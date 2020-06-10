@@ -9,8 +9,25 @@ melodias.  A Rua de Laksmi segue para leste e para oeste, onde pode-se ver
 muitas casas.
    Há um estranho portal sobre sua cabeça.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+ON z13
+D N
+~
+~
+0 -1 6601
+D S
+~
+~
+0 -1 6602
+D E
+~
+~
+0 -1 6611
+D W
+~
+~
+0 -1 6610
+D U
 Um estranho portal flutua sobre você.  Você pode ver uma estrada através do
 portal.
 ~
@@ -23,8 +40,20 @@ A Praça de Krishna~
 Uma agradável sensação de harmonia e paz toma conta da sua mente.  A Rua de
 Krishna segue para leste e para oeste, onde pode-se ver muitas casas.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D N
+~
+~
+0 -1 6603
+D S
+~
+~
+0 -1 6600
+D E
+~
+~
+0 -1 6621
+D W
 ~
 ~
 0 -1 6620
@@ -37,8 +66,20 @@ redor você observa a magnífica Praça de Ganesh e uma sublime e imponente
 estatua do destruidor de obstáculos.  A Rua de Ganesh segue para leste e
 para oeste, onde pode-se ver muitas casas.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D N
+~
+~
+0 -1 6600
+D S
+~
+~
+0 -1 6604
+D E
+~
+~
+0 -1 6631
+D W
 ~
 ~
 0 -1 6630
@@ -50,8 +91,16 @@ sensação de força e resistência é trazida até você pelas milhares de tochas
 e piscinas, que ardem em fogo.  A Rua de Indra segue para leste e para
 oeste, onde pode-se ver muitas casas.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D S
+~
+~
+0 -1 6601
+D E
+~
+~
+0 -1 6641
+D W
 ~
 ~
 0 -1 6640
@@ -64,8 +113,16 @@ Ao seu redor você observa milhares de espelhos de água e uma grandiosa
 estatua de Vishnu no dilúvio universal.  A Rua de Matsia segue para leste e
 para oeste, onde pode-se ver muitas casas.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D N
+~
+~
+0 -1 6602
+D E
+~
+~
+0 -1 6651
+D W
 ~
 ~
 0 -1 6650
@@ -76,8 +133,20 @@ Um Cruzamento de Ruas~
 Para leste e para oeste está a rua de Laksmi, para norte está a rua de Krishna e
 para sul está a rua de Ganesh.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6619
+D E
+~
+~
+0 -1 6618
+D N
+~
+~
+0 -1 6606
+D S
 ~
 ~
 0 -1 6607
@@ -88,8 +157,20 @@ Um Cruzamento de Ruas~
 Para leste e para oeste está a rua de Krishna, para sul está a rua de Laksmi e
 para norte está a rua de Indra.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6629
+D E
+~
+~
+0 -1 6628
+D N
+~
+~
+0 -1 6608
+D S
 ~
 ~
 0 -1 6605
@@ -100,8 +181,20 @@ Um Cruzamento de Ruas~
 Para leste e para oeste está a rua de Ganesh, para norte está a rua de Laksmi e
 para sul está a rua de Matsia.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6639
+D E
+~
+~
+0 -1 6638
+D N
+~
+~
+0 -1 6605
+D S
 ~
 ~
 0 -1 6609
@@ -111,8 +204,16 @@ Um Cruzamento de Ruas~
    Você está em um cruzamento das ruas da região residencial de Nova Thalos.
 Para leste e para oeste está a rua de Indra e para sul está a rua de Krishna.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6649
+D E
+~
+~
+0 -1 6648
+D S
 ~
 ~
 0 -1 6606
@@ -122,8 +223,16 @@ Um Cruzamento de Ruas~
    Você está em um cruzamento das ruas da região residencial de Nova Thalos.
 Para leste e para oeste está a rua de Matsia e para norte está a rua de Ganesh.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6659
+D E
+~
+~
+0 -1 6658
+D N
 ~
 ~
 0 -1 6607
@@ -138,11 +247,25 @@ sorte que os acompanham por toda sua vida.
    Para o norte e para o sul você vê as casas números 1 e 2.  A rua continua
 para oeste, e a praça de Laksmi pode ser vista a leste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6612
+D E
+~
+~
+0 -1 6600
+D N
 ~
 porta~
-0 -1 6701
+:n 2
+abcg -1 6700
+D S
+~
+porta~
+:n 2
+abcg -1 6701
 S
 #6611
 A Rua de Laksmi~
@@ -154,11 +277,25 @@ sorte que os acompanham por toda sua vida.
    Para o norte e para o sul você vê as casas números 3 e 4.  A rua continua
 para leste, e a praça de Laksmi pode ser vista a oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6600
+D E
+~
+~
+0 -1 6613
+D N
 ~
 porta~
-0 -1 6703
+:n 2
+abcg -1 6702
+D S
+~
+porta~
+:n 2
+abcg -1 6703
 S
 #6612
 A Rua de Laksmi~
@@ -170,11 +307,25 @@ sorte que os acompanham por toda sua vida.
    Para o norte e para o sul você vê as casas números 5 e 6.  A rua continua
 para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6614
+D E
+~
+~
+0 -1 6610
+D N
 ~
 porta~
-0 -1 6705
+:n 2
+abcg -1 6704
+D S
+~
+porta~
+:n 2
+abcg -1 6705
 S
 #6613
 A Rua de Laksmi~
@@ -186,11 +337,25 @@ sorte que os acompanham por toda sua vida.
    Para o norte e para o sul você vê as casas números 7 e 8.  A rua continua
 para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6611
+D E
+~
+~
+0 -1 6615
+D N
 ~
 porta~
-0 -1 6707
+:n 2
+abcg -1 6706
+D S
+~
+porta~
+:n 2
+abcg -1 6707
 S
 #6614
 A Rua de Laksmi~
@@ -202,11 +367,25 @@ sorte que os acompanham por toda sua vida.
    Para o norte e para o sul você vê as casas números 9 e 10.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6616
+D E
+~
+~
+0 -1 6612
+D N
 ~
 porta~
-0 -1 6709
+:n 2
+abcg -1 6708
+D S
+~
+porta~
+:n 2
+abcg -1 6709
 S
 #6615
 A Rua de Laksmi~
@@ -218,11 +397,25 @@ sorte que os acompanham por toda sua vida.
    Para o norte e para o sul você vê as casas números 11 e 12.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6613
+D E
+~
+~
+0 -1 6617
+D N
 ~
 porta~
-0 -1 6711
+:n 2
+abcg -1 6710
+D S
+~
+porta~
+:n 2
+abcg -1 6711
 S
 #6616
 A Rua de Laksmi~
@@ -234,11 +427,25 @@ sorte que os acompanham por toda sua vida.
    Para o norte e para o sul você vê as casas números 13 e 14.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6618
+D E
+~
+~
+0 -1 6614
+D N
 ~
 porta~
-0 -1 6713
+:n 2
+abcg -1 6712
+D S
+~
+porta~
+:n 2
+abcg -1 6713
 S
 #6617
 A Rua de Laksmi~
@@ -250,11 +457,25 @@ sorte que os acompanham por toda sua vida.
    Para o norte e para o sul você vê as casas números 15 e 16.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6615
+D E
+~
+~
+0 -1 6619
+D N
 ~
 porta~
-0 -1 6715
+:n 2
+abcg -1 6714
+D S
+~
+porta~
+:n 2
+abcg -1 6715
 S
 #6618
 A Rua de Laksmi~
@@ -266,11 +487,25 @@ sorte que os acompanham por toda sua vida.
    Para o norte e para o sul você vê as casas números 17 e 18.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6605
+D E
+~
+~
+0 -1 6616
+D N
 ~
 porta~
-0 -1 6717
+:n 2
+abcg -1 6716
+D S
+~
+porta~
+:n 2
+abcg -1 6717
 S
 #6619
 A Rua de Laksmi~
@@ -282,11 +517,25 @@ sorte que os acompanham por toda sua vida.
    Para o norte e para o sul você vê as casas números 19 e 20.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6617
+D E
+~
+~
+0 -1 6605
+D N
 ~
 porta~
-0 -1 6719
+:n 2
+abcg -1 6718
+D S
+~
+porta~
+:n 2
+abcg -1 6719
 S
 #6620
 A Rua de Krishna~
@@ -297,11 +546,25 @@ sabedoria que lidam com as provas da vida.
    Para o norte e para o sul você vê as casas números 1 e 2.  A rua continua
 para oeste, e a praça de Krishna pode ser vista a leste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6622
+D E
+~
+~
+0 -1 6601
+D N
 ~
 porta~
-0 -1 6721
+:n 2
+abcg -1 6720
+D S
+~
+porta~
+:n 2
+abcg -1 6721
 S
 #6621
 A Rua de Krishna~
@@ -312,11 +575,25 @@ sabedoria que lidam com as provas da vida.
    Para o norte e para o sul você vê as casas números 3 e 4.  A rua continua
 para leste, e a praça de Krishna pode ser vista a oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6601
+D E
+~
+~
+0 -1 6623
+D N
 ~
 porta~
-0 -1 6723
+:n 2
+abcg -1 6722
+D S
+~
+porta~
+:n 2
+abcg -1 6723
 S
 #6622
 A Rua de Krishna~
@@ -327,11 +604,25 @@ sabedoria que lidam com as provas da vida.
    Para o norte e para o sul você vê as casas números 5 e 6.  A rua continua
 para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6624
+D E
+~
+~
+0 -1 6620
+D N
 ~
 porta~
-0 -1 6725
+:n 2
+abcg -1 6724
+D S
+~
+porta~
+:n 2
+abcg -1 6725
 S
 #6623
 A Rua de Krishna~
@@ -342,11 +633,25 @@ sabedoria que lidam com as provas da vida.
    Para o norte e para o sul você vê as casas números 7 e 8.  A rua continua
 para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6621
+D E
+~
+~
+0 -1 6625
+D N
 ~
 porta~
-0 -1 6727
+:n 2
+abcg -1 6726
+D S
+~
+porta~
+:n 2
+abcg -1 6727
 S
 #6624
 A Rua de Krishna~
@@ -357,11 +662,25 @@ sabedoria que lidam com as provas da vida.
    Para o norte e para o sul você vê as casas números 9 e 10.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6626
+D E
+~
+~
+0 -1 6622
+D N
 ~
 porta~
-0 -1 6729
+:n 2
+abcg -1 6728
+D S
+~
+porta~
+:n 2
+abcg -1 6729
 S
 #6625
 A Rua de Krishna~
@@ -372,11 +691,25 @@ sabedoria que lidam com as provas da vida.
    Para o norte e para o sul você vê as casas números 11 e 12.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6623
+D E
+~
+~
+0 -1 6627
+D N
 ~
 porta~
-0 -1 6731
+:n 2
+abcg -1 6730
+D S
+~
+porta~
+:n 2
+abcg -1 6731
 S
 #6626
 A Rua de Krishna~
@@ -387,11 +720,25 @@ sabedoria que lidam com as provas da vida.
    Para o norte e para o sul você vê as casas números 13 e 14.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6628
+D E
+~
+~
+0 -1 6624
+D N
 ~
 porta~
-0 -1 6733
+:n 2
+abcg -1 6732
+D S
+~
+porta~
+:n 2
+abcg -1 6733
 S
 #6627
 A Rua de Krishna~
@@ -402,11 +749,25 @@ sabedoria que lidam com as provas da vida.
    Para o norte e para o sul você vê as casas números 15 e 16.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6625
+D E
+~
+~
+0 -1 6629
+D N
 ~
 porta~
-0 -1 6735
+:n 2
+abcg -1 6734
+D S
+~
+porta~
+:n 2
+abcg -1 6735
 S
 #6628
 A Rua de Krishna~
@@ -417,11 +778,25 @@ sabedoria que lidam com as provas da vida.
    Para o norte e para o sul você vê as casas números 17 e 18.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6606
+D E
+~
+~
+0 -1 6626
+D N
 ~
 porta~
-0 -1 6737
+:n 2
+abcg -1 6736
+D S
+~
+porta~
+:n 2
+abcg -1 6737
 S
 #6629
 A Rua de Krishna~
@@ -432,11 +807,25 @@ sabedoria que lidam com as provas da vida.
    Para o norte e para o sul você vê as casas números 19 e 20.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6627
+D E
+~
+~
+0 -1 6606
+D N
 ~
 porta~
-0 -1 6739
+:n 2
+abcg -1 6738
+D S
+~
+porta~
+:n 2
+abcg -1 6739
 S
 #6630
 A Rua de Ganesh~
@@ -448,11 +837,25 @@ os obstáculos impostos durante a vida.
    Para o norte e para o sul você vê as casas números 1 e 2.  A rua continua
 para oeste, e a praça de Ganesh pode ser vista a leste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6632
+D E
+~
+~
+0 -1 6602
+D N
 ~
 porta~
-0 -1 6741
+:n 2
+abcg -1 6740
+D S
+~
+porta~
+:n 2
+abcg -1 6741
 S
 #6631
 A Rua de Ganesh~
@@ -464,11 +867,25 @@ os obstáculos impostos durante a vida.
    Para o norte e para o sul você vê as casas números 3 e 4.  A rua continua
 para leste, e a praça de Ganesh pode ser vista a oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6602
+D E
+~
+~
+0 -1 6633
+D N
 ~
 porta~
-0 -1 6743
+:n 2
+abcg -1 6742
+D S
+~
+porta~
+:n 2
+abcg -1 6743
 S
 #6632
 A Rua de Ganesh~
@@ -480,11 +897,25 @@ os obstáculos impostos durante a vida.
    Para o norte e para o sul você vê as casas números 5 e 6.  A rua continua
 para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6634
+D E
+~
+~
+0 -1 6630
+D N
 ~
 porta~
-0 -1 6745
+:n 2
+abcg -1 6744
+D S
+~
+porta~
+:n 2
+abcg -1 6745
 S
 #6633
 A Rua de Ganesh~
@@ -496,11 +927,25 @@ os obstáculos impostos durante a vida.
    Para o norte e para o sul você vê as casas números 7 e 8.  A rua continua
 para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6631
+D E
+~
+~
+0 -1 6635
+D N
 ~
 porta~
-0 -1 6747
+:n 2
+abcg -1 6746
+D S
+~
+porta~
+:n 2
+abcg -1 6747
 S
 #6634
 A Rua de Ganesh~
@@ -512,11 +957,25 @@ os obstáculos impostos durante a vida.
    Para o norte e para o sul você vê as casas números 9 e 10.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6636
+D E
+~
+~
+0 -1 6632
+D N
 ~
 porta~
-0 -1 6749
+:n 2
+abcg -1 6748
+D S
+~
+porta~
+:n 2
+abcg -1 6749
 S
 #6635
 A Rua de Ganesh~
@@ -528,11 +987,25 @@ os obstáculos impostos durante a vida.
    Para o norte e para o sul você vê as casas números 11 e 12.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6633
+D E
+~
+~
+0 -1 6637
+D N
 ~
 porta~
-0 -1 6751
+:n 2
+abcg -1 6750
+D S
+~
+porta~
+:n 2
+abcg -1 6751
 S
 #6636
 A Rua de Ganesh~
@@ -544,11 +1017,25 @@ os obstáculos impostos durante a vida.
    Para o norte e para o sul você vê as casas números 13 e 14.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6638
+D E
+~
+~
+0 -1 6634
+D N
 ~
 porta~
-0 -1 6753
+:n 2
+abcg -1 6752
+D S
+~
+porta~
+:n 2
+abcg -1 6753
 S
 #6637
 A Rua de Ganesh~
@@ -560,11 +1047,25 @@ os obstáculos impostos durante a vida.
    Para o norte e para o sul você vê as casas números 15 e 16.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6635
+D E
+~
+~
+0 -1 6639
+D N
 ~
 porta~
-0 -1 6755
+:n 2
+abcg -1 6754
+D S
+~
+porta~
+:n 2
+abcg -1 6755
 S
 #6638
 A Rua de Ganesh~
@@ -576,11 +1077,25 @@ os obstáculos impostos durante a vida.
    Para o norte e para o sul você vê as casas números 17 e 18.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6607
+D E
+~
+~
+0 -1 6636
+D N
 ~
 porta~
-0 -1 6757
+:n 2
+abcg -1 6756
+D S
+~
+porta~
+:n 2
+abcg -1 6757
 S
 #6639
 A Rua de Ganesh~
@@ -592,11 +1107,25 @@ os obstáculos impostos durante a vida.
    Para o norte e para o sul você vê as casas números 19 e 20.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6637
+D E
+~
+~
+0 -1 6607
+D N
 ~
 porta~
-0 -1 6759
+:n 2
+abcg -1 6758
+D S
+~
+porta~
+:n 2
+abcg -1 6759
 S
 #6640
 A Rua de Indra~
@@ -608,11 +1137,25 @@ as adversidades impostas durante a vida.
    Para o norte e para o sul você vê as casas números 1 e 2.  A rua continua
 para oeste, e a praça de Indra pode ser vista a leste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6642
+D E
+~
+~
+0 -1 6603
+D N
 ~
 porta~
-0 -1 6761
+:n 2
+abcg -1 6760
+D S
+~
+porta~
+:n 2
+abcg -1 6761
 S
 #6641
 A Rua de Indra~
@@ -624,11 +1167,25 @@ as adversidades impostas durante a vida.
    Para o norte e para o sul você vê as casas números 3 e 4.  A rua continua
 para leste, e a praça de Indra pode ser vista a oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6603
+D E
+~
+~
+0 -1 6643
+D N
 ~
 porta~
-0 -1 6763
+:n 2
+abcg -1 6762
+D S
+~
+porta~
+:n 2
+abcg -1 6763
 S
 #6642
 A Rua de Indra~
@@ -640,11 +1197,25 @@ as adversidades impostas durante a vida.
    Para o norte e para o sul você vê as casas números 5 e 6.  A rua continua
 para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6644
+D E
+~
+~
+0 -1 6640
+D N
 ~
 porta~
-0 -1 6765
+:n 2
+abcg -1 6764
+D S
+~
+porta~
+:n 2
+abcg -1 6765
 S
 #6643
 A Rua de Indra~
@@ -656,11 +1227,25 @@ as adversidades impostas durante a vida.
    Para o norte e para o sul você vê as casas números 7 e 8.  A rua continua
 para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6641
+D E
+~
+~
+0 -1 6645
+D N
 ~
 porta~
-0 -1 6767
+:n 2
+abcg -1 6766
+D S
+~
+porta~
+:n 2
+abcg -1 6767
 S
 #6644
 A Rua de Indra~
@@ -672,11 +1257,25 @@ as adversidades impostas durante a vida.
    Para o norte e para o sul você vê as casas números 9 e 10.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6646
+D E
+~
+~
+0 -1 6642
+D N
 ~
 porta~
-0 -1 6769
+:n 2
+abcg -1 6768
+D S
+~
+porta~
+:n 2
+abcg -1 6769
 S
 #6645
 A Rua de Indra~
@@ -688,11 +1287,25 @@ as adversidades impostas durante a vida.
    Para o norte e para o sul você vê as casas números 11 e 12.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6643
+D E
+~
+~
+0 -1 6647
+D N
 ~
 porta~
-0 -1 6771
+:n 2
+abcg -1 6770
+D S
+~
+porta~
+:n 2
+abcg -1 6771
 S
 #6646
 A Rua de Indra~
@@ -704,11 +1317,25 @@ as adversidades impostas durante a vida.
    Para o norte e para o sul você vê as casas números 13 e 14.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6648
+D E
+~
+~
+0 -1 6644
+D N
 ~
 porta~
-0 -1 6773
+:n 2
+abcg -1 6772
+D S
+~
+porta~
+:n 2
+abcg -1 6773
 S
 #6647
 A Rua de Indra~
@@ -720,11 +1347,25 @@ as adversidades impostas durante a vida.
    Para o norte e para o sul você vê as casas números 15 e 16.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6645
+D E
+~
+~
+0 -1 6649
+D N
 ~
 porta~
-0 -1 6775
+:n 2
+abcg -1 6774
+D S
+~
+porta~
+:n 2
+abcg -1 6775
 S
 #6648
 A Rua de Indra~
@@ -736,11 +1377,25 @@ as adversidades impostas durante a vida.
    Para o norte e para o sul você vê as casas números 17 e 18.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6608
+D E
+~
+~
+0 -1 6646
+D N
 ~
 porta~
-0 -1 6777
+:n 2
+abcg -1 6776
+D S
+~
+porta~
+:n 2
+abcg -1 6777
 S
 #6649
 A Rua de Indra~
@@ -752,11 +1407,25 @@ as adversidades impostas durante a vida.
    Para o norte e para o sul você vê as casas números 19 e 20.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6647
+D E
+~
+~
+0 -1 6608
+D N
 ~
 porta~
-0 -1 6779
+:n 2
+abcg -1 6778
+D S
+~
+porta~
+:n 2
+abcg -1 6779
 S
 #6650
 A Rua de Matsia~
@@ -770,11 +1439,25 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
    Para o norte e para o sul você vê as casas números 1 e 2.  A rua continua
 para oeste, e a praça de Matsia pode ser vista a leste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6652
+D E
+~
+~
+0 -1 6604
+D N
 ~
 porta~
-0 -1 6781
+:n 2
+abcg -1 6780
+D S
+~
+porta~
+:n 2
+abcg -1 6781
 S
 #6651
 A Rua de Matsia~
@@ -788,11 +1471,25 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
    Para o norte e para o sul você vê as casas números 3 e 4.  A rua continua
 para leste, e a praça de Matsia pode ser vista a oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6604
+D E
+~
+~
+0 -1 6653
+D N
 ~
 porta~
-0 -1 6783
+:n 2
+abcg -1 6782
+D S
+~
+porta~
+:n 2
+abcg -1 6783
 S
 #6652
 A Rua de Matsia~
@@ -806,11 +1503,25 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
    Para o norte e para o sul você vê as casas números 5 e 6.  A rua continua
 para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6654
+D E
+~
+~
+0 -1 6650
+D N
 ~
 porta~
-0 -1 6785
+:n 2
+abcg -1 6784
+D S
+~
+porta~
+:n 2
+abcg -1 6785
 S
 #6653
 A Rua de Matsia~
@@ -824,11 +1535,25 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
    Para o norte e para o sul você vê as casas números 7 e 8.  A rua continua
 para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6651
+D E
+~
+~
+0 -1 6655
+D N
 ~
 porta~
-0 -1 6787
+:n 2
+abcg -1 6786
+D S
+~
+porta~
+:n 2
+abcg -1 6787
 S
 #6654
 A Rua de Matsia~
@@ -842,11 +1567,25 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
    Para o norte e para o sul você vê as casas números 9 e 10.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6656
+D E
+~
+~
+0 -1 6652
+D N
 ~
 porta~
-0 -1 6789
+:n 2
+abcg -1 6788
+D S
+~
+porta~
+:n 2
+abcg -1 6789
 S
 #6655
 A Rua de Matsia~
@@ -860,11 +1599,25 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
    Para o norte e para o sul você vê as casas números 11 e 12.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6653
+D E
+~
+~
+0 -1 6657
+D N
 ~
 porta~
-0 -1 6791
+:n 2
+abcg -1 6790
+D S
+~
+porta~
+:n 2
+abcg -1 6791
 S
 #6656
 A Rua de Matsia~
@@ -878,11 +1631,25 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
    Para o norte e para o sul você vê as casas números 13 e 14.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6658
+D E
+~
+~
+0 -1 6654
+D N
 ~
 porta~
-0 -1 6793
+:n 2
+abcg -1 6792
+D S
+~
+porta~
+:n 2
+abcg -1 6793
 S
 #6657
 A Rua de Matsia~
@@ -896,11 +1663,25 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
    Para o norte e para o sul você vê as casas números 15 e 16.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6655
+D E
+~
+~
+0 -1 6659
+D N
 ~
 porta~
-0 -1 6795
+:n 2
+abcg -1 6794
+D S
+~
+porta~
+:n 2
+abcg -1 6795
 S
 #6658
 A Rua de Matsia~
@@ -914,11 +1695,25 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
    Para o norte e para o sul você vê as casas números 17 e 18.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6609
+D E
+~
+~
+0 -1 6656
+D N
 ~
 porta~
-0 -1 6797
+:n 2
+abcg -1 6796
+D S
+~
+porta~
+:n 2
+abcg -1 6797
 S
 #6659
 A Rua de Matsia~
@@ -932,11 +1727,25 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
    Para o norte e para o sul você vê as casas números 19 e 20.  A rua
 continua para leste e para oeste.
 ~
-66 0 0 0 0 1
-D0
+66 0 1
+D W
+~
+~
+0 -1 6657
+D E
+~
+~
+0 -1 6609
+D N
 ~
 porta~
-0 -1 6799
+:n 2
+abcg -1 6798
+D S
+~
+porta~
+:n 2
+abcg -1 6799
 S
 #6700
 A Casa 1 da Rua de Laksmi~
@@ -944,11 +1753,12 @@ A Casa 1 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 1.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6610
+:n 2
+abcg -1 6610
 S
 #6701
 A Casa 2 da Rua de Laksmi~
@@ -956,11 +1766,12 @@ A Casa 2 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 2.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6610
+:n 2
+abcg -1 6610
 S
 #6702
 A Casa 3 da Rua de Laksmi~
@@ -968,11 +1779,12 @@ A Casa 3 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 3.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6611
+:n 2
+abcg -1 6611
 S
 #6703
 A Casa 4 da Rua de Laksmi~
@@ -980,11 +1792,12 @@ A Casa 4 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 4.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6611
+:n 2
+abcg -1 6611
 S
 #6704
 A Casa 5 da Rua de Laksmi~
@@ -992,11 +1805,12 @@ A Casa 5 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 5.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6612
+:n 2
+abcg -1 6612
 S
 #6705
 A Casa 6 da Rua de Laksmi~
@@ -1004,11 +1818,12 @@ A Casa 6 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 6.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6612
+:n 2
+abcg -1 6612
 S
 #6706
 A Casa 7 da Rua de Laksmi~
@@ -1016,11 +1831,12 @@ A Casa 7 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 7.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6613
+:n 2
+abcg -1 6613
 S
 #6707
 A Casa 8 da Rua de Laksmi~
@@ -1028,11 +1844,12 @@ A Casa 8 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 8.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6613
+:n 2
+abcg -1 6613
 S
 #6708
 A Casa 9 da Rua de Laksmi~
@@ -1040,11 +1857,12 @@ A Casa 9 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 9.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6614
+:n 2
+abcg -1 6614
 S
 #6709
 A Casa 10 da Rua de Laksmi~
@@ -1052,11 +1870,12 @@ A Casa 10 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 10.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6614
+:n 2
+abcg -1 6614
 S
 #6710
 A Casa 11 da Rua de Laksmi~
@@ -1064,11 +1883,12 @@ A Casa 11 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 11.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6615
+:n 2
+abcg -1 6615
 S
 #6711
 A Casa 12 da Rua de Laksmi~
@@ -1076,11 +1896,12 @@ A Casa 12 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 12.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6615
+:n 2
+abcg -1 6615
 S
 #6712
 A Casa 13 da Rua de Laksmi~
@@ -1088,11 +1909,12 @@ A Casa 13 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 13.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6616
+:n 2
+abcg -1 6616
 S
 #6713
 A Casa 14 da Rua de Laksmi~
@@ -1100,11 +1922,12 @@ A Casa 14 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 14.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6616
+:n 2
+abcg -1 6616
 S
 #6714
 A Casa 15 da Rua de Laksmi~
@@ -1112,11 +1935,12 @@ A Casa 15 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 15.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6617
+:n 2
+abcg -1 6617
 S
 #6715
 A Casa 16 da Rua de Laksmi~
@@ -1124,11 +1948,12 @@ A Casa 16 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 16.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6617
+:n 2
+abcg -1 6617
 S
 #6716
 A Casa 17 da Rua de Laksmi~
@@ -1136,11 +1961,12 @@ A Casa 17 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 17.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6618
+:n 2
+abcg -1 6618
 S
 #6717
 A Casa 18 da Rua de Laksmi~
@@ -1148,11 +1974,12 @@ A Casa 18 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 18.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6618
+:n 2
+abcg -1 6618
 S
 #6718
 A Casa 19 da Rua de Laksmi~
@@ -1160,11 +1987,12 @@ A Casa 19 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 19.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6619
+:n 2
+abcg -1 6619
 S
 #6719
 A Casa 20 da Rua de Laksmi~
@@ -1172,11 +2000,12 @@ A Casa 20 da Rua de Laksmi~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 20.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6619
+:n 2
+abcg -1 6619
 S
 #6720
 A Casa 1 da Rua de Krishna~
@@ -1184,11 +2013,12 @@ A Casa 1 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 1.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6620
+:n 2
+abcg -1 6620
 S
 #6721
 A Casa 2 da Rua de Krishna~
@@ -1196,11 +2026,12 @@ A Casa 2 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 2.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6620
+:n 2
+abcg -1 6620
 S
 #6722
 A Casa 3 da Rua de Krishna~
@@ -1208,11 +2039,12 @@ A Casa 3 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 3.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6621
+:n 2
+abcg -1 6621
 S
 #6723
 A Casa 4 da Rua de Krishna~
@@ -1220,11 +2052,12 @@ A Casa 4 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 4.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6621
+:n 2
+abcg -1 6621
 S
 #6724
 A Casa 5 da Rua de Krishna~
@@ -1232,11 +2065,12 @@ A Casa 5 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 5.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6622
+:n 2
+abcg -1 6622
 S
 #6725
 A Casa 6 da Rua de Krishna~
@@ -1244,11 +2078,12 @@ A Casa 6 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 6.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6622
+:n 2
+abcg -1 6622
 S
 #6726
 A Casa 7 da Rua de Krishna~
@@ -1256,11 +2091,12 @@ A Casa 7 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 7.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6623
+:n 2
+abcg -1 6623
 S
 #6727
 A Casa 8 da Rua de Krishna~
@@ -1268,11 +2104,12 @@ A Casa 8 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 8.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6623
+:n 2
+abcg -1 6623
 S
 #6728
 A Casa 9 da Rua de Krishna~
@@ -1280,11 +2117,12 @@ A Casa 9 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 9.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6624
+:n 2
+abcg -1 6624
 S
 #6729
 A Casa 10 da Rua de Krishna~
@@ -1292,11 +2130,12 @@ A Casa 10 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 10.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6624
+:n 2
+abcg -1 6624
 S
 #6730
 A Casa 11 da Rua de Krishna~
@@ -1304,11 +2143,12 @@ A Casa 11 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 11.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6625
+:n 2
+abcg -1 6625
 S
 #6731
 A Casa 12 da Rua de Krishna~
@@ -1316,11 +2156,12 @@ A Casa 12 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 12.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6625
+:n 2
+abcg -1 6625
 S
 #6732
 A Casa 13 da Rua de Krishna~
@@ -1328,11 +2169,12 @@ A Casa 13 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 13.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6626
+:n 2
+abcg -1 6626
 S
 #6733
 A Casa 14 da Rua de Krishna~
@@ -1340,11 +2182,12 @@ A Casa 14 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 14.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6626
+:n 2
+abcg -1 6626
 S
 #6734
 A Casa 15 da Rua de Krishna~
@@ -1352,11 +2195,12 @@ A Casa 15 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 15.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6627
+:n 2
+abcg -1 6627
 S
 #6735
 A Casa 16 da Rua de Krishna~
@@ -1364,11 +2208,12 @@ A Casa 16 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 16.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6627
+:n 2
+abcg -1 6627
 S
 #6736
 A Casa 17 da Rua de Krishna~
@@ -1376,11 +2221,12 @@ A Casa 17 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 17.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6628
+:n 2
+abcg -1 6628
 S
 #6737
 A Casa 18 da Rua de Krishna~
@@ -1388,11 +2234,12 @@ A Casa 18 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 18.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6628
+:n 2
+abcg -1 6628
 S
 #6738
 A Casa 19 da Rua de Krishna~
@@ -1400,11 +2247,12 @@ A Casa 19 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 19.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6629
+:n 2
+abcg -1 6629
 S
 #6739
 A Casa 20 da Rua de Krishna~
@@ -1412,11 +2260,12 @@ A Casa 20 da Rua de Krishna~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 20.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6629
+:n 2
+abcg -1 6629
 S
 #6740
 A Casa 1 da Rua de Ganesh~
@@ -1424,11 +2273,12 @@ A Casa 1 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 1.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6630
+:n 2
+abcg -1 6630
 S
 #6741
 A Casa 2 da Rua de Ganesh~
@@ -1436,11 +2286,12 @@ A Casa 2 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 2.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6630
+:n 2
+abcg -1 6630
 S
 #6742
 A Casa 3 da Rua de Ganesh~
@@ -1448,11 +2299,12 @@ A Casa 3 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 3.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6631
+:n 2
+abcg -1 6631
 S
 #6743
 A Casa 4 da Rua de Ganesh~
@@ -1460,11 +2312,12 @@ A Casa 4 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 4.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6631
+:n 2
+abcg -1 6631
 S
 #6744
 A Casa 5 da Rua de Ganesh~
@@ -1472,11 +2325,12 @@ A Casa 5 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 5.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6632
+:n 2
+abcg -1 6632
 S
 #6745
 A Casa 6 da Rua de Ganesh~
@@ -1484,11 +2338,12 @@ A Casa 6 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 6.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6632
+:n 2
+abcg -1 6632
 S
 #6746
 A Casa 7 da Rua de Ganesh~
@@ -1496,11 +2351,12 @@ A Casa 7 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 7.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6633
+:n 2
+abcg -1 6633
 S
 #6747
 A Casa 8 da Rua de Ganesh~
@@ -1508,11 +2364,12 @@ A Casa 8 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 8.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6633
+:n 2
+abcg -1 6633
 S
 #6748
 A Casa 9 da Rua de Ganesh~
@@ -1520,11 +2377,12 @@ A Casa 9 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 9.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6634
+:n 2
+abcg -1 6634
 S
 #6749
 A Casa 10 da Rua de Ganesh~
@@ -1532,11 +2390,12 @@ A Casa 10 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 10.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6634
+:n 2
+abcg -1 6634
 S
 #6750
 A Casa 11 da Rua de Ganesh~
@@ -1544,11 +2403,12 @@ A Casa 11 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 11.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6635
+:n 2
+abcg -1 6635
 S
 #6751
 A Casa 12 da Rua de Ganesh~
@@ -1556,11 +2416,12 @@ A Casa 12 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 12.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6635
+:n 2
+abcg -1 6635
 S
 #6752
 A Casa 13 da Rua de Ganesh~
@@ -1568,11 +2429,12 @@ A Casa 13 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 13.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6636
+:n 2
+abcg -1 6636
 S
 #6753
 A Casa 14 da Rua de Ganesh~
@@ -1580,11 +2442,12 @@ A Casa 14 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 14.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6636
+:n 2
+abcg -1 6636
 S
 #6754
 A Casa 15 da Rua de Ganesh~
@@ -1592,11 +2455,12 @@ A Casa 15 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 15.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6637
+:n 2
+abcg -1 6637
 S
 #6755
 A Casa 16 da Rua de Ganesh~
@@ -1604,11 +2468,12 @@ A Casa 16 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 16.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6637
+:n 2
+abcg -1 6637
 S
 #6756
 A Casa 17 da Rua de Ganesh~
@@ -1616,11 +2481,12 @@ A Casa 17 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 17.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6638
+:n 2
+abcg -1 6638
 S
 #6757
 A Casa 18 da Rua de Ganesh~
@@ -1628,11 +2494,12 @@ A Casa 18 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 18.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6638
+:n 2
+abcg -1 6638
 S
 #6758
 A Casa 19 da Rua de Ganesh~
@@ -1640,11 +2507,12 @@ A Casa 19 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 19.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6639
+:n 2
+abcg -1 6639
 S
 #6759
 A Casa 20 da Rua de Ganesh~
@@ -1652,11 +2520,12 @@ A Casa 20 da Rua de Ganesh~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 20.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6639
+:n 2
+abcg -1 6639
 S
 #6760
 A Casa 1 da Rua de Indra~
@@ -1664,11 +2533,12 @@ A Casa 1 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 1.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6640
+:n 2
+abcg -1 6640
 S
 #6761
 A Casa 2 da Rua de Indra~
@@ -1676,11 +2546,12 @@ A Casa 2 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 2.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6640
+:n 2
+abcg -1 6640
 S
 #6762
 A Casa 3 da Rua de Indra~
@@ -1688,11 +2559,12 @@ A Casa 3 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 3.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6641
+:n 2
+abcg -1 6641
 S
 #6763
 A Casa 4 da Rua de Indra~
@@ -1700,11 +2572,12 @@ A Casa 4 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 4.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6641
+:n 2
+abcg -1 6641
 S
 #6764
 A Casa 5 da Rua de Indra~
@@ -1712,11 +2585,12 @@ A Casa 5 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 5.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6642
+:n 2
+abcg -1 6642
 S
 #6765
 A Casa 6 da Rua de Indra~
@@ -1724,11 +2598,12 @@ A Casa 6 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 6.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6642
+:n 2
+abcg -1 6642
 S
 #6766
 A Casa 7 da Rua de Indra~
@@ -1736,11 +2611,12 @@ A Casa 7 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 7.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6643
+:n 2
+abcg -1 6643
 S
 #6767
 A Casa 8 da Rua de Indra~
@@ -1748,11 +2624,12 @@ A Casa 8 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 8.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6643
+:n 2
+abcg -1 6643
 S
 #6768
 A Casa 9 da Rua de Indra~
@@ -1760,11 +2637,12 @@ A Casa 9 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 9.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6644
+:n 2
+abcg -1 6644
 S
 #6769
 A Casa 10 da Rua de Indra~
@@ -1772,11 +2650,12 @@ A Casa 10 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 10.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6644
+:n 2
+abcg -1 6644
 S
 #6770
 A Casa 11 da Rua de Indra~
@@ -1784,11 +2663,12 @@ A Casa 11 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 11.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6645
+:n 2
+abcg -1 6645
 S
 #6771
 A Casa 12 da Rua de Indra~
@@ -1796,11 +2676,12 @@ A Casa 12 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 12.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6645
+:n 2
+abcg -1 6645
 S
 #6772
 A Casa 13 da Rua de Indra~
@@ -1808,11 +2689,12 @@ A Casa 13 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 13.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6646
+:n 2
+abcg -1 6646
 S
 #6773
 A Casa 14 da Rua de Indra~
@@ -1820,11 +2702,12 @@ A Casa 14 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 14.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6646
+:n 2
+abcg -1 6646
 S
 #6774
 A Casa 15 da Rua de Indra~
@@ -1832,11 +2715,12 @@ A Casa 15 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 15.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6647
+:n 2
+abcg -1 6647
 S
 #6775
 A Casa 16 da Rua de Indra~
@@ -1844,11 +2728,12 @@ A Casa 16 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 16.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6647
+:n 2
+abcg -1 6647
 S
 #6776
 A Casa 17 da Rua de Indra~
@@ -1856,11 +2741,12 @@ A Casa 17 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 17.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6648
+:n 2
+abcg -1 6648
 S
 #6777
 A Casa 18 da Rua de Indra~
@@ -1868,11 +2754,12 @@ A Casa 18 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 18.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6648
+:n 2
+abcg -1 6648
 S
 #6778
 A Casa 19 da Rua de Indra~
@@ -1880,11 +2767,12 @@ A Casa 19 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 19.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6649
+:n 2
+abcg -1 6649
 S
 #6779
 A Casa 20 da Rua de Indra~
@@ -1892,11 +2780,12 @@ A Casa 20 da Rua de Indra~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 20.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6649
+:n 2
+abcg -1 6649
 S
 #6780
 A Casa 1 da Rua de Matsia~
@@ -1904,11 +2793,12 @@ A Casa 1 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 1.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6650
+:n 2
+abcg -1 6650
 S
 #6781
 A Casa 2 da Rua de Matsia~
@@ -1916,11 +2806,12 @@ A Casa 2 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 2.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6650
+:n 2
+abcg -1 6650
 S
 #6782
 A Casa 3 da Rua de Matsia~
@@ -1928,11 +2819,12 @@ A Casa 3 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 3.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6651
+:n 2
+abcg -1 6651
 S
 #6783
 A Casa 4 da Rua de Matsia~
@@ -1940,11 +2832,12 @@ A Casa 4 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 4.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6651
+:n 2
+abcg -1 6651
 S
 #6784
 A Casa 5 da Rua de Matsia~
@@ -1952,11 +2845,12 @@ A Casa 5 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 5.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6652
+:n 2
+abcg -1 6652
 S
 #6785
 A Casa 6 da Rua de Matsia~
@@ -1964,11 +2858,12 @@ A Casa 6 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 6.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6652
+:n 2
+abcg -1 6652
 S
 #6786
 A Casa 7 da Rua de Matsia~
@@ -1976,11 +2871,12 @@ A Casa 7 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 7.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6653
+:n 2
+abcg -1 6653
 S
 #6787
 A Casa 8 da Rua de Matsia~
@@ -1988,11 +2884,12 @@ A Casa 8 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 8.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6653
+:n 2
+abcg -1 6653
 S
 #6788
 A Casa 9 da Rua de Matsia~
@@ -2000,11 +2897,12 @@ A Casa 9 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 9.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6654
+:n 2
+abcg -1 6654
 S
 #6789
 A Casa 10 da Rua de Matsia~
@@ -2012,11 +2910,12 @@ A Casa 10 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 10.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6654
+:n 2
+abcg -1 6654
 S
 #6790
 A Casa 11 da Rua de Matsia~
@@ -2024,11 +2923,12 @@ A Casa 11 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 11.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6655
+:n 2
+abcg -1 6655
 S
 #6791
 A Casa 12 da Rua de Matsia~
@@ -2036,11 +2936,12 @@ A Casa 12 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 12.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6655
+:n 2
+abcg -1 6655
 S
 #6792
 A Casa 13 da Rua de Matsia~
@@ -2048,11 +2949,12 @@ A Casa 13 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 13.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6656
+:n 2
+abcg -1 6656
 S
 #6793
 A Casa 14 da Rua de Matsia~
@@ -2060,11 +2962,12 @@ A Casa 14 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 14.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6656
+:n 2
+abcg -1 6656
 S
 #6794
 A Casa 15 da Rua de Matsia~
@@ -2072,11 +2975,12 @@ A Casa 15 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 15.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6657
+:n 2
+abcg -1 6657
 S
 #6795
 A Casa 16 da Rua de Matsia~
@@ -2084,11 +2988,12 @@ A Casa 16 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 16.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6657
+:n 2
+abcg -1 6657
 S
 #6796
 A Casa 17 da Rua de Matsia~
@@ -2096,11 +3001,12 @@ A Casa 17 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 17.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6658
+:n 2
+abcg -1 6658
 S
 #6797
 A Casa 18 da Rua de Matsia~
@@ -2108,11 +3014,12 @@ A Casa 18 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 18.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6658
+:n 2
+abcg -1 6658
 S
 #6798
 A Casa 19 da Rua de Matsia~
@@ -2120,11 +3027,12 @@ A Casa 19 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 19.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D S
 ~
 porta~
-0 -1 6659
+:n 2
+abcg -1 6659
 S
 #6799
 A Casa 20 da Rua de Matsia~
@@ -2132,10 +3040,11 @@ A Casa 20 da Rua de Matsia~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 20.
 ~
-66 12 0 0 0 1
-D0
+66 cd 1
+D N
 ~
 porta~
-0 -1 6659
+:n 2
+abcg -1 6659
 S
-$~
+$

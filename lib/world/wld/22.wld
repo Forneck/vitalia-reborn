@@ -9,7 +9,7 @@ saída ao sul... Caso contrário, você pode deixar o Parque do Safári
 seguindo norte... ou leste...
    Há um grande aviso aqui.
 ~
-22 12 0 0 0 4
+22 cd 4
 D0
 ~
 ~
@@ -49,7 +49,7 @@ se sentindo muito só e agora a única saída é para baixo... na água.
 para beber isto. Você faz isso e sente que seus movimentos estão mais
 fáceis e muito mais leves. O guia desaparece de repente e você começa a busca.
 ~
-22 12 0 0 0 0
+22 cd 0
 D5
 A água abaixo de você parece ser bastante sinistra.
 ~
@@ -61,7 +61,7 @@ Um Túnel~
    Este túnel está repleto de água e a luz vai enfraquecendo, chegando a perder a
 luminosidade. Existem duas saídas.  Uma está a leste e outra sobre você.
 ~
-22 9 0 0 0 6
+22 ad 6
 D0
 Um SORTUDO bloqueia a visão de tudo que está ao norte.
 ~
@@ -71,7 +71,8 @@ D1
 O túnel continua a leste.
 ~
 porta~
-0 2208 2203
+:n 2 a porta
+ag 2208 2203
 D4
 O quarto de preparação da busca está sobre você. 
 ~
@@ -89,7 +90,7 @@ Um Túnel~
 o oeste.
    O túnel continua em ambas as direções.
 ~
-22 9 0 0 0 6
+22 ad 6
 D1
 O túnel continua a leste.
 ~
@@ -99,7 +100,8 @@ D3
 O túnel continua a oeste.
 ~
 porta~
-0 2208 2202
+:n 2 a porta
+ag 2208 2202
 E
 porta~
 Você tem que saber arrombar uma porta para abrir esta, a menos
@@ -112,7 +114,7 @@ Um Túnel~
 à sua frente.  Felizmente, existem duas saídas, uma para o oeste e outra por
 um buraco no chão.
 ~
-22 9 0 0 0 6
+22 ad 6
 D3
 O túnel continua a oeste.
 ~
@@ -128,25 +130,25 @@ S
 Fim do Túnel~
    O túnel termina aqui. Existe um buraco no teto e uma grande porta a oeste.
 ~
-22 9 0 0 0 6
+22 ad 6
 D3
 Existe uma porta aqui.
 ~
 porta~
-0 2208 2206
+ag 2208 2206
 D4
 Existe um buraco no teto que conduz acima.
 ~
 ~
 0 -1 2204
 E
+buraco~
+O buraco segue para cima.  Foi uma grande surpresa desde que você avistou isto.
+~
+E
 porta~
 Você tem que saber arrombar uma porta para abrir esta, a menos
 que você esteja com SORTE.
-~
-E
-buraco~
-O buraco segue para cima.  Foi uma grande surpresa desde que você avistou isto.
 ~
 S
 #2206
@@ -156,7 +158,7 @@ o leste, você consegue ver uma porta e para o oeste você vê um corredor
 repleto com água. O redemoinho está ameaçando puxá-lo e você tem absoluta
 certeza que se afogaria.
 ~
-22 9 0 0 0 6
+22 ad 6
 D0
 Existe uma loja muito estranha e suspeita, que parece estar fora do lugar ao
 norte.
@@ -168,7 +170,7 @@ Uma porta bloqueia seu caminho, a menos que ela esteja aberta para não mais
 bloquear seu caminho.
 ~
 porta~
-0 2208 2205
+ag 2208 2205
 D3
 Um corredor começa a aparecer ao leste.
 ~
@@ -180,12 +182,12 @@ O remoinho de água está ameaçando o sugar para a morte.
 ~
 0 -1 2207
 E
-remoinho~
-Isto parece assustador e EXTREMAMENTE perigoso.
-~
-E
 porta~
 Esta é uma grande porta, mas não tão grande quanto vista do outro lado.
+~
+E
+remoinho~
+Isto parece assustador e EXTREMAMENTE perigoso.
 ~
 S
 #2207
@@ -204,7 +206,7 @@ O Redemoinho de Água~
 
 
 ~
-22 14 0 0 0 0
+22 bdc 0
 D4
 ~
 ~
@@ -215,7 +217,7 @@ Um Corredor~
    O corredor naturalmente se curva de um modo que parece ir para leste e
 abaixo, mas não parecendo se curvar em qualquer direção.
 ~
-22 9 0 0 0 6
+22 ad 6
 D1
 Existe uma grande sala a leste.
 ~
@@ -235,7 +237,7 @@ S
 Um Corredor~
    O corredor aqui se abre num grande caminho que sobe para leste.
 ~
-22 9 0 0 0 6
+22 ad 6
 D1
 Existe uma grande câmara a leste.
 ~
@@ -256,7 +258,7 @@ Uma Sala Completamente Inútil~
    Esta sala foi feita para confundir os que se acham espertos.   E se você está aqui parado,
 lendo o que foi escrito nestas paredes...sorria: Você não é nada esperto!
 ~
-22 0 0 0 0 0
+22 0 0
 S
 #2211
 A Sala Do Trono Anexo~
@@ -264,7 +266,7 @@ A Sala Do Trono Anexo~
 saguão inicia a oeste.  A sala é bastante luxuosa e decorada mas não há
 muito o que se observar.
 ~
-22 9 0 0 0 6
+22 ad 6
 D1
 A Sala do Trono aparece a leste.
 ~
@@ -287,7 +289,7 @@ leste, debaixo de um buraco no teto.  O trono quase preenche toda a sala.
 Ninguém está sentado nele.  A parede está decorada e alguns pilares cercam a
 sala.  O anexo está a oeste você ainda não tem certeza do que se trata.
 ~
-22 9 0 0 0 6
+22 ad 6
 D3
 A Sala do Trono Anexo está a oeste.
 ~
@@ -299,14 +301,14 @@ Você não pode ver o que está sobre esta sala.
 ~
 0 -1 2213
 E
-pilares parede~
-Isso é um conceito inútil.  Porque o arquiteto não colocou somente pilares
-modernos aqui?
-~
-E
 trono~
 Este é um objeto grande e feio, e você foi  recusado por ele.   Você não
 acredita em um motivo que o homem lagarto teria para manter isto.
+~
+E
+pilares parede~
+Isso é um conceito inútil.  Porque o arquiteto não colocou somente pilares
+modernos aqui?
 ~
 S
 #2213
@@ -316,12 +318,12 @@ feio. Pelo menos é o que você acha... você tem certeza que o homem lagarto
 entretanto gosta disto. Existem duas saídas.  Abaixo e também pela grande
 porta a leste.
 ~
-22 9 0 0 0 6
+22 ad 6
 D1
 Uma grande porta bloqueia seu caminho.
 ~
 porta~
-0 2205 2214
+abg 2205 2214
 D5
 Existe um buraco que conduz abaixo.  Evidente não é?
 ~
@@ -341,7 +343,7 @@ PARABÉNS!!
    Existem duas saídas que retrocedem para a busca e pela porta que está a
 leste você retornará para o mundo exterior.
 ~
-22 4 0 0 0 0
+22 c 0
 D1
 O caminho de retorno ao mundo real é a leste.
 ~
@@ -357,7 +359,7 @@ S
 A Sala Preparatória Da Busca~
    Esta sala está exatamente como você a deixou.  Uma saída... abaixo...
 ~
-22 12 0 0 0 0
+22 cd 0
 D5
 A água abaixo de você ainda parece estar bastante ominosa.
 ~
@@ -369,7 +371,7 @@ SORTUDO~
    Esta sala está vazia.  Existe um SORTUDO bloqueando seu caminho a sul.
 Existe um sinal na parede.
 ~
-22 8 0 0 0 0
+22 d 0
 D2
 Existe um SORTUDO bloqueando sua visão.
 ~
@@ -392,13 +394,14 @@ O Mundo Real Termina Aqui~
    A entrada para o Safári no Covil dos Lagartos é para o oeste.
 Existe uma enorme porta de metal ao sul.
 ~
-22 0 0 0 0 0
+22 0 0
 D2
 Uauu, isto se parece muito com uma dessas enormes portas de estúdio!  Eu
 gostaria muito de saber o que poderia estar além disto.
 ~
 porta metal enorme~
-1 -1 3700
+:n 2 a enorme porta de metal
+a -1 3700
 D3
 Este é o caminho de entrada para o Safári.
 ~
@@ -415,7 +418,7 @@ A Loja do Sr. Hooper~
 restaurante.
 Existem muitas coisas interessantes que você pode comprar aqui.
 ~
-22 12 0 0 0 1
+22 dc 1
 D2
 A câmara de suplicação ainda é para o sul.
 ~
@@ -426,4 +429,4 @@ balcão~
 O balcão é agradável e limpo.   O Sr. Hooper olha esperançosamente para você.
 ~
 S
-$~
+$

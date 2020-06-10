@@ -1,24 +1,34 @@
 #9700
 Dentro da Lagoa Escura~
-   Quanto mais fundo vocï¿½ vai, mais fica denso e escuro, ï¿½ praticamente
-impossï¿½vel de se ver qualquer coisa a sua frente.  Para cima e para baixo
-nada hï¿½ alï¿½m da escuridï¿½o.
+   Quanto mais fundo você vai, mais fica denso e escuro, é praticamente
+impossível de se ver qualquer coisa a sua frente.  Para cima e para baixo
+nada há além da escuridão.
 ~
-97 393317 0 0 0 8
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 acfgrs 8
+D U
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 1110
+D D
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9701
 S
 #9701
 Dentro da Lagoa Escura~
-   Esse lugar ï¿½ tï¿½o escuro que provavelmente nem peixes vivem aqui.  Para
-cima e para baixo sï¿½ existe uma imensidï¿½o de ï¿½gua turva.
+   Esse lugar é tão escuro que provavelmente nem peixes vivem aqui.  Para
+cima e para baixo só existe uma imensidão de água turva.
 ~
-97 393317 0 0 0 8
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 acfgrs 8
+D U
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9700
+D D
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9702
@@ -26,99 +36,144 @@ S
 #9702
 Dentro da Lagoa Escura~
    Cada vez mais fundo...  e mais fundo...  o que poderia existir numa
-escuridï¿½o como essa?  Somente um louco poderia nadar tï¿½o fundo.
+escuridão como essa?  Somente um louco poderia nadar tão fundo.
 ~
-97 393317 0 0 0 8
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 acfgrs 8
+D U
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9701
+D D
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9703
 S
 #9703
 Dentro da Lagoa Escura~
-   Nada hï¿½ para se ver, escuridï¿½o intensa e um frio insuportï¿½vel.  Alï¿½m de
-escura essa lagoa estï¿½ se tornando cada vez mais fria....
+   Nada há para se ver, escuridão intensa e um frio insuportável.  Além de
+escura essa lagoa está se tornando cada vez mais fria....
 ~
-97 393317 0 0 0 8
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 acfgrs 8
+D U
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9702
+D D
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9704
 S
 #9704
 Dentro da Lagoa Escura~
-   A melhor idï¿½ia seria subir para a superfï¿½cie, o frio se torna cada vez
-mais terrï¿½vel.  Nada se pode ver tanto para cima como para baixo.
+   A melhor idéia seria subir para a superfície, o frio se torna cada vez
+mais terrível.  Nada se pode ver tanto para cima como para baixo.
 ~
-97 393317 0 0 0 8
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 acfgrs 8
+D U
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9703
+D D
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9705
 S
 #9705
 Dentro da Lagoa Escura~
-   Seu fï¿½lego estï¿½ acabando, triste fim para um aventureiro tï¿½o corajoso...
-Morrer nessa profunda lagoa, solitï¿½rio e sem desvendar os mistï¿½rios nela
+   Seu fôlego está acabando, triste fim para um aventureiro tão corajoso...
+Morrer nessa profunda lagoa, solitário e sem desvendar os mistérios nela
 contidos...  Talvez ainda haja tempo de voltar...
 ~
-97 393317 0 0 0 8
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 acfgrs 8
+D U
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9704
+D D
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9706
 S
 #9706
 Dentro da Lagoa Escura~
-   A melhor idï¿½ia seria subir para a superfï¿½cie, o frio se torna cada vez
-mais terrï¿½vel.  Nada se pode ver tanto para cima como para baixo.
+   A melhor idéia seria subir para a superfície, o frio se torna cada vez
+mais terrível.  Nada se pode ver tanto para cima como para baixo.
 ~
-97 393317 0 0 0 8
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 acfgrs 8
+D U
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9705
+D D
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9707
 S
 #9707
 O Fundo da Lagoa Escura~
-   Finalmente vocï¿½ sente que tocou o fundo dessa horripilante e fria lagoa.
-Nï¿½o ï¿½ possivel ver nada, mas aparentemente hï¿½ um buraco no lado leste da
+   Finalmente você sente que tocou o fundo dessa horripilante e fria lagoa.
+Não é possivel ver nada, mas aparentemente há um buraco no lado leste da
 lagoa, talvez seria melhor voltar a superficie.
 ~
-97 393317 0 0 0 8
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 acfgrs 8
+D U
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9706
+D E
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9708
 S
 #9708
 Um Buraco no Fundo da Lagoa~
-   Este buraco parece levï¿½-lo para cima, estranhamente parece ser uma
-superfï¿½cie...  O frio ainda ï¿½ intenso mas a escuridï¿½o parece terminar.
+   Este buraco parece levá-lo para cima, estranhamente parece ser uma
+superfície...  O frio ainda é intenso mas a escuridão parece terminar.
 ~
-97 393317 0 0 0 8
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 acfgrs 8
+D W
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9707
+D U
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9709
 S
 #9709
-O Subterranï¿½o~
-   Incrï¿½vel!!!  Seus olhos estï¿½o maravilhados, um imenso local subterrï¿½neo
-embaixo dessa lagoa.  Aqui o ambiente ï¿½ mais quente e nï¿½o ï¿½ tï¿½o escuro, ï¿½
-possivel ver algumas labaredas de fogo, talvez aqui seja uma espï¿½cie de
-vulcï¿½o.  Para baixo vocï¿½ vï¿½ o buraco do fundo da lagoa, para leste esta ï¿½rea
-se alonga e ao norte vocï¿½ vï¿½ a entrada de uma grande caverna,
+O Subterranêo~
+   Incrível!!!  Seus olhos estão maravilhados, um imenso local subterrâneo
+embaixo dessa lagoa.  Aqui o ambiente é mais quente e não é tão escuro, é
+possivel ver algumas labaredas de fogo, talvez aqui seja uma espécie de
+vulcão.  Para baixo você vê o buraco do fundo da lagoa, para leste esta área
+se alonga e ao norte você vê a entrada de uma grande caverna,
 ~
-97 393321 0 0 0 0
-D0
+97 adfgrs 0
+D D
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9708
+D E
+Parece ser toda a extensão dessa área.
+~
+~
+0 -1 9714
+D N
 A entrada de uma caverna.
 ~
 ~
@@ -126,13 +181,18 @@ A entrada de uma caverna.
 S
 #9710
 Entrada da Caverna~
-   Vocï¿½ estï¿½ diante da entrada de uma grande caverna.  ï¿½ um tanto estranha
+   Você está diante da entrada de uma grande caverna.  É um tanto estranha
 a entrada dessa caverna, pois parece uma enorme boca esculpida nas rochas.
-Uma larva gosmenta estï¿½ brilhando pelo chï¿½o e pelas paredes da caverna.
-Ao norte a caverna se alonga e a sul vocï¿½ pode ver o corredor do subterrï¿½neo.
+Uma larva gosmenta está brilhando pelo chão e pelas paredes da caverna.
+Ao norte a caverna se alonga e a sul você pode ver o corredor do subterrâneo.
 ~
-97 393321 0 0 0 0
-D0
+97 adfgrs 0
+D S
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9709
+D N
 Parece ser uma caverna.
 ~
 ~
@@ -140,13 +200,18 @@ Parece ser uma caverna.
 S
 #9711
 Caverna da Serpente~
-   Estï¿½ muito escuro aqui, mas ï¿½ possï¿½vel escutar que hï¿½ algo se arrastando
-pelo chï¿½o da caverna.  ï¿½ impossï¿½vel de caminhar sem que se escorregue nessa
-gosma.  Ao leste a caverna continua a se extender e ao sul vocï¿½ pode ver sua 
+   Está muito escuro aqui, mas é possível escutar que há algo se arrastando
+pelo chão da caverna.  É impossível de caminhar sem que se escorregue nessa
+gosma.  Ao leste a caverna continua a se extender e ao sul você pode ver sua 
 entrada.
 ~
-97 393321 0 0 0 0
-D0
+97 adfgrs 0
+D S
+Aparentemente a entrada.
+~
+~
+0 -1 9710
+D E
 O fundo da caverna.
 ~
 ~
@@ -154,55 +219,75 @@ O fundo da caverna.
 S
 #9712
 Caverna da Serpente~
-   Vocï¿½ estï¿½ perto de encontrar algo horrï¿½vel, ï¿½ possï¿½vel imaginar pela
-quantia de larva gosmenta e pelos barulhos estranhos que estï¿½o vindo do
+   Você está perto de encontrar algo horrível, é possível imaginar pela
+quantia de larva gosmenta e pelos barulhos estranhos que estão vindo do
 fundo da caverna. Ao leste parece ser o fundo da caverna e o oeste a 
 caverna continua.
 ~
-97 393321 0 0 0 0
-D0
+97 adfgrs 0
+D W
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9711
+D E
 Parece ser o fundo caverna.
 ~
 ~
 0 -1 9713
 S
-#9713
+#9713 
 O Ninho da Serpente~
-   Nosssaaaa!!!  ï¿½ inacreditï¿½vel!!!  Vocï¿½ estï¿½ diante de uma serpente enorme
-e horrivel.  Com um corpo gigantesco e com trï¿½s cabeï¿½as, felizmente ela nï¿½o
-notou sua presenï¿½a...  Parece que ela nï¿½o consegue vï¿½-lo, talvez seja
-cega...  A ï¿½nica saï¿½da ï¿½ retornar pelo lado oeste, talvez fosse melhor fazer
-isso antes que sua presenï¿½a seja notada.
+   Nosssaaaa!!!  É inacreditável!!!  Você está diante de uma serpente enorme
+e horrivel.  Com um corpo gigantesco e com três cabeças, felizmente ela não
+notou sua presença...  Parece que ela não consegue vê-lo, talvez seja
+cega...  A única saída é retornar pelo lado oeste, talvez fosse melhor fazer
+isso antes que sua presença seja notada.
 ~
-97 393321 0 0 0 0
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 adfgrs 0
+D W
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9712
 S
-#9714
-O Subterrï¿½neo~
-   Vocï¿½ estï¿½ caminhando pelo subterrï¿½neo, aqui tudo ï¿½ magnï¿½fico.  A natureza
-com certeza levou milï¿½nios pra esculpir tudo isso.  No lado leste e oeste
-vocï¿½ a grande extensï¿½o desse subterrï¿½neo.
+#9714 
+O Subterrâneo~ 
+   Você está caminhando pelo subterrâneo, aqui tudo é magnífico.  A natureza
+com certeza levou milênios pra esculpir tudo isso.  No lado leste e oeste
+você a grande extensão desse subterrâneo.
 ~
-97 393321 0 0 0 0
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 adfgrs 0
+D W
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9709
+D E
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9715
 S
 #9715
-O Subterrï¿½neo~
-   O subterrï¿½eo ï¿½ muito curioso e assustador, aqui vocï¿½ nota a forï¿½a da
+O Subterrâneo~
+   O subterrâeo é muito curioso e assustador, aqui você nota a força da
 natureza, mas ao mesmo tempo fica assombrado com o ar assustador e a
-escuridï¿½o.  A oeste o suberrï¿½neo tem continuidade e ao sul vocï¿½ pode
+escuridão.  A oeste o suberrâneo tem continuidade e ao sul você pode
 ver uma pequena passagem e a leste uma sala um tanto quente.
+~  
+97 adfgrs 0
+D W
+Nada é possivel ver além da escuridão.
 ~
-97 393321 0 0 0 0
-D0
+~
+0 -1 9714
+D S
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9717
+D E
 O Fogo Eterno.
 ~
 ~
@@ -210,194 +295,229 @@ O Fogo Eterno.
 S
 #9716
 O Fogo Eterno~
-   Vocï¿½ caiu numa enorme labareda de fogo.  AAAHHhhhhh...... o calor ï¿½ 
+   Você caiu numa enorme labareda de fogo.  AAAHHhhhhh...... o calor é 
 extremo seus equipamentos se derretem e sua pele arde em chamas.....
-Vocï¿½ estï¿½ completamente queimado pelo fogo eterno.....!!!
-~
-97 2 0 0 0 0
+Você está completamente queimado pelo fogo eterno.....!!!
+~  
+97 b 0
 S
 #9717
 Uma Passagem pelas Pedras~
-   Uma pequena e muito estreita passagem, com certeza se vocï¿½ fosse um pouco
-mais gordo jamais passaria por aqui.  Ao norte vocï¿½ segue pelo subterrï¿½neo,
-para baixo vocï¿½ entra ainda mais nessa passagem estreita. 
+   Uma pequena e muito estreita passagem, com certeza se você fosse um pouco
+mais gordo jamais passaria por aqui.  Ao norte você segue pelo subterrâneo,
+para baixo você entra ainda mais nessa passagem estreita. 
 ~
-97 393577 0 0 0 0
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 adfgirs 0
+D N
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9715
+D D
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9718
 S
-#9718
+#9718 
 Uma Passagem pelas Pedras~
-   Cada vez fica mais apertada essa passagem.  Nas paredes hï¿½ muita umidade
-e muitas rochas cortantes.  Para cima parece um pouco mais fï¿½cil de passar e
+   Cada vez fica mais apertada essa passagem.  Nas paredes há muita umidade
+e muitas rochas cortantes.  Para cima parece um pouco mais fácil de passar e
 para leste ela se aprofunda.
 ~
-97 393577 0 0 0 0
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 adfgirs 0
+D U
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9717
+D E
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9719
 S
 #9719
 Uma Passagem pelas Pedras~
-   Com certeza ninguem nunca passou por aqui, e vocï¿½ respirar um pouco mais
-forte ï¿½ capaz de ficar preso.  Para oeste a passagem se alonga e para leste
-parece que hï¿½ uma sala maior.
+   Com certeza ninguem nunca passou por aqui, e você respirar um pouco mais
+forte é capaz de ficar preso.  Para oeste a passagem se alonga e para leste
+parece que há uma sala maior.
 ~
-97 393577 0 0 0 0
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 adfgirs 0
+D W
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9718
+D E
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9720
 S
 #9720
 Uma Passagem pelas Pedras~
-   Um enorme vï¿½o no chï¿½o, vocï¿½ imagina que sua caminhada serï¿½ um pouco mais
-confortï¿½vel daqui para frente.  Para baixo um enorme vï¿½o e para oeste a
+   Um enorme vão no chão, você imagina que sua caminhada será um pouco mais
+confortável daqui para frente.  Para baixo um enorme vão e para oeste a
 passagem estreita por entre as pedras.
 ~
-97 393577 0 0 0 0
-D0
-Parece ser um buraco no chï¿½o.
+97 adfgirs 0
+D W
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9719
+D D
+Parece ser um buraco no chão.
 ~
 ~
 0 -1 9721
 S
 #9721
 Uma Passagem pelas Pedras~
-   Vocï¿½ se escorrega pelas pedras, ï¿½ muito alto para poder voltar.  Sua
-ï¿½nica alternativa ï¿½ continuar descendo.  Vocï¿½ sï¿½ vï¿½ a saï¿½da para baixo.
+   Você se escorrega pelas pedras, é muito alto para poder voltar.  Sua
+única alternativa é continuar descendo.  Você só vê a saída para baixo.
 ~
-97 393577 0 0 0 0
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 adfgirs 0
+D D
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9722
 S
 #9722
 A Margem do Rio das Almas~
-   Vocï¿½ estï¿½ na margem de um rio subterrï¿½neo, as aguas sï¿½o turvas e muito
+   Você está na margem de um rio subterrâneo, as aguas são turvas e muito
 quentes, com certeza qualquer um que caisse nelas seria cozido.  Para o sul
-vocï¿½ vï¿½ o rio de ï¿½guas muitos sujas.
+você vê o rio de águas muitos sujas.
 ~
-97 393321 0 0 0 0
-D0
-Um extenso rio de ï¿½guas escuras.
+97 adfgrs 0
+D S
+Um extenso rio de águas escuras.
 ~
 ~
 0 -1 9723
 S
 #9723
 O Rio das Almas~
-   Um rio de ï¿½guas calmas, porï¿½m tudo aqui ï¿½ assustador, das ï¿½guas sobem
-borbulhas e algo parece se mexer debaixo d'agua.  Ao norte vocï¿½ vï¿½ a margem
+   Um rio de águas calmas, porém tudo aqui é assustador, das águas sobem
+borbulhas e algo parece se mexer debaixo d'agua.  Ao norte você vê a margem
 e a leste o rio continua.
+~ 
+97 adfgrs 7
+D N
+Parece ser uma margem.
 ~
-97 393321 0 0 0 7
-D0
-Um extenso rio de ï¿½guas escuras.
+~
+0 -1 9722
+D E
+Um extenso rio de águas escuras.
 ~
 ~
 0 -1 9724
 S
 #9724
-O Rio das Almas~
-   O rio continua calmo, mas vocï¿½ tem a impressï¿½o de estar sendo
-observado.  Nï¿½o existe correnteza, mas vocï¿½ percebe que ï¿½ impossï¿½vel voltar,
-como se algo arrastasse vocï¿½ cada vez mais para frente.  Sua ï¿½nica saï¿½da ï¿½
+O Rio das Almas~ 
+   O rio continua calmo, mas você tem a impressão de estar sendo
+observado.  Não existe correnteza, mas você percebe que é impossível voltar,
+como se algo arrastasse você cada vez mais para frente.  Sua única saída é
 continuar seguindo pelo lado sul.
 ~
-97 393321 0 0 0 7
-D0
-Um extenso rio de ï¿½guas escuras.
+97 adfgrs 7
+D S
+Um extenso rio de águas escuras.
 ~
 ~
 0 -1 9725
 S
 #9725
 O Rio das Almas~
-   Algo estranho estï¿½ acontecendo... as ï¿½guas claras se movimentam
-extremamente, no meio do rio um rodamoinho se forma, ï¿½ impossï¿½vel de
-voltar... vocï¿½ estï¿½ sendo puxado.  Sua ï¿½nica saï¿½da ï¿½ a curva ao leste.
-~
-97 393321 0 0 0 7
-D0
-Um extenso rio de ï¿½guas escuras.
+   Algo estranho está acontecendo... as águas claras se movimentam
+extremamente, no meio do rio um rodamoinho se forma, é impossível de
+voltar... você está sendo puxado.  Sua única saída é a curva ao leste.
+~  
+97 adfgrs 7
+D E
+Um extenso rio de águas escuras.
 ~
 ~
 0 -1 9726
 S
 #9726
-O Centro do Rodamoinho~
-   Uuaahhhhuuuu!!!  Muita ï¿½gua cai dentro do seu barco, faz ele ficar muito
-pesado.  Esse ï¿½ um caminho sem volta.  Ao norte vocï¿½ vï¿½ a ï¿½nica saï¿½da
-possï¿½vel.
+O Centro do Rodamoinho~ 
+   Uuaahhhhuuuu!!!  Muita água cai dentro do seu barco, faz ele ficar muito
+pesado.  Esse é um caminho sem volta.  Ao norte você vê a única saída
+possível.
 ~
-97 393321 0 0 0 7
-D0
-Um extenso rio de ï¿½guas escuras.
+97 adfgrs 7
+D N
+Um extenso rio de águas escuras.
 ~
 ~
 0 -1 9727
 S
 #9727
-O Rio das Almas~
+O Rio das Almas~  
    Finalmente fora daquele rodamoinho e livre de qualquer perigo, mas
-infelizmente nï¿½o hï¿½ como voltar.  Por todos os lados somente escuridï¿½o.
-Vocï¿½ vï¿½ outra curva ao leste.
+infelizmente não há como voltar.  Por todos os lados somente escuridão.
+Você vê outra curva ao leste.
 ~
-97 393321 0 0 0 7
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 adfgrs 7
+D E
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9728
 S
 #9728
-O Rio das Almas~
-   Essa parte da caverna comeï¿½a a ficar muito estreita, se vocï¿½ estivesse 
-com um barco muito grande, com certeza nï¿½o conseguiria seguir viagem.  Hï¿½
-muitos morcegos por aqui e o cheiro de suas fezes ï¿½ insuportï¿½vel.  A ï¿½nica
-passagem ï¿½ do lado norte, onde hï¿½ uma curva.
+O Rio das Almas~ 
+   Essa parte da caverna começa a ficar muito estreita, se você estivesse 
+com um barco muito grande, com certeza não conseguiria seguir viagem.  Há
+muitos morcegos por aqui e o cheiro de suas fezes é insuportável.  A única
+passagem é do lado norte, onde há uma curva.
 ~
-97 393321 0 0 0 7
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 adfgrs 7
+D N
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9729
 S
 #9729
 Uma Curva no Rio~
-   Finalmente a caverna voltou a ficar mais ampla, suas paredes estï¿½o
-repletas de morcegos mas o ar aqui ï¿½ bem melhor.  No teto da caverna hï¿½
-sinais estranhos talvez alguma civilizaï¿½ï¿½o tenha vivido aqui, mas ï¿½
-impossivel de se ler dessa distï¿½ncia.  Vocï¿½ pode ver um passagem estreita a
+   Finalmente a caverna voltou a ficar mais ampla, suas paredes estão
+repletas de morcegos mas o ar aqui é bem melhor.  No teto da caverna há
+sinais estranhos talvez alguma civilização tenha vivido aqui, mas é
+impossivel de se ler dessa distância.  Você pode ver um passagem estreita a
 leste, saindo do rio.  E ao sul parece que o rio continua.
 ~
-97 393321 0 0 0 7
-D0
+97 adfgrs 7
+D S
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9744
+D E
 Parece ser uma margem.
 ~
 ~
 0 -1 9730
 S
-#9730
+#9730 
 Uma Margem do lado leste do Rio~
-   ï¿½ incrï¿½vel a sensaï¿½ï¿½o que mais alguem estï¿½ aqui.  A impressï¿½o que vocï¿½
-tem ï¿½ que essa ampla caverna ï¿½ tomada por algo mï¿½gico e talvez muito
-malï¿½fico.  No lado leste vocï¿½ vï¿½ uma grande trilha pelas pedras, e a oeste
-o rio continua, e vocï¿½ percebe que parece haver a possibilidade de haver
-uma caverna submersa dentro da ï¿½gua, talvez fosse interessante explora-la.
+   É incrível a sensação que mais alguem está aqui.  A impressão que você
+tem é que essa ampla caverna é tomada por algo mágico e talvez muito
+maléfico.  No lado leste você vê uma grande trilha pelas pedras, e a oeste
+o rio continua, e você percebe que parece haver a possibilidade de haver
+uma caverna submersa dentro da água, talvez fosse interessante explora-la.
 ~
-97 393321 0 0 0 0
-D0
+97 adfgrs 0
+D W
+Um extenso rio de águas escuras.
+~
+~
+0 -1 9729
+D E
 Uma trilha.
 ~
 ~
@@ -405,12 +525,17 @@ Uma trilha.
 S
 #9731
 Uma Trilha na Caverna~
-   Vocï¿½ estï¿½ num caminho estreito por entre as pedras, nas paredes ï¿½ sinal
+   Você está num caminho estreito por entre as pedras, nas paredes é sinal
 de ranhuras, algo estranho passou por aqui.  Ao leste a trilha parece ser
-profunda e a oeste vocï¿½ a margem do rio.
+profunda e a oeste você a margem do rio.
 ~
-97 393577 0 0 0 0
-D0
+97 adfgirs 0
+D W
+Parece ser a margem do rio.
+~
+~
+0 -1 9730
+D E
 A trilha se extende...
 ~
 ~
@@ -418,24 +543,34 @@ A trilha se extende...
 S
 #9732
 A Trilha~
-   O cheiro de fezes de morcego aqui ï¿½ horrï¿½vel, vocï¿½ sente sua narinas
+   O cheiro de fezes de morcego aqui é horrível, você sente sua narinas
 arderem.  Arrrghhhhh...  A oeste e ao sul a trilha continua.
 ~
-97 393577 0 0 0 0
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 adfgirs 0
+D W
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9731
+D S
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9733
 S
 #9733
 A Trilha~
-   Essa trilha ï¿½ muito difï¿½cil de ser percorrida, as pedras estï¿½o cada vez
+   Essa trilha é muito difícil de ser percorrida, as pedras estão cada vez
 mais escorregadias.  A trilha continua ao sul e ao norte.
 ~
-97 393577 0 0 0 0
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 adfgirs 0
+D N
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9732
+D S
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9734
@@ -443,12 +578,17 @@ S
 #9734
 A Trilha~
    Uma trilha estreita e cheia de pedras por todos os lados, como a natureza
-foi te castigar tanto, com certeza apï¿½s sair daqui seus pï¿½s estarï¿½o moï¿½dos!
-Ao norte vocï¿½ pode ver a trilha se aprofundar e ao leste parece ser uma
+foi te castigar tanto, com certeza após sair daqui seus pés estarão moídos!
+Ao norte você pode ver a trilha se aprofundar e ao leste parece ser uma
 clareira.
 ~
-97 393577 0 0 0 0
-D0
+97 adfgirs 0
+D N
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9733
+D E
 Uma certa claridade surge daquele lado.
 ~
 ~
@@ -456,12 +596,17 @@ Uma certa claridade surge daquele lado.
 S
 #9735
 Uma Trilha na Caverna~
-   Aqui ï¿½ uma entrada no meio da rocha, para o que parece ser um trilha.  Um
-cheiro horrï¿½vel emana de dentro dela, com certeza deve estar infestada de
-morcegos.  Ao sul estï¿½ a margem do rio e a oeste o comeï¿½o da trilha.
+   Aqui é uma entrada no meio da rocha, para o que parece ser um trilha.  Um
+cheiro horrível emana de dentro dela, com certeza deve estar infestada de
+morcegos.  Ao sul está a margem do rio e a oeste o começo da trilha.
 ~
-97 393577 0 0 0 0
-D0
+97 adfgirs 0
+D W
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9734
+D S
 A margem do rio.
 ~
 ~
@@ -469,11 +614,11 @@ A margem do rio.
 S
 #9736
 Uma Margem do lado sudeste do Rio~
-   Essa margem do rio ï¿½ bem calma, porï¿½m parece que ao leste o rio acaba bem
-no meio das rochas, serï¿½ que hï¿½ uma passagem no meio das rochas?  A oeste o
-rio aparentemente ï¿½ bem longo e ao norte hï¿½ uma trilha.
-~
-97 393321 0 0 0 0
+   Essa margem do rio é bem calma, porém parece que ao leste o rio acaba bem
+no meio das rochas, será que há uma passagem no meio das rochas?  A oeste o
+rio aparentemente é bem longo e ao norte há uma trilha.
+~ 
+97 adfgrs 0
 D0
 Uma trilha.
 ~
@@ -485,20 +630,25 @@ Parece ser o fim do rio...
 ~
 0 -1 9737
 D3
-Um rio extenso de ï¿½guas muito escuras.
+Um rio extenso de águas muito escuras.
 ~
 ~
 0 -1 9739
 S
 #9737
 O Rio das Almas~
-   Uma sensaï¿½ï¿½o estranha...  parece que o rio estï¿½ chegando ao final.  A
-oeste vocï¿½ pode ver uma grande extensï¿½o de ï¿½gua, mas olhando para dentro da
-agua vocï¿½ vï¿½ o que parece ser uma caverna submersa, e algo estï¿½ se mexendo
-lï¿½ dentro.
+   Uma sensação estranha...  parece que o rio está chegando ao final.  A
+oeste você pode ver uma grande extensão de água, mas olhando para dentro da
+agua você vê o que parece ser uma caverna submersa, e algo está se mexendo
+lá dentro.
 ~
-97 393321 0 0 0 7
-D0
+97 adfgrs 7
+D W
+Um rio extenso e muito sujo.
+~
+~
+0 -1 9736
+D D
 Parece ser... algo estranho.
 ~
 ~
@@ -506,20 +656,25 @@ Parece ser... algo estranho.
 S
 #9738
 A Caverna Submersa~
-   Ohhhh nï¿½ï¿½ï¿½ï¿½oo esta horrï¿½vel caverna nï¿½o tem saï¿½da, parece que vocï¿½
-passarï¿½ o resto de seu dias aqui juntamente com essas horrï¿½veis....
-caveeeiiiirasss.  Seu destino parece estar traï¿½ado!!! 
+   Ohhhh nããããoo esta horrível caverna não tem saída, parece que você
+passará o resto de seu dias aqui juntamente com essas horríveis....
+caveeeiiiirasss.  Seu destino parece estar traçado!!! 
 ~
-97 393321 0 0 0 7
+97 adfgrs 7
 S
 #9739
 O Rio das Almas~
-   Esse rio ï¿½ muito estranho, em determinados trechos sua ï¿½gua ï¿½ limpa
-e cristalina, outros trechos como esse aqui a ï¿½gua ï¿½ extremamente
-turva.  A leste vocï¿½ vï¿½ uma margem do rio e a oeste ele segue seu rumo.
+   Esse rio é muito estranho, em determinados trechos sua água é limpa
+e cristalina, outros trechos como esse aqui a água é extremamente
+turva.  A leste você vê uma margem do rio e a oeste ele segue seu rumo.
 ~
-97 393321 0 0 0 7
-D0
+97 adfgrs 7
+D E
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9736
+D W
 Um rio extenso e muito sujo.
 ~
 ~
@@ -527,11 +682,16 @@ Um rio extenso e muito sujo.
 S
 #9740
 O Rio das Almas~
-   O rio estï¿½ calmo porem suas ï¿½guas sï¿½o muito escuras, a oeste e a leste
-vocï¿½ vï¿½ que ele ï¿½ longo.
+   O rio está calmo porem suas águas são muito escuras, a oeste e a leste
+você vê que ele é longo.
 ~
-97 393321 0 0 0 7
-D0
+97 adfgrs 7
+D E
+Um rio extenso e muito sujo.
+~
+~
+0 -1 9739
+D W
 Um rio extenso e muito sujo.
 ~
 ~
@@ -539,11 +699,16 @@ Um rio extenso e muito sujo.
 S
 #9741
 O Rio das Almas~
-   Esse rio ï¿½ muito extenso, uma pessoa sem seu preparo fï¿½sico com certeza
-nï¿½o conseguiria proseguir.  A leste e oeste o rio avanï¿½a.
+   Esse rio é muito extenso, uma pessoa sem seu preparo físico com certeza
+não conseguiria proseguir.  A leste e oeste o rio avança.
 ~
-97 393321 0 0 0 7
-D0
+97 adfgrs 7
+D E
+Um rio extenso e muito sujo.
+~
+~
+0 -1 9740
+D W
 Um rio extenso e muito sujo.
 ~
 ~
@@ -551,11 +716,16 @@ Um rio extenso e muito sujo.
 S
 #9742
 O Rio das Almas~
-   Vocï¿½ estï¿½ bem perto da margem do rio.  A norte e a leste ele continua com
-suas ï¿½guas escuras.
+   Você está bem perto da margem do rio.  A norte e a leste ele continua com
+suas águas escuras.
 ~
-97 393321 0 0 0 7
-D0
+97 adfgrs 7
+D E
+Um rio extenso e muito sujo.
+~
+~
+0 -1 9741
+D N
 Um rio extenso e muito sujo.
 ~
 ~
@@ -563,11 +733,16 @@ Um rio extenso e muito sujo.
 S
 #9743
 O Rio das Almas~
-   Vocï¿½ navega incansï¿½velmente por essas ï¿½guas.  A norte vocï¿½ a vista uma
-parte prï¿½xima da margem, ao sul o rio continua num trecho muito estreito.
+   Você navega incansávelmente por essas águas.  A norte você a vista uma
+parte próxima da margem, ao sul o rio continua num trecho muito estreito.
 ~
-97 393321 0 0 0 7
-D0
+97 adfgrs 7
+D S
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9709
+D N
 Parece ser uma caverna.
 ~
 ~
@@ -575,24 +750,39 @@ Parece ser uma caverna.
 S
 #9744
 O Rio das Almas~
-   O rio ï¿½ cada ve mais confuso, a impressï¿½o que se tem ï¿½ que nunca acaba.
+   O rio é cada ve mais confuso, a impressão que se tem é que nunca acaba.
 Do lado sul ele segue longamente, ao norte parece haver uma pequena curva e
 ao oeste existe um pequeno canal.
 ~
-97 393321 0 0 0 7
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 adfgrs 7
+D S
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9743
+D N
+Parece ser uma curva.
+~
+~
+0 -1 9729
+D W
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9745
 S
 #9745
 Um Pequeno Canal~
-   Vocï¿½ estï¿½ num pequeno e estreito canal, a leste vocï¿½ avista o rio extenso
+   Você está num pequeno e estreito canal, a leste você avista o rio extenso
 e ao oeste parece ser o final desse pequeno canal.
 ~
-97 393577 0 0 0 7
-D0
+97 adfgirs 7
+D E
+Um rio extenso e muito sujo.
+~
+~
+0 -1 9744
+D W
 Um pequeno canal.
 ~
 ~
@@ -600,12 +790,17 @@ Um pequeno canal.
 S
 #9746
 Um Pequeno Canal~
-   Parece ser o fim desse pequeno canal, aqui a agua ï¿½ cristalina...  que
-estranho!  Vocï¿½ pode ver uma margem aparentemente segura do lado sul, do
+   Parece ser o fim desse pequeno canal, aqui a agua é cristalina...  que
+estranho!  Você pode ver uma margem aparentemente segura do lado sul, do
 lado leste o canal tem continuidade.
 ~
-97 393321 0 0 0 7
-D0
+97 adfgrs 7
+D E
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9745
+D S
 Parece ser uma margem do rio.
 ~
 ~
@@ -613,26 +808,41 @@ Parece ser uma margem do rio.
 S
 #9747
 A Margem Sudoeste do Rio~
-   Vocï¿½ estï¿½ numa margem muito boa para desembarcar, aqui o solo ï¿½ repleto
-de areia.  Ao norte vocï¿½ vï¿½ um pequeno canal, ao sul hï¿½ uma entrada bem
-pequena nas rochas e a oeste hï¿½ um caminho arenoso.
+   Você está numa margem muito boa para desembarcar, aqui o solo é repleto
+de areia.  Ao norte você vê um pequeno canal, ao sul há uma entrada bem
+pequena nas rochas e a oeste há um caminho arenoso.
 ~
-97 393321 0 0 0 0
-D0
-Nada ï¿½ possivel ver alï¿½m da escuridï¿½o.
+97 adfgrs 0
+D N
+Parece ser um pequeno canal.
+~
+~
+0 -1 9746
+D S
+Parece ser uma pequena entrada no meio das rochas.
+~
+~
+0 -1 9717
+D W
+Nada é possivel ver além da escuridão.
 ~
 ~
 0 -1 9748
 S
 #9748
 Um Caminho~
-   Vocï¿½ estï¿½ num caminho muito arenoso, o chï¿½o estï¿½ repleto de uma material
-estranho, como se fosse lava vulcï¿½nica, porï¿½m muito menos quente.  A leste
-estï¿½ a margem de um canal do rio e ao sul vocï¿½ pode ver o camiho arenoso
-seguir por entre a escuridï¿½o e as pedras.
+   Você está num caminho muito arenoso, o chão está repleto de uma material
+estranho, como se fosse lava vulcânica, porém muito menos quente.  A leste
+está a margem de um canal do rio e ao sul você pode ver o camiho arenoso
+seguir por entre a escuridão e as pedras.
 ~
-97 393321 0 0 0 0
-D0
+97 adfgrs 0
+D E
+Nada é possivel ver além da pequena margem do rio.
+~
+~
+0 -1 9747
+D S
 Parece ser um caminho.
 ~
 ~
@@ -640,75 +850,95 @@ Parece ser um caminho.
 S
 #9749
 Um Caminho~
-   Seus pï¿½s sentem o calor que emana do centro da terra.  Ao norte vocï¿½ vï¿½
-toda a extensï¿½o do caminho e ao oeste vocï¿½ pode ver uma enorme formaï¿½ï¿½o
-rochosa, distribuida de forma que parece um orï¿½culo feito em pedras.
+   Seus pés sentem o calor que emana do centro da terra.  Ao norte você vê
+toda a extensão do caminho e ao oeste você pode ver uma enorme formação
+rochosa, distribuida de forma que parece um oráculo feito em pedras.
+~ 
+97 adfgrs 0
+D N
+Um pequeno caminho.
 ~
-97 393321 0 0 0 0
-D0
-Parece ser um um grande orï¿½culo sacrado.
+~
+0 -1 9748
+D W
+Parece ser um um grande oráculo sacrado.
 ~
 ~
 0 -1 9750
 S
 #9750
-O Portal da Caverna do Dragï¿½o~
-   Vocï¿½ estï¿½ diante de uma grande portal, um enorme portï¿½o de madeira separa
-vocï¿½ do mundo desconhecido.  Desenhos e inscriï¿½ï¿½es muito antigas cincundam
-todo o batente desse enorme portï¿½o.  A oeste vocï¿½ entra pelo portal do
-desconhecido e a leste vocï¿½ retorna ao seu caminho.
+O Portal da Caverna do Dragão~
+   Você está diante de uma grande portal, um enorme portão de madeira separa
+você do mundo desconhecido.  Desenhos e inscrições muito antigas cincundam
+todo o batente desse enorme portão.  A oeste você entra pelo portal do
+desconhecido e a leste você retorna ao seu caminho.
 ~
-97 393321 0 0 0 0
-D0
+97 adfgrs 0
+D E
+Apenas um caminho.
+~
+~
+0 -1 9749
+D W
 Um grande portal feito de pedras muito antigas.
 ~
 ~
 0 -1 9751
 S
 #9751
-O Orï¿½culo da Sabedoria~
-   Vocï¿½ estï¿½ num grande salï¿½o dessa caverna.  Aqui as rochas estï¿½o
-distribuidas formando um grande circulo e acima de sua cabeï¿½a se forma um
-grande anel rochoso.  Hï¿½ uma grande pedra com inscriï¿½ï¿½es muito antigas e
-aparentemente importantes.  A oeste vocï¿½ cruza o orï¿½culo seguindo um caminho
-escuro e a leste vocï¿½ retorna ao portal.
+O Oráculo da Sabedoria~
+   Você está num grande salão dessa caverna.  Aqui as rochas estão
+distribuidas formando um grande circulo e acima de sua cabeça se forma um
+grande anel rochoso.  Há uma grande pedra com inscrições muito antigas e
+aparentemente importantes.  A oeste você cruza o oráculo seguindo um caminho
+escuro e a leste você retorna ao portal.
 ~
-97 393321 0 0 0 0
-D0
-A saï¿½da do orï¿½culo.
+97 adfgrs 0
+D E
+Um grande portal feito de pedras muito antigas.
+~
+~
+0 -1 9764
+D W
+A saída do oráculo.
 ~
 ~
 0 -1 9752
 E
-inscriï¿½ï¿½o inscriï¿½ï¿½es~
-Uma inscriï¿½ï¿½o muito antiga esculpida numa grande pedra diz:
-&R"Somente os sï¿½bios teem o entendimento, antes de entrar volte e faï¿½a
-reverï¿½ncia ao seu deus, pois os fiï¿½s ganharï¿½o conhecimento e glï¿½ria."&n
+inscrição inscrições~
+Uma inscrição muito antiga esculpida numa grande pedra diz:
+&R"Somente os sábios teem o entendimento, antes de entrar volte e faça
+reverência ao seu deus, pois os fiés ganharão conhecimento e glória."&n
 ~
 S
 #9752
 A Grande Caverna~
    Cuidado!!!  Uma grande pedra rola e tampa sua passagem de retorno, pelo
-visto vocï¿½ agora nï¿½o tem mais escolha.  Vocï¿½ estï¿½ dentro de uma grande
-caverna sua ï¿½nica saida ï¿½ seguir a oeste e adentrar cada vez mais dentro
+visto você agora não tem mais escolha.  Você está dentro de uma grande
+caverna sua única saida é seguir a oeste e adentrar cada vez mais dentro
 dessa caverna.
 ~
-97 393321 0 0 0 0
-D0
-Nada se pode ver alï¿½m da escuridï¿½o.
+97 adfgrs 0
+D W
+Nada se pode ver além da escuridão.
 ~
 ~
 0 -1 9753
 S
 #9753
 A Grande Caverna~
-   Como ao longo de todo o seu caminho, aqui nï¿½o ï¿½ diferente, muitos
-morcegos voam e derrubam fezes em sua cabeï¿½a, arrghhh... que horrivel!
-A leste vocï¿½ retorna ao comeï¿½o da caverna e acima vocï¿½ vï¿½ uma pequena
+   Como ao longo de todo o seu caminho, aqui não é diferente, muitos
+morcegos voam e derrubam fezes em sua cabeça, arrghhh... que horrivel!
+A leste você retorna ao começo da caverna e acima você vê uma pequena
 passagem.
 ~
-97 393321 0 0 0 0
-D0
+97 adfgrs 0
+D E
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9752
+D U
 Parece ser uma pequena entrada nas rochas.
 ~
 ~
@@ -716,107 +946,151 @@ Parece ser uma pequena entrada nas rochas.
 S
 #9754
 Uma Pequena Passagem~
-   Esta pequena passagem ï¿½ muito estreita e escoprregadia, se vocï¿½ cair
-daqui com certeza nï¿½o serï¿½ muito agradï¿½vel.  Para cima a passagem fica cada
-vez mais lisa e perigosa e para baixo estï¿½ a grande caverna.
+   Esta pequena passagem é muito estreita e escoprregadia, se você cair
+daqui com certeza não será muito agradável.  Para cima a passagem fica cada
+vez mais lisa e perigosa e para baixo está a grande caverna.
 ~
-97 393577 0 0 0 0
-D0
-Nada se pode ver alï¿½m da escuridï¿½o.
+97 adfgirs 0
+D D
+Um pequena entrada...
+~
+~
+0 -1 9753
+D U
+Nada se pode ver além da escuridão.
 ~
 ~
 0 -1 9755
 S
 #9755
 Fim da Pequena Passagem~
-   Finalmente vocï¿½ estï¿½ chegando ao fim dessa pequena passagem.  Para baixo
-a passagem se estende e pra cima vocï¿½ percebe que tem acesso a uma outra
-grande cï¿½mara.
+   Finalmente você está chegando ao fim dessa pequena passagem.  Para baixo
+a passagem se estende e pra cima você percebe que tem acesso a uma outra
+grande câmara.
 ~
-97 393577 0 0 0 0
-D0
-Uma grande cï¿½mara.
+97 adfgirs 0
+D D
+Nada é possivel ver além da escuridão.
+~
+~
+0 -1 9754
+D U
+Uma grande câmara.
 ~
 ~
 0 -1 9756
 S
 #9756
-A Grande Cï¿½mara~
-   Vocï¿½ estï¿½ numa grande cï¿½mara, hï¿½ morcegos por todo lado.  Vocï¿½ tem a
-sensaï¿½ï¿½o que estï¿½ observado, como se essas pedras tivesse vida prï¿½pria.  A
-leste a grande cï¿½mara continua e para baixo hï¿½ uma pequena passagem.
+A Grande Câmara~
+   Você está numa grande câmara, há morcegos por todo lado.  Você tem a
+sensação que está observado, como se essas pedras tivesse vida própria.  A
+leste a grande câmara continua e para baixo há uma pequena passagem.
 ~
-97 393321 0 0 0 0
-D0
-A grande cï¿½mara.
+97 adfgrs 0
+D D
+A pequena passagem.
+~
+~
+0 -1 9755
+D E
+A grande câmara.
 ~
 ~
 0 -1 9757
 S
 #9757
-A Grande Cï¿½mara~
-   Aqui ï¿½ tudo estranho, a impressï¿½o que vocï¿½ tem ï¿½ que as pedras se
-mexem...  Vocï¿½ parece ter visto essa pedra lï¿½ na entrada!!!  Para oeste e
-para norte a grande cï¿½mara continua... repleta de pedras estranhas!
+A Grande Câmara~
+   Aqui é tudo estranho, a impressão que você tem é que as pedras se
+mexem...  Você parece ter visto essa pedra lá na entrada!!!  Para oeste e
+para norte a grande câmara continua... repleta de pedras estranhas!
 ~
-97 393321 0 0 0 0
-D0
-A grande cï¿½mara.
+97 adfgrs 0
+D W
+A grande câmara.
+~
+~
+0 -1 9756
+D N
+A grande câmara.
 ~
 ~
 0 -1 9758
 S
 #9758
-A Grande Cï¿½mara~
-   Hï¿½ pedras por todos os lados, cada uma mais estranha que a outra, vocï¿½
+A Grande Câmara~
+   Há pedras por todos os lados, cada uma mais estranha que a outra, você
 agora pode notar elas parecem... ser guerreiros petrificados!!!  Ao sul e
-ao norte a grande cï¿½mara se alonga.
+ao norte a grande câmara se alonga.
 ~
-97 393321 0 0 0 0
-D0
-A grande cï¿½mara.
+97 adfgrs 0
+D S
+A grande câmara.
+~
+~
+0 -1 9757
+D N
+A grande câmara.
 ~
 ~
 0 -1 9759
 S
 #9759
-A Grande Cï¿½mara~
-   Um pequeno altar estï¿½ aqui.  ï¿½ estranho, um altar nesse lugar?  Mas
+A Grande Câmara~
+   Um pequeno altar está aqui.  É estranho, um altar nesse lugar?  Mas
 parece que alguem utiliza essa mesa de pedras para fazer reverencias a algum
-deus.  Ao sul e a oeste vocï¿½ pode ver pedras.
+deus.  Ao sul e a oeste você pode ver pedras.
 ~
-97 393321 0 0 0 0
-D0
-A grande cï¿½mara.
+97 adfgrs 0
+D S
+A grande câmara.
+~
+~
+0 -1 9758
+D W
+A grande câmara.
 ~
 ~
 0 -1 9760
 S
 #9760
-A Grande Cï¿½mara~
-   Uma grande entrada estï¿½ a sua frente.  Hï¿½ uma enorme porta aparentemente
-feita de pedra, com inscriï¿½ï¿½es muito antigas nela.  A leste vocï¿½ vï¿½ a grande
-cï¿½mara e norte a grande porta de pedra.
+A Grande Câmara~
+   Uma grande entrada está a sua frente.  Há uma enorme porta aparentemente
+feita de pedra, com inscrições muito antigas nela.  A leste você vê a grande
+câmara e norte a grande porta de pedra.
 ~
-97 393321 0 0 0 0
-D0
-As portas sï¿½o feitas de pedras muito grandes e extremamente pesadas.
-Nï¿½o ï¿½ possï¿½vel imaginar o pode existir de tï¿½o valioso assim por de
-trï¿½s delas.
+97 adfgrs 0
+D E
+A grande câmara.
+~
+~
+0 -1 9759
+D N
+As portas são feitas de pedras muito grandes e extremamente pesadas.
+Não é possível imaginar o pode existir de tão valioso assim por de
+trás delas.
 ~
 portas pedras~
+:n 2 a porta de pedra
 1 2 9761
 S
 #9761
 Sala dos Ossos~
-   Arrgghhhh...!  Que horrï¿½vel!  Vocï¿½ estï¿½ numa sala repleta de ossos, hï¿½
-crï¿½nios e esqueletos por todos os lados.  Aparentemente foram mortos em
-batalha pois hï¿½ muitas armas jogadas por todos os lados.  Ao sul a grande
-porta de pedra estï¿½ aparentemente trancada e a norte a sala continua repleta
+   Arrgghhhh...!  Que horrível!  Você está numa sala repleta de ossos, há
+crânios e esqueletos por todos os lados.  Aparentemente foram mortos em
+batalha pois há muitas armas jogadas por todos os lados.  Ao sul a grande
+porta de pedra está aparentemente trancada e a norte a sala continua repleta
 de ossos.
 ~
-97 393321 0 0 0 0
-D0
+97 adfgrs 0
+D S
+As portas são feitas e pedras muito grandes e extremamente pesadas.
+Não é possível imaginar o pode existir de tão valioso assim por de
+trás delas.
+~
+portas pedras~
+:n 2 a porta de pedra
+1 -1 9760
+D N
 A grande sala.
 ~
 ~
@@ -824,46 +1098,56 @@ A grande sala.
 S
 #9762
 Sala dos Ossos~
-   Cada vez mais a sensaï¿½ï¿½o de perigo estï¿½ no ar, talvez fosse melhor orar
-pra seu deus...  Ao sul vocï¿½ retorna e a oeste vocï¿½ uma pequena entrada para
+   Cada vez mais a sensação de perigo está no ar, talvez fosse melhor orar
+pra seu deus...  Ao sul você retorna e a oeste você uma pequena entrada para
 uma outra sala.  Aparentemente uma luz emana dessa sala.
 ~
-97 393321 0 0 0 0
-D0
+97 adfgrs 0
+D S
+A grande sala.
+~
+~
+0 -1 9761
+D W
 Um pequena e intrigante sala.
 ~
 ~
 0 -1 9763
 S
 #9763
-Sala dos Sacrifï¿½cios~
-   Vocï¿½ esta diante do altar do grande Deus do reino das pedras.  ï¿½
+Sala dos Sacrifícios~
+   Você esta diante do altar do grande Deus do reino das pedras.  É
 impossivel deixar de ver de onde vem a luz que ilumina a sala: um amontoado
-de corpos que queimam num pedestal feito em ouro.  A passagem por onde vocï¿½
-entrou parece ter sumido magicamente.  O cheiro de carne queimada ï¿½
-insuportï¿½vel... parece que vocï¿½ nï¿½o foi tï¿½o sabio como teve oportunidade de
-ser.  Sua ï¿½nica saï¿½da ï¿½ um portal de luzes que emite muita claridade a
-oeste, porï¿½m ï¿½ impossï¿½vel olhar para ele.
+de corpos que queimam num pedestal feito em ouro.  A passagem por onde você
+entrou parece ter sumido magicamente.  O cheiro de carne queimada é
+insuportável... parece que você não foi tão sabio como teve oportunidade de
+ser.  Sua única saída é um portal de luzes que emite muita claridade a
+oeste, porém é impossível olhar para ele.
 ~
-97 393321 0 0 0 0
-D0
+97 adfgrs 0
+D W
 Um portal de luzes capaz de cega-lo.
 ~
 ~
 0 -1 9800
 S
 #9764
-O Portal da Caverna do Dragï¿½o~
-   Vocï¿½ estï¿½ diante de uma grande portal, um enorme portï¿½o de madeira separa
-vocï¿½ do mundo desconhecido.  Desenhos e inscriï¿½ï¿½es muito antigas cincundam
-todo o batente desse enorme portï¿½o.  A oeste vocï¿½ entra pelo portal do
-desconhecido e a leste vocï¿½ retorna ao seu caminho.
+O Portal da Caverna do Dragão~
+   Você está diante de uma grande portal, um enorme portão de madeira separa
+você do mundo desconhecido.  Desenhos e inscrições muito antigas cincundam
+todo o batente desse enorme portão.  A oeste você entra pelo portal do
+desconhecido e a leste você retorna ao seu caminho.
 ~
-97 393321 0 0 0 0
-D0
+97 adfgrs 0
+D E
+Apenas um caminho.
+~
+~
+0 -1 9749
+D W
 Um grande portal feito de pedras muito antigas.
 ~
 ~
 0 -1 9854
 S
-$~
+$

@@ -4,7 +4,11 @@ Os Degraus que Descem Para o Mar~
 acima de você, os degraus começam, enquanto para baixo, os degraus parecem 
 continuar eternamente.
 ~
-132 4 0 0 0 5
+132 c 5
+D4
+~
+~
+0 -1 -1
 D5
 ~
 ~
@@ -16,7 +20,7 @@ Descendo os Degraus Rochosos~
 do penhasco, dependendo para onde você vá.  Parece que talvez exista alguma 
 espécie de caverna lá embaixo.
 ~
-132 4 0 0 0 5
+132 c 5
 D4
 ~
 ~
@@ -32,7 +36,11 @@ A Face do Penhasco~
 Parece que há uma abertura na rocha à leste.  Talvez seja apenas uma fenda 
 simples, mas e depois, quem sabe?
 ~
-132 4 0 0 0 5
+132 c 5
+D1
+~
+~
+0 -1 -1
 D4
 ~
 ~
@@ -48,7 +56,7 @@ Nos Degraus~
 cheiro do mar, e agitando suas roupas.  Você começa a sentir que o seu dia 
 vai melhorar - o mar pode fazer isso com as pessoas.
 ~
-132 4 0 0 0 5
+132 c 5
 D4
 ~
 ~
@@ -63,7 +71,7 @@ A Base dos Degraus~
    Você está na base de uma série de degraus que levam ao topo de um 
 penhasco.  A praia se extende para leste e oeste além da sua visão.
 ~
-132 0 0 0 0 5
+132 0 5
 D1
 ~
 ~
@@ -85,19 +93,19 @@ alisando a areia da praia.  Para oeste você nota algumas rochas
 sobressaindo a areia e o mar.  Para o leste a praia segue plana até o 
 horizonte.
 ~
-132 0 0 0 0 2
+132 0 2
 D1
 ~
 ~
 0 -1 13204
-D2
-~
-~
-0 -1 4293
 D3
 ~
 ~
 0 -1 13206
+D2
+~
+~
+0 -1 4293
 S
 #13206
 Ao Longo da Praia~
@@ -107,7 +115,7 @@ caminho por aqui, é melhor olhar onde pisa.  Você nota que neste lugar há
 um pedaço de madeira parcialmente enterrado na areia.  Para oeste 
 encontra-se mais pedras pela praia, enquanto ao leste tudo é mais plano.
 ~
-132 0 0 0 0 2
+132 0 2
 D1
 ~
 ~
@@ -116,6 +124,11 @@ D3
 ~
 ~
 0 -1 13211
+D5
+~
+madeira~
+:n 1 um pedaço de madeira
+a -1 -1
 E
 madeira~
 Olhando mais de perto, você consegue notar algumas inscrições gravadas na 
@@ -131,7 +144,7 @@ cidade que fica em um vale próximo ao oceano. Para oeste a praia vai
 ficando cada vez mais cheia de pedras e difícil de andar.  Uma série de 
 degraus levam ao topo de um penhasco a oeste de você.
 ~
-132 0 0 0 0 2
+132 0 2
 D1
 ~
 ~
@@ -148,7 +161,7 @@ também um largo cais, onde você pode ver pequenos pontos no horizonte do
 mar, que parecem ser navios da cidade.  Para oeste você pode continuar ao 
 longo da praia.
 ~
-132 0 0 0 0 2
+132 0 2
 D1
 ~
 ~
@@ -166,7 +179,7 @@ multidão vinda de lá, entretanto o tráfego na praia está calmo.  Deve haver
 uma entrada para a cidade em algum lugar.  Para oeste a praia continua e 
 você pode ver o horizonte.
 ~
-132 0 0 0 0 2
+132 0 2
 D1
 ~
 ~
@@ -183,7 +196,7 @@ descrita como um planalto acima do oceano cercado por muralhas.  Para o
 norte encontra-se o penhasco, e existe um pequeno caminho a nordeste daqui. 
 Para oeste o caminho continua ao longo da praia por uma longa distância.
 ~
-132 0 0 0 0 2
+132 0 2
 D0
 ~
 ~
@@ -198,7 +211,7 @@ Ao Longo da Praia Rochosa~
    O caminho aqui é muito rochoso para você continuar, entretanto você pode 
 perceber que há um caminho a sudoeste.
 ~
-132 0 0 0 0 2
+132 0 2
 D1
 Você vê mais praia.
 ~
@@ -215,7 +228,7 @@ Caminho Rochoso~
 pouco longe no final do quebra-mar, e sua luz gentil guia os navegadores 
 por este mar rochoso.
 ~
-132 0 0 0 0 3
+132 0 3
 D1
 ~
 ~
@@ -230,7 +243,7 @@ Caminho Rochoso~
    O caminho continua a sudoeste até o farol, e você pode voltar para a 
 praia menos rochosa.
 ~
-132 0 0 0 0 3
+132 0 3
 D0
 ~
 ~
@@ -246,7 +259,7 @@ Caminho Rochoso~
 areia.  O farol está no final do quebra-mar, seguindo a oeste.  Para o 
 leste, o caminho faz curvas ao longo da praia.
 ~
-132 0 0 0 0 3
+132 0 3
 D1
 ~
 ~
@@ -261,7 +274,7 @@ Caminho Rochoso no Quebra-mar do Takker~
    O caminho continua para seguindo para o leste e oeste.  O quebra-mar 
 segue sempre o caminho ao sul, com um farol bastante resistente em seu fim.
 ~
-132 0 0 0 0 3
+132 0 3
 D1
 ~
 ~
@@ -281,7 +294,7 @@ Caminho Rochoso~
 Logo a leste, o quebra-mar hospeda um farol.  À oeste há apenas rochas, 
 onde pode haver alguma caverna.
 ~
-132 0 0 0 0 3
+132 0 3
 D1
 ~
 ~
@@ -296,7 +309,7 @@ Quebra-mar do Takker~
    O quebra-mar leva ao sul, em direção ao mar, terminando em um farol.  Ao 
 longo do seu caminho, você pode ver alguns pescadores tentando pescar algo.
 ~
-132 0 0 0 0 3
+132 0 3
 D0
 ~
 ~
@@ -312,7 +325,7 @@ Quebra-mar do Takker~
 confortáveis, enquanto contam divertidas histórias sobre 'os peixes que já 
 pegaram', e tentando pescar algo.
 ~
-132 0 0 0 0 2
+132 0 2
 D0
 ~
 ~
@@ -327,7 +340,7 @@ Próximo ao Farol~
    Você está na entrada do farol.  Na parede redonda ao sul, há uma porta 
 de carvalho, e para o norte, o quebra-mar leva à ilha.
 ~
-132 0 0 0 0 2
+132 0 2
 D0
 ~
 ~
@@ -335,7 +348,8 @@ D0
 D2
 ~
 porta~
-1 -1 13220
+:n 2 uma porta de carvalho
+a -1 13220
 S
 #13220
 Dentro do Farol~
@@ -345,11 +359,12 @@ sentir o cheiro do fogo crepitando na lareira.  Um cachorro adoraria estar
 ali por perto.  Você consegue também ouvir as risadas de uma jovem, vindas 
 do quarto ao lado.
 ~
-132 12 0 0 0 0
+132 cd 0
 D0
 ~
 porta~
-1 -1 13219
+:n 2 uma porta
+a -1 13219
 D2
 ~
 ~
@@ -365,7 +380,7 @@ pode ver quartos com algumas das camas da família.  Os dois quartos tem
 portas, mas ambas estão escancaradas.  Uma escada em espiral leva ao topo 
 do Farol, onde o Guardião deve passar uma grande parte de seu tempo.
 ~
-132 8 0 0 0 0
+132 d 0
 D0
 ~
 ~
@@ -373,11 +388,13 @@ D0
 D1
 ~
 porta~
-1 -1 13222
+:n 2 uma porta
+a -1 13222
 D3
 ~
 porta madeira~
-1 -1 13224
+:n 2 uma porta de madeira
+a -1 13224
 D4
 ~
 ~
@@ -389,7 +406,7 @@ O Quarto do Guardião~
 cetim.  Uma penteadeira de mogno com espelho, e uma escrivaninha podem ser 
 vistas na sala também.  Este Guardião do Farol parece ser bem vaidoso.
 ~
-132 8 0 0 0 0
+132 d 0
 D3
 ~
 ~
@@ -397,7 +414,8 @@ D3
 D5
 ~
 porta~
-0 13201 13225
+:n 2 a porta secreta
+abcd 13201 13225
 S
 #13223
 A Sala do Farol~
@@ -407,7 +425,7 @@ guardam ferramentas e oléos que servem para manter a maquinaria toda
 funcionando, assim podendo-se usar o farol com precisão, e evitar que os 
 navios se choquem com as rochas.
 ~
-132 8 0 0 0 0
+132 d 0
 D5
 ~
 ~
@@ -419,7 +437,7 @@ O Quarto da Filha do Guardião do Farol~
 cobertores rosa, uma impressionate coleção de bonecas e muitos outros 
 brinquedinhos nas prateleiras, tudo organizado por ordem de cores.
 ~
-132 8 0 0 0 0
+132 d 0
 D1
 ~
 ~
@@ -435,12 +453,13 @@ operações, com materiais de operação e alguns frascos borbulhantes.  Você
 realmente pretende descer até este quarto e conhecer o "bondoso" Guardião 
 do Farol?
 ~
-132 8 0 0 0 0
+132 d 0
 D4
 Uma escada em espiral leva até a porta do alçapão.
 ~
 porta~
-0 13201 13222
+:n 2 a porta secreta
+abcd 13201 13222
 D5
 ~
 ~
@@ -454,23 +473,27 @@ todos parecem ter uma coisa na mente - a tortura e o sofrimento dos
 prisioneiros!  Parece que este Guardião do Farol é um pouco mais do que 
 pensam sobre ele...
 ~
-132 8 0 0 0 0
+132 d 0
 D0
 ~
 cela~
-1 13202 13227
+:n 2 a cela
+abc 13202 13227
 D1
 ~
 cela~
-1 13202 13228
+:n 2 a cela
+abc 13202 13228
 D2
 ~
 cela~
-1 13202 13229
+:n 2 a cela
+abc 13202 13229
 D3
 ~
 cela~
-1 13202 13230
+:n 2 a cela
+abc 13202 13230
 D4
 ~
 ~
@@ -483,11 +506,12 @@ natureza aqui é outra; este lugar é mais arrumado.  Uma larga cama de
 madeira e ferro toma conta do quarto inteiro, e vários aparelhos de 
 tortura estão espalhados pela cama.
 ~
-132 8 0 0 0 0
+132 d 0
 D2
 ~
 cela~
-1 13202 13226
+:n 2 a cela
+abc 13202 13226
 E
 cama~
 Parece muito confortável.
@@ -498,40 +522,43 @@ A Cela~
    Esta cela é fria e grotesca, totalmente desconfortável.  Há um pequeno 
 buraco no canto da cela, onde devem ser feitas as necessidades dos presos.
 ~
-132 8 0 0 0 0
+132 d 0
 D3
 ~
 cela~
-1 13202 13226
+:n 2 a cela
+abc 13202 13226
 S
 #13229
 A Cela~
    Esta cela é fria e grotesca, totalmente desconfortável.  Há um pequeno 
 buraco no canto da cela, onde devem ser feitas as necessidades dos presos.
 ~
-132 8 0 0 0 0
+132 d 0
 D0
 ~
 cela~
-1 13202 13226
+:n 2 a cela
+abc 13202 13226
 S
 #13230
 A Cela~
    Esta cela é fria e grotesca, totalmente desconfortável.  Há um pequeno 
 buraco no canto da cela, onde devem ser feitas as necessidades dos presos.
 ~
-132 8 0 0 0 0
+132 d 0
 D1
 ~
 cela~
-1 13202 13226
+:n 2 a cela
+abc 13202 13226
 S
 #13231
 Caminho Rochoso~
    O caminho continua ao longo da praia, cheio de rochas.  Você pode seguir 
 para leste ou oeste.
 ~
-132 0 0 0 0 2
+132 0 2
 D1
 ~
 ~
@@ -548,7 +575,7 @@ caverna.  A entrada é larga, parecendo ter uns trinta pés de altura.  Não
 parece que alguém possa morar aqui, talvez a água do mar alcance a caverna, 
 mas nunca se sabe...
 ~
-132 0 0 0 0 2
+132 0 2
 D0
 ~
 ~
@@ -569,7 +596,7 @@ até os seus confins, mas para isso teria que se molhar.  Quando você
 observa a água gelada e a escuridão da caverna percebe que explora-la não é 
 uma ideia muito inteligente.
 ~
-132 4 0 0 0 2
+132 c 2
 D0
 ~
 ~
@@ -585,7 +612,7 @@ A Toca do Kracken~
 um determinado ponto.  TODA a água esta borbulhando em razão de alguma 
 força monstruosa.
 ~
-132 8 0 0 0 6
+132 d 6
 D2
 ~
 ~
@@ -597,7 +624,7 @@ O Fim do Caminho Rochoso~
 encontra-se o mar, e a oeste você tem a visão de uma rocha coberta de 
 musgos.  Ao norte o caminho está obstruido.
 ~
-132 0 0 0 0 2
+132 0 2
 D1
 ~
 ~
@@ -609,7 +636,12 @@ O Fim do Caminho~
 ainda há o caminho da praia à oeste e leste daqui.  É estranho pensar que 
 um caminho possa acabar assim, de repente, sem levar a lugar algum...
 ~
-132 8 0 0 0 0
+132 d 0
+D0
+~
+rocha~
+:n 2 a rocha
+abcd -1 -1
 D2
 ~
 ~
@@ -621,3 +653,4 @@ pudesse abrí-la...  Mas como?
 ~
 S
 $~
+

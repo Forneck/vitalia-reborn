@@ -4,7 +4,7 @@ Entrada da Vila dos Gnomos~
 leste.  Vindo do leste você ouve os sons vindos de uma pequena vila.  Há uma
 placa de aviso aqui.
 ~
-16 4 0 0 0 2
+16 c 2
 D0
 ~
 ~
@@ -24,7 +24,7 @@ Um Caminho Empoeirado~
    Este é o caminho que conduz até o vilarejo. Ele segue, indo para leste e
 oeste, e seguindo para o norte, encontra-se uma pequena casa.
 ~
-16 0 0 0 0 1
+16 0 1
 D0
 Você vê uma pequena casa.
 ~
@@ -46,7 +46,7 @@ Uma estrada na Vila~
    Esta estrada segue indo de norte a sul e passando pelo centro da vila.
 Algumas pessoas estao por ali, mas não muitas.
 ~
-16 0 0 0 0 1
+16 0 1
 D0
 Você vê uma estrada.
 ~
@@ -74,7 +74,7 @@ Um caminho empoeirado~
 Casas podem ser vistas ao norte e sul, enquanto o caminho continua a leste.
 Um aviso pode ser visto aqui.
 ~
-16 0 0 0 0 1
+16 0 1
 D0
 Você vê uma casa.
 ~
@@ -106,7 +106,7 @@ Uma estrada para a Vila~
    Esta estrada segue indo de norte a sul e passando pelo centro da vila.
 Algumas pessoas estão por ali, mas não muitas.
 ~
-16 0 0 0 0 1
+16 0 1
 D0
 Você vê uma estrada.
 ~
@@ -133,7 +133,7 @@ Uma estrada para a Vila~
    Esta estrada segue indo de norte a sul e passando pelo centro da vila.
 Algumas pessoas estão por ali, mas não muitas.
 ~
-16 0 0 0 0 1
+16 0 1
 D0
 Você vê uma estrada.
 ~
@@ -150,7 +150,7 @@ Uma estrada para a Vila~
    Esta estrada segue indo de norte a sul e passando pelo centro da vila.
 Algumas pessoas estão por ali, mas não muitas.
 ~
-16 0 0 0 0 1
+16 0 1
 D0
 Você vê uma estrada.
 ~
@@ -172,7 +172,7 @@ Uma estrada para a Vila~
    Esta estrada segue indo de norte a sul e passando pelo centro da vila.
 Algumas pessoas estão por ali, mas não muitas.
 ~
-16 0 0 0 0 1
+16 0 1
 D0
 Você vê uma estrada.
 ~
@@ -200,7 +200,7 @@ Uma pequena casa de Gnomo~
 Você pode ver o exímio trabalho artesanal desta obra, que necessitou de muita
 criatividade.
 ~
-16 8 0 0 0 0
+16 d 0
 D2
 Você vê um caminho.
 ~
@@ -213,7 +213,7 @@ Uma pequena casa de Gnomo~
 Você pode ver o exímio trabalho artesanal desta obra, que necessitou de muita
 criatividade.
 ~
-16 8 0 0 0 0
+16 d 0
 D1
 Você vê um caminho.
 ~
@@ -226,7 +226,7 @@ Uma pequena casa de Gnomo~
 Você pode ver o exímio trabalho artesanal desta obra, que necessitou de muita
 criatividade.
 ~
-16 8 0 0 0 0
+16 d 0
 D3
 Você vê um caminho.
 ~
@@ -239,7 +239,7 @@ Uma pequena casa de Gnomo~
 Você pode ver o exímio trabalho artesanal desta obra, que necessitou de muita
 criatividade.
 ~
-16 8 0 0 0 0
+16 d 0
 D2
 Você vê um caminho.
 ~
@@ -252,7 +252,7 @@ Uma pequena casa de Gnomo~
 Você pode ver o exímio trabalho artesanal desta obra, que necessitou de muita
 criatividade.
 ~
-16 8 0 0 0 0
+16 d 0
 D0
 Você vê um caminho.
 ~
@@ -265,7 +265,7 @@ Uma loja dos Gnomos~
 Os produtos tem boa aparência, mas infelizmente os gnomos não fazem negócio
 com forasteiros.
 ~
-16 8 0 0 0 0
+16 d 0
 D1
 Você vê uma estrada.
 ~
@@ -278,7 +278,7 @@ Uma loja dos Gnomos~
 Os produtos tem boa aparência, mas infelizmente os gnomos não fazem negócio
 com forasteiros.
 ~
-16 8 0 0 0 0
+16 d 0
 D1
 Você vê uma estrada.
 ~
@@ -291,7 +291,7 @@ Uma loja dos Gnomos~
 Os produtos tem boa aparência, mas infelizmente os gnomos não fazem negócio
 com forasteiros.
 ~
-16 8 0 0 0 0
+16 d 0
 D3
 Você vê uma estrada.
 ~
@@ -304,7 +304,7 @@ Caminho do Córrego~
 Este caminho é rodeado dos dois lados por um pequeno córrego. A água parece
 terrivelmente fria.
 ~
-16 4 0 0 0 2
+16 c 2
 D0
 Você vê uma estrada.
 ~
@@ -331,7 +331,7 @@ Caminho do Córrego~
 apresenta grama nova, como se tivessem parado de usa-lo há pouco tempo.
 Ao sul existe um rio e ao oeste existe uma pequena cabana.
 ~
-16 0 0 0 0 2
+16 0 2
 D1
 Você vê um pequeno caminho.
 ~
@@ -348,12 +348,12 @@ Você vê uma pequena cabana que está começando a cair.
 ~
 0 -1 1619
 E
-cabana~
-A cabana parece que foi bem construída, mas parece que o tempo causou alguns estragos nela.
-~
-E
 córrego~
 O córrego é bem pequeno, e parece ser muito gelado para nadar.
+~
+E
+cabana~
+A cabana parece que foi bem construída, mas parece que o tempo causou alguns estragos nela.
 ~
 S
 #1619
@@ -362,7 +362,7 @@ Uma pequena Cabana~
 tom carmesin bem forte. Roupas tecidas a mão e lixo esparramam-se por toda
 parte, e parece que você percebe um esqueleto ali no canto.
 ~
-16 8 0 0 0 0
+16 d 0
 D1
 Você vê um pequeno caminho.
 ~
@@ -381,7 +381,7 @@ No Córrego~
 abaixo de sua superfície. A correnteza segue lentamente para oeste e existe
 um caminho para o sul.
 ~
-16 0 0 0 0 7
+16 0 7
 D0
 Você vê um pequeno caminho.
 ~
@@ -403,7 +403,7 @@ No Córrego~
    A correnteza vem do oeste, mas uma imensa tora bloqueando o caminho,
 impede você de seguir seu caminho seguindo em frente.
 ~
-16 0 0 0 0 7
+16 0 7
 D0
 Você vê um pequeno caminho.
 ~
@@ -421,7 +421,7 @@ O Campo dos Ratos Sonhadores~
 cintura. Você sente que alguma coisa correu por sobre os seus pés.
 A leste existe uma gruta.
 ~
-16 0 0 0 0 2
+16 0 2
 D0
 Você vê um pequeno córrego.
 ~
@@ -439,7 +439,7 @@ A Gruta Escura~
 Conforme você aperta seus olhos e tenta enxergar um pouco mais a frente,
 você tem a impressão que vê algo se mexendo.
 ~
-16 1 0 0 0 3
+16 a 3
 D0
 ~
 ~
@@ -456,7 +456,7 @@ A Gruta Mais Escura~
 de você também cresce e se torna mais forte. Você teme por sua vida ao
 perceber que alguma coisa começa a emergir das sombras.
 ~
-16 1 0 0 0 3
+16 a 3
 D2
 ~
 ~
@@ -467,7 +467,7 @@ Um Caminho Empoeirado~
    Você se encontra num caminho bem usado que segue em muitas direções.
 Ao norte existe uma grande casa, e a oeste há uma fortaleza.
 ~
-16 4 0 0 0 1
+16 c 1
 D0
 Você vê uma grande casa branca.
 ~
@@ -494,7 +494,7 @@ O Portão de Ferro~
    Você pára diante da entrada da fortaleza dos gnomos. O lugar parece que
 está bem fortificado.
 ~
-16 0 0 0 0 1
+16 0 1
 D1
 Você vê um pequeno caminho.
 ~
@@ -513,7 +513,7 @@ até agora não foi morto pelos guardas. A medida que você explora o lugar,
 você percebe que as paredes e o chão estão impecavelmente limpos. As barracas
 estão ao norte e o depósito fica ao sul.
 ~
-16 8 0 0 0 0
+16 d 0
 D0
 Você vê as barracas.
 ~
@@ -542,7 +542,7 @@ até agora não foi morto pelos guardas. A medida que você explora o lugar,
 você percebe que as paredes e o chão estão impecavelmente limpos. Ao sul há
 um salão bagunçado.
 ~
-16 8 0 0 0 0
+16 d 0
 D1
 Você vê um longo corredor.
 ~
@@ -565,7 +565,7 @@ As Barracas~
 Todas as camas foram perfeitamente arrumadas e não existe uma única peça de
 roupa no chão. A leste, existe um pequeno depósito.
 ~
-16 8 0 0 0 0
+16 d 0
 D1
 Você vê um pequeno depósito.
 ~
@@ -582,7 +582,7 @@ Um Pequeno Depósito~
    É aqui que os gnomos guardam todas as suas roupas e armaduras. Não existe
 muita coisa aqui, mas você sempre pode aparecer com alguma coisa.
 ~
-16 8 0 0 0 0
+16 d 0
 D3
 Você vê as barracas.
 ~
@@ -594,7 +594,7 @@ Um Pequeno Depósito~
    É aqui que os gnomos guardam todo o seu armamento de reserva. Uma porta
 conduz para leste.
 ~
-16 8 0 0 0 0
+16 d 0
 D0
 Você vê um longo corredor.
 ~
@@ -611,7 +611,7 @@ Um Pequeno Depósito~
    Este é mais um depósito para guardar coisas dos gnomos. Mapas e planos
 de batalhas estão arrumados em pequenas pilhas sobre as prateleiras.
 ~
-16 8 0 0 0 0
+16 d 0
 D3
 Você vê um pequeno quarto.
 ~
@@ -624,7 +624,7 @@ O Salão Bagunçado~
 suas refeições. Os bancos e mesas estão perfeitamente arrumados e limpos,
 e a louça bonita e muito limpa aguarda para ser usada.
 ~
-16 8 0 0 0 0
+16 d 0
 D0
 Você vê um longo corredor.
 ~
@@ -636,7 +636,7 @@ Um Pequeno Quarto~
    Este é um quarto pequeno e simples. Seu único ponto interessante é uma
 escada que leva para baixo.
 ~
-16 8 0 0 0 0
+16 d 0
 D1
 Você vê um longo corredor.
 ~
@@ -655,7 +655,7 @@ utilizado da fortaleza. Todo o quarto se encontra coberto por poeira e
 teias-de-aranha. A escada leva de volta para cima, e a leste se encontra
 uma porta enferrujada.
 ~
-16 9 0 0 0 1
+16 ad 1
 D1
 Você vê uma porta enferrujada.
 ~
@@ -673,7 +673,7 @@ Corredor Escuro~
 primeira pessoa a entrar aqui, depois de muitos anos. O corredor continua
 ao sul e uma porta se abre para o oeste.
 ~
-16 9 0 0 0 2
+16 ad 2
 D1
 ~
 ~
@@ -694,7 +694,7 @@ Câmara de Tortura~
 de vítimas indefesas. As máquinas não parecem estar sendo usadas, mas
 poderiam trabalhar ainda.
 ~
-16 9 0 0 0 2
+16 ad 2
 D3
 ~
 ~
@@ -711,7 +711,7 @@ Corredor Escuro~
    O corredor continua seguindo na direção norte-sul. O chão está coberto
 com algum tipo de lodo escorregadio. Portas seguem a oeste e leste.
 ~
-16 9 0 0 0 2
+16 ad 2
 D0
 ~
 ~
@@ -734,7 +734,7 @@ Corredor Escuro~
    O corredor continua seguindo na direção norte-sul. O chão está coberto
 com algum tipo de lodo escorregadio. Portas seguem a oeste e leste.
 ~
-16 9 0 0 0 2
+16 ad 2
 D0
 ~
 ~
@@ -757,7 +757,7 @@ Cela da Prisão~
    Você se encontra numa cela escura e imunda. Corpos jazem sobre o chão
 trazendo ao lugar um odor insuportável.
 ~
-16 9 0 0 0 2
+16 ad 2
 D1
 ~
 ~
@@ -768,7 +768,7 @@ Cela da Prisão~
    Você se encontra numa cela escura e imunda. Corpos jazem sobre o chão
 trazendo ao lugar um odor insuportável.
 ~
-16 9 0 0 0 2
+16 ad 2
 D3
 ~
 ~
@@ -779,7 +779,7 @@ Cela da Prisão~
    Você se encontra numa cela escura e imunda. Corpos jazem sobre o chão
 trazendo ao lugar um odor insuportável.
 ~
-16 9 0 0 0 2
+16 ad 2
 D0
 ~
 ~
@@ -790,7 +790,7 @@ Cela da Prisão~
    Você se encontra numa cela escura e imunda. Corpos jazem sobre o chão
 trazendo ao lugar um odor insuportável.
 ~
-16 9 0 0 0 2
+16 ad 2
 D3
 ~
 ~
@@ -801,7 +801,7 @@ Final do Corredor Escuro~
    Você acaba de encontrar o final do corredor escuro e talvez o final de
 sua própria vida. Alguma coisa move-se desordenadamente dentro das trevas.
 ~
-16 9 0 0 0 2
+16 ad 2
 D1
 ~
 ~
@@ -816,7 +816,7 @@ S
 Uma Escada~
    Você acaba de entrar num tunel vertical com uma escada.
 ~
-16 9 0 0 0 3
+16 ad 3
 D1
 Você vê uma porta deteriorada.
 ~
@@ -832,7 +832,7 @@ Covil~
    Você acaba de entrar em um novo covil da fortaleza. Qualquer coisa
 poderia estar ali a espreita, aguardando aquele que irá virar a esquina.
 ~
-16 9 0 0 0 2
+16 ad 2
 D2
 ~
 ~
@@ -847,7 +847,7 @@ Um Corredor Úmido~
    Você está vagando por um corredor escuro, úmido e sinuoso. A temperatura
 parece ser maior aqui, assim como também o seu medo.
 ~
-16 1 0 0 0 0
+16 a 0
 D0
 ~
 ~
@@ -866,7 +866,7 @@ Um Corredor Úmido~
    Você está vagando por um corredor escuro, úmido e sinuoso. A temperatura
 parece ser maior aqui, assim como também o seu medo.
 ~
-16 1 0 0 0 0
+16 a 0
 D2
 ~
 ~
@@ -881,7 +881,7 @@ Um Corredor Úmido~
    Você está vagando por um corredor escuro, úmido e sinuoso. A temperatura
 parece ser maior aqui, assim como também o seu medo.
 ~
-16 1 0 0 0 0
+16 a 0
 D0
 ~
 ~
@@ -896,7 +896,7 @@ Um Corredor Úmido~
    Você está vagando por um corredor escuro, úmido e sinuoso. A temperatura
 parece ser maior aqui, assim como também o seu medo.
 ~
-16 1 0 0 0 0
+16 a 0
 D1
 ~
 ~
@@ -911,7 +911,7 @@ Um Corredor Úmido~
    Você está vagando por um corredor escuro, úmido e sinuoso. A temperatura
 parece ser maior aqui, assim como também o seu medo.
 ~
-16 1 0 0 0 0
+16 a 0
 D0
 ~
 ~
@@ -926,7 +926,7 @@ Um Corredor Úmido~
    Você está vagando por um corredor escuro, úmido e sinuoso. A temperatura
 parece ser maior aqui, assim como também o seu medo.
 ~
-16 1 0 0 0 0
+16 a 0
 D0
 ~
 ~
@@ -941,7 +941,7 @@ Um Corredor Úmido~
    Você está vagando por um corredor escuro, úmido e sinuoso. A temperatura
 parece ser maior aqui, assim como também o seu medo.
 ~
-16 1 0 0 0 0
+16 a 0
 D0
 ~
 ~
@@ -960,7 +960,7 @@ Um Corredor Úmido~
    Você está vagando por um corredor escuro, úmido e sinuoso. A temperatura
 parece ser maior aqui, assim como também o seu medo.
 ~
-16 1 0 0 0 0
+16 a 0
 D0
 ~
 ~
@@ -976,7 +976,7 @@ O Final do Corredor~
 encontra metido num perigo ainda maior. Atras de você se encontra a fonte
 de grande calor.
 ~
-16 1 0 0 0 0
+16 a 0
 D1
 ~
 ~
@@ -992,7 +992,7 @@ O Altar~
 encontra um grande altar com o formato de morcego. Há uma passagem que
 segue na direção oeste.
 ~
-16 1 0 0 0 0
+16 a 0
 D3
 ~
 ~
@@ -1004,7 +1004,7 @@ A Casa do Chefe~
 coberto por finos tapetes e as paredes cobertas por tinta. Você se sente
 privilegiado simplesmente por ter pisado aqui dentro.
 ~
-16 8 0 0 0 0
+16 d 0
 D2
 Você vê um caminho.
 ~
@@ -1016,7 +1016,7 @@ Um Caminho Pouco Usado~
    Você está agora num caminho raramente usado que segue rumo ao oeste da
 Vila. Você se pergunta para onde este caminho levaria.
 ~
-16 4 0 0 0 1
+16 c 1
 D1
 Você vê um caminho.
 ~
@@ -1033,7 +1033,7 @@ O Caminho Crescido~
    Enquanto o caminho segue, a grama vai crescendo cada vez mais alta.
 Você não consegue imaginar aonde exatamente este caminho levaria.
 ~
-16 0 0 0 0 2
+16 0 2
 D1
 Você vê uma clareira.
 ~
@@ -1051,7 +1051,7 @@ A Clareira~
 os tamanhos. O caminho segue, atrás para oeste e indo para o norte, parece
 que existe o poço de uma velha mina.
 ~
-16 0 0 0 0 2
+16 0 2
 D0
 Você vê o poço de uma mina.
 ~
@@ -1069,7 +1069,7 @@ Entrada para o Poço da Mina~
 que as paredes se fechem sobre você. Você fica surpreso ao perceber que
 não precisa de luz.
 ~
-16 8 0 0 0 2
+16 d 2
 D1
 Você vê um poço.
 ~
@@ -1087,7 +1087,7 @@ Poço da Mina~
 de madeira são grossos e fortes. Tochas se enfileiram sobre as paredes da
 mina. Saídas levam a todas as direções.
 ~
-16 8 0 0 0 2
+16 d 2
 D0
 Você vê um pequeno poço de mina.
 ~
@@ -1115,7 +1115,7 @@ Poço da Mina~
 de madeira são grossos e fortes. Tochas se enfileiras sobre as paredes da
 mina. Saídas levam a todas as direções.
 ~
-16 8 0 0 0 2
+16 d 2
 D0
 Você vê um quarto grande.
 ~
@@ -1143,7 +1143,7 @@ Poço da Mina~
 de madeira são grossos e fortes. Tochas se enfileiras sobre as paredes da
 mina. Saídas levam a todas as direções, exceto ao norte.
 ~
-16 8 0 0 0 2
+16 d 2
 D1
 Você vê uma passagem.
 ~
@@ -1167,7 +1167,7 @@ montanha. Você pressente que existe alguma coisa muito importante a frente,
 apenas levando em consideração todo o trabalho pesado que tiveram para criar
 esta passagem.
 ~
-16 8 0 0 0 1
+16 d 1
 D2
 Você vê a passagem.
 ~
@@ -1186,7 +1186,7 @@ montanha. Você pressente que existe alguma coisa muito importante a frente,
 apenas levando em consideração todo o trabalho pesado que tiveram para criar
 esta passagem.
 ~
-16 8 0 0 0 1
+16 d 1
 D0
 Você vê a passagem.
 ~
@@ -1205,7 +1205,7 @@ sua sorte deve estar bem pequena agora. Grandes pilares dourados se
 enfileiram formando um corredor e você nota que um tapete vermelho se
 estende sob os seus pés.
 ~
-16 8 0 0 0 0
+16 d 0
 D0
 Você vê a passagem.
 ~
@@ -1222,7 +1222,7 @@ A Sala do Trono~
    Este é um ambiente grande e claro cheio de Hobgoblins.  Ao sul existe um
 grande trono dourado bem junto da parede.
 ~
-16 8 0 0 0 0
+16 d 0
 D0
 Você vê um grande salão.
 ~
@@ -1234,7 +1234,7 @@ O Tesouro~
    Você está dentro da sala do tesouro dos Hobgoblin. Seus olhos quase ficam
 cegos pelo brilho intenso das moedas de ouro, prata e cobre.
 ~
-16 8 0 0 0 0
+16 d 0
 D0
 Você vê um quarto grande.
 ~
@@ -1246,7 +1246,7 @@ Quarto Protegido~
    Você está dentro de um quarto muito bem guardado. O lugar consegue ser
 ainda melhor construído do que os poços da mina e está iluminado por lanternas.
 ~
-16 8 0 0 0 1
+16 d 1
 D0
 Você vê um quarto grande.
 ~
@@ -1263,7 +1263,7 @@ Quarto Protegido~
    Você está dentro de um quarto muito bem guardado. O lugar consegue ser
 ainda melhor construído do que os poços da mina e está iluminado por lanternas.
 ~
-16 8 0 0 0 1
+16 d 1
 D0
 Você vê um quarto grande.
 ~
@@ -1281,7 +1281,7 @@ Arsenal Hobgoblin~
 Existem algumas espadas enferrujadas deixadas sobre prateleiras empoeiradas,
 e armaduras penduradas em cabides ou simplesmente deixadas sobre o chão.
 ~
-16 8 0 0 0 1
+16 d 1
 D0
 Você vê um poço.
 ~
@@ -1295,7 +1295,7 @@ diminuindo lentamente e estão práticamente se apagando. Daquilo que você
 consegue ver, existe uma quantidade imensa de teias-de-aranha recobrindo
 as paredes e muitos ratos aos seus pés.
 ~
-16 8 0 0 0 2
+16 d 2
 D0
 Você vê um poço.
 ~
@@ -1313,7 +1313,7 @@ Entrada para o Calabouço~
 vão grudando no chão. Sua pele se arrepia quando você fita a sujeira das
 paredes e as vê se mexendo. A maioria das saídas conduzem até celas gradeadas.
 ~
-16 8 0 0 0 2
+16 d 2
 D0
 Você vê um poço.
 ~
@@ -1341,7 +1341,7 @@ O Calabouço~
 tochas mal conseguem alcançar o ponto onde você se encontra. A maioria dos
 caminhos a partir daqui levam a celas gradeadas.
 ~
-16 8 0 0 0 2
+16 d 2
 D0
 Você vê um quarto escuro e imundo.
 ~
@@ -1369,7 +1369,7 @@ Uma Cela Gradeada~
 Palha úmida e suja cobre todo o chão. As paredes estão cobertas por um bolor
 fétido. Você vê que alguma coisa se mexe no meio da palha.
 ~
-16 8 0 0 0 2
+16 d 2
 D3
 Você vê um quarto escuro e imundo.
 ~
@@ -1382,7 +1382,7 @@ Uma Cela Gradeada~
 Palha úmida e suja cobre todo o chão. As paredes estão cobertas por um bolor
 fétido. Você vê que alguma coisa se mexe no meio da palha.
 ~
-16 8 0 0 0 2
+16 d 2
 D3
 Você vê um quarto escuro e imundo.
 ~
@@ -1395,7 +1395,7 @@ Uma Cela Gradeada~
 Palha úmida e suja cobre todo o chão. As paredes estão cobertas por um bolor
 fétido. Você vê que alguma coisa se mexe no meio da palha.
 ~
-16 8 0 0 0 2
+16 d 2
 D0
 Você vê um quarto escuro e imundo.
 ~
@@ -1408,7 +1408,7 @@ Uma Cela Gradeada~
 Palha úmida e suja cobre todo o chão. As paredes estão cobertas por um bolor
 fétido. Você vê que alguma coisa se mexe no meio da palha.
 ~
-16 8 0 0 0 2
+16 d 2
 D1
 Você vê um quarto escuro e imundo.
 ~
@@ -1421,7 +1421,7 @@ Uma Cela Gradeada~
 Palha úmida e suja cobre todo o chão. As paredes estão cobertas por um bolor
 fétido. Você vê que alguma coisa se mexe no meio da palha.
 ~
-16 8 0 0 0 2
+16 d 2
 D1
 Você vê um quarto escuro e imundo.
 ~
@@ -1433,7 +1433,7 @@ Pequeno Poço da Mina~
    Você está numa pequena extensão do poço da mina. A poeira do chão está
 intacta, sem nenhuma, absolutamente nenhuma pegada.
 ~
-16 8 0 0 0 2
+16 d 2
 D0
 Você vê um pequeno poço de mina.
 ~
@@ -1451,7 +1451,7 @@ Barracas dos Hobgoblins~
 dos Hobgoblins. O quarto, por si só, está uma bagunça, com roupas e armaduras
 por todos os lados. As camas não foram arrumadas e estão sujas.
 ~
-16 8 0 0 0 2
+16 d 2
 D0
 Você vê um grande quarto.
 ~
@@ -1473,7 +1473,7 @@ Barracas dos Hobgoblins~
    Sim! A medida que você segue em frente, o cheiro vai ficando cada vez pior.
 O que você está FAZENDO aqui?
 ~
-16 8 0 0 0 2
+16 d 2
 D2
 Você vê um grande quarto.
 ~
@@ -1487,7 +1487,7 @@ poucas mesas rotativas e muitos pratos quebrados e sujos largados pelo salão.
 Você escorrega e quase cai, ao pisar num pedaço de carne estragada que está
 jogada no chão, mas consegue se equilibrar em tempo.
 ~
-16 8 0 0 0 2
+16 d 2
 D0
 Você vê um pequeno quarto.
 ~
@@ -1509,7 +1509,7 @@ A Dispensa~
    Você se encontra dentro de um pequeno quarto cheio de farinha, grãos,
 frutas e morcegos pendurados.
 ~
-16 8 0 0 0 1
+16 d 1
 D2
 Você vê o salão bagunçado.
 ~
@@ -1523,7 +1523,7 @@ comida estragada se espalham por sobre o chão e chegam a bater em seus
 joelhos. Sobre o fogão, uma panela fervendo. Uma mão humana está ali dentro,
 sendo cozida.
 ~
-16 8 0 0 0 2
+16 d 2
 D3
 Você vê o salão bagunçado.
 ~
@@ -1535,7 +1535,7 @@ Um pequeno Poço da Mina~
    Você chega a um lugar do poço da mina onde um tunel segue para baixo.
 A passagem pequena continua seguindo rumo norte e sul.
 ~
-16 8 0 0 0 2
+16 d 2
 D0
 Você vê uma pequena toca.
 ~
@@ -1559,7 +1559,7 @@ revelando uma pequenina toca de um único compartimento. A área está fracamente
 iluminada, mas você consegue perceber o movimento de alguma coisa que está se
 dirigindo diretamente na sua direção.
 ~
-16 8 0 0 0 2
+16 d 2
 D2
 Você vê um pequeno poço de mina.
 ~
@@ -1570,11 +1570,11 @@ S
 Um Buraco~
    Você está em um buraco.
 ~
-16 8 0 0 0 3
+16 d 3
 D4
 Você vê um pequeno poço de mina.
 ~
 ~
 0 -1 1688
 S
-$~
+$

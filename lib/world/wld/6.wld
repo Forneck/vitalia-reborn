@@ -5,7 +5,7 @@ blocos, presos por um tipo de cimento.  No alto da construção, vários
 arqueiros estão prontos para atacar.  A leste você vê o deserto, e a oeste
 está o grande portão da prisão.
 ~
-6 64 0 0 0 1
+6 g 1
 D1
 Você vê o grande deserto.
 ~
@@ -15,6 +15,7 @@ D3
 Você vê um grande portão de ferro e madeira.
 ~
 portão~
+:n 1 o portão de ferro e madeira
 2 -1 601
 S
 #601
@@ -24,11 +25,12 @@ volta, apenas areia e grandes rochas espalhadas.  Curiosamente há uma abertura
 ao chão, com uma escada.  Será que a prisão mesmo está alí embaixo?  A leste
 está o portão da prisão.
 ~
-6 0 0 0 0 1
+6 0 1
 D1
 Por esta direção você sai da prisão.
 ~
 portão~
+:n 1 o portão de ferro e madeira
 2 -1 600
 D5
 Há uma sólida escada. Ao olhar pela abertura, você nota certa movimentação no
@@ -46,7 +48,7 @@ Você vê um longo corredor à oeste.  Há sentinelas, cozinheiras e serviçais
 caminhando pelo corredor.  Acima de você, a escada leva para a parte aberta da
 prisão.
 ~
-6 8 0 0 0 0
+6 d 0
 D3
 O corredor continua a oeste.
 ~
@@ -67,7 +69,7 @@ mais sombrio.  A leste você vê uma pequena claridade, que deve indicar a saída
 para a parte aberta da prisão, e a oeste o corredor continua em direção aos
 calabouços.
 ~
-6 40 0 0 0 0
+6 df 0
 D0
 O corredor segue por um pequeno espaço e termina em um cômodo que, pelo grande
 caldeirão em seu centro, se parece com uma cozinha.
@@ -97,11 +99,12 @@ por aqui.  A pouca iluminação proveniente das toxas afixadas às paredes é
 pouca para que você possa ver tudo com perfeição.  Ao norte e ao sul você pode
 ver calabouços.  O corredor continua a leste e oeste.
 ~
-6 104 0 0 0 0
+6 dfg 0
 D0
 Você vê um calabouço.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 632
 D1
 O corredor continua a leste.
@@ -112,6 +115,7 @@ D2
 Você vê um calabouço.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 633
 D3
 O corredor continua a oeste.
@@ -126,11 +130,12 @@ por aqui.  A pouca iluminação proveniente das toxas afixadas às paredes é
 pouca para que você possa ver tudo com perfeição.  Ao norte e ao sul você pode
 ver calabouços.  O corredor continua a leste e oeste.
 ~
-6 104 0 0 0 0
+6 dfg 0
 D0
 Você vê um calabouço.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 634
 D1
 O corredor continua a leste.
@@ -141,6 +146,7 @@ D2
 Você vê um calabouço.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 635
 D3
 O corredor continua a oeste.
@@ -155,11 +161,12 @@ por aqui.  A pouca iluminação proveniente das toxas afixadas às paredes é
 pouca para que você possa ver tudo com perfeição.  Ao norte e ao sul você pode
 ver calabouços.  O corredor continua a leste e oeste.
 ~
-6 104 0 0 0 0
+6 dfg 0
 D0
 Você vê um calabouço.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 636
 D1
 O corredor continua a leste.
@@ -170,6 +177,7 @@ D2
 Você vê um calabouço.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 637
 D3
 O corredor continua a oeste.
@@ -184,11 +192,12 @@ por aqui.  A pouca iluminação proveniente das toxas afixadas às paredes é
 pouca para que você possa ver tudo com perfeição.  Ao norte e ao sul você pode
 ver calabouços.  O corredor continua a leste e oeste.
 ~
-6 104 0 0 0 0
+6 dfg 0
 D0
 Você vê um calabouço.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 638
 D1
 O corredor continua a leste.
@@ -199,6 +208,7 @@ D2
 Você vê um calabouço.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 639
 D3
 O corredor continua a oeste.
@@ -213,11 +223,12 @@ por aqui.  A pouca iluminação proveniente das toxas afixadas às paredes é
 pouca para que você possa ver tudo com perfeição.  Ao norte, sul e oeste você
 pode ver calabouços.  O corredor continua a leste.
 ~
-6 104 0 0 0 0
+6 dfg 0
 D0
 Você vê um calabouço.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 640
 D1
 O corredor continua a leste.
@@ -228,11 +239,13 @@ D2
 Você vê um calabouço.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 641
 D3
 Você vê um calabouço.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 642
 S
 #616
@@ -242,7 +255,7 @@ nojento...  Por uma pequena abertura na parede escorre água, que cai em um
 jarro de barro.  No centro da sala há um enorme caldeirão.  A única saída é
 para o sul.
 ~
-6 40 0 0 0 0
+6 df 0
 D2
 Você vê o corredor.
 ~
@@ -262,7 +275,7 @@ espadas, atiradeiras, arcos e flechas, e até as grandes bolas-de-ferro que são
 presas nos pés dos condenados.  Ao norte você retorna para o corredor, e ao
 oeste você vê uma outra sala.
 ~
-6 40 0 0 0 0
+6 df 0
 D0
 Você vê o corredor.
 ~
@@ -282,7 +295,7 @@ da sala, e uma corda pindurada no teto, com um nó na ponta, suficiente para
 que sua cabeça entre nele...  Glup!  No chão há um buraco grande e fundo,
 e você sente um calafrio ao pensar o que deve haver lá embaixo.
 ~
-6 104 0 0 0 0
+6 dfg 0
 D1
 A leste você vê a sala de armas.
 ~
@@ -302,7 +315,7 @@ famintos...  Você entra em pânico e tenta escapar daqui de qualquer forma, mas
 não consegue escalar as paredes.  Os crocodilos avançam rapidamente em sua
 direção, e sem chances de escapar, você acaba virando almoço de crocodilo...
 ~
-6 42 0 0 0 0
+6 bdf 0
 D4
 ~
 ~
@@ -315,11 +328,12 @@ que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
 a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
 muito pouco.
 ~
-6 1050344 0 0 0 0
+6 dfghjku 0
 D2
 Você vê o corredor, com vários outros calabouços.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 604
 S
 #633
@@ -329,11 +343,12 @@ que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
 a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
 muito pouco.
 ~
-6 1050344 0 0 0 0
+6 dfghjku 0
 D0
 Você vê o corredor, com vários outros calabouços.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 604
 S
 #634
@@ -343,11 +358,12 @@ que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
 a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
 muito pouco.
 ~
-6 1050344 0 0 0 0
+6 dfghjku 0
 D2
 Você vê o corredor, com vários outros calabouços.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 605
 S
 #635
@@ -357,11 +373,12 @@ que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
 a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
 muito pouco.
 ~
-6 1050344 0 0 0 0
+6 dfghjku 0
 D0
 Você vê o corredor, com vários outros calabouços.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 605
 S
 #636
@@ -371,11 +388,12 @@ que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
 a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
 muito pouco.
 ~
-6 1050344 0 0 0 0
+6 dfghjku 0
 D2
 Você vê o corredor, com vários outros calabouços.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 606
 S
 #637
@@ -385,11 +403,12 @@ que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
 a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
 muito pouco.
 ~
-6 1050344 0 0 0 0
+6 dfghjku 0
 D0
 Você vê o corredor, com vários outros calabouços.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 606
 S
 #638
@@ -399,11 +418,12 @@ que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
 a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
 muito pouco.
 ~
-6 1050344 0 0 0 0
+6 dfghjku 0
 D2
 Você vê o corredor, com vários outros calabouços.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 607
 S
 #639
@@ -413,11 +433,12 @@ que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
 a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
 muito pouco.
 ~
-6 1050344 0 0 0 0
+6 dfghjku 0
 D0
 Você vê o corredor, com vários outros calabouços.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 607
 S
 #640
@@ -427,11 +448,12 @@ que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
 a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
 muito pouco.
 ~
-6 1050344 0 0 0 0
+6 dfghjku 0
 D2
 Você vê o corredor, com vários outros calabouços.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 608
 S
 #641
@@ -441,11 +463,12 @@ que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
 a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
 muito pouco.
 ~
-6 1050344 0 0 0 0
+6 dfghjku 0
 D0
 Você vê o corredor, com vários outros calabouços.
 ~
 grade~
+:n 2 a grade do calabouço
 2 -1 608
 S
 #642
@@ -455,11 +478,12 @@ que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
 a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
 muito pouco.
 ~
-6 1050344 0 0 0 0
+6 dfghjku 0
 D1
 Você vê o corredor, com vários outros calabouços.
 ~
 grade~
-2 -1 608
+:n 2 a grade do calabouço
+2 -1 608 2
 S
-$~
+$

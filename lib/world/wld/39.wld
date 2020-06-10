@@ -6,7 +6,9 @@ do portal você sente que almas atormentadas existem em qualquer lugar que
 ele vá levar.  Um ocasional estouro de calor irradia de lá...  Quase
 chamuscando seu cabelo.
 ~
-39 4 0 0 0 0
+39 c 0
+ON z39
+ON abismo
 D0
 ~
 ~
@@ -24,7 +26,7 @@ você sente algo viscoso gotejar do teto.  Ao sul, a saída o levará de volta
 aos Portais Flamejantes enquanto ao norte, uma escada segue através da
 escuridão.
 ~
-39 13 0 0 0 0
+39 acd 0
 D0
 ~
 ~
@@ -32,7 +34,8 @@ D0
 D2
 ~
 portão~
-2 3908 3914
+:n 1 o portão
+2 3908 3914 9
 S
 #3902
 A Toca de Valik~
@@ -42,7 +45,7 @@ volumoso se movimenta.  Uma baforada de fogo ilumina a caverna por um
 instante.  No segundo seguinte você vê diante de si, o maior dragão que
 jamais fora desperto.
 ~
-39 1 0 0 0 0
+39 a 0
 D3
 ~
 ~
@@ -56,10 +59,11 @@ macabras origens, crânios, escalpes, e partes do corpo mumificadas, repousam
 pela sala.  Embora a grosseria de ter tais itens guardados aqui, o lugar em
 minuciosamente limpo e organizado.
 ~
-39 0 0 0 0 0
+39 0 0
 D2
 ~
 porta~
+:n 2 a porta
 1 -1 3931
 S
 #3904
@@ -69,7 +73,7 @@ pés sumir.  E você cai...  Cai....cai...  Você tenta gritar mas o som não
 sai de sua boca.  Finalmente, você atinge o solo, e vê claramente sua alma
 se desprender de seu corpo, e voar para o paraíso.
 ~
-39 6 0 0 0 0
+39 bc 0
 S
 #3905
 A Entrada Para a Toca dos Dragões~
@@ -78,7 +82,7 @@ carbonizadas e pulsam com o calor.  A medida que você começa a suar, você se
 pergunta o que na terra poderia causar tamanho calor.  Ruídos e chamas vêm
 do leste.
 ~
-39 1 0 0 0 0
+39 a 0
 D1
 ~
 ~
@@ -94,7 +98,7 @@ Uma Curva no Rio~
 árvores contornam as bordas do rio.  Elas parecem estar observando-lhe com
 desaprovação a medida que você vaga indefeso pelas frias águas.
 ~
-39 0 0 0 0 6
+39 0 6
 D0
 ~
 ~
@@ -110,7 +114,7 @@ Uma Bifurcação no Rio~
 A corrente principal segue pelo sul e uma corrente secundária ao leste, de
 onde podem ser ouvidos lânguidos ruídos.
 ~
-39 0 0 0 0 6
+39 0 6
 D1
 ~
 ~
@@ -130,7 +134,7 @@ O Redemoinho~
 criaturas flutuam na água, rodando a sua volta, rodando e rodando neste
 redemoinho maldito.
 ~
-39 4 0 0 0 8
+39 c  8
 S
 #3909
 O Rio Talloren~
@@ -139,7 +143,7 @@ se quisessem lhe alcançar e lhe agarrar.  Coisas esbarram em suas pernas a
 medida que você luta para conseguir manter sua cabeça acima das gélidas e
 avermelhadas águas.
 ~
-39 0 0 0 0 6
+39 0 6
 D0
 ~
 ~
@@ -147,7 +151,7 @@ D0
 D1
 ~
 ~
-0 -1 3907
+0 -1 3907 0
 S
 #3910
 Descendo pelo Abismo Profundo~
@@ -156,7 +160,7 @@ frio ao toque e mortalmente silencioso.  Olhando adiante abaixo o corredor
 não revela nada, exceto escuridão.  Você pode continuar ou voltar aos
 Portais.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -173,7 +177,7 @@ frio ao toque e mortalmente silencioso.  Olhando adiante abaixo o corredor
 não revela nada, exceto escuridão.  Você pode continuar ou voltar aos
 Portais.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -190,7 +194,7 @@ luminosidade vinda do leste.  A atmosfera se torna duramente quente a medida
 que o declínio se acentua.  As sombras no corredor bruxuleiam como se fossem
 feitas pela luz de chamas ardentes.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -206,7 +210,7 @@ Se Aproximando do Fim do Corredor~
 leste.  A luz é tão brilhante, que você é forçado a proteger os olhos.  Logo
 você poderá ver a fonte deste calor e luz.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -223,14 +227,16 @@ portão forjado em ferro magicalmente engolfado em chamas, impede que você
 siga adiante.  Tudo a sua vista é chamuscado e enegrecido.  Algum alívio
 pode ser encontrado ao oeste e talvez ao sul...
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 portão~
+:n 1 o portão
 2 3908 3901
 D2
 ~
 portão~
+:n 1 o portão
 2 -1 3915
 D3
 ~
@@ -244,10 +250,11 @@ pedras lisas ainda resistem firmemente, um último tributo à habilidade
 destes construtores.  A área ao redor é chamuscada e enegrecida.  Nenhum
 sinal de vida pode ser vista e o vento é bastante calmo.
 ~
-39 0 0 0 0 2
+39 0 2
 D0
 ~
 portão~
+:n 1 o portão
 1 -1 3914
 D1
 ~
@@ -261,7 +268,7 @@ pedras lisas ainda resistem firmemente, um último tributo à habilidade
 destes construtores.  A área ao redor é chamuscada e enegrecida.  Nenhum
 sinal de vida pode ser vista e o vento é bastante calmo.
 ~
-39 0 0 0 0 2
+39 0 2
 D1
 ~
 ~
@@ -278,7 +285,7 @@ quebradas por todo o chão.  A única coisa que ainda resta é a fonte no
 centro do pátio.  De alguma forma ela sobreviveu à o que quer que causou da
 ruína deste lugar.
 ~
-39 0 0 0 0 2
+39 0 2
 D0
 ~
 ~
@@ -299,10 +306,11 @@ cerca o caminho.  Vegetação rasteira e retorcida agora cresce onde lindas
 flores foram cultivadas.  A sua frente fica uma pequena construção de pedra,
 enquanto o pátio fica ao sul.
 ~
-39 0 0 0 0 2
+39 0 2
 D0
 ~
 porta pedra~
+:n 2 a pedra
 1 -1 3919
 D1
 ~
@@ -325,7 +333,7 @@ inutilizadas.  O teto desabou há muito, deixando um enorme buraco acima de
 as cabeça.  Amassadas tapeçarias estão penduradas em uma das paredes.  Não
 há outras saídas óbvias, a não ser pela qual você veio.
 ~
-39 0 0 0 0 0
+39 0 0
 D2
 ~
 ~
@@ -337,7 +345,7 @@ A Ponte Levadiça~
 portícula fora elevada como se alguém fosse esperado.  Olhando para baixo,
 nos limites da ponte, você não ve nada, apenas a mais negra escuridão.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -358,7 +366,7 @@ melhores tempos que o Castelo viveu.  Um pedestal suporta um grande e
 empoeirado tomo.  Examinando este livro, você percebe que o último visitante
 a assina-lo o fez há séculos atrás.
 ~
-39 0 0 0 0 2
+39 0 2
 D1
 ~
 ~
@@ -374,7 +382,7 @@ O Grande Corredor~
 veludo estão penduradas nas vigas.  Macios sofás e almofadas se alinham
 pelos lados do corredor.  Nunca você viu um corredor tão esplendoroso.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -392,7 +400,7 @@ Esplendor.  Quando o sol da tarde se põe, os últimos raios de claridade
 brilham através do cristal formando um arco-íris.  Havia uma grande bola
 pendurada aqui, mas não há mais.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -416,7 +424,7 @@ O Grande Corredor~
 veludo estão penduradas nas vigas.  Macios sofás e almofadas se alinham
 pelos lados do corredor.  Nunca você viu um corredor tão esplendoroso.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -432,7 +440,7 @@ A Asa Norte~
 estranhamente amortecidos aqui.  Portas em cada lado do lugar levam a um,
 dos muitos quartos do castelo.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -440,6 +448,7 @@ D0
 D1
 ~
 porta~
+:n 2 a porta
 1 -1 3946
 D2
 ~
@@ -448,6 +457,7 @@ D2
 D3
 ~
 porta~
+:n 2 a porta
 1 -1 3943
 S
 #3926
@@ -456,7 +466,7 @@ A Asa Norte~
 estranhamente amortecidos aqui.  Portas em cada lado do lugar levam a um,
 dos muitos quartos do castelo.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -464,6 +474,7 @@ D0
 D1
 ~
 porta~
+:n 2 a porta
 1 -1 3945
 D2
 ~
@@ -472,6 +483,7 @@ D2
 D3
 ~
 porta~
+:n a porta
 1 -1 3944
 S
 #3927
@@ -482,7 +494,7 @@ no meio da torre, você se esforça, e pode ver seu topo, ele parece estar
 longe de sua vista, lhe surpreendendo pela altura da torre.  Um lânguido
 esboço de um alçapão pode ser visto.
 ~
-39 0 0 0 0 0
+39 0 0
 D2
 ~
 ~
@@ -494,7 +506,7 @@ D4
 D5
 ~
 alçapão~
-1 0 3961
+1 0 3961 1
 S
 #3928
 A Asa Sul~
@@ -502,23 +514,23 @@ A Asa Sul~
 estranhamente amortecidos aqui.  Portas em cada lado do lugar levam a um,
 dos muitos quartos do castelo.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
-0 0 3923
+0 0 3923 0
 D1
 ~
 porta leste~
-1 0 3947
+1 0 3947 1
 D2
 ~
 ~
-0 0 3929
+0 0 3929 0
 D3
 ~
 porta oeste~
-1 0 3950
+1 0 3950 1
 S
 #3929
 Asa Sul~
@@ -526,23 +538,23 @@ Asa Sul~
 estranhamente amortecidos aqui.  Portas em cada lado do lugar levam a um,
 dos muitos quartos do castelo.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
-0 0 3928
+0 0 3928 0
 D1
 ~
 porta~
-1 0 3948
+1 0 3948 1
 D2
 ~
 ~
-0 0 3930
+0 0 3930 0
 D3
 ~
 porta~
-1 0 3949
+1 0 3949 1
 S
 #3930
 A Base da Torre Sul~
@@ -552,7 +564,7 @@ no meio da torre, você se esforça, e pode ver seu topo, ele parece estar
 longe de sua vista, lhe surpreendendo pela altura da torre.  Um lânguido
 esboço de um alçapão pode ser visto.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -564,6 +576,7 @@ D4
 D5
 ~
 alçapão~
+:n 2 o alçapão
 1 -1 3935
 S
 #3931
@@ -574,10 +587,11 @@ no meio da torre, você se esforça, e pode ver seu topo, ele parece estar
 longe de sua vista, lhe surpreendendo pela altura da torre.  Uma porta de
 ferro pode ser vista ao norte.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 porta ferro~
+:n 2 a porta de ferro
 1 -1 3903
 D3
 ~
@@ -594,7 +608,7 @@ A Torre Sul~
 torre.  Ela parece continuar para sempre, sem que seu fim possa ser
 avistado.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
 ~
@@ -610,7 +624,7 @@ A Torre Sul~
 torre.  Ela parece continuar para sempre, sem que seu fim possa ser
 avistado.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
 ~
@@ -629,7 +643,7 @@ ter sido afetado por algum tipo de doença.  De fato, você começa a perceber
 que este castelo parece ser a origem de qualquer que seja a causa de tanto
 desastre e ruína.
 ~
-39 0 0 0 0 0
+39 0 0
 D5
 ~
 ~
@@ -642,10 +656,11 @@ de pedra é coberta por umidade.  Parece que a parede está verdadeiramente
 suando.  Perscrutando a escuridão, és invadido por um sentimento de intensa
 tristeza.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
 alçapão~
+:n o alçapão
 1 -1 3930
 D5
 ~
@@ -662,10 +677,11 @@ muito secou e desbotou.  Marcas feitas com cinzel foram deixadas nas
 paredes, provavelmente feitas por aqueles que sobreviveram à queda inicial e
 tentaram escapar da morte resultante do fechamento do alçapão acima.
 ~
-39 0 0 0 0 0
+39 0 0
 D3
 ~
 porta~
+:n 2 a porta
 2 -1 3937
 D4
 ~
@@ -680,10 +696,11 @@ cor sendo usada no castelo.  Uma avermelhada mancha no chão perto da porta
 do poço é a única outra cor que você vê.  Você pode sentir a paz vinda do
 oeste.
 ~
-39 4 0 0 0 0
+39 c 0
 D1
 ~
 porta~
+:n 2 a porta
 1 -1 3936
 D3
 ~
@@ -698,7 +715,7 @@ completamente calmo, até que nota-se algo a mais neste lugar.  No chão, uma
 larga trilha de sangue seco cruza o a sala da entrada até o próximo cômodo
 que fica ao oeste.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -722,7 +739,7 @@ sua boca aberta, podem ser vistos também seis apêndices, cada um terminando
 em uma enorme garra.  Magicalmente ela começa a brilhar a medida que você
 pisa no lugar.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -731,16 +748,17 @@ D5
 O altar.
 ~
 altar tampo~
-1 -1 11400
+:n 1 o altar
+ad -1 11400
+E
+altar~
+Parece haver algo embaixo desse altar. Talvez você consiga movê-lo.
+~
 E
 fresta luz algo~
 Você aproxima seus olhos da fresta, deparando-se com uma espécie de passagem
 cercada de luz.  Talvez seja possível alcançá-la, se abrir um pouco mais a
 fresta, movendo o tampo do altar.
-~
-E
-altar~
-Parece haver algo embaixo desse altar. Talvez você consiga movê-lo.
 ~
 S
 #3940
@@ -749,7 +767,7 @@ A Torre Norte~
 torre.
    Ela parece continuar para sempre, sem que seu fim possa ser avistado.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
 ~
@@ -765,7 +783,7 @@ Torre Norte~
 torre.  Ela parece continuar para sempre, sem que seu fim possa ser
 avistado.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
 ~
@@ -784,7 +802,7 @@ floresta ao seu redor parece estar agonizando.  Ao oeste, você pode ver o
 brilho de um Portal Flamejante e nada mais além dele.  Ao leste a única
 estrutura que é mais alta que esta torre é a Torre Principal.
 ~
-39 0 0 0 0 0
+39 0 0
 D5
 ~
 ~
@@ -798,7 +816,7 @@ fica nos fundos do quarto.  Um sofá adornado com rubis o convida a se sentar
 e descansar.  Quando você resolve descansar no sofá, você percebe que as
 paredes começam a sangrar...
 ~
-39 4 0 0 0 0
+39 c 0
 D1
 ~
 ~
@@ -811,7 +829,7 @@ sala.  A atmosfera pesada, lhe da um sentimento de muita disciplina.  Há
 apenas uma porta neste lugar, pela qual os guardas se espremem para passar
 em caso de emergência.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -825,7 +843,7 @@ tecido caprichoso apodreceu há muito tempo.  O pó cobriu tudo, mostrando que
 ninguém esteve aqui durante anos, desde que o local fora saqueado e
 destruído.
 ~
-39 0 0 0 0 0
+39 0 0
 D3
 ~
 ~
@@ -839,7 +857,7 @@ assistir aos julgamentos.  Na parte de trás da sala, sobre um degrau, há uma
 grande mesa de carvalho.  Em cima da mesa há marcas antigas das marteladas
 do juíz.  Ela também está coberta de sangue seco.
 ~
-39 4 0 0 0 0
+39 c 0
 D3
 ~
 ~
@@ -855,7 +873,7 @@ o ar torna-se mais quente e alguma coisa começa a gotejar do teto.  Bolhas
 de pus amarelo se abrem na superfície das paredes e um cheiro pútrido invade
 suas narinas.
 ~
-39 4 0 0 0 0
+39 c 0
 D3
 ~
 ~
@@ -868,7 +886,7 @@ sala.  A atmosfera pesada, lhe da um sentimento de muita disciplina.  Há
 apenas uma porta neste lugar, pela qual os guardas se espremem para passar
 em caso de emergência.
 ~
-39 0 0 0 0 0
+39 0 0
 D3
 ~
 ~
@@ -882,7 +900,7 @@ mofentas.  O chão é coberto com porta jóias abertos e afiados fragmentos de
 vidro.  Traços de sangue seco restam em algum dos espelhos quebrados,
 indicando a violência a qual sofreram os últimos habitantes deste quarto.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -895,7 +913,7 @@ Tudo aqui é negro.  Uma chama negra arde na lareira de obsidiana,
 emprestando alguma claridade ao lugar.  A coisa mais notável aqui, são as
 rasgadas cortinas que se movem, parecendo ter vida.
 ~
-39 4 0 0 0 0
+39 c 0
 D1
 ~
 ~
@@ -906,7 +924,7 @@ A Torre Principal~
    A escadaria continua dando voltas e voltas a medida que você sobe pela
 torre.  Ela parece continuar para sempre, sem um fim a vista.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
 ~
@@ -921,7 +939,7 @@ A Torre Principal~
    A escadaria continua dando voltas e voltas a medida que você sobe pela
 torre.  Ela parece continuar para sempre, sem um fim a vista.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
 ~
@@ -936,7 +954,7 @@ A Torre Principal~
    A escadaria continua dando voltas e voltas a medida que você sobe pela
 torre.  Ela parece continuar para sempre, sem um fim a vista.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
 ~
@@ -954,7 +972,7 @@ pelo reino.  Uma floresta moribunda ao sul.  Portais Flamejantes ao oeste, e
 um rio.  O qual daqui parece fluir em vermelho, ou pelo menos avermelhado, e
 como se não bastasse, ele flui em direção ao castelo, e então...desaparece.
 ~
-39 0 0 0 0 0
+39 0 0
 D2
 ~
 ~
@@ -973,7 +991,7 @@ armaduras estão penduradas pelas paredes.  Bustos de famosas pessoas, por
 seu valor ou poder, se alinham em cada lado do corredor.  O corredor segue
 para uma linda porta esculpida em madeira negra ao leste.
 ~
-39 4 0 0 0 0
+39 c 0
 D0
 ~
 ~
@@ -981,6 +999,7 @@ D0
 D1
 ~
 porta~
+:n 2 a porta
 1 -1 3956
 S
 #3956
@@ -992,7 +1011,7 @@ parece resistir á toda destruição e poeira.  Feito de ouro maciço e adornado
 com pedras preciosas vindas de todas as partes do mundo, ele parece lhe
 convidar a se sentar.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -1008,7 +1027,7 @@ O Tesouro~
 grande porta maciça fora arrebentada e agora está jogada pelo chão.  Se já
 existiu qualquer coisa de valor aqui, foi saqueado há muito tempo atrás.
 ~
-39 0 0 0 0 0
+39 0 0
 D2
 ~
 ~
@@ -1022,7 +1041,7 @@ A sólida mobília de mármore, coberta com a mais fina seda lhe convida a
 descansar.  Há um grande vaso de alabastro branco sobre a lareira, e nele,
 pintado em sangue, pode-se ler a palavra "PrIsÃo".
 ~
-39 0 0 0 0 0
+39 0 0
 D2
 ~
 ~
@@ -1035,7 +1054,7 @@ Tristemente tudo o que restou foram plantas rasteiras e contorcidas.
 Majestosas árvores agora estão torcidas e carbonizadas.  O solo está sem
 vida, coberto de cinzas e de morte.
 ~
-39 0 0 0 0 2
+39 0 2
 D1
 ~
 ~
@@ -1048,7 +1067,7 @@ Tristemente tudo o que restou foram plantas rasteiras e contorcidas.
 Majestosas árvores agora estão torcidas e carbonizadas.  O solo está sem
 vida, coberto de cinzas e de morte.
 ~
-39 0 0 0 0 2
+39 0 2
 D3
 ~
 ~
@@ -1060,10 +1079,11 @@ A Sala Secreta Embaixo da Torre Norte~
 do castelo se este estivesse sob ameaça.  Acima, leva para a base da torre,
 e o caminho abaixo segue para os túneis de fuga.
 ~
-39 4 0 0 0 0
+39 c 0
 D4
 ~
 alçapão~
+:n 1 o alçapão
 1 -1 3927
 D5
 ~
@@ -1076,7 +1096,7 @@ A Entrada Para os Túneis de Fuga~
 anos.  Sarrafos de madeira e vigas sustentam o teto e as paredes.  Os túneis
 de fuga seguem a leste pela escuridão.
 ~
-39 4 0 0 0 0
+39 c 0
 D1
 ~
 ~
@@ -1091,7 +1111,7 @@ Os Túneis de Fuga~
    Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 769 0 0 0 0
+39 aij 0
 D1
 ~
 ~
@@ -1102,7 +1122,7 @@ Os Túneis de Fuga~
    Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 769 0 0 0 0
+39 aij 0
 D1
 ~
 ~
@@ -1117,7 +1137,7 @@ Uma Curva no Túnel de Fuga~
    Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 773 0 0 0 0
+39 acij 0
 D0
 ~
 ~
@@ -1136,7 +1156,7 @@ Os Túneis de Fuga~
    Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 769 0 0 0 0
+39 aij 0
 D0
 ~
 ~
@@ -1151,7 +1171,7 @@ Uma Curva no Túnel de Fuga~
    Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 773 0 0 0 0
+39 acij 0
 D0
 ~
 ~
@@ -1166,7 +1186,7 @@ Uma Curva no Túnel de Fuga~
    Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 773 0 0 0 0
+39 acij 0
 D0
 ~
 ~
@@ -1178,7 +1198,7 @@ D1
 D2
 ~
 ~
-1 -1 7031
+ad -1 7031
 S
 #3969
 Um Aclive nos Túneis de Fuga~
@@ -1186,7 +1206,7 @@ Um Aclive nos Túneis de Fuga~
 escuridão.  Velhas e apodrecidas cordas se penduram da escuridão.  Se você
 deseja tentar, você pode escalar a rampa, ou pode seguir ao oeste.
 ~
-39 773 0 0 0 0
+39 acij 0
 D2
 ~
 ~
@@ -1205,7 +1225,7 @@ Os Túneis de Fuga~
    Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 769 0 0 0 0
+39 aij 0
 D2
 ~
 ~
@@ -1220,7 +1240,7 @@ Uma Curva no Túnel de Fuga~
    Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 769 0 0 0 0
+39 aij 0
 D0
 ~
 ~
@@ -1237,7 +1257,7 @@ você está indeciso por onde seguir, já que a brisa vem de duas direções
 diferentes.  Você deve escolher o caminho correto até a saída, então,
 escolha sabiamente.
 ~
-39 773 0 0 0 0
+39 acij 0
 D1
 ~
 ~
@@ -1255,7 +1275,7 @@ folhas das árvores a sua volta.  Seria um lindo lugar para sentar e
 descansar se não tudo não fosse pelo mofo negro que cobre quase tudo à
 vista.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 1~
@@ -1271,7 +1291,7 @@ Uma Trilha de Animais~
 para chegar ao rio.  Tudo através do caminho é coberto pelo mesmo mofo
 asqueroso que cobria a clareira.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -1289,7 +1309,7 @@ asqueroso que cobria a clareira.  O tom avermelhado da terra da ribeira,
 confere ao rio sua cor vermelha.  O leste lhe levará pelo rio, enquanto pelo
 oeste, você volta à clareira.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -1307,7 +1327,7 @@ pedida que você luta para conseguir manter sua cabeça acima das gélidas e
 avermelhadas águas.  Você pode tentar lutar contra a corrente e ir pelo
 oeste, ou apenas soltar o corpo e seguir a corrente.
 ~
-39 0 0 0 0 6
+39 0 6
 D1
 ~
 ~
@@ -1322,7 +1342,7 @@ Uma Piscina Subterrânea~
    Quase sem fôlego, você se encontra afundado em uma piscina, abaixo das
 águas congelantes.  O único som é o da água correndo sobre sua cabeça.
 ~
-39 65541 0 0 0 6
+39 acq 6
 D3
 ~
 ~
@@ -1338,7 +1358,7 @@ Uma Pequena Queda D´água~
 das águas adiante, lhe diz que a queda não é muito grande.  Você pode voltar
 para a piscina ou simplesmente descer pelas águas.
 ~
-39 1 0 0 0 6
+39 a 6
 D1
 ~
 ~
@@ -1357,7 +1377,7 @@ sucumbir pelo frio, você procura rapidamente um caminho para sair destas
 pode sair piscina pelo leste.  O caminho ao leste segue através da
 escuridão.
 ~
-39 1 0 0 0 6
+39 a 6
 D1
 ~
 ~
@@ -1374,7 +1394,7 @@ frio aqui.  Alguns flocos de neve flutuam pelo ar, caindo preguiçosamente
 pelo chão.  Ao leste, tudo o que pode ver é gelo.  Ao oeste, você seguira de
 volta ao rio.
 ~
-39 1 0 0 0 0
+39 a 0
 D0
 ~
 ~
@@ -1398,7 +1418,7 @@ A Costa Norte do Lago Congelado~
 Também dificulta a viagem, o fato de ser muito escorregadio aqui.  Lutando
 para chegar aqui, você desliza através do frio mortal.
 ~
-39 1 0 0 0 0
+39 a 0
 D2
 ~
 ~
@@ -1414,7 +1434,7 @@ A Costa Sul do Lago Congelado~
 Também dificulta a viagem, o fato de ser muito escorregadio aqui.  Lutando
 para chegar aqui, você desliza através do frio mortal.
 ~
-39 1 0 0 0 0
+39 a 0
 D0
 ~
 ~
@@ -1431,7 +1451,7 @@ ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que você
 escorrega por este lugar desolado.  Você deve se apressar a encontrar um
 abrigo.
 ~
-39 1 0 0 0 0
+39 a 0
 D0
 ~
 ~
@@ -1456,7 +1476,7 @@ ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que você
 escorrega por este lugar desolado.  Você deve se apressar a encontrar um
 abrigo.
 ~
-39 1 0 0 0 0
+39 a 0
 D2
 ~
 ~
@@ -1469,7 +1489,7 @@ ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que você
 escorrega por este lugar desolado.  Você deve se apressar a encontrar um
 abrigo.
 ~
-39 1 0 0 0 0
+39 1   0
 D0
 ~
 ~
@@ -1482,7 +1502,7 @@ ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que você
 escorrega por este lugar desolado.  Você deve se apressar a encontrar um
 abrigo.
 ~
-39 1 0 0 0 0
+39 a 0
 D1
 ~
 ~
@@ -1499,7 +1519,7 @@ ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que você
 escorrega por este lugar desolado.  Você deve se apressar a encontrar um
 abrigo.
 ~
-39 1 0 0 0 0
+39 a 0
 D0
 ~
 ~
@@ -1516,7 +1536,7 @@ ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que você
 escorrega por este lugar desolado.  Você deve se apressar a encontrar um
 abrigo.
 ~
-39 1 0 0 0 0
+39 a 0
 D0
 ~
 ~
@@ -1531,7 +1551,7 @@ No Congelado Lago Subterrâneo~
    Você está em um congelado lago subterrâneo.  O caminho é escorregadio, e
 você quase cai, ao se apressar para sair daqui antes que o gelo se parta.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -1545,7 +1565,7 @@ viva aqui, ainda, ao olhar para o oeste, você vê uma árvore gigantesca
 alcançando o teto de uma caverna.  Suas únicas chances são as de voltar de
 onde você veio, ou seguir ao norte para a caverna que você avistou.
 ~
-39 1 0 0 0 0
+39 a 0
 D0
 ~
 ~
@@ -1561,7 +1581,7 @@ O Centro da Ilha Congelada~
 quase até o teto da caverna.  Você percebe que a árvore é quase larga o
 suficiente para quem sabe...  Degraus?
 ~
-39 65 0 0 0 0
+39 ag   0
 D0
 ~
 ~
@@ -1588,7 +1608,7 @@ Na Árvore de Damorask~
    Você está em uma rampa de degraus escorregadios.  Você pode seguir para
 cima ou para baixo daqui.
 ~
-39 129 0 0 0 0
+39 129   0
 D2
 ~
 ~
@@ -1609,7 +1629,7 @@ trono feito de cristal, como sentinela para Damorask.  Do teto, você vê
 pilares de gelo que alcançam o solo.  Ao olhar mais de perto, você percebe
 que eles são de cor avermelhada.
 ~
-39 0 0 0 0 0
+39 0 0
 D5
 ~
 ~
@@ -1621,7 +1641,7 @@ O Santuário de Damorask~
 estas terras por séculos.  Ele está atrás de uma mesa, feita de puro gelo,
 preparando novos modos de reger as forças do mal.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
 ~
@@ -1634,7 +1654,7 @@ A Costa Sul da Ilha Congelada~
 que a neve e o gelo foram revolvidos aqui, como se alguém tivesse estado
 aqui recentemente.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -1647,7 +1667,7 @@ A Costa Ocidental da Ilha Congelada~
 Parece que a neve e o gelo foram revolvidos aqui, como se alguém tivesse
 estado aqui recentemente.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -1660,7 +1680,7 @@ A Costa Norte da Ilha Congelada~
 Parece que a neve e o gelo foram revolvidos aqui, como se alguém tivesse
 cavado aqui recentemente.
 ~
-39 0 0 0 0 0
+39 0 0
 D2
 ~
 ~
@@ -1668,17 +1688,17 @@ D2
 D5
 ~
 ~
-1 -1 3998
+ad -1 3998
 S
 #3998
 Uma Sala Secreta!~
    Você encontrou a antiga sala de tesouros do Gigante Congelado!
 ~
-39 149 0 0 0 0
+39 aceh  0
 D4
 ~
 ~
-1 -1 3997
+ad -1 3997
 S
 #3999
 A Caverna da Besta da Neve~
@@ -1686,10 +1706,10 @@ A Caverna da Besta da Neve~
 dos outros visitantes desta ilha que não foram fortes o suficiente para
 passar por este monstro.
 ~
-39 0 0 0 0 0
+39 0 0
 D2
 ~
 ~
 0 -1 3990
 S
-$~
+$

@@ -8,7 +8,7 @@ vez de uma espécie de corrimão rústico e sobem até a altura de sua
 cintura.  Para  oeste, você vai para o Altar do Templo de Midgaard e para
 leste você vê, logo adiante, uma alta torre em estilo greco-romano.
 ~
-4 20 0 0 0 2
+4 ce 2
 D1
 A estrada leva para debaixo de uma grande laje de pedra, à frente da Torre.
 ~
@@ -31,7 +31,7 @@ metros de você, e parece convidá-lo para dentro da Grande Torre.  A oeste,
 o caminho de pedras o espera, levando-o de volta para a cidade de Midgaard
 e o para leste, você tem o portão de entrada para a Embaixada.
 ~
-4 20 0 0 0 2
+4 ce 2
 D1
 Os portões da Embaixada dos Clãs.
 ~
@@ -55,7 +55,7 @@ compacta que não existe nenhum perigo de qualquer tipo de infiltração.  A
 oeste, pode-se ir abaixo da soleira de entrada e para leste, entra-se na
 grande Torre.
 ~
-4 20 0 0 0 0
+4 ce 0
 D1
 O saguão de entrada da Embaixada.
 ~
@@ -77,7 +77,7 @@ belíssima estrela de oito pontas.  Suas bases são pequenos gárgulas
 arqueados com seus braços erguidos, segurando os arcos.  Logo a sua
 frente há uma grande escada que leva para cima.
 ~
-4 393288 0 0 0 0
+4 dgsr 0
 D3
 ~
 ~
@@ -101,7 +101,7 @@ Clãs de Vitália: ao norte, A Ordem dos Discípulos da Luz; ao leste, Os
 Guardiões do Legado de Atlântida; ao sul, Os Olhos de Mitra e ao oeste, Os
 Cavaleiros da Virtude.
 ~
-4 152 0 0 0 0
+4 deh 0
 D0
 A Ordem dos Discípulos da Luz.
 ~
@@ -122,14 +122,14 @@ Os Cavaleiros da Virtude.
 ~
 ~
 0 -1 408
-D4
-~
-~
-0 -1 409
 D5
 ~
 ~
 0 -1 403
+D4
+~
+~
+0 -1 409
 S
 #405
 Sala do Clã Discípulos da Luz~
@@ -148,7 +148,7 @@ está preso em uma parede.  Baseado nesses preceitos os Discípulos vivem...
 Sim, essa sala, assim como o clã, tem a Força e Honra que esses preceitos
 inspiram.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D2
 ~
 ~
@@ -161,7 +161,7 @@ temor.  Austera como a cela de um monge, eis a Sala dos Atlantes, a sua
 frente, uma imponente estátua de Eletra, feita do mais puro jade e a seus
 pés está um livro, no qual estão gravados, a fogo, os preceitos deste Clã.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D3
 ~
 ~
@@ -189,7 +189,7 @@ pelas paredes robustas e nem pela sensação de abrigo, mas sim porque você
 parece estar sendo observado.  Esse fato, ao invés de lhe causar medo, lhe
 faz sentir tão protegido quanto qualquer magia jamais sonhou em deixar.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D0
 ~
 ~
@@ -208,7 +208,7 @@ lhe cumprimentaram com um largo sorriso e um deles lhe disse que se você
 precisasse de alguma coisa que procurasse os Justos, Sábios e Humildes do
 Clã para que possamos, na medida do possível, lhe ajudar.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D1
 ~
 ~
@@ -228,7 +228,11 @@ Clãs de Vitália: ao norte, os Remanescentes Cavaleiros de Númenor; ao
 leste, A Tribo Seguidora do Sol; e ao oeste, Os Guardiões do Segredo dos
 JVKB.
 ~
-4 156 0 0 0 0
+4 cdeh 0
+D5
+~
+~
+0 -1 404
 D0
 Os Remanescentes Cavaleiros de Númenor.
 ~
@@ -248,10 +252,6 @@ D4
 ~
 ~
 0 -1 414
-D5
-~
-~
-0 -1 404
 S
 #410
 Os Remanescentes Cavaleiros de Númenor~
@@ -271,7 +271,7 @@ que formam este clã.  Todos desejosos de igualdade entre os iguais, justiça
 e paz, em um mundo onde nenhum outro povo precise sofrer tanto quanto
 Númenor sofreu.
 ~
-4 131228 0 0 0 0
+4 cdehr 0
 D2
 ~
 ~
@@ -287,7 +287,7 @@ imponente, uma estátua se encontra, iluminada por uma estranha luz vinda do
 nada. Conforme você se aproxima dela, uma sensação de pureza invade seu
 corpo, juntamente com um calor confortável.
 ~
-4 131228 0 0 0 0
+4 cdehr 0
 D3
 ~
 ~
@@ -304,7 +304,7 @@ seus membros, características dignas apenas das Casas mais nobres de
 Vitália.  Runas indecifráveis cercam as quatro saliências no topo do altar
 de pedra: JVKB, será essa a chave para um mundo perdido?
 ~
-4 131228 0 0 0 0
+4 cdehr 0
 D1
 ~
 ~
@@ -322,10 +322,11 @@ os pesados livros que contam as histórias e as glórias de cada clã, todos
 alocados estranhamente ordenados em uma grande prateleira imponente na
 parede adjacente à porta.
 ~
-4 188 0 0 0 0
+4 cdefh 0
 D0
 ~
 porta~
+:n 2 uma pequenina porta
 0 -1 414
 S
 #414
@@ -338,19 +339,20 @@ segurando os arcos.  Ao sul há uma pequenina porta; e ao norte pode-se
 ver uma grande escada seguindo para cima, em direção ao piso superior, e
 para baixo, voltando ao piso inferior.
 ~
-4 156 0 0 0 0
+4 cdeh 0
 D2
 ~
 porta~
+:n 2 uma pequenina porta
 0 -1 413
-D4
-~
-~
-0 -1 415
 D5
 ~
 ~
 0 -1 409
+D4
+~
+~
+0 -1 415
 S
 #415
 O Terceiro Andar da Embaixada~
@@ -364,7 +366,7 @@ há uma escada que leva para cima e para baixo.  Ao norte encontra-se Os
 Filhos de Seth; ao leste, o Exército Suicida de Vitália; e ao oeste, Os
 Vingadores de Íris.
 ~
-4 156 0 0 0 0
+4 cdeh 0
 D0
 Os Filhos de Seth.
 ~
@@ -397,7 +399,7 @@ iluminado.  Nas paredes, há desenhos representando a sangrenta batalha
 entre Muwattali e Akhenaton.  No fim da sala um pequeno altar, repleto de
 oferendas a frente de uma magnífica estátua, que parece ser de Seth.
 ~
-4 131228 0 0 0 0
+4 cdehr 0
 D2
 ~
 ~
@@ -411,7 +413,7 @@ vários quadros e textos sobre as aventuras dos Suicidas de Vitália.  No
 centro do salão está uma Estátua De Cristal e ao fundo a atendente dos
 Suicidas está fazendo algumas anotações.
 ~
-4 131228 0 0 0 0
+4 cdehr 0
 D3
 ~
 ~
@@ -430,7 +432,7 @@ outra pintura, da Deusa Miuma lutando para honrar a Rainha Íris.  Na
 parede oposta a entrada, você encontra um quadro cheio de mensagens que
 chama a sua atenção.
 ~
-4 131228 0 0 0 0
+4 cdehr 0
 D1
 ~
 ~
@@ -450,7 +452,7 @@ recentes em Vitália: ao norte, Os Senhores da Tempestade; ao leste, os
 Seguidores da Dinastia Breyldon; ao sul, Os Guardiões da Prisão de Kildner
 e ao oeste A Eterna Sociedade da Luz.
 ~
-4 152 0 0 0 0
+4 deh 0
 D0
 Os Senhores da Tempestade.
 ~
@@ -471,14 +473,14 @@ A Eterna Sociedade da Luz.
 ~
 ~
 0 -1 420
-D4
-~
-~
-0 -1 421
 D5
 ~
 ~
 0 -1 415
+D4
+~
+~
+0 -1 421
 S
 #420
 A Eterna Sociedade da Luz~
@@ -494,7 +496,7 @@ siga em paz e leve em seu coração a frase: 'Meus problemas não são maiores que
 meus deuses e não irão me impedir de caminhar.  Se diante de mim não se abrir
 o mar, caminharei por sobre as águas."
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D1
 ~
 ~
@@ -513,7 +515,7 @@ Aqui se encontram representados outros três dos clãs recentes de Vitália:
 ao norte, Os Protetores da Família Mclaud; ao leste, Os Seguidores da
 Disciplina das Trevas; ao sul, Os Cavaleiros da família Dragoon.
 ~
-4 152 0 0 0 0
+4 deh 0
 D0
 Os Protetores da Família Mclaud.
 ~
@@ -529,15 +531,16 @@ Os Cavaleiros da Família Dragoon.
 ~
 ~
 0 -1 428
-D4
-Escadas para o último andar.
-~
-porta~
-0 402 423
 D5
 ~
 ~
 0 -1 419
+D4
+Escadas para o último andar.
+~
+porta~
+:n 2 a porta da Sala de Reuniões
+abg 402 423
 S
 #422
 Os Protetores da Família Mclaud~
@@ -547,7 +550,7 @@ fizeram parte deste clan.  Dentre elas você observa um belo quadro rústico
 escocês que o chama atenção.
    Há uma bela estátua de O'Connel Mclaud aqui.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D2
 ~
 ~
@@ -581,21 +584,26 @@ Conselho dos Clãs.
 de tamanha grandiosidade.
    Sua única saída é seguindo a escada e voltando para baixo.
 ~
-4 252 0 0 0 0
+4 cdefgh 0
+D5
+~
+porta~
+:n 2 a porta da Sala de Reuniões
+abg 402 421
 D4
 Você vê daqui uma passagem que parece levar à uma espécie de câmara.
 ~
 ~
 0 -1 429
-D5
-~
-porta~
-0 402 421
 E
-inscrição~
-&C"Deus, dá-nos a graça de aceitar com Serenidade as coisas que não podem ser
-mudadas, Coragem de mudar as coisas que devem ser mudadas, e Sabedoria para
-distinguir umas das outras"&n
+janela~
+Você se embriaga diante de tamanha beleza.  Nunca havia lhe ocorrido, quão
+bela é a cidade de Midgaard.
+~
+E
+mesa~
+Uma imensa e pesada peça estranhamente ovalada, que parece brotar do chão
+como se fora imensa árvore metálica.
 ~
 E
 cadeira cadeiras~
@@ -605,14 +613,10 @@ possui, contudo, a sensação de frio que costuma-se sentir, ao tocar algo
 feito de pedra.
 ~
 E
-mesa~
-Uma imensa e pesada peça estranhamente ovalada, que parece brotar do chão
-como se fora imensa árvore metálica.
-~
-E
-janela~
-Você se embriaga diante de tamanha beleza.  Nunca havia lhe ocorrido, quão
-bela é a cidade de Midgaard.
+inscrição~
+&C"Deus, dá-nos a graça de aceitar com Serenidade as coisas que não podem ser
+mudadas, Coragem de mudar as coisas que devem ser mudadas, e Sabedoria para
+distinguir umas das outras"&n
 ~
 S
 #424
@@ -622,7 +626,7 @@ existir, onde o mal nunca conseguiria aguentar os fluídos aqui presente.  As
 paredes são rodeadas de todos os lados por grandes blocos de granito, nos
 cantos da sala você percebe alguns querubins esculpidos em mármore.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D2
 ~
 ~
@@ -639,7 +643,7 @@ nuvens.  Apesar de sua imponência, quase se pode sentir a presença
 espiritual dos lendários guerreiros de Breyldon, que parecem estar zelando
 por este verdadeiro santuário.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D3
 ~
 ~
@@ -652,7 +656,7 @@ Esse é um santuário muito lindo e enfeitado, o cheiro daqui é muito bom e
 daqui se ouve um relaxante som de água corrente.  Você vê um altar com uma
 estátua sobre ele.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D0
 ~
 ~
@@ -666,7 +670,7 @@ bela jovem de cabelos longos e lisos com os pés descalços usando um vestido
 longo e justo aberto nas laterais.  A beleza de seu rosto é indescritivel e
 seus olhos encantam a todos.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D3
 ~
 ~
@@ -681,7 +685,7 @@ ouve os mais variados sons, que em seu todo parecem formar uma belíssima
 canção homenageando todos os bravos que protegem Vitália com suas próprias
 vidas.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D0
 ~
 ~
@@ -696,11 +700,11 @@ não há paredes, nem teto, nem chão, nem nada.  Ao olhar à sua volta, você
 começa a ter a sensação de que está flutuando.  Tudo à sua volta é muito
 branco e não se consegue ver de onde vem a luz que ilumina este quarto.
 ~
-4 1310968 0 0 0 0
+4 defghsu 0
 D5
 Daqui, pode-se ver a Sagrada Sala de Reuniões.
 ~
 ~
 0 -1 423
 S
-$~
+$

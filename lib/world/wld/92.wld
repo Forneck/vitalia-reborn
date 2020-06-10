@@ -8,8 +8,13 @@ não tem certeza.  Bem longe ao norte você consegue, com muita dificuldade,
 ver 5 torres: duas vermelhas, duas pretas e uma dourada.  Você ainda pode
 voltar para o sul de onde você veio.
 ~
-92 4 0 0 0 2
-D0
+92 c 2
+D N
+A estrada segue para o norte.
+~
+~
+0 -1 9201
+D S
 Você não vê muita coisa além do caminho que segue para Midgaard...
 ~
 ~
@@ -29,8 +34,13 @@ norte a visão das cinco torres parece mais nítida e você percebe que a torre
 dourada parece mudar de forma assemelhando-se a cada uma das outras torres.
 Há realmente algo de mágico nesta torre.  Você pode ainda seguir para o sul.
 ~
-92 0 0 0 0 2
-D0
+92 0 2
+D N
+A estrada segue para o norte.
+~
+~
+0 -1 9202
+D S
 A estrada segue para o sul.
 ~
 ~
@@ -44,8 +54,23 @@ multicolorida que hora assemelha-se a estrada a nordeste e hora confunde-se
 na sua forma com a estrada que segue para norodeste.  Você ainda pode voltar
 para o sul.
 ~
-92 0 0 0 0 2
-D0
+92 0 2
+D N
+Ao longe você vê um portão.
+~
+~
+0 -1 9205
+D NW
+Ao longe você vê dois portões.
+~
+~
+0 -1 9203
+D NE
+Ao longe você vê dois portões.
+~
+~
+0 -1 9204
+D S
 Você ainda pode voltar para o sul.
 ~
 ~
@@ -58,8 +83,18 @@ avermelhada com tonalidade indefinida.  Ao perceber isso você se depara com
 dois portões um ao norte e outro para noroeste.  O caminho para sudeste
 continua livre.
 ~
-92 0 0 0 0 2
-D0
+92 0 2
+D SE
+Você olha nessa direção lembrando de sua escolha.  Seria melhor alterá-la?
+~
+~
+0 -1 9202
+D NW
+Você vê um portão vermelho.
+~
+~
+0 -1 9206
+D N
 Você vê um portão vermelho.
 ~
 ~
@@ -72,8 +107,18 @@ enegrecida com tonalidade indefinida.  Ao perceber isso você se depara com
 dois portões um ao norte e outro para nordeste.  O caminho para sudoeste
 continua livre.
 ~
-92 0 0 0 0 2
-D0
+92 0 2
+D SW
+Você olha nessa direção lembrando de sua escolha.  Seria melhor alterá-la?
+~
+~
+0 -1 9202
+D NE
+Você vê um portão negro.
+~
+~
+0 -1 9208
+D N
 Você vê um portão negro.
 ~
 ~
@@ -89,12 +134,22 @@ não consegue enxergar ...  Talvez se você examinasse mais de perto a
 placa...  Você pode atravessar o portão para norte ou simplesmente seguir
 para o sul.
 ~
-92 0 0 0 0 2
-D0
+92 0 2
+D N
+Você vê uma estrada.
+~
+portão indefinida forma~
+:n 1 O portão de forma indefinida
+1 9200 9214
+D S
 Você olha nessa direção lembrando da sua escolha.  Seria melhor alterá-la?
 ~
 ~
 0 -1 9202
+E
+portão~
+Um belo portão de cor indefinida com a forma também indefinida.
+~
 E
 placa~
 Você força sua vista e consegue ler o que está escrito na placa:
@@ -105,10 +160,6 @@ boas intenções.  Saiba que a partir de sua entrada você estará sujeito às
 leis de nosso reino.
                             Ass.: Falso Ás - O Pacificador
 ~
-E
-portão~
-Um belo portão de cor indefinida com a forma também indefinida.
-~
 S
 #9206
 O Portão para o Reino de Copas~
@@ -118,12 +169,22 @@ consegue enxergar ...  Talvez se você examinasse mais de perto a placa...
 De qualquer maneira você não tem dúvidas de que está entrando na corte do
 Reino de Copas.  Você pode seguir em frente, para o norte ou para o sudeste.
 ~
-92 0 0 0 0 2
-D0
+92 0 2
+D N
+Você vê uma estrada.
+~
+portão copas forma~
+:n 1 O portão na forma do naipe de copas
+1 9201 9210
+D SE
 Você vê o caminho por onde você veio.
 ~
 ~
 0 -1 9203
+E
+Portão~
+Um belo portão vermelho com a forma do naipe de copas.
+~
 E
 placa~
 Você força sua vista e consegue ler o que está escrito na placa:
@@ -135,10 +196,6 @@ leis de nosso reino.
 
                             Ass.: Ás de Copas - O Pacificador
 ~
-E
-Portão~
-Um belo portão vermelho com a forma do naipe de copas.
-~
 S
 #9207
 O Portão para o Reino de Ouros~
@@ -148,12 +205,22 @@ consegue enxergar ...  Talvez se você examinasse mais de perto a placa...
 De qualquer maneira você não tem dúvidas de que está entrando na corte do
 Reino de Ouros.  Você pode seguir em frente, para o norte, ou para o sul.
 ~
-92 0 0 0 0 2
-D0
+92 0 2
+D N
+Você vê uma estrada.
+~
+portão ouros forma~
+:n 1 O portão na forma do naipe de ouros
+1 9202 9211
+D S
 Você vê o caminho por onde você veio.
 ~
 ~
 0 -1 9203
+E
+portão~
+Um belo portão vermelho com a forma do naipe de ouros.
+~
 E
 placa~
 Você força sua vista e consegue ler o que está escrito na placa:
@@ -165,10 +232,6 @@ leis de nosso reino.
 
                             Ass.: Ás de Ouros - O Pacificador
 ~
-E
-portão~
-Um belo portão vermelho com a forma do naipe de ouros.
-~
 S
 #9208
 O Portão para o Reino de Espadas~
@@ -179,12 +242,22 @@ De qualquer maneira você não tem dúvidas de que está entrando na corte do
 Reino de Espadas.  Você pode seguir em frente, para o norte, ou para o
 sudoeste.
 ~
-92 0 0 0 0 2
-D0
+92 0 2
+D N
+Você vê uma estrada.
+~
+portão espadas forma~
+:n 1 O portão na forma do naipe de espadas
+1 9203 9212
+D SW
 Você vê o caminho por onde você veio.
 ~
 ~
 0 -1 9204
+E
+portão~
+Um belo portão negro com a forma do naipe de espadas.
+~
 E
 placa~
 Você força sua vista e consegue ler o que está escrito na placa:
@@ -196,10 +269,6 @@ leis de nosso reino.
 
                             Ass.: Ás de Espada - O Pacificador
 ~
-E
-portão~
-Um belo portão negro com a forma do naipe de espadas.
-~
 S
 #9209
 O Portão para o Reino de Paus~
@@ -210,12 +279,22 @@ De qualquer maneira você não tem dúvidas de que está entrando na corte do
 Reino de Paus.  Você pode seguir em frente, para o norte, ou para o
 sudoeste.
 ~
-92 0 0 0 0 2
-D0
+92 0 2
+D N
+Você vê uma estrada.
+~
+portão copas forma~
+:n 1 O portão na forma do naipe de paus
+1 9204 9213
+D S
 Você vê o caminho por onde você veio.
 ~
 ~
 0 -1 9204
+E
+portão~
+Um belo portão Negro com a forma do naipe de Paus.
+~
 E
 placa~
 Você força sua vista e consegue ler o que está escrito na placa:
@@ -226,10 +305,6 @@ intenções.  Saiba que a partir de sua entrada você estará sujeito às leis de
 nosso reino.
                            Ass.: Ás de Paus - O Pacificador
 ~
-E
-portão~
-Um belo portão Negro com a forma do naipe de Paus.
-~
 S
 #9210
 Estrada para o Castelo de Copas~
@@ -239,11 +314,17 @@ linda torre vermelha.  Antes do castelo ao norte, você vê uma praça onde
 algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o sul você vê o
 portão.
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D N
+Você vê um praça.
+~
+~
+0 -1 9215
+D S
 Você vê o portão por onde você entrou.
 ~
 portão copas forma~
+:n 1 O portão na forma do naipe de copas
 1 9201 9206
 S
 #9211
@@ -254,11 +335,17 @@ linda torre vermelha.  Antes do castelo ao norte, você vê uma praça onde
 algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o sul você vê o
 portão.
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D N
+Você vê um praça.
+~
+~
+0 -1 9216
+D S
 Você vê o portão por onde você entrou.
 ~
 portão ouros forma~
+:n 1 O portão na forma do naipe de ouros
 1 9202 9207
 S
 #9212
@@ -269,11 +356,17 @@ uma linda torre Negra.  Antes do castelo ao norte, você vê uma praça onde
 algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o sul você vê o
 portão.
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D N
+Você vê um praça.
+~
+~
+0 -1 9217
+D S
 Você vê o portão por onde você entrou.
 ~
 portão espadas forma~
+:n 1 O portão na forma do naipe de espadas
 1 9203 9208
 S
 #9213
@@ -284,11 +377,17 @@ linda torre Negra.  Antes do castelo ao norte, você vê uma praça onde
 algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o sul você vê o
 portão.
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D N
+Você vê um praça.
+~
+~
+0 -1 9218
+D S
 Você vê o portão por onde você entrou.
 ~
 portão copas forma~
+:n 1 O portão na forma do naipe de copas
 1 9204 9209
 S
 #9214
@@ -299,11 +398,17 @@ uma linda torre de cor indefinida.  Antes do castelo ao norte, você vê uma
 praça onde algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o
 sul você vê o portão.
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D N
+Você vê um praça.
+~
+~
+0 -1 9219
+D S
 Você vê o portão por onde você entrou.
 ~
 portão indefinida forma~
+:n 1 O portão de forma indefinida
 1 9200 9205
 S
 #9215
@@ -311,8 +416,13 @@ O Lixo~
    Você se encontra em uma praça bastante tumultuada onde os arcanos menores
 de Copas se reúnem para celebrar sabe-se lá o quê...
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D N
+A Estrada continua rumo ao castelo.
+~
+~
+0 -1 9220
+D S
 A estrada segue para o sul.
 ~
 ~
@@ -323,8 +433,13 @@ O Lixo~
    Você se encontra em uma praça bastante tumultuada onde os arcanos menores
 de Ouros se reúnem para celebrar sabe-se lá o quê...
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D N
+A Estrada continua rumo ao castelo.
+~
+~
+0 -1 9221
+D S
 A estrada segue para o sul.
 ~
 ~
@@ -335,8 +450,13 @@ O Lixo~
    Você se encontra em uma praça bastante tumultuada onde os arcanos menores
 de Espadas se reúnem para celebrar sabe-se lá o quê...
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D N
+A Estrada continua rumo ao castelo.
+~
+~
+0 -1 9222
+D S
 A estrada segue para o sul.
 ~
 ~
@@ -347,8 +467,13 @@ O Lixo~
    Você se encontra em uma praça bastante tumultuada onde os arcanos menores
 de Paus se reúnem para celebrar sabe-se lá o quê...
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D N
+A Estrada continua rumo ao castelo.
+~
+~
+0 -1 9223
+D S
 A estrada segue para o sul.
 ~
 ~
@@ -359,8 +484,13 @@ O Lixo~
    Você se encontra em uma praça bastante tumultuada onde os coringas menos
 nobres se reúnem para celebrar sabe-se lá o quê...
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D N
+A Estrada continua rumo ao castelo.
+~
+~
+0 -1 9224
+D S
 A estrada segue para o sul.
 ~
 ~
@@ -375,12 +505,17 @@ nele e descobrir, talvez, o TESOURO perdido do Rei de Copas.  Seguindo para
 norte está a entrada do Castelo e ao sul uma praça bastante movimentada
 chama sua atenção.
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D N
+O Castelo está a sua frente, com sempre de portas abertas.
+~
+~
+0 -1 9225
+D S
 Você vê uma praça.
 ~
 ~
-0 -1 9215
+0 -1  9215
 S
 #9221
 Antes do Castelo de Ouros~
@@ -391,12 +526,17 @@ nele e descobrir, talvez, o TESOURO perdido do Rei de Ouros.  Seguindo para
 norte está a entrada do Castelo e ao sul uma praça bastante movimentada
 chama sua atenção.
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D N
+O Castelo está a sua frente, com sempre de portas abertas.
+~
+~
+0 -1 9226
+D S
 Você vê uma praça.
 ~
 ~
-0 -1 9216
+0 -1  9216
 S
 #9222
 Antes do Castelo de Espadas~
@@ -407,12 +547,17 @@ nele e descobrir, talvez, o TESOURO perdido do Rei de Espadas.  Seguindo
 para norte está a entrada do Castelo e ao sul uma praça bastante movimentada
 chama sua atenção.
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D N
+O Castelo está a sua frente, com sempre de portas abertas.
+~
+~
+0 -1 9227
+D S
 Você vê uma praça.
 ~
 ~
-0 -1 9217
+0 -1  9217
 S
 #9223
 Antes do Castelo de Paus~
@@ -423,12 +568,17 @@ nele e descobrir, talvez, o TESOURO perdido do Rei de Paus.  Seguindo para
 norte está a entrada do Castelo e ao sul uma praça bastante movimentada
 chama sua atenção.
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D N
+O Castelo está a sua frente, com sempre de portas abertas.
+~
+~
+0 -1 9228
+D S
 Você vê uma praça.
 ~
 ~
-0 -1 9218
+0 -1  9218
 S
 #9224
 Antes do Castelo Multiforme~
@@ -439,12 +589,17 @@ entrar nele e descobrir, talvez, o TESOURO perdido do Rei Coringa.  Seguindo
 para norte está a entrada do Castelo e ao sul uma praça bastante movimentada
 chama sua atenção.
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D N
+O Castelo está a sua frente, com sempre de portas abertas.
+~
+~
+0 -1 9229
+D S
 Você vê uma praça.
 ~
 ~
-0 -1 9219
+0 -1  9219
 S
 #9225
 A Sala do Trono de Copas~
@@ -459,8 +614,20 @@ menos é o q você pode ver pela porta entreaberta que se fecha
 repentinamente.  No canto noroeste da sala você vê uma porta que
 provavelmente o levará para a torre que você via do lado de fora.
 ~
-92 8 0 0 0 0
-D0
+92 d 0
+D E
+A fresta deixada pela porta não permite uma visão mais detalhada.
+~
+porta~
+:n 2 A porta bem trabalhada.
+1 -1 9230
+D NW
+Você vê uma porta.
+~
+porta~
+:n 2 A porta simples
+1 -1 9235
+D S
 Você vê a entrada do castelo.
 ~
 ~
@@ -479,8 +646,20 @@ menos é o q você pode ver pela porta entreaberta que se fecha
 repentinamente.  No canto noroeste da sala você vê uma porta que
 provavelmente o levará para a torre que você via do lado de fora.
 ~
-92 8 0 0 0 0
-D0
+92 d 0
+D E
+A fresta deixada pela porta não permite uma visão mais detalhada.
+~
+porta~
+:n 2 A porta bem trabalhada
+1 -1 9231
+D NW
+Você vê uma porta.
+~
+porta~
+:n 2 A porta simples
+1 -1 9236
+D S
 Você vê a entrada do castelo.
 ~
 ~
@@ -499,8 +678,20 @@ q você pode ver pela porta entreaberta que se fecha repentinamente.  No
 canto noroeste da sala você vê uma porta que provavelmente o levará para a
 torre que você via do lado de fora.
 ~
-92 8 0 0 0 0
-D0
+92 d 0
+D E
+A fresta deixada pela porta não permite uma visão mais detalhada.
+~
+porta~
+:n 2 A porta bem trabalhada
+1 -1 9232
+D NW
+Você vê uma porta.
+~
+porta~
+:n 2 A porta simples
+1 -1 9237
+D S
 Você vê a entrada do castelo.
 ~
 ~
@@ -519,8 +710,20 @@ você pode ver pela porta entreaberta que se fecha repentinamente.  No canto
 noroeste da sala você vê uma porta que provavelmente o levará para a torre
 que você via do lado de fora.
 ~
-92 8 0 0 0 0
-D0
+92 d 0
+D E
+A fresta deixada pela porta não permite uma visão mais detalhada.
+~
+porta~
+:n 2 A porta bem trabalhada
+1 -1 9233
+D NW
+Você vê uma porta.
+~
+porta~
+:n 2 A porta simples
+1 -1 9238
+D S
 Você vê a entrada do castelo.
 ~
 ~
@@ -540,8 +743,20 @@ que se fecha repentinamente.  No canto noroeste da sala você vê uma porta
 que provavelmente o levará para a torre que você via do lado de fora.  Você
 ainda pode sair do castelo pela direção sul.
 ~
-92 8 0 0 0 0
-D0
+92 d 0
+D E
+A fresta deixada pela porta não permite uma visão mais detalhada.
+~
+porta~
+:n 2 A porta bem trabalhada
+1 -1 9234
+D NW
+Você vê uma porta.
+~
+porta~
+:n 2 A porta simples
+1 -1 9239
+D S
 Você vê a entrada do castelo.
 ~
 ~
@@ -557,11 +772,12 @@ toda Vitália!  Sorte sua você não encontra-lo aqui ...  Mas espere ...  Onde
 andará o Pacificador do Reino de Copas?  Antes que o Ás chegue você ainda
 pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
 ~
-92 8 0 0 0 0
-D0
+92 d 0
+D W
 Sua única saida é para oeste.
 ~
 porta~
+:n 2 A porta bem trabalhada
 1 -1 9225
 S
 #9231
@@ -574,11 +790,12 @@ toda Vitália!  Sorte sua você não encontra-lo aqui ...  Mas espere ...  Onde
 andará o Pacificador do Reino de Ouros?  Antes que o Ás chegue você ainda
 pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
 ~
-92 8 0 0 0 0
-D0
+92 d 0
+D W
 Sua única saida é para oeste.
 ~
 porta~
+:n 2 A porta bem trabalhada
 1 -1 9226
 S
 #9232
@@ -591,11 +808,12 @@ toda Vitália!  Sorte sua você não encontra-lo aqui ...  Mas espere ...  Onde
 andará o Pacificador do Reino de Espadas?  Antes que o Ás chegue você ainda
 pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
 ~
-92 8 0 0 0 0
-D0
+92 d 0
+D W
 Sua única saida é para oeste.
 ~
 porta~
+:n 2 A porta bem trabalhada
 1 -1 9227
 S
 #9233
@@ -608,11 +826,12 @@ toda Vitália!  Sorte sua você não encontra-lo aqui ...  Mas espere ...  Onde
 andará o Pacificador do Reino de Paus?  Antes que o Ás chegue você ainda
 pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
 ~
-92 8 0 0 0 0
-D0
+92 d 0
+D W
 Sua única saida é para oeste.
 ~
 porta~
+:n 2 A porta bem trabalhada
 1 -1 9228
 S
 #9234
@@ -625,11 +844,12 @@ toda Vitália!  Sorte sua você não encontra-lo aqui ...  Mas espere ...  Onde
 andará o Pacificador do Reino Coringa?  Antes que o Ás chegue você ainda
 pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
 ~
-92 8 0 0 0 0
-D0
+92 d 0
+D W
 Sua única saida é para oeste.
 ~
 porta~
+:n 2 A porta bem trabalhada
 1 -1 9229
 S
 #9235
@@ -640,11 +860,18 @@ escada...  Você chega ao final da escada onde há uma porta fechada.  Você
 ainda pode voltar ao salão do trono pela mesma escada na direção
 sul.
 ~
-92 8 0 0 0 0
-D0
+92 d 0
+D N
+Você vê a porta fechada.
+~
+porta~
+:n 2 A porta da torre
+1 -1 9240
+D SE
 A descida da escada parece ser mais fácil.
 ~
 porta~
+:n 2 A porta simples
 1 -1 9225
 S
 #9236
@@ -654,11 +881,18 @@ Você não deixa de pensar que tipo de surpresa você encontrará no fim dessa
 escada...  Você chega ao final da escada onde há uma porta fechada.  Você
 ainda pode voltar ao salão do trono pela mesma escada na direção sul.
 ~
-92 8 0 0 0 0
-D0
+92 d 0
+D N
+Você vê a porta fechada.
+~
+porta~
+:n 2 A porta da torre
+1 -1 9241
+D SE
 A descida da escada parece ser mais fácil.
 ~
 porta~
+:n 2 A porta simples
 1 -1 9226
 S
 #9237
@@ -668,11 +902,18 @@ Você não deixa de pensar que tipo de surpresa você encontrará no fim dessa
 escada...  Você chega ao final da escada onde há uma porta fechada.  Você
 ainda pode voltar ao salão do trono pela mesma escada na direção sul.
 ~
-92 8 0 0 0 0
-D0
+92 d 0
+D N
+Você vê a porta fechada.
+~
+porta~
+:n 2 A porta da torre
+1 -1 9242
+D SE
 A descida da escada parece ser mais fácil.
 ~
 porta~
+:n 2 A porta simples
 1 -1 9227
 S
 #9238
@@ -682,11 +923,18 @@ não deixa de pensar que tipo de surpresa você encontrará no fim dessa
 escada...  Você chega ao final da escada onde há uma porta fechada.  Você
 ainda pode voltar ao salão do trono pela mesma escada na direção sul.
 ~
-92 8 0 0 0 0
-D0
+92 d 0
+D N
+Você vê a porta fechada.
+~
+porta~
+:n 2 A porta da torre
+1 -1 9243
+D SE
 A descida da escada parece ser mais fácil.
 ~
 porta~
+:n 2 A porta simples
 1 -1 9228
 S
 #9239
@@ -696,11 +944,18 @@ não deixa de pensar que tipo de surpresa você encontrará no fim dessa
 escada...  Você chega ao final da escada onde há uma porta fechada.  Você
 ainda pode voltar ao salão do trono pela mesma escada na direção sudeste. 
 ~
-92 8 0 0 0 0
-D0
+92 d 0
+D N
+Você vê a porta fechada.
+~
+porta~
+:n 2 A porta da torre
+1 -1 9244
+D SE
 A descida da escada parece ser mais fácil.
 ~
 porta~
+:n 2 A porta simples
 1 -1 9229
 S
 #9240
@@ -713,7 +968,7 @@ com dotes altos como a Dama de Copas.  Subitamente você percebe que a porta
 se tranca com uma rapidez estupenda impedindo seu retorno!  Parece que você
 ficou preso aqui ....
 ~
-92 8 0 0 0 0
+92 d 0
 S
 #9241
 O Alto da Torre de Ouros~
@@ -725,7 +980,7 @@ com dotes altos como a Dama de Ouros.  Subitamente você percebe que a porta
 se tranca com uma rapidez estupenda impedindo seu retorno!  Parece que você
 ficou preso aqui ....
 ~
-92 8 0 0 0 0
+92 d 0
 S
 #9242
 O Alto da Torre de Espadas~
@@ -737,7 +992,7 @@ com dotes altos como a Dama de Espadas.  Subitamente você percebe que a
 porta se tranca com uma rapidez estupenda impedindo seu retorno!  Parece que
 você ficou preso aqui ....
 ~
-92 8 0 0 0 0
+92 d 0
 S
 #9243
 O Alto da Torre de Paus~
@@ -749,7 +1004,7 @@ como a Dama de Paus.  Subitamente você percebe que a porta se tranca com uma
 rapidez estupenda impedindo seu retorno!  Parece que você ficou preso aqui
 ....
 ~
-92 8 0 0 0 0
+92 d 0
 S
 #9244
 O Alto da Torre Coringa~
@@ -761,6 +1016,6 @@ donzelas (?) com dotes altos como a Dama Coringa.  Subitamente você percebe
 que a porta se tranca com uma rapidez estupenda impedindo seu retorno!
 Parece que você ficou preso aqui ....
 ~
-92 8 0 0 0 0
+92 d 0
 S
-$~
+$

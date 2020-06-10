@@ -7,11 +7,19 @@ Cada cadeira está reservada para um Deus.
 sombras.  Você pode voltar ao Pátio pela porta ao Norte.  Ao oeste há uma
 outra porta.
 ~
-12 8 0 0 0 0
-D0
+12 d 0
+OL 106
+D N
+Esta porta ao norte o leva devolta ao Pátio do Reino dos Imortais.
+~
+porta~
+:n 2 a porta da sala de reuniões
+2 -1 1204
+D W
 Sobre esta porta há uma placa com os dizeres: "Armário".
 ~
 porta armário~
+:n 2 a porta do armário
 2 -1 1208
 S
 #1201
@@ -21,8 +29,24 @@ sua parede norte.  No canto da sala há uma bonita escada que leva ao nível
 superior.  Você pode voltar ao Pátio pela passagem ao sul ou ver as outras
 salas a leste e oeste.
 ~
-12 8 0 0 0 0
-D0
+12 d 0
+OL 101
+D E
+A Sala do Quadro dos Mortais fica a leste.
+~
+~
+0 -1 1203
+D S
+O Pátio do Reino dos Imortais pode ser visto por esta passagem ao sul.
+~
+~
+0 -1 1204
+D W
+Ao oeste você pode ver a Sala de Encontros sociais.
+~
+~
+0 -1 1206
+D U
 Esta escada leva para o nível superior.  Há um tipo de barreira no topo da
 escada.
 ~
@@ -37,7 +61,8 @@ O frio faz seus músculos doerem.  Tudo o que você pode fazer é rezar e se
 desculpar pelas más ações que vem realizando ultimamente.  Seja bom e pode
 ser que alguém lhe retire daqui.
 ~
-12 1048760 0 0 0 0
+12 defhu 0
+OL 107
 S
 #1203
 A Sala do Quadro dos Mortais~
@@ -47,8 +72,15 @@ entre os Mortais e Imortais.
    Ao norte você pode ver um belo jardim, e ao oeste você pode retornar para
 a Sala de Mensagens dos Imortais.
 ~
-12 8 0 0 0 0
-D0
+12 d 0
+OL 101
+D N
+Árvores e plantas formam os jardins ao norte. Tudo é muito bonito, e você
+sente uma forte vontade de ir até lá, respirar um ar fresco.
+~
+~
+0 -1 1210
+D W
 A Sala de Mensagens dos Imortais pode ser vista ao oeste.
 ~
 ~
@@ -65,8 +97,41 @@ usam para descansar do árduo trabalho de cuidar do mundo.
 maravilhosa.  Ao sul você vê a sala de reuniões e ao norte pode-se ver uma
 grande construção.
 ~
-12 8 0 0 0 0
-D0
+12 d 0
+OL 101
+ON imm
+ON z12
+D N
+Uma grande construção, feita de pedras brancas, com algumas janelas.
+Sua entrada é apenas uma passagem aberta, e aos lados desta passagem, há
+2 estátuas de criaturas que você nem faz idéia do que possam ser.
+~
+~
+0 -1 1201
+D E
+Você pode ver parte do Reino de Vitália ao leste.
+~
+~
+0 -1 1281
+D S
+Sobre a porta desta sala há uma placa com os dizeres: "Reuniões Divinas".
+Seria uma boa idéia entrar lá?
+~
+porta~
+:n 2 a porta da sala de reuniões
+2 -1 1200
+D W
+Você pode ver parte do Reino de Vitália ao oeste.
+~
+~
+0 -1 1280
+D NW
+Ao noroeste, há uma pequena porta, e através dela você pode ver pilhas de
+correspondências.
+~
+~
+0 -1 1205
+D SE
 Ao sudeste fica a área de sacrifícios... Tenebroso.
 ~
 ~
@@ -80,8 +145,15 @@ Pilhas de correspondências perdidas preenchem as paredes.
    O Pátio do Reino dos Imortais pode ser visto através da passagem ao
 sudeste. Há também uma porta ao leste.
 ~
-12 8 0 0 0 0
-D0
+12 d 0
+OL 101
+D E
+Você não consegue ver nada de especial nesta porta.
+~
+porta~
+:n 2
+1 -1 1206
+D SE
 Por esta porta você pode voltar para o Pátio do Reino dos Imortais.
 ~
 ~
@@ -97,11 +169,18 @@ controle maior sobre as mensagens deste quadro.
    Ao leste uma passagem que o leva devolta à Sala de Mensagens dos Imortais.
 Ao oeste há uma porta.
 ~
-12 8 0 0 0 0
-D0
+12 d 0
+OL 101
+D E
+A Sala de Mensagens dos Imortais fica ao leste.
+~
+~
+0 -1 1201
+D W
 Você não consegue ver nada de especial nesta porta.
 ~
 porta~
+:n 2
 1 -1 1205
 S
 #1207
@@ -111,8 +190,9 @@ Guardiães se reúnem para discutir os rumos de Vitália.  Tudo aqui está muito
 limpo, e há algumas imagens projetadas na parede.  Ao canto da sala, uma
 escada leva à sala logo abaixo desta.
 ~
-12 12 0 0 0 0
-D0
+12 cd 0
+OL 107
+D D
 Na base da escada, você pode ver a sala dos Deuses de Vitália.
 ~
 ~
@@ -129,11 +209,13 @@ O Armário dos Deuses~
 tomados dos maus-jogadores.  A única saída desta sala, a leste, leva devolta
 à Sala de Reunião dos Deuses.
 ~
-12 588 0 0 0 0
-D0
+12 cdgj 0
+OL 109
+D E
 Por esta porta, você volta para a Sala de Reunião dos Deuses.
 ~
 porta armário~
+:n 2 a porta do armário
 2 -1 1200
 S
 #1209
@@ -142,8 +224,9 @@ A Área de Sacrifícios~
 jogadores que ousam desafiar sua ira, ou outros objetos que acabam sendo
 perdidos.  Estranhamente, não há absolutamente nada pelo chão.
 ~
-12 4 0 0 0 2
-D0
+12 c 2
+OL 101
+D NW
 Por este caminho, você volta para o Pátio do Reino dos Imortais.
 ~
 ~
@@ -158,8 +241,14 @@ conheceu este lugar.
    A sua frente passa um pequeno córrego que segue para o norte.  Ao sul, um
 estreito caminho leva novamente ao Reino dos Imortais.
 ~
-12 20 0 0 0 2
-D0
+12 ce 2
+OL 101
+D N
+O pequeno córrego termina em um pequeno lago.
+~
+~
+0 -1 1211
+D S
 Um estreito caminho leva devolta para o reino.
 ~
 ~
@@ -179,8 +268,10 @@ se deliciando nestas águas.  Há um delicado perfume no ar, que provavelmente
 vem daquelas plantas às margens do lago.
    Ao sul você pode ver um bonito jardim.
 ~
-12 131092 0 0 0 6
-D0
+12 cer 6
+OL 101
+ON lago
+D S
 Um pequeno córrego chega por esta direção.  Mais adiante você vê os Jardins.
 ~
 ~
@@ -198,8 +289,25 @@ A Entrada para o Nível Superior~
 é elegante e bem arrumada.  Há uma sala ao norte, e corredores a leste e
 oeste.  Uma escada leva devolta ao nível inferior.
 ~
-12 8 0 0 0 0
-D0
+12 d 0
+OL 101
+D N
+Há uma sala ao norte, mas está protegida por um tipo de barreira luminosa
+em sua passagem.
+~
+~
+0 -1 1213
+D E
+Você pode ver um corredor ao leste.
+~
+~
+0 -1 1215
+D W
+Você pode ver um corredor ao oeste.
+~
+~
+0 -1 1214
+D D
 A escada desce até o nível inferior do Reino dos Imortais.
 ~
 ~
@@ -212,8 +320,19 @@ descansar e conversar.  A porta da sala, ao sul, é protegida com uma espécie
 de barreira luminosa, para evitar que inferiores tenham acesso a esta sala.
 Há uma escada que leva a uma sala logo acima.
 ~
-12 8 0 0 0 0
-D0
+12 d 0
+OL 106
+D S
+Você pode ver a entrada do nível superior ao sul.
+~
+~
+0 -1 1212
+D W
+Você vê a Sala de Controle.
+~
+~
+0 -1 1216
+D U
 Ao topo da escada, você pode ver uma nova sala, provavelmente de acesso
 ainda mais restrito do que esta.
 ~
@@ -225,8 +344,9 @@ Os Corredores~
    Ao entrar no corredor, você percebe que ele não leva a lugar algum.  Há
 um aviso pregado à parede.
 ~
-12 8 0 0 0 0
-D0
+12 d 0
+OL 101
+D E
 Você pode ver a entrada do nível superior ao leste.
 ~
 ~
@@ -243,8 +363,9 @@ Os Corredores~
    Ao entrar no corredor, você percebe que ele não leva a lugar algum.  Há
 um aviso pregado à parede.
 ~
-12 8 0 0 0 0
-D0
+12 d 0
+OL 101
+D W
 Você pode ver a entrada do nível superior ao oeste.
 ~
 ~
@@ -270,8 +391,14 @@ esta escrito: &WEsses itens são muito especiais!  Cuide deles com sua vida!&n
 espécie nao conhecida por voce, representando as Mesnadas de Vitália, com
 vários equipamentos a sua volta.
 ~
-12 8 0 0 0 0
-D0
+12 d 0
+OL 106
+D N
+Você vê a continuação da Sala de Controle.
+~
+~
+0 -1 1217
+D E
 Você vê a sala dos Deuses de Vitália.
 ~
 ~
@@ -291,8 +418,9 @@ esta escrito: &WEsses itens são muito especiais!  Cuide deles com sua vida!&n
 espécie nao conhecida por voce, representando as Mesnadas de Vitália, com
 vários equipamentos a sua volta.
 ~
-12 8 0 0 0 0
-D0
+12 d 0
+OL 106
+D S
 Você vê a continuação da Sala de Controle.
 ~
 ~
@@ -312,30 +440,37 @@ cultuados e isto lhe traz um bem estar muito grande.
    Um caminho invisível a olhos desatentos, leva você a uma outra sala, na
 direção norte.
 ~
-12 65556 0 0 0 0
-D0
+12 ceq 0
+OL 101
+ON gaivi
+D N
+Um caminho de material extremamente sutil leva à Sala dos Heróis, que fica
+a norte.
+~
+~
+0 -1 1221
+D S
 Você pode ver parte do Reino de Vitália ao sul.
 ~
 ~
 0 -1 1280
 E
-chão~
-Uma suave bruma cobre o chão, envolvendo suavemente seus pés e pernas.
-Você se sente como se estivesse caminhando nas nuvens.
+pilar pilares~
+Você se aproxima de um dos pilares e o examina detalhadamente.  Feito com um
+puríssimo mármore branco entremeado com grossos veios dourados, ele foi
+esculpido por um dos artesões etéreos, que servem aos Deuses.
 ~
 E
-caminho~
-Apenas os olhos acostumados às sutilezas do mundo etéreo, conseguem
-visualizá-lo.  Este caminho, traçado por mãos Divinas, foi impregnado por
-suave e tênue bruma, que envolve delicadamente a todos aqueles que por ele
-caminham.
+teto~
+Olhando para cima, você observa a grandiosa abóboda do salão, magníficamente
+pintada com a representação das Divindades.  As figuras parecem estar vivas,
+tamanha a perfeição da obra.
 ~
 E
-divã divãs~
-Feitos com o mais sublime dos materiais, desconhecido ainda pelos olhos
-humanos, estes belíssimos divãs, acomodam com delicadeza e conforto, aqueles
-que se reunem para decidir as provas de coragem e sabedoria que sustentam o
-Fogo Eterno dos mortais.
+mundo redor~
+O salão parece estar suspenso sobre nuvens espessas.  Se você sair, será
+possível observar todas as atividades do mundo mortal sob seus pés.  Apenas
+os olhos experientes daqueles que foram escolhidos, conseguem realmente ver.
 ~
 E
 tochas~
@@ -346,22 +481,23 @@ propostos pelos Deuses.  Se a chama no coração dos homens se apagar, este
 Fogo também se extinguirá.
 ~
 E
-mundo redor~
-O salão parece estar suspenso sobre nuvens espessas.  Se você sair, será
-possível observar todas as atividades do mundo mortal sob seus pés.  Apenas
-os olhos experientes daqueles que foram escolhidos, conseguem realmente ver.
+divã divãs~
+Feitos com o mais sublime dos materiais, desconhecido ainda pelos olhos
+humanos, estes belíssimos divãs, acomodam com delicadeza e conforto, aqueles
+que se reunem para decidir as provas de coragem e sabedoria que sustentam o
+Fogo Eterno dos mortais.
 ~
 E
-teto~
-Olhando para cima, você observa a grandiosa abóboda do salão, magníficamente
-pintada com a representação das Divindades.  As figuras parecem estar vivas,
-tamanha a perfeição da obra.
+caminho~
+Apenas os olhos acostumados às sutilezas do mundo etéreo, conseguem
+visualizá-lo.  Este caminho, traçado por mãos Divinas, foi impregnado por
+suave e tênue bruma, que envolve delicadamente a todos aqueles que por ele
+caminham.
 ~
 E
-pilar pilares~
-Você se aproxima de um dos pilares e o examina detalhadamente.  Feito com um
-puríssimo mármore branco entremeado com grossos veios dourados, ele foi
-esculpido por um dos artesões etéreos, que servem aos Deuses.
+chão~
+Uma suave bruma cobre o chão, envolvendo suavemente seus pés e pernas.
+Você se sente como se estivesse caminhando nas nuvens.
 ~
 S
 #1221
@@ -379,31 +515,29 @@ estão representados nas paredes, são verdadeiras lendas.
    Olhando para a direção sul, você percebe que naquele lugar se reunem os
 corações e mentes mais puros.
 ~
-12 65556 0 0 0 0
-D0
+12 ceq 0
+OL 101
+D N
+Um caminho de material extremamente sutil leva à Sala da Honra, que fica ao
+norte.
+~
+~
+0 -1 1222
+D S
 Um caminho de material extremamente sutil leva à Sala de Conferências, que
 fica ao sul.
 ~
 ~
 0 -1 1220
 E
-paredes figuras~
-Figuras imponentes, perfeitamente entalhadas na mais nobre de todas as
-madeiras, mostram os belos traços daqueles que foram reproduzidos aqui.  São
-heróis que deixaram uma profunda marca sobre a terra em que pisaram, feitos
-que muitos tentam repetir.
+sala mármore detalhes~
+Você observa que na brancura das paredes de mármore brotam pequenos
+afrescos, que foram esculpidos por mãos hábeis e extremamente sensíveis.
 ~
 E
-equipamentos~
-São as testemunhas das aventuras vividas por grandes e inesquecíveis heróis.
-Foram muito usados e alguns, são raros, praticamente desconhecidos pelos
-comuns.
-~
-E
-cúpula cristal~
-Cintilante e translúcida, com seu formato arredondado e simetricamente
-perfeito, esta cúpula de cristal parece uma estrela brilhando no
-firmamaneto.
+esculturas afrescos~
+Pequenas cenas, narrando os grandes feitos dos heróis, foram esculpidas no
+mais puro e perfeito mármore.
 ~
 E
 bancada~
@@ -412,14 +546,23 @@ primaveril, apara equipamentos preciosos, verdadeiras raridades, usados por
 aqueles que deixaram grandes exemplos.
 ~
 E
-esculturas afrescos~
-Pequenas cenas, narrando os grandes feitos dos heróis, foram esculpidas no
-mais puro e perfeito mármore.
+cúpula cristal~
+Cintilante e translúcida, com seu formato arredondado e simetricamente
+perfeito, esta cúpula de cristal parece uma estrela brilhando no
+firmamaneto.
 ~
 E
-sala mármore detalhes~
-Você observa que na brancura das paredes de mármore brotam pequenos
-afrescos, que foram esculpidos por mãos hábeis e extremamente sensíveis.
+equipamentos~
+São as testemunhas das aventuras vividas por grandes e inesquecíveis heróis.
+Foram muito usados e alguns, são raros, praticamente desconhecidos pelos
+comuns.
+~
+E
+paredes figuras~
+Figuras imponentes, perfeitamente entalhadas na mais nobre de todas as
+madeiras, mostram os belos traços daqueles que foram reproduzidos aqui.  São
+heróis que deixaram uma profunda marca sobre a terra em que pisaram, feitos
+que muitos tentam repetir.
 ~
 S
 #1222
@@ -433,8 +576,9 @@ que sustentam este Clan.
    Ao sul se encontra o caminho para a sala onde os heróis deixam suas
 mensagens.
 ~
-12 65556 0 0 0 0
-D0
+12 ceq 0
+OL 101
+DS
 Um caminho de material extremamente sutil leva à Sala dos Heróis, que fica
 a sul.
 ~
@@ -448,8 +592,20 @@ pessoas andando pelas ruas desta pacata cidade.  O Reino dos Imortais fica
 logo a leste!
    Um imenso salão banhado em luz celestial pode ser visto ao norte.
 ~
-12 65604 0 0 0 9
-D0
+12 cgq 9
+OL 101
+D N
+Um lindo e imenso salão sem paredes, banhado na mais bonita luz celestial
+pode ser visto ao norte.
+~
+~
+0 -1 1220
+D E
+Um formidável Reino sobre as nuvens pode ser visto ao leste.
+~
+~
+0 -1 1204
+D D
 Exatamente abaixo de você está a Praça do Templo de Midgaard.
 ~
 ~
@@ -460,8 +616,14 @@ Flutuando sobre Nova Thalos~
    Você está flutuando sobre New Thalos.  Sob as nuvens você vê os cidadãos
 e comerciantes desta cidade.  O Reino dos Imortais fica logo a oeste!
 ~
-12 65604 0 0 0 9
-D0
+12 cgq 9
+OL 101
+D W
+Um formidável Reino sobre as nuvens pode ser visto ao oeste.
+~
+~
+0 -1 1204
+D D
 Exatamente abaixo de você está a estátua do Poderoso Observador, no meio
 da Praça Central do Mercado de New Thalos.
 ~
@@ -474,11 +636,17 @@ S
 pedra e muitas ferramentas espalhadas por todos os lados.  Quem trabalha
 aqui provavelmente não é alguém muito organizado.
 ~
-12 0 0 0 0 0
-D0
+12 0 0
+OL 101
+OX magik "*abra!*" open north
+OX magik "*fecha!*" close north
+OX magik "*tranca!*" lock north
+OX magik "*destranca!*" unlock north
+D N
 ~
 ~
-0 -1 1291
+:n 2 a porta
+abchi -1 1291
 S
 #1291
 Área de Experiências~
@@ -486,10 +654,12 @@ S
 pedra e muitas ferramentas espalhadas por todos os lados.  Quem trabalha
 aqui provavelmente não é alguém muito organizado.
 ~
-12 0 0 0 0 0
-D0
+12 0 0
+OL 101
+D S
 ~
 ~
-0 -1 1290
+:n 2 a porta
+abchi -1 1290
 S
-$~
+$

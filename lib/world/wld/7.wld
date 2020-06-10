@@ -6,7 +6,7 @@ meio da floresta, despontando em meio as árvores está o pináculo da Fortaleza.
 O símbolo da roda triangular está em um dos lados da torre, para ser visto por 
 todos.  Um caminho segue a leste para dentro da floresta.
 ~
-7 4 0 0 0 4
+7 c 4
 D1
 ~
 ~
@@ -23,7 +23,7 @@ externas que revestem duas trilhas que levam ao coração da floresta.   Sua
 imaginação pode apenas esboçar os terrores malditos que o aguardam.
 Lembre-se: Você foi avisado!
 ~
-7 0 0 0 0 4
+7 0 4
 D1
 ~
 ~
@@ -42,7 +42,7 @@ diabólica chega a seus ouvidos.   Isto faz calafrios percorrerem sua espinha.
 Você pode ver uma trilha ao sul e ao leste.   Ao norte há uma cabana.
 Ou você pode fugir daqui...
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -68,7 +68,7 @@ pequenas aberturas nas paredes podem ser vistas.   O chão é de terra áspera.
 Quem quer que seja que tenha morado aqui, parece ter abandonado há muito tempo.
 Mas se você se aproximar, pode achar algo útil. 
 ~
-7 0 0 0 0 0
+7 0 0
 D2
 ~
 ~
@@ -82,7 +82,7 @@ olha ao redor, uma risada maléfica chega a seus ouvidos, ecoando pelas árvores,
 simplesmente se recusando a morrer. Você sente uma gota de suor escorrer pela 
 sua nuca.
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -96,7 +96,7 @@ S
 A Floresta Sombria~
    Você está na Floresta Sombria.   Tenha um Bom Dia.
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -116,7 +116,7 @@ Desesperadamente Perdido~
 
 Não fique com medo.  EXISTE uma saída mas, será que você consegue encontrar?
 ~
-7 4 0 0 0 0
+7 4 0
 D2
 ~
 ~
@@ -130,7 +130,7 @@ sangue comece a sair de sua boca.   Nas raízes jaz um herói.   Seu corpo está
 em decomposição mas a causa de sua morte é bastante óbvia.   O tolo herói fora
 decapitado.
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -150,7 +150,7 @@ O Denso Bosque~
 para seguir adiante.   Freqüentemente as árvores carregam antigas manchas de 
 sangue em seus troncos. 
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -171,7 +171,7 @@ ao seu redor o impedem de explorar a parede, que é uma imponente massa de
 granito frio, negro e liso.   Assim que você se aproxima desta vil Fortaleza, 
 sua alma sabe que este não é um bom lugar para ser pego.
 ~
-7 0 0 0 0 3
+7 0 3
 D2
 ~
 ~
@@ -185,7 +185,7 @@ parede.   Este lugar parece fornecer proteção dos frios ventos comuns da
 Floresta Sombria.   Você não sabe por que mas pelo menos aqui você pode 
 encontrar alguma proteção dos males da floresta.
 ~
-7 68 0 0 0 0
+7 68 0
 D1
 ~
 ~
@@ -207,7 +207,7 @@ passagem, difícil.   Você pode imaginar que este lugar rapidamente se alaga
 com uma chuva mais forte.   Você espera que isto não aconteça enquanto você 
 estiver aqui.
 ~
-7 0 0 0 0 5
+7 0 5
 D2
 ~
 ~
@@ -222,7 +222,7 @@ Mais Fundo na Floresta Sombria~
    Quanto mais fundo você alcança, mais você duvida da sanidade de sua escolha.
 Mas você sabe que há grandes riscos em voltar. 
 ~
-7 1 0 0 0 3
+7 1 3
 D1
 ~
 ~
@@ -242,7 +242,7 @@ O Palácio das Ilusões~
 dançam pela noite ao som de uma música (??), ensurdecedora e diabólica que 
 parece vir de lugar algum.   Você começa a duvidar de sua sanidade...
 ~
-7 44 0 0 0 0
+7 44 0
 D0
 ~
 ~
@@ -259,7 +259,7 @@ mal chega aqui, você está cercado de corpos, aparentemente sem vida, que se
 movimentam freneticamente ao som de assustadores ruídos que começam a ferir 
 seus ouvidos. 
 ~
-7 40 0 0 0 0
+7 40 0
 D0
 ~
 ~
@@ -281,7 +281,7 @@ de um quadrúpede: um cavalo.   Ao redor das pegadas, o solo está chamuscado.
 Olhando em volta há alguns sinais de luta.   Alguém apostou tudo contra o que 
 quer que seja que deixou as pegadas.   E perdeu. 
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -302,7 +302,7 @@ Você olha para a clareira a medida que se aproxima e a reconhece pelo que ela é.
 Um matadouro.   Suas botas esmagam esqueletos decapitados de algumas criaturas
 infelizes. 
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -324,7 +324,7 @@ algo realmente mal.   O vento chicoteia o mato, formando ondas através da grama.
 Lá fora o vento ruge e pode-se ouvir um gemido insano, maldito, que faz os pêlos de
 seu corpo se arrepiarem.
 ~
-7 0 0 0 0 0
+7 0 0
 D0
 ~
 ~
@@ -349,7 +349,7 @@ pode chamar estes corpos de pessoas) se aglomeram.   Ao se aproximar, você
 pode notar um corpo ainda quente, de um homem em sua armadura de prata, sendo 
 brutalmente esquartejado. É hora da Festa!
 ~
-7 32 0 0 0 0
+7 32 0
 D0
 ~
 ~
@@ -363,7 +363,7 @@ varrer seu medo e tremor.   Você pode seguir ao leste daqui ou fugir para o
 oeste, para a segurança da ponte.   Outra opção é seguir este pequeno rio até
 o fim.
 ~
-7 0 0 0 0 3
+7 0 3
 D1
 ~
 ~
@@ -381,7 +381,7 @@ S
 Desesperadamente Perdido~
    Você está DESESPERADAMENTE PERDIDO!
 ~
-7 1 0 0 0 3
+7 1 3
 D1
 ~
 ~
@@ -395,7 +395,7 @@ S
 Desesperadamente Perdido~
    Você está DESESPERADAMENTE PERDIDO!
 ~
-7 1 0 0 0 3
+7 1 3
 D2
 ~
 ~
@@ -409,7 +409,7 @@ S
 Desesperadamente Perdido~
    Você está DESESPERADAMENTE PERDIDO!
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -423,7 +423,7 @@ S
 Desesperadamente Perdido~
    Você está DESESPERADAMENTE PERDIDO!
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -437,7 +437,7 @@ S
 Desesperadamente Perdido~
    Você está DESESPERADAMENTE PERDIDO!
 ~
-7 1 0 0 0 3
+7 1 3
 D1
 ~
 ~
@@ -451,7 +451,7 @@ S
 Desesperadamente Perdido~
    Você está DESESPERADAMENTE PERDIDO!
 ~
-7 1 0 0 0 3
+7 1 3
 D2
 ~
 ~
@@ -467,7 +467,7 @@ sua presença.   Uma força incontrolável o obriga a fitar a Fortaleza e você
 tenta resistir...é inútil.   A oeste está um pequeno córrego.   Ao norte fica a 
 clareira, ao sul há uma pequena trilha que leva a um pequeno abrigo em ruínas.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -492,7 +492,7 @@ fazendo um caminho ao redor do lugar que pertence à Senhora do Vazio interior,
 ao sul você vê o que parecem ser os portões principais.   Ao norte a parede 
 desaparece na escuridão da Floresta Sombria.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -513,7 +513,7 @@ fazendo um caminho ao redor do lugar que pertence à Senhora do Vazio
 interior, ao sul você vê o que parecem ser os portões principais.  Ao norte
 a parede desaparece na escuridão da Floresta Sombria.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -534,7 +534,7 @@ granito são bastante lisas.  O Portão é enorme, feito de ferro, brazonado com
 o símbolo da roda triangular.  Apenas as mais bravas almas considerariam
 entrar neste lugar terrível.  Há um portão ao leste.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -556,7 +556,7 @@ fazendo um caminho ao redor do lugar que pertence à Senhora do Vazio interior,
 ao sul você vê o que parecem ser os portões principais.  Ao norte a parede
 desaparece na escuridão da Floresta Sombria.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -577,7 +577,7 @@ fazendo um caminho ao redor do lugar que pertence à Senhora do Vazio interior,
 ao sul você vê o que parecem ser os portões principais.  Ao norte a parede
 desaparece na escuridão da Floresta Sombria.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -599,7 +599,7 @@ leva sua cabeça.  Você se tornou outra vítima do Cavaleiro sem Cabeça.
 
 Tragicamente, sua história e sua vida terminam aqui.
 ~
-7 38 0 0 0 0
+7 38 0
 S
 #733
 O Desfiladeiro Rochoso~
@@ -607,7 +607,7 @@ O Desfiladeiro Rochoso~
 que estudam as pedras, estranhos não é mesmo?  Amostras de quartzo, feldspato,
 pedra calcária e outros minerais podem ser vistos.
 ~
-7 0 0 0 0 0
+7 0 0
 D0
 ~
 ~
@@ -620,7 +620,7 @@ olhar ao redor, você mal pode notar o que sobrou de um pequeno abrigo em
 ruinas.  Algumas poucas paredes restaram, o que já foi branco, agora é cinza.
 Evidentemente este abrigo foi desperdiçado pelas forças da Fortaleza.  Pena.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -641,7 +641,7 @@ paredes despedaçadas restaram como testemunhas do que fora em um tempo antigo;
 agora espera apenas pelas mãos impiedosas do tempo.  Pelo menos as ruínas
 oferecem algum abrigo do incessante vento.
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -668,7 +668,7 @@ Fortaleza Negra de Ilan foi construída, aqueles que protegiam o lugar
 resolveram fugir em segurança, ou talvez eles se juntaram aos ocupantes do
 castelo, e dividiram seus destinos.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -688,7 +688,7 @@ fresco no chão.  Embora você perceba que alguns lugares foram chamuscados,
 ainda há água na cocheira.  Tudo indica então, que alguém ou alguma coisa
 ainda usa este lugar.
 ~
-7 0 0 0 0 3
+7 0 3
 D3
 ~
 ~
@@ -705,7 +705,7 @@ dividido em milhares de fragmentos pelo chão.  A parede oriental ainda parece
 inteira, mas você nota trepidações pela parede sul, parece que ela poderia vir
 abaixo a qualquer momento.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -727,7 +727,7 @@ tem uma história diferente.  As paredes vieram abaixo como o resto do lugar.
 O Sino Gigante que uma vez fez seu chamado de alerta é agora um monte de
 bronze retorcido misturado aos escombros.
 ~
-7 0 0 0 0 0
+7 0 0
 D1
 ~
 ~
@@ -741,7 +741,7 @@ profissionais para as torturas mais horripilantes que sua alma pode imaginar.
 O ferro, a prateleira, a roda, parafusos, assim como a clássica água de
 tortura chinesa.  Cada um designado para causar mais dor possível.
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
@@ -752,7 +752,7 @@ A Antecâmara~
    A antecâmara serve de passagem para a torre da capela.  Do lado de fora há
 uma fila de cavilhas onde alguns robes estão pendurados.
 ~
-7 0 0 0 0 0
+7 0 0
 D4
 ~
 ~
@@ -766,7 +766,7 @@ S
 A Floresta Sombria~
    Você está na Floresta Sombria.   Ahm, sério?!
 ~
-7 1 0 0 0 0
+7 1 0
 D0
 ~
 ~
@@ -789,7 +789,7 @@ Mais da Floresta Sombria~
    A Floresta Sombria se extende até onde seus olhos alcançam.  O que não é
 tão longe assim, dado que é uma floresta muito densa.
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -809,7 +809,7 @@ Pista de Dança Inferno~
 noite toda até seus pés sangrarem ou você pode apenas apreciar o sofrimento
 alheio, matando (sem trocadilhos), sua curiosidade.
 ~
-7 0 0 0 0 0
+7 0 0
 D1
 ~
 ~
@@ -822,7 +822,7 @@ Desfigurado.  Agora as forças da Fortaleza profanaram e saquearam o lugar.  As
 paredes antes famosas por sua segurança, mal podem proteger elas mesmas da
 devastação dos elementos naturais.
 ~
-7 0 0 0 0 0
+7 0 0
 D1
 ~
 ~
@@ -839,7 +839,7 @@ o lodo forma uma espuma sobre a água.  Este lugar se aproxima mais de um
 pântano do que de uma lagoa, onde é favorável à procriação de mosquitos e
 outros insetos que zunem em seus ouvidos.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -855,7 +855,7 @@ Ilha de Hera~
 pequena ilhota rochosa coberta com sumagre-venenoso.  Há pouca terra, mas de
 alguma forma as videiras ainda sobrevivem.
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -866,7 +866,7 @@ Ainda Mais da Floresta Sombria~
    A esta altura você já conhece bem o lugar, e quando você pensa que não
 encontrará nada de novo, algo surpreende você!  Você está certo!
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -883,7 +883,7 @@ no aparentemente sem fim emaranhado de carvalhos que guardam este lugar
 maldito.  Continue andando e você não sabe se será capaz de achar seu caminho
 de volta.
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -905,7 +905,7 @@ consegue ver facilmente.  Preenchendo as paredes estão diversas estátuas de
 fino mármore, totalmente idênticas.  Todas trazem a imagem da Senhora da
 Fortaleza, com sua expressão imponente.
 ~
-7 12 0 0 0 0
+7 12 0
 D1
 ~
 ~
@@ -922,7 +922,7 @@ Dentro da Fortaleza~
 externa da fortaleza serve como proteção e segurança dessa construção
 diabólica.
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 ~
 ~
@@ -946,7 +946,7 @@ O Final Sul do Salão dos Espelhos~
 sala aparência de ser inúmeras vezes maior do que é.  Há umas poucas tochas
 fixadas pelas paredes.  A sala se extende para norte.
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 ~
 ~
@@ -962,7 +962,7 @@ O Final Norte do Salão dos Espelhos~
 sala aparência de ser inúmeras vezes maior do que é.  Há umas poucas tochas
 fixadas pelas paredes.  A sala se extende para sul.
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 ~
 ~
@@ -979,7 +979,7 @@ estantes.  A maioria com grossos tomos encadernados em couro.  E parecem que
 não foram usados por meses, ou anos.  Há uma boa camada de pó sobre eles.  O
 solo ladrilhado parece imaculado.
 ~
-7 8 0 0 0 0
+7 8 0
 D1
 ~
 ~
@@ -996,7 +996,7 @@ desconfortavelmente quente devido à forja.  As paredes são revestidas com os
 guardiões da fortaleza, o Guardião do Destino.  Há muitos em vários estágios
 de conserto, para serem reparados por Durlak.
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 ~
 ~
@@ -1016,7 +1016,7 @@ dançam freneticamente em orbes de cristal, penduradas no teto por anéis
 forjados em aço.  A estranha luz que provém delas lançam longas sombras que
 alcançam todo o corredor.
 ~
-7 8 0 0 0 0
+7 8 0
 D1
 ~
 ~
@@ -1036,7 +1036,7 @@ dançam freneticamente em orbes de cristal, penduradas no teto por anéis
 forjados em aço.  A estranha luz que provém delas lançam longas sombras que
 alcançam todo o corredor.
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 ~
 porta passagem secreta~
@@ -1059,7 +1059,7 @@ provendo mais luz do que o suficiente para vê-las.  As estátuas parecem estar
 se retorcendo em dor.  Cada uma capturada em determinados momentos, mostrando
 sua agonia para que todos vejam.
 ~
-7 8 0 0 0 0
+7 8 0
 D2
 ~
 ~
@@ -1076,7 +1076,7 @@ bronzeada.  Há um grande osso queimando no meio da sala, o osso queima com uma
 chama preta sobrenatural.  Uma escadaria em espiral, na parede, sobe até a
 câmara de observação.
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 ~
 ~
@@ -1097,7 +1097,7 @@ alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
 estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
 sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D1
 ~
 ~
@@ -1114,7 +1114,7 @@ alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
 estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
 sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
@@ -1131,7 +1131,7 @@ alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
 estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
 sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
@@ -1152,7 +1152,7 @@ alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
 estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
 sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
@@ -1169,7 +1169,7 @@ alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
 estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
 sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
@@ -1194,7 +1194,7 @@ alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
 estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
 sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
@@ -1220,7 +1220,7 @@ alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
 estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
 sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
@@ -1246,7 +1246,7 @@ alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
 estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
 sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D1
 ~
 ~
@@ -1263,7 +1263,7 @@ alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
 estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
 sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D1
 ~
 ~
@@ -1281,7 +1281,7 @@ S
 A Sala de 10.000 Pilares~
    Você está em uma sala com 10.000 pilares de mármore. Tenha um bom dia.
 ~
-7 9 0 0 0 0
+7 9 0
 D1
 ~
 ~
@@ -1298,7 +1298,7 @@ telescópio montado próximo à parede, proporcionando uma bela visão.  O centro
 da câmara possui uma robusta mesa de carvalho com uma modesta coleção de mapas
 e desenhos.  Uma escadaria em espiral conduz para baixo.
 ~
-7 8 0 0 0 0
+7 8 0
 D5
 ~
 ~
@@ -1314,7 +1314,7 @@ dançam freneticamente em orbes de cristal, penduradas no teto por anéis
 forjados em aço.  A estranha luz que provém delas lançam longas sombras que
 alcançam todo o corredor.
 ~
-7 8 0 0 0 0
+7 8 0
 D1
 ~
 ~
@@ -1334,7 +1334,7 @@ dançam freneticamente em orbes de cristal, penduradas no teto por anéis
 forjados em aço.  A estranha luz que provém delas lançam longas sombras que
 alcançam todo o corredor.
 ~
-7 8 0 0 0 0
+7 8 0
 D1
 ~
 ~
@@ -1351,7 +1351,7 @@ inúmeras engrenagens, peças, e outras partes internas de um relógio, girando,
 rangindo.  O efeito é quase hipnótico.  Uma escadaria construída na parece
 permite acesso aos intrigantes mecanismos acima, se você quiser subir lá.
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 ~
 ~
@@ -1369,7 +1369,7 @@ S
 Um Corredor~
    Você está na Fortaleza. Tenha um bom dia.
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
@@ -1387,7 +1387,7 @@ Você percebe que com todos esses movimentos, você seria um alvo fácil para uma
 emboscada.  Há uma escadaria que conduz abaixo, para seguir acima, você terá
 que escalar pelas engrenagens.
 ~
-7 8 0 0 0 0
+7 8 0
 D4
 ~
 ~
@@ -1403,7 +1403,7 @@ Entre os Dentes das Engrenagens~
 engrenagens, apoiando-se em estruturas móveis em um momento, escalando em
 engrenagens no outro.  
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 ~
 ~
@@ -1426,7 +1426,7 @@ engrenagem treme e começa a se mover, e você cai.  Você aterriza entre os
 dentes de duas engrenagens.  Seu corpo é mastigado e moído, e você morre
 instantaneamente.  Tragicamente sua vida e sua busca acabam aqui.
 ~
-7 10 0 0 0 0
+7 10 0
 S
 #778
 O Topo da Torre do Relógio~
@@ -1434,7 +1434,7 @@ O Topo da Torre do Relógio~
 você obtém uma boa visão.  Você pode bravamente tentar descer pelas
 engrenagens, ou pode ir até a face do relógio.
 ~
-7 8 0 0 0 0
+7 8 0
 D3
 ~
 ~
@@ -1453,7 +1453,7 @@ torre de observação extendendo-se ligeiramente mais alta de onde você está.
 Daqui você pode ver o pináculo da fortaleza extendendo-se até o céu, lançando
 sua longa sombra através da Floresta Sombria.
 ~
-7 0 0 0 0 0
+7 0 0
 D1
 ~
 ~
@@ -1465,10 +1465,11 @@ O Térreo do Pináculo~
 mais do que um poço escuro.  A única coisa que quebra a monotonia é uma
 escadaria que se estende para cima e para baixo.
 ~
-7 9 0 0 0 0
+7 9 0
 D3
 ~
 porta dupla~
+:n 2 a porta dupla
 2 717 766
 D4
 ~
@@ -1489,7 +1490,7 @@ centro do lugar é tomado por diversos instrumentos de dor.  Há um barril de
 óleo fervente.  Diversas prateleiras e incontáveis instrumentos laminados
 horríveis, velhos, infectados e enferrujados pelo tempo.
 ~
-7 8 0 0 0 0
+7 8 0
 D2
 ~
 ~
@@ -1507,7 +1508,7 @@ material escuro no centro.  Luzes profanas queimam com o poder do mal,
 lançando seu brilho sobrenatural sobre o lugar.  A escadaria em espiral que
 circula a capela, continua para cima e para baixo.
 ~
-7 8 0 0 0 0
+7 8 0
 D4
 ~
 ~
@@ -1526,7 +1527,7 @@ escadarias estejam apoiadas.  Você se maravilha pela engenhosidade disso.  Mas
 apenas as mais bravas almas subirão esses degraus, porque a cada passo que
 você dê, mais próximo estará...Dela.
 ~
-7 8 0 0 0 0
+7 8 0
 D4
 ~
 ~
@@ -1544,7 +1545,7 @@ misteriosamente, como se a escuridão da torre consumisse a luz, assim que a mesm
 fosse criada.  Suas pernas parecem querer descer os degraus ao invés de subi-los.
 Descer é afastar-se do terror no topo.
 ~
-7 8 0 0 0 0
+7 8 0
 D4
 ~
 ~
@@ -1560,7 +1561,7 @@ A Escolha~
 Há duas saídas, e para seguir adiante você tem que fazer uma escolha.  Pense
 bem antes de fazer a sua escolha.
 ~
-7 13 0 0 0 0
+7 13 0
 D0
 ~
 ~
@@ -1578,13 +1579,13 @@ S
 A Condenação~
    Você fez sua escolha, agora morra com ela.
 ~
-7 10 0 0 0 0
+7 10 0
 S
 #787
 A Maldição~
    Você fez sua escolha, agora morra com ela.
 ~
-7 10 0 0 0 0
+7 10 0
 S
 #788
 A Infernal Sala Musical~
@@ -1595,7 +1596,7 @@ brilho reflexivo.  Os canos de bronze do órgão igualmente polidos, esperando
 para serem usados.  No chão você ouve o ecoar de uma fantasmagórica orquestra
 tocando em alguma dimensão perdida, sua musica de alguma forma chega até você.
 ~
-7 41 0 0 0 0
+7 41 0
 D0
 ~
 ~
@@ -1610,7 +1611,7 @@ A Grande Escadaria em Espiral~
    Parabéns.  Você fez a escolha certa.  Talvez você tenha uma chance afinal,
 mas se você tiver um pouco de bom senso, evitará ir lá novamente.
 ~
-7 8 0 0 0 0
+7 8 0
 D4
 ~
 ~
@@ -1628,11 +1629,12 @@ obstáculo à sua passagem.  Forçar a porta será inútil.  Para prosseguir, você
 precisará de uma chave.
      Há uma porta ao norte.
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 A Porta da Morte bloqueia seu caminho.
 ~
 porta morte~
+:n 2 a porta
 2 715 791
 D5
 ~
@@ -1647,11 +1649,12 @@ caminho é iluminado por velas enfileiradas em ambos lados da escadaria.  O ar
 está pesado com a umidade e há um fedor demoníaco ao redor.  Ainda não é tarde
 demais para voltar.
 ~
-7 8 0 0 0 0
+7 8 0
 D2
    A Morte está bloqueando seu caminho.
 ~
 porta morte~
+:n 2 a porta
 2 715 790
 D4
 ~
@@ -1664,7 +1667,7 @@ Além do Caminho Sem Volta~
 através da Senhora do Vazio Interior, Ivian.  A menos que você resolva
 facilitar as coisas e morrer agora mesmo.
 ~
-7 13 0 0 0 0
+7 13 0
 D4
 ~
 ~
@@ -1679,7 +1682,7 @@ enegrecidos a assombrosa ominosidade de uma enorme tempestade.  Você pode
 caminhar até a sacada se quiser, ou pode seguir acima pela escadaria no
 centro, e desafiar a Senhora da Fortaleza.
 ~
-7 8 0 0 0 0
+7 8 0
 D1
 ~
 ~
@@ -1703,7 +1706,7 @@ você iniciou esse pesadelo pelo mar que situa-se no horizonte, ao sul.  A sacada
 se estende um pouco a sul, seja cuidadoso.
      Não há grade e o primeiro degrau é traiçoeiro.
 ~
-7 0 0 0 0 1
+7 0 1
 D2
 ~
 ~
@@ -1720,7 +1723,7 @@ rajada de vento inesperada faz você perder o equilíbrio, mas você consegue se
 pendurar por uma mão.  Quanto mais nervoso você fica, mais esse lugar se torna
 estranhamente calmo.
 ~
-7 0 0 0 0 1
+7 0 1
 D0
 ~
 ~
@@ -1734,7 +1737,7 @@ da porta ao norte.  Essa câmara é o posto de guarda para o guarda-costas pessoal
 e servo de Ivian.  O maior e mais Poderoso de todos os Guardiões: o Tempestuoso
 Cavaleiro Negro!
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
@@ -1754,7 +1757,7 @@ Senhora da Fortaleza, Ivian, sentada em seu trono, que está rodeado pela sua
 horda de filhos.  Ela olha para você e perscruta sua mente, procurando saber
 se você é significante o suficiente para preocupações.
 ~
-7 9 0 0 0 0
+7 9 0
 D2
 ~
 ~
@@ -1769,7 +1772,7 @@ A Saída~
    Fugindo rapidamente, você deixa o trono para trás e segue abaixo por uma
 escadaria secreta.
 ~
-7 5 0 0 0 0
+7 5 0
 D5
 ~
 ~
@@ -1782,7 +1785,7 @@ aparentemente interminável estrutura de carvalhos que se põem como guardiões
 desse lugar maldito.  Se seguir em frente você não sabe se saberá o caminho de
 volta.
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~

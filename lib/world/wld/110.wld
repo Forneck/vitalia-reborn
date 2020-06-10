@@ -12,22 +12,22 @@ mais poderá retroceder.
    Decida-se!  A coragem e o destemor são características que apenas os
 heróis possuem.
 ~
-110 124 0 0 0 1
-D0
+110 cdefg 1
+D N
 ~
 ~
 0 -1 11001
+E
+porta pórtico portal~
+O metal usado na confecção desta imensa porta parece ter sido forjado pelos
+Antigos Dragões.
+~
 E
 brasão~
 Os olhos mortais não conseguem definir com precisão aquilo que foi estampado
 neste brasão.  Feito com um material desconhecido pelos homens, sabe-se
 apenas que as palavras que ali foram escritas são incompreensíveis à mente
 humana.
-~
-E
-porta pórtico portal~
-O metal usado na confecção desta imensa porta parece ter sido forjado pelos
-Antigos Dragões.
 ~
 S
 #11001
@@ -41,15 +41,19 @@ ou morrer!
    Tenha cuidado Aventureiro, você está prestes a penetrar nas Mesnadas de
 Vitália.
 ~
-110 124 0 0 0 1
-D0
+110 cdefg 1
+D N
+~
+~
+0 -1 11002
+D S
 ~
 ~
 0 -1 11000
 E
-corredor corredores~
-Os corredores largos e sombrios, lembram as estradas que você já percorreu
-em suas andanças pelo mundo.
+muro muros~
+Os muros são altos, feitos com imensos blocos de uma rocha escura e
+brilhante.
 ~
 E
 rocha rochas~
@@ -57,9 +61,9 @@ As rochas que foram usadas na construção destes muros não parecem ser
 conhecidas pelos homens.
 ~
 E
-muro muros~
-Os muros são altos, feitos com imensos blocos de uma rocha escura e
-brilhante.
+corredor corredores~
+Os corredores largos e sombrios, lembram as estradas que você já percorreu
+em suas andanças pelo mundo.
 ~
 S
 #11002
@@ -72,20 +76,24 @@ por aqui em busca de fama ou de liberdade.  Figuras de dragões foram
 esculpidas nas rochas com tamanha perfeição que você tem a impressão que as
 temíveis criaturas o acompanham com o olhar.
 ~
-110 124 0 0 0 1
-D0
+110 cdefg 1
+D N
+~
+~
+0 -1 11003
+D S
 ~
 ~
 0 -1 11001
 E
-figuras dragões dragão~
-Estas criaturas parecem ter vida própria.  Seus olhos brilham no escuro e
-acompanham todos os seus movimentos.
-~
-E
 tocha tochas~
 Grandes tochas, cujas chamas ardentes iluminam o ambiente, dando ao lugar
 uma atmosfera quase mística.
+~
+E
+figuras dragões dragão~
+Estas criaturas parecem ter vida própria.  Seus olhos brilham no escuro e
+acompanham todos os seus movimentos.
 ~
 S
 #11003
@@ -100,20 +108,24 @@ para a amplidão do firmamento, procura guardar para sempre em sua mente as
 imagens daqueles que podem ser os seus últimos instantes.
    O corredor parece ter chegado ao seu destino.  Seu coração dispara...
 ~
-110 124 0 0 0 1
-D0
+110 cdefg 1
+D N
+~
+~
+0 -1 11004
+D S
 ~
 ~
 0 -1 11002
 E
-olho olhos vermelhos~
-Brilhantes e avermelhados, parecem chamas ardentes que encaram você de forma
-arrepiante, trazendo à sua mente a figura de verdadeiros demônios.
-~
-E
 corredor corredores~
 Os corredores largos e sombrios, lembram as estradas que você já percorreu
 em suas andanças pelo mundo.
+~
+E
+olho olhos vermelhos~
+Brilhantes e avermelhados, parecem chamas ardentes que encaram você de forma
+arrepiante, trazendo à sua mente a figura de verdadeiros demônios.
 ~
 S
 #11004
@@ -131,22 +143,15 @@ Clãs de Vitália.
    Às vezes, tem-se a impressão de ver grandes vultos alados sobrevoando o
 local...  Seriam os antigos dragões de Vitália?
 ~
-110 116 0 0 0 1
-D0
+110 cefg 1
+D E
+~
+~
+0 -1 11007
+D S
 ~
 ~
 0 -1 11003
-E
-estandarte estandartes clã clãs~
-Imensas flâmulas, feitas em seda, veludos e em sua grande maioria,
-rebordados com fios de ouro e pedras preciosas, trazem estampados os nomes
-dos poderosos Clãs de Vitália.
-~
-E
-portões portão~
-Pesados e com aparência de serem muito antigos, são feitos de ferro e
-circundam toda a arena, prontos para serem fechados durante as mesnadas.
-~
 E
 arena~
 Imensa.  Seu tamanho causa um certo constrangimento aos desavisados.
@@ -154,6 +159,17 @@ Figuras estranhas, feitas com luetn'amir, um metal esverdeado, estão
 espalhadas pelas paredes por toda a volta.  São dragões enormes, perfeitos,
 amendrontadores.  Seus olhos vermelhos faiscam, como se destilassem um ódio
 infinito pelos homens.
+~
+E
+portões portão~
+Pesados e com aparência de serem muito antigos, são feitos de ferro e
+circundam toda a arena, prontos para serem fechados durante as mesnadas.
+~
+E
+estandarte estandartes clã clãs~
+Imensas flâmulas, feitas em seda, veludos e em sua grande maioria,
+rebordados com fios de ouro e pedras preciosas, trazem estampados os nomes
+dos poderosos Clãs de Vitália.
 ~
 S
 #11005
@@ -171,20 +187,26 @@ pessoa presente naquele ambiente sabe que está sobre solo consagrado pelos
 próprios Deuses de Vitália e o respeitam profundamente.  Estes guerreiros
 lutarão bravamente.
 ~
-110 124 0 0 0 1
-D0
+110 cdefg 1
+D E
 ~
 portão~
-1 -1 11016
-E
-novos dragões~
-Criaturas descomunais, musculosas e extremamente fortes.  Suas feições
-lembram antigas criaturas que passaram por Vitália em tempos remotíssimos.
+:n 1 o grande portão da arena
+abc -1 11006
+D S
 ~
+portão~
+:n 1
+abc -1 11016
 E
 chão tapete~
 Um imenso tapete da mais pura lã branca existente, muito limpo e bastante
 espesso.
+~
+E
+novos dragões~
+Criaturas descomunais, musculosas e extremamente fortes.  Suas feições
+lembram antigas criaturas que passaram por Vitália em tempos remotíssimos.
 ~
 S
 #11006
@@ -200,24 +222,25 @@ Quando chegam próximos à altura da tribuna de honra, dirigem-se aos Senhores
 das Mesnadas e, com a mão direita esticada, os saúdam com entusiasmo.  Estão
 abertos os Torneios de Vitália.
 ~
-110 2105412 0 0 0 1
-D0
+110.1 cgnv 1
+ON arena
+D W
 ~
 portão~
-1 -1 11030
-E
-chão madeira~
-A arena onde as lutas ocorrem tem o chão de madeira coberto com areia
-- por isso, o nome arena - e em seu subsolo existem jaulas onde estão os
-animais presos, as celas para os prisioneiros, os locais onde os gladiadores
-se aquecem e onde armas recebem seu afiamento.  Esse subsolo tem 6 metros de
-altura.
+:n 1 o grande portão da arena
+abc -1 11005
+D E
 ~
+portão~
+:n 1 o grande portão da arena
+abc -1 11030
 E
-estandarte estandartes~
-Imensas flâmulas, feitas em seda, veludos e em sua grande maioria,
-rebordados com fios de ouro e pedras preciosas, trazem estampados os nomes
-dos poderosos Clãs de Vitália.
+arena centro~
+Imensa.  Seu tamanho causa um certo constrangimento aos desavisados.
+Figuras estranhas, feitas com luetn'amir, um metal esverdeado, estão
+espalhadas pelas paredes por toda a volta.  São dragões enormes, perfeitos,
+amendrontadores.  Seus olhos vermelhos faiscam, como se destilassem um ódio
+infinito pelos homens.
 ~
 E
 biga bigas~
@@ -226,12 +249,18 @@ rodas de metal, haviam dois objetos ponteagudos, presos em seu eixo, que
 lembravam punhais.
 ~
 E
-arena centro~
-Imensa.  Seu tamanho causa um certo constrangimento aos desavisados.
-Figuras estranhas, feitas com luetn'amir, um metal esverdeado, estão
-espalhadas pelas paredes por toda a volta.  São dragões enormes, perfeitos,
-amendrontadores.  Seus olhos vermelhos faiscam, como se destilassem um ódio
-infinito pelos homens.
+estandarte estandartes~
+Imensas flâmulas, feitas em seda, veludos e em sua grande maioria,
+rebordados com fios de ouro e pedras preciosas, trazem estampados os nomes
+dos poderosos Clãs de Vitália.
+~
+E
+chão madeira~
+A arena onde as lutas ocorrem tem o chão de madeira coberto com areia
+- por isso, o nome arena - e em seu subsolo existem jaulas onde estão os
+animais presos, as celas para os prisioneiros, os locais onde os gladiadores
+se aquecem e onde armas recebem seu afiamento.  Esse subsolo tem 6 metros de
+altura.
 ~
 S
 #11007
@@ -249,8 +278,16 @@ comidas e vinho aos seus senhores.  Às vezes, tem-se a impressão de ver
 grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
 Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+D N
+~
+portão~
+abc -1 11026
+D SW
+~
+~
+0 -1 11014
+D E
 ~
 ~
 0 -1 11008
@@ -279,8 +316,16 @@ comidas e vinho aos seus senhores.  Às vezes, tem-se a impressão de ver
 grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
 Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+D N
+~
+portão~
+abc -1 11026
+D W
+~
+~
+0 -1 11007
+D SE
 ~
 ~
 0 -1 11009
@@ -309,8 +354,16 @@ comidas e vinho aos seus senhores.  Às vezes, tem-se a impressão de ver
 grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
 Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+D E
+~
+portão~
+abc -1 11027
+D NW
+~
+~
+0 -1 11008
+D S
 ~
 ~
 0 -1 11010
@@ -339,8 +392,16 @@ comidas e vinho aos seus senhores.  Às vezes, tem-se a impressão de ver
 grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
 Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+D E
+~
+portão~
+abc -1 11027
+D N
+~
+~
+0 -1 11009
+D SW
 ~
 ~
 0 -1 11011
@@ -369,8 +430,16 @@ comidas e vinho aos seus senhores.  Às vezes, tem-se a impressão de ver
 grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
 Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+D S
+~
+portão~
+abc -1 11028
+D NE
+~
+~
+0 -1 11010
+D W
 ~
 ~
 0 -1 11012
@@ -399,8 +468,16 @@ comidas e vinho aos seus senhores.  Às vezes, tem-se a impressão de ver
 grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
 Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+D S
+~
+portão~
+abc -1 11028
+D E
+~
+~
+0 -1 11011
+D NW
 ~
 ~
 0 -1 11013
@@ -429,8 +506,16 @@ comidas e vinho aos seus senhores.  Às vezes, tem-se a impressão de ver
 grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
 Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+D W
+~
+portão~
+abc -1 11029
+D SE
+~
+~
+0 -1 11012
+D N
 ~
 ~
 0 -1 11014
@@ -459,8 +544,16 @@ comidas e vinho aos seus senhores.  Às vezes, tem-se a impressão de ver
 grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
 Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+D W
+~
+portão~
+abc -1 11029
+D S
+~
+~
+0 -1 11013
+D NE
 ~
 ~
 0 -1 11007
@@ -481,8 +574,13 @@ parte das arquibancadas é reservada, e aqui os Imortais e Deuses se sentam
 para assistir aos espetáculos.  Às vezes, tem-se a impressão de ver grandes
 vultos alados sobrevoando o local...  Seriam os antigos Dragões de Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+OL 101
+D E
+~
+~
+0 -1 1204
+D W
 ~
 ~
 0 -1 1204
@@ -493,11 +591,12 @@ As Arquibancadas da Grande Arena~
 parte especial das arquibancadas é reservada, e aqui os Campeões podem se
 sentar para assistir aos espetáculos.
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+OL 101
+D N
 ~
 ~
-1 -1 11005
+abc -1 11005
 S
 #11026
 As Saídas da Grande Arena~
@@ -511,16 +610,7 @@ com a figura grotesca e brilhante do maior dragão jamais visto pelo homem.
 E então ele desaparece...como se jamais tivesse aparecido.  Cuidado!
 Apresse o seu passo e tente se esquecer do que viu.
 ~
-110 116 0 0 0 1
-E
-dragão grotesco brilhante~
-Criaturas cruéis, perversas e rudes.  Odeiam os que possuem a alma pura e
-digna e procuram matá-las por serem tão inoportunas.  Entram em combate
-apenas pelo prazer de matar ou para proteger o local onde vivem.  Passam o
-tempo dominando escravos e matam todos aqueles que não podem ser
-controlados.  Estes dragões estão sob o controle de criaturas ainda mais
-poderosas.
-~
+110 cefg 1
 E
 multidão~
 Para alívio dos espectadores, o velarium (os toldos de pano) estava sendo
@@ -529,6 +619,15 @@ de nuvens de Vitália.  Estavam todos vestidos com suas melhores roupas e
 orgulhavam-se ao ver que as flâmulas de suas famílias tremulavam ao vento.
 Mas dentro em pouco aquela multidão sabia que iria gritar extasiada,
 enquanto a areia se encharcava com o sangue do inimigo morto.
+~
+E
+dragão grotesco brilhante~
+Criaturas cruéis, perversas e rudes.  Odeiam os que possuem a alma pura e
+digna e procuram matá-las por serem tão inoportunas.  Entram em combate
+apenas pelo prazer de matar ou para proteger o local onde vivem.  Passam o
+tempo dominando escravos e matam todos aqueles que não podem ser
+controlados.  Estes dragões estão sob o controle de criaturas ainda mais
+poderosas.
 ~
 S
 #11027
@@ -543,16 +642,7 @@ com a figura grotesca e brilhante do maior dragão jamais visto pelo homem.
 E então ele desaparece...como se jamais tivesse aparecido.  Cuidado!
 Apresse o seu passo e tente se esquecer do que viu.
 ~
-110 116 0 0 0 1
-E
-dragão grotesco brilhante~
-Criaturas cruéis, perversas e rudes.  Odeiam os que possuem a alma pura e
-digna e procuram matá-las por serem tão inoportunas.  Entram em combate
-apenas pelo prazer de matar ou para proteger o local onde vivem.  Passam o
-tempo dominando escravos e matam todos aqueles que não podem ser
-controlados.  Estes dragões estão sob o controle de criaturas ainda mais
-poderosas.
-~
+110 cefg 1
 E
 multidão~
 Para alívio dos espectadores, o velarium (os toldos de pano) estava sendo
@@ -561,6 +651,15 @@ de nuvens de Vitália.  Estavam todos vestidos com suas melhores roupas e
 orgulhavam-se ao ver que as flâmulas de suas famílias tremulavam ao vento.
 Mas dentro em pouco aquela multidão sabia que iria gritar extasiada,
 enquanto a areia se encharcava com o sangue do inimigo morto.
+~
+E
+dragão grotesco brilhante~
+Criaturas cruéis, perversas e rudes.  Odeiam os que possuem a alma pura e
+digna e procuram matá-las por serem tão inoportunas.  Entram em combate
+apenas pelo prazer de matar ou para proteger o local onde vivem.  Passam o
+tempo dominando escravos e matam todos aqueles que não podem ser
+controlados.  Estes dragões estão sob o controle de criaturas ainda mais
+poderosas.
 ~
 S
 #11028
@@ -575,16 +674,7 @@ com a figura grotesca e brilhante do maior dragão jamais visto pelo homem.
 E então ele desaparece...como se jamais tivesse aparecido.  Cuidado!
 Apresse o seu passo e tente se esquecer do que viu.
 ~
-110 116 0 0 0 1
-E
-dragão grotesco brilhante~
-Criaturas cruéis, perversas e rudes.  Odeiam os que possuem a alma pura e
-digna e procuram matá-las por serem tão inoportunas.  Entram em combate
-apenas pelo prazer de matar ou para proteger o local onde vivem.  Passam o
-tempo dominando escravos e matam todos aqueles que não podem ser
-controlados.  Estes dragões estão sob o controle de criaturas ainda mais
-poderosas.
-~
+110 cefg 1
 E
 multidão~
 Para alívio dos espectadores, o velarium (os toldos de pano) estava sendo
@@ -593,6 +683,15 @@ de nuvens de Vitália.  Estavam todos vestidos com suas melhores roupas e
 orgulhavam-se ao ver que as flâmulas de suas famílias tremulavam ao vento.
 Mas dentro em pouco aquela multidão sabia que iria gritar extasiada,
 enquanto a areia se encharcava com o sangue do inimigo morto.
+~
+E
+dragão grotesco brilhante~
+Criaturas cruéis, perversas e rudes.  Odeiam os que possuem a alma pura e
+digna e procuram matá-las por serem tão inoportunas.  Entram em combate
+apenas pelo prazer de matar ou para proteger o local onde vivem.  Passam o
+tempo dominando escravos e matam todos aqueles que não podem ser
+controlados.  Estes dragões estão sob o controle de criaturas ainda mais
+poderosas.
 ~
 S
 #11029
@@ -607,16 +706,7 @@ com a figura grotesca e brilhante do maior dragão jamais visto pelo homem.
 E então ele desaparece...como se jamais tivesse aparecido.  Cuidado!
 Apresse o seu passo e tente se esquecer do que viu.
 ~
-110 116 0 0 0 1
-E
-dragão grotesco brilhante~
-Criaturas cruéis, perversas e rudes.  Odeiam os que possuem a alma pura e
-digna e procuram matá-las por serem tão inoportunas.  Entram em combate
-apenas pelo prazer de matar ou para proteger o local onde vivem.  Passam o
-tempo dominando escravos e matam todos aqueles que não podem ser
-controlados.  Estes dragões estão sob o controle de criaturas ainda mais
-poderosas.
-~
+110 cefg 1
 E
 multidão~
 Para alívio dos espectadores, o velarium (os toldos de pano) estava sendo
@@ -625,6 +715,15 @@ de nuvens de Vitália.  Estavam todos vestidos com suas melhores roupas e
 orgulhavam-se ao ver que as flâmulas de suas famílias tremulavam ao vento.
 Mas dentro em pouco aquela multidão sabia que iria gritar extasiada,
 enquanto a areia se encharcava com o sangue do inimigo morto.
+~
+E
+dragão grotesco brilhante~
+Criaturas cruéis, perversas e rudes.  Odeiam os que possuem a alma pura e
+digna e procuram matá-las por serem tão inoportunas.  Entram em combate
+apenas pelo prazer de matar ou para proteger o local onde vivem.  Passam o
+tempo dominando escravos e matam todos aqueles que não podem ser
+controlados.  Estes dragões estão sob o controle de criaturas ainda mais
+poderosas.
 ~
 S
 #11030
@@ -641,20 +740,21 @@ companheiros de clã e se preparam para um merecido descanso.  Dormirão
 profundamente e serão acordados novamente quando os Senhores das Mesnadas
 mais uma vez erguerem o Brasão de Vitália.
 ~
-110 116 0 0 0 1
-D0
+110 cefg 1
+D W
 ~
 portão~
-1 -1 11006
-E
-novos dragões~
-Criaturas descomunais, musculosas e extremamente fortes.  Suas feições
-lembram antigas criaturas que passaram por Vitália em tempos remotíssimos.
-~
+:n 1 o grande portão da arena
+abc -1 11006
 E
 chão tapete~
 Um imenso tapete da mais pura lã branca existente, muito limpo e bastante
 espesso.
 ~
+E
+novos dragões~
+Criaturas descomunais, musculosas e extremamente fortes.  Suas feições
+lembram antigas criaturas que passaram por Vitália em tempos remotíssimos.
+~
 S
-$~
+$

@@ -7,7 +7,7 @@ que segue no sentido leste-oeste.  Você observa ao leste as luzes da isolada
 aldeia de Bri e ao nordeste a esplêndida floresta de Chet.  A estrada do
 leste segue para leste e para oeste.
 ~
-144 0 0 0 0 2
+144 0 2
 D1
 Você observa a estreita estrada do leste seguindo na direção leste.
 ~
@@ -31,7 +31,7 @@ só é quebrado pelos cantos dos pequenos pássaros que sobrevoam a estrada.
 Ao leste e ao oeste você observa a estrada do leste seguindo para os dois
 sentidos.
 ~
-144 0 0 0 0 2
+144 0 2
 D1
 Você observa a estreita estrada do leste seguindo na direção leste.
 ~
@@ -54,7 +54,7 @@ pequenos pontos de luz vindo da isolada aldeia de Bri.  A estrada segue rumo
 ao oeste e ao leste.  Ao sul você observa duas enormes pedras fincadas no
 chão e várias colinas verdes cobertas com inúmeras pedras enraizadas nelas.
 ~
-144 0 0 0 0 2
+144 0 2
 D1
 Você observa a estreita estrada do leste seguindo na direção leste.
 ~
@@ -82,7 +82,7 @@ cobertas por numerosas pedras enraizadas nelas.  A estrada continua para
 oeste na direção das terras do Condado e para leste na direção da isolada
 aldeia de Bri.
 ~
-144 0 0 0 0 2
+144 0 2
 D1
 Você observa a estreita estrada do leste seguindo na direção leste.
 ~
@@ -105,12 +105,13 @@ na direção das desabitadas terras do norte.  Ao leste você observa o portão
 oeste da isolada aldeia de Bri e ao oeste você observa a estrada do leste
 seguindo rumo ao Portos Cinzentos.
 ~
-144 0 0 0 0 2
+144 0 2
 D1
 Você observa o portão oeste da aldeia de Bri.
 ~
 portão madeira~
-0 -1 14430
+:n 1 o portão de madeira
+ag -1 14430
 D3
 Você observa a estreita estrada do leste seguindo na direção oeste.
 ~
@@ -126,7 +127,7 @@ desviam para o oeste, evitando sobrevoarem sobre as estranhas colinas que
 brotam ao sul deste assustador lugar.  Ao norte você observa a estrada do
 leste e ao sul você observa duas pedras gigantescas fincadas sobre o solo.
 ~
-144 0 0 0 0 2
+144 0 2
 D0
 Você observa a estrada do leste.
 ~
@@ -149,7 +150,7 @@ pouco tempo tenha caminhando por entre estás duas estranhas rochas.  Ao
 norte você observa um perturbador campo verde e ao sul você observa um
 imenso vale entre várias colinas misteriosas.
 ~
-144 1048676 0 0 0 2
+144 cfgu 2
 D0
 Você observa um assombroso campo verde.
 ~
@@ -173,7 +174,7 @@ arrepios.  Ao norte você observa duas monumentais pedras fincadas sobre o
 solo, ao leste e ao oeste você observa perturbadoras colinas, e ao sul você
 observa uma enorme mancha negra na neblina.
 ~
-144 1048609 0 0 0 4
+144 afu 4
 D0
 Você observa duas imensas pedras cravadas sobre o solo.
 ~
@@ -207,7 +208,7 @@ está enclausurado num recinto de neblina.  Uma estranha sensação de pavor e
 medo toma conta da sua mente.  Ao norte e ao sul você observa o imenso vale
 seguir circundando as horripilantes colinas tumulares.
 ~
-144 1048609 0 0 0 2
+144 afu 2
 D0
 Você observa um imenso vale.
 ~
@@ -230,7 +231,7 @@ lugar.  Um assombroso vento vindo do norte atinge seu corpo lhe causando
 arrepios.  Ao norte você observa uma estranha mancha negra na neblina.  Ao
 leste e ao oeste você observa perturbadoras colinas.
 ~
-144 1048609 0 0 0 4
+144 afu 4
 D0
 Você observa uma estranha mancha negra na neblina.
 ~
@@ -256,7 +257,7 @@ se torna cada fez mais frio e pesado.  A paisagem das colinas é assombrosa.
 A neblina se intensifica cada vez mais, lhe desnorteando.  Ao sul você
 observa várias misteriosas pedras fincadas sobre a superfície da colina.
 ~
-144 1048609 0 0 0 2
+144 afu 2
 D2
 Você observa as assustadoras colinas tumulares.
 ~
@@ -266,7 +267,8 @@ D5
 Você observa uma estranha pedra.
 ~
 pedra rocha~
-1 -1 14411
+:n 2 a pedra
+ad -1 14411
 S
 #14411
 Um Terrível Túmulo~
@@ -278,20 +280,21 @@ pequena passagem entre algumas rochas que segue para fora do túmulo.  De
 repente uma suave brisa atinge seu corpo, trazendo consigo o som de uma
 perturbadora canção:
            "Frio haja nas mãos, no coração e na espinha,
-@   e frio seja o sono sobre a pedra daninha:
-@   que nunca despertem de seu pétreo leito,
-@   nunca, até a Lua morta, até o Sol desfeito.
-@   Ao soprar negro dos ventos os astros vão morrer,
-@   e eles sobre o ouro ainda irão jazer,
-@   até que o lorde escuro sua mão soerga
-@   sobre o mar morto e sobre a terra negra."
+	   e frio seja o sono sobre a pedra daninha:
+	   que nunca despertem de seu pétreo leito,
+	   nunca, até a Lua morta, até o Sol desfeito.
+	   Ao soprar negro dos ventos os astros vão morrer,
+	   e eles sobre o ouro ainda irão jazer,
+	   até que o lorde escuro sua mão soerga
+	   sobre o mar morto e sobre a terra negra."
 ~
-144 1442021 0 0 0 0
+144 acfghrsu 0
 D4
 Você observa uma estranha pedra.
 ~
 pedra rocha~
-1 -1 14410
+:n 2 a pedra
+ad -1 14410
 S
 #14412
 As Colinas dos Túmulos~
@@ -304,7 +307,7 @@ oeste você observa várias misteriosas pedras fincadas sobre a superfície da
 colina.  Para cima você observa o ponto mais alto da misteriosa colina e ao
 leste você observa um imenso vale coberto pela intensa neblina.
 ~
-144 1048609 0 0 0 2
+144 afu 2
 D0
 Você observa as assustadoras colinas tumulares.
 ~
@@ -336,7 +339,7 @@ desnorteando-lhe.  Ao leste você observa várias misteriosas pedras fincadas
 sobre a superfície da colina.  Uma sensação de angústia toma conta da sua
 mente!
 ~
-144 1048609 0 0 0 2
+144 afu 2
 D1
 Você observa as assustadoras colinas tumulares.
 ~
@@ -353,7 +356,7 @@ apontadas para o céu fincadas sobre a superfície da colina.  Uma estranha
 sensação de pavor toma conta da sua mente!  Para baixo você segue na direção
 da base da colina coberta pela forte neblina.
 ~
-144 1048640 0 0 0 2
+144 gu 2
 D5
 Você observa a base da colina coberta pela intensa neblina.
 ~
@@ -369,7 +372,7 @@ se torna cada fez mais frio e pesado.  A paisagem das colinas é assombrosa.
 A neblina se intensifica cada vez mais, lhe desnorteando.  Ao sul você
 observa várias misteriosas pedras fincadas sobre a superfície da colina.
 ~
-144 1048609 0 0 0 2
+144 afu 2
 D2
 Você observa as assustadoras colinas tumulares.
 ~
@@ -379,7 +382,8 @@ D5
 Você observa uma estranha pedra.
 ~
 pedra rocha~
-1 -1 14416
+:n 2 a pedra
+ad -1 14416
 S
 #14416
 Um Terrível Túmulo~
@@ -391,20 +395,21 @@ pequena passagem entre algumas rochas que segue para fora do túmulo.  De
 repente uma suave brisa atinge seu corpo, trazendo consigo o som de uma
 perturbadora canção:
            "Frio haja nas mãos, no coração e na espinha,
-@   e frio seja o sono sobre a pedra daninha:
-@   que nunca despertem de seu pétreo leito,
-@   nunca, até a Lua morta, até o Sol desfeito.
-@   Ao soprar negro dos ventos os astros vão morrer,
-@   e eles sobre o ouro ainda irão jazer,
-@   até que o lorde escuro sua mão soerga
-@   sobre o mar morto e sobre a terra negra."
+	   e frio seja o sono sobre a pedra daninha:
+	   que nunca despertem de seu pétreo leito,
+	   nunca, até a Lua morta, até o Sol desfeito.
+	   Ao soprar negro dos ventos os astros vão morrer,
+	   e eles sobre o ouro ainda irão jazer,
+	   até que o lorde escuro sua mão soerga
+	   sobre o mar morto e sobre a terra negra."
 ~
-144 1442021 0 0 0 0
+144 acfghrsu 0
 D4
 Você observa uma estranha pedra.
 ~
 pedra rocha~
-1 -1 14415
+:n 2 a pedra
+ad -1 14415
 S
 #14417
 As Colinas dos Túmulos~
@@ -417,7 +422,7 @@ sul você observa várias misteriosas pedras fincadas sobre a superfície da
 colina.  Para cima você observa o ponto mais alto da misteriosa colina e ao
 oeste você observa um imenso vale coberto pela intensa neblina.
 ~
-144 1048609 0 0 0 2
+144 afu 2
 D0
 Você observa as assustadoras colinas tumulares.
 ~
@@ -449,7 +454,7 @@ apontadas para o céu fincadas sobre a superfície da colina.  Uma estranha
 sensação de pavor toma conta da sua mente!  Para baixo você segue na direção
 da base da colina coberta pela forte neblina.
 ~
-144 1048640 0 0 0 2
+144 gu 2
 D5
 Você observa a base da colina coberta pela intensa neblina.
 ~
@@ -466,7 +471,7 @@ desnorteando-lhe.  Ao norte você observa várias misteriosas pedras fincadas
 sobre a superfície da colina.  Uma sensação de angústia toma conta da sua
 mente!
 ~
-144 1048609 0 0 0 2
+144 afu 2
 D0
 Você observa as assustadoras colinas tumulares.
 ~
@@ -483,7 +488,7 @@ desnorteando-lhe.  Ao sul você observa várias misteriosas pedras fincadas
 sobre a superfície da colina.  Uma sensação de angústia toma conta da sua
 mente!
 ~
-144 1048609 0 0 0 2
+144 afu 2
 D2
 Você observa as assustadoras colinas tumulares.
 ~
@@ -501,7 +506,7 @@ leste você observa várias misteriosas pedras fincadas sobre a superfície da
 colina.  Para cima você observa o ponto mais alto da misteriosa colina e ao
 oeste você observa um imenso vale coberto pela intensa neblina.
 ~
-144 1048609 0 0 0 2
+144 afu 2
 D0
 Você observa as assustadoras colinas tumulares.
 ~
@@ -532,7 +537,7 @@ se torna cada fez mais frio e pesado.  A paisagem das colinas é assombrosa.
 A neblina se intensifica cada vez mais, lhe desnorteando.  Ao oeste você
 observa várias misteriosas pedras fincadas sobre a superfície da colina.
 ~
-144 1048609 0 0 0 2
+144 afu 2
 D3
 Você observa as assustadoras colinas tumulares.
 ~
@@ -542,7 +547,8 @@ D5
 Você observa uma estranha pedra.
 ~
 pedra rocha~
-1 -1 14424
+:n 2 a pedra
+ad -1 14424
 S
 #14423
 O Topo da Colina~
@@ -554,7 +560,7 @@ apontadas para o céu fincadas sobre a superfície da colina.  Uma estranha
 sensação de pavor toma conta da sua mente!  Para baixo você segue na direção
 da base da colina coberta pela forte neblina.
 ~
-144 1048640 0 0 0 2
+144 gu 2
 D5
 Você observa a base da colina coberta pela intensa neblina.
 ~
@@ -571,20 +577,21 @@ pequena passagem entre algumas rochas que segue para fora do túmulo.  De
 repente uma suave brisa atinge seu corpo, trazendo consigo o som de uma
 perturbadora canção:
            "Frio haja nas mãos, no coração e na espinha,
-@   e frio seja o sono sobre a pedra daninha:
-@   que nunca despertem de seu pétreo leito,
-@   nunca, até a Lua morta, até o Sol desfeito.
-@   Ao soprar negro dos ventos os astros vão morrer,
-@   e eles sobre o ouro ainda irão jazer,
-@   até que o lorde escuro sua mão soerga
-@   sobre o mar morto e sobre a terra negra."
+	   e frio seja o sono sobre a pedra daninha:
+	   que nunca despertem de seu pétreo leito,
+	   nunca, até a Lua morta, até o Sol desfeito.
+	   Ao soprar negro dos ventos os astros vão morrer,
+	   e eles sobre o ouro ainda irão jazer,
+	   até que o lorde escuro sua mão soerga
+	   sobre o mar morto e sobre a terra negra."
 ~
-144 1442021 0 0 0 0
+144 acfghrsu 0
 D4
 Você observa uma estranha pedra.
 ~
 pedra rocha~
-1 -1 14422
+:n 2 a pedra
+ad -1 14422
 S
 #14425
 O Topo da Colina~
@@ -596,7 +603,7 @@ apontadas para o céu fincadas sobre a superfície da colina.  Uma estranha
 sensação de pavor toma conta da sua mente!  Para baixo você segue na direção
 da base da colina coberta pela forte neblina.
 ~
-144 1048640 0 0 0 2
+144 gu 2
 D5
 Você observa a base da colina coberta pela intensa neblina.
 ~
@@ -613,7 +620,7 @@ desnorteando-lhe.  Ao leste você observa várias misteriosas pedras fincadas
 sobre a superfície da colina.  Uma sensação de angústia toma conta da sua
 mente!
 ~
-144 1048609 0 0 0 2
+144 afu 2
 D1
 Você observa as assustadoras colinas tumulares.
 ~
@@ -631,7 +638,7 @@ você observa várias misteriosas pedras fincadas sobre a superfície da
 colina.  Para cima você observa o ponto mais alto da misteriosa colina e ao
 leste você observa um imenso vale coberto pela intensa neblina.
 ~
-144 1048609 0 0 0 2
+144 afu 2
 D1
 Você observa um enorme vale que circunda as encostas das colinas.
 ~
@@ -662,7 +669,7 @@ se torna cada fez mais frio e pesado.  A paisagem das colinas é assombrosa.
 A neblina se intensifica cada vez mais, lhe desnorteando.  Ao norte você
 observa várias misteriosas pedras fincadas sobre a superfície da colina.
 ~
-144 1048609 0 0 0 2
+144 afu 2
 D0
 Você observa as assustadoras colinas tumulares.
 ~
@@ -672,7 +679,8 @@ D5
 Você observa uma estranha pedra.
 ~
 pedra rocha~
-1 -1 14429
+:n 2 a pedra
+ad -1 14429
 S
 #14429
 Um Terrível Túmulo~
@@ -684,20 +692,21 @@ pequena passagem entre algumas rochas que segue para fora do túmulo.  De
 repente uma suave brisa atinge seu corpo, trazendo consigo o som de uma
 perturbadora canção:
            "Frio haja nas mãos, no coração e na espinha,
-@   e frio seja o sono sobre a pedra daninha:
-@   que nunca despertem de seu pétreo leito,
-@   nunca, até a Lua morta, até o Sol desfeito.
-@   Ao soprar negro dos ventos os astros vão morrer,
-@   e eles sobre o ouro ainda irão jazer,
-@   até que o lorde escuro sua mão soerga
-@   sobre o mar morto e sobre a terra negra."
+	   e frio seja o sono sobre a pedra daninha:
+	   que nunca despertem de seu pétreo leito,
+	   nunca, até a Lua morta, até o Sol desfeito.
+	   Ao soprar negro dos ventos os astros vão morrer,
+	   e eles sobre o ouro ainda irão jazer,
+	   até que o lorde escuro sua mão soerga
+	   sobre o mar morto e sobre a terra negra."
 ~
-144 1442021 0 0 0 0
+144 acfghrsu 0
 D4
 Você observa uma estranha pedra.
 ~
 pedra rocha~
-1 -1 14428
+:n 2 a pedra
+ad -1 14428
 S
 #14430
 O Portão Oeste da Aldeia de Bri~
@@ -711,12 +720,13 @@ observa entre o grande muro de pedra, um imenso portão de madeira.  Ao norte
 você observa uma casa de madeira e ao leste você observa uma sinuosa rua
 seguindo na direção do interior de Bri.
 ~
-144 64 0 0 0 1
+144 g 1
 D0
 Você observa uma casa de madeira próxima do portão oeste de Bri.
 ~
 porta madeira~
-0 -1 14431
+:n 2 a porta de madeira
+ag -1 14431
 D1
 Você observa uma rua sinuosa.
 ~
@@ -726,7 +736,8 @@ D3
 Você observa o portão oeste da aldeia de Bri.
 ~
 portão madeira~
-0 -1 14404
+:n 1 o portão de madeira
+ag -1 14404
 S
 #14431
 A Casa do Porteiro~
@@ -739,12 +750,13 @@ estrada do leste.  Nas paredes você observa além de vários quadros, uma
 antiga pintura de um jovem sorridente na frente de uma bela estalagem.  Ao
 sul você observa através da porta de madeira uma rua sinuosa.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14430
+:n 2 a porta de madeira
+ag -1 14430
 S
 #14432
 Uma Rua Sinuosa Dentro da Aldeia de Bri~
@@ -759,12 +771,13 @@ observa a continuação da rua sinuosa, ao sul você observa um pequeno jardim
 dentro dos limites de uma propriedade e ao oeste você observa o grande
 portão oeste da aldeia de Bri.
 ~
-144 0 0 0 0 1
+144 0 1
 D0
 Você observa uma casa de pedra.
 ~
 porta madeira~
-0 -1 14433
+:n 2 a porta de madeira
+ag -1 14433
 D1
 Você observa uma rua sinuosa.
 ~
@@ -774,7 +787,8 @@ D2
 Você observa um pequeno jardim além da cerca de madeira.
 ~
 cerca madeira~
-0 -1 14434
+:n 2 a cerca de madeira
+ag -1 14434
 D3
 Você observa o portão oeste da aldeia de Bri.
 ~
@@ -793,12 +807,13 @@ pertence há algum homem de Bri.  Você observa também uma pequena lareira ao
 norte da porta, esquentando um pouco a temperatura da casa.  Ao sul você
 observa através da porta uma sinuosa rua da aldeia de Bri.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14432
+:n 2 a porta de madeira
+ag -1 14432
 S
 #14434
 Um Jardim Colorido em Bri~
@@ -809,22 +824,25 @@ verde e confortável.  Ao leste você observa um pequeno estábulo, ao sul você
 observa uma bela casa feita de pedra e ao norte você observa uma rua sinuosa
 e estreita.
 ~
-144 0 0 0 0 1
+144 0 1
 D0
 Você observa uma rua sinuosa.
 ~
 cerca madeira~
-0 -1 14432
+:n 2 a cerca de madeira
+ag -1 14432
 D1
 Você observa um pequeno estábulo.
 ~
 porteira madeira~
-0 -1 14435
+:n 2 a porteira de madeira
+ag -1 14435
 D2
 Você observa uma bela casa de pedra.
 ~
 porta madeira~
-0 -1 14436
+:n 2 a porta de madeira
+ag -1 14436
 S
 #14435
 Um Pequeno Estábulo~
@@ -834,12 +852,13 @@ redor você observa um pouco de capim verde num dos cantos do recinto e
 bastante feno sobre o chão.  Ao oeste você observa um belo jardim através da
 porteira de madeira.
 ~
-144 262156 0 0 0 0
+144 cds 0
 D3
 Você observa uma porteira de madeira. 
 ~
 porteira madeira~
-0 -1 14434
+:n 2 a porteira de madeira
+ag -1 14434
 S
 #14436
 Uma Bela Casa de Pedra~
@@ -853,12 +872,13 @@ limpa e arrumada perfeitamente.  No canto leste da casa, você observa alguns
 pequenos quartos com enormes camas de madeira.  Ao norte você observa uma
 resistente porta de madeira.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14434
+:n 2 a porta de madeira~
+ag -1 14434
 S
 #14437
 Uma Rua Sinuosa Dentro da Aldeia de Bri~
@@ -871,12 +891,13 @@ pessoas pequenas, incrustadas sobre a lama e marcadas sobre a areia que
 cobrem a rua.  Ao norte você observa uma casa feita de pedra.  Ao oeste e ao
 sudeste você observa a continuação da rua sinuosa.
 ~
-144 0 0 0 0 1
+144 0 1
 D0
 Você observa uma casa de pedra.
 ~
 porta madeira~
-0 -1 14438
+:n 2 a porta de madeira
+ag -1 14438
 D3
 Você observa uma rua sinuosa.
 ~
@@ -899,12 +920,13 @@ leste da casa, você observa a cozinha e um grande salão.  Nas paredes você
 percebe a presença de inúmeros quadros que ilustram maravilhosas pinturas
 da aldeia de Bri.  Ao sul você observa uma porta de madeira.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14437
+:n 2 a porta de madeira
+ag -1 14437
 S
 #14439
 Uma Rua Sinuosa Dentro da Aldeia de Bri~
@@ -920,17 +942,19 @@ sinuosa.  Ao sul você observa um pequeno jardim além da cerca que circunda a
 rua e ao nordeste você observa uma estreita rua que segue subindo a encosta
 da colina de Bri.
 ~
-144 0 0 0 0 1
+144 0 1
 D0
 Você observa uma casa de pedra.
 ~
 porta madeira~
-0 -1 14440
+:n 2 a porta de madeira
+ag -1 14440
 D2
 Você observa um pequeno jardim.
 ~
 cerca madeira~
-0 -1 14441
+:n 2 a cerca de madeira
+ag -1 14441
 D6
 Você observa uma rua sinuosa.
 ~
@@ -956,12 +980,13 @@ observa uma ampla janela, de onde se tem uma visão belíssima da colina e das
 casas de Bri.  No canto norte do recinto, você observa uma pequena cozinha e
 no canto leste um pequeno quarto.  Ao sul você observa uma porta de madeira.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14439
+:n 2 a porta de madeira
+ag -1 14439
 S
 #14441
 Um Jardim Bem Cuidado em Bri~
@@ -971,17 +996,19 @@ perfumadas e coloridas flores.  Ao norte você observa uma pequena cerca de
 madeira que circunda uma rua estreita e ao sul você observa uma casa de
 pedra.
 ~
-144 0 0 0 0 1
+144 0 1
 D0
 Você observa uma rua sinuosa.
 ~
 cerca madeira~
-0 -1 14439
+:n 2 a cerca de madeira
+ag -1 14439
 D2
 Você observa uma bela casa de pedra.
 ~
 porta madeira~
-0 -1 14442
+:n 2 a porta de madeira
+ag -1 14442
 S
 #14442
 Uma Casa de Pedra~
@@ -992,12 +1019,13 @@ se pode contemplar a suave colina e as casas de pedra de Bri.  No canto
 leste da casa, você observa uma desarrumada cozinha e um pequeno quarto.  Ao
 norte você observa uma porta de madeira.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14441
+:n 2 a porta de madeira
+ag -1 14441
 S
 #14443
 Uma Rua Acima da Colina de Bri~
@@ -1009,12 +1037,13 @@ norte você observa uma engraçada casa de madeira com algumas janelas
 redondas.  Ao oeste e ao sudeste você observa a continuação da rua que segue
 acima da colina de Bri.
 ~
-144 0 0 0 0 1
+144 0 1
 D0
 Você observa uma casa de madeira.
 ~
 porta madeira~
-0 -1 14444
+:n 2 a porta de madeira
+ag -1 14444
 D3
 Você observa uma estreita rua acima da colina de Bri.
 ~
@@ -1034,12 +1063,13 @@ paredes você observa alguns quadros que ilustram belas paisagens e alguns
 pequeninos hobbits de Bri, além de algumas janelas redondas.  Ao sul você
 observa uma curiosa porta redonda de madeira.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D2
 Você observa uma pequenina porta de madeira.
 ~
 porta madeira~
-0 -1 14443
+:n 2 a porta de madeira
+ag -1 14443
 S
 #14445
 Uma Rua Acima da Colina de Bri~
@@ -1051,12 +1081,13 @@ norte você observa uma engraçada casa de madeira com algumas janelas
 redondas.  Ao noroeste e ao sudeste você observa a continuação da rua que
 segue acima da colina de Bri.
 ~
-144 0 0 0 0 1
+144 0 1
 D0
 Você observa uma pequenina casa de madeira.
 ~
 porta madeira~
-0 -1 14446
+:n 2 a porta de madeira
+ag -1 14446
 D6
 Você observa uma estreita rua acima da colina de Bri.
 ~
@@ -1077,12 +1108,13 @@ pequenos quadros antigos que ilustram belas paisagens.  Ao norte do recinto,
 você observa uma pequena cozinha e um pequenino quarto com duas camas de
 madeira.  Ao sul você observa uma curiosa porta redonda de madeira.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D2
 Você observa uma pequenina porta de madeira.
 ~
 porta madeira~
-0 -1 14445
+:n 2 a porta de madeira
+ag -1 14445
 S
 #14447
 Uma Rua Acima da Colina de Bri~
@@ -1094,12 +1126,13 @@ norte você observa uma engraçada casa de madeira com algumas janelas
 redondas e ao noroeste você observa a continuação da rua que segue acima da
 colina de Bri.
 ~
-144 0 0 0 0 1
+144 0 1
 D0
 Você observa uma pequenina casa de madeira.
 ~
 porta madeira~
-0 -1 14448
+:n 2 a porta de madeira
+ag -1 14448
 D6
 Você observa uma estreita rua acima da colina de Bri.
 ~
@@ -1114,12 +1147,13 @@ paredes você observa alguns quadros que ilustram belas paisagens e alguns
 pequeninos hobbits de Bri, além de algumas janelas redondas.  Ao sul você
 observa uma curiosa porta redonda de madeira.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D2
 Você observa uma pequenina porta de madeira.
 ~
 porta madeira~
-0 -1 14447
+:n 2 a porta de madeira
+ag -1 14447
 S
 #14449
 Uma Rua Acima da Colina de Bri~
@@ -1131,12 +1165,13 @@ norte você observa uma engraçada casa de madeira com algumas janelas
 redondas.  Ao leste e ao oeste você observa a continuação da rua que segue
 acima da colina de Bri.
 ~
-144 0 0 0 0 1
+144 0 1
 D0
 Você observa uma pequenina casa de madeira.
 ~
 porta madeira~
-0 -1 14450
+:n 2 a porta de madeira
+ag -1 14450
 D1
 Você observa uma estreita rua acima da colina de Bri.
 ~
@@ -1157,12 +1192,13 @@ pequenos quadros antigos que ilustram belas paisagens.  Ao norte do recinto,
 você observa uma pequena cozinha e um pequenino quarto com duas camas de
 madeira.  Ao sul você observa uma curiosa porta redonda de madeira.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D2
 Você observa uma pequenina porta de madeira.
 ~
 porta madeira~
-0 -1 14449
+:n 2 a porta de madeira
+ag -1 14449
 S
 #14451
 Uma Rua Acima da Colina de Bri~
@@ -1174,12 +1210,13 @@ norte você observa uma engraçada casa de madeira com algumas janelas
 redondas.  Ao leste e ao oeste você observa a continuação da rua que segue
 acima da colina de Bri.
 ~
-144 0 0 0 0 1
+144 0 1
 D0
 Você observa uma pequenina casa de madeira.
 ~
 porta madeira~
-0 -1 14453
+:n 2 a porta de madeira
+ag -1 14453
 D1
 Você observa uma estreita rua acima da colina de Bri.
 ~
@@ -1201,12 +1238,13 @@ norte você observa uma engraçada casa de madeira com algumas janelas
 redondas e ao leste você observa a continuação da rua que segue acima da
 colina de Bri.
 ~
-144 0 0 0 0 1
+144 0 1
 D0
 Você observa uma pequenina casa de madeira.
 ~
 porta madeira~
-0 -1 14454
+:n 2 a porta de madeira
+ag -1 14454
 D1
 Você observa uma estreita rua acima da colina de Bri.
 ~
@@ -1221,12 +1259,13 @@ paredes você observa alguns quadros que ilustram belas paisagens e alguns
 pequeninos hobbits de Bri, além de algumas janelas redondas.  Ao sul você
 observa uma curiosa porta redonda de madeira.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D2
 Você observa uma pequenina porta de madeira.
 ~
 porta madeira~
-0 -1 14451
+:n 2 a porta de madeira
+ag -1 14451
 S
 #14454
 Uma Pequenina Casa de Madeira~
@@ -1237,12 +1276,13 @@ pequenos quadros antigos que ilustram belas paisagens.  Ao norte do recinto,
 você observa uma pequena cozinha e um pequenino quarto com duas camas de
 madeira.  Ao sul você observa uma curiosa porta redonda de madeira.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D2
 Você observa uma pequenina porta de madeira.
 ~
 porta madeira~
-0 -1 14452
+:n 2 a porta de madeira
+ag -1 14452
 S
 #14455
 Uma Rua Sinuosa Dentro da Aldeia de Bri~
@@ -1255,17 +1295,19 @@ incrustadas sobre a lama e marcadas sobre a areia que cobrem a rua.  Ao
 norte e ao sul você observa casas feitas de pedras.  Ao noroeste e ao
 sudeste você observa a continuação da rua sinuosa.
 ~
-144 0 0 0 0 1
+144 0 1
 D0
 Você observa uma casa de pedra.
 ~
 porta madeira~
-0 -1 14456
+:n 2 a porta de madeira
+ag -1 14456
 D2
 Você observa uma casa de pedra.
 ~
 porta madeira~
-0 -1 14457
+:n 2 a porta de madeira
+ag -1 14457
 D6
 Você observa uma rua sinuosa.
 ~
@@ -1289,12 +1331,13 @@ limpa e arrumada perfeitamente.  No canto leste da casa, você observa alguns
 pequenos quartos com enormes camas de madeira.  Ao sul você observa uma
 resistente porta de madeira.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14455
+:n 2 a porta de madeira
+ag -1 14455
 S
 #14457
 Uma Casa de Pedra~
@@ -1305,12 +1348,13 @@ chão da cozinha.  Nas paredes você observa alguns belos quadros antigos além
 de algumas amplas janelas na parede oeste.  Ao norte você observa uma porta
 de madeira.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14455
+:n 2 a porta de madeira
+ag -1 14455
 S
 #14458
 Uma Rua Sinuosa Dentro da Aldeia de Bri~
@@ -1324,17 +1368,19 @@ norte você observa uma bela casa feita de pedra e ao sul você observa um
 belo e bem tratado jardim.  Ao noroeste e ao sudeste você observa a
 continuação da rua sinuosa.
 ~
-144 0 0 0 0 1
+144 0 1
 D0
 Você observa uma casa de pedra.
 ~
 porta madeira~
-0 -1 14459
+:n 2 a porta de madeira
+ag -1 14459
 D2
 Você observa um belo jardim.
 ~
 cerca madeira~
-0 -1 14460
+:n 2 a cerca de madeira
+ag -1 14460
 D6
 Você observa uma rua sinuosa.
 ~
@@ -1357,12 +1403,13 @@ leste da casa, você observa a cozinha e um grande salão.  Nas paredes você
 percebe a presença de inúmeros quadros que ilustram maravilhosas pinturas
 da aldeia de Bri.  Ao sul você observa uma porta de madeira.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14458
+:n 2 a porta de madeira
+ag -1 14458
 S
 #14460
 Um Lindo Jardim em Bri~
@@ -1372,17 +1419,19 @@ arbustos verdes.  Sob seus pés, você observa um maravilhoso gramado verde.
 Ao norte você observa uma rua sinuosa circundada por uma pequenina cerca de
 madeira.  Ao oeste você observa uma bela casa de pedra.
 ~
-144 0 0 0 0 1
+144 0 1
 D0
 Você observa uma rua sinuosa.
 ~
 cerca madeira~
-0 -1 14458
+:n 2 a cerca de madeira
+ag -1 14458
 D3
 Você observa uma bela casa de pedra.
 ~
 porta madeira~
-0 -1 14461
+:n 2 a porta de madeira
+ag -1 14461
 S
 #14461
 Uma Casa de Pedra~
@@ -1396,12 +1445,13 @@ pertence há algum homem de Bri.  Você observa também uma pequena lareira ao
 norte da porta, esquentando um pouco a temperatura da casa.  Ao leste você
 observa uma porta de madeira.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D1
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14460
+:n 2 a porta de madeira
+ag -1 14460
 S
 #14462
 Uma Rua Sinuosa Dentro da Aldeia de Bri~
@@ -1415,12 +1465,13 @@ norte você observa uma bela casa feita de pedra.  Ao noroeste e ao sudoeste
 você observa a continuação da rua sinuosa.  Ao leste você observa a famosa e
 alegre estalagem:  O Pônei Saltitante.
 ~
-144 0 0 0 0 1
+144 0 1
 D0
 Você observa uma casa de pedra.
 ~
 porta madeira~
-0 -1 14463
+:n 2 a porta de madeira
+ag -1 14463
 D1
 Você observa a movimentada estalagem:  O Pônei Saltitante.
 ~
@@ -1446,12 +1497,13 @@ se pode contemplar a suave colina e as casas de pedra de Bri.  No canto
 leste da casa, você observa uma desarrumada cozinha e um pequeno quarto.  Ao
 sul você observa uma porta de madeira.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14462
+:n 2 a porta de madeira
+ag -1 14462
 S
 #14464
 Uma Rua Sinuosa Dentro da Aldeia de Bri~
@@ -1464,7 +1516,7 @@ incrustadas sobre a lama e marcadas sobre a areia que cobrem a rua.  Ao
 oeste você observa uma bela casa feita de pedra.  Ao sul e ao nordeste você
 observa a continuação da rua sinuosa.
 ~
-144 0 0 0 0 1
+144 0 1
 D2
 Você observa uma rua sinuosa.
 ~
@@ -1474,7 +1526,8 @@ D3
 Você observa uma casa de pedra.
 ~
 porta madeira~
-0 -1 14465
+:n 2 a porta de madeira
+ag -1 14465
 D7
 Você observa uma rua sinuosa.
 ~
@@ -1493,12 +1546,13 @@ limpa e arrumada perfeitamente.  No canto leste da casa, você observa alguns
 pequenos quartos com enormes camas de madeira.  Ao leste você observa uma
 resistente porta de madeira.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D1
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14464
+:n 2 a porta de madeira
+ag -1 14464
 S
 #14466
 Uma Rua Sinuosa Dentro da Aldeia de Bri~
@@ -1511,7 +1565,7 @@ incrustadas sobre a lama e marcadas sobre a areia que cobrem a rua.  Ao
 oeste você observa um jardim bastante mal tratado.  Ao norte e ao leste você
 observa a continuação da rua sinuosa.
 ~
-144 0 0 0 0 1
+144 0 1
 D0
 Você observa uma rua sinuosa.
 ~
@@ -1526,7 +1580,8 @@ D3
 Você observa um jardim bastante mal tratado.
 ~
 cerca madeira~
-0 -1 14467
+:n 2 a cerca de madeira
+ag -1 14467
 S
 #14467
 Um Jardim Bastante Mal Tratado~
@@ -1536,17 +1591,19 @@ flores e os arbustos agonizam secos pela falta d'água e de um cuidado mais
 dedicado.  Ao leste você observa uma rua sinuosa e ao sul você observa uma
 casa de pedra.
 ~
-144 4 0 0 0 1
+144 c 1
 D1
 Você observa uma rua sinuosa.
 ~
 cerca madeira~
-0 -1 14466
+:n 2 a cerca de madeira
+ag -1 14466
 D2
 Você observa uma casa de pedra.
 ~
 porta madeira~
-0 -1 14468
+:n 2 a porta de madeira
+ag -1 14468
 S
 #14468
 Uma Casa de Pedra~
@@ -1558,12 +1615,13 @@ da casa, você observa uma pequena e desarrumada cozinha.  No canto leste da
 casa, você observa um estranho quarto, bastante bagunçado e com um odor
 terrível.  Ao norte você observa uma porta de madeira.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14467
+:n 2 a porta de madeira
+ag -1 14467
 S
 #14469
 Uma Rua Sinuosa Dentro da Aldeia de Bri~
@@ -1576,12 +1634,13 @@ incrustadas sobre a lama e marcadas sobre a areia que cobrem a rua.  Ao
 leste você observa um belo e perfumado jardim.  Ao sul e ao oeste você
 observa a continuação da rua sinuosa.
 ~
-144 0 0 0 0 1
+144 0 1
 D1
 Você observa um belo jardim.
 ~
 cerca madeira~
-0 -1 14470
+:n 2 a cerca de madeira
+ag -1 14470
 D2
 Você observa uma rua sinuosa.
 ~
@@ -1600,17 +1659,19 @@ Bri.  Ao seu redor você observa além dos lindos arbustos, perfumadas e
 coloridas flores.  Ao oeste você observa uma pequena cerca de madeira que
 circunda uma rua estreita e ao leste você observa uma casa de pedra.
 ~
-144 0 0 0 0 1
+144 0 1
 D1
 Você observa uma bela casa de pedra.
 ~
 porta madeira~
-0 -1 14471
+:n 2 a porta de madeira
+ag -1 14471
 D3
 Você observa uma rua sinuosa.
 ~
 cerca madeira~
-0 -1 14469
+:n 2 a cerca de madeira
+ag -1 14469
 S
 #14471
 Uma Maravilhosa Casa de Pedra~
@@ -1622,12 +1683,13 @@ recinto, você observa uma enorme cozinha bem organizada e perfumada.  Ao
 oeste você observa uma porta de madeira e no canto leste do recinto, você
 observa uma escadaria que segue rumo ao pavimento superior da casa.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D3
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14470
+:n 2 a porta de madeira
+ag -1 14470
 D4
 Você observa uma escadaria.
 ~
@@ -1643,7 +1705,7 @@ No canto leste deste pavimento, você observa um grande corredor com muitas
 portas que levam a imensos quartos.  No canto oeste, você observa uma grande
 escadaria que segue rumo ao pavimento inferior da casa.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D5
 Você observa uma escadaria.
 ~
@@ -1662,7 +1724,7 @@ você observa entre o grande muro de pedra, um imenso portão de madeira.
 Ao leste você observa uma casa de madeira e ao norte você observa uma
 sinuosa rua seguindo na direção do interior de Bri.
 ~
-144 64 0 0 0 1
+144 g 1
 D0
 Você observa uma rua sinuosa.
 ~
@@ -1672,12 +1734,14 @@ D1
 Você observa uma casa de madeira próxima do portão sul de Bri.
 ~
 porta madeira~
-0 -1 14474
+:n 2 a porta de madeira
+ag -1 14474
 D2
 Você observa o portão sul da aldeia de Bri.
 ~
 portão madeira~
-0 -1 14496
+:n 1 o portão de madeira
+ag -1 14496
 S
 #14474
 A Casa do Porteiro~
@@ -1688,12 +1752,13 @@ paredes você observa alguns quadros de paisagens distantes e algumas
 pequenas janelas.  Ao oeste você observa uma porta de madeira bastante
 antiga e desgastada.
 ~
-144 393228 0 0 0 0
+144 cdrs 0
 D3
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14473
+:n 2 a porta de madeira
+ag -1 14473
 S
 #14475
 O Grande Saguão de Entrada da Estalagem:  O Pônei Saltitante~
@@ -1708,17 +1773,19 @@ estábulo e ao leste você observa a porta de entrada da estalagem com a
 seguinte mensagem pintada, em letras brancas:  O Pônei Saltitante de Cevado
 Carrapicho.  Ao oeste você observa uma rua estreita e sinuosa.
 ~
-144 0 0 0 0 1
+144 0 1
 D1
 Você observa a entrada da estalagem.
 ~
 porta madeira~
-0 -1 14477
+:n 2 a porta de madeira
+ag -1 14477
 D2
 Você observa um grande estábulo.
 ~
 porteira madeira~
-0 -1 14476
+:n 2 a porteira de madeira
+ag -1 14476
 D3
 Você observa uma rua sinuosa.
 ~
@@ -1735,12 +1802,13 @@ altas trazem um pouco de iluminação e uma agradável brisa para dentro do
 recinto, tornando-o um pouco mais confortável.  Ao norte você observa o
 saguão de entrada da estalagem.
 ~
-144 262156 0 0 0 0
+144 cds 0
 D0
 Você observa uma bela porteira.
 ~
 porteira madeira~
-0 -1 14475
+:n 2 a porteira de madeira
+ag -1 14475
 S
 #14477
 O Grande Salão da Estalagem:  O Pônei Saltitante~
@@ -1755,7 +1823,7 @@ de embriaguez atingidos.  Ao leste você observa um agradável pátio interno,
 ao oeste você observa a porta de entrada da estalagem, e ao norte e ao sul
 você observa o grande salão da Pônei Saltitante.
 ~
-144 393224 0 0 0 0
+144 drs 0
 D0
 Você observa o grande salão de estar da estalagem.
 ~
@@ -1775,7 +1843,8 @@ D3
 Você observa a porta de entrada da estalagem.
 ~
 porta madeira~
-0 -1 14475
+:n 2 a porta de madeira
+ag -1 14475
 S
 #14478
 O Grande Salão de estar da Estalagem~
@@ -1788,7 +1857,7 @@ salão é ensurdecedor, todas as pessoas falam ao mesmo tempo e algumas cantam
 curiosas e engraçadas canções.  Ao norte você observa o agitado salão de
 estar da estalagem:  O Pônei Saltitante.
 ~
-144 393224 0 0 0 0
+144 drs 0
 D0
 Você observa o grande salão de estar da estalagem.
 ~
@@ -1806,7 +1875,7 @@ alguns viajantes.  Ao nordeste você observa uma porta de madeira e ao sul
 você observa várias pessoas cantando e conversando no grande salão de estar
 da estalagem:  O Pônei Saltitante.
 ~
-144 393224 0 0 0 0
+144 drs 0
 D2
 Você observa o grande salão de estar da estalagem.
 ~
@@ -1816,7 +1885,8 @@ D7
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14480
+:n 2 a porta de madeira
+ag -1 14480
 S
 #14480
 A Cozinha da Estalagem~
@@ -1826,12 +1896,13 @@ sujos sobre o balcão.  Duas pequeninas lamparinas iluminam o recinto e um
 agradável odor surge vindo de uma bela bandeja sobre uma grande mesa no
 centro da cozinha.  Ao sudoeste você observa uma porta de madeira.
 ~
-144 393224 0 0 0 0
+144 drs 0
 D9
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14480
+:n 2 a porta de madeira
+ag -1 14480
 S
 #14481
 O Pátio Interno da Estalagem~
@@ -1844,7 +1915,7 @@ constante além de ser iluminado naturalmente.  Ao leste você observa a
 continuação do pátio interno da estalagem e ao oeste você o grande salão de
 estar da estalagem.
 ~
-144 0 0 0 0 0
+144 0 0
 D1
 Você observa um pátio interno.
 ~
@@ -1865,7 +1936,7 @@ bancos de madeira.  Algumas pessoas conversam silenciosamente aqui.  O pátio
 natural.  Ao oeste você observa a continuação do pátio interno e ao leste
 você observa um pequeno corredor na estalagem.
 ~
-144 0 0 0 0 0
+144 0 0
 D1
 Você observa um pequeno corredor na estalagem.
 ~
@@ -1885,7 +1956,7 @@ na direção do pátio interno da estalagem.  No canto leste do corredor, você
 observa uma escadaria que segue rumo ao pavimento superior da estalagem e ao
 oeste você observa o pátio interno da estalagem.
 ~
-144 8 0 0 0 0
+144 d 0
 D3
 Você observa um pátio interno.
 ~
@@ -1905,22 +1976,25 @@ que segue no sentido oeste-leste e inúmeras portas de madeira, que dão
 acesso aos numerosos quartos da estalagem.  Ao norte, ao sul e ao noroeste
 você observa algumas portas de madeira.
 ~
-144 8 0 0 0 0
+144 d 0
 D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14486
+:n 2 a porta de madeira
+ag -1 14486
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14485
+:n 2 a porta de madeira
+ag -1 14485
 D6
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14487
+:n 2 a porta de madeira
+ag -1 14487
 S
 #14485
 Um Quarto de Hóspede da Estalagem~
@@ -1933,12 +2007,13 @@ homens de Bri ou viajantes do sul.  Na parede oeste, você observa uma ampla
 janela coberta por uma grossa cortina.  Ao norte você observa uma porta de
 madeira.
 ~
-144 8 0 0 0 0
+144 d 0
 D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14484
+:n 2 a porta de madeira
+ag -1 14484
 S
 #14486
 Um Quarto de Hóspede da Estalagem~
@@ -1949,12 +2024,13 @@ cercada por quatro pequeninas cadeiras.  Na parede oeste, você observa uma
 grande janela coberta por uma grossa cortina cinza.  Ao sul você observa uma
 porta de madeira.
 ~
-144 8 0 0 0 0
+144 d 0
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14484
+:n 2 a porta de madeira
+ag -1 14484
 S
 #14487
 Um Quarto de Hóspede da Estalagem~
@@ -1966,12 +2042,13 @@ que pelas suas dimensões não lhe deixam dúvidas de que este quarto é
 utilizado por pequeninos hobbits.  Ao oeste do quarto, você observa uma
 ampla janela redonda e ao sudeste você observa uma porta de madeira.
 ~
-144 8 0 0 0 0
+144 d 0
 D8
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14484
+:n 2 a porta de madeira
+ag -1 14484
 S
 #14488
 O Corredor do Segundo Andar~
@@ -1981,22 +2058,25 @@ que segue no sentido oeste-leste e inúmeras portas de madeira, que dão
 acesso aos numerosos quartos da estalagem.  Ao norte, ao sul e ao noroeste
 você observa algumas portas de madeira.
 ~
-144 8 0 0 0 0
+144 d 0
 D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14490
+:n 2 a porta de madeira
+ag -1 14490
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14489
+:n 2 a porta de madeira
+ag -1 14489
 D6
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14491
+:n 2 a porta de madeira
+ag -1 14491
 S
 #14489
 Um Quarto de Hóspede da Estalagem~
@@ -2007,12 +2087,13 @@ uma pequena lareira e algumas brasas em chamas, que aquecem o recinto.  Na
 parede oeste do quarto, você observa uma ampla janela coberta por uma grossa
 cortina cinza.  Ao norte você observa uma porta de madeira.
 ~
-144 8 0 0 0 0
+144 d 0
 D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14488
+:n 2 a porta de madeira
+ag -1 14488
 S
 #14490
 Um Quarto de Hóspede da Estalagem~
@@ -2025,12 +2106,13 @@ homens de Bri ou viajantes do sul.  Na parede oeste, você observa uma ampla
 janela coberta por uma grossa cortina.  Ao sul você observa uma porta de
 madeira.
 ~
-144 8 0 0 0 0
+144 d 0
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14488
+:n 2 a porta de madeira
+ag -1 14488
 S
 #14491
 Um Quarto de Hóspede da Estalagem~
@@ -2041,12 +2123,13 @@ cercada por quatro pequeninas cadeiras.  Na parede oeste, você observa uma
 grande janela coberta por uma grossa cortina cinza.  Ao sudeste você observa
 uma porta de madeira.
 ~
-144 8 0 0 0 0
+144 d 0
 D8
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14488
+:n 2 a porta de madeira
+ag -1 14488
 S
 #14492
 O Corredor do Terceiro Andar~
@@ -2056,22 +2139,25 @@ que segue no sentido oeste-leste e inúmeras portas de madeira, que dão
 acesso aos numerosos quartos da estalagem.  Ao norte, ao sul e ao noroeste
 você observa algumas portas de madeira.
 ~
-144 8 0 0 0 0
+144 d 0
 D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14494
+:n 2 a porta de madeira
+ag -1 14494
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14493
+:n 2 a porta de madeira
+ag -1 14493
 D6
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14495
+:n 2 a porta de madeira
+ag -1 14495
 S
 #14493
 Um Quarto de Hóspede da Estalagem~
@@ -2081,12 +2167,13 @@ algumas cadeiras ao redor de uma mesa de madeira, iluminada por uma
 desgastada vela.  Ao oeste do recinto, você observa uma ampla janela coberta
 por uma grossa cortina cinza.  Ao norte você observa uma porta de madeira.
 ~
-144 8 0 0 0 0
+144 d 0
 D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14492
+:n 2 a porta de madeira
+ag -1 14492
 S
 #14494
 Um Quarto de Hóspede da Estalagem~
@@ -2099,12 +2186,13 @@ homens de Bri ou viajantes do sul.  Na parede oeste, você observa uma ampla
 janela coberta por uma grossa cortina.  Ao sul você observa uma porta de
 madeira.
 ~
-144 8 0 0 0 0
+144 d 0
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14492
+:n 2 a porta de madeira
+ag -1 14492
 S
 #14495
 Um Quarto de Hóspede da Estalagem~
@@ -2115,12 +2203,13 @@ cercada por quatro pequeninas cadeiras.  Na parede oeste, você observa uma
 grande janela coberta por uma grossa cortina cinza.  Ao sudeste você observa
 uma porta de madeira.
 ~
-144 8 0 0 0 0
+144 d 0
 D8
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14492
+:n 2 a porta de madeira
+ag -1 14492
 S
 #14496
 A Grande Estrada do Leste~
@@ -2131,12 +2220,13 @@ lama e na areia que cobrem totalmente a estrada.  Ao norte você observa
 algumas luzes que surgem da isolada aldeia de Bri e mais além a floresta
 Chet.  Ao sul você observa uma pequena curva na grande estrada do leste.
 ~
-144 0 0 0 0 2
+144 0 2
 D0
 Você observa o portão sul da aldeia de Bri.
 ~
 portão madeira~
-0 -1 14473
+:n 1 o portão de madeira
+ag -1 14473
 D2
 Você observa a grande estrada do leste.
 ~
@@ -2152,7 +2242,7 @@ as colinas do sul e ao norte você observa alguns pontos de luz, vindos da
 isolada aldeia de Bri.  Ao norte e ao leste você observa a continuação da
 grande estrada do leste.
 ~
-144 0 0 0 0 2
+144 0 2
 D0
 Você observa a grande estrada do leste.
 ~
@@ -2172,7 +2262,7 @@ alguns pontos de luz vindos de alguma aldeia distante e ao sul você observa
 as distantes colinas do sul.  Ao leste e ao oeste você observa a continuação
 da grande estrada do leste.
 ~
-144 0 0 0 0 2
+144 0 2
 D1
 Você observa a grande estrada do leste.
 ~
@@ -2192,7 +2282,7 @@ nascem ao longo dos limites da estrada.  Ao sul você observa muito distante
 as colinas do sul.  Ao leste e ao oeste você observa a continuação da grande
 estrada do leste.
 ~
-144 0 0 0 0 2
+144 0 2
 D1
 Você observa a grande estrada do leste.
 ~

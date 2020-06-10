@@ -6,8 +6,25 @@ forte vento sopra continuamente.  A Rua de Vayu segue para leste e para
 oeste, onde pode-se ver muitas casas.
    Há um estranho portal sobre sua cabeça.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+ON z124
+D N
+~
+~
+0 -1 12401
+D S
+~
+~
+0 -1 12402
+D E
+~
+~
+0 -1 12411
+D W
+~
+~
+0 -1 12410
+D U
 Um estranho portal flutua sobre você.  Você pode ver uma estrada através do
 portal.
 ~
@@ -20,8 +37,20 @@ A Praça de Yama~
 Um calafrio toma conta de seu corpo.  A Rua de Yama segue para leste e para
 oeste, onde pode-se ver muitas casas.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D N
+~
+~
+0 -1 12403
+D S
+~
+~
+0 -1 12400
+D E
+~
+~
+0 -1 12421
+D W
 ~
 ~
 0 -1 12420
@@ -32,8 +61,20 @@ A Praça de Surya~
 O brilho do Sol parece mais intenso nessa praça.  A Rua de Surya segue para
 leste e para oeste, onde pode-se ver muitas casas.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D N
+~
+~
+0 -1 12400
+D S
+~
+~
+0 -1 12404
+D E
+~
+~
+0 -1 12431
+D W
 ~
 ~
 0 -1 12430
@@ -43,8 +84,16 @@ A Praça de Puchan~
    Você está na praça de Puchan da região residencial de Nova Thalos.  A Rua
 de Puchan segue para leste e para oeste, onde pode-se ver muitas casas.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D S
+~
+~
+0 -1 12401
+D E
+~
+~
+0 -1 12441
+D W
 ~
 ~
 0 -1 12440
@@ -54,8 +103,16 @@ A Praça de Siva~
    Você está na praça de Siva da região residencial de Nova Thalos.  A Rua
 de Siva segue para leste e para oeste, onde pode-se ver muitas casas.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D N
+~
+~
+0 -1 12402
+D E
+~
+~
+0 -1 12451
+D W
 ~
 ~
 0 -1 12450
@@ -66,8 +123,20 @@ Um Cruzamento de Ruas~
 Para leste e para oeste está a rua de Vayu, para norte está a rua de Yama e
 para sul está a rua de Surya.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12419
+D E
+~
+~
+0 -1 12418
+D N
+~
+~
+0 -1 12406
+D S
 ~
 ~
 0 -1 12407
@@ -78,8 +147,20 @@ Um Cruzamento de Ruas~
 Para leste e para oeste está a rua de Yama, para sul está a rua de Vayu e
 para norte está a rua de Puchan.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12429
+D E
+~
+~
+0 -1 12428
+D N
+~
+~
+0 -1 12408
+D S
 ~
 ~
 0 -1 12405
@@ -90,8 +171,20 @@ Um Cruzamento de Ruas~
 Para leste e para oeste está a rua de Surya, para norte está a rua de Vayu e
 para sul está a rua de Siva.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12439
+D E
+~
+~
+0 -1 12438
+D N
+~
+~
+0 -1 12405
+D S
 ~
 ~
 0 -1 12409
@@ -101,8 +194,16 @@ Um Cruzamento de Ruas~
    Você está em um cruzamento das ruas da região residencial de Nova Thalos.
 Para leste e para oeste está a rua de Puchan e para sul está a rua de Yama.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12449
+D E
+~
+~
+0 -1 12448
+D S
 ~
 ~
 0 -1 12406
@@ -112,8 +213,16 @@ Um Cruzamento de Ruas~
    Você está em um cruzamento das ruas da região residencial de Nova Thalos.
 Para leste e para oeste está a rua de Siva e para norte está a rua de Surya.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12459
+D E
+~
+~
+0 -1 12458
+D N
 ~
 ~
 0 -1 12407
@@ -126,11 +235,25 @@ incomodar.
    Para o norte e para o sul você vê as casas números 1 e 2.  A rua continua
 para oeste, e a praça de Vayu pode ser vista a leste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12412
+D E
+~
+~
+0 -1 12400
+D N
 ~
 porta~
-0 -1 12501
+:n 2
+abcg -1 12500
+D S
+~
+porta~
+:n 2
+abcg -1 12501
 S
 #12411
 A Rua de Vayu~
@@ -140,11 +263,25 @@ incomodar.
    Para o norte e para o sul você vê as casas números 3 e 4.  A rua continua
 para leste, e a praça de Vayu pode ser vista a oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12400
+D E
+~
+~
+0 -1 12413
+D N
 ~
 porta~
-0 -1 12503
+:n 2
+abcg -1 12502
+D S
+~
+porta~
+:n 2
+abcg -1 12503
 S
 #12412
 A Rua de Vayu~
@@ -154,11 +291,25 @@ incomodar.
    Para o norte e para o sul você vê as casas números 5 e 6.  A rua continua
 para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12414
+D E
+~
+~
+0 -1 12410
+D N
 ~
 porta~
-0 -1 12505
+:n 2
+abcg -1 12504
+D S
+~
+porta~
+:n 2
+abcg -1 12505
 S
 #12413
 A Rua de Vayu~
@@ -168,11 +319,25 @@ incomodar.
    Para o norte e para o sul você vê as casas números 7 e 8.  A rua continua
 para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12411
+D E
+~
+~
+0 -1 12415
+D N
 ~
 porta~
-0 -1 12507
+:n 2
+abcg -1 12506
+D S
+~
+porta~
+:n 2
+abcg -1 12507
 S
 #12414
 A Rua de Vayu~
@@ -182,11 +347,25 @@ incomodar.
    Para o norte e para o sul você vê as casas números 9 e 10.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12416
+D E
+~
+~
+0 -1 12412
+D N
 ~
 porta~
-0 -1 12509
+:n 2
+abcg -1 12508
+D S
+~
+porta~
+:n 2
+abcg -1 12509
 S
 #12415
 A Rua de Vayu~
@@ -196,11 +375,25 @@ incomodar.
    Para o norte e para o sul você vê as casas números 11 e 12.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12413
+D E
+~
+~
+0 -1 12417
+D N
 ~
 porta~
-0 -1 12511
+:n 2
+abcg -1 12510
+D S
+~
+porta~
+:n 2
+abcg -1 12511
 S
 #12416
 A Rua de Vayu~
@@ -210,11 +403,25 @@ incomodar.
    Para o norte e para o sul você vê as casas números 13 e 14.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12418
+D E
+~
+~
+0 -1 12414
+D N
 ~
 porta~
-0 -1 12513
+:n 2
+abcg -1 12512
+D S
+~
+porta~
+:n 2
+abcg -1 12513
 S
 #12417
 A Rua de Vayu~
@@ -224,11 +431,25 @@ incomodar.
    Para o norte e para o sul você vê as casas números 15 e 16.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12415
+D E
+~
+~
+0 -1 12419
+D N
 ~
 porta~
-0 -1 12515
+:n 2
+abcg -1 12514
+D S
+~
+porta~
+:n 2
+abcg -1 12515
 S
 #12418
 A Rua de Vayu~
@@ -238,11 +459,25 @@ incomodar.
    Para o norte e para o sul você vê as casas números 17 e 18.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12405
+D E
+~
+~
+0 -1 12416
+D N
 ~
 porta~
-0 -1 12517
+:n 2
+abcg -1 12516
+D S
+~
+porta~
+:n 2
+abcg -1 12517
 S
 #12419
 A Rua de Vayu~
@@ -252,11 +487,25 @@ incomodar.
    Para o norte e para o sul você vê as casas números 19 e 20.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12417
+D E
+~
+~
+0 -1 12405
+D N
 ~
 porta~
-0 -1 12519
+:n 2
+abcg -1 12518
+D S
+~
+porta~
+:n 2
+abcg -1 12519
 S
 #12420
 A Rua de Yama~
@@ -265,11 +514,25 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
    Para o norte e para o sul você vê as casas números 1 e 2.  A rua continua
 para oeste, e a praça de Yama pode ser vista a leste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12422
+D E
+~
+~
+0 -1 12401
+D N
 ~
 porta~
-0 -1 12521
+:n 2
+abcg -1 12520
+D S
+~
+porta~
+:n 2
+abcg -1 12521
 S
 #12421
 A Rua de Yama~
@@ -278,11 +541,25 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
    Para o norte e para o sul você vê as casas números 3 e 4.  A rua continua
 para leste, e a praça de Yama pode ser vista a oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12401
+D E
+~
+~
+0 -1 12423
+D N
 ~
 porta~
-0 -1 12523
+:n 2
+abcg -1 12522
+D S
+~
+porta~
+:n 2
+abcg -1 12523
 S
 #12422
 A Rua de Yama~
@@ -291,11 +568,25 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
    Para o norte e para o sul você vê as casas números 5 e 6.  A rua continua
 para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12424
+D E
+~
+~
+0 -1 12420
+D N
 ~
 porta~
-0 -1 12525
+:n 2
+abcg -1 12524
+D S
+~
+porta~
+:n 2
+abcg -1 12525
 S
 #12423
 A Rua de Yama~
@@ -304,11 +595,25 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
    Para o norte e para o sul você vê as casas números 7 e 8.  A rua continua
 para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12421
+D E
+~
+~
+0 -1 12425
+D N
 ~
 porta~
-0 -1 12527
+:n 2
+abcg -1 12526
+D S
+~
+porta~
+:n 2
+abcg -1 12527
 S
 #12424
 A Rua de Yama~
@@ -317,11 +622,25 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
    Para o norte e para o sul você vê as casas números 9 e 10.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12426
+D E
+~
+~
+0 -1 12422
+D N
 ~
 porta~
-0 -1 12529
+:n 2
+abcg -1 12528
+D S
+~
+porta~
+:n 2
+abcg -1 12529
 S
 #12425
 A Rua de Yama~
@@ -330,11 +649,25 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
    Para o norte e para o sul você vê as casas números 11 e 12.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12423
+D E
+~
+~
+0 -1 12427
+D N
 ~
 porta~
-0 -1 12531
+:n 2
+abcg -1 12530
+D S
+~
+porta~
+:n 2
+abcg -1 12531
 S
 #12426
 A Rua de Yama~
@@ -343,11 +676,25 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
    Para o norte e para o sul você vê as casas números 13 e 14.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12428
+D E
+~
+~
+0 -1 12424
+D N
 ~
 porta~
-0 -1 12533
+:n 2
+abcg -1 12532
+D S
+~
+porta~
+:n 2
+abcg -1 12533
 S
 #12427
 A Rua de Yama~
@@ -356,11 +703,25 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
    Para o norte e para o sul você vê as casas números 15 e 16.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12425
+D E
+~
+~
+0 -1 12429
+D N
 ~
 porta~
-0 -1 12535
+:n 2
+abcg -1 12534
+D S
+~
+porta~
+:n 2
+abcg -1 12535
 S
 #12428
 A Rua de Yama~
@@ -369,11 +730,25 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
    Para o norte e para o sul você vê as casas números 17 e 18.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12406
+D E
+~
+~
+0 -1 12426
+D N
 ~
 porta~
-0 -1 12537
+:n 2
+abcg -1 12536
+D S
+~
+porta~
+:n 2
+abcg -1 12537
 S
 #12429
 A Rua de Yama~
@@ -382,11 +757,25 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
    Para o norte e para o sul você vê as casas números 19 e 20.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12427
+D E
+~
+~
+0 -1 12406
+D N
 ~
 porta~
-0 -1 12539
+:n 2
+abcg -1 12538
+D S
+~
+porta~
+:n 2
+abcg -1 12539
 S
 #12430
 A Rua de Surya~
@@ -395,11 +784,25 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
    Para o norte e para o sul você vê as casas números 1 e 2.  A rua continua
 para oeste, e a praça de Surya pode ser vista a leste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12432
+D E
+~
+~
+0 -1 12402
+D N
 ~
 porta~
-0 -1 12541
+:n 2
+abcg -1 12540
+D S
+~
+porta~
+:n 2
+abcg -1 12541
 S
 #12431
 A Rua de Surya~
@@ -408,11 +811,25 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
    Para o norte e para o sul você vê as casas números 3 e 4.  A rua continua
 para leste, e a praça de Surya pode ser vista a oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12402
+D E
+~
+~
+0 -1 12433
+D N
 ~
 porta~
-0 -1 12543
+:n 2
+abcg -1 12542
+D S
+~
+porta~
+:n 2
+abcg -1 12543
 S
 #12432
 A Rua de Surya~
@@ -421,11 +838,25 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
    Para o norte e para o sul você vê as casas números 5 e 6.  A rua continua
 para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12434
+D E
+~
+~
+0 -1 12430
+D N
 ~
 porta~
-0 -1 12545
+:n 2
+abcg -1 12544
+D S
+~
+porta~
+:n 2
+abcg -1 12545
 S
 #12433
 A Rua de Surya~
@@ -434,11 +865,25 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
    Para o norte e para o sul você vê as casas números 7 e 8.  A rua continua
 para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12431
+D E
+~
+~
+0 -1 12435
+D N
 ~
 porta~
-0 -1 12547
+:n 2
+abcg -1 12546
+D S
+~
+porta~
+:n 2
+abcg -1 12547
 S
 #12434
 A Rua de Surya~
@@ -447,11 +892,25 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
    Para o norte e para o sul você vê as casas números 9 e 10.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12436
+D E
+~
+~
+0 -1 12432
+D N
 ~
 porta~
-0 -1 12549
+:n 2
+abcg -1 12548
+D S
+~
+porta~
+:n 2
+abcg -1 12549
 S
 #12435
 A Rua de Surya~
@@ -460,11 +919,25 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
    Para o norte e para o sul você vê as casas números 11 e 12.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12433
+D E
+~
+~
+0 -1 12437
+D N
 ~
 porta~
-0 -1 12551
+:n 2
+abcg -1 12550
+D S
+~
+porta~
+:n 2
+abcg -1 12551
 S
 #12436
 A Rua de Surya~
@@ -473,11 +946,25 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
    Para o norte e para o sul você vê as casas números 13 e 14.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12438
+D E
+~
+~
+0 -1 12434
+D N
 ~
 porta~
-0 -1 12553
+:n 2
+abcg -1 12552
+D S
+~
+porta~
+:n 2
+abcg -1 12553
 S
 #12437
 A Rua de Surya~
@@ -486,11 +973,25 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
    Para o norte e para o sul você vê as casas números 15 e 16.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12435
+D E
+~
+~
+0 -1 12439
+D N
 ~
 porta~
-0 -1 12555
+:n 2
+abcg -1 12554
+D S
+~
+porta~
+:n 2
+abcg -1 12555
 S
 #12438
 A Rua de Surya~
@@ -499,11 +1000,25 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
    Para o norte e para o sul você vê as casas números 17 e 18.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12407
+D E
+~
+~
+0 -1 12436
+D N
 ~
 porta~
-0 -1 12557
+:n 2
+abcg -1 12556
+D S
+~
+porta~
+:n 2
+abcg -1 12557
 S
 #12439
 A Rua de Surya~
@@ -512,11 +1027,25 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
    Para o norte e para o sul você vê as casas números 19 e 20.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12437
+D E
+~
+~
+0 -1 12407
+D N
 ~
 porta~
-0 -1 12559
+:n 2
+abcg -1 12558
+D S
+~
+porta~
+:n 2
+abcg -1 12559
 S
 #12440
 A Rua de Puchan~
@@ -524,11 +1053,25 @@ A Rua de Puchan~
    Para o norte e para o sul você vê as casas números 1 e 2.  A rua continua
 para oeste, e a praça de Puchan pode ser vista a leste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12442
+D E
+~
+~
+0 -1 12403
+D N
 ~
 porta~
-0 -1 12561
+:n 2
+abcg -1 12560
+D S
+~
+porta~
+:n 2
+abcg -1 12561
 S
 #12441
 A Rua de Puchan~
@@ -536,11 +1079,25 @@ A Rua de Puchan~
    Para o norte e para o sul você vê as casas números 3 e 4.  A rua continua
 para leste, e a praça de Puchan pode ser vista a oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12403
+D E
+~
+~
+0 -1 12443
+D N
 ~
 porta~
-0 -1 12563
+:n 2
+abcg -1 12562
+D S
+~
+porta~
+:n 2
+abcg -1 12563
 S
 #12442
 A Rua de Puchan~
@@ -548,11 +1105,25 @@ A Rua de Puchan~
    Para o norte e para o sul você vê as casas números 5 e 6.  A rua continua
 para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12444
+D E
+~
+~
+0 -1 12440
+D N
 ~
 porta~
-0 -1 12565
+:n 2
+abcg -1 12564
+D S
+~
+porta~
+:n 2
+abcg -1 12565
 S
 #12443
 A Rua de Puchan~
@@ -560,11 +1131,25 @@ A Rua de Puchan~
    Para o norte e para o sul você vê as casas números 7 e 8.  A rua continua
 para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12441
+D E
+~
+~
+0 -1 12445
+D N
 ~
 porta~
-0 -1 12567
+:n 2
+abcg -1 12566
+D S
+~
+porta~
+:n 2
+abcg -1 12567
 S
 #12444
 A Rua de Puchan~
@@ -572,11 +1157,25 @@ A Rua de Puchan~
    Para o norte e para o sul você vê as casas números 9 e 10.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12446
+D E
+~
+~
+0 -1 12442
+D N
 ~
 porta~
-0 -1 12569
+:n 2
+abcg -1 12568
+D S
+~
+porta~
+:n 2
+abcg -1 12569
 S
 #12445
 A Rua de Puchan~
@@ -584,11 +1183,25 @@ A Rua de Puchan~
    Para o norte e para o sul você vê as casas números 11 e 12.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12443
+D E
+~
+~
+0 -1 12447
+D N
 ~
 porta~
-0 -1 12571
+:n 2
+abcg -1 12570
+D S
+~
+porta~
+:n 2
+abcg -1 12571
 S
 #12446
 A Rua de Puchan~
@@ -596,11 +1209,25 @@ A Rua de Puchan~
    Para o norte e para o sul você vê as casas números 13 e 14.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12448
+D E
+~
+~
+0 -1 12444
+D N
 ~
 porta~
-0 -1 12573
+:n 2
+abcg -1 12572
+D S
+~
+porta~
+:n 2
+abcg -1 12573
 S
 #12447
 A Rua de Puchan~
@@ -608,11 +1235,25 @@ A Rua de Puchan~
    Para o norte e para o sul você vê as casas números 15 e 16.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12445
+D E
+~
+~
+0 -1 12449
+D N
 ~
 porta~
-0 -1 12575
+:n 2
+abcg -1 12574
+D S
+~
+porta~
+:n 2
+abcg -1 12575
 S
 #12448
 A Rua de Puchan~
@@ -620,11 +1261,25 @@ A Rua de Puchan~
    Para o norte e para o sul você vê as casas números 17 e 18.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12408
+D E
+~
+~
+0 -1 12446
+D N
 ~
 porta~
-0 -1 12577
+:n 2
+abcg -1 12576
+D S
+~
+porta~
+:n 2
+abcg -1 12577
 S
 #12449
 A Rua de Puchan~
@@ -632,11 +1287,25 @@ A Rua de Puchan~
    Para o norte e para o sul você vê as casas números 19 e 20.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12447
+D E
+~
+~
+0 -1 12408
+D N
 ~
 porta~
-0 -1 12579
+:n 2
+abcg -1 12578
+D S
+~
+porta~
+:n 2
+abcg -1 12579
 S
 #12450
 A Rua de Siva~
@@ -644,11 +1313,25 @@ A Rua de Siva~
    Para o norte e para o sul você vê as casas números 1 e 2.  A rua continua
 para oeste, e a praça de Siva pode ser vista a leste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12452
+D E
+~
+~
+0 -1 12404
+D N
 ~
 porta~
-0 -1 12581
+:n 2
+abcg -1 12580
+D S
+~
+porta~
+:n 2
+abcg -1 12581
 S
 #12451
 A Rua de Siva~
@@ -656,11 +1339,25 @@ A Rua de Siva~
    Para o norte e para o sul você vê as casas números 3 e 4.  A rua continua
 para leste, e a praça de Siva pode ser vista a oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12404
+D E
+~
+~
+0 -1 12453
+D N
 ~
 porta~
-0 -1 12583
+:n 2
+abcg -1 12582
+D S
+~
+porta~
+:n 2
+abcg -1 12583
 S
 #12452
 A Rua de Siva~
@@ -668,11 +1365,25 @@ A Rua de Siva~
    Para o norte e para o sul você vê as casas números 5 e 6.  A rua continua
 para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12454
+D E
+~
+~
+0 -1 12450
+D N
 ~
 porta~
-0 -1 12585
+:n 2
+abcg -1 12584
+D S
+~
+porta~
+:n 2
+abcg -1 12585
 S
 #12453
 A Rua de Siva~
@@ -680,11 +1391,25 @@ A Rua de Siva~
    Para o norte e para o sul você vê as casas números 7 e 8.  A rua continua
 para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12451
+D E
+~
+~
+0 -1 12455
+D N
 ~
 porta~
-0 -1 12587
+:n 2
+abcg -1 12586
+D S
+~
+porta~
+:n 2
+abcg -1 12587
 S
 #12454
 A Rua de Siva~
@@ -692,11 +1417,25 @@ A Rua de Siva~
    Para o norte e para o sul você vê as casas números 9 e 10.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12456
+D E
+~
+~
+0 -1 12452
+D N
 ~
 porta~
-0 -1 12589
+:n 2
+abcg -1 12588
+D S
+~
+porta~
+:n 2
+abcg -1 12589
 S
 #12455
 A Rua de Siva~
@@ -704,11 +1443,25 @@ A Rua de Siva~
    Para o norte e para o sul você vê as casas números 11 e 12.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12453
+D E
+~
+~
+0 -1 12457
+D N
 ~
 porta~
-0 -1 12591
+:n 2
+abcg -1 12590
+D S
+~
+porta~
+:n 2
+abcg -1 12591
 S
 #12456
 A Rua de Siva~
@@ -716,11 +1469,25 @@ A Rua de Siva~
    Para o norte e para o sul você vê as casas números 13 e 14.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12458
+D E
+~
+~
+0 -1 12454
+D N
 ~
 porta~
-0 -1 12593
+:n 2
+abcg -1 12592
+D S
+~
+porta~
+:n 2
+abcg -1 12593
 S
 #12457
 A Rua de Siva~
@@ -728,11 +1495,25 @@ A Rua de Siva~
    Para o norte e para o sul você vê as casas números 15 e 16.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12455
+D E
+~
+~
+0 -1 12459
+D N
 ~
 porta~
-0 -1 12595
+:n 2
+abcg -1 12594
+D S
+~
+porta~
+:n 2
+abcg -1 12595
 S
 #12458
 A Rua de Siva~
@@ -740,11 +1521,25 @@ A Rua de Siva~
    Para o norte e para o sul você vê as casas números 17 e 18.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12409
+D E
+~
+~
+0 -1 12456
+D N
 ~
 porta~
-0 -1 12597
+:n 2
+abcg -1 12596
+D S
+~
+porta~
+:n 2
+abcg -1 12597
 S
 #12459
 A Rua de Siva~
@@ -752,11 +1547,25 @@ A Rua de Siva~
    Para o norte e para o sul você vê as casas números 19 e 20.  A rua
 continua para leste e para oeste.
 ~
-124 0 0 0 0 1
-D0
+124 0 1
+D W
+~
+~
+0 -1 12457
+D E
+~
+~
+0 -1 12409
+D N
 ~
 porta~
-0 -1 12599
+:n 2
+abcg -1 12598
+D S
+~
+porta~
+:n 2
+abcg -1 12599
 S
 #12500
 A Casa 1 da Rua de Vayu~
@@ -764,11 +1573,12 @@ A Casa 1 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 1.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12410
+:n 2
+abcg -1 12410
 S
 #12501
 A Casa 2 da Rua de Vayu~
@@ -776,11 +1586,12 @@ A Casa 2 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 2.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12410
+:n 2
+abcg -1 12410
 S
 #12502
 A Casa 3 da Rua de Vayu~
@@ -788,11 +1599,12 @@ A Casa 3 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 3.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12411
+:n 2
+abcg -1 12411
 S
 #12503
 A Casa 4 da Rua de Vayu~
@@ -800,11 +1612,12 @@ A Casa 4 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 4.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12411
+:n 2
+abcg -1 12411
 S
 #12504
 A Casa 5 da Rua de Vayu~
@@ -812,11 +1625,12 @@ A Casa 5 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 5.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12412
+:n 2
+abcg -1 12412
 S
 #12505
 A Casa 6 da Rua de Vayu~
@@ -824,11 +1638,12 @@ A Casa 6 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 6.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12412
+:n 2
+abcg -1 12412
 S
 #12506
 A Casa 7 da Rua de Vayu~
@@ -836,11 +1651,12 @@ A Casa 7 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 7.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12413
+:n 2
+abcg -1 12413
 S
 #12507
 A Casa 8 da Rua de Vayu~
@@ -848,11 +1664,12 @@ A Casa 8 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 8.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12413
+:n 2
+abcg -1 12413
 S
 #12508
 A Casa 9 da Rua de Vayu~
@@ -860,11 +1677,12 @@ A Casa 9 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 9.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12414
+:n 2
+abcg -1 12414
 S
 #12509
 A Casa 10 da Rua de Vayu~
@@ -872,11 +1690,12 @@ A Casa 10 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 10.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12414
+:n 2
+abcg -1 12414
 S
 #12510
 A Casa 11 da Rua de Vayu~
@@ -884,11 +1703,12 @@ A Casa 11 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 11.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12415
+:n 2
+abcg -1 12415
 S
 #12511
 A Casa 12 da Rua de Vayu~
@@ -896,11 +1716,12 @@ A Casa 12 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 12.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12415
+:n 2
+abcg -1 12415
 S
 #12512
 A Casa 13 da Rua de Vayu~
@@ -908,11 +1729,12 @@ A Casa 13 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 13.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12416
+:n 2
+abcg -1 12416
 S
 #12513
 A Casa 14 da Rua de Vayu~
@@ -920,11 +1742,12 @@ A Casa 14 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 14.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12416
+:n 2
+abcg -1 12416
 S
 #12514
 A Casa 15 da Rua de Vayu~
@@ -932,11 +1755,12 @@ A Casa 15 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 15.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12417
+:n 2
+abcg -1 12417
 S
 #12515
 A Casa 16 da Rua de Vayu~
@@ -944,11 +1768,12 @@ A Casa 16 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 16.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12417
+:n 2
+abcg -1 12417
 S
 #12516
 A Casa 17 da Rua de Vayu~
@@ -956,11 +1781,12 @@ A Casa 17 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 17.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12418
+:n 2
+abcg -1 12418
 S
 #12517
 A Casa 18 da Rua de Vayu~
@@ -968,11 +1794,12 @@ A Casa 18 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 18.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12418
+:n 2
+abcg -1 12418
 S
 #12518
 A Casa 19 da Rua de Vayu~
@@ -980,11 +1807,12 @@ A Casa 19 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 19.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12419
+:n 2
+abcg -1 12419
 S
 #12519
 A Casa 20 da Rua de Vayu~
@@ -992,11 +1820,12 @@ A Casa 20 da Rua de Vayu~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 20.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12419
+:n 2
+abcg -1 12419
 S
 #12520
 A Casa 1 da Rua de Yama~
@@ -1004,11 +1833,12 @@ A Casa 1 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 1.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12420
+:n 2
+abcg -1 12420
 S
 #12521
 A Casa 2 da Rua de Yama~
@@ -1016,11 +1846,12 @@ A Casa 2 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 2.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12420
+:n 2
+abcg -1 12420
 S
 #12522
 A Casa 3 da Rua de Yama~
@@ -1028,11 +1859,12 @@ A Casa 3 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 3.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12421
+:n 2
+abcg -1 12421
 S
 #12523
 A Casa 4 da Rua de Yama~
@@ -1040,11 +1872,12 @@ A Casa 4 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 4.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12421
+:n 2
+abcg -1 12421
 S
 #12524
 A Casa 5 da Rua de Yama~
@@ -1052,11 +1885,12 @@ A Casa 5 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 5.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12422
+:n 2
+abcg -1 12422
 S
 #12525
 A Casa 6 da Rua de Yama~
@@ -1064,11 +1898,12 @@ A Casa 6 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 6.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12422
+:n 2
+abcg -1 12422
 S
 #12526
 A Casa 7 da Rua de Yama~
@@ -1076,11 +1911,12 @@ A Casa 7 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 7.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12423
+:n 2
+abcg -1 12423
 S
 #12527
 A Casa 8 da Rua de Yama~
@@ -1088,11 +1924,12 @@ A Casa 8 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 8.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12423
+:n 2
+abcg -1 12423
 S
 #12528
 A Casa 9 da Rua de Yama~
@@ -1100,11 +1937,12 @@ A Casa 9 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 9.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12424
+:n 2
+abcg -1 12424
 S
 #12529
 A Casa 10 da Rua de Yama~
@@ -1112,11 +1950,12 @@ A Casa 10 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 10.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12424
+:n 2
+abcg -1 12424
 S
 #12530
 A Casa 11 da Rua de Yama~
@@ -1124,11 +1963,12 @@ A Casa 11 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 11.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12425
+:n 2
+abcg -1 12425
 S
 #12531
 A Casa 12 da Rua de Yama~
@@ -1136,11 +1976,12 @@ A Casa 12 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 12.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12425
+:n 2
+abcg -1 12425
 S
 #12532
 A Casa 13 da Rua de Yama~
@@ -1148,11 +1989,12 @@ A Casa 13 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 13.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12426
+:n 2
+abcg -1 12426
 S
 #12533
 A Casa 14 da Rua de Yama~
@@ -1160,11 +2002,12 @@ A Casa 14 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 14.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12426
+:n 2
+abcg -1 12426
 S
 #12534
 A Casa 15 da Rua de Yama~
@@ -1172,11 +2015,12 @@ A Casa 15 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 15.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12427
+:n 2
+abcg -1 12427
 S
 #12535
 A Casa 16 da Rua de Yama~
@@ -1184,11 +2028,12 @@ A Casa 16 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 16.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12427
+:n 2
+abcg -1 12427
 S
 #12536
 A Casa 17 da Rua de Yama~
@@ -1196,11 +2041,12 @@ A Casa 17 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 17.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12428
+:n 2
+abcg -1 12428
 S
 #12537
 A Casa 18 da Rua de Yama~
@@ -1208,11 +2054,12 @@ A Casa 18 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 18.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12428
+:n 2
+abcg -1 12428
 S
 #12538
 A Casa 19 da Rua de Yama~
@@ -1220,11 +2067,12 @@ A Casa 19 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 19.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12429
+:n 2
+abcg -1 12429
 S
 #12539
 A Casa 20 da Rua de Yama~
@@ -1232,11 +2080,12 @@ A Casa 20 da Rua de Yama~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 20.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12429
+:n 2
+abcg -1 12429
 S
 #12540
 A Casa 1 da Rua de Surya~
@@ -1244,11 +2093,12 @@ A Casa 1 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 1.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12430
+:n 2
+abcg -1 12430
 S
 #12541
 A Casa 2 da Rua de Surya~
@@ -1256,11 +2106,12 @@ A Casa 2 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 2.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12430
+:n 2
+abcg -1 12430
 S
 #12542
 A Casa 3 da Rua de Surya~
@@ -1268,11 +2119,12 @@ A Casa 3 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 3.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12431
+:n 2
+abcg -1 12431
 S
 #12543
 A Casa 4 da Rua de Surya~
@@ -1280,11 +2132,12 @@ A Casa 4 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 4.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12431
+:n 2
+abcg -1 12431
 S
 #12544
 A Casa 5 da Rua de Surya~
@@ -1292,11 +2145,12 @@ A Casa 5 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 5.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12432
+:n 2
+abcg -1 12432
 S
 #12545
 A Casa 6 da Rua de Surya~
@@ -1304,11 +2158,12 @@ A Casa 6 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 6.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12432
+:n 2
+abcg -1 12432
 S
 #12546
 A Casa 7 da Rua de Surya~
@@ -1316,11 +2171,12 @@ A Casa 7 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 7.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12433
+:n 2
+abcg -1 12433
 S
 #12547
 A Casa 8 da Rua de Surya~
@@ -1328,11 +2184,12 @@ A Casa 8 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 8.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12433
+:n 2
+abcg -1 12433
 S
 #12548
 A Casa 9 da Rua de Surya~
@@ -1340,11 +2197,12 @@ A Casa 9 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 9.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12434
+:n 2
+abcg -1 12434
 S
 #12549
 A Casa 10 da Rua de Surya~
@@ -1352,11 +2210,12 @@ A Casa 10 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 10.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12434
+:n 2
+abcg -1 12434
 S
 #12550
 A Casa 11 da Rua de Surya~
@@ -1364,11 +2223,12 @@ A Casa 11 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 11.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12435
+:n 2
+abcg -1 12435
 S
 #12551
 A Casa 12 da Rua de Surya~
@@ -1376,11 +2236,12 @@ A Casa 12 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 12.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12435
+:n 2
+abcg -1 12435
 S
 #12552
 A Casa 13 da Rua de Surya~
@@ -1388,11 +2249,12 @@ A Casa 13 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 13.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12436
+:n 2
+abcg -1 12436
 S
 #12553
 A Casa 14 da Rua de Surya~
@@ -1400,11 +2262,12 @@ A Casa 14 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 14.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12436
+:n 2
+abcg -1 12436
 S
 #12554
 A Casa 15 da Rua de Surya~
@@ -1412,11 +2275,12 @@ A Casa 15 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 15.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12437
+:n 2
+abcg -1 12437
 S
 #12555
 A Casa 16 da Rua de Surya~
@@ -1424,11 +2288,12 @@ A Casa 16 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 16.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12437
+:n 2
+abcg -1 12437
 S
 #12556
 A Casa 17 da Rua de Surya~
@@ -1436,11 +2301,12 @@ A Casa 17 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 17.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12438
+:n 2
+abcg -1 12438
 S
 #12557
 A Casa 18 da Rua de Surya~
@@ -1448,11 +2314,12 @@ A Casa 18 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 18.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12438
+:n 2
+abcg -1 12438
 S
 #12558
 A Casa 19 da Rua de Surya~
@@ -1460,11 +2327,12 @@ A Casa 19 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 19.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12439
+:n 2
+abcg -1 12439
 S
 #12559
 A Casa 20 da Rua de Surya~
@@ -1472,11 +2340,12 @@ A Casa 20 da Rua de Surya~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 20.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12439
+:n 2
+abcg -1 12439
 S
 #12560
 A Casa 1 da Rua de Puchan~
@@ -1484,11 +2353,12 @@ A Casa 1 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 1.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12440
+:n 2
+abcg -1 12440
 S
 #12561
 A Casa 2 da Rua de Puchan~
@@ -1496,11 +2366,12 @@ A Casa 2 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 2.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12440
+:n 2
+abcg -1 12440
 S
 #12562
 A Casa 3 da Rua de Puchan~
@@ -1508,11 +2379,12 @@ A Casa 3 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 3.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12441
+:n 2
+abcg -1 12441
 S
 #12563
 A Casa 4 da Rua de Puchan~
@@ -1520,11 +2392,12 @@ A Casa 4 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 4.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12441
+:n 2
+abcg -1 12441
 S
 #12564
 A Casa 5 da Rua de Puchan~
@@ -1532,11 +2405,12 @@ A Casa 5 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 5.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12442
+:n 2
+abcg -1 12442
 S
 #12565
 A Casa 6 da Rua de Puchan~
@@ -1544,11 +2418,12 @@ A Casa 6 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 6.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12442
+:n 2
+abcg -1 12442
 S
 #12566
 A Casa 7 da Rua de Puchan~
@@ -1556,11 +2431,12 @@ A Casa 7 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 7.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12443
+:n 2
+abcg -1 12443
 S
 #12567
 A Casa 8 da Rua de Puchan~
@@ -1568,11 +2444,12 @@ A Casa 8 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 8.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12443
+:n 2
+abcg -1 12443
 S
 #12568
 A Casa 9 da Rua de Puchan~
@@ -1580,11 +2457,12 @@ A Casa 9 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 9.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12444
+:n 2
+abcg -1 12444
 S
 #12569
 A Casa 10 da Rua de Puchan~
@@ -1592,11 +2470,12 @@ A Casa 10 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 10.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12444
+:n 2
+abcg -1 12444
 S
 #12570
 A Casa 11 da Rua de Puchan~
@@ -1604,11 +2483,12 @@ A Casa 11 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 11.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12445
+:n 2
+abcg -1 12445
 S
 #12571
 A Casa 12 da Rua de Puchan~
@@ -1616,11 +2496,12 @@ A Casa 12 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 12.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12445
+:n 2
+abcg -1 12445
 S
 #12572
 A Casa 13 da Rua de Puchan~
@@ -1628,11 +2509,12 @@ A Casa 13 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 13.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12446
+:n 2
+abcg -1 12446
 S
 #12573
 A Casa 14 da Rua de Puchan~
@@ -1640,11 +2522,12 @@ A Casa 14 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 14.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12446
+:n 2
+abcg -1 12446
 S
 #12574
 A Casa 15 da Rua de Puchan~
@@ -1652,11 +2535,12 @@ A Casa 15 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 15.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12447
+:n 2
+abcg -1 12447
 S
 #12575
 A Casa 16 da Rua de Puchan~
@@ -1664,11 +2548,12 @@ A Casa 16 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 16.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12447
+:n 2
+abcg -1 12447
 S
 #12576
 A Casa 17 da Rua de Puchan~
@@ -1676,11 +2561,12 @@ A Casa 17 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 17.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12448
+:n 2
+abcg -1 12448
 S
 #12577
 A Casa 18 da Rua de Puchan~
@@ -1688,11 +2574,12 @@ A Casa 18 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 18.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12448
+:n 2
+abcg -1 12448
 S
 #12578
 A Casa 19 da Rua de Puchan~
@@ -1700,11 +2587,12 @@ A Casa 19 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 19.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12449
+:n 2
+abcg -1 12449
 S
 #12579
 A Casa 20 da Rua de Puchan~
@@ -1712,11 +2600,12 @@ A Casa 20 da Rua de Puchan~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 20.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12449
+:n 2
+abcg -1 12449
 S
 #12580
 A Casa 1 da Rua de Siva~
@@ -1724,11 +2613,12 @@ A Casa 1 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 1.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12450
+:n 2
+abcg -1 12450
 S
 #12581
 A Casa 2 da Rua de Siva~
@@ -1736,11 +2626,12 @@ A Casa 2 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 2.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12450
+:n 2
+abcg -1 12450
 S
 #12582
 A Casa 3 da Rua de Siva~
@@ -1748,11 +2639,12 @@ A Casa 3 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 3.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12451
+:n 2
+abcg -1 12451
 S
 #12583
 A Casa 4 da Rua de Siva~
@@ -1760,11 +2652,12 @@ A Casa 4 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 4.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12451
+:n 2
+abcg -1 12451
 S
 #12584
 A Casa 5 da Rua de Siva~
@@ -1772,11 +2665,12 @@ A Casa 5 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 5.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12452
+:n 2
+abcg -1 12452
 S
 #12585
 A Casa 6 da Rua de Siva~
@@ -1784,11 +2678,12 @@ A Casa 6 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 6.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12452
+:n 2
+abcg -1 12452
 S
 #12586
 A Casa 7 da Rua de Siva~
@@ -1796,11 +2691,12 @@ A Casa 7 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 7.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12453
+:n 2
+abcg -1 12453
 S
 #12587
 A Casa 8 da Rua de Siva~
@@ -1808,11 +2704,12 @@ A Casa 8 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 8.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12453
+:n 2
+abcg -1 12453
 S
 #12588
 A Casa 9 da Rua de Siva~
@@ -1820,11 +2717,12 @@ A Casa 9 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 9.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12454
+:n 2
+abcg -1 12454
 S
 #12589
 A Casa 10 da Rua de Siva~
@@ -1832,11 +2730,12 @@ A Casa 10 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 10.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12454
+:n 2
+abcg -1 12454
 S
 #12590
 A Casa 11 da Rua de Siva~
@@ -1844,11 +2743,12 @@ A Casa 11 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 11.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12455
+:n 2
+abcg -1 12455
 S
 #12591
 A Casa 12 da Rua de Siva~
@@ -1856,11 +2756,12 @@ A Casa 12 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 12.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12455
+:n 2
+abcg -1 12455
 S
 #12592
 A Casa 13 da Rua de Siva~
@@ -1868,11 +2769,12 @@ A Casa 13 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 13.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12456
+:n 2
+abcg -1 12456
 S
 #12593
 A Casa 14 da Rua de Siva~
@@ -1880,11 +2782,12 @@ A Casa 14 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 14.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12456
+:n 2
+abcg -1 12456
 S
 #12594
 A Casa 15 da Rua de Siva~
@@ -1892,11 +2795,12 @@ A Casa 15 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 15.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12457
+:n 2
+abcg -1 12457
 S
 #12595
 A Casa 16 da Rua de Siva~
@@ -1904,11 +2808,12 @@ A Casa 16 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 16.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12457
+:n 2
+abcg -1 12457
 S
 #12596
 A Casa 17 da Rua de Siva~
@@ -1916,11 +2821,12 @@ A Casa 17 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 17.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12458
+:n 2
+abcg -1 12458
 S
 #12597
 A Casa 18 da Rua de Siva~
@@ -1928,11 +2834,12 @@ A Casa 18 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 18.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12458
+:n 2
+abcg -1 12458
 S
 #12598
 A Casa 19 da Rua de Siva~
@@ -1940,11 +2847,12 @@ A Casa 19 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 19.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D S
 ~
 porta~
-0 -1 12459
+:n 2
+abcg -1 12459
 S
 #12599
 A Casa 20 da Rua de Siva~
@@ -1952,10 +2860,11 @@ A Casa 20 da Rua de Siva~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 20.
 ~
-124 12 0 0 0 1
-D0
+124 cd 1
+D N
 ~
 porta~
-0 -1 12459
+:n 2
+abcg -1 12459
 S
-$~
+$

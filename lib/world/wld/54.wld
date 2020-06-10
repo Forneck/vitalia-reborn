@@ -5,7 +5,7 @@ chapeadas em cromo espiralam até a recepção.  Para o sul você ouve os sons
 de pessoas bebendo e se divertindo e do oeste você ouve o alvoroço das
 atividades de Nova Thalos.
 ~
-54 8 0 0 0 0
+54 d 0
 D2
 Você vê algumas pessoas dançando e bebendo.
 ~
@@ -31,7 +31,7 @@ tapete de pelúcia debaixo de seus pés é uma mudança agradável dos caminhos
 abaixo para a taverna da Hospedaria do Demônio Dançante, e para futuras
 aventuras em Nova Thalos.
 ~
-54 152 0 0 0 0
+54 deh 0
 D5
 Os degraus levam para o Demônio.
 ~
@@ -46,22 +46,22 @@ local, estão tocando suas músicas usuais.  Aos grandes quiosques estão cheio
 de pessoas bebendo e se divertindo muito.  Você sente como se estivesse em
 festa.  A sul fica um corredor pouco iluminado.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 Você vê a entrada do Demônio.
 ~
 ~
 0 -1 5400
-D2
-Você vê um corredor.
-~
-~
-0 -1 5499
 E
 bar~
 O bar parece lotado de gente, e você pode apenas perceber a poderosa magia
 do garçom, que o permite dar conta de tudo.
 ~
+D2
+Você vê um corredor.
+~
+~
+0 -1 5499
 S
 #5403
 A Medina~
@@ -69,7 +69,7 @@ A Medina~
 caminham enquanto cuidam de seus problemas do dia a dia.  A Praça Comum fica
 ao sul e a Medina continua ao Norte.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 Você vê a Medina.
 ~
@@ -88,7 +88,7 @@ Praça do Mercado à Praça Comum.  Mendigos, crentes, e outros tipos
 perambulam buscando pelos poucos de bom coração.  A Medina continua ao sul e
 a Praça do Mercado segue ao norte.  A oeste você vê uma agência postal.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 Você vê a Praça do Mercado.
 ~
@@ -113,7 +113,7 @@ esperança de descobrir o que está acontecendo aqui é Explorando ao redor.  A
 Praça do Mercado continua ao norte, oeste, e leste, com a Medina ficando ao
 sul.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -137,7 +137,9 @@ O Centro da Praça do Mercado~
 Há uma grande e peculiar estátua no centro da praça.  A praça segue em
 muitas direções.
 ~
-54 0 0 0 0 1
+54 0 1
+ON z54
+ON nova-thalos
 D0
 ~
 ~
@@ -168,7 +170,7 @@ sobressaem.  É fácil entender por que eles ficam por aqui, quando você nota
 uma loja de armas e armaduras por perto.  Talvez você possa parar e dar uma
 olhada no que estas lojas tem a oferecer.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -193,7 +195,7 @@ brincadeiras que os lojistas fazem para atrair as atenções para suas lojas.
 Ao sul, você sente o cheiro dos pães de Nova Thalos e ao oeste é a entrada de
 um armazém.  O mercado continua ao leste e ao norte daqui.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -221,7 +223,7 @@ mercado, enquanto os nativos daqui, buscam negócios ao norte.  A rua
 ocidental principal começa aqui e segue para os portões, as expansões do
 mercado seguem nas outras direções.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -247,7 +249,7 @@ rio ao sul, fluindo através da cidade.  O passeio de Ishtar segue à leste e
 oeste daqui e a Medina é ao norte.  Ao sul fica a Ponte do Rio Ishtar e o
 portão sulista.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 Você vê a Medina.
 ~
@@ -274,7 +276,7 @@ muitos contos sobre a Enorme Pirâmide, a cidade perdida de Velha Thalos e o
 amigável Dragão de bronze que repousa debaixo do deserto.  Ao sul, fica o
 deserto, e a cidade de Nova Thalos é ao norte.
 ~
-54 4 0 0 0 1
+54 c 1
 D0
 ~
 portão~
@@ -294,7 +296,7 @@ A Ponte Sul~
    Andando através da ponte você vê as apressadas águas do Rio Ishtar.  Ao
 sul, você vê o Portão Sul de Nova Thalos e a Praça Comum fica logo ao norte.
 ~
-54 4 0 0 0 1
+54 c 1
 D0
 ~
 ~
@@ -316,7 +318,7 @@ símbolo de Nova Thalos.  Os governantes da cidade não pouparam nenhuma
 despesa em construir a defesa de suas casas.  A Ponte do Rio Ishtar fica ao
 norte e o deserto ao sul.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -333,7 +335,7 @@ Thalos.  Ao norte há a humilde loja do comerciante Ankeem, cujas tecelajens
 são conhecidas como as melhores da cidade.  A oeste daqui, é a entrada do
 Primeiro Banco Real de Nova Thalos.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -357,7 +359,7 @@ A Praça Norte do Mercado~
 Palácio de Nova Thalos e o Casbah, a leste, oeste e sul daqui o agitados
 mercadores continuam dando vida ao mercado.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -383,7 +385,7 @@ permanece quieta o suficiente para você perceber que o barulho vem do
 Açougue.  Você deve pensar um pouco antes de ter coragem o suficiente de
 entrar nesta loja.  O Mercado continua ao sul e ao oeste.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -408,7 +410,7 @@ mercado é o núcleo da cidade, todas as cargas e comercio de qualquer gênero
 é levado para cá.  O mercado segue em todas as direções, menos ao leste,
 onde fica o Portão Leste.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -433,7 +435,7 @@ Seguindo ao norte, você passará pelo Palácio e a Taverna do Demônio Dançante,
 e o sul o levará para a Praça do Mercado. Uma pequena travessa a leste
 leva a uma estranha estrutura.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -455,7 +457,7 @@ Demônio, vendo muitas pessoas dançando e bebendo.  Após você cuidar de suas
 outras tarefas, você planeja visitar o a Taverna do Demônio Dançante.  O
 passeio continua a norte e sul daqui.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -473,7 +475,7 @@ lânguido som de trombetas anunciando a chegada de algum Duque ou Duquesa no
 Palácio.  Um porto seguro o aguarda ao leste nas paredes do Demônio, e o
 Passeio do Sultão continua ao norte e ao sul.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -498,19 +500,19 @@ do Palácio e do Demônio.  Ao norte você vê o bem guardado portão e pode
 distinguir lânguidos sons do comércio ao sul.  Há também, a leste, uma
 estreita rua que parece levar a uma enorme árvore.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
 0 -1 5422
-D1
-~
-~
-0 -1 5496
 D2
 ~
 ~
 0 -1 5420
+D1
+~
+~
+0 -1 5496
 S
 #5422
 Dentro do Portão Norte de Nova Thalos~
@@ -521,7 +523,7 @@ despesa em construir a defesa de suas casas.  O Passeio do Sultão continua
 ao sul e o Casbah ao leste e oeste.  Ao norte fica a selva.  Um portal abaixo
 o leva até a vila residencial de Nova Thalos.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 portão~
@@ -552,7 +554,7 @@ despesa para construir a defesa de suas casas.
    A rua principal leva ao mercado ao leste e a selva acena do oeste.  Ao
 sul fica a entrada da Guilda dos Guerreiros.
 ~
-54 4 0 0 0 1
+54 c 1
 D1
 ~
 ~
@@ -572,7 +574,7 @@ A Rua Oeste Principal~
 marteladas da loja de reparos e ao norte há o campo gramíneo conhecido como
 a Praça do Templo.  A rua principal continua ao leste e oeste.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -596,7 +598,7 @@ A Rua Oeste Principal~
 buraco.  A estrada aqui se ramifica ao norte e ao sul em duas ruelas atrás
 das lojas do mercado.  A rua principal continua a leste e a oeste daqui.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -620,7 +622,7 @@ A Rua Ocidental Principal~
 ouve os trabalhadores e ao leste, os sons de comércio tomam lugar.  O ar é
 tomado pelo cheiro de ouro e riquezas.  Na parede da loja há um cartaz.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 ~
 ~
@@ -644,7 +646,7 @@ A Principal Rua Ocidental~
 martelar de metais que vem da armoriaria.  A Praça é ao oeste e sua
 continuação ao leste.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 ~
 ~
@@ -660,7 +662,7 @@ A Principal Rua Ocidental~
 Guildas.  Ao sul é uma escura ruela.  A estrada também continua ao leste.
 Há um pequeno aviso pendurado por arame sob sua cabeça.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -695,7 +697,7 @@ desta casa de pessoas de "boas intenções".  Talvez a curiosidade o invada e
 você queira ver o que acontece lá dentro.  Ao norte você as portas abertas
 de uma loja, onde pode comprar artefatos mágicos.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -720,7 +722,7 @@ começa aqui e segue ao leste para a feira.  Um dos portões principais pode
 ser visto ao leste e a Loja de Magica de Braheem o aguarda para negócios ao
 norte.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -743,7 +745,7 @@ despesa para construir a defesa de suas casas.  A rua principal segue na
 direção do mercado ao leste e a selva acena do lesta.  Ao norte fica a
 entrada da Guilda dos Magos.
 ~
-54 4 0 0 0 1
+54 c 1
 D0
 ~
 ~
@@ -767,7 +769,7 @@ A Caça do Dia de Cassandra~
 ofender a linda vendedora você segura sua língua e silenciosamente observa
 sua seleção.
 ~
-54 12 0 0 0 0
+54 cd 0
 D2
 ~
 ~
@@ -780,7 +782,7 @@ docas até o armazém carregando grandes caixotes e descarregando os barcos
 que navegam pelo rio.  Ao norte é uma das entradas do armazém e Ishtar segue
 ao leste.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -797,7 +799,7 @@ enquanto eles cuidam de carregar e descarregar os barcos.  Uma entrada para
 uma dos enormes armazéns de Nova Thalos é ao norte e o Rio Ishtar
 silenciosamente flui pelo sul.  O caminho de Ishtar segue ao leste e oeste.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -819,7 +821,7 @@ deslizar sob o chão, você se agarra em um corrimão que alguém
 convenientemente colocou aqui.  Ao norte ficam os navios e o caminho de
 Ishtar continua ao leste e oeste.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -843,7 +845,7 @@ O Caminho Ocidental de Ishtar~
 Ordens e ás vezes maldições podem ser ouvidas do oeste, na direção dos
 armazéns.  A Praça Comum se abre ao leste, e o caminho de Ishtar ao oeste.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 ~
 ~
@@ -861,7 +863,7 @@ garoto corre até você com seus grandes olhos e, quando você retribui seu
 olhar, corre pela estrada.  A Praça Comum pode ser vista ao oeste e o
 Caminho de Ishtar continua ao leste.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -880,7 +882,7 @@ O Caminho Oriental de Ishtar~
    A larga estrada que cerca o sul da cidade continua ao oeste oriental
 daqui, cercada apenas pelo feno ao norte e pelo caminho de Ishtar ao sul.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 ~
 ~
@@ -897,7 +899,7 @@ você chegou nos estábulos.  Garanhões árabes como outras finas raças de
 cavalos podem ser negociadas por um preço razoável.  O caminho de Ishtar
 continua ao leste e oeste.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -918,7 +920,7 @@ aqui e seguem ao norte.  Sons de bêbados barulhentos e ocasionais gritos de
 gatos emanam desta direção.  Por sorte, você tem a escolha de ir ao leste e
 oeste seguindo o caminho.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 Você vê apenas escuridão.
 ~
@@ -941,7 +943,7 @@ grande seleção de delicadezas aquáticas, você imagina por quanto tempo você
 pode suportar este cheiro!  O Rio Ishtar flui ao sul com o caminho seguindo
 pelo leste e oeste.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -962,7 +964,7 @@ dica de sua localização.  O Rio Ishtar segue ao sul de você, mas parece
 claro e puro, então ele não pode ser a fonte deste cheiro pútrido.  Olhando
 ao norte você nota um pequeno aviso pendurado sob o depósito de lixo.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -994,7 +996,7 @@ Barcos são atracados às docas aqui, esperando por seus capitães voltarem dos
 armazéns e dos bares.  As águas do Rio Ishtar bate em seus pés ao sul e o
 caminho de Ishtar é ao norte.
 ~
-54 4 0 0 0 1
+54 c 1
 D0
 ~
 ~
@@ -1011,7 +1013,7 @@ Felizmente você não terá que ver a estrutura pelo lado de dentro.  Na torre
 noroeste, há uma escada que leva parra cima.  A Avenida termina aqui, saindo
 apenas pelo leste.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 ~
 ~
@@ -1033,7 +1035,7 @@ protege da selva.  Olhando ao sul, escadarias de mármore sobem pela entrada
 da prefeitura cercada de grandes pilares brancos.  A Avenida continua a
 leste e oeste daqui.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 ~
 ~
@@ -1053,7 +1055,7 @@ O Casbah~
 direção.  A oeste daqui você vê os degraus da Prefeitura e percebe o aumento
 no número de guardas.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 ~
 ~
@@ -1073,7 +1075,7 @@ O Casbah~
 guardas tomando conta da mesma.  Ao sul de você fica as grandes paredes do
 Palácio e a Avenida segue ao leste e oeste.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 ~
 ~
@@ -1088,7 +1090,7 @@ O Casbah~
    O piso de paralelepípedo segue ao longo da parede norte daqui.  A sul de
 você ficam as grandes paredes do Palácio e a Avenida segue ao leste e oeste.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 ~
 ~
@@ -1105,7 +1107,7 @@ para cá com intenções suspeitas, e cavalheiros mais velhos se vangloriam
 descendo a rua em direção à Biblioteca.  Ao oeste você pode ver as altas
 torres do portão norte, e a avenida segue ao leste.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 ~
 ~
@@ -1123,7 +1125,7 @@ pedra e olhando para cima você vê um grande e forte guarda tomando conta ao
 norte.  Para o leste segue uma interseção no Caminho das Guildas e o portão
 norte fica bem perto ao oeste.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 ~
 ~
@@ -1140,7 +1142,7 @@ interseção, os sons me marteladas, o cheiro de couro queimado, e a fumaça
 vinda da ferraria vem lhe cumprimentar.  A Avenida continua ao leste e oeste
 daqui, e o Caminho segue ao sul.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 ~
 ~
@@ -1160,7 +1162,7 @@ O Casbah~
 pedreiros.  Jovens crianças andam com suas babas se divertindo em segurança.
 A Avenida continua a leste e oeste daqui.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 ~
 ~
@@ -1178,7 +1180,7 @@ menor do que no resto da cidade.  Alguns homens velhos se apoiam em bengalas
 e jovens homens a caminho do estudo são os únicos viajante do caminho para a
 biblioteca.  A Avenida segue a leste e oeste.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 ~
 ~
@@ -1194,7 +1196,7 @@ O Casbah~
 por essa direção, você chegará na biblioteca e no grande salão de dança da
 cidade.   A torre nordeste dá acesso para cima por uma escada em espiral.
 ~
-54 0 0 0 0 1
+54 0 1
 D2
 ~
 ~
@@ -1215,7 +1217,7 @@ cidade.  A biblioteca da cidade pode ser adentrada pela porta ao oeste e O
 Casbah começa seu curso um pouco mais ao norte.  O Caminho e a entrada do
 salão de dança é ao sul.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -1235,7 +1237,7 @@ O Caminho de Kali~
 danças de Nova Thalos.  A entrada para o salão é ao oeste e o Caminho segue
 pelo norte.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -1249,7 +1251,7 @@ S
 O Subterrâneo~
    Uma pequena passagem segue a norte e sul.
 ~
-54 9 0 0 0 1
+54 ad 1
 D0
 ~
 ~
@@ -1264,7 +1266,7 @@ Uma Ruela~
    Esta é uma escura ruela entre o Palácio e a Prefeitura.  Não há nada
 aqui, além de aranhas e ratos.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -1278,7 +1280,7 @@ S
 Uma Ruela~
    A ruela termina aqui.
 ~
-54 1 0 0 0 1
+54 a 1
 D0
 ~
 ~
@@ -1297,7 +1299,7 @@ trabalhadoras dos cidadãos de Nova Thalos.   Aqui faz-se todos os itens
 vendidos na feira.  Ao longo desta extensão particular do caminho, fica a
 guilda dos Caçadores-Arqueiros a oeste e ao leste está a Guilda dos pedreiros.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -1321,7 +1323,7 @@ O Caminho das Guildas~
 leste a dos Joalheiros.  O caminho das Guildas continua ao norte e sul
 daqui.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -1346,7 +1348,7 @@ dos Curtidores, ao oeste.  Ao leste há uma linda porta esculpida em mármore,
 permitindo passagem para a entrada do Museu dos Deuses Maiores.  O caminho
 das Guildas segue ao norte e ao sul.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -1371,7 +1373,7 @@ espaços extras para erguer um santuário para seus Deuses Protetores.  O
 resultado deste labor se tornou o Museu dos Deuses Maiores; Você pode entrar
 para o caminho sagrado ao leste.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -1391,7 +1393,7 @@ O Caminho das Guildas~
 Guildas, e levar mercadorias para o mercado e para as lojas.  A rua
 principal é ao sul.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -1406,7 +1408,7 @@ Uma Ruela~
    Mesmo com sua luz você não consegue penetrar este muro mágico de escuridão
 que envolve esta ruela.
 ~
-54 5 0 0 0 1
+54 ac 1
 D0
 ~
 ~
@@ -1421,7 +1423,7 @@ Uma Ruela~
    Mesmo com sua luz você não consegue penetrar este muro mágico de escuridão
 que envolve esta ruela.
 ~
-54 1 0 0 0 1
+54 a 1
 D0
 ~
 ~
@@ -1440,7 +1442,7 @@ Uma Ruela~
     Mesmo com sua luz você não consegue penetrar este muro mágico de escuridão
 que envolve esta ruela.
 ~
-54 1 0 0 0 1
+54 a 1
 D1
 ~
 ~
@@ -1459,7 +1461,7 @@ Uma Ruela~
    Mesmo com sua luz você não consegue penetrar este muro mágico de escuridão
 que envolve esta ruela.
 ~
-54 5 0 0 0 1
+54 ac 1
 D0
 ~
 ~
@@ -1474,7 +1476,7 @@ Uma Ruela~
    Este é um pequeno canto da ruela. As paredes do templo ficam a norte e oeste.
 Você nota uma boa quantia de pegadas ao leste.
 ~
-54 1 0 0 0 1
+54 a 1
 D1
 ~
 ~
@@ -1492,7 +1494,7 @@ S
 Uma Ruela~
    Este é o fim da estreita ruela. Há um estranho monte de roupas no chão.
 ~
-54 1 0 0 0 1
+54 a 1
 D3
 ~
 ~
@@ -1509,7 +1511,7 @@ Uma Ruela~
 alguns gritos e barulhos vindos do sul.  O chão é áspero e precisa de
 reparos.  Na estrada há um pequeno buraco.
 ~
-54 5 0 0 0 1
+54 ac 1
 D0
 ~
 ~
@@ -1528,7 +1530,7 @@ Uma Ruela~
    Você está em uma pequena ruela entre a loja de reparos e o armazém.  Não
 há nada aqui além de pequenos roedores e poeira.
 ~
-54 5 0 0 0 1
+54 ac 1
 D0
 ~
 ~
@@ -1543,7 +1545,7 @@ Uma Ruela~
    Este é um pequeno canto na ruela atrás das dos armazéns e da Guilda dos
 guerreiros.  Você nota alguns fragmentos ao oeste.
 ~
-54 1 0 0 0 1
+54 a 1
 D0
 ~
 ~
@@ -1557,7 +1559,7 @@ S
 Uma Ruela~
    A ruela termina aqui assim como as pegadas que você havia notado antes.
 ~
-54 1 0 0 0 1
+54 a 1
 D3
 ~
 ~
@@ -1573,7 +1575,7 @@ O Subterrâneo~
    Você está em uma pequena passagem subterrânea embaixo da cidade.  Você vê
 um pequeno brilho de luz vindo de cima e as passagens continuam ao sul.
 ~
-54 9 0 0 0 1
+54 ad 1
 D2
 ~
 ~
@@ -1587,7 +1589,7 @@ S
 O Subterrâneo~
    A passagem continua ao norte e ao sul.
 ~
-54 9 0 0 0 1
+54 ad 1
 D0
 ~
 ~
@@ -1601,7 +1603,7 @@ S
 O Subterrâneo~
    O túnel se ramifica aqui, indo para o norte, leste e oeste.
 ~
-54 9 0 0 0 1
+54 ad 1
 D0
 ~
 ~
@@ -1620,7 +1622,7 @@ O Subterrâneo~
    A passagem leva ao sul e ao oeste.  Você percebe um pequeno brilho de luz
 vindo de cima.
 ~
-54 9 0 0 0 1
+54 ad 1
 D2
 ~
 ~
@@ -1640,7 +1642,7 @@ O Subterrâneo~
 também nota uma clareira em meio a poeira no chão, mas não parece ver
 nenhuma porta nesta direção.
 ~
-54 9 0 0 0 1
+54 ad 1
 D1
 ~
 ~
@@ -1650,7 +1652,7 @@ S
 O Subterrâneo~
    Uma pequena passagem continua ao norte e ao sul daqui.
 ~
-54 9 0 0 0 1
+54 ad 1
 D0
 ~
 ~
@@ -1665,7 +1667,7 @@ O Subterrâneo~
    A pequena passagem leva a norte e a leste daqui.  Você ouve os sons da
 cidade acima de você.
 ~
-54 9 0 0 0 1
+54 ad 1
 D0
 ~
 ~
@@ -1684,7 +1686,7 @@ O Subterrâneo~
    O túnel continua a oeste e a leste.  Felizmente você tem um bom senso de
 direção.
 ~
-54 9 0 0 0 1
+54 ad 1
 D1
 ~
 ~
@@ -1701,7 +1703,7 @@ baixo para ver se você quer sair da cidade pela água.  Para isso você deve
 abrir o portão de ferro acima de você.  O horrível cheiro do lixo chega a
 você vindo da costa.
 ~
-54 0 0 0 0 7
+54 0 7
 D1
 ~
 ~
@@ -1717,7 +1719,7 @@ O Rio Ishtar~
 casais passeando.  Ao oeste você vê a ponte sul e ao leste você vê o portão
 de ferro protegendo a cidade de visitas indesejáveis.
 ~
-54 0 0 0 0 7
+54 0 7
 D1
 ~
 portão~
@@ -1734,7 +1736,7 @@ trabalhadores terminaram o pequeno corrimão, dando fácil acesso para as
 pessoas, levando ao rio.  Ao oeste e leste você vê o rio fluindo pela
 cidade.
 ~
-54 0 0 0 0 7
+54 0 7
 D1
 ~
 ~
@@ -1754,7 +1756,7 @@ O Rio Ishtar~
 perto da rampa norte daqui fazem da navegação um pouco difícil.  Enquanto o
 rio flui ao leste você pode ver a ponte sul nesta direção.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -1774,7 +1776,7 @@ O Rio Ishtar~
 guardas esperam uma ordem para abrir o portão, no caso de algum cidadão
 queira entrar ou sair.
 ~
-54 0 0 0 0 7
+54 0 7
 D1
 ~
 ~
@@ -1782,6 +1784,7 @@ D1
 D3
 ~
 grade~
+:n 2
 1 -1 5623
 S
 #5488
@@ -1790,7 +1793,7 @@ Uma Passagem Escura~
 parece muito firme, mas procurando bem, ela não revela nenhuma porta
 secreta.  A única saída é ao leste.
 ~
-54 9 0 0 0 1
+54 ad 1
 D1
 ~
 ~
@@ -1802,7 +1805,7 @@ Uma Passagem Escura~
 algo de peculiar na parede, desta vez ao norte, mas você falha em encontrar
 alguma passagem secreta.  Vozes podem ser languidamente ouvidas do norte.
 ~
-54 9 0 0 0 1
+54 ad 1
 D1
 ~
 ~
@@ -1816,7 +1819,7 @@ S
 Uma Passagem Escura~
    A pequena passagem continua a oeste e leste daqui.
 ~
-54 9 0 0 0 1
+54 ad 1
 D1
 ~
 ~
@@ -1838,7 +1841,7 @@ você vê uma pequena escada mal construída em meio a sujeira.  Subindo pela
 escada você encontra uma porta secreta no teto.  A passagem continua a oeste
 daqui.
 ~
-54 9 0 0 0 1
+54 ad 1
 D3
 ~
 ~
@@ -1846,6 +1849,7 @@ D3
 D4
 ~
 secreta porta~
+:n 2 a porta secreta
 1 -1 5570
 E
 fogo~
@@ -1858,7 +1862,7 @@ S
 O Subterrâneo~
    A pequena passagem continua a oeste e leste.
 ~
-54 9 0 0 0 1
+54 ad 1
 D1
 ~
 ~
@@ -1872,7 +1876,7 @@ S
 O Subterrâneo~
    A pequena passagem continua a oeste e leste.
 ~
-54 9 0 0 0 1
+54 ad 1
 D1
 ~
 ~
@@ -1889,7 +1893,7 @@ Nova Thalos.  Aqui já é difícil ouvir os sonos do mercado, o que deixa o
 ambiente muito tranqüilo.  A praça comum fica ao norte, e a estrada continua
 para o sul.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -1908,7 +1912,7 @@ estrada continua para o norte, e você pode ver uma ponte para o sul.  Para o
 leste e o oeste você vê fileiras de casas.  Provavelmente você está na parte
 residencial da cidade.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -1936,15 +1940,15 @@ Uma Estreita Rua~
 tanto à estrada principal que segue pelo norte da praça central, a oeste,
 quanto a uma enorme árvore de aparência muito suspeita, a leste.
 ~
-54 0 0 0 0 1
-D1
-~
-~
-0 -1 4978
+54 0 1
 D3
 ~
 ~
 0 -1 5421
+D1
+~
+~
+0 -1 4978
 S
 #5497
 Uma Travessa do Passeio do Sultão~
@@ -1952,7 +1956,7 @@ Uma Travessa do Passeio do Sultão~
 leste daqui uma estranha estrutura, enquanto a oeste fica o Passeio do
 Sultão.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 Você vê uma estrutura muito estranha nessa direção.
 ~
@@ -1971,7 +1975,7 @@ encomendas são encontradas cobrindo as paredes.  Há muita desordem e sujeira
 por todos os lados.  Atrás do balcão há um velho senhor, esperando para
 atendê-lo.  Há uma discreta placa sobre o balcão.
 ~
-54 0 0 0 0 0
+54 0 0
 D1
 ~
 ~
@@ -1999,7 +2003,7 @@ Um Corredor Mal-iluminado~
 Dançante parece não chegar aqui, já que não é possível ouvir nada, nem vindo
 do norte, nem do sul. Uma placa chama sua atenção.
 ~
-54 45 0 0 0 0
+54 acdf 0
 D0
 ~
 ~
@@ -2022,7 +2026,7 @@ S
 O Subterrâneo~
    A pequena passagem continua a oeste e leste.
 ~
-54 9 0 0 0 0
+54 ad 0
 D1
 ~
 ~
@@ -2036,7 +2040,7 @@ S
 O Subterrâneo~
    A pequena passagem continua a oeste e leste.
 ~
-54 9 0 0 0 0
+54 ad 0
 D1
 ~
 ~
@@ -2050,7 +2054,7 @@ S
 O Subterrâneo~
    A pequena passagem continua a oeste e leste.
 ~
-54 9 0 0 0 0
+54 ad 0
 D1
 ~
 ~
@@ -2067,12 +2071,13 @@ seu Mestre pronto para o ajudar quando o tempo é certo.  A câmara
 está completamente silenciosa.  A única saída óbvia é de volta para
 a escadaria, no Néctar.
 ~
-54 152 0 0 0 0
+54 deh 0
 D1
 Você nota que no chão, próximo a base da parede ao leste, há alguns
 arranhões.
 ~
 porta secreta~
+:n 2 a porta secreta
 1 -1 5479
 D4
 ~
@@ -2087,7 +2092,7 @@ Do que você ouviu porém, este homem sagrado homem possui algum temperamento,
 e ele não parece muito feliz por você ter perturbado suas orações.
    A saída mais obvia é para sul.
 ~
-54 8 0 0 0 0
+54 d 0
 D2
 ~
 ~
@@ -2100,7 +2105,7 @@ enorme altar feito em Ônix preta altamente polida está à sua frente.
 Atrás deste altar repousa uma estátua de doze pés de altura de Akbal,
 o mais alto deus em todas as terras.
 ~
-54 88 0 0 0 0
+54 deg 0
 D2
 ~
 ~
@@ -2118,7 +2123,7 @@ Costuradas e proverem roupas.  Elas são trazidas do campo, tornadas
 roupas e tingidas em cores diferentes.  Um jovem garoto caminha
 até uma delas, a pega e sai.
 ~
-54 8 0 0 0 0
+54 d 0
 D1
 ~
 ~
@@ -2130,7 +2135,7 @@ A Guilda dos Artesões~
 com várias ferramentas e materiais.  O ar está tenso com a pressa de
 completar os vários projetos e criações.
 ~
-54 8 0 0 0 0
+54 d 0
 D3
 ~
 ~
@@ -2143,7 +2148,7 @@ parece imaculado.  Para o norte você vê a câmara do Alto Sacerdote
 e uma placa na porta com GRANDES letras que lêem 'NÃO PERTURBE'
 Para o sul está a entrada para a Guilda dos Clérigos.
 ~
-54 72 0 0 0 0
+54 dg 0
 D0
 ~
 ~
@@ -2165,7 +2170,7 @@ Thalos.  Uma fila de esculturas estão voltadas para o púlpito, dedicando
 toda sua atenção.  O fundo carpete vermelho sob seus pés parece não ter uma
 marca de uso ou sujeira.
 ~
-54 200 0 0 0 0
+54 dgh 0
 D0
 ~
 ~
@@ -2191,7 +2196,7 @@ um pouco das necessidades básicas para tal ocasião.  Estes dias a Sala de
 Doações depende da generosidade de ricos aventureiros, e uma maldição para
 aquele que entrar para roubar.
 ~
-54 12 0 0 0 0
+54 cd 0
 D3
 ~
 ~
@@ -2204,7 +2209,7 @@ pelo povo de Nova Thalos em ação de graça para os santos que eles acreditam
 terem salvado suas vidas.
    O museu continua para o sul.
 ~
-54 12 0 0 0 0
+54 cd 0
 D2
 ~
 ~
@@ -2221,7 +2226,7 @@ própria forma.  Homens carecas com roupões marrons podem ser vistos moendo e
 conversando silenciosamente uns entre os outros.  A norte está o caminho de
 volta para o próprio Templo, e a sul fica a entrada para o bar dos clérigos.
 ~
-54 152 0 0 0 0
+54 deh 0
 D0
 ~
 ~
@@ -2238,7 +2243,7 @@ grandes portões de ferro forjado ascendem abertos próximos a você.  Embora
 eles possam nem sempre serem usados pelos sacerdotes do Templo, estão
 prontos para defende-los, caso a cidade venha a estar novamente sob perigo.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -2258,7 +2263,7 @@ Os Pertences de Ahkeem~
 sutilmente rotativa.  Ahkeem parece ter um fascínio por coisas que não são
 desse mundo...  Pertences muito estranhos, de fato.
 ~
-54 8 0 0 0 0
+54 d 0
 D2
 ~
 ~
@@ -2272,7 +2277,7 @@ dizendo: 'Coma suas verduras'.  Isso é provavelmente por que você está
 desperdiçando tempo na cidade de Nova Thalos e não com ela.
    Mas espere...  Vera parece com a sua mãe!
 ~
-54 8 0 0 0 0
+54 d 0
 D2
 ~
 ~
@@ -2285,7 +2290,7 @@ pelo povo de Nova Thalos em ação de graça para os santos que eles acreditam
 terem salvado suas vidas.
    O museu continua para norte.
 ~
-54 12 0 0 0 0
+54 cd 0
 D0
 ~
 ~
@@ -2302,7 +2307,7 @@ escadaria de madeira espiralada que leva ao nível acima.  Você ouviu que
 acima daqueles degraus aguarda o velho mago capaz de ajudar você em seus
 estudos.
 ~
-54 24 0 0 0 0
+54 de 0
 D1
 ~
 ~
@@ -2311,6 +2316,7 @@ D2
 Você percebe alguns arranhões no chão, próximo a base da parede.
 ~
 porta secreta~
+:n 2 a porta secreta
 1 -1 5524
 D4
 ~
@@ -2324,7 +2330,7 @@ redor do pátio há quatro bancos de ferro trabalhado, com almofadas, onde os
 magos dessas terras sentam e trocam idéias.  Para oeste situa-se a torre das
 duas-histórias, onde o líder da Guilda dos magos executa seus experimentos.
 ~
-54 16 0 0 0 1
+54 e 1
 D2
 ~
 ~
@@ -2342,7 +2348,7 @@ materiais por sua causa.  Talvez porque só os clérigos são permitidos a
 entrar neste bar, eles toleram isso da forma mais confortável possível.  No
 canto há uma escadaria que conduz abaixo, até a câmara de meditação.
 ~
-54 152 0 0 0 0
+54 deh 0
 D0
 ~
 ~
@@ -2359,7 +2365,7 @@ paladinos e clérigos conversam, orando ou ouvindo as orações de seus
 companheiros.  Enormes degraus marmóreos conduzem até os portões do Templo e
 a Rua Principal fica para o sul.
 ~
-54 68 0 0 0 1
+54 cg 1
 D0
 ~
 ~
@@ -2380,7 +2386,7 @@ vermelho.  Enormes pilares apoiam o alto teto curvado sobre sua cabeça.
 Enquanto mais você observa, mais você duvida da habilidade dos anões para os
 detalhes.  Fios prateados separam os blocos polidos que fazem o chão.
 ~
-54 24 0 0 0 0
+54 de 0
 D1
 ~
 ~
@@ -2393,7 +2399,7 @@ casa.   Você vê uma organização satisfatória.  Os corpos...err...selecionados e
 pendurados em ganchos, sangram em panelas que escorrem direto para um único
 barril subterrâneo.   Para onde será que isso conduz...
 ~
-54 8 0 0 0 0
+54 d 0
 D3
 ~
 ~
@@ -2410,7 +2416,7 @@ as centenas de velas que revestem as estantes.  A névoa girando em torno de
 seus pés faz parecer que você entrou em um portal para outro plano.  Há uma
 mesa desorganizada próxima à parede oposta à entrada.
 ~
-54 8 0 0 0 0
+54 d 0
 D2
 ~
 ~
@@ -2422,7 +2428,7 @@ A Loja de Mágicas de Braheem~
 O dono parece trabalhar duro em sua mais recente criação mágica.
    Você vê uma pequena placa na parede.
 ~
-54 8 0 0 0 0
+54 d 0
 D2
 ~
 ~
@@ -2446,7 +2452,7 @@ A Entrada Para a Torre Dos Magos~
 Parece que seu único propósito é abrigar o poderoso feiticeiro
 que está vigiando a entrada.
 ~
-54 152 0 0 0 0
+54 deh 0
 D0
 ~
 ~
@@ -2461,7 +2467,7 @@ A Entrada Para a Guilda dos Guerreiros~
    Esta pequena sala é somente um obstáculo para manter seres indesejados do
 lado de fora.
 ~
-54 152 0 0 0 0
+54 deh 0
 D0
 ~
 ~
@@ -2480,7 +2486,7 @@ item que precisa de reparos, simplesmente entregue para o homem atrás do
 balcão.
    Há uma pequena placa no balcão.
 ~
-54 12 0 0 0 0
+54 cd 0
 D0
 ~
 ~
@@ -2498,7 +2504,7 @@ O Armazém~
    A nova riqueza encontrada dessa bela cidade são os exóticos itens à venda
 aqui.  Você pensa no que será que irá acontecer se você digitar...  LIST...
 ~
-54 8 0 0 0 0
+54 d 0
 D1
 ~
 ~
@@ -2514,7 +2520,7 @@ criações premiadas de Abdul.  Aqui comprar armaduras significa impedir
 monstros de te cortar em pequenos pedaços.   Uma nota na parede chama sua
 atenção.
 ~
-54 8 0 0 0 0
+54 d 0
 D3
 ~
 ~
@@ -2538,7 +2544,7 @@ as leis de provisão e demanda são inquestionáveis.  Pessoas vêm aqui quando
 se sentem incapaz ou estão pouco dispostas lutar suas próprias batalhas.
 Por uma pequena taxa, você pode contratar um assassino.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 ~
@@ -2547,13 +2553,14 @@ D1
 Você nota que no chão, próximo a base da parede ao leste, há alguns arranhões.
 ~
 porta secreta~
+:n 2 a porta secreta
 1 -1 5532
 S
 #5531
 A Guilda dos Mercenários~
    Esse é o quarto de armazenamento para os mercenários a serem contratados.
 ~
-54 520 0 0 0 0
+54 dj 0
 S
 #5532
 A Entrada Para a Guilda dos Ladrões~
@@ -2561,7 +2568,7 @@ A Entrada Para a Guilda dos Ladrões~
 iluminação.  Há um pequeno banco de madeira e um livro sobre ele.  O
 assassino que vigia a entrada de 'estranhos' aparece conforme você caminha.
 ~
-54 153 0 0 0 0
+54 adeh 0
 D2
 ~
 ~
@@ -2569,6 +2576,7 @@ D2
 D3
 ~
 porta secreta~
+:n 2 a porta secreta
 1 -1 5530
 S
 #5533
@@ -2579,7 +2587,7 @@ desgastadas e possuem marcas das numerosas rixas de bar que ocorreram.  Pode
 ser uma boa idéia manter a boca fechada enquanto está por aqui.   Há uma saída
 a leste onde o mestre espadachim aguarda para treinar os alunos.
 ~
-54 152 0 0 0 0
+54 deh 0
 D0
 ~
 ~
@@ -2596,11 +2604,12 @@ sacos e outros treinando com espadas.  A norte você vê um homem vestido em
 roupões pretos, ao contrário de seus camaradas, quem você assume ser seu
 mestre.
 ~
-54 152 0 0 0 0
+54 deh 0
 D1
 Você vê que a grama próxima a base da parede está ligeiramente rasgada.
 ~
 porta secreta~
+:n 2 a porta secreta
 1 -1 5473
 D3
 ~
@@ -2612,7 +2621,7 @@ O Posto de Pão~
    Um pequeno posto foi fixo aqui, mostrando a humilde seleção do lojista.
 Você nota que ele acrescentou alguns coisas à sua lista.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 ~
@@ -2626,7 +2635,7 @@ loja.  Um anão se senta em um banco no fundo da loja e martela sua mais nova
 criação.  Aqui você pode comprar raros e exóticos itens não encontrados em
 nenhuma outra parte do mundo.  Uma nota prende seu olhar.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 ~
@@ -2646,7 +2655,7 @@ A Velha Loja de Couro~
 prateleiras com numerosos bens de couro.  Há algumas mulheres sentadas em
 almofadas de couro trabalhando detalhes em jaquetas.
 ~
-54 8 0 0 0 0
+54 d 0
 D1
 ~
 ~
@@ -2659,7 +2668,7 @@ a décadas.  Mesas de pôquer revestem as paredes e todos o encaram assim que
 você entra, você não sente muito bem vindo.  O bar possui inúmeros buracos
 de faca e o garçom parece esperar as suas ordens.
 ~
-54 8 0 0 0 0
+54 d 0
 D3
 ~
 ~
@@ -2673,7 +2682,7 @@ todos os lados, e sussurram.  Um flash de aço o faz saber da quantidade de
 lâminas que há nessa multidão.  Assim que você rapidamente confere sua
 carteira, você nota uma pequena escadaria que conduz a baixo.
 ~
-54 152 0 0 0 0
+54 deh 0
 D0
 ~
 ~
@@ -2689,7 +2698,7 @@ O Armazém~
 cidade antes de serem exportadas.  Todos os itens aqui são feitos em Nova
 Thalos e exportados para todas as partes do mundo.
 ~
-54 8 0 0 0 0
+54 d 0
 D1
 ~
 ~
@@ -2706,7 +2715,7 @@ achados.  Essa área do armazém é usada para armazenagem de materiais crus
 comprados em áreas fora da cidade.  Esses bens são, então, entregues para as
 várias associações.  A área de exportação do armazém fica a sul.
 ~
-54 8 0 0 0 0
+54 d 0
 D2
 ~
 ~
@@ -2723,7 +2732,7 @@ Um velho homem com uma ondulada barba cinza está atrás do pequeno balcão
 esperando suas ordens.  Atrás dele há vários modelos de veleiros e enormes
 peixes.
 ~
-54 8 0 0 0 0
+54 d 0
 D1
 ~
 ~
@@ -2738,7 +2747,7 @@ A Sala de Desenhos~
    As paredes são cobertas com esboços de cascos.  Essa sala é usada pelo
 porto para as criações em esboços antes da construção em madeira.
 ~
-54 8 0 0 0 0
+54 d 0
 D3
 ~
 ~
@@ -2751,7 +2760,7 @@ que a maioria de suas criações lidam com cavalos.  Nas paredes você vê
 muitas ferraduras feiras de ferro.  A sala é quente, tão quente quanto o
 deserto a sul daqui, e você se pergunta como alguém pode ficar aqui.
 ~
-54 8 0 0 0 0
+54 d 0
 D2
 ~
 ~
@@ -2764,7 +2773,7 @@ Garanhões árabes escolhidos do Sultão, e cada uma possui seu próprio cocho
 para beber.  Um pequeno garoto vaga com uma pá para remover o subproduto
 ofensivo das bestas.
 ~
-54 8 0 0 0 1
+54 d 1
 D1
 ~
 ~
@@ -2781,11 +2790,12 @@ Thalos.  Aqui você pode treinar as artes de roubar, arrombar fechaduras e se
 tornar quase invisível.  Uma pequena escadaria conduz abaixo, para o
 Unicórnio.
 ~
-54 152 0 0 0 0
+54 deh 0
 D2
 Você vê pequenos arranhados na parede sul.
 ~
 porta secreta~
+:n 2 a porta secreta
 1 -1 5489
 D4
 ~
@@ -2798,7 +2808,7 @@ O Depósito de Lixo~
 constantes ventos vindos das montanhas, o cheiro é geralmente carregado para
 fora dos muros e para o deserto.
 ~
-54 0 0 0 0 1
+54 0 1
 D2
 ~
 ~
@@ -2812,7 +2822,7 @@ vê um homem sentado, curvado sobre uma pequena mesa de madeira com duas
 provetas de líquidos borbulhantes à sua frente.  Ele olha para você assim
 que você entra e sorri amplamente.
 ~
-54 152 0 0 0 0
+54 deh 0
 D5
 ~
 ~
@@ -2824,7 +2834,7 @@ O Sótão de Feno~
 de feno serve como área de armazenamento para os cavalos no estábulo.  O
 jovem garoto que você viu com a pá parece ter feito residência por aqui.
 ~
-54 8 0 0 0 0
+54 d 0
 D3
 ~
 ~
@@ -2839,7 +2849,7 @@ teto iluminam as tapeçarias que adornam as paredes.  A caimbra no seu pescoço
 diz a você que é hora de parar de olhar.  Para oeste ficam os numerosos
 corredores do palácio e o portão situa-se a leste.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 ~
@@ -2864,7 +2874,7 @@ foram comprados aqui pelo comitê responsável em recuperar o conhecimento
 perdido de Thalos.  Filas de estantes com livros em todas as condições
 preenchem as paredes.  O ar tem o aroma de pergaminho velho e cola.
 ~
-54 40 0 0 0 0
+54 df 0
 D1
 ~
 ~
@@ -2877,7 +2887,7 @@ confetes e pedaços de comida.  Centenas de canecas de cerveja vazias nas
 mesas que rodeiam a pista de danças sugerem que os cidadãos adoram sua
 bebida.   Há ainda uma grande faixa na parede.
 ~
-54 8 0 0 0 0
+54 d 0
 D1
 ~
 ~
@@ -2896,7 +2906,7 @@ A Prisão~
    Você está na cadeia.  Por alguma razão, alguém sente que você se
 comportou muito mal e que deve ser colocado a salvo por um tempo.
 ~
-54 696 0 0 0 0
+54 defhj 0
 D0
 ~
 portao~
@@ -2908,7 +2918,7 @@ A Prefeitura~
 relacionadas à política da cidade são feitas.  Embora a palavra do Sultão
 seja lei, ele normalmente gasta seu tempo em negócios fora da cidade.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 ~
@@ -2923,7 +2933,7 @@ ocupados no canto preparando penas para os finos cabos que serão usados para
 fazer flechas.  Alguns artesãos elfos estão cuidadosamente inspecionando
 cada arco conforme são terminados.
 ~
-54 8 0 0 0 0
+54 d 0
 D1
 ~
 ~
@@ -2937,7 +2947,7 @@ fazendo o que eles fazem melhor.  Os martelos voam conforme esses talentosos
 artesãos transformam a rocha em blocos ornamentados, pilares, decorações e
 muitas outras coisas.
 ~
-54 8 0 0 0 0
+54 d 0
 D3
 ~
 ~
@@ -2949,7 +2959,7 @@ A Sala de Guarda~
 interior de pedra possui um ar espartano, só o necessário.  Umas poucas
 armas estão colocadas nas paredes em caso de serem necessárias.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 ~
@@ -2963,7 +2973,7 @@ regra de todas as terras do leste reside neste fino palácio, e ele não é nem
 um pouco pobre.  A grande entrada fica além do portão, e o Passeio do Sultão
 fica para leste.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 ~
 ~
@@ -2979,7 +2989,7 @@ A Torre Noroeste~
 maravilhosa!  Para oeste você vê as altas montanhas que dividem Nova Thalos
 de Midgaard.  O Rio Ishtar fui lentamente daquela direção.
 ~
-54 8 0 0 0 0
+54 d 0
 D5
 ~
 ~
@@ -2991,7 +3001,7 @@ A Sala da Guarda~
 sentados aqui, jogando cartas.  O Interior rochoso é limpo mas as paredes
 são rodeadas de armas e armaduras.   A única saída é a sul.
 ~
-54 8 0 0 0 0
+54 d 0
 D2
 ~
 ~
@@ -3006,10 +3016,11 @@ janta.  Criados correm com utensílios para preparar lebres frescas.   Uma
 pequena porta conduz ao corredor a norte e a entrada para o saguão de jantar é
 para oeste.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 porta~
+:n 2
 1 -1 5563
 D3
 ~
@@ -3022,7 +3033,7 @@ A Torre Nordeste~
 vê as amplas plantações e então o forte.  A sul daqui você vê a cidade e
 além o Grande Deserto Oriental.
 ~
-54 8 0 0 0 0
+54 d 0
 D5
 ~
 ~
@@ -3033,10 +3044,11 @@ Um Corredor~
    Você está no fim leste do corredor do sul.  Uma pequena entrada de
 criados dá acesso à cozinha e o corredor continua a oeste.
 ~
-54 8 0 0 0 0
+54 d 0
 D2
 ~
 porta pequena~
+:n 2
 1 -1 5561
 D3
 ~
@@ -3051,7 +3063,7 @@ as várias cores que essas pessoas transformarão as belas peles.  As pessoas
 estão transformando o couro e cortando nas formas que necessitam.
    Você nota uma pequena mensagem na parede.
 ~
-54 8 0 0 0 0
+54 d 0
 D1
 ~
 ~
@@ -3069,10 +3081,11 @@ Um Corredor~
    Você está no final leste do corredor norte.  A única saída é oeste exceto
 pela simples porta de madeira a norte.   Há uma placa dourada sobre a porta.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 porta~
+:n 2
 1 -1 5566
 D3
 ~
@@ -3092,10 +3105,11 @@ O Santuário de Alá~
 As paredes aqui são decoradas com lindos, azuleijos multi-coloridos.
 Há uma presença silenciosa no ar.  Você sente a presença do Todo-Poderoso.
 ~
-54 8 0 0 0 0
+54 d 0
 D2
 ~
 porta~
+:n 2
 1 -1 5565
 S
 #5567
@@ -3103,7 +3117,7 @@ Do Lado De Fora Do Portão Norte de Nova Thalos~
    Você está do lado de fora do portão de Nova Thalos.  A cidade fica a sul,
 e uma selva fica a norte.
 ~
-54 4 0 0 0 1
+54 c 1
 D0
 ~
 ~
@@ -3118,7 +3132,7 @@ Do Lado de Fora do Portão Leste de Nova Thalos~
    Você está do lado de fora dos muros protetores da cidade.  O maciço
 portão fica a oeste daqui, e o desconhecido te aguarda a leste.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 ~
 ~
@@ -3137,7 +3151,7 @@ Do Lado de Fora do Portão Oeste de Nova Thalos~
    Você está do lado de fora dos muros da cidade, o portão de ferro fica a
 leste.  A cidade fica nesta direção e a estrada para Midgaard fica a oeste.
 ~
-54 0 0 0 0 1
+54 0 1
 D1
 ~
 portão~
@@ -3153,7 +3167,7 @@ Do Lado de Fora do Muro~
 O chão parece bem pisado, e você não pode ver nenhuma saída aparente além da
 que há a norte.
 ~
-54 0 0 0 0 2
+54 0 2
 D0
 ~
 ~
@@ -3167,10 +3181,11 @@ ninguém ainda, os criados correm por todos os lados, arrumando a mesa e
 preenchendo-a com temperos.   A entrada da cozinha fica para leste, e duas
 grandes portas duplas conduzem ao corredor a norte.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 porta portas duplas~
+:n 2
 1 -1 5572
 D1
 ~
@@ -3182,7 +3197,7 @@ Um Corredor~
    Você está em um cruzamento de longos corredores.  Há duas largas portas
 duplas a sul.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 ~
@@ -3194,6 +3209,7 @@ D1
 D2
 ~
 porta portas duplas~
+:n 2
 1 -1 5571
 D3
 ~
@@ -3206,7 +3222,7 @@ Um Corredor~
 conduzem para todas as direções, exceto para oeste, o jardim do palácio pode
 ser ali.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 ~
@@ -3229,10 +3245,11 @@ Um Corredor~
    Você chegou a um cruzamento T dos corredores.  Os corredores de madeira
 continuam a leste, oeste e sul.  Há uma pesada porta de ferro a norte.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 porta ferro pesada~
+:n 2
 1 -1 5575
 D1
 ~
@@ -3254,14 +3271,16 @@ Essa sala parece realmente fora de lugar, comparada a todo o esplendor do
 resto do palácio.   Uma grande grade de aço conduz a escuridão, e uma porta de
 ferro leva de volta para o corredor.
 ~
-54 8 0 0 0 0
+54 d 0
 D2
 ~
 porta ferro~
+:n 2
 1 -1 5574
 D5
 ~
 grade aço~
+:n 2
 1 -1 5591
 S
 #5576
@@ -3272,20 +3291,21 @@ Uma grande cama com lençóis de cetim foi colocada no meio do quarto, contra
 a parede sul, abaixo de uma janela.  A única saída óbvia é de volta a norte,
 para o corredor.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 porta~
+:n 2
 1 -1 5577
-E
-espelho~
-Você vê a imagem de um lutador humanóide com estranhas armaduras e uma arma
-empunhada.
-~
 E
 janela~
 Olhando por essa janela você pode ver os campos que separam os muros do próprio
 palácio.
+~
+E
+espelho~
+Você vê a imagem de um lutador humanóide com estranhas armaduras e uma arma
+empunhada.
 ~
 S
 #5577
@@ -3294,7 +3314,7 @@ Um Corredor~
 Na parede norte está a foto de alguns nobres esquecidos que já governaram
 essas terras.
 ~
-54 8 0 0 0 0
+54 d 0
 D1
 ~
 ~
@@ -3302,6 +3322,7 @@ D1
 D2
 ~
 porta~
+:n 2
 1 -1 5576
 D3
 ~
@@ -3317,7 +3338,7 @@ felizes dias em casa.  Ao norte, através de várias árvores, você vê um
 delicado gazebo.   Um caminho conduz de volta ao corredor e a oeste está o
 gazebo.  A sua direita está uma placa dourada.
 ~
-54 0 0 0 0 2
+54 0 2
 D1
 ~
 ~
@@ -3355,10 +3376,11 @@ carpete vermelho que cobre a linha central está sempre abaixo de seus pés e
 um ocasional banco ou vaso de planta delineia as paredes.   Há uma porta para
 norte com uma placa nela.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 porta~
+:n 2
 1 -1 5580
 D1
 ~
@@ -3388,10 +3410,11 @@ estão colocados em locais estratégicos para que o observador possa ver uma
 escultura por inteiro logo a primeira vista.  Seus olhos, porém, são
 atraídos para uma pintura que domina a parede distante.
 ~
-54 8 0 0 0 0
+54 d 0
 D2
 ~
 porta~
+:n 2
 1 -1 5579
 E
 pintura~
@@ -3405,10 +3428,11 @@ Um Quarto de Hospedes~
 leste com um espelho e uma enorme cama com lençóis de cetim, contra a parede
 sul.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 porta~
+:n 2
 1 -1 5582
 S
 #5582
@@ -3416,7 +3440,7 @@ Um Corredor~
    Você alcançou o fim oeste do corredor sul.  A única saída fica a leste,
 exceto pelas portas nas paredes sul e oeste.
 ~
-54 8 0 0 0 0
+54 d 0
 D1
 ~
 ~
@@ -3424,10 +3448,12 @@ D1
 D2
 ~
 porta~
+:n 2
 1 -1 5581
 D3
 ~
 porta~
+:n 2
 2 5401 5587
 S
 #5583
@@ -3436,7 +3462,7 @@ O Jardim Gazebo~
 O canto dos pássaros, o perfume das flores, ahhh...  Paraíso.    Você acredita
 que nunca esteve em um lugar mais calmo..
 ~
-54 8 0 0 0 0
+54 d 0
 D1
 ~
 ~
@@ -3447,10 +3473,11 @@ Um Corredor~
    Esse é o final oeste do corredor norte.  Duas portas foram colocadas nas
 paredes aqui, uma a norte, outra a oeste.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 porta~
+:n 2
 1 -1 5585
 D1
 ~
@@ -3459,6 +3486,7 @@ D1
 D3
 ~
 porta~
+:n 2
 1 -1 5589
 S
 #5585
@@ -3467,10 +3495,11 @@ A Sala da Guarda~
 guardas vêm aqui para dormir, para que eles possam deixar o chão do palácio
 com permissão especial.    A única saída fica para sul.
 ~
-54 8 0 0 0 0
+54 d 0
 D2
 ~
 porta~
+:n 2
 1 -1 5584
 S
 #5586
@@ -3479,7 +3508,7 @@ A Sala da Guarda~
 comparado ao resto do palácio, você vê apenas camas aqui.  Nas paredes você
 vê fotos de cavaleiros conhecidos que honraram a Guarda do Sultão.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 ~
@@ -3493,14 +3522,16 @@ Na parece oeste está um grande amontoado de travesseiros e uma jovem donzela
 sentada sobre eles.   Infelizmente para você apenas o Sultão é permitido entrar
 aqui.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 porta secreta~
+:n 2 a porta secreta
 1 -1 5588
 D1
 ~
 porta~
+:n 2
 2 5401 5582
 D2
 ~
@@ -3512,14 +3543,16 @@ Uma Pequena Sala~
    Essa é uma câmara secreta permitindo o acesso direto do Sultão ao seu
 Harém, quando assim ele desejar.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 porta~
+:n 2
 1 -1 5589
 D2
 ~
 porta secreta~
+:n 2 a porta secreta
 1 -1 5587
 S
 #5589
@@ -3529,7 +3562,7 @@ atentos de seus lados, prontos para fazer o último sacrifício por seu amado
 líder.  O trono revestido de ouro com jóias espalhadas está aqui.  O Sultão
 não é um homem de ninharias.
 ~
-54 8 0 0 0 0
+54 d 0
 D0
 ~
 trono~
@@ -3537,10 +3570,12 @@ trono~
 D1
 ~
 porta~
+:n 2
 1 -1 5584
 D2
 ~
 porta~
+:n 2
 1 -1 5588
 S
 #5590
@@ -3549,10 +3584,11 @@ A Sala Do Tesouro~
 O Alarme soando lhe diz que você deve ter acionado algum tipo de sistema de
 alarme.
 ~
-54 8 0 0 0 0
+54 d 0
 D2
 ~
 porta~
+:n 2
 2 5400 5589
 S
 #5591
@@ -3562,14 +3598,16 @@ um quarto.  Há um pequeno banco com algumas revistas e candelabro queimando
 de um lado.  Uma porta foi posta entre as pedras na parede norte, e uma
 grade de aço conduz acima.
 ~
-54 9 0 0 0 0
+54 ad 0
 D1
 ~
 porta~
+:n 2
 1 -1 5592
 D4
 ~
 grade aço~
+:n 2
 1 -1 5575
 S
 #5592
@@ -3577,10 +3615,11 @@ Um Túnel no Calabouço~
    Você está em um túnel de rochas asperamente cortadas, com celas para
 norte e sul.   O túnel continua a leste.
 ~
-54 9 0 0 0 0
+54 ad 0
 D0
 ~
 cela~
+:n 2
 2 5493 5597
 D1
 ~
@@ -3589,6 +3628,7 @@ D1
 D2
 ~
 cela~
+:n 2
 2 5493 5601
 D3
 ~
@@ -3600,10 +3640,11 @@ Um Túnel no Calabouço~
    Você está em um túnel de rochas asperamente cortadas, com celas para
 norte e sul.   O túnel continua a leste e oeste.
 ~
-54 9 0 0 0 0
+54 ad 0
 D0
 ~
 cela~
+:n 2
 2 5493 5598
 D1
 ~
@@ -3612,6 +3653,7 @@ D1
 D2
 ~
 cela~
+:n 2
 2 5493 5602
 D3
 ~
@@ -3623,10 +3665,11 @@ Um Túnel no Calabouço~
    Você está em um túnel de rochas asperamente cortadas, com celas para
 norte e sul.   O túnel continua a leste e oeste.
 ~
-54 9 0 0 0 0
+54 ad 0
 D0
 ~
 cela~
+:n 2
 2 5493 5599
 D1
 ~
@@ -3635,6 +3678,7 @@ D1
 D2
 ~
 cela~
+:n 2
 2 5493 5603
 D3
 ~
@@ -3647,18 +3691,21 @@ Um Túnel no Calabouço~
 norte e sul.  O túnel continua a oeste e você nota uma pequena fenda na
 rocha a leste.
 ~
-54 9 0 0 0 0
+54 ad 0
 D0
 ~
 cela~
+:n 2
 2 5493 5600
 D1
 ~
 fenda~
+:n 2
 2 5400 5596
 D2
 ~
 cela~
+:n 2
 2 5493 5604
 D3
 ~
@@ -3673,90 +3720,99 @@ Sangue espirrado e tufos de cabelo cinza se amontoam em um canto.  Assim que
 você se vira para sair, você percebe dois olhos vermelhos perscrutando da
 escuridão.
 ~
-54 553 0 0 0 0
+54 adfj 0
 D3
 ~
 fenda~
+:n 2
 2 5400 5595
 S
 #5597
 A Cela~
    Você está em uma fria câmara restrita com apenas uma saída.
 ~
-54 553 0 0 0 0
+54 adfj 0
 D2
 ~
 cela~
+:n 2
 2 5493 5592
 S
 #5598
 A Cela~
    Você está em uma fria câmara restrita com apenas uma saída.
 ~
-54 553 0 0 0 0
+54 adfj 0
 D2
 ~
 cela~
+:n 2
 2 5493 5593
 S
 #5599
 A Cela~
    Você está em uma fria câmara restrita com apenas uma saída.
 ~
-54 553 0 0 0 0
+54 adfj 0
 D2
 ~
 cela~
+:n 2
 2 5493 5594
 S
 #5600
 A Cela~
    Você está em uma fria câmara restrita com apenas uma saída.
 ~
-54 553 0 0 0 0
+54 adfj 0
 D2
 ~
 cela~
+:n 2
 2 5493 5595
 S
 #5601
 A Cela~
    Você está em uma fria câmara restrita com apenas uma saída.
 ~
-54 553 0 0 0 0
+54 adfj 0
 D0
 ~
 cela~
+:n 2
 2 5493 5592
 S
 #5602
 A Cela~
    Você está em uma fria câmara restrita com apenas uma saída.
 ~
-54 553 0 0 0 0
+54 adfj 0
 D0
 ~
 cela~
+:n 2
 2 5493 5593
 S
 #5603
 A Cela~
    Você está em uma fria câmara restrita com apenas uma saída.
 ~
-54 553 0 0 0 0
+54 adfj 0
 D0
 ~
 cela~
+:n 2
 2 5493 5594
 S
 #5604
 A Cela~
    Você está em uma fria câmara restrita com apenas uma saída.
 ~
-54 553 0 0 0 0
+54 adfj 0
 D0
 ~
 cela~
+:n 2
 2 5493 5595
 S
 #5605
@@ -3765,7 +3821,7 @@ Um Corredor~
 No chão está um magro e estreito tapete roxo.  O Corredor conduz a oeste,
 dentro do Palácio e a leste para a Grande Entrada.
 ~
-54 8 0 0 0 0
+54 d 0
 D1
 ~
 ~
@@ -3779,7 +3835,7 @@ S
 Um Caminho Através das Montanhas~
    Um caminho estreito vira aqui, conduzindo a sul e oeste.
 ~
-54 0 0 0 0 5
+54 0 5
 D2
 ~
 ~
@@ -3794,7 +3850,7 @@ Um Caminho Através das Montanhas~
    A viagem se torna dura e lenta conforme você tem que escalar as enormes
 rochas espalhadas pelo caminho.
 ~
-54 0 0 0 0 5
+54 0 5
 D0
 ~
 ~
@@ -3810,7 +3866,7 @@ O Limite do Desfiladeiro~
 de cordas que dá acesso ao outro lado balança perigosamente com a força do
 vento.
 ~
-54 0 0 0 0 5
+54 0 5
 D1
 ~
 ~
@@ -3825,7 +3881,7 @@ Na Ponte de Cordas~
    A pequena ponte de cordas treme com o seu peso conforme você atravessa o
 desfiladeiro.
 ~
-54 0 0 0 0 2
+54 0 2
 D1
 ~
 ~
@@ -3841,7 +3897,7 @@ A Borda ao Redor do Vale~
 as montanhas orientais.  A borda continua a norte seguindo a forma do vale e
 um rastro íngreme continua a leste.
 ~
-54 0 0 0 0 5
+54 0 5
 D0
 Isso pode ser usado para adicionar algo como...  O vale que supostamente
 existe aqui.  =P
@@ -3859,7 +3915,7 @@ Um Caminho através das Montanhas~
 das montanhas a leste de Midgaard.  O andamento é extremamente áspero e você
 torne o pé constantemente nas pequenas pedras no chão.
 ~
-54 0 0 0 0 5
+54 0 5
 D1
 ~
 ~
@@ -3874,7 +3930,7 @@ No Limite Oriental das Montanhas~
    Você está no limite leste das montanhas orientais.  O alto cume fica a
 oeste e as colinas rolantes e planícies ficam para leste.
 ~
-54 0 0 0 0 5
+54 0 5
 D1
 ~
 ~
@@ -3893,7 +3949,7 @@ Nos Contrafortes~
    O Caminho se curva abaixo da face das montanhas, permitindo você subir ou
 descer a face desse massivo pedaço de pedra.
 ~
-54 0 0 0 0 5
+54 0 5
 D0
 ~
 ~
@@ -3910,7 +3966,7 @@ subir ou descer, conforme você desejar.  Você pode também seguir norte por
 uma estrada que fica praticamente escondida de qualquer um que olhe para a
 região estando em um lugar mais baixo.
 ~
-54 0 0 0 0 5
+54 0 5
 D0
 ~
 ~
@@ -3930,7 +3986,7 @@ Um Rastro Rochoso~
 através das árvores você consegue ver água.  O caminho que você está
 continua para norte e leste daqui.
 ~
-54 0 0 0 0 5
+54 0 5
 D0
 ~
 ~
@@ -3948,7 +4004,7 @@ S
 Numa Estrada~
    Essa longa estrada continua para leste e sul. Há um denso bosque a oeste.
 ~
-54 0 0 0 0 2
+54 0 2
 D1
 ~
 ~
@@ -3966,7 +4022,7 @@ S
 Numa Estrada~
    A bem cuidada estrada continua a leste e oeste daqui.
 ~
-54 0 0 0 0 2
+54 0 2
 D1
 ~
 ~
@@ -3983,7 +4039,7 @@ Thalos e a oeste para as Montanhas Orientais.  Para o norte você pode ver
 amplas planícies se estendendo além do que os seus olhos podem alcançar.  A
 sul daqui começa uma escura floresta verde.
 ~
-54 0 0 0 0 2
+54 0 2
 D1
 ~
 ~
@@ -4001,7 +4057,7 @@ vale rochoso, você pode ver porque a água jusante é tão escura.  As paredes
 rochosas o alcançam, bloqueando todas as saídas, exceto a norte, que leva à
 ribeira, e a sul onde o rio fui.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 Há um pequeno caminho conduzindo para a ribeira ao norte.
 ~
@@ -4018,7 +4074,7 @@ O Rio Ishtar~
    O calmo rio um pouco depois de trilhar o interior da montanha.  Embora
 ainda profundas as rochas, você pode ver languidos traços de verde a leste.
 ~
-54 0 0 0 0 7
+54 0 7
 D1
 ~
 ~
@@ -4032,7 +4088,7 @@ S
 O Rio Ishtar~
    O Rio flui a leste e oeste através das colinas.
 ~
-54 0 0 0 0 7
+54 0 7
 D1
 ~
 ~
@@ -4047,7 +4103,7 @@ O Rio Ishtar~
    O rio começa sua decida para fora das montanhas agora e continua a fluir
 a leste.
 ~
-54 0 0 0 0 7
+54 0 7
 D1
 ~
 ~
@@ -4062,10 +4118,11 @@ O Rio Ishtar~
    O rio flui abaixo dos da cidade para leste e se estende para as
 longínquas e altas montanhas cobertas de neve a oeste.
 ~
-54 0 0 0 0 7
+54 0 7
 D1
 ~
 grade~
+:n 2
 1 -1 5487
 D3
 ~
@@ -4080,7 +4137,7 @@ expansivo gramado.  Você pode apenas se limitar a estrada que parece viajar
 acompanhando o rio, mas a ribeira está íngreme demais para que você possa
 ver muito longe.
 ~
-54 0 0 0 0 7
+54 0 7
 D1
 ~
 ~
@@ -4095,7 +4152,7 @@ O Rio Ishtar~
    O Rio continua sua decida para as terras baixas, sempre fluindo
 gentilmente para sul.
 ~
-54 0 0 0 0 7
+54 0 7
 D1
 ~
 ~
@@ -4111,7 +4168,7 @@ O Rio Ishtar~
 entretanto você não vê nada próximo ao rio.  Talvez os declives íngremes os
 previnam de usar o rio.
 ~
-54 0 0 0 0 7
+54 0 7
 D1
 ~
 ~
@@ -4128,7 +4185,7 @@ cordas foi convenientemente colocada aqui permitindo que você chegue ao
 outro lado da ponte.  Infelizmente o vento parece estar ligeiramente
 chutando a ponte.  O caminho conduz através das montanhas a leste.
 ~
-54 0 0 0 0 5
+54 0 5
 D1
 ~
 ~
@@ -4144,7 +4201,7 @@ Um Caminho Através das Montanhas~
 oeste.  Você ouve o grasnar de um grande pássaro sobre sua cabeça,
 provavelmente um urubu esperando que você caia.
 ~
-54 0 0 0 0 5
+54 0 5
 D1
 ~
 ~
@@ -4163,7 +4220,7 @@ Um Caminho Através das Montanhas~
    Um enorme pedregulho de repente decide que quer ocupar o mesmo espaço que
 você.
 ~
-54 0 0 0 0 5
+54 0 5
 D1
 ~
 ~
@@ -4177,7 +4234,7 @@ S
 Em uma Estrada~
    A Estrada que você está continua a leste e oeste.
 ~
-54 0 0 0 0 4
+54 0 4
 D1
 ~
 ~
@@ -4191,7 +4248,7 @@ S
 Em uma Estrada~
    A Estrada que você está continua a leste e oeste.
 ~
-54 0 0 0 0 2
+54 0 2
 D1
 ~
 ~
@@ -4205,7 +4262,7 @@ S
 Em uma Estrada~
    A Estrada que você está continua a leste e oeste.
 ~
-54 0 0 0 0 2
+54 0 2
 D1
 ~
 ~
@@ -4220,7 +4277,7 @@ Em uma Estrada~
    A Estrada se dobra aqui para a ribeira do rio, dando acesso ao Rio
 Ishtar.  A Estrada continua a norte e oeste da ribeira do rio.
 ~
-54 0 0 0 0 2
+54 0 2
 D0
 ~
 ~
@@ -4239,7 +4296,7 @@ O Rio das Almas Perdidas~
    O rio flui a sul através do vale nas montanhas.  Você pode ver uma
 pequena vila a oeste.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -4254,7 +4311,7 @@ O Rio das Almas Perdidas~
    O rio flui a sul no final sul deste amplo vale.  Os muros do vale ficam a
 sul.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -4270,7 +4327,7 @@ O Rio das Almas Perdidas~
 montanha.  No alto, sobre você uma pequena ponte de cordas balança com o
 vento.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -4285,7 +4342,7 @@ O Rio das Almas Perdidas~
    O Rio rapidamente flui em sua fenda do lado da montanha para o sul.
 Certamente você irá ouvir qualquer aproximação de correnteza.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -4301,7 +4358,7 @@ O Rio das Almas Perdidas~
 estrangulamento das águas.  O rio continua a norte através de uma fenda e
 flui para o sul.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -4319,7 +4376,7 @@ leste.  Para oeste você nota que as rochas se dividem e se partem, como se
 fossem rasgadas por alguma força massiva.  Parece impossível atravessar.  O
 Rio das Almas Perdidas também continua a norte.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -4337,7 +4394,7 @@ S
 O Rio Das Almas Perdidas~
    O rio continua a norte e sul daqui através de um vale desagastado pela água.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -4351,7 +4408,7 @@ S
 O Rio Das Almas Perdidas~
    O rio continua a norte e sul daqui através de um vale desagastado pela água.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -4365,7 +4422,7 @@ S
 O Rio das Almas Perdidas~
    O rio continua a norte e sul daqui através de um vale desagastado pela água.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -4381,7 +4438,7 @@ O Rio das Almas Perdidas~
 a norte através do vale.  Na borda próxima a você, e a oeste, você pode ver
 movimentos.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -4396,7 +4453,7 @@ O Rio Ishtar~
    O rio alarga-se aqui, não a muito tempo saltado da rocha, e flui a leste
 para uma planície.
 ~
-54 0 0 0 0 7
+54 0 7
 D1
 ~
 ~
@@ -4411,7 +4468,7 @@ O Rio Ishtar~
    O rio continua aqui a leste e oeste.  Há uma área de atracagem a norte,
 onde você ganha acesso à costa.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -4430,7 +4487,7 @@ O Rio Ishtar~
    O rio vaga através dos contrafortes das montanhas orientais.  O ar é mais
 seco desse lado continental e parece um pouco mais tépido.
 ~
-54 0 0 0 0 7
+54 0 7
 D1
 ~
 ~
@@ -4446,7 +4503,7 @@ O Rio Ishtar~
 Para oeste você vê os grandes cumes cobertos de neve das montanhas e a leste
 você vê o contorno de uma grande cidade.
 ~
-54 0 0 0 0 7
+54 0 7
 D1
 ~
 ~
@@ -4460,7 +4517,7 @@ S
 O Rio Ishtar~
    O rio flui a leste e oeste daqui.
 ~
-54 0 0 0 0 7
+54 0 7
 D1
 ~
 ~
@@ -4475,7 +4532,7 @@ O Rio Ishtar~
    O rio se acalma conforme se alarga e vaga através das terras baixas.  Uma
 pequena doca da acesso à costa norte.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -4499,7 +4556,7 @@ as cores se refletem em espelhos e molduras de quadros.  Você fica
 maravilhado com as belas vozes que conversam animadamente aqui enquanto
 hábeis mãos fazem poesia com as notas musicais.
 ~
-54 72 0 0 0 0
+54 dg 0
 D0
 ~
 ~
@@ -4514,7 +4571,7 @@ Nas Montanhas~
    Você está caminhando sobre rochas e pedras através da montanha entre os rios
 Ishtar e Negro.   É engraçado como todas essas pedras se parecem.
 ~
-54 0 0 0 0 5
+54 0 5
 D0
 ~
 ~
@@ -4537,7 +4594,7 @@ Nas Montanhas~
    Você está caminhando sobre rochas e pedras através da montanha entre os rios
 Ishtar e Negro.   É engraçado como todas essas pedras se parecem.
 ~
-54 0 0 0 0 5
+54 0 5
 D0
 ~
 ~
@@ -4560,7 +4617,7 @@ Nas Montanhas~
    Você está caminhando sobre rochas e pedras através da montanha entre os rios
 Ishtar e Negro.   É engraçado como todas essas pedras se parecem.
 ~
-54 0 0 0 0 5
+54 0 5
 D0
 ~
 ~
@@ -4584,7 +4641,7 @@ Nas Montanhas~
    Você está caminhando sobre rochas e pedras através da montanha entre os rios
 Ishtar e Negro.   É engraçado como todas essas pedras se parecem.
 ~
-54 0 0 0 0 5
+54 0 5
 D0
 ~
 ~
@@ -4607,7 +4664,7 @@ Nas Montanhas~
    Você está caminhando sobre rochas e pedras através da montanha entre os rios
 Ishtar e Negro.   É engraçado como todas essas pedras se parecem.
 ~
-54 0 0 0 0 5
+54 0 5
 D0
 ~
 ~
@@ -4630,7 +4687,7 @@ Nas Montanhas~
    Você está caminhando sobre rochas e pedras através da montanha entre os rios
 Ishtar e Negro.   É engraçado como todas essas pedras se parecem.
 ~
-54 0 0 0 0 0
+54 0 0
 D0
 ~
 ~
@@ -4653,7 +4710,7 @@ Nas Montanhas~
    Você está caminhando sobre rochas e pedras através da montanha entre os
 rios Ishtar e Negro.  É engraçado como todas essas pedras se parecem.
 ~
-54 0 0 0 0 5
+54 0 5
 D0
 ~
 ~
@@ -4676,7 +4733,7 @@ Nas Montanhas~
    Você está caminhando sobre rochas e pedras através da montanha entre os
 rios Ishtar e Negro.  É engraçado como todas essas pedras se parecem.
 ~
-54 0 0 0 0 5
+54 0 5
 D0
 ~
 ~
@@ -4699,7 +4756,7 @@ Nas Montanhas~
    Você está caminhando sobre rochas e pedras através da montanha entre os
 rios Ishtar e Negro.  É engraçado como todas essas pedras se parecem.
 ~
-54 0 0 0 0 5
+54 0 5
 D0
 ~
 ~
@@ -4728,7 +4785,7 @@ Parece que houve um terrível terremoto aqui, há não muito tempo atrás, e o
 caminho que leva a leste através das montanhas é coberto de pedras,
 dificultando a passagem.
 ~
-54 1 0 0 0 7
+54 a 7
 D1
 ~
 ~
@@ -4743,7 +4800,7 @@ No Rio Negro~
    O rui flui montanha abaixo através de uma cratera ao oeste e segue pelas
 montanhas ao leste.
 ~
-54 1 0 0 0 7
+54 a 7
 D1
 ~
 ~
@@ -4758,7 +4815,7 @@ No Rio Negro~
    As paredes deste vale se sobressaem enquanto o rio segue ao leste e a
 oeste daqui.
 ~
-54 1 0 0 0 7
+54 a 7
 D1
 ~
 ~
@@ -4773,7 +4830,7 @@ No Rio Negro~
    As paredes rochosas a seu redor vão ficando mais baixas enquanto o rio
 flui para foras das montanhas em direção às planícies.
 ~
-54 1 0 0 0 7
+54 a 7
 D1
 ~
 ~
@@ -4787,7 +4844,7 @@ S
 No Rio Negro~
    O rio continua a leste e oeste daqui, abaixo das montanhas ao sul.
 ~
-54 1 0 0 0 7
+54 a 7
 D1
 ~
 ~
@@ -4802,7 +4859,7 @@ No Rio Negro~
    O rio, seguindo um lento caminho em sua margem de fendas e torções.
 Altas montanhas podem ser vistas ao sul e ao leste.
 ~
-54 1 0 0 0 7
+54 a 7
 D0
 ~
 ~
@@ -4816,7 +4873,7 @@ S
 No Rio Negro~
    O rio faz uma extensa volta aqui em volta da montanha.
 ~
-54 1 0 0 0 7
+54 a 7
 D0
 ~
 ~
@@ -4831,7 +4888,7 @@ No Rio Negro~
    O rio flui ao oeste daqui em direção ao coração da montanha e a leste
 através das rochas mais uma vez.
 ~
-54 9 0 0 0 7
+54 ad 7
 D1
 ~
 ~
@@ -4846,7 +4903,7 @@ No Rio Negro~
    Você mal pode compreender o que há em frente de você enquanto o rui flui
 silenciosamente através desta passagem.
 ~
-54 9 0 0 0 7
+54 ad 7
 D1
 ~
 ~
@@ -4862,7 +4919,7 @@ No Rio Negro~
 pequenas fendas nas paredes da passagem ao norte, onde você deverá ser capaz
 de sair da água.
 ~
-54 9 0 0 0 7
+54 ad 7
 D0
 ~
 ~
@@ -4885,7 +4942,7 @@ No Rio Negro~
    O rio continua a leste e oeste daqui, fluindo ao sul para uma escura
 borda do rio.
 ~
-54 9 0 0 0 7
+54 ad 7
 D1
 ~
 ~
@@ -4900,7 +4957,7 @@ No Rio Negro~
    O rio segue ao sul através de uma estreita parte de uma passagem que
 segue pelas entranhas da montanha.
 ~
-54 9 0 0 0 7
+54 ad 7
 D1
 ~
 ~
@@ -4917,7 +4974,7 @@ das montanhas.  Infelizmente, a borda é grande o suficiente para apenas você
 descansar um pouco e não parece haver nenhuma saída a não ser de volta para
 o rio.
 ~
-54 9 0 0 0 2
+54 ad 2
 D2
 ~
 ~
@@ -4930,7 +4987,7 @@ subterrânea.  As paredes de pedra são recobertas por runas, indicando que o
 lugar inteiro está protegido por forte magia.  Grandes tochas iluminam as
 câmaras mais profundas.  Ao norte você volta para as ruas de Nova Thalos.
 ~
-54 152 0 0 0 0
+54 deh 0
 D0
 ~
 ~
@@ -4948,7 +5005,7 @@ Você percebe veios de pedras preciosas na rocha das paredes, mas acha melhor
 não olhar demais (cuidado com a ganância!)...  A caverna continua para o
 leste, e você vê a saida da caverna para o norte.
 ~
-54 24 0 0 0 1
+54 de 1
 D1
 ~
 ~
@@ -4965,7 +5022,7 @@ mobília foi entalhada em uma espécie de cristal, sendo muito bonito o efeito
 que a luz das tochas produz quando incide sobre algumas das peças.  A leste
 você percebe um aposento mergulhado no mais profundo breu.
 ~
-54 24 0 0 0 1
+54 de 1
 D1
 ~
 ~
@@ -4974,6 +5031,7 @@ D2
 Você vê pequenos arranhados na parede sul.
 ~
 porta secreta~
+:n 2 a porta secreta
 1 -1 5490
 D3
 ~
@@ -4988,7 +5046,7 @@ grande círculo, tendo como centro um altar feito de rocha azulada.  Sobre um
 pedestal de ouro, junto ao altar, duas grandes esferas de fogo violeta
 iluminam o Círculo com seu estranho brilho.
 ~
-54 152 0 0 0 1
+54 deh 1
 D3
 ~
 ~
@@ -5004,7 +5062,7 @@ mesas, no cheiro doce de flores misturado com a comida e bebida lá debaixo.
 E você, só de entrar no recinto, começou a deixar sua própria música no ar,
 numa suave melodia que conta a sua vida.
 ~
-54 72 0 0 0 0
+54 dg 0
 D5
 ~
 ~
@@ -5016,7 +5074,7 @@ Nas Planícies~
 Norte de Nova Thalos.  A leste e oeste os campos gramíneos seguem-se e ao
 norte, há alguma distância você vê algumas árvores.
 ~
-54 0 0 0 0 2
+54 0 2
 D0
 ~
 ~
@@ -5040,7 +5098,7 @@ Nas Planícies~
 ainda sim é um pouco longe.  Ao sul um pequeno caminho sujo foi aberto,
 levando a Nova Thalos.
 ~
-54 0 0 0 0 2
+54 0 2
 D0
 ~
 ~
@@ -5064,12 +5122,7 @@ O Limite da Floresta~
 onde seus olhos alcançam ao leste e oeste.  Um grande campo gramíneo pode
 ser visto ao sul.
 ~
-54 0 0 0 0 2
-D0
-A floresta ali é muito estranha...
-~
-~
-0 -1 14000
+54 0 2
 D1
 ~
 ~
@@ -5082,6 +5135,11 @@ D3
 ~
 ~
 0 -1 5683
+D0
+A floresta ali é muito estranha...
+~
+~
+0 -1 14000
 S
 #5684
 O Rio Ishtar~
@@ -5090,7 +5148,7 @@ cheiro de água salgada chega do leste.  O Mar do Dragão não deve estar
 longe.  Ao leste você pode ver o esboço lânguidos de uma cidade e ao norte
 você vê um grande campo gramíneo.
 ~
-54 0 0 0 0 7
+54 0 7
 D1
 ~
 ~
@@ -5108,7 +5166,7 @@ oeste, tudo o que você pode ver é água em todo o horizonte.  Ao norte há uma
 pequena doca e você pensa que consegue chegar lá sem muito esforço.  O rio
 segue ao oeste, em direção de Nova Thalos.
 ~
-54 0 0 0 0 7
+54 0 7
 D1
 ~
 ~
@@ -5124,7 +5182,7 @@ O Mar do Dragão~
 todas as direções até onde seu olho alcança.  Ao longe você pode ver uma
 pequena doca ao norte.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -5144,14 +5202,14 @@ D3
 D6
 ~
 ~
-1 -1 12600
+a -1 12600
 S
 #5687
 O Mar do Dragão~
    O Mar do Dragão segue para cima da costa aqui.  As profundas águas azuis
 avançam para cima da praia.  Ao norte você vê uma pequena doca.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -5171,7 +5229,7 @@ O Mar do Dragão~
 em todas as direções até onde seu olho alcança.  Você pode ver uma pequena
 doca ao oeste.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -5191,7 +5249,7 @@ O Mar do Dragão~
 em todas as direções até onde seu olho alcança.  Você pode ver uma pequena
 doca ao oeste.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -5221,7 +5279,7 @@ Embora os impostos de Nova Thalos sejam mais altos do que nas outras
 cidades, a verdade é que a maioria do dinheiro é usado para o bem dos
 habitantes.
 ~
-54 0 0 0 0 2
+54 0 2
 D1
 ~
 ~
@@ -5238,7 +5296,7 @@ norte altos pinheiros formam uma parede que segue por milhas.  Entre a
 estrada e as árvores há um belo campo gramíneo.  Ao sul daqui, atrás do rio,
 fica o Grande Deserto Oriental.  A estrada continua a leste e oeste.
 ~
-54 0 0 0 0 2
+54 0 2
 D1
 ~
 ~
@@ -5254,7 +5312,7 @@ Em uma Estrada~
 desconhecidas.  A estrada continua ao leste e oeste.  Ao sul você ouve os
 sons de barcos navegando pelo Rio Isthar entregando mercadorias.
 ~
-54 0 0 0 0 2
+54 0 2
 D1
 ~
 ~
@@ -5270,7 +5328,7 @@ Em uma Estrada~
 através das balsas e dos barcos de exportação.  Indo a pé pelo leste, você
 irá para Nova Thalos e para baixo para Midgaard.
 ~
-54 0 0 0 0 2
+54 0 2
 D1
 ~
 ~
@@ -5286,11 +5344,7 @@ Perto da Costa~
 a praia e para a doca.  Ao norte e sul, você vê a costa.  Ao oeste as terras
 mais baixas seguem para as montanhas cobertas de neve.
 ~
-54 0 0 0 0 2
-D0
-~
-~
-0 -1 4289
+54 0 2
 D1
 ~
 ~
@@ -5299,6 +5353,10 @@ D3
 ~
 ~
 0 -1 5693
+D0
+~
+~
+0 -1 4289
 S
 #5695
 Em uma Doca~
@@ -5306,7 +5364,7 @@ Em uma Doca~
 A doca parece que foi construída há muito tempo.  Uma pequena escada foi
 construída ao leste para dar fácil acesso aos navios.
 ~
-54 0 0 0 0 1
+54 0 1
 D0
 ~
 ~
@@ -5330,7 +5388,7 @@ O Mar do Dragão~
 em todas as direções até onde seu olho alcança.  Você pode ver uma pequena
 doca ao oeste.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -5349,7 +5407,7 @@ O Mar do Dragão~
    O oceano segue suavemente em todas as direções.  Você vê uma ilha, a uma
 certa distância, no horizonte.  Ao oeste você vê o continente.
 ~
-54 0 0 0 0 7
+54 0 7
 D0
 ~
 ~
@@ -5374,7 +5432,7 @@ madeira servindo de base para a estrutura.  As escuras águas turvam sua
 visão quando você olha ao oeste, mas você acha que pode haver um portão de
 ferro nesta direção.
 ~
-54 1 0 0 0 7
+54 1 7
 D3
 ~
 portão ferro~
@@ -5394,10 +5452,10 @@ A Toca de Ixitxachitl~
    Sangue escorre pela água enquanto o Ixitaxachitl devora sua última presa.
 Feixes de luz tomam a sala e seguem em sua direção!
 ~
-54 1 0 0 0 7
+54 1 7
 D1
 ~
 portão ferro~
 1 -1 5698
 S
-$~
+$

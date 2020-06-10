@@ -5,7 +5,8 @@ que esse lugar existe há milhões de anos.  Nos muros é possível notar que
 há inscrições e desenhos muito antigos e incompreensíveis.  Ao norte, você
 vê uma trilha e ao sul há um caminho para uma cabana.
 ~
-94 68 0 0 0 2
+94 cg 2
+ON z94
 D0
 Ao norte você vê uma trilha aparentemente muito antiga.
 ~
@@ -29,7 +30,7 @@ trilha, mais seus olhos ficam perturbados.  Um sentimento que você nunca
 teve enche seu coração.  Ao sul você vai para o início da trilha e ao
 norte você adentra ainda mais.
 ~
-94 68 0 0 0 2
+94 cg 2
 D0
 Ao norte você adentra pela trilha.
 ~
@@ -49,7 +50,7 @@ sensações diferentes e seu coração pulsa cada vez mais forte.  Ao norte,
 você vê o fim da trilha e ao sul ela se torna um tanto extensa.  Há uma
 outra trilha começando ao oeste.
 ~
-94 68 0 0 0 2
+94 cg 2
 D0
 Ao norte você vê que a trilha aparentemente está terminando.
 ~
@@ -73,7 +74,7 @@ campestres e ao leste outro grande portal, porém coberto por nuvens escuras
 o qual enche seu coração com um sentimento sombrio e gélido.  Ao sul está
 a extensa trilha.
 ~
-94 68 0 0 0 2
+94 cg 2
 D0
 ~
 ~
@@ -102,7 +103,7 @@ sente uma paz ao seu redor.  Ao lado desse portal há uma grande pedra com
 inscrições muito antigas e que parecem ser muito importantes.  A oeste
 você vê o grande santuário e a leste o final de uma trilha.
 ~
-94 68 0 0 0 2
+94 cg 2
 D1
 A leste tem o final de uma trilha.
 ~
@@ -114,10 +115,6 @@ Ao oeste um grande santuário dos Deuses de Vitalia.
 ~
 0 -1 9406
 E
-pedra~
-Essas pedras são enormes e as incrições nelas parecem ser muito antigas.
-~
-E
 inscrição inscrições~
    Aqui é o Santuário Sagrado, onde as almas do antigos anciões e
 protetores desse mundo descansam numa paz celestial. Os que aqui são
@@ -125,6 +122,10 @@ lembrados, venceram derradeiras batalhas contra o mal.  E durante
 muitas dessas batalhas, tiveram apenas como arma o AMOR, a HONRA e
 acima de tudo a HONESTIDADE.  No centro da sala você vê uma maravilhosa
 fonte de água pura e cristalina.
+~
+E
+pedra~
+Essas pedras são enormes e as incrições nelas parecem ser muito antigas.
 ~
 S
 #9406
@@ -134,7 +135,7 @@ estátuas dos Deuses Criadores. No fundo do corredor você tem sua vista
 ofuscada pela grande beleza das estátuas dos Deuses Supremos.  E a leste
 você pode ver o grande portal.
 ~
-94 655484 0 0 0 0
+94 cdefgrt 0
 D0
 Você vê as estátuas dos grandes Deuses Criadores.
 ~
@@ -163,7 +164,7 @@ totalmente em ouro e marfim. É incompreensível como tanta beleza pode
 ficar intacta milenios após sua construção.  A leste fica o centro da
 sala.
 ~
-94 655484 0 0 0 0
+94 cdefgrt 0
 D1
 Ao leste você vê o centro desse magnífico santuário.
 ~
@@ -177,7 +178,7 @@ totalmente em ouro e marfim. É incompreensível como tanta beleza pode
 ficar intacta milênios após sua construção.  Ao norte você pode ver
 o centro da sala.
 ~
-94 655484 0 0 0 0
+94 cdefgrt 0
 D0
 Ao norte você vê o centro desse magnífico santuário.
 ~
@@ -191,7 +192,7 @@ totalmente em ouro e marfim. É incompreensível como tanta beleza pode
 ficar intacta milenios após sua construção.  Ao sul você pode ver o
 centro da sala.
 ~
-94 655484 0 0 0 0
+94 cdefgrt 0
 D2
 Ao sul você vê o centro desse magnífico santuário.
 ~
@@ -206,7 +207,7 @@ tristeza e melancolia invade seu coração. Ao lado desse portal há uma
 grande pedra com inscrições muito antigas e que parecem ser muito 
 importantes.  A leste você uma grande sala e oeste o final de uma trilha.
 ~
-94 68 0 0 0 2
+94 cg 2
 D1
 Uma grande sala que faz você sentir calafrios.
 ~
@@ -218,10 +219,6 @@ A oeste tem o final de uma trilha.
 ~
 0 -1 9404
 E
-pedra~
-Essas pedras são enormes e as incrições nelas parecem ser muito antigas.
-~
-E
 inscrição inscrições~
    Durantes muitas vezes, houve batalhas entre os Deuses de Vitalia e fortes
 oponentes.  Os fortes, mesmo sendo inimigos sempre foram e sempre serão
@@ -230,6 +227,10 @@ confinados, nada mais merecem do que o desprezo e o repudio de quem sempre
 tentou mante-los no caminho da honra.  Movidos pelo sentimento de ganâcia,
 desrespeito e traição, hoje apenas servem de exemplos de DESONESTIDADE e
 VERGONHA.
+~
+E
+pedra~
+Essas pedras são enormes e as incrições nelas parecem ser muito antigas.
 ~
 S
 #9411
@@ -240,7 +241,7 @@ Você percebe que dentro dos blocos de gelos há algumas coisas estranhas.  A
 oeste você ve um grande portal e a leste um corredor.  No centro da sala 
 há uma fonte jorrando um líquido estranho, de cor avermelhada.
 ~
-94 1179772 0 0 0 0
+94 cdefgru 0
 D0
 Uma visão horrível, grandes blocos de gelo com aspecto assustador.
 ~
@@ -269,7 +270,7 @@ corpos apodrecidos mas que ainda parecem estar vivos em algum lugar, onde
 o sofrimento é única coisa que possuem como companhia.  Ao norte, você vê
 o centro da sala.
 ~
-94 1179772 0 0 0 0
+94 cdefgru 0
 D0
 O centro dessa sala sombria.
 ~
@@ -283,7 +284,7 @@ corpos apodrecidos mas que ainda parecem estar vivos em algum lugar, onde
 o sofrimento é única coisa que possuem como companhia.  Ao sul você vê
 o centro da sala.
 ~
-94 1179772 0 0 0 0
+94 cdefgru 0
 D2
 O centro dessa sala sombria.
 ~
@@ -297,7 +298,7 @@ sombrio, só de olhar você já sente arrepios.  Morcegos dormem dependurados
 no teto.   Sua curiosidade manda você seguir em frente, a oeste você vê uma
 grande sala.
 ~
-94 131180 0 0 0 0
+94 cdfgr 0
 D1
 Um grande corredor.
 ~
@@ -316,7 +317,7 @@ fraca.  Um vento frio quase apaga as tochas penduradas nas paredes feitas de
 pedra, que parecem ter séculos.  A oeste você vê o início do corredor e ao
 sul você vê muito pouco por causa da falta de iluminação.
 ~
-94 131180 0 0 0 0
+94 cdfgr 0
 D2
 Você imagina ser um corredor.
 ~
@@ -334,7 +335,7 @@ Corredor Sombrio~
 Cuidado!!   Com certeza ele estava mais com medo de você do que você dele.
 O longo corredor continua a norte e a leste.
 ~
-94 131180 0 0 0 0
+94 cdfgr 0
 D0
 Um grande corredor.
 ~
@@ -353,7 +354,7 @@ você estivesse sem sua luz.   Esta parte do corredor está totalmente escura,
 parece que alguém apagou a tocha de propósito.  Você com muita dificuldade
 vê que o corredor continua a oeste e ao sul.
 ~
-94 131181 0 0 0 0
+94 acdfgr 0
 D2
 Você imagina ser um grande corredor.
 ~
@@ -373,7 +374,7 @@ do caminho.  Queiram os Deuses que você tenha mais sorte que esse pobre
 aventureiro...  Você pode ver o fim do corredor a leste e ao norte parece
 que ele se alonga cada vez mais.
 ~
-94 131181 0 0 0 0
+94 acdfgr 0
 D0
 Parece ser um longo corredor.
 ~
@@ -392,17 +393,17 @@ velha e apodrecida leva até o subterrâneo.  Será que seria uma boa idéia
 descer ?  Não é possivel ver muita coisa daqui de cima.  A oeste tem um
 grande corredor.
 ~
-94 131181 0 0 0 0
-D3
-Um grande corredor.
-~
-~
-0 -1 9418
+94 acdfgr 0
 D5
 Um alçapão muito estreito.
 ~
 ~
 0 -1 9420
+D3
+Um grande corredor.
+~
+~
+0 -1 9418
 S
 #9420
 A Escada~
@@ -410,7 +411,7 @@ A Escada~
 é quase impossivel de se ver.  Esse alçapão é estreito e muito sujo, parece
 que não passa alguem aqui há anos.
 ~
-94 131437 0 0 0 0
+94 acdfgir 0
 D4
 Você não consegue ver nada.
 ~
@@ -428,7 +429,7 @@ A Escada~
 resistente também.  Você escuta gritos vindos lá de baixo.  Para cima a luz
 é tão fraca que você não pode ver quase nada.
 ~
-94 131437 0 0 0 0
+94 acdfgir 0
 D4
 Você não consegue ver nada.
 ~
@@ -449,11 +450,12 @@ com uma pequena janela em seu centro e para cima uma longa escada.
 E mais curioso ainda é a &RPLACA&n muito importante que está fixada na
 parede.
 ~
-94 131436 0 0 0 0
+94 cdfgir 0
 D3
 A oeste você uma porta de ferro muito resistente.
 ~
 porta~
+:n 2 a porta de ferro
 1 2 600
 D4
 Uma longa escada.
@@ -468,4 +470,4 @@ longa do que você possa imaginar.  Quando adentrar esse recinto tenha em
 mente somente uma coisa... o &RPOLICY&n !!!
 ~
 S
-$~
+$

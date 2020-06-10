@@ -9,8 +9,8 @@ cuidadosamente todas as informações dos painéis, livros e avisos, que
 estarão espalhados nas próximas salas, adiante.  Agora boa jornada!  Digite
 &WW&n e siga para &WOESTE&n (w) e que bons ventos guiem seus passos!
 ~
-181 96 0 0 0 0
-D0
+181 gfj 0
+D W
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -26,8 +26,8 @@ fazê-lo, digite &WGET MAPA&n.  Na parede, um enorme &Wpainel&n brilha, chamando 
 atenção.  Seja curioso, digite &WREAD PAINEL&n e descubra o que nele está
 escrito.  Para continuar sua jornada, digite &WU&n e torne-se mais sábio ainda.
 ~
-181 96 0 0 0 0
-D0
+181 gfj 0
+D U
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -58,8 +58,13 @@ Alcançando a Sabedoria~
 atravessa este jardim e segue em direção ao Norte.  Há um clima de paz
 reinando neste ambiente.
 ~
-181 96 0 0 0 0
-D0
+181 gfj 0
+D D
+Você vê um lindo jardim.
+~
+~
+0 -1 18102
+D U
 Você vê um lugar repleto de espelhos.
 ~
 ~
@@ -84,8 +89,24 @@ Casa dos Espelhos~
 cobrem todas as paredes, transmitindo a você uma sensação de infinito.  Há
 quatro portas neste lugar.  Que tal se você descobrisse aonde elas vão dar?
 ~
-181 96 0 0 0 0
-D0
+181 gfj 0
+D N
+~
+~
+0 -1 18105
+D E
+~
+~
+0 -1 18106
+D S
+~
+~
+0 -1 18107
+D W
+~
+~
+0 -1 18118
+D D
 ~
 ~
 0 -1 18108
@@ -109,8 +130,8 @@ Você entra numa sala maravilhosamente iluminada.  Espelhos de cristal cobrem
 todas as paredes, transmitindo a você uma sensação de infinito.  Há quatro
 portas neste lugar.  Que tal se você descobrisse aonde elas vão dar?
 ~
-181 608 0 0 0 0
-D0
+181 gjf 0
+D S
 ~
 ~
 0 -1 18104
@@ -134,8 +155,8 @@ Casa dos Espelhos~
 cobrem todas as paredes, transmitindo a você uma sensação de infinito.  Há
 quatro portas neste lugar.  Que tal se você descobrisse aonde elas vão dar?
 ~
-181 608 0 0 0 0
-D0
+181 gfj 0
+D W
 ~
 ~
 0 -1 18104
@@ -162,8 +183,8 @@ luminosidade.  Você se sente atraído por esta luz.  Que tal se você voltasse
 para o norte e depois seguisse para baixo, para descobrir de onde vem esta
 luz?
 ~
-181 608 0 0 0 0
-D0
+181 gfj 0
+D N
 ~
 ~
 0 -1 18104
@@ -189,8 +210,8 @@ reinando neste ambiente.  Você percebe que seu estômago começou a roncar e
 pensa que um belo naco de carne seria maravilhoso.  Continue a sua
 caminhada, quem sabe você não encontra algo que possa saciar a sua fome.
 ~
-181 608 0 0 0 0
-D0
+181 gfj 0
+D D
 Você vê um lindo jardim.
 ~
 ~
@@ -219,8 +240,8 @@ suas mãos.  E quando a fome bater, basta digitar &WEAT PÃO&n.  É bem saboroso,
 não acha?  Notou que um imenso &Wpainel&n foi colocado na parede?  Que tal
 lê-lo?  Para seguir com a sua jornada, digite W.
 ~
-181 608 0 0 0 0
-D0
+181 gfj 0
+D W
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -251,8 +272,8 @@ objeto foi esquecido aqui.  Que tal pegá-lo e enchê-lo?  Assim você não
 corre o risco de passar sede no futuro.  Para obtê-lo digite &WGET PORUNGA&n e
 leia o &Waviso&n que algum viajante mais experiente parece ter escrito.
 ~
-181 608 0 0 0 0
-D0
+181 gfj 0
+D W
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -277,8 +298,8 @@ parede.  Talvez seja bom você ler o que está escrito.  E quem sabe não seja
 interessante pegar uma destas armas e aprender a usá-la corretamente.
 Afinal, nunca se sabe o dia de amanhã...
 ~
-181 608 0 0 0 0
-D0
+181 gfj 0
+D W
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -310,8 +331,8 @@ feitas na parede.  Talvez seja bom você ler o que está escrito.  E quem sabe
 não seja interessante pegar uma destas armaduras e vesti-la da forma
 correta.  Afinal, nunca se sabe o dia de amanhã...
 ~
-181 608 0 0 0 0
-D0
+181 gfj 0
+D W
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -340,8 +361,8 @@ algo parecido com espelho, foram escritas diversas palavras.  Você percebe
 que as letras parecem fogo crepitando e sente necessidade de se aproximar
 para tentar ler aquilo que foi escrito.
 ~
-181 608 0 0 0 0
-D0
+181 gfj 0
+D W
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -369,8 +390,8 @@ certeza, por aqui passaram todos aqueles que resolveram seguir um caminho
 reto e digno.  Bem no centro da sala há um &Wpergaminho&n onde várias anotações
 foram feitas.  Pegue-o e torne-se mais sábio.
 ~
-181 608 0 0 0 0
-D0
+181 gfj 0
+D W
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -386,8 +407,8 @@ foram bastante estudados.  Algo no chão chama a sua atenção.  É um &Wlivro&n
 grosso e pesado e parece que alguém o deixou aqui de propósito.  Nunca se
 sabe o dia de amanhã.  Você gosta de livros?
 ~
-181 608 0 0 0 0
-D0
+181 gfj 0
+D W
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -407,8 +428,8 @@ sinuosos e você pressente que alguma coisa está se erguendo à sua frente,
 pronta para atacá-lo.  Lembre-se de tudo aquilo que aprendeu até agora e
 coloque em prática sem medo.  Os Deuses estarão ao seu lado.
 ~
-181 608 0 0 0 0
-D0
+181 gfj 0
+D W
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -438,8 +459,8 @@ escolher para trilhar.  E que as recompensas virão na mesma proporção.
    É importante seguir conhecendo.  Uma &Wmensagem &n foi escrita para você.
    Antes de deixar esta sala, respire fundo, concentre-se e Boa Jornada.
 ~
-181 608 0 0 0 0
-D0
+181 gfj 0
+D W
 Você vê um caminho iluminado que parece estar chegando ao fim.
 ~
 ~
@@ -451,7 +472,7 @@ Casa dos Espelhos~
 cobrem todas as paredes, transmitindo a você uma sensação de infinito.  Há
 quatro portas neste lugar.  Que tal se você descobrisse aonde elas vão dar?
 ~
-181 608 0 0 0 0
+181 gjf 0
 D1
 ~
 ~
@@ -470,4 +491,4 @@ perfeccionistas.  Figuras medievais foram cuidadosamente entalhadas em sua
 superfície, deixando-a com o aspecto de uma grande moldura.
 ~
 S
-$~
+$

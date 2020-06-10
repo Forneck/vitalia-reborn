@@ -5,7 +5,7 @@ fortaleza de areia.  O uiva, soprando por todo o vale.  O calor é intenso e
 inexorável queima cruelmente sob sua cabeça.  Ao sul, você pode ver algumas
 tendas alojadas por todo o vale.
 ~
-42 65600 0 0 0 2
+42 gq 2
 D0
 ~
 ~
@@ -23,7 +23,7 @@ próspero.  Tendas feitas de pano alvejado pelo sol se alinham por ambos os
 lados do caminho.  Você pode visitar as tendas, continuar a sul pelo
 caminho, ou voltar pelo norte, de onde sopra os ventos uivantes.
 ~
-42 65600 0 0 0 1
+42 gq 1
 D0
 ~
 ~
@@ -50,11 +50,11 @@ criando uma aparência festiva.  Um tapete felpudo cobre o chão arenoso,
 tintilando os pés daqueles que pisam sob ele.  Largas almofadas espalhadas
 são a única mobília usada aqui.
 ~
-42 65600 0 0 0 1
+42 gq 1
 D1
 ~
 ~
-0 -1 4201
+0 -1 4201 0
 S
 #4203
 A Tenda de Um Nômade Kubalai~
@@ -65,7 +65,7 @@ criando uma aparência festiva.  Um tapete felpudo cobre o chão arenoso,
 tintilando os pés daqueles que pisam sob ele.  Largas almofadas espalhadas
 são a única mobília usada aqui.
 ~
-42 65600 0 0 0 1
+42 gq 1
 D3
 ~
 ~
@@ -79,7 +79,7 @@ próspero.  Tendas feitas de pano alvejado pelo sol se alinham por ambos os
 lados do caminho.  Você pode visitar as tendas, continuar a sul pelo
 caminho, ou voltar pelo norte, de onde sopra os ventos uivantes.
 ~
-42 65600 0 0 0 1
+42 gq 1
 D0
 ~
 ~
@@ -106,7 +106,7 @@ criando uma aparência festiva.  Um tapete felpudo cobre o chão arenoso,
 tintilando os pés daqueles que pisam sob ele.  Largas almofadas espalhadas
 são a única mobília usada aqui.
 ~
-42 65600 0 0 0 1
+42 qg 1
 D1
 ~
 ~
@@ -121,7 +121,7 @@ criando uma aparência festiva.  Um tapete felpudo cobre o chão arenoso,
 tintilando os pés daqueles que pisam sob ele.  Largas almofadas espalhadas
 são a única mobília usada aqui.
 ~
-42 65600 0 0 0 1
+42 gq 1
 D3
 ~
 ~
@@ -135,7 +135,7 @@ próspero.  Tendas feitas de pano alvejado pelo sol se alinham por ambos os
 lados do caminho.  Você pode visitar as tendas, continuar a sul pelo
 caminho, ou voltar pelo norte, de onde sopra os ventos uivantes.
 ~
-42 65600 0 0 0 1
+42 qg 1
 D0
 ~
 ~
@@ -159,7 +159,7 @@ A Tenda do Gênio~
 carregam o ar, quase embriagando quem entra aqui.  Uma misteriosa névoa
 escura esconde aquele que os nômades respeitam e temem.
 ~
-42 65600 0 0 0 1
+42 qg 1
 D1
 ~
 ~
@@ -174,7 +174,7 @@ criando uma aparência festiva.  Um tapete felpudo cobre o chão arenoso,
 tintilando os pés daqueles que pisam sob ele.  Largas almofadas espalhadas
 são a única mobília usada aqui.
 ~
-42 65600 0 0 0 1
+42 qg 1
 D3
 ~
 ~
@@ -187,7 +187,7 @@ abóbada na tenda do chefe nômade.  Almofadas de pelúcia e macios tapetes
 fazem o lugar confortável a qualquer viajante.  Não há sinal da dura vida do
 deserto em lugar algum.
 ~
-42 65600 0 0 0 1
+42 qg 1
 D0
 ~
 ~
@@ -201,7 +201,7 @@ tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -228,7 +228,7 @@ chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.  Um precipício
 de areia criado por enormes dunas bloqueia a passagem ao leste e ao sul.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -247,7 +247,7 @@ chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.  Um precipício
 de areia criado por enormes dunas bloqueia a passagem ao oeste.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -269,7 +269,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -295,7 +295,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -322,7 +322,7 @@ implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.  Duas enormes dunas se erguem ao
 sul, criando um profundo vale.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -348,7 +348,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -374,7 +374,7 @@ tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -400,7 +400,7 @@ tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -426,7 +426,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -452,7 +452,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -478,7 +478,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -504,7 +504,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -530,7 +530,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -556,7 +556,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -582,7 +582,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -608,7 +608,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -634,7 +634,7 @@ tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -662,7 +662,7 @@ faz sentir isolado de todo o mundo, trazendo-lhe o desespero.  Uma inclinada
 parede de blocos de pedra de uma antiga estrutura, construída na areia,
 torna impossível continuar adiante ao sul.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -684,7 +684,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -710,7 +710,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -736,7 +736,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -762,7 +762,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -788,7 +788,7 @@ olhos.  As dunas de areia de todos os tamanhos mudam lentamente ao sabor do
 vento.  O terreno parece se inclinar ao norte onde carapaças quebradas,
 exoesqueletos, e ossos podem ser vistos em meio às areias.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -814,7 +814,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -840,7 +840,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -866,7 +866,7 @@ tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -892,7 +892,7 @@ tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -921,7 +921,7 @@ pletora, alguns magros arbustos e cactos podem ser vistos a alguma distância
 ao norte, oferecendo alguma esperança para escapar da turbulenta tempestade
 de areia.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -947,7 +947,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -973,7 +973,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -999,7 +999,7 @@ olhos.  As dunas de areia de todos os tamanhos mudam lentamente ao sabor do
 vento.  O terreno parece se inclinar ao norte onde carapaças quebradas,
 exoesqueletos, e ossos podem ser vistos em meio às areias.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1025,7 +1025,7 @@ espertamente armada, qualquer coisa que entrar aqui, vai encontrar sérias
 dificuldades escalar de volta por causa da areia que desce pelo túnel.
 Fragmentos de exoesqueletos e ossos descarnados tomam todo o lugar.
 ~
-42 65856 0 0 0 2
+42 qgi 2
 D0
 ~
 ~
@@ -1051,7 +1051,7 @@ olhos.  As dunas de areia de todos os tamanhos mudam lentamente ao sabor do
 vento.  O terreno parece se inclinar ao norte onde carapaças quebradas,
 exoesqueletos, e ossos podem ser vistos em meio às areias.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1077,7 +1077,7 @@ tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 0 0 0 0 2
+42 0 2
 D0
 ~
 ~
@@ -1104,7 +1104,7 @@ chicoteando as dunas.  Uma pequena pletora, alguns magros arbustos e cactos
 podem ser vistos a alguma distância ao norte, oferecendo alguma esperança
 para escapar da turbulenta tempestade de areia.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1129,7 +1129,7 @@ sua volta, é um sinal de esperança para os viajantes.  Não é muito
 confortável devido aos espinhos dos arbustos e cactos, mas é muito melhor
 que o deserto aberto.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1156,7 +1156,7 @@ chicoteando as dunas.  Uma pequena pletora, alguns magros arbustos e cactos
 podem ser vistos a alguma distância ao norte, oferecendo alguma esperança
 para escapar da turbulenta tempestade de areia.
 ~
-42 65600 0 0 0 2
+42 qg 2
 D0
 ~
 ~
@@ -1182,7 +1182,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1208,7 +1208,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1234,7 +1234,7 @@ olhos.  As dunas de areia de todos os tamanhos mudam lentamente ao sabor do
 vento.  O terreno parece se inclinar ao norte onde carapaças quebradas,
 exoesqueletos, e ossos podem ser vistos em meio às areias.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1260,7 +1260,7 @@ tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1287,7 +1287,7 @@ chicoteando as dunas.  Uma pequena pletora, alguns magros arbustos e cactos
 podem ser vistos a alguma distância ao norte, oferecendo alguma esperança
 para escapar da turbulenta tempestade de areia.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1313,7 +1313,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1339,7 +1339,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1365,7 +1365,7 @@ tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1391,7 +1391,7 @@ tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1417,7 +1417,7 @@ tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1443,7 +1443,7 @@ tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1469,7 +1469,7 @@ uma escrita já esquecida.  A areia no solo causa alguns ruídos ásperos a
 medida que você pisa nele, quebrando o silêncio desta estranha e esquecida
 tumba.
 ~
-42 8 0 0 0 0
+42 d 0
 D1
 ~
 ~
@@ -1487,7 +1487,7 @@ uma escrita já esquecida.  A areia no solo causa alguns ruídos ásperos a
 medida que você pisa nele, quebrando o silêncio desta estranha e esquecida
 tumba.
 ~
-42 8 0 0 0 0
+42 d 0
 D1
 ~
 ~
@@ -1505,7 +1505,7 @@ chão de pedra, intocado por eras, é ligeiramente coberto por areia.
 Esculturas e runas adornam as paredes rochosas, contando-lhe uma história que
 não é contada há séculos.
 ~
-42 8 0 0 0 0
+42 d 0
 D2
 ~
 ~
@@ -1519,7 +1519,7 @@ chão de pedra, intocado por eras, é ligeiramente coberto por areia.
 Esculturas e runas adornam as paredes rochosas, contando-lhe uma história que
 não é contada há séculos.
 ~
-42 8 0 0 0 0
+42 d 0
 D0
 ~
 ~
@@ -1533,7 +1533,7 @@ chão de pedra, intocado por eras, é ligeiramente coberto por areia.
 Esculturas e runas adornam as paredes rochosas, contando-lhe uma história que
 não é contada há séculos.
 ~
-42 8 0 0 0 0
+42 d 0
 D1
 ~
 ~
@@ -1548,7 +1548,7 @@ formando um majestoso teto de catedral.  Estranhos e belos símbolos decoram
 todo o lugar.  O propósito deste lugar foi esquecido e escondido entre as
 areias do vasto deserto.
 ~
-42 8 0 0 0 0
+42 d 0
 D0
 ~
 ~
@@ -1575,7 +1575,7 @@ chicoteando as dunas.  Uma inclinada parede de pedra de uma antiga estrutura
 construída sobre a areia, barra qualquer tentativa de continuar adiante pelo
 sul e pelo oeste.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1594,7 +1594,7 @@ chicoteando as dunas.  Uma inclinada parede de pedra de uma antiga estrutura
 construída sobre a areia, barra qualquer tentativa de continuar adiante pelo
 sul.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1615,7 +1615,7 @@ ver.  A visibilidade e a respiração se tornam difíceis a medida que a
 tempestade de areia se intensifica.  Uma pequena abertura pode ser vista na
 parede da antiga construção ao sul.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1642,7 +1642,7 @@ medida que você pisa nele, quebrando o silêncio desta estranha e esquecida
 tumba.  Você pode continuar pelo oeste, se aprofundando na pirâmide, ou pode
 voltar para o norte, para o infinito oceano de areia.
 ~
-42 8 0 0 0 0
+42 d 0
 D0
 ~
 ~
@@ -1660,7 +1660,7 @@ tempestade de areia.  Uma inclinada parede de pedra de uma antiga estrutura
 construída sobre a areia, barra qualquer tentativa de continuar adiante pelo
 norte.
 ~
-42 64 0 0 0 2
+42 g 2
 D1
 ~
 ~
@@ -1683,7 +1683,7 @@ chicoteando as dunas.  Uma inclinada parede de pedra de uma antiga estrutura
 construída sobre a areia, barra qualquer tentativa de continuar adiante pelo
 norte.
 ~
-42 64 0 0 0 2
+42 g 2
 D1
 ~
 ~
@@ -1705,7 +1705,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1731,7 +1731,7 @@ tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1758,7 +1758,7 @@ chicoteando as dunas.  Uma inclinada parede de pedra de uma antiga estrutura
 construída sobre a areia, barra qualquer tentativa de continuar adiante pelo
 norte e pelo oeste.
 ~
-42 64 0 0 0 2
+42 g 2
 D1
 ~
 ~
@@ -1776,7 +1776,7 @@ tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1800,7 +1800,7 @@ Pelas Dunas~
 quente que parece perfurar, como pregos, através das solas de suas botas.
 Você pode apenas esperar, que seus preciosos pés não se machuquem.
 ~
-42 65600 0 0 0 2
+42 qg 2
 D0
 ~
 ~
@@ -1816,7 +1816,7 @@ Em Um Caminho Sujo~
 pelo norte.  Até onde você pode dizer, não há vida por aqui.  Está ficando
 notavelmente quente, a medida que você avança.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1832,7 +1832,7 @@ Em Um Caminho Sujo~
 pode dizer, não há vida por aqui.  Está ficando notavelmente quente a
 medida que você avança.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1848,7 +1848,7 @@ Em Um Caminho Sujo~
 pode dizer, não há vida por aqui.  Está ficando notavelmente quente a
 medida que você avança.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1864,7 +1864,7 @@ Em Um Caminho Sujo~
 pode dizer, não há vida por aqui.  Está ficando notavelmente quente a
 medida que você avança.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1881,7 +1881,7 @@ em areia.  Ao longo do caminho, como antes, está ficando realmente quente a
 medida que você avança.  Você seca sua face, lavando-a com um pouco de água,
 esperando que logo o clima se amenize.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1897,7 +1897,7 @@ Em um Caminho de Areia~
 quente a medida que você avança.  Você seca sua face, lavando-a com um pouco
 de água, esperando que logo o clima se amenize.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1905,7 +1905,7 @@ D0
 D2
 ~
 ~
-0 -1 4281
+0 -1 4281 0
 S
 #4283
 Em um Caminho de Areia~
@@ -1913,7 +1913,7 @@ Em um Caminho de Areia~
 quente a medida que você avança.  Você seca sua face, lavando-a com um pouco
 de água, esperando que logo o clima se amenize.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1935,7 +1935,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1961,7 +1961,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1987,7 +1987,7 @@ tempestade de areia se intensifica.  Uma inclinada parede de pedra de uma
 antiga estrutura construída sobre a areia, barra qualquer tentativa de
 continuar adiante pelo oeste.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -2009,7 +2009,7 @@ respiração, o sufocando.  O sol ardente, acima de sua cabeça,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -2033,7 +2033,7 @@ Um Oásis~
 ser um ótimo lugar para descansar, encha seu cantil, pois pode ser o único
 lugar que você vá poder fazer isso, por algum tempo.
 ~
-42 64 0 0 0 2
+42 g 2
 D1
 ~
 ~
@@ -2050,19 +2050,19 @@ enquanto a leste ela faz uma curva seguindo ainda além.  Construções se
 erguem nessa direção, local em que a areia deixa de ser fina e se torna
 pedregosa.
 ~
-42 68 0 0 0 2
+42 gc 2
 D0
 ~
 ~
 0 -1 4276
-D1
-~
-~
-0 -1 4290
 D2
 ~
 ~
 0 -1 5694
+D1
+~
+~
+0 -1 4290
 S
 #4290
 A Praia~
@@ -2070,15 +2070,15 @@ A Praia~
 imaginava.  Conforme o caminho segue norte, mais pedras podem ser vistas a
 oeste.
 ~
-42 68 0 0 0 2
-D0
-~
-~
-0 -1 4291
+42 gc 2
 D3
 ~
 ~
 0 -1 4289
+D0
+~
+~
+0 -1 4291
 S
 #4291
 A Praia~
@@ -2086,15 +2086,15 @@ A Praia~
 imaginava.  Conforme o caminho segue norte, mais pedras podem ser vistas a
 oeste.
 ~
-42 68 0 0 0 2
-D0
-~
-~
-0 -1 4292
+42 gc 2
 D2
 ~
 ~
 0 -1 4290
+D0
+~
+~
+0 -1 4292
 S
 #4292
 A Praia~
@@ -2102,15 +2102,15 @@ A Praia~
 imaginava.  Conforme o caminho segue norte, mais pedras podem ser vistas a
 oeste.
 ~
-42 68 0 0 0 2
-D0
-~
-~
-0 -1 4293
+42 gc 2
 D2
 ~
 ~
 0 -1 4291
+D0
+~
+~
+0 -1 4293
 S
 #4293
 A Praia~
@@ -2118,15 +2118,15 @@ A Praia~
 imaginava.  Daqui você consegue ver que o caminho a noroeste e nordeste
 parece desobstruído.
 ~
-42 68 0 0 0 2
-D0
-~
-~
-0 -1 13205
+42 gc 2
 D2
 ~
 ~
 0 -1 4292
+D0
+~
+~
+0 -1 13205
 S
 #4294
 Os Limites do Deserto de Kubalai~
@@ -2136,7 +2136,7 @@ tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -2145,11 +2145,11 @@ D1
 ~
 ~
 0 -1 17600
-D2
+D3
 ~
 ~
 0 -1 4294
-D3
+D2
 ~
 ~
 0 -1 4294

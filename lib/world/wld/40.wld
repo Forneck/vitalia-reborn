@@ -5,19 +5,19 @@ sente forças malignas se aproximando desta direção.  A leste você vê a
 entrada de uma pequena vila.  Bem afastado à nordeste, uma enorme formação
 montanhosa começa a aparecer.
 ~
-40 4 0 0 0 4
+40 c 4
 D0
 ~
 ~
 0 -1 4001
-D1
-~
-~
-0 -1 3400
 D2
 ~
 ~
 0 -1 3500
+D1
+~
+~
+0 -1 3400
 S
 #4001
 As Colinas~
@@ -25,7 +25,7 @@ As Colinas~
 aterrorizantes estão quase em todas as direções ao seu redor. A uma
 distância média ao norte, você vê a enorme sombra de uma montanha solitária.
 ~
-40 4 0 0 0 4
+40 c 4
 D0
 ~
 ~
@@ -44,7 +44,7 @@ norte.  Distante a nordeste, você pode ver a face sul mais extrema do que
 parece ser uma formação montanhosa.  Você vê, ainda, um caminho seguindo
 montanha acima.
 ~
-40 4 0 0 0 4
+40 c 4
 D0
 ~
 ~
@@ -65,7 +65,7 @@ largura e 11 metros de comprimento. Uma suave brisa fresca vinda do sul o
 faz pensar que a saída da caverna é nesta direção. Ao norte, um pequeno
 túnel continua dentro da montanha.
 ~
-40 9 0 0 0 2
+40 ad 2
 D0
 ~
 ~
@@ -82,7 +82,7 @@ paredes molhadas e limosas que fazem você escorregar pelo caminho. O cheiro
 podre de lodo cresce a medida que você se embrenha ao norte, mas você ainda
 é capaz de sentir uma suave brisa fresca vindo por trás de você.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -98,7 +98,7 @@ O Túnel~
 ao norte para uma caverna enquanto que a leste, o túnel continua seguindo
 adiante através da montanha.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -113,7 +113,7 @@ O Túnel~
    Em pé no chão sujo no meio da caverna, você percebe que esta passagem não
 é muito utilizada. Ela parece seguir na direção leste, oeste e norte.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 Há uma estranha construção ali.
 ~
@@ -135,7 +135,7 @@ túnel principal parece curvar do sul para o oeste, mas há uma entrada ao
 norte. A entrada não parece ser natural e é muito mais recente que o túnel
 ou mesmo a caverna.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -155,7 +155,7 @@ O Túnel~
 condensação e, o peso da rocha sobre você o faz se sentir um pouco
 claustrofóbico. O túnel faz uma curva abrupta do oeste para o norte daqui.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -171,7 +171,7 @@ A Caverna Ampla~
 fazer as paredes a leste e a oeste quase sumirem na escuridão. Um pequeno
 túnel se abre ao sul e este também é bem escuro.
 ~
-40 9 0 0 0 2
+40 ad 2
 D1
 ~
 ~
@@ -192,7 +192,7 @@ que aparentemente não há nenhuma outra saída de lá. As paredes são
 razoavelmente lisas e parecem ter sido naturalmente esculpidas pela ação da
 água nas rochas.
 ~
-40 9 0 0 0 2
+40 ad 2
 D3
 ~
 ~
@@ -205,7 +205,7 @@ em um túnel e segue ao sul. A caverna continua ao norte, cada vez mais
 profunda e mergulhada em escuridão. Você percebe uma pilha de ossos em um
 dos cantos.
 ~
-40 9 0 0 0 2
+40 ad 2
 D0
 ~
 ~
@@ -225,7 +225,7 @@ O Túnel~
 numa direção norte-sul. As paredes são bem polidas, como se um rio tivesse
 as esculpido dentro da terra.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -240,7 +240,7 @@ O Buraco~
    Você está em uma pequena alcova, ao lado do túnel principal. Há um buraco
 grade no chão da alcova. Além do buraco, a única saida é ao norte.
 ~
-40 13 0 0 0 3
+40 acd 3
 D0
 ~
 ~
@@ -256,7 +256,7 @@ O Buraco~
 próximo a um dos cantos das paredes. O túnel continua a leste. O ar aqui é
 muito úmido e você sente como se estivesse ficando molhado e pegajoso.
 ~
-40 13 0 0 0 3
+40 acd 3
 D1
 ~
 ~
@@ -272,7 +272,7 @@ O Túnel Úmido~
 ar são tão densas que você quase pode vê-las grudando em sua roupa. O túnel
 continua a norte e a oeste. Uma caverna se abre a leste.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -294,7 +294,7 @@ gotículas de ar pairam no ar, fazendo você ter a impressão que está parado
 na chuva. As paredes da caverna são quase totalmente envolta em sombras e
 escuridão, assim como a parte sul da caverna.
 ~
-40 9 0 0 0 2
+40 ad 2
 D1
 ~
 ~
@@ -311,7 +311,7 @@ segurar com tanta umidade. Filetes quase constantes de água escorrem pelas
 paredes, se acumulando no chão, em pequenas poças estagnadas. O túnel segue
 distante ao sul.  A oeste o ar é ainda mais pesado e úmido que aqui.
 ~
-40 9 0 0 0 3
+40 ad 3
 D2
 ~
 ~
@@ -327,7 +327,7 @@ A Caverna~
 a leste possui uma abertura que parece levar a uma junção de vários outros
 túneis.
 ~
-40 9 0 0 0 2
+40 ad 2
 D1
 ~
 ~
@@ -344,7 +344,7 @@ ao norte, vem um terrivel cheiro de mofado, enquanto que o a oeste parece se
 abrir quase que imediatamente para uma caverna. Os túneis ao sul e a leste
 estão totalmente envoltos pela escuridão.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -369,7 +369,7 @@ o norte.  Você observa uma alcova, escondida nas sombras, logo ao sul de
 você, e também sente uma suave brisa vinda de algum lugar, provavelmente do
 norte.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -389,7 +389,7 @@ O Túnel Mau-cheiroso~
 visível ao norte. Parando por um instante, você nota um cheiro estranho
 vindo também do norte.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -404,7 +404,7 @@ A Caverna~
    Você está em uma caverna com ar fresco. Um vento sopra do norte. Para o
 sul, você vê um pequeno túnel seguindo adiante na montanha.
 ~
-40 9 0 0 0 2
+40 ad 2
 D0
 ~
 ~
@@ -421,7 +421,7 @@ cabeça, você vê o céu. A única saída daqui é ao sul. Olhando ao redor, você
 descobre a fonte do mau-cheiro. Corpos de vários monstros em decomposição se
 espalham pela caverna.
 ~
-40 8 0 0 0 2
+40 d 2
 D2
 ~
 ~
@@ -439,7 +439,7 @@ O Vale~
 sul.  Há uma caverna na montanha. Para o norte você pode entrar nas colinas.
 Uma trilha a leste sobe uma delas.
 ~
-40 0 0 0 0 2
+40 0 2
 D0
 ~
 ~
@@ -459,7 +459,7 @@ As Baixas Colinas~
    Você está andando por um caminho que segue serpenteando através das
 baixas colinas do lado norte do Monte Moria. O caminho continua ao norte.
 ~
-40 0 0 0 0 4
+40 0 4
 D0
 ~
 ~
@@ -474,7 +474,7 @@ A Interseção nas Baixas Colinas~
    Você está em um ponto do caminho que se divide. A estrada continua ao
 norte, enquanto uma trilha rude segue a leste para as montanhas.
 ~
-40 0 0 0 0 4
+40 0 4
 D0
 ~
 ~
@@ -496,7 +496,7 @@ pesadas estão jogadas pelo campo. Indo através do caminho ao norte, você
 chega ao fim das baixas colinas e para o oeste, você estará entrando
 novamente nelas. Ao sul, você vê uma pequena interseção no caminho.
 ~
-40 0 0 0 0 2
+40 0 2
 D0
 ~
 ~
@@ -516,7 +516,7 @@ O Fim das Baixas Colinas~
 com as planícies mais ao norte. Você pode voltar para as baixas colinas ao
 sul, ou seguir adiante através das planícies.
 ~
-40 0 0 0 0 4
+40 0 4
 D0
 ~
 ~
@@ -531,7 +531,7 @@ As Planícies~
    Você está nas planícies. O caminho segue para o sul. Olhando melhor ao
 redor, você nota uma trilha pequena, quase invísivel, entrando em um bosque.
 ~
-40 0 0 0 0 2
+40 0 2
 D2
 ~
 ~
@@ -548,11 +548,7 @@ leste-oeste.  Olhando a oeste, você vê uma interseção de caminhos, e para o
 leste, o caminho parece terminar no pé de uma cadeia montanhosa que se
 levanta abruptamente do chão, bloqueando até mesmo a sua visão do céu.
 ~
-40 0 0 0 0 4
-D0
-~
-~
-0 -1 9900
+40 0 4
 D1
 ~
 ~
@@ -561,6 +557,10 @@ D3
 ~
 ~
 0 -1 4033
+D0
+~
+~
+0 -1 9900
 S
 #4038
 A Base da Montanha~
@@ -570,7 +570,7 @@ para o oeste, onde você vê algumas planícies que você poderia alcançar após
 algum tempo de caminhada.  A leste, uma trilha bem desgastada sobe a lateral
 da montanha.
 ~
-40 0 0 0 0 5
+40 0 5
 D1
 ~
 ~
@@ -585,7 +585,7 @@ A Trilha na Montanha~
    Você está no meio de uma trilha estreita, no entando muito utilizada. Ela
 sobe a montanha rumo ao topo. Para oeste ela desce rumo as baixas colinas.
 ~
-40 0 0 0 0 5
+40 0 5
 D3
 ~
 ~
@@ -603,7 +603,7 @@ trinta metros de comprimento e, ao norte, uma fenda parece descer para uma
 gruta. Uma trilha segue para o leste, descendo para o vale quase escondido,
 deste lado da montanha.
 ~
-40 0 0 0 0 5
+40 0 5
 D0
 ~
 ~
@@ -612,14 +612,14 @@ D1
 ~
 ~
 0 -1 4076
-D4
-~
-~
-0 -1 15100
 D5
 ~
 ~
 0 -1 4039
+D4
+~
+~
+0 -1 15100
 S
 #4041
 O Covil dos Leões~
@@ -627,7 +627,7 @@ O Covil dos Leões~
 caminho de entrada, para então descobrir que aqui é um covil de um grande
 animal carnívoro!
 ~
-40 9 0 0 0 2
+40 ad 2
 D2
 ~
 ~
@@ -641,7 +641,7 @@ uma grande colina.  Uma colina que se sobresalta das baixas colinas de uma
 forma sobrenatural. Um caminho segue para o leste, parecendo começar de
 lugar algum.
 ~
-40 0 0 0 0 2
+40 0 2
 D1
 ~
 ~
@@ -658,7 +658,7 @@ O teto tem pelo menos seis metros de altura neste salão e a largura, não é
 menor que quatro metros e meio.  Ar fresco vindo do leste bate em seu rosto.
 Para o oeste, tudo o que há é escuridão.
 ~
-40 8 0 0 0 2
+40 d 2
 D1
 ~
 ~
@@ -677,7 +677,7 @@ mesa no meio do chão arenoso do salão chama a sua atencão. Ela é alta o
 suficiente para permitir que você ande por baixo dela com tranquilidade.  Um
 grande túnel sai pela parede leste da caverna.
 ~
-40 9 0 0 0 2
+40 ad 2
 D1
 ~
 ~
@@ -689,7 +689,7 @@ A Trilha Íngreme~
 Neste ponto, a trilha começa a passar entre as montanhas que o rodeiam.  Ela
 continua para as colinas a leste e para oeste descendo novamente para o vale.
 ~
-40 4 0 0 0 5
+40 c 5
 D1
 A trilha rochosa continua.
 ~
@@ -706,7 +706,7 @@ Entre as Montanhas~
    A trilha entre as montanhas parece quase sem fim, enquanto você continua
 caminhando.  Ela continua tanto para leste quanto para oeste.
 ~
-40 4 0 0 0 5
+40 c 5
 D1
 A trilha continua a leste.
 ~
@@ -724,7 +724,7 @@ As Baixas Colinas~
 Olhando o horizonte, você observa uma estreita trilha seguindo na direção
 nordeste, não muito distante a oeste.
 ~
-40 4 0 0 0 5
+40 c 5
 D1
 Você pode seguir pela trilha estreita nesta direção.
 ~
@@ -743,7 +743,7 @@ entre as montanhas para oeste. A trilha através delas parece muito longa e
 cansativa.  Você observa uma trilha seguindo a nordeste, não muito distante
 para o oeste.
 ~
-40 4 0 0 0 5
+40 c 5
 D1
 You can head towards the narrow trail this way.
 ~
@@ -760,7 +760,7 @@ As Baixas Colinas~
    Você está em um ponto em que a trilha muda de uma quase reta para o oeste
 para um caminho sinuoso para o norte e em seguida oeste.
 ~
-40 4 0 0 0 4
+40 c 4
 D0
 Uma pequena trilha segue para o norte e, adiante, para a direção oeste.
 ~
@@ -778,7 +778,7 @@ O Túnel~
 direção sul.  As paredes estão frias e umidas, com algumas gotículas. Há uma
 coisa verde, musguenta, crescendo perto do teto na parede norte.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -795,7 +795,7 @@ como o piso se torna irregular também. Olhando melhor, você percebe que o
 chão cai quase um merto e meio em degraus denteados para o leste. Para o
 oeste, ele é muito mais regular.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -810,7 +810,7 @@ O Túnel~
    Continuando através do túnel, o piso se torna liso novamente. Olhando
 melhor a sua volta, você vê uma nascente de água próxima à parede sul.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -828,7 +828,7 @@ maior e, continua na escuridão subterrânea.  A passagem a leste leva a uma
 caverna ampla, fresca e bem-iluminada. Bem diferente do que normalmente se
 encontraria numa caverna abaixo do nível do chão.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -847,7 +847,7 @@ produz algumas sombras realmente estranhas e até mesmo quase assustadoras
 nas paredes, quase escondendo os dois túneis que se afastam daqui, um para o
 leste e o outro para oeste.
 ~
-40 8 0 0 0 2
+40 d 2
 D1
 ~
 ~
@@ -867,7 +867,7 @@ O Labirinto~
 sustenta bastante baixo, sobre a sua cabeça e a passagem se mistura a
 escuridão. A única saída daqui parece ser para o oeste.
 ~
-40 9 0 0 0 3
+40 ad 3
 D3
 ~
 ~
@@ -880,7 +880,7 @@ vinda de uma enorme fogueira que queima logo a sua frente, no meio da caverna.
 O fogo lhe fornece luz mais que suficiente para tornar clara as extremidades
 norte e sul da caverna.
 ~
-40 8 0 0 0 2
+40 d 2
 D0
 ~
 ~
@@ -901,7 +901,7 @@ O Labirinto~
 baixo sobre a sua cabeça e a passagem se mistura a escuridão. As únicas
 saídas daqui parecem ser ao norte e ao sul.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -917,7 +917,7 @@ O Labirinto~
 baixo sobre a sua cabeça e a passagem se mistura a escuridão. As únicas
 saídas daqui parecem ser ao sul e a oeste.
 ~
-40 9 0 0 0 3
+40 ad 3
 D2
 ~
 ~
@@ -935,7 +935,7 @@ parece seguir ligeiramente descendente a leste.
    O túnel continua para o leste, se infiltrando ainda mais na terra, e um
 pouco acima, seguindo para o oeste, o ar parece ser bastante úmido.
 ~
-40 13 0 0 0 3
+40 acd 3
 D1
 ~
 ~
@@ -956,7 +956,7 @@ apesar disto, o nível da água não parece estar se alterando.
 e, para o leste, uma estranha luz vibrante mostra que o túnel se abre para
 uma caverna.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -974,7 +974,7 @@ ser o meio da caverna. A luz trêmula produz algumas sombras realmente
 esquisitas e até mesmo assustadoras, quase escondendo os dois túneis que
 saem daqui, um para o oeste e outro para o sul.
 ~
-40 8 0 0 0 2
+40 d 2
 D0
 ~
 ~
@@ -994,7 +994,7 @@ O Labirinto~
 baixo sobre a sua cabeça e a passagem se mistura a escuridão. As únicas
 saídas daqui parecem ser a leste e a oeste.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -1010,7 +1010,7 @@ O Labirinto~
 baixo sobre a sua cabeça e a passagem se mistura a escuridão. As únicas
 saídas daqui parecem ser a leste e ao norte
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1028,7 +1028,7 @@ direção.  Antes de sair por este caminho, você decide olhar ao redor da
 caverna.  As paredes são levemente úmidas ao toque e o teto é muito liso.
 Praticamente no centro do teto, foi feito um buraco bem arredondado.
 ~
-40 9 0 0 0 3
+40 ad 3
 D3
 ~
 ~
@@ -1045,7 +1045,7 @@ baixo sobre a sua cabeça e a passagem se mistura a escuridão. As únicas
 saídas daqui parecem ser a leste e ao norte. Para o norte, você pode ver a
 entrada de uma caverna que parece ser ampla e bem iluminada.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1062,7 +1062,7 @@ baixo sobre a sua cabeça e a passagem se mistura a escuridão.  As únicas
 saídas daqui parecem ser a leste, ao sul e ao norte. Ao sul, o túnel parece
 se abrir para uma caverna.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1082,7 +1082,7 @@ O Labirinto~
 baixo sobre a sua cabeça e a passagem se mistura a escuridão. As únicas
 saídas daqui parecem ser a oeste e ao norte.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1099,7 +1099,7 @@ esteve.  Ela se estende através da escuridão para o leste e para o sul. A
 caverna é quase preenchida por ecos de sua respirção. Estalactites e
 estalagmites se penduram no teto e sobem do chão da caverna respectivamente.
 ~
-40 9 0 0 0 2
+40 ad 2
 D1
 ~
 ~
@@ -1117,7 +1117,7 @@ caverna é quase preenchida por ecos de sua respirção. Estalactites e
 estalagmites se penduram no teto e sobem do chão da caverna respectivamente.
 Um túnel estreito se se afasta da caverna para o norte.
 ~
-40 9 0 0 0 2
+40 ad 2
 D0
 ~
 ~
@@ -1138,7 +1138,7 @@ esteve.  Ela se estende através da escuridão para o leste e para o sul.  A
 caverna é quase preenchida por ecos de sua respirção. Estalactites e
 estalagmites se penduram no teto e sobem do chão da caverna respectivamente.
 ~
-40 9 0 0 0 2
+40 ad 2
 D0
 ~
 ~
@@ -1156,7 +1156,7 @@ caverna é quase preenchida por ecos de sua respirção. Estalactites e
 estalagmites se penduram no teto e sobem do chão da caverna respectivamente.
 Um túnel estreito se afasta da caverna para o leste.
 ~
-40 9 0 0 0 2
+40 ad 2
 D0
 ~
 ~
@@ -1177,7 +1177,7 @@ ele penetra nas rochas da montanha. A parede oeste do túnel parece ter
 quebrado através de uma pequena, natural rachadura na rocha, levando ao que
 parece, uma relativamente grande, caverna.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -1198,7 +1198,7 @@ saida é voltar para oeste,onde o túnel o conduz de volta à montanha.  Em
 todo caso, não há absolutamente nada de interessante para baixo No fim dessa
 passagem.  Que estranho!
 ~
-40 9 0 0 0 3
+40 ad 3
 D3
 ~
 ~
@@ -1210,7 +1210,7 @@ O Buraco~
 norte, pois para descer rumo ao desconhecido você teria que se esgueirar
 pelo buraco que é muito pequeno para você!
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1234,7 +1234,7 @@ leste você pode ver as planicies, e logo ao norte uma estranha sombra parece
 estar mudando constantemente sua forma e quase parece acenar te convidando a
 entrar nela.
 ~
-40 0 0 0 0 4
+40 0 4
 D0
 Há uma estranha sombra modelando-se diante de você.
 ~
@@ -1256,7 +1256,7 @@ do que você havia previsto, talvez com trinta pés de comprimento.  É
 surpreendente como a percepção de distâncias é abalada pela altitude das
 montanhas não é mesmo?
 ~
-40 0 0 0 0 5
+40 0 5
 D3
 ~
 ~
@@ -1273,7 +1273,7 @@ Obviamente, sempre há o caminho cuidadosamente escondido que você percebe na
 parte leste do vale, conduzindo você para cima da montanha leste que encobre
 sua visão da maior parte do céu.
 ~
-40 0 0 0 0 5
+40 0 5
 D1
 ~
 ~
@@ -1295,7 +1295,7 @@ desaparecer diante de sua visão, mas você rapidamente poderia encontrá-lo
 novamente.  Uma trilha ainda pode leva-lo de volta para cima da montanha
 Oeste.
 ~
-40 0 0 0 0 5
+40 0 5
 D1
 ~
 ~
@@ -1313,7 +1313,7 @@ e mais para dentro da terra, você percebe que ele deve ser muito mais
 água rumo à parte mais baixa do túnel.  O Túnel parece seguir direto para
 leste por um bom trecho.
 ~
-40 13 0 0 0 3
+40 acd 3
 D1
 ~
 ~
@@ -1331,7 +1331,7 @@ quatro pessoas perfiladas lado a lado o atravesse facilmente.  Os muros não
 mostram-se muito úmidos, mas há um pequeno córrego correndo pelo muro do
 norte.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -1348,7 +1348,7 @@ seria sua extenção.  Os muros ainda estão bastante afastados, mas você pode
 ver que eles começam a se fechar rapidamente para o leste.  De fato, o
 formato da aproximação deles, o faz lembrar de um funil.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -1367,7 +1367,7 @@ um pouco mais, enquanto para leste ele se afunda mais e mais para dentro da
 terra e você pode ver um pequenino buraco de aproximadamente dois pés de
 diâmetro a altura de sua cintura no muro sul.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -1389,7 +1389,7 @@ saída dessa sala: Um túnel avançando impetuosamente para a direção do muro
 oeste.  Os muros desta caverna são irregulares e cheios de musgos ou
 humidade, seja lá o que for.
 ~
-40 9 0 0 0 3
+40 ad 3
 D3
 ~
 ~
@@ -1402,7 +1402,7 @@ A caverna é iluminada pela extraordinária, agradável, luz dourada que perece
 emanar das próprias paredes.  A caverna em si é enorme extendendo-se por uma
 pequena distancia para o oeste e sul.
 ~
-40 8 0 0 0 1
+40 d 1
 D2
 ~
 ~
@@ -1425,7 +1425,7 @@ emanar das próprias paredes.  A caverna em si é enorme extendendo-se por uma
 aproximadamente dois pés de diâmetro.  Tudo que você pode ver pelo buraco é
 a escuridão.
 ~
-40 8 0 0 0 1
+40 d 1
 D0
 ~
 ~
@@ -1449,7 +1449,7 @@ A Passagem~
 o sul e oeste. Para o sul, parece que a passagem continua, mas para oeste
 você só pode ver uma aparente luz dourada.
 ~
-40 9 0 0 0 3
+40 ad 3
 D2
 ~
 ~
@@ -1467,7 +1467,7 @@ A caverna é iluminada pela extraordinária, agradável, luz dourada que perece
 uma pequena distancia para o oeste e Norte. Uma rachadura na parede leste
 parece conduzi-lo a um tipo de passadiço.
 ~
-40 8 0 0 0 1
+40 d 1
 D0
 ~
 ~
@@ -1492,7 +1492,7 @@ caverna.  A caverna é iluminada pela extraordinária, agradável, luz dourada
 que perece emanar das próprias paredes.  A caverna em si é enorme
 extendendo-se por uma pequena distancia para o Leste, sul e norte.
 ~
-40 8 0 0 0 1
+40 d 1
 D0
 ~
 ~
@@ -1520,7 +1520,7 @@ você se dá conta do fato dele parecer muito profundo e escuro.  Há um
 estranho cheiro vindo do buraco, parece que alguma coisa lá embaixo está em
 estado de putrefação.
 ~
-40 13 0 0 0 3
+40 acd 3
 D3
 ~
 ~
@@ -1549,7 +1549,7 @@ dentro dele parece muito úmido e estagnado.  Nenhuma brisa pode ser
 percebida, mas um estranho cheiro emana do leste.  Há um quase imperceptível
 buraco no muro do sul.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -1577,7 +1577,7 @@ comparando  com a maior parte dos túneis dessas redondezas) e o ar ainda
 assim é bastante úmido.  Os muros estão cobertos por uma fina camada de um
 sumo viscoso que parece óleo.  O Túnel segue na direção leste-oeste.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -1600,7 +1600,7 @@ passagem tornando-a mais fácil.  Os muros tortuosos forçam passagem
 aprofundando-se no íntimo da terra.  Uma estranha sombra no muro do leste o
 leva a pensar que uma pequena passagem encontra o túnel lá.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1622,7 +1622,7 @@ emanar das próprias paredes.  A caverna em si é enorme extendendo-se por
 uma pequena distancia para o norte e uma formação de sombra parece indicar
 a entrada de uma passagem a oeste.
 ~
-40 8 0 0 0 1
+40 d 1
 D0
 ~
 ~
@@ -1646,7 +1646,7 @@ na parte mais inclinada do muro você nota que alguem (ou alguma coisa)
 colocou pequenso apoios para as mãos para facilitar a passagem para cima.
 O Túnel  em si segue para leste.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -1663,7 +1663,7 @@ largo o suficiente para duas pessoas caminharem lado a lado com sobra de
 espaço.  A passagem aparenta ter um formato quase retangular.  Ao longe na
 direção sul você pode ver um pequeno facho de luz.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1683,7 +1683,7 @@ O Túnel Secreto~
 visitado ultimamente (nem em qualquer outro tempo).  Ele segue voltando-se
 para o norte e ao sul algo que parece um quarto.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1702,7 +1702,7 @@ prende seu olhar por alguns minutos ameaçando impedir sua entrada.
    Olhando ao redor da caverna, ela parece continuar para oeste e sul.
 No muro do norte uma estranha e vertical rachadura levar a algum lugar.
 ~
-40 8 0 0 0 1
+40 d 1
 D0
 Parece bastante apertada.
 ~
@@ -1725,7 +1725,7 @@ acima de sua cabeça.  A dança das sombras criada pela inquietação das chamas
 prende seu olhar por alguns minutos ameaçando impedir sua entrada.
    Olhando ao redor da caverna, ela parece continuar para leste e sul.
 ~
-40 8 0 0 0 1
+40 d 1
 D1
 ~
 ~
@@ -1748,7 +1748,7 @@ O teto cai aqui surpreendentemente, ou espere, será porque o chão voltou-se
 para cima?  O Tunel parece estreitar-se mais a medida  que você olha para o
 sul, e alarga-se mais na vista norte.  A luz ao sul continua a faiscar.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1769,7 +1769,7 @@ diagonal e uns dez ou doze pés de altura.  O Passadiço se afunila para baixo
 na direção oeste onde ele leva a uma porta com aproximadamente 5 pés de
 diagonal.  O caminho para o leste parece bloqueado por uma rocha.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 A rocha que bloqueia a passagem leste parece facilmente removível.
 ~
@@ -1778,6 +1778,7 @@ muro rocha~
 D3
 ~
 porta~
+:n 2
 1 -1 4122
 E
 muro rocha~
@@ -1791,7 +1792,7 @@ pequeno, quase perfeitamente circular, lugar não parece ser uma formação
 natural, sendo as paredes muito lisas e as entradas das portas para o norte
 e leste ambas com quase cinco pés de largura por onze de altura.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1799,6 +1800,7 @@ D0
 D1
 ~
 entrada porta~
+:n 2 A porta de entrada
 1 -1 4121
 S
 #4123
@@ -1809,7 +1811,7 @@ acima de sua cabeça.  A dança das sombras criada pela inquietação das chamas
 prende seu olhar por alguns minutos ameaçando impedir sua entrada.
    Olhando ao redor da caverna, ela parece continuar para oeste e norte.
 ~
-40 8 0 0 0 1
+40 d 1
 D0
 ~
 ~
@@ -1829,7 +1831,7 @@ prende seu olhar por alguns minutos ameaçando impedir sua entrada.
 uma passagem saindo do muro oeste da caverna que parece curvar-se na direção
 norte.
 ~
-40 8 0 0 0 1
+40 d 1
 D0
 ~
 ~
@@ -1849,7 +1851,7 @@ A Passagem~
 muro do sul é liso e quase parece dançar com as sombras criadas pelo faiscar
 da luz vinda da caverna ao leste.
 ~
-40 8 0 0 0 3
+40 d 3
 D0
 ~
 ~
@@ -1867,7 +1869,7 @@ diâmetro desse caminho é de aproximadamente dois pés, e é uma situação um
 tanto difícil.  Você torce para não encontrar nenhuma minhoca ou criaturas
 desta espécie, pois seria muito difícil se defender aqui.
 ~
-40 877 0 0 0 5
+40 acdfgij 5
 D0
 Você pode ver pequeno buraco marcando a saida norte desse lugar.
 ~
@@ -1879,4 +1881,4 @@ Você ve a luz vinda da saída sul daqui.
 ~
 0 -1 4118
 S
-$~
+$

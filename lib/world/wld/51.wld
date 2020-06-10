@@ -1,39 +1,41 @@
 #5100
 A Entrada da Cidade~
-   Vocï¿½ estï¿½ na entrada para uma pequena cidade subterrï¿½nea.  Um grande
-portï¿½o de adamantite encontra-se aberto para o oeste, dando entrada para o
-interior da cidade. Um brilho suspeito sai do chï¿½o, quase abaixo de vocï¿½.
+   Você está na entrada para uma pequena cidade subterrânea.  Um grande
+portão de adamantite encontra-se aberto para o oeste, dando entrada para o
+interior da cidade. Um brilho suspeito sai do chão, quase abaixo de você.
 ~
-51 13 0 0 0 0
+51 acd 0
 D3
-Um enorme portï¿½o abre para o oeste dando entrada para o interior da cidade.
+Um enorme portão abre para o oeste dando entrada para o interior da cidade.
 ~
-portï¿½o~
+portão~
+:n 1
 1 -1 5101
-D5
-Hï¿½ algo de muito suspeito ali...
-~
-~
-1 -1 3900
 E
-portï¿½o~
-Um grande portï¿½o de adamantite com emblemas de aranhas gigantes encravados
+portão~
+Um grande portão de adamantite com emblemas de aranhas gigantes encravados
 encontra-se aqui.
 ~
+D5
+Há algo de muito suspeito ali...
+~
+~
+d -1 3900
 S
 #5101
 Uma Rua da Cidade~
-   Vocï¿½ anda ao longo de uma grande rua florida indo norte-sul.  Um grande
-portï¿½o encontra-se para o leste enquanto um prï¿½dio permanece para o oeste.
+   Você anda ao longo de uma grande rua florida indo norte-sul.  Um grande
+portão encontra-se para o leste enquanto um prédio permanece para o oeste.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 ~
 0 -1 5123
 D1
 ~
-portï¿½o~
+portão~
+:n 1
 1 -1 5100
 D2
 ~
@@ -46,9 +48,9 @@ D3
 S
 #5102
 Uma Rua da Cidade~
-   Vocï¿½ anda ao longo de uma grande rua florida indo norte e oeste.
+   Você anda ao longo de uma grande rua florida indo norte e oeste.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 ~
@@ -60,10 +62,10 @@ D3
 S
 #5103
 Uma Rua da Cidade~
-   Vocï¿½ anda ao longo de uma grande rua florida indo leste-oeste.  Uma
+   Você anda ao longo de uma grande rua florida indo leste-oeste.  Uma
 grande casa encontra-se para o sul.
 ~
-51 9 0 0 0 0
+51 ad 0 
 D1
 ~
 ~
@@ -79,11 +81,11 @@ D3
 S
 #5104
 A Terceira Casa~
-   Vocï¿½ encontra-se dentro da terceira casa da cidade; ela ï¿½ razoavelmente
-bem decorada pelo padrï¿½o drow, tendo algumas estï¿½tuas, murais e etc.  Um
+   Você encontra-se dentro da terceira casa da cidade; ela é razoavelmente
+bem decorada pelo padrão drow, tendo algumas estátuas, murais e etc.  Um
 porta leva ao sul.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 ~
@@ -91,25 +93,27 @@ D0
 D2
 ~
 porta~
+:n 2
 1 -1 5105
 S
 #5105
 A Sala do Trono~
-   A sala do trono da terceira casa ï¿½ decorada como o quintal de entrada,
+   A sala do trono da terceira casa é decorada como o quintal de entrada,
 exceto pelo sangue que cobre o altar no centro da sala.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 porta~
+:n 2
 1 -1 5104
 S
 #5106
 Uma Rua da Cidade~
-   Vocï¿½ anda ao longo de uma grande rua florida indo leste-oeste.  Para o
-norte estï¿½ um grande prï¿½dio.
+   Você anda ao longo de uma grande rua florida indo leste-oeste.  Para o
+norte está um grande prédio.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 ~
@@ -125,10 +129,10 @@ D3
 S
 #5107
 Uma Rua da Cidade~
-   Vocï¿½ anda ao longo de uma grande rua florida indo norte e leste.  Para o
-sul estï¿½ uma casa extremamente grande.
+   Você anda ao longo de uma grande rua florida indo norte e leste.  Para o
+sul está uma casa extremamente grande.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 ~
@@ -144,10 +148,10 @@ D2
 S
 #5108
 A Segunda Casa~
-   Vocï¿½ encontra-se dentro da segunda casa da cidade.  A sala ï¿½ decorada com
-estï¿½tuas de aranhas e murais por todos os lados.
+   Você encontra-se dentro da segunda casa da cidade.  A sala é decorada com
+estátuas de aranhas e murais por todos os lados.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 ~
@@ -155,26 +159,28 @@ D0
 D3
 ~
 porta~
+:n 2
 1 -1 5109
 S
 #5109
 A Sala do Trono~
-   A sala do trono da segunda casa ï¿½ somente um pouco mais decorada do que o
+   A sala do trono da segunda casa é somente um pouco mais decorada do que o
 quintal de entrada, tendo um altar no centro da sala.
 ~
-51 9 0 0 0 0
+51 ad 0
 D1
 ~
 porta~
+:n 2
 1 -1 5108
 S
 #5110
-O Portï¿½o Principal~
-   Vocï¿½ estï¿½ na entrada para a primeira casa da cidade.  Um grande portï¿½o,
-quase tï¿½o grande e elegante como aquele da entrada para a cidade,
+O Portão Principal~
+   Você está na entrada para a primeira casa da cidade.  Um grande portão,
+quase tão grande e elegante como aquele da entrada para a cidade,
 encontra-se aqui.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 ~
@@ -184,21 +190,23 @@ D2
 ~
 0 -1 5107
 D3
-Um grande portï¿½o econtra-se para o oeste.
+Um grande portão econtra-se para o oeste.
 ~
-portï¿½o~
+portão~
+:n 1
 1 -1 5111
 S
 #5111
 A Primeira Casa~
-   Vocï¿½ acha-se no quintal de entrada da primeira e maior casa da cidade.  A
-sala ï¿½ extremamente grande e decorada.  Murais e pinturas estï¿½o pendurados
+   Você acha-se no quintal de entrada da primeira e maior casa da cidade.  A
+sala é extremamente grande e decorada.  Murais e pinturas estão pendurados
 nas paredes representando algumas batalhas e uma aranha rainha.
 ~
-51 9 0 0 0 0
+51 ad 0
 D1
 ~
-portï¿½o~
+portão~
+:n 1
 1 -1 5110
 D3
 ~
@@ -207,13 +215,14 @@ D3
 S
 #5112
 A Sala do Trono~
-   A sala do trono da primeira casa ï¿½, em uma palavra...  Pavorosa.  ï¿½ tï¿½o
+   A sala do trono da primeira casa é, em uma palavra...  Pavorosa.  É tão
 chocante que chega a ser bonita.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 porta~
+:n 2
 1 -1 5113
 D1
 ~
@@ -221,21 +230,22 @@ D1
 0 -1 5111
 S
 #5113
-A Cï¿½mara Principal~
-   Esta ï¿½ a cï¿½mara do conselho para a Matriarca.  Uma enorme mesa e as
+A Câmara Principal~
+   Esta é a câmara do conselho para a Matriarca.  Uma enorme mesa e as
 cadeiras que a cercam repousam no centro da sala.
 ~
-51 9 0 0 0 0
+51 ad 0
 D2
 ~
 porta~
+:n 2
 1 -1 5112
 S
 #5114
 Uma Rua da Cidade~
-   Vocï¿½ anda ao longo de uma grande rua florida indo norte-sul e leste.
+   Você anda ao longo de uma grande rua florida indo norte-sul e leste.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 ~
@@ -251,10 +261,10 @@ D2
 S
 #5115
 Uma Rua da Cidade~
-   Vocï¿½ anda ao longo de uma grande rua florida rumando sul.  Um prï¿½dio
+   Você anda ao longo de uma grande rua florida rumando sul.  Um prédio
 encontra-se para o oeste.
 ~
-51 9 0 0 0 0
+51 ad 0
 D2
 ~
 ~
@@ -266,10 +276,10 @@ D3
 S
 #5116
 A Academia dos Sacerdotes~
-   Esta ï¿½ a mais generosa das academias, sendo assim, ela ï¿½ para os
+   Esta é a mais generosa das academias, sendo assim, ela é para os
 sacerdotes.
 ~
-51 9 0 0 0 0
+51 ad 0
 D1
 ~
 ~
@@ -277,15 +287,16 @@ D1
 S
 #5117
 Uma Rua da Cidade~
-   Vocï¿½ anda ao longo de uma grande rua florida indo leste-oeste.  Para o
+   Você anda ao longo de uma grande rua florida indo leste-oeste.  Para o
 norte avista-se um grande templo.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
-A entrada para o Templo de Lloth estï¿½ bloqueada por um grande portï¿½o
+A entrada para o Templo de Lloth está bloqueada por um grande portão
 ornamentado.
 ~
-portï¿½o~
+portão~
+:n 1
 1 -1 5119
 D1
 ~
@@ -298,9 +309,9 @@ D3
 S
 #5118
 A Academia dos Guerreiros~
-   Isso estï¿½ mais para quartel do que para uma escola.
+   Isso está mais para quartel do que para uma escola.
 ~
-51 9 0 0 0 0
+51 ad 0
 D2
 ~
 ~
@@ -308,14 +319,15 @@ D2
 S
 #5119
 A Entrada para o Templo de Lloth~
-   O Templo ï¿½ o maior prï¿½dio da cidade.  Atï¿½ mesmo suas portas estï¿½o alï¿½m da
-imaginaï¿½ï¿½o.  Dentro da entrada do templo, as paredes sï¿½o feitas de ouro e
+   O Templo é o maior prédio da cidade.  Até mesmo suas portas estão além da
+imaginação.  Dentro da entrada do templo, as paredes são feitas de ouro e
 adamantite.
 ~
-51 9 0 0 0 0
+51 ad 0
 D2
 ~
-portï¿½o~
+portão~
+:n 1
 1 -1 5117
 D5
 ~
@@ -324,10 +336,10 @@ D5
 S
 #5120
 A Academia dos Magos~
-   A Academia dos Magos ï¿½ razoavelmente bem decorada e vocï¿½ pode ver que os
-Drows preferem a mï¿½gica em detrimento do poder fï¿½sico.
+   A Academia dos Magos é razoavelmente bem decorada e você pode ver que os
+Drows preferem a mágica em detrimento do poder físico.
 ~
-51 9 0 0 0 0
+51 ad 0
 D2
 ~
 ~
@@ -335,10 +347,10 @@ D2
 S
 #5121
 Uma Rua da Cidade~
-   Vocï¿½ anda ao longo de uma grande rua florida rumando na direï¿½ï¿½o do
-leste.  Ao norte vocï¿½ avista um prï¿½dio.
+   Você anda ao longo de uma grande rua florida rumando na direção do
+leste.  Ao norte você avista um prédio.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 ~
@@ -353,12 +365,12 @@ D3
 0 -1 5117
 S
 #5122
-A Cï¿½mara dos Escravos~
-   A sala estï¿½ uma bagunï¿½a.  Palhas estï¿½o espalhadas por toda a sala,
+A Câmara dos Escravos~
+   A sala está uma bagunça.  Palhas estão espalhadas por toda a sala,
 servindo de cama para as infelizes criaturas, que se transformaram em
-vï¿½timas do imperialismo dos Drows.
+vítimas do imperialismo dos Drows.
 ~
-51 9 0 0 0 0
+51 ad 0
 D1
 ~
 ~
@@ -366,13 +378,14 @@ D1
 S
 #5123
 Uma Rua da Cidade~
-   Vocï¿½ anda ao longo de uma grande rua florida indo oeste e sul.  Ao norte
+   Você anda ao longo de uma grande rua florida indo oeste e sul.  Ao norte
 encontra-se uma casa relativamente pequena.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
-portï¿½o~
+portão~
+:n 1
 1 -1 5124
 D2
 ~
@@ -385,37 +398,38 @@ D3
 S
 #5124
 A Quarta Casa~
-   Vocï¿½ se encontra dentro da quarta casa da cidade.  Seu quintal de entrada
-ï¿½ muito desleixado para o padrï¿½o Drow e um tanto pequeno tambï¿½m.
+   Você se encontra dentro da quarta casa da cidade.  Seu quintal de entrada
+é muito desleixado para o padrão Drow e um tanto pequeno também.
 ~
-51 9 0 0 0 0
+51 ad 0
 D1
 ~
 ~
 0 -1 5125
 D2
 ~
-portï¿½o~
+portão~
+:n 1
 1 -1 5123
 S
 #5125
 A Sala do Trono~
-   A sala do trono ï¿½, basicamente, similar ao quintal de entrada no que diz
-respeito ï¿½ decoraï¿½ï¿½o.  Existe um pequeno trono atrï¿½s do altar.
+   A sala do trono é, basicamente, similar ao quintal de entrada no que diz
+respeito à decoração.  Existe um pequeno trono atrás do altar.
 ~
-51 9 0 0 0 0
+51 ad 0
 D3
 ~
 ~
 0 -1 5124
 S
 #5126
-O Salï¿½o de Entrada~
-   Vocï¿½ se acha no caminho de entrada para o templo, que continua para o
-norte em uma grande sala, indo leste e oeste.  Pequenas estï¿½tuas de aranhas
+O Salão de Entrada~
+   Você se acha no caminho de entrada para o templo, que continua para o
+norte em uma grande sala, indo leste e oeste.  Pequenas estátuas de aranhas
 se alinham nas paredes do caminho de entrada.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 ~
@@ -427,25 +441,25 @@ D4
 S
 #5127
 Uma Sala Longa~
-   Vocï¿½ estï¿½ numa sala longa ladeada com adamantite.  Nas paredes estï¿½o
+   Você está numa sala longa ladeada com adamantite.  Nas paredes estão
 esculpidas pinturas de elfos e aranhas.  A sala continua leste e oeste.  No
-momento que vocï¿½ olha para o fundo da sala, vocï¿½ avista um ou dois vultos
-movendo-se para longe de vocï¿½.
+momento que você olha para o fundo da sala, você avista um ou dois vultos
+movendo-se para longe de você.
    Para o norte encontra-se uma escada obsidiana.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 ~
 0 -1 5135
-D1
-~
-~
-0 -1 5128
 D2
 ~
 ~
 0 -1 5126
+D1
+~
+~
+0 -1 5128
 D3
 ~
 ~
@@ -453,12 +467,12 @@ D3
 S
 #5128
 Uma Sala Longa~
-   Vocï¿½ estï¿½ numa sala longa ladeada com adamantite.  Nas paredes estï¿½o
+   Você está numa sala longa ladeada com adamantite.  Nas paredes estão
 esculpidas pinturas de elfos e aranhas.  A sala continua leste e oeste.  No
-momento que vocï¿½ olha para o fundo da sala, vocï¿½ avista um ou dois vultos
-movendo-se para longe de vocï¿½.
+momento que você olha para o fundo da sala, você avista um ou dois vultos
+movendo-se para longe de você.
 ~
-51 9 0 0 0 0
+51 ad 0
 D1
 ~
 ~
@@ -470,16 +484,17 @@ D3
 S
 #5129
 Uma Sala Longa~
-   Vocï¿½ estï¿½ numa sala longa ladeada com adamantite.  Nas paredes estï¿½o
+   Você está numa sala longa ladeada com adamantite.  Nas paredes estão
 esculpidas pinturas de elfos e aranhas.  A sala continua leste e oeste.  No
-momento que vocï¿½ olha para o fundo da sala, vocï¿½ avista um ou dois vultos
-movendo-se para longe de vocï¿½.
-   Para o norte vocï¿½ avista uma porta.
+momento que você olha para o fundo da sala, você avista um ou dois vultos
+movendo-se para longe de você.
+   Para o norte você avista uma porta.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 porta~
+:n 2
 1 -1 5150
 D1
 ~
@@ -492,12 +507,12 @@ D3
 S
 #5130
 Uma Sala Longa~
-   Vocï¿½ estï¿½ numa sala longa ladeada com adamantite.  Nas paredes estï¿½o
+   Você está numa sala longa ladeada com adamantite.  Nas paredes estão
 esculpidas pinturas de elfos e aranhas.  A sala continua leste e oeste.  No
-momento que vocï¿½ olha para o fundo da sala, vocï¿½ avista um ou dois vultos
-movendo-se para longe de vocï¿½.
+momento que você olha para o fundo da sala, você avista um ou dois vultos
+movendo-se para longe de você.
 ~
-51 9 0 0 0 0
+51 ad 0
 D1
 ~
 ~
@@ -509,12 +524,12 @@ D3
 S
 #5131
 Uma Sala Longa~
-   Vocï¿½ estï¿½ numa sala longa ladeada com adamantite.  Nas paredes estï¿½o
+   Você está numa sala longa ladeada com adamantite.  Nas paredes estão
 esculpidas pinturas de elfos e aranhas.  A sala continua leste e oeste.  No
-momento que vocï¿½ olha para o fundo da sala, vocï¿½ avista um ou dois vultos
-movendo-se para longe de vocï¿½.
+momento que você olha para o fundo da sala, você avista um ou dois vultos
+movendo-se para longe de você.
 ~
-51 9 0 0 0 0
+51 ad 0
 D1
 ~
 ~
@@ -526,13 +541,13 @@ D3
 S
 #5132
 Uma Sala Longa~
-   Vocï¿½ estï¿½ numa sala longa ladeada com adamantite.  Nas paredes estï¿½o
+   Você está numa sala longa ladeada com adamantite.  Nas paredes estão
 esculpidas pinturas de elfos e aranhas.  A sala continua leste e oeste.  No
-momento que vocï¿½ olha para o fundo da sala, vocï¿½ avista um ou dois vultos
-movendo-se para longe de vocï¿½.
-   Para o sul vocï¿½ avista uma porta.
+momento que você olha para o fundo da sala, você avista um ou dois vultos
+movendo-se para longe de você.
+   Para o sul você avista uma porta.
 ~
-51 9 0 0 0 0
+51 ad 0
 D1
 ~
 ~
@@ -540,6 +555,7 @@ D1
 D2
 ~
 porta~
+:n 2
 1 -1 5133
 D3
 ~
@@ -548,24 +564,25 @@ D3
 S
 #5133
 O Quartel dos Guerreiros~
-   A sala estï¿½ uma completa desordem.  Nenhuma das camas estï¿½ arrumada,
+   A sala está uma completa desordem.  Nenhuma das camas está arrumada,
 roupas e outros itens foram deixados por tada a sala.  Bem, os guerreiros
-drow nunca foram conhecidos por sua organizaï¿½ï¿½o.
+drow nunca foram conhecidos por sua organização.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 porta~
+:n 2
 1 -1 5131
 S
 #5134
 Uma Sala Longa~
-   Vocï¿½ estï¿½ numa sala longa ladeada com adamantite.  Nas paredes estï¿½o
+   Você está numa sala longa ladeada com adamantite.  Nas paredes estão
 esculpidas pinturas de elfos e aranhas.  A sala continua leste e oeste.  No
-momento que vocï¿½ olha para o fundo da sala, vocï¿½ avista um ou dois vultos
-movendo-se para longe de vocï¿½.
+momento que você olha para o fundo da sala, você avista um ou dois vultos
+movendo-se para longe de você.
 ~
-51 9 0 0 0 0
+51 ad 0
 D1
 ~
 ~
@@ -577,10 +594,10 @@ D3
 S
 #5135
 A Escada Principal~
-   Vocï¿½ econtra-se na base de uma enorme escada obsidiana feita de
-adamantite.  As extremidades estï¿½o enfeitadas com ouro.
+   Você econtra-se na base de uma enorme escada obsidiana feita de
+adamantite.  As extremidades estão enfeitadas com ouro.
 ~
-51 9 0 0 0 0
+51 ad 0
 D2
 ~
 ~
@@ -591,11 +608,11 @@ D4
 0 -1 5136
 S
 #5136
-O Salï¿½o Principal~
-   Voce encontra-se no meio do salï¿½o principal.  As paredes sï¿½o enfeitadas
+O Salão Principal~
+   Voce encontra-se no meio do salão principal.  As paredes são enfeitadas
 com a mais pura adamantite com ouro.  Mosaicos alinham-se nas paredes.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 ~
@@ -603,6 +620,7 @@ D0
 D1
 ~
 porta~
+:n 2
 1 -1 5137
 D5
 ~
@@ -611,23 +629,24 @@ D5
 S
 #5137
 O Quartel dos Magos~
-   O quartel dos magos ï¿½ mais limpo, com a exceï¿½ï¿½o de uns poucos recipientes
-com componentes usados.  E ï¿½ melhor decorado tambï¿½m.  Camas alinham-se no
-chï¿½o para os magos repousarem nelas.  A ï¿½nica porta estï¿½ para o oeste.
+   O quartel dos magos é mais limpo, com a exceção de uns poucos recipientes
+com componentes usados.  E é melhor decorado também.  Camas alinham-se no
+chão para os magos repousarem nelas.  A única porta está para o oeste.
 ~
-51 9 0 0 0 0
+51 ad 0
 D3
 ~
 porta~
+:n 2
 1 -1 5136
 S
 #5138
-O Salï¿½o Principal~
-   Vocï¿½ estï¿½ andando pelo salï¿½o principal, decorado com adamantite e ouro.
-Para o norte, o salï¿½o continua para baixo, passando por um lance de escada,
+O Salão Principal~ 
+   Você está andando pelo salão principal, decorado com adamantite e ouro.
+Para o norte, o salão continua para baixo, passando por um lance de escada,
 enquanto existe uma porta para o oeste.
 ~
-51 9 0 0 0 0
+51 ad 0
 D2
 ~
 ~
@@ -635,6 +654,7 @@ D2
 D3
 ~
 porta~
+:n 2
 1 -1 5139
 D5
 ~
@@ -643,25 +663,27 @@ D5
 S
 #5139
 O Quartel dos Sacerdotes~
-   A cï¿½mara ï¿½ inteligentemente decorada com estï¿½tuas em formato de aranhas,
-murais e similares.  Grandes camas alinham-se no chï¿½o fazendo desta sala um
-lugar confortï¿½vel de viver.
+   A câmara é inteligentemente decorada com estátuas em formato de aranhas,
+murais e similares.  Grandes camas alinham-se no chão fazendo desta sala um
+lugar confortável de viver.
 ~
-51 9 0 0 0 0
+51 ad 0
 D1
 ~
 porta~
+:n 2
 1 -1 5138
 S
 #5140
 A Escada Principal~
-   Vocï¿½ estï¿½ subindo um lance de escadas rodeada com paredes de adamantite.
-Para o norte vocï¿½ vï¿½ uma enorme porta dourada.
+   Você está subindo um lance de escadas rodeada com paredes de adamantite.
+Para o norte você vê uma enorme porta dourada.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 porta~
+:n 2
 1 -1 5141
 D4
 ~
@@ -669,12 +691,12 @@ D4
 0 -1 5138
 S
 #5141
-A Cï¿½mara Principal~
-   Este ï¿½ o lado sul de um amplo auditï¿½rio usado para serviï¿½os dos clï¿½rigos
-drows.  No centro existe um enorme foï¿½o de sacrifï¿½cios e atrï¿½s dele
+A Câmara Principal~
+   Este é o lado sul de um amplo auditório usado para serviços dos clérigos
+drows.  No centro existe um enorme foço de sacrifícios e atrás dele
 avista-se um altar.
 ~
-51 9 0 0 0 0
+51 ad 0
 D1
 ~
 ~
@@ -682,6 +704,7 @@ D1
 D2
 ~
 porta~
+:n 2
 1 -1 5140
 D3
 ~
@@ -689,11 +712,11 @@ D3
 0 -1 5144
 S
 #5142
-O Lado Leste da Cï¿½mara Principal~
-   Vocï¿½ estï¿½ no lado leste da cï¿½mara contemplando o foï¿½o.  Para o leste
-existe uma porta enquanto que ao norte estï¿½ o altar.
+O Lado Leste da Câmara Principal~
+   Você está no lado leste da câmara contemplando o foço.  Para o leste
+existe uma porta enquanto que ao norte está o altar.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 ~
@@ -701,6 +724,7 @@ D0
 D1
 ~
 porta~
+:n 2
 1 -1 5146
 D2
 ~
@@ -708,20 +732,20 @@ D2
 0 -1 5141
 S
 #5143
-O Foï¿½o de Sacrifï¿½cio~
-   Enquanto vocï¿½ desce dentro do foï¿½o, milhares de aranhas cobrem vocï¿½,
-rasgando seu corpo frï¿½gil em fragmentos.
+O Foço de Sacrifício~
+   Enquanto você desce dentro do foço, milhares de aranhas cobrem você,
+rasgando seu corpo frágil em fragmentos.
 
-Lloth agradece ï¿½ voce pelo seu sacrifï¿½cio.
+Lloth agradece à voce pelo seu sacrifício.
 ~
-51 10 0 0 0 0
+51 bd 0
 S
 #5144
-O Lado Oeste da Cï¿½mara Principal~
-   Vocï¿½ estï¿½ no lado oeste da cï¿½mara principal observando o foï¿½o de
-sacrifï¿½cios.  Para o norte encontra-se um altar.
+O Lado Oeste da Câmara Principal~
+   Você está no lado oeste da câmara principal observando o foço de
+sacrifícios.  Para o norte encontra-se um altar.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 ~
@@ -733,12 +757,12 @@ D2
 S
 #5145
 O Altar~
-   Vocï¿½ se depara com um altar coberto com manchas de sangue recentes.
-Entalhado no topo do altar estï¿½ uma aranha gigante com uma cabeï¿½a humana.
-Olhando para baixo do altar, vocï¿½ avista um grande foï¿½o de sacrifï¿½cios
-infestado com milhares de aranhas procurando pela prï¿½xima refeiï¿½ï¿½o!
+   Você se depara com um altar coberto com manchas de sangue recentes.
+Entalhado no topo do altar está uma aranha gigante com uma cabeça humana.
+Olhando para baixo do altar, você avista um grande foço de sacrifícios
+infestado com milhares de aranhas procurando pela próxima refeição!
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 ~
@@ -752,46 +776,49 @@ D3
 ~
 0 -1 5144
 D5
-Milhares de aranhas encaram vocï¿½ sem disfarï¿½ar a fome.
+Milhares de aranhas encaram você sem disfarçar a fome.
 ~
 ~
 0 -1 5143
 S
 #5146
 As Celas dos Escravos~
-   Este ï¿½ a sala principal que dï¿½ acesso ï¿½s celas dos escravos que serï¿½o
-sacrificados.  Vocï¿½ nota que nï¿½o hï¿½ guardas por perto.
+   Este é a sala principal que dá acesso às celas dos escravos que serão
+sacrificados.  Você nota que não há guardas por perto.
 ~
-51 9 0 0 0 0
+51 ad 0
 D0
 ~
 cela~
+:n 2
 1 -1 5147
 D3
 ~
 porta~
+:n 2
 1 -1 5142
 S
 #5147
 O Curral dos Escravos~
-   Carnes e pï¿½es apodrecidos encontram-se no chï¿½o enquanto algemas estï¿½o
-penduradas nas paredes.  A sala cheira ï¿½ morte.  Vocï¿½ fica nauseado e decide
-deixar a sala atï¿½ mesmo porque vocï¿½ estï¿½, obviamente, atrasado para salvar o
+   Carnes e pães apodrecidos encontram-se no chão enquanto algemas estão
+penduradas nas paredes.  A sala cheira à morte.  Você fica nauseado e decide
+deixar a sala até mesmo porque você está, obviamente, atrasado para salvar o
 escravo.
 ~
-51 9 0 0 0 0
+51 ad 0
 D2
 ~
 cela~
+:n 2
 1 -1 5146
 S
 #5148
 A Sacristia~
-   Vocï¿½ estï¿½ dentro da sacristia atrï¿½s do altar.  Acima de vocï¿½ existe uma
-enorme ilustraï¿½ï¿½o de uma fï¿½mea drow transformando-se em uma enorme aranha e
+   Você está dentro da sacristia atrás do altar.  Acima de você existe uma
+enorme ilustração de uma fêmea drow transformando-se em uma enorme aranha e
 voltando ao normal de novo.  Existe uma porta para o oeste.
 ~
-51 9 0 0 0 0
+51 ad 0
 D2
 ~
 ~
@@ -799,28 +826,31 @@ D2
 D3
 ~
 porta~
+:n 2
 2 5115 5149
 S
 #5149
 O Tesouro~
-   Este ï¿½, obviamente, um local de armazenagem temporï¿½rio para os tesouros
+   Este é, obviamente, um local de armazenagem temporário para os tesouros
 coletados, estando eles um tanto quanto desprotegidos.
 ~
-51 9 0 0 0 0
+51 ad 0
 D1
 ~
 porta~
+:n 2
 2 5115 5148
 S
 #5150
-A Cï¿½mara do Mestre de Armas~
-   Estï¿½ ï¿½ um cï¿½modo de uma sï¿½ pessoa muito elegante.  O dono deve ser muito
+A Câmara do Mestre de Armas~
+   Está é um cômodo de uma só pessoa muito elegante.  O dono deve ser muito
 respeitado para receber este tipo de tratamento.
 ~
-51 9 0 0 0 0
+51 ad 0
 D2
 ~
 porta~
+:n 2
 1 -1 5129
 S
-$~
+$

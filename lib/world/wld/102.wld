@@ -1,14 +1,18 @@
 #10200
 Uma Larga Estrada Pelos Contrafortes~
-   Uma estrada bastante gasta leva a oeste atï¿½ os contrafortes.  Ela parece
-ter sido recentemente limpa e parece seguro seguir nesta direï¿½ï¿½o.  A sudeste
+   Uma estrada bastante gasta leva a oeste até os contrafortes.  Ela parece
+ter sido recentemente limpa e parece seguro seguir nesta direção.  A sudeste
 parece acabar a estrada.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
 0 -1 10263
+D9
+~
+~
+0 -1 5614
 D2
 ~
 ~
@@ -17,18 +21,14 @@ D3
 ~
 ~
 0 -1 10201
-D9
-~
-~
-0 -1 5614
 S
 #10201
 Uma Larga Estrada Pelos Contrafortes~
-   A estrada continua atravï¿½s dos contrafortes para leste e oeste.  Nos dois
-lados da estrada as colinas se destacam dentre as ï¿½rvores e arbustos.  Estï¿½
-ï¿½ realmente a mais bela paisagem de Jareth.
+   A estrada continua através dos contrafortes para leste e oeste.  Nos dois
+lados da estrada as colinas se destacam dentre as árvores e arbustos.  Está
+é realmente a mais bela paisagem de Jareth.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -48,12 +48,12 @@ D3
 S
 #10202
 Na Entrada do Castelo~
-   A porta do castelo fica a oeste, na entrada hï¿½ belas bandeiras
-representando o Senhor e a Senhora deste lugar.  Olhando ao leste, vocï¿½
-percebe por que este lugar ï¿½ visitado pelos mais influentes membros da
-sociedade - as colinas e o luxuriante cenï¿½rio, calmo e sereno.
+   A porta do castelo fica a oeste, na entrada há belas bandeiras
+representando o Senhor e a Senhora deste lugar.  Olhando ao leste, você
+percebe por que este lugar é visitado pelos mais influentes membros da
+sociedade - as colinas e o luxuriante cenário, calmo e sereno.
 ~
-102 64 0 0 0 2
+102 g 2
 D0
 ~
 ~
@@ -69,27 +69,31 @@ D2
 D3
 ~
 porta~
-0 -1 10203
+:n 2 a porta
+ag -1 10203
 S
 #10203
 A Chapelaria~
-   ï¿½ uma pequena sala, onde se guardam os diversos casacos e capas dos
+   É uma pequena sala, onde se guardam os diversos casacos e capas dos
 convidados do castelo.  Portas seguem para o interior do castelo ao norte,
 sul, e oeste.  A porta ao leste, claro, leva ao lado exterior. 
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 porta~
-0 -1 10204
+:n 2 a porta
+ag -1 10204
 D1
 ~
 porta~
-0 -1 10202
+:n 2 a porta
+ag -1 10202
 D2
 ~
 porta~
-0 -1 10207
+:n 2 a porta
+ag -1 10207
 D3
 ~
 ~
@@ -98,10 +102,10 @@ S
 #10204
 Um Curto Corredor~
    Aqui talvez nem seja grande o bastante para ser chamado de corredor.  Uma
-porta fica pela parede sul, e outra porta fica ao norte, em uma distï¿½ncia
+porta fica pela parede sul, e outra porta fica ao norte, em uma distância
 insignificante uma da outra.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 ~
@@ -109,19 +113,21 @@ D0
 D2
 ~
 porta~
-0 -1 10203
+:n 2 a porta
+ag -1 10203
 S
 #10205
 Um Curto Corredor~
    Aqui talvez nem seja grande o bastante para ser chamado de corredor.  Uma
-porta fica pela parede sul, e outra porta fica ao norte, em uma distï¿½ncia
+porta fica pela parede sul, e outra porta fica ao norte, em uma distância
 insignificante uma da outra.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 porta~
-0 -1 10206
+:n 2 a porta
+ag -1 10206
 D2
 ~
 ~
@@ -130,32 +136,35 @@ S
 #10206
 O Quarto Particular do Senhor~
    Como se o Senhor deste lugar nunca precisasse realmente deste quarto -
-como se isto pudesse se elevar ï¿½ categoria de quarto.  De qualquer forma ï¿½
+como se isto pudesse se elevar à categoria de quarto.  De qualquer forma é
 aqui que ele se recolhe de sua Senhora e de seus convidados, e ele
 definitivamente precisa fazer isto.  O fato de haver uma pequena cama no
-canto nï¿½o significa nada...  Nï¿½o ï¿½?
+canto não significa nada...  Não é?
 ~
-102 72 0 0 0 0
+102 dg 0
 D2
 ~
 porta~
-0 -1 10205
+:n 2 a porta
+ag -1 10205
 D3
 ~
 porta~
-0 -1 10214
+:n 2 a porta
+ag -1 10214
 S
 #10207
 Um Curto Corredor~
    Aqui talvez nem seja grande o bastante para ser chamado de corredor.  Uma
-porta fica pela parede sul, e outra porta fica ao norte, em uma distï¿½ncia
+porta fica pela parede sul, e outra porta fica ao norte, em uma distância
 insignificante uma da outra.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 porta~
-0 -1 10203
+:n 2 a porta
+ag -1 10203
 D2
 ~
 ~
@@ -164,10 +173,10 @@ S
 #10208
 Um Curto Corredor~
    Aqui talvez nem seja grande o bastante para ser chamado de corredor.  Uma
-porta fica pela parede sul, e outra porta fica ao norte, em uma distï¿½ncia
+porta fica pela parede sul, e outra porta fica ao norte, em uma distância
 insignificante uma da outra.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 ~
@@ -175,33 +184,36 @@ D0
 D2
 ~
 porta~
-0 -1 10209
+:n 2 a porta
+ag -1 10209
 S
 #10209
 Os Aposentos do Senhor e da Senhora~
-   Hï¿½ uma bela cama no centro do quarto, ela parece bastante confortï¿½vel, e
-as cortinas que a adornam dï¿½o um toque romï¿½ntico ao lugar.  Pelo jeito, o
+   Há uma bela cama no centro do quarto, ela parece bastante confortável, e
+as cortinas que a adornam dão um toque romântico ao lugar.  Pelo jeito, o
 Senhor e a Senhora desfrutam da companhia um do outro, particularmente,
-tanto quanto em pï¿½blico.
+tanto quanto em público.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 porta~
-0 -1 10208
+:n 2 a porta
+ag -1 10208
 D3
 ~
 porta~
-0 -1 10222
+:n 2 a porta
+ag -1 10222
 S
 #10210
-A Cï¿½mara Principal~
-   O teto desta enorme cï¿½mara alcanï¿½a a parte mais alta do castelo, seu
-telhado estï¿½ pelo menos a cem pï¿½s acima de sua cabeï¿½a.  Ao norte fica o
-salï¿½o de baile principal, uma sala usada em praticamente todas as noites.
-Ao sul hï¿½ a cozinha.  Uma porta fica na parede oeste.
+A Câmara Principal~
+   O teto desta enorme câmara alcança a parte mais alta do castelo, seu
+telhado está pelo menos a cem pés acima de sua cabeça.  Ao norte fica o
+salão de baile principal, uma sala usada em praticamente todas as noites.
+Ao sul há a cozinha.  Uma porta fica na parede oeste.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 ~
@@ -220,13 +232,13 @@ D3
 0 -1 10211
 S
 #10211
-A Cï¿½mara Principal~
-   O teto desta enorme cï¿½mara alcanï¿½a a parte mais alta do castelo, seu
-telhado estï¿½ pelo menos a cem pï¿½s acima de sua cabeï¿½a.  Ao norte fica o
-salï¿½o de baile principal, uma sala usada em praticamente todas as noites.
-Ao sul fica a despensa onde todos os alimentos secos sï¿½o mantidos.
+A Câmara Principal~
+   O teto desta enorme câmara alcança a parte mais alta do castelo, seu
+telhado está pelo menos a cem pés acima de sua cabeça.  Ao norte fica o
+salão de baile principal, uma sala usada em praticamente todas as noites.
+Ao sul fica a despensa onde todos os alimentos secos são mantidos.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 ~
@@ -238,16 +250,17 @@ D1
 D3
 ~
 porta~
-0 -1 10226
+:n 2 a porta
+ag -1 10226
 S
 #10212
-O Grande Salï¿½o de Baile~
-   Esta grande cï¿½mara ï¿½ permanentemente decorada da melhor maneira para as
-festas.  Um criado estï¿½ sempre disponï¿½vel, assim como um mï¿½sico para quem
-quer que deseje danï¿½ar - nï¿½o importa se ï¿½ dia ou noite.  A cï¿½mara principal
+O Grande Salão de Baile~
+   Esta grande câmara é permanentemente decorada da melhor maneira para as
+festas.  Um criado está sempre disponível, assim como um músico para quem
+quer que deseje dançar - não importa se é dia ou noite.  A câmara principal
 fica ao sul.
 ~
-102 72 0 0 0 0
+102 dg 0
 D1
 ~
 ~
@@ -258,13 +271,13 @@ D2
 0 -1 10211
 S
 #10213
-O Grande Salï¿½o de Baile~
-   Esta grande cï¿½mara ï¿½ permanentemente decorada da melhor maneira para as
-festas.  Um criado estï¿½ sempre disponï¿½vel, assim como um mï¿½sico para quem
-quer que deseje danï¿½ar - nï¿½o importa se ï¿½ dia ou noite.  A cï¿½mara principal
+O Grande Salão de Baile~
+   Esta grande câmara é permanentemente decorada da melhor maneira para as
+festas.  Um criado está sempre disponível, assim como um músico para quem
+quer que deseje dançar - não importa se é dia ou noite.  A câmara principal
 fica ao sul.
 ~
-102 72 0 0 0 0
+102 dg 0
 D2
 ~
 ~
@@ -276,15 +289,16 @@ D3
 S
 #10214
 Um Corredor Esquecido~
-   Este corredor nï¿½o parece ser usado freqï¿½entemente, nem parece ser mantido
+   Este corredor não parece ser usado freqüentemente, nem parece ser mantido
 com o mesmo zelo pelos criados do castelo.  Possivelmente esta pequena e
-estreita passagem seja mantida pelo prï¿½prio Senhor do lugar.
+estreita passagem seja mantida pelo próprio Senhor do lugar.
 ~
-102 72 0 0 0 0
+102 dg 0
 D1
 ~
 porta~
-0 -1 10206
+:n 2 a porta
+ag -1 10206
 D3
 ~
 ~
@@ -292,11 +306,11 @@ D3
 S
 #10215
 Um Corredor Esquecido~
-   Este corredor nï¿½o parece ser usado freqï¿½entemente, nem parece ser mantido
+   Este corredor não parece ser usado freqüentemente, nem parece ser mantido
 com o mesmo zelo pelos criados do castelo.  Possivelmente esta pequena e
-estreita passagem seja mantida pelo prï¿½prio Senhor do lugar.
+estreita passagem seja mantida pelo próprio Senhor do lugar.
 ~
-102 72 0 0 0 0
+102 dg 0
 D1
 ~
 ~
@@ -308,13 +322,13 @@ D3
 S
 #10216
 Um Corredor Esquecido~
-   Este corredor nï¿½o parece ser usado freqï¿½entemente, nem parece ser mantido
+   Este corredor não parece ser usado freqüentemente, nem parece ser mantido
 com o mesmo zelo pelos criados do castelo.  Possivelmente esta pequena e
-estreita passagem seja mantida pelo prï¿½prio Senhor do lugar.  Ela termina
-aqui, pequenas portas podem ser vistas ao sul e ao norte, ambas parecem nï¿½o
-terem sido abertas hï¿½ anos.
+estreita passagem seja mantida pelo próprio Senhor do lugar.  Ela termina
+aqui, pequenas portas podem ser vistas ao sul e ao norte, ambas parecem não
+terem sido abertas há anos.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 ~
@@ -325,11 +339,11 @@ D1
 0 -1 10215
 S
 #10217
-A Saï¿½da dos Fundos~
-   Os criados utilizam-se desta saï¿½da, ela parece bem usada, com os batentes
-gastos, o que demonstra o grande nï¿½mero de criados que transitam por aqui.
+A Saída dos Fundos~
+   Os criados utilizam-se desta saída, ela parece bem usada, com os batentes
+gastos, o que demonstra o grande número de criados que transitam por aqui.
 ~
-102 72 0 0 0 0
+102 dg 0
 D2
 ~
 ~
@@ -337,11 +351,11 @@ D2
 S
 #10218
 A Despensa~
-   Todos os comestï¿½veis secos do castelo sï¿½o mantidos neste quarto,
-incluindo o grande montante de ï¿½lcool que faz a festa do Senhor e da Senhora
-durar o ano todo.  Atravï¿½s da porta ao leste, hï¿½ a cozinha.
+   Todos os comestíveis secos do castelo são mantidos neste quarto,
+incluindo o grande montante de álcool que faz a festa do Senhor e da Senhora
+durar o ano todo.  Através da porta ao leste, há a cozinha.
 ~
-102 72 0 0 0 0
+102 dg 0
 D1
 ~
 ~
@@ -350,9 +364,9 @@ S
 #10219
 A Cozinha~
    Os cozinheiros do castelo trabalham diariamente, correndo contra o
-relï¿½gio, para manter boa comida no salï¿½o de baile e na prï¿½pria cozinha.  
+relógio, para manter boa comida no salão de baile e na própria cozinha.  
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 ~
@@ -360,7 +374,8 @@ D0
 D2
 ~
 porta~
-0 -1 10283
+:n 2 a porta
+ag -1 10283
 D3
 ~
 ~
@@ -368,11 +383,11 @@ D3
 S
 #10220
 O Corredor Sul~
-   Este ï¿½ um grande corredor que conecta os aposentos do Senhor e da Senhora
-ï¿½ cï¿½mara principal - ï¿½ usado pelos dois quando sentem-se cansados das festas
+   Este é um grande corredor que conecta os aposentos do Senhor e da Senhora
+à câmara principal - é usado pelos dois quando sentem-se cansados das festas
 e precisam de descanso e paz.  O corredor continua ao leste e oeste.
 ~
-102 72 0 0 0 0
+102 dg 0
 D1
 ~
 ~
@@ -384,11 +399,11 @@ D3
 S
 #10221
 O Corredor Sul~
-   Este ï¿½ um grande corredor que conecta os aposentos do Senhor e da Senhora
-ï¿½ cï¿½mara principal - ï¿½ usado pelos dois quando sentem-se cansados das festas
+   Este é um grande corredor que conecta os aposentos do Senhor e da Senhora
+à câmara principal - é usado pelos dois quando sentem-se cansados das festas
 e precisam de descanso e paz.  O corredor continua ao leste e oeste.
 ~
-102 72 0 0 0 0
+102 dg 0
 D1
 ~
 ~
@@ -400,16 +415,17 @@ D3
 S
 #10222
 O Corredor Sul~
-   Este ï¿½ um grande corredor que conecta os aposentos do Senhor e da Senhora
-ï¿½ cï¿½mara principal - ï¿½ usado pelos dois quando sentem-se cansados das festas
+   Este é um grande corredor que conecta os aposentos do Senhor e da Senhora
+à câmara principal - é usado pelos dois quando sentem-se cansados das festas
 e precisam de descanso e paz.  O corredor continua ao oeste, a porta para os
 aposentos do Senhor e da Senhora fica ao leste.
 ~
-102 72 0 0 0 0
+102 dg 0
 D1
 ~
 porta~
-0 -1 10209
+:n 2 a porta
+ag -1 10209
 D3
 ~
 ~
@@ -418,10 +434,10 @@ S
 #10223
 Uma Curva no Corredor~
    O corredor vira ao norte e ao leste, o caminho ao norte leva para a
-cï¿½mara principal e o caminho ao leste leva para os aposentos do Senhor e da
+câmara principal e o caminho ao leste leva para os aposentos do Senhor e da
 Senhora.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 ~
@@ -433,11 +449,11 @@ D1
 S
 #10224
 Corredor Oeste~
-   Este pequeno corredor ï¿½ usado pelo Senhor e pela Senhora para escapar
-para seus aposentos quanto a noite jï¿½ estï¿½ alta e eles precisam de descanso.
+   Este pequeno corredor é usado pelo Senhor e pela Senhora para escapar
+para seus aposentos quanto a noite já está alta e eles precisam de descanso.
 O corredor leva ao norte e ao sul.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 ~
@@ -449,15 +465,16 @@ D2
 S
 #10225
 Corredor Oeste~
-   Este pequeno corredor ï¿½ usado pelo Senhor e pela Senhora para escapar
-para seus aposentos quanto a noite jï¿½ estï¿½ alta e eles precisam de descanso.
+   Este pequeno corredor é usado pelo Senhor e pela Senhora para escapar
+para seus aposentos quanto a noite já está alta e eles precisam de descanso.
 O corredor leva ao norte e ao sul.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 porta~
-0 -1 10226
+:n 2 a porta
+ag -1 10226
 D2
 ~
 ~
@@ -465,61 +482,66 @@ D2
 S
 #10226
 A Base da Escadaria~
-   A escadaria leva para os quartos de hï¿½spedes onde todos os quartos dos
-convidados estï¿½o situados.  Ao leste hï¿½ a entrada para a cï¿½mara principal e
-atravï¿½s de uma porta ao sul, vocï¿½ tem um corredor levando para os aposentos
+   A escadaria leva para os quartos de hóspedes onde todos os quartos dos
+convidados estão situados.  Ao leste há a entrada para a câmara principal e
+através de uma porta ao sul, você tem um corredor levando para os aposentos
 do Senhor e da Senhora.
 ~
-102 72 0 0 0 0
+102 dg 0
 D1
 ~
 porta~
-0 -1 10211
+:n 2 a porta
+ag -1 10211
 D2
 ~
 porta~
-0 -1 10225
+:n 2 a porta
+ag -1 10225
 D4
 ~
 ~
 0 -1 10232
 S
 #10227
-O Quarto de Hï¿½spedes~
+O Quarto de Hóspedes~
    O quarto dos convidados tem um tom suave que claramente significa que ele
-ï¿½ destinado para descanso.  O castelo inteiro ï¿½ mais uma atraï¿½ï¿½o do que o
+é destinado para descanso.  O castelo inteiro é mais uma atração do que o
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao sul.
 ~
-102 72 0 0 0 0
+102 dg 0
 D2
 ~
 porta~
-0 -1 10230
+:n 2 a porta
+ag -1 10230
 S
 #10228
-O Quarto de Hï¿½spedes~
+O Quarto de Hóspedes~
    O quarto dos convidados tem um tom suave que claramente significa que ele
-ï¿½ destinado para descanso.  O castelo inteiro ï¿½ mais uma atraï¿½ï¿½o do que o
+é destinado para descanso.  O castelo inteiro é mais uma atração do que o
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 oeste.
 ~
-102 72 0 0 0 0
+102 dg 0
 D3
 ~
 porta~
-0 -1 10229
+:n 2 a porta
+ag -1 10229
 S
 #10229
 O Final Norte do Corredor~
-   O corredor termina em uma porta, presume-se que ela leve para a suï¿½te de
-hï¿½spedes que por sua vez, leva ao nï¿½vel superior.  Hï¿½ uma porta na parede
+   O corredor termina em uma porta, presume-se que ela leve para a suíte de
+hóspedes que por sua vez, leva ao nível superior.  Há uma porta na parede
 leste, o corredor segue ao oeste.
 ~
-102 72 0 0 0 0
+102 dg 0
 D1
 ~
 porta~
-0 -1 10228
+:n 2 a porta
+ag -1 10228
 D3
 ~
 ~
@@ -528,15 +550,16 @@ S
 #10230
 O Corredor Superior~
    Uma porta fica na parede norte, seguindo para um dos muitos quartos de
-hï¿½spedes deste nï¿½vel superior do castelo.  O corredor segue ao sul por uma
-boa distï¿½ncia, deixando muitas portas em ambos lados de suas paredes, todas
-levam para o quarto de hï¿½spedes.
+hóspedes deste nível superior do castelo.  O corredor segue ao sul por uma
+boa distância, deixando muitas portas em ambos lados de suas paredes, todas
+levam para o quarto de hóspedes.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 porta~
-0 -1 10227
+:n 2 a porta
+ag -1 10227
 D1
 ~
 ~
@@ -549,11 +572,11 @@ S
 #10231
 O Corredor Superior~
    O corredor segue ao sul e ao norte, deixando muitas portas em ambos lados
-de suas paredes, todas levam para o quarto de hï¿½spedes.  Esta ï¿½rea superior
-ï¿½ exclusivamente usada pelos hï¿½spedes do Senhor e da Senhora, os quartos sï¿½o
+de suas paredes, todas levam para o quarto de hóspedes.  Esta área superior
+é exclusivamente usada pelos hóspedes do Senhor e da Senhora, os quartos são
 luxuosos e bem asseados.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 ~
@@ -561,7 +584,8 @@ D0
 D1
 ~
 porta~
-0 -1 10242
+:n 2 a porta
+ag -1 10242
 D2
 ~
 ~
@@ -569,17 +593,18 @@ D2
 D3
 ~
 porta~
-0 -1 10243
+:n 2 a porta
+ag -1 10243
 S
 #10232
 O Corredor Superior~
    O corredor segue ao sul e ao norte, deixando muitas portas em ambos lados
-de suas paredes, todas levam para o quarto de hï¿½spedes.  Esta ï¿½rea superior
-ï¿½ exclusivamente usada pelos hï¿½spedes do Senhor e da Senhora, os quartos sï¿½o
-luxuosos e bem asseados.  Escadas levam para baixo, atï¿½ a cï¿½mara principal
+de suas paredes, todas levam para o quarto de hóspedes.  Esta área superior
+é exclusivamente usada pelos hóspedes do Senhor e da Senhora, os quartos são
+luxuosos e bem asseados.  Escadas levam para baixo, até a câmara principal
 do castelo.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 ~
@@ -587,7 +612,8 @@ D0
 D1
 ~
 porta~
-0 -1 10241
+:n 2 a porta
+ag -1 10241
 D2
 ~
 ~
@@ -595,7 +621,8 @@ D2
 D3
 ~
 porta~
-0 -1 10244
+:n 2 a porta
+ag -1 10244
 D5
 ~
 ~
@@ -604,11 +631,11 @@ S
 #10233
 O Corredor Superior~
    O corredor segue ao sul e ao norte, deixando muitas portas em ambos lados
-de suas paredes, todas levam para o quarto de hï¿½spedes.  Esta ï¿½rea superior
-ï¿½ exclusivamente usada pelos hï¿½spedes do Senhor e da Senhora, os quartos sï¿½o
+de suas paredes, todas levam para o quarto de hóspedes.  Esta área superior
+é exclusivamente usada pelos hóspedes do Senhor e da Senhora, os quartos são
 luxuosos e bem asseados.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 ~
@@ -616,7 +643,8 @@ D0
 D1
 ~
 porta~
-0 -1 10240
+:n 2 a porta
+ag -1 10240
 D2
 ~
 ~
@@ -624,16 +652,17 @@ D2
 D3
 ~
 porta~
-0 -1 10245
+:n 2 a porta
+ag -1 10245
 S
 #10234
 O Corredor Superior~
    O corredor segue ao sul e ao norte, deixando muitas portas em ambos lados
-de suas paredes, todas levam para o quarto de hï¿½spedes.  Esta ï¿½rea superior
-ï¿½ exclusivamente usada pelos hï¿½spedes do Senhor e da Senhora, os quartos sï¿½o
+de suas paredes, todas levam para o quarto de hóspedes.  Esta área superior
+é exclusivamente usada pelos hóspedes do Senhor e da Senhora, os quartos são
 luxuosos e bem asseados.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 ~
@@ -641,7 +670,8 @@ D0
 D1
 ~
 porta~
-0 -1 10239
+:n 2 a porta
+ag -1 10239
 D2
 ~
 ~
@@ -649,16 +679,17 @@ D2
 D3
 ~
 porta~
-0 -1 10246
+:n 2 a porta
+ag -1 10246
 S
 #10235
 O Corredor Superior~
    Uma porta fica na parede sul, seguindo para um dos muitos quartos de
-hï¿½spedes deste nï¿½vel superior do castelo.  O corredor segue ao sul por uma
-boa distï¿½ncia, deixando muitas portas em ambos lados de suas paredes, todas
-levam para o quarto de hï¿½spedes.
+hóspedes deste nível superior do castelo.  O corredor segue ao sul por uma
+boa distância, deixando muitas portas em ambos lados de suas paredes, todas
+levam para o quarto de hóspedes.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 ~
@@ -670,153 +701,165 @@ D1
 D2
 ~
 porta~
-0 -1 10238
+:n 2 a porta
+ag -1 10238
 S
 #10236
 O Final Sul do Corredor~
-   O corredor termina em uma porta, presume-se que ela leve para a suï¿½te de
-hï¿½spedes que por sua vez, leva ao nï¿½vel superior.  Hï¿½ uma porta na parede
+   O corredor termina em uma porta, presume-se que ela leve para a suíte de
+hóspedes que por sua vez, leva ao nível superior.  Há uma porta na parede
 leste, o corredor segue ao oeste.
 ~
-102 72 0 0 0 0
+102 dg 0
 D1
 ~
 porta~
-0 -1 10237
+:n 2 a porta
+ag -1 10237
 D3
 ~
 ~
 0 -1 10235
 S
 #10237
-O Quarto de Hï¿½spedes~
+O Quarto de Hóspedes~
    O quarto dos convidados tem um tom suave que claramente significa que ele
-ï¿½ destinado para descanso.  O castelo inteiro ï¿½ mais uma atraï¿½ï¿½o do que o
+é destinado para descanso.  O castelo inteiro é mais uma atração do que o
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 oeste.
 ~
-102 72 0 0 0 0
+102 dg 0
 D3
 ~
 porta~
-0 -1 10236
+:n 2 a porta
+ag -1 10236
 S
 #10238
-O Quarto de Hï¿½spedes~
+O Quarto de Hóspedes~
    O quarto dos convidados tem um tom suave que claramente significa que ele
-ï¿½ destinado para descanso.  O castelo inteiro ï¿½ mais uma atraï¿½ï¿½o do que o
+é destinado para descanso.  O castelo inteiro é mais uma atração do que o
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 norte.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 porta~
-0 -1 10235
+:n 2 a porta
+ag -1 10235
 S
 #10239
-O Quarto de Hï¿½spedes~
+O Quarto de Hóspedes~
    O quarto dos convidados tem um tom suave que claramente significa que ele
-ï¿½ destinado para descanso.  O castelo inteiro ï¿½ mais uma atraï¿½ï¿½o do que o
+é destinado para descanso.  O castelo inteiro é mais uma atração do que o
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 oeste.
 ~
-102 72 0 0 0 0
+102 dg 0
 D3
 ~
 porta~
-0 -1 10234
+:n 2 a porta
+ag -1 10234
 S
 #10240
-O Quarto de Hï¿½spedes~
+O Quarto de Hóspedes~
    O quarto dos convidados tem um tom suave que claramente significa que ele
-ï¿½ destinado para descanso.  O castelo inteiro ï¿½ mais uma atraï¿½ï¿½o do que o
+é destinado para descanso.  O castelo inteiro é mais uma atração do que o
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 oeste.
 ~
-102 72 0 0 0 0
+102 dg 0
 D3
 ~
 porta~
-0 -1 10233
+:n 2 a porta
+ag -1 10233
 S
 #10241
-O Quarto de Hï¿½spedes~
+O Quarto de Hóspedes~
    O quarto dos convidados tem um tom suave que claramente significa que ele
-ï¿½ destinado para descanso.  O castelo inteiro ï¿½ mais uma atraï¿½ï¿½o do que o
+é destinado para descanso.  O castelo inteiro é mais uma atração do que o
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 oeste.
 ~
-102 72 0 0 0 0
+102 dg 0
 D3
 ~
 porta~
-0 -1 10232
+:n 2 a porta
+ag -1 10232
 S
 #10242
-O Quarto de Hï¿½spedes~
+O Quarto de Hóspedes~
    O quarto dos convidados tem um tom suave que claramente significa que ele
-ï¿½ destinado para descanso.  O castelo inteiro ï¿½ mais uma atraï¿½ï¿½o do que o
+é destinado para descanso.  O castelo inteiro é mais uma atração do que o
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 oeste.
 ~
-102 72 0 0 0 0
+102 dg 0
 D3
 ~
 porta~
-0 -1 10231
+:n 2 a porta
+ag -1 10231
 S
 #10243
-O Quarto de Hï¿½spedes~
+O Quarto de Hóspedes~
    O quarto dos convidados tem um tom suave que claramente significa que ele
-ï¿½ destinado para descanso.  O castelo inteiro ï¿½ mais uma atraï¿½ï¿½o do que o
+é destinado para descanso.  O castelo inteiro é mais uma atração do que o
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 leste.
 ~
-102 72 0 0 0 0
+102 dg 0
 D1
 ~
 porta~
-0 -1 10231
+:n 2 a porta
+ag -1 10231
 S
 #10244
-O Quarto de Hï¿½spedes~
+O Quarto de Hóspedes~
    O quarto dos convidados tem um tom suave que claramente significa que ele
-ï¿½ destinado para descanso.  O castelo inteiro ï¿½ mais uma atraï¿½ï¿½o do que o
+é destinado para descanso.  O castelo inteiro é mais uma atração do que o
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 leste.
 ~
-102 72 0 0 0 0
+102 gd 0
 D1
 ~
 porta~
-0 -1 10232
+:n 2 a porta
+ag -1 10232
 S
 #10245
-O Quarto de Hï¿½spedes~
+O Quarto de Hóspedes~
    O quarto dos convidados tem um tom suave que claramente significa que ele
-ï¿½ destinado para descanso.  O castelo inteiro ï¿½ mais uma atraï¿½ï¿½o do que o
+é destinado para descanso.  O castelo inteiro é mais uma atração do que o
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 leste.
 ~
-102 72 0 0 0 0
+102 dg 0
 D1
 ~
 porta~
-0 -1 10233
+:n 2 a porta
+ag -1 10233
 S
 #10246
-O Quarto de Hï¿½spedes~
+O Quarto de Hóspedes~
    O quarto dos convidados tem um tom suave que claramente significa que ele
-ï¿½ destinado para descanso.  O castelo inteiro ï¿½ mais uma atraï¿½ï¿½o do que o
+é destinado para descanso.  O castelo inteiro é mais uma atração do que o
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 leste.
 ~
-102 72 0 0 0 0
+102 dg 0
 D1
 ~
 porta~
-0 -1 10234
+:n 2 a porta
+ag -1 10234
 S
 #10247
 Pela Parede do Castelo~
@@ -824,7 +867,7 @@ Pela Parede do Castelo~
 pedra podem ser claramente vistos de perto.  Ao leste e sul ficam os
 contrafortes que terminam no castelo, formando uma vista maravilhosa.
 ~
-102 64 0 0 0 2
+102 g 2
 D0
 ~
 ~
@@ -840,11 +883,11 @@ D2
 S
 #10248
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -864,11 +907,11 @@ D3
 S
 #10249
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -888,11 +931,11 @@ D3
 S
 #10250
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -912,11 +955,11 @@ D3
 S
 #10251
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -932,7 +975,7 @@ Pela Parede do Castelo~
 pedra podem ser claramente vistos de perto.  Ao leste e sul ficam os
 contrafortes que terminam no castelo, formando uma vista maravilhosa.
 ~
-102 64 0 0 0 2
+102 g 2
 D0
 ~
 ~
@@ -948,11 +991,11 @@ D2
 S
 #10253
 Ao Longo da Parede do Castelo~
-   Vocï¿½ alcanï¿½ou o final sul da parede do castelo, onde ela faz uma curva ao
+   Você alcançou o final sul da parede do castelo, onde ela faz uma curva ao
 norte e oeste.  A sua volta todo o esplendor dos contrafortes que cercam o
 castelo de Jareth, uma linda terra, cheia de verde.
 ~
-102 64 0 0 0 2
+102 g 2
 D0
 ~
 ~
@@ -964,11 +1007,11 @@ D1
 S
 #10254
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -988,11 +1031,11 @@ D3
 S
 #10255
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1012,11 +1055,11 @@ D3
 S
 #10256
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1032,11 +1075,11 @@ D3
 S
 #10257
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1048,11 +1091,11 @@ D3
 S
 #10258
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1064,12 +1107,12 @@ D3
 S
 #10259
 Um Caminho Lateral~
-   Este caminho segue ao norte ao longo das paredes do castelo, atï¿½ os
-estï¿½bulos, onde todos os hï¿½spedes guardam suas montarias.  Ao sul, estï¿½ a
-entrada para o castelo e em outras direï¿½ï¿½es estï¿½ o esplendor dos
+   Este caminho segue ao norte ao longo das paredes do castelo, até os
+estábulos, onde todos os hóspedes guardam suas montarias.  Ao sul, está a
+entrada para o castelo e em outras direções está o esplendor dos
 contrafortes que cercam Jareth.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1085,11 +1128,11 @@ D2
 S
 #10260
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1109,11 +1152,11 @@ D3
 S
 #10261
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  Eï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  EÉ difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1133,11 +1176,11 @@ D3
 S
 #10262
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  Eï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  EÉ difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1157,11 +1200,11 @@ D3
 S
 #10263
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D2
 ~
 ~
@@ -1173,11 +1216,11 @@ D3
 S
 #10264
 Um Caminho Lateral~
-   O caminho segue ao longo das paredes do castelo atravï¿½s dos estï¿½bulos e o
+   O caminho segue ao longo das paredes do castelo através dos estábulos e o
 celeiro.  Ao leste ficam os belos contrafortes desta maravilhosa terra, um
-lugar quase de surreal perfeiï¿½ï¿½o.
+lugar quase de surreal perfeição.
 ~
-102 64 0 0 0 2
+102 g 2
 D0
 ~
 ~
@@ -1193,11 +1236,11 @@ D2
 S
 #10265
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1217,11 +1260,11 @@ D3
 S
 #10266
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1241,11 +1284,11 @@ D3
 S
 #10267
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  Eï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  EÉ difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D2
 ~
 ~
@@ -1257,11 +1300,11 @@ D3
 S
 #10268
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1277,11 +1320,11 @@ D3
 S
 #10269
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1301,11 +1344,11 @@ D3
 S
 #10270
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1320,12 +1363,12 @@ D2
 0 -1 10264
 S
 #10271
-Um Caminho Lateral~
-   O caminho termina aqui, como tambï¿½m a parede do castelo.  Ao lado norte
+Um Caminho Lateral~  
+   O caminho termina aqui, como também a parede do castelo.  Ao lado norte
 fica um celeiro, usado para guardar o feno e para alimentar os animais dos
-convidados.  Do lado oeste hï¿½ o estï¿½bulo onde os animais sï¿½o mantidos.
+convidados.  Do lado oeste há o estábulo onde os animais são mantidos.
 ~
-102 64 0 0 0 2
+102 g 2
 D0
 ~
 ~
@@ -1346,11 +1389,11 @@ S
 #10272
 O Celeiro~
    Parece que os mais diversos tipos repousam aqui pelo celeiro de feno,
-enquanto seus mestres mais influentes ficam no castelo.  Hï¿½ um enorme monte
-de feno e grï¿½os estocados por todo o lugar, alguns dos montes de feno se
-transformaram em confortï¿½veis camas.
+enquanto seus mestres mais influentes ficam no castelo.  Há um enorme monte
+de feno e grãos estocados por todo o lugar, alguns dos montes de feno se
+transformaram em confortáveis camas.
 ~
-102 72 0 0 0 0
+102 gd 0
 D2
 ~
 ~
@@ -1358,22 +1401,22 @@ D2
 S
 #10273
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D1
 ~
 ~
 0 -1 10279
 S
 #10274
-O Estï¿½bulo~
-   Todas as montarias dos convidados sï¿½o mantidas aqui nesta pequena mas bem
-organizada estrutura.  A saï¿½da do lugar fica a leste.
+O Estábulo~
+   Todas as montarias dos convidados são mantidas aqui nesta pequena mas bem
+organizada estrutura.  A saída do lugar fica a leste.
 ~
-102 68 0 0 0 0
+102 gc 0
 D1
 ~
 ~
@@ -1381,11 +1424,11 @@ D1
 S
 #10275
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1405,11 +1448,11 @@ D3
 S
 #10276
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1425,11 +1468,11 @@ D3
 S
 #10277
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1445,11 +1488,11 @@ D2
 S
 #10278
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1465,13 +1508,13 @@ D3
 S
 #10279
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo. A ï¿½nica coisa
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo. A única coisa
 estranha fica a norte, onde o terreno se tornou plano, havendo alguma coisa
 muito grande em seu centro.
 ~
-102 64 0 0 0 5
+102 g 5
 D0
 ~
 ~
@@ -1491,11 +1534,11 @@ D3
 S
 #10280
 Os Contrafortes~
-   Ao todo redor podem ser vistas grandes colinas verdes.  ï¿½ difï¿½cil ver
-muito longe em qualquer direï¿½ï¿½o devido ao fato das muitas colinas obstruï¿½rem
-a visï¿½o, mas tudo o que vocï¿½ consegue ver ï¿½ simplesmente lindo.
+   Ao todo redor podem ser vistas grandes colinas verdes.  É difícil ver
+muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
+a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 64 0 0 0 5
+102 g 5
 D2
 ~
 ~
@@ -1506,14 +1549,14 @@ D3
 0 -1 10279
 S
 #10281
-Uma Grande Estrada Atravï¿½s dos Contrafortes~
-   A estrada continua atravï¿½s dos contrafortes ao leste e oeste.  Em ambos
-lados da estrada estï¿½o os contrafortes, cercados por ï¿½rvores e arbustos.  Ao
+Uma Grande Estrada Através dos Contrafortes~
+   A estrada continua através dos contrafortes ao leste e oeste.  Em ambos
+lados da estrada estão os contrafortes, cercados por árvores e arbustos.  Ao
 oeste, os galhardetes do castelo podem ser visto despontando sobre as
-colinas que bloqueiam sua visï¿½o.  Obviamente, alguï¿½m ï¿½ dono destas terras
-pelas quais vocï¿½ estï¿½ viajando, e mora a oeste daqui.
+colinas que bloqueiam sua visão.  Obviamente, alguém é dono destas terras
+pelas quais você está viajando, e mora a oeste daqui.
 ~
-102 64 0 0 0 2
+102 g 2
 D0
 ~
 ~
@@ -1532,11 +1575,11 @@ D3
 0 -1 10282
 S
 #10282
-Uma Grande Estrada Atravï¿½s dos Contrafortes~
-   Vocï¿½ estava em uma estrada cheia de altos e baixos e agora alcanï¿½ou o
-primeiro caminho sï¿½lido que estï¿½ a poucos palmos a sua frente.  
+Uma Grande Estrada Através dos Contrafortes~
+   Você estava em uma estrada cheia de altos e baixos e agora alcançou o
+primeiro caminho sólido que está a poucos palmos a sua frente.  
 ~
-102 64 0 0 0 2
+102 g 2
 D0
 ~
 ~
@@ -1556,16 +1599,17 @@ D3
 S
 #10283
 A Despensa Fria~
-   Os custos envolvidos para manter este quarto ï¿½ realmente incrï¿½vel.  Todo
-santo dia, um homem segue em sua embarcaï¿½ï¿½o para o mar congelado nos confins
-desta terra onde os minotauros reinam, e trï¿½s consigo enormes e sï¿½lidos
-blocos de gelo que sï¿½o mantidos neste quarto selado onde todos os
-mantimentos perecï¿½veis sï¿½o congelados.
+   Os custos envolvidos para manter este quarto é realmente incrível.  Todo
+santo dia, um homem segue em sua embarcação para o mar congelado nos confins
+desta terra onde os minotauros reinam, e trás consigo enormes e sólidos
+blocos de gelo que são mantidos neste quarto selado onde todos os
+mantimentos perecíveis são congelados.
 ~
-102 72 0 0 0 0
+102 dg 0
 D0
 ~
 porta~
-0 -1 10219
+:n 2 a porta
+ag -1 10219
 S
 $~

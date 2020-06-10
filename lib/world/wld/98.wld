@@ -4,8 +4,8 @@ A Entrada do Abismo~
 grande escuridão invade esse local.  Você pode ver para baixo um buraco, que
 talvez seja sua única saída.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D D
 Um pequeno buraco no chão. Nada é possivel se ver além da escuridão.
 ~
 ~
@@ -18,8 +18,13 @@ da escuridão.  A leste você vê um buraco na parede e para baixo o buraco no
 chão continua, estranhamente não é mais possivel ver o buraco na parte de
 cima de onde você saiu.
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D E
+Um pequeno buraco na parede.  Nada é possivel se ver além da escuridão.
+~
+~
+0 -1 9802
+D D
 Um pequeno e estreito buraco no chão.
 ~
 ~
@@ -30,8 +35,8 @@ Um Buraco na Parede~
    Você está dentro de um buraco na parede.  Parece não haver nada aqui alem
 da escuridão.  A oeste você retorna.
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D W
 Um pequeno buraco no chão.  Nada é possivel se ver além da escuridão.
 ~
 ~
@@ -43,8 +48,13 @@ Um Pequeno Buraco no Chão~
 séculos de vida.  Este buraco continua a descer pela escuridão e para cima
 parece retornar ao inicio.
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D U
+Um pequeno buraco acima. Nada é possivel se ver além da escuridão.
+~
+~
+0 -1 9801
+D D
 Um pequeno buraco no chão. Nada é possivel se ver além da escuridão.
 ~
 ~
@@ -57,8 +67,13 @@ séculos de vida.  É possível ver que para baixo este buraco continua a
 descer pela escuridão, dando a impressão de nunca ter fim e para cima parece
 retornar ao inicio desse buraco.
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D U
+Um pequeno buraco acima. Nada é possivel se ver além da escuridão.
+~
+~
+0 -1 9803
+D D
 Um pequeno buraco no chão. Nada é possivel se ver além da escuridão.
 ~
 ~
@@ -72,12 +87,18 @@ em ferro, com aparência muito antiga e que contém algumas inscrições.
 Talvez seja melhor você ler isto antes de entrar.  Para cima você retorna ao
 buraco de onde saiu.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D U
+Um pequeno buraco acima. Nada é possivel se ver além da escuridão.
+~
+~
+0 -1 9804
+D E
 Uma enorme porta de ferro, aparentemente muito antiga e pesada.  É impossivel
 imaginar o que pode existir por de trás dela.
 ~
 porta ferro~
+:n 2 a porta de ferro
 1 -1 9806
 E
 inscrição inscrições~
@@ -92,8 +113,8 @@ A Porta de Entrada~
 como em um passe de mágica.  Sua única saída é a leste onde há um pequeno
 corredor.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D E
 Um pequeno corredor. Nada é possivel se ver além da escuridão.
 ~
 ~
@@ -105,8 +126,13 @@ Um Pequeno Corredor~
 são feitas de pedras com aparência ancestral.  A oeste fica a porta de
 entrada e a leste parece ser o fim do corredor.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D W
+A porta de entrada.  Mas parece que ela já não existe mais.
+~
+~
+0 -1 9806
+D E
 Parece ser o fim do corredor, mas a escuridão confunde seus olhos.
 ~
 ~
@@ -117,8 +143,19 @@ Fim do Corredor~
    Você está no fim do corredor, daqui é possível ver que há um canil ao
 norte, uma pequena passagen ao sul e a oeste existe um corredor.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D W
+Um pequeno corredor que parece não ter saída.
+~
+~
+0 -1 9807
+D N
+Um grande canil, o cheiro daquele local é insuportável e a escuridão
+confunde seus olhos, mas somente um cão poderia habitar um lugar como esse.
+~
+~
+0 -1 9809
+D S
 Uma pequena passagem e sombria passagem.
 ~
 ~
@@ -130,8 +167,8 @@ O Canil~
 de carne, provavelmente esse cãozinho deve ser alimentado somente com carne.
 Você só vê uma saída a sul.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D S
 O fim do pequeno corredor.
 ~
 ~
@@ -143,8 +180,13 @@ Uma Pequena Passagem~
 impera nesse lugar.  Ao sul continua adentrar no desconhecido e a norte você
 retorna.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D N
+Você pode ver o fim de um pequeno corredor.
+~
+~
+0 -1 9808
+D S
 Só é possivel ver a continuação dessa pequena passagem.
 ~
 ~
@@ -156,8 +198,19 @@ Uma Pequena Passagem~
 local.  Ao norte você retorna, leste você vê um buraco lateral e ao sul
 existe uma sala aparentemente quente.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D N
+Toda a extensão dessa pequena passagem perdida na escuridão.
+~
+~
+0 -1 9810
+D S
+Uma sala aparentemente muito quente, pois é possivel sentir e ver luzes que
+mais parecem ser labaredas de fogo.
+~
+~
+0 -1 9813
+D E
 Um buraco na parte lateral que parece ter sido escavado a muitos séculos
 atrás, alem de ser muito apertado.
 ~
@@ -169,8 +222,14 @@ Um Buraco Lateral~
    Aqui você está dentro desse buraco apertado.  A oeste e possível ver uma
 pequena passagem, a leste você pode ver um sala bastante grande.
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D W
+Uma pequena passagem, porem bem mais confortável que esse aperto que você
+está.
+~
+~
+0 -1 9811
+D E
 Um lugar aparentemente muito grande para uma pessoa normal.  Depois de sair
 desse aperto talvez seja até confortavél.
 ~
@@ -183,13 +242,18 @@ Uma Sala Ardente~
 surgem do chão.  Ao norte você retorna e ao sul você pode ver enormes chamas
 de fogo ardente, talvez não seja uma boa opção continuar.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D N
+Você pode ver a pequena passagem.
+~
+~
+0 -1 9811
+D S
 Um calor intenso e enormes labaredas de fogo, capazes de derreter a mais
 resistente das armaduras.
 ~
 ~
-0 -1 -1
+0 -1 9716
 S
 #9814
 Uma Sala Gigantesca~
@@ -197,8 +261,13 @@ Uma Sala Gigantesca~
 enormes pegadas no chão.  A oeste você pode ver um buraco lateral e a leste
 a um desvio.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D W
+O buraco lateral, que por sinal e muito apertado.
+~
+~
+0 -1 9812
+D E
 Parece ser um desvio onde seu caminho se divide.
 ~
 ~
@@ -210,8 +279,18 @@ O Desvio~
 ver além de pedras muito antigas.  Para cima existe um buraco superior e
 para leste um buraco lateral estreito e para oeste está uma sala gigantesca.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D W
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9814
+D U
+Um outro buraco cavado na parte superior desse local.
+~
+~
+0 -1 9816
+D E
 A continuação do buraco lateral que volta a ser muito apertado.
 ~
 ~
@@ -223,8 +302,13 @@ Um Buraco Superior~
 muito apertado, esse buraco parece ter sido cavado a séculos e mais séculos.
    A leste o buraco continua e para baixo está o desvio.
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D D
+É possivel ver o desvio, onde os caminhos se dividem.
+~
+~
+0 -1 9815
+D E
 A continuação do buraco estreito, talvez fosse melhor retornar.
 ~
 ~
@@ -235,8 +319,13 @@ O Buraco Estreito~
    Este buraco parece ser longo e muito estreito.  A leste e a oeste o
 buraco continua.
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D W
+Muito escuro para se ver.
+~
+~
+0 -1 9816
+D E
 Muito escuro para se ver.
 ~
 ~
@@ -247,8 +336,13 @@ O Buraco Estreito~
    Você continua a se arrastar por dentro desse buraco estreito.  Existe uma
 passagem acima e a oeste parece retornar para o inicio do buraco.
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D W
+Nada se pode ver.
+~
+~
+0 -1 9817
+D U
 Muito escuro e muito apertado.
 ~
 ~
@@ -260,8 +354,13 @@ O Buraco Estreito~
 conta de seu corpo.  Para baixo existe um buraco que parece retornar e para
 leste você adentar ainda mais.
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D D
+Muito escuro e apertado para se ver.
+~
+~
+0 -1 9818
+D E
 Muito escuro e apertado.
 ~
 ~
@@ -273,8 +372,13 @@ O Buraco Estreito~
 estranhos e nunca ouvidos por você.  Para cima os sons aumentam e a oeste
 você retorna para o inico desse apertado buraco.
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D W
+Nada se pode ver.
+~
+~
+0 -1 9819
+D U
 Muito escuro e sombrio.
 ~
 ~
@@ -286,8 +390,13 @@ O Buraco Estreito~
 medida que você anda os sons aumentam.  Ao leste você pode ver uma porta e
 para baixo o corredor estreito se alonga.
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D D
+Muito escuro e apertado.
+~
+~
+0 -1 9820
+D E
 Um pequena porta.
 ~
 ~
@@ -300,13 +409,19 @@ sons que você estava ouvindo parece vir de dentro dessa porta, soa como uma
 musica suave e calma, uma canto limpo e angelical.  A leste está a grande
 porta de ferro e a oeste está a porta que da acesso ao buraco estreito.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D W
+Uma pequena porta que da acesso a um buraco estreito e apertado.
+~
+~
+0 -1 9821
+D E
 Uma enorme porta de ferro, aparentemente muito antiga e pesada.  É impossivel
 imaginar o que pode existir por de trás dela.  Porém pode se ouvir cantos
 muito melódicos nunca ouvidos por você.
 ~
 porta ferro~
+:n 2 a porta de ferro
 2 9801 9823
 S
 #9823
@@ -316,12 +431,13 @@ parecer mais um calabouço os sons e as luzes fazem você se sentir agraciado
 por uma sensação de paz, essa sala parece ser abençoada.  A oeste está a
 grande porta de ferro.
 ~
-98 524408 0 0 0 0
-D0
+98 defgt 0
+D W
 Uma enorme porta de ferro, aparentemente muito antiga e pesada.  Através
 dela você tem acesso a uma ante-sala.
 ~
 porta ferro~
+:n 2 a porta de ferro
 1 -1 9822
 S
 #9824
@@ -329,8 +445,13 @@ O Buraco Lateral~
    Esse buraco é muito apertado.  A oeste está um desvio e para leste você
 pode ver o fim de desse buraco lateral.
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D W
+Você pode ver um desvio, onde o caminho é dividido.
+~
+~
+0 -1 9815
+D E
 A continuação desse buraco apertado, porém parece estra chegando ao fim.
 ~
 ~
@@ -342,8 +463,13 @@ Fim do Buraco~
 os caminhos são menos apertados porém a sensação de perigo continua.  A
 oeste você vê o buraco lateral e para baixo há uma longa escada.
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D W
+Um buraco lateral.
+~
+~
+0 -1 9824
+D D
 Um longa escadaria, que foi esculpida nas próprias rochas.
 ~
 ~
@@ -354,8 +480,18 @@ Uma Longa Escada~
    Você está numa grande escada esculpida nas pedras.  Para cima existe um
 buraco, para baixo a escada se alonga e para leste há uma passagem lateral.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D U
+Parece ser o fim de um buraco estreito.
+~
+~
+0 -1 9825
+D D
+A longa escadaria de rochas se alonga.
+~
+~
+0 -1 9827
+D E
 Parece ser uma entrada lateral.
 ~
 ~
@@ -367,8 +503,13 @@ Uma Longa Escada~
 é grande por toda a extensão desse lugar.  Para cima e para baixo você vê a
 escada de pedras.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D U
+Uma longa escada cheia de degraus esculpidos em pedras.
+~
+~
+0 -1 9826
+D D
 Um longa escada cheia de degraus esculpidos em pedras.
 ~
 ~
@@ -379,8 +520,13 @@ Uma Longa Escada~
    A cada degrau, é possivel sentir a estranha sensação de estar sendo
 observado.  Para cima e para baixo só é possivel ver escadas.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D U
+Uma longa escada cheia de degraus esculpidos em pedras.
+~
+~
+0 -1 9827
+D D
 Um longa escada cheia de degraus esculpidos em pedras.
 ~
 ~
@@ -391,8 +537,13 @@ Uma Longa Escada~
    Essa longa escada parece não ter fim.  Para cima e para baixo só é
 possivel ver escadas.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D U
+Uma longa escada cheia de degraus esculpidos em pedras.
+~
+~
+0 -1 9828
+D D
 Um longa escada cheia de degraus esculpidos em pedras.
 ~
 ~
@@ -406,13 +557,24 @@ fosse um portal ou algo parecido, talvez fosse melhor tomar cuidado com essa
 estranha passagem.  Para cima a escadaria é extensa a para oeste existe uma
 porta.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D U
+Uma longa escada cheia de degraus esculpidos em pedras.
+~
+~
+0 -1 9829
+D D
+Existe uma luz um tanto estranha nada já visto por você.
+~
+~
+0 -1 9800
+D W
 Uma porta de ferro, aparentemente muito antiga e impossível de ser arrombada.
 Não da pra imaginar o que possa existir por de trás dela.  porém existem
 inscrições nela, que talvez possam ajudar e com certeza deveriam ser lidas.
 ~
 porta ferro~
+:n 2 a porta de ferro
 1 -1 9841
 E
 inscrição inscrições~
@@ -426,8 +588,13 @@ Uma Entrada Lateral~
 antigas e grandes esse lugar é cada vez mais misterioso.  Para Oeste é
 possível ver uma longa escada e para leste o corredor.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D W
+Uma longa escada cheia de degraus esculpidos em pedras.
+~
+~
+0 -1 9826
+D E
 Um pequeno corredor.
 ~
 ~
@@ -438,8 +605,13 @@ O Corredor Lateral~
    Esse corredor com paredes enormes parece estar chegando ao fim.  A oeste
 e a leste você pode ver toda a extensão desse pequemo corredor.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D W
+Um pequeno corredor.
+~
+~
+0 -1 9831
+D E
 Um pequeno corredor aparentemente sem saída.
 ~
 ~
@@ -451,12 +623,18 @@ Fim do Corredor Lateral~
 você nota que há um pequeno alçapão no chão.  Para oeste você vai para o
 inicio do corredor e para baixo há um alçapão.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D W
+Um pequeno corredor.
+~
+~
+0 -1 9832
+D D
 Um alçapão muito antigo, feito em madeira e ferragens.  Aparentemente não é
 muito pesado e pode ser facilmente aberto.
 ~
 alçapão~
+:n 1 o alçapão
 1 -1 9834
 S
 #9834
@@ -465,8 +643,15 @@ O Alçapão~
 um ar gélido vindo do fundo.  Para cima está o alçapão e para baixo uma
 estreita escada te leva cada vez mais fundo.
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D U
+Um alçapão muito antigo, feito em madeira e ferragens.  Aparentemente não é
+muito pesado e pode ser facilmente aberto.
+~
+alçapão~
+:n 1 o alçapão
+1 -1 9833
+D D
 Um longa escada cheia de degraus.
 ~
 ~
@@ -477,8 +662,13 @@ O Alçapão~
    Dentro desde alçapão é frio e apertado, talvez fosse melhor voltar.  Para
 cima e para baixo nada é possivel se ver além dessa escada.
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D U
+Uma longa escada cheia de degraus e uma escuridão intensa.
+~
+~
+0 -1 9834
+D D
 Um longa escada.
 ~
 ~
@@ -490,8 +680,13 @@ O Alçapão~
 talvez fosse melhor voltar e garatir que não ficará entalado nesse estreito
 local.  Para cima e para baixo só há escadas alem da escuridão.
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D U
+Uma escuridão intensa.
+~
+~
+0 -1 9835
+D D
 Uma escuridão intensa.
 ~
 ~
@@ -504,8 +699,13 @@ certa luminosidade vinda de baixo, mas o sentimentos de maldade e os
 calafrios aumentam cada vez mais.  Para cima a escada continua e para baixo
 parece ser o fim da escada.
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D U
+Uma escuridão intensa.
+~
+~
+0 -1 9836
+D D
 Apesar da escuridão parece que essa escada está chegando ao fim.
 ~
 ~
@@ -517,8 +717,13 @@ Fim do Alçapão~
 começando.  Para cima há uma longa escada e nada para se ver e para leste
 você pode ver uma sala iluminada
 ~
-98 262473 0 0 0 0
-D0
+98 adgis 0
+D U
+Uma escuridão intensa.
+~
+~
+0 -1 9835
+D E
 Uma sala aparentemente iluminada por tochas.
 ~
 ~
@@ -532,13 +737,19 @@ oeste está o fim do alçapão e para leste está uma porta gigantesca, talvez
 guardando algum tesouro, porém gritos vem de trás dessa porta.  Há estranhas
 inscrições nessa porta, talvez fosse melhor le-las antes de entrar.
 ~
-98 72 0 0 0 0
-D0
+98 dg 0
+D W
+Uma longa escada.
+~
+~
+0 -1 9838
+D E
 Uma porta de madeira gigantesca, é impossível imaginar como alguem poderia
 trazer madeiras tão grandes para se construir uma porta fortíssima nessa
 area tão abaixo do solo.
 ~
 porta madeira~
+:n 2 a porta de madeira
 2 9803 9840
 E
 inscrição inscrições~
@@ -554,7 +765,7 @@ ter olhos e ouvidos.  Um sentimento maléfico invade essa sala somente seus
 mais puros e verdadeiros sentimentos podem anular esse mal.  Infelizmente
 você não vê nenhuma saída.
 ~
-98 73 0 0 0 0
+98 adg 0
 S
 #9841
 O Labirinto~
@@ -562,12 +773,18 @@ O Labirinto~
 existe uma grande porta e oeste parece ser uma sala um tanto parecida com
 essa aqui.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D W
+Uma grande sala. Tudo lhe confunde pois ela é muito parecida com essa aqui.
+~
+~
+0 -1 9842
+D E
 Uma enorme porta de ferro, aparentemente muito antiga e pesada.
 Provavelmente é sua única saída daqui.
 ~
 porta ferro~
+:n 2 a porta de ferro
 2 9802 9830
 S
 #9842
@@ -575,8 +792,23 @@ O Labirinto~
    Você está dentro de algo que parece ser um grande labirinto.  Por todos
 os lados há saídas que lhe confundem cada vez mais.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D N
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9853
+D S
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9843
+D E
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9841
+D W
 Uma sala muito grande e espaçosa.
 ~
 ~
@@ -587,8 +819,23 @@ O Labirinto~
    Você está dentro de algo que parece ser um grande labirinto.  Por todos
 os lados há saídas que lhe confundem cada vez mais.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D N
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9842
+D S
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9844
+D E
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9853
+D W
 Uma sala muito grande e espaçosa.
 ~
 ~
@@ -600,8 +847,23 @@ O Labirinto~
 os lados há saídas que lhe confundem cada vez mais, porém existe uma porta
 a leste.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D N
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9843
+D S
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9845
+D E
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9853
+D W
 Uma sala muito grande e espaçosa.
 ~
 ~
@@ -613,8 +875,23 @@ O Labirinto~
 os lados há saídas que lhe confundem cada vez mais, parecendo que você está
 andando em circulos.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D N
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9844
+D S
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9853
+D E
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9852
+D W
 Uma sala muito grande e espaçosa.
 ~
 ~
@@ -625,8 +902,23 @@ O Labirinto~
    Você está dentro de algo que parece ser um grande labirinto.  Por todos
 os lados há saídas que lhe confundem cada vez mais.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D N
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9847
+D S
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9853
+D E
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9845
+D W
 Uma sala muito grande e espaçosa.
 ~
 ~
@@ -637,8 +929,23 @@ O Labirinto~
    Você está dentro de algo que parece ser um grande labirinto.  Por todos
 os lados há saídas, mas qual é a melhor opção ?
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D N
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9848
+D S
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9846
+D E
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9853
+D W
 Uma sala muito grande e espaçosa.
 ~
 ~
@@ -649,8 +956,23 @@ O Labirinto~
    Você está dentro de algo que parece ser um grande labirinto.  Por todos
 os lados há saídas que lhe confundem cada vez mais.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D N
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9853
+D S
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9847
+D E
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9852
+D W
 Uma sala muito grande e espaçosa.
 ~
 ~
@@ -661,8 +983,23 @@ O Labirinto~
    Você está cada vez mais confuso.  Há saídas por todos os lados, talvez
 fosse melhor ajoelhar-se e rezar.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D N
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9850
+D S
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9845
+D E
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9848
+D W
 Uma sala muito grande e espaçosa.
 ~
 ~
@@ -673,8 +1010,23 @@ O Labirinto~
    Você está dentro de algo que parece ser um grande labirinto.  Por todos
 os lados há saídas que lhe confundem cada vez mais.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D N
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9851
+D S
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9849
+D E
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9848
+D W
 Uma sala muito grande e espaçosa.
 ~
 ~
@@ -685,8 +1037,23 @@ O Labirinto~
    Você está dentro de algo que parece ser um grande labirinto.  Por todos
 os lados há saídas que lhe confundem cada vez mais.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D N
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9848
+D S
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9850
+D E
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9852
+D W
 Uma sala muito grande e espaçosa.
 ~
 ~
@@ -697,8 +1064,23 @@ O Labirinto~
    Você está dentro de algo que parece ser um grande labirinto.  Por todos
 os lados há saídas que lhe confundem cada vez mais.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D N
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9848
+D S
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9849
+D E
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9853
+D W
 Uma sala muito grande e espaçosa.
 ~
 ~
@@ -709,8 +1091,23 @@ O Labirinto~
    Você está dentro de algo que parece ser um grande labirinto.  Por todos
 os lados há saídas que lhe confundem cada vez mais.
 ~
-98 73 0 0 0 0
-D0
+98 adg 0
+D N
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9848
+D S
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9849
+D E
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9842
+D W
 Uma sala muito grande e espaçosa.
 ~
 ~
@@ -722,8 +1119,8 @@ O Caminho dos Sábios~
 somente o sábios de espirito, leais e honestos aventureiros serão bem
 aventurados.  Siga seu seu coração...  O seu caminho trilha a leste.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D E
 Um belo caminho...
 ~
 ~
@@ -736,8 +1133,13 @@ observado.  Tudo ao seu redor é muito lindo, um belo campo florido, talvez
 este o verdadeiro paraiso.  Para oeste você o inicio do caminho e para leste
 a trilha se alonga.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D E
+Um belo caminho...
+~
+~
+0 -1 9856
+D W
 Um belo caminho...
 ~
 ~
@@ -748,8 +1150,13 @@ O Caminho dos Sábios~
    O cheiro de lugar é muito inspirador, uma suave fragância de lavanda se
 espalha por todo esse campo.  Sua trilha retorna a oeste e continua ao sul.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D W
+Um belo caminho...
+~
+~
+0 -1 9855
+D S
 Um belo caminho...
 ~
 ~
@@ -761,8 +1168,13 @@ O Caminho dos Sábios~
 sua vista alcança há somente flores e um bonito céu azul.  A trilha segue
 para norte e leste.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D N
+Um belo caminho...
+~
+~
+0 -1 9856
+D E
 Um belo caminho...
 ~
 ~
@@ -774,8 +1186,13 @@ O Caminho dos Sábios~
 em qual é seu verdadeiro objetivo, a sensação de observado aumenta cada vez
 mais.  Sua trilha segue a oeste e a leste.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D W
+Um belo caminho...
+~
+~
+0 -1 9857
+D E
 Um belo caminho...
 ~
 ~
@@ -793,8 +1210,18 @@ um aventureiro que tem medo de explorar e prefere voltar as suas origens
 para repensar no seu destino, então siga a leste, pois lá está o inicio de
 tudo.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D N
+Um belo caminho...
+~
+~
+0 -1 9861
+D S
+Um belo caminho...
+~
+~
+0 -1 9862
+D E
 Um belo caminho...
 ~
 ~
@@ -805,8 +1232,8 @@ O Caminho dos Sábios~
    Você está no caminho dos que querem voltar e rever suas origens.  Siga a
 leste e veja onde tudo começou.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D E
 Um belo caminho...
 ~
 ~
@@ -817,8 +1244,8 @@ O Caminho dos Sábios~
    Você está no caminho dos exploradores que acham que já sabem o suficiente
 Siga ao norte e explore terras jamais conhecidas.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D N
 Um belo caminho...
 ~
 ~
@@ -830,8 +1257,8 @@ O Caminho dos Sábios~
 que reconhecem que ainda existe muito para se aprender.  Siga ao sul e vá
 ao encontro da sabedoria.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D S
 Um belo caminho...
 ~
 ~
@@ -844,8 +1271,8 @@ aquele que reconhece sua burrice".  Daqui pra frente sua dignidade e honra
 serão provadas, se você passar por essa provação, será merecedor de conhecer
 os segredos da vitória.  Seu caminho é para leste...
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D E
 Um belo caminho...
 ~
 ~
@@ -857,8 +1284,8 @@ A Entrada da Ascensão~
 sua beleza é magnífica.  O caminho a ser seguido é ao norte, onde pode ser
 visto um camiho florido e enfeitado com lindas pedras.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D N
 Um belo caminho...
 ~
 ~
@@ -870,8 +1297,8 @@ O Caminho da Ascensão~
 e a cada escolha você jamais verá que jamais poderá voltar.  Seja digno e
 honrado pois só assim poderá realmente ser aclamado como um sábio.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D N
 Um belo caminho...
 ~
 ~
@@ -883,8 +1310,8 @@ O Caminho da Ascensão~
 que era florido agora sumiu e a cada passo você nota que o caminho na suas
 costas some.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D E
 Um belo caminho...
 ~
 ~
@@ -903,8 +1330,18 @@ existem equipamentos que podem iluminar esse nevoeiro.
    A leste a escuridão é cada vez mais intensa, porem lá no fundo é possivel
 notar um velho mago, certamente ela está perdido no meio dessa nevoa tambem.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D N
+Nada é possivel ver nessa névoa intensa...
+~
+~
+0 -1 9870
+D S
+Nada é possivel ver nessa névoa intensa...
+~
+~
+0 -1 9869
+D E
 Nada é possivel ver nessa névoa intensa...
 ~
 ~
@@ -914,8 +1351,8 @@ S
 A Escolha~
   É possivel ver aquele pobre velho.  Siga a leste ao seu encontro.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D E
 Nada é possivel ver nessa névoa intensa...
 ~
 ~
@@ -925,8 +1362,8 @@ S
 A Escolha~
   É possivel ver uma grande sala de equipamentos.  Siga ao sul para entrar.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D S
 Um monte com varios equipamentos...
 ~
 ~
@@ -936,8 +1373,8 @@ S
 A Escolha~
   É possivel ver um enorme monte de equipamentos.  Siga ao norte para entrar.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D N
 Um monte com varios equipamentos...
 ~
 ~
@@ -951,8 +1388,8 @@ mago em um magnífico anjo.  Siga seu ensinamentos, pois o que lhe for dito
 será de grande utilidade no futuro próximo.  Após ouvir seus ensinamentos
 siga seu caminho a norte.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D N
 Um belo caminho...
 ~
 ~
@@ -963,8 +1400,8 @@ O Caminho da Ascensão~
    Tudo volta a ser florido, e aquele cheiro de lavanda invade suas narinas.
 O caminho é muito belo e segue a leste.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D E
 Um belo caminho...
 ~
 ~
@@ -976,8 +1413,8 @@ O Caminho da Ascensão~
 das mulheres é merecedora de tal perfume.  Com essa fragância seria capaz de
 amolecer o coração das mais terrivel das víboras.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D N
 Um belo caminho...
 ~
 ~
@@ -995,8 +1432,18 @@ possível notar que há pedras de cores douradas por todo a chão.
    A oeste é o inicio do caminho, você pode retornar ao principio e refazer
 escolhas.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D E
+Um campo de batalha...
+~
+~
+0 -1 9875
+D N
+Um belo caminho...
+~
+~
+0 -1 9876
+D W
 Onde tudo parece ter começado...
 ~
 ~
@@ -1007,8 +1454,8 @@ A Escolha~
    É possível ver um campo de batalha e um corpo ferido caído ao chão. Siga
 a leste, pois é seu destino.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D E
 Um campo de batalha...
 ~
 ~
@@ -1019,8 +1466,8 @@ A Escolha~
    É possível ver um caminho muito florido e lindo.  Siga seu destino ao
 norte.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D N
 Um belo caminho...
 ~
 ~
@@ -1030,8 +1477,8 @@ S
 A Escolha~
    É possível ver o inicio.  Siga a oeste e parta do principio.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D E
 Onde tudo parece ter começado...
 ~
 ~
@@ -1044,8 +1491,8 @@ campo, lentamente o corpo caido se levanta, como que por milagre ou por amor
 divino, ele se transforma em um anjo muito bonito.  Escute o que esse anjo
 tem a lhe falar.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D N
 Um belo caminho...
 ~
 ~
@@ -1056,8 +1503,8 @@ O Caminho da Ascensão~
    O maravilhoso cheiro de lavanda e o céu são dignos dos deuses.  Você pode
 sentir que está próximo do céu pois um sentimento puro invade seu coração.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D E
 Um belo caminho...
 ~
 ~
@@ -1069,8 +1516,8 @@ O Caminho da Ascensão~
 é como se você estivesse num plano vazio, por todos os lados nada existe e
 nada há para ser contemplado.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D E
 Não existe nada...
 ~
 ~
@@ -1082,8 +1529,23 @@ A Terceira Provação~
 caminhos a serem por você trilhados.  Escute seu coração e construa sua
 história.  O vazio ao seu redor, só será preenchido com sua fé.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D N
+Não existe nada...
+~
+~
+0 -1 9883
+D S
+Não existe nada...
+~
+~
+0 -1 9885
+D E
+Não existe nada...
+~
+~
+0 -1 9884
+D W
 Não existe nada...
 ~
 ~
@@ -1094,8 +1556,8 @@ O Vazio~
    Nada existe além da sua imaginação, por todos os lados há somente um
 abismo infinito.  Dê mais um passo rumo a sua sorte...siga a oeste.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D W
 Não existe nada...
 ~
 ~
@@ -1106,8 +1568,8 @@ O Vazio~
    Nada existe além da sua imaginação, por todos os lados há somente um
 abismo infinito.  Dê mais um passo rumo a sua sorte...siga ao norte.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D N
 Não existe nada...
 ~
 ~
@@ -1118,8 +1580,8 @@ O Vazio~
    Nada existe além da sua imaginação, por todos os lados há somente um
 abismo infinito.  Dê mais um passo rumo a sua sorte...siga a leste.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D E
 Não existe nada...
 ~
 ~
@@ -1130,8 +1592,8 @@ O Vazio~
    Nada existe além da sua imaginação, por todos os lados há somente um
 abismo infinito.  Dê mais um passo rumo a sua sorte...siga ao sul.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D S
 Não existe nada...
 ~
 ~
@@ -1147,8 +1609,8 @@ intensa capaz de cega-lo...  E essa imensa luz começa a tomar forma do mais
 belo de todos o anjos, ouça o que ele tem a lhe ensinar...  Após ouvi-lo seu
 caminho é para o norte.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D N
 Um belo caminho...
 ~
 ~
@@ -1161,8 +1623,8 @@ realmente digno de por seus pés nesse caminho, pois somente os deuses de
 Vitalia, outrora percorreram esse caminho.  Ao norte você pode uma luz
 intensa e talvez seu unico destino.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D N
 Um belo caminho...
 ~
 ~
@@ -1177,8 +1639,8 @@ tristeza dos deuses diante dos traidores, a festa dos que com fé, muita
 dignidade e acima de tudo honra, escreveram a história de suas vidas.  Seu
 caminho chega a uma bela escada, apenas suba.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D U
 Um belo caminho...
 ~
 ~
@@ -1192,8 +1654,8 @@ lavanda as imagens passadas diantes de seus olhos, você pode ver um Altar de
 pedra polida.  Uma beleza nunca vista por seus olhos, suba diante desse
 altar pois é seu destino.
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D U
 Um belo caminho...
 ~
 ~
@@ -1208,11 +1670,11 @@ você a imagem de um belo anjo, estranhamente essa imagens parece criar vida.
    A imagem cria vida e uma anjo em forma de luz se faz presente, ouça o que
 ele tem lhe dizer, depois dê um passo atrás para que seu destino se abra...
 ~
-98 372 0 0 0 2
-D0
+98 cefgi 2
+D D
 Uma terra inexplorada...
 ~
 ~
 0 -1 9800
 S
-$~
+$

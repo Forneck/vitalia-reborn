@@ -8,7 +8,7 @@ passagem que o trouxe até aqui parece ter sumido como que por mágica e,
 surgindo aparentemente do nada, um estranho vórtice de energia aparenta ser
 a única coisa que de fato existe por aqui.
 ~
-114 1048829 0 0 0 0
+114.1 aecfdghu 0
 S
 #11401
 A Fenda Entre Mundos~
@@ -20,8 +20,13 @@ fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
 pois, apesar da dificuldade de se enxergar alguma coisa, não há
 irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
+Só se vê névoa nessa direção.
+~
+~
+0 -1 11402
+D2
 Só se vê névoa nessa direção.
 ~
 ~
@@ -31,11 +36,6 @@ Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11403
-D2
-Só se vê névoa nessa direção.
-~
-~
-0 -1 11402
 D3
 Só se vê névoa nessa direção.
 ~
@@ -52,7 +52,7 @@ fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
 pois, apesar da dificuldade de se enxergar alguma coisa, não há
 irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
 Só se vê névoa nessa direção.
 ~
@@ -63,16 +63,16 @@ Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11406
-D2
-Só se vê névoa nessa direção.
-~
-~
-0 -1 11401
 D3
 Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11406
+D2
+Só se vê névoa nessa direção.
+~
+~
+0 -1 11401
 S
 #11403
 A Fenda Entre Mundos~
@@ -84,8 +84,13 @@ fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
 pois, apesar da dificuldade de se enxergar alguma coisa, não há
 irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
+Só se vê névoa nessa direção.
+~
+~
+0 -1 11404
+D2
 Só se vê névoa nessa direção.
 ~
 ~
@@ -95,11 +100,6 @@ Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11401
-D2
-Só se vê névoa nessa direção.
-~
-~
-0 -1 11404
 D3
 Só se vê névoa nessa direção.
 ~
@@ -116,12 +116,17 @@ fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
 pois, apesar da dificuldade de se enxergar alguma coisa, não há
 irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
 Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11403
+D3
+Só se vê névoa nessa direção.
+~
+~
+0 -1 11404
 D1
 Só se vê névoa nessa direção.
 ~
@@ -132,11 +137,6 @@ Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11403
-D3
-Só se vê névoa nessa direção.
-~
-~
-0 -1 11404
 S
 #11405
 A Fenda Entre Mundos~
@@ -148,12 +148,7 @@ fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
 pois, apesar da dificuldade de se enxergar alguma coisa, não há
 irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
-D0
-Só se vê névoa nessa direção.
-~
-~
-0 -1 11403
+114.2 g 2
 D1
 Só se vê névoa nessa direção.
 ~
@@ -169,6 +164,11 @@ Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11404
+D0
+Só se vê névoa nessa direção.
+~
+~
+0 -1 11403
 S
 #11406
 A Fenda Entre Mundos~
@@ -180,7 +180,7 @@ fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
 pois, apesar da dificuldade de se enxergar alguma coisa, não há
 irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
 Só se vê névoa nessa direção.
 ~
@@ -212,7 +212,7 @@ fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
 pois, apesar da dificuldade de se enxergar alguma coisa, não há
 irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
 Só se vê névoa nessa direção.
 ~
@@ -246,7 +246,7 @@ fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
 pois, apesar da dificuldade de se enxergar alguma coisa, não há
 irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
 
 Só se vê névoa nessa direção.
@@ -281,7 +281,7 @@ fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
 pois, apesar da dificuldade de se enxergar alguma coisa, não há
 irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
 Só se vê névoa nessa direção.
 ~
@@ -313,7 +313,7 @@ fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
 pois, apesar da dificuldade de se enxergar alguma coisa, não há
 irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
 Só se vê névoa nessa direção.
 ~
@@ -345,7 +345,7 @@ fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
 pois, apesar da dificuldade de se enxergar alguma coisa, não há
 irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
 Só se vê névoa nessa direção.
 ~
@@ -377,7 +377,7 @@ fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
 pois, apesar da dificuldade de se enxergar alguma coisa, não há
 irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
 Só se vê névoa nessa direção.
 ~
@@ -409,7 +409,7 @@ fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
 pois, apesar da dificuldade de se enxergar alguma coisa, não há
 irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
 Só se vê névoa nessa direção.
 ~
@@ -441,7 +441,7 @@ fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
 pois, apesar da dificuldade de se enxergar alguma coisa, não há
 irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
 Só se vê névoa nessa direção.
 ~
@@ -473,7 +473,7 @@ fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
 pois, apesar da dificuldade de se enxergar alguma coisa, não há
 irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
 Só se vê névoa nessa direção.
 ~
@@ -503,7 +503,7 @@ parece não ter se movido nesse tempo todo, dando a sensação que você está
 vivendo um eterno fim de tarde.  A névoa continua densa, mas você caminha
 com mais segurança agora que se acostumou à sua presença.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
 Só se vê névoa nessa direção.
 ~
@@ -536,22 +536,25 @@ em vão: não há nada além de uma estranha escuridão que se encontra com os
 céus na linha do horizonte.  Também não parece haver um nada abaixo do
 desfiladeiro, além de escuridão.
 ~
-114 262208 0 0 0 2
+114.3 sg 2
+OX magik "*avarohana*" unlock east
+OX magik "*avarohana*" open east
 D0
 Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11404
-D1
-Você vê apenas a escuridão do desfiladeiro.
-~
-a escuridão~
-0 -1 11418
 D2
 Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11401
+D1
+Você vê apenas a escuridão do desfiladeiro.
+~
+a escuridão~
+:n 2 a escuridão
+abcdh -1 11418
 D3
 Só se vê névoa nessa direção.
 ~
@@ -568,7 +571,7 @@ quanto o desfiladeiro abaixo.  A parca iluminação que você possui não é
 suficiente para ajudá-lo em seu descenso, sendo a última certeza aqui é a de
 que você ainda pode voltar.
 ~
-114 262252 0 0 0 1
+114.4 dfgsc 1
 D3
 Ali está o caminho de volta.
 ~
@@ -588,17 +591,17 @@ quanto o lugar completamente vazio que você a pouco "visitara", mas não há
 silêncio, já que a cada degrau que você desce, uma estrondosa lufada de
 vento frio tenta o derrubar. Ainda há tempo para voltar.
 ~
-114 393324 0 0 0 1
-D1
-O lance de escadas parece terminar ali.
-~
-~
-0 -1 11420
+114.4 dfgrsc 1
 D4
 As escadas o levam até o início do caminho.
 ~
 ~
 0 -1 11418
+D1
+O lance de escadas parece terminar ali.
+~
+~
+0 -1 11420
 S
 #11420
 O Tribunal de Yama~
@@ -616,7 +619,7 @@ Milhares de seres, formando uma fila, aguardam que um velho carrancudo, em
 pé, e um assustador ser, sentado atrás de uma gigantesca escrivaninha, façam
 alguma coisa (e que você não sabe o que é...).
 ~
-114 393320 0 0 0 0
+114.4 drfgs 0
 D3
 Você vê as escadas.
 ~
@@ -636,12 +639,7 @@ gigantesca lista escreve, em quase todas as línguas possíveis (pelo menos é
 o que você deduz) o nome do lugar: Sutala.  Você percebe que há ainda muitos
 degraus a serem descidos.
 ~
-114 393324 0 0 0 1
-D1
-Você vê a porta de pedra.
-~
-porta pedra~
-0 -1 11422
+114.4 dfgrsc 1
 D4
 O tribunal de Yama fica ali.
 ~
@@ -652,6 +650,12 @@ As escadas parecem não acabar...
 ~
 ~
 0 -1 11423
+D1
+Você vê a porta de pedra.
+~
+porta pedra~
+:n 2 a porta de pedra
+ach -1 11422
 E
 porta pedra~
 A gigantesca porta de pedra cinzenta parece não ter fechadura.  Você se
@@ -666,7 +670,7 @@ Sutala?~
 muito brincalhão e foi trazido a um lugar realmente esquisito: parece ser o
 estômago de um gigante de pedra.  Boa sorte na próxima vez...
 ~
-114 262252 0 0 0 0
+114.5 dfgsc 0
 S
 #11423
 A Entrada de Vitalaloka~
@@ -676,12 +680,7 @@ em pé por alguma força invisível, sendo possível ler sobre sua superfície um
 infindável número de palavras que devem significar a mesma coisa em diversas
 línguas: Vitalaloka.  Ainda é possível descer e subir degraus.
 ~
-114 393324 0 0 0 1
-D3
-Você vê a porta de madeira.
-~
-madeira porta~
-0 -1 11424
+114.4 dfgsrc 1
 D4
 As escadas seguem por ali.
 ~
@@ -692,6 +691,12 @@ As escadas parecem não acabar...
 ~
 ~
 0 -1 11425
+D3
+Você vê a porta de madeira.
+~
+madeira porta~
+:n 2 a porta de madeira
+ach -1 11424
 E
 porta madeira~
 A madeira da porta parece ser mais resistente que o comum.  Não há fechadura
@@ -707,7 +712,7 @@ Vitalaloka?~
 parar no punho cerrado de um demônio de sombra.  Talvez não lhe aconteça
 nada dessa vez...
 ~
-114 262252 0 0 0 0
+114.5 dfgsc 0
 S
 #11425
 A Entrada de Talatala~
@@ -717,12 +722,7 @@ você se aproxime muito.  No chão de pedra, ainda que um pouco escondidas
 pela poeira, você repara em uma profusão de nomes em várias línguas, estando
 escrito Talatala nas que você conhece.  A escada continua a descer.
 ~
-114 262252 0 0 0 1
-D1
-Você vê um enorme buraco.
-~
-buraco enorme~
-0 -1 11426
+114.4 dfgsc 1
 D4
 As escadas seguem por ali.
 ~
@@ -733,6 +733,12 @@ As escadas parecem não acabar...
 ~
 ~
 0 -1 11427
+D1
+Você vê um enorme buraco.
+~
+buraco enorme~
+:n 1 o enorme buraco
+ach -1 11426
 E
 porta buraco~
    Esse buraco é, provavelmente, a entrada para Talatala mas, devido à força
@@ -746,7 +752,7 @@ Talatala?~
 demônio de furacão, que parece estar muito incomodado com sua presença.  A
 culpa é só sua...
 ~
-114 262252 0 0 0 0
+114.5 dfgsc 0
 S
 #11427
 A Entrada de Mahatala~
@@ -755,12 +761,7 @@ porta prateada.  Um longo pergaminho repleto de palavras em diversas línguas
 foi afixado nela, sendo a escrita na sua o nome Mahatala.  Fora isso, há
 apenas a escada que continua descendo.
 ~
-114 262252 0 0 0 1
-D3
-Você vê a porta prateada.
-~
-prateada porta~
-0 -1 11428
+114.4 dfgsc 1
 D4
 As escadas seguem por ali.
 ~
@@ -771,6 +772,12 @@ As escadas parecem não acabar...
 ~
 ~
 0 -1 11429
+D3
+Você vê a porta prateada.
+~
+prateada porta~
+:n 2 a porta prateada
+ach -1 11428
 E
 porta preateada~
 Ela parece ser feita de prata, mas, ao contrário do que aconteceria com uma
@@ -784,7 +791,7 @@ Mahatala?~
 foi preso a um espelho, tendo de viver agora vendo tudo que acontece do lado
 de fora desse mundo.  Que pena...
 ~
-114 262252 0 0 0 0
+114.5 dfgsc 0
 S
 #11429
 A Entrada de Raratala~
@@ -794,12 +801,7 @@ de, que surpresa..., palavras em línguas diversas.  A que está na sua diz:
 Raratala.  Os degraus da escada permitem que você continue a descer ou
 subir.
 ~
-114 262252 0 0 0 1
-D1
-Você vê a porta dourada.
-~
-dourada porta~
-0 -1 11430
+114.4 dfgsc 1
 D4
 As escadas seguem por ali.
 ~
@@ -810,6 +812,12 @@ As escadas parecem não acabar...
 ~
 ~
 0 -1 11431
+D1
+Você vê a porta dourada.
+~
+dourada porta~
+:n 2 a porta dourada
+ach -1 11430
 E
 porta dourada~
 O dourado da porta mais se assemelha à cor do bronze antigo do que do ouro,
@@ -826,7 +834,7 @@ Raratala?~
 o ninho de um demônio de bronze.  Você estará seguro apenas enquanto ele não
 volta.
 ~
-114 262252 0 0 0 0
+114.5 dfgsc 0
 S
 #11431
 A Entrada de Atalaloka~
@@ -836,12 +844,7 @@ você vê, em tinta vermelha, a representação de palavras das mais diversas
 línguas, sendo que a que está na sua diz: Atalaloka.  Fora isso, você vê
 apenas a escada que segue para cima e para baixo.
 ~
-114 262252 0 0 0 1
-D3
-Você vê o estranho retângulo.
-~
-retângulo branco~
-0 -1 11432
+114.4 dfgsc 1
 D4
 As escadas seguem por ali.
 ~
@@ -852,6 +855,12 @@ As escadas parecem não acabar...
 ~
 ~
 0 -1 11433
+D3
+Você vê o estranho retângulo.
+~
+retângulo branco~
+:n 1 o retângulo branco
+ach -1 11432
 E
 retângulo porta branco~
 Você conclui que essa deve ser a porta para Atalaloka.  Infelizmente, nem no
@@ -864,7 +873,7 @@ Atalaloka?~
    Você pensou entrar em Atalaloka mas, por brincadeira de "alguém", foi
 parar na pintura de uma das paredes de um demônio de neve.  Nada bom...
 ~
-114 262252 0 0 0 0
+114.5 dfgsc 0
 S
 #11433
 A Entrada de Patala~
@@ -876,22 +885,20 @@ vidro verde-musgo, cobrem o chão, tilintando à medida que você pisa sobre
 elas.  Você pode subir pela escada ou, caso consiga abrir a porta, seguir a
 leste, para o Sétimo Submundo.
 ~
-114 393324 0 0 0 1
-D1
-Você vê a porta de jade.
-~
-jade porta~
-0 -1 11434
+114.4 dfrgsc 1
+OX magik "Gl[oó]ria a Sesha" unlock east
+OX magik "Gl[oó]ria a Sesha" open east
 D4
 As escadas seguem por ali.
 ~
 ~
 0 -1 11431
-E
-seixos~
-Em cada um dos seixos você percebe haver uma pequena inscrição.  Algumas
-você entende, outras não. Talvez você consiga pegar alguns deles.
+D1
+Você vê a porta de jade.
 ~
+jade porta~
+:n 2 a porta de jade
+abch -1 11434
 E
 porta jade verde~
 Você fica encantado com essa porta que parece ser feita por algum artista.
@@ -900,6 +907,11 @@ esteja olhando para um dos maiores blocos da pedra que deva já ter existido.
 Os entalhes sobre sua superfície formam uma enorme cobra de milhares de
 cabeças que parece envolver uma grande esfera com seu corpo.  Uma sensação
 de muito respeito por esta figura invade seu ser.
+~
+E
+seixos~
+Em cada um dos seixos você percebe haver uma pequena inscrição.  Algumas
+você entende, outras não. Talvez você consiga pegar alguns deles.
 ~
 S
 #11434
@@ -915,17 +927,18 @@ majestosas com seus picos salpicados de neve, mas nenhuma tão alta como a
 "coroa".  Há o que parece ser uma trilha entre as rochas, seguindo leste
 até encontrar-se com uma muralha tão extensa quanto as cordilheiras.
 ~
-114 64 0 0 0 2
+114.6 g 2
+D3
+Você vê a porta de jade.
+~
+porta jade~
+:n 2 a porta de jade
+ac -1 11433
 D1
 A trilha segue entre as rochas.
 ~
 ~
 0 -1 11435
-D3
-Você vê a porta de jade.
-~
-porta jade~
-0 -1 11433
 E
 porta jade~
 Desse lado ela possui maçaneta...
@@ -941,7 +954,7 @@ feita pelas mesmas pessoas que cobriram o chão com as pedras, pois, também
 de pedra, é impecavelmente encaixada entre elas, não havendo nenhuma
 irregularidade em sua superfície.  Você pode seguir leste e oeste.
 ~
-114 64 0 0 0 2
+114.6 g 2
 D1
 A trilha segue entre as rochas.
 ~
@@ -962,7 +975,7 @@ grande gema incrustrada em uma coroa negra...  Esse pensamento parece o
 perseguir, dando-lhe a impressão de que você não está totalmente errado.  A
 trilha continua a leste e oreste.
 ~
-114 64 0 0 0 2
+114.6 g 2
 D1
 A trilha segue entre as rochas.
 ~
@@ -981,7 +994,7 @@ região da entrada do Sétimo Submundo.  A porta de entrada (ou saída) desse
 mundo fica a alguma distância, a oeste, enquanto a trilha parece seguir até
 a muralha, um pouco mais a frente, a nordeste.
 ~
-114 64 0 0 0 2
+114.6 g 2
 D1
 A trilha segue entre as rochas.
 ~
@@ -1000,17 +1013,17 @@ região da entrada do Sétimo Submundo.  A porta de entrada (ou saída) desse
 mundo fica a alguma distância, a oeste, enquanto a trilha parece seguir até
 a muralha, um pouco mais a frente, a norte.
 ~
-114 64 0 0 0 2
-D0
-A trilha segue entre as rochas.
-~
-~
-0 -1 11439
+114.6 g 2
 D3
 A trilha segue entre as rochas.
 ~
 ~
 0 -1 11437
+D0
+A trilha segue entre as rochas.
+~
+~
+0 -1 11439
 S
 #11439
 A Trilha Entre as Rochas~
@@ -1023,16 +1036,16 @@ parece não terminar.  É possível ainda ver, ao longo da muralha postos onde
 estranhos seres montam guarda.  Mas a visão do que está a norte é que o
 fascina mais...
 ~
-114 64 0 0 0 2
-D0
-Você vê um portão na muralha.
-~
-~
-0 -1 11500
+114.6 g 2
 D3
 A trilha segue entre as rochas.
 ~
 ~
 0 -1 11438
+D0
+Você vê um portão na muralha.
+~
+~
+0 -1 11500
 S
 $~

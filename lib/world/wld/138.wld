@@ -9,7 +9,7 @@ esperando e procurando algum corpo caído no chão.  Ao sul você observa uma
 paisagem esplendorosa:  Um pequeno oásis nas ardentes terras do deserto dos
 dragões de Vitália.
 ~
-138 64 0 0 0 2
+138 g 2
 D2
 Você observa um maravilhoso oásis.
 ~
@@ -27,7 +27,7 @@ no chão, você observa imensas pegadas de monumentais criaturas.  Sobre as
 norte você observa um sublime lago de águas douradas.  Ao noroeste e ao
 nordeste você observa trilhas entre as árvores da floresta dos dragões.
 ~
-138 262144 0 0 0 3
+138 s 3
 D0
 Você observa um lindo lago de águas douradas.
 ~
@@ -53,7 +53,7 @@ magníficos dragões sobrevoando a floresta.  Ao noroeste você observa uma
 trilha entre as árvores.  Ao sudeste você observa uma magnífica estatua de
 pedra brilhante.  Ao nordeste você observa um belo lago de águas douradas.
 ~
-138 262144 0 0 0 3
+138 s 3
 D6
 Você observa uma trilha entre as árvores.
 ~
@@ -81,7 +81,7 @@ lindo lago de águas douradas.  Ao nordeste você observa uma trilha entre as
 árvores da floresta dos dragões e ao sudoeste você observa uma magnífica
 estatua de pedra brilhante.
 ~
-138 262144 0 0 0 3
+138 s 3
 D6
 Você observa um lindo lago de águas douradas.
 ~
@@ -109,7 +109,7 @@ dragão dourado planando sobre as nuvens, seguindo na direção noroeste rumo
 a imensas montanhas.  Ao nordeste e ao sudeste você observa trilhas entre as
 árvores da floresta dos dragões.
 ~
-138 262144 0 0 0 3
+138 s 3
 D7
 Você observa uma trilha entre as árvores.
 ~
@@ -131,7 +131,7 @@ observa sete dragões dourados planando sobre as nuvens.  Ao sul você observa
 uma magnífica estatua de pedra brilhante.  Ao noroeste, nordeste, sudeste e
 ao sudoeste você observa trilhas entre as árvores da floresta dos dragões.
 ~
-138 917572 0 0 0 6
+138 cgrst 6
 D2
 Você observa uma monumental estatua de pedra brilhante.
 ~
@@ -167,7 +167,7 @@ criaturas.  Por entre algumas árvores, você observa na direção nordeste
 algumas montanhas rochosas.  Ao noroeste e ao sudoeste você observa trilhas
 entre as grandes árvores da floresta dos dragões.
 ~
-138 262144 0 0 0 3
+138 s 3
 D6
 Você observa uma trilha entre as árvores.
 ~
@@ -189,7 +189,7 @@ rochosa.  Ao nordeste e ao sudoeste você observa trilhas entre as árvores da
 floresta dos dragões.  Ao sudeste você observa um belíssimo lago de águas
 douradas.
 ~
-138 262144 0 0 0 3
+138 s 3
 D6
 Você observa uma colina cinzenta.
 ~
@@ -221,7 +221,7 @@ rochosa.  Ao noroeste e ao sudeste você observa trilhas entre as árvores da
 floresta dos dragões.  Ao sudoeste você observa um belo lago de águas
 douradas.
 ~
-138 262144 0 0 0 3
+138 s 3
 D6
 Você observa uma trilha entre as árvores.
 ~
@@ -253,7 +253,7 @@ rochosas.  Ao norte você observa uma cinzenta colina rochosa.  Ao sudeste e
 ao sudoeste você observa trilhas entre as grandes árvores da floresta dos
 dragões.
 ~
-138 262144 0 0 0 3
+138 s 3
 D0
 Você observa uma colina cinzenta.
 ~
@@ -278,7 +278,7 @@ Ao sudoeste você observa uma imensa montanha rochosa sendo sobrevoada por
 monumentais dragões.  Ao nordeste e ao leste você observa uma colina rochosa
 e suas rochas cinzentas.
 ~
-138 0 0 0 0 2
+138 0 2
 D1
 Você observa uma colina cinzenta.
 ~
@@ -298,7 +298,7 @@ cinzenta.  Ao seu redor você observa grandes rochas cinzas e a ausência de
 sobrevoada por magníficos dragões.  Ao leste e ao oeste você observa uma
 colina rochosa e suas rochas cinzentas.
 ~
-138 0 0 0 0 2
+138 0 2
 D1
 Você observa uma colina cinzenta.
 ~
@@ -318,7 +318,7 @@ delimitam este lugar.  Ao noroeste e ao oeste você observa uma colina
 rochosa.  Ao sudeste você observa uma trilha entre as árvores da floresta
 dos dragões.
 ~
-138 0 0 0 0 2
+138 0 2
 D3
 Você observa uma colina cinzenta.
 ~
@@ -343,7 +343,7 @@ brancas sendo cortadas pelas asas de magníficos dragões que deitam sobre
 elas.  Ao sudeste e ao sudoeste você observa uma colina rochosa.  Ao norte
 você observa majestoso palácio que brilha como uma estrela.
 ~
-138 0 0 0 0 2
+138 0 2
 D0
 Você observa um magnífico palácio.
 ~
@@ -369,7 +369,7 @@ os raios solares e ilumina todo o palácio.  Nas paredes você observa lindas
 pinturas e runas, que expressam a monumentalidade dos seus moradores.  Ao
 sul você observa uma extensa colina rochosa.
 ~
-138 72 0 0 0 0
+138 dg 0
 D2
 Você observa uma colina cinzenta.
 ~
@@ -385,7 +385,7 @@ monumentais dragões.  Ao nordeste e ao leste você observa uma colina rochosa
 e suas rochas cinzentas.  Ao sudoeste você observa uma trilha entre as belas
 árvores da floresta dos dragões.
 ~
-138 0 0 0 0 2
+138 0 2
 D1
 Você observa uma colina cinzenta.
 ~
@@ -410,7 +410,7 @@ cinzenta.  Ao seu redor você observa grandes rochas cinzas e a ausência de
 sobrevoada por magníficos dragões.  Ao leste e ao oeste você observa uma
 colina rochosa e suas rochas cinzentas.
 ~
-138 0 0 0 0 2
+138 0 2
 D1
 Você observa uma colina cinzenta.
 ~
@@ -429,7 +429,7 @@ enormes rochas cinzentas.  Além da colina você observa grandes montanhas que
 delimitam este lugar.  Ao noroeste e ao oeste você observa a extensa colina
 rochosa.
 ~
-138 0 0 0 0 2
+138 0 2
 D3
 Você observa uma colina cinzenta.
 ~
@@ -449,7 +449,7 @@ brancas sendo cortadas pelas asas de magníficos dragões que deitam sobre
 elas.  Ao sudeste e ao sudoeste você observa uma colina rochosa.  Ao norte
 você observa majestoso palácio que brilha como uma estrela vermelha.
 ~
-138 0 0 0 0 2
+138 0 2
 D0
 Você observa um magnífico palácio.
 ~
@@ -475,7 +475,7 @@ cúpula de cristal que filtra os raios solares e ilumina todo o palácio.  Nas
 paredes você percebe lindas paisagens retratadas em sublimes pinturas.  Ao
 sul você observa uma extensa colina rochosa.
 ~
-138 72 0 0 0 0
+138 dg 0
 D2
 Você observa uma colina cinzenta.
 ~
@@ -491,7 +491,7 @@ coberta por grama e flores.  Ao norte, leste, oeste, noroeste e ao nordeste
 você observa as entradas de cinco monumentais minas de pedras preciosas.  Ao
 sul você observa uma trilha entre as árvores da floresta dos dragões.
 ~
-138 0 0 0 0 2
+138 0 2
 D0
 Você observa a entrada de uma magnífica mina.
 ~
@@ -538,7 +538,7 @@ de dentro da mina chegam até seus ouvidos, lhe deixando arrepiado.  Para
 baixo você observa um grandioso túnel dentro da mina.  Ao leste você observa
 uma colina rochosa.
 ~
-138 12 0 0 0 2
+138 cd 2
 D1
 Você observa uma colina cinzenta.
 ~
@@ -559,7 +559,7 @@ da mina, formando uma majestosa composição de brilhos.  Para cima você
 observa a entrada da mina e ao oeste você observa o túnel seguindo rumo ao
 interior da mina de ametistas.
 ~
-138 9 0 0 0 2
+138 ad 2
 D3
 Você observa o magnífico túnel da mina seguindo rumo ao seu interior.
 ~
@@ -579,7 +579,7 @@ ametistas incrustadas na superfície das paredes do túnel e algumas no chão
 da mina.  Ao leste e ao sul você observa a continuação deste grandioso e
 belíssimo túnel.
 ~
-138 9 0 0 0 2
+138 ad 2
 D1
 Você observa um túnel monumental.
 ~
@@ -600,7 +600,7 @@ pedras ametistas incrustadas nelas.  No chão você percebe várias imensas
 pegadas de dragões.  Ao norte e para baixo você observa a continuação do
 grandioso túnel.  
 ~
-138 9 0 0 0 2
+138 ad 2
 D0
 Você observa um túnel monumental.
 ~
@@ -621,7 +621,7 @@ paredes da mina.  Você observa atentamente grandes marcas de garras de
 dragões nas rochas que formam a parede oeste do imenso túnel.  Ao leste você
 observa a continuação do túnel.
 ~
-138 9 0 0 0 2
+138 ad 2
 D3
 Você observa um túnel monumental.
 ~
@@ -637,7 +637,7 @@ partir deste local e forma dois outros caminhos.  O primeiro segue para
 oeste e o segundo para sudeste.  Para cima e para baixo você observa a
 continuação do grandioso túnel.
 ~
-138 9 0 0 0 2
+138 ad 2
 D3
 Você observa um túnel monumental.
 ~
@@ -667,7 +667,7 @@ superfície do imenso túnel que corta a mina.  Você observa grandes marcas de
 garras de dragões nas paredes da mina.  Você percebe também a existência de
 grandes ninhos de dragões.  Ao noroeste você observa a continuação do túnel.
 ~
-138 9 0 0 0 2
+138 ad 2
 D6
 Você observa um túnel monumental.
 ~
@@ -683,7 +683,7 @@ superfície das rochas que formam a câmara da mina.  A grandiosidade deste
 lugar surpreenderia até os mais poderosos e ricos reis de Vitália.  Seguindo
 para cima você observa um gigantesco túnel de dimensões magníficas.
 ~
-138 9 0 0 0 2
+138 ad 2
 D4
 Você observa um túnel monumental.
 ~
@@ -699,7 +699,7 @@ mina você observa várias pegadas enormes de dragões.  Ao sudeste você
 observa uma colina rochosa e para baixo você observa o grandioso túnel
 ornado por inúmeras esmeraldas seguindo rumo ao interior da mina verde.
 ~
-138 12 0 0 0 2
+138 cd 2
 D5
 Você observa um túnel monumental.
 ~
@@ -721,7 +721,7 @@ oeste você observa a continuação do magnífico túnel seguindo na direção do
 interior da mina e para cima você observa a majestosa entrada da mina de
 esmeraldas.
 ~
-138 9 0 0 0 2
+138 ad 2
 D3
 Você observa um túnel monumental.
 ~
@@ -741,7 +741,7 @@ esmeraldas do túnel que segue rumo ao interior da mina.  No chão da mina,
 você percebe inúmeras pegadas imensas de dragões.  Ao leste e para baixo
 você observa a continuação do túnel que corta a mina de esmeraldas.
 ~
-138 9 0 0 0 2
+138 ad 2
 D1
 Você observa um túnel monumental.
 ~
@@ -762,7 +762,7 @@ pegadas ao solo.  Você percebe na superfície das paredes do monumental túnel
 várias esmeraldas incrustadas.  Ao oeste e para cima você observa a
 continuação deste gigantesco túnel.
 ~
-138 9 0 0 0 2
+138 ad 2
 D3
 Você observa um túnel monumental.
 ~
@@ -783,7 +783,7 @@ segue rumo ao oeste e para baixo dando continuidade ao grandioso túnel da
 mina de esmeraldas.  Ao leste você observa a continuação do imenso túnel
 seguindo na direção da entrada da mina.
 ~
-138 9 0 0 0 2
+138 ad 2
 D1
 Você observa um túnel monumental.
 ~
@@ -808,7 +808,7 @@ majestosos ninhos de dragões abandonados.  Ao seus pés, você observa grandes
 pegadas de dragões.  Ao leste você observa a continuação do monumental túnel
 que corta a mina de esmeraldas.
 ~
-138 9 0 0 0 2
+138 ad 2
 D1
 Você observa um túnel monumental.
 ~
@@ -823,7 +823,7 @@ esmeraldas do túnel que segue rumo ao interior da mina.  No chão da mina,
 você percebe inúmeras pegadas imensas de dragões.  Ao oeste e para cima você
 observa a continuação do túnel que corta a mina de esmeraldas.
 ~
-138 9 0 0 0 2
+138 ad 2
 D3
 Você observa um túnel monumental.
 ~
@@ -844,7 +844,7 @@ superfície das paredes da câmara e enormes pegadas de dragões no chão.  Ao
 leste você observa um imenso túnel que segue na direção da entrada da bela
 mina de esmeraldas.
 ~
-138 9 0 0 0 2
+138 ad 2
 D1
 Você observa um túnel monumental.
 ~
@@ -861,7 +861,7 @@ você observa pegadas gigantescas de dragões.  Ao sul você observa uma colina
 rochosa e para baixo você observa um magnífico túnel seguindo rumo ao
 interior da sublime mina de cristais.
 ~
-138 12 0 0 0 2
+138 cd 2
 D2
 Você observa uma colina cinzenta.
 ~
@@ -884,7 +884,7 @@ da mina.  Ao sul você observa a continuação do grande túnel que segue rumo
 ao interior da mina e para cima você observa a maravilhosa entrada da mina
 de cristais.
 ~
-138 9 0 0 0 2
+138 ad 2
 D2
 Você observa um túnel monumental.
 ~
@@ -905,7 +905,7 @@ formam uma belíssima composição.  Ao norte você observa a continuação do
 monumental túnel que corta a maravilhosa mina de cristais e para baixo você
 observa uma descida no enorme túnel que segue rumo ao interior da mina.
 ~
-138 9 0 0 0 2
+138 ad 2
 D0
 Você observa um túnel monumental.
 ~
@@ -927,7 +927,7 @@ continuação do gigantesco túnel que segue rumo ao interior da mina de
 cristais e para cima você observa uma subida íngreme no interior do imenso
 túnel.
 ~
-138 9 0 0 0 2
+138 ad 2
 D4
 Você observa uma subida íngreme no monumental túnel.
 ~
@@ -950,7 +950,7 @@ sua mente.  Ao oeste você observa a continuação do imenso túnel que segue
 rumo ao interior da mina de cristais e ao sudeste você observa o enorme
 túnel seguindo na direção da saída desta magnífica mina.
 ~
-138 9 0 0 0 2
+138 ad 2
 D3
 Você observa um túnel monumental.
 ~
@@ -972,7 +972,7 @@ majestosa fonte de cristal brilhando como uma estrela e emitindo uma melodia
 encantadora.  Ao sul você observa o gigantesco túnel que corta o interior da
 mina de cristais.
 ~
-138 8 0 0 0 1
+138 d 1
 D2
 Você observa um túnel monumental.
 ~
@@ -989,7 +989,7 @@ observa uma belíssima estatua de cristal, ao leste você observa um enorme
 túnel que segue na direção da saída da mina e para baixo você observa uma
 monumental câmara cheia de ninhos de dragões.
 ~
-138 9 0 0 0 2
+138 ad 2
 D0
 Você observa uma magnífica estatua de cristal.
 ~
@@ -1019,7 +1019,7 @@ cristal.  Você observa imensos dragões caminhando lentamente e verificando
 seus ninhos e filhotes.  Para cima você observa uma subida íngreme rumo ao
 gigantesco túnel que corta o interior da mina de cristais.
 ~
-138 8 0 0 0 1
+138 d 1
 D4
 Você observa uma subida íngreme.
 ~
@@ -1035,7 +1035,7 @@ pegadas de dragões.  Ao oeste você observa uma colina rochosa e para baixo
 você observa um enorme túnel de dimensões monumentais que segue rumo ao
 interior da mina de safiras.
 ~
-138 12 0 0 0 2
+138 cd 2
 D3
 Você observa uma colina cinzenta.
 ~
@@ -1058,7 +1058,7 @@ pedras, lhe deixando calmo e tranqüilo.  Para cima você observa a bela
 entrada da mina e para baixo você observa um túnel de proporções monumentais
 que segue rumo ao interior da encantadora mina de pedras safiras.
 ~
-138 8 0 0 0 1
+138 d 1
 D4
 Você observa a belíssima entrada da mina.
 ~
@@ -1083,7 +1083,7 @@ sudoeste você observa a continuação do grandioso túnel que segue rumo ao
 interior da mina e para cima você observa o túnel na direção da saída da
 bela mina de pedras safiras.
 ~
-138 8 0 0 0 1
+138 d 1
 D4
 Você observa um túnel monumental.
 ~
@@ -1106,7 +1106,7 @@ azul que surgem das belas safiras iluminam todo o túnel, facilitando a sua
 caminhada.  Ao nordeste e ao sudoeste você observa a continuação do imenso
 túnel que corta o interior da mina de pedras safiras.
 ~
-138 8 0 0 0 1
+138 d 1
 D7
 Você observa um túnel monumental.
 ~
@@ -1129,7 +1129,7 @@ pés, você observa imensas pegadas de dragões.  Ao nordeste você observa o
 monumental túnel seguindo na direção da saída do túnel e ao sul você observa
 uma bifurcação no grandioso túnel.
 ~
-138 8 0 0 0 1
+138 d 1
 D2
 Você observa um túnel monumental.
 ~
@@ -1153,22 +1153,22 @@ sensação de paz em seu corpo.  Ao norte você observa o grandioso túnel
 seguindo na direção da saída da mina de pedras safiras.  Ao sudeste e para
 baixo você observa o majestoso túnel se dividir em dois caminhos azulados.
 ~
-138 8 0 0 0 1
+138 d 1
 D0
 Você observa um túnel monumental.
 ~
 ~
 0 -1 13848
-D5
-Você observa vários ninhos de dragões.
-~
-~
-0 -1 13851
 D8
 Você observa uma magnífica pedra.
 ~
 ~
 0 -1 13852
+D5
+Você observa vários ninhos de dragões.
+~
+~
+0 -1 13851
 S
 #13851
 O Maravilhoso Recinto Azulado dos Dragões de Pedra Safira~
@@ -1183,7 +1183,7 @@ As safiras emitem vários feixes de luz azul em todas as direções iluminando
 todo o recinto e uma suave melodia brota do interior das mesmas.  Para cima
 você um grandioso túnel azulado.
 ~
-138 8 0 0 0 1
+138 d 1
 D4
 Você observa um túnel monumental.
 ~
@@ -1204,7 +1204,7 @@ pedra, uma suave e encantadora melodia surge, lhe deixando tranqüilo e
 espalhando uma sensação de paz em seu corpo.  Ao noroeste você observa um
 monumental túnel que corta o interior da maravilhosa mina de pedras safiras.
 ~
-138 524296 0 0 0 1
+138 dt 1
 D6
 Você observa um túnel monumental.
 ~
@@ -1221,7 +1221,7 @@ o chão da mina.  Ao sudoeste você observa uma colina rochosa e para baixo
 você observa um magnífico túnel que segue na direção do interior da mina de
 topázios.
 ~
-138 12 0 0 0 2
+138 cd 2
 D5
 Você observa um túnel monumental.
 ~
@@ -1243,7 +1243,7 @@ pegadas de dragões.  Ao leste você observa o monumental túnel que corta o
 interior da mina e para cima você observa a maravilhosa entrada da mina de
 topázios.
 ~
-138 9 0 0 0 2
+138 ad 2
 D1
 Você observa um túnel monumental.
 ~
@@ -1265,7 +1265,7 @@ silêncio neste lugar reina absolutamente.  Ao oeste você observa o imenso
 túnel seguindo rumo a saída da mina e para baixo você observa o túnel
 seguindo na direção do interior da mina de topázios.
 ~
-138 9 0 0 0 2
+138 ad 2
 D3
 Você observa um túnel monumental.
 ~
@@ -1286,7 +1286,7 @@ paredes do túnel.  Para cima você observa o imenso túnel que segue rumo a
 saída da magnífica mina amarela e ao oeste você observa a continuação do
 túnel seguindo na direção do interior da mina.
 ~
-138 9 0 0 0 2
+138 ad 2
 D3
 Você observa um túnel monumental.
 ~
@@ -1307,7 +1307,7 @@ entre elas imensas pegadas de dragões.  Ao leste você observa a continuação
 do monumental túnel que segue rumo a saída da mina e para baixo você observa
 uma bifurcação ao longo do túnel amarelo.
 ~
-138 9 0 0 0 2
+138 ad 2
 D1
 Você observa um túnel monumental.
 ~
@@ -1328,7 +1328,7 @@ paredes do túnel e espalhadas sobre o chão da mina.  Ao leste você observa
 uma magnífica estatua de pedra e para baixo você observa vários majestosos
 ninhos de dragões.
 ~
-138 9 0 0 0 2
+138 ad 2
 D1
 Você observa uma maravilhosa estatua amarela.
 ~
@@ -1350,7 +1350,7 @@ observa monumentais pegadas de dragões sobre o solo da mina.  Ao oeste você
 observa uma grandiosa bifurcação no túnel que corta o interior da mina de
 topázios.
 ~
-138 9 0 0 0 2
+138 ad 2
 D3
 Você observa uma bifurcação no túnel monumental.
 ~
@@ -1369,7 +1369,7 @@ tão poderosas e gloriosas.  No centro da câmara amarela você observa uma
 bela fonte de pedra.  Para cima você observa uma grandiosa bifurcação no
 imenso túnel que corta o interior da mina de topázios.
 ~
-138 9 0 0 0 2
+138 ad 2
 D4
 Você observa uma bifurcação no túnel monumental.
 ~
@@ -1386,7 +1386,7 @@ solitários.  Na direção noroeste você observa uma grande montanha rochosa e
 gigantescos dragões sobrevoando ao seu redor.  Ao norte você observa a 
 extensa colina verde e para baixo você observa uma colina rochosa.
 ~
-138 0 0 0 0 2
+138 0 2
 D0
 Você observa uma extensa colina verde.
 ~
@@ -1407,7 +1407,7 @@ Ao norte, sul e ao nordeste você observa a calma colina verde e ao noroeste
 você observa uma grande montanha rochosa e vários gigantescos dragões
 sobrevoando ao seu redor.
 ~
-138 0 0 0 0 2
+138 0 2
 D0
 Você observa uma extensa colina verde.
 ~
@@ -1437,7 +1437,7 @@ observa um caminho íngreme que segue rumo ao topo da montanha onde
 monumentais dragões sobrevoam ao seu redor e ao sudeste você observa uma
 bela colina verde.
 ~
-138 4 0 0 0 4
+138 c 4
 D4
 Você observa um caminho íngreme que segue rumo ao topo da montanha.
 ~
@@ -1459,7 +1459,7 @@ colina verde e ao norte você observa muito distante uma imensa rocha entre
 as belas nuvens.  Para baixo você observa um caminho íngreme na direção da
 base da grande montanha rochosa.
 ~
-138 65536 0 0 0 5
+138 q 5
 D5
 Você observa um caminho íngreme na direção da base da montanha.
 ~
@@ -1475,7 +1475,7 @@ Na direção oeste você observa uma monumental montanha rochosa sobrevoada por
 gigantescos dragões.  Ao sudeste e ao sudoeste você observa a extensa colina
 verde.
 ~
-138 0 0 0 0 2
+138 0 2
 D8
 Você observa uma extensa colina verde.
 ~
@@ -1496,7 +1496,7 @@ brancas, e perfumadas flores amarelas e azuis brotam dos pequeninos arbustos
 solitários.  Ao leste e ao noroeste você observa a extensa colina verde e ao
 nordeste você observa um belo lago de águas cristalinas.
 ~
-138 0 0 0 0 2
+138 0 2
 D1
 Você observa uma extensa colina verde.
 ~
@@ -1522,7 +1522,7 @@ Ao oeste você observa a extensa colina verde, ao noroeste você observa um
 belo lago de águas cristalinas e para baixo você observa a entrada de uma
 sinistra caverna.
 ~
-138 0 0 0 0 2
+138 0 2
 D3
 Você observa uma extensa colina verde.
 ~
@@ -1549,7 +1549,7 @@ observa uma colina verde.  Ao leste você observa as transparentes águas do
 lago brilhante e mergulhando rumo ao fundo do lago, você observa alguns
 pequeninos peixes coloridos.
 ~
-138 262148 0 0 0 6
+138 cs 6
 D1
 Você observa o reflexo das nuvens sobre a superfície das águas do lago.
 ~
@@ -1580,7 +1580,7 @@ camada compacta de grama.  Ao oeste você observa as cristalinas águas do
 lago brilhante e para baixo você observa pequeninos peixes nadando no fundo
 do lago.
 ~
-138 262148 0 0 0 6
+138 cs 6
 D3
 Você observa o reflexo das nuvens sobre a superfície das águas do lago.
 ~
@@ -1600,7 +1600,7 @@ seu redor.  Você percebe também algumas algas azuis presas no fundo do lago.
 Ao noroeste você observa o belo mundo do fundo do lago brilhante e para cima
 você observa surpreso o seu próprio reflexo na superfície das águas do lago.
 ~
-138 393280 0 0 0 8
+138 grs 8
 D4
 Você observa surpreso seu próprio reflexo na superfície das águas do lago.
 ~
@@ -1622,7 +1622,7 @@ uma grandiosa montanha rochosa sobrevoada por gigantescos dragões.  Ao sul
 você observa a extensa colina verde e ao oeste você maravilhosas cascatas
 que brotam da grandiosa montanha rochosa do oeste.
 ~
-138 0 0 0 0 2
+138 0 2
 D2
 Você observa uma extensa colina verde.
 ~
@@ -1642,7 +1642,7 @@ rochosa como formosas coroas brilhantes.  Ao seu redor você observa as
 quentes águas das cascatas formando uma bela parede de água e majestosos
 dragões banhando-se nelas.  Ao leste você observa uma extensa colina verde.
 ~
-138 0 0 0 0 6
+138 0 6
 D1
 Você observa uma extensa colina verde.
 ~
@@ -1652,7 +1652,8 @@ D6
 Você observa a suave parede de águas formada pelas cascatas.
 ~
 cascata água parede~
-0 -1 13873
+:n 2 a cascata dos dragões
+abd -1 13873
 S
 #13873
 Uma Enorme Pedra Colorida~
@@ -1663,7 +1664,7 @@ monólito e cantam suaves melodias.  Ao nordeste e ao noroeste você observa
 magníficos monólitos e ao sudeste você observa a maravilhosa parede de água
 formada pelas cascatas dos dragões.
 ~
-138 0 0 0 0 2
+138 0 2
 D6
 Você observa um belo monólito dourado.
 ~
@@ -1678,7 +1679,8 @@ D8
 Você observa uma bela parede de água formada pelas cascatas dos dragões.
 ~
 cascata água parede~
-0 -1 13872
+:n 2 a cascata dos dragões
+abd -1 13872
 S
 #13874
 Uma Gigantesca Pedra Dourada~
@@ -1689,7 +1691,7 @@ superfície.  Ao leste e ao sudeste você observa monumentais monólitos.  A
 cima das nuvens você observa uma enorme rocha flutuando nos áureos céus de
 Vitália.
 ~
-138 0 0 0 0 2
+138 0 2
 D1
 Você observa um belo monólito brilhante.
 ~
@@ -1715,7 +1717,7 @@ olham curiosamente para você e emitem constantes sons.  Ao oeste e ao
 sudoeste você observa majestosos monólitos.  Ao nordeste você observa uma
 tranqüila colina verde.
 ~
-138 0 0 0 0 2
+138 0 2
 D3
 Você observa um monólito dourado.
 ~
@@ -1740,7 +1742,7 @@ as nuvens.  Para baixo você observa um enorme monólito dourado sobre uma
 extensa colina coberta por uma compacta camada de grama e para cima você
 observa uma gigantesca rocha flutuando entre as nuvens de Vitália.
 ~
-138 131140 0 0 0 9
+138 cgr 9
 D4
 Você observa uma magnífica rocha flutuando entre as nuvens.
 ~
@@ -1760,7 +1762,7 @@ presença entre eles.  Para baixo você observa um pequeno ponto dourado sobre
 uma extensa mancha verde e para cima você observa uma magnífica rocha
 flutuando entre as nuvens de Vitália.
 ~
-138 131140 0 0 0 9
+138 cgr 9
 D4
 Você observa uma magnífica rocha flutuando entre as nuvens.
 ~
@@ -1780,7 +1782,7 @@ brancas.  Para baixo você observa várias nuvens e uma imensa mancha verde.
 Para cima você observa um magnífico castelo flutuando entre as sublimes
 nuvens de Vitália.
 ~
-138 131140 0 0 0 9
+138 cgr 9
 D4
 Você observa o glorioso castelo dos dragões.
 ~
@@ -1807,12 +1809,13 @@ pedra ornamentada por várias lamparinas douradas, que emitem um brilho
 intenso iluminando toda a plataforma.  Para baixo você observa as suaves
 nuvens dos áureos céus de Vitália.
 ~
-138 68 0 0 0 1
+138 cg 1
 D0
 Você observa um enorme portão de madeira.
 ~
 portão madeira~
-0 -1 13881
+:n 1 o portão de madeira
+adg -1 13881
 D5
 Você observa algumas nuvens.
 ~
@@ -1830,7 +1833,7 @@ abóbada.  Na superfície da belíssima abobada você observa maravilhosas
 pinturas de dragões e dos deuses.  Ao leste e ao nordeste você observa o
 majestoso e sagrado salão do castelo do deus dos bons dragões.
 ~
-138 8 0 0 0 0
+138 d 0
 D1
 Você observa o magnífico salão do castelo de Bahamut.
 ~
@@ -1854,7 +1857,7 @@ leste, noroeste e ao nordeste você observa o esplendoroso salão do castelo
 do poderoso Bahamut e ao sul você observa um enorme portão de madeira
 apoiado por uma imensa muralha de pedra.
 ~
-138 8 0 0 0 0
+138 d 0
 D1
 Você observa o magnífico salão do castelo de Bahamut.
 ~
@@ -1864,7 +1867,8 @@ D2
 Você observa um enorme portão de madeira.
 ~
 portão madeira~
-0 -1 13879
+:n 1 o portão de madeira
+adg -1 13879
 D3
 Você observa o magnífico salão do castelo de Bahamut.
 ~
@@ -1892,7 +1896,7 @@ abobada.  Na superfície da belíssima abobada você observa maravilhosas
 pinturas de dragões e dos deuses.  Ao oeste e ao noroeste você observa o
 majestoso e sagrado salão do castelo do deus dos bons dragões.
 ~
-138 8 0 0 0 0
+138 d 0
 D3
 Você observa o magnífico salão do castelo de Bahamut.
 ~
@@ -1917,7 +1921,7 @@ calmo.  Ao leste, sudeste e ao sudoeste você observa o monumental salão do
 belíssimo castelo de Bahamut e para cima você observa uma longa escadaria de
 pedras.
 ~
-138 8 0 0 0 0
+138 d 0
 D1
 Você observa o magnífico salão do castelo de Bahamut.
 ~
@@ -1952,7 +1956,7 @@ e lendários dragões.  Ao oeste, sudeste e ao sudoeste você observa o
 magnífico salão do castelo de Bahamut e para cima você observa uma longa
 escadaria de pedra.
 ~
-138 8 0 0 0 0
+138 d 0
 D3
 Você observa o magnífico salão do castelo de Bahamut.
 ~
@@ -1973,7 +1977,7 @@ Você observa o magnífico salão do castelo de Bahamut.
 ~
 ~
 0 -1 13881
-S
+S 
 #13885
 A Cela dos Amaldiçoados~
    Você está dentro da cela onde são aprisionadas as malditas e malévolas
@@ -1983,27 +1987,31 @@ Bahamut.  Ao noroeste, nordeste, sudeste e ao sudoeste você observa oito
 gigantescos tronos de pedra e ao norte da cela você observa o maravilhoso
 trono do deus dos bons dragões.
 ~
-138 3539336 0 0 0 0
+138.1 dhirsuv 0
 D6
 Você observa por entre as grades dois enormes tronos do tribunal de Bahamut.
 ~
 grade diamante~
-0 13839 13888
+:n 2 a grade de diamante
+abcd 13839 13888
 D7
 Você observa por entre as grades dois enormes tronos do tribunal de Bahamut.
 ~
 grade diamante~
-0 13839 13889
+:n 2 a grade de diamante
+abcd 13839 13889
 D8
 Você observa por entre as grades dois enormes tronos do tribunal de Bahamut.
 ~
 grade diamante~
-0 13839 13886
+:n 2 a grade de diamante
+abcd 13839 13886
 D9
 Você observa por entre as grades dois enormes tronos do tribunal de Bahamut.
 ~
 grade diamante~
-0 13839 13887
+:n 2 a grade de diamante
+abcd 13839 13887
 S
 #13886
 Entre os Monumentais Tronos e Estatuas do Tribunal de Bahamut~
@@ -2018,7 +2026,7 @@ noroeste, você observa no centro do tribunal uma impetuosa estatua de pedra
 do deus dos bons dragões, o magnífico Bahamut segurando em suas mãos uma
 enorme cela de diamante.
 ~
-138 8 0 0 0 0
+138.1 d 0
 D0
 Você observa dois imensos tronos de pedra do tribunal de Bahamut.
 ~
@@ -2033,7 +2041,8 @@ D6
 Você observa uma estatua de Bahamut segurando em suas mãos uma cela.
 ~
 grade diamante~
-0 13839 13885
+:n 2 a grade de diamante
+abcd 13839 13885
 D9
 Você observa a majestosa entrada do tribunal supremo de Bahamut.
 ~
@@ -2053,7 +2062,7 @@ nordeste, você observa no centro do tribunal uma impetuosa estatua de pedra
 do deus dos bons dragões, o magnífico Bahamut segurando em suas mãos uma
 enorme cela de diamante.
 ~
-138 8 0 0 0 0
+138.1 d 0
 D0
 Você observa dois imensos tronos de pedra do tribunal de Bahamut.
 ~
@@ -2068,7 +2077,8 @@ D7
 Você observa uma estatua de Bahamut segurando em suas mãos uma cela.
 ~
 grade diamante~
-0 13839 13885
+:n 2 a grade de diamante
+abcd 13839 13885
 D8
 Você observa a majestosa entrada do tribunal supremo de Bahamut.
 ~
@@ -2087,7 +2097,7 @@ observa no centro do tribunal uma impetuosa estatua de pedra do deus dos
 bons dragões, o magnífico Bahamut segurando em suas mãos uma enorme cela de
 diamante.
 ~
-138 8 0 0 0 0
+138.1 d 0
 D1
 Você observa dois imensos tronos de pedra do tribunal de Bahamut.
 ~
@@ -2102,7 +2112,8 @@ D8
 Você observa uma estatua de Bahamut segurando em suas mãos uma cela.
 ~
 grade diamante~
-0 13839 13885
+:n 2 a grade de diamante
+abcd 13839 13885
 S
 #13889
 Entre os Monumentais Tronos e Estatuas do Tribunal de Bahamut~
@@ -2116,7 +2127,7 @@ observa no centro do tribunal uma impetuosa estatua de pedra do deus dos
 bons dragões, o magnífico Bahamut segurando em suas mãos uma enorme cela de
 diamante.
 ~
-138 8 0 0 0 0
+138.1 d 0
 D2
 Você observa dois imensos tronos de pedra do tribunal de Bahamut.
 ~
@@ -2131,7 +2142,8 @@ D9
 Você observa uma estatua de Bahamut segurando em suas mãos uma cela.
 ~
 grade diamante~
-0 13839 13885
+:n 2 a grade de diamante
+abcd 13839 13885
 S
 #13890
 A Majestosa Entrada do Tribunal de Bahamut~
@@ -2144,7 +2156,7 @@ blocos de mármore que revestem todo o piso.  Ao noroeste e ao nordeste você
 observa monumentais tronos de pedras e lindas estatuas de dragões.  Para
 baixo você observa uma longa escadaria.
 ~
-138 8 0 0 0 0
+138 d 0
 D5
 Você observa uma longa escadaria.
 ~
@@ -2174,7 +2186,7 @@ da maravilhosa ilha de Yo.  Ao norte você observa uma magnífica alameda
 formada por duas esplendorosas estatuas de dragões e para baixo você observa
 uma longa escadaria de pedra.
 ~
-138 8 0 0 0 0
+138 d 0
 D0
 Você observa uma monumental alameda formada por estatuas de pedra.
 ~
@@ -2186,8 +2198,8 @@ Você observa uma longa escadaria.
 ~
 0 -1 13883
 E
-janela~
-Você observa a exuberante beleza da ilha de Yo.
+quadros~
+Você observa algumas manchas coloridas emolduradas com pedras brilhantes.
 ~
 E
 colunas~
@@ -2195,8 +2207,8 @@ Você observa várias runas esculpidas na superfície das pedras que formam
 esta coluna.
 ~
 E
-quadros~
-Você observa algumas manchas coloridas emolduradas com pedras brilhantes.
+janela~
+Você observa a exuberante beleza da ilha de Yo.
 ~
 S
 #13892
@@ -2212,7 +2224,7 @@ alameda dos dragões.  Ao sul você observa a entrada deste sagrado recinto e
 ao norte você observa a continuação da alameda seguindo na direção do sublime
 trono dourado, no extremo norte do salão.
 ~
-138 8 0 0 0 0
+138 d 0
 D0
 Você observa uma monumental alameda formada por estatuas de pedra.
 ~
@@ -2244,7 +2256,7 @@ observa belos quadros com maravilhosas pinturas.  No teto você uma linda
 cúpula dourada apoiada nas monumentais colunas de pedras que estruturam este
 majestoso lugar.  Ao leste você observa a bela alameda dos dragões.
 ~
-138 8 0 0 0 0
+138 d 0
 D1
 Você observa a magnífica alameda dos dragões.
 ~
@@ -2261,7 +2273,7 @@ observa belos quadros com maravilhosas pinturas.  No teto você uma linda
 cúpula dourada apoiada nas monumentais colunas de pedras que estruturam este
 majestoso lugar.  Ao oeste você observa a bela alameda dos dragões.
 ~
-138 8 0 0 0 0
+138 d 0
 D3
 Você observa a magnífica alameda dos dragões.
 ~
@@ -2281,7 +2293,7 @@ alameda dos dragões.  Ao sul você observa a entrada do magnífico salão
 celestial do castelo flutuante de Bahamut e ao norte você observa um belo
 trono dourado.
 ~
-138 8 0 0 0 0
+138 d 0
 D0
 Você observa um imenso trono dourado.
 ~
@@ -2313,7 +2325,7 @@ observa belos quadros com maravilhosas pinturas.  No teto você uma linda
 cúpula dourada apoiada nas monumentais colunas de pedras que estruturam este
 majestoso lugar.  Ao leste você observa a bela alameda dos dragões.
 ~
-138 8 0 0 0 0
+138 d 0
 D1
 Você observa a magnífica alameda dos dragões.
 ~
@@ -2330,7 +2342,7 @@ observa belos quadros com maravilhosas pinturas.  No teto você uma linda
 cúpula dourada apoiada nas monumentais colunas de pedras que estruturam este
 majestoso lugar.  Ao oeste você observa a bela alameda dos dragões.
 ~
-138 8 0 0 0 0
+138 d 0
 D3
 Você observa a magnífica alameda dos dragões.
 ~
@@ -2355,7 +2367,7 @@ janelas, trazendo consigo enormes dragões dourados que pousam no centro do
 salão.  Ao sul você observa uma maravilhosa alameda de pedras formada por
 gigantescas estatuas de dragões.
 ~
-138 8 0 0 0 0
+138 d 0
 D2
 Você observa a magnífica alameda dos dragões.
 ~
@@ -2370,7 +2382,7 @@ seu redor.  Você percebe também algumas algas azuis presas no fundo do lago.
 Ao sudeste você observa o belo mundo do fundo do lago brilhante e para cima
 você observa surpreso o seu próprio reflexo na superfície das águas do lago.
 ~
-138 393280 0 0 0 8
+138 grs 8
 D4
 Você observa surpreso seu próprio reflexo na superfície das águas do lago.
 ~
@@ -2391,7 +2403,7 @@ paredes você observa várias pinturas feitas com sangue, formando malditas
 runas.  Para cima você observa uma planície verde e ao leste você observa
 um túnel que segue rumo ao interior da caverna negra.
 ~
-138 68 0 0 0 1
+138 cg 1
 D1
 Você observa um túnel que segue rumo ao interior da caverna.
 ~
@@ -2412,7 +2424,7 @@ enormes poças de sangue e gigantescas pegadas.  Ao leste você observa a
 continuação do túnel seguindo na direção do interior da caverna e ao oeste
 você observa a entrada da assustadora caverna maldita.
 ~
-138 9 0 0 0 0
+138 ad 0
 D1
 Você observa um túnel que segue rumo ao interior da caverna.
 ~
@@ -2433,7 +2445,7 @@ enormes poças de sangue e gigantescas pegadas.  Para baixo você observa a
 continuação do túnel seguindo na direção do interior da caverna e ao oeste
 você observa um túnel que segue rumo a entrada da caverna maldita.
 ~
-138 9 0 0 0 0
+138 ad 0
 D3
 Você observa um túnel que segue rumo ao interior da caverna.
 ~
@@ -2454,7 +2466,7 @@ enormes poças de sangue e gigantescas pegadas.  Para baixo você observa a
 continuação do túnel seguindo na direção do interior da caverna e ao leste
 você observa um assustador túnel coberto por runas de sangue.
 ~
-138 9 0 0 0 0
+138 ad 0
 D1
 Você observa um túnel coberto por runas de sangue.
 ~
@@ -2475,7 +2487,7 @@ enormes poças de sangue e gigantescas pegadas.  Ao oeste você observa a
 continuação do túnel seguindo na direção do interior da caverna e ao leste
 você observa um assustador túnel coberto por runas de sangue.
 ~
-138 9 0 0 0 0
+138 ad 0
 D1
 Você observa um túnel coberto por runas de sangue.
 ~
@@ -2496,7 +2508,7 @@ enormes poças de sangue e gigantescas pegadas.  Ao oeste você observa a
 continuação do túnel seguindo na direção do interior da caverna e para cima
 você observa um assustador túnel coberto por runas de sangue.
 ~
-138 9 0 0 0 0
+138 ad 0
 D3
 Você observa um túnel que segue rumo ao interior da caverna.
 ~
@@ -2517,7 +2529,7 @@ enormes poças de sangue e gigantescas pegadas.  Ao leste você observa a
 continuação do túnel seguindo na direção do interior da caverna e para cima
 você observa um assustador túnel coberto por runas de sangue.
 ~
-138 9 0 0 0 0
+138 ad 0
 D1
 Você observa um túnel que segue rumo ao interior da caverna.
 ~
@@ -2538,7 +2550,7 @@ enormes poças de sangue e gigantescas pegadas.  Ao leste você observa a
 continuação do túnel seguindo na direção do interior da caverna e ao oeste
 você observa um assustador túnel coberto por runas de sangue.
 ~
-138 9 0 0 0 0
+138 ad 0
 D1
 Você observa um túnel que segue rumo ao interior da caverna.
 ~
@@ -2559,7 +2571,7 @@ enormes poças de sangue e gigantescas pegadas.  Ao oeste você observa um
 túnel coberto por runas de sangue e para baixo você observa uma monumental
 cratera.
 ~
-138 9 0 0 0 0
+138 ad 0
 D3
 Você observa um túnel coberto por runas de sangue.
 ~
@@ -2582,7 +2594,7 @@ visitar.  A sua volta você observa monumentais dragões negros, vermelhos e
 verdes, que olham para você curiosamente.  Para cima você observa um túnel
 coberto por runas de sangue.
 ~
-138 9 0 0 0 0
+138 ad 0
 D4
 Você observa um túnel coberto por runas de sangue.
 ~
@@ -2597,7 +2609,7 @@ confortável grama.  Alguns pássaros sobrevoam a colina e cantam suaves
 melodias.  Ao sudoeste você observa uma enorme pedra metálica e para cima
 você observa vários dragões dourados voando entre majestosas nuvens brancas.
 ~
-138 0 0 0 0 2
+138 0 2
 D4
 Você observa suaves nuvens brancas.
 ~
@@ -2616,7 +2628,7 @@ seu redor você observa alguns pássaros voando curiosamente ao seu lado entre
 as nuvens.  Para baixo você observa uma tranqüila colina verde e para cima
 você observa majestosas nuvens brancas.
 ~
-138 131140 0 0 0 9
+138 cgr 9
 D4
 Você observa suaves nuvens brancas.
 ~
@@ -2636,7 +2648,7 @@ as nuvens e imponentes dragões dourados voando na direção oeste.  Para baixo
 você observa uma extensa mancha verde entre as nuvens e para cima você
 observa algumas nuvens.
 ~
-138 131140 0 0 0 9
+138 cgr 9
 D4
 Você observa suaves nuvens brancas.
 ~
@@ -2655,7 +2667,7 @@ seu redor você observa alguns pássaros voando curiosamente ao seu lado entre
 as nuvens e imponentes dragões dourados voando na direção oeste.  Para baixo
 você observa uma extensa mancha verde entre as nuvens.
 ~
-138 131140 0 0 0 9
+138 cgr 9
 D5
 Você observa suaves nuvens brancas.
 ~
@@ -2676,7 +2688,7 @@ pleno ar emitindo pequenos raios vermelhos.  Ao nordeste e ao noroeste você
 observa o esplendoroso Conselho dos Wyrms e ao norte você observa uma
 misteriosa argola brilhante.
 ~
-138 72 0 0 0 0
+138.1 dg 0
 D0
 Você observa um enorme círculo brilhante.
 ~
@@ -2707,7 +2719,7 @@ pleno ar emitindo pequenos raios vermelhos.  Ao sudoeste e ao noroeste você
 observa o esplendoroso Conselho dos Wyrms e ao leste você observa uma
 misteriosa argola brilhante.
 ~
-138 72 0 0 0 0
+138.1 dg 0
 D1
 Você observa um enorme círculo brilhante.
 ~
@@ -2738,7 +2750,7 @@ pleno ar emitindo pequenos raios vermelhos.  Ao nordeste e ao noroeste você
 observa o esplendoroso Conselho dos Wyrms e ao oeste você observa uma
 misteriosa argola brilhante.
 ~
-138 72 0 0 0 0
+138.1 dg 0
 D3
 Você observa um enorme círculo brilhante.
 ~
@@ -2767,7 +2779,7 @@ cúpula de cristal que filtra os raios solares e ilumina todo o conselho.
 Ao norte, leste,oeste e ao sul você observa toda a imponência do Conselho
 dos Wyrms.
 ~
-138 72 0 0 0 0
+138.1 dg 0
 D0
 Você observa o Conselho dos Wyrms.
 ~
@@ -2803,7 +2815,7 @@ pleno ar emitindo pequenos raios vermelhos.  Ao sudoeste e ao sudeste você
 observa o esplendoroso Conselho dos Wyrms e ao sul você observa uma
 misteriosa argola brilhante.
 ~
-138 72 0 0 0 0
+138.1 dg 0
 D2
 Você observa um enorme círculo brilhante.
 ~
@@ -2833,7 +2845,7 @@ harmonia, ajudando uns aos outros na busca do progresso.  Ao norte você
 observa muito distante uma enorme estrela de oito pontas com uma nona ponta
 despontando do centro.
 ~
-138 97 0 0 0 2
+138.2 afg 2
 D0
 Você observa um belíssima estrela brilhante.
 ~
@@ -2851,7 +2863,7 @@ astros que oferecem calor aos diferentes mundos.  Ao sul você observa uma
 bela constelação e ao norte você observa uma maravilhosa estrela de oito
 pontas com uma nona ponta despontando do centro.
 ~
-138 97 0 0 0 2
+138.2 afg 2
 D0
 Você observa um belíssima estrela brilhante.
 ~
@@ -2874,7 +2886,7 @@ azulado brota da nona ponta da estrela de Yo seguindo na direção das ilhas
 que formam o arquipélago de Yo.  Ao sul você observa várias estrelas e belos
 astros.
 ~
-138 97 0 0 0 2
+138.2 afg 2
 D2
 Você observa vários astros e estrelas.
 ~

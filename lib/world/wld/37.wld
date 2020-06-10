@@ -8,11 +8,12 @@ como dez homens lado a lado, ela espirala infinitamente.  Os sons de passos
 ecoando é tudo o que pode ser ouvido.  Você pode voltar pelo sul para a
 plataforma, ou você pode seguir para baixo pela escada.
 ~
-37 5 0 0 0 1
+37 ac 1
 D0
 ~
 porta metal~
-1 -1 2217
+:n 2 a porta de metal
+a -1 2217
 D3
 ~
 ~
@@ -28,7 +29,7 @@ meio do nada.  Se focalizando para manter na escada, neste lugar sem
 paredes, você pode voltar para o plano mortal, ou continuar em direção ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D0
 ~
 ~
@@ -48,7 +49,7 @@ meio do nada.  Se focalizando para manter na escada, neste lugar sem
 paredes, você pode voltar para o plano mortal, ou continuar em direção ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D1
 ~
 ~
@@ -68,7 +69,7 @@ meio do nada.  Se focalizando para manter na escada, neste lugar sem
 paredes, você pode voltar para o plano mortal, ou continuar em direção ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D3
 ~
 ~
@@ -88,7 +89,7 @@ meio do nada.  Se focalizando para manter na escada, neste lugar sem
 paredes, você pode voltar para o plano mortal, ou continuar em direção ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D2
 ~
 ~
@@ -108,7 +109,7 @@ meio do nada.  Se focalizando para manter na escada, neste lugar sem
 paredes, você pode voltar para o plano mortal, ou continuar em direção ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D0
 ~
 ~
@@ -128,7 +129,7 @@ meio do nada.  Se focalizando para manter na escada, neste lugar sem
 paredes, você pode voltar para o plano mortal, ou continuar em direção ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D0
 ~
 ~
@@ -148,7 +149,7 @@ meio do nada.  Se focalizando para manter na escada, neste lugar sem
 paredes, você pode voltar para o plano mortal, ou continuar em direção ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D1
 ~
 ~
@@ -168,7 +169,7 @@ meio do nada.  Se focalizando para manter na escada, neste lugar sem
 paredes, você pode voltar para o plano mortal, ou continuar em direção ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D3
 ~
 ~
@@ -188,7 +189,7 @@ meio do nada.  Se focalizando para manter na escada, neste lugar sem
 paredes, você pode voltar para o plano mortal, ou continuar em direção ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D2
 ~
 ~
@@ -208,7 +209,7 @@ meio do nada.  Se focalizando para manter na escada, neste lugar sem
 paredes, você pode voltar para o plano mortal, ou continuar em direção ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D0
 ~
 ~
@@ -228,7 +229,7 @@ meio do nada.  Se focalizando para manter na escada, neste lugar sem
 paredes, você pode voltar para o plano mortal, ou continuar em direção ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D0
 ~
 ~
@@ -248,7 +249,7 @@ meio do nada.  Se focalizando para manter na escada, neste lugar sem
 paredes, você pode voltar para o plano mortal, ou continuar em direção ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D1
 ~
 ~
@@ -266,7 +267,7 @@ dentro do portal.  Vindo do portal, você pode ouvir o suave som da água se
 debatendo com uma espécie de margem, e a terrível lamentação de algum tipo
 de criatura.  Você pode voltar subindo a escadaria, ou avançar pelo portal.
 ~
-37 5 0 0 0 0
+37 ca 0
 D3
 ~
 ~
@@ -286,7 +287,7 @@ rio é preta como carvão, e nenhum tipo de reflexo pode ser visto.  Na
 superficie não há nenhum tipo de ondas.  O translúcido brilho de
 atormentados espíritos flui pelo rio em direção ao desconhecido.
 ~
-37 32 0 0 0 1
+37 f 1
 D0
 ~
 ~
@@ -303,7 +304,7 @@ que ele move eternamente em direção a um local desconhecido.  Nenhum
 reflexo, ondas, ou vibrações por toda a superície do rio.  O rio Styx é,
 certamente, o Rio dos Mortos.
 ~
-37 65696 0 0 0 7
+37 qhf 7
 D1
 ~
 ~
@@ -325,7 +326,7 @@ pago a Chyron, e permitido que o transportasse seguramente.
    Passando por essa cruel armadilha, seu ultimo suspiro toma seu corpo na
 medida em que você flutua....  Flutua.......  Flutua.............
 ~
-37 65696 0 0 0 7
+37 qhf 7
 D1
 ~
 ~
@@ -342,19 +343,19 @@ que ele move eternamente em direção a um local desconhecido.  Nenhum
 reflexo, ondas, ou vibrações por toda a superície do rio.  O rio Styx é,
 certamente, o Rio dos Mortos.
 ~
-37 65696 0 0 0 7
+37 qhf 7
 D1
 ~
 ~
 0 -1 3717
-D2
-~
-~
-0 -1 3718
 D3
 ~
 ~
 0 -1 3716
+D2
+~
+~
+0 -1 3718
 S
 #3718
 Caminho Abandonado~
@@ -363,7 +364,7 @@ para as águas fluindo, ainda calmas do rio Styx, você se arrepia apavorado.
 Um pequeno e abandonado caminho segue para o norte em direção a uma maciça
 catacumba, aparecendo gradualmente das sombras.
 ~
-37 4 0 0 0 3
+37 c 3
 D0
 ~
 ~
@@ -378,7 +379,7 @@ A roda de fiar fica girando e girando enquanto vai teando um interminável
 fio usando todo este meterial do chão.  O fio, magicamente flutuando, segue
 para norte.
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -397,7 +398,7 @@ de algum ser, e símbolos nas portas e paredes de pedras, dão a aura de
 magnificiência neste local.  O vacilar de sombras e o frágil sussuro lhe
 mostram que mesmo os mortos ainda vivem.
 ~
-37 0 0 0 0 0
+37 0 0
 D0
 ~
 ~
@@ -421,11 +422,12 @@ descansa aqui, acima de um pedestal de granito.  Sem contar no fato de que
 nunca ninguém entrou neste local, a cobertura do caixão está, de alguma
 forma, ligeiramente aberta.
 ~
-37 1 0 0 0 0
+37 a 0
 D0
 ~
 portão~
-1 3799 3724
+:n 1 o portão
+ab 3799 3724
 S
 #3722
 A Cripta: Sala de Atropos~
@@ -434,7 +436,7 @@ somemte por um breve momento, permitindo que Atropos avalie e marque-o.  Esta
 sala é completamente vazia, contendo somente um cadeira, onde Urd permanece
 sentado enquanto executa suas tarefas.
 ~
-37 0 0 0 0 0
+37 0 0
 D0
 ~
 ~
@@ -458,7 +460,7 @@ tremulando gentilmente com a brisa criada pela dusa presença.
 Você pode para norte seguindo o corredor abaixo, pode checar a
 sala a esquerda, ou voltar para o sul, saindo da cripta.
 ~
-37 0 0 0 0 0
+37 0 0
 D0
 ~
 ~
@@ -480,7 +482,7 @@ muitas tentativas de atravessa-la.  Inscrições em uma língua desconhecida
 adornam a lápide acima do portão.  Qual o significado...  Alguém poderia
 somente adivinhar.
 ~
-37 0 0 0 0 0
+37 0 0
 D0
 ~
 ~
@@ -491,7 +493,8 @@ Amassões e entalhes o desfiguram, mostrando as varias tentativas de abri-lo
 para ter acesso a catacumba.
 ~
 portão~
-1 3799 3721
+:n 1 o portão
+ab 3799 3721
 S
 #3725
 A Cripta: Sala de Lachesis~
@@ -502,7 +505,7 @@ vazio.  Fios preenchem a sala, todos de alguma forma sabendo a sua vez de
 ser cortado.  Você repentinamente sente que seria inteligente sair desta
 sala e não perturbar o trabalho das três do Destino.
 ~
-37 0 0 0 0 0
+37 0 0
 D1
 ~
 ~
@@ -522,7 +525,7 @@ tremulando gentilmente com a brisa criada pela dusa presença.
 Para sua direita você percebe que está mais escuro do que o comum,
 e sons de batalhas podem ser ouvidos dessa direção.
 ~
-37 0 0 0 0 0
+37 0 0
 D1
 ~
 ~
@@ -544,7 +547,7 @@ pequena névoa se arrasta passando proximo a seu tornozelo, resfriando você
 até nos ossos.  Para o oeste está o seguro e lcaro corredor, e para o sul
 há uma câmara.
 ~
-37 5 0 0 0 0
+37 ac 0
 D2
 ~
 ~
@@ -566,7 +569,7 @@ o frio na espinha ao ouvir os gritos de morte.  Você nunca tinha ouvido um
 som tão horroroso.  As origens desse som ecoam do norte, a unica saída
 visível deste denso nevoeiro.
 ~
-37 5 0 0 0 0
+37 ac 0
 D0
 ~
 ~
@@ -581,7 +584,7 @@ boiam na superfície e se esbarram com os seus calcanhares.  A presença de
 morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, você
 espera que haja alguma forma de sair deste horroroso campo de batalha.
 ~
-37 1 0 0 0 5
+37 a 5
 D0
 ~
 ~
@@ -596,7 +599,7 @@ boiam na superfície e se esbarram com os seus calcanhares.  A presença de
 morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, você
 espera que haja alguma forma de sair deste horroroso campo de batalha.
 ~
-37 1 0 0 0 5
+37 a 5
 D0
 ~
 ~
@@ -619,7 +622,7 @@ boiam na superfície e se esbarram com os seus calcanhares.  A presença de
 morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, você
 espera que haja alguma forma de sair deste horroroso campo de batalha.
 ~
-37 5 0 0 0 5
+37 ac 5
 D1
 ~
 ~
@@ -642,7 +645,7 @@ boiam na superfície e se esbarram com os seus calcanhares.  A presença de
 morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, você
 espera que haja alguma forma de sair deste horroroso campo de batalha.
 ~
-37 1 0 0 0 4
+37 a 4
 D1
 ~
 ~
@@ -665,7 +668,7 @@ boiam na superfície e se esbarram com os seus calcanhares.  A presença de
 morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, você
 espera que haja alguma forma de sair deste horroroso campo de batalha.
 ~
-37 1 0 0 0 4
+37 a 4
 D0
 ~
 ~
@@ -692,7 +695,7 @@ boiam na superfície e se esbarram com os seus calcanhares.  A presença de
 morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, você
 espera que haja alguma forma de sair deste horroroso campo de batalha.
 ~
-37 1 0 0 0 4
+37 a 4
 D2
 ~
 ~
@@ -711,7 +714,7 @@ boiam na superfície e se esbarram com os seus calcanhares.  A presença de
 morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, você
 espera que haja alguma forma de sair deste horroroso campo de batalha.
 ~
-37 1 0 0 0 4
+37 a 4
 D0
 ~
 ~
@@ -734,7 +737,7 @@ boiam na superfície e se esbarram com os seus calcanhares.  A presença de
 morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, você
 espera que haja alguma forma de sair deste horroroso campo de batalha.
 ~
-37 1 0 0 0 4
+37 a 4
 D0
 ~
 ~
@@ -749,7 +752,7 @@ susto inicial, um senso comum lhe diz que está ameaçadora sala é só o
 começo de mais sofrimento que está por vir.  Uma caminho muito empoeirado
 segue para oeste, para fora desta sala.
 ~
-37 5 0 0 0 0
+37 ac 0
 D3
 ~
 ~
@@ -764,7 +767,7 @@ cada lado de você, e o abrigo acima são as costelas de alguma besta anciã,
 formando esse saguão.  Com um tremor, você pode continuar pelo oeste, ou
 voltar para o leste em direçao a sala.
 ~
-37 4 0 0 0 2
+37 c 2
 D1
 ~
 ~
@@ -784,7 +787,7 @@ formando esse saguão.  Você pode ouvir o respingar da água, vindo de um
 buraco no chão.  Você pode seguir para baixo e dar uma olhada, ou voltar
 pelo leste.
 ~
-37 4 0 0 0 0
+37 c 0
 D1
 ~
 ~
@@ -802,7 +805,7 @@ no fato de que não pode ser detectado vento algum, pequenas ondas cobrem o
 mar.  As ondas fazem seus percursos com um pouco de dificuldade.  Um
 sentimento de desespero recobre fortemente este mar.
 ~
-37 0 0 0 0 6
+37 0 6
 D0
 ~
 ~
@@ -824,7 +827,7 @@ no fato de que não pode ser detectado vento algum, pequenas ondas cobrem o
 mar.  As ondas fazem seus percursos com um pouco de dificuldade.  Um
 sentimento de desespero recobre fortemente este mar.
 ~
-37 0 0 0 0 6
+37 0 6
 D0
 ~
 ~
@@ -850,7 +853,7 @@ no fato de que não pode ser detectado vento algum, pequenas ondas cobrem o
 mar.  As ondas fazem seus percursos com um pouco de dificuldade.  Um
 sentimento de desespero recobre fortemente este mar.
 ~
-37 0 0 0 0 6
+37 0 6
 D0
 ~
 ~
@@ -872,7 +875,7 @@ no fato de que não pode ser detectado vento algum, pequenas ondas cobrem o
 mar.  As ondas fazem seus percursos com um pouco de dificuldade.  Um
 sentimento de desespero recobre fortemente este mar.
 ~
-37 0 0 0 0 6
+37 0 6
 D0
 ~
 ~
@@ -898,7 +901,7 @@ no fato de que não pode ser detectado vento algum, pequenas ondas cobrem o
 mar.  As ondas fazem seus percursos com um pouco de dificuldade.  Um
 sentimento de desespero recobre fortemente este mar.
 ~
-37 0 0 0 0 6
+37 0 6
 D1
 ~
 ~
@@ -920,7 +923,7 @@ no fato de que não pode ser detectado vento algum, pequenas ondas cobrem o
 mar.  As ondas fazem seus percursos com um pouco de dificuldade.  Um
 sentimento de desespero recobre fortemente este mar.
 ~
-37 0 0 0 0 6
+37 0 6
 D0
 ~
 ~
@@ -946,7 +949,7 @@ no fato de que não pode ser detectado vento algum, pequenas ondas cobrem o
 mar.  As ondas fazem seus percursos com um pouco de dificuldade.  Um
 sentimento de desespero recobre fortemente este mar.
 ~
-37 0 0 0 0 6
+37 0 6
 D0
 ~
 ~
@@ -973,7 +976,7 @@ esperando sua presa.  Há uma enorme conha em um dos cantos.  Na parte
 interior da concha você pode ver um fraco e vacilante brilho.  Você pensa:
 ...  "Seria isto um portal, e uma saída para este interminável mar?"
 ~
-37 5 0 0 0 8
+37 ac 8
 D1
 ~
 ~
@@ -991,7 +994,7 @@ no fato de que não pode ser detectado vento algum, pequenas ondas cobrem o
 mar.  As ondas fazem seus percursos com um pouco de dificuldade.  Um
 sentimento de desespero recobre fortemente este mar.
 ~
-37 0 0 0 0 6
+37 0 6
 D0
 ~
 ~
@@ -1021,7 +1024,7 @@ pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
 defender seus olhos, você caminha progressivamente através da tempestade de
 areia e no intenso brilho branco, formado pela areia.
 ~
-37 0 0 0 0 3
+37 0 3
 D1
 ~
 ~
@@ -1044,7 +1047,7 @@ defender seus olhos, você caminha progressivamente através da tempestade de
 areia e no intenso brilho branco, formado pela areia.  Um grande esqueleto
 de alguma raça anciã está aqui, encarando as regiões a sul.
 ~
-37 0 0 0 0 3
+37 0 3
 D0
 ~
 ~
@@ -1067,7 +1070,7 @@ defender seus olhos, você caminha progressivamente através da tempestade de
 areia e no intenso brilho branco, formado pela areia.  Um grande esqueleto
 de alguma raça anciã está aqui, encarando as regiões a oeste.
 ~
-37 0 0 0 0 3
+37 0 3
 D1
 ~
 ~
@@ -1089,7 +1092,7 @@ pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
 defender seus olhos, você caminha progressivamente através da tempestade de
 areia e no intenso brilho branco, formado pela areia.
 ~
-37 0 0 0 0 3
+37 0 3
 D0
 ~
 ~
@@ -1115,7 +1118,7 @@ pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
 defender seus olhos, você caminha progressivamente através da tempestade de
 areia e no intenso brilho branco, formado pela areia.
 ~
-37 0 0 0 0 3
+37 0 3
 D0
 ~
 ~
@@ -1141,7 +1144,7 @@ pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
 defender seus olhos, você caminha progressivamente através da tempestade de
 areia e no intenso brilho branco, formado pela areia.
 ~
-37 0 0 0 0 3
+37 0 3
 D0
 ~
 ~
@@ -1159,7 +1162,7 @@ pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
 defender seus olhos, você caminha progressivamente através da tempestade de
 areia e no intenso brilho branco, formado pela areia.
 ~
-37 0 0 0 0 3
+37 0 3
 D2
 ~
 ~
@@ -1178,7 +1181,7 @@ defender seus olhos, você caminha progressivamente através da tempestade de
 areia e no intenso brilho branco, formado pela areia.  Um grande esqueleto
 de alguma raça anciã está aqui, encarando as regiões abaixo.
 ~
-37 4 0 0 0 3
+37 c 3
 D0
 ~
 ~
@@ -1208,7 +1211,7 @@ pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
 defender seus olhos, você caminha progressivamente através da tempestade de
 areia e no intenso brilho branco, formado pela areia
 ~
-37 0 0 0 0 3
+37 0 3
 D0
 ~
 ~
@@ -1235,7 +1238,7 @@ defender seus olhos, você caminha progressivamente através da tempestade de
 areia e no intenso brilho branco, formado pela areia.  Um grande esqueleto
 de alguma raça anciã está aqui, encarando as regiões a leste.
 ~
-37 0 0 0 0 3
+37 0 3
 D0
 ~
 ~
@@ -1258,7 +1261,7 @@ defender seus olhos, você caminha progressivamente através da tempestade de
 areia e no intenso brilho branco, formado pela areia.  Um grande esqueleto
 de alguma raça anciã está aqui, encarando as regiões a norte.
 ~
-37 0 0 0 0 3
+37 0 3
 D0
 ~
 ~
@@ -1280,7 +1283,7 @@ pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
 defender seus olhos, você caminha progressivamente através da tempestade de
 areia e no intenso brilho branco, formado pela areia.
 ~
-37 0 0 0 0 3
+37 0 3
 D0
 ~
 ~
@@ -1296,7 +1299,7 @@ Terra do Desespero~
 se dissipa antes de você.  Com um poderoso tremor, a todo o local se rompe,
 revelando um caminho que segue para locais desconhecidos.
 ~
-37 4 0 0 0 1
+37 c 1
 D1
 ~
 ~
@@ -1310,7 +1313,7 @@ Vacilando e desesperado, você agora conheçe o verdadeiro poder do Desespero.
   Sentindo como se um punho de ferro tivesse acertado seu coração, você
 deve, mais do que nunca, tomar muito cuidado...
 ~
-37 0 0 0 0 1
+37 0 1
 D1
 ~
 ~
@@ -1324,7 +1327,7 @@ Vacilando e desesperado, você agora conheçe o verdadeiro poder do Desespero.
   Sentindo como se um punho de ferro tivesse acertado seu coração, você
 deve, mais do que nunca, tomar muito cuidado...
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1342,7 +1345,7 @@ Vacilando e desesperado, você agora conheçe o verdadeiro poder do Desespero.
   Sentindo como se um punho de ferro tivesse acertado seu coração, você
 deve, mais do que nunca, tomar muito cuidado...
 ~
-37 0 0 0 0 1
+37 0 1
 D2
 ~
 ~
@@ -1360,7 +1363,7 @@ Vacilando e desesperado, você agora conheçe o verdadeiro poder do Desespero.
   Sentindo como se um punho de ferro tivesse acertado seu coração, você
 deve, mais do que nunca, tomar muito cuidado...
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1378,7 +1381,7 @@ Você percebe que está em um vazio infinito, o qual o conduz ao verdadeiro
 sentimento de desespero.  Um pequeno tufo de cordas se movimenta, chamando
 você para pega-lo.
 ~
-37 0 0 0 0 1
+37 0 1
 D2
 ~
 ~
@@ -1390,7 +1393,7 @@ Terra das Lágrimas~
 se dissipa antes de você.  Com um poderoso tremor, a todo o local se rompe,
 revelando um caminho que segue para locais desconhecidos.
 ~
-37 4 0 0 0 1
+37 c 1
 D1
 ~
 ~
@@ -1404,7 +1407,7 @@ sua volta, há gotas de água se formando e precipitando.  O silencioso choro
 de todos os seres que existem, preenchem sua mente fazendo-o cambalear.
 Segurando suas lágrimas, você deveria seguir em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1418,7 +1421,7 @@ sua volta, há gotas de água se formando e precipitando.  O silencioso choro
 de todos os seres que existem, preenchem sua mente fazendo-o cambalear.
 Segurando suas lágrimas, você deveria seguir em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D1
 ~
 ~
@@ -1436,7 +1439,7 @@ sua volta, há gotas de água se formando e precipitando.  O silencioso choro
 de todos os seres que existem, preenchem sua mente fazendo-o cambalear.
 Segurando suas lágrimas, você deveria seguir em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D2
 ~
 ~
@@ -1454,7 +1457,7 @@ sua volta, há gotas de água se formando e precipitando.  O silencioso choro
 de todos os seres que existem, preenchem sua mente fazendo-o cambalear.
 Segurando suas lágrimas, você deveria seguir em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1471,7 +1474,7 @@ precipitando geltilmente por sua volta e batendo suavemente no piso de água.
 Um enorme, e solitária lágrima flutua bem a sua frente.  Sua superfície
 cintilante parece lhe chamar para alcança-la e toca-la.
 ~
-37 0 0 0 0 1
+37 0 1
 D3
 ~
 ~
@@ -1483,7 +1486,7 @@ Terra do Sofrimento~
 se dissipa antes de você.  Com um poderoso tremor, a todo o local se rompe,
 revelando um caminho que segue para locais desconhecidos.
 ~
-37 4 0 0 0 1
+37 c 1
 D2
 ~
 ~
@@ -1497,7 +1500,7 @@ estável.  Olhando para frente, você vê que o caminho parece girar e se
 contorcer como se estivesse sofrendo.  Mesmo nervoso, você deveria seguir
 em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D3
 ~
 ~
@@ -1511,7 +1514,7 @@ estável.  Olhando para frente, você vê que o caminho parece girar e se
 contorcer como se estivesse sofrendo.  Mesmo nervoso, você deveria seguir
 em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1529,7 +1532,7 @@ estável.  Olhando para frente, você vê que o caminho parece girar e se
 contorcer como se estivesse sofrendo.  Mesmo nervoso, você deveria seguir
 em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1547,7 +1550,7 @@ estável.  Olhando para frente, você vê que o caminho parece girar e se
 contorcer como se estivesse sofrendo.  Mesmo nervoso, você deveria seguir
 em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D2
 ~
 ~
@@ -1565,7 +1568,7 @@ silenciosamente em sofrimento.  Se virando, você pode ver um enorme boca
 suspensa no ar.  Com uma silenciosa voz preenchida de sofrimento, ela te
 chama para entrar.
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1581,7 +1584,7 @@ Terra da Tristeza~
 se dissipa antes de você.  Com um poderoso tremor, a todo o local se rompe,
 revelando um caminho que segue para locais desconhecidos.
 ~
-37 4 0 0 0 1
+37 c 1
 D0
 ~
 ~
@@ -1594,7 +1597,7 @@ tivesse perdido seu único companheiro no universo.  Gemendo silenciosamente
 por aqueles que já tiveram a tristeza no coração.  Com um pesado coração,
 você deveria seguir em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1607,7 +1610,7 @@ tivesse perdido seu único companheiro no universo.  Gemendo silenciosamente
 por aqueles que já tiveram a tristeza no coração.  Com um pesado coração,
 você deveria seguir em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1624,7 +1627,7 @@ tivesse perdido seu único companheiro no universo.  Gemendo silenciosamente
 por aqueles que já tiveram a tristeza no coração.  Com um pesado coração,
 você deveria seguir em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D1
 ~
 ~
@@ -1641,7 +1644,7 @@ tivesse perdido seu único companheiro no universo.  Gemendo silenciosamente
 por aqueles que já tiveram a tristeza no coração.  Com um pesado coração,
 você deveria seguir em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D1
 ~
 ~
@@ -1660,7 +1663,7 @@ percebe como a tristeza pode modelar a vida.  Por toda sua volta flutuam os
 pedaços de um coração partido.  Uma enorme força dentro de você lhe diz
 para pegar os pequenos pedaços e construi-lo novamente.
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1677,7 +1680,7 @@ Cavaleiros como um presente de Apocalipse, pela eterna lealdade dos Quatro
 a ele.  Este é o reino da Fome, onde todos não conheçem nada além da fome e
 da sede.  Uma imponente estrutura pode ser vista ao norte.
 ~
-37 65536 0 0 0 1
+37 q 1
 D0
 ~
 ~
@@ -1691,7 +1694,7 @@ dado por Apocalipse para cada um dos Quatro Cavaleiros.  Um brilhante globo
 flutua no meio da sala, em frente ao trono.  Cenas do presente de todo o
 universo relampejam em somente um olhar a este globo.
 ~
-37 65608 0 0 0 1
+37 dgq 1
 D1
 ~
 ~
@@ -1708,7 +1711,7 @@ Cavaleiros como um presente de Apocalipse, pela eterna lealdade dos Quatro
 a ele.  Este é o reino da Pestilencia, onde todos não conheçem nada além
 de dor e desgosto.  Uma imponente estrutura pode ser vista ao leste.
 ~
-37 65544 0 0 0 1
+37 dq 1
 D1
 ~
 ~
@@ -1722,7 +1725,7 @@ dado por Apocalipse para cada um dos Quatro Cavaleiros.  Um brilhante globo
 flutua no meio da sala, em frente ao trono.  Cenas do presente de todo o
 universo relampejam em somente um olhar a este globo.
 ~
-37 65608 0 0 0 1
+37 dgq 1
 D2
 ~
 ~
@@ -1730,7 +1733,7 @@ D2
 D3
 ~
 ~
-0 0 3787
+0 0 3787 0
 S
 #3789
 Reinado da Guerra~
@@ -1739,7 +1742,7 @@ Cavaleiros como um presente de Apocalipse, pela eterna lealdade dos Quatro
 a ele.  Este é o reino da Guerra, onde todos não conheçem nada além da
 crueldade e sofrimento.  Uma imponente estrutura pode ser vista ao sul.
 ~
-37 65544 0 0 0 0
+37 dq 0 0 0 0
 D2
 ~
 ~
@@ -1753,7 +1756,7 @@ dado por Apocalipse para cada um dos Quatro Cavaleiros.  Um brilhante globo
 flutua no meio da sala, em frente ao trono.  Cenas do presente de todo o
 universo relampejam em somente um olhar a este globo.
 ~
-37 65608 0 0 0 0
+37 dgq 0 0 0 0
 D0
 ~
 ~
@@ -1770,7 +1773,7 @@ Cavaleiros como um presente de Apocalipse, pela eterna lealdade dos Quatro
 a ele.  Este é o reino da Morte, onde todos não conheçem nada além do fim e
 do começo.  Uma imponente construção pode ser vista a oeste.
 ~
-37 0 0 0 0 1
+37 0 1
 D3
 ~
 ~
@@ -1784,7 +1787,7 @@ dado por Apocalipse para cada um dos Quatro Cavaleiros.  Um brilhante globo
 flutua no meio da sala, em frente ao trono.  Cenas do presente de todo o
 universo relampejam em somente um olhar a este globo.
 ~
-37 65608 0 0 0 1
+37 dgq 1
 D0
 ~
 ~
@@ -1803,7 +1806,7 @@ buraco negro é formado pela união de duas super novas e começa, sem
 misericórdia, a puxar tudo para o seu ventre.  Lentamente o universo entra
 em colapso e dessa forma o reinado do Caos começa!
 ~
-37 65632 0 0 0 1
+37 fgq 1
 D0
 ~
 ~
@@ -1838,7 +1841,7 @@ estrelas.  Planetas vazis lentamente se enchem de vida e começam a orbitar
 uma estrela de sua escolha.  Quando tudo toma seu devido lugar, o reinado
 da Ordem começa!
 ~
-37 65632 0 0 0 1
+37 fgq 1
 D0
 ~
 ~
@@ -1873,12 +1876,13 @@ penetrando no planeta, envenenando-o por inteiro.  Logo o trono irá pairar
 novamente, deixando somente a casca morta deste planeta, a procura de um
 outro planeta cheio de vida para destruir.
 ~
-37 65608 0 0 0 1
+37 dgq 1
 D1
 Uma esquecida porta está fechada aqui.
 ~
 porta~
-1 3736 3797
+:n 2 a porta
+ab 3736 3797
 S
 #3796
 A Costa do Passado~
@@ -1888,7 +1892,7 @@ estrelas começam a aparecer no céu e o som das ondas ecoa por toda a
 parte.  Cintilantes cenas de tempos passados brilham e desaparecem nas
 águas do tempo.
 ~
-37 65728 0 0 0 3
+37 ghq 3
 D1
 ~
 ~
@@ -1903,7 +1907,7 @@ no céu, mas depois clareia e mostra o normal e único sol em nosso céu.
 Esta ilha é a morada do Grande Mestre do Tempo, que controla as águas do
 tempo aqui na costa.
 ~
-37 65600 0 0 0 2
+37 gq 2
 D1
 ~
 ~
@@ -1925,7 +1929,7 @@ começa a intensificar na medida em que o vento começa a aumentar.  Ficando
 nesta costra você pode testemunhar o temeroso poder daqueles que chamam ser
 o futuro.
 ~
-37 65728 0 0 0 3
+37 ghq 3
 D3
 ~
 ~
@@ -1939,7 +1943,7 @@ gentilmente, frequentemente aumento, só para se acalmar.  As águas parecem
 estar congeladas no tempo, como se esperassem por uma proxima ação, pelo o
 que é determinado no presente.
 ~
-37 65728 0 0 0 3
+37 ghq 3
 D0
 ~
 ~

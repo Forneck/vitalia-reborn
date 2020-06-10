@@ -9,7 +9,7 @@ visitantes possuem uma vez navegando por ele, é de que antes dos homens e da
 terra, os Deuses criaram o mar Egeu.  Ao leste você observa a magnitude
 deste divino mar, e a norte você vê uma praia.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D0
 Você observa as águas azuladas do mar Egeu que se confundem com o céu.
 ~
@@ -34,16 +34,7 @@ O Mar Egeu~
 você começa a confundir o mar com o céu.  Ao sul você observa o mar Egeu e
 toda sua extensão e imponência e ao leste você observa uma pequena ilha.
 ~
-108 131140 0 0 0 7
-D0
-~
-~
-0 -1 10800
-D1
-Você observa uma pequena ilha.
-~
-~
-0 -1 10806
+108 cgr 7
 D2
 Você observa as águas azuladas do mar Egeu que se confundem com o céu.
 ~
@@ -54,6 +45,15 @@ Você observa curioso várias nuvens sobrevoando o mar Egeu.
 ~
 ~
 0 -1 10802
+D1
+Você observa uma pequena ilha.
+~
+~
+0 -1 10806
+D0
+~
+~
+0 -1 10800
 E
 mar egeu~
 Você as águas azuladas do mar Egeu.  O nome Egeu vem do Rei Atenas Egeu, pai
@@ -67,30 +67,30 @@ As Misteriosas Nuvens do Mar Egeu~
    Incrível ! Você está sobre várias nuvens, que mas parecem nobres tecidos
 brancos.  Será real ?
 ~
-108 197060 0 0 0 9
-D2
-Você observa várias nuvens brancas.
-~
-~
-0 -1 10805
+108 cghiqr 9
 D5
 Você observa as águas azuladas do mar Egeu.
 ~
 ~
 0 -1 10801
-E
-nuvem nuvens~
-Você está perplexo !  Você está sobre várias nuvens e mesmo assim continua
-confuso.  Sem querer crê no que está acontecendo.  Contudo os Vitalianos
-possuidores de coração puro e donos de uma magnífica fé em seus deuses,
-nunca duvidariam da realidade deste local místico e divino.
+D2
+Você observa várias nuvens brancas.
 ~
+~
+0 -1 10805
 E
 mar egeu~
 Você as águas azuladas do mar Egeu.  O nome Egeu vem do Rei Atenas Egeu, pai
 de Teseu.  Egeu ao avistar o barco de Teseu vindo de Creta com as velas
 pretas, o indicava luto.  Egeu achou que seu filho tinha sido morto pelo
 minotauro e se jogou no mar, lhe entregando seu corpo e seu nome.
+~
+E
+nuvem nuvens~
+Você está perplexo !  Você está sobre várias nuvens e mesmo assim continua
+confuso.  Sem querer crê no que está acontecendo.  Contudo os Vitalianos
+possuidores de coração puro e donos de uma magnífica fé em seus deuses,
+nunca duvidariam da realidade deste local místico e divino.
 ~
 S
 #10803
@@ -99,7 +99,7 @@ O Mar Egeu~
 a presença de vários peixes curiosos seguindo seu barco.  Ao leste você vê
 toda a imponência das águas do mar Egeu.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D0
 Você observa as águas azuladas do mar Egeu.
 ~
@@ -124,13 +124,13 @@ O Mar Egeu~
 você começa a confundir o mar com o céu.  Ao leste você observa o mar Egeu e
 toda sua extensão e imponência.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D1
 Você observa as águas azuladas do mar Egeu.
 ~
 ~
 0 -1 10809
-D4
+D 4
 Você observa várias nuvens brancas. Será real ?
 ~
 ~
@@ -148,12 +148,7 @@ As Misteriosas Nuvens do Mar Egeu~
    Incrível ! Você está sobre várias nuvens, que mas parecem nobres tecidos
 brancos.  Será real ?
 ~
-108 197060 0 0 0 9
-D2
-Você observa uma nuvem branca.  Será real ?
-~
-~
-0 -1 10808
+108 cghiqr 9
 D3
 Você observa várias nuvens brancas.
 ~
@@ -169,6 +164,11 @@ Você observa várias nuvens brancas.
 ~
 ~
 0 -1 10811
+D2
+Você observa uma nuvem branca.  Será real ?
+~
+~
+0 -1 10808
 E
 nuvem nuvens~
 Você está perplexo !  Você está sobre várias nuvens e mesmo assim continua
@@ -183,39 +183,39 @@ A Ilha de Lemnos~
 pequena ilha do mar Egeu.  Ao seu redor campos floridos e uma boa sensação
 de segurança.  Ao oeste e sudeste você observa o mar Egeu.
 ~
-108 524308 0 0 0 2
+108 cet 2
 D3
 Você observa as águas azuladas do mar Egeu.
 ~
 ~
 0 -1 10801
-D4
-Você observa várias nuvens brancas.
-~
-~
-0 -1 10805
 D8
 Você observa as águas azuladas do mar Egeu.
 ~
 ~
 0 -1 10812
+D4
+Você observa várias nuvens brancas.
+~
+~
+0 -1 10805
 S
 #10807
 As Misteriosas Nuvens do Mar Egeu~
    Incrível ! Você está sobre várias nuvens, que mas parecem nobres tecidos
 brancos.  Será real ?
 ~
-108 197060 0 0 0 9
-D1
-Você observa várias nuvens brancas.  Será real ?
-~
-~
-0 -1 10818
+108 cghiqr 9
 D5
 Você observa o mar Egeu.
 ~
 ~
 0 -1 10804
+D1
+Você observa várias nuvens brancas.  Será real ?
+~
+~
+0 -1 10818
 E
 nuvem nuvens~
 Você está perplexo !  Você está sobre várias nuvens e mesmo assim continua
@@ -232,7 +232,7 @@ desconfiança dá um passo a frente e ...
 fim de Egeu, contudo teu nome não será dado a nenhum mar !  Quem não crê nas
 forças do bem e nem na proteção dos deuses cairá sempre no mar da angústia.
 ~
-108 2 0 0 0 9
+108 b 9
 S
 #10809
 O Mar Egeu~
@@ -241,7 +241,7 @@ a presença de vários peixes curiosos seguindo seu barco.  Ao oeste e
 nordeste você vê toda a imponência das águas do mar Egeu.  Ao sul você
 observa uma pequena ilha.
 ~
-108 131136 0 0 0 7
+108 gr 7
 D2
 Você observa uma pequena ilha.
 ~
@@ -273,7 +273,7 @@ ilha de Lesbos é utilizada pelos grandes navegadores do mar Egeu como ponto
 de parada para consertos e descanso para os seus tripulantes.  Ao norte você
 observa várias ondas e ao fundo o mar Egeu.
 ~
-108 524308 0 0 0 2
+108 cet 2
 D0
 Você observa o mar Egeu.
 ~
@@ -285,7 +285,7 @@ As Misteriosas Nuvens do Mar Egeu~
    Incrível ! Você está sobre várias nuvens, que mas parecem nobres tecidos
 brancos.  Será real ?
 ~
-108 197060 0 0 0 9
+108 cghiqr 9
 D3
 Você observa várias nuvens brancas. Será real ?
 ~
@@ -316,7 +316,7 @@ você começa a confundir o mar com o céu.  Ao leste e sudoeste você observa o
 mar Egeu e toda sua extensão e imponência.  Ao noroeste você observa uma
 pequena ilha.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D1
 Você observa as águas azuladas do mar Egeu.
 ~
@@ -357,7 +357,7 @@ a presença de vários peixes curiosos seguindo seu barco.  Ao oeste e
 nordeste você vê toda a imponência das águas do mar Egeu.  Ao leste, ao
 sudoeste e ao noroeste você observa várias pequenas ilhas.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D1
 Você observa uma pequena ilha.
 ~
@@ -389,7 +389,7 @@ vegetação fechada.  As pequenas ilhas do mar Egeu são verdadeiros portos
 naturais frequentemente utilizadas por grandes embarcações.  Ao oeste e
 sudeste você observa a imponência e magnitude do mar Egeu.
 ~
-108 524308 0 0 0 2
+108 cet 2
 D3
 Você observa as águas azuladas do mar Egeu.
 ~
@@ -408,7 +408,7 @@ campos florido.  Borboletas e pássaros sobrevoam a ilha compondo um belo
 balé de cores.  Ao sul você observa a espuma das ondas se quebrando na praia
 de Tasos.
 ~
-108 524308 0 0 0 2
+108 cet 2
 D2
 Você observa o mar Egeu.
 ~
@@ -421,7 +421,7 @@ O Mar Egeu~
 você começa a confundir o mar com o céu.  Ao norte e ao leste você observa
 duas ilhas do mar Egeu.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D0
 Você observa uma pequena ilha.
 ~
@@ -453,7 +453,7 @@ maneira.  E por Egina ter sido repovoada de um formigueiro, seus habitantes
 ficaram conhecidos como Mirmidões.  Ao seu redor você observa um campo
 florido.  Ao oeste e ao sudeste você observa as águas azuladas do mar Egeu.
 ~
-108 524308 0 0 0 2
+108 cet 2
 D3
 Você observa as águas azuladas do mar Egeu.
 ~
@@ -470,17 +470,17 @@ As Misteriosas Nuvens do Mar Egeu~
    Incrível ! Você está sobre várias nuvens, que mas parecem nobres tecidos
 brancos.  Será real ?
 ~
-108 197060 0 0 0 9
-D1
-Você observa várias nuvens brancas.  Será real ?
-~
-~
-0 -1 10811
+108 cghiqr 9
 D3
 Você observa várias nuvens brancas.  Será real ?
 ~
 ~
 0 -1 10807
+D1
+Você observa várias nuvens brancas.  Será real ?
+~
+~
+0 -1 10811
 E
 nuvem nuvens~
 Você está perplexo !  Você está sobre várias nuvens e mesmo assim continua
@@ -496,7 +496,7 @@ a presença de vários peixes curiosos seguindo seu barco.  Ao norte e ao
 oeste você observa as águas azuladas do mar Egeu.  Ao leste você observa o
 delta do rio Escamandro.  Ao sudeste você observa um porto natural.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D0
 Você observa as águas azuladas do mar Egeu.
 ~
@@ -533,7 +533,7 @@ as águas azuladas do mar Egeu.  Ao noroeste você observa uma pequena ilha
 e ao nordeste você observa um afunilamento no mar, provocado por dois
 grandes blocos de terra.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D0
 Você observa as águas azuladas do mar Egeu.
 ~
@@ -570,7 +570,7 @@ sul da tenda você observa uma mesa e várias cadeiras, constantemente
 utilizados para traçar os planos de guerra das tropas gregas.  Ao norte você
 observa o acampamento grego.
 ~
-108 393228 0 0 0 0
+108 cdrs 0
 D0
 Você observa pela entrada da tenda o acampamento grego.
 ~
@@ -592,12 +592,12 @@ Ao nordeste você observa um campo aberto com vegetação rasteira.  Ao
 noroeste você observa um porto natural e ao sudeste você observa algumas
 tendas e alguns soldados se recuperando da última batalha.
 ~
-108 0 0 0 0 1
+108 0 1
 D2
 Você observa uma tenda nobre.
 ~
 ~
-0 -1 10821
+0  -1 10821
 D6
 Você observa um porto natural.
 ~
@@ -621,7 +621,7 @@ Egeu.  Ao seu redor você observa vários barcos gregos vazios e a bandeira
 tremulando com o brasão das tropas gregas.  Ao noroeste você observa o mar
 Egeu e ao sudeste você observa um acampamento grego.
 ~
-108 0 0 0 0 1
+108 0 1
 D6
 Você observa as águas azuladas do mar Egeu.
 ~
@@ -642,7 +642,7 @@ cristalinas.  Em direção da margem norte, você observa uma colina.  Ao leste
 você observa a extensão do rio seguindo para o interior da terra.  Ao oeste
 você observa o encontro das águas do mar Egeu e do rio Escamandro.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D1
 Você observa as águas do rio Escamandro.
 ~
@@ -672,7 +672,7 @@ extensa colina no sentido oeste-leste.  Ao oeste você observa o delta do rio
 Escamandro e o encontro das águas do mar Egeu com as águas cristalinas do
 rio.  Ao leste você observa as águas clamas do rio Escamandro.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D1
 Você observa as águas calmas e cristalinas do rio Escamandro.
 ~
@@ -695,7 +695,7 @@ O Rio Escamandro~
 observa uma colina no sentido oeste-leste.  Ao oeste e ao leste você observa
 as águas do rio Escamandro.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D1
 Você observa as águas calmas do rio Escamandro.
 ~
@@ -719,7 +719,7 @@ facilitam a movimentação de seus visitantes. Ao norte você observa uma
 extensa colina no sentido oeste-leste.  Ao oeste e ao leste você observa as
 águas calmas e cristalinas do rio Escamandro.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D1
 Você observa as águas calmas do rio Escamandro.
 ~
@@ -743,17 +743,17 @@ observa uma colina no sentido oeste-leste.  Ao oeste e ao leste você observa
 as águas do rio Escamandro.  Ao sul você observa um campo de guerra com
 vários corpos no chão.
 ~
-108 131140 0 0 0 7
-D1
-Você observa as águas calmas do rio Escamandro.
-~
-~
-0 -1 10827
+108 cgr 7
 D2
 Você observa um campo sangrento de batalha.
 ~
 ~
 0 -1 10855
+D1
+Você observa as águas calmas do rio Escamandro.
+~
+~
+0 -1 10827
 D3
 Você observa as águas cristalinas do rio Escamandro.
 ~
@@ -772,7 +772,7 @@ facilitam a movimentação de seus visitantes. Ao norte você observa que a
 extensa colina no sentido oeste-leste já está bem distante.  Ao oeste e
 ao leste você observa as águas calmas e cristalinas do rio Escamandro.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D1
 Você observa as águas calmas do rio Escamandro.
 ~
@@ -796,7 +796,7 @@ você observa um acampamento com uma bandeira tremulando ilustrada com o
 brasão troiano.  Ao oeste e ao leste você observa as águas calmas e
 cristalinas do rio Escamandro.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D0
 Você observa uma bandeira tremulando com o brasão troiano.
 ~
@@ -823,7 +823,7 @@ O Rio Escamandro~
    Você está navegando as águas calmas do rio Escamandro.  Ao leste e oeste
 você observa as águas cristalinas do rio Escamandro.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D1
 Você observa as águas calmas do rio Escamandro.
 ~
@@ -849,21 +849,21 @@ observa as águas calmas e cristalinas do rio Escamandro.  Ao leste você vê a
 colina seguindo no sentido oeste-leste, enquanto a norte você vê uma outra,
 diferente da de Quiron..
 ~
-108 131072 0 0 0 4
-D0
-~
-~
-0 -1 700
-D2
-Você observa o delta do rio Escamandro.
-~
-~
-0 -1 10824
+108 r 4
 D5
 Você observa a colina rochosa.
 ~
 ~
 0 -1 10833
+D2
+Você observa o delta do rio Escamandro.
+~
+~
+0 -1 10824
+D0
+~
+~
+0 -1 700
 E
 colina rochosa~
 Você observa a colina de Quiron, o mais sábio dos centauros.  Quiron foi o
@@ -883,7 +883,7 @@ vinda do norte com um forte odor marinho, lhe indica que possivelmente nesta
 direção você encontrará um oceano.  Ao leste e ao oeste você vê a colina de
 Quiron, que divide a terra nas partes norte e sul.
 ~
-108 131072 0 0 0 4
+108 r 4
 D1
 Você observa a colina de Quiron.
 ~
@@ -914,7 +914,12 @@ com uma bandeira tremulando com o brasão das tropas gregas.  Ao leste e ao
 oeste você observa a colina de Quiron, que divide a terra em duas partes: a
 norte e a sul.
 ~
-108 131072 0 0 0 4
+108 r 4
+D5
+Você observa um acampamento grego.
+~
+~
+0 -1 10844
 D1
 Você observa a colina rochosa de Quiron.
 ~
@@ -925,11 +930,6 @@ Você observa a colina rochosa de Quiron.
 ~
 ~
 0 -1 10833
-D5
-Você observa um acampamento grego.
-~
-~
-0 -1 10844
 E
 colina rochosa~
 Você observa a colina de Quiron, o mais sábio dos centauros.  Quiron foi o
@@ -949,7 +949,7 @@ Uma brisa vinda do norte trás consigo um odor marinho.  Ao leste e ao oeste
 você observa a continuação da colina de Quiron.  Ao sudeste você percebe a
 entrada de uma gruta.
 ~
-108 131072 0 0 0 4
+108 r 4
 D1
 Você observa a colina rochosa de Quiron.
 ~
@@ -985,7 +985,7 @@ refeição dos moradores deste local.  Nas paredes da gruta você observa
 símbolos estranhos e escrituras nunca vistas antes por você.  Ao noroeste
 você observa a saída da gruta.
 ~
-108 393293 0 0 0 0
+108 acdgrs 0
 D6
 Você observa a saída da gruta.
 ~
@@ -1002,7 +1002,7 @@ A Colina de Quiron~
 oeste você observa uma trilha rochosa no sentido oeste-leste seguindo toda a
 colina.  Você sente uma brisa vinda do norte trazendo um aroma marinho.
 ~
-108 131072 0 0 0 4
+108 r 4
 D1
 Você observa a colina de Quiron.
 ~
@@ -1031,7 +1031,7 @@ A Colina de Quiron~
 oeste você observa uma trilha rochosa no sentido oeste-leste seguindo toda a
 colina.  Você sente uma brisa vinda do norte trazendo um aroma marinho.
 ~
-108 131072 0 0 0 4
+108 r 4
 D1
 Você observa a colina de Quiron.
 ~
@@ -1061,7 +1061,7 @@ Quiron.  A visão da área daqui é bastante privilegiada.  Para baixo você
 observa uma praia.  Ao oeste você observa um caminho rochoso sobre a colina
 de Quiron.
 ~
-108 131072 0 0 0 4
+108 r 4
 D3
 Você observa a colina rochosa de Quiron.
 ~
@@ -1095,7 +1095,7 @@ Para baixo você observa um acampamento troiano com uma bandeira tremulando o
 imponente brasão das tropas troianas e ao oeste você observa alguns pastores
 cuidando de suas ovelhas.
 ~
-108 131072 0 0 0 5
+108 r 5
 D3
 Você observa várias ovelhas.
 ~
@@ -1118,7 +1118,12 @@ da tropa troiana deste acampamento.  Para cima você observa o Monte Ida, ao
 sul você observa as águas cristalinas e calmas do rio Escamandro e ao
 nordeste você observa alguns soldados troianos.
 ~
-108 0 0 0 0 1
+108 0 1
+D4
+Você observa alguns pastores cuidando de várias ovelhas.
+~
+~
+0 -1 10840
 D1
 Você observa uma tenda nobre.
 ~
@@ -1129,11 +1134,6 @@ Você observa o rio Escamandro.
 ~
 ~
 0 -1 10830
-D4
-Você observa alguns pastores cuidando de várias ovelhas.
-~
-~
-0 -1 10840
 D7
 Você observa o acampamento troiano.
 ~
@@ -1148,7 +1148,7 @@ a presença de várias armas de guerra e armaduras troianas.  No canto norte
 da tenda você observa o suprimento de toda a tropa troiana.  Ao oeste você
 observa alguns soldados por entre a entrada da tenda.
 ~
-108 393228 0 0 0 0
+108 cdrs 0
 D3
 Você observa por entre a entrada da tenda vários soldados troianos.
 ~
@@ -1164,7 +1164,7 @@ constantemente chegam até a entrada da tenda para examinarem o que você está
 fazendo aqui.  Ao nordeste você observa por entre a entrada da tenda alguns
 soldados gregos.
 ~
-108 393228 0 0 0 0
+108 cdrs 0
 D7
 Você observa o acampamento grego.
 ~
@@ -1184,7 +1184,7 @@ grega.  Ao nordeste você observa a praia de Dardanelos, ao sudeste você
 observa várias tendas e soldados gregos prontos para partirem para o mar e
 para cima você observa uma colina rochosa.
 ~
-108 0 0 0 0 1
+108 0 1
 D0
 Você observa vários soldados trabalhando junto a uma peça de madeira enorme.
 ~
@@ -1200,16 +1200,16 @@ Você observa a belíssima praia de Dardanelos.
 ~
 ~
 0 -1 10846
-D8
-Você observa vários soldados prontos para seguirem para os navios gregos.
-~
-~
-0 -1 10980
 D9
 Você observa uma tenda nobre grega.
 ~
 ~
 0 -1 10843
+D8
+Você observa vários soldados prontos para seguirem para os navios gregos.
+~
+~
+0 -1 10980
 S
 #10845
 A Gigante Peça de Xadrez~
@@ -1219,7 +1219,7 @@ precisamente um cavalo.  Ao sul você observa o acampamento e vários soldados
 gregos recolhendo os equipamentos, indicando que claramente que irão
 abandonar a batalha.
 ~
-108 4 0 0 0 1
+108 c 1
 D2
 Você observa o acampamento grego.
 ~
@@ -1241,7 +1241,7 @@ Ao norte você observa algumas embarcações navegando em direção do estreito
 de Dardanelos.  Ao leste você observa a belíssima visão da praia de
 Dardanelos.  Ao sudoeste você observa um acampamento grego.
 ~
-108 0 0 0 0 2
+108 0 2
 D1
 Você observa a belíssima praia de Dardanelos.
 ~
@@ -1268,7 +1268,7 @@ quebrando na beira da praia e ao sul você observa uma extensa colina no
 sentido oeste-leste.  Ao oeste você observa a praia e ao leste você percebe
 várias embarcações com o brasão dos comerciantes troianos.
 ~
-108 0 0 0 0 2
+108 0 2
 D1
 Você observa um porto natural.
 ~
@@ -1289,7 +1289,7 @@ troiano tremulando.  Você observa vários barcos troianos sendo carregados
 com vários baús.  Ao leste e ao oeste você observa a bela praia de
 Dardanelos.  Ao norte você observa as misteriosas águas do mar Negro.
 ~
-108 0 0 0 0 1
+108 0 1
 D0
 Você observa o mar Negro.
 ~
@@ -1320,7 +1320,7 @@ Ao leste você observa a extensa praia de Dardanelos.  Ao oeste você vê um
 porto natural de domínio Troiano e para cima você observa a colina rochosa
 de Quiron.
 ~
-108 0 0 0 0 1
+108 0 1
 D0
 Você observa o Mar Negro.
 ~
@@ -1349,7 +1349,7 @@ O Estreito de Dardanelos~
 negro.  Ao leste você observa a extensão do estreito de Dardanelos e ao
 sudoeste você observa o mar Egeu.
 ~
-108 131332 0 0 0 7
+108 cir 7
 D1
 Você observa o estreito de Dardanelos.
 ~
@@ -1374,7 +1374,7 @@ O Estreito de Dardanelos~
 observa as águas misteriosas do mar Negro e ao oeste você observa as águas
 do mar Egeu se encontrando com as do mar Negro.
 ~
-108 131332 0 0 0 7
+108 cir 7
 D1
 Você observa as águas do mar Negro.
 ~
@@ -1402,7 +1402,7 @@ domínio troiano.  Ao leste você observa as águas do mar Negro, ao oeste você
 observa o estreito de Dardanelos e ao sul você observa um grande porto
 natural de domínio troiano.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D1
 Você observa as águas do misterioso mar Negro.
 ~
@@ -1432,7 +1432,7 @@ Você observa várias embarcações seguindo em direção oeste rumo ao estreito
 de Dardanelos.  Ao leste e oeste você observa as águas do mar Negro, e ao
 sul você observa a praia de Dardanelos.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D1
 Você observa o mar Negro.
 ~
@@ -1461,17 +1461,17 @@ O Mar Negro~
 embarcações seguindo em direção do estreito de Dardanelos e ao oeste você
 observa as águas do Mar Negro.
 ~
-108 131140 0 0 0 7
-D1
-Você observa grandes embarcações.
-~
-~
-0 -1 10977
+108 cgr 7
 D3
 Você observa o mar Negro.
 ~
 ~
 0 -1 10853
+D1
+Você observa grandes embarcações.
+~
+~
+0 -1 10977
 E
 mar negro~
 Você observa as águas do mar Negro.  Região estratégica para os objetivos
@@ -1488,7 +1488,7 @@ dos lados esteja sujo de sangue e no chão.  Ao norte você observa o rio
 Escamandro, ao sudeste, sudoeste e oeste você observa campos abertos de
 vegetação rasteira e ao leste você observa um tranquilo campo florido.
 ~
-108 4 0 0 0 2
+108 c 2
 D0
 Você observa as águas calmas do rio Escamandro.
 ~
@@ -1526,7 +1526,7 @@ sustenta imponentemente as bandeiras ilustradas com o brasão de Tróia.  Será
 a cidade de Tróia ?  Ao nordeste você observa uma batalha sangrenta, ao
 sudoeste e ao noroeste você observa um campo aberto de vegetação rasteira.
 ~
-108 4 0 0 0 2
+108 c 2
 D1
 Você observa um enorme fosso circundando uma fortaleza.
 ~
@@ -1563,7 +1563,7 @@ Ao nordeste, sudeste, norte e sul você observa um campo florido.  Ao
 sudoeste você observa um acampamento com uma bandeira ilustrada com o
 imponente brasão grego.
 ~
-108 4 0 0 0 2
+108 c 2
 D0
 Você observa um campo florido.
 ~
@@ -1600,7 +1600,7 @@ valas profundas circundando uma enorme fortaleza que ostenta a bandeira com
 a ilustração do brasão imponente dos troianos.  Ao nordeste você observa um
 campo florido.
 ~
-108 4 0 0 0 2
+108 c 2
 D2
 Você observa um enorme fosso circundando uma imponente fortaleza.
 ~
@@ -1636,7 +1636,7 @@ incansavelmente há dez anos.  Enquanto as tropas gregas não descansam
 lutando pelo seus objetivos.  Ao noroeste, sudoeste, norte e ao sul
 você observa um calmo campo florido.
 ~
-108 4 0 0 0 2
+108 c 2
 D0
 Você observa um campo florido.
 ~
@@ -1666,7 +1666,7 @@ quebrada pelos gritos de dor e morte vindos do nordeste e do sudoeste. Ao
 norte e ao oeste você observa várias valas circundando uma imponente
 fortaleza troiana e ao sudeste você observa um campo florido.
 ~
-108 4 0 0 0 2
+108 c 2
 D0
 Você observa uma profunda vala.
 ~
@@ -1701,7 +1701,7 @@ lágrimas nos olhos, tristeza na face e o peito apertado.  Pois sabem que
 alguém vencerá, alguém morrerá enfim.  Ao nordeste, leste e oeste você
 observa um campo florido e ao sudeste você observa uma estrada de pedras.
 ~
-108 4 0 0 0 2
+108 c 2
 D1
 Você observa um campo florido.
 ~
@@ -1738,7 +1738,7 @@ observa um campo florido, ao sudeste você observa uma violenta batalha
 entre soldados gregos e troianos.  Ao sul você observa uma estrada de
 pedras.
 ~
-108 4 0 0 0 2
+108 c 2
 D0
 Você observa uma profunda vala.
 ~
@@ -1777,7 +1777,7 @@ deve ser usada.  Você observa o caminho da estrada de pedras seguindo em
 direção sudeste.  Ao noroeste você observa uma batalha violenta entre
 soldados gregos e troianos.
 ~
-108 4 0 0 0 2
+108 c 2
 D6
 Você observa uma batalha entre gregos e troianos.
 ~
@@ -1802,7 +1802,7 @@ A Estrada Abandonada~
 deve ser usada.  Você observa o caminho da estrada de pedras seguindo em
 direção sudeste e noroeste.
 ~
-108 4 0 0 0 2
+108 c 2
 D6
 Você observa a estrada de pedras seguindo na direção noroeste.
 ~
@@ -1827,7 +1827,7 @@ A Estrada Abandonada~
 deve ser usada.  Você observa o caminho da estrada de pedras seguindo em
 direção noroeste e ao leste uma fortaleza em ruínas.
 ~
-108 4 0 0 0 2
+108 c 2
 D3
 Você observa uma fortaleza em ruínas.
 ~
@@ -1853,7 +1853,7 @@ observa por todos os lados a destruição da guerra.  Paredes inteiras de
 rochas maciças foram derrubadas.  Ao oeste você observa uma estrada de
 pedras.
 ~
-108 393284 0 0 0 5
+108 cgrs 5
 D1
 Você observa uma estrada de pedras.
 ~
@@ -1872,7 +1872,7 @@ observa vários campos floridos, a paisagem é realmente maravilhosa.  Ao
 norte você um campo florido e ao sul você observa a continuação da estrada
 de pedras.
 ~
-108 4 0 0 0 2
+108 c 2
 D0
 Você observa um campo florido.
 ~
@@ -1895,7 +1895,7 @@ A Estrada de Pedras~
 observa vários campos floridos, a paisagem é realmente maravilhosa.  Ao
 norte e ao sul você observa a continuação da estrada de pedras.
 ~
-108 4 0 0 0 2
+108 c 2
 D0
 Você observa uma bela estrada de pedras.
 ~
@@ -1919,7 +1919,7 @@ observa vários campos floridos, a paisagem é realmente maravilhosa.  Ao
 norte e ao leste você observa a continuação da estrada de pedras.  Ao
 sudoeste você observa uma fortaleza abandonada.
 ~
-108 4 0 0 0 2
+108 c 2
 D0
 Você observa uma bela estrada de pedras.
 ~
@@ -1948,7 +1948,7 @@ observa objetos que foram abandonados em uma possível fuga do local.  A
 fortaleza está intacta e teria capacidade de abrigar milhares de soldados.
 Ao nordeste você observa uma estrada de pedra.
 ~
-108 393292 0 0 0 2
+108 cdgrs 2
 D7
 Você observa uma bela estrada de pedras.
 ~
@@ -1961,7 +1961,7 @@ A Estrada de Pedras~
 observa vários campos floridos, a paisagem é realmente maravilhosa.  Ao
 oeste e ao leste você observa a continuação da estrada de pedras.
 ~
-108 4 0 0 0 2
+108 c 2
 D1
 Você observa uma bela estrada de pedras.
 ~
@@ -1985,7 +1985,7 @@ observa vários campos floridos, a paisagem é realmente maravilhosa.  Ao
 oeste você observa a continuação da estrada de pedras e ao sudeste você
 percebe uma fortaleza troiana abandonada.
 ~
-108 4 0 0 0 2
+108 c 2
 D3
 Você observa uma bela estrada de pedras.
 ~
@@ -2010,7 +2010,7 @@ uma das mais magníficas obras arquitetônicas de toda Vitália.  Basicamente
 a fortaleza é formada por duas torres e tem como base uma estrela.  Ao
 noroeste você observa uma estrada de pedras.
 ~
-108 393292 0 0 0 2
+108 cdgrs 2
 D6
 Você observa uma bela estrada de pedras.
 ~
@@ -2025,7 +2025,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao leste e sudoeste você observa o
 caminho feito pela vala.  Ao oeste você observa um campo florido.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D1
 Você observa as águas escuras da vala profunda.
 ~
@@ -2056,7 +2056,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao oeste e sudeste você observa o
 caminho feito pela vala.  Ao leste você observa um campo florido.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D1
 Você observa um campo florido.
 ~
@@ -2087,7 +2087,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao sul e noroeste você observa o
 caminho feito pela vala.  Ao norte você observa um campo florido.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D0
 Você observa um campo florido.
 ~
@@ -2118,7 +2118,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao norte e sudoeste você observa o
 caminho feito pela vala.  Ao sul você observa um campo florido.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D0
 Você observa as águas escuras da vala profunda.
 ~
@@ -2149,17 +2149,17 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao oeste e nordeste você observa o
 caminho feito pela vala.  Ao leste você observa um campo florido.
 ~
-108 393284 0 0 0 7
-D1
-Você observa um campo florido.
-~
-~
-0 -1 10860
+108 cgrs 7
 D3
 Você observa as águas escuras da vala profunda.
 ~
 ~
 0 -1 10879
+D1
+Você observa um campo florido.
+~
+~
+0 -1 10860
 D7
 Você observa as águas escuras da vala profunda.
 ~
@@ -2180,7 +2180,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao leste e noroeste você observa o
 caminho feito pela vala.  Ao oeste você observa um campo florido.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D1
 Você observa as águas escuras da vala profunda.
 ~
@@ -2212,22 +2212,22 @@ troianos e são realmente profundas.  Ao norte, ao leste e ao sudeste você
 observa os caminhos feitos pelas valas.  Ao sul você observa um campo
 florido.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D0
 Você observa as águas escuras da vala profunda.
 ~
 ~
 0 -1 10881
-D1
-Você observa as águas escuras da vala profunda.
-~
-~
-0 -1 10888
 D2
 Você observa um campo florido.
 ~
 ~
 0 -1 10862
+D1
+Você observa as águas escuras da vala profunda.
+~
+~
+0 -1 10888
 D8
 Você observa as águas escuras da vala profunda.
 ~
@@ -2248,7 +2248,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao sul e ao nordeste você observa os
 caminhos feitos pelas valas.  Ao norte você observa um campo florido.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D0
 Você observa um campo florido.
 ~
@@ -2279,7 +2279,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao leste e ao sudoeste você observa os
 caminhos feitos pelas valas.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D2
 Você observa as águas escuras da vala profunda.
 ~
@@ -2305,7 +2305,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao oeste e ao sudeste você observa os
 caminhos feitos pelas valas.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D3
 Você observa as águas escuras da vala profunda.
 ~
@@ -2331,7 +2331,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao sul e ao noroeste você observa os
 caminhos feitos pelas valas.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D2
 Você observa as águas escuras da vala profunda.
 ~
@@ -2357,7 +2357,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao norte, oeste e ao sudoeste você
 observa os caminhos feitos pelas valas.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D0
 Você observa as águas escuras da vala profunda.
 ~
@@ -2388,7 +2388,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao oeste e ao nordeste você observa os
 caminhos feitos pelas valas.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D3
 Você observa as águas escuras da vala profunda.
 ~
@@ -2414,7 +2414,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao leste e ao noroeste você observa os
 caminhos feitos pelas valas.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D1
 Você observa as águas escuras da vala profunda.
 ~
@@ -2440,7 +2440,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao norte, ao oeste e ao sudeste você
 observa os caminhos feitos pelas valas.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D0
 Você observa as águas escuras da vala profunda.
 ~
@@ -2471,7 +2471,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao sul e ao nordeste você observa os
 caminhos feitos pelas valas.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D2
 Você observa as águas escuras da vala profunda.
 ~
@@ -2497,7 +2497,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao leste e ao sudoeste você observa os
 caminhos feitos pelas valas.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D1
 Você observa as águas escuras da vala profunda.
 ~
@@ -2523,17 +2523,12 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao oeste e ao sudeste você observa os
 caminhos feitos pelas valas.  Ao sudoeste você observa uma planície.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D3
 Você observa as águas escuras da vala profunda.
 ~
 ~
 0 -1 10890
-D5
-Você observa a entrada de um estranho túnel.
-~
-~
-0 -1 10976
 D8
 Você observa as águas escuras da vala profunda.
 ~
@@ -2544,6 +2539,11 @@ Você observa uma planície com bastante vegetação rasteira.
 ~
 ~
 0 -1 10898
+D5
+Você observa a entrada de um estranho túnel.
+~
+~
+0 -1 10976
 E
 valas anéis anel água~
 Você observa as valas e percebe que são realmente profundas.  Suas águas são
@@ -2559,7 +2559,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao sul e ao noroeste você observa os
 caminhos feitos pelas valas.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D2
 Você observa as águas escuras da vala profunda.
 ~
@@ -2585,7 +2585,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao norte, ao leste e ao sudoeste você
 observa os caminhos feitos pelas valas.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D0
 Você observa as águas escuras da vala profunda.
 ~
@@ -2616,7 +2616,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao oeste e ao nordeste você observa os
 caminhos feitos pelas valas.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D3
 Você observa as águas escuras da vala profunda.
 ~
@@ -2642,7 +2642,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao leste e ao noroeste você observa os
 caminhos feitos pelas valas.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D1
 Você observa as águas escuras da vala profunda.
 ~
@@ -2668,7 +2668,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao norte e ao sudeste você observa os
 caminhos feitos pelas valas.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D0
 Você observa as águas escuras da vala profunda.
 ~
@@ -2694,7 +2694,7 @@ direta de seus inimigos.  Foram feitas artificialmente por trabalhadores
 troianos e são realmente profundas.  Ao sul e ao nordeste você observa os
 caminhos feitos pelas valas.
 ~
-108 393284 0 0 0 7
+108 cgrs 7
 D2
 Você observa as águas escuras da vala profunda.
 ~
@@ -2720,11 +2720,12 @@ sul você observa uma enorme porta de madeira e as muralhas da fortaleza que
 protege a cidade de Tróia.  Ao sudeste e sudoeste você observa a extensão da
 planície e ao nordeste você observa as águas escuras de uma vala profunda.
 ~
-108 4 0 0 0 2
+108 c 2
 D2
 Você observa uma enorme porta de madeira.
 ~
 porta madeira~
+:n 2 a porta de madeira
 2 10882 10902
 D7
 Você observa as águas escuras da vala profunda.
@@ -2757,7 +2758,7 @@ sul você observa uma enorme porta de madeira e as muralhas da fortaleza que
 protege a cidade de Tróia.  Ao noroeste e sudoeste você observa a extensão
 da planície.
 ~
-108 4 0 0 0 2
+108 c 2
 D6
 Você observa uma planície coberta de vegetação.
 ~
@@ -2784,7 +2785,7 @@ sul você observa uma enorme porta de madeira e as muralhas da fortaleza que
 protege a cidade de Tróia.  Ao noroeste e nordeste você observa a extensão
 da planície.
 ~
-108 4 0 0 0 2
+108 c 2
 D6
 Você observa uma planície coberta de vegetação.
 ~
@@ -2811,7 +2812,7 @@ sul você observa uma enorme porta de madeira e as muralhas da fortaleza que
 protege a cidade de Tróia.  Ao nordeste e ao sudeste você observa a extensão
 da planície.
 ~
-108 4 0 0 0 2
+108 c 2
 D7
 Você observa uma planície coberta de vegetação.
 ~
@@ -2844,11 +2845,12 @@ gloriosa, ostentando a honra e dignidade de Tróia.  Ao norte você observa
 uma enorme porta de madeira.  Ao leste e ao oeste você observa dois postos
 de guarda e ao sul você observa a movimentada praça da cidade.
 ~
-108 68 0 0 0 1
+108 cg 1
 D0
 Você observa uma enorme porta de madeira.
 ~
 porta madeira~
+:n 2 a porta de madeira
 2 10882 10898
 D1
 Você observa um posto de guarda troiana.
@@ -2875,7 +2877,7 @@ visto daqui e se torna alvo fácil dos arqueiros troianos.  No canto oeste do
 posto você observa uma mesa e duas cadeiras de madeira.  Ao leste você
 observa a entrada da cidade.
 ~
-108 4 0 0 0 1
+108 c 1
 D1
 Você a entrada da cidade de Tróia.
 ~
@@ -2896,7 +2898,7 @@ visto daqui e se torna alvo fácil dos arqueiros troianos.  No canto oeste do
 posto você observa uma mesa e duas cadeiras de madeira.  Ao oeste você
 observa a entrada da cidade.
 ~
-108 4 0 0 0 1
+108 c 1
 D3
 Você a entrada da cidade de Tróia.
 ~
@@ -2918,7 +2920,7 @@ cortinas, que separam o interior do exterior.  Numa das paredes você observa
 uma pintura dos portos naturais de Tróia.  Ao sudoeste você observa alguns
 troianos caminhando pela rua.
 ~
-108 393228 0 0 0 0
+108 cdrs 0
 D9
 Você observa algumas pessoas caminhando na rua.
 ~
@@ -2934,7 +2936,7 @@ interior do exterior.  Numa das paredes você observa uma pintura do Deus dos
 Mares, Poseidon.  Ao sudoeste você observa alguns troianos caminhando pela
 rua.
 ~
-108 393228 0 0 0 0
+108 cdrs 0
 D9
 Você observa algumas pessoas caminhando na rua.
 ~
@@ -2951,7 +2953,7 @@ observa o templo de Tróia, ao sul você observa algumas pessoas fazendo
 comércio, ao oeste você observa um belo jardim e bem ao sul você observa ao
 fundo um grande pálacio.
 ~
-108 131072 0 0 0 1
+108 r 1
 D0
 Você observa a entrada da cidade de Tróia.
 ~
@@ -2987,7 +2989,7 @@ Ao leste você observa o caminho a seguir pela rua, ao nordeste você percebe
 uma casa troiana e ao oeste você observa a praça de Tróia e a agitação de
 seus habitantes.
 ~
-108 393472 0 0 0 1
+108 irs 1
 D1
 Você observa uma rua bastante estreita.
 ~
@@ -3012,7 +3014,7 @@ para dificultar qualquer tentativa de invasão por parte de algum inimigo.
 Ao leste, ao sul e ao nordeste você observa casas troianas.  Ao oeste você
 observa uma estreita rua da cidade de Tróia.
 ~
-108 393472 0 0 0 1
+108 irs 1
 D1
 Você observa uma casa troiana.
 ~
@@ -3042,7 +3044,7 @@ Você percebe também que não existe portas e sim cortinas, que separam o
 interior do exterior.  Numa das paredes você observa uma pintura do Deus dos
 Mares, Poseidon.  Ao oeste você observa alguns troianos caminhando pela rua.
 ~
-108 393228 0 0 0 0
+108 cdrs 0
 D9
 Você observa algumas pessoas caminhando na rua.
 ~
@@ -3060,7 +3062,7 @@ de Tróia costumam adorar estes deuses e glorificar seus nomes pela proteção
 e sustento vindos do mar.  Ao nordeste você observa a agitada praça da
 cidade.
 ~
-108 917660 0 0 0 0
+108 cdehrst 0
 D7
 Você observa várias pessoas caminhando na praça da cidade.
 ~
@@ -3076,7 +3078,7 @@ direção de uma rua, ao norte e ao sul você observa algumas pessoas
 conversando e fazendo comércio e bem ao sul você observa ao fundo um grande
 pálacio.
 ~
-108 131072 0 0 0 1
+108 r 1
 D0
 Você observa a praça da cidade.
 ~
@@ -3102,7 +3104,7 @@ Ao sudeste você observa o caminho a seguir pela rua, ao sul você percebe uma
 casa troiana e ao oeste você observa a praça de Tróia e a agitação de
 seus habitantes.
 ~
-108 393472 0 0 0 1
+108 irs 1
 D2
 Você observa uma casa troiana.
 ~
@@ -3128,7 +3130,7 @@ interior do exterior.  Numa das paredes você observa uma pintura da
 magnífica cidade de Tróia.  Ao norte você observa alguns troianos caminhando
 pela rua.
 ~
-108 393228 0 0 0 0
+108 cdrs 0
 D0
 Você observa algumas pessoas caminhando na rua.
 ~
@@ -3143,7 +3145,7 @@ bela escadaria que dar acesso a entrada do pálacio.  Ao leste você observa
 a agitada praça da cidade e ao sul você observa o maravilhoso pálacio real
 de Tróia.
 ~
-108 64 0 0 0 1
+108 g 1
 D1
 Você observa a praça da cidade.
 ~
@@ -3153,6 +3155,7 @@ D2
 Você observa uma grande porta dourada.
 ~
 porta dourada~
+:n 2 a porta dourada
 1 2 10920
 S
 #10916
@@ -3167,7 +3170,7 @@ pela praça da cidade, ao oeste você observa as escadarias que dão acesso ao
 pálacio real, ao sul você observa uma loja de suprimentos e ao sudeste você
 vê uma loja de armas e armaduras troianas.
 ~
-108 131072 0 0 0 1
+108 r 1
 D0
 Você observa a agitada praça troiana.
 ~
@@ -3198,7 +3201,7 @@ interior do exterior.  Numa das paredes você observa uma pintura das grandes
 embarcações de Tróia.  Ao norte você observa alguns troianos caminhando pela
 rua.
 ~
-108 393228 0 0 0 0
+108 cdrs 0
 D0
 Você observa uma rua bastante estreita.
 ~
@@ -3213,7 +3216,7 @@ para dificultar qualquer tentativa de invasão por parte de algum inimigo.
 Ao leste e ao sul você observa tradicionais casas troianas e ao noroeste
 você observa a continuação da rua.
 ~
-108 393472 0 0 0 1
+108 irs 1
 D1
 Você observa uma casa troiana.
 ~
@@ -3239,7 +3242,7 @@ interior do exterior.  Numa das paredes você observa uma pintura dos grandes
 guerreiros de Tróia.  Ao oeste você observa alguns troianos caminhando pela
 rua.
 ~
-108 393228 0 0 0 0
+108 cdrs 0
 D3
 Você observa uma rua bastante estreita.
 ~
@@ -3255,11 +3258,12 @@ sentadas conversando entre as flores.  Ao sul você observa um grande salão,
 ao sudoeste você vê um grande pátio e ao norte você observa a entrada do
 pálacio real.
 ~
-108 131140 0 0 0 1
+108 cgr 1
 D0
 Você observa uma grande porta dourada.
 ~
 porta dourada~
+:n 2 a porta dourada
 1 2 10915
 D2
 Você observa um grande salão.
@@ -3280,7 +3284,7 @@ pessoas entrando e saindo da loja.  Na parede você observa um aviso.  Ao
 norte você observa a praça e vários comerciantes troianos vendendo seus
 produtos.
 ~
-108 131080 0 0 0 0
+108 dr 0
 D0
 Você observa a praça da cidade.
 ~
@@ -3306,7 +3310,7 @@ sul do recinto você observa algumas armaduras e no canto norte você observa
 um grande forno com brasas em chamas.  Ao noroeste você observa a praça da
 cidade.
 ~
-108 131080 0 0 0 0
+108 dr 0
 D6
 Você observa a praça da cidade.
 ~
@@ -3331,7 +3335,7 @@ Você percebe também que não existe portas e sim cortinas, que separam o
 interior do exterior.  Numa das paredes você observa uma pintura do Deus dos
 Mares, Poseidon.  Ao norte você observa alguns troianos caminhando pela rua.
 ~
-108 393228 0 0 0 0
+108 cdrs 0
 D0
 Você observa uma rua bastante estreita.
 ~
@@ -3346,7 +3350,7 @@ principalmente nas comemorações de vitórias em batalhas contra os gregos.
 Ao nordeste você observa o grande jardim de Tróia, ao sudeste você observa
 um grande salão e ao oeste você observa uma grande pira.
 ~
-108 131072 0 0 0 1
+108 r 1
 D3
 Você observa o santuário dos guerreiros mortos.
 ~
@@ -3372,7 +3376,7 @@ cadeiras e mesas de madeira.  Ao norte você observa o maravilhoso jardim do
 pálacio, sul você observa um belo lago, ao noroeste você observa um grande
 pátio e ao sudeste você observa uma bela porta dourada.
 ~
-108 131080 0 0 0 0
+108 dr 0
 D0
 Você observa várias flores coloridas.
 ~
@@ -3392,6 +3396,7 @@ D8
 Você observa uma bela porta dourada.
 ~
 porta dourada~
+:n 2 a porta dourada
 1 2 10928
 S
 #10926
@@ -3401,7 +3406,7 @@ bela cama, alguns armários e algumas cadeiras.  O aposento com certeza deve
 pertencer a algum troiano pertencente a realeza.  Ao sul você observa o
 grande salão real.
 ~
-108 131080 0 0 0 0
+108 dr 0
 D2
 Você observa o grande salão real.
 ~
@@ -3416,7 +3421,7 @@ Você daria tudo para não sair das águas rejuvenescentes do pequeno lago, mas
 suas aventuras o impedem de ficar.  Ao norte você observa o grande salão do
 pálacio real.
 ~
-108 917508 0 0 0 6
+108 crst 6
 D0
 Você observa o grande salão do pálacio.
 ~
@@ -3438,7 +3443,7 @@ nobres.  Ao norte e ao sul você observa aposentos reais, ao leste você
 observa o grande salão real e ao noroeste você observa uma bela porta
 dourada.
 ~
-108 131084 0 0 0 0
+108 cdr 0
 D0
 Você observa um aposento real.
 ~
@@ -3458,6 +3463,7 @@ D6
 Você observa uma porta dourada.
 ~
 porta dourada~
+:n 2 a porta dourada
 1 2 10925
 S
 #10929
@@ -3468,7 +3474,7 @@ do deus Poseidon e da deusa Atena.  O salão real é o local onde o rei recebe
 seus visitantes mais nobres.  Ao leste você observa um aposento real.  Ao
 norte, oeste e ao sul você observa a beleza do salão real.
 ~
-108 131084 0 0 0 0
+108 cdr 0
 D0
 Você observa a beleza e riqueza do salão real.
 ~
@@ -3501,11 +3507,12 @@ acesso as passarelas do muro do pálacio, local preferido pela realeza para
 observar as batalhas e as belíssimas terras troianas.  Ao norte você
 percebe uma bela porta de madeira.
 ~
-108 131080 0 0 0 0
+108 dr 0
 D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
+:n 2 a porta madeira
 1 2 10998
 D3
 Você observa o grande salão real.
@@ -3525,7 +3532,7 @@ bela cama, alguns armários e algumas cadeiras.  O aposento com certeza deve
 pertencer a algum troiano pertencente a realeza.  Ao norte você observa o
 grande salão real.
 ~
-108 131080 0 0 0 0
+108 dr 0
 D0
 Você observa o grande salão real.
 ~
@@ -3541,7 +3548,7 @@ superfície das águas do mar num elegante balé ao soprar do vento formando
 um espelho distorcido do fundo do mar.  Ao leste, oeste e sul você observa
 curioso os misteriosos corais do reino dos mares.
 ~
-108 393441 0 0 0 8
+108 afghrs 8
 D1
 Você observa um colorido coral.
 ~
@@ -3569,7 +3576,7 @@ O Reino dos Mares~
 inesquecíveis águas do mar Egeu.  Ao leste você observa uma enorme concha
 branca e ao oeste você um cardume de peixes entre os corais.
 ~
-108 393441 0 0 0 8
+108 afghrs 8
 D1
 Você escuta um ruído bastante forte vindo desta direção.
 ~
@@ -3588,7 +3595,7 @@ com a visão que acaba de ter.  Você observa uma enorme concha branca com
 algumas esculturas em suas paredes e com alguns diamantes e algas azuis lhe
 tornando mais bela.  Ao oeste você observa o reino dos mares.
 ~
-108 393441 0 0 0 8
+108 afghrs 8
 D3
 Você observa vários corais coloridos.
 ~
@@ -3610,7 +3617,7 @@ O Reino dos Mares~
 inesquecíveis águas do mar Egeu.  Ao leste e ao sul você um cardume de
 peixes entre os corais.
 ~
-108 393441 0 0 0 8
+108 afghrs 8
 D1
 Você observa vários corais de todas as formas e cores.
 ~
@@ -3628,7 +3635,7 @@ O Reino dos Mares~
 inesquecíveis águas do mar Egeu.  Ao norte você um cardume de peixes entre
 os corais.
 ~
-108 393441 0 0 0 8
+108 afghrs 8
 D0
 Você observa alguns peixes coloridos.
 ~
@@ -3648,7 +3655,7 @@ nadando de um lado para o outro, vários peixes e lindos golfinhos, que
 curiosos aproximam-se de você.  Você sente uma forte energia vinda deste
 lugar.  Ao norte você observa o reino dos mares.
 ~
-108 393441 0 0 0 8
+108 afghrs 8
 D0
 Você observa alguns corais coloridos.
 ~
@@ -3668,7 +3675,7 @@ você observa algumas algas e curiosos golfinhos que se afastam de você a
 medida que você nada em direção do interior da sombria caverna.  Ao sudeste
 você observa o interior da caverna.
 ~
-108 393697 0 0 0 8
+108 afghirs 8
 D0
 Você observa a saída da caverna de corais.
 ~
@@ -3688,17 +3695,17 @@ observa a entrada da caverna e o fim desse sentimento estranho e ao sudeste
 você não consegue observar nada, apenas sente grandes ondulações nas águas
 vindas desta direção.
 ~
-108 393697 0 0 0 8
-D6
-Você observa alguns golfinhos olhando para você do exterior da caverna.
-~
-~
-0 -1 10938
+108 afghirs 8
 D8
 Impossível! Você apenas sente ondulações nas águas vindas desta direção.
 ~
 ~
 0 -1 10940
+D6
+Você observa alguns golfinhos olhando para você do exterior da caverna.
+~
+~
+0 -1 10938
 S
 #10940
 Mal Presságio, A Agonia da Morte~
@@ -3706,7 +3713,7 @@ Mal Presságio, A Agonia da Morte~
 você sentia sumiu de forma misteriosa e repentinamente.  Você sente algo
 estranho se movimentando...
 ~
-108 393441 0 0 0 8
+108 afghrs 8
 S
 #10941
 Os Estábulos do Olimpo~
@@ -3718,7 +3725,7 @@ com espaço para cada animal divino que vive aqui.  Ao redor dos estábulos
 você observa um lindo e perfumado campo verde.  Com certeza você não irá
 esquecer deste local.
 ~
-108 524516 0 0 0 2
+108 cfght 2
 S
 #10942
 O Lar das Nereidas~
@@ -3727,7 +3734,7 @@ mágico e misterioso do fundo do mar.  Ao sul você observa algumas algas
 azuis tremulando por trás de um grande coral e ao norte você observa o
 misterioso reino do fundo do mar.
 ~
-108 393441 0 0 0 8
+108 afghrs 8
 D0
 Você observa alguns peixes nadando.
 ~
@@ -3741,7 +3748,7 @@ pálacio real troiano.  Ao seu redor você observa alguns pequeninos peixes,
 para cima você percebe os feixes de luz vindo do pálacio e para baixo você
 observa uma entrada de forma circular.
 ~
-108 393285 0 0 0 8
+108 acgrs 8
 D4
 Você observa a superfície do lago.
 ~
@@ -3760,7 +3767,7 @@ percebe que está num túnel.  O túnel é bastante escuro e suas paredes cheias
 de algas.  Para cima você observa a superfície do lago pela entrada do túnel
 e para baixo você observa a continuação do túnel.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D4
 Você observa a superfície do lago pela entrada do túnel.
 ~
@@ -3778,7 +3785,7 @@ O Túnel Secreto~
 claustrofobia é terrível aqui.  Ao leste e para cima você observa a
 continuação do túnel, esperançoso de encontrar uma luz para o fim do túnel.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D1
 Você observa a continuação do túnel.
 ~
@@ -3797,7 +3804,7 @@ caminho é comprimido pelas paredes viscosas do túnel, dificultando ainda
 mais a sua saída.  Para cima e para oeste você observa a continuação do
 estreito e escuro túnel.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D3
 Você observa a continuação do túnel.
 ~
@@ -3816,7 +3823,7 @@ a passagem de uma pessoa, suas paredes são totalmente cobertas por algas e
 as águas que reinam nos túneis são extremamente escuras.  Ao norte e para
 baixo você observa a continuação dos túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D0
 Você observa a continuação dos túneis secretos.
 ~
@@ -3836,7 +3843,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao norte e ao sul você observa a continuação dos túneis
 secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D0
 Você observa a continuação dos túneis secretos.
 ~
@@ -3856,17 +3863,17 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao nordeste, sudeste e ao sul você observa a continuação
 dos túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
-D2
-Você observa a continuação dos túneis secretos.
-~
-~
-0 -1 10948
+108 acgirs 8
 D7
 Você observa a continuação dos túneis secretos.
 ~
 ~
 0 -1 10950
+D2
+Você observa a continuação dos túneis secretos.
+~
+~
+0 -1 10948
 D8
 Você observa a continuação dos túneis secretos.
 ~
@@ -3881,7 +3888,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao sudeste e ao sudoeste você observa a continuação dos
 túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D8
 Você observa a continuação dos túneis secretos.
 ~
@@ -3901,17 +3908,17 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao noroeste, sudoeste e ao sul você observa a
 continuação dos túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
-D2
-Você observa a continuação dos túneis secretos.
-~
-~
-0 -1 10953
+108 acgirs 8
 D6
 Você observa a continuação dos túneis secretos.
 ~
 ~
 0 -1 10950
+D2
+Você observa a continuação dos túneis secretos.
+~
+~
+0 -1 10953
 D9
 Você observa a continuação dos túneis secretos.
 ~
@@ -3926,7 +3933,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao nordeste, noroeste, leste e ao sul você observa a
 continuação dos túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D1
 Você observa a continuação dos túneis secretos.
 ~
@@ -3956,7 +3963,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao norte, oeste, sul e ao sudeste você observa a
 continuação dos túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D0
 Você observa a continuação dos túneis secretos.
 ~
@@ -3986,7 +3993,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao norte e ao sudeste você observa a continuação dos
 túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D0
 Você observa a continuação dos túneis secretos.
 ~
@@ -4006,7 +4013,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao leste e ao sul você observa a continuação dos túneis
 secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D1
 Você observa a continuação dos túneis secretos.
 ~
@@ -4026,7 +4033,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao norte, noroeste e oeste você observa a continuação
 dos túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D0
 Você observa a continuação dos túneis secretos.
 ~
@@ -4051,7 +4058,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao noroeste e ao sul você observa a continuação dos
 túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D2
 Você observa a continuação dos túneis secretos.
 ~
@@ -4071,7 +4078,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao norte, leste e ao sudoeste você observa a continuação
 dos túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D0
 Você observa a continuação dos túneis secretos.
 ~
@@ -4096,7 +4103,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao norte, oeste e ao sudoeste você observa a continuação
 dos túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D0
 Você observa a continuação dos túneis secretos.
 ~
@@ -4121,7 +4128,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao sudoeste você observa a continuação dos túneis
 secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D9
 Você observa a continuação dos túneis secretos.
 ~
@@ -4136,7 +4143,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao sudeste e ao sudoeste você observa a continuação dos
 túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D8
 Você observa a continuação dos túneis secretos.
 ~
@@ -4156,7 +4163,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao nordeste e ao sul você observa a continuação dos
 túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D2
 Você observa a continuação dos túneis secretos.
 ~
@@ -4176,7 +4183,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao nordeste, noroeste, leste e ao sul você observa a
 continuação dos túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D1
 Você observa a continuação dos túneis secretos.
 ~
@@ -4206,7 +4213,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao norte e ao sudeste você observa a continuação dos
 túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D0
 Você observa a continuação dos túneis secretos.
 ~
@@ -4226,7 +4233,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao nordeste e noroeste você observa a continuação dos
 túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D6
 Você observa a continuação dos túneis secretos.
 ~
@@ -4246,7 +4253,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao nordeste você observa a continuação dos túneis
 secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D0
 Você observa a continuação dos túneis secretos.
 ~
@@ -4271,7 +4278,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao nordeste você observa a continuação dos túneis
 secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D7
 Você observa a continuação dos túneis secretos.
 ~
@@ -4286,7 +4293,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao noroeste você observa a continuação dos túneis
 secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D6
 Você observa a continuação dos túneis secretos.
 ~
@@ -4301,7 +4308,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao norte você observa a continuação dos túneis secretos
 de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D0
 Você observa a continuação dos túneis secretos.
 ~
@@ -4316,17 +4323,17 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao nordeste, noroeste, oeste e ao sul você observa a
 continuação dos túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
-D2
-Você observa a continuação dos túneis secretos.
-~
-~
-0 -1 10969
+108 acgirs 8
 D3
 Você observa a continuação dos túneis secretos.
 ~
 ~
 0 -1 10975
+D2
+Você observa a continuação dos túneis secretos.
+~
+~
+0 -1 10969
 D6
 Você observa a continuação dos túneis secretos.
 ~
@@ -4346,7 +4353,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao sudoeste você observa a continuação dos túneis
 secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D9
 Você observa a continuação dos túneis secretos.
 ~
@@ -4361,7 +4368,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao norte, nordeste, noroeste, oeste e ao sudeste você
 observa a continuação dos túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D0
 Você observa a continuação dos túneis secretos.
 ~
@@ -4396,7 +4403,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao nordeste, sudoeste e ao sul você observa a
 continuação dos túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D2
 Você observa a continuação dos túneis secretos.
 ~
@@ -4421,7 +4428,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao oeste, nordeste, sudoeste e ao sudeste você observa a
 continuação dos túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D3
 Você observa a continuação dos túneis secretos.
 ~
@@ -4451,7 +4458,7 @@ experientes.  A cada curva ou a cada bifurcação você ansiosamente reza para
 encontrar a saída.  Ao norte, leste, sudoeste e ao sudeste você observa a
 continuação dos túneis secretos de Tróia.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D0
 Você observa a continuação dos túneis secretos.
 ~
@@ -4482,7 +4489,7 @@ encontrar a saída.  Ao leste, oeste, sul e ao nordeste você observa a
 continuação dos túneis secretos de Tróia.  Para cima você observa vários
 feixes na superfície da água.
 ~
-108 393541 0 0 0 8
+108 acgirs 8
 D1
 Você observa a continuação dos túneis secretos.
 ~
@@ -4498,16 +4505,16 @@ Você observa a continuação dos túneis secretos.
 ~
 ~
 0 -1 10966
-D4
-Você observa vários feixes de luz.
-~
-~
-0 -1 10891
 D7
 Você observa a continuação dos túneis secretos.
 ~
 ~
 0 -1 10974
+D4
+Você observa vários feixes de luz.
+~
+~
+0 -1 10891
 S
 #10977
 O Mar Negro~
@@ -4517,7 +4524,7 @@ tremulando, ostentando o brasão das Amazonas de Pentesiléia.  Você começa a
 imaginar o que elas vieram fazer aqui, navegando em direção do Estreito de
 Dardanelos.  Ao oeste você observa as águas do Mar Negro.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D3
 Você observa o Mar Negro.
 ~
@@ -4536,7 +4543,7 @@ A Praia de Dardanelos~
 do norte torna o local muito agradável.  Ao norte você observa o magnífico
 Mar Negro e ao oeste você observa a bela praia de Dardanelos.
 ~
-108 0 0 0 0 1
+108 0 1
 D0
 Você observa as águas misteriosas do mar Negro.
 ~
@@ -4554,7 +4561,7 @@ O Mar Egeu~
 você começa a confundir o mar com o céu.  Ao sul você observa o mar Egeu e
 toda sua extensão e imponência.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D2
 Você observa as águas azuladas do mar Egeu.
 ~
@@ -4576,7 +4583,7 @@ acampamento.  Quase todas as tendas já foram desarmadas e todo o armamento
 já foi guardado em grandes baús.  Será que os gregos vão fugir ?  Você
 começa a se perguntar.  Ao noroeste você observa o centro do acampamento.
 ~
-108 0 0 0 0 1
+108 0 1
 D6
 Você observa a correria dos soldados no acampamento.
 ~
@@ -4590,7 +4597,7 @@ proximidades trazem suas ovelhas para dá-lhes alimento.  Ao norte você
 observa bem ao fundo a colina de Quíron e ao leste você observa a beleza e
 tranquilidade do Monte Ida.
 ~
-108 131072 0 0 0 5
+108 r 5
 D3
 Você observa várias ovelhas.
 ~
@@ -4604,7 +4611,7 @@ você.  Ao seu redor várias tendas e soldados se recuperando da última
 batalha contra os gregos.  Ao sudoeste você observa o centro do acampamento
 troiano.
 ~
-108 0 0 0 0 1
+108 0 1
 D9
 Você observa várias tendas e soldados troianos.
 ~
@@ -4617,7 +4624,7 @@ O Rio Escamandro~
 você observa as águas do rio Escamandro e ao sudoeste você observa um campo
 florido.
 ~
-108 131140 0 0 0 7
+108 cgr 7
 D3
 Você observa as águas cristalinas do rio Escamandro.
 ~
@@ -4642,17 +4649,17 @@ batalhas entre gregos e troianos.  Ao nordeste você observa as margens do
 rio Escamandro e ao sudoeste você observa a tranquilidade de um campo florido
 sem batalhas e nem sangue.
 ~
-108 4 0 0 0 2
-D2
-Você observa uma batalha brutal entre gregos e troianos.
-~
-~
-0 -1 10859
+108 c 2
 D3
 Você observa uma batalha brutal entre gregos e troianos.
 ~
 ~
 0 -1 10855
+D2
+Você observa uma batalha brutal entre gregos e troianos.
+~
+~
+0 -1 10859
 D7
 Você observa o rio Escamandro.
 ~
@@ -4671,7 +4678,7 @@ nobre de toda as terras troianas.  Ao leste você observa uma brutal batalha
 entre gregos e troianos.  Ao sul e sudeste você observa um lindo campo
 florido.
 ~
-108 4 0 0 0 2
+108 c 2
 D1
 Você observa uma grande batalha entre gregos e troianos.
 ~
@@ -4696,7 +4703,7 @@ reparando suas armas.  Os soldados expressam em suas faces a angústia e o
 cansaço de nove anos de guerra.  Ao noroeste você observa o centro do
 acampamento grego.
 ~
-108 0 0 0 0 1
+108 0 1
 D8
 Você observa o centro do acampamento grego.
 ~
@@ -4710,7 +4717,7 @@ sobrevoam as flores, pousando em suas pétalas.  Ao norte e nordeste você
 observa um campo florido e ao leste você observa uma violenta batalha entre
 soldados gregos e troianos.
 ~
-108 4 0 0 0 2
+108 c 2
 D0
 Você observa um belo campo florido.
 ~
@@ -4734,7 +4741,7 @@ pousam em você e pássaros curiosos aproximam-se.  A sensação de paz só é
 quebrada pelos gritos de dor e morte vindos do norte e oeste. Ao noroeste
 você observa um campo florido.
 ~
-108 4 0 0 0 2
+108 c 2
 D0
 Você observa uma batalha entre gregos e troianos.
 ~
@@ -4758,7 +4765,7 @@ cidade de Tróia.  Algumas pessoas cansadas da agitação da praça da cidade
 visitam o jardim e descansam nas sombras das árvores.  Ao leste você observa
 a praça de Tróia e ao oeste você observa alguns arbustos.
 ~
-108 4 0 0 0 1
+108 c 1
 D1
 Você observa a agitada praça da cidade.
 ~
@@ -4776,7 +4783,7 @@ Atrás dos Arbustos do Jardim de Tróia~
 local.  Ao leste você observa por entre as folhas e galhos algumas pessoas
 caminhando pela praça da cidade.
 ~
-108 4 0 0 0 1
+108 c 1
 D1
 Você observa belas árvores e flores.
 ~
@@ -4792,7 +4799,7 @@ uma grande pira, cercada de jarros de mel e óleo, 4 cavalos, dois cachorros
 e o corpo de cinco prisioneiros gregos.  Ao leste você observa o pátio de
 jogos.
 ~
-108 4 0 0 0 1
+108 c 1
 D1
 Você observa o pátio de jogos.
 ~
@@ -4815,7 +4822,7 @@ você observa uma violenta batalha entre gregos e troianos.  Ao norte e ao
 oeste você observa a continuação da passarela.  Para baixo você observa os
 aposentos reais.
 ~
-108 131076 0 0 0 1
+108 cr 1
 D0
 Você observa a passarela dos muros do pálacio troiano.
 ~
@@ -4844,7 +4851,7 @@ você observa uma violenta batalha entre gregos e troianos, tendo como pano
 de fundo o rio Escamandro.  Ao oeste e ao sul você observa a continuação da
 passarela dos muros do pálacio de Tróia.
 ~
-108 131076 0 0 0 1
+108 cr 1
 D2
 Você observa a passarela dos muros do pálacio.
 ~
@@ -4868,17 +4875,17 @@ bandeira ostentando o brasão grego tremulando, tendo como pano de fundo o
 mar Egeu.  Ao norte e ao leste você observa a continuação da passarela dos
 muros do pálacio de Tróia.
 ~
-108 131076 0 0 0 1
-D0
-Você observa a passarela dos muros do pálacio.
-~
-~
-0 -1 10995
+108 cr 1
 D1
 Você observa a passarela dos muros do pálacio.
 ~
 ~
 0 -1 10992
+D0
+Você observa a passarela dos muros do pálacio.
+~
+~
+0 -1 10995
 S
 #10995
 A Passarela dos Muros do Palácio~
@@ -4892,7 +4899,7 @@ você observa uma violenta batalha entre gregos e troianos, tendo como pano
 de fundo o rio Escamandro.  Ao leste e ao sul você observa a continuação da
 passarela dos muros do pálacio de Tróia.
 ~
-108 131076 0 0 0 1
+108 cr 1
 D1
 Você observa a passarela dos muros do pálacio.
 ~
@@ -4912,7 +4919,7 @@ fazem o salão brilhar como a constelação de Andrômeda, várias estátuas dos
 deuses e reis troianos embelezam ainda mais o salão.  Ao sul você observa
 o majestoso salão real do palácio de Tróia.
 ~
-108 131084 0 0 0 0
+108 cdr 0
 D2
 Você observa o brilhante salão real.
 ~
@@ -4926,7 +4933,7 @@ observa várias pinturas dos artistas mais nobres e encantadores de todas as
 terras de Tróia, retratando as belíssimas constelações de Cisne, Andrômena e
 Aquário.  Ao norte você observa a continuação do salão real.
 ~
-108 131084 0 0 0 0
+108 cdr 0
 D0
 Você observa o brilhante salão real.
 ~
@@ -4941,16 +4948,18 @@ da rainha Hécuba.  Tudo aqui foi feito para um rei, como no salão real, ouro
 e prata compõem o ambiente.  Ao sul você observa o salão real e nordeste
 você percebe uma porta dourada.
 ~
-108 131084 0 0 0 0
+108 cdr 0
 D2
 Você observa o salão real.
 ~
 porta madeira~
+:n 2 a porta madeira
 1 2 10930
 D7
 Você observa uma porta dourada.
 ~
 porta dourada~
+:n 2 a porta dourada
 2 10883 10999
 S
 #10999
@@ -4961,11 +4970,12 @@ rotas de comércio.  Ao seu redor você observa tesouros de vários lugares.
 Marfim, ouro, prata, cobre, pedras preciosas e vários tecidos e especiarias.
 Ao sudoeste você observa um aposento real.
 ~
-108 131084 0 0 0 0
+108 cdr 0
 D9
 Você observa um aposento real.
 ~
 porta dourada~
+:n 2 a porta dourada
 2 10883 10998
 S
-$~
+$

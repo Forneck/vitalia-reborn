@@ -7,10 +7,11 @@ cercos que resistiu.  Os bancos impregnados de fossas nojentas e fedorentas
 estão a esquerda e a direita.  O castelo situa-se a frente, para o norte, ou
 você pode deixá-lo indo para o sul.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ponte levadiça~
+:n 1 a ponte levadica
 1 0 2701
 D1
 ~
@@ -33,7 +34,7 @@ todo o reino estão parados e examinando aqui.  Os bancos impregnados de
 fossas estão a esquerda e a direita.  O castelo situa-se a frente, na
 direção norte, ou você pode deixá-lo indo para o sul.
 ~
-27 4 0 0 0 0
+27 4 0
 D0
 ~
 ~
@@ -58,7 +59,7 @@ todos os emblemas dos aliados do castelo balançam alegremente no topo.
 Tochas brilhantes iluminam o caminho para o coração do castelo.  A passagem
 entre as paredes do castelo começam para o leste e oeste.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -84,7 +85,7 @@ andando.  Algumas delas se encaminham às lojas, outras para o pátio.
 Qualquer coisa que seja necessária pode ser encontrada ao longo da Rua
 Principal.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -110,7 +111,7 @@ andando.  Algumas delas se encaminham para as lojas, outras para o pátio.
 Qualquer coisa que seja necessária pode ser encontrada ao longo da Rua
 Principal.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -132,7 +133,7 @@ andando.  Algumas delas se encaminham para as lojas, outras para o pátio.
 Qualquer coisa que seja necessária pode ser encontrada ao longo da Rua
 Principal.
 ~
-27 0 0 0 0 0
+27 0 0
 D1
 ~
 ~
@@ -154,7 +155,7 @@ superfície.  Bolhas de gases nocivos elevam-se das profundezas e estouram na
 superfície.  Funcionando como um maravilhoso mecanismo de defesa, eles
 cercam todo o castelo.
 ~
-27 0 0 0 0 6
+27 0 6
 D0
 ~
 ~
@@ -172,7 +173,7 @@ superfície.  Bolhas de gases nocivos elevam-se das profundezas e estouram na
 superfície.  Funcionando como um maravilhoso mecanismo de defesa, eles
 cercam todo o castelo.
 ~
-27 0 0 0 0 6
+27 0 6
 D0
 ~
 ~
@@ -190,7 +191,7 @@ superfície.  Bolhas de gases nocivos elevam-se das profundezas e estouram na
 superfície.  Funcionando como um maravilhoso mecanismo de defesa, eles
 cercam todo o castelo.
 ~
-27 4 0 0 0 0
+27 4 0
 D2
 ~
 ~
@@ -209,15 +210,15 @@ acontece pela pressão exercída nas barreiras no Castelo Midan para manter o
 rio livre deste horrível canal.  Você pode escalar o aparelho e ir em
 direção ao rio ou voltar, pelo canal, para a passagem do castelo.
 ~
-27 4 0 0 0 6
-D2
-~
-~
-0 -1 2706
+27 4 6
 D3
 ~
 ~
 0 -1 2701
+D2
+~
+~
+0 -1 2706
 S
 #2710
 Entre as Fortificações do Castelo~
@@ -227,7 +228,7 @@ defensores atirem flechas em qualquer atacante, em caso de um cerco.  Você
 percebe que este castelo é bem protegido e não cairá facilmente nas mãos de
 inimigos.
 ~
-27 4 0 0 0 0
+27 4 0
 D1
 ~
 ~
@@ -244,7 +245,7 @@ podem ser comprados aqui pela população local.  Pessoas correm ao redor de
 você enquanto tentam pegar o que podem enquanto está a venda.  Isto é
 realmente o paraíso dos compradores.
 ~
-27 4 0 0 0 0
+27 4 0
 D1
 ~
 ~
@@ -261,7 +262,7 @@ edificações ainda aguentam firme e, claro, desgostam a abundância do musgo
 verde cescendo nas fendas.  Heras inglesas graciosamente adornam a torre.
 Esta é a casa da família governante do castelo.
 ~
-27 12 0 0 0 0
+27 12 0
 D0
 ~
 ~
@@ -281,7 +282,7 @@ A Torre para o Quarto do Rei~
 construtores.  Tapetes vermelhos estendem-se pelo chão e tapeçarias cobrem
 as paredes.  Membros da família real têm seus quartos aqui.
 ~
-27 8 0 0 0 0
+27 8 0
 D0
 ~
 ~
@@ -310,7 +311,7 @@ chão que estende-se por todo o comprimento do saguão.  Há também duas
 grandes tepeçarias nas paredes, uma de cada lado.  Tochas nas paredes
 fornecem luz paras as pessoas verem.
 ~
-27 8 0 0 0 0
+27 8 0
 D1
 ~
 ~
@@ -323,7 +324,7 @@ chão que estende-se por todo o comprimento do saguão.  Há também duas
 grandes tepeçarias nas paredes, uma de cada lado.  Tochas nas paredes
 fornecem luz paras as pessoas verem.
 ~
-27 8 0 0 0 0
+27 8 0
 D0
 ~
 ~
@@ -340,7 +341,7 @@ chão que estende-se por todo o comprimento do saguão.  Há também duas
 grandes tepeçarias nas paredes, uma de cada lado.  Tochas nas paredes
 fornecem luz paras as pessoas verem.
 ~
-27 8 0 0 0 0
+27 8 0
 D0
 ~
 ~
@@ -361,7 +362,7 @@ chão que estende-se por todo o comprimento do saguão.  Há também duas
 grandes tepeçarias nas paredes, uma de cada lado.  Tochas nas paredes
 fornecem luz paras as pessoas verem.
 ~
-27 8 0 0 0 0
+27 8 0
 D3
 ~
 ~
@@ -374,7 +375,7 @@ fundo do quarto.  Uniformes estão pendurados organizadamente em um pequeno
 armário embutido, na parede leste.  Aqui é onde os guardas reais moram e
 dormem.
 ~
-27 8 0 0 0 0
+27 8 0
 D2
 ~
 ~
@@ -388,7 +389,7 @@ Uma grande escrivaninha está a leste.  Nela estão a estampa do selo real,
 pergaminhos de impostos, blocos de cera e um tubo emplumado.  De fato, este
 é o aposento do Rei!
 ~
-27 8 0 0 0 0
+27 8 0
 D0
 Nada.
 ~
@@ -406,7 +407,7 @@ outros caminhos e estradas, ele oferece uma viagem estável e confortável.
 Campos de trigo e aveia balançam com a brisa ao longo deste caminhos.  O
 castelo situa-se ao norte.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -422,7 +423,7 @@ Um Cruzamento em T~
 para o castelo é para o oeste.  Um caminho muito utilizado vai para o sul.
 Um caminho sujo em direção a uma clareira fica ao leste.
 ~
-27 4 0 0 0 2
+27 4 2
 D1
 ~
 ~
@@ -443,7 +444,7 @@ Tudo que restou ao longo deste caminho são escassas ervas daninhas que
 crescem nas bordas do caminho.  Gritos de guerra e gritos de dor podem ser
 ouvidos, vindos do leste.  O caminho segue ao norte e ao sul.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -463,7 +464,7 @@ O Caminho para os Campos de Guerra~
 ao leste.  O castelo e os campos de treino situam-se à oeste.  Gotas de
 sangue recentes e secas podem ser vistas aqui, respingadas entre as pedras.
 ~
-27 4 0 0 0 2
+27 4 2
 D1
 ~
 ~
@@ -480,7 +481,7 @@ fortes aqui, devido aos poucos pisões recebidos.  Pode-se dizer que cavalos
 passam rotinamente por aqui, pelas pegadas no chão.  Olhando a frente, para
 o sul, você pode ver claramente coloridas tendas motadas em um grande campo.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -496,7 +497,7 @@ Um Caminho pelos Campos de Extermínio~
 vivo acontecem.  Algumas pessoas estão aqui pelo prazer da luta, outras para
 o treino.  Fique em guarda, acidentes acontecem.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -520,7 +521,7 @@ Um Caminho pelos Campos de Extermínio~
 vivo acontecem.  Algumas pessoas estão aqui pelo prazer da luta, outras para
 o treino.  Fique em guarda, acidentes acontecem.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -542,7 +543,7 @@ levantamento de peso e exercício com espadas são algumas atividades
 acontecendo.  Esquivando-se, um vagabundo é golpeado pr um cavaleiro.  Você
 vê entradas para grandes tendas à direita e à esquerda.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -568,7 +569,7 @@ armas feitas à mão repousam de forma organizada em uma escrivaninha à
 direita.  Uma grande cama à direita sustenta armaduras polidas, prontas para
 serem vestidas.
 ~
-27 8 0 0 0 0
+27 8 0
 D3
 ~
 ~
@@ -580,7 +581,7 @@ Uma Tenda de um Escudeiro~
 no meio do quarto.  Uma cama está atrás.  Pilhas de farrapos usados para
 limpar e polir utensílios dos cavaleiro estão espalhados pelo chão.
 ~
-27 8 0 0 0 0
+27 8 0
 D1
 ~
 ~
@@ -594,7 +595,7 @@ levantamento de peso e exercício com espadas são algumas atividades
 acontecendo.  Esquivando-se, um vagabundo é golpeado pr um cavaleiro.  Você
 vê entradas para grandes tendas à direita e à esquerda.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -620,7 +621,7 @@ com que qualquer um se sinta em casa.  Uma escrivaninha com inúmeros papeis,
 contendo a extensa programação de eventos deste reino, está no centro do
 quarto.  Incensos perfumados queimam de apoios presos ao teto da tenda.
 ~
-27 8 0 0 0 0
+27 8 0
 D3
 ~
 ~
@@ -632,7 +633,7 @@ A Tenda de um Escudeiro~
 no meio do quarto.  Uma cama está atrás.  Pilhas de farrapos usados para
 limpar e polir utensílios dos cavaleiro estão espalhados pelo chão.
 ~
-27 8 0 0 0 0
+27 8 0
 D1
 ~
 ~
@@ -645,7 +646,7 @@ melhor forma possível, nesta tenda.  Uma cama médica encontra-se no centro
 do quarto.  Um grande balde cheio de água sangrenta está perto dela.  Um
 grande buraco no topo da tenda permite a entrada da luz do sol.
 ~
-27 8 0 0 0 0
+27 8 0
 D0
 ~
 ~
@@ -657,7 +658,7 @@ Os Campos de Extermínio~
 vivo acontecem.  Algumas pessoas estão aqui pelo prazer da luta, outras para
 o treino.  Fique em guarda, acidentes acontecem.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -677,7 +678,7 @@ Um Caminho pelos Campos de Extermínio~
 vivo acontecem.  Algumas pessoas estão aqui pelo prazer da luta, outras para
 o treino.  Fique em guarda, acidentes acontecem.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -694,7 +695,7 @@ oferecer proteção contra os atacantes.  Sangue pinta o chão e pedaços de
 carne sacrificada está ao redor.  O zumbido das moscas procurando por corpos
 é enlouquecedor.  Estes são realmente os Campos de Extermínio!
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -718,7 +719,7 @@ Um Caminho pelos Campos de Extermínio~
 vivo acontecem.  Algumas pessoas estão aqui pelo prazer da luta, outras para
 o treino.  Fique em guarda, acidentes acontecem.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -739,7 +740,7 @@ oferecer proteção contra os atacantes.  Sangue pinta o chão e pedaços de
 carne sacrificada está ao redor.  O zumbido das moscas procurando por corpos
 é enlouquecedor.  Estes são realmente os Campos de Extermínio!
 ~
-27 0 0 0 0 2
+27 0 2
 D1
 ~
 ~
@@ -759,7 +760,7 @@ com um olhar frio e mortal.  Você espera que a razão por estar lá seja boa.
 Olhando para o leste você vê outro ecritório...  Ousa entrar?  Talvez você
 deva apenas voltar...
 ~
-27 12 0 0 0 0
+27 12 0
 D1
 ~
 ~
@@ -777,7 +778,7 @@ de algum liquído aparentemente sujo está entre vários papéis manchados com
 sangue.  Uma porta, ligeiramente aberta, revela um grupo de escadas
 conduzindo para baixo.
 ~
-27 12 0 0 0 0
+27 12 0
 D3
 ~
 ~
@@ -795,7 +796,7 @@ superfície.  Bolhas de gases nocivos elevam-se das profundezas e estouram na
 superfície.  Funcionando como um maravilhoso mecanismo de defesa, eles
 cercam todo o castelo.
 ~
-27 5 0 0 0 6
+27 5 6
 D1
 ~
 ~
@@ -814,7 +815,7 @@ os carcereiros aparecem!!  Fortes e vestidos de preto, eles avançam em sua
 direção, espadas empunhadas...  O som estridente de várias chaves presas em
 suas cinturas rompem o silêncio
 ~
-27 8 0 0 0 0
+27 8 0
 D0
 ~
 ~
@@ -830,7 +831,7 @@ Os Estábulos~
 animais, podem ser vistos aqui.  Toda noite os animais do castelo são
 reunidos e trnacados aqui para evitar qualquer dano causado por eles.
 ~
-27 0 0 0 0 0
+27 0 0
 D3
 ~
 ~
@@ -843,7 +844,7 @@ Chicotes de couro...  Pequenos ganchos visíveis fazem um zig-zag em todo seu
 comprimento.  As paredes respingadas de sangue e o chão manchado contam
 sobre várias mortes.
 ~
-27 9 0 0 0 0
+27 9 0
 D3
 ~
 ~
@@ -856,7 +857,7 @@ uma ocasional entrada.  Você pode ver barras cobrindo as portas, mas nada
 além daquilo...  As salas são tão escuras que você sente como se estivesse
 caindo no vácuo escuro.
 ~
-27 8 0 0 0 0
+27 8 0
 D0
 ~
 ~
@@ -864,6 +865,7 @@ D0
 D1
 ~
 A porta da cela~
+:n 2 a porta da cela
 1 0 2747
 D2
 ~
@@ -872,6 +874,7 @@ D2
 D3
 ~
 A porta da cela~
+:n 2 a porta da cela
 1 0 2748
 S
 #2746
@@ -880,10 +883,11 @@ Corredor do Calabouço~
 nem imaginar que outros horrores irá encontrar aqui...  Sua mente clama para
 que você volte.
 ~
-27 8 0 0 0 0
+27 8 0
 D1
 ~
 A porta da cela~
+:n 2 a porta da cela
 1 0 2744
 D2
 ~
@@ -892,6 +896,7 @@ D2
 D3
 ~
 A porta da cela~
+:n 2 a porta da cela
 1 0 2749
 S
 #2747
@@ -901,7 +906,7 @@ correntes presas no alto da parede contam sobre torturas e dores
 excruciantes...  Você treme involuntariamente quando olha para as marcas
 escuras de sangue seco que marcam a parede...
 ~
-27 9 0 0 0 0
+27 9 0
 D3
 ~
 ~
@@ -915,7 +920,7 @@ correntes do pulso e do tornozla, você percebe que existem pedaços de carne
 dilacerada ainda presentes...  O cheio na sala é predominante...  Carne
 podre e morte penetra em seus sentidos...
 ~
-27 9 0 0 0 0
+27 9 0
 D1
 ~
 ~
@@ -928,7 +933,7 @@ cheiro de carne podre.  Você rapidamente descobre a origem do cheiro
 pútrido...  Vários corpos em putrefação estão pendurados por grossas
 correntes presas nas paredes...
 ~
-27 9 0 0 0 0
+27 9 0
 D1
 ~
 ~
@@ -941,7 +946,7 @@ chão que estende-se por todo o comprimento do saguão.  Há também duas
 grandes tepeçarias nas paredes, uma de cada lado.  Tochas nas paredes
 fornecem luz paras as pessoas verem.
 ~
-27 8 0 0 0 0
+27 8 0
 D2
 ~
 ~
@@ -958,7 +963,7 @@ milhas.  Um inimigo teria dificuldades tentando se aproximar sem ser notado.
 Você pode ver brilhos da luz refletidas nas armaduras no Campo de Extermínio
 ao sul.  As árvores da Floresta Midan cobrem as terras a leste.
 ~
-27 0 0 0 0 0
+27 0 0
 D5
 ~
 ~
@@ -973,7 +978,7 @@ pequeno sino vai para cima em direção ao quarto do rei.  Quando o sino toca
 os criados entram em atividade para cumprir a ordem do rei.  As mobilias
 neste quarto são planas e simples
 ~
-27 8 0 0 0 0
+27 8 0
 D2
 ~
 ~
@@ -986,7 +991,7 @@ rigores da vida no castelo.  Pequenas árvores e arbustos trazem um pouco do
 mundo lá fora.  A água flui do topo da fonte de bacia em bacia até que ela
 se encontre com o lago do peixe dourado, no meio do pátio.
 ~
-27 16 0 0 0 0
+27 16 0
 D1
 ~
 ~
@@ -999,7 +1004,7 @@ leste, no fim da sala.  Pedaços de metal estão espalhados por toda a grande
 bancada de carvalho na sala.  Uma bacia com água está no meio da sala.
 Escadas ao longo da parede norte levam ao andar superior, para outras lojas.
 ~
-27 8 0 0 0 0
+27 8 0
 D3
 ~
 ~
@@ -1017,7 +1022,7 @@ milhas.  Um inimigo teria dificuldades tentando se aproximar sem ser notado.
 Você pode ver brilhos da luz refletidas nas armaduras no Campo de Extermínio
 ao sul.  As árvores da Floresta Midan cobrem as terras a leste.
 ~
-27 0 0 0 0 0
+27 0 0
 D5
 ~
 ~
@@ -1030,7 +1035,7 @@ mercadorias assadas.  Um agradável odor de canela toma conta da sala.
 Apenas as melhores mercadorias assadas são vendidas aqui.  Qualquer coisa de
 menor qualidade é mandada para alimentar os animais do estábulo.
 ~
-27 12 0 0 0 0
+27 12 0
 D1
 ~
 ~
@@ -1047,7 +1052,7 @@ O Quarto da Rainha~
 armário e bobagens podem ser vistas aqui.  Uma porta leva ao quarto do rei,
 ao sul.
 ~
-27 8 0 0 0 0
+27 8 0
 D2
 ~
 ~
@@ -1065,7 +1070,7 @@ acaso for uma arma em especial, o ferreiro irá trabalhar com o forno no
 andar de baixo para deixá-la a seu gosto.  Escadas na parede ao norte levam
 para cima e para baixo.
 ~
-27 8 0 0 0 0
+27 8 0
 D4
 ~
 ~
@@ -1081,7 +1086,7 @@ O Depósito de Armaduras~
 Armaduras dos melhores artesãos podem ser compradas aqui.  Olhando ao redor
 você a única saída, que é descer as escadas.
 ~
-27 8 0 0 0 0
+27 8 0
 D5
 ~
 ~
@@ -1095,7 +1100,7 @@ defensores atirem flechas em qualquer atacante, em caso de um cerco.  Você
 percebe que este castelo é bem protegido e não cairá facilmente nas mãos de
 inimigos.
 ~
-27 4 0 0 0 0
+27 4 0
 D1
 ~
 ~
@@ -1113,7 +1118,7 @@ defensores atirem flechas em qualquer atacante, em caso de um cerco.  Você
 percebe que este castelo é bem protegido e não cairá facilmente nas mãos de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -1131,7 +1136,7 @@ defensores atirem flechas em qualquer atacante, em caso de um cerco.  Você
 percebe que este castelo é bem protegido e não cairá facilmente nas mãos de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -1149,7 +1154,7 @@ defensores atirem flechas em qualquer atacante, em caso de um cerco.  Você
 percebe que este castelo é bem protegido e não cairá facilmente nas mãos de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -1167,7 +1172,7 @@ defensores atirem flechas em qualquer atacante, em caso de um cerco.  Você
 percebe que este castelo é bem protegido e não cairá facilmente nas mãos de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -1184,7 +1189,7 @@ fortificações daqui.  Olhando para cima você pode ver que uma torre de
 guarda de pedra foi construida sobre aquela.  Uma escada ao longo da parede
 interna leva para a torre de guarda acima.
 ~
-27 0 0 0 0 0
+27 0 0
 D1
 ~
 ~
@@ -1206,7 +1211,7 @@ defensores atirem flechas em qualquer atacante, em caso de um cerco.  Você
 percebe que este castelo é bem protegido e não cairá facilmente nas mãos de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D1
 ~
 ~
@@ -1224,7 +1229,7 @@ defensores atirem flechas em qualquer atacante, em caso de um cerco.  Você
 percebe que este castelo é bem protegido e não cairá facilmente nas mãos de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D1
 ~
 ~
@@ -1242,7 +1247,7 @@ defensores atirem flechas em qualquer atacante, em caso de um cerco.  Você
 percebe que este castelo é bem protegido e não cairá facilmente nas mãos de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D1
 ~
 ~
@@ -1260,7 +1265,7 @@ defensores atirem flechas em qualquer atacante, em caso de um cerco.  Você
 percebe que este castelo é bem protegido e não cairá facilmente nas mãos de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D1
 ~
 ~
@@ -1277,7 +1282,7 @@ fortificações daqui.  Olhando para cima você pode ver que uma torre de
 guarda de pedra foi construida sobre aquela.  Uma escada ao longo da parede
 interna leva para a torre de guarda acima.
 ~
-27 0 0 0 0 0
+27 0 0
 D2
 ~
 ~
@@ -1299,7 +1304,7 @@ defensores atirem flechas em qualquer atacante, em caso de um cerco.  Você
 percebe que este castelo é bem protegido e não cairá facilmente nas mãos de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -1317,7 +1322,7 @@ defensores atirem flechas em qualquer atacante, em caso de um cerco.  Você
 percebe que este castelo é bem protegido e não cairá facilmente nas mãos de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -1335,7 +1340,7 @@ defensores atirem flechas em qualquer atacante, em caso de um cerco.  Você
 percebe que este castelo é bem protegido e não cairá facilmente nas mãos de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -1353,7 +1358,7 @@ defensores atirem flechas em qualquer atacante, em caso de um cerco.  Você
 percebe que este castelo é bem protegido e não cairá facilmente nas mãos de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -1371,7 +1376,7 @@ defensores atirem flechas em qualquer atacante, em caso de um cerco.  Você
 percebe que este castelo é bem protegido e não cairá facilmente nas mãos de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D1
 ~
 ~
@@ -1388,7 +1393,7 @@ com a fraca luz do sol na entrada da caverna aqui eh escuro.  Uma briga pode
 ser ouvida vinda de algum lugar daqui.  Talvez seja melhor sair
 silenciosamente e voltar por onde veio.
 ~
-27 5 0 0 0 0
+27 5 0
 D3
 ~
 ~
@@ -1402,7 +1407,7 @@ Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
 graciosamente no chão ao seu redor.  Os sons do imenso jardim selvagem são
 tranquilizantes para a alma do viajante.
 ~
-27 0 0 0 0 3
+27 0 3
 D0
 ~
 ~
@@ -1420,7 +1425,7 @@ graciosamente no chão ao seu redor.  Os sons do imenso jardim selvagem são
 tranquilizantes para a alma do viajante.  A trilha o leva para o norte e
 para o sul.
 ~
-27 0 0 0 0 3
+27 0 3
 D0
 ~
 ~
@@ -1437,7 +1442,7 @@ oferecer proteção contra os atacantes.  Sangue pinta o chão e pedaços de
 carne sacrificada está ao redor.  O zumbido das moscas procurando por corpos
 é enlouquecedor.  Estes são realmente os Campos de Extermínio!
 ~
-27 0 0 0 0 2
+27 0 2
 D1
 ~
 ~
@@ -1459,7 +1464,7 @@ carne sacrificada está ao redor.  O zumbido das moscas procurando por corpos
 é enlouquecedor.  Estes são realmente os Campos de Extermínio!  Uma grande
 tenda emanando uma fraca aura preta está a leste.
 ~
-27 0 0 0 0 2
+27 0 2
 D1
 ~
 ~
@@ -1481,7 +1486,7 @@ convidam-no a um descanso.  Você deseja descansar, mas a presença de sangue
 no chão úmido deixa-o nervoso.  A oeste você pode voltar as Campos de
 Extermínio.
 ~
-27 12 0 0 0 0
+27 12 0
 D3
 ~
 ~
@@ -1494,7 +1499,7 @@ oferecer proteção contra os atacantes.  Sangue pinta o chão e pedaços de
 carne sacrificada está ao redor.  O zumbido das moscas procurando por corpos
 é enlouquecedor.  Estes são realmente os Campos de Extermínio!
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -1507,7 +1512,7 @@ Borboletas de todos os tipos voam entre as coloridas flores selvagens que
 crescem aqui.  Para o norte o caminho torna-se uma trilha através da
 Floresta Midan.  A oeste está um caminho mais utilizado.
 ~
-27 0 0 0 0 3
+27 0 3
 D0
 ~
 ~
@@ -1524,7 +1529,7 @@ Raios de sol passam pelas folhas das árvores que crescem acima de você.  As
 árvores estão começando a dar espaço para baixos arbustos e para a grama
 alta.  Uma clareira abriu-se ao o sul, enquanto a floresta está a leste.
 ~
-27 4 0 0 0 3
+27 4 3
 D1
 ~
 ~
@@ -1541,7 +1546,7 @@ Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
 graciosamente no chão ao seu redor.  Os sons do imenso jardim selvagem são
 tranquilizantes para a alma do viajante.  A trilha vai para leste e oeste.
 ~
-27 0 0 0 0 3
+27 0  3
 D1
 ~
 ~
@@ -1558,7 +1563,7 @@ Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
 graciosamente no chão ao seu redor.  Os sons do imenso jardim selvagem são
 tranquilizantes para a alma do viajante.  A trilha vai para leste e oeste.
 ~
-27 0 0 0 0 3
+27 0 3
 D1
 ~
 ~
@@ -1575,7 +1580,7 @@ Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
 graciosamente no chão ao seu redor.  Os sons do imenso jardim selvagem são
 tranquilizantes para a alma do viajante.  A trilha vai para leste e oeste.
 ~
-27 0 0 0 0 3
+27 0 3
 D1
 ~
 ~
@@ -1592,7 +1597,7 @@ Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
 graciosamente no chão ao seu redor.  Os sons do imenso jardim selvagem são
 tranquilizantes para a alma do viajante.  A trilha vai para leste e oeste.
 ~
-27 0 0 0 0 3
+27 0  3
 D1
 ~
 ~
@@ -1610,7 +1615,7 @@ Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
 graciosamente no chão ao seu redor.  Os sons do imenso jardim selvagem são
 tranquilizantes para a alma do viajante.
 ~
-27 0 0 0 0 3
+27 0 3
 D2
 ~
 ~
@@ -1628,7 +1633,7 @@ Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
 graciosamente no chão ao seu redor.  Os sons do imenso jardim selvagem são
 tranquilizantes para a alma do viajante.
 ~
-27 0 0 0 0 3
+27 0 3
 D1
 ~
 ~
@@ -1647,11 +1652,15 @@ conforme ela flui sobre as pedras.  O resplendor aquático parece brilhar
 como se uma brisa vinda do leste apenas sobre o outro lado da cascata.  É um
 lugar tranqüilo, um onde um viajante pode descansar sem se preocupar.
 ~
-27 16 0 0 0 3
+27 16 3
 D0
 ~
 ~
 0 -1 2792
+D1
+~
+~
+0 -1 -1
 D2
 ~
 ~
@@ -1669,7 +1678,7 @@ graciosamente no chão ao seu redor.  Os sons do imenso jardim selvagem são
 tranquilizantes para a alma do viajante.  Uma clareira pode ser vista ao
 sul.
 ~
-27 0 0 0 0 3
+27 0 3
 D1
 ~
 ~
@@ -1691,7 +1700,7 @@ Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
 graciosamente no chão ao seu redor.  Os sons do imenso jardim selvagem são
 tranquilizantes para a alma do viajante.
 ~
-27 0 0 0 0 3
+27 0 3
 D2
 ~
 ~
@@ -1710,7 +1719,7 @@ graciosamente no chão ao seu redor.  Os sons do imenso jardim selvagem são
 tranquilizantes para a alma do viajante.  Para o sul está uma área aberta de
 encostas que podem cair.
 ~
-27 0 0 0 0 3
+27 0 3
 D0
 ~
 ~
@@ -1719,6 +1728,10 @@ D1
 ~
 ~
 0 -1 2795
+D2
+~
+~
+0 -1 -1
 S
 #2795
 Uma trilha através da Floresta Midan~
@@ -1727,7 +1740,7 @@ Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
 graciosamente no chão ao seu redor.  Os sons do imenso jardim selvagem são
 tranquilizantes para a alma do viajante.  A trilha vai para leste e oeste.
 ~
-27 0 0 0 0 3
+27 0 3
 D1
 ~
 ~
@@ -1745,7 +1758,7 @@ ampla vegetação de plátanos marcam o começo da Floresta Midan.  Uma trilha
 de um rico solo sedimentar pode ser vista a oeste.  Midgaard situa-se a
 leste.
 ~
-27 4 0 0 0 3
+27 4 3
 D0
 ~
 ~
@@ -1762,7 +1775,7 @@ Raios de sol passam pelas folhas das árvores que crescem acima de você.  Uma
 clareira pode ser vista a leste e a floresta fechada está ao sul.  A trilha
 continua ao norte e oeste.
 ~
-27 0 0 0 0 3
+27 0 3
 D0
 ~
 ~
@@ -1788,7 +1801,7 @@ arranhada por algum tipo de animal grande.  Uma entrada para uma caverna
 está a leste.  Ao norte está a floresta mais aberta e uma trilha de
 caçadores está a oeste.
 ~
-27 0 0 0 0 3
+27 0 3
 D0
 ~
 ~
@@ -1808,7 +1821,7 @@ A Mata Fechada na Floresta Midan~
 A vegetação daqui é tão densa que a única saída é voltando de onde veio ou
 indo para leste na trilha dos caçadores.
 ~
-27 0 0 0 0 3
+27 0 3
 D0
 ~
 ~

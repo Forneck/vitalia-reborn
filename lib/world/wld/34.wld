@@ -6,7 +6,7 @@ Villspah.  O Barão é um homem generoso e um mago competente mas sua
 generosidade somente se extende para aqueles que ele convida para entrar
 em suas terras.
 ~
-34 0 0 0 0 1
+34 0 1
 D1
 ~
 ~
@@ -23,7 +23,7 @@ lama, tornando o progresso extremamente fácil.  A estrada se curva para o
 leste por uma distância extremamente longa, terminando em um grande castelo
 que mal pode ser visto daqui.
 ~
-34 4 0 0 0 1
+34 c 1
 D1
 ~
 ~
@@ -40,7 +40,7 @@ lama, tornando o progresso extremamente fácil.  A estrada se curva para o
 leste por uma distância extremamente longa, terminando em um grande castelo
 que mal pode ser visto daqui.
 ~
-34 0 0 0 0 1
+34 0 1
 D1
 ~
 ~
@@ -57,7 +57,7 @@ pelo Barão.  Duas construções de madeira encontram-se a leste daqui, uma em
 cada lado da estrada.  Por seu aspecto e o cheiro que exalam parecem ser
 estábulos.  Uma pequena cidade encontra-se logo após elas.
 ~
-34 0 0 0 0 1
+34 0 1
 D1
 ~
 ~
@@ -74,11 +74,12 @@ estábulo e a outra é a loja do cavaleiro.  Há agrupamentos de lojas
 seguindo pelo lado das estradas.  Esta comunidade parece estar crescendo
 muito bem, em todas as formas.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 porta~
-1 -1 3427
+:n 2 a porta
+a -1 3427
 D1
 ~
 ~
@@ -99,7 +100,7 @@ pequena vila passeia - alguns indo ou vindo do castelo.  O castelo se
 encontra em uma pequena distância a leste, dominando a visão naquela
 direção.  Outra estrada cruza esta, indo na direção norte e sul.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -123,7 +124,7 @@ Estrada Principal~
 Há sinais em cada uma das lojas indicando ao norte uma taverna, e ao sul
 um vendedor de alimentos não perecíveis.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -148,7 +149,7 @@ cidade, onde o tráfego de pessoas é mais intenso, mas ainda em bom estado.
 Há uma hospedaria de dois andares ao lado norte, conectada a taverna, logo
 a noroeste daqui, e um armazém na direção sul.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -172,7 +173,7 @@ Estrada Principal~
 exatamente nas direções opostas à estrada principal.  O castelo encontra-se
 diretamente a oeste, a ponte levadiça está presentemente aberta.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -196,7 +197,7 @@ Estrada Principal, Próximo ao Castelo~
 pavimentada em direção a casa do Barão.  O castelo possui a clara visão  de
 ser um local com uma cordial recepção.
 ~
-34 0 0 0 0 1
+34 0 1
 D1
 ~
 ~
@@ -213,7 +214,7 @@ estrada com uma rigorosa atenção.  Eles estão vestindo o tradicional
 magenta da família do Barão, longas e vistosas vestimentas de feiticeiro, e
 por cima uma excelente armadura de couro.
 ~
-34 0 0 0 0 1
+34 0 1
 D1
 ~
 ~
@@ -231,7 +232,7 @@ envergadura de tasneiras encontra-se a leste da estrada, escoando para o
 fosso que circula o castelo.  Para o lado oeste, há a parede leste da
 hospedaria.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -250,7 +251,7 @@ suas paredes brancas e levemente descascadas pela intensa luz do sol que a
 atinge.  A parede leste de uma loja comum encontra-se na direção oeste, e
 há um painel com lamparinas, rolos de corda e sacos retradado na mesma.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -268,7 +269,7 @@ principal, que pode levá-lo diretamente para os domínios do Barão, ou para
 fora deles.  Uma pequena loja encontra-se a oeste da estrada, e sua entrada
 principal é ao seu lado norte.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -286,7 +287,7 @@ com uma roda de pás ao norte - presumivelmente o local de trabalho de
 alguém.  Logo após um pequeno grupo de tasneiras a leste, encontra-se o
 castelo do Barão de Villspah, um mago poderoso e muito gentil.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -306,7 +307,7 @@ Laço Norte de Villspah, Lado Norte~
 de enxofre através de sua porta.  A estrada segue para leste e oeste
 passando por várias lojas e casas de Villspah.
 ~
-34 0 0 0 0 1
+34 0 1
 D1
 ~
 ~
@@ -328,7 +329,7 @@ interior.  Ao sul há uma estrutura parecida com um celeiro, de onde pode
 ser ouvido estalos de metal.  A estrada se curva para leste e oeste pela
 vila de Villspah.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -352,7 +353,7 @@ Laço Norte de Villspah, Lado Noroeste~
 plantação de milho.  A estrada segue para leste, passando por mais lojas e
 para sul, rumo a estrada principal de Villspah.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -374,7 +375,7 @@ outro lado desta construção.  A estrada faz uma curva fechada para leste
 logo a norte daqui, e a estrada principal segue em uma pequena distância
 logo a sul.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -393,7 +394,7 @@ principal, mas um pouco mais estreito.  A parede oeste da estalagem
 encontra-se a leste da estrada, e há um campo de plantação de milho
 a oeste.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -411,7 +412,7 @@ encontra-se a parede ocidental de uma loja, e para o oeste há fileiras e
 mais fileiras de plantação de milho.  A estrada principal segue diretamente
 para o norte.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -427,7 +428,7 @@ Laço Sul de Villspah, Lado Oeste~
 de comodidade através da vila.  Cercante aos subúrbios desta pequena
 comunidade há uma vasta plantação de milho atingindo seis pés altura.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -444,7 +445,7 @@ milho que cercam a vila, com suas linhas nítidas e perfeitas.  Por uma
 pequena distância ao norte segue a estrada principal, e a laçada da estrada
 segue ao leste.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -461,7 +462,7 @@ portas abertas o convidando para entrar.  A loja ao norte ostenta a gravura
 de uma deslumbrante jóia logo acima da porta, certamente a indicação de um
 dono de joalheria.  A estrada continua para leste e oeste.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -486,7 +487,7 @@ parecendo mais uma barraca - instalada ao lado norte da estrada.  Logo a
 leste daqui, a estrada faz uma curva para o norte, continuando o laço sul
 de Villspah.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -508,7 +509,7 @@ colorido jardim, onde as flores silvestres crescem, cuidadas pelos
 habitantes locais da vila.  Ao sul, através de um pequeno portão de ferro,
 encontra-se o cemitério, onde há pouquíssimas lápides.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -520,7 +521,8 @@ D1
 D2
 ~
 portão~
-1 -1 3441
+:n 1 o portão
+a -1 3441
 D3
 ~
 ~
@@ -533,7 +535,7 @@ laço sul.  Há um pequeno templo, mas bem arrumado, no lado leste da
 estrada.  Não muito distante daqui encontra-se a estrada prindipal, ao
 norte.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -555,18 +557,19 @@ parede norte, e uma cadeira com aspecto velho, mas muito aconchegante.  Um
 conjunto de portas corrediças foi construído na parede norte desta loja,
 sendo o único acesso aos cavalos que estão à venda.
 ~
-34 8 0 0 0 0
+34 d 0
 D2
 ~
 porta~
-1 -1 3404
+:n 2 a porta
+a -1 3404
 S
 #3428
 Pastagem dos Cavalos~
    Este pequeno espaço gramado é onde o comerciante de cavalos da vila
 mantém sues animais até que estes sejam  vendidos.
 ~
-34 0 0 0 0 2
+34 0 2
 S
 #3429
 A Taverna da Cidade~
@@ -580,7 +583,7 @@ ou preparando comida para os fregueses.  Uma porta giratória encontra-se
 fixada na parede leste, dirigindo um caminho para a hospedaria onde os
 viajantes podem repousar.
 ~
-34 8 0 0 0 0
+34 d 0
 D1
 ~
 ~
@@ -598,7 +601,7 @@ leste, ao fim da sala, segue para cima onde há quartos para serem locados.
 O fogo queima calmamente na lareira da parede norte, exalando para toda a
 sala um ar quente e aconchegante.
 ~
-34 12 0 0 0 0
+34 cd 0
 D2
 ~
 ~
@@ -615,7 +618,7 @@ empilhados em uma estante limpa e conservada.  Um pequeno balcão
 encontra-se encostado à parede sul desta loja, no qual você pode comprar
 o que desejar.
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 ~
@@ -627,7 +630,7 @@ A Loja Comum de Villspah~
 exceto a norte onde o balcão principal está localizado.  Tudo, do útil ao
 fútil, está à venda nesta loja, é só comprar no balcão.
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 ~
@@ -640,7 +643,7 @@ cidade.  A maioria dos habitantes locais precisam mais do trabalho da
 ferraria do que de alguma arma, entretanto o verdadeiro encanto do
 proprietário é pelas armas.
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 ~
@@ -654,7 +657,7 @@ comprar algo aqui - o resto da loja é bloqueado por uma estranha parede.
 Você pode sentir estranhos odores vindos da parte sul desta construção,
 alguns deles bons, outros nem tanto.
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 ~
@@ -666,7 +669,7 @@ O Moinho de Villspah~
 sistema de funil criado pelo próprio Barão.  Villspah possui as águas mais
 límpidas de toda Vitália, uma ostentação que não é para muitos.
 ~
-34 8 0 0 0 0
+34 d 0
 D2
 ~
 ~
@@ -681,7 +684,7 @@ com confortáveis cadeiras em sua volta.  Há dois pequenos sofás logo
 adiante, arredondados e com mesas, onde as pessoas podem relaxar enquanto
 apreciam uma xícara de café.
 ~
-34 8 0 0 0 0
+34 d 0
 D2
 ~
 ~
@@ -695,7 +698,7 @@ ramos de plantas, dos quais a maioria você desconhece, todos secos.  Talvez
 por isso eles devem ser usados em pequenas quantidades, ou como
 medicamentos.
 ~
-34 8 0 0 0 0
+34 d 0
 D2
 ~
 ~
@@ -708,7 +711,7 @@ interesse da população, entretanto por o Barão ser um mago - e um mago
 muito poderoso - a joalheria traz uma vida elegante e vistosa para ele.  Os
 habitantes locais, é claro, também fazem algumas pequenas compras aqui.
 ~
-34 8 0 0 0 0
+34 d 0
 D2
 ~
 ~
@@ -722,7 +725,7 @@ assim vem encarregando o cartógrafo a fazer vários mapas das mais exóticas
 regiões de Vitália.  Com sua renda fixa, o cartógrafo vende qualquer tipo
 de mapa que o Barão venha a pedir.
 ~
-34 8 0 0 0 0
+34 d 0
 D2
 ~
 ~
@@ -734,7 +737,7 @@ O Pequeno Templo de Villspah~
 todo domingo.  Um altar encontra-se a leste, no final do templo, e há um
 tapete estendido saindo da porta em direção ao altar.
 ~
-34 8 0 0 0 0
+34 d 0
 D3
 ~
 ~
@@ -749,11 +752,12 @@ atenção é o pequeno número de covas - não que deveria ter muitos mortos,
 mas a cidade não parece ser nova e muitos ja devem ter passado seus últimos
 anos aqui em Villspah.
 ~
-34 0 0 0 0 2
+34 0 2
 D0
 ~
 portão~
-1 -1 3425
+:n 1 o portão
+a -1 3425
 S
 #3442
 O Viveiro de Aves~
@@ -762,7 +766,7 @@ deste local.  O cheiro não é nada agradável, entretanto os animais que
 estão nas jaulas são mais do que aprazíveis - são formidáveis companheiros
 para se ter por um pequeno custo.
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 ~
@@ -774,7 +778,7 @@ O Jardim de Villspah~
 imagináveis.  Uma pequena área aberta encontra-se ao sul com  alguns bancos
 de madeira uma fonte ao meio.
 ~
-34 0 0 0 0 2
+34 0 2
 D2
 ~
 ~
@@ -792,7 +796,7 @@ redor do contorno do parque, dando a sensação de conforto e paz que só pode
 ser encontrado ao ar livre.  Um belo jardim encontra-se a norte, e um
 portão de ferro separa este parque de um cemitério ao lado leste.
 ~
-34 0 0 0 0 2
+34 0 2
 D0
 ~
 ~
@@ -806,7 +810,7 @@ possível.  Você está encorajado a estabular seu animal por todo o tempo
 necessário, readquirindo-o quando for embora, para manter a paz e a
 limpeza desta vila.
 ~
-34 12 0 0 0 0
+34 cd 0
 D0
 ~
 ~
@@ -820,7 +824,7 @@ isso não é a pura verdade.  É dito que o Barão sempre foi fiel ao antigo
 rei, e por esse motivo, ele talvez tenha alguns inimigos dentro de suas
 próprias terras.
 ~
-34 4 0 0 0 1
+34 c 1
 D1
 ~
 ~
@@ -838,11 +842,12 @@ guardas, onde há vigias durante todo o tempo.  Pequenas fendas nas portas
 de madeira das torres, permitem que flechas sejam lançadas caso um intruso
 passe pelos guardas da ponte.
 ~
-34 0 0 0 0 0
+34 0 0
 D0
 ~
 porta~
-1 -1 3448
+:n 2 a porta
+a -1 3448
 D1
 ~
 ~
@@ -850,7 +855,8 @@ D1
 D2
 ~
 porta~
-1 -1 3450
+:n 2 a porta
+a -1 3450
 D3
 ~
 ~
@@ -862,11 +868,12 @@ Torre de Guarda Norte~
 guardas acima.  Há ma pequena mesa e um banquinho encostados no canto da
 sala.  A porta encontra-se a sul.
 ~
-34 8 0 0 0 0
+34 d 0
 D2
 ~
 porta~
-1 -1 3447
+:n 2 a porta
+a -1 3447
 D4
 ~
 ~
@@ -880,7 +887,7 @@ invasões.  Com tamanha tranquilidade da cidade, e a afeição dos
 habitantes locais, parece até estranho a necessidade do Barão de ter
 postos de guarda funcionando a todo momento.
 ~
-34 8 0 0 0 0
+34 d 0
 D5
 ~
 ~
@@ -892,11 +899,12 @@ Torre de Guarda Sul~
 guardas acima.  Há ma pequena mesa e um banquinho encostados no canto da
 sala.  A porta encontra-se a norte.
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 porta~
-1 -1 3447
+:n 2 a porta
+a -1 3447
 D4
 ~
 ~
@@ -910,7 +918,7 @@ invasões.  Com tamanha tranquilidade da cidade, e a afeição dos
 habitantes locais, parece até estranho a necessidade do Barão de ter
 postos de guarda funcionando a todo momento.
 ~
-34 8 0 0 0 0
+34 d 0
 D5
 ~
 ~
@@ -923,19 +931,22 @@ seja, precisam antes falar com seu consultor e informar o motivo de sua
 visita.  Se você deseja ver o Barão, você deve, antes, ter a permissão do
 consultor.  Ou...  Talvez tentar alguma outra coisa?
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 porta~
-1 3402 3455
+:n 2 a porta
+ab 3402 3455
 D1
 ~
 porta~
-1 3400 3453
+:n 2 a porta
+ab 3400 3453
 D2
 ~
 porta~
-1 3403 3457
+:n 2 a porta
+ab 3403 3457
 D3
 ~
 ~
@@ -948,16 +959,19 @@ fúteis.  Todo o seu tempo é destinado a relações com as necessidades dos
 habitantes e aos mensageiros estrangeiros.  Seja paciente e você será
 logo atendido e poderá entrar na Câmara de Estado.
 ~
-34 8 0 0 0 0
+34 d 0
 D1
 ~
 porta~
-1 3401 3454
+:n 2 a porta
+ab 3401 3454
 D3
 ~
 porta~
-1 3400 3452
+:n 2 a porta
+ab 3400 3452
 S
+T 3440
 #3454
 A Câmara de Estado~
    Uma grande e ampla mesa ocupa a maior parte do espaço que esta sala
@@ -966,11 +980,12 @@ encontra-se na ponta leste da mesa.  Há também, menores, mas confortáveis
 cadeiras alinhadas pelos lados da mesa.  Uma tapeçaria magente cobre o
 canto leste da sala, logo atrás da cadeira do Barão.
 ~
-34 8 0 0 0 0
+34 d 0
 D3
 ~
 porta~
-1 3401 3453
+:n 2 a porta
+ab 3401 3453
 D4
 ~
 ~
@@ -983,7 +998,7 @@ de festas, onde se pode visitar.  Não há cadeiras nesta sala, somente uma
 enorme mesa carregada com todos os tipos de alimentos - prontos para serem
 degustados.
 ~
-34 8 0 0 0 0
+34 d 0
 D1
 ~
 ~
@@ -991,7 +1006,8 @@ D1
 D2
 ~
 porta~
-1 3402 3452
+:n 2 a porta
+ab 3402 3452
 S
 #3456
 A Cozinha~
@@ -1000,7 +1016,7 @@ O grande forno que o cozinheiro usa libera um instenso calor a todo
 momento, seja dia ou noite.  O salão de festas é muito mais confortável -
 que tal ir lá para preparar uma refeição?
 ~
-34 8 0 0 0 0
+34 d 0
 D3
 ~
 ~
@@ -1014,11 +1030,12 @@ de distância uma da outra - uma delas logo a sul de você.  Na distânte
 parede leste há outra porta, com aparência mais robusta do que as da
 parede sul.
 ~
-34 40 0 0 0 0
+34 df 0
 D0
 ~
 porta~
-1 3403 3452
+:n 2 a porta
+ab 3403 3452
 D1
 ~
 ~
@@ -1026,18 +1043,20 @@ D1
 D2
 ~
 porta~
-1 -1 3459
+:n 2 a porta
+a -1 3459
 S
 #3458
 Um Corredor Vazio~
    Uma porta robusta encontra-se a leste daqui, parecendo ser muito sólida
 e difícil de ser aberta.  Outra porta encontra-se a sul.
 ~
-34 40 0 0 0 0
+34 df 0
 D2
 ~
 porta~
-1 -1 3460
+:n 2 a porta
+a -1 3460
 D3
 ~
 ~
@@ -1045,7 +1064,8 @@ D3
 D5
 ~
 porta~
-1 3403 3461
+:n 2 a porta
+ab 3403 3461
 S
 #3459
 A Sala de Guarda~
@@ -1053,11 +1073,12 @@ A Sala de Guarda~
 ser pacífico e tranquilo?  O que será que todos estes homens armados estão
 fazendo aqui?
 ~
-34 40 0 0 0 0
+34 df 0
 D0
 ~
 porta~
-1 -1 3457
+:n 2 a porta
+a -1 3457
 D1
 ~
 ~
@@ -1069,11 +1090,12 @@ A Sala de Guarda~
 ser pacífico e tranquilo?  O que será que todos estes homens armados estão
 fazendo aqui?
 ~
-34 40 0 0 0 0
+34 df 0
 D0
 ~
 porta~
-1 -1 3458
+:n 2 a porta
+a -1 3458
 D3
 ~
 ~
@@ -1087,7 +1109,7 @@ marcadas por uma insignificante infiltração.  Uma pequena passagem na pedra
 segue para norte em direção a uma outra pequena sala, e uma bela porta
 econtra-se no lado oeste.
 ~
-34 40 0 0 0 0
+34 df 0
 D0
 ~
 ~
@@ -1095,11 +1117,13 @@ D0
 D3
 ~
 porta~
-1 3419 3463
+:n 2 a porta
+ab 3419 3463
 D4
 ~
 porta~
-1 3403 3458
+:n 2 a porta
+ab 3403 3458
 S
 #3462
 Anexo da Despensa~
@@ -1107,7 +1131,7 @@ Anexo da Despensa~
 algum modo, esta sala foi vedada de qualquer infiltração, mantendo todos
 os alimentos que aqui estão protegidos.
 ~
-34 40 0 0 0 0
+34 df 0
 D2
 ~
 ~
@@ -1119,15 +1143,17 @@ Entrada do Calabouço~
 sul de três conjuntos de celas.  Parece que o Barão não é tão tranquilo e
 pacífico como todos pensam que ele é.
 ~
-34 40 0 0 0 0
+34 df 0
 D0
 ~
 cela~
-1 3405 3468
+:n 2 a cela
+ab 3405 3468
 D1
 ~
 porta~
-1 3419 3461
+:n 2 a porta
+ab 3419 3461
 D3
 ~
 ~
@@ -1139,11 +1165,12 @@ O Calabouço~
 grossas barras de ferro as cercando.  Há uma espessa porta de madeira no
 final da sala, a leste - sendo a única saída deste calabouço.
 ~
-34 40 0 0 0 0
+34 df 0
 D0
 ~
 cela~
-1 3405 3467
+:n 2 a cela
+ab 3405 3467
 D1
 ~
 ~
@@ -1159,11 +1186,12 @@ O Calabouço~
 grossas barras de ferro as cercando.  Há uma espessa porta de madeira no
 final da sala, a leste - sendo a única saída deste calabouço.
 ~
-34 40 0 0 0 0
+34 df 0
 D0
 ~
 cela~
-1 3405 3466
+:n 2 a cela
+ab 3405 3466
 D1
 ~
 ~
@@ -1175,11 +1203,12 @@ Uma Cela~
 ratos.  Aqueles que são aprisionados aqui devem ser pessoas muito más, para
 serem tratados de tal forma pelo Barão.
 ~
-34 40 0 0 0 0
+34 df 0
 D2
 ~
 cela~
-1 3405 3465
+:n 2 a cela
+ab 3405 3465
 S
 #3467
 Uma Cela~
@@ -1187,11 +1216,12 @@ Uma Cela~
 ratos.  Aqueles que são aprisionados aqui devem ser pessoas muito más, para
 serem tratados de tal forma pelo Barão.
 ~
-34 40 0 0 0 0
+34 df 0
 D2
 ~
 cela~
-1 3405 3464
+:n 2 a cela
+ab 3405 3464
 S
 #3468
 Uma Cela~
@@ -1199,22 +1229,24 @@ Uma Cela~
 ratos.  Aqueles que são aprisionados aqui devem ser pessoas muito más, para
 serem tratados de tal forma pelo Barão.
 ~
-34 40 0 0 0 0
+34 df 0
 D2
 ~
 cela~
-1 3405 3463
+:n 2 a cela
+ab 3405 3463
 S
 #3469
 Parte Superior da Sala de Guarda~
    Guardas estão aqui, a todo instante, protegendo a entrada para os
 aposentos do Barão.  Esta pequena câmara tem só esta finalidade.
 ~
-34 8 0 0 0 0
+34 d 0
 D3
 ~
 porta~
-1 3406 3470
+:n 2 a porta
+ab 3406 3470
 D5
 ~
 ~
@@ -1228,11 +1260,12 @@ para muita mobília, possuindo só simples móveis.  Uma lareira encontra-se
 fixa à parede noroeste, e um grande tapete cobre a maior parte do piso na
 parte sudeste da sala.  A cama do Barão encontra-se a sul.
 ~
-34 8 0 0 0 0
+34 d 0
 D1
 ~
 porta~
-1 3406 3469
+:n 2 a porta
+ab 3406 3469
 D2
 ~
 ~
@@ -1252,7 +1285,7 @@ parte sudeste da sala.  A cama do Barão encontra-se a sudeste.  Há uma
 janela parecida com um vitral na parede sul, possuindo um estranha
 mistura de cores e um misterioso movimento.
 ~
-34 8 0 0 0 0
+34 d 0
 D1
 ~
 ~
@@ -1271,7 +1304,7 @@ fixa à parede noroeste, e um grande tapete cobre a maior parte do piso na
 parte sudoeste da sala.  A cama do Barão está aqui, encostada na parede a
 sudeste.
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 ~
@@ -1289,7 +1322,7 @@ para muita mobília, possuindo só simples móveis.  Uma lareira encontra-se
 fixa à parede noroeste, e um grande tapete cobre a maior parte do piso
 deste local.  A cama do Barão encontra-se a leste.
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 ~

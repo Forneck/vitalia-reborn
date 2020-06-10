@@ -9,8 +9,13 @@ saudando a sua vinda e a emoção vai aumentando.  Uma luz começa a surgir, a
 princípio suave e tênue e vai se tornando mais e mais forte, à medida que
 você vai avançando.
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+ON santuario
+D E
+~
+~
+0 -1 9403
+D S
 ~
 ~
 0 -1 22201
@@ -24,8 +29,8 @@ uma espécie de metal azulado, algumas incrições.  De alguma forma, você
 consegue entender o significado daquela estranha língua e fica profundamente
 emocionado ao perceber que conseguiu chegar até aqui.
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+D S
 ~
 ~
 0 -1 22202
@@ -42,8 +47,8 @@ portões, você vê um belo e esplêndido vale.  Dois guardas olham para você e
 sorriem, eles sabem que você poderá fazer parte desse lugar.  Existe uma
 bela placa em uma das torres.
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+D S
 ~
 ~
 0 -1 22203
@@ -62,8 +67,8 @@ pessoas e aventureiros passeiam por aqui em busca de inspiração.  Alguns
 bardos divagam, perdidos em seus pensamentos enquanto criam canções e poemas
 sobre grandes feitos.  Um enorme templo reflete a luz do Sol, ao oeste.
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+D W
 ~
 ~
 0 -1 22204
@@ -77,8 +82,12 @@ foram, mas, que ainda assim, permanecem vivos em você, falando diretamente
 ao seu coração.  Uma brisa suave parece embalar os seus passos e você olha
 para cima, emocionado e agradecido por poder estar vivenciando este momento.
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+D W
+~
+~
+0 -1 22205
+D E
 ~
 ~
 0 -1 22203
@@ -93,8 +102,12 @@ ao seu coração.  Uma brisa suave parece embalar os seus passos e você olha
 para cima, emocionado e agradecido por poder estar vivenciando este momento.
 Ao longe você vê uma construção imensa.
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+D W
+~
+~
+0 -1 22206
+D E
 ~
 ~
 0 -1 22204
@@ -109,8 +122,12 @@ ao seu coração.  Uma brisa suave parece embalar os seus passos e você olha
 para cima, emocionado e agradecido por poder estar vivenciando este momento.
 Você está chegando próximo a uma construção maravilhosa.
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+D W
+~
+~
+0 -1 22207
+D E
 ~
 ~
 0 -1 22205
@@ -128,8 +145,12 @@ todos os bravos e você fica impressionado com as cenas ali perpetuadas.
 Estranhamente, você consegue ver através das paredes brancas e percebe que
 lá fora, em um grande vale, há um número infinito de belíssimas estátuas.
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+D S
+~
+~
+0 -1 22208
+D E
 ~
 ~
 0 -1 22206
@@ -153,8 +174,12 @@ aos Deuses pedindo suas bençãos e partir para a luta!
    Há uma floresta a sudeste e além dela, parece haver uma interessante
 construção.
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+D SE
+~
+~
+0 -1 22209
+D N
 ~
 ~
 0 -1 22207
@@ -169,8 +194,8 @@ visitar aqueles que, de alguma forma, serviram de inspiração para a sua
 própria jornada.
    Há uma floresta a sudeste e uma interessante construção ao longe.
 ~
-222 68 0 0 0 1
-D0
+222 cg 1
+D SE
 ~
 ~
 0 -1 22210
@@ -188,8 +213,8 @@ vento continua lhe instigando a visitar aqueles que, de alguma forma,
 serviram de inspiração para a sua própria jornada.
    A floresta fica a sudeste e uma interessante construção surge ao longe.
 ~
-222 68 0 0 0 1
-D0
+222 cg 1
+D SE
 ~
 ~
 0 -1 22211
@@ -208,8 +233,8 @@ serviram de inspiração para a sua própria jornada.
    A floresta está bem próxima e uma interessante construção vai tomando
 forma.
 ~
-222 68 0 0 0 1
-D0
+222 cg 1
+D SE
 ~
 ~
 0 -1 22212
@@ -228,8 +253,8 @@ lugar.  Alguém que queria ajudar seus semelhantes.  Alguém que queria levar
 pão para os famintos e esperança aos que haviam desistido de sonhar.  Alguém
 como você?
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+D E
 ~
 ~
 0 -1 22213
@@ -245,8 +270,8 @@ diferente se as pessoas não fossem tão mesquinhas, tão egoístas.  Ainda bem
 que você jamais foi assim, não é?  Então você percebe que está perto do
 porto e pensa: "Será que vale a pena caminhar até lá?".
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+D E
 ~
 ~
 0 -1 22214
@@ -261,8 +286,8 @@ serviram de inspiração para a sua própria jornada.  O cheiro do oceano chega
 às suas narinas, vindos do oeste.  A floresta vai ficando para trás e parece
 que ao leste existe uma grande festa acontecendo.
 ~
-222 68 0 0 0 1
-D0
+222 cg 1
+D E
 ~
 ~
 0 -1 22215
@@ -277,8 +302,8 @@ grande desbravador.  Quanta honra poder conhecê-lo, não é?  A sua jornada
 ainda não terminou e você segue novamente para o sul, pois parece que
 naquela direção, bem perto dali, outra festa está acontecendo.
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+D S
 ~
 ~
 0 -1 22216
@@ -296,8 +321,12 @@ repete baixinho aquele nome....Jasão...Argonautas....o grande líder destes,
 que são os melhores marinheiros de todos os mares e sem dúvida, grandes
 guerreiros também.
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+D S
+~
+~
+0 -1 22217
+D N
 ~
 ~
 0 -1 22215
@@ -310,12 +339,16 @@ doce sensação de paz.  E mais uma vez o vento parece ser o grande
 incentivador do seu aprendizado.  Seus passos seguem firmes, confiantes, em
 direção à floresta.
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+D S
+~
+~
+0 -1 22218
+D N
 ~
 ~
 0 -1 22216
-S
+S  
 #22218
 Deixando o Porto~
    Você sai do porto e seus passos seguem firmes, em direção à floresta.
@@ -323,8 +356,8 @@ Seu espírito está confiante, ciente de que o aprendizado é grande, porém
 precioso e importante.  Uma construção rústica vai surgindo e parece que sua
 alma de aventureiro o impulsiona em direção sul.
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+D S
 ~
 ~
 0 -1 22219
@@ -336,8 +369,8 @@ confiante, ciente de que o aprendizado é grande, porém precioso e
 importante.  Distante, ao sul, uma construção rústica vai surgindo e parece
 que sua alma de aventureiro está mais viva do que nunca.
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+D S
 ~
 ~
 0 -1 22220
@@ -349,8 +382,13 @@ grande, porém precioso e importante.  Uma construção rústica está bem
 próxima e há uma grande excitação em sua alma de aventureiro, como se
 estivesse prevendo alguma coisa importante que está para acontecer.
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+D S
+~
+porta~
+:n 2 a porta
+ag -1 22221
+D N
 ~
 ~
 0 -1 22219
@@ -370,11 +408,12 @@ e mais poderosa espada de todos os tempos, para aquele que se transformaria
 no maior e mais poderoso Rei de todos os tempos.  Você precisa partir...o
 vento parece estar lhe chamando.
 ~
-222 24 0 0 0 0
-D0
+222 de 0
+D N
 ~
 porta~
-0 -1 22222
+:n 2 a porta
+ag -1 22222
 S
 #22222
 Fora da Cabana Rústica~
@@ -387,10 +426,10 @@ se tornar exemplo.  Uma suave luz começa a surgir no horizonte e você tem a
 certeza de que é naquela direção que você precisa ir.  Seus passos seguem
 firmes, confiantes, na direção daquela luz.
 ~
-222 16 0 0 0 1
-D0
+222 e 1
+D N
 ~
 ~
 0 -1 50
 S
-$~
+$
