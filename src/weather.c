@@ -93,9 +93,9 @@ void weather_and_time(int mode)
 				break;
 			case SKY_SNOWING:
 				if (weather->before == SKY_RAINING)
-					write_to_output(d->character, "A chuva p�ra de cair e come�a a nevar.\r\n");
+					write_to_output(d->character, "A chuva para de cair e começa a nevar.\r\n");
 				else
-					write_to_output(d->character, "A neve come�a a cair.\r\n");
+					write_to_output(d->character, "A neve começa a cair.\r\n");
 				break;
 			}
 		}
@@ -110,9 +110,9 @@ void weather_and_time(int mode)
 				{
 					if (p < 25)
 						write_to_output(d->character,
-									 "Voc� sente uma brisa passando por voc�.\r\n");
+									 "Você sente uma brisa passando por você.\r\n");
 					else if (p < 50)
-						write_to_output(d->character, "Um forte vento a�oita o seu rosto.\r\n");
+						write_to_output(d->character, "Um forte vento açoita o seu rosto.\r\n");
 					else if (p < 75)
 						write_to_output(d->character, "A ventania dificulta os seus movimentos.\r\n");
 					else
@@ -120,7 +120,7 @@ void weather_and_time(int mode)
 				}
 				else if (weather->temperature < 5)
 					write_to_output(d->character,
-								 "Uma nevasca parece prestes a cair sobre a regi�o.\r\n");
+								 "Uma nevasca parece prestes a cair sobre a região.\r\n");
 				break;
 			case SKY_RAINING:
 			case SKY_LIGHTNING:
@@ -128,7 +128,7 @@ void weather_and_time(int mode)
 				{
 					if (p < 25)
 						write_to_output(d->character,
-									 "Voc� brisa passa por voc�, jogando a chuva contra o seu rosto.\r\n");
+									 "Uma brisa passa por você, jogando a chuva contra o seu rosto.\r\n");
 					else
 						write_to_output(d->character,
 									 "A chuva e os fortes ventos dificultam os seus passos.\r\n");
@@ -139,13 +139,13 @@ void weather_and_time(int mode)
 				case SKY_RAINING:
 					if (climate->humidity >= 0.75 && p >= 50)
 						write_to_output(d->character,
-									 "Pesadas gotas de chuva caem com viol�ncia.\r\n");
+									 "Pesadas gotas de chuva caem com violência.\r\n");
 					break;
 				case SKY_LIGHTNING:
 					if (climate->humidity >= 0.60 && p < 50)
-						write_to_output(d->character, "O som dos trov�es preenchem o ar.\r\n");
+						write_to_output(d->character, "O som dos trovões preenchem o ar.\r\n");
 					else if (climate->humidity >= 0.70 && p < 60)
-						write_to_output(d->character, "Um claro rel�mpago rasga os c�us.\r\n");
+						write_to_output(d->character, "Um claro relâmpago rasga os céus.\r\n");
 					break;
 				default:		/* stupid gcc */
 					break;
