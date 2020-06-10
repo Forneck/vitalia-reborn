@@ -1,0 +1,932 @@
+/*
+ * SPELLS AND SKILLS.  This area defines which spells are assigned to
+ * which classes, and the minimum level the character must be to use
+ * the spell or skill.
+ */
+void init_spell_levels(void)
+{
+  /* MAGES */
+/*spell_level(SPELL_VENTRILOQUATE,      CLASS_MAGIC_USER,  1); */
+  spell_level(SPELL_MAGIC_MISSILE,      CLASS_MAGIC_USER,  1);
+  spell_level(SPELL_DETECT_INVIS,       CLASS_MAGIC_USER,  2);
+  spell_level(SPELL_DETECT_MAGIC,       CLASS_MAGIC_USER,  2);
+  spell_level(SPELL_CHILL_TOUCH,        CLASS_MAGIC_USER,  3);
+  spell_level(SPELL_INFRAVISION,        CLASS_MAGIC_USER,  4);
+  spell_level(SPELL_INVISIBLE,          CLASS_MAGIC_USER,  5);
+  spell_level(SPELL_BURNING_HANDS,      CLASS_MAGIC_USER,  6);
+  spell_level(SPELL_BREATH,             CLASS_MAGIC_USER,  7);
+  spell_level(SPELL_STRENGTH,           CLASS_MAGIC_USER,  8);
+  spell_level(SPELL_LOCATE_OBJECT,      CLASS_MAGIC_USER,  9);
+  spell_level(SPELL_SHOCKING_GRASP,     CLASS_MAGIC_USER, 10);
+  spell_level(SKILL_MEDITATE,           CLASS_MAGIC_USER, 10);
+  spell_level(SPELL_MAGE_IDENTIFY,      CLASS_MAGIC_USER, 11);
+  spell_level(SPELL_SUMMON,             CLASS_MAGIC_USER, 11);
+  spell_level(SPELL_SLEEP,              CLASS_MAGIC_USER, 12);
+  spell_level(SPELL_LIGHTNING_BOLT,     CLASS_MAGIC_USER, 12);
+  spell_level(SPELL_BLINDNESS,          CLASS_MAGIC_USER, 14);
+  spell_level(SPELL_VAMP_TOUCH,         CLASS_MAGIC_USER, 15);
+  spell_level(SPELL_DETECT_POISON,      CLASS_MAGIC_USER, 16);
+  spell_level(SPELL_COLOR_SPRAY,        CLASS_MAGIC_USER, 17);
+  spell_level(SPELL_IMPROVED_ARMOR,     CLASS_MAGIC_USER, 18);
+  spell_level(SPELL_FLY,                CLASS_MAGIC_USER, 18);
+  spell_level(SPELL_ENERGY_DRAIN,       CLASS_MAGIC_USER, 18);
+  spell_level(SPELL_CURSE,              CLASS_MAGIC_USER, 20);
+  spell_level(SPELL_POISON,             CLASS_MAGIC_USER, 20);
+  spell_level(SPELL_FIREBALL,           CLASS_MAGIC_USER, 22);
+  spell_level(SPELL_PARALYSE,           CLASS_MAGIC_USER, 22);
+  spell_level(SPELL_CHARM,              CLASS_MAGIC_USER, 25);
+  spell_level(SPELL_SENSE_LIFE,         CLASS_MAGIC_USER, 28);
+  spell_level(SPELL_ENCHANT_WEAPON,     CLASS_MAGIC_USER, 34);
+  spell_level(SPELL_WORD_OF_RECALL,     CLASS_MAGIC_USER, 65); /* -- jr */
+  spell_level(SPELL_WATERWALK,          CLASS_MAGIC_USER, 70); /* -- jr */
+  spell_level(SPELL_DISINTEGRATE,       CLASS_MAGIC_USER, 85);
+  spell_level(SPELL_PORTAL,             CLASS_MAGIC_USER, 90); /* -- jr */
+
+  /* CLERICS */
+  spell_level(SPELL_CURE_LIGHT,         CLASS_CLERIC,  1);
+  spell_level(SPELL_CREATE_FOOD,        CLASS_CLERIC,  2);
+  spell_level(SPELL_CREATE_WATER,       CLASS_CLERIC,  3);
+  spell_level(SPELL_DETECT_POISON,      CLASS_CLERIC,  4);
+  spell_level(SPELL_DETECT_ALIGN,       CLASS_CLERIC,  4);
+  spell_level(SPELL_CURE_BLIND,         CLASS_CLERIC,  5);
+  spell_level(SPELL_BLESS,              CLASS_CLERIC,  6);
+  spell_level(SPELL_BREATH,             CLASS_CLERIC,  6);
+  spell_level(SPELL_DETECT_INVIS,       CLASS_CLERIC,  8);
+  spell_level(SPELL_BLINDNESS,          CLASS_CLERIC,  8);
+  spell_level(SKILL_MEDITATE,           CLASS_CLERIC,  9);
+  spell_level(SPELL_INFRAVISION,        CLASS_CLERIC, 10);
+  spell_level(SPELL_TALKDEAD,           CLASS_CLERIC, 10);
+  spell_level(SPELL_PROT_FROM_EVIL,     CLASS_CLERIC, 11);
+  spell_level(SPELL_POISON,             CLASS_CLERIC, 12);
+  spell_level(SPELL_GROUP_ARMOR,        CLASS_CLERIC, 13);
+  spell_level(SPELL_CURE_CRITIC,        CLASS_CLERIC, 14);
+  spell_level(SKILL_MOUNT,		CLASS_CLERIC, 14);
+  spell_level(SPELL_SUMMON,             CLASS_CLERIC, 15);
+  spell_level(SPELL_SENSE_LIFE,         CLASS_CLERIC, 15);
+  spell_level(SPELL_RAISE_DEAD,         CLASS_CLERIC, 16);
+  spell_level(SPELL_REMOVE_POISON,      CLASS_CLERIC, 18);
+  spell_level(SPELL_WORD_OF_RECALL,     CLASS_CLERIC, 18);
+  spell_level(SPELL_EARTHQUAKE,         CLASS_CLERIC, 18);
+  spell_level(SPELL_DISPEL_EVIL,        CLASS_CLERIC, 20);
+  spell_level(SPELL_DISPEL_GOOD,        CLASS_CLERIC, 20);
+  spell_level(SPELL_SANCTUARY,          CLASS_CLERIC, 21);
+  spell_level(SPELL_CALL_LIGHTNING,     CLASS_CLERIC, 22);
+  spell_level(SPELL_HEAL,               CLASS_CLERIC, 24);
+  spell_level(SPELL_PARALYSE,           CLASS_CLERIC, 26);
+  spell_level(SPELL_CONTROL_WEATHER,    CLASS_CLERIC, 26);
+  spell_level(SPELL_CHARM,              CLASS_CLERIC, 28);
+  spell_level(SPELL_HARM,               CLASS_CLERIC, 28);
+  spell_level(SPELL_RESSURECT,          CLASS_CLERIC, 32);
+  spell_level(SPELL_GROUP_HEAL,         CLASS_CLERIC, 32);
+  spell_level(SPELL_REMOVE_CURSE,       CLASS_CLERIC, 34);
+  spell_level(SPELL_WATERWALK,          CLASS_CLERIC, 40); /* -- jr */
+  spell_level(SPELL_AID,                CLASS_CLERIC, 45); /* -- jr */
+  spell_level(SPELL_FLY,                CLASS_CLERIC, 65); /* -- jr */
+  spell_level(SPELL_IMPROVED_ARMOR,     CLASS_CLERIC, 80); /* -- jr */
+  spell_level(SPELL_STONESKIN,          CLASS_CLERIC, 90); /* -- jr */
+
+  /* THIEVES */
+  spell_level(SKILL_SNEAK,			CLASS_THIEF,  1);
+  spell_level(SKILL_PICK_LOCK,			CLASS_THIEF,  3);
+  spell_level(SKILL_STEAL,			CLASS_THIEF,  5);
+  spell_level(SKILL_BACKSTAB,			CLASS_THIEF,  6);
+  spell_level(SKILL_SPY,			CLASS_THIEF,  8);
+  spell_level(SKILL_HIDE,			CLASS_THIEF, 10);
+  spell_level(SKILL_TRACK,			CLASS_THIEF, 12);
+  spell_level(SKILL_ENVENOM,			CLASS_THIEF, 15);
+  spell_level(SKILL_SEIZE,			CLASS_THIEF, 20);
+  spell_level(SKILL_ESCAPE,			CLASS_THIEF, 22);
+  spell_level(SKILL_BACKFLIP,			CLASS_THIEF, 24);
+  spell_level(SKILL_WEAPON_DAGGERS,		CLASS_THIEF, 25); /* -- jr */
+  spell_level(SKILL_NIGHTHAMMER,		CLASS_THIEF, 50);
+
+  /* WARRIORS */
+  spell_level(SKILL_KICK,			CLASS_WARRIOR,  1);
+  spell_level(SKILL_WEAPON_SWORDS,		CLASS_WARRIOR,  3); /* -- jr */
+  spell_level(SKILL_WEAPON_DAGGERS,		CLASS_WARRIOR,  3); /* -- jr */
+  spell_level(SKILL_RESCUE,			CLASS_WARRIOR,  5);
+  spell_level(SKILL_WEAPON_WHIPS,		CLASS_WARRIOR,  8); /* -- jr */
+  spell_level(SKILL_TRACK,			CLASS_WARRIOR, 10);
+  spell_level(SKILL_MOUNT,			CLASS_WARRIOR, 11);
+  spell_level(SKILL_WEAPON_TALONOUS_ARMS,	CLASS_WARRIOR, 13); /* -- jr */
+  spell_level(SKILL_WEAPON_BLUDGEONS,		CLASS_WARRIOR, 15); /* -- jr */
+  spell_level(SKILL_BASH,			CLASS_WARRIOR, 20);
+  spell_level(SKILL_WEAPON_EXOTICS,		CLASS_WARRIOR, 20); /* -- jr */
+  spell_level(SKILL_COMBO_ATTACK,		CLASS_WARRIOR, 30); /* -- jr */
+  spell_level(SKILL_WEAPON_POLEARMS,		CLASS_WARRIOR, 40); /* -- AC */
+
+  /* DRUIDS */
+  spell_level(SPELL_BURST_OF_FLAME,		CLASS_DRUID,  1); /* -- ac */
+  spell_level(SPELL_SKIN_LIKE_WOOD,		CLASS_DRUID,  3); /* -- mp */
+  spell_level(SPELL_DETECT_POISON,		CLASS_DRUID,  4);
+  spell_level(SPELL_BURST_OF_FIRE,		CLASS_DRUID,  5); /* -- ac */
+  spell_level(SPELL_BREATH,			CLASS_DRUID,  6);
+  spell_level(SPELL_CREATE_FOOD,		CLASS_DRUID,  7);
+  spell_level(SPELL_CREATE_NECTAR,		CLASS_DRUID,  7);
+  spell_level(SPELL_THISTLECOAT,		CLASS_DRUID,  8); /* -- mp */
+  spell_level(SPELL_IGNITE,			CLASS_DRUID,  9); /* -- ac */
+  spell_level(SKILL_MEDITATE,			CLASS_DRUID, 12);
+  spell_level(SPELL_INVIGOR,			CLASS_DRUID, 13); /* -- mp */
+  spell_level(SPELL_EVOKE_CROW,			CLASS_DRUID, 14); /* -- mp */
+  spell_level(SPELL_MINOR_HEALING,		CLASS_DRUID, 15); /* -- ac */
+  spell_level(SPELL_CASCADE_HAIL,		CLASS_DRUID, 17); /* -- mp */
+  spell_level(SPELL_REMOVE_POISON,		CLASS_DRUID, 18);
+  spell_level(SPELL_DANCE_FIREFLIES,		CLASS_DRUID, 19); /* -- mp */
+  spell_level(SPELL_CHARM,			CLASS_DRUID, 24); /* -- mp */
+  spell_level(SPELL_STINGING_SWARM,		CLASS_DRUID, 25); /* -- mp */
+  spell_level(SPELL_SENSE_LIFE,			CLASS_DRUID, 29);
+  spell_level(SPELL_EVOKE_WOLF,			CLASS_DRUID, 30); /* -- mp */
+  spell_level(SPELL_SKIN_LIKE_ROCK,		CLASS_DRUID, 35); /* -- mp */
+  spell_level(SPELL_WORD_OF_RECALL,		CLASS_DRUID, 37);
+  spell_level(SPELL_REGENERATION,		CLASS_DRUID, 40); /* -- mp */
+  spell_level(SPELL_WATERWALK,			CLASS_DRUID, 43);
+  spell_level(SPELL_FURY_OF_AIR,		CLASS_DRUID, 50); /* -- mp */
+  spell_level(SPELL_CONTROL_WEATHER,		CLASS_DRUID, 55);
+  spell_level(SPELL_EVOKE_BEAR,			CLASS_DRUID, 60); /* -- mp */
+  spell_level(SPELL_SKIN_LIKE_STEEL,		CLASS_DRUID, 65); /* -- mp */
+  spell_level(SPELL_EARTHQUAKE,			CLASS_DRUID, 70); /* -- ac */
+  spell_level(SPELL_FLY,			CLASS_DRUID, 75);
+  spell_level(SPELL_LIGHTNING_BLAST,		CLASS_DRUID, 80); /* -- ac */
+  spell_level(SPELL_EVOKE_LION,			CLASS_DRUID, 85); /* -- mp */
+  spell_level(SPELL_SKIN_LIKE_DIAMOND,		CLASS_DRUID, 90); /* -- mp */
+
+  /* BARDS */
+  spell_level(CHANSON_ARDOR,			CLASS_BARD,   1); /* -- AC */
+  spell_level(SPELL_MAGIC_MISSILE,		CLASS_BARD,   2);
+  spell_level(SKILL_WEAPON_DAGGERS,		CLASS_BARD,   4);
+  spell_level(CHANSON_BRINDE,			CLASS_BARD,   6); /* -- AC */
+  spell_level(CHANSON_OFUSCAR,			CLASS_BARD,   9); /* -- ac */
+  spell_level(CHANSON_NINAR,			CLASS_BARD,  12); /* -- ac */
+  spell_level(SPELL_SOUNDBARRIER,		CLASS_BARD,  15); /* -- AC */
+  spell_level(CHANSON_LEVEZA,			CLASS_BARD,  18); /* -- ac */
+  spell_level(SPELL_MAGE_IDENTIFY,		CLASS_BARD,  20);
+  spell_level(SPELL_VOICE_EXPLOSION,		CLASS_BARD,  23); /* -- AC */
+  spell_level(CHANSON_ANDARILHO,		CLASS_BARD,  28); /* -- ac */
+  spell_level(CHANSON_VOLTAR,			CLASS_BARD,  31); /* -- AC */ 
+  spell_level(SKILL_TRIP,			CLASS_BARD,  35); /* -- AC */
+  spell_level(CHANSON_MORTE,			CLASS_BARD,  40); /* -- ac */
+  spell_level(CHANSON_CESSAR,                   CLASS_BARD,  42); /* -- AC */
+  spell_level(SKILL_ADAGIO,			CLASS_BARD,  45); /* -- AC */
+  spell_level(SKILL_ALLEGRO,			CLASS_BARD,  50); /* -- AC */
+  spell_level(SKILL_MEDITATE,			CLASS_BARD,  56);
+  spell_level(CHANSON_VISAO,                    CLASS_BARD,  59); /* -- AC */
+  spell_level(CHANSON_ENCANTO,                  CLASS_BARD,  62); /* -- AC */
+  spell_level(CHANSON_VULNERAVEL,		CLASS_BARD,  68); /* -- AC */
+  spell_level(CHANSON_TREMOR,			CLASS_BARD,  72); /* -- ac */
+  spell_level(CHANSON_ALENTO,			CLASS_BARD,  77); /* -- ac */
+  spell_level(CHANSON_ECOS,			CLASS_BARD,  82); /* -- AC */
+  spell_level(CHANSON_CLAMOR,			CLASS_BARD,  88); /* -- AC */
+  spell_level(CHANSON_DEUSES,			CLASS_BARD,  95); /* -- ac */
+}
+
+/* PLAYER SPELLS -- Numbered from 1 to MAX_SPELLS */
+#define SPELL_STONESKIN		     53 /* -- vp -			 */
+#define SPELL_FIRESHIELD	     54 /* -- vp -			 */
+#define SPELL_IMPROVED_ARMOR	     55 /* -- vp -			 */
+#define SPELL_DISINTEGRATE	     56 /* -- vp -			 */
+#define SPELL_MAGE_IDENTIFY	     57 /* -- vp -			 */
+#define SPELL_TALKDEAD		     58 /* -- vp -			 */
+#define SPELL_RAISE_DEAD	     59 /* -- vp -			 */
+#define SPELL_RESSURECT		     60 /* -- vp -			 */
+#define SPELL_VAMP_TOUCH	     61 /* -- vp -			 */
+#define SPELL_BREATH		     62 /* -- vp -			 */
+#define SPELL_FLY		     63 /* -- vp -			 */
+#define SPELL_PARALYSE		     64 /* -- vp -			 */
+#define SPELL_AID		     65 /* -- jr - Set 07, 1999		 */
+#define SPELL_PORTAL		     66 /* -- jr - Set 24, 1999		 */
+#define SPELL_SKIN_LIKE_WOOD	     67 /* -- mp - Oct 13, 2001		 */
+#define SPELL_SKIN_LIKE_ROCK	     68 /* -- mp - Oct 13, 2001		 */
+#define SPELL_SKIN_LIKE_STEEL	     69 /* -- mp - Oct 13, 2001		 */
+#define SPELL_SKIN_LIKE_DIAMOND	     70 /* -- mp - Oct 13, 2001		 */
+#define SPELL_BURST_OF_FLAME	     71 /* -- ac - Oct 13, 2001		 */
+#define SPELL_BURST_OF_FIRE	     72 /* -- ac - Oct 13, 2001		 */
+#define SPELL_IGNITE		     73 /* -- ac - Oct 13, 2001		 */
+#define SPELL_INVIGOR		     74 /* -- mp - Oct 13, 2001		 */
+#define SPELL_MINOR_HEALING	     75 /* -- ac - Oct 14, 2001		 */
+#define SPELL_LIGHTNING_BLAST	     76 /* -- ac - Oct 14, 2001		 */
+#define SPELL_REGENERATION	     77 /* -- mp - Oct 13, 2001		 */
+#define SPELL_THISTLECOAT	     78 /* -- mp -			 */
+#define SPELL_CASCADE_HAIL	     79 /* -- mp -			 */
+#define SPELL_DANCE_FIREFLIES	     80 /* -- mp -			 */
+#define SPELL_STINGING_SWARM	     81 /* -- mp -			 */
+#define SPELL_FURY_OF_AIR	     82 /* -- mp - Nov 04, 2001		 */
+#define SPELL_EVOKE_CROW	     83 /* -- mp -			 */
+#define SPELL_EVOKE_WOLF	     84 /* -- mp -			 */
+#define SPELL_EVOKE_BEAR	     85 /* -- mp -			 */
+#define SPELL_EVOKE_LION	     87 /* -- mp -			 */
+#define SPELL_CREATE_NECTAR	     88 /* -- mp -			 */
+#define SPELL_VOICE_EXPLOSION	     89 /* -- ac - March, 2003		 */
+#define SPELL_SOUNDBARRIER	     90 /* -- ac - March, 2003		 */
+#define SPELL_GLOOMSHIELD	     91 /* -- ac - September, 2003	 */
+
+#define SPELL_DARKNESS               92
+#define SPELL_TRANSPORT_VIA_PLANTS      93
+#define SPELL_PROT_FROM_GOOD         94
+
+/* To make an affect induced by dg_affect look correct on 'stat' we need to define it with a 'spellname'. */
+#define SPELL_DG_AFFECT              95
+
+/** Total Number of defined spells */
+#define NUM_SPELLS                   95
+
+/* Insert new spells here, up to MAX_SPELLS */
+#define MAX_SPELLS		    160
+
+/* PLAYER CHANSONS - Numbered from MAX_SPELLS+1 to MAX_CHANSON */
+#define CHANSON_HEAD		    161 /* First chanson, just for ctrl	 */
+#define CHANSON_ARDOR		    161 /* -- AC - JUNE, 2003		 */
+#define CHANSON_OFUSCAR		    162 /* -- AC - JUNE, 2003		 */
+#define CHANSON_NINAR		    163 /* -- AC - JUNE, 2003		 */
+#define CHANSON_TREMOR		    164 /* -- AC - JUNE, 2003		 */
+#define CHANSON_ANDARILHO	    165 /* -- AC - JUNE, 2003		 */
+#define CHANSON_MORTE		    166 /* -- AC - JUNE, 2003		 */
+#define CHANSON_LEVEZA		    167 /* -- AC - JUNE, 2003		 */
+#define CHANSON_ALENTO		    168 /* -- AC - JUNE, 2003		 */
+#define CHANSON_DEUSES		    169 /* -- AC - JUNE, 2003		 */
+#define CHANSON_VULNERAVEL	    170 /* -- AC - JUNE, 2003		 */
+#define CHANSON_VOLTAR		    171 /* -- AC - JUNE, 2003		 */
+#define CHANSON_BRINDE		    172 /* -- AC - JUNE, 2003		 */
+#define CHANSON_ECOS		    173 /* -- AC - JUNE, 2003		 */
+#define CHANSON_CLAMOR		    174 /* -- AC - JUNE, 2003		 */
+#define CHANSON_ENCANTO             175 /* -- AC - SEPT, 2003            */
+#define CHANSON_CESSAR              176 /* -- AC - SEPT, 2003            */
+#define CHANSON_VISAO               177 /* -- AC - SEPT, 2003            */
+
+/* Insert new songs here, up to MAX_CHANSONS */
+#define MAX_CHANSONS		    220
+
+
+/* PLAYER SKILLS - Numbered from MAX_SONGS+1 to MAX_SKILLS */
+#define SKILL_BACKSTAB              221 /* Reserved Skill[] DO NOT CHANGE */
+#define SKILL_BASH                  222 /* Reserved Skill[] DO NOT CHANGE */
+#define SKILL_HIDE                  223 /* Reserved Skill[] DO NOT CHANGE */
+#define SKILL_KICK                  224 /* Reserved Skill[] DO NOT CHANGE */
+#define SKILL_PICK_LOCK             225 /* Reserved Skill[] DO NOT CHANGE */
+#define SKILL_PUNCH                 226 /* Reserved Skill[] DO NOT CHANGE */
+#define SKILL_RESCUE                227 /* Reserved Skill[] DO NOT CHANGE */
+#define SKILL_SNEAK                 228 /* Reserved Skill[] DO NOT CHANGE */
+#define SKILL_STEAL                 229 /* Reserved Skill[] DO NOT CHANGE */
+#define SKILL_TRACK		    230 /* Reserved Skill[] DO NOT CHANGE */
+#define SKILL_WEAPON_SWORDS	    231 /* -- jr - 24/08/99 * Wpn-prof	 */
+#define SKILL_WEAPON_DAGGERS	    232 /* -- jr - 24/08/99 * Wpn-prof	 */
+#define SKILL_WEAPON_WHIPS	    233 /* -- jr - 24/08/99 * Wpn-prof	 */
+#define SKILL_WEAPON_TALONOUS_ARMS  234 /* -- jr - 24/08/99 * Wpn-prof	 */
+#define SKILL_WEAPON_BLUDGEONS	    235 /* -- jr - 24/08/99 * Wpn-prof	 */
+#define SKILL_WEAPON_EXOTICS	    236 /* -- jr - 24/08/99 * Wpn-prof	 */
+#define SKILL_SPY		    237 /* -- jr - May 15, 2000		 */
+#define SKILL_SEIZE		    238 /* -- jr - Sep 15, 2000		 */
+#define SKILL_BACKFLIP		    239	/* -- jr - Apr 07, 2001		 */
+#define SKILL_MOUNT		    240 /* -- jr - Apr 07, 2001		 */
+#define SKILL_ENVENOM		    241	/* -- jr - Jul 19, 2001		 */
+#define SKILL_NIGHTHAMMER	    242	/* -- jr - Oct 07, 2001		 */
+#define SKILL_MEDITATE		    243 /* -- jr - Dec 29, 2001		 */
+#define SKILL_ESCAPE		    244 /* -- jr - Dec 29, 2001		 */
+#define SKILL_COMBO_ATTACK	    245	/* -- jr - Dec 29, 2001		 */
+#define SKILL_WEAPON_POLEARMS	    246	/* -- AC - Apr, 2003		 */
+#define SKILL_ADAGIO		    247	/* -- AC - Apr, 2003		 */
+#define SKILL_ALLEGRO		    248	/* -- AC - Apr, 2003		 */
+#define SKILL_TRIP		    249	/* -- AC - JUNE, 2003		 */
+#define SKILL_BANDAGE 250 /* -- FC */
+#define SKILL_WHIRLWIND             251
+
+/* New skills may be added here up to MAX_SKILLS (297) */
+
+/* NON-PLAYER AND OBJECT SPELLS AND SKILLS: The practice levels for the spells
+ * and skills below are _not_ recorded in the players file; therefore, the
+ * intended use is for spells and skills associated with objects (such as
+ * SPELL_IDENTIFY used with scrolls of identify) or non-players (such as NPC
+ * only spells). */
+ #define SPELL_SCROLL_IDENTIFY		    301
+#define SPELL_FIRE_BREATH	    302
+#define SPELL_GAS_BREATH	    303
+#define SPELL_FROST_BREATH	    304
+#define SPELL_ACID_BREATH	    305
+#define SPELL_LIGHTNING_BREATH	    306
+#define SPELL_YOUTH		    307
+#define SPELL_FIRESTORM		    308	/* -- jr - Apr 08, 2001	 */
+
+#define TOP_SPELL_DEFINE	    399
+
+  if (IS_SET(SINFO.routines, MAG_MANUAL))
+    switch (spellnum) {
+      case SPELL_CHARM:
+	MANUAL_SPELL(spell_charm);
+	break;
+      case SPELL_CREATE_WATER:
+	MANUAL_SPELL(spell_create_water);
+	break;
+      case SPELL_DETECT_POISON:
+	MANUAL_SPELL(spell_detect_poison);
+	break;
+      case SPELL_VENTRILOQUATE:
+	MANUAL_SPELL(spell_ventriloquate);
+	break;
+      case SPELL_ENCHANT_WEAPON:
+	MANUAL_SPELL(spell_enchant_weapon);
+	break;
+      case SPELL_MAGE_IDENTIFY:
+	MANUAL_SPELL(spell_identify);
+	break;
+      case SPELL_IDENTIFY:
+	MANUAL_SPELL(spell_identify);
+	break;
+      case SPELL_LOCATE_OBJECT:
+	MANUAL_SPELL(spell_locate_object);
+	break;
+      case SPELL_SUMMON:
+	MANUAL_SPELL(spell_summon);
+	break;
+      case SPELL_WORD_OF_RECALL:
+	MANUAL_SPELL(spell_recall);
+	break;
+      case SPELL_RAISE_DEAD:
+	MANUAL_SPELL(spell_raise_dead);
+	break;
+      case SPELL_RESSURECT:
+	MANUAL_SPELL(spell_ressurect);
+	break;
+      case SPELL_VAMP_TOUCH:
+	MANUAL_SPELL(spell_vamp_touch);
+	break;
+      case SPELL_YOUTH:
+	MANUAL_SPELL(spell_youth);
+	break;
+      case SPELL_PORTAL:
+	MANUAL_SPELL(spell_portal);
+	break;
+      case SPELL_TELEPORT:
+	MANUAL_SPELL(spell_teleport);
+	break;
+      case SPELL_FURY_OF_AIR:
+	MANUAL_SPELL(spell_fury_air);
+	break;
+      case SPELL_CREATE_NECTAR:
+	MANUAL_SPELL(spell_create_nectar);
+	break;
+      case CHANSON_VOLTAR:
+	MANUAL_SPELL(chanson_voltar);
+	break;
+      case CHANSON_BRINDE:
+	MANUAL_SPELL(chanson_brinde);
+	break;
+      case CHANSON_ENCANTO:
+	MANUAL_SPELL(chanson_encanto);
+	break;
+	    case SPELL_SOUNDBARRIER:
+      case SPELL_ARMOR:
+      case SPELL_IMPROVED_ARMOR:
+      case SPELL_SKIN_LIKE_ROCK:
+      case SPELL_SKIN_LIKE_STEEL:
+      case SPELL_SKIN_LIKE_DIAMOND:
+	MANUAL_SPELL(spell_armor);
+	break;
+	
+	
+	
+	***************
+	  spello(SPELL_AID, "aid", 180, 120, 5, POS_STANDING,	/* -- jr - 07/09/99 */
+	TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE,
+	MAG_AFFECTS | MAG_POINTS | MAG_UNAFFECTS,
+	"Voc� sente seu corpo menos resistente.");
+
+  spello(SPELL_ANIMATE_DEAD, "animate dead", 35, 10, 3, POS_STANDING,
+	TAR_OBJ_ROOM, FALSE, MAG_SUMMONS,
+	NULL);
+
+  spello(SPELL_ARMOR, "armor", 30, 15, 3, POS_FIGHTING,
+	TAR_CHAR_ROOM, FALSE, MAG_AFFECTS | MAG_MANUAL,
+	"Voc� se sente menos protegid$r.");
+
+  spello(SPELL_BREATH, "breath", 30, 15, 3, POS_STANDING,
+        TAR_CHAR_ROOM, FALSE, MAG_AFFECTS,
+	"Voc� sente necessidade de respirar novamente.");
+
+  spello(SPELL_IMPROVED_ARMOR, "improved armor", 80, 30, 5, POS_FIGHTING,
+	TAR_CHAR_ROOM, FALSE, MAG_AFFECTS | MAG_MANUAL,
+	"Voc� se sente menos protegid$r.");
+
+  spello(SPELL_BLESS, "bless", 35, 5, 3, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_OBJ_INV, FALSE, MAG_AFFECTS | MAG_ALTER_OBJS,
+	"Voc� se sente menos aben�oad$r.");
+
+  spello(SPELL_BLINDNESS, "blindness", 35, 25, 1, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_NOT_SELF, FALSE, MAG_AFFECTS,
+	"Voc� volta a enxergar.");
+
+  spello(SPELL_BURNING_HANDS, "burning hands", 30, 10, 3, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE,
+	NULL);
+
+  spello(SPELL_CALL_LIGHTNING, "call lightning", 40, 25, 3, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE,
+	NULL);
+
+  spello(SPELL_CHARM, "charm person", 75, 50, 2, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_NOT_SELF, TRUE, MAG_MANUAL,
+	"Voc� se sente mais auto-confiante.");
+
+  spello(SPELL_CHILL_TOUCH, "chill touch", 30, 10, 3, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE | MAG_AFFECTS,
+	"Voc� se sente retomando suas for�as.");
+
+  spello(SPELL_CLONE, "clone", 80, 65, 5, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE, MAG_SUMMONS,
+	NULL);
+
+  spello(SPELL_COLOR_SPRAY, "color spray", 30, 15, 3, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE,
+	NULL);
+
+  spello(SPELL_CONTROL_WEATHER, "control weather", 75, 25, 5, POS_STANDING,
+	TAR_IGNORE, FALSE, MAG_MANUAL,
+	NULL);
+
+  spello(SPELL_CREATE_FOOD, "create food", 30, 5, 4, POS_STANDING,
+	TAR_IGNORE, FALSE, MAG_CREATIONS,
+	NULL);
+
+  spello(SPELL_CREATE_WATER, "create water", 30, 5, 4, POS_STANDING,
+	TAR_OBJ_INV | TAR_OBJ_EQUIP, FALSE, MAG_MANUAL,
+	NULL);
+
+  spello(SPELL_CURE_BLIND, "cure blind", 30, 5, 2, POS_STANDING,
+	TAR_CHAR_ROOM, FALSE, MAG_UNAFFECTS,
+	NULL);
+
+  spello(SPELL_CURE_CRITIC, "cure critic", 30, 10, 2, POS_FIGHTING,
+	TAR_CHAR_ROOM, FALSE, MAG_POINTS,
+	NULL);
+
+  spello(SPELL_CURE_LIGHT, "cure light", 30, 10, 2, POS_FIGHTING,
+	TAR_CHAR_ROOM, FALSE, MAG_POINTS,
+	NULL);
+
+  spello(SPELL_CURSE, "curse", 80, 50, 2, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_OBJ_INV, TRUE,
+	MAG_AFFECTS | MAG_DAMAGE | MAG_ALTER_OBJS,
+	"Voc� se sente mais otimista.");
+
+  spello(SPELL_DETECT_ALIGN, "detect alignment", 20, 10, 2, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE, MAG_AFFECTS,
+	"Voc� perde sua sensibilidade.");
+
+  spello(SPELL_DETECT_INVIS, "detect invisibility", 20, 10, 2, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE, MAG_AFFECTS,
+	"Suas pupilas voltam ao normal.");
+
+  spello(SPELL_DETECT_MAGIC, "detect magic", 20, 10, 2, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE, MAG_AFFECTS,
+	"Suas pupilas voltam ao normal.");
+
+  spello(SPELL_DETECT_POISON, "detect poison", 15, 5, 1, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM, FALSE, MAG_MANUAL,
+	"A detec��o de veneno se encerra.");
+
+  spello(SPELL_DISINTEGRATE, "disintegrate", 90, 50, 10, POS_FIGHTING,
+        TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE,
+	NULL);
+
+  spello(SPELL_DISPEL_EVIL, "dispel evil", 40, 25, 3, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE,
+	NULL);
+
+  spello(SPELL_DISPEL_GOOD, "dispel good", 40, 25, 3, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE,
+	NULL);
+
+  spello(SPELL_EARTHQUAKE, "earthquake", 40, 25, 3, POS_FIGHTING,
+	TAR_IGNORE, TRUE, MAG_AREAS,
+	NULL);
+
+  spello(SPELL_ENCHANT_WEAPON, "enchant weapon", 150, 100, 10, POS_STANDING,
+	TAR_OBJ_INV, FALSE, MAG_MANUAL,
+	NULL);
+
+  spello(SPELL_ENERGY_DRAIN, "energy drain", 40, 25, 1, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE | MAG_MANUAL,
+	NULL);
+
+  spello(SPELL_GROUP_ARMOR, "group armor", 50, 30, 2, POS_STANDING,
+	TAR_IGNORE, FALSE, MAG_GROUPS,
+	NULL);
+
+  spello(SPELL_FIREBALL, "fireball", 40, 30, 2, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE,
+	NULL);
+
+  spello(SPELL_FIRESHIELD, "fireshield", 150, 100, 10, POS_STANDING,
+        TAR_CHAR_ROOM, FALSE, MAG_AFFECTS,
+	"A aura de fogo ao redor de seu corpo desaparece.");
+
+  spello(SPELL_FLY, "fly", 80, 40, 3, POS_FIGHTING,
+	TAR_CHAR_ROOM, FALSE, MAG_AFFECTS,
+	"Voc� se sente pesad$r novamente.");
+
+  spello(SPELL_GROUP_HEAL, "group heal", 80, 60, 5, POS_STANDING,
+	TAR_IGNORE, FALSE, MAG_GROUPS,
+	NULL);
+
+  spello(SPELL_HARM, "harm", 75, 45, 3, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE,
+	NULL);
+
+  spello(SPELL_HEAL, "heal", 60, 40, 3, POS_FIGHTING,
+	TAR_CHAR_ROOM, FALSE, MAG_POINTS | MAG_UNAFFECTS,
+	NULL);
+
+  spello(SPELL_MAGE_IDENTIFY, "identify", 40, 20, 5, POS_STANDING,
+        TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_EQUIP, FALSE, MAG_MANUAL,
+	NULL);
+
+  spello(SPELL_INFRAVISION, "infravision", 25, 10, 1, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE, MAG_AFFECTS,
+	"Sua vis�o noturna parece desaparecer.");
+
+  spello(SPELL_INVISIBLE, "invisibility", 35, 25, 1, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM, FALSE, MAG_AFFECTS | MAG_ALTER_OBJS,
+	"Voc� se sente expost$r.");
+
+  spello(SPELL_LIGHTNING_BOLT, "lightning bolt", 30, 15, 1, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE,
+	NULL);
+
+  spello(SPELL_LOCATE_OBJECT, "locate object", 25, 20, 1, POS_STANDING,
+	TAR_OBJ_WORLD, FALSE, MAG_MANUAL,
+	NULL);
+
+  spello(SPELL_MAGIC_MISSILE, "magic missile", 25, 10, 3, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE,
+	NULL);
+
+  spello(SPELL_STONESKIN, "stoneskin", 200, 100, 10, POS_STANDING,
+	TAR_CHAR_ROOM, FALSE, MAG_AFFECTS,
+	"Sua pele perde a dureza.");
+
+  spello(SPELL_PARALYSE, "paralyse", 50, 20, 3, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_NOT_SELF, TRUE, MAG_AFFECTS,
+	"Voc� pode andar novamente.");
+
+  spello(SPELL_POISON, "poison", 50, 20, 3, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_NOT_SELF | TAR_OBJ_INV, TRUE,
+	MAG_AFFECTS | MAG_ALTER_OBJS,
+	"Voc� se sente menos doente.");
+
+  spello(SPELL_PORTAL, "portal", 160, 90, 5, POS_STANDING,  // -- jr - 24/04/99
+	TAR_CHAR_WORLD | TAR_NOT_SELF, FALSE, MAG_MANUAL,
+	NULL);
+
+  spello(SPELL_PROT_FROM_EVIL, "protection from evil", 40, 10, 3, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE, MAG_AFFECTS,
+	"Voc� se sente menos protegid$r.");
+
+  spello(SPELL_RAISE_DEAD, "raise dead", 100, 60, 8, POS_STANDING,
+	TAR_OBJ_ROOM, FALSE, MAG_MANUAL,
+	NULL);
+
+  spello(SPELL_REMOVE_CURSE, "remove curse", 45, 25, 5, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_EQUIP, FALSE,
+	MAG_UNAFFECTS | MAG_ALTER_OBJS,
+	NULL);
+
+  spello(SPELL_REMOVE_POISON, "remove poison", 40, 8, 4, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM, FALSE,
+	MAG_UNAFFECTS | MAG_ALTER_OBJS,
+	NULL);
+
+  spello(SPELL_RESSURECT, "ressurect", 180, 80, 10, POS_STANDING,
+	TAR_OBJ_ROOM | TAR_CHAR_WORLD | TAR_NOT_SELF, FALSE, MAG_MANUAL,
+	NULL);
+
+  spello(SPELL_SANCTUARY, "sanctuary", 110, 85, 5, POS_STANDING,
+	TAR_CHAR_ROOM, FALSE, MAG_AFFECTS,
+	"A aura branca ao redor de seu corpo desaparece.");
+
+  spello(SPELL_SENSE_LIFE, "sense life", 20, 10, 2, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE, MAG_AFFECTS,
+	"Voc� se sente menos sens�vel �s coisas ao seu redor.");
+
+  spello(SPELL_SHOCKING_GRASP, "shocking grasp", 30, 15, 3, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE,
+	NULL);
+
+  spello(SPELL_SLEEP, "sleep", 40, 25, 5, POS_STANDING,
+	TAR_CHAR_ROOM, TRUE, MAG_AFFECTS,
+	"Voc� se sente menos cansad$r.");
+
+  spello(SPELL_STRENGTH, "strength", 35, 30, 1, POS_STANDING,
+	TAR_CHAR_ROOM, FALSE, MAG_AFFECTS,
+	"Voc� se sente mais frac$r.");
+
+  spello(SPELL_SUMMON, "summon", 75, 50, 3, POS_STANDING,
+	TAR_CHAR_WORLD | TAR_NOT_SELF, FALSE, MAG_MANUAL,
+	NULL);
+
+  spello(SPELL_TALKDEAD, "talk with dead", 50, 20, 5, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE, MAG_AFFECTS,
+	"Voc� n�o consegue mais sentir o mundo dos mortos.");
+
+  spello(SPELL_TELEPORT, "teleport", 75, 50, 3, POS_STANDING,
+	TAR_CHAR_ROOM, FALSE, MAG_MANUAL,
+	NULL);
+
+  spello(SPELL_VAMP_TOUCH, "vampiric touch", 30, 15, 1, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_MANUAL,
+	NULL);
+
+  spello(SPELL_VENTRILOQUATE, "ventriloquate", 30, 15, 3, POS_FIGHTING,
+	TAR_CHAR_ROOM, FALSE, MAG_MANUAL,
+	NULL);
+
+  spello(SPELL_WATERWALK, "waterwalk", 80, 40, 5, POS_STANDING,
+	TAR_CHAR_ROOM, FALSE, MAG_AFFECTS,
+	"Seus p�s parecem menos boiantes.");	/* -- jr - 09/07/99 */
+
+  spello(SPELL_WORD_OF_RECALL, "word of recall", 20, 10, 2, POS_STANDING,
+	TAR_CHAR_ROOM, FALSE, MAG_MANUAL,
+	NULL);
+
+  /* Druid spells -- mp - Jul 13, 2001 */
+
+  spello(SPELL_SKIN_LIKE_WOOD, "skin like wood", 30, 10, 5, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE, MAG_AFFECTS,
+	"Voc� se sente menos protegid$r.");
+
+  spello(SPELL_SKIN_LIKE_ROCK, "skin like rock", 70, 15, 5, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE, MAG_AFFECTS | MAG_POINTS|MAG_MANUAL,
+	"Voc� se sente menos protegid$r.");
+
+  spello(SPELL_SKIN_LIKE_STEEL, "skin like steel", 100, 20, 5, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE, MAG_AFFECTS | MAG_POINTS | MAG_MANUAL,
+	"Voc� se sente menos protegid$r.");
+
+  spello(SPELL_CREATE_NECTAR, "create nectar", 30, 5, 4, POS_STANDING,
+	TAR_OBJ_INV | TAR_OBJ_EQUIP, FALSE, MAG_MANUAL,
+	NULL);
+
+  spello(SPELL_SKIN_LIKE_DIAMOND, "skin like diamond", 110, 35, 5, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE, MAG_AFFECTS | MAG_MANUAL,
+	"Voc� se sente menos protegid$r.");
+
+  spello(SPELL_INVIGOR, "invigor", 40, 15, 3, POS_STANDING,
+	TAR_CHAR_ROOM, FALSE, MAG_POINTS,
+	NULL);
+
+  spello(SPELL_REGENERATION, "regeneration", 60, 15, 3, POS_FIGHTING,
+	TAR_CHAR_ROOM, FALSE, MAG_POINTS,
+	NULL);
+
+  spello(SPELL_FURY_OF_AIR, "fury of air", 200, 100, 10, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_MANUAL,
+	NULL);
+
+  /* -- ac - Jul 13, 2001 */
+
+  spello(SPELL_BURST_OF_FLAME, "burst of flame", 20, 10, 3, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE,
+	NULL);
+
+  spello(SPELL_BURST_OF_FIRE, "burst of fire", 25, 15, 3, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE,
+	NULL);
+
+  spello(SPELL_IGNITE, "ignite", 30, 20, 3, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE,
+	NULL);
+
+  spello(SPELL_MINOR_HEALING, "minor healing", 30, 10, 2, POS_FIGHTING,
+	TAR_CHAR_ROOM, FALSE, MAG_POINTS,
+	NULL);
+
+  spello(SPELL_LIGHTNING_BLAST, "lightning blast", 150, 75, 40, POS_FIGHTING,
+	TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE,
+	NULL); /* -- ac - Jul 14, 2001 */
+
+  /* EDIN */
+  spello(SPELL_DANCE_FIREFLIES, "dance of fireflies", 70, 65, 4, POS_STANDING,
+	TAR_CHAR_ROOM, FALSE, MAG_AFFECTS,
+	"Voc� observa os vaga-lumes indo embora, um a um.");
+
+  spello(SPELL_STINGING_SWARM, "stinging swarm", 65, 60, 4, POS_STANDING,
+	TAR_CHAR_ROOM | TAR_NOT_SELF, TRUE, MAG_AFFECTS,
+	"Voc� nota que o enxame j� n�o � t�o grande e que est� se desfazendo.");
+
+  spello(SPELL_THISTLECOAT, "thistlecoat", 30, 20, 3, POS_STANDING,
+	TAR_CHAR_ROOM, FALSE, MAG_AFFECTS,
+	"Voc� percebe que seu casaco de espinhos se desfez.");
+
+  spello(SPELL_CASCADE_HAIL, "cascade of hail", 62, 57, 4, POS_FIGHTING,
+	TAR_IGNORE, TRUE, MAG_AREAS,
+	NULL);
+
+  spello(SPELL_EVOKE_CROW, "evoke crow", 130, 120, 3, POS_STANDING,
+	TAR_IGNORE, FALSE, MAG_SUMMONS,
+	NULL);
+
+  spello(SPELL_EVOKE_WOLF, "evoke wolf", 190, 150, 3, POS_STANDING,
+	TAR_IGNORE, FALSE, MAG_SUMMONS,
+	NULL);
+
+  spello(SPELL_EVOKE_BEAR, "evoke bear", 220, 170, 3, POS_STANDING,
+	TAR_IGNORE, FALSE, MAG_SUMMONS,
+	NULL);
+
+  spello(SPELL_EVOKE_LION, "evoke lion", 280, 200, 3, POS_STANDING,
+	TAR_IGNORE, FALSE, MAG_SUMMONS,
+	NULL);
+
+  /* Bards spells - ac - march 2003 */
+  spello(SPELL_VOICE_EXPLOSION, "voice explosion", 70, 20, 3, POS_STANDING,
+	TAR_IGNORE, TRUE, MAG_AREAS,
+	NULL);
+
+  spello(SPELL_SOUNDBARRIER, "soundbarrier", 100, 20, 5, POS_STANDING,
+	TAR_CHAR_ROOM, FALSE, MAG_AFFECTS | MAG_MANUAL,
+	"Voc� percebe a barreira de som se dissipar.");
+
+  /* CHANSONS */
+  /* Bards - AC - 2003 */
+  chansono(CHANSON_ARDOR, "ardor das chamas", 20, 5, 2, POS_STANDING,
+	   TAR_IGNORE, FALSE, MAG_CREATIONS,
+	   NULL,
+           "Se h� luz em um instante,\n noutro h� escurid�o.\n Se h� chama flamejante,\n faz-se cinzas sobre o ch�o.\n\n Noite de negror profundo,\n assim seja afastada:\n ilumina este mundo\n minha tocha encantada!");
+
+  chansono(CHANSON_OFUSCAR, "luz que ofusca", 30, 10, 3, POS_STANDING,
+	   TAR_CHAR_ROOM | TAR_NOT_SELF, FALSE, MAG_AFFECTS,
+	   "Voc� volta a enxergar.",
+	   "� Luz eu pe�o que atenda\n esse meu humilde desejo:\n ofusque poss�vel senda\n dos vil�es que ainda vejo.");
+
+  chansono(CHANSON_NINAR, "cancao de ninar", 42, 6, 4, POS_STANDING,
+           TAR_CHAR_ROOM, TRUE, MAG_AFFECTS,
+	   "Voc� se sente menos sonolent$r.",
+           "V�u te caia sobre a fronte,\n n�voa branda de sonhar,\n que de al�m do Sono o Monte\n possas tu atravessar.");
+
+  chansono(CHANSON_TREMOR, "tremor", 60, 20, 4, POS_FIGHTING,
+	   TAR_IGNORE, TRUE, MAG_AREAS,
+	   NULL,
+           "Trema a terra,\n mova o ch�o!\n Torpe fera,\n morra ent�o!");
+
+  chansono(CHANSON_ANDARILHO, "a balada do andarilho", 50, 13, 4, POS_STANDING,
+	   TAR_CHAR_ROOM, FALSE, MAG_POINTS,
+	   NULL,
+           "No final de cada estrada\n espera um velho andarilho.\n Capa rota, mal-trapilho,\n a face nobre enlevada.\n\n Canta o velho uma balada,\n � a Can��o do Viajante,\n toada antiga, apaixonante,\n de uma busca n�o findada.\n\n E o errante aventureiro,\n tantas vezes t�o sozinho,\n com o canto v� um caminho,\n pois no fim h� um parceiro.");
+
+  chansono(CHANSON_MORTE, "o grito da morte", 100, 45, 4, POS_FIGHTING,
+	   TAR_CHAR_ROOM | TAR_FIGHT_VICT, TRUE, MAG_DAMAGE,
+	   NULL,
+           "Da garganta do ceifeiro temido,\n parta e reverbere o mortal bramido.\n Cessar� somente qualquer ru�do,\n quando mais uma alma tiver partido.");
+
+  chansono(CHANSON_LEVEZA, "leveza das �guas", 80, 40, 5, POS_STANDING,
+	   TAR_CHAR_ROOM, FALSE, MAG_AFFECTS,
+	   "Seus p�s parecem mais pesados.",
+           "Enquanto essa can��o durar\n em palavras que retumbem,\n que seus p�s nunca se afundem,\n seja por rio, lago ou mar.");
+
+  chansono(CHANSON_ALENTO, "alento de guerra", 270, 115, 15, POS_STANDING,
+           TAR_CHAR_ROOM, FALSE, MAG_AFFECTS,
+	   "A grande for�a que habitava seu cora��o parece sumir.",
+           "As fortes espadas,\n bravos cora��es.\n Ferozes ca�adas\n a grandes drag�es.\n\n Em pedras talhadas\n altas constru��es,\n com ferro armadas\n e seus torre�es.\n\n Pelas madrugadas\n de tantas vis�es\n tropas aliadas\n derrubam port�es.\n\n No fundo, atento,\n lento dedilhar.\n Um forte alento,\n tal vento a soprar.\n\n N�o � um lamento:\n canta o guerrear.\n Espere um momento...\n � um bardo a cantar!");
+
+  chansono(CHANSON_DEUSES, "invocacao aos deuses", 90, 50, 5, POS_FIGHTING,
+	   TAR_CHAR_ROOM, FALSE, MAG_POINTS,
+	   NULL,
+           "Dos C�us Criadores,\n e For�as do Mar;\n da Terra Senhores,\n e Poderes do Ar;\n possam curar eles,\n os seres divinos,\n as chagas daqueles\n de duros destinos.");
+
+  chansono(CHANSON_VOLTAR, "o bardo quer voltar", 30, 10, 3, POS_STANDING,
+	   TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE, MAG_MANUAL,
+	   NULL,
+           "Perdido eu em terra erma,\n esgotei-me em tanto errar.\n Canto ent�o, minha taverna,\n p'ro meu lar quero voltar.\n\n Perdido eu em tanto errar,\n esgotei-me em terra erma.\n Canto ent�o, meu doce lar:\n quero estar � na taverna!");	
+
+  chansono(CHANSON_BRINDE, "vinho para brindar", 30, 5, 4, POS_STANDING,
+	   TAR_OBJ_INV | TAR_OBJ_EQUIP, FALSE, MAG_MANUAL,
+	   NULL,
+           "Em estando eu, bardo,\n um s�brio sorrindo,\n eis o que falo:\n 'no copo que trago\n me surja bom vinho!'");
+
+  chansono(CHANSON_VULNERAVEL, "vulnerabilidade", 50, 20, 3, POS_STANDING,
+           TAR_CHAR_ROOM | TAR_NOT_SELF, FALSE, MAG_AFFECTS,
+	   "Voc� se sente menos vulner�vel.",
+           "A magia da palavra;\n a magia da can��o.\n Meu trabalho, minha lavra\n lhe enfraque�a o cora��o!");
+
+  chansono(CHANSON_ECOS, "ecos de maldicao", 70, 30, 4, POS_STANDING,
+	   TAR_CHAR_ROOM | TAR_NOT_SELF, TRUE, MAG_AFFECTS | MAG_DAMAGE,
+	   "Os enlouquecedores ecos da maldi��o est�o parando de $r atormentar.",
+           "Com um som forte\n e um tom hostil,\n maldize a sorte\n em teu covil,\n ecoa a Morte,\n vil� t�o vil.\n\n Com som de morte,\n que ecoa hostil\n vil� da sorte,\n forte e t�o vil,\n de tom mui forte,\n sai do covil!");
+
+  chansono(CHANSON_CLAMOR, "clamor", 70, 30, 6, POS_STANDING,
+	   TAR_CHAR_ROOM, FALSE, MAG_UNAFFECTS,
+	   NULL,
+           "�, eco fatal\n que causa tal dor.\n Loucura letal\n repleta de horror.\n V�-te todo mal,\n ouve meu clamor!\n\n Loucura do mal,\n ou�o teu horror.\n Num eco letal,\n que pare a dor,\n Magia mortal,\n V�-te, por favor!");
+
+  chansono(CHANSON_ENCANTO, "voz de encanto", 80, 50, 5, POS_FIGHTING,
+	   TAR_CHAR_ROOM| TAR_NOT_SELF, TRUE, MAG_MANUAL,
+	   "Voc� se sente mais don$r do pr�prio nariz.",
+           "Na voz h� o c�u\n de doce encantar.\n Vai, sente esse mel,\n te deixas levar...");
+
+  chansono(CHANSON_CESSAR, "cancao do bardo amigo", 30, 10, 2, POS_FIGHTING,
+	   TAR_CHAR_ROOM, FALSE, MAG_POINTS,
+	   NULL,
+	   "Escuta o cantar\n do bardo amigo.\n Percebe-o cessar\n co'a dor e o perigo.");
+
+  chansono(CHANSON_VISAO, "visao de artista", 20, 10, 2, POS_STANDING,
+	   TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE, MAG_AFFECTS,
+	   "Voc� se sente menos sens�vel.",
+	   "O mundo � mais claro\n p'ra artistas e loucos.\n Canto p'ra, de fato,\n ser ambos um pouco!");
+
+  /* NON-castable spells should appear here */
+  spello(SPELL_IDENTIFY, "identify", 0, 0, 0, 0,
+	TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM, FALSE, MAG_MANUAL,
+	NULL);
+
+  spello(SPELL_YOUTH, "youth", 0, 0, 0, 0,
+	TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE, MAG_MANUAL,
+	NULL);
+
+  spello(SPELL_FIRESTORM, "fire storm", 0, 0, 0, 0,
+	 TAR_CHAR_ROOM | TAR_NOT_SELF, TRUE, MAG_DAMAGE,
+	 NULL);
+
+  spello(SPELL_GLOOMSHIELD, "gloomshield", 0, 0, 0, 0,
+	 TAR_CHAR_ROOM | TAR_SELF_ONLY, FALSE, MAG_AFFECTS,
+	 "O escudo de trevas que $r resguardava se desvanece lentamente.");
+
+  /*
+   * These spells are currently not used, not implemented, and not castable.
+   * Values for the 'breath' spells are filled in assuming a dragon's breath.
+   */
+
+  spello(SPELL_FIRE_BREATH, "fire breath", 0, 0, 0, POS_SITTING,
+	TAR_IGNORE, TRUE, 0,
+	NULL);
+
+  spello(SPELL_GAS_BREATH, "gas breath", 0, 0, 0, POS_SITTING,
+	TAR_IGNORE, TRUE, 0,
+	NULL);
+
+  spello(SPELL_FROST_BREATH, "frost breath", 0, 0, 0, POS_SITTING,
+	TAR_IGNORE, TRUE, 0,
+	NULL);
+
+  spello(SPELL_ACID_BREATH, "acid breath", 0, 0, 0, POS_SITTING,
+	TAR_IGNORE, TRUE, 0,
+	NULL);
+
+  spello(SPELL_LIGHTNING_BREATH, "lightning breath", 0, 0, 0, POS_SITTING,
+	TAR_IGNORE, TRUE, 0,
+	NULL);
+
+  /*
+   * Declaration of skills - this actually doesn't do anything except
+   * set it up so that immortals can use these skills by default.  The
+   * min level to use the skill for other classes is set up in class.c.
+   */
+
+  skillo(SKILL_BACKSTAB, "backstab");
+  skillo(SKILL_BASH, "bash");
+  skillo(SKILL_HIDE, "hide");
+  skillo(SKILL_KICK, "kick");
+  skillo(SKILL_PICK_LOCK, "pick lock");
+  skillo(SKILL_PUNCH, "punch");
+  skillo(SKILL_RESCUE, "rescue");
+  skillo(SKILL_SEIZE, "seize");
+  skillo(SKILL_SNEAK, "sneak");
+  skillo(SKILL_SPY, "spy");
+  skillo(SKILL_STEAL, "steal");
+  skillo(SKILL_TRACK, "track");
+  skillo(SKILL_BACKFLIP, "backflip");
+  skillo(SKILL_MOUNT, "mount");
+  skillo(SKILL_ENVENOM, "envenom");
+  skillo(SKILL_NIGHTHAMMER, "nighthammer");
+  skillo(SKILL_WEAPON_SWORDS, "swords");
+  skillo(SKILL_WEAPON_DAGGERS, "daggers");
+  skillo(SKILL_WEAPON_WHIPS, "whips");
+  skillo(SKILL_WEAPON_TALONOUS_ARMS, "talonous arms");
+  skillo(SKILL_WEAPON_BLUDGEONS, "bludgeons");
+  skillo(SKILL_WEAPON_EXOTICS, "exotics");
+  skillo(SKILL_MEDITATE, "meditate");
+  skillo(SKILL_ESCAPE, "escape");
+  skillo(SKILL_COMBO_ATTACK, "combo attack");
+  skillo(SKILL_WEAPON_POLEARMS, "polearms");
+  skillo(SKILL_ADAGIO, "adagio");
+  skillo(SKILL_ALLEGRO, "allegro");
+  skillo(SKILL_TRIP, "trip");
+
+  /*
+   * The infernal exceptions...
+   * -- jr - Dec 29, 2001
+   */
+  spell_info[SKILL_WEAPON_SWORDS].max_learn = 80;
+  spell_info[SKILL_WEAPON_DAGGERS].max_learn = 80;
+  spell_info[SKILL_WEAPON_WHIPS].max_learn = 80;
+  spell_info[SKILL_WEAPON_TALONOUS_ARMS].max_learn = 80;
+  spell_info[SKILL_WEAPON_BLUDGEONS].max_learn = 80;
+  spell_info[SKILL_WEAPON_EXOTICS].max_learn = 80;
+  spell_info[SKILL_WEAPON_POLEARMS].max_learn = 80;
+
+  /*
+   * Other special parameters
+   */
+  spell_info[SKILL_COMBO_ATTACK].max_learn = 75;
+  spell_info[SKILL_COMBO_ATTACK].max_improv = 85;
+  spell_info[SKILL_TRIP].max_learn = 70;
+  spell_info[SKILL_TRIP].max_improv = 80;
+}
+	
+	

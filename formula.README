@@ -1,0 +1,82 @@
+
+Formula: solve mathematics formula using combinations of operators, 
+variables and numbers. 
+
+List of operators and variables:
+
+Operators : && Logical AND            Variables: GOOD     |  HITROLL
+            || Logical OR                        NEUTRAL  |  DAMROLL
+            >= Rel. greater or equal             EVIL     |  SAVPARA 
+            >  Relational greater                STR      |  SAVROD
+            <= Rel. less or equal                DEX      |  SAVPETRI
+            <  Relational less                   INT      |  SAVBREATH
+            == Relational equal                  WIS      |  SAVSPELL
+            != Relational not equal              CON
+            !  NOT                               CHA
+            ^  Bitwise exclusive OR              CLASS
+            &  Bitwise AND                       LEVEL
+            |  Bitwise inclusive OR              AGE 
+            -  Subtraction                       HEIGHT
+            +  Addition                          WEIGHT 
+            /  Division                          HIT
+            *  Multiplication                    MANA
+            %  Modulus                           MOVE
+            () Parentheses                       MAXMANA
+            RAND() Random                        MAXHIT
+            DICE(a, b)                           MAXMOVE
+            ?: Ternary operator                  GOLD
+            SELF.                                EXP  
+            VICT.                                ARMOR
+                                                 PARAM
+
+All variables (except PARAM), must be precedes by either SELF. or VICT.
+
+Return value(s):
+
+SELF.MANA  = Caster mana
+VICT.DEX   = Victim dexterity.
+SELF.CLASS = 0 (Magical User)
+             1 (Cleric)
+             2 (Thief)
+             3 (Warrior)
+PARAM      = special level. 
+             " 
+                  This is used by some spells, it represent obj level or 
+                  caster level.
+
+             for e.g: a staff that cast a level 12 spell. PARAM will return 12.
+             In most case PARAM just return SELF.LEVEL   "
+
+Operator:
+RAND(value) : randomize number between 1 and value.
+
+Operator:
+DICE(a, b)  : help dice.
+
+Conditional Operator:
+? :         : A ? B : C 
+              if A is true return B otherwise return C.
+
+examples: 
+
+formula 1200 + (self.class == 0 ? 10 : (self.class == 1 ? 20 : 30))
+return 1210, 1220, 1230 based on the caster CLASS.
+
+Numbers:
+All numbers must be integer, this version doesn't support real number yet.
+
+a) BAD: self.int * 2.4
+b) GOOD: self.int * 2 + self.int * 4 / 10
+
+Note: (b) result would NOT be rounded. Decimal would be dropped.
+
+Notes: 
+
+1) If a formula is wrong or fail. It will return 0. 
+
+2) All levels of ? : require to be between parenthese, or the result would be wrong.
+
+GOOD: formula 1200 + (self.class == 0 ? 10 : (self.class == 1 ? 20 : 30))
+BAD:  formula 1200 + self.class == 0 ? 10 : self.class == 1 ? 20 : 30
+
+(6 feb 2020)

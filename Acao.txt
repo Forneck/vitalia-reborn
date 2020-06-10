@@ -1,0 +1,113 @@
+
+if (GET_POS(i) != POS_FIGHTING)
+{
+	if (SITTING(i))
+		furniture = SITTING(i);
+
+	switch (GET_POS(i))
+	{
+	case (POS_DEAD):
+		if (FLYING(i))
+			send_to_char(ch, " está flutuando aqui, mort%c.", art);
+		else
+			send_to_char(ch, " está caíd%c aqui, mort%c.", art, art);
+		break;
+	case POS_MORTALLYW:
+		if (FLYING(i))
+			send_to_char(ch, " está flutuando aqui, mortalmente ferid%c.", art);
+		else
+			send_to_char(ch, " está caíd%c aqui, mortalmente ferid%c.", art, art);
+	break, case POS_INCAP:
+		if (FLYING(i))
+			send_to_char(ch, " está flutuando aqui, incapacitad%c.", art);
+		else
+			send_to_char(ch, " está caíd%c aqui, incapacitad%c.", art, art);
+		break;
+	case POS_STUNNED:
+		if (FLYING(i))
+			send_to_char(ch, " está flutuando aqui, atordoad%c.", art);
+		else
+			send_to_char(ch, " está caíd%c aqui, atordoad%c.", art, art);
+		break;
+	case POS_MEDITING:
+		if (FLYING(i))
+			send_to_char(ch, " está em um transe profundo, meditando enquanto levita.");
+		else
+			send_to_char(ch, " está em um transe profundo, meditando.");
+		break;
+	case POS_SLEEPING:
+		if (FLYING(i))
+		{
+			if (furniture)
+				send_to_char(ch, " está aqui, dormindo em %s no ar.", OBJS(furniture, ch));
+			else
+				send_to_char(ch, " está aqui, dormindo no ar.");
+		}
+		else
+		{
+			if (furniture)
+				send_to_char(ch, " está dormindo em %s.", OBJS(furniture, ch));
+			else
+				send_to_char(ch, " está dormindo aqui.");
+		}
+		break;
+	case POS_RESTING:
+		if (FLYING(i))
+		{
+			if (furniture)
+				send_to_char(ch, " está descansando em %s no ar.", OBJS(furniture, ch));
+			else
+				send_to_char(ch, " está aqui, descansando no ar.");
+		}
+		else
+		{
+			if (furniture)
+				send_to_char(ch, " está descansando em %s.", OBJS(furniture, ch));
+			else
+				send_to_char(ch, " está descansando aqui.");
+		}
+		break;
+	case POS_SITTING:
+		if (FLYING(i))
+		{
+			if (furniture)
+				send_to_char(ch, " está aqui, sentad%c em %s no ar.", art, OBJS(furniture, ch));
+			else
+				send_to_char(ch, " está aqui, sentad%c no ar.", art);
+		}
+		else
+		{
+			if (furniture)
+				send_to_char(ch, " está sentad%c em %s.", art, OBJS(furniture, ch));
+			else
+				send_to_char(ch, " está sentad%c aqui.", art);
+		}
+		break;
+	case POS_STANDING:
+		if (FLYING(i))
+			send_to_char(ch, " está voando aqui.");
+		else
+			send_to_char(ch, " está em pé aqui.");
+	default:
+		send_to_char(ch, "!FIGHTING");
+		break;
+	}
+}
+else
+{
+	if (FIGHTING(i))
+	{
+		send_to_char(ch, " está aqui, lutando contra ");
+		if (FIGHTING(i) == ch)
+			send_to_char(ch, "VOCÊ!");
+		else
+		{
+			if (IN_ROOM(i) == IN_ROOM(FIGHTING(i)))
+				send_to_char(ch, "%s!", PERS(FIGHTING(i), ch));
+			else
+				send_to_char(ch, "alguem que já se foi!");
+		}
+	}
+	else						/* NIL fighting pointer */
+		send_to_char(ch, " está aqui brigando com o nada.");
+}
