@@ -1,0 +1,420 @@
+#16000
+bandeira verde~
+a bandeira verde~
+A bandeira verde está posicionada aqui.~
+~
+13 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+bandeira verde~
+Esta é a bandeira verde, se você for deste exército, proteja-a a todo custo.
+~
+#16001
+bandeira azul~
+a bandeira azul~
+A bandeira azul está posicionada aqui.~
+~
+13 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+bandeira azul~
+Esta bandeira é a bandeira azul, se você for deste exército, proteja-a a
+todo custo.
+~
+#16002
+bandeira vermelha~
+a bandeira vermelha~
+A bandeira vermelha está posicionada aqui.~
+~
+13 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+bandeira vermelha~
+Esta bandeira é a bandeira vermelha, se você for deste exército, proteja-a a
+todo custo.
+~
+#16003
+bandeira amarela~
+a bandeira amarela~
+A bandeira amarela está posicionada aqui.~
+~
+13 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+bandeira amarela~
+Esta bandeira é a bandeira amarela, se você for deste exército, proteja-a a
+todo custo.
+~
+#16004
+bandeira verde~
+a bandeira verde~
+A bandeira verde está posicionada aqui.~
+$p explode, e $n se machuca!~
+14 0 0 0 0 a 0 0 0 0 0 0 0
+0 24 -1 -1
+2 0 0 0 0
+E
+bandeira verde~
+Esta parece ser a bandeira do exército verde, capture-a.
+~
+#16005
+bandeira azul~
+a bandeira azul~
+A bandeira azul está posicionada aqui.~
+$p explode, e $n se machuca!~
+14 0 0 0 0 a 0 0 0 0 0 0 0
+0 24 -1 -1
+2 0 0 0 0
+E
+bandeira azul~
+Esta parece ser a bandeira do exército azul, capture-a.
+~
+#16006
+bandeira vermelha~
+a bandeira vermelha~
+A bandeira vermelha está posicionada aqui.~
+$p explode, e $n se machuca!~
+14 0 0 0 0 a 0 0 0 0 0 0 0
+0 24 -1 -1
+2 0 0 0 0
+E
+bandeira vermelha~
+Esta parece ser a bandeira do exército vermelho, capture-a.
+~
+#16007
+bandeira amarela~
+a bandeira amarela~
+A bandeira amarela está posicionada aqui.~
+$p explode, e $n se machuca!~
+14 0 0 0 0 a 0 0 0 0 0 0 0
+0 24 -1 -1
+2 0 0 0 0
+E
+bandeira amarela~
+Esta parece ser a bandeira do exército amarelo, capture-a.
+~
+#16008
+carta objetivo~
+a carta objetivo~
+A carta objetivo foi esquecida aqui.~
+~
+13 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+carta objetivo~
+A carta objetivo está lacrada, pegue-a para ler as informações.
+~
+#16009
+carta objetivo~
+a carta objetivo~
+A carta objetivo está esquecida aqui.~
+~
+2 cq 0 0 0 ao 0 0 0 0 0 0 0
+2 -1 -1 -1
+1 0 0 0 0
+E
+carta objetivo~
+A carta objetivo está lacrada, pegue-a para ler as informações.
+~
+#16010
+chave castelo castelos~
+a chave dos castelos~
+A chave dos castelos foi deixada aqui.~
+~
+18 cdeq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+5 0 0 105 0
+E
+chave castelo castelos~
+Esta é a chave que abre o portão dos quatro castelos.
+~
+#16011
+disfarce espião~
+&go Disfarce do Espião&n~
+O Disfarce do Espião foi esquecido aqui.~
+~
+11 degq 0 0 0 ar 0 0 0 cg 0 0 0
+0 0 0 0
+5 10 1 15 0
+E
+disfarce espião~
+Esta mascara os espiões dos exércitos utilizam para passarem desapercebidos
+pelos campos inimigos, é extremamente leve, deixando assim o espião com a
+agilidade de que necessita para cumprir suas missões secretas.
+~
+A
+2 1
+A
+6 2
+A
+17 -3
+A
+18 2
+#16012
+botas soldado~
+&gas Botas de Soldado&n~
+As Botas de Soldado foram abandonadas aqui.~
+~
+9 deq 0 0 0 ag 0 0 0 cg 0 0 0
+8 0 0 0
+6 15 2 15 0
+E
+botas soldado~
+Estas botas de couro bem lustro foram usadas pelos soldados dos exércitos.
+Dizem que quando você as veste, você sente uma enorme vontade de estar
+sempre em movimento.
+~
+A
+2 1
+A
+14 35
+A
+18 3
+#16013
+bracelete cabo~
+&go Bracelete do Cabo&n~
+O Bracelete do Cabo foi esquecido aqui.~
+~
+9 deq 0 0 0 am 0 0 0 cg 0 0 0
+6 0 0 0
+7 20 3 15 0
+E
+bracelete cabo~
+A primeira impressão que você tem deste bracelete é a de que eles são feios
+e mal acabados mas, na verdade, estes braceletes de aço são usados pelos
+cabos para aparar os golpes recebidos e causar mais dano nos desferidos
+contra os inimigos durante suas batalhas portanto, são muito poderosos.
+~
+A
+1 1
+A
+5 1
+A
+18 1
+A
+19 2
+#16014
+braçais sargento~
+&gos Braçais do Sargento&n~
+Os Braçais de Sargento foram postos aqui.~
+~
+9 deq 0 0 0 ai 0 0 0 cg 0 0 0
+7 0 0 0
+8 25 4 15 0
+E
+braçais sargento~
+Estes braçais são feitos do mais puro metal existente portanto, são muito
+difíceis de ser quebrado, você pode ver três listras brancas, uma acima da
+outra em cada braço, o emblema dos sargentos.
+~
+A
+2 -1
+A
+18 1
+A
+19 3
+#16015
+perneiras tenente~
+&gas Perneiras de Tenente&n~
+As Perneiras de Tenente foram esquecidas em um canto da sala.~
+~
+9 deq 0 0 0 af 0 0 0 cg 0 0 0
+6 0 0 0
+9 30 5 15 0
+E
+perneiras tenente~
+Estas perneiras são feitas do mais puro metal existente, portanto, são muito
+difíceis de ser quebrada, você pode ver uma estrela central na lateral de
+cada perna, emblema dos tenentes.
+~
+A
+2 1
+A
+18 2
+A
+19 1
+#16016
+elmo capitão~
+&go Elmo do Capitão&n~
+O Elmo do Capitão foi posto cuidadosamente aqui.~
+~
+9 deq 0 0 0 ae 0 0 0 cg 0 0 0
+5 0 0 0
+10 35 6 15 0
+E
+elmo capitão~
+Este elmo é feito da mais pura prata, 3 estrelas de diamantes tornam este um
+dos objetos mais belos que você já viu, sem deixar de ser uma ótima
+proteção.
+~
+A
+3 1
+A
+4 1
+A
+6 1
+A
+13 20
+A
+18 2
+A
+19 1
+#16017
+cinturão major~
+&go Cinturão do Major&n~
+O Cinturão do Major foi solto e esquecido por alguém aqui.~
+~
+9 degq 0 0 0 al 0 0 0 nD 0 0 0
+8 0 0 0
+10 40 7 15 0
+E
+cinturão major~
+Este cinturão é confeccionado do mais puro couro, sua fivela em formato de
+estrela é de ouro branco, o que lhe dá um aspecto belo e ao mesmo templo
+simples.
+~
+A
+18 1
+A
+19 2
+#16018
+anel coronel~
+&go Anel de Coronel&n~
+O Anel de Coronel foi perdido por aqui.~
+~
+9 degq 0 0 0 ab 0 0 0 i 0 0 0
+7 0 0 0
+10 45 8 15 0
+E
+anel coronel~
+Este não passa de um simples anel de ouro com uma pequena gema branca, mas
+segundo dizem as lendas, este é um dos mais poderosos anéis de Vitália.
+~
+A
+18 2
+A
+19 2
+#16019
+armadura general~
+&ga Armadura do General&n~
+A Armadura do General está perfeitamente posicionada aqui.~
+~
+9 degq 0 0 0 ad 0 0 0 s 0 0 0
+15 0 0 0
+10 50 9 15 0
+E
+armadura general~
+Uma armadura indestrutível, forjada no mais puro mithril, protege você dos
+mais fortes ataques, parece emanar faíscas de fogo de suas 3 estrelas de
+rubi posicionadas no peitoral, um objeto simplesmente impressionante.
+~
+A
+18 2
+A
+19 2
+#16020
+montante marechal~
+&go Montante do Marechal&n~
+O Montante do Marechal está estendido em um dos cantos.~
+~
+5 bdegiqr 0 0 0 an 0 0 0 iD 0 0 0
+0 6 10 3
+10 60 10 15 0
+E
+montante marechal~
+Este é o Montante do Marechal, uma arma poderosíssima, poucos conseguiram
+empunhá-la.  Sua lamina é de mithril, o que a torna leve e praticamente
+indestrutível, o corte perfeito nunca será desgastado.  O poder que emana
+das pedras, uma de diamante e outra de rubi que foram engastadas no punho do
+montante protege a quem lutar de posse desta arma.
+~
+A
+18 7
+A
+19 7
+#16021
+quadro exércitos painel vitórias~
+o painel das vitórias~
+Um painel feito do metal mais nobre de Vitália foi fincado neste solo.~
+~
+13 giq 0 0 0 0 0 0 0 iD 0 0 0
+0 0 0 0
+89 0 2500000 0 0
+E
+quadro painel exército~
+Se você está lendo isso, este quadro não está funcionando.
+~
+#16022
+medalha honra mérito estrategistas~
+&ga medalha de honra ao mérito dos estrategistas&n~
+A medalha de honra ao mérito dos estrategistas foi deixada aqui.~
+~
+8 adq 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+1 150 0 0 0
+E
+medalha honra mérito estrategistas~
+Belíssima peça esta.  Deve ser bastante preciosa, já que possui estampada
+nela as palavras secretas da Ordem dos Estrategistas de Vitália.  Cravejada
+com pedras brilhantes e coruscantes, parecem exalar poder.  Guarde-a bem
+pois ela representa uma brilhante vitória.
+~
+#16023
+medalha bronze estrategistas~
+&ga medalha de bronze dos estrategistas&n~
+A medalha de bronze dos estrategistas foi deixada aqui.~
+~
+8 adq 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+1 150 0 0 0
+E
+medalha bronze estrategistas~
+Belíssima peça esta.  Deve ser bastante preciosa, já que possui estampada
+nela as palavras secretas da Ordem dos Estrategistas de Vitália.  Cravejada
+com pedras brilhantes e coruscantes, parecem exalar poder.  Guarde-a bem
+pois ela representa cinco brilhantes vitórias.
+~
+#16024
+medalha prata estrategistas~
+&ga medalha de prata dos estrategistas&n~
+A medalha de prata dos estrategistas foi deixada aqui.~
+~
+8 adq 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+1 150 0 0 0
+E
+medalha prata estrategistas~
+Belíssima peça esta.  Deve ser bastante preciosa, já que possui estampada
+nela as palavras secretas da Ordem dos Estrategistas de Vitália.  Cravejada
+com pedras brilhantes e coruscantes, parecem exalar poder.  Guarde-a bem
+pois ela representa dez brilhantes vitórias.
+~
+#16025
+medalha ouro estrategistas~
+&ga medalha de ouro dos estrategistas&n~
+A medalha de ouro dos estrategistas foi deixada aqui.~
+~
+8 adq 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+1 150 0 0 0
+E
+medalha ouro estrategistas~
+Belíssima peça esta.  Deve ser bastante preciosa, já que possui estampada
+nela as palavras secretas da Ordem dos Estrategistas de Vitália.  Cravejada
+com pedras brilhantes e coruscantes, parecem exalar poder.  Guarde-a bem
+pois ela representa cinqüenta brilhantes vitórias.
+~
+#16026
+fonte estrategistas~
+uma fonte de abastecimento~
+Uma fonte de abastecimento de água foi construída aqui.~
+~
+23 e 0 0 0 0 0 0 0 0 0 0 0
+10000 10000 0 0
+10 0 0 0 0
+$~

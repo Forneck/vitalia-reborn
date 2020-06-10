@@ -1,0 +1,462 @@
+#15000
+gwydion guarda real~
+Gwydion~
+Gwydion o Guarda Real está aqui em serviço.
+~
+Como todos os membros da Guarda, Gwydion veste uma armadura de correntes
+conforme deles como um uniforme. Ele parece muito bem treinado e se move
+como um lutador experiente.
+~
+2097218 0 0 0 0 0 0 0 800 E
+11 9 2 3d6+130 1d8+4
+400 11000
+8 8 1
+E
+#15001
+rei welmar~
+Rei Welmar~
+O sábio Rei Welmar está sentado aqui em seu trono.
+~
+Em sua avançada meia-idade, com sua barba começando a ficar grisalha,
+o Rei Welmar ainda está muito bem fisicamente, e não seria gentil se atacado.
+Apesar disso, você sabe que ele é muito louvado por toda a nação, e
+tem uma reputação tanto como sábio, como soberano.
+~
+2105346 0 0 0 272 0 0 0 1000 E
+52 0 -10 3d60+1480 4d8+16
+35000 1000000
+6 8 1
+E
+#15002
+fantasma horrivel~
+o horrível fantasma~
+Você ouve um gemido assustador e avista um horrível fantasma se aproximando.
+~
+O fantasma é quase transparente e parece muito ASSUSTADOR!
+~
+2351158 0 0 0 526352 0 0 0 -700 E
+15 6 -6 9d6+150 2d8+2
+3000 22000
+8 8 0
+E
+#15003
+jim guarda real~
+Jim~
+Jim o Guarda Real está aqui em serviço.
+~
+Como todos os membros da Guarda, Jim veste uma armadura de correntes
+exigida deles como um uniforme. Ele parece muito bem treinado e se move
+como um lutador experiente.
+~
+2097216 0 0 0 0 0 0 0 800 E
+11 9 2 3d6+130 1d8+4
+400 11000
+8 8 1
+E
+#15004
+brian guarda real~
+Brian~
+Brian o Guarda Real está aqui, treinando com o Mestre.
+~
+Como todos os membros da Guarda, Brian veste uma armadura de correntes
+exigida deles como um uniforme. Ele parece muito bem treinado e se move
+como um lutador experiente.
+~
+2097218 0 0 0 0 0 0 0 800 E
+11 9 2 3d6+130 1d8+4
+400 11000
+8 8 1
+E
+#15005
+mick guarda real~
+Mick~
+Mick o Guarda Real está aqui, treinando com o Mestre.
+~
+Como todos os membros da Guarda, Mick veste uma armadura de correntes
+exigida deles como um uniforme. Ele parece muito bem treinado e se move
+como um lutador experiente.
+~
+2097218 0 0 0 0 0 0 0 800 E
+11 9 2 3d6+130 1d8+4
+400 11000
+8 8 1
+E
+#15006
+matt guarda real~
+Matt~
+Matt o Guarda Real está aqui em serviço.
+~
+Como todos os membros da Guarda, Matt veste uma armadura de correntes
+exigida deles como um uniforme. Ele parece muito bem treinado e se move
+como um lutador experiente.
+~
+2097216 0 0 0 0 0 0 0 800 E
+11 9 2 3d6+130 1d8+4
+400 11000
+8 8 1
+E
+#15007
+jochem guarda real~
+Jochem~
+Jochem o Guarda Real está sentado, de folga.
+~
+Como todos os membros da Guarda, Jochem veste uma armadura de correntes
+exigida deles como um uniforme. Ele parece muito bem treinado e se move
+como um lutador que já viu mais de uma batalha e aguarda ansiosamente
+pela próxima!
+~
+2097216 0 0 0 0 0 0 0 900 E
+13 7 2 3d6+150 1d8+5
+400 16000
+6 6 1
+E
+#15008
+anne guarda real~
+Anne~
+Anne a Guarda Real está aqui em serviço.
+~
+Como todos os membros da Guarda, Anne veste uma armadura de correntes
+exigida deles como um uniforme. Ela parece muito bem treinada e se move
+como uma lutadora que já viu mais de uma batalha e aguarda ansiosamente
+pela próxima!
+~
+2097216 0 0 0 0 0 0 0 900 E
+13 7 2 3d6+150 1d8+5
+400 16000
+8 8 2
+E
+#15009
+andrew guarda real~
+Andrew~
+Andrew o Guarda Real está aqui em serviço.
+~
+Como todos os membros da Guarda, Andrew veste uma armadura de correntes
+exigida deles como um uniforme. Ele parece muito bem treinado e se move
+como um lutador que já viu mais de uma batalha e aguarda ansiosamente
+pela próxima!
+~
+2097216 0 0 0 0 0 0 0 900 E
+13 7 2 3d6+150 1d8+5
+400 16000
+8 8 1
+E
+#15010
+bertram bert guarda real~
+Bertram~
+Bertram o Guarda Real está aqui em serviço.
+~
+Como todos os membros da Guarda, Bertram veste uma armadura de correntes
+exigida deles como um uniforme. Ele parece muito bem treinado e carrega
+suas cicatrizes com orgulho. Este cara parece duro...
+~
+2097216 0 0 0 0 0 0 0 900 E
+15 5 1 3d6+175 1d8+7
+400 21000
+8 8 1
+E
+#15011
+jeanette guarda real~
+Jeanette~
+Jeanette a Guarda Real está aqui em serviço.
+~
+Como todos os membros da Guarda, Jeanette veste uma armadura de correntes
+exigida deles como um uniforme. Ela parece muito bem treinada e carrega
+suas cicatrizes com orgulho. Esta garota poderia desagradável se quisesse...
+~
+2097216 0 0 0 0 0 0 0 900 E
+15 5 1 3d6+175 1d8+7
+400 21000
+8 8 2
+E
+#15012
+peter capitao guarda real~
+Peter, o Capitão da Guarda Real~
+Peter, o Capitão da Guarda Real, anda por aí inspecionando.
+~
+Como todos os membros da Guarda, Peter veste uma armadura de correntes
+exigida deles como um uniforme. Mesmo que todos os outros guardas
+pareçam muito bem treinados, você se dá conta que nenhum deles teria
+alguma chance contra este homem numa luta. Ele mede, pelo menos, 2
+metros e mesmo assim se move com uma graça felina. Ele, atualmente, irradia
+força e confiança, e você luta contra uma súbita pressão para
+voltar a si ao ver ele.
+~
+2097216 0 0 0 0 0 0 0 900 E
+19 1 -1 3d6+240 2d6+8
+1000 35000
+8 8 1
+E
+#15013
+mestre treinador~
+O Mestre Treinador~
+O Mestre Treinador está aqui, supervisionando.
+~
+Velho, mas experiente, o Mestre Treinador é habilidoso no uso
+de praticamente qualquer tipo de arma inventada pelo homem.
+~
+2097218 0 0 0 0 0 0 0 950 E
+18 1 1 2d6+220 1d8+8
+1000 30000
+8 8 1
+E
+#15014
+mensageiro real~
+o Mensageiro Real~
+O Mensageiro Real se encontra aqui.
+~
+Este é um jovem de constituição poderosa, e sua função principal
+é fazer os anúncios reais.
+~
+2097152 0 0 0 0 0 0 0 800 E
+18 1 -1 3d6+220 1d8+9
+500 30000
+8 8 1
+E
+#15015
+ergan assassino~
+Ergan o Assassino~
+Atirado em um canto você enxerga Ergan, vulgo o Assassino de Townsbridge.
+~
+Você recorda da época, há uma década atrás, quando as notícias do dia
+eram como este homem havia trucidado a população inteira da pequena
+vila de Townsbridge. Ele foi preso e aqui está ele - uma sombra do
+indiscutível grande guerreiro que ele uma vez fora, mas ainda considerado
+como se o fosse.
+~
+2121908 0 0 0 589824 0 0 0 -1000 E
+13 8 2 3d6+155 2d8+2
+0 18000
+6 6 1
+E
+#15016
+mordomo james~
+James o Mordomo~
+James o Mordomo está aqui, olhando pretenciosamente.
+~
+O típico e perfeito mordomo: avançada meia-idade, um pouco careca e com
+uma respeitável barriga.
+~
+2097216 0 0 0 0 0 0 0 500 E
+8 13 3 1d6+100 1d9+2
+200 3750
+8 8 1
+E
+#15017
+mulher limpeza~
+a Mulher da Limpeza~
+Existe uma Mulher da Limpeza aqui, tentando não ser notada.
+~
+Apesar dela ter um trabalho servil, ela parece gostar dele.
+~
+2097216 0 0 0 0 0 0 0 800 E
+1 20 9 4d6+1 1d5+0
+10 100
+8 8 2
+E
+#15018
+barata~
+a barata~
+Uma larga barata está rastejando pela parede.
+~
+Muito larga mesmo, e eles dizem que baratas são difíceis de matar...
+~
+2293776 0 0 0 0 0 0 0 -250 E
+4 20 3 2d6+120 1d3+0
+5 750
+8 8 0
+E
+#15019
+astrologo~
+o Astrólogo~
+O Astrólogo está sentado aqui, estudando um livro.
+~
+Ele é velho e tem cabelos brancos, com uma longa barba. Ao ver
+ele, você pode quase acredita nos rumores sobre estrelas
+orientando o Destino e que a astrologia é capaz de ver o futuro.
+~
+2156562 0 0 0 0 0 0 0 900 E
+108 0 -2 1d1+30000 3d8+30
+2000 80000
+6 6 1
+E
+#15020
+tim guarda guarda-costas~
+Tim, o Guarda-Costas do Rei~
+Tim, o Guarda-Costas do Rei, está em pé aqui.
+~
+Este rapaz parece como seu irmão gêmeo, Tom. Parece não haver
+dúvidas que ele é completamente preparado para dar sua vida
+pelo Rei, se necessário.
+~
+2097154 0 0 0 16 0 0 0 900 E
+17 4 1 3d6+205 1d8+8
+1000 28000
+8 8 1
+E
+#15021
+tom guarda guarda-costas~
+Tom, o Guarda-Costas do Rei~
+Tom, o Guarda-Costas do Rei, está em pé aqui.
+~
+Este rapaz parece como seu irmão gêmeo, Tim. Parece não haver
+dúvidas que ele é completamente preparado para dar sua vida
+pelo Rei, se necessário.
+~
+2097154 0 0 0 16 0 0 0 900 E
+17 4 1 3d6+205 1d8+8
+1000 28000
+8 8 1
+E
+#15022
+chefe cozinheiro~
+o Cozinheiro-chefe~
+O Cozinheiro-chefe está aqui, gritando ordens para os outros cozinheiros.
+~
+Parece que ele tem provado sua própria comida com muito entusiasmo.
+Ele é, em outras palavras, um tanto gordo.
+~
+2156690 0 0 0 0 0 0 0 500 E
+108 4 -1 2d6+1283 4d4+14
+1000 40000
+8 8 1
+E
+#15023
+cozinheiro~
+o cozinheiro~
+Existe um cozinheiro aqui, ocupado com uma panela.
+~
+Um jovem cozinheiro, ansioso em fazer o que o Cozinheiro-chefe ordena.
+~
+2097282 0 0 0 0 0 0 0 300 E
+4 17 6 2d7+46 1d8+0
+50 600
+8 8 1
+E
+#15024
+david homem guarda~
+David~
+David, um grande e mal-cuidado homem, encontra-se aqui, vigiando a porta.
+~
+Ele é realmente grande e você tem a sensação de que ele não seria
+gentil com quem tentasse de passar por ele.
+~
+2097154 0 0 0 16 0 0 0 250 E
+19 2 0 2d6+235 1d7+10
+2000 35000
+8 8 1
+E
+#15025
+dick homem guarda~
+Dick~
+Dick, um grande e mal-cuidado homem, encontra-se aqui, vigiando a porta.
+~
+Ele é realmente grande e você tem a sensação de que ele não seria
+gentil com quem tentasse de passar por ele.
+~
+2097154 0 0 0 16 0 0 0 250 E
+19 2 0 2d6+235 1d7+10
+2000 35000
+8 8 1
+E
+#15026
+jerry guarda real~
+Jerry~
+Jerry o Guarda Real está aqui de folga, jogando dados.
+~
+Como todos os membros da Guarda, Jerry veste uma armadura de correntes
+exigida deles como um uniforme. Ele parece muito bem treinado e se move
+como um lutador experiente.
+~
+2097216 0 0 0 0 0 0 0 800 E
+11 9 2 3d6+130 1d8+4
+400 11000
+5 5 1
+E
+#15027
+michael guarda real~
+Michael~
+Michael o Guarda Real está aqui de folga, jogando dados.
+~
+Como todos os membros da Guarda, Michael veste uma armadura de correntes
+exigida deles como um uniforme. Ele parece muito bem treinado e se move
+como um lutador experiente.
+~
+2097216 0 0 0 0 0 0 0 800 E
+11 9 2 3d6+130 1d8+4
+400 11000
+5 5 1
+E
+#15028
+hans guarda real~
+Hans~
+Hans o Guarda Real está aqui em serviço.
+~
+Como todos os membros da Guarda, Hans veste uma armadura de correntes
+exigida deles como um uniforme. Ele parece muito bem treinado e se move
+como um lutador que já viu mais de uma batalha e aguarda ansiosamente
+pela próxima!
+~
+2097216 0 0 0 0 0 0 0 900 E
+13 7 2 3d6+150 1d8+5
+400 16000
+8 8 1
+E
+#15029
+boris guarda real~
+Boris~
+Boris o Guarda Real está aqui em serviço.
+~
+Como todos os membros da Guarda, Boris veste uma armadura de correntes
+exigida deles como um uniforme. Ele parece muito bem treinado e carrega
+suas cicatrizes com orgulho. Este cara parece duro...
+~
+2097216 0 0 0 0 0 0 0 900 E
+15 5 1 3d6+175 1d8+7
+400 21000
+8 8 1
+E
+#15030
+zumbi aldeao~
+o zumbi~
+Um zumbi está cambaleando sobre alguns corpos aqui, movendo-se muito
+silenciosamente.
+~
+É inteiramente possível que este zumbi foi, uma vez, um dos moradores
+de Townsbridge, que foi trazido para a vida novamente tomado por um
+desejo de vingança.
+~
+2269234 0 0 0 526416 0 0 0 0 E
+11 6 3 4d4+95 2d4+8
+0 10000
+8 8 0
+E
+#15031
+esqueleto aldeao~
+o esqueleto~
+Um esqueleto está se movendo com um som retumbande aqui, escalando alguns
+corpoes.
+~
+É inteiramente possível que este esqueleto foi, uma vez, um dos moradores
+de Townsbridge, que foi trazido para a vida novamente tomado por um
+desejo de vingança.
+~
+2269234 0 0 0 2128 0 0 0 0 E
+10 8 3 4d4+80 2d3+6
+0 8000
+8 8 0
+E
+#15032
+poço demonio~
+o demônio do poço~
+Um enorme demônio cercado por chamas levanta-se para fora do lago negro.
+~
+É uma coisa horripilante, esta criatura demoníaca das profundezas do
+Abismo. Ele olha enfurecido para você com olhos vermelhos de sangue, deixa
+à mostra suas enormes presas brancas e sua garras cortantes tipo navalha.
+~
+2353202 0 0 0 2384 0 0 0 -1000 E
+33 0 -10 3d60+1480 4d8+16
+35000 1000000
+6 8 1
+E
+$

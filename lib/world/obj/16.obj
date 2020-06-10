@@ -1,0 +1,201 @@
+#1600
+chave ensanguentada~
+uma chave ensanguentada~
+Uma chave ensanguentada está fincada aqui no chão.~
+~
+18 b 0 0 0 a 0 0 0 0 0 0 0
+2 0 0 0
+1 1000 0 0 0
+#1601
+chave imunda~
+uma chave imunda~
+Uma chave imunda foi deixada aqui.~
+~
+18 b 0 0 0 a 0 0 0 0 0 0 0
+2 0 0 0
+1 1050 0 0 0
+#1602
+brinquedo bumerangue~
+Um bumerangue de brinquedo~
+Um bumerangue de brinquedo pede para ser recolhido.~
+~
+5 a 0 0 0 a 0 0 0 0 0 0 0
+0 2 4 7
+5 5 0 0 0
+#1603
+cajado retorcido~
+Um cajado retorcido~
+Um cajado retorcido está aqui.~
+~
+5 a 0 0 0 an 0 0 0 0 0 0 0
+0 1 9 7
+15 600 0 0 0
+#1604
+espada gnomo~
+uma espada de gnomo~
+Uma espada de gnomo surge à sua frente.~
+~
+5 a 0 0 0 an 0 0 0 0 0 0 0
+0 3 3 3
+15 4000 0 0 0
+#1605
+escudo pregos cravejado~
+um escudo cravejado de pregos~
+Um escudo cravejado de pregos foi deixado aqui.~
+~
+9 a 0 0 0 aj 0 0 0 0 0 0 0
+4 0 0 0
+16 3000 0 0 0
+#1606
+poção sangrenta~
+uma poção sangrenta~
+Uma poção sangrenta foi deixada aqui.~
+~
+10 b 0 0 0 a 0 0 0 0 0 0 0
+15 4 8 -1
+22 1500 0 0 0
+#1607
+manto sangrento~
+um manto sangrento~
+Um manto sangrento está caído ali no canto.~
+~
+9 a 0 0 0 ac 0 0 0 0 0 0 0
+4 0 0 0
+15 2000 0 0 0
+#1608
+anel morcego~
+Um anel de morcego~
+Um anel com formato de morcego foi deixado aqui.~
+~
+9 a 0 0 0 ab 0 0 0 0 0 0 0
+3 0 0 0
+2 2500 0 0 0
+A
+14 15
+#1609
+colar contas~
+Um colar de contas~
+Um colar de contas de uma volta está aqui.~
+~
+9 a 0 0 0 ac 0 0 0 0 0 0 0
+3 0 0 0
+8 4000 0 0 0
+A
+18 2
+#1610
+espada electrum~
+uma espada electrum~
+Uma espada electrum está aqui.~
+~
+5 a 0 0 0 an 0 0 0 0 0 0 0
+0 4 3 3
+20 100000 0 0 0
+#1611
+cesta vime~
+uma cesta de vime~
+Uma cesta de vime está aqui.~
+~
+15 ab 0 0 0 a 0 0 0 0 0 0 0
+90 0 -1 0
+5 45 0 0 0
+#1612
+amendoim~
+alguns amendoins~
+Alguns amendoins foram deixados aqui.~
+~
+19 ab 0 0 0 a 0 0 0 0 0 0 0
+16 0 0 0
+9 25 0 0 0
+#1613
+grãos grão sementes semente~
+alguns grãos~
+Alguns grãos foram deixados aqui.~
+~
+19 ab 0 0 0 a 0 0 0 0 0 0 0
+15 0 0 0
+8 22 0 0 0
+#1614
+esquife barco~
+um esquife~
+Um pequeno esquife está aqui.~
+~
+22 b 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+24 1500 0 0 0
+#1615
+botas gnomos~
+um par de botas de gnomo~
+Você percebe um par de botas de Gnomo.~
+~
+9 a 0 0 0 ag 0 0 0 0 0 0 0
+4 0 0 0
+12 12000 0 0 0
+A
+14 10
+#1616
+moedas~
+uma pilha de moedas~
+Uma pilha de moedas.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+1000 0 0 0
+1 1 0 0 0
+#1617
+moedas~
+uma pilha de moedas~
+Uma pilha de moedas.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+5000 0 0 0
+1 1 0 0 0
+#1618
+moedas~
+uma pilha de moedas~
+Uma pilha de moedas.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+1000 0 0 0
+1 1 0 0 0
+#1619
+escudo pedra~
+um escudo de pedra~
+Um pesado escudo de pedra está aqui.~
+~
+9 a 0 0 0 aj 0 0 0 0 0 0 0
+4 0 0 0
+35 9000 0 0 0
+A
+1 2
+#1620
+pesada malha metálica~
+uma pesada malha metálica~
+Uma grande malha metálica pesada está aqui.~
+~
+9 a 0 0 0 ad 0 0 0 0 0 0 0
+6 0 0 0
+30 35000 0 0 0
+#1621
+grande clava~
+uma clava grande~
+Uma clava grande está aqui.~
+~
+5 a 0 0 0 an 0 0 0 0 0 0 0
+0 4 3 7
+22 20000 0 0 0
+#1622
+banana~
+uma banana~
+Tem uma banana aqui.~
+~
+19 ab 0 0 0 ao 0 0 0 0 0 0 0
+6 0 0 0
+5 9 0 0 0
+#1623
+poção cura~
+uma poção de cura~
+Uma poção de cura foi deixada aqui.~
+~
+10 b 0 0 0 a 0 0 0 0 0 0 0
+32 25 3 -1
+1 1 0 0 0
+$~

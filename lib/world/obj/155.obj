@@ -1,0 +1,95 @@
+#15500
+armadura metal~
+uma armadura de metal da OmE~
+Um pedaço de metal está aqui no chão.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+6 0 0 0
+6 7000 20 0 0
+E
+armadura metal~
+Ela está muito bem polida e limpa, tendo a aparência de ser uma boa e 
+poderosa armadura.  Ela parece que nunca foi usada.
+~
+A
+13 -5
+A
+12 7
+A
+6 1
+#15501
+espada aço~
+uma espada de aço~
+Uma simples espada de aço está aqui no chão.~
+~
+5 ahm 0 0 0 an 0 0 0 0 0 0 0
+0 3 4 3
+9 1000 10 0 0
+E
+espada aço~
+Esta simples espada de aço ainda brilha, e possui a aparência de 
+que nunca foi usada.
+~
+#15502
+escudo aço~
+um escudo de aço~
+Um escudo da OmE foi deixado aqui.~
+~
+9 0 0 0 0 aj 0 0 0 0 0 0 0
+7 0 0 0
+14 200 1 0 0
+E
+escudo aço~
+Este escudo exibe o símbolo da Ordem Militar da Espada, possuindo duas 
+espadas cruzadas apontando para baixo.
+~
+#15503
+prancheta~
+uma prancheta~
+Uma prancheta foi perdida aqui.~
+~
+12 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+4 100 1 0 0
+E
+prancheta~
+Ela possui a superfície em madeira, e tem um grampo de metal na parte 
+superior.  Certamente uma prancheta.
+~
+A
+2 -2
+A
+18 1
+#15504
+bracelete metal~
+um bracelete de metal~
+Um bracelete de metal foi perdido aqui.~
+~
+9 a 0 0 0 am 0 0 0 0 0 0 0
+4 0 0 0
+5 300 3 0 0
+E
+bracelete metal~
+Muito simples, feito de metal, e para ser usado nos pulsos.
+~
+A
+1 1
+A
+13 -8
+#15505
+estandarte~
+um estandarte cinza~
+Um pedaço de tecido cinza está aqui, jogado em um canto.~
+~
+12 b 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+5 100 5 0 0
+E
+estandarte~
+Esta tapeçaria representa a sociedade Elven, de seus anciões, desde o 
+passado até o presente.  Toda a história e magia da sociedade Elven está 
+representado neste estandarte.
+~
+A
+4 2
+$~

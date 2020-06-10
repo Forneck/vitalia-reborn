@@ -1,0 +1,7255 @@
+#16000
+A Ponte do Castelo~
+   Esta larga ponte faz a ligação entre os campos e o enorme castelo que
+está a sua frente, você avista dois enormes estandartes verdes pendurados
+nos mastros de duas torres frontais da construção.  Você pode voltar por
+onde veio ou seguir para o sul em direção ao castelo.
+~
+160 393280 0 0 0 2
+D0
+~
+~
+0 -1 16301
+D2
+~
+~
+0 -1 16001
+S
+#16001
+A Ponte do Castelo~
+   Você está a apenas alguns metros do grandioso portão de metal que protege
+o castelo das numerosas tentativas de invasão que este sofre, ao olhar para
+as paredes pode ver uma flâmula verde pendurada em cada lateral do portão.
+Ao norte você segue pela ponte e ao sul chega aos portões.
+~
+160 393280 0 0 0 2
+D0
+~
+~
+0 -1 16000
+D2
+~
+~
+0 -1 16002
+S
+#16002
+O Imponente Portão~
+   Você está em frente ao grande portão de metal do castelo do reino verde
+e, caso não seja desta equipe, a imponência de sua fortificação deixa-lhe em
+duvidas se deve ou não entrar.  Se estiver com medo volte correndo para o
+norte, se for alguém com uma alma aventureira siga para o sul.
+~
+160 393280 0 0 0 2
+D0
+~
+~
+0 -1 16001
+D2
+Os portões do castelo verde.
+~
+portão portões~
+1 16010 16003
+S
+#16003
+A Entrada do Castelo~
+   Passando o portão da entrada, você olha ao redor e percebe que toda a
+decoração é feita com detalhes verdes.  Grandes quadros pintados com a
+imagem dos grandes marechais estão nas paredes.  Para voltar para a parte
+exterior siga para o norte; ao sul, leste e oeste corredores levam ao
+interior da fortificada construção.
+~
+160 393288 0 0 0 0
+D0
+Os portões do castelo verde.
+~
+portão portões~
+1 16010 16002
+D1
+~
+~
+0 -1 16004
+D2
+~
+~
+0 -1 16039
+D3
+~
+~
+0 -1 16030
+S
+#16004
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao oeste você volta para a entrada do
+castelo e para leste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16005
+D3
+~
+~
+0 -1 16003
+S
+#16005
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16006
+D3
+~
+~
+0 -1 16004
+S
+#16006
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores e
+aqui se dividem para o sul também.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16007
+D2
+~
+~
+0 -1 16035
+D3
+~
+~
+0 -1 16005
+S
+#16007
+O Canto Nordeste do Castelo~
+   Aqui acaba o corredor que trazia para o nordeste do castelo e iniciam os
+corredores que seguem para o extremo sul-oeste, aqui também há uma escada
+que leva para alguma parte superior.  Para o oeste e o sul estão os
+corredores e para cima uma escada.
+~
+160 393288 0 0 0 0
+D2
+~
+~
+0 -1 16008
+D3
+~
+~
+0 -1 16006
+D4
+~
+~
+0 -1 16031
+S
+#16008
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores e
+aqui se dividem para o oeste também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16007
+D2
+~
+~
+0 -1 16009
+D3
+~
+~
+0 -1 16035
+S
+#16009
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16008
+D2
+~
+~
+0 -1 16010
+S
+#16010
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16009
+D2
+~
+~
+0 -1 16011
+S
+#16011
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores e
+aqui se dividem para o oeste também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16010
+D2
+~
+~
+0 -1 16012
+D3
+~
+~
+0 -1 16036
+S
+#16012
+O Canto Sudeste do Castelo~
+   Aqui acabam os corredores que traziam para o sudoeste do castelo e
+iniciam os corredores que seguem para o extremo sul-leste.  Para o oeste e o
+norte estão os corredores e ao leste algo.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16011
+D1
+Uma porta camuflada.
+~
+porta camuflada~
+1 -1 16074
+D3
+~
+~
+0 -1 16013
+S
+#16013
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores e
+aqui se dividem para o norte também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16036
+D1
+~
+~
+0 -1 16012
+D3
+~
+~
+0 -1 16014
+S
+#16014
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16013
+D3
+~
+~
+0 -1 16015
+S
+#16015
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16014
+D3
+~
+~
+0 -1 16016
+S
+#16016
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16015
+D3
+~
+~
+0 -1 16017
+S
+#16017
+Uma Intersecção dos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Para o norte segue um corredor que passa
+pelo centro do castelo, a leste e oeste continuam os corredores laterais.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16045
+D1
+~
+~
+0 -1 16016
+D3
+~
+~
+0 -1 16018
+S
+#16018
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16017
+D3
+~
+~
+0 -1 16019
+S
+#16019
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16018
+D3
+~
+~
+0 -1 16020
+S
+#16020
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores e
+aqui se dividem para o norte também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16037
+D1
+~
+~
+0 -1 16019
+D3
+~
+~
+0 -1 16021
+S
+#16021
+O Canto Sudoeste do Castelo~
+   Aqui acabam os corredores que traziam para o sudoeste do castelo e
+iniciam os corredores que seguem para o extremo norte-leste.  Para o leste e
+o norte estão os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16022
+D1
+~
+~
+0 -1 16020
+S
+#16022
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores e
+aqui se dividem para o leste também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16023
+D1
+~
+~
+0 -1 16037
+D2
+~
+~
+0 -1 16021
+S
+#16023
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16024
+D2
+~
+~
+0 -1 16022
+S
+#16024
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16025
+D2
+~
+~
+0 -1 16023
+S
+#16025
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores e
+aqui se dividem para o leste também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16026
+D1
+~
+~
+0 -1 16038
+D2
+~
+~
+0 -1 16024
+S
+#16026
+O Canto Noroeste do Castelo~
+   Aqui acaba o corredor que trazia para o noroeste do castelo e iniciam os
+corredores que seguem para o extremo sul-leste, aqui também há uma escada
+que leva para alguma parte superior.  Para o leste e o sul estão os
+corredores e para cima uma escada.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16027
+D2
+~
+~
+0 -1 16025
+D4
+~
+~
+0 -1 16033
+S
+#16027
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores e
+aqui se dividem para o sul também.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16028
+D2
+~
+~
+0 -1 16038
+D3
+~
+~
+0 -1 16026
+S
+#16028
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16029
+D3
+~
+~
+0 -1 16027
+S
+#16029
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16030
+D3
+~
+~
+0 -1 16028
+S
+#16030
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste você volta para a entrada do
+castelo e para oeste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16003
+D3
+~
+~
+0 -1 16029
+S
+#16031
+A Escadaria da Torre Leste~
+   Você sobe a grande escadaria circular de pedras que leva ao topo da torre
+leste do castelo do exército verde, em um certo ponto as escadas terminam em
+uma porta de metal.  Para cima há uma porta fechando o caminho que leva ao
+topo e para baixo você volta aos corredores.
+~
+160 393288 0 0 0 0
+D4
+Uma porta de metal.
+~
+porta~
+1 -1 16032
+D5
+~
+~
+0 -1 16007
+S
+#16032
+O Topo da Torre Leste~
+   Do alto da torre é possível olhar para todo o terreno acidentado que
+separa os castelos dos quatro exércitos inimigos, aqui parece um lugar
+seguro.  Opa!  A porta de metal que você deixou fechar quando entrou parece
+não abrir pelo lado de dentro...
+~
+160 393280 0 0 0 2
+D5
+Uma porta de metal.
+~
+porta~
+1 -1 16031
+S
+#16033
+A Escadaria da Torre Oeste~
+   Você sobe a grande escadaria circular de pedras que leva ao topo da torre
+oeste do castelo do exército verde, em um certo ponto as escadas terminam em
+uma porta de metal.  Para cima há uma porta fechando o caminho que leva ao
+topo e para baixo você volta aos corredores.
+~
+160 393288 0 0 0 0
+D4
+Uma porta de metal.
+~
+porta~
+1 -1 16034
+D5
+~
+~
+0 -1 16026
+S
+#16034
+O Topo da Torre Oeste~
+   Do alto da torre é possível olhar para todo o terreno acidentado que
+separa os castelos dos quatro exércitos inimigos, aqui parece um lugar
+seguro.  Para baixo abrindo a porta de metal está a escadaria que você usou
+para chegar até aqui.
+~
+160 393280 0 0 0 2
+D5
+Uma porta de metal.
+~
+porta~
+1 -1 16033
+S
+#16035
+Uma Junção~
+   Você está nos corredores do castelo, por todos os lados podem-se observar
+detalhes demonstrando a supremacia do exército verde.  Para o norte e para o
+leste continuam os corredores.
+~
+160 393280 0 0 0 2
+D0
+~
+~
+0 -1 16006
+D1
+~
+~
+0 -1 16008
+S
+#16036
+Uma Junção~
+   Você está nos corredores do castelo, por todos os lados podem-se observar
+detalhes demonstrando a supremacia do exército verde.  Para o sul e para o
+leste continuam os corredores, para cima está uma bela escadaria com um rico
+tapete verde, levando aos aposentos superiores.
+~
+160 393280 0 0 0 2
+D1
+~
+~
+0 -1 16011
+D2
+~
+~
+0 -1 16013
+D4
+~
+~
+0 -1 16048
+S
+#16037
+Uma Junção~
+   Você está nos corredores do castelo, por todos os lados podem-se observar
+detalhes demonstrando a supremacia do exército verde.  Para o sul e para o
+oeste continuam os corredores, para cima está uma bela escadaria com um rico
+tapete verde, levando aos aposentos superiores.
+~
+160 393280 0 0 0 2
+D2
+~
+~
+0 -1 16020
+D3
+~
+~
+0 -1 16022
+D4
+~
+~
+0 -1 16047
+S
+#16038
+Uma Junção~
+   Você está nos corredores do castelo, por todos os lados podem-se observar
+detalhes demonstrando a supremacia do exército verde.  Para o norte e para o
+oeste continuam os corredores.
+~
+160 393280 0 0 0 2
+D0
+~
+~
+0 -1 16027
+D3
+~
+~
+0 -1 16025
+S
+#16039
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte você volta para a entrada do
+castelo e para o sul continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16003
+D2
+~
+~
+0 -1 16040
+S
+#16040
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Para o norte e para o leste continuam os
+corredores do castelo.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16039
+D1
+~
+~
+0 -1 16041
+S
+#16041
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Para o oeste e para o sul continuam os
+corredores do castelo.
+~
+160 393288 0 0 0 0
+D2
+~
+~
+0 -1 16042
+D3
+~
+~
+0 -1 16040
+S
+#16042
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Para o norte e para o oeste continuam os
+corredores do castelo.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16041
+D3
+~
+~
+0 -1 16043
+S
+#16043
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Para o leste e para o oeste continuam os
+corredores do castelo.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16042
+D3
+~
+~
+0 -1 16044
+S
+#16044
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Para o leste e para o sul continuam os
+corredores do castelo.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16043
+D2
+~
+~
+0 -1 16045
+S
+#16045
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército verde,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Para o norte e para o sul continuam os
+corredores do castelo e para o leste segue uma estreita passagem.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16044
+D1
+~
+~
+0 -1 16046
+D2
+~
+~
+0 -1 16017
+S
+#16046
+Acesso as Masmorras~
+   Aqui há uma grade de metal que separa o andar principal das escadas que
+levem ao subterrâneo do castelo, onde estão as masmorras, lá são presos
+todos os que têm intenções de prejudicar o exército verde, seria uma boa
+idéia entrar lá?  Para baixo fica a entrada das masmorras e para o oeste
+seguem os corredores.
+~
+160 393289 0 0 0 0
+D3
+~
+~
+0 -1 16045
+D5
+Uma grade de metal.
+~
+grade metal~
+1 -1 16049
+S
+#16047
+No Topo da Escadaria~
+   Aqui termina a escadaria que traz para o segundo andar do castelo, atrás
+da cortina verde estão os aposentos e salas dos lideres do exército verde,
+se for pego aqui vai estar com sérios problemas por estar espionando.  Para
+norte fica a cortina que separa os dois andares e para baixo os corredores.
+~
+160 393288 0 0 0 0
+D0
+A cortina verde.
+~
+cortina verde~
+1 -1 16060
+D5
+~
+~
+0 -1 16037
+S
+#16048
+No Topo da Escadaria~
+   Aqui termina a escadaria que traz para o segundo andar do castelo, atrás
+da cortina verde estão os aposentos e salas dos lideres do exército verde,
+se for pego aqui vai estar com sérios problemas por estar espionando.  Para
+norte fica a cortina que separa os dois andares e para baixo os corredores.
+~
+160 393288 0 0 0 0
+D0
+A cortina verde.
+~
+cortina verde~
+1 -1 16065
+D5
+~
+~
+0 -1 16036
+S
+#16049
+A Entrada das Masmorras~
+   Aqui estão as temidas masmorras do exército verde, se for pego aqui por
+alguém provavelmente irá conhecê-las muito bem e por um longo tempo.  Para
+cima você volta para o andar principal e para o leste, oeste e sul seguem os
+corredores das masmorras.
+~
+160 393289 0 0 0 0
+D1
+~
+~
+0 -1 16050
+D2
+~
+~
+0 -1 16052
+D3
+~
+~
+0 -1 16056
+D4
+Uma grade de metal.
+~
+grade metal~
+1 -1 16046
+S
+#16050
+Corredores das Masmorras~
+   Você está nos não muito limpos e agradáveis corredores das masmorras do
+castelo do exército verde.  Para o sul está uma porta de ferro fechada e sem
+nenhuma abertura e para o oeste você volta para a entrada.
+~
+160 393289 0 0 0 0
+D2
+Uma porta de ferro.
+~
+porta ferro~
+1 -1 16051
+D3
+~
+~
+0 -1 16049
+S
+#16051
+A Solitária~
+   Aqui fica a temível solitária, usada para acalmar aquele prisioneiro que
+costuma arranjar encrencas.  Por azar você foi espionar onde não deve e não
+tem como sair daqui!
+~
+160 393289 0 0 0 0
+S
+#16052
+Corredores das Masmorras~
+   Você está nos não muito limpos e agradáveis corredores das masmorras do
+castelo do exército verde.  Para o leste está uma porta de ferro fechada e
+sem nenhuma abertura e para o norte você volta para a entrada.
+~
+160 393289 0 0 0 0
+D0
+~
+~
+0 -1 16049
+D1
+Uma porta de ferro.
+~
+porta ferro~
+1 -1 16051
+S
+#16053
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao norte você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D0
+Uma porta de metal.
+~
+porta metal~
+1 -1 16056
+S
+#16054
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao norte você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D0
+Uma porta de metal.
+~
+porta metal~
+1 -1 16055
+S
+#16055
+Corredores das Masmorras~
+   Você está nos não muito limpos e agradáveis corredores das masmorras do
+castelo do exército verde.  Para o sul, para o norte e para o oeste portas
+de metal fechadas e para o leste mais do corredor.
+~
+160 393289 0 0 0 0
+D0
+Uma porta de metal.
+~
+porta metal~
+1 -1 16058
+D1
+~
+~
+0 -1 16056
+D2
+Uma porta de metal.
+~
+porta metal~
+1 -1 16054
+D3
+Uma porta de metal.
+~
+porta metal~
+1 -1 16059
+S
+#16056
+Corredores das Masmorras~
+   Você está nos não muito limpos e agradáveis corredores das masmorras do
+castelo do exército verde.  Para o sul e para o norte portas de metal
+fechadas e para o leste e oeste mais do corredor.
+~
+160 393289 0 0 0 0
+D0
+Uma porta de metal.
+~
+porta metal~
+1 -1 16057
+D1
+~
+~
+0 -1 16049
+D2
+Uma porta de metal.
+~
+porta metal~
+1 -1 16053
+D3
+~
+~
+0 -1 16055
+S
+#16057
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao sul você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D2
+Uma porta de metal.
+~
+porta metal~
+1 -1 16056
+S
+#16058
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao sul você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D2
+Uma porta de metal.
+~
+porta metal~
+1 -1 16055
+S
+#16059
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao leste você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D1
+Uma porta de metal.
+~
+porta metal~
+1 -1 16055
+S
+#16060
+Entrada do Segundo Andar~
+   A escadaria trouxe para o segundo andar do castelo, passando pela cortina
+verde você chega aos aposentos e salas dos lideres do exército verde, se for
+pego aqui vai estar com sérios problemas por estar espionando.  Para o sul
+fica a cortina que separa os dois andares e para leste os corredores do
+segundo andar.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16061
+D2
+A cortina verde.
+~
+cortina verde~
+1 -1 16047
+S
+#16061
+O Corredor Verde~
+   Este corredor é ricamente decorado, em sua extensão estão estatuas dos
+grandes heróis, quadros dos marechais e generais nas paredes e um belo
+tapete verde estende-se pelo chão.  Para o oeste está a passagem que leva
+para o andar principal, para o leste o rico corredor e para o norte os
+aposentos dos lideres.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16072
+D1
+~
+~
+0 -1 16062
+D3
+~
+~
+0 -1 16060
+S
+#16062
+O Corredor Verde~
+   Este corredor é ricamente decorado, em sua extensão estão estatuas dos
+grandes heróis, quadros dos marechais e generais nas paredes e um belo
+tapete verde estende-se pelo chão.  Para o oeste e para o leste segue o rico
+corredor.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16063
+D3
+~
+~
+0 -1 16061
+S
+#16063
+O Corredor Verde~
+   Este corredor é ricamente decorado, em sua extensão estão estatuas dos
+grandes heróis, quadros dos marechais e generais nas paredes e um belo
+tapete verde estende-se pelo chão.  Para o oeste e para o leste segue o rico
+corredor.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16064
+D3
+~
+~
+0 -1 16062
+S
+#16064
+O Corredor Verde~
+   Este corredor é ricamente decorado, em sua extensão estão estatuas dos
+grandes heróis, quadros dos marechais e generais nas paredes e um belo
+tapete verde estende-se pelo chão.  Para o leste está a passagem que leva
+para o andar principal e para o oeste o rico corredor.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16065
+D3
+~
+~
+0 -1 16063
+S
+#16065
+Entrada do Segundo Andar~
+   A escadaria trouxe para o segundo andar do castelo, passando pela cortina
+verde você chega aos aposentos e salas dos lideres do exército verde, se for
+pego aqui vai estar com sérios problemas por estar espionando.  Para o sul
+fica a cortina que separa os dois andares, para oeste os corredores do
+segundo andar e ao norte os aposentos dos lideres.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16066
+D2
+A cortina verde.
+~
+cortina verde~
+1 -1 16048
+D3
+~
+~
+0 -1 16064
+S
+#16066
+Escritório dos Capitães~
+   Aqui fica o escritório dos capitães do exército verde, você pode ver
+algumas mesas com cadeiras e diversas estantes cheias de papeis.  Para o sul
+você vai para a entrada do segundo andar e para o oeste há uma placa
+indicando ser o escritório dos coronéis.
+~
+160 393288 0 0 0 0
+D2
+~
+~
+0 -1 16065
+D3
+~
+~
+0 -1 16067
+S
+#16067
+Escritório dos Coronéis~
+   Aqui fica o escritório dos coronéis do exército verde, você pode ver
+algumas mesas com cadeiras e diversas estantes cheias de papeis.  Para o
+leste fica o escritório dos capitães e para o norte há uma placa indicando
+ser o escritório do marechal.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16068
+D1
+~
+~
+0 -1 16066
+S
+#16068
+Escritório do Marechal~
+   Aqui fica o escritório do poderoso marechal, líder das forças verdes,
+você uma mesa com uma confortável poltrona e vários planos de estratégias
+pendurados nas paredes.  Para o oeste fica a biblioteca do castelo, para o
+sul você vai ao escritório dos coronéis.
+~
+160 393288 0 0 0 0
+D2
+~
+~
+0 -1 16067
+D3
+~
+~
+0 -1 16069
+S
+#16069
+Biblioteca do Castelo Verde~
+   Diversas estantes amarrotadas de livros sobre estratégia, mapas, plantas
+e planos estão organizados aqui na bela biblioteca.  Uma das estantes chama
+sua atenção por estar preenchida apenas por livros de capa verde.  Para o
+leste fica o escritório do marechal e para o oeste o escritório do general.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16068
+D2
+Uma estante de livros verdes.
+~
+estante verdes livros~
+1 -1 16073
+D3
+~
+~
+0 -1 16070
+S
+#16070
+Escritório do General~
+   Aqui fica o escritório do poderoso general, segundo no poderio da força
+verde, você uma mesa com uma confortável poltrona e vários planos com
+estratégias pendurados nas paredes.  Para o leste fica a biblioteca do
+castelo, para o sul você vai ao escritório dos majores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16069
+D2
+~
+~
+0 -1 16071
+S
+#16071
+Escritório dos Majores~
+   Aqui fica o escritório dos majores do exército verde, você pode ver
+algumas mesas com cadeiras e diversas estantes cheias de papeis.  Para o
+oeste fica o escritório dos tenentes e para o norte há uma placa indicando
+ser o escritório do general.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16070
+D3
+~
+~
+0 -1 16072
+S
+#16072
+Escritório dos Tenentes~
+   Aqui fica o escritório dos tenentes do exército verde, você pode ver
+algumas mesas com cadeiras e diversas estantes cheias de papeis.  Para o sul
+você vai para o corredor do segundo andar e para o leste há uma placa
+indicando ser o escritório dos majores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16071
+D2
+~
+~
+0 -1 16061
+S
+#16073
+A Passagem Secreta~
+   Empurrando a estante de livros da biblioteca você fica surpreso ao
+encontrar esta sala escondida.  Há um buraco no chão, e descendo a escada
+você irá parar em alguma outra parte do castelo.  Para o norte está a
+biblioteca e para baixo você desce as escadas.
+~
+160 393289 0 0 0 0
+D0
+Uma estante de livros verdes.
+~
+estante verdes livros~
+1 -1 16069
+D5
+~
+~
+0 -1 16002
+S
+#16074
+A Passagem Escondida~
+   Passando pela porta camuflada você encontra uma enorme passagem que leva
+para algum ponto a noroeste.  Para o oeste você volta para os corredores e
+para o noroeste ficam as passagens.
+~
+160 393288 0 0 0 0
+D3
+Uma porta camuflada.
+~
+porta camuflada~
+1 -1 16012
+D6
+~
+~
+0 -1 16026
+S
+#16075
+A Ponte do Castelo~
+   Esta larga ponte faz a ligação entre os campos e o enorme castelo que
+está a sua frente, você avista dois enormes estandartes vermelhos pendurados
+nos mastros de duas torres frontais da construção.  Você pode voltar por
+onde veio ou seguir para o norte em direção ao castelo.
+~
+160 393280 0 0 0 2
+D0
+~
+~
+0 -1 16076
+D2
+~
+~
+0 -1 16322
+S
+#16076
+A Ponte do Castelo~
+   Você está a apenas alguns metros do grandioso portão de metal que protege
+o castelo das numerosas tentativas de invasão que este sofre, ao olhar para
+as paredes pode ver uma flâmula vermelha pendurada em cada lateral do
+portão.  Ao sul você segue pela ponte e ao norte chega aos portões.
+~
+160 393280 0 0 0 2
+D0
+~
+~
+0 -1 16077
+D2
+~
+~
+0 -1 16075
+S
+#16077
+O Imponente Portão~
+   Você está em frente ao grande portão de metal do castelo do reino
+vermelho e, caso não seja desta equipe, a imponência de sua fortificação
+deixa-lhe em duvidas se deve ou não entrar.  Se estiver com medo volte
+correndo para o sul, se for alguém com uma alma aventureira siga para o
+norte.
+~
+160 393280 0 0 0 2
+D0
+Os portões do castelo vermelho.
+~
+portão portões~
+1 16010 16078
+D2
+~
+~
+0 -1 16076
+S
+#16078
+A Entrada do Castelo~
+   Passando o portão da entrada, você olha ao redor e percebe que toda a
+decoração é feita com detalhes vermelhos.  Grandes quadros pintados com a
+imagem dos grandes marechais estão nas paredes.  Para voltar para a parte
+exterior siga para o sul; ao norte, leste e oeste corredores levam ao
+interior da fortificada construção.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16114
+D1
+~
+~
+0 -1 16105
+D2
+Os portões do castelo vermelho.
+~
+portão portões~
+1 16010 16077
+D3
+~
+~
+0 -1 16079
+S
+#16079
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste você volta para a
+entrada do castelo e para oeste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16078
+D3
+~
+~
+0 -1 16080
+S
+#16080
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16079
+D3
+~
+~
+0 -1 16081
+S
+#16081
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores e aqui se dividem para o norte também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16110
+D1
+~
+~
+0 -1 16080
+D3
+~
+~
+0 -1 16082
+S
+#16082
+O Canto Sudoeste do Castelo~
+   Aqui acaba o corredor que trazia para o sudoeste do castelo e iniciam os
+corredores que seguem para os extremos norte-leste, aqui também há uma
+escada que leva para alguma parte superior.  Para o leste e o norte estão os
+corredores e para cima uma escada.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16083
+D1
+~
+~
+0 -1 16081
+D4
+~
+~
+0 -1 16106
+S
+#16083
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores e aqui se dividem para o leste também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16084
+D1
+~
+~
+0 -1 16110
+D2
+~
+~
+0 -1 16082
+S
+#16084
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16085
+D2
+~
+~
+0 -1 16083
+S
+#16085
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16086
+D2
+~
+~
+0 -1 16084
+S
+#16086
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores e aqui se dividem para o leste também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16087
+D1
+~
+~
+0 -1 16111
+D2
+~
+~
+0 -1 16085
+S
+#16087
+O Canto Noroeste do Castelo~
+   Aqui acabam os corredores que traziam para o noroeste do castelo e
+iniciam os corredores que seguem para os extremos sul-leste.  Para o leste e
+o sul estão os corredores e ao oeste algo.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16088
+D2
+~
+~
+0 -1 16086
+D3
+Uma porta camuflada.
+~
+porta camuflada~
+1 -1 16149
+S
+#16088
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores e aqui se dividem para o sul também.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16089
+D2
+~
+~
+0 -1 16111
+D3
+~
+~
+0 -1 16087
+S
+#16089
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16090
+D3
+~
+~
+0 -1 16088
+S
+#16090
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16091
+D3
+~
+~
+0 -1 16089
+S
+#16091
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16092
+D3
+~
+~
+0 -1 16090
+S
+#16092
+Uma Intersecção dos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Para o sul segue um corredor que
+passa pelo centro do castelo, a leste e oeste continuam os corredores
+laterais.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16093
+D2
+~
+~
+0 -1 16120
+D3
+~
+~
+0 -1 16091
+S
+#16093
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16094
+D3
+~
+~
+0 -1 16092
+S
+#16094
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16095
+D3
+~
+~
+0 -1 16093
+S
+#16095
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores e aqui se dividem para o sul também.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16096
+D2
+~
+~
+0 -1 16112
+D3
+~
+~
+0 -1 16094
+S
+#16096
+O Canto Nordeste do Castelo~
+   Aqui acabam os corredores que traziam para o nordeste do castelo e
+iniciam os corredores que seguem para os extremos sul-oeste.  Para o oeste e
+o sul estão os corredores.
+~
+160 393288 0 0 0 0
+D2
+~
+~
+0 -1 16097
+D3
+~
+~
+0 -1 16095
+S
+#16097
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores e aqui se dividem para o oeste também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16096
+D2
+~
+~
+0 -1 16098
+D3
+~
+~
+0 -1 16112
+S
+#16098
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16097
+D2
+~
+~
+0 -1 16099
+S
+#16099
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16098
+D2
+~
+~
+0 -1 16100
+S
+#16100
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores e aqui se dividem para o oeste também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16099
+D2
+~
+~
+0 -1 16101
+D3
+~
+~
+0 -1 16113
+S
+#16101
+O Canto Sudeste do Castelo~
+   Aqui acaba o corredor que trazia para o sudeste do castelo e iniciam os
+corredores que seguem para os extremos norte-oeste, aqui também há uma
+escada que leva para alguma parte superior.  Para o oeste e o norte estão os
+corredores e para cima uma escada.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16100
+D3
+~
+~
+0 -1 16102
+D4
+~
+~
+0 -1 16108
+S
+#16102
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores e aqui se dividem para o norte também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16113
+D1
+~
+~
+0 -1 16101
+D3
+~
+~
+0 -1 16103
+S
+#16103
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16102
+D3
+~
+~
+0 -1 16104
+S
+#16104
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16103
+D3
+~
+~
+0 -1 16105
+S
+#16105
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao oeste você volta para a
+entrada do castelo e para leste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16104
+D3
+~
+~
+0 -1 16078
+S
+#16106
+A Escadaria da Torre Oeste~
+   Você sobe a grande escadaria circular de pedras que leva ao topo da torre
+oeste do castelo do exército vermelho, em um certo ponto as escadas terminam
+em uma porta de metal.  Para cima há uma porta fechando o caminho que leva
+ao topo e para baixo você volta aos corredores.
+~
+160 393288 0 0 0 0
+D4
+Uma porta de metal.
+~
+porta~
+1 -1 16107
+D5
+~
+~
+0 -1 16082
+S
+#16107
+O Topo da Torre Oeste~
+   Do alto da torre é possível olhar para todo o terreno acidentado que
+separa os castelos dos quatro exércitos inimigos, aqui parece um lugar
+seguro.  Opa!  A porta de metal que você deixou fechar quando entrou parece
+não abrir pelo lado de dentro...
+~
+160 393280 0 0 0 2
+D5
+Uma porta de metal.
+~
+porta~
+1 -1 16106
+S
+#16108
+A Escadaria da Torre Leste~
+   Você sobe a grande escadaria circular de pedras que leva ao topo da torre
+leste do castelo do exército vermelho, em um certo ponto as escadas terminam
+em uma porta de metal.  Para cima há uma porta fechando o caminho que leva
+ao topo e para baixo você volta aos corredores.
+~
+160 393288 0 0 0 0
+D4
+Uma porta de metal.
+~
+porta~
+1 -1 16109
+D5
+~
+~
+0 -1 16101
+S
+#16109
+O Topo da Torre Leste~
+   Do alto da torre é possível olhar para todo o terreno acidentado que
+separa os castelos dos quatro exércitos inimigos, aqui parece um lugar
+seguro.  Para baixo abrindo a porta de metal está a escadaria que você usou
+para chegar até aqui.
+~
+160 393280 0 0 0 2
+D5
+Uma porta de metal.
+~
+porta~
+1 -1 16108
+S
+#16110
+Uma Junção~
+   Você está nos corredores do castelo, por todos os lados podem-se observar
+detalhes demonstrando a supremacia do exército vermelho.  Para o sul e para
+o oeste continuam os corredores.
+~
+160 393280 0 0 0 2
+D2
+~
+~
+0 -1 16081
+D3
+~
+~
+0 -1 16083
+S
+#16111
+Uma Junção~
+   Você está nos corredores do castelo, por todos os lados podem-se observar
+detalhes demonstrando a supremacia do exército vermelho.  Para o norte e
+para o oeste continuam os corredores, para cima está uma bela escadaria com
+um rico tapete vermelho, levando aos aposentos superiores.
+~
+160 393280 0 0 0 2
+D0
+~
+~
+0 -1 16088
+D3
+~
+~
+0 -1 16086
+D4
+~
+~
+0 -1 16123
+S
+#16112
+Uma Junção~
+   Você está nos corredores do castelo, por todos os lados podem-se observar
+detalhes demonstrando a supremacia do exército vermelho.  Para o norte e
+para o leste continuam os corredores, para cima está uma bela escadaria com
+um rico tapete vermelho, levando aos aposentos superiores.
+~
+160 393280 0 0 0 2
+D0
+~
+~
+0 -1 16095
+D1
+~
+~
+0 -1 16097
+D4
+~
+~
+0 -1 16122
+S
+#16113
+Uma Junção~
+   Você está nos corredores do castelo, por todos os lados podem-se observar
+detalhes demonstrando a supremacia do exército vermelho.  Para o sul e para
+o leste continuam os corredores.
+~
+160 393280 0 0 0 2
+D1
+~
+~
+0 -1 16100
+D2
+~
+~
+0 -1 16102
+S
+#16114
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao sul você volta para a entrada
+do castelo e para o norte continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16115
+D2
+~
+~
+0 -1 16078
+S
+#16115
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Para o sul e para o oeste
+continuam os corredores do castelo.
+~
+160 393288 0 0 0 0
+D2
+~
+~
+0 -1 16114
+D3
+~
+~
+0 -1 16116
+S
+#16116
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Para o leste e para o norte
+continuam os corredores do castelo.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16117
+D1
+~
+~
+0 -1 16115
+S
+#16117
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Para o sul e para o leste
+continuam os corredores do castelo.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16118
+D2
+~
+~
+0 -1 16116
+S
+#16118
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Para o leste e para o oeste
+continuam os corredores do castelo.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16119
+D3
+~
+~
+0 -1 16117
+S
+#16119
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Para o oeste e para o norte
+continuam os corredores do castelo.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16120
+D3
+~
+~
+0 -1 16118
+S
+#16120
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército
+vermelho, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Para o norte e para o sul
+continuam os corredores do castelo e para o oeste segue uma estreita
+passagem.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16092
+D2
+~
+~
+0 -1 16119
+D3
+~
+~
+0 -1 16121
+S
+#16121
+Acesso as Masmorras~
+   Aqui há uma grade de metal que separa o andar principal das escadas que
+levem ao subterrâneo do castelo, onde estão as masmorras, lá são presos
+todos os que têm intenções de prejudicar o exército vermelho, seria uma boa
+idéia entrar lá?  Para baixo fica a entrada das masmorras e para o leste
+seguem os corredores.
+~
+160 393289 0 0 0 0
+D1
+~
+~
+0 -1 16120
+D5
+Uma grade de metal.
+~
+grade metal~
+1 -1 16124
+S
+#16122
+No Topo da Escadaria~
+   Aqui termina a escadaria que traz para o segundo andar do castelo, atrás
+da cortina vermelha estão os aposentos e salas dos lideres do exército
+vermelho, se for pego aqui vai estar com sérios problemas por estar
+espionando.  Para norte fica a cortina que separa os dois andares e para
+baixo os corredores.
+~
+160 393288 0 0 0 0
+D0
+A cortina vermelha.
+~
+cortina vermelha~
+1 -1 16135
+D5
+~
+~
+0 -1 16112
+S
+#16123
+No Topo da Escadaria~
+   Aqui termina a escadaria que traz para o segundo andar do castelo, atrás
+da cortina vermelha estão os aposentos e salas dos lideres do exército
+vermelho, se for pego aqui vai estar com sérios problemas por estar
+espionando.  Para norte fica a cortina que separa os dois andares e para
+baixo os corredores.
+~
+160 393288 0 0 0 0
+D0
+A cortina vermelha.
+~
+cortina vermelha~
+1 -1 16140
+D5
+~
+~
+0 -1 16111
+S
+#16124
+A Entrada das Masmorras~
+   Aqui estão as temidas masmorras do exército vermelho, se for pego aqui
+por alguém provavelmente irá conhece-las muito bem e por um longo tempo.
+Para cima você volta para o andar principal e para o leste, oeste e norte
+seguem os corredores das masmorras.
+~
+160 393289 0 0 0 0
+D0
+~
+~
+0 -1 16127
+D1
+~
+~
+0 -1 16131
+D3
+~
+~
+0 -1 16125
+D4
+Uma grade de metal.
+~
+grade metal~
+1 -1 16121
+S
+#16125
+Corredores das Masmorras~
+   Você está nos não muito limpos e agradáveis corredores das masmorras do
+castelo do exército vermelho.  Para o norte está uma porta de ferro fechada
+e sem nenhuma abertura e para o leste você volta para a entrada.
+~
+160 393289 0 0 0 0
+D0
+Uma porta de ferro.
+~
+porta ferro~
+1 -1 16126
+D1
+~
+~
+0 -1 16124
+S
+#16126
+A Solitária~
+   Aqui fica a temível solitária, usada para acalmar aquele prisioneiro que
+costuma arranjar encrencas.  Por azar você foi espionar onde não deve e não
+tem como sair daqui!
+~
+160 393289 0 0 0 0
+S
+#16127
+Corredores das Masmorras~
+   Você está nos não muito limpos e agradáveis corredores das masmorras do
+castelo do exército vermelho.  Para o oeste está uma porta de ferro fechada
+e sem nenhuma abertura e para o sul você volta para a entrada.
+~
+160 393289 0 0 0 0
+D2
+~
+~
+0 -1 16124
+D3
+Uma porta de ferro.
+~
+porta ferro~
+1 -1 16126
+S
+#16128
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao sul você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D2
+Uma porta de metal.
+~
+porta metal~
+1 -1 16131
+S
+#16129
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao sul você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D2
+Uma porta de metal.
+~
+porta metal~
+1 -1 16130
+S
+#16130
+Corredores das Masmorras~
+   Você está nos não muito limpos e agradáveis corredores das masmorras do
+castelo do exército vermelho.  Para o sul, para o norte e para o leste
+portas de metal fechadas e para o oeste mais do corredor.
+~
+160 393289 0 0 0 0
+D0
+Uma porta de metal.
+~
+porta metal~
+1 -1 16129
+D1
+Uma porta de metal.
+~
+porta metal~
+1 -1 16134
+D2
+Uma porta de metal.
+~
+porta metal~
+1 -1 16133
+D3
+~
+~
+0 -1 16131
+S
+#16131
+Corredores das Masmorras~
+   Você está nos não muito limpos e agradáveis corredores das masmorras do
+castelo do exército vermelho.  Para o sul e para o norte portas de metal
+fechadas e para o leste e oeste mais do corredor.
+~
+160 393289 0 0 0 0
+D0
+Uma porta de metal.
+~
+porta metal~
+1 -1 16128
+D1
+~
+~
+0 -1 16130
+D2
+Uma porta de metal.
+~
+porta metal~
+1 -1 16132
+D3
+~
+~
+0 -1 16124
+S
+#16132
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao sul você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D0
+Uma porta de metal.
+~
+porta metal~
+1 -1 16131
+S
+#16133
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao sul você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D0
+Uma porta de metal.
+~
+porta metal~
+1 -1 16130
+S
+#16134
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao oeste você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D3
+Uma porta de metal.
+~
+porta metal~
+1 -1 16130
+S
+#16135
+Entrada do Segundo Andar~
+   A escadaria trouxe para o segundo andar do castelo, passando pela cortina
+vermelha você chega aos aposentos e salas dos lideres do exército vermelho,
+se for pego aqui vai estar com sérios problemas por estar espionando.  Para
+o sul fica a cortina que separa os dois andares e para oeste os corredores
+do segundo andar.
+~
+160 393288 0 0 0 0
+D2
+A cortina vermelha.
+~
+cortina vermelha~
+1 -1 16122
+D3
+~
+~
+0 -1 16136
+S
+#16136
+O Corredor Vermelho~
+   Este corredor é ricamente decorado, em sua extensão estão estatuas dos
+grandes heróis, quadros dos marechais e generais nas paredes e um belo
+tapete vermelho estende-se pelo chão.  Para o leste está a passagem que leva
+para o andar principal, para o oeste o rico corredor e para o norte os
+aposentos dos lideres.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16147
+D1
+~
+~
+0 -1 16135
+D3
+~
+~
+0 -1 16137
+S
+#16137
+O Corredor Vermelho~
+   Este corredor é ricamente decorado, em sua extensão estão estatuas dos
+grandes heróis, quadros dos marechais e generais nas paredes e um belo
+tapete vermelho estende-se pelo chão.  Para o oeste e para o leste segue o
+rico corredor.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16136
+D3
+~
+~
+0 -1 16138
+S
+#16138
+O Corredor Vermelho~
+   Este corredor é ricamente decorado, em sua extensão estão estatuas dos
+grandes heróis, quadros dos marechais e generais nas paredes e um belo
+tapete vermelho estende-se pelo chão.  Para o oeste e para o leste segue o
+rico corredor.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16137
+D3
+~
+~
+0 -1 16139
+S
+#16139
+O Corredor Vermelho~
+   Este corredor é ricamente decorado, em sua extensão estão estatuas dos
+grandes heróis, quadros dos marechais e generais nas paredes e um belo
+tapete vermelho estende-se pelo chão.  Para o oeste está a passagem que leva
+para o andar principal e para o leste o rico corredor.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16138
+D3
+~
+~
+0 -1 16140
+S
+#16140
+Entrada do Segundo Andar~
+   A escadaria trouxe para o segundo andar do castelo, passando pela cortina
+vermelha você chega aos aposentos e salas dos lideres do exército vermelho,
+se for pego aqui vai estar com sérios problemas por estar espionando.  Para
+o sul fica a cortina que separa os dois andares, para leste os corredores do
+segundo andar e ao norte os aposentos dos lideres.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16141
+D1
+~
+~
+0 -1 16139
+D2
+A cortina vermelha.
+~
+cortina vermelha~
+1 -1 16123
+S
+#16141
+Escritório dos Capitães~
+   Aqui fica o escritório dos capitães do exército vermelho, você pode ver
+algumas mesas com cadeiras e diversas estantes cheias de papeis.  Para o sul
+você vai para a entrada do segundo andar e para o leste há uma placa
+indicando ser o escritório dos coronéis.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16142
+D2
+~
+~
+0 -1 16140
+S
+#16142
+Escritório dos Coronéis~
+   Aqui fica o escritório dos coronéis do exército vermelho, você pode ver
+algumas mesas com cadeiras e diversas estantes cheias de papeis.  Para o
+oeste fica o escritório dos capitães e para o norte há uma placa indicando
+ser o escritório do marechal.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16143
+D3
+~
+~
+0 -1 16141
+S
+#16143
+Escritório do Marechal~
+   Aqui fica o escritório do poderoso marechal, líder das forças vermelhas,
+você uma mesa com uma confortável poltrona e vários planos de estratégias
+pendurados nas paredes.  Para o leste fica a biblioteca do castelo, para o
+sul você vai ao escritório dos coronéis.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16144
+D2
+~
+~
+0 -1 16142
+S
+#16144
+Biblioteca do Castelo Vermelho~
+   Diversas estantes amarrotadas de livros sobre estratégia, mapas, plantas
+e planos estão organizados aqui na bela biblioteca.  Uma das estantes chama
+sua atenção por estar preenchida apenas por livros de capa vermelha.  Para o
+oeste fica o escritório do marechal e para o leste o escritório do general.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16145
+D2
+Uma estante de livros vermelhos.
+~
+estante vermelhos livros~
+1 -1 16148
+D3
+~
+~
+0 -1 16143
+S
+#16145
+Escritório do General~
+   Aqui fica o escritório do poderoso general, segundo no poderio da força
+vermelha, você uma mesa com uma confortável poltrona e vários planos com
+estratégias pendurados nas paredes.  Para o oeste fica a biblioteca do
+castelo, para o sul você vai ao escritório dos majores.
+~
+160 393288 0 0 0 0
+D2
+~
+~
+0 -1 16146
+D3
+~
+~
+0 -1 16144
+S
+#16146
+Escritório dos Majores~
+   Aqui fica o escritório dos majores do exército vermelho, você pode ver
+algumas mesas com cadeiras e diversas estantes cheias de papeis.  Para o
+leste fica o escritório dos tenentes e para o norte há uma placa indicando
+ser o escritório do general.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16145
+D1
+~
+~
+0 -1 16147
+S
+#16147
+Escritório dos Tenentes~
+   Aqui fica o escritório dos tenentes do exército vermelho, você pode ver
+algumas mesas com cadeiras e diversas estantes cheias de papeis.  Para o sul
+você vai para o corredor do segundo andar e para o oeste há uma placa
+indicando ser o escritório dos majores.
+~
+160 393288 0 0 0 0
+D2
+~
+~
+0 -1 16136
+D3
+~
+~
+0 -1 16146
+S
+#16148
+A Passagem Secreta~
+   Empurrando a estante de livros da biblioteca você fica surpreso ao
+encontrar esta sala escondida.  Há um buraco no chão, e descendo a escada
+você irá parar em alguma outra parte do castelo.  Para o norte está a
+biblioteca e para baixo você desce as escadas.
+~
+160 393289 0 0 0 0
+D0
+Uma estante de livros vermelhos.
+~
+estante vermelhos livros~
+1 -1 16144
+D5
+~
+~
+0 -1 16177
+S
+#16149
+A Passagem Escondida~
+   Passando pela porta camuflada você encontra uma enorme passagem que leva
+para algum ponto a sudeste.  Para o leste você volta para os corredores e
+para o sudeste fica a passagem.
+~
+160 393288 0 0 0 0
+D1
+Uma porta camuflada.
+~
+porta camuflada~
+1 -1 16187
+D8
+~
+~
+0 -1 16101
+S
+#16150
+A Ponte do Castelo~
+   Esta larga ponte faz a ligação entre os campos e o enorme castelo que
+está a sua frente, você avista dois enormes estandartes amarelos pendurados
+nos mastros de duas torres frontais da construção.  Você pode voltar por
+onde veio ou seguir para o leste em direção ao castelo.
+~
+160 393280 0 0 0 2
+D1
+~
+~
+0 -1 16151
+D3
+~
+~
+0 -1 16312
+S
+#16151
+A Ponte do Castelo~
+   Você está a apenas alguns metros do grandioso portão de metal que protege
+o castelo das numerosas tentativas de invasão que este sofre, ao olhar para
+as paredes pode ver uma flâmula amarela pendurada em cada lateral do portão.
+Ao oeste você segue pela ponte e ao leste chega aos portões.
+~
+160 393280 0 0 0 2
+D1
+~
+~
+0 -1 16152
+D3
+~
+~
+0 -1 16150
+S
+#16152
+O Imponente Portão~
+   Você está em frente ao grande portão de metal do castelo do reino amarelo
+e, caso não seja desta equipe, a imponência de sua fortificação deixa-lhe em
+duvidas se deve ou não entrar.  Se estiver com medo volte correndo para o
+oeste, se for alguém com uma alma aventureira siga para o leste.
+~
+160 393280 0 0 0 2
+D1
+Os portões do castelo amarelo.
+~
+portão portões~
+1 16010 16153
+D3
+~
+~
+0 -1 16151
+S
+#16153
+A Entrada do Castelo~
+   Passando o portão da entrada, você olha ao redor e percebe que toda a
+decoração é feita com detalhes amarelos.  Grandes quadros pintados com a
+imagem dos grandes marechais estão nas paredes.  Para voltar para a parte
+exterior siga para o oeste; ao norte, leste e sul corredores levam ao
+interior da fortificada construção.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16154
+D1
+~
+~
+0 -1 16189
+D2
+~
+~
+0 -1 16180
+D3
+Os portões do castelo amarelo.
+~
+portão portões~
+1 16010 16152
+S
+#16154
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao sul você volta para a entrada
+do castelo e para norte continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16155
+D2
+~
+~
+0 -1 16153
+S
+#16155
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16156
+D2
+~
+~
+0 -1 16154
+S
+#16156
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores e aqui se dividem para o leste também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16157
+D1
+~
+~
+0 -1 16185
+D2
+~
+~
+0 -1 16155
+S
+#16157
+O Canto Noroeste do Castelo~
+   Aqui acaba o corredor que trazia para o noroeste do castelo e iniciam os
+corredores que seguem para os extremos sul-leste, aqui também há uma escada
+que leva para alguma parte superior.  Para o leste e o sul estão os
+corredores e para cima uma escada.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16158
+D2
+~
+~
+0 -1 16156
+D4
+~
+~
+0 -1 16181
+S
+#16158
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores e aqui se dividem para o sul também.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16159
+D2
+~
+~
+0 -1 16185
+D3
+~
+~
+0 -1 16157
+S
+#16159
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16160
+D3
+~
+~
+0 -1 16158
+S
+#16160
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16161
+D3
+~
+~
+0 -1 16159
+S
+#16161
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores e aqui se dividem para o sul também.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16162
+D2
+~
+~
+0 -1 16186
+D3
+~
+~
+0 -1 16160
+S
+#16162
+O Canto Nordeste do Castelo~
+   Aqui acabam os corredores que traziam para o nordeste do castelo e
+iniciam os corredores que seguem para os extremos sul-oeste.  Para o oeste e
+o sul estão os corredores e ao norte algo.
+~
+160 393288 0 0 0 0
+D0
+Uma porta camuflada.
+~
+porta camuflada~
+1 -1 16224
+D2
+~
+~
+0 -1 16163
+D3
+~
+~
+0 -1 16161
+S
+#16163
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores e aqui se dividem para o oeste também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16162
+D2
+~
+~
+0 -1 16164
+D3
+~
+~
+0 -1 16186
+S
+#16164
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16163
+D2
+~
+~
+0 -1 16165
+S
+#16165
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16164
+D2
+~
+~
+0 -1 16166
+S
+#16166
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16165
+D2
+~
+~
+0 -1 16167
+S
+#16167
+Uma Intersecção dos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Para o oeste segue um corredor
+que passa pelo centro do castelo, a norte e sul continuam os corredores
+laterais.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16166
+D2
+~
+~
+0 -1 16168
+D3
+~
+~
+0 -1 16195
+S
+#16168
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16167
+D2
+~
+~
+0 -1 16169
+S
+#16169
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16168
+D2
+~
+~
+0 -1 16170
+S
+#16170
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores e aqui se dividem para o oeste também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16169
+D2
+~
+~
+0 -1 16171
+D3
+~
+~
+0 -1 16187
+S
+#16171
+O Canto Sudeste do Castelo~
+   Aqui acabam os corredores que traziam para o sudeste do castelo e iniciam
+os corredores que seguem para os extremos norte-oeste.  Para o norte e o
+oeste estão os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16170
+D3
+~
+~
+0 -1 16172
+S
+#16172
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores e aqui se dividem para o norte também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16187
+D1
+~
+~
+0 -1 16171
+D3
+~
+~
+0 -1 16173
+S
+#16173
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16172
+D3
+~
+~
+0 -1 16174
+S
+#16174
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16173
+D3
+~
+~
+0 -1 16175
+S
+#16175
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao leste e oeste continuam os
+corredores e aqui se dividem para o norte também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16188
+D1
+~
+~
+0 -1 16174
+D3
+~
+~
+0 -1 16176
+S
+#16176
+O Canto Sudoeste do Castelo~
+   Aqui acaba o corredor que trazia para o sudoeste do castelo e iniciam os
+corredores que seguem para os extremos norte-leste, aqui também há uma
+escada que leva para alguma parte superior.  Para o leste e o norte estão os
+corredores e para cima uma escada.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16177
+D1
+~
+~
+0 -1 16175
+D4
+~
+~
+0 -1 16183
+S
+#16177
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores e aqui se dividem para o leste também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16178
+D1
+~
+~
+0 -1 16188
+D2
+~
+~
+0 -1 16176
+S
+#16178
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16179
+D1
+~
+~
+0 -1 16177
+S
+#16179
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte e sul continuam os
+corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16180
+D2
+~
+~
+0 -1 16178
+S
+#16180
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao norte você volta para a
+entrada do castelo e para sul continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16153
+D2
+~
+~
+0 -1 16179
+S
+#16181
+A Escadaria da Torre Norte~
+   Você sobe a grande escadaria circular de pedras que leva ao topo da torre
+norte do castelo do exército amarelo, em um certo ponto as escadas terminam
+em uma porta de metal.  Para cima há uma porta fechando o caminho que leva
+ao topo e para baixo você volta aos corredores.
+~
+160 393288 0 0 0 0
+D4
+Uma porta de metal.
+~
+porta~
+1 -1 16182
+D5
+~
+~
+0 -1 16157
+S
+#16182
+O Topo da Torre Norte~
+   Do alto da torre é possível olhar para todo o terreno acidentado que
+separa os castelos dos quatro exércitos inimigos, aqui parece um lugar
+seguro.  Opa!  A porta de metal que você deixou fechar quando entrou parece
+não abrir pelo lado de dentro...
+~
+160 393280 0 0 0 2
+D5
+Uma porta de metal.
+~
+porta~
+1 -1 16181
+S
+#16183
+A Escadaria da Torre Sul~
+   Você sobe a grande escadaria circular de pedras que leva ao topo da torre
+leste do castelo do exército amarelo, em um certo ponto as escadas terminam
+em uma porta de metal.  Para cima há uma porta fechando o caminho que leva
+ao topo e para baixo você volta aos corredores.
+~
+160 393288 0 0 0 0
+D4
+Uma porta de metal.
+~
+porta~
+1 -1 16184
+D5
+~
+~
+0 -1 16176
+S
+#16184
+O Topo da Torre Sul~
+   Do alto da torre é possível olhar para todo o terreno acidentado que
+separa os castelos dos quatro exércitos inimigos, aqui parece um lugar
+seguro.  Para baixo abrindo a porta de metal está a escadaria que você usou
+para chegar até aqui.
+~
+160 393280 0 0 0 2
+D5
+Uma porta de metal.
+~
+porta~
+1 -1 16183
+S
+#16185
+Uma Junção~
+   Você está nos corredores do castelo, por todos os lados podem-se observar
+detalhes demonstrando a supremacia do exército amarelo.  Para o norte e para
+o oeste continuam os corredores.
+~
+160 393280 0 0 0 2
+D0
+~
+~
+0 -1 16158
+D3
+~
+~
+0 -1 16156
+S
+#16186
+Uma Junção~
+   Você está nos corredores do castelo, por todos os lados podem-se observar
+detalhes demonstrando a supremacia do exército amarelo.  Para o norte e para
+o leste continuam os corredores, para cima está uma bela escadaria com um
+rico tapete amarelo, levando aos aposentos superiores.
+~
+160 393280 0 0 0 2
+D0
+~
+~
+0 -1 16161
+D1
+~
+~
+0 -1 16163
+D4
+~
+~
+0 -1 16198
+S
+#16187
+Uma Junção~
+   Você está nos corredores do castelo, por todos os lados podem-se observar
+detalhes demonstrando a supremacia do exército amarelo.  Para o sul e para o
+leste continuam os corredores, para cima está uma bela escadaria com um rico
+tapete amarelo, levando aos aposentos superiores.
+~
+160 393280 0 0 0 2
+D1
+~
+~
+0 -1 16170
+D2
+~
+~
+0 -1 16172
+D4
+~
+~
+0 -1 16197
+S
+#16188
+Uma Junção~
+   Você está nos corredores do castelo, por todos os lados podem-se observar
+detalhes demonstrando a supremacia do exército amarelo.  Para o sul e para o
+oeste continuam os corredores.
+~
+160 393280 0 0 0 2
+D2
+~
+~
+0 -1 16175
+D3
+~
+~
+0 -1 16177
+S
+#16189
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Ao oeste você volta para a
+entrada do castelo e para o leste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16190
+D3
+~
+~
+0 -1 16153
+S
+#16190
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Para o norte e para o oeste
+continuam os corredores do castelo.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16191
+D3
+~
+~
+0 -1 16189
+S
+#16191
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Para o leste e para o sul
+continuam os corredores do castelo.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16192
+D2
+~
+~
+0 -1 16190
+S
+#16192
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Para o sul e para o oeste
+continuam os corredores do castelo.
+~
+160 393288 0 0 0 0
+D2
+~
+~
+0 -1 16193
+D3
+~
+~
+0 -1 16191
+S
+#16193
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Para o norte e para o sul
+continuam os corredores do castelo.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16192
+D2
+~
+~
+0 -1 16194
+S
+#16194
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Para o leste e para o norte
+continuam os corredores do castelo.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16193
+D1
+~
+~
+0 -1 16195
+S
+#16195
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército
+amarelo, estes caminhos parecem não acabar e você reza aos deuses para não
+se perder e conseguir cumprir sua missão.  Para o leste e para o oeste
+continuam os corredores do castelo e para o norte segue uma estreita
+passagem.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16196
+D1
+~
+~
+0 -1 16167
+D3
+~
+~
+0 -1 16194
+S
+#16196
+Acesso as Masmorras~
+   Aqui há uma grade de metal que separa o andar principal das escadas que
+levem ao subterrâneo do castelo, onde estão as masmorras, lá são presos
+todos os que têm intenções de prejudicar o exército amarelo, seria uma boa
+idéia entrar lá?  Para baixo fica a entrada das masmorras e para o sul
+seguem os corredores.
+~
+160 393289 0 0 0 0
+D2
+~
+~
+0 -1 16195
+D5
+Uma grade de metal.
+~
+grade metal~
+1 -1 16199
+S
+#16197
+No Topo da Escadaria~
+   Aqui termina a escadaria que traz para o segundo andar do castelo, atrás
+da cortina amarela estão os aposentos e salas dos lideres do exército
+amarelo, se for pego aqui vai estar com sérios problemas por estar
+espionando.  Para leste fica a cortina que separa os dois andares e para
+baixo os corredores.
+~
+160 393288 0 0 0 0
+D1
+A cortina amarela.
+~
+cortina amarela~
+1 -1 16210
+D5
+~
+~
+0 -1 16187
+S
+#16198
+No Topo da Escadaria~
+   Aqui termina a escadaria que traz para o segundo andar do castelo, atrás
+da cortina amarela estão os aposentos e salas dos lideres do exército
+amarelo, se for pego aqui vai estar com sérios problemas por estar
+espionando.  Para leste fica a cortina que separa os dois andares e para
+baixo os corredores.
+~
+160 393288 0 0 0 0
+D1
+A cortina amarela.
+~
+cortina amarela~
+1 -1 16215
+D5
+~
+~
+0 -1 16186
+S
+#16199
+A Entrada das Masmorras~
+   Aqui estão as temidas masmorras do exército amarelo, se for pego aqui por
+alguém provavelmente irá conhece-las muito bem e por um longo tempo.  Para
+cima você volta para o andar principal e para o leste, norte e sul seguem os
+corredores das masmorras.
+~
+160 393289 0 0 0 0
+D0
+~
+~
+0 -1 16200
+D1
+~
+~
+0 -1 16202
+D2
+~
+~
+0 -1 16206
+D4
+Uma grade de metal.
+~
+grade metal~
+1 -1 16196
+S
+#16200
+Corredores das Masmorras~
+   Você está nos não muito limpos e agradáveis corredores das masmorras do
+castelo do exército amarelo.  Para o leste está uma porta de ferro fechada e
+sem nenhuma abertura e para o sul você volta para a entrada.
+~
+160 393289 0 0 0 0
+D1
+Uma porta de ferro.
+~
+porta ferro~
+1 -1 16201
+D2
+~
+~
+0 -1 16199
+S
+#16201
+A Solitária~
+   Aqui fica a temível solitária, usada para acalmar aquele prisioneiro que
+costuma arranjar encrencas.  Por azar você foi espionar onde não deve e não
+tem como sair daqui!
+~
+160 393289 0 0 0 0
+S
+#16202
+Corredores das Masmorras~
+   Você está nos não muito limpos e agradáveis corredores das masmorras do
+castelo do exército amarelo.  Para o norte está uma porta de ferro fechada e
+sem nenhuma abertura e para o oeste você volta para a entrada.
+~
+160 393289 0 0 0 0
+D0
+Uma porta de ferro.
+~
+porta ferro~
+1 -1 16201
+D3
+~
+~
+0 -1 16199
+S
+#16203
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao oeste você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D3
+Uma porta de metal.
+~
+porta metal~
+1 -1 16206
+S
+#16204
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao oeste você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D3
+Uma porta de metal.
+~
+porta metal~
+1 -1 16205
+S
+#16205
+Corredores das Masmorras~
+   Você está nos não muito limpos e agradáveis corredores das masmorras do
+castelo do exército amarelo.  Para o sul, para o leste e para o oeste portas
+de metal fechadas e para o norte mais do corredor.
+~
+160 393289 0 0 0 0
+D0
+~
+~
+0 -1 16206
+D1
+Uma porta de metal.
+~
+porta metal~
+1 -1 16204
+D2
+Uma porta de metal.
+~
+porta metal~
+1 -1 16209
+D3
+Uma porta de metal.
+~
+porta metal~
+1 -1 16208
+S
+#16206
+Corredores das Masmorras~
+   Você está nos não muito limpos e agradáveis corredores das masmorras do
+castelo do exército amarelo.  Para o leste e para o oeste portas de metal
+fechadas e para o norte e sul mais do corredor.
+~
+160 393289 0 0 0 0
+D0
+~
+~
+0 -1 16199
+D1
+Uma porta de metal.
+~
+porta metal~
+1 -1 16203
+D2
+~
+~
+0 -1 16205
+D3
+Uma porta de metal.
+~
+porta metal~
+1 -1 16207
+S
+#16207
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao leste você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D1
+Uma porta de metal.
+~
+porta metal~
+1 -1 16206
+S
+#16208
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao leste você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D1
+Uma porta de metal.
+~
+porta metal~
+1 -1 16205
+S
+#16209
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao norte você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D0
+Uma porta de metal.
+~
+porta metal~
+1 -1 16205
+S
+#16210
+Entrada do Segundo Andar~
+   A escadaria trouxe para o segundo andar do castelo, passando pela cortina
+amarela você chega aos aposentos e salas dos lideres do exército amarelo, se
+for pego aqui vai estar com sérios problemas por estar espionando.  Para o
+oeste fica a cortina que separa os dois andares e para norte os corredores
+do segundo andar.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16211
+D3
+A cortina amarela.
+~
+cortina amarela~
+1 -1 16197
+S
+#16211
+O Corredor Amarelo~
+   Este corredor é ricamente decorado, em sua extensão estão estatuas dos
+grandes heróis, quadros dos marechais e generais nas paredes e um belo
+tapete amarelo estende-se pelo chão.  Para o sul está a passagem que leva
+para o andar principal, para o norte o rico corredor e para o leste os
+aposentos dos lideres.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16212
+D1
+~
+~
+0 -1 16222
+D2
+~
+~
+0 -1 16210
+S
+#16212
+O Corredor Amarelo~
+   Este corredor é ricamente decorado, em sua extensão estão estatuas dos
+grandes heróis, quadros dos marechais e generais nas paredes e um belo
+tapete amarelo estende-se pelo chão.  Para o norte e para o sul segue o rico
+corredor.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16213
+D2
+~
+~
+0 -1 16211
+S
+#16213
+O Corredor Amarelo~
+   Este corredor é ricamente decorado, em sua extensão estão estatuas dos
+grandes heróis, quadros dos marechais e generais nas paredes e um belo
+tapete amarelo estende-se pelo chão.  Para o norte e para o sul segue o rico
+corredor.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16214
+D2
+~
+~
+0 -1 16212
+S
+#16214
+O Corredor Amarelo~
+   Este corredor é ricamente decorado, em sua extensão estão estatuas dos
+grandes heróis, quadros dos marechais e generais nas paredes e um belo
+tapete amarelo estende-se pelo chão.  Para o norte está a passagem que leva
+para o andar principal e para o sul o rico corredor.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16215
+D2
+~
+~
+0 -1 16213
+S
+#16215
+Entrada do Segundo Andar~
+   A escadaria trouxe para o segundo andar do castelo, passando pela cortina
+amarela você chega aos aposentos e salas dos lideres do exército amarelo, se
+for pego aqui vai estar com sérios problemas por estar espionando.  Para o
+oeste fica a cortina que separa os dois andares, para sul os corredores do
+segundo andar e ao leste os aposentos dos lideres.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16216
+D2
+~
+~
+0 -1 16214
+D3
+A cortina amarela.
+~
+cortina amarela~
+1 -1 16198
+S
+#16216
+Escritório dos Capitães~
+   Aqui fica o escritório dos capitães do exército amarelo, você pode ver
+algumas mesas com cadeiras e diversas estantes cheias de papeis.  Para o
+oeste você vai para a entrada do segundo andar e para o sul há uma placa
+indicando ser o escritório dos coronéis.
+~
+160 393288 0 0 0 0
+D2
+~
+~
+0 -1 16217
+D3
+~
+~
+0 -1 16215
+S
+#16217
+Escritório dos Coronéis~
+   Aqui fica o escritório dos coronéis do exército amarelo, você pode ver
+algumas mesas com cadeiras e diversas estantes cheias de papeis.  Para o
+norte fica o escritório dos capitães e para o leste há uma placa indicando
+ser o escritório do marechal.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16216
+D1
+~
+~
+0 -1 16218
+S
+#16218
+Escritório do Marechal~
+   Aqui fica o escritório do poderoso marechal, líder das forças amarelas,
+você uma mesa com uma confortável poltrona e vários planos de estratégias
+pendurados nas paredes.  Para o sul fica a biblioteca do castelo, para o
+oeste você vai ao escritório dos coronéis.
+~
+160 393288 0 0 0 0
+D2
+~
+~
+0 -1 16219
+D3
+~
+~
+0 -1 16217
+S
+#16219
+Biblioteca do Castelo Amarelo~
+   Diversas estantes amarrotadas de livros sobre estratégia, mapas, plantas
+e planos estão organizados aqui na bela biblioteca.  Uma das estantes chama
+sua atenção por estar preenchida apenas por livros de capa amarela.  Para o
+norte fica o escritório do marechal e para o sul o escritório do general.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16218
+D2
+~
+~
+0 -1 16220
+D3
+Uma estante de livros amarelos.
+~
+estante amarelos livros~
+1 -1 16223
+S
+#16220
+Escritório do General~
+   Aqui fica o escritório do poderoso general, segundo no poderio da força
+amarela, você uma mesa com uma confortável poltrona e vários planos com
+estratégias pendurados nas paredes.  Para o norte fica a biblioteca do
+castelo, para o oeste você vai ao escritório dos majores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16219
+D3
+~
+~
+0 -1 16221
+S
+#16221
+Escritório dos Majores~
+   Aqui fica o escritório dos majores do exército amarelo, você pode ver
+algumas mesas com cadeiras e diversas estantes cheias de papeis.  Para o sul
+fica o escritório dos tenentes e para o leste há uma placa indicando ser o
+escritório do general.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16220
+D2
+~
+~
+0 -1 16222
+S
+#16222
+Escritório dos Tenentes~
+   Aqui fica o escritório dos tenentes do exército amarelo, você pode ver
+algumas mesas com cadeiras e diversas estantes cheias de papeis.  Para o
+oeste você vai para o corredor do segundo andar e para o norte há uma placa
+indicando ser o escritório dos majores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16221
+D3
+~
+~
+0 -1 16210
+S
+#16223
+A Passagem Secreta~
+   Empurrando a estante de livros da biblioteca você fica surpreso ao
+encontrar esta sala escondida.  Há um buraco no chão, e descendo a escada
+você irá parar em alguma outra parte do castelo.  Para o leste está a
+biblioteca e para baixo você desce as escadas.
+~
+160 393289 0 0 0 0
+D1
+Uma estante de livros amarelos.
+~
+estante amarelos livros~
+1 -1 16219
+D5
+~
+~
+0 -1 16152
+S
+#16224
+A Passagem Escondida~
+   Passando pela porta camuflada você encontra uma enorme passagem que leva
+para algum ponto a sudoeste.  Para o sul você volta para os corredores e
+para o sudoeste fica a passagem.
+~
+160 393288 0 0 0 0
+D2
+Uma porta camuflada.
+~
+porta camuflada~
+1 -1 16162
+D9
+~
+~
+0 -1 16176
+S
+#16225
+A Ponte do Castelo~
+   Esta larga ponte faz a ligação entre os campos e o enorme castelo que
+está a sua frente, você avista dois enormes estandartes amarelos pendurados
+nos mastros de duas torres frontais da construção.  Você pode voltar por
+onde veio ou seguir para o oeste em direção ao castelo.
+~
+160 393280 0 0 0 2
+D1
+~
+~
+0 -1 16332
+D3
+~
+~
+0 -1 16226
+S
+#16226
+A Ponte do Castelo~
+   Você está a apenas alguns metros do grandioso portão de metal que protege
+o castelo das numerosas tentativas de invasão que este sofre, ao olhar para
+as paredes pode ver uma flâmula azul pendurada em cada lateral do portão.
+Ao leste você segue pela ponte e ao oeste chega aos portões.
+~
+160 393280 0 0 0 2
+D1
+~
+~
+0 -1 16225
+D3
+~
+~
+0 -1 16227
+S
+#16227
+O Imponente Portão~
+   Você está em frente ao grande portão de metal do castelo do reino azul e,
+caso não seja desta equipe, a imponência de sua fortificação deixa-lhe em
+duvidas se deve ou não entrar.  Se estiver com medo volte correndo para o
+leste, se for alguém com uma alma aventureira siga para o oeste.
+~
+160 393280 0 0 0 2
+D1
+~
+~
+0 -1 16226
+D3
+Os portões do castelo azul.
+~
+portão portões~
+1 16010 16228
+S
+#16228
+A Entrada do Castelo~
+   Passando o portão da entrada, você olha ao redor e percebe que toda a
+decoração é feita com detalhes azuis.  Grandes quadros pintados com a imagem
+dos grandes marechais estão nas paredes.  Para voltar para a parte exterior
+siga para o leste; ao norte, oeste e sul corredores levam ao interior da
+fortificada construção.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16255
+D1
+Os portões do castelo azul.
+~
+portão portões~
+1 16010 16227
+D2
+~
+~
+0 -1 16229
+D3
+~
+~
+0 -1 16264
+S
+#16229
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte você volta para a entrada do
+castelo e para sul continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16228
+D2
+~
+~
+0 -1 16230
+S
+#16230
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16229
+D2
+~
+~
+0 -1 16231
+S
+#16231
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores e
+aqui se dividem para o oeste também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16230
+D2
+~
+~
+0 -1 16232
+D3
+~
+~
+0 -1 16260
+S
+#16232
+O Canto Sudeste do Castelo~
+   Aqui acaba o corredor que trazia para o sudeste do castelo e iniciam os
+corredores que seguem para os extremos norte-oeste, aqui também há uma
+escada que leva para alguma parte superior.  Para o oeste e o norte estão os
+corredores e para cima uma escada.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16231
+D3
+~
+~
+0 -1 16233
+D4
+~
+~
+0 -1 16256
+S
+#16233
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores e
+aqui se dividem para o norte também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16260
+D1
+~
+~
+0 -1 16232
+D3
+~
+~
+0 -1 16234
+S
+#16234
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16233
+D3
+~
+~
+0 -1 16235
+S
+#16235
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16234
+D3
+~
+~
+0 -1 16236
+S
+#16236
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores e
+aqui se dividem para o norte também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16261
+D1
+~
+~
+0 -1 16235
+D3
+~
+~
+0 -1 16237
+S
+#16237
+O Canto Sudoeste do Castelo~
+   Aqui acabam os corredores que traziam para o sudoeste do castelo e
+iniciam os corredores que seguem para os extremos norte-leste.  Para o leste
+e o norte estão os corredores e ao sul algo.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16238
+D1
+~
+~
+0 -1 16236
+D2
+Uma porta camuflada.
+~
+porta camuflada~
+1 -1 16299
+S
+#16238
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores e
+aqui se dividem para o leste também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16239
+D1
+~
+~
+0 -1 16261
+D2
+~
+~
+0 -1 16237
+S
+#16239
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16240
+D2
+~
+~
+0 -1 16238
+S
+#16240
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16241
+D2
+~
+~
+0 -1 16239
+S
+#16241
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16242
+D2
+~
+~
+0 -1 16240
+S
+#16242
+Uma Intersecção dos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Para o leste segue um corredor que passa
+pelo centro do castelo, a norte e sul continuam os corredores laterais.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16243
+D1
+~
+~
+0 -1 16270
+D2
+~
+~
+0 -1 16241
+S
+#16243
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16244
+D2
+~
+~
+0 -1 16242
+S
+#16244
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16245
+D2
+~
+~
+0 -1 16243
+S
+#16245
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores e
+aqui se dividem para o leste também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16246
+D1
+~
+~
+0 -1 16262
+D2
+~
+~
+0 -1 16244
+S
+#16246
+O Canto Noroeste do Castelo~
+   Aqui acabam os corredores que traziam para o noroeste do castelo e
+iniciam os corredores que seguem para os extremos sul-leste.  Para o sul e o
+leste estão os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16247
+D2
+~
+~
+0 -1 16245
+S
+#16247
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores e
+aqui se dividem para o sul também.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16248
+D2
+~
+~
+0 -1 16262
+D3
+~
+~
+0 -1 16246
+S
+#16248
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16249
+D3
+~
+~
+0 -1 16247
+S
+#16249
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16250
+D3
+~
+~
+0 -1 16248
+S
+#16250
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste e oeste continuam os corredores e
+aqui se dividem para o sul também.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16251
+D2
+~
+~
+0 -1 16263
+D3
+~
+~
+0 -1 16249
+S
+#16251
+O Canto Nordeste do Castelo~
+   Aqui acaba o corredor que trazia para o nordeste do castelo e iniciam os
+corredores que seguem para os extremos sul-oeste, aqui também há uma escada
+que leva para alguma parte superior.  Para o oeste e o sul estão os
+corredores e para cima uma escada.
+~
+160 393288 0 0 0 0
+D2
+~
+~
+0 -1 16252
+D3
+~
+~
+0 -1 16250
+D4
+~
+~
+0 -1 16258
+S
+#16252
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores e
+aqui se dividem para o oeste também.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16251
+D2
+~
+~
+0 -1 16253
+D3
+~
+~
+0 -1 16263
+S
+#16253
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16252
+D2
+~
+~
+0 -1 16254
+S
+#16254
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao norte e sul continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16253
+D2
+~
+~
+0 -1 16255
+S
+#16255
+Pelos Corredores~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao sul você volta para a entrada do castelo
+e para norte continuam os corredores.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16254
+D2
+~
+~
+0 -1 16228
+S
+#16256
+A Escadaria da Torre Sul~
+   Você sobe a grande escadaria circular de pedras que leva ao topo da torre
+sul do castelo do exército azul, em um certo ponto as escadas terminam em
+uma porta de metal.  Para cima há uma porta fechando o caminho que leva ao
+topo e para baixo você volta aos corredores.
+~
+160 393288 0 0 0 0
+D4
+Uma porta de metal.
+~
+porta~
+1 -1 16257
+D5
+~
+~
+0 -1 16232
+S
+#16257
+O Topo da Torre Sul~
+   Do alto da torre é possível olhar para todo o terreno acidentado que
+separa os castelos dos quatro exércitos inimigos, aqui parece um lugar
+seguro.  Opa!  A porta de metal que você deixou fechar quando entrou parece
+não abrir pelo lado de dentro...
+~
+160 393280 0 0 0 2
+D5
+Uma porta de metal.
+~
+porta~
+1 -1 16256
+S
+#16258
+A Escadaria da Torre Norte~
+   Você sobe a grande escadaria circular de pedras que leva ao topo da torre
+Norte do castelo do exército azul, em um certo ponto as escadas terminam em
+uma porta de metal.  Para cima há uma porta fechando o caminho que leva ao
+topo e para baixo você volta aos corredores.
+~
+160 393288 0 0 0 0
+D4
+Uma porta de metal.
+~
+porta~
+1 -1 16259
+D5
+~
+~
+0 -1 16251
+S
+#16259
+O Topo da Torre Norte~
+   Do alto da torre é possível olhar para todo o terreno acidentado que
+separa os castelos dos quatro exércitos inimigos, aqui parece um lugar
+seguro.  Para baixo abrindo a porta de metal está a escadaria que você usou
+para chegar até aqui.
+~
+160 393280 0 0 0 2
+D5
+Uma porta de metal.
+~
+porta~
+1 -1 16258
+S
+#16260
+Uma Junção~
+   Você está nos corredores do castelo, por todos os lados podem-se observar
+detalhes demonstrando a supremacia do exército azul.  Para o sul e para o
+leste continuam os corredores.
+~
+160 393280 0 0 0 2
+D1
+~
+~
+0 -1 16231
+D2
+~
+~
+0 -1 16233
+S
+#16261
+Uma Junção~
+   Você está nos corredores do castelo, por todos os lados podem-se observar
+detalhes demonstrando a supremacia do exército azul.  Para o sul e para o
+oeste continuam os corredores, para cima está uma bela escadaria com um rico
+tapete azul, levando aos aposentos superiores.
+~
+160 393280 0 0 0 2
+D2
+~
+~
+0 -1 16236
+D3
+~
+~
+0 -1 16238
+D4
+~
+~
+0 -1 16273
+S
+#16262
+Uma Junção~
+   Você está nos corredores do castelo, por todos os lados podem-se observar
+detalhes demonstrando a supremacia do exército azul.  Para o norte e para o
+oeste continuam os corredores, para cima está uma bela escadaria com um rico
+tapete azul, levando aos aposentos superiores.
+~
+160 393280 0 0 0 2
+D0
+~
+~
+0 -1 16247
+D3
+~
+~
+0 -1 16245
+D4
+~
+~
+0 -1 16272
+S
+#16263
+Uma Junção~
+   Você está nos corredores do castelo, por todos os lados podem-se observar
+detalhes demonstrando a supremacia do exército azul.  Para o norte e para o
+leste continuam os corredores.
+~
+160 393280 0 0 0 2
+D0
+~
+~
+0 -1 16250
+D1
+~
+~
+0 -1 16252
+S
+#16264
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Ao leste você volta para a entrada do
+castelo e para o oeste continuam os corredores.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16228
+D3
+~
+~
+0 -1 16265
+S
+#16265
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Para o sul e para o leste continuam os
+corredores do castelo.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16264
+D2
+~
+~
+0 -1 16266
+S
+#16266
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Para o oeste e para o norte continuam os
+corredores do castelo.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16265
+D3
+~
+~
+0 -1 16267
+S
+#16267
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Para o norte e para o leste continuam os
+corredores do castelo.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16268
+D1
+~
+~
+0 -1 16266
+S
+#16268
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Para o norte e para o sul continuam os
+corredores do castelo.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16269
+D2
+~
+~
+0 -1 16267
+S
+#16269
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Para o oeste e para o sul continuam os
+corredores do castelo.
+~
+160 393288 0 0 0 0
+D2
+~
+~
+0 -1 16268
+D3
+~
+~
+0 -1 16270
+S
+#16270
+Pelos Corredores Centrais~
+   Você está andando pelos imensos corredores do castelo do exército azul,
+estes caminhos parecem não acabar e você reza aos deuses para não se perder
+e conseguir cumprir sua missão.  Para o leste e para o oeste continuam os
+corredores do castelo e para o sul segue uma estreita passagem.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16269
+D2
+~
+~
+0 -1 16271
+D3
+~
+~
+0 -1 16242
+S
+#16271
+Acesso as Masmorras~
+   Aqui há uma grade de metal que separa o andar principal das escadas que
+levem ao subterrâneo do castelo, onde estão as masmorras, lá são presos
+todos os que têm intenções de prejudicar o exército azul, seria uma boa
+idéia entrar lá?  Para baixo fica a entrada das masmorras e para o norte
+seguem os corredores.
+~
+160 393289 0 0 0 0
+D0
+~
+~
+0 -1 16270
+D5
+Uma grade de metal.
+~
+grade metal~
+1 -1 16274
+S
+#16272
+No Topo da Escadaria~
+   Aqui termina a escadaria que traz para o segundo andar do castelo, atrás
+da cortina azul estão os aposentos e salas dos lideres do exército azul, se
+for pego aqui vai estar com sérios problemas por estar espionando.  Para
+leste fica a cortina que separa os dois andares e para baixo os corredores.
+~
+160 393288 0 0 0 0
+D1
+A cortina azul.
+~
+cortina azul~
+1 -1 16285
+D5
+~
+~
+0 -1 16262
+S
+#16273
+No Topo da Escadaria~
+   Aqui termina a escadaria que traz para o segundo andar do castelo, atrás
+da cortina azul estão os aposentos e salas dos lideres do exército azul, se
+for pego aqui vai estar com sérios problemas por estar espionando.  Para
+leste fica a cortina que separa os dois andares e para baixo os corredores.
+~
+160 393288 0 0 0 0
+D1
+A cortina azul.
+~
+cortina azul~
+1 -1 16290
+D5
+~
+~
+0 -1 16261
+S
+#16274
+A Entrada das Masmorras~
+   Aqui estão as temidas masmorras do exército azul, se for pego aqui por
+alguém provavelmente irá conhece-las muito bem e por um longo tempo.  Para
+cima você volta para o andar principal e para o oeste, norte e sul seguem os
+corredores das masmorras.
+~
+160 393289 0 0 0 0
+D0
+~
+~
+0 -1 16281
+D2
+~
+~
+0 -1 16275
+D3
+~
+~
+0 -1 16277
+D4
+Uma grade de metal.
+~
+grade metal~
+1 -1 16271
+S
+#16275
+Corredores das Masmorras~
+   Você está nos não muito limpos e agradáveis corredores das masmorras do
+castelo do exército azul.  Para o leste está uma porta de ferro fechada e
+sem nenhuma abertura e para o sul você volta para a entrada.
+~
+160 393289 0 0 0 0
+D0
+~
+~
+0 -1 16274
+D3
+Uma porta de ferro.
+~
+porta ferro~
+1 -1 16276
+S
+#16276
+A Solitária~
+   Aqui fica a temível solitária, usada para acalmar aquele prisioneiro que
+costuma arranjar encrencas.  Por azar você foi espionar onde não deve e não
+tem como sair daqui!
+~
+160 393289 0 0 0 0
+S
+#16277
+Corredores das Masmorras~
+   Você está nos não muito limpos e agradáveis corredores das masmorras do
+castelo do exército azul.  Para o sul está uma porta de ferro fechada e sem
+nenhuma abertura e para o leste você volta para a entrada.
+~
+160 393289 0 0 0 0
+D1
+~
+~
+0 -1 16274
+D2
+Uma porta de ferro.
+~
+porta ferro~
+1 -1 16276
+S
+#16278
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao leste você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D1
+Uma porta de metal.
+~
+porta metal~
+1 -1 16281
+S
+#16279
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao leste você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D1
+Uma porta de metal.
+~
+porta metal~
+1 -1 16280
+S
+#16280
+Corredores das Masmorras~
+   Você está nos não muito limpos e agradáveis corredores das masmorras do
+castelo do exército azul.  Para o norte, para o leste e para o oeste portas
+de metal fechadas e para o sul mais do corredor.
+~
+160 393289 0 0 0 0
+D0
+Uma porta de metal.
+~
+porta metal~
+1 -1 16284
+D1
+Uma porta de metal.
+~
+porta metal~
+1 -1 16283
+D2
+~
+~
+0 -1 16281
+D3
+Uma porta de metal.
+~
+porta metal~
+1 -1 16279
+S
+#16281
+Corredores das Masmorras~
+   Você está nos não muito limpos e agradáveis corredores das masmorras do
+castelo do exército azul.  Para o leste e para o oeste portas de metal
+fechadas e para o norte e sul mais do corredor.
+~
+160 393289 0 0 0 0
+D0
+~
+~
+0 -1 16280
+D1
+Uma porta de metal.
+~
+porta metal~
+1 -1 16282
+D2
+~
+~
+0 -1 16274
+D3
+Uma porta de metal.
+~
+porta metal~
+1 -1 16278
+S
+#16282
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao oeste você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D3
+Uma porta de metal.
+~
+porta metal~
+1 -1 16281
+S
+#16283
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao oeste você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D3
+Uma porta de metal.
+~
+porta metal~
+1 -1 16280
+S
+#16284
+Uma Cela~
+   Este não é o local mais agradável do castelo, é sujo, escuro e cheira a
+mofo, melhor não descobrirem que está no castelo, ou ficará aqui por muito
+tempo.  Ao sul você sai da cela e vai para os corredores.
+~
+160 393289 0 0 0 0
+D2
+Uma porta de metal.
+~
+porta metal~
+1 -1 16280
+S
+#16285
+Entrada do Segundo Andar~
+   A escadaria trouxe para o segundo andar do castelo, passando pela cortina
+azul você chega aos aposentos e salas dos lideres do exército azul, se for
+pego aqui vai estar com sérios problemas por estar espionando.  Para o oeste
+fica a cortina que separa os dois andares e para sul os corredores do
+segundo andar.
+~
+160 393288 0 0 0 0
+D2
+~
+~
+0 -1 16286
+D3
+A cortina azul.
+~
+cortina azul~
+1 -1 16272
+S
+#16286
+O Corredor Azul~
+   Este corredor é ricamente decorado, em sua extensão estão estatuas dos
+grandes heróis, quadros dos marechais e generais nas paredes e um belo
+tapete azul estende-se pelo chão.  Para o norte está a passagem que leva
+para o andar principal, para o sul o rico corredor e para o leste os
+aposentos dos lideres.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16285
+D1
+~
+~
+0 -1 16297
+D2
+~
+~
+0 -1 16287
+S
+#16287
+O Corredor Azul~
+   Este corredor é ricamente decorado, em sua extensão estão estatuas dos
+grandes heróis, quadros dos marechais e generais nas paredes e um belo
+tapete azul estende-se pelo chão.  Para o norte e para o sul segue o rico
+corredor.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16286
+D2
+~
+~
+0 -1 16288
+S
+#16288
+O Corredor Azul~
+   Este corredor é ricamente decorado, em sua extensão estão estatuas dos
+grandes heróis, quadros dos marechais e generais nas paredes e um belo
+tapete azul estende-se pelo chão.  Para o norte e para o sul segue o rico
+corredor.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16287
+D2
+~
+~
+0 -1 16289
+S
+#16289
+O Corredor Azul~
+   Este corredor é ricamente decorado, em sua extensão estão estatuas dos
+grandes heróis, quadros dos marechais e generais nas paredes e um belo
+tapete azul estende-se pelo chão.  Para o sul está a passagem que leva para
+o andar principal e para o norte o rico corredor.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16288
+D2
+~
+~
+0 -1 16290
+S
+#16290
+Entrada do Segundo Andar~
+   A escadaria trouxe para o segundo andar do castelo, passando pela cortina
+azul você chega aos aposentos e salas dos lideres do exército azul, se for
+pego aqui vai estar com sérios problemas por estar espionando.  Para o oeste
+fica a cortina que separa os dois andares, para norte os corredores do
+segundo andar e ao leste os aposentos dos lideres.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16289
+D1
+~
+~
+0 -1 16291
+D3
+A cortina azul.
+~
+cortina azul~
+1 -1 16273
+S
+#16291
+Escritório dos Capitães~
+   Aqui fica o escritório dos capitães do exército azul, você pode ver
+algumas mesas com cadeiras e diversas estantes cheias de papeis.  Para o
+oeste você vai para a entrada do segundo andar e para o norte há uma placa
+indicando ser o escritório dos coronéis.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16292
+D3
+~
+~
+0 -1 16290
+S
+#16292
+Escritório dos Coronéis~
+   Aqui fica o escritório dos coronéis do exército azul, você pode ver
+algumas mesas com cadeiras e diversas estantes cheias de papeis.  Para o sul
+fica o escritório dos capitães e para o leste há uma placa indicando ser o
+escritório do marechal.
+~
+160 393288 0 0 0 0
+D1
+~
+~
+0 -1 16293
+D2
+~
+~
+0 -1 16291
+S
+#16293
+Escritório do Marechal~
+   Aqui fica o escritório do poderoso marechal, líder das forças azuis, você
+uma mesa com uma confortável poltrona e vários planos de estratégias
+pendurados nas paredes.  Para o norte fica a biblioteca do castelo, para o
+oeste você vai ao escritório dos coronéis.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16294
+D3
+~
+~
+0 -1 16292
+S
+#16294
+Biblioteca do Castelo Azul~
+   Diversas estantes amarrotadas de livros sobre estratégia, mapas, plantas
+e planos estão organizados aqui na bela biblioteca.  Uma das estantes chama
+sua atenção por estar preenchida apenas por livros de capa azul.  Para o sul
+fica o escritório do marechal e para o norte o escritório do general.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16295
+D2
+~
+~
+0 -1 16293
+D3
+Uma estante de livros azuis.
+~
+estante azuis livros~
+1 -1 16298
+S
+#16295
+Escritório do General~
+   Aqui fica o escritório do poderoso general, segundo no poderio da força
+azul, você uma mesa com uma confortável poltrona e vários planos com
+estratégias pendurados nas paredes.  Para o sul fica a biblioteca do
+castelo, para o oeste você vai ao escritório dos majores.
+~
+160 393288 0 0 0 0
+D2
+~
+~
+0 -1 16294
+D3
+~
+~
+0 -1 16296
+S
+#16296
+Escritório dos Majores~
+   Aqui fica o escritório dos majores do exército azul, você pode ver
+algumas mesas com cadeiras e diversas estantes cheias de papeis.  Para o
+norte fica o escritório dos tenentes e para o leste há uma placa indicando
+ser o escritório do general.
+~
+160 393288 0 0 0 0
+D0
+~
+~
+0 -1 16297
+D1
+~
+~
+0 -1 16295
+S
+#16297
+Escritório dos Tenentes~
+   Aqui fica o escritório dos tenentes do exército azul, você pode ver
+algumas mesas com cadeiras e diversas estantes cheias de papeis.  Para o
+oeste você vai para o corredor do segundo andar e para o sul há uma placa
+indicando ser o escritório dos majores.
+~
+160 393288 0 0 0 0
+D2
+~
+~
+0 -1 16296
+D3
+~
+~
+0 -1 16286
+S
+#16298
+A Passagem Secreta~
+   Empurrando a estante de livros da biblioteca você fica surpreso ao
+encontrar esta sala escondida.  Há um buraco no chão, e descendo a escada
+você irá parar em alguma outra parte do castelo.  Para o leste está a
+biblioteca e para baixo você desce as escadas.
+~
+160 393289 0 0 0 0
+D1
+Uma estante de livros azuis.
+~
+estante azuis livros~
+1 -1 16294
+D5
+~
+~
+0 -1 16227
+S
+#16299
+A Passagem Escondida~
+   Passando pela porta camuflada você encontra uma enorme passagem que leva
+para algum ponto a nordeste.  Para o norte você volta para os corredores e
+para o nordeste fica a passagem.
+~
+160 393288 0 0 0 0
+D0
+Uma porta camuflada.
+~
+porta camuflada~
+1 -1 16237
+D7
+~
+~
+0 -1 16251
+S
+#16300
+Um Buraco~
+   Você infelizmente caiu em uma das armadilhas feita pelo marechal deste
+castelo.  Você não tem saídas, a não ser seguir para baixo e retornar ao
+templo.
+~
+160 393317 0 0 0 3
+D5
+~
+~
+0 -1 50
+S
+#16301
+Fora do Castelo Verde~
+   Você finalmente chegou onde queria: o Castelo Verde.  O castelo por fora
+é muito grande e...verde!  Você nota várias flâmulas e bandeiras verdes
+postas na parte de fora do castelo.  Indo para sul você segue para a ponte
+que leva ao castelo, mas se você estiver com medo de entrar nesse castelo
+você pode voltar, ao norte ou para baixo.
+~
+160 393280 0 0 0 3
+D0
+~
+~
+0 -1 16302
+D2
+~
+~
+0 -1 16000
+D5
+~
+~
+0 -1 16300
+S
+#16302
+Em um Vasto Campo~
+   Daqui você tem uma melhor visão do castelo verde, mas mesmo assim você
+não pode ver muitos detalhes, o que você pode ver é que é um castelo um
+tanto quanto grande, e tem várias pessoas se mexendo na parte de cima do
+castelo.  Você pode se aproximar mais do castelo indo para o sul ou voltar
+de onde você veio, para cima há uma torre de vigilância.
+~
+160 393280 0 0 0 3
+D0
+~
+~
+0 -1 16303
+D2
+~
+~
+0 -1 16301
+D4
+~
+~
+0 -1 16367
+S
+#16303
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D1
+~
+~
+0 -1 16304
+D2
+~
+~
+0 -1 16302
+D3
+~
+~
+0 -1 16339
+S
+#16304
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16304
+D1
+~
+~
+0 -1 16305
+D2
+~
+~
+0 -1 16304
+D3
+~
+~
+0 -1 16303
+S
+#16305
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D1
+~
+~
+0 -1 16306
+D3
+~
+~
+0 -1 16304
+S
+#16306
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D1
+~
+~
+0 -1 16307
+D3
+~
+~
+0 -1 16305
+S
+#16307
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16308
+D1
+~
+~
+0 -1 16307
+D2
+~
+~
+0 -1 16307
+D3
+~
+~
+0 -1 16306
+S
+#16308
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16309
+D1
+~
+~
+0 -1 16308
+D2
+~
+~
+0 -1 16307
+D3
+~
+~
+0 -1 16308
+S
+#16309
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16310
+D2
+~
+~
+0 -1 16308
+S
+#16310
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16314
+D1
+~
+~
+0 -1 16311
+D2
+~
+~
+0 -1 16309
+S
+#16311
+Em um Vasto Campo~
+   Daqui você tem uma melhor visão do castelo amarelo, mas mesmo assim você
+não pode ver muitos detalhes, o que você pode ver é que é um castelo um
+tanto quanto grande, e tem várias pessoas se mexendo na parte de cima do
+castelo.  Você pode se aproximar mais do castelo indo para o leste ou voltar
+de onde você veio, para cima há uma torre de vigilância.
+~
+160 393280 0 0 0 3
+D1
+~
+~
+0 -1 16312
+D3
+~
+~
+0 -1 16310
+D4
+~
+~
+0 -1 16373
+S
+#16312
+Fora do Castelo Amarelo~
+   Você finalmente chegou onde queria: o Castelo Amarelo.  O castelo por
+fora é muito grande e...amarelo!  Você nota várias flâmulas e bandeiras
+amarelas postas na parte de fora do castelo.  Indo para leste você segue
+para a ponte que leva ao castelo, mas se você estiver com medo de entrar
+nesse castelo você pode voltar, ao oeste ou para baixo.
+~
+160 393280 0 0 0 3
+D1
+~
+~
+0 -1 16150
+D3
+~
+~
+0 -1 16311
+D5
+~
+~
+0 -1 16313
+S
+#16313
+Um Buraco~
+   Você infelizmente caiu em uma das armadilhas feita pelo marechal deste
+castelo.  Você não tem saídas, a não ser seguir para baixo e retornar ao
+templo.
+~
+160 393317 0 0 0 3
+D5
+~
+~
+0 -1 50
+S
+#16314
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16315
+D2
+~
+~
+0 -1 16310
+D3
+~
+~
+0 -1 16346
+S
+#16315
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16316
+D2
+~
+~
+0 -1 16314
+S
+#16316
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16316
+D1
+~
+~
+0 -1 16316
+D2
+~
+~
+0 -1 16315
+D3
+~
+~
+0 -1 16317
+S
+#16317
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D1
+~
+~
+0 -1 16316
+D3
+~
+~
+0 -1 16318
+S
+#16318
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16318
+D1
+~
+~
+0 -1 16317
+D2
+~
+~
+0 -1 16318
+D3
+~
+~
+0 -1 16319
+S
+#16319
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D1
+~
+~
+0 -1 16318
+D2
+~
+~
+0 -1 16349
+D3
+~
+~
+0 -1 16320
+S
+#16320
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16321
+D1
+~
+~
+0 -1 16319
+D3
+~
+~
+0 -1 16324
+S
+#16321
+Em um Vasto Campo~
+   Daqui você tem uma melhor visão do castelo vermelho, mas mesmo assim você
+não pode ver muitos detalhes, o que você pode ver é que é um castelo um
+tanto quanto grande, e tem várias pessoas se mexendo na parte de cima do
+castelo.  Você pode se aproximar mais do castelo indo para o norte ou voltar
+de onde você veio, para cima há uma torre de vigilância.
+~
+160 393280 0 0 0 3
+D0
+~
+~
+0 -1 16322
+D2
+~
+~
+0 -1 16320
+D4
+~
+~
+0 -1 16379
+S
+#16322
+Fora do Castelo Vermelho~
+   Você finalmente chegou onde queria: o Castelo Vermelho.  O castelo por
+fora é muito grande e...vermelho!  Você nota várias flâmulas e bandeiras
+vermelhas postas na parte de fora do castelo.  Indo para norte você segue
+para a ponte que leva ao castelo, mas se você estiver com medo de entrar
+nesse castelo você pode voltar, ao sul ou para baixo.
+~
+160 393280 0 0 0 3
+D0
+~
+~
+0 -1 16075
+D2
+~
+~
+0 -1 16321
+D5
+~
+~
+0 -1 16323
+S
+#16323
+Um Buraco~
+   Você infelizmente caiu em uma das armadilhas feita pelo marechal deste
+castelo.  Você não tem saídas, a não ser seguir para baixo e retornar ao
+templo.
+~
+160 393317 0 0 0 3
+D5
+~
+~
+0 -1 50
+S
+#16324
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D1
+~
+~
+0 -1 16320
+D3
+~
+~
+0 -1 16325
+S
+#16325
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16325
+D1
+~
+~
+0 -1 16324
+D2
+~
+~
+0 -1 16325
+D3
+~
+~
+0 -1 16326
+S
+#16326
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D1
+~
+~
+0 -1 16325
+D3
+~
+~
+0 -1 16327
+S
+#16327
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16327
+D1
+~
+~
+0 -1 16326
+D2
+~
+~
+0 -1 16328
+D3
+~
+~
+0 -1 16327
+S
+#16328
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16327
+D2
+~
+~
+0 -1 16329
+S
+#16329
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16328
+D1
+~
+~
+0 -1 16329
+D2
+~
+~
+0 -1 16330
+D3
+~
+~
+0 -1 16329
+S
+#16330
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16329
+D2
+~
+~
+0 -1 16334
+D3
+~
+~
+0 -1 16331
+S
+#16331
+Em um Vasto Campo~
+   Daqui você tem uma melhor visão do castelo azul, mas mesmo assim você não
+pode ver muitos detalhes, o que você pode ver é que é um castelo um tanto
+quanto grande, e tem várias pessoas se mexendo na parte de cima do castelo.
+Você pode se aproximar mais do castelo indo para o oeste ou voltar de onde
+você veio, para cima há uma torre de vigilância.
+~
+160 393280 0 0 0 3
+D1
+~
+~
+0 -1 16330
+D3
+~
+~
+0 -1 16332
+D4
+~
+~
+0 -1 16385
+S
+#16332
+Fora do Castelo Azul~
+   Você finalmente chegou onde queria: o Castelo Azul.  O castelo por fora é
+muito grande e...azul!  Você nota várias flâmulas e bandeiras azuis postas
+na parte de fora do castelo.  Indo para oeste você segue para a ponte que
+leva ao castelo, mas se você estiver com medo de entrar nesse castelo você
+pode voltar, ao leste ou para baixo.
+~
+160 393280 0 0 0 3
+D1
+~
+~
+0 -1 16331
+D3
+~
+~
+0 -1 16225
+D5
+~
+~
+0 -1 16333
+S
+#16333
+Um Buraco~
+   Você infelizmente caiu em uma das armadilhas feita pelo marechal deste
+castelo.  Você não tem saídas, a não ser seguir para baixo e retornar ao
+templo.
+~
+160 393317 0 0 0 3
+D5
+~
+~
+0 -1 50
+S
+#16334
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16330
+D1
+~
+~
+0 -1 16356
+D2
+~
+~
+0 -1 16335
+S
+#16335
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16334
+D1
+~
+~
+0 -1 16335
+D2
+~
+~
+0 -1 16336
+D3
+~
+~
+0 -1 16335
+S
+#16336
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16335
+D1
+~
+~
+0 -1 16337
+D2
+~
+~
+0 -1 16336
+D3
+~
+~
+0 -1 16336
+S
+#16337
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D1
+~
+~
+0 -1 16338
+D3
+~
+~
+0 -1 16336
+S
+#16338
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16338
+D1
+~
+~
+0 -1 16339
+D2
+~
+~
+0 -1 16338
+D3
+~
+~
+0 -1 16337
+S
+#16339
+Em um Vasto Campo~
+   Você está em um vasto campo verde que se estende até onde sua vista
+alcança.  Você repara algumas pequenas flores espalhadas pelo campo e
+algumas raras árvores grandes.  Você vê saídas para todas as direções.
+~
+160 393288 0 0 0 3
+D0
+~
+~
+0 -1 16349
+D1
+~
+~
+0 -1 16303
+D3
+~
+~
+0 -1 16338
+S
+#16340
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16360
+D1
+~
+~
+0 -1 16341
+D3
+~
+~
+0 -1 16359
+S
+#16341
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16342
+D1
+~
+~
+0 -1 16341
+D3
+~
+~
+0 -1 16340
+S
+#16342
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16366
+D2
+~
+~
+0 -1 16341
+S
+#16343
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16343
+D1
+~
+~
+0 -1 16344
+D2
+~
+~
+0 -1 16343
+D3
+~
+~
+0 -1 16343
+S
+#16344
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que você consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16345
+D3
+~
+~
+0 -1 16343
+S
+#16345
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16346
+D2
+~
+~
+0 -1 16344
+D3
+~
+~
+0 -1 16361
+S
+#16346
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D1
+~
+~
+0 -1 16314
+D2
+~
+~
+0 -1 16345
+D3
+~
+~
+0 -1 16347
+S
+#16347
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16347
+D1
+~
+~
+0 -1 16346
+D2
+~
+~
+0 -1 16347
+D3
+~
+~
+0 -1 16347
+S
+#16348
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16349
+D2
+~
+~
+0 -1 16348
+S
+#16349
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16319
+D2
+~
+~
+0 -1 16348
+D3
+~
+~
+0 -1 16350
+S
+#16350
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D1
+~
+~
+0 -1 16349
+D2
+~
+~
+0 -1 16362
+D3
+~
+~
+0 -1 16351
+S
+#16351
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16351
+D1
+~
+~
+0 -1 16350
+D2
+~
+~
+0 -1 16352
+D3
+~
+~
+0 -1 16351
+S
+#16352
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16351
+D1
+~
+~
+0 -1 16352
+D2
+~
+~
+0 -1 16352
+D3
+~
+~
+0 -1 16352
+S
+#16353
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D1
+~
+~
+0 -1 16353
+D2
+~
+~
+0 -1 16353
+D3
+~
+~
+0 -1 16354
+S
+#16354
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D1
+~
+~
+0 -1 16353
+D2
+~
+~
+0 -1 16355
+S
+#16355
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16354
+D1
+~
+~
+0 -1 16363
+D2
+~
+~
+0 -1 16356
+S
+#16356
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16355
+D1
+~
+~
+0 -1 16357
+D2
+~
+~
+0 -1 16356
+D3
+~
+~
+0 -1 16334
+S
+#16357
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16357
+D1
+~
+~
+0 -1 16357
+D3
+~
+~
+0 -1 16356
+S
+#16358
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16358
+D2
+~
+~
+0 -1 16359
+S
+#16359
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16358
+D1
+~
+~
+0 -1 16340
+D2
+~
+~
+0 -1 16339
+D3
+~
+~
+0 -1 16359
+S
+#16360
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16360
+D2
+~
+~
+0 -1 16340
+S
+#16361
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D1
+~
+~
+0 -1 16345
+D3
+~
+~
+0 -1 16366
+S
+#16362
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D0
+~
+~
+0 -1 16350
+D2
+~
+~
+0 -1 16365
+S
+#16363
+Em um Lago Escuro~
+   Você está em uma lagoa escura e fria.  Você nota o corpo de vários peixes
+mortos e restos de comida flutuando por aqui.  O odor é insuportável e mal
+se consegue respirar.  Você consegue avistar bem longe, um pântano
+lamacento, mas fora isso tudo o que consegue ver é o lago.
+~
+160 393281 0 0 0 7
+D1
+~
+~
+0 -1 16364
+D3
+~
+~
+0 -1 16355
+S
+#16364
+O Pântano Lamacento~
+   A única coisa que você pode ver aqui é uma árvore seca e sem folhas.
+Fora isso tudo é pura lama.  Você está todo sujo de lama até a altura da
+cintura; o que dificulta seus passos e torna sua jornada ainda mais
+cansativa.  Você pode tentar sair daqui, ou continuar neste pântano e ver se
+acha algo de interessante.
+~
+160 393441 0 0 0 6
+D1
+~
+~
+0 -1 16365
+D3
+~
+~
+0 -1 16363
+S
+#16365
+O Pântano Lamacento~
+   A única coisa que você pode ver aqui é uma árvore seca e sem folhas.
+Fora isso tudo é pura lama.  Você está todo sujo de lama até a altura da
+cintura; o que dificulta seus passos e torna sua jornada ainda mais
+cansativa.  Você pode tentar sair daqui, ou continuar neste pântano e ver se
+acha algo de interessante.
+~
+160 393441 0 0 0 6
+D0
+~
+~
+0 -1 16362
+D1
+~
+~
+0 -1 16366
+D3
+~
+~
+0 -1 16364
+S
+#16366
+O Pântano Lamacento~
+   A única coisa que você pode ver aqui é uma árvore seca e sem folhas.
+Fora isso tudo é pura lama.  Você está todo sujo de lama até a altura da
+cintura; o que dificulta seus passos e torna sua jornada ainda mais
+cansativa.  Você pode tentar sair daqui, ou continuar neste pântano e ver se
+acha algo de interessante.
+~
+160 393441 0 0 0 6
+D1
+~
+~
+0 -1 16361
+D2
+~
+~
+0 -1 16342
+D3
+~
+~
+0 -1 16365
+S
+#16367
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+~
+0 -1 16368
+D5
+~
+~
+0 -1 16302
+S
+#16368
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+~
+0 -1 16369
+D5
+~
+~
+0 -1 16367
+S
+#16369
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+~
+0 -1 16370
+D5
+~
+~
+0 -1 16368
+S
+#16370
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+u s porta~
+1 -1 16371
+D5
+~
+~
+0 -1 16369
+S
+#16371
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+u s porta~
+1 -1 16372
+D5
+~
+d b porta~
+1 -1 16370
+S
+#16372
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para baixo você
+pode sair da torre.
+~
+160 393288 0 0 0 0
+D5
+~
+d b porta~
+1 -1 16371
+S
+#16373
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+~
+0 -1 16374
+D5
+~
+~
+0 -1 16311
+S
+#16374
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+~
+0 -1 16375
+D5
+~
+~
+0 -1 16373
+S
+#16375
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+~
+0 -1 16376
+D5
+~
+~
+0 -1 16374
+S
+#16376
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+u s porta~
+1 -1 16377
+D5
+~
+~
+0 -1 16375
+S
+#16377
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+u s porta~
+1 -1 16378
+D5
+~
+d b porta~
+1 -1 16376
+S
+#16378
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para baixo você
+pode sair da torre.
+~
+160 393288 0 0 0 0
+D5
+~
+d b porta~
+1 -1 16377
+S
+#16379
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+~
+0 -1 16380
+D5
+~
+~
+0 -1 16321
+S
+#16380
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+~
+0 -1 16381
+D5
+~
+~
+0 -1 16379
+S
+#16381
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+~
+0 -1 16382
+D5
+~
+~
+0 -1 16380
+S
+#16382
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+u s porta~
+1 -1 16383
+D5
+~
+~
+0 -1 16381
+S
+#16383
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+u s porta~
+1 -1 16384
+D5
+~
+d b porta~
+1 -1 16382
+S
+#16384
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para baixo você
+pode sair da torre.
+~
+160 393288 0 0 0 0
+D5
+~
+d b porta~
+1 -1 16383
+S
+#16385
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+~
+0 -1 16386
+D5
+~
+~
+0 -1 16331
+S
+#16386
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+~
+0 -1 16387
+D5
+~
+~
+0 -1 16385
+S
+#16387
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+~
+0 -1 16388
+D5
+~
+~
+0 -1 16386
+S
+#16388
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+u s porta~
+1 -1 16389
+D5
+~
+~
+0 -1 16387
+S
+#16389
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para cima você
+continua cada vez mais alto na torre ou pode sair dela indo para baixo.
+~
+160 393288 0 0 0 0
+D4
+~
+u s porta~
+1 -1 16390
+D5
+~
+d b porta~
+1 -1 16388
+S
+#16390
+Torre de Vigilância~
+   Você esta na torre de vigilância que fica antes de chegar no castelo,
+daqui é possível ver perfeitamente bem toda a região do campo e do escuro
+lago que fica entre este e os outros castelos inimigos.  Para baixo você
+pode sair da torre.
+~
+160 393288 0 0 0 0
+D5
+~
+d b porta~
+1 -1 16389
+S
+#16391
+A Sala de Convocação~
+   &RATENÇÃO!!!&n  Você está entrando em uma área de alto risco, somente os mais
+corajosos e espertos sairão vencedores, se for uma pessoa que não gosta de
+desafios volte agora, se deseja aventura siga para cima e leia atentamente
+as instruções.
+~
+160 131196 0 0 0 0
+D4
+A Sala das Instruções.
+~
+~
+0 -1 16392
+S
+#16392
+A Sala das Instruções~
+   &y1)&n Você será do &BExercito Azul&n, &RExercito Vermelho&n, &GExercito Verde&n ou
+&YExercito Amarelo&n.  A escolha será de acordo com as instruções que os deuses
+darão, ajuste seu titulo colocando apenas Exercito <cor>.
+   &y2)&n Na sala a norte há quatro portas, cada um levará o exercito para o
+castelo de sua cor, preste atenção para qual direção deve seguir pois é
+proibido seguir em outra direção.
+   &y3)&n Não saia da sala inicial, lá recebera as instruções necessária para
+cumprir a missão, o marechal de seu exército dirá quando poderão partir.
+~
+160 131324 0 0 0 0
+D0
+~
+~
+0 -1 16393
+S
+#16393
+Os Quatro Destinos~
+   Estas portas mágicas o levarão até o seu destino.  Preste atenção no qual
+deve seguir.
+   &Rnorte&n: Exercito Vermelho.
+   &Yleste&n: Exercito Amarelo.
+   &Boeste&n: Exercito Azul.
+   &Gsul&n  : Exercito Verde.
+~
+160 131324 0 0 0 0
+D0
+Exercito Vermelho.
+~
+porta norte vermelha~
+1 16010 16077
+D1
+Exercito Amarelo.
+~
+porta leste amarela~
+1 16010 16152
+D2
+Exercito Verde.
+~
+porta sul verde~
+1 16010 16002
+D3
+Exercito Azul.
+~
+porta oeste azul~
+1 16010 16227
+S
+#16394
+A Sala do Tesouro~
+   Tesouros de todos os tipos e valores estão postos nesta sala.  Desde
+objetos de valor simbólico até estátuas de ouro e objetos mágicos.  Todos os
+tesouros adquiridos pelos Marechais durante os anos estão guardados aqui.  A
+sala é muito grande e ricamente decorada.  Pendurado na parede há um quadro
+que você deve ler.  A única saída fica para o norte.
+~
+160 1179900 0 0 0 0
+D0
+~
+porta saída~
+1 16010 16395
+S
+#16395
+A Sala da Vitória~
+   Se você está passando por este corredor é porque o seu exercito é o
+vencedor, parabéns!  Ao norte você volta para a sua cidade.
+~
+160 131324 0 0 0 0
+D0
+~
+~
+0 -1 50
+S
+$~

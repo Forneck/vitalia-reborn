@@ -1,0 +1,204 @@
+#11400
+yaksha névoa ser demônio~
+um yaksha de névoa~
+Um ser de névoa gargalha histericamente.
+~
+Você nunca viu um ser como esse...  Seu corpo é feito de névoa, o que o
+camufla muito bem, sendo possível apenas ver com clareza seu par de pequenos
+olhos vermelhos.  Em pouco tempo você percebe que ele pode deixar seu corpo
+mais denso, única vez que parece ser de matéria palpável.  Ele parece rir de
+sua expressão assustada.
+~
+2105488 0 0 0 0 0 0 0 -100 E
+31 3 -8 6d7+600 4d4+17
+0 33000
+8 8 1
+E
+#11401
+pisacha pedra demônio grande~
+um pisacha-pedra~
+Uma grande pedra pareceu se mexer.
+~
+Você examina a pedra e, surpreso, percebe que ela é na verdade um estranho
+ser tentando se esconder de você.  Seus braços e pernas, muito finos e
+longos, se dobram de maneira que ele, acocorado no chão, pareça uma grande
+pedra cinzenta coberta por alguns musgos, que nada mais são além dos cabelos
+e pêlos de seu corpo.  Ele parece inofensivo com seus olhos, tão cinzentos
+quanto sua própria sua pele, assustados.
+~
+2105488 0 0 0 0 0 0 0 -100 E
+29 2 -7 6d6+700 5d3+18
+0 36000
+8 8 1
+E
+#11402
+pisacha demônio grama monte~
+um pisacha-grama~
+Há um estranho monte de grama aqui.
+~
+De pele marrom quase que completamente coberta por estranhos pêlos verdes,
+esse pequeno demônio tenta se camuflar o melhor possível.  Seus estranhos
+olhos parecem dois pedregulhos acinzentados que, colocados lado a lado sobre
+um monte de grama, brilham intensamente.  Mesmo que você o observe por
+horas, dificilmente perceberá seus movimentos.
+~
+2105488 0 0 0 0 0 0 0 -100 E
+33 0 -8 5d6+741 5d3+16
+0 39000
+8 8 1
+E
+#11403
+morcego enorme~
+um morcego~
+Um enorme morcego sobrevoa sua cabeça.
+~
+Esse morcego deve ter mais de um metro de envergadura. Enorme mesmo.
+~
+2170898 0 0 0 0 0 0 0 -80 E
+20 4 -6 6d6+600 4d3+16
+0 32000
+8 8 1
+E
+#11404
+pisachi sombra ser demônio~
+uma pisachi-sombra~
+Você percebe algo errado em sua sombra.
+~
+Assumindo a forma e o lugar de sua sombra, essa estranha pisachi parece mais
+parece estar tentando pregar-lhe uma peça do que fazer-lhe algum mal.  Seu
+corpo feito de sombra consegue, magicamente, tomar o lugar de qualquer
+sombra e ter a forma que quiser, a menos que a claridade do lugar que esteja
+seja muito grande: isso a mata.
+~
+2105488 0 0 0 0 0 0 0 -200 E
+36 0 -9 5d6+899 5d4+18
+0 59000
+8 8 2
+E
+#11405
+cão demônio monstruoso~
+um cão-demônio~
+Um monstruoso cão guarda esse local.
+~
+Grande como um urso, esse enorme cão negro mostra os afiados dentes enquanto
+acompanha cada um de seus movimentos com seus dois pares de olhos amarelos.
+Suas compridas patas, eficientes para saltar e correr, possuem garras tão
+grandes quanto suas presas, enquanto sua cauda negra, exatamente como um
+chicote, o ameaça estalando no ar.
+~
+2357266 0 0 0 0 0 0 0 -400 E
+50 -4 -12 7d7+1200 6d7+23
+0 90000
+8 8 1
+BareHandAttack: 4
+E
+#11406
+chitragupta senhor guardião cansado registros~
+Chitragupta~
+Um senhor de ar cansado lê em voz alta o que está escrito em um grande livro.
+~
+Chitragupta é o ajudante de Yama desde que a primeira alma deixou seu corpo
+e veio parar aqui.  A função principal desse homem robusto e de baixa
+estatura é ler o livro da vida de cada um que chega para que Yama julgue
+para onde ele deve ser encaminhado, o que ele faz sem reclamar.  Apesar do
+ar cansado em seu rosto redondo, o guardião dos resgistros do além pode
+continuar com sua tarefa até o fim dos tempos pois, num lugar onde o tempo
+não existe, parar só atrapalharia seu trabalho.
+~
+2109458 0 0 0 0 0 0 0 0 E
+78 -10 -19 8d8+2000 7d7+30
+10000 178000
+8 8 1
+BareHandAttack: 9
+Str: 16
+Dex: 16
+Int: 16
+Wis: 16
+Con: 16
+Cha: 16
+E
+#11407
+Yama deus morte homem sombrio~
+Yama, o Deus da Morte~
+Um homem de semblante sombrio reflete enquanto seu ajudante lê em voz alta.
+~
+Yama é aquele que julga se as almas irão para os céus ou para os infernos do
+mundo.  Ele assume a forma que deseja, seja para assustar alguém, seja para
+tranqüilizar.  No momento, ele é um homem imenso de longos cabelos negros e
+um espesso e comprido bigode.  Seus olhos estão fechados e seu corpo
+completamente imóvel, indicando que ele vasculha a alma à sua frente para
+decidir para onde ela vai e quando voltará para uma nova audiência.
+Inesperadamente, o que você pensava ser uma cicatriz vertical entre as
+sobrancelhas de Yama se abre, revelando um terceiro olho que emite um forte
+facho de luz: ele chegou a um veredicto.
+~
+2353170 0 0 0 0 0 0 0 0 E
+101 -29 -40 9d9+12900 14d12+49
+50000 2345678
+8 8 1
+BareHandAttack: 6
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#11408
+multidão almas fila enfileiradas~
+a multidão de almas~
+Uma multidão de almas enfileiradas espera sua vez de ser julgada.
+~
+As mais diferentes almas formam essa multidão...  Há humanos, demônios,
+animais e mais um enorme número de seres que você nunca viu na vida.  Alguns
+tem aparência muita etérea, luminosa, enquanto outros parecem ser ainda
+feitos de carne e osso.  Ao contrário do que você imaginava, quase ninguém
+aqui parece temer seu destino.
+~
+2170898 0 0 0 0 0 0 0 0 E
+90 -15 -39 7d7+10000 9d9+29
+1111 400000
+8 8 2
+E
+#11409
+narada homem simples andarilho divino~
+Narada, o andarilho divino~
+Um homem de vestes simples cumprimenta-o amavelmente.
+~
+Narada é um homem iluminado que dedica sua vida a explorar todos os lugares
+destes mundos, aparecendo sempre no momento certo e na hora certa, levando
+um pouco de sua luz para qualquer ser que precise e cruze seu caminho.  Não
+se sabe onde suas andanças começaram nem onde elas terminarão, mas dizem que
+vez ou outra um ser aparece para ele e pergunta como estão as coisas no
+mundo.  Ele relata o que viu e segue seu caminho, parecendo estar em uma
+importante missão.
+~
+2105362 0 0 0 0 0 0 0 600 E
+60 -5 -19 7d7+2000 8d8+27
+6390 160000
+8 8 1
+E
+#11410
+estátua naga guarda~
+a estátua de um guarda naga~
+A imponente estátua de um guarda naga impede que você siga em frente.
+~
+A enorme estátua do naga permanece como toda estátua deve ser: estática.
+Você tem a impressão de ter visto seus olhos, que se assemelham a dois rubis com
+uma esmeralda formando a oblíqua pupila, se mexerem, mas logo afasta essa
+idéia. Seu corpo, metade humano e metade serpente, é perfeito e, apesar
+da rigidez da pedra, parece ter a mobilidade da carne e músculos vivos.
+~
+2351122 0 0 0 0 0 0 0 0 E
+60 -7 -19 7d7+2100 6d6+22
+0 200000
+8 8 1
+BareHandAttack: 6
+Str: 18
+Dex: 15
+Int: 15
+Wis: 15
+Con: 15
+Cha: 15
+E
+$

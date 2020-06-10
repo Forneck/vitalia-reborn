@@ -1,0 +1,294 @@
+#10200
+olho bronze jóia magnífica~
+um olho de bronze~
+Uma magnífica jóia jaz no chão, chamando sua atenção.~
+~
+11 aglnq 0 0 0 ar 0 0 0 0 0 0 0
+0 0 0 0
+3 100000 0 21 0
+A
+17 -2
+A
+13 20
+A
+1 1
+A
+2 -2
+#10201
+elegante armadura~
+uma elegante armadura~
+Uma bela armadura foi jogada aqui.~
+~
+9 a 0 0 0 ad 0 0 0 0 0 0 0
+4 0 0 0
+6 10000 0 21 0
+A
+4 1
+A
+5 1
+#10202
+bracelete pequeno delicado~
+um bracelete delicado~
+Um pequeno bracelete foi abandonado aqui.~
+~
+11 a 0 0 0 am 0 0 0 0 0 0 0
+0 0 0 0
+2 8000 0 21 0
+A
+17 -2
+A
+19 1
+A
+3 -1
+A
+1 -1
+#10203
+vestido amassado elegante~
+um elegante vestido~
+Há um vestido amassado no chão.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+4 0 0 0
+4 3410 0 0 0
+A
+2 -2
+#10204
+colar pérolas~
+um colar de pérolas~
+Um esplêndido colar de pérolas está jogado no chão.~
+~
+11 a 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+3 6780 0 21 0
+A
+17 -1
+A
+12 20
+A
+3 2
+A
+1 -2
+#10205
+véu donzela~
+um véu de donzela~
+Um véu de donzela está no chão, coberto de sujeira.~
+~
+11 0 0 0 0 ar 0 0 0 0 0 0 0
+0 0 0 0
+1 810 0 21 0
+A
+2 1
+A
+6 -2
+#10206
+luminária servo~
+uma luminária de servo~
+Uma velha luminária foi deixada aqui.~
+~
+1 a 0 0 0 ao 0 0 0 0 0 0 0
+0 0 -1 0
+4 610 0 21 0
+A
+13 20
+A
+19 1
+A
+3 -2
+#10207
+garrafa~
+uma garrafa de uísque~
+Uma garrafa de uísque foi jogada no chão.~
+~
+17 0 0 0 0 ao 0 0 0 0 0 0 0
+10 10 5 0
+15 110 0 21 0
+#10208
+grosso fivela cinto brilhante relevos~
+um grosso cinto com uma fivela ornada com relevos~
+Um grosso cinto com brilhante fivela está no chão~
+~
+9 b 0 0 0 al 0 0 0 0 0 0 0
+5 0 0 0
+3 510 0 21 0
+A
+6 1
+A
+13 -15
+#10209
+máscara ferro trabalhada~
+uma máscara de ferro trabalhada~
+Uma máscara brilhante foi abandonada aqui.~
+~
+9 al 0 0 0 ar 0 0 0 0 0 0 0
+0 0 0 0
+4 5610 0 21 0
+A
+18 -2
+A
+19 1
+A
+13 -20
+A
+2 -1
+#10210
+velhas botas batida~
+um par de botas batidas~
+Um par de botas velhas foi deixado aqui.~
+~
+9 0 0 0 0 ag 0 0 0 0 0 0 0
+5 0 0 0
+6 310 0 21 0
+A
+19 1
+A
+14 10
+A
+1 -2
+#10211
+luvas cotovelo couro~
+um par de luvas de couro que alcançam o cotovelo~
+Um par de longas luvas foi abandonado aqui.~
+~
+9 0 0 0 0 ah 0 0 0 0 0 0 0
+0 0 0 0
+3 510 0 21 0
+A
+19 1
+A
+13 -20
+#10212
+escudo enorme imenso ferro~
+um enorme escudo de ferro~
+Um imenso escudo de ferro jaz no chão.~
+~
+9 0 0 0 0 aj 0 0 0 0 0 0 0
+0 0 0 0
+9 7619 0 21 0
+A
+19 1
+A
+2 -2
+A
+17 -5
+#10213
+luvas claras~
+um par de luvas brancas~
+Um par de belas luvas claras foi abandonado aqui.~
+~
+9 0 0 0 0 ah 0 0 0 0 0 0 0
+0 0 0 0
+3 510 0 1 0
+#10214
+óculos par ar negro~
+um par de óculos de aro negro~
+Um par de óculos foi perdido por aqui.~
+~
+11 0 0 0 0 ar 0 0 0 0 0 0 0
+0 0 0 0
+3 810 0 15 0
+A
+17 -1
+A
+3 1
+A
+4 1
+A
+1 -1
+#10215
+bolsa livro~
+uma bolsa de livros~
+Há uma grande bolsa no chão.~
+~
+15 0 0 0 0 ak 0 0 0 0 0 0 0
+300 0 -1 0
+1 1510 0 11 0
+A
+19 1
+#10216
+violino magnífico curvo~
+um magnífico violino~
+Um magnífico violino está encostado próximo à parede.~
+~
+12 a 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+3 4510 0 0 0
+E
+violino magnífico curvo~
+Assim que você o olha, algumas imagens passam por sua mente..  E você sente
+uma sensação de êxtase.
+~
+#10217
+botas trabalhador grossas~
+um par de botas de trabalhador~
+Um par de grossas botas foi posto aqui.~
+~
+9 0 0 0 0 ag 0 0 0 0 0 0 0
+0 0 0 0
+5 410 0 0 0
+#10218
+anel prateado articulado~
+um belo anel articulado~
+Um anel articulado prateado foi esquecido aqui.~
+~
+11 a 0 0 0 ab 0 0 0 0 0 0 0
+0 0 0 0
+2 2110 0 21 0
+A
+17 -2
+A
+18 1
+A
+19 1
+#10219
+manopla jóias cravejada~
+uma manopla cravejada com jóias~
+Uma inestimável manopla cravejada com jóias.~
+~
+11 a 0 0 0 ah 0 0 0 0 0 0 0
+0 0 0 0
+2 2410 0 21 0
+A
+17 -6
+A
+13 20
+A
+1 -1
+#10220
+anel teia~
+uma anel de teias~
+Um estranho anel de teias foi esquecido aqui.~
+~
+11 a 0 0 0 ab 0 0 0 0 0 0 0
+0 0 0 0
+2 3510 0 21 0
+A
+18 2
+A
+12 10
+A
+24 -2
+#10221
+livro vida~
+o Livro da Vida~
+O Livro da Vida foi negligentemente perdido aqui.~
+~
+2 ac 0 0 0 ao 0 0 0 0 0 0 0
+21 36 15 -1
+5 17610 0 21 0
+#10222
+cassoque negro~
+um cassoque negro~
+Um cassoque negro com o ébano foi jogado por aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+6 0 0 0
+5 10 0 21 0
+A
+2 1
+A
+4 1
+A
+13 20
+A
+1 -2
+$~

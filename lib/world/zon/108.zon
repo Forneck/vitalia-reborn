@@ -1,0 +1,542 @@
+#108
+Vitalia~
+A Cidade de Tróia~
+10800 10999 180 1 a 0 0 0 -1 -1
+-1
+*
+* Colocar os monstros
+*
+M 0 10800 1 10937 colocar Poseidon nas �guas divinas de Poseidon
+E 1 10840 10 16   entregar o Tridente de Poseidon a Poseidon
+M 0 10801 1 10934 colocar Trit�o em Anfitrite, a concha monumental
+E 1 10839 10 16   entregar a concha marinha para Trit�o
+M 0 10802 1 10942 colocar T�tis no lar das nereidas
+E 1 10812 10 3    entregar um colar de conchas a T�tis
+E 1 10813 10 12   entregar um vestido branco a T�tis
+M 0 10803 1 10941 colocar P�gaso nos est�bulos do Olimpo
+G 1 10822 10 -1   entregar a ferradura de P�gaso a P�gaso
+M 0 10804 1 10822 colocar Aquiles em o acampamento de Menelau
+E 1 10805 10 5    entregar a armadura de Aquils a Aquiles
+E 1 10806 10 11   entregar o escudo de Aquiles a Aquiles
+E 1 10880 14 16   entregar uma lan�a de combate a Aquiles
+M 0 10805 1 10942 colocar Peleus no Lar das nereidas
+E 1 10927 10 0    entregar o cora��o da nereida a Peleus
+M 0 10806 1 10821 colocar Menelau numa tenda nobre grega
+E 1 10825 10 5    entregar a armadura de Menelau a Menelau
+E 1 10880 14 16   entregar uma lan�a de combate a Menelau
+M 0 10807 1 10995 colocar Pr�amos na passarela dos muros do p�lacio
+E 1 10802 10 5    entregar a armadura de bronze a Pr�amos
+E 1 10803 10 6    entregar a coroa de brilhantes a Pr�amos
+E 1 10853 10 14   entregar um bracelete de ouro a Pr�amos
+G 1 10882 1 -1      entregar a chave dourada a Pr�amos
+M 0 10808 1 10925 colocar P�ris num grande sal�o do p�lacio
+E 1 10826 10 5    entregar a armadura de P�ris a P�ris
+E 1 10880 14 16   entregar uma lan�a de combate a P�ris
+M 0 10809 1 10836 Colocar Qu�ron na gruta de Qu�ron
+E 1 10816 10 16   entregar o arco da sabedoria a Qu�ron
+M 0 10810 1 10844 colocar Agamemnon no acampamneto do rei Ulisses
+E 1 10827 10 5    entregar a armadura de Agamemnon a Agamemnon
+E 1 10880 14 16   entregar uma lan�a de combate a Agamemnon
+M 0 10811 1 10929 colocar Heitor no sal�o real
+E 1 10828 10 5    entregar a armadura de Heitor a Heitor
+E 1 10880 14 16   entregar uma lan�a de combate a Heitor
+M 0 10812 1 10842 colocar o rei Reso no acampamento do rei Reso
+E 1 10829 10 5    entregar a armadura de Reso a Reso
+E 1 10860 10 14   entregar um bracelete de marfim a Reso
+M 0 10813 1 10978 colocar Pentesil�ia na praia de Dardanelos
+E 1 10842 10 5    entregar a armadura da guerreira a Pentesil�ia
+E 1 10843 10 16   entregar o arco de Pentesil�ia a Pentesil�ia
+E 1 10844 10 20   entregar o brinco da guerreia a Pentesil�ia
+E 1 10845 10 3    entregar o colar da coragem a Pentesil�ia
+M 0 10814 1 10868 colocar M�mnon na estrada de pedras
+E 1 10818 10 11   entregar um escudo et�ope a M�mnon
+E 1 10819 10 16   entregar a lan�a da coragem a M�mnon
+E 1 10820 10 3    entregar um colar de dentes a M�mnon
+E 1 10821 10 12   entregar um manto de pele a M�mnon
+M 0 10815 1 10980 colocar Ajaz no acampamento do rei Ulisses
+E 1 10830 10 5    entregar a armadura de Ajax a Ajax
+E 1 10880 14 16   entregar uma lan�a de combate a Ajax
+M 0 10816 1 10843 Colocar Ulisses numa tenda nobre grega
+E 1 10831 10 5    entregar a armadura de Ulisses a Ulisses
+E 1 10880 14 16   entregar uma lan�a de combate a Ulisses
+M 0 10817 1 10993 colocar Andr�maca na passarela dos muros do p�lacio
+E 1 10848 10 12   entregar um vestido de seda a Andr�maca
+E 1 10849 50 8    entregar uma sand�lia de couro a Andr�maca
+E 1 10861 10 20   entregar um brinco de conchas a Andr�maca
+M 0 10818 1 10861 colocar Diomedes em Terror, a batalha do medo
+E 1 10832 10 5    entregar a armadura de Diomedes a Diomedes
+M 0 10819 1 10817 colocar Eaco na ilha de Egina
+E 1 10824 10 3    entregar a Eaco o colar da esperan�a
+E 1 10854 10 14   entregar um bracelete de prata a Eaco
+M 0 10820 1 10822 colocar P�troclo no acampamento de Menelau
+E 1 10833 10 5    entregar a armadura de P�troclo a P�troclo
+E 1 10855 10 14   entregar um bracelete de cobre a P�troclo
+E 1 10880 14 16   entregar uma lan�a de combate a P�troclo
+M 0 10821 1 10935 colocar o Leviat� no reino dos mares
+G 1 10928 10 -1      entregar a poderosa escama do leviat� ao Leviat�
+M 0 10822 1 10995 colocar H�cuba na passarela dos muros do p�lacio
+E 1 10814 10 20   entregar a H�cuba um brinco de brilhantes
+E 1 10848 10 12   entregar um vestido de seda a H�cuba
+E 1 10849 50 8    entregar uma sand�lia de couro a H�cuba
+G 1 10883 1 -1       entregar a chave do tesouro a H�cuba
+M 0 10823 1 10925 colocar Helena num grande sal�o p�lacio
+E 1 10848 10 12   entregar um vestido de seda a Helena
+E 1 10849 50 8    entregar uma sand�lia de couro a Helena
+E 1 10857 10 20   entregar a Helena um brinco de jade
+M 0 10824 1 10920 colocar Cassandra nos jardins do p�lacio
+E 1 10804 10 3    entregar o colar de Apolo a Cassandra
+E 1 10848 10 12   entregar um vestido de seda a Cassandra
+E 1 10849 50 8    entregar uma sand�lia de couro a Cassandra
+M 0 10825 8 10903 colocar um guarda troiano num posto de guarda
+E 1 10849 50 8    entregar uma sand�lia de couro ao guarda troiano
+E 1 10875 10 7    entregar uma perneira troiana ao guarda troiano
+E 1 10876 10 10   entregar uma bra�adeira troiana ao guarda troiano
+E 1 10877 10 6    entregar uma elmo troiano ao guarda troiano
+E 1 10878 10 5    entregar uma armadura troiana ao guarda troiano
+E 1 10879 10 16   entregar uma espada curta ao guarda troiano
+M 0 10825 8 10903 colocar um guarda troiano num posto de guarda
+E 1 10849 50 8    entregar uma sand�lia de couro ao guarda troiano
+E 1 10875 10 7    entregar uma perneira troiana ao guarda troiano
+E 1 10876 10 10   entregar uma bra�adeira troiana ao guarda troiano
+E 1 10877 10 6    entregar uma elmo troiano ao guarda troiano
+E 1 10878 10 5    entregar uma armadura troiana ao guarda troiano
+E 1 10879 10 16   entregar uma espada curta ao guarda troiano
+M 0 10825 8 10904 colocar um guarda troiano num posto de guarda
+E 1 10849 50 8    entregar uma sand�lia de couro ao guarda troiano
+E 1 10875 10 7    entregar uma perneira troiana ao guarda troiano
+E 1 10876 10 10   entregar uma bra�adeira troiana ao guarda troiano
+E 1 10877 10 6    entregar uma elmo troiano ao guarda troiano
+E 1 10878 10 5    entregar uma armadura troiana ao guarda troiano
+E 1 10879 10 16   entregar uma espada curta ao guarda troiano
+M 0 10825 8 10904 colocar um guarda troiano num posto de guarda
+E 1 10849 50 8    entregar uma sand�lia de couro ao guarda troiano
+E 1 10875 10 7    entregar uma perneira troiana ao guarda troiano
+E 1 10876 10 10   entregar uma bra�adeira troiana ao guarda troiano
+E 1 10877 10 6    entregar uma elmo troiano ao guarda troiano
+E 1 10878 10 5    entregar uma armadura troiana ao guarda troiano
+E 1 10879 10 16   entregar uma espada curta ao guarda troiano
+M 0 10825 8 10915 colocar um guarda troiano na entrada do p�lacio
+E 1 10849 50 8    entregar uma sand�lia de couro ao guarda troiano
+E 1 10875 10 7    entregar uma perneira troiana ao guarda troiano
+E 1 10876 10 10   entregar uma bra�adeira troiana ao guarda troiano
+E 1 10877 10 6    entregar uma elmo troiano ao guarda troiano
+E 1 10878 10 5    entregar uma armadura troiana ao guarda troiano
+E 1 10879 10 16   entregar uma espada curta ao guarda troiano
+M 0 10825 8 10915 colocar um guarda troiano na entrada do p�lacio
+E 1 10849 50 8    entregar uma sand�lia de couro ao guarda troiano
+E 1 10875 10 7    entregar uma perneira troiana ao guarda troiano
+E 1 10876 10 10   entregar uma bra�adeira troiana ao guarda troiano
+E 1 10877 10 6    entregar uma elmo troiano ao guarda troiano
+E 1 10878 10 5    entregar uma armadura troiana ao guarda troiano
+E 1 10879 10 16   entregar uma espada curta ao guarda troiano
+M 0 10825 8 10928 colocar um guarda troiano no sal�o real
+E 1 10849 50 8    entregar uma sand�lia de couro ao guarda troiano
+E 1 10875 10 7    entregar uma perneira troiana ao guarda troiano
+E 1 10876 10 10   entregar uma bra�adeira troiana ao guarda troiano
+E 1 10877 10 6    entregar uma elmo troiano ao guarda troiano
+E 1 10878 10 5    entregar uma armadura troiana ao guarda troiano
+E 1 10879 10 16   entregar uma espada curta ao guarda troiano
+M 0 10825 8 10928 colocar um guarda troiano no sal�o real
+E 1 10849 50 8    entregar uma sand�lia de couro ao guarda troiano
+E 1 10875 10 7    entregar uma perneira troiana ao guarda troiano
+E 1 10876 10 10   entregar uma bra�adeira troiana ao guarda troiano
+E 1 10877 10 6    entregar uma elmo troiano ao guarda troiano
+E 1 10878 10 5    entregar uma armadura troiana ao guarda troiano
+E 1 10879 10 16   entregar uma espada curta ao guarda troiano
+M 0 10826 8 10848 colocar um soldado troiano no porto natural
+E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
+E 1 10863 10 10   entregar uma bra�adeira prateada ao soldado troiano
+E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
+E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
+E 1 10880 14 16   entregar uma lan�a de combate ao soldado troiano
+G 1 10905 10 -1      entregar as rotas mar�timas ao soldado troiano
+M 0 10826 8 10848 colocar um soldado troiano no porto natural
+E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
+E 1 10863 10 10   entregar uma bra�adeira prateada ao soldado troiano
+E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
+E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
+E 1 10880 14 16   entregar uma lan�a de combate ao soldado troiano
+M 0 10826 8 10841 colocar um soldado troiano no acampamento de Reso
+E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
+E 1 10863 10 10   entregar uma bra�adeira prateada ao soldado troiano
+E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
+E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
+E 1 10880 14 16   entregar uma lan�a de combate ao soldado troiano
+M 0 10826 8 10841 colocar um soldado troiano no acampamento de Reso
+E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
+E 1 10863 10 10   entregar uma bra�adeira prateada ao soldado troiano
+E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
+E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
+E 1 10880 14 16   entregar uma lan�a de combate ao soldado troiano
+M 0 10826 8 10898 colocar um soldado troiano numa plan�cie no cora��o
+E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
+E 1 10863 10 10   entregar uma bra�adeira prateada ao soldado troiano
+E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
+E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
+E 1 10880 14 16   entregar uma lan�a de combate ao soldado troiano
+M 0 10826 8 10898 colocar um soldado troiano numa plan�cie no cora��o
+E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
+E 1 10863 10 10   entregar uma bra�adeira prateada ao soldado troiano
+E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
+E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
+E 1 10880 14 16   entregar uma lan�a de combate ao soldado troiano
+M 0 10826 8 10900 colocar um soldado troiano numa plan�cie no cora��o
+E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
+E 1 10863 10 10   entregar uma bra�adeira prateada ao soldado troiano
+E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
+E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
+E 1 10880 14 16   entregar uma lan�a de combate ao soldado troiano
+M 0 10826 8 10900 colocar um soldado troiano numa plan�cie no cora��o
+E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
+E 1 10863 10 10   entregar uma bra�adeira prateada ao soldado troiano
+E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
+E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
+E 1 10880 14 16   entregar uma lan�a de combate ao soldado troiano
+M 0 10827 3 10855 colocar um batalh�o troiano na sanguinol�ncia
+E 1 10866 10 7    entregar uma perneira dourada ao batalh�o troiano
+E 1 10867 10 10   entregar uma bra�adeira dourada ao batalh�o troiano
+E 1 10868 10 6    entregar uma elmo dourado ao batalh�o troiano
+E 1 10869 10 5    entregar uma armadura dourado ao batalh�o troiano
+E 1 10880 14 16   entregar uma lan�a de combate ao batalh�o troiano
+E 1 10892 10 17   entregar um estandarte troiano ao batalh�o troiano
+M 0 10827 3 10859 colocar um batalh�o troiano na bravura
+E 1 10866 10 7    entregar uma perneira dourada ao batalh�o troiano
+E 1 10867 10 10   entregar uma bra�adeira dourada ao batalh�o troiano
+E 1 10868 10 6    entregar uma elmo dourado ao batalh�o troiano
+E 1 10869 10 5    entregar uma armadura dourado ao batalh�o troiano
+E 1 10880 14 16   entregar uma lan�a de combate ao batalh�o troiano
+E 1 10892 10 17   entregar um estandarte troiano ao batalh�o troiano
+M 0 10827 3 10861 colocar um batalh�o troiano no terror
+E 1 10866 10 7    entregar uma perneira dourada ao batalh�o troiano
+E 1 10867 10 10   entregar uma bra�adeira dourada ao batalh�o troiano
+E 1 10868 10 6    entregar uma elmo dourado ao batalh�o troiano
+E 1 10869 10 5    entregar uma armadura dourado ao batalh�o troiano
+E 1 10880 14 16   entregar uma lan�a de combate ao batalh�o troiano
+E 1 10892 10 17   entregar um estandarte troiano ao batalh�o troiano
+M 0 10828 3 10855 colocar um batalh�o grego na sanguinol�ncia
+E 1 10866 10 7    entregar uma perneira dourada ao batalh�o grego
+E 1 10867 10 10   entregar uma bra�adeira dourada ao batalh�o grego
+E 1 10868 10 6    entregar uma elmo dourado ao batalh�o grego
+E 1 10869 10 5    entregar uma armadura dourado ao batalh�o grego
+E 1 10880 14 16   entregar uma lan�a de combate ao batalh�o grego
+E 1 10891 10 17   entregar um estandarte grego ao batalh�o grego
+M 0 10828 3 10859 colocar um batalh�o grego na bravura
+E 1 10866 10 7    entregar uma perneira dourada ao batalh�o grego
+E 1 10867 10 10   entregar uma bra�adeira dourada ao batalh�o grego
+E 1 10868 10 6    entregar uma elmo dourado ao batalh�o grego
+E 1 10869 10 5    entregar uma armadura dourado ao batalh�o grego
+E 1 10880 14 16   entregar uma lan�a de combate ao batalh�o grego
+E 1 10891 10 17   entregar um estandarte grego ao batalh�o grego
+M 0 10828 3 10861 colocar um batalh�o grego no terror
+E 1 10866 10 7    entregar uma perneira dourada ao batalh�o grego
+E 1 10867 10 10   entregar uma bra�adeira dourada ao batalh�o grego
+E 1 10868 10 6    entregar uma elmo dourado ao batalh�o grego
+E 1 10869 10 5    entregar uma armadura dourado ao batalh�o grego
+E 1 10880 14 16   entregar uma lan�a de combate ao batalh�o grego
+E 1 10891 10 17   entregar um estandarte grego ao batalh�o grego
+M 0 10829 2 10821 colocar um guarda grego numa tenda nobre grega
+E 1 10849 50 8    entregar uma sand�lia de couro ao guarda grego
+E 1 10871 10 7    entregar uma perneira grega ao guarda grego
+E 1 10872 10 10   entregar uma bra�adeira grega ao guarda grego
+E 1 10873 10 6    entregar uma elmo grego ao guarda grego
+E 1 10874 10 5    entregar uma armadura grega ao guarda grego
+M 0 10829 2 10843 colocar um guarda grego numa tenda nobre grega
+E 1 10849 50 8    entregar uma sand�lia de couro ao guarda grego
+E 1 10871 10 7    entregar uma perneira grega ao guarda grego
+E 1 10872 10 10   entregar uma bra�adeira grega ao guarda grego
+E 1 10873 10 6    entregar uma elmo grego ao guarda grego
+E 1 10874 10 5    entregar uma armadura grega ao guarda grego
+M 0 10830 6 10823 colocar um soldado grego num porto natural
+E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
+E 1 10863 10 10   entregar uma bra�adeira prateada ao soldado troiano
+E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
+E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
+E 1 10880 14 16   entregar uma lan�a de combate ao soldado troiano
+M 0 10830 6 10823 colocar um soldado grego num porto natural
+E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
+E 1 10863 10 10   entregar uma bra�adeira prateada ao soldado troiano
+E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
+E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
+E 1 10880 14 16   entregar uma lan�a de combate ao soldado troiano
+M 0 10830 6 10822 colocar um soldado grego no acampamento de Menelau
+E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
+E 1 10863 10 10   entregar uma bra�adeira prateada ao soldado troiano
+E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
+E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
+E 1 10880 14 16   entregar uma lan�a de combate ao soldado troiano
+M 0 10830 6 10822 colocar um soldado grego no acampamento de Menelau
+E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
+E 1 10863 10 10   entregar uma bra�adeira prateada ao soldado troiano
+E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
+E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
+E 1 10880 14 16   entregar uma lan�a de combate ao soldado troiano
+M 0 10830 6 10844 colocar um soldado grego no acampamento de Ulisses
+E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
+E 1 10863 10 10   entregar uma bra�adeira prateada ao soldado troiano
+E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
+E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
+E 1 10880 14 16   entregar uma lan�a de combate ao soldado troiano
+M 0 10830 6 10844 colocar um soldado grego no acampamento de Ulisses
+E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
+E 1 10863 10 10   entregar uma bra�adeira prateada ao soldado troiano
+E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
+E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
+E 1 10880 14 16   entregar uma lan�a de combate ao soldado troiano
+M 0 10831 1 10868 colocar um batalh�o et�ope na estrada de pedras
+E 1 10817 10 19   entregar uma agulha de marfim ao batalh�o et�ope
+E 1 10818 10 11   entregar um escudo et�ope ao batalh�o et�ope
+E 1 10819 10 16   entregar a lan�a da coragem ao batalh�o et�ope
+M 0 10832 4 10905 colocar um cidad�o troiano numa casa troiana
+E 1 10847 10 12   entregar um manto de seda ao cidad�o troiano
+E 1 10849 50 8    entregar uma sand�lia de couro ao cidad�o troiano
+M 0 10833 4 10905 colocar uma cidad� troiana numa casa troiana
+E 1 10848 10 12   entregar um vestido de seda a cidad� troiana
+E 1 10849 50 8    entregar uma sand�lia de couro a cidad� troiana
+M 0 10833 4 10910 colocar uma cidad� troiana numa casa troiana
+E 1 10848 10 12   entregar um vestido de seda a cidad� troiana
+E 1 10849 50 8    entregar uma sand�lia de couro a cidad� troiana
+M 0 10833 4 10923 colocar uma cidad� troiana numa casa troiana
+E 1 10848 10 12   entregar um vestido de seda a cidad� troiana
+E 1 10849 50 8    entregar uma sand�lia de couro a cidad� troiana
+M 0 10832 4 10923 colocar um cidad�o troiano numa casa troiana
+E 1 10847 10 12   entregar um manto de seda ao cidad�o troiano
+E 1 10849 10 8    entregar uma sand�lia de couro ao cidad�o troiano
+M 0 10832 4 10917 colocar um cidad�o troiano numa casa troiana
+E 1 10847 10 12   entregar um manto de seda ao cidad�o troiano
+E 1 10849 50 8    entregar uma sand�lia de couro ao cidad�o troiano
+M 0 10833 4 10911 colocar uma cidad� troiana no templo de Tr�ia
+E 1 10848 10 12   entregar um vestido de seda a cidad� troiana
+E 1 10849 50 8    entregar uma sand�lia de couro a cidad� troiana
+M 0 10832 4 10911 colocar um cidad�o troiano no templo de Tr�ia
+E 1 10847 10 12   entregar um manto de seda ao cidad�o troiano
+E 1 10849 50 8    entregar uma sand�lia de couro ao cidad�o troiano
+M 0 10834 3 10909 colocar uma crian�a troiana numa rua
+E 1 10847 10 12   entregar um manto de seda a uma crian�a troiana
+E 1 10849 50 8    entregar uma sand�lia de couro a uma crian�a troiana
+G 1 10915 10 -1      entregar a harpa do bardo a uma crian�a troiana
+M 0 10834 3 10906 colocar uma crian�a troiana numa casa troiana
+E 1 10847 10 12   entregar um manto de seda a uma crian�a troiana
+E 1 10849 50 8    entregar uma sand�lia de couro a uma crian�a troiana
+M 0 10834 3 10916 colocar uma crian�a troiana na pra�a de Tr�ia
+E 1 10847 10 12   entregar um manto de seda a uma crian�a troiana
+E 1 10849 50 8    entregar uma sand�lia de couro a uma crian�a troiana
+M 0 10835 1 10916 colocar um artes�o troiano na pra�a de Tr�ia
+E 1 10847 10 12   entregar um manto de seda a uma crian�a troiana
+E 1 10849 50 8    entregar uma sand�lia de couro a uma crian�a troiana
+M 0 10836 1 10845 colocar o mestre artes�o-grego no cavalo de Tr�ia
+E 1 10847 10 12   entregar um manto de seda ao mestre-artes�o-grego
+E 1 10849 50 8    entregar uma sand�lia de couro ao mestre-artes�o
+G 1 10893 10 -1     entregar um pergaminho do mestre-artes�o ao mestre
+M 0 10837 3 10912 colocar um comerciante troiano na pra�a
+E 1 10847 10 12   entregar um manto de seda ao comerciante troiano
+E 1 10849 50 8    entregar uma sand�lia de couro ao comerciante troiano
+G 1 10896 10 -1     entregar um tapete persa ao comerciante troiano
+M 0 10837 3 10916 colocar um comerciante troiano na pra�a
+E 1 10847 10 12   entregar um manto de seda ao comerciante troiano
+E 1 10849 50 8    entregar uma sand�lia de couro ao comerciante troiano
+G 1 10894 10 -1      entregar uma �nfora de micenos ao comerciante troiano
+M 0 10837 3 10907 colocar um comerciante troiano na pra�a
+E 1 10847 10 12   entregar um manto de seda ao comerciante troiano
+E 1 10849 50 8    entregar uma sand�lia de couro ao comerciante troiano
+G 1 10895 10 -1     entregar um prato de cer�mica do Chipre ao comerciante
+G 1 10924 50 -1      entregar uma garrafa de vinho ao comerciante
+M 0 10838 1 10911 colocar Laocoonte no templo de Tr�ia
+E 1 10807 10 12   entregar o manto sacerdotal de Laocoonte a Laocoonte
+E 1 10808 10 16   entregar o cajado do c�tico a Laocoonte
+E 1 10849 50 8    entregar uma sand�lia de couro a Laocoonte
+M 0 10839 1 10990 colocar S�non atr�s dos arbustos
+E 1 10815 10 16   entregar a faca do espi�o a S�non
+E 1 10847 10 12   entregar um manto de seda a S�non
+E 1 10849 50 8    entregar uma sand�lia de couro a S�non
+G 1 10912 10 -1     entregar um pergaminho a S�non
+M 0 10840 1 10991 colocar En�ias no santu�rio dos guerreiros
+E 1 10823 10 14   entregar o bracelete de Afrodite a En�ias
+E 1 10929 10 5    entregar a armadura de En�ias a En�ias
+E 1 10880 14 16   entregar uma lan�a de combate a En�ias
+M 0 10841 1 10991 colocar Anquises no santu�rio dos guerreiros
+E 1 10847 10 12   entregar um manto de seda a Anquises
+E 1 10849 50 8    entregar uma sand�lia de couro a Anquises
+E 1 10851 10 14   entregar um bracelete de Zinco a Anquises
+M 0 10842 1 10994 colocar Creusa na passarela dos muros do p�lacio
+E 1 10848 10 12   entregar um vestido de seda a Creusa
+E 1 10849 50 8    entregar uma sand�lia de couro a Creusa
+E 1 10870 10 2    entregar um anel de diamante a Creusa
+M 0 10843 1 10994 colocar Asc�nio na passarela dos muros do p�lacio
+E 1 10847 10 12   entregar um manto de seda a Asc�nio
+E 1 10849 50 8    entregar uma sand�lia de couro a Asc�nio
+E 1 10852 10 14   entregar um bracelete da Pomer�nia a Asc�nio
+M 0 10844 1 10843 Colocar Briseis numa tenda nobre grega
+E 1 10848 10 12   entregar um vestido de seda a Briseis
+E 1 10849 50 8    entregar uma sand�lia de couro a Briseis
+E 1 10856 10 19   entregar um brinco de ouro a Briseis
+M 0 10845 3 10978 colocar uma amazona na praia de Dardanelos
+E 1 10841 10 16   entregar um arco da amazona a uma amazona
+E 1 10842 10 5    entregar a armadura da guerreira a uma amazona
+M 0 10845 3 10978 colocar uma amazona na praia de Dardanelos
+E 1 10841 10 16   entregar um arco da amazona a uma amazona
+E 1 10842 10 5    entregar a armadura da guerreira a uma amazona
+M 0 10845 3 10978 colocar uma amazona na praia de Dardanelos
+E 1 10841 10 16   entregar um arco da amazona a uma amazona
+E 1 10842 10 5    entregar a armadura da guerreira a uma amazona
+M 0 10846 1 10834 colocar Dolon na colina de Qu�ron
+E 1 10847 10 12   entregar um manto de seda a Dolon
+E 1 10849 50 8    entregar uma sand�lia de couro a Dolon
+E 1 10899 10 17   entregar um estranho tubo de aumento a Dolon
+M 0 10847 1 10817 colocar os mirmid�es na ilha de Egina
+E 1 10850 10 11   entregar um escudo de bronze aos mirmid�es
+E 1 10880 14 16   entregar uma lan�a de combate aos mirmid�es
+E 1 10930 10 5    entregar aos mirmid�es a armadura das formigas
+M 0 10848 2 10937 colocar uma sereia nas �guas divinas de Poseidon
+E 1 10809 10 20   entregar um brinco de corais a uma sereia
+M 0 10848 2 10938 colocar uma sereia na entrada da caverna de corais
+E 1 10809 10 20   entregar um brinco de corais a uma sereia
+E 1 3817 1 17     Card Tiara(3817) com Sereia(10848)
+M 0 10849 1 10840 colocar um pastor de ovelhas no monte Ida
+E 1 10810 10 17   entregar um cajado ao pastor
+E 1 10811 10 12   entregar um manto de pele ao Pastor
+E 1 10849 50 8    entregar uma sand�lia de couro ao Pastor
+G 1 10919 10 -1    entregar uma garrafa de leite de ovelha ao Pastor
+M 0 10850 1 10942 colocar Anfitrite no lar das nereidas
+E 1 10800 10 6    entregar um elmo de corais a Anfitrite
+E 1 10801 10 12   entregar um vestido celeste a Anfitrite
+M 0 10851 1 10986 colocar Nestor no acampamento do rei Menelau
+E 1 10834 10 5    entregar a armadura de Nestor a Nestor
+E 1 10880 14 16   entregar uma lan�a de combate a Nestor
+M 0 10852 1 10920 colocar P�ndaro nos jardins do p�lacio
+E 1 10835 10 5    entregar a armadura de P�ndaro a P�ndaro
+E 1 10880 14 16   entregar uma lan�a de combate a P�ndaro
+E 1 10858 10 3    entregar um colar de marfim a P�ndaro
+M 0 10853 1 10902 colocar Polidoro na cidade de Tr�ia
+E 1 10847 10 12   entregar um manto de seda a Polidoro
+E 1 10849 50 8    entregar uma sand�lia de couro a Polidoro
+E 1 10881 10 16   entregar uma adaga de marfim a Polidoro
+M 0 10854 1 10841 colocar Sarp�don no acampamento do rei Reso
+E 1 10836 10 5    entregar a armadura de Sarp�don a Sarp�don
+E 1 10880 14 16   entregar uma lan�a de combate a Sarp�don
+M 0 10855 1 10980 colocar F�nix no acampamento do rei Ulisses
+E 1 10837 10 5    entregar a armadura de F�nix a F�nix
+E 1 10880 14 16   entregar uma lan�a de combate a F�nix
+M 0 10856 1 10935 colocar uma tartaruga marinha no reino dos mares
+M 0 10857 1 10817 colocar o cisne de Egina na ilha de Egina
+M 0 10858 1 10890 colocar a serpente guardi� nos an�is de Tr�ia
+M 0 10859 2 10840 colocar uma ovelha no monte Ida
+M 0 10859 2 10840 colocar uma ovelha no monte Ida
+M 0 10860 2 10833 colocar um cavalo na colina de Qu�ron
+M 0 10860 2 10837 colocar um cavalo na colina de Qu�ron
+M 0 10861 1 10937 colocar um golfinho com Poseidon
+M 0 10862 1 10940 colocar o Octopos no mal press�gio
+M 0 10863 1 10933 colocar um tubar�o no reino dos mares
+M 0 10864 1 10932 colocar um cardume de peixes no mar Egeu
+M 0 10865 1 10840 colocar um c�o pastor no monte Ida
+M 0 10866 1 10907 colocar um galo na pra�a de Tr�ia
+M 0 10867 1 10833 colocar um garanh�o na colina de Qu�ron
+M 0 10868 1 10820 colocar um gale�o grego no mar Egeu
+M 0 10869 1 10852 colocar um gale�o troiano no mar Negro
+M 0 10870 1 10804 colocar o navio fantasma no mar Egeu
+M 0 10871 1 10927 colocar Polixena num pequeno lago
+E 1 10848 10 12   entregar um vestido de seda a Polixena
+E 1 10849 50 8    entregar uma sand�lia de couro a Polixena
+E 1 10859 10 20   entregar um brinco de marfim a Polixena
+G 1 10898 10 -1      entregar um jarro de porcelana a Polixena
+G 1 10925 50 -1     entregar um cacho de uvas a Polixena
+M 0 10872 1 10823 colocar Neoptolemus no porto natural
+E 1 10838 10 5    entregar a armadura de Neoptolemus a Neoptolemus
+E 1 10846 10 16   entregar o machado a Neoptolemus
+*
+* Colocar objetos
+*
+R 0 10911 10884    retirar a estatua de Poseidon
+O 0 10884 1 10911  carregar uma nova estatua
+R 0 10981 10885    retirar a estatua de Atena
+O 0 10885 1 10981  carregar uma nova estatua
+R 0 10981 10886    retirar a estatua de Hera
+O 0 10886 1 10981  carregar uma nova estatua
+R 0 10981 10887    retirar a estatua de Afrodite
+O 0 10887 1 10981  carregar uma nova estatua
+R 0 10845 10888    retirar a enorme pe�a de xadrez
+O 0 10888 1 10845  carregar uma nova pe�a de xadrez
+R 0 10841 10889    retirar um mastro com uma bandeira troiana
+O 0 10889 5 10841  carregar uma novo mastro com a bandeira troiana
+R 0 10841 10913    retirar uma fogueira
+O 0 10913 10 10841 carregar uma nova fogueira
+R 0 10822 10890    retirar um mastro com uma bandeira grega
+O 0 10890 5 10822  carregar uma novo mastro com a bandeira grega
+R 0 10822 10913    retirar uma fogueira
+O 0 10913 10 10822 carregar uma nova fogueira
+R 0 10844 10890    retirar um mastro com uma bandeira grega
+O 0 10890 5 10844  carregar uma novo mastro com a bandeira grega
+R 0 10844 10913    retirar uma fogueira
+O 0 10913 10 10844 carregar uma nova fogueira
+R 0 10915 10889    retirar um mastro com uma bandeira troiana
+O 0 10889 5 10915  carregar uma novo mastro com a bandeira troiana
+R 0 10915 10913    retirar uma fogueira
+O 0 10913 10 10915 carregar uma nova fogueira
+R 0 10906 10900    retirar uma mesa de madeira
+O 0 10900 10 10906 carregar uma nova mesa
+R 0 10906 10902    retirar uma cadeira de madeira
+O 0 10902 10 10906 carregar uma nova cadeira
+R 0 10910 10900    retirar uma mesa de madeira
+O 0 10900 10 10910 carregar uma nova mesa
+R 0 10910 10902    retirar uma cadeira de madeira
+O 0 10902 10 10910 carregar uma nova cadeira
+R 0 10923 10900    retirar uma mesa de madeira
+O 0 10900 10 10923 carregar uma nova mesa
+R 0 10923 10902    retirar uma cadeira de madeira
+O 0 10902 10 10923 carregar uma nova cadeira
+R 0 10929 10901    retirar uma mesa de m�rmore
+O 0 10901 10 10929 carregar uma nova mesa de m�rmore
+R 0 10929 10903    retirar uma cadeira de m�rmore
+O 0 10903 10 10929 carregar uma nova cadeira de m�rmore
+R 0 10907 10904    retirar a fonte de m�rmore
+O 0 10904 3 10907  carregar uma nova fonte
+R 0 10991 10911    retirar uma urna dourada
+O 0 10911 5 10991  carregar uma nova urna dourada
+R 0 10905 10908    retirar uma cama de madeira
+O 0 10908 3 10905 carregar uma nova cama
+R 0 10905 10914    retirar um arm�rio de madeira
+O 0 10914 3 10905 carregar um novo arm�rio
+R 0 10917 10908    retirar uma cama de madeira
+O 0 10908 3 10917 carregar uma nova cama
+R 0 10917 10914    retirar um arm�rio de madeira
+O 0 10914 3 10917 carregar um novo arm�rio
+R 0 10811 10917    retirar portal m�gico
+O 0 10917 1 10811  carregar um novo portal
+R 0 10928 10906    retirar quadro de Poseidon
+O 0 10906 14 10928 carregar um novo quadro
+R 0 10928 10907    retirar quadro de Tr�ia
+O 0 10907 10 10928 carregar um novo quadro
+R 0 10998 10909    retirar uma cama real
+O 0 10909 3 10998 carregar uma nova cama
+R 0 10926 10909    retirar uma cama real
+O 0 10909 3 10926 carregar uma nova cama
+R 0 10931 10909    retirar uma cama real
+O 0 10909 3 10931 carregar uma nova cama
+R 0 10926 10910    retirar uma cama real
+O 0 10910 3 10926 carregar uma nova cama
+R 0 10931 10910    retirar uma cama real
+O 0 10910 3 10931 carregar uma nova cama
+R 0 10998 10910    retirar uma cama real
+O 0 10910 3 10998 carregar uma nova cama
+R 0 10999 10897    retirar um ba� real
+O 0 10897 10 10999 carregar um novo ba�
+P 1 10918 1 10897 carregar moedas de ouro no ba�
+R 0 10921 10921    retirar um p�o
+O 0 10921 50 10921 carregar um novo p�o
+R 0 10921 10921    retirar um p�o
+O 0 10921 50 10921 carregar um novo p�o
+R 0 10921 10923    retirar um barril de vinho
+O 0 10923 50 10921 carregar um novo barril
+*
+* Ajustar as passagens
+*
+D 0 10898 2 2      fechar e trancar a porta de madeira (lado de fora)
+D 0 10902 0 2      fechar e trancar a porta de madeira (lado de dentro)
+D 0 10915 2 2      fechar e trancar a porta dourada (lado de fora)
+D 0 10920 0 2      fechar e trancar a porta dourada (lado de dentro)
+D 0 10925 8 2      fechar e trancar a porta dourada (lado de fora)
+D 0 10928 6 2      fechar e trancar a porta dourada (lado de dentro)
+D 0 10930 0 2      fechar e trancar a porta de madeira (lado de fora)
+D 0 10998 2 2      fechar e trancar a porta de madeira (lado de dentro)
+D 0 10998 7 2      fechar e trancar a porta dourada (lado de fora)
+D 0 10999 9 2      fechar e trancar a porta dourada (lado de dentro)
+S

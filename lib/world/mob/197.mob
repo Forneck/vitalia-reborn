@@ -1,0 +1,278 @@
+#19700
+orc batedor negro~
+o batedor orc~
+Um batedor se esgueira por aqui.
+~
+Você vê um orc não muito grande.  Seu olhar é frio e atento a cada movimento
+seu.  Ele olha para sua bolsa como quem olha para uma presa fácil.
+~
+2117312 0 0 0 1116248 0 0 0 -500 E
+43 -3 -10 15d6+900 5d6+12
+1000 46000
+8 8 1
+E
+#19701
+guarda orc negro~
+o guarda orc~
+Um guarda orc está aqui parado
+~
+Você vê um orc médio de pele negra como a noite mais escura de Vitália.  Ele
+não mostra nenhuma reação mas você percebe que seu próximo passo será em sua
+direção.
+~
+2117122 0 0 0 67864 0 0 0 -500 E
+46 -10 -15 15d6+1000 5d8+16
+1000 56000
+8 8 1
+E
+#19702
+guarda orc negro chefe~
+o chefe da guarda orc~
+O Chefe da guarda Orc grita impacientemente por aqui.
+~
+Você vê um orc de tamanho considerável..  
+'&B..uma luta contra este orc não será tão fácil&n', você pensa.
+~
+2117122 0 0 0 67864 0 0 0 -500 E
+50 -15 -20 15d6+1500 8d6+35
+8000 100000
+8 8 1
+E
+#19703
+aranha negra~
+uma aranha negra~
+Uma aranha negra espera pacientemente sua presa.
+~
+Este aracnídeo tecendo suas teias pacientemente não está muito feliz com sua
+presença...  Talvez antes de atacar a mosca mais próxima ela pense em atacar
+VOCÊ!!
+~
+2097316 0 0 0 2128 0 0 0 0 E
+11 14 0 15d6+100 2d6+4
+0 6000
+8 8 2
+E
+#19704
+cobra negra~
+uma cobra negra~
+Uma cobra negra sibila fitando você.
+~
+O ruído desta enorme cobra negra poderia deixar qualquer um surdo!  Ela
+esgueira-se pelos cantos procurando o melhor momento para dar seu bote.  O
+que você está esperando?  AO ATAQUE!
+~
+2097184 0 0 0 1050704 0 0 0 0 E
+12 13 0 15d6+100 2d6+6
+0 8000
+8 8 2
+E
+#19705
+cobra verde~
+uma cobra verde~
+Uma cobra verde rasteja displicentemente.
+~
+Este réptil passeando pelos cantos não parece oferecer perigo ..  Mas quem
+sabe?
+~
+2097188 0 0 0 2064 0 0 0 -15 E
+15 12 -1 15d6+300 2d4+10
+0 10000
+8 8 2
+E
+#19706
+enorme orc~
+um enorme orc~
+um enorme orc está a procura de uma presa fácil.
+~
+Você dificilmente encontra algum orc tão grande.  Sua pele, de tão escura,
+quase brilha.  Ele olha para você e procura sua faca..  
+~
+2115780 0 0 0 1050712 0 0 0 -500 E
+48 -10 -25 15d6+800 10d4+23
+3000 90000
+8 8 1
+E
+#19707
+orc negro grande~
+um grande orc negro~
+Um grande orc negro caminha por aqui.
+~
+Você olha para este orc que continua sua caminhada até perceber sua
+presença.  Ele olha fixamente para você e para sua arma..  Ele parece
+desejá-la.  
+~
+2115684 0 0 0 256 0 0 0 -600 E
+48 -8 -20 15d6+800 10d6+28
+2000 150000
+8 8 1
+E
+#19708
+orc líder negro~
+o líder dos orcs negros~
+Um Orc ENORME olha você indiferentemente.
+~
+Você nunca viu uma criatura tão grande...
+Mesmo para um orc sua aparência assusta de tão feio e a pele escura como ...
+Como...  Como falta total de luz...  Com certeza não ele não foi escolhido
+líder por seus profundos conhecimentos sobre as necessidades dos orcs mas
+sim pela sua força incomensurável.
+~
+2287746 0 0 0 1116496 0 0 0 -1000 E
+80 -18 -35 15d6+5000 10d8+41
+13000 225000
+8 8 1
+BareHandAttack: 12
+Str: 19
+StrAdd: 100
+Dex: 16
+Int: 3
+Wis: 3
+Con: 18
+Cha: 3
+E
+#19709
+velho druida~
+um velho druida~
+Um velho druida para seu trabalho e olha para você.
+~
+Você vê um velho e profundo conhecedor das ervas medicinais.  
+~
+2353298 0 0 0 67924 0 0 0 0 E
+50 -4 -17 15d6+1000 3d6+22
+3000 100000
+8 8 1
+BareHandAttack: 9
+Str: 16
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#19710
+feiticeiro orc~
+O feiticeiro orc~
+Um orc com vestes negras está parado olhando para o nada.
+~
+Você olha para esta criatura e ela nem se quer toma conhecimento de sua
+chegada.  Parece muito ocupado fingindo-se de inteligente..
+~
+2097346 0 0 0 2424 0 0 0 -500 E
+49 5 -12 15d6+600 3d4+15
+7500 70000
+8 8 1
+E
+#19711
+mulher bela donzela~
+a donzela~
+Uma bela mulher fita você com um olhar apavorado.
+~
+Você vê uma donzela desesperada.  Sua beleza é encoberta pelas marcas da dor
+e do medo.  Você se pergunta o que pode ela estar fazendo num lugar como
+este...
+~
+2115714 0 0 0 2128 0 0 0 0 E
+12 10 -2 15d6+350 6d6+12
+100 10000
+5 4 2
+E
+#19712
+sacerdote orc~
+o sacerdote Orc~
+Um orc em uma túnica negra tenta fazer cara de sábio.
+~
+Você vê um orc pequeno e um tanto embaraçado com sua presença.  Suas vestes
+são longas e negras e sua expressão é de um ser pacífico, isso mais por
+falta de habilidade para batalhas do que por filosofia...
+~
+2113542 0 0 0 2424 0 0 0 -800 E
+40 3 -13 15d6+500 3d6+17
+3000 77000
+8 8 1
+E
+#19713
+velho homem~
+um velho homem~
+Um homem com pensamento distante está aqui.
+~
+Este homem parece ter encontrado aqui o isolamento necessário.  Pela sua
+expressão você percebe que ele há muito não conversa com ninguém.  Ele
+parece ser respeitado pelos orcs e vive nesse vale a tanto tempo quanto o
+mais antigo dos orcs.  Provavelmente ele foi um honrado guerreiro mas sua
+história ainda está por ser contada ..
+~
+2310146 0 0 0 67920 0 0 0 1000 E
+90 -19 -25 15d6+3000 8d6+38
+15000 192000
+8 8 1
+E
+#19714
+prisioneiro elfo~
+um prisioneiro elfo~
+Um prisioneiro elfo tenta não parecer amedrontado.
+~
+Sua expressão é firme embora sua situação não seja das melhores.  Este elfo
+a muito não vê um bom alimento ou água apropriados para ser de tamanha
+beleza.
+~
+2113538 0 0 0 2128 0 0 0 500 E
+53 0 -14 15d6+700 4d6+15
+1000 40000
+8 8 1
+E
+#19715
+prisioneiro elfo~
+o prisioneiro elfo~
+Um prisioneiro mostra um estranho brilho no olhar.
+~
+Você nota no olhar deste elfo um brilho típico de quem tem certeza de que
+sua sorte há de mudar em breve.
+~
+2113542 0 0 0 67648 0 0 0 500 E
+56 0 -20 15d6+900 4d6+18
+1000 49000
+8 8 1
+E
+#19716
+orc criança~
+uma criança orc~
+Uma criança orc olha atentamente cada movimento.
+~
+Você nota um brilho de maldade no olhar dessa criança que observa tentando
+aprender os movimentos de luta dos orcs em treinamento.
+~
+2113538 0 0 0 2128 0 0 0 -500 E
+13 4 -2 15d6+300 3d6+10
+100 24000
+8 8 2
+E
+#19717
+general orc~
+O General Orc~
+Um orc com aparência imponente grita com todo mundo.
+~
+Ele anda de um lado para o outro, grita com todos e olha furiosamente para
+cada um dos presentes nesta sala.  INCLUSIVE VOCÊ!!!
+~
+2121894 0 0 0 67928 0 0 0 -1000 E
+90 -24 -35 15d6+3500 8d6+39
+3000 192000
+8 8 1
+E
+#19718
+aventureiro perdido~
+o aventureiro perdido~
+Um homem olha ao redor parecendo perdido.
+~
+Este aventureiro trás em seu rosto as marcas de muitas aventuras.
+Observando bem você pode se ver em seu olhar..  Pode ver nele seus próprios
+medos e anseios..  Ele é a personificação de todos os aventureiros.  Perdido
+em seus pensamentos ele já não procura um lugar a salvo..  Não procura mais
+sua familia ou amigos..  Ele segue sempre em busca de novos desafios..  
+~
+2344966 0 0 0 1640784 0 0 0 0 E
+76 0 -13 15d6+970 8d6+19
+1000 90000
+8 8 1
+E
+$

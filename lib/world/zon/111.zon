@@ -1,0 +1,59 @@
+#111
+Vitalia~
+O Reino das Pedras~
+11100 11199 180 0 bc 0 0 0 -1 -1
+-1
+*
+*Colocar os monstros
+*
+M 0 11101 1 11176     colocar o guardi�o na entrada
+G 1 11105 1 17    entregar a chave ao guardi�o
+M 0 11101 1 11182     colocar o guardi�o na entrada
+G 1 11105 1 17       entregar a chave ao guardi�o
+M 0 11102 1 11184     colocar o monstro de pedra
+M 0 11103 1 11134     colocar o urso na caverna
+*
+*Colocar os objetos
+*
+O 0 11100 10 11116 	   carregar uma pedra 
+O 0 11100 10 11116 	   carregar uma pedra 
+O 0 11100 10 11141 	   carregar uma pedra 
+O 0 6402 25 11141  	   carregar uma agata 
+O 0 11100 10 11142  	   carregar uma pedra 
+O 0 5230 4 11143    	   carregar uma pedra azul claro 
+O 0 9322 5 11144    	   carregar um monolito de pedra 
+O 0 17326 6 11145     	   carregar uma pequena pedra preta 
+O 0 5230 4 11146    	   carregar uma pedra azul claro 
+O 0 9322 5 11147     	   carregar um monolito de pedra 
+O 0 17326 6 11151     	   carregar uma pequena pedra preta 
+O 0 11100 10 11154   	   carregar uma pedra 
+O 0 11100 10 11154  	   carregar uma pedra 
+O 0 11101 1 11154  	   carregar uma pedra 
+O 0 11100 10 11154  	   carregar uma pedra 
+O 0 6402 25 11154  	   carregar uma agata 
+O 0 17326 6 11154     	   carregar uma pequena pedra preta 
+O 0 11100 10 11157     	   carregar uma pedra 
+O 0 6402 25 11163     	   carregar uma agata 
+O 0 9322 5 11168     	   carregar um monolito de pedra 
+O 0 17326 6 11172     	   carregar uma pequena pedra preta 
+O 0 5230 4 11174     	   carregar uma pedra azul claro 
+O 0 6402 25 11175     	   carregar uma agata 
+O 0 17326 6 11183     	   carregar uma pequena pedra preta 
+O 0 9322 5 11187   	   carregar um monolito de pedra 
+O 0 6402 25 11190     	   carregar uma agata 
+O 0 11100 10 11198         carregar uma pedra 
+O 0 8146 20 11199 	   carregar uma pedra eg�pcia 
+R 0 11139 11103       	   retirar o ba� da floresta
+O 0 11103 1 11139   	   carregar um novo ba�
+P 1 11106 1 11103          carregar um papel dentro do ba�
+R 0 11198 11104       	   retirar o ba� do calabou�o
+O 0 11104 1 11198   	   carregar um novo ba� no calabou�o
+P 1 11102 1 11104          carregar a chave dentro do ba�
+*
+* Ajustar as passagens
+*
+D 0 11176 3 2        fechar os port�es do calabou�o (lado de fora)
+D 0 11198 1 2	     fechar os port�es do calabou�o (lado de dentro)
+D 0 11182 1 2        fechar os port�es do calabou�o (lado de fora)
+S
+$~

@@ -1,0 +1,303 @@
+#3300
+laranja~
+uma laranja~
+Uma laranja est� no ch�o aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+8 0 0 0
+1 8 8 0 0
+E
+laranja~
+Voc� imagina como ela veio parar aqui, visto
+que laranjas n�o costumam migrar.
+~
+#3301
+fardo trigo~
+um fardo de trigo~
+Existe um fardo de trigo aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+24 0 0 0
+100 1000 1000 0 0
+E
+fardo trigo~
+Ele n�o lhe parece apetitoso, mas um
+cavalo adoraria isso...
+~
+#3302
+citara~
+uma grande c�tara~
+Uma ENORME c�tara feita de ouro foi deixada em um canto.~
+~
+8 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+40 200000 20000 0 0
+E
+citara~
+Algu�m realmente forte, com grandes dedos poderia tocar isso. Voc� n�o.
+~
+#3303
+barril perfume~
+um barril de perfume~
+Voc� pode sentir daqui o cheiro do barril no outro lado da sala.~
+~
+8 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+20 100000 10000 0 0
+E
+barril perfume~
+Cheira bem... o r�tulo diz:
+
+   "Em algum lugar entre GPA e MUD encontra-se...
+                OBSESS�O"
+~
+#3304
+estatua~
+uma est�tua~
+Existe uma est�tua do Aglandiir aqui, feita de ouro s�lido.~
+~
+8 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+30 150000 15000 0 0
+E
+estatua~
+Ele � um lindo e extraordin�rio sujeito, para um drag�o.
+~
+#3305
+alabarda~
+uma alabarda~
+Uma alabarda feita de runas encontra-se aqui no ch�o.~
+~
+5 g 0 0 0 an 0 0 0 0 0 0 0
+0 1 12 17
+16 10000 3000 0 0
+E
+alabarda~
+As runas resplandecem com uma luz clara, fazendo voc�
+pensar que esta deve ser uma respeit�vel arma.
+~
+A
+18 5
+#3306
+pocao protecao parda frasco~
+uma po��o de prote��o~
+Existe um frasco com um flu�do pardo aqui.~
+~
+10 a 0 0 0 a 0 0 0 0 0 0 0
+20 36 1 3
+1 10000 2000 0 0
+E
+pocao protecao parda frasco~
+Parece grossa e castanho-cinzenta (parda). Eca!
+~
+#3307
+coroa~
+uma coroa de drag�o~
+A coroa do Aglandiir encontra-se aqui, irradiando uma prote��o.~
+~
+8 a 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+400 0 0 0 0
+E
+coroa~
+A prote��o repele voc�, fazendo voc� imaginar como
+voc� vai colocar sua m�os nesta enorme e valiosa
+pe�a de ouro...
+~
+#3308
+maca~
+uma ma��~
+Uma ma�� vermelha, mas muito magra, est� aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+4 0 0 0
+1 5 2 0 0
+E
+maca~
+Ela n�o est� bichada... ainda.
+~
+#3309
+pao cesta~
+uma cesta de p�es~
+Uma cesta cheia de p�es frescos encontra-se aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+12 0 0 0
+1 10 5 0 0
+E
+pao cesta~
+Mmmm... Centeio!
+~
+#3310
+melao~
+um mel�o~
+Um mel�o est� aqui, descartado evidentemente.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+8 0 0 0
+3 8 3 0 0
+E
+melao~
+Uau!  Olhe para o tamanho daquele mel�o!
+~
+#3311
+faca~
+uma faca~
+Uma faca em perfeita arte descansa aqui.~
+~
+5 dn 0 0 0 ano 0 0 0 0 0 0 0
+0 3 5 11
+8 1000000 20000 0 0
+E
+faca~
+O artes�o... isto tira sua respira��o! Esta
+faca... ela deve ter sido forjada pelo
+legend�rio ferreiro Gabadiel. A faca deve
+valer uma fortuna!
+~
+A
+18 3
+A
+2 2
+#3312
+espada longa~
+uma espada longa~
+Uma magn�fica espada longa est� enfiada na terra.~
+~
+5 dmnt 0 0 0 ano 0 0 0 0 0 0 0
+0 2 7 3
+15 750000 15000 0 0
+E
+espada longa~
+Esta espada � leve mas seu corpo � perfeitamente
+balanceado. Tal arma incr�vel s� pode ter sido
+forjada pelo legend�rio ferreiro Gabadiel e como
+tal, deve valer uma fortuna!
+~
+A
+18 2
+A
+1 1
+#3313
+espada curta~
+uma espada curta~
+Uma espada curta encontra-se aqui... trabalho expl�ndido~
+~
+5 adgimnqt 0 0 0 ano 0 0 0 0 0 0 0
+0 5 6 3
+10 10000000 30000 101 0
+E
+espada curta~
+Ela traz l�grimas ao seus olhos. Esta deve ter
+sido o grande trabalho do ferreiro Gabadiel; seu
+trabalho final. Simplesmente de valor incalcul�vel.
+~
+A
+18 10
+A
+19 10
+A
+2 3
+#3314
+corpo~
+um corpo queimado e desmembrado~
+Um corpo queimado e desmembrado est� aqui no ch�o.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+1 1 1 0 0
+E
+corpo~
+Ele ainda est� ardendo um pouco; os criminosos n�o
+devem estar muito longe!
+~
+#3315
+cimitarra~
+uma cimitarra~
+Uma cimitarra t�o grande quanto seu bra�o est� aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 7 3
+10 500 50 0 0
+E
+cimitarra~
+Esta arma realmente n�o � de muita qualidade.
+~
+#3316
+engradado~
+um engradado~
+Um engradado est� acondicionado aqui.~
+~
+15 0 0 0 0 a 0 0 0 0 0 0 0
+200 5 0 0
+50 100 20 0 0
+E
+engradado~
+� um engradado normal feito de madeira.
+~
+#3317
+arco ca�a~
+um arco de ca�a~
+Um arco de ca�a encontra-se aqui, sem dono~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 5 11
+6 400 40 0 0
+E
+arco ca�a~
+Este � o tipo de arma que voc� usaria para ca�ar
+alguns veados ou coelhos, mas n�o � do tipo que
+voc� levaria para uma batalha...
+~
+A
+19 1
+#3318
+colete couro~
+um colete de couro~
+Um bom colete de couro encontra-se aqui.~
+~
+9 g 0 0 0 ad 0 0 0 0 0 0 0
+6 0 0 0
+6 5000 500 0 0
+E
+colete couro~
+As bainhas foram delicadamente costuradas com uma linha...
+~
+#3319
+copo~
+um copo~
+Um copo de cerveja est� esquecido aqui.~
+~
+17 0 0 0 0 ao 0 0 0 0 0 0 0
+1 1 1 0
+2 5 1 0 0
+E
+copo~
+Este � um bom copo cheio de cerveja caseira. N�o parece existir
+muita coisa flutuando nela.
+~
+#3320
+copo~
+um copo~
+Um grande copo de um l�quido amarelo est� aqui, frio e coberto de gelo.~
+~
+17 0 0 0 0 ao 0 0 0 0 0 0 0
+1 1 3 0
+2 8 3 0 0
+E
+copo~
+Parece bom. Parece aquecido. N�o importa; ele ainda parece bom.
+~
+#3321
+dose~
+uma dose~
+Uma dose de u�sque est� aqui.~
+~
+17 0 0 0 0 ao 0 0 0 0 0 0 0
+1 1 5 0
+1 10 5 0 0
+E
+dose~
+Uau!  Parece ser um material muito potente!
+~
+$~

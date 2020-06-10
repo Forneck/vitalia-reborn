@@ -1,0 +1,528 @@
+#13700
+Nenya anel diamante~
+Nenya, o anel do poder~
+Um magnífico anel de mithril foi deixado aqui.~
+~
+11 adegiq 0 0 0 ab 0 0 0 0 0 0 0
+0 0 0 0
+4 5000000 500000 70 0
+E
+Nenya anel diamante~
+Você observa um belíssimo anel feito de mithril com um magnífico diamante
+fincado nele.  Nenya é um dos três anéis do poder dados aos reis élficos por
+Celebrimbor, um dos maiores joalheiros Élficos da cidade de Ost-in-edhil.
+O Nenya e os outros dois anéis do poder entregues aos reis élficos só não
+são mais poderosos do que o Um anel forjado em Sammath Naur, as câmaras de
+fogo na Montanha da Perdição.  Se este celestial anel chegou as suas mãos,
+então o mantenha protegido dos cruéis poderes do mal e das terríveis mãos do
+senhor do escuro.
+~
+A
+4 1
+A
+18 2
+A
+19 2
+#13701
+frasco luz eärendil~
+a luz de Eärendil~
+Um frasco de cristal foi deixado aqui, emanando uma suave luz branca.~
+~
+1 adegiq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 -1 0
+6 2000000 200000 40 0
+E
+frasco luz eärendil~
+Você observa um lindo frasco de cristal de onde emana uma suave luz branca.
+Este frasco contém a luz da estrela de Eärendil e iluminará os lugares
+escuros por onde você passar quando todas as outras luzes se apagarem.
+~
+A
+12 10
+A
+17 -5
+A
+3 1
+#13702
+pedra élfica elessar~
+a pedra élfica de Elessar~
+Uma linda pedra verde-clara foi esquecida aqui.~
+~
+8 adegq 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+4 1500000 150000 60 0
+E
+pedra élfica elessar~
+Você observa uma belíssima pedra verde-clara, engastada num magnífico broche
+feito de prata e moldado na forma de uma impetuosa águia com as asas
+abertas.
+~
+A
+13 8
+A
+19 2
+#13703
+cacho fios cabelo~
+um cacho de fios de cabelo da senhora de Lothlórien~
+Um majestoso cacho de fios de cabelo dourado foi deixado aqui.~
+~
+8 adegikq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+3 1200000 120000 40 0
+E
+cachos fios cabelo~
+Você observa um belíssimo cacho de fios de cabelo dourado da celestial e
+suprema senhora de Lothlórien e rainha dos Galadhrim, Galadriel.
+~
+A
+12 20
+A
+17 -5
+A
+24 -3
+#13704
+espelho bacia prateada~
+o espelho de Galadriel~
+Uma sublime bacia prateada foi colocada aqui, sobre um altar de pedras.~
+~
+8 aegi 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+6 1000000 100000 101 0
+E
+futuro~
+Você observa um nobre e digno cavaleiro forte, porém com várias marcas de
+batalhas travadas durante sua vida.  Você percebe que este cavaleiro está
+sentado sobre belas nuvens olhando atentamente alguns jovens correndo sobre
+uma bela planície e alguns jovens cavaleiros treinando para futuras batalhas
+e aventuras.  De repente surgem mais dois cavaleiros que carregam em seus
+corpos um brilho celestial e divino.  Os dois divinos cavaleiros seguram o
+primeiro cavaleiro que estava sentando nas nuvens pelos seus braços e voam
+rumo à uma terra distante, onde um espírito de fraternidade e união reina.
+Ao chegarem nesta gloriosa terra você observa poderosos e celestiais deuses
+e imortais.  E de repente o surpreso cavaleiro que foi levado para está
+terra sagrada e divina, se ajoelha e olha para o céu.  Neste momento você
+observa o belo rosto desse surpreso cavaleiro e percebe que ele é você.
+~
+E
+presente~
+Você observa magníficas batalhas sendo travadas por impetuosos cavaleiros e
+bestas enfurecidas e cegas pelo ódio.
+~
+E
+passado~
+Você observa sua bela cidade natal e seus amigos.  Um imenso sentimento de
+saudade toma conta do seu corpo e da sua mente!
+~
+E
+espelho bacia prateada~
+Você observa uma simples bacia prateada contendo um pouco de água
+cristalina.  O espelho de Galadriel pode revelar muitas coisas e para
+algumas pessoas pode mostrar o que elas desejam ver.  O espelho revelará
+algumas coisas já passadas, coisas que estão acontecendo e as que ainda
+podem acontecer.  Após algum tempo você observa algumas imagens surgindo na
+superfície da fina camada d'água contida no espelho.
+~
+#13705
+altar pedras~
+um altar de pedras~
+Um altar de pedras foi construído aqui.~
+~
+12 e 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+70 20000 2000 1 0
+E
+altar pedras~
+Você observa um simples altar construído com grandes pedras cinzentas e uma
+bacia prateada sobre ele.
+~
+#13706
+fonte~
+uma fonte~
+Uma fonte de água prateada está aqui, jorrando seu líquido divino.~
+~
+23 e 0 0 0 0 0 0 0 0 0 0 0
+50 50 15 0
+60 50000 5000 1 0
+E
+fonte~
+Você observa uma bela fonte que nasce de uma majestosa colina verde e suas
+águas prateadas que correm murmurando até o jardim fechado de Lothlórien.
+~
+#13707
+coroa flores douradas~
+uma majestosa coroa de flores douradas~
+Uma linda coroa de flores douradas foi esquecida aqui, reluzindo como ouro.~
+~
+11 ae 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+3 20000 2000 30 0
+E
+coroa flores douradas~
+Você observa uma bela tiara feita com maravilhosas flores dos monumentais
+pés de mallorn, oriundas da celestial floresta dourada de Lothlórien.
+~
+A
+17 -5
+A
+19 1
+#13708
+harpa dourada~
+a bela harpa dourada da senhora de Lórien~
+Uma maravilhosa harpa dourada foi esquecida aqui.~
+~
+8 aeik 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+8 60000 6000 45 0
+E
+harpa dourada~
+Você observa uma belíssima harpa dourada com lindas cordas prateadas.
+~
+A
+5 1
+A
+17 -3
+A
+19 1
+#13709
+manto cinza~
+o magnífico manto do senhor de Lórien~
+Um belíssimo manto cinza foi esquecido aqui.~
+~
+11 aegk 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+6 65000 6500 55 0
+E
+manto cinza~
+Você observa um magnífico manto cinza bordado com algumas runas e inscrições
+prateadas.
+~
+A
+17 -5
+A
+1 1
+A
+24 -2
+#13710
+bainha élfica~
+uma magnífica bainha élfica~
+Uma magnífica bainha foi deixada aqui, emitindo um brilho divino.~
+~
+11 adegikq 0 0 0 al 0 0 0 0 0 0 0
+0 0 0 0
+6 1600000 160000 45 0
+E
+bainha élfica~
+Você observa uma majestosa bainha élfica coberta por uma gravura de flores e
+folhas feita em ouro e prata.  Você observa em sua superfície algumas runas
+élficas formadas por pedras, o nome de Andúril e a linhagem nobre de uma
+espada.
+~
+A
+2 1
+A
+5 1
+A
+17 -4
+#13711
+cinto ouro~
+um belo cinto de ouro~
+Um belo cinto de ouro foi deixado aqui, reluzindo como o sol.~
+~
+11 aei 0 0 0 al 0 0 0 0 0 0 0
+0 0 0 0
+6 1000000 100000 45 0
+E
+cinto ouro~
+Você observa um lindo cinto feito em ouro e ornado por uma bela pedra
+vermelha.
+~
+A
+3 1
+#13712
+cinto prata~
+um lindo cinto de prata~
+Um lindo cinto de prata foi esquecido aqui.~
+~
+11 aei 0 0 0 al 0 0 0 0 0 0 0
+0 0 0 0
+6 900000 90000 45 0
+E
+cinto prata~
+Você observa um belíssimo cinto de prata com uma fivela moldada na forma de
+uma flor de ouro.
+~
+A
+2 1
+A
+18 1
+#13713
+arco galadhrim~
+um belo arco dos Galadhrim~
+Um grande arco foi deixado aqui.~
+~
+5 r 0 0 0 an 0 0 0 0 0 0 0
+0 4 4 1
+10 150000 15000 20 0
+E
+arco galadhrim~
+Você observa um robusto e bastante comprido arco, cuja corda é feita de fios
+de cabelo élfico.  Esses poderosos arcos são utilizados pelos Galadhrim, o
+povo das árvores.
+~
+A
+18 2
+A
+19 2
+#13714
+manto cinza Lórien~
+um belo manto de Lórien~
+Um belíssimo manto cinza foi esquecido aqui.~
+~
+11 0 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+6 160000 16000 20 0
+E
+manto cinza Lórien~
+Você observa um belo manto cinza feito pelas habilidosas e celestiais mãos
+dos elfos de Lothlórien.
+~
+A
+5 1
+A
+17 -3
+#13715
+bracelete prateado~
+um lindo bracelete de Lórien~
+Um belo bracelete prateado foi deixado aqui.~
+~
+11 i 0 0 0 am 0 0 0 0 0 0 0
+0 0 0 0
+4 80000 8000 20 0
+E
+bracelete prateado~
+Você observa um belíssimo bracelete feito de prata com maravilhosas runas
+élficas entalhadas em sua superfície.
+~
+A
+13 10
+A
+17 -3
+#13716
+perneiras prateadas~
+um par de perneiras prateadas de Lórien~
+Um magnífico par de perneiras prateadas foram deixadas aqui.~
+~
+11 i 0 0 0 af 0 0 0 0 0 0 0
+0 0 0 0
+5 85000 8500 20 0
+E
+perneiras prateadas~
+Você observa um magnífico par de perneiras prateadas ornadas com algumas
+pedras verdes e vermelhas.  Você percebe na superfície das belas perneiras
+algumas runas élficas entalhadas.
+~
+A
+14 10
+A
+17 -3
+#13717
+pássaro dourado~
+um impetuoso pássaro dourado~
+Um belo pássaro dourado está aqui, emitindo uma suave luz dourada.~
+~
+1 aegi 0 0 0 ao 0 0 0 0 0 0 0
+0 0 -1 0
+4 140000 14000 25 0
+E
+pássaro dourado~
+Você observa um lindo pássaro dourado voando belamente sobre você.  O seu
+corpo emiti uma suave luz dourada capaz de iluminar os lugares mais escuros
+e as profundas trevas.
+~
+A
+17 -3
+A
+6 1
+#13718
+lamparina prateada~
+uma linda lamparina prateada~
+Uma linda lamparina prateada foi deixada aqui, iluminando todo o lugar.~
+~
+1 a 0 0 0 ao 0 0 0 0 0 0 0
+0 0 -1 0
+5 50000 5000 15 0
+E
+lamparina prateada~
+Você observa uma bela lamparina feita de prata emitindo uma intensa luz.
+~
+A
+6 1
+A
+17 -3
+#13719
+fonte pedra~
+a fonte de pedra de Caras Galadhon~
+Uma belíssima fonte de pedra foi construída aqui.~
+~
+23 ei 0 0 0 0 0 0 0 0 0 0 0
+30 30 15 0
+80 60000 6000 1 0
+E
+fonte pedra~
+Você observa uma linda fonte de pedra cinza.  Nas bordas da fonte você
+observa belos pássaros saltando dentro de suas águas e outros alegremente
+emitindo maravilhosas melodias.
+~
+#13720
+estatuas~
+as formosas estatuas do jardim de Lórien~
+Algumas formosas estatuas de pedras foram fincadas aqui.~
+~
+12 e 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+80 50000 5000 1 0
+E
+estatuas~
+Você observa belíssimas estatuas feitas de pedras, que expressam o cotidiano
+do maravilhoso povo de Lórien.
+~
+#13721
+nascente celebrant~
+a linda nascente do Celebrant~
+A linda nascente do Celebrant jorra suas belas águas entre as rochas.~
+~
+23 e 0 0 0 0 0 0 0 0 0 0 0
+100 100 15 0
+60 1000000 100000 1 0
+E
+nascente celebrant~
+Você observa a bela nascente do Celebrant entre as rochas jorrando
+fortemente suas águas.
+~
+#13722
+barco élfico~
+um sublime barco élfico~
+Um maravilhoso barco élfico foi deixado aqui.~
+~
+22 e 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+22 20000 2000 1 0
+E
+barco élfico~
+Você observa um magnífico barco élfico de construção leve e diferente dos
+barcos de outros povos.  Estes barcos são espertos e resistentes.  Não
+afundarão, não importa o que esteja sendo carregado neles.  Contudo são
+teimosos se forem mal conduzidos.
+~
+#13723
+athelas erva folha~
+uma folha de athelas~
+Uma folha de athelas foi deixada aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+3 0 0 0
+1 100 10 1 0
+E
+athelas erva folha~
+Você observa uma conservada folha da erva Athelas, a folha do rei.  Esta
+erva é um ótimo remédio para aliviar as dores causadas por envenenamentos.
+~
+#13724
+cacho flores douradas~
+um belo cacho de flores douradas de Lórien~
+Um belo cacho de flores douradas de Lórien foram deixadas aqui.~
+~
+12 ae 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+3 200 20 1 0
+E
+cacho flores douradas~
+Você observa um belo e perfumado cacho de flores douradas dos monumentais
+pés de mallorn da flores de Lothlórien.
+~
+A
+6 2
+#13725
+mallorn árvore~
+uma gigantesca mallorn~
+Uma gigantesca mallorn está cravada aqui, à sua frente.~
+~
+8 aei 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+120 2000000 200000 1 0
+E
+mallorn árvore~
+Você uma maravilhosa e monumental mallorn.  Seus troncos são lisos e
+prateados, suas folhas são maiores do que as de bétulas e douradas, e suas
+flores são douradas e exalam um agradável perfume.  As mallorn são
+encontradas apenas na magnífica floresta dourada de Lothlórien.
+~
+#13726
+folha mallorn~
+uma folha dourada de mallorn~
+Uma grande e bela folha dourada caiu aqui.~
+~
+12 aei 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 80 8 1 0
+E
+folha mallorn~
+Você observa uma enorme folha dourada, oriunda dos magníficos pés de mallorn
+da floresta gloriosa de Lothlórien.
+~
+#13727
+lembas bolo pedaço~
+um pedaço de lembas~
+Um pedaço de bolo foi esquecido aqui.~
+~
+19 i 0 0 0 a 0 0 0 0 0 0 0
+20 0 0 0
+3 1000 100 1 0
+E
+lembas bolo pedaço~
+Você observa um saboroso pedaço de lembas entre algumas folhas.  Este
+nutritivo alimento é feito de farinha assada e embalado com folhas.  Apenas
+os Eldar sabiam como fazer.
+~
+#13728
+corda hithlain~
+uma corda de hithlain~
+Uma sublime corda foi deixada aqui.~
+~
+12 aei 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+5 10000 1000 1 0
+E
+corda hithlain~
+Você observa uma resistente corda feita de hithlain, oriunda da gloriosa
+floresta de Lothlórien.
+~
+#13729
+flor sono fumellar~
+uma perfumada fumellar~
+Uma linda flor perfumada foi esquecida aqui.~
+~
+19 aei 0 0 0 ao 0 0 0 0 0 0 0
+4 0 0 0
+2 1000 100 1 0
+E
+flor sono fumellar~
+Você observa uma maravilhosa fumellar.  Chamada pelos deuses de a flor do
+sono, elas cresciam nos jardins de Lórien e ao anoitecer brilhavam em
+vermelho.
+~
+#13730
+esfera vermelha~
+uma esfera vermelha~
+Uma estranha esfera vermelha está aqui, girando no ar na sua frente.~
+~
+14 ae 0 0 0 a 0 0 0 0 0 0 0
+0 75 26 30
+10 1000000 100000 1 0
+E
+esfera vermelha~
+Você observa um estranha esfera vermelha girando velozmente na sua frente.
+No chão você percebe nojentas pegadas de orcs.  Uma estranha sensação toma
+conta do seu corpo!
+~
+$~

@@ -1,0 +1,64 @@
+#72
+Vitalia~
+O Esgoto Labirinto~
+7200 7299 25 2 0 0 0 0 -1 -1
+-1
+*
+* Mobiles
+M 0 7200 1 7201         Esfacelador de Mentes Mestre
+E 1 7200 2 16                   Vara Maligna
+E 1 7203 4 3                    Capa
+G 1 7205 4                      Chave
+O 1 7204 6 7200         Po��o Azul Neon
+O 1 7210 1 7200         Tesouro
+M 0 7201 1 7203         Esfacelador de Mentes Veterano
+E 1 7201 4 16                   Grande Ma�a
+M 0 7202 2 7205         Esfacelador de Mentes Junior
+E 1 7202 8 16                   Pequena Ma�a
+M 0 7202 2 7207         Esfacelador de Mentes Junior
+E 1 7202 8 16                   Pequena Ma�a
+M 0 7203 10 7214        Homem-rato
+E 1 7211 16 16                  Espada Pequena
+M 0 7203 10 7213        Homem-rato
+E 1 7211 16 16                  Espada Pequena
+M 0 7203 10 7215        Homem-rato
+E 1 7211 16 16                  Espada Pequena
+M 0 7203 10 7217        Homem-rato
+E 1 7211 16 16                  Espada Pequena
+M 0 7203 10 7219        Homem-rato
+M 0 7203 10 7221        Homem-rato
+M 0 7203 10 7223        Homem-rato
+M 0 7203 10 7225        Homem-rato
+M 0 7203 10 7233        Homem-rato
+M 0 7203 10 7233        Homem-rato
+M 0 7204 1 7234         Rato Gigantesco
+M 0 7002 5 7285         O Rato de Esgoto
+M 0 7002 5 7285         O Rato de Esgoto
+E 1 7190 5 2                    Anel de Prata
+E 1 7209 8 8                    Botas Lama�entas
+G 1 7208 20                     Bengala da Luz
+M 0 7002 5 7285         O Rato de Esgoto
+M 0 7000 8 7286         O Horripilante Monstro Lama�ento
+M 0 7000 8 7286         O Horripilante Monstro Lama�ento
+M 0 7000 8 7281         O Horripilante Monstro Lama�ento
+M 0 7000 8 7281         O Horripilante Monstro Lama�ento
+M 0 7000 8 7280         O Horripilante Monstro Lama�ento
+* Objects
+R 0 7206 7206
+O 0 7206 4 7206         Cr�nio
+R 0 7211 7208
+O 0 7208 20 7211        Vara da Luz
+* Doors
+D 0 7201 3 2            Porta do Tesouro
+D 0 7200 1 2
+D 0 7202 0 1            Porta Secreta da Toca
+D 0 7201 2 1
+D 0 7208 0 1            Porta da Toca
+D 0 7204 2 1
+D 0 7281 2 1            Porta de Entrada
+D 0 7280 0 1
+D 0 7286 0 1            Porta da Sala de Torturas
+D 0 7285 2 1
+*
+S
+$

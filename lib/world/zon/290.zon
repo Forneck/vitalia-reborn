@@ -1,0 +1,137 @@
+#290
+Vitalia~
+A Torre do Barão de Cailveh~
+29000 29099 190 1 b 0 0 0 -1 -1
+-1
+*
+M 0 29037 1 29049           alfaiate
+M 0 29032 1 29054           Mochaaska
+M 0 29033 1 29052           propriet�ria da loja
+M 0 29029 1 29045           Salaylia
+M 0 29031 1 29042           farmac�utico
+*
+M 0 29036 2 29038           garotinha
+*
+M 0 29035 3 29040           cidad�o
+M 0 29035 3 29050           cidad�o
+*
+M 0 29034 1 29047           ministro da cidade
+E 1 29015 15 13                           cintur�o branco
+*
+M 0 29030 1 29044           dono da ferraria 
+M 0 29028 1 29046           Calintra    
+M 0 29027 1 29048           bela mulher 
+M 0 29026 1 29048           elegante cavalheiro
+M 0 29025 1 29048           homem          
+M 0 29024 1 29048           contador de hist�rias      
+M 0 29023 1 29048           balconista          
+M 0 29022 1 29027           professora     
+M 0 29021 1 29028           homem     
+*
+D 0 29028 1 1 100
+M 0 29020 1 29024           dona da casa
+*
+D 0 29024 2 1
+M 0 29019 1 29035           velho homem
+*
+D 0 29035 3 1
+M 0 29018 1 29036           lenhador desocupado     
+*
+D 0 29036 3 1
+M 0 29017 1 29032           fazendeiro        
+*
+D 0 29032 1 1
+M 0 29016 1 29037           dona de casa 
+*
+D 0 29037 3 1
+M 0 29015 3 29017           vaca   
+M 0 29015 3 29018           vaca   
+M 0 29015 3 29016           vaca        
+*
+D 0 29016 0 1
+M 0 29014 1 29015           colono da fazenda          
+*
+D 0 29015 2 1
+M 0 29013 1 29061           primo visitante      
+E 1 29013 15 7                              par de perneiras desgastadas
+E 1 29014 15 13                            cinto manchado
+*
+D 0 29061 2 1
+M 0 29012 1 29073           empregada        
+*
+M 0 29008 1 29056           arrogante propriet�ria                   
+E 1 29010 20 19                             diamante cintilante                              
+M 0 29007 1 29056           humilde peticion�rio   
+*
+D 0 29056 3 1
+M 0 29011 2 29014           seguran�a do quarto               
+E 1 29012 15 11                             escudo de face prateada
+*
+M 0 29011 2 29014           seguran�a do quarto            
+E 1 29011 15 16                             enorme clava
+*
+D 0 29014 1 1
+M 0 29010 1 29077           assistente              
+*
+D 0 29077 2 2
+M 0 29009 1 29057           fazendeiro          
+*
+M 0 29006 1 29057           elegante homem          
+G 1 29009 15 0
+*
+M 0 29002 1 29057           Gilzaan           
+E 1 29006 15 2                               anel prateado de Cailveh
+*
+D 0 29057 0 1
+M 0 29005 1 29060           servo         
+*
+D 0 29060 2 1
+M 0 29004 1 29080           astr�nomo da corte       
+*
+M 0 29003 1 29076           Necromocis        
+E 1 29007 20 8                               par de sand�lias escolares
+E 1 29008 200 17                              livro da prote��o
+*
+M 0 29000 1 29079           Bar�o de Cailveh   
+E 1 29000 1 17                                velha e fr�gil chave 
+E 1 29001 15 16                               mangual do Bar�o  
+E 1 29002 15 12                               manto sagrado  
+E 1 29003 15 14                               bracelete de p�rolas  
+*
+D 0 29058 2 1           
+D 0 29058 0 1
+D 0 29058 1 1
+*
+M 0 29001 1 29058           Melinna    
+E 1 29004 15 19                               cruz de peltre   
+E 1 29005 15 5                                vestido branco liso
+*
+D 0 29081 0 2
+D 0 29071 4 1
+D 0 29071 1 1
+D 0 29075 5 1
+D 0 29066 3 1
+D 0 29070 0 1
+D 0 29064 2 1
+D 0 29065 0 1
+D 0 29067 2 1
+D 0 29062 0 1
+D 0 29059 3 1
+D 0 29023 3 1
+D 0 29023 1 1
+D 0 29023 0 1
+D 0 29034 1 1
+D 0 29022 1 1
+D 0 29022 3 1
+D 0 29033 1 1
+D 0 29021 1 1
+D 0 29021 3 1
+D 0 29031 3 1
+D 0 29025 1 1
+D 0 29029 3 1
+D 0 29026 1 1
+D 0 29026 3 1
+D 0 29000 7 1
+*
+S
+$

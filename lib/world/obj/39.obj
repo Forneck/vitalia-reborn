@@ -1,0 +1,373 @@
+#3900
+lâmina destino eterno~
+a lâmina do Destino Eterno~
+Uma lâmina negra está jogada aqui, esperando para empalar alguém.~
+~
+5 bgjn 0 0 0 an 0 0 0 0 0 0 0
+0 3 8 3
+9 2000 0 40 0
+A
+18 1
+A
+19 2
+#3901
+adaga cólera~
+a adaga da cólera~
+Uma adaga com um formato arcano brilha com uma leve aura vermelha no chão.~
+~
+5 ln 0 0 0 ano 0 0 0 0 0 0 0
+0 2 8 14
+5 2000 0 30 0
+A
+2 1
+A
+5 1
+#3902
+anel escuridão~
+o Anel da Escuridão~
+Você percebe um pequeno anel com um brilho estranho jogado junto à sujeira.~
+~
+9 amnpt 0 0 0 ab 0 0 0 0 0 0 0
+8 0 0 0
+1 1500 0 30 0
+A
+2 1
+A
+18 2
+#3903
+colar chamas flamejante~
+um colar flamejante~
+Um colar em chamas está jogado aqui~
+~
+9 aglq 0 0 0 ac 0 0 0 0 0 0 0
+5 0 0 0
+2 2500 0 30 0
+A
+18 1
+#3904
+braçais pragas~
+os braçais das pragas~
+Um par de braçais com estranhas inscrições foi abandonado aqui.~
+~
+9 ajpq 0 0 0 ai 0 0 0 0 0 0 0
+6 0 0 0
+6 1000 0 40 0
+A
+12 100
+A
+14 -20
+#3905
+keldar ira espada~
+a Ira de Keldar~
+Uma estranha espada coberta com manchas de sangue está cravada aqui.~
+~
+5 aq 0 0 0 an 0 0 0 0 0 0 0
+0 3 8 3
+9 0 0 70 0
+A
+13 -20
+A
+18 2
+A
+19 -1
+#3906
+espada cristal~
+uma espada de cristal~
+Você fita uma espada feita de cristal flutuando próxima aos seus pés.~
+~
+5 abfgkoq 0 0 0 an 0 0 0 0 0 0 0
+0 3 6 3
+6 25000 0 40 0
+A
+1 2
+A
+5 2
+A
+19 3
+#3907
+brilhante armadura~
+uma armadura brilhante~
+Você vislumbra uma brilhante armadura jogada aqui.~
+~
+9 aimoptu 0 0 0 ad 0 0 0 0 0 0 0
+13 0 0 0
+10 9000 0 40 0
+A
+12 100
+#3908
+chave flamejante metal chamas~
+uma chave flamejante~
+Você vê um pedaço de metal em chamas jogado aqui.~
+~
+18 cdhq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#3909
+martelo juiz~
+o martelo do Juiz~
+Um martelo de juiz foi abandonado aqui.~
+~
+5 bq 0 0 0 ano 0 0 0 0 0 0 0
+0 5 4 5
+9 15000 0 20 0
+A
+3 1
+A
+4 2
+#3910
+vestes juiz negras~
+as vestes de um juiz~
+Algumas vestes negras estão jogadas aqui, elas brilham levemente.~
+~
+9 p 0 0 0 ak 0 0 0 0 0 0 0
+9 0 0 0
+5 12000 30 0 0
+A
+3 2
+#3911
+placa bronze palavras~
+uma grande placa~
+Uma grande placa de bronze escrita com palavras flamejantes foi posta em um pilar.~
+~
+13 a 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+100 0 0 0 0
+E
+placa bronze palavras~
+"Nessas terras as estrelas caem dos céus dos dragões, onde o sol poente seca
+suas lágrimas sobre promessas desfeitas.  Onde poeira das estrelas lhe
+carregam até as terras esquecidas.  E o hino das estrelas se torna guia."
+~
+#3912
+chave gelo cristal~
+uma chave de cristal~
+Uma chave feita de cristal e fria como gelo foi deixada aqui.~
+~
+18 af 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#3913
+trono gelo~
+o Trono de Gelo~
+Um grande trono real feito de gelo foi posto aqui~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+500 11 3936 0
+100 0 0 0 0
+#3914
+amuleto ancião~
+um amuleto ancião~
+Um amuleto com aparência antiga foi deixado aqui, junto à sujeira.~
+~
+9 bg 0 0 0 ac 0 0 0 0 0 0 0
+9 0 0 0
+1 0 0 0 0
+A
+13 30
+A
+24 -10
+#3915
+amuleto alma~
+o amuleto alma~
+Um amuleto translúcido foi abandonado aqui.~
+~
+9 fgi 0 0 0 ac 0 0 0 0 0 0 0
+8 0 0 0
+2 2000 0 40 0
+A
+12 50
+A
+24 -10
+#3920
+demônio lâmina~
+a lâmina demônio~
+Uma lâmina forjada de algum material ínfero bruxuleia entre as sombras.~
+~
+5 ajlmnt 0 0 0 ano 0 0 0 0 0 0 0
+0 3 6 3
+6 0 0 20 0
+A
+5 1
+A
+19 1
+#3921
+manto sombras negro longo~
+um longo manto negro~
+Um manto que parece ter sido feito de sombras está jogado aqui.~
+~
+9 ajlmnt 0 0 0 ak 0 0 0 0 0 0 0
+9 0 0 0
+7 2000 0 20 0
+A
+17 -7
+A
+24 -3
+A
+5 -3
+#3925
+garras valik~
+as garras de Valik~
+As garras de uma besta foram abandonadas aqui.~
+~
+5 g 0 0 0 ahn 0 0 0 0 0 0 0
+0 4 4 0
+2 0 0 50 0
+A
+6 -2
+A
+19 2
+#3926
+espada anciões~
+a espada dos anciões~
+Uma longa espada, com aparência imponente, foi cravada no chão.~
+~
+5 abgio 0 0 0 an 0 0 0 0 0 0 0
+0 5 4 0
+6 2000 0 40 0
+A
+18 2
+A
+19 3
+A
+24 -20
+#3927
+capacete tempestade~
+o capacete da tempestade~
+Um grande e belo capacete azul foi deixado aqui. Dele emana uma estranha energia.~
+~
+9 aghmnt 0 0 0 ae 0 0 0 0 0 0 0
+6 0 0 0
+5 2000 0 30 0
+A
+9 -2
+#3928
+manoplas trovão~
+as manoplas do trovão~
+Você percebe um par de manoplas jogadas no chão, delas nascem estranhos fios elétricos.~
+~
+9 agop 0 0 0 ah 0 0 0 0 0 0 0
+6 0 0 0
+7 2000 0 30 0
+A
+5 2
+A
+19 1
+#3929
+brinco crânio ossos~
+um brinco de crânio com ossos cruzados~
+Um brinco jogado aqui parece sorrir malignamente para você.~
+~
+9 hn 0 0 0 aq 0 0 0 0 0 0 0
+2 0 0 0
+2 1000 0 28 0
+#3930
+escudo elementos~
+o escudo dos elementos~
+Um robusto escudo que possui um brilho estranho foi deixado aqui.~
+~
+9 abgp 0 0 0 aj 0 0 0 0 0 0 0
+9 0 0 0
+7 1000 0 60 0
+A
+12 120
+A
+19 2
+#3931
+manto tecido sangue~
+um manto de sangue~
+Um pequeno monte de tecido vermelho como sangue foi jogado aqui. Ele parece estar vivo.~
+~
+9 hn 0 0 0 ak 0 0 0 0 0 0 0
+2 0 0 0
+5 0 0 0 0
+A
+24 -3
+#3932
+anel gelo~
+o anel do gelo~
+Um belo anel que parece ter sido forjado em gelo está jogado aqui~
+~
+11 q 0 0 0 ab 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 10 0
+A
+1 1
+A
+17 -5
+#3933
+braço esqueleto~
+o braço de um esqueleto~
+O braço de algum infeliz jaz jogado aqui.~
+~
+14 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+200 0 0 0 0
+#3934
+chicote lagarto cinco cabeças~
+um chicote com cinco cabeças de lagarto~
+Um estranho chicote com cinco cabeças de lagarto foi deixado aqui.~
+~
+5 b 0 0 0 an 0 0 0 0 0 0 0
+0 3 6 2
+12 0 0 30 0
+A
+18 1
+A
+19 2
+#3935
+baú gelo~
+um baú de gelo~
+Um grande baú feito inteiramente de gelo cristalino foi posto aqui.~
+~
+15 f 0 0 0 0 0 0 0 0 0 0 0
+500 15 3936 0
+100 0 0 0 0
+E
+baú gelo~
+O baú possui um estranho buraco em seu topo.
+~
+#3936
+chave gelo~
+uma chave de gelo~
+Uma chave feita inteiramente de gelo cristalino foi jogada aqui.~
+~
+18 cd 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#3937
+estalactite gelo~
+uma estalactite de gelo~
+Uma estalactite de gelo está jogada aqui.~
+~
+5 afg 0 0 0 an 0 0 0 0 0 0 0
+0 4 6 11
+15 0 0 50 0
+A
+18 -3
+A
+19 4
+#3950
+fonte~
+uma fonte~
+Uma fonte majestosamente esculpida com estranhos desenhos está aqui, inexplicavelmente intacta.~
+~
+23 0 0 0 0 0 0 0 0 0 0 0 0
+1000 1000 15 0
+300 0 0 0 0
+#3951
+adaga~
+uma pequena adaga~
+Uma pequena adaga foi deixada no chão.~
+~
+5 ain 0 0 0 ano 0 0 0 0 0 0 0
+0 2 8 0
+2 1200 0 0 0
+#3952
+amontoado ouro moedas~
+um amontoado de moedas de ouro~
+Um amontoado de moedas de ouro está abandonado aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+30000 0 0 0
+5 0 0 0 0
+$~

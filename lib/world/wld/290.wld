@@ -1,0 +1,1377 @@
+#29000
+O Port�o de Madeira~
+   A estrada a sul deste port�o � coberta com uma camada de pedregulho, a
+uma curta dist�ncia do sudeste, um pequeno povoado pode ser visto.  O port�o
+parece ser mais que um ponto de parada para viajantes se certificarem do
+caminho certo a ser tomado ou para ter certeza de que o Bar�o est� de fato
+em sua torre do que um posto militar de fiscaliza��o - embora h� guardas que
+fa�am isso.  Ao oeste o caminho leva para longe das terras de Cailveh.
+~
+290 0 0 0 0 1
+D2
+~
+~
+0 -1 29001
+D7
+~
+port�o~
+1 -1 2689
+S
+#29001
+A Estrada de Pedregulhos~
+   Esta estrada � meticulosamente bem cuidada, atravessando os campos de
+trigo e milho que parecem crescer sempre em toda a �rea.  Um pequeno povoado
+fica ao sudeste daqui, fuma�a vem das muitas chamin�s, todas as constru��es
+parecem ser muito bem cuidadas.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29000
+D2
+~
+~
+0 -1 29002
+S
+#29002
+A Estrada de Pedregulhos~
+   Do lado leste da estrada, a parte traseira de muitas casas podem ser
+vistas.  Elas s�o todas bem constru�das, fortes e adornadas com grama fresca
+que cresce a seu redor.  A estrada continua a norte e ao sul.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29001
+D2
+~
+~
+0 -1 29003
+S
+#29003
+A Estrada de Pedregulhos~
+   Do lado leste da estrada, a parte traseira de muitas casas podem ser
+vistas.  Elas s�o todas bem constru�das, fortes e adornadas com grama fresca
+que cresce a seu redor.  A estrada continua a norte e ao sul, sendo ao sul,
+a entrada para o povoado.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29002
+D2
+~
+~
+0 -1 29004
+S
+#29004
+Pelo Povoado~
+   Uma estrada, tamb�m cheia de pedregulhos, igual a que voc� est�, segue a
+leste pelo povoado.  Ao sul, a estrada continua at� virar ao leste, ao
+norte, ela segue at� onde seus olhos alcan�am.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29003
+D1
+~
+~
+0 -1 29019
+D2
+~
+~
+0 -1 29005
+S
+#29005
+A Estrada de Pedregulhos~
+   A estrada segue ao norte e ao sul, o povoado dos contribuintes do Bar�o
+fica logo ao leste e os belos campos de gr�os ao oeste.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29004
+D2
+~
+~
+0 -1 29006
+S
+#29006
+A Estrada de Pedregulhos~
+   A estrada segue a norte e sul, o povoado dos contribuintes do Bar�o fica
+ao leste e os belos campos de gr�os ao oeste.  Ao sul, a estradas fazem uma
+curva para o sudeste.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29005
+D2
+~
+~
+0 -1 29007
+S
+#29007
+A Estrada Pedregulhos~
+   A estrada curva-se ao leste, em dire��o � torre que pode ser vista a
+curta dist�ncia.  Um pequeno caminho leva a um celeiro, a �nica constru��o
+entre o povoado e a torre.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29006
+D1
+~
+~
+0 -1 29008
+S
+#29008
+A Estrada de Pedregulhos~
+   A estrada continua a contorcer-se atrav�s dos campos, a torre, mais alta
+do que nunca, fica ao sudeste.  Ao norte, atrav�s de um caminho pelos campos
+de milho, uma pequeno povoado pode ser visto - o lugar onde todos que
+trabalham para o Bar�o vivem.
+~
+290 0 0 0 0 1
+D2
+~
+~
+0 -1 29009
+D3
+~
+~
+0 -1 29007
+S
+#29009
+Uma Curva no Caminho de Pedregulhos~
+   A estrada faz uma curva ao norte e leste, levando para a torre de Cailveh
+ou para longe dela - dependendo em qual caminho voc� v� seguir.  Um celeiro
+fica a sudeste daqui, a �nica estrutura vis�vel entre aqui, e a torre.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29008
+D1
+~
+~
+0 -1 29010
+S
+#29010
+Uma Curva no Caminho de Pedregulhos~
+   A estrada faz uma curva ao norte e leste, levando para a torre de Cailveh
+ou para longe dela - dependendo em qual caminho voc� v� seguir.  Uma pequena
+entrada para o celeiro fica ao sul.
+~
+290 0 0 0 0 1
+D2
+~
+~
+0 -1 29011
+D3
+~
+~
+0 -1 29009
+S
+#29011
+Diante de um Grande Celeiro~
+   A entrada para o celeiro fica ao sul, a porta previamente est� aberta
+para quem quiser entrar.  Parece que Cailveh confia em seus complacentes
+guardas que controlam a entrada de sua propriedade...  Ao leste a estrada
+segue para a porta principal de Cailveh, ao norte a estrada segue para fora
+destas terras.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29010
+D1
+~
+~
+0 -1 29012
+D2
+~
+~
+0 -1 29015
+S
+#29012
+A Oeste da Torre~
+   A torre de Cailveh fica a leste daqui, sua altura o assusta a medida que
+voc� se aproxima.  A estrada leva em dire��o � torre ou a oeste, para fora
+destas terras.
+~
+290 0 0 0 0 1
+D1
+~
+~
+0 -1 29013
+D3
+~
+~
+0 -1 29011
+S
+#29013
+Diante da Torre~
+   As portas da torre ficam ao leste, com suas grandes portas de carvalho,
+emolduradas em ferro.  Colheitas abundantes ficam pelo norte e sul da
+estrada, de onde sobra uma calma brisa.  Este n�o � de forma alguma, um
+lugar a se sentir intimidado, ou indesejado.
+~
+290 0 0 0 0 1
+D1
+~
+~
+0 -1 29014
+D3
+~
+~
+0 -1 29012
+S
+#29014
+Os Portais de Entrada da Torre~
+   As portas para a torre, s�o certamente grandes o bastante para serem
+consideradas portais - elas s�o pelo menos dez metros altas.  Entre, se voc�
+quiser, ou volte ao oeste, pela estrada principal.
+~
+290 0 0 0 0 1
+D1
+~
+porta portais~
+1 -1 29056
+D3
+~
+~
+0 -1 29013
+S
+#29015
+O Celeiro Minuciosamente Limpo~
+   At� as paredes interiores deste celeiro foram pintadas de prata!  As
+ferramentas s�o penduradas nas paredes, ordenadas cuidadosamente, o ch�o, �
+at� varrido.  Atrav�s de uma porta ao sul ficam os pastos.
+~
+290 8 0 0 0 0
+D0
+~
+~
+0 -1 29011
+D2
+~
+porta~
+0 -1 29016
+S
+#29016
+Os Pastos~
+   Esta pequena �rea cercada guarda as vacas que mant�m os moradores de
+Cailveh bem alimentadas e com grande suprimento de leite.  Cuidado onde voc�
+pisa...
+~
+290 0 0 0 0 2
+D0
+~
+porta~
+0 -1 29015
+D1
+~
+~
+0 -1 29017
+D3
+~
+~
+0 -1 29018
+S
+#29017
+Os Pastos~
+   Esta pequena �rea cercada guarda as vacas que mant�m os moradores de
+Cailveh bem alimentadas e com grande suprimento de leite.  Cuidado onde voc�
+pisa...  
+~
+290 0 0 0 0 2
+D3
+~
+~
+0 -1 29016
+S
+#29018
+Os Pastos~
+   Esta pequena �rea cercada guarda as vacas que mant�m os moradores de
+Cailveh bem alimentadas e com grande suprimento de leite.  Cuidado onde voc�
+pisa... 
+~
+290 0 0 0 0 2
+D1
+~
+~
+0 -1 29016
+S
+#29019
+A Estrada do Povoado~
+   Esta bem cuidada estrada segue atrav�s do povoado, um lugar muito bem
+cuidado, onde as ruas est�o livres dos lixos e todas as casas s�o limpas
+regularmente.  A estrada principal fica ao oeste.
+
+Um pequeno aviso fica no lado sul da estrada.
+~
+290 0 0 0 0 1
+D1
+~
+~
+0 -1 29020
+D3
+~
+~
+0 -1 29004
+E
+aviso~
+Todos os viajantes s�o bem vindos.
+
+N�o traga a maldade com voc� ao entrar, mas apenas a bondade aflorada em seu
+cora��o.  Que os Deuses estejam contigo.
+~
+S
+#29020
+Uma Interse��o na Estrada do Povoado~
+   Casas ficam ao norte e sul; pequenas, limpas estruturas que parecem
+aconchegantes.  Ao leste h� o que parece ser o mercado, onde a maioria dos
+neg�cios do vilarejo s�o feitos.  A estrada principal para a torre fica a
+oeste.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29021
+D1
+~
+~
+0 -1 29038
+D2
+~
+~
+0 -1 29025
+D3
+~
+~
+0 -1 29019
+S
+#29021
+A Estrada do Povoado~
+   Estradas ficam do lado leste e oeste da estrada, que segue a norte e sul
+passando por casas de todos os tamanhos e formas.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29022
+D1
+~
+porta~
+0 -1 29037
+D2
+~
+~
+0 -1 29020
+D3
+~
+porta~
+0 -1 29032
+S
+#29022
+A Estrada do Povoado~
+   Estradas ficam do lado leste e oeste da estrada, que segue a norte e sul
+passando por casas de todos os tamanhos e formas.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29023
+D1
+~
+porta~
+0 -1 29036
+D2
+~
+~
+0 -1 29021
+D3
+~
+porta~
+0 -1 29033
+S
+#29023
+Um Beco Sem Sa�da~
+   Voc� est� cercado por todos os lados, exceto a sul, por casas dos
+moradores de Cailveh.  A �nica sa�da daqui � ao sul, ao menos que voc�
+de seja encontrar alguma pessoa que more nestas casas.
+~
+290 0 0 0 0 1
+D0
+~
+porta~
+0 -1 29024
+D1
+~
+porta~
+0 -1 29035
+D2
+~
+~
+0 -1 29022
+D3
+~
+porta~
+0 -1 29034
+S
+#29024
+Uma Casa Simples~
+   A mob�lia deste lugar � bastante simples, nada parece ter algum valor,
+apenas fun��o.  H� apenas um adorno na parede, que � um grande quadro que
+ostenta uma pintura dos belos pastos dourados.
+~
+290 8 0 0 0 0
+D2
+~
+porta~
+0 -1 29023
+S
+#29025
+A Estrada do Povoado~
+   Esta � uma �rea residencial da comunidade, onde casas se alinham em ambos
+lados da rua.  Apenas a norte daqui h� a interse��o principal, ao sul, fica
+uma pequena pra�a.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29020
+D1
+~
+porta~
+0 -1 29031
+D2
+~
+~
+0 -1 29026
+D3
+~
+~
+0 -1 29030
+S
+#29026
+A Pra�a do Col�gio~
+   Denominada Pra�a do Col�gio, por nenhuma outra raz�o, sen�o o fato do
+col�gio estar bem ao sul daqui, esta pequena pra�a faz uma curva contornada
+pelas casas do lado leste e oeste da escola.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29025
+D1
+~
+porta~
+0 -1 29029
+D2
+~
+~
+0 -1 29027
+D3
+~
+porta~
+0 -1 29028
+S
+#29027
+O Velho Col�gio~
+   H� tr�s filas de mesas alinhadas no ch�o, e uma mesa um pouco maior de
+frente para o lado sul da sala.  Pequenos detalhes mostram que esta pequena
+comunidade d� grande �nfase para a religi�o, como grandes livros religiosos
+em cima da mesa maior.
+~
+290 8 0 0 0 0
+D0
+~
+~
+0 -1 29026
+S
+#29028
+Uma Pequena Casa~
+   Este pequeno lar, n�o tem mais de dez p�s, obviamente a casa de algu�m
+solteiro.  Uma pequena cama fica pela parede sul, uma pequena mesa, fica no
+canto noroeste.
+~
+290 8 0 0 0 0
+D1
+~
+porta~
+0 -1 29026
+S
+#29029
+Uma Casa Limpa~
+   Esta casa de tamanho m�dio � meticulosamente limpa, as paredes foram at�
+lavadas.  Um quadro com a imagem de um austero homem fica na parede perto da
+porta, onde tamb�m parece ter um aviso.
+~
+290 8 0 0 0 0
+D3
+~
+porta~
+0 -1 29026
+E
+aviso~
+Por favor, tire os sapatos!
+~
+S
+#29030
+Uma Casa Vazia~
+   Parece que quem quer que seja que construiu este lugar, a abandonou para
+viver em algum outro lugar.  Com um pouco de limpeza, e alguns pequenos
+concertos, este poderia ser um bom lugar para se viver.
+~
+290 8 0 0 0 0
+D1
+~
+~
+0 -1 29025
+S
+#29031
+Uma Casa Recentemente Pintada~
+   O cheiro de tinta usada nas paredes � ainda fresco, as paredes ainda
+brilham com a tinta.  Todas as mob�lias foram afastadas das paredes at� que
+as mesmas sequem.
+~
+290 8 0 0 0 0
+D3
+~
+porta~
+0 -1 29025
+S
+#29032
+Uma Casa Silenciosa~
+   As brancas paredes desta casa juntamente com as s�brias mob�lias d�o um
+ar bastante s�rio a esta casa.  
+~
+290 8 0 0 0 0
+D1
+~
+porta~
+0 -1 29021
+S
+#29033
+Uma Casa Simples~
+   Esta � de fato a casa de algu�m feliz, simples mas feliz; nada na casa
+parece ter algum valor monet�rio.  H� uma mesa com cadeiras feitas de
+madeira crua e uma cama feita da mesma madeira.
+~
+290 0 0 0 0 0
+D1
+~
+porta~
+1 0 29022
+S
+#29034
+Uma Pequena Casa~
+   Os c�modos desta casa s�o apertados, de fato, permitindo movimento para
+apenas uma pessoa de casa vez.  A porta fica ao leste.
+~
+290 8 0 0 0 0
+D1
+~
+porta~
+0 -1 29023
+S
+#29035
+Uma Casa de Telhado de Sap�~
+   Esta � a �nica casa em todo o vilarejo que n�o tem telhado a prova de
+�gua.  O telhado � feito de sap�, as paredes s�o de madeira �spera, e
+estranhamente, aqui parece ser um bom lugar para se ficar.
+~
+290 8 0 0 0 0
+D3
+~
+porta~
+0 -1 29023
+S
+#29036
+Uma Pequena Casa Feita de Troncos~
+   Esta �, at� onde voc� saiba, a �nica casa no povoado feita de madeira.  O
+dono deve ter gasto bastante tempo para construir este lugar, e deve se
+orgulhar muito, pois o lugar ficou lindo.  A maioria da madeira das paredes
+internas foram esculpidas para maior conforto.  A mob�lia � feita da mesma
+madeira escura da qual fora feita a casa.
+~
+290 8 0 0 0 0
+D3
+~
+~
+0 -1 29022
+S
+#29037
+Uma Casa Confort�vel~
+   Esta casa ostenta um fog�o de madeira em brasa ao canto norte, o ar
+quente d� ao lugar um clima confort�vel e aconchegante.  Uma poltrona
+forrada com pele de animais e uma escrivaninha ficam na parede sul.
+~
+290 8 0 0 0 0
+D3
+~
+porta~
+0 -1 29021
+S
+#29038
+Atrav�s do Povoado~
+   Esta pequena parte de estrada corre entre as duas principais interse��es
+do povoado, ao norte fica um estabelecimento p�blico.  O estabelecimento �
+na verdade um bom lugar para se comer, tem uma reputa��o de boa comida e
+bons freq�entadores.
+~
+290 0 0 0 0 1
+D1
+~
+~
+0 -1 29039
+D2
+~
+~
+0 -1 29048
+D3
+~
+~
+0 -1 29020
+S
+#29039
+Pr�ximo � Pra�a do Vilarejo~
+   Um lindo parque fica ao lado leste da rua, cheio de flores e �rvores.  A
+pequena estrada segue a norte e sul atrav�s do centro de neg�cios e tamb�m
+ao oeste.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29040
+D1
+~
+~
+0 -1 29047
+D2
+~
+~
+0 -1 29050
+D3
+~
+~
+0 -1 29038
+S
+#29040
+A Estrada do Vilarejo~
+   A estrada segue pelo norte e sul, passando por um pequeno restaurante do
+lado leste e um herborista do lado oeste da estrada.  Ao norte daqui fica
+uma pequena pra�a. 
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29041
+D1
+~
+~
+0 -1 29045
+D2
+~
+~
+0 -1 29039
+D3
+~
+~
+0 -1 29046
+S
+#29041
+A Pra�a Nordeste~
+   Neg�cios o cercam, o martelar do ferreiro pode ser bem ouvido ao lado
+oeste da estrada, um pequeno pr�dio fica a leste - onde reside o m�dico da
+cidade.  Ao norte, o alquimista diz ter as melhores po��es de todos os
+tempos.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29042
+D1
+~
+~
+0 -1 29043
+D2
+~
+~
+0 -1 29040
+D3
+~
+~
+0 -1 29044
+S
+#29042
+A Farm�cia~
+   Cheiros estranhos comp�e o ar deste mofado e curioso lugar.  Liquidos
+coloridos guardados em recipientes de vidro tomam a parede norte, atr�s do
+balc�o - o trabalho de horas de preparo, feitas pelo Mestre Alquimista.
+~
+290 8 0 0 0 0
+D2
+~
+~
+0 -1 29041
+S
+#29043
+O M�dico da Cidade~
+   Parece que o doutor n�o est� no momento.  O pr�dio inteiro repousa em
+sil�ncio e vazio.  Sem vida.  Entediantemente estranho.
+~
+290 8 0 0 0 0
+D3
+~
+~
+0 -1 29041
+S
+#29044
+A Ferraria~
+   Entrando neste pr�dio te teto bastante alto, o calor o engolfa.  O homem
+r�stico e imundo que trabalha nos fundos deste lugar, n�o deve obviamente
+ligar para higiene ou pelo fato de estar trabalhando a uma temperatura
+absurda.
+~
+290 8 0 0 0 0
+D1
+~
+~
+0 -1 29041
+S
+#29045
+Salaylia~
+   Salaylia prepara os mais deliciosos pratos, que podem ser comidos aqui
+mesmo, ou levados para suas jornadas.  De qualquer modo, ela se sente
+satisfeita em poder alimentar os famintos.
+~
+290 8 0 0 0 0
+D3
+~
+~
+0 -1 29040
+S
+#29046
+A Herborista~
+   Pequenas plantas crescem pelas prateleiras nas paredes norte e sul do
+lugar, o balc�o fica ao oeste.  Dentro do balc�o, h� amostras de cataplasmas
+e rem�dios que o herbarista oferece.
+~
+290 8 0 0 0 0
+D1
+~
+~
+0 -1 29040
+S
+#29047
+O Parque Colorido~
+   Este � obviamente um lugar que merece o orgulho dos moradores, � muito
+bem cuidado.  Pequenos bancos de pedra repousam ao longo do caminho,
+permitindo que voc� descanse o quanto desejar.
+~
+290 16 0 0 0 2
+D3
+~
+~
+0 -1 29039
+S
+#29048
+O Bar dos Cidad�os~
+   Este bar, denominado o Bar dos Cidad�os, s� � denominado assim pelo fato
+de ap�s o trabalho, a maioria dos moradores da cidade virem aqui para beber
+e conversar.  Todas as noites 'reuni�es' s�o feitas ao redor dos pratos de
+legumes e carne, acompanhados de risadas e �s vezes musica, trazida por
+trovadores errantes.
+~
+290 8 0 0 0 0
+D0
+~
+~
+0 -1 29038
+S
+#29049
+A Alfaiataria~
+   Os habitantes tendem em sua maioria a serem simples trabalhadores,
+pessoas humildes a servi�os dos Deuses, que trabalham diariamente com
+orgulho.  Sendo assim, o alfaiate n�o parece ter muita freguesia.
+~
+290 8 0 0 0 0
+D1
+~
+~
+0 -1 29050
+S
+#29050
+A Estrada do Povoado~
+   A estrada segue a sul passando pelos negociantes e pela capela em dire��o
+a um maravilhoso jardim, cheio de vida e cor.  Ao norte fica a Pra�a do
+Vilarejo.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29039
+D1
+~
+~
+0 -1 29051
+D2
+~
+~
+0 -1 29053
+D3
+~
+~
+0 -1 29049
+S
+#29051
+A Casa de Adora��o~
+   Toda manh� e toda tarde, toda a comunidade se recolhe neste lugar humilde
+para dar gra�as pelas terras onde vivem e por seu bem feitor, o Bar�o de
+Cailveh.  Fileiras de bancos seguem pela parede leste onde um estranho
+s�mbolo est� pendurado na parede - o que parece ser s�mbolo de sua adora��o
+-, brilhando lindamente.
+~
+290 8 0 0 0 0
+D3
+~
+~
+0 -1 29050
+S
+#29052
+O Armaz�m~
+   � realmente uma loja geral, vende de tudo, se voc� procura algo que n�o
+tenha, basta encomendar.  Pelo menos � esta a reputa��o.  Todo tipo de
+inutilidade e necessidades s�o expostas nas prateleiras e mostru�rios de
+madeira.
+~
+290 8 0 0 0 0
+D1
+~
+~
+0 -1 29053
+S
+#29053
+A Pra�a Sul~
+   Um magn�fico jardim fica a sul daqui, uma organizada loja fica ao oeste e
+algum tipo de moinho fica do lado leste.
+~
+290 0 0 0 0 1
+D0
+~
+~
+0 -1 29050
+D1
+~
+~
+0 -1 29054
+D2
+~
+~
+0 -1 29055
+D3
+~
+~
+0 -1 29052
+S
+#29054
+A Destilaria~
+   Este costumava ser o velho moinho da cidade, mas fora transformado em uma
+destilaria para que a �gua que abastece os moradores esteja livre de
+doen�as.  Barris, garrafas ou qualquer recipiente pode ser cheio ou comprado
+aqui.
+~
+290 8 0 0 0 0
+D3
+~
+~
+0 -1 29053
+S
+#29055
+Os Jardins~
+   Este lindo jardim � cuidado com amor e zelo por todos os moradores,
+mantido como um para�so para a alma e silenciosa contempla��o.  Mantido
+imaculado por muito tempo, sem exce��es, e assim continuar� sendo.
+~
+290 0 0 0 0 2
+D0
+~
+~
+0 -1 29053
+S
+#29056
+Entrada Para a C�mara Principal~
+   Este � na verdade uma parte da c�mara principal, ao leste Cailveh mant�m
+sua corte.  A sa�da da torre fica ao oeste.
+~
+290 8 0 0 0 0
+D1
+~
+~
+0 -1 29057
+D3
+~
+porta~
+0 -1 29014
+S
+#29057
+A C�mara Principal~
+   H� uma porta na parede norte, perto de uma ornada tape�aria prateada que
+desce do teto at� o ch�o, cobrindo toda a c�mara.  Na parede sul, h� outra
+tape�aria, dando � c�mara um ar de majestosa santidade.
+~
+290 8 0 0 0 0
+D0
+~
+porta~
+0 -1 29061
+D1
+~
+~
+0 -1 29058
+D3
+~
+~
+0 -1 29056
+S
+#29058
+A C�mara de Audi�ncias~
+   Todos os assuntos formais importantes do Estado s�o administrados aqui.
+H� algumas cadeiras trabalhadas em prata, ostentando em seu assento uma
+confort�vel almofada vermelha.  Uma fina cortina prateada segue atr�s das
+cadeiras, completando a cena de for�a e calma, que Cailveh deseja proteger e
+perpetuar.  Portas ficam ao norte e ao sul.
+~
+290 8 0 0 0 0
+D0
+~
+porta~
+0 -1 29060
+D1
+~
+cortina cortinas fina~
+1 -1 29059
+D2
+~
+porta~
+0 -1 29062
+D3
+~
+~
+0 -1 29057
+S
+#29059
+Por Tr�s das Cortinas~
+   Parece que o Bar�o tem essa passagem para fugir de todo o barulho e
+stress quando desejar.  H� uma escada de pedra levando para o alto da
+torre, se curvando, fazendo voc� perd�-la de vista.  Atr�s da cortina fica a
+C�mara de Audi�ncia.
+~
+290 8 0 0 0 0
+D3
+~
+cortina cortinas fina~
+1 -1 29058
+D4
+~
+~
+0 -1 29063
+S
+#29060
+O Sal�o de Festividades~
+   Portas g�meas ficam ao sul deste grande sal�o, designadas para permitir a
+entrada e sa�da de grandes quantidades de pessoas.  Uma grande mesa toma
+quase toda a extens�o do sal�o, lindamente decorada, com uma bela toalha lhe
+cobrindo.
+~
+290 8 0 0 0 0
+D2
+~
+porta~
+0 -1 29058
+D3
+~
+~
+0 -1 29061
+S
+#29061
+O Sal�o de Festividades~
+   Portas g�meas ficam ao sul deste grande sal�o, designadas para permitir a
+entrada e sa�da de grandes quantidades de pessoas.  Uma grande mesa toma
+quase toda a extens�o do sal�o, lindamente decorada, com uma bela toalha lhe
+cobrindo.
+~
+290 8 0 0 0 0
+D1
+~
+~
+0 -1 29060
+D2
+~
+porta~
+0 -1 29057
+S
+#29062
+A Sala Privada de Reuni�es~
+   Sempre que um visitante que n�o seja considerado amigo de Cailveh precisa
+tratar de neg�cios, eles s�o trazidos para c�.  A sala � protegida com
+grossas paredes de modo que, o que se fala aqui, seja apenas ouvido aqui.
+~
+290 288 0 0 0 0
+D0
+~
+porta~
+0 -1 29058
+S
+#29063
+A Escada Secreta~
+   Este degraus s�o o �nico modo de alcan�ar os n�veis superiores da torre.
+Cailveh os mant�m escondidos para que ele possa desfrutar de calma e
+sil�ncio para tratar de assuntos familiares.  A nenhum visitante � permitida
+o acesso �s c�maras superiores, apenas a Cailveh, sua fam�lia e alguns
+servi�ais.
+~
+290 8 0 0 0 0
+D4
+~
+~
+0 -1 29064
+D5
+~
+~
+0 -1 29059
+S
+#29064
+O Corredor de Pedra~
+   Os degraus chegam a um corredor que nem � grande nem pequeno.  As paredes
+s�o de pedra, bem assentadas e firmes.  Na parede sul h� uma porta, os
+degraus seguem para baixo, no andar principal da torre, e o corredor segue a
+oeste, em dire��o a mais portas.
+~
+290 8 0 0 0 0
+D2
+~
+porta~
+0 -1 29070
+D3
+~
+~
+0 -1 29065
+D5
+~
+~
+0 -1 29063
+S
+#29065
+O Corredor de Pedra~
+   Uma porta fica na parede norte, o corredor segue a leste e oeste, e para
+ambos os lados, n�o vai muito longe.
+~
+290 8 0 0 0 0
+D0
+~
+porta~
+0 -1 29067
+D1
+~
+~
+0 -1 29064
+D3
+~
+~
+0 -1 29066
+S
+#29066
+O Fim do Corredor~
+   Uma larga porta fica na parede oeste, limitando o corredor.  Ao leste h�
+mais portas, com uma escada seguindo para baixo, at� o fim do corredor.
+~
+290 8 0 0 0 0
+D1
+~
+~
+0 -1 29065
+D3
+~
+porta~
+0 2 29071
+S
+#29067
+A C�mara Privada de Gilzaan~
+   Gilzaan, sendo o filho mais velho de Cailveh, provavelmente ser� herdeiro
+de todas as terras de seu pai, e possui o maior quarto de toda a torre.
+Tudo o que � sagrado e valioso, educativo e contemplativo, repousa
+ordenadamente pelo quarto, que realmente parece abrigar um grande n�mero de
+objetos e mob�lia.  H� uma porta na parede sul.
+~
+290 8 0 0 0 0
+D2
+~
+porta~
+0 -1 29065
+D3
+~
+~
+0 -1 29068
+S
+#29068
+A C�mara Privada de Gilzaan~
+   Gilzaan, sendo o filho mais velho de Cailveh, provavelmente ser� herdeiro
+de todas as terras de seu pai, e possui o maior quarto de toda a torre.
+Tudo o que � sagrado e valioso, educativo e contemplativo, repousa
+ordenadamente pelo quarto, que realmente parece abrigar um grande n�mero de
+objetos e mob�lia.  H� uma porta na parede sul, que fica a leste daqui.
+~
+290 8 0 0 0 0
+D1
+~
+~
+0 -1 29067
+S
+#29069
+A C�mara Privada de Necromocis~
+   Necromocis � o filho mais novo de Cailveh, mas certamente o mais
+promissor dos dois.  A maioria de seu tempo � gasto nas partes mais altas da
+torre, debru�ado sobre os manuscritos antigos que Cailveh mant�m em sua
+biblioteca.  Ele � o orgulho e alegria de Cailveh, e sua sabedoria o levar�
+a correr � Baronia, assim como seu irm�o corre, por direito.
+~
+290 8 0 0 0 0
+D1
+~
+~
+0 -1 29070
+S
+#29070
+A C�mara Privada de Necromocis~
+   Necromocis � o filho mais novo de Cailveh, mas certamente o mais
+promissor dos dois.  A maioria de seu tempo � gasto nas partes mais altas da
+torre, debru�ado sobre os manuscritos antigos que Cailveh mant�m em sua
+biblioteca.  Ele � o orgulho e alegria de Cailveh, e sua sabedoria o levar�
+a correr � Baronia, assim como seu irm�o corre, por direito.
+~
+290 8 0 0 0 0
+D0
+~
+porta~
+0 -1 29064
+D3
+~
+~
+0 -1 29069
+S
+#29071
+A Sala de Estar~
+   A sala � aquecida por uma enorme lareira que fica do lado oeste.  Ela
+toma toda a parede, feita de pedra, dando um clima aconchegante e r�stico ao
+lugar.  Confort�veis poltronas e sof�s aumentam este clima.  Aqui � onde
+Cailveh e sua fam�lia passam a maioria de suas tardes juntos, longe dos
+problemas da corte, que nunca parecem acabar l� embaixo.
+~
+290 8 0 0 0 0
+D0
+~
+~
+0 -1 29074
+D1
+~
+porta~
+0 -1 29066
+D2
+~
+~
+0 -1 29072
+D4
+~
+lareira~
+1 -1 29075
+E
+lareira~
+� uma enorme pe�a de pedra, tomando toda a parede.  A maioria de suas
+pedras s�o regulares e cinzentas, mas h� algumas mais escuras, parecem
+diferentes das outras.
+~
+E
+pedra pedras~
+Elas parecem que n�o foram bem assentadas, como se voc� pudesse ser capaz de mov�-las. 
+~
+S
+#29072
+As C�maras Privadas de Cailveh~
+   Esta parte da sala � mais uma entrada para a �rea privada de Cailveh, a
+qual ele divide com sua esposa.  A sala segue a curva da torre, abrindo a
+leste para as c�maras privadas e a norte para a sala de estar.
+~
+290 8 0 0 0 0
+D0
+~
+~
+0 -1 29071
+D1
+~
+~
+0 -1 29073
+S
+#29073
+As C�maras Privadas de Cailveh~
+   Este conjunto de quartos privados s�o reservados apenas para Cailveh e
+sua esposa, um recanto para os dois, para fugirem de tudo.  H� uma grande
+cama, um confort�vel div� diante da lareira - � uma organiza��o muito
+atraente.
+~
+290 8 0 0 0 0
+D3
+~
+~
+0 -1 29072
+S
+#29074
+A Sala de Banho~
+   H� um esculpido recipiente em madeira no centro da sala, designado para o
+banho, em cima de um curioso pedestal de pedra, que segura as brasas
+ardentes de carv�o e a banheira.  Uma mesa de madeira fica na parede oeste
+com um espelho sobre ela.
+~
+290 8 0 0 0 0
+D2
+~
+~
+0 -1 29071
+S
+#29075
+A Escadaria de Runas~
+   As runas dos lados da escada s�o como avisos para intrusos, como sinal
+que quando um convidado n�o desejado subir por estas escadas Cailveh ficar�
+furioso.  Siga para cima na dire��o de seus aposentos particulares, mas
+esteja precavido sobre sua f�ria e a ira de seus Deuses.
+~
+290 8 0 0 0 0
+D4
+~
+~
+0 -1 29076
+D5
+~
+segredo secreto~
+1 -1 29071
+S
+#29076
+O Laborat�rio~
+   Todo o lugar � coberto com mesas e runas, nas paredes, as prateleiras de
+madeira guardam todo tipo de manuscritos, pergaminhos, livros e v�rios
+recipientes preenchidos com l�quidos coloridos.  A madeira abaixo de seus
+p�s range ao seu pisar, de fato � dif�cil manter-se despercebido por um
+longo tempo.
+~
+290 8 0 0 0 0
+D1
+~
+~
+0 -1 29077
+D2
+~
+~
+0 -1 29078
+D5
+~
+~
+0 -1 29075
+S
+#29077
+O Laborat�rio~
+   Todo o lugar � coberto com mesas e runas, nas paredes, as prateleiras de
+madeira guardam todo tipo de manuscritos, pergaminhos e livros.  A madeira
+abaixo de seus p�s range ao seu pisar, de fato � dif�cil manter-se
+despercebido por um longo tempo.  H� uma porta na parede sul, a qual n�o
+parece ser aberta com freq��ncia.
+~
+290 8 0 0 0 0
+D2
+~
+porta~
+0 29000 29081
+D3
+~
+~
+0 -1 29076
+S
+#29078
+O Est�dio~
+   Aqui, � a entrada para o laborat�rio que fica a norte daqui.  Uma
+confort�vel cadeira fica na parede oeste, ela parece ser usada
+freq�entemente.  Estantes revestem a parede peste, a maioria dos livros s�o
+mais escol�sticos do que para pesquisa.
+~
+290 8 0 0 0 0
+D0
+~
+~
+0 -1 29076
+D2
+~
+~
+0 -1 29079
+S
+#29079
+A Biblioteca~
+   Parece que h� muitos livros nas prateleiras ao norte do que voc� poderia
+imaginar.  Cada cent�metro de espa�o foi tomado por estantes e livros, todos
+organizados por conte�do e tamanho.
+~
+290 8 0 0 0 0
+D0
+~
+~
+0 -1 29078
+D1
+~
+~
+0 -1 29080
+S
+#29080
+O Observat�rio~
+   H� uma grande e alta janela na parede sul, abrindo caminho pelo telhado
+para os c�us.  Um estranho objeto fora posto perto da janela, se parece com
+um longo tubo com uma lente em ambas as pontas.
+~
+290 8 0 0 0 0
+D3
+~
+~
+0 -1 29079
+S
+#29081
+O Quarto de Artefatos~
+   Aqui, se guarda todo tipo de objetos, desde de utens�lios velhos, at�
+todo tipo de inutilidade.  Aqui, mais se parece com um armaz�m de velharias.
+~
+290 0 0 0 0 0
+D0
+~
+porta~
+0 29000 29077
+S
+$~

@@ -1,0 +1,11 @@
+#Tue May 26 19:54:21 GMT-03:00 2020
+run_mode=0
+conf_internal=false
+binary_fname=
+sm_names=rebuildAsciiIndex.c plrtoascii.c webster.c rebuildMailIndex.c sign.c shopconv.c split.c asciipasswd.c autowiz.c wld2html.c
+conf_patch=true
+qmake_cmd=export PATH\=(c4droid\:GCCROOT)qt/bin/\:$PATH\nexport C4DROID_QTLIBPATH\=(c4droid\:QTLIBPATH)\nqmake -spec android-g++
+make_cmd=make CC\="$CC" CXX\="$CXX" SHELL\="$SHELL"
+conf_cmd=export PATH\=/busybox-virtual\:(c4droid\:DATADIR)\:(c4droid\:GCCROOT)bin\:(c4droid\:GCCROOT)(c4droid\:PREFIX)/bin/\:$PATH\nexport CFLAGS\="-Os -s (c4droid\:PIE)"\nexport CXXFLAGS\="-Os -s (c4droid\:PIE)"\nexport SHELL\="(c4droid\:DATADIR)sh"\nexport CONFIG_SHELL\="sh"\nexport PKG_CONFIG_PATH\=(c4droid\:GCCROOT)(c4droid\:PREFIX)/lib/pkgconfig\ncd (c4droid\:CURSRCDIR)\nfind . -exec touch {} \\;\ncd (c4droid\:BUILDDIR)\n(c4droid\:CURSRCDIR)/configure --host\=(c4droid\:PREFIX) --prefix\=(c4droid\:GCCROOT)(c4droid\:PREFIX) CFLAGS\="$CFLAGS" CXXFLAGS\="$CXXFLAGS" --build\=i686-linux --disable-shared --enable-static\nmake SHELL\="$SHELL"\nmake install SHELL\="$SHELL"
+comp_mode=0
+prepare_cmds=export PATH\=/busybox-virtual\:(c4droid\:DATADIR)\:(c4droid\:GCCROOT)bin\:(c4droid\:GCCROOT)(c4droid\:PREFIX)/bin/\:$PATH\nexport CC\="(c4droid\:PREFIX)-gcc (c4droid\:PIE) (c4droid\:MAKEMODEARGS)"\nexport CXX\="(c4droid\:PREFIX)-g++ (c4droid\:PIE) (c4droid\:MAKEMODEARGS)"\nexport SHELL\="(c4droid\:DATADIR)sh"\ncd (c4droid\:CURSRCDIR)

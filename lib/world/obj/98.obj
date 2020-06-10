@@ -1,0 +1,117 @@
+#9801
+chave prata~
+uma chave de prata~
+Uma chave de prata foi deixada aqui.~
+~
+18 acdq 0 0 0 a 0 0 0 in 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+chave prata~
+Esta chave parece ser feita de uma prata puríssima, seu brilho é único
+e jamais visto por seu olhos.  
+~
+#9802
+chave suja~
+uma chave muito suja~
+Uma chave muito suja foi deixada aqui.~
+~
+18 acdq 0 0 0 a 0 0 0 in 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+chave suja~
+Esta chave está muito suja e parece ter sido esquecida aqui à muito tempo.
+É possível notar alguns ferrugens nela.
+~
+#9803
+chave negra~
+uma chave negra~
+Uma chave negra foi deixada aqui.~
+~
+18 acdq 0 0 0 a 0 0 0 in 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+chave negra~
+Esta chave negra de aparência horrível, parece pertencer a algo sobrenatural. 
+~
+#9804
+chave cristal~
+uma chave de cristal~
+Uma chave de cristal foi deixada aqui.~
+~
+18 acdq 0 0 0 a 0 0 0 in 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+chave cristal~
+Está chave de cristal é muito mais resistente do que parece.  Feita de um
+material azul claro, emite cores exuberantes.
+~
+#9805
+cúpula vidro~
+uma cúpula de vidro~
+Uma cúpula de vidro foi deixada aqui.~
+~
+15 acdeiq 0 0 0 0 0 0 0 0 0 0 0
+60 15 9804 0
+80 1000000 10000 1 0
+E
+cúpula vidro~
+Esta cúpula de vidro é inquebrável e de material azulado, aparentemente há
+um objeto dentro dela.  Talvez seja algo de valor.
+~
+#9806
+escudo negro~
+um escudo negro~
+Um poderoso escudo negro foi deixado aqui.~
+~
+9 bfgj 0 0 0 aj 0 0 0 q 0 0 0
+15 0 0 0
+15 5000 2000 70 0
+E
+escudo negro~
+Este escudo negro é muito poderoso e parece ter sido feito por magos muito
+poderosos, pois o poder de proteção dele é sobrenatural .
+~
+A
+18 2
+A
+19 2
+#9807
+manto dourado~
+um manto dourado~
+Um poderoso manto mágico de cor dourada foi deixado aqui.~
+~
+9 adegiq 0 0 0 ak 0 0 0 cdei 0 0 0
+10 0 0 0
+10 1000000 0 70 0
+E
+manto dourado~
+Este poderoso manto mágico de cor dourada parece ser feito de um material
+mágico.  Você pode sentir que dele emana um luz magnífica e seus poderes
+são ilimitados.
+~
+A
+1 1
+A
+2 2
+A
+18 2
+A
+19 2
+#9808
+pergaminho dourado~
+um pergaminho dourado~
+Um poderoso pergaminho dourado foi deixado aqui.~
+A força do bem se faz presente no coração dos maus... ~
+12 acdegiq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 60 0
+E
+pergaminho dourado~
+Este pergaminho parece ter sido escrito a muito tempo, suas letras parecem
+ter sido escritas em ouro, em um dialeto jamais visto por seus olhos.
+~
+$~

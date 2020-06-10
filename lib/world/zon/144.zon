@@ -1,0 +1,340 @@
+#144
+Vitalia~
+A Aldeia de Bri~
+14400 14499 60 1 a 0 0 0 -1 -1
+-1
+*
+* Colocar os Mobs
+*
+M 0 14400 4 14411   Colocar uma Criatura Tumular num Terr�vel T�mulo
+G 1 14411 1        Entregar um Broche Azul para a Criatura Tumular
+M 0 14400 4 14416   Colocar uma Criatura Tumular num Terr�vel T�mulo
+G 1 14412 1        Entregar um Diadema Dourado para a Criatura Tumular
+M 0 14400 4 14424   Colocar uma Criatura Tumular num Terr�vel T�mulo
+G 1 14415 2        Entregar uma Bainha Negra para a Criatura Tumular
+P 1 14414 2 14415   Colocar um Punhal Longo dentro da Bainha Negra
+M 0 14400 4 14429   Colocar uma Criatura Tumular num Terr�vel T�mulo
+G 1 14415 2        Entregar uma Bainha Negra para a Criatura Tumular
+P 1 14414 2 14415   Colocar um Punhal Longo dentro da Bainha Negra
+M 0 14401 4 14414   Colocar um Bra�o Rastejante no Topo da Colina
+M 0 14401 4 14418   Colocar um Bra�o Rastejante no Topo da Colina
+M 0 14401 4 14423   Colocar um Bra�o Rastejante no Topo da Colina
+M 0 14401 4 14425   Colocar um Bra�o Rastejante no Topo da Colina
+M 0 14402 1 14426   Colocar o p�nei Bolo-fofo na Colina
+E 1 14416 1 3      Entregar uma Antiga Coleira de Couro para Bolo-fofo
+M 0 14403 1 14431   Colocar o Porteiro Harry na Casa do Porteiro
+E 1 14409 2 0      Entregar uma Lamparina de Bronze ao Porteiro Harry
+E 1 14410 2 12     Entregar um Manto Negro Desgastado ao Porteiro Harry
+M 0 14404 1 14479   Colocar Cevado Carrapicho na Estalagem P�nei Saltitante
+E 1 14417 1 12     Entregar um Avental Branco para Cevado Carrapicho
+M 0 14405 1 14480   Colocar o Hobbit Nob na Cozinha da Estalagem
+E 1 14418 1 1      Entregar um Anel de Prata ao Hobbit Nob
+M 0 14406 1 14475   Colocar o Gato do Hobbit Bob no Sagu�o de Entrada da Estalagem
+E 1 14419 1 3      Entregar uma Coleira de Seda ao gato do Hobbit Bob
+M 0 14407 1 14476   Colocar o Hobbit Bob no Est�bulo da Estalagem
+E 1 14420 1 13     Entregar um Cinto Esverdeado ao Hobbit Bob
+M 0 14408 12 14433  Colocar um Homem de Bri numa Casa da Aldeia
+E 1 14421 10 7     Entregar uma Cal�a de Tecido Azul ao Homem de Bri
+E 1 14422 10 5     Entregar uma Camisa de Tecido Verde ao Homem de Bri
+E 1 14423 10 8     Entregar um Par de Botas de Couro ao Homem de Bri
+M 0 14408 12 14442  Colocar um Homem de Bri numa Casa da Aldeia
+E 1 14421 10 7     Entregar uma Cal�a de Tecido Azul ao Homem de Bri
+E 1 14422 10 5     Entregar uma Camisa de Tecido Verde ao Homem de Bri
+E 1 14423 10 8     Entregar um Par de Botas de Couro ao Homem de Bri
+M 0 14408 12 14456  Colocar um Homem de Bri numa Casa da Aldeia
+E 1 14421 10 7     Entregar uma Cal�a de Tecido Azul ao Homem de Bri
+E 1 14422 10 5     Entregar uma Camisa de Tecido Verde ao Homem de Bri
+E 1 14423 10 8     Entregar um Par de Botas de Couro ao Homem de Bri
+M 0 14408 12 14461  Colocar um Homem de Bri numa Casa da Aldeia
+E 1 14421 10 7     Entregar uma Cal�a de Tecido Azul ao Homem de Bri
+E 1 14422 10 5     Entregar uma Camisa de Tecido Verde ao Homem de Bri
+E 1 14423 10 8     Entregar um Par de Botas de Couro ao Homem de Bri
+M 0 14408 12 14465  Colocar um Homem de Bri numa Casa da Aldeia
+E 1 14421 10 7     Entregar uma Cal�a de Tecido Azul ao Homem de Bri
+E 1 14422 10 5     Entregar uma Camisa de Tecido Verde ao Homem de Bri
+E 1 14423 10 8     Entregar um Par de Botas de Couro ao Homem de Bri
+M 0 14408 12 14437  Colocar um Homem de Bri numa Rua da Aldeia
+E 1 14421 10 7     Entregar uma Cal�a de Tecido Azul ao Homem de Bri
+E 1 14422 10 5     Entregar uma Camisa de Tecido Verde ao Homem de Bri
+E 1 14423 10 8     Entregar um Par de Botas de Couro ao Homem de Bri
+M 0 14408 12 14455  Colocar um Homem de Bri numa Rua da Aldeia
+E 1 14421 10 7     Entregar uma Cal�a de Tecido Azul ao Homem de Bri
+E 1 14422 10 5     Entregar uma Camisa de Tecido Verde ao Homem de Bri
+E 1 14423 10 8     Entregar um Par de Botas de Couro ao Homem de Bri
+M 0 14408 12 14462  Colocar um Homem de Bri numa Rua da Aldeia
+E 1 14421 10 7     Entregar uma Cal�a de Tecido Azul ao Homem de Bri
+E 1 14422 10 5     Entregar uma Camisa de Tecido Verde ao Homem de Bri
+E 1 14423 10 8     Entregar um Par de Botas de Couro ao Homem de Bri
+M 0 14408 12 14469  Colocar um Homem de Bri numa Rua da Aldeia
+E 1 14421 10 7     Entregar uma Cal�a de Tecido Azul ao Homem de Bri
+E 1 14422 10 5     Entregar uma Camisa de Tecido Verde ao Homem de Bri
+E 1 14423 10 8     Entregar um Par de Botas de Couro ao Homem de Bri
+M 0 14408 12 14472  Colocar um Homem de Bri numa Rua da Aldeia
+E 1 14421 10 7     Entregar uma Cal�a de Tecido Azul ao Homem de Bri
+E 1 14422 10 5     Entregar uma Camisa de Tecido Verde ao Homem de Bri
+E 1 14423 10 8     Entregar um Par de Botas de Couro ao Homem de Bri
+M 0 14408 12 14494  Colocar um Homem de Bri num Quarto da Estalagem
+M 0 14408 12 14490  Colocar um Homem de Bri num Quarto da Estalagem
+M 0 14409 10 14434  Colocar uma Mulher de Bri num Jardim da Aldeia
+E 1 14424 10 12    Entregar um Vestido Branco a Mulher de Bri
+E 1 14425 5 3      Entregar uma Gargantilha de Ouro a Mulher de Bri
+M 0 14409 10 14470  Colocar uma Mulher de Bri num Jardim da Aldeia
+E 1 14424 10 12    Entregar um Vestido Branco a Mulher de Bri
+E 1 14425 5 3      Entregar uma Gargantilha de Ouro a Mulher de Bri
+M 0 14409 10 14460  Colocar uma Mulher de Bri num Jardim da Aldeia
+E 1 14424 10 12    Entregar um Vestido Branco a Mulher de Bri
+E 1 14425 5 3      Entregar uma Gargantilha de Ouro a Mulher de Bri
+M 0 14409 10 14441  Colocar uma Mulher de Bri num Jardim da Aldeia
+E 1 14424 10 12    Entregar um Vestido Branco a Mulher de Bri
+E 1 14425 5 3      Entregar uma Gargantilha de Ouro a Mulher de Bri
+M 0 14409 10 14438  Colocar uma Mulher de Bri numa Casa da Aldeia
+E 1 14424 10 12    Entregar um Vestido Branco a Mulher de Bri
+E 1 14425 5 3      Entregar uma Gargantilha de Ouro a Mulher de Bri
+M 0 14409 10 14457  Colocar uma Mulher de Bri numa Casa da Aldeia
+E 1 14424 10 12    Entregar um Vestido Branco a Mulher de Bri
+E 1 14426 5 1      Entregar uma Anel Vermelho a Mulher de Bri
+M 0 14409 10 14463  Colocar uma Mulher de Bri numa Casa da Aldeia
+E 1 14424 10 12    Entregar um Vestido Branco a Mulher de Bri
+E 1 14426 5 1      Entregar uma Anel Vermelho a Mulher de Bri
+M 0 14409 10 14440  Colocar uma Mulher de Bri numa Casa da Aldeia
+E 1 14424 10 12    Entregar um Vestido Branco a Mulher de Bri
+E 1 14426 5 1      Entregar uma Anel Vermelho a Mulher de Bri
+M 0 14409 10 14456  Colocar uma Mulher de Bri numa Casa da Aldeia
+E 1 14424 10 12    Entregar um Vestido Branco a Mulher de Bri
+E 1 14426 5 1      Entregar uma Anel Vermelho a Mulher de Bri
+M 0 14409 10 14465  Colocar uma Mulher de Bri numa Casa da Aldeia
+E 1 14424 10 12    Entregar um Vestido Branco a Mulher de Bri
+E 1 14426 5 1      Entregar uma Anel Vermelho a Mulher de Bri
+M 0 14410 1 14458   Colocar um An�o Viajante numa Rua da Aldeia
+E 1 14427 1 16     Entregar um Grande Machado ao An�o Viajante
+M 0 14411 1 14478   Colocar um Guardi�o na Estalagem P�nei Saltitante
+E 1 14429 1 16     Entregar uma Espada Antiga ao Guardi�o 
+E 1 14430 1 17     Entregar uma Faca Prateada ao Guardi�o
+M 0 14412 1 14468   Colocar Bill Samambaia numa Casa de Pedra
+E 1 14431 1 9      Entregar um Par de Luvas Negras a Bill Samambaia
+M 0 14413 8 14448   Colocar um Hobbit de Bri numa Casa de Bri
+E 1 14432 6 7      Entregar uma Cal�a de Tecido ao Hobbit de Bri
+E 1 14433 6 5      Entregar uma Camisa de Tecido ao Hobbit de Bri
+M 0 14413 8 14454   Colocar um Hobbit de Bri numa Casa de Bri
+E 1 3845 16 17      Card Hobbit(3845) com Hobbit(14413)
+E 1 14432 6 7      Entregar uma Cal�a de Tecido ao Hobbit de Bri
+E 1 14433 6 5      Entregar uma Camisa de Tecido ao Hobbit de Bri
+M 0 14413 8 14450   Colocar um Hobbit de Bri numa Casa de Bri
+E 1 14432 6 7      Entregar uma Cal�a de Tecido ao Hobbit de Bri
+E 1 14433 6 5      Entregar uma Camisa de Tecido ao Hobbit de Bri
+M 0 14413 8 14444   Colocar um Hobbit de Bri numa Casa de Bri
+E 1 14432 6 7      Entregar uma Cal�a de Tecido ao Hobbit de Bri
+E 1 14433 6 5      Entregar uma Camisa de Tecido ao Hobbit de Bri
+M 0 14413 8 14451   Colocar um Hobbit de Bri numa Rua de Bri
+E 1 14432 6 7      Entregar uma Cal�a de Tecido ao Hobbit de Bri
+E 1 14433 6 5      Entregar uma Camisa de Tecido ao Hobbit de Bri
+M 0 14413 8 14445   Colocar um Hobbit de Bri numa Rua de Bri
+E 1 14432 6 7      Entregar uma Cal�a de Tecido ao Hobbit de Bri
+E 1 14433 6 5      Entregar uma Camisa de Tecido ao Hobbit de Bri
+M 0 14413 8 14487   Colocar um Hobbit de Bri num Quarto da Estalagem
+M 0 14413 8 14489   Colocar um Hobbit de Bri num Quarto da Estalagem
+M 0 14414 6 14446   Colocar uma Hobbit de Bri numa Casa de Bri
+E 1 14434 6 12     Entregar um Vestido de Tecido a Hobbit de Bri
+M 0 14414 6 14453   Colocar uma Hobbit de Bri numa Casa de Bri
+E 1 14434 6 12     Entregar um Vestido de Tecido a Hobbit de Bri
+M 0 14414 6 14454   Colocar uma Hobbit de Bri numa Casa de Bri
+E 1 14434 6 12     Entregar um Vestido de Tecido a Hobbit de Bri
+M 0 14414 6 14450   Colocar uma Hobbit de Bri numa Casa de Bri
+E 1 14434 6 12     Entregar um Vestido de Tecido a Hobbit de Bri
+M 0 14414 6 14448   Colocar uma Hobbit de Bri numa Casa de Bri
+E 1 14434 6 12     Entregar um Vestido de Tecido a Hobbit de Bri
+M 0 14414 6 14444   Colocar uma Hobbit de Bri numa Casa de Bri
+E 1 14434 6 12     Entregar um Vestido de Tecido a Hobbit de Bri
+M 0 14415 1 14477   Colocar um Forasteiro na Estalagem P�nei Saltitante
+E 1 14435 1 13     Entregar um Cintur�o Negro ao Forasteiro
+M 0 14416 1 14498   Colocar um Grupo de Viajantes na Grande Estrada do Leste
+E 1 14436 1 0      Entregar uma Lamparina de Prata ao Grupo de Viajantes
+M 0 14417 1 14478   Colocar um Grupo de An�es na Estalagem P�nei Saltitante
+G 1 14428 1        Entregar uma Mochila de Viajante ao Grupo de An�es
+M 0 14418 1 14479   Colocar um Grupo de Homens de Bri na Estalagem
+M 0 14419 1 14477   Colocar um Grupo de Hobbits de Bri na Estalagem
+M 0 14420 1 14474   Colocar o Porteiro de Bri na Casa do Porteiro
+E 1 14409 2 0      Entregar uma Lamparina de Bronze ao Porteiro
+E 1 14410 2 12     Entregar um Manto Negro Desgastado ao Porteiro
+M 0 14421 4 14435   Colocar um P�nei dentro do Est�bulo
+M 0 14421 4 14435   Colocar um P�nei dentro do Est�bulo
+M 0 14421 4 14476   Colocar um P�nei dentro do Est�bulo da Estalagem
+M 0 14421 4 14476   Colocar um P�nei dentro do Est�bulo da Estalagem
+M 0 14422 2 14435   Colocar um Cavalo dentro do Est�bulo
+M 0 14422 2 14476   Colocar um Cavalo dentro do Est�bulo da Estalagem
+M 0 14423 2 14401   Colocar um P�ssaro na Estrada do Leste
+M 0 14423 2 14497   Colocar um P�ssaro na Grande Estrada do Leste
+*
+* Colocar os Objs
+*
+R 0 14406 14400     Retirar o Port�o das Colinas dos T�mulos nas Colinas
+O 0 14400 1 14406   Colocar um novo Port�o das Colinas dos T�mulos
+R 0 14408 14401     Retirar uma Pedra Tumular nas Colinas
+O 0 14401 1 14408   Colocar uma nova Pedra Tumular nas Colinas
+R 0 14400 14402     Retirar alguns arbustos da Estrada do Leste
+O 0 14402 5 14400   Colocar alguns arbustos novos
+R 0 14401 14402     Retirar alguns arbustos da Estrada do Leste
+O 0 14402 5 14401   Colocar alguns arbustos novos
+R 0 14402 14402     Retirar alguns arbustos da Estrada do Leste
+O 0 14402 5 14402   Colocar alguns arbustos novos
+R 0 14403 14402     Retirar alguns arbustos da Estrada do Leste
+O 0 14402 5 14403   Colocar alguns arbustos novos
+R 0 14404 14402     Retirar alguns arbustos da Estrada do Leste
+O 0 14402 5 14404   Colocar alguns arbustos novos
+R 0 14434 14403     Retirar algumas flores e arbustos de um Jardim da Aldeia
+O 0 14403 4 14434   Colocar algumas flores e arbustos novos
+R 0 14441 14403     Retirar algumas flores e arbustos de um Jardim da Aldeia
+O 0 14403 4 14441   Colocar algumas flores e arbustos novos
+R 0 14460 14403     Retirar algumas flores e arbustos de um Jardim da Aldeia
+O 0 14403 4 14460   Colocar algumas flores e arbustos novos
+R 0 14470 14403     Retirar algumas flores e arbustos de um Jardim da Aldeia
+O 0 14403 4 14470   Colocar algumas flores e arbustos novos
+R 0 14433 14404     Retirar uma Cama de Madeira de uma Casa da Aldeia 
+O 0 14404 7 14433   Colocar uma nova Cama de Madeira
+R 0 14442 14404     Retirar uma Cama de Madeira de uma Casa da Aldeia 
+O 0 14404 7 14442   Colocar uma nova Cama de Madeira
+R 0 14465 14404     Retirar uma Cama de Madeira de uma Casa da Aldeia 
+O 0 14404 7 14465   Colocar uma nova Cama de Madeira
+R 0 14457 14404     Retirar uma Cama de Madeira de uma Casa da Aldeia 
+O 0 14404 7 14457   Colocar uma nova Cama de Madeira
+R 0 14454 14404     Retirar uma Cama de Madeira de uma Casa da Aldeia 
+O 0 14404 7 14454   Colocar uma nova Cama de Madeira
+R 0 14448 14404     Retirar uma Cama de Madeira de uma Casa da Aldeia 
+O 0 14404 7 14448   Colocar uma nova Cama de Madeira
+R 0 14444 14404     Retirar uma Cama de Madeira de uma Casa da Aldeia 
+O 0 14404 7 14444   Colocar uma nova Cama de Madeira
+R 0 14438 14405     Retirar uma Estante de Madeira de uma Casa da Aldeia
+O 0 14405 5 14438   Colocar uma nova Estante de Madeira
+R 0 14463 14405     Retirar uma Estante de Madeira de uma Casa da Aldeia
+O 0 14405 5 14463   Colocar uma nova Estante de Madeira
+R 0 14471 14405     Retirar uma Estante de Madeira de uma Casa da Aldeia
+O 0 14405 5 14471   Colocar uma nova Estante de Madeira
+R 0 14450 14405     Retirar uma Estante de Madeira de uma Casa da Aldeia
+O 0 14405 5 14450   Colocar uma nova Estante de Madeira
+R 0 14480 14405     Retirar uma Estante de Madeira da Cozinha da Estalagem
+O 0 14405 5 14480   Colocar uma nova Estante de Madeira
+R 0 14477 14406     Retirar uma Cadeira de Madeira da Estalagem
+O 0 14406 3 14477   Colocar uma nova Cadeira de Madeira
+R 0 14478 14406     Retirar uma Cadeira de Madeira da Estalagem
+O 0 14406 3 14478   Colocar uma nova Cadeira de Madeira
+R 0 14479 14406     Retirar uma Cadeira de Madeira da Estalagem
+O 0 14406 3 14479   Colocar uma nova Cadeira de Madeira
+R 0 14477 14407     Retirar uma Mesa de Madeira da Estalagem
+O 0 14407 3 14477   Colocar uma nova Mesa de Madeira
+R 0 14478 14407     Retirar uma Mesa de Madeira da Estalagem
+O 0 14407 3 14478   Colocar uma nova Mesa de Madeira
+R 0 14479 14407     Retirar uma Mesa de Madeira da Estalagem
+O 0 14407 3 14479   Colocar uma nova Mesa de Madeira
+R 0 14480 14408     Retirar um Barril de Cerveja da Cozinha da Estalagem
+O 0 14408 2 14480   Colocar um novo Barril de Cerveja
+R 0 14478 14408     Retirar um Barril de Cerveja da Cozinha da Estalagem
+O 0 14408 2 14478   Colocar um novo Barril de Cerveja
+R 0 14411 14413     Retirar um Amontoado de Tesouros Antigos
+O 0 14413 4 14411   Colocar um novo Amontoado de Tesouros Antigos
+R 0 14416 14413     Retirar um Amontoado de Tesouros Antigos
+O 0 14413 4 14416   Colocar um novo Amontoado de Tesouros Antigos
+R 0 14424 14413     Retirar um Amontoado de Tesouros Antigos
+O 0 14413 4 14424   Colocar um novo Amontoado de Tesouros Antigos
+R 0 14429 14413     Retirar um Amontoado de Tesouros Antigos
+O 0 14413 4 14429   Colocar um novo Amontoado de Tesouros Antigos
+R 0 14480 14437     Retirar um Suculeto Assado de Frango da Cozinha da Estalagem
+O 0 14437 1 14480   Colocar um novo Assado de Frango
+R 0 14478 14438     Retirar um Tradicional Prato de Bri da Estalagem
+O 0 14438 2 14478   Colocar um novo Prato Tradicional
+R 0 14479 14438     Retirar um Tradicional Prato de Bri da Estalagem
+O 0 14438 2 14479   Colocar um novo Prato Tradicional
+*
+* Ajustar as Passagens
+*
+D 0 14404 1 1      fechar o port�o de madeira (lado de fora)
+D 0 14430 3 1      fechar o port�o de madeira (lado de dentro)
+D 0 14410 5 1      fechar a rocha (lado de fora)
+D 0 14411 4 1      fechar a rocha (lado de dentro)
+D 0 14415 5 1      fechar a rocha (lado de fora)
+D 0 14416 4 1      fechar a rocha (lado de dentro)
+D 0 14422 5 1      fechar a rocha (lado de fora)
+D 0 14424 4 1      fechar a rocha (lado de dentro)
+D 0 14428 5 1      fechar a rocha (lado de fora)
+D 0 14429 4 1      fechar a rocha (lado de dentro)
+D 0 14430 0 1      fechar a porta de madeira (lado de fora)
+D 0 14431 2 1      fechar a porta de madeira (lado de dentro)
+D 0 14432 0 1      fechar a porta de madeira (lado de fora)
+D 0 14433 2 1      fechar a porta de madeira (lado de dentro)
+D 0 14432 2 1      fechar a cerca de madeira (lado de fora)
+D 0 14434 0 1      fechar a cerca de madeira (lado de dentro)
+D 0 14434 1 1      fechar a porteira de madeira (lado de fora)
+D 0 14435 3 1      fechar a porteira de madeira (lado de dentro)
+D 0 14434 2 1      fechar a porta de madeira (lado de fora)
+D 0 14436 0 1      fechar a porta de madeira (lado de dentro)
+D 0 14437 0 1      fechar a porta de madeira (lado de fora)
+D 0 14438 2 1      fechar a porta de madeira (lado de dentro)
+D 0 14439 0 1      fechar a porta de madeira (lado de fora)
+D 0 14440 2 1      fechar a porta de madeira (lado de dentro)
+D 0 14439 2 1      fechar a cerca de madeira (lado de fora)
+D 0 14441 0 1      fechar a cerca de madeira (lado de dentro)
+D 0 14441 2 1      fechar a porta de madeira (lado de fora)
+D 0 14442 0 1      fechar a porta de madeira (lado de dentro)
+D 0 14443 0 1      fechar a porta de madeira (lado de fora)
+D 0 14444 2 1      fechar a porta de madeira (lado de dentro)
+D 0 14445 0 1      fechar a porta de madeira (lado de fora)
+D 0 14446 2 1      fechar a porta de madeira (lado de dentro)
+D 0 14447 0 1      fechar a porta de madeira (lado de fora)
+D 0 14448 2 1      fechar a porta de madeira (lado de dentro)
+D 0 14449 0 1      fechar a porta de madeira (lado de fora)
+D 0 14450 2 1      fechar a porta de madeira (lado de dentro)
+D 0 14451 0 1      fechar a porta de madeira (lado de fora)
+D 0 14453 2 1      fechar a porta de madeira (lado de dentro)
+D 0 14452 0 1      fechar a porta de madeira (lado de fora)
+D 0 14454 2 1      fechar a porta de madeira (lado de dentro)
+D 0 14455 0 1      fechar a porta de madeira (lado de fora)
+D 0 14456 2 1      fechar a porta de madeira (lado de dentro)
+D 0 14455 2 1      fechar a porta de madeira (lado de fora)
+D 0 14457 0 1      fechar a porta de madeira (lado de dentro)
+D 0 14458 0 1      fechar a porta de madeira (lado de fora)
+D 0 14459 2 1      fechar a porta de madeira (lado de dentro)
+D 0 14458 2 1      fechar a porta de madeira (lado de fora)
+D 0 14460 0 1      fechar a porta de madeira (lado de dentro)
+D 0 14460 3 1      fechar a porta de madeira (lado de fora)
+D 0 14461 1 1      fechar a porta de madeira (lado de dentro)
+D 0 14462 0 1      fechar a porta de madeira (lado de fora)
+D 0 14463 2 1      fechar a porta de madeira (lado de dentro)
+D 0 14464 3 1      fechar a porta de madeira (lado de fora)
+D 0 14465 1 1      fechar a porta de madeira (lado de dentro)
+D 0 14466 3 1      fechar a cerca de madeira (lado de fora)
+D 0 14467 1 1      fechar a cerca de madeira (lado de dentro)
+D 0 14467 2 1      fechar a porta de madeira (lado de fora)
+D 0 14468 0 1      fechar a porta de madeira (lado de dentro)
+D 0 14469 1 1      fechar a cerca de madeira (lado de fora)
+D 0 14470 3 1      fechar a cerca de madeira (lado de dentro)
+D 0 14470 1 1      fechar a porta de madeira (lado de fora)
+D 0 14471 3 1      fechar a porta de madeira (lado de dentro)
+D 0 14473 1 1      fechar a porta de madeira (lado de fora)
+D 0 14474 3 1      fechar a porta de madeira (lado de dentro)
+D 0 14473 2 1      fechar o port�o de madeira (lado de fora)
+D 0 14496 0 1      fechar o port�o de madeira (lado de dentro)
+D 0 14475 2 1      fechar a porteira de madeira (lado de fora)
+D 0 14476 0 1      fechar a porteira de madeira (lado de dentro)
+D 0 14475 1 1      fechar a porta de madeira (lado de fora)
+D 0 14477 3 1      fechar a porta de madeira (lado de dentro)
+D 0 14479 7 1      fechar a porta de madeira (lado de fora)
+D 0 14480 9 1      fechar a porta de madeira (lado de dentro)
+D 0 14484 0 1      fechar a porta de madeira (lado de fora)
+D 0 14486 2 1      fechar a porta de madeira (lado de dentro)
+D 0 14484 2 1      fechar a porta de madeira (lado de fora)
+D 0 14485 0 1      fechar a porta de madeira (lado de dentro)
+D 0 14484 6 1      fechar a porta de madeira (lado de fora)
+D 0 14487 8 1      fechar a porta de madeira (lado de dentro)
+D 0 14488 0 1      fechar a porta de madeira (lado de fora)
+D 0 14490 2 1      fechar a porta de madeira (lado de dentro)
+D 0 14488 2 1      fechar a porta de madeira (lado de fora)
+D 0 14489 0 1      fechar a porta de madeira (lado de dentro)
+D 0 14488 6 1      fechar a porta de madeira (lado de fora)
+D 0 14491 8 1      fechar a porta de madeira (lado de dentro)
+D 0 14492 0 1      fechar a porta de madeira (lado de fora)
+D 0 14494 2 1      fechar a porta de madeira (lado de dentro)
+D 0 14492 2 1      fechar a porta de madeira (lado de fora)
+D 0 14493 0 1      fechar a porta de madeira (lado de dentro)
+D 0 14492 6 1      fechar a porta de madeira (lado de fora)
+D 0 14495 8 1      fechar a porta de madeira (lado de dentro)
+S
+$~

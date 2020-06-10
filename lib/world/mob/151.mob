@@ -1,0 +1,166 @@
+#15100
+Disc�pulo Samurai~
+Um disc�pulo Samurai~
+Um disc�pulo Samurai est� aqui, tentando compreender as leis de Karma.
+~
+Voc� v� um jovem Samurai perto de si.  Suas roupas e armas indicam que ele 
+� apenas um disc�pulo.
+~
+2123778 0 0 0 0 0 0 0 250 E
+50 7 -20 3d5+1400 5d4+15
+0 50000
+8 8 1
+E
+#15101
+Samurai Aprendiz~
+Um aprendiz de Samurai~
+Um aprendiz de Samurai est� meditando aqui. 
+~
+Voc� v� um aprendiz de samurai perto de si.  Ele parece mesmo ser um
+aprendiz pois est� concentrado em seus exerc�cios, absolutamente
+ausente da realidade � sua volta.
+~
+2123778 0 0 0 0 0 0 0 300 E
+60 6 -21 3d6+1500 4d7+17
+0 70000
+8 3 1
+E
+#15102
+Guerreiro Samurai~
+Um Guerreiro Samurai~
+Um Guerreiro Samurai est� aqui, tentando parecer cruel.
+~
+Voc� se encontra pr�ximo a um dos maiores guerreiros de todos
+os tempos e, pelo aspecto de sua arma, ele est� pronto para lutar.
+~
+2156802 0 0 0 0 0 0 0 350 E
+60 4 -22 3d8+1800 4d8+16
+5000 70000
+8 8 1
+E
+#15103
+Shogun Compreens�o~
+O Shogun da Compreens�o~
+O Shogun da Compreens�o est� aqui e parece que ele est� distra�do,
+pensando em alguma coisa.
+~
+O Shogun da Compreens�o resplandece em bondade e compreens�o e olha
+diretamente para voc�, como se ele soubesse de alguma coisa.
+~
+2222354 0 0 0 0 0 0 0 360 E
+75 0 -23 3d10+1900 4d8+20
+10000 150000
+8 5 1
+E
+#15104
+Shogun �tica~
+O Shogum da �tica~
+O Shogum da �tica parece que fica incomodado com a sua apar�ncia.
+~
+O Shogum da �tica ergue-se em sua dire��o. Pelo aspecto de sua espada 
+ensang�entada, voc� acha melhor n�o ser JULGADO por ele. 
+~
+2222354 0 0 0 0 0 0 0 360 E
+70 -2 -24 3d10+1950 5d8+22
+10000 200000
+8 8 1
+E
+#15105
+Shogum Lealdade~
+O Shogum da Lealdade~
+O Shogum da Lealdade est� aqui, ofegante, como quem acaba de fugir de algo.
+~
+O Shogum da Lealdade mostra-se pronto para encarar qualquer desafio.  Seria
+melhor t�-lo como amigo.
+~
+2222354 0 0 0 0 0 0 0 360 E
+75 -4 -25 3d10+2000 5d8+25
+10000 250000
+8 8 1
+E
+#15106
+Shogum Repeito~
+O Shogum do Respeito~
+O Shogum do Respeito est� aqui, polindo sua espada antiga.
+~
+Voc� v� uma enorme figura, segurando uma arma que se parece com uma lan�a.
+A presen�a do Shogum, por si s�, demanda respeito.
+~
+2222354 0 0 0 0 0 0 0 360 E
+80 -6 -26 3d10+2200 5d7+26
+10000 300000
+8 5 1
+E
+#15107
+Shogum Autoridade~
+O Shogum da Autoridade~
+O Shogum da Autoridade exige algo de voc�.
+~
+Este homem te lembra de tudo o que voc� sempre temeu num pai.
+Sua vontade � de correr de volta para seu quarto.
+~
+2222354 0 0 0 0 0 0 0 360 E
+85 -8 -27 3d10+2400 5d7+27
+10000 350000
+8 8 1
+E
+#15108
+Shogum Conhecimento~
+O Shogum do Conhecimento~
+O Shogum do Conhecimento exclama entusiasmado, 'Eureka!'.
+~
+O Shogum do Conhecimento mal olha para voc�, e voc� fica imaginando
+o qu�o s�bio ele �.
+~
+2222354 0 0 0 0 0 0 0 360 E
+90 -10 -28 3d10+2500 5d7+28
+10000 400000
+8 8 1
+E
+#15109
+Shogum Verdade~
+O Shogum da Verade~
+O Shogum da Verdade est� aqui, murmurando enigmas.
+~
+Ele � mau, forte, e tem uma arma maior que a sua.
+Voc� treme de medo... sem brincadeira.
+~
+2222354 0 0 0 0 0 0 0 360 E
+95 -12 -29 3d10+2700 5d7+29
+10000 350000
+8 8 1
+E
+#15110
+Shogum Caridade~
+O Shogum do Caridade~
+O Shogum do Caridade est� aqui, prendendo flores em seu cinto.
+~
+O Shogum do Caridade faz com que voc� se lembre de alguns ensinamentos
+de seu pai.  A �nica coisa que voc� consegue pensar � em dar um forte 
+abra�o nele!
+~
+2222354 0 0 0 0 0 0 0 360 E
+100 -14 -30 3d10+2900 5d7+30
+10000 450000
+8 8 1
+E
+#15111
+Tokugawa Yoshikatsu~
+Tokugawa Yoshikatsu~
+Tokugawa Yoshikatsu est� meditando aqui.
+~
+Tokugawa Yoshikatsu foi um dos maiores Samurais de todos os tempos.
+E, em breve, ou voc� ou ele estar� morto.
+~
+2222354 0 0 0 0 0 0 0 500 E
+101 -20 -32 3d10+8000 5d7+40
+40000 1500000
+3 8 1
+Str: 18
+Dex: 20
+Int: 18
+Wis: 20
+Con: 18
+Cha: 20
+E
+$

@@ -1,0 +1,390 @@
+#4200
+tam'ala~
+o Tam'ala~
+Algo com dentes extremamente afiados lhe observa, escondido na areia.
+~
+O Tam'ala é um predador que caça durante séculos pelo deserto.  Ninguém sabe
+realmente como é um Tam'ala, pois seu corpo sempre fica escondido sob as
+areias.  Pouquíssimas pessoas já escaparam de um ataque seu...
+~
+2105362 0 0 0 1654848 0 0 0 -1000 E
+30 3 -10 1d30+950 3d4+15
+0 107642
+8 8 1
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4201
+areia redemoinho demônio~
+um demônio de areia~
+Um furioso redemoinho de areia surge diante de você.
+~
+ia é um irritante ser que habita o deserto Kubalai.  Pequeno
+e feito de milhões de grãos de areia e sujeira, ele parece vagar pelos
+desertos, atormentando os viajantes.  Um par de malignos olhos negros
+brilham no centro do redemoinho.
+~
+2106882 0 0 0 65600 0 0 0 -500 E
+22 9 3 1d22+140 2d3+11
+650 18068
+8 8 1
+BareHandAttack: 10
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4202
+parda áspide cobra~
+uma áspide~
+Uma cobra parda está enterrada na areia próxima aos seus pés.
+~
+Essa cobra parece ser venenosa...
+~
+2105858 0 0 0 65600 0 0 0 -400 E
+23 9 1 1d23+120 2d4+11
+700 23117
+8 8 2
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4203
+areia besouro~
+um besouro de areia~
+Um grande besouro rasteja por aqui, à procura de alimento.
+~
+O besouro de areia é uma criatura inofensiva que vaga pelo deserto à
+procurando alimento.  Carregando sua pesada casca, ele é impérvio aos
+severos elementos de seu lar.  Quando ele anda, você apenas nota leves
+movimentos na areia.
+~
+2105986 0 0 0 65600 0 0 0 -2 E
+21 8 2 1d21+200 2d3+10
+600 15159
+8 8 1
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4204
+redemoinho gigantesco funil ar~
+um gigantesco redemoinho~
+Um poderoso funil de ar dança descontroladamente por aqui.
+~
+Cuidado para não ser tragado por ele!
+~
+2631682 0 0 0 67174400 0 0 0 500 E
+21 8 2 1d21+400 2d3+10
+600 17159
+8 8 1
+BareHandAttack: 6
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4205
+cão gra'lan~
+um cão Gra'lan~
+Um cão Gra'lan passa rapidamente por você.
+~
+Grande e esbelto, os Gra'lans lembram galgos, exceto por seres bem maiores.
+Grandes orelhas e olhos brilhantes mostram que essas criaturas são
+inteligentes e deve ser respeitadas.  Sua pele marrom empalidecida e sua
+habilidade mostram que ele é o melhor em uma caçada no deserto.
+~
+2140352 0 0 0 65600 0 0 0 300 E
+24 10 4 1d24+180 2d4+12
+750 28308
+8 8 1
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4206
+escorpião~
+um escorpião~
+Um escorpião foge à sua aproximação.
+~
+Essa pequena criatura parece bastante aborrecida em vê-lo.
+~
+2140864 0 0 0 65600 0 0 0 -350 E
+22 9 4 1d22+120 2d3+11
+650 27068
+8 8 1
+BareHandAttack: 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4207
+chefe nômade~
+o Chefe Nômade~
+O Chefe dos Nômades está parado aqui.
+~
+O Chefe obteve justamente sua posição entre seu povo por desafiar o perigo
+dos Tam'ala.  Alto, forte e vestido adequadamente, isso mostra que esse
+homem conhece bem a severa vida no deserto.
+~
+2127890 0 0 0 589828 0 0 0 0 E
+29 13 -5 1d29+320 3d4+14
+1000 46251
+8 8 1
+BareHandAttack: 13
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4208
+nômade homem~
+um nômade~
+Um homem alto está aqui, com o rosto coberto.
+~
+Você observa atentamente a única parte do rosto desse homem que lhe é
+visível: seus olhos de negro tão profundo quanto a noite no deserto.  Ele
+parece atento a todos os movimentos a seu redor, inclusive os seus...
+~
+2127890 0 0 0 589828 0 0 0 100 E
+26 11 -4 1d26+150 2d5+13
+850 26133
+8 8 1
+BareHandAttack: 13
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4209
+nômade cavaleiro homem~
+um cavaleiro nômade~
+Um homem com um sorriso alegre e um ar aventureiro está aqui.
+~
+Os cavaleiros são bravos indivíduos quem se aventuram no deserto para trazer
+comida e água.  Preparados e mentalmente fortes, eles são excelentes
+sobreviventes.  De todos os nômades daqui, os cavaleiros são a elite dos
+fortes.
+~
+2127890 0 0 0 589828 0 0 0 300 E
+28 13 -7 1d28+450 2d6+14
+950 51569
+8 8 1
+BareHandAttack: 13
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4210
+nômade mulher~
+uma nômade~
+Uma mulher caminha por aqui.
+~
+Completamente coberta e protegida do rude ambiente, as mulheres nômades são
+tão fortes quantos os homens.  Crescida em um ambiente que desconsidera
+diferenças de gênero, ela é capaz de tudo que um homem for.  Essa é a única
+forma para que esse povo sobreviva no deserto.
+~
+2127890 0 0 0 589828 0 0 0 100 E
+25 11 0 1d25+299 2d4+12
+800 23646
+8 8 2
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4211
+translúcido gênio algo~
+um gênio~
+Algo translúcido paira no ar, sorrindo malignamente para você.
+~
+Primeiramente, você pensou que esse gênio era apenas uma estranha coluna de
+fumaça...  Mas o par de brilhantes olhos e o sorriso sardônico lhe
+indicam que algo de muito perigoso está perante você.
+~
+2138642 0 0 0 1572864 0 0 0 -800 E
+24 10 -2 1d24+321 2d4+12
+750 24503
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4212
+sir'kas felino~
+um Sir'kas~
+Um felino caminha lentamente pela areia.
+~
+O pequeno Sir'kas se assemelha em muito com um lince, só que é bem
+menor e com orelhas bem mais pontudas. Seus belos olhos de felino são
+protegidos por pálbebras muito escuras, parecendo que ele usa maquiagem...
+Que engraçado!
+~
+2107538 0 0 0 589824 0 0 0 248 E
+24 10 0 1d24+200 2d4+12
+750 21308
+8 8 1
+BareHandAttack: 8
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4213
+estátua~
+uma estátua~
+Uma grande estátua está aqui, gasta pela abrasiva areia.
+~
+Essa estátua foi construída a muito tempo atrás, na mesma época e com as
+mesma rochas que se ergueram as grandes pirâmides.  Com cerca de 3 metros de
+altura, ela representa um deus que lhe é desconhecido e parece estar aqui
+para guardar um caminho agora soterrado.
+~
+2170898 0 0 0 65856 0 0 0 -400 E
+28 3 -12 1d28+645 2d6+14
+950 171569
+8 8 2
+BareHandAttack: 9
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4214
+múmia~
+uma múmia~
+Uma múmia imunda rasteja em sua direção.
+~
+Essa múmia está caindo aos pedaços! E fedendo...
+~
+2105986 0 0 0 589824 0 0 0 -430 E
+25 11 0 1d25+358 2d4+12
+800 38646
+8 8 2
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4215
+íbis pássaro~
+um Íbis~
+Um pássaro, feito de pedra, toma vida de repente diante de seus olhos.
+~
+Íbis, venerado pelo povo da pirâmide, desfruta do santuário oferecido aqui.
+Um gracioso pássaro com longas asas e pescoço, bico curvado, e plumagem
+rosada é o símbolo da santidade daqui.  Ele se torna novamente uma estátua
+de pedra em tempos de sofrimento, e reanima-se em tempos de alegria.
+~
+2678786 0 0 0 67174400 0 0 0 780 E
+27 11 -3 1d27+471 2d6+13
+900 39650
+8 8 1
+BareHandAttack: 11
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4244
+verme areia~
+um verme de areia~
+Um grande verme de areia surge diante dos seus pés.
+~
+Você se surpreende com a enorme boca do verme: ele possui dentes recurvados,
+totalmente pontiagudos.  Normalmente eles ficam enterrados na areia e,
+quando sentem alguma possível presa acima deles, abrem imediatamente a
+bocarra e engolem-na inteira.  Parece que você teve sorte...
+~
+2105378 0 0 0 589824 0 0 0 -300 E
+24 10 0 1d24+400 2d4+12
+750 43438
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4252
+urubu~
+um urubu~
+Um urubu sobrevoa sua cabeça.
+~
+Ele parece faminto...
+~
+2629762 0 0 0 67174400 0 0 0 -200 E
+20 8 4 1d20+400 2d3+10
+550 33385
+8 8 1
+BareHandAttack: 11
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4256
+camelo~
+um camelo~
+Um camelo passeia por aqui.
+~
+Esse simpático camelo lhe parece familiar...
+~
+2105474 0 0 0 65536 0 0 0 200 E
+20 8 2 1d20+600 2d3+10
+550 53385
+8 8 1
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4268
+faraó~
+o Grande Faraó~
+O Grande Faraó está diante de você, perscrutando-lhe.
+~
+O Grande Faraó está viajando por seu reino.  Vestido em esplendorosas roupas
+egípcias reais, ele segue em diante.  Um colar com um grande ankh dourado,
+um par de antigos braceletes de prata, pele de chita, e uma capa feita da
+plumagem de um Íbis o fazem parecer um deus na terra.
+
+~
+2291714 0 0 0 65792 0 0 0 1000 E
+29 8 -8 1d29+800 3d4+14
+1000 70251
+8 8 1
+BareHandAttack: 13
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4270
+miragem~
+uma miragem~
+Você vislumbra uma miragem adiante.
+~
+Você está vendo coisa...
+~
+2156546 0 0 0 524352 0 0 0 0 E
+23 9 4 1d23+700 2d4+11
+700 39117
+8 8 2
+Dex: 12
+Int: 13
+Wis: 13
+E
+#4274
+esfinge~
+uma Esfinge~
+Uma Esfinge está aqui, coberta pela areia.
+~
+A Esfinge foi coberta pelas areias por séculos, até a recente tempestade de
+areia trazê-la das profundezas da areia até a superfície.  Um massivo corpo
+de leão, e uma cabeça humana completam essa criatura.  Tendo vivido eras,
+essa é uma das mais sábias criaturas de todos os reinos.
+~
+2353154 0 0 0 65792 0 0 0 0 E
+29 6 -16 1d29+800 3d4+14
+1000 77977
+5 5 2
+BareHandAttack: 6
+Dex: 12
+Int: 13
+Wis: 13
+E
+$

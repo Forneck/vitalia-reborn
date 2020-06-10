@@ -1,0 +1,97 @@
+#115
+Vitalia~
+O Sétimo Mundo Oculto, Patala~
+11500 11599 160 1 a 0 0 0 -1 -1
+-1
+*
+* Monstros (muralha)
+M 0 11500 4 11505      guarda naga
+E 1 11500 30 16               empunhar barchi
+E 1 11505 30 5                vestir coura�a no corpo
+E 1 11506 30 11               usar escudo
+M 0 11500 4 11510      guarda naga
+E 1 11500 30 16               empunhar barchi
+E 1 11505 30 5                vestir coura�a no corpo
+E 1 11506 30 11               usar escudo
+M 0 11500 4 11515      guarda naga
+E 1 11500 30 16               empunhar barchi
+E 1 11505 30 5                vestir coura�a no corpo
+E 1 11506 30 11               usar escudo
+M 0 11500 4 11525      guarda naga
+E 1 11500 30 16               empunhar barchi
+E 1 11505 30 5                vestir coura�a no corpo
+E 1 11506 30 11               usar escudo
+M 0 11501 1 11500      Khanti
+E 1 11502 20 19               usar brinco
+E 1 11503 15 5                vestir sari-armadura no corpo
+E 1 11504 15 16               empunhar khanda
+E 1 11507 1 17                segurar a primeira das chaves do Mundo Oculto
+E 1 11501 15 21               usar bindu
+E 1 11508 15 22               usar nath
+M 0 11502 3 11541      espinhal agressivo
+M 0 11502 3 11550      espinhal agressivo
+M 0 11502 3 11544      espinhal agressivo
+M 0 11503 2 11553      monstro de lama
+M 0 11503 2 11537      monstro de lama
+M 0 11504 1 11559      um Bra�o de Khura
+E 1 11509 3 17                segurar a segunda das chaves do Mundo Oculto
+M 0 11506 3 11565      o pequeno yaksha
+E 1 11512 30 16               empunhar gadba de madeira
+E 1 11514 30 5                pintar corpo com sangue
+M 0 11506 3 11591      o pequeno yaksha
+E 1 11512 30 16               empunhar gadba de madeira
+E 1 11514 30 5                pintar corpo com sangue
+M 0 11506 3 11596      o pequeno yaksha
+E 1 11512 30 16               empunhar gadba de madeira
+E 1 11514 30 5                pintar corpo com sangue
+M 0 11507 1 11599      o yaksha resmung�o
+E 1 11513 30 16               empunhar mazhu de ferro
+E 1 11515 30 6                usar chifres de yaksha adulto
+M 0 11508 2 11584      um naga ca�ador
+E 1 11516 10 3                um medalh�o de prote��o
+M 0 11508 2 11589      um naga ca�ador
+E 1 11517 10 16               uma lathi de ametista
+M 0 11509 1 11567      uma nagini rastreadora
+E 1 11518 10 16               um khatar de rastreador
+E 1 11519 10 22               um nath de prata
+M 0 11510 5 11577      uma coluna d'�gua
+M 0 11510 5 11569      uma coluna d'�gua
+M 0 11510 5 11590      uma coluna d'�gua
+M 0 11510 5 11571      uma coluna d'�gua
+M 0 11510 5 11580      uma coluna d'�gua
+M 0 11511 2 11566      uma nagini ca�adora
+E 1 11521 10 16               um arp�o de prata
+M 0 11511 2 11581      uma nagini ca�adora
+E 1 11521 10 16               um arp�o de prata
+O 0 11522 5 11572             esfera d'�gua
+O 0 11522 5 11576             esfera d'�gua
+O 0 11522 5 11568             esfera d'�gua
+O 0 11522 5 11585             esfera d'�gua
+O 0 11522 5 11579             esfera d'�gua
+M 0 11512 1 11555      ge�logo
+E 1 11525 15 16               martelo
+E 1 11526 10 12               bolsa
+P 1 11523 15 11526            form�o
+P 1 11524 15 11526            form�o
+P 1 11527 15 11526            pincel
+M 0 11513 1 11531      mineralogista
+E 1 11529 10 17               valise
+P 1 11528 10 11529            anota��es
+P 1 19031 20 11529            luvas
+P 1 11534 20 11529            caixinha
+P 1 11530 10 11534            amostra
+P 1 11534 20 11529            caixinha
+P 1 11531 10 11534            amostra
+P 1 11534 20 11529            caixinha
+P 1 11532 10 11534            amostra
+P 1 11534 20 11529            caixinha
+P 1 11533 10 11534            amostra
+M 0 11514 1 11552      Vijay
+E 1 11535 10 16               lan�a negra
+*
+* Portas
+D 0 11500 0 2               fechar port�o de ferro
+D 0 11530 2 2               fechar port�o de ferro
+D 0 11559 1 2               o muro de espinhos
+S
+$

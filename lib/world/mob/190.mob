@@ -1,0 +1,426 @@
+#19001
+elfo guardião~
+O Guardião Elfo~
+Um guardião elfo está aqui guardando o portão.
+~
+Este é um elfo robusto na melhor fase de sua vida, até onde você pode ver.
+~
+2101266 0 0 0 20 0 0 0 1000 E
+19 8 -1 3d6+240 3d5+8
+2100 29000
+8 8 1
+E
+#19002
+elfo soldado guarda~
+O Soldado Elfo~
+Um soldado elfo está parado aqui, guardando o caminho.
+~
+Este é um elfo em plena juventude, mandado pelo chefe dos guardas da vila
+para proteger o caminho dos intrusos indesejados aqui.
+~
+2101250 0 0 0 20 0 0 0 1000 E
+17 10 0 1d12+123 1d8+5
+654 18000
+8 8 1
+E
+#19003
+elfa soldada guarda~
+a Guarda Elfa~
+Uma guarda elfa em sua ronda protegendo os habitantes da vila.
+~
+Esta é uma elfa em plena juventude, mandada pelo chefe dos guardas da vila
+para protegê-la dos intrusos.
+~
+2101250 0 0 0 20 0 0 0 1000 E
+12 10 2 1d12+123 1d8+4
+654 14500
+8 8 2
+E
+#19004
+elfo vendedor armas~
+O Elfo Vendedor de Armas~
+Um grande elfo vendedor de armas está andando atrás do balcão
+~
+Você nota uma expressão cansada em seu belo rosto.
+~
+2113538 0 0 0 16 0 0 0 900 E
+107 2 2 6d10+390 1d8+12
+10000 80000
+8 8 1
+E
+#19005
+elfo armeiro lojista~
+O Elfo Armeiro~
+Um grande elfo armeiro está andando atrás do balcão.
+~
+Você nota um expressão cansada em seu belo rosto.
+~
+2113538 0 0 0 16 0 0 0 900 E
+107 2 2 6d10+390 1d8+12
+30000 80000
+8 8 1
+E
+#19006
+elfo mago~
+O Mago Elfo~
+Um franzino mago elfo flutua atrás do balcão
+~
+Você nota um expressão cansada em seu belo rosto.
+~
+2113538 0 0 0 0 0 0 0 900 E
+107 2 2 6d10+390 1d8+12
+30000 80000
+8 8 1
+E
+#19007
+elfo Quintor lojista~
+O Elfo de Nome Quintor~
+Um elfo de nome Quintor está contando dinheiro atrás do balcão.
+~
+Você nota um expressão cansada em seu belo rosto.
+~
+2113538 0 0 0 0 0 0 0 900 E
+107 2 2 6d10+390 1d8+12
+30000 80000
+8 8 1
+E
+#19008
+elfo barman atendente gordo~
+O Barman Elfo~
+Um elfo gordo está parado atrás do balcão anotando os pedidos.
+~
+Você nota um expressão cansada em seu belo rosto.
+~
+2113538 0 0 0 0 0 0 0 900 E
+107 2 2 6d10+390 1d8+12
+2000 80000
+8 8 1
+E
+#19009
+elfa recepcionista~
+a Elfa Recepcionista~
+Uma bonita elfa está na recepção.
+~
+Você nota um expressão cansada em seu belo rosto.
+~
+2113538 0 0 0 0 0 0 0 900 E
+23 2 2 6d10+390 1d8+12
+2000 80000
+8 8 2
+E
+#19010
+elfo chefe guarda~
+O Chefe da Guarda Élfica~
+Um elfo com aparência de preguiçoso está deitado na cama, roncando alto.
+~
+Este elfo parece de alguma maneira mais experiente do que qualquer guarda
+da vila.  Pelo uniforme, ele provavelmente é o chefe da guarda da vila.
+Você nota muitas cicatrizes nas mãos e em seu pescoço.  Ele  
+obviamente participou de muitas batalhas nos seus dias de glória.
+~
+2158592 0 0 0 272 0 0 0 1000 E
+26 0 -4 1d50+500 4d6+10
+789 175000
+4 4 1
+E
+#19011
+elfo guarda soldado~
+O Guarda Elfo~
+Um guarda elfo está aqui, jogando baralho na mesa.
+~
+Este é um elfo em plena juventude, mandado pelo chefe dos guardas da vila
+para proteger o caminho dos intrusos indesejados aqui.
+~
+2101250 0 0 0 16 0 0 0 1000 E
+13 10 0 1d12+123 1d8+5
+654 12000
+6 6 1
+E
+#19012
+elfo jardineiro~
+O elfo jardineiro~
+Um elfo está aqui, alegremente cuidando das flores do jardim.
+~
+O jardineiro é um elfo sorridente, que parece exercer seu trabalho com muito
+gosto.  Suas mãos calejadas afagam com carinho as flores com as quais
+conversa.
+~
+2117638 0 0 0 120 0 0 0 700 E
+10 9 0 2d5+260 14d2+7
+4500 16900
+8 8 1
+E
+#19013
+elfo cidadão~
+O cidadão elfo~
+Um simpático cidadão elfo caminha por aqui, cumprimentando a todos que passam.
+~
+O elfo aparenta ser bastante jovem e cheio de vitalidade.  Como todos os que
+vivem aqui, parece irradiar uma certa luz.  Ele parece não estranhar a sua
+presença.
+~
+2103360 0 0 0 80 0 0 0 700 E
+10 10 0 2d2+400 4d3+8
+6000 14600
+8 8 1
+E
+#19014
+elfa cidadã~
+a cidadã elfa~
+Uma graciosa cidadã elfa caminha por aqui, acenando para todos que passam.
+~
+A elfa aparenta ser bastante jovem e cheia de vida.  Como todos os que vivem
+aqui, parece irradiar uma certa luz.  Ela parece não estranhar a sua
+presença.
+~
+2103360 0 0 0 80 0 0 0 700 E
+10 10 0 2d2+400 4d3+8
+6000 14600
+8 8 2
+E
+#19015
+prefeito nádor bherlïon~
+Nádor Bherlïon, o Prefeito~
+O atarefado prefeito dos bosques tenta, infrutiferamente, trabalhar aqui.
+~
+Nádor Bherlïon é um simpático elfo de aparência inofensiva.  De cabelos
+grisalhos e longas barbas prateadas, tenta quase em vão manter seus
+brilhantes olhos cinzentos abertos.  Talvez você deva deixá-lo tirar um
+cochilo...
+~
+2121734 0 0 0 65872 0 0 0 1000 E
+20 16 -6 4d4+600 4d4+10
+7000 34000
+6 8 1
+E
+#19016
+sacerdote elfo~
+O elfo sacerdote~
+Um elfo sacerdote do Templo está aqui, observando o movimento da cidade.
+~
+Esse elfo passa-lhe a imagem de grande honra e responsabilidade.  Muito
+belo, tem cabelos prateados e olhos cinzentos, e todo seu corpo parece
+emanar uma estranha luz branca.  Percebendo estar sendo observado, ele sorri
+para você.
+~
+2158610 0 0 0 368 0 0 0 1000 E
+16 10 -5 3d3+560 3d3+9
+6000 32000
+8 8 1
+E
+#19017
+elfa sacerdotisa~
+a sacerdotisa elfa~
+Uma altiva sacerdotisa da Lua de Prata está aqui cuidando do Templo.
+~
+A sacerdotisa parece se orgulhar muito de seu posto no Templo.  Mesmo o ar
+de superioridade não esconde a beleza de seus cabelos negros e profundos
+olhos cor-de-avelã, combinados com traços clássicos.  Uma estranha luz
+parece incidir sobre a elfa, que não demonstra notar nada de sua
+insignificante presença...
+~
+2158610 0 0 0 368 0 0 0 1000 E
+17 9 -6 3d3+580 3d3+10
+7000 34500
+8 8 2
+E
+#19018
+sacerdote elfo~
+O elfo sacerdote~
+Um elfo sacerdote do Templo está aqui, observando o movimento da cidade.
+~
+Esse elfo passa-lhe a imagem de grande honra e responsabilidade.  Muito
+belo, tem cabelos prateados e olhos cinzentos, e todo seu corpo parece
+emanar uma estranha luz branca.  Percebendo estar sendo observado, ele sorri
+para você.
+~
+2158672 0 0 0 368 0 0 0 1000 E
+12 10 0 3d3+420 3d3+7
+5000 23000
+8 8 1
+E
+#19019
+elfa sacerdotisa~
+a sacerdotisa elfa~
+Uma altiva sacerdotisa da Lua de Prata está aqui cuidando do Templo.
+~
+A sacerdotisa parece se orgulhar muito de seu posto no Templo.  Mesmo o ar
+de superioridade não esconde a beleza de seus cabelos negros e profundos
+olhos cor-de-avelã, combinados com traços clássicos.  Uma estranha luz
+parece incidir sobre a elfa, que não demonstra notar nada de sua
+insignificante presença...
+~
+2158672 0 0 0 368 0 0 0 1000 E
+13 11 -1 3d3+450 3d3+8
+5000 24500
+8 8 2
+E
+#19020
+elfa dona dona-de-casa senhora élfica~
+a elfa dona-de-casa~
+Uma senhora élfica esta aqui, calmamente limpando sua casa.
+~
+Apesar do cansaço, essa senhora parece cuidar de sua casa com muito carinho.
+Ela passa pela casa saltitando e cantando enquanto termina seus afazeres...
+Quanta disposição!
+~
+2101378 0 0 0 80 0 0 0 700 E
+10 13 2 4d4+280 3d3+5
+4000 13400
+8 8 2
+E
+#19021
+elfa criança~
+a criança elfa~
+Totalmente alheia ao mundo, uma saudável criança elfa brinca com seus brinquedos.
+~
+Ela parece estar bem feliz brincando sem você se intrometer...
+~
+2097154 0 0 0 0 0 0 0 700 E
+6 18 4 2d2+100 2d2+4
+200 8000
+8 8 2
+E
+#19022
+elfo apressado~
+O elfo apressado~
+Um elfo que parece estar muito apressado está aqui, tentando passar o mais rápido possível.
+~
+Ele parece estar atrasado para algum compromisso.  Talvez esteja saindo do
+trabalho e precise chegar em casa logo.  Vamos, não dá mais tempo: ele está
+muito apressado para isso..
+~
+2130112 0 0 0 80 0 0 0 600 E
+11 12 0 4d4+367 4d3+7
+6000 21000
+8 8 1
+E
+#19023
+sabiá vermelho passarinho pássaro~
+o sabiá vermelho~
+Um passarinho vermelho canta alegremente empoleirado em um galho.
+~
+Trata-se de um belo sabiá vermelho...  Seu doce canto se parece com alguma
+antiga canção que você já não se lembra mais...  Estranho...
+~
+2097154 0 0 0 0 0 0 0 600 E
+2 18 7 2d2+100 2d2+3
+0 2000
+8 8 1
+E
+#19024
+rouxinou azul passarinho pássaro~
+o rouxinol azul~
+Um passarinho azul canta maravilhosamente empoleirado em um galho que invade a sala.
+~
+Trata-se de um belo rouxinoul azul, que canta uma doce melodia que lhe enche
+os ouvidos...  Você se sente até mais leve ao ouvi-lo.
+~
+2097154 0 0 0 0 0 0 0 600 E
+2 18 7 2d2+100 2d2+3
+0 2000
+8 8 1
+E
+#19025
+esquilo engraçado~
+o esquilo engraçado~
+Um engraçado esquilo marrom roe rapidamente algumas nozes.
+~
+Peludo e elétrico, esse esquilo é muito engraçadinho.  Imagine, parece
+desaprovar sua presença aqui!  Talvez seja melhor o deixar em paz.
+~
+2097154 0 0 0 0 0 0 0 600 E
+2 18 7 2d2+100 2d2+3
+0 2000
+8 8 1
+E
+#19026
+elfo bardo~
+O Bardo Elfo~
+Um bardo elfo está sentado tocando seu alaúde e cantando.
+~
+Este elfo está vestido de verde, com calças marrons.  Ele está tocando um
+alaúde feito com a mais fina madeira e com cordas prateadas.
+~
+2158594 0 0 0 524560 0 0 0 750 E
+19 2 -1 3d6+200 3d3+6
+1000 35000
+6 6 1
+E
+#19027
+velho homem humano druida~
+O Velho Druida~
+Um velho druida está parado aqui salmodiando magias ancestrais.
+~
+Este é um humano em seus velhos dias.  Ele está vestindo um manto grosso e
+segurando um cajado de carvalho nas mãos.
+~
+2097220 0 0 0 327696 0 0 0 1 E
+50 0 -13 3d12+1033 1d8+19
+18000 180000
+8 8 1
+E
+#19028
+elemental fogo enorme~
+O Enorme Elemental do Fogo~
+Um enorme elemental do fogo está parado aqui queimando tudo.
+~
+Você só vê as chamas em formato humanóide.
+~
+2154562 0 0 0 589840 0 0 0 1 E
+33 -4 -10 2d12+700 4d8+16
+9000 160000
+8 8 1
+E
+#19029
+grande crescido urso animal~
+O urso crescido~
+Um urso crescido está rondando a clareira.
+~
+É grande, marrom e está furioso.
+~
+2097312 0 0 0 0 0 0 0 0 E
+29 2 1 2d10+190 1d6+6
+0 27000
+8 8 0
+E
+#19030
+grnde tigre animal~
+O enorme tigre~
+O tigre enorme está rondando a clareira.
+~
+Você vê que é grande, listrado e está furioso.
+~
+2097312 0 0 0 0 0 0 0 0 E
+30 2 1 2d10+160 1d8+8
+0 29000
+8 8 0
+E
+#19031
+elfo campeão~
+O Campeão~
+Um elfo campeão está parado apreciando os troféus.
+~
+O elfo a sua frente é bem bonito e robusto (para um elfo).  Até onde você
+pode ver.
+~
+2248770 0 0 0 82192 0 0 0 1000 E
+37 -14 -20 21d40+428 7d6+37
+90000 800000
+8 8 1
+E
+#19032
+enorme corvo negro~
+um enorme corvo negro~
+Um enorme corvo negro está aqui, grasnando ameaçadoramente.
+~
+Esse é o maior corvo que você já viu!  O corpo dele é totalmente coberto por
+penas negras, destacando ainda mais seus malignos olhos vermelhos.  O bico e
+as garras parecem afiados como navalhas...  Talvez seja melhor se afastar...
+~
+2097248 0 0 0 0 0 0 0 0 E
+22 10 1 2d5+110 2d4+7
+0 17450
+8 8 1
+E
+$

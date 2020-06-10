@@ -1,0 +1,150 @@
+#900
+homba~
+o homba~
+O homba esvoaça em sua volta.
+~
+Parte falcão, parte urso, parte lobo. Parte a parte, e faz-se um horrível
+total.
+~
+2103330 0 0 0 67732 0 0 0 -100 E
+4 16 5 2d10+40 1d8+4
+100 1500
+8 8 0
+E
+#901
+espadachim~
+o espadachim~
+O maior espadachim do mundo está na sua frente, zombando da sua cara.
+~
+Este é o maior espadachim.
+~
+2103330 0 0 0 67600 0 0 0 -400 E
+7 12 3 3d10+80 2d5+2
+250 3000
+8 8 1
+E
+#902
+mumia rabscuttle~
+a Mumia de Rabscuttle~
+A Mumia de Rabscuttle perambula aqui, braços levantados, andando em sua direção.
+~
+Só bandagens, sem personalidade.
+~
+2103330 0 0 0 67600 0 0 0 -780 E
+11 10 1 6d3+130 2d6+2
+750 10500
+8 8 2
+E
+#903
+lagarto gigante~
+o lagarto gigante~
+Um lagarto gigante está aqui.
+~
+Esta escamosa criatura parece bem adaptada ao seu habitat subterrâneo.
+Ele parece muito poderoso.
+~
+2103330 0 0 0 67600 0 0 0 100 E
+16 6 2 10d2+220 3d4+5
+1200 26000
+8 8 1
+E
+#904
+woundwort general demonio~
+General Woundwort~
+General Woundwort, o demonio negro de Minos, espera para retalhá-lo em tiras.
+~
+Ele vagamente parece como um coelho, mas certamente não age como um.
+~
+2103330 0 0 0 67856 0 0 0 -1000 E
+25 0 -1 10d8+520 3d5+12
+10000 28000
+8 8 1
+E
+#905
+franz capanga~
+Franz o Capanga~
+Franz, capanga de Minos, está aqui para malhar você.
+~
+Franz não é frutinha.  Ele é muito musculoso e parece como se pudesse
+espremer sua cabeça como uma uva.
+~
+2103330 0 0 0 67856 0 0 0 -300 E
+12 7 4 5d10+120 2d8+4
+1000 14000
+8 8 1
+E
+#906
+hanz capanga~
+Hanz o Capanga~
+Hanz esta' aqui flexionando seus musculos e espremendo uvas.
+~
+Hanz não é frutinha.  Ele é muito musculoso e parece como se pudesse levantar
+um dragão.
+~
+2103330 0 0 0 67856 0 0 0 -300 E
+12 7 4 5d10+120 2d8+4
+1000 14000
+8 8 1
+E
+#907
+minos rei minotauro~
+Rei Minos o Minotauro~
+Rei Minos, o Minotauro, está aqui, esperando para lhe fazer sangrar até a morte.
+~
+Ele cheira muito ruim.
+~
+2193442 0 0 0 67920 0 0 0 -1000 E
+26 0 -2 12d8+590 4d6+10
+0 50000
+8 8 1
+E
+#908
+tartaruga dragao~
+a tartaruga dragão~
+Uma grande tartaruga dragão emerge movendo a água em ondas altas.
+~
+A carapaça da tartaruga é do tamanho de uma pequena casa e tão dura quanto
+rocha.
+~
+2162784 0 0 0 67600 0 0 0 -200 E
+22 4 -5 12d6+350 1d20+5
+10000 40000
+8 8 1
+E
+#909
+harpia do mar~
+a harpia do mar~
+Você percebe o rosto de uma horrível harpia na costa do mar.
+~
+A harpia do mar é uma terrivel combatente e tem dentes afiados e cortantes.
+~
+2097248 0 0 0 67600 0 0 0 -700 E
+4 16 6 4d4+35 2d5+0
+100 750
+8 8 2
+E
+#910
+tritao~
+o tritão~
+Existe um tritão nadando aqui balançando seu tridente contra você!
+~
+O tritão tem uma poderosa cauda em vez de pernas.
+~
+2193442 0 0 0 1640464 0 0 0 350 E
+5 14 5 5d5+65 2d4+2
+1500 1000
+8 8 1
+E
+#911
+caranguejo cascudo~
+o caranguejo cascudo~
+Um caranguejo cascudo está rastejando por aqui a procura de comida.
+~
+Isto se parace como um caranguejo...o que mais pode ser dito?
+~
+2162848 0 0 0 67600 0 0 0 0 E
+2 18 4 5d2+25 1d5+0
+0 150
+8 8 0
+E
+$

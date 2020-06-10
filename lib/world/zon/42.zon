@@ -1,0 +1,213 @@
+#42
+Vitalia~
+O Escaldante Deserto de Kubalai~
+4200 4299 260 2 a 0 0 0 -1 -1
+4
+*
+*
+M 0 4215 1 4264    �bis             
+E 1 4220 10 2                  o selo de Os�ris
+E 1 4221 10 17                 o fogo de An�bis
+E 1 4222 10 16                 a gl�ria de R�
+*
+M 0 4214 3 4262    m�mia
+E 1 4227 15 9                  o toque de Thot
+*
+M 0 4214 3 4263    m�mia 
+E 1 4227 15 9                  o toque de Thot
+*
+M 0 4268 1 4265    Grande Fara�
+E 1 4218 15 3                   antigo colar com um ankh dourado
+E 1 4219 15 6                   coroa do fara�     
+*
+M 0 4214 3 4261    m�mia
+E 1 4227 15 9                   o toque de Thot
+*
+M 0 4213 2 4269    est�tua 
+E 1 4200 15 21                  maldi��o de Baphamet         
+*
+M 0 4213 2 4269    est�tua
+E 1 4200 15 21                  maldi��o de Baphamet     
+*
+M 0 4270 4 4259    miragem
+G 1 4223 20 -1                    po��o da miragem    
+*
+M 0 4274 1 4258    Esfinge
+E 1 4216 10 17                  cajado da sabedoria
+*
+M 0 4206 3 4253    escorpi�o
+E 1 4213 20 16                  ferr�o de um escorpi�o
+*
+M 0 4202 3 4254    �spide
+G 1 4224 15  -1                   presas de uma �spide          
+*
+M 0 4206 3 4256    escorpi�o
+E 1 4213 20 16                  ferr�o de um escorpi�o  
+*
+M 0 4204 4 4252    gigantesco redemoinho 
+*
+M 0 4212 5 4249    um Sir'kas    
+E 1 4201 20 16                  garras de um Sir'kas
+*
+M 0 4212 5 4249    um Sir'kas
+E 1 4201 20 16                  garras de um Sir'kas
+*
+M 0 4205 5 4248    c�o Gra'lan
+*
+O 0 4288 1 4247                 um pequeno tanque de �gua
+*
+M 0 4204 4 4246    gigantesco redemoinho
+M 0 4206 3 4238    escorpi�o
+E 1 4213 20 16                  ferr�o de um escorpi�o
+*
+M 0 4270 4 4239    miragem
+G 1 4223 20 -1                    po��o da miragem
+*
+M 0 4200 1 4243    Tam'ala
+E 1 4214 15 21                  mand�bula de um Tam'ala 
+E 1 4226 20 16                  tent�culo de um Tam'ala 
+*
+M 0 4202 3 4244    �spide
+G 1 4224 15 -1                     presas de uma �spide
+*
+M 0 4201 4 4245    dem�nio de areia
+G 1 4225 20   -1                  frasco com areia
+*
+M 0 4212 5 4237    um Sir'kas
+E 1 4201 20 16                  garras de um Sir'kas
+*
+M 0 4203 3 4235    besouro de areia
+E 1 4217 20 11                  carapa�a de um besouro de areia
+*
+M 0 4270 4 4234    miragem
+G 1 4223 20  -1                   po��o da miragem
+*
+M 0 4201 4 4232    dem�nio de areia
+G 1 4225 20    -1                 frasco com areia
+*
+M 0 4252 4 4230    urubu
+M 0 4203 3 4229    besouro de areia
+E 1 4217 20 11                  carapa�a de um besouro de areia
+*
+M 0 4201 4 4266    dem�nio de areia
+G 1 4225 20    -1                 frasco com areia
+*
+M 0 4244 3 4268    verme de areia
+E 1 4215 20 12                  pele de um verme de areia
+*
+M 0 4205 5 4225    c�o Gra'lan
+M 0 4205 5 4225    c�o Gra'lan
+*
+M 0 4203 3 4228    besouro de areia
+E 1 4217 20 11                  carapa�a de um besouro de areia
+*
+M 0 4212 5 4286    um Sir'kas
+E 1 4201 20 16                  garras de um Sir'kas
+*
+M 0 4212 5 4286    um Sir'kas
+E 1 4201 20 16                  garras de um Sir'kas
+* 
+M 0 4244 3 4223    verme de areia
+E 1 4215 20 12                  pele de um verme de areia
+*
+M 0 4204 4 4221    gigantesco redemoinho
+M 0 4256 4 4220    camelo
+M 0 4252 4 4274    urubu
+E 1 3832 1 17       Card Urubu(3832) com Urubu(4252)
+M 0 4205 5 4271    c�o Gra'lan
+M 0 4205 5 4215    c�o Gra'lan
+M 0 4256 4 4216    camelo
+M 0 4256 4 4217    camelo
+M 0 4256 4 4217    camelo
+*
+M 0 4270 4 4218    miragem
+G 1 4223 20     -1                po��o da miragem
+*
+M 0 4201 4 4213    dem�nio de areia
+G 1 4225 20   -1                  frasco com areia 
+*
+M 0 4202 3 4212    �spide
+G 1 4224 15  -1                   presas de uma �spide
+*
+M 0 4244 3 4284    verme de areia
+E 1 4215 20 12                  pele de um verme de areia  
+*
+M 0 4252 4 4283    urubu
+M 0 4204 4 4275    gigantesco redemoinho
+M 0 4252 4 4280    urubu
+*
+M 0 4210 4 4203    n�made
+E 1 4205 30 6                    turbante n�made                         
+E 1 4206 30 12                   manto pardo                        
+E 1 4207 20 16                   Krishnar                         
+*
+M 0 4210 4 4203    n�made
+E 1 4205 30 6                    turbante n�made   
+E 1 4206 30 12                   manto pardo   
+E 1 4207 20 16                   Krishnar  
+*
+M 0 4208 4 4201    n�made
+E 1 4205 30 6                    turbante n�made  
+E 1 4206 30 12                   manto pardo  
+E 1 4207 20 16                   Krishnar  
+*
+M 0 4209 4 4202    n�made cavaleiro
+E 1 4205 30 6                    turbante n�made  
+E 1 4206 30 12                   manto pardo  
+E 1 4208 15 8                    botas de montaria 
+*
+M 0 4210 4 4202    n�made
+E 1 4205 30 6                    turbante n�made  
+E 1 4206 30 12                   manto pardo  
+E 1 4207 20 16                   Krishnar  
+*
+M 0 4208 4 4205    n�made
+E 1 4205 30 6                    turbante n�made  
+E 1 4206 30 12                   manto pardo  
+E 1 4207 20 16                   Krishnar  
+*
+M 0 4209 4 4205    n�made cavaleiro
+E 1 4205 30 6                    turbante n�made  
+E 1 4206 30 12                   manto pardo  
+E 1 4208 15 8                    botas de montaria 
+*
+M 0 4209 4 4204    n�made cavaleiro
+E 1 4205 30 6                    turbante n�made  
+E 1 4206 30 12                   manto pardo  
+E 1 4208 15 8                    botas de montaria 
+*
+M 0 4209 4 4204    n�made cavaleiro
+E 1 4205 30 6                    turbante n�made  
+E 1 4206 30 12                   manto pardo  
+E 1 4208 15 8                    botas de montaria 
+*
+M 0 4208 4 4209    n�made
+E 1 4205 30 6                    turbante n�made  
+E 1 4206 30 12                   manto pardo  
+E 1 4207 20 16                   Krishnar  
+*
+M 0 4211 1 4208    g�nio
+E 1 4202 20 12                   capa  
+E 1 4203 20 8                    tapete 
+E 1 4204 20 14                   faixa  
+*
+M 0 4208 4 4207    n�made
+E 1 4205 30 6                    turbante n�made  
+E 1 4206 30 12                   manto pardo  
+E 1 4207 20 16                   Krishnar  
+*
+M 0 4210 4 4207    n�made
+E 1 4205 30 6                    turbante n�made  
+E 1 4206 30 12                   manto pardo  
+E 1 4207 20 16                   Krishnar  
+*
+M 0 4207 1 4210    Chefe N�made
+E 1 4209 20 13                   faixa real  
+E 1 4210 20 8                    largas botas de seda 
+E 1 4211 15 22                   argola Kubalai 
+E 1 4212 20 19                   brinco de pedra  
+*
+O 0 4288 1 4288
+*
+S
+$

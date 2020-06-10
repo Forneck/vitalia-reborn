@@ -1,0 +1,700 @@
+#8101
+sacerdote~
+um sacerdote~
+Um sacerdote est� aqui, expressando algumas palavras.
+~
+Os olhos do imponente sacerdote brilham com uma estranha luz, parecendo que
+sugam sua energia.  Voc� se sente cada vez mais fraco ao encarar esse homem
+de apar�ncia sombria.
+~
+2357312 0 0 0 262400 0 0 0 -360 E
+40 0 -5 2d500+200 3d4+18
+2000 40000
+8 8 1
+E
+#8102
+cidad�o eg�pcio~
+o cidad�o eg�pcio~
+Um cidad�o eg�pcio est� em p� aqui.
+~
+O cidad�o � apenas mais um dos humildes homens que servem fielmente ao
+fara�.
+~
+2097344 0 0 0 0 0 0 0 360 E
+25 3 -3 2d10+200 2d3+12
+0 15000
+8 8 1
+E
+#8103
+esposa fara� fara bela jovemo~
+a esposa do fara�~
+Uma bela jovem est� aqui tentando agradar a todos.
+~
+Ela � uma bela jovem que, ao lado das outras esposas do fara�, vive apenas
+em fun��o de seu marido, perdendo assim os melhores anos de sua vida.  Voc�
+nota um estranho brilho em seus olhos...
+~
+2097346 0 0 0 0 0 0 0 360 E
+20 5 -5 2d20+100 1d2+13
+5000 10000
+8 8 2
+E
+#8104
+escravo~
+o escravo~
+Um escravo est� aqui trabalhando arduamente.
+~
+O escravo aparenta n�o se alimentar h� muito tempo.  Suas costas nuas,
+curvadas como se carregassem um grande peso, s�o cheias de cicatrizes e
+feridas, todas devido �s chicotadas.  Sua face � totalmente marcada pelo
+tempo e pelo cansa�o.
+~
+2097344 0 0 0 0 0 0 0 370 E
+20 15 2 3d30+200 1d1+4
+1 7000
+8 8 1
+E
+#8105
+campon�s~
+o campon�s~
+Um campon�s est� aqui � procura de trabalho.
+~
+O campon�s � apenas um homem humilde que trabalha arduamente para pagar seus
+impostos.
+~
+2097348 0 0 0 0 0 0 0 360 E
+25 6 -1 3d10+300 1d2+12
+2000 9000
+8 8 1
+E
+#8106
+vizir~
+o Vizir~
+Um Vizir est� em p� aqui.
+~
+Reconhecido facilmente por ser dono de um olhar frio e ar prepotente, este �
+o homem mais importante do imp�rio.  O Vizir veste roupas ricamente
+ornamentadas, contrastando em muito com a plebe que o cerca.
+~
+2355270 0 0 0 262144 0 0 0 -360 E
+70 2 -10 2d1+2000 4d4+20
+20000 55000
+8 8 1
+E
+#8107
+imakhu~
+o Imakhu~
+Um Imakhu est� aqui recolhendo impostos.
+~
+Ele � mais um honrado homem do Imp�rio.
+~
+2355270 0 0 0 256 0 0 0 360 E
+60 1 -10 3d15+1500 4d4+24
+40000 50000
+8 8 1
+E
+#8108
+nomarca~
+o Nomarca~
+Um Nomarca est� aqui tomando conta de seu distrito.
+~
+Apenas mais um bar�o...
+~
+2355270 0 0 0 262144 0 0 0 -360 E
+80 -1 -10 2d30+500 2d6+20
+70000 70000
+8 8 1
+E
+#8109
+escriba~
+o escriba~
+Um escriba est� aqui fazendo anota��es.
+~
+Vestindo apenas uma tanga, o escriba segue anotando tudo o que v�.
+~
+2097350 0 0 0 0 0 0 0 360 E
+25 20 0 2d10+600 4d2+1
+1 7000
+8 8 1
+E
+#8110
+hemutiu~
+um Hemutiu~
+Um Hemutiu est� em p� aqui.
+~
+Esse simples artes�o, vestido somente trapos, trabalha humildemente para os
+mais ricos.
+~
+2355270 0 0 0 256 0 0 0 -360 E
+60 3 -10 1d1+2000 5d2+19
+1 35000
+8 8 1
+E
+#8111
+radumah~
+Radumah~
+Radumah est� aqui observando voc�.
+~
+Ele � um homem magro de sorriso suspeito.  Voc� acha muito estranho o jeito
+esperan�oso com que ele o olha...
+~
+2351366 0 0 0 296 0 0 0 360 E
+105 -20 -80 5d6+3092 8d5+30
+12000 0
+5 8 1
+E
+#8112
+sobek~
+Sobek~
+Sobek est� aqui acariciando um pequeno animal que est� em suas m�os.
+~
+Sobek, o deus eg�pcio protetor dos animais, possui cabe�a de crocodilo e
+corpo humano.  Ele �, aparentemente, bastante amea�ador.
+~
+2353170 0 0 0 262360 0 0 0 -360 E
+90 0 -36 10d30+2000 6d3+40
+60000 150000
+8 8 1
+E
+#8113
+thot~
+Thot~
+Thot est� em p� aqui denominando algumas coisas.
+~
+Thot, o de cabe�a de �bis, � o mensageiro dos Deuses.  Ele carrega uma
+caneta e um pergaminho com os quais escreve sobre todas as coisas desse
+mundo.
+~
+2353426 0 0 0 262360 0 0 0 360 E
+91 -5 -66 1d2+3000 6d6+42
+65000 165000
+8 8 1
+E
+#8114
+seth~
+Seth~
+Seth est� aqui protegendo as areias do Egito.
+~
+Seth � o deus cuja benevol�ncia se restringe �s for�as do deserto.  Assim,
+ele protege o Egito dos estrangeiros.
+~
+2353170 0 0 0 262360 0 0 0 -360 E
+90 -4 -38 9d9+2500 5d4+34
+70000 200000
+8 8 1
+E
+#8115
+sekmet~
+Sekmet~
+Com benevol�ncia, Sekmet fita voc�.
+~
+Voc� pode notar que, debaixo de suas vestes negras, Sekmet possui um corpo
+escultural. Sua cabe�a de leoa, por�m, d�-lhe uma apar�rencia assustadora.
+~
+2356804 0 0 0 854360 0 0 0 -360 E
+90 -7 -36 8d9+2700 3d7+34
+60000 200000
+8 8 2
+E
+#8116
+r�~
+R�~
+R�, envolto por seus raios solares, est� aqui.
+~
+Voc� est� diante do Grande Deus Sol.  Seu corpo, coberto por vestes
+douradas, emana uma amarelada luz quente.
+~
+2345234 0 0 0 344 0 0 0 360 E
+95 -10 -47 3d3+3980 3d8+40
+80000 299000
+5 8 1
+E
+#8117
+h�rus~
+H�rus~
+H�rus est� sentado aqui observando a todos.
+~
+H�rus, o deus com cabe�a de falc�o, � o prot�tipo sagrado do fara�.  Seu
+corpo jovem � robusto e saud�vel, digno de um grande guerreiro.  Consigo ele
+carrega carrega a justi�a e a honestidade.
+~
+2349632 0 0 0 262488 0 0 0 -360 E
+98 0 -35 3d3+4890 6d5+40
+90000 300000
+5 8 1
+E
+#8118
+h�tor~
+H�tor~
+H�tor parece estar em outra realidade.
+~
+A Deusa do C�u, H�tor, � uma bela mulher que leva sobre a cabe�a o disco
+solar entre um par de chifres de vaca.  Seus costumes s�o... peculiares.
+~
+2349122 0 0 0 344 0 0 0 360 E
+101 -7 -46 2d4+6500 8d3+37
+90000 220000
+8 8 2
+E
+#8119
+ptah~
+Ptah~
+Ptah est� aqui contemplando as areias do Egito.
+~
+Voc� observa esse homem barbado com o corpo totalmente enrolado em
+bandagens, exatamente como uma m�mia.  Sua cabe�a est� coberta por uma
+esp�cie de capuz, enquanto suas m�os, cruzadas na frente de seu corpo,
+seguram um Ankh e um Djed.
+~
+2357506 0 0 0 344 0 0 0 360 E
+90 -2 -36 2d3+2670 6d2+29
+70000 312000
+8 8 1
+E
+#8120
+�sis~
+�sis~
+�sis, adornada com suas j�ias, est� em p� aqui.
+~
+�sis � uma bela mulher de meia-idade que, vestida em trajes da mais fina l�
+e linho bordados com ouro e prata, graciosamente ostenta um grande n�mero de
+j�ias.
+~
+2357442 0 0 0 262488 0 0 0 -360 E
+101 -5 -37 2d3+4000 6d4+35
+50000 316000
+8 8 2
+E
+#8121
+bes~
+Bes~
+Bes est� aqui com uma crian�a nos bra�os.
+~
+Barbado, com o aspecto ao mesmo tempo selvagem e c�mico de duende, Bes, o
+protetor das mulheres gr�vidas e das crian�as, � sempre mostrado nas imagens
+eg�pcias de frente e n�o de perfil, como convencionalmente as pessoas s�o
+representadas no Egito.  Isso o faz se perguntar por que Bes recebe esse
+tipo de tratamento...
+~
+2227906 0 0 0 262400 0 0 0 360 E
+90 -3 -20 3d3+3000 6d4+25
+50000 300000
+5 8 1
+E
+#8122
+An�bis~
+an�bis~
+An�bis est� aqui vigiando as tumbas.
+~
+An�bis, o Deus dos mortos, tem corpo de homem e cabe�a de chacal.  Seus
+olhos s�o t�o vermelhos quanto assustadores e sua alma t�o negra quanto a
+aura que o cerca.
+~
+2357298 0 0 0 262512 0 0 0 -360 E
+101 -12 -30 4d4+3080 7d5+44
+20000 1000000
+8 8 1
+E
+#8123
+os�ris~
+Os�ris~
+Os�ris est� aqui com um olhar n�o muito agrad�vel.
+~
+Os�ris � o deus eg�pico da morte e ressurrei��o.  Vestindo uma mortalha
+branca, sua apar�ncia � de um moribundo: seu corpo exala um cheiro putrefato
+e sua pele parece estar em decomposi��o.
+~
+2357282 0 0 0 262512 0 0 0 -360 E
+102 -20 -40 3d4+2119 10d7+35
+40000 1500000
+8 8 1
+E
+#8124
+seth farao far�~
+Seth I~
+O fara� est� aqui governando a cidade do alto de seu trono.
+~
+Ele homem de apar�ncia nobre e ar arrogante.  Seus ricos trajes s�o os mais
+finos j� vistos sobre as areias do Egito.
+~
+2357266 0 0 0 256 0 0 0 360 E
+101 -2 -30 2d3+4000 5d5+30
+60000 200000
+8 8 1
+E
+#8125
+carrasco~
+o carrasco~
+O carrasco avan�a sobre voc� amea�adoramente.
+~
+Voc� apenas consegue vislumbrar um par de olhos assustadoramente frios por
+detr�s da viseira de seu capacete.  Segurando um enorme machado nas m�os, o
+carrasco caminha lentamente em sua dire��o.
+~
+2111522 0 0 0 112 0 0 0 -360 E
+40 5 -8 2d4+2500 1d2+6
+100 30000
+8 8 1
+E
+#8126
+embalsamador~
+o embalsamador~
+Um homem sombrio est� aqui embalsamando um corpo.
+~
+Olhando para o embalsamador voc� nota sangue e resqu�cios de tecido humano
+em suas vestes.  � dif�cil n�o notar tamb�m o fedor putrefato que ele
+exala.
+~
+2097190 0 0 0 112 0 0 0 -360 E
+30 7 -1 2d1+2000 3d3+10
+1000 20000
+8 8 1
+E
+#8127
+ajudante embalsamador~
+o ajudante de embalsamador~
+O ajudante de embalsamador est� em p� aqui.
+~
+Ele segura em uma de suas m�os um pequeno frasco de natr�o e na outra as
+v�sceras de algum infeliz.  Sua face revela a loucura e o frieza de seu
+cora��o.
+~
+2097190 0 0 0 112 0 0 0 -360 E
+30 5 0 2d2+2000 3d4+13
+500 18000
+8 8 1
+E
+#8128
+nefertiti~
+Nefertiti~
+Nefertiti est� aqui repousando em seu div�.
+~
+Nefertiti, a rainha e consorte de Akhenaton, � uma jovem de beleza
+inigual�vel.  Seus olhos s�o de profundo negro com longas e espessas
+pestanas, fazendo par com carnudos l�bios vermelhos dispostos em um rosto
+perfeito.  "A bela que chegou" � o significado de seu nome e perfeitamente
+descreve ela que � uma das mulheres mais belas e influentes dessa �poca.
+~
+2355202 0 0 0 262400 0 0 0 360 E
+80 -10 -20 2d3+2000 9d5+23
+1000 100000
+5 8 2
+E
+#8129
+pajem~
+o pajem~
+Um pajem est� em p� aqui.
+~
+Ele � apenas um garoto sorridente sempre pronto para ajudar.
+~
+2103298 0 0 0 112 0 0 0 360 E
+20 10 -3 5d9+600 4d1+10
+5 9000
+8 8 1
+E
+#8130
+eunuco~
+o eunuco~
+Um eunuco est� em p� aqui.
+~
+Parece que ele ficaria eternamente em p� aqui. E sem reclamar...
+~
+2103298 0 0 0 112 0 0 0 360 E
+20 15 -1 1d2+1000 2d2+5
+1 5000
+8 8 1
+E
+#8131
+criado~
+o criado~
+Um atarefado criado est� aqui.
+~
+O criado veste roupas simples, o que combina perfeitamente com sua natureza
+humilde.  Ele est� um pouco atrapalhado pois tenta servir bem a todos.
+~
+2103296 0 0 0 112 0 0 0 360 E
+20 10 0 5d5+1000 4d4+4
+10 1000
+8 8 1
+E
+#8132
+banqueiro~
+o banqueiro~
+O banqueiro est� em p� aqui.
+~
+Ele n�o parece muito confi�vel, por�m muito inteligente.
+~
+2154514 0 0 0 0 0 0 0 360 E
+10 0 0 1d1+30000 6d6+10
+0 400
+8 8 1
+E
+#8133
+tesoureiro~
+o tesoureiro~
+O tesoureiro est� aqui contando dinheiro.
+~
+Ele n�o parece ser confi�vel o bastante para guardar seu dinheiro mas,
+afinal, voc� n�o tem escolha.
+~
+2099218 0 0 0 112 0 0 0 360 E
+30 3 -20 2d5+2000 5d5+20
+1000 30000
+8 8 1
+E
+#8134
+�bis~
+o �bis~
+Um �bis est� aqui a sobrevoar sua cabe�a.
+~
+Ele � uma bela ave de pernas e bico longos.  A maioria de suas penas, muito
+brancas, parecem especialmente destacar as preciosas plumas de cor azul oceano.
+~
+2621504 0 0 0 0 0 0 0 360 E
+5 19 0 2d5+90 1d1+2
+0 80
+8 8 1
+E
+#8135
+gato~
+o gato~
+Um gato percorre a sala rapidamente.
+~
+Esse gato negro aparenta ser muito esperto e corajoso.
+~
+2097220 0 0 0 0 0 0 0 -360 E
+7 19 0 2d5+150 1d2+2
+0 100
+8 8 1
+E
+#8136
+escaravelho~
+o escaravelho~
+Um escaravelho est� aqui procurando por comida.
+~
+Voc� fica assustado com a agressividade desse pequeno escaravelho negro...
+~
+2097248 0 0 0 0 0 0 0 -360 E
+5 15 0 3d4+400 1d2+3
+0 100
+8 8 1
+E
+#8137
+rato~
+o rato~
+Um rato est� aqui tentando subir na sua perna.
+~
+Esse rato nojento est� todo coberto com um espessa e f�tida camada de lama.
+~
+2097222 0 0 0 0 0 0 0 360 E
+7 19 0 3d3+200 1d2+2
+0 100
+8 8 1
+E
+#8138
+khons~
+Khons~
+Khons est� aqui mirando o firmamento.
+~
+Khons � o deus eg�pcio da Lua.  Ele lhe conta porque n�o pode aparecer o m�s
+inteiro em toda sua gl�ria: uma vez, jogando senet contra Thot, Khons
+impensadamente apostou parte de sua luz.  Thot acabou ganhando o jogo e
+Khons teve de se contentar em, todo m�s, mostrar aos poucos sua luz at� que,
+atingindo seu auge, comece a minguar.
+~
+2357266 0 0 0 262512 0 0 0 360 E
+101 -8 -30 2d2+4500 8d8+32
+50000 200000
+8 8 1
+E
+#8139
+imothep~
+Imothep~
+Imothep se aproxima de voc� lentamente.
+~
+Voc� est� perante Imothep (ou pelo menos o que restou dele), o
+sumo-sacertode do fara�.  Totalmente envolto em bandagens, exatamente como
+uma m�mia, ele parece ter ressurgido do mundo dos mortos para vingar sua
+morte trazendo as 7 pragas do Egito.
+~
+2357302 0 0 0 262512 0 0 0 -360 E
+79 -10 -30 1d5+4000 3d3+30
+0 100000
+8 8 1
+E
+#8140
+akhenaton~
+Akhenaton~
+Akhenaton est� em p� aqui.
+~
+Akhenaton, um homem muito alto e magro, � conhecido principalmente por ser o
+fara� que cultuava apenas um deus: Aton, o Sol.  Ao lado de sua mulher, a
+bela Nefertiti, Akhenaton mant�m a paz no Egito.
+~
+2353170 0 0 0 262512 0 0 0 360 E
+90 -20 -18 6d6+3490 7d7+37
+40000 200000
+8 8 1
+E
+#8141
+ladr�o homem~
+o ladr�o~
+Um homem vestido todo de preto est� rondando esse lugar.
+~
+Ele aparenta muito sangue-frio e agilidade.  
+~
+2101316 0 0 0 524400 0 0 0 360 E
+20 8 -1 2d5+700 1d1+14
+10000 20000
+8 8 1
+E
+#8142
+tumbas ladr�o~
+o ladr�o de tumbas~
+Um ladr�o de tumbas est� aqui buscando um tesouro.
+~
+Voc� mal o v� diante da escurid�o.
+~
+2097220 0 0 0 65536 0 0 0 360 E
+30 5 0 3d3+600 1d2+2
+500 15000
+8 8 1
+E
+#8143
+cordoniz~
+um raro cordoniz~
+Um cordoniz est� aqui ciscando o ch�o.
+~
+Esse parece ser uma esp�cie muito rara de cordoniz pois, diferente da
+colora��o cinzenta e marrom comum, essa ave possui penas multicoloridas que
+parecem emitir um discreto brilho.  O cordoniz parece muito compenetrado em
+sua busca por comida.
+~
+2097216 0 0 0 0 0 0 0 0 E
+5 19 0 2d2+50 2d1+3
+0 500
+8 8 1
+E
+#8144
+explorador homem~
+o explorador~
+Um homem parece estar perdido por aqui.
+~
+Vestindo roupas que algum dia foram claras, esse homem parece procurar
+urgentemente, com sua lamparina, por uma sa�da.
+~
+2097216 0 0 0 0 0 0 0 360 E
+29 4 -4 2d5+1400 1d1+22
+50 10000
+8 8 1
+E
+#8145
+v�bora cobra~
+a v�bora~
+Uma enorme cobra est� rastejando pelo ch�o.
+~
+Essa enorme cobra passa quase despercebida nas quentes areias do deserto:
+seu couro tem a tonalidade certa para a camuflar.  Tenha muito cuidado para
+n�o pisar nessa mort�fera v�bora do Saara.
+~
+2097248 0 0 0 112 0 0 0 -360 E
+17 8 -1 3d3+300 5d2+12
+0 500
+8 8 2
+E
+#8146
+crian�a eg�pcia~
+a crian�a eg�pcia~
+Uma crian�a est� aqui procurando por sua m�e.
+~
+A pobre crian�a parece ter se perdido de sua m�e: chama-a incessantemente
+enquanto l�grimas desesperadas rolam por sua face corada.
+~
+2097216 0 0 0 0 0 0 0 360 E
+16 12 0 2d3+300 1d2+5
+10 1800
+8 8 2
+E
+#8147
+serpente~
+a Serpente~
+Uma enorme serpente est� aqui, encarando voc�.
+~
+Voc� se sente hipnotizado pelos olhos dessa serpente: parecem de fogo, com
+seu brilho se tornando mais fraco ou mais intenso.  De sua boca parece sair
+algum tipo de �cido f�tido, o que lhe inspira n�o s� medo como tamb�m
+repugn�ncia.
+~
+2162726 0 0 0 262512 0 0 0 -360 E
+101 -21 -40 8d8+6000 8d8+43
+0 300000
+8 8 2
+E
+#8148
+harirf~
+Harirf~
+Harirf est� aqui polindo suas botas.
+~
+Ele aparenta ser um lojista honesto e confi�vel mesmo tendo uma enorme arma
+presa em sua cintura.
+~
+2285586 0 0 0 262144 0 0 0 360 E
+108 0 -50 25d25+30000 2d4+30
+30000 0
+8 8 1
+E
+#8149
+rafertine~
+Rafertine~
+Uma bela mulher est� aqui a vender p�es.
+~
+Ela � uma linda mulher que j� chegou na meia-idade.  De porte elegante e
+sorriso sincero, Rafertine oferece a voc� alguns de seus p�es.
+~
+2285586 0 0 0 256 0 0 0 360 E
+108 0 -50 25d25+30000 2d4+30
+20000 0
+8 8 2
+E
+#8150
+musedic~
+Musedic~
+Musedic est� aqui tramando alguma coisa.
+~
+Musedic, com sua apar�ncia asquerosa, � dono de um olhar matreiro que
+desperta admira��o.
+~
+2285586 0 0 0 262144 0 0 0 -360 E
+108 0 -50 25d25+30000 2d4+30
+30000 0
+8 8 1
+E
+#8151
+m�mia~
+a m�mia~
+Uma m�mia arrasta-se em sua dire��o.
+~
+Exalando um insuport�vel cheiro de mofo e carne p�trida, essa m�mia parece
+disposta a fazer-lhe algum mal.  Voc� n�o sabe se fica mais assustado com
+sua enorme figura envolta em bandagens ou com os ferozes urros que saem do
+que deve ser sua boca.
+~
+2097248 0 0 0 112 0 0 0 -360 E
+30 10 0 2d5+1000 2d2+14
+0 21000
+8 8 2
+E
+#8152
+soldado eg�pcio~
+um soldado eg�pcio~
+Um soldado eg�pcio est� de guarda aqui.
+~
+Esse soldado de fei��es s�rias parece muito concentrado na defesa do
+patrim�nio de seu fara�.
+~
+2291714 0 0 0 112 0 0 0 -360 E
+40 -3 -17 5d10+1700 8d2+19
+0 12000
+8 8 1
+E
+$

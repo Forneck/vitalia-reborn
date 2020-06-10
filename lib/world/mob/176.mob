@@ -1,0 +1,534 @@
+#17600
+escorpi�o~
+um escorpi�o~
+Um pequeno escorpi�o passa rapidamente por voc�.
+~
+Este � um t�pico escorpi�o amarelado do deserto de Gobi.  Mesmo sendo 
+pequeno, seu veneno pode ser letal.
+~
+2119872 0 0 0 0 0 0 0 -100 E
+10 17 5 4d6+200 1d8+2
+0 500
+8 8 1
+E
+#17601
+lagarto~
+um lagarto~
+Um grande lagarto o encara ferozmente.
+~
+Este lagarto possui o corpo todo coberto escamas verdes e muito r�gidas.  
+Ao observar sua presen�a, ele abre sua boca mostrando suas enormes presas.
+~
+2103392 0 0 0 0 0 0 0 -150 E
+13 15 2 4d6+280 1d8+2
+0 700
+8 8 1
+E
+#17602
+cidad�o xi'an~
+um cidad�o de Xi'an~
+Um cidad�o de Xi'an est� aqui, o observando estanhamente.
+~
+Voc� percebe que ele usa um simples traje cinza claro, e um chap�u de palha 
+triangular e pontudo, caracter�stico dos chineses.  Ao olhar em sua face, 
+voc� observa que ele tem os olhos puxados, e uma longa barba e bigodes 
+negros.
+~
+2128448 0 0 0 0 0 0 0 0 E
+20 6 -1 2d6+350 1d9+2
+1000 2500
+8 8 1
+E
+#17603
+cidad� xi'an~
+uma cidad� de Xi'an~
+Uma cidad� de Xi'an est� aqui, apressada com seus afazeres.
+~
+Voc� percebe que ela usa um simples traje cinza claro, e um chap�u de palha 
+triangular e pontudo, caracter�stico dos chineses.  Ao olhar em sua face, 
+voc� observa que ele tem os olhos puxados e uma apar�ncia inocente.
+~
+2128448 0 0 0 0 0 0 0 0 E
+20 6 -1 2d6+350 1d8+1
+1000 2000
+8 8 2
+E
+#17604
+cidad�o xi'an~
+um cidad�o de Xi'an~
+Um cidad�o de Xi'an est� aqui, carregando alguns sacos.
+~
+Voc� percebe que ele usa um simples traje cinza claro, e um chap�u de palha 
+triangular e pontudo, caracter�stico dos chineses.  Ao olhar em sua face, 
+voc� observa que ele tem os olhos puxados, e uma longa barba e bigodes 
+negros.
+~
+2128448 0 0 0 0 0 0 0 0 E
+20 6 -1 2d6+350 1d9+2
+1000 2500
+8 8 1
+E
+#17605
+chaoyang~
+Chaoyang~
+Chaoyang est� aqui, com alguns fios de palha nas m�os.
+~
+Chaoyang � conhecido como o dono do armaz�m de Xi'an.  Ele possui uma idade 
+avan�ada, apresentando muita fraqueza e simplicidade, mas mesmo assim 
+produz produtos de �tima qualidade.  Chaoyang est� usando o traje cinza 
+claro t�pico da regi�o, e possui os cabelos e a barba muito branca e longa.
+~
+2351106 0 0 0 0 0 0 0 0 E
+108 6 5 5d6+600 2d7+1
+1000 2000
+8 8 1
+E
+#17606
+tse-ling~
+Tse-Ling~
+Tse-Ling o sauda, e aguarda atr�s do balc�o.
+~
+Tse-Ling � uma senhora muito baixa e j� muito velha.  Ela usa na cabe�a um 
+chap�u de palha t�pico chin�s, e veste alguns trajes de seda.  Apesar de 
+seu aspecto simples e caseiro, Tse-Ling parece fazer deliciosos alimentos.
+~
+2351106 0 0 0 0 0 0 0 0 E
+108 6 5 5d6+600 2d7+1
+1000 2000
+8 8 2
+E
+#17607
+guanghua~
+Guanghua~
+Guanghua est� aqui, sentando em um banquinho, enquanto toma seu ch�.
+~
+Guanhua � um senhor muito admirado em Xi'an.  Mesmo muito velho, e fraco, 
+ele produz maravilhosos tecidos de seda, coloridos e de �tima qualidade.
+Ele veste uma de suas pe�as de seda preta, e usa na cabe�a um chap�u de 
+palha caracter�stico chin�s.
+~
+2351106 0 0 0 0 0 0 0 0 E
+108 6 5 5d6+600 2d7+1
+1000 2000
+8 8 1
+E
+#17608
+ex�rcito xi'an~
+O ex�rcito de Xi'an~
+O ex�rcito de Xi'an est� aqui, treinando para a pr�xima batalha. 
+~
+Este ex�rcito � enorme.  Nele voc� pode ver cavalaria, infantaria, 
+arqueiros, entre outros, formando uma verdadeira m�quina de guerra.  Todos 
+do ex�rcito usam o mesmo tipo de traje, sendo uma t�nica colorida, 
+dependendo a cor em sua fun��o, e uma armadura por cima.  Al�m de armas, 
+eles carregam com benevol�ncia alguns bras�es chineses.
+~
+2353170 0 0 0 0 0 0 0 -150 E
+102 -53 -45 5d5+16200 10d15+62
+100000 6699999
+8 8 1
+BareHandAttack: 10
+E
+#17609
+serpente deserto~
+uma serpente do deserto~
+Uma serpente do deserto se esgueira por aqui.
+~
+A serpente do deserto tem um tamanho m�dio e uma colora��o marrom.  Se 
+ergueira rapidamente pelas areias do deserto atr�s de alimento, que 
+normalmente s�o presas f�ceis � ela.
+~
+2103392 0 0 0 0 0 0 0 -150 E
+15 15 2 4d6+300 1d8+4
+1000 850
+8 8 2
+E
+#17610
+guarda muralha oriental~
+O Guarda oriental da Grande Muralha~
+O Guarda oriental da Grande Muralha est� aqui, pronto para defende-la a qualquer custo.
+~
+Ele aparenta um aspecto muito forte e valente.  Ele � respons�vel pela 
+guarda do forte oriental da Grande Muralha.  Possuindo longos cabelos 
+negros, e uma bela t�nica de seda negra, coberto por uma grande armadura, 
+este guarda n�o parece ser um alvo f�cil.
+~
+2357506 0 0 0 0 0 0 0 0 E
+80 -5 -24 5d5+1900 5d10+25
+10000 200000
+8 8 1
+E
+#17611
+soldado chin�s~
+Um soldado chin�s~
+Um soldado chin�s est� aqui, protegendo a Grande Muralha.
+~
+Ele veste uma armadura simples, e carrega sempre preparado sua arma em 
+m�os.  Pronto para defender a muralha, ele faria qualquer coisa para matar 
+qualquer invasor que por acaso se aproxime.
+~
+2120000 0 0 0 0 0 0 0 0 E
+30 5 -3 2d2+500 4d4+14
+300 30000
+8 8 1
+E
+#17612
+guardi�o~
+O Guardi�o da muralha~
+O Guardi�o da muralha empunha suas armas assim que percebe sua presen�a.
+~
+Apesar do povo chin�s ser muito baixo, este guardi�o � o contrario, sendo 
+al�m de alto, muito forte.  Ele veste os caracter�sticos trajes chineses e 
+um chap�u de palha pontudo na cabe�a.  Em seu corpo voc� pode ver uma bela 
+armadura negra.  E suas m�os voc� pode ver que ele empunha dois grandes 
+bast�es de madeira, com uma enorme e afiad�ssima l�mina, pronta para 
+dilacerar aquele que invadir sua morada.
+~
+2357298 0 0 0 0 0 0 0 -300 E
+101 -13 -37 5d5+6000 8d10+30
+60000 2354330
+8 8 1
+BareHandAttack: 14
+E
+#17613
+guarda entrada~
+O guarda da entrada~
+O guarda da Grande Muralha est� aqui, defendento a entrada.
+~
+Este guarda empunha uma enorme lan�a, pronto para usa-la contra aqueles 
+que tentarem invadir a morada de seu imperador.
+~
+2127874 0 0 0 0 0 0 0 0 E
+90 5 -20 5d5+2800 8d7+30
+7000 505009
+8 8 1
+BareHandAttack: 11
+E
+#17614
+nove drag�es drag�o~
+os Nove Drag�es~
+O mural come�a a se transformar, dando vida aos Nove Drag�es chineses.
+~
+Voc� pode ver os enormes Nove Drag�es chineses, sendo tr�s deles laranjas, 
+quatro azuis e dois brancos.  Os Nove Drag�es s�o conhecidos pela sua f�ria 
+com os desconhecidos.  Daqueles que ja tentaram enfrenta-los, nenhum 
+sobreviveu at� hoje.  Apesar de serem diferentes nas cores, todos 
+apresentam o mesmo aspecto f�sico.  S�o muito alongados e finos, tendo o 
+aspecto de cobra, mas muito maior.  Todos tem enormes garras em cada uma 
+das quatro patas, e na boca, afiadissimos dentes, capazes de dilacerar a 
+carne com facilidade.
+~
+2357290 0 0 0 0 0 0 0 0 E
+105 -69 -80 5d7+22500 10d17+67
+150000 7312100
+8 8 1
+BareHandAttack: 1
+Str: 18
+StrAdd: 7
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#17615
+concubina~
+uma concubina~
+Uma concubina imperial est� aqui, assustada com a sua presen�a.
+~
+Ela � uma das mulheres mais lindas que voc� j� viu.  A concubina possui um 
+cabelo muito escuro, e longo at� os ombros, e os olhos muito esticados.  A 
+sua pele � muito clara como a neve, e ela vesta uma longa e fina t�nica 
+vermelha de seda.
+~
+2121734 0 0 0 0 0 0 0 0 E
+20 3 -1 6d6+550 3d2+5
+10000 20000
+5 5 2
+E
+#17616
+guardi�o~
+o guardi�o da entrada~
+O guardi�o dos port�es da Cidade Proibida o encara com benevol�ncia.
+~
+Apesar de n�o ser um homem muito alto, ele � um dos mais fortes que voc� j� 
+viu.  Ele veste uma grossa armadura de couro negra, e um belo chap�u 
+tri�ngular na cabe�a.  Voc� tamb�m percebe que ele possui os cabelos e 
+bigode muito negros e longos.  O guardi�o est� disposto a dar a sua vida 
+para proteger a cidade imperial.
+~
+2357250 0 0 0 0 0 0 0 10 E
+80 -5 -23 5d5+1100 5d9+20
+5000 175000
+8 8 1
+E
+#17617
+le�o le�es~
+os le�es de bronze~
+Dois grandes le�es chineses de bronze protegem a passagem.
+~
+A fei��o destes animais � incr�vel.  S�o enormes e fort�ssimos le�es.  No 
+lado direito encontra-se a f�mea, segurando uma grande esfera de bronze com 
+a pata direita, e no lado esquerdo o macho, segurando uma esfera de bronze 
+semelhante com a pata esquerda.  Ambos se portam mostrando suas enormes 
+presas, para amedontrar os intrusos da Cidade Proibida.
+~
+2353170 0 0 0 0 0 0 0 500 E
+101 -19 -42 5d5+6000 10d9+37
+75000 3000000
+8 8 1
+E
+#17618
+guardi�o~
+o guardi�o da torre~
+O guardi�o da torre oriental sul o olha com desprezo, encarando-o.
+~
+O guardi�o da torre � um homem de estatura m�dia, e aparenta ter seus 
+trinta anos de idade.  Ele veste uma bela armadura vermelha, e empunha uma 
+enorme lan�a pontiaguda.  Voc� pode perceber o olhar penetrante do 
+guardi�o, atento a cada movimento seu.
+~
+2185234 0 0 0 0 0 0 0 10 E
+80 -2 -17 6d6+2700 9d10+25
+0 165505
+8 8 1
+BareHandAttack: 11
+E
+#17619
+guardi�o~
+o guardi�o da torre~
+O guardi�o da torre oriental norte o olha com desprezo, encarando-o.
+~
+O guardi�o da torre � um homem de estatura m�dia, e aparenta ter seus 
+trinta anos de idade.  Ele veste uma bela armadura verde, e empunha uma 
+enorme lan�a.  Voc� pode perceber o olhar penetrante do guardi�o, atento 
+a cada movimento seu, pronto para ataca-lo.
+~
+2185266 0 0 0 0 0 0 0 10 E
+80 -2 -17 6d6+2700 9d10+27
+0 165505
+8 8 1
+BareHandAttack: 14
+E
+#17620
+guardi�o~
+o guardi�o da torre~
+O guardi�o da torre ociental norte o olha com desprezo, encarando-o.
+~
+O guardi�o da torre � um homem de estatura m�dia, e aparenta ter seus 
+trinta anos de idade.  Ele veste uma bela armadura amarela, e empunha uma 
+enorme lan�a.  Apesar de muito forte e bem armado, ele aparentar estar 
+muito cansado, devido ao intenso trabalho de cuidar da torre.
+~
+2185234 0 0 0 0 0 0 0 10 E
+80 -2 -17 6d6+2750 9d10+25
+0 165505
+8 8 1
+BareHandAttack: 14
+E
+#17621
+guardi�o~
+o guardi�o da torre~
+O guardi�o da torre ociental sul o olha com desprezo, encarando-o.
+~
+O guardi�o da torre � um homem de estatura m�dia, e aparenta ter seus 
+trinta anos de idade.  Ele veste uma bela armadura branca, e empunha uma 
+enorme lan�a.  Voc� pode perceber o olhar penetrante do guardi�o, atento 
+a cada movimento seu.
+~
+2185234 0 0 0 0 0 0 0 10 E
+80 -2 -17 6d6+2700 9d10+25
+0 165505
+8 8 1
+BareHandAttack: 2
+E
+#17622
+eunuco~
+um eunuco~
+Um eunuco est� aqui, empunhando uma enorme lan�a.
+~
+Este enorme eunuco � o guardi�o das conubinas do imperador chin�s.
+~
+2193458 0 0 0 0 0 0 0 -30 E
+80 2 -20 5d5+2300 8d10+27
+15000 100899
+8 8 1
+E
+#17623
+sacerdote budista~
+um sacerdote budista~
+Um sacerdote budista est� aqui, orando profundamente.
+~
+Voc� pode ver que ele j� � muito velho.  Olhando para o sacerdote, voc� 
+percebe que ele � totalmente careca, e veste-se com alguns panos enrolados 
+ao corpo, e uma sand�lia de couro.
+~
+2193426 0 0 0 0 0 0 0 600 E
+75 3 -15 6d3+1700 7d6+20
+0 150000
+8 3 1
+E
+#17624
+sacerdote budista~
+um sacerdote budista~
+Um sacerdote budista o olha com espanto, tentando se proteger.
+~
+Voc� pode ver que ele j� � muito velho.  Olhando para o sacerdote, voc� 
+percebe que ele � totalmente careca, e veste-se com alguns panos enrolados 
+ao corpo, e uma sand�lia de couro.
+~
+2193426 0 0 0 0 0 0 0 600 E
+75 3 -15 6d3+1700 7d6+20
+0 150000
+3 3 1
+E
+#17625
+guarda imperial~
+o guarda imperial~
+Um guarda imperial empunha as suas armas, pronto para te atacar.
+~
+Olhando para o guarda imperial, voc� pode ver que ele est� usando todo 
+um aparato militar.  Ele veste uma grande armadura vermelha, e por 
+debaixo, uma grande roupa de seda branca.  Voc� pode ver que ele possui 
+longos cabelos negros, que formando trancinhas; e na cabe�a ele usa um 
+doa caracter�sticos chap�us triangulares chineses.  Assim que o guarda 
+percebe a sua presen�a, voc� pode ver que ele avan�a at� voc�, tentando 
+proteger com a pr�pria vida o seu imperador.
+~
+2357306 0 0 0 0 0 0 0 0 E
+105 -39 -47 5d5+6500 9d9+45
+50000 3400000
+8 8 1
+BareHandAttack: 11
+E
+#17626
+chinesa~
+uma chinesa~
+Uma chinesa est� aqui, cantarolando alegremente.
+~
+Esta chinesa est� com o rosto todo maquiado de branco e rosa, e os cabelos 
+enrolados em na nuca, pronta para a pr�xima �pera.  Ela veste um longo 
+vestido de seda azul, com bordados de flores rosa, e junto ao rosto, ela 
+veste uma estranha, mas muito enfeitada, m�scara.
+~
+2127874 0 0 0 0 0 0 0 0 E
+25 7 3 4d6+705 3d8+5
+3000 60000
+8 8 2
+E
+#17627
+chinesa~
+uma chinesa~
+Uma chinesa anda de um lado para o outro, tentando decorar o seu texto.
+~
+Esta chinesa est� com o rosto todo maquiado de branco e rosa, e os cabelos 
+enrolados em na nuca, pronta para a pr�xima �pera.  Ela veste um longo 
+vestido de ceda azul, com bordados de flores rosa, e junto ao rosto, ela 
+veste uma estranha, mas muito enfeitada, m�scara.
+~
+2127874 0 0 0 0 0 0 0 0 E
+25 7 3 4d6+705 3d8+5
+3000 60000
+8 8 2
+E
+#17628
+xiezhi~
+Xiezhi~
+Xiezhi est� aqui, descansando sob as sombras das �rvores.
+~
+Xiezhi � o s�mbolo da justi�a para os chineses.  Ele � um unic�rnio 
+lend�rio, tendo a cabe�a e as garras de um drag�o drag�o, e o rabo de 
+le�o.  Em seu nariz voc� pode ver uma pequenina argola vermelha.
+~
+2357522 0 0 0 0 0 0 0 0 E
+105 -40 -60 5d6+5700 10d10+45
+70000 4204500
+5 5 1
+BareHandAttack: 8
+E
+#17629
+imperador qing~
+Qing, o imperador chin�s~
+O imponente imperador chin�s Qing est� aqui, sentado em seu trono.
+~
+Olhando para o imperador chin�s, voc� pode ver que ele aparenta ter seus 
+cinq�enta anos.  O imperador veste po cima do corpo uma enorme t�nica de 
+seda amarela, com bordados de drag�es em dourado.  Na cabe�a do imperador 
+voc� pode ver uma enorme e bela coroa.  Voc� pode ver tamb�m que o 
+imperador empunha a enorme alabarda imperial chinesa.
+~
+2357274 0 0 0 0 0 0 0 700 E
+108 -70 -85 5d5+22100 10d18+70
+900000 7500000
+6 6 1
+BareHandAttack: 11
+Str: 18
+StrAdd: 7
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#17630
+guarda~
+um guarda chin�s~
+Um guarda est� aqui, vigiando o local.
+~
+Olhando para o guarda, voc� pode ver que ele veste uma armadura simples no 
+corpo, sobre uma t�nica de seda, e empunha pequena espada de ferro.
+~
+2127906 0 0 0 0 0 0 0 400 E
+70 4 -20 3d3+1300 4d6+16
+5000 99344
+8 8 1
+E
+#17631
+f�nix ave~
+F�nix~
+Uma grande ave descansa aqui, com todo o corpo em chamas.
+~
+Olhando para a F�nix, voc� pode v�r que sua plumagem � a combina��o de 
+cinco cores vivas.  Diz as lendas que a F�nix se sacrifica no fogo, e 
+renasce das pr�prias cinzas, sendo assim uma ave imortal.  A F�nix � a 
+representa��o de todos os elementos da natureza, e dizem os chineses, que 
+quando ela aparece, � porque um bom imperador est� no poder.
+~
+2881562 0 0 0 0 0 0 0 900 E
+105 -47 -75 6d6+7500 10d11+55
+0 6035570
+5 5 2
+BareHandAttack: 8
+E
+#17632
+imperatriz ci xi~
+Ci Xi, a imperatriz~
+Ci Xi, a imperatriz chinesa est� aqui, observando a beleza do local.
+~
+Ci Xi � uma mulher muito bela.  Olhando para a imperatriz, voc� pode ver 
+que ela possui longos cabelos negros e uma estatura n�o muito alta.  Ela 
+tamb�m veste uma bela t�nica chinesa azul, bordada em dourado com v�rios 
+drag�es.
+~
+2220162 0 0 0 0 0 0 0 500 E
+60 -20 -16 3d3+2300 8d8+30
+50000 150000
+8 8 2
+E
+#17633
+drag�o~
+o Drag�o de bronze~
+Um belo drag�o de bronze est� im�vel aqui, parecendo uma est�tua.
+~
+Este drag�o possui o corpo muito alongado, e quatro grandes patas; duas 
+frontais e duas posteriores.  Em suas patas voc� pode ver grandes e 
+afiad�ssimas garras; assim como em sua boca, na qual encontram-se muitos 
+dentes afiados.  Uma particularidade deste drag�o � que ele possui o corpo 
+todo em chamas, e de uma forma estranha, este fogo n�o parece queima-lo.
+~
+2357258 0 0 0 0 0 0 0 400 E
+101 -50 -37 7d7+9756 5d10+51
+1000 3600000
+8 8 1
+E
+$

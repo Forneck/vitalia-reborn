@@ -1,0 +1,319 @@
+#5900
+fonte rachada~
+uma velha fonte rachada~
+Há uma velha fonte rachada com uma estátua no centro aqui.~
+~
+23 0 0 0 0 0 0 0 0 0 0 0 0
+800 800 13 1
+1000 0 0 0 0
+E
+fonte estátua~
+A estátua representa um homem que parece ser orgulhoso e muito sábio.  Ele
+parece fitar, imponente, algum ponto além do horizonte.
+~
+#5901
+taça vidro despedaçada~
+uma taça despedaçada~
+Há no chão os restos de uma despedaçada taça de vidro.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+10 7 13 1
+12 0 0 0 0
+#5902
+manto trapo podre apodrecido~
+um trapo apodrecido~
+Um pedaço de manto podre foi deixado aqui.~
+~
+9 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+#5903
+poça~
+uma poça de sangue~
+O chão desse belvedere foi banhado com sangue.~
+~
+23 0 0 0 0 0 0 0 0 0 0 0 0
+100 100 13 1
+0 0 0 0 0
+#5904
+altar chão~
+um altar negro banhado com sangue~
+Há um grande altar negro banhado em sangue no centro da sala, esperando sua próxima vítima.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+1000 0 0 0 0
+E
+altar~
+Isso parece ser nada mais do que algumas rochas empilhadas.  Porém com o
+longo tecido negro em seu topo e as inúmeras manchas de sangue, isso adquire
+um aspecto assombroso.
+~
+#5905
+estante~
+uma velha estante~
+Uma velha estante agarra-se fragilmente à parede. Isso pode desabar a qualquer momento.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+500 0 -1 0
+1000 0 0 0 0
+#5906
+livro~
+um livro manchado com sangue~
+Um grande livro com manchas de sangue foi deixado aqui.~
+~
+2 q 0 0 0 a 0 0 0 0 0 0 0
+10 17 17 -1
+8 3000 300 0 0
+#5907
+cadáver homem~
+o cadáver de um homem~
+Há um cadáver de um homem com o tórax aberto próximo à parede.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+140 0 0 0 0
+#5908
+barril~
+um barril com fogo~
+Há um grande barril queimando lixo aqui.~
+~
+1 q 0 0 0 0 0 0 0 0 0 0 0
+0 0 -1 0
+500 0 0 0 0
+#5909
+corpo cadáver~
+um cadáver fresco~
+Um cadáver fresco foi deixado aqui, derramando muito sangue.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+160 0 0 0 0
+E
+corpo cadáver~
+Parece que isso estava vivo há poucos minutos.  O sangue que flui de seu
+interior ainda é quente.  Seu peito foi aberto, praticamente dividido em
+dois.  Pelas marcas de sangue por aqui, o coração da vítima deve ter sido
+arrancado ferozmente.
+~
+#5910
+corpo apodrecido~
+um corpo apodrecido~
+Um corpo apodrecido foi jogado aqui. Em seu peito há um grande buraco.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+165 0 0 0 0
+#5911
+negra profana lâmina adaga~
+uma profana adaga negra~
+Uma adaga negra com uma lâmina curva emite sua profana luz aqui.~
+~
+5 ahjlnqt 0 0 0 ano 0 0 0 0 0 0 0
+0 4 4 11
+3 4000 400 0 0
+A
+6 2
+A
+19 3
+A
+18 -2
+#5912
+manto sujo ensangüentado~
+um manto sujo e ensangüentado~
+Um manto ensangüentado foi jogado aqui.~
+~
+9 jlq 0 0 0 ak 0 0 0 0 0 0 0
+5 0 0 0
+9 1000 1000 0 0
+#5913
+anel encantamento~
+o anel do encantamento~
+Um anel que brilha intensamente foi perdido aqui.~
+~
+9 jlq 0 0 0 ab 0 0 0 0 0 0 0
+6 0 0 0
+5 30000 3000 10 0
+A
+6 1
+A
+12 30
+#5914
+jaqueta~
+uma jaqueta suja~
+Uma jaqueta imunda foi deixada aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+0 0 0 0
+4 0 0 0 0
+#5915
+sangue inocente poça~
+uma poça de sangue inocente~
+Há uma poça de sangue inocente no chão.~
+~
+12 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+9 0 0 0 0
+A
+1 1
+A
+18 2
+#5916
+couro rasgado~
+alguns pedaços de couro rasgado~
+Alguns pedaços de couro rasgado foram deixados aqui.~
+~
+9 jq 0 0 0 ac 0 0 0 0 0 0 0
+3 0 0 0
+8 550 55 0 0
+#5917
+camada vômito poça~
+uma poça de vômito~
+Uma grossa camada de vômito cobre o chão.~
+~
+12 hjlq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+A
+6 -12
+#5918
+couro imundo pedaço~
+um imundo pedaço de couro~
+Um imundo pedaço de couro foi deixado aqui.~
+~
+9 hjq 0 0 0 ac 0 0 0 0 0 0 0
+3 0 0 0
+1 0 0 0 0
+#5919
+manta esfarrapada~
+uma manta esfarrapada~
+Uma manta esfarrapada foi pisoteada.~
+~
+9 hjlq 0 0 0 ak 0 0 0 0 0 0 0
+6 0 0 0
+7 5000 500 0 0
+A
+19 -2
+A
+18 2
+#5920
+humano coração~
+um coração humano~
+O coração de alguém foi deixado aqui.~
+~
+12 hjlq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 4560 456 0 0
+A
+13 -30
+A
+17 -5
+A
+1 1
+#5921
+couro costas~
+o couro das costas de alguém~
+O couro das costas de alguém foi jogado aqui.~
+~
+9 hjlq 0 0 0 ac 0 0 0 0 0 0 0
+5 0 0 0
+7 5000 500 20 0
+A
+13 10
+A
+18 1
+#5922
+chicote negro couro~
+um chicote negro de couro~
+Um chicote negro foi deixado aqui.~
+~
+5 ghjlq 0 0 0 an 0 0 0 0 0 0 0
+0 4 5 10
+7 6000 600 20 0
+A
+19 2
+A
+1 1
+#5923
+palavra raantra pergaminho~
+a palavra de Raantra~
+Um pergaminho negro escrito em tinta vermelha foi jogado aqui.~
+~
+12 hjlq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+8 50000 500 40 0
+E
+palavra raantra pergaminho~
+O pergaminho, dado a Gunter por Raantra, representa uma de suas palavras de ordem.
+Você lê:
+
+Sacrifício
+
+~
+A
+3 2
+A
+4 3
+#5924
+espada bronze enegrecido~
+uma espada de bronze enegrecido~
+Uma longa espada de bronze foi esquecida aqui.~
+~
+5 hjlq 0 0 0 an 0 0 0 0 0 0 0
+0 3 3 3
+8 21111 2111 10 0
+A
+2 2
+#5925
+capacete enegrecido~
+um capacete enegrecido~
+Um capacete enegrecido foi jogado aqui.~
+~
+9 hjlq 0 0 0 ae 0 0 0 0 0 0 0
+4 0 0 0
+8 12221 1222 0 0
+A
+4 1
+#5926
+capa preta~
+uma capa preta~
+Uma longa capa preta foi deixada aqui.~
+~
+9 jlq 0 0 0 ak 0 0 0 0 0 0 0
+2 0 0 0
+8 34441 3444 0 0
+A
+19 3
+A
+2 -2
+#5927
+frasco sangue~
+um frasco de sangue negro~
+Um frasco de sangue negro foi perdido aqui.~
+~
+10 jlq 0 0 0 ao 0 0 0 0 0 0 0
+10 33 14 -1
+3 4440 440 0 0
+#5928
+anel vermelho sangue~
+um anel vermelho-sangue~
+Um anel que parece ter sido feito de sangue foi jogado aqui.~
+~
+9 jlq 0 0 0 ab 0 0 0 0 0 0 0
+6 0 0 0
+3 56789 5679 30 0
+A
+18 1
+A
+1 -1
+#5929
+mochila viajante~
+uma mochila de viajante~
+Uma velha mochila de viajante foi perdida aqui.~
+~
+15 q 0 0 0 ak 0 0 0 0 0 0 0
+120 1 -1 0
+20 4444 444 10 0
+A
+14 25
+$~

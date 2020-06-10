@@ -1,0 +1,191 @@
+#2200
+coroa ouro~
+uma coroa de ouro~
+Uma coroa de ouro foi esquecida aqui.~
+~
+8 g 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+30 50000 50000 0 0
+E
+coroa ouro~
+Esta coroa de ouro parece valer seu peso em ouro.
+~
+#2201
+espada medieval~
+uma espada medieval~
+Uma espada medieval quase nova foi deixada aqui no chão.~
+~
+5 h 0 0 0 an 0 0 0 0 0 0 0
+0 2 6 11
+2 1100 110 0 0
+E
+espada medieval~
+Esta espada medieval tem a forma semelhante a um punhal, exceto que o cabo
+é perpendicular à lâmina e não paralelo.
+~
+A
+18 1
+#2202
+manto homem lagarto pilha roupa conjunto~
+um conjunto de mantos do homem lagarto~
+Uma pilha de roupas foi deixada aqui.  Elas parecem ser mantos.~
+~
+9 ag 0 0 0 ak 0 0 0 0 0 0 0
+5 0 0 0
+5 30000 10000 0 0
+E
+manto homem lagarto pilha roupa conjunto~
+Estes mantos possuem desenhos estranhos e possuem um odor característico dos
+homens lagartos.   Eles são de uma cor azul escura.
+~
+A
+12 10
+A
+1 2
+#2203
+chave inútil~
+uma chave inútil~
+Uma chave completamente inútil foi deixada aqui.~
+~
+18 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+razão~
+Não há nenhuma razão absoluta para esta chave, exceto por ser um artigo
+inútil, que ninguém pode adquirir.   As gratificações são para o caso de 
+alguém encontrá-la ou seja, deveria ser ignorada pois é um artigo não
+pode ser usado em nenhuma forma.   Confuso?
+~
+E
+chave inútil~
+Esta chave é completamente inútil desde que não possa ser apanhada e
+adquirida.  A porta que destranca deve ser destrancada.... hmmmmm, eu tenho
+certeza que há alguma razão obscura entretanto para isto...
+~
+A
+1 4
+#2204
+altar~
+um grande altar~
+Um enorme e astronômico altar está no meio do quarto.~
+~
+9 a 0 0 0 ae 0 0 0 0 0 0 0
+15 0 0 0
+400 1 1 0 0
+E
+escrita~
+Não foi com o intuito de insultar sua inteligência ou coisa parecida mas esta
+escrita é completamente incompreensível. Outro ridículo...
+~
+E
+ridículo~
+Pode ser usado em sua cabeça, seu ridículo!
+~
+E
+altar~
+Este altar é realmente GRANDE.  Tem uma pequena e incompreensível escrita
+por toda parte.
+~
+A
+14 -30
+A
+13 30
+#2205
+chave verde~
+uma chave verde para a saída~
+Uma chave grande e verde foi deixada aqui.~
+~
+18 abg 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 10 1000000 0 0
+E
+chave verde~
+Esta chave será usada para a saída.  Nada mais.
+~
+#2206
+pergaminho mágico~
+um pergaminho mágico~
+Um pergaminho mágico está aqui.~
+~
+2 f 0 0 0 ao 0 0 0 0 0 0 0
+17 36 3 -1
+5 20000 3672 0 0
+E
+eefrtfg~
+De fato, eu estava esperando que você soubesse o que isto significa...até
+porque eu não tenho a menor idéia do que seja.
+~
+E
+pergaminho mágico~
+Este pergaminho mágico tem a palavra 'EEFRTFG' escrita nele.
+~
+A
+14 10
+#2207
+escudo~
+um escudo~
+Um escudo está aqui no chão.~
+~
+9 a 0 0 0 aj 0 0 0 0 0 0 0
+7 0 0 0
+13 513 513 0 0
+E
+escudo~
+Este é um escudo absolutamente básico, como se o seu criador o tivesse feito
+num momento em que ele ou ela estivesse tendo uma enorme crise de tédio.
+~
+A
+9 -3
+#2208
+sortudo~
+um SORTUDO~
+Um SORTUDO foi deixado aqui no chão.~
+~
+18 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 1000000 0 0
+E
+sortudo~
+Garoto, você é muito sortudo!  Você achou isto... e isto abre a porta dos
+túneis.
+~
+#2209
+barril~
+o barril~
+Um barril de leite foi deixado aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+50 50 10 0
+65 60 20 0 0
+E
+barril~
+Iste é um barril de leite padrão da Rua Gergelim, normalmente encontrado na
+loja do Senhor Hooper.
+~
+#2211
+copo~
+um copo~
+Um copo de leite está aqui esperando por um bebedor ansioso.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+5 5 10 0
+6 10 2 0 0
+E
+copo~
+Este é um copo ordinário com o emblema da Rua Gergelim gravado em um dos lados.
+~
+#2212
+biscoito pedaço chocolate pequeno~
+um pequeno pedaço biscoito de chocolate~
+Um pequeno pedaço biscoito de chocolate foi deixado aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+6 0 0 0
+1 7 3 0 0
+E
+biscoito pedaço chocolate pequeno~
+Isto é essencialmente SÓ uma pequena parte do ENORME PEDAÇO DE BISCOITO DE
+CHOCOLATE encontrado em outro lugar.
+~
+$~

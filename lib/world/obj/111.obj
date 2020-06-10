@@ -1,0 +1,164 @@
+#11100
+pedra velha~
+uma pedra~
+Uma velha pedra.~
+~
+13 h 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+5 0 0 1 0
+E
+pedra velha~
+Uma pedra muito velha e empoeirada.
+~
+#11101
+pedra velha~
+uma pedra~
+Uma velha pedra.~
+~
+18 h 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+5 0 0 1 0
+E
+pedra velha~
+Uma pedra muito velha e empoeirada.
+~
+#11102
+chave antiga suja~
+uma chave antiga e suja~
+Uma chave muito suja foi deixada aqui.~
+~
+18 acdq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+chave suja~
+Esta chave está muito suja e parece ter sido deixada aqui à muito tempo.
+~
+#11103
+baú antigo~
+um antigo baú~
+Um velho e estranho baú.~
+~
+15 a 0 0 0 a 0 0 0 0 0 0 0
+9999 15 11102 0
+9999 10 1 1 0
+E
+baú antigo~
+Este é um baú muito antigo e velho.  Aparentemente está trancado e parece
+ter sido desenterrado pois há muita sujeira ao seu redor.
+~
+#11104
+baú antigo~
+um antigo baú~
+Um velho e estranho baú.~
+~
+15 a 0 0 0 a 0 0 0 0 0 0 0
+9999 15 11105 0
+9999 10 1 1 0
+E
+baú antigo~
+Este é um baú muito antigo e velho.  Aparentemente está trancado e parece
+ter sido desenterrado pois há muita sujeira ao seu redor.
+~
+#11105
+chave antiga suja~
+uma chave antiga e suja~
+Uma chave muito suja foi deixada aqui.~
+~
+18 acdq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+chave suja~
+Esta chave está muito suja e parece ter sido deixada aqui à muito tempo.
+~
+#11106
+papel velho~
+um papel muito velho~
+Um antigo papel corroido pelo tempo.~
+~
+13 h 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+papel velho~
+&RSe você está lendo isso agora é porque eu estava certo.  Muitos querem
+meu tesouro, tive que mudar de local para garantir que estará guardado
+em segurança.  DESISTA !!! AMALDIÇOADO SEJA OS QUE NELE COLOCAREM AS
+MÃOS!!!&n
+~
+#11107
+escudo negro pedra petrificado~
+um escudo negro petrificado~
+Um poderoso escudo negro esculpido em pedra foi deixado aqui.~
+~
+9 bfgjl 0 0 0 aj 0 0 0 0 0 0 0
+10 0 0 0
+9999 5000 2000 60 0
+E
+escudo negro~
+Este escudo negro é muito poderoso e parece ter sido feito por magos muito
+poderosos, pois o poder de proteção dele é sobrenatural .
+~
+A
+18 2
+A
+19 2
+#11108
+barril~
+um barril~
+Um barril cheio de areia foi deixado aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+50 0 0 0
+9999 0 0 0 0
+#11109
+barril~
+um barril~
+Um barril aparentemente cheio de areia foi deixado aqui.~
+~
+15 0 0 0 0 a 0 0 0 0 0 0 0
+50 13 -1 0
+9999 0 0 0 0
+#11110
+jaqueta couro envelhecida velha suja~
+uma jaqueta de couro suja e muito velha~
+Alguém perdeu uma jaqueta de couro muito velha e suja.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+3 0 0 0
+20 500 10 0 0
+#11111
+peitoral bronze petrificado~
+peitoral de bronze petrificado~
+Um peitoral de bronze totalmente petrificado foi deixado no chão.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+6 0 0 0
+9999 7000 100 0 0
+#11112
+arma tridente negro~
+&Ro tridente negro&n~
+Um poderoso tridente foi deixado cuidadosamente aqui.~
+~
+5 adghq 0 0 0 an 0 0 0 0 0 0 0
+0 5 9 11
+1 0 0 106 0
+E
+arma tridente negro~
+Esse poderoso artefato parece ter sido forjado nas profundezas do
+obscuro.  É possivel notar estranhos entalhes de desenhos e de
+escritas totalmente imcompreensiveis para olhos de qualquer motal.
+Todo esse poder parece emanar dos antigos espiritos do mundo dos mortos.
+~
+A
+3 5
+A
+4 5
+A
+18 5
+A
+19 5
+A
+24 5
+$~

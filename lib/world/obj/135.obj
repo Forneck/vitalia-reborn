@@ -1,0 +1,200 @@
+#13500
+riacho~
+um pequeno riacho~
+Um pequeno riacho atravessa a clareira.~
+~
+23 0 0 0 0 0 0 0 0 0 0 0 0
+50000 50000 15 0
+1000 0 0 0 0
+E
+riacho~
+A água parece limpa e cristalina.
+~
+#13501
+folha~
+uma folha seca~
+Uma folha seca caiu no chão.~
+~
+13 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1000 0 0 0 0
+#13502
+ingresso balsa~
+um ingresso para a balsa~
+Um ingresso foi perdido aqui.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+2 100 0 0 0
+#13503
+couro pedaço animal esfarrapado~
+um pedaço de couro de animal esfarrapado~
+Um pedaço de couro esfarrapado foi abandonado aqui.~
+~
+9 0 0 0 0 ak 0 0 0 0 0 0 0
+3 0 0 0
+5 300 0 0 0
+#13504
+manto esfarrapado~
+um manto esfarrapado~
+Um manto esfarrapado foi perdido aqui. Nele foram desenhados um estranho dente e um olho.~
+~
+9 0 0 0 0 ak 0 0 0 0 0 0 0
+5 0 0 0
+5 1200 0 0 0
+#13505
+colete esfarrapado~
+um colete esfarrapado~
+Um colete esfarrapado foi jogado aqui. Nele há o desenho de um dente e de um olho.~
+~
+9 0 0 0 0 ac 0 0 0 0 0 0 0
+4 0 0 0
+4 300 0 0 0
+#13506
+chave madeira pequena~
+uma chave de madeira~
+Uma pequena chave de madeira está no chão.~
+~
+18 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#13508
+armário~
+um armário~
+Há um grande armário de madeira num canto.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+100 1 -1 0
+500 0 0 0 0
+E
+armário~
+Feito em madeira nobre, ele foi muito bem trabalhado. Obviamente em motivo escandinavo.
+~
+#13509
+jarro tempero~
+um jarro de tempero~
+Um pequeno jarro de tempero sem lacre foi posto aqui.~
+~
+15 0 0 0 0 a 0 0 0 0 0 0 0
+5 5 -1 0
+1 100 0 0 0
+#13510
+pó negro~
+um pouco de pó negro~
+Um pouco de pó negro com um cheiro muito forte foi espalhado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+-2 0 0 0
+1 300 0 0 0
+E
+pó negro~
+Alguma coisa lhe diz que não é muito seguro brincar com isso.
+~
+#13511
+sementes amarelas~
+algumas sementes amarelas~
+Algumas sementes amarelas foram jogadas aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+1 0 0 0
+1 10 0 0 0
+#13512
+maço papeis amassados~
+um maço de papeis amassados~
+Um grande maço de papeis amassados foi deixado aqui.~
+~
+13 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100 0 0 0
+E
+maço papeis amassados~
+Isso parece velho e gasto, mas você ainda pode ler algumas lânguidas
+palavras escritas por mãos muito estranhas.
+~
+#13517
+cajado madeira negra~
+um cajado de madeira negra~
+Você vê um cajado de madeira negra jogado no chão.~
+~
+5 k 0 0 0 an 0 0 0 0 0 0 0
+0 2 3 7
+5 500 0 0 0
+E
+cajado madeira negra~
+Esse cajado de carvalho é forte, mas possui equilíbrio.
+~
+A
+4 2
+#13518
+manto marrom sujo~
+um manto marrom~
+Um manto marrom sujo foi abandonado aqui.~
+~
+9 kl 0 0 0 ad 0 0 0 0 0 0 0
+6 0 0 0
+5 600 0 20 0
+E
+manto marrom sujo~
+Esse manto é rústico, e parece bem resistente.
+~
+A
+12 10
+A
+3 2
+#13520
+ervas rosadas~
+algumas ervas rosadas~
+Algumas ervas rosadas foram jogadas no chão.~
+~
+10 c 0 0 0 a 0 0 0 0 0 0 0
+15 73 74 -1
+1 10 0 15 0
+#13521
+púrpuras ervas~
+algumas ervas púrpuras~
+Algumas ervas púrpuras foram deixadas aqui.~
+~
+10 c 0 0 0 a 0 0 0 0 0 0 0
+15 25 25 79
+1 100 0 15 0
+#13522
+ervas negras~
+algumas ervas negras~
+Há algumas ervas negras espalhadas no chão.~
+~
+10 c 0 0 0 a 0 0 0 0 0 0 0
+10 4 57 -1
+1 100 0 10 0
+#13523
+ervas cinzentas~
+algumas ervas cinzentas~
+Algumas ervas cinzentas foram perdidas aqui.~
+~
+10 c 0 0 0 a 0 0 0 0 0 0 0
+8 33 39 39
+1 100 0 8 0
+#13524
+ervas vermelhas~
+algumas ervas vermelhas~
+Há algumas ervas vermelhas pisoteadas aqui.~
+~
+10 c 0 0 0 a 0 0 0 0 0 0 0
+15 20 20 -1
+1 100 0 15 0
+#13525
+ervas alaranjadas~
+algumas ervas alaranjadas~
+Alguém deixou algumas ervas alaranjadas jogadas aqui.~
+~
+10 c 0 0 0 a 0 0 0 0 0 0 0
+5 16 66 66
+1 100 0 5 0
+#13526
+ervas roxas~
+algumas ervas roxas~
+Algumas ervas roxas estão no chão.~
+~
+10 c 0 0 0 a 0 0 0 0 0 0 0
+25 67 33 67
+1 100 0 25 0
+$~

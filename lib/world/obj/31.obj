@@ -1,0 +1,251 @@
+#3100
+xícara~
+uma xícara~
+Uma xícara foi deixada aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+8 8 11 0
+13 5 1 0 0
+E
+xícara~
+É uma xícara pequena bem simples.
+~
+#3101
+xícara~
+uma xícara~
+Uma xícara foi deixada aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+8 8 12 0
+13 7 1 0 0
+E
+xícara~
+É uma xícara pequena bem simples.
+~
+#3102
+xícara~
+uma xícara~
+Uma xícara foi deixada aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+12 12 15 0
+17 2 1 0 0
+E
+xícara~
+É uma xícara grande bem simples.
+~
+#3103
+garrafa francesa Evian~
+uma garrafa de água Evian~
+Uma garrafa de água mineral francesa está aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+24 24 15 0
+29 10 6 0 0
+E
+garrafa~
+É uma garrafa bem clara e grande.  E há um rótulo bem grande grudado em um
+dos seus lados.
+~
+E
+rótulo~
+Você foi enganado!  Na parte de baixo do rótulo, está escrito em letras bem
+miudinhas "Engarrafada em Midgaard pela Evian Inc.".  Esta água vem do quase
+sempre limpo Rio de Midgaard.
+~
+#3104
+cantil~
+um cantil~
+Um cantil foi deixado aqui no chão.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+80 80 15 0
+85 45 15 0 0
+E
+cantil~
+É um cantil razoavelmente grande.  Parece que cabe muita água nele.
+~
+#3105
+chave ferro~
+uma chave de ferro~
+Uma chave de ferro foi deixada aqui.~
+~
+18 c 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 10 0 0
+E
+chave ferro~
+A chave de ferro não tem nada de especial.  Na verdade ela é bem comum.
+~
+#3106
+chave enferrujada~
+uma chave enferrujada~
+Uma chave enferrujada foi deixada aqui.~
+~
+18 c 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 10 0 0
+E
+chave enferrujada~
+Essa chave grande está bastante enferrujada.  Você percebe um monte de
+sujeira nela.
+~
+#3107
+chave madeira~
+uma chave de madeira~
+Uma chave de madeira foi deixada aqui.~
+~
+18 c 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 10 0 0
+E
+chave madeira~
+A chave de madeira não tem nada de especial.  Para dizer a verdade, ela é a
+chave mais sem graça que você já viu em toda a sua vida.
+~
+#3108
+chave latão~
+uma chave de latão~
+Uma chave de latão foi deixada aqui.~
+~
+18 c 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 10 0 0
+E
+chave latão~
+A chave de latão é pequena e parece que ela serve numa fechadura deveras
+complicada.
+~
+#3109
+escrivaninha~
+a escrivaninha~
+Uma escrivaninha foi colocada em frente à parede oeste da sala.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+34 15 3107 0
+100 0 0 0 0
+E
+gaveta~
+Você percebe uma fechadura na gaveta.
+~
+E
+escrivaninha~
+A escrivaninha parece ser bastante espaçosa.  Há uma gaveta do lado
+esquerdo.
+~
+#3110
+cofre~
+o cofre~
+Um cofre foi colocado num canto escuro da sala.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+34 15 3108 0
+999 0 0 0 0
+E
+cofre~
+O cofre é muito pesado e possui fechadura.
+~
+#3111
+banco~
+o banco~
+Um banco de madeira pintado de branco está aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+100 600 200 0 0
+E
+banco~
+É um banco bastante pesado mas muito confortável.  Foi colocado virado para
+o lado do rio para que assim você possa se sentar e ver o rio e as bonitas
+casas que estão na outra margem.
+~
+#3112
+chave cidade~
+a Chave da Cidade~
+A imensa Chave da Cidade está aqui.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+30 10000 500 0 0
+E
+chave cidade~
+É provavelmente a maior chave que você já viu em sua vida.  Feita do mais
+puro ouro polido e adornada em toda sua extensão com o Brasão de Midgaard.
+~
+#3113
+fonte~
+uma fonte~
+Uma pequena fonte branca está aqui, borbulhando alegremente.~
+~
+23 0 0 0 0 0 0 0 0 0 0 0 0
+999 999 15 0
+999 0 0 0 0
+E
+fonte~
+É muito bonita.  Feita do mais puro mármore branco.
+~
+#3114
+moedas ouro~
+uma pequena pilha de moedas de ouro~
+Uma pequena pilha de moedas de ouro está aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+37 0 0 0
+5 0 0 0 0
+#3115
+moedas ouro~
+o ouro~
+Há um monte de ouro aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+32385 0 0 0
+5 0 0 0 0
+#3116
+castiçal velas peltre~
+um castiçal~
+Um castiçal de peltre está aqui.~
+~
+1 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 24 0
+5 150 10 0 0
+E
+castiçal~
+É um castiçal que parece ser bem velho, para três velas, feito de peltre.
+As velas são de uma cor branco-amarelada.
+~
+#3117
+olmo árvore~
+um olmo~
+Um velho olmo cresce aqui.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+olmo árvore~
+As folhas tenras do olmo balançam suavemente ao vento.
+~
+#3118
+pergaminho silenciador silêncio~
+o pergaminho do silêncio~
+Um estranho pergaminho foi deixado aqui.~
+~
+2 cegq 0 0 0 ao 0 0 0 0 0 0 0
+2 -1 -1 -1
+1 0 0 0 0
+E
+pergaminho silenciador silêncio~
+Você não consegue compreender os estranhos caracteres que foram usados neste
+estranho pergaminho. Sabe-se apenas que aqueles que dele fizeram uso, 
+conseguiram calar totalmente as pessoas à sua volta.   Seria este o objetivo
+dos Deuses ao criarem semelhante artefato? 
+~
+#3199
+quadro recados mensagens~
+um quadro de recados~
+Um imenso quadro de recados foi preso nesta parede.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+$~

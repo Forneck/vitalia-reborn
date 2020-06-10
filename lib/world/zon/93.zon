@@ -1,0 +1,177 @@
+#93
+Vitalia~
+Paraíso dos Dragões~
+9300 9399 180 0 b 0 0 0 -1 -1
+-1
+*
+* Colocar os monstros
+*
+M 0 9300 1 9342    colocar o anci�o dourado na casa
+E 1 9300 20 0      entregar o cora��o do drag�o ao anci�o
+E 1 9353 30 19     entregar as argolas douradas ao anci�o
+E 1 3863 16 17      Card drag dourado(3863) com drag doura(9300)
+M 0 9301 1 9366    colocar o anci�o prateado nas nuvens
+E 1 9301 20 16     entregar o cajado da bonadade ao anci�o
+E 1 3864 16 17      Card drag prate(3864) com drag prat(9301)
+M 0 9302 1 9309    colocar o anci�o de bronze na gruta
+E 1 9302 20 16     entregar o arco do aventureiro ao anci�o
+E 1 9357 30 19     entregar o brinco do bravo ao anci�o
+E 1 3865 16 17      Card drag bron(3865) com drag bronze(9302)
+M 0 9303 1 9383    colocar Tiamat na pestil�ncia
+E 1 9311 20 3      entregar o medalh�o para Tiamat
+E 1 3862 16 17      Card tiamat(3862) com tiamat(9303)
+M 0 9304 1 9331    colocar o anci�o branco no topo da montanha
+E 1 9306 20 6      entregar a coroa de cristal ao anci�o
+E 1 3873 16 17      Card drag branc(3873) com drag branco(9304)
+M 0 9305 1 9362    colocar o anci�o azul no deserto
+E 1 9305 20 17     entregar a garra de drag�o ao anci�o
+E 1 9355 20 19     entregar o brinco de penas ao anci�o
+G 1 3869 16          Card drag azul(3869) com drag azul(9305)
+M 0 9306 5 9322    colocar o anci�o verde na floresta
+E 1 9304 20 11     entregar o escudo de escamas ao anci�o
+E 1 3868 16 17      Card drag verde(3868) com drag verde(9306)
+M 0 9323 5 9322    colocar um filhote do anci�o verde na floresta
+M 0 9307 1 9381    colocar o anci�o negro no p�ntano
+E 1 9303 20 3      entregar o olho da morte ao anci�o
+E 1 3872 16 17      Card drag neg(3872) com drag negro(9307)
+M 0 9308 1 9390    colocar o anci�o vermelho na c�mara dos tesouros
+E 1 9307 20 6      entregar a tiara de diamante ao anci�o
+E 1 9354 20 19     entregar o brinco de p�rolas ao anci�o
+E 1 3871 16 17      Card drag verm(3871) com drag verme(9308)
+M 0 9309 1 9372    colocar o anci�o amarelo no deserto
+E 1 9308 20 0      entregar o sol do deserto ao anci�o
+E 1 3870 16 17      Card drag amar(3870) com drag amare(9309)
+M 0 9310 1 9350    colocar o anci�o dracolich no sal�o dos ossos
+E 1 9309 20 1      entregar o anel de ossos ao anci�o
+E 1 3866 16 17      Card dracol anci(3866) com dracol anci(9310)
+M 0 9311 1 9386    colocar o anci�o fantasma na fantasmagoria
+E 1 9310 20 16     entregar a espada esp�rito ao anci�o
+E 1 3867 16 17      Card drag espi(3867) com drag espi(9311)
+M 0 9312 1 9314    colocar a dragoneza fada rainha na �rvore dourada
+E 1 9312 30 6     entregar a coroa de flores a rainha fada
+E 1 9356 30 20    entregar o brinco do firmamento a rainha fada
+E 1 9316 30 8     entregar um par de botas de folhas a rainha fada
+E 1 9317 30 5     entregar um vestido de flores a rainha fada
+E 1 3861 16 17     Card drag fada(3861) com dragoneza fada(9312)
+M 0 9313 1 9314    colocar um drag�o fada guarda na �rvore dourada
+E 1 9313 30 16    entregar o arco da alegria ao drag�o fada guarda
+E 1 9314 30 11    entregar um escudo de flores ao drag�o fada guarda
+E 1 9315 30 7     entregar uma cal�a de flores ao drag�o fada guarda
+E 1 9316 30 8     entregar um par de botas de folhas ao drag�o fada guarda
+M 0 9313 1 9314    colocar um drag�o fada guarda na �rvore dourada
+E 1 9313 30 16    entregar o arco da alegria ao drag�o fada guarda
+E 1 9314 30 11    entregar um escudo de flores ao drag�o fada guarda
+E 1 9315 30 7     entregar uma cal�a de flores ao drag�o fada guarda
+E 1 9316 30 8     entregar um par de botas de folhas ao drag�o fada guarda
+M 0 9313 1 9314    colocar um drag�o fada guarda na �rvore dourada
+E 1 9313 30 16    entregar o arco da alegria ao drag�o fada guarda
+E 1 9314 30 11    entregar um escudo de flores ao drag�o fada guarda
+E 1 9315 30 7     entregar uma cal�a de flores ao drag�o fada guarda
+E 1 9316 30 8     entregar um par de botas de folhas ao drag�o fada guarda
+M 0 9314 1 9312    colocar o drag�o fada na floresta
+E 1 9315 30 7     entregar uma cal�a de flores ao drag�o fada 
+E 1 9316 30 8     entregar um par de botas de folhas ao drag�o fada
+E 1 3855 7 17      Card drag fada(3855) com drag fada(9314)
+M 0 9315 1 9312   colocar a dragoneza fada na floresta
+E 1 9316 30 8     entregar um par de botas de folhas a dragoneza fada
+E 1 9317 30 5     entregar um vestido de flores a dragoneza fada
+M 0 9319 1 9312   colocar um duende na floresta
+M 0 9320 1 9312   colocar uma duende na floresta
+M 0 9322 4 9313   colocar uma fada na floresta
+E 1 9320 30 17    entregar uma varinha m�gica a fada
+M 0 9322 4 9313   colocar uma fada na floresta
+E 1 9320 30 17    entregar uma varinha m�gica a fada
+M 0 9322 4 9315   colocar uma fada no ninho dos drag�es fadas
+E 1 9320 30 17    entregar uma varinha m�gica a fada
+M 0 9314 4 9315   colocar o drag�o fada na floresta
+E 1 9315 30 7     entregar uma cal�a de flores ao drag�o fada 
+E 1 9316 30 8     entregar um par de botas de folhas ao drag�o fada
+M 0 9315 1 9315   colocar a dragoneza fada na floresta
+E 1 9316 30 8     entregar um par de botas de folhas a dragoneza fada
+E 1 9317 30 5     entregar um vestido de flores a dragoneza fada
+M 0 9316 1 9302    colocar o guardi�o da harmonia na fonte de luz azul
+G 1 9318 1         entregar a chave da pestil�ncia ao guardi�o
+M 0 9317 1 9303    colocar o guardi�o da paz na fonte de luz branca
+E 1 9352 5 17      entregar o apito sagrado ao guardi�o
+M 0 9318 1 9317    colocar o tempo na casa de madeira
+E 1 9350 10 17     entregar a pena do tempo ao tempo
+G 1 9319 10        entregar a ampulheta do tempo ao tempo
+G 1 9351 10        entregar o di�rio sagrado ao tempo
+M 0 9324 4 9388    colocar a aranha de fogo numa passagem em chamas
+M 0 9324 4 9388    colocar a aranha de fogo numa passagem em chamas
+M 0 9324 4 9389    colocar a aranha de fogo numa passagem em chamas
+M 0 9324 4 9389    colocar a aranha de fogo numa passagem em chamas
+M 0 9325 3 9354    colocar um dromed�rio no deserto
+M 0 9325 3 9354    colocar um dromed�rio no deserto
+M 0 9325 3 9354    colocar um dromed�rio no deserto
+M 0 9326 1 9375    colocar uma serpente negra no p�ntano
+M 0 9327 1 9377    colocar a apari��o do p�ntano no p�ntano
+E 1 9321 30 12    entregar um manto velho a apari��o do p�ntano
+M 0 9328 1 9308    colocar um cardume de peixes no fundo do lago
+*
+* Colocar os objetos
+*
+R 0 9366 9347      retirar um trono de ouro branco e prata
+O 0 9347 10 9366   carregar um novo trono de ouro branco e prata
+R 0 9383 9337      retirar a caixa de pandora
+O 0 9337 5 9383    carregar uma nova caixa de pandora
+P 1 9338 5 9337    carregar a morte dentro da caixa de pandora
+P 1 9339 5 9337    carregar a mis�ria dentro da caixa de pandora
+P 1 9340 5 9337    carregar a peste dentro da caixa de pandora
+P 1 9341 5 9337    carregar a guerra dentro da caixa de pandora
+R 0 9390 9336      retirar a esfera de fogo
+O 0 9336 5 9390    carregar uma nova esfera de fogo
+R 0 9350 9344      retirar os ossos de drag�es
+O 0 9344 5 9350    carregar novos ossos de drag�es
+R 0 9386 9331      retirar a fonte fantasmag�rica
+O 0 9331 5 9386    carregar uma nova fonte fantasmag�rica
+R 0 9314 9328      retirar um pequeno trono dourado
+O 0 9328 5 9314    carregar um novo trono pequeno dourado
+R 0 9303 9324      retirar a t�bua de madeira
+O 0 9324 5 9303    carregar uma nova t�bua de madeira
+R 0 9302 9325      retirar a t�bua de madeira
+O 0 9325 5 9302    carregar uma nova t�bua de madeira
+R 0 9317 9329      retirar a estante de madeira
+O 0 9329 10 9317   carregar uma nova estante de madeira
+P 1 9330 80 9329   carregar o livro da virtude dentro da estante de madeira
+R 0 9308 9323      retirar as algas azuis
+O 0 9323 20 9308   carregar novas algas azuis
+R 0 9301 9322      retirar um mon�lito de pedra
+O 0 9322 5 9301    carregar um novo mon�lito de pedra
+R 0 9315 9326      retirar o ninho de drag�es fadas
+O 0 9326 5 9315    carregar um novo ninho de drag�es fadas
+P 1 9327 20 9326   carregar um ovo dentro do ninho de drag�es fadas
+P 1 9327 20 9326   carregar um ovo dentro do ninho de drag�es fadas
+P 1 9327 20 9326   carregar um ovo dentro do ninho de drag�es fadas
+R 0 9335 9332      retirar um mon�lito de pedra azul
+O 0 9332 5 9335    carregar um novo mon�lito de pedra azul
+R 0 9335 9333      retirar um mon�lito de pedra verde
+O 0 9333 5 9335    carregar um novo mon�lito de pedra verde
+R 0 9335 9334      retirar um mon�lito de pedra preto
+O 0 9334 5 9335    carregar um novo mon�lito de pedra preto
+R 0 9335 9335      retirar um mon�lito de pedra branco
+O 0 9335 5 9335    carregar um novo mon�lito de pedra branco 
+R 0 9341 9342      retirar a flor-de-lis
+O 0 9342 80 9341   carregar uma nova flor-de-lis
+R 0 9345 9343      retirar a est�tua do drag�o de ouro
+O 0 9343 5 9345    carregar uma nova est�tua do drag�o de ouro
+R 0 9355 9345      retirar uma garrafa antiga
+O 0 9345 20 9355   carregar uma nova garrafa antiga
+R 0 9374 9346      retirar um totem de pedra
+O 0 9346 5 9374    carregar um novo totem de pedra
+R 0 9373 9348      retirar uma flor do deserto
+O 0 9348 80 9373   carregar uma nova flor do deserto
+R 0 9373 9349      retirar a �rvore de fogo
+O 0 9349 10 9373   carregar uma nova �rvore de fogo
+*
+* Ajustar as passagens
+*
+D 0 9316 3 1       fechar a porta da casa de madeira (lado de fora)
+D 0 9317 1 1       fechar a porta da casa de madeira (lado de dentro)
+D 0 9341 3 1       fechar a porta da casa de madeira (lado de fora)
+D 0 9342 1 1       fechar a porta da casa de madeira (lado de dentro)
+D 0 9347 3 1       fechar o port�o de ossos (lado de fora)
+D 0 9348 1 1       fechar o port�o de ossos (lado de dentro)
+D 0 9337 0 2       fechar a enorme porta negra (lado de fora)
+D 0 9383 2 2       fechar a enorme porta negra (lado de dentro)
+S

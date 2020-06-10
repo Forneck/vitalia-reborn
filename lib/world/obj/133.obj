@@ -1,0 +1,244 @@
+#13301
+capa pele marrom~
+uma capa de pele marrom~
+Uma capa de pele marrom está aqui, amontoada no chão.~
+~
+9 0 0 0 0 ac 0 0 0 0 0 0 0
+10 0 0 0
+4 15000 1000 30 0
+E
+marrom pele capa~
+É uma capa marrom muito grossa.
+~
+A
+1 1
+#13302
+espada reta~
+uma espada monumental~
+Uma espada reta está cravada aqui no chão.~
+~
+5 b 0 0 0 an 0 0 0 0 0 0 0
+0 4 4 3
+9 10000 1000 10 0
+E
+espada~
+A espada parece muito antiga.
+~
+A
+13 10
+#13303
+cajado polido~
+um cajado polido~
+Um cajado bem polido está jogado no chão.~
+~
+5 b 0 0 0 an 0 0 0 0 0 0 0
+0 5 3 7
+9 20000 3000 10 0
+E
+polido cajado~
+Parece um cajado polido.  Provavelmente bom para acertar os inimigos.
+~
+A
+18 1
+#13304
+vassoura pelo molhada~
+uma vassoura de pelo molhada~
+Uma vassoura de pelo molhada está formando uma poça de água com sabão.~
+~
+13 h 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+5 100 1000 0 0
+E
+vassoura pelo molhada~
+Argh, é uma vassoura fedorenta.. melhor correr antes que você tenha que
+esfregar alguma coisa com ela.
+~
+A
+9 5
+#13305
+chave mármore~
+uma chave de mármore~
+Uma chave de mármore está aqui apanhando poeira.~
+~
+18 f 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 50 500 0 0
+E
+mármore chave~
+É uma pequena chave, acredito que poderia abrir uma porta de mármore.
+~
+#13306
+carvalho chave~
+uma chave de carvalho~
+Há uma chave de carvalho aqui.~
+~
+18 f 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 50 500 0 0
+E
+carvalho chave~
+É uma pequena chave de carvalho.. acho que deve abrir uma porta de carvalho.
+~
+#13307
+ferro chave~
+uma chave de ferro~
+Uma chave de ferro está enferrujando aqui.~
+~
+18 f 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 50 500 0 0
+E
+ferro chave~
+É uma chave de ferro.  Deve abrir uma porta de ferro talvez.
+~
+#13308
+taurus anel~
+um anel de taurus~
+Um anel em formato de búfalo está aqui no chão.~
+~
+9 af 0 0 0 abo 0 0 0 0 0 0 0
+5 0 0 0
+1 20000 5000 50 0
+E
+taurus anel~
+É um anel com um búfalo dourado esculpido.
+~
+A
+19 2
+A
+2 1
+#13310
+grande manto pele~
+o grande manto de pele~
+Um grande manto de pele está aqui.~
+~
+9 ab 0 0 0 ak 0 0 0 0 0 0 0
+10 0 0 0
+10 20000 3000 10 0
+E
+pele manto~
+Isto foi algum dia a pele de um grande búfalo.
+~
+A
+5 2
+A
+10 20
+#13311
+máscara chifre dourada~
+uma máscara dourada com chifres~
+Há uma máscara dourada com dois enormes chifres aqui.~
+~
+9 abf 0 0 0 ae 0 0 0 0 0 0 0
+8 0 0 0
+3 40000 6000 55 0
+E
+máscara chifre dourada~
+Esta máscara é feita do mais puro ouro e tem dois chifres enormes.
+~
+A
+24 -2
+A
+19 2
+#13312
+wabat bíblia~
+uma bíblia Wabat~
+Um item forjado pelos deuses está aqui.~
+~
+4 abdq 0 0 0 ao 0 0 0 0 0 0 0
+25 4 4 27
+10 100000 10000 106 0
+E
+wabat bíblia~
+A Bíblia de Wabat foi escrita assim:
+I.   Agirás com honra todo o tempo.
+II.  Eliminarás teu inimigo somente com sua espada.
+III. Defenderás Wabat e todos os que não puderem defender-se.
+IV.  Não seguirás ninguém a não ser Wabat.
+V.   Matarás todos os infiéis que usam o nome de Wabat em vão.
+
+Assim está escrito na Bíblia de Wabat.
+~
+A
+18 5
+A
+19 5
+#13313
+adaga fogo~
+a adaga de fogo~
+Um item forjado pelos deuses está aqui.~
+~
+5 abdq 0 0 0 an 0 0 0 0 0 0 0
+0 9 9 11
+10 1 1 106 0
+E
+adaga fogo~
+Uma filete de fogo percorre toda a lâmina desta adaga, assim como seu cabo.
+~
+A
+24 10
+A
+19 4
+#13314
+armadura elos metal~
+uma velha armadura de elos de metal~
+Um item forjado pelos deuses está aqui.~
+~
+9 abdq 0 0 0 ad 0 0 0 0 0 0 0
+30 0 0 0
+10 1 1 106 0
+E
+armadura elos metal~
+Nossa! Uma velha armadura de elos de metal! E você pensava que nunca mais
+veria uma como essa!
+~
+A
+18 4
+A
+19 4
+#13315
+manto sagrado~
+um manto sagrado~
+Um item forjado pelos deuses está aqui.~
+~
+9 abd 0 0 0 ak 0 0 0 0 0 0 0
+20 0 0 0
+10 1 1 106 0
+E
+manto sagrado~
+É um manto sagrado forjado pelos deuses.
+~
+A
+24 20
+#13316
+perneira marrom pele~
+um par de perneiras marrons de pele~
+Um par de perneiras marrons está jogado aqui no chão.~
+~
+9 ab 0 0 0 af 0 0 0 0 0 0 0
+7 0 0 0
+5 30000 10000 55 0
+E
+perneira marrom pele~
+Elas parecem ter sido tiradas de um grande búfalo.
+~
+A
+14 50
+A
+2 2
+#13317
+bracelete chifre retorcido~
+um bracelete de chifre retorcido~
+Um pedaço de chifre retorcido está caído no chão.~
+~
+9 ab 0 0 0 am 0 0 0 0 0 0 0
+5 0 0 0
+2 10000 2000 60 0
+E
+bracelete chifre retorcido~
+Este pedaço de chifre foi bastante polido e deve caber direitinho no seu pulso.
+~
+A
+18 2
+A
+19 1
+$~

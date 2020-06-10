@@ -1,0 +1,245 @@
+#0
+bug~
+um bug~
+Este objeto é RUIM!  Se você está vendo isso, deve haver um bug no jogo.
+Por favor, reporte imediatamente usando o comando BUG.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+#2
+chave~
+uma chave~
+Uma chave com aparência ligeiramente irreal está aqui.~
+~
+18 cdfq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 108 0
+#5
+corpo~
+o corpo de um monstro~
+O corpo de um monstro está aqui.~
+~
+25 cdq 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+1000 0 100000 0 0
+#10
+pão viagem lemba~
+um pão de viagem~
+Um pão de viagem foi deixado aqui.~
+~
+19 g 0 0 0 a 0 0 0 0 0 0 0
+24 0 0 0
+1 50 50 0 0
+E
+pão viagem lemba~
+O pão de viagem é a comida tradicional dos elfos durante viagens, sendo
+chamado de lembas.  Dizem que eles saciam a fome dos cansados viajantes
+rapidamente.
+~
+#11
+punhado morangos silvestres~
+um punhado de morangos silvestres~
+Um punhado de apetitosos morangos silvestres foi deixado aqui.~
+~
+19 g 0 0 0 a 0 0 0 0 0 0 0
+24 0 0 0
+1 50 50 0 0
+E
+punhado morangos silvestres~
+Esses morangos devem ter vindo de algum lugar muito especial... São grandes,
+vermelhos, cheirosos... Você começa a salivar só de pensar em comê-los!
+Hum... Que tal fazer uma torta com eles?
+~
+#31
+portal~
+um portal nebuloso~
+Um portal nebuloso flutua aqui.~
+~
+26 cdeg 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+#32
+portal~
+um portal~
+Você vê um portal aberto aqui.~
+~
+26 cdeg 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+#33
+saída~
+a saída do portal~
+Você vê a saída do portal, brilhando por entre as névoas.~
+~
+26 cdeg 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+#34
+tocha encantada~
+uma tocha encantada~
+Uma tocha arde em chama branca ao emitir suave música.~
+~
+1 abdegq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 72 0
+1 10000 0 0 0
+#40
+bandagem bandagens~
+várias bandagens~
+Várias bandagens foram deixadas aqui.~
+~
+11 0 0 0 0 abcdefghilm 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#63
+mapa midgaard~
+um mapa de Midgaard~
+Um mapa de Midgaard foi deixado aqui.~
+~
+12 e 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 67 20 0 0
+E
+mapa midgaard~
+ ,----------,                    :
+ | Mapa de  |                    |
+ | Midgaard |    Tabuleiro <--   +   --> Zona dos
+ '----------'    de Xadrez       |       Iniciantes
+                          (Grande Campo)
+                                 |
+                                 +
+                                 |
+                                 |
+                       Campos <--+
+                                 |
+                                 |
+                             Altar do
+                              Templo
+             :                   |
+             |                   |
+(Casas)<-- Fonte -- Leitura -- Templo -- Doações
+             |                   de
+             :                Midgaard                Recepção
+                                 |      Correios    _,-'
+                   Assoc.        |           |  _,-'
+                 Clérigos -- Praca do -- Grunting---Bar
+                              Templo     Boar Inn    |
+                                 |                   Clube de Bardos
+        Assoc. Loja de           |              Loja de
+       Druidas Magia   Padaria   |    Armazém   Armas
+           |       |      |    Praça     |        |        Portão
+      <--Portão----+------+---Mercado----+--------+--------Leste-->
+         Oeste     |      |      |       |        |         |
+           |    Assoc.  Loja de  |    Loja de   Assoc.     Loja de
+         (Estr.  Magos  Armaduras|    Animais  Guerreiros  Água
+          Muro)                  |
+           |                     |           Residencial
+           |         Confraria   |     Banco   Midgaard 
+           |              |    Praça     |        |
+           +------+-------+---Mediana----+--------+
+           |      |              |
+           |    Jornal           |
+           |           Brechó    |                    Loja de Mapas
+           |              |    Praça                        |
+           +--  (Beco  ---+----Comum-----(Beco Escuro)------+
+           |  Miserável)  |      |       |        |         |
+           |            Grubby   |    Assoc.   O Dique   Depósito
+           |             Inn     |    Ladrões     |      Deserto
+         (Estr.               Dep. de             |
+          Muro)                Lixo               |
+           |             Esgoto-'                 |
+           |                                   Rio de
+  <==== [Ponte] ============================== Midgaard =============>
+           |
+           |
+           +-----------+-(Passeio)--+-------------+----------+
+           |           |            |             |          |
+           |           +            +----Café     +---Vintém |
+           |           |  Parque--v |             |          |
+           |  Quartel  |         +--+--+          |          |
+           |    de ----+----+----+--o--+-----+----+---Escrit |
+           |  Guarda   |                          | Prefeito |
+           |           +            +-(Esmeralda)-+          |
+       (Passeio)       |            |                    (Passeio)
+           |           +---(Estrada-+-do Parque)--+          |
+           |                        |             |   Rua    |
+           |           +-(Esmeralda)+             +---Olmo   |
+           |           |                          |          |
+           |           +---Asilo dos Novatos      +---Museu  |
+           |           |                          |   Árvore |
+           |           |                          |         \|
+  Portão<--+-----------+-------(Passeio)----------+----------+
+    Sul                                           |
+                                              Cemitério
+~
+#64
+mapa iniciantes sobre-terrâneo~
+um mapa da Zona dos Iniciantes~
+Um mapa da Zona dos Iniciantes foi deixado aqui.~
+~
+12 e 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 131 20 0 0
+E
+mapa iniciantes sobre-terraneo~
+ ,----------------------.                                     Sacada
+ | Zona dos Iniciantes  |                                    _,-'|
+ |----------------------|                                _,-'    |
+ | Ala superior         |   Sala da              Escadarias      |
+ '----------------------'   Estatua--Antecamara----Norte         |
+                               |                     |           |
+                               |                     |           |
+                          Antecamara                 |           |
+                           Iluminada                 |        Sacada
+                               '                     |       _,-'
+                               ,                     |   _,-'
+  Comeco da   Antecamara      Um     Antecamara  Escadarias
+   Passagem------Suja--------Nexus-  -Iluminada-----Sul
+      |           '            |                     |
+      |           ,            |                     |
+      |        Pequeno      Mais da              Passagem
+<--Entrada      Quarto-  -Antecamara             Estreita
+                               |                     '
+                               |                     ,
+   Final da   Antecamara     Outro                Sala do
+<--Passagem----Iluminada-----Canto------  ------Alquimista
+                                               _,-'
+~
+#65
+mapa iniciantes sub-terrâneo~
+um mapa da Zona dos Iniciantes - Sub-terrâneo~
+Um mapa da Zona dos Iniciantes foi deixado aqui.~
+~
+12 e 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 263 20 0 0
+E
+mapa iniciantes sub-terrâneo~
+ ,--------------, Curva na                  Interseccao               Outro
+ | Zona dos     | Passagem--------------------em 'T'------------------Canto
+ | Iniciantes   |     |                          |                      |
+ |--------------|     |                          |                      |
+ | Ala inferior |     |        Canto na          |          Outra       |
+ '--------------'     |       Antecamara---------|----------Curva       |
+                      |            |             |            |         |
+                      |            |             |            |         |
+                   A Sala          |             |        Passagem      |
+                  Vermelha---------|-------------|--------Dividida      |
+                 _,-'              |             |            |         |
+                                   |             |            |         |
+     Uma Sala     Passagem   Cruzamento de       |            |     Canto do
+       Maior----Leste-Oeste---Corredores---------|------------|------Quarto
+         |                         |             |            |
+         |                         |             |            |
+        Uma                        A  _,-'     Outro     Interseccao
+     Passagem-------------------Entrada        Canto----de Passagens
+         |                         |                          |
+         |                         |                          |
+         |                     Curva na     Desvio para  Mais outro
+         |                     Passagem--------o sul--------Canto
+         |                                       |
+         |                                       |
+     Uma Sala                                Uma Sala
+      Grande----------------------------------Grande
+~
+$~

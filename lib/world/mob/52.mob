@@ -1,0 +1,135 @@
+#5200
+contemplador~
+o poderoso contemplador~
+Você encontra o olhar mortal de um contemplador.
+~
+Ele possui um grande olho central que projeta um raio anti-mágica e dez
+tentáculos com olhos sobre o corpo arredondado, os quais podem fazer tudo
+desde enfeitiçá-lo até lhe desintegrar. Contempladores não são conhecidos por
+sua personalidade.
+~
+2189346 0 0 0 67856 0 0 0 -870 E
+25 6 0 1d14+450 6d9+5
+28560 134000
+8 8 0
+E
+#5201
+lâmia besta~
+a lâmia~
+Uma estranha lâmia encontra-se aqui, aguardando sua próxima refeição. 
+~
+Esta é uma criatura com a parte superior do corpo de uma linda mulher mas 
+com a parte inferior de uma fera quadrúpede.  Ela lambe os lábios ao olhar
+para você, ambiciosamente.
+~
+2097764 0 0 0 0 0 0 0 -1000 E
+12 12 3 1d10+120 2d5+1
+1500 10500
+8 8 2
+E
+#5202
+mímico bau~
+o mímico~
+Um resistente baú está em um dos cantos da sala.
+~
+Um resistente baú de madeira preso com faixas de ferro e uma pesada fechadura
+na frente.
+~
+2293762 0 0 0 0 0 0 0 10 E
+11 10 1 1d20+130 2d7+0
+0 13000
+8 8 0
+E
+#5203
+mímico pedra esqueletos~
+o mímico~
+Dois esqueletos estão esmagados sob uma enorme pedra.
+~
+Uma enorme pedra parece ter sido jogada aqui de alguma forma, já que não 
+existem pedras semelhantes na região.  Dois esqueletos abaixo dela são apenas
+isso, ossos... nenhum farrapo ou nada mais parece estar preso a eles.
+~
+2293762 0 0 0 0 0 0 0 -10 E
+14 7 1 3d15+150 3d5+1
+0 20000
+8 8 0
+E
+#5204
+mímico piso~
+o mímico~
+O piso de pedra desta casa parece ter sido rachado ao meio.
+~
+Que desordem! Você pensa consigo mesmo o que poderia ter causado tamanha 
+destruição.
+~
+2293762 0 0 0 0 0 0 0 -140 E
+11 11 3 2d6+110 2d6+0
+0 10500
+8 8 0
+E
+#5205
+mímico potes pedaços~
+o mímico~
+Alguns pedaços de vaso encontram-se espalhados pelo chão.
+~
+Os fragmentos parecem ter feito parte de um grande vaso de algum local, 
+provavelmente antes da cidade tombar.
+~
+2293762 0 0 0 0 0 0 0 200 E
+11 14 0 1d8+100 2d5+3
+0 9800
+8 8 0
+E
+#5206
+mímico tábuas madeira~
+o mímico~
+Algumas tábuas de madeira estão empilhadas em uma plataforma baixa.
+~
+O simples fato destas tábuas esterem sobre esta plataforma lhe faz acreditar 
+que alguém esteve aqui antes de você...
+~
+2293762 0 0 0 0 0 0 0 0 E
+11 9 0 1d12+110 4d3+1
+0 12000
+8 8 0
+E
+#5207
+lagarto chifres~
+o lagarto de chifres~
+Um pequeno lagarto com chifres balança sua língua e rasteja bem em sua frente.
+~
+Um pequeno e lindo lagarto -- bem, isso se você gostar de répteis!
+~
+2097280 0 0 0 0 0 0 0 300 E
+3 17 4 1d14+30 2d4+0
+0 500
+8 8 0
+E
+#5208
+golem pedra~
+o golem de pedra~
+Em um canto você vê um grande golem de pedra, mantendo a guarda.
+~
+É um grande pedaço de rocha que foi mágicamente moldado em uma enorme 
+criatura de pedra. Ele encontra-se aqui ainda guardando a cidade.
+~
+2353442 0 0 0 2128 0 0 0 800 E
+25 0 -5 6d6+500 4d7+3
+4250 145000
+8 8 0
+E
+#5209
+lâmia besta~
+a lâmia~
+Uma estranha lâmia encontra-se aqui, aguardando sua próxima refeição. 
+~
+Esta é uma criatura com a parte superior do corpo de uma linda mulher mas 
+com a parte inferior de uma fera quadrúpede.  Ela lambe os lábios ao olhar
+para você, ambiciosamente.
+~
+2097250 0 0 0 64 0 0 0 -500 E
+9 10 3 1d12+120 1d4+5
+1500 7000
+8 8 2
+E
+$

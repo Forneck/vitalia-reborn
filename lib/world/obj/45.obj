@@ -1,0 +1,424 @@
+#4500
+chave madeira~
+uma chave de madeira~
+Uma chave de madeira foi esquecida aqui.~
+~
+18 cdq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 300 30 0 0
+#4501
+chave pedra~
+uma chave de pedra~
+Uma chave de pedra foi esquecida aqui.~
+~
+18 cdq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+5 400 40 0 0
+#4502
+chave bronze~
+uma chave de bronze~
+Uma chave de bronze foi esquecida aqui.~
+~
+18 cdq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+5 1000 100 0 0
+#4503
+chave ferro~
+uma chave de ferro~
+Uma chave de ferro foi esquecida aqui.~
+~
+18 cdq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+6 100 10 0 0
+#4504
+chave prata~
+uma chave de prata~
+Uma chave de prata foi esquecida aqui.~
+~
+18 cdq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+5 3000 300 0 0
+#4505
+chave ouro~
+uma chave de ouro~
+Uma chave de ouro foi esquecida aqui.~
+~
+18 cdq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+5 5000 500 0 0
+#4506
+asas thorondor~
+as asas de Thorondor~
+Um par de enormes asas foi deixado aqui.~
+~
+24 b 0 0 0 ap 0 0 0 0 0 0 0
+0 0 30 0
+15 10000 1000 45 0
+E
+asas~
+Realmente enorme estas asas, com uma extensão de 55 metros. Você fica
+a imaginar o tamanho da ave que a possuía.
+~
+A
+1 2
+A
+2 -2
+A
+18 1
+A
+19 1
+#4507
+lanterna élfica~
+uma lanterna élfica~
+Uma lanterna, esquecida aqui, ilumina o ambiente.~
+~
+1 a 0 0 0 ao 0 0 0 0 0 0 0
+0 0 -1 0
+5 50000 5000 20 0
+E
+lanterna élfica~
+Maravilhosa! Está lanterna só pode ter sido elaborada por hábeis escultores
+élficos.  Conta-se que as verdadeiras intenções das pessoas são reveladas
+ao ser atingido por sua luz.
+~
+A
+17 -2
+A
+18 1
+A
+24 -1
+#4508
+espada élfica~
+uma grande espada élfica~
+Uma grande espada foi esquecida aqui.~
+~
+5 r 0 0 0 an 0 0 0 0 0 0 0
+0 5 5 3
+20 9000 900 27 0
+A
+17 -1
+A
+18 -1
+A
+19 2
+#4509
+machado élfico bronze~
+um machado com lâmina vermelha~
+Um belo machado de bronze foi solto aqui.~
+~
+5 r 0 0 0 an 0 0 0 0 0 0 0
+0 5 5 3
+20 10000 1000 28 0
+A
+18 1
+A
+19 1
+#4510
+viseira águia~
+uma viseira com bico de águia~
+Um bico de águia foi perdido por aqui.~
+~
+9 b 0 0 0 ar 0 0 0 0 0 0 0
+5 0 0 0
+6 12000 1200 25 0
+E
+viseira~
+Uma bela viseira negra, de ferro, com um bico de águia.
+~
+A
+6 1
+A
+13 3
+#4511
+cota malha prata~
+uma cota de malha de prata~
+Uma malha de prata foi deixada aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+9 0 0 0
+15 20000 2000 35 0
+A
+2 1
+A
+6 2
+A
+18 2
+#4512
+arco longo dourado~
+um arco longo dourado~
+Um maravilhoso arco dourado foi deixado no chão.~
+~
+5 amnopu 0 0 0 ano 0 0 0 0 0 0 0
+0 4 6 11
+10 30000 3000 45 0
+A
+6 1
+A
+17 5
+A
+18 1
+A
+19 1
+#4513
+flecha ouro~
+uma flecha de ouro~
+Uma flecha dourada está largada no chão.~
+~
+8 abmnopu 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+5 30000 3000 45 0
+A
+18 1
+A
+19 2
+A
+21 -2
+#4514
+escudo cintilante cristal~
+um escudo cintilante~
+Um escudo cintilante como as gotas do orvalho está caído aqui.~
+~
+9 ak 0 0 0 aj 0 0 0 0 0 0 0
+10 0 0 0
+15 50000 5000 60 0
+E
+escudo cintilante cristal~
+Cintilante como se estivesse orvalhado de gotas de chuva, mas na verdade
+são mil pinos de cristal.
+~
+A
+6 2
+A
+12 5
+A
+18 2
+A
+19 -1
+#4515
+cálice~
+um cálice de vinho~
+Há um cálice de vinho tinto aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+8 8 2 0
+13 50 5 0 0
+#4516
+lembas~
+um lembas~
+Há um pouco de lembas aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+24 0 0 0
+2 50 5 0 0
+#4517
+cinto bolsa~
+uma bolsa presa ao cinto~
+Uma bolsa e um cinto foram esquecidos aqui.~
+~
+15 g 0 0 0 al 0 0 0 0 0 0 0
+50 5 -1 0
+9 2000 200 5 0
+E
+cinto bolsa~
+Nem a água nem as interpéries farão mal ao que a bolsa guarda enquanto
+estiver selada.
+~
+A
+2 1
+A
+14 2
+A
+17 -2
+#4518
+cisne elmo~
+o elmo dos cisnes~
+Um belo elmo com sete penas foi largado no chão.~
+~
+9 egk 0 0 0 ae 0 0 0 0 0 0 0
+7 0 0 0
+7 50000 5000 85 0
+E
+elmo cisne pena~
+...E, os cisnes lhe fizeram reverência, cada um arrancou uma grande pena das
+asas a Tuor.  E ele tomou as sete penas e as pôs no cimo do elmo.
+~
+A
+2 -1
+A
+13 15
+A
+19 2
+#4519
+manto cinzento~
+o manto cinzento do Senhor das Águas~
+Um pedaço de pano cinzento foi deixado para trás por alguém.~
+~
+11 g 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+8 50000 5000 90 0
+E
+manto cinzento~
+Um manto para andar nas sombras...
+~
+A
+2 1
+A
+17 -5
+A
+18 2
+A
+19 1
+#4520
+fonte gondolin~
+a fonte da praça central de Gondolin~
+Uma deslumbrante fonte de pedra, jorra água cristalina em várias direções.~
+~
+23 0 0 0 0 0 0 0 0 0 0 0 0
+1000 1000 15 0
+500 100000 1000 0 0
+E
+fonte~
+A mais deslumbrante das fontes de Ondolindë.  As águas correm e esguicham
+jatos em várias direções, entrecruzando-se no ar e criando desenhos variados
+antes de cair em milhares de respingos.
+~
+#4521
+árvore belthil prata~
+Belthil, a árvore de prata~
+Belthil, a Árvore de Prata, foi esculpida neste belo jardim.~
+~
+8 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+100 10000000 100 0 0
+E
+árvore belthil~
+Belthil, o Brilho Divino, é a imagem de Telperion feita por Turgon.  Suas
+belas flores de prata emitem um fulgir prateado que ilumina todo o ambiente.
+~
+#4522
+árvore glingal ouro~
+Glingal, a árvore de ouro~
+Glingal, a Árvore de Ouro, foi esculpida neste belo jardim.~
+~
+8 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+100 10000000 100 0 0
+E
+árvore glingal~
+Glingal, a Chama Suspensa, é a imagem de Laurelin feita por Turgon.
+Suas belas folhas de ouro emitem um fulgir dourado que ilumina todo o
+ambiente.
+~
+#4523
+flor prata belthil~
+a flor de prata de Belthil~
+Uma das flores de prata de Belthil repousa no gramado.~
+~
+3 akq 0 0 0 ao 0 0 0 0 0 0 0
+20 3 3 36
+3 100000 1000 10 0
+E
+flor prata~
+Esta é uma das flores de Belthil, esculpida pelas mãos de Turgon.
+~
+#4524
+folha ouro glingal~
+a folha de ouro de Glingal~
+Uma das folhas de ouro de Glingal repousa no gramado.~
+~
+3 akq 0 0 0 ao 0 0 0 0 0 0 0
+20 2 2 53
+3 1000000 1000 10 0
+E
+folha ouro~
+Esta é uma das folhas de Glingal, esculpida pelas mãos de Turgon.
+~
+#4525
+elessar jóia~
+a jóia Elessar~
+Uma belíssima jóia verde foi perdida por alguém e repousa aqui.~
+~
+8 adgikq 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+3 1000000 1000 90 0
+E
+elessar jóia~
+A Elessar foi feita em Gondolin por Celebrindal, o qual a deu a Idril,
+a filha do Rei.
+Esta jóia brilha como se a luz límpida do sol estivesse aprisionada, mas
+é verde como as folhas das árvores.  Diz-se que aqueles que olham através
+desta pedra vêem coisas que haviam murchado ou queimado novamente sãs, ou
+tais como eram na graça de sua juventude, e que as mãos de quem a segure
+levam a cura dos ferimentos a todos que tocarem.
+~
+A
+3 1
+A
+4 1
+#4526
+cetro justiça~
+o cetro de justiça~
+Um belo cetro de prata com um grande diamante foi deixado aqui.~
+~
+4 adgkq 0 0 0 ao 0 0 0 0 0 0 0
+90 3 3 3
+8 50000 5000 50 0
+A
+3 1
+A
+4 1
+A
+18 3
+A
+19 3
+#4527
+trono turgon~
+o trono de Turgon~
+O trono de Turgon, feito de ouro está posicionado sobre um estrado de mármore.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+50 10000000 10000 0 0
+E
+trono~
+Um belo trono de ouro sobre um estrado de mármore que pode ser movido.
+~
+#4528
+chave~
+uma chave de prata~
+Uma pequena chave de prata foi esquecida aqui.~
+~
+18 cdq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+4 100 10 0 0
+#4529
+tesouro~
+uma parte do tesouro de Gondolin~
+Parte do tesouro de Gondolin está aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+200000 0 0 0
+20 200000 0 0 0
+#4530
+chicote balrog fogo~
+o chicote de fogo dos Balrogs~
+Um horrendo chicote em chamas foi largado aqui.~
+~
+5 jl 0 0 0 an 0 0 0 0 0 0 0
+0 5 6 2
+10 50000 5000 50 0
+E
+chicote balrog fogo~
+Um terrível chicote com três pontas que ardem intensamente.
+~
+A
+4 -2
+A
+12 -50
+A
+17 -5
+A
+18 2
+A
+19 2
+$~

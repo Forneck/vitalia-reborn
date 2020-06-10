@@ -1,0 +1,401 @@
+#900
+Na Correnteza do Rio~
+   Assim que o rio sai da cidade de Midgaard, ele pega velocidade e leva
+você através das margens cercadas pelas árvores de Haon-Dor. Enquanto a
+cidade desaparece a leste, você se aproxima de uma obscura floresta a oeste.
+~
+9 0 0 0 0 7
+D1
+~
+~
+0 -1 3200
+D3
+~
+~
+0 -1 901
+S
+#901
+A Margem do Rio~
+   O rio é fundo, e corre rapidamente na direção leste-oeste. Para norte
+o rio termina e entra uma clareira onde um barranco leva até um escuro e
+fechado bosque. Isto não parece muito convidativo de qualquer modo.
+~
+9 0 0 0 0 7
+D0
+~
+~
+0 -1 6120
+D1
+~
+~
+0 -1 900
+D3
+~
+~
+0 -1 902
+S
+#902
+A Parte Sinuosa do Rio~
+   O rio serpenteia e quase joga você pra fora de seu barco. A agua é
+escura, gelada, com um brilho reptiliano. Ele parece quase vivo. O rio corre
+para o leste e para o sul.
+~
+9 0 0 0 0 7
+D1
+~
+~
+0 -1 901
+D2
+~
+~
+0 -1 903
+S
+#903
+A Paisagem Pitoresca~
+   A obscura floresta de Haon-Dor desaparece atrás de você a nordeste.
+O rio continua na direção oeste através do delta do rio, onde você avista
+uma grande ilha.
+~
+9 0 0 0 0 7
+D1
+~
+~
+0 -1 902
+D3
+~
+~
+0 -1 904
+S
+#904
+A Correnteza no Delta do Rio~
+   Você está na borda do delta do rio, onde o rio termina o seu caminho
+para o mar. A agua aqui á Negra. Funda. Escura. Mortal. As ondas da maré
+movem você para cima e para baixo.
+~
+9 0 0 0 0 7
+D0
+~
+~
+0 -1 911
+D1
+~
+~
+0 -1 903
+D2
+~
+~
+0 -1 906
+D3
+~
+~
+0 -1 905
+S
+#905
+Perto das Rochas~
+   Você sacode-se para cima e para baixo nas ondas que vem perigosamente
+perto de algumas rochas grandes, pontudas na costa leste de uma ilha incomum.
+Não há nenhuma maneira de você ancorar lá sem ser morto.
+~
+9 0 0 0 0 7
+D1
+~
+~
+0 -1 904
+D2
+~
+~
+0 -1 906
+S
+#906
+O Delta Sul do Rio~
+   Você está fazendo seu caminho ao longo de um canal no delta do rio entre
+a ilha ao oeste e á costa ao sul e leste. Ao sul um envelhecido e quebrado
+cáis sai para fora da terra e para o oeste o canal vai para perto da ilha
+enquanto se move em torno de sua ponta do sul.
+~
+9 0 0 0 0 7
+D0
+~
+~
+0 -1 905
+D1
+~
+~
+0 -1 904
+D2
+~
+~
+0 -1 907
+D3
+~
+~
+0 -1 908
+S
+#907
+O Pier~
+   Você flutua ao lado de um cáis se desintegrando e por muito tempo
+esquecido. Ao oeste a água começa a parar e há muitas ervas daninhas e
+algumas algas que flutuam próximas. 
+~
+9 0 0 0 0 7
+D0
+~
+~
+0 -1 906
+D3
+~
+~
+0 -1 908
+S
+#908
+Passagem Pelas Algas~
+   O caminho por aqui é difícil. A maré luta com o fluxo normal do rio e
+aqui perto da borda do mar há uma grande quantidade de algas. Ao oeste o
+canal passa a ponta do sul da ilha e vai para águas abertas.
+~
+9 0 0 0 0 7
+D0
+~
+~
+0 -1 906
+D1
+~
+~
+0 -1 907
+D3
+~
+~
+0 -1 909
+S
+#909
+A Última Parada~
+   O delta encontra com o mar aqui. Ao oeste você não vê nada mais do que o
+oceano no horizonte. Os pássaros do mar gritam ruidosamente em sua aproximação
+e voam para uma praia próxima na ilha. Isto parace como se este poderia ser a
+última parada para aqueles indo para o mar.
+~
+9 0 0 0 0 7
+D0
+~
+~
+0 -1 910
+D1
+~
+~
+0 -1 908
+S
+#910
+A Praia~
+   Esta parece uma praia deserta na ponta do sul da ilha.  Seguindo sudoeste
+você entra em mar aberto.  Não há muito a ver aqui e não há nenhuma maneira
+cruzar os penhascos rochosos e íngremes que cercam este lugar.
+~
+9 0 0 0 0 2
+D2
+~
+~
+0 -1 909
+D3
+~
+~
+0 -1 2010
+D9
+~
+~
+0 -1 10800
+S
+#911
+O Canal Norte~
+   O rio se divide e corre de encontro a ilha e a um canal navegável que se
+divide para o norte e para o oeste.
+~
+9 4 0 0 0 7
+D0
+~
+~
+0 -1 912
+D2
+~
+~
+0 -1 904
+D3
+~
+~
+0 -1 912
+S
+#912
+O Canal Norte~
+   O rio carrega-o rapidamente para o oeste enquanto o canal começa a se
+estreitar enquanto se espreme através na extremidade norte da ilha.
+~
+9 0 0 0 0 7
+D1
+~
+~
+0 -1 911
+D2
+~
+~
+0 -1 911
+D3
+~
+~
+0 -1 913
+S
+#913
+Perto da Ilha~
+   Você está fora de uma aterragem pequena na ilha que não parece ser nada
+mais do que um trajeto curto que conduz ao lado de uma colina.
+~
+9 4 0 0 0 7
+D1
+~
+~
+0 -1 912
+D2
+~
+~
+0 -1 914
+S
+#914
+O Caminho dos Que Ficaram~
+   Corpos encontram-se por toda parte. Campones, mendigos, duques, duquesas.
+Os deuses não ouvirão seu chamado aqui. Daqui não lhe responderão. Ao sul
+o trajeto termina na entrada de uma escura caverna. Um letreiro foi afixado
+ao lado da entrada.
+~
+9 0 0 0 0 1
+D0
+~
+~
+0 -1 913
+D2
+~
+~
+0 -1 915
+E
+letreiro~
+Um letreiro ao lado da caverna escura diz:
+
+   AVISO! Somente os tolos e os mortos passam por este caminho.
+   Os desafios de Minos, nosso glorioso governante, esperam.
+~
+S
+#915
+O Primeiro Desafio de Minos~
+   Ah... você encontra-se no campo de batalha de Minos. Minos ama torturar
+seu povo através destes lugares. Ele coleta monstros do mundo todo e os poem
+aqui.
+~
+9 9 0 0 0 1
+D1
+~
+~
+0 -1 916
+S
+#916
+O Segundo Desafio de Minos~
+   A voz de Minos reverbera nas quatro paredes desta sala: 'Descanse um pouco
+e certifique-se de que você está curado. Você precisará para o próximo
+monstro em meu desafio. Ou você é forte o bastante? '
+   Ao sul é a entrada para o próximo desafio na fortaleza de Minos.
+~
+9 9 0 0 0 1
+D2
+~
+~
+0 -1 917
+S
+#917
+O Terceiro Desafio de Minos~
+   Você entra em um quarto vermelho. Muito vermelho. Como se o rei Minos o
+usou para estripar seus convidados. O trajeto continua a leste. Você vê
+luzes azuis nesse sentido.
+~
+9 9 0 0 0 0
+D1
+~
+~
+0 -1 918
+S
+#918
+O Quarto Desafio de Minos~
+   Minos deve ser um monstro pesquisador. Você vê uma luz azul cintilante.
+Uma voz diz, 'PORQUE VOCÊ ESTÁ AQUI!'
+~
+9 9 0 0 0 0
+D2
+~
+~
+0 -1 919
+S
+#919
+O Quinto Desafio de Minos~
+   Isto é o quartel do General Woundwort. Cadáveres de coelhos encontram-se
+dispersados sobre este pequeno inferno. O General não é uma pessoa muito boa
+como você pode pensar.
+~
+9 9 0 0 0 0
+D1
+~
+~
+0 -1 920
+S
+#920
+O Sexto Desafio de Minos~
+   Quisera nós sabermos quantas mais salas Minos tem. Os trajetos parecem
+ser infinitos. Você escuta os sons de gritos de morte do leste. Uma voz alta
+grita um outro aviso: 'Sai agora ou enfrente minha ira!' Há uma escada que
+conduz para cima na extremidade do quarto e há uma brisa fresca que vem de
+lá.
+~
+9 9 0 0 0 0
+D2
+~
+~
+0 -1 921
+D4
+~
+~
+0 -1 923
+S
+#921
+O Último Desafio de Minos~
+   Este é a sala de Minos. O que você esperava? A sala é decorada
+prodigamente para este rei bovino. Tudo é tão opulento que faz seus olhos
+doerem. Sobreviva e leve a fortuna dele!
+A única saída é uma porta grande de carvalho na parede do leste.
+~
+9 9 0 0 0 0
+D1
+Você vê uma porta de carvalho razoavelmente grande reforçada com ferro e
+seguramente trancada.
+~
+porta carvalho~
+2 900 922
+S
+#922
+A Sala Real~
+    A sala do tesouro de Minos é escura, exceto por sua lanterna.
+Esperançosamente ainda não foi descoberta pelos muitos ladrões legendários
+de Midgaard. Uma passagem secreta conduz para cima daqui.
+~
+9 521 0 0 0 0
+D4
+~
+~
+0 -1 910
+S
+#923
+Acima, Na Praia~
+   Você senta-se entre as rochas em uma pequena praia na extremidade sul da
+ilha. Você poderia descer facilmente, mas subir de novo seria uma outra
+história.
+~
+9 0 0 0 0 4
+D5
+~
+~
+0 -1 910
+S
+$~

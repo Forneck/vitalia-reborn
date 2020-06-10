@@ -1,0 +1,308 @@
+#1100
+Uma Trilha Esquecida~
+   Você está numa trilha estreita, onde o solo é de terra fofa e a paisagem
+é inteiramente feita por vegetação rasteira.  A leste, a estrada continua e
+você consegue ver, ao longe, uma ponte que cruza um desfiladeiro.  Uma névoa
+branca o impede de ver o que há depois da ponte.
+   Ao norte há uma enorme árvore solitária, única na paisagem.
+   A estrada retorna ao Templo pela direção oeste.
+~
+11 0 0 0 0 2
+D0
+Uma trilha conduz a uma árvore, única em toda a vegetação.
+~
+~
+0 -1 1101
+D1
+A estrada continua na direção da ponte.
+~
+~
+0 -1 1105
+D2
+Você repara que ali está havendo uma estranha movimentação.
+~
+~
+0 -1 2200
+D3
+Você vê o Templo de Midgaard.
+~
+porta~
+1 -1 3063
+S
+#1101
+A Árvore Solitária~
+   De perto, a árvore parece muito maior do que vista de longe.  Ela
+permanece aqui, como eterna protetora dessa região de vegetação ainda
+virgem.
+   Ao redor de seu tronco, você nota uns frutos de coloração púrpura que já
+estão se deteriorando.  Ao olhar para cima, você vê que a árvore ainda tem
+alguns frutos em seus galhos mais altos, e o tronco oferece apoio suficiente
+para você tentar escalá-la.
+   Para sul, uma trilha leva de volta à estrada de terra fofa.
+~
+11 0 0 0 0 2
+D2
+A trilha retorna a estrada de terra fofa.
+~
+~
+0 -1 1100
+D4
+A copa da árvore parece ter alguns frutos em sua parte mais alta.
+~
+~
+0 -1 1102
+S
+#1102
+A Copa da Árvore~
+   Ufa!  Essa arvore bem que poderia ser mais baixa...
+   Você está na copa da árvore.  Olhando para baixo, você sente um pouco de
+vertigem por causa da altura, que deve estar entre uns 8 a 10 metros.  Ainda
+é possivel voltar à base da arvore, com um pouco de cautela.  Afinal, você
+pode se machucar se cair desta altura.
+   Os frutos estão mais acima, na parte superior da copa.  Se você quiser,
+você pode se arriscar a subir lá e pegar alguns dos frutos...
+~
+11 0 0 0 0 2
+D4
+Você consegue ver os frutos na parte superior da copa.
+~
+~
+0 -1 1103
+D5
+Uma leve vertigem faz você se segurar com mais força nos galhos...
+Uma queda daqui poderia causar sérios estragos...
+~
+~
+0 -1 1101
+S
+#1103
+A Copa Superior da Árvore~
+   A visão daqui é incrível.  Você consegue ver a cidade de Midgaard quase
+que inteira daqui, e toda a paisagem que a rodeia.  Ao leste, uma pequena
+estrada leva até uma ponte que desaparece por dentro de uma espessa névoa
+branca.
+   Olhando para baixo, você julga estar a uns 20 metros de altura, e cair de
+uma altura dessas pode ser fatal...
+   Daqui é possivel alcançar os frutos desta arvore, que possuem um cor
+púrpura e são mais ou menos do tamanho de uma maçã.  Para o leste, em um
+galho isolado, você nota um fruto de cor dourada, diferente de todos os
+outros.  O galho em que ele esta mal resiste ao peso do proprio fruto.  Você
+precisaria voar para chegar até ele.
+~
+11 0 0 0 0 2
+D1
+Um pequeno fruto solitário de cor dourada esta pendurado em um galho.
+~
+~
+0 -1 1104
+D5
+Com muita cautela, ainda é possível descer até a copa da árvore.
+~
+~
+0 -1 1102
+E
+frutos~
+Pequenos frutos de cor púrpura e do tamanho de uma maçã estão ao seu alcance.
+~
+S
+#1104
+O Fruto Sagrado~
+   Voando, você se arrisca até o galho, onde o fruto está.  Daqui, você pode
+voltar pelo mesmo galho ou já que voce esta voando, descer atá a base da
+árvore.
+~
+11 0 0 0 0 9
+D3
+Você pode voar até a copa superior da arvore.
+~
+~
+0 -1 1103
+D5
+Você pode voar até a base da árvore.
+~
+~
+0 -1 1101
+S
+#1105
+Uma Trilha Esquecida~
+   A trilha fica ainda mais estreita nesse trecho.  Aqui vegetação invadiu a
+trilha quase que inteiramente.  Parece que ninguém usa essa trilha a anos...
+   O chão vai ficando cada vez mais frio e mais úmido a cada passo em
+direção à ponte.  A cada passo na direção leste, a ponte vai se aproximando,
+junto com a nevoa espessa.
+   A oeste, a trilha retorna em direção ao templo de Midgaard.
+~
+11 0 0 0 0 2
+D0
+Você vê um caminho que leva até um vasto campo...
+~
+~
+0 -1 5700
+D1
+A trilha continua na direção da ponte.
+~
+~
+0 -1 1106
+D3
+A trilha retorna na direção do Templo de Midgaard.
+~
+~
+0 -1 1100
+S
+#1106
+O Final da Trilha~
+   Aqui a vegetação já cobriu por completo a antiga trilha.  A partir daqui
+o caminho fica mais difícil e cansativo.
+   Você pode continuar a leste em direção à ponte, que fica mais próxima a
+cada passo, ou retornar ao Templo, voltando pela trilha, para oeste.
+~
+11 0 0 0 0 3
+D0
+~
+~
+0 -1 2150
+D1
+A ponte fica mais próxima a cada passo.  Algo deixa você um pouco
+apreensivo...
+~
+~
+0 -1 1107
+D3
+Ao longe, você avista o Templo de Midgaard.
+~
+~
+0 -1 1105
+S
+#1107
+Uma Passagem Entre Arbustos~
+   Não há mais trilha nenhuma aqui para seguir.  A vegetação aqui é mais
+alta, chegando a cobrir seu corpo até os ombros.  Folhagens e espinhais
+arranham seu corpo a cada passo, tornando a caminhada ainda mais difícil.
+Seria uma boa, voltar daqui para oeste, para a seguranca do Templo de
+Midgaard.
+   Dentre os arbustos, você ouve um barulho vindo do sul.  Ao oeste, a
+folhagem parece abrir caminho para algum lugar.
+~
+11 0 0 0 0 3
+D0
+A folhagem parece menos densa nesta direção.
+~
+~
+0 -1 -1
+D1
+~
+~
+0 -1 2300
+D2
+Além do barulho, você não vê nada de especial.
+~
+~
+0 -1 1108
+D3
+Este caminho retorna de volta ao Templo de Midgaard.
+~
+~
+0 -1 1106
+S
+#1108
+A Lagoa Escura~
+   Você escorregou em alguma coisa viscosa que estava no chão e acabou
+caindo dentro de uma lagoa, de águas escuras e que exalam um odor podre no
+ar.  A água bate nos seus tornozelos enquanto você tenta descobrir aonde
+você veio parar.
+   Uma sensação estranha faz você querer sair dessa lagoa o quanto antes.
+   A única saída aparente é voltar de onde...  Mas como?  Você não consegue
+achar nenhuma saída ao redor do lago.  Parece que a vegetação se fechou
+totalmente, e é muito densa para você atravessar.  No desespero, você nota
+algumas bolhas vindo a superficie do lago.  Talvez a saída seja para
+baixo...
+~
+11 0 0 0 0 6
+D5
+Tem umas bolhas de ar vindo dessa direção.
+~
+~
+0 -1 1109
+E
+vegetação~
+Parece ter se fechado propositalmente.  E é muito densa para se atravessar.
+~
+S
+#1109
+Dentro da Lagoa Escura~
+   É realmente escuro aqui em baixo, e mesmo com magia não é possivel ver
+muito além. Sem poder ver muito, suas únicas opções são voltar à superficie,
+ou nadar até o fundo da lagoa.
+~
+11 393313 0 0 0 8
+D4
+Está muito escuro para você ver alguma coisa.
+~
+~
+0 -1 1108
+D5
+Está muito escuro para você ver alguma coisa.
+~
+~
+0 -1 1110
+S
+#1110
+Dentro da Lagoa Escura~
+   Você continua nadando, sem com isso chegar ao fundo da lagoa.  Você nota
+a uma grande tubulação desembocando aquí, vindo do leste.
+   Você ainda pode voltar a superficie deste ponto.
+~
+11 393313 0 0 0 8
+D1
+Parece que não é usada a anos.
+~
+~
+0 -1 1111
+D4
+~
+~
+0 -1 1109
+D5
+~
+~
+0 -1 9700
+S
+#1111
+A Entrada da Tubulação~
+   Você está diante de um tubo de mais ou menos 2 metros de diâmetro, muito
+velho, que não é usado a anos.  Na sua entrada, tem uma grade com um cadeado
+enferrujado.  Parece que se voce quiser entrar no cano, você vai ter que dar
+um jeito neste cadeado.
+~
+11 393313 0 0 0 8
+D0
+O tubalacao parece continuar para norte.
+~
+grade~
+1 -1 1112
+D3
+~
+~
+0 -1 1110
+S
+#1112
+Dentro da Tubulacao~
+   Você segue nadando dentro do tubo até chegar a um lugar seco.  Parece que
+nessa parte o cano esta acima do nivel da lagoa.  Ugh!  O cheiro daqui é
+ainda pior que o do lago.
+   Essa tubulação termina repentinamente e a unica direção a se tomar é uma
+bifurcação que leva para baixo, ou retornar nadando até a lagoa.
+~
+11 393281 0 0 0 0
+D2
+A tubulação retorna à lagoa.
+~
+grade~
+1 -1 1111
+D5
+Esta muito escuro para você ver algo.
+~
+~
+0 -1 7022
+S
+$~

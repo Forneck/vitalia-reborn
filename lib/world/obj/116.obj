@@ -1,0 +1,1256 @@
+#11600
+chave raio port�es celestiais~
+a chave dos Port�es Celestiais~
+Uma dourada chave em forma de raio brilha intensamente no ch�o.~
+~
+18 acq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 10000 0 0 0
+E
+chave raio port�es celestiais~
+Essa grande chave abre os port�es que levam ao grande jardim do reino de
+Lorde Indra.  Cuidado com o que faz com ela...
+~
+#11601
+fonte dourada ushas~
+a Fonte dourada de Ushas~
+A dourada fonte de Ushas jorra seu l�quido dourado, que respinga em voc�.~
+~
+8 a 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+100 1000000 0 0 0
+E
+fonte dourada ushas~
+Essa fonte jorra a �gua dourada em que Ushas se banha. Apenas ela, a
+Sempre-Jovem, tem permiss�o de tocar em suas �guas.
+~
+#11602
+tornozeleiras ouro belas~
+tornozeleiras de ouro~
+Um par de belas tornozeleiras de ouro foi negligentemente deixado aqui.~
+~
+11 aq 0 0 0 af 0 0 0 0 0 0 0
+0 0 0 0
+3 30000 10 0 0
+E
+tornozeleiras ouro belas~
+S�o, de fato, j�ias muito femininas. Uma dama fica muito bem usando-as.
+~
+A
+17 -5
+A
+6 2
+#11603
+bandeja grande prata~
+uma bandeja de prata~
+Uma grande bandeja de prata foi deixada no ch�o.~
+~
+15 a 0 0 0 ao 0 0 0 0 0 0 0
+20 0 0 0
+2 1000 0 0 0
+#11604
+ta�a cristal~
+uma ta�a~
+Uma bela ta�a de cristal foi deixada no ch�o.~
+~
+17 0 0 0 0 ao 0 0 0 0 0 0 0
+20 20 2 0
+25 1000 0 0 0
+#11605
+crepe bandeja arroz lentilha dosa~
+uma bandeja de dosa~
+Uma bandeja de pequenos crepes cuidadosamente embalados foi esquecido aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+28 0 0 0
+2 80 0 0 0
+E
+bandeja crepe arroz lentilha pequeno dosa~
+Esses pequenos crepes s�o feito de massa de semolina e recheados com
+lentilhas cozidas em molho acebolado, depois embalados um a um com um fino
+papel de seda. � um petisco muito apreciado em Svarga.
+~
+#11606
+samosa past�is prato batata~
+um prato de samosa~
+Um prato repleto de pequenos past�is foi deixado aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+30 0 0 0
+3 180 0 0 0
+E
+past�is prato samosa batata~
+De massa de batata, os pequenos past�is fritos em �leo s�o recheado com
+cubos, tamb�m de batata, previamente cozidos num molho feito com
+ingredientes de sabor bastante picante: cebola, gengibre, a�afr�o-da-terra,
+gr�os de mostarda, coentro, cominho e lim�o, al�m de uma pitada de sal e
+a��car.  Seu sabor � forte, mas muito bom.
+~
+#11607
+bandeja dhokla bolinhos arroz gr�o-de-bico gr�o bico~
+uma bandeja com pequenos dhoklas~
+Uma bandeja repleta de bolinhos foi deixado aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+32 0 0 0
+3 200 0 0 0
+E
+bandeja dhokla bolinhos arroz gr�o-de-bico gr�o bico~
+O dhokla � um bolinho salgado feito de arroz e gr�o-de-bico, que
+deve ser servido com uma esp�cie de pat�, o chutney.
+~
+#11608
+terrina chutney coco mariyal molho marrom-claro marrom claro~
+mariyal chutney~
+Uma terrina cheia de um molho espesso, marrom-claro, foi deixada aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+20 0 0 0
+1 80 0 0 0
+E
+terrina chutney coco mariyal molho marrom-claro marrom claro~
+Esse molho espesso, um tipo de pat�, � feito de coco.
+~
+#11609
+terrina chutney aam manga molho alaranjado~
+aam chutney~
+Uma terrina contendo um espesso molho alaranjado foi esquecida aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+20 0 0 0
+1 80 0 0 0
+E
+terrina chutney aam manga molho alaranjado~
+Esse chutney, uma esp�cie de pat�, � de manga.
+~
+#11610
+terrina imali chutney tamarindo amarelado molho~
+imali chutney~
+Uma terrina repleta de espesso molho amarelado foi deixada aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+20 0 0 0
+1 80 0 0 0
+E
+terrina imali chutney tamarindo amarelado molho~
+Sendo uma esp�cie de pat�, esse chutney foi feito com tamarindos.
+~
+#11611
+ta�a srikhand creme coalhada sobremesa~
+uma ta�a de srikhand~
+Uma bela ta�a de sobremesa foi deixada aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+20 0 0 0
+1 80 0 0 0
+E
+ta�a srikhand creme coalhada sobremesa~
+Nessa ta�a h� uma sobremesa gelada feita com coalhada, pistache,
+cardamomo e a�afr�o.
+~
+#11612
+velho livro artes marciais enorme envelhecido kalaripayat~
+a Arte do Kalaripayat~
+Um enorme livro j� envelhecido est� ca�do no ch�o.~
+~
+12 q 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+4 10000 0 0 0
+E
+velho livro artes marciais enorme envelhecido kalaripayat~
+Voc� abre o grande livro e come�a a ler seu in�cio:
+
+" - O que � Kalaripayat?  - se perguntam os que desconhecem a velha arte.
+   E se diz que � ela uma das mais antigas artes marciais desses mundos.
+Seu nome vem de Kalari, "escola" ou "treinamento", e Payat, que, de seus
+significados, tem "pancada, soco, combate" como principais.  Sua pr�tica �
+exercida pela classe guerreira dessas regi�es, a Kshatryia, e � vinculada
+tamb�m aos grandes Rishis e �queles que praticam a Vidyia Yoga.  Seu
+principal prop�sito � manter a harmonia interior e exterior no homem, e
+assim, na sociedade.
+
+   Como em outras artes, grande � a influ�ncia da mais antiga, a Shastra
+Vidyia, cujo principal instrumento � a espada.  Mas nela, na Kalaripayat, o
+guerreiro n�o s� domina as armas, como aprende tamb�m o combate desarmado
+(utilizando t�cnicas, que englobam ambos os tipos, chamadas Suvasu),
+tornando-se assim mais completo.  Deve ele, para isso, obedecer seu mestre e
+a arte, sabendo manter o respeitoso sil�ncio durante a pr�tica.
+
+   Para o combate desarmado aprende a "Arte Antiga do 'Marma'", que abrange
+o conhecimento dos pontos vitais do corpo humano (sthula sharira, o corpo
+denso).  Para isso, � uma arte que tanto aperfei�oa o condicionamento f�sico
+do corpo para luta, quanto o condicionamento espiritual e mental.
+
+   De sua origem diz-se que os grandes Rishis guerreiros ensinaram seus
+segredos para os principais Brahmins.  Esses, por sua vez, instru�ram outros
+dos seus, escolhendo entre eles vinte e um peritos em combates corpo a corpo
+com os quas os guerreiros (Yodhas) treinaram. Esses vinte e um guerreiros,
+ent�o, estabeleceram vinte e uma escolas.
+ 
+   Sabe-se ent�o ser o Kalaripayat uma mistura �nica de pr�ticas
+espirituais, mentais e f�sicas.  O treinamento segue rituais estritos e
+diversas diretrizes.  H�, assim, no 'Gurukula' (resid�ncia dos mestres), um
+treinamento f�sico r�gido, assim como treinamento �tico e espiritual.  O
+Kalariguru (Mestre de Defesa Pessoal) guia seus estudantes num caminho que
+os permitir� estarem prontos para qualquer situa��o na vida.
+
+   Essa arte se encontra pareada � Ayurvedica, a medicina v�dica, cujo nome
+�, na Kalaripayat, conhecido por "Kalarichiktsa", baseando-se esta em
+identificar os marmas (pontos vitais) e trat�-los, caso necess�rio, com
+massagens, �leos essenciais e ervas medicinais.
+  
+   O desenvolvimento dessa arte se d� em tr�s n�veis e sub-n�veis, sendo
+eles, respectivamente:
+
+         O treinamento externo
+
+1) MEYTHARI ou exerc�cios f�sicos. 
+Seq��ncias de exerc�cio f�sico e Vidya Yoga, incluindo tor��es,
+alongamentos, articula��es, saltos, rasteiras, agilidade e desempenho geral
+do corpo.  Elas habilitam o estudante a desenvolver ao m�ximo sua
+coordena��o motora, os princ�pios de movimento em espa�o e a compreender o
+fluxo cont�nuo de energia no corpo.
+
+2) KOLTHARI ou coordena��o f�sica. 
+Isto envolve treinamento com armas de madeira, num primeiro momento, e
+depois com armas reais (lan�as e outros).  A pr�tica habilita o estudante a
+ter controle e pleno dom�nio de si e do objeto, al�m de manter o equil�brio
+de sua mente.  At� mesmo um fr�gil instrumento de madeira pode tornar-se uma
+eficiente arma nas m�os de um Yodha.  Usando-as com o conhecimento que
+adquire, pode ele vencer at� mesmo um advers�rio de extrema for�a e peso.
+
+3) ANKATHARI ou pr�tica de combate. 
+Aqui, finalmente, h� a pr�tica completa do combate armado:
+S�o usados Kadaras (punhal), Udaval e Paricha (Espada e Escudo), Kuntham
+(Lan�a), Otta (bast�o em forma de 'S'), Gadba (Clava) , Mazhu (Machado), e
+Urumi (uma espada flex�vel e longa).  Esta � a fase final do treinamento
+externo.
+
+         O treinamento interno
+
+4) DHY�NA YUKTA, a medita��o do guerreiro.
+
+5) YODHANAYAMA, o dom�nio do guerreiro.
+
+6) VAJRAUP�SANA, a t�cnica do guerreiro.
+
+
+   Al�m desse aprendizado, o guerreiro pode estender seu conhecimento
+estudando o Verum Kaythari, que trata exclusivamente de combate desarmado.
+Nele, o guerreiro, sem armas, luta com um inimigo armado, aplicando t�cnicas
+como o Ozhivukal (saltos), Irrakkam (fintas e recuos), Kayttam (o caminhar
+correto), Thada (bloqueios), Pidutham (atraca��o) e Marmam (tocar e golpear
+os pontos vitais do advers�rio).  � assim que o corpo inteiro torna-se uma
+arma."
+
+Depois dessa leitura, voc� ainda examina algumas ilustra��es do livro, que
+mostram alguns movimentos, muitos baseados em movimentos de animais, tendo
+eles todos a caracter�stica de deverem ser realizados em harmonia com a
+respira��o (pranayama).
+~
+#11613
+estante enorme livros~
+uma enorme estante de livros~
+undefined~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+100 0 0 0
+80 0 0 0 0
+#11614
+bindi marut j�ia azulada luz~
+o bindi de um Marut~
+Uma suave luz azulada revela uma pequena j�ia esquecida por aqui.~
+~
+11 aq 0 0 0 ar 0 0 0 0 0 0 0
+0 0 0 0
+1 10000 25 0 0
+E
+bindi marut j�ia azulada luz~
+Esse bindi � sagrado... Feito para adornar o ajna dos Senhores das Tempestades,
+ajudantes de Indra, constitui-se em uma maravilhosa safira azul-ultramarino numa
+pequena moldura de material brilhante, o mesmo de suas armaduras.
+~
+A
+6 1
+A
+17 -3
+#11616
+raio brilhante~
+um raio~
+Um brilhante raio ilumina tudo a seu redor.~
+~
+5 a 0 0 0 ano 0 0 0 0 0 0 0
+0 4 4 12
+5 10000 10 0 0
+E
+raio brilhante~
+Cuidado: isso queima!!
+~
+A
+18 1
+#11617
+armadura marut~
+a armadura de um Marut~
+A fabulosa armadura de um Marut foi deixada aqui.~
+~
+9 aq 0 0 0 ad 0 0 0 0 0 0 0
+10 0 0 0
+6 90000 25 0 0
+E
+armadura marut~
+Forjada a partir de rel�mpagos pelo magn�fico artes�o Twashtri, essa
+armadura brilha t�o intensamente que chega a cegar. Se voc� fosse
+um Marut, conseguiria ler o que est� escrito por toda sua superf�cie...
+~
+A
+2 1
+#11618
+frasco kanakarasa l�quido pequeno brilhante~
+um frasco de kanakarasa~
+Um pequeno frasco contendo brilhante l�quido dourado foi perdido por aqui.~
+~
+1 aq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 -1 0
+3 100000 0 15 0
+E
+frasco kanakarasa l�quido pequeno brilhante~
+Realmente, o que importa � o que h� dentro, n�o o inv�lucro: dentro de um
+simples frasco de vidro est� guardado nada mais nada menos do que um pouco
+do ouro divino que jorra na estranha nascente acima das nuvens de Patala...
+Voc� se encanta com o luzir do l�quido, brilhando e pulsando como se fosse
+pura luz solar (o que talvez n�o seja uma inverdade...).
+~
+A
+19 1
+A
+17 -3
+#11619
+cintur�o kanakajja dourado~
+o cintur�o de Kanakajja~
+Um valioso cintur�o dourado foi perdido aqui.~
+~
+9 aq 0 0 0 al 0 0 0 0 0 0 0
+8 0 0 0
+6 100000 0 30 0
+E
+cintur�o kanakajja dourado~
+Esse enorme cintur�o foi especialmente forjado por Twashtri para ser usado
+por L�tus de Ouro.  At� agora voc� n�o sabe direito quem era esse naga, mas
+pelo menos ele rendeu um bom cinto...
+~
+A
+2 1
+#11620
+escudo trov�es negro~
+um escudo de trov�es~
+Um estranho escudo negro emite um ensurdecedor som � medida que voc� se aproxima.~
+~
+9 aq 0 0 0 aj 0 0 0 0 0 0 0
+8 0 0 0
+6 0 0 0 0
+E
+escudo trov�es negro~
+Acredite se quiser: Twashtri fez esse escudo usando apenas trov�es.
+Como pode?
+~
+#11621
+bast�o marut otta estranho formato~
+o otta de um Marut~
+Um bast�o de estranho formato, perdido por aqui, irradia uma forte luz.~
+~
+5 aq 0 0 0 an 0 0 0 0 0 0 0
+0 4 4 5
+5 70000 0 13 0
+E
+bast�o marut otta estranho formato~
+Esse bast�o foi feito com um grande n�mero de raios, o que significa que seu
+poder de destrui��o � superior ao de um �nico.  Sua forma � a de um raio. 
+~
+A
+19 1
+#11622
+m�scara adrksa fr�gil~
+a m�scara de Adrksa~
+Uma m�scara de apar�ncia fr�gil foi esquecida no ch�o.~
+~
+11 aq 0 0 0 ar 0 0 0 0 0 0 0
+0 0 0 0
+5 80000 0 30 0
+E
+m�scara adrksa fr�gil~
+Ela cobre s� metade do rosto, parecendo ter sido feita para que Adrksa abra
+seus olhos sem que ningu�m perceba.  Inicialmente, voc� pensou que ela era
+de porcelana pintada de azul-marinho, mas o contato com seu material prova
+que aquilo � t�o duro quanto o a�o.
+~
+A
+6 1
+A
+1 1
+A
+18 1
+#11623
+belo bracelete fr�gil idrksa~
+o bracelete de Idrksa~
+Algu�m esqueceu por aqui um belo bracelete de apar�ncia fr�gil.~
+~
+11 aq 0 0 0 am 0 0 0 0 0 0 0
+0 0 0 0
+5 80000 0 30 0
+E
+belo bracelete fr�gil idrksa~
+Esse bracelete n�o � t�o fr�gil quanto aparenta: voc� pensou que ele fosse
+feito de porcelana, mas ele �, na verdade, de um material t�o resistente
+quanto o a�o.  Voc� gostaria muito de encontrar Twashtri e encomendar
+algumas coisinhas para ele, pois parece que ele sabe fazer armas e armaduras
+estranhamente belas (e poderosas...).
+~
+A
+5 1
+A
+2 1
+A
+13 20
+#11628
+est�tua arjuna jovem~
+a est�tua de Arjuna~
+A est�tua do jovem Arjuna parece profundamente angustiada.~
+~
+8 aq 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+80 888888 0 0 0
+E
+est�tua arjuna jovem~
+Arjuna se sente bastante confuso a respeito de sua pr�xima batalha: ele ter�
+que combater seus pr�prios familiares.  O jovem perguntou a Krishna, seu
+mestre, porque isso acontecia com ele e quais eram seus prop�sitos.
+Krishna, ent�o, teve com ele uma longa conversa que, sendo posteriormente
+escrita, recebe o nome de Bhagavata Gita (ou apenas Gita, que significa
+can��o em s�nscrito).  Voc� para e co�a a cabe�a: "Gita me lembra uma famosa
+m�sica de algum mundo..."
+~
+#11629
+est�tua macaco hanuman~
+a est�tua de Hanuman~
+A est�tua de um macaco acena para voc�, mostrando-se simp�tico.~
+~
+8 aq 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+80 888888 0 0 0
+E
+est�tua macaco hanuman~
+Essa est�tua representa Hanuman, o rei dos macacos.  Se voc� ouviu a
+hist�ria que Valmiki conta, tem id�ia da coragem, for�a e lealdade do rei,
+cuja ajuda ao jovem Rama possibilitou o resgate de Sita.  Se n�o ouviu ou
+n�o prestou aten��o, agora sabe.
+~
+#11630
+est�tua varaha javali~
+a est�tua de Varaha~
+A est�tua de um enorme javali olha para todos os lados, extremamente desconfiada.~
+~
+8 aq 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+80 888888 0 0 0
+E
+est�tua varaha javali~
+Cuidado com esse javali: Varaha � forte, pertinaz e experiente.  Seu mais
+comentado feito foi o duelo, que durou 1000 anos, contra o poderoso dem�nio
+Hiranyaksha.  Quem ganhou?  Varaha, oras!
+~
+#11631
+gatka dan�a espada livro grande empoeirado~
+Gatka - a Dan�a da Espada~
+Um grande e empoeirado livro foi esquecido aqui.~
+~
+12 aq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+5 10000 0 0 0
+E
+shastra armas~
+Voc� tenta ler essa parte do livro, mas seu conte�do n�o parece ser para
+seus olhos.
+~
+E
+tareek hist�ria~
+Voc� tenta ler essa parte do livro, mas seu conte�do n�o parece ser para
+seus olhos.
+~
+E
+vidyaa ci�ncia~
+Voc� come�a a, rapidamente, olhar algumas partes do livro, parando nessa
+passagem da Vidyaa, a Ci�ncia:
+"Poucos lugares desse mundo ainda conhecem a Gatka em sua forma original.
+Ela � conhecida como vinda da Shastra Vidyaa, a Ci�ncia da Espada, t�o
+antiga quanto os textos v�dicos.  Nela, todo gesto � um ato de cria��o.
+Toda a��o se desdobra em um Kriya, um ciclo completo e equilibrado, todo
+movimento � uma postura que expressa uma energia particular, uma Mudra, todo
+pensamento exige medita��o, pois � o guerreiro um criador, e um criador est�
+intimamente ligado � sua obra."
+~
+E
+�ndice~
+1) Vidyaa  - A Ci�ncia
+2) Tareek  - A Hist�ria
+3) Shastra - As Armas     
+    I    - Barchi
+    II   - Chackram
+    III  - Dahl
+    IV   - Gurj
+    V    - Kaman
+    VI   - Katar
+    VII  - Khanda
+    VIII - Kirpan
+    IX   - Lathi
+    X    - Marati
+    XI   - Soti
+    XII  - Tabar
+    XIII - Talwar
+    XIV  - Tir
+~
+E
+introdu��o~
+   Esse livro trata sobre a antiq��ssima t�cnica de luta chamada Gatka, a
+Dan�a da Espada.  Aqui ser�o tratadas quest�es filos�ficas, cient�ficas e,
+como n�o poderia deixar de ser, pr�ticas.
+   Tamb�m foram cuidadosamente selecionadas ilustra��es de movimentos e das
+Shastra, as armas sagradas (nem todas foram aqui enumeradas, apenas as
+principais).
+   Espera-se que, com a ajuda desse humilde livro, o guerreiro se torne mais
+s�bio e mais h�bil.
+   Fiquem em paz.
+~
+E
+sinal dourado~
+O sinal, uma esp�cie de selo de ouro, representa um chackram sobre o qual se
+cruzam dois kirpans e, no centro do conjunto, apoia-se uma khanda.  
+~
+E
+gatka dan�a espada livro grande empoeirado~
+Voc� cuidadosamente limpa a capa do livro com as pontas de seus dedos e descobre
+que, por debaixo da sujeira, um belo sinal dourado d� mais pistas � respeito
+do conte�do de suas p�ginas. Ap�s uma breve an�lise, voc� o abre e, aliviado,
+constata que tudo escrito est� em sua l�ngua. Uma pequena introdu��o e o �ndice
+chamam sua aten��o.
+~
+#11632
+punhal bonito curvo kadaras~
+um kadaras~
+Um bonito punhal curvo foi deixada aqui.~
+~
+5 a 0 0 0 ano 0 0 0 0 0 0 0
+0 4 3 11
+3 10000 0 0 0
+#11633
+turbante azul~
+um turbante azul~
+Algu�m deixou aqui um bonito turbante azul.~
+~
+9 0 0 0 0 ae 0 0 0 0 0 0 0
+4 0 0 0
+3 1234 0 0 0
+#11634
+armadura azul~
+uma armadura azul~
+Uma estranha armadura azul foi perdida aqui.~
+~
+9 a 0 0 0 ad 0 0 0 0 0 0 0
+8 0 0 0
+3 12345 0 0 0
+E
+borda sinal~
+Voc� l�:
+"Armoraria e Arsenal de Twashtri: agora em Bhogavati"
+~
+E
+armadura azul~
+Feita por milhares de pequenos elos, essa armadura apresenta uma bela
+colora��o azul nunca antes vista por voc� em qualquer metal conhecido.
+Um pequeno sinal em uma das bordas da pe�a chama sua aten��o.
+~
+#11635
+faixa branca~
+uma faixa branca~
+Uma faixa impecavelmente branca foi inexplicavelmente perdida aqui.~
+~
+9 a 0 0 0 al 0 0 0 0 0 0 0
+5 0 0 0
+3 1110 0 0 0
+#11636
+chap�u cozinheiro branco~
+um chap�u de cozinheiro~
+Um estranho chap�u branco foi perdido aqui.~
+~
+9 0 0 0 0 ae 0 0 0 0 0 0 0
+5 0 0 0
+3 560 0 0 0
+#11637
+touca branca pano~
+uma touca branca~
+Uma touca de pano branco foi deixada no ch�o.~
+~
+9 0 0 0 0 ae 0 0 0 0 0 0 0
+4 0 0 0
+3 430 0 0 0
+#11638
+avental branco~
+um avental branco~
+Um avental quase novo foi esquecido aqui.~
+~
+9 0 0 0 0 ak 0 0 0 0 0 0 0
+5 0 0 0
+3 450 0 0 0
+#11639
+cutelo enorme~
+um enorme cutelo~
+Um enorme e afiado cutelo foi fincado no ch�o.~
+~
+5 0 0 0 0 ano 0 0 0 0 0 0 0
+0 4 3 3
+4 1090 0 0 0
+#11640
+prateleira madeira~
+uma prateleira de madeira~
+H� uma grande prateleira de madeira presa a uma das paredes.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+100 0 0 0
+80 100000 0 0 0
+E
+prateleira madeira~
+Esse tipo de prateleira parece servir para guardar ingredientes a serem
+usados.  Bastante pr�tico.
+~
+#11641
+caril frasco amarelo meetha neem tempero~
+um frasco de caril em p�~
+Um pequeno frasco amarelo foi deixado aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+12 0 0 0
+2 1000 0 0 0
+E
+caril frasco amarelo meetha neem~
+Voc� l� no r�tulo:
+
+              *MEETHA NEEM EM P�*
+~
+#11642
+vidro gengibre ra�zes adrak tempero~
+um vidro contendo gengibre~
+Um pequeno vidro contendo ra�zes foi deixado aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+12 0 0 0
+2 1000 0 0 0
+E
+vidro gengibre ra�zes~
+Voc� l� no r�tulo:
+
+             *PEDA�OS DE ADRAK*
+~
+#11643
+frasco avermelhado jaifal tempero noz-moscada noz moscada~
+um frasco de noz-moscada em p�~
+Um pequeno frasco avermelhado foi deixado aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+12 0 0 0
+2 1000 0 0 0
+E
+frasco avermelhado noz-moscada noz moscada~
+Voc� l� no r�tulo:
+
+             *JAIFAL EM P�*
+~
+#11644
+frasco marrom dalchini canela tempero~
+um frasco de canela~
+Um frasco marrom foi deixado aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+12 0 0 0
+2 1000 0 0 0
+E
+frasco marrom canela~
+Voc� l� no r�tulo:
+
+             *DALCHINI EM P�*
+~
+#11645
+vidro frasco alho seco lahsun tempero~
+um frasco com alho seco~
+Um pequeno vidro fechado foi deixado aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+12 0 0 0
+2 1000 0 0 0
+E
+vidro frasco alho seco~
+Voc� l� no r�tulo:
+
+             *LAHSUN SECO*
+~
+#11646
+frasco coentro ocre dhaniya tempero~
+um frasco de coentro em p�~
+Um pequeno frasco ocre foi deixado aqui~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+12 0 0 0
+2 1000 0 0 0
+E
+frasco coentro ocre~
+Voc� l� no r�tulo:
+
+             *DHANIYA EM P�*
+~
+#11647
+fraso escuro cravo loung tempero~
+um frasco de cravo em p�~
+Um pequeno frasco escuro foi deixado aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+12 0 0 0
+2 1000 0 0 0
+E
+frasco cravo escuro~
+Voc� l� no r�tulo:
+
+             *LOUNG EM P�*
+~
+#11648
+frasco gergelim sementes til tempero~
+um frasco de sementes de gergelim~
+Um frasco contendo pequenas sementes foi deixado aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+12 0 0 0
+2 1000 0 0 0
+E
+frasco gergelim sementes~
+Voc� l� no r�tulo:
+
+             *SEMENTES DE TIL*
+~
+#11649
+frasco folhas louro tej pan tempero~
+um frasco de folhas de louro~
+Um frasco contendo pequenas folhas foi esquecido aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+12 0 0 0
+2 1000 0 0 0
+E
+frasco folhas louro~
+Voc� l� no r�tulo:
+
+             *TEJ PAN*
+~
+#11650
+frasco sal negro sendha tempero namak~
+um frasco de sal negro~
+Um pequeno frasco negro foi deixado aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+12 0 0 0
+2 1000 0 0 0
+E
+frasco sal negro~
+Voc� l� no r�tulo:
+
+             *SENDHA NAMAK*
+~
+#11651
+bacia~
+uma bacia~
+Uma grande bacia foi cheia de �gua e aqui deixada.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+100 100 0 0
+105 100 0 0 0
+#11652
+arm�rio comida~
+um arm�rio de comida~
+Um grande arm�rio de comida atrai sua aten��o.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+90 5 0 0
+80 13330 0 0 0
+E
+arm�rio comida~
+Comida... Comida... Comida!
+~
+#11653
+estante~
+uma estante~
+Uma grande estante guarda alimentos da despensa.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+90 0 0 0
+80 9999 0 0 0
+#11654
+ravanastron instrumento corda~
+um ravanastron~
+Um estranho instrumento de corda foi deixado aqui.~
+~
+12 a 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+3 34440 0 0 0
+E
+ravanastron instrumento corda~
+Voc� est� frente a frente a um dos mais antigos instrumentos j�
+inventados...  Ele � composto, basicamente, de um longo cilindro de madeira
+com duas cordas muito bem presas a ele.  Para toc�-lo, use o arco.
+~
+A
+3 1
+A
+4 1
+#11655
+sari lil�s~
+um sari lil�s~
+Um belo sari lil�s foi deixado aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+4 0 0 0
+5 28000 0 0 0
+A
+6 1
+#11656
+tornozeleiras ametista~
+tornozeleiras de ametista~
+Um par de belas tornozeleiras de ametista foram perdidas por aqui.~
+~
+12 a 0 0 0 af 0 0 0 0 0 0 0
+0 0 0 0
+5 18000 0 0 0
+#11657
+choli vermelho vermelha blusa~
+um choli vermelho~
+Uma bonita blusa vermelha foi deixada aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+0 0 0 0
+5 13560 0 0 0
+E
+choli vermelho vermelha blusa~
+Essa delicada blusa, usada apenas por mulheres, � bastante corfot�vel,
+tendo decote arredondado, mangas curtas e deixando parte do ventre exposto.
+Pode tanto ser usada por baixo de um sari como com cal�as.
+~
+A
+6 1
+#11658
+cal�as bufantes vermelhas~
+bufantes cal�as vermelhas~
+Algu�m deixou um par de cal�as vermelhas no ch�o.~
+~
+9 0 0 0 0 af 0 0 0 0 0 0 0
+5 0 0 0
+5 18780 0 0 0
+E
+cal�as bufantes vermelhas~
+O corte indica que essas cal�as s�o femininas, sendo de um tecido de �tima
+qualidade e muito confort�veis.
+~
+#11659
+tatuagem henna l�quido po�a escuro~
+tatuagens de henna~
+H� uma po�a de estranho l�quido escuro no ch�o.~
+~
+11 0 0 0 0 afghi 0 0 0 0 0 0 0
+0 0 0 0
+1 110 0 0 0
+#11660
+choli amarelo amarela blusa~
+um choli amarelo~
+Uma bonita blusa amarela foi deixada aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+0 0 0 0
+5 13560 0 0 0
+E
+choli amarelo amarela blusa~
+Essa delicada blusa, usada apenas por mulheres, � bastante corfot�vel,
+tendo decote arredondado, mangas curtas e deixando parte do ventre exposto.
+Pode tanto ser usada por baixo de um sari como com cal�as.
+~
+A
+6 1
+#11661
+nath brinco cristal~
+um nath de cristal~
+Um pequeno brinco de cristal foi aqui perdido.~
+~
+11 0 0 0 0 as 0 0 0 0 0 0 0
+0 0 0 0
+1 12345 0 0 0
+A
+1 1
+#11662
+shalwar verde elegantes cal�as~
+um shalwar verde~
+Um par de elegantes cal�as verdes foi deixado aqui.~
+~
+9 0 0 0 0 af 0 0 0 0 0 0 0
+5 0 0 0
+5 11780 0 0 0
+E
+shalwar verde elegantes cal�as~
+O elegante shalwar � uma pe�a de roupa muito apreciada pelas
+mulheres. De tecido di�fano, � extremamente confort�vel e bonito.
+~
+#11663
+kamiz vestido verde seda~
+um kamiz verde~
+Alguma dama perdeu um belo vestido de seda por aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+5 0 0 0
+5 19052 0 0 0
+E
+kamiz vestido verde seda~
+Feito para ser usado junto do shalwar, esse vestido � realmente
+muito bonito. A seda foi pintada com motivos florais, sendo predominantemente
+verde.
+~
+#11664
+xale dupatta lev�ssimo verde~
+um dupatta verde~
+Um lev�ssimo xale verde foi perdido aqui.~
+~
+9 0 0 0 0 ack 0 0 0 0 0 0 0
+2 0 0 0
+1 20000 0 0 0
+E
+xale dupatta lev�ssimo verde~
+Esse tipo de xale costuma ser usado sobre o kamiz.
+~
+#11665
+t�nica branca~
+uma t�nica branca~
+Algu�m perdeu sua t�nica por aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+4 0 0 0
+5 21052 0 0 0
+#11666
+t�nica azul~
+uma t�nica azul~
+Aqui foi perdida uma bela t�nica azul.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+4 0 0 0
+5 21052 0 0 0
+#11667
+negra t�nica sherwani negro~
+um sherwani negro~
+Uma elegante t�nica negra foi esquecida aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+4 0 0 0
+5 21052 0 0 0
+E
+negra t�nica sherwani negro~
+De tecido bastante leve e nobre, essa t�nica � tipicamente usada em ocasi�es
+formais.  Os homens elegantes da regi�o costumam usar sempre esse tipo de
+roupa.
+~
+#11668
+t�nica cinzenta~
+uma t�nica cinzenta~
+Uma confort�vel t�nica cinzenta foi perdida aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+4 0 0 0
+5 21052 0 0 0
+E
+t�nica cinzenta~
+O corte dessa t�nica, apesar de simples, � perfeito!
+~
+#11669
+alaranjada t�nica sherwani alaranjado~
+um sherwani alaranjado~
+Uma alegre t�nica alaranjada foi esquecida aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+4 0 0 0
+5 21052 0 0 0
+#11670
+coura�a negra~
+uma coura�a negra~
+Uma estranha coura�a negra chama a sua aten��o.~
+~
+9 ahjlq 0 0 0 ad 0 0 0 0 0 0 0
+7 0 0 0
+8 50000 0 15 0
+E
+coura�a negra~
+Voc� pensou que ela era completamente negra, mas n�o �...
+Na parte correspondente ao abdome h�, em alto relevo, um desenho
+representando um enorme drag�o.
+~
+A
+2 2
+#11671
+espada amaldi�oada negra~
+uma espada amaldi�oada~
+Uma estranha espada negra foi deixada aqui.~
+~
+5 ahjlq 0 0 0 an 0 0 0 0 0 0 0
+0 4 4 3
+7 70000 0 25 0
+E
+espada amaldi�oada negra~
+Voc� consegue ler, com muito custo, as inscri��es na l�mina da espada:
+"A maldi��o de Vritra acompanhar� todo aquele que sangrar por essa l�mina"
+
+Coisa boa n�o �...
+~
+A
+18 1
+A
+3 -1
+#11672
+carta mensagem negra amea�a vritra~
+a amea�a de Vritra~
+Uma estranha carta negra foi jogada aqui.~
+~
+16 q 0 0 0 ao 0 0 0 0 0 0 0
+1 -1 0 0
+1 0 0 0 0
+E
+carta mensagem negra amea�a~
+Voc� l� a mensagem escrita em vermelho-vivo sobre o papel negro:
+"
+Meu velho advers�rio, a Seca voltou. E est� mais poderosa que antes.
+
+Ela o estar� esperando no ponto mais alto dos c�us desse mundo, exatamente
+no dia em que � comemorado o fim de nosso �ltimo duelo.
+
+Nem que voc� use todo o poder dos trov�es conseguir� me deter. Dessa vez
+ser� diferente.
+
+Espero-o."
+
+Isso n�o explica muita coisa...
+~
+#11673
+arco gandiva dourado~
+Gandiva~
+Arjuna perdeu seu magn�fico arco dourado exatamente aqui.~
+~
+5 agmnoqtu 0 0 0 an 0 0 0 0 0 0 0
+0 5 5 12
+10 100000 0 50 0
+E
+arco gandiva dourado~
+Esse magn�fico arco foi dado a Varuna por Soma.  Varuna o deu a Agni, e este
+com ele presenteou Arjuna.  Sendo assim, voc� tem em m�os uma arma digna de
+deuses...
+~
+A
+19 5
+A
+18 5
+#11674
+armadura arjuna~
+a armadura de Arjuna~
+A bela armadura de Arjuna foi aqui perdida.~
+~
+9 agmnoqt 0 0 0 ad 0 0 0 0 0 0 0
+12 0 0 0
+8 1000000 0 70 0
+E
+armadura arjuna~
+Dourada como o rio celestial, essa armadura foi encomendada a Twashtri por
+Vasuki IV, que a deu a seu genro como presente de casamento.
+~
+#11675
+krishna olho estranho objeto luz divina~
+o Olho de Krishna~
+Um estranho objeto emite sua luz divina mesmo estando no ch�o.~
+~
+1 agq 0 0 0 ao 0 0 0 ceglv 0 0 0
+0 0 -1 0
+10 1000000 0 101 0
+E
+Krishna olho estranho objeto luz divina~
+Uma vez, Arjuna pediu a Krishna que revelasse sua verdadeira forma.
+Representava isso o constante (e �s vezes admiravelmente petulante) dizer da
+humanidade � Divindade: "Revele-se a mim".  Krishna respondeu ao aprendiz:
+"com estes teus olhos n�o consegues me ver...".  Deu ele a Arjuna, ent�o, o
+olho da sabedoria, um pesado fardo que deve ser carregado apenas ap�s a
+purifica��o do cora��o e eleva��o da mente.  Arjuna, j� preparado para o
+despertar que o olho acarreta, fechou seus olhos materiais e equipou-se,
+podendo, enfim, ver o que � a Divindade.
+~
+A
+3 2
+A
+4 2
+#11676
+menino est�tua vasuratha~
+a est�tua de Vasuratha~
+A est�tua de um menino ca�ando adorna esses lados do jardim.~
+~
+8 aq 0 0 0 0 0 0 0 ceglv 0 0 0
+0 0 0 0
+80 888888 0 0 0
+E
+menino est�tua vasuratha~
+Vasuratha, um sorrindente Marut, est� correndo atr�s de uma enorme cobra
+armado de arco e estranhas flechas em forma de raios. Voc� pensa ter escutado
+a est�tua rir, mas deve ter sido sua imagina��o...
+~
+#11677
+est�tua dyuti daksa menino menina~
+a est�tua de Dyuti e Daksa~
+Voc� se depara com a est�tua de uma menina e um menino cantando.~
+~
+8 aq 0 0 0 0 0 0 0 ceglv 0 0 0
+0 0 0 0
+80 888888 0 0 0
+E
+est�tua dyuti daksa menino menina~
+Dyuti e Daksa alegremente cantam parte do Bhagavata Gita com suas melodiosas
+vozes de crian�a.  Isso o deixa muito confuso, pois os dois Maruts s�o
+apenas est�tuas.
+~
+#11678
+l�tus azul flor~
+um l�tus azul~
+Uma preciosa flor de l�tus azul flutua no ar � sua frente.~
+~
+12 a 0 0 0 aeo 0 0 0 ceglv 0 0 0
+0 0 0 0
+1 1000 0 0 0
+E
+l�tus azul flor~
+Essa delicada flor foi colhida dos jardins de um pal�cio nos c�us de Patala.
+Dizem que l� � a morada de Indra e de 49 dos in�meros filhos de Diti.
+~
+A
+6 2
+#11679
+est�tua s�bio bhagirathi senhor idoso~
+a est�tua do s�bio Bhagirathi~
+Uma est�tua de um senhor idoso rezando atrai sua aten��o.~
+~
+8 aq 0 0 0 0 0 0 0 ceglv 0 0 0
+0 0 0 0
+80 888888 0 0 0
+E
+est�tua s�bio bhagirathi senhor idoso~
+Bhagirathi est�, em suas preces, pedindo para que Ganga des�a dos c�us e
+traga �gua para a humanidade.  Voc� at� consegue ouv�-lo entoando seus
+c�nticos, mas acredita ser s� sua imagina��o...
+~
+#11680
+est�tua s�bio chyavana jovem~
+a est�tua do s�bio Chyavana~
+Voc� observa a est�tua de um jovem concentrado na leitura de um pergaminho.~
+~
+8 aq 0 0 0 0 0 0 0 ceglv 0 0 0
+0 0 0 0
+80 888888 0 0 0
+E
+est�tua s�bio chyavana jovem~
+Chyavana, como retratado nessa est�tua, aparenta ser muito jovem.  Por�m, �
+muito mais velho do que se pode pensar, mas recuperou sua juventude devido �
+sua ast�cia e � de sua esposa, a fiel Sukanya.  Neste momento, a est�tua
+est� conferindo o �ltimo hino que escreveu e que, entre outros, far� parte
+do Rig Veda.
+~
+#11681
+est�tua valmiki s�bio~
+a est�tua do s�bio Valmiki~
+Voc� se surpreende ao perceber que uma das est�tuas est� contando uma bela hist�ria.~
+~
+8 aq 0 0 0 0 0 0 0 ceglv 0 0 0
+0 0 0 0
+80 888888 0 0 0
+E
+est�tua valmiki s�bio~
+Valmiki come�a a contar o Ramayana, as aventuras de Rama e sua amada, Sita.
+Ele olha para voc�, sorri e pergunta: "Est� gostando da hist�ria?" 
+Voc� fica mudo... 
+~
+#11682
+est�tua radha mulher bela~
+a est�tua de Radha~
+A est�tua de uma bela mulher chora copiosamente, clamando por seu amado.~
+~
+8 aq 0 0 0 0 0 0 0 ceglv 0 0 0
+0 0 0 0
+80 888888 0 0 0
+E
+est�tua radha mulher bela~
+A est�tua da formosa Radha encolhe-se no gramado, solu�ando por sentir falta
+de seu querido Krishna.  Voc� se oferece para enxugar suas l�grimas, mas ela
+diz que o choro lhe far� bem...  Radha, sentindo-se um pouco melhor, come�a
+a contar como era inebriante o som da flauta de seu companheiro, cuja do�ura fazia
+uma floresta inteira parar para escutar.  Voc� pensa que esse seria um belo
+espet�culo a se assistir...
+~
+#11683
+arroz pequeno~
+um pequeno saco de arroz~
+Um pequeno saco de arroz foi deixado aqui.~
+~
+19 0 0 0 0 ao 0 0 0 ceglv 0 0 0
+18 0 0 0
+4 1000 0 0 0
+#11684
+saco batatas pesado~
+um saco de batatas~
+Um pesado saco de batatas foi colocado em um canto da despensa.~
+~
+19 0 0 0 0 a 0 0 0 ceglv 0 0 0
+40 0 0 0
+15 1000 0 0 0
+#11685
+cetro rainha indrani magn�fico~
+o cetro de Indrani~
+Um magn�fico cetro de rainha flutua � sua frente.~
+~
+1 adgijkq 0 0 0 ao 0 0 0 ceglv 0 0 0
+0 0 -1 0
+10 100000 0 70 0
+E
+cetro magn�fico indrani rainha~
+Feito de ouro, esse cetro � extremamente pesado.  A sua extremidade inferior
+� menos larga que a superior, sendo que o corpo lentamente se alarga at�
+culminar em um recept�culo para uma grande esfera de cristal transparente.
+O cristal brilha intensamente, como se existisse uma estrela em seu
+interior.  Voc� sente que manter o brilho desse cristal exige bastante
+poder.
+~
+A
+1 1
+A
+2 2
+A
+18 2
+A
+12 -100
+A
+17 9
+#11686
+sari amarelo~
+um sari amarelo~
+Um belo sari de seda amarela foi deixado aqui.~
+~
+9 0 0 0 0 ad 0 0 0 ceglv 0 0 0
+5 0 0 0
+5 23321 0 0 0
+#11687
+trono rei~
+o trono do rei~
+undefined~
+~
+15 a 0 0 0 0 0 0 0 ceglv 0 0 0
+90 0 0 0
+90 1000000 0 0 0
+$~

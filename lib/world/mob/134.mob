@@ -1,0 +1,558 @@
+#13400
+elfo mago~
+o mago elfo~
+Um mago elfo está flutuando atrás do balcão.
+~
+Você nota que ele parece cansado.
+~
+2156546 0 0 0 16 0 0 0 900 E
+108 -20 -6 1d1+2525 21d1+40
+50000 42840
+8 8 1
+E
+#13401
+dios armeiro~
+Dios, o armeiro~
+Dios o armeiro está aqui.
+~
+Ele é um homem de meia idade, porém forte e robusto.
+~
+2156546 0 0 0 16 0 0 0 900 E
+108 -20 -10 1d1+2000 5d6+10
+50000 700000
+8 8 1
+E
+#13402
+denek ferreiro~
+Denek, o ferreiro~
+Denek está aqui, mostrando suas obras.
+~
+Denek é um bravo guerreiro elfo, que parece ter passado por diversas
+batalhas.
+~
+2156546 0 0 0 16 0 0 0 900 E
+108 -20 -6 1d1+2525 21d1+40
+50000 42840
+8 8 1
+E
+#13403
+recepcionista~
+a recepcionista~
+A recepcionista está sentada em sua mesa, sorrindo para você.
+~
+Ela é muito bonita, para um elfo.
+~
+2156546 0 0 0 16 0 0 0 900 E
+108 -20 -6 1d1+2525 21d1+40
+50000 42840
+8 8 2
+E
+#13404
+mestre-guia mestre guia feiticeiros mago~
+o Mestre-Guia dos Feiticeiros~
+Um Mago Elfo está aqui, lendo um grande livro.
+~
+Em seus olhos você pode ver claramente a quantidade de conhecimento que ele
+possui.  Ele veste finos mantos que parecem mágicos, e você nota que há uma
+aura azulada ao redor de seu corpo.
+~
+2156562 0 0 0 272 0 0 0 1000 E
+108 -30 -10 1d1+8000 32d1+50
+2500 79158
+8 8 1
+E
+#13405
+mestre-guia mestre guia sacerdotes clérigos~
+o Mestre-Guia dos Clérigos~
+O Mestre-Guia dos Clérigos está aqui, profundamente concentrado em suas preces.
+~
+Você não tem duvidas de que ele está bem próximo ao seu Deus; Ele parece
+pacifico e simpático.  Você nota uma leve aura branca ao redor de seu corpo.
+~
+2156562 0 0 0 272 0 0 0 1000 E
+108 -30 -10 1d1+8000 32d1+50
+2500 79158
+8 8 1
+E
+#13406
+mestre-guia mestre guia ladinos mendiga~
+a Mestra-Guia dos Ladinos~
+Uma mendiga está sentada aqui, em um completo silêncio.
+~
+Você percebe que qualquer movimento que ela faça, você é incapaz de
+acompanhar.  Ela veste alguns trapos gastos, parecendo ser uma mendiga.
+~
+2156562 0 0 0 272 0 0 0 1000 E
+108 -30 -10 1d1+8000 32d1+50
+2500 79158
+8 8 2
+E
+#13407
+mestre-guia mestre guia guerreiros~
+o Mestre-Guia dos Guerreiros~
+O Mestre-Guia dos Guerreiros está aqui, afiando um gigantesco machado.
+~
+Esse sem duvidas é o seu Mestre-Guia.  Grande e forte, com músculos nos
+próprios músculos.  As diversas cicatrizes espalhadas pelo seu corpo provam
+que ele já usava armas antes de você nascer.  Ele possui um semblante calmo.
+~
+2156562 0 0 0 272 0 0 0 1000 E
+108 -30 -10 1d1+8000 32d1+50
+2500 79158
+8 8 1
+E
+#13408
+Leeve barman~
+Leeve, o Barman~
+Leeve está aqui, lavando alguns copos.
+~
+An undefined string.
+~
+2121730 0 0 0 0 0 0 0 900 E
+40 -20 -6 1d1+2525 21d1+40
+12000 42840
+8 8 1
+E
+#13409
+zelador~
+o zelador~
+O zelador está aqui.
+~
+An undefined string.
+~
+2099264 0 0 0 0 0 0 0 800 E
+10 10 6 1d1+200 5d1+10
+125 1785
+8 8 1
+E
+#13410
+pacificador elfo~
+o Pacificador~
+Um Pacificador está parado aqui, feito uma estátua.
+~
+Ele aparenta ser um elfo forte e bravo...  e parece não falar com NINGUÉM.
+~
+2103376 0 0 0 8 0 0 0 1000 E
+30 -10 -2 1d1+2250 13d1+30
+625 153337
+8 8 1
+E
+#13411
+pardal~
+um pardal~
+Um pardal voa por aqui, procurando comida.
+~
+An undefined string.
+~
+2097152 0 0 0 0 0 0 0 200 E
+1 17 8 1d1+30 2d1+3
+0 75
+8 8 0
+E
+#13412
+esquilo~
+um esquilo~
+Um pequeno esquilo avermelhado corre por entre as árvores.
+~
+Ele é totalmente elétrico, esse pequeno roedor parece nunca parar de correr.
+~
+2097216 0 0 0 524288 0 0 0 170 E
+1 19 9 1d1+15 1d1+1
+0 75
+8 8 0
+E
+#13413
+Quele lojista~
+Quele, o lojista~
+Quele está atrás do balcão, aguardando que você compre algo.
+~
+An undefined string.
+~
+2121730 0 0 0 0 0 0 0 900 E
+108 -20 -6 1d1+2525 21d1+40
+15000 42840
+8 8 1
+E
+#13414
+cidadão thewester~
+um cidadão de Thewster~
+Um cidadão de Thewster, está vagando por aqui.
+~
+É um típico Elfo.
+~
+2099264 0 0 0 0 0 0 0 800 E
+20 -4 0 1d1+1800 10d1+24
+475 116842
+8 8 1
+E
+#13415
+garçom~
+o garçom~
+Um garçom está aqui, pronto para pegar o seu pedido.
+~
+An undefined string.
+~
+2123778 0 0 0 8 0 0 0 1000 E
+108 -20 -6 1d1+2525 21d1+40
+875 42840
+8 8 1
+E
+#13416
+cavalo~
+um cavalo~
+Um cavalo está aqui.
+~
+Um alto e forte cavalo marrom.
+~
+2361472 0 0 0 2048 0 0 0 370 E
+10 10 6 1d1+200 5d1+10
+0 1785
+8 8 1
+E
+#13417
+velho cavalo~
+um velho cavalo~
+Um velho cavalo está aqui, tomando um pouco de água.
+~
+An undefined string.
+~
+2361472 0 0 0 2048 0 0 0 370 E
+15 5 4 1d1+500 6d1+15
+0 5454
+8 8 1
+E
+#13418
+burro~
+um burro~
+Um burro está aqui, ruminando um pouco de grama.
+~
+An undefined string.
+~
+2361472 0 0 0 2048 0 0 0 370 E
+16 4 3 1d1+600 6d1+16
+0 7304
+8 8 1
+E
+#13419
+mestre-guia mestre guia paladinos~
+o Mestre-Guia dos Paladinos~
+O Mestre-Guia dos Paladinos está aqui, ensinando um novato a se defender.
+~
+Ele é um guerreiro fortemente treinado, pertencente à ordem militar da Fé.
+Seu dever é proteger a Fidelidade da perseguição e dos ataques traiçoeiros.
+Sua devoção à suas crenças combinadas aos seus conhecimentos o fazem um
+oponente mortífero.
+~
+2156562 0 0 0 272 0 0 0 1000 E
+108 -30 -10 1d1+8000 32d1+50
+2500 79158
+8 8 1
+E
+#13420
+sentinela~
+um sentinela~
+Um sentinela está aqui.
+~
+Ele parece ser um bravo guerreiro que tem como dever proteger as Guildas.
+~
+2156546 0 0 0 272 0 0 0 800 E
+50 -13 -3 1d1+2350 15d1+33
+700 90000
+8 8 1
+E
+#13421
+monge mestre-guia mestre guia~
+o Mestre-Guia dos Monges~
+O Mestre-Guia dos Monges está aqui, brincando com uma pequena nuvem.
+~
+Ele é pequeno e parece fraco, mas não deixe as aparências lhe enganarem.
+~
+2156562 0 0 0 272 0 0 0 1000 E
+108 -30 -10 1d1+8000 32d1+50
+2500 79158
+8 8 1
+E
+#13422
+mestre-guia mestre guia sentinelas~
+o Mestre-Guia dos Sentinelas~
+O Mestre-Guia dos Sentinelas está aqui, ajudando um novato.
+~
+Um alto e magro homem.
+~
+2156562 0 0 0 272 0 0 0 1000 E
+108 -30 -10 1d1+8000 32d1+50
+2500 79158
+8 8 1
+E
+#13423
+elfo criança~
+uma criança elfo~
+Uma criança elfo está aqui, brincando.
+~
+An undefined string.
+~
+2097152 0 0 0 0 0 0 0 0 E
+10 10 6 1d1+200 5d1+10
+125 1785
+8 8 1
+E
+#13424
+quétos capitão guarda~
+Quétos, o Capitão da Guarda~
+Quétos, o Capitão da Guarda está em sua mesa.
+~
+An undefined string.
+~
+2123778 0 0 0 16 0 0 0 900 E
+40 -10 -2 1d1+2250 13d1+30
+625 223337
+8 8 1
+E
+#13425
+sion~
+Sion~
+Sion está aqui, esperando por suas ordens.
+~
+Ele parece ser algo como uma fada, ele parece ser sábio.
+~
+2123778 0 0 0 16777232 0 0 0 900 E
+40 -20 -6 1d1+2525 21d1+40
+875 242840
+8 8 1
+E
+#13426
+velho elfo~
+um velho elfo~
+Um velho elfo está sentado atrás do balcão.
+~
+An undefined string.
+~
+2648066 0 0 0 16 0 0 0 800 E
+40 -20 -6 1d1+2525 21d1+40
+875 242840
+8 8 1
+E
+#13427
+velho elfo~
+um velho elfo~
+Um velho elfo está sentado em sua cadeira de balanço.
+~
+Sua idade não revela a força que esconde este belo ser.
+~
+2648066 0 0 0 16 0 0 0 800 E
+40 -20 -6 1d1+2525 21d1+40
+875 242840
+8 8 1
+E
+#13428
+elfo guarda~
+um guarda elfo~
+Um guarda elfo está aqui, procurando por problemas.
+~
+Ninguem gostaria de arrumar confusão com ele por perto.
+~
+2097152 0 0 0 0 0 0 0 500 E
+40 -5 0 1d1+2000 11d1+25
+500 118700
+8 8 1
+E
+#13429
+elfo guarda~
+um guarda elfo~
+Um guarda elfo está aqui, fazendo sua ronda normal.
+~
+Ninguém gostaria de arrumar confusão com ele por perto.
+~
+2099458 0 0 0 0 0 0 0 500 E
+40 -5 0 1d1+2000 11d1+25
+500 118700
+8 8 1
+E
+#13430
+pardal~
+um pequeno pardal~
+Um pequeno pardal passa voando por você.
+~
+Você pouco pode ver olhando para esta criatura.
+~
+2099536 0 0 0 1080 0 0 0 1000 E
+1 14 7 1d1+100 3d1+6
+0 75
+8 8 1
+E
+#13431
+fada~
+uma fada~
+Uma bela fada voa pacificamente por aqui.
+~
+Esta bela fada flutua levemente sorrindo para quem olha para ela.
+~
+2099264 0 0 0 0 0 0 0 800 E
+15 5 4 1d1+500 6d1+15
+250 5454
+8 8 1
+E
+#13432
+elfo~
+um elfo~
+Um elfo anda calmamente por aqui.
+~
+A beleza deste elfo impressiona mesmo seus olhos acostumados a ver
+maravilhas espalhadas por Vitália.
+~
+2099264 0 0 0 0 0 0 0 800 E
+15 5 4 1d1+500 6d1+15
+250 5454
+8 8 1
+E
+#13433
+aranha negra pequena~
+uma pequena aranha negra~
+Uma pequena aranha negra se arrasta próxima aos seus pés.
+~
+Uma pequena aranha com grande colmilhos e seis olhos vermelhos.
+~
+2097216 0 0 0 2048 0 0 0 -400 E
+45 2 -6 1d1+800 7d1+18
+0 50769
+8 8 2
+E
+#13434
+minhoca viscosa~
+uma viscosa minhoca~
+Uma viscosa minhoca se arrasta pelo chão.
+~
+Ecow! Que bicho nojento!
+~
+2097216 0 0 0 2048 0 0 0 -400 E
+48 -5 -5 1d1+900 8d3+19
+0 62571
+8 8 2
+E
+#13435
+rato~
+um rato~
+Um pequeno rato procura um lugar para se esconder.
+~
+Essa criatura asquerosa embrenha-se pelos cantos procurando esconder-se.  Ao
+perceber que é inútil sua tentativa ele olha fixamente para você.
+~
+2097216 0 0 0 2048 0 0 0 -500 E
+49 -4 -6 1d1+1000 8d3+20
+0 63056
+8 8 1
+E
+#13436
+morcego~
+um morcego~
+Um pequeno morcego está dependurado de cabeça para baixo aqui.
+~
+Você vê um pequeno morcego alimentando-se de frutas..  Ou seria ele
+hematófago?  
+~
+2097216 0 0 0 2048 0 0 0 -500 E
+50 -1 -7 1d1+1200 9d4+21
+0 74625
+8 8 1
+E
+#13437
+cobra verde~
+uma cobra~
+Uma grande cobra verde está embolada no chão.
+~
+Sem tirar os olhos de você essa cobra parece não mover um músculo.
+~
+2154562 0 0 0 2048 0 0 0 -500 E
+52 -2 -8 1d1+1400 9d3+22
+0 80823
+8 8 2
+E
+#13438
+dragão bebê~
+um bebê dragão~
+Um bebê dragão está aqui.
+~
+Ohh..  ele é lindo!
+~
+2097216 0 0 0 2048 0 0 0 -500 E
+43 -3 -10 1d1+1600 5d6+23
+0 80666
+8 8 1
+E
+#13439
+rato homem homem-rato~
+um homem-rato~
+Um assustador homem-rato anda por aqui.
+~
+Ele possui o corpo de um homem, mas com a cabeça de um rato.
+~
+2097312 0 0 0 2048 0 0 0 -250 E
+44 -4 -12 1d1+1800 6d5+24
+475 84178
+8 8 1
+E
+#13440
+fedorento homem-rato homem rato~
+um fedorento homem-rato~
+Um fedorento homem-rato rasteja pelo chão, à procura de comida.
+~
+Ele possui o corpo de um homem, mas com a cabeça de um rato.
+~
+2097220 0 0 0 2048 0 0 0 -250 E
+55 -5 -13 1d1+2000 6d6+25
+500 89074
+8 8 1
+E
+#13441
+cobra verde~
+uma cobra~
+Uma grande cobra verde está embolada no chão.
+~
+Essa enorme cobra olha com indiferença para você e concentra-se em algo que
+você não pode definir.
+~
+2121728 0 0 0 2048 0 0 0 -500 E
+60 -6 -12 4d5+800 7d4+18
+0 90769
+8 8 2
+E
+#13442
+homem-rato guarda rato homem~
+um homem-rato guarda~
+um homem-rato guarda está aqui.
+~
+Sua aparencia é horrivel!  Corpo de homem ..  Cabeça de rato ...  O que esse
+guarda estaria protegendo?
+~
+2158758 0 0 0 0 0 0 0 -250 E
+80 -9 -9 1d1+2050 6d8+26
+525 139234
+8 8 1
+E
+#13443
+homem-rato rei homem rato~
+o homem-rato Rei~
+O Homem-rato rei está aqui, dirigindo suas suspeitas.
+~
+Você olha para essa criatura horrível!  É um enorme homem rato com
+aparencia serena e mesmo sábia..  
+~
+2156546 0 0 0 0 0 0 0 -400 E
+100 -13 -14 4d4+2050 8d5+36
+15250 188857
+4 8 1
+E
+#13444
+homem-rato guarda rato homem~
+um homem-rato guarda~
+um homem-rato guarda está aqui.
+~
+Sua aparência é horrivel!  Corpo de homem ..  Cabeça de rato ...  O que esse
+guarda estaria protegendo?
+~
+2156710 0 0 0 0 0 0 0 -250 E
+90 -10 -13 1d1+2050 7d6+31
+10025 169234
+8 8 1
+E
+$

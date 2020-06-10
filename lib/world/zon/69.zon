@@ -1,0 +1,95 @@
+#69
+Vitalia~
+Os Templos de Anura~
+6900 6999 55 2 abd 0 0 0 -1 -1
+-1
+D 0 6971 5 2
+*
+D 0 6972 5 2
+*
+D 0 6973 5 2
+*
+D 0 6974 5 2
+*
+D 0 6975 5 2
+*
+D 0 6977 0 2
+*
+D 0 6910 5 2
+*
+D 0 6921 5 2
+*
+D 0 6957 5 2
+*
+D 0 6964 5 2
+*
+D 0 6976 5 1
+*
+D 0 6987 5 1
+*
+M 0 6900 1 6987                     Anura
+E 1 6906 15 16                             empunhar machado
+E 1 6900 15 3                              usar amuleto
+*
+M 0 6901 4 6906                     guarda
+*
+M 0 6901 4 6920                     guarda
+*
+M 0 6901 4 6950                     guarda
+*
+M 0 6901 4 6967                     guarda
+*
+M 0 6902 5 6900                     perereca
+*
+M 0 6902 5 6916                     perereca
+*
+M 0 6902 5 6919                     perereca
+*
+M 0 6902 5 6921                     perereca
+*
+M 0 6903 3 6909                     girino
+G 1 6909 40                                cauda
+*
+M 0 6903 3 6935                     girino
+G 1 6909 40                                cauda
+*
+M 0 6904 1 6979                     guarda
+E 1 6908 1 16                              espada
+E 1 6907 1 4                               colar de espinhos de sapo
+*
+M 0 6905 1 6948                     guarda
+*
+M 0 6906 3 6973                     guarda-sapo
+E 1 6908 1 16                              espada
+*
+M 0 6906 3 6975                     guarda-sapo
+E 1 6908 1 16                              espada
+*
+M 0 6906 3 6987                     guarda-sapo
+E 1 6908 1 16                              espada
+*
+M 0 6907 1 6982                     Heqit
+E 1 6910 1 12                              manto
+*
+O 0 6911 1 6917                            chave
+*
+O 0 6912 1 6934                            chave
+*
+O 0 6913 1 6945                            chave
+*
+O 0 6914 1 6970                            chave
+*
+O 0 6915 1 6982                            chave
+*
+O 0 6916 1 6911                            tabuleta
+*
+O 0 6917 1 6929                            tabuleta
+*
+O 0 6918 1 6948                            tabuleta
+*
+O 0 6919 1 6962                            tabuleta
+*
+O 0 6920 1 6976                            tesouro
+*
+S
+$

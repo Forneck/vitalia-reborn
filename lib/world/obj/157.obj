@@ -1,0 +1,268 @@
+#15701
+chafariz fonte~
+um chafariz~
+Um chafariz, jorrando uma �gua cristalina, se encontra a sua frente.~
+~
+23 0 0 0 0 0 0 0 0 0 0 0 0
+999999 999999 0 0
+0 0 0 0 0
+E
+chafariz fonte~
+� lindo, talvez o chafariz mais belo que voc� j� viu...
+~
+#15702
+bast�o amarelo~
+um bast�o amarelo~
+Um bast�o amarelo foi perdido aqui.~
+~
+18 cdeq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+3 120 12 50 0
+E
+bast�o amarelo~
+� um bast�o um tanto estranho...
+~
+#15703
+molho chaves~
+um molho de chaves~
+Algumas chaves foram esquecidas aqui.~
+~
+18 bcdeq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+5 120 12 50 0
+E
+molho chaves~
+� um molho de chaves bem antigo. Onde estar�o as fechaduras?
+~
+#15704
+unha ro�da~
+uma peda�o de unha ro�da~
+H� um peda�o de uma unha ro�da aqui.~
+~
+9 aegjop 0 0 0 ab 0 0 0 0 0 0 0
+6 0 0 0
+12 15000 1500 50 0
+E
+unha ro�da~
+� nojenta, e a criatura a qual pertencia parecia gostar de coisas...vermelhas.
+~
+A
+1 2
+A
+5 1
+A
+13 10
+A
+6 -3
+#15705
+chave prateada~
+a chave prateada em chamas~
+Um objeto met�lico est� jogado ao ch�o, pegando fogo.~
+~
+18 abcdeiq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 120 12 50 0
+E
+chave prateada~
+Seria uma chave comum, n�o fosse as chamas que a envolvem e queimam seus dedos. 
+~
+#15706
+colar~
+um colar em chamas~
+Um colar em chamas foi esquecido aqui.~
+~
+9 abejn 0 0 0 ac 0 0 0 0 0 0 0
+5 0 0 0
+13 100000 10000 70 0
+E
+colar~
+� estranho, por�m muito bonito colar avermelhado, como se estivesse em brasas.
+Ele parece ser bastante antigo.
+~
+A
+2 1
+A
+12 15
+A
+18 1
+#15707
+cetro azul~
+um cetro azul~
+Um cetro azul foi deixado aqui.~
+~
+18 abcdq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+15 120 12 50 0
+E
+cetro azul~
+� um cetro azul e pertenceu, provavelmente, a algu�m importante.
+~
+#15708
+cetro vermelho~
+um cetro vermelho~
+Um cetro vermelho foi deixado aqui.~
+~
+18 abcdq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+15 120 12 50 0
+E
+cetro azul~
+� um cetro vermelho e pertenceu, provavelmente, a algu�m importante.
+~
+#15709
+manto azulado~
+um manto azulado~
+Algu�m esqueceu seu manto aqui.~
+~
+11 abop 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+8 9000 900 55 0
+E
+manto azulado~
+� um bel�ssimo manto, ricamente bordado com fios de ouro e enfeitado com pedras
+que devem ser extremamente preciosas. Digno de um rei.
+~
+A
+12 20
+A
+17 -5
+A
+19 1
+#15710
+manto avermelhado~
+um manto avermelhado~
+Um manto avermelhado foi perdido aqui.~
+~
+11 abmnt 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+8 9000 900 55 0
+E
+manto avermelhado~
+� um bel�ssimo manto, ricamente bordado com fios de ouro e enfeitado com pedras
+que devem ser extremamente preciosas. Digno de uma rainha.
+~
+A
+13 10
+A
+17 -8
+A
+18 1
+#15711
+caixa~
+uma caixa de j�ias~
+Uma caixinha fechada est� aqui.~
+~
+15 b 0 0 0 o 0 0 0 0 0 0 0
+100 15 15708 0
+7 900 90 0 0
+E
+caixa~
+Parece uma caixa de j�ias.
+~
+#15712
+anel brilhantes~
+um anel de brilhantes~
+Um valioso anel est� ca�do ao ch�o.~
+~
+9 am 0 0 0 ab 0 0 0 0 0 0 0
+4 0 0 0
+2 18900 1890 0 0
+E
+anel brilhantes~
+� um valioso anel.
+~
+A
+6 2
+#15713
+colar brilhantes~
+um colar de brilhantes~
+Um lindo colar est� aqui.~
+~
+9 amnopu 0 0 0 ac 0 0 0 0 0 0 0
+2 0 0 0
+7 18900 0 10 0
+E
+colar brilhantes~
+� um precioso colar, e deve pertencer a uma preciosa pessoa.
+~
+A
+6 2
+#15714
+brinco brilhantes~
+um brinco de brilhantes~
+Uma pedra se encontra no ch�o, reluzindo.~
+~
+9 agklmoptu 0 0 0 aq 0 0 0 0 0 0 0
+1 0 0 0
+3 30900 3 60 0
+E
+brinco brilhantes~
+Pequeno em tamanho, grande em valor.
+~
+A
+6 2
+#15715
+chave~
+a chave secreta~
+Aquilo que parece ser uma chave foi esquecida aqui.~
+~
+18 cdeq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+3 120 12 0 0
+E
+chave~
+Um objeto diferente e, olhando com aten��o, lembra uma chave.
+~
+#15716
+pergaminho~
+um velho pergaminho~
+Um velho pergaminho foi deixado aqui.~
+~
+15 bcfq 0 0 0 ao 0 0 0 0 0 0 0
+3 1 -1 0
+5 200 20 50 0
+E
+pergaminho~
+Um pergaminho diferente, eu diria.
+~
+#15717
+livro~
+um livro antigo~
+Um livro se encontra aqui, produzindo uma fraca luz.~
+~
+8 ab 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+25 15000 1500 0 0
+E
+livro antigo~
+   &WConta a lenda que, certo dia, os Deuses tentaram criar uma ave bondosa
+capaz de espalhar, com suas intensas chamas, luz para aqueles presos na
+escurid�o.
+ 
+   Contudo, no momento da cria��o, a Escurid�o se mostrou vis�vel e, para
+evitar que aquela ave atrapalhasse seus planos de dominar toda Vit�lia, ela
+a amaldi�oou:
+
+   &C"Nascer e crescer, e o mal espalhar.  Esse � o destino que eu lhe concedo,
+Flyre, assim que voc� acordar."&n
+
+   &WA Escurid�o foi embora e Flyre brotou de uma pequena chama.  Imposs�vel
+de ser destru�da, os Deuses resolveram prend�-la em um lugar secreto de onde
+ela jamais escaparia.  O lugar escolhido foi o castelo de um rei, num lugar
+distante.
+
+   Para evitar poss�veis acidentes todo o castelo caiu sobre uma magia, que
+n�o matava nenhum ser, mas os deixava presos em seus pr�prios corpos.
+ 
+   O tempo foi passando e Vit�lia foi evoluindo.  Com isso, os habitantes
+desse mundo foram ficando cada vez mais corajosos e, aos poucos, foram
+tentando descobrir o que de t�o especial ronda esse Castelo.
+
+   Nenhum, at� hoje, saiu vivo.  Em uns o medo � maior e eles saem daqui o
+mais r�pido poss�vel; outros, por�m, que chegam a encontrar a Grande Ave,
+perecem na �rdua luta.
+
+   A cada novo dia uma p�gina do livro � escrita, e vem sendo assim h� mais
+de 500 anos.&n
+~
+$~

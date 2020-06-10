@@ -1,0 +1,480 @@
+#14400
+criatura tumular~
+uma criatura tumular~
+Uma terrível criatura tumular está aqui, olhando friamente para você.
+~
+Você observa uma horripilante criatura tumular, que lança um olhar frio e
+assustador sobre você.  Sua pele pálida e em decomposição torna ainda mais
+terrível a sua aparência.
+~
+2353682 0 0 0 0 0 0 0 -700 E
+45 -10 -7 5d10+1800 3d5+25
+10000 90000
+8 8 2
+Str: 15
+Dex: 18
+Int: 15
+Wis: 12
+Con: 8
+Cha: 3
+E
+#14401
+braço rastejante~
+um braço rastejante~
+Um braço em decomposição foi deixado aqui, exalando um odor terrível.
+~
+Você observa sobre o chão um braço humano em decomposição.  Algumas
+cicatrizes feitas por alguma lâmina ou por garras, marcam a sua pele
+totalmente retalhada.
+~
+2343426 0 0 0 0 0 0 0 -500 E
+20 -5 -2 5d10+850 4d4+15
+0 40000
+8 8 1
+BareHandAttack: 13
+Con: 8
+Cha: 3
+E
+#14402
+pônei bolo fofo~
+Bolo-fofo~
+Um pônei gorducho pasta tranqüilamente aqui.
+~
+Você observa um velho e gordo pônei de pêlo brilhante e bastante macio.  O
+simpático Bolo-fofo pertence ao senhor Tom Bombadillo.
+~
+2375872 0 0 0 0 0 0 0 400 E
+25 -5 0 5d3+450 5d6+15
+0 30000
+8 8 1
+E
+#14403
+porteiro larry~
+Larry, o porteiro de Bri~
+Um velho porteiro está aqui, vigiando o portão oeste de Bri.
+~
+Você observa um velho homem narigudo e de sombracelhas grossas, seu rosto
+bastante marcado pelo tempo mostra os sinais da sua longa vida.  De repente,
+o velho Larry caminha na sua direção e lhe pergunta de forma grosseira:
+            &B"O que você quer, e de onde veio?"&n
+~
+2156546 0 0 0 0 0 0 0 600 E
+45 -10 -6 5d10+1200 6d4+25
+8000 80000
+8 8 1
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 15
+Cha: 18
+E
+#14404
+cevado carrapicho~
+Cevado Carrapicho~
+Cevado Carrapicho, o dono da Pônei Saltitante está aqui, correndo sem parar.
+~
+Você observa um homem gordo e baixo, careca e de rosto vermelho, porém muito
+simpático.  O agitado Cevado Carrapicho é o dono da movimentada estalagem:
+O Pônei Saltitante.  Vestido com um avental branco, o velho Cevado corre de
+um lado para o outro tentando atender todos os seus clientes.
+~
+2156546 0 0 0 0 0 0 0 800 E
+45 -12 -6 5d10+1300 8d3+25
+15000 90000
+8 8 1
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+E
+#14405
+nob hobbit empregado~
+Nob, o empregado hobbit~
+Nob, o empregado hobbit da estalagem está aqui, sorrindo para você.
+~
+Você observa um pequenino hobbit de aparência alegre e pés bem peludos.  Nob
+é um dos empregados da estalagem:  O Pônei Saltitante.
+~
+2154502 0 0 0 0 0 0 0 700 E
+40 -5 -3 5d10+950 6d4+20
+5000 70000
+8 8 1
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 12
+E
+#14406
+gato negro~
+um gato negro~
+Um engraçado gato negro está aqui, olhando para os pratos sobre as mesas.
+~
+Você observa um engraçado gato de pêlo suave e negro.  Este belo gato
+pertence ao hobbit Bob, que trabalha cuidando dos animais do estábulo da
+estalagem do senhor Cevado Carrapicho.
+~
+2113666 0 0 0 0 0 0 0 400 E
+6 10 0 5d8+200 5d5+8
+0 9000
+8 8 1
+BareHandAttack: 8
+Dex: 18
+Int: 15
+Con: 18
+Cha: 18
+E
+#14407
+bob hobbit empregado~
+Bob, o empregado hobbit~
+Bob, o empregado hobbit da estalagem está aqui, cuidando dos animais.
+~
+Você observa um pequenino hobbit gorducho e de pés bastante peludos.  Bob
+trabalha no estábulo da estalagem do senhor Cevado Carrapicho e possui um
+engraçado gato negro, que vez por outra faz malabarismos para alegrar os
+fregueses da Pônei Saltitante.
+~
+2154502 0 0 0 0 0 0 0 700 E
+40 -5 -4 5d10+980 6d4+22
+5000 70000
+8 8 1
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 12
+E
+#14408
+homem bri~
+um homem de Bri~
+Um homem de Bri está aqui, olhando para você curiosamente.
+~
+Você observa um homem bastante forte, troncudo, baixo e de cabelos
+castanhos.  Ele lhe observa com um olhar amigável e faz um sinal de boas
+vindas para você.  Os homens de Bri não pertencem a ninguém além de si
+próprios, segundo suas próprias histórias, foram os habitantes originais e
+eram descendentes dos primeiros homens que ocuparam o Oeste do mundo-médio.
+~
+2160646 0 0 0 0 0 0 0 750 E
+45 -12 -5 5d10+1350 9d3+25
+9500 70000
+8 8 1
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#14409
+mulher bri~
+uma mulher de Bri~
+Uma bela mulher de Bri está aqui, cuidando da sua casa.
+~
+Você observa uma linda mulher de Bri de cabelos castanhos claros e de olhar
+bastante expressivo.
+~
+2160646 0 0 0 0 0 0 0 750 E
+45 -10 -4 5d10+1000 9d3+18
+5000 60000
+8 8 2
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#14410
+anão viajante~
+um anão viajante~
+Um anão viajante está aqui, procurando um local para se abrigar.
+~
+Você observa um troncudo anão de barba e cabelos longos.  Sua aparência não
+é das melhores e seu rosto expressa um sentimento de cansaço.
+~
+2287618 0 0 0 0 0 0 0 500 E
+45 -15 -6 5d10+1250 9d3+25
+1500 80000
+8 8 1
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#14411
+guardião~
+um guardião~
+Um misterioso guardião está aqui, sentado num dos cantos da estalagem.
+~
+Você observa um homem bastante alto e de pele mais escura que os homens de
+Bri.  Nos dias de hoje, poucos homens como este são visto.  Eles são
+chamados de guardiões e vagam à vontade para o lado do sul e para o leste,
+chegando até as Montanhas Sombrias.  O povo de Bri não costumava fazer
+amizade com eles.
+~
+2287618 0 0 0 0 0 0 0 700 E
+50 -15 -7 5d10+1400 9d3+28
+1000 90000
+6 6 1
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#14412
+bill samambaia~
+Bill Samambaia~
+Bill Samambaia está aqui, olhando para você com um sorriso sarcástico.
+~
+Você observa o aproveitador Bill Samambaia.  De pele morena, magro e com um
+olhar repugnante, Bill Samambaia possui o nome sujo em toda a aldeia de Bri.
+Ele adora fazer maldades para se divertir e costuma receber visitas de
+estranhas pessoas do sul.
+~
+2123844 0 0 0 0 0 0 0 -360 E
+45 -10 -4 5d10+1100 4d4+20
+10000 80000
+8 8 1
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+E
+#14413
+hobbit bri~
+um hobbit de Bri~
+Um pequenino hobbit de Bri está aqui, cuidando dos seus afazeres.
+~
+Você observa um pequenino e simpático hobbit nativo de Bri.  Os pequeninos
+de Bri juram que o assentamento hobbit da aldeia de Bri é o mais antigo do
+mundo, fundado antes mesmo que o rio Brandevin fosse atravessado e o Condado
+colonizado.  Gentis e amigáveis, os alegres hobbits de Bri, certamente não
+são como os seus parentes do Condado imaginam.
+~
+2126036 0 0 0 0 0 0 0 700 E
+35 -5 -5 5d5+1300 3d8+15
+6000 60000
+8 8 1
+BareHandAttack: 13
+Dex: 18
+E
+#14414
+hobbit bri~
+uma hobbit de Bri~
+Uma simpática hobbit de Bri está aqui, cuidando das suas tarefas.
+~
+Você observa uma bela e simpática hobbit nativa de Bri.  Os pequeninos
+de Bri juram que o assentamento hobbit da aldeia de Bri é o mais antigo do
+mundo, fundado antes mesmo que o rio Brandevin fosse atravessado e o Condado
+colonizado.  Gentis e amigáveis, os alegres hobbits de Bri, certamente não
+são como os seus parentes do Condado imaginam.
+~
+2126036 0 0 0 0 0 0 0 700 E
+35 -2 -4 5d5+1100 3d8+15
+5000 58000
+8 8 2
+BareHandAttack: 13
+Dex: 18
+E
+#14415
+homem forasteiro~
+um estranho forasteiro~
+Um estranho forasteiro está aqui, observando o agitado bar da estalagem.
+~
+Você observa um estranho homem coberto por um manto negro, que lhe impede de
+espreitar o misterioso rosto deste forasteiro.  Você percebe que ele observa
+cuidadosamente todas as pessoas do bar e seus pertences.
+~
+2121862 0 0 0 0 0 0 0 -400 E
+35 -5 -6 5d5+1200 3d8+25
+10000 65000
+8 8 1
+BareHandAttack: 13
+Str: 15
+Dex: 18
+Int: 18
+Wis: 15
+Con: 18
+Cha: 13
+E
+#14416
+viajantes~
+alguns viajantes~
+Alguns viajantes seguem tranqüilamente pela estrada.
+~
+Você observa um grupo de viajantes formado por dez homens fortes e altos,
+que seguem para alguma cidade distante, carregando consigo várias
+mercadorias.
+~
+2226182 0 0 0 0 0 0 0 400 E
+50 -12 -8 5d10+2500 6d6+25
+20000 100000
+8 8 1
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#14417
+grupo anões~
+um grupo de anões~
+Um alegre grupo de anões está aqui, sentado ao redor de uma animada mesa.
+~
+Você observa um alegre grupo formado por seis anões viajantes de terras
+distantes, que estão hospedados na movimentada estalagem do senhor Cevado
+Carrapicho.  Como todos os grupos que passam pela aldeia de Bri, uma parada
+na estalagem para recuperar as forças e cantar um pouco é sempre bem vinda.
+~
+2226178 0 0 0 0 0 0 0 450 E
+50 -14 -8 5d10+2100 7d5+25
+25000 125000
+8 8 1
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#14418
+grupo homens bri~
+um grupo de homens de Bri~
+Um barulhento grupo de homens de Bri está aqui, conversando no bar.
+~
+Você observa vários homens de Bri cantando, conversando e bebendo muita
+cerveja numa grande mesa num dos cantos do bar da estalagem o Pônei
+Saltitante.  O barulho perto deles é ensurdecedor e desagradável.
+~
+2220034 0 0 0 0 0 0 0 450 E
+50 -12 -8 5d10+2300 6d5+25
+8000 100000
+8 8 1
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#14419
+grupo hobbits bri~
+um grupo de hobbits de Bri~
+Um feliz grupo de hobbits de Bri está aqui, sentado ao redor de uma mesa.
+~
+Você observa um pequeno grupo formado por alguns pequeninos hobbits da
+aldeia de Bri.  Sentados ao redor de uma grande mesa de madeira, eles
+conversam e cantam canções antigas.
+~
+2125954 0 0 0 0 0 0 0 500 E
+50 -8 -9 5d10+2100 7d5+25
+12000 110000
+8 8 1
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#14420
+velho porteiro~
+o porteiro do portão sul~
+Um velho porteiro está aqui, vigiando o portão sul da aldeia de Bri.
+~
+Você observa um velho homem de Bri com várias marcas deixadas pelo tempo em
+seu rosto.  O velho porteiro guardará incansavelmente o portão sul da aldeia
+de Bri, cumprindo assim sua tarefa e protegendo todos os moradores da
+aldeia.
+~
+2156546 0 0 0 0 0 0 0 600 E
+45 -5 -4 5d10+1200 7d4+25
+8000 65000
+8 8 1
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 15
+Cha: 18
+E
+#14421
+pônei~
+um belo pônei~
+Um belo pônei está aqui, aguardando os cuidados do seu dono.
+~
+Você observa um lindo e simpático pônei de pelo suave e brilhante.
+~
+2441218 0 0 0 0 0 0 0 400 E
+18 10 0 5d3+350 3d4+8
+0 28000
+8 8 1
+Str: 18
+Dex: 18
+Int: 15
+Wis: 15
+Con: 18
+Cha: 18
+E
+#14422
+cavalo~
+um imponente cavalo~
+Um magnífico cavalo está aqui, descansando no estábulo.
+~
+Você observa um belíssimo cavalo de postura impetuosa e pelo suave e branco.
+Seus cascos brilham refletindo os raios luminosos que surgem da sua luz.
+~
+2441218 0 0 0 0 0 0 0 400 E
+18 -3 0 5d3+450 5d4+10
+0 30000
+8 8 1
+Str: 18
+Dex: 18
+Int: 15
+Wis: 15
+Con: 18
+Cha: 18
+E
+#14423
+pássaro colorido~
+um lindo pássaro colorido~
+Um lindo pássaro colorido está aqui, cantando sem parar belas melodias.
+~
+Você observa um maravilhoso pássaro de penas coloridas que emitem um brilho
+intenso e magnífico.
+~
+2162768 0 0 0 0 0 0 0 500 E
+2 20 0 2d2+30 2d2+4
+0 600
+8 8 1
+Str: 6
+Int: 10
+Wis: 8
+Con: 7
+Cha: 18
+E
+$

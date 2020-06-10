@@ -1,0 +1,114 @@
+#57
+Vitalia~
+Graye~
+5700 5799 30 0 0 0 0 0 -1 -1
+-1
+* The doors..
+
+D 0 5743 5 2             Close tomb entrance
+D 0 5759 4 2  
+D 0 5744 5 2             Close trapdoor
+D 0 5746 4 2 
+D 0 5749 5 2             Other end of trapdoor
+D 0 5748 4 2
+D 0 5755 0 2             Close ebony door
+D 0 5756 2 2 
+D 0 5756 1 2             Close ivory door
+D 0 5762 3 2       
+
+* The mobs..
+
+M 0 5701 5 5705          Load a brownie
+E 1 5707 50 17           Give him a wand
+M 0 5701 5 5708
+E 1 5707 50 17
+M 0 5701 5 5716
+E 1 5707 50 17
+M 0 5701 5 5717
+E 1 5707 50 17
+M 0 5701 5 5714
+E 1 5707 50 17
+*
+M 0 5702 10 5709         Load a wolf
+M 0 5702 10 5710
+M 0 5702 10 5711
+M 0 5702 10 5714
+M 0 5702 10 5717
+*
+M 0 5703 5 5719          Load a rabbit
+M 0 5703 5 5716
+M 0 5703 5 5713
+*
+M 0 5704 1 5715          Load Tomal the woodsman
+E 1 5708 20 12           Cloak
+E 1 5709 20 13           Belt
+E 1 5710 20 8            Boots
+*
+M 0 5705 4 5733          Load demon guard
+M 0 5705 4 5734
+M 0 5705 4 5735
+M 0 5705 4 5736
+*
+M 0 5706 5 5737          Load Graye Guardsman
+E 1 5711 20 6            Helmet
+E 1 5712 20 3            Cape
+E 1 5713 20 16           Sword
+M 0 5706 5 5737
+E 1 5711 20 6
+E 1 5712 20 3
+E 1 5713 20 16
+M 0 5706 5 5737
+E 1 5711 20 6
+E 1 5712 20 3
+E 1 5713 20 16
+M 0 5706 5 5738
+M 0 5706 5 5739
+*
+M 0 5707 3 5750          Load an Imp
+M 0 5707 3 5751
+*
+M 0 5708 3 5750          Minor Demon
+M 0 5708 3 5751
+*
+M 0 5709 4 5738          Citizens
+M 0 5710 4 5738
+M 0 5709 4 5739
+M 0 5710 4 5739
+*
+M 0 5711 1 5750          Major demon
+E 1 5714 20 17           Claw
+*
+M 0 5712 1 5752          Rift guardian
+E 1 5715 18 10           Armband
+*
+M 0 5713 2 5754          Jail Guard
+E 1 5716 20 16           Whip
+M 0 5713 2 5755   
+E 1 5716 20 16
+*
+M 0 5714 1 5745          Rymat
+*
+M 0 5715 1 5755          Irgon
+E 1 5717 18 0            Candle
+E 1 5703 5 17            Ebony Key
+*
+M 0 5716 1 5756          Scrytin
+E 1 5718 18 11           Shield
+E 1 5704 5 17            Ivory Key
+
+* load up misc stuff..
+
+O 0 5705 1 5743          Cronicles 
+O 0 5722 1 5762          Scrawled Note
+O 0 5721 1 5743          Journal
+O 0 5723 1 5762          Key to tomb
+O 0 5702 1 5743          Trap key
+*
+O 0 5720 1 5761          Graye's Plate
+O 0 5719 1 5761          Graye's Visor 
+*
+O 0 5706 1 5743          Desk
+P 0 5701 1 5706          Key in desk
+*
+S
+$~

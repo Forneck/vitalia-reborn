@@ -1,0 +1,1949 @@
+#13500
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da  floresta  podem  ser ouvidos a sua volta. O caminho faz uma curva
+aqui, seguindo ao norte e leste.
+~
+135 65536 0 0 0 2
+D1
+~
+~
+0 -1 13501
+D2
+~
+~
+0 -1 13505
+S
+#13501
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da  floresta  podem  ser ouvidos a sua volta. O caminho faz uma curva
+aqui, seguindo ao oeste e ao sul.
+~
+135 65536 0 0 0 2
+D1
+~
+~
+0 -1 13502
+D2
+~
+~
+0 -1 13506
+D3
+~
+~
+0 -1 13500
+S
+#13502
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 0 3207
+D1
+~
+~
+0 -1 13503
+D2
+~
+~
+0 -1 13507
+D3
+~
+~
+0 -1 13501
+S
+#13503
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D1
+~
+~
+0 -1 13504
+D2
+~
+~
+0 -1 13508
+D3
+~
+~
+0 -1 13502
+S
+#13504
+A Floresta~
+  Você  está  na  Floresta  de  Thewster  onde  grilos  e pequenos pássaros
+gorjeiam. Do sul vem o cheiro de algo morto.
+~
+135 0 0 0 0 3
+D2
+~
+~
+0 -1 13509
+D3
+~
+~
+0 -1 13503
+S
+#13505
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13500
+D1
+~
+~
+0 -1 13506
+D2
+~
+~
+0 -1 13511
+S
+#13506
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da  floresta  podem  ser ouvidos a sua volta. O caminho faz uma curva
+aqui, seguindo ao norte e leste.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13501
+D1
+~
+~
+0 -1 13507
+D2
+~
+~
+0 -1 13512
+D3
+~
+~
+0 -1 13505
+S
+#13507
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da  floresta  podem  ser ouvidos a sua volta. O caminho faz uma curva
+aqui, seguindo ao sul e ao oeste.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13502
+D1
+~
+~
+0 -1 13508
+D2
+~
+~
+0 -1 13513
+D3
+~
+~
+0 -1 13506
+S
+#13508
+A Floresta~
+  Você  está  na  Floresta  de  Thewster  onde  grilos  e pequenos pássaros
+gorjeiam. Do leste vem o cheiro de algo morto.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13503
+D1
+~
+~
+0 -1 13509
+D2
+~
+~
+0 -1 13514
+D3
+~
+~
+0 -1 13507
+S
+#13509
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13504
+D1
+~
+~
+0 -1 13510
+D2
+~
+~
+0 -1 13515
+D3
+~
+~
+0 -1 13508
+S
+#13510
+A Floresta~
+  Você  está  na  Floresta  de  Thewster  onde  grilos  e pequenos pássaros
+gorjeiam. Do oeste vem o cheiro de algo morto.
+~
+135 0 0 0 0 3
+D2
+~
+~
+0 -1 13516
+D3
+~
+~
+0 -1 13509
+S
+#13511
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13505
+D1
+~
+~
+0 -1 13512
+D2
+~
+~
+0 -1 13522
+S
+#13512
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13506
+D1
+~
+~
+0 -1 13513
+D2
+~
+~
+0 -1 13523
+D3
+~
+~
+0 -1 13511
+S
+#13513
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da  floresta  podem  ser ouvidos a sua volta. O caminho faz uma curva
+aqui, seguindo ao norte e ao sul.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13507
+D1
+~
+~
+0 -1 13514
+D2
+~
+~
+0 -1 13524
+D3
+~
+~
+0 -1 13512
+S
+#13514
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13508
+D1
+~
+~
+0 -1 13515
+D2
+~
+~
+0 -1 13525
+D3
+~
+~
+0 -1 13513
+S
+#13515
+A Floresta~
+  Você  está  na  Floresta  de  Thewster  onde  grilos  e pequenos pássaros
+gorjeiam. Do norte vem o cheiro de algo morto.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13509
+D1
+~
+~
+0 -1 13516
+D2
+~
+~
+0 -1 13526
+D3
+~
+~
+0 -1 13514
+S
+#13516
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13510
+D1
+~
+~
+0 -1 13517
+D2
+~
+~
+0 -1 13527
+D3
+~
+~
+0 -1 13515
+S
+#13517
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D1
+~
+~
+0 -1 13518
+D2
+~
+~
+0 -1 13528
+D3
+~
+~
+0 -1 13516
+S
+#13518
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D1
+~
+~
+0 -1 13519
+D2
+~
+~
+0 -1 13529
+D3
+~
+~
+0 -1 13517
+S
+#13519
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D1
+~
+~
+0 -1 13520
+D2
+~
+~
+0 -1 13530
+D3
+~
+~
+0 -1 13518
+S
+#13520
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D1
+~
+~
+0 -1 13521
+D2
+~
+~
+0 -1 13531
+D3
+~
+~
+0 -1 13519
+S
+#13521
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D2
+~
+~
+0 -1 13532
+D3
+~
+~
+0 -1 13520
+S
+#13522
+Um Caminho Sujo e Empoeirado~
+  Você caminha ao longo de uma estrada empoeirada, que não parece ser usada
+com  freqüência. A poeira sobe do chão a medida que seus pés tocam o mesmo.
+A  floresta  cerca  o  caminho  e pequenos olhos vermelhos podem ser vistos
+através das folhas, te observando.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13511
+D1
+~
+~
+0 -1 13523
+D3
+~
+~
+0 -1 13583
+S
+#13523
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da  floresta  podem ser ouvidos a sua volta. Um sujo caminho segue ao
+oeste.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13512
+D1
+~
+~
+0 -1 13524
+D3
+~
+~
+0 -1 13522
+S
+#13524
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da  floresta  podem  ser ouvidos a sua volta. O caminho faz uma curva
+aqui, seguindo ao norte e leste.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13513
+D1
+~
+~
+0 -1 13525
+D2
+~
+~
+0 -1 13535
+D3
+~
+~
+0 -1 13523
+S
+#13525
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da  floresta  podem  ser  ouvidos  a  sua  volta.  O  caminho faz uma
+interseção com um outro caminho, seguindo a leste, oeste e ao sul.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13514
+D1
+~
+~
+0 -1 13526
+D2
+~
+~
+0 -1 13536
+D3
+~
+~
+0 -1 13524
+S
+#13526
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons da floresta podem ser ouvidos a sua volta. Ao longe, pelo leste, podem
+ser vistas algumas montanhas.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13515
+D1
+~
+~
+0 -1 13527
+D2
+~
+~
+0 -1 13537
+D3
+~
+~
+0 -1 13525
+S
+#13527
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
+ao oeste.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13516
+D1
+~
+~
+0 -1 13528
+D2
+~
+~
+0 -1 13538
+D3
+~
+~
+0 -1 13526
+S
+#13528
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
+ao oeste.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13517
+D1
+~
+~
+0 -1 13529
+D2
+~
+~
+0 -1 13539
+D3
+~
+~
+0 -1 13527
+S
+#13529
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
+ao oeste.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13518
+D1
+~
+~
+0 -1 13530
+D3
+~
+~
+0 -1 13528
+S
+#13530
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
+ao oeste.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13519
+D1
+~
+~
+0 -1 13531
+D3
+~
+~
+0 -1 13529
+S
+#13531
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
+ao oeste.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13520
+D1
+~
+~
+0 -1 13532
+D3
+~
+~
+0 -1 13530
+S
+#13532
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
+ao oeste.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13521
+D1
+~
+~
+0 -1 13533
+D3
+~
+~
+0 -1 13531
+S
+#13533
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
+ao oeste.
+~
+135 65536 0 0 0 2
+D1
+~
+~
+0 -1 13534
+D3
+~
+~
+0 -1 13532
+S
+#13534
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da  floresta  podem ser ouvidos a sua volta. Largos muros de um jovem
+vilarejo bloqueia sua passagem ao leste.
+~
+135 0 0 0 0 4
+D0
+~
+~
+0 -1 13582
+D3
+~
+~
+0 -1 13533
+D8
+~
+~
+0 -1 4401
+S
+#13535
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13524
+D1
+~
+~
+0 -1 13536
+D2
+~
+~
+0 -1 13540
+S
+#13536
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao norte e
+ao sul.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13525
+D1
+~
+~
+0 -1 13537
+D2
+~
+~
+0 -1 13541
+D3
+~
+~
+0 -1 13535
+S
+#13537
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13526
+D1
+~
+~
+0 -1 13538
+D2
+~
+~
+0 -1 13542
+D3
+~
+~
+0 -1 13536
+S
+#13538
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13527
+D1
+~
+~
+0 -1 13539
+D2
+~
+~
+0 -1 13543
+D3
+~
+~
+0 -1 13537
+S
+#13539
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13528
+D3
+~
+~
+0 -1 13538
+S
+#13540
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13535
+D1
+~
+~
+0 -1 13541
+D2
+~
+~
+0 -1 13544
+S
+#13541
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao norte e
+ao sul.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13536
+D1
+~
+~
+0 -1 13542
+D2
+~
+~
+0 -1 13545
+D3
+~
+~
+0 -1 13540
+S
+#13542
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13537
+D1
+~
+~
+0 -1 13543
+D2
+~
+~
+0 -1 13546
+D3
+~
+~
+0 -1 13541
+S
+#13543
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13538
+D2
+~
+~
+0 -1 13547
+D3
+~
+~
+0 -1 13542
+S
+#13544
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13540
+D1
+~
+~
+0 -1 13545
+D2
+~
+~
+0 -1 13548
+S
+#13545
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao norte e
+ao sul.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13541
+D1
+~
+~
+0 -1 13546
+D2
+~
+~
+0 -1 13549
+D3
+~
+~
+0 -1 13544
+S
+#13546
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13542
+D1
+~
+~
+0 -1 13547
+D2
+~
+~
+0 -1 13550
+D3
+~
+~
+0 -1 13545
+S
+#13547
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13543
+D2
+~
+~
+0 -1 13551
+D3
+~
+~
+0 -1 13546
+S
+#13548
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13544
+D1
+~
+~
+0 -1 13549
+D2
+~
+~
+0 -1 13554
+S
+#13549
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao norte e
+ao sul.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13545
+D1
+~
+~
+0 -1 13550
+D2
+~
+~
+0 -1 13555
+D3
+~
+~
+0 -1 13548
+S
+#13550
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13546
+D1
+~
+~
+0 -1 13551
+D2
+~
+~
+0 -1 13556
+D3
+~
+~
+0 -1 13549
+S
+#13551
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13547
+D2
+~
+~
+0 -1 13557
+D3
+~
+~
+0 -1 13550
+S
+#13552
+A Clareira~
+ Você esta na entrada da uma pequena caverna, pequenos e brilhantes olhos o
+encaram  firmemente.  É  realmente  escuro  lá dentro, você irá precisar de
+alguma fonte de luz.
+~
+135 0 0 0 0 2
+D1
+~
+~
+0 -1 13553
+D2
+~
+~
+0 -1 13558
+D3
+~
+~
+0 -1 13609
+D5
+~
+~
+0 0 13443
+S
+#13553
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D2
+~
+~
+0 -1 13559
+D3
+~
+~
+0 -1 13552
+S
+#13554
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13548
+D1
+~
+~
+0 -1 13555
+D2
+~
+~
+0 -1 13560
+S
+#13555
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao norte e
+ao sul.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13549
+D1
+~
+~
+0 -1 13556
+D2
+~
+~
+0 -1 13561
+D3
+~
+~
+0 -1 13554
+S
+#13556
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13550
+D1
+~
+~
+0 -1 13557
+D2
+~
+~
+0 -1 13562
+D3
+~
+~
+0 -1 13555
+S
+#13557
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13551
+D2
+~
+~
+0 -1 13563
+D3
+~
+~
+0 -1 13556
+S
+#13558
+A Clareira~
+  Você  está  em  uma  grande  clareira na floresta, ao norte você vê o que
+parece ser a entrada de uma caverna.
+~
+135 0 0 0 0 2
+D0
+~
+~
+0 -1 13552
+D1
+~
+pedra~
+1 -1 13559
+D2
+~
+~
+0 -1 13564
+D3
+~
+~
+0 -1 13609
+S
+#13559
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13553
+D1
+~
+~
+0 -1 13560
+D2
+~
+~
+0 -1 13565
+D3
+~
+pedra~
+1 -1 13558
+S
+#13560
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13554
+D1
+~
+~
+0 -1 13561
+D2
+~
+~
+0 -1 13566
+D3
+~
+~
+0 -1 13559
+S
+#13561
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao norte e
+ao sul.
+~
+135 65536 0 0 0 2
+D0
+~
+~
+0 -1 13555
+D1
+~
+~
+0 -1 13562
+D2
+~
+~
+0 -1 13567
+D3
+~
+~
+0 -1 13560
+S
+#13562
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13556
+D1
+~
+~
+0 -1 13563
+D2
+~
+~
+0 -1 13568
+D3
+~
+~
+0 -1 13561
+S
+#13563
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13557
+D2
+~
+~
+0 -1 13569
+D3
+~
+~
+0 -1 13562
+S
+#13564
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13558
+D1
+~
+~
+0 -1 13565
+D2
+~
+~
+0 -1 13570
+S
+#13565
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13559
+D1
+~
+~
+0 -1 13566
+D2
+~
+~
+0 -1 13571
+D3
+~
+~
+0 -1 13564
+S
+#13566
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13560
+D1
+~
+~
+0 -1 13567
+D2
+~
+~
+0 -1 13572
+D3
+~
+~
+0 -1 13565
+S
+#13567
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao norte e
+ao sul.
+~
+135 0 0 0 0 2
+D0
+~
+~
+0 -1 13561
+D1
+~
+~
+0 -1 13568
+D2
+~
+~
+0 -1 13573
+D3
+~
+~
+0 -1 13566
+S
+#13568
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13562
+D1
+~
+~
+0 -1 13569
+D2
+~
+~
+0 -1 13574
+D3
+~
+~
+0 -1 13567
+S
+#13569
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13563
+D2
+~
+~
+0 -1 13575
+D3
+~
+~
+0 -1 13568
+S
+#13570
+O Caminho de Nirin~
+ O caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
+ao oeste.
+~
+135 0 0 0 0 2
+D0
+~
+~
+0 -1 13564
+D1
+~
+~
+0 -1 13571
+D3
+~
+~
+0 -1 13628
+S
+#13571
+Os Degraus~
+ A estrada de Nirin se alarga aqui e parece ser bem cuidada. Os galhos aqui
+crescem  de  modo  a formar degraus que seguem para cima, ao sul você vê um
+estábulo. A oeste e leste, a estrada de Nirin continua.
+~
+135 0 0 0 0 1
+D0
+~
+~
+0 -1 13565
+D1
+~
+~
+0 -1 13572
+D2
+~
+~
+0 -1 13577
+D3
+~
+~
+0 -1 13570
+D4
+~
+~
+0 0 13402
+S
+#13572
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
+ao oeste.
+~
+135 0 0 0 0 2
+D0
+~
+~
+0 -1 13566
+D1
+~
+~
+0 -1 13573
+D2
+~
+~
+0 -1 13578
+D3
+~
+~
+0 -1 13571
+S
+#13573
+O Caminho de Nirin~
+  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
+ao oeste. O caminho faz uma volta aqui e agora vai de norte a oeste.
+~
+135 0 0 0 0 2
+D0
+~
+~
+0 -1 13567
+D1
+~
+~
+0 -1 13574
+D2
+~
+~
+0 -1 13579
+D3
+~
+~
+0 -1 13572
+S
+#13574
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13568
+D1
+~
+~
+0 -1 13575
+D2
+~
+~
+0 -1 13580
+D3
+~
+~
+0 -1 13573
+S
+#13575
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13569
+D2
+~
+~
+0 -1 13581
+D3
+~
+~
+0 -1 13574
+S
+#13576
+Os Estábulos~
+   O que há para ser dito? É um tedioso estábulo.
+~
+135 0 0 0 0 3
+S
+#13577
+Os Estábulos~
+  Você  está nos fétidos e sujos estábulos. Selas repousam sobre cavalos de
+madeira  e  ferraduras  podem  ser  vistas, penduradas nas paredes. A única
+saída é ao norte para os degraus.
+~
+135 8 0 0 0 0
+D0
+~
+~
+0 -1 13571
+S
+#13578
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13572
+D1
+~
+~
+0 -1 13579
+S
+#13579
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13573
+D1
+~
+~
+0 -1 13580
+D3
+~
+~
+0 -1 13578
+S
+#13580
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13574
+D1
+~
+~
+0 -1 13581
+D3
+~
+~
+0 -1 13579
+S
+#13581
+A Floresta~
+  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
+por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
+galhos emaranhados até chegar ao solo.
+~
+135 0 0 0 0 3
+D0
+~
+~
+0 -1 13575
+D1
+A floresta ali já não é a mesma. É outra, muito sombria.
+~
+~
+0 -1 13174
+D3
+~
+~
+0 -1 13580
+S
+#13582
+Uma Cabana~
+  Você  está  em uma pequena cabana circular ao norte do caminho, parece um
+bom lugar para descansar antes de viajar mais adiante.
+~
+135 16777228 0 0 0 0
+D2
+~
+~
+0 -1 13534
+S
+#13583
+Um Caminho Sujo e Empoeirado~
+  Os  volumosos  portões de Silverthorne fica ao oeste, formando uma grande
+sombra  sobre  você.  A  estrada  pela  qual  você  está andando é bastante
+estreita e nuvens de poeira sopram com a brisa. A floresta de altas árvores
+com  largas  folhas  verdes de todos os tipos cerca a estrada ao norte e ao
+sul. O caminho sujo e empoeirado segue pelo leste.
+~
+135 4 0 0 0 2
+D1
+~
+~
+0 -1 13584
+D3
+~
+~
+0 0 3207
+S
+#13584
+Um Caminho Sujo e Empoeirado~
+  A  estrada  pela  qual  você está andando é bastante estreita e nuvens de
+poeira  sopram com a brisa. Ocasionalmente uma larga folha se desprende das
+árvores  e espirala até alcançar o chão. A estrada suja continua ao leste e
+ao oeste, de onde também pode-se ver os muros de uma cidade.
+~
+135 0 0 0 0 2
+D1
+~
+~
+0 -1 13585
+D3
+~
+~
+0 -1 13583
+S
+#13585
+Um Caminho Sujo e Empoeirado~
+   A estrada  pela  qual  você está andando é bastante estreita e nuvens de
+poeira  sopram  com  a brisa. A floresta de altas árvores com largas folhas
+verdes  de  todos  os  tipos  cerca  a  estrada ao norte e ao sul. Pequenas
+criaturas podem ser ouvidas. O Caminho sujo continua a leste e oeste.
+~
+135 0 0 0 0 2
+D1
+~
+~
+0 -1 13586
+D3
+~
+~
+0 -1 13584
+S
+#13586
+Um Caminho Sujo e Empoeirado~
+  A  estrada  pela  qual  você está andando é bastante estreita e nuvens de
+poeira  sopram com a brisa. Ocasionalmente uma larga folha se desprende das
+árvores  e espirala até alcançar o chão. A estrada suja continua ao leste e
+ao oeste, de onde também pode-se ver os muros de uma cidade.
+~
+135 0 0 0 0 2
+D1
+~
+~
+0 -1 13522
+D3
+~
+~
+0 -1 13585
+S
+#13587
+Uma Sala Muito Estranha~
+  Saia já daqui!
+~
+135 0 0 0 0 0
+D0
+~
+~
+0 0 13500
+D1
+~
+~
+0 0 13530
+D2
+.
+~
+~
+0 0 13540
+D3
+~
+~
+0 0 13560
+D4
+~
+~
+0 0 13570
+S
+#13588
+Uma Sala Muito Estranha~
+  Saia já daqui!
+~
+135 0 0 0 0 0
+D0
+~
+~
+0 0 13510
+D1
+~
+~
+0 0 13530
+D2
+~
+~
+0 0 13550
+D3
+~
+~
+0 0 13570
+S
+$~

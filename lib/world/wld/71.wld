@@ -1,0 +1,654 @@
+#7100
+A Margem da Água~
+   A lagoa está fracamente iluminada por uma luz difusa.  Você não pode ver
+absolutamente nada por perto.  A escuridão aqui parece enormente opressiva.
+O ar é úmido e a rocha em que você está é escorregadia.  A lagoa parece
+muito escura.  A lagoa parece extender-se ao leste.  A rocha pode ser escalada
+a partir daqui.
+~
+71 13 0 0 0 5
+D0
+~
+~
+0 -1 8328
+D1
+A lagoa extende-se par o leste mas você não tem como mover-se até lá.
+~
+~
+0 -1 -1
+D4
+~
+~
+0 -1 7000
+S
+#7101
+Abaixo do Buraco de Lama~
+   Você está numa pequena sala com uma grande rachadura no teto.  Da rachadura
+há lama caindo  em grande quantidade.  ARGH!.  Você pode sentir o
+terrível fedor do viscoso sedimento enquanto você tenta não ser coberto
+pela lama que cai.  A leste há uma entrada levando para fora daqui e parece
+absolutamente impossível forçar a descida por este caminho lamaçento.
+~
+71 13 0 0 0 5
+D1
+Leste.  Você não vê nada de interessante.
+~
+~
+0 -1 7103
+E
+lama~
+Você nunca tinha visto uma substância tão nojenta antes, ela quase faz você
+vomitar.
+~
+S
+#7102
+Abaixo do Poço Escuro~
+   Você encontrou um bom lugar.  Você está no centro de uma sala com apenas
+duas saídas, para cima e para leste.  Uma escada alta foi deixada aqui para
+que você possa subir para fora do poço sem precisar usar uma corda.
+~
+71 9 0 0 0 1
+D1
+~
+~
+0 -1 7104
+D4
+Cima.  Você não vê nada aqui, está muito escuro.
+~
+~
+0 -1 7004
+E
+escada~
+Esta é uma escada de madeira muito engraçada e, depois de uma inspeção mais
+detalhada, você descobre que ela está magicamente presa a parede!  Você
+não consegue mesmo com todo seu esforço movê-la.
+~
+S
+#7103
+Uma Curva Lamaçenta no Sistema de Esgoto~
+   Você está no que parece ser uma curva no sistema de canos de esgoto.  O
+"chão" está completamente coberto pela lama!  Isso inclui suas pernas e
+joelhos também.  O cano leva a oeste e sul.
+~
+71 9 0 0 0 4
+D2
+Ao sul há menos lama que aqui!  Ela parece, realmente acabar lá!  Você acha
+que será bom sentir seus pés livres da lama novamente.
+~
+~
+0 -1 7104
+D3
+Você pode ver uma sala em que a lama goteja no chão formando grandes bolos
+de lama.  Não parece haver saídas desta sala.
+~
+~
+0 -1 7101
+E
+lama~
+Você nunca tinha visto uma substância tão nojenta antes, ela quase faz você
+vomitar.
+~
+S
+#7104
+Uma Junção nos Canos de Esgoto~
+   Você está no centro do que parece ser uma junção de canos tripla indo
+para leste, oeste e norte.
+~
+71 9 0 0 0 1
+D0
+Você pode ver um lugar cheio de lama começando nesta direção.
+~
+~
+0 -1 7103
+D1
+Leste.  Você não consegue ver nada está muito escuro.
+~
+~
+0 -1 7112
+D3
+Oeste.  Há uma sala com uma escada levando para cima.
+~
+~
+0 -1 7102
+S
+#7105
+Abaixo da Velha Fonte~
+   Você está pendurado nas bordas escorregadias da velha fonte que leva
+para baixo e para cima.  O único ponto seguro aqui são as barras de metal
+cimentadas nas bordas, você agarra-se a uma tão freneticamente que não cai.
+Quem sabe quão profunda é essa fonte?  As barras levam para baixo e para
+cima.
+~
+71 9 0 0 0 5
+D4
+Há uma fraca e turva luz vindo de cima, ou talvez seja só a sua imaginação.
+De qualquer maneira está mais escuro aqui do que lá em cima, se isso for
+possível.
+~
+~
+0 -1 7015
+D5
+Lá embaixo nada pode ser identificado.  A escuridão que se mostra aqui
+parece ser impossível de existir no mundo mortal.  Ela é tão abundante que
+uma tocha acesa lá seria totalmente inútil... isso é o que você acha.  Não
+é o tipo de coisa que encoraje você nessa viagem, heim?
+~
+~
+0 -1 -1
+E
+barras~
+Elas parecem bem escorregadias, e não parecem seguras, porém podem ser
+seguras o bastante para você descer, com as duas mãos nelas.
+~
+S
+#7106
+O Canto Noroeste do Peitoril~
+   Você está, inclinado para fora do peitoril, com apenas duas polegadas de
+segurança.  O peitoril continua para leste mas não volta para o sul.  O
+peitoril é tão estreito que você não pode virar-se então você deve
+continuar a seguir em frente.
+~
+71 13 0 0 0 5
+D1
+O peitoril continua para o leste.
+~
+~
+0 -1 7113
+D2
+O peitoril continua para o sul.
+~
+~
+0 -1 7107
+D5
+O abismo acaba lá em baixo.  Quem sabe oque esconde-se lá embaixo?
+~
+rocha degrau margem~
+1 -1 7279
+E
+margem estranha~
+Esta é, sinceramente, uma estranha obra de artesanato.  A margem parece
+formar um degrau que leva para cima, mas que degrau bem feito!  O Abismo
+abre-se embaixo, levando aparentemente a total destruição.
+~
+E
+degrau~
+Uma pequena rocha destaca-se logo abaixo, de qualquer forma o caminho é para
+BAIXO, para BAIXO e PLOFT!!
+~
+E
+rocha~
+Parece ser uma abertura.  Talvez esse seja o caminho para baixo.
+~
+S
+#7107
+O Estreito Peitoril~
+   Você está começando a caminhar no peitoril, não há como voltar.  Há uma
+outra saída daqui mas leva diretamente para o meio-ar e com grandes
+chances de uma sessão de quedas livres.
+~
+71 13 0 0 0 5
+D0
+Norte.  O peitoril leva para um canto e encurva-se para o leste.
+~
+~
+0 -1 7106
+D1
+Você está no meio-ar, e abaixo não há nada além da escuridão.  Você
+treme ao pensar em cair desta altura.
+~
+~
+0 -1 7190
+D2
+Sul.  O peitoril leva ao sul direto para a escuridão.
+~
+~
+0 -1 7108
+S
+#7108
+O Estreito Peitoril~
+   Você está começando a caminhar no peitoril, não há como voltar.  Há uma
+outra saída daqui mas leva diretamente para o meio-ar e com grandes
+chances de uma sessão de quedas livres.
+~
+71 13 0 0 0 5
+D0
+Norte.  O peitoril leva ao norte.
+~
+~
+0 -1 7107
+D1
+Você está no meio-ar, e abaixo não há nada além da escuridão.  Você
+treme ao pensar em cair desta altura.
+~
+~
+0 -1 7190
+D2
+O peitoril continua ao sul em meio a escuridão.
+~
+~
+0 -1 7109
+S
+#7109
+O Estreito Peitoril~
+   Você está começando a caminhar no peitoril, não há como voltar.  Há uma
+outra saída daqui mas leva diretamente para o meio-ar e com grandes
+chances de uma sessão de quedas livres.
+~
+71 13 0 0 0 5
+D0
+Norte.  O peitoril leva ao norte.
+~
+~
+0 -1 7108
+D1
+Você está no meio-ar, e abaixo não há nada além da escuridão.  Você
+treme ao pensar em cair desta altura.
+~
+~
+0 -1 7190
+D2
+O peitoril continua ao sul em meio a escuridão.
+~
+~
+0 -1 7110
+S
+#7110
+O Estreito Peitoril~
+   Você está começando a caminhar no peitoril, não há como voltar.  Existe uma
+OUTRA saída daqui mas leva diretamente para o Passo-Em-Falso e com grandes
+chances de uma sucessão de quedas livres.
+~
+71 13 0 0 0 5
+D0
+Norte.  O peitoril leva ao norte.
+~
+~
+0 -1 7107
+D1
+Você está fixa o olhar no Passo-Em-Falso e abaixo dele não há nada além da
+escuridão.  Você treme ao pensar em cair desta altura.
+~
+~
+0 -1 7190
+D2
+Sul.  Você pode notar o canto sudoeste do peitoril.
+~
+~
+0 -1 7111
+S
+#7111
+O Canto Sudoeste do Peitoril~
+   Este peitoril parece ser mais largo que o outro ao norte daqui.  O peitoril
+parece levar a um tipo de abismo na total escuridão.  O peitoril parece ter
+uma margem aparentemente estranha.
+~
+71 13 0 0 0 5
+D0
+Norte.  O peitoril leva ao norte.
+~
+~
+0 -1 7110
+D1
+Você vê um largo peitoril levando ao leste.
+~
+~
+0 -1 7115
+D2
+Ao sul daqui fica a saída do peitoril.
+~
+~
+0 -1 7112
+D5
+O abismo acaba lá em baixo.  Quem sabe o que esconde-se lá embaixo?
+~
+margem estranha~
+1 -1 7279
+E
+margem estranha~
+Esta é, sinceramente, uma estranha obra-prima da natureza.  A margem parece
+formar um degrau que leva para cima, mas que degrau bem feito!  O Abismo
+abre-se embaixo, levando aparentemente a total destruição.
+~
+E
+degrau~
+Uma pequena rocha destaca-se logo abaixo, de qualquer forma o caminho é para
+BAIXO, para BAIXO e PLOFT!!
+~
+E
+rocha~
+Parece ser uma abertura.  Talvez esse seja o caminho para baixo.
+~
+S
+#7112
+Uma Estranha Intersecção~
+   Você está numa estranha intersecção de canos de esgoto.  Os canos realmente
+não parecem ser canos de esgoto.  Eles parecem ser um túnel de pedra ou uma
+passagem talhada na rocha.  Os caminhos daqui levam ao norte, leste e oeste.
+~
+71 9 0 0 0 1
+D0
+Norte.  Você vê um peitoril para algo que parece ser um abismo.
+~
+~
+0 -1 7111
+D1
+~
+~
+0 -1 7122
+D3
+~
+~
+0 -1 7104
+S
+#7113
+O Estreiro Peitoril Indo do Leste para o Oeste~
+   Você está começando a caminhar no peitoril, não há como voltar.  Há uma
+outra saída daqui mas leva diretamente para o meio-ar e com grandes chances de
+uma sucessão de quedas livres.
+~
+71 13 0 0 0 5
+D1
+O peitoril leva a leste.
+~
+~
+0 -1 7116
+D2
+Você está no meio-ar, e abaixo não há nada além da escuridão.  Você treme só de
+pensar em cair desta altura.
+~
+~
+0 -1 7190
+S
+#7114
+Passo-Em-Falso~
+   Você simplesmente pisou na mais azarada posição de todo Mundo de Vitália.
+O resultado de um ato tão tolo deverá ser punido com a morte, você sabe
+disso, não sabe?   Com uma aceleração de aproximadamente 9.82 metros²
+por segundo, você está agora caindo no Abismo.  O que lhe espera lá
+embaixo continua sendo um mistério.  Adeus mundo cruel...
+~
+71 10 0 0 0 0
+D0
+~
+~
+0 -1 7119
+D1
+~
+~
+0 -1 7118
+D2
+~
+~
+0 -1 7120
+D3
+~
+~
+0 -1 7117
+D4
+~
+~
+0 -1 7115
+S
+#7115
+O Largo Peitoril~
+   Você está num peitoril que parece ser bem maior que o resto.  Este leva
+para o oeste e leste e ainda tem uma saída para o sul.  Talvez você pudesse
+pular no meio-ar, porém essa não parece ser uma boa idéia.  O caminho ao
+sul está na mais completa escuridão.
+~
+71 13 0 0 0 4
+D0
+~
+~
+0 -1 7114
+D1
+~
+~
+0 -1 7121
+D2
+~
+~
+0 -1 7129
+D3
+~
+~
+0 -1 7111
+S
+#7116
+O Canto Nordeste do Peitoril~
+   Você está pendurado no peitoril, com apenas algumas polegadas de segurança,
+há um peitoril sólido abaixo dos seus pés.  O peitoril continua para o oeste e
+leva ao sul daqui para a escuridão.
+~
+71 13 0 0 0 5
+D2
+~
+~
+0 -1 7117
+D3
+O peitoril continua a oeste.
+~
+~
+0 -1 7113
+D5
+Você pode notar as marcas de um alçapão no solo.  A terra provavelmente
+está escondendo uma entrada secreta.  Isso parece levar para baixo, para
+a superfície da rocha sólida do peitoril.
+~
+alçapão secreta entrada~
+1 -1 7280
+E
+chão peitoril rocha~
+O chão aqui parece ser um pouco diferente dos outros.  Há um tipo de solo
+leve neste peitoril, talvez você devesse olhar cuidadosamente isso.  Ele
+parece ser bastante interessante.
+~
+E
+solo leve terra~
+Você pode notar as marcas de um alçapão no solo.  A terra provavelmente
+está escondendo uma entrada secreta.  Isso parece levar para baixo, para
+a superfície da rocha sólida do peitoril.
+~
+S
+#7117
+O Estreito Peitoril~
+   Você está começando a caminhar no peitoril, não há como voltar.  Há uma
+outra saída daqui mas leva diretamente para o meio-ar e com grandes chances
+de uma sessão de quedas livres.  E isso é a oeste daqui, por isso tome
+cuidado por onde pisa.
+~
+71 13 0 0 0 5
+D2
+O Peitoril leva ao sul.
+~
+~
+0 -1 7118
+D3
+Você está no meio-ar, e abaixo não há nada além da escuridão.  Você
+treme ao pensar em cair desta altura.
+~
+~
+0 -1 7114
+S
+#7118
+O Estreito Peitoril Leste~
+    Você está começando a caminhar no peitoril, não há como voltar.  Há uma
+outra saída daqui mas leva diretamente para o meio-ar e com grandes chances
+de uma sessão de quedas livres.  E isso é a oeste daqui, por isso tome
+cuidado por onde pisa.
+~
+71 13 0 0 0 5
+D2
+O peitoril leva ao sul.
+~
+~
+0 -1 7119
+D3
+Você está no meio-ar, e abaixo não há nada além da escuridão.  Você
+treme ao pensar em cair desta altura.
+~
+~
+0 -1 7114
+S
+#7119
+O Estreito Peitoril Leste~
+    Você está começando a caminhar no peitoril, não há como voltar.  Há uma
+outra saída daqui mas leva diretamente para o meio-ar e com grandes chances
+de uma sessão de quedas livres.  E isso é a oeste daqui, por isso tome
+cuidado por onde pisa.
+~
+71 13 0 0 0 5
+D2
+O peitoril leva ao sul.
+~
+~
+0 -1 7120
+D3
+Você está no meio-ar, e abaixo não há nada além da escuridão.  Você
+treme ao pensar em cair desta altura.
+~
+~
+0 -1 7114
+S
+#7120
+O Estreito Peitoril Leste~
+    Você está começando a caminhar no peitoril, não há como voltar.  Há uma
+outra saída daqui mas leva diretamente para o meio-ar e com grandes chances
+de uma sessão de quedas livres.  E isso é a oeste daqui, por isso tome
+cuidado por onde pisa.  Você vê uma pequena abertura ao leste.
+~
+71 13 0 0 0 5
+D1
+Leste. Você para em meio a escuridão.
+~
+~
+0 -1 7123
+D2
+O peitoril leva ao sul.
+~
+~
+0 -1 7121
+D3
+Você está no meio-ar, e abaixo não há nada além da escuridão.  Você
+treme ao pensar em cair desta altura.
+~
+~
+0 -1 7114
+S
+#7121
+O Canto Sudeste do Peitoril~
+   Este peitoril parece ser um pouco mais largo que o que fica ao norte
+daqui.  O Peitoril parece levar a um tipo de abismo totalmente escuro.
+~
+71 13 0 0 0 5
+D0
+Ao norte daqui você pode ver um peitoril.
+~
+~
+0 -1 7120
+D3
+O peitoril leva a oeste.
+~
+~
+0 -1 7115
+D5
+O abismo acaba lá em baixo.  Quem sabe oque esconde-se lá embaixo?
+~
+rocha degrau margem~
+2 -1 7279
+E
+margem estranha~
+Esta é, sinceramente, uma estranha obra-prima da Natureza.  A margem parece
+formar um degrau que leva para cima, mas que degrau bem feito!  O Abismo
+abre-se embaixo, levando aparentemente a total destruição.
+~
+E
+degrau~
+Uma pequena rocha destaca-se logo abaixo, de qualquer forma o caminho é para
+BAIXO, para BAIXO e PLOFT!!
+~
+E
+rocha~
+Parece ser uma abertura.  Talvez esse seja o caminho para baixo.
+~
+S
+#7122
+Abaixo do Poço~
+   Você está numa caverna na completa escuridão que leva a oeste.  A parede
+parece ser sobrenatural.
+~
+71 9 0 0 0 0
+D3
+~
+~
+0 -1 7112
+E
+parede~
+Há uma rachadura aqui, e parece ter sido feita recentemente.
+~
+S
+#7123
+Abaixo do Poço~
+   Uma escada leva para cima pelo poço.  Uma pequena abertura leva a oeste
+daqui.
+~
+71 9 0 0 0 5
+D3
+Você pode ver um estreito peitoril indo ao norte e ao sul.
+~
+~
+0 -1 7120
+D4
+Está muito escuro acima daqui.
+~
+~
+0 -1 7041
+S
+#7129
+A Linha do Esgoto~
+   Você está numa parte estreita do esgoto.  Abaixo o esgoto continua e ao
+norte está o peitoril.
+~
+71 9 0 0 0 3
+D0
+Você pode ver o lado sul do peitoril.
+~
+~
+0 -1 7115
+D5
+Você vê profundamente para baixo pelo dreno.
+~
+~
+0 -1 7221
+S
+#7190
+Passo-Em-Falso~
+   Você simplesmente pisou na mais azarada posição de todo Mundo de Vitália.
+O resultado de um ato tão tolo deverá ser punido com a morte, você sabe.
+   Com uma aceleração de aproximadamente 9,82 metros por segundo ao quadrado,
+você está agora caindo no Abismo.  O que lhe espera lá embaixo continua sendo
+um mistério.  Adeus mundo cruel.
+~
+71 10 0 0 0 0
+D0
+~
+~
+0 -1 7109
+D1
+~
+~
+0 -1 7108
+D2
+~
+~
+0 -1 7110
+D3
+~
+~
+0 -1 7107
+D4
+~
+~
+0 -1 7113
+S
+$~

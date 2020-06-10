@@ -1,0 +1,528 @@
+#12000
+juiz~
+o juiz~
+Um juiz está assistindo aos jogos atentamente.
+~
+O juiz é um gladiador aposentado e todas as partes expostas de seu corpo
+estão cobertas por feias cicatrizes. Apesar dos anos que já pesam sobre ele,
+permanece sadio e em boa forma.
+~
+2099202 0 0 0 256 0 0 0 100 E
+12 9 2 3d7+140 1d7+4
+2000 13000
+8 8 1
+E
+#12001
+marcador~
+o marcador~
+Um marcador tem um olho em seu cronômetro e o outro em seu bloco de anotações.
+~
+O marcador é um homem jovem com os seus 25 anos e ele estuda atentamente o
+seu bloco de anotações.
+~
+2156546 0 0 0 0 0 0 0 100 E
+7 14 4 3d5+80 1d4+3
+500 2250
+8 8 1
+E
+#12003
+espectador~
+o espectador~
+Um espectador está aqui, assistindo aos jogos.
+~
+O espectador está imundo, meio bêbado e gritando feito um louco.
+~
+2097154 0 0 0 0 0 0 0 -100 E
+5 16 5 2d6+65 2d4+0
+100 900
+6 6 0
+E
+#12004
+nobre homem~
+o homem nobre~
+Um nobre se encontra aqui, parecendo indiferente à tudo.
+~
+O nobre está vestido com roupas caras e luxuosas, e é tido por muitos, como
+sendo muito esnobe, por causa de suas atitudes. Apesar de estar envelhecendo
+e seu cabelo e barba estarem ficando grisalhos, ele continua sendo uma pessoa
+não muito fácil de se domar.
+~
+2099330 0 0 0 16 0 0 0 500 E
+12 9 2 4d6+140 1d7+5
+3500 13000
+8 8 1
+E
+#12005
+escrava~
+a escrava~
+Uma escrava está parada aqui, desejando ser livre.
+~
+Uma jovem muito bonita, que foi capturada ao invés de ser morta, quando as
+legiões Romanas invadiram e dominaram a sua terra.
+~
+2097154 0 0 0 0 0 0 0 0 E
+3 18 7 3d6+30 1d7+0
+10 350
+8 8 2
+E
+#12006
+gladiador~
+o gladiador~
+Há um gladiador parado aqui.
+~
+Um homem com músculos bem definidos e que está fortemente blindado e armado
+até os dentes. Ele vive para combater.
+~
+2097154 0 0 0 0 0 0 0 -250 E
+14 5 0 4d7+150 1d8+6
+700 12500
+8 8 1
+E
+#12007
+condutor~
+o condutor de carruagem~
+Há um condutor de carruagem aqui.
+~
+Você vê um indivíduo pequeno e muito leve cuja vida inteira foi dedicada ao
+seu trabalho com a velocidade e os cavalos.
+~
+2097154 0 0 0 0 0 0 0 100 E
+10 11 2 3d7+120 2d6+1
+1200 9000
+8 8 1
+E
+#12008
+treinador~
+o treinador~
+Há um treinador aqui, repassando as estratégias de último minuto.
+~
+Quando você tenta espiar sobre os seus ombros e ouvir seus resmungos,
+ele mede você de cima embaixo e lhe dá um olhar que faz você sentir
+todos os seus ossos congelarem.
+~
+2099202 0 0 0 0 0 0 0 0 E
+11 10 2 4d5+130 2d6+1
+500 10000
+8 8 1
+E
+#12009
+curandeiro~
+o curandeiro~
+Um curandeiro está parando aqui.
+~
+Você vê um homem jovem, ainda aprendendo sobre curas mágicas, vestindo um
+casaco branco e usando um estetoscópio.
+~
+2099218 0 0 0 16 0 0 0 900 E
+14 7 1 2d7+170 1d7+6
+1500 12000
+8 8 1
+E
+#12010
+herborista jovem~
+a herborista~
+Há uma linda jovem aqui, carregando ervas para ajudar a curar os doentes.
+~
+A herborista é uma jovem dama muito bonita, que tem 22 anos aproximadamente.
+Ela tem olhos marrons profundos e seus cabelos castanhos batem em seus ombros.
+O corpo dela é perfeitamente proporcional e ela tem aproximadamente 1 metro e
+65 centímetros de altura.
+~
+2099330 0 0 0 16 0 0 0 1000 E
+10 11 2 3d4+110 1d7+4
+500 8000
+8 8 2
+E
+#12011
+lojista~
+Titus lojista~
+O lojista de Titus está aqui, prestando atenção em sua loja.
+~
+O lojista é um homem de meia idade, lá pelos seus cinquenta e poucos anos,
+que parece gostar de sua vida pacata. Há uma longa cicatriz que percorre
+seu rosto desde o canto de sua boca até a orelha direita, dando a ele a
+falsa impressão de que ele está sempre sorrindo.
+~
+2156546 0 0 0 272 0 0 0 750 E
+108 0 -2 4d10+400 3d8+12
+5000 80000
+8 8 1
+E
+#12012
+pedinte~
+o pedinte~
+O pobre pedinte se encontra aqui, tentando melhorar sua penosa existência.
+~
+Você vê um homem pequeno e sujo, que não parece muito saudável.  
+~
+2154688 0 0 0 0 0 0 0 250 E
+4 17 6 3d4+40 1d8+0
+100 600
+8 8 1
+E
+#12013
+pajem~
+o pajem~
+Um pajem se encontra aqui, esperando para entregar sua mensagem.
+~
+Você vê um jovem garoto, que parece muito forte e muito rápido.  Ele tem a
+aparência de um estudante.
+~
+2097154 0 0 0 0 0 0 0 0 E
+6 15 4 3d6+75 2d4+1
+0 1600
+8 8 1
+E
+#12014
+queixoso~
+o queixoso~
+O queixoso se encontra aqui, pleiteando por seus direitos.
+~
+Seu estado é lamentável. Absolutamente lamentável.
+~
+2097154 0 0 0 0 0 0 0 0 E
+11 10 2 3d6+140 2d6+3
+1000 12000
+8 8 1
+E
+#12015
+cambista~
+o vendedor de ingressos~
+Um cambista se encontra aqui, olhando esperançosamente para você.
+~
+Ele parece estar esperando que você ou compre um ingresso ou saia do
+caminho para que assim ele possa vender ingressos para as pessoas
+que realmente querem compra-los.
+~
+2099202 0 0 0 0 0 0 0 100 E
+17 4 1 4d8+210 1d6+11
+4000 28000
+8 8 1
+E
+#12016
+vendedor~
+o vendedor do estádio~
+Um vendedor está andando aqui, vendendo caríssimos cachorros-quente e cerveja.
+~
+O vendedor é um homem com aparência desprezível, que não tem medo de uma
+briga e parece que ele já teve mais que suficiente experiencia com
+espectadores bons de discussão.
+~
+2154560 0 0 0 0 0 0 0 -150 E
+8 13 3 2d4+13000 2d5+15
+500 3700
+8 8 1
+E
+#12017
+cidadão~
+o cidadão~
+Um cidadão de Roma está parado aqui.
+~
+Parece ser mais um cidadão comum, se dirigindo para o seu trabalho.
+~
+2099264 0 0 0 0 0 0 0 900 E
+5 16 5 1d4+85 1d8+1
+100 1000
+8 8 1
+E
+#12018
+sentinela guarda~
+o sentinela~
+Um sentinela se encontra aqui, protegendo o portão.
+~
+Você vê um defensor público forte e leal.
+~
+2099222 0 0 0 0 0 0 0 1000 E
+11 10 2 3d6+130 1d6+5
+500 11000
+8 8 1
+E
+#12019
+soldado~
+o soldado~
+Um soldado de folga está andando por aí, a procura de diversão.
+~
+Você vê um membro de uma das legiões de elite do Imperador.  Ele parece ser
+MUITO forte.  Você tem este vago pressentimento de que a diversão dele não
+vai ser uma atividade saudável.
+~
+2099264 0 0 0 0 0 0 0 300 E
+17 4 -1 3d5+220 1d6+9
+1281 28000
+8 8 1
+E
+#12020
+imperador julius caesar~
+Julius Caesar~
+Julius Caesar, o Imperador de Roma, está sentado aqui.
+~
+Você vê um homem que está vestido com as melhores roupas, que comeu a melhor
+das comidas e morou no palácio mais opulento que Roma jamais conheceu.
+~
+2123778 0 0 0 65808 0 0 0 990 E
+27 0 -7 10d5+650 3d7+15
+24763 150000
+8 8 1
+E
+#12021
+guarda-costas~
+o guarda-costas real~
+Há um guarda-costas real aqui, pronto para morrer por seu Imperador.
+~
+O guarda-costas está vestido com o que existe de melhor em armaduras e como
+arma, usa apenas o que de mais mortal existir.  Ele é muito forte e uma
+briga com ele seria um inferno.  Ele foi treinado para suspeitar de tudo e
+de todos, menos das visitas inocentes, e está pronto para atacar aqueles que
+tiverem as menores das intenções.
+~
+2100514 0 0 0 16 0 0 0 990 E
+18 2 0 3d6+220 1d6+6
+5000 35000
+8 8 1
+BareHandAttack: 6
+Str: 18
+StrAdd: 90
+E
+#12022
+juiz justica~
+o juiz~
+Um juiz se encontra aqui, estudando um caso.
+~
+Ele parece estar totalmente interessado pelo caso, talvez você não devesse
+perturbá-lo agora. Quem sabe mais tarde não seria melhor.
+~
+2115586 0 0 0 0 0 0 0 990 E
+21 0 -1 20d5+260 1d7+11
+5000 50000
+6 6 1
+E
+#12023
+mestre programador~
+o mestre programador~
+O mestre programador se encontra aqui, escrevendo em sua agenda.
+~
+Quando você olha para ele, ele fita você por alguns segundos e pergunta, 
+'você tem um horário marcado?'  Ele espera por alguns segundos e então
+pergunta, 'Você gostaria de marcar um?'
+~
+2099202 0 0 0 0 0 0 0 900 E
+17 3 0 4d4+210 1d6+9
+3000 28000
+8 8 1
+E
+#12024
+bola visguenta verde~
+a bola-de-limbo~
+Uma bola de limbo verde está pendurada sobre você, escorrendo para baixo.
+~
+Uma bola verde de lodo escorrendo atraves das paredes.
+~
+2293798 0 0 0 2128 0 0 0 -500 E
+12 9 2 3d4+145 2d6+2
+0 13000
+8 8 2
+BareHandAttack: 9
+Int: 3
+E
+#12025
+mago froboz~
+Froboz~
+Froboz o mago se encontra aqui, praticando em uma nova magia.
+~
+Você vê um homem de meia idade, cujo conhecimento de magia, tanto ofensiva
+quanto defensiva, é lendário. Ele literalmente brilha com uma aura rosada.
+~
+2123794 0 0 0 272 0 0 0 300 E
+23 0 -3 5d10+425 1d8+14
+32000 95000
+8 8 1
+E
+#12026
+titus andronicus~
+Titus Andronicus~
+Titus Andronicus se encontra aqui, polindo suas novas espadas.
+~
+Quando você olha para ele, ele de repente desembainha uma de suas espadas,
+recentemente afiadas e fita você com um olhar furioso!! Caia fora!
+~
+2123826 0 0 0 272 0 0 0 500 E
+24 0 -5 1d5+450 1d8+14
+31000 85000
+8 8 1
+BareHandAttack: 3
+E
+#12027
+senador~
+o senador~
+Um senador se encontra aqui, esperando pela abertura dos debates.
+~
+Ele parece estar muito entendiado e está brincando com uma das pontas de sua
+toga.
+~
+2099202 0 0 0 0 0 0 0 350 E
+10 11 2 3d5+120 2d6+1
+500 9000
+8 8 1
+E
+#12028
+beleguim~
+o beleguim~
+O beleguim se encontra aqui, mantendo ordem no tribunal.
+~
+Ele é um homem muito severo e insiste que o mais absoluto silêncio seja feito
+na sala do tribunal em que ele trabalha. Podem falar apenas os que o juiz
+der permissão.
+~
+2099202 0 0 0 16 0 0 0 900 E
+16 5 1 1d5+200 2d7+4
+1000 24000
+8 8 1
+E
+#12029
+defensora~
+a defensora~
+A defensora se encontra aqui, pleiteando o caso dela.
+~
+Ela parece ser bem organizada e cheia de confiança em si mesma.
+~
+2099202 0 0 0 0 0 0 0 200 E
+11 9 1 3d6+130 2d7+1
+500 11000
+8 8 2
+E
+#12030
+júpiter rei deus~
+Júpiter~
+Júpiter, Rei dos Deuses, cuida de seu reino daqui de cima.
+~
+Ele é o mais forte dos Deuses, e certamente nem um pouco fácil!  Os poderes
+dele transcendem o plano físico, e ele poderia facilmente matar um mortal
+despreparado.
+~
+2353458 0 0 0 330000 0 0 0 1000 E
+107 -60 -60 10d100+19000 15d12+80
+150000 13000000
+8 8 1
+BareHandAttack: 10
+Str: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#12031
+venus deusa~
+Venus~
+Venus, a Deusa da Beleza e da Sabedoria, descansa aqui.
+~
+Venus é provalemente uma das mulheres mais lindas que você já viu, senão
+A MAIS maravilhosa. Apesar de toda esta aparência de pura beleza e perfeição,
+seus poderes são inimagináveis.
+~
+2353170 0 0 0 330000 0 0 0 1000 E
+105 -40 -45 7d100+16500 12d12+60
+80000 8000000
+5 5 2
+BareHandAttack: 12
+Str: 20
+Dex: 20
+Int: 20
+Wis: 20
+Con: 20
+Cha: 25
+E
+#12032
+marte deus~
+Marte~
+Marte, o Deus da Guerra e do Estado, está sentado aqui.
+~
+Marte é um Deus alto, com olhos ardentes e perigosos. O cenho franzido
+dá a ele um ar aterrorizante.
+~
+2353170 0 0 0 67856 0 0 0 1000 E
+103 -40 -40 10d100+14800 15d10+52
+60000 6000000
+6 6 1
+BareHandAttack: 7
+Str: 25
+Dex: 20
+Int: 20
+Wis: 20
+Con: 20
+Cha: 20
+E
+#12033
+mercúrio mensageiro deus~
+Mercúrio~
+Mercúrio, o mensageiro dos Deuses, se encontra aqui.
+~
+Mercúrio é um Deus bonito e jovem e possui um ar malicioso em seu rosto.
+~
+2353170 0 0 0 67600 0 0 0 1000 E
+101 -25 -30 8d20+12300 11d11+45
+40000 3000000
+8 8 1
+BareHandAttack: 13
+Str: 20
+Dex: 25
+Int: 20
+Wis: 20
+Con: 20
+Cha: 23
+E
+#12034
+lojista~
+Froboz lojista~
+O lojista de Froboz está aqui, cuidando de sua loja.
+~
+O lojista é um homem de meia idade, lá pelos seus cinquenta e poucos anos,
+que parece gostar de sua vida pacata. Há uma longa cicatriz que percorre seu
+rosto desde o canto de sua boca até a orelha direita, dando a ele a falsa
+impressão de que ele está sempre sorrindo.
+~
+2123778 0 0 0 272 0 0 0 650 E
+60 0 -2 4d10+400 1d8+14
+5000 80000
+8 8 1
+E
+#12035
+carrasco~
+o carrasco~
+O carrasco se encontra aqui, esperando para torturar alguma pobre alma.
+~
+Você vê um homem forte que está usando um capuz preto que encobre sua face.
+Suas atitudes são muito sádicas e ele claramente adora aquilo que faz.
+~
+2121766 0 0 0 16 0 0 0 -1000 E
+20 1 0 2d6+260 2d2+14
+1000 40000
+8 8 1
+E
+#12036
+padeiro~
+o padeiro~
+O padeiro olha você calmamente, limpando a farinha em seu rosto, com a mão.
+~
+Um gordo e bem apessoado padeiro. Mas você pode ver que ele possui muitas
+cicatrizes em seu corpo.
+~
+2156546 0 0 0 16400 0 0 0 900 E
+108 0 -10 6d10+30000 2d8+22
+2000 80000
+8 8 1
+E
+#12037
+merceeiro~
+o merceeiro~
+Um merceeiro está atrás do balcão, com um olhar ligeiramente impaciente.
+~
+Um merceeiro alto, que consegue carregar dois sacos de trigo, pesando 200
+libras cada um, em seus ombros.
+~
+2156546 0 0 0 16 0 0 0 900 E
+108 0 -10 1d1+30000 2d8+22
+20000 80000
+8 8 1
+E
+$

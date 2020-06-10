@@ -1,0 +1,39 @@
+Name: Cansian
+Pass: teste
+Titl: the Implementor
+Sex : 1
+Levl: 110
+Id  : 1
+Brth: 1591127846
+Plyd: 1176
+Last: 1591483608
+Lmot: 1591129540
+Lnew: 1591483438
+Htwn: 1372
+Host: 127.0.0.1
+Hite: 177
+Wate: 134
+Act : 0 0 0 0
+Aff : 0 0 0 0
+Pref: efghinoqrv d 0 0
+Invs: 101
+Room: 65535
+Hit : 500/500
+Mana : 100/100
+Move: 82/82
+Str : 25/100
+Int : 25
+Wis : 25
+Dex : 25
+Con : 25
+Cha : 25
+Ac  : 100
+Exp : 7000000
+Olc : 0
+Affs:
+63 22 0 42 131072 0 0 0
+0 0 0 0 0 0 0 0
+Alis: 1
+ priv
+ redit $1;3;10;0;q;y
+1

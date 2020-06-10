@@ -1,0 +1,879 @@
+#9200
+chave coringa forma indefinida~
+a chave do Reino Coringa~
+Você vê uma chave com um desenho de forma indefinida no chão.~
+~
+18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 10 1 0 0
+E
+chave desenho forma indefinida~
+A chave tem um desenho com os quatro naipes de um baralho.
+~
+#9201
+chave copas~
+a chave do Reino de Copas~
+Você vê uma chave no chão.~
+~
+18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 10 1 0 0
+E
+chave copas~
+A chave tem um desenho na forma de um naipe de Copas.
+~
+#9202
+chave ouros~
+a chave do Reino de Ouros~
+Você vê uma chave no chão.~
+~
+18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 10 1 0 0
+E
+chave ouros~
+A chave tem um desenho na forma de um naipe de Ouros.
+~
+#9203
+chave espadas~
+a chave do Reino de Espadas~
+Você vê uma chave no chão.~
+~
+18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 10 1 0 0
+E
+chave espadas~
+A chave tem um desenho na forma de um naipe de Espadas.
+~
+#9204
+chave paus~
+a chave do Reino de Paus~
+Você vê uma chave no chão.~
+~
+18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 10 1 0 0
+E
+chave paus~
+A chave tem um desenho na forma de um naipe de Paus.
+~
+#9205
+alabarda valete arma cabo copas lâmina~
+a alabarda do Valete de Copas~
+Você encontra uma arma com um longo cabo e uma lâmina na ponta.~
+~
+5 gjl 0 0 0 an 0 0 0 0 0 0 0
+0 3 4 17
+6 5000 500 10 0
+E
+alabarda cabo lâmina copas~
+Ao examinar de perto esta bela alabarda, você percebe que em todo o 
+seu cabo há um entalhe muito bem feito no formato do naipe de copas.
+~
+#9206
+alabarda valete arma cabo ouros lâmina~
+a alabarda do Valete de Ouros~
+Você encontra uma arma com um longo cabo e uma lâmina na ponta.~
+~
+5 gjl 0 0 0 an 0 0 0 0 0 0 0
+0 3 4 17
+6 5000 500 10 0
+E
+alabarda cabo lâmina ouros~
+Ao examinar de perto esta bela alabarda, você percebe que em todo o
+seu cabo há um entalhe muito bem feito no formato do naipe de ouros.
+~
+#9207
+alabarda valete arma cabo lâmina espadas~
+a alabarda do Valete de Espadas~
+Você encontra uma arma com um longo cabo e uma lâmina na ponta.~
+~
+5 gkl 0 0 0 an 0 0 0 0 0 0 0
+0 3 4 17
+6 5000 500 10 0
+E
+alabarda cabo lâmina espadas~
+Ao examinar de perto esta bela alabarda, você percebe que em todo o
+seu cabo há um entalhe muito bem feito no formato do naipe de espadas.
+~
+#9208
+alabarda valete arma cabo paus lâmina~
+a alabarda do Valete de Paus~
+Você encontra uma arma com um longo cabo e uma lâmina na ponta.~
+~
+5 gkl 0 0 0 an 0 0 0 0 0 0 0
+0 3 4 17
+6 5000 500 10 0
+E
+alabarda cabo lâmina paus~
+Ao examinar de perto esta bela alabarda, você percebe que em todo o
+seu cabo há um entalhe muito bem feito no formato do naipe de espadas.
+~
+#9209
+alabarda valete arma lamina cabo~
+a alabarda do Valete Coringa~
+Você encontra uma arma com um longo cabo e uma lâmina na ponta.~
+~
+5 gjk 0 0 0 an 0 0 0 0 0 0 0
+0 3 4 17
+6 5000 500 10 0
+E
+alabarda cabo lâmina coringa~
+Ao examinar de perto esta bela alabarda, você percebe que em todo o
+seu cabo há um entalhe muito bem feito no formato dos naipes do baralho.
+~
+#9210
+espada rei real copas bela~
+a espada do Rei de Copas~
+Uma bela espada real encontra-se fincada no chão.~
+~
+5 agjlr 0 0 0 an 0 0 0 0 0 0 0
+0 4 6 3
+9 15000 1500 15 0
+E
+espada rei real copas bela~
+A espada parece ser capaz de cortar qualquer coisa. Logo se nota que
+ela pertenceu a um grande Rei!
+~
+#9211
+espada rei real ouros bela~
+a espada do Rei de Ouros~
+Uma bela espada real encontra-se fincada no chão.~
+~
+5 agjlr 0 0 0 an 0 0 0 0 0 0 0
+0 4 6 3
+9 15000 1500 15 0
+E
+espada rei real ouros bela~
+A espada parece ser capaz de cortar qualquer coisa. Logo se nota que
+ela pertenceu a um grande Rei!
+~
+#9212
+espada rei real espadas~
+a espada do Rei de Espadas~
+Uma bela espada real encontra-se fincada no chão.~
+~
+5 agklr 0 0 0 an 0 0 0 0 0 0 0
+0 4 6 3
+9 15000 1500 15 0
+E
+espada rei real espadas~
+A espada parece ser capaz de cortar qualquer coisa. Logo se nota que
+ela pertenceu a um grande Rei!
+~
+#9213
+espada rei real paus~
+a espada do Rei de Paus~
+Uma bela espada real encontra-se fincada no chão.~
+~
+5 agklr 0 0 0 an 0 0 0 0 0 0 0
+0 4 6 3
+9 15000 1500 15 0
+E
+espada rei real paus~
+A espada parece ser capaz de cortar qualquer coisa. Logo se nota que
+ela pertenceu a um grande Rei!
+~
+#9214
+espada rei real coringa~
+a espada do Rei Coringa~
+Uma bela espada real encontra-se fincada no chão.~
+~
+5 agjkr 0 0 0 an 0 0 0 0 0 0 0
+0 4 6 3
+9 15000 1500 15 0
+E
+espada rei real coringa~
+A espada parece ser capaz de cortar qualquer coisa. Logo se nota que
+ela pertenceu a um grande Rei!
+~
+#9215
+chicote copas~
+o chicote do Ás de Copas~
+Um belo chicote foi deixado aqui.~
+~
+5 abgjl 0 0 0 an 0 0 0 0 0 0 0
+2 4 4 2
+3 10000 1000 15 0
+#9216
+chicote ouros~
+o chicote do Ás de Ouros~
+Um belo chicote foi deixado aqui.~
+~
+5 abgjl 0 0 0 an 0 0 0 0 0 0 0
+2 4 4 2
+3 10000 1000 15 0
+#9217
+chicote espadas~
+o chicote do Ás de Espadas~
+Um belo chicote foi deixado aqui.~
+~
+5 abgkl 0 0 0 an 0 0 0 0 0 0 0
+2 4 4 2
+3 10000 1000 15 0
+#9218
+chicote paus~
+o chicote do Ás de Paus~
+Um belo chicote foi deixado aqui.~
+~
+5 abgkl 0 0 0 an 0 0 0 0 0 0 0
+2 4 4 2
+3 10000 1000 15 0
+#9219
+chicote falso~
+o chicote do Falso Ás~
+Um belo chicote foi deixado aqui.~
+~
+5 abgjk 0 0 0 an 0 0 0 0 0 0 0
+2 4 4 2
+3 10000 1000 15 0
+#9220
+florete copas três~
+o florete do Três de Copas~
+Um florete está jogado ali no canto.~
+~
+5 ag 0 0 0 an 0 0 0 0 0 0 0
+0 2 6 3
+3 1000 100 5 0
+#9221
+florete ouros três~
+o florete do Três de Ouros~
+Um florete está jogado ali no canto.~
+~
+5 ag 0 0 0 an 0 0 0 0 0 0 0
+0 2 6 3
+3 1000 100 5 0
+#9222
+florete espadas três~
+o florete do Três de Espadas~
+Um florete está jogado ali no canto.~
+~
+5 ag 0 0 0 an 0 0 0 0 0 0 0
+0 2 6 3
+3 1000 100 5 0
+#9223
+florete paus três~
+o florete do Três de Paus~
+Um florete está jogado ali no canto.~
+~
+5 ag 0 0 0 an 0 0 0 0 0 0 0
+0 2 6 3
+3 1000 100 5 0
+#9224
+florete coringa~
+o florete do Coringa Três ~
+Um florete está jogado ali no canto.~
+~
+5 ag 0 0 0 an 0 0 0 0 0 0 0
+0 2 6 3
+3 1000 100 5 0
+#9225
+punhal sete copas~
+o punhal do Sete de Copas~
+Um punhal em forma de sete foi esquecido aqui.~
+~
+5 ag 0 0 0 ano 0 0 0 0 0 0 0
+0 3 6 14
+2 2000 200 5 0
+#9226
+punhal sete ouros~
+o punhal do Sete de Ouros~
+Um punhal em forma de sete foi esquecido aqui.~
+~
+5 ag 0 0 0 ano 0 0 0 0 0 0 0
+0 3 6 14
+2 2000 200 5 0
+#9227
+punhal sete espadas~
+o punhal do Sete de Espadas~
+Um punhal em forma de sete foi esquecido aqui.~
+~
+5 ag 0 0 0 ano 0 0 0 0 0 0 0
+0 3 6 14
+2 2000 200 5 0
+#9228
+punhal sete paus~
+o punhal do Sete de Paus~
+Um punhal em forma de sete foi esquecido aqui.~
+~
+5 ag 0 0 0 ano 0 0 0 0 0 0 0
+0 3 6 14
+2 2000 200 5 0
+#9229
+punhal sete coringa~
+o punhal do Coringa Sete~
+Um punhal em forma de sete foi esquecido aqui.~
+~
+5 ag 0 0 0 ano 0 0 0 0 0 0 0
+0 3 6 14
+2 2000 200 5 0
+#9230
+manto rei real bordado copas~
+o manto bordado do Rei de Copas~
+Um manto bordado com o brasão do Rei de Copas foi deixado aqui.~
+~
+11 abfjl 0 0 0 ack 0 0 0 0 0 0 0
+0 0 0 0
+10 19000 1900 0 0
+A
+17 -6
+A
+13 10
+#9231
+manto rei real bordado ouros~
+o manto bordado do Rei de Ouros~
+Um manto bordado com o brasão do Rei de Ouros foi deixado aqui.~
+~
+11 abfjl 0 0 0 ack 0 0 0 0 0 0 0
+0 0 0 0
+10 19000 1900 0 0
+A
+17 -6
+A
+13 10
+#9232
+manto rei real bordado espadas~
+o manto bordado do Rei de Espadas~
+Um manto bordado com o brasão do Rei de Espadas foi deixado aqui.~
+~
+11 abfkl 0 0 0 ack 0 0 0 0 0 0 0
+0 0 0 0
+10 19000 1900 0 0
+A
+17 -6
+A
+13 10
+#9233
+manto rei real bordado paus~
+o manto bordado do Rei de Paus~
+Um manto bordado com o brasão do Rei de Paus foi deixado aqui.~
+~
+11 abfkl 0 0 0 ack 0 0 0 0 0 0 0
+0 0 0 0
+10 19000 1900 0 0
+A
+17 -6
+A
+13 10
+#9234
+manto rei real bordado coringa~
+o manto bordado do Rei Coringa~
+Um manto bordado com o brasão do Rei Coringa foi deixado aqui.~
+~
+11 abfjk 0 0 0 ack 0 0 0 0 0 0 0
+0 0 0 0
+10 19000 1900 0 0
+A
+17 -6
+A
+13 10
+#9235
+brinco dama copas~
+um brinco da Dama de Copas~
+Um brinco brilha mesmo na ausência da luz aqui no chão~
+~
+9 abgjl 0 0 0 aq 0 0 0 0 0 0 0
+0 0 0 0
+1 10000 1000 10 0
+A
+17 -2
+A
+19 1
+A
+6 1
+#9236
+brinco dama ouros~
+um brinco da Dama de Ouros~
+Um brinco brilha mesmo na ausência da luz aqui no chão~
+~
+9 abgjl 0 0 0 aq 0 0 0 0 0 0 0
+0 0 0 0
+1 10000 1000 10 0
+A
+17 -2
+A
+19 1
+A
+6 1
+#9237
+brinco dama espadas~
+um brinco da Dama de Espadas~
+Um brinco brilha mesmo na ausência da luz aqui no chão~
+~
+9 abgkl 0 0 0 aq 0 0 0 0 0 0 0
+0 0 0 0
+1 10000 1000 10 0
+A
+17 -2
+A
+19 1
+A
+6 1
+#9238
+brinco dama paus~
+um brinco da Dama de Paus~
+Um brinco brilha mesmo na ausência da luz aqui no chão~
+~
+9 abgkl 0 0 0 aq 0 0 0 0 0 0 0
+0 0 0 0
+1 10000 1000 10 0
+A
+17 -2
+A
+19 1
+A
+6 1
+#9239
+brinco dama coringa~
+um brinco da Dama Coringa~
+Um brinco brilha mesmo na ausência da luz aqui no chão~
+~
+9 abgjk 0 0 0 aq 0 0 0 0 0 0 0
+0 0 0 0
+1 10000 1000 10 0
+A
+17 -3
+A
+19 1
+A
+6 1
+#9240
+colar dama lindo copas~
+o colar da Dama de Copas~
+Um lindo colar foi esquecido aqui.~
+~
+11 aijl 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+3 10000 1000 10 0
+A
+9 -3
+A
+17 -4
+A
+18 2
+#9241
+colar dama lindo ouros~
+o colar da Dama de Ouros~
+Um lindo colar foi esquecido aqui.~
+~
+11 aijl 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+3 10000 1000 10 0
+A
+9 -3
+A
+17 -4
+A
+18 2
+#9242
+colar dama lindo espadas~
+o colar da Dama de Espadas~
+Um lindo colar foi esquecido aqui.~
+~
+11 aikl 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+3 10000 1000 10 0
+A
+9 -3
+A
+17 -4
+A
+18 2
+#9243
+colar dama lindo paus~
+o colar da Dama de Paus~
+Um lindo colar foi esquecido aqui.~
+~
+11 aikl 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+3 10000 1000 10 0
+A
+9 -3
+A
+17 -4
+A
+18 2
+#9244
+colar dama lindo coringa~
+o colar da Dama Coringa~
+Um lindo colar foi esquecido aqui.~
+~
+11 aijk 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+3 10000 1000 10 0
+A
+9 -3
+A
+17 -4
+A
+18 2
+#9245
+baú tesouro copas~
+o baú do tesouro de Copas~
+Um belo baú com o Brasão do Rei de Copas está aqui.~
+~
+15 b 0 0 0 0 0 0 0 0 0 0 0
+100 15 9260 0
+500 0 0 0 0
+#9246
+baú tesouro ouros~
+o baú do tesouro de Ouros~
+Um belo baú com o Brasão do Rei de Ouros está aqui.~
+~
+15 b 0 0 0 0 0 0 0 0 0 0 0
+100 15 9261 0
+500 0 0 0 0
+#9247
+baú tesouro espadas~
+o baú do tesouro de Espadas~
+Um belo baú com o Brasão do Rei de Espadas está aqui.~
+~
+15 b 0 0 0 0 0 0 0 0 0 0 0
+100 15 9262 0
+500 0 0 0 0
+#9248
+baú tesouro paus~
+o baú do tesouro de Paus~
+Um belo baú com o Brasão do Rei de Paus está aqui.~
+~
+15 b 0 0 0 0 0 0 0 0 0 0 0
+100 15 9263 0
+500 0 0 0 0
+#9249
+baú tesouro coringa~
+o baú do tesouro Coringa~
+Um belo baú com o Brasão do Rei coringa está aqui.~
+~
+15 b 0 0 0 0 0 0 0 0 0 0 0
+100 15 9264 0
+500 0 0 0 0
+#9250
+arca copas~
+a arca do quarto do Ás de Copas~
+Uma arca de madeira está no canto em harmonia com a decoração do quarto.~
+~
+15 b 0 0 0 0 0 0 0 0 0 0 0
+100 15 9265 0
+500 0 0 0 0
+#9251
+arca ouros~
+a arca do quarto do Ás de Ouros~
+Uma arca de madeira está no canto em harmonia com a decoração do quarto.~
+~
+15 b 0 0 0 0 0 0 0 0 0 0 0
+100 15 9266 0
+500 0 0 0 0
+#9252
+arca espadas~
+a arca do quarto do Ás de Espadas~
+Uma arca de madeira está no canto em harmonia com a decoração do quarto.~
+~
+15 b 0 0 0 0 0 0 0 0 0 0 0
+100 15 9267 0
+500 0 0 0 0
+#9253
+arca paus~
+a arca do quarto do Ás de Paus~
+Uma arca de madeira está no canto em harmonia com a decoração do quarto.~
+~
+15 b 0 0 0 0 0 0 0 0 0 0 0
+100 15 9268 0
+500 0 0 0 0
+#9254
+arca falso~
+a arca do quarto do Falso Ás~
+Uma arca de madeira está no canto em harmonia com a decoração do quarto.~
+~
+15 b 0 0 0 0 0 0 0 0 0 0 0
+100 15 9269 0
+500 0 0 0 0
+#9255
+coroa rainha copas~
+a coroa da Rainha de Copas~
+Uma coroa foi esquecida e está aqui juntando poeira.~
+~
+11 aijl 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+8 10000 1000 10 0
+A
+3 2
+A
+6 3
+A
+17 -6
+#9256
+coroa rainha ouros~
+a coroa da Rainha de Ouros~
+Uma coroa foi esquecida e está aqui juntando poeira.~
+~
+11 aijl 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+8 10000 1000 10 0
+A
+3 2
+A
+6 3
+A
+17 -6
+#9257
+coroa rainha espadas~
+a coroa da Rainha de Espadas~
+Uma coroa foi esquecida e está aqui juntando poeira.~
+~
+11 aikl 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+8 10000 1000 10 0
+A
+3 2
+A
+6 3
+A
+17 -6
+#9258
+coroa rainha paus~
+a coroa da Rainha de Paus~
+Uma coroa foi esquecida e está aqui juntando poeira.~
+~
+11 aikl 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+8 10000 1000 10 0
+A
+3 2
+A
+6 3
+A
+17 -6
+#9259
+coroa rainha coringa~
+a coroa da Rainha Coringa~
+Uma coroa foi esquecida e está aqui juntando poeira.~
+~
+11 aijk 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+8 10000 1000 10 0
+A
+3 2
+A
+6 3
+A
+17 -6
+#9260
+chave tesouro copas~
+a chave do tesouro de Copas~
+A chave do tesouro está jogada no chão.~
+~
+18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+chave tesouro copas~
+Você se esforça e consegue enxergar o desenho muito pequeno no formato do
+naipe de copas.
+~
+#9261
+chave tesouro ouros~
+a chave do tesouro de Ouros~
+A chave do tesouro está jogada no chão.~
+~
+18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+chave tesouro ouros~
+Você se esforça e consegue enxergar o desenho muito pequeno no formato do
+naipe de ouros.
+~
+#9262
+chave tesouro espadas~
+a chave do tesouro de Espadas~
+A chave do tesouro está jogada no chão.~
+~
+18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+chave tesouro espadas~
+Você se esforça e consegue enxergar o desenho muito pequeno no formato do
+naipe de Espadas.
+~
+#9263
+chave tesouro paus~
+a chave do tesouro de Paus~
+A chave do tesouro está jogada no chão.~
+~
+18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+chave tesouro paus~
+Você se esforça e consegue enxergar o desenho muito pequeno no formato do
+naipe de paus.
+~
+#9264
+chave tesouro coringa~
+a chave do tesouro Coringa~
+A chave do tesouro está jogada no chão.~
+~
+18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+chave tesouro coringa~
+Você se esforça e consegue enxergar o desenho muito pequeno no formato dos
+quatro naipes do baralho.
+~
+#9265
+chave esculpida mão~
+uma chave esculpida a mão~
+Uma chave esculpida por mãos muito habilidosas está no chão.~
+~
+18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+esculpida chave mão~
+Mãos habilidosas esculpiram esta chave. Você pode ver a assinatura do 
+Ás de copas!!
+~
+#9266
+chave esculpida mão~
+uma chave esculpida a mão~
+Uma chave esculpida por mãos muito habilidosas está no chão.~
+~
+18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+esculpida chave mão~
+Mãos habilidosas esculpiram esta chave. Você pode ver a assinatura do 
+Ás de Ouros!!
+~
+#9267
+chave esculpida mão~
+uma chave esculpida a mão~
+Uma chave esculpida por mãos muito habilidosas está no chão.~
+~
+18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+esculpida chave mão~
+Mãos habilidosas esculpiram esta chave. Você pode ver a assinatura do 
+Ás de Espadas!!
+~
+#9268
+chave esculpida mão~
+uma chave esculpida a mão~
+Uma chave esculpida por mãos muito habilidosas está no chão.~
+~
+18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+esculpida chave mão~
+Mãos habilidosas esculpiram esta chave. Você pode ver a assinatura do 
+Ás de Paus!!
+~
+#9269
+chave esculpida mão~
+uma chave esculpida a mão~
+Uma chave esculpida por mãos muito habilidosas está no chão.~
+~
+18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+esculpida chave mão~
+Mãos habilidosas esculpiram esta chave. Você pode ver a assinatura do 
+Falso Ás!!
+~
+#9270
+moedas ouro fortuna~
+a fortuna do Rei de Copas~
+Uma fortuna em moedas de ouro está aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+15000 0 0 0
+5 15000 0 0 0
+#9271
+moedas ouro fortuna~
+a fortuna do Rei de Ouros~
+Uma fortuna em moedas de ouro está aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+15000 0 0 0
+5 15000 0 0 0
+#9272
+moedas ouro fortuna~
+a fortuna do Rei de Espadas~
+Uma fortuna em moedas de ouro está aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+15000 0 0 0
+5 15000 0 0 0
+#9273
+moedas ouro fortuna~
+a fortuna do Rei de Paus~
+Uma fortuna em moedas de ouro está aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+15000 0 0 0
+5 15000 0 0 0
+#9274
+moedas ouro fortuna~
+a fortuna do Rei Coringa~
+Uma fortuna em moedas de ouro está aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+15000 0 0 0
+5 15000 0 0 0
+#9275
+moedas ouro economias~
+as economias do Ás de Copas~
+Há algumas moedas de ouro, as economias do Ás de Copas, espalhadas aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+10000 0 0 0
+5 10000 0 0 0
+#9276
+moedas ouro economias~
+as economias do Ás de Ouros~
+Há algumas moedas de ouro, as economias do Ás de Ouros, espalhadas aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+10000 0 0 0
+5 10000 0 0 0
+#9277
+moedas ouro economias~
+as economias do Ás de Espadas~
+Há algumas moedas de ouro, as economias do Ás de Espadas, espalhadas aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+10000 0 0 0
+5 10000 0 0 0
+#9278
+moedas ouro economias~
+as economias do Ás de Paus~
+Há algumas moedas de ouro, as economias do Ás de Paus, espalhadas aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+10000 0 0 0
+5 10000 0 0 0
+#9279
+moedas ouro economias~
+as economias do Falso Ás~
+Há algumas moedas de ouro, as economias do Falso Ás, espalhadas aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+10000 0 0 0
+5 10000 0 0 0
+#9280
+trono menor~
+um trono menor~
+O trono menor, provavelmente da Rainha, parece vazio aqui.~
+~
+15 b 0 0 0 0 0 0 0 0 0 0 0
+100 0 -1 0
+500 0 0 0 0
+$~

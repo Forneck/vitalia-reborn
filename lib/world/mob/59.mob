@@ -1,0 +1,271 @@
+#5900
+raantra~
+Raantra~
+Raantra est� ajoelhado aqui, louvando os c�us.
+~
+Seus olhos est�o fortemente fechados, e seus joelhos sangram abundantemente.
+Em sua m�o direita, ele segura uma faca, apontando-a para os c�us.  Ele
+sussurra algumas palavras e preces que parecem n�o ter sentido.
+~
+2121730 0 0 0 67600 0 0 0 -1000 E
+80 -7 -7 4d10+1840 4d9+16
+1234 176000
+8 8 1
+E
+#5901
+seguidor crente~
+um seguidor~
+Um crente seguidor est� ajoelhado pr�ximo ao seu l�der.
+~
+Ele parece imitar seu l�der.  Seus sujos ferimentos sangram muito.  Ele
+parece n�o tirar os olhos da l�mina que seu l�der aponta aos c�us.
+~
+2127874 0 0 0 67600 0 0 0 -1000 E
+24 9 -3 1d50+450 15d2+14
+978 65000
+8 8 1
+E
+#5902
+corcunda~
+um corcunda~
+Um horrendo corcunda se aproxima do balc�o � sua frente, sangrando abundantemente.
+~
+Ele quase n�o nota sua presen�a devido a toda dor que est� sentido, mas ele
+parece estar tentando falar com voc�.
+~
+2121730 0 0 0 65536 0 0 0 0 E
+15 6 -6 5d20+900 1d10+6
+150 25000
+8 8 1
+E
+#5903
+elfo enjoado~
+um elfo enjoado~
+Um elfo est� sentado pr�ximo � fonte, vomitando descontroladamente.
+~
+Ele olha para voc� com um olhar horrorizado e parece pedir sua ajuda, alguma
+ajuda.
+~
+2326530 0 0 0 16 0 0 0 600 E
+21 8 -3 2d4+250 3d6+12
+1000 29000
+6 6 1
+E
+#5904
+mulher~
+uma mulher~
+Uma mulher anda incessantemente por aqui.
+~
+Ela abra�a os pr�prios bra�os fortemente, como se estivesse com muito frio
+ou amedrontada.  Ela est� extremamente desconfort�vel, parece temer algo.
+~
+2097282 0 0 0 16 0 0 0 -200 E
+12 11 5 3d3+275 3d4+6
+130 23000
+8 8 2
+E
+#5905
+mendigo homem~
+um mendigo~
+Um homem vestido com trapos sujos est� deitado aqui.
+~
+Ele est� extremamente sujo. E seu cheiro... 
+~
+2097286 0 0 0 16 0 0 0 -750 E
+16 8 1 4d6+450 4d3+6
+2000 33000
+8 8 1
+E
+#5906
+crian�a apavorada~
+uma crian�a apavorada~
+Uma crian�a apavorada se expreme em um canto, fugindo de sua luz.
+~
+Ela veste trajes sujos e est� coberta com arranh�es e ferimentos.  Ela n�o
+parece ter mais do que onze anos.
+~
+2097218 0 0 0 0 0 0 0 400 E
+12 13 2 3d9+300 4d1+8
+5 6800
+6 6 1
+E
+#5907
+homem pranto~
+um homem em prantos~
+Um homem sentado pr�ximo a voc� chora incontrolavelmente.
+~
+Ele alterna entre �dio e tristeza - tocando o que sobrou do corpo de seu
+filho, acariciando seus cabelos ensang�entados.
+~
+2097154 0 0 0 65536 0 0 0 100 E
+18 6 -2 6d7+800 5d1+9
+90 32000
+8 8 1
+E
+#5908
+rato~
+um rato~
+Um rato passa rapidamente por tr�s de voc�.
+~
+Um rato comum e desagrad�vel.
+~
+2097220 0 0 0 0 0 0 0 0 E
+8 16 6 2d9+150 1d3+7
+0 3300
+8 8 1
+E
+#5909
+gunter~
+Gunter~
+Gunter est� aqui, pregando a palavra do escolhido.
+~
+Gunter � um pequeno e p�lido homem que parece estar muito doente.  Ele � o
+escolhido, e possui a tarefa de selecionar o pr�ximo escolhido. 
+~
+2158720 0 0 0 606216 0 0 0 -700 E
+41 -4 -10 5d100+2000 6d7+24
+2000 105000
+8 8 1
+E
+#5910
+carrasco homem~
+um carrasco~
+Um homem guarda o corredor � frente. Ele possui um leve ar de esc�rnio.
+~
+Uma horr�vel cicatriz percorre toda a sua face esquerda.  Ele olha para voc�
+e move seu bra�o para cima e para baixo, preparando seu chicote.
+~
+2103298 0 0 0 67600 0 0 0 -1000 E
+25 8 -1 10d8+520 3d5+12
+10000 40000
+8 8 1
+E
+#5911
+homem esfarrapado~
+um homem esfarrapado~
+Um homem esfarrapado est� pr�ximo a um barril com fogo, aquecendo suas m�os.
+~
+Ele foi t�o assolado pela mis�ria que � primeira vista voc� se assusta.
+Voc� repara que o pobre homem, inteiramente coberto de sujeira, possui
+profundas marcas tanto em seu rosto quanto em suas m�os.
+~
+2097154 0 0 0 2064 0 0 0 -300 E
+16 5 1 5d4+210 2d6+4
+5000 24000
+8 8 1
+E
+#5912
+investigador homem~
+um investigador~
+Um homem em um longo manto negro anda lentamente ao redor, resmungando consigo mesmo.
+~
+Seus resmungos n�o s�o coerentes, ele fala em frases confusas e complexas,
+frases que n�o possuem significado.  S�o palavras de algu�m confuso e com
+restri��es em suas faculdades mentais.
+~
+2097216 0 0 0 0 0 0 0 -300 E
+22 11 1 7d10+1400 1d6+10
+500 44000
+8 8 1
+E
+#5913
+seguidora~
+uma seguidora escondida~
+Uma das seguidoras de Raantra est� tentando se esconder nas sombras.
+~
+Ela percebe que voc� a viu, e faz uma leve rever�ncia com a cabe�a.  
+~
+2154498 0 0 0 1656832 0 0 0 -550 E
+40 0 -5 6d12+1650 6d8+3
+800 60000
+8 8 2
+E
+#5914
+morcego marrom~
+um morcego marrom~
+Um morcego mergulha em sua dire��o.
+~
+� dif�cil ter uma boa vis�o dele, mas isso nem importa j� ele est� vindo
+diretamente para sua cabe�a...
+~
+2097314 0 0 0 65552 0 0 0 -400 E
+9 11 3 3d5+175 2d4+4
+0 8000
+8 8 1
+E
+#5915
+aranha tar�ntula~
+uma tar�ntula~
+Uma pequena e pe�onhenta aranha se move pr�xima a voc�.
+~
+Ela n�o parece ser agressiva, nem t�o grande para qualquer ataque.  Por�m �
+uma aranha, desagrad�vel e trai�oeira aranha.
+~
+2097282 0 0 0 65552 0 0 0 -400 E
+9 14 5 3d5+105 2d3+6
+0 2000
+8 8 1
+E
+#5916
+morte cavaleiro entorpecido~
+um entorpecido Cavaleiro da Morte~
+Um Cavaleiro da Morte vaga por a�, parecendo estar estorpecido.
+~
+Parece ser a primeira vez que ele usa sua arma. H� uma fina linha de baba saindo do canto esquerdo de sua boca.  Seus olhos parecem fixos no nada, como se ele estivesse em transe.
+~
+2099254 0 0 0 272 0 0 0 -999 E
+23 8 -1 8d5+700 5d5+12
+600 34000
+8 8 1
+E
+#5917
+homem aventureiro~
+um aventureiro~
+Um homem com trajes de aventura est� aqui, um tanto quanto surpreso com sua presen�a.
+~
+Parece que ele estava tirando um cochilo aonde ele pensava ser seguro.
+~
+2154514 0 0 0 65552 0 0 0 400 E
+26 0 -4 10d8+1800 4d4+22
+1500 100000
+8 8 1
+E
+#5918
+corcunda human�ide~
+um human�ide ensanguentado~
+Um human�ide corcunda coberto com sangue est� aqui.
+~
+Esta desagrad�vel criatura parece querer jogar sangue em voc�.  
+~
+2097314 0 0 0 67648 0 0 0 -800 E
+27 9 0 9d11+2100 2d4+12
+0 58000
+8 8 1
+E
+#5919
+seguidor~
+um seguidor~
+O seguidor est� espancando um garoto, sorrindo maldosamente.
+~
+O seguidor parece ter isso como seu esporte preferido, sua �nica raz�o de
+viver.
+~
+2097282 0 0 0 81920 0 0 0 -900 E
+25 5 -4 8d11+2000 5d3+17
+1078 63000
+8 8 1
+E
+#5920
+garoto p�nico~
+um garoto em p�nico~
+Um garoto em p�nico bate sua cabe�a na escrivaninha. H� sangue por todos os lados.
+~
+Parece que o homem bateu por muito tempo nas costas do garoto.  Ele est�
+perdendo muito sangue...
+~
+2097282 0 0 0 65536 0 0 0 100 E
+10 15 6 3d7+200 1d4+7
+10 4600
+8 8 1
+E
+$

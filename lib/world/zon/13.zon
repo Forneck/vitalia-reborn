@@ -1,0 +1,18 @@
+#13
+Vitalia~
+Residencial Midgaard~
+1300 1399 300 2 0 0 0 -1 -1
+-1
+*
+R 0 1302 1300       retirar o po�o
+O 1 1300 1 1302     recolocar o po�o
+*
+* ajustar portas
+*
+D 0 1310 0 1
+D 0 1311 2 1
+D 0 1320 3 1
+D 0 1321 1 1
+D 0 1322 1 1
+D 0 1323 3 1
+S

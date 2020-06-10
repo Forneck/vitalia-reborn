@@ -1,0 +1,96 @@
+#9100
+galinha biruta~
+a galinha biruta~
+Uma galinha biruta está passeando por aqui.
+~
+Ela parece ter ficado biruta após ter ficado muitos anos no milharal.
+~
+2353186 0 0 0 65872 0 0 0 0 E
+71 -19 -23 20d2+2234 8d3+43
+0 100000
+8 8 2
+BareHandAttack: 8
+Dex: 13
+Int: 13
+Wis: 13
+E
+#9101
+galo insano~
+o galo insano~
+Um galo insano está passeando por aqui.
+~
+Ele parece ter ficado insano após ter ficado muitos anos no milharal.
+~
+2353186 0 0 0 65792 0 0 0 0 E
+72 -20 -25 5d6+3600 9d4+43
+0 100000
+8 8 1
+BareHandAttack: 8
+Dex: 13
+Int: 13
+Wis: 13
+E
+#9102
+porco doido~
+o porco doido~
+Um porco doido está passeando por aqui.
+~
+Ele parece ter ficado doido após ter ficado muitos anos no milharal.
+~
+2353186 0 0 0 65792 0 0 0 0 E
+73 -23 -25 4d4+3520 13d3+40
+0 100000
+8 8 1
+BareHandAttack: 4
+Dex: 13
+Int: 13
+Wis: 13
+E
+#9103
+vaca louca~
+a vaca louca~
+Uma vaca louca está passeando por aqui.
+~
+Ela parece ter ficado louca após ter ficado muitos anos no milharal.
+~
+2353186 0 0 0 65792 0 0 0 0 E
+73 -17 -23 6d4+2500 8d5+39
+0 100000
+8 8 2
+BareHandAttack: 7
+Dex: 13
+Int: 13
+Wis: 13
+E
+#9104
+touro alienado~
+o touro alienado~
+Um touro alienado está passeando por aqui.
+~
+Ele parece ter ficado alienado após ter ficado muitos anos no milharal.
+~
+2353186 0 0 0 65872 0 0 0 0 E
+74 -20 -25 5d4+1200 8d5+42
+0 100000
+8 8 1
+BareHandAttack: 7
+Dex: 13
+Int: 13
+Wis: 13
+E
+#9105
+cavalo maluco~
+o cavalo maluco~
+Um cavalo maluco está passeando por aqui.
+~
+Ele parece ter ficado maluco após ter ficado muitos anos no milharal.
+~
+2353186 0 0 0 65872 0 0 0 0 E
+70 -18 -18 5d8+2500 8d6+30
+0 100000
+8 8 1
+Dex: 13
+Int: 13
+Wis: 13
+E
+$

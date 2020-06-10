@@ -1,0 +1,830 @@
+#2500
+guardião sombras~
+o guardião das sombras~
+Um guardião das sombras berra um desafio e ataca.
+~
+Isto parece ser feito de nada mais que escuridão...
+~
+2357348 0 0 0 526416 0 0 0 -350 E
+9 10 1 9d9+90 2d5+5
+100 4000
+8 8 0
+E
+#2501
+aventureiro~
+o aventureiro perdido~
+Um aventureiro magro e pálido está aqui, parecendo perdido e sem esperanças.
+~
+Ele parece pálido e adoentado; sem dúvida esteve perdido por um bom tempo.
+~
+2097280 0 0 0 2048 0 0 0 400 E
+8 12 6 10d10+10 2d4+4
+286 1500
+6 8 1
+E
+#2502
+edgar~
+Edgar~
+Edgar o Escudeiro Humano está de pé aqui, parecendo bastante perdido.
+~
+Edgar diz 'com licença, você poderia me dizer onde se compram cálices?'
+
+Você vê diante de você, direto da elite guerreira de Midgaard, o poderoso
+exterminador de coelhinhos em pessoa, Edgar o Horrível!
+~
+2097284 0 0 0 2048 0 0 0 1000 E
+1 20 10 3d9+10 1d8+1
+23 100
+8 8 1
+E
+#2503
+diamante golem~
+o golem de diamante~
+Um enorme golem de diamante monta guarda aqui.
+~
+Isto parece bastante forte.
+~
+2353234 0 0 0 2064 0 0 0 500 E
+23 5 -10 23d23+230 3d6+15
+985 15000
+8 8 0
+E
+#2504
+mago jovem~
+o mago~
+Um jovem mago vaga por aí, desatento a tudo.
+~
+Ele parece estar contemplando a vida, o amor e os mistérios do universo.
+Ou então, ele pode apenas estar com dor de cabeça.
+~
+2097344 0 0 0 2064 0 0 0 450 E
+10 10 -1 10d10+100 1d8+8
+436 3500
+8 8 1
+E
+#2505
+strick barman~
+Strick o barman~
+Strick está aqui, levitando bebidas até seus fregueses.
+~
+Ele parece bastante inofensivo, tanto quanto um dragão adormecido parece.
+~
+2154498 0 0 0 2064 0 0 0 750 E
+108 1 -6 1d1+30000 3d7+20
+2000 20000
+8 8 1
+E
+#2506
+tatorious mago~
+Tatorious~
+Tatorious o mago está aqui, calculando seus lucros.
+~
+Tatorious pisca maliciosamente o olho para você.
+~
+2154498 0 0 0 2064 0 0 0 900 E
+108 0 -8 1d1+30000 3d7+21
+5000 24000
+8 8 1
+E
+#2507
+ezmerelda cozinheira~
+Ezmerelda~
+Ezmerelda a cozinheira está aqui, mexendo uma grande panela de alguma coisa.
+~
+Ela não se parece com a cozinheira típica que você encontraria numa cozinha,
+mas ela certamente se encaixa no esperado para uma torre cheia de magos.
+~
+2097154 0 0 0 2064 0 0 0 -500 E
+20 6 -1 20d20+200 3d4+8
+1092 31300
+8 8 2
+E
+#2508
+assistente mago~
+o assistente da cozinheira~
+O assistente da cozinheira está aqui, ajudando-a a cozinhar.
+~
+Este jovem homem está ocupado adicionando estranhos ingredientes à grande
+panela.
+~
+2101442 0 0 0 2064 0 0 0 -200 E
+11 8 1 11d11+110 3d4+4
+116 4600
+8 8 1
+E
+#2509
+prisioneiro~
+o prisioneiro~
+Um prisioneiro está acorrentado à parede desta sala.
+~
+Embora suas roupas estejam em farrapos, você pode discernir que elas devem
+ter sido, algum dia, finas vestimentas.  Uma mordaça de metal foi ajustada
+sobre a boca do pobre miserável, se é para abafar seus gritos, ou para
+impedí-lo de lançar magias, você não tem como saber.
+
+Ele parece estar bastante louco, sem dúvida foi horrivelmente maltratado.
+~
+2097346 0 0 0 0 0 0 0 100 E
+16 6 2 3d30+30 2d4+9
+0 1800
+8 8 1
+E
+#2510
+carcereiro mago~
+O Carcereiro~
+O Carcereiro está aqui, tirando uma confortável soneca.
+~
+Ele está um tanto sujo.
+~
+2097154 0 0 0 2064 0 0 0 100 E
+17 5 -3 17d17+170 3d5+10
+1326 12000
+4 4 1
+E
+#2511
+vassoura~
+a vassoura~
+Uma vassoura de palha está aqui, encostada contra a parede.
+~
+A vassoura grita 'Tome isto, seu boçal!'
+~
+2351218 0 0 0 2128 0 0 0 50 E
+7 10 2 7d7+70 2d4+4
+0 1600
+8 8 0
+E
+#2512
+menores mãos guardiãs~
+o par de mãos sem corpo~
+Um par de mãos sem corpo flutua no ar.
+~
+As mãos estremecem com a antecipação de estrangular alguém.
+~
+2326624 0 0 0 2128 0 0 0 -400 E
+9 7 -5 9d9+90 2d4+5
+0 3100
+8 8 0
+E
+#2513
+guardiões maiores olhos~
+o par de olhos sem corpo~
+Um par de olhos sem corpo flutua, encarando você.
+~
+Os olhos ardem em chams de ódio latente.
+~
+2195552 0 0 0 2128 0 0 0 -600 E
+15 5 -9 15d15+150 3d4+8
+0 9100
+8 8 0
+E
+#2514
+mago visitante~
+o mago~
+Um mago visitante está aqui roncando num pacífico sono.
+~
+Ele parece estar bastante sonolento.
+~
+2097350 0 0 0 2064 0 0 0 250 E
+12 8 -2 12d12+120 2d4+5
+726 6200
+4 4 1
+E
+#2515
+aprendiz jovem~
+a jovem aprendiz de feiticeiro~
+Uma jovem aprendiz de feiticeiro está aqui, realizando estudos mágicos.
+~
+Ela parece estar bastante concentrada em seus estudos.
+~
+2097350 0 0 0 2064 0 0 0 400 E
+7 7 2 7d6+25 2d4+5
+369 2950
+6 6 2
+E
+#2516
+aprendiz jovem~
+o jovem aprendiz~
+Um jovem aprendiz está aqui murmurando palavras mágicas para si mesmo.
+~
+Ele parece ignorar tudo à sua volta, exceto o feitiço que está memorizando.
+~
+2097350 0 0 0 2064 0 0 0 380 E
+7 6 2 7d6+25 2d4+5
+487 2750
+8 8 1
+E
+#2517
+aprendiz jovem~
+o jovem aprendiz~
+Um jovem aprendiz está dormindo aqui.
+~
+
+Ele parece estar sonhando.
+~
+2097350 0 0 0 2064 0 0 0 350 E
+7 7 2 7d6+25 2d4+4
+211 2650
+4 4 1
+E
+#2518
+aprendiz jovem~
+o jovem aprendiz~
+Um jovem aprendiz está aqui provocando um gatinho encurralado.
+~
+Ele parece ser um jovem travesso.
+~
+2097350 0 0 0 2064 0 0 0 -200 E
+7 7 1 7d6+25 2d4+5
+382 2300
+8 8 1
+E
+#2519
+gatinho~
+o pequeno gatinho~
+Um pequeno gatinho está aqui, miando aterrorizado.
+~
+A pequena bola de pêlos parece estar muito infeliz.  Pêlos chamuscados e
+algumas marcas de queimaduras menores marcam sua pelugem mosqueada.
+~
+2097350 0 0 0 2064 0 0 0 500 E
+1 20 1 1d1+10 1d4+1
+0 11
+8 8 2
+E
+#2520
+estudante~
+o estudante~
+Um estudante de magias está aqui, bastante entediado.
+~
+O estudante boceja.
+~
+2097350 0 0 0 2064 0 0 0 350 E
+8 9 1 8d8+80 2d4+6
+263 3000
+6 6 1
+E
+#2521
+instrutor professor mago~
+o instrutor de magia~
+O instrutor grita diante de sua interrupção e lhe ataca.
+~
+Ele parece estar bastante nervoso por ser interrompido por você.
+~
+2097314 0 0 0 2064 0 0 0 300 E
+14 6 -2 14d14+140 3d4+8
+880 18500
+8 8 1
+E
+#2522
+estudante~
+o estudante de magias~
+Um estudante de magias está aqui, tentando dominar a magia invisibilidade.
+~
+Ele pisca, surgindo e voltando a desaparecer, tentando dominar o feitiço.
+~
+2097350 0 0 0 2068 0 0 0 400 E
+8 8 -2 8d8+80 2d4+6
+198 2200
+8 8 1
+E
+#2523
+professor mago~
+o professor de magias~
+Um professor de magias grita diante de sua interrupção e lhe ataca.
+~
+An undefined string.
+~
+2097314 0 0 0 2064 0 0 0 300 E
+15 5 -4 15d15+150 3d4+9
+1256 20500
+8 8 1
+E
+#2524
+estudante~
+a estudante de magias~
+Uma estudante de magias adormeceu sobre sua mesa de trabalho.
+~
+Ela parece não ter resistido ao tédio absoluto.
+~
+2097350 0 0 0 2064 0 0 0 400 E
+9 11 -2 9d9+90 2d4+7
+567 3800
+4 4 2
+E
+#2525
+mago orador~
+o mago~
+Um velho mago está aqui, fazendo um discurso.
+~
+An undefined string.
+~
+2097350 0 0 0 2064 0 0 0 400 E
+18 4 -5 18d18+180 3d4+8
+2468 31000
+8 8 1
+E
+#2526
+mago jovem~
+o jovem mago~
+Um jovem mago está aqui, aprendendo combate corpo-a-corpo.
+~
+An undefined string.
+~
+2097350 0 0 0 2064 0 0 0 300 E
+9 11 -1 9d9+90 2d4+8
+695 3800
+8 8 1
+E
+#2527
+senhora batalha~
+a senhora de batalha~
+A senhora de batalha está aqui, ensinando os belos usos de uma adaga.
+~
+Ela parece bastante robusta. De fato, ela se parece mais com uma guerreira
+do que com uma maga.
+~
+2164898 0 0 0 2064 0 0 0 200 E
+17 2 -2 17d17+170 3d5+8
+3211 23050
+8 8 2
+E
+#2528
+mago professor~
+o professor de magia~
+Um professor de magia está aqui, relaxando.
+~
+An undefined string.
+~
+2097218 0 0 0 2064 0 0 0 200 E
+15 5 1 15d15+150 3d4+4
+1002 15800
+5 5 1
+E
+#2529
+mago~
+o mago idoso~
+Um mago idoso está dormindo aqui.
+~
+Sonhos de magia e poder provavelmente estão fluindo por sua mente neste
+exato momento, é melhor não acordá-lo.
+~
+2097376 0 0 0 2064 0 0 0 350 E
+20 5 -5 20d20+200 3d4+9
+1567 37500
+4 8 1
+E
+#2530
+escrivão mago~
+o escrivão~
+Um escrivão está aqui, trabalhando em alguns manuscritos.
+~
+An undefined string.
+~
+2097350 0 0 0 2064 0 0 0 400 E
+14 6 -1 14d14+140 3d4+4
+312 14850
+8 8 1
+E
+#2531
+escrivã maga~
+o escrivã~
+Uma escrivã está aqui, trabalhando diligentemente em algumas traduções.
+~
+Ela é muito bonita.  Pena que seus únicos interesses pareçam ser as palavras
+de conhecimento que ela está traduzindo.
+~
+2097350 0 0 0 2064 0 0 0 500 E
+15 6 -1 15d15+150 2d4+10
+684 16550
+8 8 2
+E
+#2532
+mestre escrivão~
+o Mestre Escrivão~
+O Mestre Escrivão está aqui, parecendo um pouco nervoso.
+~
+Ele parece ser tão velho, que sua pele já não é nada senão uma ruga gigante.
+O mestre escrivão grita 'Como ousas interromper meu trabalho de suma
+importância???'
+~
+2097378 0 0 0 2064 0 0 0 100 E
+22 4 -5 22d22+220 3d5+8
+5634 29500
+8 8 1
+E
+#2533
+assistente escrivão~
+o assistente do escrivão~
+O assistente do escrivão está aqui, dobrando pergaminhos.
+~
+An undefined string.
+~
+2097378 0 0 0 2064 0 0 0 100 E
+16 6 -2 16d16+160 3d4+6
+1050 21300
+8 8 1
+E
+#2534
+mestre encantador mago~
+o Encantador~
+O Encantador está aqui, lançando um encantamento sobre uma espada muito bem
+forjada.
+~
+An undefined string.
+~
+2097314 0 0 0 2064 0 0 0 -200 E
+23 4 -5 23d23+230 3d5+6
+6812 30500
+8 8 1
+E
+#2535
+espada dançarina~
+a espada dançarina~
+Uma espada belamente forjada repousa sobre a mesa de trabalho.
+~
+Isto parece bastante afiado.
+~
+2353314 0 0 0 2064 0 0 0 -500 E
+10 1 -10 10d10+100 3d5+5
+0 4000
+8 8 0
+E
+#2536
+alquimista~
+o Alquimista Louco~
+O Alquimista Louco murmura algo incompreensível e ataca.
+~
+Ele parece já ter bebido poções demais.  Seus olhos agitados fixam-se em
+vários pontos ao acaso e ele começa a babar.
+
+O Alquimista Louco joga sua cabeça para trás e gargalha com uma alegria
+repleta de insanidade!
+~
+2097378 0 0 0 2064 0 0 0 150 E
+24 4 -4 24d24+240 3d5+10
+2346 31500
+8 8 1
+E
+#2537
+mestre convocador~
+o Mestre Convocador~
+O Mestre Convocador está aqui, mantendo abertos portais para outros planos.
+~
+An undefined string.
+~
+2097378 0 0 0 2064 0 0 0 -200 E
+22 5 -2 22d22+220 3d5+6
+1019 27050
+8 8 1
+E
+#2538
+mestre encantador~
+o Mestre Encantador~
+O Mestre encantador profere as palavras 'uuuzzldctz'.
+~
+O Mestre Encantador mede você de cima a baixo, sempre procurando por um
+novo bichinho de estimação.
+~
+2097186 0 0 0 2064 0 0 0 -400 E
+23 4 -4 23d23+230 3d5+10
+4672 31050
+8 8 1
+E
+#2539
+golem madeira~
+o golem de madeira~
+Um golem de madeira permanece em vigília silenciosa, guardando as escadas.
+~
+Ele parece inflamável.
+~
+2355298 0 0 0 2064 0 0 0 100 E
+16 7 -5 16d16+160 1d10+10
+1000 17500
+8 8 0
+E
+#2540
+mestre vinculador~
+o Mestre Vinculador~
+O Mestre Vinculador está aqui, recarregando uma varinha enegrecida.
+~
+O Mestre Vinculador rosna para você e ataca.
+~
+2097378 0 0 0 2064 0 0 0 -500 E
+23 5 -4 23d23+230 3d5+8
+2315 30500
+8 8 1
+E
+#2541
+mestre criador~
+o Criador de Golem~
+O Criador de Golem está aqui, cinzelando uma peça de pedra.
+~
+An undefined string.
+~
+2097314 0 0 0 2064 0 0 0 300 E
+21 6 -2 21d21+210 3d5+5
+2678 26850
+8 8 1
+E
+#2542
+golem granito~
+o golem de granito~
+Um golem de granito está de pé aqui, esperando pelas ordens de seu mestre.
+~
+Isto mais lhe parece uma estátua, até você ver que ele se anda,
+desajeitado, em sua direção.
+~
+2355298 0 0 0 2064 0 0 0 300 E
+20 7 -6 20d20+200 4d5+10
+0 25600
+8 8 0
+E
+#2543
+golem bronze~
+o golem de bronze~
+Um golem de bronze está de pé aqui, brilhando com a luz que recebe.
+~
+Ele parece ser pouco inteligente.
+~
+2355298 0 0 0 2064 0 0 0 350 E
+18 8 -3 18d18+180 4d5+5
+0 22350
+8 8 0
+E
+#2544
+golem carne~
+o golem de carne~
+Um golem de carne monta guarda por aqui.
+~
+Isto parece ser feito de um potpourri de diferentes partes de corpos;
+algumas nem chegam a lembrar qualquer coisa humana.
+~
+2355298 0 0 0 2064 0 0 0 200 E
+12 9 -1 12d12+120 4d4+4
+0 8520
+8 8 0
+E
+#2545
+golem pano~
+o golem de pano~
+Um golem de pano vaga por aqui.
+~
+Isto mais parece uma trouxa de roupa suja, é surpreendente que possa andar.
+~
+2355298 0 0 0 2064 0 0 0 350 E
+8 10 1 8d8+80 3d4+1
+0 2100
+8 8 0
+E
+#2546
+golem adamantite~
+o golem de adamantite~
+Um golem de adamantite está de pé aqui, parecendo muito perigoso.
+~
+Isto parece ser forjado de metal escuro.  Parece forte e durável, embora
+um tanto não-inteligente.
+~
+2355298 0 0 0 2064 0 0 0 350 E
+25 0 -10 25d25+250 3d7+3
+10000 35650
+8 8 0
+E
+#2547
+golem barro~
+o golem de barro~
+Um golem de barro monta guarda aqui.
+~
+An undefined string.
+~
+2355298 0 0 0 2064 0 0 0 200 E
+15 5 -1 15d15+150 4d5+3
+0 18320
+8 8 0
+E
+#2548
+mestre ilusionista mago dragão~
+o Mestre das Ilusões~
+Um enorme dragão de três cabeças multi-colorido rosna para você.
+~
+A imagem de um dragão horrível bruxeleia no ar e, onde antes havia um
+dragão, agora está um homem velho e aparentemente inofensivo.
+~
+2097350 0 0 0 2064 0 0 0 150 E
+21 6 -4 21d21+210 3d5+5
+2345 26450
+8 8 1
+E
+#2549
+necromante mestre~
+o Necromante~
+O Necromante está aqui, erguendo servos mortos-vivos.
+~
+Vestido todo de preto, o Necromante é alto e magro mas, ainda assim, uma
+figura imponente.  Um capuz negro encobre a maior parte de sua face, mas
+dois pontos em brasa, que lhe servem de olhos, podem ser vistos através da
+sombra.  O Necromante grita algumas obscenidades e ordena que seus servos
+ataquem.
+~
+2097378 0 0 0 2064 0 0 0 -950 E
+25 0 -8 25d25+250 3d7+7
+11684 35250
+8 8 1
+E
+#2550
+esqueleto morto-vivo~
+o esqueleto animado~
+Um esqueleto animado grita silenciosamente e ataca.
+~
+Isto não sente dor e o ataca impiedosamente.
+~
+2285730 0 0 0 2064 0 0 0 -500 E
+15 5 -2 15d15+150 3d4+10
+0 16500
+8 8 0
+E
+#2551
+morto-vivo gigante~
+o gigante morto-vivo~
+Um gigante morto-vivo se arrasta em sua direção.
+~
+Esta coisa parece ser o cadáver reanimado de um gigante, criando um enorme
+zumbi.
+~
+2285668 0 0 0 2064 0 0 0 -500 E
+18 5 -4 18d18+180 3d5+10
+0 22000
+8 8 0
+E
+#2552
+bruxa velha feia~
+a bruxa feia~
+Uma bruxa feia está aqui, espionando segredos.
+~
+Ela não tem rosto nenhum, apenas pele branca, muito pertubadora.  De onde
+sua boca deveria estar, vem um repugnante som de riso, que faz sua pele se
+revolver de repulsão.
+~
+2097252 0 0 0 2064 0 0 0 -450 E
+20 5 -2 20d20+200 3d6+5
+2150 26850
+8 8 2
+E
+#2553
+bibliotecário mago~
+o Bibliotecário~
+O Bibliotecário adormeceu sobre sua escrivaninha.
+~
+Ele parece um velho homem, bastante pacífico.
+~
+2097378 0 0 0 2064 0 0 0 450 E
+23 3 -6 23d23+230 3d6+5
+1287 29500
+4 8 1
+E
+#2554
+aprendiz~
+o aprendiz do Mestre~
+O aprendiz do Mestre salta para impedir sua passagem.
+~
+Um poderoso mago por natureza, o aprendiz do mestre do equilíbrio abandonou
+seu posto na hierarquia da guilda dos magos para servir ao Grande Mestre, na
+esperança de encontrar segredos que ninguém jamais esperaria descobrir
+sozinho.
+~
+2097254 0 0 0 2320 0 0 0 0 E
+24 -3 -12 24d24+240 3d6+6
+6723 30750
+8 8 1
+E
+#2555
+gato familiar cinza~
+o gato cinzento~
+Um gato cinzento se espreguiça preguiçosamente.
+~
+O gato cinzento levanta uma orelha em sua direção, sentindo sua observação,
+e ronrona satisfeito.  Parece ser bastante inofensivo, até você notar suas
+garras bem grandes.
+~
+2097218 0 0 0 526352 0 0 0 0 E
+15 5 -5 15d15+150 5d5+5
+0 18750
+8 8 2
+E
+#2556
+mestre cinza~
+o Mestre da Neutralidade~
+O Mestre da Neutralidade está aqui, contemplando o equilíbrio do Universo.
+~
+Ele parece estar em paz.
+~
+2100070 0 0 0 2320 0 0 0 0 E
+30 -10 -20 30d30+300 2d5+20
+15350 150000
+8 8 1
+E
+#2557
+aprendiza negra~
+a aprendiza de robe negro~
+Uma aprendiza vestida de negro pula das sombras e ataca.
+~
+Ela tem uma cicatriz terrível que desce pelo lado de seu rosto, um dia ela
+deve ter sido bela, mas agora a cicatriz, combinada com o que parece ser
+carranca, faz dela uma imagem a se temer.
+~
+2097254 0 0 0 2064 0 0 0 -750 E
+20 2 -6 20d20+200 3d6+6
+13876 27800
+8 8 2
+E
+#2558
+gato preto familiar~
+o gato preto~
+Um gato preto de pêlos arrepiados silva ao ver você.
+~
+Parece ser muito maligno e perigoso.  Afagá-lo parece estar completamente
+fora de questão.
+~
+2097218 0 0 0 526352 0 0 0 -800 E
+16 5 -4 16d16+160 3d7+3
+0 19950
+8 8 0
+E
+#2559
+mestre negro~
+o Mestre dos Mantos Negros~
+O Mestre dos Mantos Negros está aqui, planejando feitos vis.
+~
+O Mestre encara você.
+~
+2100838 0 0 0 2320 0 0 0 -1000 E
+30 -10 -20 30d30+300 2d5+20
+22100 150000
+8 8 1
+E
+#2560
+aprendiz branco~
+o aprendiz de robe branco~
+Um aprendiz vestido de branco grita perante sua profanação da bondade.
+~
+Ele parece um fanático.
+O aprendiz vestido de branco berra 'Tu és indigno desta honra!'
+~
+2097318 0 0 0 2064 0 0 0 750 E
+20 2 -6 20d20+200 3d6+6
+7400 27850
+8 8 1
+E
+#2561
+gato branco familiar~
+o gato branco~
+Um gato branco está aqui, limpando seu pêlo. 
+~
+Parece ser nada mais que uma grande bola de pêlos, com garras.
+~
+2097218 0 0 0 526352 0 0 0 800 E
+15 4 -4 15d8+10 3d7+3
+0 7950
+8 8 0
+E
+#2562
+mestre branco~
+o Mestre da Bondade~
+O Mestre da Bondade está aqui, franzindo o cenho diante de sua intrusão.
+~
+Ele parece um bastardo auto-proclamado símbolo do Bem.
+~
+2100582 0 0 0 2320 0 0 0 1000 E
+30 -10 -20 30d30+300 2d5+20
+21900 150000
+8 8 1
+E
+#2563
+gato morim familiar~
+o gato morim~
+Um grande gato morim está aqui.
+~
+Parece ser incrivelmente grande para um gato, sem dúvida um gigante de sua
+espécie.  Um belo colar engastado de jóias em seu pescoço é seu único
+adorno.
+~
+2113602 0 0 0 526352 0 0 0 0 E
+25 1 -9 25d25+250 5d5+10
+0 30000
+8 8 0
+E
+#2564
+mestra grande soberana~
+a Grande Soberana~
+A Grande Soberana da Magia está sentada aqui.
+~
+Ela parece estar muito confortável em seu trono esmeralda.  Assombrosamente
+jovem e bela para alguém de tamanha estatura na guilda, sem dúvida tal
+beleza vem sendo mantida através do uso de poderosas magias.  A Grande
+Soberana afaga seu familiar e sorri para você em confidência.
+~
+2123846 0 0 0 67856 0 0 0 0 E
+50 -20 -30 50d50+500 3d4+20
+50000 200000
+8 8 2
+E
+$

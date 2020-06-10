@@ -1,0 +1,287 @@
+#6101
+aviso~
+um aviso~
+Uma antiga placa com um aviso está no chão.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+10 2 2 0 0
+E
+aviso~
+Apenas algumas das letras estão legíveis :-
+                _
+      _________| |_________
+     /         | |         \
+    /  CAR.AX  | |  M.STY   \
+    \  M..SI.N | |  SW..P   /
+     \_________| |_________/
+               | |
+
+~
+#6102
+árvore abertura~
+uma árvore colossal~
+Uma árvore colossal bloqueia o caminho para o oeste.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+1000 0 0 0
+0 0 0 0 0
+E
+abertura~
+A abertura é muito apertada para que você possa passar por ela e parece
+que a árvore é oca por dentro.
+~
+E
+árvore~
+Esta árvore gigantesca deve ter pelo menos uns mil anos.   Seu tronco áspero,
+de um cinza pálido, está cheio de arranhões e marcas de garras.   Em seu lado oeste,
+há uma pequenina abertura, um pouco acima do solo.
+~
+#6103
+galho longo cinzento~
+um longo e cinzento galho~
+Um longo e cinzento galho pesado está sobre o chão.~
+~
+1 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 25 0
+20 1 3 0 0
+E
+galho longo cinzento~
+É um galho bastante pesado e parece que ele caiu de grande altura.   Parece
+que ele está há muito tempo sem vida e está bastante seco.   Ele poderia
+facilmente ser aceso com fogo.
+~
+#6104
+galho longo cinzento~
+um longo e cinzento galho~
+Um longo e cinzento galho pesado está sobre o chão.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 6 7
+18 60 20 0 0
+E
+galho longo cinzento~
+É um galho bastante pesado e parece que ele caiu de grande altura.   Ele é
+longo e reto, a madeira é muito dura e ainda está cheio de seiva.   Mesmo
+não sendo muito confortável para segurar, ele poderia fácilmente ser
+usado como uma desajeitada mas bastante potente arma.
+~
+A
+18 -2
+#6105
+galho longo cinzento~
+um longo e cinzento galho~
+Um longo e cinzento galho pesado está sobre o chão.~
+~
+13 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+40 0 0 0 0
+E
+galho longo cinzento~
+É um galho bastante pesado e parece que ele caiu de grande altura.   Ele é
+todo retorcido, a madeira é muito dura e ainda está cheio seiva.
+~
+#6106
+cogumelo venenoso~
+um cogumelo venenoso~
+Um grande cogumelo venenoso cresce por aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+12 0 0 0
+5 20 20 0 0
+E
+cogumelo venenoso~
+É um boletus enorme, amarronzado, que deve pesar por volta de cinco libras.
+Bem em cima, sua superfície está coberta por uma fina camada de um limbo
+transparente, que exala um cheiro desagradável.   Não é a coisa mais apetitosa
+que você já tenha visto.
+~
+#6107
+cogumelo venenoso~
+um cogumelo venenoso~
+Um grande cogumelo venenoso cresce por aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+12 0 0 1
+5 20 20 0 0
+E
+cogumelo venenoso~
+É um boletus enorme, amarronzado, que deve pesar por volta de cinco libras.
+Bem em cima, sua superfície está coberta por uma fina camada de um limbo
+transparente, que exala um cheiro desagradável.   Não é a coisa mais apetitosa
+que você já tenha visto.
+~
+#6108
+moedas ouro~
+um punhado de moedas de ouro~
+Um grande punhado de moedas de ouro estão espalhadas aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+15326 0 0 0
+15 15326 0 0 0
+#6109
+poção azul~
+uma poção azul~
+Uma poção azul foi deixada aqui.~
+~
+10 g 0 0 0 a 0 0 0 0 0 0 0
+15 28 -1 -1
+2 25000 2500 0 0
+E
+poção azul~
+Ela tem uma bonita coloração de um azul profundo e tem cheiro de hortelã.
+~
+#6110
+poção amarelo almiscarada~
+uma poção amarelo-almiscarada~
+Uma poção amarelada foi deixada aqui.~
+~
+10 g 0 0 0 a 0 0 0 0 0 0 0
+15 39 -1 -1
+2 1000 200 0 0
+E
+poção amarelo almiscarada~
+Ela tem um tom profundo de amarelo e um forte perfume adocicado.
+~
+#6111
+escudo redondo grande~
+Um grande escudo redondo~
+Um grande escudo redondo foi deixado aqui.~
+~
+9 0 0 0 0 aj 0 0 0 0 0 0 0
+5 0 0 0
+15 300 800 0 0
+E
+escudo redondo grande~
+Feito de uma madeira muito dura, foi reforçado com bandas de ferro fundido.
+~
+#6112
+coroa ferro~
+uma coroa de ferro~
+Uma coroa de ferro foi deixada aqui no chão.~
+~
+9 g 0 0 0 ae 0 0 0 0 0 0 0
+6 0 0 0
+20 7000 500 0 0
+E
+coroa ferro~
+É uma pesada coroa, do tamanho de uma cabeça humana e feita do mais sólido
+ferro.
+~
+#6113
+cetro ferro~
+um cetro de ferro~
+Um cetro de ferro foi deixado aqui no chão.~
+~
+1 g 0 0 0 ao 0 0 0 0 0 0 0
+0 0 -1 0
+10 5000 700 0 0
+E
+cetro ferro~
+É um pesado cetro feito do mais sólido ferro.
+~
+#6114
+anel ferro~
+um anel de ferro~
+Um anel de ferro foi deixado aqui no chão.~
+~
+11 g 0 0 0 ab 0 0 0 0 0 0 0
+0 0 0 0
+10 5000 500 0 0
+E
+anel ferro~
+É um anel bastante pesado, criado para dedos humanos usarem e feito do mais
+sólido ferro.   Não possui qualquer tipo de decoração e nem precisa.
+~
+A
+17 -4
+A
+9 1
+#6115
+estrela estrela-da-manhã~
+a estrela-da-manhã~
+A estrela-da-manhã está aqui, tomando poeira enquanto se encontra jogada
+no chão.~
+~
+5 g 0 0 0 an 0 0 0 0 0 0 0
+0 2 9 7
+10 15000 2000 0 0
+A
+18 2
+#6116
+camisa escamas~
+uma camisa de escamas de dragão negro~
+Uma camisa de escamas de dragão negro, foi deixada aqui.~
+~
+9 g 0 0 0 ad 0 0 0 0 0 0 0
+6 0 0 0
+10 10000 100 0 0
+E
+camisa escama~
+É uma camisa cavada, feita com enormes escamas de dragão negro, adornada
+com fios de prata.   Seu interior foi forrado com a pele macia da barriga de
+um dragão, tornando-a muito confortável de ser usada.   A palavra 'Isha'
+foi gravada em uma de suas escamas.
+~
+#6117
+saia escamas~
+uma saia de escamas de dragão negro~
+Uma saia de escamas de dragão negro foi deixada aqui.~
+~
+9 g 0 0 0 af 0 0 0 0 0 0 0
+6 0 0 0
+8 5000 100 0 0
+E
+saia escamas~
+É uma saia curta, feita com enormes escamas de dragão negro, adornada com
+fios de prata.    Seu interior foi forrado com a pele macia da barriga de
+um dragão, tornando-a muito confortável de ser usada.   A palavra 'Isha'
+foi gravada em uma de suas escamas.
+~
+#6118
+manto negro~
+um manto negro com capuz~
+Um grande manto com capuz, negro como a noite, foi deixado aqui.~
+~
+11 g 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+20 8000 4000 0 0
+E
+manto negro~
+É um pesado manto negro com um grande capuz.   Em seu interior, a palavra
+'Isha' foi bordada, com fios de prata.
+~
+A
+17 -6
+A
+24 -4
+#6119
+cinto prata~
+um largo cinto de prata~
+Um largo cinto de prata foi deixado aqui.~
+~
+9 ag 0 0 0 al 0 0 0 0 0 0 0
+6 0 0 0
+4 5000 3500 0 0
+E
+cinto prata~
+É um largo cinto, feito com pequeninos anéis de prata, costurados juntos.
+~
+#6120
+espada longa delgada fina~
+uma espada longa e delgada~
+Uma espada longa e delgada foi deixada aqui no chão.~
+~
+5 agjl 0 0 0 an 0 0 0 0 0 0 0
+0 3 6 3
+4 30000 6000 0 0
+E
+espada longa delgada fina~
+É uma espada longa e delgada que parece ter sido feita de prata.   A palavra
+'Isha' foi gravada em seu punho.
+~
+A
+18 4
+A
+19 2
+$~

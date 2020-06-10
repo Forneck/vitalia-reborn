@@ -1,0 +1,107 @@
+#13200
+pelicano~
+um pelicano~
+Um pelicano est� aqui, descansando no sol.
+~
+� parecido com qualquer outro pelicano que voc� j� tenha visto...
+~
+2097344 0 0 0 0 0 0 0 0 E
+2 17 8 3d6+15 2d3+3
+0 453
+8 8 1
+BareHandAttack: 4
+E
+#13201
+lontra mar~
+uma lontra do mar~
+Uma lontra do mar est� aqui, se aquecendo no calor do sol.
+~
+Ela � pequena e engra�adinha, apesar de parecer um pouco pegajosa.
+~
+2097344 0 0 0 0 0 0 0 0 E
+3 17 8 3d10+20 4d2+3
+0 764
+6 8 2
+BareHandAttack: 4
+E
+#13202
+gaivota marinha~
+uma gaivota marinha~
+Uma gaivota est� procurando migalhas pelo ch�o.
+~
+Ela � pequena e suja, voc� precisaria de uma boa mira para acerta-la com 
+uma pedra.
+~
+2097344 0 0 0 0 0 0 0 0 E
+3 16 8 9d6+17 2d5+3
+0 567
+8 8 0
+BareHandAttack: 4
+E
+#13203
+guardi�o farol~
+O Guardi�o do Farol~
+O Guardi�o do Farol est� aqui, pronto para ataca-lo.
+~
+Assim que o guardi�o o v� ele resmunga algo sem sentido, e avan�a em sua 
+dire��o, pronto para ataca-lo.
+~
+2119714 0 0 0 0 0 0 0 -200 E
+25 9 1 3d6+500 5d3+11
+550 35678
+8 8 1
+E
+#13204
+prisioneiro~
+um prisioneiro~
+Um prisioneiro est� aqui, se arrastando pelo ch�o.
+~
+Este prisioneiro parece estar h� tanto tempo preso aqui, que j� n�o tem 
+mais for�as nem para andar.
+~
+2113538 0 0 0 0 0 0 0 700 E
+11 13 2 3d6+250 1d8+8
+300 14589
+8 8 1
+E
+#13205
+prisioneira mulher~
+uma prisioneira~
+Uma mulher est� deitada aqui, coberta de sangue.
+~
+Parece que ela j� foi uma mulher muito bonita, entretanto ela est� agora 
+coberta de hematomas e sujeira, e parece que ela foi bastante espancada e 
+depois arrastada na lama.  Assim fica dif�cil de saber como ela era.
+~
+2113538 0 0 0 0 0 0 0 700 E
+11 13 2 3d6+250 1d8+8
+300 14567
+5 8 2
+E
+#13206
+prisioneiro~
+um prisioneiro~
+Um prisioneiro j� sem for�as tenta dizer algo � voc�.
+~
+Este prisoneiro parece ter sido esquecido aqui.  Ele apresenta enormes 
+barbas brancas, e est� muito magro devido � falta de comida.
+~
+2113538 0 0 0 0 0 0 0 800 E
+11 13 2 3d6+280 1d8+8
+300 15363
+8 8 1
+E
+#13207
+prisioneiro~
+um prisioneiro~
+Um prisioneiro est� aqui esticado na cama, esperando para ser torturado.
+~
+Voc� pode ver que ele est� com as m�os e os p�s presos � cama, tremendo 
+intensamente.
+~
+2113538 0 0 0 0 0 0 0 750 E
+13 11 2 3d6+300 1d8+8
+400 19863
+6 6 1
+E
+$

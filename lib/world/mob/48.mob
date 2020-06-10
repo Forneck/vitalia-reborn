@@ -1,0 +1,311 @@
+#4800
+homem rocha obsidiana~
+um homem de rocha obsidiana~
+O muro parece se movimentar, e um homem rocha surge da parede.
+~
+Um enorme bloco de pedra parece ter forma humana. Ele � forte o bastante 
+para explodir qualquer coisa que tente passar por aqui.
+~
+2119730 0 0 0 0 0 0 0 0 E
+45 3 -4 16d17+1450 5d5+20
+2000 79000
+8 8 1
+E
+#4801
+homem p�lido~
+o homem p�lido~
+O homem p�lido observa voc�, formando planos para ataca-lo.
+~
+Ele n�o tem mais de cinco p�s de altura. Por�m com seus guardi�es ao seu 
+lado, n�o necessita de estatura para impressiona-lo. Sua pele � 
+cor-de-leite e seus olhos negros como carv�o. Ele n�o tem nenhum cabelo 
+na cabe�a.
+~
+2353202 0 0 0 0 0 0 0 -900 E
+50 0 -5 20d22+3000 5d9+20
+4978 71000
+8 8 1
+E
+#4802
+m�e aboleth~
+uma m�e aboleth~
+Um aboleth est� rangendo para voc�, na inten��o de devor�-lo com uma bocada.
+~
+Ela parece um peixe gigante e inteligente, com cerca de vinte p�s de 
+comprimento, sua pele � verde azulada com manchas de cor cinza.
+~
+2097186 0 0 0 0 0 0 0 -700 E
+41 5 -4 14d16+1300 3d6+15
+0 59000
+8 8 2
+E
+#4803
+beb� aboleth~
+um beb� aboleth~
+Um beb� aboleth segue sua m�e esperando por uma boa refei��o.
+~
+Ele se parece com sua m�e porem � menor e n�o tem manchas cinza.
+~
+2128002 0 0 0 0 0 0 0 -200 E
+34 8 -3 11d15+1175 3d4+13
+0 39000
+8 8 1
+E
+#4804
+largo morcego~
+um largo morcego~
+Um largo morcego desce do teto para atacar voc�!
+~
+Seus olhos s�o vermelhos como brasas e suas presas est�o prontas para o 
+ataque.
+~
+2103330 0 0 0 0 0 0 0 0 E
+27 8 -1 9d11+1200 2d4+12
+0 39000
+8 8 1
+E
+#4805
+escravo imundo~
+um escravo imundo~
+Um escravo imundo move-se sorrateiramente por voc�, limpando restos no ch�o.
+~
+Ele � um monte de carne podre e sangrenta que n�o tem c�rebro ele sabe 
+apenas trabalhar.
+~
+2097286 0 0 0 0 0 0 0 -100 E
+24 9 0 8d10+1200 2d3+10
+0 20000
+8 8 1
+E
+#4806
+r�ptil carnicento~
+um r�ptil carnicento~
+um r�ptil carnicento rasteja-se pela caverna, pegando tudo que consegue.
+~
+Essa coisa parece um gigante com dentes. Anda de um lado para o outro 
+procurando por restos perdidos em batalhas.
+~
+2099808 0 0 0 0 0 0 0 -400 E
+26 9 0 9d11+950 4d4+11
+0 56000
+8 8 1
+E
+#4807
+beijo morte~
+o beijo da morte~
+O beijo da morte flutua perto de voc�, com seus tent�culos balan�ando.
+~
+Ele parece um contemplador, com varios olhos e tent�culos. Voc� se sente 
+desconfortavel quando encarca um dos olhos.
+~
+2189362 0 0 0 0 0 0 0 -1000 E
+43 3 -4 14d18+2500 4d9+7
+2541 103000
+8 8 1
+BareHandAttack: 16
+E
+#4808
+chefe bugbear~
+o chefe bugbear~
+O chefe bugbear rosnando ferozmente no seu lugar de descanso.
+~
+Essa coisa n�o parece desejar intrusos. Ele � bastante �gil e est� pronto 
+para atacar...
+~
+2226210 0 0 0 0 0 0 0 -400 E
+39 2 -6 13d16+2100 8d6+5
+3180 103000
+8 8 1
+E
+#4809
+l�der bugbear~
+o l�der bugbear~
+O l�der bugbear est� aqui, praticando gritos de guerra.
+~
+Parece que o seu fim est� pr�ximo, ele decidiu matar voc�. Ele parece muito 
+com os outros bugbears por�m mais largo e com presas maiores.
+~
+2226210 0 0 0 0 0 0 0 -700 E
+38 2 -5 13d14+2475 8d5+6
+2651 103000
+8 8 1
+E
+#4810
+bugbear xama~
+o bugbear Xam�~
+O bugbear Xam� olha para voc� com raiva. Voc� o incomodou.
+~
+Parece que esse bugbear sabe ler alguma coisa. Ele est� um Tomo Antigo.
+~
+2127906 0 0 0 0 0 0 0 -900 E
+37 3 -4 12d15+2150 3d5+4
+1876 80000
+8 8 1
+E
+#4811
+criatura profundezas~
+a criatura das profundezas~
+A criatura das profundezas est� sentada no centro da sala olhando para voc�.
+~
+Essa abomina��o da natureza geralmente descansa no escuro, em lugares 
+fedorentos e semelhantes ao inferno. Vive mandando criaturas para a ilha 
+da destrui��o.
+~
+2226210 0 0 0 0 0 0 0 -1000 E
+44 2 -5 16d16+2625 4d5+6
+3687 105000
+8 8 2
+E
+#4812
+feyr dorminhoco~
+um feyr dorminhoco~
+Glup! Voc� trope�ou no feyr dorminhoco.
+~
+Dizem que esta criatura m�stica � nascida das sombras mais profundas e 
+escuras. Ela � uma mistura de todos os horrores existentes na mente dos 
+X'Raantra's.
+~
+2185250 0 0 0 0 0 0 0 -1000 E
+47 2 -5 17d16+2750 6d6+7
+3411 76000
+8 8 1
+E
+#4813
+gargula~
+um g�rgula~
+Uma est�tua de gargula est� apoiada na parede.
+~
+Voc� tem a impress�o de que esta estatua est� viva. Suas garras est�o 
+mesmo se movendo?
+~
+2099234 0 0 0 0 0 0 0 -900 E
+43 3 -4 14d18+1600 4d5+6
+1432 64000
+8 8 1
+BareHandAttack: 8
+E
+#4814
+gargula~
+o g�rgula~
+Um g�rgula extremamente largo descansa em um canto.
+~
+Ele est� curvado, abra�ando os joelhos. Sua cabe�a esta abaixada, de 
+qualquer forma, parece que um dos olhos est� encarando voc�.
+~
+2099234 0 0 0 0 0 0 0 -990 E
+46 3 -4 16d18+1800 4d7+16
+3711 84000
+8 8 1
+BareHandAttack: 8
+E
+#4815
+corcunda~
+um corcunda~
+Um pequeno homem corcunda aponta a espada para voc�.
+~
+Esse uivante, berrador e barulhento corcunda parece amea�ado, de qualquer 
+forma nunca se sabe.
+~
+2127906 0 0 0 0 0 0 0 -500 E
+28 3 -1 9d12+1150 3d4+16
+1089 90000
+8 8 1
+E
+#4816
+monstro~
+o monstro~
+Um enorme monstro faminto bate os p�s e urra encarando voc�.
+~
+Isso parece um giganteso touro com chifres como os de um minotauro.  Na 
+realidade ele � um minotauro, por�m o corpo n�o parece com o de um humano.
+~
+2103330 0 0 0 0 0 0 0 -400 E
+36 3 -4 12d14+1425 5d4+17
+1099 100000
+8 8 1
+BareHandAttack: 6
+E
+#4817
+diabinho~
+um diabinho~
+Um repugnante diabinho cinza estente os bra�os em sua dire��o.
+~
+Ele esta vestido com alguns trapos imundos e esfarrapados, o resto do corpo 
+est� coberto por asquerosos cabelos longos e pretos. A pele � toda cinzenta 
+e escamosa.
+~
+2291746 0 0 0 0 0 0 0 -800 E
+48 3 -4 17d18+2200 5d6+22
+3677 111000
+8 8 1
+E
+#4818
+assombra��o~
+uma assombra��o~
+Uma assombra��o aparece rapidamente tentando assusta-lo!
+~
+Ela � gigantesca, com aproximadamente nove p�s de altura e bastante 
+pesada.  Parece um cruzamento de homem e fantasma, suas garras podem 
+arranhar e causar dor.
+~
+2119730 0 0 0 0 0 0 0 -1000 E
+49 3 -4 17d20+2700 5d7+20
+4211 120000
+8 8 2
+E
+#4819
+monte argila~
+um monte de argila~
+Um monte de argila suga o calor do lugar, inclusive o seu!
+~
+Ele nao � nada mais que um monte de argila marrom no ch�o da caverna, 
+entretanto emana um poder que esta sugando todo o calor deste local.  Est� 
+se movendo constantemente e seus bra�o parecem tent�culos prontos para 
+ferir quem incomoda-lo.
+~
+2103330 0 0 0 0 0 0 0 -200 E
+42 5 -4 14d17+2175 4d7+15
+0 121000
+8 8 1
+E
+#4820
+homem argila~
+um homem de argila~
+Um homem de argila est� em posi��o de ataque, cuidado!
+~
+Ele n�o � t�o largo - tem cerca de quatro p�s de largura, mas n�o aparenta 
+ter muita for�a. Ele deve estar esperando uma oportunidade para atacar.
+~
+2103346 0 0 0 0 0 0 0 -300 E
+35 5 -4 12d13+1800 4d5+13
+1099 80000
+8 8 1
+E
+#4821
+membro bugbear~
+um membro bugbear~
+Um membro bugbear est� vagando por aqui.
+~
+Ele est� coberto com uma pele grossa, suas sobrancelhas sobem e descem 
+deixando-o com uma apar�ncia assustadora.
+~
+2120194 0 0 0 0 0 0 0 -200 E
+31 5 -2 10d1+1500 4d5+12
+1566 70000
+8 8 1
+E
+#4822
+drag�o profundezas~
+o Drag�o das profundezas~
+O Drag�o das profundezas observa voc� com curiosidade.
+~
+Ele provavelmente est� tentando descobrir que tipo de homem tolo entraria 
+no esconderijo de um Drag�o.
+~
+2357298 0 0 0 0 0 0 0 -900 E
+60 2 -7 5d5+2700 5d9+20
+10000 200000
+5 5 1
+BareHandAttack: 8
+E
+$

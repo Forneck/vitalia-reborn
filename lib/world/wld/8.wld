@@ -1,0 +1,757 @@
+#800
+O Começo da Trilha Sinuosa~
+   A floresta vai ficando para trás e você passa pelas ultimas árvores.  De
+repente você observa um enorme e fantasmagórico castelo construído nas
+encostas de um penhasco.  Uma estreita, e sinuosa trilha corta o penhasco em
+direção a entrada do castelo, muitos metros acima de você.  Você pensa ver
+algum movimento na trilha, possivelmente uma pessoa ou duas, mais não tem
+certeza já que parecem estar muito longe.  Suas escolhas parecem ser muito
+limitadas.  Você pode escolher seguir a trilha em frente para o castelo, ou
+voltar para a floresta diminuindo suas chances de viver caso venha a se
+perder.
+~
+8 1 0 0 0 3
+D1
+~
+~
+0 -1 801
+D7
+~
+~
+0 -1 5717
+S
+#801
+A Sinuosa Trilha do Penhasco~
+   A trilha começa muito íngreme, seguindo em direção aos portões do
+castelo.  Você não vê nenhuma luz ou sinal de vida.  Possivelmente é só um
+antigo castelo abandonado.  Possivelmente.
+~
+8 1 0 0 0 3
+D3
+~
+~
+0 -1 800
+D4
+~
+~
+0 -1 802
+S
+#802
+A Sinuosa Trilha do Penhasco~
+   A trilha se direciona para oeste e segue subindo o penhasco em direção ao
+castelo.  Você vê uma grande torre se erguendo a direita da entrada
+principal, protegia por um grande muro separado do resto do castelo.  Você
+percebe que os portões estão fechados, provavelmente trancados.  Ao olhar
+para o ameaçador castelo acima, um tremor corre através de sua alma.  Este
+lugar lhe traz um mal pressentimento.
+~
+8 1 0 0 0 3
+D3
+~
+~
+0 -1 803
+D5
+~
+~
+0 -1 801
+S
+#803
+A Sinuosa Trilha do Penhasco~
+   A trilha segue íngreme, sempre em direção ao castelo acima.  Agora você
+pode ver o topo da torre, onde morcegos circulam constantemente como se a
+tivessem observando, protegendo para algum desconhecido mestre.
+~
+8 1 0 0 0 3
+D1
+~
+~
+0 -1 802
+D4
+~
+~
+0 -1 804
+S
+#804
+A Sinuosa Trilha do Penhasco~
+   A trilha segue para o leste em direção ao castelo, ou para baixo em
+direção a floresta.  Você está agora bem acima da floresta, seguindo pela
+trilha.  Daqui você vê que toda a floresta está anexada junto as enormes
+montanhas, formando uma espécie de prisão na forma de floresta, cheia de
+horrores.  Que lugar mais terrível onde você foi parar!
+~
+8 1 0 0 0 3
+D1
+~
+~
+0 -1 805
+D5
+~
+~
+0 -1 803
+S
+#805
+A Sinuosa Trilha do Penhasco~
+   A trilha segue oeste - leste em direção ao infernal castelo, e oeste na
+direção da terrível floresta.  Você realmente não está com muitas escolhas.
+~
+8 1 0 0 0 3
+D1
+~
+~
+0 -1 806
+D3
+~
+~
+0 -1 804
+S
+#806
+A Sinuosa Trilha do Penhasco~
+   A trilha continua íngreme, curvando e seguindo para os portões do
+castelo.  Você está extremamente acima da floresta, olhando para o topo das
+árvores.  Não que você esteja tão distante - está terrivelmente escuro lá.
+~
+8 1 0 0 0 3
+D3
+~
+~
+0 -1 805
+D4
+~
+~
+0 -1 807
+S
+#807
+A Sinuosa Trilha do Penhasco~
+   A trilha continua a escalar em direção ao castelo, que já está muito mais
+próximo de você.  A oeste se encontra a base de vários degraus de pedras que
+se direcionam para os portões principais do castelo.  A trilha também segue
+para baixo em direção a floresta.
+~
+8 1 0 0 0 3
+D3
+~
+~
+0 -1 808
+D5
+~
+~
+0 -1 806
+S
+#808
+A Sinuosa Trilha do Penhasco~
+   Você chegou ao topo da trilha.  Uma grande escada de pedras, construída
+no penhasco, segue para a entrada principal deste diabólico lugar.  A trilha
+volta para leste, se curvando em direção a floresta.
+~
+8 1 0 0 0 3
+D1
+~
+~
+0 -1 807
+D4
+~
+~
+0 -1 809
+S
+#809
+Os Portões do Castelo~
+   Você está diante dos portões do castelo, uma enorme fronteira de ferro, e
+portas de carvalho que parecem ser fortes o bastante para conter um exército
+inteiro.  Uma escada de pedras segue de volta para a floresta.
+~
+8 0 0 0 0 0
+D0
+~
+portão~
+1 -1 810
+D5
+~
+~
+0 -1 808
+S
+#810
+Um Corredor com Eco~
+   Este amplo corredor de pedra segue para norte em direção a uma larga
+escadaria de pedras.  Suas passadas ecoam por todo o corredor, cada passo
+que você da o faz dar um pulinho, tão alto que parece ter alguém te
+seguindo, alguém que para quando você para, e anda quando você anda, mais
+olhando ao redor você percebe que está se passando por tolo.  A saída deste
+terrível, e morto castelo aparenta ser ao sul.
+~
+8 9 0 0 0 0
+D0
+~
+~
+0 -1 811
+D2
+~
+portão~
+1 -1 809
+S
+#811
+Um Corredor com Eco~
+   Este castelo emite uma estranha presença, um sentimento de ódio de um
+ancião, um antigo ódio que se perdeu com o passar dos séculos.  Tudo a sua
+volta, sinais de desuso são aparentes, você ainda tem o sentimento de que
+este lugar é desabitado.  Teias de aranha por todos os lados, a poeira no
+chão, e todas as mobílias em péssimo estado deviriam dar a impressão de ser
+um lugar abandonado, mesmo assim você tem a sensação oposta.  Grandes
+arcadas seguem para leste e oeste em direção a grande salas, o corredor
+continua para norte e sul.
+~
+8 0 0 0 0 0
+D0
+~
+~
+0 -1 812
+D1
+~
+~
+0 -1 817
+D2
+~
+~
+0 -1 810
+D3
+~
+~
+0 -1 818
+S
+#812
+Um Corredor com Eco~
+   Este longo e gótico corredor segue para norte e sul pelo centro deste
+terrível local.  Um teto, com uma cúpula e diversos entalhos, se eleva bem
+acima de você.  Uma pequena porta de carvalho se dirige para leste, e uma
+grande arcada segue para oeste.
+~
+8 0 0 0 0 0
+D0
+~
+~
+0 -1 813
+D1
+~
+porta~
+1 -1 824
+D2
+~
+~
+0 -1 811
+D3
+~
+~
+0 -1 820
+S
+#813
+Um Corredor com Eco~
+   Para norte segue uma grande escada de pedras em direção ao cume do
+castelo.  Este deve ser o caminho para a torre que você observou fora do
+castelo.  Para leste, um pequeno corredor com um teto muito baixo se adentra
+na escuridão.  Olhando nesta direção você sente um leve arrepio, contudo sem
+saber a razão.  O corredor segue ao norte para as escadas ou para sul em
+direção a entrada (ou saída) do castelo.
+~
+8 8 0 0 0 0
+D0
+~
+~
+0 -1 814
+D1
+~
+~
+0 -1 815
+D2
+~
+~
+0 -1 812
+S
+#814
+a Base das Escadas~
+   A escada em forma espiral segue para cima, se perdendo na altura e
+escuridão.  Você não escuta nenhum som vindo de cima, mas no momento tudo
+parece estar muito quieto.  Você deve seguir subindo as escadas, ou voltar
+para sul em direção aos portões do castelo.
+~
+8 8 0 0 0 0
+D2
+~
+~
+0 -1 813
+D4
+~
+~
+0 -1 838
+S
+#815
+Uma Passagem Estreita~
+   Esta pequena, e restrita passagem segue para leste no que parece ser um
+beco sem saída.  Há somente espaço para uma pessoa se espremer através da
+passagem, e o sentimento que você teve anteriormente se intensifica ao
+adentrar cada vez mais nesta passagem.  Não seria melhor voltar para oeste?
+~
+8 264 0 0 0 0
+D1
+~
+~
+0 -1 816
+D3
+~
+~
+0 -1 813
+S
+#816
+Uma Passagem Estreita~
+   Você chegou no final da passagem.  Não há uma saída aparente para nenhuma
+das direções exceto para oeste, voltando de onde você veio.  Há somente
+espaço para você se virar.
+~
+8 264 0 0 0 0
+D2
+~
+porta~
+1 -1 821
+D3
+~
+~
+0 -1 815
+S
+#817
+Câmara Abobadada~
+   Esta estranha sala vazia possui uma variedade de velha, diferente e
+desconfortável mobília.  As paredes, uma vez pintadas brilhantes, as cores
+vivas agora estão cobertas por tantas camadas de poeira que é difícil dizer
+exatamente onde estava pintado.  Parece que esta sala pode ter sido usada
+para entretenimento de hóspedes anteriormente, mais agora é como todas as
+outras áreas deste lugar - mortas.
+~
+8 8 0 0 0 0
+D3
+~
+~
+0 -1 811
+S
+#818
+Sala de Banquetes~
+   Esta sala lhe traz um sentimento tão terrível, um intenso sentimento de
+horror, que você quase passa mal só de entrar.  As atrocidades que devem ter
+sido cometidas nesta sala, o horror que deve ter sido acometido sobre
+incontáveis vítimas, todo esse sentimento penetra sua alma, os sentimentos
+recebidos das paredes dessa sala.  Uma grande mesa de pedra, grande o
+suficiente para doze pessoas sentadas, está no centro da sala, castiçais de
+prata ainda com cera repousam sobra ela.  Uma varanda se abre para o sul com
+uma larga porta.  A única outra saída daqui é para leste.
+~
+8 8 0 0 0 0
+D1
+~
+~
+0 -1 811
+D2
+~
+~
+0 -1 819
+S
+#819
+A Varanda~
+   A varanda tem aproximadamente vinte pés de largura, e o piso se estende
+por aproximadamente dez pés para a área aberta.  A floresta abaixo de você,
+ainda escura e misteriosa como quando você esteve no interior da mesma, ela
+parece ondular e sair de foco, com a neblina que se agarra no topo das
+árvores.  Não há cadeiras ou nenhum outro tipo de móveis aqui, somente uma
+extensa e aberta superfície de pedra.  Você pode voltar a Sala de Banquetes,
+ao norte daqui.
+~
+8 8 0 0 0 0
+D0
+~
+~
+0 -1 818
+S
+#820
+Uma Sala Vazia~
+   A função desta grande sala lhe é desconhecida.  Ela esta completamente
+vazia, sem qualquer tipo de mobília, ou qualquer tipo de decoração.  As
+paredes tem as mesmas pinturas, que parecem ser sempre as mesmas por todo o
+castelo, mas diferente desses antigos rabiscos não há nada aqui.  A saída
+segue para leste.
+~
+8 9 0 0 0 0
+D1
+~
+~
+0 -1 812
+S
+#821
+O Topo das Escadas~
+   Você esta no topo da grande escadaria.  Não há nenhum tipo de grade pelas
+escadas, mas essas seguem sempre na direção de um dos lados da parede.  O
+outro lado das escadas se abre em uma enorme sala com uma fileira de caixões
+fechado s, todos alinhados perfeitamente.  Na parede ao norte se encontram
+três histórias, desconhecidas, pequenos nichos construídos na parede.  Esses
+nichos se parecem com um grande número de galerias de sepultamentos.  Talvez
+seria uma boa idéia sair desta sala.
+~
+8 9 0 0 0 0
+D0
+~
+porta~
+1 -1 816
+D5
+~
+~
+0 -1 822
+S
+#822
+Uma Grande Escada de Pedras~
+   As escadas seguem para baixo em direção a grande sala, a sala cheia de
+caixões.  Não parece ter ninguém no quarto, pelo menos, ninguém que você
+pode ver.  Entretanto, isso não significa que não há qualquer um aqui.
+~
+8 9 0 0 0 0
+D4
+~
+~
+0 -1 821
+D5
+~
+~
+0 -1 823
+S
+#823
+Uma Grande Escada de Pedras~
+   As escadas continuam poucos metros para baixo, em direção a uma sala que
+se parece com uma câmara de sepultamento ou algo do gênero.  Você tem uma
+sensação muito ruim ao se aproximar destes caixões.  É algo bastante
+ominoso, certamente.
+~
+8 9 0 0 0 0
+D4
+~
+~
+0 -1 822
+D5
+~
+~
+0 -1 827
+S
+#824
+O Poço Negro das Escadas~
+   Um escuro e molhado desfiladeiro de escadas segue para baixo em direção à
+escuridão.  Há uma sensação de desespero pairando sobre essa área do
+castelo, ao mesmo tempo, um senso de tardia e desesperada esperança parecem
+alcançar você.  Iluminando para baixo das escadas, você somente tem a
+confirmação de que elas ainda seguem mais do que você pode ver e adentram na
+escuridão.
+~
+8 9 0 0 0 0
+D3
+~
+porta~
+1 -1 812
+D5
+~
+~
+0 -1 834
+S
+#825
+Galeria Abobadada~
+   Há caixões por todos os lados, mas ao lado norte, a parede esta coberta
+por uma pilha de criptas que atingem o teto.  Este não é, definitivamente, o
+tipo de sala que você gostaria de permanecer muito tempo, pela qual que seja
+a razão.
+~
+8 9 0 0 0 0
+D1
+~
+~
+0 -1 826
+D2
+~
+~
+0 -1 827
+S
+#826
+Câmara Abobadada~
+   A parede repleta de escuros nichos se ergue a sua direita até alcançar o
+teto, os mais altos se escondem na escuridão.  Você tem a sensação de estar
+sendo observado, não importando o lugar que você esteja da sala.
+Estranhamente, essa sensação não parece vir dos caixões que o circundam,
+mais sim de outra parte, não tão obvia assim.
+~
+8 9 0 0 0 0
+D2
+~
+~
+0 -1 828
+D3
+~
+~
+0 -1 825
+S
+#827
+Câmara Abobadada~
+   A presença dos caixões que o circulam é tão grande, que você sente
+necessário segurar seu fôlego nesta sala.  A parede ao norte, cheia de
+nichos de sepultamentos até o topo, parece o fitar, como se estivesse
+observando cada movimento seu, esperando o momento certo.  Uma pequena
+passagem segue para sul, saindo do canto sudoeste da sala.  Uma ampla escada
+se dirige para uma grande porta de carvalho acima.
+~
+8 9 0 0 0 0
+D0
+~
+~
+0 -1 825
+D1
+~
+~
+0 -1 828
+D2
+~
+~
+0 -1 829
+D4
+~
+~
+0 -1 823
+S
+#828
+Câmara Abobadada~
+   A sala parece estar muito tranqüila, mesmo pelo fato de ser uma câmara.
+A pequena, e escura passagem parece o chamar, ela esta a sul de você.  Você
+pensa ter visto um sinal de luz vindo do interior desta passagem...
+~
+8 9 0 0 0 0
+D0
+~
+~
+0 -1 826
+D2
+~
+~
+0 -1 830
+D3
+~
+~
+0 -1 827
+S
+#829
+Câmara Abobadada~
+   Esta enorme câmara de sepultamento não lhe da uma boa sensação que você
+esperava ter desde quando entrou nas florestas abaixo desse castelo.  Os
+vários caixões espalhados, e a intensa escuridão lhe da o sentimento de ter
+que sair deste lugar o mais rápido possível, o MAIS breve possível.
+~
+8 9 0 0 0 0
+D0
+~
+~
+0 -1 827
+D1
+~
+~
+0 -1 830
+S
+#830
+Câmara Abobadada~
+   A pequena passagem continua para sul, e há certamente uma luz de algo
+cintilando nesta direção.  A câmara de sepultamento onde você está,
+encontra-se totalmente aberta e tem uma impressionante vista.  A enorme
+parede, dotada de nichos por toda sua extensão até o topo, deve ter ao menos
+três histórias, possivelmente mais, e o número de caixões que cobrem o
+assoalho passa de vinte.  Isso realmente faz você pensar por que razão
+entrou neste lugar.
+~
+8 9 0 0 0 0
+D0
+~
+~
+0 -1 828
+D2
+~
+~
+0 -1 831
+D3
+~
+~
+0 -1 829
+S
+#831
+Uma Câmara Iluminada por Velas~
+   Nesta pequena câmara há nada mais do que poucas velas, que queimam em
+pequenos suportes presos nas paredes.  Esta sala é como uma ligação para uma
+sala muito maior ao sul daqui.  A câmara abobadada é para o norte.
+~
+8 8 0 0 0 0
+D0
+~
+~
+0 -1 830
+D2
+~
+~
+0 -1 832
+S
+#832
+A Câmara do Soberano~
+   Esta sala é mais escura do que o preto do piche, mais escura do que a
+mais escura das noites.  Um caixão ornado esta junto a parede leste, sobre
+um pedestal.  Um grande trono descansa junto a parede sul, estofado com
+veludo e antigo pelo olhar.  Perto deste há uma pequena mesa, que pode ter
+sido usada para colocar bebidas ou outras coisas.  Fora isso, não parece
+existir nenhum outro tipo de objeto nesta sala.  A saída segue para norte
+através da pequena passagem e volta para a câmara abobadada.
+~
+8 9 0 0 0 0
+D0
+~
+~
+0 -1 831
+D1
+~
+~
+0 -1 833
+S
+#833
+O Caixão do Soberano~
+   Este luxuoso caixão, todo aveludado e muito aconchegante, possuí um fino
+travesseiro como descanso de cabeça.  Isso mostra que o Soberano dormia
+muito bem por aqui.
+~
+8 9 0 0 0 0
+D3
+~
+~
+0 -1 832
+S
+#834
+Uma Esreita Passagem~
+   Essa estreita e pequena passagem de pedra segue para baixo com uma
+pequena distância até um corredor.  Você pode ouvir o som de goteiras de
+água, e as paredes parecem ser úmidas ao toque.  Esta não se parece
+definitivamente uma das mais luxuosas seções do castelo.
+~
+8 9 0 0 0 0
+D4
+~
+~
+0 -1 824
+D5
+~
+~
+0 -1 835
+S
+#835
+Um Escuro Corredor Gotejante~
+   Este pequeno e estreito corredor cheira a mofo e é muito úmido.  Parece
+ter uma saída a sul daqui.  Há uma grande e pesada porta no final do
+corredor.
+~
+8 9 0 0 0 0
+D2
+~
+~
+0 -1 836
+D4
+~
+~
+0 -1 834
+S
+#836
+Um Escuro Corredor Gotejante~
+   Você esta defronte a uma grande porta feita de madeira e tiras de ferro.
+Você não pode ouvir nenhum som através da porta, o que necessariamente não
+significa que não há nada lá.  O corredor úmido e desagradável segue para
+norte em direção às escadarias, e para cima saindo dessa terrível parte do
+castelo.
+~
+8 9 0 0 0 0
+D0
+~
+~
+0 -1 835
+D2
+~
+porta~
+1 -1 837
+S
+#837
+Sala de Tortura~
+   Esta cela, fria e com paredes muito sólidas de pedra, deve ter sido usada
+como um câmara de tortura há muitos anos atrás.  As antigas correntes presas
+na parede e a donzela de ferro onde repousam os mortos, lhe dá toda a
+certeza para confirmar este fato.  Você passa seus dedos por toda a
+superfície polida da donzela de ferro, se matutando de como ela ainda está
+limpa e em bom estado.  Bom, limpa e polida?  Esta donzela de ferro ainda
+está sendo usada!!!
+~
+8 9 0 0 0 0
+D0
+~
+porta~
+1 -1 836
+S
+#838
+Escadas Sinuosas~
+   A escada serpenteia em direção ao topo da torre.  As paredes de pedras de
+ambos os lados servem como corrimões.
+~
+8 9 0 0 0 0
+D4
+~
+~
+0 -1 839
+D5
+~
+~
+0 -1 814
+S
+#839
+Escadas Sinuosas~
+   A escada serpenteia em direção ao topo da torre.  As paredes de pedra de
+ambos os lados servem como corrimões.
+~
+8 9 0 0 0 0
+D4
+~
+~
+0 -1 840
+D5
+~
+~
+0 -1 838
+S
+#840
+Escadas Sinuosas~
+   A escada serpenteia em direção ao topo da torre.  As paredes de pedra de
+ambos os lados servem como corrimões.
+~
+8 9 0 0 0 0
+D4
+~
+~
+0 -1 841
+D5
+~
+~
+0 -1 839
+S
+#841
+A Torre~
+   Esta torre lhe dá uma vista espetacular de toda a floresta e de todo o
+penhasco que o rodeia.  Você olha ao longe, para sudoeste, onde há a Estrada
+Oeste cruzando toda a passagem, acima da elevação sobretudo desta terrível
+escuridão e morte.  No momento que você está aqui examinando a floresta
+abaixo, um estranho sentimento de poder vem até você.  Você sente como se
+toda a floresta abaixo estivesse na ponta se seus dedos, tudo esperando por
+seu comando.  Você balança sua cabeça, podendo ter agora um controle maior
+sobre si mesmo.  Você volta para a sua atual situação e realidade.  A
+fantasia estava muito melhor...
+~
+8 9 0 0 0 0
+D5
+~
+~
+0 -1 840
+S
+$~

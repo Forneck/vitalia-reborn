@@ -1,0 +1,890 @@
+#2300
+acrobata homem~
+um acrobata~
+Um homem corre e salta, torcendo o corpo e dando um salto mortal triplo no ar.
+~
+O �nico momento em que ele para de dar saltos e se contorcer � quando ele corre
+de forma majestosa e firme.  Ele olha para voc� e pisca.
+~
+2140186 0 0 0 65536 0 0 0 100 E
+20 12 2 5d7+600 2d3+10
+550 13385
+8 8 1
+E
+#2301
+malabarista mulher~
+uma malabarista~
+Uma malabarista anda cuidadosamente enquanto faz malabarismos com cinco bolas.
+~
+Ela � t�o boa em sua arte que ela consegue acenar para os transeuntes ao mesmo
+tempo em que manuseia as bolas com perfei��o, sem deixar que nenhuma delas caia
+no ch�o.   Todos ficam extasiados com sua destreza e as crian�as est�o
+extremamente entusiasmadas.
+~
+2127890 0 0 0 67664 0 0 0 600 E
+8 13 2 2d10+100 2d4+5
+400 4500
+8 8 2
+E
+#2302
+bardo m�sico rua~
+um bardo-m�sico de rua~
+Um bardo vagabundeia pelas ruas, tocando seu bandolim lindamente.
+~
+Sua l�mpida voz de tenor mistura-se com precis�o ao som perfeito do seu 
+bandolim, criando uma melodia maravilhosa, que desperta profundos sentimentos
+nos esp�ritos de quem a ouve, tornando o dia mais bonito e mais ensolarado. 
+~
+2128018 0 0 0 65544 0 0 0 500 E
+17 13 0 5d8+600 2d5+9
+63 28000
+8 8 1
+E
+#2303
+menestrel errante~
+uma menestrel errante~
+Uma menestrel errante passa meio sem rumo, elevando sua voz em bonita can��o.
+~
+Ela parece estar hipnotizada por sua pr�pria m�sica - ela canta com os olhos
+fechados, envolvida por profundo emo��o e sensibilidade.
+~
+2111684 0 0 0 65600 0 0 0 500 E
+15 14 -1 4d9+500 2d5+8
+498 16000
+8 8 2
+E
+#2304
+vendedor t�nico homem viajante uniforme~
+o vendedor de t�nicos~
+Um homem vestido com roupas claras de viagem lhe d� as boas-vindas.
+~
+Ele faz sinal para que voc� chegue mais perto, mais perto e mais perto ainda.
+E ent�o ele murmurando, conta para voc� sobre as qualidades impressionantes dos
+t�nicos que transformam um homem burro em um quase g�nio e no outro, que faz
+com que a mulher dos seus sonhos se apaixone perdidamente por voc�. 
+~
+2127956 0 0 0 65648 0 0 0 600 E
+21 11 1 7d9+1200 4d6+11
+3 40000
+8 8 1
+E
+#2305
+Milissin hist�ria contadora~
+Milissin, a Contadora de Hist�ria~
+Milissin est� lendo o antigo Tomo e sua voz vai mudando conforme o personagem.
+~
+Milissin possui o raro talento de conseguir mudar o tom de sua voz sempre que
+quer.   Ela faz sua voz soar como se fosse a voz de algu�m muito mal ou muito
+triste; assustado ou sonolento; feliz ou bondoso, tornando-a uma maravilhosa 
+contadora de hist�rias...talvez A MELHOR DE TODAS!
+~
+2127890 0 0 0 67888 0 0 0 800 E
+22 11 -5 7d10+1400 5d6+12
+45000 43000
+8 8 2
+E
+#2306
+macaco pequeno~
+um pequeno macaco~
+Um pequeno macaco dan�a acompanhando a melodia do bardo.
+~
+Ele est� preso ao bardo por uma fina corda que est� amarrada a uma coleira
+que o macado est� usando.
+~
+2100610 0 0 0 75792 0 0 0 200 E
+6 15 3 4d6+69 2d4+2
+50 1500
+8 8 1
+E
+#2307
+garoto menino crian�a pequeno~
+o pequeno garoto~
+Um pequeno garoto passa correndo, gritando de alegria por estar aqui.
+~
+Ele parece estar em todos os lugares ao mesmo tempo.   Ele est� realmente muito
+feliz e parece uma avalanche cheia de barulhos e movimentos, que ningu�m parece
+conseguir deter!!
+~
+2154496 0 0 0 65616 0 0 0 780 E
+11 10 1 6d3+130 2d6+2
+200 5200
+8 8 1
+E
+#2308
+senhora idosa zayla madame~
+a grandiosa Madame Zayla~
+Uma senhora idosa est� sentada im�vel na escurid�o deste lugar.
+~
+Ela est� com suas m�os cruzadas sobre a mesa.   Ela não est� nem olhando para
+voc� nem desviando o olhar de voc�.   Olhando mais de perto, voc� come�a a 
+pensar que talvez ela seja completamente cega.
+~
+2128146 0 0 0 2384 0 0 0 500 E
+24 9 0 8d10+1400 2d3+14
+150 55000
+8 8 2
+E
+#2309
+mulher quiromante tarot~
+a quiromante~
+Uma mulher sentada no ch�o com um estranho baralho aberto em sua frente.
+~
+Ela est� concentrada nas cartas que est�o diante dela, como se estivesse lendo
+alguma coisa importante ali, pelo modo como est�o arrumadas no ch�o.
+~
+2128146 0 0 0 2384 0 0 0 500 E
+24 9 0 8d10+1400 2d3+14
+150 55000
+6 6 2
+E
+#2310
+dan�arina cigana~
+uma dan�arina cigana~
+Uma dan�arina cigana move-se com a batida da m�sica.
+~
+� dif�cil assistir esta linda mulher adulta dan�ando sem ficar levemente 
+corado.  Por�m, tamb�m � claro que sempre � evidente que o que ela faz � a 
+arte milenar de um povo e deve ser encarada de forma s�ria.
+~
+2126022 0 0 0 8 0 0 0 600 E
+26 9 4 7d10+670 3d8+2
+3000 50000
+8 8 2
+E
+#2311
+dan�arino cigano~
+um cigano~
+Um homem cigano tenta acompanhar o ritmo de sua acompanhante.
+~
+Ele � um maravilhoso dan�arino em todos os sentidos.   Ela � apenas um POUCO
+mais interessante de ser assistida do que ele.
+~
+2125894 0 0 0 0 0 0 0 500 E
+34 2 -2 2d5+1150 5d8+2
+8000 70000
+8 8 1
+E
+#2312
+vendedor comida cigano homem~
+um cigano vendedor de comida~
+Um homem coberto por tatuagens e piercings est� servindo comida aqui.
+~
+O homem canta e fala jovialmente com todos os seus fregu�ses, como se não
+houvesse outro lugar em Vit�lia que ele gostaria de estar.
+~
+2125894 0 0 0 65536 0 0 0 800 E
+22 10 1 4d10+1400 3d6+12
+35 43000
+8 8 1
+E
+#2313
+Jo�ozinho garoto garotinho batedor carteira m�o leve~
+Jo�ozinho, o M�o-Leve~
+Um garotinho pula em cima de voc� e sai correndo em outra dire��o.
+~
+Hmmm....não ficou parecendo que o pequeno batedor de carteiras estava tentando
+aliviar a SUA carteira?  � melhor tentar perguntar para ele quais eram suas
+inten��es.
+~
+2158788 0 0 0 65544 0 0 0 600 E
+12 15 7 3d6+445 3d4+3
+150 40000
+8 8 1
+E
+#2314
+mulher~
+uma mulher~
+Uma mulher est� sentada na grama, assistindo a performance dos artistas.
+~
+Ela parece estar totalmente absorvida pela performance, embora esta não seja
+exatamente muito boa - os atores, definitivamente, não s�o profissionais.
+~
+2126050 0 0 0 65648 0 0 0 600 E
+29 3 -4 5d10+822 4d8+0
+1000 35000
+8 8 2
+E
+#2315
+vendedora mulher cigana~
+a vendedora~
+Uma vendedora anda pela feira, carregando consigo um cesto repleto de comida.
+~
+Ela grita em plenos pulm�es para todos que a escutem possam  vir e comprar
+suas del�cias enquanto os estoques ainda duram.
+~
+2355392 0 0 0 65792 0 0 0 1000 E
+35 2 -5 6d12+1050 5d8+4
+5000 60000
+8 8 2
+E
+#2316
+mendigo andarilho vagabundo~
+um andarilho~
+Um andarilho vaga pela feira, indo a lugar nenhum.
+~
+Ela anda com suas m�os dentro dos bolsos, com uma capa de viagem jogada sobre
+seu ombro esquerdo.   Ele não olha e nem evita ningu�m, simplesmente segue
+com sua aparentemente inofensiva rotina de caminhar.
+~
+2125970 0 0 0 65536 0 0 0 600 E
+25 9 8 8d11+2000 4d4+15
+566 52000
+8 8 1
+E
+#2317
+poeta tronco bardo desafinado~
+um bardo solit�rio~
+Um bardo sentado sobre um tronco de madeira, toca desafinadamente seu ala�de.
+~
+Ele suavemente balan�a seu corpo sobre o toco de madeira, com os olhos fechados
+e murmurando a letra da m�sica que ele toca em seu ala�de.  Deve ser muito bom
+estar t�o concentrado em sua pr�pria m�sica.
+~
+2125970 0 0 0 65536 0 0 0 600 E
+19 12 2 6d9+900 1d6+9
+176 34000
+6 6 1
+E
+#2318
+mulher trovadora flautista~
+uma mulher trovadora~
+Uma mulher sentada � beira do rio, tocando m�sica em uma flauta de bambu.
+~
+A m�sica � suave e aconchegante e sai da flauta como se fosse uma car�cia. Ela
+toca com tamanho sentimento que parece que at� mesmo o vento parou para ouvir 
+sua melodia.
+~
+2125970 0 0 0 0 0 0 0 900 E
+17 13 3 5d8+700 1d5+9
+266 28000
+6 6 2
+E
+#2319
+mulher gata atriz~
+uma atriz~
+Uma mulher vestida como gata est� preparada para entrar em cena.
+~
+A mulher veste uma longa cauda e possui um par de bigodes, que consegue
+fazer at� o mais s�rio dos expectadores rir.   Ela interpreta bem o 
+seu papel.
+~
+2126016 0 0 0 0 0 0 0 500 E
+35 2 -5 5d12+1050 5d8+9
+5000 60000
+8 8 2
+E
+#2320
+ator homem cogumelo~
+um ator~
+um homem vestido como um enorme cogumelo aguarda para recitar sua fala.
+~
+Realmente não � preciso ter muito talento para interpretar o papel de
+um cogumelo, contudo, o homem diz suas falas com muita propriedade
+e firmeza.
+~
+2126016 0 0 0 0 0 0 0 500 E
+35 2 -5 5d12+1050 5d8+7
+5000 60000
+8 8 1
+E
+#2321
+cigana mulher~
+uma cigana~
+Uma cigana est� ajoelhada na beira da �gua, lavando suas roupas.
+~
+Ela cantarola enquanto esfrega e limpa suas roupas, aparentemente
+feliz, com sua vida e completamente satisfeita por estar lavando
+suas roupas no rio.
+~
+2125970 0 0 0 0 0 0 0 500 E
+35 2 -5 5d12+1050 5d8+7
+5000 60000
+6 6 2
+E
+#2323
+cigano ferreiro~
+um cigano ferreiro~
+Um cigano est� aqui, colocando ferraduras em um cavalo.
+~
+Ele n�o � muito alto mas em compensa��o, � bem robusto e muito for�a.    
+Os bra�os dele s�o muito musculosos bronzeados.      
+~
+2158614 0 0 0 0 0 0 0 600 E
+29 3 -4 5d10+822 4d8+8
+1000 35000
+8 8 1
+E
+#2324
+m�mico~
+um m�mico~
+um homem estranho faz m�micas aqui.
+~
+O m�mico silenciosamente gesticula, atuando como se estivesse dentro de uma
+redoma de vidro, distante de tudo e de todos. Realmente n�o h� nada pior que 
+um m�mico, com excess�o talvez de um pol�tico.  Por favor, acabe com o 
+sofrimento deste aqui.      
+~
+2097222 0 0 0 0 0 0 0 -200 E
+18 9 3 3d5+400 2d6+5
+5000 12000
+8 8 1
+E
+#2325
+mulher cigana maquiadora~
+a maquiadora de rostos~
+Uma cigana sorridente pinta os rostinhos das crian�as felizes.
+~
+Ela parece estar verdadeiramente desfrutando do divertimento e da excita��o 
+que cada crian�a exibe ao ter uma face nova � pintada. As crian�as pulam, riem
+e saltam da cadeira dela, rindo em total felicidade.      
+~
+2140186 0 0 0 0 0 0 0 100 E
+26 8 0 9d10+2050 2d4+16
+550 43385
+8 8 2
+E
+#2326
+homem artista~
+o artista descansa~
+Um dos artistas descansa aqui, depois de um agitado desempenho no palco.
+~
+Ele massageia suas pobres pernas cansadas, sentindo fortes c�imbras, 
+consequ�ncia do seu esfor�o no palco.      
+~
+2158738 0 0 0 0 0 0 0 400 E
+20 9 3 3d10+450 3d7+1
+700 40000
+6 6 1
+E
+#2327
+mulher artista~
+a artista descansa~
+Uma mulher está deitada de costas, recuperando sua respiração depois de um ter feito um espetáculo fatigante.
+~
+Ela está olhando para o céu, enquanto recupera seu fôlego, perdida em 
+pensamentos.
+~
+2140186 0 0 0 0 0 0 0 100 E
+20 12 2 5d7+600 2d3+10
+550 43385
+8 8 2
+E
+#2328
+homem cidad�o~
+um cidad�o~
+Um cidad�o caminhando enquanto admira os cen�rios e os sons do festival.  
+~
+Ele caminha a ermo, tentando mostrar que não est� impressionado com as 
+artimanhas do ciganos, por�m seus olhos est�o bem abertos dele e seus ouvidos 
+bem atentos.      
+~
+2128080 0 0 0 256 0 0 0 700 E
+29 7 -3 10d10+2200 2d4+19
+376 74000
+8 8 1
+E
+#2329
+homem camponês~
+um camponês espantado~
+Um camponês com ar espantado caminha pelo festival movimento.  
+~
+Este homem rústico não faz nenhuma tentativa para esconder o fato que ele só vê tantas pessoas reunidas num mesmo lugar quando ele vem para a cidade.
+~
+2123984 0 0 0 0 0 0 0 700 E
+17 13 7 5d8+700 6d5+9
+107 68000
+8 8 1
+E
+#2330
+mulher camponesa~
+uma camponesa~
+Uma camponesa anda atrav�s da multid�o, nauseada com o cheiro do povo. 
+~
+Parece que esta mulher acha que as pessoas � sua volta não est�o no mesmo n�vel
+que ela e que eles deveriam prestar mais aten��o por onde andam.  A maioria 
+deles não est�o nem a� para ela.      
+~
+2123984 0 0 0 0 0 0 0 700 E
+25 2 -3 4d10+950 5d6+4
+5000 60000
+8 8 2
+E
+#2331
+elfo errante~
+um elfo errante~
+Um elfo caminha firme e ereto pelo festival.
+~
+Embora ele pare�a estar desfrutando dos espet�culos e exibi��es do festival, ele mantém uma das m�os em seu punhal, prevenindo-se de qualquer eventual
+surpresa.
+~
+2128084 0 0 0 0 0 0 0 400 E
+20 9 3 3d10+450 3d7+4
+700 40000
+8 8 1
+E
+#2332
+robusta camponesa esposa~
+uma robusta esposa camponesa~
+Uma simp�tica e robusta camponesa anda pelo festival sorrindo calorosamente.
+~
+Ela parece t�o feliz, t�o satisfeita por estar passeando entre as pessoas.    
+Pobrezinha, com certeza ela não deve passear muito.
+~
+2123984 0 0 0 0 0 0 0 700 E
+35 2 -5 5d12+1050 5d8+2
+5000 60000
+8 8 2
+E
+#2333
+homem fazendeiro~
+um fazendeiro~
+Um fazendeiro caminha pelo festival com um olhar de incredulidade em sua face. 
+~
+Este � um homem simples, que parece ser bastante pobre e que com certeza nunca
+conheceu muito da boa vida.  Tudo isto parece ser demais para o coitado.      
+~
+2123984 0 0 0 0 0 0 0 600 E
+29 3 -4 5d10+822 4d8+4
+1000 38000
+8 8 1
+E
+#2334
+esposa fazendeiro mulher~
+a esposa de um fazendeiro~
+Uma mulher com um simples vestido rodado sorridente e maravilhada.  
+~
+Ela olha em todas as dire��es, tentando ver tudo ao mesmo tempo.  
+~
+2123984 0 0 0 0 0 0 0 600 E
+29 3 -4 5d10+822 4d8+2
+1000 35000
+8 8 2
+E
+#2335
+anão saltitante~
+um anão saltitante~
+Um anão correndo em meio � multid�o, dando cambalhotas e saltos mortais. 
+~
+Ele faz todos seus truques dando um pequeno grito e sempre sorrindo. Algumas
+vezes ele inclui as pessoas em seus n�meros, saltando no ar e mergulhando no
+ch�o e passando entre as pernas dos expectadores admirados.      
+~
+2126016 0 0 0 65544 0 0 0 600 E
+18 12 2 6d7+800 1d5+9
+450 31000
+8 8 1
+E
+#2336
+homem perna-de-pau~
+o homem da perna-de-pau~
+Um homem caminha pelo festival sobre imensas pernas-de-pau.
+~
+As pernas-de-pau parecem ser uma extens�o das pr�prias pernas dele.  Ele nunca
+hesita ou d� trope��es.      
+~
+2126016 0 0 0 65544 0 0 0 600 E
+17 13 3 5d8+700 2d5+9
+400 28000
+8 8 1
+E
+#2337
+vadio cigano~
+um cigano vadio~
+Um cigano est� deitado na grama, vadiando, com os bra�os dobrados sob a cabe�a.
+~
+Ele não parece estar nem um pouco incomodado pelo fato de estar deitado bem
+no meio do gramado onde milhares de pessoas caminham sem parar.  Ele descansa  
+tranquilamente, cochilando sem qualquer dor de consci�ncia, enquanto todos 
+parecem estar ocupados, trabalhando duro para ganhar uns cobres.
+~
+2125954 0 0 0 0 0 0 0 600 E
+30 6 -2 10d11+2250 2d5+20
+967 47000
+5 5 1
+E
+#2338
+atirador facas~
+o atirador de facas~
+Um homem vestido com uma t�nica prateada atirando facas largas e curvas.  
+~
+Ele pega as facas, fazendo-as girar t�o r�pido quanto poss�vel e as atira para
+seu companheiro vestido em vermelho, que as atira de volta, num n�mero que 
+arranca aplaudos da plat�ia encantada.      
+~
+2125922 0 0 0 1048832 0 0 0 700 E
+35 2 -5 5d12+1050 5d8+8
+5000 60000
+8 8 1
+E
+#2339
+atirador facas vermelho~
+o atirador de facas de vermelho~
+Um homem vestido com uma t�nica vermelha, atira facas largas e curvas.  
+~
+Enquanto seu companheiro pega e atira as facas girantes para ele, este homem 
+fala animadamente com a multid�o, incentivando-os a atirarem moedas de ouro
+para os dois.      
+~
+2125922 0 0 0 1048832 0 0 0 0 E
+35 2 -5 5d12+1050 5d8+8
+5000 60000
+8 8 1
+E
+#2340
+tratadora~
+a tratadora dos animais~
+Uma mulher cuida dos animais, mantendo um r�gido controle sobre eles.
+~
+A fun��o principal dela � estar segura que estes animais não ir�o prejudir as  
+crian�as que as acariciam.  E isso � exatamente isso que ela faz.      
+~
+2128146 0 0 0 368 0 0 0 1000 E
+24 9 10 8d11+1800 2d3+14
+787 69000
+8 8 2
+E
+#2341
+crian�a pintura le�o~
+uma crian�a com a face pintada de le�o~
+Uma crian�a passa correndo, com seu rosto pintado como um le�o. 
+~
+Ele olha para voc�.  
+Ele sorri maliciosamente e faz: ' Roarrrrr. '  
+~
+2126020 0 0 0 65544 0 0 0 600 E
+10 15 6 3d7+200 1d4+7
+56 4400
+8 8 1
+E
+#2342
+homem ator~
+um ator concentrado~
+Um homem fita o vazio, enquanto murmura bem baixinho suas falas.  
+~
+Ele balan�a sua cabe�a a cada palavra sussurrada, como se estivesse concordando
+com tudo aquilo que ele est� dizendo, preparando-se assim, psicologicamente.
+~
+2125954 0 0 0 65544 0 0 0 600 E
+17 13 7 5d8+700 3d5+9
+460 28000
+8 8 1
+E
+#2343
+atriz concentrada~
+uma atriz concentrada~
+Uma mulher um tanto nervosa, anda de um lado para outro, no palco.  
+~
+Enquanto caminha sem parar, ela murmura para si mesma o qu�o talentosa ela �  
+na arte de cantar e dan�ar, munindo-se assim de auto-confian�a.      
+~
+2125954 0 0 0 65792 0 0 0 500 E
+34 2 -2 2d5+1150 5d9+1
+8000 90000
+8 8 2
+E
+#2344
+crian�a pintura gatinho gato~
+uma crian�a com a face pintada de gato~
+Uma crian�a passa correndo, com seu rosto pintado como um gatinho.
+~
+Ela grita de prazer e corre sem parar de t�o feliz, enquanto mia e ronrona ao  
+mesmo tempo.
+~
+2126020 0 0 0 65544 0 0 0 600 E
+26 9 4 7d10+670 3d8+2
+3000 60000
+8 8 2
+E
+#2345
+crian�a pintura caveira~
+uma crian�a com a face pintada de caveira~
+Uma crian�a com uma face pintada igual a uma caveira olha para voc�.
+~
+� sópintura de face, mas ele parece estar levando o papel dele totalmente  
+a s�rio.      
+~
+2097348 0 0 0 65544 0 0 0 600 E
+26 9 4 7d10+670 3d8+2
+3000 60000
+8 8 2
+E
+#2346
+vendedor cigano~
+o vendedor cigano~
+Um homem dentro de uma carro�a, acena para que voc� veja suas mercadorias.
+~
+Ele � gordo e ruivo, cheio de sardas, e usa um turbante sujo em sua cabe�a.
+Ele veste uma encardida t�nica que perdeu a cor, de tanto uso.      
+~
+2158722 0 0 0 65904 0 0 0 700 E
+22 10 5 7d10+1400 5d6+12
+167 44000
+8 8 1
+E
+#2347
+vendedora cigana mulher~
+a rainha dos tecidos~
+Uma orgulhosa mulher com roupas multi-coloridas est� sentada em sua carro�a. 
+~
+Ela oferece ' a melhor mercadoria do mundo', coisas t�o ex�ticas que somente 
+podem ser encontradas do outro lado do mundo.  Ser�o falsifica��es apenas? 
+~
+2158722 0 0 0 65904 0 0 0 700 E
+22 10 5 7d10+1400 4d6+12
+230 43000
+8 8 2
+E
+#2348
+bijouterias vendedora mulher~
+a vendedora de bijouterias~
+Uma mulher cheia de bijouterias acena para que voc� se aproxime. 
+~
+Ela o incita a dar uma boa olhada em suas bonitas mercadorias, tudo a um pre�o
+que não pode ser desprezado e muito especial para voc� - mas � sóhoje, 
+aproveite agora mesmo!      
+~
+2158722 0 0 0 368 0 0 0 700 E
+22 10 5 7d10+1400 4d6+12
+657 43000
+8 8 2
+E
+#2349
+mestre marionete boneco~
+o mestre das marionetes~
+O mestre das marionetes faz suas pequenas criaturas dan�arem comicamente. 
+~
+Ele olha para a plat�ia, de tempos em tempos, para ter certeza de que seu 
+p�blico est� desfrutando o espet�culo, mas a maior parte do tempo, este
+homem com nariz de rato parece concentrado no pr�prio trabalho.      
+~
+2128146 0 0 0 2384 0 0 0 0 E
+24 9 0 8d10+1400 2d3+14
+150 25000
+8 8 1
+E
+#2350
+cavalo robusto~
+um cavalo robusto~
+Um cavalo robusto pacientemente espera por suas ferraduras.
+~
+De vez em quando, pode-se ouvir um relincho amortecido e nota-se um elegante
+rabo que não para de balan�ar, como se estivesse profundamente entediado, ali.
+~
+2158594 0 0 0 524560 0 0 0 1000 E
+19 2 -1 3d6+200 3d3+6
+1000 35000
+8 8 1
+E
+#2351
+cigano malicioso~
+um cigano sorrindo maliciosamente~
+Um cigano com um grande sorriso malicioso serve uma bandeja de cerveja inglesa.
+~
+Os olhos dele est�o um pouco vermelhos ao redor das extremidades e seu sorriso
+um tanto c�nico demais. Ele parece ter tomado uns copos a mais...      
+~
+2121862 0 0 0 0 0 0 0 700 E
+6 18 10 2d4+300 3d2+4
+200 18000
+8 8 1
+E
+#2352
+bebedor cerveja~
+um bebedor de cerveja inglesa~
+Um bebedor est� aqui, tomando v�rias cervejas inglesas.
+~
+Ele � um homem alto, que parece levar seu h�bito de beber muito a s�rio.
+~
+2121734 0 0 0 65616 0 0 0 1000 E
+20 16 0 4d3+600 4d3+8
+7000 44000
+8 8 1
+E
+#2353
+fazendeiro cerveja~
+um fazendeiro tomando cerveja inglesa~
+Um fazendeiro est� aqui, tomando sua cerveja inglesa. 
+~
+não parece que ele seja um grande bebedor de cervejas, por�m, ele segura 
+firmemente sua caneca de cerveja. Talvez ele esteja com medo que o gar�om
+a leve embora...
+~
+2121734 0 0 0 65616 0 0 0 1000 E
+20 16 0 4d3+600 4d3+8
+7000 45000
+8 8 1
+E
+#2354
+cerveja inglesa b�bado~
+o b�bado local~
+Um dos habitantes da cidade est� perto do barril, enchendo seu copo toda hora. 
+~
+Ele tenta conversar com qualquer um que o escute - e ele ter uma hist�ria para
+quase tudo. Voc� vai arriscar ficar ouvindo conversa mole? 
+~
+2103360 0 0 0 80 0 0 0 700 E
+10 10 0 2d2+400 3d3+8
+6000 24600
+8 8 1
+E
+#2355
+colono expectador~
+um colono~
+Um colono assiste admirado, os movimentos de quadril da dan�arina cigana. 
+~
+Ele não deve ter mais que quinze ou dezesseis, e tem sardas e tudo.  
+~
+2160642 0 0 0 2096 0 0 0 500 E
+14 14 4 4d8+400 2d4+8
+83 31000
+8 8 1
+E
+#2356
+expectador rapaz cidade~
+um rapaz da cidade~
+Um jovem da cidade cora enquanto assiste os movimentos da dan�arina cigana.
+~
+Ele pode estar se ruborizando, mas continua firme ali, assistindo ao show, sem 
+sequer piscar.  
+~
+2160642 0 0 0 2100 0 0 0 1000 E
+15 14 4 4d9+500 4d5+8
+56 26000
+8 8 1
+E
+#2357
+mulher balzaquiana~
+uma mulher balzaquiana~
+Uma mulher mais velha est� aqui, reclamando muito por causa do espet�culo.  
+~
+Ela com certeza faz muito barulho, quando as ciganas entram para se exibir, 
+mas não d� um pio, quando os ciganos entram em cena e permanece no recinto h�
+mais de uma hora e meia, assistindo ao show, entusiasmada com a beleza dos
+jovens rapazes que se exibem no palco.
+~
+2160642 0 0 0 2100 0 0 0 1000 E
+16 13 3 5d7+600 2d5+8
+68 33000
+8 8 2
+E
+#2358
+expectador cigano~
+um expectador cigano~
+Um cigano assiste seus companheiros dan�arem. 
+~
+Ele parece estar descansando no intervalo entre dois espet�culos.  
+~
+2158722 0 0 0 272 0 0 0 1000 E
+26 0 -4 1d50+500 4d6+10
+789 175000
+8 8 1
+E
+#2359
+jovem camponesa~
+uma jovem camponesa~
+Uma jovem camponesa assiste em �xtase aos ex�ticos dan�arinos ciganos.
+~
+Esta pobre criaturinha certamente � uma forte candidata aos amores proibidos. Ela parece estar se apaixonando por um dos dan�arinos ciganos.
+~
+2160642 0 0 0 67636 0 0 0 1000 E
+15 14 4 4d9+500 2d4+8
+672 36000
+8 8 2
+E
+#2360
+cozinheira cigana~
+uma mulher cigana~
+Uma mulher cigana prepara comida para a faminta multid�o que est� no festival.
+~
+Ela est� toda respingada por manchas de �leo mas isso não parece estar
+tirando nem um pouco o seu prazer por estar ali.
+~
+2160642 0 0 0 67632 0 0 0 1000 E
+22 10 0 7d12+1023 2d8+12
+654 43000
+8 8 2
+E
+#2361
+crian�a pintura ansiosa inquieta~
+uma crian�a inquieta~
+Uma crian�a inquieta espera para ter seu rosto pintado.
+~
+Ele tenta não parecer muito entusiasmado e ansiosa mas não consegue ficar
+parada um segundo e por isso salta de um p� para o outro e seus olhos brilham
+ante a expectativa.      
+~
+2158738 0 0 0 67632 0 0 0 1000 E
+15 10 -1 3d6+240 3d5+8
+2100 29000
+8 8 1
+E
+#2362
+crian�a olhos arregalados~
+uma crian�a com olhos arregalados~
+Uma crian�a com olhos arregalados escuta entusiasmada � hist�ria.
+~
+Uma fina linha de saliva escorre pelo canto de sua boca, mas ele não parece  
+perceber. Ele olha para cima, com medo do contador de hist�rias, como se 
+se achasse que o mesmo faz parte da hist�ria que est� sendo contada.
+~
+2158722 0 0 0 65544 0 0 0 600 E
+12 15 7 3d6+145 3d4+7
+150 40000
+8 8 1
+E
+#2363
+pequena menina~
+uma menininha atenta~
+Uma pequenina menina escuta a hist�ria sem piscar.
+~
+O rabo-de-cavalo dela se move de um lado para o outro, conforme ela acompanha
+os movimentos das m�os do contador de hist�ria e seu rosto est� impass�vel,
+como se fosse quebrar a qualquer minuto, por causa da tens�o nervosa.
+~
+2158630 0 0 0 65544 0 0 0 900 E
+10 15 7 3d9+305 2d5+8
+800 20000
+8 8 2
+E
+#2364
+rapaz jovem~
+um jovem rapaz~
+Um jovem rapaz est� ouvindo a hist�ria com curiosidade em seu olhar. 
+~
+Ele est� com o olhar fixo, como se estivesse em um transe, t�o perdido nos 
+devaneios do enredo da hist�ria, que perdeu o contato com o real mundo.      
+~
+2125938 0 0 0 65536 0 0 0 600 E
+29 3 -4 5d10+822 4d8+7
+1000 35000
+8 8 1
+E
+#2398
+monstro inacabado criatura~
+um pobre ser irreconhec�vel~
+Uma pobre criatura terr�velmente feia est� aqui. 
+~
+Ao olhar para ele, voc� sente seu cora��o se encher de miseric�rdia por ver
+algo que, de t�o feio, parece não ter sido acabado.  
+~
+2226388 0 0 0 327936 0 0 0 1000 E
+50 -15 1 10d12+1800 5d6+9
+0 5000
+8 8 1
+E
+#2399
+duvois mordomo~
+o mordomo Duvois~
+Duvois, o mordomo particular est� aqui, pronto para receber seu pedido.  
+~
+Um velho camarada ingl�s, com cabelos e bigodes acinzentados. Sua apar�ncia
+� bondosa e amig�vel e ele parece estar feliz diante da expectativa de poder 
+lhe ser �til. Est� vestido com os trajes tradicionais de mordomo e sua postura
+retil�nea demonstra toda a classe que um mordomo ingl�s precisa ter.  
+~
+2353178 0 0 0 0 0 0 0 0 E
+99 -30 -10 30d100+3000 30d100+50
+1 120000
+8 8 1
+E
+$

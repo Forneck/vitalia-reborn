@@ -1,0 +1,46 @@
+#2800
+sulatnat sacerdote profeta celebrante~
+Sulatnat, o Sacerdote Profeta~
+Sulatnat, o Profeta está aqui, murmurando indecifráveis palavras.
+~
+Sulatnat é um antigo sacerdote de Vitália que, por seus grandes feitos
+e infinita sabedoria, foi eleito pelos Deuses como o responsável pelos
+ofícios da Grande Catedral.  Sua idade é um grande mistério, já que sua
+aparência é a de alguém que viveu muito mais que a grande maioria jamais
+sonharia em viver.   Sua barba branquinha é tão comprida, que muitas 
+vezes os mais distraídos chegam a pisá-la e seu cabelo tão alvo quanto
+os flocos de neve recém caídos.  Ele está usando um grande manto branco
+tão longo, que encobrem seus pés e arrastam pelo chão e sobre seu 
+coração, há uma espécie de bordado, donde se destaca o Brasão de 
+Vitália e algumas palavras indecifráveis aos olhos dos leigos:
+&y"V'tah alyia enam luvieri enam lu'lyia"&n.
+~
+2285570 0 0 0 0 0 0 0 1000 E
+108 -70 -70 8d9+8000 8d8+20
+1000000 1000000
+8 8 1
+Str: 18
+StrAdd: 100
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#2802
+Horácio mordomo~
+Horácio, o mordomo~
+Um mordomo sorridente lhe oferece um canapé.
+~
+Extremamente simpático e muito sorridente, este homem parece ser muito 
+experiente em sua profissão.   Incansável e atento, procura servir a todos com
+delicadeza e prontidão.  Seu traje elegante e discreto, revela o caráter firme
+e sólido de alguém, que mesmo estando em serviço, continua sereno e feliz. 
+~
+2156608 0 0 0 0 0 0 0 0 E
+108 10 0 1d1+30000 1d10+10
+1 2000
+8 8 1
+Cha: 18
+E
+$

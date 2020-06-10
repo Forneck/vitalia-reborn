@@ -1,0 +1,188 @@
+#137
+Vitalia~
+Lothlórien~
+13700 13799 180 1 ab 0 0 0 -1 -1
+-1
+*
+* Colocar os Mobs
+*
+M 0 13702 1 13797    Colocar Haldir de L�rien sobre um Talan
+E 1 13717 5 0        Entregar um P�ssaro Dourado para Haldir de L�rien
+E 1 13713 17 16      Entregar um Arco dos Galadhrim para Haldir de L�rien
+G 1 13728 3          Entregar uma Corda para Haldir de L�rien
+M 0 13703 1 13729    Colocar R�mil de L�rien sobre um Talan
+E 1 13715 5 14       Entregar um Bracelete de L�rien para R�mil de L�rien
+E 1 13713 17 16      Entregar um Arco dos Galadhrim para R�mil de L�rien
+G 1 13728 3          Entregar uma Corda para R�mil de L�rien
+M 0 13704 1 13732    Colocar Orophin de L�rien sobre um Talan
+E 1 13716 5 7        Entregar um Par de Perneiras de L�rien para Orophin de L�rien
+E 1 13713 17 16      Entregar um Arco dos Galadhrim para Orophin de L�rien
+G 1 13728 3          Entregar uma Corda para Orophin de L�rien
+M 0 13705 1 13798    Colocar Galadriel sobre um Talan
+E 1 13707 5 6        Entregar uma Coroa de Flores Douradas para Galadriel
+E 1 13708 5 17       Entregar uma Harpa Dourada para Galadriel
+M 0 13706 1 13798    Colocar Celeborn sobre um Talan
+E 1 13709 5 12       Entregar o Manto do Senhor de L�rien para Celeborn
+E 1 3810 1 17        Card Lamina de Alaric(3810) com Celeborn(13706)
+M 0 13707 14 13729   Colocar um Elfo de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de L�rien
+E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de L�rien
+M 0 13707 14 13729   Colocar um Elfo de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de L�rien
+E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de L�rien
+M 0 13707 14 13732   Colocar um Elfo de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de L�rien
+E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de L�rien
+M 0 13707 14 13732   Colocar um Elfo de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de L�rien
+E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de L�rien
+M 0 13707 14 13759   Colocar um Elfo de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de L�rien
+E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de L�rien
+M 0 13707 14 13759   Colocar um Elfo de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de L�rien
+E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de L�rien
+M 0 13707 14 13774   Colocar um Elfo de L�rien nos Jardins de Caras Galadhon 
+E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de L�rien
+E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de L�rien
+M 0 13707 14 13793   Colocar um Elfo de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de L�rien
+E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de L�rien
+M 0 13707 14 13771   Colocar um Elfo de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de L�rien
+E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de L�rien
+M 0 13707 14 13785   Colocar um Elfo de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de L�rien
+E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de L�rien
+M 0 13707 14 13787   Colocar um Elfo de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de L�rien
+E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de L�rien
+M 0 13707 14 13788   Colocar um Elfo de L�rien na Monumental Fonte de Pedra de Caras Galadhon
+E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de L�rien
+E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de L�rien
+M 0 13707 14 13794   Colocar um Elfo de L�rien num Belo Passeio Branco
+E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de L�rien
+E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de L�rien
+M 0 13707 14 13797   Colocar um Elfo de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de L�rien
+E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de L�rien
+M 0 13708 10 13778   Colocar uma Elfa de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de L�rien
+G 1 13724 5          Entregar um Cacho de Flores Douradas a Elfa
+M 0 13708 10 13782   Colocar uma Elfa de L�rien num Belo Passeio Branco
+E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de L�rien
+G 1 13724 5          Entregar um Cacho de Flores Douradas a Elfa
+M 0 13708 10 13773   Colocar uma Elfa de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de L�rien
+G 1 13724 5          Entregar um Cacho de Flores Douradas a Elfa
+M 0 13708 10 13780   Colocar uma Elfa de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de L�rien
+G 1 13724 5          Entregar um Cacho de Flores Douradas a Elfa
+M 0 13708 10 13790   Colocar uma Elfa de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de L�rien
+G 1 13724 5          Entregar um Cacho de Flores Douradas a Elfa
+M 0 13708 10 13793   Colocar uma Elfa de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de L�rien
+M 0 13708 10 13795   Colocar uma Elfa de L�rien no Final do Passeio Branco
+E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de L�rien
+M 0 13708 10 13785   Colocar uma Elfa de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de L�rien
+M 0 13708 10 13775   Colocar uma Elfa de L�rien nos Jardins de Caras Galadhon
+E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de L�rien
+M 0 13708 10 13787   Colocar uma Elfa de L�rien sobre um Talan
+E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de L�rien
+M 0 13709 6 13788    Colocar uma Crian�a Elfa na Monumental Fonte de Pedra de Caras Galadhon
+E 1 13718 6 0        Entregar uma Lamparina Prateada para a Crian�a Elfa
+G 1 13727 6          Entregar um Peda�o de Lembas a uma Crian�a Elfa
+M 0 13709 6 13778    Colocar uma Crian�a Elfa sobre um Talan 
+E 1 13718 6 0        Entregar uma Lamparina Prateada para a Crian�a Elfa
+G 1 13727 6          Entregar um Peda�o de Lembas a uma Crian�a Elfa
+M 0 13709 6 13773    Colocar uma Crian�a Elfa sobre um Talan 
+E 1 13718 6 0        Entregar uma Lamparina Prateada para a Crian�a Elfa
+G 1 13727 6          Entregar um Peda�o de Lembas a uma Crian�a Elfa
+M 0 13709 6 13771    Colocar uma Crian�a Elfa sobre um Talan 
+E 1 13718 6 0        Entregar uma Lamparina Prateada para a Crian�a Elfa
+G 1 13727 6          Entregar um Peda�o de Lembas a uma Crian�a Elfa
+M 0 13709 6 13769    Colocar uma Crian�a Elfa nos Jardins de Caras Galadhon 
+E 1 13718 6 0        Entregar uma Lamparina Prateada para a Crian�a Elfa
+G 1 13727 6          Entregar um Peda�o de Lembas a uma Crian�a Elfa
+M 0 13709 6 13786    Colocar uma Crian�a Elfa numa Bela Escada sobre um tronco de Mallorn
+E 1 13718 6 0        Entregar uma Lamparina Prateada para a Crian�a Elfa
+G 1 13727 6          Entregar um Peda�o de Lembas a uma Crian�a Elfa
+M 0 13710 8 13756    Colocar um P�ssaro Prateado em Cerin Amroth
+M 0 13710 8 13716    Colocar um P�ssaro Prateado na Floresta de Lothl�rien
+M 0 13710 8 13735    Colocar um P�ssaro Prateado na Floresta de Lothl�rien
+M 0 13710 8 13761    Colocar um P�ssaro Prateado na Floresta de Lothl�rien
+M 0 13710 8 13747    Colocar um P�ssaro Prateado na Colina de Amroth
+M 0 13710 8 13776    Colocar um P�ssaro Prateado nos Jardins de Caras Galadhon
+M 0 13710 8 13799    Colocar um P�ssaro Prateado no Espelho de Galadriel
+M 0 13710 8 13788    Colocar um P�ssaro Prateado na Monumental Fonte de Pedra de Caras Galadhon
+M 0 13711 8 13714    Colocar um Esquilo Dourado na Floresta de Lothl�rien
+M 0 13711 8 13751    Colocar um Esquilo Dourado na Colina de Amroth
+M 0 13711 8 13718    Colocar um Esquilo Dourado na Floresta de Lothl�rien
+M 0 13711 8 13743    Colocar um Esquilo Dourado na Floresta Dourada de Lothl�rien
+M 0 13711 8 13734    Colocar um Esquilo Dourado na Floresta Dourada de Lothl�rien
+M 0 13711 8 13791    Colocar um Esquilo Dourado em Caras Galadhon
+M 0 13711 8 13768    Colocar um Esquilo Dourado nos Jardins de Caras Galadhon
+M 0 13711 8 13783    Colocar um Esquilo Dourado em Caras Galadhon
+*
+* Colocar Objs
+*
+R 0 13799 13705      Retirar um Altar de Pedras do Espelho de Galadriel
+O 0 13705 1 13799    Colocar um novo Altar de Pedras no Espelho de Galadriel
+R 0 13799 13704      Retirar o Espelho de Galadriel do Jardim Fechado
+O 0 13704 1 13799    Colocar um novo Espelho de Galadriel no Jardim Fechado
+R 0 13799 13706      Retirar uma Fonte do Espelho de Galadriel
+O 0 13706 1 13799    Colocar uma nova Fonte no Espelho de Galadriel
+R 0 13788 13719      Retirar uma Fonte de Pedra de Caras Galadhon
+O 0 13719 1 13788    Colocar uma nova Fonte de Pedra em Caras Galadhon
+R 0 13774 13720      Retirar as Estatuas dos Jardins de Caras Galadhon
+O 0 13720 1 13774    Colocar novas Estatuas nos Jardins de Caras Galadhon
+R 0 13707 13721      Retirar a Nascente do Celebrant de sua Nascente
+O 0 13721 1 13707    Colocar uma Nova Nascente do Celebrant em sua Nascente
+R 0 13764 13722      Retirar um Barco �lfico do Veio de Prata
+O 0 13722 1 13764    Colocar um novo Barco �lfico no Veio de Prata
+R 0 13710 13723      Retirar uma Athelas do Campo Verde
+O 0 13723 1 13710    Colocar uma nova Athelas no Campo Verde
+R 0 13724 13725      Retirar uma Mallorn da Floresta Dourada de Lothl�rien
+O 0 13725 9 13724    Colocar uma nova Mallorn na Floresta Dourada de Lothl�rien
+R 0 13738 13725      Retirar uma Mallorn da Floresta Dourada de Lothl�rien
+O 0 13725 9 13738    Colocar uma nova Mallorn na Floresta Dourada de Lothl�rien
+R 0 13745 13725      Retirar uma Mallorn da Floresta Dourada de Lothl�rien
+O 0 13725 9 13745    Colocar uma nova Mallorn na Floresta Dourada de Lothl�rien
+R 0 13762 13725      Retirar uma Mallorn da Floresta Dourada de Lothl�rien
+O 0 13725 9 13762    Colocar uma nova Mallorn na Floresta Dourada de Lothl�rien
+R 0 13774 13725      Retirar uma Mallorn dos Jardins de Caras Galadhon
+O 0 13725 9 13774    Colocar uma nova Mallorn dos Jardins de Caras Galadhon
+R 0 13775 13725      Retirar uma Mallorn dos Jardins de Caras Galadhon
+O 0 13725 9 13775    Colocar uma nova Mallorn dos Jardins de Caras Galadhon
+R 0 13776 13725      Retirar uma Mallorn dos Jardins de Caras Galadhon
+O 0 13725 9 13776    Colocar uma nova Mallorn dos Jardins de Caras Galadhon
+R 0 13768 13725      Retirar uma Mallorn dos Jardins de Caras Galadhon
+O 0 13725 9 13768    Colocar uma nova Mallorn dos Jardins de Caras Galadhon
+R 0 13769 13725      Retirar uma Mallorn dos Jardins de Caras Galadhon
+O 0 13725 9 13769    Colocar uma nova Mallorn dos Jardins de Caras Galadhon
+R 0 13733 13726      Retirar uma Folha de Mallorn da Floresta Dourada de Lothl�rien
+O 0 13726 5 13733    Colocar uma nova Folha de Mallorn na Floresta Dourada de Lothl�rien
+R 0 13736 13726      Retirar uma Folha de Mallorn da Floresta Dourada de Lothl�rien
+O 0 13726 5 13736    Colocar uma nova Folha de Mallorn na Floresta Dourada de Lothl�rien
+R 0 13741 13726      Retirar uma Folha de Mallorn da Floresta Dourada de Lothl�rien
+O 0 13726 5 13741    Colocar uma nova Folha de Mallorn na Floresta Dourada de Lothl�rien
+R 0 13791 13726      Retirar uma Folha de Mallorn de Caras Galadhon
+O 0 13726 5 13791    Colocar uma nova Folha em Caras Galadhon
+R 0 13781 13726      Retirar uma Folha de Mallorn de Caras Galadhon
+O 0 13726 5 13781    Colocar uma nova Folha em Caras Galadhon
+R 0 13768 13729      Retirar uma Fumellar dos Jardins de Caras Galadhon
+O 0 13729 4 13768    Colocar uma nova Fumellar nos Jardins de Caras Galadhon
+R 0 13769 13729      Retirar uma Fumellar dos Jardins de Caras Galadhon
+O 0 13729 4 13769    Colocar uma nova Fumellar nos Jardins de Caras Galadhon
+R 0 13775 13729      Retirar uma Fumellar dos Jardins de Caras Galadhon
+O 0 13729 4 13775    Colocar uma nova Fumellar nos Jardins de Caras Galadhon
+R 0 13776 13729      Retirar uma Fumellar dos Jardins de Caras Galadhon
+O 0 13729 4 13776    Colocar uma nova Fumellar nos Jardins de Caras Galadhon
+*
+* Ajustando as Portas
+*
+D 0 13760 0 2       Ajustando o Port�o de Madeira de Caras Galadhon (Lado de Fora)
+D 0 13774 2 2       Ajustando o Port�o de Madeira de Caras Galadhon (Lado de Dentro)
+S

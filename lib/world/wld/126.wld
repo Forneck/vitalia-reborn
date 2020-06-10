@@ -1,0 +1,6542 @@
+#12600
+As �guas do Atl�ntico~
+   Voc� est� navegando pelas �guas misteriosas do grande e perigoso oceano
+Atl�ntico.  Lendas assustadoras de serpentes gigantes e monstros marinhos 
+s�o contadas pelos mais corajosos navegadores.  Ao seu redor voc� observa
+uma das mais belas paisagens das sagradas terras de Vit�lia.  A imensid�o do
+magn�fico Atl�ntico e de suas lendas, o faz um dos oceanos mais po�ticos e
+temidos de Vit�lia.  Ao noroeste voc� observa as majestosas �guas do oceano
+Atl�ntico.
+~
+126 131140 0 0 0 7
+D6
+Voc� observa as belas �guas do Atl�ntico.
+~
+~
+0 -1 12601
+D8
+~
+~
+0 -1 5686
+S
+#12601
+As �guas do Atl�ntico~
+   Voc� est� navegando pelas �guas do magn�fico e temido oceano Atl�ntico.
+Suas lendas s�o contadas em todos os portos, cidades e por povos que vivem
+banhados por suas misteriosas �guas.  Vindas do norte rajadas frias de vento
+fazem seu corpo tremer.  Ao norte e sudeste voc� observa a imensid�o das 
+belas �guas do Atl�ntico e ao noroeste voc� observa as frias �guas do oceano
+Atl�ntico Norte.
+~
+126 131136 0 0 0 7
+D0
+Voc� observa as belas �guas do Atl�ntico.
+~
+~
+0 -1 12602
+D6
+Voc� observa o oceano Atl�ntico Norte.
+~
+~
+0 -1 12838
+D8
+Voc� observa as belas �guas do Atl�ntico.
+~
+~
+0 -1 12600
+S
+#12602
+As �guas do Atl�ntico~
+   Voc� est� navegando pelas lend�rias �guas do magn�fico oceano Atl�ntico.
+A cada milha mar�tima na dire��o norte, a temperatura fica cada vez mais
+baixa.  Voc� observa no horizonte pontos, que parecem ser terra firme.  Ao
+sul voc� as belas �guas do Atl�ntico, ao leste voc� observa as frias �guas
+do mar do Norte e ao noroeste voc� observa as temidas �guas vikings do mar 
+da Noruega.
+~
+126 131136 0 0 0 7
+D1
+Voc� observa as frias �guas do mar do Norte.
+~
+~
+0 -1 12603
+D2
+Voc� observa as belas �guas do Atl�ntico.
+~
+~
+0 -1 12601
+D6
+Voc� observa as frias �guas do mar da Noruega.
+~
+~
+0 -1 12610
+S
+#12603
+O Mar do Norte~
+   Voc� est� navegando pelas frias �guas do mar do Norte.  O mar do Norte
+est� atualmente sobre dom�nio dos Vikings, que dominam as rotas mar�timas,
+que se estendem desde o Golfo de Bothnia passando pelo mar B�ltico, mar do 
+Norte, oceano Atl�ntico, mar da Noruega e pelo frio mar Glacial �rtico.  Ao
+seu redor voc� observa grandes por��es de terra banhadas pelo arrepiante mar
+do Norte.  Ao leste voc� observa as g�lidas �guas do mar do Norte e ao oeste
+voc� observa o lend�rio oceano Atl�ntico.
+~
+126 131136 0 0 0 7
+D1
+Voc� observa as frias �guas do mar do Norte.
+~
+~
+0 -1 12604
+D3
+Voc� observa as lend�rias �guas do oceano Atl�ntico.
+~
+~
+0 -1 12602
+S
+#12604
+O Mar do Norte~
+   Voc� est� navegando pelas �guas dominadas pelos magn�ficos Vikings da
+Escandinavia.  Ao seu redor voc� observa grandes por��es de terras, ao norte
+voc� observa a pen�nsula Escandinavia e ao sul voc� observa as lindas terras
+dinamarquesas.  Ao norte voc� percebe uma bela praia escandinava, ao leste e
+ao oeste voc� observa as frias �guas do mar do Norte.
+~
+126 131136 0 0 0 7
+D0
+Voc� observa uma bela praia escandinava.
+~
+~
+0 -1 12613
+D1
+Voc� observa as frias �guas do mar do Norte.
+~
+~
+0 -1 12605
+D3
+Voc� observa as frias �guas do mar do Norte.
+~
+~
+0 -1 12603
+S
+#12605
+O Mar do Norte~
+   Voc� est� navegando pelas �guas frias e dominadas pelos povos Vikings da
+pen�nsula escandinava.  Ao leste e ao oeste voc� observa as g�lidas �guas
+do mar do Norte.
+~
+126 131136 0 0 0 7
+D1
+Voc� observa as frias �guas do mar do Norte.
+~
+~
+0 -1 12606
+D3
+Voc� observa as frias �guas do mar do Norte.
+~
+~
+0 -1 12604
+S
+#12606
+O Mar do Norte~
+   Voc� est� navegando pelas �guas g�lidas do mar do Norte.  Ao norte voc�
+observa belos e imensos fiordes, que circundam toda a costa da pen�nsula
+escandinava.  Ao oeste voc� observa as frias �guas do mar do Norte e ao
+sudeste voc� observa o mar B�ltico.
+~
+126 131136 0 0 0 7
+D3
+Voc� observa as frias �guas do mar do Norte.
+~
+~
+0 -1 12605
+D8
+Voc� observa o mar B�ltico.
+~
+~
+0 -1 12607
+S
+#12607
+O Mar B�ltico~
+   Voc� est� navegando pelas �guas frias do mar B�ltico.  As �guas do 
+B�ltico s�o dominadas pelos Vikings suecos, povo formado por v�rios cl�s
+ligados pela lealdade e extremamente habilidosos na arte da navega��o e da 
+guerra.  Ao norte voc� observa magn�ficos fiordes, que formam a costa da
+pen�nsula escandinava.  Ao leste voc� observa a continua��o do mar B�ltico
+e ao noroeste voc� observa as frias �guas do mar do Norte.
+~
+126 131136 0 0 0 7
+D1
+Voc� observa as �guas do mar B�ltico.
+~
+~
+0 -1 12608
+D6
+Voc� observa as �guas do mar do Norte.
+~
+~
+0 -1 12606
+S
+#12608
+O Mar B�ltico~
+   Voc� est� navegando pelas temidas �guas de domina��o Vikings do mar 
+B�ltico.  Ao norte voc� observa uma bela praia escandinava entre dois 
+grandes fiordes.  Ao nordeste e ao oeste voc� observa as frias �guas do
+mar B�ltico.
+~
+126 131136 0 0 0 7
+D0
+Voc� observa uma linda praia escandinava.
+~
+~
+0 -1 12618
+D3
+Voc� observa o mar B�ltico.
+~
+~
+0 -1 12607
+D7
+Voc� observa o mar B�ltico.
+~
+~
+0 -1 12609
+S
+#12609
+O Mar B�ltico~
+   Voc� est� navegando pelas perigosas �guas do mar B�ltico, dominadas pelos
+Vikings suecos.  Ao noroeste voc� observa monumentais fiordes que formam a
+costa da pen�nsula escandinava.  Ao norte voc� observa o golfo de Bothnia e
+ao sudoeste voc� observa as frias �guas do mar B�ltico.
+~
+126 131136 0 0 0 7
+D0
+Voc� observa o golfo de Bothnia.
+~
+~
+0 -1 12647
+D9
+Voc� observa as �guas do mar B�ltico.
+~
+~
+0 -1 12608
+S
+#12610
+O Mar da Noruega~
+   Voc� est� navegando pelas frias e temidas �guas de domina��o dos Vikings
+noruegueses do mar da Noruega.  Ao norte voc� observa o mar da Noruega na
+linha do horizonte e ao sudeste voc� observa as �guas lend�rias do oceano
+Atl�ntico.  Ao leste entre dois magn�ficos fiordes voc� observa uma bela
+praia escandinava.
+~
+126 131136 0 0 0 7
+D0
+Voc� observa as �guas dominadas pelos Vikings noruegueses.
+~
+~
+0 -1 12619
+D1
+Voc� observa uma linda praia na costa da pen�nsula escandinava.
+~
+~
+0 -1 12611
+D8
+Voc� observa as �guas lend�rias do oceano Atl�ntico.
+~
+~
+0 -1 12602
+S
+#12611
+Uma Praia Escandinava~
+   Voc� est� caminhando numa bela praia norueguesa em plena pen�nsula
+escandinava.  Ao seu redor voc� observa monumentais fiordes e algumas 
+embarca��es Vikings abandonadas na praia.  Ao olhar para o sul, voc� percebe
+uma magn�fica estatua de bronze Viking.  Vindo do leste voc� ouve alguns
+sons estranhos.  Ao norte voc� observa uma bela plan�cie norueguesa, ao
+oeste voc� observa o temido mar da Noruega e ao sudeste voc� observa a
+extens�o da linda praia escandinava.
+~
+126 4 0 0 0 2
+D0
+Voc� observa uma bela paisagem escandinava.
+~
+~
+0 -1 12620
+D3
+Voc� observa as �guas g�lidas do mar da Noruega.
+~
+~
+0 -1 12610
+D8
+Voc� observa no horizonte a bela praia escandinava.
+~
+~
+0 -1 12612
+S
+#12612
+Liberdade, as Asas do Cora��o~
+   Voc� est� caminhando numa bela praia escandinava.  A paisagem que voc�
+tem daqui � fascinante.  Ao sul monumentais fiordes fazem voc� sentir a
+celestial presen�a do mar em toda sua plenitude.  Ao olhar para o interior
+da bel�ssima pen�nsula escandinava voc� sente uma divina sensa��o de 
+liberdade, de leveza e de deslumbramento.  Ao norte voc� observa uma vila
+viking e ao leste e noroeste voc� observa no horizonte toda a extens�o da 
+praia escandinava.
+~
+126 0 0 0 0 2
+D0
+Voc� observa uma vila viking.
+~
+~
+0 -1 12621
+D1
+Voc� observa uma bela praia escandinava.
+~
+~
+0 -1 12613
+D6
+Voc� observa uma bela praia escandinava.
+~
+~
+0 -1 12611
+S
+#12613
+Uma Praia Escandinava~
+   Voc� est� caminhando numa linda praia norueguesa em plena pen�nsula
+escandinava.  Ao seu redor dois imensos fiordes se abrem formando est�
+magn�fica praia.  Ao norte voc� observa uma vila viking, ao sul voc� observa
+as frias �guas do mar do Norte e ao oeste voc� observa a extens�o da 
+maravilhosa praia escandinava.
+~
+126 4 0 0 0 2
+D0
+Voc� observa uma vila viking.
+~
+~
+0 -1 12622
+D2
+Voc� observa o mar do Norte.
+~
+~
+0 -1 12604
+D3
+Voc� observa a bel�ssima praia escandinava.
+~
+~
+0 -1 12612
+S
+#12614
+O Santu�rio do Poderoso Thor~
+   Voc� est� no idolatrado santu�rio de Thor, o senhor dos trov�es.  O deus
+mais popular entre os povos vikings e um dos mais glorificados.  Os povos
+que rezam para Thor e pedem for�a e coragem para vencer seus inimigos, n�o
+fazem sacrif�cios.  Ao seu redor bel�ssimas runas e uma monumental estatua
+do supremo deus dos trov�es.  Ao noroeste voc� observa o centro da vila
+viking.
+~
+126 524416 0 0 0 1
+D6
+Voc� observa o centro da vila viking.
+~
+~
+0 -1 12622
+S
+#12615
+A Floresta de Gelo~
+   Voc� est� caminhando por entre imensas �rvores carregadas e cobertas de
+gelo.  A dificuldade de caminhar nas trilhas � grande, por causa da grande
+quantidade de neve que existe aqui.  Ao seu redor voc� observa uma bela
+floresta, por�m a sensa��o de solid�o � intensa.  A floresta possui vida,
+por�m o clima desta regi�o faz com que as criaturas que vivam aqui fiquem
+abrigadas.  Ao norte e ao leste voc� observa a fria e solit�ria floresta
+sueca.
+~
+126 393216 0 0 0 5
+D0
+Voc� observa a floresta branca.
+~
+~
+0 -1 12653
+D1
+Voc� observa a floresta branca.
+~
+~
+0 -1 12616
+S
+#12616
+A Floresta de Gelo~
+   Voc� est� caminhando por entre monumentais �rvores cobertas de neve.  A
+dificuldade de caminhar pelas trilhas � muito grande, por causa da enorme
+quantidade de neve acumulada aqui.  Ao oeste voc� observa uma trilha na
+floresta de gelo e ao leste voc� observa uma bela plan�cie escandinava.
+~
+126 393216 0 0 0 5
+D1
+Voc� observa uma linda plan�cie escandinava.
+~
+~
+0 -1 12617
+D3
+Voc� observa a floresta branca.
+~
+~
+0 -1 12615
+S
+#12617
+Uma Plan�cie Escandinava~
+   Voc� est� caminhando numa bela e calma plan�cie escandinava.  Est� 
+regi�o da pen�nsula escandinava � habitada pelos povos vikings suecos.  Ao
+seu redor voc� observa uma vegeta��o rasteira e um solo bastante rochoso.  Ao
+norte voc� observa uma vila viking, ao sul voc� observa uma bela praia e ao
+fundo o mar B�ltico, e ao oeste voc� percebe a presen�a de uma floresta
+coberta de gelo e neve.
+~
+126 0 0 0 0 2
+D0
+Voc� observa uma movimentada vila viking.
+~
+~
+0 -1 12627
+D2
+Voc� observa uma bela praia escandinava.
+~
+~
+0 -1 12618
+D3
+Voc� observa �rvores cobertas de gelo e neve.
+~
+~
+0 -1 12616
+S
+#12618
+Uma Praia Escandinava~
+   Voc� est� caminhando numa bela praia escandinava.  Ao seu redor dois 
+monumentais fiordes se abrem formando est� magn�fica praia.  Ao sul da praia
+banhada pelas �guas do mar B�ltico, voc� observa uma majestosa estatua 
+viking sueca, demonstrando desde j�, quem � que manda nessas terras.  Ao 
+norte voc� observa uma bela plan�cie escandinava e ao sul voc� observa as
+g�lidas �guas do mar B�ltico.
+~
+126 4 0 0 0 2
+D0
+Voc� observa uma linda plan�cie escandinava.
+~
+~
+0 -1 12617
+D2
+Voc� observa o mar B�ltico.
+~
+~
+0 -1 12608
+S
+#12619
+O Mar da Noruega~
+   Voc� est� navegando pelas misteriosas e arrepiantes �guas do mar da 
+Noruega.  Ao longo de toda a costa da Noruega, voc� observa imensos fiordes.
+Contudo em alguns pontos voc� percebe a exist�ncia de entradas nas rochas,
+formando assim as praias escandinavas.  Ao sul e noroeste voc� observa o mar 
+da Noruega na linha do horizonte e ao leste voc� observa o delta do rio 
+Glama.
+~
+126 131136 0 0 0 7
+D1
+Voc� observa o delta do rio Glama.
+~
+~
+0 -1 12636
+D2
+Voc� observa as frias �guas do mar da Noruega.
+~
+~
+0 -1 12610
+D6
+Voc� observa as frias �guas do mar da Noruega.
+~
+~
+0 -1 12658
+S
+#12620
+Uma Vila Viking Norueguesa~
+   Voc� est� numa agitada vila viking.  Ao seu redor voc� observa v�rias 
+cabanas de madeira e turfa, algumas lindas mulheres vikings, grandes 
+guerreiros vikings desafiando uns aos outros em jogos que s� acabam com a
+morte de um dos participantes e belos cavalos selagens.  A vida viking � 
+marcada pela viol�ncia e seus deuses s�o impiedosos.  Ao norte voc� observa
+o belo delta do rio Glama, ao sul voc� observa uma magn�fica praia 
+escandinava e ao sudeste voc� observa o centro da vila viking.
+~
+126 0 0 0 0 1
+D0
+Voc� observa as �guas do rio Glama.
+~
+~
+0 -1 12636
+D2
+Voc� observa uma bela praia escandinava.
+~
+~
+0 -1 12611
+D8
+Voc� observa a agita��o no centro da vila viking.
+~
+~
+0 -1 12621
+S
+#12621
+O Centro da Vila Viking~
+   Voc� est� caminhando pela vila viking.  Ao seu redor voc� observa v�rias
+cabanas de madeira e de turfa.  Voc� percebe alguns homens vikings se 
+divertindo jogando o famoso jogo de tabuleiro viking, o hnefatafl.  Ao oeste 
+do centro da vila voc� observa alguns vikings jogando knattleikr, um jogo de
+bola.  Ao leste voc� escuta sons, que parecem ser de uma festa viking, ao 
+norte voc� observa uma cabana com v�rias armas ao seu redor, ao sul voc�
+observa uma bela praia escandinava e ao noroeste voc� observa uma tranq�ila
+plan�cie escandinava.
+~
+126 0 0 0 0 1
+D0
+Voc� observa a cabana do ferreiro viking.
+~
+~
+0 -1 12628
+D1
+Voc� observa o centro da vila viking.
+~
+~
+0 -1 12622
+D2
+Voc� observa uma bela praia escandinava.
+~
+~
+0 -1 12612
+D6
+Voc� observa uma pac�fica plan�cie.
+~
+~
+0 -1 12620
+S
+#12622
+O Centro da Vila Viking~
+   Voc� est� caminhando no centro agitado da vila viking.  Ao seu redor voc�
+observa uma movimentada e alegre festa viking.  V�rios homens e mulheres
+dan�am e cantam de forma desarm�nica, mas com muita alegria e felicidade.
+Ao norte voc� observa uma cabana de madeira e turfa, ao nordeste voc� 
+observa uma bela plan�cie escandinava, ao leste voc� observa uma grande 
+cabana de madeira e turfa, ao sudeste voc� observa um santu�rio, ao sul voc� 
+observa uma bela praia escandinava e ao oeste voc� o centro da vila viking.
+~
+126 0 0 0 0 1
+D0
+Voc� observa uma cabana de madeira e turfa.
+~
+~
+0 -1 12629
+D1
+Voc� observa uma grande cabana viking.
+~
+~
+0 -1 12623
+D2
+Voc� observa uma bela praia escandinava.
+~
+~
+0 -1 12613
+D3
+Voc� observa o centro agitado da vila viking.
+~
+~
+0 -1 12621
+D7
+Voc� observa uma tranq�ila plan�cie escandinava.
+~
+~
+0 -1 12630
+D9
+Voc� observa um sublime santu�rio.
+~
+~
+0 -1 12614
+S
+#12623
+A Cabana Longa~
+   Voc� est� dentro de uma longa cabana de madeira e de turfa.  A vila dos
+vikings � constitu�da por cabanas pequenas de madeira e turfa, que servem 
+como dormit�rios, cabanas de ferreiros, cabanas para armazenar suprimentos,
+o centro da vila, local onde acontece a maior intera��o entre os moradores
+da vila, e a cabana longa, local onde � feita a refei��o e as reuni�es dos 
+vikings.  Ao seu redor voc� observa uma enorme mesa de madeira, de 
+comprimento quase igual ao da cabana, v�rias cadeiras de madeira e uma
+grande fogueira no canto norte da cabana.  Ao oeste voc� observa o agitado
+centro da vila viking.
+~
+126 131080 0 0 0 0
+D3
+Voc� observa o centro da vila viking.
+~
+~
+0 -1 12622
+S
+#12624
+A Sala das Riquezas Vikings~
+   Voc� est� na sala dos tesouros dos vikings suecos, liderados pelo rei 
+Eric.  Ao seu redor v�rias pe�as de ouro e prata, pe�as de v�rios lugares
+oriundas de ataques mar�timos e invas�es a outras cidades.  Ao norte voc�
+observa uma porta de madeira.
+~
+126 131080 0 0 0 0
+D0
+Voc� observa uma porta de madeira.
+~
+porta madeira~
+2 12722 12631
+S
+#12625
+A Sala dos Trof�us~
+   Voc� est� na assustadora sala de trof�us dos vikings suecos, liderados
+pelo rei Eric.  Ao seu redor voc� observa penduradas pelas paredes cabe�as,
+bra�os e pernas de antigos inimigos vencidos.  A sala dos trof�us intimida
+qualquer aventureiro que chega a fortaleza viking.  Ao norte voc� observa
+um grande sal�o.
+~
+126 1179656 0 0 0 0
+D0
+Voc� observa um grande sal�o.
+~
+~
+0 -1 12632
+S
+#12626
+Uma Cabana de Madeira~
+   Voc� est� dentro de uma cabana de madeira e de turfa.  Ao seu redor voc� 
+observa uma cama de turfa e alguns restos de comida.  Ao leste voc� observa
+uma bela plan�cie escandinava.
+~
+126 131080 0 0 0 0
+D1
+Voc� observa a vila viking.
+~
+~
+0 -1 12627
+S
+#12627
+Uma Vila Viking Sueca~
+   Voc� est� numa agitada vila viking.  Ao seu redor voc� observa v�rias 
+cabanas de madeira e turfa, algumas lindas mulheres vikings, grandes 
+guerreiros vikings desafiando uns aos outros em jogos que s� acabam com a
+morte de um dos participantes e belos cavalos selagens.  A vida viking � 
+marcada pela viol�ncia e seus deuses s�o impiedosos.  Ao norte voc� observa
+o centro da vila viking, ao sul voc� observa uma bela praia escandinava e
+ao oeste voc� observa uma cabana de madeira e turfa.
+~
+126 0 0 0 0 1
+D0
+Voc� observa a agita��o no centro da vila viking.
+~
+~
+0 -1 12634
+D2
+Voc� observa uma bela praia escandinava entre dois fiordes.
+~
+~
+0 -1 12617
+D3
+Voc� observa uma cabana de madeira e turfa.
+~
+~
+0 -1 12626
+S
+#12628
+A Cabana do Ferreiro Viking~
+   Voc� est� dentro da cabana do ferreiro viking.  Ao seu redor ferramentas
+e uma enorme lareira.  Voc� observa armas espalhadas por todos os cantos da
+cabana.  Os ferreiros vikings s�o vitais para seus povos, pois saem das m�os
+deles as armas que far�o seus inimigos se ajoelharem.  Ao sul voc� observa o
+centro da vila viking.
+~
+126 131080 0 0 0 0
+D2
+Voc� observa o centro movimentado da vila viking.
+~
+~
+0 -1 12621
+S
+#12629
+O Armaz�m da Vila~
+   Voc� est� dentro do grande armaz�m da vila viking.  Ao seu redor voc�
+observa suprimentos que daria para alimentar a vila toda por um ano.  Ao sul
+voc� observa o centro da vila viking.
+~
+126 131080 0 0 0 0
+D2
+Voc� observa o centro da vila viking.
+~
+~
+0 -1 12622
+S
+#12630
+Uma Plan�cie Escandinava~
+   Voc� est� caminhando numa bel�ssima plan�cie escandinava.  A paisagem ao
+seu redor � formid�vel.  As flores vermelhas e azuis juntamente com as
+borboletas e os p�ssaros d�o um colorido especial a plan�cie.  Ao norte voc�
+observa as �guas do rio Glama e ao sudoeste voc� observa uma agitada vila 
+viking.
+~
+126 0 0 0 0 1
+D0
+Voc� observa o rio Glama.
+~
+~
+0 -1 12638
+D9
+Voc� observa uma agitada vila viking.
+~
+~
+0 -1 12622
+S
+#12631
+O Sal�o Real de Eric~
+   Voc� est� no imponente sal�o da fortaleza viking de Eric, o rei da Su�cia
+e l�der de todos os cl�s suecos.  Ao seu redor voc� observa algumas runas e
+figuras do supremo deus Odin.  No canto oeste do sal�o voc� observa o trono
+de ouro do rei Eric, ao seu lado dois c�lices de prata a espera dos l�deres
+vikings da pen�nsula escandinava.  Ao norte e ao sul voc� observa uma porta
+de madeira.
+~
+126 72 0 0 0 0
+D0
+Voc� observa uma porta de madeira.
+~
+porta madeira~
+1 -1 12639
+D1
+Voc� observa o grande sal�o da fortaleza.
+~
+~
+0 -1 12632
+D2
+Voc� observa uma porta de madeira.
+~
+porta madeira~
+2 12722 12624
+S
+#12632
+O Sal�o da Fortaleza Viking~
+   Voc� est� caminhando pelo magn�fico sal�o da fortaleza viking.  Ao seu
+redor voc� percebe que os costumes e tradi��es dos escandinavos s�o bem
+diferentes dos j� visto por voc�.  Ao oeste voc� observa o trono do grande
+viking Eric, rei da Su�cia e l�der dos cl�s suecos.  Ao norte voc� observa
+um santu�rio viking, ao sul voc� observa a sala de trof�us do rei Eric e ao
+nordeste voc� observa a extens�o de todo sal�o da fortaleza, vindo desde o
+grande port�o at� o trono do imponente Eric.
+~
+126 72 0 0 0 0
+D0
+Voc� observa um belo santu�rio.
+~
+~
+0 -1 12640
+D2
+Voc� observa a sala de trof�us dos vikings.
+~
+~
+0 -1 12625
+D3
+Voc� observa o trono do rei da Su�cia.
+~
+~
+0 -1 12631
+D7
+Voc� observa o grande sal�o da fortaleza.
+~
+~
+0 -1 12641
+S
+#12633
+O Santu�rio do Supremo Odin~
+   Voc� est� no magn�fico santu�rio de Odin, o deus dos deuses e senhor do
+pal�cio de Valhala.  Ao seu redor bel�ssimas runas e uma monumental estatua
+do supremo deus dos deuses.  Os sacerdotes Hofgodis afirmam que Odin vive 
+em Asgard no pal�cio magn�fico, chamado de Valhala.  Os Hofgodis contam
+tamb�m que os guerreiros que morrem segurando armas em batalhas viveram
+para sempre no Valhala, em grandes batalhas de dia e a noite em majestosas
+festas.  Ao leste voc� observa o centro da vila viking.
+~
+126 524416 0 0 0 1
+D1
+Voc� observa o centro da vila viking.
+~
+~
+0 -1 12634
+S
+#12634
+O Centro da Vila viking~
+   Voc� est� caminhando pela vila viking.  Ao seu redor voc� observa v�rias
+cabanas de madeira e de turfa.  O centro da vila est� bastante agitado hoje.
+Ao norte voc� observa alguns homens se divertindo em jogos, ao leste voc�
+uma cabana de madeira e turfa, ao sul voc� observa uma plan�cie escandinava
+e ao oeste voc� observa um belo santu�rio viking.
+~
+126 0 0 0 0 1
+D0
+Voc� observa o centro da vila viking.
+~
+~
+0 -1 12644
+D1
+Voc� observa uma pequena cabana.
+~
+~
+0 -1 12635
+D2
+Voc� observa uma tranq�ila plan�cie escandinava.
+~
+~
+0 -1 12627
+D3
+Voc� observa um sublime santu�rio ao deus Odin.
+~
+~
+0 -1 12633
+S
+#12635
+A Cabana do Ferreiro Viking~
+   Voc� est� dentro da cabana do ferreiro viking.  Ao seu redor ferramentas
+e uma enorme lareira.  Voc� observa armas espalhadas por todos os cantos da
+cabana.  Os ferreiros vikings s�o vitais para seus povos, pois saem das m�os
+deles as armas que far�o seus inimigos se ajoelharem.  Ao oeste voc� observa 
+o centro da vila viking.
+~
+126 131080 0 0 0 0
+D3
+Voc� observa o centro da vila viking.
+~
+~
+0 -1 12634
+S
+#12636
+O Delta do Rio Glama~
+   Voc� est� navegando pelas �guas cristalinas e frias do rio Glama.  Ao 
+oeste voc� observa o encontro das �guas do rio Glama com as �guas do mar da
+Noruega, ao sul voc� observa uma vila viking, ao norte voc� observa uma
+floresta coberta de neve e ao oeste voc� observa as �guas do rio Glama.
+~
+126 131140 0 0 0 7
+D0
+Voc� observa uma floresta coberta de neve.
+~
+~
+0 -1 12648
+D1
+Voc� observa as �guas do rio Glama.
+~
+~
+0 -1 12637
+D2
+Voc� observa uma vila viking.
+~
+~
+0 -1 12620
+D3
+Voc� observa as �guas do mar da Noruega.
+~
+~
+0 -1 12619
+S
+#12637
+O Rio Glama~
+   Voc� est� navegando pelas �guas cristalinas do rio Glama.  Ao seu redor
+voc� j� percebe os primeiros sinais das mudan�as clim�ticas da regi�o, a
+medida que voc� segue para norte a quantidade de neve e gelo aumenta e o 
+frio fica incontrol�vel.  Ao norte voc� observa uma floresta coberta de neve
+e gelo, ao leste e oeste voc� observa as �guas cristalinas do rio Glama.
+~
+126 131140 0 0 0 7
+D0
+Voc� observa uma floresta coberta de gelo e neve.
+~
+~
+0 -1 12649
+D1
+Voc� observa as �guas cristalinas do rio Glama.
+~
+~
+0 -1 12638
+D3
+Voc� observa as �guas cristalinas do rio Glama.
+~
+~
+0 -1 12636
+S
+#12638
+O Rio Glama~
+   Voc� est� navegando pelas �guas cristalinas do rio Glama.  Ao norte voc�
+observa uma floresta coberta de gelo e neve, ao sul voc� observa uma bela
+plan�cie escandinava e ao oeste voc� observa as �guas do rio Glama.
+~
+126 131140 0 0 0 7
+D0
+Voc� observa uma floresta coberta de gelo e neve.
+~
+~
+0 -1 12650
+D2
+Voc� observa uma tranq�ila plan�cie escandinava.
+~
+~
+0 -1 12630
+D3
+Voc� observa as �guas cristalinas do rio Glama.
+~
+~
+0 -1 12637
+S
+#12639
+O Aposento de Eric~
+   Voc� est� dentro do aposento do imponente rei da Su�cia e l�der dos cl�s
+vikings da Su�cia.  Ao seu redor voc� observa um aposento bastante simples 
+para um rei.  Apenas uma cama de turfa, alguns ba�s e uma mesa de madeira.
+Voc� percebe que a verdadeira riqueza deste povo est� na sua for�a e coragem
+de derrubar e aniquilar qualquer inimigo que n�o se ajoelhe perante seu rei
+e seu povo.  Ao sul voc� observa o grande sal�o e o trono de ouro de Eric.
+~
+126 72 0 0 0 0
+D2
+Voc� observa o grande sal�o da fortaleza viking.
+~
+porta madeira~
+1 -1 12631
+S
+#12640
+O Santu�rio da Fortaleza~
+   Voc� est� dentro do sublime santu�rio da fortaleza viking.  Ao seu redor
+algumas runas e uma enorme pedra, utilizada para fazer sacrif�cios humanos.
+O rei Eric j� sacrificou para Odin uma vez quatrocentos prisioneiros de 
+guerra.  A sensa��o aqui � de tranq�ilidade.  Ao sul voc� observa o grande
+sal�o da fortaleza viking.
+~
+126 524488 0 0 0 0
+D2
+Voc� observa o grande sal�o da fortaleza.
+~
+~
+0 -1 12632
+S
+#12641
+O Sal�o da Fortaleza Viking~
+   Voc� est� dentro do grande sal�o da fortaleza viking.  Ao oeste voc� 
+observa toda a extens�o do sal�o, feito para que o rei pudesse ver todas
+pessoas que entrassem na fortaleza.  Ao leste voc� observa alguns guardas
+vikings e ao sudoeste voc� observa o sal�o da fortaleza.
+~
+126 72 0 0 0 0
+D1
+Voc� observa um ponto de guarda viking.
+~
+~
+0 -1 12642
+D9
+Voc� observa o grande sal�o da fortaleza viking.
+~
+~
+0 -1 12632
+S
+#12642
+A Sala da Guarda da Fortaleza~
+   Voc� est� dentro da protegida sala da guarda da fortaleza viking.  Ao seu
+redor voc� observa v�rias armas e guardas vikings.  Para se chegar ao rei
+ser� preciso muita sorte.  Ao leste voc� observa um grande port�o de madeira
+e ao oeste voc� observa o grande sal�o da fortaleza.
+~
+126 72 0 0 0 0
+D1
+Voc� observa um grande port�o de madeira.
+~
+grande port�o madeira~
+1 -1 12643
+D3
+Voc� observa o grande sal�o da fortaleza viking.
+~
+~
+0 -1 12641
+S
+#12643
+A Entrada da Fortaleza Viking~
+   Voc� est� na entrada da fortaleza viking.  Ao seu redor v�rios vikings
+olham para voc� curiosamente.  A fortaleza � feita de madeira bastante
+resistente.  Ao leste voc� observa o centro movimentado da vila viking e ao
+oeste voc� observa um grande port�o de madeira.
+~
+126 0 0 0 0 1
+D1
+Voc� observa o centro da vila viking.
+~
+~
+0 -1 12644
+D3
+Voc� observa um grande port�o de madeira.
+~
+grande port�o madeira~
+1 -1 12642
+S
+#12644
+O Centro da Vila Viking~
+   Voc� est� caminhando pelo centro da vila viking.  Ao seu redor voc� 
+observa v�rios viking torcendo e desafiando uns aos outros num jogo de 
+arremesso de enormes pedras.  Voc� observa tamb�m algumas cabanas de madeira 
+e de turfa e pequenas crian�as brincando.  Ao norte e ao sul voc� observa o 
+centro da vila viking, ao leste voc� percebe uma bela plan�cie escandinava
+e ao oeste voc� observa a entrada da fortaleza viking.
+~
+126 0 0 0 0 1
+D0
+Voc� observa a movimenta��o no centro da vila viking.
+~
+~
+0 -1 12655
+D1
+Voc� observa uma bela e tranq�ila plan�cie escandinava.
+~
+~
+0 -1 12645
+D2
+Voc� observa a movimenta��o no centro da vila viking.
+~
+~
+0 -1 12634
+D3
+Voc� observa a entrada da fortaleza viking.
+~
+~
+0 -1 12643
+S
+#12645
+Uma Vila Viking Sueca~
+   Voc� est� caminhando por uma bela plan�cie escandinava.  Ao seu redor
+voc� observa as lindas flores na vegeta��o rasteira e o solo rochoso da
+pen�nsula escandinava.  O aroma na plan�cie � maravilhoso, como tamb�m a
+paisagem que se tem daqui.  Ao leste voc� observa uma linda praia formada
+por uma abertura entre dois monumentais fiordes e ao oeste voc� observa a
+agita��o no centro da vila viking.
+~
+126 0 0 0 0 2
+D1
+Voc� observa uma linda praia escandinava.
+~
+~
+0 -1 12646
+D3
+Voc� observa o centro da vila viking.
+~
+~
+0 -1 12644
+S
+#12646
+Uma Praia Escandinava~
+   Voc� est� caminhando numa bel�ssima praia escandinava, formada por uma
+abertura entre dois grandes fiordes.  Ao leste voc� observa as tranq�ilas
+�guas do golfo de Bothnia e ao oeste voc� observa uma vila viking.
+~
+126 4 0 0 0 2
+D1
+Voc� observa o golfo de Bothnia.
+~
+~
+0 -1 12647
+D3
+Voc� observa uma agitada vila viking sueca.
+~
+~
+0 -1 12645
+S
+#12647
+O Golfo de Bothnia~
+   Voc� est� navegando pelas tranq�ilas �guas do golfo de Bothnia.  Ao norte
+voc� observa as �guas do golfo de Bothnia, ao sul voc� observa as g�lidas
+�guas do mar B�ltico e ao oeste voc� observa entre dois monumentais fiordes
+uma praia rochosa escandinava.  Ao leste voc� observa a Suomi, a terra dos
+mil lagos.
+~
+126 131136 0 0 0 7
+D0
+Voc� observa as tranq�ilas �guas do golfo de Bothnia.
+~
+~
+0 -1 12657
+D2
+Voc� observa as frias �guas do mar B�ltico.
+~
+~
+0 -1 12609
+D3
+Voc� observa uma abertura entre dois monumentais fiordes.
+~
+~
+0 -1 12646
+S
+#12648
+A Floresta de Gelo~
+   Voc� est� caminhando por entre monumentais �rvores carregadas de gelo e
+neve.  Precisa-se de muito esfor�o e for�a para caminhar pelas trilhas
+cheias de neve.  O sil�ncio na floresta � solene.  Ao norte e ao leste voc�
+observa trilhas na floresta de gelo e ao sul voc� observa as �guas 
+cristalinas do rio Glama.
+~
+126 393216 0 0 0 5
+D0
+Voc� observa uma trilha coberta de neve na floresta.
+~
+~
+0 -1 12659
+D1
+Voc� observa uma trilha coberta de neve na floresta.
+~
+~
+0 -1 12649
+D2
+Voc� observa o rio Glama.
+~
+~
+0 -1 12636
+S
+#12649
+A Floresta de Gelo~
+   Voc� est� caminhando com muita dificuldade por uma trilha entre 
+monumentais �rvores cobertas de gelo e neve.  A medida que voc� segue para
+norte o clima fica mais arrepiante e frio.  Ao sul voc� observa o rio Glama,
+ao leste e ao oeste voc� observa trilhas na floresta de gelo.
+~
+126 393216 0 0 0 5
+D1
+Voc� observa uma trilha coberta de neve na floresta.
+~
+~
+0 -1 12650
+D2
+Voc� observa o rio Glama.
+~
+~
+0 -1 12637
+D3
+Voc� observa uma trilha coberta de neve na floresta.
+~
+~
+0 -1 12648
+S
+#12650
+A Floresta de Gelo~
+   Voc� est� caminhando numa trilha coberta de neve e gelo na floresta de
+gelo.  Ao seu redor v�rias �rvores cobertas de neve e um sil�ncio solene.
+Ao sul voc� observa as �guas cristalinas do rio Glama, ao oeste voc� observa
+uma trilha na floresta de gelo e para cima voc� observa os monumentais Alpes
+escandinavos.
+~
+126 393216 0 0 0 5
+D2
+Voc� observa o rio Glama.
+~
+~
+0 -1 12638
+D3
+Voc� observa uma trilha coberta de neve na floresta.
+~
+~
+0 -1 12649
+D4
+Voc� observa os monumentais e bel�ssimos Alpes escandinavos.
+~
+~
+0 -1 12651
+S
+#12651
+Os Alpes Escandinavos~
+   Voc� est� caminhando numa trilha �ngreme em dire��o ao ponto mais alto 
+dos Alpes escandinavos.  Ao seu redor voc� observa as grandes rochas negras
+que formam est� cadeia montanhosa rochosa.  Ao olhar na dire��o oeste voc�
+observa a bela floresta de gelo, uma paisagem bel�ssima.  Para cima voc�
+observa uma trilha no topo dos Alpes escandinavos e para baixo voc� observa
+a floresta de gelo.
+~
+126 131396 0 0 0 5
+D4
+Voc� observa o topo dos Alpes escandinavos.
+~
+~
+0 -1 12652
+D5
+Voc� observa a floresta de gelo.
+~
+~
+0 -1 12650
+S
+#12652
+Os Monumentais Alpes Escandinavos~
+   Voc� est� caminhando numa trilha no topo dos Alpes escandinavos.  A
+paisagem das terras escandinavas daqui � magn�fica.  Ao oeste voc� observa
+as belas �guas do mar da Noruega, ao leste as tranq�ilas �guas do golfo de 
+Bothnia.  Voc� observa tamb�m algumas vilas vikings nas terras aos p�s dos
+Alpes.  Ao norte voc� observa uma trilha no topo dos Alpes escandinavos e
+para baixo voc� observa uma trilha �ngreme em dire��o a floresta de gelo.
+~
+126 196672 0 0 0 5
+D0
+Voc� observa uma trilha rochosa no topo dos Alpes escandinavos.
+~
+~
+0 -1 12660
+D5
+Voc� observa uma trilha rochosa em dire��o da floresta de gelo.
+~
+~
+0 -1 12651
+S
+#12653
+A Floresta de Gelo~
+   Voc� est� caminhando por entre monumentais �rvores cobertas de neve.  A
+dificuldade de caminhar pelas trilhas � muito grande, por causa da enorme
+quantidade de neve acumulada aqui.  Ao sul voc� observa uma trilha na 
+floresta de gelo e ao norte voc� observa o belo rio Angerman.
+~
+126 393216 0 0 0 5
+D0
+Voc� observa o rio Angerman.
+~
+~
+0 -1 12661
+D2
+Voc� observa uma trilha coberta de neve na floresta de gelo.
+~
+~
+0 -1 12615
+S
+#12654
+A Grande Cabana Viking~
+   Voc� est� dentro de uma longa cabana de madeira e de turfa.  A vila dos
+vikings � constitu�da por cabanas pequenas de madeira e turfa, que servem 
+como dormit�rios, cabanas de ferreiros, cabanas para armazenar suprimentos,
+o centro da vila, local onde acontece a maior intera��o entre os moradores
+da vila, e a cabana longa, local onde � feita a refei��o e as reuni�es dos 
+vikings.  Ao seu redor voc� observa uma enorme mesa de madeira, de 
+comprimento quase igual ao da cabana, v�rias cadeiras de madeira e uma
+grande fogueira no canto norte da cabana.  Em cima da grande mesa voc� 
+observa um enorme urso branco abatido pelos ca�adores vikings.  Ao leste 
+voc� observa o agitado centro da vila viking.
+~
+126 131080 0 0 0 0
+D1
+Voc� observa o centro da vila viking.
+~
+~
+0 -1 12655
+S
+#12655
+O Centro da Vila Viking~
+   Voc�s est� caminhando pela agitada vila viking.  Ao seu redor voc� 
+observa v�rias cabanas de madeira e turfa e alguns vikings jogando um jogo 
+de tabuleiro, chamado de hnefatafl.  Ao norte voc� observa uma bela plan�cie 
+escandinava, ao leste e ao oeste voc� observa cabanas vikings e ao sul voc�
+observa a movimenta��o no centro da vila viking.
+~
+126 0 0 0 0 1
+D0
+Voc� observa uma bela plan�cie escandinava.
+~
+~
+0 -1 12662
+D1
+Voc� observa o armaz�m da vila viking.
+~
+~
+0 -1 12656
+D2
+Voc� observa o centro da vila viking.
+~
+~
+0 -1 12644
+D3
+Voc� observa a grande cabana viking.
+~
+~
+0 -1 12654
+S
+#12656
+O Armaz�m da Vila~
+   Voc� est� dentro do grande armaz�m da vila viking.  Ao seu redor voc�
+observa suprimentos que daria para alimentar a vila toda por um longo 
+per�odo.  Ao oeste voc� observa o centro da vila viking.
+~
+126 131080 0 0 0 0
+D3
+Voc� observa o centro da vila viking.
+~
+~
+0 -1 12655
+S
+#12657
+O Golfo de Bothnia~
+   Voc� est� navegando pelas tranq�ilas �guas do golfo de Bothnia.  Ao sul e
+noroeste voc� observa as �guas do golfo de Bothnia.  Ao leste voc� observa a 
+Suomi, a terra dos mil lagos.
+~
+126 131136 0 0 0 7
+D2
+Voc� observa as �guas tranq�ilas do golfo de Bothnia.
+~
+~
+0 -1 12647
+D6
+Voc� observa as �guas tranq�ilas do golfo de Bothnia.
+~
+~
+0 -1 12663
+S
+#12658
+O Mar da Noruega~
+   Voc� est� navegando pelas frias e temidas �guas de domina��o dos Vikings
+noruegueses do mar da Noruega.  A paisagem da costa escandinava � bel�ssima
+e monumental, seus fiordes transformam a pen�nsula escandinava numa 
+verdadeira fortaleza natural.  Ao nordeste e ao sudeste voc� observa o mar 
+da Noruega na linha do horizonte.
+~
+126 131136 0 0 0 7
+D7
+Voc� observa o mar da Noruega.
+~
+~
+0 -1 12670
+D8
+Voc� observa o mar da Noruega.
+~
+~
+0 -1 12619
+S
+#12659
+A Floresta de Gelo~
+   Voc� est� caminhando com muita dificuldade por uma trilha entre 
+monumentais �rvores cobertas de gelo e neve.  A medida que voc� segue para
+norte o clima fica mais arrepiante e frio.  Ao norte e ao sul voc� observa 
+trilhas cobertas de neve na floresta de gelo.
+~
+126 393216 0 0 0 5
+D0
+Voc� observa uma trilha coberta de neve.
+~
+~
+0 -1 12664
+D2
+Voc� observa uma trilha coberta de neve.
+~
+~
+0 -1 12648
+S
+#12660
+Os Monumentais Alpes Escandinavos~
+   Voc� est� caminhando numa trilha no topo dos Alpes escandinavos.  Ao seu
+redor as bel�ssimas terras escandinavas.  Em seu cora��o, o sentimento de
+liberdade explode em batidas fortes de emo��o e fascina��o.  Ao nordeste e
+ao sul voc� observa uma trilha no topo coberto de neve dos Alpes 
+escandinavos.
+~
+126 196672 0 0 0 5
+D2
+Voc� observa uma trilha no topo dos Alpes coberto de neve.
+~
+~
+0 -1 12652
+D7
+Voc� observa uma trilha no topo dos Alpes escandinavos.
+~
+~
+0 -1 12666
+S
+#12661
+O Rio Angerman~
+   Voc� est� navegando pelas frias e tranq�ilas �guas do rio Angerman.  Ao
+nordeste voc� observa as belas �guas do rio Angerman e ao sul voc� observa
+a bela floresta de gelo coberta de neve.
+~
+126 131140 0 0 0 7
+D2
+Voc� observa a floresta de gelo.
+~
+~
+0 -1 12653
+D7
+Voc� observa o rio Angerman.
+~
+~
+0 -1 12667
+S
+#12662
+Uma Vila Viking Sueca~
+   Voc� est� caminhando numa bela plan�cie escandinava.  Ao seu redor voc�
+observa algumas cabanas de madeira e turfa, e alguns vikings curiosos com a
+sua presen�a.  Ao norte voc� observa as �guas do rio Angerman e ao sul voc�
+observa o centro da vila viking.
+~
+126 0 0 0 0 1
+D0
+Voc� observa o rio Angerman.
+~
+~
+0 -1 12668
+D2
+Voc� observa o centro da vila viking.
+~
+~
+0 -1 12655
+S
+#12663
+O Golfo de Bothnia~
+   Voc� est� navegando pelas tranq�ilas �guas do golfo de Bothnia.  Ao norte
+e ao sudeste voc� observa as �guas do golfo de Bothnia.  A paisagem da costa
+escandinava � monumental com seus fiordes magn�ficos.  Ao leste voc� 
+observa a Suomi, a terra dos mil lagos.
+~
+126 131136 0 0 0 7
+D0
+Voc� observa as �guas frias do golfo de Bothnia.
+~
+~
+0 -1 12669
+D8
+Voc� observa as �guas frias do golfo de Bothina.
+~
+~
+0 -1 12657
+S
+#12664
+A Floresta de Gelo~
+   Voc� est� caminhando por entre monumentais �rvores carregadas de gelo e
+neve.  Precisa-se de muito esfor�o e for�a para caminhar pelas trilhas
+cheias de neve.  O sil�ncio na floresta � solene.  Ao sul voc� observa uma
+trilha na floresta de gelo e ao norte voc� observa uma agitada vila viking.
+~
+126 393216 0 0 0 5
+D0
+Voc� observa uma vila viking.
+~
+~
+0 -1 12672
+D2
+Voc� observa uma trilha coberta de neve.
+~
+~
+0 -1 12659
+S
+#12665
+Uma Cabana de Madeira~
+   Voc� est� dentro de uma cabana de pedras e turfa.  Ao seu redor voc� 
+observa uma cama de feno e alguns restos de comida.  Ao norte voc� observa
+o centro da vila viking.
+~
+126 131080 0 0 0 0
+D0
+Voc� observa o centro da vila viking.
+~
+~
+0 -1 12673
+S
+#12666
+Os Monumentais Alpes Escandinavos~
+   Voc� est� caminhando numa trilha no topo dos Alpes escandinavos.  A
+paisagem das terras escandinavas daqui � magn�fica.  Ao oeste voc� observa
+as belas �guas do mar da Noruega, ao leste as tranq�ilas �guas do golfo de 
+Bothnia.  Voc� observa tamb�m algumas vilas vikings nas terras aos p�s dos
+Alpes.  Ao norte e sudoeste voc� observa uma trilha no topo dos Alpes 
+escandinavos.
+~
+126 196672 0 0 0 5
+D0
+Voc� observa uma trilha no topo dos Alpes escandinavos.
+~
+~
+0 -1 12675
+D9
+Voc� observa uma trilha no topo dos Alpes escandinavos.
+~
+~
+0 -1 12660
+S
+#12667
+O Rio Angerman~
+   Voc� est� navegando pelas frias e tranq�ilas �guas do rio Angerman.  Os
+ventos vindos do norte causam arrepios em voc�.  Ao sudoeste e ao leste voc� 
+observa as belas �guas do rio Angerman.
+~
+126 131140 0 0 0 7
+D1
+Voc� observa o rio Angerman.
+~
+~
+0 -1 12668
+D9
+Voc� observa o rio Angerman.
+~
+~
+0 -1 12661
+S
+#12668
+O Rio Angerman~
+   Voc� est� navegando nas belas e tranq�ilas �guas do rio Angerman.  Ao sul
+voc� observa alguns vikings construindo embarca��es nas margens do rio 
+Angerman.  Ao norte voc� observa o temido deserto de gelo e ao sul voc�
+observa uma bela plan�cie escandinava.
+~
+126 131140 0 0 0 7
+D0
+Voc� observa o arrepiante e solit�rio deserto de gelo.
+~
+~
+0 -1 12677
+D2
+Voc� observa uma bela plan�cie escandinava.
+~
+~
+0 -1 12662
+S
+#12669
+O Golfo de Bothnia~
+   Voc� est� navegando pelas tranq�ilas �guas do golfo de Bothnia.  Ao sul
+e ao nordeste voc� observa as �guas do golfo de Bothnia e ao oeste voc� 
+observa as �guas tranq�ilas do bela rio Angerman.  Ao leste voc� observa a 
+Suomi, a terra dos mil lagos.
+~
+126 131136 0 0 0 7
+D2
+Voc� observa as �guas do golfo de Bothnia.
+~
+~
+0 -1 12663
+D3
+Voc� observa o delta do rio Angerman.
+~
+~
+0 -1 12668
+D7
+Voc� observa as �guas do golfo de Bothnia.
+~
+~
+0 -1 12699
+S
+#12670
+O Mar da Noruega~
+   Voc� est� navegando pelas misteriosas e arrepiantes �guas do mar da 
+Noruega.  Ao longo de toda a costa da Noruega, voc� observa imensos fiordes.
+Contudo em alguns pontos voc� percebe a exist�ncia de entradas nas rochas,
+formando assim as praias escandinavas.  Ao norte e ao sudoeste voc� observa
+o mar da Noruega na linha do horizonte e ao leste voc� observa uma bela 
+praia escandinava.
+~
+126 131136 0 0 0 7
+D0
+Voc� observa as frias �guas do mar da Noruega.
+~
+~
+0 -1 -1
+D1
+Voc� observa uma bela praia escandinava entre dois fiordes.
+~
+~
+0 -1 12671
+D9
+Voc� observa as frias �guas do mar da Noruega.
+~
+~
+0 -1 12658
+S
+#12671
+Uma Bela Praia Escandinava~
+   Voc� est� caminhando numa bela praia escandinava, formada por uma grande
+abertura entre dois monumentais fiordes.  Ao seu redor voc� observa grandes 
+rochas negras cobertas de neve.  Voc� observa a neve caindo por sobre sua
+armadura.  Ao oeste voc� observa o mar da Noruega e ao leste voc� observa 
+uma agitada vila viking norueguesa.
+~
+126 4 0 0 0 2
+D1
+Voc� observa uma vila viking norueguesa.
+~
+~
+0 -1 12672
+D3
+Voc� observa o mar da Noruega.
+~
+~
+0 -1 12670
+S
+#12672
+Uma Vila Viking Norueguesa~
+   Voc� est� caminhando por uma bela plan�cie escandinava.  Ao seu redor
+voc� observa as lindas flores na vegeta��o rasteira e o solo rochoso da
+pen�nsula escandinava.  O aroma na plan�cie � maravilhoso, como tamb�m a
+paisagem que se tem daqui.  Voc� observa a neve caindo sobre sua armadura.
+Ao oeste voc� observa uma linda praia formada por uma abertura entre dois
+monumentais fiordes, ao leste voc� observa a agita��o no centro da vila 
+viking, ao norte voc� observa v�rios vikings jogando jogos de desafios, 
+que chegam a valer as vezes a pr�pria vida, e ao sul voc� observa voc� 
+observa uma floresta coberta de neve.
+~
+126 0 0 0 0 2
+D0
+Voc� observa uma plan�cie escandinava.
+~
+~
+0 -1 12678
+D1
+Voc� observa o centro da vila viking.
+~
+~
+0 -1 12673
+D2
+Voc� observa uma floresta coberta de neve.
+~
+~
+0 -1 12664
+D3
+Voc� observa uma praia escandinava.
+~
+~
+0 -1 12671
+S
+#12673
+O Centro da Vila Viking~
+   Voc� est� caminhando pela vila viking.  Ao seu redor voc� observa v�rias
+cabanas de pedras e turfa.  O centro da vila est� bastante agitado hoje.  A 
+neve n�o para de cair, acumulando por cima das cabanas e por toda vila 
+viking.  Ao norte, leste e sul voc� observa algumas cabanas de pedras e 
+turfa, ao sul voc� observa uma plan�cie escandinava e ao oeste e nordeste 
+voc� observa belas plan�cies escandinavas.
+~
+126 0 0 0 0 1
+D0
+Voc� observa o armaz�m da vila viking.
+~
+~
+0 -1 12679
+D1
+Voc� observa uma longa cabana.
+~
+~
+0 -1 12674
+D2
+Voc� observa uma cabana de pedras e turfa.
+~
+~
+0 -1 12665
+D3
+Voc� observa uma bela plan�cie escandinava.
+~
+~
+0 -1 12672
+D7
+Voc� observa uma bela plan�cie escandinava.
+~
+~
+0 -1 12680
+S
+#12674
+A Grande Cabana Viking~
+   Voc� est� dentro de uma longa cabana de pedras e turfa.  A vila dos
+vikings � constitu�da por cabanas pequenas de pedras e turfa, que servem 
+como dormit�rios, cabanas de ferreiros, cabanas para armazenar suprimentos,
+o centro da vila, local onde acontece a maior intera��o entre os moradores
+da vila, e a cabana longa, local onde � feita a refei��o e as reuni�es dos 
+vikings.  Ao seu redor voc� observa uma enorme mesa de madeira, de 
+comprimento quase igual ao da cabana, v�rias cadeiras de madeira e uma
+grande fogueira no canto norte da cabana.  Ao oeste voc� observa o agitado 
+centro da vila viking.
+~
+126 131080 0 0 0 0
+D3
+Voc� observa o centro da vila viking.
+~
+~
+0 -1 12673
+S
+#12675
+Os Monumentais Alpes Escandinavos~
+   Voc� est� caminhando numa trilha no topo dos Alpes escandinavos.  A
+paisagem das terras escandinavas daqui � magn�fica.  Ao oeste voc� observa
+as belas �guas do mar da Noruega, ao leste as tranq�ilas �guas do golfo de 
+Bothnia.  Voc� observa tamb�m algumas vilas vikings nas terras aos p�s dos
+Alpes.  Ao nordeste e ao sul voc� observa uma trilha no topo dos Alpes 
+escandinavos.
+~
+126 196672 0 0 0 5
+D2
+Voc� observa uma trilha no topo dos Alpes escandinavos.
+~
+~
+0 -1 12666
+D7
+Voc� observa uma trilha no topo dos Alpes escandinavos.
+~
+~
+0 -1 12676
+S
+#12676
+Os Monumentais Alpes Escandinavos~
+   Voc� est� caminhando numa trilha coberta pela neve, que n�o para de cair
+nos Alpes escandinavos.  Al�m dos Alpes voc� observa um imenso deserto de
+gelo que cobre toda a pen�nsula escandinava em sua extremidade norte.  Ao
+norte e ao sudoeste voc� observa uma trilha coberta de neve no topo dos 
+Alpes escandinavos.
+~
+126 196672 0 0 0 5
+D0
+Voc� observa uma trilha no topo dos Alpes escandinavos.
+~
+~
+0 -1 12705
+D9
+Voc� observa uma trilha no topo dos Alpes escandinavos.
+~
+~
+0 -1 12675
+S
+#12677
+O Deserto Escandinavo de Gelo~
+   Voc� est� caminhando pelo temido deserto de gelo.  Os ventos frios e a
+neve que n�o para de cair fazem desta regi�o uma das mais des�rticas da
+pen�nsula escandinava.  Ao seu redor voc� observa na linha do horizonte o
+deserto de gelo e n�o encontra mais nada.  Ao nordeste e ao noroeste voc�
+observa o deserto de gelo da Su�cia e ao sul voc� observa o rio Angerman.
+~
+126 1245284 0 0 0 4
+D2
+Voc� observa o rio Angerman.
+~
+~
+0 -1 12668
+D6
+Voc� observa o branco deserto de gelo.
+~
+~
+0 -1 12689
+D7
+Voc� observa o branco deserto de gelo.
+~
+~
+0 -1 12690
+S
+#12678
+Uma Bela Plan�cie Coberta de Neve~
+   Voc� est� caminhando numa plan�cie coberta de neve.  Ao seu redor voc�
+observa grandes vikings desafiando uns aos outros num jogo de arremesso de
+pedras, ao lado v�rios homens e mulheres agitam a competi��o e aplaudem os
+mais fortes e corajosos.  Ao sul voc� observa uma bel�ssima plan�cie 
+escandinava.
+~
+126 0 0 0 0 1
+D2
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12672
+S
+#12679
+O Armaz�m da Vila~
+   Voc� est� dentro do grande armaz�m da vila viking.  Ao seu redor voc�
+observa suprimentos que daria para alimentar a vila toda por um longo 
+per�odo de tempo.  Ao sul voc� observa o centro da vila viking.
+~
+126 131080 0 0 0 0
+D2
+Voc� observa o centro da vila.
+~
+~
+0 -1 12673
+S
+#12680
+Uma Vila Viking Norueguesa~
+   Voc� est� caminhando numa bela plan�cie coberta de neve.  Ao seu redor
+voc� observa lindas flores azuis em meio a muita neve e gelo.  Ao norte voc�
+observa o belo rio Namse, ao leste voc� observa uma cabana cheia de armas e
+ao sudoeste voc� observa o centro da vila viking.
+~
+126 0 0 0 0 1
+D0
+Voc� observa o rio Namse.
+~
+~
+0 -1 12683
+D1
+Voc� observa uma cabana de pedras e turfa.
+~
+~
+0 -1 12681
+D9
+Voc� observa o centro da vila viking.
+~
+~
+0 -1 12673
+S
+#12681
+A Cabana do Ferreiro Viking~
+   Voc� est� dentro da cabana do ferreiro viking.  Ao seu redor ferramentas
+e uma enorme lareira.  Voc� observa armas espalhadas por todos os cantos da
+cabana.  Os ferreiros vikings s�o vitais para seus povos, pois saem das m�os
+deles as armas que far�o seus inimigos se ajoelharem.  Ao oeste voc� observa 
+uma bela plan�cie escandinava coberta de neve.
+~
+126 131080 0 0 0 0
+D3
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12680
+S
+#12682
+O Rio Namse~
+   Voc� est� navegando nas g�lidas �guas do magn�fico rio Namse.  A neve n�o
+para de cair, as �guas do rio em algumas partes j� est�o completamente
+congeladas.  Ao noroeste voc� observa o temido mar da Noruega e ao leste
+voc� observa as frias �guas do rio Namse.
+~
+126 131140 0 0 0 7
+D1
+Voc� observa as �guas congeladas do rio Namse.
+~
+~
+0 -1 12683
+D6
+Voc� observa as temidas �guas do mar da Noruega.
+~
+~
+0 -1 -1
+S
+#12683
+O Rio Namse~
+   Voc� est� navegando pelas frias e congelantes �guas do rio Namse.  Os 
+ventos vindos do norte s�o de causar arrepios.  Ao norte voc� observa o
+des�rtico deserto de gelo da Noruega, ao leste e oeste voc� observa as 
+congeladas �guas do rio Namse e ao sul voc� observa uma bela plan�cie 
+escandinava coberta de neve.
+~
+126 131140 0 0 0 7
+D0
+Voc� observa o deserto de gelo da Noruega.
+~
+~
+0 -1 12687
+D1
+Voc� observa as congelantes �guas do rio Namse.
+~
+~
+0 -1 12684
+D2
+Voc� observa uma bela plan�cie escandinava coberta de gelo.
+~
+~
+0 -1 12680
+D3
+Voc� observa as congelantes �guas do rio Namse.
+~
+~
+0 -1 12682
+S
+#12684
+O Rio Namse~
+   Voc� est� navegando pelas congelantes �guas do rio Namse.  Uma forte 
+neblina surge vinda do leste e ventos frios vindos do norte lhe causam
+arrepios.  Ao oeste voc� observa as �guas frias do rio Namse.
+~
+126 131140 0 0 0 7
+D3
+Voc� observa as frias e congelantes �guas do rio Namse.
+~
+~
+0 -1 12683
+S
+#12686
+A Terra do Sol da Meia-Noite~
+   Voc� est� caminhando com muita dificuldade e por muitas horas neste 
+des�rtico lugar.  A neve n�o para de cair e os ventos frios lhe causam 
+arrepios.  O clima bastante frio dificulta sua respira��o.  Voc� observa no 
+c�u o sol brilhando como se as horas n�o passassem, por�m o tempo aqui n�o 
+parou.  Ao seu redor a neve e o gelo formam a realeza dessa terra.
+~
+126 1245284 0 0 0 4
+S
+#12687
+A Terra do Sol da Meia-Noite~
+   Voc� chegou numa das regi�es mais g�lidas e des�rticas de toda a 
+pen�nsula escandinava.  Voc� observa a linha do horizonte com muita 
+dificuldade, causada pelos fortes ventos frios e pela neve que n�o para de 
+cair.  Ao olhar para o c�u voc� percebe que o sol brilha com muita for�a,
+mesmo passando horas caminhando por estas terras solit�rias o sol n�o 
+diminuiu seu brilho.  A cada rajada de vento um horr�vel som domina toda a
+regi�o, parecendo com o grito de um guerreiro no leito de sua morte.  Ao sul
+voc� observa as �guas do rio Namse.
+~
+126 1245284 0 0 0 4
+D2
+Voc� observa o rio Namse.
+~
+~
+0 -1 12683
+S
+#12688
+A Terra do Sol da Meia-Noite~
+   Voc� est� caminhando com muita dificuldade e por muitas horas neste 
+des�rtico lugar.  A neve n�o para de cair e os ventos frios lhe causam 
+arrepios.  O clima bastante frio dificulta sua respira��o.  Voc� observa no 
+c�u o sol brilhando como se as horas n�o passassem, por�m o tempo aqui n�o 
+parou.  Ao seu redor a neve e o gelo formam a realeza dessa terra.
+~
+126 1245284 0 0 0 4
+S
+#12689
+O Deserto Escandinavo de Gelo~
+   Voc� est� caminhando pelo temido deserto de gelo.  Os ventos frios e a
+neve que n�o para de cair fazem desta regi�o uma das mais des�rticas da
+pen�nsula escandinava.  Ao seu redor voc� observa na linha do horizonte o
+deserto de gelo e n�o encontra mais nada.  Ao nordeste, noroeste e sudeste 
+voc� observa o deserto de gelo da Su�cia.
+~
+126 1245284 0 0 0 4
+D6
+Voc� observa o g�lido deserto de gelo da Su�cia.
+~
+~
+0 -1 12695
+D7
+Voc� observa o g�lido deserto de gelo da Su�cia.
+~
+~
+0 -1 12696
+D8
+Voc� observa o g�lido deserto de gelo da Su�cia.
+~
+~
+0 -1 12677
+S
+#12690
+O Deserto Escandinavo de Gelo~
+   Voc� est� caminhando pelo temido deserto de gelo.  Os ventos frios e a
+neve que n�o para de cair fazem desta regi�o uma das mais des�rticas da
+pen�nsula escandinava.  Ao seu redor voc� observa na linha do horizonte o
+deserto de gelo e n�o encontra mais nada.  Ao nordeste, noroeste e sudoeste 
+voc� observa o deserto de gelo da Su�cia.
+~
+126 1245284 0 0 0 4
+D6
+Voc� observa o g�lido deserto de gelo da Su�cia.
+~
+~
+0 -1 12696
+D7
+Voc� observa o g�lido deserto de gelo da Su�cia.
+~
+~
+0 -1 12697
+D9
+Voc� observa o g�lido deserto de gelo da Su�cia.
+~
+~
+0 -1 12677
+S
+#12691
+O Mar da Noruega~
+   Voc� est� navegando pelas frias e temidas �guas de domina��o dos Vikings
+noruegueses do mar da Noruega.  A paisagem da costa escandinava � bel�ssima
+e monumental, seus fiordes transformam a pen�nsula escandinava numa 
+verdadeira fortaleza natural.  Ao nordeste voc� observa o congelante mar
+glacial �rtico e ao sul voc� observa o temido mar da Noruega.
+~
+126 131136 0 0 0 7
+D2
+Voc� observa as frias �guas do mar da Noruega.
+~
+~
+0 -1 -1
+D7
+Voc� observa as �guas congelantes do mar glacial �rtico.
+~
+~
+0 -1 12700
+S
+#12692
+A Terra do Sol da Meia-Noite~
+   Voc� est� caminhando com muita dificuldade e por muitas horas neste 
+des�rtico lugar.  A neve n�o para de cair e os ventos frios lhe causam 
+arrepios.  O clima bastante frio dificulta sua respira��o.  Voc� observa no 
+c�u o sol brilhando como se as horas n�o passassem, por�m o tempo aqui n�o 
+parou.  Ao seu redor a neve e o gelo formam a realeza dessa terra.
+~
+126 1245284 0 0 0 4
+S
+#12693
+A Terra do Sol da Meia-Noite~
+   Voc� est� caminhando com muita dificuldade e por muitas horas neste 
+des�rtico lugar.  A neve n�o para de cair e os ventos frios lhe causam 
+arrepios.  O clima bastante frio dificulta sua respira��o.  Voc� observa no 
+c�u o sol brilhando como se as horas n�o passassem, por�m o tempo aqui n�o 
+parou.  Ao seu redor a neve e o gelo formam a realeza dessa terra.
+~
+126 1245284 0 0 0 4
+S
+#12694
+A Terra do Sol da Meia-Noite~
+   Voc� est� caminhando com muita dificuldade e por muitas horas neste 
+des�rtico lugar.  A neve n�o para de cair e os ventos frios lhe causam 
+arrepios.  O clima bastante frio dificulta sua respira��o.  Voc� observa no 
+c�u o sol brilhando como se as horas n�o passassem, por�m o tempo aqui n�o 
+parou.  Ao seu redor a neve e o gelo formam a realeza dessa terra.
+~
+126 1245284 0 0 0 4
+S
+#12695
+O Deserto Escandinavo de Gelo~
+   Voc� est� caminhando pelo temido deserto de gelo.  Os ventos frios e a
+neve que n�o para de cair fazem desta regi�o uma das mais des�rticas da
+pen�nsula escandinava.  Ao seu redor voc� observa na linha do horizonte o
+deserto de gelo e n�o encontra mais nada.  Ao leste e sudeste voc� observa o 
+deserto de gelo da Su�cia e para cima voc� observa os magn�ficos Alpes
+escandinavos.
+~
+126 1245284 0 0 0 4
+D1
+Voc� observa o g�lido deserto de gelo da Su�cia.
+~
+~
+0 -1 12696
+D4
+Voc� observa uma trilha �ngreme em dire��o do topo dos Alpes.
+~
+~
+0 -1 12706
+D8
+Voc� observa o g�lido deserto de gelo da Su�cia.
+~
+~
+0 -1 12689
+S
+#12696
+O Deserto Escandinavo de Gelo~
+   Voc� est� caminhando pelo temido deserto de gelo.  Os ventos frios e a
+neve que n�o para de cair fazem desta regi�o uma das mais des�rticas da
+pen�nsula escandinava.  Ao seu redor voc� observa na linha do horizonte o
+deserto de gelo e n�o encontra mais nada.  Ao leste, oeste, sudeste e
+sudoeste voc� observa o deserto de gelo da Su�cia e para cima voc� observa 
+os magn�ficos Alpes escandinavos.
+~
+126 1245284 0 0 0 4
+D1
+Voc� observa o g�lido deserto de gelo da Su�cia.
+~
+~
+0 -1 12697
+D3
+Voc� observa o g�lido deserto de gelo da Su�cia.
+~
+~
+0 -1 12695
+D8
+Voc� observa o g�lido deserto de gelo da Su�cia.
+~
+~
+0 -1 12690
+D9
+Voc� observa o g�lido deserto de gelo da Su�cia.
+~
+~
+0 -1 12689
+S
+#12697
+O Deserto Escandinavo de Gelo~
+   Voc� est� caminhando pelo temido deserto de gelo.  Os ventos frios e a
+neve que n�o para de cair fazem desta regi�o uma das mais des�rticas da
+pen�nsula escandinava.  Ao seu redor voc� observa na linha do horizonte o
+deserto de gelo e n�o encontra mais nada.  Ao oeste e sudoeste voc� observa 
+o deserto de gelo da Su�cia e ao leste voc� observa um g�lida praia 
+escandinava.
+~
+126 1245284 0 0 0 4
+D1
+Voc� observa uma bela praia escandinava.
+~
+~
+0 -1 12698
+D3
+Voc� observa o g�lido deserto de gelo da Su�cia.
+~
+~
+0 -1 12696
+D9
+Voc� observa o g�lido deserto de gelo da Su�cia.
+~
+~
+0 -1 12690
+S
+#12698
+Uma Bela Praia Escandinava~
+   Voc� est� caminhando numa pela praia escandinava.  Os ventos frios e a
+neve que cai intensamente, transformam este magn�fico lugar num para�so 
+des�rtico.  Ao leste voc� observa o g�lido golfo de Bothnia e ao oeste voc�
+observa o temido deserto de gelo da Su�cia.
+~
+126 4 0 0 0 2
+D1
+Voc� observa o golfo de Bothnia.
+~
+~
+0 -1 12699
+D3
+Voc� observa o frios e assustador deserto de gelo da Su�cia.
+~
+~
+0 -1 12697
+S
+#12699
+O Golfo de Bothnia~
+   Voc� est� navegando pelas tranq�ilas �guas do golfo de Bothnia.  Ao 
+sudoeste voc� observa as �guas do golfo de Bothnia e ao oeste voc� observa
+uma bela praia escandinava.  Ao leste voc� observa a Suomi, a terra dos 
+mil lagos.
+~
+126 131136 0 0 0 7
+D3
+Voc� observa uma bela praia g�lida escandinava.
+~
+~
+0 -1 12698
+D9
+Voc� observa as �guas frias do golfo de Bothnia.
+~
+~
+0 -1 12669
+S
+#12700
+O Mar Glacial �rtico~
+   Voc� est� navegando pelas congelantes �guas do mar glacial �rtico.  Ao
+seu redor voc� observa uma paisagem des�rtica.  A neve invade toda a sua
+embarca��o.  Os fortes ventos frios dificultam sua navega��o.  Ao nordeste
+voc� observa as �guas g�lidas do mar glacial �rtico, ao sudoeste voc�
+observa o mar temido da Noruega, ao sudeste voc� observa um monumental
+fiorde na costa da Noruega e ao oeste voc� observa o mar da Groenl�ndia.
+~
+126 131136 0 0 0 7
+D3
+Voc� observa o mar da Groenl�ndia.
+~
+~
+0 -1 12878
+D7
+Voc� observa o congelante mar glacial �rtico.
+~
+~
+0 -1 12707
+D8
+Voc� observa um monumental fiorde na costa da Noruega.
+~
+~
+0 -1 12701
+D9
+Voc� observa o temido mar da Noruega.
+~
+~
+0 -1 12691
+S
+#12701
+Um Monumental Fiorde Noruegu�s~
+   Voc� est� caminhando com muita dificuldade num belo fiorde na costa da
+Noruega.  A paisagem � simplesmente linda.  Voc� sente a suprema e magn�fica
+liberdade pulsar em suas veias.  Ao noroeste voc� observa a imensid�o do mar
+da Noruega e ao leste voc� observa um assustador deserto de gelo.
+~
+126 131140 0 0 0 5
+D1
+Voc� observa o temido deserto de gelo da Noruega.
+~
+~
+0 -1 12702
+D6
+Voc� observa o congelante mar glacial �rtico.
+~
+~
+0 -1 12700
+S
+#12702
+A Terra do Sol da Meia-Noite~
+   Voc� chegou numa das regi�es mais g�lidas e des�rticas de toda a
+pen�nsula escandinava.  Voc� observa a linha do horizonte com muita
+dificuldade, causada pelos fortes ventos frios e pela neve que n�o para de
+cair.  Ao olhar para o c�u voc� percebe que o sol brilha com muita for�a,
+mesmo passando horas caminhando por estas terras solit�rias o sol n�o
+diminuiu seu brilho.  A cada rajada de vento um horr�vel som domina toda a
+regi�o, parecendo com o grito de um guerreiro no leito de sua morte.  Ao
+leste voc� observa um monumental fiorde e ao norte voc� observa as �guas do
+mar glacial �rtico.
+~
+126 1245284 0 0 0 4
+D0
+Voc� observa o mar glacial �rtico.
+~
+~
+0 -1 12709
+D1
+Voc� observa um belo fiorde.
+~
+~
+0 -1 12701
+S
+#12703
+A Terra do Sol da Meia-Noite~
+   Voc� est� caminhando com muita dificuldade e por muitas horas neste
+des�rtico lugar.  A neve n�o para de cair e os ventos frios lhe causam
+arrepios.  O clima bastante frio dificulta sua respira��o.  Voc� observa no
+c�u o sol brilhando como se as horas n�o passassem, por�m o tempo aqui n�o
+parou.  Ao seu redor a neve e o gelo formam a realeza dessa terra.
+~
+126 1245284 0 0 0 4
+S
+#12704
+A Terra do Sol da Meia-Noite~
+   Voc� est� caminhando com muita dificuldade e por muitas horas neste
+des�rtico lugar.  A neve n�o para de cair e os ventos frios lhe causam
+arrepios.  O clima bastante frio dificulta sua respira��o.  Voc� observa no
+c�u o sol brilhando como se as horas n�o passassem, por�m o tempo aqui n�o
+parou.  Ao seu redor a neve e o gelo formam a realeza dessa terra.
+~
+126 1245284 0 0 0 4
+S
+#12705
+Os Monumentais Alpes Escandinavos~
+   Voc� est� caminhando numa trilha no topo dos Alpes escandinavos.  A
+paisagem das terras escandinavas daqui � magn�fica.  Ao oeste voc� observa
+as belas �guas do mar da Noruega, ao leste as tranq�ilas �guas do golfo de
+Bothnia.  Voc� observa tamb�m algumas vilas vikings nas terras aos p�s dos
+Alpes.  Ao noroeste voc� observa uma trilha no topo dos Alpes escandinavos
+e para baixo voc� observa uma trilha �ngreme em dire��o ao deserto de gelo
+da Su�cia.
+~
+126 131136 0 0 0 5
+D5
+Voc� observa uma trilha �ngreme em dire��o do deserto de gelo.
+~
+~
+0 -1 12695
+D6
+Voc� observa a monumental vista do topo dos Alpes Escandinavos.
+~
+~
+0 -1 12706
+S
+#12706
+Yggdrasill, o Elo entre os Mundos~
+   Voc� est� caminhando numa trilha no topo dos Alpes escandinavos.  A
+paisagem das terras escandinavas daqui � magn�fica.  Ao oeste voc� observa
+as belas �guas do mar da Noruega e ao leste as tranq�ilas �guas do golfo de
+Bothnia.  Voc� observa tamb�m algumas vilas vikings nas terras aos p�s dos
+Alpes, contudo uma vis�o surpreendente faz voc� ficar paralisado.  Voc�
+percebe uma grande �rvore com tr�s ra�zes gigantes.  Uma raiz segue para
+cima, outra para baixo e a terceira segue para norte.  Ao sudeste voc�
+observa uma trilha �ngreme em dire��o ao deserto de gelo da Su�cia e ao sul
+voc� observa uma trilha no topo dos Alpes escandinavos.
+~
+126 196672 0 0 0 5
+D0
+Voc� observa uma monumental raiz.
+~
+~
+0 -1 12711
+D2
+Voc� observa uma trilha no topo dos Alpes escandinavos.
+~
+~
+0 -1 12676
+D4
+Voc� observa uma monumental raiz.
+~
+~
+0 -1 12710
+D5
+Voc� observa uma monumental raiz.
+~
+~
+0 -1 12712
+D8
+Voc� observa uma trilha �ngreme em dire��o ao deserto de gelo da Su�cia.
+~
+~
+0 -1 12705
+S
+#12707
+O Mar Glacial �rtico~
+   Voc� est� navegando pelas congelantes �guas do mar glacial �rtico.  Ao
+seu redor voc� observa uma paisagem des�rtica.  A neve invade toda a sua
+embarca��o.  Os fortes ventos frios dificultam sua navega��o.  Ao nordeste
+e sudoeste voc� observa as �guas g�lidas do mar glacial �rtico.
+~
+126 131136 0 0 0 7
+D7
+Voc� observa o congelante mar glacial �rtico.
+~
+~
+0 -1 12708
+D9
+Voc� observa o congelante mar glacial �rtico.
+~
+~
+0 -1 12700
+S
+#12708
+O Mar Glacial �rtico~
+   Voc� est� navegando pelas congelantes �guas do mar glacial �rtico.  Ao
+seu redor voc� observa uma paisagem des�rtica.  A neve invade toda a sua
+embarca��o.  Os fortes ventos frios dificultam sua navega��o.  Ao leste e ao
+sudoeste voc� observa as �guas g�lidas do mar glacial �rtico.
+~
+126 131136 0 0 0 7
+D1
+Voc� observa o congelante mar glacial �rtico.
+~
+~
+0 -1 12709
+D9
+Voc� observa o congelante mar glacial �rtico.
+~
+~
+0 -1 12707
+S
+#12709
+O Mar Glacial �rtico~
+   Voc� est� navegando pelas congelantes �guas do mar glacial �rtico.  Ao
+seu redor voc� observa uma paisagem des�rtica.  A neve invade toda a sua
+embarca��o.  Os fortes ventos frios dificultam sua navega��o.  Ao oeste voc�
+observa as �guas g�lidas do mar glacial �rtico e ao sul voc� observa o
+temido deserto de gelo da Noruega.
+~
+126 131136 0 0 0 7
+D2
+Voc� observa o deserto de gelo da Noruega.
+~
+~
+0 -1 12702
+D3
+Voc� observa as �guas congelantes do mar glacial �rtico.
+~
+~
+0 -1 12708
+S
+#12710
+Uma Raiz Monumental~
+   Incr�vel !  Voc� est� escalando uma monumental raiz.  Ao seu redor voc�
+observa algumas nuvens e uma sensa��o de tranq�ilidade toma conta do seu
+corpo.  Em dire��o dos c�us voc� observa a continua��o da gigantesca raiz e
+descendo voc� observa os monumentais Alpes escandinavos.
+~
+126 196932 0 0 0 5
+D4
+Voc� observa uma imensa raiz rumo aos c�us.
+~
+~
+0 -1 12713
+D5
+Voc� observa os Alpes escandinavos.
+~
+~
+0 -1 12706
+S
+#12711
+Uma Raiz Monumental~
+   Incr�vel !  Voc� est� caminhando sobre uma monumental raiz.  Ao seu redor
+voc� observa algumas nuvens e uma sensa��o de tranq�ilidade toma conta do
+seu corpo.  Na dire��o norte voc� observa a continua��o da gigantesca raiz
+e ao sul voc� observa os monumentais Alpes escandinavos.
+~
+126 196932 0 0 0 5
+D0
+Voc� observa uma imensa raiz.
+~
+~
+0 -1 12757
+D2
+Voc� observa os magn�ficos Alpes escandinavos.
+~
+~
+0 -1 12706
+S
+#12712
+Uma Raiz Monumental~
+   Incr�vel !  Voc� est� escalando uma monumental raiz.  Ao seu redor voc�
+observa algumas nuvens e uma sensa��o de tranq�ilidade toma conta do seu
+corpo.  Em dire��o de um escuro abismo voc� observa a continua��o da
+gigantesca raiz e para cima voc� observa os monumentais Alpes escandinavos.
+~
+126 131396 0 0 0 5
+D4
+Voc� observa os monumentais Alpes escandinavos.
+~
+~
+0 -1 12706
+D5
+Voc� observa uma enorme raiz rumo a um abismo.
+~
+~
+0 -1 12783
+S
+#12713
+Uma Raiz Monumental~
+   Voc� est� escalando uma monumental raiz, grande como um cintur�o de um
+poderoso gigante de gelo.  Ao seu redor voc� percebe a exist�ncia de belas
+nuvens.  Em dire��o dos c�us voc� observa uma majestoso arco-�ris e para
+baixo voc� observa a imensa raiz em dire��o dos Alpes escandinavos.
+~
+126 196932 0 0 0 5
+D4
+Voc� observa um magn�fico arco-�ris.
+~
+~
+0 -1 12714
+D5
+Voc� observa uma raiz imensa rumo aos Alpes.
+~
+~
+0 -1 12710
+S
+#12714
+O Celestial Bifrost~
+   Voc� est� caminhando por um majestoso e celestial arco-�ris.  Ao seu
+redor uma paisagem que nunca ser� esquecida por voc�.  V�rias nuvens formam
+v�rias figuras como se estivessem vivas, ao olha o horizonte voc� observa
+v�rios pontos brilhantes vindos de uma terra desconhecida por voc�.  Ao
+olhar para baixo voc� observa toda pen�nsula escandinava, seus rios, suas
+vilas, os magn�ficos Alpes e os temidos mares congelantes que cercam essas
+lend�rias terras.  Ao norte voc� observa um brilho intenso e celestial,
+para baixo em dire��o dos Alpes escandinavos voc� observa uma imensa raiz
+e para cima voc� observa um belo pal�cio dourado.
+~
+126 196708 0 0 0 1
+D0
+Voc� observa um brilho celestial.
+~
+~
+0 -1 12715
+D4
+Voc� observa um belo pal�cio dourado.
+~
+~
+0 -1 12814
+D5
+Voc� observa os Alpes escandinavos.
+~
+~
+0 -1 12713
+S
+#12715
+Asgard, A Morada dos Deuses~
+   Um brilho intenso atinge seus olhos.  Ao abri-los voc� observa ao seu
+redor as sagradas terras de Asgard, a morada dos deuses e para�so dos dignos
+guerreiros mortos em combate com suas armas nas m�os.  O gelo, a neve e os
+fortes ventos frios continuam a atingir todas criaturas que chegam as terras
+escandinavas, por�m aqui voc� se sente protegido.  Ao norte, nordeste e
+noroeste voc� observa curioso alguns pontos brilhantes e ao sul voc� observa
+um belo arco-�ris.
+~
+126 100 0 0 0 3
+D0
+Voc� observa Asgard coberta de neve.
+~
+~
+0 -1 12717
+D2
+Voc� observa um magn�fico arco-�ris.
+~
+~
+0 -1 12714
+D6
+Voc� observa Asgard coberta de neve.
+~
+~
+0 -1 12716
+D7
+Voc� observa Asgard coberta de neve.
+~
+~
+0 -1 12718
+S
+#12716
+Uma Plan�cie Coberta de Gelo~
+   Voc� est� caminhando pelas sagradas terras de Asgard.  Ao seu redor voc�
+observa muita neve e gelo.  Sua armadura j� est� completamente coberta de
+neve.  Ao norte voc� observa um belo bosque, ao sudeste voc� observa uma
+bela fonte, ao leste e ao noroeste voc� observa uma plan�cie coberta de
+neve.
+~
+126 96 0 0 0 3
+D0
+Voc� observa um belo bosque.
+~
+~
+0 -1 12720
+D1
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12717
+D6
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12719
+D8
+Voc� observa uma bela fonte.
+~
+~
+0 -1 12715
+S
+#12717
+Uma Plan�cie Coberta de Gelo~
+   Voc� est� caminhando pelas sagradas terras de Asgard.  Ao seu redor voc�
+observa uma paisagem maravilhosa, onde a neve reina sobre o bosque e as
+terras sagradas de Asgard.  Ao norte voc� observa uma majestosa c�pula de
+cristal, ao leste e oeste voc� observa uma tranq�ila plan�cie coberta de
+neve e ao sul voc� observa uma bela fonte.
+~
+126 96 0 0 0 3
+D0
+Voc� observa uma magn�fica c�pula de cristal.
+~
+~
+0 -1 12721
+D1
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12718
+D2
+Voc� observa uma linda fonte.
+~
+~
+0 -1 12715
+D3
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12716
+S
+#12718
+Uma Plan�cie Coberta de Gelo~
+   Voc� est� caminhando pelas sagradas terras de Asgard.  Ao seu redor voc�
+observa muita neve e gelo, e um brilho dourado vindo do nordeste.  Ao norte
+voc� observa um belo bosque coberto de neve, ao nordeste e ao oeste voc�
+observa uma plan�cie coberta de neve e ao sudoeste voc� observa uma sublime
+fonte.
+~
+126 96 0 0 0 3
+D0
+Voc� observa um belo bosque.
+~
+~
+0 -1 12722
+D3
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12717
+D7
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12723
+D9
+Voc� observa a fonte de Asgard.
+~
+~
+0 -1 12715
+S
+#12719
+Uma Plan�cie Coberta de Neve~
+   Voc� est� caminhando sobre a neve de uma bela plan�cie.  A paisagem �
+magn�fica, ao seu redor voc� observa um verdadeiro mar de neve.  Ao olhar
+para os c�us, voc� observa o magn�fico sol, que com seus primeiros raios da
+manh� acorda os Einherjars para as batalhas nas magn�ficas terras de Asgard
+e ao primeiro olhar da lua, todos se unem e se confraternizam no bel�ssimo
+pal�cio de Valhala.  Ao norte voc� observa uma c�pula monumental de prata e
+ao sudeste voc� observa uma plan�cie coberta por um mar de neve.
+~
+126 96 0 0 0 3
+D0
+Voc� observa uma celestial c�pula de prata.
+~
+~
+0 -1 12724
+D8
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12716
+S
+#12720
+O Bosque de Asgard~
+   Voc� est� caminhando por entre belas �rvores do magn�fico bosque de
+Asgard.  A sensa��o aqui � de tranq�ilidade e paz.  Ao norte voc� observa
+grandes �rvores cobertas de neve, ao sul voc� observa uma plan�cie coberta
+de neve, ao leste voc� observa uma c�pula de cristal e ao noroeste voc�
+observa uma c�pula de prata.
+~
+126 100 0 0 0 3
+D0
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12725
+D1
+Voc� observa uma linda c�pula de cristal.
+~
+~
+0 -1 12721
+D2
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12716
+D6
+Voc� observa uma bela c�pula de prata.
+~
+~
+0 -1 12724
+S
+#12721
+Uma Bela C�pula de Cristal~
+   Voc� est� dentro de uma bela c�pula de cristal.  Ao seu redor voc�
+observa as bel�ssimas paredes de cristal e ao olhar para o teto voc� observa
+uma magn�fica c�pula de cristal.  O bosque de Asgard parece abra�ar a bela
+obra pelo norte, leste e oeste e ao sul voc� observa uma paisagem magn�fica,
+uma linda plan�cie coberta de neve.
+~
+126 917608 0 0 0 0
+D0
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12726
+D1
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12722
+D2
+Voc� observa um mar de neve.
+~
+~
+0 -1 12717
+D3
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12720
+S
+#12722
+O Bosque de Asgard~
+   Voc� est� caminhando por entre belas �rvores do magn�fico bosque de
+Asgard.  A sensa��o aqui � de tranq�ilidade e paz.  Ao norte voc� observa
+grandes �rvores cobertas de neve, ao sul voc� observa uma plan�cie coberta
+de neve, ao oeste voc� observa uma c�pula de cristal e ao nordeste voc�
+observa uma c�pula de ouro.
+~
+126 100 0 0 0 3
+D0
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12727
+D2
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12718
+D3
+Voc� observa uma bela c�pula de cristal.
+~
+~
+0 -1 12721
+D7
+Voc� observa uma bela c�pula de ouro.
+~
+~
+0 -1 12728
+S
+#12723
+Uma Plan�cie Coberta de Neve~
+   Voc� est� caminhando sobre uma bela plan�cie coberta de neve.  OS ventos
+frios lhe causam arrepios e a neve j� cobriu completamente sua armadura.  Ao
+norte voc� observa uma magn�fica c�pula de ouro e ao sudoeste voc� observa a
+linda plan�cie coberta por um imenso mar de neve.
+~
+126 96 0 0 0 3
+D0
+Voc� observa uma bela c�pula de ouro.
+~
+~
+0 -1 12728
+D9
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12718
+S
+#12724
+Uma Bela C�pula de Prata~
+   Voc� est� dentro de uma bela c�pula de prata.  Ao seu redor voc� observa
+a beleza do teto e das paredes feitas da mais pura e nobre prata.  Voc�
+sente uma estranha sensa��o de apatia e nota que as marcas e feridas de suas
+�ltimas batalhas est�o sendo curadas.  Ao norte e ao sudeste voc� observa o
+belo bosque de Asgard e ao sul voc� observa uma plan�cie coberta de neve.
+~
+126 917608 0 0 0 0
+D0
+Voc� observa um belo bosque.
+~
+~
+0 -1 12729
+D2
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12719
+D8
+Voc� observa um belo bosque.
+~
+~
+0 -1 12720
+S
+#12725
+O Bosque de Asgard~
+   Voc� est� caminhando por entre belas �rvores do magn�fico bosque de
+Asgard.  A sensa��o aqui � de tranq�ilidade e paz.  Al�m das belas �rvores
+ao seu redor voc� percebe ao norte um belo pal�cio.  Ao leste, sul e
+noroeste voc� observa grandes �rvores cobertas de neve.
+~
+126 100 0 0 0 3
+D1
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12726
+D2
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12720
+D6
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12729
+S
+#12726
+O Cora��o do Bosque de Asgard~
+   Voc� est� caminhando entre magn�ficas e admir�veis �rvores do bosque de
+Asgard.  Voc� possui uma vis�o de toda a paisagem do bosque e uma vis�o do
+al�m de suas �rvores.  Ao norte voc� observa uma bela plan�cie coberta por
+um mar de neve, mais al�m da plan�cie voc� observa um maravilhoso pal�cio.
+Ao leste e oeste voc� observa as �rvores do belo bosque de Asgard e ao sul
+voc� observa uma bela c�pula de cristal.
+~
+126 100 0 0 0 3
+D0
+Voc� observa uma bela plan�cie coberta de neve.
+~
+~
+0 -1 12731
+D1
+Voc� observa o tranq�ilo bosque de Asgard.
+~
+~
+0 -1 12727
+D2
+Voc� observa uma bela c�pula de cristal.
+~
+~
+0 -1 12721
+D3
+Voc� observa o tranq�ilo bosque de Asgard.
+~
+~
+0 -1 12725
+S
+#12727
+O Bosque de Asgard~
+   Voc� est� caminhando por entre belas �rvores do magn�fico bosque de
+Asgard.  A sensa��o aqui � de tranq�ilidade e paz.  Al�m das belas �rvores
+ao seu redor voc� percebe ao norte um belo pal�cio.  Ao leste, sul e
+nordeste voc� observa grandes �rvores cobertas de neve.
+~
+126 100 0 0 0 3
+D2
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12722
+D3
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12726
+D7
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12730
+S
+#12728
+Uma Bela C�pula de Ouro~
+   Voc� est� dentro de uma bela c�pula de ouro.  Ao seu redor voc� observa
+com muita admira��o o belo teto e paredes de ouro.  Uma incr�vel sensa��o de
+apatia atinge todo seu corpo.  Ao olhar para as suas marcas e feridas da sua
+�ltima batalha voc� percebe que elas est�o sendo curadas.  Ao norte e ao
+sudoeste voc� observa o majestoso bosque de Asgard e ao sul voc� observa uma
+plan�cie coberta de neve.
+~
+126 917608 0 0 0 0
+D0
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12730
+D2
+Voc� observa uma bela plan�cie branca.
+~
+~
+0 -1 12723
+D9
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12722
+S
+#12729
+O Bosque de Asgard~
+   Voc� est� caminhando tranq�ilamente por entre as belas �rvores cobertas
+de neve do magn�fico bosque de Asgard.  Ao oeste voc� observa a festiva
+plan�cie de Ida, ao sul voc� observa uma bela c�pula de prata, ao noroeste
+voc� observa um imenso mar de neve e ao sudeste voc� observa o belo bosque
+de Asgard.
+~
+126 100 0 0 0 3
+D2
+Voc� observa uma majestosa c�pula de prata.
+~
+~
+0 -1 12724
+D3
+Voc� observa a fe�rica plan�cie de Ida.
+~
+~
+0 -1 12808
+D6
+Voc� observa um imenso mar de neve.
+~
+~
+0 -1 12732
+D8
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12725
+S
+#12730
+O Bosque de Asgard~
+   Voc� est� caminhando por entre as belas �rvores do bosque de Asgard.  Ao
+seu redor muita neve e gelo.  A neve que n�o para de cair cobre toda a sua
+armadura.  Ao leste voc� observa a plan�cie de Vigrid, ao sul voc� observa
+uma maravilhosa c�pula de ouro, ao nordeste voc� observa um imenso mar de
+neve e ao sudoeste voc� observa o belo bosque de Asgard.
+~
+126 100 0 0 0 3
+D1
+Voc� observa bela plan�cie de Vigrid.
+~
+~
+0 -1 12800
+D2
+Voc� observa uma bela c�pula de ouro.
+~
+~
+0 -1 12728
+D7
+Voc� observa um imenso mar de neve.
+~
+~
+0 -1 12738
+D9
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12727
+S
+#12731
+Uma Plan�cie Coberta de Gelo~
+   Voc� est� caminhando sobre uma plan�cie coberta de neve.  Ao seu redor
+voc� observa muita neve e gelo.  Contudo uma magn�fica paisagem come�a a
+surgi em seus olhos, o majestoso pal�cio Valhala, lugar dos sonhos de todos
+os corajosos guerreiros vikings.  Ao norte voc� observa um majestoso port�o
+dourado e ao sul voc� observa o bosque de Asgard.
+~
+126 96 0 0 0 3
+D0
+Voc� observa a entrada do pal�cio Valhala.
+~
+~
+0 -1 12735
+D2
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12726
+S
+#12732
+O Mar de Neve~
+   Magn�fica !  Voc� est� caminhando sobre um imenso mar de neve.  Ao seu
+redor voc� observa apenas o branco da neve na linha do horizonte.  Ao norte
+voc� observa uma regi�o totalmente coberta de neve, ao sudeste voc� observa
+o bosque de Asgard com suas monumentais �rvores cobertas de neve e ao leste
+voc� observa um rio de �guas congeladas.
+~
+126 96 0 0 0 4
+D0
+Voc� observa um imenso mar de neve.
+~
+~
+0 -1 12753
+D1
+Voc� observa um rio de �guas congeladas.
+~
+~
+0 -1 12733
+D8
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12729
+S
+#12733
+As �guas Congeladas do Rio de Asgard~
+   Voc� est� caminhando com muito cuidado sobre a fina superf�cie do rio de
+�guas congeladas de Asgard, qualquer passo-em-falso poderia ser fatal.  Ao
+seu redor voc� observa as terras de Asgard, seu bosque e seu rio de �guas
+congeladas.  Ao olhar para baixo voc� percebe a exist�ncia de pequenos
+peixes na camada ainda l�quida do belo rio.  Ao norte e leste voc� observa
+as �guas congeladas do rio de Asgard e ao oeste voc� observa um imenso mar
+de neve.
+~
+126 131168 0 0 0 2
+D0
+Voc� observa um rio de �guas congeladas.
+~
+~
+0 -1 12754
+D1
+Voc� observa um rio de �guas congeladas.
+~
+~
+0 -1 12734
+D3
+Voc� observa um imenso mar de neve.
+~
+~
+0 -1 12732
+D8
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12729
+S
+#12734
+As �guas Congeladas do Rio de Asgard~
+   Voc� est� caminhando com muito cuidado sobre a fina superf�cie do rio de
+�guas congeladas de Asgard, qualquer passo-em-falso poderia ser fatal.  Ao
+seu redor voc� observa as terras de Asgard, seu bosque e seu rio de �guas
+congeladas.  Ao olhar para baixo voc� percebe a exist�ncia de pequenos
+peixes na camada ainda l�quida do belo rio.  Ao oeste voc� observa as �guas
+congeladas do rio de Asgard e ao leste voc� observa a entrada do pal�cio
+Valhala.
+~
+126 131168 0 0 0 2
+D1
+Voc� observa a entrada do pal�cio Valhala.
+~
+~
+0 -1 12735
+D3
+Voc� observa um rio de �guas congeladas.
+~
+~
+0 -1 12733
+S
+#12735
+A Entrada do Espl�ndido Valhala~
+   Voc� est� na entrada do mais belo e divino pal�cio de Asgard.  Ao seu
+redor voc� observa ao leste e oeste as �guas congeladas do rio de Asgard, ao
+sul voc� observa uma bela plan�cie coberta de neve e ao norte voc� observa
+o majestoso port�o do pal�cio de Valhala.
+~
+126 100 0 0 0 3
+D0
+Voc� observa o port�o dourado do Valhala.
+~
+port�o dourado~
+2 12730 12739
+D1
+Voc� observa um rio de �guas congeladas.
+~
+~
+0 -1 12736
+D2
+Voc� observa uma bela plan�cie coberta de neve.
+~
+~
+0 -1 12731
+D3
+Voc� observa um rio de �guas congeladas.
+~
+~
+0 -1 12734
+S
+#12736
+As �guas Congeladas do Rio de Asgard~
+   Voc� est� caminhando com muito cuidado sobre a fina superf�cie do rio de
+�guas congeladas de Asgard, qualquer passo-em-falso poderia ser fatal.  Ao
+seu redor voc� observa as terras de Asgard, seu bosque e seu rio de �guas
+congeladas.  Ao olhar para baixo voc� percebe a exist�ncia de pequenos
+peixes na camada ainda l�quida do belo rio.  Ao leste voc� observa as �guas
+congeladas do rio de Asgard e ao oeste voc� observa a entrada do pal�cio
+Valhala.
+~
+126 131168 0 0 0 2
+D1
+Voc� observa um rio de �guas congeladas.
+~
+~
+0 -1 12737
+D3
+Voc� observa a entrada do majestoso Valhala.
+~
+~
+0 -1 12735
+S
+#12737
+As �guas Congeladas do Rio de Asgard~
+   Voc� est� caminhando com muito cuidado sobre a fina superf�cie do rio de
+�guas congeladas de Asgard, qualquer passo-em-falso poderia ser fatal.  Ao
+seu redor voc� observa as terras de Asgard, seu bosque e seu rio de �guas
+congeladas.  Ao olhar para baixo voc� percebe a exist�ncia de pequenos
+peixes na camada ainda l�quida do belo rio.  Ao norte e oeste voc� observa
+as �guas congeladas do rio de Asgard e ao leste voc� observa um imenso mar
+de neve.
+~
+126 131168 0 0 0 2
+D0
+Voc� observa um rio de �guas congeladas.
+~
+~
+0 -1 12755
+D1
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12738
+D3
+Voc� observa um rio de �guas congeladas.
+~
+~
+0 -1 12736
+S
+#12738
+O Mar de Neve~
+   Magn�fica !  Voc� est� caminhando sobre um imenso mar de neve.  Ao seu
+redor voc� observa apenas o branco da neve na linha do horizonte.  Ao norte
+voc� observa uma regi�o totalmente coberta de neve, ao sudoeste voc�
+observa o bosque de Asgard com suas monumentais �rvores cobertas de neve e
+ao oeste voc� observa um rio de �guas congeladas.
+~
+126 96 0 0 0 4
+D0
+Voc� observa uma bela plan�cie branca.
+~
+~
+0 -1 12756
+D3
+Voc� observa as �guas congeladas do rio de Asgard.
+~
+~
+0 -1 12737
+D9
+Voc� observa �rvores cobertas de neve.
+~
+~
+0 -1 12730
+S
+#12739
+O Divino Pal�cio Valhala~
+   Voc� est� dentro do celestial pal�cio Valhala, morada de Odin e dos
+Einherjars, guerreiros que morreram valentemente em combate, pois s�o
+exclu�dos do Valhala todos os guerreiros que morreram pacificamente.  Os
+guerreiros s�o trazidos ao Valhala pelas nove Valqu�rias.  Os Einherjars
+passam o dia lutando at� se fazerem em peda�os uns aos outros.  Por�m quando
+chega a noite eles se restabelecem dos ferimentos e voltam ao festim no
+glorioso pal�cio.  Ao norte voc� observa uma bela ponte em dire��o de um
+grande sal�o do pal�cio e ao sul voc� observa o belo port�o dourado do
+pal�cio.
+~
+126 96 0 0 0 1
+D0
+Voc� observa uma bela ponte de ouro.
+~
+~
+0 -1 12741
+D2
+Voc� observa o belo port�o do pal�cio.
+~
+port�o dourado~
+2 12730 12735
+S
+#12740
+Os Jardins do Pal�cio Valhala~
+   Voc� est� caminhando por entre belas flores e arbustos dos belos jardins
+do pal�cio Valhala.  Ao seu redor voc� observa perfumadas flores azuis e
+amarelas e alguns esquilos brancos brincando nos arbustos.  Ao norte e ao
+leste voc� observa os belos jardins da magn�fica morada dos deuses e ao
+nordeste voc� observa um grande sal�o dentro do pal�cio.
+~
+126 96 0 0 0 2
+D0
+Voc� observa lindas flores.
+~
+~
+0 -1 12751
+D1
+Voc� observa lindas flores.
+~
+~
+0 -1 12742
+D7
+Voc� observa um grande sal�o dentro do Valhala.
+~
+~
+0 -1 12745
+S
+#12741
+A Bela Ponte de Ouro do Valhala~
+   Voc� est� caminhando sobre uma bela ponte de ouro, que segue em dire��o
+de um grande sal�o dentro do pal�cio. Ao seu redor voc� observa os sublimes
+jardins do pal�cio Valhala.  Ao norte voc� observa um grande sal�o dentro do
+pal�cio e ao sul voc� observa a entrada do Valhala.
+~
+126 352 0 0 0 1
+D0
+Voc� observa um grande sal�o dentro do Valhala.
+~
+~
+0 -1 12745
+D2
+Voc� observa a entrada do celestial Valhala.
+~
+~
+0 -1 12739
+S
+#12742
+Os Jardins do Pal�cio Valhala~
+   Voc� est� caminhando por entre belas flores e arbustos dos belos jardins
+do pal�cio Valhala.  Ao seu redor voc� observa perfumadas flores azuis e
+amarelas e alguns esquilos brancos brincando nos arbustos.  Ao norte e ao
+oeste voc� observa os belos jardins da magn�fica morada dos deuses e ao
+noroeste voc� observa um grande sal�o dentro do pal�cio.
+~
+126 96 0 0 0 2
+D0
+Voc� observa lindas flores.
+~
+~
+0 -1 12743
+D3
+Voc� observa lindas flores.
+~
+~
+0 -1 12740
+D6
+Voc� observa um grande sal�o dentro do Valhala.
+~
+~
+0 -1 12745
+S
+#12743
+Os Jardins do Pal�cio Valhala~
+   Voc� est� caminhando por entre belas flores e arbustos dos belos jardins
+do pal�cio Valhala.  Ao seu redor voc� observa perfumadas flores azuis e
+amarelas e alguns esquilos brancos brincando nos arbustos.  Ao norte e ao
+sul voc� observa os belos jardins da magn�fica morada dos deuses.
+~
+126 96 0 0 0 2
+D0
+Voc� observa lindas flores.
+~
+~
+0 -1 12752
+D2
+Voc� observa lindas flores.
+~
+~
+0 -1 12742
+S
+#12744
+O Sal�o dos Festins do Valhala~
+   Voc� est� dentro do magn�fico pal�cio Valhala, a morada de Odin.  Ao seu
+redor voc� observa v�rias cadeiras e mesas de madeira, nas paredes pinturas
+de belas paisagens escandinavas e runas.  Em cima das mesas voc� observa
+v�rios c�lices cheios de hidromel, bebida fornecida aos her�is pela cabra
+Heidrum, e percebe tamb�m apetitosos peda�os de carne do javali Schrinnir.
+A fartura de carne de javali deve-se ao fato de que embora o javali seja
+cozido todas as manh�s, ele fica inteiro novamente todas as noites.  Quando
+os her�is n�o est�o lutando, eles s�o sempre encontrados aqui.  Ao norte e
+ao leste voc� observa o grande sal�o do Valhala.
+~
+126 104 0 0 0 0
+D0
+Voc� observa o grande sal�o do Valhala.
+~
+~
+0 -1 12747
+D1
+Voc� observa o grande sal�o do Valhala.
+~
+~
+0 -1 12745
+S
+#12745
+O Sal�o dos Einherjars~
+   Voc� est� dentro do esplendoroso sal�o dos her�is Einherjars.  O supremo
+e senhor deus dos deuses, Odin, desejoso de reunir grande n�mero de her�is a
+fim de poder enfrentar os gigantes quando chegar o grande dia da luta
+decisiva, manda as Valqu�rias escolherem em todos os campos de batalhas os
+que deveriam ser mortos e trazidos ao Valhala.  Para os guerreiros vikings
+uma apari��o de uma das nove Valqu�rias antes ou durante uma batalha � um
+importante e glorificante sinal que o para�so o aguarda.  Ao seu redor voc�
+observa alguns her�is e algumas cadeiras e mesas de madeira.  Ao norte, ao
+leste e ao oeste voc� observa o grande sal�o do pal�cio Valhala, ao sul voc�
+observa uma bela ponte de ouro e ao sudeste e sudoeste voc� observa os belos
+jardins do Valhala.
+~
+126 104 0 0 0 0
+D0
+Voc� observa o grande sal�o do pal�cio.
+~
+~
+0 -1 12748
+D1
+Voc� observa o grande sal�o do pal�cio.
+~
+~
+0 -1 12746
+D2
+Voc� observa uma bela ponte de ouro.
+~
+~
+0 -1 12741
+D3
+Voc� observa o grande sal�o do pal�cio.
+~
+~
+0 -1 12744
+D8
+Voc� observa lindas flores.
+~
+~
+0 -1 12742
+D9
+Voc� observa lindas flores.
+~
+~
+0 -1 12740
+S
+#12746
+O Sal�o dos Festins do Valhala~
+   Voc� est� dentro do mais glorioso e desejado lugar que um guerreiro
+viking possa desejar estar.  Voc� est� dentro do pal�cio Valhala no grande
+sal�o dos festins.  O grande sal�o � utilizado pelos her�is durante a noite
+em grandes festas, pois durante o dia todos se despeda�am em bravas batalhas
+para passar o tempo, a espera do Ragnarok, o crep�sculo dos deuses.  Ao seu
+redor voc� observa lindas pinturas nas paredes do sal�o e algumas runas.  Ao
+norte e ao oeste voc� observa o grande sal�o do pal�cio.
+~
+126 104 0 0 0 0
+D0
+Voc� observa o grande sal�o do pal�cio.
+~
+~
+0 -1 12749
+D3
+Voc� observa o grande sal�o do pal�cio.
+~
+~
+0 -1 12745
+S
+#12747
+O Sal�o dos Festins do Valhala~
+   Voc� est� dentro do grande sal�o dos festins do Valhala.  Ao seu redor
+voc� observa algumas cadeiras e mesas, nas paredes voc� observa lindas
+pinturas dos deuses e no centro do sal�o voc� observa lindas mulheres
+guerreiras e algumas fadas.  Ao leste e ao sul voc� observa o grande sal�o
+do pal�cio Valhala.
+~
+126 104 0 0 0 0
+D1
+Voc� observa o grande sal�o do pal�cio.
+~
+~
+0 -1 12748
+D2
+Voc� observa o grande sal�o do pal�cio.
+~
+~
+0 -1 12744
+S
+#12748
+O Sal�o dos Einherjars~
+   Voc� est� dentro do celestial sal�o dos festins do pal�cio Valhala.  Ao
+seu redor voc� observa alguns guerreiros vikings, rec�m ressuscitados e
+trazidos para o Valhala, para viverem no para�so, lutando de dia e em
+grandes banquetes durante a noite, em troca eles deveriam defender o Valhala
+de qualquer perigo.  Ao sul, ao leste e ao oeste voc� observa o grande sal�o
+do Valhala e para cima voc� observa uma parte elevada do sal�o.
+~
+126 104 0 0 0 0
+D1
+Voc� observa o grande sal�o do pal�cio.
+~
+~
+0 -1 12749
+D2
+Voc� observa o grande sal�o do pal�cio.
+~
+~
+0 -1 12745
+D3
+Voc� observa o grande sal�o do pal�cio.
+~
+~
+0 -1 12747
+D4
+Voc� observa um belo trono.
+~
+~
+0 -1 12750
+S
+#12749
+O Sal�o dos Festins do Valhala~
+   Voc� est� dentro do grande sal�o dos festins do Valhala.  Ao seu redor
+voc� observa algumas cadeiras e mesas, nas paredes voc� observa lindas
+pinturas dos deuses e no centro do sal�o voc� observa lindas mulheres
+guerreiras e algumas fadas.  Ao oeste e ao sul voc� observa o grande sal�o
+do pal�cio Valhala.
+~
+126 104 0 0 0 0
+D2
+Voc� observa o grande sal�o do pal�cio.
+~
+~
+0 -1 12746
+D3
+Voc� observa o grande sal�o do pal�cio.
+~
+~
+0 -1 12748
+S
+#12750
+A Morada do Supremo~
+   Voc� est� na parte mais elevada do grande sal�o dos Einherjars.  Ao seu
+redor voc� observa uma belo trono e algumas runas.  Deste lugar voc� possui
+uma vis�o de todo o sal�o abaixo.  Para baixo voc� observa alguns degraus na
+dire��o do grande sal�o do pal�cio Valhala.
+~
+126 104 0 0 0 0
+D5
+Voc� observa o grande sal�o do pal�cio.
+~
+~
+0 -1 12748
+S
+#12751
+Os Jardins do Pal�cio Valhala~
+   Voc� est� caminhando por entre belas flores e arbustos dos belos jardins
+do pal�cio Valhala.  Ao seu redor voc� observa perfumadas flores azuis e
+amarelas e alguns esquilos brancos brincando nos arbustos.  Ao leste e ao
+sul voc� observa os belos jardins da magn�fica morada dos deuses e ao
+sudeste voc� observa um grande sal�o dentro do pal�cio.
+~
+126 96 0 0 0 2
+D1
+Voc� observa lindas flores.
+~
+~
+0 -1 12752
+D2
+Voc� observa lindas flores.
+~
+~
+0 -1 12740
+D8
+Voc� observa o grande sal�o do pal�cio.
+~
+~
+0 -1 12748
+S
+#12752
+Os Jardins do Pal�cio Valhala~
+   Voc� est� caminhando por entre belas flores e arbustos dos belos jardins
+do pal�cio Valhala.  Ao seu redor voc� observa perfumadas flores azuis e
+amarelas e alguns esquilos brancos brincando nos arbustos.  Ao oeste e ao
+sul voc� observa os belos jardins da magn�fica morada dos deuses e ao
+sudoeste voc� observa um grande sal�o dentro do pal�cio.
+~
+126 96 0 0 0 2
+D2
+Voc� observa lindas flores.
+~
+~
+0 -1 12743
+D3
+Voc� observa lindas flores.
+~
+~
+0 -1 12751
+D9
+Voc� observa o grande sal�o do pal�cio.
+~
+~
+0 -1 12748
+S
+#12753
+O Mar de Neve~
+   Magn�fica !  Voc� est� caminhando sobre um imenso mar de neve.  Ao seu
+redor voc� observa apenas o branco da neve na linha do horizonte.  Ao sul
+voc� observa uma regi�o totalmente coberta de neve e ao leste voc� observa
+um rio de �guas congeladas.
+~
+126 96 0 0 0 4
+D1
+Voc� observa as �guas congeladas do rio de Asgard.
+~
+~
+0 -1 12754
+D2
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12732
+S
+#12754
+As �guas Congeladas do Rio de Asgard~
+   Voc� est� caminhando com muito cuidado sobre a fina superf�cie do rio de
+�guas congeladas de Asgard, qualquer passo-em-falso poderia ser fatal.  Ao
+seu redor voc� observa as terras de Asgard, seu bosque e seu rio de �guas
+congeladas.  Ao olhar para baixo voc� percebe a exist�ncia de pequenos
+peixes na camada ainda l�quida do belo rio.  Ao sul e ao leste voc� observa
+as �guas congeladas do rio de Asgard e ao oeste voc� observa um imenso mar
+de neve.
+~
+126 131168 0 0 0 2
+D1
+Voc� observa as �guas congeladas do rio de Asgard.
+~
+~
+0 -1 12755
+D2
+Voc� observa as �guas congeladas do rio de Asgard.
+~
+~
+0 -1 12733
+D3
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12753
+S
+#12755
+As �guas Congeladas do Rio de Asgard~
+   Voc� est� caminhando com muito cuidado sobre a fina superf�cie do rio de
+�guas congeladas de Asgard, qualquer passo-em-falso poderia ser fatal.  Ao
+seu redor voc� observa as terras de Asgard, seu bosque e seu rio de �guas
+congeladas.  Ao olhar para baixo voc� percebe a exist�ncia de pequenos
+peixes na camada ainda l�quida do belo rio.  Ao sul e ao oeste voc� observa
+as �guas congeladas do rio de Asgard e ao leste voc� observa um imenso mar
+de neve.
+~
+126 131168 0 0 0 2
+D1
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12756
+D2
+Voc� observa as �guas congeladas do rio de Asgard.
+~
+~
+0 -1 12737
+D3
+Voc� observa as �guas congeladas do rio de Asgard.
+~
+~
+0 -1 12754
+S
+#12756
+O Mar de Neve~
+   Magn�fica !  Voc� est� caminhando sobre um imenso mar de neve.  Ao seu
+redor voc� observa apenas o branco da neve na linha do horizonte.  Ao sul
+voc� observa uma regi�o totalmente coberta de neve, ao oeste voc� observa
+um rio de �guas congeladas e ao nordeste voc� observa uma bela floresta.
+~
+126 96 0 0 0 4
+D2
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12738
+D3
+Voc� observa as �guas congeladas do rio de Asgard.
+~
+~
+0 -1 12755
+D7
+Voc� observa uma bela floresta.
+~
+~
+0 -1 12815
+S
+#12757
+Uma Raiz Monumental~
+   Voc� est� caminhando sobre uma monumental raiz.  Ao seu redor voc�
+observa algumas nuvens e na gigantesca raiz alguns galhos e folhas enormes.
+Ao norte e ao sul voc� observa a continua��o da magn�fica raiz.
+~
+126 196932 0 0 0 5
+D0
+Voc� observa uma gigantesca raiz.
+~
+~
+0 -1 12758
+D2
+Voc� observa uma gigantesca raiz.
+~
+~
+0 -1 12711
+S
+#12758
+Uma Raiz Monumental~
+   Voc� est� caminhando sobre uma monumental raiz.  Ao seu redor voc�
+observa algumas nuvens e na gigantesca raiz alguns galhos e folhas enormes.
+Ao sul voc� observa a continua��o da magn�fica raiz e ao norte voc� observa
+uma sublime po�o em meio a uma plan�cie de gelo.
+~
+126 196932 0 0 0 5
+D0
+Voc� observa o po�o de Ymir.
+~
+~
+0 -1 12759
+D2
+Voc� observa uma raiz monumental.
+~
+~
+0 -1 12757
+S
+#12759
+Jotunheim, A Morada dos Gigantes~
+   Voc� est� nas maravilhosas terras de Jotunheim, a morada dos gigantes.
+Criados antes dos deuses, os gigantes representam o caos, que foi eliminado
+ap�s a chegada dos deuses que implantaram a ordem.  Ao seu redor voc�
+observa uma perfumada plan�cie florida.  Ao norte e ao nordeste voc� observa
+a floresta de Jotunheim, ao noroeste voc� observa uma clareira na bela
+floresta de Jotunheim e ao sul voc� observa uma monumental raiz.
+~
+126 100 0 0 0 2
+D0
+Voc� observa uma bela floresta.
+~
+~
+0 -1 12761
+D2
+Voc� observa uma enorme raiz.
+~
+~
+0 -1 12758
+D6
+Voc� observa uma clareira.
+~
+~
+0 -1 12760
+D7
+Voc� observa uma bela floresta.
+~
+~
+0 -1 12762
+S
+#12760
+Uma Enorme Clareira~
+   Voc� est� caminhando por uma imensa clareira cercada pelo belo bosque
+Jotunheim.  Ao seu redor voc� observa pegadas enormes no ch�o coberto de
+neve.  Ao nordeste voc� observa a bela floresta de Jotunheim e ao sudeste
+voc� observa um belo po�o.
+~
+126 96 0 0 0 2
+D7
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12763
+D8
+Voc� observa o po�o de Ymir.
+~
+~
+0 -1 12759
+S
+#12761
+A Monumental Floresta de Jotunheim~
+   Voc� est� caminhando por entre gigantescas �rvores cobertas de neve e
+gelo.  A dificuldade de seguir pelas trilhas que se abrem entre as �rvores
+aumenta principalmente por causa de enormes pegadas no solo, que formam
+imensas crateras.  Ao seu redor belas �rvores grandiosas que de t�o
+monumentais voc� n�o consegue observa seus topos.  Ao nordeste e ao noroeste
+voc� observa a magn�fica floresta de Jotunheim e ao sul voc� observa o po�o
+de Ymir.
+~
+126 96 0 0 0 3
+D2
+Voc� observa o po�o de Ymir.
+~
+~
+0 -1 12759
+D6
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12763
+D7
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12764
+S
+#12762
+A Monumental Floresta de Jotunheim~
+   Voc� est� caminhando por entre gigantescas �rvores cobertas de neve e
+gelo.  A dificuldade de seguir pelas trilhas que se abrem entre as �rvores
+aumenta principalmente por causa de enormes pegadas no solo, que formam
+imensas crateras.  Ao seu redor belas �rvores grandiosas que de t�o
+monumentais voc� n�o consegue observa seus topos.  Ao noroeste voc� observa
+a magn�fica floresta de Jotunheim e ao sudoeste voc� observa o po�o de Ymir.
+~
+126 96 0 0 0 3
+D6
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12764
+D9
+Voc� observa o po�o de Ymir.
+~
+~
+0 -1 12759
+S
+#12763
+A Monumental Floresta de Jotunheim~
+   Voc� est� caminhando por entre gigantescas �rvores cobertas de neve e
+gelo.  A dificuldade de seguir pelas trilhas que se abrem entre as �rvores
+aumenta principalmente por causa de enormes pegadas no solo, que formam
+imensas crateras.  Ao seu redor belas �rvores grandiosas que de t�o
+monumentais voc� n�o consegue observa seus topos.  Ao noroeste e ao sudeste
+voc� observa a magn�fica floresta de Jotunheim e ao sudoeste voc� observa
+uma imensa clareira.
+~
+126 96 0 0 0 3
+D6
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12765
+D8
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12761
+D9
+Voc� observa uma imensa clareira.
+~
+~
+0 -1 12760
+S
+#12764
+A Monumental Floresta de Jotunheim~
+   Voc� est� caminhando por entre gigantescas �rvores cobertas de neve e
+gelo.  A dificuldade de seguir pelas trilhas que se abrem entre as �rvores
+aumenta principalmente por causa de enormes pegadas no solo, que formam
+imensas crateras.  Ao seu redor belas �rvores grandiosas que de t�o
+monumentais voc� n�o consegue observa seus topos.  Ao nordeste, sudeste e
+sudoeste voc� observa a magn�fica floresta de Jotunheim.
+~
+126 96 0 0 0 3
+D7
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12767
+D8
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12762
+D9
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12761
+S
+#12765
+A Monumental Floresta de Jotunheim~
+   Voc� est� caminhando por entre gigantescas �rvores cobertas de neve e
+gelo.  A dificuldade de seguir pelas trilhas que se abrem entre as �rvores
+aumenta principalmente por causa de enormes pegadas no solo, que formam
+imensas crateras.  Ao seu redor belas �rvores grandiosas que de t�o
+monumentais voc� n�o consegue observa seus topos.  Ao norte, leste e sudeste
+voc� observa a magn�fica floresta de Jotunheim.
+~
+126 96 0 0 0 3
+D0
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12768
+D1
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12766
+D8
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12763
+S
+#12766
+A Monumental Floresta de Jotunheim~
+   Voc� est� caminhando por entre gigantescas �rvores cobertas de neve e
+gelo.  A dificuldade de seguir pelas trilhas que se abrem entre as �rvores
+aumenta principalmente por causa de enormes pegadas no solo, que formam
+imensas crateras.  Ao seu redor belas �rvores grandiosas que de t�o
+monumentais voc� n�o consegue observa seus topos.  Ao norte, leste e oeste
+voc� observa a magn�fica floresta de Jotunheim.
+~
+126 96 0 0 0 3
+D0
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12769
+D1
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12767
+D3
+Voc� observa a floresta de Jotunheim..
+~
+~
+0 -1 12765
+S
+#12767
+A Monumental Floresta de Jotunheim~
+   Voc� est� caminhando por entre gigantescas �rvores cobertas de neve e
+gelo.  A dificuldade de seguir pelas trilhas que se abrem entre as �rvores
+aumenta principalmente por causa de enormes pegadas no solo, que formam
+imensas crateras.  Ao seu redor belas �rvores grandiosas que de t�o
+monumentais voc� n�o consegue observa seus topos.  Ao oeste e ao sudoeste
+voc� observa a magn�fica floresta de Jotunheim e ao norte voc� observa uma
+imensa clareira.
+~
+126 96 0 0 0 3
+D0
+Voc� observa uma imensa clareira.
+~
+~
+0 -1 12770
+D3
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12766
+D9
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12764
+S
+#12768
+A Monumental Floresta de Jotunheim~
+   Voc� est� caminhando por entre gigantescas �rvores cobertas de neve e
+gelo.  A dificuldade de seguir pelas trilhas que se abrem entre as �rvores
+aumenta principalmente por causa de enormes pegadas no solo, que formam
+imensas crateras.  Ao seu redor belas �rvores grandiosas que de t�o
+monumentais voc� n�o consegue observa seus topos.  Ao norte, leste e sul
+voc� observa a magn�fica floresta de Jotunheim.
+~
+126 96 0 0 0 3
+D0
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12781
+D1
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12769
+D2
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12765
+S
+#12769
+A Monumental Floresta de Jotunheim~
+   Voc� est� caminhando por entre gigantescas �rvores cobertas de neve e
+gelo.  A dificuldade de seguir pelas trilhas que se abrem entre as �rvores
+aumenta principalmente por causa de enormes pegadas no solo, que formam
+imensas crateras.  Ao seu redor belas �rvores grandiosas que de t�o
+monumentais voc� n�o consegue observa seus topos.  Ao oeste e ao sul voc�
+observa a magn�fica floresta de Jotunheim, ao leste voc� observa uma imensa
+clareira e ao norte voc� observa a cidade de Utgard.
+~
+126 96 0 0 0 3
+D0
+Voc� observa a cidade de Utgard.
+~
+~
+0 -1 12771
+D1
+Voc� observa uma imensa clareira.
+~
+~
+0 -1 12770
+D2
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12766
+D3
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12768
+S
+#12770
+Uma Enorme Clareira~
+   Voc� est� caminhando por uma imensa clareira cercada pelo belo bosque
+Jotunheim.  Ao seu redor voc� observa pegadas enormes no ch�o coberto de
+neve.  Sons estranhos de como estrondosas gargalhadas surgem vindos da
+dire��o noroeste.  Ao norte, sul e oeste voc� observa a bela floresta de
+Jotunheim.
+~
+126 96 0 0 0 2
+D0
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12782
+D2
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12767
+D3
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12769
+S
+#12771
+Utgard, a Cidade do Senhor das Ilus�es~
+   Voc� chegou a cidade de Utgard.  Ao seu redor voc� observa monstruosos
+gigantes, cabanas monumentais e belas estatuas dos lend�rios gigantes e do
+poderoso Ymir, voc� percebe tamb�m alguns tremores de terra a cada passo que
+estas enormes criaturas d�o ao caminhar.  A cidade � governada pelo rei
+Utgard-Loki, o rei das artimanhas.  Ao norte voc� observa a pra�a da cidade
+e ao sul voc� observa o belo bosque de Jotunheim.
+~
+126 100 0 0 0 1
+D0
+Voc� observa a pra�a da cidade.
+~
+~
+0 -1 12773
+D2
+Voc� observa o belo bosque de Jotunheim.
+~
+~
+0 -1 12769
+S
+#12772
+O P�tio das Estatuas Gigantes~
+   Magn�ficas !  Voc� est� caminhando por entre monumentais estatuas de
+pedra.  Ao seu redor est�o presentes todos os lend�rios gigantes que estas
+terras j� conheceram.  Um sentimento de constrangimento surge dentro de voc�
+ao olhar para as majestosas estatuas e gigantes que est�o a sua volta.  Ao
+norte voc� observa uma imensa estatua de ouro e ao leste voc� observa a
+pra�a da cidade.
+~
+126 96 0 0 0 1
+D0
+Voc� observa uma divina estatua de ouro.
+~
+~
+0 -1 12775
+D1
+Voc� observa a pra�a da cidade.
+~
+~
+0 -1 12773
+S
+#12773
+A Pra�a de Utgard~
+   Voc� est� caminhando pela pra�a da cidade de Utgard com todo o cuidado e
+aten��o do mundo para n�o ser esmagado por estas criaturas gigantescas.  Ao
+seu redor voc� observa v�rios gigantes conversando e brigando entre si.  Ao
+norte voc� observa um pal�cio al�m da pra�a da cidade, ao leste voc� observa
+uma taverna, ao oeste voc� percebe monumentais estatuas e ao sul voc�
+observa a entrada da cidade de Utgard.
+~
+126 96 0 0 0 1
+D0
+Voc� observa  pra�a de Utgard.
+~
+~
+0 -1 12776
+D1
+Voc� observa uma monstruosa taverna.
+~
+~
+0 -1 12774
+D2
+Voc� observa a entrada da cidade.
+~
+~
+0 -1 12771
+D3
+Voc� observa v�rias estatuas gigantescas.
+~
+~
+0 -1 12772
+S
+#12774
+A Taverna de Utgard~
+Voc� est� dentro de uma gigantesca taverna.  Ao seu redor v�rios gigantes
+cantam e bebem, enquanto outros caem na gargalhada ao lembrar das outras
+ra�as de Vit�lia.  A cada piada um tremor de terra em fun��o da agita��o
+dessas monstruosas criaturas, a cada c�lice seco um soco na mesa fazendo lhe
+perder o equil�brio.  Ao oeste voc� observa enormes p�s do lado de fora da
+taverna na pra�a da cidade.
+~
+126 104 0 0 0 0
+D3
+Voc� observa a pra�a da cidade.
+~
+~
+0 -1 12773
+S
+#12775
+Ymir, a Lenda da Cria��o~
+   Voc� est� no p�tio das estatuas, caminhando entre belas estatuas dos
+lend�rios gigantes que j� habitaram estas terras.  Ao seu redor voc� observa
+imensas estatuas, por�m uma estatua de ouro lhe chama bastante aten��o.  Ao
+sul voc� observa a continua��o do p�tio das estatuas.
+~
+126 96 0 0 0 1
+D2
+Voc� observa magn�ficas estatuas.
+~
+~
+0 -1 12772
+S
+#12776
+A Pra�a de Utgard~
+   Voc� est� caminhando pela perigosa pra�a de Utgard, qualquer descuido seu
+pode significar sua vida ou uma bela esmagada.  Ao norte voc� observa um
+sublime pal�cio, ao leste voc� observa um silencioso bosque e ao sul voc�
+observa alguns gigantes correndo na pra�a da cidade fazendo toda Jotunheim
+tremer.
+~
+126 96 0 0 0 1
+D0
+Voc� observa o pal�cio de Utgard.
+~
+~
+0 -1 12779
+D1
+Voc� observa o bosque de Ymir.
+~
+~
+0 -1 12777
+D2
+Voc� observa a pra�a da cidade.
+~
+~
+0 -1 12773
+S
+#12777
+O Bosque de Ymir~
+   Voc� est� caminhando entre as �rvores e os arbustos do belo bosque de
+Ymir.  O sil�ncio � total, nem o vento que sopra frio e forte faz as �rvores
+produzirem algum barulho.  A neve cobre toda a trilha do bosque e suas
+�rvores.  Ao oeste voc� observa a pra�a de Utgard.
+~
+126 96 0 0 0 3
+D3
+Voc� observa a pra�a da cidade.
+~
+~
+0 -1 12776
+S
+#12778
+A Sala do Tesouro de Utgard-Loki~
+   Voc� est� dentro da sala do tesouro de Utgard-Loki.  Este local foi
+mantido em segredo at� a sua chegada.  Voc� sente um mal press�gio e olha
+em dire��o da porta, mas n�o observa nada.  Ao seu redor v�rios artefatos de
+ouro, coroas de diamantes e moedas de ouro e prata.  Ao leste voc� observa o
+trono de Utgard-Loki.
+~
+126 108 0 0 0 0
+D1
+Voc� observa uma porta de ferro.
+~
+porta ferro~
+2 12737 12779
+S
+#12779
+O Pal�cio de Utgard-Loki~
+   Voc� est� dentro do sublime pal�cio de Utgard-Loki.  Ao seu redor voc�
+observa alguns bancos de madeira, algumas estatuas dos gigantes lutando
+contra os deuses e os Einherjars e um belo trono.  O pal�cio � bastante
+simples, por�m de dimens�es fenomenais.  Ao oeste voc� observa uma porta de
+ferro, ao leste voc� observa um grande quarto real e ao sul voc� observa a
+agitada pra�a de Utgard e alguns gigantes conversando.
+~
+126 108 0 0 0 0
+D1
+Voc� observa uma cama enorme.
+~
+~
+0 -1 12780
+D2
+Voc� observa a pra�a da cidade.
+~
+~
+0 -1 12776
+D3
+Voc� observa uma porta de ferro.
+~
+porta ferro~
+2 12737 12778
+S
+#12780
+Os Aposentos de Utgard-Loki~
+   Voc� est� dentro dos aposentos do rei de Utgard.  Ao seu redor voc�
+observa uma imensa cama de madeira e alguns bancos e ba�s de madeira.
+Algumas roupas fedorentas largadas pelo ch�o e uma enorme bota que mede a
+sua altura.  Ao oeste voc� observa o trono de Utgard-Loki.
+~
+126 108 0 0 0 0
+D3
+Voc� observa o trono de Utgard-Loki.
+~
+~
+0 -1 12779
+S
+#12781
+A Monumental Floresta de Jotunheim~
+   Voc� est� caminhando por entre gigantescas �rvores cobertas de neve e
+gelo.  A dificuldade de seguir pelas trilhas que se abrem entre as �rvores
+aumenta principalmente por causa de enormes pegadas no solo, que formam
+imensas crateras.  Ao seu redor belas �rvores grandiosas que de t�o
+monumentais voc� n�o consegue observa seus topos.  Ao leste e ao sul voc�
+observa a magn�fica floresta de Jotunheim.
+~
+126 96 0 0 0 3
+D1
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12782
+D2
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12768
+S
+#12782
+A Monumental Floresta de Jotunheim~
+   Voc� est� caminhando por entre gigantescas �rvores cobertas de neve e
+gelo.  A dificuldade de seguir pelas trilhas que se abrem entre as �rvores
+aumenta principalmente por causa de enormes pegadas no solo, que formam
+imensas crateras.  Ao seu redor belas �rvores grandiosas que de t�o
+monumentais voc� n�o consegue observa seus topos.  Ao oeste voc� observa a
+magn�fica floresta de Jotunheim e ao sul voc� percebe uma imensa clareira.
+~
+126 96 0 0 0 3
+D2
+Voc� observa uma imensa clareira.
+~
+~
+0 -1 12770
+D3
+Voc� observa a floresta de Jotunheim.
+~
+~
+0 -1 12781
+S
+#12783
+Uma Raiz Monumental~
+   Incr�vel !  Voc� est� escalando uma monumental raiz.  Ao seu redor voc�
+observa as paredes negras e sombrias de um abismo.  Descendo em dire��o de
+um escuro abismo voc� observa a continua��o da gigantesca raiz e para cima
+voc� observa tamb�m a continua��o da imensa raiz.
+~
+126 131396 0 0 0 5
+D4
+Voc� observa uma imensa raiz.
+~
+~
+0 -1 12712
+D5
+Voc� observa uma enorme raiz rumo a um abismo.
+~
+~
+0 -1 12784
+S
+#12784
+Uma Raiz Monumental~
+   Incr�vel !  Voc� est� escalando uma monumental raiz.  Ao seu redor voc�
+observa as paredes negras e sombrias de um abismo.  Para cima voc� observa a
+continua��o da gigantesca raiz e ao norte voc� observa uma sombria fonte.
+~
+126 131396 0 0 0 5
+D0
+Voc� observa uma fonte negra.
+~
+~
+0 -1 12785
+D4
+Voc� observa uma imensa raiz.
+~
+~
+0 -1 12783
+S
+#12785
+Niffleheim, a Terra das Trevas e do Frio~
+   A escurid�o toma conta de seus olhos e sua mente se enche de terror.  Ao
+seu redor paisagens horr�veis e sombrias.  As trevas e o frio reinam
+absolutos nesta terra dos mortos.  Voc� chegou a Niffleheim, lugar onde s�o
+trazidos os guerreiros mortos por doen�as, por fome, por velhice ou
+guerreiros mortos pacificamente.  Sua passagem por este solo inf�rtil n�o
+ser� passageira.  Ao norte voc� observa uma terra sombria e ao sul voc�
+observa uma raiz monumental sendo corro�da pela Anidhogge.
+~
+126 100 0 0 0 2
+D0
+Voc� observa a escurid�o.
+~
+~
+0 -1 12787
+D2
+Voc� observa uma imensa raiz.
+~
+~
+0 -1 12784
+S
+#12786
+As Trevas de Niffleheim~
+   Voc� est� caminhando pelas escuras terras de Niffleheim.  Fortes ventos
+frios sopram na sua dire��o.  Ao seu redor imagens de guerreiros mortos e
+almas perdidas que trazem em seus rostos uma expressam de ang�stia e medo.
+Ao leste voc� observa as trevas e os seus moradores.
+~
+126 96 0 0 0 2
+D1
+Voc� observa imagens terr�veis e almas correndo em sua dire��o.
+~
+~
+0 -1 12787
+S
+#12787
+As Trevas de Niffleheim~
+   Voc� est� caminhando nas assustadoras terras de Niffleheim.  Ao seu redor
+voc� observa alguns guerreiros rec�m chegados as trevas de Niffleheim, em
+seus rostos uma express�o de terror e medo.  Fortes ventos frios surgem
+vindos do norte causando lhe arrepios.  Ao norte voc� observa o port�o do
+pal�cio das trevas, ao leste e ao oeste voc� observa as terras de Niffleheim
+e ao sul voc� observa uma fonte escura.
+~
+126 96 0 0 0 2
+D0
+Voc� observa um port�o negro.
+~
+port�o negro~
+1 2 12789
+D1
+Voc� observa as trevas.
+~
+~
+0 -1 12788
+D2
+Voc� observa uma fonte sombria.
+~
+~
+0 -1 12785
+D3
+Voc� observa as trevas.
+~
+~
+0 -1 12786
+S
+#12788
+As Trevas de Niffleheim~
+   Voc� est� caminhando pelas escuras terras de Niffleheim.  Fortes ventos
+frios sopram na sua dire��o.  Ao seu redor imagens de guerreiros mortos e
+almas perdidas que trazem em seus rostos uma expressam de ang�stia e medo.
+Ao oeste voc� observa as trevas e os seus moradores e para baixo voc�
+observa a entrada de uma c�mara subterr�nea.
+~
+126 96 0 0 0 2
+D3
+Voc� observa as trevas.
+~
+~
+0 -1 12787
+D5
+Voc� observa a entrada de uma c�mara subterr�nea.
+~
+~
+0 -1 12825
+S
+#12789
+Elvinder, o Pal�cio de Hela~
+   Voc� est� dentro do pal�cio de Hela, lugar repleto de mortos.  Cada
+detalhe deste pal�cio lembra as trevas e a morte.  Ao seu redor voc� observa
+algumas almas angustiadas entrando no pal�cio, as paredes do pal�cio formam
+formas estranhas e terr�veis. Ao olhar para os c�us voc� percebe que em
+Niffleheim n�o existem nuvens e nem t�o pouco c�u.  Onde deveria ser visto o
+sagrado c�u n�rdico, voc� observa a imagem rebatida do que acontece nas
+terras das trevas.  Ao norte voc� observa um grande sal�o com v�rios corpos
+em decomposi��o e algumas almas perdidas, ao sul voc� observa as terras
+inf�rtis de Niffleheim atrav�s do port�o negro e ao noroeste e nordeste voc�
+observa a floresta de morta de Niffleheim.
+~
+126 108 0 0 0 0
+D0
+Voc� observa um grande sal�o.
+~
+~
+0 -1 12791
+D2
+Voc� observa um port�o negro.
+~
+port�o negro~
+1 2 12787
+D6
+Voc� observa a floresta de Niffleheim.
+~
+~
+0 -1 12790
+D7
+Voc� observa a floresta de Niffleheim.
+~
+~
+0 -1 12792
+S
+#12790
+A Floresta da Escurid�o~
+   Voc� est� caminhando aterrorizado pela floresta da escurid�o.  Ao seu
+redor troncos negros e arbustos mortos.  A floresta est� totalmente morta.
+O sil�ncio m�rbido da floresta s� � quebrado pelos fortes ventos frios que
+sopram em sua dire��o.  Ao norte e ao leste voc� observa a floresta de
+Niffleheim e ao sudeste voc� observa a entrada do pal�cio Elvinder.
+~
+126 96 0 0 0 2
+D0
+Voc� observa a floresta de Niffleheim.
+~
+~
+0 -1 12796
+D1
+Voc� observa a floresta de Niffleheim.
+~
+~
+0 -1 12792
+D8
+Voc� observa a entrada do pal�cio Elvinder.
+~
+~
+0 -1 12789
+S
+#12791
+O Sal�o dos Mortos~
+   Voc� est� dentro do pal�cio Elvinder.  Ao seu redor voc� observa v�rios
+corpos pelo ch�o em decomposi��o e algumas lamas perdidas em p�nico.  Vindos
+do sul voc� observa guerreiros que foram mortos pacificamente rec�m chegados
+a Niffleheim.  Ao norte voc� observa um grande sal�o do pal�cio Elvinder e
+ao sul voc� observa a entrada do pal�cio.
+~
+126 104 0 0 0 0
+D0
+Voc� observa um grande sal�o do pal�cio Elvinder.
+~
+~
+0 -1 12794
+D2
+Voc� observa a entrada do Elvinder.
+~
+~
+0 -1 12789
+S
+#12792
+A Floresta da Escurid�o~
+   Voc� est� caminhando aterrorizado pela floresta da escurid�o.  Ao seu
+redor troncos negros e arbustos mortos.  A floresta est� totalmente morta.
+O sil�ncio m�rbido da floresta s� � quebrado pelos fortes ventos frios que
+sopram em sua dire��o.  Ao norte e ao oeste voc� observa a floresta de
+Niffleheim e ao sudoeste voc� observa a entrada do pal�cio Elvinder.
+~
+126 96 0 0 0 2
+D0
+Voc� observa a floresta de Niffleheim.
+~
+~
+0 -1 12798
+D3
+Voc� observa a floresta de Niffleheim.
+~
+~
+0 -1 12790
+D9
+Voc� observa a entrada do pal�cio Elvinder.
+~
+~
+0 -1 12789
+S
+#12793
+A Morte~
+   Voc� est� dentro de um sal�o escuro.  Ao seu redor voc� observa dez
+tumbas e em cada uma delas voc� observa o nome de um dos deuses que moram em
+Asgard.  Ao ler os nomes voc� sente uma estranha sensa��o de desespero e
+medo.  Ao olhar para o teto voc� observa um redemoinho negro e cenas
+assustadoras do Ragnarok.  Ao leste voc� observa um grande sal�o do pal�cio
+Elvinder.
+~
+126 104 0 0 0 0
+D1
+Voc� observa um grande sal�o.
+~
+~
+0 -1 12794
+S
+#12794
+O Sal�o dos Mortos e das Trevas~
+   Voc� est� dentro do temido sal�o dos mortos do Elvinder, a fortaleza de
+Hela.  A cada passo na dire��o norte, voc� percebe que o sal�o fica mais
+escuro.  A sensa��o dentro do Elvinder � assustadora, voc� escuta gritos de
+dor e p�nico.  Ao seu redor corpos no ch�o se decomp�em e almas perdidas
+olham para voc� com uma express�o de ang�stia no rosto.  Ao norte voc�
+observa um trono, ao leste voc� observa uma c�pula negra, ao oeste voc�
+observa uma sala escura e ao sul voc� observa o sal�o dos mortos.
+~
+126 104 0 0 0 0
+D0
+Voc� observa um trono.
+~
+~
+0 -1 12797
+D1
+Voc� observa uma c�pula negra.
+~
+~
+0 -1 12795
+D2
+Voc� observa o sal�o dos mortos.
+~
+~
+0 -1 12791
+D3
+Voc� observa uma sala escura.
+~
+~
+0 -1 12793
+S
+#12795
+A C�pula Negra de Balder~
+   Voc� est� dentro de uma c�pula negra.  O sil�ncio e a escurid�o lhe deixa
+atento e assustado com qualquer som estranho.  Ao seu redor voc� observa
+apenas uma enorme pedra em forma de mesa, ao chegar mais perto voc� observa
+um corpo em cima dela.  Ao oeste voc� observa uma grande sal�o do pal�cio
+Elvinder.
+~
+126 104 0 0 0 0
+D3
+Voc� observa um grande sal�o dentro do pal�cio.
+~
+~
+0 -1 12794
+S
+#12796
+A Floresta da Escurid�o~
+   Voc� est� caminhando aterrorizado pela floresta da escurid�o.  Ao seu
+redor troncos negros e arbustos mortos.  A floresta est� totalmente morta.
+O sil�ncio m�rbido da floresta s� � quebrado pelos fortes ventos frios que
+sopram em sua dire��o.  Ao sul e ao leste voc� observa a floresta de
+Niffleheim e ao nordeste voc� observa a cidadela de Hel.
+~
+126 96 0 0 0 2
+D1
+Voc� observa a floresta de Niffleheim.
+~
+~
+0 -1 12798
+D2
+Voc� observa a floresta de Niffleheim.
+~
+~
+0 -1 12790
+D7
+Voc� observa a cidadela de Hel.
+~
+~
+0 -1 12799
+S
+#12797
+O Trono das Trevas~
+   Voc� est� dentro do pal�cio Elvinder.  Ao seu redor voc� observa v�rios
+corpos em decomposi��o e almas perdidas em p�nico.  A sua frente voc�
+observa um sombrio trono feito de um amontoado de corpos e esqueletos.  Ao
+sul voc� observa o grande sal�o do pal�cio Elvinder e ao norte a cidadela de
+Hel.
+~
+126 104 0 0 0 0
+D0
+Voc� observa a macabra cidadela de Hel.
+~
+~
+0 -1 12799
+D2
+Voc� observa v�rios corpos em decomposi��o.
+~
+~
+0 -1 12794
+S
+#12798
+A Floresta da Escurid�o~
+   Voc� est� caminhando aterrorizado pela floresta da escurid�o.  Ao seu
+redor troncos negros e arbustos mortos.  A floresta est� totalmente morta.
+O sil�ncio m�rbido da floresta s� � quebrado pelos fortes ventos frios que
+sopram em sua dire��o.  Ao sul e ao oeste voc� observa a floresta de
+Niffleheim e ao noroeste voc� observa a cidadela de Hel.
+~
+126 96 0 0 0 2
+D2
+Voc� observa a floresta de Niffleheim.
+~
+~
+0 -1 12792
+D3
+Voc� observa a floresta de Niffleheim.
+~
+~
+0 -1 12796
+D6
+Voc� observa a cidadela de Hel.
+~
+~
+0 -1 12799
+S
+#12799
+A Cidadela de Hel~
+   Voc� est� na cidadela de Hel, o reino dos mortos.  Os mortos em geral v�o
+para Niffleheim, mas os maus v�o direto para a cidadela de Hel e ficam aqui
+para sempre junto de almas em p�nico e de corpos em decomposi��o.
+...voc� observa uma placa sombria...
+...bem vindo a cidadela de Hel, sua estadia ser� eterna.
+...Voc� est� morto !
+~
+126 102 0 0 0 1
+S
+#12800
+A Plan�cie de Vigrid~
+   Voc� est� caminhando sobre uma bela e tranq�ila plan�cie coberta de neve
+das sagradas terras de Asgard.  Ao olhar para o c�u n�rdico voc� observa um
+brilho estranho e voc� sente uma forte energia emanando dessa plan�cie
+gelada.  Ao nordeste e ao sudeste voc� observa a plan�cie de Vigrid, ao
+leste voc� observa as �guas do grande lago Amsvartnir e ao oeste voc�
+observa o bosque de Asgard.
+~
+126 228 0 0 0 2
+D1
+Voc� observa o grande lago Amsvartnir.
+~
+~
+0 -1 12804
+D3
+Voc� observa o bosque de Asgard.
+~
+~
+0 -1 12730
+D7
+Voc� observa a bela plan�cie de Vigrid.
+~
+~
+0 -1 12801
+D8
+Voc� observa a bela plan�cie de Vigrid.
+~
+~
+0 -1 12803
+S
+#12801
+A Plan�cie de Vigrid~
+   Voc� est� caminhando sobre uma bela e tranq�ila plan�cie coberta de neve
+das sagradas terras de Asgard.  Ao olhar para o c�u n�rdico voc� observa um
+brilho estranho e voc� sente uma forte energia emanando dessa plan�cie
+gelada.  Ao nordeste e ao noroeste voc� observa a plan�cie de Vigrid e ao
+sul voc� observa as �guas do grande lago Amsvartnir.
+~
+126 228 0 0 0 2
+D2
+Voc� observa o lago Amsvartnir.
+~
+~
+0 -1 12804
+D6
+Voc� observa a bela plan�cie de Vigrid.
+~
+~
+0 -1 12800
+D7
+Voc� observa a bela plan�cie de Vigrid.
+~
+~
+0 -1 12802
+S
+#12802
+A Plan�cie de Vigrid~
+   Voc� est� caminhando sobre uma bela e tranq�ila plan�cie coberta de neve
+das sagradas terras de Asgard.  Ao olhar para o c�u n�rdico voc� observa um
+brilho estranho e voc� sente uma forte energia emanando dessa plan�cie
+gelada.  Ao noroeste e ao sudoeste voc� observa a plan�cie de Vigrid, ao
+oeste voc� observa as �guas do grande lago Amsvartnir, ao nordeste voc�
+observa um belo pal�cio de ouro e prata e ao sudeste voc� observa um pal�cio
+de cristal.
+~
+126 228 0 0 0 2
+D3
+Voc� observa o lago Amsvartnir.
+~
+~
+0 -1 12804
+D6
+Voc� observa a bela plan�cie de Vigrid.
+~
+~
+0 -1 12803
+D7
+Voc� observa o pal�cio Bilskirnir.
+~
+~
+0 -1 12806
+D8
+Voc� observa o pal�cio Brudablik.
+~
+~
+0 -1 12807
+D9
+Voc� observa a bela plan�cie de Vigrid.
+~
+~
+0 -1 12801
+S
+#12803
+A Plan�cie de Vigrid~
+   Voc� est� caminhando sobre uma bela e tranq�ila plan�cie coberta de neve
+das sagradas terras de Asgard.  Ao olhar para o c�u n�rdico voc� observa um
+brilho estranho e voc� sente uma forte energia emanando dessa plan�cie
+gelada.  Ao sudoeste e ao sudeste voc� observa a plan�cie de Vigrid e ao sul
+voc� observa as �guas do grande lago Amsvartnir.
+~
+126 228 0 0 0 2
+D2
+Voc� observa o lago Amsvartnir.
+~
+~
+0 -1 12804
+D8
+Voc� observa a bela plan�cie de Vigrid.
+~
+~
+0 -1 12802
+D9
+Voc� observa a bela plan�cie de Vigrid.
+~
+~
+0 -1 12800
+S
+#12804
+As �guas do Lago Amsvartnir~
+   Voc� est� nadando nas perfumadas e tranq�ilas �guas do lago Amsvartnir.
+Uma sensa��o de vitalidade e calma toma conta do seu corpo.  Ao seu redor
+voc� observa as majestosas terras de Asgard e pequenos flocos de neve, que
+n�o param de cair.  Ao norte, sul, leste e oeste voc� observa a bel�ssima
+plan�cie de Vigrid e rumo ao centro do lago voc� observa uma pequena ilha.
+~
+126 786532 0 0 0 6
+D0
+Voc� observa a bela plan�cie de Vigrid.
+~
+~
+0 -1 12803
+D1
+Voc� observa a bela plan�cie de Vigrid.
+~
+~
+0 -1 12802
+D2
+Voc� observa a bela plan�cie de Vigrid.
+~
+~
+0 -1 12801
+D3
+Voc� observa a bela plan�cie de Vigrid.
+~
+~
+0 -1 12800
+D4
+Voc� observa uma pequena ilha.
+~
+~
+0 -1 12805
+S
+#12805
+A Pequena Ilha de Lyngvi~
+   Voc� est� caminhando sobre as terras da pequena ilha de Lyngvi.  Ao seu
+redor voc� observa v�rias pegadas enormes de alguma criatura estranha.  A
+paisagem das terras de Asgard do local mais elevado da ilha � monumental.
+Para baixo voc� observa as �guas do lago Amsvartnir.
+~
+126 100 0 0 0 2
+D5
+Voc� observa o lago Amsvartnir.
+~
+~
+0 -1 12804
+S
+#12806
+O Belo Pal�cio Bilskirnir~
+   Voc� est� dentro do magn�fico pal�cio de ouro e prata do poderoso senhor
+dos trov�es, filho mais velho de Odin e o ser mais forte entre os deuses e
+os homens.  Ao seu redor voc� observa m�veis bel�ssimos feitos pelas m�os
+habilidosas dos an�es que vivem nas c�maras subterr�neas de Niffelheim.  Ao
+sudoeste voc� observa a calma plan�cie de Vigrid.
+~
+126 108 0 0 0 0
+D9
+Voc� observa a bela plan�cie de Vigrid.
+~
+~
+0 -1 12802
+S
+#12807
+O Pal�cio Brudablik~
+   Voc� est� dentro do majestoso pal�cio Brudablik.  Todo feito de cristal,
+o pal�cio pertence ao Deus Balder, o bom.  Ao seu redor voc� observa m�veis
+bel�ssimos feitos de cristais de v�rias cores.  Ao nordeste voc� observa a
+plan�cie de Vigrid.
+~
+126 108 0 0 0 0
+D6
+Voc� observa a bela plan�cie de Vigrid.
+~
+~
+0 -1 12802
+S
+#12808
+A Plan�cie de Ida~
+   Voc� est� caminhando sobre uma bela plan�cie coberta de neve.  Ao seu
+redor voc� observa v�rios Einherjars sorrindo e com uma express�o nos seus
+rostos de muita alegria.  Ao leste voc� observa o bosque de Asgard , ao
+noroeste e ao sudoeste voc� observa a magn�fica plan�cie de Ida e ao oeste
+voc� observa um belo santu�rio.
+~
+126 100 0 0 0 2
+D1
+Voc� observa o belo bosque de Asgard.
+~
+~
+0 -1 12729
+D3
+Voc� observa um magn�fico santu�rio.
+~
+~
+0 -1 12812
+D6
+Voc� observa as terras da plan�cie de Ida.
+~
+~
+0 -1 12811
+D9
+Voc� observa as terras da plan�cie de Ida.
+~
+~
+0 -1 12809
+S
+#12809
+A Plan�cie de Ida~
+   Voc� est� caminhando pelas terras da magn�fica plan�cie de Ida, dentro
+das sagradas terras de Asgard.  A neve continua caindo impiedosamente,
+cobrindo toda a sua armadura.  Ao norte voc� observa um imponente santu�rio
+e ao nordeste e noroeste voc� observa as terras da plan�cie de Ida.
+~
+126 96 0 0 0 2
+D0
+Voc� observa um monumental santu�rio.
+~
+~
+0 -1 12812
+D6
+Voc� observa as terras da plan�cie de Ida.
+~
+~
+0 -1 12810
+D7
+Voc� observa as terras da plan�cie de Ida.
+~
+~
+0 -1 12808
+S
+#12810
+A Plan�cie de Ida~
+   Voc� est� caminhando sobre uma bela plan�cie coberta de neve.  Ao seu
+redor voc� observa v�rios Einherjars sorrindo e com uma express�o nos seus
+rostos de muita alegria.  Ao nordeste e ao sudeste voc� observa a magn�fica
+plan�cie de Ida e ao leste voc� observa um belo santu�rio.
+~
+126 96 0 0 0 2
+D1
+Voc� observa um belo santu�rio.
+~
+~
+0 -1 12812
+D7
+Voc� observa as terras da plan�cie de Ida.
+~
+~
+0 -1 12811
+D8
+Voc� observa as terras da plan�cie de Ida.
+~
+~
+0 -1 12809
+S
+#12811
+A Plan�cie de Ida~
+   Voc� est� caminhando pelas terras da magn�fica plan�cie de Ida, dentro
+das sagradas terras de Asgard.  A neve continua caindo impiedosamente,
+cobrindo toda a sua armadura.  Ao norte voc� observa um pal�cio de prata, ao
+sul voc� observa um magn�fico santu�rio e ao sudeste e sudoeste voc� observa
+as terras da plan�cie de Ida.
+~
+126 96 0 0 0 2
+D0
+Voc� observa um belo pal�cio prateado.
+~
+~
+0 -1 12813
+D2
+Voc� observa um imponente santu�rio.
+~
+~
+0 -1 12812
+D8
+Voc� observa as terras da plan�cie de Ida.
+~
+~
+0 -1 12808
+D9
+Voc� observa as terras da plan�cie de Ida.
+~
+~
+0 -1 12810
+S
+#12812
+Gladsheim, O Santu�rio da Alegria~
+   Voc� est� no santu�rio da alegria, lugar onde os her�is e deuses de
+Asgard visitam trazendo e semeando a alegria.  Ao seu redor voc� observa
+seis imensas rochas que formam o santu�rio.  Voc� percebe v�rios her�is
+caminhando e conversando no santu�rio.  Ao norte, leste, oeste e sul voc�
+observa as terras fe�ricas da plan�cie de Ida.
+~
+126 524404 0 0 0 2
+D0
+Voc� observa as terras da plan�cie de Ida.
+~
+~
+0 -1 12811
+D1
+Voc� observa as terras da plan�cie de Ida.
+~
+~
+0 -1 12808
+D2
+Voc� observa as terras da plan�cie de Ida.
+~
+~
+0 -1 12809
+D3
+Voc� observa as terras da plan�cie de Ida.
+~
+~
+0 -1 12810
+S
+#12813
+Sessrumir, o Pal�cio das Flores~
+   Voc� est� dentro de um belo pal�cio de prata todo ornamentado de flores
+de todas as cores e perfumes.  O pal�cio Sessrumir pertence a Fr�ia, deusa
+da fertilidade e da paz dom�stica.  Ao sul voc� observa al�m das flores, as
+bel�ssimas terras cobertas de neve da plan�cie de Ida.
+~
+126 108 0 0 0 0
+D2
+Voc� observa as terras da plan�cie de Ida.
+~
+~
+0 -1 12811
+S
+#12814
+Himinbjorg, o Penhasco do C�u~
+   Voc� est� dentro do magn�fico pal�cio todo feito em ouro do deus guardi�o
+Heindall.  Ao seu redor voc� observa os belos m�veis dourados feitos pelas
+famosas e habilidosas m�os dos an�es que vivem nas c�maras subterr�neas de
+Niffelheim.  Do pal�cio � poss�vel observar todo o arco-�ris e como tamb�m
+seus visitantes.  Para baixo voc� observa um belo arco-�ris.
+~
+126 108 0 0 0 0
+D5
+Voc� observa um magn�fico arco-�ris.
+~
+~
+0 -1 12714
+S
+#12815
+Alfheim, o Dom�nio de Freyr~
+   Voc� est� na floresta dourada de Alfheim.  Por alguns momentos a neve que
+caia sem parar, deu uma tr�gua.  Os raios solares ao atingirem as belas
+�rvores da floresta, refletem em seus olhos uma luz dourada e intensa.  A
+floresta de Alfheim � a morada dos belos e benevolentes esp�ritos brancos.
+Ao leste voc� observa a misteriosa floresta de Aflheim e ao sudoeste voc�
+observa uma plan�cie coberta de neve.
+~
+126 100 0 0 0 3
+D1
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12816
+D9
+Voc� observa uma plan�cie coberta de neve.
+~
+~
+0 -1 12756
+S
+#12816
+A Floresta Dourada de Alfheim~
+   Voc� est� caminhando entre as belas �rvores da floresta de Alfheim.  Ao
+seu redor voc� observa que a neve n�o chegou aqui.  Ao olhar para o ch�o
+voc� percebe pegadas de alguma pequena criatura.  Ao nordeste, sudeste e ao
+oeste voc� observa as �rvores da floresta dourada de Alfheim.
+~
+126 96 0 0 0 3
+D3
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12815
+D7
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12817
+D8
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12819
+S
+#12817
+A Floresta Dourada de Alfheim~
+   Voc� est� caminhando por entre as belas �rvores da floresta de Alfheim,
+morada dos esp�ritos brancos e dom�nio do Deus Freyr, o deus do sol.  Ao seu
+redor a majestosa floresta emite das suas �rvores um brilho intenso e
+celestial, que atinge seus olhos, deixando voc� cego por algum tempo.  Ao
+leste e ao sudoeste voc� observa trilhas na floresta de Alfheim.
+~
+126 96 0 0 0 3
+D1
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12818
+D9
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12816
+S
+#12818
+A Floresta Dourada de Aflheim~
+   Voc� est� caminhando entre as belas �rvores da floresta de Alfheim.  Ao
+seu redor voc� observa que a neve n�o chegou aqui.  Ao olhar para o ch�o
+voc� percebe pegadas de alguma pequena criatura.  Ao oeste voc� observa as
+�rvores da floresta dourada de Alfheim.
+~
+126 96 0 0 0 3
+D3
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12817
+S
+#12819
+A Floresta Dourada de Alfheim~
+   Voc� est� caminhando pelas trilhas da majestosa floresta dourada de
+Alfheim.  Ao seu redor voc� observa belas �rvores e ao olhar para o ch�o
+voc� percebe algumas pequeninas pegadas de alguma criatura da floresta.  Ao
+nordeste, sudeste e noroeste voc� observa trilhas por entre as �rvores da
+floresta dourada de Alfheim.
+~
+126 96 0 0 0 3
+D6
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12816
+D7
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12820
+D8
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12823
+S
+#12820
+A Floresta Dourada de Alfheim~
+   Voc� est� caminhando por entre as belas �rvores da floresta de Alfheim,
+morada dos esp�ritos brancos e dom�nio do Deus Freyr, o deus do sol.  Ao seu
+redor a majestosa floresta emite das suas �rvores um brilho intenso e
+celestial, que atinge seus olhos, deixando voc� cego por algum tempo.  Ao
+sul e ao sudoeste voc� observa trilhas na floresta de Alfheim.
+~
+126 96 0 0 0 3
+D2
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12821
+D9
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12819
+S
+#12821
+O Sol, o Cora��o de Alfheim~
+   Voc� est� caminhando na floresta dourada de Alfheim.  Ao seu redor voc�
+observa as monumentais �rvores douradas e uma enorme bola de fogo.  O sol
+de Alfheim ilumina toda a floresta e alegra todos os esp�ritos brancos da
+floresta.  A luz irradiada pelo sol de Alfheim ao atingi-lo, faz voc�
+refletir sobre seus atos.  Uma enorme sensa��o de paz, fraternidade, uni�o e
+harmonia tomam conta do seu corpo e da sua mente.  Ao norte voc� observa uma
+trilha na divina floresta de Alfheim.
+~
+126 96 0 0 0 1
+D0
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12820
+S
+#12822
+A Floresta Dourada de Aflheim~
+   Voc� est� caminhando entre as belas �rvores da floresta de Alfheim.  Ao
+seu redor voc� observa que a neve n�o chegou aqui.  Ao olhar para o ch�o
+voc� percebe pegadas de alguma pequena criatura.  Ao sudoeste voc� observa
+as �rvores da floresta dourada de Alfheim.
+~
+126 96 0 0 0 3
+D9
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12823
+S
+#12823
+A Floresta Dourada de Aflheim~
+   Voc� est� caminhando entre as belas �rvores da floresta de Alfheim.  Ao
+seu redor voc� observa que a neve n�o chegou aqui.  Ao olhar para o ch�o
+voc� percebe pegadas de alguma pequena criatura.  Ao nordeste, sudeste e ao
+noroeste voc� observa as �rvores da floresta dourada de Alfheim.
+~
+126 96 0 0 0 3
+D6
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12819
+D7
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12822
+D8
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12824
+S
+#12824
+A Floresta Dourada de Alfheim~
+   Voc� est� caminhando por entre as belas �rvores da floresta de Alfheim,
+morada dos esp�ritos brancos e dom�nio do Deus Freyr, o deus do sol.  Ao seu
+redor a majestosa floresta emite das suas �rvores um brilho intenso e
+celestial, que atinge seus olhos, deixando voc� cego por algum tempo.  Ao
+noroeste voc� observa trilhas na floresta de Alfheim.
+~
+126 96 0 0 0 3
+D6
+Voc� observa a floresta dourada de Alfheim.
+~
+~
+0 -1 12823
+S
+#12825
+Uma C�mara Subterr�nea~
+   Voc� est� caminhando com bastante dificuldade dentro de uma c�mara
+subterr�nea de Niffleheim.  A escurid�o � quase que total, as paredes s�o
+lisas como se algu�m as tivesse polido.  O odor dentro da c�mara �
+insuport�vel.  Para cima voc� observa a sa�da da c�mara subterr�nea e ao
+oeste voc� observa um corredor bastante escuro.
+~
+126 393581 0 0 0 0
+D1
+Voc� observa um corredor escuro.
+~
+~
+0 -1 12826
+D4
+Voc� observa as trevas de Niffleheim.
+~
+~
+0 -1 12788
+S
+#12826
+Um Corredor Escuro~
+   Voc� est� caminhando dentro da c�mara subterr�nea num corredor bastante
+escuro e sujo.  Ao seu redor voc� observa as lisas paredes da c�mara e ao
+olhar para o ch�o observa muita lama e pequenas pegadas.  Ao leste voc�
+observa o corredor indo em dire��o do interior da c�mara subterr�nea e ao
+oeste voc� observa a sa�da.
+~
+126 393577 0 0 0 0
+D1
+Voc� observa um corredor bastante sujo.
+~
+~
+0 -1 12827
+D3
+Voc� observa a sa�da da c�mara subterr�nea.
+~
+~
+0 -1 12825
+S
+#12827
+Um Corredor Escuro~
+   Voc� est� caminhando dentro da c�mara subterr�nea num corredor bastante
+escuro e sujo.  Ao seu redor voc� observa as lisas paredes da c�mara e ao
+olhar para o ch�o observa muita lama e pequenas pegadas.  Ao oeste voc�
+observa o corredor indo em dire��o da sa�da da c�mara subterr�nea e descendo
+pelo corredor voc� observa em meio a escurid�o algumas tochas de fogo nas
+paredes.
+~
+126 393577 0 0 0 0
+D3
+Voc� observa um corredor bastante sujo.
+~
+~
+0 -1 12826
+D5
+Voc� observa um espa�o amplo no final do corredor.
+~
+~
+0 -1 12828
+S
+#12828
+O P�tio da Escurid�o~
+   Oooh!  Que sujeira!  Que odor terr�vel!  Voc� chegou num grande p�tio
+completamente sujo.  Ao seu redor algumas tochas nas paredes d�o um pouco de
+ilumina��o a este emporcalhado lugar.  Voc� caminha com bastante cuidado
+para n�o escorregar nas po�as de lama que existem aqui.  Voc� sente uma
+estranha sensa��o de que algu�m est� lhe observando.  Para cima, para baixo
+e ao leste voc� observa estreitos corredores.
+~
+126 393577 0 0 0 0
+D1
+Voc� observa um corredor bastante sujo.
+~
+~
+0 -1 12829
+D4
+Voc� observa um corredor bastante sujo.
+~
+~
+0 -1 12827
+D5
+Voc� observa um corredor bastante sujo.
+~
+~
+0 -1 12833
+S
+#12829
+Um Corredor Escuro~
+   Voc� est� caminhando dentro da c�mara subterr�nea num corredor bastante
+escuro e sujo.  Ao seu redor voc� observa as lisas paredes da c�mara e ao
+olhar para o ch�o observa muita lama e pequenas pegadas. Ao oeste voc�
+observa em meio a escurid�o algumas tochas de fogo nas paredes e ao leste
+voc� observa o final do corredor.
+~
+126 393577 0 0 0 0
+D1
+Voc� observa o final do corredor.
+~
+~
+0 -1 12830
+D3
+Voc� observa um espa�o amplo no final do corredor.
+~
+~
+0 -1 12828
+S
+#12830
+O Fim do Corredor Escuro~
+   Voc� chegou ao final do corredor escuro e bastante sujo.  Ao seu redor
+voc� observa algumas ferramentas de ferreiros sujas no ch�o e uma grande
+fogueira.  No ch�o muita lama e pegadas pequeninas de alguma criatura.  Ao
+oeste voc� observa um corredor escuro.
+~
+126 393577 0 0 0 0
+D3
+Voc� observa um corredor bastante sujo.
+~
+~
+0 -1 12829
+S
+#12831
+O P�tio da Podrid�o~
+   Voc� chegou num espa�o mais amplo que os corredores, por�m bastante sujo
+e escuro.  Ao seu redor voc� observa um p�tio cheio de lama e com as paredes
+lisas como se tivessem sido polidas por algu�m.  Ao olhar para o ch�o voc�
+percebe v�rias pequenas pegadas de alguma criatura.  Ao leste e para baixo
+voc� observa um corredor bastante escuro.
+~
+126 393321 0 0 0 0
+D1
+Voc� observa um corredor bastante sujo.
+~
+~
+0 -1 12832
+D5
+Voc� observa um corredor bastante sujo.
+~
+~
+0 -1 12834
+S
+#12832
+Um Corredor Escuro~
+   Voc� est� caminhando dentro da c�mara subterr�nea num corredor bastante
+escuro e sujo.  Ao seu redor voc� observa as lisas paredes da c�mara e ao
+olhar para o ch�o observa muita lama e pequenas pegadas.  Ao leste voc�
+observa um corredor bastante escuro e ao oeste voc� observa um p�tio amplo
+e bastante sujo.
+~
+126 393577 0 0 0 0
+D1
+Voc� observa um corredor bastante sujo.
+~
+~
+0 -1 12833
+D3
+Voc� observa um p�tio bastante sujo.
+~
+~
+0 -1 12831
+S
+#12833
+Um Corredor Escuro~
+   Voc� est� caminhando dentro da c�mara subterr�nea num corredor bastante
+escuro e sujo.  Ao seu redor voc� observa as lisas paredes da c�mara e ao
+olhar para o ch�o observa muita lama e pequenas pegadas.  Ao oeste voc�
+observa a continua��o do corredor e para cima voc� observa um p�tio sujo com
+algumas tochas nas paredes.
+~
+126 393577 0 0 0 0
+D3
+Voc� observa um corredor bastante sujo.
+~
+~
+0 -1 12832
+D4
+Voc� observa um p�tio um pouco iluminado.
+~
+~
+0 -1 12828
+S
+#12834
+Nas Profundezas de Niffleheim~
+   Voc� est� dentro de uma profunda c�mara subterr�nea das trevas de
+Niffleheim.  A ilumina��o neste lugar � m�nima e se n�o fosse pelo seu
+equipamento, a escurid�o seria absoluta.  Ao leste voc� observa um corredor
+assustador e para cima voc� observa um p�tio bastante sujo.
+~
+126 393577 0 0 0 0
+D1
+Est� muito escuro para voc� percebe algo.
+~
+~
+0 -1 12835
+D4
+Voc� observa uma p�tio muito sujo.
+~
+~
+0 -1 12831
+S
+#12835
+Um Corredor Escuro~
+   Voc� est� caminhando dentro da c�mara subterr�nea num corredor bastante
+escuro e sujo.  Ao seu redor voc� observa as lisas paredes da c�mara e ao
+olhar para o ch�o observa muita lama e pequenas pegadas.  Ao leste e ao
+oeste voc� observa um corredor bastante escuro.
+~
+126 393577 0 0 0 0
+D1
+Est� muito escuro para voc� percebe algo.
+~
+~
+0 -1 12836
+D3
+Est� muito escuro para voc� percebe algo.
+~
+~
+0 -1 12834
+S
+#12836
+Um Corredor Escuro~
+   Voc� est� caminhando dentro da c�mara subterr�nea num corredor bastante
+escuro e sujo.  Ao seu redor voc� observa as lisas paredes da c�mara e ao
+olhar para o ch�o observa muita lama e pequenas pegadas.  Ao oeste voc�
+observa um corredor bastante escuro e para baixo voc� observa um grande
+buraco.
+~
+126 393577 0 0 0 0
+D3
+Est� muito escuro para voc� percebe algo.
+~
+~
+0 -1 12835
+D5
+Voc� observa um grande buraco.
+~
+~
+0 -1 12837
+S
+#12837
+A Depress�o das Trevas~
+   Voc� est� dentro de uma c�mara subterr�nea das trevas de Niffleheim.  Ao
+seu redor voc� observa alguns ossos da �ltima refei��o dos moradores desta
+suja e escura c�mara e no canto norte da depress�o voc� observa um trono de
+ferro e madeira.  O odor aqui � insuport�vel.  Voc� olha para todos os lados
+,mas n�o encontra uma sa�da deste local.
+~
+126 393321 0 0 0 0
+S
+#12838
+As Frias �guas do Oceano Atl�ntico Norte~
+   Voc� est� navegando pelas g�lidas e temidas �guas do oceano Atl�ntico
+Norte.  Ao seu redor al�m da proa da sua embarca��o, voc� observa ansioso a
+imensid�o do oceano esperando a qualquer momento encontrar novas terras
+desconhecidas.  Ao norte voc� observa as �guas do oceano Atl�ntico Norte e
+ao sudeste voc� observa as �guas do oceano Atl�ntico.
+~
+126 131140 0 0 0 7
+D0
+Voc� observa o oceano Atl�ntico Norte.
+~
+~
+0 -1 12839
+D8
+Voc� observa o oceano Atl�ntico.
+~
+~
+0 -1 12601
+S
+#12839
+As �guas do Oceano Atl�ntico Norte~
+   Voc� est� navegando pelas �guas frias do oceano Atl�ntico Norte.  Em cada
+porto, em cada nova cidade que voc� chega as lendas sobre este imenso oceano
+fazem sua imagina��o saltitar.  Ao nordeste, noroeste e ao sul voc� observa
+as �guas do oceano Atl�ntico Norte.
+~
+126 131136 0 0 0 7
+D2
+Voc� observa o oceano Atl�ntico Norte.
+~
+~
+0 -1 12838
+D6
+Voc� observa o oceano Atl�ntico Norte.
+~
+~
+0 -1 12840
+D7
+Voc� observa o oceano Atl�ntico Norte.
+~
+~
+0 -1 12880
+S
+#12840
+As �guas do Oceano Atl�ntico Norte~
+   Voc� est� navegando pelas temidas e lend�rias �guas g�lidas do oceano
+Atl�ntico Norte.  Ao seu redor voc� observa apenas a imensid�o do oceano e
+a vela da sua embarca��o tremulando por causa dos ventos frios, que lhe
+causam arrepios.  Ao noroeste e ao sudeste voc� observa as �guas do oceano
+Atl�ntico Norte.
+~
+126 131136 0 0 0 7
+D6
+Voc� observa o oceano Atl�ntico Norte.
+~
+~
+0 -1 12841
+D8
+Voc� observa o oceano Atl�ntico Norte.
+~
+~
+0 -1 12839
+S
+#12841
+As �guas do Oceano Atl�ntico Norte~
+   Voc� est� navegando pelas g�lidas e des�rticas �guas do oceano Atl�ntico
+Norte.  Ao seu redor al�m das frias �guas do oceano Atl�ntico Norte e dos
+fortes ventos frios, voc� observa al�m da sua proa uma enorme ilha de gelo.
+Ao sudeste voc� observa as �guas do oceano Atl�ntico Norte e ao norte voc�
+percebe a exist�ncia de uma magn�fica ilha de gelo.
+~
+126 131136 0 0 0 7
+D0
+Voc� observa a monumental terra do gelo.
+~
+~
+0 -1 12842
+D8
+Voc� observa o oceano Atl�ntico Norte.
+~
+~
+0 -1 12840
+S
+#12842
+Isl�ndia, a Terra do Gelo~
+   Voc� encontrou a magn�fica terra do gelo, a Isl�ndia.  Ao seu redor voc�
+observa grandes calotas de gelo, contrastando com as erup��es ferventes dos
+g�iseres e os rios de lava dos imensos vulc�es da ilha.  A paisagem deste
+lugar � monumental e nunca ser� esquecida por voc�.  Os ventos frios que
+surgem em redemoinhos lhe causam arrepios, fortes tremores de terra deixam
+sua imagina��o em movimento, observando o terreno aguardando onde ser� a
+pr�xima erup��o de �guas ferventes ou de lava.  Ao sul voc� observa as frias
+�guas do oceano Atl�ntico Norte e ao norte voc� observa uma des�rtica calota
+de gelo.
+~
+126 68 0 0 0 2
+D0
+Voc� observa uma enorme calota de gelo.
+~
+~
+0 -1 12843
+D2
+Voc� observa o oceano Atl�ntico Norte.
+~
+~
+0 -1 12841
+S
+#12843
+Uma Monumental Calota de Gelo~
+   Voc� est� caminhando com muita dificuldade sob o gelo e a neve que cai
+constantemente.  Ao seu redor voc� observa uma paisagem des�rtica, por�m
+monumental, uma grande calota branca de gelo.  Voc� observa tamb�m grandes
+vulc�es ao noroeste e sente alguns tremores de terra.  Ao sul, noroeste e ao
+nordeste voc� observa uma grande calota de gelo.
+~
+126 64 0 0 0 2
+D2
+Voc� observa uma enorme calota de gelo.
+~
+~
+0 -1 12842
+D6
+Voc� observa uma enorme calota de gelo.
+~
+~
+0 -1 12844
+D7
+Voc� observa uma enorme calota de gelo.
+~
+~
+0 -1 12845
+S
+#12844
+Uma Monumental Calota de Gelo~
+   Voc� est� caminhando sob uma magn�fica calota de gelo.  Ao seu redor o
+gelo e a neve reinam como supremos, os ventos g�lidos atingem voc� como
+flechas e os tremores de terra n�o cessam.  Ao oeste e ao sudeste voc�
+observa a extensa calota de gelo.
+~
+126 64 0 0 0 2
+D3
+Voc� observa uma enorme calota de gelo.
+~
+~
+0 -1 12846
+D8
+Voc� observa uma enorme calota de gelo.
+~
+~
+0 -1 12843
+S
+#12845
+Uma Monumental Calota de Gelo~
+   Voc� est� caminhando sob uma magn�fica e des�rtica calota de gelo nas
+bel�ssimas terras da Isl�ndia.  Ao seu redor voc� observa uma imensa calota
+de gelo e ao olhar para o solo coberto de gelo e neve voc� percebe algumas
+pegadas semelhantes a de seres humanos.  Ao nordeste voc� observa um campo
+de vegeta��o rasteira e ao sudoeste voc� observa a extensa calota de gelo.
+~
+126 64 0 0 0 2
+D7
+Voc� observa um belo campo de vegeta��o rasteira.
+~
+~
+0 -1 12883
+D9
+Voc� observa uma enorme calota de gelo.
+~
+~
+0 -1 12843
+S
+#12846
+Uma Monumental Calota de Gelo~
+   Voc� est� caminhando sob as monumentais calotas de gelo das incr�veis
+terras da Islandesas.  Ao seu redor voc� observa uma grande calota de gelo
+e al�m da calota voc� percebe enormes vulc�es.  Ao leste voc� observa a
+extensa calota de gelo e ao norte voc� observa um enorme vulc�o.
+~
+126 64 0 0 0 2
+D0
+Voc� observa um grande vulc�o.
+~
+~
+0 -1 12848
+D1
+Voc� observa uma enorme calota de gelo.
+~
+~
+0 -1 12844
+S
+#12847
+O Deserto de Lava Vulc�nica~
+   Voc� est� no assustador deserto de lava vulc�nica.  O calor neste lugar �
+insuport�vel.  Ao seu redor voc� observa um mar de lava que desce dos
+grandes vulc�es da ilha e formam este particular deserto.  A paisagem deste
+lugar e' completamente oposta das calotas de gelo da ilha.  A cada passo que
+voc� dar os tremores de terra aumentam.  O perigo de uma nova erup��o pode
+est� em qualquer lugar.  Ao oeste voc� observa um grande vulc�o.
+~
+126 68 0 0 0 2
+D3
+Voc� observa um grande vulc�o.
+~
+~
+0 -1 12848
+S
+#12848
+A Base do Grande Vulc�o Askja~
+   Voc� est� escalando o poderoso e magn�fico vulc�o Askja, o rei e soberano
+supremo do deserto de lava das terras da Isl�ndia.  Ao seu redor voc�
+observa duas paisagens incr�veis:  O deserto de lava e as calotas de gelo.
+Para cima voc� observa uma trilha �ngreme em dire��o do topo do vulc�o, ao
+leste e oeste voc� observa o assustador deserto de lava e ao sul voc�
+observa uma monumental calota de gelo.
+~
+126 131140 0 0 0 4
+D1
+Voc� observa o deserto de lava vulc�nica.
+~
+~
+0 -1 12847
+D2
+Voc� observa uma imensa calota de gelo.
+~
+~
+0 -1 12846
+D3
+Voc� observa o deserto de lava vulc�nica.
+~
+~
+0 -1 12851
+D4
+Voc� observa uma trilha em dire��o ao topo do Vulc�o.
+~
+~
+0 -1 12849
+S
+#12849
+O Vulc�o Askja~
+   Voc� est� escalando o monumental vulc�o Askja.  O perigo de uma nova
+erup��o pode surgir a qualquer momento.  Ao seu redor voc� observa duas
+paisagens bem distintas:  O deserto de lava vulc�nica e as calotas de gelo.
+Para cima voc� observa o topo do vulc�o Askja e para baixo voc� observa uma
+trilha �ngreme em dire��o a base do vulc�o.
+~
+126 196672 0 0 0 5
+D4
+Voc� observa o perigoso topo do vulc�o.
+~
+~
+0 -1 12850
+D5
+Voc� observa uma trilha �ngreme em dire��o da base do vulc�o.
+~
+~
+0 -1 12848
+S
+#12850
+O Topo do Poderoso Askja~
+   Voc� chegou no lugar que tanto desejava, o topo do vulc�o Askja.  Ao seu
+redor voc� observa a majestosa ilha da Isl�ndia e seus segredos.  Um forte
+tremor abala todo o corpo do vulc�o Askja...
+
+...Voc� sente um forte calor se aproximando...
+...Nervoso e paralisado, voc� observa sua morte chegar...
+...Sua inoc�ncia lhe custou muito caro voc� est� morto e imortalizado para
+sempre, quando o mar de lava vulc�nica que lhe cobriu secar.
+~
+126 196614 0 0 0 5
+S
+#12851
+O Deserto de Lava Vulc�nica~
+   Voc� est� no assustador deserto de lava vulc�nica.  O calor neste lugar �
+insuport�vel.  Ao seu redor voc� observa um mar de lava que desce dos
+grandes vulc�es da ilha e formam este particular deserto.  A paisagem deste
+lugar � completamente oposta das calotas de gelo da ilha.  A cada passo que
+voc� d� os tremores de terra aumentam.  O perigo de uma nova erup��o pode
+estar em qualquer lugar.  Ao oeste e ao leste voc� observa a base de dois
+poderosos e magn�ficos vulc�es.
+~
+126 68 0 0 0 2
+D1
+Voc� observa um grande vulc�o.
+~
+~
+0 -1 12848
+D3
+Voc� observa um grande vulc�o.
+~
+~
+0 -1 12852
+S
+#12852
+A Base do Grande Vulc�o Hekla~
+   Voc� est� escalando o poderoso e magn�fico vulc�o Hekla.  Ao seu redor
+voc� observa duas paisagens incr�veis:  O deserto de lava e as calotas de
+gelo.  Para cima voc� observa uma trilha �ngreme em dire��o do topo do
+vulc�o, ao leste voc� observa o assustador deserto de lava e para baixo voc�
+observa uma monumental calota de gelo.
+~
+126 131140 0 0 0 4
+D1
+Voc� observa o deserto de lava vulc�nica.
+~
+~
+0 -1 12851
+D4
+Voc� observa uma trilha �ngreme em dire��o do topo do vulc�o.
+~
+~
+0 -1 12853
+D5
+Voc� observa uma bela calota de gelo.
+~
+~
+0 -1 12855
+S
+#12853
+O Vulc�o Hekla~
+   Voc� est� escalando o monumental vulc�o Hekla.  O perigo de uma nova
+erup��o pode surgir a qualquer momento.  Ao seu redor voc� observa duas
+paisagens bem distintas:  O deserto de lava vulc�nica e as calotas de gelo.
+Para cima voc� observa o topo do vulc�o Hekla e para baixo voc� observa uma
+trilha �ngreme em dire��o a base do vulc�o.
+~
+126 196672 0 0 0 5
+D4
+Voc� observa o perigoso topo do vulc�o.
+~
+~
+0 -1 12854
+D5
+Voc� observa uma trilha em dire��o da base do Hekla.
+~
+~
+0 -1 12852
+S
+#12854
+O Topo do Magn�fico Hekla~
+   Voc� chegou no lugar que tanto desejava, o topo do vulc�o Hekla.  Ao seu
+redor voc� observa a majestosa ilha da Isl�ndia e seus segredos.  Um forte
+tremor abala todo o corpo do vulc�o Hekla...
+...Voc� sente um forte calor se aproximando...
+...Nervoso e paralisado, voc� observa sua morte chegar...
+...Sua inoc�ncia lhe custou muito caro voc� est� morto e imortalizado para
+sempre, quando o mar de lava vulc�nica que lhe cobriu secar.
+~
+126 196614 0 0 0 5
+S
+#12855
+Uma Monumental Calota de Gelo~
+   Voc� est� caminhando com muita dificuldade sob o gelo e a neve que cai
+constantemente.  Ao seu redor voc� observa uma paisagem des�rtica, por�m
+monumental, uma grande calota branca de gelo.  Voc� observa tamb�m grandes
+vulc�es ao noroeste e sente alguns tremores de terra.  Para cima voc�
+observa a base de um grande vulc�o e ao norte voc� observa um grande campo
+cheio de cavalos selvagens.
+~
+126 64 0 0 0 2
+D0
+Voc� observa um belo campo de vegeta��o rasteira.
+~
+~
+0 -1 12856
+D4
+Voc� observa a base do vulc�o.
+~
+~
+0 -1 12852
+S
+#12856
+Um Grande Campo Verde~
+   Voc� est� caminhando num belo campo verde.  O gelo e a neve n�o chegaram
+ainda aqui.  Ao seu redor v�rios cavalos selvagens e uma vegeta��o rasteira
+bem verde, diferente de tudo at� agora visto por voc� nesta imensa ilha de
+gelo.  Mais ao norte do campo voc� percebe um simples cercado feito de
+pedras negras utilizado como um est�bulo para alguns cavalos.  Ao sul voc�
+observa uma imensa calota de gelo e ao noroeste voc� observa um belo campo
+verde.
+~
+126 0 0 0 0 2
+D2
+Voc� observa uma bela calota de gelo.
+~
+~
+0 -1 12855
+D6
+Voc� observa um campo verde.
+~
+~
+0 -1 12857
+S
+#12857
+Um Campo Verde~
+   Voc� est� caminhando num belo campo verde, onde a neve e o gelo n�o
+chegaram ainda.  Ao seu redor voc� observa a entrada de uma vila viking,
+cabanas de rochas vulc�nicas e feno, e v�rios vikings caminhando pela vila.
+Ao oeste voc� observa uma bela estatua do poderoso deus Thor, ao leste voc�
+observa uma calota de gelo, norte voc� observa uma cabana cheia de armas, ao
+sul voc� observa uma cabana de rochas e feno e ao sudeste voc� observa um
+cercado feito de rochas.
+~
+126 4 0 0 0 1
+D0
+Voc� observa uma cabana cheia de ferramentas.
+~
+~
+0 -1 12864
+D1
+Voc� observa uma calota imensa de gelo.
+~
+~
+0 -1 12867
+D2
+Voc� observa uma cabana de rocha e feno.
+~
+~
+0 -1 12858
+D3
+Voc� observa uma monumental estatua de Thor, o senhor dos trov�es.
+~
+~
+0 -1 12862
+D8
+Voc� observa um cercado feito de rochas.
+~
+~
+0 -1 12856
+S
+#12858
+Uma Pequena Cabana Viking~
+   Voc� est� dentro de uma pequena cabana viking, feita de rocha vulc�nica e
+feno.  Ao seu redor voc� observa uma cama de pedra coberta de feno, uma mesa
+feita de madeira bastante envelhecida e duas grandes pedras.  Ao norte voc�
+observa alguns vikings caminhando no belo campo verde.
+~
+126 131080 0 0 0 0
+D0
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12857
+S
+#12859
+Uma Pequena Cabana Viking~
+   Voc� est� dentro de uma pequena cabana viking, feita de rocha vulc�nica e
+feno.  Ao seu redor voc� observa uma cama de pedra coberta de feno, uma mesa
+feita de madeira bastante envelhecida e duas grandes pedras.  Ao norte voc�
+observa alguns vikings caminhando no belo campo verde e observando a estatua
+do poderoso deus Thor.
+~
+126 131080 0 0 0 0
+D0
+Voc� observa a bela estatua do deus Thor.
+~
+~
+0 -1 12862
+S
+#12860
+O Armaz�m da Vila Viking~
+   Voc� est� dentro de uma grande cabana feita de rochas vulc�nicas e feno.
+Ao seu redor pilhas de suprimentos est�o guardados aqui.  Ao norte voc�
+observa alguns vikings conversando num belo campo verde.
+~
+126 131080 0 0 0 0
+D0
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12863
+S
+#12861
+A Longa Cabana da Vila Viking~
+   Voc� est� dentro de uma longa cabana viking feita de rochas vulc�nicas e
+feno.  Ao seu redor voc� observa uma longa mesa de madeira e v�rias cadeiras
+feitas de pedras.  Na extremidade mais distante da porta voc� observa um
+belo trono negro coberto de peles de animais.  Nas paredes voc� observa
+algumas pinturas que contam as viagens dos vikings noruegueses e suecos, que
+partiram da pen�nsula escandinava e chegaram at� aqui.  Ao leste voc�
+observa um belo campo verde.
+~
+126 131080 0 0 0 0
+D1
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12863
+S
+#12862
+O Centro da Vila Viking~
+   Voc� est� caminhando num belo campo verde, situado bem no centro da vila
+viking.  Ao seu redor voc� percebe v�rias cabanas de rochas vulc�nicas e
+feno, e alguns vikings conversando e brigando.  No centro do campo verde
+voc� observa uma majestosa estatua do deus Thor, o senhor dos trov�es.  Ao
+leste e oeste voc� observa a extens�o do campo verde e ao norte e ao sul
+voc� observa pequenas cabanas.
+~
+126 0 0 0 0 1
+D0
+Voc� observa uma pequena cabana.
+~
+~
+0 -1 12865
+D1
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12857
+D2
+Voc� observa uma pequena cabana.
+~
+~
+0 -1 12859
+D3
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12863
+S
+#12863
+Um Campo Verde~
+   Voc� est� caminhando num belo campo verde, onde a neve e o gelo n�o
+chegaram ainda.  Ao seu redor voc� observa v�rias cabanas de rochas
+vulc�nicas e feno, e v�rios vikings caminhando pela vila.  Ao norte voc�
+observa uma pequena cabana viking, ao oeste voc� observa uma longa cabana
+viking, ao sul voc� observa o armaz�m da vila e ao oeste voc� observa uma
+bela estatua do deus Thor, o senhor dos trov�es.
+~
+126 0 0 0 0 1
+D0
+Voc� observa uma pequena cabana viking.
+~
+~
+0 -1 12866
+D1
+Voc� observa uma bela estatua do deus Thor no centro do campo verde.
+~
+~
+0 -1 12862
+D2
+Voc� observa o armaz�m da vila viking.
+~
+~
+0 -1 12860
+D3
+Voc� observa uma longa cabana viking.
+~
+~
+0 -1 12861
+S
+#12864
+A Cabana do Ferreiro Viking~
+   Voc� est� dentro de uma pequena cabana viking.  Ao seu redor voc� observa
+v�rias ferramentas, armas e um pequena fogueira.  O calor dentro da cabana �
+insuport�vel.  Ao sul voc� observa alguns vikings caminhando num belo campo
+verde.
+~
+126 131080 0 0 0 0
+D2
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12857
+S
+#12865
+Uma Pequena Cabana Viking~
+   Voc� est� dentro de uma pequena cabana viking, feita de rocha vulc�nica e
+feno.  Ao seu redor voc� observa uma cama de pedra coberta de feno, uma mesa
+feita de madeira bastante envelhecida e duas grandes pedras.  Ao sul voc�
+observa alguns vikings caminhando no belo campo verde e observando a estatua
+do poderoso deus Thor.
+~
+126 131080 0 0 0 0
+D2
+Voc� observa a bela estatua do deus Thor no centro do campo verde.
+~
+~
+0 -1 12862
+S
+#12866
+Uma Pequena Cabana Viking~
+   Voc� est� dentro de uma pequena cabana viking, feita de rocha vulc�nica e
+feno.  Ao seu redor voc� observa uma cama de pedra coberta de feno, uma mesa
+feita de madeira bastante envelhecida e duas grandes pedras.  Ao sul voc�
+observa um belo campo verde, situado na vila viking.
+~
+126 131080 0 0 0 0
+D2
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12863
+S
+#12867
+Uma Monumental Calota de Gelo~
+   Voc� est� caminhando sob uma magn�fica e des�rtica calota de gelo nas
+bel�ssimas terras da Isl�ndia.  Ao seu redor voc� observa uma imensa calota
+de gelo e ao olhar para o solo coberto de gelo e neve voc� percebe algumas
+pegadas semelhantes a de seres humanos.  Ao oeste voc� observa um belo campo
+verde e ao leste voc� observa o majestoso rio Blanda.
+~
+126 64 0 0 0 2
+D1
+Voc� observa as g�lidas �guas do rio Blanda.
+~
+~
+0 -1 12869
+D3
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12857
+S
+#12868
+As �guas G�lidas do Rio Blanda~
+   Voc� est� navegando nas frias �guas do rio Blanda.  Ao seu redor al�m das
+�guas congelantes do rio Blanda e dos arrepiantes ventos, voc� observa uma
+imensa calota de gelo que margeia todo o rio.  Ao nordeste voc� observa as
+�guas do rio Blanda.
+~
+126 131140 0 0 0 7
+D7
+Voc� observa o rio Blanda.
+~
+~
+0 -1 12869
+S
+#12869
+As �guas G�lidas do Rio Blanda~
+   Voc� est� navegando nas frias �guas do rio Blanda.  Ao seu redor al�m das
+�guas congelantes do rio Blanda e dos arrepiantes ventos, voc� observa uma
+imensa calota de gelo que margeia todo o rio.  Ao norte e ao sudoeste voc�
+observa as �guas do rio Blanda e ao sudeste e oeste voc� observa uma bela
+calota de gelo.
+~
+126 131140 0 0 0 7
+D0
+Voc� observa o rio Blanda.
+~
+~
+0 -1 12870
+D3
+Voc� observa uma imensa calota de gelo.
+~
+~
+0 -1 12867
+D8
+Voc� observa uma imensa calota de gelo.
+~
+~
+0 -1 12895
+D9
+Voc� observa o rio Blanda.
+~
+~
+0 -1 12868
+S
+#12870
+As �guas G�lidas do Rio Blanda~
+   Voc� est� navegando nas frias �guas do rio Blanda.  Ao seu redor al�m das
+�guas congelantes do rio Blanda e dos arrepiantes ventos, voc� observa uma
+imensa calota de gelo que margeia todo o rio.  Ao sul e ao noroeste voc�
+observa as �guas do rio Blanda.
+~
+126 131140 0 0 0 7
+D2
+Voc� observa o rio Blanda.
+~
+~
+0 -1 12869
+D6
+Voc� observa o rio Blanda.
+~
+~
+0 -1 12871
+S
+#12871
+As �guas G�lidas do Rio Blanda~
+   Voc� est� navegando nas frias �guas do rio Blanda.  Ao seu redor al�m das
+�guas congelantes do rio Blanda e dos arrepiantes ventos, voc� observa uma
+imensa calota de gelo que margeia todo o rio.  Ao sudeste e ao nordeste voc�
+observa as �guas do rio Blanda.
+~
+126 131140 0 0 0 7
+D7
+Voc� observa o rio Blanda.
+~
+~
+0 -1 12872
+D8
+Voc� observa o rio Blanda.
+~
+~
+0 -1 12870
+S
+#12872
+As �guas G�lidas do Rio Blanda~
+   Voc� est� navegando nas frias �guas do rio Blanda.  Ao seu redor al�m das
+�guas congelantes do rio Blanda e dos arrepiantes ventos, voc� observa uma
+imensa calota de gelo que margeia todo o rio.  Ao sudoeste voc� observa as
+�guas do rio Blanda e ao norte voc� observa o mar da Groenl�ndia.
+~
+126 131140 0 0 0 7
+D0
+Voc� observa o congelante mar da Groenl�ndia.
+~
+~
+0 -1 12873
+D9
+Voc� observa o rio Blanda.
+~
+~
+0 -1 12871
+S
+#12873
+O Mar da Groenl�ndia~
+   Voc� est� navegando pelas congelantes e des�rticas �guas do mar da
+Groenl�ndia.  O mar da Groenl�ndia s� n�o � temido pelos habilidosos
+navegadores vikings.  Ao seu redor voc� observa as �guas silenciosas e
+frias do mar da Groenl�ndia.  Os ventos fortes e congelantes lhe causam
+arrepios e dificultam a sua respira��o.  Ao sul voc� observa o delta do rio
+Blanda e ao leste voc� observa a imensid�o do mar da Groenl�ndia.
+~
+126 131140 0 0 0 7
+D1
+Voc� observa as �guas congelantes do mar da Groenl�ndia.
+~
+~
+0 -1 12874
+D2
+Voc� observa o delta do rio Blanda.
+~
+~
+0 -1 12872
+S
+#12874
+O Mar da Groenl�ndia~
+   Voc� est� navegando pelas congelantes �guas do temido mar da Groenl�ndia.
+Ao seu redor voc� observa a imensid�o deste silencioso mar.  Os ventos frios
+fazem as velas da sua embarca��o tremularem fortemente.  Ao sudeste e ao
+oeste voc� observa as �guas do mar da Groenl�ndia.
+~
+126 131136 0 0 0 7
+D3
+Voc� observa as �guas congelantes do mar da Groenl�ndia.
+~
+~
+0 -1 12873
+D8
+Voc� observa as �guas congelantes do mar da Groenl�ndia.
+~
+~
+0 -1 12875
+S
+#12875
+O Mar da Groenl�ndia~
+   Voc� est� navegando pelas g�lidas �guas do temido mar da Groenl�ndia.  Ao
+seu redor voc� observa al�m das silenciosas e calmas �guas do mar da
+Groenl�ndia, os bel�ssimos fiordes existentes em toda a ilha da Isl�ndia.
+Ao leste e ao noroeste voc� observa as congelantes �guas do mar da
+Groenl�ndia.
+~
+126 131136 0 0 0 7
+D1
+Voc� observa as �guas congelantes do mar da Groenl�ndia.
+~
+~
+0 -1 12876
+D6
+Voc� observa as �guas congelantes do mar da Groenl�ndia.
+~
+~
+0 -1 12874
+S
+#12876
+O Mar da Groenl�ndia~
+   Voc� est� navegando pelas congelantes �guas do temido mar da Groenl�ndia.
+Ao seu redor voc� observa a imensid�o deste silencioso mar.  Os ventos frios
+fazem as velas da sua embarca��o tremularem fortemente.  Ao sudeste e ao
+oeste voc� observa as �guas do mar da Groenl�ndia.
+~
+126 131136 0 0 0 7
+D3
+Voc� observa as �guas congelantes do mar da Groenl�ndia.
+~
+~
+0 -1 12875
+D8
+Voc� observa as �guas congelantes do mar da Groenl�ndia.
+~
+~
+0 -1 12877
+S
+#12877
+O Mar da Groenl�ndia~
+   Voc� est� navegando pelas g�lidas �guas do temido mar da Groenl�ndia.  Ao
+seu redor voc� observa al�m das silenciosas e calmas �guas do mar da
+Groenl�ndia, os bel�ssimos fiordes existentes em toda a ilha da Isl�ndia.
+Ao sudeste e ao noroeste voc� observa as congelantes �guas do mar da
+Groenl�ndia.
+~
+126 131136 0 0 0 7
+D6
+Voc� observa as �guas congelantes do mar da Groenl�ndia.
+~
+~
+0 -1 12876
+D8
+Voc� observa as �guas congelantes do mar da Groenl�ndia.
+~
+~
+0 -1 12878
+S
+#12878
+O Mar da Groenl�ndia~
+   Voc� est� navegando pelas congelantes e des�rticas �guas do mar da
+Groenl�ndia.  O mar da Groenl�ndia s� n�o � temido pelos habilidosos
+navegadores vikings.  Ao seu redor voc� observa as �guas silenciosas e
+frias do mar da Groenl�ndia.  Os ventos fortes e congelantes lhe causam
+arrepios e dificultam a sua respira��o.  Ao noroeste e ao sudeste voc�
+observa a imensid�o do mar da Groenl�ndia e ao leste voc� observa o mar
+Glacial �rtico.
+~
+126 131140 0 0 0 7
+D1
+Voc� observa o mar Glacial �rtico.
+~
+~
+0 -1 12700
+D6
+Voc� observa as �guas congelantes do mar da Groenl�ndia.
+~
+~
+0 -1 12877
+D8
+Voc� observa as �guas congelantes do mar da Groenl�ndia.
+~
+~
+0 -1 12879
+S
+#12879
+O Mar da Groenl�ndia~
+   Voc� est� navegando pelas congelantes �guas do temido mar da Groenl�ndia.
+Ao seu redor voc� observa a imensid�o deste silencioso mar.  Os ventos frios
+fazem as velas da sua embarca��o tremularem fortemente.  Ao noroeste voc�
+observa as �guas do mar da Groenl�ndia e ao sul voc� observa as �guas do
+oceano Atl�ntico Norte.
+~
+126 131136 0 0 0 7
+D2
+Voc� observa as �guas do oceano Atl�ntico Norte.
+~
+~
+0 -1 12880
+D6
+Voc� observa as �guas congelantes do mar da Groenl�ndia.
+~
+~
+0 -1 12878
+S
+#12880
+As �guas do Oceano Atl�ntico Norte~
+   Voc� est� navegando pelas temidas e lend�rias �guas g�lidas do oceano
+Atl�ntico Norte.  Ao seu redor voc� observa apenas a imensid�o do oceano e
+a vela da sua embarca��o tremulando por causa dos ventos frios, que lhe
+causam arrepios.  Ao sudoeste voc� observa as �guas do oceano Atl�ntico
+Norte e ao norte voc� observa as �guas do mar da Groenl�ndia.
+~
+126 131136 0 0 0 7
+D0
+Voc� observa o mar da Groenl�ndia.
+~
+~
+0 -1 12879
+D9
+Voc� observa o oceano Atl�ntico Norte.
+~
+~
+0 -1 12839
+S
+#12881
+Uma Pequena Cabana Viking~
+   Voc� est� dentro de uma pequena cabana viking, feita de rocha vulc�nica e
+feno.  Ao seu redor voc� observa uma cama de pedra coberta de feno, uma mesa
+feita de madeira bastante envelhecida e duas grandes pedras.  Ao norte voc�
+observa alguns vikings caminhando numa bela plan�cie de vegeta��o rasteira.
+~
+126 131080 0 0 0 0
+D0
+Voc� observa uma bela plan�cie verde.
+~
+~
+0 -1 12884
+S
+#12882
+A Cabana do Ferreiro Viking~
+   Voc� est� dentro de uma pequena cabana viking.  Ao seu redor voc� observa
+v�rias ferramentas, armas e um pequena fogueira.  O calor dentro da cabana �
+insuport�vel.  Ao norte voc� observa alguns vikings caminhando numa majestosa
+plan�cie de vegeta��o rasteira.
+~
+126 131080 0 0 0 0
+D0
+Voc� observa uma bela plan�cie verde.
+~
+~
+0 -1 12885
+S
+#12883
+Um Belo Campo Verde~
+   Voc� est� caminhando sob um maravilhoso campo coberto de vegeta��o
+rasteira, onde a neve e o gelo n�o chegaram ainda.  Ao seu redor voc�
+observa uma agitada vila viking e v�rias cabanas de rochas vulc�nicas e
+feno.  Ao norte, nordeste e leste voc� observa o imenso campo de vegeta��o
+rasteira e ao sudoeste voc� observa uma bela calota de gelo.
+~
+126 4 0 0 0 2
+D0
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12887
+D1
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12884
+D7
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12888
+D9
+Voc� observa uma imensa calota de gelo.
+~
+~
+0 -1 12845
+S
+#12884
+Um Belo Campo Verde~
+   Voc� est� caminhando sob um bel�ssimo campo de vegeta��o rasteira nas
+majestosas terras da Isl�ndia.  Ao seu redor voc� observa v�rias cabanas e
+alguns vikings conversando e brigando entre si.  Ao leste e oeste voc�
+observa o belo campo de vegeta��o rasteira, onde a neve e o gelo ainda n�o
+chegaram e ao sul voc� observa uma pequena cabana.
+~
+126 0 0 0 0 2
+D1
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12885
+D2
+Voc� observa uma pequena cabana da vila viking.
+~
+~
+0 -1 12881
+D3
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12883
+S
+#12885
+Um Belo Campo Verde~
+   Voc� est� caminhando sob um bel�ssimo campo de vegeta��o rasteira nas
+majestosas terras da Isl�ndia.  Ao seu redor voc� observa v�rias cabanas e
+alguns vikings conversando e brigando entre si.  Ao oeste voc� observa o
+belo campo de vegeta��o rasteira, onde a neve e o gelo ainda n�o chegaram e
+ao sul voc� observa uma pequena cabana cheia de ferramentas.
+~
+126 0 0 0 0 2
+D2
+Voc� observa a cabana do ferreiro viking.
+~
+~
+0 -1 12882
+D3
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12884
+S
+#12886
+Uma Pequena Cabana Viking~
+   Voc� est� dentro de uma pequena cabana viking, feita de rocha vulc�nica e
+feno.  Ao seu redor voc� observa uma cama de pedra coberta de feno, uma mesa
+feita de madeira bastante envelhecida e duas grandes pedras.  Ao leste voc�
+observa alguns vikings caminhando numa bela plan�cie de vegeta��o rasteira.
+~
+126 131080 0 0 0 0
+D1
+Voc� observa uma bela plan�cie verde.
+~
+~
+0 -1 12887
+S
+#12887
+Um Belo Campo Verde~
+   Voc� est� caminhando sob uma bela plan�cie de vegeta��o rasteira nas
+magn�ficas terras da Isl�ndia.  Ao seu redor voc� observa a vila viking com
+suas cabanas feitas de rochas vulc�nicas e feno, e seus habitantes
+competindo entre si em jogos brutais.  Ao norte e ao sul voc� observa um
+belo campo de vegeta��o rasteira e ao oeste voc� observa uma pequena cabana.
+~
+126 0 0 0 0 2
+D0
+Voc� observa um campo verde.
+~
+~
+0 -1 12892
+D2
+Voc� observa um campo verde.
+~
+~
+0 -1 12883
+D3
+Voc� observa uma pequena cabana.
+~
+~
+0 -1 12886
+S
+#12888
+A Monumental Estatua do Senhor dos Trov�es~
+   Voc� est� caminhando sob um belo campo verde numa agitada vila viking.
+Ao seu redor voc� observa v�rias cabanas feitas de rochas vulc�nicas e feno,
+alguns vikings conversando e cavalgando sob o majestoso campo verde.  No
+centro da vila voc� observa uma monumental estatua do deus Thor, o senhor dos
+trov�es e filho de Odin, o senhor de Asgard.  Ao norte, leste e ao sudoeste
+voc� observa o belo campo de vegeta��o verde, onde a neve e o gelo ainda n�o
+conquistaram e ao nordeste voc� observa uma longa cabana viking.
+~
+126 0 0 0 0 2
+D0
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12893
+D1
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12889
+D7
+Voc� observa uma longa cabana viking.
+~
+~
+0 -1 12894
+D9
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12883
+S
+#12889
+Um Belo Campo Verde~
+   Voc� est� caminhando sob um belo campo verde na movimentada vila viking.
+Ao seu redor v�rias cabanas feitas de rochas vulc�nicas e feno, alguns
+vikings brigando e algumas crian�as vikings brincando.  Ao leste voc�
+observa uma grande cabana viking e ao oeste voc� observa um belo campo de
+vegeta��o rasteira, onde a neve e o gelo ainda n�o chegaram.
+~
+126 0 0 0 0 2
+D1
+Voc� observa o armaz�m da vila viking.
+~
+~
+0 -1 12890
+D3
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12888
+S
+#12890
+O Armaz�m da Vila Viking~
+   Voc� est� dentro de uma grande cabana feita de rochas vulc�nicas e feno.
+Ao seu redor pilhas de suprimentos est�o guardados aqui, aguardando o mais
+tenebroso inverno.  Ao oeste voc� observa alguns vikings conversando num
+belo campo verde.
+~
+126 131080 0 0 0 0
+D3
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12889
+S
+#12891
+Uma Pequena Cabana Viking~
+   Voc� est� dentro de uma pequena cabana viking, feita de rocha vulc�nica e
+feno.  Ao seu redor voc� observa uma cama de pedra coberta de feno, uma mesa
+feita de madeira bastante envelhecida e duas grandes pedras.  Ao leste voc�
+observa alguns vikings caminhando numa bela plan�cie de vegeta��o rasteira.
+~
+126 131080 0 0 0 0
+D1
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12892
+S
+#12892
+Um Belo Campo Verde~
+   Voc� est� caminhando sob a vegeta��o rasteira de uma majestosa plan�cie
+das terras da Isl�ndia.  Ao seu redor voc� observa a vila viking e sua
+agita��o, suas cabanas e seus habitantes.  Ao norte voc� observa uma imensa
+calota de gelo, ao oeste voc� observa uma pequena cabana viking e ao sul
+voc� observa um belo campo de vegeta��o rasteira, onde a neve e o gelo ainda
+n�o conquistaram.
+~
+126 0 0 0 0 2
+D0
+Voc� observa uma monumental calota de gelo.
+~
+~
+0 -1 12895
+D2
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12887
+D3
+Voc� observa uma pequena cabana.
+~
+~
+0 -1 12891
+S
+#12893
+Um Belo Campo Verde~
+   Voc� est� caminhando sob um bel�ssimo campo de vegeta��o rasteira nas
+majestosas terras da Isl�ndia.  Ao seu redor voc� observa v�rias cabanas e
+alguns vikings conversando e brigando entre si.  Ao sul voc� observa um belo
+campo de vegeta��o rasteira, onde a neve e o gelo ainda n�o chegaram e ao
+norte voc� observa uma pequena cabana viking.
+~
+126 0 0 0 0 2
+D0
+Voc� observa uma pequena cabana.
+~
+~
+0 -1 12896
+D2
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12888
+S
+#12894
+A Longa Cabana Viking~
+   Voc� est� dentro de uma longa cabana viking feita de rochas vulc�nicas e
+feno.  Ao seu redor voc� observa uma enorme mesa de pedra e algumas cadeiras
+de madeira, numa das extremidades da mesa, voc� observa um majestoso trono
+de pedra.  Nas paredes voc� observa algumas runas e pinturas que contam as
+viagens dos vikings noruegueses e suecos das suas terras at� aqui.  No canto
+sudeste da cabana voc� observa uma escadaria, que para cima leva para o
+sal�o da alta c�pula do parlamento de Althing.  Ao sudoeste voc� observa um
+campo verde, onde a neve e o gelo ainda n�o conquistaram.
+~
+126 8 0 0 0 0
+D4
+Voc� observa uma escadaria.
+~
+~
+0 -1 12897
+D9
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12888
+S
+#12895
+Uma Monumental Calota de Gelo~
+   Voc� est� caminhando com muita dificuldade sob o gelo e a neve que cai
+constantemente.  Ao seu redor voc� observa uma paisagem des�rtica, por�m
+monumental, uma grande calota branca de gelo.  Ao sul voc� observa um belo
+campo verde, onde a neve e o gelo ainda n�o chegaram, ao noroeste voc�
+observa as �guas congelantes do rio Blanda e ao nordeste voc� observa
+grandes erup��es de �gua fervente, que surgem dos g�iseres.
+~
+126 64 0 0 0 2
+D2
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12892
+D6
+Voc� observa o rio Blanda.
+~
+~
+0 -1 12869
+D7
+Voc� observa magn�ficos g�iseres.
+~
+~
+0 -1 12898
+S
+#12896
+Uma Pequena Cabana Viking~
+   Voc� est� dentro de uma pequena cabana viking, feita de rocha vulc�nica e
+feno.  Ao seu redor voc� observa uma cama de pedra coberta de feno, uma mesa
+feita de madeira bastante envelhecida e duas grandes pedras.  Ao sul voc�
+observa alguns vikings caminhando numa bela plan�cie de vegeta��o rasteira.
+~
+126 131080 0 0 0 0
+D2
+Voc� observa um belo campo verde.
+~
+~
+0 -1 12893
+S
+#12897
+O Parlamento de Althing~
+   Voc� est� dentro do mais antigo parlamento das gloriosas terras de
+Vit�lia.  O parlamento de Althing foi criado a partir da uni�o dos v�rios
+cl�s vikings, que colonizaram a terra do gelo, a Isl�ndia.  Dessa uni�o
+surgiu o poder m�ximo e as leis que regem todos os vikings da ilha.  Ao seu
+redor voc� observa uma enorme mesa de pedra e v�rias cadeiras de madeira.
+Nas paredes voc� observa as pinturas de algumas runas e algumas tochas de
+fogo.  No canto sudeste do sal�o voc� observa uma escadaria que segue para
+baixo na dire��o do grande sal�o social viking.
+~
+126 131084 0 0 0 0
+D5
+Voc� observa uma escadaria.
+~
+~
+0 -1 12894
+S
+#12898
+Os G�iseres da Isl�ndia~
+   Voc� est� caminhando com bastante aten��o entre as monumentais fontes de
+�guas ferventes, os g�iseres.  Ao seu redor o vapor que surge das erup��es
+dos g�iseres toma conta de todo o local.  As fontes de �guas ferventes s�o
+elementos vitais para a sobreviv�ncia dos vikings nesta ilha, onde o gelo e
+a neve reinam como supremos.  Pois s�o dessas fontes que � retirada a �gua
+para o abastecimento das vilas vikings.  Ao sudoeste voc� observa uma imensa
+calota de gelo e ao leste voc� observa um lago de �guas estranhas.
+~
+126 64 0 0 0 2
+D1
+Voc� observa um lago de �guas amarelas.
+~
+~
+0 -1 12899
+D9
+Voc� observa uma imensa calota de gelo.
+~
+~
+0 -1 12895
+S
+#12899
+Um Lago de Enxofre~
+   Voc� est� nadando nas fedorentas e estranhas �guas amarelas de um
+tenebroso lago de enxofre.  Ao seu redor voc� observa nas margens do lago
+alguns g�iseres e muito vapor.  A sensa��o dentro deste lago � insuport�vel.
+Voc� respira com bastante dificuldade, inalando todos os gases mal�ficos,
+que est�o neste espa�o.  Ao oeste voc� observa algumas erup��es de g�iseres.
+~
+126 65604 0 0 0 6
+D3
+Voc� observa v�rios g�iseres.
+~
+~
+0 -1 12898
+S
+$~

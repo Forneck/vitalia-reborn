@@ -1,0 +1,187 @@
+#100
+asas~
+um par de asas~
+Um par de asas está aqui.~
+~
+24 0 0 0 0 ap 0 0 0 0 0 0 0
+0 0 0 0
+3 0 0 0 0
+#101
+caneta~
+uma caneta~
+Uma caneta foi deixada aqui.~
+~
+21 e 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 10 0 101 0
+#102
+cisne pena pluma branca~
+uma pena de pluma de cisne~
+Uma pequena pluma branca flutua pelo ar.~
+~
+21 e 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 30 0 101 0
+#103
+papel~
+um papel~
+Um papel foi deixado aqui.~
+~
+16 eq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#104
+anotação~
+uma anotação~
+Uma anotação foi deixada aqui.~
+~
+16 eq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#105
+mensagem~
+uma mensagem~
+Há uma mensagem aqui.~
+~
+16 eq 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+#106
+papiro papel~
+um papiro~
+Um rolo de papiro está jogado no chão.~
+~
+16 eq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 15 0 0 0
+#107
+placa~
+uma placa~
+Há uma placa aqui. Talvez você deva lê-la!~
+~
+16 eq 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 30 0 0 0
+#108
+importante mensagem~
+uma MENSAGEM IMPORTANTE~
+                   *** Há uma MENSAGEM IMPORTANTE aqui. ***
+                   *********** Você deve lê-la! ***********~
+~
+16 eq 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+20 0 0 0 0
+#109
+importante placa~
+uma PLACA IMPORTANTE~
+                    *** Há uma PLACA IMPORTANTE aqui. ***
+                    ********* Você deve lê-la! **********~
+~
+16 eq 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+20 0 0 0 0
+#110
+papel carta vermelha~
+uma carta vermelha~
+Uma carta vermelha foi deixada aqui.~
+~
+16 eq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#111
+papel carta laranja~
+uma carta laranja~
+Uma carta laranja foi deixada aqui.~
+~
+16 eq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#112
+papel carta amarela~
+uma carta amarela~
+Uma carta amarela foi deixada aqui.~
+~
+16 eq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#113
+papel carta verde~
+uma carta verde~
+Uma carta verde foi deixada aqui.~
+~
+16 eq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#114
+papel carta anil~
+uma carta anil~
+Uma carta anil foi deixada aqui.~
+~
+16 eq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#115
+papel carta azul~
+uma carta azul~
+Uma carta azul foi deixada aqui.~
+~
+16 eq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#116
+papel carta violeta~
+uma carta violeta~
+Uma carta violeta foi deixada aqui.~
+~
+16 eq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#117
+papel carta marrom~
+uma carta marrom~
+Uma carta marrom foi deixada aqui.~
+~
+16 eq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#118
+papel carta cinza~
+uma carta cinza~
+Uma carta cinza foi deixada aqui.~
+~
+16 eq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#119
+papel carta escura~
+uma carta escura~
+Uma carta escura foi deixada aqui.~
+~
+16 eq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#120
+papel carta clara~
+uma carta clara~
+Uma carta clara foi deixada aqui.~
+~
+16 eq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#121
+papel carta brilhante~
+uma carta brilhante~
+Uma carta brilhante foi deixada aqui.~
+~
+16 eq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#190
+dinamite~
+uma dinamite~
+Há uma dinamite aqui.~
+$p explode, e $n se machuca!~
+14 0 0 0 0 a 0 0 0 0 0 0 0
+0 24 -1 -1
+2 0 0 0 0
+$~

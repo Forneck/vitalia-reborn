@@ -1,0 +1,294 @@
+#3300
+fazendeiro~
+o fazendeiro~
+Um fazendeiro anda ao redor, buscando algo para fazer.
+~
+Este fazendeiro é um cidadão de Stanneg das Montanhas, e como tal, é uma das
+pessoas mais chatas do mundo.
+~
+2097348 0 0 0 0 0 0 0 500 E
+7 14 4 3d5+83 2d4+1
+1000 2250
+8 8 1
+E
+#3301
+comerciante~
+o comerciante~
+Um monótono comerciante aguarda você fazer alguma coisa.
+~
+O monótono comerciante mantém um preguiçoso olho em você enquanto ele espera
+que você compre alguma coisa.
+~
+2154498 0 0 0 0 0 0 0 750 E
+108 1 -40 3d5+245 3d6+6
+10000 40000
+8 8 1
+E
+#3302
+amazona~
+a amazona~
+Uma amazona se encontra aqui, pronta para defender seus cavalos...
+~
+Esta mulher parece preparada para qualquer coisa que você possa fazer...
+Ela é realmente uma mulher que deve ser tratada com respeito...
+~
+2103298 0 0 0 1572880 0 0 0 750 E
+20 1 -6 3d5+245 3d6+4
+8000 40000
+8 8 2
+E
+#3303
+cavalo~
+o cavalo~
+Um cavalo pasta por aqui.
+~
+Este cavalo parece estar em bom estado.  Ele olha para você com seus
+delicados olhos marrons e você sente-se com vontade de lhe dar uma cenoura.
+~
+2097154 0 0 0 0 0 0 0 250 E
+5 16 5 1d10+60 2d4+0
+0 1000
+8 8 1
+BareHandAttack: 4
+E
+#3304
+mulher do fazendeiro~
+a mulher do fazendeiro~
+Uma mulher de fazendeiro oferece a você alguns vegetais.
+~
+Esta mulher tem os mais diferentes tipos de frutas e vegetais para você
+comprar.  Ela parece aborrecida, porém.
+~
+2154498 0 0 0 0 0 0 0 500 E
+108 1 -40 3d5+245 3d6+6
+10000 40000
+8 8 2
+E
+#3305
+dragao aglandiir~
+Aglandiir~
+O Príncipe dos Dragões, Aglandiir, está sentado aqui olhando curiosamente
+para você.
+~
+Aglandiir é um príncipe para a espécie dele e ele não chegou até este título
+deixando as pessoas roubarem dos seus protegidos e iguais!
+~
+2353202 0 0 0 264464 0 0 0 750 E
+105 -93 -70 100d10+20800 12d12+80
+300000 1000000
+8 8 1
+BareHandAttack: 8
+Str: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 16
+E
+#3306
+cíclope~
+o cíclope~
+Um cíclope está aqui, tentando calcular distância sem a menor
+percepção de profundidade.
+~
+Este Cíclope atira pedras realmente bem.  Com um olho, porém, acertar o alvo
+é outra coisa.  Ele olha para você e rosna ao errar você de novo!
+~
+2172966 0 0 0 0 0 0 0 -500 E
+16 8 0 3d5+295 2d8+2
+10000 24000
+8 8 1
+BareHandAttack: 13
+E
+#3307
+salle woman~
+Salle~
+Uma mulher ignora você completamente de tanta atenção que ela
+está dispendendo para a espada dela.
+~
+Ela é um mulher e tanto, toda em cabelo e olhos, ao que parece.  Sua roupa é
+da mesma cor castanho-amarelado que sua pele e cabelo.  Os olhos azuis dela
+olham para você com surpresa e parecendo mostrar uma grande inteligência.
+Sua boca contrai-se zombando de você...
+~
+2191362 0 0 0 0 0 0 0 -600 E
+15 6 -3 3d5+200 2d6+6
+6500 24000
+8 8 2
+E
+#3308
+homem duwick~
+Duwick~
+Um homem realmente imenso ri de você e empunha sua espada!
+~
+Este deve ser o maior homem que você já viu.  Ele tem mais de dois metros do
+pé à cabeça, e pesa uns bons 130 kilos -- a maior parte concentrada no seu
+bíceps e peitorais ao que parece.  Uma bainha decorada encontra-se junto à
+sua cintura, com o empunhador de uma adaga prateada aparecendo para fora...
+Um pequena arma para um grande homem!
+~
+2191362 0 0 0 0 0 0 0 -900 E
+22 0 -7 3d5+400 3d6+10
+15000 70000
+8 8 1
+E
+#3309
+recepcionista~
+o Recepcionista~
+Um recepcionista oferece a você um quarto.
+~
+Ele parece como um fazendeiro aposentado ganhando a vida honestamente
+trabalhando na hospedaria.  Mais poder para ele!
+~
+2097154 0 0 0 0 0 0 0 400 E
+12 9 -3 3d5+140 2d7+1
+8000 8000
+8 8 1
+E
+#3310
+dono da hospedaria~
+o dono da hospedaria~
+Um velho dono de hospedaria cumprimenta você quando você entra.
+~
+Ele é velho e grisalho, mas parece ter sido capaz de manter suas faculdades
+mentais através dos anos.  Um grande suéter de lã agasalha ele aquecendo-o.
+Seus olhos azuis dançam sobre você com diversão ao notar suas armas, mas ele
+não aparenta estar tão aterrorizado com isso.
+~
+2097154 0 0 0 0 0 0 0 750 E
+10 11 2 3d5+120 2d6+1
+2000 9000
+8 8 1
+E
+#3311
+caçador~
+o caçador~
+Um caçador anda pelas ruas da cidade em seu próprio tempo.
+~
+Ele parece mal cuidado, como se a forte personalidade das montanhas tivesse
+infectado ele com sua resistência.  Seu andar é decidido, sua face é
+desgastada, seus olhos frios e escuros.  Os outros saem do seu caminho
+quando ele passa.
+~
+2101316 0 0 0 0 0 0 0 500 E
+11 10 -2 3d5+133 2d6+2
+1200 11000
+8 8 1
+E
+#3312
+garçom~
+um garçom~
+Um garçom apressa-se, preocupado com seu trabalho.
+~
+Ele parece apoquentado com a maneira com que ele rapidamente pega os pedidos
+e corre para os fundos para pegar a comida e para o bar conseguir as
+bebidas.  Ele não parece lhe dirigir uma olhadela no momento em que ele
+passa por você.
+~
+2097154 0 0 0 0 0 0 0 0 E
+5 16 7 3d5+60 2d4+0
+500 850
+8 8 1
+E
+#3313
+garçonete~
+uma garçonete~
+Uma garçonete apressa-se, preocupada com seu trabalho.
+~
+Ela parece apoquentada com a maneira com que ela rapidamente pega os pedidos
+e corre para os fundos para pegar a comida e para o bar conseguir as
+bebidas.  Ela não parece lhe dirigir uma olhadela no momento em que ela
+passa por você.
+~
+2097154 0 0 0 0 0 0 0 0 E
+5 16 7 3d5+60 2d4+0
+500 850
+8 8 2
+E
+#3314
+homem do bar~
+o homem do bar~
+O homem do bar lava um copo preguiçosamente aqui.
+~
+Ele inclina a cabeça, sorri e pergunta a você o que você gostaria de beber.
+Enquanto você decide, ele lentamente seca um copo com um pano velho de bar.
+O copo está completamente limpo mas ele continua a limpá-lo.  Que figura!
+~
+2154498 0 0 0 0 0 0 0 200 E
+108 6 -10 3d5+180 2d8+2
+10000 21000
+8 8 1
+E
+#3315
+bandido~
+o bandido~
+Um bandido move-se subitamente ao avistar você.
+~
+Eca!  Será que esse cara já viu algum banho?  Sua face, mãos, armas...
+Quase todas as partes dele estão cobertas com imundície, poeira, sujeira e
+dentes cariados.  Porém, sua espada é polida e limpa...
+~
+2098852 0 0 0 0 0 0 0 -500 E
+16 5 -2 3d5+195 2d8+3
+1000 25000
+8 8 1
+E
+#3316
+bandido sentinela~
+o bandido sentinela~
+Um bandido sentinela encontra-se aqui atento.
+~
+Ele pode ser um bandido, mas ele não é nenhum vagabundo.  Você pensa quem
+poderia ser capaz de manter esse bandidos na linha para manter uma bom
+serviço de guarda...
+
+(cara, este louco FEDE!!!)
+~
+2098722 0 0 0 0 0 0 0 -500 E
+18 3 -3 3d5+220 3d6+2
+2400 32000
+8 8 1
+E
+#3317
+mineiro escravo~
+o escravo~
+Um escravo está aqui escavando uma nova passagem.
+~
+O escravo olha para você com olhos suplicantes.  Ele quer sua liberdade.  As
+correntes ao redor do seu tornozelo são justas e você pergunta a si mesmo se
+você deveria, ou melhor, se você pode dar-lhe a liberdade.
+~
+2097282 0 0 0 0 0 0 0 1000 E
+6 15 10 3d5+70 1d8+1
+0 1500
+8 8 1
+E
+#3318
+fazendeiro~
+o fazendeiro~
+Um fazendeiro anda ao redor, buscando algo para fazer.
+~
+Este fazendeiro é um cidadão de Stanneg das Montanhas, e como tal, é uma das
+pessoas mais chatas do mundo.
+~
+2097350 0 0 0 0 0 0 0 500 E
+7 14 4 3d5+83 2d4+1
+1000 2250
+8 8 1
+E
+#3319
+caçador~
+o caçador~
+Um caçador anda pelas ruas da cidade em seu próprio tempo.
+~
+Ele parece mal cuidado, como se a forte personalidade das montanhas tivesse
+infectado ele com sua resistência.  Seu andar é decidido, sua face é
+desgastada, seus olhos frios e escuros.  Os outros saem do seu caminho
+quando ele passa.
+~
+2101318 0 0 0 0 0 0 0 500 E
+11 10 -2 3d5+133 2d6+2
+1200 11000
+8 8 1
+E
+$

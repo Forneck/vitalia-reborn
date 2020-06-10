@@ -1,0 +1,556 @@
+#13100
+espada antiga enferrujada~
+uma antiga espada enferrujada~
+Uma antiga espada enferrujada está na poeira.~
+~
+5 mnt 0 0 0 an 0 0 0 0 0 0 0
+0 4 3 3
+5 10 0 3 0
+A
+19 1
+A
+13 15
+#13101
+chave dentes pequena marrom~
+uma pequena chave marrom~
+Uma pequena chave marrom que parece ter os dentes gastos está aqui.~
+~
+18 c 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 10 0 0 0
+E
+chave pequena marrom~
+Você vê uma pequena chave marrom que está aparentemente gasta.
+~
+#13102
+chave prateada brilhante~
+uma chave prateada~
+Uma chave prateada brilhante encontra-se no chão.~
+~
+18 c 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 10 0 0 0
+E
+chave prateada brilhante~
+Esta chave está em ótimo estado.  Esta pequena chave prateada parece 
+necessitar de um amigo...?  Que chave estranha. Porque você não fica com 
+ela? 
+~
+#13103
+chave antiga velha~
+uma chave antiga~
+Uma antiga chave está no chão.~
+~
+18 c 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 10 0 0 0
+E
+chave antiga~
+Esta chave esta tão velha que você consegue sentir sua idade somente a
+segurando.
+~
+#13104
+chave nublada deuses peça estranha~
+uma chave nublada feita pelos deuses~
+Uma estranha peça nublada com a forma de uma chave está aqui.~
+~
+18 c 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 10 0 0 0
+E
+chave nublada deuses~
+Esta chave foi definitivamente feita por um deus e você acha que não
+deveria estar vendo isto.
+~
+#13105
+dentes bohemoth brancos afiados~
+o dente de Bohemoth~
+Alguns dentes brancos e afiados estão no solo aqui.~
+~
+11 n 0 0 0 aq 0 0 0 0 0 0 0
+0 0 0 0
+4 10 0 80 0
+E
+dentes bohemoth~
+Estes dentes brancos são fortes e afiados. Eles possuem alguns furos,
+talvez por causa do esforço de arrancá-los.
+~
+A
+19 2
+A
+17 -4
+#13106
+cidadão roupão liso~
+o roupão de um cidadão~
+Um roupão liso está aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+4 0 0 0
+3 10 0 0 0
+#13107
+lâmina torin símbolo empoeirada~
+uma lâmina que carrega o símbolo de Torin~
+Uma lâmina empoeirada com o que parece ser o símbolo de Torin encontra-se
+aqui.~
+~
+5 mnt 0 0 0 an 0 0 0 0 0 0 0
+0 5 3 14
+4 10 0 10 0
+A
+18 2
+A
+19 1
+#13108
+escudo torin símbolo empoeirado redondo grande~
+um escudo que possui o símbolo de Torin~
+Um grande escudo redondo e empoeirado está aqui;~
+~
+9 m 0 0 0 aj 0 0 0 0 0 0 0
+8 0 0 0
+5 10 0 55 0
+E
+escudo torin símbolo empoeirado redondo grande~
+No centro deste escudo existe um símbolo de Torin.
+~
+A
+19 1
+A
+13 10
+A
+17 -2
+#13109
+espada incandescente larga mendo~
+a espada larga incandescente de Mendo~
+Uma espada larga incandescente está no chão repelindo a poeira.~
+~
+5 ao 0 0 0 an 0 0 0 0 0 0 0
+0 5 4 3
+6 10 0 95 0
+E
+espada incandescente larga mendo~
+Há uma palavra rabiscada na lâmina: 'MENDO'.
+~
+A
+19 3
+A
+18 3
+A
+2 -2
+#13110
+armadura brilhante placas~
+um armadura de placas brilhantes~
+Uma armadura de placas brilhantes está no chão repelindo a poeira.~
+~
+9 amnt 0 0 0 ad 0 0 0 0 0 0 0
+10 0 0 0
+8 10 0 65 0
+A
+19 1
+#13111
+capacete brilhante~
+um capacete brilhante~
+Um capacete brilhante está aqui repelindo a poeira.~
+~
+9 a 0 0 0 ae 0 0 0 0 0 0 0
+8 0 0 0
+6 10 0 60 0
+A
+12 -10
+A
+14 -10
+A
+19 1
+#13112
+sandália gasta~
+uma sandália gasta~
+Uma sandália bastante gasta encontra-se aqui no chão.~
+~
+11 0 0 0 0 ag 0 0 0 0 0 0 0
+0 0 0 0
+3 10 0 0 0
+#13113
+pedaço sombra~
+um pedaço da sombra~
+Um estranho pedaço de sombra está no chão, podendo ser apanhado.~
+~
+11 b 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+2 10 0 50 0
+A
+2 1
+A
+17 -8
+#13114
+manopla brilhante~
+uma manopla brilhante~
+Uma manopla brilhante está no chão repelindo a poeira.~
+~
+9 amnt 0 0 0 ah 0 0 0 0 0 0 0
+7 0 0 0
+6 10 0 70 0
+A
+1 -1
+A
+19 1
+#13115
+espada longa trabalhada~
+uma espada longa bem trabalhada~
+Uma espada longa bem trabalhada está aqui no chão.~
+~
+5 gmnt 0 0 0 an 0 0 0 0 0 0 0
+0 5 3 3
+5 10 0 35 0
+A
+19 2
+A
+18 2
+#13116
+escudo símbolo luz grande~
+um escudo com o Símbolo da Luz~
+Um grande escudo está no chão.~
+~
+9 ak 0 0 0 aj 0 0 0 0 0 0 0
+9 0 0 0
+8 10 0 25 0
+E
+escudo símbolo luz grande~
+Isto possui um símbolo da Luz.
+~
+A
+20 -2
+A
+21 -2
+A
+22 -2
+A
+23 -2
+A
+24 -2
+#13117
+escudo brilhante~
+um escudo brilhante~
+Um escudo brilhante está no chão repelindo a poeira.~
+~
+9 a 0 0 0 aj 0 0 0 0 0 0 0
+6 0 0 0
+6 10 0 20 0
+A
+19 1
+#13118
+escudo enferrujado torinense~
+um escudo enferrujado~
+Um escudo enferrujado, que parece ser Torinense, está no chão.~
+~
+9 mnt 0 0 0 aj 0 0 0 0 0 0 0
+6 0 0 0
+6 10 0 30 0
+A
+19 -1
+#13119
+escudo símbolo torin fantasmagórico~
+um escudo fantasmagórico com o Símbolo de Torin~
+Um escudo fantasmagórico está no chão.~
+~
+9 f 0 0 0 aj 0 0 0 0 0 0 0
+7 0 0 0
+5 10 0 40 0
+E
+escudo símbolo torin fantasmagórico~
+Isto possui o Símbolo de Torin.
+~
+A
+23 -5
+A
+19 2
+A
+1 -1
+#13120
+bastão mágico brilhante poder~
+um bastão mágico~
+Um bastão brilhante de imenso poder está no chão.~
+~
+4 bnoptu 0 0 0 ao 0 0 0 0 0 0 0
+30 4 2 1
+5 10 0 0 0
+E
+bastão mágico~
+Este poderoso bastão parece que está aqui há muito tempo, esperando por 
+alguém para encontrá-lo. Talvez você devesse contar esta proeza e levar 
+consigo este milagre...
+~
+A
+12 10
+A
+13 25
+#13121
+clava fé poder~
+uma clava da fé~
+Uma clava que representa o poder e a fé encontra-se aqui no chão.~
+~
+5 gopr 0 0 0 an 0 0 0 0 0 0 0
+0 7 3 10
+6 10 0 85 0
+E
+clava fé~
+Esta clava está coberta de antigas runas, sendo possível sentir uma forte
+aura vindo dela.
+~
+A
+12 15
+A
+19 3
+#13122
+espada lorgeth monstruosa~
+a espada de Lorgeth~
+Uma monstruosa espada está aqui.~
+~
+5 gmnt 0 0 0 an 0 0 0 0 0 0 0
+0 6 4 3
+9 10 0 95 0
+E
+espada lorgeth monstruosa~
+Isto possui o nome Lorgeth cuidadosamente gravado no cabo.
+~
+A
+19 3
+A
+18 2
+A
+1 2
+#13123
+camisa camaleão~
+uma camisa de camaleão~
+Uma camisa está aqui, camuflando-se com o ambiente.~
+~
+9 f 0 0 0 ad 0 0 0 0 0 0 0
+3 0 0 0
+3 10 0 3 0
+E
+camisa camaleão~
+Você consegue ver o esboço desta camisa no meio de tanta sujeira. Ela 
+está tão camuflada que você mal consegue vê-la. Conforme se movimenta 
+pelo ambiente ela modifica de cor, ou seja, se adapta ao lugar.
+~
+#13124
+calças camaleão~
+um par de calças de camaleão~
+Um par de calças está realmente cheia de poeira.~
+~
+9 f 0 0 0 af 0 0 0 0 0 0 0
+4 0 0 0
+3 10 0 3 0
+E
+calças camaleão~
+Você consegue ver apenas o esboço de uma calça no meio de tanta poeira.  
+~
+#13125
+luvas camaleão~
+um par de luvas de camaleão ~
+Um par de luvas está aqui coberto de poeira.~
+~
+9 fmnpt 0 0 0 ai 0 0 0 0 0 0 0
+7 0 0 0
+4 10 0 40 0
+E
+luvas camaleão~
+Você consegue ver apenas o esboço de algumas luvas no meio da poeira.  
+~
+A
+5 2
+#13126
+armadura fantasmagórica~
+uma armadura fantasmagórica~
+Você vê uma armadura fantasmagórica aqui no chão.~
+~
+9 fmnt 0 0 0 ad 0 0 0 0 0 0 0
+8 0 0 0
+7 10 0 40 0
+A
+24 -5
+A
+1 2
+A
+6 -1
+#13127
+perneira fantasmagórica~
+uma perneira fantasmagórica~
+Uma perneira fantasmagórica está aqui.~
+~
+9 f 0 0 0 af 0 0 0 0 0 0 0
+6 0 0 0
+5 10 0 5 0
+A
+12 9
+A
+20 -5
+#13128
+braçadeiras fantasmagórica~
+um par de braçadeiras fantasmagórica~
+Um par de braçadeiras fantasmagórica está aqui no chão.~
+~
+9 fmnt 0 0 0 ai 0 0 0 0 0 0 0
+6 0 0 0
+6 10 0 5 0
+A
+22 -5
+A
+1 2
+#13129
+chapa universal fantasmagórica~
+uma chapa universal fantasmagórica~
+Uma fantasmagórica chapa universal está aqui no chão.~
+~
+9 fmnt 0 0 0 aj 0 0 0 0 0 0 0
+3 0 0 0
+3 10 0 5 0
+A
+21 10
+A
+3 2
+#13130
+espada sharel longa adornada~
+a espada longa adornada de Sharel~
+Uma espada adornada esta no meio da poeira aqui.~
+~
+5 mnt 0 0 0 an 0 0 0 0 0 0 0
+0 4 4 3
+5 10 0 5 0
+E
+espada sharel adornada londa~
+Isto possui o nome Sharel gravado.
+~
+A
+19 1
+A
+18 1
+A
+13 20
+#13131
+armadura enferrujada~
+uma armadura enferrujada~
+Uma armadura enferrujada está aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+5 0 0 0
+5 10 0 3 0
+#13132
+osso perna~
+um osso da perna~
+Um osso da perna esta' aqui, mas isto parece estar danificado, provavelmente
+foi quando alguém tentou bater em algo.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 3 2 5
+3 10 0 0 0
+#13133
+osso braço~
+um osso do braço~
+Um osso do braço esta' aqui, mas isto parece estar danificado, provavelmente
+foi quando alguém tentou bater em algo.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 3 5
+3 10 0 0 0
+#13134
+medalhão rei torin antigo~
+o medalhão do Rei de Torin.~
+Um antigo medalhão do Rei de Torin está aqui.~
+~
+11 a 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+2 10 0 6 0
+A
+24 -3
+A
+17 -2
+#13135
+medalhão torin inquisitor chefe~
+um medalhão do Chefe Inquisitor de Torin~
+Um estranho medalhão está no chão.~
+~
+11 b 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+2 10 0 3 0
+E
+medalhão torin inquisitor chefe~
+Ele já foi usado por muito tempo pelo Chefe Inquisitor de Torin.
+~
+A
+24 -3
+#13136
+lâmina sombra sombria~
+uma lâmina sombria~
+Uma lâmina de ar sombrio está aqui.~
+~
+5 gjmnt 0 0 0 an 0 0 0 0 0 0 0
+0 5 4 14
+3 10 0 10 0
+E
+lâmina sombra sombria~
+Não parece ter mais significado do que uma sombra, mas você ainda pode tocar
+nisto, e incrivelmente ainda corta.
+~
+A
+19 2
+A
+10 -50
+#13137
+vara chão rei~
+uma vara do Rei~
+Uma vara está no chão. Isto possui uma presença ao redor lhe dizendo que
+pertenceu ao rei.~
+~
+3 a 0 0 0 an 0 0 0 0 0 0 0
+20 5 5 71
+4 10 0 0 0
+#13138
+manto rei~
+o manto do Rei~
+Um manto está no chão. Uma presença ao redor disto lhe indica que pertence
+ao Rei.~
+~
+9 0 0 0 0 ak 0 0 0 0 0 0 0
+4 0 0 0
+4 10 0 5 0
+A
+24 -2
+A
+20 -2
+#13139
+anel rei~
+o anel do Rei~
+Um anel está no chão. Uma presença ao redor dele indica que este foi o anel
+pessoal do Rei.~
+~
+11 0 0 0 0 ab 0 0 0 0 0 0 0
+0 0 0 0
+2 10 0 5 0
+A
+1 2
+#13140
+escudo largo~
+um escudo largo~
+Um escudo largo está aqui.~
+~
+9 m 0 0 0 aj 0 0 0 0 0 0 0
+10 0 0 0
+11 10 0 20 0
+E
+escudo largo~
+Isto parece ser tão largo que parece conseguir conter uma multidão.
+~
+A
+1 2
+#13141
+clava brilhante~
+uma clava brilhante~
+Uma brilhante clava está aqui, repelindo o pó.~
+~
+5 a 0 0 0 an 0 0 0 0 0 0 0
+0 6 3 5
+4 10 0 35 0
+A
+19 2
+A
+18 2
+$~

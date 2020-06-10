@@ -1,0 +1,1061 @@
+#1700
+Um Vale Selvagem~
+   Voc� move-se vagarosamente atrav�s das verdes videiras e da espessa grama
+   Que cobre o ch�o do vale.  Parece que este lugar n�o tem recebido pessoas
+h� d�cadas.  A sul, a terra eleva-se at� um pared�o coberto de vegeta��o,
+onde apenas um buraco se destaca.  A leste a vegeta��o abre-se para um
+caminho que leva a uma estranha encosta de pedra.
+~
+17 68 0 0 0 4
+D1
+A encosta parece com uma imensa besta que foi deixada aqui para apodrecer.
+~
+~
+0 -1 1701
+D2
+~
+~
+0 -1 1758
+E
+encosta pedra~
+A encosta parece com uma imensa besta que foi deixada aqui para apodrecer.
+~
+S
+#1701
+Diante do Drag�o~
+   Voc� para diante da forma petrificada do Drag�o Ancalador.  Voc� ainda 
+pode perceber seu �dio da terra, que um dia foi sua.  Uma vaga sensa��o de 
+maldade emana do ser petrificado, que um dia aterrorizou na��es.
+~
+17 64 0 0 0 4
+D1
+A imensa goela est� gelada.  Voc� poderia alcan�ar a l�ngua e escalar para 
+entrar, voc� adoraria faz�-lo.
+~
+~
+0 -1 1702
+D3
+~
+~
+0 -1 1700
+S
+#1702
+Na Boca do Drag�o~
+   Fileiras de dentes de pedra t�o grandes que formam muros est�o aqui.  Uma
+l�ngua marcada com pedras est� a leste,  atr�s molares de pedra t�o
+grandes quanto escudos de ferro.
+~
+17 72 0 0 0 0
+D1
+~
+~
+0 -1 1703
+D3
+~
+~
+0 -1 1701
+S
+#1703
+Pelas Am�gdalas de Pedra~
+   Voc� est� atr�s da boca do drag�o.  A garganta continua para baixo e
+algo transpira do peito petrificado.
+~
+17 73 0 0 0 0
+D3
+~
+~
+0 -1 1702
+D5
+~
+~
+0 -1 1704
+S
+#1704
+Uma Garganta de Pedra~
+   O ch�o � irregular -- o meio da passagem � mais baixo que os lados, que 
+crescem como muros.  A passagem como um todo � ligeiramente inclinada,
+levando para o leste e para baixo.
+~
+17 73 0 0 0 0
+D4
+~
+~
+0 -1 1703
+D5
+~
+~
+0 -1 1705
+S
+#1705
+Ainda Mais nas Profundezas da Garganta~
+   O t�nel come�a a perder sua inclina��o, seguinto simplesmente na dire��o
+leste.  As formas do que pode ser m�sculos petrificados cobrem as paredes.
+~
+17 73 0 0 0 0
+D1
+~
+~
+0 -1 1706
+D4
+~
+~
+0 -1 1704
+S
+#1706
+Uma Jun��o~
+   Voc� est� numa jun��o de quatro caminhos.  A garganta do drag�o continua
+a leste e oeste, mas na espremedura abaixo h�  um l�bio petrificado, voc� 
+pode perceber t�neis ao norte e ao sul.
+~
+17 73 0 0 0 0
+D0
+Voc� espreita embaixo do l�bio petrificado e v� uma fraca luz em meio a
+escurid�o.
+~
+~
+0 -1 1707
+D1
+~
+~
+0 -1 1755
+D2
+Voc� espreita embaixo do l�bio petrificado e v� uma fraca luz em meio a
+escurid�o.
+~
+~
+0 -1 1710
+D3
+~
+~
+0 -1 1705
+E
+l�bios l�bio~
+ Quem pode dizer a qual parte da anatomia draconiana pertence isso? 
+~
+S
+#1707
+Um T�nel de Pedra~
+   Essa passagem circular de pedra encurva-se gradualmente para cima, � um 
+lugar muito iluminado e quente.
+~
+17 73 0 0 0 0
+D2
+~
+~
+0 -1 1706
+D4
+Voc� pode ver tudo com uma grande claridade, voc� sente fortes rajadas de 
+vento quente.
+~
+~
+0 -1 1708
+S
+#1708
+Um Pulm�o do Drag�o~
+   Chamas antigas queimam aqui, esperando o renascimento de seu mestre.
+~
+17 72 0 0 0 0
+D5
+~
+~
+0 -1 1707
+S
+#1709
+O Cora��o do Drag�o~
+   Palvras m�gicas, que brilham com uma luz azul, est�o cravadas nas paredes
+de pedra da c�mara do cora��o de Ancalador.  A pureza da m�gica cont�m
+o mal e forma uma sagrada balan�a de Neutralidade.  Parece que uma m�sica
+amorosa est� tocando aqui.
+~
+17 584 0 0 0 0
+D0
+Voc� v� a parede da c�mara abrir-se para voc�, guiando para um t�nel.
+~
+~
+0 -1 1755
+S
+#1710
+Um T�nel de Pedra~
+   Essa passagem de pedra � iluminada por uma grande luz e um calor violento
+parece vir do final da passagem.
+~
+17 73 0 0 0 0
+D0
+~
+~
+0 -1 1706
+D4
+Voc� deve cobrir seus olhos pois o brilho � muito intenso.
+~
+~
+0 -1 1711
+S
+#1711
+Um Pulm�o do Drag�o~
+   Os fogos nucleares que energizavam o drag�o com sua apavorante respira��o 
+est�o aqui, e eles est�o latentes a muito tempo, eles queimam voc� 
+lentamente e fazem voc� arrepender-se de estar usando uma armadura de metal.
+~
+17 72 0 0 0 0
+D5
+~
+~
+0 -1 1710
+S
+#1712
+Est�mago de Ancalador~
+   A garganta de Ancalador acaba, revelando uma enorme caverna iluminada por
+assustadoras e difusas luzes verdes e amarelas.  Nada mais maravilhoso!  Uma
+ponte de madeira transp�e a caverna coberta por estalactites.  Um degrau 
+abaixo leva, com seguran�a, ao ch�o da caverna, e a ponte segue a leste.
+~
+17 76 0 0 0 0
+D1
+~
+~
+0 -1 1713
+D3
+~
+~
+0 -1 1755
+D5
+Apesar do degrau, a descida parece �rdua, mas n�o aparenta ser perigosa.
+~
+~
+0 -1 1720
+S
+#1713
+Uma Ponte de Madeira~
+   Voc� n�o pode imaginar quem construiria uma ponte nesta fant�stica
+caverna.  Grandes estalagmites crescem enquanto as assustadoras luzes 
+parecem mover-se na n�voa ao longe.  A ponte continua para o leste.
+~
+17 72 0 0 0 0
+D1
+~
+~
+0 -1 1714
+D3
+Voc� v� a entrada para a c�mara do est�mago.
+~
+~
+0 -1 1712
+D5
+As estalagmites parecem olhar de modo amea�ador para voc�.
+~
+~
+0 -1 1716
+S
+#1714
+Uma Ponte de Madeira~
+   Voc� est� no meio da ponte de madeira.  Grandes estalagmites crescem ao 
+seu redor e as luzes assustadoras continuam a dan�ar na n�voa ao longe.
+A ponte continua para o leste e para o oeste.
+~
+17 72 0 0 0 0
+D1
+~
+~
+0 -1 1715
+D3
+~
+~
+0 -1 1713
+D5
+As estalagmites parecem olhar de modo amea�ador para voc�.
+~
+~
+0 -1 1716
+S
+#1715
+Uma Ponte de Madeira~
+   A floresta aqui � velha, semelhante ao resto da ponte. As mortais
+estalagmites continuam ao longe e mais luzes verdes e amarelas podem ser
+vistas na n�voa ao longe.  A ponte acaba num pequeno planalto a leste.
+~
+17 72 0 0 0 0
+D1
+Voc� v� a ponte coincidir com o fim da caverna.
+~
+~
+0 -1 1726
+D3
+~
+~
+0 -1 1714
+D5
+As estalagmites parecem olhar de modo amea�ador para voc�.
+~
+~
+0 -1 1716
+S
+#1716
+Uma Floresta de Estalagmite~
+   Voc� mergulha na ponte de madeira e encontra-se grudado entre v�rias 
+estalagmites.  Mover-se machuca muito, e voc� n�o consegue lembrar-se de 
+nenhuma m�gica para escapar dessa situa��o.
+~
+17 76 0 0 0 0
+S
+#1717
+A Floresta �cida~
+   Estalagmites afiadas encontram-se aqui, criadas por pingos de mineral
+que caem das estalactites acima.  Po�as de �cido preenchem cada fenda do
+duro ch�o da caverna.  A caverna continua para o sul e leste.
+~
+17 72 0 0 0 4
+D1
+~
+~
+0 -1 1718
+D2
+~
+~
+0 -1 1720
+S
+#1718
+A Floresta �cida~
+   As Estalagmites daqui s�o grandes e de tom arco-�ris.  Po�as de �cido
+g�strico est�o espalhadas pelo ch�o.  A caverna expande-se em todas as 
+dire��es exceto ao norte.
+~
+17 72 0 0 0 4
+D1
+~
+~
+0 -1 1719
+D2
+~
+~
+0 -1 1721
+D3
+~
+~
+0 -1 1717
+S
+#1719
+A Floresta �cida~
+   Afiadas estalagmites crescem, criadas por pingos de mineral que caem das
+estalactites acima.  Po�as de �cido preenchem cada fenda do duro ch�o da 
+caverna.
+~
+17 72 0 0 0 4
+D2
+~
+~
+0 -1 1722
+D3
+~
+~
+0 -1 1718
+S
+#1720
+A Floresta �cida~
+   Voc� para em frente a uma maravilhosa vis�o.  Escondido entre a n�voa no
+ch�o da caverna est� uma floresta, de forma diferente, estalagmites afiadas
+rodeadas por po�as de algo que deve ser os restos de �cido g�strico do 
+drag�o.
+~
+17 72 0 0 0 4
+D0
+~
+~
+0 -1 1717
+D1
+~
+~
+0 -1 1721
+D2
+~
+~
+0 -1 1723
+D4
+Voc� v� o peitoril de entrada para a caverna do est�mago.
+~
+~
+0 -1 1712
+S
+#1721
+A Floresta �cida~
+   Voc� est� no centro da caverna do est�mago do drag�o.  Uma ponte de
+madeira aparece ao longe.  Afiadas estalagmites equilibram-se aqui
+encontrando cada pingo que � lan�ado sobre elas.
+~
+17 72 0 0 0 4
+D0
+~
+~
+0 -1 1718
+D1
+~
+~
+0 -1 1722
+D2
+~
+~
+0 -1 1724
+D3
+~
+~
+0 -1 1720
+S
+#1722
+A Floresta �cida~
+   As estalagmites aqui s�o grandes e t�m um tom de arco-�ris.  Po�as de 
+�cido g�strico est�o espalhadas pelo ch�o.  Um degrau leva a um grande
+planalto no fim da caverna.
+~
+17 72 0 0 0 4
+D0
+~
+~
+0 -1 1719
+D2
+~
+~
+0 -1 1725
+D3
+~
+~
+0 -1 1721
+D4
+Aparentemente ele � um degrau que tamb�m leva-o de volta.
+~
+~
+0 -1 -1
+S
+#1723
+A Floresta �cida~
+   N�voa gira ao redor de um estranho ovo de casca de cristal.  A caverna
+continua para o norte e para o leste.
+~
+17 72 0 0 0 4
+D0
+~
+~
+0 -1 1720
+D1
+~
+~
+0 -1 1724
+S
+#1724
+A Floresta �cida~
+   Afiadas estalagmites crescem, criadas por pingos de mineral que caem das
+estalactites acima.  Po�as de �cido preenchem cada fenda do duro ch�o da 
+caverna.
+~
+17 72 0 0 0 4
+D0
+~
+~
+0 -1 1721
+D1
+~
+~
+0 -1 1725
+D3
+~
+~
+0 -1 1723
+S
+#1725
+A Floresta �cida~
+   As estalagmites aqui s�o grandes e t�m um tom de arco-�ris.  Po�as de 
+�cido g�strico est�o espalhadas pelo ch�o.  A caverna continua para norte e 
+oeste.
+~
+17 72 0 0 0 4
+D0
+~
+~
+0 -1 1722
+D3
+~
+~
+0 -1 1724
+S
+#1726
+O Fim do Estom�go~
+   A ponte de madeira acaba aqui, num grande planalto acima do ch�o da 
+caverna.  O planalto tem uma vista panor�mica, por completo, da floresta de
+�cido e pedra ao longe.  Um t�nel na parede da caverna ao leste foi escorado
+por uma parede de gesso e ossos.  Duas grandes portas com ma�anetas de 
+caveira foram colocadas aqui.
+~
+17 73 0 0 0 0
+D1
+Voc� v� uma enorme quantidade de portas feitas de ossos.
+~
+porta portas caveira~
+0 1718 1756
+D3
+Voc� v� uma ponte de madeira.
+~
+~
+0 -1 1715
+D5
+Voc� v� um degrau que desce para o ch�o da caverna.
+~
+~
+0 -1 1722
+S
+#1727
+O P�ncreas do Drag�o~
+   Voc� est� numa c�mara de forma estranha, o mais forte org�o de Ancalador.
+  Uma luz amarelada ilumina a sala.  O pressentimento de maldade � grande 
+aqui, pode-se ler um aviso que diz, 'Memento Mori', ou na nossa l�ngua, 
+'Lembre-se de Morrer'.  A c�mara ainda continua para o leste e para baixo.
+~
+17 72 0 0 0 0
+D0
+Voc� v� uma fissura na parede do org�o.
+~
+fissura~
+0 -1 1756
+D1
+~
+~
+0 -1 1745
+D5
+~
+~
+0 -1 1749
+S
+#1728
+O Intestino Delgado~
+   Voc� entrou num t�nel mon�tono que deve ser o come�o do intestino delgado
+do drag�o.  Pequenas pilhas de caveiras humanas e restos de armaduras foram
+deixados aqui.  O t�nel continua para norte e para o oeste um t�nel pode ser
+visto.
+~
+17 73 0 0 0 0
+D0
+~
+~
+0 -1 1729
+D3
+~
+~
+0 -1 1756
+S
+#1729
+O Intestino Delgado~
+   O t�nel segue para o sul e para o leste.
+~
+17 73 0 0 0 0
+D1
+~
+~
+0 -1 1730
+D2
+~
+~
+0 -1 1728
+S
+#1730
+O Intestino Delgado~
+   O tranquilo t�nel encurva-se para o oeste e para o norte.
+~
+17 73 0 0 0 0
+D2
+~
+~
+0 -1 1731
+D3
+~
+~
+0 -1 1729
+S
+#1731
+O Intestino Delgado~
+   As paredes claras do t�nel correm para o norte e para o sul.
+~
+17 73 0 0 0 0
+D0
+~
+~
+0 -1 1730
+D2
+~
+~
+0 -1 1732
+S
+#1732
+O Intestino Delgado~
+   O T�nel vem do norte e mergulha penetrantemente para baixo.
+~
+17 73 0 0 0 0
+D0
+~
+~
+0 -1 1731
+D5
+~
+~
+0 -1 1733
+S
+#1733
+O Intestino Delgado~
+   O descaracterizado t�nel leva para o norte e para cima.  Sons ecoam das
+claras paredes, voc� n�o pode dizer se est�o longe ou perto.
+~
+17 73 0 0 0 0
+D0
+~
+~
+0 -1 1734
+D4
+~
+~
+0 -1 1732
+S
+#1734
+O Intestino Delgado~
+   Pilhas de equipamento quebrado, de aventureiros h� muito tempo mortos,
+foram armazenadas aqui.  O t�nel corre para o norte e para o sul.
+~
+17 73 0 0 0 0
+D0
+~
+~
+0 -1 1735
+D2
+~
+~
+0 -1 1733
+S
+#1735
+O Intestino Delgado~
+   O t�nel encurva-se do sul para o leste.  Voc� imagina que muitos restos,
+de bravos guerreiros que desafiaram o drag�o, podem estar aqui dilacerados
+e estragados.
+~
+17 73 0 0 0 0
+D1
+~
+~
+0 -1 1736
+D2
+~
+~
+0 -1 1734
+S
+#1736
+O Intestino Delgado~
+   As paredes claras do t�nel seguem para o leste e para o sul.
+~
+17 73 0 0 0 0
+D2
+~
+~
+0 -1 1737
+D3
+~
+~
+0 -1 1735
+S
+#1737
+O Intestino Delgado~
+   O tranquilo t�nel estreita-se, ao sul daqui, num novo t�nel.
+~
+17 73 0 0 0 0
+D0
+~
+~
+0 -1 1736
+D2
+O novo t�nel parece ser composto de diferentes texturas.
+~
+~
+0 -1 1738
+S
+#1738
+O Intestino Grosso~
+   Diferente do intestino delgado, as paredes aqui t�m fendas.  Elas s�o 
+�speras e sujas.
+~
+17 73 0 0 0 0
+D0
+~
+~
+0 -1 1737
+D1
+~
+~
+0 -1 1739
+S
+#1739
+O Intestino Grosso~
+  O cheiro de lixo � forte nesta parte do t�nel que corre para o oeste e 
+para o norte.
+~
+17 73 0 0 0 0
+D0
+~
+~
+0 -1 1740
+D3
+~
+~
+0 -1 1738
+S
+#1740
+O Intestino Grosso~
+   As �speras paredes do t�nel arranham sua armadura e corta sua pele 
+desprotegida quando voc� segue para o norte ou para o sul.
+~
+17 73 0 0 0 0
+D0
+~
+~
+0 -1 1741
+D2
+~
+~
+0 -1 1739
+S
+#1741
+O Intestino Grosso~
+   O t�nel segue para o leste mas voc� acha muitos apoios entre a 
+sujeira.
+~
+17 73 0 0 0 0
+D1
+~
+~
+0 -1 1742
+D2
+~
+~
+0 -1 1740
+S
+#1742
+O Intestino Grosso~
+   O �spero e rachado t�nel estreita-se para o sul.
+~
+17 73 0 0 0 0
+D2
+~
+~
+0 -1 1743
+D3
+~
+~
+0 -1 1741
+S
+#1743
+Uma Sf�ncter de Pedra~
+   Voc� est� num t�nel estreito, pode-se andar sem bater sua cabe�a no teto.
+Uma brisa do sul levanta a poeira e voc� come�a a acreditar que est� longe 
+de estar seguro.
+~
+17 73 0 0 0 0
+D0
+~
+~
+0 -1 1742
+D1
+~
+~
+0 -1 1744
+S
+#1744
+No Rabo do Drag�o~
+   Voc� nunca tinha ficado t�o feliz por ter visto a luz do dia!  Voc� est�
+no rabo de pedra do drag�o, que � coberto de verdes videiras e pequenas 
+violetas.  Os p�ssaros cantam e voc� pode perceber um desfalecido p�tio 
+para o sul, deixando o monte do drag�o.  Uma poste indicador em forma de 
+caveira aponta para um caminho pouco usado ao norte.  H� uma grande por��o 
+de terra, estrategicamente colocada,para bloquear o caminho para o norte.
+~
+17 68 0 0 0 3
+D2
+Voc� v� um p�tio rodeando o drag�o, voltando para sua goela.
+~
+~
+0 -1 1701
+D3
+H� um estranho buraco na parede de pedra, com um lado circular.
+~
+~
+0 -1 1743
+E
+por��o terra estrat�gica~
+Esta grande e estranha cria��o �, meramente, uma estrat�gia muito usado por 
+escritores para desviar pessoas para longe de algo que ele ou ela n�o queria
+que eles vissem at� o presente momento.  Falando nisso, voc� viu o p�tio
+que leva ao sul, n�o viu?
+~
+E
+sinal poste indicador~
+No poste indicador l�-se uma antiga escrita r�nica:
+
+A Pen�ltima Torre da Magia, uma lenda ou uma realidade? No final desse
+caminho... quem sabe voc� n�o ache a verdade?  Dentre aqueles que foram ver
+nenhum voltou para contar a verdade...
+                            
+                                 ---Mercutio, o Poeta do Reino
+
+~
+S
+#1745
+Um Jardim Morto-Vivo~
+   Arbustos balan�ando e palmeiras tremorosas rodeiam algumas �rvores
+esquel�ticas que formam este horrendo jardim.  A vida, esconde-se nas 
+deformadas paredes da c�mara, parece que todas morreram e voltaram da morte   
+de algum modo.  Uma parede abre-se no org�o petrificado levando para o 
+oeste e para baixo.
+~
+17 72 0 0 0 0
+D3
+~
+~
+0 -1 1727
+D5
+~
+~
+0 -1 1750
+S
+#1746
+As C�maras Privadas~
+   Esta pequena sala parece ter sido cavada com as m�os de dentro do 
+p�ncreas de Ancalador.  Ela tem alguns confortos, como uma confort�vel
+cama e um pequeno bancada de alquimista, mas se o drag�o algum dia
+libertar-se de sua pris�o de pedra, ele ficar� bastante infeliz com essa
+situa��o.  A �nica sa�da � para o oeste.
+~
+17 72 0 0 0 0
+D3
+Do lado de fora � a c�mara do anfiteatro.
+~
+porta caix�o~
+0 -1 1747
+S
+#1747
+O Anfiteatro Macabro~
+   Voc� est� numa ampla e circular sali�ncia olhando um grande peda�o de 
+pedra na c�mara abaixo.  Assentos crus s�o feitos de rocha porosa e as 
+paredes s�o decoradas com v�rios ossos serrados e um pouco de sangue, 
+'Preso sem direito a fian�a.' Uma porta de tampa de caix�o foi posta na parede 
+a leste, enquanto degraus cortam a rocha ao oeste e abaixo.
+~
+17 72 0 0 0 0
+D1
+Voc� v� uma porta feita de tampa de caix�o.
+~
+porta caix�o~
+0 -1 1746
+D3
+~
+~
+0 -1 1748
+D5
+~
+~
+0 -1 1751
+S
+#1748
+O Templo da Morte~
+   Voc� est� num pequeno santu�rio em homenagem ao 'P�lido Padre das 
+Pessoas Mudas'.  Aqui, o tirano Grim do inferno � desejado como um princ�pio 
+de inspira��o e sabedoria aos membros da guilda.  A paredes da c�mara abrem
+para as sa�das ao leste e para baixo.
+~
+17 72 0 0 0 0
+D1
+~
+~
+0 -1 1747
+D5
+~
+~
+0 -1 1752
+S
+#1749
+Armazenagem Fria~
+   O fedor dessa c�mara de armazenagem faz voc� ficar tonto por um tempo.  
+Ap�s a n�usea ter passado voc� percebe cad�veres conservados a frio, em 
+montes, nas paredes de pedra.  Barris de poeira e garrafas de sangue enchem 
+a sala. Na parede, marcado com tinta preta, est� rabiscado 'Os sonos sem
+sonhos.'  A c�mara acaba para cima ou para o sul.
+~
+17 72 0 0 0 0
+D2
+~
+~
+0 -1 1752
+D4
+~
+~
+0 -1 1727
+S
+#1750
+O Canil dos Mortos~
+   A c�mara feita de uma pedra muito dura est� totalmente vazia exceto por
+um anel de ferro posto no centro.  Uma grande e pesada corrente com um 
+colar em cada ponta est� preso a corrente. Numa pequena inscri��o no colar
+l�-se 'Quietus.'
+~
+17 72 0 0 0 0
+D2
+~
+~
+0 -1 1751
+D4
+~
+~
+0 -1 1745
+S
+#1751
+A Sala de Opera��es~
+   Esta c�mara circular � dominada por um grande peda�o de pedra no centro
+que parece conter incont�veis manchas de horr�veis experi�ncias. O trabalho 
+cruel que � executado aqui � geralmente observado do anfiteatro por 
+aprendizes da guilda e patronos.
+~
+17 72 0 0 0 0
+D0
+~
+~
+0 -1 1750
+D4
+~
+~
+0 -1 1747
+S
+#1752
+A Sala da Guilda~
+   Esta � a maior c�mara do p�ncreas de Ancalador.  Uma longa mesa de 
+banquetes feita de caix�es apertados uns contra os outros enche a longa 
+sala.  Na parede, est� escrito, com algo que parece ser sangue de dem�nio,
+'Um d�bito que todos n�s devemos pagar.'  Um par de portas de tampa de 
+caix�o est� a oeste, e outras sa�das est�o ao norte e para cima.
+~
+17 72 0 0 0 0
+D0
+~
+~
+0 -1 1749
+D3
+~
+porta portas caix�o~
+0 -1 1753
+D4
+~
+~
+0 -1 1748
+S
+#1753
+O Altar da Aniquila��o~
+   Voc� para em frente ao horr�vel Altar da Aniquila��o onde a m�gica e o
+poder da extin��o e da dissolu��o s�o altamente explorados.  Voc� pode
+sentir as incont�veis cerim�nias de extin��o que foram executadas aqui,
+como trevas que impregnam o altar, que parece uma grande gaiola feita de  
+costelas e no centro est� a caveira de um dem�nio.  Em frente ao altar est� 
+uma grade de ferro preta que cobre um po�o escuro onde a ru�na da vida � 
+glorificada em sacrif�cio.
+~
+17 72 0 0 0 0
+D1
+~
+porta portas caix�o~
+0 -1 1752
+D5
+Voc� n�o pode ver muita coisa, mas voc� n�o gosta do pouco que v�.
+~
+grade~
+0 1705 1754
+S
+#1754
+O Po�o Escuro~
+   O mal deste lugar procura extinguir sua luz quando as trevas sugam uma 
+alma mal�fica.  Voc� conhece o verdadeiro medo quando algo move-se na 
+escurid�o... em sua dire��o.
+~
+17 73 0 0 0 0
+D4
+Voc� v� uma grade de ferro preta sobre voc�.
+~
+grade ferro~
+0 1705 1753
+S
+#1755
+Um T�nel de Pedra~
+   A garganta do drag�o continua para leste e oeste para um p�tio que nem
+sobe nem desce.  A parede sul, leva ao lado esquerdo do drag�o, um calor
+pode ser sentido, seguido por um sentimento de pura maldade.
+~
+17 73 0 0 0 0
+D1
+Voc� v� o t�nel abrir-se para uma grande caverna.
+~
+~
+0 -1 1712
+D3
+~
+~
+0 -1 1706
+S
+#1756
+Um Corredor de Pedra~
+   Voc� est� num t�nel de pedra circular.  As paredes s�o irregulares e 
+rachadas.  O t�nel continua para leste e oeste.
+~
+17 77 0 0 0 0
+D1
+Voc� v� o come�o de um novo e tranquilo t�nel.
+~
+~
+0 -1 1728
+D2
+Voc� parece ser capaz de espiar na fissura aberta.
+~
+fissura~
+0 -1 1727
+D3
+Voc� v� uma porta feita de osso conduzir at� a caverna do est�mago.
+~
+porta portas osso~
+0 1718 1726
+E
+muro~
+Uma pequena fissura surge de um muro ao sul.
+~
+S
+#1757
+Al�m da Lareira~
+   Voc� descobriu uma passagem secreta na lareira das ru�nas e acabou
+escorregando por uma esp�cie de tobog� que passa por um t�nel escuro e
+abafado.  O t�nel termina, repentinamente, em uma estreita passagem circular
+com alguma ilumina��o, a norte.  Uma escada feita de corda, ao lado dessa
+passagem, permite que voc� escale de volta � passagem que o trouxe at� aqui.
+~
+17 393545 0 0 0 5
+D0
+~
+~
+0 -1 1758
+D4
+~
+passagem secreta~
+0 -1 5999
+S
+#1758
+A Passagem~
+   Voc� caminha, com dificuldade, pelos metros finais do t�nel, agora plano
+mas ainda encharcado por �gua enlameada.  A passagem parece dar,
+inesperadamente, em um vale que se extende por todo norte.  O t�nel fica a
+sul.
+~
+17 393545 0 0 0 5
+D0
+~
+~
+0 -1 1700
+D2
+~
+~
+0 -1 1757
+S
+$~

@@ -1,0 +1,482 @@
+#3902
+efreeti criatura gigante chamas~
+um efreeti gigante~
+Você vê uma criatura gigantesca, completamente envolvida em chamas, guardando o portão adiante.
+~
+Seja lá o que estiver atrás desse portão, deve ser bem interessante.  Para
+saber você terá que passar por ele.
+~
+2128914 0 0 0 264536 0 0 0 -1000 E
+32 15 -20 1d32+2325 3d5+16
+1150 60000
+8 8 1
+BareHandAttack: 6
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3903
+Venus Armadilha de Mosca~
+a Venus Armadilha de Mosca~
+Uma planta com muitas armadilhas em forma de disco cresce em meio a ossos amontoados aqui.
+~
+Movendo-se sempre calmamente, você percebe que seus tentaculos são
+extremamente mortíferos.  Você se pergunta se isso pode sentir sua presença
+daqui, ou se sente apenas o que toca seus discos.
+~
+2353234 0 0 0 536870922 0 0 0 -700 E
+26 11 -4 1d26+2050 2d5+13
+0 40000
+8 8 2
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3904
+traíra besta árvore~
+uma traíra~
+Uma massiva besta parecida com uma árvore aparece diante de você.
+~
+Grandes olhos vermelhos brilham na escuridão assim que isso acorda.  Essa
+coisa se move quase graciosamente para algo tão grande.  Você vê uma
+multidão de garras que se inclinam e vêm em sua direção.
+~
+2099314 0 0 0 67672 0 0 0 -700 E
+27 12 -8 1d27+2100 2d6+13
+0 60000
+8 8 2
+BareHandAttack: 7
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3905
+morte vermelha fossas sangue criatura~
+morte vermelha~
+No chão, várias fossas de sangue se unem, formando uma criatura diante de você.
+~
+Completamente feita de sangue, essa criatura disforme se move lentamente em
+sua direção.  Tudo que ela toca é coberto com um sangue escuro e grosso.  Um
+largo rastro de sangue fica por onde isso passa.
+~
+2099314 0 0 0 88 0 0 0 -1000 E
+28 13 -12 1d28+2150 2d6+14
+0 60000
+8 8 2
+BareHandAttack: 6
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3906
+praga negra espírito~
+a praga negra~
+Um espírito demoníaco aparece diante de você, brandindo garras negras.
+~
+Mais escura que as sombras, você percebe que ela não possui face.  Você
+percebe o brilho de suas garras quando ela pula da escuridão.
+~
+2099314 0 0 0 88 0 0 0 -1000 E
+28 13 -12 1d28+2150 2d6+14
+0 60000
+8 8 2
+BareHandAttack: 6
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3907
+febre amarela figura~
+a febre amarela~
+Uma figura pálida e magra materializa-se do chão.
+~
+Alto e magro, isso parece estar infectado por todas as doenças do mundo.
+Sua pele é tão esticada que ele possui uma aparência esquelética.  Um calor
+intenso irradia dele, como se estivesse em chamas por dentro.
+~
+2099302 0 0 0 88 0 0 0 -1000 E
+28 13 -12 1d28+2150 2d6+14
+0 60000
+8 8 2
+BareHandAttack: 12
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3908
+demilich esqueleto~
+Demilich~
+Um gigantesco esqueleto lhe fita de seu trono assim que você entra.
+~
+O esqueleto vivo de algum ancião de alguma raça desconhecida levanta-se de
+seu trono quando lhe vê.  Olhos com aparência maligna brilham de seu crânio.
+Cantando algo em uma língua desconhecida, ele subtamente pula em sua
+direção.
+~
+2291826 0 0 0 88 0 0 0 -1000 E
+40 21 -20 1d40+2525 4d5+20
+1550 120000
+8 8 2
+BareHandAttack: 6
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3909
+esqueleto cavaleiro morte~
+o cavaleiro da morte~
+Um esqueleto vestido com armaduras de um cavaleiro surge diante de você.
+~
+Coberto por uma magnífica armadura, ele parece olhar através de você.  Uma
+das mãos se levanta, sinalizando que você não deve seguir adiante.  A outra
+mão desembanha sua grande espada e a empunha com uma facilidade mortífera.
+~
+2103410 0 0 0 88 0 0 0 -1000 E
+25 11 0 1d25+2000 2d4+12
+800 40000
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3910
+kalas~
+Kalas~
+Kalas, o Senhor do Abismo, caminha adiante.
+~
+Um poderoso homem com a face coberta de cicatrizes de incontáveis batalhas
+que lutou em nome do mal.  Sua bela face ainda mostra a crueldade que ele
+conhece.  Seus olhos negros brilham em lembrança de sua reputação.
+~
+2103348 0 0 0 67672 0 0 0 -1000 E
+39 20 -20 1d39+2500 4d5+19
+1500 120000
+8 8 1
+BareHandAttack: 12
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3911
+mímico baú~
+o mímico~
+Um estranho baú foi posto no canto da sala, rodeado de ossos.
+~
+Um estranho baú que ainda não foi arrombado.  Ele parece estar vivo (?) e
+respirando (?).
+~
+2097170 0 0 0 0 0 0 0 -750 E
+20 8 2 1d20+1000 2d3+10
+550 30000
+8 8 1
+BareHandAttack: 12
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3912
+magistrado esqueleto ossos~
+o Magistrado~
+Uma pilha de ossos proxima à escrivaninha de repente começa a se unir e se levanta.
+~
+Ele se poe imponentemente diante de você, vestindo algumas vestes de um
+juiz.  Uma voz fantasmagórica vinda dele sussura: "Culpado..  Culpado..
+Culpado..  Culpado...  Culpado....".  Subitamente, ele empunha seu grande
+martelo e lança em sua direção com uma força incalculável!
+~
+2099286 0 0 0 0 0 0 0 -1000 E
+27 12 -8 1d27+2100 2d6+13
+900 60000
+8 8 1
+BareHandAttack: 7
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3913
+tempestade~
+a tempestade gigante~
+Uma tempestade gigante extremamente zangada vem em sua direção.
+~
+Uma gigantesca figura desajeitada rodeada por uma névoa aparece diante de
+você.  Você pode ver fortes cargas elétricas nascendo de seu corpo em
+direçao ao solo.
+~
+2099282 0 0 0 0 0 0 0 0 E
+30 14 -20 1d30+2250 3d4+15
+1050 60000
+8 8 2
+BareHandAttack: 5
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3914
+escravo criatura~
+um pequeno escravo da caverna~
+Uma pequena criatura palida surge da escuridão.
+~
+Atravacado e bem pálido, a vida desse ser são esses túneis escuros.
+~
+2097172 0 0 0 0 0 0 0 -730 E
+12 3 5 1d12+300 1d4+6
+250 3638
+8 8 1
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3915
+zumbi guerreiro abismo~
+Um zumbi guerreiro do Abismo~
+Um forte zumbi guerreiro se põe diante de você, guardando o castelo.
+~
+Ele parece um feroz lutador, capaz de cortar você ao meio como um galho de
+árvore.  Isso é, se sua espada não lhe empalar primeiro.
+~
+2098178 0 0 0 0 0 0 0 0 E
+27 12 -8 1d27+2100 2d6+13
+900 60000
+8 8 1
+BareHandAttack: 9
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3916
+demônio bael~
+o Bael~
+Um pequeno e magro demônio zomba de você com um sorriso maligno.
+~
+Bael é um espírito em forma de serpente que se move usando seus dois
+poderosos braços.  Assim que ele lhe vê, ele salta e ergue seu peito.  Suas
+mãos, agora livres, vêm na direção de sua alma.
+~
+2103348 0 0 0 0 0 0 0 -1000 E
+22 9 1 1d22+1400 2d3+11
+650 30000
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3917
+svern demônio~
+um Svern~
+Um grande demônio massivo surge diante de seus olhos, da escuridão.
+~
+Seu corpo coberto de músculos e com garras em formato de adagas fazem o
+Svern uma criatura com a qual não se deve brincar.  Ele é extremamente alto,
+bem acima de sua cabeça.
+~
+2103348 0 0 0 2136 0 0 0 -1000 E
+23 9 8 1d23+1600 2d4+11
+700 30000
+8 8 1
+BareHandAttack: 8
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3918
+vrock demônio ave~
+a Vrock~
+Um demônio com o formato de uma ave desce dos ares em sua direção.
+~
+O Vrock parece ser um cruzamento entre uma ave de rapina e alguma raça de
+humanoide.  Isso só seria possivel com a intervençao das forças demôniacas.
+Seu forte bico curvado parece extremamente letal.
+~
+2103348 0 0 0 2136 0 0 0 -1000 E
+24 10 4 1d24+1800 2d4+12
+750 40000
+8 8 2
+BareHandAttack: 8
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3919
+valik zumbi dragão~
+Valik, o dragão zumbi~
+Um gigantesco dragão com a pele em decomposição se move diante de você.
+~
+Aliado do mal, ele é considerado o segundo ser mais poderoso próximo a
+Damorask.  Valik esteve aqui desde o começo dos tempos.  Um dos mais
+poderosos seres está diante de você, você nota que em sua boca caberiam
+facilmente 5 homens.
+~
+2099314 0 0 0 0 0 0 0 -1000 E
+50 29 -28 1d50+6000 4d5+25
+2500 300000
+8 8 1
+BareHandAttack: 8
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3920
+damorask figura gelo~
+Damorask~
+Uma figura, uma vez humana, feita de gelo levanta seus braços para a árvore assim que você se aproxima.
+~
+Apesar de ser feito de gelo em seu local perpetuamente congelado, você nota
+que o tempo ainda afeita esse poderoso feiticeiro.  Olhos sábios e
+movimentos afetados pela idade desmentem seu mortífero poder.  Com um súbito
+movimento de sua mão, afiados fragmentos de gelo saltam do chão e começam a
+rodeá-lo.
+~
+2119794 0 0 0 0 0 0 0 -1000 E
+48 27 -28 1d48+4500 4d5+24
+2300 270000
+8 8 1
+BareHandAttack: 6
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3921
+mímico estatueta~
+o mímico~
+A estatueta move-se graciosamente em sua direção.
+~
+An undefined string.
+~
+2115666 0 0 0 0 0 0 0 -750 E
+20 8 2 1d20+1000 2d3+10
+550 15000
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3922
+monolito gelo~
+um monolito gigante~
+Um gigantesco monolito de gelo vêm descontroladamente em sua direção.
+~
+Em tamanho, isso é um rival de Valik.  Valik, até mesmo em um ataque de
+fúria, pensaria duas vezes antes de enfrentar isso.  Seu corpo massivo
+parece ter sido cinzelado com uma camada impenetrável de gelo.
+~
+2115634 0 0 0 0 0 0 0 -1000 E
+50 29 -28 1d50+6000 4d5+25
+2500 300000
+6 6 1
+BareHandAttack: 6
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3923
+besta neve~
+uma besta da neve~
+Uma besta da neve se põe diante de você, guardando a ilha.
+~
+A besta da neve parece brilhar misteriosamente.  Ela rosna para você assim
+que você tenta passar por ela para a ilha.  Ela foi posta aqui de sentinela
+pelo seu mestre Damorask.
+~
+2115634 0 0 0 2136 0 0 0 -1000 E
+45 25 -24 1d45+3000 4d5+22
+0 150000
+8 8 2
+BareHandAttack: 10
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3924
+pilar gelo~
+um pilar de gelo~
+Um grande pilar de gelo foi posto aqui.
+~
+Apenas um pilar feito de gelo, resistente e frio.  Seu contemplamento pode
+transforma-lo em uma estátua massiva de gelo se isso for desejado.
+~
+2187264 0 0 0 1048832 0 0 0 -1000 E
+40 21 -20 1d40+2525 4d5+20
+0 150000
+8 8 1
+BareHandAttack: 5
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3925
+yeti água~
+um yeti de água~
+Um yeti de água está aqui, guardando seu precioso rio.
+~
+An undefined string.
+~
+2121780 0 0 0 0 0 0 0 0 E
+30 14 -20 1d30+2250 3d4+15
+0 60000
+8 8 2
+BareHandAttack: 10
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3926
+pseudo-hidra pseudo hidra dragão~
+uma Pseudo-Hidra vermelha~
+Do centro do redemoinho surgem sete cabeças de dragão que rosnam ao mesmo tempo para você.
+~
+Surgindo da água, um massivo corpo reptílico parece alcançar os céus.  Suas
+sete cabeças emitem um ensurdecedor ruído para você.  A Pseudo-Hidra
+vermelha é a ultima de uma grande raça anciã mortífera.  Uma explosão de
+chamas...  Um grande esguicho de ácido...  Uma mortal carga elétrica...  Uma
+rajada de gelo...  Um atordoante golpe de água...  Uma grossa névoa de gases
+venenosos...  Um bruxuleio de luz profana...  Algo lhe diz que a hidra é um
+adversário formidável.
+~
+2287634 0 0 0 0 0 0 0 0 E
+43 23 -24 1d43+2800 4d5+21
+0 150000
+8 8 2
+BareHandAttack: 6
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3927
+hidra gigante~
+uma hidra gigante~
+Uma gigantesca hidra de seis cabeças está aqui, adormecida.
+~
+Ela parece estar em um profundo sono mágico, mas talvez não por muito tempo.
+Uma das seis cabeças se move como se estivesse prestes a acordar.  Ela é bem
+maior do que um dragão comum e parece ser tão má quanto.
+~
+2353186 0 0 0 2136 0 0 0 -520 E
+37 19 -20 1d37+2450 3d7+18
+0 120000
+4 4 2
+BareHandAttack: 2
+Dex: 12
+Int: 13
+Wis: 13
+E
+#3928
+feiticeiro marfim homem~
+um feiticeiro de marfim~
+Um velho homem com aparência sábia está aqui, afundado em sua insanidade.
+~
+Uma pura aura branca o rodea.  Apesar de seu corpo frágil, seus olhos são
+cheios de vida.  Ele continua eternamente confinado a essa sala por uma
+poderosa força maligna que não pode ser quebrada.  Calmamente, ele caminha
+para o vaso e se protege com ele.
+~
+2291730 0 0 0 344 0 0 0 1000 E
+40 21 -20 1d40+2525 4d5+20
+1550 150000
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+$

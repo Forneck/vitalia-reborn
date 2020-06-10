@@ -1,0 +1,90 @@
+#800
+morcego~
+um grande morcego negro~
+Um grande morcego negro voa em sua frente.
+~
+Ele não aparenta querer lhe atacar, somente o observa com um olhar muito
+penetrante.
+~
+2119872 0 0 0 0 0 0 0 -200 E
+10 13 6 10d10+200 1d6+10
+0 4466
+8 8 1
+BareHandAttack: 8
+E
+#801
+cigano zigeuner~
+o Cigano Zigeuner~
+O Cigano Zigeuner parece estar chocado com sua presença.
+~
+Andando cabisbaixo e resmungando consigo mesmo, você seria a ultima
+coisa que ele esperaria encontrar.
+~
+2153024 0 0 0 0 0 0 0 -400 E
+35 0 -15 10d10+2250 3d5+18
+1300 75632
+8 8 1
+E
+#802
+cigano~
+o Cigano~
+O Cigano encara você e vira-se rapidamente.
+~
+Parece estar em sua maneira de cuidar de algo...'
+~
+2115648 0 0 0 0 0 0 0 -400 E
+23 8 -7 10d10+1600 2d2+16
+900 46544
+8 8 1
+E
+#803
+cigano Ornah~
+o Cigano Ornah~
+O Cigano Ornah corre em sua direção, com a arma empunhada!
+~
+De todos os ciganos do castelo, você tinha que encontrar aquele com
+desejo de matar...
+~
+2123872 0 0 0 0 0 0 0 -400 E
+20 8 -8 10d10+1000 3d3+15
+700 38676
+8 8 1
+E
+#804
+grande vampiro~
+um Grande Vampiro~
+Um Grande Vampiro se joga sobre você num desejo frenético de sangue!
+~
+Você realmente não tem tempo para ficar parado observando-o, pois
+ele já esta lhe atacando!
+~
+2357344 0 0 0 0 0 0 0 -700 E
+45 -4 -20 10d10+3100 4d6+20
+2200 120764
+8 8 1
+E
+#805
+pequeno vampiro~
+um pequeno vampiro~
+Um pequeno vampiro lhe ataca com um poder que sómente um vampiro pode ter.
+~
+Observe o dente - alguma coisa parece lembrar você sobre o dente.
+~
+2119776 0 0 0 0 0 0 0 -800 E
+30 0 -10 10d10+2250 3d6+18
+1600 69345
+8 8 1
+E
+#806
+Soberano Vampiro~
+O Vampiro Soberano~
+Uma enorme e terrível criatura está prestes a morder seu pescoço.
+~
+Ele se movimenta com muita rapidez...é muito difícil dizer algo sobre ele.
+~
+2353186 0 0 0 0 0 0 0 -1000 E
+50 -10 -30 10d10+3500 5d5+29
+4300 231087
+8 8 1
+E
+$

@@ -1,0 +1,177 @@
+#138
+Vitalia~
+O Arquipélago de Yo~
+13800 13999 135 1 bde 0 0 0 -1 -1
+-1
+*
+* Colocar os Monstros
+*
+M 0 13800 1 13898   Colocar Bahamut no Trono do Deus dos Bons Drag�es
+E 1 13800 20 16     Entregar o Chicote de Platina para Bahamut
+E 1 13844 20 0      Entregar a Estrela Polar para Bahamut
+G 1 13839 20        Entregar a Chave de Diamante para Bahamut
+M 0 13801 1 13864   Colocar o Filho de Bahamut no Topo da Montanha Rochosa
+E 1 13822 20 21     Entregar a M�scara de Platina ao Filho de Bahamut
+M 0 13802 1 13819   Colocar o Drag�o de Cobre no Pal�cio dos Drag�es de Cobre
+E 1 13808 20 3      Entregar um Amuleto vermelho Met�lico ao Drag�o de Cobre
+E 1 13809 20 16     Entregar um Tridente Met�lico ao Drag�o de Cobre
+M 0 13803 1 13814   Colocar o Drag�o de Lat�o no Pal�cio dos Drag�es de Lat�o
+E 1 13810 20 3      Entregar um Amuleto de Lat�o ao Drag�o de Lat�o
+E 1 13811 20 11     Entregar um Escudo de Lat�o ao Drag�o de Lat�o
+M 0 13804 1 13828   Colocar o Drag�o de Pedra Ametista numa C�mara da Mina de Ametistas
+E 1 13818 20 5      Entregar uma Armadura de Ametistas ao Drag�o de Pedra Ametista
+E 1 13819 20 7      Entregar um par de Perneiras de Ametistas ao Drag�o de Pedra Ametista
+M 0 13805 1 13852   Colocar o Drag�o de Pedra Safira numa C�mara da Mina de Safiras
+E 1 13816 20 5      Entregar uma Armadura de Safiras ao Drag�o de Pedra Safira
+E 1 13817 20 19     Entregar um Brinco de Safira ao Drag�o de Pedra Safira
+M 0 13806 1 13836   Colocar o Drag�o de Pedra Esmeralda numa C�mara da Mina de Esmeraldas
+E 1 13812 20 5      Entregar uma Armadura de Esmeraldas ao Drag�o de Pedra Esmeralda
+E 1 13813 20 1      Entregar um Anel de Esmeralda ao Drag�o de Pedra Esmeralda
+M 0 13807 1 13860   Colocar o Drag�o de Pedra Top�zio numa C�mara da Mina de Top�zios
+E 1 13814 20 5      Entregar uma Armadura de Top�zio ao Drag�o de Pedra Top�zio
+E 1 13815 20 1      Entregar um Anel de Top�zio ao Drag�o de Pedra Top�zio
+M 0 13808 1 13844   Colocar o Drag�o de Cristal numa C�mara da Mina de Cristal
+E 1 13820 20 5      Entregar uma Armadura de Cristal ao Drag�o de Cristal
+E 1 13821 20 16     Entregar um Punhal de Cristal ao Drag�o de Cristal
+C 0 13881 13809 -1     Verificar a presen�a do Guardi�o do Reino dos C�us
+M 1 13809 7 13881   Colocar um Guardi�o do Reino dos C�us no Sal�o do Castelo de Bahamut
+E 1 13801 20 11     Entregar um Escudo de PLatina ao Guardi�o
+C 0 13883 13809 -1    Verificar a presen�a do Guardi�o do Reino dos C�us
+M 1 13809 7 13883   Colocar um Guardi�o do Reino dos C�us no Sal�o do Castelo de Bahamut
+E 1 13802 20 16     Entregar uma Lan�a de Platina ao Guardi�o
+C 0 13884 13809 -1    Verificar a presen�a do Guardi�o do Reino dos C�us
+M 1 13809 7 13884   Colocar um Guardi�o do Reino dos C�us no Sal�o do Castelo de Bahamut
+E 1 13803 20 16     Entregar uma Foice de Platina ao Guardi�o
+C 0 13893 13809 -1    Verificar a presen�a do Guardi�o do Reino dos C�us
+M 1 13809 7 13893   Colocar um Guardi�o do Reino dos C�us no Sal�o do Castelo de Bahamut
+E 1 13804 20 21     Entregar uma M�scara Dourada ao Guardi�o
+C 0 13894 13809 -1    Verificar a presen�a do Guardi�o do Reino dos C�us
+M 1 13809 7 13894   Colocar um Guardi�o do Reino dos C�us no Sal�o do Castelo de Bahamut
+E 1 13805 20 5      Entregar a Armadura dos Drag�es de Yo ao Guardi�o
+C 0 13896 13809 -1    Verificar a presen�a do Guardi�o do Reino dos C�us
+M 1 13809 7 13896   Colocar um Guardi�o do Reino dos C�us no Sal�o do Castelo de Bahamut
+G 1 13806 20        Entregar um Celestial Par de Asas
+C 0 13897 13809 -1    Verificar a presen�a do Guardi�o do Reino dos C�us
+M 1 13809 7 13897   Colocar um Guardi�o do Reino dos C�us no Sal�o do Castelo de Bahamut
+E 1 13807 20 13     Entregar a Bainha de Diamante ao Guardi�o
+M 0 13810 1 13870   Colocar um Drag�o Aqu�tico no Fundo do Lago Brilhante
+E 1 13823 20 22     Entregar um Espinho Azul ao Drag�o Aqu�tico
+M 0 13812 5 13828   Colocar um Filhote de Drag�o na Mina de Ametistas
+M 0 13812 5 13852   Colocar um Filhote de Drag�o na Mina de Safiras
+M 0 13812 5 13836   Colocar um Filhote de Drag�o na Mina de Esmeraldas
+M 0 13812 5 13860   Colocar um Filhote de Drag�o na Mina de Top�zios
+M 0 13812 5 13844   Colocar um Filhote de Drag�o na Mina de Cristal
+M 0 13813 1 13915   Colocar Chronepsis no Conselho dos Wyrms
+E 1 13845 20 17     Entregar a Harpa de Prata de Chronepsis
+M 0 13814 1 13916   Colocar Aasterinian no Conselho dos Wyrms
+E 1 13848 20 0      Entregar a Estrela V�sper para Aasterinian
+M 0 13815 1 13909   Colocar Faluzure nas Profundezas de Yo
+E 1 13847 20 21     Entregar um Cr�nio de Drag�o a Faluzure
+M 0 13816 1 13910   Colocar um Drag�o de Diamante Vermelho numa Colina Verde
+E 1 13856 20 10     Entregar um Par de Bra�adeiras de Diamantes Vermelhos ao Drag�o
+M 0 13817 1 13885   Colocar um Drag�o das Profundezas na Cela dos Amaldi�oados
+E 1 13857 20 17     Entregar uma Coluna Vertebral ao Drag�o das Profundezas
+M 0 13818 1 13906   Colocar um Drag�o das Sombras na Caverna Maldita
+M 0 13819 1 13921   Colocar Yo na Celestial Estrela de Yo
+G 1 13846 20        Entregar o Cetro de Cinco Cabe�as para Yo
+E 1 13850 10 0      Entregar a Estrela com Nove Pontas para Yo
+M 0 13820 1 13902   Colocar uma Horda de Dracoliches na Caverna Maldita
+M 0 13821 6 13801   Colocar um P�ssaro na Floresta dos Drag�es
+M 0 13821 6 13804   Colocar um P�ssaro na Floresta dos Drag�es
+M 0 13821 6 13806   Colocar um P�ssaro na Floresta dos Drag�es
+M 0 13821 6 13862   Colocar um P�ssaro numa Colina Verde
+M 0 13821 6 13867   Colocar um P�ssaro numa Colina Verde
+M 0 13821 6 13875   Colocar um P�ssaro numa Colina Verde
+*
+* Colocar os Objetos
+*
+R 0 13800 13824     Retirar uma Monumental Estatua de Pedra
+O 0 13824 1 13800   Carregar uma Nova Monumental Estatua de Pedra
+R 0 13801 13825     Retirar uma Monumental Estatua de Pedra
+O 0 13825 1 13801   Carregar uma Nova Monumental Estatua de Pedra
+R 0 13814 13826     Retirar uma Fonte de Lat�o
+O 0 13826 1 13814   Carregar uma Nova Fonte de Lat�o
+R 0 13819 13827     Retirar uma Fonte de Cobre
+O 0 13827 1 13819   Carregar uma Nova Fonte de Cobre
+R 0 13828 13828     Retirar um Ninho de Drag�o
+O 0 13828 5 13828   Carregar um Novo Ninho de Drag�o
+P 1 13855 8 13828   Colocar um Ovo dentro do Ninho
+P 1 13855 8 13828   Colocar um Ovo dentro do Ninho
+R 0 13836 13828     Retirar um Ninho de Drag�o
+O 0 13828 5 13836   Carregar um Novo Ninho de Drag�o
+P 1 13855 8 13828   Colocar um Ovo dentro do Ninho
+P 1 13855 8 13828   Colocar um Ovo dentro do Ninho
+R 0 13851 13828     Retirar um Ninho de Drag�o
+O 0 13828 5 13851   Carregar um Novo Ninho de Drag�o
+P 1 13855 8 13828   Colocar um Ovo dentro do Ninho
+P 1 13855 8 13828   Colocar um Ovo dentro do Ninho
+R 0 13860 13828     Retirar um Ninho de Drag�o
+O 0 13828 5 13860   Carregar um Novo Ninho de Drag�o
+P 1 13855 8 13828   Colocar um Ovo dentro do Ninho
+P 1 13855 8 13828   Colocar um Ovo dentro do Ninho
+R 0 13842 13829     Retirar uma Fonte Cristal
+O 0 13829 1 13842   Carregar uma Nova Fonte de Cristal
+R 0 13852 13830     Retirar uma Monumental Pedra Safira
+O 0 13830 1 13852   Carregar uma Nova Monumental pedra Safira
+R 0 13851 13831     Retirar uma Fonte de Safira
+O 0 13831 1 13851   Carregar uma Nova Fonte de Safira
+R 0 13859 13832     Retirar uma Estatua de Top�zio
+O 0 13832 1 13859   Carregar uma Nova Estatua de Top�zio
+R 0 13860 13833     Retirar uma Fonte de Top�zio
+O 0 13833 1 13860   Carregar uma Nova Fonte de Top�zio
+R 0 13873 13834     Retirar um Mon�lito Colorido   
+O 0 13834 1 13873   Carregar um Novo Mon�lito Colorido
+R 0 13875 13835     Retirar um Mon�lito Met�lico
+O 0 13835 1 13875   Carregar um Novo Mon�lito Met�lico
+R 0 13874 13836     Retirar um Mon�lito Dourado
+O 0 13836 1 13874   Carregar um Novo Mon�lito Dourado
+R 0 13880 13838     Retirar uma Estatua dos Drag�es
+O 0 13838 2 13880   Carregar uma Nova Estatua dos Drag�es
+R 0 13882 13838     Retirar uma Estatua dos Drag�es
+O 0 13838 2 13882   Carregar uma Nova Estatua dos Drag�es
+R 0 13893 13837     Retirar uma Estatua dos Deuses e dos Drag�es
+O 0 13837 4 13893   Carregar uma Nova Estatua dos Deuses e dos Drag�es
+R 0 13894 13837     Retirar uma Estatua dos Deuses e dos Drag�es
+O 0 13837 4 13894   Carregar uma Nova Estatua dos Deuses e dos Drag�es
+R 0 13896 13837     Retirar uma Estatua dos Deuses e dos Drag�es
+O 0 13837 4 13896   Carregar uma Nova Estatua dos Deuses e dos Drag�es
+R 0 13897 13837     Retirar uma Estatua dos Deuses e dos Drag�es
+O 0 13837 4 13897   Carregar uma Nova Estatua dos Deuses e dos Drag�es
+R 0 13893 13840     Retirar um Quadro da Parede
+O 0 13840 1 13893   Carregar um Novo Quadro na Parede
+R 0 13894 13841     Retirar um Quadro da Parede
+O 0 13841 1 13894   Carregar um Novo Quadro na Parede
+R 0 13896 13842     Retirar um Quadro da Parede
+O 0 13842 1 13896   Carregar um Novo Quadro na Parede
+R 0 13897 13843     Retirar um Quadro da Parede
+O 0 13843 1 13897   Carregar um Novo Quadro na Parede
+R 0 13901 13849     Retirar uma Carni�a
+O 0 13849 3 13901   Carregar uma Nova Carni�a
+R 0 13904 13849     Retirar uma Carni�a
+O 0 13849 3 13904   Carregar uma Nova Carni�a
+R 0 13907 13849     Retirar uma Carni�a
+O 0 13849 3 13907   Carregar uma Nova Carni�a
+R 0 13913 13851     Retirar uma Esfera de Fogo
+O 0 13851 1 13913   Carregar uma Esfera de Fogo
+R 0 13914 13852     Retirar uma Esfera de Fogo
+O 0 13852 1 13914   Carregar uma Esfera de Fogo
+R 0 13918 13853     Retirar um Magn�fico Portal 
+O 0 13853 1 13918   Carregar um Novo Magn�fico Portal
+R 0 13919 13854     Retirar um Magn�fico Portal 
+O 0 13854 1 13919   Carregar um Novo Magn�fico Portal
+*
+* Ajustar as Portas
+*
+D 0 13872 6 1      Fechar a Cascata (Lado de Fora)
+D 0 13873 8 1      Fechar a Cascata (Lado de Dentro)
+D 0 13879 0 1      Fechar o Port�o de Madeira (Lado de Fora)
+D 0 13881 2 1      Fechar o Port�o de Madeira (Lado de Dentro)
+D 0 13885 6 2      Fechar e Trancar a Cela dos Amaldi�oados (Lado de Dentro)
+D 0 13888 8 2      Fechar e Trancar a Cela dos Amaldi�oados (Lado de Fora)
+D 0 13885 7 2      Fechar e Trancar a Cela dos Amaldi�oados (Lado de Dentro)
+D 0 13888 8 2      Fechar e Trancar a Cela dos Amaldi�oados (Lado de Fora)
+D 0 13885 8 2      Fechar e Trancar a Cela dos Amaldi�oados (Lado de Dentro)
+D 0 13885 6 2      Fechar e Trancar a Cela dos Amaldi�oados (Lado de Fora)
+D 0 13885 9 2      Fechar e Trancar a Cela dos Amaldi�oados (Lado de Dentro)
+D 0 13887 7 2      Fechar e Trancar a Cela dos Amaldi�oados (Lado de Fora)
+S

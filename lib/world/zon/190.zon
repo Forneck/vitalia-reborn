@@ -1,0 +1,156 @@
+#190
+Vitalia~
+Os Bosques dos Elfos~
+19000 19099 60 2 0 0 0 -1 -1
+-1
+*
+D 0 19078 4 1             porta da casa
+D 0 19052 5 1             porta da casa
+D 0 19061 0 1             porta da casa para a varanda
+D 0 19059 2 1             porta da varanda para a casa
+D 0 19060 0 1             porta da casa para a varanda
+D 0 19058 2 1             porta da varanda para a casa
+D 0 19037 4 1             porta da escada para a prefeitura
+D 0 19048 5 1             porta da prefeitura para a escada
+D 0 19033 1 1             port�o da Alameda para bosques
+D 0 19001 3 1             port�o dos bosques para Alameda
+D 0 19003 5 1
+D 0 19005 4 1
+M 0 19001 2 19001                   O Guardi�o Elfo
+E 1 19003 10 5            uma cota de malha de Mithril no corpo
+E 1 19004 10 16           empunhar uma espada de duas m�os de Mithril
+M 0 19001 2 19001                   O Guardi�o Elfo
+E 1 19003 10 5            uma cota de malha de Mithril no corpo
+E 1 19004 10 16           empunhar uma espada de duas m�os de Mithril
+M 0 19005 1 19010                   O Elfo Armeiro
+E 1 19001 0 16          uma espada com corte de diamante
+M 0 19004 1 19011                    O Elfo Vendedor de Armas
+E 1 19004 20 16          empunhar uma espada de duas m�os de Mithril
+M 0 19006 1 19014                    O Mago Elfo
+E 1 19001 100 16          empunhar uma espada de duas m�os de Mithril
+M 0 19007 1 19013                    Quintor (Armaz�m)
+E 1 19001 100 16          empunhar uma espada de duas m�os de Mithril
+M 0 19008 1 19016                    O Barman (The Tavern of Hope)
+E 1 19001 100 16          empunhar uma espada de duas m�os de Mithril
+M 0 19009 1 19090                     A Elfa Recepcionista
+E 1 19001 10 16           empunhar uma espada de duas m�os de Mithril
+M 0 19010 1 19004                     O Chefe da Guarda �lfica
+E 1 19001 10 16           empunhar uma linda espada longa
+E 1 19002 10 5            cota de malha �lfica no corpo
+E 1 19007 10 6               usar coifa na cabe�a
+M 0 19011 8 19018                     Guardas jogando baralho
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19011 8 19018                     Guardas jogando baralho
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19011 8 19018                     Guardas jogando baralho
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19011 8 19018                     Guardas jogando baralho
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19011 8 19003                     Guardas jogando baralho
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19011 8 19003                     Guardas jogando baralho
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19011 8 19003                     Guardas jogando baralho
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19011 8 19003                     Guardas jogando baralho
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19002 15 19006                    Soldado Elfo de guarda
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19002 10 19007                    Soldado Elfo de guarda
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19002 10 19008                    Soldado Elfo de guarda
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19002 10 19012                    Soldado Elfo de guarda
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19002 10 19009                    Soldado Elfo de guarda
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19002 10 19002                    Soldado Elfo de guarda
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19003 10 19008                    Guarda Elfa andando
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19003 10 19008                    Guarda Elfa andando
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19003 10 19008                    Guarda Elfa andando
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19003 15 19015                    Guarda Elfa andando
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+O 0 19005 1 19006         garregar o grande telesc�pio na plataforma
+O 0 15006 10 19027        carregar espada de treinamento
+O 0 15006 10 19027        carregar espada de treinamento
+O 0 15006 10 19027        carregar espada de treinamento
+O 0 3023 2 19027        carregar clava de madeira
+O 0 3023 2 19027        carregar clava de madeira
+O 0 19045 1 19048         estante na prefeitura
+M 0 19027 1 19052                     O Velho Dru�da na casa
+E 1 19004 10 16          empunhar uma espada de duas m�os de Mithril
+E 1 19021 20 12           vestir acolhedora manta de l�
+M 0 19028 1 19077                     Elemental
+E 1 19022 20 1            anel no dedo
+M 0 19029 4 19062                      Urso na floresta
+M 0 19030 3 19067                      Tigre na floresta
+M 0 19032 2 19082                      corvo na floresta
+M 0 19031 1 19019                      Campe�o na sala
+E 1 3820 1 17            Card Nabaqila(3820) com Campe�o(19031)
+E 1 19001 10 16          empunhar espada de fio de diamante
+E 1 19003 10 5           vestir cota de malha de Mithril
+E 1 19008 4 7             vestir grevas �lficas
+M 0 19012 1 19035         jardineiro no jardim do templo
+E 1 19047 10 17           segurar a tesoura
+E 1 19048 10 5            vertir a macac�o
+M 0 19013 1 19047                      cidad�o na rua
+M 0 19013 2 19043                      cidad�o na rua
+E 1 3841 16 17               Card Elfo(3841) com elfo(19013)
+M 0 19013 1 19015                      cidad�o na rua
+M 0 19014 1 19029                      cidad� na alameda
+M 0 19013 1 19032                      cidad�o na alameda
+M 0 19014 2 19038                      cidad�o na rua
+M 0 19015 1 19048                      N�dor na Prefeitura
+E 1 19042 1 13            vestir cintur�o de metal na cintura
+M 0 19016 1 19059                      sacerdote das escadarias
+E 1 19038 4 5             usar as vestes sacerdotais
+E 1 19039 4 16            empunhar gl�dio de prata
+M 0 19017 1 19053                      sacerdotisa nas escadarias
+E 1 19038 4 5             usar as vestes sacerdotais
+E 1 19039 4 16            empunhar gl�dio de prata
+M 0 19018 1 19037                      sacerdote na rua
+E 1 19038 4 5             usar as vestes sacerdotais
+E 1 19040 12 20            usar brincos
+M 0 19019 1 19009                      sacerdotisa na rua
+E 1 19038 4 5             usar as vestes sacerdotais
+E 1 19040 12 19            usar brincos
+E 1 19040 12 20            usar brincos
+M 0 19020 1 19060                      dona de casa em sua casa
+E 1 19044 1 6
+M 0 19021 2 19061                      crian�a brincando
+M 0 19021 1 19061                      crian�a brincando
+O 0 19046 1 19061         ba� de brinquedos na sala
+M 0 19022 1 19016                      elfo com pressa perto da estalagem
+G 1 19043 1
+M 0 19023 1 19051                      sabi� perto da �rvore
+M 0 19024 1 19048                      um rouxinol na prefeitura
+M 0 19025 1 19078                      um esquilo na �rvore
+G 1 19041 2               nozes com o esquilo
+M 0 19003 10 19034                     Guarda Elfa andando
+E 1 19001 10 16          empunhar uma linda espada longa
+E 1 19002 10 5           cota de malha �lfica no corpo
+M 0 19026 1 19016                      Elfo bardo na estalagem
+E 1 19049 2 16            empunhando um ala�de
+S

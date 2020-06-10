@@ -1,0 +1,2697 @@
+#11500
+O Port�o Externo Para Patala~
+   Voc� est� bem em frente a um grande port�o de ferro.  Do outro lado, por
+entre as grades, � poss�vel avistar uma pequena trilha adentrando por um
+grande p�ntano.  Altos muros de pedra negra seguem em ambos os lados at�
+al�m do que sua vista pode alcan�ar, protegendo e ocultando o resto da
+paisagem.  Na parede do muro � esquerda, foi afixado um pergaminho de aviso.
+~
+115 321 0 0 0 1
+D0
+O port�o se abre para uma pequena trilha que adentra em um estranho p�ntano
+~
+port�o ferro~
+1 11507 11530
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11501
+D2
+Voc� v� a trilha entre as rochas.
+~
+~
+0 -1 11439
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11511
+E
+muros altos~
+Gigantescas pedras negras, perfeitamente encaixadas umas �s outras, formam
+um muro que segue at�...  Hum...  Voc� n�o consegue ver se h� fim...  Mas,
+pelas suas contas, ele tem cerca de doze metros de altura e, olhando pelo
+port�o, dois metros de largura.  Voc� sente calafrios ao tentar imaginar
+quem construiu isso...
+~
+E
+port�o ferro~
+De ferro negro, esse port�o parece extremamente pesado.  As grades foram
+feitas sob a forma de enormes cobras com a cabe�a voltada para o alto, de
+l�nguas bifurcadas afiadas como pequenas lan�as.  Voc� n�o se atreveria a
+tentar escal�-lo... 
+~
+E
+aviso parede esquerda pergaminho~
+Est� escrito:
+&R* &B======================================================================== &R*&n
+&B|   &WDecreto Real Emitido por Sua Majestade o Rei Vasuki IV, Soberano&n       &B|   
+&B|      &Wdo Reino de Patala e Representante de Sesha entre seu povo&n          &B|          
+&B|                                                                          &B|
+&B|     &g" Aqui, apenas ser�o bem-vindos os descendentes da ra�a de Sesha.    &B|
+&B|       &g�quele que, n�o tendo correndo em suas veias o divino sangue       &B|
+&B|       &gdo Grande Senhor dos Nagas, pisar no sagrado solo do Reino         &B|
+&B|       &gOculto, ser� ca�ado e aniquilado por todo e qualquer filho         &B|
+&B|       &gda Grande Serpente, seja naga ou nagini, rico ou pobre.            &B|
+&B|                                                                          &B|
+&B|       &gSer�o bem-vindos tamb�m aqueles que trouxerem o selo naga          &B|
+&B|       &gconsigo.                                                           &B|
+&B|       &gTer� uma morte lenta e insuportavelmente dolorosa quem se          &B|
+&B|       &gatrever a tentar enganar os olhos de nossos guardi�es usando       &B|
+&B|       &gum selo roubado ou falsificado. Acredite, n�s saberemos.           &B|
+&B|                                                                          &B|
+&B|       &gAssim escrito, assim � lei.                                        &B|
+&B|                                                                          &B|
+&B|       &gPela gl�ria de Sesha, o Grande Senhor."                            &B|
+&B|                                                                          &B|
+&B|                               &YVasuki IV&L, Soberano do S�timo Submundo     &B|
+&R* &B======================================================================== &R*   
+~
+S
+#11501
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11502
+D3
+O port�o fica bem ali.
+~
+~
+0 -1 11500
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11502
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11503
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11501
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11503
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11504
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11502
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11504
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11505
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11503
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11505
+Um Posto de Guarda~
+   Voc� est� seguindo em frente a alta muralha de pedras negras, pensando na
+vida enquanto perde qualquer esperan�a de encontrar o fim desses muros,
+quando depara-se com um "pequena" torre esculpida por dentro das pedras.  Um
+estandarte brasonado com as armas da Casa Real de Patala foi preso num
+suporte acima da porta e, olhando pela janela, � poss�vel ver um grande mapa
+foi grudado na parede.  Voc� estranha n�o haver ningu�m ali...
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11506
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11504
+E
+mapa grande~
+Esse mapa representa essa regi�o de Vit�lia e assinala suas principais
+cidades.  Voc� consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
+segundo est� escrito, uma cidade chamada Bhogavati.
+~
+E
+estandarte brasonado armas casa real patala porta~
+O vento parece querer impedir voc� de examinar o estandarte...  S� �
+poss�vel ver que, num fundo negro como breu, uma enorme serpente de
+... uma... duas... tr�s... quatro... V�RIAS cabe�as enrola-se em torno de
+uma esfera celeste e... melhor desistir, est� dif�cil demais de ver...
+~
+S
+#11506
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11507
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11505
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11507
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11508
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11506
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11508
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11509
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11507
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11509
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11510
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11508
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11510
+Um Posto de Guarda~
+   Voc� est� seguindo em frente a alta muralha de pedras negras, pensando na
+vida enquanto perde qualquer esperan�a de encontrar o fim desses muros,
+quando depara-se com um "pequena" torre esculpida por dentro das pedras.  Um
+estandarte brasonado com as armas da Casa Real de Patala foi preso num
+suporte acima da porta e, olhando pela janela, � poss�vel ver um grande mapa
+foi grudado na parede.  Voc� estranha n�o haver ningu�m ali...
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11529
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11509
+E
+mapa grande~
+Esse mapa representa essa regi�o de Vit�lia e assinala suas principais
+cidades.  Voc� consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
+segundo est� escrito, uma cidade chamada Bhogavati.
+~
+E
+estandarte brasonado armas casa real patala porta~
+O vento parece querer impedir voc� de examinar o estandarte...  S� �
+poss�vel ver que, num fundo negro como breu, uma enorme serpente de
+... uma... duas... tr�s... quatro... V�RIAS cabe�as enrola-se em torno de
+uma esfera celeste e... melhor desistir, est� dif�cil demais de ver...
+~
+S
+#11511
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+O port�o fica bem ali.
+~
+~
+0 -1 11500
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11512
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11512
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11511
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11513
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11513
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11512
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11514
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11514
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11513
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11515
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11515
+Um Posto de Guarda~
+   Voc� est� seguindo em frente a alta muralha de pedras negras, pensando na
+vida enquanto perde qualquer esperan�a de encontrar o fim desses muros,
+quando depara-se com um "pequena" torre esculpida por dentro das pedras.  Um
+estandarte brasonado com as armas da Casa Real de Patala foi preso num
+suporte acima da porta e, olhando pela janela, � poss�vel ver um grande mapa
+foi grudado na parede.  Voc� estranha n�o haver ningu�m ali...
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11514
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11516
+E
+mapa grande~
+Esse mapa representa essa regi�o de Vit�lia e assinala suas principais
+cidades.  Voc� consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
+segundo est� escrito, uma cidade chamada Bhogavati.
+~
+E
+estandarte brasonado armas casa real patala porta~
+O vento parece querer impedir voc� de examinar o estandarte...  S� �
+poss�vel ver que, num fundo negro como breu, uma enorme serpente de
+... uma... duas... tr�s... quatro... V�RIAS cabe�as enrola-se em torno de
+uma esfera celeste e... melhor desistir, est� dif�cil demais de ver...
+~
+S
+#11516
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11515
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11517
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11517
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11516
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11518
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11518
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11517
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11519
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11519
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11518
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11520
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11520
+Um Posto de Guarda~
+   Voc� est� seguindo em frente a alta muralha de pedras negras, pensando na
+vida enquanto perde qualquer esperan�a de encontrar o fim desses muros,
+quando depara-se com um "pequena" torre esculpida por dentro das pedras.  Um
+estandarte brasonado com as armas da Casa Real de Patala foi preso num
+suporte acima da porta e, olhando pela janela, � poss�vel ver um grande mapa
+foi grudado na parede.  Voc� estranha n�o haver ningu�m ali...
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11519
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11521
+E
+mapa grande~
+Esse mapa representa essa regi�o de Vit�lia e assinala suas principais
+cidades.  Voc� consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
+segundo est� escrito, uma cidade chamada Bhogavati.
+~
+E
+estandarte brasonado armas casa real patala porta~
+O vento parece querer impedir voc� de examinar o estandarte...  S� �
+poss�vel ver que, num fundo negro como breu, uma enorme serpente de
+... uma... duas... tr�s... quatro... V�RIAS cabe�as enrola-se em torno de
+uma esfera celeste e... melhor desistir, est� dif�cil demais de ver...
+~
+S
+#11521
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11520
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11522
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11522
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11521
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11523
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11523
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11512
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11524
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11524
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11523
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11525
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11525
+Um Posto de Guarda~
+   Voc� est� seguindo em frente a alta muralha de pedras negras, pensando na
+vida enquanto perde qualquer esperan�a de encontrar o fim desses muros,
+quando depara-se com um "pequena" torre esculpida por dentro das pedras.  Um
+estandarte brasonado com as armas da Casa Real de Patala foi preso num
+suporte acima da porta e, olhando pela janela, � poss�vel ver um grande mapa
+foi grudado na parede.  Voc� estranha n�o haver ningu�m ali...
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11524
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11526
+E
+mapa grande~
+Esse mapa representa essa regi�o de Vit�lia e assinala suas principais
+cidades.  Voc� consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
+segundo est� escrito, uma cidade chamada Bhogavati.
+~
+E
+estandarte brasonado armas casa real patala porta~
+O vento parece querer impedir voc� de examinar o estandarte...  S� �
+poss�vel ver que, num fundo negro como breu, uma enorme serpente de
+... uma... duas... tr�s... quatro... V�RIAS cabe�as enrola-se em torno de
+uma esfera celeste e... melhor desistir, est� dif�cil demais de ver...
+~
+S
+#11526
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11525
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11527
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11527
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11526
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11528
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11528
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11527
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11529
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11529
+Seguindo Os Altos Muros~
+   Voc� est� seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Voc� n�o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas dire��es que ela segue.  Uma
+estranha for�a mant�m as negras e imensas pedras desses muros unidas,
+formando uma maci�a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco � a palavra certa para descrever isso.
+~
+115 65 0 0 0 1
+D1
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11528
+D3
+Os altos muros seguem at� al�m de onde sua vista alcan�a...
+~
+~
+0 -1 11510
+E
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha est�o t�o unidas que parecem ser uma �nica e
+colossal rocha.  Voc� examina-as mais de perto, mas n�o reconhece que tipo
+de pedras s�o: negras e de aspecto v�treo, s�o resistentes demais para serem
+de simples obsidiana (como voc� chegou a pensar).
+~
+S
+#11530
+No Reino Oculto~
+   Voc� conseguiu passar pela Guardi� dos Port�es de Patala.  Isso n�o �
+tarefa para qualquer um...  Mas h� muita coisa ainda para acontecer aqui,
+n�o se esque�a disso.  Por hora, voc� s� consegue ver que o caminho � sua
+frente segue em dire��o a um grande p�ntano, sumindo por entre o breu que
+paira sobre aquele lugar.  Voc� pode voltar ainda, � s� seguir sul...
+~
+115 5 0 0 0 2
+D0
+A trilha parece entrar direto no p�ntano.
+~
+~
+0 -1 11531
+D2
+Voc� v� o grande port�o de ferro que separa o Mundo Exterior do Mundo Oculto
+~
+port�o ferro~
+1 11507 11500
+S
+#11531
+Uma Trilha Para o P�ntano~
+   Voc� est� andando por uma estranha trilha coberta por min�sculas pedras
+negras.  N�o se consegue ver nada ao redor pois grandes arbustos parecem
+querer esconder o m�ximo poss�vel desse lugar misterioso.  Voc� pode seguir
+em dire��o a um grande p�ntano, a norte, ou voltar pelo sul.
+~
+115 5 0 0 0 2
+D0
+A trilha parece entrar direto no p�ntano.
+~
+~
+0 -1 11532
+D2
+Voc� ainda consegue ver o port�o.
+~
+~
+0 -1 11530
+S
+#11532
+Uma Trilha Para o P�ntano~
+   Voc� est� andando por uma estranha trilha coberta por min�sculas pedras
+negras.  N�o se consegue ver nada ao redor pois grandes arbustos parecem
+querer esconder o m�ximo poss�vel desse lugar misterioso.  Voc� pode seguir
+em dire��o a um grande p�ntano, a norte, ou voltar pelo sul.
+~
+115 5 0 0 0 2
+D0
+A trilha parece entrar direto no p�ntano.
+~
+~
+0 -1 11555
+D2
+Voc� ainda consegue ver o port�o.
+~
+~
+0 -1 11530
+S
+#11533
+Khura, O P�ntano Arredio~
+   A trilha pela qual voc� veio tornou-se, de repente, totalmente de terra.
+Sumiram as pedras, restou lama e espinhos.  �rvores escuras e retorcidas,
+com ra�zes a�reas, crescem a seu redor nas �reas alagadas, enquanto grandes
+espinhais seguem acompanhando caminho.  Vez ou outra voc� escuta o estranho
+canto de p�ssaros nativos, mas n�o consegue ver nenhum.  A n�voa densa que
+cobre voc� n�o permite que voc� enxergue direito, fazendo-o escorregar na
+lama repetidas vezes.  O caminho segue para sul, norte e sudeste.
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11544
+D2
+~
+~
+0 -1 11543
+D8
+~
+~
+0 -1 11555
+S
+#11534
+Khura, O P�ntano Arredio~
+   A trilha pela qual voc� veio tornou-se, de repente, totalmente de terra.
+Sumiram as pedras, restou lama e espinhos.  �rvores escuras e retorcidas,
+com ra�zes a�reas, crescem a seu redor nas �reas alagadas, enquanto grandes
+espinhais seguem acompanhando caminho.  Vez ou outra voc� escuta o estranho
+canto de p�ssaros nativos, mas n�o consegue ver nenhum.  A n�voa densa que
+cobre voc� n�o permite que voc� enxergue direito, fazendo-o escorregar na
+lama repetidas vezes.  O caminho segue para leste ou volta para sudoeste.
+~
+115 393289 0 0 0 3
+D1
+~
+~
+0 -1 11535
+D9
+~
+~
+0 -1 11555
+S
+#11535
+Khura, O P�ntano Arredio~
+   Voc� est� caminhando por sobre o terreno enlameado do p�ntano.  Ao seu
+redor, grandes espinhais parecem tentar mant�-lo na mesma trilha, al�m de
+esconder o terreno a seu redor.  Vez ou outra voc� v� o outro lado desses
+arbustos e percebe que est� na parte mais segura do lugar pois � a �nica
+regi�o que n�o est� coberta por borbulhante �gua lamacenta.
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11536
+D3
+~
+~
+0 -1 11534
+S
+#11536
+Khura, O P�ntano Arredio~
+   Os espinhos que acompanham o caminho est�o cada vez mais pr�ximos de
+voc�, arranhando-o seguidas vezes.  Voc� sente que ter� dificuldade para
+caminhar daqui pra frente pois, seguindo com os olhos at� onde a trilha
+parece ir, percebe que ela fica cada vez mais estreita e perigosa.
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11537
+D1
+~
+~
+0 -1 11538
+D2
+~
+~
+0 -1 11535
+D3
+~
+~
+0 -1 11553
+S
+#11537
+Khura, O P�ntano Arredio~
+   Voc� est� caminhando por uma estreita trilha que segue, ladeada por
+grandes espinhais, dentro do p�ntano.  Est� cada vez mais dif�cil caminhar
+por aqui pois, al�m de uma densa n�voa cobrir todo o percurso e os espinhos
+o arranharem, a lama chega agora at� seus joelhos.  Voc� tamb�m n�o gosta
+muito do som de �gua borbulhando que parece estar cada vez mais perto...
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11547
+D1
+~
+~
+0 -1 11539
+D2
+~
+~
+0 -1 11537
+S
+#11538
+Khura, O P�ntano Arredio~
+   Voc� est� caminhando por uma estreita trilha que segue, ladeada por
+grandes espinhais, dentro do p�ntano.  Est� cada vez mais dif�cil caminhar
+por aqui pois, al�m de uma densa n�voa cobrir todo o percurso e os espinhos
+o arranharem, a lama chega agora at� seus joelhos.  Voc� tamb�m n�o gosta
+muito do som de �gua borbulhando que parece estar cada vez mais perto...
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11543
+D1
+~
+~
+0 -1 11541
+D2
+~
+~
+0 -1 11539
+D3
+~
+~
+0 -1 11536
+S
+#11539
+Khura, O P�ntano Arredio~
+   Voc� caminha por entre os espinhais com muito cuidado, tentando n�o se
+arranhar nem atolar na lama.  A n�voa densa que cobre tudo aqui n�o permite
+que voc� veja nem um palmo diante do nariz, mas n�o impede que voc� ou�a o
+som de alguma coisa (parece �gua) borbulhando.  � poss�vel seguir nas quatro
+dire��es cardeais.
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11538
+D1
+~
+~
+0 -1 11551
+D2
+~
+~
+0 -1 11540
+D3
+~
+~
+0 -1 11537
+S
+#11540
+Khura, O P�ntano Arredio~
+   Voc� est� caminhando por uma estreita trilha que segue, ladeada por
+grandes espinhais, dentro do p�ntano.  Est� cada vez mais dif�cil caminhar
+por aqui pois, al�m de uma densa n�voa cobrir todo o percurso e os espinhos
+o arranharem, a lama chega agora at� seus joelhos.  Voc� tamb�m n�o gosta
+muito do som de �gua borbulhando que parece estar cada vez mais perto...
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11539
+D1
+~
+~
+0 -1 11561
+D3
+~
+~
+0 -1 11541
+S
+#11541
+Khura, O P�ntano Arredio~
+   Voc� est� coberto de lama at� a cintura, foi arranhado impiedosamente
+pelos espinhais, n�o enxerga nada al�m de n�voa, sente um cheiro muito
+esquisito vindo do norte, ouve o som parecido com �gua na fervura e continua
+firme em sua explora��o...  Boa sorte, mas ningu�m lhe promete sucesso
+aqui...
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11542
+D1
+~
+~
+0 -1 11540
+D3
+~
+~
+0 -1 11538
+S
+#11542
+O Ataque de Khura~
+Definitivamente, voc� n�o � s�bio!
+
+E por isso, foi tragado por uma das gargantas de Khura!
+
+HAHAHAHA!!!!!!!!
+
+.... sinta seu corpo se dissolver na lama fervente do Segundo Guardi�o ....
+
+.... �, voc� j� morreu ....
+~
+115 6 0 0 0 0
+S
+#11543
+Khura, O P�ntano Arredio~
+   Voc� est� caminhando por sobre o terreno enlameado do p�ntano.  Ao seu
+redor, grandes espinhais parecem tentar mant�-lo na mesma trilha, al�m de
+esconder o terreno a seu redor.  Vez ou outra voc� v� o outro lado desses
+arbustos e percebe que est� na parte mais segura do lugar pois � a �nica
+regi�o que n�o est� coberta por borbulhante �gua lamacenta.
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11533
+D1
+~
+~
+0 -1 11550
+D2
+~
+~
+0 -1 11538
+D3
+~
+~
+0 -1 11544
+S
+#11544
+Khura, O P�ntano Arredio~
+   Os espinhos que acompanham o caminho est�o cada vez mais pr�ximos de
+voc�, arranhando-o seguidas vezes.  Voc� sente que ter� dificuldade para
+caminhar daqui pra frente pois, seguindo com os olhos at� onde a trilha
+parece ir, percebe que ela fica cada vez mais estreita e perigosa.
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11545
+D1
+~
+~
+0 -1 11543
+D2
+~
+~
+0 -1 11534
+D9
+~
+~
+0 -1 11552
+S
+#11545
+Khura, O P�ntano Arredio~
+   Voc� est� caminhando por uma estreita trilha que segue, ladeada por
+grandes espinhais, dentro do p�ntano.  Est� cada vez mais dif�cil caminhar
+por aqui pois, al�m de uma densa n�voa cobrir todo o percurso e os espinhos
+o arranharem, a lama chega agora at� seus joelhos.  Mais al�m, ao norte,
+voc� percebe que uma luz avermelhada atravessando a n�voa.
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11546
+D2
+~
+~
+0 -1 11544
+S
+#11546
+Khura, O P�ntano Arredio~
+   Voc� caminha por entre os espinhais com muito cuidado, tentando n�o se
+arranhar nem atolar na lama.  A n�voa densa que cobre tudo aqui n�o permite
+que voc� veja nem um palmo diante do nariz, mas uma estranha luz avermelhada
+parece atravessar essa barreira e sinalizar para voc�.  As �nicas dire��es
+que voc� pode seguir s�o norte e sul.
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11548
+D2
+~
+~
+0 -1 11545
+D3
+~
+~
+0 -1 11547
+S
+#11547
+Khura, O P�ntano Arredio~
+   Voc� est� bem no meio de um c�rculo de altos espinhais.  O solo n�o �
+firme aqui, fazendo com que voc� se sinta afundando na lama quente.  Opa!
+Voc� est� realmente afundando!  Mas.. espere!  Onde est� a sa�da??
+~
+115 393289 0 0 0 3
+S
+#11548
+Khura, O P�ntano Arredio~
+   Voc� caminha com dificuldade sobre o solo lamacento do p�ntano.  Grandes
+espinhais limitam o espa�o que voc� pode andar, al�m de dificultarem a vis�o
+dos arredores.  Uma densa n�voa cobre a trilha, acabando com suas esperan�as
+de ver pelo menos para onde voc� est� indo.  Uma luz avermelhada, vinda do
+norte, parece indicar-lhe o caminho.
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11549
+D2
+~
+~
+0 -1 11546
+D3
+~
+~
+0 -1 11561
+S
+#11549
+Khura, O P�ntano Arredio~
+   A lama agora o cobre at� a regi�o dos quadris.  � dif�cil continuar pois
+voc� se sente muito cansado.  O ar aqui tamb�m parece mais pesado, e a n�voa
+t�o densa que voc� imagina conseguir apalp�-la.  Os espinhos se tornaram
+mais compridos e afiados, machucando-o ainda mais.  Realmente, n�o h� muita
+coisa o impelindo a continuar...  S� essa curiosidade m�rbida em
+descobrir que estranha luz � essa que parece o chamar...
+~
+115 393289 0 0 0 3
+D1
+~
+~
+0 -1 11550
+D2
+~
+~
+0 -1 11548
+D6
+~
+~
+0 -1 11555
+S
+#11550
+Khura, O P�ntano Arredio~
+   Voc� est� praticamente nadando nessa lama.  Al�m da dificuldade de
+caminhar por esse solo lodoso, voc� ainda tem que ter o m�ximo de cuidado ao
+se mexer devido aos espinhais cada vez mais pr�ximos...  - Voc� agora sabe o
+motivo desse lugar ser chamado de P�ntano Arredio...  E o que ser� Khura?
+- Mas, como voc� n�o � bobo a ponto de parar pra pensar nesse tipo de coisa
+justamente agora, voc� segue em dire��o �quela estranha luz avermelhada que,
+cada vez mais forte, atravessa at� a densa n�voa que cobre tudo.
+~
+115 393289 0 0 0 3
+D1
+~
+~
+0 -1 11560
+D2
+~
+~
+0 -1 11551
+D3
+~
+~
+0 -1 11549
+D8
+~
+~
+0 -1 11547
+S
+#11551
+Khura, O P�ntano Arredio~
+   Voc� est� tentando caminhar com seguran�a na estreita trilha de lama que
+passa pelo p�ntano, mas a dificuldade � tamanha que parece que o fim dessa
+jornada ser� sua morte.  Os espinhais continuam arranhando-o, mas voc� est�
+come�ando a se acostumar com as constante dilacera��es.  Pensando bem, voc�
+se sente tranq�ilizado por haver uma densa n�voa cobrindo tudo, impedindo
+que voc� se desanime ainda mais com o que h� pela frente.
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11550
+D1
+~
+~
+0 -1 11554
+D2
+~
+~
+0 -1 11552
+D3
+~
+~
+0 -1 11539
+S
+#11552
+Khura, O P�ntano Arredio~
+   Voc� est� caminhando por uma estreita trilha que segue, ladeada por
+grandes espinhais, dentro do p�ntano.  Est� cada vez mais dif�cil caminhar
+por aqui pois, al�m de uma densa n�voa cobrir todo o percurso e os espinhos
+o arranharem, a lama chega agora at� seus joelhos.  Mais al�m, a leste,
+voc� percebe que uma luz avermelhada atravessando a n�voa.
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11551
+D1
+~
+~
+0 -1 11553
+D2
+~
+~
+0 -1 11555
+D3
+~
+~
+0 -1 11562
+S
+#11553
+Khura, O P�ntano Arredio~
+   Voc� caminha por entre os espinhais com muito cuidado, tentando n�o se
+arranhar nem atolar na lama.  A n�voa densa que cobre tudo aqui n�o permite
+que voc� veja nem um palmo diante do nariz, mas uma estranha luz avermelhada
+parece atravessar essa barreira e sinalizar para voc�.  As dire��es que voc�
+pode seguir s�o norte, leste e oeste.
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11554
+D1
+~
+~
+0 -1 11536
+D3
+~
+~
+0 -1 11552
+S
+#11554
+Khura, O P�ntano Arredio~
+   Voc� se sente em um verdadeiro labirinto de espinhos e lama.  O solo
+pantanoso o cobre at� a cintura, dificultando sua locomo��o.  Al�m dos altos
+espinhais que dilaceram constantemente sua carne, voc� v� apenas n�voa densa
+e, atravessando-a, uma estranha luz avermelhada que parece o atrair.
+~
+115 393289 0 0 0 3
+D2
+~
+~
+0 -1 11553
+D3
+~
+~
+0 -1 11551
+D7
+~
+~
+0 -1 11556
+S
+#11555
+Uma Trilha Para o P�ntano~
+   Voc� est� andando por uma estranha trilha coberta por min�sculas pedras
+negras.  Os arbustos que ladeavam esse caminho param de crescer exatamente
+quando voc� chega no p�ntano, tendo seu lugar tomado por grandes e perigosos
+espinhais.  Voc� pode entrar no p�ntano seguindo nordeste ou noroeste, j�
+que a trilha se bifurca.  Apenas cuidado para n�o se arranhar com os
+espinhos.
+~
+115 393293 0 0 0 3
+D2
+~
+~
+0 -1 11532
+D6
+~
+~
+0 -1 11533
+D7
+~
+~
+0 -1 11534
+S
+#11556
+Khura, O P�ntano Arredio~
+   Tudo de repente ficou escuro.  Voc� sente a textura pegajosa da lama em
+seu corpo, assim como percebe ainda estar rodeado pelos espinhos.  Voc� n�o
+tem a m�nima id�ia de para onde deve ir agora, mas consegue identificar de
+onde a luz avermelhada vinha: do norte e noroeste...  Interessante ela
+atra�-lo assim de t�o longe....
+~
+115 393289 0 0 0 3
+D0
+Uma forte luz avermelhada parece vir dali...
+~
+~
+0 -1 11557
+D2
+~
+~
+0 -1 11559
+D6
+Uma forte luz avermelhada parece vir dali...
+~
+~
+0 -1 11558
+D9
+~
+~
+0 -1 11554
+S
+#11557
+O Ataque de Khura~
+Voc� est� justamente em frente a um dos olhos do Segundo Guardi�o!!
+
+Khura o abre completamente, fazendo incidir sobre voc� a mortal luz de seu olhar!
+
+... voc� desintegra...
+
+                               e...
+
+                                    ... xi! virou p�...
+
+~
+115 6 0 0 0 0
+S
+#11558
+O Ataque de Khura~
+Voc� est� justamente em frente a um dos olhos do Segundo Guardi�o!!
+
+Khura o abre completamente, fazendo incidir sobre voc� a mortal luz de seu olhar!
+
+... voc� desintegra...
+
+                               e...
+
+                                    ... xi! virou p�...
+
+~
+115 6 0 0 0 0
+S
+#11559
+O Ataque de Khura~
+   Voc� est� cercado por altos espinhais.  Infelizmente, parece que seu
+caminho foi bloqueado por um muro de espinhos, sendo muito dif�cil.
+A densa n�voa do p�ntano parece impregnar tudo aqui, al�m do borbulhar
+constante que preenche seus ouvidos. Algo lhe diz para ter muita cautela
+aqui, pois quando se diz p�ntano arredio, n�o � brincadeira...  Cuidado!
+~
+115 262213 0 0 0 3
+D0
+H� uma estranha luz avermelhada vindo dali...
+~
+~
+0 -1 11556
+D1
+Voc� v� apenas um enorme muro de espinhos...
+~
+orif�cio fechadura~
+0 11509 11563
+E
+orif�cio fechadura~
+Est� tudo claro do outro lado!  Voc� consegue avistar um bel�ssimo campo e,
+bem mais a frente... Algo grande, mas muito distante.
+~
+E
+muro~
+O muro, enorme e repleto de espinhos afiad�ssimos, possui um orif�cio, na
+altura de sua cabe�a, do tamanho de um pulso.  Uma estranha luz passa por
+ele.
+~
+S
+#11560
+Khura, O P�ntano Arredio~
+   Voc� est� caminhando por uma estreita trilha que segue, ladeada por
+grandes espinhais, dentro do p�ntano.  Est� cada vez mais dif�cil caminhar
+por aqui pois, al�m de uma densa n�voa cobrir todo o percurso e os espinhos
+o arranharem, a lama chega agora at� seus joelhos.  Mais al�m, a oeste,
+voc� percebe que uma luz avermelhada atravessando a n�voa.
+~
+115 393289 0 0 0 3
+D3
+~
+~
+0 -1 11550
+S
+#11561
+Khura, O P�ntano Arredio~
+   Os espinhos que acompanham o caminho est�o cada vez mais pr�ximos de
+voc�, arranhando-o seguidas vezes.  Voc� sente que ter� dificuldade para
+caminhar daqui pra frente pois, seguindo com os olhos at� onde a trilha
+parece ir, percebe que ela fica cada vez mais estreita e perigosa.
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11534
+D1
+~
+~
+0 -1 11548
+D2
+~
+~
+0 -1 11537
+S
+#11562
+Khura, O P�ntano Arredio~
+   Os espinhos que acompanham o caminho est�o cada vez mais pr�ximos de
+voc�, arranhando-o seguidas vezes.  Voc� sente que ter� dificuldade para
+caminhar daqui pra frente pois, seguindo com os olhos at� onde a trilha
+parece ir, percebe que ela fica cada vez mais estreita e perigosa.
+~
+115 393289 0 0 0 3
+D0
+~
+~
+0 -1 11540
+D1
+~
+~
+0 -1 11533
+D2
+~
+~
+0 -1 11537
+D3
+~
+~
+0 -1 11541
+S
+#11563
+O Outro Lado do Port�o~
+   Voc� fica t�o estupefato com a mudan�a de paisagem que perde o f�lego.
+Um caudaloso rio de �guas l�mpidas corre em um pequeno vale entre campos e
+colinas cobertas de grama verde-esmeralda e flores multicoloridas.  Quando
+voc� se volta para dar uma �ltima olhada no port�o que leva a Khura, a
+surpresa � ainda maior: Khura sumiu sem deixar rastros.  � como se nunca
+tivesse existido o grande p�ntano...
+~
+115 64 0 0 0 2
+D0
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11598
+D1
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11564
+D2
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11594
+D3
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11564
+S
+#11564
+Vastos Campos e Infid�veis Colinas~
+   Voc� est� caminhando pelos extensos campos e subindo o suave declive das
+colinas desse lugar.  N�o h� sinal de ser vivo algum aqui, o que o deixa
+mais temeroso ainda...  Seu instinto de aventureiro lhe diz para seguir em
+dire��o ao rio, acompanhando o caminho entre as colinas.
+~
+115 64 0 0 0 2
+D0
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11565
+D1
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11563
+D2
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11596
+D3
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11563
+S
+#11565
+Vastos Campos e Infid�veis Colinas~
+   Voc� est� caminhando pelos extensos campos e subindo o suave declive das
+colinas desse lugar.  N�o h� sinal de ser vivo algum aqui, o que o deixa
+mais temeroso ainda...  Voc� decidiu seguir o conselho que seus instintos
+lhe deram e se dirige ao imenso rio.
+~
+115 64 0 0 0 2
+D0
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11591
+D1
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11598
+D2
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11564
+D3
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11564
+S
+#11566
+O Rio Ikshumati~
+   Voc� navega nas revoltosas �guas de Ikshumati.  A sua maior preocupa��o
+no momento � n�o cair de sua embarca��o, pois, definitivamente, esse rio �
+bem mais profundo do que voc� gostaria...  Uma estranha luz parece gui�-lo
+para longe da margem, sendo emitida do fundo das �guas. A voz continua a
+atorment�-lo, assim como uma melodia que parece quase deix�-lo em estado
+de transe...
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11567
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11573
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11569
+S
+#11567
+O Rio Ikshumati~
+   Ikshumati n�o parece nada satisfeito com sua presen�a aqui...  Suas �guas
+parecem pequenas m�os tentando virar seu barco para depois o afogar.  Uma
+l�nguida voz sussurra em seu ouvidos: ela manda-o embora daqui.  J� a
+melodia que ressoa dentro de sua cabe�a parece ficar mais forte � medida que
+voc� se afasta da margem, dando-lhe a sensa��o de que ela est� relacionada
+com a estranha luz emitida no fundo do rio.  Cuidado...
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11568
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11572
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11566
+S
+#11568
+O Rio Ikshumati~
+   Voc� tomou coragem e decidiu entrar no rio.  Uma estranha melodia come�a
+a ressoar dentro de sua cabe�a, e um voz l�nguida parece sussurar em seus
+ouvidos: " Saia de Ikshumati...  Voc� nele n�o � bem-vindo...  N�o profane
+as �guas de Ikshumati..." As �guas do rio se tornaram mais revoltas, e voc�
+tem dificuldade em manter sua embarca��o inteira.  Procurando avistar a
+outra margem do rio, voc� v� uma estranha luz sendo emitida do fundo do
+rio...
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11578
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11571
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11567
+D3
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11593
+S
+#11569
+O Rio Ikshumati~
+   As �guas do rio parecem ser suas verdadeiras inimigas no momento.  �
+quase imposs�vel se manter em sua embarca��o ou pelo menos mant�-la
+inteira...  A luz emitida do fundo do rio parece mais intensa a medida que
+voc� se afasta da margem, o que n�o � consolo algum...  A melodia continua a
+ressoar, e a voz sussurra cada vez mais repetitiva...  Seu corpo balan�a de
+um lado para o outro, como que em transe.
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11570
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11574
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11570
+S
+#11570
+O Rio Ikshumati~
+   Voc� est� navegando pelo Ikshumati, um rio de belas e revoltas �guas de
+tom viol�ceo.  O rio parece extremamente disposto a n�o deix�-lo permanecer
+muito tempo vivo, jogando sua embarca��o de um lado para outro como se fosse
+um brinquedo.  Uma luz, vindo do fundo das �guas, se intensifica cada vez
+mais, atraindo-o, enquanto uma voz repetitiva tenta afast�-lo daqui.  Voc�,
+como que em transe, balan�a o corpo acompanhando o ritmo de uma mon�tona
+melodia.
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11569
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11575
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11575
+S
+#11571
+O Rio Ikshumati~
+   Ikshumati n�o parece nada satisfeito com sua presen�a aqui...  Suas �guas
+parecem pequenas m�os tentando virar seu barco para depois o afogar.  Uma
+l�nguida voz sussurra em seu ouvidos: ela manda-o embora daqui.  J� a
+melodia que ressoa dentro de sua cabe�a parece ficar mais forte � medida que
+voc� se afasta da margem, dando-lhe a sensa��o de que ela est� relacionada
+com a estranha luz emitida no fundo do rio.  Cuidado...
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11573
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11578
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11572
+D3
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11578
+S
+#11572
+O Rio Ikshumati~
+   Sua embarca��o � quase destru�da pelas revoltas �guas do rio Ikshumati,
+cuja disposi��o em deix�-lo permanecer mais tempo vivo parece ser cada vez
+menor.  Mas voc� continua pois, ao fixar seus olhos na estranha luz do fundo
+das �guas, sente uma for�a maior atraindo, mais forte at� que a repetitiva
+voz que o manda embora e que a mon�tona melodia que faz seu corpo vibrar.
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11571
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11582
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11573
+D3
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11567
+S
+#11573
+O Rio Ikshumati~
+   As �guas do rio parecem ser suas verdadeiras inimigas no momento.  �
+quase imposs�vel se manter em sua embarca��o ou pelo menos mant�-la
+inteira...  A luz emitida do fundo do rio parece mais intensa a medida que
+voc� se afasta da margem, o que n�o � consolo algum...  A melodia continua a
+ressoar, e a voz sussurra cada vez mais repetitiva...  Seu corpo balan�a de
+um lado para o outro, como que em transe.
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11572
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11579
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11574
+D3
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11566
+S
+#11574
+O Rio Ikshumati~
+   Ikshumati parece cada vez mais bravio: suas �guas parecem in�meras m�os
+tentando agarr�-lo, segurando seus bra�os e pernas enquanto tentam virar sua
+embarca��o.  Uma intensa luz sai do fundo das �guas, vinda de longe, mas
+extremamente intensa.  Uma suave melodia preenche sua cabe�a, enquanto uma
+repetitiva voz sussurra em seu ouvido, pedindo para que parta do rio.
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11573
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11579
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11576
+D3
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11569
+S
+#11575
+O Rio Ikshumati~
+   Voc� navega nas revoltosas �guas de Ikshumati.  A sua maior preocupa��o
+no momento � n�o cair de sua embarca��o, pois, definitivamente, esse rio �
+bem mais profundo do que voc� gostaria...  Uma estranha luz parece gui�-lo
+para longe da margem, sendo emitida do fundo das �guas. A voz continua a
+atorment�-lo, assim como uma melodia que parece quase deix�-lo em estado
+de transe...
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11574
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11567
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11580
+D3
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11570
+S
+#11576
+O Rio Ikshumati~
+   Sua embarca��o � quase destru�da pelas revoltas �guas do rio Ikshumati,
+cuja disposi��o em deix�-lo permanecer mais tempo vivo parece ser cada vez
+menor.  Mas voc� continua pois, ao fixar seus olhos na estranha luz do fundo
+das �guas, sente uma for�a maior atraindo, mais forte at� que a repetitiva
+voz que o manda embora e que a mon�tona melodia que faz seu corpo vibrar.
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11581
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11581
+D3
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11574
+S
+#11577
+O Rio Ikshumati~
+   Voc� est� desesperado pois, navegando pelo Ikshumati, tem a impress�o que
+s� a morte far� com que voc� saia daqui.  At� que todas as atividades das
+�guas param...  A entranha luz, a �nica coisa que lhe dava for�as para
+continuar, parece ter formado um c�rculo de luz que o envolve e sobe at� os
+c�us.  Voc� se sente protegido...  e tentado a mergulhar e descobrir qual �
+a fonte de tal...  magia?
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11590
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11582
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11572
+D3
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11569
+D5
+Ali parece haver uma ben�fica magia... Parece...
+~
+~
+0 -1 11300
+S
+#11578
+O Rio Ikshumati~
+   Voc� est� navegando pelo Ikshumati, um rio de belas e revoltas �guas de
+tom viol�ceo.  O rio parece extremamente disposto a n�o deix�-lo permanecer
+muito tempo vivo, jogando sua embarca��o de um lado para outro como se fosse
+um brinquedo.  Uma luz, vindo do fundo das �guas, se intensifica cada vez
+mais, atraindo-o, enquanto uma voz repetitiva tenta afast�-lo daqui.  Voc�,
+como que em transe, balan�a o corpo acompanhando o ritmo de uma mon�tona
+melodia.
+~
+115 393280 0 0 0 7
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11583
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11584
+D3
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11571
+S
+#11579
+O Rio Ikshumati~
+   Voc� navega nas revoltosas �guas de Ikshumati.  A sua maior preocupa��o
+no momento � n�o cair de sua embarca��o, pois, definitivamente, esse rio �
+bem mais profundo do que voc� gostaria...  Uma estranha luz parece gui�-lo
+para longe da margem, sendo emitida do fundo das �guas. A voz continua a
+atorment�-lo, assim como uma melodia que parece quase deix�-lo em estado
+de transe...
+~
+115 393280 0 0 0 7
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11585
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11580
+D3
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11573
+S
+#11580
+O Rio Ikshumati~
+   Voc� est� navegando pelo Ikshumati, um rio de belas e revoltas �guas de
+tom viol�ceo.  O rio parece extremamente disposto a n�o deix�-lo permanecer
+muito tempo vivo, jogando sua embarca��o de um lado para outro como se fosse
+um brinquedo.  Uma luz, vindo do fundo das �guas, se intensifica cada vez
+mais, atraindo-o, enquanto uma voz repetitiva tenta afast�-lo daqui.  Voc�,
+como que em transe, balan�a o corpo acompanhando o ritmo de uma mon�tona
+melodia.
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11579
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11569
+D3
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11575
+S
+#11581
+O Rio Ikshumati~
+   Sua embarca��o � quase destru�da pelas revoltas �guas do rio Ikshumati,
+cuja disposi��o em deix�-lo permanecer mais tempo vivo parece ser cada vez
+menor.  Mas voc� continua pois, ao fixar seus olhos na estranha luz do fundo
+das �guas, sente uma for�a maior atraindo, mais forte at� que a repetitiva
+voz que o manda embora e que a mon�tona melodia que faz seu corpo vibrar.
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11576
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11576
+S
+#11582
+O Rio Ikshumati~
+   Ikshumati parece cada vez mais bravio: suas �guas parecem in�meras m�os
+tentando agarr�-lo, segurando seus bra�os e pernas enquanto tentam virar sua
+embarca��o.  Uma intensa luz sai do fundo das �guas, vinda de longe, mas
+extremamente intensa.  Uma suave melodia preenche sua cabe�a, enquanto uma
+repetitiva voz sussurra em seu ouvido, pedindo para que parta do rio.
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11581
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11588
+S
+#11583
+O Rio Ikshumati~
+   Voc� navega nas revoltosas �guas de Ikshumati.  A sua maior preocupa��o
+no momento � n�o cair de sua embarca��o, pois, definitivamente, esse rio �
+bem mais profundo do que voc� gostaria...  Uma estranha luz parece gui�-lo
+para longe da margem, sendo emitida do fundo das �guas. A voz continua a
+atorment�-lo, assim como uma melodia que parece quase deix�-lo em estado
+de transe...
+~
+115 393280 0 0 0 7
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11587
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11584
+D3
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11577
+S
+#11584
+O Rio Ikshumati~
+   Sua embarca��o � quase destru�da pelas revoltas �guas do rio Ikshumati,
+cuja disposi��o em deix�-lo permanecer mais tempo vivo parece ser cada vez
+menor.  Mas voc� continua pois, ao fixar seus olhos na estranha luz do fundo
+das �guas, sente uma for�a maior atraindo, mais forte at� que a repetitiva
+voz que o manda embora e que a mon�tona melodia que faz seu corpo vibrar.
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11578
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11589
+D3
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11575
+S
+#11585
+O Rio Ikshumati~
+   Voc� est� navegando pelo Ikshumati, um rio de belas e revoltas �guas de
+tom viol�ceo.  O rio parece extremamente disposto a n�o deix�-lo permanecer
+muito tempo vivo, jogando sua embarca��o de um lado para outro como se fosse
+um brinquedo.  Uma luz, vindo do fundo das �guas, se intensifica cada vez
+mais, atraindo-o, enquanto uma voz repetitiva tenta afast�-lo daqui.  Voc�,
+como que em transe, balan�a o corpo acompanhando o ritmo de uma mon�tona
+melodia.
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11581
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11586
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11580
+S
+#11586
+O Rio Ikshumati~
+   Voc� navega nas revoltosas �guas de Ikshumati.  A sua maior preocupa��o
+no momento � n�o cair de sua embarca��o, pois, definitivamente, esse rio �
+bem mais profundo do que voc� gostaria...  Uma estranha luz parece gui�-lo
+para longe da margem, sendo emitida do fundo das �guas. A voz continua a
+atorment�-lo, assim como uma melodia que parece quase deix�-lo em estado
+de transe...
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11578
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11567
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11587
+D3
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11585
+S
+#11587
+O Rio Ikshumati~
+   Sua embarca��o � quase destru�da pelas revoltas �guas do rio Ikshumati,
+cuja disposi��o em deix�-lo permanecer mais tempo vivo parece ser cada vez
+menor.  Mas voc� continua pois, ao fixar seus olhos na estranha luz do fundo
+das �guas, sente uma for�a maior atraindo, mais forte at� que a repetitiva
+voz que o manda embora e que a mon�tona melodia que faz seu corpo vibrar.
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11586
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11566
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11588
+D3
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11584
+S
+#11588
+O Rio Ikshumati~
+   Ikshumati n�o parece nada satisfeito com sua presen�a aqui...  Suas �guas
+parecem pequenas m�os tentando virar seu barco para depois o afogar.  Uma
+l�nguida voz sussurra em seu ouvidos: ela manda-o embora daqui.  J� a
+melodia que ressoa dentro de sua cabe�a parece ficar mais forte � medida que
+voc� se afasta da margem, dando-lhe a sensa��o de que ela est� relacionada
+com a estranha luz emitida no fundo do rio.  Por um momento, voc� parece
+vislumbrar algo diferente nos c�us, um estranho brilho que se aproxima e,
+trazendo o som dos trov�es, desenha um imenso raio sobre sua cabe�a.  Para
+sua surpresa, ele n�o se apagou, estando a apenas alguns metros acima de
+voc�.
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11587
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11569
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11589
+D3
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11582
+D4
+~
+~
+1 -1 11600
+S
+#11589
+O Rio Ikshumati~
+   Ikshumati parece cada vez mais bravio: suas �guas parecem in�meras m�os
+tentando agarr�-lo, segurando seus bra�os e pernas enquanto tentam virar sua
+embarca��o.  Uma intensa luz sai do fundo das �guas, vinda de longe, mas
+extremamente intensa.  Uma suave melodia preenche sua cabe�a, enquanto uma
+repetitiva voz sussurra em seu ouvido, pedindo para que parta do rio.
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11588
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11570
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11590
+D3
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11584
+S
+#11590
+O Rio Ikshumati~
+   Sua embarca��o � quase destru�da pelas revoltas �guas do rio Ikshumati,
+cuja disposi��o em deix�-lo permanecer mais tempo vivo parece ser cada vez
+menor.  Mas voc� continua pois, ao fixar seus olhos na estranha luz do fundo
+das �guas, sente uma for�a maior atraindo, mais forte at� que a repetitiva
+voz que o manda embora e que a mon�tona melodia que faz seu corpo vibrar.
+~
+115 393280 0 0 0 7
+D0
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11589
+D1
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11575
+D2
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11569
+D3
+Voc� v� Ikshumati... e mais nada...
+~
+~
+0 -1 11581
+S
+#11591
+Vastos Campos e Infid�veis Colinas~
+   Voc� est� caminhando nesse lugar completamente estranho e pensa: "Isso
+n�o � exatamente como eu imaginava que Patala seria...".  O Mundo Oculto, o
+mais baixo plano que existe, parece prometer mais surpresas...  Enquanto
+isso, voc� observa o rio, agora mais pr�ximo, e se assusta ao constatar que
+s� � poss�vel enxergar uma das margens...
+~
+115 64 0 0 0 2
+D0
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11564
+D1
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11592
+D2
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11565
+D3
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11596
+S
+#11592
+Vastos Campos e Infid�veis Colinas~
+   Voc� est� seguindo em dire��o a um grande rio, subindo o suave
+arredondado de colinas e passando por extensos campos.  Pela primeira vez em
+sua jornada, voc� tem tempo de olhar para o estranho c�u de Patala.
+Acompanhando o curso do rio com os olhos, voc� novamente se surpreende: ele
+segue at� al�m do horizonte, vindo de algum lugar antes do nada...
+~
+115 64 0 0 0 2
+D0
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11593
+D1
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11599
+D2
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11564
+D3
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11591
+S
+#11593
+A Margem do Rio~
+   Voc� est� lentamente se aproximando da margem do grande rio.  Quando
+chega, observa o que h� pela frente...  As �guas refletem o tom viol�ceo dos
+c�us, parecendo terem roubado a cor da mais sacra flor de l�tus.  Tentando
+descobrir se o rio � muito fundo, voc� percebe que algu�m que n�o sabe nadar
+facilmente se afogaria aqui.
+~
+115 64 0 0 0 2
+D0
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11591
+D1
+Um rio de ex�ticas �guas viol�ceas margeia esse lado das colinas.
+~
+~
+0 -1 11568
+D2
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11593
+D3
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11598
+S
+#11594
+Vastos Campos e Infid�veis Colinas~
+   Voc� est� caminhando pelos extensos campos e subindo o suave declive das
+colinas desse lugar.  N�o h� sinal de ser vivo algum aqui, o que o deixa
+mais temeroso ainda...  Seu instinto de aventureiro lhe diz para seguir em
+dire��o ao rio, acompanhando o caminho entre as colinas.
+~
+115 64 0 0 0 2
+D0
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11563
+D1
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11596
+D2
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11595
+D3
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11564
+S
+#11595
+Vastos Campos e Infid�veis Colinas~
+   Voc� est� caminhando pelos extensos campos e subindo o suave declive das
+colinas desse lugar.  N�o h� sinal de ser vivo algum aqui, o que o deixa
+mais temeroso ainda...  Voc� decidiu seguir o conselho que seus instintos
+lhe deram e se dirige ao imenso rio.
+~
+115 64 0 0 0 2
+D0
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11594
+D1
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11597
+D2
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11563
+D3
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11598
+S
+#11596
+Vastos Campos e Infid�veis Colinas~
+   Voc� est� caminhando nesse lugar completamente estranho e pensa: "Isso
+n�o � exatamente como eu imaginava que Patala seria...".  O Mundo Oculto, o
+mais baixo plano que existe, parece prometer mais surpresas...  Enquanto
+isso, voc� observa o rio, agora mais pr�ximo, e se assusta ao constatar que
+s� � poss�vel enxergar uma das margens...
+~
+115 64 0 0 0 2
+D0
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11564
+D1
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11591
+D2
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11597
+D3
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11597
+S
+#11597
+Vastos Campos e Infid�veis Colinas~
+   Voc� est� seguindo em dire��o a um grande rio, subindo o suave
+arredondado de colinas e passando por extensos campos.  Pela primeira vez em
+sua jornada, voc� tem tempo de olhar para o estranho c�u de Patala.
+Acompanhando o curso do rio com os olhos, voc� novamente se surpreende: ele
+segue at� al�m do horizonte, vindo de algum lugar antes do nada...
+~
+115 64 0 0 0 2
+D0
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11596
+D1
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11594
+D2
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11599
+D3
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11595
+S
+#11598
+Vastos Campos e Infid�veis Colinas~
+   Voc� est� caminhando nesse lugar completamente estranho e pensa: "Isso
+n�o � exatamente como eu imaginava que Patala seria...".  O Mundo Oculto, o
+mais baixo plano que existe, parece prometer mais surpresas...  Enquanto
+isso, voc� observa o rio, agora mais pr�ximo, e se assusta ao constatar que
+s� � poss�vel enxergar uma das margens...
+~
+115 64 0 0 0 2
+D0
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11565
+D1
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11563
+D2
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11595
+D3
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11565
+S
+#11599
+Vastos Campos e Infid�veis Colinas~
+   Voc� est� seguindo em dire��o a um grande rio, subindo o suave
+arredondado de colinas e passando por extensos campos.  Pela primeira vez em
+sua jornada, voc� tem tempo de olhar para o estranho c�u de Patala.
+Acompanhando o curso do rio com os olhos, voc� novamente se surpreende: ele
+segue at� al�m do horizonte, vindo de algum lugar antes do nada...
+~
+115 64 0 0 0 2
+D0
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11597
+D1
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11564
+D2
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11591
+D3
+Voc� v� apenas vastos campos e colinas...
+~
+~
+0 -1 11592
+S
+$~

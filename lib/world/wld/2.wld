@@ -1,0 +1,1316 @@
+#200
+O Caminho de Terra~
+   Este e' o amplo caminho de terra atraves da viscosa, verde, fresca zona rural de Midgaard.
+   Ha' um grande portao enferrujado em um arco de pedra a leste. O caminho segue em direcao ao oeste.
+ ~
+2 0 0 0 0 2
+D1
+Ha' um portao enferrujado a leste.
+~
+portão enferrujado~
+1 -1 3625
+D3
+O caminho continua para oeste.
+~
+~
+0 -1 201
+E
+arco~
+O arco é feito de blocos grandes de pedra, mas algumas estão no chão impedindo o bom funcionamento do portão.
+~
+S
+#201
+O Caminho de Terra~
+   Este é o amplo caminho de terra atraves da viscosa, verde, fresca zona rural de Midgaard.
+   Ao norte é possivel ver as lindas montanhas Dragonhelm bem ao longe.
+   O caminho de terra continua para o leste e o oeste.
+~
+2 0 0 0 0 2
+D1
+O caminho continua para leste.
+~
+~
+0 -1 200
+D3
+O caminho continua para oeste.
+~
+~
+0 -1 202
+S
+#202
+O Caminho de Terra~
+   Este é o amplo caminho de terra atraves da viscosa, verde, fresca zona rural de Midgaard.
+   Ao norte é possivel ver as lindas montanhas Dragonhelm bem ao longe.
+   O caminho de terra continua para o leste e o oeste.
+~
+2 0 0 0 0 2
+D1
+O caminho continua para leste.
+~
+~
+0 -1 201
+D3
+O caminho continua para oeste.
+~
+~
+0 -1 203
+S
+#203
+Uma Curva no Caminho~
+   Neste ponto do caminho existe uma curva para o norte.
+   O caminho de terra continua para o norte e o oeste.
+~
+2 0 0 0 0 2
+D0
+O caminho faz uma curva para o norte.
+~
+~
+0 -1 204
+D1
+O caminho continua para leste.
+~
+~
+0 -1 202
+S
+#204
+O Caminho de Terra~
+   As terras ao redor estão cobertas por uma fina camada de neve.
+   Ao norte existe uma ponte, coberta de neve e gelo.
+   O caminho de terra continua para o norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+Um ponte congelada pode ser vista ao norte.
+~
+~
+0 -1 205
+D2
+O caminho continua para o sul.
+~
+~
+0 -1 203
+S
+#205
+Uma Ponte Congelada~
+   A ponte é feita de um metal vermelho, com alguns detalhes dourados.  Em cada extremidade tem um grande portal.
+   Por toda a ponte existe uma espessa camada de neve.
+   Há no leste e oeste um pequeno rio congelado.  O caminho continua para o norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+O caminho continua para o norte.
+~
+~
+0 -1 206
+D2
+~
+~
+0 0 204
+S
+#206
+Um Caminho Congelado~
+   Aqui a camada de neve está mais espessa. As vezes é possivel ver um floco de neve caindo.
+   Ao norte existe uma bifurcação no caminho e sul uma ponte coberta de neve.
+~
+2 1048576 0 0 0 14
+D0
+O caminho continua para uma bifurcação.
+~
+~
+0 -1 207
+D2
+O caminho continua para o sul.
+~
+~
+0 -1 205
+S
+#207
+Uma Bifurcacão~
+   Aqui o caminho se divide. A noroeste ele continua em direção a uma grande construção que parece um castelo.
+   A nordeste é possivel ver algumas montanhas e a entrada de uma mina.
+   Uma grande e solitaria árvore cresce a leste, quase sem folhas. As poucas folhas que restam estão cobertas de neve.
+   O caminho continua para sul.
+~
+2 1048576 0 0 0 14
+D2
+O caminho continua para o sul.
+~
+~
+0 -1 206
+D6
+Este caminho leva para o castelo de gelo.
+~
+~
+0 -1 209
+D7
+Este caminho leva para a entrada da mina.
+~
+~
+0 -1 208
+S
+#208
+O Caminho da Mina~
+   Neste lugar, a camada de neve está mais fina. O caminho é um pouco ingreme e bem iluminado.
+   Existe uma bifurcação a sudoeste.
+~
+2 1048576 0 0 0 4
+D9
+Este é o caminho para a bifurcação.
+~
+~
+0 -1 207
+S
+#209
+O Caminho Noroeste~
+   As terras ao redor estão cobertas por uma grossa camada de neve.
+   Ao norte existe um grande castelo azulado. Existe uma bifurcação a sudeste.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 210
+D8
+~
+~
+0 0 207
+S
+#210
+Proximo ao Castelo~
+   Aqui não há neve cobrindo o caminho. Apenas uma camada escorregadia de gelo.  Existe um grande castelo de gelo ao norte.
+   O chão tem um brilho azulado e o caminho continua para norte e sul.
+~
+2 1048580 0 0 0 14
+D0
+~
+~
+0 0 211
+D2
+~
+~
+0 0 209
+S
+#211
+Em Frente aos Portões~
+   Todo o castelo é feito de gelo e brilha com o mesmo brilho azulado do chão.
+   A muralha externa possui seis metros de altura e tem uma aparencia bem reforçada.
+   Uma estrada de gelo acompanha a parte externa da muralha.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 212
+D1
+~
+~
+0 0 244
+D2
+~
+~
+0 0 210
+D3
+~
+~
+0 0 276
+S
+#212
+Os Portões de Gelo~
+   Ao sul portões de gelo foram construidos para proteger este lugar. Feitos de espinhos de gelo que cruzam na diagonal, eles parecem sair da terra.
+    Ao sul é possivel ver a estrada da muralha.
+~
+2 1048580 0 0 0 14
+D0
+~
+~
+0 0 280
+D2
+~
+~
+0 0 211
+S
+#213
+O Pátio Aberto~
+   Aqui é a parte do pátio mais proxima dos portões. Algumas marcas podem ser vistas no chao.
+~
+2 1056768 0 0 0 14
+D0
+~
+~
+0 0 216
+D1
+~
+~
+0 0 214
+D2
+~
+~
+0 0 280
+D3
+~
+~
+0 0 218
+D6
+~
+~
+0 0 217
+D7
+~
+~
+0 0 215
+S
+#214
+O Pátio Aberto~
+   Este é o canto sudeste do pátio. Um pouco mais a sudeste existe uma torre de observação.
+   Algumas marcas podem ser vistas no chão.
+~
+2 1056768 0 0 0 14
+D0
+~
+~
+0 0 215
+D3
+~
+~
+0 0 213
+D8
+~
+~
+0 0 219
+S
+#215
+O Patio Aberto~
+   Este é o canto nordeste do pátio. Um pouco mais a nordeste existe uma torre de observação.
+   Algumas marcas podem ser vistas no chão.
+~
+2 1056768 0 0 0 14
+D2
+~
+~
+0 0 214
+D3
+~
+~
+0 0 216
+D7
+~
+~
+0 0 220
+D8
+~
+~
+0 0 213
+S
+#216
+O Pátio Aberto~
+   Aqui é a parte do pátio mais proxima da parte nobre do castelo. Algumas marcas podem ser vistas no chao.
+~
+2 1056768 0 0 0 14
+D0
+~
+~
+0 0 223
+D1
+~
+~
+0 0 215
+D2
+~
+~
+0 0 213
+D3
+~
+~
+0 0 217
+D8
+~
+~
+0 0 214
+D9
+~
+~
+0 0 218
+S
+#217
+O Pátio Aberto~
+   Este é o canto noroeste do pátio. Um pouco mais a noroeste existe uma torre de observação.
+   Algumas marcas podem ser vistas no chão.
+~
+2 1056768 0 0 0 14
+D1
+~
+~
+0 0 216
+D2
+~
+~
+0 0 218
+D6
+~
+~
+0 0 221
+D8
+~
+~
+0 0 213
+S
+#218
+O Pátio Aberto~
+   Este é o canto sudoeste do pátio. Um pouco mais a sudoeste existe uma torre de observação.
+   Algumas marcas podem ser vistas no chão.
+~
+2 1056768 0 0 0 14
+D0
+~
+~
+0 0 217
+D1
+~
+~
+0 0 213
+D7
+~
+~
+0 0 216
+D9
+~
+~
+0 0 222
+S
+#219
+A Torre Sudeste~
+   Totalmente feita de gelo, esta torre circular mede mais de 30 metros de altura. Possui diametro suficiente para abrigar dezenas de soldados ao mesmo tempo no seu interior.
+~
+2 1048576 0 0 0 14
+D6
+~
+~
+0 0 214
+D8
+~
+~
+0 0 225
+S
+#220
+A Torre Nordeste~
+   Totalmente feita de gelo, esta torre circular mede mais de 30 metros de altura. Possui diametro suficiente para abrigar dezenas de soldados ao mesmo tempo no seu interior.
+~
+2 1048576 0 0 0 14
+D7
+~
+~
+0 0 227
+D9
+~
+~
+0 0 215
+S
+#221
+A Torre Noroeste~
+   Totalmente feita de gelo, esta torre circular mede mais de 30 metros de altura. Possui diametro suficiente para abrigar dezenas de soldados ao mesmo tempo no seu interior.
+~
+2 1048576 0 0 0 14
+D6
+~
+~
+0 0 229
+D8
+~
+~
+0 0 217
+S
+#222
+A Torre Sudoeste~
+   Totalmente feita de gelo, esta torre circular mede mais de 30 metros de altura. Possui diametro suficiente para abrigar dezenas de soldados ao mesmo tempo no seu interior.
+~
+2 1048576 0 0 0 14
+D7
+~
+~
+0 0 218
+D9
+~
+~
+0 0 231
+S
+#223
+A Sala de Espera~
+   Esta sala é destinada a todos que aguardam uma audiencia. No canto leste existe uma escadaria que leva as partes subterraneas.
+~
+2 1048648 0 0 0 14
+D0
+~
+~
+0 0 224
+D2
+~
+~
+0 0 216
+D5
+~
+~
+0 0 233
+S
+#224
+A Sala do Trono~
+   A altura e largura deste lugar são consideraveis. O chão está dividido em três partes, sendo a parte norte em posição mais elevada e a parte sul a mais inferior.
+~
+2 1048584 0 0 0 14
+D2
+~
+~
+0 0 223
+D6
+~
+~
+0 0 278
+D7
+~
+~
+0 0 279
+S
+#225
+Dentro da Torre Sudeste~
+   A area interna e' um espaco circular de varios metros. Este parece ser um espaco dedicado ao treinamento dos soldados.
+   O chao e as paredes tem um brilho azulado.
+   Uma escada em espiral acompanha as paredes e algumas janelas foram colocadas em alguns pontos.
+~
+2 1048584 0 0 0 14
+D4
+~
+~
+0 0 226
+D6
+~
+~
+0 0 219
+S
+#226
+O Topo da Torre Sudeste~
+   Daqui é possivel ver os arredores do castelo e a entrada de uma mina.
+   Um enorme tabuleiro de xadrez e um quartel tambem podem ser vistos a distancia.
+   Algumas fendas permitem atingir os inimigos que se aproximam.
+~
+2 1114112 0 0 0 14
+D5
+~
+~
+0 0 225
+S
+#227
+Dentro da Torre Nordeste~
+ A area interna e' um espaco circular de varios metros. Este parece ser um espaco dedicado a alimentação.
+   O chao e as paredes tem um brilho azulado.
+   Uma escada em espiral acompanha as paredes e algumas janelas foram colocadas em alguns pontos.
+~
+2 1048584 0 0 0 14
+D4
+~
+~
+0 0 228
+D9
+~
+~
+0 0 220
+S
+#228
+O Topo da Torre Nordeste~
+   Daqui é possivel ver os arredores do castelo e a estrada que circula o castelo.
+   Cinco torres podem ser vistas a distancia.
+   Algumas fendas permitem atingir os inimigos que se aproximam.
+~
+2 1114112 0 0 0 14
+D5
+~
+~
+0 0 227
+S
+#229
+Dentro da Torre Noroeste~
+   A area interna e' um espaco circular de varios metros.
+   O chao e as paredes tem um brilho azulado. Alguns espinhos de gelo saem do chão dificultando o caminho.
+   Uma escada em espiral acompanha as paredes e algumas janelas foram colocadas em alguns pontos.
+~
+2 1048584 0 0 0 14
+D4
+~
+~
+0 0 230
+D8
+~
+~
+0 0 221
+S
+#230
+O Topo da Torre Noroeste~
+    Daqui é possivel ver os arredores do castelo e a estrada que circula o castelo.
+   Uma grande floresta pode ser vista a distancia.
+   Algumas fendas permitem atingir os inimigos que se aproximam.
+~
+2 1114112 0 0 0 14
+D5
+~
+~
+0 0 229
+S
+#231
+Dentro da Torre Sudoeste~
+  A area interna e' um espaco circular de varios metros.
+   O chao e as paredes tem um brilho azulado.
+   Uma escada em espiral acompanha as paredes e algumas janelas foram colocadas em alguns pontos.
+   O caminho da porta até as escadas é um pequeno labirinto. Paredes de gelo estão continuamente se movendo e mudando o interior da torre.
+~
+2 1048584 0 0 0 14
+D4
+~
+~
+0 0 232
+D7
+~
+~
+0 0 222
+S
+#232
+O Topo da Torre Sudoeste~
+   Daqui é possivel ver os arredores do castelo.
+   Uma floresta e algumas casas podem ser vistas a distancia.
+   Algumas fendas permitem atingir os inimigos que se aproximam.
+~
+2 1114112 0 0 0 14
+D5
+~
+~
+0 0 231
+S
+#233
+A Prisão Gelada~
+   O ambiente aqui é pouco iluminado. Alguns sons abafados podem ser ouvidos.
+   Uma pesada porta de metal com caveiras penduradas foi colocada aqui.
+   Gritos e sons de tortura parecem vir do outro lado da porta.
+   Um vento gelado pode ser sentido constantemente.
+~
+2 1048585 0 0 0 14
+D0
+~
+~
+0 0 234
+D4
+~
+~
+0 0 223
+S
+#234
+O Corredor da Prisão~
+   Um corredor escuro e estreito. Uma pesada porta de metal foi colocada ao sul.
+   Ao norte o corredor continua na escuridão.
+   O som de gritos continua cada vez mais alto.
+      Um vento gelado pode ser sentido constantemente.
+~
+2 1048585 0 0 0 14
+D0
+~
+~
+0 0 235
+D2
+~
+~
+0 0 233
+S
+#235
+O Corredor da Prisão~
+   Um corredor escuro e estreito. O corredor continua ao norte e ao sul.
+   Ao leste e oeste existem duas celas numeradas.
+~
+2 1048585 0 0 0 14
+D0
+~
+~
+0 0 238
+D1
+~
+~
+0 0 236
+D2
+~
+~
+0 0 234
+D3
+~
+~
+0 0 237
+S
+#236
+Cela 1~
+   Esta cela tem o formato quadrado e bem pequena. Algumas correntes de gelo estão presas no teto.
+   No chão existem algumas poças de água.
+~
+2 1048841 0 0 0 14
+D3
+~
+~
+0 0 235
+S
+#237
+Cela 2~
+   Esta cela é grande o suficiente para caber um grupo pequeno de aventureiros. As paredes são totalmente lisas.
+   Alguns ossos podem ser vistos no canto mais distante da porta. Não é possivel ouvir qualquer som do exterior.
+~
+2 1048617 0 0 0 14
+D1
+~
+~
+0 0 235
+S
+#238
+O Corredor da Prisão~
+   Um corredor escuro e estreito. O corredor continua ao norte e ao sul.
+   Ao leste e oeste existem duas celas numeradas.
+~
+2 1048585 0 0 0 14
+D0
+~
+~
+0 0 241
+D1
+~
+~
+0 0 239
+D2
+~
+~
+0 0 235
+D3
+~
+~
+0 0 240
+S
+#239
+Cela 3~
+   Esta cela possui espinhos de gelo que saem de todos os lados. Qualquer movimento aqui faz aparecer um espinho novo que retorna ao local de origem depois de alguns segundos.
+   Os espinhos parecem ter comprimentos variaveis.
+~
+2 1048585 0 0 0 14
+D3
+~
+~
+0 0 238
+S
+#240
+Cela 4~
+   As paredes são lisas exceto por alguns buracos. O chão tem a forma de uma grade.
+   Jatos de água gelada espirram dos buracos na parede em intervalos irregulares.
+~
+2 1048585 0 0 0 14
+D1
+~
+~
+0 0 238
+S
+#241
+O Final do Corredor~
+   Um corredor escuro e estreito. O corredor continua ao sul.
+   Duas portas de gelo foram coladas aqui.
+~
+2 1048585 0 0 0 14
+D1
+~
+~
+0 0 242
+D2
+~
+~
+0 0 238
+D3
+~
+~
+0 0 243
+S
+#242
+O Dormitorio~
+   As paredes e o chão são a unica coisa de pedra neste local.
+   Algumas camas de madeira foram dispostas ao redor das paredes e nenhum som do exterior pode ser ouvido.
+~
+2 524328 0 0 0 14
+D3
+~
+~
+0 0 241
+S
+#243
+O Deposito de Armas e Armaduras~
+   Diversos manquins com armaduras e armas foram colocados aqui.
+   Os manequins são feitos de gelo como tudo ao redor e dispostos em fileiras.
+   Nenhum som do exterior pode ser ouvido.
+~
+2 1048616 0 0 0 14
+D1
+~
+~
+0 0 241
+S
+#244
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao norte.
+   O caminho segue para leste e oeste.
+~
+2 1048576 0 0 0 14
+D1
+~
+~
+0 0 245
+D3
+~
+~
+0 0 211
+S
+#245
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao norte.
+   O caminho segue para leste e oeste.
+~
+2 1048576 0 0 0 14
+D1
+~
+~
+0 0 246
+D3
+~
+~
+0 0 244
+S
+#246
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao norte.
+   O caminho segue para leste e oeste.
+~
+2 1048576 0 0 0 14
+D1
+~
+~
+0 0 247
+D3
+~
+~
+0 0 245
+S
+#247
+A Curva na Estrada~
+   Esta estrada de gelo acompanha a alta muralha de gelo.
+   O caminho segue norte e oeste.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 248
+D3
+~
+~
+0 0 246
+S
+#248
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao oeste.
+   O caminho segue para norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 249
+D2
+~
+~
+0 0 247
+S
+#249
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao oeste.
+   O caminho segue para norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 250
+D2
+~
+~
+0 0 248
+S
+#250
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao oeste.
+   O caminho segue para norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 251
+D2
+~
+~
+0 0 249
+S
+#251
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao oeste.
+   O caminho segue para norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 252
+D2
+~
+~
+0 0 250
+S
+#252
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao oeste.
+   O caminho segue para norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 253
+D2
+~
+~
+0 0 251
+S
+#253
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao oeste.
+   O caminho segue para norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 254
+D2
+~
+~
+0 0 252
+S
+#254
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao oeste.
+   O caminho segue para norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 255
+D2
+~
+~
+0 0 253
+S
+#255
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao oeste.
+   O caminho segue para norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 256
+D2
+~
+~
+0 0 254
+S
+#256
+A Curva na Estrada~
+   Esta estrada de gelo acompanha a alta muralha.
+   O caminho segue para oeste e sul.
+~
+2 1048576 0 0 0 14
+D2
+~
+~
+0 0 255
+D3
+~
+~
+0 0 257
+S
+#257
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao sul.
+   O caminho segue para leste e oeste.
+~
+2 1048576 0 0 0 14
+D1
+~
+~
+0 0 256
+D3
+~
+~
+0 0 258
+S
+#258
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao sul.
+   Algumas marcas foram deixadas na muralha.
+   O caminho segue para leste e oeste.
+~
+2 1048580 0 0 0 14
+D1
+~
+~
+0 0 257
+D2
+~
+~
+0 0 277
+D3
+~
+~
+0 0 259
+S
+#259
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao sul.
+   O caminho segue para leste e oeste.
+~
+2 1048576 0 0 0 14
+D1
+~
+~
+0 0 258
+D3
+~
+~
+0 0 260
+S
+#260
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao sul.
+   O caminho segue para leste e oeste.
+~
+2 1048576 0 0 0 14
+D1
+~
+~
+0 0 259
+D3
+~
+~
+0 0 261
+S
+#261
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao sul.
+   O caminho segue para leste e oeste.
+~
+2 1048576 0 0 0 14
+D1
+~
+~
+0 0 260
+D3
+~
+~
+0 0 262
+S
+#262
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao sul.
+   O caminho segue para leste e oeste.
+~
+2 1048576 0 0 0 14
+D1
+~
+~
+0 0 261
+D3
+~
+~
+0 0 263
+S
+#263
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao sul.
+   O caminho segue para leste e oeste.
+~
+2 1048576 0 0 0 14
+D1
+~
+~
+0 0 262
+D3
+~
+~
+0 0 264
+S
+#264
+A Curva na Estrada~
+   Esta estrada de gelo acompanha a alta muralha.
+   O caminho segue para leste e sul.
+~
+2 1048576 0 0 0 14
+D1
+~
+~
+0 0 263
+D2
+~
+~
+0 0 265
+S
+#265
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao leste.
+   O caminho segue para norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 264
+D2
+~
+~
+0 0 266
+S
+#266
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao leste.
+   O caminho segue para norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 265
+D2
+~
+~
+0 0 267
+S
+#267
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao leste.
+   O caminho segue para norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 266
+D2
+~
+~
+0 0 268
+S
+#268
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao leste.
+   O caminho segue para norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 267
+D2
+~
+~
+0 0 269
+S
+#269
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao leste.
+   O caminho segue para norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 268
+D2
+~
+~
+0 0 270
+S
+#270
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao leste.
+   O caminho segue para norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 269
+D2
+~
+~
+0 0 271
+S
+#271
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao leste.
+   O caminho segue para norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 270
+D2
+~
+~
+0 0 272
+S
+#272
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao leste.
+   O caminho segue para norte e sul.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 271
+D2
+~
+~
+0 0 273
+S
+#273
+A Curva na Estrada~
+   Esta estrada de gelo acompanha a alta muralha de gelo.
+   O caminho segue norte e leste.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 272
+D1
+~
+~
+0 0 274
+S
+#274
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao norte.
+   O caminho segue para leste e oeste.
+~
+2 1048576 0 0 0 14
+D1
+~
+~
+0 0 275
+D3
+~
+~
+0 0 273
+S
+#275
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao norte.
+   O caminho segue para leste e oeste.
+~
+2 1048576 0 0 0 14
+D1
+~
+~
+0 0 276
+D3
+~
+~
+0 0 274
+S
+#276
+A Estrada da Muralha~
+   Esta estrada de gelo acompanha a alta muralha construida ao norte.
+   O caminho segue para leste e oeste.
+~
+2 1048576 0 0 0 14
+D1
+~
+~
+0 0 211
+D3
+~
+~
+0 0 275
+S
+#277
+A Passagem Secreta~
+   Uma passagem escura e estreita. Enormes teias de aranha cobrem os cantos.
+   O ar aqui parece estagnado, como se nunca se esta passagem nunca tivesse sido utilizada.
+~
+2 1310825 0 0 0 14
+D0
+~
+~
+0 0 258
+D2
+~
+~
+0 0 279
+S
+#278
+O Tesouro do Castelo~
+   Diversas moedas, joias e baus foram empilhados aqui de qualquer forma.
+   Algumas garrafas dificeis de achar tambem podem ser encontradas aqui.
+   É tanta coisa empilhada que fica dificil se orientar aqui para quem não tem costume de entrar aqui.
+~
+2 1048588 0 0 0 14
+D1
+~
+~
+0 0 279
+D8
+~
+~
+0 0 224
+S
+#279
+Os Aposentos Reais~
+   Um ambiente luxuoso. Estantes com diversas garrafas raras estão espalhadas perto das paredes.
+   No centro do quarto, uma cama enorme foi colocada. Um perfume doce e inebriante cobre este lugar.
+~
+2 524300 0 0 0 14
+D0
+~
+~
+0 0 277
+D3
+~
+~
+0 0 278
+D9
+~
+~
+0 0 224
+S
+#280
+Os Portões de Gelo~
+   Ao norte portões de gelo foram construidos para proteger este lugar. Feitos de espinhos de gelo que cruzam na diagonal, eles parecem sair da terra.
+    Ao norte é possivel ver um pátio aberto.
+~
+2 1048576 0 0 0 14
+D0
+~
+~
+0 0 213
+D2
+~
+~
+0 0 212
+S
+$~

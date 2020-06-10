@@ -1,0 +1,1032 @@
+#3000
+barril~
+um barril~
+Um barril de cerveja foi deixado aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+50 50 1 0
+65 300 100 0 0
+#3001
+garrafa~
+uma garrafa~
+Uma garrafa de cerveja foi abandonada aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+8 8 1 0
+10 20 8 0 0
+#3002
+garrafa~
+uma garrafa~
+Um garrafa de chopp foi deixada aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+8 8 3 0
+10 10 3 0 0
+#3003
+garrafa~
+uma garrafa~
+Uma garrafa de rabo-de-galo foi deixada no ch�o.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+8 8 7 0
+10 50 17 0 0
+#3004
+frasco~
+um frasco~
+Um frasco escuro foi abandonado aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+8 8 8 0
+10 20 7 0 0
+#3005
+chave fosco metal~
+uma chave de metal fosco~
+Uma chave feita de um metal fosco foi abandonada no ch�o.~
+~
+18 cdq 0 0 0 ao 0 0 0 0 0 0 0
+3005 0 0 0
+1 0 0 0 0
+#3009
+viagem p�o lemba~
+um p�o de viagem~
+Um p�o de viagem foi deixado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+24 0 0 0
+1 50 50 0 0
+E
+viagem p�o lemba~
+O p�o de viagem � a comida tradicional dos elfos durante viagens, sendo
+chamado de lembas.  Dizem que eles saciam a fome dos cansados viajantes
+rapidamente.
+~
+#3010
+p�o fatia~
+uma fatia de p�o~
+Uma fatia de p�o foi deixada aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+12 0 0 0
+1 10 10 0 0
+#3011
+bolo t�maras~
+um bolo de t�maras~
+Algu�m deixou aqui um bolo de t�maras de apar�ncia apetitosa.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+5 0 0 0
+1 5 5 0 0
+#3012
+taco mexicano~
+um taco mexicano~
+Um taco mexicano, que aparenta estar delicioso, foi abandonado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+15 0 0 0
+1 15 15 0 0
+#3013
+burrito quente apimentado~
+um burrito apimentado~
+Um burrito fumegante e muito apimetando foi deixado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+10 0 0 0
+1 10 10 0 0
+#3014
+nachos nacho~
+alguns nachos com queijo~
+Algu�m deixou alguns nachos com queijo aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+5 0 0 0
+1 5 5 0 0
+E
+nachos nacho~
+Eles est�o cobertos por muito queijo.  Parecem ser um dos especiais feitos
+pelo Tio Juan.
+~
+#3015
+carne peda�o~
+um peda�o de carne~
+Um peda�o de carne de origem duvidosa foi deixado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+14 0 0 0
+5 24 10 0 0
+E
+carne peda�o~
+N�o que aparente estar envenenada ou algo assim, mas voc� n�o est� muito
+seguro quanto � origem dessa carne.  Realmente, � pouco prov�vel que um
+ca�ador derrubasse uma pe�a de carne de cervo ou de coelho...  'de que lugar
+do mundo veio essa carne?' , � isso que voc� se pergunta...
+~
+#3016
+barril~
+um barril~
+Um barril de hidromel foi deixado aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+50 50 18 0
+55 310 100 0 0
+#3017
+barril~
+um barril~
+Um barril de sidra foi deixado aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+50 50 19 0
+55 280 100 0 0
+#3018
+garrafa~
+uma garrafa~
+Uma garrafa de hidromel foi deixada aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+20 20 18 0
+25 100 100 0 0
+#3019
+procurado cartaz~
+um cartaz de 'Procurado'~
+Um cartaz de 'Procurado' foi desleixadamente abandonado no ch�o.~
+~
+16 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 1 0 0 0
+E
+procurado cartaz~
+Voc� v� uma figura muito conhecida por n�o ser um 'bom mo�o'.  Se voc�
+encontr�-lo, pode at� receber uma recompensa.
+~
+#3020
+adaga~
+uma adaga~
+Uma adaga de l�mina afiada foi esquecida aqui.~
+~
+5 n 0 0 0 an 0 0 0 0 0 0 0
+0 1 4 11
+1 10 10 0 0
+#3021
+espada espadim~
+um espadim~
+Um espadim foi deixado aqui, no ch�o.~
+~
+5 n 0 0 0 an 0 0 0 0 0 0 0
+0 1 6 11
+3 60 10 0 0
+E
+inscri��o~
+Est� escrito: 'Fa�a com que essa espada seja uma boa companheira.'
+~
+E
+espada espadim~
+O espadim parece ter uma inscri��o igual a diversas outras inscri��es...
+~
+#3022
+espada longa~
+uma espada longa~
+Uma espada longa foi esquecida aqui.~
+~
+5 n 0 0 0 an 0 0 0 0 0 0 0
+0 1 8 3
+8 600 10 0 0
+#3023
+clava madeira~
+uma clava de madeira~
+Uma simples clava de madeira foi deixada aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 3 7
+3 12 10 0 0
+#3024
+machado guerra~
+um machado de guerra~
+Um machado de guerra de tamanho m�dio foi esquecido aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 5 7
+6 50 10 0 0
+#3025
+flagelo enorme~
+um flagelo~
+Um enorme flagelo foi deixado aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 4 7
+6 625 10 0 0
+#3026
+garrafa~
+uma garrafa~
+Uma garrafa de sidra foi deixada aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+20 20 19 0
+25 80 1 0 0
+#3027
+fatia p�o centeio~
+uma fatia de p�o de centeio~
+Uma fatia de p�o de centeio foi deixada aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+10 0 0 0
+1 15 5 0 0
+#3028
+peda�o torta nozes~
+um peda�o de torta de nozes~
+Um peda�o de torta foi deixado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+10 0 0 0
+1 20 5 0 0
+#3029
+batatas coradas~
+batatas coradas~
+Um prato de batatas coradas foi deixado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+20 0 0 0
+1 25 5 0 0
+#3030
+tocha~
+uma tocha~
+Uma grande tocha foi deixada aqui.~
+~
+1 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 24 0
+1 10 10 0 0
+#3031
+lanterna lat�o~
+uma lanterna~
+Uma lanterna de lat�o foi deixada aqui.~
+~
+1 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 96 0
+1 50 10 0 0
+#3032
+bolsa~
+uma bolsa~
+Uma pequena bolsa foi abandonada aqui.~
+~
+15 0 0 0 0 ao 0 0 0 0 0 0 0
+50 0 0 0
+2 20 10 0 0
+#3033
+caixa~
+uma caixa~
+Uma pequena caixa foi deixada aqui.~
+~
+15 0 0 0 0 ao 0 0 0 0 0 0 0
+10 0 0 0
+5 50 10 0 0
+#3034
+caixa automatico~
+um caixa autom�tico~
+Um caixa autom�tico foi instalado em uma das paredes daqui.~
+~
+12 cdeg 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+5000 0 0 0 0
+E
+caixa automatico~
+H� uma pequena nota no caixa, onde se l�:
+
+Para usar, digite 'BALANCE', 'WITHDRAW' <quantia>, ou 'DEPOSIT <quantia>'.
+Por favor, informe qualquer estranha ocorr�ncia ao gerente do banco.
+
+~
+#3035
+fonte~
+a grande fonte~
+Uma grande fonte esculpida em m�rmore com veios azulados est� aqui,
+borbulhando incessantemente.~
+~
+23 cdeg 0 0 0 0 0 0 0 0 0 0 0
+9999 9999 15 0
+9999 0 0 0 0
+E
+m�rmore fonte grande veios azulados~
+� um trabalho muito bem feito, escupida de um simples peda�o de um belo
+m�rmore branco com veios de profundo azul, que mais parecem rel�mpagos
+azulados dan�ando por toda a superf�cie da fonte.  Toda a pe�a parece estar,
+de alguma maneira, sob efeito de um encantamento pois o n�vel da �gua parece
+nunca diminuir.
+~
+#3036
+cart�o credito~
+um cart�o de cr�dito~
+Um bonito e pr�tico cart�o de cr�dito foi esquecido no ch�o daqui.~
+~
+12 cdeg 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 10000 10 0 0
+E
+cartao credito~
+H� algo escrito na parte de tras do cart�o. L�-se:
+
+Para usar, digite 'BALANCE', 'WITHDRAW' <quantia>, ou 'DEPOSIT <quantia>'.
+Por favor, informe qualquer estranha ocorr�ncia ao gerente do banco.
+
+~
+#3037
+vela~
+uma vela~
+Uma vela foi deixada aqui, apagada.~
+~
+1 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 4 0
+1 5 1 0 0
+E
+vela~
+Uma vela feita em casa, que estranho!
+~
+#3038
+prego~
+um prego~
+Um prego de um tost�o foi esquecido aqui, na poeira.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 1 11
+1 5 1 0 0
+E
+prego~
+� um comum prego de ferro, muito usado pelos carpinteiros.
+~
+#3039
+panela~
+uma panela~
+Uma panela de ferro fundido foi deixada aqui, no ch�o.~
+~
+15 0 0 0 0 a 0 0 0 0 0 0 0
+10 0 0 0
+10 100 20 0 0
+E
+panela~
+� uma �tima panela. Voc� poderia us�-la, se fosse menos atrapalhado.
+~
+#3040
+peitoral met�lico~
+um peitoral met�lico~
+Um peitoral met�lico foi esquecido no ch�o.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+7 0 0 0
+100 18000 150 0 0
+#3041
+cota elos met�licos~
+uma cota de elos met�licos~
+Algu�m esqueceu aqui uma cota de elos met�licos.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+5 0 0 0
+60 2500 50 0 0
+#3042
+escudo madeira~
+um escudo~
+Um pequeno escudo de madeira foi esquecido no ch�o.~
+~
+9 0 0 0 0 aj 0 0 0 0 0 0 0
+2 0 0 0
+3 100 10 0 0
+#3043
+casaco couro macio~
+um casaco de couro~
+Um casaco de couro macio foi esquecida aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+2 0 0 0
+10 200 10 0 0
+#3044
+jaqueta couro envelhecido~
+uma jaqueta de couro envelhecido~
+Algu�m perdeu uma jaqueta de couro envelhecido no ch�o daqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+3 0 0 0
+20 500 10 0 0
+#3045
+casaco couro~
+um casaco de couro~
+Um casaco de couro foi deixado aqui, n�o ch�o.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+4 0 0 0
+40 1000 10 0 0
+#3046
+peitoral bronze~
+peitoral de bronze~
+Um peitoral de bronze foi deixado no ch�o.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+6 0 0 0
+80 7000 100 0 0
+#3049
+vermelha po��o juventude frasco~
+uma po��o vermelha da juventude~
+Um frasco com uma po��o vermelha foi deixado aqui.~
+~
+10 g 0 0 0 ao 0 0 0 0 0 0 0
+12 307 -1 -1
+1 50000 500 0 0
+E
+vermelha po��o juventude frasco~
+A po��o possui um s�mbolo desenhado no frasco. Parece ser um "Y".
+~
+#3050
+pergaminho identifica��o~
+um pergaminho de identifica��o~
+Um pergaminho foi desleixadamente deixado aqui.~
+~
+2 g 0 0 0 ao 0 0 0 0 0 0 0
+12 301 -1 -1
+1 2001 10 0 0
+E
+pergaminho identifica��o~
+O pergaminho possui a seguinte f�rmula m�gica escrita:
+
+     ???
+    ?   ?
+       ?
+      ?
+      ?
+      *
+
+~
+#3051
+po��o amarela~
+uma po��o amarela de detectar invisibilidade~
+Um pequeno frasco com uma po��o de cor amarela foi descuidadamente esquecido
+aqui.~
+~
+10 g 0 0 0 ao 0 0 0 0 0 0 0
+12 19 -1 -1
+1 400 10 0 0
+E
+po��o amarela~
+O frasco da po��o possui um pequeno r�tulo 'Detectar O Invis�vel'.
+~
+#3052
+pergaminho retorno~
+um pergaminho de retorno~
+Um pergaminho foi negligentemente deixado aqui.~
+~
+2 g 0 0 0 ao 0 0 0 0 0 0 0
+12 42 -1 -1
+4 2001 10 0 0
+E
+pergaminho retorno~
+O pergaminho possui a f�rmula da 'Palavra de Retorno' escrita.
+~
+#3053
+vara varinha cinza~
+uma varinha cinza de invisibilidade~
+Uma varinha cinza foi descuidadamente esquecida aqui.~
+~
+3 g 0 0 0 ao 0 0 0 0 0 0 0
+12 2 2 29
+2 4000 100 0 0
+E
+vara varinha cinza~
+A varinha consiste em um envelhecido bast�o de cor cinza escuro.
+Voc� nota um pequeno s�mbolo gravado em sua base.  O s�mbolo se assemelha a
+isso:
+
+     \ /
+    - O -
+     / \
+
+~
+#3054
+bast�o retorcido~
+um bast�o retorcido~
+Um bast�o retorcido foi desleixadamente esquecido aqui.~
+~
+4 g 0 0 0 ao 0 0 0 0 0 0 0
+12 1 1 38
+17 7000 5000 0 0
+E
+bast�o retorcido~
+O bast�o � feito de madeira de carvalho, medindo cerca de cinco p�s.  Ele se
+ajusta perfeitamente a sua m�o.  Voc� nota um pequeno s�mbolo gravado em sua
+base, parecendo-se com isso:
+
+  ZZZZZ
+     Z
+    Z
+   Z
+  ZZZZZ  z   z
+
+~
+#3055
+bast�o metal~
+um bast�o de metal~
+Algu�m deixou um bast�o de metal aqui.~
+~
+4 g 0 0 0 ao 0 0 0 0 0 0 0
+10 8 8 15
+7 8500 300 0 0
+E
+bast�o metal~
+O bast�o � feito de um metal desconhecido por voc�.
+~
+#3056
+pergaminho ressurrei��o~
+um pergaminho da ressurrei��o~
+Um pergaminho da ressurrei��o foi deixado aqui, esperando para trazer as pessoas dos bra�os da Morte.~
+~
+2 gik 0 0 0 ao 0 0 0 0 0 0 0
+15 58 -1 -1
+1 6200 280 0 0
+E
+pergaminho ressurrei��o~
+Voc� v� um pergaminho feito por poderosos cl�rigos no intuito de ajudar os
+cidad�os de Midgaard.
+~
+#3057
+pergaminho remove maldi��es maldi��o~
+um pergaminho que remove maldi��es~
+Um pergaminho que remove maldi��es foi deixado aqui, emanando uma suave luz azul.~
+~
+2 aegi 0 0 0 ao 0 0 0 0 0 0 0
+21 35 43 -1
+1 21000 140 0 0
+E
+pergaminho remove maldi��es maldi��o~
+O pergaminho foi escrito em um papel que emana uma suave luz azul.  Ele foi
+feito por poderosos cl�rigos no intuito de ajudar os cidad�os que possuem
+itens amaldi�oados.
+~
+A
+6 1
+#3058
+omelete toucinho~
+omelete com toucinho~
+Um prato de omelete com toucinho foi deixado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+26 0 0 0
+1 21 5 0 0
+#3059
+pombo assado ervas~
+pombo assado em ervas~
+Um prato com pombo assado em ervas foi deixado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+30 0 0 0
+1 28 5 0 0
+#3060
+balsa~
+uma balsa~
+Uma balsa foi esquecida aqui.~
+~
+22 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+75 400 10 0 0
+E
+balsa~
+A balsa parece ser bem primitiva.
+~
+#3061
+canoa~
+uma canoa~
+Uma canoa foi deixada aqui.~
+~
+22 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+32 1000 100 0 0
+E
+canoa~
+A canoa � suficientemente leve.
+~
+#3062
+pernil de javali~
+pernil de javali~
+Um prato de pernil de javali foi deixado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+30 0 0 0
+1 35 5 0 0
+#3063
+sopa de feij�o~
+sopa de feij�o~
+Uma tigela com sopa de feij�o foi deixada aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+20 0 0 0
+1 16 16 0 0
+#3064
+bolinhos a�ucarados~
+bolinhos a�ucarados~
+Um prato de bolinhos fritos e cobertos com a��car foi deixado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+15 0 0 0
+1 20 20 0 0
+#3065
+biscoitos nata~
+biscoitos de nata~
+Um prato com biscoitos de nata foi deixado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+10 0 0 0
+1 10 10 0 0
+#3066
+copo~
+um copo~
+Um copo de leite foi deixada aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+10 10 10 0
+15 20 1 0 0
+#3067
+copo~
+um copo~
+Um copo de limonada foi deixada aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+10 10 6 0
+15 20 1 0 0
+#3068
+torradas manteiga mel~
+torradas com manteiga e mel~
+Um prato de torradas com manteiga e mel foi deixado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+15 0 0 0
+1 12 12 0 0
+#3069
+escudo brasonado bras�o bardo~
+um escudo com o bras�o bardo~
+Um escudo brasonado foi deixado aqui emanando suave melodia.~
+~
+9 bgmnopt 0 0 0 aj 0 0 0 0 0 0 0
+8 0 0 0
+4 20000 0 31 0
+E
+bras�o~
+Num fundo negro voc� v� a figura de uma harpa dourada de cordas flanejantes,
+esta envolvida por um c�rculo brilhante formado por palavras em uma escrita
+muito antiga. Nas bordas do bras�o est�o as notas do in�cio de uma can��o
+que ningu�m ousa nem assoviar. � este o reverenciado bras�o que poucos
+conseguem decifrar, mesmo entre os bardos.
+~
+E
+escudo~
+Voc� olha atentamente esse belo escudo de metal leve e bem polido, ligeiramente
+dourado. Sua forma segue a do bras�o esmaltado que brilha em seu centro,
+este o alto s�mbolo da sociedade barda.
+~
+#3070
+manoplas bronze~
+um par de manoplas de bronze~
+Um par de manoplas de bronze foi esquecido aqui.~
+~
+9 0 0 0 0 ah 0 0 0 0 0 0 0
+6 0 0 0
+8 1750 100 0 0
+#3071
+luvas de couro~
+um par de luvas de couro~
+Um par de luvas de couro foi deixado no ch�o.~
+~
+9 0 0 0 0 ah 0 0 0 0 0 0 0
+3 0 0 0
+3 75 10 0 0
+#3072
+punhal dourada l�mina bras�o bardo~
+um punhal com o bras�o bardo~
+Um punhal de l�mina dourada foi deixado aqui emitindo suave melodia.~
+~
+5 bgmnopt 0 0 0 ano 0 0 0 0 0 0 0
+0 4 4 11
+3 15000 0 31 0
+E
+bras�o~
+O bras�o propriamente dito foi colocado em uma fina moldura dourada, sendo
+ele uma perfeita miniatura dos maiores: num fundo negro h� a figura de uma
+harpa dourada de cordas flanejantes, esta envolvida por um c�rculo brilhante
+formado por palavras em uma escrita muito antiga.  Nas bordas est�o as notas
+do in�cio de uma can��o que ningu�m ousa nem assoviar.
+~
+E
+punhal l�mina dourada~
+O punhal � leve e afiado, tendo sua l�mina dourada um polimento t�o
+perfeito quanto um espelho. A empunhadura negra, de metal fosco, acompanha
+adapta-se perfeitamente � m�o do bardo, tendo ela como �nico enfeite um
+pequeno bras�o esmaltado.
+~
+A
+18 1
+#3073
+brasonado peitoral bras�o bardo~
+um peitoral com o bras�o bardo~
+Um peitoral brasonado emite suave melodia mesmo jogado no ch�o.~
+~
+9 bgmnopt 0 0 0 ad 0 0 0 0 0 0 0
+7 0 0 0
+5 30000 0 31 0
+E
+bras�o~
+Num fundo negro voc� v� a figura de uma harpa dourada de cordas flanejantes,
+esta envolvida por um c�rculo brilhante formado por palavras em uma escrita
+muito antiga. Nas bordas do bras�o est�o as notas do in�cio de uma can��o
+que ningu�m ousa nem assoviar. � este o reverenciado bras�o que poucos
+conseguem decifrar, mesmo entre os bardos.
+~
+E
+peitoral~
+De metal levemente dourado, esse peitoral se ajusta perfeitamente ao tronco de
+quem o usa. Sobre a regi�o do cora��o, no centro do peito, um bras�o
+negro se destaca.
+~
+#3074
+camisa negra~
+uma camisa negra~
+Uma camisa negra foi deixada aqui.~
+~
+9 bgmnopt 0 0 0 ad 0 0 0 0 0 0 0
+4 0 0 0
+1 12000 0 31 0
+E
+bras�o~
+Num fundo negro voc� v� a figura de uma harpa dourada de cordas flanejantes,
+esta envolvida por um c�rculo brilhante formado por palavras em uma escrita
+muito antiga. Nas bordas do bras�o est�o as notas do in�cio de uma can��o
+que ningu�m ousa nem assoviar. � este o reverenciado bras�o que poucos
+conseguem decifrar, mesmo entre os bardos.
+~
+E
+camisa negra~
+De corte perfeito e costura impercept�vel, essa camisa � uma boa op��o para
+o bardo que busca conforto e, como n�o poderia deixar de ser, eleg�ncia.  Os
+bot�es s�o totalmente negros, havendo somente um diferente, o
+que fica no colarinho, pois nele h� o desenho de um bras�o.
+~
+#3075
+elmo bronze~
+um elmo de bronze~
+Um elmo de bronze foi deixado aqui.~
+~
+9 0 0 0 0 ae 0 0 0 0 0 0 0
+6 0 0 0
+8 3500 100 0 0
+#3076
+gorro couro~
+um gorro de couro~
+Um gorro de couro foi esquecido aqui, no ch�o.~
+~
+9 0 0 0 0 ae 0 0 0 0 0 0 0
+3 0 0 0
+3 150 10 0 0
+#3077
+luvas couro negro~
+luvas de couro negro~
+Um par de luvas de couro foi deixado aqui.~
+~
+9 bgmnopt 0 0 0 ah 0 0 0 0 0 0 0
+3 0 0 0
+1 7000 0 31 0
+E
+bot�o bras�o~
+Num fundo negro voc� v� a figura de uma harpa dourada de cordas flanejantes,
+esta envolvida por um c�rculo brilhante formado por palavras em uma escrita
+muito antiga. Nas bordas do bras�o est�o as notas do in�cio de uma can��o
+que ningu�m ousa nem assoviar. � este o reverenciado bras�o que poucos
+conseguem decifrar, mesmo entre os bardos.
+~
+E
+luvas couro negro~
+Essas luvas protegem as m�os sem impedir-lhes o movimento, sendo ainda
+bastante belas.  O bot�o que ajusta cada uma delas ao pulso � negro,
+possuindo o bras�o bardo em sua superf�cie.
+~
+#3078
+mochila couro negro negra~
+uma mochila de couro negro~
+Uma mochila negra foi deixada aqui.~
+~
+15 bgmnopt 0 0 0 ak 0 0 0 0 0 0 0
+200 7 -1 0
+4 3000 0 31 0
+E
+al�as fivelas bras�o~
+Num fundo negro voc� v� a figura de uma harpa dourada de cordas flanejantes,
+esta envolvida por um c�rculo brilhante formado por palavras em uma escrita
+muito antiga. Nas bordas do bras�o est�o as notas do in�cio de uma can��o
+que ningu�m ousa nem assoviar. � este o reverenciado bras�o que poucos
+conseguem decifrar, mesmo entre os bardos.
+~
+E
+mochila couro negro negra~
+Ela � bastante espa�osa, parecendo ainda ser muito resistente.  O couro foi
+cuidadosamente preparado para nunca rasgar, mofar ou ser de alguma forma
+danificado, sendo ainda imperme�vel.  As al�as ajust�veis s�o presas com
+duas fivelas douradas, cada uma delas ostentando um pequeno bras�o.
+~
+#3079
+negro chap�u abas~
+um chap�u negro com grandes abas~
+Um chap�u de grandes abas foi deixado aqui.~
+~
+9 bgmnopt 0 0 0 ae 0 0 0 0 0 0 0
+4 0 0 0
+3 10000 0 31 0
+E
+bras�o broche~
+O face do broche � uma moldura dourada em que o bras�o se apoia.  Ele � de
+fundo negro, havendo a figura de uma harpa dourada de cordas flanejantes em
+seu centro.  Esta � envolta por um c�rculo brilhante formado por palavras em
+uma escrita muito antiga.  Nas bordas do bras�o est�o as notas do in�cio de
+uma can��o que ningu�m ousa nem assoviar.
+~
+E
+negro chap�u abas~
+O chap�u de copa plana � muito elegante e �til com seu tecido negro e
+arma��o met�lica leve.  As grandes abas lan�am sombras protetoras sobre a
+face de quem o usa, parecendo uma boa op��o para dias de muito sol, chuva ou
+ainda para pessoas que gostam de criar um ar misterioso sobre sua pessoa.
+Um broche preso � copa mostra um belo bras�o.
+~
+#3080
+perneiras bronze~
+um par de perneiras de bronze~
+Um par de perneiras de bronze est� aqui, esquecido no ch�o.~
+~
+9 0 0 0 0 af 0 0 0 0 0 0 0
+6 0 0 0
+8 3500 100 0 0
+#3081
+cal�a couro~
+uma cal�a de couro~
+Uma cal�a de couro foi deixada no ch�o.~
+~
+9 0 0 0 0 af 0 0 0 0 0 0 0
+3 0 0 0
+8 150 10 0 0
+#3082
+flauta doce negra madeira~
+uma flauta doce~
+Uma flauta de madeira negra foi deixada aqui.~
+~
+12 bgmnopt 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 1000 0 31 0
+E
+disco selo~
+No disco voc� v� o selo do bras�o dos bardos, a harpa dourada de cordas
+flamejantes.  Um pequeno c�rculo de palavras em escrita antiga envolve o
+intrumento, enqunto as bordas do selo s�o ladeadas pelas notas iniciais de
+uma melodia nunca nem mesmo assoviada.
+~
+E
+flauta doce madeira negra~
+A delicada flauta � feita de macia madeira negra cuidadosamente
+envernizada. Os orif�cios foram circundados com lustroso dourado,
+havendo ainda um disco negro na parte superior, pr�ximo ao bocal.
+~
+#3083
+charamela instrumento sopro negra madeira belo~
+uma charamela negra~
+Um belo instrumento de sopro, feito de madeira negra, foi deixado aqui.~
+~
+12 bgmnopt 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 1500 0 31 0
+E
+selo~
+Envolto numa moldura dourada, voc� v� um disco negro com o selo do bras�o
+dos bardos, a harpa dourada de cordas flamejantes.  Um pequeno c�rculo de
+palavras em escrita antiga envolve o intrumento, enqunto as bordas do selo
+s�o ladeadas pelas notas iniciais de uma melodia nunca nem mesmo assoviada.
+~
+E
+charamela negra~
+O corpo cil�ndrico da charamela � feito de negra madeira de um perfume doce
+e �mido, assim como o � o som do instrumento.  O bocal c�nico e a outra
+extremidade, em forma de sino, s�o de metal dourado.  As duas palhetas do
+instrumento s�o negras, havendo nelas o delicado selo bardo.
+~
+#3084
+mandola negra~
+uma mandola negra~
+Uma mandola negra, com cordas douradas, foi deixada aqui.~
+~
+12 bgmnopt 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 2500 0 31 0
+E
+bras�o~
+No fundo negro voc� v� a figura de uma harpa dourada de cordas flanejantes,
+esta envolvida por um c�rculo brilhante formado por palavras em uma escrita
+muito antiga. Nas bordas do bras�o est�o as notas do in�cio de uma can��o
+que ningu�m ousa nem assoviar. � este o reverenciado bras�o que poucos
+conseguem decifrar, mesmo entre os bardos.
+~
+E
+mandola negra~
+Essa delicada mandola, semelhante a um ala�de, mas bem menor,
+� toda negra, destacando suas cordas e trastes dourados. Na parte plana
+do corpo do instrumento h� um grande bras�o.
+~
+#3085
+bra�adeiras bronze~
+um par de bra�adeiras de bronze~
+Um par de bra�adeiras de bronze foram deixadas aqui.~
+~
+9 0 0 0 0 ai 0 0 0 0 0 0 0
+6 0 0 0
+8 1750 100 0 0
+#3086
+bra�ais couro~
+um par de bra�ais de couro~
+Um par de bra�ais de couro foram deixados no ch�o daqui.~
+~
+9 0 0 0 0 ai 0 0 0 0 0 0 0
+2 0 0 0
+4 75 10 0 0
+#3087
+pandeiro~
+um pandeiro~
+Um bonito pandeiro foi deixado aqui~
+~
+12 bgmnopt 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 1000 0 31 0
+E
+bras�o membrana~
+No fundo negro voc� v� a figura de uma harpa dourada de cordas flanejantes,
+esta envolvida por um c�rculo brilhante formado por palavras em uma escrita
+muito antiga. Nas bordas do bras�o est�o as notas do in�cio de uma can��o
+que ningu�m ousa nem assoviar. � este o reverenciado bras�o que poucos
+conseguem decifrar, mesmo entre os bardos.
+~
+E
+pandeiro~
+Os guizos dourados presos � arma��o negra t�m um som alegre e limpo.  Voc� o
+toca um pouco, parando para observar a membrana negra com um grande bras�o
+ao centro.
+~
+#3096
+quadro mensagens~
+um quadro de mensagens sociais~
+Um grande quadro de mensagens sociais foi posto na parede aqui.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+mensagens~
+Use 'look quadro' para ler o quadro.
+~
+E
+quadro~
+Se voc� est� lendo isso, este quadro n�o est� funcionando.
+~
+#3097
+quadro mensagens~
+um quadro de mensagens congelado~
+Um grande quadro de mensagens est� aqui, esculpido em um bloco de gelo.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+mensagens~
+Use 'look quadro' para ler o quadro.
+~
+E
+quadro~
+Se voc� est� lendo isso, este quadro n�o est� funcionando.
+~
+#3098
+quadro mensagens~
+um quadro sagrado de mensagens~
+Um grande quadro de mensagens foi posto na parede aqui.  Ele brilha com uma
+suave aura.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+mensagens~
+Use 'look quadro' para ler o quadro.
+~
+E
+quadro~
+Se voc� est� lendo isso, este quadro n�o est� funcionando.
+~
+#3099
+quadro mensagens~
+um quadro de mensagens~
+Um grande quadro de mensagens foi posto na parede aqui.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+mensagens~
+Use 'look quadro' para ler o quadro.
+~
+E
+quadro~
+Se voc� est� lendo isso, este quadro n�o est� funcionando.
+~
+$~

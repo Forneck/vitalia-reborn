@@ -1,0 +1,57 @@
+#15
+Vitalia~
+O Caminho da Virtude~
+1500 1599 120 2 0 0 0 -1 -1
+-1
+*
+* By Steppin, Originally For ChicagoMUD 4-94
+*             Hopefully Final Version For JediMUD 12-95
+* Conversion to CircleMUD by Furry
+*
+M 0 1500 1 1540         Al�
+E 1 3828 1 17            Card Pena Esc(3828) com Ala(1500)
+M 0 1501 1 1533         Miguel
+E 1 1500 5 17                   Balan�a da Justi�a
+M 0 1502 1 1531         Gabriel
+E 1 1501 5 17                  Pergaminho do Mensageiro
+M 0 1503 1 1530         Rafael
+E 1 1503 5 11                   O Protetor dos Fi�is
+M 0 1504 1 1528         Uriel
+E 1 1502 3 16                  Espada Flamejante
+M 0 1505 1 1501         Querubim
+E 1 1508 5 17                  Chave dos Port�es
+M 0 1506 1 1505         Zombeteiro
+E 1 1509 8 17                   A Hist�ria Queimada
+M 0 1507 5 1509         G�nio
+M 0 1507 5 1516         G�nio
+M 0 1507 5 1521         G�nio
+M 0 1507 5 1524         G�nio
+M 0 1507 5 1539         G�nio
+M 0 1508 1 1512         Velho
+E 1 1504 3 10                   Faixa Rota
+M 0 1509 1 1511         Califa de Hakin
+M 0 1510 1 1510         Judas
+M 0 1511 1 1509         Fara�
+E 1 1512 6 3                    Ankh
+M 0 1512 1 1519         Abu Bakr
+E 1 1505 6 16                   Cimitarra Encrustrada
+M 0 1513 1 1520         Umar
+M 0 1514 1 1521         Otomano
+E 1 1510 6 0                   A Surata do Livro
+M 0 1515 1 1522         Ali
+E 1 1511 6 9                   Luvas da Uni�o
+M 0 1516 1 1514         Anjo
+M 0 1517 1 1515         A voz de sat�
+E 1 1514 1 0                   Odiosa imagem
+M 0 1518 1 1516         Drag�o
+E 1 1513 6 3                    Amuleto de R�
+M 0 1519 1 1517         Dem�nio
+G 1 1506 1 -1                     Brasa chamuscante
+M 0 1520 1 1524         Beb�
+M 0 1521 1 1525         Adolescente
+M 0 1522 1 1526         Homem
+M 0 1523 1 1527         Alma
+G 1 1507 1 -1                     Chama et�rea
+*
+S
+$~

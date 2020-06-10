@@ -1,0 +1,286 @@
+@B                 __   __   _    ________   ___ o�  __       _     ___
+@W       O MUNDO  @B|  |.' .'.'_| .'_    _.' .' _ `.  |  |    .'_|  .' _ `.
+@W            DE  @B|  ' .'  |  |    |  |   |  ' |  | |  |    |  | |  ' |  |
+@B                |  .'    |  |    |  |   |  .-.  | |  |___ |  | |  .-.  |
+@B                |.'      |_.'    |_.'   |_.' |_.' |____.' |_.' |_.' |_.'@n
+@B _____________________________________________________[@W Leis para Cl�s @B]_______@n
+
+{index}
+   Cl�s s�o grupos de personagens que por se afinizarem entre si e por
+agirem e interagirem de forma semelhante, tanto no comportamento, quanto em
+suas cren�as, se unem e d�o origem a uma quase fam�lia.
+
+   Por fazerem parte de um mesmo grupo, podem ajudar-se entre si com
+equipamentos, com expedi��es visando a explora��o de forma mais segura ao
+Mundo de Vit�lia e, principalmente, passar aos seus membros os fundamentos
+essenciais da dignidade, da honra e da fidelidade.
+
+   Este arquivo � dividido em v�rias partes.  Digite um dos comandos abaixo
+para consultar a parte de interesse:
+   @gCLAN POL CRIA��O           @nCria��o e forma��o de cl�s.
+   @gCLAN POL GERAL             @nLeis gerais sobre o uso dos cl�s.
+   @gCLAN POL L�DERES           @nLeis para os l�deres de cl�s.
+   @gCLAN POL MEMBROS           @nLeis para os membros de cl�s.
+   @gCLAN POL NOVOS             @nLeis para convites de novos membros.
+   @gCLAN POL IMORTAIS          @nLeis para os membros imortais.
+{criacao cria��o formacao forma��o}
+@+B[@+WForma��o de Cl�s@+B]@+n
+   Este cap�tulo foi escrito especialmente para guiar os jogadores que
+desejam construir seus pr�prios cl�s.
+
+   Cada cl� � formado por um fundador, um sucessor e outros membros.  O
+n�mero de membros de um cl� dever� ser definido por seus dirigentes, havendo
+por�m a necessidade de serem ocupadas oito posi��es na dire��o do Cl�.
+
+   Estes oito dirigentes ocupar�o n�veis diferentes, com fun��es e poderes
+distintos.  O n�vel mais alto do cl� � o de L�der.
+
+   Poder�o participar de um cl� todos os jogadores que forem aceitos pela
+dire��o do mesmo.  Cada cl� poder� criar seu pr�prio sistema de
+arregimenta��o de novos membros e regras espec�ficas para isto.
+
+   Os cl�s poder�o ter um dos Deuses de Vit�lia como protetor.  Para que
+isto ocorra, caber� ao l�der do cl� entrar em contato com a divindade em
+quest�o e pedir-lhe permiss�o.  O canal de comunica��o entre este Deus
+Protetor e seus protegidos dever� ser feito atraves de MudMail.  O canal
+PRAY n�o dever� ser utlizado como via de comunica��o.
+
+   Para que um cl� possa ser criado, h� que se estabelecer diretrizes:
+
+@G1. Nome Oficial (NECESS�RIO)@n
+   � a forma como o cl� ser� conhecido no MUD.  O nome dever� estar dentro
+do contexto medieval, ter no m�ximo 40 letras e n�o poder� conter nomes
+ofensivos, nomes de outros MUDs ou de cl�s existentes nestes, ou nomes de
+outros jogadores.
+
+@G2. Nome Curto (NECESS�RIO)@n
+   � a forma como o cl� ser� representado no MUD atrav�s do comando WHO, e
+tamb�m ser� usado em comandos como CLAN APPLY ou CLAN INFO.  Deve ser uma
+�nica palavra ou sigla, e ter no m�nimo 3 e no m�ximo 12 letras.
+   O nome curto � sempre escrito com uma cor.  Voc� pode definir a cor com
+que o nome ser� exibido (uma das cores que constam no HELP CORES).
+
+@G3. Hist�ria (NECESS�RIO)@n
+   � a hist�ria de como o cl� se formou no MUD.  Dever� estar dentro do
+contexto medieval, n�o poder� ter cores (exceto as que ser�o usadas para
+destacar subt�tulos, se houverem) e n�o poder� ter refer�ncias a outros
+jogadores (exceto aos membros iniciais).  Poder� fazer refer�ncia a �reas ou
+mobs existentes no MUD.
+
+@G4. L�deres (NECESS�RIO)@n
+   Tanto o Fundador como o Sucessor dever�o estar pelo menos na @Ysegunda
+encarna��o@n e ter atingido ou transposto o @Y50� n�vel@n, e dever�o ter um bom
+hist�rico de vida, podendo dar bons exemplos.  Ambos ir�o possuir o mesmo
+n�vel de poderes dentro do cl�.
+
+@G5. Membros (NECESS�RIO)@n
+   Para o cl� ser constru�do, o cl� dever� ter seis membros iniciais, de n�vel
+superiror a 10, al�m do Fundador e Sucessor.  Estes seis membros iniciais
+poder�o possuir cargos especiais na dire��o do cl�.
+
+@G6. Sede (NECESS�RIO)@n
+   A descri��o de at� dez salas que formar�o a sede do Cl�.  Estas salas
+dever�o ser numeradas de 0 (zero) a 9 (nove), apenas para controle interno
+da ordem que ser�o escritas.  Obrigatoriamente, a sala onde ficar�o os
+sentinelas dever� ser a primeira (de n�mero zero).  As outras salas podem
+ser escritas em qualquer ordem.
+   Cada sala deve possuir as seguintes informa��es:
+   - T�tulo;
+   - descri��o principal;
+   - caracter�sticas (fechada, escura, silenciosa, etc);
+   - sa�das para outras salas;
+   - o qu� se v� na dire��o de cada sa�da (ex: look north).
+   � interessante desenhar um mapa de como ser� a sede do cl�.  Estabele�a
+tamb�m qual sala no mundo atual dever� ser "conectada" � sede, e o caminho
+que dever� ser feito para se chegar � sede.
+
+@G7. Postos ou Posi��es (NECESS�RIO)@n
+   S�o os postos existentes dentro do cl�, em escala de n�vel, de iniciante
+at� l�der.  Cada posto tem um determinado n�vel de poderes, entre os
+seguintes:
+   - @cNovato@n:  deposit, donate, members, say
+   - @cMembro@n:  tudo o que o novato pode, mais: balance, withdraw
+   - @cMestre@n:  tudo o que o membro pode, mais: enroll, kick
+   - @cRegente@n: tudo o que o Mestre pode, mais: demote, promote, mail
+   - @cL�der@n:   tudo o que o Regente pode, mais: descript
+   Podem-se ter v�rios postos em cada um destes n�veis, mas o posto mais
+baixo dever� obrigatoriamente ter n�vel "novato", e o posto mais alto dever�
+ter n�vel "l�der".  Pode-se ter at� um total de 12 postos dentro do cl�.
+   Tanto Fundador como Sucessor ter�o n�vel de l�deres do cl�.  Se houver
+apenas um posto com n�vel "l�der", ambos ir�o ocupar inicialmente este
+posto.  Sucessor e Fundador poder�o ocupar postos diferentes, desde que o
+posto do Sucessor seja imediatamente inferior ao do Fundador, e que ambos
+tenham n�vel de "l�der".
+
+@G8. Objetos (OPCIONAL)@n
+   Poder� ser criado um m�ximo de seis objetos que ficar�o no cl�, contendo
+s�mbolos, regras, lemas, bras�es ou hist�rias do cl�.  S�o objetos que
+ficar�o fixos nas salas da sede do cl�, @We n�o ter�o outra utilidade al�m de
+serem observados@n (placas, t�buas, livros, est�tuas, etc).
+   Cada objeto deve possuir as seguintes informa��es:
+   - Nome do objeto;
+   - descri��o b�sica do objeto (que aparecer� na sala);
+   - descri��o detalhada do objeto (que aparecer� quando digitar look obj);
+   - n�mero da sala onde o objeto ficar�.
+
+   Caso seja necess�rio, a dire��o do cl� poder� comprar ba�s (de uma lista
+pr�-determinada) para serem usados na sede do cl�.
+
+@G9. Sala de Cura R�pida (OPCIONAL)@n
+   Caso seja desejado, uma das salas da sede do cl� poder� ter a propriedade
+de curar mais rapidamente os jogadores que ali entrarem.  Ser� cobrado @Y2
+milh�es e 500 mil moedas@n do cl� por m�s (na vida real) para este benef�cio.
+
+@G10. Sala de Doa��es (OPCIONAL)@n
+   Caso seja desejado, o cl� poder� ter uma sala de doa��es de objetos, com
+isso, habilitando tamb�m o comando CLAN DONATE para os membros do cl�.  H�
+um limite para a quantidade de objetos que podem ser depositados na sala de
+doa��es do cl�.
+
+@G11. Quadro de Mensagens (OPCIONAL)@n
+   Caso seja desejado, poder� ser criado um quadro de mensagens para que os
+membros do cl� possam colocar mensagens ou avisos relativos ao cl�.  Tamb�m
+� um meio dos l�deres comunicarem suas regras e decis�es aos membros.
+
+@G12. Fonte de �gua (OPCIONAL)@n
+   O cl� poder� tamb�m possuir uma fonte de �gua em sua sede.
+
+@G13. Sentinela Personalizado (OPCIONAL)@n
+   Na porta de entrada de cada cl� s�o colocados dois mobs que bloqueiam a
+entrada de n�o-membros na sede do cl�.  Caso seja desejado, esses mobs podem
+ser personalizados, de acordo com o tema do cl�.
+
+@G14. Mascote (OPCIONAL)@n
+   O cl� pode optar por ter um mascote: um mob que ser� carregado na sede do
+cl�, e al� ficar� transitando.
+
+   Ap�s reunir todas as informa��es para a cria��o do cl�, envie uma
+mensagem de e-mail para @Bclans@mud.linkway.com.br@n, pedindo permiss�o para a
+constru��o do cl�.  @WN�O ENVIE NENHUMA INFORMA��O AINDA@n.  Se a permiss�o for
+concedida, voc� receber� uma resposta com o endere�o de uma p�gina que voc�
+dever� acessar e preencher com todas as informa��es acima.  Ap�s enviar as
+informa��es atrav�s dessa p�gina, os Deuses ir�o analisar para ent�o aprovar
+a constru��o do cl�, ou solicitar alguma modifica��o para o adequamento ao
+MUD.
+
+   A aprova��o do cl� poder� levar at� uma semana, se n�o houverem
+adequa��es a serem feitas, e mais uma semana para ser constru�do.  No
+momento da constru��o ser�o cobrados @Y20 milh�es de moedas de ouro@n para o
+servi�o de constru��o, mais @Y2 milh�es e 500 mil@n se houver uma sala de cura
+r�pida.
+{geral gerais}
+@+B[@+WLeis Gerais de uso dos Cl�s@+B]@+n
+
+   Todo aquele que pertence a um cl�, deve respeita-lo e defende-lo com a
+sua vida.  Todos os membros devem obedecer o conjunto de regras estabelecido
+pela lideran�a do cl�, e devem respeitar o membros menos graduados assim como
+seus superiores.
+
+   A sede do cl� deve ser um local consagrado pelos membros.  N�o se deve
+usar outras salas al�m da sala de doa��es para guardar objetos.  Cabe aos
+l�deres do cl� manter o local organizado e limpo.
+
+   O comando CLAN MAIL deve ser usado com extrema modera��o, apenas para
+mensagens realmente importantes.  Para mensagens comuns, o quadro do cl�
+deve ser utilizado.
+{lideres l�deres}
+@+B[@+WPerfil dos L�deres de um Cl�@+B]@+n
+   Para se tornar o Fundador de um Cl�, o jogador dever� necessariamente ter
+@Wreencarnado pelo menos uma vez@n, ter @Wum n�vel maior do que 50@n e @Wum bom
+hist�rico de vida@n.  O bom L�der � aquele que pode dar bons exemplos.
+
+   Tanto o fundador quanto seu sucessor possuem o mesmo n�vel de poder na
+forma��o de um cl�.  Tanto um quanto outro dever�o, necessariamente, ter um
+comportamento exemplar dentro do MUD e se isso n�o ocorrer, fundador ou
+sucessor poder�o perder seus poderes dentro do Cl�, e ser�o substitu�dos.
+No caso do fundador, a substitui��o ser� feita automaticamente pelo
+sucessor.  No caso do sucessor, o fundador poder� fazer sua escolha pessoal,
+passando pelo crivo dos seis membros mais graduados de seu Cl�.  No caso em
+que ambos, fundador e sucessor, terem seus poderes e t�tulos confiscados por
+mal uso, assumir� o poder, o membro mais graduado e antigo do Cl� e este
+convocar� elei��es gerais aos membros do Cl�, podendo candidatar-se a L�der.
+
+@+B[@+WDeveres dos L�deres de um Cl�@+B]@+n
+@+G1.@+n Caber� aos l�deres do Cl� manter seus membros informados sobre mudan�as
+ocorridas no Cl�, utilizando-se para isso, dos quadros de aviso existentes
+em suas sedes.
+
+@+G2.@+n Caber� aos l�deres do Cl� estabelerecem leis e regras para seus membros,
+e que as mesmas sejam sempre coerentes com as regras do POLICY de Vit�lia.
+Em caso de d�vida, prevalece sempre aquilo que estiver escrito no POLICY.
+
+@+G3.@+n Caber� aos l�deres do Cl� transmitirem aos seus novos membros, suas
+regras e suas leis, assim como todas as responsabilidades devidas para com o
+Cl�.  Para isso, os l�deres do Cl� devem usar os quadros de avisos existentes
+em suas sedes.
+
+@+G4.@+n Os l�deres dos Cl�s s�o respons�veis pelas atitudes de seus membros, e se
+um de seus membros infringir as leis do POLICY, estes ser�o chamados pelos
+Deuses e pagar�o pesadas multas, que ser�o debitadas da conta corrente do
+Cl�.
+
+@+G5.@+n Os l�deres dos Cl�s poder�o punir os membros rebeldes com expuls�es,
+chamadas execra��es p�blicas, que poder�o ser feitas na sede do Cl�.
+
+@+G6.@+n Os l�deres dos Cl�s poder�o organizar pequenas quests internas, entre
+os membros do pr�prio cl�.  Estas aventuras n�o devem se tornar motivos de
+brigas entre membros do cl� e outros jogadores.  Os Deuses n�o interferir�o
+nestas quests, e n�o ser�o respons�veis por eventuais perdas de objetos, ou
+outras interfer�ncias causadas por jogadores que n�o pertencem ao cl�.
+
+@+G7.@+n Os l�deres possuem um compromisso com o Cl� e com o MUD, e � exigida a
+sua freq��ncia no MUD, para que possa cuidar dos assuntos do Cl� com
+responsabilidade.  Se todos os atuais l�deres do Cl� n�o puderem estar
+presentes no MUD por v�rios dias consecutivos, estes dever�o promover e dar
+autonomia a um dos regentes para assumir o posto de l�der temporariamente.
+{membros}
+@+B[@+WDeveres dos Membros de um Cl�@+B]@+n
+   Todo aquele que tiver seu nome submetido e aprovado, tornando-se assim o
+membro de um Cl�, torna-se assim, protegido por aquela bandeira, e deve
+portanto, respeita-la e defende-la com sua vida.
+
+   O jogador ao entrar em um Cl�, deve estar ciente de que a ele dever� ser
+fiel e que lhe ser� vedada a entrada a outros Cl�s.  Os �nicos casos em que
+poder�o haver excess�o ser�o os casos em que o desligamento for feito de
+forma amistosa e �tica e quando houver um consenso entre os membros de seu
+antigo Cl�, com a aprova��o destes.
+
+{membros novos}
+@+B[@+WNovos Membros de um Cl�@+B]@+n
+   � expressamente proibida a arregimenta��o de novos membros de um Cl� pelo
+canal Gossip.  Se membros de um Cl� forem pegos agindo desta forma, ser�o
+punidos com a perda do canal.  Se acontecer uma primeira vez, apenas o
+membro infrator ser� punido.  Se isso se tornar frequente, o Cl� ser�
+penalizado com multas.
+
+   � expressamente proibido aos membros de um Cl� usarem o canal Gossip para
+pronunciarem seus Gritos de Guerra.  Os canais que dever�o ser utilizados
+para este fim s�o SAY e CLAN SAY.  O canal SHOUT pode ser usado apenas
+durante as mesnadas.
+
+   � permitido o convite feito utilizando-se comunica��o telep�tica (canal
+Tell) ou o comunica��o simples (canal Say).  Tamb�m poder�o se utilizar do
+MudMail para mandarem seus convites.  Bons jogadores costumam ser bons
+membros.
+
+   � permitido ajudar aos novos jogadores, os chamados "newbies", desde que
+esta ajuda n�o possa ser interpretada como aliciamento de um futuro membro.
+Que esta ajuda seja respons�vel, que se volte mais no sentido de orientar o
+novo jogador, auxiliando-o em suas d�vidas no que se refere � din�mica do
+jogo, explicando regras, enfim, ajudando algu�m a escrever sua hist�ria com
+honra e dignidade.  Poder�o tamb�m, esporadicamente, ajudar a estes novos
+personagens com algum equipamento, mas sempre com prud�ncia e bom-senso.
+{imortais}
+@+B[@+WImortais e Semi-Deuses@+B]@+n
+   Ao se tornar Imortal, o jogador passa para um novo plano evolutivo,
+perdendo assim, o contato direto com o mundo dos mortais.  Ao se tornar
+Imortal, o jogador n�o poder� mais interferir no Cl�, devendo usar apenas o
+quadro de avisos da sede de seu Cl� para se comunicar com os outros membros.
+Ao chegar ao n�vel de Semi-Deus, o jogador dever� se desligar do Cl�.  �
+importante que o L�der do Cl�, ao se deparar com a proximidade da
+imortalidade, j� v� preparando seu sucessor.  E que este esteja pronto para
+assumir a lideran�a assim que o Fundador alcance o n�vel de Semi-Deus.
+Quando um Cl� tiver um de seus membros atingindo o n�vel m�ximo (Semi-Deus),
+este ter� seu nome elevado � Galeria de Semi-Deuses do Cl� em quest�o.  Este
+membro ser� ent�o cultuado e ser� uma verdadeira lenda entre os membros de
+seu grupo.

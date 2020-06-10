@@ -1,0 +1,25 @@
+#70
+Vitalia~
+O Esgoto, Primeiro Nível~
+7000 7099 15 2 0 0 0 0 -1 -1
+-1
+*
+* Mobiles
+M 0 7001 9 7041         O Morcego Desprez�vel
+M 0 7001 9 7025         O Morcego Desprez�vel
+M 0 7001 9 7004         O Morcego Desprez�vel
+M 0 7001 9 7004         O Morcego Desprez�vel
+M 0 7002 3 7049         O Rato de Esgoto
+M 0 7002 3 7031         O Rato de Esgoto
+M 0 7003 8 7039         A Pequena Aranha Peluda
+M 0 7003 8 7039         A Pequena Aranha Peluda
+M 0 7003 8 7039         A Pequena Aranha Peluda
+M 0 7003 8 7037         A Pequena Aranha Peluda
+M 0 7003 8 7037         A Pequena Aranha Peluda
+M 0 7003 8 7050         A Pequena Aranha Peluda
+* Doors
+D 0 7047 1 1            Fim Sul do Grande Esgoto
+D 0 7053 3 1
+*
+S
+$

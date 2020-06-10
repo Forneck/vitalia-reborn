@@ -1,0 +1,96 @@
+#13301
+monge shaggy~
+o Monge Shaggy~
+um Monge Shaggy está tranquilamente parado aqui.
+~
+Este homem parece ser um monge comum, exceto pela sua enorme estatura e pelo
+corpo coberto de um pelo marrom e liso mesmo nas palmas das mãos.  Ele o
+encara repentinamente.
+~
+2097222 0 0 0 276 0 0 0 600 E
+10 11 2 70d2+200 2d6+9
+50 10000
+8 8 1
+E
+#13302
+estátua prata~
+a Estatua de Prata~
+Uma Estátua de Prata foi colocada no canto.
+~
+Bem, ela não parece humana.  Parece mais um conjunto de armaduras.  Mas que
+diabos ela foi virar para olhar para você?
+~
+2097346 0 0 0 276 0 0 0 400 E
+15 6 1 150d1+40 2d8+4
+1000 15000
+8 8 0
+E
+#13303
+templar~
+o templar de Mateon~
+O templar de Mateon está aqui olhando pela janela.
+~
+Este homem dedicou toda sua vida a Mateon e ao homem atrás da máscara.  Ele
+se vira lentamente e o olha sem expressão.
+~
+2097250 0 0 0 276 0 0 0 800 E
+20 0 -20 200d1+60 3d5+16
+6000 30000
+8 8 1
+E
+#13304
+mateon cavaleiro~
+o grande Cavaleiro Mateon~
+Mateon, o defensor do búfalo, encara você!
+~
+Mateon é um homem ENORME.  Um homem muito ZANGADO.  Ele não deixará você
+chegar PERTO do homem mascarado.
+~
+2097250 0 0 0 276 0 0 0 600 E
+22 0 -20 430d1+10 4d6+19
+5000 40000
+8 8 1
+E
+#13305
+arrumadeira mulher~
+a arrumadeira~
+Uma arrumadeira está aqui tentando dar um jeito na bagunça.
+~
+A arrumadeira parece perturbada e olha de relance para você, com jeito de
+estar simplesmente aterrorizada.
+~
+2097346 0 0 0 16 0 0 0 100 E
+10 15 3 100d1+10 2d6+1
+500 1000
+8 8 2
+E
+#13306
+taurus homem~
+Taurus~
+Um homem vestindo uma máscara dourada observa você.
+~
+Você olha para este homem e percebe algo engraçado.  Ele parece ter
+dificuldades em manter-se com as duas pernas.  Conforme você olha ele vai se
+despindo.  Você percebe sua pele sob o manto.  Ele retira finalmente a
+máscara e você vê um enorme búfalo com um anel no nariz.  "Belo anel", você
+pensa.
+~
+2097218 0 0 0 276 0 0 0 800 E
+60 -19 -7 700d1+50 6d6+38
+10000 100000
+8 8 1
+E
+#13307
+acólito~
+um acólito~
+Um acólito está aqui procurando uma vassoura.
+~
+O Acólito está a procura de uma vassoura.  Ele está heróicamente tentando
+fingir que você não existe.
+~
+2097348 0 0 0 20 0 0 0 600 E
+10 12 3 100d1+10 2d5+4
+200 10000
+8 8 1
+E
+$

@@ -1,0 +1,329 @@
+#19800
+guardião entrada~
+o guardião da entrada~
+Um imponente guardião cuida da passagem.
+~
+Você vê um guerreiro alto e forte.  Sua missão, assim como a de seus
+antecessores é guardar a entrada do labirinto e permitir que apenas os mais
+bravos e destemidos entrem.
+~
+2160690 0 0 0 67920 0 0 0 0 E
+30 1 -20 6d20+500 5d6+20
+5000 99000
+8 8 1
+E
+#19801
+centauro ~
+um centauro~
+Um centauro vaga pelo labirinto.
+~
+Você vê uma figura mística que não acreditava existir..  Um centauro.  Sua
+parte homem é bela e sua parte cavalo é muito forte.  Ele parece olhar para
+você com um olhar indiferente..
+~
+2124100 0 0 0 67920 0 0 0 0 E
+40 1 -30 15d6+600 6d6+21
+3500 100000
+8 8 1
+E
+#19802
+fada labirinto~
+a fada do labirinto~
+Uma pequena fada passeia pelo labirinto.
+~
+Ao olhar para esta fada você vê uma bela criatura que guarda um poder que você
+mesmo desconhece..  Ela é a guardiã do labirinto e de seus segredos.
+~
+2154692 0 0 0 67924 0 0 0 500 E
+50 1 -16 15d6+850 5d6+30
+5000 150000
+8 8 2
+E
+#19803
+aventureiro perdido~
+um aventureiro~
+Um aventureiro perdido procura uma saída.
+~
+Você olha para o aventureiro e percebe que alguns de seus equipamentos são
+muito bonitos e raros... talvez alguns deles tenham sido encontrados aqui
+no labirinto pois ele parece estar aqui há muito tempo.
+~
+2123968 0 0 0 67584 0 0 0 -500 E
+50 3 -26 15d6+600 5d6+27
+30000 145000
+8 8 1
+E
+#19804
+guerreiro líder grupo~
+o guerreiro do grupo~
+Um guerreiro experiente lidera um grupo.
+~
+Ao olhar para este guerreiro você logo nota que ele é o líder do grupo.  Seu
+semblante marcado revela sua experiência em expedições como esta.  Seus
+seguidores o respeitam e obedecem pois confiam nele.  É melhor não mexer com
+esse guerreiro.
+~
+2226194 0 0 0 65792 0 0 0 500 E
+60 0 -25 15d6+870 5d6+33
+5000 200000
+8 8 1
+E
+#19805
+mago grupo~
+o mago do grupo~
+Um mago ajuda seus companheiros com magias.
+~
+Ao olhar para este mago você logo nota que ele tem bastante experiência em
+combates.  Sua magia é poderosa e ele a usa para deixar seus companheiros
+mais fortes e resistentes, bem como para destruir os inimigos do grupo em
+batalhas sangrentas.
+~
+2259074 0 0 0 67696 0 0 0 500 E
+60 6 -10 15d6+300 3d4+25
+15000 99000
+8 8 1
+E
+#19806
+ladrão grupo~
+o ladrão do grupo~
+Um ladrão está parado no canto imperceptível.
+~
+Ao olhar para este típico representante da classe dos ladinos você percebe
+que suas habilidades são usadas para ajudar o grupo a evoluir e a atacar os
+inimigos que por ventura apareçam em sua jornada.  Ele brinca com uma faca e
+você percebe um conjunto de equipamentos para abrir fechaduras em sua
+cintura.
+~
+2259078 0 0 0 1575252 0 0 0 300 E
+60 4 -20 15d6+600 5d6+25
+15000 100000
+8 8 1
+E
+#19807
+clérigo padre grupo~
+o clérigo do grupo~
+Um clérigo abençoa seus companheiros para o combate.
+~
+Ao olhar pare este clérigo você percebe que ele está sempre pronto para
+ajudar seu grupo com suas magias de cura e suas auras poderosas.
+~
+2292098 0 0 0 76120 0 0 0 700 E
+60 7 -20 15d6+400 5d6+21
+5000 87000
+8 8 1
+E
+#19808
+unicórnio cavalo~
+um unicórnio~
+Um belo cavalo com um único chifre passeia por aqui.
+~
+Ao olhar para este cavalo você percebe tratar-se de uma criatura sagrada.
+Poucos destes podem ser vistos por Vitália e você se sente privilegiado em
+ver um unicórnio e a pureza de seu olhar.
+~
+2312512 0 0 0 1051084 0 0 0 900 E
+70 2 -32 15d6+800 4d6+37
+1000 150000
+8 8 1
+Str: 18
+StrAdd: 100
+Dex: 25
+Int: 18
+Wis: 15
+Con: 15
+Cha: 25
+E
+#19809
+amazona mulher~
+uma amazona~
+Uma bela mulher procura seu cavalo pelo labirinto.
+~
+Ao olhar pare esta bela mulher você percebe que se trata de uma guerreira
+experiente.  Ela olha para você sem medo e pergunta: 'Você viu um cavalo
+branco?'.
+~
+2226180 0 0 0 2304 0 0 0 100 E
+60 5 -10 15d6+500 5d6+20
+5000 900000
+8 8 2
+E
+#19810
+amarelo demônio~
+o demônio amarelo~
+Um demônio amarelado está aqui.
+~
+Uma luz maligna irradia do corpo do demônio impedindo uma visão melhor de
+seu corpo.  Você não precisa de ver os detalhes para saber que ele oferece
+GRANDE perigo.
+~
+2158082 0 0 0 67648 0 0 0 -900 E
+90 -12 -20 15d6+700 5d6+40
+75000 400000
+8 8 1
+E
+#19811
+verde demônio~
+o demônio verde~
+Um demônio esverdeado ostenta um sorriso malígno.
+~
+Quando você olha para este demônio ele olha para você e diz friamente: 'HORA
+DE MORRER!!!'
+~
+2158098 0 0 0 67648 0 0 0 -900 E
+90 -12 -20 15d6+700 5d6+40
+75000 400000
+8 8 1
+E
+#19812
+demônio vermelho~
+o demônio vermelho~
+Um terrível demônio vermelho espera calmamente para atacar.
+~
+O Demônio olha para você com um olhar indiferente.  Você percebe que sua
+vida nada vale para esta criatura.  Sua maldade é evidente em todos os
+sentidos.  Você pode senti-la no ar, pode quase mesmo tocá-la.
+~
+2158082 0 0 0 67904 0 0 0 -999 E
+95 -18 -45 15d6+1000 5d6+47
+75000 500000
+8 8 1
+BareHandAttack: 8
+Str: 18
+StrAdd: 100
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 4
+E
+#19813
+guardião verde~
+o guardião verde~
+Um guardião de roupas verdes está em pé aqui.
+~
+Ao olhá-lo mais de perto você percebe que esta figura imponente de vestes
+bonitas na cor verde não sabe bem o que guarda.  Sua visão foi tirada ainda
+jovem e ele parece ter sido treinado sua vida inteira para guardar a chave
+verde e os mistérios que esta porta esconde.
+~
+2154498 0 0 0 65794 0 0 0 -700 E
+60 -20 -35 15d6+800 4d6+20
+5000 300000
+8 8 1
+E
+#19814
+guardião amarelo~
+o guardião amarelo~
+Um guardião de roupas amarelas está em pé aqui.
+~
+Ao olhá-lo mais de perto você percebe que esta figura imponente de vestes
+bonitas na cor amarela não sabe bem o que guarda.  Sua visão foi tirada
+ainda jovem e ele parece ter sido treinado sua vida inteira para guardar a
+chave amarela e os mistérios que esta porta esconde.
+~
+2154498 0 0 0 65794 0 0 0 0 E
+60 -20 -35 15d6+600 5d4+20
+5000 300000
+8 8 0
+E
+#19815
+guardião vermelho~
+o guardião vermelho~
+Um guardião de roupas vermelhas está em pé aqui.
+~
+Ao olhá-lo mais de perto você percebe que esta figura imponente de vestes
+bonitas na cor vermelha não sabe bem o que guarda.  Sua visão foi tirada
+ainda jovem e ele parece ter sido treinado sua vida inteira para guardar a
+chave vermelha e os mistérios que esta porta esconde.
+~
+2154514 0 0 0 65794 0 0 0 -700 E
+60 -20 -30 15d6+600 5d4+19
+5000 300000
+8 8 1
+E
+#19816
+fantasma aventureiro~
+o fantasma do aventureiro~
+Um fantasma de um aventureiro perdido vaga por aqui.
+~
+Você tenta olhar para esta figura e acaba olhando através dela..  O que você
+esperava?  É um fantasma!
+~
+2156704 0 0 0 1640516 0 0 0 0 E
+50 10 -3 15d6+500 5d4+10
+20000 40000
+8 8 1
+E
+#19817
+guerreiro fantasma~
+o fantasma do guerreiro~
+Um fantasma de aparência imponente está aqui.
+~
+Ao olhar para este fantasma você percebe que sua maneira de vestir-se e agir
+tem uma beleza especial somente vista em guerreiros honrados.  Ele
+provavelmente fora, em tempos idos, um guerreiro muito valoroso.  Sua
+expressão de dor mostra que essa honra foi-lhe tirada.  Você lembra da lenda
+escrita numa das salas deste labirinto e alguma coisa diz que este é o
+guerreiro citado na história.
+~
+2222086 0 0 0 1640772 0 0 0 -400 E
+60 0 -15 15d6+700 5d6+20
+15000 100000
+8 8 1
+E
+#19818
+dama mulher bela~
+a dama do campo~
+Uma bela mulher passeia pelo campo.
+~
+Você olha para esta bela mulher tipicamente do campo e percebe o quanto a
+vida pode ser bela e descomplicada.
+~
+2105472 0 0 0 67584 0 0 0 600 E
+25 15 0 15d6+100 5d3+5
+1000 50000
+8 8 2
+E
+#19819
+necromante figura estranha sombria~
+o necromante~
+Uma figura estranha e sombria parece rezar logo ali.
+~
+Em sua infância, os mais velhos contavam uma lenda sobre um jovem padre que
+escondera-se em um labirinto para estudar as magias malignas de convocação
+dos mortos.  Ao olhar para esta figura você reconhece este NECROMANTE.
+~
+2287778 0 0 0 67916 0 0 0 -500 E
+60 5 -18 15d6+600 5d4+15
+15000 200000
+8 8 1
+E
+#19820
+guardião esperança~
+o guardião da esperança~
+Parado a sua frente o guardião da sua ultima esperança de sair daqui.
+~
+Ele tem a chave para sua saída... se você é um aventureiro descuidado e saiu
+para uma exploração sem seu &WPERGAMINHO DE RETORNO&n, talvez ele possa ajudar,
+embora você não saiba bem como...
+~
+2344978 0 0 0 1116224 0 0 0 900 E
+80 5 -25 15d6+800 5d4+16
+1000 300000
+8 8 1
+E
+#19821
+ladrão fantasma~
+o ladrão fantasma~
+Um ladrão fantasma vaga por aqui. Protejam seus bolsos!
+~
+Sempre em busca de novos tesouros, a medida que você olha para ele, este
+pequeno ladrão fixa os olhos demoradamente em você e desaparece, surgindo
+num piscar de olhos em outra posição.  É notoriamente um fantasma.
+~
+2098708 0 0 0 67660 0 0 0 -800 E
+70 -10 -30 600d1+250 2d8+25
+10000 200000
+8 8 1
+E
+$

@@ -1,0 +1,890 @@
+#1000
+baú vermelho~
+um baú vermelho~
+Um baú vermelho foi deixado aqui no chão.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+#1001
+baú laranja~
+um baú laranja~
+Um baú laranja foi deixado aqui no chão.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+#1002
+baú amarelo~
+um baú amarelo~
+Um baú amarelo foi deixado aqui no chão.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+#1003
+baú verde~
+um baú verde~
+Um baú verde foi deixado aqui no chão.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+#1004
+baú ciano~
+um baú ciano~
+Um baú ciano foi deixado aqui no chão.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+#1005
+baú azul~
+um baú azul~
+Um baú azul foi deixado aqui no chão.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+#1006
+baú roxo~
+um baú roxo~
+Um baú roxo foi deixado aqui no chão.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+#1007
+baú branco~
+um baú branco~
+Um baú branco foi deixado aqui no chão.~
+~
+15 deq 0 0 0 abcdefghijklmnopqrstuvwxyzABCDEF 0 0 0 0 0 0 0
+1500 7 0 0
+8 50000 25000 0 0
+#1008
+janela norte~
+uma janela para as Montanhas Dragonhelm~
+A janela da parede norte mostra uma bela paisagem por trás de suas cortinas.~
+~
+12 cde 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+89 0 0 0 0
+E
+janela norte cortinas~
+Você afasta as belas cortinas verde-musgo da janela e, apoiado no parapeito,
+perde seu olhar observando a beleza das longínquas Montanhas Dragonhelm: o
+contorno esverdeado de seus montes, as nuvens ocultando os cumes mais altos,
+o Pico do Dragão...  Um pouco surpreso, você repara num grande vulto
+verde-metálico sobrevoando o Pico e, apurando seus ouvidos, consegue
+identificar o canto de um dos grandes habitantes dessa região...  Você
+poderia passar o dia só admirando a vista...
+~
+#1009
+janela sul~
+uma janela para Midgaard~
+Há, por trás das cortinas da janela da parede sul, a movimentação de uma grande cidade.~
+~
+12 cde 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+89 0 0 0 0
+E
+janela sul cortinas~
+Você afasta as cortinas amarelas da janela e observa, interessado, toda a
+movimentação de Midgaard.  Examina os transeuntes e imagina a história de
+suas vidas...  Vê as grandes, médias e pequenas lojas, seus vendedores, os
+novos carregamentos de mercadorias chegando...  Sente o cheiro delicioso do
+pão de viagem acabando de sair do forno, junto com os apetitosos bolos de
+tâmaras que são vendidos na Padaria, e pensa como eles são deliciosos
+acompanhados por uma caneca de chopp gelado...  Acena para os incansáveis
+sentinelas e os sérios Pacificadores, não esquecendo-se também, é claro, dos
+eficientes zeladores e os irriquietos fidos e odifs...  Que cidade
+interessante!
+~
+#1010
+janela leste~
+uma janela para as Terras Orientais~
+Por entre as cortinas da janela da parede leste, uma grande variedade de lugares pode ser avistada.~
+~
+12 cde 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+89 0 0 0 0
+E
+janela leste cortinas~
+Você delicadamente afasta as cortinas azul-celeste da janela e põe-se a
+observar toda a paisagem que se desenrola a sua frente.  Não é possível ver
+o rio além do dique mas, mais adiante, você identifica as ardentes areias do
+Grande Deserto Oriental as suas pirâmides.  A sudoeste do deserto, você
+consegue avistar o grande Coliseu de Roma e o Monte dos Deuses.  A nordeste
+do deserto, um aglomerado de construções com cúpulas coloridas e altos
+minaretes cercado por grandes muros forma a bela imagem da misteriosa cidade
+de Nova Thalos vista ao longe.  E há tanta coisa a mais para se ver!
+~
+#1011
+janela oeste~
+uma janela para as Florestas~
+A figura de exuberantes florestas se extende por trás das cortidas da janela da parede oeste.~
+~
+12 cde 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+89 0 0 0 0
+E
+janela oeste cortinas~
+Você afasta com cuidado as cortinas de tecido escarlate dessa janela e
+distraidamente contempla as exuberantes florestas a oeste de Midgaard.  Um
+grande carvalho destaca-se entre os outros, parecendo apontar para algum
+lugar.  É possível ver daqui a sombra das enormes teias de aranha que
+cobrem toda uma parte de Haon-Dor, formando a escura região de Arachnos.
+Apertando a vista, você percebe, cortando os céus, a silhueta de um grande
+castelo e as terras de seu rei.
+~
+#1012
+estante livros ébano~
+uma estante de livros feita de ébano~
+Há uma enorme estante de livros feita de ébano ocupando uma parede inteira dessa sala.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+E
+estante livros ébano~
+Essa estante é tão grande que ocupa uma parede inteira dessa sala!  Mas você
+não se impressiona apenas com seu tamanho: ela foi cuidadosamente entalhada
+e envernizada por mãos extremamente habilidosas...  As grandes prateleiras
+da estante possuem detalhes em suas bordas que se assemelham aos degraus de
+uma construção sacra, enquanto as laterais formam grandes colunas com fustes
+canelados e capitéis cercados por frisos e flores-de-lótus pintadas com tinta
+obtida do pó de ouro.
+~
+#1013
+mesa refeições~
+uma mesa de refeições~
+Uma mesa de refeições feita de carvalho foi colocada próxima a um canto dessa sala, perto da janela.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+50 0 0 0 0
+E
+mesa refeições~
+Simples, porém bonita, essa mesa de carvalho foi cuidadosamente polida e
+entalhada, tendo uma perfeita forma ovalada.
+~
+#1014
+forno lenha~
+um forno a lenha~
+Um forno a lenha novinho foi encostado em uma das paredes da cozinha.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+50 0 0 0 0
+E
+forno lenha~
+Você não consegue se contar ao imaginar as deliciosas receitas que fará nesse
+forno novinho!
+~
+#1015
+poltrona estofada~
+uma poltrona estofada~
+Uma grande poltrona estofada, disposta em canto da sala, parece obrigá-lo a se sentar nela.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+50 0 0 0 0
+E
+poltrona estofada~
+Fofinha... Grandona... Parece uma nuvem de tão confortável... Acho que já
+sabemos qual seu móvel favorito! :P
+~
+#1016
+armário ébano~
+um armário de ébano~
+Um imenso armário de ébano está encostado em uma das paredes do quarto.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+E
+armário ébano~
+Esse pesado armário de ébano foi cuidadosamente polido e entalhado por mãos
+extremamente hábeis. As duas grandes portas possuem molduras que imitam as
+formas de colunas sulcadas com elaborados capitéis em forma de flor-de-lótus.
+Os trincos e fechaduras são de ouro envelhecido, dando um ar mais sofisticado
+ainda à essa peça.
+~
+#1017
+cama dossel ébano ouro~
+uma cama com dossel~
+Uma enorme cama de ébano com um belo dossel com tecido de cor ouro-envelhecido foi posta no quarto de frente à janela.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+50 0 0 0 0
+E
+cama dossel ébano ouro~
+Você se espanta com a riqueza dessa cama: de ébano polido e entalhado,
+possui um grande dossel sustentado por quatro colunas caneladas e decoradas
+com capitéis em forma de flor-de-lótus.  As flores dos entalhes foram
+cuidadosamente pintadas com tinta de pó de ouro, combinando com o imenso
+tecido de seda nacarada que cobre o baldaquino.  Os lençóis, colcha e
+travesseiros estão limpos e perfumados; a cama perfeitamente arrumada parece
+convidá-lo a se deitar e tirar um pequeno cochilo...
+~
+#1018
+tapete persa florais~
+um tapete persa com motivos florais~
+Um belo tapete com motivos florais foi estendido sobre o chão.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+tapete persa florais~
+Feito à mão com a lã de melhor qualidade existente, esse tapete é um
+verdadeiro tesouro.  Se você perguntar a um entendido ele lhe dirá que,
+muito provavelmente, essa peça veio da cidade de Gulistã já que as flores
+retratadas no tapete são as famosas rosas daquela região. Ele também ficaria
+admirado com a densidade dele: 150 nós por centímetro quadrado! Imagine
+quantos anos não foram necessários para terminá-lo... Sendo assim, cuidado
+quando for pisar sobre ele.
+~
+#1019
+suporte lamparina aço~
+uma grande lamparina~
+Há, em um dos cantos da sala, um suporte de aço mantendo uma lamparina na altura exata para iluminar todo o recinto.~
+~
+1 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 178 0
+1 150 10 0 0
+E
+suporte lamparina aço~
+Ela parece estar bem segura ali.
+~
+#1020
+espelho moldura~
+um espelho com moldura~
+Um belo espelho com moldura foi pregado à uma das paredes do quarto.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+espelho moldura~
+$> look self
+~
+#1021
+quadro família~
+um quadro de sua família~
+Um grande quadro pintando com tinta à óleo foi pregado em uma das paredes dessa sala.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+quadro família~
+Todos estão sorrindo ternamente para você nesse quadro :).  Que simpático
+isso!
+~
+#1022
+tapete carneiro~
+um tapete de carneiro~
+Um macio tapete de carneiro foi estendido no chão dessa sala.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+tapete carneiro~
+A pele de um carneiro inteiro foi cuidadosamente tratada até se transformar
+em um tapete branco e muito fofo.  Que sensação deliciosa é a que se tem
+andando descalço sobre ele!
+~
+#1023
+cadeira carvalho~
+uma cadeira de carvalho~
+Uma pesada cadeira de carvalho foi colocada aqui, ao lado da mesa de refeições.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+80 0 0 0 0
+E
+cadeira carvalho~
+É uma cadeira, oras!
+~
+#1024
+cama carvalho~
+uma cama de carvalho~
+Uma cama de solteiro feita de carvalho foi posta bem em frente à janela do quarto.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+80 0 0 0 0
+E
+cama carvalho~
+Ela é um pouco rústica, mas não deixa de ser bonita. Além disso, é bastante
+confortável (e é isso que importa!) :P.
+~
+#1025
+vaso flores campestres arranjo~
+um vaso de flores campestres~
+Um belo arranjo de flores campestres foi colocado em um vaso para enfeitar essa sala.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+vaso flores campestres arranjo~
+Ahhh, que beleza de arranjo! A casa fica muito mais alegre enfeitada e
+perfumada por essas flores: rosas amarelas e brancas, pequenas margaridas,
+cândidos lírios brancos, delicados miosótis azul-celeste e cravinas de belo
+vermelho-pálido... Uma benéfica magia parece ter encantado essas flores, que
+nunca murcham...
+~
+#1026
+bule porcelana~
+um bule de chá~
+Um precioso bule de porcelana chinesa foi colocado em cima da mesa.~
+~
+17 0 0 0 0 ao 0 0 0 0 0 0 0
+24 24 11 0
+29 0 0 0 0
+E
+bule porcelana~
+Pelo bico do bule sai o delicioso aroma de chá fumegante... Hummm! Sirva-se de
+uns bolinhos, traga sua xícara e vá já fazer um lanche!
+~
+#1027
+bolo aniversário~
+um bolo de aniversário~
+Um IMENSO bolo de aniversário foi deixado aqui, em cima de uma bandeja.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+6 0 0 0 0
+E
+bolo aniversário~
+Hummmmm!  Com três andares de massa de pão-de-ló bem úmido, recheio de
+morango e mousse de chocolate e uma caprichada cobertura de chantili, raspas
+de chocolate e morangos inteiros, esse bolo é uma tentação para mortal
+nenhum botar defeito...  Coma logo, ou alguém fará isso por você!
+~
+#1028
+xícara porcelana chinesa~
+uma xícara de porcelana~
+Uma preciosa xícara de porcelana chinesa foi coloca em cima da mesa.~
+~
+17 0 0 0 0 ao 0 0 0 0 0 0 0
+8 8 11 0
+13 5 1 0 0
+E
+xícara porcelana chinesa~
+Essa delicada xícara foi cuidadosamente decorada com a pintura de pequenas
+flores azuis e detalhes dourados. Simples e elegante, é um pequeno tesouro.
+~
+#1029
+lista compras móveis~
+lista de compras para móveis~
+Um extenso pergaminho de papel muito branco foi afixado na porta.~
+~
+13 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+lista compras móveis~
+Você lê, gravados em letra dourada e caligrafia perfeita:
+&W"  
+&Y Lista de Móveis e Utensílios Disponíveis para os Locatários de Casas em
+Vitália:&n
+
+&R01) &Yuma janela para as Montanhas Dragonhelm
+&R02) &Yuma janela para Midgaard
+&R03) &Yuma janela para as Terras Orientais
+&R04) &Yuma janela para as Florestas
+&R05) &Yuma estante de livros feita de ébano
+&R06) &Yuma mesa de refeições
+&R07) &Yum forno a lenha
+&R08) &Yuma poltrona estofada
+&R09) &Yum armário de ébano
+&R10) &Yuma cama com dossel
+&R11) &Yum tapete persa com motivos florais
+&R12) &Yuma grande lamparina
+&R13) &Yum espelho com moldura
+&R14) &Yum quadro de sua família
+&R15) &Yum tapete de carneiro
+&R16) &Yuma cadeira de carvalho
+&R17) &Yuma cama de carvalho
+&R18) &Yum vaso de flores campestres
+&R19) &Yum bule de chá
+&R20) &Yuma xícara de porcelana
+&R21) &Yum bolo de aniversário
+&R22) &Yuma bacia de água
+&R23) &Yuma lareira
+&R24) &Yuma escrivaninha
+&R25) &Yum largo telescópio
+&R26) &Yuma escultura
+&R27) &Yuma estátua
+&R28) &Ybaús&n
+
+&W   Assim que possível, comuniquem às divindades responsáveis sobre quais
+itens serão encomendados.
+     Atenciosamente,&n
+
+     &BDomus Negotium&W, a Imobiliária de Vitália."&n
+~
+#1030
+escrivaninha~
+uma escrivaninha~
+Há uma escrivaninha feita em ébano aqui.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+100 5 -1 0
+800 0 0 0 0
+#1031
+baú negro~
+um baú negro~
+Um baú negro foi deixado aqui no chão.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+#1032
+baú rosa~
+um baú rosa~
+Um baú rosa foi deixado aqui no chão.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+#1033
+baú marrom~
+um baú marrom~
+Um baú marrom foi deixado aqui no chão.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+#1034
+baú dourado~
+um baú dourado~
+Um baú dourado foi deixado aqui no chão.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+#1035
+baú prateado~
+um baú prateado~
+Um baú prateado foi deixado aqui no chão.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+#1036
+baú ocre~
+um baú ocre~
+Um baú ocre foi deixado aqui no chão.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+#1037
+baú cristal~
+um baú de cristal~
+Um baú de cristal foi deixado aqui no chão.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+#1038
+baú ébano~
+um baú de ébano~
+Um baú de ébano foi deixado aqui no chão.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+#1039
+baú carvalho~
+um baú de carvalho~
+Um baú de carvalho foi deixado aqui no chão.~
+~
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
+8 50000 25000 0 0
+#1040
+vidro perfume francês~
+um vidro de perfume francês~
+Um lindo vidro de perfume foi deixado aqui.~
+~
+8 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+13 8000 800 0 0
+E
+vidro perfume francês~
+O frasco deste perfume é lindo! Feito de cristal, foi totalmente
+entalhado a mão e possui algumas pedras semi-preciosas inscrustradas nele.
+Ao abrir o vidro, um aroma inesquecível se espalha, deixando no ambiente, 
+um perfume que lembra os mistérios do Oriente.
+~
+#1041
+aliança noivado anel ouro~
+uma linda aliança de noivado~
+Um lindo anel de ouro foi deixado aqui.~
+~
+11 g 0 0 0 ab 0 0 0 0 0 0 0
+0 0 0 0
+1 20000 8000 0 0
+E
+aliança noivado anel ouro~
+É um anel largo e muito bonito.  Feito de ouro maciço e absolutamente
+perfeito.  Quando você olha em seu interior, lê que seu nome foi
+cuidadosamente gravado ali.
+~
+A
+13 25
+#1042
+aliança casamento anel ouro~
+uma linda aliança de casamento~
+Um lindo anel de ouro foi deixado aqui.~
+~
+11 g 0 0 0 ab 0 0 0 0 0 0 0
+0 0 0 0
+1 20000 8000 0 0
+E
+aliança casamento anel ouro~
+Um anel largo, feito de ouro maciço e absolutamente perfeito. Quando você
+olha em seu interior, lê que seu nome foi cuidadosamente gravado ali.
+~
+A
+13 25
+#1043
+espelho ouro cristal~
+um espelho de cristal~
+Um maravilhoso espelho feito de ouro e cristal brilha aqui no chão.~
+~
+13 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+espelho cristal~
+$> look self
+~
+#1044
+bouquet ramalhete flores~
+um lindo e perfumado bouquet de flores~
+Um colorido e perfumado ramalhete de flores foi deixado aqui.~
+~
+13 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+bouquet ramalhete flores~
+Ah! Que flores lindas estas! São rosas, margaridas, pequenos miosótis
+e lindos e perfumados jasmins!  Com certeza foram colhidas há pouco, pois
+seu frescor é indiscutível.
+~
+#1045
+sombrinha rendada~
+uma linda sombrinha rendada~
+Uma linda sombrinha toda enfeitada com rendas foi deixada aqui.~
+~
+13 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+sombrinha rendada~
+Esta linda sombrinha, feita com rendas finas e delicadas, foi feita para
+proteger as lindas damas do sol e das chuvas.
+~
+#1046
+boneca porcelana~
+uma linda boneca de porcelana~
+Uma linda boneca de porcelana foi deixada aqui.~
+~
+13 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+boneca porcelana~
+Que perfeição! Os cabelos são longos e loiros e os olhos azuis possuem longos
+cílios, dando à boneca um ar sonhador e enigmático.
+~
+#1047
+bússola~
+uma pequena bússola de prata~
+Uma pequena bússola de prata foi deixada aqui.~
+~
+13 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+bússola~
+Uma pequena caixa circular, revestida com um vidro transparente.  Dentro
+está uma peça metálica, parecida com uma agulha.  Esta peça está
+precariamente equilibrada sobre um pino aguçado e tem livre movimento
+horizontal.  Como a agulha é imantada, ela aponta, sempre para o Norte
+Magnético...  Que interessante!
+~
+#1048
+monóculo~
+um monóculo de ouro com lente de cristal~
+Um monóculo feito de ouro com uma grossa lente de cristal foi deixado aqui.~
+~
+13 0 0 0 0 ar 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+monóculo~
+Pequenino, redondo, debruado com tartaruga e com uma lente grossa, feita de
+cristal.  Quando você o coloca, sente que um ar certo ar de mistério e
+seriedade tomam conta de sua pessoa.
+~
+#1049
+lista presentes~
+lista de presentes~
+Um extenso pergaminho de papel foi deixado aqui.~
+~
+13 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+lista presentes~
+Você lê, gravados em letra dourada e caligrafia perfeita:
+&W"  
+&Y Lista de Objetos para Presentes para entregas a Domicílio de Vitália:&
+
+&R01) &YUm vidro de perfume frances
+&R02) &YUma aliança de Noivado
+&R03) &YUma aliança de Casamento
+&R04) &Yum espelho de cristal
+&R05) &Yum perfumado bouquet de flores
+&R06) &Yuma linda sombrinha rendada
+&R07) &Yuma boneca de porcelana
+&R08) &Yuma pequena bússola de prata
+&R09) &Yum monóculo de ouro
+&R10) &Yum vaso de flores campestres
+&R11) &Yum bule de chá
+&R12) &Yuma xícara de porcelana
+&R13) &Yum bolo de aniversário&n
+~
+#1050
+gorro noel vermelho papai~
+um gorro de cetim vermelho com pompom branco na ponta~
+O gorro do Papai Noel foi deixado aqui.~
+~
+9 adeiq 0 0 0 ae 0 0 0 0 0 0 0
+5 0 0 0
+3 500000 300000 0 0
+E
+gorro noel vermelho papai~
+Um lindo e brilhante gorro de cetim vermelho com um grande pompom branco na
+ponta.
+~
+#1051
+barba branca branquinha vistosa papai noel~
+uma barba muito comprida e branquinha~
+Que estranho! Uma imensa barba branca do Papai Noel parece ter sido deixada 
+aqui.~
+~
+9 deiq 0 0 0 ar 0 0 0 0 0 0 0
+3 0 0 0
+2 500000 300000 0 0
+E
+barba branca vistosa papai noel peluda~
+Uma linda barba, totalmente branca e parecendo ser muito macia, alva 
+como neve.
+~
+#1052
+bota couro negro papai noel~
+um lindo par de botas de cano alto de couro negro~
+Um lindo par de botas negras de Papai Noel está aqui.~
+~
+11 deiq 0 0 0 ag 0 0 0 0 0 0 0
+0 0 0 0
+5 500000 300000 0 0
+E
+bota couro negro lindas papai noel~
+Estas botas são lindas, brilhantes como um espelho e negras como a noite. 
+Feitas de couro, elas aparentam ser muito confortáveis e resistentes.
+~
+#1053
+saco presentes vermelho papai noel~
+um imenso saco de presentes feito de tecido vermelho~
+Um saco enorme, cheio de presentes de Natal parece ter sido esquecido aqui.~
+~
+15 bdeiq 0 0 0 ao 0 0 0 0 0 0 0
+1000 1 -1 0
+4 500000 300000 0 0
+E
+saco presentes vermelho papai noel colorido~
+Um saco lotado por pacotes coloridos e enfeitados, usado pelo Papai Noel
+para guardar e manter os presentes que ainda serão entregues. 
+~
+#1054
+cinto negro fivela papai noel~
+um enorme cinto de couro negro com fivela de prata~
+Um cinto de couro negro, com uma fivela de prata do Papai Noel foi 
+deixado aqui.~
+~
+9 adeiq 0 0 0 al 0 0 0 0 0 0 0
+5 0 0 0
+2 500000 300000 0 0
+E
+cinto negro couro enorme papai noel~
+Você entende o tamanho deste cinto ao imaginar o tamanho da barriga do 
+Papai Noel: simplesmente enorme!  Feito de couro, ele possui uma grande e 
+pesada fivela de prata.
+~
+#1055
+calças vermelha papai noel~
+uma grande calça de cetim vermelho~
+Uma grande calça de Papai Noel foi deixada aqui.~
+~
+9 adeiq 0 0 0 af 0 0 0 0 0 0 0
+5 0 0 0
+3 500000 300000 0 0
+E
+calças enormes cetim vermelho papai noel~
+Estas calças são enormes e possuem uma cor avermelhada muito bonita e 
+brilhante.
+~
+#1056
+casaco papai noel vermelho~
+um casaco de cetim vermelho debruada com arminho branco~
+Um grande casaco de cetim vermelho, enfeitado com arminho branco e imensos
+botões de prata foi deixado aqui~
+~
+9 adeiq 0 0 0 ad 0 0 0 0 0 0 0
+10 0 0 0
+10 500000 300000 0 0
+E
+casaco cetim vermelho papai noel~
+Este enorme casaco é feito do mais puro e brilhante cetim vermelho, todo 
+debruado com arminho branco em toda a sua volta.  Simplesmente lindo!
+~
+#1057
+luvas papai noel brancas~
+um par de luvas brancas~
+Um par de luvas brancas de Papai Noel está aqui.~
+~
+9 adeiq 0 0 0 ah 0 0 0 0 0 0 0
+7 0 0 0
+10 500000 300000 0 0
+E
+luvas par branquíssimas neve~
+Um lindo par de luvas branquíssimas como a neve.  Somente o Papai Noel para 
+possuir algo assim...
+~
+#1058
+presente vermelho pacote embrulho brilhante~
+um grande pacote embrulhado em papel de presente vermelho~
+Um imenso pacote de presente, todo embrulhado em papel vermelho, está aqui.~
+~
+15 abdegq 0 0 0 a 0 0 0 0 0 0 0
+30 1 -1 0
+1 1 1 0 0
+E
+presente pacote embrulho vermelho~
+Um lindo presente, todo embrulhado em bonito papel vermelho, arrematado com
+um lindo laço de fita dourado.
+~
+#1059
+presente amarelo embrulho pacote brilhante~
+um grande pacote embrulhado em papel de presente amarelo~
+Um imenso pacote de presente, todo embrulhado em papel amarelo, está aqui.~
+~
+15 abdegq 0 0 0 a 0 0 0 0 0 0 0
+30 1 -1 0
+1 1 1 0 0
+E
+presente pacote embrulho amarelo~
+Um lindo presente, todo embrulhado em bonito papel amarelo, arrematado com
+um lindo laço de fita verde brilhante.
+~
+#1060
+presente verde pacote embrulho brilhante~
+um grande pacote embrulhado em papel de presente verde~
+Um imenso pacote de presente, todo embrulhado em papel verde, está aqui.~
+~
+15 abdegq 0 0 0 a 0 0 0 0 0 0 0
+30 1 -1 0
+1 1 1 0 0
+E
+presente verde embrulho pacote~
+Um lindo presente, todo embrulhado em bonito papel verde, arrematado com
+um lindo laço de fita vermelha brilhante.
+~
+#1061
+presente rosa pacote brilhante embrulho~
+um grande presente cor-de-rosa~
+Um imenso pacote de presente, todo embrulhado em papel cor-de-rosa, está aqui.~
+~
+15 abdegq 0 0 0 a 0 0 0 0 0 0 0
+30 1 -1 0
+1 1 1 0 0
+E
+presente pacote embrulho rosa~
+Um lindo presente, todo embrulhado em bonito papel cor-de-rosa, arrematado com
+um lindo laço de fita prateada.
+~
+#1062
+saco doces~
+um delicado saquinho cheio de doces~
+Um lindo saquinho cheio de doces foi deixado aqui por alguém muito bonzinho.~
+~
+19 bq 0 0 0 a 0 0 0 0 0 0 0
+3 0 0 0
+3 1 1 0 0
+E
+saquinho doces~
+Este pequeno saco contem muitos doces sortidos. Só pode ser um presente 
+do Papai Noel...
+~
+#1063
+caixinha surpresas~
+uma misteriosa caixinha embrulhada em papel de seda~
+Uma misteriosa caixinha toda embrulhada em delicado papel de seda dourado
+foi esquecida aqui.~
+~
+19 bq 0 0 0 a 0 0 0 0 0 0 0
+3 0 0 0
+3 1 1 0 0
+E
+caixinha misteriosa papel seda embrulho dourado~
+Esta caixinha é absolutamente exótica. Embrulhada com finíssimo papel de seda
+dourado, parece conter precioso tesouro em seu interior.
+~
+#1064
+árvore natal pinheiro~
+uma maravilhosa árvore de &f&RN&Ga&Rt&Ga&Rl&n~
+Uma maravilhosa árvore de &f&RN&Ga&Rt&Ga&Rl&n&g lindamente enfeitada está aqui.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+80 0 0 0 0
+E
+árvore natal pinheiro~
+Você fica extasiado ao olhar para este pinheiro gigantesco, totalmente 
+enfeitado com belíssimas peças que mais parecem ser jóias. Uma suave luz
+dourada o envolve por completo, destacando uma pequena jóia que foi colocada
+na ponta de seu galho mais alto, onde se pode ler:
+&RT&Ge&Rn&Gh&Ra &Gu&Rm &RF&Ge&Rl&Gi&Rz &f&RN&Ga&Rt&Ga&Rl&n.
+~
+#1065
+banana fatal~
+um estranho objeto verde-amarelado~
+Uma banana que parece ser bastante fatal está aqui.~
+~
+5 dn 0 0 0 ano 0 0 0 0 0 0 0
+0 3 5 11
+8 1000000 20000 0 0
+E
+banana fatal~
+Este estranho objeto parece ser uma fruta...embora possua corte afiado.
+Sua cor lembra o ouro e por isso, deve valer uma verdadeira fortuna!
+A impressão que se tem é que deve pertencer a alguém igualmente estranho.
+~
+A
+18 3
+A
+2 2
+$~

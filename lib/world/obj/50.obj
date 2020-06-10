@@ -1,0 +1,281 @@
+#5000
+picareta minerador~
+uma picareta de minerador~
+Uma picareta de minerador, que parece ter sido feita de prata, foi deixada no chão.~
+~
+5 j 0 0 0 an 0 0 0 0 0 0 0
+0 1 9 11
+3 600 500 0 0
+#5001
+cota malha reluzente~
+uma reluzente cota de malha~
+Uma reluzente cota de malha foi deixada no chão.~
+~
+9 ag 0 0 0 ad 0 0 0 0 0 0 0
+7 0 0 0
+2 75000 20000 20 0
+A
+2 2
+A
+17 -4
+#5002
+alabarda~
+uma alabarda~
+Uma alabarda poderosa foi encostada contra a parede.~
+~
+5 gi 0 0 0 an 0 0 0 0 0 0 0
+0 3 5 17
+16 12000 10000 0 0
+A
+18 2
+A
+19 2
+#5003
+amuleto cogumelo~
+um cogumelo amuleto~
+Um amuleto em forma de cogumelo se encontra no chão.~
+~
+9 gp 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+2 1500 4000 0 0
+A
+5 2
+#5005
+osso perna~
+um grande osso de perna~
+Um grande osso de perna jaz no chão.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 4 7
+5 300 60 0 0
+#5006
+xícara cacto~
+uma pequena xícara de cacto~
+Uma pequena xícara de cacto foi deixada no chão.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+5 5 0 0
+6 30 5 0 0
+#5007
+pequena cesta vime~
+uma pequena cesta de vime~
+Uma pequena cesta de vime se encontra no chão.~
+~
+15 0 0 0 0 a 0 0 0 0 0 0 0
+100 5 -1 0
+50 5000 50 0 0
+#5008
+pequena cesta vime~
+uma pequena cesta de vime~
+Uma pequena cesta de vime se encontra no chão.~
+~
+15 0 0 0 0 a 0 0 0 0 0 0 0
+100 5 -1 0
+50 5000 50 0 0
+#5009
+pequena cesta vime~
+uma pequena cesta de vime~
+Uma pequena cesta de vime se encontra no chão.~
+~
+15 0 0 0 0 a 0 0 0 0 0 0 0
+100 5 -1 0
+50 5000 50 0 0
+#5010
+pequena cesta vime~
+uma cesta pequena de vime~
+Uma pequena cesta de vime se encontra no chão.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+100 5 -1 0
+50 5000 50 0 0
+#5011
+rolo corda~
+um rolo de corda~
+Um imenso rolo de corda se encontra no chão.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+12 450 45 0 0
+#5012
+pacote estacas~
+um pacote de estacas~
+Um pequeno pacote de estacas foi deixado aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 2 11
+6 250 30 0 0
+#5013
+mapa velho despedaçado~
+um mapa velho, despedaçado~
+Um já se desfazendo mapa velho e despedaçado, foi deixado aqui.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 300 20 0 0
+#5014
+turbante acolchoado~
+um grosso turbante acolchoado~
+Um grosso turbante acolchoado foi deixado aqui.~
+~
+9 gh 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+15 4300 100 0 0
+A
+17 1
+#5015
+moedas do tesouro~
+uma grande pilha de moedas de ouro~
+Uma grande e fulgurante pilha de moedas de ouro se encontra aos seus pés.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+46270 0 0 0
+5 0 0 0 0
+#5016
+sabre longa curva lâmina~
+um sabre de lâmina longa e curva~
+Um sabre de lâmina longa e curva foi cravado no chão.~
+~
+5 l 0 0 0 an 0 0 0 0 0 0 0
+0 1 8 3
+7 1050 200 0 0
+A
+18 2
+#5017
+cimitarra curvada~
+uma cimitarra curvada~
+Uma cimitarra curvada se encontra aos seus pés.~
+~
+5 l 0 0 0 an 0 0 0 0 0 0 0
+0 1 7 3
+6 600 150 0 0
+A
+18 1
+#5018
+longo cutelo pontiagudo~
+um longo e pontiagudo cutelo~
+Um longo e pontiagudo cutelo se encontra aqui.~
+~
+5 l 0 0 0 an 0 0 0 0 0 0 0
+0 1 7 3
+5 550 10 0 0
+#5019
+poção rosada~
+uma poção rosada~
+Uma poção rosada está aqui.~
+~
+10 0 0 0 0 a 0 0 0 0 0 0 0
+25 33 17 -1
+6 600 100 0 0
+#5020
+vara de platina~
+uma vara de platina~
+Uma vara de platina se encontra aqui.~
+~
+3 b 0 0 0 ao 0 0 0 0 0 0 0
+30 10 10 32
+8 1900 1000 0 0
+#5021
+arco dourado~
+um arco dourado~
+Um poderoso arco dourado se encontra aqui.~
+~
+5 abfgio 0 0 0 an 0 0 0 0 0 0 0
+0 4 6 12
+20 150000 20000 30 0
+#5022
+pergaminho codificado~
+um pergaminho codificado~
+Um pergaminho codificado se encontra aos seus pés.~
+~
+2 0 0 0 0 a 0 0 0 0 0 0 0
+22 14 35 43
+7 1500 500 0 0
+#5023
+baú ferro~
+um baú de ferro~
+Um baú de ferro com um cadeado reluzente foi deixado aqui.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+200 13 5024 0
+200 1000 0 0 0
+#5024
+chave dourada~
+uma chave dourada~
+Uma chave dourada brilhante se encontra aqui.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+10 0 0 0
+1 150 0 0 0
+#5025
+pulseira de cobre~
+uma pulseira de cobre~
+Uma pulseira de cobre manchado se encontra aos seus pés.~
+~
+9 gh 0 0 0 am 0 0 0 0 0 0 0
+-5 0 0 0
+10 23000 2500 0 0
+A
+13 10
+A
+19 -4
+#5026
+gema rubi~
+um grande rubi~
+Um grande rubi foi displicentemente deixado no chão, tomando pó.~
+~
+8 gh 0 0 0 ao 0 0 0 0 0 0 0
+20 0 0 0
+9 4000 200 0 0
+#5027
+gema diamante~
+um diamante resplandescente~
+Um resplandescente diamante se encontra aos seus pés.~
+~
+8 g 0 0 0 ao 0 0 0 0 0 0 0
+21 0 0 0
+10 9500 200 0 0
+#5028
+gema safira~
+uma safira deslumbrante~
+Uma deslumbrante safira foi deixada aqui, emitindo faíscas fulgurantes.~
+~
+8 g 0 0 0 ao 0 0 0 0 0 0 0
+22 0 0 0
+7 3500 200 0 0
+#5029
+lápis-lazuli lápis lazuli gema azul~
+um lápis-lazuli azul escuro~
+Um lápis-lazuli azul escuro está aqui.~
+~
+8 g 0 0 0 ao 0 0 0 0 0 0 0
+24 0 0 0
+11 8500 200 0 0
+#5030
+jóia olho tigre olho-de-tigre~
+a Jóia Olho-de-tigre~
+A Jóia Olho-de-tigre está brilhando aqui.~
+~
+8 i 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+23 43000 1500 0 0
+A
+2 1
+#5031
+granada vermelha gema~
+uma granada de vermelho intenso~
+O brilho intenso de uma gema vermelha desperta em você a cobiça.~
+~
+8 h 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+30 35000 600 0 0
+A
+3 -2
+#5032
+gema esmeralda verde faiscante~
+uma esmeralda verde faiscante~
+Uma esmeralda verde faiscante se encontra aqui.~
+~
+8 g 0 0 0 ao 0 0 0 0 0 0 0
+23 0 0 0
+7 5500 200 0 0
+$~

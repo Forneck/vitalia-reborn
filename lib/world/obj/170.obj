@@ -1,0 +1,543 @@
+#17001
+anel terra~
+o anel da terra~
+Um anel escuro que parece absorver todas as luzes ao seu redor está no chão.~
+~
+12 b 0 0 0 ab 0 0 0 0 0 0 0
+0 0 0 0
+5 10000 2000 0 0
+A
+3 1
+A
+4 1
+#17002
+rocha rochas pedra peitoral~
+um peitoral de pedra~
+Um peitoral feito de rochas do interior da terra foi abandonado aqui.~
+~
+9 b 0 0 0 ad 0 0 0 0 0 0 0
+7 0 0 0
+70 20000 4000 5 0
+A
+5 1
+#17003
+flamejante fogo adaga~
+uma adaga flamejante~
+Há uma estranha adaga crepitando próxima ao seu pé.~
+~
+5 ag 0 0 0 ano 0 0 0 0 0 0 0
+0 4 4 11
+3 10000 2000 7 0
+A
+19 3
+#17004
+capa chama chamas tecido~
+uma capa de chamas~
+Um estranho tecido em chamas foi jogado aqui.~
+~
+9 ag 0 0 0 ak 0 0 0 0 0 0 0
+8 0 0 0
+3 10000 2000 10 0
+A
+19 1
+#17005
+botas vento~
+as botas do vento~
+Um par de curiosas botas parecem praticamente flutuar no chão.~
+~
+9 bfg 0 0 0 ag 0 0 0 0 0 0 0
+6 0 0 0
+1 10000 2000 15 0
+A
+2 1
+A
+14 5
+#17006
+capacete furacão~
+o capacete furacão~
+Um capacete que parece ter suportado inúmeras tempestades foi deixado aqui.~
+~
+9 bfg 0 0 0 ae 0 0 0 0 0 0 0
+8 0 0 0
+4 20000 4000 10 0
+A
+23 -4
+#17007
+espada trovão~
+a reluzente espada trovão~
+Um estranho trovão está no chão, cuspindo faíscas.~
+~
+5 abeiop 0 0 0 an 0 0 0 0 0 0 0
+0 6 3 3
+10 10000 2000 15 0
+A
+18 -1
+A
+19 2
+#17008
+escudo elétrico~
+um escudo elétrico~
+Um escudo completamente feito de energia zumbe no chão.~
+~
+9 abeop 0 0 0 aj 0 0 0 0 0 0 0
+9 0 0 0
+8 10000 2000 8 0
+A
+1 -1
+A
+5 1
+#17009
+gelo cinturão~
+um cinturão de gelo~
+Um cinturão feito de gelo foi deixado aqui.~
+~
+9 a 0 0 0 al 0 0 0 0 0 0 0
+7 0 0 0
+10 10000 1000 5 0
+A
+5 -2
+#17010
+manto mares mar~
+o manto dos mares~
+Um manto com um desenho de um belo mar foi deixado aqui.~
+~
+9 eg 0 0 0 ak 0 0 0 0 0 0 0
+9 0 0 0
+6 10000 2000 5 0
+A
+12 25
+A
+18 -3
+#17011
+amuleto elemental~
+um amuleto elemental~
+Um amuleto com os desenhos de todos os elementos foi perdido aqui.~
+~
+9 ag 0 0 0 ac 0 0 0 0 0 0 0
+7 0 0 0
+1 10000 5000 0 0
+A
+23 -5
+#17012
+bracelete elementais elemental~
+um bracelete elemental~
+Um bracelete feito de magias elementais foi perdido aqui.~
+~
+9 ag 0 0 0 am 0 0 0 0 0 0 0
+4 0 0 0
+4 10000 4000 8 0
+A
+13 15
+#17013
+braçadeira platina~
+um par de braçadeiras de platina~
+Um par de braçadeiras de platina foi esquecido aqui.~
+~
+9 a 0 0 0 ai 0 0 0 0 0 0 0
+6 0 0 0
+4 10000 1000 5 0
+A
+1 1
+A
+4 -2
+#17014
+perneiras platina~
+um par de perneiras de platina~
+Um par de perneiras de platina foi perdido aqui.~
+~
+9 a 0 0 0 af 0 0 0 0 0 0 0
+6 0 0 0
+4 10000 1000 5 0
+A
+2 1
+A
+3 -2
+#17015
+flamejante vara fogo~
+a vara elemental do fogo~
+Uma vara flamejante foi jogada aqui.~
+~
+3 cdq 0 0 0 ao 0 0 0 0 0 0 0
+15 3 3 26
+7 1900 200 8 0
+#17016
+cristal vara gelo~
+a vara elemental do gelo~
+Uma vara de cristal foi deixada aqui.~
+~
+3 cdq 0 0 0 ao 0 0 0 0 0 0 0
+21 3 3 8
+7 1900 200 8 0
+#17017
+vara terra~
+a vara elemental da terra~
+Uma vara negra foi esquecida aqui.~
+~
+3 cdq 0 0 0 ao 0 0 0 0 0 0 0
+7 2 2 23
+7 1900 200 8 0
+#17018
+vara ar~
+a vara elemental do ar~
+Uma vara quase transparente está no chão, junto com a sujeira.~
+~
+3 cdq 0 0 0 ao 0 0 0 0 0 0 0
+11 3 3 61
+7 1900 200 8 0
+#17019
+vara trovão~
+a vara elemental do trovão~
+Uma estranha vara com o formato de um trovão está no chão.~
+~
+3 cdq 0 0 0 ao 0 0 0 0 0 0 0
+9 2 2 30
+7 1900 200 8 0
+#17020
+clava pedra~
+uma clava de pedra~
+Uma grande clava de pedra foi posta aqui.~
+~
+5 gm 0 0 0 an 0 0 0 0 0 0 0
+0 1 12 7
+16 1000 10 5 0
+#17021
+magnetita vermelha pedra~
+uma magnetita~
+Uma pequena pedra avermelhada está no chão.~
+~
+3 cdq 0 0 0 ao 0 0 0 0 0 0 0
+19 1 1 27
+2 5000 175 8 0
+#17022
+brasa lava~
+uma brasa~
+Um pequeno pedaço de lava solidificada brilha incessantemente no chão.~
+~
+1 a 0 0 0 ao 0 0 0 0 0 0 0
+0 0 200 0
+4 500 1 0 0
+#17023
+pergaminho energia recuperação~
+um pergaminho de energia~
+Um pergaminho de recuperação de energia está embaixo do seu pé.~
+~
+2 q 0 0 0 ao 0 0 0 0 0 0 0
+19 15 39 -1
+1 2100 120 0 0
+#17024
+jarro~
+um jarro de água~
+Um grande e intrigantemente brilhante jarro com água foi deixado aqui.~
+~
+17 a 0 0 0 a 0 0 0 0 0 0 0
+70 70 0 0
+75 100 100 0 0
+#17025
+pó mágico~
+um pouco de pó mágico~
+Um misterioso pó parece ter se juntado e aparecido próximo a você.~
+~
+10 a 0 0 0 a 0 0 0 0 0 0 0
+20 19 -1 -1
+1 100 1 0 0
+#17026
+chamas lança fogo~
+uma lança de fogo~
+Uma lança de chamas azuladas queima no chão.~
+~
+5 br 0 0 0 an 0 0 0 0 0 0 0
+0 2 15 15
+14 5000 500 10 0
+A
+13 -20
+A
+18 1
+#17027
+adaga~
+uma fria adaga~
+Uma brilhante adaga congelada foi deixada no chão.~
+~
+5 imnpt 0 0 0 ano 0 0 0 0 0 0 0
+0 6 3 11
+1 19000 900 20 0
+A
+19 1
+A
+1 -1
+#17028
+rocha glacial~
+uma rocha glacial~
+Uma enorme rocha glacial está aqui.~
+~
+5 gmn 0 0 0 an 0 0 0 0 0 0 0
+0 1 15 6
+16 2000 900 20 0
+A
+18 -1
+#17029
+foice~
+uma foice~
+Uma grande foice prateada prende sua atenção.~
+~
+5 gr 0 0 0 an 0 0 0 0 0 0 0
+0 6 3 17
+11 8200 900 15 0
+A
+23 -5
+A
+17 -3
+#17030
+chicote trovão~
+o chicote trovão~
+Um chicote reluzente zumbe próximo a você.~
+~
+5 b 0 0 0 an 0 0 0 0 0 0 0
+0 4 4 2
+10 10000 900 8 0
+A
+19 2
+A
+1 -2
+#17031
+elixir anti ciclope anti-ciclope~
+o elixir anti-ciclope~
+Um elixir para proteção contra ciclopes foi perdido por aqui.~
+~
+10 a 0 0 0 a 0 0 0 0 0 0 0
+15 29 -1 -1
+1 100 100000 0 0
+#17032
+manopla manoplas espinhosas espinhosa~
+um par de manoplas espinhosas~
+Um par de estranhas manoplas foi deixado aqui.~
+~
+5 cg 0 0 0 ahn 0 0 0 0 0 0 0
+0 1 16 11
+5 0 0 0 0
+E
+manopla espinhosas espinhosa manoplas~
+Essas estranhas manoplas protegem todos o seu punho e parte do seu
+braço. Elas possuem longos e afiados espinhos, que poderiam facilmente
+rasgar qualquer coisa que desejassem.  
+~
+A
+18 1
+A
+19 1
+#17033
+peitoral mordred~
+o peitoral de Mordred~
+Um maligno peitoral foi deixado aqui.~
+~
+9 bj 0 0 0 ad 0 0 0 0 0 0 0
+11 0 0 0
+15 0 0 30 0
+E
+peitoral mordred~
+Você possui o Poderoso Peitoral de Mordred. Você quase consegue ver
+a face maligna de Mordred em seu reflexo.
+~
+A
+2 1
+A
+18 1
+#17034
+empatia escudo~
+o escudo da empatia~
+Um curioso escudo está no chão.~
+~
+9 a 0 0 0 aj 0 0 0 0 0 0 0
+5 0 0 0
+9 0 0 0 0
+E
+empatia escudo~
+Você vê uma imagem ondulada, que se assemelha a um escudo.
+~
+A
+5 2
+A
+6 2
+#17035
+colar diamantes selene~
+o colar de diamantes pertencente a Selene~
+Um colar com magníficos diamantes está espalhado no chão.~
+~
+9 a 0 0 0 ac 0 0 0 0 0 0 0
+6 0 0 0
+1 0 0 30 0
+E
+colar diamantes selene~
+Você contempla um esplêndido colar de diamantes. Sua beleza é
+apenas superada pela de sua dona, Selene.
+~
+A
+22 5
+A
+23 5
+#17036
+manto sombras sujo~
+um manto sujo~
+Um manto negro como as sombras foi jogado aqui.~
+~
+9 a 0 0 0 ak 0 0 0 0 0 0 0
+8 0 0 0
+3 0 0 10 0
+E
+manto sombras sujo~
+Esse manto parece realmente possuir sombras ao invés de tecido.
+Parece que qualquer coisa poderia ser escondida nele.
+~
+A
+20 5
+A
+21 5
+#17037
+capacete miniatura azul~
+um capacete azul~
+Um estranho capacete em miniatura foi esquecido no chão.~
+~
+9 a 0 0 0 ae 0 0 0 0 0 0 0
+5 0 0 0
+1 0 0 10 0
+A
+24 5
+A
+1 1
+#17038
+perneiras femininas~
+um par de perneiras femininas~
+Um par de perneiras femininas foi deixado aqui.~
+~
+9 a 0 0 0 af 0 0 0 0 0 0 0
+7 0 0 0
+4 0 0 10 0
+A
+2 1
+A
+3 1
+#17039
+botas pinos~
+um par de botas com pinos afiados~
+Um par de botas mortíferas foi abandonado aqui.~
+~
+9 a 0 0 0 ag 0 0 0 0 0 0 0
+6 0 0 0
+2 0 0 10 0
+A
+4 1
+A
+5 1
+#17040
+manopla poderosas reforçadas~
+um par de manoplas reforçadas~
+Um par de poderosas manoplas foi perdido aqui.~
+~
+9 a 0 0 0 ah 0 0 0 0 0 0 0
+4 0 0 0
+2 0 0 30 0
+A
+9 -5
+A
+10 -5
+#17041
+braçadeira femininas~
+um par de braçadeiras femininas~
+Um par de pequenas braçadeiras foi deixado aqui.~
+~
+9 a 0 0 0 ai 0 0 0 0 0 0 0
+6 0 0 0
+5 0 0 30 0
+A
+11 1
+A
+17 -3
+#17042
+cinto fantasma metálico~
+o misterioso cinto do Fantasma~
+Um cinto metálico está aqui, esperando alguém para laçar.~
+~
+9 af 0 0 0 al 0 0 0 0 0 0 0
+6 0 0 0
+1 0 0 30 0
+#17043
+faixas~
+as faixas do poder~
+Algumas faixas brilhantes foram deixadas aqui.~
+~
+9 a 0 0 0 al 0 0 0 0 0 0 0
+5 0 0 0
+1 0 0 30 0
+A
+17 -2
+A
+19 2
+#17045
+estátua flamejante~
+uma estátua flamejante~
+Uma bela estátua flamejante foi posta aqui.~
+~
+1 a 0 0 0 ao 0 0 0 0 0 0 0
+0 0 -1 0
+2 0 0 0 0
+#17046
+anel lava~
+o anel do vulcão~
+Um anel que brilha como a lava está no chão.~
+~
+9 a 0 0 0 ab 0 0 0 0 0 0 0
+8 0 0 0
+2 0 0 30 0
+E
+anel lava~
+Esse anel parece possuir o poder de um vulcão em seu interior. Ele possui um 
+misterioso brilho.
+~
+#17047
+anel morte~
+o anel da morte~
+Um anel profano foi abandonado aqui.~
+~
+9 a 0 0 0 ab 0 0 0 0 0 0 0
+8 0 0 0
+2 0 0 30 0
+#17048
+papéis manuscrito~
+um manuscrito~
+Alguns papéis amassados que lembram um antigo manuscrito foram deixados aqui.~
+~
+12 a 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+papéis manuscrito~
+Você vê um velho e esfarrapado manuscrito. Você percebe que ele carrega algumas
+inscrições:
+
+                  &WPara aqueles que ainda possuem alma...&n
+                  &C"Aqui jáz o fruto de seu espírito."&n
+~
+#17049
+espada sofrimento~
+a espada maligna do sofrimento~
+Uma longa espada negra foi fincada no chão, ela possui uma aura negra.~
+~
+5 jlr 0 0 0 an 0 0 0 0 0 0 0
+0 1 14 3
+20 20000 2000 10 0
+A
+18 1
+A
+19 1
+#17050
+cinturão feiticeiro~
+o cinturão do feiticeiro~
+Um estranho cinturão foi deixado aqui.~
+~
+9 a 0 0 0 al 0 0 0 0 0 0 0
+8 0 0 0
+5 20000 20 15 0
+A
+3 1
+A
+12 10
+$~

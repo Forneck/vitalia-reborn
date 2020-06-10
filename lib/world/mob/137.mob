@@ -1,0 +1,249 @@
+#13700
+Nimrodel elfa donzela~
+Nimrodel~
+Nimrodel, a donzela �lfica est� aqui, procurando Amroth.
+~
+Voc� observa uma linda donzela �lfica de uma beleza magn�fica.  Nimrodel
+expressa claramente em seu rosto um sentimento de ang�stia.  A celestial
+elfa se perdeu do seu povo, quando os an�es acordaram um terr�vel mal nas
+montanhas.
+~
+2357250 0 0 0 0 0 0 0 1000 E
+101 -30 -25 5d15+8000 10d9+30
+0 2000000
+8 8 2
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#13701
+Amroth elfo~
+Amroth~
+Amroth, o amado elfo de Nimrodel est� aqui, procurando Nimrodel.
+~
+Voc� observa um alto e imp�vido elfo, seu nome � Amroth e seu cora��o est� a
+procura da sua metade:  A linda e celestial Nimrodel.  Voc� observa uma
+triste express�o de ang�stia estampada no rosto dele.
+~
+2357250 0 0 0 0 0 0 0 1000 E
+101 -35 -30 5d15+8200 10d9+35
+0 2000000
+8 8 1
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#13702
+Haldir elfo~
+Haldir de L�rien~
+Haldir de L�rien, um dos guardi�es de L�rien est� aqui.
+~
+Voc� observa o belo Haldir de L�rien.  Alto, forte e de cabelos prateados,
+Haldir de L�rien possui um olhar encantador e demonstra a for�a e coragem do
+seu povo nos seus olhos.  Haldir de L�rien � irm�o dos belos elfos Orophin e
+R�mil de L�rien.
+~
+2357250 0 0 0 0 0 0 0 1000 E
+50 -5 -12 5d15+2200 7d9+25
+15000 120000
+8 8 1
+BareHandAttack: 13
+Str: 15
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#13703
+R�mil elfo~
+R�mil de L�rien~
+R�mil de L�rien, um dos guardi�es de L�rien est� aqui.
+~
+Voc� observa um magn�fico elfo de cabelos prateados e pele alva.  R�mil de
+L�rien � um dos guardi�es da floresta dourada de Lothl�rien e dos Galadhrim.
+R�mil � irm�o de Haldir e Orophin de L�rien.
+~
+2357250 0 0 0 0 0 0 0 1000 E
+45 -2 -10 5d10+1800 7d8+20
+10000 105000
+8 8 1
+BareHandAttack: 13
+Str: 15
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#13704
+Orophin elfo~
+Orophin de L�rien~
+Orophin de L�rien, um dos guardi�es de L�rien est� aqui.
+~
+Voc� observa um jovem e bel�ssimo elfo de Lothl�rien.  Orophin de L�rien �
+um dos guardi�es da floresta dourada de Lothl�rien e dos Galadhrim.  Orophin
+� irm�o de Haldir e R�mil de L�rien.
+~
+2357250 0 0 0 0 0 0 0 1000 E
+45 -2 -10 5d10+1800 7d8+20
+10000 105000
+8 8 1
+BareHandAttack: 13
+Str: 15
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#13705
+Galadriel elfa senhora~
+Galadriel~
+Galadriel, a senhora de L�rien est� aqui, emitindo paz para todo o seu povo.
+~
+Voc� observa a Filha de Finarfin, Galadriel � a mais bela elfa de todos da
+casa de Finw�.  Seu cabelo possuem reflexos de ouro como se tivesse captado
+numa rede o esplendor de Laurelin.  � a mais alta e valente, com uma bondade
+e sabedoria que poucos possuem.  Nasceu nas Terras Imortais de Valinor.  A
+celestial senhora de Lothl�rien est� vestida com trajes completamente
+brancos.  Galadriel possui um enorme poder e vive pacificamente ao lado do
+seu povo, os Galadhrim.
+~
+2357250 0 0 0 0 0 0 0 1000 E
+70 -15 -30 5d10+4500 7d10+25
+25000 268000
+8 8 2
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#13706
+Celeborn elfo senhor~
+Celeborn~
+Celeborn, o senhor de L�rien est� aqui, observando o brilho de L�rien.
+~
+Voc� observa o celestial senhor de L�rien.  Belo, alto e com uma postura
+imponente.  Celeborn possui lindos cabelos prateados e longos, e veste
+trajes completamente brancos.  O Senhor de Lothl�rien vive ao lado da bela
+Galadriel na maravilhosa cidade de Caras Galadhon.
+~
+2357250 0 0 0 0 0 0 0 1000 E
+70 -15 -30 5d10+4600 7d10+25
+25000 268000
+8 8 1
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#13707
+elfo~
+um elfo de L�rien~
+Um belo elfo de L�rien est� aqui, olhando para voc� alegremente.
+~
+Voc� observa um belo elfo de cabelos prateados e de uma postura imponente.
+Os Galadhrim vivem na gloriosa Caras Galadhon e cultivam a paz e a harmonia
+entre os povos.
+~
+2357250 0 0 0 0 0 0 0 1000 E
+40 0 -7 5d10+1600 7d8+20
+8000 80000
+8 8 1
+BareHandAttack: 13
+Str: 15
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#13708
+elfa~
+uma elfa de L�rien~
+Uma bela elfa de L�rien est� aqui, sorrindo para voc�.
+~
+Voc� observa uma majestosa elfa de L�rien de belos cabelos dourados bastante
+longos e olhos encantadores.  Os Galadhrim vivem na gloriosa Caras Galadhon
+e cultivam a paz e a harmonia entre os povos.
+~
+2357250 0 0 0 0 0 0 0 1000 E
+40 0 -7 5d10+1550 7d8+20
+8000 80000
+8 8 2
+BareHandAttack: 13
+Str: 15
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#13709
+crian�a elfa~
+uma linda crian�a elfa~
+Uma linda crian�a elfa est� aqui, brincando no seu imagin�rio mundo.
+~
+Voc� observa uma bela crian�a elfa de cabelos prateados e olhos
+encantadores.  Ao chegar mais pr�ximo dela, voc� a observa brincando em
+seu mundo m�gico e imagin�rio.
+~
+2357250 0 0 0 0 0 0 0 1000 E
+15 15 -2 5d10+400 4d6+5
+2000 7000
+8 8 2
+BareHandAttack: 13
+E
+#13710
+p�ssaro prateado~
+um lindo p�ssaro prateado~
+Um lindo p�ssaro prateado est� aqui, cantando sem parar belas melodias.
+~
+Voc� observa um maravilhoso p�ssaro de penas prateadas que emitem um brilho
+intenso e magn�fico.
+~
+2162768 0 0 0 0 0 0 0 500 E
+1 16 5 2d2+10 1d2+4
+0 300
+8 8 1
+BareHandAttack: 13
+Str: 6
+Int: 10
+Wis: 8
+Con: 7
+Cha: 18
+E
+#13711
+esquilo dourado~
+um belo esquilo dourado~
+Um belo esquilo dourado est� aqui, saltando sobre troncos de mallorns.
+~
+Voc� observa um lindo e brincalh�o esquilo dourado que vive nas florestas
+douradas de Lothl�rien.
+~
+2162768 0 0 0 0 0 0 0 500 E
+2 14 1 4d4+20 2d2+6
+0 600
+8 8 1
+BareHandAttack: 13
+Str: 7
+Wis: 8
+Con: 8
+Cha: 18
+E
+$

@@ -1,0 +1,71 @@
+#220
+Vitalia~
+Anexo~
+22000 22099 720 2 df 0 0 0 -1 -1
+-1
+*
+* O Banco de Vit�lia (10-14)
+*
+R 0 22011 22010		quadro de mensagens
+O 0 22010 1 22011	quadro de mensagens
+R 0 22011 3034		ATM
+O 0 3034 100 22011	ATM
+D 0 22010 0 1		fechar porta do cofre
+D 0 22011 2 1		fechar porta do cofre
+*
+* A Confraria da Fam�lia Daguerreo (15-19)
+*
+R 0 22015 22015		bras�o
+O 0 22015 1 22015	bras�o
+*
+* O Jornal de Vit�lia (20-24)
+*
+M 0 22020 1 22020	a recepcionista
+M 0 22021 1 22020	o vendedor de jornais
+* M 0 22022 1 22021	o mensageiro
+M 0 22023 1 22021	o operador da m�quina
+R 0 22021 22020		a prensa
+O 0 22020 1 22021	a prensa
+R 0 22022 22021		uma pilha de pap�is
+O 0 22021 5 22022	uma pilha de pap�is
+R 0 22022 22022		quadro de mensagens
+O 0 22022 1 22022	quadro de mensagens
+R 0 22022 22023		um bebedouro
+O 0 22023 1 22022	um bebedouro
+D 0 22022 1 1		fechar a porta da sala do editor-chefe
+D 0 22023 3 1		fechar a porta da sala do editor-chefe
+*
+* Os Jardins de Videl (25-29)
+*
+D 0 22026 2 1            cerca da videl
+D 0 22027 0 1            cerca da videl
+R 0 22027 22025          mesa de pic-nic
+O 0 22025 1 22027        mesa de pic-nic
+R 0 22027 22026          toalha de pic-nic
+O 0 22026 1 22027        toalha de pic-nic
+R 0 22027 22027          cesto de pic-nic
+O 0 22027 1 22027        cesto de pic-nic
+R 0 22027 22028          riacho
+O 0 22028 1 22027        riacho
+*
+* A Caminho da Paz (30-59)
+*
+D 0 22031 0 1		A Sala dos Conselhos Dados <-> A Sala dos Sentimentos Nobres
+D 0 22033 2 1		A Sala dos Conselhos Dados <-> A Sala dos Sentimentos Nobres
+D 0 22031 2 1		A Sala dos Conselhos Dados <-> A Sala dos Sentimentos Puros
+D 0 22032 0 1		A Sala dos Conselhos Dados <-> A Sala dos Sentimentos Puros
+D 0 22032 4 1		A Sala dos Sentimentos Puros -> Ouvindo as Palavras da Vida
+D 0 22033 4 1		A Sala dos Sentimentos Nobres -> Ouvindo as Palavras da Vida
+D 0 22032 1 1		A Sala dos Sentimentos Puros <-> O Encontro da Uni�o e da For�a
+D 0 22035 3 1		A Sala dos Sentimentos Puros <-> O Encontro da Uni�o e da For�a
+D 0 22033 3 1		A Sala dos Sentimentos Nobres <-> O Encontro da Uni�o e da For�a
+D 0 22035 1 1		A Sala dos Sentimentos Nobres <-> O Encontro da Uni�o e da For�a
+R 0 22031 22059		o Mural de Mensagens
+O 0 22059 1 22031	o Mural de Mensagens
+R 0 22035 22058		o Pequeno Mural de Mensagens
+O 0 22058 1 22035	o Pequeno Mural de Mensagens
+R 0 22034 22057		a pequena fonte de cristal
+O 0 22057 1 22034	a pequena fonte de cristal
+M 0 22030 1 22030	Honireves
+S
+$

@@ -1,0 +1,766 @@
+#9200
+A Estrada dos Cinco Reinos~
+   Você caminha por uma estrada realmente bela de terra batida.  Pouca
+poeira é levantada ao seu caminhar e você pode respirar muito bem, embora
+não perceba a presença de árvores ou qualquer tipo de vegetação por perto.
+A estrada é ladeada por pedras muito brancas, talvez fosse mármore mas você
+não tem certeza.  Bem longe ao norte você consegue, com muita dificuldade,
+ver 5 torres: duas vermelhas, duas pretas e uma dourada.  Você ainda pode
+voltar para o sul de onde você veio.
+~
+92 4 0 0 0 2
+D0
+Você não vê muita coisa além do caminho que segue para Midgaard...
+~
+~
+0 -1 3070
+E
+pedras~
+Você vê várias pedras brancas muito lisas que jamais poderiam ser retiradas
+de seu lugar original.  Você sente que estas pedras foram colocadas para
+adornar o caminho de chegada de Reis e Rainhas, ou talvez alguém mais
+importante.
+~
+S
+#9201
+A Estrada dos Cinco Reinos~
+   Você continua caminhando pela estrada maravilhado por sua beleza.  Ao
+norte a visão das cinco torres parece mais nítida e você percebe que a torre
+dourada parece mudar de forma assemelhando-se a cada uma das outras torres.
+Há realmente algo de mágico nesta torre.  Você pode ainda seguir para o sul.
+~
+92 0 0 0 0 2
+D0
+A estrada segue para o sul.
+~
+~
+0 -1 9200
+S
+#9202
+A Escolha~
+   É chegada a hora de você decidir seu caminho.  Três são suas escolhas e
+a partir daqui você terá selado seu caminho.  Ao norte há uma estrada
+multicolorida que hora assemelha-se a estrada a nordeste e hora confunde-se
+na sua forma com a estrada que segue para norodeste.  Você ainda pode voltar
+para o sul.
+~
+92 0 0 0 0 2
+D0
+Você ainda pode voltar para o sul.
+~
+~
+0 -1 9201
+S
+#9203
+Os Dois Portões~
+   Você nem percebe que depois de feita sua escolha a estrada toma uma cor
+avermelhada com tonalidade indefinida.  Ao perceber isso você se depara com
+dois portões um ao norte e outro para noroeste.  O caminho para sudeste
+continua livre.
+~
+92 0 0 0 0 2
+D0
+Você vê um portão vermelho.
+~
+~
+0 -1 9207
+S
+#9204
+Os Dois Portões~
+   Você nem percebe que depois de feita sua escolha a estrada toma uma cor
+enegrecida com tonalidade indefinida.  Ao perceber isso você se depara com
+dois portões um ao norte e outro para nordeste.  O caminho para sudoeste
+continua livre.
+~
+92 0 0 0 0 2
+D0
+Você vê um portão negro.
+~
+~
+0 -1 9209
+S
+#9205
+O Portão de Forma Indefinida~
+   Você se depara com um portão de forma indefinida.  Na verdade você nota
+que ele toma diversas formas, ou melhor, quatro formas muito parecidas com
+os naipes de um baralho.  Sua tonalidade também oscila entre o vermelho e o
+preto.Uma placa está bem ao alto do portão com alguma coisa escrita mas você
+não consegue enxergar ...  Talvez se você examinasse mais de perto a
+placa...  Você pode atravessar o portão para norte ou simplesmente seguir
+para o sul.
+~
+92 0 0 0 0 2
+D0
+Você olha nessa direção lembrando da sua escolha.  Seria melhor alterá-la?
+~
+~
+0 -1 9202
+E
+placa~
+Você força sua vista e consegue ler o que está escrito na placa:
+
+Seja bem vindo ao Reino Coringa.  Nosso soberano, o Rei Coringa, governa
+este reino com justiça e sabedoria.  Esperamos que sua vinda aqui seja com
+boas intenções.  Saiba que a partir de sua entrada você estará sujeito às
+leis de nosso reino.
+                            Ass.: Falso Ás - O Pacificador
+~
+E
+portão~
+Um belo portão de cor indefinida com a forma também indefinida.
+~
+S
+#9206
+O Portão para o Reino de Copas~
+   Você se depara com um portão todo vermelho com a forma do naipe de copas.
+Uma placa está bem ao alto do portão com alguma coisa escrita mas você não
+consegue enxergar ...  Talvez se você examinasse mais de perto a placa...
+De qualquer maneira você não tem dúvidas de que está entrando na corte do
+Reino de Copas.  Você pode seguir em frente, para o norte ou para o sudeste.
+~
+92 0 0 0 0 2
+D0
+Você vê o caminho por onde você veio.
+~
+~
+0 -1 9203
+E
+placa~
+Você força sua vista e consegue ler o que está escrito na placa:
+
+Seja bem vindo ao reino de Copas.  Nosso soberano, o Rei de Copas governa
+este reino com justiça e sabedoria.  Esperamos que sua vinda aqui seja com
+boas intenções.  Saiba que a partir de sua entrada você estará sujeito às
+leis de nosso reino.
+
+                            Ass.: Ás de Copas - O Pacificador
+~
+E
+Portão~
+Um belo portão vermelho com a forma do naipe de copas.
+~
+S
+#9207
+O Portão para o Reino de Ouros~
+   Você se depara com um portão todo vermelho com a forma do naipe de ouros.
+Uma placa está bem ao alto do portão com alguma coisa escrita mas você não
+consegue enxergar ...  Talvez se você examinasse mais de perto a placa...
+De qualquer maneira você não tem dúvidas de que está entrando na corte do
+Reino de Ouros.  Você pode seguir em frente, para o norte, ou para o sul.
+~
+92 0 0 0 0 2
+D0
+Você vê o caminho por onde você veio.
+~
+~
+0 -1 9203
+E
+placa~
+Você força sua vista e consegue ler o que está escrito na placa:
+
+Seja bem vindo ao reino de Ouros.  Nosso soberano, o Rei de Ouros governa
+este reino com justiça e sabedoria.  Esperamos que sua vinda aqui seja com
+boas intenções.  Saiba que a partir de sua entrada você estará sujeito às
+leis de nosso reino.
+
+                            Ass.: Ás de Ouros - O Pacificador
+~
+E
+portão~
+Um belo portão vermelho com a forma do naipe de ouros.
+~
+S
+#9208
+O Portão para o Reino de Espadas~
+   Você se depara com um portão todo negro com a forma do naipe de espadas.
+Uma placa está bem ao alto do portão com alguma coisa escrita mas você não
+consegue enxergar ...  Talvez se você examinasse mais de perto a placa...
+De qualquer maneira você não tem dúvidas de que está entrando na corte do
+Reino de Espadas.  Você pode seguir em frente, para o norte, ou para o
+sudoeste.
+~
+92 0 0 0 0 2
+D0
+Você vê o caminho por onde você veio.
+~
+~
+0 -1 9204
+E
+placa~
+Você força sua vista e consegue ler o que está escrito na placa:
+
+Seja bem vindo ao reino de Espada.  Nosso soberano, o Rei de Espadas governa
+este reino com justiça e sabedoria.  Esperamos que sua vinda aqui seja com
+boas intenções.  Saiba que a partir de sua entrada você estará sujeito às
+leis de nosso reino.
+
+                            Ass.: Ás de Espada - O Pacificador
+~
+E
+portão~
+Um belo portão negro com a forma do naipe de espadas.
+~
+S
+#9209
+O Portão para o Reino de Paus~
+   Você se depara com um portão todo Negro com a forma do naipe de paus.
+Uma placa está bem ao alto do portão com alguma coisa escrita mas você não
+consegue enxergar ...  Talvez se você examinasse mais de perto a placa...
+De qualquer maneira você não tem dúvidas de que está entrando na corte do
+Reino de Paus.  Você pode seguir em frente, para o norte, ou para o
+sudoeste.
+~
+92 0 0 0 0 2
+D0
+Você vê o caminho por onde você veio.
+~
+~
+0 -1 9204
+E
+placa~
+Você força sua vista e consegue ler o que está escrito na placa:
+
+Seja bem vindo ao Reino de Paus.  Nosso soberano, o Rei de Paus governa este
+reino com justiça e sabedoria.  Esperamos que sua vinda aqui seja com boas
+intenções.  Saiba que a partir de sua entrada você estará sujeito às leis de
+nosso reino.
+                           Ass.: Ás de Paus - O Pacificador
+~
+E
+portão~
+Um belo portão Negro com a forma do naipe de Paus.
+~
+S
+#9210
+Estrada para o Castelo de Copas~
+   Atravessando o portão do Reino de Copas você entra em uma estrada pouco
+movimentada, que segue em direção ao castelo de Copas onde você pode ver uma
+linda torre vermelha.  Antes do castelo ao norte, você vê uma praça onde
+algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o sul você vê o
+portão.
+~
+92 0 0 0 0 1
+D0
+Você vê o portão por onde você entrou.
+~
+portão copas forma~
+1 9201 9206
+S
+#9211
+Estrada para o Castelo de Ouros~
+   Atravessando o portão do Reino de Ouros você entra em uma estrada pouco
+movimentada, que segue em direção ao castelo de Ouros onde você pode ver uma
+linda torre vermelha.  Antes do castelo ao norte, você vê uma praça onde
+algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o sul você vê o
+portão.
+~
+92 0 0 0 0 1
+D0
+Você vê o portão por onde você entrou.
+~
+portão ouros forma~
+1 9202 9207
+S
+#9212
+Estrada para o Castelo de Espadas~
+   Atravessando o portão do Reino de Espadas você entra em uma estrada pouco
+movimentada, que segue em direção ao castelo de Espadas onde você pode ver
+uma linda torre Negra.  Antes do castelo ao norte, você vê uma praça onde
+algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o sul você vê o
+portão.
+~
+92 0 0 0 0 1
+D0
+Você vê o portão por onde você entrou.
+~
+portão espadas forma~
+1 9203 9208
+S
+#9213
+Estrada para o Castelo de Paus~
+   Atravessando o portão do Reino de Paus você entra em uma estrada pouco
+movimentada, que segue em direção ao castelo de Paus onde você pode ver uma
+linda torre Negra.  Antes do castelo ao norte, você vê uma praça onde
+algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o sul você vê o
+portão.
+~
+92 0 0 0 0 1
+D0
+Você vê o portão por onde você entrou.
+~
+portão copas forma~
+1 9204 9209
+S
+#9214
+Estrada para o Castelo Multiforme~
+   Atravessando o portão do Reino Coringa você entra em uma estrada pouco
+movimentada, que segue em direção ao Castelo Multiforme onde você pode ver
+uma linda torre de cor indefinida.  Antes do castelo ao norte, você vê uma
+praça onde algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o
+sul você vê o portão.
+~
+92 0 0 0 0 1
+D0
+Você vê o portão por onde você entrou.
+~
+portão indefinida forma~
+1 9200 9205
+S
+#9215
+O Lixo~
+   Você se encontra em uma praça bastante tumultuada onde os arcanos menores
+de Copas se reúnem para celebrar sabe-se lá o quê...
+~
+92 0 0 0 0 1
+D0
+A estrada segue para o sul.
+~
+~
+0 -1 9210
+S
+#9216
+O Lixo~
+   Você se encontra em uma praça bastante tumultuada onde os arcanos menores
+de Ouros se reúnem para celebrar sabe-se lá o quê...
+~
+92 0 0 0 0 1
+D0
+A estrada segue para o sul.
+~
+~
+0 -1 9211
+S
+#9217
+O Lixo~
+   Você se encontra em uma praça bastante tumultuada onde os arcanos menores
+de Espadas se reúnem para celebrar sabe-se lá o quê...
+~
+92 0 0 0 0 1
+D0
+A estrada segue para o sul.
+~
+~
+0 -1 9212
+S
+#9218
+O Lixo~
+   Você se encontra em uma praça bastante tumultuada onde os arcanos menores
+de Paus se reúnem para celebrar sabe-se lá o quê...
+~
+92 0 0 0 0 1
+D0
+A estrada segue para o sul.
+~
+~
+0 -1 9213
+S
+#9219
+O Lixo~
+   Você se encontra em uma praça bastante tumultuada onde os coringas menos
+nobres se reúnem para celebrar sabe-se lá o quê...
+~
+92 0 0 0 0 1
+D0
+A estrada segue para o sul.
+~
+~
+0 -1 9214
+S
+#9220
+Antes do Castelo de Copas~
+   Você está diante de um belo castelo de cartas vermelhas.  Sua entrada é
+sempre bem guardada.  O mistério do que te aguarda dentro deste castelo
+invade sua alma e você não consegue pensar em mais nada a não ser em entrar
+nele e descobrir, talvez, o TESOURO perdido do Rei de Copas.  Seguindo para
+norte está a entrada do Castelo e ao sul uma praça bastante movimentada
+chama sua atenção.
+~
+92 0 0 0 0 1
+D0
+Você vê uma praça.
+~
+~
+0 -1 9215
+S
+#9221
+Antes do Castelo de Ouros~
+   Você está diante de um belo castelo de cartas vermelhas.  Sua entrada é
+sempre bem guardada.  O mistério do que te aguarda dentro deste castelo
+invade sua alma e você não consegue pensar em mais nada a não ser em entrar
+nele e descobrir, talvez, o TESOURO perdido do Rei de Ouros.  Seguindo para
+norte está a entrada do Castelo e ao sul uma praça bastante movimentada
+chama sua atenção.
+~
+92 0 0 0 0 1
+D0
+Você vê uma praça.
+~
+~
+0 -1 9216
+S
+#9222
+Antes do Castelo de Espadas~
+   Você está diante de um belo castelo de cartas pretas.  Sua entrada é
+sempre bem guardada.  O mistério do que te aguarda dentro deste castelo
+invade sua alma e você não consegue pensar em mais nada a não ser em entrar
+nele e descobrir, talvez, o TESOURO perdido do Rei de Espadas.  Seguindo
+para norte está a entrada do Castelo e ao sul uma praça bastante movimentada
+chama sua atenção.
+~
+92 0 0 0 0 1
+D0
+Você vê uma praça.
+~
+~
+0 -1 9217
+S
+#9223
+Antes do Castelo de Paus~
+   Você está diante de um belo castelo de cartas pretas.  Sua entrada é
+sempre bem guardada.  O mistério do que te aguarda dentro deste castelo
+invade sua alma e você não consegue pensar em mais nada a não ser em entrar
+nele e descobrir, talvez, o TESOURO perdido do Rei de Paus.  Seguindo para
+norte está a entrada do Castelo e ao sul uma praça bastante movimentada
+chama sua atenção.
+~
+92 0 0 0 0 1
+D0
+Você vê uma praça.
+~
+~
+0 -1 9218
+S
+#9224
+Antes do Castelo Multiforme~
+   Você está diante de um belo castelo de cartas multicoloridas.  Sua
+entrada é sempre bem guardada.  O mistério do que te aguarda dentro deste
+castelo invade sua alma e você não consegue pensar em mais nada a não ser em
+entrar nele e descobrir, talvez, o TESOURO perdido do Rei Coringa.  Seguindo
+para norte está a entrada do Castelo e ao sul uma praça bastante movimentada
+chama sua atenção.
+~
+92 0 0 0 0 1
+D0
+Você vê uma praça.
+~
+~
+0 -1 9219
+S
+#9225
+A Sala do Trono de Copas~
+   Você se encontra diante de um salão enorme com cortinas vermelhas e o
+chão quadriculado em branco e vermelho.  Na parede há um ENORME painel com o
+brasão de Copas.  A sua frente o mais belo de todos os tronos que você já
+viu.  Forrado com cetim vermelho esse trono deve pertencer ao belo Rei de
+Copas e um trono um pouco menor parece não ser usado há muito tempo, o que o
+faz pensar que a rainha não mais habita esse mundo.  A leste você vê uma
+pequena sala, que, embora pareça pequena, também parece muito luxuosa - ao
+menos é o q você pode ver pela porta entreaberta que se fecha
+repentinamente.  No canto noroeste da sala você vê uma porta que
+provavelmente o levará para a torre que você via do lado de fora.
+~
+92 8 0 0 0 0
+D0
+Você vê a entrada do castelo.
+~
+~
+0 -1 9220
+S
+#9226
+A Sala do Trono de Ouros~
+   Você se encontra diante de um salão enorme com cortinas vermelhas e o
+chão quadriculado em branco e vermelho.  Na parede há um ENORME painel com o
+brasão de Ouros.  A sua frente o mais belo de todos os tronos que você já
+viu.  Forrado com cetim vermelho esse trono deve pertencer ao belo Rei de
+Ouros e um trono um pouco menor parece não ser usado há muito tempo, o que o
+faz pensar que a rainha não mais habita esse mundo.  A leste você vê uma
+pequena sala, que, embora pareça pequena, também parece muito luxuosa - ao
+menos é o q você pode ver pela porta entreaberta que se fecha
+repentinamente.  No canto noroeste da sala você vê uma porta que
+provavelmente o levará para a torre que você via do lado de fora.
+~
+92 8 0 0 0 0
+D0
+Você vê a entrada do castelo.
+~
+~
+0 -1 9221
+S
+#9227
+A Sala do Trono de Espadas~
+   Você se encontra diante de um salão enorme com cortinas negras e o chão
+quadriculado em branco e preto.  Na parede há um ENORME painel com o brasão
+de Espadas.  A sua frente o mais belo de todos os tronos que você já viu.
+Forrado com cetim negro esse trono deve pertencer ao belo Rei de Espadas e
+um trono um pouco menor parece não ser usado há muito tempo, o que o faz
+pensar que a rainha não mais habita esse mundo.  A leste você vê uma pequena
+sala, que, embora pareça pequena, também parece muito luxuosa - ao menos é o
+q você pode ver pela porta entreaberta que se fecha repentinamente.  No
+canto noroeste da sala você vê uma porta que provavelmente o levará para a
+torre que você via do lado de fora.
+~
+92 8 0 0 0 0
+D0
+Você vê a entrada do castelo.
+~
+~
+0 -1 9222
+S
+#9228
+A Sala do Trono de Paus~
+   Você se encontra diante de um salão enorme com cortinas negras e o chão
+quadriculado em branco e preto.  Na parede há um ENORME painel com o brasão
+de Paus.  A sua frente o mais belo de todos os tronos que você já viu.
+Forrado com cetim negro esse trono deve pertencer ao belo Rei de Paus e um
+trono um pouco menor parece não ser usado há muito tempo, o que o faz pensar
+que a rainha não mais habita esse mundo.  A leste você vê uma pequena sala,
+que, embora pareça pequena, também parece muito luxuosa - ao menos é o q
+você pode ver pela porta entreaberta que se fecha repentinamente.  No canto
+noroeste da sala você vê uma porta que provavelmente o levará para a torre
+que você via do lado de fora.
+~
+92 8 0 0 0 0
+D0
+Você vê a entrada do castelo.
+~
+~
+0 -1 9223
+S
+#9229
+A Sala do Trono do Rei Coringa~
+   Você se encontra diante de um salão enorme com cortinas coloridas e o
+chão quadriculado em vermelho e preto.  Na parede há um ENORME painel com o
+brasão sem forma definida.  A sua frente um trono que parece imitar, sem
+sucesso a beleza de outros.  Forrado com cetim de uma cor indefinida esse
+trono deve pertencer ao Rei Coringa e um trono um pouco menor parece não ser
+usado há muito tempo, o que o faz pensar que a rainha não mais habita esse
+mundo.  A leste você vê uma pequena sala, que, embora pareça pequena, também
+parece muito luxuosa - ao menos é o q você pode ver pela porta entreaberta
+que se fecha repentinamente.  No canto noroeste da sala você vê uma porta
+que provavelmente o levará para a torre que você via do lado de fora.  Você
+ainda pode sair do castelo pela direção sul.
+~
+92 8 0 0 0 0
+D0
+Você vê a entrada do castelo.
+~
+~
+0 -1 9224
+S
+#9230
+O Quarto do Ás de Copas~
+   Você está diante de um luxuosíssimo aposento com tudo que há de melhor em
+conforto.  Também, pudera, este quarto pertence ao ÁS de COPAS!  O mais
+habilidoso de todos os habitantes deste e de muitos outros reinos!  Sua
+habilidade com espadas, chicotes, lanças e todo tipo de arma é famosa por
+toda Vitália!  Sorte sua você não encontra-lo aqui ...  Mas espere ...  Onde
+andará o Pacificador do Reino de Copas?  Antes que o Ás chegue você ainda
+pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
+~
+92 8 0 0 0 0
+D0
+Sua única saida é para oeste.
+~
+porta~
+1 -1 9225
+S
+#9231
+O Quarto do Ás de Ouros~
+   Você está diante de um luxuosíssimo aposento com tudo que há de melhor em
+conforto.  Também, pudera, este quarto pertence ao ÁS de OUROS!  O mais
+habilidoso de todos os habitantes deste e de muitos outros reinos!  Sua
+habilidade com espadas, chicotes, lanças e todo tipo de arma é famosa por
+toda Vitália!  Sorte sua você não encontra-lo aqui ...  Mas espere ...  Onde
+andará o Pacificador do Reino de Ouros?  Antes que o Ás chegue você ainda
+pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
+~
+92 8 0 0 0 0
+D0
+Sua única saida é para oeste.
+~
+porta~
+1 -1 9226
+S
+#9232
+O Quarto do Ás de Espadas~
+   Você está diante de um luxuosíssimo aposento com tudo que há de melhor em
+conforto.  Também, pudera, este quarto pertence ao ÁS de ESPADAS!  O mais
+habilidoso de todos os habitantes deste e de muitos outros reinos!  Sua
+habilidade com espadas, chicotes, lanças e todo tipo de arma é famosa por
+toda Vitália!  Sorte sua você não encontra-lo aqui ...  Mas espere ...  Onde
+andará o Pacificador do Reino de Espadas?  Antes que o Ás chegue você ainda
+pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
+~
+92 8 0 0 0 0
+D0
+Sua única saida é para oeste.
+~
+porta~
+1 -1 9227
+S
+#9233
+O Quarto do Ás de Paus~
+   Você está diante de um luxuosíssimo aposento com tudo que há de melhor em
+conforto.  Também, pudera, este quarto pertence ao ÁS de PAUS!  O mais
+habilidoso de todos os habitantes deste e de muitos outros reinos!  Sua
+habilidade com espadas, chicotes, lanças e todo tipo de arma é famosa por
+toda Vitália!  Sorte sua você não encontra-lo aqui ...  Mas espere ...  Onde
+andará o Pacificador do Reino de Paus?  Antes que o Ás chegue você ainda
+pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
+~
+92 8 0 0 0 0
+D0
+Sua única saida é para oeste.
+~
+porta~
+1 -1 9228
+S
+#9234
+O Quarto do Falso Ás~
+   Você está diante de um luxuosíssimo aposento com tudo que há de melhor em
+conforto.  Também, pudera, este quarto pertence ao Falso Ás!  O mais
+habilidoso de todos os habitantes deste e de muitos outros reinos!  Sua
+habilidade com espadas, chicotes, lanças e todo tipo de arma é famosa por
+toda Vitália!  Sorte sua você não encontra-lo aqui ...  Mas espere ...  Onde
+andará o Pacificador do Reino Coringa?  Antes que o Ás chegue você ainda
+pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
+~
+92 8 0 0 0 0
+D0
+Sua única saida é para oeste.
+~
+porta~
+1 -1 9229
+S
+#9235
+A Subindo a Torre de Copas~
+   Você está em uma escada reta que o conduz ao alto da torre de Copas.
+Você não deixa de pensar que tipo de surpresa você encontrará no fim dessa
+escada...  Você chega ao final da escada onde há uma porta fechada.  Você
+ainda pode voltar ao salão do trono pela mesma escada na direção
+sul.
+~
+92 8 0 0 0 0
+D0
+A descida da escada parece ser mais fácil.
+~
+porta~
+1 -1 9225
+S
+#9236
+A Subindo a Torre de Ouros~
+   Você está em uma escada reta que o conduz ao alto da torre de Ouros.
+Você não deixa de pensar que tipo de surpresa você encontrará no fim dessa
+escada...  Você chega ao final da escada onde há uma porta fechada.  Você
+ainda pode voltar ao salão do trono pela mesma escada na direção sul.
+~
+92 8 0 0 0 0
+D0
+A descida da escada parece ser mais fácil.
+~
+porta~
+1 -1 9226
+S
+#9237
+A Subindo a Torre de Espadas~
+   Você está em uma escada reta que o conduz ao alto da torre de Espadas.
+Você não deixa de pensar que tipo de surpresa você encontrará no fim dessa
+escada...  Você chega ao final da escada onde há uma porta fechada.  Você
+ainda pode voltar ao salão do trono pela mesma escada na direção sul.
+~
+92 8 0 0 0 0
+D0
+A descida da escada parece ser mais fácil.
+~
+porta~
+1 -1 9227
+S
+#9238
+A Subindo a Torre de Paus~
+   Você está em uma escada reta que o conduz ao alto da torre de Paus.  Você
+não deixa de pensar que tipo de surpresa você encontrará no fim dessa
+escada...  Você chega ao final da escada onde há uma porta fechada.  Você
+ainda pode voltar ao salão do trono pela mesma escada na direção sul.
+~
+92 8 0 0 0 0
+D0
+A descida da escada parece ser mais fácil.
+~
+porta~
+1 -1 9228
+S
+#9239
+A Subindo a Torre Coringa~
+   Você está em uma escada reta que o conduz ao alto da torre Coringa.  Você
+não deixa de pensar que tipo de surpresa você encontrará no fim dessa
+escada...  Você chega ao final da escada onde há uma porta fechada.  Você
+ainda pode voltar ao salão do trono pela mesma escada na direção sudeste. 
+~
+92 8 0 0 0 0
+D0
+A descida da escada parece ser mais fácil.
+~
+porta~
+1 -1 9229
+S
+#9240
+O Alto da Torre de Copas~
+   Você nota que, vendo daqui, o interior da torre é muito menor do que você
+havia imaginado pelo lado de fora.  Na verdade trata-se de um pequeno
+aposento onde o Rei de Copas deixa sua filha para livra-la dos
+conquistadores baratos que rondam o Reino de Copas atrás de belas donzelas
+com dotes altos como a Dama de Copas.  Subitamente você percebe que a porta
+se tranca com uma rapidez estupenda impedindo seu retorno!  Parece que você
+ficou preso aqui ....
+~
+92 8 0 0 0 0
+S
+#9241
+O Alto da Torre de Ouros~
+   Você nota que, vendo daqui, o interior da torre é muito menor do que você
+havia imaginado pelo lado de fora.  Na verdade trata-se de um pequeno
+aposento onde o Rei de Ouros deixa sua filha para livra-la dos
+conquistadores baratos que rondam o Reino de Ouros atrás de belas donzelas
+com dotes altos como a Dama de Ouros.  Subitamente você percebe que a porta
+se tranca com uma rapidez estupenda impedindo seu retorno!  Parece que você
+ficou preso aqui ....
+~
+92 8 0 0 0 0
+S
+#9242
+O Alto da Torre de Espadas~
+   Você nota que, vendo daqui, o interior da torre é muito menor do que você
+havia imaginado pelo lado de fora.  Na verdade trata-se de um pequeno
+aposento onde o Rei de Espadas deixa sua filha para livra-la dos
+conquistadores baratos que rondam o Reino de Espadas atrás de belas donzelas
+com dotes altos como a Dama de Espadas.  Subitamente você percebe que a
+porta se tranca com uma rapidez estupenda impedindo seu retorno!  Parece que
+você ficou preso aqui ....
+~
+92 8 0 0 0 0
+S
+#9243
+O Alto da Torre de Paus~
+   Você nota que, vendo daqui, o interior da torre é muito menor do que você
+havia imaginado pelo lado de fora.  Na verdade trata-se de um pequeno
+aposento onde o Rei de Paus deixa sua filha para livra-la dos conquistadores
+baratos que rondam o Reino de Paus atrás de belas donzelas com dotes altos
+como a Dama de Paus.  Subitamente você percebe que a porta se tranca com uma
+rapidez estupenda impedindo seu retorno!  Parece que você ficou preso aqui
+....
+~
+92 8 0 0 0 0
+S
+#9244
+O Alto da Torre Coringa~
+   Você nota que, vendo daqui, o interior da torre é muito menor do que você
+havia imaginado pelo lado de fora.  Na verdade trata-se de um pequeno
+aposento onde o Rei Coringa deixa sua filha (?) para livra-la dos
+conquistadores baratos que rondam o Reino Coringa atrás de belas (?)
+donzelas (?) com dotes altos como a Dama Coringa.  Subitamente você percebe
+que a porta se tranca com uma rapidez estupenda impedindo seu retorno!
+Parece que você ficou preso aqui ....
+~
+92 8 0 0 0 0
+S
+$~

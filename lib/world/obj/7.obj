@@ -1,0 +1,360 @@
+#700
+roda triangular~
+um medalhão com uma roda triangular~
+Um amuleto negro foi abandonado aqui, ele possui um brilho profano.~
+~
+9 agj 0 0 0 ac 0 0 0 0 0 0 0
+3 0 0 0
+1 100 0 10 0
+E
+roda triangular~
+Preso a uma corrente, este símbolo diabólico é feito de algo desconhecido.
+Ele parece conter uma parte do poder da Senhora do Vazio Interior.  Assim
+que você o toca, você sente o gosto.  A força diabólica de seu espírito.
+~
+A
+4 2
+A
+12 20
+A
+6 -2
+#701
+lanterna enferrujada~
+uma lanterna enferrujada~
+Uma lanterna enferrujada está jogada aqui, próxima à parede.~
+~
+1 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 24 0
+3 55 0 0 0
+E
+lanterna enferrujada~
+Um antigo dispositivo de iluminação, enferrujado pelo passar dos anos,
+embora ainda funcione bem.
+~
+#702
+tocha~
+uma tocha~
+Uma tocha foi posta em uma das paredes.~
+~
+1 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 5 0
+1 15 0 0 0
+#703
+pena prateada anjo~
+uma pena prateada da asa de um Anjo~
+Uma pena metálica foi deixada junto à sujeira.~
+~
+8 ik 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 1000 9 30 0
+A
+18 2
+A
+6 1
+#704
+cimitarra negra cavaleiro~
+a cimitarra negra do cavaleiro~
+Uma cimitarra negra como a noite foi perdida aqui.~
+~
+5 bgnqt 0 0 0 an 0 0 0 0 0 0 0
+0 5 3 3
+10 250000 2 9 0
+E
+cimitarra negra~
+Esta espada negra é feita de algum material desconhecido.  Ela zune com o
+poder maligno do Vazio Interior.
+~
+A
+4 -3
+A
+1 1
+A
+19 3
+#705
+erva ervas brilhante~
+uma erva brilhante~
+Algumas ervas crescem por aqui.~
+~
+12 a 0 0 0 a 0 0 0 0 0 0 0
+5 43 16 0
+1 100 0 0 0
+E
+Ervas brilhantes~
+Um pequeno cacho de ervas brilhante brota do chão.  Somente uma erva muito
+resistente conseguiria sobreviver num lugar desses.
+~
+#706
+caco vazio objeto~
+um caco de vazio~
+Há um objeto que você não consegue identificar jogado aqui.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#707
+cristal orbe negro~
+um orbe de cristal~
+Um orbe de cristal negro flutua sobre o chão.~
+~
+1 hjlq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 2000 0
+5 1500 0 30 0
+A
+12 20
+A
+13 -30
+#709
+guardião peitoral~
+o peitoral de um Guardião~
+O peitoral de um Guardião foi deixado aqui.~
+~
+9 p 0 0 0 ad 0 0 0 0 0 0 0
+5 0 0 0
+35 23000 0 0 0
+A
+6 2
+A
+13 20
+#710
+poder prateado anjo aura energia~
+o Poder do Anjo Prateado~
+Uma aura de energia flutua, perdida, pelo chão.~
+~
+5 aikq 0 0 0 an 0 0 0 0 0 0 0
+0 4 4 3
+10 10844 0 20 0
+E
+poder prateado energia aura anjo~
+Este é o poder do Anjo Prateado solidificado.
+~
+A
+19 3
+#711
+placa~
+uma placa~
+Uma placa foi posta na parede. Talvez você devesse lê-la.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+placa~
+
+Indesejáveis Convidados
+Vossa presença não é desejada aqui. Se desejardes me
+confrontar serei forçada a parar-vos. Sois bem-vindos
+a tentar, mas não vos salvarei de vossa própria ignorância.
+
+Fostes avisados.
+
+Ivian
+~
+#715
+chave morte~
+a chave da Morte~
+A chave da Morte está jogada aqui, entre escombros.~
+~
+18 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#716
+telescópio~
+o telescópio~
+O telescópio de observação está próximo a janela.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+10 0 0 0
+100 0 0 0 0
+E
+telescópio~
+Nada.
+~
+#717
+chave C~
+a Chave C~
+A chave C foi perdida aqui.~
+~
+18 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+10 0 0 0 0
+#718
+estante livros~
+uma estante de livros~
+Há uma grande estante de livros próxima à parede, juntando pó.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+75 0 -1 0
+0 0 0 0 0
+#719
+chave livro capa belo harmoniosa ascensão~
+o Livro da Ascensão Harmoniosa~
+Um belo livro de capa trabalhada foi deixado aqui.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+15 100 0 0 0
+E
+chave livro capa belo harmoniosa ascensão~
+A Chave para a Ascensão Harmoniosa: Os Extremos são coisas
+desagradáveis. Invariavelmente, eles trabalham para a prevenção
+da harmonia. Portanto, apenas a chave que se libertou dos limites
+e de sua cegueira pode destrancar as portas que levam por entre
+os pilares desse mundo.
+~
+#720
+tomo ígneo livro~
+o Tomo do Fogo Infernal~
+Um grosso livro encadernado com couro ígneo foi deixado aqui.~
+~
+2 adq 0 0 0 a 0 0 0 0 0 0 0
+1 26 16 30
+15 2000 0 0 0
+E
+tomo livro ígneo~
+Você recita as palavras amaldiçoadas "Incenderius Diabolicius!"
+~
+#721
+tomo livro gelo~
+o Tomo do Gelo Maldito~
+Um livro encadernado com couro azulado foi deixado aqui.~
+~
+2 adq 0 0 0 a 0 0 0 0 0 0 0
+10 61 -1 30
+15 0 0 0 0
+E
+tomo livro~
+Você recita as palavras banidas "Subthermae Aeterna!"
+~
+#722
+tomo tempestades~
+o Tomo das Tempestades~
+Um grande livro encadernado em couro brilhante foi deixado aqui.~
+~
+2 adq 0 0 0 a 0 0 0 0 0 0 0
+35 37 30 66
+15 2000 0 0 0
+E
+livro tomo tempestades~
+Você recita as palavras anciãs "Volteaic Electrum Teslagrate!"
+~
+#730
+chave D~
+a Chave D~
+A Chave D foi esquecida aqui.~
+~
+18 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+35 0 0 0 0
+#731
+chave afiada A~
+a Chave A afiada~
+A Chave A foi deixada aqui.~
+~
+5 g 0 0 0 an 0 0 0 0 0 0 0
+0 3 1 3
+20 1000 0 10 0
+#732
+chave B~
+a Chave B~
+A Chave B está no chão.~
+~
+3 0 0 0 0 ao 0 0 0 0 0 0 0
+15 3 3 29
+10 2000 0 0 0
+#733
+chave F lâmina laminada~
+a Chave F laminada~
+Uma lâmina foi jogada aqui.~
+~
+18 adq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+35 0 0 0 0
+A
+18 -3
+A
+5 2
+A
+2 1
+#734
+chave G~
+a chave G~
+A chave G está aqui, coberta pela sujeira.~
+~
+18 adq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+9 0 0 0 0
+A
+12 25
+A
+19 -2
+A
+4 1
+#735
+chave E~
+a Chave E~
+A Chave E está no chão.~
+~
+18 abgh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+75 0 0 0 0
+A
+1 -1
+A
+14 -30
+A
+13 -30
+#736
+órgão diabólico~
+o órgão diabólico~
+Um magnífico órgão foi posto no meio da sala.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+245 0 -1 0
+0 0 0 0 0
+#737
+manoplas guardião~
+as manoplas de um Guardião~
+Um par de manoplas negras está jogado aqui.~
+~
+9 o 0 0 0 ah 0 0 0 0 0 0 0
+7 0 0 0
+10 5000 0 20 0
+A
+12 -15
+A
+13 20
+#738
+capacete guardião~
+o capacete de um Guardião~
+Um pesado capacete negro está no chão.~
+~
+9 gm 0 0 0 ae 0 0 0 0 0 0 0
+6 0 0 0
+20 5000 0 20 0
+A
+13 20
+A
+5 1
+A
+12 -10
+A
+14 -15
+#750
+ira espada escarlate~
+a ira~
+A espada escarlate negra, a Ira, está fincada no chão.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 3 4 3
+5 0 2 0 0
+#751
+tomo livro golem golens humanóide~
+o Tomo dos Golens~
+Um velho livro, com a imagem de um humanóide foi deixado aqui.~
+~
+8 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+15 10000 0 0 0
+A
+3 2
+$~

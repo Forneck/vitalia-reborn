@@ -1,0 +1,1295 @@
+#20100
+O Asilo dos Novatos~
+   O Asilo dos Novatos é um antigo prédio de pedra, com uma atmosfera de
+melancolia e depressão. Foi o lar dos insanos habitantes de Vitália por
+séculos. Apesar do fato de que os tempos mudaram, as táticas e tratamentos
+dos pacientes continuam sendo primitivos e cruéis.    
+~
+201 4 0 0 -1 201
+D0
+~
+~
+0 -1 20101 0
+D3
+~
+~
+0 0 3125
+S
+#20101
+Dentro do Asilo~
+   Você está na entrada do Asilo. As paredes, apesar da possibilidade de muito
+tempo atrás ela terem sido brancas e limpas, agora são imundas, cobertas
+de poeiras e vômitos de novatos. O cheiro aqui é terrível, e percebendo que
+apenas na ENTRADA do lugar você já começa a sentir enjôo, você imagina que
+ficará pior lá dentro. Para o leste é o cadastro e para oeste é o
+vestíbulo. Há uma porta para o norte.    
+~
+201 dfg 0 0 0 0
+D0
+~
+porta~
+:n 2 a porta
+ab 20100 20105 15
+D1
+~
+~
+0 -1 20104 0
+D2
+~
+~
+0 -1 20100 0
+S
+#20102
+O Vestíbulo~
+   Esse é um vestíbulo e uma sala de espera aqui no Asilo dos Novatos. Um
+escritório de enfermeira se encontra a oeste e a entrada principal para o
+leste. Empoeiradas, porém confortáveis cadeiras foram espalhadas pela sala.
+Talvez você queira descansar um pouco?    
+~
+201 536870924 0 0 0 0
+D1
+~
+~
+0 -1 20101 0
+D3
+~
+~
+1 -1 20103 1
+S
+#20103
+Sala da Enfermeira~
+   Essa sala fede a amônia e álcool...uma ótima combinação. Como qualquer
+sala nesse lugar, as paredes estão imundas e podres, o chão parece que não
+é lavado há meses, possivelmente anos! Talvez você queira fazer um
+exame de saúde...?   
+~
+201 dfg 0 0 0 0
+D1
+~
+~
+1 -1 20102 1
+S
+#20104
+Sala de Identificação~
+   É aqui o lugar onde os visitantes do Asilo pegam as credenciais para poder 
+entrar.   As insígnias deixadas aqui diferenciam visitantes de pacientes, então
+seria uma boa idéia pegar uma (só para o caso de eles cometerem um erro).    
+~
+201 dfg 0 0 0 0
+D3
+~
+~
+0 -1 20101 0
+E
+insígnia~
+É permitida a sua entrada no Asilo. 
+Por favor, não mate os pacientes.
+~
+S
+#20105
+O Primeiro Andar do Asilo~
+   Esse é o primeiro piso do Asilo. Algumas tochas iluminam o caminho nesse
+pequeno lugar. As paredes são sujas e cheias de líquens. Odores horríveis
+penetram no ar e pairam como doenças. O corredor continua a leste e a oeste.
+Uma porta levando para fora do prédio pode ser vista ao sul.    
+~
+201 dfg 0 0 0 0
+D1
+~
+~
+0 -1 20108 0
+D2
+~
+Porta~
+2 20100 20101 15
+D3
+~
+~
+0 -1 20106 0
+E
+parede~
+Há algo escrito na parede: &R"QUE CHEIRO É ESSE?!?"&n
+~
+S
+#20106
+O Primeiro Andar do Asilo~
+   Esse é o primeiro piso do Asilo. Algumas tochas iluminam o caminho nesse
+pequeno lugar. As paredes são sujas e cheias de líquens. Odores horríveis
+penetram no ar e pairam como doenças. O corredor continua a leste e a oeste.    
+~
+201 dfg 0 0 0 0
+D1
+~
+~
+0 -1 20105 0
+D3
+~
+~
+0 -1 20107 0
+S
+#20107
+O Salão do Primeiro Andar~
+   Essa sala principal parece ser bem longa, dando espaço para os pacientes
+vagarem. É provavelmente melhor deixá-los aqui fazendo apenas isso - você
+realmente não quer mexer com a cabeça deles ou coisa assim...quer?   
+~
+201 dfg 0 0 0 0
+D1
+~
+~
+0 -1 20106 0
+D3
+~
+~
+0 -1 20109 0
+S
+#20108
+O Salão do Primeiro Andar~
+   Essa grande sala tem todo o espaço que esses novatos precisam para vagar
+por aí, trombando e falando com seus amigos imaginários. A sala abre-se para
+oeste e daqui você pode ver um grande número de novatos loucos. Talvez você
+devesse matá-los...Há um pequeno corredor levando para fora dessa
+sala ao leste.    
+~
+201 dfg 0 0 0 0
+D1
+~
+~
+0 -1 20110 0
+D3
+~
+~
+0 -1 20105 0
+S
+#20109
+O Primeiro Andar do Asilo~
+   Esse é o primeiro piso do Asilo. Algumas tochas iluminam o caminho nesse
+pequeno lugar. As paredes são sujas e cheias de líquens. Odores horríveis
+penetram no ar e pairam como doenças. Há um uma espécie de sinal gravado na
+parede....talvez fosse bom ler com cuidado. 
+O corredor continua a leste e a oeste.
+~
+201 dfg 0 0 0 0
+D1
+~
+~
+1 -1 20107 1
+D3
+~
+~
+0 -1 20114 0
+E
+sinal~
+&R***CUIDADO!***
+
+Não faça as seguintes coisas com os pacientes:
+Falar.
+Tocar.
+Fazer contato com os olhos.
+Alimentar.
+Divertir.
+
+Ou sofra as consequências.&n
+~
+S
+#20110
+O Corredor Leste~
+   Esse é o primeiro piso do Asilo. Algumas tochas iluminam o caminho nesse
+pequeno lugar. As paredes são sujas e cheias de líquens. Odores horríveis
+penetram no ar e pairam como doenças. O corredor termina aqui em uma
+escada. Você pode ver as celas aqui, ir para cima ou voltar para o oeste.    
+~
+201 dfg 0 0 0 0
+D0
+~
+~
+1 -1 20111 1
+D1
+~
+~
+0 -1 20113 0
+D2
+~
+~
+1 -1 20112 1
+D3
+~
+~
+0 -1 20108 0
+D4
+~
+~
+0 -1 20149 0
+S
+#20111
+A Sala Pequena~
+   Essa pequena sala, ou carinhosamente chamada de 'cela', é um pequeno espaço
+que um residente do Asilo pode chamar por ele mesmo.  Há uma pequena cama
+no canto e um pequeno armário onde eles podem deixar seus pertences. A
+saída é para o sul.    
+~
+201 dfg 0 0 0 0
+D2
+~
+~
+1 -1 20110 1
+S
+#20112
+A Sala Pequena~
+   Essa pequena sala, ou carinhosamente chamada de 'cela', é um pequeno espaço
+que um residente do Asilo pode chamar por ele mesmo.  Há uma pequena cama
+no canto e um pequeno armário onde eles podem deixar seus pertences. A
+saída é para o norte.    
+~
+201 dfg 0 0 0 0
+D0
+~
+~
+1 -1 20110 1
+S
+#20113
+A Sala Pequena~
+   Essa pequena sala, ou carinhosamente chamada de 'cela', é um pequeno espaço
+que um residente do Asilo pode chamar por ele mesmo.  Há uma pequena cama
+no canto e um pequeno armário onde eles podem deixar seus pertences. A
+saída é para o oeste.    
+~
+201 dfg 0 0 0 0
+D3
+~
+~
+0 -1 20110 0
+S
+#20114
+O Corredor Oeste~
+   Esse setor do corredor é um pouco limpo. Ele parece ser o único local em
+todo o Asilo que é limpo. O corredor termina aqui, em uma escada que leva
+para baixo. Você pode ver as celas aqui, ir para baixo ou voltar para leste.
+~
+201 dfg 0 0 0 0
+D0
+~
+~
+1 -1 20115 1
+D1
+~
+~
+0 -1 20109 0
+D2
+~
+~
+1 -1 20117 1
+D3
+~
+~
+1 -1 20116 1
+D5
+~
+~
+0 -1 20119 0
+S
+#20115
+A Sala Pequena~
+   Essa pequena sala, ou carinhosamente chamada de 'cela', é um pequeno espaço
+que um residente do Asilo pode chamar por ele mesmo.  Há uma pequena cama
+no canto e um pequeno armário onde eles podem deixar seus pertences. A
+saída é para o sul.    
+~
+201 dfg 0 0 0 0
+D2
+~
+~
+1 -1 20114 1
+S
+#20116
+A Sala Pequena~
+   Essa pequena sala, ou carinhosamente chamada de 'cela', é um pequeno espaço
+que um residente do Asilo pode chamar por ele mesmo.  Há uma pequena cama
+no canto e um pequeno armário onde eles podem deixar seus pertences. A
+saída é para o leste.    
+~
+201 dfg 0 0 0 0
+D1
+~
+~
+1 -1 20114 1
+S
+#20117
+A Sala Pequena~
+   Essa pequena sala, ou carinhosamente chamada de 'cela', é um pequeno espaço
+que um residente do Asilo pode chamar por ele mesmo.  Há uma pequena cama
+no canto e um pequeno armário onde eles podem deixar seus pertences. A
+saída é para o norte.    
+~
+201 dfg 0 0 0 0
+D0
+~
+~
+1 -1 20114 1
+S
+#20118
+A Cela~
+   As paredes são feitas de uma fina camada de forro branco acolchoado, feito
+para prevenir que o paciente se machuque. O estofamento em si já está
+rasgado e usado, depois de muitos anos sofrendo os abusos dos pacientes, que
+se jogam contra as paredes nos momentos de raiva, cólera ou frustração. 
+Além do paciente, não há objetos na sala, já que tudo é retirado pelos 
+atendentes pelo medo que seja usado como arma. Uma força mágica na porta 
+previne que o paciente escape da sala.
+~
+201 0 0 0 0 0
+D1
+~
+~
+0 -1 20119 0
+S
+#20119
+As Escadas~
+   Esse é o porão do Asilo, onde os mais perigosos pacientes estão abrigados.
+Algumas tochas iluminam o caminho nesse pequeno lugar. As paredes são sujas
+e cheias de líquens. Odores horríveis penetram no ar e pairam como doenças.
+Murmúrios e lamúrias incompreensíveis ecoam pelo corredor. Você pode checar
+as celas aqui, ir para baixo, subir ou ir para leste pelo corredor.    
+~
+201 4 0 0 0 0
+D0
+~
+~
+0 -1 20133 0
+D1
+~
+~
+0 -1 20120 0
+D2
+~
+~
+0 -1 20134 0
+D3
+~
+~
+0 -1 20118 0
+D4
+~
+~
+0 -1 20114 0
+D5
+~
+~
+0 -1 20135 0
+S
+#20120
+Corredor no Porão~
+   Esse é o porão do Asilo, onde os mais perigosos pacientes estão abrigados.
+Algumas tochas iluminam o caminho nesse pequeno lugar. As paredes são sujas
+e cheias de líquens. Odores horríveis penetram no ar e pairam como doenças.
+Murmúrios e lamúrias incompreensíveis ecoam pelo corredor. O corredor
+continua par leste e oeste.    
+~
+201 0 0 0 0 0
+D1
+~
+~
+0 -1 20121 0
+D3
+~
+~
+0 -1 20119 0
+S
+#20121
+Corredor no Porão~
+   Esse é o porão do Asilo, onde os mais perigosos pacientes estão abrigados.
+Algumas tochas iluminam o caminho nesse pequeno lugar. As paredes são sujas
+e cheias de líquens. Odores horríveis penetram no ar e pairam como doenças.
+Murmúrios e lamúrias incompreensíveis ecoam pelo corredor. O corredor
+continua par leste e oeste.    
+~
+201 0 0 0 0 0
+D0
+~
+~
+0 -1 20131 0
+D1
+~
+~
+0 -1 20122 0
+D2
+~
+~
+0 -1 20132 0
+D3
+~
+~
+0 -1 20120 0
+S
+#20122
+Corredor no Porão~
+   Esse é o porão do Asilo, onde os mais perigosos pacientes estão abrigados.
+Algumas tochas iluminam o caminho nesse pequeno lugar. As paredes são sujas
+e cheias de líquens. Odores horríveis penetram no ar e pairam como doenças.
+Murmúrios e lamúrias incompreensíveis ecoam pelo corredor. O corredor
+continua par leste e oeste.    
+~
+201 0 0 0 0 0
+D1
+~
+~
+0 -1 20123 0
+D3
+~
+~
+0 -1 20121 0
+S
+#20123
+Corredor no Porão~
+   Esse é o porão do Asilo, onde os mais perigosos pacientes estão abrigados.
+Algumas tochas iluminam o caminho nesse pequeno lugar. As paredes são sujas
+e cheias de líquens. Odores horríveis penetram no ar e pairam como doenças.
+Murmúrios e lamúrias incompreensíveis ecoam pelo corredor. O corredor
+continua par leste e oeste. Existem celas ao norte e ao sul.    
+~
+201 0 0 0 0 0
+D0
+~
+~
+0 -1 20129 0
+D1
+~
+~
+0 -1 20124 0
+D2
+~
+~
+0 -1 20130 0
+D3
+~
+~
+0 -1 20122 0
+S
+#20124
+Corredor no Porão~
+   Esse é o porão do Asilo, onde os mais perigosos pacientes estão abrigados.
+Algumas tochas iluminam o caminho nesse pequeno lugar. As paredes são sujas
+e cheias de líquens. Odores horríveis penetram no ar e pairam como doenças.
+Murmúrios e lamúrias incompreensíveis ecoam pelo corredor. O corredor
+continua par leste e oeste.    
+~
+201 0 0 0 0 0
+D1
+~
+~
+0 -1 20125 0
+D3
+~
+~
+0 -1 20123 0
+S
+#20125
+Corredor no Porão~
+   Esse é o porão do Asilo, onde os mais perigosos pacientes estão abrigados.
+Algumas tochas iluminam o caminho nesse pequeno lugar. As paredes são sujas
+e cheias de líquens. Odores horríveis penetram no ar e pairam como doenças.
+Murmúrios e lamúrias incompreensíveis ecoam pelo corredor. O corredor
+termina aqui, diante de três celas.    
+~
+201 0 0 0 0 0
+D0
+~
+~
+0 -1 20127 0
+D1
+~
+~
+0 -1 20126 0
+D2
+~
+~
+0 -1 20128 0
+D3
+~
+~
+0 -1 20124 0
+S
+#20126
+A Cela~
+   As paredes são feitas de uma fina camada de forro branco acolchoado, feito
+para previnir que o paciente se machuque. O estofamento em si já está
+rasgado e usado, depois de muitos anos de abuso de pacientes se jogando
+contra as paredes em momentos de raiva, cólera ou frustração. Além do
+paciente, não há objetos na sala, já que tudo é retirado pelos atendentes
+pelo medo que seja usado como arma. Uma força mágica na porta previne que
+o paciente escape da sala.
+~
+201 0 0 0 0 0
+D3
+~
+~
+0 -1 20125 0
+S
+#20127
+A Cela~
+   As paredes são feitas de uma fina camada de forro branco acolchoado, feito
+para prevenir que o paciente se machuque. O estofamento em si já está
+rasgado e usado, depois de muitos anos de abuso de pacientes se jogando
+contra as paredes em momentos de raiva, cólera ou frustração. Além do
+paciente, não há objetos na sala, já que tudo é retirado pelos atendentes
+pelo medo que seja usado como arma. Uma força mágica na porta previne que
+o paciente escape da sala.
+~
+201 0 0 0 0 0
+D2
+~
+~
+0 -1 20125 0
+S
+#20128
+A Cela~
+   As paredes são feitas de uma fina camada de forro branco acolchoado, feito
+para previnir que o paciente se machuque. O estofamento em si já está
+rasgado e usado, depois de muitos anos de abuso de pacientes se jogando
+contra as paredes em momentos de raiva, cólera ou frustração. Além do
+paciente, não há objetos na sala, já que tudo é retirado pelos atendentes
+pelo medo que seja usado como arma. Uma força mágica na porta previne que
+o paciente escape da sala.
+~
+201 0 0 0 0 0
+D0
+~
+~
+0 -1 20125 0
+S
+#20129
+A Cela~
+   As paredes são feitas de uma fina camada de forro branco acolchoado, feito
+para previnir que o paciente se machuque. O estofamento em si já está
+rasgado e usado, depois de muitos anos de abuso de pacientes se jogando
+contra as paredes em momentos de raiva, cólera ou frustração. Além do
+paciente, não há objetos na sala, já que tudo é retirado pelos atendentes
+pelo medo que seja usado como arma. Uma força mágica na porta previne que
+o paciente escape da sala.
+~
+201 0 0 0 0 0
+D2
+~
+~
+0 -1 20123 0
+S
+#20130
+A Cela~
+   As paredes são feitas de uma fina camada de forro branco acolchoado, feito
+para previnir que o paciente se machuque. O estofamento em si já está
+rasgado e usado, depois de muitos anos de abuso de pacientes se jogando
+contra as paredes em momentos de raiva, cólera ou frustração. Além do
+paciente, não há objetos na sala, já que tudo é retirado pelos atendentes
+pelo medo que seja usado como arma. Uma força mágica na porta previne que
+o paciente escape da sala.
+~
+201 0 0 0 0 0
+D0
+~
+~
+0 -1 20123 0
+S
+#20131
+A Cela~
+   As paredes são feitas de uma fina camada de forro branco acolchoado, feito
+para previnir que o paciente se machuque. O estofamento em si já está
+rasgado e usado, depois de muitos anos de abuso de pacientes se jogando
+contra as paredes em momentos de raiva, cólera ou frustração. Além do
+paciente, não há objetos na sala, já que tudo é retirado pelos atendentes
+pelo medo que seja usado como arma. Uma força mágica na porta previne que
+o paciente escape da sala.    
+~
+201 0 0 0 0 0
+D2
+~
+~
+0 -1 20121 0
+S
+#20132
+A Cela~
+   As paredes são feitas de uma fina camada de forro branco acolchoado, feito
+para previnir que o paciente se machuque. O estofamento em si já está
+rasgado e usado, depois de muitos anos de abuso de pacientes se jogando
+contra as paredes em momentos de raiva, cólera ou frustração. Além do
+paciente, não há objetos na sala, já que tudo é retirado pelos atendentes
+pelo medo que seja usado como arma. Uma força mágica na porta previne que
+o paciente escape da sala.
+~
+201 0 0 0 0 0
+D0
+~
+~
+0 -1 20121 0
+S
+#20133
+A Cela~
+   As paredes são feitas de uma fina camada de forro branco acolchoado, feito
+para previnir que o paciente se machuque. O estofamento em si já está
+rasgado e usado, depois de muitos anos de abuso de pacientes se jogando
+contra as paredes em momentos de raiva, cólera ou frustração. Além do
+paciente, não há objetos na sala, já que tudo é retirado pelos atendentes
+pelo medo que seja usado como arma. Uma força mágica na porta previne que
+o paciente escape da sala.
+~
+201 0 0 0 0 0
+D2
+~
+~
+0 -1 20119 0
+S
+#20134
+A Cela~
+   As paredes são feitas de uma fina camada de forro branco acolchoado, feito
+para previnir que o paciente se machuque. O estofamento em si já está
+rasgado e usado, depois de muitos anos de abuso de pacientes se jogando
+contra as paredes em momentos de raiva, cólera ou frustração. Além do
+paciente, não há objetos na sala, já que tudo é retirado pelos atendentes
+pelo medo que seja usado como arma. Uma força mágica na porta previne que
+o paciente escape da sala.
+~
+201 0 0 0 0 0
+D0
+~
+~
+0 -1 20119 0
+S
+#20135
+AS Escadas~
+   Esse é subsolo do porão do Asilo. Muitas poucas pessoas sabem desse lugar. 
+Aqui é onde os criminosos mais perigosos de Vitália são mantidos. Ranger
+de ossos e gritos assustadores ecoam por aqui. Runas mágicas foram marcadas
+nas paredes, previnindo que qualquer um que esteja preso aqui escape. O
+corredor continua a leste, ou você pode voltar para cima.    
+~
+201 4 0 0 0 0
+D1
+~
+~
+0 -1 20136 0
+D4
+~
+~
+0 -1 20119 0
+S
+#20136
+Um Corredor no Subsolo do Porão~
+   Algumas tochas iluminam o caminho nesse pequeno lugar. Runas mágicas
+escritas nas paredes brilham e emitem uma radiação poderosa. Gritos de
+fúria, frustração e insanidade podem ser ouvidos por alguém que anda por
+aqui.    
+~
+201 0 0 0 0 0
+D1
+~
+~
+0 -1 20137 0
+D3
+~
+~
+0 -1 20135 0
+S
+#20137
+Um Corredor no Subsolo do Porão~
+   Algumas tochas iluminam o caminho nesse pequeno lugar. Runas mágicas
+escritas nas paredes brilham e emitem uma radiação poderosa. Gritos de
+fúria, frustração e insanidade podem ser ouvidos por alguém que anda por
+aqui. Você poder ver celas ao norte e ao sul aqui.   
+~
+201 0 0 0 0 0
+D0
+~
+~
+0 -1 20143 0
+D1
+~
+~
+0 -1 20138 0
+D2
+~
+~
+0 -1 20144 0
+D3
+~
+~
+0 -1 20136 0
+S
+#20138
+Um Corredor no Subsolo do Porão~
+   Algumas tochas iluminam o caminho nesse pequeno lugar. Runas mágicas
+escritas nas paredes brilham e emitem uma radiação poderosa. Gritos de
+fúria, frustração e insanidade podem ser ouvidos por alguém que anda por
+aqui.    
+~
+201 0 0 0 0 0
+D1
+~
+~
+0 -1 20139 0
+D3
+~
+~
+0 -1 20137 0
+S
+#20139
+Um Corredor no Subsolo do Porão~
+   Algumas tochas iluminam o caminho nesse pequeno lugar. Runas mágicas
+escritas nas paredes brilham e emitem uma radiação poderosa. Gritos de
+fúria, frustração e insanidade podem ser ouvidos por alguém que anda por
+aqui. Você pode ver celas ao norte e ao sul daqui.    
+~
+201 0 0 0 0 0
+D0
+~
+~
+0 -1 20141 0
+D1
+~
+~
+0 -1 20140 0
+D2
+~
+~
+0 -1 20142 0
+D3
+~
+~
+0 -1 20138 0
+S
+#20140
+Um Corredor no Subsolo do Porão~
+   Algumas tochas iluminam o caminho nesse pequeno lugar. Runas mágicas
+escritas nas paredes brilham e emitem uma radiação poderosa. Gritos de
+fúria, frustração e insanidade podem ser ouvidos por alguém que anda por
+aqui.    
+~
+201 0 0 0 0 0
+D1
+~
+~
+0 -1 20145 0
+D3
+~
+~
+0 -1 20139 0
+S
+#20141
+A Cela~
+   As paredes são feitas de uma fina camada de forro branco acolchoado, feito
+para prevenir que o paciente se machuque. O estofamento em si já está
+rasgado e usado, depois de muitos anos de abuso de pacientes se jogando
+contra as paredes em momentos de raiva, cólera ou frustração. Além do
+paciente, não há objetos na sala, já que tudo é retirado pelos atendentes
+pelo medo que seja usado como arma. Uma força mágica na porta previne que
+o paciente escape da sala.
+~
+201 0 0 0 0 0
+D2
+~
+~
+0 -1 20139 0
+S
+#20142
+A Cela~
+   As paredes são feitas de uma fina camada de forro branco acolchoado, feito
+para previnir que o paciente se machuque. O estofamento em si já está
+rasgado e usado, depois de muitos anos de abuso de pacientes se jogando
+contra as paredes em momentos de raiva, cólera ou frustração. Além do
+paciente, não há objetos na sala, já que tudo é retirado pelos atendentes
+pelo medo que seja usado como arma. Uma força mágica na porta previne que
+o paciente escape da sala.
+~
+201 0 0 0 0 0
+D0
+~
+~
+0 -1 20139 0
+S
+#20143
+A Cela~
+   As paredes são feitas de uma fina camada de forro branco acolchoado, feito
+para previnir que o paciente se machuque. O estofamento em si já está
+rasgado e usado, depois de muitos anos de abuso de pacientes se jogando
+contra as paredes em momentos de raiva, cólera ou frustração. Além do
+paciente, não há objetos na sala, já que tudo é retirado pelos atendentes
+pelo medo que seja usado como arma. Uma força mágica na porta previne que
+o paciente escape da sala.
+~
+201 0 0 0 0 0
+D2
+~
+~
+0 -1 20137 0
+S
+#20144
+A Cela~
+   As paredes são feitas de uma fina camada de forro branco acolchoado, feito
+para previnir que o paciente se machuque. O estofamento em si já está
+rasgado e usado, depois de muitos anos de abuso de pacientes se jogando
+contra as paredes em momentos de raiva, cólera ou frustração. Além do
+paciente, não há objetos na sala, já que tudo é retirado pelos atendentes
+pelo medo que seja usado como arma. Uma força mágica na porta previne que
+o paciente escape da sala.
+~
+201 0 0 0 0 0
+D0
+~
+~
+0 -1 20137 0
+S
+#20145
+Um Corredor no Subsolo do Porão~
+   Algumas tochas iluminam o caminho nesse pequeno lugar. Runas mágicas
+escritas nas paredes brilham e emitem uma radiação poderosa. Gritos de
+fúria, frustração e insanidade podem ser ouvidos por alguém que anda por
+aqui. O corredor termina aqui. Você pode verificar as celas aqui, ou voltar
+para o oeste.    
+~
+201 0 0 0 0 0
+D0
+~
+~
+0 -1 20146 0
+D1
+~
+~
+0 -1 20148 0
+D2
+~
+~
+0 -1 20147 0
+D3
+~
+~
+0 -1 20140 0
+S
+#20146
+A Cela~
+   As paredes são feitas de uma fina camada de forro branco acolchoado, feito
+para previnir que o paciente se machuque. O estofamento em si já está
+rasgado e usado, depois de muitos anos de abuso de pacientes se jogando
+contra as paredes em momentos de raiva, cólera ou frustração. Além do
+paciente, não há objetos na sala, já que tudo é retirado pelos atendentes
+pelo medo que seja usado como arma. Uma força mágica na porta previne que
+o paciente escape da sala.
+~
+201 0 0 0 0 0
+D2
+~
+~
+0 -1 20145 0
+S
+#20147
+A Cela~
+   As paredes são feitas de uma fina camada de forro branco acolchoado, feito
+para previnir que o paciente se machuque. O estofamento em si já está
+rasgado e usado, depois de muitos anos de abuso de pacientes se jogando
+contra as paredes em momentos de raiva, cólera ou frustração. Além do
+paciente, não há objetos na sala, já que tudo é retirado pelos atendentes
+pelo medo que seja usado como arma. Uma força mágica na porta previne que
+o paciente escape da sala.
+~
+201 0 0 0 0 0
+D0
+~
+~
+0 -1 20145 0
+S
+#20148
+A Cela~
+   As paredes são feitas de uma fina camada de forro branco acolchoado, feito
+para previnir que o paciente se machuque. O estofamento em si já está
+rasgado e usado, depois de muitos anos de abuso de pacientes se jogando
+contra as paredes em momentos de raiva, cólera ou frustração. Além do
+paciente, não há objetos na sala, já que tudo é retirado pelos atendentes
+pelo medo que seja usado como arma. Uma força mágica na porta previne que
+o paciente escape da sala.
+~
+201 0 0 0 0 0
+D3
+~
+~
+0 -1 20145 0
+S
+#20149
+As Escadas~
+   É aqui o topo da escadaria. O ar é quente e cheio de odores malignos que
+aguçam os seus sentidos. Dizem que a oeste há uma grande sala, onde funciona
+uma espécie de laboratório onde fazem alguns experimentos.
+Para baixo você voltará para o corredor principal.    
+~
+201 4 0 0 0 0
+D3
+~
+~
+0 -1 20150 0
+D5
+~
+~
+0 -1 20110 0
+S
+#20150
+O Grande Laboratório~
+   É uma grande sala, cheia de equipamentos e objetos (para o medo de algumas
+pessoas se machucarem). Um estofamento antigo e rasgado cobre as paredes,
+mostrando que muitos pacientes já estiveram aqui para o bem da ciência. O
+piso está sujo, em uma cor amarelada, fazendo qualquer um pensar que ele
+não deveria estar aqui. Um campo de força está a oeste, enquanto que a
+escadaria está a leste.    
+~
+201 0 0 0 0 0
+D0
+~
+~
+0 -1 20152 0
+D1
+~
+~
+0 -1 20149 0
+D2
+~
+~
+0 -1 20155 0
+D3
+~
+campo força~
+:n 1 o campo de força
+ab 20100 20151 15
+S
+#20151
+O Grande Laboratório~
+   Essa é a tenda do pesquisador, onde qualquer um pode ficar e observar os
+pacientes em uma relativa segurança. Uma estante, cheia de todos os tipos
+de livros de ciência e psicologia, fica na parede oeste. Para o norte,
+leste e sul ficam campos de força que protege a pessoa que esteja aqui
+dentro da entrada de pessoas não autorizadas. Uma mesa fica no meio da
+sala, cercado por grandes tamboretes usados para observação.    
+~
+201 4 0 0 0 0
+D0
+~
+campo força~
+:n 1 o campo de força
+a -1 20153
+D1
+~
+campo força~
+:n 1 o campo de força
+a -1 20150
+D2
+~
+campo força~
+:n 1 o campo de força
+a -1 20154
+S
+#20152
+O Grande Laboratório~
+   É uma grande sala, cheia de equipamentos e objetos (para o medo de algumas
+pessoas se machucarem). Um estofamento antigo e rasgado cobre as paredes,
+mostrando que muitos pacientes já estiveram aqui para o bem da ciência. O
+piso está sujo, em uma cor amarelada, fazendo qualquer um pensar que ele
+não deveria estar aqui.    
+~
+201 0 0 0 0 0
+D2
+~
+~
+0 -1 20150 0
+D3
+~
+~
+0 -1 20153 0
+S
+#20153
+O Grande Laboratório~
+   É uma grande sala, cheia de equipamentos e objetos (para o medo de algumas
+pessoas se machucarem). Um estofamento antigo e rasgado cobre as paredes,
+mostrando que muitos pacientes já estiveram aqui para o bem da ciência. O
+piso está sujo, em uma cor amarelada, fazendo qualquer um pensar que ele
+não deveria estar aqui. Um campo de força fica a sul.    
+~
+201 0 0 0 0 0
+D1
+~
+~
+0 -1 20152 0
+D2
+~
+campo força~
+:n 1 o campo de força
+ab 20100 20151
+S
+#20154
+O Grande Laboratório~
+   É uma grande sala, cheia de equipamentos e objetos (para o medo de algumas
+pessoas se machucarem). Um estofamento antigo e rasgado cobre as paredes,
+mostrando que muitos pacientes já estiveram aqui para o bem da ciência. O
+piso está sujo, em uma cor amarelada, fazendo qualquer um pensar que ele
+não deveria estar aqui.  Um campo de força fica a norte.    
+~
+201 0 0 0 0 0
+D0
+~
+campo força~
+:n 1 o campo de força
+ab 20100 20151
+D1
+~
+~
+0 -1 20155 0
+S
+#20155
+O Grande Laboratório~
+   É uma grande sala, cheia de equipamentos e objetos (para o medo de algumas
+pessoas se machucarem). Um estofamento antigo e rasgado cobre as paredes,
+mostrando que muitos pacientes já estiveram aqui para o bem da ciência. O
+piso está sujo, em uma cor amarelada, fazendo qualquer um pensar que ele
+não deveria estar aqui.    
+~
+201 0 0 0 0 0
+D0
+~
+~
+0 -1 20150 0
+D3
+~
+~
+0 -1 20154 0
+S
+#20160
+O Deserto~
+   Uma monótona areia de cor cinza e branca cobre o chão em todas as
+direções. Quando você olha mais além, percebe alguns tufos de grama marrom
+crescendo esporádicamente. Porém, a coisa que você nota mais explicitamente 
+é o tremor e um urro muito forte, vindo de longe.
+Uma grande placa &RGRITA &n pela sua atenção.
+~
+201 0 0 0 0 0
+D1
+~
+~
+0 0 3067 0
+D3
+~
+~
+0 -1 20161 0
+E
+grande placa~
+A placa diz em negrito.
+
+Essa terra é habitada por gigantes. Fique atento por onde você viaja.
+~
+S
+#20161
+O Deserto~
+   Uma monótona areia de cor cinza e branca cobre o chão em todas as
+direções. Quando você olha mais além, percebe alguns tufos de grama marrom
+crescendo esporádicamente. Porém, a coisa que você nota mais explicitamente 
+é o tremor e um urro muito forte, vindo de longe.
+~
+201 0 0 0 0 0
+D1
+~
+~
+0 -1 20160 0
+D3
+~
+~
+0 -1 20162 0
+S
+#20162
+O Deserto~
+   Uma monótona areia de cor cinza e branca cobre o chão em todas as
+direções. Quando você olha mais além, percebe alguns tufos de grama marrom
+crescendo esporádicamente. Porém, a coisa que você nota mais explicitamente 
+é o tremor e um urro muito forte, vindo de longe.
+~
+201 0 0 0 0 0
+D1
+~
+~
+0 -1 20161 0
+D3
+~
+~
+0 -1 20162 0
+S
+#20164
+Dentro do Estômago do Gigante.~
+   Você está afundado até o joelho em algum líquido verde. Pedaços, nacos e as
+vezes até um animal inteiro flutuam perto de você. Para cima, você vê a
+entrada do esôfago e possivelmente a saída para fora daqui, se você pudesse
+escalar até lá. Há mais do estômago do gigante para leste.    
+~
+201 13 0 0 0 0
+D1
+~
+~
+0 -1 20165 0
+S
+#20165
+O Estômago~
+   O líquido verde que contém as coisas dentro do estômago do gigante começa
+a rodar formando um redemoinho que suga você para dentro do intestino
+delgado. Como o cervo que está lutando para não ser sugado pra lá, você
+percebe que será melhor seguir a multidão...    
+~
+201 41 0 0 0 0
+D3
+~
+~
+0 -1 20164 0
+D5
+~
+~
+0 -1 20166 0
+E
+cervo~
+Você tem esperanças que os chifres dele darão ao gigante uma grande
+indigestão.  
+~
+S
+#20166
+O Intestino Delgado~
+   Fora do pote e direto para a frigideira. Você mal consegue ficar em pé dentro
+do intestino delgado. Ele dobra e faz curvas por todo o lugar, fazendo com
+que fique fácil se perder. O intestino delgado continua para leste.    
+~
+201 41 0 0 0 0
+D1
+~
+~
+0 -1 20167 0
+D4
+~
+~
+0 -1 20165 0
+S
+#20167
+O Intestino Delgado~
+   O líquido verde parece ficar mais denso. As tenuosas passagens do intestino
+delgado levam para baixo. Seu amigo, o cervo sem sorte, está indo para
+aquela direção. Por que você não?    
+~
+201 41 0 0 0 0
+D3
+~
+~
+0 -1 20166 0
+D5
+~
+~
+0 -1 20168 0
+E
+cervo~
+Uau, ele parece bem perturbado.    
+~
+S
+#20168
+O Intestino Delgado~
+   O intestino delgado pulsa em volta de você, levando-o para baixo no sistema
+digestivo do gigante. O mesmo líquido verde continua te envolvendo, quase
+em uma cor fashion.    
+~
+201 41 0 0 0 0
+D3
+~
+~
+0 -1 20169 0
+D4
+~
+~
+0 -1 20167 0
+S
+#20169
+O Intestino Delgado~
+   O Intestino Delgado começa a se alargar para finalmente se tornar intestino
+grosso. A pasta verde forma um redemoinho e te suga para baixo.    
+~
+201 41 0 0 0 0
+D1
+~
+~
+0 -1 20168 0
+D5
+~
+~
+0 -1 20170 0
+S
+#20170
+O Intestino Grosso~
+   Ahhh...  Finalmente algum lugar para se esticar. O intestino grosso é quase
+igual ao intestino delgado, exceto pelo seu tamanho massivo. A pasta verde
+flutua para leste.    
+~
+201 41 0 0 0 0
+D1
+~
+~
+0 -1 20171 0
+D4
+~
+~
+0 -1 20169 0
+S
+#20171
+O Intestino Grosso~
+   Ahhh...  Finalmente algum lugar para se esticar. O intestino grosso é quase
+igual ao intestino delgado, exceto pelo seu tamanho massivo. A pasta verde
+flutua para leste.
+~
+201 41 0 0 0 0
+D3
+~
+~
+0 -1 20170 0
+D5
+~
+~
+0 -1 20172 0
+S
+#20172
+O Intestino Grosso~
+   Ahhh...  Finalmente algum lugar para se esticar. O intestino grosso é quase
+igual ao intestino delgado, exceto pelo seu tamanho massivo. A pasta verde
+flutua para leste.
+~
+201 41 0 0 0 0
+D1
+~
+~
+0 -1 20173 0
+D4
+~
+~
+0 -1 20171 0
+S
+#20173
+O Final do Intestino Grosso~
+   Ahhh...  Finalmente algum lugar para se esticar. O intestino grosso é quase
+igual ao intestino delgado, exceto pelo seu tamanho massivo. Você pode ver
+uma fraca luz vinda do leste.
+~
+201 45 0 0 0 0
+D3
+~
+~
+0 -1 20172 0
+S
+#20174
+O Deserto~
+   Uma monótona areia de cor cinza e branca cobre o chão em todas as
+direções. Quando você olha mais além, percebe alguns tufos de grama marrom
+crescendo esporádicamente. Porém, a coisa que você nota mais explicitamente 
+é o tremor e um urro muito forte, vindo de longe.
+~
+201 0 0 0 0 0
+D1
+~
+~
+0 -1 20160 0
+D3
+~
+~
+0 -1 20162 0
+S
+$~

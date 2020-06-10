@@ -1,0 +1,395 @@
+#1700
+espada cimitarra~
+uma cimitarra~
+Uma estranha espada está jogada aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 6 3
+5 900 300 0 0
+E
+espada cimitarra~
+Ela é uma pequena espada de corte, ela parece um pouco usada.
+~
+#1701
+cálice~
+um cálice~
+Um cálice manchado de sangue foi deixado aqui.~
+~
+17 0 0 0 0 ao 0 0 0 0 0 0 0
+6 6 13 5
+11 300 100 0 0
+E
+cálice~
+Um presente perfeito para a mamãe!
+~
+#1702
+cofre cobre~
+o cofre de cobre~
+Um belo cofre de cobre está disposto em frente a parede.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+200 13 0 0
+0 0 0 0 0
+E
+cofre cobre~
+Este pequeno cofre parece poder conter todos os seus bens, que não são
+muitos.
+~
+#1703
+tônico raízes sínfito~
+um tônico de raízes de sínfito~
+Um tônico de raízes de sínfito foi jogado aqui.~
+~
+10 g 0 0 0 ao 0 0 0 0 0 0 0
+15 39 39 33
+1 600 200 0 0
+E
+tônico raízes sínfito~
+O que você não mataria para ficar mais forte, certo?
+~
+#1704
+elixir língua serpente~
+um elixir de língua de serpente~
+Um elixir de língua de serpente está aqui.~
+~
+10 g 0 0 0 ao 0 0 0 0 0 0 0
+15 44 21 -1
+1 600 200 0 0
+E
+elixir língua serpente~
+Esse elixir pode ser bom para você, mas ele parece nojento.
+É de fato uma língua de serpente.
+~
+#1705
+chave esqueleto~
+uma chave esqueleto~
+Uma velha chave esqueleto está no chão.~
+~
+18 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 500 20 0 0
+E
+chave esqueleto~
+Ela é feita de osso.  O que você esperava encontrar, neste lugar de morte?
+~
+#1706
+zarabata bambu~
+uma zarabatana~
+Uma longa, zarabatana feita de bambu está no chão.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 6 2 12
+5 16000 3000 0 0
+E
+zarabatana bambu~
+Que curioso, como você poderia imaginar encontrar uma zarabatana feita de bambu
+num lugar como este...
+~
+A
+18 1
+#1707
+piscina~
+a piscina~
+Você parece estar numa piscina de sangue.~
+~
+17 0 0 0 0 0 0 0 0 0 0 0 0
+20 20 13 5
+500 500 50 0 0
+E
+piscina sangue~
+UAU! Perfeito para o vampiro que existe dentro de você!  Eu me pergunto se o
+sangue é humano ou animal, que seja...
+~
+#1708
+sangue pedra vermelha~
+a Pedra de Sangue~
+Uma grande e sombria pedra vermelha espera, atraentemente, para ser pega.~
+~
+4 ejq 0 0 0 ao 0 0 0 0 0 0 0
+13 5 5 25
+8 30000 15000 0 0
+E
+sangue pedra vermelha~
+Ela brilha malignamente com sua luz rubra.  Você observa a pedra atentamente
+e tem a impressão de que há um figura desfigurada presa dentro dela.
+~
+A
+4 -2
+#1709
+dilacerador coração punhal fino~
+O Dilacerador de Coração~
+Um imundo punhal fino com uma brilhante lâmina preta está em meio a poeira.~
+~
+5 bgj 0 0 0 an 0 0 0 0 0 0 0
+0 4 4 11
+3 10000 3500 0 0
+E
+dilacerador coração punhal fino~
+Este punhal possui uma nítida aura maligna ao redor de sua fina lâmina.
+~
+A
+18 3
+A
+13 -10
+#1710
+escudo escaravelho~
+um escudo escaravelho~
+Um escudo com um grande e morto escaravelho fixado no centro está aqui.~
+~
+9 g 0 0 0 aj 0 0 0 0 0 0 0
+6 0 0 0
+17 9000 3000 0 0
+E
+escudo escaravelho~
+Este é um escudo comum exceto pelo gigante escaravelho fixado no centro.
+O besouro parece ser uma enorme mancha do vulgar escaravelho.
+~
+A
+5 1
+#1711
+clava crânio fred~
+a Clava do Morto-Vivo Fred~
+Uma clava em forma de crânio foi deixada aqui.~
+~
+5 bgj 0 0 0 an 0 0 0 0 0 0 0
+0 3 6 6
+14 12000 4000 0 0
+E
+clava crânio fred~
+Um robusto obelisco embrulhado de couro e proeminente com a animada caveira
+de Fred.  Percebe-se que o maxilar está faltando, você pode ouvi-lo gritar
+coisas obscenas no meio da desordem.  Uma vaga luz agita-se dentro de seus
+olhos como se ele dissesse, 'Oque você está olhando, respiração de larva?
+~
+A
+19 3
+#1712
+escudo arsenal~
+um escudo arsenal~
+Um escudo espetado com um círculo de facas ao seu redor, foi deixado aqui.~
+~
+15 0 0 0 0 aj 0 0 0 0 0 0 0
+3 0 -1 0
+7 2400 800 0 0
+E
+escudo arsenal~
+O escudo possui um círculo de facas de lançar ao seu redor.
+~
+A
+17 -5
+A
+19 1
+#1713
+faca lançar~
+uma faca de lançar~
+Uma bem equilibrada faca de lançar está no chão.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 4 3
+1 10 1 0 0
+E
+faca lançar~
+Essa faca foi cuidadosamente feita para alcançar um equilíbrio máximo,
+portanto pode ser usada para um lançamento preciso.
+~
+#1714
+pilha escombros~
+a pilha~
+Uma pilha de escombros foi amontoada num pequeno planalto, longe do ácido.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+1000 0 -1 0
+0 0 0 0 0
+E
+pilha escombros~
+Ela contém todo tipo de itens estragados e equipamento gasto armazenado
+pelos exigentes habitantes deste lugar.
+~
+#1715
+guisarme arma haste~
+uma guisarme~
+Uma longa, fina arma de haste foi deixada aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 8 1
+16 1500 500 0 0
+E
+guisarme arma haste~
+O que mais pode ser dito? Esta é especialmente uma longa arma de destruição.
+~
+A
+18 -2
+A
+19 2
+#1716
+luva menestrel~
+uma luva de menestrel~
+Uma única, luva de menestrel branca foi descartada aqui.~
+~
+9 ag 0 0 0 ah 0 0 0 0 0 0 0
+4 0 0 0
+8 4500 1000 30 0
+E
+luva menestrel harpa~
+A luva tem um pequeno bordado atrás formando a figura de uma pequena harpa.
+~
+A
+18 1
+#1717
+cota malha gasta~
+notável cota de malha gasta~
+Uma gasta coleção de cotas de malha foi arremessada aqui.~
+~
+9 g 0 0 0 ad 0 0 0 0 0 0 0
+9 0 0 0
+20 70000 10000 0 0
+E
+cota malha gasta~
+Ela parece estar pronta para ser jogada fora!
+~
+#1718
+chave granito~
+uma chave de granito~
+Uma chave de pedra estilizada foi deixada aqui.~
+~
+18 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 1500 90 0 0
+E
+chave granito~
+Esta chave parece ser feita de um granito sólido.  Você admira-se
+ao pensar que tipo de ferramentas devem ter sido usadas para faze-la.
+~
+#1719
+corpo embalsamado~
+um corpo embalsamado~
+Um horrendo corpo embalsamado exala seu fedor por todo o local.~
+~
+13 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+50 0 0 0 0
+E
+corpo embalsamado~
+Ugh. Você nunca tinha visto um corpo tão doentio em toda sua vida.
+E o cheiro disto é horrível!
+~
+#1720
+martelo túmulo~
+um martelo de túmulo~
+Um enferrujado martelo de túmulo foi jogado aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 7 2
+12 1500 150 0 0
+E
+martelo túmulo~
+Este martelo parece ter sido usado apenas para colocar os mortos em seus
+lugares.
+~
+A
+19 1
+#1721
+adaga enferrujada~
+uma adaga enferrujada~
+Uma velha e enferrujada adaga foi deixada aqui.~
+~
+5 0 0 0 0 ano 0 0 0 0 0 0 0
+0 2 2 11
+1 2 2 0 0
+E
+adaga enferrujada~
+Essa adaga parece ser mais velha do que aparenta, foi deixada aqui para
+enferrujar a muito tempo.
+~
+#1722
+frasco poção castanho escuro~
+uma poção castanho escura~
+Um pequeno frasco foi esquecido aqui.~
+~
+10 g 0 0 0 ao 0 0 0 0 0 0 0
+25 19 33 -1
+2 35 20 0 0
+E
+frasco poção castanho escuro~
+O frasco contém um líquido nojento de cor castanho escuro.
+~
+#1723
+grande escudo brilhante~
+um grande, escudo brilhante~
+Um objeto de metal brilhante está aqui, parece ser um escudo.~
+~
+9 g 0 0 0 aj 0 0 0 0 0 0 0
+6 0 0 0
+1 1000 100 0 0
+E
+grande escudo brilhante~
+Esse escudo é muito brilhante, e aparenta ter sido rencentemente polido
+por algo ou alguém, além disso está velho muitas decadas pelo estilo que
+é feito.
+~
+A
+1 -2
+A
+9 10
+#1724
+tocha verde~
+uma tocha verde~
+Uma excelente tocha verde foi deixada aqui.~
+~
+1 g 0 0 0 ao 0 0 0 0 0 0 0
+0 0 -1 0
+1 1 25 0 0
+E
+tocha verde~
+Essa tocha é única, você nunca tinha visto uma tocha inflamar com
+uma chama permanente antes, e com uma chama verde...
+~
+#1725
+elmo prata~
+um elmo de prata~
+Um sujo elmo de prata brilho no chão.~
+~
+9 0 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+4 0 0 0 0
+E
+gravuras linha~
+As linhas parecem ser o fragmento de um padrão, mas você não faz idéia do
+que é o padrão.
+~
+E
+elmo prata~
+Esse elmo parece ser puramente ornamental, e parece não fornecer a quem o
+usar qualquer proteção.  Ele é finamente esculpido com pequenas linhas em
+forma de onda.
+~
+#1726
+jaqueta couro decomposta~
+uma quase decomposta jaqueta de couro~
+Uma jaqueta de couro em fase de decomposição foi deixada aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+1 0 0 0
+2 0 0 0 0
+E
+jaqueta couro decomposta~
+Essa jaqueta parece que um dia esteve em uma condição decente, mas não mais.
+~
+#1727
+estranha vara metal~
+uma estranha vara de metal~
+Uma estranha vara feita de material metálico foi deixada aqui.~
+~
+13 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+15 7 2 0 0
+E
+estranha vara metal~
+Essa estranha vara metálica aparenta ser apenas um galho de árvore, mas
+olhando bem você repara desenhos cuidadosamente feitos ao longo da
+lança são: curvas, nós, protuberâncias.
+Você não tem uma pista de para que você vai usar isto, mas você deve
+carrega-la pois pode ser de grande uso para coisas que vão alem da sua
+imaginacao.
+~
+$~

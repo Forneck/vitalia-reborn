@@ -1,0 +1,42 @@
+#97
+Vitalia~
+O Subterrâneo~
+9700 9799 300 1 bd 0 0 0 -1 -1
+-1
+*
+* Colocar os monstros
+*
+M 0 9704 1 9713     colocar a Serpente no Ninho
+G 1 9702 1          entregar a armadura
+M 0 9706 1 9763     colocar o deus das pedras
+E 1 3812 1 17       Card Manoplas de Zogthu(3812) com Deus das Pedras(9706)
+M 0 9702 1 9753     colocar o drag�o negro
+G 1 9701 1          entregar o chicote
+M 0 9701 10 9715    colocar o morcego
+M 0 9701 10 9715    colocar o morcego
+M 0 9701 10 9728    colocar o morcego
+M 0 9701 10 9728    colocar o morcego
+M 0 9701 10 9735    colocar o morcego
+M 0 9701 10 9735    colocar o morcego
+M 0 9701 10 9753    colocar o morcego
+M 0 9701 10 9753    colocar o morcego
+M 0 9701 10 9756    colocar o morcego
+M 0 9701 10 9756    colocar o morcego
+M 0 9705 4 9709     colocar a aranha
+M 0 9705 4 9712     colocar a aranha
+M 0 9705 4 9731     colocar a aranha
+M 0 9705 4 9760     colocar a aranha
+G 1 9704 2          entregar a po��o
+M 0 9703 2 9714    colocar o escaravelho
+M 0 9703 2 9734    colocar o escaravelho
+G 1 9703 1          entregar o anel
+G 1 9704 2          entregar a po��o
+*
+****************************************************************************
+*
+* Ajustar as passagens
+*
+D 0 9760 0 2        fechar a porta da Sala de Ossos (lado de fora)
+D 0 9761 2 2        fechar a porta da Sala de Ossos (lado de fora)
+S
+$

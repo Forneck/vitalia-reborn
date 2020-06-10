@@ -1,0 +1,260 @@
+#5300
+venenosa cobra~
+a horrível cobra~
+Uma pequena cobra venenosa serpenteia a seu redor.
+~
+É uma pequena cobra, com escamas lisas como se fosse cerâmica.  A mordida
+venenosa desta cobra derrubou muitos faraós poderosos.
+~
+2097248 0 0 0 0 0 0 0 0 E
+5 14 8 5d5+50 1d6+1
+10 1000
+8 8 0
+E
+#5301
+cobra naja~
+a cobra naja~
+Uma enorme cobra naja ergue-se à sua frente e lentamente vai mostrando sua
+explendorosa cabeça, que se abre como se fôra um enorme leque de escamas.
+~
+A cobra naja movimenta-se de forma sinuosa, rastejando de um lado para o
+outro, bem diante de você, exibindo sua incrível cabeça totalmente aberta,
+como se fosse um leque, e cujas cores fortes são usadas para distrair suas
+vítimas antes do bote.
+~
+2097248 0 0 0 0 0 0 0 0 E
+7 13 7 7d7+70 2d4+2
+25 2000
+8 8 0
+E
+#5302
+mangusto~
+o pequeno mangusto~
+Um pequeno mangusto se esquiva pelo chão, caçando cobras.
+~
+O mangusto é um roedor manhoso, um rápido caçador de perigosas cobras
+venenosas.  Ela cheira você, parecendo estar a procura de comida em suas
+mãos.
+~
+2097248 0 0 0 2048 0 0 0 10 E
+11 10 6 11d11+110 3d5+3
+100 10000
+8 8 2
+E
+#5303
+guardião pirâmide~
+o guardião da pirâmide~
+O guardião da pirâmide protege as tumbas dos intrusos.
+~
+O guardião da pirâmide fez um juramento para destruir todos os ladrões de
+tumbas dos faraós.  Ele está totalmente vestido, dos pés a cabeça, com
+roupas cor de areia.
+~
+2101266 0 0 0 65536 0 0 0 250 E
+8 12 5 8d8+80 2d6+2
+200 3750
+8 8 1
+E
+#5304
+ladrão tumba~
+um ladrão de tumba~
+Um furtivo ladrão de tumba está a procura do tesouro.
+~
+O ladrão esbarra em você, e em seguida volta a se esconder na escuridão.
+~
+2097344 0 0 0 1638400 0 0 0 -250 E
+10 10 5 10d10+100 2d6+3
+500 9000
+8 8 1
+E
+#5305
+ali babá ladrão~
+Ali Babá~
+Ali Babá está aqui, procurando pelo tesouro do faraó.
+~
+Você vê um homem alto, barbado, com olhos ambiciosos.  Ali Babá passou a sua
+vida roubando os outros.  Roubou inclusive recentemente, muitos itens bem
+debaixo do nariz dos guardiões da pirâmide.  Algum dia ele pode ser pego mas
+não hoje...
+~
+2099284 0 0 0 589824 0 0 0 -300 E
+18 2 0 18d18+180 3d8+2
+1000 30000
+8 8 1
+E
+#5306
+mágico tapete~
+o tapete magico~
+Um pequeno tapete de tecido se encontra debaixo de seus pés.
+~
+O tapete é simplesmente lindo, feito de um material sedoso.  Ele parece se
+levantar e tocar seu pé.  Espere, ele esta em pé, a poucos centímetros do
+chão!  Na verdade ele parece estar VIVO!
+~
+2353170 0 0 0 67600 0 0 0 500 E
+9 11 7 9d9+90 2d5+2
+250 6000
+8 8 0
+E
+#5307
+múmia cadáver~
+a múmia~
+Uma múmia vem em sua direção, incomodada com a sua presença.
+~
+Você vê apenas a desfigurada carne humana em decomposição, animada pelo
+etéreo espírito de um morto.
+~
+2285664 0 0 0 67664 0 0 0 -600 E
+12 8 4 12d12+120 1d6+6
+750 15000
+8 8 0
+E
+#5308
+homem areia~
+o homem de areia~
+Um homem de areia brota do chão do deserto.
+~
+O homem de areia é exatamente isso: alguma coisa estranha, formada da areia
+do deserto.  Ele parece ser bastante grande e forte em sua casa de ventos
+quentes e arenosos.
+~
+2287728 0 0 0 67600 0 0 0 0 E
+14 6 2 14d14+140 2d7+4
+1500 18000
+8 8 1
+E
+#5309
+efreeti~
+O Efreeti~
+O Efreeti está aqui, envolto por uma coluna de fogo.
+~
+O Efreeti é um poderoso ser, feito de fogo.  Ele contempla você com desdém e
+desprezo, com os braços cruzados sobre seu poderoso peito.
+~
+2353202 0 0 0 67600 0 0 0 -600 E
+20 0 -10 20d20+700 4d6+20
+11000 40000
+8 8 1
+E
+#5310
+coluna cariátide~
+a cariátide~
+Uma coluna de arenito esta aqui, esculpida em uma figura feminina.
+~
+Na coluna foram esculpidas quatro figuras femininas bem formadas.  O arenito
+da cariátide é bem antigo mas você ainda pode ver uma espada letal, de
+pedra, nas mãos de cada figura.
+~
+2357266 0 0 0 67584 0 0 0 0 E
+24 -4 -13 24d24+940 4d6+20
+35000 100000
+8 8 2
+E
+#5311
+gênio~
+o gênio~
+O gênio surge dos confins de uma pequena lâmpada.
+~
+O gênio é um poderoso ser feito do próprio ar e freqüentemente aprisionado
+em uma pequena lâmpada, usada para satisfazer os desejos de quem a encontra.
+Ele sorri para você, com os braços cruzados sobre sua pele azul, acariciando
+seu cavanhaque.
+~
+2353170 0 0 0 67600 0 0 0 600 E
+28 -8 -36 28d28+880 6d6+28
+60000 310000
+8 8 1
+E
+#5312
+hieracoesfinge esfinge~
+a hieracoesfinge~
+A hieracoesfinge lhe parece muito esperta.
+~
+As hieracoesfinges são criaturas espertas, pequenas, mas sórdidas.  Possuem
+a cabeça de pássaro, com poderosas asas, e quatro patas prontas para rasgar
+suas vítimas em pedaços.  Eles costumam ter bastante inveja da superioridade
+dos seus primos mais velhos.
+~
+2189424 0 0 0 67584 0 0 0 -200 E
+15 0 -23 15d15+650 4d10+25
+7500 21000
+8 8 2
+E
+#5313
+ginoesfinge esfinge~
+a ginoesfinge~
+Uma ginoesfinge está sentada aqui, entretida por um enigma.
+~
+A ginoesfinge é uma criatura tranqüila e amigável, tem o corpo de uma linda
+mulher de pele escura da cintura para cima, asas emplumadas e as hábeis
+pernas de um poderoso felino.  Agora ela está confusa, tentando resolver um
+enigma de sua prima crioesfinge.
+
+~
+2189330 0 0 0 67600 0 0 0 100 E
+19 -12 -30 19d19+590 3d10+29
+10000 35000
+8 8 2
+E
+#5314
+crioesfinge esfinge~
+a esfinge~
+Uma crioesfinge observa você calmamente.
+~
+A crioesfinge é uma criatura calma e amigável, tendo a cabeça de um carneiro
+sobre o corpo de um felino bem peludo e asas como as de uma águia.  Ela se
+encanta com enigmas, proporcionando divertimento aos seus primos facilmente
+confundidos.
+~
+2189330 0 0 0 67600 0 0 0 300 E
+23 -13 -32 23d23+930 6d10+25
+25000 80000
+8 8 2
+E
+#5315
+androesfinge esfinge~
+a androesfinge~
+Uma poderosa androesfinge balança sua juba de leão.
+~
+A poderosa androesfinge é uma criatura gigantesca, com o corpo de um leão,
+cuja face é como a de um homem relativamente simpático e um par volumoso de
+asas.  São contados contos de faraós que ficaram surdos permanentemente ao
+ouvir o poderoso rugido desta esfinge.
+~
+2189330 0 0 0 67600 0 0 0 400 E
+27 -10 -36 27d27+970 4d10+27
+50000 200000
+8 8 2
+E
+#5316
+grande esfinge~
+a grande esfinge~
+Uma poderosa esfinge repousa na areia, dormente por séculos.
+~
+A grande esfinge se sobressai dez pés acima de você, repousando em estado de
+dormência.  Ela se tornou quase indistinguível da areia que a cerca, apesar
+de você ainda poder identificar os traços de uma bonita face que já ditou
+muitas regras.
+~
+2353170 0 0 0 67856 0 0 0 500 E
+80 -21 -40 41d41+1410 6d10+37
+125000 2900000
+8 8 2
+E
+#5317
+ramsés múmia~
+Ramsés, o Maldito~
+Você despertou o poderoso servo dos faraós, Ramsés.
+~
+Assim que a luz que você carrega ilumina o rosto e o corpo da criatura, você
+pode ver que seus traços vão se definindo, preenchendo, endurecendo, ate que
+um homem aparentemente saudável se ergue diante de você, marcado apenas pelo
+seu último sono.  Seu cabelo é preto e macio, sua pele escura como
+chocolate, e seu peito quase nem se mexe quando respira.
+~
+2287634 0 0 0 67856 0 0 0 150 E
+50 -18 -48 38d38+1380 8d6+40
+88000 2400000
+8 8 1
+E
+$

@@ -1,0 +1,249 @@
+#13400
+fonte jorrante~
+uma fonte jorrante~
+Há uma grande fonte aqui, jorrando néctar.~
+~
+23 0 0 0 0 0 0 0 0 0 0 0 0
+9999 9999 16 0
+1000 0 0 0 0
+E
+fonte jorrante~
+Uma fonte ornamentada, feita de mármore branco.  Sua perfeição é
+surpreendente.  Ela parece ter sido encantada, o nível da água nunca baixa.
+~
+#13401
+escudo elfo negro~
+um escudo negro de elfo~
+Um escudo negro foi jogado aqui.~
+~
+9 bi 0 0 0 aj 0 0 0 0 0 0 0
+6 0 0 0
+12 1500 0 0 0
+E
+escudo elfo negro~
+Um forte e robusto escudo.  Isso traz à sua mente antigas lendas élficas de
+um escudo que trazia uma proteção mágica ao seu dono.
+~
+#13402
+manoplas elfos élficas~
+um par de manoplas élficas~
+Um par de manoplas feita por elfos foi esquecida no chão~
+~
+9 0 0 0 0 ah 0 0 0 0 0 0 0
+5 0 0 0
+8 1500 0 0 0
+#13403
+botas escuras~
+um par de botas escuras~
+Um par de botas escuras foi deixado aqui.~
+~
+22 g 0 0 0 ag 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+botas escuras~
+Essas botas são feitas de um estranho material intrigantemente leve, parece
+que elas poderiam flutuar em uma poça d'água.
+~
+A
+17 -4
+#13414
+vara enorme~
+uma enorme vara~
+Uma enorme vara foi jogada aqui.~
+~
+5 0 0 0 0 ano 0 0 0 0 0 0 0
+0 1 4 10
+1 300 0 0 0
+#13415
+tocha~
+uma tocha~
+Uma grande tocha foi perdida aqui.~
+~
+1 a 0 0 0 ao 0 0 0 0 0 0 0
+0 0 36 0
+2 0 0 0 0
+#13416
+perneiras~
+um par de perneiras~
+Alguém com muita pressa deixou suas perneiras aqui~
+~
+9 0 0 0 0 af 0 0 0 0 0 0 0
+2 0 0 0
+1 1200 0 0 0
+#13417
+manto verde élfico~
+um manto élfico verde~
+Um manto verde foi abandonado junto à sujeira.~
+~
+9 a 0 0 0 ak 0 0 0 0 0 0 0
+1 0 0 0
+2 1200 0 0 0
+A
+13 10
+#13418
+espada élfica~
+uma fina espada élfica~
+Uma bela espada élfica foi deixada aqui.~
+~
+5 b 0 0 0 an 0 0 0 0 0 0 0
+0 2 8 3
+10 1000 0 0 0
+E
+espada élfica~
+Ela é pesada e possui um cabo branco e longo.
+~
+A
+19 1
+#13419
+mithril élfica armadura~
+uma armadura élfica~
+Uma armadura de mithril foi deixada aqui.~
+~
+9 ag 0 0 0 ad 0 0 0 0 0 0 0
+6 0 0 0
+6 1000 0 0 0
+A
+12 10
+#13421
+camisa lisa~
+uma camisa lisa~
+Uma camisa lisa foi perdida aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+0 0 0 0
+1 300 0 0 0
+A
+17 -3
+#13422
+roupa banho~
+uma roupa de banho~
+Uma roupa de banho foi jogada aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+2 0 0 0
+2 100 0 0 0
+#13423
+papel~
+um pedaço de papel~
+Um pedaço de papel amassado está jogado aqui.~
+~
+12 f 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300 0 0 0
+#13424
+pedaço giz~
+um pedaço de giz~
+Um pedaço de giz branco foi deixado no chão.~
+~
+12 c 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300 0 0 0
+#13425
+atem amuleto~
+o amuleto de Atem~
+Um amuleto com o símbolo de Atem foi perdido aqui.~
+~
+9 a 0 0 0 ac 0 0 0 0 0 0 0
+5 0 0 0
+5 2000 0 0 0
+A
+13 10
+#13426
+alcova rochosa~
+uma alcova rochosa~
+Uma alcova rochosa se abre diante de seus pés.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+50 0 0 0
+9999 0 0 0 0
+E
+alcova rochosa~
+Um pequeno buraco na face do precipício.  Uma pequena luz reflete de seu
+profundo interior.
+~
+#13427
+capacete atem~
+um capacete de Atem~
+Um belo capacete de Atem foi jogado aqui.~
+~
+9 ag 0 0 0 ae 0 0 0 0 0 0 0
+4 0 0 0
+4 2000 0 0 0
+A
+3 2
+A
+24 -2
+#13433
+pedaço papel~
+um pedaço de papel~
+Um pedaço de papel rasgado foi jogado aqui.~
+~
+16 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 300 0 0 0
+E
+pedaço papel~
+Parece que isso seria usado para a criação de um pergaminho.
+~
+#13434
+garrafa madeira~
+uma garrafa~
+Uma garrafa de madeira está no chão.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+10 10 3 0
+10 100 0 0 0
+E
+garrafa madeira~
+Uma bela garrafa, muito bem feita.  Ela parece ser boa para guardar poções.
+~
+#13435
+bengala~
+uma bengala~
+Uma bengala foi perdida aqui.~
+~
+5 i 0 0 0 ano 0 0 0 0 0 0 0
+0 1 3 5
+2 2200 0 0 0
+#13436
+manto azul~
+um manto azul~
+undefined~
+~
+9 0 0 0 0 ak 0 0 0 0 0 0 0
+4 0 0 0
+2 2100 0 0 0
+#13437
+chave madeira~
+uma chave de madeira~
+Uma chave de madeira está jogada aqui.~
+~
+18 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#13438
+poção élfica~
+uma poção élfica~
+Uma estranha poção foi deixada aqui.~
+~
+10 0 0 0 0 a 0 0 0 0 0 0 0
+10 73 73 30
+1 1230 0 0 0
+#13439
+lemba~
+uma lemba~
+Uma lemba foi abandonada aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+15 0 0 0
+1 20 0 0 0
+#13440
+dragão assado perna~
+um assado de perna de dragão~
+Um apetitoso assado de perna de dragão foi deixado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+15 0 0 0
+2 20 0 0 0
+$~

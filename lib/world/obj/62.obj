@@ -1,0 +1,84 @@
+#6200
+chave~
+uma chave~
+Uma chave está aqui~
+~
+18 cdq 0 0 0 ao 0 0 0 0 0 0 0
+6200 0 0 0
+1 20 0 0 0
+E
+chave~
+Ela é uma chave lisa.
+~
+#6201
+algemas~
+um par de algemas~
+Um par de algemas de aço está aqui.~
+~
+9 h 0 0 0 ah 0 0 0 0 0 0 0
+0 0 0 0
+20 100 20 0 0
+E
+algemas~
+Elas são grandes objetos de aço, feitas para prender ao redor das mãos.
+~
+A
+18 -20
+#6202
+grilhões~
+um par de grilhões~
+Um par de grilhões foi deixado aqui, descartado.~
+~
+9 h 0 0 0 ag 0 0 0 0 0 0 0
+0 0 0 0
+20 100 20 0 0
+E
+grilhões~
+Grandes grilhões de ferro, feitos para prender ao redor dos tornozelos.
+~
+A
+14 -80
+#6203
+pedra runa~
+Uma Pedra Runa~
+Uma pequena pedra com uma inscrição está aqui.~
+~
+1 a 0 0 0 ao 0 0 0 0 0 0 0
+0 0 -1 0
+1 10000 2000 0 0
+E
+pedra runa~
+Ela é uma pequena pedra encravada com um estranho símbolo.  Estranho...
+~
+A
+12 8
+#6204
+clava~
+uma clava~
+Uma tosca clava de madeira está aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 2 7
+12 10 2 0 0
+E
+clava~
+Ele é uma grande, clava de madeira.
+~
+#6205
+faca lâmina~
+a Lâmina Rígida~
+Uma faca vibrando com eterna energia aqui.~
+~
+5 bp 0 0 0 an 0 0 0 0 0 0 0
+0 3 7 3
+1 100000 20000 0 0
+E
+faca lâmina~
+Ela é uma faca única, com uma safira em forma de inseto no punho.  Ela vibra 
+constantemente e sua mão treme um pouco quando você a toca.
+~
+A
+12 10
+A
+13 -20
+$~

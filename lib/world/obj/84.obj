@@ -1,0 +1,755 @@
+#8400
+athelas erva arbusto~
+um pequeno arbusto de athelas~
+Um pequeno arbusto verde est� fincado aqui, emitindo um forte perfume.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+6 0 0 0
+4 100 10 1 0
+E
+athelas erva arbusto~
+Voc� observa um belo arbusto verde, chamada de Athelas, a folha do rei.  Um
+intenso perfume brota das suas folhas, que s�o utilizadas como um �timo
+rem�dio para aliviar as dores causadas por envenenamentos.
+~
+#8401
+vasilhas potes~
+v�rias vasilhas vazias e potes quebrados~
+V�rias vasilhas vazias e potes quebrados foram deixados aqui.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+100 10 1 1 0
+E
+vasilhas potes~
+Voc� observa dezenas de vasilhas vazias e muitos potes quebrados.  Com
+certeza h� muito tempo deixaram de ser utilizados!
+~
+#8402
+ossos velhos~
+v�rios ossos velhos~
+In�meros ossos velhos foram deixados aqui, espalhados no ch�o.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+200 10 1 1 0
+E
+ossos velhos~
+Voc� observa v�rios ossos velhos espalhados sobre o ch�o.
+~
+#8403
+trolls pedra estatua~
+tr�s imensos trolls de pedra~
+Um enorme troll est� aqui agachado, sendo observado por outros dois.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+600 600 60 1 0
+E
+trolls pedra estatua~
+Voc� observa tr�s imensos e assustadores trolls petrificados.  Um est�
+agachado, enquanto os outros dois o observam.  Voc� percebe um engra�ado
+enfeite atr�s da orelha de um dos trolls: um pequenino ninho de passarinho.
+~
+#8404
+antiga rocha pedra~
+uma antiga pedra~
+Uma rocha est� aqui sobre o capim.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+10 10 1 1 0
+E
+runas marcas secretas~
+Voc� observa atentamente as runas de an�es e marcas secretas, por�m n�o
+consegue identificar nada que fa�a sentido.
+~
+E
+antiga rocha pedra~
+Voc� observa uma desgastada rocha com algumas runas de an�es e estranhas
+marcas secretas entalhadas em sua superf�cie.
+~
+#8405
+diadema prata~
+um diadema de prata~
+Um diadema de prata foi deixado aqui, brilhando como a luz de uma estrela.~
+~
+11 ak 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+7 2000000 200000 65 0
+E
+diadema de prata~
+Voc� observa um maravilhoso diadema de prata com misteriosas runas
+esculpidas em sua superf�cie.
+~
+A
+12 30
+A
+17 -5
+#8406
+touca rendas prateadas pedras~
+uma bela touca de rendas prateadas~
+Uma bela touca prateada foi esquecida aqui.~
+~
+11 ak 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+8 2500000 250000 40 0
+E
+touca rendas prateadas pedras~
+Voc� observa uma linda touca de rendas prateadas, ornamentada por majestosas
+pedras, de um brilho branco.
+~
+A
+17 -5
+#8407
+cinto prata folhas~
+um belo cinto de folhas de prata~
+Um maravilhoso cinto de prata foi deixado aqui.~
+~
+11 a 0 0 0 al 0 0 0 0 0 0 0
+0 0 0 0
+10 2000000 200000 75 0
+E
+cinto prata folhas~
+Voc� observa um bel�ssimo cinto de folhas lavradas em prata.  Este belo
+cinto pertence a linda Estrela Vespertina do povo �lfico.
+~
+A
+17 -5
+#8408
+fragmentos espada narsil~
+os fragmentos da esplendorosa Narsil~
+Uma espada fragmentada est� aqui, sobre as m�os de uma bela estatua.~
+~
+8 aegi 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+50 5000000 500000 0 0
+E
+fragmentos espada narsil~
+Voc� observa os fragmentos da gloriosa Narsil.  Brilhante e imponente, a
+bela Narsil pertencia a Elendil, por�m no cerco a Barad-dur, no final da
+Segunda Era, ele foi morto em combate e a espada foi quebrada.  A majestosa
+espada foi forjada pelo an�o Telchar de Nogrod, durante a Primeira Era.
+~
+#8409
+c�pula cristal~
+uma bel�ssima c�pula de cristal~
+Uma maravilhosa c�pula de cristal foi constru�da aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+100 10000 1000 0 0
+E
+c�pula cristal~
+Voc� observa uma sublime c�pula de cristal constru�da pelos encantadores
+elfos de Imladris.  Sobre o teto da c�pula, voc� observa v�rios p�ssaros
+cantando.
+~
+#8410
+estatua arwen pedra~
+uma estatua de Arwen~
+Uma bela estatua de pedra foi fincada aqui, expressando o esplendor �lfico.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+180 10000 1000 0 0
+E
+estatua arwen pedra~
+Voc� observa uma bel�ssima estatua �lfica feita de pedra.  Voc� percebe uma
+bela donzela �lfica de lindos cabelos longos e rosto suave, perfeitamente
+esculpida na rocha.
+~
+#8411
+est�tua beren pedra~
+uma est�tua de Beren~
+Uma imponente est�tua de pedra foi fincada aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+200 10000 1000 0 0
+E
+est�tua beren pedra~
+Voc� observa um belo homem mortal, de olhar marcante e forte.  T�o real,
+por�m constru�do majestosamente de pedra.
+~
+#8412
+est�tua l�thien pedra~
+uma est�tua de L�thien Tin�viel~
+Uma maravilhosa est�tua de pedra foi fincada aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+180 10000 1000 0 0
+E
+estatua l�thien pedra~
+Voc� observa uma linda donzela �lfica de cabelos longos e pele suave.
+~
+#8413
+estatuas pedra muro~
+algumas estatuas esculpidas no muro~
+Bel�ssimas estatuas de pedra foram fincadas aqui, esculpidas no muro.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+140 1000 100 0 0
+E
+estatuas pedra muro~
+Voc� observa lindas estatuas de pedra, esculpidas detalhadamente no muro que
+cerca a gloriosa cidade de Valfenda.  Maravilhosos desenhos em alto relevo
+de folhas e caules comp�em o muro, real�ando as lindas estatuas �lficas de
+pedra.
+~
+#8414
+estante livros madeira~
+uma bela estante de livros~
+Uma bela estante de madeira foi colocada aqui, protegendo v�rios livros.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+80 5 -1 0
+160 100000 10000 0 0
+E
+estante livros madeira~
+Voc� observa uma bela estante de livros feita de madeira.
+~
+#8415
+livros antigos~
+v�rios livros antigos~
+V�rios livros antigos est�o guardados aqui.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+40 100000 10000 0 0
+E
+livros antigos~
+Voc� observa v�rios livros �lficos antigos.
+~
+#8416
+quadro batalha~
+o quadro da batalha de Sauron e Isildur~
+Um grande quadro com bordas douradas est� aqui, fixado na parede.~
+~
+8 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+35 100000 10000 0 0
+E
+quadro batalha~
+Voc� observa um maravilhoso quadro com bordas douradas, que ilustra a
+monumental batalha nas encostas de Orodruin, no momento em que Isildur
+cortou o Anel da m�o de Sauron, com o fragmento do punho da espada do seu
+pai, Elendil.
+~
+#8417
+estatua �lfica m�rmore branco~
+uma estatua de m�rmore branco~
+Uma bela estatua �lfica de m�rmore branco foi colocada aqui.~
+~
+8 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+85 1000 100 0 0
+E
+estatua �lfica m�rmore branco~
+Voc� observa uma maravilhosa estatua de m�rmore branco de uma linda donzela
+�lfica.  Sobre as suas m�os voc� observa brilhantes fragmentos da poderosa e
+gloriosa Narsil.
+~
+#8418
+�rvore imensa~
+uma magn�fica �rvore~
+Uma imensa �rvore est� fincada aqui, fazendo sombra em todo o p�tio.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+55 1000 100 0 0
+E
+�rvore imensa~
+Voc� observa uma magn�fica �rvore fincada no canto oeste do grande p�tio.
+~
+#8419
+pequeno p�lpito pedra~
+um pequeno p�lpito de pedra~
+Um pequeno p�lpito de pedra foi constru�do no centro do p�tio.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+35 1000 100 0 0
+E
+pequeno p�lpito pedra~
+Voc� observa um pequeno p�lpito de pedra constru�do no centro do belo p�tio
+do Conselho de Elrond.
+~
+#8420
+v�rias cadeiras madeira~
+v�rias cadeiras de madeira~
+V�rias cadeiras de madeira foram colocadas aqui, formando um grande c�rculo.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+12 100 10 0 0
+E
+v�rias cadeiras madeira~
+Voc� observa v�rias cadeiras de madeira, organizadas ao longo do p�tio.
+~
+#8421
+estatuas pedra �lficas~
+majestosas estatuas �lficas~
+Maravilhosas estatuas �lficas comp�em a bela paisagem do conselho.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+250 5000 500 0 0
+E
+estatuas pedra �lficas~
+Voc� observa bel�ssimas estatuas �lficas feitas de pedra.
+~
+#8422
+tape�arias tecidas~
+majestosas tape�arias tecidas~
+Majestosas tape�arias tecidas est�o aqui, penduradas nas paredes.~
+~
+8 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+12 1000 100 0 0
+E
+tape�arias tecidas~
+Voc� observa maravilhosas tape�arias tecidas penduradas nas paredes, com
+belos e misteriosos desenhos em sua superf�cie.
+~
+#8423
+mesa comprida madeira~
+uma mesa comprida~
+Uma bela mesa comprida de madeira foi colocada aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+45 1000 100 0 0
+E
+mesa comprida madeira~
+Voc� observa uma maravilhosa mesa comprida feita de madeira e com bel�ssimos
+detalhes em forma de folhas e caules esculpidos em sua superf�cie.
+~
+#8424
+grande lareira~
+uma grande lareira~
+Uma grande lareira foi constru�da aqui, iluminando todo o sal�o.~
+~
+1 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 -1 0
+50 100 10 0 0
+E
+grande lareira~
+Voc� observa uma grande lareira constru�da em meio a dois pilares
+entalhados, iluminando todo o grande sal�o do fogo.
+~
+#8425
+fonte m�rmore branco~
+uma bela fonte de m�rmore branco~
+Uma bela fonte de m�rmore branco foi constru�da aqui.~
+~
+23 a 0 0 0 0 0 0 0 0 0 0 0
+80 80 15 0
+100 10000 1000 0 0
+E
+fonte m�rmore branco~
+Voc� observa uma maravilhosa fonte feita de m�rmore branco.  Sua superf�cie
+foi esculpida detalhadamente com formas que comp�em a natureza.  Alegres e
+belos p�ssaros aproveitam a �gua pura da fonte para brincarem com ela.
+~
+#8426
+chave jade~
+uma pequenina chave verde~
+Uma pequenina chave verde foi esquecida aqui.~
+~
+18 cf 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+3 500 50 0 0
+E
+runas antigas estranhas~
+Voc� n�o consegue entend�-las.
+~
+E
+chave jade~
+Voc� observa uma pequenina chave esculpida numa pedra jade.  Em sua
+superf�cie voc� observa estranhas e antigas runas.
+~
+#8427
+cetro ann�minas~
+o cetro de ann�minas~
+Um magn�fico bast�o de prata foi deixado aqui, brilhando como uma estrela.~
+~
+4 agi 0 0 0 ano 0 0 0 0 0 0 0
+100 8 8 53
+12 5000000 500000 101 0
+E
+cetro ann�minas~
+Voc� observa um magn�fico bast�o de prata, o bel�ssimo cetro de Ann�minas,
+principal s�mbolo de realeza em N�menor.  Os s�bios anci�es da Terra-m�dia
+contam que o cetro de Ann�minas � o mais antigo trabalho feito por homens
+preservado at� os dias atuais.
+~
+A
+13 70
+A
+4 3
+A
+3 4
+#8428
+anel barahir dourado serpentes g�meas~
+o anel de Barahir~
+Duas pequenas serpentes g�meas com olhos verdes est�o aqui.~
+~
+11 agi 0 0 0 ab 0 0 0 0 0 0 0
+0 0 0 0
+4 5000000 500000 101 0
+E
+anel barahir dourado serpentes g�meas~
+Voc� observa o magn�fico anel de Barahir.  Este bel�ssimo anel foi feito em
+Valinor na forma de duas serpentes g�meas com olhos de esmeralda, suas
+cabe�as se encontram entre uma bela coroa de flores de ouro.
+~
+A
+12 70
+A
+18 2
+A
+1 2
+#8429
+cama madeira~
+uma cama de madeira~
+Uma bel�ssima cama de madeira foi colocada aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+45 100 10 0 0
+E
+cama madeira~
+Voc� observa uma bel�ssima cama de madeira esculpida majestosamente. 
+~
+#8430
+mesa madeira~
+uma mesa de madeira~
+Uma mesa de madeira foi colocada aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+45 100 10 0 0
+E
+mesa madeira~
+Voc� observa uma maravilhosa mesa feita de madeira e com bel�ssimos detalhes
+em forma de folhas e caules esculpidos em sua superf�cie.
+~
+#8431
+c�lice prata~
+um belo c�lice de prata~
+Um belo c�lice de prata foi esquecido aqui.~
+~
+17 0 0 0 0 ao 0 0 0 0 0 0 0
+3 3 15 0
+8 50 5 0 0
+E
+c�lice prata~
+Voc� observa um maravilhoso c�lice de prata com uma bela pedra verde fincada
+em sua superf�cie.
+~
+#8432
+ba� dourado p�rolas~
+um maravilhoso ba� dourado com p�rolas~
+Um maravilhoso ba� dourado com p�rolas foi deixado aqui.~
+~
+15 ae 0 0 0 0 0 0 0 0 0 0 0
+60 15 8433 0
+25 100000 10000 0 0
+E
+ba� dourado p�rolas~
+Voc� observa um bel�ssimo ba� dourado com majestoso desenhos esculpidos em
+sua superf�cie e ornamentado com grandes p�rolas.
+~
+#8433
+chave dourada pequena~
+uma pequena chave dourada~
+Uma pequena chave dourada foi esquecida aqui.~
+~
+18 ae 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 100 10 0 0
+E
+chave dourada pequena~
+Voc� observa uma pequena chave dourada ornamentada por uma grande p�rola em
+uma de suas extremidades.
+~
+#8434
+ba� prateado p�rolas~
+um maravilhoso ba� prateado com p�rolas~
+Um maravilhoso ba� prateado com p�rolas foi deixado aqui.~
+~
+15 ae 0 0 0 0 0 0 0 0 0 0 0
+60 15 8435 0
+25 100000 10000 0 0
+E
+ba� prateado p�rolas~
+Voc� observa um bel�ssimo ba� prateado com majestoso desenhos esculpidos em
+sua superf�cie e ornamentado com grandes p�rolas.
+~
+#8435
+chave prateada pequena~
+uma pequena chave prateada~
+Uma pequena chave prateada foi esquecida aqui.~
+~
+18 ae 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 100 10 0 0
+E
+chave prateada pequena~
+Voc� observa uma pequena chave prateada ornamentada por uma grande p�rola em
+uma de suas extremidades.
+~
+#8436
+vilya ouro safira anel~
+Vilya, o anel do poder~
+Um magn�fico anel de ouro foi deixado aqui, brilhando intensamente.~
+~
+11 adegi 0 0 0 ab 0 0 0 0 0 0 0
+0 0 0 0
+4 5000000 500000 101 0
+E
+vilya ouro safira anel~
+Voc� observa um bel�ssimo anel feito de ouro com uma magn�fica safira
+fincada nele.  Vilya � um dos tr�s an�is do poder dados aos reis �lficos por
+Celebrimbor, um dos maiores joalheiros �lficos da cidade de Ost-in-edhil.
+O Vilya e os outros dois an�is do poder entregues aos reis �lficos s� n�o
+s�o mais poderosos do que o Um anel forjado em Sammath Naur, as c�maras de
+fogo na Montanha da Perdi��o.  Se este celestial anel chegou as suas m�os,
+ent�o o mantenha protegido dos cru�is poderes do mal e das terr�veis m�os do
+senhor do escuro.
+~
+A
+2 3
+A
+1 2
+A
+4 2
+#8437
+manto branco �lfico~
+um belo manto �lfico~
+Um bel�ssimo manto branco �lfico foi deixado aqui.~
+~
+11 ag 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+6 160000 16000 10 0
+E
+manto branco �lfico~
+Voc� observa um belo manto branco �lfico com maravilhosos detalhes em alto
+relevo em tons de verde.  
+~
+A
+17 -4
+A
+24 -5
+#8438
+vestido azul celeste �lfico~
+um lindo vestido �lfico azul-celeste~
+Um lindo vestido �lfico azul-celeste foi deixado aqui.~
+~
+11 ag 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+6 650000 65000 20 0
+E
+vestido azul celeste �lfico~
+Voc� observa um maravilhoso vestido �lfico azul celeste feito com fios
+suaves e m�gicos das gloriosas e celestiais terras de Valfenda.
+~
+A
+17 -4
+#8439
+brinco cristais luminosos~
+um brinco de cristais luminosos~
+Pequeninos cristais luminosos foram deixados aqui, brilhando intensamente.~
+~
+11 0 0 0 0 aq 0 0 0 0 0 0 0
+0 0 0 0
+5 3000 300 10 0
+E
+brinco cristais luminosos~
+Voc� observa um bel�ssimo brinco feito com majestosos cristais luminosos
+fixados numa pequenina argola de prata.  Um surpreendente feixe de luz �
+emitido intensamente pelos pequeninos cristais.
+~
+A
+13 20
+A
+17 -4
+#8440
+par botas azul �lficas~
+um par de botas �lficas~
+Um belo par de botas �lficas foi deixado aqui.~
+~
+11 0 0 0 0 ag 0 0 0 0 0 0 0
+0 0 0 0
+5 10000 1000 5 0
+E
+par botas azul �lficas~
+Voc� observa um lindo par de botas leve, feito com um resistente tecido azul
+e com uma pequena runa �lfica esculpida em sua superf�cie.
+~
+A
+14 12
+A
+17 -5
+#8441
+bra�adeiras prata prateadas~
+as bra�adeiras de Glorfindel~
+Um magn�fico par de bra�adeiras prateadas foi esquecido aqui.~
+~
+9 aeg 0 0 0 ai 0 0 0 0 0 0 0
+8 0 0 0
+7 125000 12500 25 0
+E
+bra�adeiras prata prateadas~
+Voc� observa um magn�fico par de bra�adeiras prateadas com bel�ssimos
+detalhes feitos com pequeninas pedras preciosas.  Majestosas runas �lficas
+marcam formosamente a superf�cie prateada das bra�adeiras.
+~
+A
+18 1
+#8442
+faca prata~
+a faca de prata de Elladan~
+Uma magn�fica faca de prata foi deixada aqui, fincada sobre o ch�o.~
+~
+5 dn 0 0 0 ano 0 0 0 0 0 0 0
+0 4 5 11
+12 1500000 150000 35 0
+E
+faca prata~
+Voc� observa uma monumental faca prateada com lindos desenhos �lficos
+esculpidos caprichosamente em sua l�mina.  Uma sublime gema amarela foi
+fixada no belo punhal da poderosa faca prateada, representando um dos
+guardi�es de Valfenda. 
+~
+A
+18 2
+A
+19 3
+#8443
+arco guardi�o marfim prata~
+o arco guardi�o de Elrohir~
+Um belo arco de marfim e prata foi deixado aqui, brilhando como uma estrela.~
+~
+5 adnr 0 0 0 an 0 0 0 0 0 0 0
+0 4 5 12
+12 2000000 200000 20 0
+E
+arco guardi�o marfim prata~
+Voc� observa um magn�fico arco feito de marfim e prata pelas caprichosas e
+delicadas m�os dos elfos de Valfenda.  Voc� percebe uma bel�ssima gema azul
+fixada numa das extremidades do arco, representando um dos guardi�es de
+Valfenda.
+~
+A
+13 10
+A
+18 2
+A
+19 3
+#8444
+flauta dourada~
+a encantadora flauta dourada de Lindir~
+Uma linda flauta dourada foi esquecida aqui.~
+~
+3 adgik 0 0 0 ao 0 0 0 0 0 0 0
+25 6 4 7
+8 1000000 100000 25 0
+E
+flauta dourada~
+Voc� observa uma maravilhosa flauta dourada feita em ouro pelos s�bios e
+aben�oados elfos de Valfenda.  Voc� percebe uma magn�fica gema vermelha
+fixada numa das extremidades da linda flauta dourada, representando um dos
+guardi�es de Valfenda.
+~
+A
+5 2
+A
+6 3
+#8445
+verde escuro medalh�o sabedoria~
+o medalh�o da sabedoria de Erestor~
+Um maravilhoso medalh�o verde-escuro foi esquecido aqui.~
+~
+11 aei 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+6 1200000 120000 30 0
+E
+verde escuro medalh�o sabedoria~
+Voc� observa o maravilhoso medalh�o da sabedoria do s�bio chefe do conselho
+da casa de Elrond.  Uma bela e grande gema verde comp�e o sublime medalh�o,
+fixada numa linda corrente de ouro.
+~
+A
+4 2
+#8446
+cinto �lfico tecido azul~
+um lindo cinto �lfico azul~
+Um lindo cinto �lfico azul foi esquecido aqui.~
+~
+11 eq 0 0 0 al 0 0 0 0 0 0 0
+0 0 0 0
+6 50000 5000 1 0
+E
+cinto �lfico tecido azul~
+Voc� observa um bel�ssimo cinto �lfico feito de um tecido azul bastante
+resistente.
+~
+A
+5 1
+A
+17 -4
+#8447
+luva �lfica tecido azul azuis~
+um belo par de luvas �lficas~
+Um belo par de luvas �lficas azuis foi deixado aqui.~
+~
+11 eq 0 0 0 ah 0 0 0 0 0 0 0
+0 0 0 0
+6 50000 5000 1 0
+E
+luva �lfica tecido azul azuis~
+Voc� observa um bel�ssimo par de luvas �lficas feito de um tecido azul
+bastante resistente.
+~
+A
+2 1
+A
+17 -5
+#8448
+harpa �lfica dourada~
+uma maravilhosa harpa �lfica dourada~
+Uma maravilhosa harpa �lfica dourada foi deixada aqui.~
+~
+12 aeq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+20 250000 25000 1 0
+E
+harpa �lfica dourada~
+Voc� observa uma magn�fica harpa �lfica dourada feita pelas caprichosas m�os
+dos elfos de Valfenda.
+~
+A
+3 1
+A
+6 2
+#8449
+b�ssola brinquedo~
+uma pequenina b�ssola~
+Um pequenino brinquedo foi esquecido aqui, por alguma crian�a traquina.~
+~
+12 q 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+3 100 10 1 0
+E
+b�ssola brinquedo~
+Voc� observa uma pequenina b�ssola e o seu ponteiro louco, girando para um
+lado e para o outro sem parar.  Uma pequena corrente de prata est� fixada na
+pequena b�ssola.
+~
+A
+17 -3
+$~

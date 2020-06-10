@@ -1,0 +1,235 @@
+#6900
+amuleto sapo~
+um amuleto sapo~
+Um amuleto foi deixado aqui.~
+~
+11 aiq 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+1 10000 0 54 0
+E
+amuleto sapo~
+Você vê um amuleto dourado com um sapo verde brilhando 
+em seu centro.  Ele aparenta ter alguns poderes e provavelmente
+vale um bom negócio.
+~
+A
+1 1
+A
+2 2
+A
+4 -2
+A
+14 3
+A
+17 -6
+A
+18 2
+#6906
+machado anura~
+o machado de Anura~
+Um machado está jogado aqui.~
+~
+5 agq 0 0 0 an 0 0 0 0 0 0 0
+0 5 4 3
+4 25000 0 63 0
+E
+machado anura~
+Você vê um grande machado dourado aqui, com alguns desenhos esculpidos
+em sua lâmina. Quase novo, só esta um pouco sujo de sangue.
+~
+A
+18 4
+A
+19 5
+A
+17 -6
+#6907
+espinhos colar~
+um colar de espinhos de sapo~
+Um colar de espinhos está no chão.~
+~
+11 a 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+1 8000 0 0 0
+E
+espinhos colar~
+Você vê um colar de couro negro com espinhos pontudos de metal saindo
+dele. AI!
+~
+A
+11 -20
+A
+13 15
+A
+17 -3
+#6908
+guarda espada~
+uma espada de guarda~
+Uma espada de guarda está jogada no chão aqui.~
+~
+5 a 0 0 0 an 0 0 0 0 0 0 0
+0 3 4 3
+3 3000 0 0 0
+E
+guarda espada~
+Você vê uma longa e afiada espada.
+~
+#6909
+girino cauda~
+Uma cauda de girino~
+Uma suculenta cauda de girino se encontra no chão.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+36 0 0 0
+1 50 0 0 0
+E
+girino cauda~
+Você fica com água na boca só de olhar.  Nham!
+~
+#6910
+heqit manto~
+o manto de Heqit~
+O manto de Heqit foi solto por aqui.  Apesar de tudo ela é uma generosa deusa.~
+~
+9 aq 0 0 0 ak 0 0 0 0 0 0 0
+8 0 0 0
+2 30000 0 9 0
+E
+heqit manto~
+Você vê um longo manto de seda com um sapo estampado nele.
+~
+A
+2 1
+A
+5 1
+A
+10 25
+A
+6 1
+A
+13 27
+#6911
+leste templo chave~
+a chave leste do templo~
+Uma chave foi jogada no chão.~
+~
+18 aq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 1000 0 0 0
+E
+leste templo chave~
+É uma das chaves para o grande templo de Anura.
+~
+#6912
+sul templo chave~
+a chave sul do templo~
+Uma chave foi jogada no chão.~
+~
+18 aq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 1000 0 0 0
+E
+sul templo chave~
+É uma das chaves para o grande templo de Anura.
+~
+#6913
+oeste templo chave~
+a chave oeste do templo~
+Uma chave foi jogada no chão.~
+~
+18 aq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 1000 0 0 0
+E
+oeste templo chave~
+É uma das chaves para o grande templo de Anura.
+~
+#6914
+norte templo chave~
+a chave norte do templo~
+Uma chave foi jogada no chão.~
+~
+18 aq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 1000 0 0 0
+E
+norte templo chave~
+É uma das chaves para o grande templo de Anura.
+~
+#6915
+grande templo chave~
+a chave do grande templo~
+Uma chave foi jogada no chão.~
+~
+18 aq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 1000 0 0 0
+E
+grande templo chave~
+É uma das chaves para o grande templo de Anura.
+~
+#6916
+primeira tabuleta~
+a primeira tabuleta~
+Há uma tabuleta aqui que chama a sua atenção.~
+~
+13 aq 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+1 1000 0 0 0
+E
+primeira tabuleta~
+Você vê uma tabuleta onde se lê:
+PAHCERIEOAABNERELAMEACCRUHJARIOLVRDSNEOPEEIOREOLARDRCTEFPVANÉAONEOSCRUANSODDRAN
+~
+#6917
+segunda tabuleta~
+a segunda tabuleta~
+Há uma tabuleta aqui que chama a sua atenção.~
+~
+13 aq 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+1 1000 0 0 0
+E
+segunda tabuleta~
+Você vê uma tabuleta onde se lê:
+APAHNIRMUPVUIEEATSQNRÊOAMAÁLASCAEUAEDMEINRRQTMAAAUAEIIPIARLTADGDMQEOAMVAETEGDJA
+~
+#6918
+terceira tabuleta~
+a terceira tabuleta~
+Há uma tabuleta aqui que chama a sua atenção.~
+~
+13 aq 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+1 1000 0 0 0
+E
+terceira tabuleta~
+Você vê uma tabuleta onde se lê:
+RARAOMOPSARFDMNOASUTVENRAVAAOTODSSNGOPPDOCOUOPPVSSÉVPDOMLAIIUAREPUENEAENSOMABOD
+~
+#6919
+quarta tabuleta~
+a quarta tabuleta~
+Há uma tabuleta aqui que chama a sua atenção.~
+~
+18 aq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 1000 0 0 0
+E
+quarta tabuleta~
+Você vê uma tabuleta em forma de chave onde se lê:
+ANAVPETLELAOAFTAAIERONTÁCEPVPHEEEAOUTLIATENATLAREABIIARAASEASNATLENTMCROGSIAORA
+~
+#6920
+moedas tesouro~
+o tesouro~
+Uma pilha de moedas de ouro se encontra aqui.~
+~
+20 a 0 0 0 a 0 0 0 0 0 0 0
+80000 0 0 0
+1 0 0 0 0
+E
+moedas tesouro~
+É um tesouro considerável.
+~
+$~

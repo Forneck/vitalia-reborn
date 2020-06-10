@@ -1,0 +1,40 @@
+TODO:
+character.c /rebegin etc...
+
+act.mov -> 640
+
+portal
+autoress/limits
+spells
+reroll
+clans
+class to lvl 100 (saves para druid/bard)
+
+remort:
+ideia: volta nivel 1 (hp, mov, mana continua). segue para plano 2, nao ganha xp em plano inferior (pode alternar entre planos), Skills voltam a poder usar quando atingir nivel novamente.
+
+verificar modificadores nos objs no inventario (2 maos)
+remover veneno da arma
+weather
+talk_dead no move
+
+
+diminuir carga de stoneskin no dano
+modificar o consider
+
+para o menu de hometown:
+j = world[(IN_ROOM(ch))].zone;
+		send_to_char(ch, "Jogadores em %s\tn.\r\n--------------------\r\n", zone_table[j].name);
+
+		/* objects */
+for (j = object_list; j; j = next_thing)
+{
+	next_thing = j->next;		/* Next in object list */
+	
+	 LIST_FOR_SECURE(object_list, j, next_thing, l_global) {
+
+mobs acentuados: 0, 1,3, 4
+100,102,103
+areas acentuadas: 
+
+objs acentuados:

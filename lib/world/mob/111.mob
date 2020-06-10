@@ -1,0 +1,85 @@
+#11101
+guardião pedra~
+o Guardião de Pedra~
+O Guardião de Pedra está diante de você.
+~
+Este ser parece ter não ter pele, sua couraça é totalmente feita em pedra.
+Estramente ele olha para você com um semblante horrível.  Aparentemente ele
+está aqui imóvel a muito tempo.
+~
+2291862 0 0 0 327936 0 0 0 -1000 E
+105 -42 -80 10d6+10300 10d10+50
+0 5100000
+8 8 1
+BareHandAttack: 6
+Str: 25
+StrAdd: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#11102
+monstro pedra~
+o Monstro de Pedra~
+O Monstro de Pedra está aqui.
+~
+Feito todo em pedra esse terrível monstro é praticamente imortal.  Sua pele
+feita em rocha é impenetrável.
+~
+2128032 0 0 0 1116496 0 0 0 -700 E
+102 -20 -80 10d6+10000 10d10+40
+0 1300000
+8 8 1
+BareHandAttack: 6
+Str: 25
+StrAdd: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#11103
+urso enorme grande forte~
+o grande urso da montanha~
+Um enorme urso está aqui.
+~
+Muito grande e forte, esse feroz animal tem cara de faminto.  Apesar de
+gordo seus olhos retratam um animal capaz de comer um ser humano minúsculo
+como você em questão de minutos.
+~
+2189442 0 0 0 65536 0 0 0 -100 E
+100 -16 -15 10d6+10000 10d10+33
+0 300000
+4 8 1
+BareHandAttack: 8
+Str: 25
+StrAdd: 25
+Dex: 25
+Con: 25
+E
+#11104
+horrível gárgula~
+o Gárgula~
+Um horrível gárgula está voando aqui.
+~
+Com uma aparência horrível e tenebrosa, este pequeno monstro demonstra uma
+maldade imensa em seus olhos.  Misturado em meio as névoas este ser
+sobrenatural sobrevoa em volta de seu único mestre.
+~
+2678790 0 0 0 67963256 0 0 0 -1000 E
+104 -32 -80 10d6+10000 10d10+50
+100000 450000
+8 8 1
+BareHandAttack: 4
+Str: 25
+StrAdd: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+$

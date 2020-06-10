@@ -1,0 +1,238 @@
+#1700
+zumbi pútrido~
+o zumbi pútrido~
+Um zumbi pútrido está aqui.
+~
+Ele é um ótimo exemplo de morto-vivo:  pele everdeada,  olhos fundos  
+com um tom amarelado,  garras sujas e afiadas.
+~
+2097154 0 0 0 0 0 0 0 0 E
+13 8 1 4d6+565 2d7+11
+0 16000
+8 8 1
+E
+#1701
+víbora~
+uma víbora mortal~
+Uma víbora venenosa rasteja aqui.
+~
+Esta pequena cobra parece muito perigosa,  melhor desviar de seu caminho.
+~
+2097248 0 0 0 0 0 0 0 0 E
+12 9 2 2d6+350 3d6+10
+0 14000
+8 8 2
+BareHandAttack: 4
+E
+#1702
+mortícia guilda lider~
+Mortícia~
+Mortícia, a Senhora da Guilda e Líder da Vida após a Morte está aqui.
+~
+Seus longos cabelos negros e brilhantes,  vestem suas curvas perfeitas .
+Como essa coisa meiga tornou-se a líder dessa seita?  Um poeta escreveu:
+                
+           'Você pode dizer que ela tinha prática na arte da ilusão
+            por suas mãos manchadas de sangue.'
+
+~
+2097158 0 0 0 272 0 0 0 -1000 E
+23 0 -5 4d6+825 3d8+17
+14786 60000
+8 8 2
+E
+#1703
+lazarus médico assassino~
+Lazarus~
+Lazarus, Assassino e Médico da guilda, está aqui.
+~
+Este mestre herbalista é muito valioso para a guilda, como um preparador
+tanto de venenos, quanto de bálsamos sedativos.  Sempre que a morte lhe
+da a libertação... os necromantes o reanimam.  
+~
+2097154 0 0 0 256 0 0 0 -900 E
+19 2 0 3d8+622 2d10+16
+13238 35900
+8 8 1
+E
+#1704
+besouro morto vivo~
+o besouro morto-vivo~
+Um besouro morto-vivo está parado aqui.
+~
+Um belo exemplo de feitiçaria, esta besta gigante pode viajar por milhares 
+de quilômetros sem precisar de água ou comida.  Uma montaria muito 
+econômica...e também divertida!
+~
+2097154 0 0 0 0 0 0 0 -300 E
+11 10 2 1d6+150 2d6+11
+0 11000
+8 8 1
+E
+#1705
+cavaleiro fantasma~
+o cavaleiro fantasma~
+Um cavaleiro fantasma observa tudo silenciosamente, por aqui.
+~
+Esse, provavelmente, era algum pobre aventureiro, como você, antes dos
+necromantes o pegarem.  Agora ela apenas aguarda, espada em punho como 
+um guarda espiritual.
+~
+2097186 0 0 0 0 0 0 0 -800 E
+15 6 1 1d8+185 2d8+12
+1555 35000
+8 8 1
+E
+#1706
+guardião cripta~
+o Guardião da Cripta~
+O Guardião da Cripta, está aqui, arreganhando os dentes maliciosamente.
+~
+O Guardião da Cripta é um horrendo esqueleto com algumas partes putrefatas
+de seu antigo corpo ainda presas a si. A cavidade que acomodava os olhos
+agora possui apenas dois pequenos pontos luminosos que acompanham
+todos os seus movimentos. Cuidado com ele.
+~
+2097186 0 0 0 16 0 0 0 -1000 E
+25 0 -7 5d6+910 3d6+24
+20225 70000
+8 8 1
+E
+#1707
+eremita~
+o eremita~
+Um Eremita, está aqui, esperando por compania.
+~
+Parecendo ser um louco delirante,  o eremita vive em seu isolamento e não
+fala com ninguém a anos. O despenteado eremita puxa você para perto e 
+começa a contar um estranho conto:
+
+        "Há 600 anos atrás,  quando eu era apenas um rapaz,  um grande 
+         dragão dominava a região.  Seu nome era Ancalador.  Muitos heróis
+         batalharam com ele,  mas todos falharam e morreram,  horrivelmente,
+         eu presumo.  Mas um feiticeiro o desafiou a um duelo mágico.
+         Ele também morreu,  como os outros,  mas em seu último suspiro
+         o feiticeiro transformou o poderoso Ancalador em pedra!
+         Muitos acreditavam que o reinado do dragão tinha acabado,  mas 
+         depois que as comemorações terminaram,  e a vida retornou ao seu 
+         ritmo tranquilo,  as pessoas começaram a reparar que a presença do 
+         dragão ainda podia ser sentida.  Ancalador continuava,  de fato, 
+         a manipular as mentes dos homens de dentro de sua prisão petrificada.  
+         Muitos acreditam que ele está planejando o dia em que ele poderá 
+         retornar ao seu corpo."
+
+O Eremita começa a tagarelar loucamente, quando lágrimas escorrem por sua 
+dura face.
+Você não pode conseguir mais nada com ele.
+~
+2097154 0 0 0 0 0 0 0 500 E
+10 11 4 2d8+325 2d6+11
+23 9000
+8 8 1
+E
+#1708
+bolha lama~
+a lama verde~
+Uma bolha de lama verde pula em cima de você!
+~
+Ela parece ser algo parecido com um muco animado,  dissolvendo e comendo 
+tudo aquilo que toca.
+~
+2097186 0 0 0 0 0 0 0 0 E
+6 15 4 1d10+105 1d8+3
+0 1500
+8 8 2
+E
+#1709
+habitante chama~
+o habitante da chama~
+Um habitante da chama está aquecendo-se no fogo aqui.
+~
+Seu aspecto muda de acordo com a chama em que ele está contido.  Um momento
+ele se assemelha a uma serpente,  em outro,  a um homem.  Ele parece está 
+adorando seu estado.
+~
+2097154 0 0 0 0 0 0 0 -50 E
+14 7 1 1d10+475 2d8+11
+18000 18000
+6 6 1
+E
+#1710
+aranha verde~
+a aranha verde de cristal~
+Uma aranha verde de cristal está perambulando por aqui.
+~
+A fantástica besta parece ser feita de uma substancia cristalina que lhe
+dá uma luz verde.  Ela bate suas mandíbulas cristalizadas para irritá-lo.
+~
+2097280 0 0 0 0 0 0 0 -400 E
+8 13 3 2d6+296 2d5+11
+0 13750
+8 8 2
+E
+#1711
+aranha amarela~
+a aranha amarela de cristal~
+Uma aranha amarela de cristal está batendo suas mandíbulas aqui.
+~
+Levemente menor que sua prima verde, está criatura também parece ser 
+feita de uma substância cristalina viva que brilha amarelo.
+~
+2097312 0 0 0 0 0 0 0 -350 E
+7 14 4 1d8+285 2d4+11
+351 12250
+8 8 2
+E
+#1712
+guarda petrificado~
+o guarda petrificado~
+O guarda petrificado vigia a passagem.
+~
+Ele exibe o olhar de desprezo de um frio controle sob sua face pedregosa.
+~
+2097154 0 0 0 0 0 0 0 -700 E
+12 10 2 2d4+355 2d7+13
+1009 13000
+8 8 1
+E
+#1713
+batelão avermelhado~
+um batelão avermelhado~
+Um batelão avermelhado está amontoado aqui.
+~
+Esta grande besta tem gigantescas mandíbulas e uma boca de mamífero,  
+animal raivoso,  com olhos de inseto.  O efeito é confuso.
+~
+2097184 0 0 0 0 0 0 0 -750 E
+18 3 0 3d6+625 3d6+21
+0 30000
+8 8 1
+E
+#1714
+gelatina ocre~
+a gelatina ocre~
+Uma repugnante gelatina ocre aproxima-se.
+~
+Quando ele vagarosamente vai se esvaindo,  você pode perceber os itens 
+indigestos que se encontram em  seu interior.  Essas coisas devem vir de um 
+passado infeliz, você presume.
+~
+2097184 0 0 0 0 0 0 0 -700 E
+16 5 1 2d6+496 2d8+12
+1576 25000
+8 8 2
+E
+#1715
+necromante~
+o Necromante~
+Um Necromante da Pedra de Sangue, está aqui, criando zumbis.
+~
+O mal exala de seus mantos escuros.  Suas mãos são adornadas com longas
+unhas que são manchadas com pomadas malignas e líquidos embalsamadores.
+~
+2097314 0 0 0 0 0 0 0 -900 E
+17 2 -3 1d6+666 2d8+17
+666 28000
+8 8 1
+E
+$

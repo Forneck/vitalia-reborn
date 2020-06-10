@@ -1,0 +1,714 @@
+#1400
+espada lâmina élfica alaric~
+&Ya Lâmina Élfica de Alaric&n~
+Uma longa espada vermelha, com um rubi em sua lâmina foi deixada aqui.~
+~
+5 bdeginopqrt an c
+0 7 9 3
+17 10000000 0 40
+E
+espada lâmina élfica alaric~
+Você vê a sua frente uma arma de formidável aparência, digna do resgate de um
+rei. Seu punho é feito do mais puro ouro branco, detalhadamente desenhado com
+símbolos de origem élfica. A extensão de sua lâmina possui uma tênue
+luminescência rubra, dando-lhe o aspecto de aço recém forjado. Um belo rubi,
+encrustrado entre a lâmina e o punho da espada, a faz um item de rara beleza.
+&WEsta espada é muito especial! Cuide dela com a sua vida!&n
+
+Se informe sobre a história desta espada com o comando HELP ALARIC.
+~
+A
+2 +2
+A
+6 +1
+A
+18 +8
+A
+19 +8
+#1401
+escudo fogo~
+&Yum escudo de fogo&n~
+Um escudo incandescente foi deixado aqui.~
+~
+9 bdegq aj r
+5 0 0 0
+12 10000000 0 40
+E
+escudo fogo~
+Este escudo foi feito por um Avatar da Magia, e há chamas todo ao redor dele.
+&WEste escudo é muito especial! Cuide dele com a sua vida!&n
+~
+A
+18 2
+A
+1 2
+A
+19 1
+A
+6 1
+#1402
+manoplas zoghtu~
+&Yas Manoplas de Zoghtu&n~
+As manoplas de Zoghtu, o Arqui-Necromante foram deixadas aqui.~
+~
+9 bdegq ah
+10 0 0 0
+12 10000000 0 40
+E
+manoplas zoghtu~
+Você vê uma manopla de exótico aspecto. É confeccionada com couro de dragão
+negro, cujas escamas conferem proteção as mãos do usuário. Pequenas saliências
+ósseas percorrem toda a extensão da manopla, terminando em garras nas
+extremidades dos dedos. Sobre a palma da manopla há uma gema cor de sangue.
+&WEstas manoplas são muito especiais! Cuide delas com a sua vida!&n
+
+Se informe da história destas manoplas com o comando HELP ZOGHTU.
+~
+A
+2 -1
+A
+18 +4
+A
+19 +4
+#1403
+olho hórus~
+&Yo Olho de Hórus&n~
+O olho de Hórus foi deixado aqui.~
+~
+1 bdegkq ao
+0 0 -1 0
+6 10000000 0 40
+E
+olho horus~
+Esta é uma jóia de rara beleza.  Lapidada de um diamante azul, a gema possui
+a forma de um globo ocular, cujo brilho sobrenatural parece rasgar as trevas
+ao seu redor.
+&WEste olho é muito especial! Cuide dele com a sua vida!&n
+
+Se informe sobre a históriaste olho com o comando HELP HORUS.
+~
+A
+18 +6
+A
+19 +5
+A
+17 -3
+#1404
+armadura carnax~
+&YCarnax, a Armadura Viva&n~
+Uma estranha armadura feita de carne jaz esquecida ao chão.~
+~
+9 bdegnq ad 0
+18 0 0 0
+16 10000000 0 40
+E
+armadura carnax~
+Você vê uma armadura moldada a partir de carne e músculos, sendo que estes 
+parecem mover-se em constante atividade. Uma camada de sangue banha toda
+a extensão do estranho objeto, dando-lhe um brilho sinistro.
+&WEsta armadura é muito especial! Cuide dela com a sua vida!&n
+
+Se informe sobre a históriasta armadura com o comando HELP CARNAX.
+~
+A
+1 +2
+A
+13 -40
+A
+19 +5
+#1405
+manto trevas huthven~
+&Yo Manto de Trevas de Huthven&n~
+Um manto escuro jaz abandonado ao chão.~
+~
+11 bdegmnpqtu ak :1:10:32
+0 0 0 0
+3 10000000 0 40
+E
+manto trevas huthven~
+Você vê um manto de cor negra, cujo tecido parece ser frio ao toque.
+Um broche de ônix na forma de um corvo prende as abas do manto.
+&WEste manto é muito especial! Cuide dele com a sua vida!&n
+
+Se informe sobre a história deste manto com o comando HELP HUTHVEN.
+~
+A
+2 +2
+A
+17 -16
+A
+18 2
+#1406
+bastão bruenor~
+&Yo Bastão de Bruenor&n~
+Um bastão de exótica aparência está no chão, abandonado.~
+~
+5 bdegiklmopqt an h
+0 4 10 6
+15 10000000 0 40
+E
+bastão bruenor~
+O bastão tem seu cabo feito por uma rara espécie de madeira branca, polida,
+fazendo-o reluzir. Em seu topo há a figura de uma fênix dourada, cujas asas
+formam lâminas de alto potencial cortante. Símbolos sagrados percorrem toda
+a extensão do bastão, denunciando origens relacionadas a algum culto
+religioso. Será você digno de tocar este artefato?
+&WEste bastão é muito especial! Cuide dele com a sua vida!&n
+
+Se informe sobre a história deste bastão com o comando HELP BRUENOR.
+~
+A
+3 +2
+A
+4 +3
+A
+18 +5
+A
+19 +5
+A
+1 3
+#1407
+tiara calíope~
+&Ya Tiara de Calíope, a Sereia&n~
+Uma frágil tiara de coral está abandonada ao chão.~
+~
+11 bdegq ae x
+0 0 0 0
+2 10000000 0 40
+E
+tiara calíope~
+De aparência frágil, apesar de leve, a tiara é feita de um coral muito
+resistente, só encontrado nas profundezas do mar de Creta.  Conchas e pedras
+marinhas ornamentam a tiara, fazendo-a uma valiosa peça de arte de inestimável
+valor.
+&WEsta tiara é muito especial! Cuide dela com a sua vida!&n
+
+Se informe sobre a história desta tiara com o comando HELP CALIOPE.
+~
+A
+13 +30
+A
+17 -20
+A
+18 2
+A
+6 3
+A
+19 1
+#1408
+machado dourado júpiter~
+&Yo Machado Dourado de Júpiter&n~
+Um machado dourado encontra-se deitado ao chão.~
+~
+5 bdegjmnoqrt an 0
+0 7 10 3
+27 10000000 0 40
+E
+machado dourado júpiter~
+O machado parece ter sido feito do mais puro ouro, cujas lâminas de mithrill
+e jóias cravejadas em sua extensão parecem brilhar magicamente à luz da tocha.
+&WEste machado é muito especial! Cuide dele com a sua vida!&n
+
+Se informe sobre a história deste machado com o comando HELP JUPITER.
+~
+A
+18 +8
+A
+19 +7
+#1409
+anel cranaloc ouro esféricas pedras~
+&Yo anel de Cranaloc&n~
+Um belo anel de ouro, com duas pedras esféricas incrustradas, foi perdido aqui.~
+~
+9 bdejq ab bce
+4 0 0 0
+17 10000000 0 40
+E
+anel cranaloc ouro esféricas pedras~
+O pesado anel de Cranaloc é feito de puro ouro.  Em seu centro duas pedras
+de forma esférica, uma de profundo negro e outra de bela coloração vermelho
+sangue, foram inscrustradas.  Olhando bem, não estão inscrustradas!  Parecem
+ligadas ao anel por uma estranha magia...  Você se sente hipnotizado pela
+estranha vibração que esse anel emite e confuso com uma voz lamuriosa que
+ecoa em sua cabeça...
+&WEste anel é muito especial! Cuide dele com a sua vida!&n
+
+Se informe sobre a história deste anel com o comando HELP CRANALOC.
+~
+A
+12 +150
+A
+13 +50
+A
+19 +2
+A
+18 2
+#1410
+espada chave nabaqila cristal~
+&Ya Chave de Nabaqila&n~
+Você percebe que uma magnífica espada de cristal foi cuidadosamente depositada aqui.~
+~
+5 bdegikqr an :10:12
+0 8 8 3
+23 10000000 0 40
+E
+espada chave nabaqila cristal~
+Você contempla a bela espada que é a Chave de Nabaqila: seu cabo foi
+laboriosamente esculpido em um duríssimo cristal de cor azul com um desenho
+representando uma mão humana.  A lâmina é feita de um estranho metal quase
+transparente, lhe parecendo ser feito, na realidade, de alguma rocha
+desconhecida.  Você deve manusear a espada com muito cuidado, já que seu
+afiado corte nunca se desgastou...
+&WEsta espada é muito especial!  Cuide dela com a sua vida!&n
+
+Se informe sobre a história desta espada com o comando HELP NABAQILA.
+~
+A
+2 +1
+A
+17 -6
+A
+18 +9
+A
+19 +9
+#1411
+rosa vermelha~
+&Ya rosa vermelha&n~
+Uma bela rosa vermelha como sangue, foi deixada aqui.~
+~
+1 abdegqon ao :12
+0 0 -1  0 
+5 10000000 0 40
+E
+rosa vermelha espinhos prateados~
+Por trás da aparência frágil desta delicada rosa, está uma poderosa 
+arma que usa os poderes da luz e da paz contra seus inimigos. Está 
+envolta por uma estranha chama quente e seus espinhos parecem ser muito 
+perigosos. Suas pétalas são extremamente macias, exalando um suave e
+adocicado odor extremamente agradável.
+&WEsta rosa é muito especial! Cuide dela com a sua vida!&n
+
+Se informe sobre a história desta rosa com o comando HELP ROSA.
+~
+A
+2 +2
+A
+3 +3
+A
+18 3
+A
+4 +3
+A
+6 +2
+A
+17 -10
+#1412
+cálice sagrado~
+&Yum cálice sagrado&n~
+O cálice sagrado está aqui, refletindo uma luz que quase cega você.~
+~
+1 adegikmopqt ao
+0 0 -1 0
+7 10000000 0 40
+E
+cálice ouro imagens sagrado~
+Diversas imagens sagradas estão esculpidas neste pesado cálice de ouro maciço.
+Você pode identificar dentre inúmeras cenas bíblicas a cena da 'Criação',
+belamente esculpida.
+&WEste cálice é muito especial! Cuide dele com a sua vida!&n
+
+Se informe sobre a história deste cálice com o comando HELP CALICE.
+~
+A
+2 +3
+A
+18 +3
+A
+19 +4
+A
+17 -5
+#1413
+manto inverno neve~
+&YO Manto do Inverno&n~
+Um manto que parece ser de pura neve parece congelar tudo a seu redor.~
+~
+9 adegq ak h
+14 0 0 0
+8 100000000 0 40
+E
+manto inverno neve~
+Você segura entre suas mãos um manto de suave textura, branco como a mais
+pura neve.  Muito longo, você fica admirado com os desenhos que, em forma de
+flocos de neve, foram feitos com delicados fios de prata e pequenos
+diamantes de brilho puro.  O interior do manto, para sua surpresa, é
+profundamente negro, havendo nele uma representação da Lua de Prata,
+Teriany.
+&WEste manto é muito especial! Cuide dele com a sua vida!&n
+
+Se informe sobre a história deste mando com o comando HELP TERIANY.
+~
+A
+3 1
+A
+6 1
+A
+18 2
+A
+19 2
+A
+2 1
+#1414
+bracelete verão dourado~
+&YO Bracelete do Verão&n~
+Um estranho bracelete dourado emite intenso calor à sua frente.~
+~
+9 adegq am r
+6 0 0 0
+8 100000000 0 40
+E
+bracelete verão dourado~
+O belo bracelete, feito de ouro puro, cobre não só o pulso como também
+metade do braço de quem o usa.  Sua superfície muito polida reflete a luz de
+modo que pareça sempre cintilar, fazendo-o ainda com mais intensidade quando
+próximo ao calor.  A única interrupção a essa uniformidade é um uma
+inscrição, na parte superior da peça, que representa o nome da Lua de Fogo,
+Latïzie.
+&WEste bracelete é muito especial! Cuide dele com a sua vida!&n
+
+Se informe sobre a história deste mando com o comando HELP LATIZIE.
+~
+A
+1 2
+A
+13 50
+A
+19 2
+A
+18 1
+#1415
+cinturão outono ouro cobre~
+&YO Cinturão do Outono&n~
+Um belíssimo cinturão de ouro e cobre parece trazer uma ventania dentro de si.~
+~
+9 adegq al C
+14 0 0 0
+7 100000000 0 40
+E
+cinturão outono ouro cobre~
+O ouro e cobre foram trabalhados de tal maneira que o cinturão parece ser
+feito de finos cipós de dourado amarelo e vermelho entrelaçados.  O que
+aumenta essa impressão de não ser de metal é a mobilidade da peça que, como
+se o material fosse encantado, se ajusta perfeitamente ao corpo de quem o
+veste, A fivela é formada por duas pedras, uma raríssima safira dourada e
+outra tão rara, esverdeada, que se encaixam formando o nome da Lua de
+Safira, Aqrien.
+&WEste cinturão é muito especial! Cuide dele com a sua vida!&n
+
+Se informe sobre a história deste manto com o comando HELP AQRIEN.
+~
+A
+1 1
+A
+2 1
+A
+18 2
+A
+19 1
+#1416
+anel primavera verde delicado esverdeado~
+&YO Anel da Primavera&n~
+Um delicado anel emite estranha luz esverdeada para todos os lados.~
+~
+9 adegq ab Ak
+11 0 0 0
+7 100000000 0 40
+E
+anel primavera verde delicado esverdeado~
+O delicado anel foi esculpido em um grande pedaço da mais nobre jade
+existente, de verde tão limpo e profundo que se pode perder a vista ao se
+demorar o olhar nele.  Finos veios de prata foram cuidadosamente encaixados
+na peça de modo que parecem ter crescido em seu interior, pulsando levemente
+a cada toque seu.  Na parte superior da jóia a prata e o jade parecem se
+fundir formando uma estranha pedra cuja forma lembra o nome mágico da Lua de
+Prata, Kadrictes.
+&WEste anel é muito especial! Cuide dele com a sua vida!&n
+
+Se informe sobre a história deste mando com o comando HELP KADRICTES.
+~
+A
+19 2
+A
+18 2
+A
+3 1
+A
+4 1
+A
+2 1
+A
+13 +100
+#1417
+Phanzyenon aro~
+&Yo Aro de Phanzyenon&n~
+Um aro feito com fios de metal puro e brilhante foi perdido aqui.~
+~
+9 adgjnq aq fsu
+8 0 0 0
+10 100000000 1000000 45
+E
+Phanzyenon aro~
+Ao olhar para este artefato você parece sentir que está sendo avaliado
+pela própria Morte e receia ter medo. Ao tocá-lo, um frio intenso
+percorre sua espinha e rápidamente você se dá conta que está diante
+de algo absolutamente desconhecido. Se você observar a superfície da 
+enorme pedra negra deste brinco por algum tempo, começará a ver pequenos
+vultos que parecem estar se contorcendo em algum lugar distante.
+Ele foi confeccionado em duríssimo metal amarelo-escuro e absolutamente
+desconhecido aos olhos mortais.
+&WEste anel é muito especial! Cuide dele com a sua vida!&n
+
+Se informe sobre a história desse anel com o comando HELP PHANZYENON.
+~
+A
+6 -3
+A
+12 +200
+A
+13 +200
+A
+18 +4
+A
+19 +3
+#1418
+pena dourada escritor~
+&YA Pena Dourada do Escritor&n~
+Uma delicada pena de um dourado avermelhado foi deixada aqui..~ 
+~
+1 bdegkq ao
+0 0 -1 0
+6 10000000 0 40
+E
+pena dourada escritor Zhar-Netitsa~
+Esta pequenina pena parece ser capaz de absorver raios de sol e refletí-los,
+sem que seus olhos se queimem.  Seu toque é suave e morno e pequeninas gotas
+douradas circulam rápidamente, indo de uma ponta à outra, num movimento
+continuado e intrigante.  Enquanto você a observa, sua mente parece entrar
+em circuito acelerado e você se sente como se estivesse conseguindo entender
+aquilo que era lhe era incompreensível até então.
+&WEsta pena é muito especial! Cuide dela com a sua vida!&n
+
+Se informe sobre a história desta pena com o comando HELP Zhar-Netitsa.
+~
+A
+4 +4
+A
+3 +4
+A
+17 -5
+A
+6 6
+A
+9 -15
+A
+18 2
+#1419
+anel olho mente~
+&Yo Anel do Olho da Mente&n~
+Um Anel totalmente feito de prata, está aqui, procurando seu dono, o Grande
+Mestre dos Dragões.~
+~
+9 bdeq ab :2
+5 0 0 0
+12 10000000 1000 15
+E
+anel olho mente~
+Uma argola prateada fina e polida faz o laço em uma pequena e disforme
+pedrinha azulada, manchada de preto.  Quanto mais a observa, mais dentro de
+seus pensamentos a pedra parece permear.  Melhor desviar a vista, antes que
+algo ruim lhe aconteça.
+&WEste anel é muito especial! Cuide dele com a sua vida!&n
+
+Se informe sobre a história deste anel com o comando HELP MENTE.
+~
+A
+9 5
+A
+12 50
+A
+13 50
+A
+18 1
+A
+19 3
+#1420
+elmo poder~
+&Yo Elmo do Poder&n~
+Um pedaço de pedra em chamas está aqui, mas ele bem que se parece com um elmo,
+talves possa ser útil.~
+~
+9 bdegq ae
+15 0 0 0
+18 10000000 1000 15
+E
+elmo poder~
+Este elmo, é feito totalmente de pedra incandescente, não se sabe se você
+realmente agüentaria muito tempo com ele em sua cabeça mas, ele parece ser
+realmente poderoso, afinal já pertenceu a Dyne.
+&WEste elmo é muito especial! Cuide dele com a sua vida!&n
+
+Se informe sobre a história deste elmo com o comando HELP PODER.
+~
+A
+1 2
+A
+13 50
+A
+18 2
+A
+19 3
+#1421
+pingente sabedoria~
+&Yo Pingente da Sabedoria&n~
+Um pingente muito bonito, foi esquecido aqui por um grande aventureiro, talvez
+seja melhor devolver a ele.~
+~
+9 bdegq ac :2:3:4
+6 0 0 0
+10 10000000 1000 15
+E
+pingente sabedoria~
+Este Pingente amarelo tem em seu centro a fulgurante imagem de um sol de 
+deserto.   Ele parece ser muito útil, já pertenceu ao Grande Dyne.
+&WEste pingente é muito especial! Cuide dele com a sua vida!&n
+
+Se informe sobre a história deste pingente com o comando HELP PINGENTE.
+~
+A
+4 3
+A
+18 3
+A
+19 3
+#1422
+bracelete ossos~
+&Yo Bracelete de Ossos&n~
+Um Bracelete todo feito de ossos foi esquecido aqui.~
+~
+9 bdejq am :13
+5 0 0 0
+8 10000000 1000 15
+E
+bracelete ossos~
+Este Bracelete é todo feito de ossos, provavelmente ossos de algum Dragão morto,
+ele parece realmente forte, prestando muita atenção, você consegue notar uma 
+pedra bem em seu centro, uma pedra muito pequena, algo que você jamais viu igual
+em sua vida.
+&WEste bracelete é muito especial! Cuide dele com a sua vida!&n
+
+Se informe sobre a história deste bracelete com o comando HELP OSSOS.
+~
+A
+4 -2
+A
+12 35
+A
+18 2
+A
+19 3
+#1423
+armadura polar~
+&Ya Armadura Polar&n~
+A Armadura Polar está aqui emitindo estranho brilho azulado.~
+~
+9 adegq ad
+16 0 0 0
+20 10000000 1000 15
+E
+armadura polar~
+É uma armadura, toda feita de gelo, adornada com as mais variadas pedras 
+preciosas.   Ela parece ser realmente muito resistente, mesmo quando exposta
+ao fogo.
+&WEsta armadura é muito especial! Cuide dela com a sua vida!&n
+
+Se informe sobre a história desta armadura com o comando HELP POLAR.
+~
+A
+18 2
+A
+19 4
+A
+24 -2
+#1424
+escudo dourado dragões~
+&Yo Escudo Dourado dos Dragões&n~
+Um Escudo feito de ouro puro, parecendo ser muito pesado, atrai a sua atenção.~
+~
+9 adegq aj :12
+10 0 0 0
+15 10000000 1000 15
+E
+escudo dourado dragões~
+Ele brilha muito, totalmente feito do mais puro ouro, exceto em suas dobras,
+que são feitas de titânio.   Ele possue um diamante, bem no centro, que parece
+aumentar muito sua resistência.
+&WEste escudo é muito especial! Cuide dele com a sua vida!&n
+
+Se informe sobre a história deste escudo com o comando HELP DOURADO.
+~
+A
+2 1
+A
+18 3
+A
+19 3
+#1425
+esfera apocalipse~
+&Ya Esfera do Apocalipse&n~
+A Esfera Do Apocalipse foi esquecida por aqui.~
+~
+1 bdfgq ao
+0 0 -1 0
+8 10000000 1000 15
+E
+esfera apocalipse~
+É uma esfera incandescente, parece com um coração, está sempre batendo.
+&WEsta esfera é muito especial! Cuide dela com a sua vida!&n
+
+Se informe sobre a história desta esfera com o comando HELP APOCALIPSE.
+~
+A
+6 2
+A
+12 65
+A
+18 5
+A
+19 4
+#1426
+espada Geandrias~
+&Ya Espada de Geandrias&n~
+A Grande Espada de Geandrias está aqui, atraindo-o de forma quase hipnótica.~
+~
+5 adegiq an :7
+0 7 7 3
+20 10000000 1000 15
+E
+espada Geandrias~
+Uma obra de arte totalmente feita de diamante, exceto sua empunhadura, que
+é feita em ouro.   Em sua ponta há um rubi, que foi banhado no sangue de
+todos os Dragões e no sangue de Geandrias.
+&WEsta espada é muito especial! Cuide dela com a sua vida!&n
+
+Se informe sobre a história desta espada com o comando HELP GEANDRIAS.
+~
+A
+1 1
+A
+3 1
+A
+4 1
+A
+18 10
+A
+19 10
+$

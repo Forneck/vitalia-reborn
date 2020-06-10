@@ -1,0 +1,342 @@
+#20100
+insígnia visitante~
+uma insígnia escrito "VISITANTE"~
+Há uma insígnia de visitante do Asilo dos Novatos aqui.~
+~
+18 b 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+4 1 0 0 0
+E
+insígnia visitante~
+É uma pequena insígnia, parecendo uma chave, de fato.
+~
+#20101
+jaqueta rasgada~
+uma jaqueta rasgada~
+Uma jaqueta com apenas uma manga está aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+2 0 0 0
+8 1 0 1 0
+#20102
+agulha injeção~
+uma agulha de injeção~
+Essa agulha hipodérmica parece ter sido usada (ARGH!)~
+~
+3 0 0 0 0 ano 0 0 0 0 0 0 0
+1 1 1 11
+2 1 0 1 0
+E
+agulha injeção~
+O interior da câmara parece conter algum tipo de substância estranha...
+Melhor nem procurar saber o que é...
+~
+#20103
+clava guarda madeira~
+uma clava pesada de madeira~
+A clava de um dos guardas está aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 4 7
+4 1 0 1 0
+E
+clava guarda madeira~
+Uma clava de um guarda está aqui.  Em um dos lados diz: Asilo dos Novatos
+Parece muito usada.
+~
+#20104
+escudo guarda~
+um escudo de guarda~
+Um escudo de um guarda do Asilo dos Novatos.~
+~
+9 0 0 0 0 aj 0 0 0 0 0 0 0
+4 0 0 0
+5 1 0 1 0
+E
+escudo guarda~
+Isso é um escudo dos guardas do Asilo dos Novatos. Parece estar usado.    
+~
+#20105
+máscara guarda~
+uma máscara de guarda~
+Uma máscara de um guarda do Asilo dos Novatos está aqui.~
+~
+9 0 0 0 0 ar 0 0 0 0 0 0 0
+3 0 0 0
+2 1 0 1 0
+E
+máscara guarda~
+Uma máscara de um dos guardas do Asilo dos Novatos está aqui, parecendo
+muito usada.
+~
+#20106
+garrafa~
+uma garrafa~
+Uma garrafa de uísque foi deixada aqui.~
+~
+17 0 0 0 0 ao 0 0 0 0 0 0 0
+2 2 5 1
+2 5 0 1 0
+E
+garrafa~
+Porque tem uma caveira com dois ossos cruzados na frente? Bom, deixa pra
+lá...
+~
+#20107
+capa paciente~
+uma capa de paciente~
+Uma capa aparentando ser de um paciente foi deixada aqui.~
+~
+9 0 0 0 0 ak 0 0 0 0 0 0 0
+6 0 0 0
+4 1 0 1 0
+E
+capa paciente~
+Não seria má idéia vestir uma dessas.    
+~
+#20108
+cachecol verde~
+um cachecol verde~
+Um cachecol verde foi jogado aqui.~
+~
+11 0 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+3 1 0 1 0
+E
+cachecol verde~
+É longo e verde.
+~
+A
+17 -1
+#20109
+chapéu branco~
+um chapéu branco~
+Um chapéu branco foi deixado aqui, esperando para vestir alguma cabeça.~
+~
+9 0 0 0 0 ae 0 0 0 0 0 0 0
+2 0 0 0
+4 0 0 9 0
+#20110
+barba vermelha~
+uma estranha barba vermelha~
+Uma estranha barba vermelha está aqui.~
+~
+9 0 0 0 0 ae 0 0 0 0 0 0 0
+0 0 50 0
+4 50 0 9 0
+#20111
+anel romano~
+um belíssimo anel romano~
+Um anel com a efígie de um louco imperador romano foi deixado aqui.~
+~
+9 0 0 0 0 ab 0 0 0 0 0 0 0
+1 0 0 0
+4 75 0 9 0
+#20112
+tiara rubi~
+uma tiara de rubi~
+Uma pequena tiara de rubi está aqui, esperando ser usada.~
+~
+9 0 0 0 0 ae 0 0 0 0 0 0 0
+1 0 0 0
+7 100 0 9 0
+#20113
+máscara couro vermelho~
+uma máscara de couro vermelho~
+Uma máscara de couro vermelho foi descartada e deixada aqui.~
+~
+11 0 0 0 0 ar 0 0 0 0 0 0 0
+0 0 0 0
+7 50 0 9 0
+A
+17 -1
+#20114
+cavanhaque~
+um cavanhaque~
+Um pequeno tufo de cabelo foi deixado aqui no canto.~
+~
+11 0 0 0 0 ar 0 0 0 0 0 0 0
+0 0 0 0
+4 30 0 9 0
+A
+17 -1
+#20115
+manto couro tigre~
+um manto feito com couro de tigre~
+Um pesado manto feito com o couro de um tigre foi deixado aqui.~
+~
+11 0 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+7 100 0 9 0
+A
+17 -2
+#20116
+anel conquistador~
+o anel do conquistador~
+Um anel com o símbolo de um grande conquistador está aqui, esquecido.~
+~
+11 0 0 0 0 ab 0 0 0 0 0 0 0
+0 0 0 0
+3 30 0 9 0
+A
+17 -1
+#20117
+cachimbo~
+um cachimbo~
+Um pequeno cachimbo se encontra aqui.~
+~
+4 a 0 0 0 ao 0 0 0 0 0 0 0
+10 3 1 35
+1 0 0 0 0
+E
+cachimbo~
+Um brilho maligno aparece repentinamente, e depois some!
+~
+#20118
+vassoura~
+uma vassoura~
+Uma vassoura de bruxa está aqui, abandonada e coberta de teias.~
+~
+4 0 0 0 0 ao 0 0 0 0 0 0 0
+10 5 5 56
+7 10 0 10 0
+#20119
+manga armadura anzóis~
+um par de mangas feita de anzóis~
+Um par de mangas de armadura feita de anzóis foi deixada aqui.~
+~
+9 0 0 0 0 ai 0 0 0 0 0 0 0
+2 0 0 0
+5 50 0 10 0
+#20120
+capa listrada~
+uma capa de listrada~
+Uma capa listrada de vermelho e negro está aqui.~
+~
+9 0 0 0 0 ak 0 0 0 0 0 0 0
+2 0 0 0
+8 100 0 10 0
+#20121
+mandíbula canibal ensangüentada~
+uma mandíbula de canibal~
+Uma ensangüentada mandíbula foi deixada aqui aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 3 4 4
+7 75 0 10 0
+#20122
+cesta cabeças~
+uma cesta para cabeças~
+Uma cesta ensanguentada está aqui, esperando para ser usada novamente.~
+~
+15 0 0 0 0 ao 0 0 0 0 0 0 0
+30 5 -1 0
+4 0 10 0 0
+#20123
+tira toucinho~
+uma tira de toucinho~
+Uma tira de um nojento toucinho está aqui, apodrecendo.~
+~
+9 0 0 0 0 ao 0 0 0 0 0 0 0
+2 0 0 0
+10 20 0 10 0
+#20124
+luvas vermelhas couro~
+um par de luvas de couro vermelho~
+Um par de luvas de couro vermelho foi deixado aqui.~
+~
+9 0 0 0 0 ah 0 0 0 0 0 0 0
+2 0 0 0
+6 75 0 10 0
+#20125
+botas~
+um par de botas cobertas de sangue~
+Um par de botas está aqui, coberta por sangue.~
+~
+9 0 0 0 0 ag 0 0 0 0 0 0 0
+2 0 0 0
+8 50 0 10 0
+#20160
+goblin espada~
+uma espada de goblin~
+Uma espada de goblin se encontra aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 4 3
+3 0 0 0 0
+#20161
+vermelha capa~
+uma capa vermelha~
+Uma pilha de roupa vermelha está aqui.~
+~
+9 j 0 0 0 ak 0 0 0 0 0 0 0
+2 0 0 0
+3 0 0 0 0
+#20162
+branca capa~
+uma capa branca~
+Uma pilha de roupa branca está aqui.~
+~
+9 0 0 0 0 ak 0 0 0 0 0 0 0
+2 0 0 0
+2 0 0 0 0
+#20163
+cozinha pia~
+uma pia de cozinha~
+Uma pia de cozinha está aqui.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+99999 0 0 0 0
+E
+cozinha pia~
+Ok, está um pouco suja.    
+~
+#20164
+dentado elmo~
+um grande elmo dentado~
+Um grande elmo dentado está aqui.~
+~
+9 0 0 0 0 ae 0 0 0 0 0 0 0
+2 0 0 0
+3 0 0 0 0
+#20165
+espinhado inseto carapaça~
+um carapaça de inseto espinhado~
+Uma carapaça de um inseto espinhado foi jogado aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+4 0 0 0
+4 0 0 0 0
+A
+13 5
+#20166
+espada mata gigantes~
+a espada 'Mata de Gigantes'~
+Uma grande espada foi cravada no chão.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 3 3
+2 0 0 0 0
+E
+espada mata gigantes~
+Essa grande espada foi feita para arrancar os olhos dos gigantes, fazendo
+com que eles se tornem mais fáceis de se derrotar.    
+
+Por ser grande e pesada, ela torna o seu usuário mais lento nos golpes.
+~
+A
+19 2
+A
+18 1
+A
+2 -1
+#20199
+charuto~
+um estranho charuto~
+Um chaturo extremanente fedido foi deixado aqui por alguém.~
+~
+3 a 0 0 0 ao 0 0 0 0 0 0 0
+10 3 3 16
+1 0 0 0 0
+$~

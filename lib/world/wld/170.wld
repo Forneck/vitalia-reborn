@@ -1,0 +1,1222 @@
+#17001
+Um Caminho Montês~
+   Você está em um caminho pelo lado da montanha.  O caminho contorna a 
+montanha,e você não pode ver o que há a sua frente.  Você sente um grande
+poder emanando detrás da montanha.
+~
+170 0 0 0 0 5
+D4
+~
+~
+0 -1 17002
+D5
+~
+~
+0 -1 4002
+S
+#17002
+Um Caminho Montês~
+   Você está em um caminho montês que leva ao redor da montanha em direção
+ao topo.  Você sente um brilho vindo da área atrás da montanha, o qual você
+não pode ver ainda.
+~
+170 0 0 0 0 5
+D4
+~
+~
+0 -1 17003
+D5
+~
+~
+0 -1 17001
+S
+#17003
+As Tumbas~
+   Há algumas pedras amontoadas aqui e ali, as tumbas dos que não
+conseguiram alcançar o topo da montanha.  Curiosamente você vê alguns
+corpos descobertos, que não parecem terem sido mortos por exaustão. 
+O caminho se curva ao leste, ao redor da montanha.
+~
+170 0 0 0 0 5
+D4
+~
+~
+0 -1 17004
+D5
+~
+~
+0 -1 17002
+E
+tumbas pedras tumba~
+Você está realmente feliz por não estar abaixo daquelas pilhas!  Muitas das 
+tumbas têm o mesmo nome gravado, 'Rognab'.  Ele deve vir muito aqui.
+~
+E
+corpos corpo morto~
+Eles parecem ter tido seus pescoços quebrados e sua carne, mastigada.
+~
+S
+#17004
+Uma Curva Cega no Caminho Montês~
+   Parece um caminho normal, mas NÃO É!  Esta parte do caminho é habitada
+Por um enorme (e claro, devorador de humanos) Ciclope.  O caminho termina 
+adiante.
+~
+170 0 0 0 0 5
+D4
+~
+~
+0 -1 17005
+D5
+~
+~
+0 -1 17003
+S
+#17005
+A Visão~
+   Esta é uma estonteante visão de um canyon.  Há um aviso aqui que diz:
+                     &RCUIDADO - CANYON DOS ELEMENTAIS&n
+Rajadas de fogo se erguem do poço de lava no lado oeste do canyon.  
+O céu parece engraçado, e o ar parece nebuloso ao noroeste.  Faíscas de
+eletricidade podem ser vistas ao nordeste.  Ao leste você vê um forte rio
+mágico correndo através do canyon.  Há também ao leste a entrada de uma
+caverna.  O caminho segue ao norte.
+~
+170 0 0 0 0 5
+D0
+~
+~
+0 -1 17006
+D5
+~
+~
+0 -1 17004
+S
+#17006
+A Visão~
+   Você vê muitos serventes elementais rondando pelo canyon.  O zunido que
+vem do canyon fica mais alto.  O caminho faz uma descida para dentro do
+canyon aqui.
+~
+170 0 0 0 0 5
+D2
+~
+~
+0 -1 17005
+D5
+~
+~
+0 -1 17007
+S
+#17007
+A Entrada do Canyon Elemental~
+   Você é assombrado pelos sons e sinais dos grandes poderes que trabalham
+aqui.  Serventes elementais andam por todos os lados, cumprindo as ordens
+das regras elementais.  Você vê uma pequena estrada ao norte, e você pode
+escalar para a visão daqui.
+~
+170 0 0 0 0 3
+D0
+~
+~
+0 -1 17009
+D4
+~
+~
+0 -1 17006
+S
+#17008
+O Solo do Canyon~
+   Muitas formas elementais vagam por aqui.  Algumas parecem estar cuidando
+de sua vida, e outras parecem nem ter vida.  No geral, é calmo, mas ainda há
+um zunido de coisas acontecendo.  O canyon segue a norte e leste.
+~
+170 0 0 0 0 3
+D0
+~
+~
+0 -1 17011
+D1
+~
+~
+0 -1 17009
+S
+#17009
+O Portal Elemental~
+   Ao oeste emerge um caminho entre os poços de lava.  Ao nordeste um
+caminho corre través do rio.  Ao leste já há a boca de uma caverna, que
+leva direto para dentro do canyon.  Muitos elementais de todas as raças
+vagam por este caminho que segue em direção norte.
+~
+170 0 0 0 0 3
+D0
+~
+~
+0 -1 17012
+D1
+~
+~
+0 -1 17010
+D2
+~
+~
+0 -1 17007
+D3
+~
+~
+0 -1 17008
+S
+#17010
+O Solo do Canyon~
+   Muitas formas elementais vagam por aqui.  Algumas parecem estar cuidando
+de sua vida, e outras parecem nem ter vida.  No geral, é calmo, mas ainda há
+um zunido de coisas acontecendo.  O canyon segue a norte e leste.  Há uma
+boca de caverna em uma das paredes do canyon, no lado leste.
+~
+170 0 0 0 0 3
+D0
+~
+~
+0 -1 17013
+D1
+~
+~
+0 -1 17020
+D3
+~
+~
+0 -1 17009
+S
+#17011
+O Solo do Canyon~
+   Muitas formas elementais vagam por aqui.  Algumas parecem estar cuidando
+de sua vida, e outras parecem nem ter vida.  No geral, é calmo, mas ainda há
+um zunido de coisas acontecendo.  O canyon segue a norte, sul e leste.
+~
+170 0 0 0 0 3
+D0
+~
+~
+0 -1 17014
+D1
+~
+~
+0 -1 17012
+D2
+~
+~
+0 -1 17008
+S
+#17012
+O Solo do Canyon~
+   Muitas formas elementais vagam por aqui.  Algumas parecem estar cuidando
+de sua vida, e outras parecem nem ter vida.  No geral, é calmo, mas ainda há
+um zunido de coisas acontecendo.  O canyon segue em todas as direções.
+~
+170 0 0 0 0 3
+D0
+~
+~
+0 -1 17015
+D1
+~
+~
+0 -1 17013
+D2
+~
+~
+0 -1 17009
+D3
+~
+~
+0 -1 17011
+S
+#17013
+O Solo do Canyon~
+   Muitas formas elementais vagam por aqui.  Algumas parecem estar cuidando
+de sua vida, e outras parecem nem ter vida.  No geral, é calmo, mas ainda há
+um zunido de coisas acontecendo.  O canyon segue a norte, sul e oeste.  Um
+caminho segue uma corrente ao leste.
+~
+170 0 0 0 0 3
+D0
+~
+~
+0 -1 17016
+D1
+~
+~
+0 -1 17028
+D2
+~
+~
+0 -1 17010
+D3
+~
+~
+0 -1 17012
+S
+#17014
+O Solo do Canyon~
+   Muitas formas elementais vagam por aqui.  Algumas parecem estar cuidando
+de sua vida, e outras parecem nem ter vida.  No geral, é calmo, mas ainda há
+um zunido de coisas acontecendo.  O canyon segue a norte, sul e leste. Ao
+oeste um jardim está em chamas.
+~
+170 0 0 0 0 3
+D0
+~
+~
+0 -1 17017
+D1
+~
+~
+0 -1 17015
+D2
+~
+~
+0 -1 17011
+D3
+~
+~
+0 -1 17037
+S
+#17015
+O Solo do Canyon~
+   Muitas formas elementais vagam por aqui.  Algumas parecem estar cuidando
+de sua vida, e outras parecem nem ter vida.  No geral, é calmo, mas ainda há
+um zunido de coisas acontecendo.  O canyon segue em todas as direções.
+~
+170 0 0 0 0 3
+D0
+~
+~
+0 -1 17018
+D1
+~
+~
+0 -1 17016
+D2
+~
+~
+0 -1 17012
+D3
+~
+~
+0 -1 17014
+S
+#17016
+O Solo do Canyon~
+   Muitas formas elementais vagam por aqui.  Algumas parecem estar cuidando
+de sua vida, e outras parecem nem ter vida.  No geral, é calmo, mas ainda há
+um zunido de coisas acontecendo.  O canyon segue a norte, sul e oeste.
+~
+170 0 0 0 0 3
+D0
+~
+~
+0 -1 17019
+D2
+~
+~
+0 -1 17013
+D3
+~
+~
+0 -1 17015
+S
+#17017
+O Solo do Canyon~
+   Muitas formas elementais vagam por aqui.  Algumas parecem estar cuidando
+de sua vida, e outras parecem nem ter vida.  No geral, é calmo, mas ainda há
+um zunido de coisas acontecendo.  O canyon segue a sul e leste.  Você pode
+escalar uma elevação no canyon ao norte.
+~
+170 0 0 0 0 3
+D0
+~
+~
+0 -1 17053
+D1
+~
+~
+0 -1 17018
+D2
+~
+~
+0 -1 17014
+S
+#17018
+O Solo do Canyon~
+   Muitas formas elementais vagam por aqui.  Algumas parecem estar cuidando
+de sua vida, e outras parecem nem ter vida.  No geral, é calmo, mas ainda há
+um zunido de coisas acontecendo.  O canyon segue a leste, sul e oeste.
+~
+170 0 0 0 0 3
+D1
+~
+~
+0 -1 17019
+D2
+~
+~
+0 -1 17015
+D3
+~
+~
+0 -1 17017
+S
+#17019
+O Solo do Canyon~
+   Muitas formas elementais vagam por aqui.  Algumas parecem estar cuidando
+de sua vida, e outras parecem nem ter vida.  No geral, é calmo, mas ainda há
+um zunido de coisas acontecendo.  O canyon segue a sul e oeste.  Você pode
+escalar uma elevação no canyon ao norte.
+~
+170 0 0 0 0 3
+D0
+~
+~
+0 -1 17054
+D2
+~
+~
+0 -1 17016
+D3
+~
+~
+0 -1 17018
+S
+#17020
+A Caverna Escura~
+   Você percebe um caminho sinuoso levando ao leste entre enormes
+pedregulhos.  Você sente uma poderosa fonte de energia vinda daquela
+direção.
+~
+170 9 0 0 0 3
+D1
+~
+~
+0 -1 17021
+D3
+~
+~
+0 -1 17010
+S
+#17021
+As Cavernas Mais Escuras~
+   Você mal pode ver o caminho, mesmo com sua fonte de luz.  As rochas da
+caverna parecem mais escuras que a escuridão.  Você ouve um poderoso zunido
+ao seu redor.  Ásperos caminhos seguem ao sul e ao leste, é difícil dizer 
+exatamente onde você está indo.
+~
+170 9 0 0 0 3
+D1
+~
+~
+0 -1 17022
+D2
+~
+~
+0 -1 17023
+D3
+~
+~
+0 -1 17020
+S
+#17022
+As Cavernas Mais Escuras~
+   Você mal pode ver o caminho, mesmo com sua fonte de luz.  As rochas da
+caverna parecem mais escuras que a escuridão.  Você ouve um poderoso zunido
+a seu redor.  Ásperos caminhos seguem ao sul e ao oeste, é difícil dizer 
+exatamente onde você está indo.
+~
+170 9 0 0 0 3
+D2
+~
+~
+0 -1 17024
+D3
+~
+~
+0 -1 17021
+S
+#17023
+As Cavernas Mais Escuras~
+   Você mal pode ver o caminho, mesmo com sua fonte de luz.  As rochas da
+caverna parecem mais escuras que a escuridão.  Você ouve um poderoso zunido
+a seu redor.  Ásperos caminhos seguem ao sul e ao leste, é difícil dizer 
+exatamente onde você está indo.
+~
+170 9 0 0 0 3
+D0
+~
+~
+0 -1 17021
+D1
+~
+~
+0 -1 17024
+D2
+~
+~
+0 -1 17025
+S
+#17024
+As Cavernas Mais Escuras~
+   Você mal pode ver o caminho, mesmo com sua fonte de luz.  As rochas da
+caverna parecem mais escuras que a escuridão.  Você ouve um poderoso zunido
+a seu redor.  Ásperos caminhos seguem ao sul e ao oeste, é difícil dizer 
+exatamente onde você está indo.
+~
+170 9 0 0 0 3
+D0
+~
+~
+0 -1 17022
+D2
+~
+~
+0 -1 17026
+D3
+~
+~
+0 -1 17023
+S
+#17025
+As Cavernas Mais Escuras~
+   Sua luz não parece funcionar aqui.  Nem forças mágicas de luz parecem
+iluminar um palmo a sua frente.  Você subitamente percebe que o caminho se 
+inclinou, e você não notou por causa da escuridão.  Você sente uma grande 
+presença pelos caminhos ao leste.
+~
+170 9 0 0 0 3
+D0
+~
+~
+0 -1 17023
+D1
+~
+~
+0 -1 17026
+S
+#17026
+As Cavernas Mais Escuras~
+   Sua luz não parece funcionar aqui.  Nem forças mágicas de luz parecem 
+iluminar um palmo a sua frente.  Você subitamente percebe que o caminho se 
+inclinou, e você não notou por causa da escuridão.  Você sente uma grande 
+presença vinda diretamente do leste.
+~
+170 9 0 0 0 3
+D0
+~
+~
+0 -1 17024
+D1
+~
+~
+0 -1 17027
+D3
+~
+~
+0 -1 17025
+S
+#17027
+Câmara Terrestre~
+   Esta é o domicílio do Criador da Terra.  Ele decide sobre terremotos, 
+avalanches e deslizamentos.  O Criador da Terra senta sobre um enorme trono
+de mármore cravado na parede.
+~
+170 9 0 0 0 3
+D3
+~
+~
+0 -1 17026
+E
+trono mármore~
+O Criador observa seu olhar, e não gosta nada!  A terra inteira parece
+tremer com seus pensamentos.
+~
+S
+#17028
+Pelo Rio~
+   A água parece borbulhar e espumar magicamente.  Embora esguiche em você,
+a água não parece molhá-lo.  O caminho segue ao norte perto da água. Ao
+oeste há uma interseção em forma de T.
+~
+170 0 0 0 0 3
+D0
+~
+~
+0 -1 17029
+D3
+~
+~
+0 -1 17013
+S
+#17029
+No Rio~
+   Para continuar, você teve de andar no rio.  Embora você ande com água
+pelos joelhos, você parece não se molhar.  Uma baía se estende ao norte e
+o rio flui ao sul.
+~
+170 0 0 0 0 6
+D0
+~
+~
+0 -1 17030
+D2
+~
+~
+0 -1 17028
+S
+#17030
+A Baía Elemental~
+   A água é cristalina aqui e você vê o fundo da baía a trinta pés abaixo de 
+você.  Então você percebe que está andando sobre a água realmente.  Água 
+verdadeiramente mágica.  E você ainda está seco!
+~
+170 0 0 0 0 6
+D0
+~
+~
+0 -1 17033
+D1
+~
+~
+0 -1 17031
+D2
+~
+~
+0 -1 17029
+S
+#17031
+A Baía Elemental~
+   A água é cristalina aqui e você vê o fundo da baía a trinta pés abaixo de 
+você.  Então você percebe que está andando sobre a água realmente.  Água 
+verdadeiramente mágica.  E você ainda está seco!
+~
+170 0 0 0 0 6
+D0
+~
+~
+0 -1 17034
+D1
+~
+~
+0 -1 17032
+D3
+~
+~
+0 -1 17030
+S
+#17032
+A Baía Elemental~
+   A água é cristalina aqui e você vê o fundo da baía a trinta pés abaixo de 
+você.  Então você percebe que está andando sobre a água realmente.  Água 
+verdadeiramente mágica.  E você ainda está seco!
+~
+170 0 0 0 0 6
+D0
+~
+~
+0 -1 17035
+D3
+~
+~
+0 -1 17031
+S
+#17033
+A Baía Elemental~
+   A água é cristalina aqui e você vê o fundo da baía a trinta pés abaixo de 
+você.  Então você percebe que está andando sobre a água realmente.  Água 
+verdadeiramente mágica.  E você ainda está seco!
+~
+170 0 0 0 0 6
+D1
+~
+~
+0 -1 17034
+D2
+~
+~
+0 -1 17030
+S
+#17034
+A Baía Elemental~
+   A água é cristalina aqui e você vê o fundo da baía a trinta pés abaixo de 
+você.  Então você percebe que está andando sobre a água realmente.  Água 
+verdadeiramente mágica.  E você ainda está seco!
+~
+170 0 0 0 0 6
+D1
+~
+~
+0 -1 17035
+D2
+~
+~
+0 -1 17031
+D3
+~
+~
+0 -1 17033
+S
+#17035
+A Baía Elemental~
+   A água é cristalina aqui e você vê o fundo da baía a trinta pés abaixo de 
+você.  Então você percebe que está andando sobre a água realmente.  Água 
+verdadeiramente mágica.  E você ainda está seco!
+~
+170 0 0 0 0 6
+D2
+~
+~
+0 -1 17032
+D3
+~
+~
+0 -1 17034
+D5
+~
+~
+0 -1 17036
+S
+#17036
+A Câmara de Água~
+   Esta câmara foi magicamente criada aqui no chão da baía.  Ela parece
+estar por aqui há bom tempo.  Embora você esteja embaixo da água, você não 
+encontra dificuldades para respirar normalmente, e curiosamente você não
+sente a pressão da água sobre você.
+~
+170 8 0 0 0 6
+D4
+~
+~
+0 -1 17035
+S
+#17037
+Um Caminho em Chamas~
+   Você cuidadosamente caminha ao longo de um caminho do qual emergem
+gêiseres de fogo.  Pequeninos vulcões cospem lava no rio.  O fogo é quente
+mas não o bastante para ser perigoso.  O caminho se estende a leste e ao sul.
+~
+170 0 0 0 0 5
+D1
+~
+~
+0 -1 17014
+D2
+~
+~
+0 -1 17038
+S
+#17038
+Um Caminho em Chamas~
+   Você cuidadosamente caminha ao longo de um caminho do qual emergem
+gêiseres de fogo.  Um jardim ao oeste brilha em uma chama eterna.
+~
+170 0 0 0 0 5
+D0
+~
+~
+0 -1 17037
+D3
+~
+~
+0 -1 17042
+S
+#17042
+Os Jardins em Chamas~
+   Em toda sua volta há fogo;  as pedras, os arbustos e até mesmo o ar
+parece estar flamejante.  Curiosamente, o fogo mágico não consome o que
+queima.  Um caminho a leste leva por entre os poços de lava.
+~
+170 0 0 0 0 5
+D1
+~
+~
+0 -1 17038
+D3
+~
+~
+0 -1 17045
+S
+#17045
+A Câmara de Fogo~
+   O Criador do Fogo senta sobre um trono feito de chama azul.  Pequenas
+chamas dançam para lá e para cá para entreter seu Criador. 
+~
+170 0 0 0 0 3
+D1
+~
+~
+0 -1 17042
+S
+#17046
+O Caminho Elétrico~
+   O caminho brilha e zuni por causa da eletricidade que pulsa através dele. 
+Parece acalmar seus pés cansados.  Ao norte há uma depressão.  O caminho
+segue a leste também.
+~
+170 0 0 0 0 3
+D0
+~
+~
+0 -1 17048
+D1
+~
+~
+0 -1 17053
+S
+#17047
+O Campo de Força~
+   Através dele há uma calma atmosfera, você sente que algo muito importante 
+fica próximo daqui.  O campo de força segue a norte e leste.
+~
+170 0 0 0 0 4
+D0
+~
+~
+0 -1 17049
+D1
+~
+~
+0 -1 17048
+S
+#17048
+O Campo de Força~
+   Através dele há uma calma atmosfera, você sente que algo muito importante 
+fica próximo daqui.  O campo de força segue a norte e oeste.
+~
+170 0 0 0 0 4
+D0
+~
+~
+0 -1 17050
+D2
+~
+~
+0 -1 17046
+D3
+~
+~
+0 -1 17047
+S
+#17049
+O Campo de Força~
+   Através dele há uma calma atmosfera, você sente que algo muito importante 
+fica próximo daqui.  O campo de força segue a sul e ao leste.
+~
+170 0 0 0 0 4
+D1
+~
+~
+0 -1 17050
+D2
+~
+~
+0 -1 17047
+S
+#17050
+O Campo de Força~
+   Através dele há uma calma atmosfera, você sente que algo muito importante 
+fica próximo daqui.  O campo de força segue a norte e leste.  Algo muito 
+importante chama sua atenção ao leste.
+~
+170 0 0 0 0 4
+D1
+~
+~
+0 -1 17051
+D2
+~
+~
+0 -1 17048
+D3
+~
+~
+0 -1 17049
+S
+#17051
+Os Raios~
+   Acima das escadas cravadas na encosta, você vê intermitentes flashes de
+luz.  Um contínuo zumbido vem daquela direção.  Ao oeste fica o campo de
+força.
+~
+170 0 0 0 0 4
+D3
+~
+~
+0 -1 17050
+D4
+~
+~
+0 -1 17052
+S
+#17052
+A Câmara de Luz~
+   Há um tipo de painel de controle aqui.  Aparentemente o Criador dos Raios 
+observa e controla as forças elétricas daqui.  Degraus cravados na encosta
+levam para baixo.
+~
+170 8 0 0 0 6
+D5
+~
+~
+0 -1 17051
+S
+#17053
+O Caminho Oeste~
+   Um campo elétrico começa ao oeste.  A mesa continua a leste.  Ou você
+pode escalar o canyon a sul.
+~
+170 0 0 0 0 4
+D1
+~
+~
+0 -1 17054
+D2
+~
+~
+0 -1 17017
+D3
+~
+~
+0 -1 17046
+S
+#17054
+O Caminho Leste~
+   Um novo caminho começa ao norte.  Este segue ao oeste.  Ou você pode
+escalar canyon abaixo pelo sul.  Ao oeste você vê pegadas quase já 
+desaparecidas.
+~
+170 0 0 0 0 4
+D0
+~
+~
+0 -1 17055
+D1
+~
+~
+0 -1 17061
+D2
+~
+~
+0 -1 17019
+D3
+~
+~
+0 -1 17053
+S
+#17055
+Flutuando no Ar~
+   Até onde você percebeu, estava em um caminho.  Abruptamente o caminho 
+desapareceu sob seus pés muito mais rápido do que você pôde notar.  Ao invés
+de você despencar para a morte, você começa a caminhar pelo ar.  O espaço ao 
+norte e oeste parecem feitos de ar apenas, mas você pode andar lá.  
+   O caminho pelo qual você veio fica ao sul.
+~
+170 0 0 0 0 4
+D0
+~
+~
+0 -1 17057
+D1
+~
+~
+0 -1 17056
+D2
+~
+~
+0 -1 17054
+S
+#17056
+Flutuando no Ar~
+   Você olha e vê o chão a cem pés abaixo de você. O vento sussurrando em
+sua orelha o faz pensar que a sensação é ótima.  Ao norte você nota algo
+como um portal. Ao oeste há mais ar.
+~
+170 0 0 0 0 4
+D0
+~
+~
+0 -1 17058
+D3
+~
+~
+0 -1 17055
+S
+#17057
+Flutuando no Ar~
+   Você olha e vê o chão a cem pés abaixo de você.  O vento sussurrando em
+sua orelha o faz pensar de que a sensação é ótima.  Ao leste você nota algo
+como um portal.  Ao sul há mais ar.
+~
+170 0 0 0 0 4
+D1
+~
+~
+0 -1 17058
+D2
+~
+~
+0 -1 17055
+S
+#17058
+Flutuando no Ar~
+   Você olha e vê o chão a cem pés abaixo de você.  O vento sussurrando em
+sua orelha o faz pensar de que a sensação é ótima.  Há um portal flutuando
+aqui.  Ele fica a leste.  Você pode flutuar ao sul ou ao oeste, se quiser.
+~
+170 0 0 0 0 4
+D1
+~
+~
+0 -1 17059
+D2
+~
+~
+0 -1 17056
+D3
+~
+~
+0 -1 17057
+E
+portal~
+Através do portal você vê um túnel.
+~
+S
+#17059
+Um Túnel de Vento~
+   O túnel segue ao leste, ao oeste você pode adentrar o portal.  O vento
+neste portal é bastante feroz.
+~
+170 0 0 0 0 4
+D1
+~
+~
+0 -1 17060
+D3
+~
+~
+0 -1 17058
+E
+portal~
+Através do portal você não vê nada, apenas o céu.
+~
+S
+#17060
+A Câmara de Ar~
+   Finos tornados vêm e vão dançando pelo chão.  Nos fundos da câmara você
+nota um enorme trono feito de nuvens.  Um túnel segue a oeste.
+~
+170 8 0 0 0 6
+D3
+~
+~
+0 -1 17059
+E
+trono nuvens~
+Embora o trono de nuvens pareça sólido o bastante para se sentar, eu não 
+tentaria se fosse você!
+~
+S
+#17061
+Seguindo a Trilha~
+   Você se encontra andando ao longo de um caminho que segue através de uma 
+parte bastante barulhenta do canyon.  A trilha que você estava seguindo
+começa a se tornar mais proeminente.  Você pensa que estas pegadas podem
+ser frescas.  De volta ao oeste você vê um caminho para o canyon.  Ao leste,
+o caminho continua.
+~
+170 0 0 0 0 4
+D1
+~
+~
+0 -1 17062
+D3
+~
+~
+0 -1 17054
+S
+#17062
+Seguindo a Trilha~
+   Você continua a seguir as pegadas atentamente.  Tão atentamente, que você 
+bate seu rosto em um grande aviso.  Você coça a cabeça e se pergunta como
+pôde ter sido tão cego.  Ao sul, o caminho continua acima de uma colina.  De 
+volta ao oeste, o caminho segue para o canyon.
+~
+170 0 0 0 0 4
+D2
+~
+~
+0 -1 17063
+D3
+~
+~
+0 -1 17061
+E
+Grande aviso~
+O aviso diz:
+Mahn-tor 8 passos largos.
+~
+S
+#17063
+Acima da Cidade~
+   No topo da colina a vista tira seu fôlego.  Diante de você estão as
+grandes paredes cercando a cidade.  Em volta do portão principal você pode
+ver minotauros apressados para evitar a tempestade que está por vir.  O sul
+o levará para os portões da cidade, e esperançosamente para um abrigo dos
+ventos frios.
+~
+170 0 0 0 0 4
+D0
+~
+~
+0 -1 17062
+D2
+~
+~
+0 -1 17064
+S
+#17064
+Perto dos Portões~
+   Você está a poucos passos dos portões da cidade.  Os guardas que estão
+aqui parecem ferozes, assim como os minotauros.  Talvez você possa dribla-
+-los para conseguir entrar...
+~
+170 0 0 0 0 4
+D0
+~
+~
+0 -1 17063
+S
+#17065
+Ao Longo do Caminho Sul~
+   Você está caminhando ao longo do caminho sul.  Nesta direção você vê
+enormes montanhas.  Você trouxe seus equipamentos de caminhada?
+~
+170 0 0 0 0 4
+D0
+~
+~
+0 -1 3502
+D2
+~
+~
+0 -1 17066
+S
+#17066
+Ao Longo do Caminho Sul~
+   Você está caminhando ao longo do caminho sul.  Nesta direção você vê
+enormes montanhas.  Atrás das montanhas pode ser visto um vasto canyon.
+Você trouxe seus equipamentos de caminhada?
+~
+170 0 0 0 0 4
+D0
+~
+~
+0 -1 17065
+D2
+~
+~
+0 -1 17067
+S
+#17067
+Ao Longo do Caminho Sul~
+   Você está caminhando ao longo do caminho sul.  Nesta direção você vê
+enormes montanhas.  Atrás das montanhas pode ser visto um vasto canyon.
+Você trouxe seus equipamentos de caminhada?
+~
+170 0 0 0 0 4
+D0
+~
+~
+0 -1 17066
+D2
+~
+~
+0 -1 17068
+S
+#17068
+Ao Longo do Caminho Sul~
+   Você está caminhando ao longo do caminho sul.  Nesta direção você vê
+enormes montanhas.  Atrás das montanhas pode ser visto um vasto canyon.
+Você trouxe seus equipamentos de caminhada?
+~
+170 0 0 0 0 4
+D0
+~
+~
+0 -1 17067
+D2
+~
+~
+0 -1 17069
+S
+#17069
+Ao Longo do Caminho Sul~
+   Você está caminhando ao longo do caminho sul.  Nesta direção você vê
+enormes montanhas.  Atrás das montanhas pode ser visto um vasto canyon.
+Você trouxe seus equipamentos de caminhada?
+~
+170 0 0 0 0 4
+D0
+~
+~
+0 -1 17068
+D2
+~
+~
+0 -1 17070
+S
+#17070
+Ao Longo do Caminho Sul~
+   Você está caminhando ao longo do caminho sul.  Nesta direção você vê
+enormes montanhas.  Atrás das montanhas pode ser visto um vasto canyon.
+Você trouxe seus equipamentos de caminhada?
+~
+170 0 0 0 0 4
+D0
+~
+~
+0 -1 17069
+D2
+~
+~
+0 -1 17071
+S
+#17071
+Ao Longo do Caminho Sul~
+   Você está caminhando ao longo do caminho sul.  Nesta direção você vê
+enormes montanhas.  Atrás das montanhas pode ser visto um vasto canyon.
+Você trouxe seus equipamentos de caminhada?
+~
+170 0 0 0 0 4
+D0
+~
+~
+0 -1 17070
+D2
+~
+~
+0 -1 17072
+S
+#17072
+Ao Longo do Caminho Sul~
+   Você está caminhando ao longo do caminho sul.  Nesta direção você vê
+enormes montanhas.  Atrás das montanhas pode ser visto um vasto canyon.
+Você trouxe seus equipamentos de caminhada?
+~
+170 0 0 0 0 4
+D0
+~
+~
+0 -1 17071
+D2
+~
+~
+0 -1 17001
+S
+$~

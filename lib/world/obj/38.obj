@@ -1,0 +1,1566 @@
+#3800
+fonte chafariz corvo~
+um chafariz~
+Um grande corvo de asas abertas está soltando água pelo seu bico.~
+~
+23 0 0 0 0 0 0 0 0 0 0 0 0
+500 500 0 0
+500 500 50 0 0
+E
+fonte corvo~
+   Um grande corvo de asas abertas, feito de mármore negro, está
+soltando água pelo seu bico.  No peito do corvo pode-se ver um grande
+ômega esculpido.
+~
+#3801
+arbusto~
+os arbustos~
+undefined~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+30 5 -1 0
+20 5 0 0 0
+E
+arbusto flores~
+   Os arburtos são delicadamente podados para ficarem com as formas de
+cartas e naipes de baralho, tornando o jardim um dos locais mais bonitos
+que você já viu.  Parace haver alguma coisa entre as folhas de um dos
+arbustos.
+~
+#3802
+pasta colecionador~
+a pasta do colecionador~
+Você vê uma bela pasta de couro, daquelas usadas por colecionadores,
+esquecida aqui.~
+~
+15 0 0 0 0 ao 0 0 0 0 0 0 0
+50 5 -1 0
+10 2500 250 20 0
+E
+pasta~
+   Você olha uma linda pasta de couro negro com fivelas de prata, ao
+abri-la você várias páginas com divisorias de plástico onde pode-se
+acomodar os Card´s de forma organizada e sem risco de estraga-los.
+~
+#3803
+bilhete~
+um bilhete de entrada do Museu~
+Algum distraído esqueceu seu bilhete do Museu aqui.~
+~
+12 cdq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 10000 0 0 0
+E
+bilhete~
+Está escrito que é necessário apresentar este bilhete para entrar no museu.
+~
+#3804
+lista mob~
+uma lista~
+Há uma lista presa próxima a porta aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+10 0 0 0 0
+E
+lista~
+Lista da Série MOB´s I - Mob's Normais
+
+(&BC&n) Comum      
+(&BI&n) Incomum    
+(&BR&n) Rara       
+(&BE&n) Especiais  
+
+Mob's Normais (20 cartas) (2 E, 3 R, 5 I, 10 C)
+&B01&n- Guardião da Floresta (E)
+&B02&n- Drow (E) 
+&B03&n- Novatos (R)
+&B04&n- Urubu (R)
+&B05&n- Fido (R)
+&B06&n- Atoms(I)
+&B07&n- Bolha Verde (I)
+&B08&n- Homem-Lagarto (I)
+&B09&n- Miconoide (I)
+&B10&n- Lamia (I)
+&B11&n- Peças do xadrez (C)
+&B12&n- Cartas de Baralho (C)
+&B13&n- Elfo (C)
+&B14&n- Gnomo (C)
+&B15&n- Anão (C)
+&B16&n- Cidadão Romano (C)
+&B17&n- Hobbit (C)
+&B18&n- Goblin (C)
+&B19&n- Hobgoblin (C)
+&B20&n- Orc (C)
+
+Itens para troca desta série:
+&BPochete do Colecionador&n
+&BLupa do Colecinonador&n
+&BLuvas do Colecinador&n
+
+Regras para troca:
+&B1&n- É permitido no máximo 2 trocas por itens desta serie por jogador;
+&B2&n- Pode-se usar 1 (uma) carta coringa por troca.
+~
+#3805
+lista mob~
+uma lista~
+Há uma lista presa próxima a porta aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+10 0 0 0 0
+E
+lista~
+Lista da Série MOB´s II Dragões de Vitália
+
+(&RC&n) Comum      
+(&RI&n) Incomum    
+(&RR&n) Rara       
+(&RE&n) Especiais  
+
+Dragões de Vitália (25 cartas) (2 E, 3 R, 6 I, 14 C)
+&R01&n- Puff (E) 
+&R02&n- Dragão do Apocalipse (E) 
+&R03&n- Dragão Esqueleto (R)
+&R04&n- Bebê Dragão (R) 
+&R05&n- Nidhogg (R)
+&R06&n- Aglandiir (I)
+&R07&n- Dragão Fada (I)
+&R08&n- Draco (I)
+&R09&n- Fafnir (I)
+&R10&n- Dracolich (I)
+&R11&n- Valik (I)
+&R12&n- Dragão Invisível (C)
+&R13&n- Rainha Dragoneza (C)
+&R14&n- Tiamat (C)
+&R15&n- Ancião Dragão Dourado (C)
+&R16&n- Ancião Dragão Prateado (C)
+&R17&n- Ancião Dragão de Bronze (C)
+&R18&n- Dracolich ancião (C)
+&R19&n- Dragão Fantasma (C)
+&R20&n- Ancião Dragão Verde (C)
+&R21&n- Ancião Dragão Azul (C)
+&R22&n- Ancião Dragão Amarelo (C)
+&R23&n- Ancião Dragão Vermelho (C)
+&R24&n- Ancião Dragão Negro (C)
+&R25&n- Ancião Dragão Branco (C)
+
+Itens para troca desta série:
+&ROlho do Dragão&n
+&RCalças com bolsos do Dragão&n
+&RMedalha do Matador de Dragões Bons&n
+&RMedalha do Matador de Dragões Maus&n
+
+Regras para troca:
+&R1&n- É permitido no máximo 2 trocas por itens desta série por jogador;
+&R2&n- Pode-se usar 1 (uma) carta coringa por troca.
+~
+#3806
+lista áreas~
+uma lista~
+Há uma lista aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+10 0 0 0 0
+E
+lista~
+Lista da Serie Áreas
+
+(&GC&n) Comum      
+(&GI&n) Incomum    
+(&GR&n) Rara       
+(&GE&n) Especiais 
+
+Ainda não existem cartas desta série.
+~
+#3807
+lista itens~
+lista~
+Há uma lista presa próxima a porta aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+10 0 0 0 0
+E
+lista~
+Lista da Serie Itens I Itens Dourados
+
+(&YC&n) Comum      
+(&YI&n) Incomum    
+(&YR&n) Rara       
+(&YE&n) Especiais
+
+Itens I Dourados (21 cartas) (2 E, 19 R)
+
+&Y01&n- Bracelete de Ossos (E)
+&Y02&n- Espada de Geandrias (E)
+&Y03&n- Lâmina Élfica de Alaric (R)
+&Y04&n- Escudo de Fogo (R)
+&Y05&n- Manoplas de Zoghtu (R)
+&Y06&n- Olho de Hórus (R)
+&Y07&n- Carnax (R)
+&Y08&n- Manto das Trevas de Huthven (R)
+&Y09&n- Bastão de Bruenor (R)
+&Y10&n- Tiara de Calíope (R)
+&Y11&n- Machado de Júpiter (R)
+&Y12&n- Anel de Cranaloc (R)
+&Y13&n- Chave de Nabaqila (R)
+&Y14&n- Rosa Vermelha (R)
+&Y15&n- Cálice Sagrado (R)
+&Y16&n- Manto do Inverno (R)
+&Y17&n- Bracelete do Verão (R)
+&Y18&n- Anel da Primavera (R)
+&Y19&n- Cinturão do Outono (R)
+&Y20&n- Aro de Phanzyenon (R)
+&Y21&n- Pena Dourada do Escritor (R)
+
+Itens para troca desta série:
+&YUm item dourado a escolha do jogador.&n
+
+Regras para troca:
+&Y1&n- Pode-se trocar apenas 1 (uma) vez está série;
+&Y2&n- O jogador não poderá possuir item dourado;
+&Y3&n- Não pode-se usar carta coringa nesta série.
+~
+#3808
+estátua abstrata~
+uma estátua de forma abstrata~
+Uma estátua de forma abstrata encontra-se aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+80 10000 1000 0 0
+E
+inscrição~
+   "Esta estátua representa você, sim, você!  Assim como também representa
+todos os grandes homens e mulheres que se aventuram ou já se aventuraram
+por Vitália e deixaram aqui sua marca.  A maior glória que você poderá
+conquistar é a amizade de seus companheiros, e o amor deles será a melhor
+recompensa que irá receber.  Mantenha isso em mente e você nunca será
+esquecido, e ao mesmo tempo levará para sempre Vitália em seu coração.
+A AMIZADE irá abrir o mundo para você."
+~
+E
+estátua abstrata~
+   Na verdade, essa estátua possui uma forma mais abstrata, por isso se
+destaca um pouco das demais.  Parece ser uma pessoa empunhando uma arma, mas
+você nem ao menos é capaz de identificar seu sexo, ou sua profissão.  Ainda
+assim ela te lembra muito alguém que você conhece... só não está conseguindo
+lembrar o nome.  O chão embaixo da estátua está um pouco arranhado, como se
+a houvessem arrastado algumas vezes.  Ao pé da estátua há uma pequena
+inscrição.
+~
+#3809
+lista personalidades~
+lista~
+Há uma lista presa próxima a porta aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+10 0 0 0 0
+E
+lista~
+Lista da Série Personalidades
+
+(&CC&n) Comum      
+(&CI&n) Incomum    
+(&CR&n) Rara       
+(&CE&n) Especiais 
+
+Ainda não existem cartas desta série.
+~
+#3810
+carta card itens~
+o Card Lâmina Élfica de Alaric~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Ao virá-la
+você se depara com a pintura da espada élfica mais bela que já viu.  Sua
+lâmina possui uma tênue luminescência rubra, dando-lhe o aspecto de aço
+recem forjado.  Seu cabo é ricamente detalhado e um rubi encrustrado entre
+a lâmina e o punho da espada completa essa arma, digna de um rei.
+
+&YTipo R, carta 3 de 21, Série Itens I.&n
+~
+#3811
+carta card itens~
+o Card Escudo de Fogo~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Ao virá-la,
+você se assusta, pois tem a impressão que a carta é coberta por chamas.
+Prestando mais atenção, você pode ver a pintura de um magnífico escudo
+rodeado por fogo, e tem a nítida impressão que as labaredas que o cercam
+realmente estão se movimentando.
+
+&YTipo R, carta 4 de 21, Série Itens I.&n
+~
+#3812
+carta card itens~
+o Card Manoplas de Zoghtu~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Do outro
+lado há a pintura de uma luva bastante exótica, aparentemente feita de
+couro de dragão negro.  Pequenas saliênicas ósseas que percorrem essa
+manopla terminam em garras nas pontas dos dedos.  Coroando seu aspecto
+bizarro, sobre a palma da manopla foi encrustrada uma gema cor de sangue.
+
+&YTipo R, carta 5 de 21, Série Itens I.&n
+~
+#3813
+carta card itens~
+o Card Olho de Horus~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Ao virá-la
+você vê a pintura de um belíssimo diamante azul, lapidado na forma de um
+globo ocular.  Essa jóia de rara beleza parece emanar um brilho sobrenatural,
+quase capaz de saltar para fora da pintura e iluminar o ambiente ao seu redor.
+
+&YTipo R, carta 6 de 21, Série Itens I.&n
+~
+#3814
+carta card itens~
+o Card Carnax~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Na sua frente
+há a pintura de uma armadura muito estranha, que parece ser feita de carne e
+músculos e banhada em sangue.  Ao observar a imagem, você tem a nítida
+impressão que os músculos da armadura se movem, como se ela estivesse viva.
+
+&YTipo R, carta 7 de 21, Série Itens I.&n
+~
+#3815
+carta card itens~
+o Card Manto das Trevas de Huthven~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Ao virá-la
+você vê a imagem de um manto de cor negra, cuja abas são presas por um broche
+de onix na forma de um corvo.  Você nota com estranheza que esse card é
+bastante frio ao toque.
+
+&YTipo R, carta 8 de 21, Série Itens I.&n
+~
+#3816
+carta card itens~
+o Card Bastão de Bruenor~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Do outro lado
+há a pintura de um belo bastão de cabo de madeira branca reluzente, coroado
+com uma fenix dourada cujas asas parecem lâminas muito afiadas.  Toda a
+extensão deste belo artefato está coberta com símbolos religiosos.
+
+&YTipo R, carta 9 de 21, Série Itens I.&n
+~
+#3817
+carta card itens~
+o Card Tiara de Calíope~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Do outro lado
+há a pintura de uma bela e delicada tiara, feita aparentemente de coral.
+Conchas e pedras marinhas são os ornamentos dessa bela jóia.
+
+&YTipo R, carta 10 de 21, Série Itens I.&n
+~
+#3818
+carta card itens~
+o Card Machado de Júpiter~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Ao virá-la
+você pode ver a pintura de um grande machado de ouro, cujas lâminas de
+mithril parecem irradiar um brilho mágico.  O machado ainda é cravejado
+com inúmeras jóias, tornando-o ainda mais especial.
+
+&YTipo R, carta 11 de 21, Série Itens I.&n
+~
+#3819
+carta card itens~
+o Card Anel de Cranaloc~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Enquanto
+observa a frente da carta, onde está a pintura de um anel de ouro ligado a
+duas pedras esféricas, uma negra e outra vermelha, você tem a sensação de
+ouvir uma voz lamuriosa ecoando em sua cabeça.  O anel é fascinante e você
+não quer deixar de olhar pra sua pintura.
+
+&YTipo R, carta 12 de 21, Série Itens I.&N
+~
+#3820
+carta card itens~
+o Card Chave de Nabaqila~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Ao virá-la
+você vê a imagem de uma bela e exótica espada.  Seu cabo azul, esculpido na
+forma de uma mão humana parece ser feito de cristal.  Já a lâmina parece ser
+feita de um metal quase transparente, e você tem a impressão de que ela é
+bastante afiada.
+
+&YTipo R, carta 13 de 21, Série Itens I.&n
+~
+#3821
+carta card itens~
+o Card Rosa Vermelha~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Ao virá-la
+você imediatamente sente um perfume suave e adocicado se espalhar no ar.
+Então você percebe a imagem de uma delicada rosa vermelha pintada na carta,
+envolta por uma brilhante chama.  Esta parece ser uma rosa muito especial.
+
+&YTipo R, carta 14 de 21, Série Itens I.&n
+~
+#3822
+carta card itens~
+o Card Cálice Sagrado~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Ao virá-la
+você vê a pintura de um belíssimo cálice de ouro.  Várias imagens estão
+esculpidas no cálice e você consegue identificar que são representações
+bíblicas.  Seria essa então uma pintura do famoso Santo Graal?
+
+&YTipo R, carta 15 de 21, Série Itens I.&n
+~
+#3823
+carta card itens~
+o Card Manto do Inverno~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Do outro lado
+há a imagem de um longo manto, branco como a neve.  Vários flocos de neve
+foram bordados nele com delicados fios de prata e pequenos diamantes.  
+Na borda da carta você percebe o símbolo da Lua de Prata, Teriany.
+
+&YTipo R, carta 16 de 21, Série Itens I.&n
+~
+#3824
+carta card itens~
+o Card Bracelete do Verão~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Do outro lado
+há a imagem de um grande bracelete de ouro, cuja superfície é bastante
+polida.  Você tem a impressão que esse card é bem quente ao toque.  Na borda
+da carta você percebe o símbolo da Lua de Fogo, Latïzie.
+
+&YTipo R, carta 17 de 21, Série Itens I.&n
+~
+#3825
+carta card itens~
+o Card Anel da Primavera~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Do outro lado
+há a imagem de um magnífico anel de jade, de um verde limpo e profundo.
+Finos veios de prata foram encaixados na peça, tornando-a ainda mais bela.
+Na borda da carta você percebe o símbolo da Lua de Prata, Kadrictes.
+
+&YTipo R, carta 18 de 21, Série Itens I.&n
+~
+#3826
+carta card itens~
+o Card Cinturão do Outono~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Do outro lado
+há a imagem de um cinturão feito de finos cipós dourados e vermelhos, cuja
+fivela é formada por duas safiras, uma dourada e outra esverdeada. 
+Prestando mais atenção você compreende que os cipós na verdade são feitos de
+ouro e cobre, o que tornam o cinto ainda mais especial.  Na borda da carta
+você percebe o símbolo da Lua de Safira, Aqrien.
+
+&YTipo R, carta 19 de 21, Série Itens I.&n
+~
+#3827
+carta card itens~
+o Card Aro de Phanzyenon~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Ao virá-la
+você se depara com a pintura de um brinco (anel?) de metal amarelo-escuro
+com uma grande pedra negra encrustrada.  Por algum motivo desconhecido,
+essa imagem lhe dá calafrios.  Seria imaginação sua ou há pequenos vultos
+se contorcendo dentro da pedra negra?
+
+&YTipo R, carta 20 de 21, Série Itens I.&n
+~
+#3828
+carta card itens~
+o Card Pena Dourada do Escritor~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Na frente
+dela você pode ver a pintura de uma pequenina pena dourada brilhando ao sol,
+com minúsculas gotas sobre ela.  As gotas parecem correr de uma ponta à
+outra da pena, num movimento continuado e intrigante.  Só de olhar para essa
+imagem você sente sua mente disparar, como se estivesse sendo estimulada a
+pensar.
+
+&YTipo R, carta 21 de 21, Série Itens I.&n
+~
+#3829
+carta card mobs~
+o Card Guardião da Floresta~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 500000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Ao virá-la você vê
+a estranha imagem de uma sombra esfumaçada movendo-se entre as árvores.
+
+&BTipo E, carta 1 de 20, Série MOB´s I.&n
+~
+#3830
+carta card mobs~
+o Card Drows~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 500000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Do outro lado há a
+imagem de uma bela elfa de pele negra e cabelos prateados sentada com um
+sorriso perverso sobre um trono em forma de aranha.  Aos seus pés
+encontram-se outros drows, comandados por uma sacerdotiza.  Guardando o
+trono você ainda percebe os horríveis híbridos, metade drows, metade
+aranhas, transformados dessa forma por terem falhado em seu teste de
+lealdade a Lolth.
+
+&BTipo E, carta 2 de 20, Série MOB´s I.&n
+~
+#3831
+carta card mobs~
+o Card Novatos~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Ao virá-la você vê
+a pintura de vários jovens percorrendo os corredores e salas de alguma
+construção.  A pintura é tão detalhada que você consegue até imaginar a
+personalidade de cada um deles.  Um deles com cara de retardado, perde seu
+tempo pedindo informações a outro com cara de perdido.  Outro que parece ser
+um guarda procura por alguma coisa enquanto segura uma coleira na mão, sem
+prestar muita atenção na garota tagarela ao seu lado.  Num canto um jovem
+bem equipado com cara de esperto parece prestes a enfrentar um minotauro,
+mas um outro com cara de imbecil não para de o importunar.  Só faltava mesmo
+aparecer um jovem de óculos e bengala usando uma roupa listrada pra completar
+a cena.
+
+&BTipo R, carta 3 de 20, Série MOB´s I.&n
+~
+#3832
+carta card mobs~
+o Card Urubu~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Do outro lado há
+apenas a imagem de um simples urubu olhando para baixo enquanto voa,
+provavelmente a procura de carniça.  O que mais você queria?
+
+&BTipo R, carta 4 de 20, Série MOB´s I.&n
+~
+#3833
+carta card mobs~
+o Card Fido~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Do outro lado...
+surpresa!  Está o Odif de frente pra trás, ou melhor, está a imagem de um
+simples Fido, pequeno e sujo, revirando o lixo.
+
+&BTipo R, carta 5 de 20, Série MOB´s I.&n
+~
+#3834
+carta card mobs~
+o Card Atoms~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 200000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Do outro lado há a
+imagem de uma família de Atoms, prestando a atenção num xamã.  Esses
+estranhos seres que de certa forma chegam a lembrar os elfos estão
+tranquilamente posicionados nos grossos galhos de uma gigantesca árvore.
+Você é capaz de perceber inúmeros outros seres nos galhos acima e abaixo
+dos Atoms, como fadas, macacos, duendes e cobras.
+
+&BTipo I, carta 6 de 20, Série MOB´s I.&n
+~
+#3835
+carta card mobs~
+o Card Bolha Gelatinosa Verde~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 200000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Ao virá-la você se
+depara com a estranha imagem de uma grande e gosmenta bolha verde.  Poderia
+até ser uma imagem engraçada, não fosse o esqueleto e restos de equipamente
+flutuando dentro dessa asquerosa criatura.
+
+&BTipo I, carta 7 de 20, Série MOB´s I.&n
+~
+#3836
+carta card mobs~
+o Card Homens Lagarto~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 200000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Do outro lado há a
+imagem de uma savana, onde encontra-se um homem lagarto sentado num trono,
+usando um grande altar como coroa.  Vários outros homens lagartos fazem
+guarda ao seu redor, ou pelo menos deveriam estar fazendo, pois é nítido
+pela pintura que praticamente todos estão distraídos.
+
+&BTipo I, carta 8 de 20, Série MOB´s I.&n
+~
+#3837
+carta card mobs~
+o Card Miconóides~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 200000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Ao virá-la você vê a
+imagem de uma caverna cheia de estranhas criaturas.  São grandes e pequenos
+cogumelos, com braços e pernas.  Você nota que eles possuem feições humanas
+logo abaixo dos seus chapéus.  Todos parecem estar dançando e talvez
+cantando, enquanto espalham inúmeros esporos pelo ar.  
+
+&BTipo I, carta 9 de 20, Série MOB´s I.&n
+~
+#3838
+carta card mobs~
+o Card Lâmia~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 200000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Ao virá-la você vê
+a pintura de uma bela mulher com um sorriso maligno nos lábios.  Apesar de
+sua beleza, ela não é totalmente humana.  Seu dorso é de uma mulher, mas da
+cintura pra baixo seu corpo é de uma fera quadrúpede, semelhante a um felino.
+
+&BTipo I, carta 10 de 20, Série MOB´s I.&n
+~
+#3839
+carta card mobs~
+o Card Peças de Xadrez~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Do outro lado há a
+curiosa pintura de várias peças de xadrez lutando entre si como se estivessem
+vivas, sobre um campo de batalha que mais parece um enorme tabuleiro.
+
+&BTipo C, carta 11 de 20, Série MOB´s I.&n
+~
+#3840
+carta card mobs~
+o Card Cartas de Baralho~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Do outro lado há a
+curiosa pintura de várias cartas de baralho se curvando diante de uma grande
+carta de um Rei de Copas, que possui braços e pernas.  Ao lado do Rei
+encontra-se um imponente Ás, como se fosse seu guarda costas e ao fundo você
+ainda percebe a imagem de uma carta de uma Dama no alto de uma torre.
+
+&BTipo C, carta 12 de 20, Série MOB´s I.&n
+~
+#3841
+carta card mobs~
+o Card Elfos~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Na sua frente está
+pintada a imagem um belo elfo sorridente sentado de costas para um grande
+olmo.  Ao fundo parece haver uma bela cidade entre as árvores, com vários
+elfos de armaduras brancas de mithril caminhando por ali.  Entre o olmo e a
+cidade élfica há uma fonte onde uma bela elfa se admira, enquanto um elfo de
+aparência apressada vem em sua direção. 
+
+&BTipo C, carta 13 de 20, Série MOB´s I.&n
+~
+#3842
+carta card mobs~
+o Card Gnomos~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Do outro lado há a
+interessante imagem de alguns gnomos cientistas trabalhando numa engenhoca
+no meio de uma pequena vila, enquanto crianças gnomos brincam por ali.
+Alguns homens gnomos estão parados observando a estranha invenção, mas no
+canto da carta você percebe que um deles está mais ocupado adimirando uma
+mulher gnomo de aparência vaidosa.
+
+&BTipo C, carta 14 de 20, Série MOB´s I.&n
+~
+#3843
+carta card mobs~
+o Card Anões~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Ao virá-la você vê
+a pintura de vários anões sorridentes, andando entre as montanhas carregando
+picaretas.  Alguns estão entrando numa mina, enquanto um médico anão faz uma
+oração ao seu deus ao mesmo tempo que cuida da perna machucada de um guarda.
+Ao fundo alguns anões parecem combater um gigante.
+
+&BTipo C, carta 15 de 20, Série MOB´s I.&n
+~
+#3844
+carta card mobs~
+o Card Cidadão Romano~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Ao virá-la você vê
+a imagem de um homem de aparência comum.  Sua toga branca e suas sandálias
+de couro trançado deixam claro que ele é um cidadão de Roma.  Caso isso não
+fosse óbvio o suficiente, ao fundo você pode ver um grande coliseu, para
+onde se dirigem várias pessoas, inclusive uma figura imponente cercada por
+guardas que pode muito bem ser Júlio César... ou talvez a próxima vítima dos
+leões.
+
+&BTipo C, carta 16 de 20, Série MOB´s I.&n
+~
+#3845
+carta card mobs~
+o Card Hobbits~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Do outro lado você
+encontra a imagem de vários hobbits pequeninos preparando uma festa. 
+De rostos sorridentes e bochechudos e pés grandes e peludos, essas
+simpáticas criaturas parecem bastante atarefadas com os preparativos do
+festejo.  Tendas estão sendo armadas próximas a suas tocas e muita comida
+está sendo carregada.  Ao fundo próximo alguns hobbits estão erguendo uma
+faixa com os dizeres Feliz 111 Aniversário.
+
+&BTipo C, carta 17 de 20, Série MOB´s I.&n
+~
+#3846
+carta card mobs~
+o Card Goblins~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card mobs~
+O verso dessa carta traz a estranha imagem de um Odif.  Do outro lado há a
+imagem de várias criaturas pequenas e esfarrapadas, de pele verde e nojenta.
+Um goblin que provavelmente é o tenente ou algo do tipo está ocupado batendo
+em um de seus subordinados, enquanto outro que parece ser o chefe brande uma
+suja espada como se ordenando um ataque.
+
+&BTipo C, carta 18 de 20, Série MOB´s I.&n
+~
+#3847
+carta card mobs~
+o Card Hobgoblins~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Ao virá-la você vê
+a imagem de vários hobgoblins no que parece ser um salão de uma caverna.
+Um rei, pateticamente vestido com roupas sofisticadas que não suportam seus
+grandes músculos, é guardado por alguns guardas-costas enquanto vários
+soldados abrem caminho para um gordo e sujo hobgoblin trazendo uma enorme
+panela.  Parece que estão prestes a devorar alguma vítima recente.
+
+&BTipo C, carta 19 de 20, Série MOB´s I.&n
+~
+#3848
+carta card mobs~
+o Card Orcs~
+Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+O verso dessa carta traz a estranha imagem de um Odif.  Do outro lado há a
+imagem de um feroz orc agitando um enorme martelo de guerra.
+
+&BTipo C, carta 20 de 20, Série MOB´s I.&n
+~
+#3849
+carta card mobsII~
+o Card Puff~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 500000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão e, ao virá-la, um
+dragão feito de uma substância amorfa de coloração rosada: ela é a Puff, o
+Dragão dos Sonhos.
+
+&RTipo E, carta 1 de 25, Série MOB´s II.&n
+~
+#3850
+carta card mobsII~
+o Card Dragão do Apocalipse~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 500000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um dragão ardente como brasa em chamas com três enormes cabeças
+exalando fogo pro suas narinas.
+
+&RTipo E, carta 2 de 25, Série MOB´s II.&n
+~
+#3851
+carta card mobsII~
+o Card Dragão Esqueleto~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 500000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um enorme dragão feito de ossos branco como o marmore, é incrivel
+como não existe nem uma falha em seu corpo.  O Dragão Esqueleto seria
+bonito se não fosse tão assustador. 
+
+&RTipo E, carta 3 de 25, Série MOB´s II.&n
+~
+#3852
+carta card mobsII~
+o Card Bebê Dragão~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê uma dócil criatura com aparência inofensiva apesar de medir pouco
+mais de um metro ele ainda representa perigo para um aventureiro despreparado.
+
+&RTipo R, carta 4 de 25, Série MOB´s II.&n
+~
+#3853
+carta card mobsII~
+o Card Nidhogg~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 300000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um enorme dragão com grandes olhos flamejantes e vários ferimentos
+roendo a raiz de uma árvore de tamanho colossal.  Ao fundo do card pode-se
+notar uma grande águia real.
+
+&RTipo R, carta 5 de 25, Série MOB´s II.&n
+~
+#3854
+carta card mobsII~
+o Card Aglandiir~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 200000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um grande dragão dourado sentado em um trono de ouro olhando para
+uma pequena espada curta em suas mãos.  Pela coroa em sua cabeça pode-se
+notar que este deve ser um nobre entre os dragões.
+
+&RTipo I, carta 6 de 25, Série MOB´s II.&n
+~
+#3855
+carta card mobsII~
+o Card Dragão Fada~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 200000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um pequeno dragão colorido com asas de borboleta em um tom azulado
+pousado sobre um girassol.
+
+&RTipo I, carta 7 de 25, Série MOB´s II.&n
+~
+#3856
+carta card mobsII~
+o Card Draco~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 200000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê uma enorme cabeça de um dragão azul escuro, seu olhar maligno parece
+atravessar a carta e gera em você um frio na espinha.
+
+&RTipo I, carta 8 de 25, Série MOB´s II.&n
+~
+#3857
+carta card mobsII~
+o Card Fafnir~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 200000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um enorme dragão branco ao seu lado pode-se ver um humano que é
+pouco menor que suas garras.
+
+&RTipo I, carta 9 de 25, Série MOB´s II.&n
+~
+#3858
+carta card mobsII~
+o Card Dracolich~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 200000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um amontoado de ossos formando um grande dragão, este dragão está
+além da vida e da morte.
+
+&RTipo I, carta 10 de 25, Série MOB´s II.&n
+~
+#3859
+carta card mobsII~
+o Card Valik~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 200000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um dragão morto-vivo com pedaços podres de carne presos aos seus
+ossos e vermes saindo de seu rosto, deixando sua aparência é muito
+repugnante.
+
+&RTipo I, carta 11 de 25, Série MOB´s II.&n
+~
+#3860
+carta card mobsII~
+o Card Dragão Invisível~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 200000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um grande borrão negro e no meio um par de olhos vermelhos, agora
+você entende que o dragão invísel na verdade se mescla as sombras
+tornando-se 'invisível'.
+
+&RTipo I, carta 12 de 25, Série MOB´s II.&n
+~
+#3861
+carta card mobsII~
+o Card Rainha Dragoneza~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê uma linda dragoneza do tamanho de uma rosa com suas asas douradas
+de borboleta voando por uma linda vila.
+
+&RTipo C, carta 13 de 25, Série MOB´s II.&n
+~
+#3862
+carta card mobsII~
+o Card Tiamat~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você se assusta ao ver um dragão com cinco cabeças uma de cada cor sendo
+negra e azul as da direita vermelha a central e verde e branca as da
+esquerda.  No canto da carta você nota uma pequena e estranha caixa.
+
+&RTipo C, carta 14 de 25, Série MOB´s II.&n
+~
+#3863
+carta card mobsII~
+o Card Ancião Dragão Dourado~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um nobre dragão dourado, suas escamas parecem feitas do mais puro
+ouro sem nem uma falha.  E sua cabeça você dois enormes chifres tornando
+ele mais imponente ainda.
+
+&RTipo C, carta 15 de 25, Série MOB´s II.&n
+~
+#3864
+carta card mobsII~
+o Card Ancião Dragão Prateado~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um dragão prateado emanando uma luz de bondade e paz em sua cabeça
+você nota um coroa feita com seus cinco chifres dando um ar de respeito
+para está magnifica criatura.
+
+&RTipo C, carta 16 de 25, Série MOB´s II.&n
+~
+#3865
+carta card mobsII~
+o Card Ancião Dragão de Bronze~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um dragão com escamas de bronze em um tom de marrom avermelhado,
+você fica hipnotizado pela beleza deste dragão.
+
+&RTipo C, carta 17 de 25, Série MOB´s II.&n
+~
+#3866
+carta card mobsII~
+o Card Dracolich Ancião~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um enorme Dracolich formado de ossos com dois pontos vermelhos onde
+deveriam ficar os olhos ele é o responsável pelo julgamento das almas dos
+dragões.
+
+&RTipo C, carta 18 de 25, Série MOB´s II.&n
+~
+#3867
+carta card mobsII~
+o Card Dragão Fantasma~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um ser horripilante que lembra a forma de um dragão feito de uma
+substância transparênte, ele parece ser um espírito.
+
+&RTipo C, carta 19 de 25, Série MOB´s II.&n
+~
+#3868
+carta card mobsII~
+o Card Ancião Dragão Vermelho~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um dragão com escamas vermelhas como o sangue, pode-se notar pelo
+seu rosto que este dragão é de poucas palavras.
+
+&RTipo C, carta 20 de 25, Série MOB´s II.&n
+~
+#3869
+carta card mobsII~
+o Card Ancião Dragão Azul~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um dragão tão azul quanto os céus de Vitália, com olhos vermelhos
+como o sangue, ele está sobrevoando um deserto.
+
+&RTipo C, carta 21 de 25, Série MOB´s II.&n
+~
+#3870
+carta card mobsII~
+o Card Ancião Dragão Amarelo~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um dragão com escamas amarelas e dois chifres na cabeça, este
+dragão te lembra muito o Ancião Dragão Dourado mais suas escamas não
+brilham como o ouro.
+
+&RTipo C, carta 22 de 25, Série MOB´s II.&n
+~
+#3871
+carta card mobsII~
+o Card Ancião Dragão Verde~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um dragão com escamas verdes sobre um ninho no meio das árvores
+cuidando de seus quatro filhotes.
+
+&RTipo C, carta 23 de 25, Série MOB´s II.&n
+~
+#3872
+carta card mobsII~
+o Card Ancião Dragão Negro~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um dragão com escamas negras como seu coração.  Você olha esta
+criatura e deseja que nunca encontre ela em seu caminho.
+
+&RTipo C, carta 24 de 25, Série MOB´s II.&n
+~
+#3873
+carta card mobsII~
+o Card Ancião Dragão Branco~
+Jogada ao chão encontra-se um carta com um ovo de dragão.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100000 30000 0 0
+E
+carta card~
+Você pode ver no verso da carta um grande ovo de dragão ao virar a carta
+você vê um dragão, um lindo dragão tão branco como a neve e com asas em tom
+de madre-pérola, no meio de sua testa você vê apenas um chifre.
+
+&RTipo C, carta 25 de 25, Série MOB´s II.&n
+~
+#3874
+pochete colecionador~
+a pochete do colecionador~
+Uma linda pochete preta está caída no chão.~
+~
+15 dq 0 0 0 al 0 0 0 0 0 0 0
+20 5 -1 0
+8 500000 50000 10 0
+E
+pochete~
+Você vê uma linda pochete de couro negro com três aberturas para se
+guardar cartas em seus compartimentos.  Esta pochete, mostra que você
+é um grande colecionador de cartas.  Nela está escrito em letras
+vermelhas: Serie Mob I.
+~
+A
+1 2
+A
+17 -6
+A
+19 1
+#3875
+lupa colecionador~
+a lupa do colecionador~
+Uma pequena lupa está refletindo a luz em direção aos seus olhos.~
+~
+12 dq 0 0 0 aor 0 0 0 0 0 0 0
+0 0 0 0
+5 500000 50000 10 0
+E
+lupa~
+Você vê uma lupa de cristal com um lindo e pequeno cabo de madre-perôla,
+com pequenas runas douradas.  Esta lupa é usada para ver os detalhes das
+cartas colecionaveis.  Dizem que está lupa tem propriedas mágicas, será
+verdade?
+~
+A
+4 1
+A
+17 -2
+A
+18 1
+#3876
+luvas colecionador~
+as luvas do colecionador~
+Um par de luvas brilham com uma pequena aura caídas ao chão.~
+~
+11 dq 0 0 0 ah 0 0 0 0 0 0 0
+0 0 0 0
+5 500000 50000 10 0
+E
+luvas~
+Você vê um par de lindas luvas feitas de couro de Mink com uma
+pequena aura mágica que envita o cotado direto com as cartas
+permitindo que as mesmas possam ser manuzeadas sem perigo de
+estraga-las.
+~
+A
+17 -5
+A
+2 1
+A
+18 2
+A
+19 1
+#3877
+olho dragão gema~
+o olho do dragão~
+Uma linda gema vermelha do tamanho de uma maçã está caída no chão.~
+~
+11 dq 0 0 0 ar 0 0 0 0 0 0 0
+0 0 0 0
+10 600000 60000 20 0
+E
+olho~
+Você vê uma linda gema vermelha com um risco negro no meio, assim como
+a Lupa do Colecionador é usado para ver os detalhes das cartas só que
+possui uma aumento maior e mais nitidez das imagens revelando segredos
+contidos nas cartas.
+~
+A
+3 2
+A
+4 2
+A
+17 -5
+A
+18 2
+#3878
+calças dragão~
+as calças com bolsos do dragão~
+Você uma calça com vários bolsos caída.~
+~
+9 dq 0 0 0 af 0 0 0 0 0 0 0
+8 0 0 0
+15 600000 60000 20 0
+E
+calças~
+Estas calças de couro azul são feitas com as escamas de um Dragão
+Azul, muito bonitas e confortáveis ajundam os colecionadores a
+andarem por Vitália atrás de cartas, além disso ela possui vários
+bolsos que podem quardar mais de 100 cartas.
+~
+A
+2 1
+A
+14 25
+A
+18 1
+A
+19 1
+#3879
+medalha dragão bons~
+a medalha do matador de dragões bons~
+Um pequeno pingente de um dragão vermelho está caído aqui.~
+~
+11 djq 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+9 600000 60000 30 0
+E
+medalha~
+Você vê um lindo pinguente de um Dragão Vermelho com suas asas
+abertas, em seu olho pode-se notar duas pequenas esmeraldas verdes.
+Este é o simbolo que você realmente é um grande colecionador cartas
+e matador de dragões.
+~
+A
+17 -5
+A
+18 1
+A
+19 3
+#3880
+medalha dragão maus~
+a medalha do matador de dragões maus~
+Um pequeno pingente de um dragão dourado está caído aqui.~
+~
+11 dkq 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+9 600000 60000 30 0
+E
+medalha~
+Você vê um lindo pinguente de um Dragão Dourado com suas asas
+abertas, em seus olhos pode-se notar dois pequenos diamantes azuis.
+Este é o simbolo que você realmente é um grande colecionador cartas
+e matador de dragões.
+~
+A
+17 -5
+A
+18 1
+A
+19 3
+#3881
+carta card~
+o Card Bracelete de Ossos~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 500000 30000 0 0
+E
+carta card itens~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Na frente
+dela você pode ver um bracelete todo feito de ossos, provavelmente de
+algum Dragão morto, prestando bastante atenção você consegue notar uma
+pedra como nunca viu antes, no centro do bracelete.
+
+&YTipo E, carta 1 de 21, Série Itens I.&n
+~
+#3882
+carta card itens~
+o Card Espada de Geandrias~
+Um card cujo verso emite um brilho dourado foi deixado aqui.~
+~
+8 degq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 500000 30000 0 0
+E
+carta card~
+O verso dessa carta brilha com um intenso brilho &Ydourado&n.  Na frente
+dela você pode ver uma verdadeira obra de arte, feita inteiramente de
+diamante, exceto pela empunhadura que foi feita em ouro.  Também percebe
+que há um grande rubi em sua ponta.
+
+&YTipo E, carta 2 de 21, Série Itens I.&n
+~
+$~

@@ -1,0 +1,86 @@
+#6300
+chave negra~
+uma chave negra~
+Uma simples chave negra foi deixada aqui.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+6300 0 0 0
+1 0 0 0 0
+#6301
+faca afiada~
+uma faca muito afiada~
+Uma faca muito afiada está aqui no chão.~
+~
+5 glmnpt 0 0 0 an 0 0 0 0 0 0 0
+0 8 1 11
+9 1000 2500 0 0
+E
+faca afiada~
+Uma faca afiada, MUITO afiada -- você parece poder cortar o ar ao meio!
+~
+A
+2 2
+A
+18 3
+#6302
+chapéu mago~
+um chapéu de mago~
+Um chapéu azul de mago está aqui no chão.~
+~
+9 fgnoptu 0 0 0 ae 0 0 0 0 0 0 0
+6 0 0 0
+5 20000 10000 0 0
+E
+chapéu mago~
+Um chapéu feito de pano azul.  Parece ser bem confortável.
+~
+A
+3 2
+A
+12 17
+#6303
+chapéu pontífice ornamento cone cabeça~
+um chapéu de pontífice~
+Um ornamento cônico para a cabeça, com símbolos religiosos, está aqui.~
+~
+9 fgmoptu 0 0 0 ae 0 0 0 0 0 0 0
+6 0 0 0
+5 20000 10000 0 0
+E
+chapéu pontífice ornamento cone cabeça~
+Ele foi usado por poderosas figuras seculares.
+~
+A
+4 3
+A
+12 13
+#6304
+viseira negra cavaleiro~
+uma viseira negra de cavaleiro~
+Uma viseira negra se encontra no chão.~
+~
+9 fgmnotu 0 0 0 ae 0 0 0 0 0 0 0
+8 0 0 0
+5 20000 10000 0 0
+E
+viseira negra cavaleiro~
+Uma viseira que protege a cabeça, boa para guerreiros.
+~
+A
+1 1
+A
+5 2
+#6305
+poção densa branca~
+uma densa poção branca~
+Uma densa poção branca foi deixada aqui.~
+~
+10 g 0 0 0 a 0 0 0 0 0 0 0
+25 15 35 19
+9 21000 1000 0 0
+E
+poção densa branca~
+É uma poção nojenta, branca e densa, que se parece com teia líquida e
+tem cheiro de remédio.
+~
+$~

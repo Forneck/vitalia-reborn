@@ -1,0 +1,161 @@
+#3600
+peao negro~
+o Peão da Corte Negra~
+Você vê um peão parado aqui, esperando por ordens.
+~
+O Peão Negro parece com um pequeno cavaleiro mas sem o seu poderoso corcel.
+Sua armadura é brilhante e negra. Ele está pronto para dar a sua vida pela
+Coroa.
+~
+2097350 0 0 0 16 0 0 0 -400 E
+4 14 8 3d3+25 2d3+1
+100 400
+8 8 1
+E
+#3601
+peao branco~
+o Peão da Corte Branca~
+Você vê um peão parado aqui, esperando por ordens.
+~
+O Peão Branco parece com um pequeno cavaleiro, mas sem o seu poderoso corcel. 
+Sua armadura é inteira branca e não tem uma única mancha. Ele está pronto para
+dar sua vida pela Coroa.
+~
+2097350 0 0 0 16 0 0 0 400 E
+4 14 8 3d3+25 2d3+1
+100 400
+8 8 1
+E
+#3602
+torre negra castelo~
+a Torre Negra~
+No canto você percebe uma imensa e negra torre de pedra, sobre rodas.
+~
+A Torre Negra é uma imensa tumba sobre rodas, erguida por mãos humanas.
+Apenas por sua aparência, ela será provavelmente a SUA tumba.
+~
+2326530 0 0 0 16 0 0 0 -600 E
+14 11 5 2d4+250 3d6+3
+1000 20000
+8 8 2
+E
+#3603
+torre branca castelo~
+a Torre Branca~
+No canto você percebe uma imensa e branca torre de pedra, sobre rodas.
+~
+A Torre Branca é uma imensa tumba sobre rodas, erguida por mãos humanas.
+Apenas por sua aparência, ela será provavelmente a SUA tumba.
+~
+2326530 0 0 0 16 0 0 0 600 E
+14 11 5 2d4+250 3d6+3
+1000 20000
+8 8 2
+E
+#3604
+cavaleiro negro~
+o cavaleiro negro~
+Aqui se encontra um magnífico cavaleiro do reino da escuridão.
+~
+O Cavaleiro Negro está aqui, montado sobre o seu cavalo de guerra negro
+como o ébano. Seus olhos flamejam por vingança, por trás de sua viseira.
+~
+2097186 0 0 0 16 0 0 0 -400 E
+9 11 3 3d5+175 2d4+1
+1000 8000
+8 8 1
+E
+#3605
+cavaleiro branco~
+o cavaleiro branco~
+Aqui se encontra um magnífico cavaleiro do reino da luz.
+~
+O Cavaleiro Branco está aqui, montado sobre o seu cavalo de guerra branco
+como o marfim. Seus olhos brilham de alegria, por trás de sua viseira.
+~
+2097186 0 0 0 16 0 0 0 400 E
+9 11 3 3d5+175 2d4+1
+1000 8000
+8 8 1
+E
+#3606
+bispo negro~
+o bispo negro~
+Um bispo está parado aqui, escuro como densas sombras.
+~
+O Bispo Negro parece estar pronto para ajudá-lo a alcançar SUA sepultura,
+assim ele poderá abençoá-lo apropriadamente.
+~
+2097154 0 0 0 16 0 0 0 -500 E
+12 11 5 2d3+175 3d4+6
+1300 13000
+8 8 1
+E
+#3607
+bispo branco~
+o bispo branco~
+Um bispo está parado aqui, envolvido por suave luminosidade.
+~
+O Bispo Branco parece estar pronto a ajudá-lo de qualquer forma possível
+para que assim ele possa atingir a um grau de espiritualidade mais alto.
+~
+2097154 0 0 0 16 0 0 0 500 E
+12 11 5 2d3+175 3d4+6
+1300 13000
+8 8 1
+E
+#3608
+rainha negra~
+a Rainha Negra~
+A Rainha Negra se encontra aqui.
+~
+A Rainha Negra é uma mulher notavelmente bonita, com pele pálida e uma massa
+farta de cabelos escuros, que coroam sua cabeça como se fossem uma nuvem
+negra. Se olhares pudessem matar, você já estaria morto.
+~
+2099238 0 0 0 272 0 0 0 -750 E
+16 8 1 4d6+450 4d4+6
+2000 26000
+8 8 2
+E
+#3609
+rainha branca~
+a Rainha Branca~
+A Rainha Branca se encontra aqui.
+~
+A Rainha Branca é uma mulher extraordinariamente bonita, com pele escura e
+uma massa farta de cabelos claros que moldam sua cabeça como se fossem um
+raio de sol dourado. Para você, isto é seguramente amor a primeira vista.
+~
+2099238 0 0 0 272 0 0 0 750 E
+16 8 1 4d6+450 4d4+6
+2000 26000
+8 8 2
+E
+#3610
+rei negro~
+o Rei Negro~
+O Rei Negro se encontra aqui.
+~
+O Rei Negro é uma figura ameaçadora. Olhando-o assim de perto, você
+facilmente consegue entender o porque dele ser o rei e não você.
+~
+2099254 0 0 0 272 0 0 0 -999 E
+18 8 -1 8d5+700 5d5+8
+6000 34000
+8 8 1
+E
+#3611
+rei branco~
+o Rei Branco~
+O Rei Branco se encontra aqui.
+~
+O Rei Branco é uma figura majestosa e imponente. Olhando-o assim de perto,
+você facilmente consegue entender o porque dele ser o rei e não você.
+~
+2099254 0 0 0 272 0 0 0 999 E
+18 8 -1 8d5+700 5d5+8
+6000 34000
+8 8 1
+E
+$

@@ -1,0 +1,328 @@
+#8301
+loctus besta monstro~
+o Loctus~
+Loctus se ergue aqui, pronto para atacá-lo.
+~
+Um monstro enorme, com toda a pele coberta por escamas, boca repleta de 
+dentes muito afiados e com enormes garras.  Prepare-se para morrer!
+~
+2357298 0 0 0 0 0 0 0 -700 E
+103 -31 -40 100d6+13000 10d9+51
+70000 4000000
+8 8 1
+BareHandAttack: 6
+Dex: 25
+Int: 25
+Wis: 25
+E
+#8302
+guardião loctus~
+o Guardião de Loctus~
+Um enorme guardião está aqui, imóvel.
+~
+Um ser enorme, parecendo mais um paredão.  Um animal que parece ser uma 
+mistura de demônio com dragão, algo terrível.
+~
+2357778 0 0 0 0 0 0 0 -500 E
+105 -32 -42 90d5+15000 12d7+53
+50000 5100000
+8 8 1
+BareHandAttack: 10
+Dex: 25
+Int: 25
+Wis: 18
+Con: 18
+Cha: 18
+E
+#8303
+serpente fogo~
+a Serpente de Fogo~
+Uma enorme serpente cuspindo fogo, avança em sua direção.
+~
+Esta imensa serpente com certeza jamais foi vista antes. Envolvida por imensas
+labaredas de fogo e produzindo um som absolutamente apavorante, causa em você
+um tremendo pavor e sua vontade é sumir de perto dela o quanto antes.
+~
+2357298 0 0 0 0 0 0 0 -400 E
+102 -27 -35 100d3+10000 15d10+48
+50000 1500000
+8 8 2
+BareHandAttack: 4
+Dex: 25
+Int: 25
+E
+#8304
+serpente gelo~
+a Serpente de Gelo~
+Uma enorme serpente, bafejando gelo puro, avança sobre você.
+~
+Ao invés de ficar observando-a, cuidado com a retaguarda!
+~
+2357298 0 0 0 0 0 0 0 -400 E
+102 -27 -35 100d3+10000 15d10+48
+50000 1500000
+8 8 2
+BareHandAttack: 4
+Dex: 25
+Int: 25
+E
+#8305
+serpente areia~
+a Serpente da Areia~
+Um enorme serpente sai da areia, pronta para lhe atacar.
+~
+Uma serpente muito grande, com escamas verdes e olhos avermelhados, parece 
+pronta para destruí-lo.
+~
+2357298 0 0 0 0 0 0 0 -400 E
+102 -27 -35 100d3+10000 15d10+48
+50000 1500000
+8 8 2
+BareHandAttack: 4
+Dex: 25
+Int: 25
+E
+#8306
+morcego~
+um morcego~
+Um pequeno morcego voa em sua direção.
+~
+Não muito maior que um palmo, este morcego de olhos vermelhos parece ser mais 
+perigoso do que aparenta ser.
+~
+2660580 0 0 0 0 0 0 0 -400 E
+50 -10 -15 10d3+1600 6d7+23
+5000 90000
+8 8 1
+E
+#8307
+mago~
+o Mago~
+Um mago está aqui, descansando.
+~
+Um ser não muito grande mas já muito desgastado pelo tempo, que ficou 
+preso aqui.
+~
+2351106 0 0 0 0 0 0 0 500 E
+80 -19 -27 8d12+3000 6d6+35
+10000 210000
+5 5 1
+E
+#8308
+clérigo~
+o Clérigo~
+Um clérigo está aqui, descansando.
+~
+Com longas vestes brancas, este clérigo parece ser bem velho e estar muito 
+cansado.
+~
+2351106 0 0 0 0 0 0 0 500 E
+80 -19 -27 8d12+3000 6d6+35
+10000 210000
+5 5 1
+E
+#8309
+ladrão~
+o Ladrão~
+Um ladrão está aqui, descansando.
+~
+Vestindo somente uma calça e um manto simples, este ladrão parece estar mais 
+fraco que um fido!
+~
+2351106 0 0 0 0 0 0 0 500 E
+80 -19 -27 8d12+3000 6d6+35
+10000 210000
+5 5 1
+E
+#8310
+guerreiro~
+o Guerreiro~
+Um guerreiro está aqui, descansando.
+~
+Usanso uma velha e desgastada armadura, este guerreiro parece muito fraco e 
+faminto.   Ele deve ter passado por momentos horríveis, nesta prisão.
+~
+2351106 0 0 0 0 0 0 0 500 E
+80 -19 -27 8d12+3000 6d6+35
+10000 210000
+5 5 1
+E
+#8311
+nativo nobre~
+um nativo com nobre feições~
+Um nativo com nobre feições está aqui, falando algo que você não entende.
+~
+A única coisa que ele diz é: "Kriu maSekwov??"
+~
+2158676 0 0 0 134285568 0 0 0 400 E
+20 5 -3 3d6+400 6d4+13
+1500 16000
+8 8 1
+BareHandAttack: 13
+StrAdd: 3
+Dex: 18
+Int: 20
+Wis: 13
+Con: 14
+Cha: 15
+E
+#8312
+nativa~
+uma nativa com nobre feições~
+Uma nativa com nobre feições está aqui, falando algo que você não entende.
+~
+A única coisa que ela diz é: "Kriu maSekwov??"
+~
+2158676 0 0 0 134285568 0 0 0 400 E
+20 5 -3 3d6+400 4d4+13
+1500 16000
+8 8 2
+BareHandAttack: 8
+StrAdd: 3
+Dex: 18
+Int: 13
+Wis: 13
+Con: 14
+Cha: 25
+E
+#8313
+nativa criança~
+um pequeno nativo com nobre feições~
+Uma criança com um pequeno adorno na cabeça está brincado por aqui.
+~
+A única coisa que ela diz é: "Kriu maSekwov??"
+~
+2158676 0 0 0 134285568 0 0 0 400 E
+15 8 -2 3d6+400 4d3+11
+1500 13000
+8 8 1
+BareHandAttack: 4
+StrAdd: 3
+Dex: 18
+Int: 13
+Wis: 13
+Con: 14
+Cha: 25
+E
+#8314
+guardiã sentinela nativa~
+a nativa sentinela~
+Uma nativa sentinela está aqui, observando você.
+~
+A única coisa que ela diz é: "Kriu maSekwov??"
+~
+2357266 0 0 0 134285568 0 0 0 400 E
+81 -17 -28 3d6+3400 7d5+39
+5000 240000
+8 8 2
+BareHandAttack: 9
+StrAdd: 3
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 25
+E
+#8315
+guerreira~
+a Guerreira~
+Uma estranha Guerreira, ao perceber sua chegada, olha com esperança para você.
+~
+Que figura explendida!  Com belíssimos olhos negros como a noite e radiantes 
+como estrelas, você pensa que poderia se perder neste olhar que parecem ter
+visto cenas inesquecíveis.
+~
+2351106 0 0 0 0 0 0 0 500 E
+50 -7 -19 5d5+3500 6d6+25
+4000 109400
+8 8 2
+E
+#8316
+maga~
+a Maga~
+Uma estranha Maga está aqui, chorando muito.
+~
+Ao olhar, você vê que que esta pobre mulher está chorando muito.  Ela 
+parece estar realmente desesperada, pois por mais que tente, não 
+consegue dizer nada.
+~
+2351106 0 0 0 0 0 0 0 500 E
+50 -7 -19 5d5+3500 6d6+25
+4000 109400
+8 8 2
+E
+#8317
+clériga~
+a Clériga~
+Uma estranha Cleriga está aqui, desesperada.
+~
+Ao olhar, você vê que que esta pobre mulher está chorando muito.  
+Ela parece estar realmente desesperada, pois por mais que tente, 
+não consegue dizer nada.
+~
+2351106 0 0 0 0 0 0 0 500 E
+50 -7 -19 5d5+3500 6d6+25
+4000 109400
+8 8 2
+E
+#8318
+ladra~
+a Ladra~
+Uma estranha Ladra está aqui, chorando.
+~
+Ao olhar, você vê que que esta pobre mulher está completamente 
+desesperada.
+~
+2351106 0 0 0 0 0 0 0 500 E
+50 -7 -19 5d5+3500 6d6+25
+4000 109400
+8 8 2
+E
+#8319
+druidesa~
+a Druidesa~
+Uma estranha Druidesa está aqui, cabisbaixa.
+~
+Ao olhar, você vê que que esta pobre mulher está muito fraca  
+e chorando muito. Ela parece estar realmente desesperada,
+pois por mais que tente, não consegue dizer nada.
+~
+2351106 0 0 0 0 0 0 0 500 E
+50 -7 -19 5d5+3500 6d6+25
+4000 109400
+8 8 2
+E
+#8320
+bruxa feiticeira~
+a bruxa da aldeia~
+A bruxa da aldeia esta aqui, com um pé de galinha pendurado boca.
+~
+Você só tem vontade de gritar e dizer: "ARGHT!! QUE CRIATURA MEDONHA!!" mas,
+e se ela te pegar fazendo isso??
+~
+2289718 0 0 0 671156224 0 0 0 -900 E
+40 -5 -15 3d6+2700 5d6+23
+15000 85000
+8 8 2
+BareHandAttack: 12
+StrAdd: 3
+Dex: 18
+Int: 25
+Wis: 13
+Con: 14
+Cha: 15
+E
+#8321
+druida~
+o Druida~
+Um druida está aqui, descansando.
+~
+Trajando alguns trapos, este druida possui a estatura de alguém como você, mas 
+não consegue mais se portar em pé.
+~
+2351106 0 0 0 0 0 0 0 500 E
+80 -19 -27 8d12+3000 6d6+35
+10000 210000
+5 5 1
+E
+$

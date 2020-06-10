@@ -1,0 +1,762 @@
+#2700
+regateador~
+um regateador~
+Um homem astuto corre para frente e para trás gritando preços de mercadorias.
+~
+É alguém a quem você não confiaria suas coisas nem mesmo por um segundo.
+Sagaz, com os olhos pequeno e brilhantes movimentando-se nervosamente.  Mãos
+rápidas, sempre prontas para um momento oportuno para roubar algo.  O
+regateador é atualmente um ladrão disfarçado.
+~
+2123924 0 0 0 1572944 0 0 0 -300 E
+14 11 2 1d14+400 1d5+7
+300 5390
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2701
+camponês~
+um camponês~
+Um pobre camponês anda em círculos, meio sem rumo.
+~
+O camponês esteve trabalhando duro nos campos todo dia.  Ele está agora
+tirando um intervalo de todo aquele trabalho.
+~
+2158680 0 0 0 524400 0 0 0 400 E
+10 13 0 1d10+200 1d4+5
+200 2285
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2702
+ferreiro~
+o ferreiro~
+Este grande e bruto homem irá moldar ou concertar qualquer coisa para você.
+~
+Músculos ondulados e as costas largas fazem este homem intimidar a maioria
+das pessoas.  Levantando o martelo ele acerta um novo golpe no metal quente.
+~
+2222098 0 0 0 526400 0 0 0 300 E
+18 16 1 1d18+800 1d6+9
+450 10232
+8 8 1
+BareHandAttack: 9
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2703
+chefe homem~
+o chefe do estábulo~
+Um homem nervoso está aqui, reclamando do tempo.
+~
+O chefe do estábulo é um homem nervoso.  Apesar de seus resmungos, seus
+olhos brilhantes revelam que eles tem um bom coração.  Ele nunca maltratou
+ninguém ou qualquer animal.  No entanto, isso não significa que ele não irá
+lutar bravamente se algum de seus amores estiver em apuros.
+~
+2158850 0 0 0 2160 0 0 0 400 E
+16 13 2 1d16+600 1d6+8
+350 7577
+8 8 1
+BareHandAttack: 2
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2704
+garoto~
+o garoto do estábulo~
+Um esbelto garoto caminha carregando baldes do água para os animais.
+~
+O garoto do estábulo realmente ama seu trabalho.  Ele fragilmente se importa
+com os animais, os quais amam ele.  Cabelos castanhos e olhos de cor azul
+escuro honram sua aparência.  Bronzeado do trabalho ao sol, é um prazer
+tê-lo à volta.
+~
+2158740 0 0 0 524400 0 0 0 200 E
+10 12 1 1d10+200 1d4+5
+200 2285
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2705
+mulher coquete~
+uma senhora coquete~
+Uma mulher vestindo roupas extravagantes e chamativas, acena para você.
+~
+Não exatamente bonita e nem feia, esta senhora tem modos afetados demais
+para alguém como ela.
+~
+2289792 0 0 0 1640528 0 0 0 200 E
+11 13 3 1d11+250 1d4+5
+225 2914
+8 8 2
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2706
+nobre~
+um nobre~
+Um nobre caminha adiante.
+~
+Carregando arrogância, o nobre o ridiculariza conforme você se aproxima
+dele.  Ele é realmente rico, especialmente quando você dá uma rápida olhada
+na rechonchuda carteira que ele carrega.  Ele deve ter grande crédito na
+guarda do castelo para estar passeando com tanto dinheiro.
+~
+2154640 0 0 0 2160 0 0 0 0 E
+14 12 1 1d14+400 1d5+7
+300 10390
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2707
+guarda real~
+o guarda real~
+Um guarda esplendidamente vestido está em pé aqui.
+~
+Não seja enganado pelo uniforme do guarda real.  Ele é um matador letal e
+treinado.  Ele está em guarda, atento para qualquer problema.
+~
+2161984 0 0 0 592240 0 0 0 100 E
+17 10 0 1d17+700 1d6+8
+400 8844
+8 8 0
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2708
+guarda atento sentinela~
+um sentinela atento~
+Um Sentinela muito atento está sentado aqui.
+~
+Um Sentinela está sentado aqui olhando alguns papéis aparentemente
+importantes.  Ele encara você com cara de poucos amigos, ao lhe encontrar.
+~
+2160898 0 0 0 524656 0 0 0 200 E
+34 15 0 2d14+800 2d5+21
+300 25390
+6 6 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2709
+carcereiro~
+o carcereiro~
+Um carcereiro repentinamente aparece perto de você, espada em punho!!
+~
+Um carcereiro vestido todo de preto aparece repentinamente ao seu lado com a
+espada em punho!!
+~
+2220822 0 0 0 1640768 0 0 0 -200 E
+15 15 0 1d15+500 1d5+7
+325 6427
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2710
+torturador~
+o torturador~
+Um torturador está aqui rindo maldosamente.
+~
+Um torturador está aqui, rindo maldosamente conforme considera toda graça
+que voê e ele terão.
+~
+2160818 0 0 0 1575280 0 0 0 -300 E
+25 11 0 1d15+500 1d5+7
+325 6427
+8 8 0
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2711
+torturador~
+o torturador veterano~
+O Sr. Torturador está aqui esperando sua próxima vítima...VOCÊ!
+~
+O Sr. Torturador está aqui rindo maldosamente, esperando sua próxima
+vítima...VOCÊ!
+~
+2160818 0 0 0 1837424 0 0 0 -700 E
+27 16 1 1d17+750 1d6+8
+400 8844
+8 8 1
+BareHandAttack: 13
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2712
+mestre torturador~
+o Mestre Torturador~
+O Mestre Torturador espera aqui.
+~
+O Mestre Torturador espera aqui, com muito sangue gotejando em sua mão.
+~
+2160818 0 0 0 1902960 0 0 0 -1000 E
+40 7 -1 1d19+700 2d3+9
+500 29744
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2713
+guarda carcerário~
+o guarda carcerário~
+O Guarda Carcerário está aqui, as chaves para a sua sala nas mãos dele.
+~
+O guarda carcerário, vestido com um longo manto preto está aqui.  Ele segura
+as chaves para o seu quarto.
+~
+2158752 0 0 0 591920 0 0 0 750 E
+20 8 0 1d20+500 2d3+10
+550 13385
+8 8 2
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2716
+mamãe ursa~
+a mamãe ursa~
+A mamãe ursa dorme aqui, perto de sua cria.
+~
+Roncando alto, ela vira de um lado para outro, como se estivesse tendo um
+pesadelo.  Seria um pesadelo para você se ela acordasse e o visse perto de
+sua cria, já que ela tem cinco garras de três polegadas em cada pata.
+~
+2160658 0 0 0 65840 0 0 0 1000 E
+30 5 3 1d15+800 1d5+7
+0 15427
+8 8 2
+BareHandAttack: 8
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2717
+filhote urso~
+um filhote de urso~
+Um pequeno filhote dá alegres cambalhotas enquanto sua mãe dorme aqui perto.
+~
+Um maço de pelos alegre, o filhote não sente medo.  Você sorri conforme ele
+dá saltos e cambalhotas, brincando com sua irmã
+~
+2154642 0 0 0 65584 0 0 0 500 E
+10 12 3 1d10+200 1d4+5
+0 2285
+8 8 2
+BareHandAttack: 8
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2718
+corça~
+uma corça~
+Uma corça está aqui, comendo.
+~
+Astuta e saudável, a corça é rápida para correr a menor sinal de perigo.
+Ela continua a mordiscar a exuberante grama, mantendo suas orelhas alerta a
+qualquer barulho nãoa amigável.
+~
+2154624 0 0 0 48 0 0 0 100 E
+9 12 3 1d9+175 1d3+4
+0 1747
+8 8 2
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2719
+cinza raposa~
+uma raposa cinza~
+Uma raposa caminha silenciosamente, seguindo sua presa.
+~
+Pêlo cinza, orelhas de extremidade branca, e um rabo ocupado dá a essa
+criatura a sua identidade.  Ela olha para você durante um curto tempo e
+então continua a seguir sua presa antes que o rastro fique frio.
+~
+2154624 0 0 0 48 0 0 0 100 E
+7 11 5 1d7+125 1d2+3
+0 920
+8 8 1
+BareHandAttack: 8
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2720
+pássaro~
+um pássaro~
+Um pequeno pássaro salta ao redor no chão e então voa
+~
+Erguendo a cabeça e olhando para você, ela sai voando.  Pousando a uma curta
+distância de você, ela repete seu movimento bobo.
+~
+2154624 0 0 0 48 0 0 0 200 E
+6 14 6 1d6+70 1d2+3
+0 621
+8 8 1
+BareHandAttack: 8
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2721
+borboleta~
+uma borboleta~
+Uma pequena e colorida borboleta voa graciosamente.
+~
+Ela está ocupada no trabalho de procurar por néctar doce.  Ela apenas para
+um momento para checar voce, então ela voa alegre novamente.
+~
+2154624 0 0 0 48 0 0 0 200 E
+6 17 7 1d6+70 1d2+3
+0 621
+8 8 0
+BareHandAttack: 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2722
+porco~
+um porco enlameado~
+Um porco alegremente coberto com lama ronca alegremente.
+~
+Pequeno e arredondado, ele rola na lama.  Roncando alegremente, parece que
+ele não se preocupa com o mundo
+~
+2154624 0 0 0 48 0 0 0 400 E
+7 15 7 1d7+125 1d2+3
+0 1920
+8 8 0
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2723
+vaca~
+uma vaca preguiçosa~
+Uma vaca ruminando descansa no chão.
+~
+A vaca não é diferente de qualquer outra vaca que você já viu.  Estúpida e
+preguiçosa, ela descansa aqui, esperando pelo garoto do estábulo para
+alimentá-la.
+~
+2154624 0 0 0 48 0 0 0 200 E
+8 12 7 1d8+150 1d3+4
+0 7293
+8 8 2
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2724
+cavalo~
+um cavalo muito forte~
+Um cavalo muito forte está aqui, cochilando.
+~
+Musculoso e grande, o cavalo se destaca dos outros e está aproveitando seu
+bem merecido descanso, depois de ter trabalhado duro todo o dia, nos campos.
+~
+2154624 0 0 0 48 0 0 0 200 E
+10 13 5 1d10+200 1d4+5
+0 2285
+8 8 1
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2725
+cavalo~
+um cavalo de guerra~
+Um cavalo com uma cicatriz de guerra está aqui, impaciente.
+~
+Cicatrizes das incontáveis batalhas decoram o peito do cavalo.  Sua pata
+firmemente fincada no chão, parece ansiosa para estar livre novamente.
+~
+2154624 0 0 0 2352 0 0 0 200 E
+12 13 4 1d12+300 1d4+6
+0 3638
+8 8 2
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2726
+padeiro empedernido~
+o padeiro empedernido~
+Um empedernido padeiro está aqui, vendendo as suas recentes gostosuras assadas.
+~
+Ele parece muito cansado.  E depois de todo o serviço, ele ainda tem que
+acordar bem cedo, para assim ele poder vender os maravilhosos pães que você
+ama comer.
+~
+2158738 0 0 0 48 0 0 0 300 E
+22 9 -2 1d22+1400 2d3+11
+650 17068
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2727
+jovem escudeiro~
+um escudeiro~
+Um jovem ambicioso escudeiro está aqui.
+~
+O jovem escudeiro espera seu mestre voltar.  Conforme ele espera, ele está
+ocupado polindo a armadura do cavaleiro.  Algum dia este jovem espera entrar
+para o nível da nobreza e possibilitar a entrada nas festividades lá fora.
+~
+2158738 0 0 0 48 0 0 0 100 E
+9 12 6 1d9+175 1d3+4
+175 1747
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2728
+vendedor~
+o vendedor de armas~
+Um homem está sentado atrás do balcão, girando uma adaga distraído.
+~
+O vendedor de armas eh alto, magro e tem uma barbicha bem aparada.  Ele foi
+um homem de aluguél que viajou por todo o reino.  Ele está cansado e aplica
+seu extenso conhecimento em um novo trabalho...  Negócios.
+~
+2158738 0 0 0 48 0 0 0 300 E
+20 8 0 1d20+1000 2d3+10
+550 13385
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2729
+fabricante mulher~
+a fabricante de armaduras~
+Uma mulher com uma cicatriz na face está ocupada, mexendo com anéis de ferro.
+~
+Ela que já foi uma reconhecida guerreira, havia parado de fazer armaduras
+depois de um acidente monstruoso que a deixou cega de um olho.  Foi assim
+que ela obteve aquela feia e comprida cicatriz na face.
+~
+2158738 0 0 0 1900592 0 0 0 200 E
+30 7 -5 1d19+900 2d3+9
+500 11744
+8 8 2
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2730
+mulher~
+a mulher do padeiro~
+Uma mulher sorridente cumprimenta-o ao entrar na sala.
+~
+Esta é a mulher à quem pertence o crédito de fazer as delicias assadas que
+vê aqui.  Seu marido apenas vende e supervisiona outros aspectos da padaria.
+~
+2158738 0 0 0 48 0 0 0 200 E
+21 8 3 1d21+1200 2d3+10
+600 15159
+8 8 2
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2731
+rei jorus~
+O Rei Jorus~
+Um homem imponente vestindo um manto real anda pela sala.
+~
+Ele é um bom e generoso home que governou Midantra por um longo tempo.  Sob
+seu governo, o reinado viu nada além de prosperidade...  Até agora.
+Recentes relatos de falhas na colheita e doença espreitando as terras têm
+pesado bastante em sua mente ultimamente.
+~
+2358544 0 0 0 262512 0 0 0 500 E
+60 -5 -10 8d23+3900 7d6+30
+40000 101028
+8 8 1
+Dex: 13
+Int: 13
+Wis: 13
+E
+#2732
+rainha elsa~
+a Rainha Elsa~
+Uma mulher de graciosidade e beleza aparece e cumprimentá-o gentilmente
+~
+A Rainha Elsa é casada e permaneceu fiel a seu marido por doze anos.  Uma
+boa e generosa mulher, ela é rápida em oferecer uma mão a quem precisa.  Ela
+tem sido o gênio por trás da política da corte, enquanto seu marido manuseia
+os negócios externos aos do castelo.
+~
+2358544 0 0 0 262512 0 0 0 500 E
+50 0 -8 3d23+2800 5d4+19
+30000 91028
+8 8 2
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2733
+mercenário~
+um mercenário~
+Um mercenário vaga procurando por maneiras de fazer dinheiro fácil.
+~
+O mercenário é mai um ladrão do que um guerreiro.  Ele pode lutar bem para
+salvar sua pele, mas ele prefere deixar outro lutar.  Depois de tudo é fácil
+saquear um corpo do que saquear uma pessoa viva.
+~
+2158770 0 0 0 1900592 0 0 0 -500 E
+10 13 4 1d10+200 1d4+5
+200 2285
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2734
+alguma coisa mulher~
+Alguma coisa~
+Alguma coisa escapa por entre a escuridão.
+~
+Esta mulher move-se silenciosamente, ela provavelmente pode caminhar por uma
+sala cheio de folhas secas e se aproximar de alguém sem ser notada.  Tal
+habilidades tem sido proveitosa para ela em seus assaltos.
+~
+2355332 0 0 0 1902704 0 0 0 -600 E
+11 13 4 1d11+250 1d4+5
+225 2914
+8 8 2
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2735
+jovem~
+uma jovem~
+Uma jovem ambiciosa escudeira está aqui.
+~
+Uma alta garota está aqui, ocupada afiando armas. Uma das poucas a ocupar o 
+tradicional nível dominado por homens, ela não parece amedrontada pela tarefa 
+à sua frente. Na verdade, ela aceita e aproveita o desafio.
+~
+2158738 0 0 0 48 0 0 0 200 E
+9 2 4 1d9+175 1d3+4
+175 11747
+8 8 2
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2736
+treinador grisalho veterano~
+o treinador~
+Um grisalho veterano de muitas guerras olha assim que você entra na sala.
+~
+Agitando a mão cheia de sangue, ele lhe dá as boas vindas, da entrada de sua
+tenda.  Rapidamente mapeando ao seu redor, ele percebe que você não está
+precisando de atenção médica e volta a limpar intrumentos cirúrgicos.  Forte
+e de mãos firmes, mostra que o Treinador não é especialista apenas em itens
+cirúrgicos, mas com armas também.
+~
+2158738 0 0 0 262192 0 0 0 300 E
+24 4 4 1d14+400 1d5+7
+300 5390
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2737
+paladina~
+uma linda paladina~
+Uma mulher alta e flexível está sentada em sua mesa, organizando eventos do dia.
+~
+A mais poderosa guerreira de toda a Midantra não é o que alguém esperava que
+fosse, segundo mencionavam as lendas.  Para iniciantes, ela não é cruel nem
+faz o tipo que está entediada por causa de tantas lutas.  Ela é agradável e
+suas habilidades em batalha é que a mantiveram intacta e linda.  Um punhal e
+uma adaga estão em seu cinto, assim como uma espada de lamina longa descansa
+em pé, ao lado da mesa.
+~
+2358544 0 0 0 262512 0 0 0 500 E
+40 0 -5 1d16+1000 6d5+23
+350 108334
+6 6 2
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2738
+cavaleiro branca rosa~
+o Cavaleiro da Rosa Branca~
+Um cavaleiro em uma brilhante armadura branca sorri assim que entra na tenda.
+~
+Um querido amigo da Paladina, ele viajou de longe para ajudar a organizar os
+Campos de Treinamento.  Ainda que não seja um homem alto nem musculoso, ele
+se move com a graciosidade de um gato.  Seus olhos observam tudo que se move
+ao redor.  Um veterano de várias batalhas, ele não conhece o medo.
+~
+2358544 0 0 0 368 0 0 0 500 E
+30 5 -1 1d15+500 1d5+7
+325 37069
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2739
+homem~
+um homem de fama~
+Um homem guiado pela sede de sangue salta em sua direção!
+~
+Um tipo sombrio que nenhum confia completamente, o homem de fama irá fazer
+qualquer coisa que puder para ganhar fama e atenção.  O que ele faz
+frequentemente nem sempre é bom.  Mesmo que as pessoas o notem, ele sempre
+irá fazer algo meio duvidoso...
+~
+2160816 0 0 0 1900656 0 0 0 -200 E
+30 12 4 1d12+300 1d4+6
+250 13638
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2740
+distraído cavaleiro~
+um cavaleiro distraído~
+Um cavaleiro, novo nessas terras, assume posição defensiva conforme se aproxima.
+~
+Ouvindo sobre os Campos de Treinamente para cavaleiros, ele veio de longe
+para chegar aqui.  Com o grande objetivo de ficar famoso um dia, ele
+aprimora suas habilidades.
+~
+2158738 0 0 0 48 0 0 0 300 E
+13 14 4 1d13+350 1d5+6
+275 4462
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2741
+sanguessuga~
+uma sanguessuga~
+Uma imensa criatura feia nada para a superfície e repentinamente mergulha.
+~
+Esta sanguesuga é maior que a maioria.  Alcançando o tamanho de três pés,
+isto não é algo que você gostaria que grudasse na sua perna, sugando todo
+seu sangue!
+~
+2158752 0 0 0 262192 0 0 0 -100 E
+10 13 3 1d10+200 1d4+5
+0 2285
+8 8 0
+BareHandAttack: 16
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2742
+monstro~
+o monstro do canal~
+Um desajeitado monstro surge das turvas profundezas arremessando-se em sua direção.
+~
+Um réptil gigantesco, o mostro do canal é feito para a vida no fosso.
+Grandes olhos ajudam-no a ver na escuridão e uma poderosa calda o empurra
+pela água com facilidade.  Quatro braços musculosos e duas pernas fazem esse
+monstro poderoso em uma luta.
+~
+2158752 0 0 0 264304 0 0 0 -200 E
+15 5 2 1d15+500 1d5+12
+0 36427
+8 8 1
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2743
+cervo~
+um nobre cervo~
+Um nobre cervo bufa conforme você se aproxima dele.
+~
+O cervo ostenta um grande chifre de doze pontos.  Tendo sido caçado por esse
+chifre, o cervo se tornou desconfiado quando se trata de seres humanos.
+~
+2154624 0 0 0 48 0 0 0 100 E
+11 13 4 1d11+250 1d4+5
+0 6914
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2744
+supervisor geral Rizzo~
+Rizzo, o supervisor geral da loja~
+Rizzo está próximo de sua carroça, vendendo suas mercadorias aqui.
+~
+Rizzo é um veterano aposentado do exército, que retornou à sua tradição
+familiar de vender mercadorias variadas.  Apesar de já ter um pouco de
+idade, sua força e graça ainda são bem evidentes em seus movimentos.
+~
+2154624 0 0 0 4194352 0 0 0 400 E
+30 -10 -14 1d50+3000 4d5+25
+2500 138481
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#2745
+cavaleiro negro espinho~
+O Cavaleiro do Espinho Negro~
+Rangendo os rentes raivosamente, um cavaleiro vestido de preto convida-o a lutar!
+~
+Banido para sempre da irmandade dos Paladinos por ter cometido horríveis
+crimes contra o reino, o Cavaleiro do Espinho Negro carrega muita raiva
+dentro de si.  O vermelho em seus olhos mostra que ele vive pela vontade e
+prazer de matar a qualquer custo.
+~
+2349104 0 0 0 1902848 0 0 0 -1000 E
+45 6 -1 1d15+500 1d5+7
+325 27069
+8 8 1
+BareHandAttack: 12
+Dex: 12
+Int: 13
+Wis: 13
+E
+$

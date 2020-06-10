@@ -1,0 +1,963 @@
+#15701
+O Campo Aberto~
+   Nossa, que diferen�a!  Depois de sair de uma floresta t�o densa e escura,
+voc� chega num enorme campo.  A luz do sol quase lhe cega, t�o desacostumado
+� luz voc� estava.  Bem ao longe, voc� avista uma pequena ponte, e al�m
+dela, um castelo.
+~
+157 4 0 0 0 2
+D2
+Voc� v� uma ponte que aparenta ser bastante velha... Talvez n�o seja uma 
+boa id�ia atravess�-la.
+~
+ponte~
+0 -1 15702
+D3
+Uma escura floresta.
+~
+floresta~
+0 -1 6142
+S
+#15702
+A Ponte~
+   "Oh-oh... Essa ponte n�o parece ser muito segura..." - voc� pensou.  E 
+estava certo.  Mas mesmo assim tentou atravess�-la...  Tsc tsc...  Agora 
+voc� est� a�, pendurado no que sobrou dela...  Seus dedos est�o doendo pois 
+o sol � muito forte e a corda est� quente.  Se gritar por socorro, ningu�m 
+ir� te ouvir...  S� lhe resta subir, antes que os crocodilos do fosso pouco 
+abaixo de voc� lhe comam vivo...
+~
+157 131076 0 0 0 9
+D0
+Voc� pode ver um grande campo aberto.
+~
+campo~
+0 -1 15701
+D1
+Voc� ouve v�rias sons que lembram um barulho de mordidas. Voc� v� algumas 
+escamas negras se mexendo.
+~
+~
+0 -1 15703
+D2
+Uma pra�a pode ser vista a sul.
+~
+~
+0 -1 15704
+S
+#15703
+O Fosso dos Crocodilos~
+   Ooops...  Seus dedos n�o ag�entaram e voc� escorregou.  Os crocodilos 
+est�o lhe devorando brutalmente.  Lhe arrancam os bra�os, as pernas, a 
+cabe�a, tudo.  Numa hora dessas voc� est� morto, mas sua alma ainda continua 
+l�, vendo seu corpo ser estra�alhado.  � uma cena horrorosa, e � preciso ter 
+um est�mago muito forte, para ag�entar v�-la.
+~
+157 2 0 0 0 0
+S
+#15704
+A Pra�a~
+   Ufa!  Depois de 4 longas e cansativas horas, voc� finalmente conseguiu, 
+digamos, escalar a ponte.  Parab�ns!  Agora voc� se encontra numa pequena 
+pra�a, na frente de um imenso castelo.  Voc� v� o castelo atrav�s das �guas 
+de um chafariz que se encontra na sua frente. 
+~
+157 131136 0 0 0 1
+D0
+Voc� v� uma ponte que aparenta ser bastante velha... talvez n�o seja uma boa 
+id�ia atravess�-la.
+~
+~
+0 -1 15702
+D2
+Voc� v� um lindo chafariz jorrando �gua, talvez seja um bom lugar para matar 
+sua sede. 
+~
+~
+0 -1 15705
+S
+#15705
+O Centro da Pra�a~
+   Voc� se encontra no centro da pra�a e pode ver a sua frente um chafariz.
+  � lindo.  E jorra uma �gua t�o cristalina que a imagem do castelo fica t�o 
+n�tida quanto se ele existisse dentro do Chafariz.  Ele � da forma de uma 
+linda ave de fogo, a qual voc� nunca viu.  O castelo est� � sua frente e 
+para chegar at� ele, voc� ter� que subir uma escadaria.
+~
+157 131136 0 0 0 1
+D0
+Voc� consegue ver uma pra�a a norte.
+~
+~
+0 -1 15704
+D1
+Voc� v� uma longa escadaria. 
+~
+~
+0 -1 15706
+D3
+Voc� v� uma longa escadaria
+~
+~
+0 -1 15707
+S
+#15706
+A Escadaria~
+   S�o feitas de pedra, e aparentam ter mais de 100 anos.  Possuem cerca de 
+100 degraus, o que lhe faz ficar extremamente cansado.  Mas, enquanto para 
+para descansar, voc� percebe que em certos locais dessa escadaria tamb�m 
+existe um desenho da mesma ave de fogo do chafariz...  "Que ave ser� 
+essa?" - voc� se pergunta...
+~
+157 131136 0 0 0 1
+D1
+Voc� v� uma chafariz jorrando �gua para todos os lados.
+~
+~
+0 -1 15705
+D8
+Voc� v� uma grande porta de madeira, parece ser a entrada do Castelo.
+~
+~
+0 -1 15708
+S
+#15707
+A Escadaria~
+   S�o feitas de pedra, e aparentam ter mais de 100 anos.  Possuem cerca de 
+100 degraus, o que lhe faz ficar extremamente cansado.  Mas, enquanto p�ra 
+para descansar, voc� percebe que em certos locais dessa escadaria tamb�m 
+existe um desenho da mesma ave de fogo do chafariz...  Que ave ser� 
+essa? - voc� se pergunta...
+~
+157 131136 0 0 0 1
+D3
+Um chafariz jorra �gua para todos os lados. 
+~
+~
+0 -1 15705
+D9
+Voc� v� uma grande porta, guardando a entrada do Castelo.
+~
+~
+0 -1 15708
+S
+#15708
+A Porta~
+   Voc� chegou na entrada principal do castelo.  Na grande porta que se     
+encontra � sua frente, est� escrito: "Bem Vindo Ao Castelo de Flyre!"  Ah..
+  Finalmente voc� descobriu nome do castelo.  Os guardas barram caminho 
+para a entrada do castelo.  Voc� tenta conversar, mas nem lhe olhar nos 
+olhos eles olham...
+~
+157 131141 0 0 0 1
+D2
+Um Imenso Sal�o te aguarda a sul.
+~
+porta~
+1 -1 15709
+D6
+Voc� v� uma escadaria.
+~
+~
+0 -1 15706
+D7
+Voc� v� uma escadaria.
+~
+~
+0 -1 15707
+S
+#15709
+O Imenso Sal�o~
+   Depois de uma luta e tanto voc� consegue entrar no castelo!  Se encontra 
+agora num grande sal�o.  Aqui o que n�o falta � luxo...  E sil�ncio.  
+Nenhuma palavra, nenhum ru�do (a n�o ser os seus) s�o ouvidos.  O mais 
+estranho � que existem mais duas pessoas aqui: O Rei e a Rainha, que n�o te 
+olharam nem mesmo por um instante.  Parece que n�o te viram. Mas voc� est� 
+na frente deles!  Como � poss�vel?...
+~
+157 131145 0 0 0 0
+D0
+A porta do castelo se encontra a norte daqui.
+~
+porta~
+1 -1 15708
+D1
+~
+~
+0 -1 15739
+D2
+~
+~
+0 -1 15711
+D3
+~
+~
+0 -1 15710
+D4
+Voc� v� uma imensa escada, talvez a maior que voc� j� tenha visto.
+~
+~
+0 -1 15714
+S
+#15710
+Um Corredor~
+   � um corredor como outro qualquer.  A n�o ser pelo sil�ncio...  N�o � um 
+sil�ncio comum...  � um sil�ncio assustador, que lhe faz tremer at� os p�s.  
+No final do corredor se encontra uma sala.  Quem sabe voc� n�o encontre 
+algu�m l�.  E que n�o seja cego, de prefer�ncia.
+~
+157 393545 0 0 0 0
+D1
+~
+~
+0 -1 15709
+D3
+~
+porta escrit�rio~
+1 -1 15712
+S
+#15711
+Um Corredor~
+   � um corredor como outro qualquer.  A n�o ser pelo sil�ncio...  N�o � um 
+sil�ncio comum...  � um sil�ncio assustador, que lhe faz tremer at� os p�s.  
+No final do corredor se encontra uma sala.  Quem save voc� n�o encontre 
+algu�m l�, e que n�o seja cego, de prefer�ncia.
+~
+157 393545 0 0 0 0
+D0
+~
+~
+0 -1 15709
+D2
+Algo impede que sua vis�o fique n�tida. Estranho...
+~
+~
+0 -1 15713
+D3
+~
+passagem secreta~
+0 15715 15719
+S
+#15712
+O Escrit�rio~
+   Pap�is, pap�is e mais pap�is.  Todos espalhados pela pequena sala.  No 
+meio da papelada, voc� encontra uma linda mulher, de cabelos loiros e olhos 
+da cor do mel.  Voc� vai chegando cada ver mais perto da mo�a e...  Ahh! Ela 
+tamb�m n�o lhe v�! N�o lhe ouve!  N�o percebe sua presen�a!  O que ser� isso?  
+O que est� acontecendo com esse lugar?  Ser� que seu destino ser� igual ao 
+dos monarcas ou dessa mo�a?  Voc� tem duas op��es: pode fugir daqui, ou 
+continuar explorando o lugar.
+~
+157 393321 0 0 0 0
+D1
+~
+porta~
+1 -1 15711
+S
+#15713
+A Cozinha~
+   � uma cozinha muito bem limpa.  N�o se v� nada sujo e a comida cheira
+bem.  Nham nham...  O Chefe da Cozinha � bem competente.  Est� tudo no seu
+devido lugar.  Estranhamente, ele esta como os outros habitantes desse
+castelo: im�vel!  Mas, se n�o foi ele, quem fez toda essa comida?  Voc�
+avista uma porta aberta nos fundos. 
+~
+157 131145 0 0 0 0
+D0
+~
+~
+0 -1 15711
+D1
+Por mais que se esfor�e, voc� n�o consegue distinguir a forma desse lugar.
+~
+~
+0 -1 15718
+D2
+~
+~
+0 -1 15726
+S
+#15714
+A Escada Principal~
+   � uma escada das mais luxuosas.  Existem alguns desenhos nela...  � o 
+mesmo desenho que aparece no chafariz e na porta!  Que ave ser� essa?  E sua 
+curiosidade aumenta a cada passo que voc� d�.
+~
+157 131145 0 0 0 0
+D5
+Voc� pode ver parte do Imenso Sal�o.
+~
+~
+0 -1 15709
+D7
+~
+~
+0 -1 15727
+D8
+~
+~
+0 -1 15730
+S
+#15715
+Um Corredor Escuro~
+   Finalmente voc� encontra com o ch�o, aqui � escuro, assustador e cheira 
+mal.  A sa�da foi misteriosamente bloqueada, e s� resta seguir em frente.
+~
+157 131145 0 0 0 0
+D3
+Voc� n�o v� nada, apenas a escurid�o.
+~
+~
+0 -1 15716
+S
+#15716
+Um Corredor Escuro~
+   Voc� n�o consegue enxergar nada, algo parece ter bloqueado a passagem de 
+onde voc� veio, e s� resta seguir em frente nessa escurid�o.
+~
+157 131145 0 0 0 0
+D3
+Voc� n�o v� nada, apenas a escurid�o.
+~
+~
+0 -1 15717
+S
+#15717
+Um Corredor Escuro~
+   Voc� n�o consegue enxergar nada, algo parece ter bloqueado a passagem de 
+onde voc� veio, e s� lhe resta seguir em frente nessa escurid�o.
+~
+157 131145 0 0 0 0
+D2
+Finalmente voc� encontrou um foco de luz depois de tanta escurid�o.
+~
+~
+0 -1 15720
+S
+#15718
+O Por�o~
+   � tudo muito sujo por aqui e aparentemente do nada, um grande livro
+come�a a produzir uma fraca luz, talvez com suas �ltimas for�as.
+~
+157 217 0 0 0 0
+D3
+Ahh sim! Voc� lembra que para essa dire��o fica a Cozinha, pela qual voc� 
+acabou de passar.
+~
+~
+0 -1 15713
+S
+#15719
+A Passagem Secreta~
+   Ah�!  Voc� sabia que deveria ter alguma passagem secreta naquele 
+corredor.
+   Depois de alguma procura voc� finalmente achou.  E est� caindo, caindo...  
+N�o v� nem sente nada, mas voc� sabe de uma coisa: uma hora voc� vai 
+encontrar o ch�o.  E nesse hora, voc� espera encontrar a resposta para todo
+o mist�rio que invadiu seus pensamentos.
+~
+157 131145 0 0 0 0
+D3
+~
+~
+0 -1 15715
+S
+#15720
+A Pris�o~
+   Argh!  Quanto mais voc� anda, mais nojo voc� sente.  Agora a cena � de 
+v�rias celas, com muitos ossos dentro delas.  Na parte de cima do castelo, as 
+pessoas estavam im�veis, mas pareciam estar "meio vivas"...  Essas n�o.  As 
+pessoas (?) est�o mortas!  Parece que esse lugar foi esquecido de sua 
+exist�ncia.  � um lugar horrendo, que voc� faz quest�o de n�o voltar nunca 
+mais.
+~
+157 131145 0 0 0 0
+D0
+Apenas a escurid�o.
+~
+~
+0 -1 15717
+D2
+Voc� tenta, mas n�o consegue ver.
+~
+~
+0 -1 15721
+D3
+Voc� n�o consegue enxergar nada.
+~
+~
+1 15703 15722
+S
+#15721
+A Pris�o~
+   Argh! Quanto mais voc� anda, mais nojo voc� sente.  Agora a cena � de 
+v�rias celas, com muitos ossos dentro delas.  Na parte de cima do castelo, 
+as pessoas estavam im�veis, mas pareciam estar meio vivas...  Essas n�o.  As 
+pessoas (?) est�o mortas!  Parece que esse lugar foi esquecido de sua 
+exist�ncia.  � um lugar horrendo, que voc� faz quest�o de n�o voltar nunca 
+mais.
+~
+157 131145 0 0 0 0
+D0
+Voc� n�o consegue ver nada. Talvez seja a dist�ncia.
+~
+~
+0 -1 15720
+D1
+Uma esp�cie de Cela... Sim, � isso que voc� v�.
+~
+~
+1 15703 15723
+D3
+Uma esp�cie de Cela... Sim, � isso que voc� v�.
+~
+~
+1 15703 15724
+S
+#15722
+A Cela~
+   Ossos, ossos e mais ossos.  Pela posi��o, voc� julga que eles estavam se 
+rastejando e gritando, provavelmente por �gua e comida.
+~
+157 393289 0 0 0 0
+D1
+Voc� n�o consegue enxergar nada.
+~
+grade cela~
+1 15703 15720
+S
+#15723
+A Cela~
+   Ossos, ossos e mais ossos.  Pela posi��o, voc� julga que eles estavam se 
+rastejando e gritando, provavelmente por �gua e comida.
+~
+157 393289 0 0 0 0
+D3
+Voc� n�o consegue enxergar nada. 
+~
+grade cela~
+1 15703 15721
+S
+#15724
+A Cela~
+   Ossos, ossos e mais ossos.  Pela posi��o, voc� julga que eles estavam se 
+rastejando e gritando, provavelmente por �gua e comida.
+~
+157 131145 0 0 0 0
+D1
+~
+grade cela~
+1 15703 15721
+D9
+~
+grade cela~
+0 15707 15725
+S
+#15725
+A Cela Isolada~
+   Finalmente voc� encontra Flyre, a Ave do Fogo.  Ela � totalmente feita de 
+fogo, e voc� n�o tem nem coragem de chegar perto.  Infelizmente a cela � 
+pequena, e ficar longe dela � quase imposs�vel.  Voc� faz de tudo para que 
+ela n�o te perceba, e quando se d� conta, uma sensa��o de tristeza e de 
+des�nimo lhe invade o corpo, e vem � voc� a imagem de um quadro com seu 
+nome, desenhando sua suposta imagem daquele momento.  Parece que o olhar de 
+Flyre lhe hipnotizou, e ela est� se aproximando de voc�, e est� cada vez 
+mais perto...  Mas a coragem para a luta n�o existe, e voc� s� tem � suas 
+m�os o medo que tomou seu corpo.  Ainda h� tempo de fugir...
+~
+157 109 0 0 0 9
+D4
+~
+grande porta~
+0 15705 15756
+S
+#15726
+O Quintal~
+   � um simples quintal, mas o sil�ncio continua.  Voc� n�o ouve o canto de 
+nenhum p�ssaro, nem mesmo do vento batendo nas v�rias planta��es ali 
+existentes...Nada.  Como isso � poss�vel?  O que t�o grave aconteceu, para 
+que esse castelo fosse enfeiti�ado dessa forma, e perdesse toda a vida e 
+alegria que um dia, al� dever� ter existido?  S�o perguntas que, talvez, voc� 
+nunca ter� as respostas...
+~
+157 65 0 0 0 0
+D0
+~
+~
+0 -1 15713
+D1
+~
+~
+0 -1 15746
+D2
+~
+~
+0 -1 15751
+D3
+~
+~
+0 -1 15748
+D8
+~
+~
+0 -1 15750
+D9
+~
+~
+0 -1 15749
+S
+#15727
+Um Grande Corredor~
+   � um longo corredor, e possui em suas paredes quadros de v�rios jovens.  
+Ao olhar mais detalhadamente para eles, voc� percebe uma express�o de 
+tristeza e des�nimo.
+~
+157 73 0 0 0 0
+D0
+~
+~
+0 -1 15732
+D1
+~
+~
+0 -1 15728
+D2
+~
+~
+0 -1 15735
+D9
+~
+~
+0 -1 15714
+S
+#15728
+Um Grande Corredor~
+   O corredor continua, e parece n�o ter fim.  E ambas paredes existem
+quadros de jovens, olhando-lhe tristemente.  Voc� se sente observado. 
+~
+157 73 0 0 0 0
+D0
+~
+~
+0 -1 15733
+D1
+~
+~
+0 -1 15740
+D2
+~
+~
+0 -1 15736
+D3
+~
+~
+0 -1 15727
+D4
+~
+~
+0 -1 15741
+S
+#15729
+Um Grande Corredor~
+   O corredor continua, e possui em suas paredes quadros de v�rios jovens. 
+   Ao olhar mais detalhadamente para eles voc� percebe uma express�o de 
+tristeza e des�nimo.    Ao final de tantos quadros existe um em 
+branco...Com seu nome escrito!  Um indescrit�vel medo lhe faz pensar 
+seriamente em sair do castelo...Imediatamente.
+~
+157 73 0 0 0 0
+D1
+~
+~
+0 -1 15730
+S
+#15730
+Um Grande Corredor~
+   O corredor continua, e parece n�o ter fim.  E ambas paredes existem
+quadros de jovens, olhando-lhe tristemente.  Voc� se sente observado. 
+~
+157 73 0 0 0 0
+D0
+~
+~
+0 -1 15734
+D1
+~
+~
+0 -1 15731
+D2
+~
+~
+0 -1 15737
+D3
+~
+~
+0 -1 15729
+D6
+~
+~
+0 -1 15714
+S
+#15731
+Um Grande Corredor~
+   O corredor continua, e parece n�o ter fim.  E ambas paredes existem
+quadros de jovens, olhando-lhe tristemente.  Voc� se sente observado. 
+~
+157 73 0 0 0 0
+D0
+~
+~
+0 -1 15734
+D1
+~
+~
+0 -1 15746
+D3
+~
+~
+0 -1 15730
+D4
+~
+porta madeira~
+0 -1 15741
+S
+#15732
+O Quarto de H�spedes~
+   � um quarto de h�spedes, mas parece n�o ser usado h� muito tempo.  N�o 
+existe nada de mais aqui, e ele s� lhe serviu para aumentar o pavor.
+~
+157 131145 0 0 0 0
+D2
+~
+~
+0 -1 15727
+S
+#15733
+O Quarto de H�spedes~
+   � um quarto de h�spedes, mas parece n�o ser usado h� muito tempo.  N�o 
+existe nada de mais aqui, e ele s� lhe serviu para aumentar o pavor.
+~
+157 131145 0 0 0 0
+D2
+~
+~
+0 -1 15728
+S
+#15734
+O Quarto de H�spedes~
+   � um quarto de h�spedes, mas parece n�o ser usado h� muito tempo.  N�o 
+existe nada de mais aqui, e ele s� lhe serviu para aumentar o pavor.
+~
+157 131145 0 0 0 0
+D2
+~
+~
+0 -1 15731
+S
+#15735
+O Quarto de H�spedes~
+   � um quarto de h�spedes, mas parece n�o ser usado h� muito tempo.  N�o 
+existe nada de mais aqui, e ele s� lhe serviu para aumentar o pavor.
+~
+157 131145 0 0 0 0
+D2
+~
+~
+0 -1 15729
+S
+#15736
+O Quarto de H�spedes~
+   � um quarto de h�spedes, mas parece n�o ser usado h� muito tempo.  N�o 
+existe nada de mais aqui, e ele s� lhe serviu para aumentar o pavor.
+~
+157 131145 0 0 0 0
+D0
+~
+~
+0 -1 15727
+S
+#15737
+O Quarto de H�spedes~
+   � um quarto de h�spedes, mas parece n�o ser usado h� muito tempo.  N�o e
+xiste nada de mais aqui, e ele s� lhe serviu para aumentar o pavor.
+~
+157 131145 0 0 0 0
+D0
+~
+~
+0 -1 15728
+S
+#15738
+O Quarto de H�spedes~
+   � um quarto de h�spedes, mas parece n�o ser usado h� muito tempo.  N�o 
+existe nada de mais aqui, e ele s� lhe serviu para aumentar o pavor.
+~
+157 131145 0 0 0 0
+D0
+~
+~
+0 -1 15729
+S
+#15739
+O Trono~
+   Agora n�o tem desculpa.  Voc� est� a dois passos deles!  Mas eles n�o 
+reagem.  Parecem estar mortos...  Eles devem estar enfeiti�ados.  Mas quem 
+fez isso? 
+~
+157 131145 0 0 0 0
+D3
+~
+~
+0 -1 15709
+S
+#15740
+O Aposento Real~
+   O Aposento real...  Bem aconchegante, por sinal.  Uma imensa cama, 
+janelas enormes...  Voc� percebe uma pequena caixinha num dos criados-mudos. 
+   Parece ter algo bem interessante dentro dela.
+~
+157 131145 0 0 0 0
+D3
+~
+~
+0 -1 15728
+S
+#15741
+Subindo para as Torres~
+   � escuro.  A luz do sol n�o consegue penetrar nesse local.  At� agora, 
+todos os locais onde voc� explorou, ou possu�a a luz do sol ou um casti�al 
+como fonte de luz.  Aqui n�o tem nada disso. � escurid�o total, e sua fonte 
+de luz � muito bem vinda.  Quanto mais voc� sobe, mais a escurid�o e o frio 
+aumentam.  Voc� tem a impress�o de que o que te espera l� em cima n�o � coisa 
+boa.  Voc� chega num local onde existem 4 sa�das: voltar, ir para leste, para 
+oeste, ou continuar subindo...  Agora � com voc�.
+~
+157 73 0 0 0 0
+D1
+~
+~
+0 -1 15745
+D3
+~
+~
+0 -1 15744
+D4
+~
+~
+0 -1 15742
+D5
+~
+~
+0 -1 15731
+S
+#15742
+A Torre Principal~
+   Finalmente, algum movimento!  No alto da mais alta torre desse Castelo 
+uma criatura se mexe...  Ele est� na sua frente, e voc� v� claramente um 
+velho prisioneiro, quase morto.  Um zumbi, podemos cham�-lo assim, ele est� 
+vindo na sua dire��o.
+~
+157 131145 0 0 0 0
+D5
+~
+~
+0 -1 15741
+S
+#15743
+Descendo Mais Depressa~
+   Voc� literalmente desce muito mais depressa que se fosse pela escada.  
+Voc� cai do alto da torre, e o impacto com o ch�o n�o foi nada agrad�vel.  
+Doeu.
+~
+157 6 0 0 0 0
+S
+#15744
+A Torre de Apoio~
+   Nossa!  Que medo!  Voc� pensou que existiria alguma criatura de 7 cabe�as 
+aqui, mas tudo o que encontrou foi um velho esqueleto.  Agora, voc� sabe que 
+veio para o caminho errado...  Voltar � a �nica sa�da.
+~
+157 131145 0 0 0 0
+D1
+~
+~
+0 -1 15741
+S
+#15745
+A Torre de Apoio~
+   Nossa!  Que medo!  Voc� pensou que existiria alguma criatura de 7 cabe�as 
+aqui, mas tudo o que encontrou foi um velho esqueleto.  Agora, voc� sabe que 
+veio para o caminho errado...  Voltar � a �nica sa�da.
+~
+157 131145 0 0 0 0
+D1
+Voc� tenta, mas n�o consegue ver nada. 
+~
+~
+0 -1 15743
+D3
+Voc� tenta, mas n�o consegue ver nada. 
+~
+~
+0 -1 15741
+S
+#15746
+Um Pequeno Aposento~
+   Um quarto quase igual ao Quarto real.  Ao ver bonecas, e v�rios outros 
+tipos de brinquedos espalhados, voc� julga que este deve ser o aposento de 
+uma crian�a, provavelmente da princesa.  Mesmo no quarto de uma crian�a, o 
+clima sinistro n�o deixa de existir...  Isso j� est� te dando alguns cabelos 
+brancos...
+~
+157 131145 0 0 0 0
+D3
+~
+~
+0 -1 15731
+S
+#15747
+O Celeiro~
+   Argh, que cheiro horr�vel!  Os cavalos aqui presentes infestaram o local 
+com um cheiro insuport�vel, que lhe faz sair dali agora, antes que desmaie.  
+Mesmo com o cheiro, voc� n�o p�de deixar de perceber que os cavalos tamb�m 
+estavam im�veis...
+~
+157 65 0 0 0 0
+D3
+~
+~
+0 -1 15726
+S
+#15748
+O Curral~
+   Argh, que cheiro horr�vel!  As vacas aqui presentes infestaram o local 
+com um cheiro insuport�vel, que lhe faz sair dali agora, antes que desmaie. 
+   Mesmo com o cheiro, voc� n�o p�de deixar de perceber que as vacas tamb�m 
+tinham algo de estranho...  Estavam im�veis.
+~
+157 65 0 0 0 0
+D1
+~
+~
+0 -1 15726
+S
+#15749
+O Chiqueiro~
+   Foi a gota d'�gua!  Aqui voc� n�o fica nem por 10 segundos.  O cheiro � 5 
+vezes pior que o cheiro do curral ou do celeiro.  O sil�ncio incomoda, mas o 
+cheiro � insuport�vel!  Sair daqui e nunca mais voltar parece ser uma �tima 
+id�ia.
+~
+157 65 0 0 0 0
+D7
+~
+~
+0 -1 15726
+S
+#15750
+O Galinheiro~
+   �...  O cheiro daqui n�o � t�o ruim assim, d� para ag�entar.  E voc� 
+come�a a pensar: at� os animais est�o im�veis...  Mas as vacas continuam 
+dando leite, e as galinhas continuam botando ovos.  Mesmo quase mortos, o 
+animais n�o param de fazer o que devem...  Muito estranho.
+~
+157 65 0 0 0 0
+D6
+~
+~
+0 -1 15726
+S
+#15751
+A Planta��o de Cenoura~
+   "Que fome!  As cenouras parecem estar boas!"  Voc� pensa... e est�o, de 
+fato.  Uma planta��o de cenoura!  H� quanto tempo voc� n�o via uma!  H� 
+quanto tempo voc� n�o comia uma!  � uma das planta��es mais bem cuidadas que 
+voc� j� viu. 
+   Ao longe, voc� avista uma simples mulher, que colhe as cenouras e as 
+coloca num cesto, n�o � preciso dizer o que essa mulher tem de estranho...
+~
+157 65 0 0 0 0
+D0
+~
+~
+0 -1 15726
+D1
+~
+~
+0 -1 15752
+D3
+~
+~
+0 -1 15755
+S
+#15752
+Milharal~
+   T� a� um vegetal que voc� n�o sabe para que serve.  Ele � muito duro, e 
+machuca os dentes.  Mas se existe, � porque alguma utilidade ele deve ter.  
+E n�o lhe cabe descobrir qual �.  Seu dever agora � desvendar todo o mist�rio 
+que ronda esse local...  Ou sair dele imediatamente.
+~
+157 65 0 0 0 0
+D2
+~
+~
+0 -1 15755
+D3
+~
+~
+0 -1 15751
+S
+#15753
+A Planta��o de Morangos~
+   "Morangos!  Que del�cia!"  Est�o vermelhinhos e se demorar mais um dia 
+para serem degustados, ir�o apodrecer.  E � querendo evitar esse desperd�cio 
+que uma simples mulher os est�(va) colhendo.
+~
+157 65 0 0 0 0
+D1
+~
+~
+0 -1 15751
+D2
+~
+porta dep�sito~
+1 15702 15754
+S
+#15754
+O Dep�sito~
+   Milho, morango, leite, ovos, trigo...  Uma infinidade de coisas est� 
+depositada aqui.  E est�o separadas, cada tipo em uma cesta.  Morangos em 
+uma, milhos em outra...  Cada cesta est� destinada a uma pessoa.
+~
+157 73 0 0 0 0
+D0
+~
+porta~
+1 15702 15753
+S
+#15755
+A Planta��o de Trigo~
+   Aqui n�o existe nada de especial...  � apenas uma planta��o de trigo.  O 
+mais incr�vel, � que voc� sente o vento, mas n�o v� a planta��o se mexendo, 
+nem um pouquinho...  Ela permanece im�vel.
+~
+157 65 0 0 0 0
+D0
+~
+~
+0 -1 15752
+S
+#15756
+A Ascens�o~
+   Essa � a sala onde a Ave de Fogo depositava seus pertences mais 
+preciosos.  Ser� que, ap�s tantos s�culos fechada, essa sala ainda
+guarda algo de valioso?
+~
+157 137 0 0 0 0
+D4
+Um lugar conhecido por todos.
+~
+porta grande~
+1 15705 5025
+S
+$~

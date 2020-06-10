@@ -1,0 +1,120 @@
+#900
+chave dourada ouro maciço~
+uma chave dourada~
+Uma chave de ouro macico repousa aqui.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+900 0 0 0
+1 0 0 0 0
+#901
+escudo minotauro~
+um escudo negro de minotauro~
+Um escudo negro de minotauro foi deixado aqui.~
+~
+9 dgh 0 0 0 aj 0 0 0 0 0 0 0
+12 0 0 0
+12 5000 1350 30 0
+E
+escudo minotauro~
+Um forte e vigoroso escudo.  Ele nos leva à mente as histórias de um 
+escudo que traz proteção contra gases venenosos.
+~
+A
+23 -4
+#902
+poção borbulhante~
+uma poção borbulhante~
+Uma pocao borbulhante borbulha aqui.~
+~
+10 g 0 0 0 a 0 0 0 0 0 0 0
+15 15 15 15
+2 1300 500 0 0
+#903
+manoplas troll~
+um par de manoplas de troll~
+Um par de manoplas de pele de troll se encontra no chão.~
+~
+9 g 0 0 0 ah 0 0 0 0 0 0 0
+5 0 0 0
+8 2000 1350 0 0
+#904
+anel platina~
+um anel de platina~
+Um reluzente anel de platina se encontra aqui.  Há uma pequena gravação
+nele.~
+~
+1 agh 0 0 0 abo 0 0 0 0 0 0 0
+0 0 -1 0
+1 2000 5500 0 0
+E
+anel platina gravação~
+Na gravação do anel lê-se:
+
+Amaldiçoados sejam os deuses por proverem moedas aos mortais!
+E malditos sejam os mortais por aceitarem esses dotes valorosos dos deuses!
+Especialmente amaldiçoados sejam os que não levantam a tampa do vaso
+sanitário.
+~
+A
+17 10
+A
+18 2
+#905
+malho~
+um malho~
+Um malho foi cuidadosamente deixado aqui.~
+~
+5 fgh 0 0 0 an 0 0 0 0 0 0 0
+0 3 4 7
+8 5000 3500 0 0
+A
+19 2
+#906
+moedas ouro tesouro amontoado~
+um grande tesouro~
+Um grande amontoado resplandecente de moedas de ouro se encontra aos
+seus pés.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+43500 0 0 0
+20 43500 0 0 0
+#907
+arpão pesado~
+um pesado arpao~
+Um pesado arpão foi lançado no chão aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 7 11
+8 450 200 0 0
+A
+19 1
+#908
+tridente~
+um tridente~
+Há um tridente de guerreiro aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 4 11
+8 350 200 0 0
+E
+tridente~
+É um tridente comum, normalmente usado por gladiadores ou tritões.  Ele tem
+três dentes afiados, todos arqueados e um cabo de madeira com duas
+confortáveis empunhadeiras.
+~
+#909
+botas barco~
+um par de botas~
+Um par de botas está aqui sobre uma poça d'água.~
+~
+22 deq 0 0 0 ag 0 0 0 0 0 0 0
+0 0 0 0
+1 5000 1850 0 0
+E
+botas barco~
+As botas são feitas de uma estranha e obscura luz pesada e flutua na
+poça d'água.
+~
+A
+14 -20
+$~

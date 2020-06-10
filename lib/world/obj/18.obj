@@ -1,0 +1,47 @@
+#1800
+chave~
+uma chave~
+Há uma chave aqui.~
+~
+18 cdq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+chave~
+Uma simples chave, com o número 0 (zero) escrito em sua alça.
+~
+#1801
+chave~
+uma chave~
+Há uma chave aqui.~
+~
+18 cdq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+chave~
+Uma simples chave, com o número 1 (um) escrito em sua alça.
+~
+#1802
+latrina~
+uma latrina~
+Há uma latrina aqui.~
+~
+23 cdq 0 0 0 0 0 0 0 0 0 0 0
+10 10 0 0
+80 0 0 0 0
+#1899
+foice morte~
+a Foice da Morte~
+A Foice da Morte repousa pesadamente ao chão.~
+~
+5 cdjkmnot 0 0 0 an 0 0 0 0 0 0 0
+0 15 15 17
+40 0 50000 107 0
+E
+foice morte~
+É uma foice muito pesada.  O punho cinza é feito de madeira dura e a longa
+lâmina de ferro é completamente lisa, após incontáveis anos de uso.  Sente-se
+frio ao tocá-la.
+~
+$~

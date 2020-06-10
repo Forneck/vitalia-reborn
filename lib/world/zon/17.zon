@@ -1,0 +1,111 @@
+#17
+Vitalia~
+Ancalador e A Guilda de Necromantes~
+1700 1799 23 2 0 0 0 0 -1 -1
+-1
+* Mobiles
+M 0 1700 4 1727         Zumbi
+M 0 1700 4 1751         Zumbi
+M 0 1700 4 1751         Zumbi
+M 0 1700 4 1752         Zumbi
+M 0 1701 3 1754         v�bora
+M 0 1701 3 1754         v�bora
+M 0 1701 3 1754         v�bora
+M 0 1702 1 1753         Morticia
+E 1 1709 2 16                   Dilacerador de Cora��o
+E 1 1710 20 11                  Escudo Escaravelho
+M 0 1703 1 1746         Lazarus
+E 1 1706 10 16                  Zarabatana
+M 0 1704 2 1745         Besouro Morto-Vivo
+M 0 1705 6 1748         Cavaleiro Fantasma
+E 1 1700 50 16                  Cimitarra
+M 0 1705 6 1748         Cavaleiro Fantasma
+E 1 1700 50 16                  Cimitarra
+M 0 1705 6 1749         Cavaleiro Fantasma
+E 1 1700 50 16                  Cimitarra
+M 0 1705 6 1753         Cavaleiro Fantasma
+E 1 1700 50 16                  Cimitarra
+M 0 1705 6 1753         Cavaleiro Fantasma
+E 1 1700 50 16                  Cimitarra
+M 0 1705 6 1753         Cavaleiro Fantasma
+E 1 1700 50 16                  Cimitarra
+M 0 1706 1 1754         Guardi�o da Cripta
+E 1 1711 2 16                   Clava de Fred
+E 1 1708 1 17                   A Pedra de Sangue
+M 0 1707 1 1700         Eremita
+M 0 1708 2 1703         Lama Verde
+M 0 1708 2 1703         Lama Verde
+M 0 1709 2 1708         Habitante da Chama
+M 0 1709 2 1711         Habitante da Chama
+M 0 1710 5 1717         Aranha Verde
+M 0 1710 5 1719         Aranha Verde
+E 1 1716 5 9                    Luvas de Menestrel
+M 0 1710 5 1721         Aranha Verde
+M 0 1710 5 1723         Aranha Verde
+E 1 1712 7 11                   Escudo Arsenal
+P 1 1713 49 1712                        Faca de Lan�ar
+P 1 1713 49 1712                        Faca de Lan�ar
+P 1 1713 49 1712                        Faca de Lan�ar
+P 1 1713 49 1712                        Faca de Lan�ar
+P 1 1713 49 1712                        Faca de Lan�ar
+P 1 1713 49 1712                        Faca de Lan�ar
+P 1 1713 49 1712                        Faca de Lan�ar
+M 0 1710 5 1725         Aranha Verde
+M 0 1711 5 1718         Aranha Amarela
+M 0 1711 5 1720         Aranha Amarela
+M 0 1711 5 1722         Aranha Amarela
+M 0 1711 5 1725         Aranha Amarela
+M 0 1711 5 1723         Aranha Amarela
+M 0 1712 1 1726         Guarda
+E 1 1715 16 16                  Guisarme
+E 1 1718 1 17                   Chave Granito
+M 0 1713 6 1729         Batel�o Avermelhado
+M 0 1713 6 1733         Batel�o Avermelhado
+M 0 1713 6 1736         Batel�o Avermelhado
+M 0 1713 6 1738         Batel�o Avermelhado
+M 0 1713 6 1739         Batel�o Avermelhado
+M 0 1713 6 1740         Batel�o Avermelhado
+M 0 1714 6 1730         Gelatina Ocre
+G 1 1721 5 1715                 Adaga Enferrujada
+M 0 1714 6 1734         Gelatina Ocre
+G 1 1723 2 1715                 Escudo Brilhante
+M 0 1714 6 1737         Gelatina Ocre
+G 1 1722 20 -1                   Po��o Castanho-Escuro
+M 0 1714 6 1738         Gelatina Ocre
+G 1 1727 2 -1                   Vara de Metal Estranha
+M 0 1714 6 1741         Gelatina Ocre
+G 1 1722 20 -1                    Po��o Castanho-Escuro
+M 0 1714 6 1741         Gelatina Ocre
+G 1 1717 1 -1                   Cota de Malha Gasta
+M 0 1715 3 1748         Necromante
+E 1 1720 15 16                  Martelo de T�mulo
+G 1 1701 5 -1                     C�lice
+M 0 1715 3 1751         Necromante
+E 1 1720 15 16                  Martelo de T�mulo
+E 1 1705 1 17                   Chave esqueleto
+M 0 1715 3 1752         Necromante
+E 1 1720 15 16                  Martelo de T�mulo
+G 1 1719 1 -1                     Corpo
+* Objects
+O 0 1702 1 1746         Cofre
+P 1 1703 20 1702                T�nico
+P 1 1704 20 1702                Elixir
+O 0 1707 1 1751         Piscina de Sangue
+O 0 1714 1 1723         Pilha de Escombros
+P 1 1721 5 1714                 Adaga Enferrujada
+P 1 1724 9 1714                 Tocha Verde
+P 1 1725 5 1714                 Helmo de Prata
+P 1 1726 5 1714                 Jaqueta de couro decomposta
+* Doors
+D 0 1726 1 2            Est�mago para o Corredor de Pedra
+D 0 1756 3 2
+D 0 1727 0 1            P�ncreas para o Corredor de Pedra
+D 0 1756 2 1
+D 0 1752 3 1            Sala da Guilda para o Altar
+D 0 1753 1 1
+D 0 1747 1 1            Anfiteatro para C�maras Privadas de Lazarus
+D 0 1746 3 1            
+D 0 1753 5 2            Altar para Po�o Escuro
+D 0 1754 4 2           
+D 0 1757 4 1
+S

@@ -1,0 +1,361 @@
+#22010
+quadro~
+o quadro de mensagens~
+Um grande quadro de mensagens foi posto na parede aqui.~
+~
+13 cdeq 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+89 0 0 0 0
+E
+quadro~
+Se você está lendo isso, este quadro não está funcionando.
+~
+#22015
+brasão daguerreo~
+o Brasão Daguerreo~
+Um belo brasão está aqui, guardado pelos Daguerreo.~
+~
+12 cdeq 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+brasão daguerreo~
+O brasão é muito belo, e é dividido em quatro.  Cada parte representa um dos
+chefes da familía.  Acima do brasão há um dragão; na verdade, é o grande
+dragão Daguerreo, que foi vencido pelo grupo de aventureiros que iniciou
+essa grande família.  Uma inscrição abaixo do brasão diz: A Grande e Unida
+Família Daguerreo.  Se quiser ver o brasão com mais detalhes, ou saber da
+história, fale com Gex, o patriarca da família.
+~
+#22020
+prensa máquina~
+a prensa~
+Uma grande máquina está aqui, fazendo um barulho infernal.~
+~
+12 cdeq 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+prensa máquina~
+A prensa é uma grande máquina, repleta de manivelas, esteiras e roletes.  Um
+homem a opera com cuidado.  Folhas de papel passam por ela, sendo impressos
+e transformados no melhor jornal de Vitália.
+~
+#22021
+papéis pilha~
+uma pilha de papéis~
+Uma pilha de papéis está espalhada pelo chão.~
+~
+12 cdeq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+papéis pilha~
+Pegando alguns papéis do chão, você lê o início de uma matéria:
+"Sentinelas de Midgaard fazem greve e pedem menos bolhas na cidade"
+~
+#22022
+quadro~
+o quadro de mensagens~
+Um grande quadro de mensagens foi posto na parede aqui.~
+~
+13 cdeq 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+89 0 0 0 0
+E
+quadro~
+Se você está lendo isso, este quadro não está funcionando.
+~
+#22023
+bebedouro fonte pedra~
+Uma pequenina fonte de pedra jorrando água quase gelada.~
+Há uma pequena fonte de pedra no canto da sala, jorrando água cristalina.~
+~
+23 0 0 0 0 0 0 0 0 0 0 0 0
+50000 50000 15 0
+1000 0 0 0 0
+E
+bebedouro fonte pedra~
+É basicamente um bebedouro, mas não parece ter sido feito por mãos mortais,
+pois ele é feito de pedras cor de ébano, que pulsam como se estivessem vivas.
+Aparentemente foi um presente dado pelos deuses aos jornalistas de Vitália,
+pelos seus feitos.
+~
+#22025
+mesa pic-nic~
+uma enorme mesa de pic-nic~
+Uma mesa enorme feita de toras de madeira está aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+mesa pic-nic~
+Essa mesa deve pesar muito, pois foi feita da madeira maciça de troncos imensos
+de árvores encontradas nos bosques de Vitália.  Sua boca enche de água quando
+você olha para os pratos que foram colocados sobre a mesa: são tantas tortas,
+bolos, doces e salgados, que você fica indeciso sobre o que comer.
+~
+#22026
+toalha xadrez vermelha~
+uma linda toalha xadrez vermelha~
+Uma linda toalha xadrez vermelha foi estendida sobre o chão.~
+~
+12 dgq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+toalha xadrez~
+É uma linda toalha xadrez vermelha.   Feita de tecido rústico, você se 
+surpreende ao tocá-la, pois é suave e muito leve.  É impressão sua ou essa 
+toalha foi tecida com os fios de seda da melhor qualidade?   Hum...que chique
+para um pic-nic!
+~
+#22027
+cesta cesto~
+uma cesta de Pic-Nic~
+Uma cesta de vime, cheia de comidas e bebidas, foi deixada aqui por sua dona.~
+~
+15 dgq 0 0 0 ao 0 0 0 0 0 0 0
+300 0 -1 0
+1 0 0 0 0
+E
+cesta cesto~
+Que vontade de assaltar essa cesta e pegar parte dessa comida!  Tem tanta coisa
+ali dentro que você logo pensa que deve ser mágica ou algo parecido, pois
+dificilmente alguém iria conseguir colocar toda essa comida dentro de um 
+simples cesto de vime, se não fosse através de mágica!
+~
+#22028
+riacho~
+o riacho fluindo~
+Um pequenino riacho vai fluindo lentamente, limpo e claro.~
+~
+23 0 0 0 0 0 0 0 0 0 0 0 0
+99999 99999 0 0
+1100 0 0 0 0
+#22030
+mensagem paz capacidade ouvir~
+&Wa Mensagem, Capacidade de ouvir&n~
+Uma linda Mensagem de Paz chama sua atenção.~
+~
+12 ag 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 100 0 0 0
+E
+mensagem paz capacidade ouvir~
+
+                            &WCapacidade de ouvir!&N
+
+
+   A capacidade de ouvir não se limita exclusivamente à possibilidade de
+captar sons.
+
+   Temos sido surdos em um mundo repleto de sons e de melodias que poderiam
+transformar nossas vidas em sinfonias de amor e de realização.
+
+   Temos sido criaturas incapazes de perceber palavras e histórias
+maravilhosas que ilustram a existência dos seres que nos cercam e que muito
+poderiam nos ensinar.
+
+   Temos sido deficientes auditivos quando se trata de escutar
+verdadeiramente aquilo que precisamos ouvir.
+
+   É necessário e urgente que desenvolvamos a real capacidade de ouvir.
+~
+#22031
+mensagem paz viver flores~
+&Wa Mensagem, Viver como flores&n~
+Uma linda Mensagem de Paz chama sua atenção.~
+~
+12 ag 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 100 0 0 0
+E
+mensagem paz viver flores~
+
+                              &WViver como flores&N
+
+
+   Era uma vez um jovem que caminhava ao lado do seu mestre.
+   Ele perguntou:
+   - Mestre, como faço para não me aborrecer?  Algumas pessoas falam demais,
+outras são ignorantes.  Algumas são indiferentes, outras mentirosas...
+Sofro com as que caluniam...
+   - Pois viva como as flores!  - advertiu o mestre.
+   - Como é viver como as flores?  - perguntou o discípulo.
+   - Repare nestas flores  - continuou o mestre -  apontando lírios que
+cresciam no jardim.  Elas nascem no esterco, entretanto são puras e
+perfumadas.  Extraem do adubo malcheiroso tudo que lhes é útil e saudável,
+mas não permitem que o azedume da terra manche o frescor de suas pétalas...
+   É justo angustiar-se com as próprias culpas, mas não é sábio permitir
+que os vícios dos outros nos importunem.  Os defeitos deles são deles e não
+seus.  Se não são seus, não há razão para aborrecimento.  Exercite, pois, a
+virtude de rejeitar todo mal que vem de fora...  Não se deixe contaminar por
+tudo aquilo que o rodeia...  Assim, você estará vivendo como as flores!
+~
+#22032
+mensagem paz loja deus~
+&Wa Mensagem, A Loja de Deus&n~
+Uma linda Mensagem de Paz chama sua atenção.~
+~
+12 ag 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 100 0 0 0
+E
+mensagem paz loja deus~
+
+                               &WA Loja de Deus&N
+
+
+   "Entrei na lojinha e vi um anjo no balcão.
+
+   Maravilhado, indaguei-lhe:  - Santo Anjo do Senhor, o que vendes?
+
+   Respondeu-me:  - Todos os dons de Deus.
+
+   Perguntei:  - Custa muito caro?
+
+   - Não, é tudo de graça.
+
+   Contemplei a loja e vi jarros com caridade, vidros com fé, pacotes com
+esperança, caixinhas com salvação, potes de sabedoria...   Tomei coragem e
+pedi:
+
+   - Por favor Santo Anjo, quero muito amor, todo o perdão, um vidro de fé,
+bastante felicidade e salvação eterna para mim e minha família também.
+
+   Então o Anjo do Senhor preparou-me um pequeno embrulho, tão pequeno que
+mal cabia na palma da minha mão.
+
+   Maravilhado mais uma vez, disse-lhe:
+
+   - É possível tudo estar aqui?
+
+   O Anjo respondeu-me sorrindo:
+
+   - Meu querido irmão, na loja de Deus não vendemos frutos, apenas
+sementes!"
+~
+#22033
+mensagem paz confia sempre~
+&Wa Mensagem, Confia Sempre&n~
+Uma linda Mensagem de Paz chama sua atenção.~
+~
+12 ag 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 100 0 0 0
+E
+mensagem paz confia sempre~
+
+                                &WConfia Sempre&N
+
+
+                                Senhor Deus,
+              Não tenho a menor idéia de para onde estou indo,
+                    Não enxergo o caminho à minha frente,
+                 Não sei ao certo onde irá dar esse caminho.
+
+               Também não conheço verdadeiramente a mim mesmo,
+           E o fato de que penso que estou seguindo a Tua vontade
+         Não significa que realmente esteja seguindo a Tua vontade.
+
+                 Mas acredito que o meu desejo de Te agradar
+                            Realmente Te agrada.
+
+                E espero ter esse desejo em tudo o que fizer,
+                    Espero nunca me afastar desse desejo.
+
+                         Sei que, se assim o fizer,
+                     Tu me guiarás pelo caminho correto
+              Embora eu possa nem saber que o estou trilhando.
+
+                        Assim, confiarei sempre em Ti
+                       Embora eu pareça estar perdido
+                      E caminhando na sombra da morte.
+
+                E não temerei, porque Tu estás sempre comigo
+            E nunca deixarás que eu enfrente os perigos sozinho.
+~
+#22034
+mensagem paz amanhecer~
+&Wa Mensagem, Amanhecer&n~
+Uma linda Mensagem de Paz chama sua atenção.~
+~
+12 ag 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 100 0 0 0
+E
+mensagem paz amanhecer~
+
+                                  &WAmanhecer&N
+
+
+   Quero nascer de novo cada dia que nasce.
+
+   Quero ser outra vez novo, puro, cristalino.
+
+   Quero lavar-me, cada manhã, do homem velho, da poeira velha, das palavras
+gastas, dos gestos rituais.
+
+   Quero reviver a primeira manhã da criação, o primeiro abrir dos olhos
+para a vida.
+
+   Quero que cada manhã, a alma desabroche do sono como a rosa do botão, e
+surja, como a aurora do oceano, ao sorriso dos teus lábios, ao gesto de tua
+mão.
+
+   Quero me engrinaldar para a festa renovada com que cada dia nos convidas
+e desdobrar as asas como a águia em demanda do sol.
+
+   Quero crer, a cada nova aurora, que esta é a definitiva, a do encontro
+com a felicidade, a da permanência assegurada, a de teu sim definitivo. 
+~
+#22057
+fonte cristal~
+uma pequenina fonte de cristal vertendo água suavemente~
+Uma pequenina fonte de cristal suavemente verte água pura e cristalina.~
+~
+23 0 0 0 0 0 0 0 0 0 0 0 0
+99999 99999 0 0
+1100 0 0 0 0
+E
+fonte cristal~
+A pequenina fonte, embora pequenina, verte água tão pura e cristalina que 
+verdadeiro espelho parece se formar em seu regato.   Feita com cristais 
+translúcidos, em tons de rosa e azuis, parece ter sido criada por verdadeiras
+mãos divinas.
+~
+#22058
+mural mensagens~
+um pequeno mural~
+Um pequeno mural, repleto de mensagens de força e coragem, atrai seu olhar.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+mensagens~
+Use 'look mural' para ler o quadro.
+~
+E
+mural~
+Se você está lendo isso, este mural não está funcionando.
+~
+#22059
+mural mensagens~
+um imenso mural~
+Um imenso mural, repleto de mensagens de força e coragem, atrai seu olhar.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+mensagens~
+Use 'look mural' para ler o quadro.
+~
+E
+mural~
+Se você está lendo isso, este mural não está funcionando.
+~
+$~

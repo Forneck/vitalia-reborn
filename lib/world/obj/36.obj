@@ -1,0 +1,181 @@
+#3600
+armadura preta peão~
+uma armadura do Peão Negro~
+Um amontoado de armadura negra está aqui.~
+~
+9 j 0 0 0 ad 0 0 0 0 0 0 0
+1 0 0 0
+13 200 1 0 0
+#3601
+armadura branca peão~
+uma armadura de Peão Branco~
+Um amontoado de armadura branca está aqui.~
+~
+9 k 0 0 0 ad 0 0 0 0 0 0 0
+1 0 0 0
+13 200 1 0 0
+#3602
+espada negra peão~
+uma espada do Peão Negro~
+A espada do Peão da corte Negra está aqui.~
+~
+5 j 0 0 0 an 0 0 0 0 0 0 0
+0 3 3 3
+10 100 1 0 0
+#3603
+espada branca peão~
+uma espada do Peão Branco~
+A espada do Peão da corte Branca está aqui.~
+~
+5 k 0 0 0 an 0 0 0 0 0 0 0
+0 3 3 3
+10 100 1 0 0
+#3604
+armadura negra torre~
+uma armadura da Torre Negra~
+Uma armadura forjada dos restos mortais da Torre Negra está jogada no chão.~
+~
+9 ahj 0 0 0 ad 0 0 0 0 0 0 0
+2 0 0 0
+60 10000 5 0 0
+A
+17 2
+A
+5 1
+#3605
+armadura branca torre~
+uma armadura da Torre Branca~
+Uma armadura forjada dos restos mortais da Torre Branca está jogada no chão.~
+~
+9 agk 0 0 0 ad 0 0 0 0 0 0 0
+2 0 0 0
+60 10000 5 0 0
+A
+17 2
+A
+5 1
+#3606
+lança negra cavalo cavaleiro~
+a lança do Cavaleiro da Corte Negra~
+A lança do Cavaleiro da Corte Negra está aqui, criando ferrugem.~
+~
+5 bgj 0 0 0 an 0 0 0 0 0 0 0
+0 3 5 15
+18 7500 3 0 0
+A
+19 2
+A
+23 5
+#3607
+lança branca cavalo cavaleiro~
+a lança do Cavaleiro da Corte Branca~
+A lança do Cavaleiro da Corte Branca está aqui, criando ferrugem.~
+~
+5 bgk 0 0 0 an 0 0 0 0 0 0 0
+0 3 5 15
+18 7500 3 0 0
+A
+19 2
+A
+23 5
+#3608
+cajado negro bispo~
+o cajado do Bispo Negro~
+O cajado do Bispo Negro está jogado aqui.~
+~
+4 agj 0 0 0 ao 0 0 0 0 0 0 0
+20 3 3 36
+3 14000 6 0 0
+#3609
+cajado branco bispo~
+o cajado do Bispo Branco~
+O cajado do Bispo Branco está jogado aqui.~
+~
+4 agk 0 0 0 ao 0 0 0 0 0 0 0
+20 3 3 36
+3 14000 6 0 0
+#3610
+coroa negra rainha~
+a coroa da Rainha Negra~
+A coroa da Rainha Negra foi abandonada aqui.~
+~
+9 bgj 0 0 0 ae 0 0 0 0 0 0 0
+2 0 0 0
+4 3000 5 0 0
+A
+3 1
+A
+4 1
+#3611
+coroa negra branca~
+a coroa da Rainha Branca~
+A coroa da Rainha Branca foi abandonada aqui.~
+~
+9 bgk 0 0 0 ae 0 0 0 0 0 0 0
+2 0 0 0
+4 3000 5 0 0
+A
+3 1
+A
+4 1
+#3612
+cetro negro rei~
+o cetro do Rei Negro~
+O Cetro do Rei Negro está tomando poeira aqui.~
+~
+8 bfgj 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+180 85000 1 0 0
+A
+1 2
+A
+18 1
+A
+19 1
+#3613
+cetro branco rei~
+o cetro do Rei Branco~
+O Cetro do Rei Branco está tomando poeira aqui.~
+~
+8 bfgk 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+180 85000 10 0 0
+A
+1 2
+A
+18 1
+A
+19 1
+#3614
+chave negra tesouro~
+a chave do Tesouro da Corte Negra~
+Você nota uma sinistra chave negra jogada aqui.~
+~
+18 cdfq 0 0 0 ao 0 0 0 0 0 0 0
+3614 0 0 0
+1 1000 300 0 0
+#3615
+chave branca tesouro~
+a chave do Tesouro da Corte Branca~
+Você nota uma chave branca e brilhante jogada aqui.~
+~
+18 cdfq 0 0 0 ao 0 0 0 0 0 0 0
+3615 0 0 0
+1 1000 300 0 0
+#3616
+moedas ouro negra real tesouro~
+o Tesouro Real da Corte Negra~
+Há MUITAS moedas de ouro aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+10000 0 0 0
+10 10000 0 0 0
+#3617
+moedas ouro branca real tesouro~
+o Tesouro Real da Corte Branca~
+Há MUITAS moedas de ouro aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+10000 0 0 0
+10 10000 0 0 0
+$~

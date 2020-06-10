@@ -1,0 +1,181 @@
+#9801
+cérbero~
+Cérbero~
+O temível Cérbero está aqui.
+~
+Este terrivel cão de três cabeças está faminto.  Guardião desse lugar, ele
+jamais perdeu uma batalha contra os que invadem seus dominios.
+~
+2615298 0 0 0 330064 0 0 0 -700 E
+102 -13 -75 10d20+8150 8d11+33
+30000 2300000
+8 8 1
+BareHandAttack: 4
+Str: 25
+StrAdd: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#9802
+ciclope gigante~
+o Ciclope gigante~
+O Ciclope gigante está de guarda aqui.
+~
+Esse gigantesco Ciclope, possuidor de uma força extrema é capaz de ver um e
+sentir o cheiro de um intruso a distância, mesmo possuindo somente um olho.
+~
+2353154 0 0 0 67920 0 0 0 -700 E
+102 -15 -75 10d20+8150 8d11+35
+30000 4000000
+8 8 1
+BareHandAttack: 13
+Str: 25
+StrAdd: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#9803
+monstro pedra~
+o Monstro de Pedra~
+O Monstro de Pedra está dormindo aqui.
+~
+Feito todo em pedra esse terrivel monstro é praticamente imortal.  Sua pele
+feita em rocha é impenetrável.
+~
+2353154 0 0 0 67920 0 0 0 -700 E
+102 -20 -35 10d20+8150 8d11+32
+30000 3000000
+4 4 1
+BareHandAttack: 6
+Str: 25
+StrAdd: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#9804
+mal supremo~
+o Mal Supremo~
+O Mal Supremo está diante de você.
+~
+Está criatura abominável parece ser um fonte de energia maléfica.  Você
+sente toda a maldade que invade essa sala, é praticamente impossivel definir
+sua forma, uma grande nevoa negra te impede de ver a face dessa terrivel
+criatura.
+~
+2353158 0 0 0 330064 0 0 0 -1000 E
+105 -20 -80 8d12+11400 10d12+40
+100000 8500000
+8 8 1
+BareHandAttack: 12
+Str: 25
+StrAdd: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#9805
+dragão invisível~
+o dragão invisível~
+O Dragão invisível está aqui.
+~
+Você vê um enorme dragão de pele negra e com uma imensa cauda.  Possuidor de
+uma inacreditável força e com a habilidade de ficar invisível aos seus olhos
+é capaz de soltar imensas laberadas de fogo.  Ele demonstra ser muito forte
+e hábil.
+~
+2881538 0 0 0 1378564 0 0 0 -500 E
+40 -10 -28 10d20+850 6d7+27
+20000 445000
+8 8 1
+BareHandAttack: 12
+Dex: 25
+Wis: 25
+E
+#9806
+anjo luz~
+o Anjo da Luz~
+O Anjo da Luz está aqui, para lhe guiar.
+~
+Ele é muito grande, uma imensidão de luzes ao seu redor. Você tenta olhar
+mas é praticamente impossivel ver seu rosto. As luzes ofuscam seu olhos e
+parecem preencher o vazio de seu coração.
+~
+2351122 0 0 0 65872 0 0 0 1000 E
+106 -30 -25 10d6+16000 9d6+49
+50000 2300000
+8 8 1
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#9807
+anjo amor~
+o Anjo do Amor~
+O Anjo do Amor está aqui, para lhe guiar.
+~
+Ele é enorme, seu poder é repleto de amor e compreensão. Você tenta olhar
+mas é praticamente impossivel entender a sensação de paz e conforto que esse
+gigantesco clarão de luzes emitem.
+~
+2351122 0 0 0 65872 0 0 0 1000 E
+106 -21 -35 10d6+16000 9d6+45
+50000 3000000
+8 8 1
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#9808
+anjo honestidade~
+o Anjo da Honestidade~
+O Anjo da Honestidade está aqui, para lhe guiar.
+~
+Uma luz muito grande é somente o que você vê.  Seus olhos são cegados por
+toda clareza e luminosidade e seu coração parece sentir o poder da honra e
+honestidade que emana desse poderoso anjo.
+~
+2351122 0 0 0 65872 0 0 0 1000 E
+106 -21 -45 10d6+16000 9d6+38
+50000 4000000
+8 8 1
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#9809
+anjo vitória~
+o Anjo da Vitória~
+O Anjo da Vitória está aqui, para lhe guiar.
+~
+É imcompreensível o poder desse anjo.  É protetor dos vitoriosos, guiados
+pela luz e possuidores de grande honestidade. Abençoado seja você por ser
+digno de estar na presença dessa divindade angelical.
+~
+2351122 0 0 0 65872 0 0 0 1000 E
+106 -24 -45 10d6+16000 5d9+42
+50000 6000000
+8 8 1
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+$

@@ -1,0 +1,191 @@
+#10300
+lança~
+uma lança~
+Uma lança comum foi deixada aqui.~
+~
+5 ehjmnt 0 0 0 an 0 0 0 0 0 0 0
+0 3 3 11
+4 1000 0 5 0
+#10301
+fogueira~
+uma grande fogueira~
+Uma grande fogueira tudo ilumina com seu forte brilho!~
+~
+15 a 0 0 0 0 0 0 0 0 0 0 0
+1000 0 -1 0
+0 0 0 0 0
+E
+fogueira~
+Ei, cuidado, isso parece bem quente!
+~
+#10302
+coração~
+um coração humano~
+Um coração humano ainda pulsa lentamente, largado no chão!~
+~
+18 bc 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+coração~
+Urgh! Ele ainda pulsa na sua mão! Que magia estranha seria capaz disto?
+~
+#10303
+ossos pilha~
+uma pilha de ossos~
+Uma pilha de ossos está aqui no chão.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+ossos~
+Epa! Ossos humanos! Muitos deles! Deve ter sido uma boa refeição.
+~
+#10304
+carne fatia~
+uma grande fatia de carne~
+Uma grande fatia de carne que parece com o formato de uma pequena perna foi
+deixada no chão.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+12 0 0 1
+2 5 0 1 0
+E
+perna~
+Ah! uma perna humana! Você nao vai comer ISTO, vai?
+~
+#10305
+pele leão animal~
+uma pele de animal~
+Uma pele de animal está aqui.~
+~
+11 0 0 0 0 ad 0 0 0 0 0 0 0
+0 0 0 0
+2 1000 0 8 0
+E
+pele leão animal~
+É um pedaço de pele, provávelmente de algum leão.
+~
+A
+19 1
+A
+18 1
+A
+17 -4
+#10306
+clava osso~
+uma clava feita de osso~
+Uma grande clava feita de ossos está aqui.~
+~
+5 glr 0 0 0 an 0 0 0 0 0 0 0
+0 4 4 6
+5 3000 0 15 0
+A
+1 2
+A
+3 -2
+A
+19 2
+A
+4 -2
+#10307
+colar dentes~
+um colar de dentes~
+Um colar feito de dentes está aqui.~
+~
+11 b 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+6 5000 0 12 0
+A
+13 5
+A
+17 -1
+A
+19 1
+A
+18 -1
+#10308
+galho~
+um galho~
+Um pequeno galho está aqui.~
+~
+13 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+5 0 0 0 0
+E
+galho~
+Feito de madeira! O que você esperava?-
+~
+#10309
+cristal crânio~
+um crânio de cristal~
+Um crânio feito de cristal!~
+~
+1 a 0 0 0 ao 0 0 0 0 0 0 0
+0 0 -1 0
+10 3000 0 5 0
+E
+cristal crânio~
+O crânio parece ter sido feito de um cristal desconhecido...
+~
+A
+4 1
+A
+3 1
+A
+12 5
+#10310
+fonte delicada granito branco~
+uma delicada fonte de granito branco~
+Uma linda fonte jorra sua água por aqui.~
+~
+23 cdeg 0 0 0 0 0 0 0 0 0 0 0
+9999 9999 15 0
+9999 0 0 0 0
+E
+fonte delicada granito branco~
+É um trabalho muito delicado, foi totalmente esculpida em um único pedaço de
+granito branco, com veios rosados e azuis. 
+~
+#10311
+couraça troll~
+uma couraça de troll~
+Uma espessa couraça está aqui.~
+~
+11 bejn 0 0 0 ad 0 0 0 0 0 0 0
+0 0 0 0
+3 1000 500 7 0
+E
+couraça troll~
+Esta couraça negra de troll pode lhe fornecer uma enorme proteção.
+~
+A
+1 -1
+A
+14 -10
+A
+17 10
+A
+24 5
+#10312
+cetro kenuthi~
+o cetro de Kenuthi~
+Um grande e poderoso cetro foi perdido aqui.~
+~
+5 gkmn 0 0 0 ano 0 0 0 0 0 0 0
+0 3 3 11
+6 250000 3000 0 0
+A
+19 2
+A
+18 2
+#10313
+chave ferro~
+uma chave de ferro~
+Uma chave de ferro foi perdida aqui.~
+~
+18 bc 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+$~

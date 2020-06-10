@@ -1,0 +1,142 @@
+#45
+Vitalia~
+Gondolin, o Reino Oculto~
+4500 4599 780 1 ad 0 0 0 -1 -1
+-1
+*
+* Ajustar port�es:
+D 0 4512 5 1            Entrada das montanhas
+D 0 4513 4 1
+D 0 4520 0 2            Port�o de madeira
+D 0 4528 0 2            Port�o de pedra
+D 0 4529 2 1
+D 0 4536 1 2            Port�o de bronze
+D 0 4537 3 1
+D 0 4542 0 2            Port�o de ferro
+D 0 4543 2 1
+D 0 4546 0 2            Port�o de prata
+D 0 4547 2 1
+D 0 4549 0 2            Port�o de ouro
+D 0 4550 2 1
+D 0 4553 0 2            Port�o de a�o
+D 0 4554 2 1
+D 0 4529 8 1            Torres do port�o de pedra
+D 0 4529 9 1
+D 0 4530 6 1
+D 0 4531 7 1
+D 0 4564 1 1            Porta da torre do rei
+D 0 4565 3 1
+D 0 4570 2 1            Porta no sal�o de cristal
+D 0 4572 0 1            Aposentos de Idril
+D 0 4572 2 1            Aposentos de Idril
+D 0 4573 0 1            Quarto de Earendil
+D 0 4574 3 1            Escada
+D 0 4575 1 1            Sal�o de audi�ncias
+D 0 4575 3 2            Sala do tesouro
+D 0 4576 1 1            Sala do tesouro
+D 0 4568 5 2            Tuneis de fuga
+D 0 4577 4 2            Tuneis de fuga
+D 0 4581 0 1            Porta de uma casa
+D 0 4582 2 1
+D 0 4586 2 1            Porta de uma casa
+D 0 4588 0 1
+*
+* Mobs e itens at� o s�timo port�o:
+M 0 4500 2 4508         �guia
+M 0 4500 2 4503         �guia
+M 0 4501 1 4512         Thorondor
+E 1 4506 5 18           asas de Thorondor
+M 0 4503 1 4517         Elemmakil
+E 1 4507 5 0            lanterna �lfica
+*
+M 0 4504 2 4520         sentinela de madeira
+M 0 4504 2 4520         sentinela de madeira
+G 1 4500 1      -1        chave de madeira
+M 0 4505 2 4528         sentinela de pedra
+M 0 4505 2 4528         sentinela de pedra
+G 1 4501 1     -1         chave de pedra
+M 0 4506 2 4536         sentinela de bronze
+M 0 4506 2 4536         sentinela de bronze
+G 1 4502 1 -1             chave de bronze
+M 0 4507 2 4542         sentinela de ferro
+M 0 4507 2 4542         sentenela de ferro
+G 1 4503 1  -1            chave de ferro
+M 0 4508 2 4546         sentinela de prata
+M 0 4508 2 4546         sentinela de prata
+G 1 4504 1  -1            chave de prata
+M 0 4509 2 4549         sentinela de ouro
+M 0 4509 2 4549         sentinela de ouro
+G 1 4505 1 -1             chave de ouro
+M 0 4510 1 4553         sentinela de a�o
+*
+M 0 4511 1 4534         soldados do segundo port�o
+E 1 4508 5 16           uma grande espada �lfica
+M 0 4512 1 4537         soldados do terceiro port�o
+E 1 4509 5 16           um machado com l�mina vermelha
+M 0 4513 1 4544         soldados do quarto port�o
+E 1 4510 5 21           uma viseira com bico de �guia
+M 0 4514 1 4547         soldados do quinto port�o
+E 1 4511 5 5            cota de malha de prata
+M 0 4515 1 4550         soldados do sexto port�o
+E 1 4512 10 16          arco longo dourado
+E 1 4513 10 17          flecha de ouro
+*
+M 0 4516 1 4553         Ecthelion
+E 1 4514 5 11           um escudo cintilante
+*
+O 0 4515 10 4530        uma ta�a de vinho
+O 0 4516 20 4530        um lembas
+O 0 4515 10 4531        uma ta�a de vinho
+O 0 4516 20 4531        um lembas
+M 0 4517 2 4533         um vigia
+M 0 4517 2 4532         um vigia
+*
+* Mobs e itens al�m do s�timo port�o:
+M 0 4518 1 4554         Voronwe
+E 1 4517 6 13           uma bolsa presa ao cinto
+P 1 4516 20 4517        lembas dentro da bolsa
+*
+M 0 4502 1 4554         Tuor
+E 1 4518 1 6            o elmo dos cisnes
+E 1 4519 1 12           o manto cinzento
+*
+C 0 4557 4519 -1
+M 1 4519 5 4557         sentinela no port�o de entrada
+M 1 4519 5 4557         sentinela
+C 0 4564 4519 -1
+M 1 4519 5 4564         sentinela na torre do rei
+M 1 4519 5 4564         sentinela
+C 0 4574 4519 -1
+M 1 4519 5 4574         sentinela do sal�o de audi�ncias
+*
+R 0 4561 4520
+O 0 4520 1 4561         fonte central
+*
+O 0 4521 1 4566         Belthil
+R 0 4566 4523
+O 1 4523 5 4566        flor
+O 0 4522 1 4567         Glingal
+R 0 4567 4524
+O 1 4524 5 4567        folha
+*
+M 0 4523 1 4571         Maeglin
+M 0 4520 1 4572         Idril
+E 1 4525 2 3            a j�ia Elessar
+M 0 4521 1 4573         E�rendil
+M 0 4522 1 4575         Turgon
+E 1 4526 5 17           cetro de justi�a
+G 1 4528 1  -1            chave de prata
+M 0 4524 1 4561         Glorfindel
+O 0 4527 1 4575         trono
+O 0 4529 1 4576         tesouro
+*
+M 0 4525 1 4579         Balrog
+E 1 4530 5 16           chicote
+*
+M 0 4526 2 4587         elfo
+M 0 4526 2 4581         elfo
+M 0 4527 2 4588         elfa
+M 0 4527 2 4582         elfa
+M 0 4528 2 4583         crian�a
+M 0 4528 2 4585         crian�a
+S

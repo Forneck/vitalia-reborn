@@ -1,0 +1,502 @@
+#12100
+javali~
+um javali~
+Um fedorento, desagradável e gordo javali está aqui, gemendo.
+~
+Que cheiro é esse?
+~
+2125858 0 0 0 16 0 0 0 0 E
+9 11 3 3d5+375 2d4+1
+1000 6000
+8 8 1
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12101
+lotus negro~
+o Lotus Negro~
+Um lotus negro está aqui, preparado para avançar em sua próxima vítima.
+~
+Uma desagradável e perigosa criatura.
+~
+2127910 0 0 0 16 0 0 0 -750 E
+16 8 1 4d6+450 4d4+6
+2000 16000
+8 8 1
+BareHandAttack: 10
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12102
+rato com dentes afiados~
+um rato com dentes afiados~
+Um rato com dentes afiados se esconde em um canto, rangendo seus 
+terríveis dentes.
+~
+Maior do que um típico rato, ele anda através da sombra.
+Seus pequenhos maus olhos se mostram em alerta e brilham com uma 
+estranha lus.  Eles podem ser perigosos, com seus vários dentes 
+afiadíssimos.
+~
+2126054 0 0 0 16 0 0 0 -400 E
+12 14 8 3d3+225 2d3+2
+1000 4000
+8 8 1
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12103
+pequeno demônio~
+o pequeno demônio~
+Um pequeno demônio rasteja aqui, pronto para lutar.
+~
+Pequeno e forte, este demônio parece ser muito malvado.
+~
+2126436 0 0 0 1572864 0 0 0 -1000 E
+12 12 3 1d10+320 2d5+1
+1500 7500
+8 8 1
+BareHandAttack: 3
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12104
+cérbero~
+o cérbero~
+Um cérbero ronda por você, observando-o.
+~
+Liso e hábil, um notável adversário.
+~
+2322466 0 0 0 1572864 0 0 0 -200 E
+11 14 -3 1d8+330 2d5+3
+100 9800
+8 8 0
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12105
+lesma gigante~
+uma lesma gigante~
+Você vê uma lesma gigante aqui, bloqueando seu caminho.
+~
+Urgh!! Essa coisa é repugnante!
+~
+2125922 0 0 0 64 0 0 0 -500 E
+9 10 3 1d12+220 1d4+5
+1500 7000
+8 8 2
+BareHandAttack: 9
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12106
+anão negro~
+o anão negro~
+Um Anão negro está aqui, sorrindo para você.
+~
+Ele pode ser sorridente, mas que isso não quer dizer que ele goste de 
+você.
+~
+2127910 0 0 0 272 0 0 0 -750 E
+16 8 1 4d6+450 4d4+6
+2000 10000
+8 8 1
+BareHandAttack: 9
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12107
+grande lobo~
+o grande lobo~
+Um grande lobo caminha em sua direção, uivando horrivelmente.
+~
+Parece pequeno, perto de tantos outros animais e deve ser bem macio e 
+rápido, este animal parece aguçar a sua curiosidade.
+~
+2125858 0 0 0 16 0 0 0 -400 E
+9 11 3 3d5+275 2d4+1
+1000 6000
+8 8 1
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12108
+bolor bola rastejante~
+o bolor rastejante~
+Um bola verde rastejante vagarosamente avança em sua direção.
+~
+Com aparência verde, gelatinoso e meio rugosa, parece cheia de ódio.
+~
+2293798 0 0 0 2128 0 0 0 -500 E
+12 9 2 3d4+445 2d6+2
+0 13000
+8 8 1
+BareHandAttack: 6
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12109
+enorme sanguessuga~
+a enorme sanguessuga~
+A enorme sanguessuga está aqui, pronta para jantar.
+~
+Este bicho enorme e visguento tem um aspecto que lhe dá asco.
+~
+2099810 0 0 0 67664 0 0 0 -1000 E
+15 6 1 1d12+385 2d8+3
+0 11000
+8 8 2
+BareHandAttack: 9
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12110
+leão jamuuran~
+um Leão Jamuuran~
+Um leão Jamuuran está aqui, esperando pela chance de matar.
+~
+Que perfeição este animal é.
+~
+2191456 0 0 0 2320 0 0 0 -1000 E
+20 1 0 1d12+348 2d6+9
+1000 10000
+8 8 1
+BareHandAttack: 6
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12111
+jor~
+um Jor~
+Um Jor está aqui, meio vesgo por causa da luz ofuscante.
+~
+Imagine isso: ele tem a aparêcia de um orc, só que bem pior...
+~
+2128482 0 0 0 67664 0 0 0 -1000 E
+15 6 1 1d12+485 2d8+3
+0 11000
+8 8 1
+BareHandAttack: 6
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12112
+diurge~
+o Diurge~
+Um Diurge está aqui, batendo em seu escudo, pronto para lutar.
+~
+Essa coisa tem uma pele negra acizentada, cabelo vermelho metálico 
+e um rosto tremendamente feio.
+~
+2125862 0 0 0 16 0 0 0 -1000 E
+20 1 -5 2d6+460 3d4+14
+1000 40000
+8 8 1
+BareHandAttack: 6
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12113
+beemonte~
+o beemonte~
+Aqui se ergue um Beemonte, planejando vê-lo morto.
+~
+Ele o fita atentamente e ataca.
+~
+2125858 0 0 0 16 0 0 0 -400 E
+9 11 -4 3d5+275 2d4+4
+1000 8000
+8 8 1
+BareHandAttack: 9
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12114
+caiveh~
+um Caiveh~
+Um pequeno e forte Caiveh está aqui, com uma espada nas mãos.
+~
+Pequeno e ágil, esta apavorante máquina de luta espera por sua 
+próxima vítima.
+~
+2351138 0 0 0 16 0 0 0 600 E
+14 11 5 2d4+250 3d6+3
+1000 20000
+8 8 1
+BareHandAttack: 3
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12115
+drakian~
+o Drakian~
+O Drakian está aqui, parecendo meio impaciente.
+~
+Na medida que você começa a examiná-lo, ele ataca!
+~
+2191394 0 0 0 0 0 0 0 -900 E
+22 0 -70 3d5+520 3d6+10
+15000 70000
+8 8 1
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12116
+Crixna~
+o Crixna~
+O Crixna está em pé aqui, olhando aborrecido para você.
+~
+Ele parece ter dentro de si uma fúria imensa, pois seus movimentos são
+frenéticos e agressivos. Seus braços rodopiam, em movimento de ataque.    
+~
+2121766 0 0 0 16 0 0 0 -1000 E
+20 1 0 3d6+560 2d4+14
+1000 40000
+8 8 1
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12117
+wyrm~
+um Wyrm~
+Um Wyrm acorda de seu descanso e ataca.
+~
+Bem...você sabe: é um wyrm!
+~
+2103298 0 0 0 526352 0 0 0 -1000 E
+20 1 0 1d12+245 3d6+4
+5000 7000
+8 8 1
+BareHandAttack: 5
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12118
+djinni~
+um djinni~
+Um Djinni está aqui, orgulhoso e confiante.
+~
+Este Djinni olha em seu olho e parece zombar de você, como se já 
+tivesse decidido que você não será capaz de ter uma luta digna de ser
+levada a sério.
+~
+2189346 0 0 0 67856 0 0 0 -870 E
+25 6 0 3d14+450 6d9+5
+28560 134000
+8 8 1
+BareHandAttack: 6
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12119
+basilisco~
+um basilisco~
+Um basilisco furtivamente vai em sua direção, tentando furar seu olho.
+~
+Ele se parece com um bebê dragão e é letal como um deles.
+~
+2351266 0 0 0 1572944 0 0 0 -600 E
+14 11 -3 2d4+380 3d6+3
+1000 20000
+8 8 1
+BareHandAttack: 6
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12120
+saltitante dervixe~
+um saltitante dervixe~
+Voce é confrontado com um Saltitante Dervixe.
+~
+É uma criatura rápida e você imagina que sua morte também será muito 
+rápida.
+~
+2097764 0 0 0 0 0 0 0 -1000 E
+12 12 3 1d10+420 2d5+3
+1500 10500
+8 8 1
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12121
+quimera leão bode dragão~
+uma quimera aparentemente calma~
+Uma imponente Quimera está sentada no centro da sala.
+~
+Uma estranha criatura esta, com três cabeças: leão, bode e dragão, esta quimera
+pode se tornar agitada quando perturbada.    
+~
+2190086 0 0 0 0 0 0 0 -500 E
+16 8 -4 3d5+595 4d6+5
+10000 24000
+8 6 2
+BareHandAttack: 4
+Str: 18
+StrAdd: 90
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12122
+ciclope~
+um ciclope~
+Um Ciclope se vira diante de você e arreganha os dentes maldosamente.
+~
+Este ser de um olho só, observa você como se fosse uma deliciosa refeição.  
+
+~
+2099202 0 0 0 256 0 0 0 100 E
+12 9 -3 3d7+480 2d4+4
+2000 13000
+8 8 1
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12123
+hidra gigante~
+uma Hidra Gigante~
+Uma Hidra Gigante olha para você através da sala.
+~
+Esta criatura parece ser um perigoso adversário.    
+~
+2156706 0 0 0 16 0 0 0 400 E
+15 11 -3 3d5+395 3d4+5
+1000 8000
+8 8 2
+BareHandAttack: 10
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12124
+enorme gigante~
+um Enorme Gigante~
+Um impressionante gigante lhe ataca assim que o vê.
+~
+Esta enorme criatura não está totalmente feliz por estar presa aqui.
+~
+2156598 0 0 0 272 0 0 0 -999 E
+18 8 -4 8d5+700 5d5+8
+6000 34000
+8 8 1
+BareHandAttack: 13
+Dex: 12
+Int: 3
+Wis: 13
+E
+#12125
+ogro ghazban~
+um Ogro Ghazban~
+Um Ogro Ghazban se curva sobre você, pisando sobre os corpos no chão.
+~
+Ele parece possuir somente o desejo de destruir. Esta coisa não passa
+de um maldito bastardo.
+~
+2156640 0 0 0 0 0 0 0 300 E
+17 4 -5 3d5+720 4d6+9
+1281 28000
+8 8 1
+BareHandAttack: 7
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12126
+cynamolgus peludo~
+o peludo Cynamolgus~
+Um peludo Cynamolgus caminha pesadamente, balançando seu enorme porrete.
+~
+ECA! Só de olhar você sente seu estômago enjoar.
+~
+2160674 0 0 0 0 0 0 0 990 E
+25 0 -8 20d5+560 4d7+11
+5000 35000
+8 8 1
+BareHandAttack: 3
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12127
+troll negro~
+um Troll Negro~
+Um Troll Negro pula de um canto escuro, atacando pelo lado!
+~
+Feio, verruguento e muito, muito malvado.
+~
+2161954 0 0 0 16 0 0 0 990 E
+30 2 -5 3d6+650 5d6+12
+5000 45000
+8 8 1
+BareHandAttack: 6
+Str: 18
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12128
+Cavaleiro khordovian~
+o Cavaleiro Khordovian~
+Um Cavaleiro Khordovian, preso por traição, olha você e oferece um desafio.
+~
+Oh Céus! Ele tem a aparência tão nobre que você práticamente lamenta
+ter que matá-lo.
+~
+2127874 0 0 0 65808 0 0 0 -990 E
+35 0 -70 10d5+1450 6d7+14
+24763 150000
+8 8 1
+BareHandAttack: 3
+Dex: 12
+Int: 13
+Wis: 13
+E
+#12129
+minotauro~
+O Grande Minotauro~
+Aqui está ele - o Fabuloso Minotauro.
+~
+Enormes unhas, cauda cheia de espinhos, possui a cabeça de touro e o 
+toráx de um homem absolutamente descomunal, seus dentes são tão grandes
+que você custa a crer que esta coisa seja real!
+~
+2353186 0 0 0 67920 0 0 0 -870 E
+70 -9 -15 9d14+3650 8d9+30
+28560 134000
+8 8 1
+BareHandAttack: 4
+Dex: 12
+Int: 13
+Wis: 13
+E
+$

@@ -1,0 +1,428 @@
+#5300
+maça egípcia~
+uma maça egípcia~
+Uma maça esculpida em hieróglifos foi deixada aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 6 7
+10 800 50 0 0
+E
+maça egípcia~
+A  maça é feita de bronze sólido e esculpida com estranhos hieróglifos.
+~
+#5301
+robe areia~
+um robe cor de areia~
+Um robe cor de areia está aqui.~
+~
+9 0 0 0 0 ak 0 0 0 0 0 0 0
+4 0 0 0
+5 500 40 0 0
+E
+robe areia~
+O robe é cor de areia branca e na verdade ele está mesmo coberto de areia.
+Você não parece ser capaz de remover toda a areia, não importa o quanto você
+tente.
+~
+#5302
+navalha achatada~
+uma navalha achatada~
+Um achatada navalha se encontra aqui.~
+~
+5 g 0 0 0 an 0 0 0 0 0 0 0
+0 3 3 11
+8 1000 100 0 0
+E
+navalha achatada~
+A lâmina da navalha é negra, afiada e achatada.
+~
+A
+2 1
+A
+18 1
+#5303
+turbante pano~
+um sujo turbante de pano~
+Um sujo turbante de pano foi esquecido aqui.~
+~
+9 g 0 0 0 ae 0 0 0 0 0 0 0
+5 0 0 0
+10 1500 250 0 0
+E
+Turbante pano~
+O turbante costumava ser branco, agora está coberto com óleo e sujeira da
+cabeça e dos cabelos de seu antigo dono, que não devia se banhar com
+freqüência.
+~
+A
+2 1
+A
+13 5
+#5304
+faixas gaze pano~
+algumas faixas de pano~
+Uma longa tira de pano enrolado repousa no chão, formando uma pilha.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+5 0 0 0
+15 1250 175 0 0
+E
+faixas panos~
+As faixas de pano enrolado são velhas, enrugadas e fedem a fluido
+embalsamador.
+~
+#5305
+garrafa fluido~
+uma garrafa de fluido embalsamandor~
+Uma garrafa empoeirada está aqui.~
+~
+10 0 0 0 0 a 0 0 0 0 0 0 0
+5 33 -1 -1
+5 250 50 0 0
+E
+garrafa fluido~
+A garrafa está empoeirada e seu fluido tem um estranho cheiro doce.
+~
+#5306
+natrão pote~
+um pote de natrão~
+Um pote de natrão está aqui no chão.~
+~
+10 0 0 0 0 a 0 0 0 0 0 0 0
+10 16 -1 -1
+6 300 60 0 0
+E
+natrão pote~
+Hei! Isso é sal!
+~
+#5307
+bola fogo~
+uma pequena bola quente de fogo~
+Uma pequena bola de fogo paira no ar diante de seus olhos.~
+~
+1 agp 0 0 0 ao 0 0 0 0 0 0 0
+0 0 -1 0
+10 3500 500 0 0
+E
+bola fogo~
+A bola de fogo é bastante quente e muito brilhante.
+~
+A
+13 10
+A
+14 50
+#5308
+cimitarra pedra~
+uma cimitarra de pedra~
+Uma curvada cimitarra feita de pedra se encontra no chão.~
+~
+5 bgmnotu 0 0 0 an 0 0 0 0 0 0 0
+0 4 3 3
+18 10000 750 0 0
+E
+cimitarra pedra~
+A cimitarra é feita de pedra muito sólida, trabalhada e esculpida com
+absoluta perfeição, com lâmina de corte frio e extremamente afiado e está
+com apenas algumas ranhuras em sua superfície.
+~
+A
+18 2
+A
+19 3
+#5309
+chave pedra~
+uma chave de pedra~
+Uma chave de pedra foi esquecida aqui.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+5309 0 0 0
+15 0 0 0 0
+E
+chave pedra~
+A chave é feita de pedra indestrutível.
+~
+#5310
+sarcófago pedra~
+um imponente sarcófago de pedra~
+Um imponente sarcófago de pedra se encontra no centro da tumba.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+500 15 5309 0
+5000 5000 5000 0 0
+E
+sarcófago pedra~
+Os lados do sarcófago são esculpidos com imagens de faraós, de grandes
+guerras que foram travadas há anos atrás, de grandes pirâmides sendo
+construídas...
+
+Uma imagem sobreposta em cima do sarcófago, forma a visão de um dos
+poderosos faraós, pintado em ouro e encrustado com pedras preciosas.
+
+Você vê uma pequena fechadura no sarcófago.
+~
+#5311
+poeira~
+alguma poeira antiga~
+Um pequenino monte de poeira está sendo espalhado pela suave brisa.~
+~
+13 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 1 1 0 0
+E
+poeira~
+A poeira é antiga.  Quando você a deixa escorrer por entre seus dedos, você
+acha percebe pequenos fragmentos de ossos - estes devem ser os restos muito
+antigos de alguma coisa.
+~
+#5312
+escaravelho esmeralda~
+uma esmeralda em forma de escaravelho~
+Uma esmeralda em forma de escaravelho se encontra no chão.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+5312 0 0 0
+5 0 0 0 0
+E
+escaravelho esmeralda~
+O escaravelho é magnificamente detalhado, principalmente pelos finos pelos
+em suas patas de inseto e as pequeninas esmeraldas, que fazem as vêzes de
+olhos.
+~
+#5313
+lâmpada~
+uma lâmpada~
+Uma pequena lâmpada manchada e com muitos riscos, foi deixada aqui.~
+~
+4 abgk 0 0 0 ao 0 0 0 0 0 0 0
+25 5 5 51
+10 25000 600 0 0
+E
+lâmpada~
+A lâmpada é bastante antiga e parece danificada.  Você a esfrega para
+limpá-la um pouco, mas não parece adiantar.
+~
+A
+17 -5
+A
+18 1
+#5314
+ankh~
+uma ankh~
+Uma pequena ankh de bronze foi deixada aqui.~
+~
+9 ik 0 0 0 ao 0 0 0 0 0 0 0
+7 0 0 0
+9 10000 300 0 0
+E
+ankh~
+A ankh é o símbolo sagrado de uma religião do Antigo Egito, que simboliza a
+imortalidade.  Feita de bronze, ela brilha com uma suave luz que acalma
+você.
+~
+A
+3 1
+A
+4 2
+#5315
+livro enigmas~
+um livro de enigmas~
+Um antigo livro de páginas gastas foi esquecido aqui.~
+~
+2 0 0 0 0 a 0 0 0 0 0 0 0
+21 53 20 22
+15 7500 250 0 0
+E
+livro enigmas~
+O livro de páginas gastas, contém confusos enigmas para entretê-lo.  Você se
+acha confuso pelo seu conteúdo e tenta tirar isso de sua cabeça.
+~
+#5316
+pata leão~
+uma pata de leão~
+Uma poderosa pata de leão foi deixada aqui.~
+~
+5 g 0 0 0 an 0 0 0 0 0 0 0
+0 1 14 5
+20 18000 600 0 0
+E
+pata leão~
+A poderosa pata de leão possui correias de bronze, de maneira que ela possa
+se ajustar em sua mão.  Assim que você a veste, ela se funde com sua mão,
+tornando-se uma extensão de seu braço.
+~
+A
+5 1
+A
+18 4
+#5317
+pergaminho resposta~
+a resposta~
+Um pequeno pedaço de pergaminho coberto por hieróglifos se encontra aqui.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+5317 0 0 0
+1 1 1 0 0
+E
+resposta hieróglifos pergaminho~
+Você não consegue decifrar os estranhos hieróglifos que cobrem o pergaminho.
+~
+#5318
+tesouro~
+o tesouro da esfinge~
+O volumoso tesouro da esfinge se encontra aqui, amontoado em uma grande pilha.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+23850 0 0 0
+23 23850 0 0 0
+E
+tesouro~
+O tesouro é incrivelmente grande, moedas de ouro e objetos mais valiosos do
+que você consegue imaginar, foram acumulados neste lugar.
+~
+#5319
+areia pilha~
+uma pilha de areia~
+Você vê uma pequena pilha de areia.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+12986 0 0 0
+12 12986 0 0 0
+E
+areia pilha~
+Você pensa ver algumas moedas e valores brilhando entre os grãos de areia.
+~
+#5320
+múmia maldição~
+a maldição da múmia~
+Alguma alma feliz escapou da maldição da múmia, por enquanto.~
+~
+13 cdfgh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 500 50 0 0
+E
+múmia maldição~
+Há rumores de que aquele que ousa perturbar o túmulo da múmia, deverá ser
+amaldiçoado pela eternidade e que seus descendentes deverão ser igualmente
+amaldiçoados por dez gerações seguidas.
+~
+A
+13 -50
+A
+14 -100
+#5321
+elixir copo pequeno~
+um pequeno elixir~
+Um pequeno copo de elixir se encontra bem debaixo de seus pés.~
+~
+10 g 0 0 0 a 0 0 0 0 0 0 0
+30 39 1 36
+2 10000 500 0 0
+E
+elixir copo pequeno~
+O elixir é pequeno.  Alguma coisa lhe diz que seu conteúdo é bastante
+potente.  Talvez potente demais para mortais comuns que tentam consumi-lo.
+~
+#5322
+máscara dourada~
+uma máscara dourada~
+Uma máscara linda e magnificamente entalhada foi deixada aqui.~
+~
+9 g 0 0 0 ae 0 0 0 0 0 0 0
+10 0 0 0
+10 15000 750 50 0
+E
+máscara dourada~
+Esta maravilhosa máscara foi forjada em puro ouro e mágicamente encantada
+para se ajustar perfeitamente à face de qualquer um que queira usá-la.  Seus
+belíssimos detalhes dourados com toques em turquesa parecem mover-se de
+forma a coincidir com as expressões faciais daquele que a usa.
+~
+A
+12 25
+A
+13 10
+#5323
+diamante~
+o diamante~
+undefined~
+~
+13 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+5 0 0 0 0
+E
+diamante~
+Aha!
+
+Voce vê uma gema de muitas faces, que estranhamente não reflete a luz, o que
+torna muito difícil achá-la no chão.
+~
+#5324
+vara bronze sol reluzente~
+uma vara reluzente como o sol~
+Uma pequena vara de bronze brilha aqui, com luz própria.~
+~
+3 agp 0 0 0 ao 0 0 0 0 0 0 0
+35 5 5 27
+10 25000 1000 0 0
+E
+vara bronze sol reluzente~
+Essa pequena vara é uma arma sagrada usada pela antiga civilização desta
+terra para se defender contra o mais mortal de seus inimigos.  Ela
+resplandece com a brilhante e reluzente luz do sol.
+~
+A
+21 -5
+A
+24 -5
+#5325
+anel areia~
+um anel cor de areia~
+Um pequeno anel cor de areia foi cuidadosamente deixado aqui.~
+~
+9 bg 0 0 0 ab 0 0 0 0 0 0 0
+8 0 0 0
+5 20000 750 40 0
+E
+anel areia~
+O anel é pequeno, liso e sua cor de areia é inconfundível, isso emite um
+zumbido continuo que causa um certo comichão nas pontas de seus dedos.
+~
+A
+3 1
+A
+12 35
+#5326
+esfinge dourada~
+uma pequena esfinge dourada~
+Uma pequena esfinge dourada brilha à luz.~
+~
+8 g 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+5 50000 750 0 0
+E
+esfinge dourada~
+A esfinge dourada é incrivelmente detalhada e muito pequena, cabendo
+fácilmente na palma de sua mão.  Você consegue ver a expressão de sabedoria
+e paz em sua face.
+~
+A
+4 2
+#5327
+perneiras esfinge~
+perneiras em forma de esfinge~
+Volumosas perneiras com a forma do corpo de uma esfinge, estão aqui.~
+~
+9 gk 0 0 0 af 0 0 0 0 0 0 0
+10 0 0 0
+20 20000 500 50 0
+E
+perneiras esfinge~
+Estas mágicas perneiras lhe dão a força e a determinação da mais poderosa
+das antigas esfinges.  Você sente o antigo poder emanando delas: elas
+parecem estar quase vivas.
+~
+A
+1 3
+A
+14 80
+$~

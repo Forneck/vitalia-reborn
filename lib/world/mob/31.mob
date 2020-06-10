@@ -1,0 +1,156 @@
+#3100
+criada~
+a criada~
+A Criada está esperando por suas ordens.
+~
+Ela é muito bonita, possui cabelos dourados e seus olhos são de um azul
+profundo. Você pensa consigo mesmo que esta é uma boa razão para vir aqui
+mais freqüentemente.
+~
+2156546 0 0 0 16 0 0 0 1000 E
+108 0 -10 1d1+30000 1d8+22
+2000 80000
+8 8 2
+E
+#3101
+sacristao~
+o Sacristão~
+Um Sacristão está sentado aqui, bebendo seu chá bem quente.
+~
+O Sacristão parece que está aqui para relaxar um pouco, após terminar de
+cavar mais uma sepultura.
+~
+2097154 0 0 0 0 0 0 0 800 E
+3 18 7 2d6+35 1d7+0
+13 300
+6 6 1
+E
+#3102
+chefe sentinela~
+o Chefe dos Sentinelas~
+O Chefe dos Sentinelas está parecendo muito transtornado.
+~
+Um chefe muito bravo.
+~
+2097190 0 0 0 16 0 0 0 800 E
+17 3 1 1d12+210 1d8+18
+0 28000
+8 8 1
+E
+#3103
+sentinela guarda~
+o sentinela transtornado~
+Um sentinela está parado aqui, parecendo estar muito transtornado.
+~
+Um grande, forte e bravo sentinela.
+~
+2097190 0 0 0 0 0 0 0 1000 E
+10 10 2 1d12+123 1d8+3
+0 9000
+8 8 1
+E
+#3104
+secretaria~
+a Secretária~
+Uma secretária está sentada em sua mesa, datilografando algo.
+~
+Ela parece está muito ocupada.
+
+A Secretária diz 'Desculpe, mas o Prefeito está extremamente ocupado, hoje.'
+A Secretária diz 'Por favor, sente-se enquanto espera.'
+~
+2097154 0 0 0 0 0 0 0 900 E
+12 9 2 1d12+148 2d7+1
+100 13000
+8 8 2
+E
+#3105
+prefeito~
+o prefeito~
+O Prefeito está sentado em sua imensa poltrona, roncando muito alto.
+~
+Ele é um homem atarracado, de meia-idade, com cabelos ralos e acinzentados.
+~
+2123778 0 0 0 16 0 0 0 1000 E
+54 0 -10 6d10+1360 5d8+18
+1000 230000
+4 4 1
+Dex: 25
+Int: 16
+Con: 20
+E
+#3106
+chorao~
+o chorao da cidade~
+O Chorão da Cidade está aqui, fungando baixinho.
+~
+Ele é muito bom em seu trabalho - completamente derretido em lágrimas.
+~
+2097280 0 0 0 0 0 0 0 900 E
+1 20 9 2d6+10 1d5+0
+34 100
+8 8 1
+E
+#3120
+cisne~
+o cisne~
+Um cisne está nadando em volta da lagoa.
+~
+O cisne branco é muito elegante.
+~
+2097154 0 0 0 0 0 0 0 1000 E
+1 20 9 2d6+10 1d5+0
+0 100
+8 8 1
+E
+#3121
+patinho~
+o patinho~
+Um patinho está nadando em volta da lagoa.
+~
+O patinho é adorável, ele se parece mais com um floquinho de plumas pequenino.
+~
+2097154 0 0 0 0 0 0 0 1000 E
+0 20 10 1d1+0 1d1+0
+0 1
+8 8 1
+E
+#3122
+pardal~
+o pardal~
+Um pardal está se esbaldando pelo chão.
+~
+Parece que o pardal está aproveitando a vida.
+~
+2097344 0 0 0 0 0 0 0 1000 E
+0 20 10 2d6+0 1d3+0
+0 25
+8 8 1
+E
+#3123
+pato~
+o pato~
+Um pato está aqui, grasnando alegremente.
+~
+O pato é bem gordo. Parece que ele está aproveitando a vida.
+~
+2097216 0 0 0 0 0 0 0 1000 E
+1 20 10 2d6+5 1d4+0
+0 75
+8 8 0
+E
+#3124
+guarda-costas~
+o guarda-costas~
+O guarda-costas do Prefeito está aqui, sem tirar os olhos de você.
+~
+Alto e forte. Já foi um pacificador desta cidade, e agora foi recrutado a
+proteger seu Prefeito.
+~
+2097232 0 0 0 16 0 0 0 1000 E
+40 0 -6 10d10+750 8d8+21
+1000 45000
+8 8 1
+BareHandAttack: 10
+E
+$

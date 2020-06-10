@@ -1,0 +1,101 @@
+#4400
+pilha tecido capote escuro~
+um capote escuro~
+Uma pilha de tecido escuro foi jogada aqui.~
+~
+9 0 0 0 0 ace 0 0 0 0 0 0 0
+7 0 0 0
+5 2110 0 0 0
+#4401
+nirin madeira cajado amaldiçoado~
+um amaldiçoado cajado de madeira Nirin~
+Um cajado de madeira foi deixado aqui.~
+~
+1 a 0 0 0 ao 0 0 0 0 0 0 0
+0 0 -1 0
+4 8400 0 0 0
+E
+nirin madeira cajado amaldiçoado~
+O cajado de madeira escura tem cerca de seis pés de comprimento.  Ele foi
+feito a partir da madeira de uma árvore Nirin amaldiçoada.  É um tanto
+difícil achar.
+~
+#4402
+peixe grande~
+um peixe grande~
+Um peixe muito grande foi deixado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+20 0 0 0
+3 200 0 0 0
+#4403
+estranha noz~
+uma estranha noz~
+Uma estranha noz está aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+10 0 0 0
+1 50 0 0 0
+#4404
+estranha noz~
+uma estranha noz~
+Uma estranha noz está aqui.~
+~
+18 ac 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+estranha noz~
+Estranho... Ela parece atraí-lo em direção à lagoa.
+~
+#4405
+garra espinhos galhos~
+uma garra de galhos cheia de espinhos~
+Uma garra feita de galhos e cheia de espinhos está aqui.~
+~
+5 a 0 0 0 an 0 0 0 0 0 0 0
+0 5 4 8
+1 0 0 0 0
+A
+19 1
+A
+18 1
+#4457
+aviso placa poste madeira~
+uma placa de madeira~
+Uma placa de madeira foi pregada num poste.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+50 0 0 0 0
+E
+aviso placa poste~
+
+Você lê:
+&W
+&W                      ,--------,&n
+&W         .............:........:.............  &n
+&W       .´                                    `.&n
+&W      '&n          &B&uBem-vindo a Qui'lur!&n&W          '&n
+&W      '                                        '&n
+&W      '&n     &R*&n &YA Aldeia fica a leste&n&W            '&n
+&W      '                                        '&n
+&W      '&n     &R*&n &YProibida a entrada de&n &Y&uLobos&n &You&n&W   '&n
+&W      ' &n  &Y&uMinotauros&u&Y, por favor...&n&W             '&n
+&W       `.             _        _             .`&n
+&W         ´´´´´´´´´´´´´:´´´´´´´´:´´´´´´´´´´´´´&n
+&W                      :        :&n
+                       
+       
+~
+#4458
+pesca arpão~
+um arpão de pesca~
+Um arpão de pesca está jogado aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 5 4 11
+6 5000 0 0 0
+A
+2 2
+$~

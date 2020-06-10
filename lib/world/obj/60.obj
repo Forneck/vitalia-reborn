@@ -1,0 +1,289 @@
+#6000
+machado serra~
+um machado de serra~
+Um pesado machado de serra se encontra aqui.~
+~
+5 d 0 0 0 an 0 0 0 0 0 0 0
+0 2 3 3
+12 50 15 0 0
+E
+machado serra~
+É um machado pesado, do tipo que lenhadores usam para derrubar árvores.
+~
+A
+18 1
+#6001
+camisa xadrez~
+uma camisa xadrez~
+Um camisa xadrez foi deixada aqui~
+~
+9 d 0 0 0 ad 0 0 0 0 0 0 0
+1 0 0 0
+2 20 8 0 0
+E
+camisa xadrez~
+É uma camisa tamanho gigante, xadrez, feita com flanela grossa.
+~
+#6002
+botas couro~
+um par de botas de couro curtido~
+Um par de botas de couro curtido estão aqui.~
+~
+9 d 0 0 0 ag 0 0 0 0 0 0 0
+2 0 0 0
+4 60 10 0 0
+E
+botas~
+Elas foram fabricadas com um couro rústico que foi bastante untado com óleo,
+a fim de se tornar à prova d'água.   Embora rústicas, elas parecem ser bastante
+funcionais.
+~
+#6003
+lareira~
+uma lareira~
+Uma lareira feita de pedra foi colocada na parede do leste.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+200 0 0 0
+0 0 0 0 0
+E
+lareira~
+Feita de pedras de tamanhos variados, que foram sendo colocadas umas sobre as
+outras e fixadas por argamassa.   Sua chaminé foi feita de maneira a tirar toda
+a fumaça do forro da cabana.
+~
+#6004
+lanterna latão coberta~
+uma lanterna de latão coberta~
+Uma lanterna de latão coberta foi deixada aqui.~
+~
+1 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 100 0
+4 60 10 0 0
+E
+letras~
+As palavras escritas dizem:
+
+Use 'hold lanterna' para acionar.
+
+~
+E
+lanterna latão coberta~
+Ela é grande e bastante robusta e usando óleo como combustível, esta lanterna
+feita de latão foi feita com uma alça para carregá-la e possui uma espécie de
+tampa, que protege a chama, dos ventos.   Algumas palavras estão escritas
+embaixo dela.
+~
+#6005
+cômoda madeira~
+uma cômoda de madeira~
+Uma cômoda de madeira foi colocada no canto.~
+~
+15 0 0 0 0 a 0 0 0 0 0 0 0
+100 15 6006 0
+20 100 10 0 0
+E
+arca madeira~
+É uma grande arca, feita com pequenas pranchas de madeira que foram alinhadas
+e presas com grandes parafusos.   Um puxador simples, de latão foi colocado
+nela.
+~
+#6006
+chave latão~
+uma pequena chave de latão~
+Uma pequena chave de latão foi deixada aqui.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+6006 0 0 0
+1 0 0 0 0
+E
+chave latão~
+É uma pequena e bem simples chave de latão, que não possui nenhuma marca ou
+inscrição nela.
+~
+#6007
+moedas ouro~
+um punhado de moedas de ouro~
+Algumas moedas de ouro foram deixadas numa pilha bem no chão.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+127 0 0 0
+1 127 0 0 0
+E
+moedas ouro~
+As moedas parecem ser de ouro.   Obviamente elas são bastante valiosas.
+~
+#6010
+amoras-pretas frutinhas~
+algumas amoras pretas~
+Algumas amoras pretas crescem em arbustos perto daqui.~
+~
+19 c 0 0 0 a 0 0 0 0 0 0 0
+3 0 0 0
+1 0 0 0 0
+E
+amoras-pretas frutinhas~
+Com certeza elas parecem ser muito apetitosas.
+~
+#6011
+cogumelo~
+um cogumelo~
+Um pequeno cogumelo cresce aqui por perto.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+6 0 0 0
+1 10 10 0 0
+E
+cogumelo~
+Essa coisinha pequena parecer ser bastante gostosa.
+~
+#6012
+aviso~
+um grande aviso~
+Um grande aviso, preso num poste, foi colocado ao lado da estrada.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+100 0 0 0 0
+E
+aviso~
+Está escrito:-
+
+                         Haon-Dor
+                         --------
+ Esta é a Floresta de Haon-Dor.  Fica sob a sua responsabilidade a sua entrada.
+  Este é um lugar onde nem tudo que você enxerga é real e nem sempre o real
+    aparece.   Tenha cuidado com as suas intenções, nem sempre elas poderão
+ ser bem interpretadas.
+~
+E
+poste~
+Não é o poste mais interessante do mundo.
+Melhor deixar isso aqui, até porque um grande aviso foi pregado nele.
+
+~
+#6013
+barril~
+um barril~
+Um barril de água foi deixado aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+40 40 15 0
+45 60 20 0 0
+#6014
+riacho córrego~
+um pequeno riacho~
+Um pequeno riacho serpenteia pela floresta ao lado da estrada.~
+~
+23 0 0 0 0 0 0 0 0 0 0 0 0
+50000 50000 15 0
+0 0 0 0 0
+E
+riacho córrego~
+A água parece estar limpa e refrescante.
+~
+#6015
+lago~
+o lago~
+Há um lago aqui, convidando-o para nadar.~
+~
+23 0 0 0 0 0 0 0 0 0 0 0 0
+50000 50000 0 0
+0 0 0 0 0
+#6016
+galho carvalho bastão~
+um bastão feito de carvalho~
+Há um bastão de carvalho caído aqui.~
+~
+5 g 0 0 0 an 0 0 0 0 0 0 0
+0 1 7 7
+16 1 20 0 0
+E
+galho carvalho bastão cassetete~
+O galho de carvalho parece bastante sólido e poderia ser uma boa arma.
+~
+A
+19 2
+A
+1 -2
+#6017
+corpo cadáver porco-do-mato~
+o corpo de um porco-do-mato~
+O corpo mutilado de um porco-do-mato foi deixado no chão.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+100 0 0 0
+500 1 1 0 0
+#6018
+fatia grossa carne~
+uma grande e grossa fatia de carne~
+Uma grande fatia grossa de carne fresca de porco-do-mato está aqui no chão.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+24 0 0 0
+15 40 1 0 0
+E
+fatia grossa carne~
+Isso parece dar bastante sustança.
+~
+#6019
+presas dentes par~
+um par de presas de porco-do-mato~
+Um par de grandes presas de porco-do-mato foi derrubado aqui.~
+~
+8 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+10 60 1 0 0
+E
+presas dentes par~
+Eles parecem que podem ter algum valor nas mãos de um artesão.
+~
+#6020
+cepo tora côncavo girando~
+uma tora côncava~
+Há uma tora côncava no chão.~
+~
+22 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+48 2 1 0 0
+E
+tora~
+Parece que isso poderia fácilmente flutuar.
+~
+#6021
+ninho pássaro~
+o ninho do pássaro~
+undefined~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+30 0 0 0
+0 0 0 0 0
+#6022
+ovo azul tordo~
+um ovo azul de tordo~
+Um pequenino ovo azulado foi deixado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+6 0 0 0
+1 10 0 0 0
+E
+ovo azul tordo~
+Ele é pequeninho, mas alimenta.
+~
+#6023
+carne coelho~
+um pedaço de carne de coelho~
+Um grande pedaço de carne de coelho.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+12 0 0 0
+5 29 20 0 0
+#6024
+carne gamo corça cervo~
+um pedaço de carne de cervo~
+Um grande pedaço de carne de cervo.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+24 0 0 0
+10 80 20 0 0
+$~

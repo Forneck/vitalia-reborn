@@ -1,0 +1,108 @@
+#22200
+guarda guardiao gigante guerreiro~
+O Guardião dos Portais~
+Um gigante guerreiro está aqui, protegendo este local.
+~
+Apesar da aparência austera e sombria, ele está imensamente feliz
+pois recebeu a maior honra de todas: Proteger os Portões de Valhala!
+~
+2160722 0 0 0 0 0 0 0 250 E
+101 0 -12 6d10+1500 8d10+80
+3 60000
+8 8 1
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#22201
+robin hood príncipe ladrões ladrão~
+Robin Hood, o Príncipe dos Ladrões~
+Robin Hood está aqui, com um sorriso aberto nos lábios, feliz por saber
+que você pode finalmente compreender seus motivos.
+~
+Ele é jovem, não deve passar dos 25 anos.  Antes, ele foi Robin de LocksLei,
+um nobre possuidor de terras.  Mas o destino lhe reservou outra coisa...  A
+morte de seu pai, o confisco de suas terras, sua fuga e a oportunidade de se
+tornar um herói!  Ele é agora Robin Hood, O Príncipe dos Ladrões.
+~
+2154582 0 0 0 0 0 0 0 0 E
+101 0 -20 6d10+1500 8d10+80
+3 70000
+8 8 1
+Str: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#22202
+hans tadden~
+Hans Tadden~
+O gigante Hans Tadden está aqui, estendendo os braços em sua direção.
+~
+Ele está com uma barba enorme...  Pelo visto, há anos ele não se barbeia e
+pelo jeito, há muito tempo ele não sabe o que é tomar um bom banho.  Mas o
+importante não é o seu cheiro ou sua aparência.  O que importa de fato são
+os seus atos, suas atitudes como homem.  E nisto, ele é rei.  Lembre-se:
+você está diante do maior de todos os exploradores.
+~
+2154578 0 0 0 0 0 0 0 0 E
+101 0 -16 6d10+1500 8d10+80
+3 60000
+8 8 1
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#22203
+essência arthur rei~
+a Essência do Rei Arthur~
+A Essência do Rei Arthur está aqui, pronto para ensinar-lhe suas lições.
+~
+Você está diante da essência daquele que foi o maior de todos os Reis.
+Lembre-se que é preciso muita honra e muita dignidade para poder compreender
+sua mensagem e que ele, o maior de todos, escolheu uma cabana simples, para
+ensiná-lo.
+~
+2357330 0 0 0 330000 0 0 0 1000 E
+105 -92 -77 10d100+22200 13d13+93
+150000 7500000
+5 5 1
+BareHandAttack: 13
+Str: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#22204
+jasão argonautas~
+Jasão, o Líder dos 50 Argonautas~
+Jasão, o Grande Líder dos 50 Argonautas está aqui, feliz por poder lhe
+encontrar.
+~
+O grande Jasão e seus Argonautas: cinqüenta heróis gregos dotados de dons
+especiais.  Partiram para Cólquida, onde buscaram o poderoso Velocino de
+Ouro.
+~
+2357330 0 0 0 330000 0 0 0 1000 E
+105 -92 -77 10d100+22200 13d13+93
+150000 7500000
+5 5 1
+BareHandAttack: 13
+Str: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+$

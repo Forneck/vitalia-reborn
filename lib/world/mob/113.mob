@@ -1,0 +1,698 @@
+#11300
+cardume peixes cristal~
+um cardume de peixes de cristal~
+Um grande cardume de peixes translúcidos nada à sua frente.
+~
+Esses peixes, de uns 30 centímentros de comprimento, nadam em um grupo de
+meio milhar de seres brilhantes e translúcidos como cristal puro.  Não
+parecem perigosos, apesar das afiadas nadadeiras.
+~
+2099264 0 0 0 2048 0 0 0 0 E
+19 2 0 4d20+300 4d3+8
+2000 45000
+8 8 1
+E
+#11301
+serpente dourada~
+uma serpente dourada~
+Uma serpente de escamas douradas nada em volta de você.
+~
+A serpente é bastante longa, mais ou menos seu tamanho em comprimento, e de
+corpo muito robusto.  Suas escamas douradas, radiantes como se fossem
+polidas, são largas, possuindo algumas delas pequenas pedras coloridas que
+se assemelham a gemas.  Os olhos amarelos, com uma fenda negra no centro,
+acompanham seus movimentos enquanto seu corpo faz voltas em torno de você,
+da mesma forma que a língua bifurcada se move de um lado para outro junto a
+um par de compridos bigodes.
+~
+2099202 0 0 0 2048 0 0 0 0 E
+19 1 0 50d4+370 4d4+6
+1800 45000
+8 8 2
+E
+#11302
+naga sacerdote sumo-sacerdote nihar~
+Nihar, o Sumo-Sacerdote~
+Um naga de ar grave abençoa as águas do centro do templo.
+~
+De aparência madura, fartos cabelos negros começando a esbranquecer nas
+têmporas, Nihar é um naga de muito poder em Patala.  Ele é responsável
+pelo templo de Sesha de Bhogavati, sendo este o principal deste mundo, além
+de ser um dos mais próximos conselheiros do rei.  Ele se veste com
+simplicidade, cobrindo seu corpo com um alvo tecido de bom algodão,
+carregando como item de valor apenas o sinal do templo.
+~
+2287618 0 0 0 67856 0 0 0 0 E
+44 0 -5 1d50+450 15d3+14
+30000 150000
+8 8 1
+E
+#11303
+anjali nagini graciosa sacerdotisa~
+Anjali, a sacerdotisa~
+Uma graciosa nagini caminha entre as oferendas, organizando-as.
+~
+Anjali é uma nagini bastante miúda, de rosto quase infantil. A pele
+de sua parte humana é alva, enquanto a de sua metade serpente é coberta
+com escamas que vão de um rosa muito claro até intenso rubro, quase negro,
+na ponta de sua cauda. Seus grandes olhos, negros, percorrem toda a sala
+de oferendas como se procurassem algo fora do lugar. Caso achassem, ela
+iria correndo arrumar, esquecendo-se do intruso no templo.
+~
+2287618 0 0 0 67920 0 0 0 0 E
+33 0 -6 25d2+450 15d2+30
+6000 80000
+8 8 2
+E
+#11304
+shashwat naga enorme sacerdote~
+Shashwat, o sacerdote~
+Um enorme naga se curva perante um altar enquanto entôa estranho cântico.
+~
+Shashwat mais parece um soldado do que um sacerdote: ele é muito alto (você
+diz que ele tem, pelo menos, dois metros e meio), corpo musculoso e queimado
+de sol, cabelos negros aparados muito curtos, barba feita.  Sua parte
+serpente, de escamas cor-de-mogno, se enrola a seu redor, totalmente imóvel.
+O sacerdote está, no momento, utilizando-se de um antigo cântico naga para
+curar as feridas de alguém que pediu que lhe enviasse suas preces.
+~
+2287618 0 0 0 67920 0 0 0 0 E
+33 0 -6 25d2+450 15d2+30
+6000 80000
+8 8 1
+E
+#11305
+Sapni sacerdotisa nagini~
+Sapni, a sacerdotisa~
+Há uma nagini sentada no centro da sala, em profunda meditação.
+~
+Sapni está com a mente e espírito em outro lugar.  Enrolada sobre sua cauda,
+ela move lentamente seu tronco de um lado para o outro, como um pêndulo que
+se destaca na fraca iluminação.  Você não enxerga detalhes sobre ela,
+percebendo apenas que as escamas de sua cauda têm uma aparência metálica, já
+que refletem um pouco da luz do lugar.
+~
+2287618 0 0 0 67920 0 0 0 0 E
+33 0 -6 25d2+450 15d2+30
+6000 80000
+8 8 2
+E
+#11306
+pramsu naga sacerdote~
+Pramsu, o sacerdote~
+Um concentrado sacerdote procura algo entre alguns pergaminhos.
+~
+Pramsu, um naga de cabelos longos, lisos e brancos, procura entre um
+amontoado de pergaminhos algum específico.  Seus grandes olhos cinzentos, de
+fenda oblíqua muito fechada, movem-se de um texto para o outro, sem prestar
+atenção em você, sendo acompanhados por mãos jovens de dedos magros e unhas
+aparadas.  A barba alva, curta e bem-cuidada, envelhece o rosto jovial.
+~
+2287618 0 0 0 67920 0 0 0 0 E
+33 0 -6 25d2+450 15d2+30
+6000 80000
+8 8 1
+E
+#11307
+nagini sorridente mira atendente~
+Mira~
+Uma nagini muito sorridente pede que você se aproxime de um dos balcões.
+~
+A sorridente Mira, que cuida das vendas na joalheria de sua família, é uma
+bela nagini de pele e cabelos rosáceos.  Os olhos, brilhantes como duas
+gemas rosadas lapidadas, parecem sorrir junto da generosa boca de perfeitos
+dentes brancos.  Ela parece disposta a mostrar a bela coleção de sua loja.
+~
+2156546 0 0 0 0 0 0 0 900 E
+108 0 -10 1d1+30000 2d8+12
+2000 160000
+8 8 2
+E
+#11308
+dhiraj atendente naga~
+Dhiraj~
+O atendente da armoraria o observa por de trás do balcão.
+~
+Dhiraj parece um pouco enfastiado por ficar atrás do balcão.  Ele
+provavelmente prefere auxiliar na oficina, mas por algum motivo está
+atendendo na armoraria.
+~
+2156546 0 0 0 0 0 0 0 900 E
+108 0 -10 1d1+30000 2d8+12
+2000 160000
+8 8 1
+E
+#11309
+atendente naga balraj~
+Balraj~
+O atendente do arsenal parece divertir-se ao golpear o ar com uma espada.
+~
+Balraj está entre muitas armas, o que o deixa muito satisfeito.  Ele, no
+momento, cuida do atendimento do arsenal, mas também trabalha na oficina
+auxiliando Twashtri em seu trabalho.  Os melhores artefatos nascem pelas
+mãos do mestre, sendo um privilégio tocá-los, como ele faz, durante as
+vendas.
+~
+2156546 0 0 0 0 0 0 0 900 E
+108 0 -10 1d1+30000 2d8+12
+2000 160000
+8 8 1
+E
+#11310
+twashtri mestre artesão~
+Twashtri~
+O mestre dos artesãos está aqui, trabalhando em mais um projeto.
+~
+Twashtri é um artesão de divinos poderes.  Sua arte é tão perfeita que
+recebeu o título de mestre dos artesãos, tendo recebido livre acesso a até a
+Cidade das Jóias, mesmo não sendo um naga.  Recurvado de tanto trabalhar
+sobre seus tesouros, esse senhor de tantas centenas de anos possui ainda um
+par de olhos muito brilhantes, azuis como as águas de um mar no verão, que
+parecem tão jovens quanto geniais.  As mãos, apesar do trabalho de tantos
+anos, são delicadas como as de um instrumentista, um tanto queimadas pelo
+calor da forja, assim como o são os musculosos braços.  Um engraçado bigode
+branco, com alguns pinduricalhos dourados, cobre a boca e parte das
+bochechas, sendo amarrado em uma trança logo abaixo do queixo.  Os cabelos,
+também brancos, já são ralos, e os poucos fios são aparados muito rentes à
+cabeça, fazendo-o parecer completamente calvo.  Ele parece concentrado
+demais para prestar atenção em você.
+~
+2353170 0 0 0 65792 0 0 0 700 E
+101 -24 -26 10d5+6800 10d7+33
+42000 1099999
+8 8 1
+E
+#11311
+hemadri nagini~
+Hemadri~
+Uma nagini de olhos dourados limpa o balcão.
+~
+Hemadri, de estranhos olhos dourados, parece bastante irritada pois alguém
+derramou uma poção que produz água sobre o grande balcão da loja.  Pelo
+jeito a poção é muito eficaz, pois a água parece surgir do nada por sobre o
+balcão e começa a escorrer, tendo já molhando todo o chão do Caldeirão.
+~
+2156546 0 0 0 0 0 0 0 900 E
+108 0 -10 1d1+30000 2d8+12
+2000 160000
+8 8 2
+E
+#11312
+nagini recepcionista mishti~
+Mishti~
+Uma nagini enrolou-se em sua cauda e caiu no sono enquanto "trabalhava".
+~
+A função de Mishti é receber e atender aqueles que desejam se hospedar na
+Pedra Preciosa, ou que já estão hospedados, é claro.  Para alegria da bela
+nagini de cauda alaranjada, o movimento hoje foi quase nulo, podendo ela
+tirar uma boa soneca sem que ninguém a interrompesse.
+~
+2156546 0 0 0 0 0 0 0 900 E
+108 0 -10 1d1+30000 2d8+12
+2000 160000
+8 8 2
+E
+#11313
+kshiraj barman naga~
+Kshiraj~
+Um naga prepara bebidas atrás do balcão, enquanto conversa com clientes.
+~
+Kshiraj conhece bebidas de quase todos os lugares em que se consome álcool.
+Não há o que ele não faça.  Muito simpático, esse naga, bastante magro em
+relação ao normal, consegue manter uma boa conversa com qualquer um que se
+aproxime.  Talvez até com você...
+~
+2156546 0 0 0 0 0 0 0 900 E
+108 0 -10 1d1+30000 2d8+12
+2000 160000
+8 8 1
+E
+#11314
+grupo yakshas bêbados~
+um grupo de yakshas bêbados~
+Um pequeno grupo de yakshas, todos bêbados, canta alegremente.
+~
+Parecendo vir de noroeste do Ikshumati, esses yakshas são pequenos mercadores
+que não dispensam uma parada no Cobra Voando para saborear as deliciosas
+bebidas aqui oferecidas.  Os demônios desse grupo têm corpos de carne e
+osso, o que os faz poderem ser vistos normalmente: são baixos, de pele rosa
+muito enrugada, com alguns pêlos roxos; os olhos são grandes, de íris negra,
+no alto da cabeça ovalada; as orelhas pontudas parecem grandes chifres
+partindo das laterais do crânio, sendo elas repletas de argolas douradas.  A
+boca larga, cheia de dentes, está sempre sorrindo. Eles cantam uma alegre
+melodia conhecida por você. Coisas de bêbado...
+~
+2285570 0 0 0 2128 0 0 0 -900 E
+25 4 -6 9d7+500 4d5+25
+4708 85000
+8 8 1
+E
+#11315
+garçom naga~
+um garçom~
+Um atarefado garçom passa carregando duas grandes bandejas.
+~
+O pobre naga anda de um lado para o outro anotando pedidos e entregando
+bebidas.  Ele segura uma bandeja com uma mão e outra com a cauda.  Com a
+outra mão segura um pano para limpar as mesas.
+~
+2104322 0 0 0 2048 0 0 0 0 E
+4 17 6 1d1+55 1d8+0
+50 600
+8 8 1
+E
+#11316
+naga entediado~
+um naga entediado~
+Um naga de aparência entediada bebe lentamente de uma caneca.
+~
+Provavelmente esse naga não tem o que fazer e veio procurar a animação da
+taverna, mas não consegiu livrar-se do tédio.  Só uma boa briga parece que
+Irá satisfazê-lo.
+~
+2097154 0 0 0 0 0 0 0 0 E
+19 1 -1 3d6+240 3d6+8
+1000 35000
+8 8 1
+E
+#11317
+pisacha metal ferro demônio~
+um pisacha de ferro~
+Um pequeno demônio de ferro espera sua vez de jogar os dardos.
+~
+Baixo e magro, o pisacha possui o corpo coberto por duras escamas de ferro.
+Sua cabeça é de forma humana, apenas mais arredondada e da cor do metal de
+suas escamas.  Os olhos pequenos, negros, estão franzidos enquanto olham
+para o alvo de dardos: ele logo irá jogar.
+~
+2097154 0 0 0 0 0 0 0 -500 E
+21 9 0 3d6+130 2d8+11
+400 21000
+8 8 1
+E
+#11318
+naga~
+um naga~
+Um naga prepara-se para lançar mais um dardo em um alvo.
+~
+O naga, de rosto e cauda marcados por cicatrizes, ensaia amplos movimentos
+antes de lançar um pequeno dardo de ponta aguda na direção de um velho alvo
+a alguns metros de distância.  Ele parece bem concentrado.
+~
+2103298 0 0 0 67600 0 0 0 -780 E
+31 1 -1 6d3+550 4d6+12
+750 30500
+8 8 1
+E
+#11319
+naga rastreador belo~
+um rastreador~
+Um rastreador descansa em uma das poltronas, abraçado às suas armas.
+~
+Como todos os rastreadores, esse naga não possui cor definida de pele e
+escamas: elas se transformam de modo que ele está quase sempre camuflado.
+Durante o sono, quando está mais vulnerável, ele fica totalmente cinzento,
+lembrando a tonalidade das nuvens de uma tempestade.  Por esse motivo, os
+rastreadores quase nunca dormem, sendo a visão de um deles dormindo algo
+realmente raro.
+~
+2285586 0 0 0 0 0 0 0 0 E
+50 -8 -9 7d7+1100 7d5+20
+6000 95000
+4 8 1
+E
+#11320
+demônio rakshasi habilidosa~
+uma habilidosa rakshasi~
+Uma habilidosa rakshasi examina atentamente um baralho.
+~
+Ela verifica atentamente o baralho que tem em mãos, contando as cartas e
+procurando marcas.  Perita em trapaça, essa rakshasi é sempre chamada para
+procurar irregularidades em tudo o que estiver ligado a jogos de azar,
+evitando ações de má-fé por parte dos jogadores.  Ela já teve seus dias de
+criminosa, mas agora trabalha pela lei.
+~
+2193410 0 0 0 67920 0 0 0 -100 E
+26 0 -2 12d8+590 4d6+10
+0 50000
+8 8 1
+E
+#11321
+kalidas naga senhor~
+o Senhor Kalidas~
+O Senhor Kalidas, dono da loja, cumprimenta você, com simpatia.
+~
+O velho Kalidas, antes um grande viajante, agora alegra-se em vender o fruto
+de suas viagens e, vez ou outra, partir em busca de mercadorias.  É um naga
+alto, de pele acobreada, olhos escuros e cabelos já brancos.  Suas escamas
+da parte serpente são avermelhadas, possuindo listras negras e amarelas,
+sinal de grande força.  Apesar de forasteiros não serem bem-vindos aqui, ele
+o recebe bem, pois já conhece viajantes como você.
+~
+2156546 0 0 0 0 0 0 0 900 E
+108 0 -10 1d1+30000 2d8+12
+2000 160000
+8 8 1
+E
+#11322
+darshani nagini mensageira chefe~
+Darshani, a mensageira-chefe~
+A chefe dos mensageiros organiza algumas cartas a serem enviadas.
+~
+Darshani é a chefe dos mensageiros do Serviço Postal de Bhogavati e Região.
+Ela no momento está verificando se todos os maços de cartas a serem enviados
+estão separados para serem levados pelos mensageiros certos, pois um erro
+pode ser fatal.
+~
+2156546 0 0 0 0 0 0 0 900 E
+108 0 -10 1d1+30000 2d8+12
+2000 160000
+8 8 2
+E
+#11323
+distraído gaurang naga~
+Gaurang~
+Um naga distraidamente afina um instrumento.
+~
+Gaurang é o dono da Sublime Música, tendo a herdado de seu pai, que a herdou
+de seu avô, que a herdou de seu bisavô e assim por diante.  Dizem que os
+melhores instrumentos músicais produzidos em Patala vêm da oficina da
+família de Gaurang, sendo que entre seus compradores estão até os celestiais
+gandhavas.  O esbelto naga de escamas verde-oliva, quando não está
+trabalhando na loja, está construindo instrumentos na oficina ou compondo
+novas melodias.
+~
+2156546 0 0 0 0 0 0 0 900 E
+108 0 -10 1d1+30000 2d8+12
+2000 160000
+8 8 1
+E
+#11324
+nadish naga vendedor barcos~
+Nadish~
+O vendedor de barcos, por de trás do balcão, acena para você.
+~
+Nadish é um naga de baixa estatura e músculos bem desenvolvidos, de um
+marinheiro de muitos anos de experiência e viagens.  O rosto, castigado pelo
+sol, é de um homem muito sério que às vezes explode em gargalhadas,
+surpreendendo a todos.  Seus barcos são velozes e resistentes, mais até do
+que ele se permite admitir.
+~
+2156546 0 0 0 0 0 0 0 900 E
+108 0 -10 1d1+30000 2d8+12
+2000 160000
+8 8 1
+E
+#11325
+mestre-guia naga sacerdote~
+o mestre-guia dos clérigos~
+Seu mestre-guia ora aqui a seu Deus, com fervor.
+~
+Os olhos cerrados escondem o brilho que a iluminação divina traz, permitindo
+que esse homem, de aspecto calmo e bondoso, caminhe por entre seus irmãos
+sem mostrar totalmente a imponente luz de sua alma.
+~
+2156562 0 0 0 272 0 0 0 1000 E
+108 0 -10 10d100+2000 5d10+100
+18794 100000
+8 8 1
+E
+#11326
+mestre-guia mulher encapuzada ladina~
+a mestra-guia dos ladinos~
+Um mulher encapuzada está de pé aqui, apoiada em uma das paredes.
+~
+Você consegue ver apenas o queixo e a boca vermelha de sua mestra.
+Seus movimentos são graciosos, rápidos, sua fala macia e cuidadosa.
+Ela está totalmente coberta por um capuz e capa negra, sendo possível
+perceber, de relance, muitas armas brilhando à luz das poucas tochas.
+~
+2156562 0 0 0 272 0 0 0 1000 E
+108 0 -10 10d100+2000 5d10+100
+18794 100000
+8 8 2
+E
+#11328
+druidesa gentil mestre guia druidas~
+a mestra-guia dos druidas~
+Uma druidesa de rosto gentil pede para você se aproximar um pouco mais.
+~
+Um pouco envelhecida, mas de olhos e sorriso jovial, sua mestra recebe você
+com a alegria de uma velha professora que recebe um aluno querido.  Ela
+parece ficar mais radiante quando começa a falar dos ensinamentos que pode
+lhe passar.
+~
+2156562 0 0 0 272 0 0 0 1000 E
+108 0 -10 10d100+2000 5d10+100
+18794 100000
+8 8 2
+E
+#11329
+guerreiro mestre-guia~
+o mestre-guia dos guerreiros~
+Seu mestre-guia observa sua chegada com seus argutos olhos de guerreiro.
+~
+De beleza quase selvagem, seu guia é um homem que está no auge de sua força
+e que atingiu completa maestria das artes da guerra.  Sua força, imensa,
+emana dos olhos profundamente negros emoldurados pela cabeleira que começa a
+acinzentar, e das grandes mãos que manuseiam qualquer arma como se fosse uma
+extensão de seu próprio corpo.  Ele pode lhe ensinar muito.
+~
+2156562 0 0 0 0 0 0 0 1000 E
+108 0 -10 10d100+2000 5d10+100
+18794 100000
+8 8 1
+E
+#11330
+mestre-guia magos~
+o mestre-guia dos magos~
+Um velho mago sorri ao ver mais um aluno chegar.
+~
+Ele olha para você com seus velhos, muito velhos, olhos azuis, fazendo com
+que você se perca nas eras que seu mestre viveu.  De volta ao normal, você
+repara em como parece ser desgastante para seu mestre permanecer em um corpo
+que restringe o poder que seu grande espírito possui, mas apesar disso ele
+não demonstra preferir abandonar seus pupilos para viver seu pleno poder.
+Ele considera sua vida já plena.
+~
+2156562 0 0 0 0 0 0 0 1000 E
+108 0 -10 10d100+2000 5d10+100
+18794 100000
+8 8 1
+E
+#11331
+naga feiticeiro~
+um feiticeiro naga~
+Um naga de grande poder guarda a Irmandade.
+~
+Membro da Irmandade de Magos, esse feiticeiro de olhos e escamas cor-de-vinho
+é um feiticeiro cuja experiência e habilidade em magias de defesa e ataque
+lhe rendeu o posto de guardião. Ele sabe ser fatal.
+~
+2156546 0 0 0 272 0 0 0 900 E
+108 -20 -8 6d10+1500 8d8+80
+2000 60000
+8 8 1
+E
+#11332
+nagini templar~
+a nagini templar~
+Uma nagini guarda, impassível, a entrada da Congregação.
+~
+Treinada para proteger os membros da Congregação, essa nagini
+é tão fria quanto o cinza de seus olhos e escamas. Ela é uma clériga de
+habilidades guerreiras, mas você dificilmente a imagina rezando e abençoando
+alguém.
+~
+2156546 0 0 0 272 0 0 0 1000 E
+108 -20 -8 6d10+1500 8d8+80
+2000 160000
+8 8 2
+E
+#11333
+assassina nagini~
+a nagini assassina~
+Oculta pelas sombras, uma nagini protege a entrada da Sociedade.
+~
+Olhos furtivos, mãos ágeis, habilidade em matar: ela se oculta nas sombras
+como se fosse uma perigosa parte delas. Sua cauda, marrom-escuro, possui
+em sua extremidade alguns espinhos afiados, vermelhos como sangue, usados
+como arma. Será muito difícil sobreviver a ela.
+~
+2156546 0 0 0 1573200 0 0 0 400 E
+108 -20 -8 6d10+1500 8d8+80
+2000 160000
+8 8 2
+E
+#11334
+nagini guerreira~
+a nagini guerreira~
+Uma nagini guarda impaciente a entrada da Associação.
+~
+Uma das mais habilidosas dentro da casta guerreira, essa nagini especializou-se
+em inúmeras táticas de combate e artes marciais. Por adorar utilizar-se
+de sua grande capacidade de guerra, acha muito monótona a tarefa
+de guardar a entrada da Associação. Ou seja: adoraria comprar uma briga
+aqui, e agora.
+~
+2156546 0 0 0 272 0 0 0 800 E
+108 -20 -8 6d10+1500 8d8+80
+2000 160000
+8 8 2
+E
+#11335
+druida naga paciente~
+o druida naga~
+Um naga de aspecto paciente parece meditar em pé, enquanto guarda a Confraria.
+~
+Ele olha para além do horizonte, perdido em pensamentos.  Mas uma parte de
+sua mente está alerta e pronta para defender a Confraria utilizando-se de
+todo seu grande poder druídico, custe o que custar.
+~
+2156546 0 0 0 272 0 0 0 800 E
+108 -20 -8 6d10+1500 8d8+80
+2000 160000
+8 8 1
+E
+#11336
+serpente pequena rubi~
+uma pequena serpente de rubi~
+Uma pequena serpente de rubi mergulha e salta das águas.
+~
+A pequena serpente, de corpo feito de rubi, faz todo tipo de piruetas que
+consegue fazer na água.  Ela não parece se intimidar com sua presença.
+~
+2097220 0 0 0 1048576 0 0 0 -300 E
+5 16 5 50d1+10 3d3+2
+0 2000
+8 8 2
+E
+#11337
+serpente esmeralda~
+uma serpente de esmeralda~
+Uma serpente de esmeralda mergulha e salta das águas.
+~
+Verde pela esmeralda que constitui seu corpo, essa serpente mágica sente-se
+à vontade para brincar nas límpidas águas.
+~
+2097220 0 0 0 1048576 0 0 0 -300 E
+7 15 4 50d1+20 3d3+3
+0 2000
+8 8 2
+E
+#11338
+tartaruga opala azul~
+uma tartaruga de opala azul~
+Uma tartaruga de casco feito de opala azul bóia sobre as águas.
+~
+O casco dessa tartaruga mágica, de opala azul, brilha em diversas
+tonalidades à medida que a luz é refletida e seus olhos se aproximam ou
+afastam dele.  Sua grossa pele é feita de um translúcido cristal
+azul-escuro.
+~
+2097220 0 0 0 1048576 0 0 0 -300 E
+8 15 2 50d1+30 3d3+3
+0 3000
+8 8 2
+E
+#11339
+lagarto ônix negro pequeno~
+um lagarto de ônix~
+Um pequeno lagarto negro navega sobre uma folha dourada.
+~
+Pequeno, de grandes olhos vermelhos e saltados, esse lagarto cintila com
+suas escamas de ônix polida.  Ele parece muito tranqüilo, como um pequeno
+marinheiro navegando em sua folha-navio.
+~
+2097220 0 0 0 1048576 0 0 0 -300 E
+6 15 4 50d1+20 3d3+3
+0 2600
+8 8 1
+E
+#11340
+serpente marfim~
+uma serpente de marfim~
+Uma serpente de marfim nada tranqüilamente perto de você.
+~
+O branco polido do marfim que forma o corpo da serpente forma um bonito par
+com as pontas douradas de suas escamas e olhos.  Sua língua bifurcada, que é
+exposta vez o outra, parece feita de rubi.  Provavelmente é uma criatura
+mágica.
+~
+2097220 0 0 0 1048576 0 0 0 -300 E
+9 11 2 50d1+40 3d3+4
+0 5000
+8 8 2
+E
+#11341
+membro guarda naga jóias safira~
+um sentinela da Guarda das Jóias~
+Um membro da Guarda está aqui, pronto para defender a cidade.
+~
+Dentro da Guarda, os sentinelas são chamados classe Safira, recebendo
+uniformes e armas que possuem a pedra de sua divisão.  São todos eles
+robustos, de escamas azuis, ocres ou verdes, cabelos da cor da cauda
+cortados acima das orelhas, barba raspada e com uma característica
+pintura negra nas maçãs do rosto.
+~
+2127952 0 0 0 16 0 0 0 0 E
+15 -2 -6 5d20+900 1d10+10
+1500 25000
+8 8 1
+E
+#11342
+soldado guarda naga jóias rubi~
+um soldado da Guarda das Jóias~
+Um membro da Guarda ronda por aqui.
+~
+Para manter a ordem, dentro da Guarda há a chamada classe Rubi, sendo que
+seus membros, soldados de várias graduações, recebem uniformes e armas
+que possuem a pedra de sua divisão. Os soldados são, por padrão, altos
+e esbeltos, de escamas vermelhas, vinho ou arroxeadas, cabelos longos,
+avermelhados, presos com fios dourados, rosto limpo e unhas negras.
+~
+2127952 0 0 0 16 0 0 0 0 E
+15 0 -6 5d20+900 1d10+12
+1500 25000
+8 8 1
+E
+#11343
+guardião guarda naga jóias prata~
+um guardião da Guarda das Jóias~
+Um membro da Guarda está aqui, a postos.
+~
+Os guardiões, classe Prata da Guarda das Jóias, são membros do grupo de
+elite cuja divisão veste-se e arma-se quase que utilizando-se somente a
+mágica prata de Bhogavati.  Todos eles possuem escamas prateadas,
+reluzentes, cebeças completamente raspadas, um discreto cavanhaque e
+espessas sobrancelhas prateadas, além de duas fileiras de pontudos espinhos
+que vão da ponta de sua cauda até a nuca. São muito perigosos.
+~
+2291730 0 0 0 2320 0 0 0 0 E
+30 0 -10 10d10+950 8d8+18
+4000 90500
+8 8 1
+BareHandAttack: 10
+E
+#11344
+kshatryia guerreiro vigia ouro esmeralda guarda naga jóias~
+um kshatryia-vigia da Guarda das Jóias~
+Um membro da Guarda protege o portão.
+~
+Os kshatryias são uma grande divisão na Guarda das Jóias, um verdadeiro
+exército formado de nagas guerreiros.  Esses nagas distribuem-se em vários
+postos, sendo eles denominados classe Ouro, e o posto de vigia subclasse
+Ouro e Esmeralda.  Os vigias estão entre os membros mais altos da guarda
+(entre dois metros e quarenta e três metros), de corpo maciço, escamas de
+diversos tons de verde, cabelos lisos longos, sempre negros, donos de
+brilhantes olhos cor de avelã e alva pele, que eles cobrem com pinturas em
+henna.  São os primeiros a perceberem ataques à cidade, protegendo os
+portões e controlando o canal a seu redor.
+~
+2291730 0 0 0 2320 0 0 0 0 E
+50 -1 -11 10d10+1050 8d8+19
+4000 110500
+8 8 1
+BareHandAttack: 10
+E
+$

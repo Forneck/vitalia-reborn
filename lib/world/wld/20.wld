@@ -1,0 +1,2683 @@
+#2000
+O Hall de Entrada~
+   Logo ap�s voc� subir as escadas, voc� se depara com o p�rtico de entrada,
+possuindo uma grande porta de bronze com o S�mbolo da Ordem.  A constru��o,
+em estilo corinthio relembra um pouco as constru��es de Roma.
+~
+20 131140 0 0 0 2
+D0
+H� areia at� onde seus olhos conseguem ver.
+~
+~
+0 -1 5030
+S
+#2001
+O Sal�o Principal~
+   Voc� adentra o sal�o e ao faz�-lo se espanta com o tamanho e a beleza do
+mesmo.  Em cada canto do sal�o existe uma grande est�tua, que serve de pilar
+de sustenta��o, dos grandes Cavaleiros da Luz, precursores da ordem.  No
+ch�o voc� se espanta com o bel�ssimo trabalho de revestimento em m�rmore
+formando o s�mbolo da Ordem dos Disc�pulos da Luz.  No teto pode-se ver uma
+grande pintura retratando a batalha na qual os Cavaleiros da Luz derrotaram
+as For�as da Entropia.  Muita luz vem da sala acima.
+~
+20 8 0 0 0 0
+D0
+~
+~
+0 -1 2002
+S
+#2002
+Uma Sala Muito Iluminada~
+   � Impressionante, a sala � enorme, no entanto s� existe uma fonte de
+energia no seu centro, emitindo muita luz branca.  Voc� nem consegue
+enxergar sua sombra.  Voc� se sente bem, como se pudesse recuperar todos os
+seus ferimentos de batalha...  Seus olhos s�o ofuscados com a linda luz
+emitida pela esfera, isso de alguma forma o acalma.  � perigoso, voc� pode
+pegar no sono...
+~
+20 524440 0 0 0 0
+D0
+~
+~
+0 -1 2001
+S
+#2003
+A Sala das Armas~
+   Est� � uma sala grande, onde voc� pode notar v�rias armaduras e armas,
+dos mais variados estilos, tamanhos e idades.  Parece ser mais um museu de
+armas e armaduras.  Esta sala funciona assim como a sala de doa��es do
+templo de Midgaard.  O estilo de constru��o utilizado nele segue o padr�o da
+Ordem, o estilo helen�stico, utilizado em toda essa enorme constru��o.
+~
+20 8 0 0 0 0
+D0
+~
+~
+0 -1 2001
+S
+#2004
+Sala de Reuni�o da C�pula~
+   Voc�, ao entrar, pode ver uma enorme mesa de m�rmore redonda, tendo nela
+v�rias cadeiras, levando em conta o n�mero de membros na ordem atualmente
+voc� poderia arriscar que existe uma para cada pessoa.  Milhares de livros e
+est�o aqui, pelo que dizem, � a maior biblioteca existente.  Existem
+pinturas das v�rias batalhas realizadas p�los grandes Cavaleiros da Luz em
+toda a sala.
+~
+20 12 0 0 0 0
+D0
+~
+~
+0 -1 2001
+S
+#2005
+A Sala dos Guerreiros Lend�rios~
+   Nesta sala, que se estende p�r dois corredores, leste e oeste, voc� pode
+contemplar v�rias est�tuas dos melhores Disc�pulos da Luz de todos os
+tempos.  Muitos dos que conviveram com tais lend�rios aventureiros dizem que
+ao entrar nessa sala sentem uma enorme saudade assim como uma enorme
+sensa��o de paz, estes tamb�m afirmar que os restos "mortais" de tais
+aventureiros est�o enterrados na base de suas respectivas est�tuas.
+~
+20 8 0 0 0 0
+D0
+~
+~
+0 -1 2001
+S
+#2006
+O Corredor dos Guerreiros Lend�rios~
+   Este corredor � uma extens�o da sala anterior, tamb�m aqui voc� pode
+notar in�meras est�tuas de aventureiros.
+~
+20 8 0 0 0 0
+D0
+~
+~
+0 -1 2005
+S
+#2007
+A Sala da Heran�a Divina~
+   Esta sala possui uma atmosfera diferente do resto do castelo.  Aqui o
+mundo dos imortais se funde ao dos mortais.  � como se algu�m tentasse lhe
+dizer algo.  Ao centro, voc� observa uma est�tua de um antigo cavaleiro
+feita de um reluzente metal.  Ela representa o primeiro Disc�pulo da Luz
+que, com bravura e dignidade, entregou sua vida em nome de todos aqueles que
+lutam pelo bem.  Em sua base h� uma placa com alguns dizeres.
+~
+20 8 0 0 0 0
+D0
+~
+~
+0 -1 2006
+S
+#2008
+Os Belos Jardins da Ordem~
+   Que beleza, uma verdadeira obra prima da jardinagem!!  Os Jardins da
+Ordem dos Disc�pulos da Luz, tido como o mais belo do mundo, possui todos os
+tipos de plantas existentes em Vit�lia e alguns tipos j� extintos fora dos
+jardins.  Muitos magos da ordem utilizam de tal raras ervas para suas
+f�rmulas m�gicas.  Bem ao centro do jardim voc� pode ver uma grande fonte e
+mais ao fundo um grande e belo edif�cio.
+~
+20 0 0 0 0 1
+D0
+~
+~
+0 -1 2006
+S
+#2009
+A Fonte de Luz~
+   No centro do jardim localiza-se um magnifico trabalho em m�rmore da mais
+pura cor branca: uma fonte representando o voo de Anluzir, um cavalo alado,
+ser de luz que aben�oa �queles que est�o do lado do Bem.  As l�mpidas �guas
+que acompanham a magn�fica figura com certeza ir�o n�o apenas saciar a sede
+dos que precisam, mas fornecer nova energia aos bravos merecem.
+~
+20 0 0 0 0 1
+D0
+~
+~
+0 -1 2008
+S
+#2010
+Entrada dos Guardi�es do Legado Atlante.~
+   Voc� esta na imponente entrada para a sede do cl� dos defensores dos
+princ�pios lemurianos.  Voc�, pela extraordin�ria decora��o que perpetua
+nesta sala, sente a import�ncia que este cl� teve em sua �poca remota.  O
+BRAS�O suspenso no alto da parede, por sobre o grande port�o de a�o, parece
+como novo, apesar dos muitos anos pelos quais perpetua.  A oeste, voc�
+estar� dentro da sede.  S� � permitida a entrada para membros do cl�.
+~
+20 131140 0 0 0 2
+D0
+� oeste, um caminho muito seguro que o levar� at� o Templo do Legado Atlante.
+~
+~
+0 -1 2011
+S
+#2011
+Um Vasto Caminho~
+   Quando voc� entra por essa passagem observa a rigorosidade da constru��o
+deste caminho que � feito de pedras rochosas ornamentadas com s�mbolos
+feitos de safira e �nix encaixados em suas paredes.  Voc� se sente muito
+protegido ao saber que esta dentro da sede do cl�.  A leste, est� a entrada
+da sede do cl�.  A oeste, voc� v� o Templo do Legado Atlante.
+~
+20 8 0 0 0 1
+D0
+O Poderoso Templo do Legado Atlante est� � oeste daqui.
+~
+~
+0 -1 2012
+S
+#2012
+Templo do Legado Atlante~
+   Aqui voc� se sente totalmente protegido de qualquer for�a do mal.  O
+Templo foi a primeira sala a ser constru�da quando os defensores lemurianos
+chegaram em Vit�lia.  Voltado para o crescente, a luz do dia irradia em
+todas as dire��es, tornando-o uma pot�ncia em luminosidade.
+~
+20 524296 0 0 0 1
+D0
+Uma Passagem que lhe levar� para o Laborat�rio de Sindic�ncias fica a oeste daqui.
+~
+~
+0 -1 2018
+S
+#2013
+Sala do Conhecimento~
+   Uma montanha de livros esta organizada uniformemente nas prateleiras da
+sabedoria.  V�rios quadros est�o pendurados nas paredes.
+   Um papiro esta pendurado na parede a leste.  Voc� sente necessidade de
+aprofundar sua pr�tica de vida ao l�-lo.  A oeste est� o santu�rio e ao sul
+a sala de doa��es.
+~
+20 8 0 0 0 1
+D0
+O Santu�rio est� a oeste daqui.
+~
+~
+0 -1 2014
+S
+#2014
+O Santu�rio~
+   Ao adentrar este recinto voc� sente seu corpo mais leve e aben�oado.  � o
+poder salutar do santu�rio.  Sacerdotes em t�nicas luminosas andam por aqui,
+eles bendizem cada ser que aqui repousa ou caminha.  A este voc� retorna
+para a sala do conhecimento.
+~
+20 8 0 0 0 1
+D0
+Para leste daqui est� a Sala do Conhecimento.
+~
+~
+0 -1 2013
+S
+#2015
+A Sala de Concess�es~
+   � uma sala ampla mas muito organizada.  Aqui voc� pode encontrar diversos
+itens organizados que possam ser �teis em sua jornada.  Voc� opta pelo que
+mais lhe servir e pode lev�-lo, eles est�o aqui para ter serventia e nenhum
+valor ser� cobrado.
+~
+20 8 0 0 0 1
+D0
+Para sul daqui est� a Sala do Conhecimento.
+~
+~
+0 -1 2013
+S
+#2016
+A Pra�a~
+   Cercada por uma relva macia e verde, a pra�a � um sacr�rio da Natureza.
+Aqui os p�ssaros celebram em poesia com seus cantos.  O vento percorre seu
+corpo dando-lhe energia e uma agrad�vel sensa��o de bem estar.  Tulipas,
+orqu�deas, violetas e cris�ntemos colorem a pra�a.  Ao sul voc� estar� na
+sala de reuni�o.
+~
+20 8 0 0 0 1
+D0
+A Grande C�pula das Decis�es est� a sul daqui.
+~
+~
+0 -1 2017
+S
+#2017
+A C�pula~
+   Este � um edif�cio precisamente constru�do nos moldes Atlantes.  A
+clarab�ia no alto permite a entrada do feixe de luz que reflete na t�vola.
+� aqui que os Atlantes congregam-se para examinar e deliberar acerca das
+quest�es que os preocupam.
+~
+20 40 0 0 0 1
+D0
+Uma maravilhosa Pra�a est� a norte da C�pula.
+~
+~
+0 -1 2016
+S
+#2018
+Um Atrium~
+   Ao seguir por uma trilha de pedras assentadas no ch�o voc� avista ao
+longe uma entrada.  Atrav�s desta trilha voc� chegar� no laborat�rio de
+sindic�ncias.
+~
+20 8 0 0 0 1
+D0
+Para baixo est� o Laborat�rio de Sindic�ncias.
+~
+~
+0 -1 2019
+S
+#2019
+O Laborat�rio de Sindic�ncias~
+   Ao chegar neste recinto voc� v� um enorme e confort�vel div�, voc�
+sente-se tentado a sentar nele e senta-se.  Uma vez confortavelmente
+instalado voc� sentir� a presen�a amiga de algum dos fundadores do cl�, este
+lhe propor� uma quest�o acerca da fam�lia e do mundo que voc� deseja
+associar-se.  Aqui n�o poder� haver qualquer comunica��o com o mundo
+exterior.
+~
+20 40 0 0 0 1
+D0
+Para cima h� uma passagem que lhe levar� ao Templo.
+~
+~
+0 -1 2018
+S
+#2020
+Port�o de Entrada~
+   Este � a entrada para o Cl� dos Observadores voc� fica deslumbrado com a
+beleza e com a incrivel prote��o que ele deve dar a quem est� l� dentro.
+   A sua frente est� entre os muros de pedra maci�a uma enorme Grade de
+Ferro, que parece ser bem resistente, e por tr�s dela, voc� consegue ver uma
+Grande Porta de Madeira que lhe faz pensar o quanto de trabalho os
+construtores devem tem tido para levant�-la.
+~
+20 131140 0 0 0 2
+D0
+~
+~
+0 -1 3313
+S
+#2021
+Biblioteca~
+   Est� � a biblioteca do Cl�, voc� nunca viu uma sala com tantos livros, e
+tanta teia junta ao mesmo tempo.  Voc� sente que est� sala n�o � uma das
+mais visitadas da Sede.  E voc� acaba sentindo um pouco de culpa por isto...
+   Mas o que mais lhe chama a aten��o, � um grande livro no meio da sala, e
+uma grande pedra mais ao canto da parede, parece que h� algo escrito l�...
+~
+20 8 0 0 0 1
+D0
+Voc� v� uma pequena porta no meio de tantos livros.
+~
+porta~
+1 -1 2022
+S
+#2022
+Sal�o de Entrada~
+   Voc� est� no sal�o de entrada do Cl�, no centro dele voc� encontra um
+enorme chafariz, toda a parede � bem decorada com pinturas de animais e
+plantas, com uma beleza e qualidade t�o grande que parecem estar vivos de
+verdade.
+   A sua frente existe uma grande porta, parece ser muito pesada, que sai no
+Sal�o Principal, a Oeste voc� avista um porta com uma placa em cima, a Leste
+h� apenas cortinas de cor lilas e atr�s de voc� est� a Grande Porta de
+Entrada com suas grades e prote��es.
+~
+20 8 0 0 0 1
+D0
+Voc� v� uma pequena porta com uma placa em cima onde diz "Biblioteca".
+~
+~
+1 -1 2021
+E
+parede~
+Voc� tem a impress�o que todos estes animais e plantas que est�o pintados na
+parede est�o vivos olhando para voc� de verdade.
+~
+S
+#2023
+Iris~
+   Voc� est� em uma sala escura, com pequenos pontos de luz de diversas
+cores como vermelho, azul, amarelo, verde e outras localizadas nas paredes
+da sala.  A sala cheia de cortinas pesadas, simbolos e objetos nunca visto
+antes, o deixa encantado e atraido por ela.
+   Ao respirar voc� sente uma enorme energia aqui.  Toda a energia de
+Vitalia parece passar por esta sala.  Este lugar parece ser o local perfeito
+para meditar e recuperar a energia perdida em combate.
+~
+20 524297 0 0 0 1
+D0
+Voc� v� enormes cortinas de cor lilas.
+~
+porta~
+1 -1 2022
+E
+parede~
+Voc� v� varios pontos de luz coloridos pela parede, isto parece te acalmar
+profundamente.
+~
+S
+#2024
+Armorial~
+   Est� � a sala de doa��es do Cl�, onde aventureiros deixam itens dos quais
+n�o ir�o mais usar para os mais novos.
+   Voc� v� uma placa aqui.
+~
+20 8 0 0 0 1
+D0
+~
+~
+0 -1 2025
+E
+placa~
+   Aquele que for pego vendendo itens desta sala ser� severamente punido.
+
+                                                Ass: Arkano Lider do Cl�.
+~
+S
+#2025
+Sal�o Principal~
+   Este � o sal�o principal do Cl�, onde os membros do Cl� costumam se
+encontrar para contar suas aventuras e compartilhar suas experi�ncias.
+Voc� v� pr�xima as paredes v�rias armas e equipamentos usados em grandes
+aventuras pelos mais destemidos aventureiros.  Voc� percebe que s�o
+equipamentos de alta qualidade, mas um conselho, n�o toque em nenhum
+deles...
+~
+20 8 0 0 0 1
+D0
+Voc� v� uma grande escadaria neste lugar.
+~
+~
+0 -1 2027
+S
+#2026
+Sala de Reuni�o do Conselho~
+   Est� � a sala onde o conselho se re�ne, no centro h� uma enorme mesa
+feita no mais belo estilo rustico, e em sua volta se encontram oito cadeiras
+enormes, feitas de mais nobre madeira.  Nas paredes voc� v� quadros das mais
+antigas batalhas vistas pelos observadores.  Bem ao centro da mesas se
+encontra um cristal, que ao primeiro sinal de perigo para o planeta da um
+sinal de alerta para os membros do conselho.
+~
+20 8 0 0 0 1
+D0
+~
+~
+0 -1 2029
+S
+#2027
+O Sal�o de Festas~
+   Voc� se encontra em um enorme sal�o, com tantas mesas e cadeiras que
+cont�-las parece algo realmente trabalhoso.  No final da sala, ap�s passar
+por todas as mesas e um amplo espa�o vazio, voc� v� um enorme palco, todo
+arrumado.  Isso o faz pensar que provavelmente haver� alguma apresenta��o
+hoje.  Quem sabe...?
+   Em cima de cada mesa h� garrafas de vinho e comida que parecem n�o
+acabar.  Ser� que os Magos de Mitra t�m algo a ver com isso?
+~
+20 8 0 0 0 1
+D0
+Voc� v� a grande escadaria pela qual chegou.  Voc� fica pensando como �
+grande e nem se cansou ao subi-la.
+~
+~
+0 -1 2025
+E
+sal�o~
+As mesas se agrupam de uma tal maneira que uma pista de dan�a.  � formada.
+O que est� esperando?  V� e tire algu�m para dan�ar!
+~
+E
+palco~
+O Palco est� todo arrumado e as cortinas est�o se fechando.
+Oba! Hoje tem show!
+~
+E
+mesa~
+Voc� v� uma mesa feita de carvalho, cheia das mais variadas especiarias.
+~
+S
+#2028
+O Altar~
+   Este � o Templo do Cl�, um lugar calmo onde os membros aproveitam para
+descan�ar e e meditar.  Qualquer um que provoque o o disturbio deste local
+ser� severamente punido, n�o se deve faltar com o respeito e muito menos com
+a moral aqui...
+   Este local � diferente dos outros templos, aqui n�o h� estatuas, apenas
+um altar, onde cada um pode horar para seu pr�prio Deus.
+~
+20 8 0 0 0 1
+D0
+Est� � a sa�da para o sal�o principal.
+~
+~
+0 -1 2025
+E
+altar~
+Voc� sente uma grande paz dentro si.
+~
+S
+#2029
+Sala do Tesouro~
+   Est� � a sala do tesouro, aqui se encontra todo tipo de tesouro, desde
+pedras preciosas at� armas encantadas, estes itens foram obtidos pelo
+membros do cl� desde sua exist�ncia, e estes itens so saem daqui como
+premios para valorozos aventureiros que o fazem por merecer.
+~
+20 9 0 0 0 1
+D0
+~
+~
+0 -1 2026
+S
+#2030
+Os Port�es das Virtudes~
+   Voc� est� em frente dos port�es de entrada para o Cl� dos Cavaleiros da
+Virtude, a medida que voc� chega perto dos port�es, repara cenas do grande
+cataclisma ocorrido a s�culos atr�s entalhados em sua antiga madeira.  Voc�
+sente pena pelos que renegaram aos Deuses de Vit�lia e ajudaram o mal a
+prevalecer, morrendo por estes motivos de forma horrenda.  Gradativamente ao
+entrar no Cl�, voc� passa a sentir uma sensa��o de calma e tranquilidade.
+~
+20 131140 0 0 0 2
+D0
+Uma obscura floresta pode ser vista nesta dire��o.
+~
+~
+0 -1 6000
+S
+#2031
+O Sal�o da Humildade~
+   Aqui � o centro do Cl�.  Voc� v� que � um sal�o muito grande, h� v�rias
+prateleiras com in�meros pergaminhos apoiados, o teto mal pode ser visto.
+Voc� v� pinturas de batalhas do bem contra o mal por todas as paredes, ao
+centro, em um pedestal, voc� pode ver um �nico pergaminho apoiado sobre ele,
+um pergaminho diferente dos outros, com uma luz celestial refletindo em seus
+olhos.  Este com certeza � o pergaminho contendo a hist�ria dos Cavaleiros
+da Virtude, o grande Pergaminho das Virtudes.
+~
+20 8 0 0 0 1
+D0
+Enormes port�es entalhados com cenas do grande cataclisma.
+~
+port�es port�o~
+0 -1 2030
+S
+#2032
+A Sala da Sabedoria~
+   A Sala da Sabedoria � o local onde os Cavaleiros da Virtude fazem suas
+reuni�es para decidir o sobre o futuro e o bem estar de Vit�lia, esta sala �
+pequena devida a grande quantidade de pergaminhos nela existente, aqui se
+fazem leituras deles em volta da mesa de carvalho localizada no centro,
+sendo ela iluminada por uma vasta irradia��o solar.
+~
+20 8 0 0 0 1
+D0
+Um forte brilho emana desta dire��o.
+~
+~
+1 -1 2033
+S
+#2033
+O Corredor da F�~
+   Voc� est� em um corredor que brilha conforme voc� passa ao longo dele,
+dizem que quanto maior sua f� e suas virtudes, maior ser� o brilho do
+corredor, nota-se que este corredor continua ao norte.
+~
+20 8 0 0 0 1
+D0
+Esta sala � restrita somente aos grandes Cavaleiros deste Cl�.
+~
+~
+1 -1 2032
+S
+#2034
+A Sala da Justi�a~
+   Esta � uma sala muito ampla e bonita, existem v�rias armaduras e armas
+dos antigos Cavaleiros da Virtude, que defenderam Vit�lia por toda sua vida.
+Estas armaduras e armas foram deixadas aqui, para que voc� e outros
+cavaleiros possam usa-las em suas batalhas contra o mal.  Em uma das paredes
+existe algumas palavras gravadas em uma placa de bronze.
+~
+20 8 0 0 0 1
+D0
+Um forte brilho emana desta dire��o.
+~
+~
+0 -1 2033
+E
+placa~
+       "O desnecess�rio para algu�m, pode ser o essencial para outro."
+    "Seja solid�rio com seus companheiros, deixe aqui o que voc� n�o usa,
+               para que outros possam desfrutar deste bem."
+~
+S
+#2035
+O P�tio da Sinceridade~
+   Este � o local onde os Cavaleiros da Virtude praticam suas habilidades e
+magias de guerras usadas contra as trevas.  Pode-se ver alguns artigos para
+pratica de lutas com espadas e combate corpo a corpo neste canto, no outro
+lado do p�tio existem alguns objetos m�gicos.  Ao norte, o p�tio termina em
+um port�o, que leva a um belo jardim.  Ao leste pode-se ver uma sala um mal
+iluminada por algumas tochas, um ar sobrio preenche a sala.
+~
+20 0 0 0 0 1
+D0
+Um forte brilho emana desta dire��o.
+~
+~
+0 -1 2033
+S
+#2036
+Sala da Disciplina~
+   Esta � a sala onde os Cavaleiros da Virtude adquirem sua disciplina, �
+uma sala simples com alguns pergaminhos espalhados sobre as mesas
+localizadas nos cantos, esta sala � iluminada apenas por tochas flamejantes
+encravas em pedestais de bronze.  Ao olhar para a parede norte destaca-se um
+imenso quadro de mogno, rabiscado por gravetos queimados pelas tochas que o
+iluminam.
+~
+20 8 0 0 0 1
+D0
+Um p�tio de treinamento.
+~
+~
+0 -1 2035
+S
+#2037
+Recanto da Lealdade~
+   Ao olhar para nordeste voc� repara arbustos e pequenas �rvores margeando
+um riacho onde corre �gua clara e cristalina, este riacho circunda uma
+enorme est�tua de m�rmore branco e continua no sentido leste.  Ao olha para
+a est�tua voc� identifica o s�mbolo deste Cl�, os Deuses de Vit�lia.  Este
+� um local sagrado e muito respeitado, tenha cuidado com suas atitudes
+quando estiver aqui.
+~
+20 0 0 0 0 1
+D0
+Um belo jardim com uma fonte natural.
+~
+~
+0 -1 2038
+S
+#2038
+Os Jardins da Primavera~
+   � um bel�ssimo jardim onde cresce frondozas �rvores frut�feras e flores
+campestres das mais variadas esp�cies, deixando o local com um suave
+perfume.  Animais rodeiam este jardim com brincadeiras e travessuras, os
+p�ssaros emitem uma suave melodia em seus ninhos, deixando este local com
+uma enorme sensa��o de paz e amor.  Olhando a sua frente podesse ver uma
+fonte toda ornamentada em pedras r�sticas e plantas aqu�ticas, irrigada e
+abastecida infinitamente por �guas cristalinas de um riacho vindo do oeste.
+A oeste segue uma trilha por arbustos e pequenas �rvores, a leste, podesse
+ver um enorme templo.
+~
+20 0 0 0 0 1
+D0
+Ao final desta trilha voc� repara em uma enorme pedra esculpida.
+~
+~
+0 -1 2037
+S
+#2039
+O Templo da Bondade~
+   Este � um templo muito antigo, onde os Cavaleiros da Virtude costumavam
+se recuperar de suas sangrentas batalhas contra as trevas.  O templo inteiro
+� feito de m�rmore branco, manchado de vermelho pelos ferimentos de in�meros
+cavaleiros que descansaram neste local.  Dizem os mais antigos que este
+sangue aqui deixado transforma este templo em um recinto m�gico e
+revitalizante, dizem tamb�m que os cavaleiros em final de suas vidas
+deixavam aqui um pouco de sua vitalidade e disposi��o, para que os futuros
+Cavaleiros pudessem se curar mais r�pido, feito em um ritual m�gico por
+velhos anci�es.
+~
+20 524440 0 0 0 1
+D0
+Um belo jardim com uma fonte natural.
+~
+~
+0 -1 2038
+E
+templo~
+Este templo foi construido por enormes blocos de m�rmore branco, v�rias
+manchas de sangue saltam aos seus olhos, o sangue dos antigos Cavaleiros da
+Virtude, dizem que este sangue torna-o um templo sagrado e m�gico.
+~
+S
+#2040
+Uma Pequena Clareira~
+   Voc� acaba de passar pelas �rvores e arbustos que dominavam a floresta.
+Com algum esfor�o, voc� rompeu os cip�s e ra�zes que encobriam esta pequena
+clareira.  Deu trabalho.  Uma pena, pois n�o h� nada interessante aqui,
+exceto por um estranho par de sentinelas postos frente a uma sequ�ia
+gigantesca que faz juz aos s�culos que aparenta ter.  Pensando bem, parece
+haver algo interessante entalhado em seu tronco.  Com sorte, e a colabora��o
+das im�veis criaturas a sua frente, voc� poder� chegar perto o suficiente
+para observ�-la.
+~
+20 131140 0 0 0 1
+D0
+Parece que, entre as grandes ra�zes da �rvore, h� uma abertura por onde,
+apesar de com dificuldade, passaria um homem.
+~
+~
+0 -1 2041
+E
+�rvore sequ�ia~
+                                #####
+        #####                  ######         #####
+         #########             #####       ###########
+          #########           #####   #################
+            #######          ################    #######
+              ###            ###########       #######
+         ############       # #######       #######
+ #####################          ##        #####
+ #############  #######              #####
+  ##########    #####   #           ##########
+   #######     #####                    ######
+     ###     #######  #               ####        ######
+            ######## #             ####     ###############
+          ###########        #################       ########
+       ####### #####          ##########                ######
+    #########  ####                           ###        ######
+  ##########  #####              #######     #####        #####
+  ########  ## ####           ###     ##### #####         #####
+    ########  #####          ##          ######          #####
+       ####   #####          #         ####  ####       #####
+             ######           #     #####     ####    ######
+            #######             #####               ######
+             #####                              ########
+               ##                       ##########
+
+                           BEN��O
+~
+S
+#2041
+Uma Abertura Entre as Ra�zes~
+   Voc� acabou de entrar em...  Um buraco!  Pois �.  Depois de passar pelas
+ra�zes, voc� encontra um buraco que parece ser a entrada de uma longa
+caverna.  Estranhamente, as ra�zes por onde voc� passa parecem ter sido
+moldadas para facilitar sua descida...  Exato!  Voc� est� descendo por uma
+exuberante escada de ra�zes!  Voltando para cima, voc� estar� na pequena
+clareira.  Um lusco-fosco de chamas ilumina suavemente a sala a leste.
+~
+20 9 0 0 0 0
+D0
+Subindo pela escada, voc� poder� sair daqui, e voltar para a clareira.
+~
+~
+0 -1 2040
+S
+#2042
+Uma Pequena Vertente~
+   Esta sala n�o possui qualquer forma de ilumina��o, mas voc� ainda sente a
+presen�a da fuma�a da sala ao lado.  O ch�o � �mido e barrento, mas voc�
+consegue manter-se em p� gra�as �s ra�zes que recobrem-no.  O som de �gua
+parece vir do canto noroeste da sala, de uma pequena rachadura, de onde
+verte um fino v�u de �gua que escorre por uma raiz que sai da parede e se
+acumula em uma pequena pocilga marrom.  O fundo da pocilga pode ser visto
+claramente, devido a transpar�ncia e cristalinidade da �gua, fruto do
+trabalho da M�e Natureza em filtr�-la, algo espetacular, que poucos goles
+desta �gua pode saciar uma pessoa com MUITA sede.  Para o Sul, voc� consegue
+ver a fraca ilumina��o das tochas, e j� sente o sufocante ar que vem de l�.
+~
+20 9 0 0 0 0
+D0
+Um t�nel com sa�das para todas as dire��es.
+~
+~
+0 -1 2043
+S
+#2043
+Os T�neis~
+   Apenas um par de tochas iluminam esta parte dos t�neis.  A ilumina��o �
+prec�ria, mas a falta de vento far� com que as tochas permanecam al� por
+muito tempo.  O ar � viciado, pesado por causa da fuma�a.  Uma escava��o de
+terra, que parece ser sustentado pelas ra�zes que surgem e seguem pelas
+paredes, teto e pelo chao.  H� um barulho suave de �gua vindo do Norte, e
+uma ilumina��o fraca vem do sul.  Enfim, a fuma�a das tochas lhe faz
+lacrimejar e sua respira��o � dif�cil.  Voc� tem que sair r�pido daqui,
+antes que caia inconsciente e morra asfixiado aqui mesmo.
+~
+20 8 0 0 0 0
+D0
+Um emaranhado de ra�zes que parecem formar uma escada que sobe.
+~
+~
+0 -1 2041
+S
+#2044
+Os Alojamentos~
+   Hum...  Um lugar interessante.  H�, apesar do ch�o de terra e das paredes
+serem sustentadas por pedras e ra�zes, algumas pilhas de feno atados com
+tiras de cip�, onde os refugiados podem descansar e algumas caixas de
+madeira onde eles depositam seus pertences para poderem deitar-se.  A
+ilumina��o � feita por tochas nas paredes, que servem-se de um estranho
+sistema de ventila��o que dissipa toda a fuma�a, mas mantendo a sala com um
+clima incrivelmente agrad�vel.
+~
+20 524312 0 0 0 0
+D0
+Um t�nel com sa�das para todas as dire��es.
+~
+~
+0 -1 2043
+S
+#2045
+O Dep�sito~
+   Pelos Deuses!!  De onde veio tanto lixo?!?  Por ser o final desse longo
+t�nel, deve ser aqui onde eram jogadas todas as coisas sem utilidade.  H� de
+todo tipo de coisa.  Desde velhos frascos quebrados de po��es e peda�os de
+l�minas tomados de ferrugem, at� um ninho de ratos sob um velho elmo com o
+s�mbolo de N�menor.  Alguns restos de comida est�o em cima de um banco de
+pedra.  Realmente...  � um dep�sito de lixo, nada al�m disso...  Alias, sabe
+aquela sua velha armadura?  Que tal desfazer-se dela por aqui mesmo?  Por
+que ser� que ningu�m aparece por aqui para tentar diminuir a bagun�a?
+Hey...  Remexendo nas tralhas, voc� acaba encontrando uma PLACA
+interessante.  Parece ser muito velha, mas n�o custa nada examin�-la.
+~
+20 8 0 0 0 0
+D0
+Algumas runas aparecem por esta entrada, e seguem para o seu interior.
+~
+~
+0 -1 2046
+S
+#2046
+Sala da Pedra~
+   Voc�, ao atravessar o t�nel, percebe que estranhas runas est�o escritas
+em ra�zes pelas paredes e ch�o, e em pedras presas �s ra�zes, no teto e nas
+paredes.  Elas parecem seguir algum tipo de ordem, que lhe levam atrav�s do
+t�nel, at� uma grande pedra, perfurada por grandes e fortes ra�zes, que a
+prendem firmemente �s paredes do t�nel.  H� algumas coisas escritas nele.
+Alias, o que ser� que um talhadeira e um martelo fazem presos ao lado do
+quadro, pendurados em ra�zes?
+~
+20 8 0 0 0 0
+D0
+Uma enorme sala, com uma grande pedra ao centro.
+~
+~
+0 -1 2047
+S
+#2047
+Uma Grande Gruta~
+   Assim que sai dos t�neis, voc� adentra uma enorme gruta subterr�nea.
+Circular, ela possui uma enorme pedra com uma escultura inacabada bem em seu
+centro.  Esta gruta � iluminada por tochas em todas as paredes.  Voc�
+poderia, certamente, tirar uma delas se precisasse para iluminar seu
+caminho.  Uma corrente de convex�o faz com que a fuma�a delas seja sugada
+por uma abertura bem no alto do teto.  As paredes e o ch�o s�o recobertos de
+ra�zes e pedras, que fazem a sustenta��o do lugar.  A oeste, voc� volta para
+a encruzilhada de t�neis.  Ao norte, h� mais um t�nel.  E ra�zes tapam o que
+parecem ser outras entradas, ao leste e ao sul.
+~
+20 8 0 0 0 0
+D0
+Um t�nel com sa�das para todas as dire��es.
+~
+~
+0 -1 2043
+S
+#2048
+A Sala de N�menor~
+   Voc� encontra-se em uma sala diferente das outras, uma sala bem iluminada
+por tochas fincadas em todas as paredes, estas paredes s�o inteiramente
+cobertas pelas ra�zes que sustentam a terra a sua volta.  H� v�rias imagens
+dos antigos D�nedain entalhadas na madeira, representando a hist�ria de seus
+ancestrais.  Esta sala � composta por v�rias pedras colocadas em volta de
+uma enorme raiz, cuidadosamente esculpida formando uma mesa de centro.  Este
+local � utilizado apenas pelos mais s�bios remanescentes dos D�dedains, se
+voc� esta aqui, � por que voc� tem um grande valor para n�s.
+~
+20 8 0 0 0 0
+D0
+Uma enorme sala, com uma grande pedra ao centro.
+~
+~
+0 -1 2047
+S
+#2049
+O Ref�gio~
+   Depois de algum trabalho, os galhos e ra�zes cedem �s suas tentativas de
+afast�-los, mas voltam a fechar-se logo que voc� passa e os solta.  Esse
+lugar parece n�o ser usado h� muito tempo.  Com paredes formadas por muitas
+pedras sutentadas por ra�zes, est� muito �mido, sujo e iluminado por apenas
+um feixe de luz que parece vir do teto.  Mantendo-se em sil�ncio e sem fazer
+movimentos bruscos, dificilmente alguem encotraria voc� aqui, o que faz
+deste um lugar perfeito para um esconderijo.  Andando mais um pouco voc�
+esbarra num cip�, que vem da mesma dire��o do feixe de luz.  Esse cip�
+parece ser resistente o bastante para aguentar seu peso.
+~
+20 8 0 0 0 0
+D0
+Uma enorme sala, com uma grande pedra ao centro.
+~
+ra�z~
+1 -1 2047
+S
+#2050
+O Grande Port�o Dourado~
+   Voc� se depara com um grande Port�o de Ferro dourado, com um magn�fico
+arco de m�rmore branco resplandecendo em torno dele.  O Port�o possui em sua
+superf�cie, uma infinidade de desenhos sim�tricos, em alto relevo e ao
+observar melhor, voc� nota que estes desenhos formam a representa��o de um
+grande e lindo Sol.  Para dentro do Port�o, o caminho de grama sob seus p�s
+continua, farfalhando e brilhando com a farta luz do Sol, que bate nas
+got�culas de orvalho.  Dois fortes e gentis sentinelas guardam a entrada.
+~
+20 131140 0 0 0 1
+D0
+~
+~
+0 -1 5703
+S
+#2051
+Um Campo Gramado~
+   Voc� pisa sobre um vasto gramado fresco e verde.  A grama � bem cuidada,
+e reflete a luz do Sol em suas got�culas, dando-lhe uma delicada sensa��o de
+pureza e harmonia.  Daqui voc� pode avistar uma fonte para o norte.  E ao
+sul se localiza o grande Port�o.
+~
+20 0 0 0 0 1
+D0
+~
+port�o~
+1 -1 2050
+S
+#2052
+A Fonte~
+   No meio desta pequena pra�a gramada, uma bela fonte branca jorra �gua
+cristalina.  Para norte fica um fabuloso Templo e voc� tamb�m avista para
+oeste uma constru��o branca.  Para sul e leste, o gramado continua,
+verdejante e atrativo.  A temperatura daqui � mais quente, por�m ainda
+agrad�vel, pois nenhuma �rvore impede a entrada do Sol.
+~
+20 0 0 0 0 1
+D0
+~
+~
+0 -1 2056
+S
+#2053
+O Templo Solis~
+   Voc� acaba de entrar num magn�fico Templo inteirinho feito de m�rmore
+branco, com um lindo teto sustentado por quatro grandes colunas esculpidas
+em relevo.  O ch�o � limpo e branco, feito de enormes lajotas de m�rmore
+puro.  Voc� avista para leste e oeste, duas velhas e grandes �rvores que
+proporcionam uma agrad�vel sombra para o Templo, para norte esta um altar, e
+ao sul uma fonte.  Voc� se sente bem aqui, leve como uma pluma, e parece n�o
+sentir dor.
+~
+20 524304 0 0 0 1
+D0
+Voc� v� uma grande sala, parecendo um audit�rio no topo de uma escadaria
+prateada.
+~
+~
+0 -1 2059
+S
+#2054
+O Altar da Est�tua~
+   Voc� entra em um pequeno altar, sem paredes, apenas com o ch�o feito de
+blocos brancos de m�rmore, lisos.  Logo ali � frente, em meio caminhos de
+arbustos que invadiram o local por fora, uma estatua dourada de um humano
+esta exposta, em cima de uma coluna.  Para traz, o Templo se perde quase que
+totalmente entre os galhos.  Este lugar � bem reservado, e assim voc� se
+sente protegido.
+~
+20 0 0 0 0 1
+D0
+~
+~
+0 -1 2053
+S
+#2055
+O Armaz�m~
+   Voc� acaba de entrar em uma pequena constru��o de m�rmore branco.  Nas
+paredes norte e sul, duas janela iluminam o local, na janela norte, uma
+grande �rvore pode ser vista, e para o sul, um campo de grama deveras
+apraz�vel.  Nas paredes voc� nota, pendurados, alguns objetos, guardados,
+prontos para serem usados.  Ap�s a porta, a grande fonte jorra �gua.
+~
+20 8 0 0 0 0
+D0
+~
+~
+0 -1 2052
+S
+#2056
+Um Campo de Grama~
+   Uma pequena trilha atravessa este campo, dobrando suavemente para norte.
+A grama parece muito bem cuidada e com a brisa, ela farfalha como a bater
+das asas de um p�ssaro.  Perdido no campo, um pouco ao norte, a trilha segue
+e no meio da grama pode-se notar uma �rvore grande.  Para oeste, a fonte
+pode ser vista.
+~
+20 0 0 0 0 1
+D0
+~
+~
+0 -1 2052
+S
+#2057
+A �rvore do Leste~
+   Esta grande �rvore proporciona uma agrad�vel sombra sob a qual voc� se
+sente refrescado e bem.  Abaixo dela, folhas foram se depositando, formando
+assim um macio colch�o marrom, no qual voc� sente vontade de deitar.  Voc�
+nota, em cima, galhos largos.  Para sul, a trila segue e para oeste um
+Templo branco se apresenta.
+~
+20 0 0 0 0 1
+D0
+~
+~
+0 -1 2056
+S
+#2058
+A �rvore do Oeste~
+   Esta grande �rvore proporciona uma agrad�vel sombra na qual voc� se sente
+refrescado e bem.  Abaixo dela, folhas foram se depositando, formando assim
+um macio colch�o marrom, no qual voc� sente vontade de deitar.  Voc� nota,
+em cima, galhos largos.  Para sul, uma pequena constru��o se ergue em meio o
+gramado e para leste um Templo branco se apresenta.
+~
+20 0 0 0 0 1
+D0
+~
+~
+0 -1 2053
+S
+#2059
+A Sala Branca~
+   Voc� esta em uma sala completamente feita de m�rmore, assim como o templo
+que ela esta em cima, grandes adornos de prata real�am a beleza desse
+m�rmore.  Junto a sala, est�o dispostos uma enorme fileira de bancos de
+madeira escura como o mogno, bancos esses, que se disp�em de maneira a
+formar um U gigante, com um banco mais alto disposto de uma cadeira no
+centro de tudo.  Olhando esta sala, parecer ser um lugar calmo e tranquilo,
+onde s�o definidas as id�ias que fazem de Solis o cl� que � hoje, cheio de
+dignidade e compaix�o.  Uma enorme escadaria mesclada entre o brilho da
+prata e a escurid�o do mogno o leva para baixo, devolta ao Templo Solis.
+~
+20 184 0 0 0 0
+D0
+Raios de Sol ofuscam sua vis�o, lembrando-o que o Templo Solis se encontra
+abaixo.
+~
+~
+0 -1 2053
+S
+#2060
+A Entrada~
+   O topo da montanha se abre em uma imensa chapada.  Inunda seus olhos a
+imagem da constru��o de propor��es dantescas que parece alcan�ar as nuvens.
+Voc� pondera se n�o seria esta a morada de um titan.  Um voltuoso port�o
+adornado em prata e ouro � guardado por imponentes sentinelas, nele l�-se:
+JVKB.
+~
+20 131140 0 0 0 1
+D0
+O sentinela bloqueia sua vis�o.
+~
+~
+0 -1 2061
+S
+#2061
+O Sagu�o~
+   De fato o lugar se revela gigantesco, incont�veis tochas iluminam o
+sagu�o redondo.  No centro uma fonte jorra �gua cristalina.  Pr�ximo a
+entrada h� um caixa e quadro de avisos.
+~
+20 8 0 0 0 0
+D0
+Voc� v� dois sentinelas que protegem a entrada.
+~
+~
+0 -1 2060
+S
+#2062
+Termas Divinas~
+   Ao entrar no sal�o uma sensa��o de paz e conforto toma seu corpo como se
+nenhum mal pudesse afet�-lo.  N�o h� tochas, piscinas naturais emanam vapor
+e uma suave luz por todo lugar.  Parece ser este o lugar onde os deuses
+descansam.
+~
+20 524344 0 0 0 0
+D0
+Voc� v� um grande sal�o com uma fonte no centro.
+~
+~
+0 -1 2061
+S
+#2063
+O Arsenal~
+   O imenso dep�sito abriga em seu interior armas, armaduras e itens m�gicos
+de todos os tipos, dignos dos mais poderosos ex�rcitos.
+~
+20 8 0 0 0 0
+D0
+Voc� v� um grande sal�o com uma fonte no centro.
+~
+~
+0 -1 2061
+S
+#2064
+O Desafio JVKB~
+   As paredes bem acabadas agora que tem contornos cavernosos, tochas pelos
+arredores iluminam o altar central e as quatro est�tuas com medalh�es em
+letra, tudo aqui parece reproduzir a gruta da historia.  Um olhar mais
+atento lhe diz que tudo parece ter milhares de anos e que todo o resto foi
+constru�do em volta desta sala.  Voc� se assusta ao perceber onde de fato
+est�: na Caverna das Orqu�deas Sussurrantes.
+~
+20 8 0 0 0 0
+D0
+Voc� v� um grande sal�o com uma fonte no centro.
+~
+~
+0 -1 2061
+S
+#2065
+O Julgamento Mundano~
+   N�o ha muito pra se ver. Esse lugar claramente n�o recebeu muita aten��o.
+O altar em forma de J � parcamente iluminado e esta vazio, mal se consegue
+ler: "Julgar os outros � condenar a si pr�prio."
+~
+20 8 0 0 0 0
+D0
+Ao oeste voc� v� um altar e algumas estatuas.
+~
+~
+0 -1 2064
+S
+#2066
+A Luxuria Perdida~
+   O altar em V � simples como todo o resto, feito em pedra e madeira sem
+nenhuma ostenta��o.  Talhado na parte interior os dizeres: "Pagara em vida
+seus pecados e nada daqui levar�."
+~
+20 8 0 0 0 0
+D0
+Ao leste voc� v� um altar e algumas estatuas.
+~
+~
+0 -1 2064
+S
+#2067
+A F� profana~
+   Armas e armaduras emitem um brilho fosco e iluminam o interior.  O altar
+em forma de K tem sobre ele um guerreiro que parece se proteger com uma
+fr�gil cruz de madeira, ao lado dele esta escrito: "O brado de um tolo � o
+disfarce de um covarde."
+~
+20 8 0 0 0 0
+D0
+Ao sul voc� v� um altar e algumas estatuas.
+~
+~
+0 -1 2064
+S
+#2068
+A Eterna Busca~
+   Uma luz m�gica dispensa as tochas, o altar em B traz oferendas ao bem
+mais valioso do homem: sua fam�lia.  Runas desconhecidas na base podem de
+algum modo ser facilmente lidas por voc�, trazem um recado estranho: "Melhor
+uma crian�a pia que um pastor in�quo."
+~
+20 8 0 0 0 0
+D0
+Ao norte voc� v� um altar e algumas estatuas.
+~
+~
+0 -1 2064
+S
+#2069
+A Redoma~
+   Este � o ultimo andar, onde a c�pula se re�ne.  A frente v�-se seis
+assentos, dois tronos maiores lado a lado ao centro, em volta disposto dois
+a dois diagonalmente mais quatro cadeiras. Uma enorme mesa pode abrigar o
+conselho, no fundo pr�ximo a porta um banco que parece ser o dos r�us.
+~
+20 8 0 0 0 0
+D0
+Abaixo voc� v� um altar e algumas estatuas.
+~
+~
+0 -1 2064
+S
+#2070
+O Caminho para o Cl� Dragoon~
+   A poucos metros voc� pode ver um imenso templo feito de pedra, que parece
+quardar segredos muito antigos.  Bem a sua frente h� um grande port�o negro,
+e ao lado dele voc� repara em dois guerreiros que parecem ser muito fortes,
+e dispostos a proteger este templo dos invasores.
+~
+20 131140 0 0 0 1
+D0
+Voc� pode ver uma linda fonte no centro da sala.
+~
+~
+0 -1 2071
+S
+#2071
+Dentro do Grande Templo~
+   Voc� repara que as paredes da proximidade est�o cheias de desenhos
+enigm�ticos, esculpidos com muito cuidado e precis�o, que parecem
+respresentar uma grande batalha que acontecera h� muito tempo atr�s.  Voc�
+ouve os mais variados sons, que em seu todo parecem formar uma bel�ssima
+can��o homenageando todos os bravos que protegem Vit�lia com suas pr�prias
+vidas.
+~
+20 0 0 0 0 1
+D0
+Voc� pode ver um grande corredor.
+~
+~
+0 -1 2072
+S
+#2072
+O Corredor de Acesso~
+   Aqui � o in�cio do corredor que d� acesso a duas salas.  A oeste voc�
+pode ver um grande quadro.  A leste pode ver guerreiros se equipando para
+novas batalhas.
+~
+20 0 0 0 0 1
+D0
+Voc� pode ver a continua��o do corredor.
+~
+~
+0 -1 2075
+S
+#2073
+A Sala de Mensagens~
+   Esta � a sala onde os guerreiros deixam seus avisos para todos os
+membros.  Nesta sala h� um quadro de mensagens pendurado em uma das paredes.
+Quando voc� olha para ele acha que deve o ler.
+~
+20 0 0 0 0 1
+D0
+Voc� pode ver um grande corredor.
+~
+~
+0 -1 2072
+S
+#2074
+O Quarto de Prepara��o~
+   Este � o local onde pode ver um arsenal de armas e equipamentos que j�
+foram usados por poderosos aventureiros de Vit�lia, e que agora est�o aqui
+para serem utilizados em novas batalhas.
+~
+20 0 0 0 0 1
+D0
+Voc� pode ver um grande corredor.
+~
+~
+0 -1 2072
+S
+#2075
+O Final do Corredor de Acesso~
+   Aqui � a parte final do corredor que da acesso a duas salas.  A norte
+voc� v� os guerreiros feridos repousando.  A leste voc� v� v�rios Guerreiros
+reunidos descutindo alguma coisa que n�o d� para se ouvir.
+~
+20 0 0 0 0 1
+D0
+Voc� pode ver a grande sala de reuni�es.
+~
+~
+0 -1 2076
+S
+#2076
+A Sala de Reuni�es~
+   Nesta sala s�o discutidos os problemas do cl�.  Aqui tamb�m s�o
+discutidos planos para matar os mais poderosos monstros deste mundo.
+~
+20 0 0 0 0 1
+D0
+Voc� pode ver a sala do L�der.
+~
+~
+0 -1 2077
+S
+#2077
+A Sala do L�der~
+   Este � o local onde s�o realizados encontros dos l�deres e seus homens de
+confian�a.  Aqui s�o discutidos os assuntos administrtivos do cl�.
+~
+20 0 0 0 0 1
+D0
+Voc� pode ver a grande sala de reuni�es.
+~
+~
+0 -1 2076
+S
+#2078
+A Sala de Recupera��o~
+   Voc� sente uma estranha sensa��o ao entrar aqui.  Parece que esta sala
+est� envolvida por um poder de cura, permitindo que seus ferimentos
+cicatrizem mais r�pido.
+~
+20 524304 0 0 0 1
+D0
+Voc� pode ver o final do corredor.
+~
+~
+0 -1 2075
+S
+#2080
+Em Frente � Escadaria~
+   A sua frente a uma enorme escadaria, feita de arenito que parece ser
+muito antigo.  Os degraus s�o largos, o que torna a subida muito cansativa.
+Voc� n�o sabe bem ao certo aonde essa escada vai terminar, mas j� � poss�vel
+ver, bem ao fundo, uma enorme constru��o de pedra que se assemelha muito com
+uma pir�mide.  Voc� v� duas imponente esfinges e cada uma esta com um lindo
+medalh�o de ouro, parece existir um s�mbolo em cada medalh�o.
+~
+20 131140 0 0 0 1
+D0
+H� um imenso rio pra l�.
+~
+~
+0 -1 8109
+E
+medalh�o~
+Esse parece ser um s�mbolo de uma esfinge.  O medalh�o � feito de puro ouro
+e parece pesar bastante.
+
+                           //                         \\
+                          //                           \\
+                         //                             \\
+                        //                               \\
+                       //_________________________________\\
+                       |                                   |
+                       |       ####  ### ##### #   #       |
+                       |      #     #      #   #   #       |
+                       |       ###  ###    #   #####       |
+                       |          # #      #   #   #       |
+                       |      ####   ###   #   #   #       |
+                       |===================================|
+                       |             ---------             |
+                      /             /   ---   \             \
+                     /             /   /   \   \             \
+                    /             /   /     \   \             \
+                   /             /   / =   = \   \             \
+                  /             /    |       |    \             \
+                 |              \    |       |    /              |
+                 |               \    \  _  /    /               |
+                 |                \    |   |    /                |
+                 |                /    |   |    \                |
+                 |               /\     ---     /\               |
+                 \              /  \           /  \              /
+                  \            /     \       /     \            /
+                   \          |       \     /       |          /
+                    \         |        \   /        |         /
+                     \      ----        000        ----      /
+                      \    /    \________0________/    \    /
+                       \   ------                 ------   /
+                        |=================================|
+~
+S
+#2081
+Escadaria da Pir�mide~
+   Voc� j� est� muito cansado, mas a escada parece estar no fim.  Daqui est�
+mais vis�vel as �rvores de um belo o�sis que se forma ap�s mais alguns
+degraus.  Voc� olha para os lados e v� que desta escadaria pode observar
+todo Egito, e sua enorme magnitude.
+~
+20 0 0 0 0 1
+D0
+A escadaria parece ser bem maior aqui de cima, trope�ar n�o parece uma boa
+id�ia...
+~
+~
+0 -1 2080
+S
+#2082
+O�sis da Pir�mide~
+   Este talvez seja, um dos locais mais belos em que voc� j� esteve.  Uma
+relva verde, umedecida pelo orvalho da manh�, cobre o ch�o.  Algumas �rvores
+fazem sombra em um pequeno lago de �gua cristalina onde os aventureiros
+saciam sua sede ap�s a longa subida.  � sua frente, agora j� bem n�tida,
+est� uma pir�mide.  A entrada da pir�mide est� logo a sua frente.
+~
+20 0 0 0 0 1
+D0
+A entrada � muito estreita, logo, pouco pode ser visto.
+~
+~
+0 -1 2083
+S
+#2083
+O Sal�o das Tempestades~
+   � um imenso sal�o, com muitas colunas apoiando o teto, para que esse n�o
+desabe.  Ao contr�rio do que voc� imaginava, esse local � muito bem
+iluminado, entretanto, insuport�velmente quente, porque n�o h� nenhuma sa�da
+de ar, com exce��o da porta de entrada.  V�rios desenhos decoram a parede.
+Ainda h� alguns hier�glifos, t�o antigos, que talvez ningu�m nesse mundo
+possa traduzi-los.  No fim do sal�o h� uma escada.  H� tamb�m mais duas
+salas, a Leste e Oeste.  Esse lugar � realmente grande!
+~
+20 8 0 0 0 0
+D0
+Voc� consegue ver algumas confort�veis almofadas no ch�o.
+~
+~
+0 -1 2084
+E
+desenho~
+Uma figura do Deus Seth segurando um cajado em forma de cobra, parece estar
+invocando uma tempestade.
+~
+S
+#2084
+Alojamento da Pir�mide~
+   Esta sala � menos iluminada do que o sal�o de onde voc� veio.  Entretanto
+o ambiente � um pouco mais confort�vel.  As confort�veis almofadas que no
+ch�o se encontram fazem voc� ter vontade de deitar-se sobre elas e ficar ali
+o resto do dia.
+~
+20 524312 0 0 0 0
+D0
+Voc� consegue ver pouca coisa por causa da quantidade de pilares.
+~
+~
+0 -1 2083
+S
+#2085
+Refugio dos Sacerdotes~
+   Voc� v� que esta sala esta uma bagun�a, parece que ningu�m a arruma h�
+muito tempo.  Esta sala era usada antigamente pelos sacerdotes de Seth em
+seus estudos m�sticos.  H� uma grande quantidade de papiros atirados ao
+ch�o.  Que desperd�cio!  Por�m h� um papiro em destaque na parede.  Parece
+estar ali para ser lido.
+~
+20 8 0 0 0 0
+D0
+Voc� consegue ver pouca coisa por causa da quantidade de pilares.
+~
+~
+0 -1 2083
+S
+#2086
+Altar dos Devotos~
+   Ao entrar nessa sala voc� se espanta com a magnitude da est�tua que aqui
+se encontra.  Esculpida em quartzo, a est�tua tenta reproduzir a forma de
+Seth.  Os desenhos da sala representam alde�es que fazem rever�ncias ao
+colossal poder do Deus.  Mais ao fundo da sala h� um altar, coberto por um
+pano aveludado vermelho.  Sobre ele h� diversas oferendas feitas pelos seus
+filhos.  Atr�s do altar h� mais uma escada..
+~
+20 8 0 0 0 0
+D0
+Voc� consegue ver pouca coisa por causa da quantidade de pilares.
+~
+~
+0 -1 2083
+S
+#2087
+Os Tesouros da Pir�mide~
+   Tesouros de todos os tipos e valores est�o postos nessa sala.  Desde
+objetos de valor simb�lico at� est�tuas de ouro.  Todos os tesouros
+adquiridos pelos Filhos de Seth durante anos est�o guardados aqui.  As
+lendas dizem que cair� uma maldi��o quem ousar roub�-los.  No fim da sala h�
+uma pequena pilha de objetos usados em batalha.  Ao lado dessa pilha h� uma
+tabuleta de cedro destinada aqueles que desejam pegar os objetos que ali se
+encontram.
+~
+20 8 0 0 0 0
+D0
+Parece ser um altar, descansam ali muitas oferendas.
+~
+~
+0 -1 2086
+S
+#2088
+O Legado de Seth~
+   Sobre uma mesa de ferro, colocada no centro da sala, h� um livro,
+emanando uma luz vermelha.  H� muitas lendas sobre esse livro.  Todos os
+segredos que os Filhos de Seth guardam est�o escritos nesse livros.  Poucas
+pessoas conseguem entender oque esta escrito no livro.
+~
+20 8 0 0 0 0
+D0
+Parece ser um altar, descansam ali muitas oferendas.
+~
+~
+0 -1 2086
+S
+#2089
+A Tumba de Muwattali~
+   Os tesouros de Muwattali est�o todos colocados aqui nessa tumba.  Dentro
+do seu sarc�fago de vidro est� o corpo mumificado do antigo guardi�o dos
+segredos de Seth.  Nas paredes, h� desenhos que representam uma boa passagem
+para a outra vida.  Os membros superiores re�nem-se aqui para resolver os
+problemas pedindo ajuda para a sapi�ncia de Muwattali.
+~
+20 40 0 0 0 0
+D0
+� poss�vel ver apenas a enorme escada por onde voc� passou.
+~
+~
+0 -1 2086
+S
+#2090
+A Entrada~
+   Esta � a entrada de uma sede, um local onde voc� sente uma grande e
+poderosa energia, que lhe traz um bem estar interior, isto lhe d� uma imensa
+vontade de entrar.
+   Voc� avista um belo port�o, e todos os seus sentimentos que n�o sejam
+pelo bem do cl� desaparecem quando voc� avista dois guardas protegendo a
+entrada.
+~
+20 131140 0 0 0 1
+D0
+Voc� v� uma das depend�ncias do cl�.
+~
+~
+0 -1 2091
+S
+#2091
+O Templo de Trevor~
+   Voc� sente seguro e com uma �tima sensa��o ao entrar nesta sala, pela
+presen�a de uma est�tua no centro.  Est� � uma sala totalmente forjada a
+ouro branco e amarelo, o que d� um brilho especial a este local.  Voc� v�
+uma longa escadaria seguindo para cima.
+~
+20 0 0 0 0 1
+D0
+Voc� v� uma das depend�ncias do cl�.
+~
+~
+0 -1 2090
+S
+#2092
+O Dormit�rio~
+   Esta sala � tranq�ila e arejada, com um aspecto muito calmo e
+confort�vel, o que lhe d� sono e uma grande vontade de descansar.  H� uma
+luz azul no teto, o que da uma maior tranq�ilidade ao local.  Voc� v� duas
+longas escadarias, seguindo para cima e outra para baixo.
+~
+20 524304 0 0 0 1
+D0
+Voc� v� uma das depend�ncias do cl�.
+~
+~
+0 -1 2091
+S
+#2093
+O Escrit�rio~
+   Voc� v� uma sala imensa, onde no seu centro h� uma mesa com lugar para
+diversas pessoas, no centro da mesa existe algo que emite uma forte e bonita
+luz, dando um ar mais s�rio ao local.
+~
+20 0 0 0 0 1
+D0
+Voc� v� uma das depend�ncias do cl�.
+~
+~
+0 -1 2092
+S
+#2094
+O Jardim~
+   Voc� v� um local rodeado de belas flores, no seu centro est� uma bela
+fonte de �gua cristalina.  Apenas entrando nesta sala voc� j� se sente mais
+hidratado.
+~
+20 0 0 0 0 1
+D0
+Voc� v� uma das depend�ncias do cl�.
+~
+~
+0 -1 2091
+S
+#2095
+A Sala da Legisla��o~
+   Esta � uma sala bastante agrad�vel, voc� sente que pode passar horas nela
+tranq�ilamente escrevendo suas mensagens num grande e belo quadro.  A sala
+possui alguns livros em suas estantes e um LIVRO que provavelmente seja
+especial, pois est� num local em destaque.  Escadas conduzem at� o andar de
+cima.
+~
+20 0 0 0 0 1
+D0
+Voc� v� uma das depend�ncias do cl�.
+~
+~
+0 -1 2094
+S
+#2096
+A Transi��o~
+   Este seria um local �timo para se morar, um lugar bastante agrad�vel, com
+poucos passos voc� pode ter tudo o que precisar para manter suas
+necessidades alimentares.  Voc� pode ver duas grandes escadarias seguindo
+para cima ou para baixo.
+~
+20 0 0 0 0 1
+D0
+Voc� v� uma das depend�ncias do cl�.
+~
+~
+0 -1 2095
+S
+#2097
+Sala de Reuni�es~
+   Esta sala � por sinal muito bonita, voc� percebe que dela n�o d� para
+ouvir vozes de quem estiver fora da mesma.  Esta sala possui uma grande mesa
+redonda que d� a impress�o de ter sido constru�da para representar
+igualdade.
+~
+20 0 0 0 0 1
+D0
+Voc� v� uma das depend�ncias do cl�.
+~
+~
+0 -1 2096
+S
+#2098
+O Corredor~
+   Esta sala � um simples corredor que conduz at� o armaz�m, onde est�o
+depositados todos os itens que s�o doados ao cl�.  No final deste corredor
+parece haver uma escada.
+~
+20 0 0 0 0 1
+D0
+Voc� v� uma das depend�ncias do cl�.
+~
+~
+0 -1 2099
+S
+#2099
+O Armaz�m~
+   Esta � uma sala bastante simples e pouco iluminada mas voc� pode ver que
+ela � uma sala cheia de itens brilhantes e muitos valiosos.  Um aviso na
+perede diz o seguinte: MANTENHA A SALA ARRUMADA!
+~
+20 0 0 0 0 1
+D0
+Voc� v� uma das depend�ncias do cl�.
+~
+~
+0 -1 2098
+S
+#2100
+Entrada do Quartel~
+   Ao norte voc� v� um enorme port�o duplo de ferro separando voc� do vale
+localizado nas entranhas das montanhas que se erguem � sua frente.  Um grande
+bras�o coroa o centro do port�o, que � guardado por duas sentinelas fortemente
+armadas.  Voc� percebe o topo de uma grande constru��o g�tica erguida no
+interior do vale, grande o suficiente para abrigar um ex�rcito.
+~
+20 131140 0 0 0 1
+D0
+Voc� pode ver a rua...
+~
+~
+0 -1 9404
+S
+#2101
+Jardim~
+   Voc� est� em um grande campo gramado dentro do vale.  A sua esquerda voc�
+v� �rvores frut�feras que formam um pomar e onde p�ssaros gorjeiam calmamente
+enquanto se banham numa grande fonte que est� jorrando �gua cristalina.  Voc�
+pode sentir o suave aroma das flores e da grama rec�m cortada.  J� a sua
+direita, voc� v� uma grande e elaborada pista de treinamentos, com v�rios
+tipos de obst�culos, e perto desse belo jardim at� que lhe agrada a id�ia de
+se exercitar ao ar livre.
+   Ao norte pode ser vista a maci�a e fortificada constru��o de pedra em estilo
+g�tico que abriga o Quartel General do Ex�rcito Suicida de Vit�lia.  Ao sul est�
+a sa�da do vale onde o QG encontra-se protegido!
+~
+20 0 0 0 0 1
+D0
+Voc� pode ver os port�es de entrada do Quartel.
+~
+~
+0 -1 2100
+S
+#2102
+Sal�o Principal~
+   Finalmente dentro do QG, voc� se encontra num grande sal�o circular com dois
+grandes pilares de sustenta��o, esculpidos com cenas que retratam uma batalha
+entre o bem e o mal ocorrida no come�o dos tempos.  No centro do sal�o est� uma
+grande est�tua de cristal.  Existem sa�das para todos as dire��es e h� tamb�m uma
+escada que o leva para o piso superior.
+~
+20 8 0 0 0 0
+D0
+Voc� pode ver uma escada que segue para o segundo andar.
+~
+~
+0 -1 2105
+S
+#2103
+Sala de Reuni�es~
+   Voc� est� na sala onde os Suicidas se re�nem pra tra�ar suas estrat�gias.
+No centro h� uma grande mesa, com candelabros e mapas espalhados sobre ela e
+algumas cadeiras ao seu redor.  Tochas nas paredes iluminam o ambiente, dando
+ao local um ar de mist�rio.  Voc� observa que bel�ssimas armaduras de metal
+est�o dispostas no fundo da sala, e entre elas na parede foi colocado um
+imenso quadro de avisos.  Do lado oposto ao da porta de entrada h� um
+estandarte com alguns dizeres.  S� h� sa�da por onde voc� veio.
+~
+20 8 0 0 0 0
+D0
+Biblioteca do Exercito.
+~
+armadura~
+1 -1 2107
+S
+#2104
+Arsenal~
+   Voc� est� na sala que funciona como dep�sito de armas e equipamentos para
+o Ex�rcito Suicida.  A sensa��o � de se estar dentro de um enorme cofre de
+seguran�a, pois al�m da enorme porta blindada, a sala n�o possui nenhuma
+janela.  Al�m disso, apenas o alto escal�o do ex�rcito conhece a palavra
+m�gica que permite passar pela barreira arcana que protege o arsenal,
+aumentando ainda mais a seguran�a dessa sala.  Enormes ba�s s�o usados para
+se guardar os itens que podem ajudar os Suicidas a triunfar em batalhas
+futuras.  O sal�o principal fica a oeste daqui.
+~
+20 8 0 0 0 0
+D0
+Voc� pode ver um sal�o circular com uma grande est�tua no centro.
+~
+~
+0 -1 2102
+S
+#2105
+Alojamento dos Suicidas~
+   Ao subir as escadas voc� chega num grande alojamento, com duas fileiras
+de beliches que se estendem at� o final do aposento.  Basta entrar aqui e
+algo lhe diz que esta sala � encantada, pois voc� sente seu sangue come�ar
+a fluir com mais intensidade em suas veias e uma estranha energia parece
+envolver seu corpo, de forma relaxante.  Uma grande runa com a imagem de
+uma f�nix decora o centro do teto do dormit�rio, pulsando com uma luz
+alaranjada que parece restaurar suas for�as.  � �bvio que descansando aqui,
+os soldados do Ex�rcito Suicida logo estar�o prontos para enfrentar a
+pr�xima batalha.
+~
+20 524312 0 0 0 0
+D0
+Voc� pode ver uma escada que leva para o primeiro andar.
+~
+~
+0 -1 2102
+S
+#2106
+Corredor~
+   Voc� adentra um corredor �mido e sombrio.  No fim dele, ao norte, h� uma
+porta aparentemente trancada com um aviso pregado nela.  H� uma outra sa�da
+para o oeste no meio do corredor e ao sul, voc� pode ver o Sal�o Principal.
+~
+20 8 0 0 0 0
+D0
+Voc� v� um sal�o enorme e bem decorado.
+~
+~
+0 -1 2109
+E
+aviso~
+                              *********************
+                              * Sala dos Oficiais *
+                              *********************
+~
+S
+#2107
+Biblioteca do Exercito~
+   Voc� entra numa biblioteca.  Aqui voc� sente que o conhecimento flui
+facilmente e que suas id�ias se clareiam.  Todas as paredes desta sala
+est�o cobertas por estantes que v�o deste o teto at� o ch�o, completamente
+cheias de livros, cuja maioria trata de guerras e batalhas.  H� tamb�m
+muitos livros sobre grandes her�is.  Uma placa de bronze foi afixada acima
+da porta.  Um sil�ncio intranspon�vel toma conta deste local.  S� h� sa�da
+para leste.
+~
+20 40 0 0 0 0
+D0
+Sala de Reuni�es.
+~
+estante~
+1 -1 2103
+E
+placa~
+Voc� pode ler os dizeres:
+"Lembrem-se: A pena e' mais poderosa que a espada".
+~
+S
+#2108
+Sala dos Oficiais~
+   A sala � muito bem decorada com alguns quadros e vasos.  Nas paredes
+podem ser vistos alguns objetos coletados durante as aventuras do Ex�rcito
+Suicida de Vit�lia, expostos como trof�us.  No centro, uma mesa redonda
+indica onde o Conselho de Oficiais se re�ne pra tomar suas decis�es mais
+importantes.  Se voc� conseguiu entrar neste quarto � sinal que voc� goza
+de um status alto.  Portanto, use de seu posto com sabedoria.
+~
+20 8 0 0 0 0
+D0
+Voc� pode ver uma porta trancada.
+~
+~
+0 -1 2106
+S
+#2109
+O Grande Sal�o de Bailes~
+   Voc� acabou de entrar num enorme sal�o, onde o Ex�rcito Suicida celebra
+suas festas e comemora��es.  Grande o suficiente para se poderem realizar
+marchas militares dentro dele, ainda assim o sal�o passa uma sensa��o
+bastante aconchegante.  Enormes colunas de m�rmore asgaardiano, iluminadas
+por tochas que produzem chamas verdes ou azuladas, sustentam o teto
+abobadado, onde est� pintada uma magn�fica batalha do Ex�rcito contra a
+"Invas�o de Fogo", onde muitos Suicidas deram suas vidas para protegerem os
+vitalianos de uma horda de Drag�es Vermelhos.  O mais incr�vel na pintura,
+s�o as figuras das Valqu�rias voando atrav�s do campo de batalha, lideradas
+pela LadyDeath, recolhendo os nobres esp�ritos dos soldados mortos no
+combate, pois sempre que voc� olha, elas est�o em um local diferente.  Mais
+ao fundo do sal�o, voc� percebe que cada janela � na verdade um vitral, com
+a representa��o do reino da morte das diversas religi�es que existem em
+Vit�lia.  Mesmo assim, as imagens est�o longe de serem tristes, pois cada
+uma transmite a promessa de renascimento e da recompensa oferecida por cada
+pante�o de deuses.  No extremo fim do sal�o voc� ainda nota um grande p�dio,
+onde os Oficiais costumam realizar seus discursos, trajando suas melhores
+armaduras de combate, e onde os membros do Ex�rcito costumam ganhar suas
+medalhas e condecora��es.  Gra�as a uma poderosa magia, ao se olhar por mais
+de um minuto para a parede atr�s do p�dio, ela se torna transparente e o
+Vazio pode ser contemplado, com o Ceifeiro olhando em sua dire��o, em seu
+habitual sil�ncio.
+~
+20 8 0 0 0 0
+D0
+Voc� v� um corredor no sentido norte-sul.
+~
+~
+0 -1 2106
+S
+#2110
+O Portal da Sapiencia~
+   Voc� est� diante de um portal de a�o que aparenta estar aqui h� s�culos.
+Daqui � possivel sentir uma leve brisa vinda do sul, o que faz voc� se
+sentir em uma outra exist�ncia.  Olhando fixamente para o portal, voc�
+percebe que ele come�a a se transformar em nuvens cinzentas, e, num piscar
+de olhos, volta ao seu estado inicial.
+   Em cima do portal, talhada em madeira, existe uma palavra: Vingan�a.
+~
+20 131140 0 0 0 1
+D0
+Uma estranha movimenta��o pode ser percebida.
+~
+~
+0 -1 2111
+S
+#2111
+O Museu da Guerra~
+   Por todos os lados � poss�vel ver dezenas de escudos e armas, utilizados
+pelos antigos seguidores da Rainha Iris.  A poeira que se acumulou neste
+recinto durante d�cadas roubou o intenso brilho desses equipamentos.
+Entretando, no centro do sal�o se destingue uma bel�ssima c�pula de
+diamante.  Voc� percebe que dentro desta c�pula est�o os lend�rios amuletos
+e espadas, utilizados pelos mais importantes disc�pulos da rainha.  �
+incr�vel descobrir que aquela velha lenda � ver�dica.
+~
+20 136 0 0 0 0
+D0
+Voc� v� uma superficie estranha.
+~
+~
+0 -1 2112
+S
+#2112
+O Manancial da Vida~
+   Brotando do ch�o, voc� sente molhando seus p�s a fonte da vida: �gua.
+Segundo os anci�es, era neste local que os guerreiros se abasteciam com �gua
+e alimentos para as batalhas.  Voc� se sente aliviado ao tomar um pouco de
+�gua ap�s tanto andar.
+~
+20 0 0 0 0 1
+D0
+Uma linda c�pula divina pode ser vista.
+~
+~
+0 -1 2113
+S
+#2113
+Os Aposentos de Iris~
+   Era neste lugar que a Rainha Iris trasmitia sua sabedoria antes de seu
+fim.  Era aqui tamb�m que os guerreiros descancavam para as batalhas,
+curando seus ferimentos e ouvindo as palavras da rainha.  No centro da sala
+encontra-se uma est�tua, rodeada por tochas, que aquecem e iluminam o
+ambiente.  Aproximando-se da bela obra, voc� logo percebe que se trata da
+s�bia Deusa Miuma.
+~
+20 524312 0 0 0 0
+D0
+Voc� ve uma enorme fonte.
+~
+~
+0 -1 2112
+S
+#2114
+O Por�o~
+   Grandes containers se encontram aqui.  � este o lugar que os novos
+defensores do vilarejo usam como dep�sito para seus armamentos.  Se voc�
+est� se preparando para um combate, veio ao lugar certo.
+~
+20 8 0 0 0 0
+D0
+Voc� v� o lindo aposento de Iris.
+~
+~
+0 -1 2113
+S
+#2115
+O Ref�gio~
+   Segundo os mais antigos, era este o lugar que criancas e mulheres
+utilizavam para se refugiar durante as invasoes. Voce fica se perguntando
+como caberiam mais de cinco pessoas nesta minuscula sala. O ar torna-se mais
+escasso a medida que os minutos passam. Seria uma boa ideia sair daqui
+depressa.
+~
+20 8 0 0 0 0
+D0
+Voc� v� os aposentos de Iris
+~
+porta~
+1 -1 2113
+S
+#2116
+A Sala dos Ensinamentos~
+   Olhando ao redor, voc� percebe que muitas informa��es podem ser
+adquiridas nesta sala.  Livros e alguns instrumentos de estudo se distribuem
+pelas prateleiras.  Aqui est�o registrados todos os feitos dos disc�pulos da
+rainha.  � prov�vel que voc� encontre todas as respostas que precisa.
+~
+20 0 0 0 0 1
+D0
+Voc� v� os Planejamentos.
+~
+~
+0 -1 2117
+S
+#2117
+Os Planejamentos~
+   V�rias cadeiras se distribuem aqui, em torno de uma mesa feita de um
+refinado tipo de madeira.  � aqui que os moradores se re�nem para discuss�es
+sobre a vila.  Uma lareira � a fonte de calor deste lugar.
+~
+20 8 0 0 0 0
+D0
+Uma enorme sala brilha a leste.
+~
+~
+0 -1 2118
+S
+#2118
+A Sala da Vingan�a~
+   Foi este o �ltimo lugar visitado pela Rainha Iris.  � nesta espa�osa sala
+que os principais membros da vila tomam as mais importantes decis�es.  O
+grande altar da Deusa Miuma se encontra aqui, rodeado por min�sculas velas,
+mas, que estranhamente, produzem uma quantidade descomunal de luz.  Apenas
+uma pessoa com um cora��o puro poderia estar aqui.
+~
+20 40 0 0 0 0
+D0
+H� muitas coisas, voc� n�o consegue enchergar muito.
+~
+~
+0 -1 2117
+S
+#2120
+O Grande Port�o~
+   Caminhando voc� vai notando que na verdade n�o existia nenhum lago.  Um
+enorme castelo ergue-se a sua frente, a constru��o � t�o bela que enganou
+seus olhos.  Voc� se depara com um grande port�o, a entrada para o Castelo
+dos Senhores da Tempestade.  � de uma extraordin�ria beleza, muralhas foram
+construidas para resistir a qualquer tipo de ataque.  Voc� nao pode deixar
+de perceber as quatros torres unidas por imensos pared�es, onde em cada uma
+h� uma escultura de anjos, que parecem estar vivos vigiando o local.  O
+lugar est� muito bem cuidado, com �rvores podadas e um belo jardim.
+~
+20 131140 0 0 0 1
+D0
+Voc� ve um imenso port�o, com belas esculturas de anjos e o bras�o do clan
+dos Senhores da Tempestade.
+~
+~
+0 -1 2121
+S
+#2121
+O Jardim do Castelo~
+   Este lugar foi perfeitamente decorado, voc� observa uma bela est�tua de
+Thal no centro de uma fonte feita de m�rmore.  A fonte foi t�o bem
+trabalhada que o efeito da �gua o faz sentir mais leve, como se estivesse
+flutuando, a cada gota que cai, ondas circulares no espelho de �gua fazem
+com que a bela imagem do anjo se incline e trema.  O jardim est� t�o bem
+podado que parece que algu�m esteve trabalhando nele neste momento.  Para
+norte voc� encontra o port�o do castelo, para sul, a sala principal do
+castelo.
+~
+20 0 0 0 0 1
+D0
+Voc� observa a sala principal do castelo dos Senhores da Tempestade.
+~
+~
+0 -1 2122
+S
+#2122
+A Sala Principal do Castelo~
+   Ao adentrar no sal�o, voc� sente como se o mundo la fora deixasse de
+existir, onde o mal nunca conseguiria aguentar os flu�dos aqui presente.  As
+paredes s�o rodeadas de todos os lados por grandes blocos de granito, nos
+cantos da sala voc� percebe alguns querubins esculpidos em m�rmore.  Voc�
+observa uma luz dourada, saindo da sala ao lado.
+~
+20 8 0 0 0 1
+D0
+Voc� observa um longo corredor.
+~
+~
+0 -1 2124
+S
+#2123
+A Heran�a dos Anjos~
+   Uma forte luz dourada, vem de uma trombeta posta sobre um pedestal de
+m�rmore; s� de entrar voc� sente sendo curado.  A trombeta foi um dos
+presentes deixados pelos Anjos da Luz.  A luz � t�o forte e a sensa��o de
+cura � t�o magn�fica que voc� sente vontade de dormir.
+~
+20 524312 0 0 0 1
+D0
+Voc� observa a sala principal do castelo dos Senhores da Tempestade.
+~
+~
+0 -1 2122
+S
+#2124
+O Corredor~
+   Voc� se encontra em um belo e largo corredor, e observa quadros muito bem
+pintados, alguns fazendo men��o aos Deuses de Vit�lia, outros aos Anjos da
+Luz.  Muito bem iluminado, voc� observa o Bras�o dos Senhores da Tempestade
+pendurado em uma parede.
+~
+20 8 0 0 0 1
+D0
+Voc� v� a sala da reflex�o, uma luz branca, vem de um dos lados da sala,
+consegue ver tamb�m uma escada.
+~
+~
+0 -1 2125
+S
+#2125
+A Sala da Reflex�o~
+   Magn�fica!, cuidadosamente decorada, este � o primeiro pensamento de
+todos que entram nesta bela e imensa sala.  Em um canto da sala, foi
+cuidadosamente colocada uma est�tua dos Anjos da Luz, imponentes com suas
+espadas flamejantes, que resplandecem uma luz branca.  T�o perfeitos que
+parecem estar vivos, protegendo o local.  Na parede a oeste, uma bela porta
+de madeira maci�a fecha uma sala, onde os l�deres se re�nem para reuni�es
+importantes.  Para baixo, est� o dep�sito de armas.  Para leste, um caminho
+que da acesso a biblioteca.
+~
+20 8 0 0 0 1
+D0
+Uma escada o conduz at� o dep�sito de armas.
+~
+~
+0 -1 2128
+S
+#2126
+Sala de Reuni�o~
+   Feito com materiais que abafam o som, esta sala � decorada com imagens e
+livros narrando as conquistas dos Senhores da Tempestade contra o ex�rcito
+de Khell.  Uma bela mesa redonda est� posicionada no meio da sala.  Rodeando
+a mesa, voc� v� v�rias cadeiras.
+~
+20 40 0 0 0 1
+D0
+Uma Bela porta de madeira maci�a.
+~
+~
+1 -1 2125
+S
+#2127
+A Biblioteca~
+   Este lugar deve ter sido decorado por um grande mestre de decora��o.  H�
+uma grande estante de livros com uma valiosa cole��o.  Uma grande mesa
+redonda est� no meio da sala, voc� v� v�rias cadeiras de um material �nico e
+deslumbrante.  No canto da sala voc� percebe um livro aberto sobre uma
+coluna de m�rmore, onde est�o as regras e o c�digo de honra dos Senhores da
+Tempestade.
+~
+20 40 0 0 0 1
+D0
+Voc� v� a sala da reflex�o, uma luz branca, vem de um dos lados da sala,
+consegue ver tamb�m uma escada.
+~
+~
+0 -1 2125
+S
+#2128
+Dep�sito de Armas~
+   Iluminada por tochas fixas a parede, ao adentrar nesta sala voc� ve
+v�rios baus com �timos equipamentos, a sensa��o de orgulho e ao mesmo tempo
+um frio na espinha n�o pode deixar de ser sentida por voc�, ao imaginar Os
+Senhores da Tempestade em combate para adquiri-los.
+~
+20 8 0 0 0 1
+D0
+Voc� observa uma escada, que o levar� ao piso superior.
+~
+~
+0 -1 2125
+S
+#2130
+O Port�o de Entrada do Cl� Dinastia~
+   Voc� depara com um grande port�o de madeira todo entalhado.  L� dentro
+parece ser muito calmo e bonito.  O local � rodeado por imensas �rvores e do
+lado de fora do port�o pode-se ver uma �rvore quase gigante.  Pode-se ouvir
+dali o suave burburinho de uma queda d'�gua.
+~
+20 131140 0 0 0 1
+D0
+Os Jardins do Templo.
+~
+~
+0 -1 2131
+S
+#2131
+Os Jardins do Templo~
+   Voc� por alguns instantes se sente paralisado diante de tanta beleza e
+esplendor.  Este jardim parece ter sido criado por m�os divinas tamanha a
+sua beleza e nobreza.  O perfume exalado pelas flores chega a ser
+inebriante.  V�rios p�ssaros raros est�o voando por ali e n�o muito distante
+dali, pode-se perceber o som de uma cachoeira que parece estar seguindo o
+ritmo alegre e despreocupado dos passarinhos que chegam ali para se banhar e
+matar a sede.
+~
+20 0 0 0 0 1
+D0
+Com muita clareza voc� pode ver a imensa �rvore Frondosa.
+~
+~
+0 -1 2137
+S
+#2132
+O Templo de Breyldon~
+   � um templo majestoso e imponente, com altas colunas de m�rmore
+sustentando suas grossas paredes feitas com uma rocha que parece cintilar.
+Este � um lugar onde a paz e a harmonia prevalecem, e estranhamente, voc� se
+sente muito mais bondoso e com o cora��o cheio de alegria e j�bilo.  Por
+alguns momentos voc� parece estar andando sobre macias e aconchegantes
+nuvens.  Apesar de sua impon�ncia, quase se pode sentir a presen�a
+espiritual dos lend�rios guerreiros de Breyldon, que parecem estar zelando
+por este verdadeiro santu�rio.
+~
+20 0 0 0 0 1
+D0
+Voc� pode ver daqui a bonita cachoeira
+~
+~
+0 -1 2133
+S
+#2133
+Nas Pr�ximidades da Cachoeira~
+   � medida que voc� caminha, vai percebendo que o som da �gua batendo nas
+pedras vai se tornando cada vez mais alto.  E prestando mais aten��o, voc�
+nota o ru�do dos diversos animais que devem estar ali por perto, saciando a
+sede ou simplesmente banhando-se nas �guas l�mpidas e claras.
+~
+20 0 0 0 0 1
+D0
+Voc� pode ver o majestoso Templo.
+~
+~
+0 -1 2132
+S
+#2134
+A Grande Cachoeira~
+   Voc� se surpreende com a beleza e a grandeza desta cachoeira.  Suas �guas
+s�o claras e muito limpas e voc� se sente muito mais leve e mais puro neste
+local, talvez porque estas �guas parecem estar impregnadas com os poderes
+m�gicos de algu�m.
+~
+20 0 0 0 0 1
+D0
+Voc� pode ver uma imensa pedra.
+~
+~
+0 -1 2133
+S
+#2135
+A Sala de Reuni�es~
+   � neste local onde todos os membros da Fam�lia dos Breyldon se re�nem
+para discutirem seus problemas e para planejarem seus passos.  E � aqui que
+s�o tomadas as decis�es que afetam a vida de todos os membros do Cl�.  Este
+� um lugar de onde se pode ver toda a propriedade do cl�.  O ch�o foi
+coberto por um granito absolutamente branco e o teto abobodado, possui
+afrescos que contam a saga dos Breyldon.
+~
+20 8 0 0 0 1
+D0
+Deste local n�o se pode ver nada alem da luz que penetra difusa e suave.
+~
+~
+0 -1 2138
+S
+#2136
+A Sala de Doac�es~
+   � uma sala muito grande e majestosa, circundada por in�meras janelas que
+descortinam ao longe a paisagem quase m�stica do rio que se transforma em
+cachoeira.  Uma suave lufada de vento o envolve de quando em quando,
+arejando o ambiente e deixando-o fresco e ameno, mesmo nos dias mais
+quentes.  Esta sala parece ser muito antiga.
+~
+20 8 0 0 0 1
+D0
+Voc� pode ver uma pequena parte do Templo.
+~
+~
+0 -1 2132
+S
+#2137
+A �rvore Frondosa~
+   Neste local encontra-se uma imensa e maravilhosa �rvore, cujo topo jamais
+foi alcan�ado por ningu�m.  Ela parece ser m�gica, pois seus frutos
+vermelhos e de aspecto suculento n�o estouram ao ca�rem no ch�o,
+permanecendo intactos, prontos para serem comidos.
+~
+20 524304 0 0 0 1
+D0
+Voc� v� uma grande sala.
+~
+~
+0 -1 2136
+S
+#2138
+A Sala dos Guardi�es~
+   As paredes muito altas desta sala s�o muito brancas, dando-se a impress�o
+de se estar suspenso no ar.  A temperatura neste local � amena e h� uma
+grande quantidades de tochas iluminando todo o ambiente, podendo-se ver
+assim, uma vasta galeria de quadros pintados � �leo, que foram pendurados
+nas paredes.  Estes quadros perpetuam a imagem de todos os her�is que
+pertenceram ao cl� dos Breyldon.
+~
+20 8 0 0 0 1
+D0
+Voc� pode ver a sala dos Guardi�es.
+~
+~
+0 -1 2135
+S
+#2140
+Os Port�es da Montanha~
+   Voc� se depara com port�es t�o grandes que parecem guardar muitos
+tesouros, por cima da muralha voc� v� uma montanha, mas n�o consegue olhar
+por muito tempo, pois uma luz muito forte e reluzente parece cegar-lhe.
+~
+20 131140 0 0 0 4
+D0
+Voc� v� uma linda fonte no centro de uma sala.
+~
+~
+0 -1 2141
+S
+#2141
+Ao P� da Montanha~
+   Ao entrar nessa sala, uma sensa��o muito boa percorre todo o seu corpo.
+Daqui voc� v� melhor uma grande montanha.
+~
+20 0 0 0 0 4
+D0
+Voc� v� a entrada do cl�, onde dois sentinelas est�o posicionados para a
+guarda.
+~
+~
+0 -1 2140
+S
+#2142
+O Soberano Santu�rio na Montanha~
+   Ao entrar nessa sala voc� v� suas feridas e cicatrizes desaparecerem.
+Esse e um santu�rio muito lindo e enfeitado, o cheiro daqui e muito bom e
+daqui se ouve um relaxante som de �gua corrente.  Voc� v� um altar com uma
+estatua sobre ele.
+~
+20 524304 0 0 0 4
+D0
+Voc� v� uma linda fonte no centro de uma sala.
+~
+~
+0 -1 2141
+S
+#2143
+A Sala de Doa��es~
+   E uma sala muito grande e ventilada onde generosos combatentes ofertam
+seus achados.
+~
+20 0 0 0 0 4
+D0
+Voc� v� uma linda fonte no centro de uma sala.
+~
+~
+0 -1 2141
+S
+#2144
+Escadarias na Montanha~
+   Nesse lugar voc� v� uma linda escadaria de prata que parece levar ao c�u,
+aqui voc� tamb�m v� algo lapidado na montanha.
+~
+20 0 0 0 0 4
+D0
+Voc� v� uma linda fonte no centro de uma sala.
+~
+~
+0 -1 2141
+S
+#2145
+O Topo da Montanha~
+   Aqui fica a nascente de um riacho que corre ate a fonte e abastece todo o
+cl�.  Um vento frio refresca todo o lugar para que ningu�m esquente sua
+cabe�a aqui.  Essa e uma grande sala de reuni�es onde o destino de muitos
+ser� decidido.
+~
+20 0 0 0 0 4
+D0
+Voc� v� uma sala com muitos desenhos enigm�ticos, voc� n�o os entende.
+~
+~
+0 -1 2146
+S
+#2146
+O Segredo da Montanha~
+   Essa sala parece muito vazia, pois poucos v�m aqui.  H� alguns desenhos
+retratando a hist�rica batalha contra as for�as do mal nas paredes, que
+ainda s�o segredos para muitos aventureiros.
+~
+20 0 0 0 0 4
+D0
+Voc� v� uma sala vazia, parece um lugar de reuni�es.
+~
+~
+0 -1 2145
+S
+#2150
+O Enorme Obelisco~
+   Voc� v� uma pequena passagem por entre as rochas ao norte, que esta
+protegida por imensos guardas �lficos empunhando seus maravilhosos arcos.
+Quando tenta espiar por entre a passagem, sente o arrepio percorrer seu
+corpo quando escuta uma voz rouca sussurrar em seu ouvido: - Se n�o fases
+parte dessa sociedade, retira-se antes do fim.
+~
+20 131140 0 0 0 1
+D0
+Um grandioso templo esculpido na rocha lhe traz grande harmonia ao cora��o.
+~
+~
+0 -1 2151
+S
+#2151
+O Hall de entrada do Templo da Luz~
+   Voc� fica maravilhado com a riqueza de detalhes esculpida nas rochas.
+Tudo nesse templo � natural, utilizando toda a grandiosidade da natureza.
+Existem duas Portas Laterais, uma Grande escada ao centro, que d� acesso ao
+piso superior e uma maravilhosa fonte de �gua l�mpida nesse hall de entrada.
+~
+20 0 0 0 0 1
+D0
+Voc� v� uma maravilhosa estatua com as palmas das m�os viradas para baixo.
+~
+~
+0 -1 2153
+S
+#2152
+Grande Sal�o de Reuni�es~
+   Uma imensa mesa, com dezenas de lugares, � a �nica coisa que se v� nessa
+sala.  Olhando para as paredes, essas parecem contar hist�rias
+impressionantes sobre as reuni�es aqui realizadas.  Do mais baixo, ao mais
+alto posto do clan utilizam estas cadeiras para decidir o futuro da
+sociedade.
+~
+20 0 0 0 0 1
+D0
+Um grandioso Hall de Entrada lhe d� acesso as outras depend�ncias da
+Sociedade.
+~
+~
+0 -1 2151
+S
+#2153
+Uma Grande Estatua Representando o Amor Divino~
+   � sem d�vida alguma a mais bela constru��o que seus olhos j� viram nessa
+vida.  Na parede rochosa esta esculpida uma esp�cie de fogueira com um rosto
+misterioso ao meio.  Da imagem saem duas m�os com as palmas apontadas para o
+centro da sala, lhe convidando para entrar sob as palmas.  Suas feridas
+come�am a cicatrizar � medida que adentra a sala.
+~
+20 524304 0 0 0 1
+D0
+Um grandioso Hall de entrada lhe da acesso as outras depend�ncias da
+Sociedade.
+~
+~
+0 -1 2151
+S
+#2154
+O Caminho para a Purifica��o Espiritual~
+   Nesta Sala encontra-se uma grande rocha levitando ao centro.  Essa rocha
+traz impressas em sua lateral algumas palavras, que brilham sob seus olhos.
+Acima da rocha esta escrita a frase: "Meus problemas n�o s�o maiores que os
+meus Deuses e n�o ir�o me impedir de caminhar.  Se diante de mim n�o se
+abrir o mar, andarei por sobre as �guas".
+~
+20 0 0 0 0 1
+D0
+Voc� avista na sala ao lado um quadro utilizado para informar toda a
+sociedade.
+~
+~
+0 -1 2155
+S
+#2155
+Participando da Sociedade~
+   Nessa sala encontrasse um quadro com informa��es atuais sobre a
+sociedade, este � um lugar muito freq�entado por aqueles que se importam e
+ajudam no andamento da sociedade.
+~
+20 0 0 0 0 1
+D0
+Ao lado encontra-se a rocha com as regras para a purifica��o de toda a
+Sociedade.
+~
+~
+0 -1 2154
+S
+#2156
+Altar aos Deuses~
+   Nessa sala encontra-se um grandioso altar dedicado a ora��o aos Deuses de
+Vit�lia.  Lembre-se sempre de agradecer e nem sempre de pedir.  H� uma
+grande e confort�vel almofada para se ajoelhar e meditar.
+~
+20 0 0 0 0 1
+D0
+Uma clara sala com mesa e algumas cadeiras.  Certamente utilizada pela
+diretoria.
+~
+~
+0 -1 2158
+S
+#2157
+Sala de Equipamentos~
+   Esta sala tem um brilho descomunal.  Em suas paredes encontram-se
+pendurados in�meros equipamentos, que ser�o utilizados por toda a Sociedade.
+Esta sala � um privilegio.  Use os equipamentos com sabedoria e nunca
+faltar�o.
+~
+20 0 0 0 0 1
+D0
+Voc� v� um lindo altar para orar aos Deuses.  Agrade�a as b�n��os recebidas.
+~
+~
+0 -1 2156
+S
+#2158
+Diretoria da Sociedade da Luz~
+   Nesta sala s�o resolvidas todas as diretrizes da Sociedade.  Na mesa ao
+centro encontram-se algumas cadeiras destinadas aos l�deres da Sociedade.
+Voc� sente o poder da sociedade invadindo a sala, para iluminar as mentes
+que aqui est�o.
+~
+20 0 0 0 0 1
+D0
+Voc� v� um lindo altar para orar aos Deuses.  Agrade�a as b�n��os recebidas.
+~
+~
+0 -1 2156
+S
+#2159
+Sala do Campe�o da Sociedade da Luz~
+   Aqui s� entram com a autoriza��o do l�der do clan.  A sala est�
+preenchida com um enorme poder que � emitido pelo esp�rito do campe�o do
+cl�.  Ele fica aqui a espera de seus equipamentos para poder defender, com
+a sua vida, os ideais da Sociedade da Luz.
+~
+20 0 0 0 0 1
+D0
+Voc� v� um lindo altar para orar aos Deuses.  Agrade�a as b�n��os recebidas.
+~
+~
+0 -1 2156
+S
+#2160
+A Entrada Colossal~
+   Voc� est� diante de uma constru��o que aparenta ser muito antiga e que,
+por incr�vel que pare�a, ainda est� intacta.  Essa arquitetura lembra a
+arquitetura escocesa do s�culo X.  Voc� percebe uma placa dourada acima de
+um grande port�o.
+~
+20 131140 0 0 0 1
+D0
+O Templo do Cl� Mclaud.
+~
+~
+0 -1 2161
+E
+placa~
+                           BEM VINDO AO CL� MCLAUD
+~
+S
+#2161
+O Templo do Cl� Mclaud~
+   Voc� est� em um enorme Templo, rodeado por inscri��es muito antigas e se
+surpreende com a variedade de cores e formas desenhadas nos vitrais.  O
+cheiro agrad�vel e a luminosidade suave e aconchegante lhe trazem uma imensa
+paz interior.
+~
+20 0 0 0 0 1
+D0
+A sala de doa��es.
+~
+~
+0 -1 2164
+S
+#2162
+Um Grande Altar~
+   Voc� est� no altar do Templo do Cl� Mclaud.  � um altar repleto de j�ias
+preciosas, presas � parede, com imagens e nomes de antigos membros da
+fam�lia Mclaud.  Ao olhar para cima, voc� v� a est�tua de um anjo pendurada
+a alguns metros da sua cabe�a.
+~
+20 0 0 0 0 1
+D0
+A Sala de Reuni�es.
+~
+~
+0 -1 2166
+S
+#2163
+Uma Sala Iluminada~
+   Voc� est� em uma sala onde o teto parece n�o existir, pois a luz daqui �
+muito branca, ofuscando seus olhos, como os raios de Sol.  Ao entrar nessa
+sala, voc� se esquece do mundo.  Aqui voc� pode dormir e se concentrar o
+bastante para poder voltar �s suas batalhas.
+~
+20 524304 0 0 0 0
+D0
+O Templo do Cl� Mclaud.
+~
+~
+0 -1 2161
+S
+#2164
+A Sala de Doa��es~
+   Esta � a sala de doa��es do cl� Mclaud.  Aqui, voc� pode ajudar os seus
+irm�os, deixando alguns itens que sejam desnecess�rios para voc� mas que
+talvez sejam muito necess�rios para outros membros.
+~
+20 0 0 0 0 0
+D0
+O Templo do Cl� Mclaud.
+~
+~
+0 -1 2161
+S
+#2165
+A Fonte de �gua~
+   Voc� observa uma linda fonte jorrando �gua limpa.  Pare aqui para matar a
+sua sede e encher seu cantil.
+~
+20 0 0 0 0 1
+D0
+Um grande altar.
+~
+~
+0 -1 2162
+S
+#2166
+A Sala de Reuni�es~
+   Esta � uma sala reservada, usada somente para reuni�es do Conselho do
+Cl�.  Aqui s�o discutidas sugest�es e cr�ticas sobre as regras e onde s�o
+implementadas as modifica��es necess�rias.
+~
+20 0 0 0 0 0
+D0
+O grande altar.
+~
+~
+0 -1 2162
+S
+#2170
+Os Port�es Negros~
+   Voc� est� em frente a enormes port�es de ferro negros.  Em cada port�o
+h� uma imagem de uma jovem muito bela com cabelos longos e lisos.  Voc�
+fica encantado com a beleza desta jovem.  Ela tem os p�s descal�os e usa um
+vestido longo.  Existem duas criaturas parecidas com drag�es protegendo os
+port�es.
+~
+20 131157 0 0 0 1
+D0
+H� um jardim com uma fonte negra no centro.
+~
+~
+0 -1 2171
+S
+#2171
+O Jardim Negro~
+   H� um jardim muito bem cuidado com uma grande variedade de flores.  Mas
+todas as flores tem as p�talas negras deixando o jardim sombrio.  No centro
+do jardim se encontra uma fonte negra.
+~
+20 0 0 0 0 1
+D0
+Voc� v� uma sala com in�meros equipamentos.
+~
+~
+0 -1 2172
+S
+#2172
+O Sal�o das Armas~
+   Neste sal�o existem diversas armas e equipamentos para batalha.  Todos
+est�o em excelente estado e bem preservados.  A l�mina das armas de corte
+s�o bem afiadas.  � como se uma magia protegesse os equipamentos do
+desgaste do tempo.
+~
+20 0 0 0 0 1
+D0
+H� um jardim com uma fonte negra no centro.
+~
+~
+0 -1 2171
+S
+#2173
+As Rubricas Ensang�entadas~
+   Voc� entra nessa enorme sala iluminada apenas por pequenos casti�ais e
+mal consegue enxergar a parede que fica do outro lado.  Ao dar alguns
+passos, nota que nela existem milhares de pap�is pregados sujos de sangue.
+Ao ouvir passos vindo, entende que s� tem duas escolhas: ficar e ler ou
+fugir para nunca mais voltar.
+~
+20 1 0 0 0 1
+D0
+H� um jardim com uma fonte negra no centro.
+~
+~
+0 -1 2171
+S
+#2174
+O Sal�o da Historia~
+   Nas paredes deste sal�o se encontram gravuras mostrando toda a hist�ria
+da batalha de Tenebra contra Azgher e as aventuras de seus cinco primeiros
+disc�pulos.  No centro do sal�o se encontra um pequeno altar com um
+pergaminho sobre ele.
+~
+20 0 0 0 0 1
+D0
+Voc� v� um grande templo negro.
+~
+~
+0 -1 2176
+S
+#2175
+A Sala da Noite Eterna~
+   Voc� encontra-se em um belo jardim de grama baixa.  A sala n�o tem teto e
+voc� pode ver a beleza das estrelas e da lua.  Aqui � sempre noite e voc�
+se sente tranq�ilo e relaxado.  Muitos vem aqui para admirar as estrelas,
+descansar ou meditar neste clima de tranq�ilidade.
+~
+20 524304 0 0 0 1
+D0
+Voc� v� um grande templo negro.
+~
+~
+0 -1 2176
+S
+#2176
+O Templo de Tenebra~
+   As paredes do templo s�o feitas de marmore negro.  Ao norte voc� v� um
+belo altar com a est�tua de Tenebra e um pouco antes do altar est� o trono
+dela.  Aqui � onde a Deusa protetora do cl� faz suas apari��es para dar
+mais ensinamentos e aben�oar seus seguidores.
+~
+20 16 0 0 0 1
+D0
+Voc� uma sala com v�rios murais.
+~
+~
+0 -1 2174
+S
+#2177
+O Altar de Tenebra~
+   Este � o altar do templo de Tenebra.  Muitos devotos fazem ora��es a
+Deusa das Trevas.  No topo do altar se encontra a est�tua de Tenebra, uma
+bela jovem de cabelos longos e lisos com os p�s descal�os usando um vestido
+longo e justo aberto nas laterais.  A beleza de seu rosto � indescritivel
+e seus olhos encantam a todos.
+~
+20 16 0 0 0 1
+D0
+Voc� v� um grande templo negro.
+~
+~
+0 -1 2176
+S
+#2178
+O Conselho Das Trevas~
+   Um sil�ncio mortal reina nessa sala.  No centro nota-se uma mesa longa de
+mogno, cheia de inscri��es em uma l�ngua demon�aca e cadeiras feitas de
+ossos de bestas selvagens.  A fraca ilumina��o vem de uma pequena bola de
+fogo azul que flutua no teto.  Logo no primeiro passo dentro desse recinto,
+voc� sente vontade de calar-se e falar somente quando necess�rio, afinal, �
+uma honra pisar nesse ch�o antigo.
+~
+20 41 0 0 0 0
+D0
+Voc� enxerga a mais bela est�tua j� esculpida.
+~
+~
+0 -1 2177
+S
+$~

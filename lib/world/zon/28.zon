@@ -1,0 +1,93 @@
+#28
+Vitalia~
+A Grande Catedral de Cristal~
+2800 2899 30 1 abcde 0 0 0 -1 -1
+-1
+*
+*Portas
+*
+D 0 2807 1 1
+D 0 2807 3 1
+D 0 2811 4 2
+D 0 2811 0 2
+D 0 2811 3 2
+D 0 2811 2 2
+D 0 2811 8 2
+D 0 2812 8 2
+D 0 2812 7 2
+D 0 2813 8 2
+D 0 2813 7 2
+D 0 2814 8 2
+D 0 2814 7 2
+D 0 2815 7 2
+D 0 2815 8 2
+D 0 2816 5 2
+D 0 2816 0 2
+D 0 2816 2 2
+D 0 2817 5 2
+D 0 2817 3 2
+D 0 2817 1 2
+D 0 2818 3 1
+D 0 2822 5 1
+D 0 2823 1 1
+D 0 2829 4 1
+D 0 2829 8 1
+D 0 2830 3 2
+D 0 2830 6 2
+D 0 2830 9 1
+D 0 2835 4 1
+D 0 2836 5 2
+D 0 2836 2 2
+D 0 2838 1 1
+D 0 2838 4 1
+D 0 2839 5 1
+D 0 2842 4 2
+D 0 2842 5 2
+D 0 2842 7 2
+D 0 2843 5 2
+D 0 2843 2 2
+D 0 2843 4 2
+D 0 2843 1 2
+D 0 2843 5 2
+D 0 2844 7 2
+D 0 2845 3 2
+D 0 2845 4 2
+*
+*Mobs e Objetos
+*
+R 0 2810 2800          remover bebedouro
+O 0 2800 1 2810        carregar bebedouro
+R 0 2816 2802          remover painel
+O 0 2802 1 2816        carregar painel
+R 0 2806 2801          remover musica
+O 0 2801 1 2806        carregar musica
+M 0 2800 1 2836        carregar Sulatnat
+R 0 2807 2813          remover carruagem
+O 0 2813 1 2807        carregar carruagem
+R 0 2844 2816          remover fonte
+O 0 2816 1 2844        carregar fonte
+M 0 2802 1 2845        carregar Hor�cio
+E 1 2831 1 17            bandeja de prata
+R 0 2817 2823          remover ba� azul
+O 0 2823 1 2817        carregar ba� azul
+P 1 2810 1 2823          carregar manto nupcial no ba� azul
+P 1 2825 1 2823          carregar botas camur�a no ba� azul
+P 1 2826 1 2823          carregar coroa de louro no ba� azul
+P 1 2827 1 2823          carregar corrente de louro no ba� azul
+P 1 2829 1 2823          carregar camisa seda no ba� azul
+P 1 2830 1 2823          carregar cal�a linho branco no ba� azul
+P 1 1042 1000 2823       carregar alianca no ba� azul
+P 1 1042 1000 2823       carregar alianca no ba� azul
+P 1 1043 1000 2823       carregar espelho no ba� azul
+R 0 2843 2824          remover ba� rosa
+O 0 2824 1 2843          carregar ba� rosa
+P 1 2804 1 2824          carregar vestido de noiva no ba� rosa
+P 1 2806 1 2824          carregar v�u de noiva no ba� rosa
+P 1 2807 1 2824          carregar grinalda no ba� rosa
+P 1 2808 1 2824          carregar bouquete no ba� rosa
+P 1 2809 1 2824          carregar sapatos de cristal no ba� rosa
+P 1 2828 1 2824          carregar colar de brilhantes no ba� rosa
+P 1 2832 1 2824          carregar maquiagem no ba� rosa
+P 1 1043 1000 2824       carregar espelho no ba� rosa
+*
+S

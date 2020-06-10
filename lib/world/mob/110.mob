@@ -1,0 +1,160 @@
+#11000
+camelo selvagem~
+o camelo selvagem~
+Um camelo selvagem, muito perigoso, bufa enquanto observa seus adversários.
+~
+Não brinque com este animal.
+~
+2162722 0 0 0 0 0 0 0 -350 E
+5 12 6 1d6+80 2d4+3
+0 900
+8 8 1
+E
+#11001
+alazão selvagem~
+o alazão selvagem~
+Um alazão extremamente irriquieto tenta dar coices em todos à sua volta.
+~
+Não brinque com este animal.
+~
+2162722 0 0 0 0 0 0 0 -350 E
+5 11 7 2d6+60 2d4+4
+0 900
+8 8 1
+E
+#11002
+lobo assassino~
+o lobo assassino~
+Um enorme lobo negro, com dentes sujos de sangue, rosna para seus adversários.
+~
+Não brinque com este animal.
+~
+2162722 0 0 0 0 0 0 0 -350 E
+5 12 5 1d7+54 2d4+3
+0 900
+8 8 1
+E
+#11003
+tigre furioso~
+o tigre furioso~
+Um tigre furioso tenta ferir a todos que dele se aproximam.
+~
+Não brinque com esse animal.
+~
+2162722 0 0 0 0 0 0 0 -350 E
+5 10 8 1d6+60 2d4+3
+0 900
+8 8 1
+E
+#11004
+leoa sanguinária~
+a leoa sanguinária~
+Uma leoa sedenta de sangue ameaça a todos aqui.
+~
+Não brinque com esse animal.
+~
+2162722 0 0 0 0 0 0 0 -350 E
+5 11 5 1d6+74 2d4+3
+0 900
+8 8 2
+E
+#11005
+urso feroz~
+o urso feroz~
+Um enorme e feroz urso tenta atacar um infeliz domador.
+~
+Não brinque com esse animal.
+~
+2162722 0 0 0 0 0 0 0 -350 E
+5 13 4 1d8+60 2d4+4
+0 900
+8 8 1
+E
+#11006
+leão indócil~
+o leão indócil~
+Um bravio leão de juba negra ameaça os outros animais com seu rugido.
+~
+Não brinque com esse animal.
+~
+2162722 0 0 0 0 0 0 0 -350 E
+5 14 3 1d7+60 2d4+4
+0 900
+8 8 2
+E
+#11007
+raposa astuta vermelha~
+a astuta raposa vermelha~
+Uma raposa de aspecto indefeso, porém inteligente, ronda os outros animais.
+~
+Não brinque com esse animal.
+~
+2162722 0 0 0 0 0 0 0 -350 E
+5 10 4 1d7+70 2d4+4
+0 900
+8 8 2
+E
+#11008
+arauto anfitrião~
+o arauto anfitrião~
+O imponente arauto que carrega o Brasão de Vitália acena para a platéia.
+~
+Ele, por mérito próprio, foi escolhido pelos próprios Senhores das Mesnadas e pelos
+Antigos Dragões para, com a benção dos deuses, carregar o Brasão de Vitália e proteger
+os mistérios das Mesnadas. Ele é muito mais velho do que se imagina...
+~
+2351106 0 0 0 0 0 0 0 0 E
+101 0 -20 5d5+3000 6d6+20
+0 0
+8 8 1
+E
+#11009
+domador~
+o domador de animais~
+Um forte domador tenta, em vão, conter os animais.
+~
+Ele está preocupado com o que vai acontecer nessa arena...
+~
+2162722 0 0 0 0 0 0 0 -350 E
+5 14 6 1d5+60 2d4+3
+0 900
+8 8 1
+E
+#11010
+representantes~
+os representantes dos clãs~
+Os representantes de cada clã estão no centro da arena segurando seus respectivos estandartes.
+~
+An undefined string.
+~
+2351106 0 0 0 0 0 0 0 0 E
+90 10 -10 4d4+1500 5d5+10
+0 0
+8 8 1
+E
+#11011
+pipoqueiro~
+o pipoqueiro~
+Um sorridente pipoqueiro anda para lá e pra cá tentando vender alguma coisa.
+~
+Ele sorri para você e mostra tudo que tem para vender:
+'Aceita uma pipoquinha? É gostosa e baratinha!'
+~
+2351168 0 0 0 0 0 0 0 0 E
+90 10 -10 4d4+1500 5d5+10
+0 0
+8 8 1
+E
+#11012
+vendedor souvenires~
+o vendedor de souvenires~
+Um vendedor de souvenires passa por você oferecendo seus artigos.
+~
+Ele parece muito atrapalhado segurando tantos souvenires!
+~
+2351168 0 0 0 0 0 0 0 0 E
+90 10 -10 4d4+1500 5d5+10
+0 0
+8 8 1
+E
+$

@@ -1,0 +1,21 @@
+#222
+Vitalia~
+O Santuário das Glórias~
+22200 22299 0 0 0 0 0 -1 -1
+-1
+*
+M 0 22200 1 22201	carregar o guarda
+E 1 22201 1 16		empunhar a lan�a dos bravos
+M 0 22201 1 22212	carregar robin hood
+M 0 22202 1 22215	carregar hans tadden
+M 0 22203 1 22221	carregar a essencia de Arthur
+M 0 22204 1 22216	carregar Jasao
+O 0 22203 1 22208	carregar Ken
+O 0 22204 1 22208	carregar Kidaf
+O 0 22205 1 22208	carregar Nanoc
+O 0 22206 1 22208	carregar Nimue
+O 0 22207 1 22208       carregar Aqua
+O 0 22208 1 22208       carregar Torvante
+O 0 22209 1 22208       carregar Lupulis
+S
+$

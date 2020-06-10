@@ -1,0 +1,853 @@
+#12101
+Entrada Para o Labirinto~
+   Tudo cidade abruptamente termina aqui, nesse grande alçapão de madeira.
+O tamanho desse alçapão é comparavel a três carroças colocadas lado a lado.
+Uma enorme alça de ferro cravada nesse alçapão parece ser uma das maneiras
+de abri-lo.  Você percebe que seria mais prudente ler o aviso daqui, antes
+de tentar abri-lo e entrar.
+~
+121 68 0 0 0 1
+D2
+~
+~
+0 -1 10279
+D5
+Há uma frágil escada seguindo para baixo.
+~
+alçapão~
+1 12133 12102
+S
+#12102
+Dentro do Labirinto~
+   Mesmo sua luz parece não conseguir penetar a escuridão deste local.  As 
+paredes, velhas e gastas, por criaturas que tentaram por muitos anos atingir 
+o mundo acima, são escuras e acizentadas, não lhe dando nenhuma sensação de 
+conforto.  Você pode ouvir sons, barulhos; sons de luta, e sons de que você 
+não tem ideia do que ser.  Tudo ecoa por sua volta, rebatendo de parede em 
+parede, tornando impossível saber o quão longe esses sons estão.
+~
+121 265 0 0 0 0
+D3
+~
+~
+0 -1 12103
+S
+#12103
+Uma Sala Imunda~
+   Aqui deve ser onde o Labirinto mantêm seu estoque de comida, imaginando o 
+que  aquela comida nojenta deve ser.  Há uma pequena goteira de água da 
+entrada, a oeste, fazendo com que alguns fungos cresçam aqui, proporcionando 
+comida a estes indecentes animais.
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 -1 12102
+D3
+~
+~
+0 -1 12104
+S
+#12104
+Uma Sala Imunda~
+   O odor se torna cada vez mais desagradável, o terrível piso imundo, você 
+sente a vontade de sair correndo desse local.
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12107
+D1
+Há um picante cheiro vindo dessa direção.
+~
+~
+0 -1 12103
+D2
+~
+~
+0 -1 12108
+D3
+~
+~
+0 -1 12105
+S
+#12105
+Uma Sala Imunda~
+   Maldição!!!  Mais sujeira!!!
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 -1 12104
+D3
+~
+~
+0 -1 12106
+S
+#12106
+Um Pouco de Ar Fresco~
+   Finalmente uma chance de respirar por seu nariz novamente!  A camada de 
+sujeira diminuiu, deixando o ar ainda um pouco desagradável, mas não 
+doentio e podre como era anteriormente.  A gruta se vira aqui, seguindo 
+para norte.
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12109
+D1
+~
+~
+0 -1 12105
+S
+#12107
+Recâmara~
+   Este recanto se parece ser onde, as mais poderosas criaturas vem fazer 
+seus banquetes de pobres, estúpidos e desprezíveis seres.
+~
+121 265 0 0 0 0
+D2
+~
+~
+0 -1 12104
+S
+#12108
+Um Recanto~
+   Este escondido lugar parece ser onde seres tentaram se esconder dos 
+famintos monstros que passam por aqui atrás de comida.
+   Acha que funciona?
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12104
+S
+#12109
+Sala do Lotus~
+   A caverna continua para norte, escura e sombria como antes.  Pelo 
+menos ela não fede.
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12110
+D2
+~
+~
+0 -1 12106
+S
+#12110
+Um Túnel~
+   O túnel segue de norte a sul daqui, ainda bruto e inacabado, quase 
+pré-histórico.  Parece que homens não vem aqui à muito tempo.  Se por 
+acaso vieram, não permaneceram por muito tempo.
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12111
+D2
+~
+~
+0 -1 12109
+S
+#12111
+Um Túnel~
+   Ainda sem luz, sem lugar para descansar, este sombrio lugar não 
+oferece nenhum conforto.  Você não tem nenhuma ajuda, a não ser 
+manter a vigia.
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12112
+D2
+~
+~
+0 -1 12110
+S
+#12112
+Uma Parte Diferente no Túnel~
+   O túnel continua, ainda escuro e melancólico.  Entretanto, você
+começa a ver evidências de uma forma de vida mais adiantada.  As 
+paredes possuem várias marcas estranhas, que poderiam ser arranhões, todavia,
+elas parecem ser mais do que isso.  Elas estão muito tênues aqui.    
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12113
+D2
+~
+~
+0 -1 12111
+S
+#12113
+Uma Parte Diferente no Túnel~
+   As marcas parecem ser mais salientes aqui e você pode perceber 
+que elas de fato são entalhes e não somente arranhões de lutas 
+remotas.    
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12114
+D2
+~
+~
+0 -1 12112
+S
+#12114
+Caverna dos Demônios~
+   Esta grande sala tem vários "buracos", permitindo a morada de 
+alguns desses seres.  A maioria desses buracos está provida com camas
+e todo o material usado no dia a dia parecem ter sido esculpidos na pedra
+mas eles foram tão bem feitos que você não tem o menor problema para saber
+a função básica de cada coisa.
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12115
+D2
+~
+~
+0 -1 12113
+S
+#12115
+A Caverna~
+   A caverna aqui é menor do que para sul, mas larga o suficiente para não ser
+chamada de túnel.  Cada vez mais, você percebe que algumas das criaturas
+presas aqui podem ser mais do que somente imundos animais.    
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12116
+D2
+~
+~
+0 -1 12114
+S
+#12116
+A Caverna~
+   Ainda maior do que um túnel na entrada, essa caverna tem a largura de cinco
+homens lado a lado e dez pés de altura.  Com certeza, este é um  lugar fora do
+comum e nessas paredes você pode ver antigas marcas de arranhões de batalhas
+passadas.
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12117
+D2
+~
+~
+0 -1 12115
+S
+#12117
+Estranha Sala de Armas~
+   Esta caverna, maior do que qualquer outra em que você já esteve, parece 
+mais uma sala de guerra do que um lugar para morar.  Várias armas estão 
+penduradas pelas paredes, elmos de diferentes tipos e várias outras peças 
+de metal estão espalhadas pela sala.
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 -1 12118
+D2
+~
+~
+0 -1 12116
+S
+#12118
+A Caverna~
+   A caverna segue de leste a oeste aqui, levando a lugares e a monstros 
+totalmente desconhecidos.
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 -1 12119
+D3
+Um forte cheiro acre, parecido com remédio, vem dessa direção.
+~
+~
+0 -1 12117
+S
+#12119
+Túnel Muito Limpo~
+   De maneira estranha, as paredes e o piso dessa parte do Labirinto 
+parecem ter sido escovadas e muito limpas, surpreendentemente 
+limpas, que não há sinal de um simples foco de poeira neste local.
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 -1 12120
+D3
+~
+~
+0 -1 12118
+S
+#12120
+Uma Caverna Muito Limpa~
+   Agora você entende porque essas salas estão tão limpas.  Nenhuma criatura 
+desejaria permanecer tão próximo a estas salas.
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 -1 12121
+D3
+~
+~
+0 -1 12119
+S
+#12121
+Uma Caverna Muito Limpa~
+   A caverna aqui continua muito limpa e polida, porém desagradáveis ondulações
+no chão dificultam seu caminho.
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 -1 12122
+D3
+~
+~
+0 -1 12120
+S
+#12122
+Sala de Esqueletos~
+   Por todos os lados você pode ver ossos, alguns ainda conectados a seu
+esqueleto original, outros espalhados pela sala.  Que tipo de criatura 
+colecionaria ossos?
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 -1 12123
+D3
+~
+~
+0 -1 12121
+S
+#12123
+Sala de Ossos~
+   Ainda coberta de ossos, esta sala cheira a morte e a podridão.  Melhor 
+continuar a seguir seu caminho.
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 -1 12124
+D3
+~
+~
+0 -1 12122
+S
+#12124
+Algumas Plantas~
+   Finalmente você encontra vida vegetal.  Isso se parece mais com algum 
+tipo de fungo mas, pelo menos, é algo diferente daquilo que você estava vendo 
+pelas paredes até agora.
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 -1 12125
+D3
+~
+~
+0 -1 12123
+S
+#12125
+Um Pequeno Ponto de Luz~
+   Neste horripilante e escuro Labirinto, este pequeno ponto é o único lugar 
+por onde uma ligeira luz consegue passar.  Por esse motivo, este é o único 
+local onde algum vegetal poderia viver além do musgo simples.  Por toda a 
+sua volta, nas fendas das paredes e do chão, crescem grandes e fortes plantas.
+Hei!!! O que foi isso??  O que você acabou de ouvir foi um rosnado?
+~
+121 264 0 0 0 0
+D1
+~
+~
+0 -1 12126
+D3
+~
+~
+0 -1 12124
+S
+#12126
+De Volta à Escuridão~
+   Escuro como a mais escura das noites, você pode ouvir claramente os pesados 
+passos de algo que parece ser imenso mas, infelizmente, não pode ver ninguém.
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 -1 12127
+D3
+~
+~
+0 -1 12125
+S
+#12127
+Os Jors~
+   Rápidas como a luz, horríveis como o pecado, estas criaturas esperam 
+por um delicioso e suculento jantar: VOCÊ!    
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 -1 12128
+D3
+~
+~
+0 -1 12126
+S
+#12128
+Os Jors~
+   Carne crua por todo o lado e muito sangue pelas paredes. O mau cheiro de
+corpos destroçados e apodrecendo parece não incomodar estas criaturas 
+repugnantes e hostis, que devem ser as coisas mais nojentas de toda Vitália.
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 -1 12129
+D3
+~
+~
+0 -1 12127
+S
+#12129
+Os Jors~
+   Algo lhe diz que esses Jors lhe darão trabalho.  Você se encontra rodeado 
+por eles. Não há opção: é lutar ou morrer!
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 -1 12130
+D3
+~
+~
+0 -1 12128
+S
+#12130
+Uma Curva no Caminho~
+   O caminho agora segue para o sul, em direção a um lugar ainda mais escuro,
+nas profundezas do covil do demônio.
+~
+121 265 0 0 0 0
+D2
+~
+~
+0 -1 12131
+D3
+~
+~
+0 -1 12129
+S
+#12131
+Seguindo Para Sul~
+   As paredes aqui não possuem nenhum traço característico, nada a não ser
+arranhões de batalhas e manchas de sangue.
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12130
+D2
+~
+~
+0 -1 12132
+S
+#12132
+Seguindo Para Sul~
+   Aqui também não existem marcas diferentes nas paredes.  Você sente como se 
+estivesse nessa caverna há muito tempo.  Você adoraria saber que dia é hoje e 
+que horas são agora.
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12131
+D2
+~
+~
+0 -1 12133
+S
+#12133
+Seguindo Para Sul~
+   Você continua indo em direção sul, tremendo a cada passo que dá.  Agora, 
+junto com os sons de passadas pesadas e de vozes guturais, você ouve um som 
+muito agudo, que lhe causa um enorme arrepio.
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12132
+D2
+~
+~
+0 -1 12134
+S
+#12134
+Em Estado de Alerta~
+   Graças a Deus, seus instintos lhe disseram para olhar para cima, no mesmo
+instante que uma enorme figura negra se atirava rapidamente em sua direção,
+logo acima da entrada.
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12133
+D2
+~
+~
+0 -1 12135
+S
+#12135
+Uma Sala em Ruínas~
+   A sala aqui é coberta por entulho de toda a espécie e por todo o lado 
+existem verdadeiras montanhas de lixo. Ao olhar para as paredes, você tem a
+nítida impressão de que alguém atirou com uma catapulta nelas, tamanho 
+os estragos.
+~
+121 0 0 0 0 1
+D0
+~
+~
+0 -1 12134
+D2
+~
+~
+0 -1 12136
+S
+#12136
+Uma Sala em Ruínas~
+   A espessa camada de entulho no chão desta sala parece dizer que o Crixna
+na outra sala não era o único Crixna desse Labirinto.
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12135
+D2
+~
+~
+0 12135 12137
+S
+#12137
+Um Piso Sujo~
+   O chão de pedra começa a dar espaço a uma fina e arenosa camada de 
+poeira.  Você quase tem a sensação de estar andando em uma praia.    
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 12135 12136
+D2
+~
+~
+0 12137 12138
+S
+#12138
+Um Piso Lamacento~
+  O chão está completamente imundo, e muito lamacento.  Isso parece ser 
+areia movediça mas felizmente não é.    
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 12137 12137
+D3
+~
+~
+0 -1 12139
+S
+#12139
+De Volta às Pedras~
+   Esta grande sala parece ser a morada permanente de alguém que provou ser 
+capaz de manter tanta firmeza no poço do inferno.  Muito limpa e muito 
+arrumada.
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 -1 12138
+D3
+~
+~
+0 -1 12140
+S
+#12140
+Morada do Basilisco~
+   Basilisco.  A terrível reputação desta criatura traz medo ao seu coração.  
+Você somente havia ouvido falar desta assustadora criatura nas histórias de 
+criança e se espanta ao perceber que elas de fato existem.    
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 -1 12139
+D3
+~
+~
+0 -1 12141
+S
+#12141
+O Horror Oeste~
+   E sua longa caminhada continua, seguindo através dessa verdadeira trilha 
+de horrores e mais horrores.  Sua mente começa a divagar e você se pega 
+pensando que pode estar chovendo na superfície.  Talvez uma ducha fria fosse
+lhe cair bem agora.    
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 -1 12140
+D3
+~
+~
+0 -1 12142
+S
+#12142
+Uma Caverna~
+   Avançando, você continua através de seu último objetivo: o de matar o 
+demôniaco e fabuloso Minotauro.  Para o oeste, apenas a escuridão.  
+Para o leste, mais escuridão.  Só há escuridão.
+~
+121 265 0 0 0 0
+D1
+~
+~
+0 12138 12141
+D3
+~
+~
+0 -1 12143
+S
+#12143
+Mais uma Caverna~
+   Você começa a ver sinais de riqueza aqui, à medida que avança por esse
+labirinto.  Parece que todos os objetos preciosos trazidos por aqueles que
+eram aprisionados aqui foram levados por uma criatura bem mais poderosa
+do que seu próprio dono.
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12144
+D1
+~
+~
+0 -1 12142
+S
+#12144
+Outra Caverna~
+   As paredes daqui são mais primitivas do que as paredes na entrada 
+deste local.  Parece que estas foram feitas bem mais recentemente.  Seria 
+possível essas criaturas estarem cavando novos túneis em direção à liberdade?
+~
+121 265 0 0 0 0
+D2
+~
+~
+0 -1 12143
+D3
+~
+~
+0 12136 12145
+S
+#12145
+Caverna Inacabada~
+   A caverna aqui, definitivamente, foi feita antes das cavernas anteriores.  
+As paredes chegam a ser cortantes, com tantas pontas agudas e mal acabadas em
+alguns locais e elas não parecem, de modo algum, serem naturais, 
+como as paredes anteriores.
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12146
+D1
+~
+~
+0 12136 12144
+S
+#12146
+Em Direção à Claridade~
+   Aqui ainda é bem escuro mas não tão escuro quanto nos outros locais e você
+consegue ver uma pequena luz vinda de longe.  Pode-se ouvir grunhidos e roncos
+vindos de inúmeras criaturas.  E aos poucos, você percebe alguns ruídos de luta,
+e muitos gritos estridentes.  Esse é o tipo de som que você tem plena certeza
+de que o acompanhará até o fim de seus dias.    
+~
+121 265 0 0 0 0
+D0
+~
+~
+0 -1 12147
+D2
+~
+~
+0 -1 12145
+S
+#12147
+Sala de Tortura~
+   Você sabe que agora deve estar perto do Covil do Minotauro.  Esta sala 
+parece ter sido feita com o único objetivo de torturar os habitantes do 
+local.  Há correntes presas nas paredes e antigas e rústicas armas por toda 
+a sala.  Criaturas de vários tamanhos e formas se movem pela sala, torturando e
+causando muita dor às pobres criaturas que foram aprisionadas aqui.
+~
+121 264 0 0 0 0
+D2
+~
+~
+0 -1 12146
+D3
+~
+~
+0 -1 12148
+S
+#12148
+Sala de Tortura~
+   Mais do que óbvio, tortura parece ser um passatempo muito popular por aqui.  
+Mais cenas de dor e de terror vão enchendo a sua vista.  Um Ciclope se 
+inclinando sobre um Caiveh, salivando, um Cavaleiro Khordovian testando uma 
+nova técnica de interrogatório em um Diurge, obtendo, como único resultado
+visível, um ensurdecedor grito de medo e dor.
+~
+121 264 0 0 0 0
+D1
+~
+~
+0 -1 12147
+D3
+~
+~
+0 -1 12149
+S
+#12149
+A Câmara do Minotauro~
+   Estas são as câmaras particulares do Minotauro.  Ele poderia estar em 
+qualquer uma dessas salas, portanto permanecer em guarda é provavelmente uma
+ótima ideia.  Você parece que pode ouvir um som baixo...um som divertido.  
+Um som que diz: "Este idiota está aqui para tentar pegar a MINHA cabeça?!?"
+~
+121 264 0 0 0 0
+D0
+~
+~
+0 -1 12150
+D1
+~
+~
+0 -1 12148
+S
+#12150
+A Câmara do Mintauro~
+   Parece que a sua risada é eterna: um som interminável, que não ecoa somente
+de sala em sala, parede em parede mas dentro do seu corpo, torturando-o.  Esta
+criatura, que vive há centenas de anos, sabe que você está aqui e acha isso 
+divertido.  Talvez você deva repensar sua estratégia...
+~
+121 264 0 0 0 0
+D0
+~
+~
+0 -1 12151
+D2
+~
+~
+0 -1 12149
+S
+#12151
+A Câmara do Minotauro~
+   Dizem que o Minotauro é o mestre do roubo.  Uma criatura que se move sem ser
+detectada, de um lugar para outro.  Até mesmo em uma câmara como esta parece ser
+possível para o Minotauro se enconder de tal forma nas sombras, que ninguém 
+consiga percebe-lo...até que seja tarde demais.
+~
+121 264 0 0 0 0
+D0
+~
+~
+0 -1 12152
+D2
+~
+~
+0 -1 12150
+S
+#12152
+A Câmara do Minotauro~
+   Ele nunca irá parar de rir???!!??  O riso constante, aliado ao fato de que,
+em todas as salas que você entra, encontra criaturas assustadoras, parece estar
+levando-o à insanidade.  Onde ele está?  Por que ele não aparece?
+~
+121 264 0 0 0 0
+D1
+~
+~
+0 -1 12154
+D2
+~
+~
+0 -1 12151
+S
+#12154
+A Sala do Tesouro do Minotauro~
+   Uma sala simples, somente com esses poucos baús, guardados por criaturas
+extremamente poderosas.
+~
+121 264 0 0 0 0
+D3
+~
+~
+0 -1 12152
+S
+$~

@@ -1,0 +1,203 @@
+#4400
+Elkain mago elfo sombrio~
+Elkain~
+Um grande elfo, vestindo um capote escuro, está aqui.
+~
+Elkain é um antigo estudante de Qui'lok, o Mago Sombrio, que depois do
+banimento de seu mestre, resolveu partir mundo afora, em busca de novos
+conhecimentos.
+~
+2105410 0 0 0 0 0 0 0 -1000 E
+49 -8 -13 6d6+2900 8d8+29
+1750 82936
+8 8 1
+E
+#4401
+estranho arbusto~
+um estranho arbusto~
+Um estranho arbusto cresce aqui.
+~
+Você olha fixamente para a grande plantação de arbustos, de um tom de 
+verde profundo, e percebe que aqueles dois pequenos furos quase no topo
+praticamente se parecem com dois olhos...    
+~
+2105412 0 0 0 0 0 0 0 0 E
+40 0 -6 4d4+2525 6d6+20
+875 42840
+8 8 1
+E
+#4402
+espinhos árvore~
+uma árvore de espinhos~
+Uma árvore com galhos que lembram braços está aqui.
+~
+An undefined string.
+~
+2105412 0 0 0 0 0 0 0 0 E
+41 -1 -6 4d4+2550 6d6+21
+900 45552
+8 8 1
+E
+#4403
+guarda elfo sentinela~
+O Sentinela do portão~
+O Sentinela do portão está aqui, parecendo bêbado.
+~
+Assim que você o olha, percebe que ele é grande demais para um elfo e 
+suas orelhas bastante pontudas.
+~
+2105350 0 0 0 0 0 0 0 0 E
+42 -7 -7 6d6+2575 7d7+24
+950 58551
+4 8 1
+E
+#4404
+elfa jovem~
+uma jovem elfa~
+Uma jovem elfa está aqui.
+~
+Ela percebe você olhando para ela e acena em torno de si.
+"O que você acha da minha casa?", ela exclama.  
+"Se capturar um estranho arbusto e o amarrar para baixo ele crescerá 
+como uma cabana."
+~
+2105350 0 0 0 0 0 0 0 0 E
+43 -3 -7 6d6+2600 7d7+23
+1000 57260
+8 8 2
+E
+#4405
+elfo pescador~
+um elfo pescador~
+Um elfo pescador anda ao redor, procurando por um bom lugar para 
+lançar um anzol.
+~
+Assim que você o olha percebe que ele é meip grande para um elfo e suas 
+orelhas são bastante pontudas.
+~
+2105346 0 0 0 0 0 0 0 0 E
+43 -3 -7 6d6+2600 7d7+26
+1000 59260
+8 8 1
+E
+#4406
+peixe garoupa~
+uma garoupa~
+Uma grande garoupa nada aqui.
+~
+É muito grande e colorida, em tons alaranjados.
+~
+2105346 0 0 0 0 0 0 0 0 E
+43 -3 -7 6d6+2100 6d6+18
+1000 51260
+8 8 1
+E
+#4407
+elfa anciã~
+o elfa anciã~
+A elfa anciã está aqui.
+~
+Ela olha para você e fala, "Alguma coisa no Templo da Água na lagoa torna a 
+todos grandes e fortes, até mesmo as plantas e animais ao redor daqui são 
+maiores do que o normal para sua espécie."
+A anciã faz uma pausa e continua:
+"Alguns acreditam que a ferramenta que os deuses usaram para criar a lagoa
+está guardado no Templo da Água e que é isto que nos torna mais fortes."
+~
+2121734 0 0 0 0 0 0 0 0 E
+50 -10 -13 6d6+5000 8d8+29
+2500 75962
+8 8 2
+E
+#4408
+dourado peixe~
+um grande peixe dourado~
+Um grande peixe dourado nada em lentos círculos em torno de você.
+~
+An undefined string.
+~
+2105346 0 0 0 0 0 0 0 0 E
+42 -2 -6 6d6+2575 22d1+21
+950 48551
+8 8 1
+E
+#4409
+elfo~
+um elfo~
+Um elfo está nadando aqui.
+~
+Ele é bastante alto e nada com fortes braçadas.
+~
+2105346 0 0 0 0 0 0 0 0 E
+43 -3 -7 6d6+2600 7d7+26
+1000 54260
+8 8 1
+Str: 15
+E
+#4410
+elfo pescador~
+um elfo pescador~
+Um elfo está pescando aqui.
+~
+Como todos os elfos daqui, ele é realmente grande para sua espécie.
+~
+2105346 0 0 0 0 0 0 0 0 E
+44 -4 -7 6d6+2625 7d7+24
+1050 57731
+8 8 1
+Str: 15
+E
+#4411
+elfa curandeira élfica~
+uma curandeira élfica~
+Uma curandeira élfica está aqui.
+~
+Ela olha para baixo e pergunta, "Você já esteve alguma vez no 
+Templo da Água, na lagoa? Eu tenho tentado entrar lá há anos mas nunca 
+consegui encontrar a chave."
+~
+2105346 0 0 0 0 0 0 0 0 E
+44 -4 -7 6d6+2625 7d7+24
+1050 57731
+8 8 2
+E
+#4412
+elfo~
+um elfo~
+Um elfo está aqui, arrumando sua casa.
+~
+Ele é um tanto alto e suas orelhas parecem afiadas.
+~
+2105346 0 0 0 0 0 0 0 0 E
+44 -6 -7 6d6+2625 7d7+24
+1050 57731
+8 8 1
+Str: 15
+E
+#4413
+elfo vendedor~
+Um elfo~
+Um elfo está em pé atrás do balcão.
+~
+An undefined string.
+~
+2156546 0 0 0 0 0 0 0 0 E
+108 10 0 1d1+30000 1d10+10
+1 2000
+8 8 1
+Str: 15
+E
+#4414
+salamandra~
+uma salamandra~
+Uma salamandra aquática estuda-o com um olhar curioso.
+~
+An undefined string.
+~
+2105346 0 0 0 0 0 0 0 0 E
+42 -3 -6 6d6+2575 7d7+22
+950 48551
+8 8 1
+Str: 15
+E
+$

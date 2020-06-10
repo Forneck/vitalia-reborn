@@ -1,0 +1,41 @@
+#181
+Vitalia~
+Os Caminhos Iniciais~
+18100 18199 3 1 d 0 0 0 -1 -1
+-1
+M 0 18110 1 18116 	(a cobra naja-rainha)
+G 1 18100 100 -1 	(o brinco da naja)
+G 1 18100 100 -1 	(o brinco da naja)
+G 1 18102 100 -1 	(um par de cotoveleiras de couro de cobra)
+R 0 18102 63 -1 	(um mapa de Midgaard)
+O 0 63 100 18102 	(um mapa de Midgaard)
+R 0 18102 5690 -1 	(um mapa de Nova Thalos)
+O 0 5690 100 18102 	(um mapa de Nova Thalos)
+R 0 18109 3009 -1 	(um p�o de viagem)
+R 1 18109 3009 -1 	(um p�o de viagem)
+R 1 18109 3009 -1 	(um p�o de viagem)
+O 1 3009 1000 18109 	(um p�o de viagem)
+O 1 3009 1000 18109 	(um p�o de viagem)
+O 1 3009 1000 18109 	(um p�o de viagem)
+R 0 18110 18106 -1 	(a fonte eterna)
+O 0 18106 2 18110 	(a fonte eterna)
+R 0 18110 18107 -1 	(uma porunga de couro)
+O 0 18107 200 18110 	(uma porunga de couro)
+R 0 18111 18105 -1 	(uma adaga da gigantesca naja-rainha)
+O 0 18105 200 18111 	(uma adaga da gigantesca naja-rainha)
+R 0 18112 18104 -1 	(um colete de couro de cobra)
+O 0 18104 200 18112 	(um colete de couro de cobra)
+R 0 18112 18103 -1 	(um p�taso de couro de cobra)
+O 0 18103 200 18112 	(um p�taso de couro de cobra)
+R 0 18112 18101 -1 	(um coxote de couro de cobra)
+O 0 18101 200 18112 	(um coxote de couro de cobra)
+R 0 18113 18109 -1 	(um archote de cobre)
+O 0 18109 200 18113 	(um archote de cobre)
+R 0 18114 18108 -1 	(O Pergaminho do Mestre)
+O 0 18108 200 18114 	(O Pergaminho do Mestre)
+R 0 18115 18110 -1 	(o Livro dos Aventureiros)
+O 0 18110 200 18115 	(o Livro dos Aventureiros)
+R 0 18117 18111 -1 	(a Mensagem do Sonhador)
+O 0 18111 200 18117 	(a Mensagem do Sonhador)
+S
+$

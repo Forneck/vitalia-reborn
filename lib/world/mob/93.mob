@@ -1,0 +1,621 @@
+#9300
+dragão ancião dourado~
+o Ancião Dragão Dourado~
+O Ancião Dragão Dourado está aqui, com seu coração justo e bondoso.
+~
+O Dragão Dourado é enorme, de aparência justa e benevolente.  Suas escamas
+são de majesto dourado, reluzentindo como se tendo luz própria.  Os dois
+chifres, maiores que um homem adulto, lhe dão um ar de altivez realmente
+digno de um ser divino e supremo em sua raça.
+~
+2881810 0 0 0 84216280 0 0 0 1000 E
+106 -35 -80 10d5+25000 10d10+55
+200000 7500000
+8 8 1
+BareHandAttack: 8
+Str: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#9301
+dragão ancião prateado~
+o Ancião Dragão Prateado~
+O Ancião Dragão Prateado está aqui, procurando alguém em perigo.
+~
+O Dragão Prateado possui uma aparência magnífica.  Suas escamas prateadas
+brilham como se espalhassem bondade e fraternidade para todos os lados.
+Cinco chifres formam uma imponente coroa prateada em torno de sua cabeça.
+~
+2881810 0 0 0 83954008 0 0 0 1000 E
+106 -30 -80 10d5+20000 10d9+50
+180000 7000000
+8 8 1
+BareHandAttack: 8
+Str: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#9302
+dragão ancião bronze~
+o Ancião Dragão de Bronze~
+O Ancião Dragão de Bronze está aqui, esperando uma nova aventura.
+~
+O Dragão de Bronze é alegre e curioso, adora participar de aventuras, e de
+discutir e explanar suas opiniões com o grupo de aventura.  Suas escamas de
+bronze são de uma beleza esplendorosa e hipnótica.  Os três chifres e suas
+afiadas garras podem retalhar rapidamente qualquer infeliz ser que lhe
+ataque.
+~
+2877458 0 0 0 83954128 0 0 0 1000 E
+106 -25 -60 10d5+15000 10d8+45
+150000 5500000
+8 8 1
+BareHandAttack: 8
+Str: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#9303
+dragão tiamat~
+Tiamat~
+Tiamat, a dragão de cincos cabeças está aqui, olhando fixamente para você.
+~
+Tiamat possui cinco cabeças, sendo a central vermelha e a única que fala.
+É necessária muita cautela, pois cada cabeça lança um ataque diferente e
+Mortal.  Da direita para esquerda você observa aterrorizado as cabeças do
+Poderoso Tiamat: a primeira é negra e espirra uma rajada de ácido; em
+seguida você observa a azul que lança raios; a terceira é a cabeça central,
+vermelha, que possui uma mortal baforada de fogo; à esquerda da central está
+a verde, cujo ataque é um mortal gás venenoso; já a última cabeça, branca,
+ataca usando uma poderosa rajada de gelo.  Tiamat possui dentro de si todas
+as chagas e males do mundo.  É perversa e cruel.
+~
+2877490 0 0 0 67438936 0 0 0 -1000 E
+107 -40 -70 10d5+6500 10d10+70
+150000 6000000
+8 8 2
+BareHandAttack: 8
+Str: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#9304
+dragão ancião branco~
+o Ancião Dragão Branco~
+O Ancião Dragão Branco está aqui, pronto para congelar sua próxima vítima.
+~
+O Dragão Branco é da cor da neve.  Seu corpo totalmente coberto por escamas
+brancas é facilmente camuflado em seu habitat natural. Um porém é que ele se torna facilmente 
+visível fora dos lugares congelados.  Suas asas possuem uma beleza magnífica
+quando abertas, parecendo feitas de puríssima madrepérola.  O Ancião Branco possui apenas um chifre, bem no meio da sua 
+cabeça.  Ele também é dono de uma rajada congelante de gelo.
+~
+2877458 0 0 0 67176768 0 0 0 300 E
+100 -20 -40 10d5+5000 9d9+40
+90000 4600000
+8 8 1
+BareHandAttack: 8
+Str: 20
+Dex: 25
+Int: 20
+Wis: 20
+Con: 20
+Cha: 20
+E
+#9305
+dragão ancião azul~
+o Ancião Dragão Azul~
+O Ancião Dragão Azul está aqui, vigiando seu território.
+~
+O Ancião Dragão Azul possui escamas da cor do céu vitaliano, que magicamente
+mudam de tonalidade de acordo com as condições da abóboda celeste.  Seus
+olhos são de um intenso vermelho, como sangue.  Possuindo dois chifres em
+sua cabeça, geralmente é confundido com o próprio céu ao sobrevoar o deserto
+do paraíso dos dragões de Vitália ou áreas áridas.
+~
+2877490 0 0 0 67176704 0 0 0 300 E
+100 -23 -39 10d5+5200 9d9+48
+50000 4000000
+8 8 1
+BareHandAttack: 8
+Str: 25
+Dex: 20
+Int: 25
+Wis: 20
+Con: 20
+Cha: 20
+E
+#9306
+dragão ancião verde~
+o Ancião Dragão Verde~
+O Ancião Dragão Verde está aqui, mal-humorado como sempre.
+~
+O Ancião Dragão Verde possui escamas predominantemente verdes.  Possui ainda
+escamas amareladas, mas apenas na parte frontal do corpo (no pescoço e na
+barriga), além da cauda.  Sua cabeça ostenta dois chifres e sua mandíbula
+superior possui duas grandes presas, o que faz os seus inimigos tremerem.  O
+Ancião Verde é capaz de arriscar a própria vida pelos seus filhotes.
+~
+2877490 0 0 0 67176776 0 0 0 -350 E
+100 -19 -42 10d5+5250 9d9+35
+50000 3500000
+8 8 1
+BareHandAttack: 8
+Str: 25
+Dex: 20
+Int: 20
+Wis: 20
+Con: 25
+Cha: 20
+E
+#9307
+dragão ancião negro~
+o Ancião Dragão Negro~
+O Ancião Dragão Negro está aqui, sombrio como a morte.
+~
+O Ancião Dragão Negro é um dos seres mais perversos de Vitália.  Seu corpo é
+coberto quase que predominatemente por escamas negras, tendo apenas na parte
+frontal do seu corpo, no pescoço, na barriga e na cauda, escamas cinzas.
+Suas asas negras e seus três chifres compõem uma das figuras mais
+aterrorizantes de Vitália.
+~
+2877490 0 0 0 68225352 0 0 0 -1000 E
+100 -24 -31 10d5+5500 9d8+54
+50000 3500000
+8 8 1
+BareHandAttack: 8
+Str: 25
+Dex: 25
+Int: 20
+Wis: 20
+Con: 25
+Cha: 20
+E
+#9308
+dragão ancião vermelho~
+o Ancião Dragão Vermelho~
+O Ancião Dragão Vermelho está aqui, procurando novos tesouros.
+~
+O Ancião Dragão Vermelho possui escamas belíssimas, da cor de sangue.  Ele
+possui dois chifres enormes ao lado dos olhos e uma cauda com três espigões
+brancos que podem derrubar qualquer gigante.  Extremamente ganancioso, ele
+sempre menospreza seus inimigos.
+~
+2877490 0 0 0 67438848 0 0 0 -350 E
+100 -22 -31 10d5+5200 9d9+46
+50000 3500000
+8 8 1
+BareHandAttack: 8
+Str: 25
+Dex: 20
+Int: 20
+Wis: 20
+Con: 25
+Cha: 25
+E
+#9309
+dragão ancião amarelo~
+o Ancião Dragão Amarelo~
+O Ancião Dragão Amarelo está aqui, preparando uma nova armadilha.
+~
+O Ancião Dragão Amarelo é uma das criaturas mais belas e magníficas do
+paraíso dos dragões de Vitália.  Possui escamas em tons de amarelo-gualdo,
+sendo que os dois chifres que possui na cabeça são os maiores chifres
+encontrados em todos os dragões.  Suas potentes garras podem chegar a um
+metro e meio de comprimento.
+~
+2877458 0 0 0 67176768 0 0 0 300 E
+100 -27 -30 10d5+4900 9d7+38
+20000 1900000
+8 8 1
+BareHandAttack: 8
+Str: 20
+Dex: 20
+Int: 25
+Wis: 25
+Con: 20
+Cha: 25
+E
+#9310
+ancião dracolich~
+o dracolich ancião~
+O Dracolich Ancião está aqui, esperando a próxima alma para ser julgada.
+~
+O Dracolich ancião é uma das criaturas mais aterrorizantes do paraíso dos
+dragões de Vitália.  Ele é um dragão morto-vivo, que possui todos os poderes
+do dragão quando estava vivo, porém muito mais fortes e mortais.  O Ancião,
+por ser dragão mais velho desta espécie, não possui mais a carne e os órgãos
+do corpo que ele incorporou, pois sua magia de preservação não conseguiu
+manter nada além dos ossos.  Sua imensa figura é basicamente um grande
+esqueleto com sinistros olhos formados por apenas pontos de luz.  Ele
+aparenta possuir bem mais que mil anos.  
+~
+2877490 0 0 0 67176792 0 0 0 -1000 E
+103 -35 -45 10d5+6000 11d11+60
+50000 5000000
+8 8 1
+BareHandAttack: 8
+Str: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 20
+Cha: 20
+E
+#9311
+dragão fantasma~
+o dragão fantasma~
+O Dragão Fantasma está aqui, escondido do juiz das almas.
+~
+O Dragão fantasma é uma criatura horripilante, aterrorizante, medonha.
+Você, quando consegue olhar diretamente para ele, observa uma alma presa
+dentro do seu corpo fantasmagórico.  O Dragão fantasma vive no paraíso dos
+dragões de Vitália, escondido do dracolich ancião, o juiz das almas dos
+dragões.
+~
+2351154 0 0 0 83954012 0 0 0 -700 E
+100 -19 -35 10d5+4800 9d8+39
+49000 2001500
+8 8 1
+BareHandAttack: 8
+Str: 20
+Dex: 25
+Int: 20
+Wis: 20
+Con: 20
+E
+#9312
+dragoneza fada rainha~
+a dragoneza fada rainha~
+A Dragoneza Fada Rainha está aqui, lançando rajadas coloridas de alegria.
+~
+A Rainha dos dragões fadas possui uma alegria contagiante.  Suas belas asas
+produzem um brilho magnífico ao serem abertas.  A Rainha fada é pequenina,
+porém bastante bondosa e pacífica e não poupará esforços para ajudar um
+amigo em perigo.
+~
+2846738 0 0 0 67176712 0 0 0 700 E
+25 2 -10 5d3+760 4d3+13
+5000 60000
+8 8 2
+BareHandAttack: 12
+Str: 8
+Dex: 25
+Int: 25
+Wis: 25
+Cha: 25
+E
+#9313
+dragão fada guarda real~
+um dragão fada guarda-real~
+Um Dragão Fada, guarda-real, está aqui protegendo todos os seus irmãos.
+~
+O Guarda-real possui a missão de proteger todos os seus irmãos e as pessoas
+que precisam de ajuda.  Ele possui asas verdes e escamas azuis.  Como todo
+dragão fada, ele é alegre e adora uma piada, principalmente quando a piada é
+sobre os visitantes.
+~
+2846738 0 0 0 67174664 0 0 0 500 E
+25 -10 -5 5d3+1750 4d4+36
+4500 45000
+8 8 1
+BareHandAttack: 12
+Str: 10
+Dex: 18
+Int: 18
+Wis: 18
+Con: 13
+Cha: 20
+E
+#9314
+dragão fada~
+um dragão fada~
+Um Dragão fada está aqui, lançando rajadas coloridas em sua direção. 
+~
+O Dragão fada possui escamas coloridas e asas azuis.  Ele adora pregar peças
+e contar piadas, principalmente com os visitantes.  O Dragão fada é muito
+pacífico e alegre. E está sempre disposto a ajudar os necessitados.
+~
+2846928 0 0 0 67174664 0 0 0 500 E
+20 4 -3 5d3+525 4d3+18
+2000 30000
+8 8 1
+BareHandAttack: 12
+Str: 8
+Dex: 18
+Int: 15
+Wis: 15
+Cha: 20
+E
+#9315
+dragoneza fada~
+uma dragoneza fada~
+Uma Dragoneza fada está aqui, fazendo piadas sobre você e rindo da sua cara. 
+~
+A Dragoneza fada possui escamas coloridas e asas cor de rosa.  Ela adora 
+pregar peças e contar piadas, principalmente com os visitantes.  A Dragoneza 
+fada é muito pacífica e alegre e está sempre disposta a ajudar os necessitados.
+~
+2846928 0 0 0 67174664 0 0 0 500 E
+20 0 -2 5d3+500 4d3+11
+2000 30000
+8 8 2
+BareHandAttack: 12
+Str: 8
+Dex: 18
+Int: 15
+Wis: 15
+Cha: 23
+E
+#9316
+guardião harmonia~
+o guardião da harmonia~
+O Guardião da Harmonia está aqui, protegendo o paraíso dos dragões.
+~
+O Guardião é alto, forte e imponente.  É possível observar uma fonte de luz
+azul emanando do seu peito.  Sua missão consiste em proteger o paraíso dos
+dragões de Vitália de todos os males, se for preciso com sua própria vida.
+~
+2877714 0 0 0 67436872 0 0 0 1000 E
+105 -20 -40 10d5+7000 9d9+46
+34000 3500000
+8 8 1
+BareHandAttack: 13
+Str: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#9317
+guardião paz~
+o guardião da paz~
+O Guardião da Paz está aqui, protegendo o paraíso dos dragões.
+~
+O Guardião é alto, forte e imponente.  É possível observar uma fonte de luz
+branca emanando do seu peito.  Sua missão consiste em proteger o paraíso dos
+dragões de Vitália de todos os males, se for preciso com sua própria vida.
+~
+2877714 0 0 0 67436872 0 0 0 1000 E
+105 -20 -40 10d5+7000 9d9+46
+34000 3500000
+8 8 1
+BareHandAttack: 13
+Str: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#9318
+tempo~
+o tempo~
+O Senhor do Tempo está aqui, escrevendo o passado, o presente e o futuro. 
+~
+Ele é um homem velho que carrega as marcas de sua existência pelo seu corpo.
+Pouco se sabe para falar dele.  Apenas que veste seu lendário manto azul.
+~
+2351106 0 0 0 67176788 0 0 0 300 E
+106 -50 -80 10d5+30000 12d12+60
+200000 10000000
+6 6 1
+BareHandAttack: 12
+Str: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#9319
+duende~
+um duende~
+Um Duende está aqui, preparando a próxima travessura.
+~
+O Duende é uma criatura pequenina, com as bochechas gordinhas e rosadas e
+que adora fazer travessuras.  Ele costuma conviver junto com dragões-fadas e
+fadas.  Seu olhar é irônico e misterioso.  Veste roupas de couro feitas por
+ele mesmo e pintadas com vários tons de tinta.
+~
+2126020 0 0 0 67592 0 0 0 300 E
+12 5 0 5d3+150 3d4+8
+1000 1000
+8 8 1
+Str: 8
+Dex: 15
+Con: 8
+E
+#9320
+duende~
+uma duende~
+Uma Duende está aqui, preparando a próxima travessura.
+~
+A Duende é uma criatura pequenina, com as bochechas gordinhas e rosadas e
+que adora fazer travessuras.  Ela costuma conviver junto com dragões-fadas e
+fadas.  Seu olhar é irônico e misterioso.  Veste roupas de couro feitas por
+ela mesma e pintadas com vários tons de tinta.
+~
+2126020 0 0 0 67592 0 0 0 300 E
+12 5 0 5d3+140 3d4+8
+2000 2000
+8 8 2
+Str: 8
+Con: 8
+Cha: 15
+E
+#9322
+fada~
+uma fada~
+Uma Fada está aqui, emanando alegria e felicidade para todos os lados.
+~
+A Fada possui dois pares de asas coloridas e um pequenino corpo de humano.
+Ela é muito simpática e alegre, adora brincar com visitantes e possui o 
+poder de prever acontecimentos.  Ela está usando um lindo vestido feito de
+pétalas de flores colhidas no paraíso.
+~
+2715856 0 0 0 67176744 0 0 0 700 E
+10 5 1 5d3+135 3d4+6
+500 11000
+8 8 2
+Str: 5
+Int: 13
+Wis: 13
+Con: 7
+Cha: 16
+E
+#9323
+filhote dragão verde~
+um filhote de dragão verde~
+Um Filhote de dragão verde está aqui, esperando a mãe chegar com a comida.
+~
+O Filhote desde cedo possui a agressividade da mãe, porém não consegue usar
+suas mandíbulas de forma mortal.  Ele possui escamas num tom de verde muito 
+claro, seus dois chifres ainda não se desenvolveram e sua fome é 
+assustadora.
+~
+2187266 0 0 0 65792 0 0 0 -350 E
+15 8 3 5d3+250 3d4+16
+500 30000
+4 4 1
+BareHandAttack: 4
+Dex: 8
+Int: 8
+Wis: 8
+Cha: 8
+E
+#9324
+aranha fogo~
+uma aranha-de-fogo~
+Uma Aranha-de-fogo está aqui, com seu corpo coberto de chamas.
+~
+A Aranha-de-fogo é uma estranha criatura, que vive numa das cavernas do
+paraíso dos dragões de Vitália.  Alguns dizem que um mago vitaliano, em uma
+de suas experiências acabou criando num acidente estas incríveis criaturas.  
+O Corpo da aranha-de-fogo não é atingido pelas chamas e elas odeiam água.
+A Aranha-de-fogo é do mesmo tamanho de um cão-de-guarda.
+~
+2355362 0 0 0 851976 0 0 0 -350 E
+25 3 1 5d3+750 4d4+8
+2500 10000
+8 8 2
+BareHandAttack: 1
+Str: 12
+Con: 13
+E
+#9325
+dromedário~
+um dromedário~
+Um Dromedário está aqui, procurando por um oásis.
+~
+O Dromedário é uma espécie de camelo, que possui um pescoço curto e uma 
+corcova.  Vive perambulando no deserto dos dragões de Vitália à procura de
+água e fugindo do ataque dos dragões do deserto.
+~
+2375872 0 0 0 65536 0 0 0 350 E
+10 8 3 5d3+120 3d4+5
+500 13000
+8 8 1
+Str: 13
+Wis: 8
+Con: 13
+E
+#9326
+serpente negra~
+a serpente negra~
+Uma Serpente negra do pântano está aqui, com as presas cheias de veneno.
+~
+A Serpente negra possui escamas escuras como o sombrio pântano, seus olhos
+brilham como dois pontos de luz verde e suas presas enormes ficam expostas
+como se para mostrar seu veneno mortal.  De uns seis metros de comprimento,
+ela seria capaz de sufocar um gigante com sua esmagadora enroscada.
+~
+2287650 0 0 0 17369288 0 0 0 -300 E
+55 -20 -30 10d5+1200 8d8+30
+300 321200
+8 8 2
+BareHandAttack: 4
+Str: 15
+Dex: 15
+Con: 15
+E
+#9327
+aparição~
+a aparição do pântano~
+Uma Aparição do pântano está aqui, olhando o dono do seu próximo corpo.
+~
+A Aparição do pântano é uma das criaturas mais assustadoras do paraíso, já
+que poucos são aqueles que conseguem escapar dela e de seu olhar negro.  Ela
+aparece e desaparece misteriosamente, sendo que até hoje ninguém sabe muita
+coisa a seu respeito.
+~
+2353202 0 0 0 17369244 0 0 0 -700 E
+60 3 -15 10d5+1650 4d6+10
+500 212000
+8 8 2
+Str: 13
+Dex: 15
+Int: 13
+Wis: 12
+Con: 15
+Cha: 8
+E
+#9328
+cardume peixes~
+um cardume de peixes~
+Um Cardume de peixes está aqui, nadando com toda sua beleza nas águas.
+~
+O Cardume de peixes é bastante colorido, contendo peixes de todas as cores,
+formas e tamanhos.  Você consegue contar mais ou menos uns 50 peixes neste cardume
+magnífico.
+~
+2220034 0 0 0 16777216 0 0 0 350 E
+5 8 8 3d7+80 3d2+5
+0 3000
+8 8 1
+BareHandAttack: 4
+Str: 5
+Int: 7
+Wis: 7
+Con: 8
+Cha: 18
+E
+#9329
+mensageiro paz~
+o mensageiro da paz~
+O Mensageiro da paz está aqui, sereno e puro como uma criança.
+~
+O Mensageiro da paz na verdade é um enorme pássaro com penas brancas, bico
+dourado e possuidor da força de um titã.  Sua missão é a de levar uma
+mensagem de paz para todos os povos de Vitália.  Raramente ele é visto, pois
+normalmente ele utiliza outras formas físicas, como a de humano, assumindo
+principalmente a identidade de uma crianças na sua função de semear a paz.
+O Mensageiro da paz é uma criatura divina e será sempre querida e amada por
+todos os Deuses e habitantes mortais ou imortais de Vitália.
+~
+2875410 0 0 0 84085112 0 0 0 1000 E
+106 -40 -80 10d5+30000 12d10+60
+0 9000000
+8 8 1
+BareHandAttack: 4
+Str: 25
+Dex: 25
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+$

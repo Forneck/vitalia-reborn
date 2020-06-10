@@ -1,0 +1,198 @@
+#10000
+aldeõo homem~
+o aldeõo~
+Um homem está aqui, fazendo qualquer que seja a tarefa que Mordecai o
+mandou fazer.
+~
+O aldeão se assemelha a qualquer outro homem que você conheça em qualquer
+rua de Vitália.
+~
+2097220 0 0 0 0 0 0 0 -200 E
+6 12 6 2d6+70 1d2+6
+275 1890
+8 8 1
+E
+#10001
+magra mulher aldeã~
+a magra aldeâ~
+você vê uma magra aldeã parada aqui parecendo doente, pálida e patética
+como todo o Inferno.
+~
+A mulher poderia provavelmente ser bonita, se não fosse suas costelas
+aparecendo pelo mal fabricado e raquítico vestido.
+~
+2097220 0 0 0 0 0 0 0 400 E
+6 12 7 2d6+70 1d2+6
+175 1876
+8 8 2
+E
+#10002
+tenente caspan soldado~
+Tenente Caspan~
+Caspan imediatamente reconhece que você não é um dos cidadãos de Mordecai e ataca!
+~
+Forte, alto, e poderoso como o Inferno, esse homem pode provavelmente
+rasgar você de membro a membro.
+~
+2123810 0 0 0 0 0 0 0 -600 E
+29 0 -1 10d10+800 13d1+18
+500 34533
+8 8 1
+E
+#10003
+penelope~
+Penelope~
+Penelope se encontra aqui, bonita como uma Deusa.
+~
+Com algumas pequenas gorduras bem localizadas, Penelope aparenta saber
+alguns truques com cartas.
+~
+2123778 0 0 0 0 0 0 0 600 E
+27 2 0 9d11+600 12d1+16
+200 28765
+8 8 2
+E
+#10004
+soldado mordecai~
+o soldado~
+Um dos soldados de Mordecai marcha aqui, atento nos seus serviços.
+~
+Vestido em velhas roupas de combate, esses soldados apresentam um 
+angustiante conjunto.
+~
+2097186 0 0 0 0 0 0 0 -400 E
+18 3 0 4d7+550 15d1+19
+300 32456
+8 8 1
+E
+#10005
+pequena aldeia ladra menina~
+a pequena ladra~
+Uma pequena menina de doze anos se encontra aqui, realizando pequenos
+furtos, como ordenado por Mordecai.
+~
+A garota aparenta estar fraca e abatida. Quem sabe você não deveria ter 
+pena dela?
+~
+2097216 0 0 0 0 0 0 0 -50 E
+8 11 6 2d9+150 1d3+7
+2 3000
+8 8 2
+E
+#10006
+pálida criança trapos~
+a pálida criança em trapos~
+Uma criança coberta por desagradáveis trapos passa por aqui.
+~
+A criança, vestida nos mais sujos trapos, olha para você com seus olhos
+inocentes, e sorri um sorriso sem dentes.
+~
+2097216 0 0 0 0 0 0 0 -50 E
+8 16 6 2d9+150 1d3+16
+0 3000
+8 8 1
+E
+#10007
+grávida mulher~
+a mulher grávida~
+Uma mulher grávida está sentada aqui, comendo coxa de galinha com mel.
+~
+A mulher olha para você com esperança e pergunta, 
+"Trouxe alguma torta?!?"
+~
+2097154 0 0 0 0 0 0 0 500 E
+12 14 3 3d9+300 1d4+8
+4 12754
+6 6 2
+E
+#10008
+três patas cachorro~
+o cachorro com três patas~
+Um cachorro com três patas passa mancando por você.
+~
+Esse pulguento, abatido, quase morto de fome cachorro olha 
+tristemente para você e continua mancando em frente.    
+~
+2097216 0 0 0 0 0 0 0 0 E
+2 17 6 1d6+15 1d1+2
+0 323
+8 8 0
+BareHandAttack: 4
+E
+#10009
+bruxa dente~
+a bruxa sem dente~
+Uma bruxa sem dente se encontra aqui, com um grande sorriso, tentando
+parecer atraente.
+~
+Quando a bruxa vê que você demonstra interesse, seu sorriso fica maior. 
+Ela lentamente levanta, estica suas pernas e pisca sugestivamente.
+~
+2097154 0 0 0 0 0 0 0 0 E
+10 15 6 3d7+200 1d4+7
+10 4200
+6 6 2
+E
+#10010
+mordecai~
+Mordecai~
+Mordecai está aqui, orgulhoso, desafiador, e sujo.
+~
+Mordecai é uma figura ameaçadora. O verdadeiro Senhor dos Mendigos.
+~
+2124418 0 0 0 0 0 0 0 -999 E
+40 -2 -6 13d8+2525 3d6+20
+2000 93657
+8 8 1
+E
+#10011
+andarilha galinha~
+a galinha~
+Uma galinha olha para você, com nenhuma preocupação na vida além de ciscar.
+~
+As vezes você se pergunta se sua vida seria melhor se você fosse uma galinha.
+~
+2097216 0 0 0 0 0 0 0 0 E
+3 18 8 1d5+20 1d2+2
+2 30
+8 8 2
+E
+#10012
+mulher piolhente~
+a mulher piolhenta~
+Uma mulher está aqui, se coçando por causa de piolhos.
+~
+A mulher se coça freneticamente enquanto cata piolhos de sua cabeça.  Ela não parece se incomodar que a vejam assim.
+~
+2121730 0 0 0 0 0 0 0 0 E
+4 14 6 1d10+95 1d1+6
+37 1800
+8 8 2
+E
+#10013
+orfão escondido pequeno ladrãozinho moleque~
+o pequeno ladrãozinho~
+Um pequeno ladrãozinho está aqui escondido, contando suas moedas.
+~
+As mãos de mendigo e os astutos olhos dão a esse pequeno moleque uma
+aparência de criminoso. Ele está vasculhando a sua bolsa inspecionando o
+que roubou. Talvez algo seja seu.    
+~
+2097348 0 0 0 0 0 0 0 0 E
+10 13 4 1d1+200 1d1+12
+75 4000
+8 8 1
+E
+#10014
+homem velho~
+o velho homem de mal humor~
+Um velho homem de mal humor está aqui, reclamando do clima.
+~
+Ele é um homem velho e mal-humorado. E só.
+~
+2099202 0 0 0 0 0 0 0 -200 E
+15 10 4 2d20+480 5d3+12
+69 15000
+8 8 1
+E
+$

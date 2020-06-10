@@ -1,0 +1,135 @@
+#95
+Vitalia~
+Galáxia~
+9500 9599 350 1 bd 0 0 0 -1 -1
+-1
+M 0 9501 3 9513        carregar pobres aventureiros
+M 0 9501 3 9522
+M 0 9501 3 9523
+*
+M 0 9502 6 9504        carregar estrelas
+M 0 9502 6 9508
+M 0 9502 6 9512
+M 0 9502 6 9521
+M 0 9502 6 9533
+M 0 9502 6 9555
+*
+M 0 9503 3 9510        jovens nebulosas
+M 0 9503 3 9518
+M 0 9503 3 9522
+*
+M 0 9504 5 9522        cometas
+E 1 9501 30 16
+M 0 9504 5 9508        cometas
+E 1 9501 30 16
+M 1 9501 5 9513        cometas
+E 1 9501 30 16
+M 0 9504 5 9505        cometas
+E 1 9501 30 16
+M 0 9504 5 9517        cometas
+E 1 9501 30 16
+*
+M 0 9505 4 9504        carregar gigantes vermelhas
+M 0 9505 4 9508
+M 0 9505 4 9509
+M 0 9505 4 9513
+*
+M 0 9506 3 9506        carregar an�s brancas
+M 0 9506 3 9514
+M 0 9506 3 9522
+*
+M 0 9507 1 9510        carregar nebulosa cabe�a de cavalo
+*
+M 0 9508 1 9530        carregar Andr�meda
+E 1 9528 15 10                 dar correntes
+*
+M 0 9509 1 9532        carregar H�rcules
+E 1 9502 15 10                  dar bra�adeiras
+*
+M 0 9510 1 9517        carregar P�gasus
+*
+M 0 9511 1 9528        carregar �rion
+E 1 9504 15 13                   dar cinto
+*
+M 0 9512 1 9526         M�rope
+M 0 9533 1 9526         Elektra
+M 0 9534 1 9526         Alc�one
+M 0 9535 1 9526         Maia
+M 0 9536 1 9526         Ast�rope
+M 0 9537 1 9526         Taigete
+M 0 9538 1 9526         Celaeno
+*
+M 0 9513 1 9563         cabe�a de Draco
+G 1 9505 10                       horrendo cr�nio
+E 1 3856 7 17            Card Draco(3856) com Draco(9513)
+*
+M 0 9514 2 9558         beb� drag�o
+M 0 9514 2 9560
+*
+M 0 9515 1 9542         carregar �ries
+G 1 9524 3              dar broto da primavera
+D 1 9539 4 2            trancar porta apenas se a chave estiver em reset
+D 1 9554 5 2
+E 1 9506 15 12                      usar velocino
+*
+M 0 9516 1 9543         carregar touro
+E 1 9507 15 8                       usar ferraduras
+*
+M 0 9517 1 9544         carregar g�meo
+*
+M 0 9518 1 9544         carregar G�meo
+E 1 9508 15 21                      dar mascara
+*
+M 0 9519 1 9545         carregar C�ncer
+G 1 9525 3              dar chave
+D 1 9554 4 2 		trancar porta apenas se a chave estiver em reset
+D 1 9555 5 2
+E 1 9509 15 5                         dar carapa�a de c�ncer
+*
+M 0 9520 1 9546         carregar le�o
+E 1 9510 15 5                         dar pele de le�o
+*
+M 0 9521 1 9547         carregar virgem
+E 1 9511 15 14                        dar  bracelete
+*
+M 0 9522 1 9548         carregar Libra
+G 1 9526 3              dar chave
+D 1 9559 1 2 		trancar porta apenas se a chave estiver em reset
+D 1 9560 3 2
+G 1 9513 15                            dar  balan�a
+E 1 9512 15 11
+*
+M 0 9523 1 9549         carregar escorpi�o
+E 1 9514 15 16                         dar ferr�o
+*
+M 0 9524 1 9550         carregar Sagit�rio
+E 1 9515 3 17           flecha
+E 1 9516 3 16           arco
+*
+M 0 9525 1 9551         carregar Capric�rnio
+G 1 9527 3              dar chave
+D 1 9563 2 2 		trancar porta apenas se a chave estiver em reset
+D 1 9564 0 2
+E 1 9517 15 9                           chifres
+*
+M 0 9526 1 9552         carregar aqu�rio
+E 1 9518 10 17                          dar vaso
+*
+M 0 9527 1 9553         carregar sereia
+E 1 9519 15 7                           dar cauda
+*
+M 0 9528 1 9553         carregar peixe
+*
+M 0 9529 1 9570         ursa maior
+*
+M 0 9530 1 9565         carregar rainha
+E 1 9520 12 1                           dar anel da dignidade
+*
+M 0 9531 1 9567         carregar rei
+E 1 9521 12 0                           dar cetro do poder
+*
+M 0 9532 1 9571         carregar Polaris
+E 1 9522 12 2                           anel da gal�xia
+E 1 9523 12 16                          dar sete estrelas
+S
+$~

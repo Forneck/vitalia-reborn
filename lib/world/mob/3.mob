@@ -1,0 +1,187 @@
+#300
+guardião labirinto~
+o Guardião do Labirinto~
+O Guardião do Labirinto está parado diante de você.
+~
+Essa criatura torturada mede cerca de 4 metros de altura, e parece não ser
+muito humano.  Ele possui uma calda que é grossa como o tronco de uma árvore
+e dezenas de dentes que poderiam mutilar qualquer criatura, tornando-a
+irreconhecível.
+~
+2099202 0 0 0 256 0 0 0 -50 E
+15 5 -4 3d15+500 4d5+7
+325 16427
+8 8 1
+BareHandAttack: 9
+Dex: 12
+Int: 13
+Wis: 13
+E
+#301
+zumbi~
+um zumbi~
+Um zumbi caminha sem destino por aqui.
+~
+Pela aparência suja de suas roupas você percebe que ele passou por uma séria
+tortura.
+~
+2099264 0 0 0 0 0 0 0 -50 E
+12 15 1 1d12+300 1d4+6
+250 3638
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#302
+guardião portões~
+o Guardião dos Portões~
+o Guardião dos Portões está aqui, fitando o horizonte.
+~
+Você apenas consegue ver um par de argutos olhos negros...
+~
+2099202 0 0 0 0 0 0 0 -50 E
+23 9 -2 1d23+1600 2d4+11
+700 29117
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#303
+zumbi mulher~
+uma mulher zumbi~
+Uma mulher zumbi anda por aqui, procurando algo (?).
+~
+Você vê uma mulher que, a muito tempo atrás, deve ter sido bonita.  Agora
+tudo o que resta dela é um cadáver.
+~
+2099264 0 0 0 0 0 0 0 -50 E
+15 14 3 1d15+500 1d5+7
+325 6427
+8 8 2
+Dex: 12
+Int: 13
+Wis: 13
+E
+#304
+guerrand~
+Guerrand~
+Guerrand está aqui, cuidado da loja.
+~
+Guerrand está vestindo trajes asiáticos muito simples e usando uma colônia
+barata.
+~
+2156546 0 0 0 0 0 0 0 0 E
+108 10 0 1d1+30000 1d10+10
+1 2000
+8 8 1
+E
+#305
+monstro gigante peludo~
+um gigante monstro peludo~
+Um gigante monstro peludo aparece diante de você.
+~
+Ele é gigantesco. E muuuuuuito peludo.
+~
+2099234 0 0 0 0 0 0 0 -50 E
+30 2 -2 1d30+2250 3d4+15
+1050 37642
+8 8 1
+E
+#306
+papai~
+Papai~
+Papai está aqui.
+~
+Quem é o papai??  ELE é!!!
+~
+2099206 0 0 0 64 0 0 0 -50 E
+25 4 0 1d25+2000 2d4+12
+800 23646
+8 8 1
+BareHandAttack: 12
+Dex: 12
+Int: 13
+Wis: 13
+E
+#307
+mamãe~
+Mamãe~
+Mamãe está aqui.
+~
+Mamãe? MAMÃAAE!
+~
+2099206 0 0 0 64 0 0 0 -50 E
+25 4 0 1d25+2000 2d4+12
+800 23646
+8 8 2
+BareHandAttack: 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#308
+irmão ~
+Irmão~
+Um irmão está aqui.
+~
+UM IRMÃO!!!
+~
+2099206 0 0 0 64 0 0 0 -50 E
+20 8 -12 1d20+1000 2d3+10
+550 13385
+8 8 1
+BareHandAttack: 13
+Dex: 12
+Int: 13
+Wis: 13
+E
+#309
+irmã~
+Irmã~
+Uma irmã está aqui.
+~
+Como ela cresceu!
+~
+2099206 0 0 0 64 0 0 0 -50 E
+20 8 -12 1d20+1000 2d3+10
+550 13385
+8 8 2
+BareHandAttack: 13
+Dex: 12
+Int: 13
+Wis: 13
+E
+#310
+feiticeiro~
+o Feiticeiro do Labirinto~
+O Feiticeiro do Labirinto está aqui, fitando você como uma estátua.
+~
+Ele parece ser mais do que um simples feiticeiro...
+~
+2099234 0 0 0 260 0 0 0 -50 E
+30 6 -12 1d30+2250 3d4+15
+1050 37642
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+#311
+oráculo~
+o Oráculo~
+O Oráculo está aqui, flutuando na água.
+~
+Seus ralos cabelos flutuam como os movimentos da água.  Com cada onda move
+levemente seu corpo...  Isso não parece estar morto...
+~
+2097154 0 0 0 256 0 0 0 -50 E
+35 3 -20 1d35+2400 3d6+17
+1300 55768
+8 8 1
+Dex: 12
+Int: 13
+Wis: 13
+E
+$

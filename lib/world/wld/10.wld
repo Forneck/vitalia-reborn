@@ -1,0 +1,1100 @@
+#1000
+O Centro da Vila~
+   Este é o centro das residências de Midgaard.  Você vê casas e mais casas
+para todos os lados.  A leste, tem uma estrada que leva você de volta ao
+templo de Midgaard.  Tanto a norte, a sul e a oeste, existem estradas que
+levam até as residências de Midgaard.
+   Tem uma grande fonte bem no centro da vila, onde os viajantes cansados
+podem saciar sua sede.
+~
+10 0 0 0 0 1
+D0
+A Rua do Luar de Jade segue nesta direção.
+~
+~
+0 -1 1030
+S
+#1001
+A Estrada da Vila~
+   Você está numa estrada pavimentada com granito.  A oeste, você vê a fonte
+central da zona residencial de Midgaard.  A leste, as escadarias levam de
+volta à sala de leitura do templo.
+~
+10 0 0 0 0 1
+D0
+Você vê a fonte central da zona residencial de Midgaard.
+~
+~
+0 -1 1000
+S
+#1002
+A Rua do Luar de Prata~
+   Você está caminhando pela Rua do Luar de Prata.  Esse nome vem de uma das
+luas de Vitália, Teriany, que brilha com uma cor prateada.  Daqui você não é
+capaz de ver o final dessa rua.  Para leste e oeste estão as casas 1 e 2, ao
+sul está o centro da vila, e a rua continua para o norte.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 2 dessa rua.
+~
+porta~
+0 -1 1051
+S
+#1003
+A Rua do Luar de Prata~
+   Você está caminhando pela Rua do Luar de Prata.  Esse nome vem de uma das
+luas de Vitália, Teriany, que brilha com uma cor prateada.  Daqui você não é
+capaz de ver o final dessa rua.  Para leste e oeste estão as casas 3 e 4, ao
+norte está o centro da vila, e a rua continua para o norte.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 4 dessa rua.
+~
+porta~
+0 -1 1053
+S
+#1004
+A Rua do Luar de Prata~
+   Você está caminhando pela Rua do Luar de Prata.  Esse nome vem de uma das
+luas de Vitália, Teriany, que brilha com uma cor prateada.  Daqui você não é
+capaz de ver o final dessa rua.  Para leste e oeste estão as casas 5 e 6.  A
+rua continua para o norte e para o sul.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 6 dessa rua.
+~
+porta~
+0 -1 1055
+S
+#1005
+A Rua do Luar de Prata~
+   Você está caminhando pela Rua do Luar de Prata.  Esse nome vem de uma das
+luas de Vitália, Teriany, que brilha com uma cor prateada.  Daqui você não é
+capaz de ver o final dessa rua.  Para leste e oeste estão as casas 7 e 8.  A
+rua continua para o norte e para o sul.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 8 dessa rua.
+~
+porta~
+0 -1 1057
+S
+#1006
+A Rua do Luar de Prata~
+   Você está caminhando pela Rua do Luar de Prata.  Esse nome vem de uma das
+luas de Vitália, Teriany, que brilha com uma cor prateada.  Daqui você não é
+capaz de ver o final dessa rua.  Para leste e oeste estão as casas 9 e 10.
+A rua continua para o norte e para o sul.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 10 dessa rua.
+~
+porta~
+0 -1 1059
+S
+#1010
+A Rua do Luar de Fogo~
+   Você está caminhando pela Rua do Luar de Fogo.  Esse nome vem de uma das
+luas de Vitália, Latïzie, que brilha com uma cor avermelhada.  Daqui você
+não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 1 e
+2, ao leste está o centro da vila, e a rua continua para o oeste.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 2 dessa rua.
+~
+porta~
+0 -1 1061
+S
+#1011
+A Rua do Luar de Fogo~
+   Você está caminhando pela Rua do Luar de Fogo.  Esse nome vem de uma das
+luas de Vitália, Latïzie, que brilha com uma cor avermelhada.  Daqui você
+não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 3 e
+4.  A rua continua para o leste e para o oeste.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 4 dessa rua.
+~
+porta~
+0 -1 1063
+S
+#1012
+A Rua do Luar de Fogo~
+   Você está caminhando pela Rua do Luar de Fogo.  Esse nome vem de uma das
+luas de Vitália, Latïzie, que brilha com uma cor avermelhada.  Daqui você
+não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 5 e
+6.  A rua continua para o leste e para o oeste.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 6 dessa rua.
+~
+porta~
+0 -1 1065
+S
+#1013
+A Rua do Luar de Fogo~
+   Você está caminhando pela Rua do Luar de Fogo.  Esse nome vem de uma das
+luas de Vitália, Latïzie, que brilha com uma cor avermelhada.  Daqui você
+não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 7 e
+8.  A rua continua para o leste e para o oeste.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 8 dessa rua.
+~
+porta~
+0 -1 1067
+S
+#1014
+A Rua do Luar de Fogo~
+   Você está caminhando pela Rua do Luar de Fogo.  Esse nome vem de uma das
+luas de Vitália, Latïzie, que brilha com uma cor avermelhada.  Daqui você
+não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 9 e
+10.  A rua continua para o leste e para o oeste.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 10 dessa rua.
+~
+porta~
+0 -1 1069
+S
+#1015
+Um Cruzamento de Ruas~
+   Neste ponto se cruzam a Rua do Luar de Fogo, com a Rua da Luz.  A Rua da
+Luz continua para o norte e para o sul, enquanto a Rua do Luar de Fogo
+continua para leste e para oeste.
+~
+10 0 0 0 0 1
+D0
+A Rua da Luz continua nesta direção.
+~
+~
+0 -1 1042
+S
+#1016
+O Final da Rua do Luar de Fogo~
+   Você chegou ao final da Rua do Luar de Fogo.  Já não há mais casas por
+aquí, os densos arbustos não lhe permitem continuar caminhando para o oeste.
+~
+10 0 0 0 0 1
+D0
+A rua continua nessa direção.
+~
+~
+0 -1 1015
+S
+#1020
+A Rua do Luar de Safira~
+   Você está caminhando pela Rua do Luar de Safira.  Esse nome vem de uma
+das luas de Vitália, Aqrien, que brilha com uma cor azulada.  Daqui você
+não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 1 e
+2, ao leste está o centro da vila, e a rua continua para o oeste.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 2 dessa rua.
+~
+porta~
+0 -1 1081
+S
+#1021
+A Rua do Luar de Safira~
+   Você está caminhando pela Rua do Luar de Safira.  Esse nome vem de uma
+das luas de Vitália, Aqrien, que brilha com uma cor azulada.  Daqui você
+não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 3 e
+4.  A rua continua para o leste e para o oeste.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 4 dessa rua.
+~
+porta~
+0 -1 1083
+S
+#1022
+A Rua do Luar de Safira~
+   Você está caminhando pela Rua do Luar de Safira.  Esse nome vem de uma
+das luas de Vitália, Aqrien, que brilha com uma cor azulada.  Daqui você
+não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 5 e
+6.  A rua continua para o leste e para o oeste.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 6 dessa rua.
+~
+porta~
+0 -1 1085
+S
+#1023
+A Rua do Luar de Safira~
+   Você está caminhando pela Rua do Luar de Safira.  Esse nome vem de uma
+das luas de Vitália, Aqrien, que brilha com uma cor azulada.  Daqui você
+não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 7 e
+8.  A rua continua para o leste e para o oeste.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 8 dessa rua.
+~
+porta~
+0 -1 1087
+S
+#1024
+Um Cruzamento de Ruas~
+   Neste ponto se cruzam a Rua do Luar de Safira, com a Rua da Luz.  A Rua
+da Luz continua para o norte e para o sul, enquanto a Rua do Luar de Safira
+continua para leste e para oeste.
+~
+10 0 0 0 0 1
+D0
+A Rua da Luz continua nesta direção.
+~
+~
+0 -1 1041
+S
+#1025
+A Rua do Luar de Safira~
+   Você está caminhando pela Rua do Luar de Safira.  Esse nome vem de uma
+das luas de Vitália, Aqrien, que brilha com uma cor azulada.  Daqui você
+não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 9 e
+10.  A rua continua para o leste e para o oeste.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 10 dessa rua.
+~
+porta~
+0 -1 1089
+S
+#1026
+O Final da Rua do Luar de Safira~
+   Você chegou ao final da Rua do Luar de Safira.  Já não há mais casas por
+aquí, os densos arbustos não lhe permitem continuar caminhando para o oeste.
+~
+10 0 0 0 0 1
+D0
+A rua continua nessa direção.
+~
+~
+0 -1 1025
+S
+#1030
+A Rua do Luar de Jade~
+   Você está caminhando pela Rua do Luar de Jade.  Esse nome vem de uma das
+luas de Vitália, Kadrictes, que brilha com uma cor esverdeada.  Daqui você
+não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 1 e
+2, ao leste está o centro da vila, e a rua continua para o oeste.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 2 dessa rua.
+~
+porta~
+0 -1 1091
+S
+#1031
+A Rua do Luar de Jade~
+   Você está caminhando pela Rua do Luar de Jade.  Esse nome vem de uma das
+luas de Vitália, Kadrictes, que brilha com uma cor esverdeada.  Daqui você
+não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 3 e
+4.  A rua continua para o leste e para o oeste.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 4 dessa rua.
+~
+porta~
+0 -1 1093
+S
+#1032
+A Rua do Luar de Jade~
+   Você está caminhando pela Rua do Luar de Jade.  Esse nome vem de uma das
+luas de Vitália, Kadrictes, que brilha com uma cor esverdeada.  Daqui você
+não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 5 e
+6.  A rua continua para o leste e para o oeste.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 6 dessa rua.
+~
+porta~
+0 -1 1095
+S
+#1033
+A Rua do Luar de Jade~
+   Você está caminhando pela Rua do Luar de Jade.  Esse nome vem de uma das
+luas de Vitália, Kadrictes, que brilha com uma cor esverdeada.  Daqui você
+não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 7 e
+8.  A rua continua para o leste e para o oeste.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 8 dessa rua.
+~
+porta~
+0 -1 1097
+S
+#1034
+Um Cruzamento de Ruas~
+   Neste ponto se cruzam a Rua do Luar de Jade, com a Rua da Luz.  A Rua da
+Luz continua para o norte e para o sul, enquanto a Rua do Luar de Jade
+continua para leste e para oeste.
+~
+10 0 0 0 0 1
+D0
+A Rua da Luz continua nesta direção.
+~
+~
+0 -1 1043
+S
+#1035
+A Rua do Luar de Jade~
+   Você está caminhando pela Rua do Luar de Jade.  Esse nome vem de uma das
+luas de Vitália, Kadrictes, que brilha com uma cor esverdeada.  Daqui você
+não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 9 e
+10.  A rua continua para o leste e para o oeste.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 10 dessa rua.
+~
+porta~
+0 -1 1099
+S
+#1036
+O Final da Rua do Luar de Jade~
+   Você chegou ao final da Rua do Luar de Jade.  Já não há mais casas por
+aquí, os densos arbustos não lhe permitem continuar caminhando para o oeste.
+~
+10 0 0 0 0 1
+D0
+A rua continua nessa direção.
+~
+~
+0 -1 1035
+S
+#1040
+A Rua da Luz~
+   Você está caminhando pela Rua da Luz.  Daqui você não é capaz de ver o
+final dessa rua.  Para leste e oeste estão as casas 1 e 2.  A rua continua
+para o norte e para o sul.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 2 dessa rua.
+~
+porta~
+0 -1 1071
+S
+#1041
+A Rua da Luz~
+   Você está caminhando pela Rua da Luz.  Daqui você não é capaz de ver o
+final dessa rua.  Para leste e oeste estão as casas 3 e 4.  A rua continua
+para o norte e para o sul.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 4 dessa rua.
+~
+porta~
+0 -1 1073
+S
+#1042
+A Rua da Luz~
+   Você está caminhando pela Rua da Luz.  Daqui você não é capaz de ver o
+final dessa rua.  Para leste e oeste estão as casas 5 e 6.  A rua continua
+para o norte e para o sul.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 6 dessa rua.
+~
+porta~
+0 -1 1075
+S
+#1043
+A Rua da Luz~
+   Você está caminhando pela Rua da Luz.  Daqui você não é capaz de ver o
+final dessa rua.  Para leste e oeste estão as casas 7 e 8.  A rua continua
+para o norte e para o sul.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 8 dessa rua.
+~
+porta~
+0 -1 1077
+S
+#1044
+A Rua da Luz~
+   Você está caminhando pela Rua da Luz.  Daqui você não é capaz de ver o
+final dessa rua.  Para leste e oeste estão as casas 9 e 10.  A rua continua
+para o norte e para o sul.
+~
+10 0 0 0 0 1
+D0
+Você vê a casa número 10 dessa rua.
+~
+porta~
+0 -1 1079
+S
+#1050
+A Casa 1 da Rua do Luar de Prata~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Prata, número 1.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1002
+S
+#1051
+A Casa 2 da Rua do Luar de Prata~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Prata, número 2.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1002
+S
+#1052
+A Casa 3 da Rua do Luar de Prata~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Prata, número 3.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1003
+S
+#1053
+A Casa 4 da Rua do Luar de Prata~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Prata, número 4.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1003
+S
+#1054
+A Casa 5 da Rua do Luar de Prata~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Prata, número 5.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1004
+S
+#1055
+A Casa 6 da Rua do Luar de Prata~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Prata, número 6.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1004
+S
+#1056
+A Casa 7 da Rua do Luar de Prata~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Prata, número 7.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1005
+S
+#1057
+A Casa 8 da Rua do Luar de Prata~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Prata, número 8.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1005
+S
+#1058
+A Casa 9 da Rua do Luar de Prata~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Prata, número 9.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1006
+S
+#1059
+A Casa 10 da Rua do Luar de Prata~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Prata, número 10.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1006
+S
+#1060
+A Casa 1 da Rua do Luar de Fogo~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Fogo, número 1.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1010
+S
+#1061
+A Casa 2 da Rua do Luar de Fogo~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Fogo, número 2.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1010
+S
+#1062
+A Casa 3 da Rua do Luar de Fogo~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Fogo, número 3.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1011
+S
+#1063
+A Casa 4 da Rua do Luar de Fogo~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Fogo, número 4.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1011
+S
+#1064
+A Casa 5 da Rua do Luar de Fogo~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Fogo, número 5.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1012
+S
+#1065
+A Casa 6 da Rua do Luar de Fogo~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Fogo, número 6.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1012
+S
+#1066
+A Casa 7 da Rua do Luar de Fogo~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Fogo, número 7.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1013
+S
+#1067
+A Casa 8 da Rua do Luar de Fogo~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Fogo, número 8.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1013
+S
+#1068
+A Casa 9 da Rua do Luar de Fogo~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Fogo, número 9.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1014
+S
+#1069
+A Casa 10 da Rua do Luar de Fogo~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Fogo, número 10.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1014
+S
+#1070
+A Casa 1 da Rua da Luz~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua da Luz, número 1.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1040
+S
+#1071
+A Casa 2 da Rua da Luz~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua da Luz, número 2.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1040
+S
+#1072
+A Casa 3 da Rua da Luz~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua da Luz, número 3.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1041
+S
+#1073
+A Casa 4 da Rua da Luz~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua da Luz, número 4.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1041
+S
+#1074
+A Casa 5 da Rua da Luz~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua da Luz, número 5.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1042
+S
+#1075
+A Casa 6 da Rua da Luz~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua da Luz, número 6.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1042
+S
+#1076
+A Casa 7 da Rua da Luz~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua da Luz, número 7.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1043
+S
+#1077
+A Casa 8 da Rua da Luz~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua da Luz, número 8.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1043
+S
+#1078
+A Casa 9 da Rua da Luz~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua da Luz, número 9.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1044
+S
+#1079
+A Casa 10 da Rua da Luz~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua da Luz, número 10.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1044
+S
+#1080
+A Casa 1 da Rua do Luar de Safira~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Safira, número 1.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1020
+S
+#1081
+A Casa 2 da Rua do Luar de Safira~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Safira, número 2.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1020
+S
+#1082
+A Casa 3 da Rua do Luar de Safira~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Safira, número 3.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1021
+S
+#1083
+A Casa 4 da Rua do Luar de Safira~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Safira, número 3.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1021
+S
+#1084
+A Casa 5 da Rua do Luar de Safira~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Safira, número 5.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1022
+S
+#1085
+A Casa 6 da Rua do Luar de Safira~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Safira, número 6.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1022
+S
+#1086
+A Casa 7 da Rua do Luar de Safira~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Safira, número 7.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1023
+S
+#1087
+A Casa 8 da Rua do Luar de Safira~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Safira, número 8.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1023
+S
+#1088
+A Casa 9 da Rua do Luar de Safira~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Safira, número 9.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1025
+S
+#1089
+A Casa 10 da Rua do Luar de Safira~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Safira, número 10.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1025
+S
+#1090
+A Casa 1 da Rua do Luar de Jade~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Jade, número 1.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1030
+S
+#1091
+A Casa 2 da Rua do Luar de Jade~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Jade, número 2.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1030
+S
+#1092
+A Casa 3 da Rua do Luar de Jade~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Jade, número 3.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1031
+S
+#1093
+A Casa 4 da Rua do Luar de Jade~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Jade, número 4.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1031
+S
+#1094
+A Casa 5 da Rua do Luar de Jade~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Jade, número 5.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1032
+S
+#1095
+A Casa 6 da Rua do Luar de Jade~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Jade, número 6.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1032
+S
+#1096
+A Casa 7 da Rua do Luar de Jade~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Jade, número 7.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1033
+S
+#1097
+A Casa 8 da Rua do Luar de Jade~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Jade, número 8.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1033
+S
+#1098
+A Casa 9 da Rua do Luar de Jade~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Jade, número 9.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1035
+S
+#1099
+A Casa 10 da Rua do Luar de Jade~
+   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
+saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
+Rua do Luar de Jade, número 10.
+~
+10 12 0 0 0 1
+D0
+Você vê a saída para a rua.
+~
+porta~
+0 -1 1035
+S
+$~

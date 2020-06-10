@@ -1,0 +1,145 @@
+#5100
+goblin escravo~
+o Goblin Escravo~
+Um goblin escravo encontra-se aqui adormecido.
+~
+O indefeso goblin suplica por perdão.
+~
+2097282 0 0 0 0 0 0 0 350 E
+1 20 9 1d11+11 1d5+0
+0 100
+4 4 1
+E
+#5101
+cidadao drow~
+o Cidadão Drow~
+Um cidadão drow está aqui, andando em redor em serviço.
+~
+Eu duvido que ele seja do tipo que fica dando informações.
+~
+2103392 0 0 0 2064 0 0 0 -1000 E
+10 12 0 1d10+130 13d1+3
+300 10750
+8 8 1
+E
+#5102
+nobre guerreiro drow~
+o Guerreiro Drow~
+Um guerreiro drow conserva-se aqui, guardando sua casa.
+~
+Ele parece um tanto aborrecido!
+~
+2103330 0 0 0 2064 0 0 0 -1000 E
+12 9 0 1d5+160 14d1+7
+1000 15000
+8 8 1
+E
+#5103
+nobre mago drow~
+o Mago Drow~
+Um mago drow está aqui protegendo sua casa.
+~
+O mago se prepara para conjurar uma magia... em você!!
+~
+2103330 0 0 0 2064 0 0 0 -1000 E
+15 8 2 1d12+190 8d2+2
+2000 21000
+8 8 1
+E
+#5104
+sacerdotiza drow~
+a Sacerdotiza Drow~
+Uma sacerdotiza drow está aqui esbravejando ordens.
+~
+Eu não gostaria de dormir ao lado dela!
+~
+2103330 0 0 0 2064 0 0 0 -1000 E
+17 5 0 1d11+205 14d1+4
+4000 28000
+8 8 2
+E
+#5105
+mestre drow~
+o Mestre Drow~
+Um mestre drow encara você irritadamente.
+~
+O mestre drow está SEMPRE pronto para uma briga.
+~
+2103330 0 0 0 2064 0 0 0 -1000 E
+21 0 0 1d12+248 18d1+4
+10000 60000
+8 8 1
+E
+#5106
+mestre de armas drow~
+o Mestre de Armas Drow~
+Um mestre de armas drow está aqui praticando boxe.
+~
+Ele definitivamente sabe como lutar.
+~
+2103330 0 0 0 67600 0 0 0 -1000 E
+23 0 -2 1d25+405 12d2+4
+15000 80000
+8 8 1
+E
+#5107
+matriarca drow~
+a Matriarca~
+A Matriarca da casa encontra-se aqui.
+~
+Ela parece realmente aborrecida de você ter percorrido o caminho até aqui.
+~
+2099234 0 0 0 67856 0 0 0 -1000 E
+24 0 -3 1d50+450 15d2+4
+30000 130000
+8 8 2
+E
+#5108
+matriarca drow~
+a Matriarca~
+A Matriarca da primeira casa está esperando por você.
+~
+Ela parece como se estivesse para cortar sua cabeça fora e comê-la.
+~
+2099234 0 0 0 67856 0 0 0 -1000 E
+25 0 -4 5d10+350 12d2+24
+40000 150000
+8 8 2
+E
+#5109
+drow-aranha~
+o Drow-aranha~
+O drow-aranha olha para você debochadamente enquanto ele empunha sua espada.
+~
+Este meio aranha, meio drow é um oponente formidável.
+~
+2121824 0 0 0 67600 0 0 0 -1000 E
+8 12 2 1d6+195 2d6+2
+200 4000
+8 8 0
+E
+#5110
+drow-aranha~
+o Drow-aranha~
+O drow-aranha olha para você debochadamente enquanto empunha sua espada.
+~
+Este meio aranha, meio drow é um oponente formidável.
+~
+2121826 0 0 0 67856 0 0 0 -1000 E
+11 10 0 1d6+295 3d6+8
+0 7000
+8 8 0
+E
+#5111
+yochlol~
+Yochlol~
+Uma Yochlol transforma-se em um redemoinho nebuloso...
+~
+Yochlol não está com um bom humor.
+~
+2320434 0 0 0 67920 0 0 0 -1000 E
+23 0 -6 25d2+450 15d2+30
+60000 80000
+8 8 2
+E
+$

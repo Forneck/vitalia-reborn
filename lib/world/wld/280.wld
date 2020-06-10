@@ -1,0 +1,1455 @@
+#28000
+Uma Pequena Floresta~
+   Voc� est� em uma floresta.  Existem muitas �rvores grandes por aqui.  A
+densa folhagem se expande at� onde sua vista pode alcan�ar.  Ao norte voc�
+consegue ver apenas a silhueta de uma montanha muito grande que parece bem
+diferente de todas as outras montanhas que voc� j� viu.
+~
+280 0 0 0 0 3
+D0
+~
+~
+0 -1 28001
+D3
+~
+~
+0 -1 6011
+E
+montanha~
+Est� muito longe para voc� v�r.
+~
+S
+#28001
+Uma Trilha na Floresta~
+   Voc� est� em uma trilha na floresta.  Existem muitas �rvores � sua volta.
+O solo est� bastante �mido e seus p�s afundam no ch�o, � medida que voc�
+caminha.  A floresta � bem densa e voc� n�o tem outra sa�da al�m desta
+trilha.
+~
+280 0 0 0 0 3
+D0
+~
+~
+0 -1 28002
+D2
+~
+~
+0 -1 28000
+S
+#28002
+A Encruzilhada da Trilha~
+   Neste ponto a trilha se divide.  Um caminho segue para o norte e o outro
+para o leste, em dire��o a um barulho de �gua caindo.  Pequenos v�os entre
+os arbustos permitem que a luz penetre na floresta.  Voc� pode ver a
+silhueta de uma enorme montanha ao norte.
+~
+280 0 0 0 0 3
+D0
+~
+~
+0 -1 28003
+D1
+~
+~
+0 -1 28004
+D2
+~
+~
+0 -1 28001
+E
+montanha~
+A montanha tem o formato de um cone mas em seu cume h� uma estranha
+estrutura que voc� nem imagina o que seja.
+~
+S
+#28003
+O Final da Trilha~
+   Um grande n�mero de �rvores foram cortadas recentemente aqui.  Arbustos e
+troncos est�o jogados sobre o solo �mido.  Alguns pequenos insetos passeiam
+sobre a madeira que est� aos seus p�s, � procura de qualquer tipo de comida.
+N�o existe nenhuma sa�da a n�o ser voltar.
+~
+280 0 0 0 0 3
+D2
+~
+~
+0 -1 28002
+S
+#28004
+Uma Clareira na Floresta~
+   Este lugar parece ser ideal para um descanso.  N�o h� nada encobrindo a
+sua vis�o do c�u al�m de alguns pequeninos passarinhos, que tra�am v�os
+rasantes em dire��o � folhagem das �rvores.  Ao leste, um pequeno lago
+parece convidar os animais da floresta para que matem sua sede em suas �guas
+claras.  O barulho das �guas de uma chachoeira mostra que voc� est� bem
+pr�ximo dela.  Alguns coelhos e gazelas cruzam r�pidamente a clareira, indo
+de um lado para o outro, algumas vezes silenciosamente outras nem tanto,
+perturbando seu descanso.
+~
+280 0 0 0 0 3
+D1
+~
+~
+0 -1 28005
+D3
+~
+~
+0 -1 28002
+S
+#28005
+Lago das �guas Cristalinas~
+   Este lago de �guas t�o claras parece um enorme espelho, quando visto de
+cima.  O reflexo das nuvens em sua superf�cie mistura-se � silhueta dos
+peixes que nadam em suas �guas.  O fundo do lago � rochoso e a mar� est�
+bastante calma.  Esta situa��o � um tanto estranha pois voc� percebe que uma
+poderosa cachoeira est� bem pr�xima, ao norte.
+~
+280 4 0 0 0 6
+D0
+~
+~
+0 -1 28006
+D3
+~
+~
+0 -1 28004
+S
+#28006
+Uma Poderosa Cachoeira Entre S�lidas Rochas~
+   Uma espl�ndida cachoeira pulveriza �gua em seu rosto.  A sensa��o �
+deliciosa e refrescante e uma suave brisa o envolve, dando ao lugar uma
+sensa��o de paz.  Ao sul existem apenas as �guas claras do lago e ao norte,
+uma poderosa e talvez perigosa cachoeira.  Para onde ser� que toda esta �gua
+vai?  N�o h� nem rios ou canais.  Esta incerteza lhe causa uma apreens�o e
+desperta em voc� a curiosidade.
+~
+280 4 0 0 0 6
+D0
+~
+~
+0 -1 28007
+D2
+~
+~
+0 -1 28005
+S
+#28007
+Sob a Cachoeira~
+   �gua, �gua e �gua.  Voc� nunca viu tanta �gua caindo sobre sua cabe�a.
+Suas roupas e equipamentos est�o ensopados e apesar disso, voc� n�o se
+importa, afinal a vis�o do maravilhoso arco-�ris compensa qualquer
+sacrif�cio.  Talvez seja uma boa id�ia retornar antes que voc� se resfrie e
+pegue uma pneumonia.
+~
+280 4 0 0 0 6
+D0
+~
+grade rede~
+1 -1 28008
+D2
+~
+~
+0 -1 28006
+S
+#28008
+Um Lago Escondido Atr�s da Cachoeira~
+   Ent�o � para c� que toda a �gua vai!!  Um lago escondido pela grande
+cachoeira.  � primeira vista, este lugar parece ser uma galeria subterr�nea,
+com forma��es calc�reas bastante interessantes em seu lado oeste.  A �gua
+desce para c� passando pela rede e cria uma segunda queda, que � menor do
+que aquela que esta l� fora mas suficientemente alta para obstruir seu
+caminho de volta.
+~
+280 13 0 0 0 6
+D3
+~
+~
+0 -1 28009
+S
+#28009
+Forma��es Calc�reas do Lago~
+   Um n�mero imenso de colunas de calc�reo est�o espalhadas pela sala.
+Estas colunas foram formadas h� s�culos, atrav�s de um paciente e constante
+trabalho da Natureza, que dep�sita min�sculas gotas de �gua contendo
+part�culas de calc�reo.  E este trabalho prossegue pois as colunas continuam
+a se formar.  Algumas esculturas parecem altares e outras lembram seres
+humanos e semi-humanos.
+   Voc� sente que a �gua corre com mais for�a ao oeste.
+~
+280 9 0 0 0 6
+D1
+~
+~
+0 -1 28008
+D3
+~
+~
+0 -1 28010
+S
+#28010
+Um Canal com Forte Correnteza~
+   Voc� est� em um canal que foi constru�do por m�os humanas.  Voc� precisa
+de muita habilidade para manter sua estabilidade e para n�o se chocar contra
+as paredes.  O canal � bastante extenso mas a velocidade da �gua faz com que
+voc� o atravesse r�pidamente.
+~
+280 13 0 0 0 6
+D0
+~
+~
+0 -1 28011
+D1
+~
+~
+0 -1 28009
+S
+#28011
+Uma Estranha Piscina~
+   Um lugar bastante estranho para se encontrar uma piscina.  Voc� chega at�
+sua borda com um certo cuidado pois percebe algo muito peculiar acontecendo.
+Toda a �gua que entra nesta piscina simplesmente desaparece, deixando aquele
+imenso buraco exposto.  N�o existe jeito de sair desta cratera.  Sem
+escadas, sem degraus, sem nada.  As paredes s�o lisas, escorregadias e pelo
+jeito muitos curiosos n�o tiveram a mesma sorte que voc�.  Para onde ser�
+que esta �gua est� indo?
+~
+280 13 0 0 0 6
+D2
+~
+~
+0 -1 28010
+D5
+~
+buraco piscina~
+1 -1 28012
+S
+#28012
+O Rio dos Her�is~
+   Woooooow!!!!!  Repentinamente voc� � tragado por um poderoso turbilh�o.
+Voc� passa por um longo tubo a uma velocidade impressionante e embora tente
+desesperadamente ver algo, a �nica coisa poss�vel � prender a respira��o e
+rezar para que alguma entidade divina o proteja.  E da mesma forma r�pida
+com que foi tragado, voc� emerge em um rio sinuoso.  Feliz, voc� percebe que
+o c�u est� azul e o sol brilhante e voc� faz uma prece em agradecimento aos
+Deuses pela ben��o de sua salva��o.
+   O rio � repleto por pequenas quedas d'�gua com uns 10 p�s de altura, cada
+uma.  Voc� sabe que se seguir em frente, muito poss�velmente n�o poder�
+voltar.
+~
+280 4 0 0 0 6
+D0
+~
+~
+0 -1 28013
+S
+#28013
+O Rio dos Her�is~
+   Voc� passou por uma cachoeira.  Voc� v� nas margens do rio um grande
+n�mero de canos.  Estes canos levam a �gua para alguns povoados da regi�o.
+Al�m do aqueduto est�o algumas �rvores e um pequeno pr�dio ao nordeste.
+~
+280 4 0 0 0 6
+D0
+~
+~
+0 -1 28014
+S
+#28014
+O Rio dos Her�is~
+   O rio come�a a fazer uma curva aqui.  Um estranho ru�do chega do leste,
+como se fossem in�meros tambores.  O som parece estar vindo daquele pequeno
+pr�dio na margem leste.  A �gua produz pequenas ondas, produzindo pequenas
+gotas que refletem a luz.
+~
+280 4 0 0 0 6
+D0
+~
+~
+0 -1 28019
+D1
+~
+~
+0 -1 28015
+S
+#28015
+Fora do Pequeno Pr�dio da Margem do Rio~
+   Voc� est� do lado de fora do pequeno pr�dio.  A constru��o � branca e
+possui uma torre de observa��o.  Canos vindos do sul entram no pr�dio e saem
+para o norte.  Um forte ru�do sai de dentro do pr�dio.  A grama cresce
+bastante alta aqui e em alguns lugares chega a bater em sua cintura.  H� uma
+porta de ferro no leste.
+~
+280 0 0 0 0 1
+D1
+~
+porta~
+1 -1 28016
+D3
+~
+~
+0 -1 28014
+S
+#28016
+Dentro do Pr�dio da Bomba D'�gua~
+   Que som terr�vel!  H� uma enorme m�quina que vibra tremendamente e
+bombeia a �gua.  Esta m�quina foi constru�da com centenas de engrenagens e
+pe�as desconhecidas.  O lugar onde voc� se encontra � enorme.  A luz penetra
+no ambiente atrav�s de pequenos buracos localizados na parede e s�o
+suficientes para iluminar apenas pequenas partes da sala.
+~
+280 41 0 0 0 0
+D2
+~
+porta~
+2 28099 28017
+D3
+~
+porta~
+1 -1 28015
+D4
+~
+al�ap�o~
+1 -1 28018
+S
+#28017
+O Dep�sito do Pr�dio da Bomba D'�gua~
+   Voc� est� dentro de um pequeno quarto.  � muito mal iluminado e voc� pode
+ver apenas algumas ferramentas, canos e alguns utens�lios mec�nicos.  Nas
+paredes est�o presos alguns mapas e esquemas de m�quinas para explicar como
+repar�-las.
+~
+280 41 0 0 0 0
+D0
+~
+porta~
+2 28099 28016
+S
+#28018
+A Torre de Vigia do Pr�dio~
+   A luz de fora repentinamente preenche este lugar.  Voc� nota que est� na
+torre de vigia.  Aqui voc� pode ver toda a amplid�o da paisagem � sua volta.
+Ao leste voc� v� muitas colinas, ao norte existem muitos navios que est�o no
+grande rio, ao oeste h� um imenso campo e para o sul est�o as montanhas
+rochosas.  Mais al�m ao norte, voc� v� uma cidade que foi constru�da aos p�s
+de um enorme vulc�o.
+~
+280 8 0 0 0 0
+D5
+~
+al�ap�o~
+1 -1 28016
+S
+#28019
+O Rio dos Her�is~
+   Neste lugar, a �gua parece ser calma e alguns insetos d�o mergulhos em
+sua superf�cie.  Existem apenas umas tr�s �rvores na margem e alguns canos.
+Por�m ao norte, voc� v� um grande vulc�o e aos seus p�s, um n�mero grande de
+bonitas constru��es.  Voc� tem certeza de que aquilo � uma cidade.
+~
+280 4 0 0 0 6
+D0
+~
+~
+0 -1 28020
+D2
+~
+~
+0 -1 28014
+S
+#28020
+O Rio dos Her�is~
+   Voc� est� em um lugar curioso.  Existem tr�s rios que convergem para c�.
+Ao sul est� o Rio dos Her�is, ao leste, o Rio dos Vencedores e ao oeste est�
+o Rio dos Bravos.  Os dois �ltimos rios desembocam no primeiro.  Ao norte,
+h� um pequeno porto e uma pra�a.
+~
+280 4 0 0 0 6
+D0
+~
+~
+0 -1 28078
+D1
+~
+~
+0 -1 28058
+D2
+~
+~
+0 -1 28019
+D3
+~
+~
+0 -1 28021
+S
+#28021
+O Rio dos Vencedores~
+   A �gua est� mais clara aqui.  Voc� se pergunta se isso � devido ao fato
+do rio fazer ser bem mais estreito aqui e das margens estarem mais pr�ximas
+uma da outra do que ao oeste.
+~
+280 0 0 0 0 6
+D1
+~
+~
+0 -1 28020
+D3
+~
+~
+0 -1 28022
+S
+#28022
+O Rio dos Vencedores~
+   As margens do rio est�o realmente bem mais pr�ximas uma da outra, a ponto
+de se concluir que a navega��o com grandes embarca��es deve ser pr�ticamente
+imposs�vel.  Voc� tamb�m nota que nesta parte, o rio � bem raso, como se
+voc� estivesse perto de sua nascente.
+   A vegeta��o nestas margens � quase que totalmente composta por grama e
+pequenas �rvores.
+~
+280 0 0 0 0 6
+D1
+~
+~
+0 -1 28021
+D2
+~
+~
+0 -1 28023
+S
+#28023
+A Parte Canalizada do Rio dos Vencedores~
+   Voc� percebe com surpresa porque o rio � t�o raso e t�o estreito: ele foi
+canalizado por algu�m.  Por causa disso e pelo fato da terra ser t�o plana,
+voc� acaba achando que a grama das margens n�o � grama de verdade mas talvez
+algum tipo de planta cultivada e irrigada pelo rio.
+~
+280 0 0 0 0 6
+D0
+~
+~
+0 -1 28022
+D2
+~
+~
+0 -1 28024
+S
+#28024
+A Parte Canalizada do Rio dos Vencedores~
+   O rio que na verdade � um canal, se divide em dois bra�os.  Para o leste,
+o rio penetra naquilo que parece ser um campo de arroz.  Para o oeste, ele
+vai seguindo em dire��o ao que parece ser um campo de trigo.  O canal
+principal segue para o norte e o sul.
+~
+280 0 0 0 0 6
+D0
+~
+~
+0 -1 28023
+D1
+~
+~
+0 -1 28032
+D2
+~
+~
+0 -1 28025
+D3
+~
+~
+0 -1 28041
+S
+#28025
+A Parte Canalizada do Rio dos Vencedores~
+   Ao prosseguir pelo canal, voc� percebe que provavelmente este seja um
+local agr�cola: existem muitos campos cultivados em todas as margens do rio.
+Voc� pondera que este deve ser um belo lugar para se viver, quando voc�
+tiver finalmente decidido a se aposentar desta sua vida de lutas, aventuras
+e...  Matan�as!
+~
+280 0 0 0 0 6
+D0
+
+~
+~
+0 -1 28024
+D2
+
+~
+~
+0 -1 28026
+S
+#28026
+A Parte Canalizada do Rio dos Vencedores~
+   O canal novamente se divide em dois bra�os.  Para o leste o rio penetra
+naquilo que parece ser um campo de soja.  E para o oeste, ele segue na
+dire��o de um campo de aveia.  O canal tamb�m continua para o norte e sul.
+~
+280 0 0 0 0 6
+D0
+~
+~
+0 -1 28025
+D1
+~
+~
+0 -1 28035
+D2
+~
+~
+0 -1 28027
+D3
+~
+~
+0 -1 28044
+S
+#28027
+A Parte Canalizada do Rio dos Vencedores~
+   Ao prosseguir pelo canal, voc� percebe que realmente este � um local
+agr�cola: existem muitos campos cultivados em todas as margens do rio.  Voc�
+pondera que este deve ser um belo lugar para se viver, quando voc� tiver
+finalmente decidido a se aposentar desta sua vida de lutas, aventuras e...
+Matan�as!
+~
+280 0 0 0 0 6
+D0
+~
+~
+0 -1 28026
+D2
+~
+~
+0 -1 28028
+S
+#28028
+A Parte Canalizada do Rio dos Vencedores~
+   O canal novamente se divide em dois bra�os.  Para o leste, o rio penetra
+naquilo que parece ser um campo de milho...e isto o faz se lembrar do quanto
+voc� adora milho assado...talvez voc� possa ir at� l� e pegar algumas
+espigas para comer.
+   Para o oeste, o canal segue em dire��o a um campo de cevada.  E segue
+para o norte e sul.
+~
+280 0 0 0 0 6
+D0
+~
+~
+0 -1 28027
+D1
+~
+~
+0 -1 28038
+D2
+~
+~
+0 -1 28029
+D3
+~
+~
+0 -1 28047
+S
+#28029
+A Parte Canalizada do Rio dos Vencedores~
+   Enquanto voc� segue atrav�s do canal, voc� come�a a pensar que isto �
+realmente um lugar muito entediante....apenas �gua e campos cultivados...e
+voc� quer alguma a��o!!  Contudo, parece que esta parte do rio est� mais
+funda e mais larga...quem sabe voc� n�o encontra alguma coisa mais
+interessante pela frente.
+~
+280 0 0 0 0 6
+D0
+~
+~
+0 -1 28028
+D2
+~
+~
+0 -1 28030
+S
+#28030
+O Rio dos Vencedores~
+   As margens do canal est�o repletas de plantas cultivadas.  A cor da �gua
+� bem clara, ficando mais clara ao norte e mais escura ao sul.  A terra �
+plana e o ar est� impregnado com o cheiro de seiva das plantas.
+~
+280 0 0 0 0 6
+D0
+~
+~
+0 -1 28029
+D2
+~
+~
+0 -1 28031
+S
+#28031
+O Rio dos Vencedores~
+   O rio termina aqui.  Este local � muito calmo e apenas pequeninos
+p�ssaros quebram a serenidade do lugar.
+~
+280 0 0 0 0 6
+D0
+~
+~
+0 -1 28030
+S
+#28032
+O Canal Estreito Entre Campos de Arroz~
+   Voc� est� em um canal muito estreito entre dois campos de arroz.  Voc�
+n�o consegue ver muita coisa dos campos porque as margens s�o muito altas.
+Contudo, voc� pode entrar nos campos pelo norte e pelo sul, para satisfazer
+sua curiosidade.  A outra alternativa � ir pelo oeste, na dire��o do canal
+principal.
+~
+280 0 0 0 0 6
+D0
+~
+~
+0 -1 28033
+D2
+~
+~
+0 -1 28034
+D3
+~
+~
+0 -1 28024
+S
+#28033
+O Lado Norte do Campo de Arroz~
+   Voc� est� no lado norte de um campo de arroz.  Os p�s de arroz s�o
+plantas altas e mesmo sem voc� saber muita coisa sobre agricultura, voc�
+percebe que o arroz est� pronto para ser colhido.  O solo � �mido e o som
+dos insetos parece tomar conta do lugar.
+~
+280 0 0 0 0 2
+D2
+~
+~
+0 -1 28032
+S
+#28034
+O Lado Sul do Campo de Arroz~
+   Voc� est� no lado norte de um campo de arroz.  Ao norte est� um canal
+estreito separando a planta��o de arroz em dois campos distintos.  Ao sul, a
+vegeta��o abruptamente se transforma em algo parecido com soja.  Olhando
+para as plantas, voc� imagina onde estariam as pessoas que fazem a colheita.
+~
+280 0 0 0 0 2
+D0
+~
+~
+0 -1 28032
+D2
+~
+~
+0 -1 28036
+S
+#28035
+O Canal Estreito Entre Campos de Soja~
+   Voc� est� em um canal estreito entre dois campos de soja.  Voc� n�o pode
+ver muito da soja porque as margens s�o bem altas.  Contudo, voc� pode
+entrar nos campos pelo norte e pelo sul, para satisfazer sua curiosidade.  A
+outra alternativa � ir para o oeste, para o canal principal.
+~
+280 0 0 0 0 6
+D0
+~
+~
+0 -1 28036
+D2
+~
+~
+0 -1 28037
+D3
+~
+~
+0 -1 28026
+S
+#28036
+O Lado Norte do Campo de Soja~
+   Voc� est� no lado norte de um campo de soja.  Ao sul est� um canal
+estreito separando a planta��o de soja em dois campos distintos.  Ao norte,
+a vegeta��o abruptamente se transforma em algo parecido com arroz.  Mesmo
+sem voc� saber muita coisa sobre agricultura, voc� percebe que a soja est�
+pronta para ser colhida.
+~
+280 0 0 0 0 2
+D0
+~
+~
+0 -1 28034
+D2
+~
+~
+0 -1 28035
+S
+#28037
+O Lado Sul do Campo de Soja~
+   Voc� est� no lado sul de um campo de soja.  Ao norte est� um canal
+estreito separando a planta��o de soja em dois campos distintos.  Ao sul, a
+vegeta��o abruptamente se transforma em algo parecido com milho.  A soja
+est� pronta para ser colhida e voc� se pergunta onde estariam as pessoas
+respons�veis pela colheita.
+~
+280 0 0 0 0 2
+D0
+~
+~
+0 -1 28035
+D2
+~
+~
+0 -1 28039
+S
+#28038
+O Canal Estreito Entre Campos de Milho~
+   Voc� est� em um canal estreito entre dois campos de milho.  Voc� consegue
+ver os altos p�s-de-milho que est�o ao norte, sul e leste.  Voc� pensa que
+poderia ir at� l� e colher uma espiga....afinal existem tantas ali...e os
+donos da planta��o talvez nem fossem dar pela falta de apenas uma delas...ou
+ser� que dariam?
+~
+280 0 0 0 0 6
+D0
+~
+~
+0 -1 28039
+D1
+~
+~
+0 -1 9100
+D2
+~
+~
+0 -1 28040
+D3
+~
+~
+0 -1 28028
+S
+#28039
+O Lado Norte do Campo de Milho~
+   Voc� est� no lado norte de um campo de milho.  Ao sul est� um canal
+estreito separando a planta��o de milho em dois campos distintos.  Ao norte,
+a vegeta��o abruptamente se transforma em algo parecido com soja.  Olhando
+para as plantas, voc� imagina onde estariam as pessoas que fazem a colheita.
+~
+280 0 0 0 0 2
+D0
+~
+~
+0 -1 28037
+D2
+~
+~
+0 -1 28038
+S
+#28040
+O Lado Sul do Campo de Milho~
+   Voc� est� no lado sul de um campo de milho.  Os p�s-de-milho s�o altos,
+as espigas s�o grandes.  Tudo o que voc� entende sobre milho se consiste em
+coloc�-lo em uma panela com �gua fervendo e cozinhar devagar mas ainda assim
+voc� percebe que todo o milho est� pronto para ser colhido.  O som dos
+insetos toma conta do lugar e a �nica sa�da poss�vel parece ser ao norte,
+para o canal
+~
+280 0 0 0 0 2
+D0
+~
+~
+0 -1 28038
+S
+#28041
+O Canal Estreito Entre Campos de Trigo~
+   Voc� est� em um canal estreito entre dois campos de trigo.  Voc� n�o pode
+ver muito do trigo porque as margens s�o bem altas.  Contudo, voc� pode
+entrar nos campos pelo norte e pelo sul, para satisfazer sua curiosidade.  A
+outra alternativa � ir para o leste, para o canal principal.  Um barco
+pequeno desce o rio para o oeste.
+~
+280 0 0 0 0 6
+D0
+~
+~
+0 -1 28042
+D1
+~
+~
+0 -1 28024
+D2
+~
+~
+0 -1 28043
+D3
+~
+~
+0 -1 28050
+S
+#28042
+O Lado Norte do Campo de Trigo~
+   Um imenso campo de trigo se extende em dire��o ao norte.  A planta��o
+cobre completamente cada cent�metro da terra, criando um vasto tapete que
+parece dan�ar ao vento.  A cena enche sua vista e voc� procura pelos
+trabalhadores que ir�o fazer a colheita do trigo.
+~
+280 0 0 0 0 2
+D2
+~
+~
+0 -1 28041
+S
+#28043
+O Lado Sul do Campo de Trigo~
+   Trigo � o ingrediente b�sico para se fazer p�o.  Voc� percebe que o trigo
+usado para fazer os famosos p�es romanos e Midgaardianos pode ter sido
+produzido aqui.  Esse campo de trigo tem um tom forte de amarelo e quando a
+luz do sol incide sobre o trigal, este brilha como se fosse ouro.
+~
+280 0 0 0 0 2
+D0
+~
+~
+0 -1 28041
+D2
+~
+~
+0 -1 28045
+S
+#28044
+O Canal Estreito Entre Campos de Aveia~
+   Voc� est� em um canal estreito entre dois campos de aveia.  Voc� n�o pode
+ver muito da aveia porque as margens s�o bem altas.  Contudo, voc� pode
+entrar nos campos pelo norte e pelo sul, para satisfazer sua curiosidade.  A
+outra alternativa � ir para o leste, para o canal principal.
+~
+280 0 0 0 0 6
+D0
+~
+~
+0 -1 28045
+D1
+~
+~
+0 -1 28026
+D2
+~
+~
+0 -1 28046
+S
+#28045
+O Lado Norte do Campo de Aveia~
+   Enquanto voc� v� este campo de aveia, voc� se lembra de quando era uma
+linda crian�a e sua queria m�e sempre lhe dizia para comer aveia para ficar
+forte e saud�vel.  Voc� fica emocionado e por um momento gostaria de voltar
+para sua casa materna.  Contudo, rapidamente voc� se recupera e volta ao seu
+estado normal, esquecendo todas essas bobagens sentimentais.
+~
+280 0 0 0 0 2
+D0
+~
+~
+0 -1 28043
+D2
+~
+~
+0 -1 28044
+S
+#28046
+O Lado Sul do Campo de Aveia~
+   O campo de aveia parece terminar.  As plantas dan�am ao vento.  Voc� v�
+in�meros homens e mulheres trabalhando, colhendo e carregando v�rias
+carro�as com a aveia colhida.
+~
+280 0 0 0 0 2
+D0
+~
+~
+0 -1 28044
+D2
+~
+~
+0 -1 28048
+S
+#28047
+O Canal Estreito Entre Campos de Cevada~
+   Voc� est� em um canal estreito entre dois campos de cevada.  Voc� n�o
+pode ver muito da aveia porque as margens s�o bem altas.  Contudo, voc� pode
+entrar nos campos pelo norte e pelo sul, para satisfazer sua curiosidade.  A
+outra alternativa � ir para o leste, para o canal principal.
+~
+280 0 0 0 0 6
+D0
+~
+~
+0 -1 28048
+D1
+~
+~
+0 -1 28028
+D2
+~
+~
+0 -1 28049
+S
+#28048
+O Lado Norte do Campo de Cevada~
+   Voc� est� no lado norte de um campo de cevada.  Ao sul est� um canal
+estreito separando a planta��o de cevada em dois campos distintos.  Ao
+norte, a vegeta��o abruptamente se transforma em algo parecido com aveia.
+Mesmo sem entender nada de agricultura, voc� tem plena certeza de que esta
+cevada est� pronta para ser colhida.
+~
+280 0 0 0 0 2
+D0
+~
+~
+0 -1 28046
+D2
+~
+~
+0 -1 28047
+S
+#28049
+O Lado Sul do Campo de Cevada~
+   Um imenso campo de cevada segue daqui e se extende para o sul.  A
+planta��o cobre completamente cada cent�metro da terra, criando um tapete
+amarelo que parece dan�ar ao vento.  A cena enche sua vista e voc� procura
+pelos trabalhadores que ir�o fazer a colheita da cevada.
+~
+280 0 0 0 0 2
+D0
+~
+~
+0 -1 28047
+S
+#28050
+Caminho das Pastagens~
+   H� um caminho estreito que segue rumo ao norte.  Em um dos lados da
+estradinha, voc� v� uma placa onde esta escrito "�rea de Pastagem".  O
+caminho parece ser precariamente mantido, indicando que talvez esteja
+abandonado.
+~
+280 4 0 0 0 2
+D0
+~
+~
+0 -1 28051
+D1
+~
+~
+0 -1 28041
+S
+#28051
+No Caminho Perto das Pastagens~
+   Voc� est� perto da �rea de pastagem.  N�o h� nada de interessante aqui,
+apenas algumas ferramentas de madeira jogadas ao longo do caminho e algumas
+ervas daninhas que cresceram em volta das velhas �rvores.  As pastagens
+come�am ao norte e voc� sente que ir� encontrar coisas mais interessantes
+neste lugar.
+~
+280 4 0 0 0 2
+D0
+~
+~
+0 -1 28052
+D2
+~
+~
+0 -1 28050
+S
+#28052
+A Pastagem Descoberta~
+   Este pasto est� pobremente plantado.  A grama � rara e pouca e parece que
+a terra est� a espera de algu�m que a plante.
+~
+280 4 0 0 0 2
+D0
+~
+~
+0 -1 28053
+D1
+~
+~
+0 -1 28054
+D2
+~
+~
+0 -1 28051
+S
+#28053
+A Pastagem~
+   Um n�mero imenso de cabe�as de gado se espalham pelo rico verde do pasto.
+Alguns trabalhadores est�o aqui, lidando com os bois e vacas que comem sem
+pressa a grama apetitosa.  Os ton�is de leite foram deixados pr�ximos �s
+ferramentas dos camponeses.  Um dos ton�is parece estar cheio.
+~
+280 0 0 0 0 2
+D1
+~
+~
+0 -1 28055
+D2
+~
+~
+0 -1 28052
+S
+#28054
+A Pastagem Perto do Rio~
+   Este lugar � uma rica �rea para pastagem.  Est� dividido em diversas
+�reas menores, que est�o divididas para as diferentes esp�cies de animais.
+Ali est�o cavalos, bois, carneiros e porcos.  Tamanha diversidade de carne
+excita sua mente.  Por que n�o presentear seu est�mago com um grande e
+suculento assado?
+~
+280 0 0 0 0 2
+D0
+~
+~
+0 -1 28055
+D3
+~
+~
+0 -1 28052
+S
+#28055
+A Pastagem~
+   H� um grande n�mero de cavalos aqui.  Alguns s�o realmente maravilhosos,
+fortes e parecem excelentes para cavalgar.  Em uma das extremidades do
+pasto, voc� v� trabalhadores treinando alguns animais que com certeza ser�o
+usados para auxiliar na lavoura ou para entretenimento.  Essa ra�a de
+cavalos produz excelente animais, extremamente vigorosos e velozes.
+~
+280 0 0 0 0 2
+D1
+~
+~
+0 -1 28056
+D2
+~
+~
+0 -1 28054
+D3
+~
+~
+0 -1 28053
+S
+#28056
+A Estrada Paralela � Margem do Rio~
+   Voc� est� em uma estrada bastante estreita, perto da �rea de pastagem.
+Voc� v� algumas cabe�as de gado e trabalhadores lidando com eles no pasto.
+A estrada segue pelo lado oeste dos pastos e para uma pra�a que est� bem
+distante, ao leste.
+   Voc� olha para o sul e v� um rio e mais al�m, um imenso e colorido campo.
+Esse campo � composto por grandes quadrados cobertos por diferentes tipos de
+plantas.  Cada um dos quadrados possui uma cor e est�o cobertos por um tipo
+planta��o.
+~
+280 4 0 0 0 2
+D1
+~
+~
+0 -1 28057
+D3
+~
+~
+0 -1 28055
+S
+#28057
+A Estrada Paralela � Margem do Rio~
+   Essa estrada estreita segue para o leste.  Voc� pode ver daqui uma linda
+vista, com ricas colinas, vales e uma grande �rea de pastos.  Est�o bem
+distantes, contudo, pode-se perceber pequenos pontos brancos, marrons e
+pretos, que parecem ser cabe�as de gado.  Se isso for verdade, voc� est�
+olhando para o melhor gado que voc� jamais viu.
+~
+280 4 0 0 0 2
+D1
+~
+~
+0 -1 28078
+D3
+~
+~
+0 -1 28056
+S
+#28058
+O Rio dos Bravos~
+   Voc� est� chegando perto de um cais e pode ver diversos navios mercantes,
+bem como navios de batalha, que est�o ancorados ao longo do porto.  O rio �
+bastante largo e profundo e permite a navega��o de grandes naus.  A �gua n�o
+� muito polu�da mas vai ficando mais suja a medida em que voc� segue para o
+leste.
+~
+280 0 0 0 0 6
+D1
+~
+~
+0 -1 28059
+D3
+~
+~
+0 -1 28020
+S
+#28059
+O Rio dos Bravos~
+   O rio se torna mais largo e mais polu�do aqui.  Na estrada paralela �
+margem do rio, voc� pode ver alguns marinheiros que est�o � procura de
+divers�o e alguns trabalhadores est�o embarcando mercadorias nos navios,
+comida, roupas, utens�lios, metais e outros coisas que voc� n�o consegue
+imaginar.
+~
+280 0 0 0 0 6
+D1
+~
+~
+0 -1 28060
+D3
+~
+~
+0 -1 28058
+S
+#28060
+O Rio dos Bravos~
+   Voc� est� em um estu�rio.  A �gua do rio se mistura � �gua do oceano.  Ao
+leste voc� v� apenas uma quantidade imensa de �gua.  Ao norte existe uma
+grande rampa por onde os navios s�o i�ados para serem reparados e um pr�dio
+grande, que parece ser um galp�o.
+~
+280 4 0 0 0 6
+D0
+~
+~
+0 -1 28061
+D1
+~
+~
+0 -1 28077
+D3
+~
+~
+0 -1 28059
+S
+#28061
+As Docas de Calyus~
+   Voc� est� se encontra em um pequeno p�tio.  H� um grande pr�dio aqui onde
+as pessoas entram e saem.  Atravessando o p�tio existe uma rua bastante
+larga com um grande n�mero de galp�es.
+~
+280 0 0 0 0 1
+D0
+~
+~
+0 -1 28067
+D1
+~
+~
+0 -1 28062
+D2
+~
+~
+0 -1 28060
+D3
+~
+~
+0 -1 28065
+S
+#28062
+A Rua Leste das Docas~
+   H� uma pequena quantidade de pessoas neste lugar.  A maioria s�o
+guerreiros locais que se alistaram para defender sua terra natal.  Nas
+margens est�o ancorados um grande n�mero de navios de guerra que parecem
+terem estado em grandes batalhas.
+~
+280 0 0 0 0 1
+D1
+~
+~
+0 -1 28063
+D3
+~
+~
+0 -1 28061
+S
+#28063
+A Rua Leste das Docas~
+   Voc� est� em uma rua muito larga.  Esta �rea parece ser zona militar
+porque em suas margens est�o ancorados apenas navios de guerra.  Em um dos
+lados da rua, voc� v� um grande n�mero de galp�es mas todas as portas est�o
+fechadas e muito bem guardadas.  O ch�o est� sujo e alguns dos guerreiros
+entram e saem dos navios.
+~
+280 0 0 0 0 1
+D1
+~
+~
+0 -1 28064
+D3
+~
+~
+0 -1 28062
+S
+#28064
+A Rua Leste das Docas~
+   A rua termina aqui.  Esta �rea parece estar reservada para futuras
+expans�es.  Apenas alguns galp�es foram constru�dos aqui.
+~
+280 0 0 0 0 1
+D3
+~
+~
+0 -1 28063
+S
+#28065
+A Rua Oeste das Docas~
+   Voc� v� um grupo de galp�es ao longo da rua.  Alguns est�o com suas
+portas abertas, permitindo que se possa ver o que guardam em seus
+interiores.  Incont�veis sacos de gr�os rec�m colhidos est�o armazenados
+ali.  Carregadores levam estes sacos at� os navios.  Voc� percebe que esta �
+a zona cerealista do porto e que os produtores embarcam seus produtos aqui
+para vend�-los em regi�es remotas.  Voc� pensa se aquele trigo que est� ali
+seria o trigo com o qual os padeiros de Midgaard fazem seus deliciosos
+p�ezinhos de viagem.
+~
+280 0 0 0 0 1
+D1
+~
+~
+0 -1 28061
+D3
+~
+~
+0 -1 28066
+S
+#28066
+A Rua Oeste das Docas~
+   Esta � uma rua bastante comprida, cal�ada com pequenos blocos de pedras e
+que segue em dire��o ao leste.  Os navios mercantes est�o ancorados lado a
+lado, ao longo da margem do rio e os ancoradouros de madeira se espalham por
+entre eles.  Marinheiros desocupados, andam despreocupadamente pelas ruas,
+em busca de divers�o e prazer e falam com algumas garotas que est�o por ali.
+   Ao oeste voc� percebe uma pra�a onde crian�as cantam alegres m�sicas e
+dezenas de vendedores oferecem suas mercadorias.  H� uma bonita fonte ali.
+~
+280 0 0 0 0 1
+D1
+~
+~
+0 -1 28065
+D3
+~
+~
+0 -1 28078
+S
+#28067
+O Escrit�rio Central das Docas de Calyus~
+   A recep��o � um lugar bastante movimentado.  Ali est�o trabalhadores,
+vendedores, marinheiros, guerreiros e guardas.  Voc� v� uma grande mesa no
+centro da sala, onde alguns homens contratam trabalhadores para trabalharem
+no carregamento dos navios.  Alguns homens est�o recebendo seus pagamentos.
+Ao leste h� uma porta e ao oeste um corredor.
+~
+280 0 0 0 0 0
+D1
+~
+porta~
+1 -1 28070
+D2
+~
+~
+0 -1 28061
+D3
+~
+~
+0 -1 28068
+S
+#28068
+O Corredor~
+   Este corredor se extende para o leste.  Suas paredes s�o limpas e claras
+e alguns quadros com a figura de militares foram penduradas ali.  O ch�o
+est� coberto por um grosso tapete que parece ser bastante macio.  Existem
+pequenos pontos abertos no teto, que deixam a luz penetrar, dando ao
+ambiente uma sensa��o de paz.
+~
+280 0 0 0 0 0
+D1
+~
+~
+0 -1 28067
+D3
+~
+~
+0 -1 28069
+S
+#28069
+O Corredor~
+   O corredor faz uma curva aqui.  H� um bonito quadro a �leo pendurado em
+uma de suas paredes pendurado aqui.  � a figura de uma baleia azul.  As
+escadas sobem at� o segundo andar.
+~
+280 0 0 0 0 0
+D0
+~
+~
+0 -1 28072
+D1
+~
+~
+0 -1 28068
+S
+#28070
+O Escrit�rio do Mestre do Estaleiro~
+   Esse quarto � bem amplo, com prateleiras nas paredes, umas mesinhas e
+cadeiras.  � um comodo bem claro e foi decorado com um grande n�mero de
+gravuras de peixes.  H� uma interessante escultura de metal de um tubar�o
+baleia em um dos cantos do ambiente.  Deve ter uns 8 p�s de comprimento e
+parece bem real.  Existem muitas folhas de papel espalhadas sobre a mesa e
+algumas delas voaram quando voc� abriu a porta.
+   Uma outra porta ao leste chama a sua aten��o.
+~
+280 0 0 0 0 0
+D1
+~
+porta~
+2 28098 28071
+D3
+~
+porta~
+1 -1 28067
+S
+#28071
+O Quarto do Mestre do Estaleiro~
+   Sim!  O quarto do Mestre!  Exatamente aquilo que voc� procurava.  O
+quarto � pequeno mas parece ser bem confort�vel.  H� uma mesa, uma linda
+poltrona e um sof� que o convida para uma pequena soneca.  Mas o que voc�
+est� realmente procurando n�o � descanso mas sim dinheiro, um equipamento
+melhor e...sangue!  Se alguma dessas coisas estiverem aqui voc� ir�
+descobrir...
+~
+280 0 0 0 0 0
+D3
+~
+porta~
+2 28098 28070
+S
+#28072
+A Escadaria para o Segundo Andar~
+   As escadas sobem para o segundo andar.  Ao longo da escadaria, existem
+janelinhas redondas e alguns pain�is pendurados na parede.  Voc� percebe que
+se dirige para um lugar bastante reservado assim que l� a placa informando
+que apenas pessoas autorizadas podem subir.
+~
+280 0 0 0 0 0
+D2
+~
+~
+0 -1 28069
+D4
+~
+~
+0 -1 28073
+S
+#28073
+A Escadaria para o Andar T�rreo~
+   Estas escadas v�o para o andar t�rreo.  Acima de sua cabe�a foram
+colocadas pinturas a �leo de golfinhos e ao sul voc� pode ver um pequeno
+vest�bulo.  Alguns vasos com flores foram colocados sobre uma mesa console e
+h� uma clarab�ia no teto que est� entreaberta, permitindo que uma brisa
+fresca entre e refresque o ambiente um pouco.
+~
+280 0 0 0 0 0
+D2
+~
+~
+0 -1 28074
+D5
+~
+~
+0 -1 28072
+S
+#28074
+O Vest�bulo~
+   Este � um c�modo realmente luxuoso.  As paredes s�o revestidas por placas
+de m�rmore rosado e tapetes persas ornamentam o ch�o, cuja ilumina��o chega
+atrav�s de um maravilhoso lustre folhado a ouro.  H� uma enorme parede
+envidra�ada que descortina o cen�rio magn�fico de todo o estaleiro.
+~
+280 0 0 0 0 0
+D0
+~
+~
+0 -1 28073
+D1
+~
+~
+0 -1 28075
+S
+#28075
+A Antec�mara dos Aposentos do Almirante~
+   Voc� est� dentro de um pequeno quarto.  H� uma mesa, uma estante de
+livros e um grande vaso com rosas vermelhas.  Sobre a mesa est�o v�rios
+pap�is espalhados e alguns deles est�o marcados com o selo Docas de Calyus.
+Voc� percebe que este � um escrit�rio assim que v� que dentro de uma das
+gavetas abertas existem um espelho e alguns batons.
+~
+280 0 0 0 0 0
+D1
+~
+porta~
+2 28097 28076
+D3
+~
+~
+0 -1 28074
+S
+#28076
+Os Aposentos do Almirante~
+   Este � um lugar soberbo.  As paredes est�o cobertas por madeira escura,
+de lei, o ch�o coberto por um felpudo tapete vermelho e o teto iluminado por
+dezenas das velas de um magn�fico lustre de cristal.  Penduradas nas
+paredes, as in�meras medalhas de ouro e prata que foram conquistadas pelo
+Almirante.  H� um bonito aqu�rio com dezenas com peixes ex�ticos em cima de
+uma mesinha de canto.  Sobre uma imensa mesa de madeira maci�a h� uma
+pequena placa com os dizeres: "Almirante Dasher".  Voc� sabe que est� dentro
+dos aposentos do chef�o e que talvez possa haver alguma a��o aqui.
+~
+280 0 0 0 0 0
+D3
+~
+porta~
+2 28097 28075
+S
+#28077
+A Baia de Calyus~
+   O oceano come�a aqui.  Al�m de �gua, voc� s� consegue ver navios partindo
+em dire��o a terras desconhecidas.
+~
+280 4 0 0 0 6
+D3
+~
+~
+0 -1 28060
+S
+#28078
+A Pra�a do Porto~
+   Voc� se encontra em uma grande pra�a central.  Algumas crian�as est�o
+cantando c�nticos natalinos, um grande n�mero de vendedores oferecem seus
+artigos e uma cascata cristalina de �gua jorra de uma bonita fonte.  Ao sul
+voc� v� uma rampa para barcos e ao oeste est� uma estrada estreita que segue
+em dire��o �s colinas.  Ao leste h� outra estrada que parece seguir em
+dire��o �s docas.
+~
+280 0 0 0 0 1
+D1
+~
+~
+0 -1 28066
+D2
+~
+~
+0 -1 28020
+D3
+~
+~
+0 -1 28057
+S
+$~

@@ -1,0 +1,957 @@
+#7500
+chave grande esqueleto~
+uma grande chave em forma de esqueleto~
+Uma grande chave em forma de esqueleto foi perdida aqui.~
+~
+18 b 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+chave grande esqueleto~
+Os dentes na chave s�o muito grandes e precisos.
+~
+#7501
+chave metal enferrujada~
+uma chave de metal enferrujada~
+Uma chave de metal enferrujada est� aqui.~
+~
+18 b 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+chave metal enferrujada~
+A pequena chave de metal foi pouco utilizada em todos estes anos.  A falta
+de uso e as m�os suadas dos guardas acabaram enferrujando ela.
+~
+#7502
+chave prateada~
+uma chave prateada~
+Uma chave prateada foi jogada aqui.~
+~
+18 b 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+chave prateada~
+A chave prateada parece ser muito forte por�m foi cuidadosamente produzida.
+~
+#7503
+chave grande metal~
+uma longa chave de metal~
+Uma longa chave de metal foi jogada aqui.~
+~
+18 b 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#7504
+chave pedra~
+uma chave de pedra~
+Uma chave feita de pedra foi perdida aqui.~
+~
+18 b 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+chave pedra~
+Feita de ard�sia, a chave tem uma superf�cie preta e sombria.
+~
+#7505
+chave polida pedra~
+uma chave de pedra polida~
+Uma chave brilhante foi jogada aqui.~
+~
+18 a 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+chave polida pedra~
+Feita de algum tipo de quartzo, a chave foi cuidadosamente polida.
+~
+#7506
+mesa grande madeira carvalho~
+uma grande mesa de madeira~
+Uma grande mesa de madeira est� no centro da sala.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+300 100 0 0 0
+E
+mesa grande madeira carvalho~
+A mesa foi feita de carvalho.  Foi encerada com uma cera de abelhas onde deu
+um brilho intenso.
+~
+#7507
+fonte bar�o homem est�tua~
+uma fonte~
+H� uma fonte com a est�tua de um homem murmurando baixinho aqui.~
+~
+23 0 0 0 0 0 0 0 0 0 0 0 0
+1000 1000 0 0
+10000 0 0 0 0
+E
+fonte bar�o homem est�tua~
+A fonte foi toda feita de pedra numa forma oval.  Em uma plataforma no meio
+est� uma est�tua de um homem que usa um anel.
+~
+#7508
+mesa trabalho grande madeira~
+uma grande mesa de trabalho de madeira~
+Uma grande mesa de trabalho de madeira est� contra uma parede distante.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+10000 0 0 0 0
+E
+mesa trabalho grande madeira~
+A mesa de trabalho ocupa muito espa�o deste quarto.  Tr�s tamboretes est�o
+ao redor do banco.  Na mesa est� espalhado v�rias ferramentas que s�o
+utilizadas pelos joalheiros que trabalham aqui.
+~
+#7509
+carruagem~
+uma carruagem~
+Uma carruagem cara foi estacionada aqui.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+10000 0 0 0 0
+E
+carruagem~
+A carruagem � azul com detalhes em preto.  Existe um bras�o pintado nas
+portas.  As molas parecem estar um pouco gastas.
+~
+#7510
+chave pequena metal~
+uma pequena chave de metal~
+Uma pequena chave de metal foi jogada aqui.~
+~
+18 b 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+chave pequena metal~
+A chave � muito fina.  Isto com certeza � mais decrotiva do que funcional.
+~
+#7511
+chave bronze~
+uma chave de bronze~
+Uma chave de bronze est� sobre o ch�o.~
+~
+18 b 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+chave bronze~
+A chave � muito pequena e feita de bronze.  Existe um min�sculo cadeado em
+sua ponta que est� fechado.
+~
+#7512
+ba� trancado~
+um ba�~
+Um ba� est� fixado na cabeceira da cama.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+100 5 -1 0
+200 50 0 0 0
+E
+ba� trancado~
+O ba� � de uma constru��o muito grande e pesada.  Isto foi feito de carvalho
+e possui barras de ferro na vertical para refor�ar.
+~
+#7513
+moedas ouro~
+uma pequena pilha de moedas~
+Uma pequena pilha de moedas de ouro foi escondida aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+1000 0 0 0
+5 0 0 0 0
+#7514
+anel ouro sete pontas~
+Um anel de ouro com sete pontas.~
+Um anel dourado foi perdido aqui.~
+~
+11 af 0 0 0 ab 0 0 0 0 0 0 0
+0 0 0 0
+8 1500 0 0 0
+E
+anel ouro sete pontas~
+O anel foi feito de um ouro altamente refinado.  E � bastante pesado para o
+seu tamanho.
+~
+A
+17 -4
+A
+6 1
+#7515
+doblete roupas azul~
+um doblete azul com um ornamento verde~
+Algumas roupas foram descartadas aqui.~
+~
+9 a 0 0 0 ad 0 0 0 0 0 0 0
+6 0 0 0
+10 100 0 0 0
+E
+doblete azul roupas~
+O doblete foi feito de uma l� muito macia.  Isto deve ter dado bastante
+trabalho para conseguir.
+~
+#7516
+perneiras preta~
+um elegante par de perneiras~
+Um par de perneiras est� amarrotado aqui.~
+~
+9 a 0 0 0 af 0 0 0 0 0 0 0
+5 0 0 0
+6 500 0 0 0
+E
+perneiras preta~
+As perneiras foram feitas de um tecido de seda bastante grosso.  Elas
+parecem ser bastante caras.  Uma complementa��o muito boa para um nobre.
+~
+#7517
+botas couro caras~
+um par de botas de couro~
+Um par de botas bastante caras foi deixado aqui.~
+~
+9 a 0 0 0 ag 0 0 0 0 0 0 0
+2 0 0 0
+9 300 0 0 0
+E
+botas couro caras~
+As botas s�o muito grandes e sua ponta � quadrada.  Com muitas marcas de
+uso, freq�entemente eram prendido esporas nelas.
+~
+A
+1 1
+A
+2 1
+#7518
+punhal cabo marfim~
+um punhal com o cabo de marfim~
+Um punhal com o cabo de marfim foi perdido aqui.~
+~
+5 agjl 0 0 0 an 0 0 0 0 0 0 0
+0 4 4 11
+9 1000 0 60 0
+E
+punhal cabo marfim~
+O artesanato deste punhal n�o � superado.  A l�mina foi feita por um mestre
+ferreiro e o cabo de marfim foi esculpido dentro, parece ser a cabe�a de uma
+cobra.
+~
+A
+2 1
+A
+19 4
+A
+18 4
+#7519
+medalh�o dourado~
+um medalh�o dourado~
+Um medalh�o dourado foi jogado aqui.~
+~
+15 0 0 0 0 ac 0 0 0 0 0 0 0
+15 5 -1 0
+3 200 0 0 0
+E
+medalh�o~
+O medalh�o dourado tem uma min�scula batida em um dos lados.  Dentro do
+medalh�o h� um pequeno retrato de uma mulher que est� sorrindo suavemente.
+~
+A
+6 1
+#7520
+capacete danificado~
+um capacete danificado~
+Um capacete danificado foi deixado no ch�o.~
+~
+9 ajl 0 0 0 ae 0 0 0 0 0 0 0
+5 0 0 0
+10 100 0 56 0
+E
+capacete danificado~
+O capacete foi fortemente constru�do por um guarda de nariz comprido.  O
+lado direito foi severamente danificado uma vez, mas foi reformado voltando
+a sua forma original.
+~
+A
+13 30
+#7521
+coura�a batalha~
+uma coura�a de batalha~
+Um belo equipamento foi deixado aqui.~
+~
+9 jl 0 0 0 ad 0 0 0 0 0 0 0
+8 0 0 0
+12 300 0 60 0
+E
+coura�a batalha~
+Esta bela coura�a de batalha est� bem conservada.  O couro est� bastante
+surrado as fivelas em perfeito estado.
+~
+A
+14 25
+#7522
+espada longa brilhante~
+uma espada longa muito brilhante~
+Uma espada longa muito brilhante foi derrubada aqui.~
+~
+5 ajl 0 0 0 an 0 0 0 0 0 0 0
+0 4 4 3
+12 1300 0 40 0
+E
+espada longa brilhante~
+A longa espada de ferro foi polida deixando um brilho intenso.  Enquanto a
+arma estiver em perfeito estado, voc� certamente n�o procurar� por outra
+arma.
+~
+A
+19 4
+A
+6 -3
+#7523
+anel mercen�rio~
+o anel de um mercen�rio~
+Um anel com um estranho desenho foi esquecido aqui.~
+~
+9 jl 0 0 0 ab 0 0 0 0 0 0 0
+4 0 0 0
+4 400 0 30 0
+E
+anel mercen�rio~
+O anel foi feito de ferro com o desenho de uma bela pantera.
+~
+A
+13 -15
+A
+19 1
+A
+1 -1
+#7524
+coifa corrente~
+uma coifa de corrente~
+Algumas correntes de armaduras foram deixadas aqui no ch�o.~
+~
+9 jl 0 0 0 ae 0 0 0 0 0 0 0
+6 0 0 0
+8 650 0 0 0
+E
+coifa corrente~
+As liga��es que comp�em a coifa s�o muito pequenas.  O metal se conservou
+bem e n�o existe nenhum sinal de ferrugem.
+~
+A
+5 1
+#7525
+sabre espada cavalaria~
+um sabre de cavalaria~
+Uma espada longa e fina foi deixada aqui.~
+~
+5 gjl 0 0 0 an 0 0 0 0 0 0 0
+0 5 3 3
+9 700 0 20 0
+E
+sabre espada cavalaria~
+A sabre possui 3 metros de comprimento e � muito fina.  A l�mina possui uma
+curvatura que vai do cabo at� a ponta.
+~
+A
+19 3
+A
+18 3
+#7526
+armadura sombria~
+uma sombria armadura de metal~
+Algumas armaduras de metal foram deixadas em uma pilha aqui.~
+~
+9 jl 0 0 0 ad 0 0 0 0 0 0 0
+10 0 0 0
+10 500 0 43 0
+E
+armadura sombria~
+A armadura de metal foi feita para n�o poder lustrar.  O ferreiro deve ter
+colocado algum tipo de material na mistura para conseguir manter as
+liga��es.
+~
+A
+19 2
+A
+18 -1
+#7527
+capa vermelha arredondada~
+uma capa meio arredondada~
+Uma capa vermelha foi deixada aqui.~
+~
+11 jl 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+6 50 0 0 0
+E
+capa vermelha arredondada~
+A capa foi feita de um material barato e lanoso e foi pintada em uma cor
+vermelha.  A cor acabou borrando e enfraquecendo na coloca��o de remendos.
+~
+A
+17 -5
+A
+1 -1
+#7528
+jaqueta couro~
+um jaqueta de couro~
+Uma jaqueta de couro foi descartada aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+5 0 0 0
+10 300 0 0 0
+E
+jaqueta couro~
+A jaqueta parece ter sido bastante usada.  Foi endurecida em �leo e o couro
+� bastante duro e r�gido.
+~
+#7529
+gorro couro~
+um gorro de couro~
+Um gorro de couro foi esquecido aqui.~
+~
+9 0 0 0 0 ae 0 0 0 0 0 0 0
+3 0 0 0
+5 100 0 0 0
+E
+gorro couro~
+O gorro foi brutamente cortado de couro duro.  Pelo cheiro disto,
+freq�entemente era usado e n�o limpo.
+~
+#7530
+espada guarda simples~
+uma simples espada do guarda~
+Uma simples mas utiliz�vel espada foi deixada aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 3 3 3
+12 130 0 0 0
+E
+espada guarda simples~
+A espada parece ter sido feita por um bom ferreiro.  Ela � bastante plana e
+possui um �timo desempenho.
+~
+#7531
+pequena luneta estranho tubo~
+uma pequena luneta~
+Um estranho tubo foi jogado aqui.~
+~
+12 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+15 1300 0 0 0
+E
+pequena luneta estranho tubo~
+A luneta mostra sinais de muito uso.  Por�m parece trabalhar
+extraordinariamente bem.
+~
+A
+4 1
+#7532
+cortador carne~
+um cortador de carne~
+Um cortador de carne foi deixado aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 5 3
+9 200 0 0 0
+E
+cortador carne~
+O cortador possui algumas pe�as faltando da extremidade da l�mina.  A
+pr�pria l�mina � muito grossa e afiada.
+~
+#7533
+pequeno empregada roupas pretas uniforme~
+o uniforme de uma empregada~
+Uma pequena quantidade de roupas pretas foram descartadas e est�o aqui.~
+~
+11 0 0 0 0 ad 0 0 0 0 0 0 0
+0 0 0 0
+5 50 0 0 0
+E
+pequeno empregada roupas pretas uniforme~
+Esta � a roupa que uma empregada utiliza para trabalhar, mas n�o existe
+muito o que admirar nisto.
+~
+#7534
+espanador pena~
+um espanador de pena~
+Um espanador de penas foi deixado aqui.~
+~
+13 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+5 0 0 0 0
+E
+espanador pena~
+O espanador de pena tem um longo cabo de madeira.
+~
+#7535
+casaco preto~
+um casaco preto formal~
+Um casaco preto foi perdido aqui.~
+~
+11 0 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+8 200 0 0 0
+E
+casaco preto~
+O casaco preto � usado pelo criado do Darwin.
+~
+#7536
+cal�as pretas~
+um par de cal�as pretas~
+Um par de cal�as pretas foi jogado no ch�o.~
+~
+11 0 0 0 0 af 0 0 0 0 0 0 0
+0 0 0 0
+5 100 0 0 0
+E
+cal�as pretas~
+As cal�as s�o de Darwin para seu uso formal e pessoal.
+~
+#7537
+camisa branca~
+uma camisa branca~
+Uma camisa branca foi descartada aqui.~
+~
+11 0 0 0 0 ad 0 0 0 0 0 0 0
+0 0 0 0
+5 100 0 0 0
+E
+camisa branca~
+A camisa branca faz parte do traje pessoal do Darwin.
+~
+#7538
+t�nica vermelha pajem~
+uma t�nica vermelha~
+Uma t�nica vermelha de um pajem foi deixado aqui.~
+~
+11 0 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+5 50 0 0 0
+E
+t�nica vermelha pajem~
+A t�nica vermelha tem o emblema de um pajem em seu peito.  Apesar de ser
+bastante pequeno, parece �til.
+~
+#7539
+macac�o sujo~
+um macac�o sujo~
+Um macac�o foi deixado aqui.~
+~
+11 0 0 0 0 ad 0 0 0 0 0 0 0
+0 0 0 0
+7 150 0 0 0
+E
+macac�o sujo~
+O macac�o est� completamente sujo com lama.  No joelho est� muito gasto, e
+Existe um pequeno buraco no joelho direito.
+~
+A
+1 1
+#7540
+tesoura jardinagem~
+uma tesoura de jardinagem~
+Uma velha tesoura de jardinagem foi esquecida aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 3 4 11
+8 50 0 9 0
+A
+18 1
+#7541
+armadura treinamento acolchoada~
+uma armadura acolchoada de treinamento~
+Uma armadura acolchoada de treinamento foi descartada aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+7 0 0 0
+10 175 0 0 0
+E
+armadura treinamento acolchoada~
+A armadura de treinamento � feita de um couro bastante fino.  O interior foi
+forrado com um tipo de veludo.  A armadura � muito grande e possui um forte
+odor de suor.
+~
+A
+2 -2
+#7542
+faca equilibrada~
+uma faca equilibrada~
+Uma longa faca com uma l�mina grossa foi deixada aqui no ch�o.~
+~
+5 gj 0 0 0 ano 0 0 0 0 0 0 0
+0 2 6 11
+10 140 0 0 0
+E
+faca equilibrada~
+A faca � muito bem equilibrada.  A pesada l�mina � longa, grossa e possui
+uma ponta muito afiada.  No cabo tem fixado uma grande bola de metal.
+~
+A
+19 2
+A
+18 2
+A
+1 -1
+#7543
+jogo boleadeiras~
+boleadeiras~
+Um jogo de boleadeiras foi deixado aqui.~
+~
+5 gj 0 0 0 ano 0 0 0 0 0 0 0
+0 3 4 9
+11 200 0 0 0
+E
+boleadeiras~
+Foram presas v�rias bolas de pedra uma a outra por grossa corda.    
+~
+A
+19 2
+A
+18 2
+#7544
+espada madeira treinamento~
+uma espada de madeira~
+Uma longa espada de madeira est� aqui.~
+~
+5 j 0 0 0 an 0 0 0 0 0 0 0
+0 2 5 9
+12 10 0 0 0
+E
+espada madeira treinamento~
+A espada de madeira est� bastante usada.  Existem v�rias marcas em sua
+l�mina.
+~
+#7545
+protetor cabe�a~
+um protetor de cabe�a~
+Um protetor de cabe�a est� aqui.~
+~
+11 0 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+8 10 0 0 0
+E
+protetor cabe�a~
+O protetor de cabe�a � feito de couro com uma pesada espuma al�m de velha.     
+~
+A
+17 -6
+#7546
+pequeno martelo m�o~
+um martelo~
+Um pequeno martelo de m�o foi esquecido aqui.~
+~
+5 g 0 0 0 an 0 0 0 0 0 0 0
+0 1 7 7
+10 100 0 0 0
+E
+pequeno martelo m�o~
+O martelo possui um cabo bastante curto.    
+~
+A
+1 2
+A
+19 3
+A
+12 -10
+A
+13 -20
+A
+3 -2
+#7547
+colete couro~
+um colete de couro~
+Um colete de couro foi deixado aqui.~
+~
+11 0 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+12 75 0 0 0
+E
+colete couro~
+O colete foi feito com grossas camadas de couro.  Existem marcas de
+queimadura e fuligem na parte frontal.
+~
+A
+17 -4
+#7548
+chicote cavalo~
+um chicote de cavalo~
+Um chicote de cavalo foi deixado aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 5 2
+5 120 0 0 0
+E
+chicote cavalo~
+O chicote de cavalo � comprido e negro. Na ponta existem uma parte de metal.    
+~
+#7549
+olhos flutuante globo ocular~
+um olho flutuante~
+Parece ser um globo ocular que flutua aqui pr�ximo ao ch�o.~
+~
+1 cjl 0 0 0 ao 0 0 0 0 0 0 0
+0 0 -1 0
+1 1000 0 20 0
+E
+olhos flutuante ocular globo~
+Os olhos se movem em c�rculos. A pupila � vermelha com uma luz misteriosa.    
+~
+A
+19 1
+A
+17 -4
+#7550
+armadura malha a�o flex�vel~
+uma armadura de malha de a�o flex�vel~
+Um objeto inacabado est� aqui.~
+~
+9 a 0 0 0 ad 0 0 0 0 0 0 0
+10 0 0 0
+11 300 0 0 0
+E
+armadura malha a�o flex�vel~
+A armadura foi constru�da de malha de a�o.  Enquanto as liga��es estiverem
+finas, elas ser�o muito fortes.  Com a aptid�o nas liga��es, a armadura �
+bastante flex�vel.
+~
+A
+3 -2
+#7551
+perneiras malha a�o~
+um par de perneiras em malha de a�o~
+Um par de perneiras em malha de a�o est�o perdidas aqui.~
+~
+9 a 0 0 0 af 0 0 0 0 0 0 0
+7 0 0 0
+9 350 0 0 0
+E
+perneiras malha a�o~
+As perneiras foram constru�das em malha de a�o.  Enquanto as liga��es
+estiverem finas, elas ser�o muito fortes.  Com a aptid�o nas liga��es, a
+armadura � bastante flex�vel.
+~
+A
+6 -2
+#7552
+pena tinta ponta~
+uma pena sem tinta~
+Uma pena sem tinta caiu aqui no ch�o.~
+~
+13 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 10 0 0 0
+E
+pena tinta ponta~
+A pena � de um pav�o.  Parece que havia tinta preta na ponta, mas ela secou.    
+~
+#7553
+machado guerra grande~
+um grande machado de guerra~
+Um grande machado de guerra foi deixado aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 3 5 3
+20 400 0 10 0
+E
+machado guerra grande~
+O machado de guerra tem uma l�mina com dois lados.  A arma � muito pesada e
+necessita de algu�m bastante forte e habilidoso para utiliz�-la.
+~
+#7554
+min�sculo alfinete~
+um min�sculo alfinete~
+Um min�sculo alfinete foi derrubado aqui.~
+~
+13 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 10 0 0 0
+E
+min�sculo alfinete~
+O alfinete � bastante fino e � usado para costura.
+~
+#7555
+botas macias~
+um par de macias botas~
+Um par de botas foi esquecido aqui.~
+~
+11 0 0 0 0 ag 0 0 0 0 0 0 0
+0 0 0 0
+7 240 0 20 0
+E
+botas macias~
+As botas foram feitas de um couro macio.  As solas s�o confortavelmente
+flex�veis.
+~
+A
+14 60
+#7556
+capa preta~
+uma capa preta~
+Uma capa preta foi deixada aqui.~
+~
+11 0 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+8 550 0 0 0
+E
+capa preta~
+A capa preta � longa e serve em voc� facilmente.    
+~
+A
+17 -6
+#7557
+faca curvada mal�fica~
+uma faca com uma l�mina curvada~
+Uma faca mal�fica foi perdida aqui.~
+~
+5 gjl 0 0 0 an 0 0 0 0 0 0 0
+0 2 8 11
+7 175 0 50 0
+E
+faca curvada mal�fica~
+Esta faca tem somente um prop�sito...  Infligir dor.  Possui uma longa e
+fina l�mina cortante.
+~
+A
+19 5
+A
+18 -4
+A
+6 -2
+#7558
+m�scara verde~
+uma m�scara verde com olhos vermelhos~
+Uma m�scara feia foi deixada aqui.~
+~
+11 jl 0 0 0 ar 0 0 0 0 0 0 0
+0 0 0 0
+6 5 0 0 0
+E
+m�scara verde~
+A m�scara � grande e fina.  Foi feita para se utilizar sobre os olhos e na
+testa.
+~
+A
+6 -3
+A
+4 1
+A
+17 -4
+#7559
+capuz preto~
+um capuz preto~
+Um capuz preto est� aqui no ch�o.~
+~
+11 jl 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+6 15 0 30 0
+E
+capuz preto~
+O capuz preto cobre seu rosto inteiro, mas a parte de tr�s da cabe�a fica
+descoberto.  N�o parece ter significado algum usar algo assim.
+~
+A
+17 -5
+A
+3 1
+A
+13 20
+#7560
+chave martelada metal~
+uma chave de metal martelada~
+Uma chave feita brutalmente est� aqui.~
+~
+18 b 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+chave martelada metal~
+A chave foi feita brutalmente. Parece ter sido feita com pressa.
+~
+#7561
+punhal grande fino longo~
+um punhal fino e longo~
+Um punhal fino e longo foi perdido aqui.~
+~
+5 g 0 0 0 an 0 0 0 0 0 0 0
+0 3 7 11
+9 250 0 20 0
+E
+punhal grande fino longo~
+O punhal possui um brilho intenso e sua ponta foi muito bem afiada.    
+~
+A
+1 -2
+A
+19 3
+A
+18 3
+A
+13 -35
+#7562
+chave brilhante brilhando~
+uma chave brilhando em amarelo~
+Uma chave que emite um brilho intenso foi jogada aqui.~
+~
+18 b 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 0 0
+E
+chave amarela~
+A chave foi feita de a�o e deram um acabamento com uma pintura em amarelo.
+Um brilho pode ser visto pr�ximo do metal abaixo da pintura.
+~
+#7563
+caixa forte grande~
+uma grande caixa-forte~
+Uma grande caixa-forte foi fixado � parede.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+100 15 7562 0
+2000 0 0 0 0
+E
+caixa forte grande~
+A grande caixa-forte de metal � muito bonito.  Existe uma fechadura na parte
+frontal, mas nenhuma parte not�vel ou algum modo de abrir.
+~
+#7564
+tesouro fortuna darwin ouro moedas~
+uma quantia ENORME de moedas de ouro~
+A fortuna do bar�o Darwin est� aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+20000 0 0 0
+5 0 0 0 0
+E
+tesouro fortuna darwin ouro moedas~
+As moedas de ouro do Bar�o apresentam uma vis�o real e impressionante dele.
+~
+#7565
+cofre dourado~
+um cofre dourado~
+Um cofre dourado est� sobre uma mesa.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+100 15 7566 0
+1000 0 0 0 0
+E
+cofre dourado~
+O cofre dourado � mesmo complicado.    
+~
+#7566
+chave cabe�a drag�o~
+uma pequena chave com a cabe�a de um drag�o~
+Uma estranha chave est� aqui.~
+~
+18 b 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 1 0
+E
+chave cabe�a drag�o~
+A chave tem um cabo longo com a cabe�a de um drag�o.  Na boca do drag�o est�
+aberta e min�sculas j�ias foram fixadas nas �rbitas oculares.
+~
+$~

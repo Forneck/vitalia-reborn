@@ -1,0 +1,28 @@
+@B                 __   __   _    ________   ___ o   __       _     ___
+@W       O MUNDO  @B|  |.' .'.'_| .'_    _.' .' _ `.  |  |    .'_|  .' _ `.
+@W            DE  @B|  ' .'  |  |    |  |   |  ' |  | |  |    |  | |  ' |  |
+@B                |  .'    |  |    |  |   |  .-.  | |  |___ |  | |  .-.  |
+@B                |.'      |_.'    |_.'   |_.' |_.' |____.' |_.' |_.' |_.'@n
+@B __________________________________________________________[@W Novidades @B]_______@n
+
+@n
+@C-@G=@Y>@W XX de YYYY de 2020 @C@Y<@G=@C-@n
+
+   Atualização do sistema interno do mundo para a versão mais recente.
+   O Mundo de Vitália agora conta com uma nova classe de personagem, @RRanger@n.
+
+   Novos tipos de item (@GPlanta@n e @YMobilia@n).
+   Os jogadores podem sentar, descansar e deitar nas mobilias.
+   É possivel beber direto em algumas salas.
+   Mais opções no toggle/prefedit.
+   Canais mudado para prefedit (editor de preferencias).
+   Adicionado historico para canais de comunicação.
+   É possível olhar para o céu e ver a posição do sol, lua e estrelas.
+   Look around tambêm pode dar mais informações das salas.
+  Habilidade Scan, mostra os mobs nas salas próximas.
+   Sistema de grupos modificado, agora mostra lista de grupos @Gabertos@n e @Rfechados@n para novos membros e em qual área está o líder.
+  Who mostra separado personagens até nível 10.
+  Sistema de Happyhour com bonus de ouro e xp.
+  Where mostra o nome da área.
+  Comando sacrifice para sacrificar corpos e objetos. 
+  Comando @rLand@n para parar de voar.

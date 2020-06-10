@@ -1,0 +1,49 @@
+#98
+Vitalia~
+O Abismo~
+9800 9899 300 0 bd 0 0 0 -1 -1
+-1
+*
+* Colocar os monstros
+*
+M 0 9801 1 9809     colocar o Cerbero no canil
+M 0 9802 1 9814     colocar o Gigante Ciclope
+G 1 9801 1          entregar a chave ao Gigante
+M 0 9803 1 9839     colocar o monstro de pedra
+G 1 9803 1          entregar a chave ao monstro
+M 0 9805 1 9839     colocar o drag�o invis�vel
+E 1 3860 16 17       Card drag invis(3860) com drag invis(9805)
+G 1 9806 1          entregar o escudo negro
+M 0 9804 1 9840     colocar o Mal Supremo
+G 1 9804 1          entregar a chave ao Mal Supremo
+M 0 9806 1 9871     colocar o Anjo da Luz
+M 0 9807 1 9878     colocar o Anjo do Amor
+M 0 9808 1 9886     colocar o Anjo da Honestidade
+M 0 9809 1 9890     colocar o Anjo da Vit�ria
+G 1 9808 2          entregar o pergaminho ao Anjo da Vit�ria
+*
+* Colocar os objetos
+*
+*   O manto dourado anda causando problemas, ent�o eu bloqueei o carregamento.
+*   -- jr Out 06, 2002
+*
+R 0 9840 9805       retirar a c�pula
+O 0 9805 1 9840     carregar uma nova c�pula
+P 1 9807 1 9805     carregar o manto dentro da c�pula
+* Manto dourado - tirar soh comentar as linhas acima
+R 0 9849 9802       retirar a chave suja
+O 0 9802 1 9849     carregar uma nova chave suja
+R 0 9823 9808       retirar o pergaminho
+O 0 9808 2 9823     carregar o pergaminho
+*
+* Ajustar as passagens
+*
+D 0 9822 1 2        fechar a porta do calabou�o dos anjos (lado de fora)
+D 0 9823 3 2        fechar a porta do calabou�o dos anjos (lado de dentro)
+D 0 9830 3 1        fechar a porta do labirinto (lado de fora)
+D 0 9841 1 2        fechar a porta do labirinto (lado de dentro)
+D 0 9833 5 1        fechar o al�ap�o (lado de fora)
+D 0 9834 4 1        fechar o al�ap�o (lado de dentro)
+D 0 9839 1 2        fechar a porta da sala do trono (lado de fora)
+S
+$

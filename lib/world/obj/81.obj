@@ -1,0 +1,790 @@
+#8101
+osso~
+um osso~
+Há aqui um grande osso destacando-se dentre os restos mortais de uma criatura.~
+~
+13 dh 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+2 1 1 0 0
+#8102
+crânio~
+um crânio~
+Um crânio empoeirado está jogado aqui.~
+~
+13 dh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+4 1 1 0 0
+#8103
+máscara anúbis~
+a máscara de Anúbis~
+Algo semelhante à cabeça de um chacal foi deixada no chão, atraindo a sua atenção.~
+~
+9 agl 0 0 0 ae 0 0 0 0 0 0 0
+8 0 0 0
+25 800000 80000 78 0
+E
+máscara anúbis~
+Você tem em mãos a assustadora e inexpressiva face de um chacal.
+~
+A
+19 3
+A
+1 2
+A
+12 30
+#8104
+coroa nefertiti~
+a coroa de Nefertiti~
+A magnífica coroa da rainha do Egito foi esquecida aqui.~
+~
+11 agk 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+10 300000 30000 80 0
+E
+coroa nefertiti~
+Examinando-a você só consegue pensar em uma coisa: está à altura da
+belíssima Nefertiti.
+~
+A
+6 2
+A
+18 2
+#8105
+papiro~
+um papiro~
+Há um pedaço de papiro amarrotado no chão.~
+~
+13 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 1 1 0 0
+#8106
+tocha~
+uma tocha~
+Uma tocha ardendo em chamas foi jogada aqui.~
+~
+1 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 10 0
+10 90 9 0 0
+#8107
+tâmara~
+uma tâmara~
+Você se depara com uma tâmara jogada no chão.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+3 0 0 0
+2 5 1 0 0
+#8108
+figo seco~
+um figo seco~
+Parece que alguém perdeu aqui um apetitoso figo seco.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+4 0 0 0
+1 10 1 0 0
+#8109
+cacho uvas~
+um cacho de uvas~
+Um grande cacho de uvas foi jogado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+3 0 0 0
+3 5 1 0 0
+#8110
+maçã~
+uma maçã~
+Você se depara com uma bonita maçã jogada no chão.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+3 0 0 0
+5 7 1 0 0
+#8111
+liteira~
+uma liteira~
+Uma preciosa liteira adornada com pedras preciosas foi cuidadosamente depositada no chão.~
+~
+22 d 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+40 400 40 30 0
+#8112
+sandálias egípcias~
+um par de sandálias egípcias~
+Um par de sandalias foi esquecido aqui.~
+~
+9 0 0 0 0 ag 0 0 0 0 0 0 0
+7 0 0 0
+10 1000 100 10 0
+#8113
+sandálias akhenaton~
+as sandálias de Akhenaton~
+Um par de sandálias digno de um faraó foi deixado aqui.~
+~
+9 bk 0 0 0 ag 0 0 0 0 0 0 0
+10 0 0 0
+12 500000 50000 90 0
+A
+18 2
+#8114
+algumas bandagens~
+algumas bandagens~
+Há algumas bandagens encardidas aqui.~
+~
+13 a 0 0 0 ad 0 0 0 0 0 0 0
+0 0 0 0
+1 1 1 0 0
+A
+17 10
+#8115
+cesta~
+uma cesta~
+Uma velha cesta foi jogada no chão daqui.~
+~
+15 0 0 0 0 ao 0 0 0 0 0 0 0
+80 0 -1 0
+8 30 5 0 0
+#8116
+amuleto hórus~
+o amuleto de Hórus~
+Um misterioso amuleto parece magicamente atrair a sua atenção.~
+~
+11 bgjn 0 0 0 ac 0 0 0 defl 0 0 0
+0 0 0 0
+15 900000 150000 70 0
+E
+amuleto hórus~
+O poder que emana do amuleto lhe dá uma sensação de força...
+~
+A
+17 -10
+A
+1 2
+A
+2 1
+#8117
+lança Sekmet~
+a lança de Sekmet~
+Uma grande e bela lança foi esquecida aqui.~
+~
+5 bgjl 0 0 0 an 0 0 0 0 0 0 0
+0 5 7 11
+20 500000 60000 70 0
+E
+lança Sekmet~
+Essa bela lança foi feita de algum estranho e raro material.  Você examina
+com atenção o grande número de desenhos inscritos por toda sua extensão, mas
+não consegue entendê-los.
+~
+A
+18 7
+A
+2 2
+#8118
+manto negro~
+um manto negro~
+Um manto negro foi jogado aqui.~
+~
+15 gjl 0 0 0 ak 0 0 0 0 0 0 0
+9 0 -1 0
+9 40000 4000 70 0
+A
+17 -8
+A
+19 2
+A
+1 1
+#8119
+manto prateado~
+um manto prateado~
+Um manto preateado foi jogado aqui.~
+~
+15 bgk 0 0 0 ak 0 0 0 0 0 0 0
+9 0 -1 0
+10 50000 6000 50 0
+A
+2 1
+A
+18 2
+A
+17 -7
+#8120
+ankh osíris~
+a ankh de Osíris~
+Uma poderosa ankh jaz aqui a espera de um guardião. Ela brilha ao seu olhar.~
+~
+11 aglo 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+7 750000 75000 70 0
+E
+ankh osiris~
+Esse artefato possui um poder incrível...  O espírito de Osíris parece
+descansar em seu interior.
+~
+A
+13 10
+A
+18 1
+A
+17 -10
+#8121
+pote~
+um pote de água~
+Um pequeno pote de água está aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+4 4 0 0
+9 10 1 0 0
+#8122
+lamparina~
+uma lamparina~
+Você vê uma lamparina jogada aqui.~
+~
+1 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 5 0
+6 20 0 0 0
+#8123
+esfinge ouro~
+uma esfinge de ouro~
+Uma belíssima réplica em ouro de uma esfinge foi deixada aqui.~
+~
+8 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+8 50000 5000 0 0
+#8124
+turbante branco~
+um turbante branco~
+Um fino turbante branco foi deixado aqui.~
+~
+11 akl 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+3 100 20 70 0
+A
+17 -9
+A
+2 1
+A
+1 1
+A
+13 10
+#8125
+cetro immothep~
+o cetro de Immothep~
+Um estranho cetro está aqui.~
+~
+12 gjnp 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+30 800000 80000 70 0
+A
+13 18
+A
+12 -10
+A
+1 3
+#8126
+qebehsenuef canópica bela~
+a canópica de Qebehsenuef~
+Uma bela canópica foi colocada aqui.~
+~
+17 bh 0 0 0 ao 0 0 0 0 0 0 0
+5 4 13 1
+40 5000 500 30 0
+#8127
+hapi canópica ornamentada~
+a canópica de Hapi~
+Uma canópica ornamentada foi deixada aqui.~
+~
+17 abh 0 0 0 ao 0 0 0 0 0 0 0
+6 6 13 0
+30 6000 300 30 0
+#8128
+canópica ouro deimsety~
+a canópica de Deimsety~
+Uma canópica de ouro está brilhando aqui.~
+~
+12 bghj 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+30 80000 5000 40 0
+#8129
+canópica esplêndida duamutef~
+a canópica de Duamutef~
+Uma esplêndida canópica com confusos desenhos foi guardada aqui.~
+~
+12 bghl 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+30 80000 5000 40 0
+#8130
+livro mortos~
+o Livro dos mortos~
+Um grande livro negro está aqui envolto por uma misteriosa luz.~
+~
+12 bgjop 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+30 900000 150000 80 0
+E
+livro mortos~
+Ele é um grande e velho livro com antigas preces egípcias.  Segundo dizem, é
+um dos mais poderosos livros que já existiu.
+~
+A
+12 100
+A
+13 100
+#8131
+frasco veneno negro~
+um frasco de veneno~
+Um pequeno frasco negro está no chão.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+2 2 13 1
+9 20 1 0 0
+#8132
+frasco perfume belo~
+um frasco de perfume~
+Um belo frasco de perfume está aqui.~
+~
+8 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+13 8000 800 0 0
+#8133
+adaga egípcia hieróglifos~
+uma adaga egípcia~
+Uma adaga com confusos hieróglifos foi jogada aqui.~
+~
+5 gln 0 0 0 ano 0 0 0 0 0 0 0
+0 2 4 11
+7 60000 5000 30 0
+#8134
+lança egípcia bela~
+uma lança egípcia~
+Uma bela lança foi deixada aqui.~
+~
+5 gl 0 0 0 an 0 0 0 0 0 0 0
+0 3 5 11
+15 70000 5000 30 0
+#8135
+faca egípcia~
+uma faca egípcia~
+Uma faca reluzindo uma luz maligna foi jogada aqui.~
+~
+5 agjln 0 0 0 ano 0 0 0 0 0 0 0
+0 5 7 3
+8 900000 200000 50 0
+E
+faca egípcia~
+Esta faca está coberta por desenhos de chamas...  Dela se desprende uma
+energia maligna.
+~
+A
+13 5
+A
+19 2
+A
+18 2
+#8136
+espada egípcia grande~
+uma espada egípcia~
+Uma grande espada jaz aqui esperando um futuro banho de sangue.~
+~
+5 abjmnotu 0 0 0 an 0 0 0 0 0 0 0
+0 3 8 3
+10 500 30 30 0
+A
+1 -2
+A
+2 3
+A
+17 -2
+#8137
+machado egípcio~
+um machado egípcio~
+Um machado de aparência ameaçadora foi jogado aqui.~
+~
+5 bgjmnortu 0 0 0 an 0 0 0 0 0 0 0
+0 3 9 6
+20 500 60 30 0
+A
+18 4
+A
+19 1
+#8138
+turbante egípcio velho~
+um turbante egípcio~
+Um velho turbante foi esquecido aqui.~
+~
+11 al 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+5 22000 300 10 0
+A
+17 -8
+A
+5 2
+#8139
+turbante vizir~
+o turbante do Vizir~
+Um turbante feito em fino tecido foi jogado no chão.~
+~
+11 aj 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+4 20000 2000 15 0
+A
+17 -10
+A
+13 -10
+A
+2 1
+A
+6 2
+#8140
+manto sacerdote~
+o manto do sacerdote~
+Um manto que emite estranha aura foi deixado aqui.~
+~
+9 abjl 0 0 0 ak 0 0 0 0 0 0 0
+7 0 0 0
+6 300 30 30 0
+A
+6 -1
+A
+12 10
+#8141
+embrace egípcio velho~
+um embrace egípcio~
+Um velho embrace foi jogado aqui.~
+~
+9 bl 0 0 0 ai 0 0 0 0 0 0 0
+4 0 0 0
+10 200 30 50 0
+A
+18 1
+#8142
+boi amuleto pequeno ápis~
+o boi Ápis~
+Um pequeno amuleto foi deixado aqui.~
+~
+8 bdgh 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+10 5000 500 0 0
+E
+boi ápis amuleto~
+Esse amuleto traz a imagem de uma poderosa divindade egípcia.
+~
+#8143
+capa linho branco~
+uma capa de linho branco~
+Uma bela capa branca foi esquecida aqui.~
+~
+9 akl 0 0 0 ac 0 0 0 0 0 0 0
+7 0 0 0
+5 100 20 30 0
+A
+17 -1
+#8144
+capa linho negro negra~
+uma capa de linho negro~
+Uma capa negra foi deixada aqui.~
+~
+9 ajl 0 0 0 ac 0 0 0 0 0 0 0
+7 0 0 0
+5 100 20 30 0
+A
+17 -1
+#8145
+amuleto ápis misterioso~
+o amuleto de Ápis~
+Um misterioso amuleto foi deixado aqui.~
+~
+9 b 0 0 0 ac 0 0 0 0 0 0 0
+5 0 0 0
+3 10000 100 0 0
+A
+17 -3
+#8146
+pedra egípcia~
+uma pedra egípcia~
+Uma velha pedra está aqui brilhando suavemente.~
+~
+1 a 0 0 0 ao 0 0 0 0 0 0 0
+0 0 120 0
+3 100 20 0 0
+A
+17 -5
+#8147
+papiro smmrmb velho~
+um papiro que lê 'smmrmb'~
+Um velho papiro foi jogado aqui.~
+~
+2 g 0 0 0 a 0 0 0 0 0 0 0
+70 42 -1 -1
+2 1000 150 0 0
+#8148
+papiro momr~
+um papiro que lê 'momr'~
+Um papiro bem conservado está aqui.~
+~
+2 g 0 0 0 a 0 0 0 0 0 0 0
+50 56 -1 -1
+4 2000 50 0 0
+#8149
+papiro aamb~
+um papiro que lê 'aamb'~
+Um pequeno papiro foi jogado aqui.~
+~
+2 g 0 0 0 a 0 0 0 0 0 0 0
+70 59 -1 -1
+4 5000 300 0 0
+#8150
+frasco poção anúbis~
+a poção de Anúbis~
+Um frasco com um líquido misterioso foi deixado aqui.~
+~
+10 g 0 0 0 a 0 0 0 0 0 0 0
+28 36 35 16
+15 50000 2000 0 0
+#8151
+poção íbis clara~
+a poção do Íbis~
+Uma poção clara foi esquecida aqui.~
+~
+10 cg 0 0 0 a 0 0 0 0 0 0 0
+20 39 39 -1
+5 30000 3000 0 0
+#8152
+papiro sobek ornamentado~
+o papiro de Sobek~
+Um papiro bem ornamentado foi deixado aqui.~
+~
+2 g 0 0 0 a 0 0 0 0 0 0 0
+36 1 -1 -1
+5 15000 150 0 0
+#8153
+pão integral~
+um pão integral~
+Um pão está jogado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+13 0 0 0
+2 60 6 0 0
+#8154
+tanga egípcia~
+uma tanga egípcia~
+Uma bela tanga foi deixada aqui.~
+~
+9 k 0 0 0 al 0 0 0 0 0 0 0
+4 0 0 0
+5 500 50 0 0
+#8155
+bracelete bronze~
+um bracelete de bronze~
+Um bracelete de bronze foi esquecido aqui.~
+~
+9 mnt 0 0 0 am 0 0 0 0 0 0 0
+2 0 0 0
+12 25000 2500 0 0
+A
+1 1
+#8156
+cinto egípcio~
+um cinto egípcio~
+Um belo cinto foi deixado aqui.~
+~
+9 al 0 0 0 al 0 0 0 0 0 0 0
+1 0 0 0
+5 40000 4000 30 0
+A
+17 -5
+#8157
+coroa bronze~
+uma coroa de bronze~
+Uma coroa de bronze foi esquecida no chão.~
+~
+9 abln 0 0 0 ae 0 0 0 0 0 0 0
+8 0 0 0
+7 400 40 30 0
+#8158
+máscara prata~
+uma máscara de prata~
+Uma brilhante máscara de prata foi jogada aqui.~
+~
+9 aklm 0 0 0 ae 0 0 0 0 0 0 0
+9 0 0 0
+3 500 50 30 0
+#8159
+bracelete prata~
+um bracelete de prata~
+Um belo bracelete de prata está aqui.~
+~
+9 ajlm 0 0 0 am 0 0 0 0 0 0 0
+5 0 0 0
+3 500 50 0 0
+#8160
+escaravelho coleóptero~
+um escaravelho-coleóptero~
+Um escaravelho está aqui, brilhando levemente.~
+~
+1 ab 0 0 0 ao 0 0 0 0 0 0 0
+0 0 100 0
+5 300 30 30 0
+A
+17 5
+A
+1 1
+#8161
+alarga~
+uma alarga~
+Uma alarga foi deixada aqui.~
+~
+11 gmnt 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+6 800 80 0 0
+A
+17 -3
+A
+18 1
+#8162
+cabeça serpente~
+uma cabeça de serpente~
+Uma cabeça de serpente o fita ameaçadoramente.~
+~
+11 bop 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+4 3000 30 30 0
+A
+17 -5
+A
+12 30
+#8163
+pássaro alma esplêndido~
+um pássaro alma~
+Um esplêndido pássaro pousou aqui.~
+~
+1 ab 0 0 0 ac 0 0 0 0 0 0 0
+0 0 80 0
+4 6000 30 30 0
+A
+17 -5
+A
+12 20
+A
+13 10
+#8164
+escudo soldado guerra~
+um escudo de soldado~
+Um escudo de guerra foi deixado aqui.~
+~
+9 lo 0 0 0 aj 0 0 0 0 0 0 0
+5 0 0 0
+12 20000 200 30 0
+A
+17 -5
+A
+2 1
+#8165
+pena~
+uma pena~
+Um magnífica pena foi deixada aqui.~
+~
+12 agj 0 0 0 ao 0 0 0 v 0 0 0
+0 0 0 0
+2 50000 500 30 0
+E
+pena~
+Essa bela pena possui um estranho brilho...  É possível sentir uma aura de
+força a rodeando.
+~
+A
+12 40
+#8166
+balança~
+uma balança~
+Uma balança rodeada de hieróglifos está aqui.~
+~
+12 abg 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+80 30000 300 0 0
+E
+balança~
+Esta bonita balança foi feita de um material bastante raro...  Você a
+examina, admirando seus hieróglifos.
+~
+#8167
+sarcófago~
+um enorme sarcófago~
+Há um enorme sarcófago aqui.~
+~
+12 a 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+800 50000 500 0 0
+E
+sarcófago~
+Há algo nesse grande sarcófago que o atrai...  É estranho, mas em meio a um
+lugar tão mórbido, ele se mantém limpo e belo.  Há um desenho em sua tampa,
+uma espécie de inscrição...  Isso só poderia ter sido feito por algo
+sobre-humano.
+~
+#8168
+parede~
+uma parede~
+Uma das paredes emite uma estranha força.~
+~
+12 a 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+4000 400 40 0 0
+E
+parede~
+Você observa essa gigantesca parede que estranhamente parece brilhar.
+Há por toda sua extensão um grande número de hieroglifós que, mesmo você
+não entendendo tudo o que dizem, alertam sobre um grande perigo...
+~
+#8169
+pilar djed pilar-djed~
+o Pilar-Djed~
+Há um grande pilar no meio da sala.~
+~
+12 a 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+3000 300 30 0 0
+E
+pilar djed pilar-djed~
+Uma leve luz avermelhada rodeia esse grande pilar de pedra iluminando toda a
+sala.  Os hieróglifos nele esculpidos são muito confusos pelo que você
+conseguiu analisar.  Eles dizem algo sobre uma terrível batalha entre os
+deuses do Egito...  E sobre uma enorme serpente cuspidora de fogo.  Há ainda
+uma inscrição que diz '...Pilar-Djed...'.
+~
+#8170
+laço ísis~
+o laço de Ísis~
+Um belo laço foi deixado aqui.~
+~
+11 bjl 0 0 0 al 0 0 0 0 0 0 0
+0 0 0 0
+1 30000 300 60 0
+A
+17 -2
+A
+18 1
+A
+19 1
+#8171
+hieróglifo~
+um velho hieróglifo~
+Um hieróglifo empoeirado caiu aqui.~
+~
+18 a 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+4 200 20 0 0
+#8172
+crânio acinzentado~
+um crânio acinzentado~
+Um crânio acinzentado foi jogado aqui.~
+~
+18 a 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+2 100 10 0 0
+#8173
+chave enferrujada~
+uma velha chave enferrujada~
+Um chave enferrujada foi esquecida aqui.~
+~
+18 a 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 100 10 0 0
+$~

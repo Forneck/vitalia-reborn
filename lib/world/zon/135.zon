@@ -1,0 +1,62 @@
+#135
+Vitalia~
+A Floresta Tropical de Thewster~
+13500 13599 15 2 0 0 0 -1 -1
+-1
+M 0 13500 3 13543
+M 0 13501 3 13543
+M 0 13502 3 13543
+M 0 13502 3 13543
+M 0 13503 3 13543
+M 0 13504 3 13543
+M 0 13504 3 13543
+M 0 13505 2 13543
+G 1 13501 10
+M 0 13517 5 13543
+M 0 13517 5 13543
+O 0 13500 3 13540
+O 0 13500 3 13541
+O 0 13500 3 13542
+M 0 13506 1 13549		O Hierofante
+E 1 13517 99 16		segurar uma vara
+E 1 13518 99 5		vestir o manto
+G 1 13526 99		ervas rosas
+G 1 13525 99		ervas laranjas
+M 0 13507 1 13545		a Hierofante f�mea
+E 1 13517 99 16		segurar uma vara
+E 1 13518 99 5		vestir o manto
+G 1 13520 99		ervas azuis
+G 1 13522 99		ervas negras
+M 0 13508 1 13546	o druida elfo
+E 1 13517 99 16	 segurar uma vara
+G 1 13521 99		erva roxa
+G 1 13523 99		ervas cinza
+M 0 13509 1 13548		o druida elfo
+E 1 13517 99 16		segurar uma vara
+G 1 13526 99		ervas rosas
+G 1 13524 99		ervas vermelhas
+M 0 13510 2 13549
+M 0 13511 2 13550
+M 0 13512 1 13549
+M 0 13513 4 13547		coelho
+M 0 13513 4 13547		coelho
+M 0 13514 9 13550		cobra
+M 0 13515 1 13555		druida
+G 1 13520 99		ervas azuis
+M 0 13515 2 13562		druida
+G 1 13523 99		ervas cinzas
+M 0 13516 1 13558		drioda
+G 1 13521 99		ervas roxas
+M 0 13516 2 13561		druida
+G 1 13525 99		ervas laranjas
+O 0 13508 2 13556		armario
+O 0 13508 2 13558
+O 0 13509 2 13559
+P 1 13510 1 13509
+O 0 13509 2 13559
+P 1 13511 1 13509
+O 0 13512 1 13559
+D 0 13558 1 1
+D 0 13559 3 1
+S
+$~

@@ -1,0 +1,227 @@
+#5701
+brownie floresta~
+o brownie da floresta~
+Um brownie da floresta refugia-se por aqui.
+~
+O brownie da floresta pisca para você e se esconde ligeiro.  Bastante
+amigável esta criaturinha.
+~
+2097348 0 0 0 1048580 0 0 0 800 E
+12 9 1 150d1+20 2d7+5
+300 15000
+8 8 1
+E
+#5702
+lobo~
+o lobo~
+um lobo ronda por aqui procurando um coelho.
+~
+O lobo parece estar bastante faminto.  Você percebe que ele está pensando se
+VOCÊ não teria o mesmo gosto de um coelho.
+~
+2097220 0 0 0 1048576 0 0 0 -300 E
+5 16 5 50d1+10 3d3+2
+0 2000
+8 8 1
+E
+#5703
+coelho pardo~
+o coelho pardo~
+Um coelho pardo saltita alegremente.
+~
+O coelho olha em sua direção com seus grandes olhos castanhos e então bate
+em retirada..  OPA..  Lá vai seu almoço!
+~
+2097344 0 0 0 0 0 0 0 400 E
+3 18 7 30d1+5 1d3+1
+0 600
+8 8 1
+E
+#5704
+tomal mateiro~
+Tomal~
+Um mateiro olha para você com um talo de mato pendendo de sua boca.
+~
+O mateiro sorri disfarçando e com um sotaque desconhecido diz, 'Oi
+forasteiro - o nome é Tomal..  Como vai?'
+~
+2097348 0 0 0 256 0 0 0 800 E
+23 2 -2 400d1+250 3d8+8
+1000 70000
+8 8 1
+E
+#5705
+demônio guardião forma sombria~
+O guardião demônio~
+Uma forma sombria aparece da neblina.
+~
+Você vê uma tenebrosa combinação de dentes e garras, o guardião demônio está
+decidido a arrancar suas tripas.
+~
+2097250 0 0 0 788736 0 0 0 -1000 E
+30 -1 -10 500d2+300 5d5+10
+10000 132317
+8 8 1
+E
+#5706
+guarda sentinela graye~
+O guarda de Graye~
+O guarda de Graye vigia em seu posto.
+~
+O guarda sorri gentilmente dizendo, 'Melhor ficar perto de mim, amigo, é um
+mundo perigoso lá fora.'
+~
+2097218 0 0 0 256 0 0 0 900 E
+30 0 -2 200d2+200 3d6+11
+20000 40000
+8 8 1
+E
+#5707
+diabinho diabo~
+o diabinho~
+um diabinho rosnando para você.
+~
+Ele parece um diabinho inofensivo, mas seus dentes afiados poderiam machucar
+se ele mordesse seu braço.
+~
+2097252 0 0 0 1048576 0 0 0 -800 E
+8 12 3 50d1+10 3d3+6
+1 5000
+8 8 1
+E
+#5708
+menor demônio~
+o demônio menor~
+Um demônio menor salta em sua direção saindo das sombras!
+~
+O demônio aparenta ser um pequenino amontoado de carne viva, cartilagem e
+dentes.  Ele o fita com muita fúria em seus olhos.
+~
+2097248 0 0 0 2097156 0 0 0 -900 E
+13 8 1 150d2+80 2d7+8
+1 15000
+8 8 1
+E
+#5709
+cidadão graye homem~
+O cidadão Graye~
+Um cidadão de Graye passa correndo olhando por sobre os ombros.
+~
+O homem parece preocupado - Você também estaria se sua cidade estivesse
+sitiada por demônios.
+~
+2097344 0 0 0 256 0 0 0 700 E
+17 6 1 150d2+30 2d8+8
+1000 22000
+8 8 1
+E
+#5710
+cidadã mulher~
+a cidadã de Graye~
+Uma cidadã de Graye passa correndo olhando por sobre os ombros.
+~
+A mulher parece preocupada - Você também estaria se sua cidade estivesse
+sitiada por demônios.
+~
+2097280 0 0 0 256 0 0 0 700 E
+19 6 2 150d2+20 2d7+9
+3000 22000
+8 8 2
+E
+#5711
+demônio maior~
+um demônio maior~
+Um demônio maior está aqui a espreita.
+~
+Você olha bem dentro dos olhos dessa besta.  Você não nota nenhuma razão ou
+conhecimento a não ser uma imensa sêde de poder e destruição.
+~
+2097252 0 0 0 260 0 0 0 -900 E
+36 -2 -1 350d2+220 3d8+14
+5000 64000
+8 8 1
+E
+#5712
+guardião gruta espectro~
+O guardião da gruta~
+Um espectro de sombra aparece violentamente em seu caminho.
+~
+Tudo que você vê é um nevoeiro com dois grandes olhos vermelhos brilhando...
+~
+2097250 0 0 0 260 0 0 0 -900 E
+35 -1 -3 800d1+250 3d7+13
+10000 125987
+8 8 1
+E
+#5713
+guarda cela carcereiro~
+o carcereiro~
+Um carcereiro ronda por aqui, chicoteando os prisioneiros.
+~
+O guarda parece ser..  Bem...  Quase humano.  Ele está coberto por feridas e
+tufos de pelos.  Ele te avista com seu único olho bom e diz, 'Abaixe as
+armas..  Prisioneiro!'
+~
+2097254 0 0 0 256 0 0 0 -800 E
+28 1 0 250d1+110 3d6+10
+5000 48999
+8 8 1
+E
+#5714
+rymat conselheiro~
+Rymat~
+O conselheiro do rei está aqui, soluçando.
+~
+Ele olha para você e implora, 'Por favor!  Eles o levaram!  Eu vejo que é um
+destemido aventureiro..  Por favor traga-o de volta para nós!' O conselheiro
+lhe dá as costas e continua a lamentar-se, tremendo incontrolavelmente.
+~
+2097218 0 0 0 256 0 0 0 900 E
+23 0 0 350d1+50 3d8+13
+1000 70000
+8 8 1
+E
+#5715
+irgon arque demônio~
+O Arque-Deomônio Irgon~
+O Arque-Demônio emerge das sombras.
+~
+Irgon olha para você com desprezo.  Suas costas oleosas refletem a luz das
+tochas.  Uma grande garra branca aponta em sua direção e ele profetiza,
+'Prepare-se para morrer.'
+~
+2097250 0 0 0 262404 0 0 0 -900 E
+43 -3 -18 900d2+150 5d5+17
+29000 130000
+8 8 1
+E
+#5716
+scrytin demônio discípulo~
+Scrytin~
+Scrytin, o discípulo do senhor dos demônios, sorri para você.
+~
+Scrytin olha para você com ternura e de repente você se sente em paz e
+relaxado.  Você o encara diretamente nos olhos e se sente adormecer
+profundamente mais e mais...NÃO!!!!  Scrytin, percebendo que você saiu de
+seu transe grunhe, 'Não quer ser meu escravo hein?..  Então você deve
+morrer'
+~
+2097248 0 0 0 65856 0 0 0 -999 E
+45 -4 -10 1000d2+250 4d8+18
+29000 140000
+8 8 1
+E
+#5717
+relnar rei~
+rei Relnar~
+O bom Rei Relnar está aqui.
+~
+Você olha dentro de seus olhos e nota sua descendência direta de Graye e
+agora é capaz de compreender porque sua cidade é tão próspera e feliz.
+~
+2097218 0 0 0 65856 0 0 0 999 E
+45 -6 -10 1000d2+250 4d8+19
+32000 150000
+8 8 1
+E
+$

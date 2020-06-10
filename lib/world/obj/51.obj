@@ -1,0 +1,185 @@
+#5100
+espada longa cidadão~
+uma espada longa de um cidadão~
+Uma espada longa de um cidadão, feita de adamantite, foi deixada aqui.~
+~
+5 m 0 0 0 an 0 0 0 0 0 0 0
+0 1 8 3
+12 1000 500 0 0
+A
+18 1
+A
+19 1
+#5101
+espada longa nobre~
+uma espada longa de um nobre~
+Uma espada longa de um nobre, feita de adamantite, está aqui.~
+~
+5 m 0 0 0 an 0 0 0 0 0 0 0
+0 1 8 3
+12 1500 800 0 0
+A
+18 2
+A
+19 2
+#5102
+chicote cobra duas cabeças~
+um chicote com duas cabeças de cobra~
+Um chicote com duas cabeças de cobra está aqui.~
+~
+5 ab 0 0 0 an 0 0 0 0 0 0 0
+0 2 6 2
+12 1750 1500 0 0
+A
+18 2
+A
+19 2
+#5103
+chicote cobra três cabeças~
+um chicote com três cabeças de cobra~
+Um chicote com três cabeças de cobra foi deixado aqui.~
+~
+5 ab 0 0 0 an 0 0 0 0 0 0 0
+0 2 7 2
+12 5000 2300 0 0
+A
+18 2
+A
+19 2
+#5104
+chicote cobra quatro cabeças~
+um chicote com quatro cabeças de cobra~
+Um chicote com quatro cabeças de cobra foi cuidadosamente deixado aqui.~
+~
+5 ab 0 0 0 an 0 0 0 0 0 0 0
+0 2 8 2
+12 10250 4000 0 0
+A
+18 2
+A
+19 2
+#5105
+longa espada negra~
+uma longa espada negra~
+Uma longa espada negra foi cuidadosamente deixada aqui.~
+~
+5 agm 0 0 0 an 0 0 0 0 0 0 0
+0 2 8 3
+12 10250 4000 0 0
+A
+18 2
+A
+19 2
+#5106
+chicote cobra cinco cabeças~
+um chicote com cinco cabeças de cobra~
+Um chicote com cinco cabeças de cobra foi cuidadosamente deixado aqui.~
+~
+5 agj 0 0 0 an 0 0 0 0 0 0 0
+0 3 6 2
+12 12000 4500 0 0
+A
+1 -2
+A
+3 -2
+#5107
+chicote cobra seis cabeças~
+um chicote com seis cabeças de cobra~
+Um chicote com seis cabeças de cobra foi cuidadosamente abandonado aqui.~
+~
+5 agj 0 0 0 an 0 0 0 0 0 0 0
+0 4 5 2
+12 15000 8000 0 0
+A
+1 -3
+A
+3 -3
+#5108
+protetor braço ferro~
+um par de protetores de braço~
+Um par de protetores de braço de ferro foi abandonado aqui.~
+~
+9 ag 0 0 0 ai 0 0 0 0 0 0 0
+8 0 0 0
+3 2000 1000 0 0
+A
+18 -1
+#5109
+luvas~
+um par de luvas~
+Um par de luvas encontra-se aqui no chão.~
+~
+11 a 0 0 0 ah 0 0 0 0 0 0 0
+0 0 0 0
+2 10000 3000 0 0
+A
+1 2
+#5110
+vara azul prateada~
+uma vara azul prateada~
+Uma vara azul prateada foi abandonada aqui em meio da sujeira.~
+~
+3 g 0 0 0 ao 0 0 0 0 0 0 0
+10 3 3 30
+1 4000 3000 0 0
+#5111
+capacete pequeno~
+um pequeno capacete~
+Um pequeno capacete encontra-se encostado junto a uma rocha.~
+~
+9 g 0 0 0 ae 0 0 0 0 0 0 0
+1 0 0 0
+5 6000 3000 0 0
+A
+3 3
+#5112
+anel rubi~
+um pequeno anel de rubi~
+Um pequeno anel de rubi está jogado em meio da sujeira.~
+~
+11 g 0 0 0 ab 0 0 0 0 0 0 0
+0 0 0 0
+1 20000 8000 0 0
+A
+13 25
+#5113
+adaga aranha~
+uma adaga em formato de aranha~
+Um adaga com lâminas em formato de pernas de aranha está aqui no chão.~
+~
+5 gjmnpt 0 0 0 an 0 0 0 0 0 0 0
+0 3 4 11
+8 12000 15000 0 0
+A
+18 3
+A
+19 3
+#5114
+chapéu verde~
+um pequeno e brilhante chapéu verde~
+Um pequeno e brilhante chapéu verde foi deixado em meio a sujeira.~
+~
+9 h 0 0 0 ae 0 0 0 0 0 0 0
+6 0 0 0
+1 2000 600 0 0
+A
+9 -5
+A
+17 -2
+#5115
+chave adamantite~
+uma chave de adamantite~
+Uma chave feita de um estranho metal se encontra aqui.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+5115 0 0 0
+1 0 0 0 0
+#5116
+ouro tesouro moedas~
+uma pilha de moedas de ouro~
+Uma grande pilha de moedas de ouro se encontra aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+17645 0 0 0
+10 17645 0 0 0
+$~

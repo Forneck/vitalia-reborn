@@ -1,0 +1,743 @@
+#3000
+feiticeiro~
+o feiticeiro~
+Um feiticeiro anda de um lado para o outro, atrás do balcão, falando sozinho.
+~
+O feiticeiro parece velho e senil mas mesmo assim ele parece ser um feiticeiro
+muito poderoso. Ele está vestido com roupas finas, e está usando muitos anéis
+e braceletes da melhor qualidade.
+~
+2156546 0 0 0 16 0 0 0 900 E
+108 2 2 1d1+30000 2d8+18
+30000 160000
+8 8 1
+E
+#3001
+padeiro~
+o padeiro~
+O padeiro olha você calmamente, limpando a farinha em seu rosto com a mão.
+~
+Um gordo e bem apessoado padeiro. Mas você pode ver que ele possui muitas
+cicatrizes em seu corpo.
+~
+2156546 0 0 0 16 0 0 0 900 E
+108 0 -10 1d1+30000 2d8+18
+100 160000
+8 8 1
+E
+#3002
+merceeiro~
+o merceeiro~
+Um merceeiro está atrás do balcão, com um olhar ligeiramente impaciente.
+~
+Um merceeiro alto, que consegue carregar dois sacos de trigo, pesando 200
+libras cada um, em seus ombros.
+~
+2156546 0 0 0 16 0 0 0 900 E
+108 0 -10 1d1+30000 2d8+18
+30000 160000
+8 8 1
+E
+#3003
+vendedor~
+o vendedor de armas~
+Um vendedor de armas está parado aqui.
+~
+Ele é um jovem vendedor de armas, que ainda tem muita coisa para aprender,
+mas que está ansioso para lhe vender os seus mais novos instrumentos de
+carnificina e destruição.
+~
+2156546 0 0 0 16 0 0 0 900 E
+108 0 -10 1d1+30000 2d8+18
+30000 160000
+8 8 1
+E
+#3004
+armeiro~
+o armeiro~
+Um armeiro está aqui, mostrando a sua nova (e previamente usada) armadura.
+~
+Um armeiro velho mas muito forte. Ele já fêz mais armaduras em sua vida do
+que você poderia imaginar.
+~
+2156546 0 0 0 16 0 0 0 900 E
+108 0 -10 1d1+30000 2d8+18
+28500 160000
+8 8 1
+E
+#3006
+capitão stolar~
+Capitão Stolar~
+Um capitão aposentado está parado aqui, vendendo embarcações.
+~
+Este capitão comeu mais tubarões em sua vida do que você matou insetos.
+~
+2156546 0 0 0 16 0 0 0 900 E
+108 2 2 1d1+30000 2d8+12
+2000 160000
+8 8 1
+E
+#3007
+marinheiro~
+o marinheiro~
+Um marinheiro está parado aqui, esperando para ajudar você.
+~
+Ele parece ser forte como um lobo-do-mar.
+~
+2156546 0 0 0 0 0 0 0 900 E
+108 0 -10 1d1+30000 2d8+12
+2000 160000
+8 8 1
+E
+#3008
+tio juan~
+tio Juan~
+Tio Juan está aqui, pronto para receber as suas ordens.
+~
+Olhando para ele não se sabe ao certo se ele é um clandestino ou não.
+~
+2156546 0 0 0 0 0 0 0 900 E
+108 0 -10 1d1+30000 2d8+18
+2000 160000
+8 8 1
+E
+#3009
+wally vendedor~
+Wally o vendedor de água~
+Wally o vendedor de água está parado atrás do balcão.
+~
+Wally é um pouco distraído mas parece ser muito forte.  Ele tem um copo de
+água natural da Fonte de Midgaard nas mãos.  Quando nota você, imediatamente
+ele exibe a sua excelente coleção de águas minerais, das quais ele muito se
+orgulha.
+~
+2156546 0 0 0 16 0 0 0 800 E
+108 0 -10 1d1+30000 1d8+18
+1000 160000
+8 8 1
+E
+#3010
+carteiro agente postal~
+o agente postal~
+O chefe dos carteiros está aqui, pronto para lhe ajudar com a correspondência.
+~
+O agente postal parece ser um homem velho feliz, porém já um pouco lento.
+Ele se preocupa com a reputação do SCM (Serviço de Correio de Midgaard),
+porquê muitas pessoas parecem achar que este serviço está lento.  Talvez se
+ele escovasse as teias de aranha do seu uniforme, passaria uma impressão
+melhor.
+~
+2287618 0 0 0 65552 0 0 0 1000 E
+108 0 -10 1d1+30000 1d8+18
+2000 0
+8 8 1
+E
+#3011
+moe cartógrafo~
+Moe o Cartógrafo~
+Moe o Cartógrafo está aqui, sentado em sua escrivaninha.
+~
+Moe é um homem idoso, que viajou muito no passado. Agora, ele escreve mapas
+para ajudar aos novos aventureiros a atingirem suas conquistas pelo mundo
+afora.
+~
+2156548 0 0 0 2064 0 0 0 300 E
+108 0 -10 1d1+30000 1d8+18
+1200 200000
+6 6 1
+E
+#3015
+caçador aventuras~
+o caçador de aventuras~
+Um caçador de aventuras está parado aqui, procurando por sua presa.
+~
+O caçador de aventuras é um homem bem alto e forte, muito bem treinado nas
+artes de caçar e matar. Se eu fosse você, eu não o aborreceria. Pode ser
+extremamente perigoso para sua saúde.
+~
+2271378 0 0 0 591872 0 0 0 -100 E
+15 10 0 100d5+50 2d6+6
+5000 42000
+8 8 1
+E
+#3016
+vendedor jornaleiro garoto~
+o vendedor de jornais~
+O vendedor de jornais está aqui, carregando um fardo de jornais.
+~
+O vendedor de jornais é um garoto gordinho e baixo, que sua muito.  Em seu
+pescoço, está pendurada uma placa, que diz "Jornal de Vitália,
+Imparcialidade e Preço Baixo".  Quando ele o vê, corre em sua direção,
+oferecendo o jornal.  Ele carrega um fardo de jornais embaixo do braço.
+~
+2285632 0 0 0 16 0 0 0 150 E
+108 0 -10 1d1+30000 2d8+18
+0 160000
+8 8 1
+E
+#3020
+mestre-guia mago~
+a mestre-guia dos magos~
+Sua mestre-guia está aqui, estudando um livro de magia.
+~
+Embora sua mestre-guia pareça velha e cansada, você pode ver claramente a
+imensa sabedoria que ela possui.  Ela está usando uma delicada roupa mágica
+e você nota que ela está inteira envolvida por uma suave aura de tonalidade
+azul.
+~
+2156562 0 0 0 272 0 0 0 1000 E
+108 0 -10 10d100+2000 5d10+100
+18794 100000
+8 8 2
+E
+#3021
+mestre-guia sacerdote~
+o mestre-guia dos clérigos~
+Seu mestre-guia está orando para o seu Deus, aqui.
+~
+Você não tem nenhuma dúvida de que este mestre-guia verdadeiramente está
+perto de seu Deus; ele tem um olhar calmo, amoroso.  Você nota que ele é
+rodeado por uma aura branca.
+~
+2156562 0 0 0 272 0 0 0 1000 E
+108 0 -10 10d100+2000 5d10+100
+18794 100000
+8 8 1
+E
+#3022
+mestre-guia mendiga ladra~
+a mestre-guia dos ladrões~
+Uma mendiga está sentada aqui, ela poderia ser a sua mestre-guia?
+~
+Você nota que quando a sua mestre-guia se move, você não consegue perceber.
+Este é o jeito do verdadeiro ladrão. Ela está vestida com roupas pobres, e
+possui a aparência de uma mendiga.
+~
+2156562 0 0 0 272 0 0 0 1000 E
+108 0 -10 10d100+2000 5d10+100
+18794 100000
+8 8 2
+E
+#3023
+mestre-guia~
+o mestre-guia dos guerreiros~
+Seu mestre-guia está parado aqui, amolando um machado.
+~
+Este é seu mestre. Grande e forte, com músculos imensos. Várias cicatrizes
+espalhadas pelo seu corpo, provam que ele já estava usando seus braços muito
+antes de você nascer. Ele tem um olhar tranqüilo em sua face.
+~
+2156562 0 0 0 0 0 0 0 1000 E
+108 0 -10 10d100+2000 5d10+100
+18794 100000
+8 8 1
+E
+#3024
+feiticeiro~
+o feiticeiro~
+Um feiticeiro está guardando a entrada.
+~
+Ele é um mago experiente que se especializou na área da Magia de Combate.
+Ele está aqui para tomar conta da Guilda dos Magos. Seu conhecimento profundo
+de magias ofensivas e defensivas, fazem dele um oponente mortal.
+~
+2156546 0 0 0 272 0 0 0 900 E
+108 -20 -8 6d10+1500 8d8+80
+2000 60000
+8 8 1
+E
+#3025
+cavaleiro templar~
+o cavaleiro templar~
+Um cavaleiro templar está guardando a entrada.
+~
+Ele é um guerreiro especialmente treinado que pertence à ordem militar da
+Fé.  O dever dele é proteger os crentes de perseguições e ataques traiçoeiros.
+Sua devoção religiosa combinada à sua habilidade superior fazem dele
+um oponente mortal.
+~
+2156546 0 0 0 272 0 0 0 1000 E
+108 -20 -8 6d10+1500 8d8+80
+2000 160000
+8 8 1
+E
+#3026
+assassino~
+o assassino~
+Um assassino está guardando a entrada.
+~
+Ele é um ladrão que se especializou em matar os outros de maneira tão
+eficiente quanto possível, utilizando-se para isso, de todos os tipos de
+armas. O conhecimento superior que ele possui, o faz saber como, quando e
+onde usar de forma combinada e cautelosa estas armas. Isso faz dele um
+oponente mortal.
+~
+2156546 0 0 0 1573200 0 0 0 400 E
+108 -20 -8 6d10+1500 8d8+80
+2000 160000
+8 8 1
+E
+#3027
+cavaleiro~
+o cavaleiro~
+Um cavaleiro está guardando a entrada.
+~
+Ele é um guerreiro especialista que foi condecorado por incontáveis atos
+heróicos. O dever dele é proteger a Guilda dos Espadachins. Sua habilidade
+extrema combinada com sua experiência em guerras, faz dele um mortal oponente.
+~
+2156546 0 0 0 272 0 0 0 800 E
+108 -20 -8 6d10+1500 8d8+80
+2000 160000
+8 8 1
+E
+#3028
+mestre guia druidas~
+o mestre-guia dos druidas~
+Seu mestre-guia está aqui, alegremente dissertando sobre filosofia.
+~
+Você se sente calmo na presença desse sábio: seus bondosos olhos transmitem
+muita segurança, acalmando o coração mais agitado e despertando a mente mais
+preguiçosa.  Ele poderá passar-lhe todos os ensinamentos druídicos, mas
+exigirá de você a conduta daquele que acredita em um ideal.
+~
+2156562 0 0 0 272 0 0 0 1000 E
+108 0 -10 10d100+2000 5d10+100
+18794 100000
+8 8 1
+E
+#3029
+guardiã confraria druidisa~
+a guardiã da Confraria~
+Uma sorridente druidisa guarda a entrada da Confraria.
+~
+A guardiã da Confraria irradia juventude, mesmo sendo um dos membros mais
+antigos da Confraria.  Responsável pela segurança do refúgio dos sacerdotes
+em Midgaard, ela pacientemente guarda sua entrada, bloquando-a com sua
+poderosa magia.
+~
+2156546 0 0 0 272 0 0 0 1000 E
+108 -20 -8 6d10+1500 8d8+80
+2000 160000
+8 8 2
+E
+#3040
+barman~
+o barman~
+Um barman calmamente observa você, enquanto mistura gradativamente uma bebida.
+~
+Um barman com aspecto cansado que odeia desordens em seu bar.
+~
+2154498 0 0 0 0 0 0 0 900 E
+108 2 2 6d10+390 1d8+12
+2000 80000
+8 8 1
+E
+#3041
+garçom~
+o garçom~
+Um garçom está andando de um lado pro outro.
+~
+Um garçom com aspecto cansado.
+~
+2154498 0 0 0 0 0 0 0 900 E
+108 2 2 6d10+390 1d8+12
+2000 80000
+8 8 1
+E
+#3042
+garçom~
+o garçom~
+Um homem que agora leva uma vida quieta e pacífica como garçom, está aqui.
+~
+Este homem obviamente foi um famoso feiticeiro em seus dias de juventude.
+Você instantaneamente reconhece aquele rosto, assim que olha para ele.
+~
+2154498 0 0 0 0 0 0 0 600 E
+108 1 2 6d10+390 1d8+12
+2000 80000
+8 8 1
+E
+#3043
+garçom~
+o garçom~
+Um garçom que parece ter perdido contato com Deus, está parado aqui.
+~
+Este garçom faz você se sentir como se tivesse que ficar de joelhos e
+e começar a adorar Deus. Naaah.
+~
+2154498 0 0 0 0 0 0 0 600 E
+108 1 2 6d10+390 1d8+12
+2000 80000
+8 8 1
+E
+#3044
+garçom~
+o garçom~
+Um garçom que sabe onde seus fregueses guardam seu dinheiro, está parado aqui.
+~
+Hmmm... gostaria de saber onde ele arrumou aquela moeda que ele está brincando.
+~
+2154498 0 0 0 0 0 0 0 600 E
+108 1 2 6d10+390 1d8+12
+2000 80000
+8 8 1
+E
+#3045
+garçom~
+o garçom~
+Um garçom está aqui.
+~
+Parece que este sujeito poderia facilmente matar você sem derrubar nenhuma
+das garrafas de bebida que ele carrega
+~
+2154498 0 0 0 0 0 0 0 600 E
+108 1 2 6d10+390 1d8+12
+2000 80000
+8 8 1
+E
+#3046
+encardido~
+Encardido~
+Encardido está parado aqui, ansioso para servir uma bebida especial para você.
+~
+Encardido parece realmente... hmm... imundo. Ele gosta de manter os seus
+fregueses felizes, mas não mexa com ele ou ele poderá ficar realmente MUITO
+bravo.
+~
+2156562 0 0 0 16 0 0 0 600 E
+108 1 -10 1d1+30000 1d8+22
+2000 80000
+8 8 1
+E
+#3047
+garçom~
+o garçom~
+Um simpático garçom de traços celtas enxuga alguns copos com uma toalha.
+~
+Ele já é um senhor de idade, mas sua límpida e constante risada o faz
+parecer um druida ainda jovem, cheio de energia.  Você repara em sua
+cabeleira ruiva, que, assim como a longa barba encaracolada, está começando
+a ficar branca.
+~
+2154498 0 0 0 0 0 0 0 600 E
+108 1 2 6d10+390 1d8+12
+2000 80000
+8 8 1
+E
+#3048
+mestra trovadora~
+a mestra trovadora~
+Sua mestra está aqui, estudando algumas partituras.
+~
+Sua mestra, uma senhora de riso solto e voz poderosa, parece estar
+cantarolando mesmo ao falar.  Seus cabelos são brancos, curtos e arrepiados,
+os olhos negros brilhantes, o rosto redondo de bochechas e nariz rosados.
+Quando ela fala é como se a sua frente se descortinasse uma enorme tela de
+um quadro em que tudo tem vida, movimento.  Suas lições devem ser ouvidas
+atentamente e assimiladas pois o conhecimento dos bardos permite enxergar-se
+o mundo por trás do mundo...
+~
+2156562 0 0 0 272 0 0 0 1000 E
+108 0 -10 10d100+2000 5d10+100
+18794 100000
+8 8 2
+E
+#3049
+bardo sentinela~
+o bardo sentinela~
+Um bardo protege a entrada.
+~
+Protegido por longo manto, esse alto bardo assovia traqüilamente enquanto
+protege a entrada que leva ao Clube de Bardos. Sua aparência despreocupada
+oculta a esperteza e agilidade de um homem de mil talentos e cujos olhos,
+na cabeça coberta, brilham observando tudo.
+~
+2156546 0 0 0 272 0 0 0 800 E
+108 -20 -8 6d10+1500 8d8+80
+2000 160000
+8 8 1
+E
+#3050
+atendente mulher~
+a atendente~
+Uma mulher canta as opções de bebida que o bar oferece.
+~
+Saltitante feito uma pulga risonha (??), a atendente passa prá lá e pra cá
+cantando sobre qualquer coisa em que fixe seus olhos mais de cinco segundos.
+No momento ela inventou uma canção a respeito das bebidas do bar.  O refrão
+é algo como: "... e gulpt!  HIC!  HIC!  HIC!"
+~
+2154498 0 0 0 0 0 0 0 600 E
+108 1 2 6d10+390 1d8+12
+2000 80000
+8 8 2
+E
+#3051
+mestre bardo~
+o mestre bardo~
+Seu mestre bardo está aqui a cantar.
+~
+Seu mestre, um sábio conhecedor da música do mundo, vê tudo com seus olhos
+de pura poesia: desde o silêncio mais profundo até o mais sublime da magia.
+Ele o ensinará que cantar, tocar e criar é só mais uma forma de tornar
+a vida mais cheia de belezas e que uma de suas mais sérias missões
+é afugentar o mal e sua teia de tristezas.
+~
+2156562 0 0 0 272 0 0 0 1000 E
+108 0 -10 10d100+2000 5d10+100
+18794 100000
+8 8 1
+E
+#3052
+gambrinus senhor~
+Gambrinus~
+Um senhor de alvas suíças e espessas sobrancelhas limpa o balcão.
+~
+Gambrinus é um senhor alto e barrigudo, de nariz avermelhado e olhos quase
+sempre fechados de tanto rir.  Seus cabelos, brancos e já ralos, envolvem a
+cabeça e terminam em suíças cuidadosamente aparadas, da mesma cor que os
+poucos fios da careca e das espessas e rebeldes sobrancelhas.  Toda vez que
+ele vende algo, experimenta uma pequena porção do mesmo produto. Diz que é
+só para experimentar, mas tente imaginá-lo após um dia de trabalho...
+~
+2156546 0 0 0 272 0 0 0 800 E
+108 -20 -8 6d10+1500 8d8+80
+2000 160000
+8 8 1
+E
+#3053
+bardo bernardo~
+o bardo Bernardo~
+Um homem alto de vasta cabeleira castanha afina alguns instrumentos.
+~
+Bernardo lembra um urso: grande e forte, de pele bronzeada e cabelos
+encaracolados sempre rebeldes.  Um certo brilho brincalhão nunca deixa seus
+olhos escuros, estes protegidos pelas espessas sobrancelhas sempre
+despenteadas.  O sorriso amistoso consegue suavizar sua ameaçadora figura
+que, apesar de parecer desajeitada, é ágil e hábil, produzindo finos
+instrumentos e tocando-os com maestria e emoção.
+~
+2156546 0 0 0 272 0 0 0 800 E
+108 -20 -8 6d10+1500 8d8+80
+2000 160000
+8 8 1
+E
+#3059
+pacificador~
+o Pacificador~
+Um Pacificador está aqui, pronto para agir ao primeiro sinal de problema.
+~
+Ele parece muito forte e sábio. Parece que ele não fala com QUALQUER um.
+~
+2103376 0 0 0 16 0 0 0 1000 E
+40 0 -4 10d10+750 8d8+18
+4000 50500
+8 8 1
+BareHandAttack: 10
+E
+#3060
+sentinela~
+o sentinela~
+Um sentinela está parado aqui.
+~
+Um grande, forte, solidário e confiável sentinela.
+~
+2103360 0 0 0 16 0 0 0 1000 E
+10 10 1 1d12+123 1d8+5
+500 9000
+8 8 1
+E
+#3061
+zelador~
+o zelador~
+Um zelador anda de um lado para o outro, limpando tudo.
+~
+Que trabalho pesado ele tem.
+~
+2099264 0 0 0 0 0 0 0 800 E
+1 20 9 2d6+10 1d5+0
+34 100
+8 8 1
+E
+#3062
+cachorro fido~
+o fido bestial~
+Um fido bestial está aqui, fuçando no lixo, a procura de comida.
+~
+O fido é um cachorro pequeno que tem um cheiro muito ruim e seus dentes estão
+cheios de pedaços de carne apodrecida grudadas.
+~
+2162912 0 0 0 65536 0 0 0 -200 E
+0 20 10 1d6+4 1d4+0
+0 25
+8 8 1
+BareHandAttack: 4
+E
+#3063
+mercenário~
+o mercenário~
+Um mercenário está aqui, esperando por trabalho.
+~
+Ele tem um aspecto de ser muito mau, e você sabe que ele faria qualquer
+coisa por dinheiro.
+~
+2099202 0 0 0 0 0 0 0 -330 E
+5 15 5 2d6+60 1d6+1
+87 900
+8 8 1
+E
+#3064
+bêbado~
+o bêbado~
+Um bêbado feliz, cantando a plenos pulmões.
+~
+Um bêbado que parece estar muito feliz, e que carrega muito dinheiro.
+~
+2097154 0 0 0 0 0 0 0 400 E
+2 19 8 2d6+22 1d6+0
+53 200
+8 8 1
+E
+#3065
+mendiga~
+a mendiga~
+Uma mendiga está aqui, pedindo algumas moedas.
+~
+A mendiga parece que está farta da vida.
+~
+2097154 0 0 0 0 0 0 0 400 E
+1 20 9 2d6+10 1d5+0
+0 100
+8 8 2
+E
+#3066
+odif laitseb~
+o odif laitseb~
+Um odif laitseb está aqui, andando de trás prá frente.
+~
+O odif é um deus pequeno que foi transformado por algum cachorro.
+~
+2162912 0 0 0 65536 0 0 0 -200 E
+0 20 10 1d6+4 1d4+0
+0 25
+8 8 1
+BareHandAttack: 4
+E
+#3067
+sentinela~
+o sentinela~
+Um sentinela está aqui, tomando conta do portão.
+~
+Um grande, forte, solidário e confiável sentinela.
+~
+2103362 0 0 0 0 0 0 0 1000 E
+10 10 1 1d12+123 1d8+5
+500 9000
+8 8 1
+E
+#3068
+bolha gelatinosa verde~
+a bolha gelatinosa verde~
+Uma bolha gelatinosa verde e gosmenta está aqui, chupando restos de escombros.
+~
+Uma coisa medonha de se olhar; é enorme, esverdeado e se parece com uma bolha.
+~
+2353360 0 0 0 16 0 0 0 0 E
+20 0 0 1d11+325 3d6+5
+1000 40000
+8 8 2
+BareHandAttack: 6
+E
+#3089
+animais loja garoto~
+o Garoto da Loja de Animais~
+O Garoto da Loja da Animais está aqui, acariciando algo peludo em suas mãos.
+~
+Assim que você olha para ele, ele abre suas mãos e mostra um rato!
+~
+2156546 0 0 0 0 0 0 0 1000 E
+108 10 1 1d1+30000 20d4+10
+500 9000
+8 8 1
+E
+#3090
+gatinho~
+o gatinho~
+Um pequeno gatinho leal está aqui.
+~
+O gatinho parece ser um gracioso, pequenino e destemido lutador.
+~
+2113542 0 0 0 0 0 0 0 0 E
+1 20 9 1d6+11 1d4+0
+0 100
+8 8 0
+BareHandAttack: 8
+E
+#3091
+cachorrinho~
+o cachorrinho~
+Um pequenino e leal cachorrinho está aqui.
+~
+O cachorrinho parece ser um gracioso, pequenino e destemido lutador.
+~
+2113542 0 0 0 0 0 0 0 0 E
+1 20 9 1d6+13 1d4+0
+0 125
+8 8 0
+BareHandAttack: 8
+E
+#3092
+cão~
+o cão-de-caça~
+Um pequeno, rápido e leal cão-de-caça está aqui.
+~
+O cão-de-caça parece ser um lutador destemido.
+~
+2113542 0 0 0 0 0 0 0 0 E
+2 19 8 1d12+22 1d6+0
+0 200
+8 8 0
+BareHandAttack: 4
+E
+#3093
+rottweiler~
+o rottweiler~
+Um grande e leal rottweiler está aqui.
+~
+O rottweiler parece ser um forte e destemido lutador.
+~
+2113542 0 0 0 0 0 0 0 0 E
+3 18 7 1d12+35 1d7+0
+0 800
+8 8 0
+BareHandAttack: 4
+E
+#3094
+lobo~
+o lobo~
+Um lobo grande e bem treinado está aqui.
+~
+O lobo parece ser forte e um lutador que desconhece o medo.
+~
+2113542 0 0 0 0 0 0 0 0 E
+4 17 6 1d12+47 1d8+0
+0 1600
+8 8 0
+BareHandAttack: 4
+E
+#3095
+belchior gerente~
+Belchior, o Gerente do Brechó~
+Belchior, o Gerente do Brechó, está muito preocupado com sua comissão.
+~
+Belchior é um senhor interessante, irriquieto e parece estar bastante
+preocupado com alguma coisa.   Suas roupas estão tão empoeiradas!
+Pelo jeito dele, as vendas não andam muito boas.
+~
+2156550 0 0 0 2064 0 0 0 300 E
+108 0 -10 1d1+30000 1d8+18
+1200 200000
+8 8 1
+E
+$

@@ -1,0 +1,897 @@
+#5400
+palácio chave~
+as chaves do palácio de Nova Thalos~
+Uma grande chave brasonada com o escudo de Nova Thalos está jogada aqui.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+5400 0 0 0
+5 0 0 0 0
+#5401
+cidade chave~
+a chave da cidade de Nova Thalos~
+A pesada chave da cidade foi deixada aqui, na sujeira.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+5401 0 0 0
+5 0 0 0 0
+#5402
+fonte~
+a grande fonte central~
+A grande Fonte Central está aqui, dominando a Praça Central com sua imponência.~
+~
+23 ce 0 0 0 0 0 0 0 0 0 0 0
+9999 9999 0 0
+9999 0 0 0 0
+#5403
+maça espinhos~
+uma maça de espinhos~
+Uma pequena e espinhosa bola de metal conectada a um bastão por uma corrente está no chão.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 5 6
+5 1200 500 0 0
+#5404
+pique~
+um pique~
+Um pique está aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 12 16
+3 2100 100 0 0
+#5405
+bardiche~
+um bardiche~
+Um bardiche está aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 6 17
+4 1900 110 0 0
+#5406
+bec corbin~
+um bec de corbin~
+Um bec de corbin está aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 8 16
+3 5400 50 0 0
+#5407
+guisarme bill~
+um bill-guisarme~
+Um bill-guisarme está aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 10 17
+3 1300 50 0 0
+#5408
+fauchard~
+um fauchard~
+Um fauchard está aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 8 17
+3 1250 20 0 0
+#5409
+glaive~
+uma glaive~
+Uma glaive está aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 10 17
+3 1870 20 0 0
+#5410
+guisarme~
+um guisarme~
+Um guisarme está aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 4 17
+4 1953 20 0 0
+#5411
+foice~
+uma foice~
+Uma foice está aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 4 17
+1 500 10 0 0
+#5412
+espada bastarda duas mãos~
+uma espada bastarda de duas mãos~
+Uma espada bastarda de duas mãos está aqui.~
+~
+5 r 0 0 0 an 0 0 0 0 0 0 0
+0 2 8 3
+18 12580 10000 0 0
+#5413
+cimitarra~
+uma cimitarra~
+Uma cimitarra está aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 9 3
+10 1200 150 0 0
+A
+19 1
+#5414
+florete~
+um florete~
+Um florete está no chão.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 8 11
+10 3100 100 0 0
+A
+18 1
+#5415
+armadura elos~
+uma armadura de elos~
+Uma armadura de elos foi abandonada aqui.~
+~
+9 agmnotu 0 0 0 ad 0 0 0 0 0 0 0
+8 0 0 0
+25 3400 800 0 0
+#5416
+armadura escamas metal~
+uma armadura de escamas de metal~
+Uma armadura de brigantine foi jogada aqui.~
+~
+9 agmo 0 0 0 ad 0 0 0 0 0 0 0
+7 0 0 0
+20 2000 420 0 0
+#5417
+armadura placas lisas~
+uma armadura de placas lisas~
+Uma armadura de placas lisas foi esquecida aqui.~
+~
+9 agmnotu 0 0 0 ad 0 0 0 0 0 0 0
+9 0 0 0
+28 4000 1000 0 0
+#5418
+armadura anel anéis~
+uma armadura de anéis~
+Uma armadura de anéis está no chão.~
+~
+9 n 0 0 0 ad 0 0 0 0 0 0 0
+5 0 0 0
+6 1385 100 0 0
+#5419
+armadura tala~
+uma armadura de talas~
+Uma armadura de talas está aqui.~
+~
+9 m 0 0 0 ad 0 0 0 0 0 0 0
+4 0 0 0
+5 2500 100 0 0
+#5420
+escudo madeira~
+um escudo de madeira~
+Um escudo de madeira foi deixado aqui.~
+~
+9 0 0 0 0 aj 0 0 0 0 0 0 0
+1 0 0 0
+1 10 1 0 0
+#5421
+escudo de espinhos~
+Um escudo de espinhos~
+Um escudo de espinhos está aqui.~
+~
+9 0 0 0 0 aj 0 0 0 0 0 0 0
+7 0 0 0
+8 175 17 0 0
+#5422
+escudo~
+um escudo~
+Um escudo está no chão.~
+~
+9 0 0 0 0 aj 0 0 0 0 0 0 0
+1 0 0 0
+6 30 7 0 0
+#5423
+jaqueta couro~
+uma jaqueta de couro~
+Uma jaqueta de couro foi jogada aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+3 0 0 0
+6 600 200 0 0
+#5424
+mangas couro~
+um par de mangas de couro~
+Um par de mangas de couro está no chão.~
+~
+9 0 0 0 0 ai 0 0 0 0 0 0 0
+2 0 0 0
+2 350 200 0 0
+#5425
+gorro couro~
+um gorro de couro~
+Um gorro de couro foi deixado aqui.~
+~
+9 0 0 0 0 ae 0 0 0 0 0 0 0
+1 0 0 0
+2 65 200 0 0
+#5426
+calças couro~
+uma calça de couro~
+Uma calça de couro foi jogada aqui.~
+~
+9 0 0 0 0 af 0 0 0 0 0 0 0
+2 0 0 0
+2 850 200 0 0
+#5427
+luvas couro~
+um par de luvas de couro~
+Um par de luvas de couro está jogada aqui.~
+~
+9 0 0 0 0 ah 0 0 0 0 0 0 0
+2 0 0 0
+2 150 200 0 0
+#5428
+botas acolchoadas couro~
+um par de botas de couro acolchoadas~
+Um par de botas de couro acolchoadas está aqui.~
+~
+9 0 0 0 0 ag 0 0 0 0 0 0 0
+2 0 0 0
+2 410 200 0 0
+#5429
+jaqueta couro pregos~
+uma jaqueta de couro ornada com pregos~
+Uma jaqueta de couro ornada com pregos foi jogada aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+3 0 0 0
+10 650 200 0 0
+#5430
+mangas couro pregos~
+um par de mangas de couro ornada com pregos~
+Um par de mangas de couro ornada com pregos está no chão.~
+~
+9 0 0 0 0 ai 0 0 0 0 0 0 0
+3 0 0 0
+3 500 200 0 0
+#5431
+calça pregos couro~
+uma calça de couro ornada com pregos~
+Uma calça de couro ornada com pregos foi deixada aqui.~
+~
+9 0 0 0 0 af 0 0 0 0 0 0 0
+3 0 0 0
+3 500 200 0 0
+#5432
+luvas couro pregos~
+um par de luvas de couro ornada com pregos~
+Um par de luvas de couro com pinos foi esquecido aqui.~
+~
+9 0 0 0 0 ah 0 0 0 0 0 0 0
+3 0 0 0
+3 500 200 0 0
+#5433
+escudo couro~
+um escudo de couro~
+Um escudo de couro foi jogado aqui.~
+~
+9 0 0 0 0 aj 0 0 0 0 0 0 0
+5 0 0 0
+3 50 200 0 0
+#5434
+saco~
+um saco~
+Um saco está no chão.~
+~
+15 0 0 0 0 ao 0 0 0 0 0 0 0
+50 0 0 0
+1 20 200 0 0
+#5435
+lampião~
+um lampião~
+Um lampião está aqui.~
+~
+1 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 48 0
+1 100 200 0 0
+#5436
+mochila~
+uma mochila~
+Uma mochila foi abandonada aqui.~
+~
+15 0 0 0 0 ak 0 0 0 0 0 0 0
+75 1 0 0
+8 100 100 0 0
+#5437
+cesta~
+uma cesta~
+Uma cesta está no chão.~
+~
+15 0 0 0 0 a 0 0 0 0 0 0 0
+50 0 0 0
+4 250 50 0 0
+#5438
+cinto sacola cintura~
+uma sacola de cintura~
+Uma sacola de cintura está aqui.~
+~
+15 0 0 0 0 al 0 0 0 0 0 0 0
+25 0 0 0
+3 100 20 0 0
+#5439
+vela~
+uma vela~
+Uma vela está jogada aqui.~
+~
+1 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 50 0
+1 35 10 0 0
+#5440
+queijo pedaço~
+um pedaço de queijo~
+Um pedaço de queijo foi abandonado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+5 0 0 0
+1 5 10 0 0
+#5441
+pão~
+um pouco de pão~
+Um pouco de pão foi jogado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+3 0 0 0
+1 3 10 0 0
+#5442
+ração seca~
+um pouco de ração seca~
+Um pouco de ração seca está no chão.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+20 0 0 0
+2 20 30 0 0
+#5443
+ração ferro~
+um pouco de ração de ferro~
+Há um pouco de ração de ferro no chão.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+25 0 0 0
+3 25 50 0 0
+#5445
+noz nozes~
+algumas nozes~
+Algumas nozes estão espalhadas pelo chão.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+1 0 0 0
+1 1 10 0 0
+#5446
+cinto~
+um cinto~
+Um cinto bem trabalhado foi abandonado aqui.~
+~
+9 0 0 0 0 al 0 0 0 0 0 0 0
+0 0 0 0
+2 2 10 0 0
+#5447
+botas bota caminhar~
+um par de botas de caminhar~
+Um belo par de botas de caminhar foi jogada aqui.~
+~
+9 0 0 0 0 ag 0 0 0 0 0 0 0
+0 0 0 0
+3 390 10 0 0
+#5448
+capa manto~
+uma capa de pele~
+Uma belíssima capa de pele foi esquecida aqui.~
+~
+9 0 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+2 4550 50 0 0
+#5449
+faixa~
+uma faixa~
+Uma elegante faixa foi jogada por aqui.~
+~
+9 0 0 0 0 al 0 0 0 0 0 0 0
+0 0 0 0
+1 375 10 0 0
+#5450
+meia~
+um par de meias~
+Um par de meias foi esquecido aqui.~
+~
+9 0 0 0 0 ag 0 0 0 0 0 0 0
+0 0 0 0
+1 120 10 0 0
+#5451
+manto comum~
+um manto comum~
+Um elegante manto feito de tecido comum foi deixado aqui.~
+~
+9 0 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+2 90 20 0 0
+#5452
+manto bordado~
+um manto bordado~
+Um belo manto bordado está jogado aqui.~
+~
+9 0 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+2 2500 5 0 0
+#5453
+sandálias sandália~
+um par de sandálias~
+Um par de belas sandálias está no chão.~
+~
+9 0 0 0 0 ag 0 0 0 0 0 0 0
+0 0 0 0
+1 15 10 0 0
+#5454
+faixa~
+uma faixa~
+Há uma faixa jogada aqui.~
+~
+9 0 0 0 0 al 0 0 0 0 0 0 0
+0 0 0 0
+1 20 10 0 0
+#5455
+jaqueta seda~
+uma jaqueta de seda~
+Uma bela jaqueta de seda foi abandonada aqui.~
+~
+9 0 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+1 3800 100 0 0
+#5456
+ovo~
+um ovo~
+Há um ovo jogado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+2 0 0 0
+1 3 10 0 0
+#5457
+cenoura~
+uma cenoura~
+Você vê uma cenoura no chão.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+3 0 0 0
+1 4 10 0 0
+#5458
+tomate~
+um tomate~
+Um tomate foi jogado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+2 0 0 0
+1 8 10 0 0
+#5459
+figo~
+um figo~
+Alguém deixou um figo no chão.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+1 0 0 0
+1 2 10 0 0
+#5460
+tâmara tâmaras~
+algumas tâmaras~
+Há um punhado de tâmaras no chão.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+2 0 0 0
+1 4 10 0 0
+#5461
+carneiro pernil~
+um pernil de carneiro~
+Um pernil de carneiro foi deixado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+10 0 0 0
+2 10 20 0 0
+#5462
+bife~
+um bife~
+Você vê um bife jogado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+15 0 0 0
+5 20 50 0 0
+#5463
+frango~
+um frango~
+Um frango depenado foi deixado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+12 0 0 0
+3 12 30 0 0
+#5464
+arenque salgado~
+um arenque salgado~
+Um arenque salgado foi deixado aqui.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+8 0 0 0
+1 8 10 0 0
+#5465
+músculo~
+um músculo~
+Há um músculo no chão.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+4 0 0 0
+1 4 10 0 0
+#5467
+taça licor azul~
+uma taça~
+Uma taça de licor azulado foi esquecido aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+5 5 5 0
+10 1800 10 0 0
+#5468
+taça~
+uma taça~
+Uma taça foi deixada aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+1 1 2 0
+1 3800 10 0 0
+#5469
+garrafa grogue~
+uma garrafa de grogue de rum~
+Há uma garrafa no chão.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+2 2 3 0
+7 8000 10 0 0
+#5470
+frasco brilhante azul~
+um frasco azul brilhante~
+Há frasco azul brilhante no chão.~
+~
+10 ag 0 0 0 ao 0 0 0 0 0 0 0
+12 1 3 -1
+1 800 15 0 0
+E
+frasco brilhante azul~
+O líquido azulado dentro desse frasco possui um estranho brilho.  Há um pequeno rótulo que lê: 'Proteção'
+~
+#5471
+poção verde-escuro~
+uma poção verde-escuro~
+Uma poção verde-escuro foi abandonada aqui.~
+~
+10 ag 0 0 0 ao 0 0 0 0 0 0 0
+10 15 35 -1
+1 5000 15 0 0
+E
+poção verde~
+A poção dentro desse frasco é esverdiada e há um pequeno rótulo que lê: 'Cura'
+~
+#5472
+poção cristalina~
+uma poção cristalina~
+Uma poção cristalina foi perdida aqui.~
+~
+10 g 0 0 0 ao 0 0 0 0 0 0 0
+10 50 51 35
+1 3000 15 0 0
+E
+poção cristalina~
+Essa pequena garrafa parece conter um líquido muito claro.  Há um rótulo nela que lê: 'Preparação'
+~
+#5473
+poção lactescente~
+uma poção lactescente~
+Uma poção lactescente foi perdida aqui.~
+~
+10 cd 0 0 0 ao 0 0 0 0 0 0 0
+15 14 28 36
+1 25500 15 0 0
+E
+poção lactescente~
+Esse frasco contém um líquido extremamente branco que parece muito grosso.
+Um pequeno rótulo lê: 'Redenção'
+~
+#5474
+poção azul escura~
+uma poção azul escura~
+Uma poção azul escura foi abandonada aqui.~
+~
+10 0 0 0 0 ao 0 0 0 0 0 0 0
+10 35 14 -1
+1 4000 15 0 0
+E
+poção azul escura~
+Essa poção azul escura possui um pequeno rótulo onde se lê: 'Restauração'
+~
+#5475
+garrafa escorpião flamejante~
+um escorpião flamejante~
+Uma garrafa de cerveja forte foi deixada aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+5 5 1 0
+10 500 10 0 0
+#5476
+barril~
+um barril~
+Um barril de cerveja foi abandonado aqui.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+10 10 1 0
+15 900 50 0 0
+#5477
+dose~
+uma dose~
+Há uma dose de licor no chão.~
+~
+17 0 0 0 0 a 0 0 0 0 0 0 0
+1 1 5 0
+1 350 10 0 0
+#5478
+pergaminho retorno~
+um pergaminho de retorno~
+Há um pergaminho de retorno no chão.~
+~
+2 g 0 0 0 ao 0 0 0 0 0 0 0
+12 42 -1 -1
+4 1500 25 0 0
+#5479
+vara cinza prateada~
+uma vara cinza-prateada~
+Uma vara cinza-prateada foi esquecida aqui.~
+~
+3 gnopt 0 0 0 ao 0 0 0 0 0 0 0
+15 1 1 6
+1 10000 15 0 0
+E
+vara cinza prateada~
+Você vê uma pequena nuvem cravada na base dessa vara.
+~
+#5480
+vara amarela~
+uma brilhante vara amarela~
+Uma brilhante vara amarela foi abandonada aqui.~
+~
+3 g 0 0 0 ao 0 0 0 0 0 0 0
+1 1 1 19
+1 666 15 0 0
+E
+vara amarela~
+Você vê uma forma estranha que sutilmente desaparece na base dessa vara.
+~
+#5481
+vara carvalho~
+uma vara de carvalho~
+Uma vara de carvalho foi deixada no chão.~
+~
+3 g 0 0 0 ao 0 0 0 0 0 0 0
+35 1 1 62
+1 500 15 0 0
+#5482
+vara rosada~
+uma vara rosada~
+Uma vara rosada está no chão.~
+~
+3 g 0 0 0 ao 0 0 0 0 0 0 0
+3 1 1 38
+1 5000 15 0 0
+#5483
+tesoura costura~
+uma tesoura de costura~
+Há uma tesoura de costura jogada aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 4 1
+2 100 50 0 0
+#5484
+cutelo carne~
+um cutelo de carne~
+Há um cutelo de carne no chão.~
+~
+5 cd 0 0 0 an 0 0 0 0 0 0 0
+0 1 5 0
+5 100 10 0 0
+#5485
+caneta-tinteiro caneta tinteiro~
+uma caneta-tinteiro~
+Uma caneta-tinteiro foi esquecida aqui.~
+~
+5 b 0 0 0 an 0 0 0 0 0 0 0
+0 1 3 11
+1 100 5 0 0
+#5486
+marreta~
+uma marreta~
+Uma marreta foi deixada aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 3 6
+24 200 40 0 0
+#5487
+ferradura~
+uma ferradura~
+Uma ferradura foi abandonada aqui.~
+~
+9 bg 0 0 0 aco 0 0 0 0 0 0 0
+1 0 0 0
+2 1000 200 0 0
+A
+18 1
+#5488
+sela~
+uma sela~
+Uma sela foi deixada aqui.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+4 100 50 0 0
+#5489
+equitação chicote~
+um chicote para equitação~
+Há um chicote para equitação aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 4 2
+1 50 10 0 0
+#5490
+xadrez tabuleiro~
+um tabuleiro de xadrez~
+Um pesado tabuleiro de mármore foi jogado aqui.~
+~
+5 g 0 0 0 an 0 0 0 0 0 0 0
+0 1 25 6
+10 100 20 40 0
+#5491
+semente~
+uma semente~
+Há uma semente no chão.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+6 0 0 0
+1 10 0 0 0
+#5492
+lança gae bolg~
+Gae Bolg~
+Uma bela lança foi abandonada aqui.~
+~
+5 agmnotu 0 0 0 an 0 0 0 0 0 0 0
+0 5 3 15
+12 18000 12500 0 0
+E
+lança gae bolg~
+É uma bela lança brilhante, com seis pés de comprimento e possui uma brilhante
+e bem polida lâmina prateada em sua ponta. Essa deve ser a coisa mais pontuda
+que você ja viu.
+~
+#5493
+chave~
+a chave das celas~
+A chave das celas foi jogada aqui.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+5493 0 0 0
+1 100 200 0 0
+#5494
+chave~
+a chave do calabouço~
+A chave do calabouço foi deixada aqui.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+5494 0 0 0
+1 100 200 0 0
+#5495
+garra garras wolverine luva~
+as garras de wolverine~
+As garras de algum animal foram abandonadas aqui.~
+~
+5 bl 0 0 0 an 0 0 0 0 0 0 0
+0 3 6 8
+2 400 50 0 0
+A
+13 -20
+#5496
+ira machado alá~
+a ira de Alá~
+Um machado grande e ricamente ornamentado flutua sobre o chão.~
+~
+5 agmopt 0 0 0 an 0 0 0 0 0 0 0
+0 4 4 6
+16 25000 12500 0 0
+E
+ira machado alá~
+Parece que essa enorme arma poderia partir ao meio qualquer coisa ou
+qualquer um por perto.
+~
+#5497
+prateado curvo punhal~
+um punhal prateado curvo~
+Um belo punhal prateado curvo foi abandonado aqui.~
+~
+5 n 0 0 0 ano 0 0 0 0 0 0 0
+0 2 3 11
+4 6000 300 0 0
+E
+prateado curvo punhal~
+Parece que isso já matou vários lobos.  Há algumas manchas de sangue na
+lâmina.  A lâmina curva parece que pode matar um homem com uma única
+punhalada exata.  Perfeita para bons ladrões.
+~
+A
+2 1
+A
+18 1
+A
+19 1
+#5500
+vara ressurreição~
+uma vara mágica da ressurreição~
+Uma vara mágica muito especial foi deixada aqui.~
+~
+3 gik 0 0 0 ao 0 0 0 0 0 0 0
+15 4 4 58
+1 15500 0 0 0
+E
+vara ressurreição~
+Você vê uma vara mágica de madeira, que parece emanar um poder muito
+especial.  Dizem que os sacerdotes de Nova Thalos produziram essa vara pela
+necessidade de trazer devolta velhos companheiros de guerra, e por não
+possuírem acesso à magia disponível em Midgaard.
+~
+#5501
+poção frasco transparente~
+uma poção transparente~
+Um frasco com uma poção transparente foi deixado aqui.~
+~
+10 0 0 0 0 ao 0 0 0 0 0 0 0
+12 29 19 -1
+2 3500 0 0 0
+#5690
+mapa nova thalos~
+um mapa de Nova Thalos~
+Um mapa de Nova Thalos foi deixado aqui.~
+~
+12 e 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 445 20 0 0
+E
+mapa nova thalos~
+    /--/                          /\                                     /--/
+   /,-/---------------------------'`------------------------------------/-./
+    `-----------------------------.,--------------------------------------'
+     |       |     |              ||                 |                   |
+   Prisão  Prefei  +              ||--Árvo           |                   |
+           tura    |              ||   re   Arquei---+--Pedrei  Biblio---+
+                   +    -------   ||          ros    |   ros     teca    |
+   Câmara  Altar       |Palácio|--||--Taver          |                   |
+      |      |          -------   ||    na    Tece---+---Arte   Danças---+
+     ----------                   ||    |     lães   |   sões
+    |  Templo  |-Doações          ||   Clube de      |
+     ----------                   || Bardos  Curti---+---Museu
+      |      |                    ||-- Zona  dores   |     |
+   Guilda  Port.  ,--             || Iniciantes      +---Museu
+   Clér.     |    |               ||                 |                Guilda
+           Praça  +       Roupas  ||  Verduras       +   Bruxa Mágica Magos
+             |    |   Banco -------------- Açougue   |     |     |     |
+-/`------------------------|  A Praça do  |--------------------------------'\-
+-\,------------------------|   Mercado    |--------------------------------./-
+     |       |    | Armazém -------------- Armoraria |     |           |
+   Guilda Reparos +      Padaria  ||  Armas          +   Guilda Ladr.  Guilda
+   Guerr.         |            --------              |                 Druidas
+                  `--         | Medina |     Couro---+--------+---Hosp.
+                               --------                       |          Dep
+     Armazém   Porto              ||        Forja  Estábulos  +   Caça   Lixo
+     |     |     |            ----------      |     |         |     |     |
+    ,------------------------|  Praça   |----------------------------------.
+    `------------------------|   Comum  |----------------------------------'
+      .          |            ----------                 #===================#
+     /|\ N     Rampa              ||                     #Mapa de Nova Thalos#
+      |                           ||                     #-------------------#
+     -*-          - - - - -- -----||----- -- - - - -     # Todos os direitos #
+      |         (residências)     ||     (residências)   #    reservados.    #
+                                  \/                     #===================#
+~
+$~

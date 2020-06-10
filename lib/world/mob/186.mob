@@ -1,0 +1,215 @@
+#18601
+demônio buraco poço toca sepultura~
+o demônio da sepultura~
+O horrível demônio da sepultura está aqui, medindo-o dos pés à cabeça.
+~
+Eca....que criatura nojenta!  Ela é negra e verde e completamente limbosa.
+E está babando por todos os lados....E parece ser má também.  Como pode
+existir algo assim?
+~
+2097158 0 0 0 0 0 0 0 -750 E
+5 17 5 4d6+42 1d5+1
+100 1200
+8 8 0
+E
+#18602
+monstro novato~
+o monstro novato~
+O monstro novato está parado aqui com um olhar tão confuso!! Mate-o!!! Mate-o!
+~
+Este pequeno demônio é uma criatura singular.  Ele até que não parece ser
+perigoso mas você não pode ter muita certeza.  Ele tem apenas 4 pés de
+altura mas possui um corpo bastante musculoso...talvez fosse melhor você
+perguntar a ele se ele precisa de alguma ajuda, não acha?  Ah!!  Que nada!
+Melhor matar mesmo!
+~
+2097220 0 0 0 0 0 0 0 0 E
+2 19 9 2d4+16 1d4+1
+250 400
+8 8 1
+E
+#18603
+dragão bebê~
+o dragão-bebê~
+O dragão-bebê de estimação de alguém está aqui, perdido e xeretando por tudo.
+~
+Aaaaaahhh...que amor!  Um dragão bebê tão pequenininho!  Ele tem apenas 3
+pés de altura e você fica querendo apertá-lo até cansar....não, na verdade o
+que você quer mesmo é matar o bichinho!  Mas lembre-se de uma coisa: até
+mesmo os dragões pequenos podem causar um grande problema.
+~
+2097152 0 0 0 0 0 0 0 100 E
+4 17 6 1d4+50 1d6+1
+0 1000
+8 8 1
+E
+#18604
+novato guarda monstro~
+o Guarda Novato~
+O Guarda Novato está aqui se perguntando para onde teria ido o dragão.
+~
+O Guarda tem também a incumbência de tomar conta dos dragõezinhos de
+estimação do Alquimista mas parece que ele não está fazendo um trabalho
+muito bom não.  Ele olha para você e diz: "Você não viu aquele dragão?  O
+Mestre irá me arrancar a cabeça se eu não encontrar o bichinho!"
+~
+2097154 0 0 0 0 0 0 0 0 E
+3 18 7 2d6+34 1d7+0
+500 800
+8 8 1
+E
+#18605
+alquimista novato~
+o Alquimista Novato~
+O Alquimista Novato está tentando fazer alguma coisa aqui.
+~
+Esse sujeito peludo tem uma aparência muito engraçada.  Ele parece estar bem
+ocupado, tentando misturar um líquido a outro.
+~
+2097154 0 0 0 0 0 0 0 0 E
+5 16 5 4d6+38 2d4+0
+1000 1200
+8 8 0
+E
+#18606
+réptil coisa inseto pavoroso nojento~
+o réptil nojento~
+Um pequeno réptil nojento está correndo pelo chão, bem aos seus pés.
+~
+Iiiiiiieeeeeeca!!!!  Se alguma vez limpassem este lugar, com certeza estes
+vermes imundos, pequenos, cheios de pernas e marrons não estariam aqui!
+~
+2097216 0 0 0 0 0 0 0 -250 E
+1 20 10 1d4+8 1d4+0
+0 100
+8 8 0
+E
+#18607
+novato zumbi~
+o zumbi novato~
+Um jovem MUITO magro....parece até um zumbi!!
+~
+Este rapaz foi solto aqui há muito tempo atrás...ele agora é muito mais
+zumbi do que homem.  Você deveria sentir pena dele por causa disso...mas
+espere!!  Ele parece que está querendo atacá-lo!
+~
+2097252 0 0 0 0 0 0 0 -500 E
+4 17 5 1d8+46 2d4+0
+300 600
+8 8 0
+E
+#18608
+demônio diabo travesso~
+o diabo travesso~
+Uma pequena criatura travessa (um demônio talvez?) está se esgueirando por aqui.
+~
+Esta pequena criatura verde com alguns traços humanos possui um longo rabo
+pontudo.  É difícil de descrevê-la porque muito antes que seus olhos possam
+dar uma boa examinada nela, a coisa dispara na direção das sombras e some.
+~
+2097380 0 0 0 0 0 0 0 -800 E
+3 19 7 1d10+30 1d4+1
+0 300
+8 8 1
+E
+#18609
+minotauro~
+o Poderoso Minotauro~
+O Grande Minotauro está se perguntando que sabor você teria.
+~
+Um homem poderoso, com a cabeça de um touro.  E parece ser tão forte quanto
+um touro mas não tem jeito de ser muito esperto não.  Mas já que você o está
+analisando...bem...não parece que ele é muito mais feroz do que qualquer
+outro touro que você tenha visto antes....e ele está vindo direto em sua
+direção.
+~
+2098752 0 0 0 0 0 0 0 -1000 E
+7 15 5 3d5+85 2d4+1
+1000 3000
+8 8 1
+E
+#18610
+espectro fantasma~
+o espectro escuro~
+O espectro escuro está se escondendo nas sombras.
+~
+O fantasma de um aventureiro morto há muito tempo...esconde-se aqui a espera
+de uma chance de levar à morte qualquer um que cruze o seu caminho.
+~
+2099266 0 0 0 524298 0 0 0 -850 E
+6 16 3 3d5+62 2d4+0
+0 1600
+8 8 0
+E
+#18611
+novato chato imbecil~
+o imbecil chato~
+Um novato está aqui chateando e importunando você.
+~
+Que imbecil!!!  Ele não se cala!..e ainda por cima fica fazendo os
+comentários mais absurdos sobre tudo!  Melhor calar a boca dele com a fria
+lâmina de aço de uma espada!
+HAHAHAHAHAHAHAHAHAHA!
+~
+2097220 0 0 0 0 0 0 0 -500 E
+2 18 10 2d4+20 1d3+1
+250 500
+8 8 1
+E
+#18612
+novato retardado ignorante~
+o novato ignorante~
+um novato com cara de retardado está aqui.
+~
+Que idiota!  Ele deve ser o tipo que faz cada uma das perguntas que foram
+respondidas pelos professores pelo menos umas 3 vezes.  Este rapaz
+simplesmente não entende absolutamente nada que digam para ele.  Melhor
+acabar logo com a mediocridade dele.
+~
+2097220 0 0 0 0 0 0 0 0 E
+1 20 10 1d1+19 1d3+1
+50 220
+8 8 1
+E
+#18613
+novata tagarela~
+a novata tagarela~
+Uma novata está aqui, falando à beça.
+~
+Bem, pelo menos esta garota parece ser bem legal.  Claro, ela fala muito mas
+mesmo assim ela parece ser bem amistosa.  Parece que existe um motivo para
+ela estar aqui, ao contrário dos outros que você já viu.
+~
+2097216 0 0 0 0 0 0 0 100 E
+3 18 8 6d5+22 1d7+1
+700 600
+8 8 2
+E
+#18614
+novato perdido~
+o novato perdido~
+Um novato está aqui vagabundeando sem destino.
+~
+Hummm...já faz algum tempo que ele está por aqui e ele está muito longe de
+casa a esta hora.  Não pense que ele sabe onde ele está não.  Quem sabe você
+não o ajuda um pouco.
+~
+2097216 0 0 0 0 0 0 0 300 E
+4 17 6 8d5+20 1d6+1
+250 500
+8 8 1
+E
+#18615
+novato esperto~
+o novato esperto~
+Um novato está aqui e ele tem jeito de estar bastante seguro sobre as coisas.
+~
+Aqui está uma pessoa que tem tudo.  Bons equipamentos também.  Será que ele
+leu os arquivos de ajuda, é?
+~
+2097220 0 0 0 0 0 0 0 500 E
+5 15 9 10d5+20 2d3+2
+1100 1000
+8 8 1
+E
+$

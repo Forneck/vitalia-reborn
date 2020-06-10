@@ -1,0 +1,222 @@
+#5000
+dervixe esfarrapado~
+o dervixe esfarrapado~
+Um esfarrapado dervixe caminha sem rumo por aqui.
+~
+Usando trapos como se fossem roupas, este  pobre homem parece estar
+precisando de um bom descanso.
+~
+2097348 0 0 0 1572864 0 0 0 900 E
+5 15 5 1d10+60 2d4+0
+70 1000
+8 8 1
+E
+#5001
+dervixe grande~
+o dervixe~
+Um grande dervixe está atento por eventuais sinais de problema.
+~
+Usando trapos como se fossem roupas, este pobre homem parece estar
+precisando de MUITO descanso.
+~
+2097248 0 0 0 1572864 0 0 0 650 E
+8 12 3 2d6+100 2d6+1
+150 7000
+8 8 1
+E
+#5002
+cobra coral~
+a cobra coral~
+Uma brilhante cobra colorida serpenteia ao longo da areia.
+~
+Esta cobra relativamente inofensiva, possui listras de cores alternando
+vermelho, amarelo e preto.
+~
+2097216 0 0 0 0 0 0 0 -10 E
+4 17 4 1d6+40 1d9+0
+0 600
+8 8 0
+E
+#5003
+escorpião pequeno~
+o escorpião pequeno~
+Um pequeno escorpião vermelho foge à sua aproximação.
+~
+Seu pequeno rabo é extremamente perigoso para uma criatura tão
+pequenina.
+~
+2097216 0 0 0 0 0 0 0 -50 E
+3 17 1 1d6+40 1d8+0
+0 500
+8 8 0
+E
+#5004
+verme arroxeado gigantesco~
+o verme da areia~
+Um gigantesco verme arroxeado surge da areia e ataca!
+~
+Ele é grande, mal-encarado e roxo. Caia fora!
+~
+2263090 0 0 0 2128 0 0 0 -300 E
+21 0 3 2d10+320 3d7+14
+2540 65000
+8 8 0
+E
+#5005
+dragão bronze~
+o dragão de bronze~
+Um dragão de bronze imenso emerge da escuridão e diz 'Oi'.
+~
+E acrescenta: 'Prepare-se para morrer! Tenha um bom dia!'
+~
+2162738 0 0 0 67856 0 0 0 950 E
+20 1 0 2d6+500 3d6+4
+1500 45000
+8 8 0
+E
+#5006
+líder nômade~
+o líder nômade~
+O líder nômade está sentado concentrado em sua muda oração.
+~
+Ele está vestido com um manto de seda, todo pespontado com linha de
+ouro. Ao seu lado há um enorme cutelo todo entalhado. Um ar
+extremamente arrogante molda a sua expressão.
+~
+2099330 0 0 0 16 0 0 0 950 E
+14 7 0 2d6+170 2d8+5
+1000 18000
+6 6 1
+E
+#5007
+chefe nômade~
+o chefe nômade~
+O chefe nômade está em pé, encarando-lhe com um ar de suspeita.
+~
+Este é o segundo homem na linha do comando dos nômades.  As roupas dele
+foram feitas com a mais pura seda e bordadas com linha de ouro.  Um
+cutelo assustador está ao seu lado.
+~
+2099330 0 0 0 0 0 0 0 900 E
+12 8 1 2d6+135 2d5+3
+600 14000
+8 8 1
+E
+#5008
+guerreiro nômade~
+o guerreiro  nômade~
+Um guerreiro nômade, cheio de si, está aqui.
+~
+Este guerreiro, de aparência sanguinária, está vestido com as roupas
+típica dos nômades.
+~
+2097154 0 0 0 0 0 0 0 700 E
+10 11 2 1d6+105 2d6+1
+300 7000
+8 8 1
+E
+#5009
+escrava jovem~
+a escrava~
+Uma jovem escrava senta-se aqui, fitando-lhe com olhos suplicantes.
+~
+Ela está muito fraca e magra.
+~
+2097282 0 0 0 0 0 0 0 1000 E
+3 18 9 1d4+25 1d5+0
+0 300
+5 5 2
+E
+#5010
+dracolich~
+o dracolich~
+Uma pilha de ossos vai se erguendo, dando assim, forma ao esqueleto de
+um dracolich.
+~
+O dracolich é agora apenas um monte de ossos com alguns pedaços de
+carne pendurada.
+Obviamente que isto não teme mais a morte.
+~
+2222130 0 0 0 67924 0 0 0 -1000 E
+24 0 -6 1d12+520 3d5+35
+75000 125000
+8 8 0
+E
+#5011
+drider~
+o drider~
+O drider olha apetitosamente para você enquanto lentamente desembainha
+sua espada.
+~
+Esta meio-aranha, meio-drow criatura é uma oponente formidável.
+~
+2097248 0 0 0 67600 0 0 0 -1000 E
+8 12 2 1d6+95 2d6+2
+200 4000
+8 8 0
+E
+#5012
+anão duergar sombrio~
+o sombrio anão~
+Um sombrio anão está aqui, cavando com sua picareta à procura de pedras
+preciosas.
+~
+O sombrio anão provavelmente poderia esmagar sua cabeça tão facilmente
+quanto ele faz com essas pedras.
+~
+2097248 0 0 0 67600 0 0 0 -850 E
+5 16 3 1d11+60 2d5+1
+170 1250
+8 8 1
+E
+#5013
+miconóide~
+o miconóide~
+Um pacífico miconóide move-se com dificuldade aqui.
+~
+O miconóide se parece com um gigantesco cogumelo (e provavelmente tem o
+mesmo gosto).
+~
+2097344 0 0 0 2064 0 0 0 850 E
+6 15 4 1d12+68 2d7+0
+50 600
+8 8 1
+E
+#5014
+xamã miconóide~
+o miconóide xamã~
+Um miconóide enorme se encontra aqui, cantando em uma língua muito
+estranha.
+~
+O xamã está espalhando esporos pelo ar.
+~
+2099492 0 0 0 2320 0 0 0 950 E
+14 7 1 1d12+173 2d7+2
+2500 18000
+8 8 1
+E
+#5015
+oásis escavadeira empoeirada~
+uma escavadeira empoeirada~
+Um pequeno oásis convida-lhe a um mergulho.
+~
+An undefined string.
+~
+2293798 0 0 0 0 0 0 0 -200 E
+7 10 1 1d6+85 3d4+0
+450 2250
+8 8 0
+E
+#5017
+camelo selvagem~
+o camelo selvagem~
+Um camelo selvagem, muito perigoso, bufa enquanto olha para você.
+~
+Não brinque com este animal.
+~
+2162722 0 0 0 0 0 0 0 -351 E
+5 12 6 1d6+60 2d4+3
+270 900
+8 8 0
+E
+$

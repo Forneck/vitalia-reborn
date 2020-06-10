@@ -1,0 +1,1386 @@
+#6100
+Um Estreito Caminho Através da Escura Floresta Profunda~
+   Você está em um estreito caminho que faz seu caminho através dos enormes
+troncos cinzas.  As copas das árvores são muito densas, deixando a floresta
+na escuridão.  O caminho segue ao leste e ao oeste.
+~
+61 9 0 0 0 3
+D0
+Um pequeno caminho sombrio segue ao norte.
+~
+~
+0 -1 6064
+D1
+O caminho estreito segue ao leste, para uma parte um pouco mais clara da
+floresta.
+~
+~
+0 -1 6004
+D3
+O caminho estreito segue ao leste através da floresta.
+~
+~
+0 -1 6101
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho escuro parece frágil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas raízes romperam o solo.
+~
+S
+#6101
+Um Estreito Caminho Através da Escura Floresta Profunda~
+   Você está em um empoeirado caminho que segue para o leste e oeste, entre
+enormes árvores antigas, cujos troncos lembram antigos pilares de um
+corredor deserto.  Ao sul, um frágil caminho o conduz além.
+~
+61 9 0 0 0 3
+D1
+O caminho estreito segue ao leste através da floresta.
+~
+~
+0 -1 6100
+D2
+O caminho leva ao sul, longe do caminho.
+~
+~
+0 -1 6104
+D3
+O caminho estreito segue ao oeste através da floresta.
+~
+~
+0 -1 6102
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+E
+caminho~
+O caminho escuro parece frágil comparado com os volumosos troncos, e em
+alguns lugares, gigantescas raízes romperam o solo.
+~
+S
+#6102
+Um Estreito Caminho Através da Escura Floresta Profunda~
+   Você está em um empoeirado caminho que segue pelo leste e oeste entre
+enormes árvores antigas que o cerca de todos os lados.  Nenhum som pode ser
+ouvido - tudo está em completo silêncio.
+~
+61 9 0 0 0 3
+D1
+O caminho estreito segue ao leste através da floresta.
+~
+~
+0 -1 6101
+D3
+O caminho estreito segue ao oeste através da floresta.
+~
+~
+0 -1 6103
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+E
+caminho~
+O caminho escuro parece frágil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas raízes romperam o solo.
+~
+S
+#6103
+Um Estreito Caminho Através da Escura Floresta Profunda~
+   Você está onde o caminho faz uma curva, como que para evitar se chocar
+com um tronco colossal ao oeste.  Nenhum som pode ser ouvido - tudo está em
+completo silêncio.  O caminho segue ao leste e ao sul, e um pequeno caminho
+leva para longe da trilha ao norte.
+~
+61 9 0 0 0 3
+D0
+Um pequeno caminho leva para longe da trilha.
+~
+~
+0 -1 6150
+D1
+O caminho estreito segue ao leste através da floresta.
+~
+~
+0 -1 6102
+D2
+O caminho estreito segue ao sul através da floresta.
+~
+~
+0 -1 6108
+D9
+~
+~
+0 -1 2040
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho escuro parece frágil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas raízes romperam o solo.
+~
+S
+#6104
+Um Pequeno Caminho na Escura Floresta Profunda~
+   Você está em um estreito caminho que atravessa a escura floresta
+profunda.  Você se sente como se as antigas árvores observassem você em
+profundo silencio.  O caminho continua ao norte e ao sul.
+~
+61 9 0 0 0 3
+D0
+O estreito caminho segue através das árvores ao norte.
+~
+~
+0 -1 6101
+D2
+O estreito caminho segue através das árvores ao sul.
+~
+~
+0 -1 6105
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+S
+#6105
+Um Pequeno Caminho na Escura Floresta Profunda~
+   Você está em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas árvores acinzentadas cercam você.  O caminho continua ao
+norte e ao oeste.
+~
+61 9 0 0 0 3
+D0
+O estreito caminho segue através das árvores ao norte.
+~
+~
+0 -1 6104
+D3
+O estreito caminho segue através das árvores ao oeste.
+~
+~
+0 -1 6106
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+S
+#6106
+Uma Junção na Escura Floresta Profunda~
+   Você está em uma junção onde três caminhos se encontram.  Antigas árvores
+acinzentadas o cercam de todos os lados.  Os caminhos seguem para o leste,
+sul e oeste.
+~
+61 9 0 0 0 3
+D1
+O estreito caminho segue através das árvores ao leste.
+~
+~
+0 -1 6105
+D2
+O estreito caminho segue através das árvores ao sul.
+~
+~
+0 -1 6117
+D3
+O estreito caminho segue através das árvores ao oeste.
+~
+~
+0 -1 6107
+E
+caminho ~
+O caminho parece frágil comparada com os volumosos troncos, e em alguns
+lugares, gigantescas raízes romperam o solo.
+~
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+S
+#6107
+Um Pequeno Caminho na Escura Floresta Profunda~
+   Você está em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas árvores acinzentadas cercam você.  O caminho continua ao
+norte e ao leste.
+~
+61 9 0 0 0 3
+D0
+O estreito caminho segue através das árvores ao norte.
+~
+~
+0 -1 6108
+D1
+O estreito caminho segue através das árvores ao leste.
+~
+~
+0 -1 6106
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor..
+~
+E
+árvore árvores troncos tronco~
+As gigantescas árvores antigas parece lhe observar silenciosamente.
+~
+S
+#6108
+Um Estreito Caminho Através da Escura Floresta Profunda~
+   Você está em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas árvores acinzentadas cercam você.  O caminho continua
+para o norte e oeste e ao sul, um frágil caminho o leva para longe do
+caminho.
+~
+61 9 0 0 0 3
+D0
+O caminho estreito segue ao norte através da floresta.
+~
+~
+0 -1 6103
+D2
+O caminho segue ao sul, para longe do caminho.
+~
+~
+0 -1 6107
+D3
+O caminho estreito segue ao oeste através da floresta.
+~
+~
+0 -1 6109
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+E
+caminho~
+O caminho escuro parece frágil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas raízes romperam o solo.
+~
+S
+#6109
+Um Estreito Caminho Através da Escura Floresta Profunda~
+   Você está em um empoeirado caminho que segue pelo leste e oeste entre
+enormes árvores antigas que o cerca de todos os lados.  Nenhum som pode ser
+ouvido - tudo está em completo silêncio.
+~
+61 9 0 0 0 3
+D1
+O caminho estreito segue ao leste através da floresta.
+~
+~
+0 -1 6108
+D3
+O caminho estreito segue ao oeste através da floresta.
+~
+~
+0 -1 6110
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho escuro parece frágil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas raízes romperam o solo.
+~
+S
+#6110
+Um Estreito Caminho Através da Escura Floresta Profunda~
+   Antigas árvores acinzentadas o cercam de todos os lados.  O caminho segue
+ao leste e ao sul.  Ao oeste, um pequeno caminho o leva para longe da
+trilha.
+~
+61 9 0 0 0 3
+D1
+O caminho estreito segue ao leste através da floresta.
+~
+~
+0 -1 6109
+D2
+O caminho estreito segue ao sul através da floresta.
+~
+~
+0 -1 6111
+D3
+O caminho estreito segue ao oeste através da floresta.
+~
+~
+0 -1 6130
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+E
+caminho~
+O caminho escuro parece frágil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas raízes romperam o solo.
+~
+S
+#6111
+Um Estreito Caminho Através da Escura Floresta Profunda~
+   Você está em um caminho empoeirado que segue ao norte e sul entre as
+enormes árvores antigas que lhe observam silenciosamente.
+~
+61 9 0 0 0 3
+D0
+O caminho estreito segue ao norte através da floresta.
+~
+~
+0 -1 6110
+D2
+O caminho estreito segue ao sul através da floresta.
+~
+~
+0 -1 6112
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho escuro parece frágil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas raízes romperam o solo.
+~
+S
+#6112
+Um Estreito Caminho Através da Escura Floresta Profunda~
+   Você está em um caminho empoeirado que segue entre as enormes árvores
+antigas que o cercam de todos os lados.  O caminho segue ao norte e oeste e
+ao leste, um frágil caminho o leva para longe do caminho.
+~
+61 9 0 0 0 3
+D0
+O caminho estreito segue ao norte através da floresta.
+~
+~
+0 -1 6111
+D1
+O caminho leva ao leste - para longe do caminho.
+~
+~
+0 -1 6113
+D3
+O caminho estreito segue ao oeste através da floresta.
+~
+~
+0 -1 6127
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+E
+caminho~
+O caminho escuro parece frágil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas raízes romperam o solo.
+~
+S
+#6113
+Um Pequeno Caminho na Escura Floresta Profunda~
+   Você está em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas árvores acinzentadas cercam você.  O caminho continua ao
+sul e ao oeste.
+~
+61 9 0 0 0 3
+D2
+O estreito caminho segue através das árvores ao sul.
+~
+~
+0 -1 6114
+D3
+O estreito caminho segue através das árvores ao oeste.
+~
+~
+0 -1 6112
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+S
+#6114
+Uma Junção na Escura Floresta Profunda~
+   Você está em uma junção onde três caminhos se encontram.  Antigas árvores
+acinzentadas o cercam de todos os lados.  Os caminhos seguem para leste e
+oeste.
+~
+61 9 0 0 0 3
+D0
+O estreito caminho segue através das árvores ao norte.
+~
+~
+0 -1 6113
+D1
+O estreito caminho segue através das árvores ao leste.
+~
+~
+0 -1 6115
+D3
+O estreito caminho segue através das árvores ao oeste.
+~
+~
+0 -1 6122
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+S
+#6115
+Um Pequeno Caminho na Escura Floresta Profunda~
+   Você está em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas árvores acinzentadas cercam você.  O caminho continua ao
+norte e ao oeste.
+~
+61 9 0 0 0 3
+D0
+O estreito caminho segue através das árvores ao norte.
+~
+~
+0 -1 6116
+D3
+O estreito caminho segue através das árvores ao oeste.
+~
+~
+0 -1 6114
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+S
+#6116
+Uma Junção na Escura Floresta Profunda~
+   Você está em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas árvores acinzentadas cercam você.  O caminho continua á
+leste e sul.
+~
+61 9 0 0 0 3
+D1
+O estreito caminho segue através das árvores ao leste.
+~
+~
+0 -1 6117
+D2
+O estreito caminho segue através das árvores ao sul.
+~
+~
+0 -1 6115
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+S
+#6117
+Uma Junção na Escura Floresta Profunda~
+   Você está em uma junção onde três caminhos se encontram.  Antigas árvores
+acinzentadas o cercam de todos os lados.  Os caminhos seguem para leste,
+oeste e norte.
+~
+61 9 0 0 0 3
+D0
+O estreito caminho segue através das árvores ao norte.
+~
+~
+0 -1 6106
+D1
+O estreito caminho segue através das árvores ao leste.
+~
+~
+0 -1 6118
+D3
+O estreito caminho segue através das árvores ao oeste.
+~
+~
+0 -1 6116
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+S
+#6118
+Um Pequeno Caminho na Escura Floresta Profunda~
+   Você está em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas árvores acinzentadas cercam você.  O caminho continua ao
+sul e ao oeste.
+~
+61 9 0 0 0 3
+D2
+O estreito caminho segue através das árvores ao sul.
+~
+~
+0 -1 6119
+D3
+O estreito caminho segue através das árvores ao oeste.
+~
+~
+0 -1 6117
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+S
+#6119
+Um Pequeno Caminho na Escura Floresta Profunda~
+   Você está em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas árvores acinzentadas cercam você.  O caminho continua.
+~
+61 9 0 0 0 3
+D0
+O estreito caminho segue através das árvores ao norte.
+~
+~
+0 -1 6118
+D2
+O estreito caminho segue através das árvores ao sul.
+~
+~
+0 -1 6120
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+S
+#6120
+Na Ribeira de um Rio na Escura Floresta Profunda~
+   Você está em um estreito caminho que segue na escura floresta profunda.
+Ao sul, um rápido rio flui ao oeste pela floresta.  Antigas árvores antigas
+acinzentadas repousam pela ribeira.  O caminho continua ao norte e ao oeste.
+~
+61 9 0 0 0 3
+D0
+O estreito caminho segue através das árvores ao norte.
+~
+~
+0 -1 6119
+D2
+Parece que você poderia adentrar o rio pelo sul.
+~
+~
+0 -1 901
+D3
+O estreito caminho segue através das árvores ao oeste.
+~
+~
+0 -1 6121
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+E
+ribeira árvore árvores troncos tronco~
+As copas das antigas árvores tomam ambos lados da ribeira formando um denso
+telhado acima do rio escuro.
+~
+E
+rio~
+O rio flui rapidamente e fortemente.  Ele parece negro, ou pelo menos assim
+parece na sombra.
+~
+S
+#6121
+Um Caminho Sem Saída na Escura Floresta Profunda~
+   Você está em um estreito caminho através da escura floresta profunda.  As
+antigas árvores estão tão próximas uma das outras, que o caminho desaparece
+entre elas.  Ao sul um escuro rio flui ao leste e ao oeste.  A única saída
+parece ser ao leste.
+~
+61 9 0 0 0 3
+D1
+O estreito caminho segue através das árvores ao leste.
+~
+~
+0 -1 6120
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+E
+ribeira árvore árvores troncos tronco~
+As copas das antigas árvores tomam ambos lados da ribeira, formando um denso
+telhado acima do rio escuro.
+~
+E
+rio~
+O rio flui rapidamente e fortemente.  Ele parece negro, ou pelo menos assim
+parece na sombra.
+~
+S
+#6122
+Um Pequeno Caminho na Escura Floresta Profunda~
+   Você está em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas árvores acinzentadas cercam você.  O caminho continua ao
+leste e ao sul.
+~
+61 9 0 0 0 3
+D1
+O estreito caminho segue através das árvores ao leste.
+~
+~
+0 -1 6114
+D2
+O estreito caminho segue através das árvores ao sul.
+~
+~
+0 -1 6123
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+S
+#6123
+Uma Junção na Ribanceira do Rio na Escura Floresta Profunda~
+   Você está em uma junção, onde três caminhos se encontram.  Antigas
+árvores acinzentadas parecem observar você silenciosamente por todos os
+lados.  Ao sul, um rio escuro flui do leste ao oeste através da floresta.
+Caminhos levam ao norte, leste e oeste.
+~
+61 9 0 0 0 3
+D0
+O estreito caminho segue através das árvores ao norte.
+~
+~
+0 -1 6122
+D1
+O estreito caminho segue através das árvores ao leste.
+~
+~
+0 -1 6124
+D3
+O estreito caminho segue através das árvores ao oeste.
+~
+~
+0 -1 6125
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+E
+ribeira árvore árvores troncos tronco~
+As copas das antigas árvores tomam ambos lados da ribeira, formando um denso
+telhado acima do rio escuro.
+~
+E
+rio~
+O rio flui rapidamente e fortemente.  Ele parece negro, ou pelo menos assim
+parece na sombra.
+~
+S
+#6124
+Um Caminho Sem Saída na Escura Floresta Profunda~
+   Você está em um estreito caminho através da escura floresta profunda.  As
+antigas árvores estáo tão próximas umas das outras, que o caminho desaparece
+entre elas.  A única saída parece ser ao oeste.
+~
+61 9 0 0 0 3
+D3
+O estreito caminho segue através das árvores ao oeste.
+~
+~
+0 -1 6123
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+E
+ribeira árvore árvores troncos tronco~
+As copas das antigas árvores tomam ambos lados da ribeira formando um denso
+telhado acima do rio escuro.
+~
+E
+rio~
+O rio flui rapidamente e fortemente.  Ele parece negro, ou pelo menos assim
+parece na sombra.
+~
+S
+#6125
+Um Estreito Caminho pela Ribeira na Escura Floresta Profunda~
+   Você está em um estreito caminho através da escura floresta profunda.
+Antigas árvores acinzentadas estão por toda parte.  O caminho continua ao
+norte e ao leste.
+~
+61 9 0 0 0 3
+D0
+O estreito caminho segue através das árvores ao norte.
+~
+~
+0 -1 6126
+D1
+O estreito caminho segue através das árvores ao leste.
+~
+~
+0 -1 6123
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+E
+ribeira árvore árvores troncos tronco~
+As copas das antigas árvores tomam ambos lados da ribeira, formando um denso
+telhado acima do rio escuro.
+~
+E
+rio~
+O rio flui rapidamente e fortemente.  Ele parece negro, ou pelo menos assim
+parece na sombra.
+~
+S
+#6126
+Um Estreito Caminho na Escura Floresta Profunda~
+   Você está em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas árvores acinzentadas cercam você.  O caminho continua ao
+norte e ao oeste, ao sul um frágil caminho o leva para do caminho.
+~
+61 9 0 0 0 3
+D0
+O caminho estreito segue ao norte através da floresta.
+~
+~
+0 -1 6127
+D2
+O caminho o leva ao sul - para longe do caminho.
+~
+~
+0 -1 6125
+D3
+O caminho estreito segue ao oeste através da floresta.
+~
+~
+0 -1 6128
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+E
+caminho~
+O caminho escuro parece frágil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas raízes romperam o solo.
+~
+S
+#6127
+Um Estreito Caminho na Escura Floresta Profunda~
+   Você está em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas árvores acinzentadas cercam você.  O caminho continua.
+~
+61 9 0 0 0 3
+D1
+O caminho estreito segue ao leste através da floresta.
+~
+~
+0 -1 6112
+D2
+O caminho estreito segue ao sul através da floresta.
+~
+~
+0 -1 6126
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho escuro parece frágil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas raízes romperam o solo.
+~
+S
+#6128
+Um Estreito Caminho Através da Escura Floresta Profunda~
+   Você está em um empoeirado caminho que segue pelo leste e oeste entre
+enormes árvores antigas que o cerca de todos os lados.  Nenhum som pode ser
+ouvido - tudo está no mais absoluto e completo silêncio.
+~
+61 9 0 0 0 3
+D1
+O caminho estreito segue ao leste através da floresta.
+~
+~
+0 -1 6126
+D3
+O caminho estreito segue ao oeste através da floresta.
+~
+~
+0 -1 6129
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho escuro parece frágil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas raízes romperam o solo.
+~
+S
+#6129
+Um Estreito Caminho Através da Escura Floresta Profunda~
+   Você está em um empoeirado caminho que segue pelo leste e oeste entre
+enormes árvores antigas, que o cercam de todos os lados.  Nenhum som pode
+ser ouvido - tudo está no mais absoluto e completo silêncio.
+~
+61 9 0 0 0 3
+D1
+O caminho estreito segue ao leste através da floresta.
+~
+~
+0 -1 6128
+D3
+O caminho estreito segue ao oeste através da floresta.
+~
+~
+0 -1 6135
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho escuro parece frágil comparada com os volumosos troncos, e em alguns
+lugares, gigantescas raízes romperam o solo.
+~
+S
+#6130
+Um Estreito Caminho Através da Escura Floresta Profunda~
+   Você está em um empoeirado caminho que segue pelo leste e oeste entre
+enormes árvores antigas, que o cerca de todos os lados.  Os troncos das
+árvores parecem estar cobertos com alguma substância pegajosa, que parece
+ficar mais pegajosa ao oeste!  Cuidado!
+~
+61 9 0 0 0 3
+D1
+O caminho estreito segue ao leste através da floresta.
+~
+~
+0 -1 6110
+D3
+A substância pende dos galhos das árvores acima do caminho, em forma de
+cordões.  Ao oeste, o caminho parece estar coberto por grossas cordas
+cobertas por cola.  Você pode sentir as forças do mal vindas de lá, e seus
+ossos lhe dizem que não é uma boa idéia prosseguir.
+~
+~
+0 -1 6131
+D4
+~
+~
+0 -1 6132
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho escuro parece frágil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas raízes romperam o solo.
+~
+E
+substância corda cordões cola~
+A substância lembra grossas cordas cobertas de cola.  Se isso não fosse do
+tamanho que é, você poderia jurar que é uma teia de aranha.
+~
+S
+#6131
+A Teia de Aranha Mortífera~
+   Você está andando pelo estreito caminho, desviando dos cordões pegajosos
+enquanto avança..
+
+Uma aranha enorme, venenosa cai acima de você!
+Uma aranha enorme, venenosa cai acima de você!
+Uma aranha enorme, venenosa cai acima de você!
+
+A aranha enorme, venenosa o pica!  Você resiste ao veneno!
+A aranha enorme, venenosa o pica!  Você está envenenado!
+A aranha enorme, venenosa o pica!  Você está envenenado!
+
+Você está morto!
+~
+61 10 0 0 0 3
+D1
+~
+~
+0 -1 6130
+D3
+~
+~
+0 -1 6134
+D4
+~
+~
+0 -1 6133
+S
+#6132
+Em Cima, na Árvore~
+   Você está pendurado pelo lado de fora de um enorme tronco de árvore,
+coberto com por substância pegajosa.  Exatamente a oeste, há uma imensa teia
+de aranha presa entre várias árvores gigantescas, inclusive na que você
+está.  Ao norte, há o que parece ser uma entrada.
+~
+61 13 0 0 0 6
+D0
+Ao norte, há o que parece uma grande expansão de teias que se extende ao
+longe pelas árvores.
+~
+~
+0 -1 6301
+D3
+Ao oeste há uma imensa teia de aranha. Ela parece bastante macia.
+~
+~
+0 -1 6133
+D5
+Abaixo há um caminho.
+~
+~
+0 -1 6130
+E
+teia~
+A teia de aranha se estira ao oeste. Parece possível andar nela.
+~
+S
+#6133
+Na Teia de Aranha~
+   Você está se equilibrando cuidadosamente nos grandes cordões que seguram
+a teia.  Ao leste, há um gigantesco tronco de árvore e ao oeste há o que
+parece ser a entrada de uma caverna.  Sua estrutura é formada por muitas
+camadas de teia.
+~
+61 9 0 0 0 6
+D1
+Ao leste há um gigantesco tronco de árvore.
+~
+~
+0 -1 6132
+D3
+Ao oeste, há a entrada do que parece ser uma caverna.
+~
+~
+0 -1 6134
+E
+caverna~
+Cobre a área correspondente a um círculo irregular, com o diâmetro de cerca
+de 120 pés e tem pelo menos 20 pés de altura.  Ela parece muito antiga.
+~
+E
+teia~
+A imensa teia de aranha balança suavemente.
+~
+S
+#6134
+O Ninho da Rainha Aranha~
+   Você está dentro de uma caverna que parece ser feita inteiramente de
+cordões de teia.  A temperatura e umidade são bastante altas, tornando
+difícil de se respirar o ar sujo que circula aqui.  As paredes estão
+cobertas de casulos abertos.
+~
+61 9 0 0 0 6
+D1
+Comparado a este lugar, o leste parece convidativo.
+~
+~
+0 -1 6133
+E
+casulos casulo~
+Os casulos estourados estão abertos, como se alguma coisa que estivesse
+dentro realmente quisesse sair.  Eles são do tamanho de uma cabeça humana.
+~
+E
+teia parede paredes~
+As pegajosas paredes estão cobertas de casulos abertos.
+~
+S
+#6135
+Um Caminho Empoeirado na Escura Floresta Profunda~
+   Você está em um empoeirado caminho através da escura floresta profunda.
+Antigas árvores cinzentas o cercam de todos os lados.  O caminho continua ao
+norte e ao leste.
+~
+61 9 0 0 0 3
+D0
+O caminho segue ao norte através da floresta.
+~
+~
+0 -1 6136
+D1
+O caminho segue ao leste através da floresta.
+~
+~
+0 -1 6129
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+S
+#6136
+Um Caminho Empoeirado na Escura Floresta Profunda~
+   Você está em um empoeirado caminho através da escura floresta profunda.
+Antigas árvores cinzentas o cercam de todos os lados.  O caminho continua a
+sul e a oeste.  Uma larga trilha irregular segue ao leste para longe do
+caminho.
+~
+61 9 0 0 0 3
+D1
+As árvores de todos os lados do caminho possuem arranhões em seus troncos.
+~
+~
+0 -1 6142
+D2
+O caminho segue através das árvores ao sul.
+~
+~
+0 -1 6135
+D3
+O caminho segue através das árvores, ao oeste.
+~
+~
+0 -1 6137
+E
+árvore árvores troncos tronco~
+Estas antigas árvores devem estar aqui por muitos, muitos anos.  É
+impossível enxergar além mesmo das copas mais baixas.
+~
+E
+caminho~
+O caminho parece frágil e inseguro, comparado aos enormes troncos de árvores
+ao seu redor.
+~
+E
+caminho~
+O caminho escuro parece frágil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas raízes romperam o solo.
+~
+S
+#6137
+No Fim do Caminho, Através da Escura Floresta Profunda~
+   Você está em um caminho através da escura floresta profunda.  Antigas
+árvores cinzentas o cercam de todos os lados.  Um estreito caminho segue ao
+norte e a única saída é ao leste, através do caminho principal.
+~
+61 9 0 0 0 3
+D0
+Um estreito caminho segue ao norte através dos arbustos.
+~
+~
+0 -1 6138
+D1
+O caminho segue ao leste, através das árvores.
+~
+~
+0 -1 6136
+E
+árvore tronco troncos~
+As antigas árvores cinzentas parecem lhe observar silenciosamente.
+~
+S
+#6138
+No Caminho Estreito~
+   O caminho continua ao norte e ao sul, seguindo através dos densos
+arbustos desta parte da floresta de Haon-Dor.  Antigas árvores cinzentas o
+cercam de todos os lados.  Os arbustos fecham o caminho, tornando-o estreito
+para sua passagem.  O caminho parece clarear ao sul.
+~
+61 9 0 0 0 3
+D0
+O caminho estreito continua ao norte, através dos árbustos.
+~
+~
+0 -1 6139
+D2
+O caminho segue a leste, através das árvores.
+~
+~
+0 -1 6137
+E
+árvores troncos tronco~
+As antigas árvores cinzentas parecem lhe observar silenciosamente.
+~
+S
+#6139
+No Caminho Estreito~
+   O caminho continua ao norte e ao sul, seguindo através dos densos
+arbustos desta parte da floresta de Haon-Dor.  Antigas árvores cinzentas o
+cercam de todos os lados.  Os arbustos fecham o caminho, tornando-o estreito
+para sua passagem.
+~
+61 9 0 0 0 3
+D0
+À uma curta distância ao norte, você pode ver algo brilhando.
+~
+~
+0 -1 6203
+D2
+O caminho estreito continua ao norte, através dos árbustos.
+~
+~
+0 -1 6138
+S
+#6142
+Do Lado de Fora de uma Caverna, na Escura Floresta Profunda~
+   Você está no fim de um grande e irregular caminho.  A leste a um local
+completamente diferente, um campo aberto que parece isolado por magia.  Ao
+norte, há uma o que parece ser a entrada de uma caverna.  As árvores aqui
+possuem marcas como se alguma coisa enorme as tivesse rasgado com suas
+garras, com raiva.
+
+~
+61 9 0 0 0 3
+D0
+O cheiro repugnante de um grande réptil sai da entrada da caverna.
+~
+~
+0 -1 6143
+D1
+~
+~
+0 -1 15701
+D3
+O caminho continua ao oeste.
+~
+~
+0 -1 6136
+E
+entrada caverna~
+A entrada da caverna emana o cheiro repugnante de um grande réptil.
+~
+E
+árvores árvore~
+As enormes e antigas árvores cinzentas possuem marcas como se alguma coisa
+enorme as tivesse rasgado com suas garras, com muita raiva.
+~
+S
+#6143
+A Caverna do Dragão Verde~
+   Você está em uma grande caverna natural.  O chão está coberto de ossos de
+todos os tipos e o fedor tão volumoso que você poderia cortá-lo com uma
+faca.  A única saída é ao sul.
+~
+61 9 0 0 0 3
+D2
+A saída o leva de volta á floresta.
+~
+~
+0 -1 6142
+E
+osso ossos chão~
+A maioria dos ossos no chão parecem ter origem humana.
+~
+S
+#6150
+O Caminho Estreito~
+   Este caminho parece mais assustador do que qualquer outro que você viu.
+As habituais marcas de garras de animais e mordidas nas árvores diminuem e
+se tornam distantes.  O mato parece se mover para o leste.  O caminho
+continua ao norte.
+~
+61 9 0 0 0 3
+D0
+O caminho estreito continua ao norte.
+~
+~
+0 -1 6151
+D1
+um caminho esquecido.
+~
+mato~
+1 -1 19700
+D2
+O caminho cruza o caminho da floresta principal.
+~
+~
+0 -1 6103
+S
+#6151
+O Caminho Estreito~
+   Esta parte do caminho é também bastante peculiar.  Você não vê nenhum
+sinal de vida animal, nem nada parecido.  A estrutura formada pelas árvores,
+força o caminho a uma acentuada curva ao leste.
+~
+61 9 0 0 0 3
+D1
+O caminho segue ao leste.
+~
+~
+0 -1 6152
+D2
+O começo do caminho.
+~
+~
+0 -1 6150
+S
+#6152
+O Círculo de Árvores~
+   Ás árvores aqui parecem formar um círculo em volta de uma enorme árvore
+no centro.  Você percebe uma porta de madeira esculpida na enorme árvore ao
+leste.  O caminho que você vinha seguindo parece terminar na base da árvore.
+~
+61 9 0 0 0 3
+D1
+A porta da árvore foi belamente esculpida.
+~
+porta~
+1 -1 6153
+D3
+A curva no caminho.
+~
+~
+0 -1 6151
+S
+#6153
+Dentro da Grande Árvore~
+   Você entrou dentro da árvore.  A partir daqui, degraus conduzem para
+baixo, na escuridão, ou você pode sair da árvore, seguindo para o oeste.
+~
+61 9 0 0 0 3
+D3
+A porta da árvore foi lindamente esculpida.
+~
+porta~
+1 -1 6152
+D5
+Os degraus parecem que poderiam sustentar seu peso.
+~
+~
+0 -1 6154
+S
+#6154
+O Corredor Subterrâneo~
+   Este corredor é aparentemente uma das raízes da árvore.  Ele segue ao
+sul, de onde você pode ouvir estranhos barulhos.
+~
+61 9 0 0 0 3
+D2
+O corredor parece bem grande.
+~
+~
+0 -1 6155
+D4
+Os degraus parecem que poderiam sustentar seu peso.
+~
+~
+0 -1 6153
+S
+#6155
+O Templo Cultista~
+   Este templo, construído para um Deus o qual você não adora, é um bom
+lugar para visitar mas você se sente desconfortável ao pensar em gastar seu
+tempo aqui.  O altar esculpido na madeira parece quase brilhar quando você
+entra na sala.  A única saída é pela qual você entrou.
+~
+61 9 0 0 0 3
+D0
+O corredor ao norte parece bem grande.
+~
+~
+0 -1 6154
+S
+$~

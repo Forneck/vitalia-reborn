@@ -1,0 +1,61 @@
+#9701
+chicote correntes~
+um chicote de correntes~
+Um poderoso chicote feito de correntes foi deixado aqui.~
+~
+5 bj 0 0 0 an 0 0 0 0 0 0 0
+0 2 8 2
+12 12000 1200 60 0
+E
+chicote correntes~
+Este chicote foi feito com correntes muito poderosas e cortantes.  Seu poder
+de ataque é impressionante.
+~
+A
+18 2
+A
+19 2
+#9702
+armadura couro serpente~
+uma armadura de couro de serpente~
+Uma poderosa armadura feita em couro de serpente foi deixada aqui.~
+~
+9 agjl 0 0 0 ad 0 0 0 0 0 0 0
+5 0 0 0
+15 1000000 10000 60 0
+E
+armadura couro serpente~
+Esta armadura é feita do couro da serpente marinha, é possivel notar as
+cores avermelhadas da própria serpente.
+~
+A
+19 2
+#9703
+anel mágico~
+um anel mágico~
+Um magnífico anel mágico foi deixado aqui.~
+~
+11 afgik 0 0 0 ab 0 0 0 in 0 0 0
+0 0 0 0
+2 10000 1000 60 0
+E
+anel mágico~
+Um anel bastante interessante.
+~
+A
+18 2
+A
+24 2
+#9704
+poção cura~
+uma poção de cura~
+Uma poção muito especial foi deixada aqui.~
+Nada parece ter acontecido~
+10 a 0 0 0 ao 0 0 0 in 0 0 0
+60 43 43 43
+1 20000 2000 0 0
+E
+poção cura~
+Esta poção antiga parece ser a cura para os mais variados males.
+~
+$~

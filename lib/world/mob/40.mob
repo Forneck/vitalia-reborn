@@ -1,0 +1,281 @@
+#4000
+serpente enorme cobra~
+a serpente~
+Uma enorme e terrível serpente está aos seus pés, sibilando para você.
+~
+Ela parece estar com fome.
+~
+2097186 0 0 0 2064 0 0 0 -200 E
+11 7 4 5d10+50 3d6+0
+0 12000
+8 8 0
+E
+#4001
+serpente cobra verde~
+uma serpente verde~
+Uma pequena serpente verde está aqui, e não parece muito amistosa ...
+~
+Ela parece gelada.
+~
+2097154 0 0 0 0 0 0 0 -100 E
+7 12 4 3d10+30 2d6+1
+0 2500
+8 8 0
+E
+#4002
+centopéia~
+a centopéia~
+Uma pequena centopéia está aqui, deixando seu rastro pelo chão.
+~
+Ela parece completamente sem calor.
+~
+2097154 0 0 0 0 0 0 0 100 E
+3 20 6 2d10+20 1d6+0
+0 400
+8 8 0
+E
+#4003
+kobold~
+o kobold~
+Um horrível kobold está aqui procurando comida.
+~
+Ele é horrível.
+~
+2097220 0 0 0 2048 0 0 0 -100 E
+4 16 5 2d10+40 1d8+1
+50 800
+8 8 0
+E
+#4004
+orc~
+o orc~
+O Orc ronda por aqui procurando alguem para matar.
+~
+Você percebe toda a maldade no seu olhar...
+~
+2097252 0 0 0 2048 0 0 0 -400 E
+5 15 5 2d10+60 2d4+0
+100 900
+8 8 0
+E
+#4005
+orc enorme~
+um orc~
+Um enorme orc está aqui parecendo mal intencionado.
+~
+Ele parece pavoroso.
+~
+2097220 0 0 0 2048 0 0 0 -500 E
+7 11 2 3d20+75 2d6+2
+200 3000
+8 8 1
+E
+#4050
+guerreiro~
+o guerreiro~
+Um guerreiro muito alto está aqui.  Ele tem muito mais cicatrizes do 
+que qualquer pessoa que você já tenha visto.
+~
+Ele parece ser um lutador forte e sem cérebro.
+~
+2097254 0 0 0 2048 0 0 0 -300 E
+12 8 4 10d10+50 2d8+1
+1000 12000
+8 8 1
+E
+#4051
+guerreiro~
+o guerreiro~
+Um guerreiro alto está aqui.
+~
+Ele parece ter jeito com armas.
+~
+2097252 0 0 0 2048 0 0 0 -400 E
+7 13 5 3d10+80 2d5+0
+200 2500
+8 8 1
+E
+#4052
+hobgoblin~
+o hobgoblin~
+Um pequeno hobgoblin está aqui parado.
+~
+O hobgoblin parece um tanto perdido.
+~
+2097220 0 0 0 2048 0 0 0 -300 E
+6 12 6 3d8+70 2d4+0
+100 1500
+8 8 1
+E
+#4053
+serpente cobra marrom~
+a serpente~
+Uma serpente marrom te observa.
+~
+A serpente parece ter segundas intenções.
+~
+2097186 0 0 0 2048 0 0 0 -600 E
+10 10 4 4d10+60 3d5+1
+0 12000
+8 8 0
+E
+#4054
+centopéia~
+a centopéia~
+Uma centopéia branca está aqui.
+~
+A centopéia não parece realmente perceber você.
+~
+2097154 0 0 0 0 0 0 0 -100 E
+5 17 5 1d10+50 1d7+0
+0 1000
+8 8 0
+E
+#4055
+hobgoblin~
+o hobgoblin~
+Um enorme hobgoblin está aqui.
+~
+O hobgoblin parece bastante perigoso.
+~
+2097220 0 0 0 2048 0 0 0 -500 E
+10 8 2 1d16+120 2d6+3
+300 10000
+8 8 1
+E
+#4056
+orc~
+o orc~
+Um orc está aqui, procurando alguma coisa (ou talvez alguem?) para comer.
+~
+Bem, ele não parece ser muito amigável.
+~
+2097252 0 0 0 2048 0 0 0 -800 E
+8 13 2 3d10+100 2d5+2
+150 4000
+8 8 1
+E
+#4057
+leão montanha~
+o leão da montanha~
+Um leão da montanha está aqui, grunhindo perversamente para você.
+~
+O leão parece bastante hostil com enormes garras e grandes dentes.
+~
+2097248 0 0 0 2048 0 0 0 -100 E
+5 16 5 1d10+60 2d4+0
+0 900
+8 8 1
+E
+#4058
+gigante colina~
+o gigante da colina~
+Um gigante da colina está aqui arremessando algumas pedras por aí.
+~
+O gigante parece ter cerca de 9 pés de altura.  Por suas ações você
+logo chega a conclusão que ele não é muito inteligente.
+~
+2162752 0 0 0 2048 0 0 0 0 E
+13 8 2 1d10+160 2d10+0
+1000 16500
+8 8 1
+E
+#4100
+mago~
+o mago~
+Um pequeno mago de aparência inteligente está aqui.
+~
+Sua inteligência faz qualquer pessoa normal parecer estúpido...
+Parece que ele lida bem com magia.
+~
+2097190 0 0 0 2064 0 0 0 -100 E
+13 10 2 3d20+100 2d6+0
+2500 21000
+8 8 1
+E
+#4101
+troll enorme~
+o troll~
+Um enorme troll está aqui.
+~
+Bem, ele parece perigoso!
+~
+2097190 0 0 0 2048 0 0 0 -800 E
+12 8 1 2d10+100 2d7+1
+500 13000
+8 8 1
+E
+#4102
+serpente cobra verde enorme~
+a serpente~
+Uma enorme serpente verde está aqui. Parece ser a guardiã de forças malígnas.
+~
+Você vê uma criatura demoníaca.
+~
+2097190 0 0 0 2048 0 0 0 -700 E
+10 8 5 6d10+50 3d5+2
+0 9000
+8 8 1
+E
+#4103
+ladrão~
+o ladrão~
+Um ladrão está aqui todo vestido de preto.
+~
+Ele parece estar contando um punhado de moedas. Talvez você devesse contar
+o SEU ouro também...
+~
+2097220 0 0 0 1574928 0 0 0 -400 E
+8 13 3 1d10+100 2d5+2
+100 4000
+8 8 1
+E
+#4104
+orc feioso~
+o orc~
+um orc feioso está aqui.
+~
+É bastante desagradável olhar para ele.
+~
+2097380 0 0 0 67600 0 0 0 -200 E
+7 14 4 1d5+90 2d4+1
+200 2250
+8 8 1
+E
+#4105
+centopéia~
+a centopéia~
+Uma pequena e fria centopéia está aqui.
+~
+Bem, ela não parece prestar muita atenção em você.
+~
+2097154 0 0 0 0 0 0 0 300 E
+6 15 4 3d10+50 1d8+1
+0 1500
+8 8 0
+E
+#4106
+guereiro~
+o guerreiro~
+Um guerreiro humano está aqui. Ele traz um sorriso macabro no rosto.
+~
+Ele não parece muito amigável...
+~
+2097252 0 0 0 2048 0 0 0 -300 E
+9 10 3 3d10+100 2d6+2
+500 9000
+8 8 1
+E
+#4107
+kobold~
+o kobold~
+um kobold verde está aqui.
+~
+Ele parece lodoso..
+~
+2097252 0 0 0 2048 0 0 0 -100 E
+7 14 4 4d10+25 1d9+1
+20 3000
+8 8 1
+E
+$

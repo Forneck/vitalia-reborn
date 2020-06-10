@@ -1,0 +1,571 @@
+#3700
+bastão destino~
+o bastão do Destino~
+Um estreito objeto, como um bastão, está aqui no chão.~
+~
+5 aegin 0 0 0 an 0 0 0 0 0 0 0
+0 5 5 5
+5 500 0 47 0
+A
+18 3
+A
+24 -2
+A
+19 -1
+#3701
+grilheta destino~
+a Grilheta do Destino~
+Uma longa grilheta está aqui, vergando sobre seu próprio peso.~
+~
+9 aep 0 0 0 am 0 0 0 0 0 0 0
+5 0 0 0
+2 500 0 47 0
+A
+18 1
+A
+19 1
+A
+3 -2
+#3702
+tesoura destino~
+a tesoura do Destino~
+Um afiado par de tesouras está aqui.~
+~
+5 bep 0 0 0 an 0 0 0 0 0 0 0
+0 4 5 11
+5 0 0 47 0
+A
+18 1
+A
+19 1
+#3703
+lança pontuda~
+uma lança pontuda~
+Uma lança pontuda está aqui, parcialmente coberta por sujeira.~
+~
+5 egi 0 0 0 an 0 0 0 0 0 0 0
+0 5 5 15
+8 1000 0 46 0
+A
+1 1
+A
+19 3
+A
+18 3
+A
+13 -30
+A
+2 -2
+#3704
+lágrimas adaga~
+a adaga das lágrimas~
+Uma adaga está aqui, arrepiando no chão.~
+~
+5 abo 0 0 0 an 0 0 0 0 0 0 0
+0 6 5 11
+8 1000 0 49 0
+A
+18 2
+A
+19 -2
+A
+2 3
+#3705
+espada sofrimento~
+a espada do sofrimento~
+Um misterioso clamor ecoa da lâmina que está aqui.~
+~
+5 aegi 0 0 0 an 0 0 0 0 0 0 0
+0 6 5 3
+15 1000 0 49 0
+A
+19 2
+A
+18 5
+A
+24 2
+#3706
+machado sofrimento~
+o machado do Sofrimento~
+Ecoantes gemidos rodeiam este machado, resplandescendo aqui.~
+~
+5 eit 0 0 0 an 0 0 0 0 0 0 0
+0 5 6 10
+20 1000 0 49 0
+A
+18 -1
+#3707
+bastão desespero~
+o bastão do desespero~
+Sons de melancolia erradiam do bastão que está aqui no chão.~
+~
+5 begin 0 0 0 an 0 0 0 0 0 0 0
+0 5 6 7
+15 1000 0 40 0
+A
+1 3
+A
+18 1
+A
+19 2
+#3708
+terror espada~
+a espada do Terror~
+Uma estranha arma descansa aqui no chão.~
+~
+5 bg 0 0 0 an 0 0 0 0 0 0 0
+0 7 4 3
+5 600 0 46 0
+A
+18 3
+A
+19 1
+A
+13 20
+#3709
+clamor adaga~
+a adaga do Clamor~
+Uma estranha arma descansa aqui no chão.~
+~
+5 ai 0 0 0 an 0 0 0 0 0 0 0
+0 7 4 1
+7 600 0 46 0
+A
+18 2
+A
+19 -1
+A
+13 20
+#3710
+vestimenta grande negra~
+uma grande vestimenta negra~
+Um traje, mais negro do que a noite está aqui.~
+~
+11 abep 0 0 0 ad 0 0 0 0 0 0 0
+0 0 0 0
+20 300 0 46 0
+A
+14 30
+A
+12 30
+A
+19 1
+A
+2 -2
+#3711
+decadência garra~
+a garra da decadência~
+Uma envelhecida garra está aqui, brilhando fracamente.~
+~
+5 abegi 0 0 0 an 0 0 0 0 0 0 0
+0 5 5 8
+18 450 0 45 0
+A
+13 -25
+A
+19 4
+A
+18 1
+A
+24 -3
+#3712
+silêncio bastão~
+o bastão do silêncio~
+O ar enfraquece enquanto esta estranha arma pulsa misteriosamente.~
+~
+5 abegi 0 0 0 an 0 0 0 0 0 0 0
+0 5 4 5
+5 0 0 50 0
+A
+13 -30
+A
+12 -30
+A
+24 -4
+#3713
+asas da morte~
+as asas da morte~
+Uma intensa aura de morte circula a pilha de tecido que está aqui.~
+~
+11 be 0 0 0 ad 0 0 0 0 0 0 0
+0 0 0 0
+13 250 0 50 0
+A
+18 2
+#3714
+espada flamejante~
+uma espada flamejante~
+Uma espada está aqui, queimando ferozmente.~
+~
+5 agi 0 0 0 an 0 0 0 0 0 0 0
+0 5 4 3
+30 500 0 46 0
+A
+1 -2
+A
+18 -2
+A
+19 3
+#3715
+bracelete flamejante~
+um bracelete flamejante~
+Um bracelete feito por fogo mágico está queimando aqui.~
+~
+11 aip 0 0 0 am 0 0 0 0 0 0 0
+0 0 0 0
+3 230 0 46 0
+A
+18 1
+A
+19 1
+A
+13 -30
+A
+12 30
+#3716
+traje infernal fogo~
+um traje infernal~
+Um traje feito do fogo infernal crepita, enquanto brilha aqui.~
+~
+9 agj 0 0 0 ad 0 0 0 0 0 0 0
+8 0 0 0
+28 700 0 45 0
+A
+1 2
+A
+2 1
+A
+18 1
+#3717
+garra sangrenta~
+a garra sangrenta~
+Um conjunto de garras está aqui, com sede de sangue.~
+~
+5 egi 0 0 0 an 0 0 0 0 0 0 0
+0 6 4 8
+14 200 0 42 0
+A
+18 3
+A
+19 2
+#3718
+osso pedaço~
+um pedaço de osso~
+Um fino pedaço de osso da perna de alguma raça anciã está aqui.~
+~
+5 begi 0 0 0 an 0 0 0 0 0 0 0
+0 6 3 5
+23 344 0 42 0
+A
+18 4
+A
+19 2
+A
+12 20
+#3719
+mandíbula cessação~
+a mandíbula da cessação~
+Um par de mandíbulas está aqui, em meio a poeira.~
+~
+11 beo 0 0 0 ar 0 0 0 0 0 0 0
+0 0 0 0
+14 600 0 45 0
+A
+12 25
+A
+24 5
+#3720
+pedaço osso~
+um pedaço de osso~
+Um fino pedaço de osso está aqui, resplandecendo suavemente na luz.~
+~
+5 begi 0 0 0 an 0 0 0 0 0 0 0
+0 6 3 14
+6 400 0 44 0
+A
+2 3
+A
+18 3
+A
+19 1
+#3721
+demolição espada~
+a espada da Demolição~
+Uma arma com grande poder de está aqui, zunindo intensamente.~
+~
+5 egi 0 0 0 an 0 0 0 0 0 0 0
+0 7 3 3
+25 3000 0 50 0
+A
+1 2
+A
+13 10
+A
+19 2
+#3722
+destruição adaga~
+a adaga da Destruição~
+Uma arma com grande poder de destruição está aqui, brilhando fracamente.~
+~
+5 aegin 0 0 0 an 0 0 0 0 0 0 0
+0 5 4 14
+25 3000 0 50 0
+A
+1 1
+A
+13 30
+A
+18 3
+A
+19 2
+#3723
+foice morte~
+a poderosa foice da morte~
+A foice da Morte está aqui, erradiando uma aura de morte.~
+~
+5 begin 0 0 0 an 0 0 0 0 0 0 0
+0 5 6 17
+10 1000 0 50 0
+A
+19 3
+A
+18 3
+A
+24 -2
+A
+1 -2
+A
+13 -15
+#3724
+frio adaga~
+a adaga do Frio~
+Uma aura de frio circula a arma que está aqui.~
+~
+5 ae 0 0 0 an 0 0 0 0 0 0 0
+0 4 4 14
+10 1000 0 50 0
+A
+19 2
+A
+18 2
+A
+24 -2
+A
+3 -2
+#3725
+calor espada~
+a espada do Calor~
+Um intenso, e pulsante calor é erradiado por esta arma que está no chão.~
+~
+5 aegit 0 0 0 an 0 0 0 0 0 0 0
+0 10 3 3
+5 1000 0 50 0
+A
+18 2
+A
+19 2
+A
+24 4
+#3726
+fome bastão~
+o bastão da Fome~
+Uma única arma flutua, imóvel no ar.~
+~
+5 eim 0 0 0 an 0 0 0 0 0 0 0
+0 7 3 5
+10 1000 0 50 0
+A
+19 1
+A
+18 1
+A
+24 -2
+A
+2 -2
+A
+14 -30
+#3727
+arco guerra~
+o arco da guerra~
+O arco da guerra está aqui, flamejando ferozmente.~
+~
+5 aegi 0 0 0 an 0 0 0 0 0 0 0
+0 5 4 12
+10 1000 0 50 0
+A
+19 4
+A
+18 3
+A
+24 -2
+A
+17 3
+A
+1 -2
+#3728
+ancião amuleto~
+o amuleto ancião~
+Uma amuleto muito antigo está aqui, juntando poeira.~
+~
+11 bep 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+3 1500 0 50 0
+A
+18 2
+A
+19 1
+A
+24 -3
+A
+17 -5
+A
+13 -25
+#3729
+braçadeira tempo~
+a braçadeira do tempo~
+Uma ofuscante braçadeira está aqui.~
+~
+9 abe 0 0 0 am 0 0 0 0 0 0 0
+5 0 0 0
+5 2000 0 50 0
+A
+12 30
+A
+14 30
+A
+13 30
+#3730
+espada estelar~
+uma espada dos astros~
+Uma pequena arma, cotada de poeira estelar, está aqui.~
+~
+5 ae 0 0 0 an 0 0 0 0 0 0 0
+0 4 6 3
+5 2500 0 50 0
+A
+18 1
+A
+19 1
+A
+1 -3
+A
+3 -1
+#3731
+escudo gwnar~
+o escudo de Gwnar~
+Um poderoso escudo está aqui, esperando para ser novamente usado.~
+~
+9 ae 0 0 0 aj 0 0 0 0 0 0 0
+7 0 0 0
+15 500 0 40 0
+A
+24 -3
+A
+13 20
+A
+14 20
+A
+19 1
+#3732
+cesta simples~
+uma cesta~
+Uma cesta simples está aqui.~
+~
+15 b 0 0 0 a 0 0 0 0 0 0 0
+100 1 -1 0
+5 1000 0 0 0
+#3733
+brinco eterno~
+o brinco eterno~
+Um pequeno brinco cintila aqui no chão.~
+~
+11 bem 0 0 0 aq 0 0 0 0 0 0 0
+0 0 0 0
+1 2000 0 50 0
+A
+6 3
+A
+24 -3
+A
+18 1
+#3734
+anel armadura divina~
+um anel da armadura divina~
+Um pequeno anel está aqui, brilhando com uma luz sagrada.~
+~
+9 eo 0 0 0 ab 0 0 0 0 0 0 0
+3 0 0 0
+3 200 0 42 0
+A
+1 -2
+A
+5 -2
+A
+18 2
+A
+17 -10
+#3735
+manto servidão~
+o manto da servidão~
+Um longo, e grosso tecido está aqui, brilhando e zunindo poderosamente.~
+~
+11 abe 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+20 100 0 42 0
+A
+1 -3
+A
+2 -3
+A
+14 -30
+#3736
+chave apocalipse~
+a chave do Apocalipse~
+Uma chave foi esquecida aqui.~
+~
+18 ac 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#3796
+punhal ébano~
+um punhal de ébano~
+Aqui no chão há um punhal mortal.~
+~
+5 gi 0 0 0 an 0 0 0 0 0 0 0
+0 4 5 11
+5 0 0 41 0
+A
+5 -3
+A
+18 2
+A
+19 4
+#3797
+saco ervas~
+um saco de ervas~
+Há um saco de ervas jogado aqui no chão.~
+~
+19 ab 0 0 0 a 0 0 0 0 0 0 0
+12 0 0 0
+2 150 0 0 0
+#3798
+argola aço~
+uma argola de aço~
+Uma argola feita de aço está aqui no chão, juntando poeira.~
+~
+11 mt 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+2 5000 3000 12 0
+A
+2 1
+#3799
+chave ferro trabalhado~
+uma chave de ferro trabalhado~
+Uma pequena chave feita de ferro está aqui, parcialmente escondida na sujeira.~
+~
+18 bc 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+A
+9 30
+$~

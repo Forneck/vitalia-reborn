@@ -1,0 +1,484 @@
+#9200
+cartomante mulher~
+a cartomante~
+Uma mulher está sentada na beira da estrada.
+~
+Você ve uma bela mulher com cabelos negros e olhar penetrante.  Ela sorri e
+pergunta gentilmente: 
+'Quer saber o que seu futuro preparou para você?'
+~
+2132102 0 0 0 68 0 0 0 0 E
+11 12 1 2d5+100 3d5+2
+1250 15000
+8 6 2
+E
+#9201
+valete guarda copas~
+o valete de copas~
+Um valete de copas monta guarda no portão.
+~
+Um altivo valete guarda os portões desse reino.  Ele parece do tipo que
+não aceita provocações.  Notando sua presença ele reafirma sua posição e
+exclama com imponência:
+"Alto lá! Identifique-se em nome do Rei!'
+~
+2103298 0 0 0 256 0 0 0 -500 E
+15 8 0 3d6+150 2d6+3
+2500 18000
+8 8 1
+E
+#9202
+valete guarda ouros~
+o valete de ouros~
+Um valete de ouros monta guarda no portão.
+~
+Um altivo valete guarda os portões desse reino.  Ele parece do tipo que
+não aceita provocações.  Notando sua presença ele reafirma sua posição e
+exclama com imponência:
+"Alto lá! Identifique-se em nome do Rei!'
+~
+2103298 0 0 0 256 0 0 0 -500 E
+15 8 0 3d6+150 2d6+3
+2500 18000
+8 8 1
+E
+#9203
+valete guarda espadas~
+o valete de espadas~
+Um valete de espadas monta guarda no portão.
+~
+Um altivo valete guarda os portões desse reino.  Ele parece do tipo que
+não aceita provocações.  Notando sua presença ele reafirma sua posição e
+exclama com imponência:
+"Alto lá! Identifique-se em nome do Rei!'
+~
+2103298 0 0 0 256 0 0 0 500 E
+15 8 0 3d6+150 2d6+3
+2500 18000
+8 8 1
+E
+#9204
+valete guarda paus~
+o valete de paus~
+Um valete de paus monta guarda no portão.
+~
+Um altivo valete guarda os portões desse reino.  Ele parece do tipo que
+não aceita provocações.  Notando sua presença ele reafirma sua posição e
+exclama com imponência:
+"Alto lá! Identifique-se em nome do Rei!'
+~
+2103298 0 0 0 256 0 0 0 500 E
+15 8 0 3d6+150 2d6+3
+2500 18000
+8 8 1
+E
+#9205
+valete guarda coringa~
+o coringa disfarçado em valete~
+Um valete (?) monta guarda no portão.
+~
+Um altivo valete guarda os portões desse reino.  Ele parece do tipo que
+não aceita provocações.  Notando sua presença ele reafirma sua posição e
+exclama com imponência:
+"Alto lá! Identifique-se em nome do Rei!'
+~
+2103298 0 0 0 256 0 0 0 0 E
+15 8 0 3d6+150 2d6+3
+2500 18000
+8 8 1
+E
+#9206
+sete copas~
+o sete de copas~
+Um sete de copas caminha distraído.
+~
+Apenas sete comum ...
+~
+2099396 0 0 0 0 0 0 0 -400 E
+10 15 2 2d6+100 2d4+0
+500 9000
+8 8 1
+E
+#9207
+sete ouros~
+o sete de ouros~
+Um sete de ouros caminha distraído.
+~
+Apenas um sete comum ...
+~
+2099396 0 0 0 0 0 0 0 -400 E
+10 15 2 2d6+100 2d4+0
+500 9000
+8 8 1
+E
+#9208
+sete espadas~
+o sete de espadas~
+Um sete de espadas caminha distraído.
+~
+Apenas um sete comum ...
+~
+2099396 0 0 0 0 0 0 0 400 E
+10 15 2 2d6+100 2d4+0
+500 9000
+8 8 1
+E
+#9209
+sete paus~
+o sete de paus~
+Um sete de paus caminha distraído.
+~
+Apenas um sete comum ...
+~
+2099396 0 0 0 0 0 0 0 400 E
+10 15 2 2d6+100 2d4+0
+500 9000
+8 8 1
+E
+#9210
+sete coringa~
+o coringa fingindo ser um sete~
+Um coringa fingindo ser um sete caminha distraído.
+~
+Apenas um sete (?) comum ...
+~
+2099396 0 0 0 0 0 0 0 0 E
+10 15 2 2d6+100 2d4+0
+500 9000
+8 8 1
+E
+#9211
+três copas~
+um três de copas~
+um três de copas festejando sabe-se lá o que ...
+~
+Apenas um três comum...
+~
+2099268 0 0 0 0 0 0 0 -400 E
+4 16 7 2d4+50 2d3+1
+250 600
+8 8 1
+E
+#9212
+três ouros~
+um três de ouros~
+um três de ouros festejando sabe-se lá o que ...
+~
+Apenas um três comum...
+~
+2099268 0 0 0 0 0 0 0 -400 E
+4 16 7 2d4+50 2d3+1
+250 600
+8 8 1
+E
+#9213
+três espadas~
+um três de espadas~
+um três de espadas festejando sabe-se lá o que ...
+~
+Apenas um três comum...
+~
+2099268 0 0 0 0 0 0 0 -400 E
+4 16 7 2d4+50 2d3+1
+250 600
+8 8 1
+E
+#9214
+três paus~
+um três de paus~
+um três de paus festejando sabe-se lá o que ...
+~
+Apenas um três comum...
+~
+2099268 0 0 0 0 0 0 0 400 E
+4 16 7 2d4+50 2d3+1
+250 600
+8 8 1
+E
+#9215
+três coringa~
+um coringa disfarçado de três~
+um coringa disfarçado de três festejando sabe-se lá o que ...
+~
+Apenas um três (?) comum...
+~
+2099268 0 0 0 0 0 0 0 0 E
+4 16 7 2d4+50 2d3+1
+250 600
+8 8 1
+E
+#9216
+canastra cartas copas~
+a canastra de copas~
+Várias cartas formam uma canastra e guardam a entrada do Castelo
+~
+Você vê várias cartas, uma seguida da outra!  Todas do mesmo naipe.  Você
+pensa se seria uma boa idéia enfrentar esta CANASTRA ...
+~
+2267138 0 0 0 324 0 0 0 -700 E
+10 10 2 3d6+100 2d5+2
+2500 15000
+8 8 2
+E
+#9217
+canastra cartas ouros~
+a canastra de ouros~
+Várias cartas formam uma canastra e guardam a entrada do Castelo
+~
+Você vê várias cartas, uma seguida da outra!  Todas do mesmo naipe.  Você
+pensa se seria uma boa idéia enfrentar esta CANASTRA ...
+~
+2267138 0 0 0 324 0 0 0 -700 E
+10 10 2 3d6+100 2d5+2
+2500 15000
+8 8 2
+E
+#9218
+canastra cartas espadas~
+a canastra de espadas~
+Várias cartas formam uma canastra e guardam a entrada do Castelo
+~
+Você vê várias cartas, uma seguida da outra!  Todas do mesmo naipe.  Você
+pensa se seria uma boa idéia enfrentar esta CANASTRA ...
+~
+2267138 0 0 0 324 0 0 0 700 E
+10 10 2 3d6+100 2d5+2
+2500 15000
+8 8 2
+E
+#9219
+canastra cartas paus~
+a canastra de paus~
+Várias cartas formam uma canastra e guardam a entrada do Castelo
+~
+Você vê várias cartas, uma seguida da outra!  Todas do mesmo naipe.  Você
+pensa se seria uma boa idéia enfrentar esta CANASTRA ...
+~
+2267138 0 0 0 324 0 0 0 700 E
+10 10 2 3d6+100 2d5+2
+2500 15000
+8 8 2
+E
+#9220
+canastra cartas suja~
+a canastra suja~
+Várias cartas formam uma canastra e guardam a entrada do Castelo
+~
+Você vê várias cartas, uma seguida da outra!  Nem todas são do mesmo naipe.
+Você pensa se seria uma boa idéia enfrentar esta CANASTRA ...  Ainda que
+suja...
+~
+2267138 0 0 0 324 0 0 0 0 E
+10 10 2 3d6+100 2d5+2
+2500 15000
+8 8 2
+E
+#9221
+rei copas figura~
+o Rei de Copas~
+Uma figura realmente bela personifica a figura do REI!
+~
+Ao olhar para essa figura envolta em um manto vermelho você sente que sua
+sabedoria e força o levaram a ocupar um cargo tão nobre!
+~
+2267138 0 0 0 324 0 0 0 -700 E
+20 7 -1 8d1+500 4d6+3
+5000 60000
+8 6 1
+E
+#9222
+rei ouros figura~
+o Rei de Ouros~
+Uma figura realmente bela personifica a figura do REI!
+~
+Ao olhar para essa figura envolta em um manto vermelho você sente que sua
+sabedoria e força o levaram a ocupar um cargo tão nobre!
+~
+2267138 0 0 0 324 0 0 0 -700 E
+20 7 -1 8d1+500 4d6+3
+5000 60000
+8 6 1
+E
+#9223
+rei espadas figura~
+o Rei de Espadas~
+Uma figura realmente bela personifica a figura do REI!
+~
+Ao olhar para essa figura envolta em um manto negro você sente que sua
+sabedoria e força o levaram a ocupar um cargo tão nobre!
+~
+2267138 0 0 0 324 0 0 0 700 E
+20 7 -1 8d1+500 4d6+3
+5000 60000
+8 6 1
+E
+#9224
+rei paus figura~
+o Rei de Paus~
+Uma figura realmente bela personifica a figura do REI!
+~
+Ao olhar para essa figura envolta em um manto negro você sente que sua
+sabedoria e força o levaram a ocupar um cargo tão nobre!
+~
+2267138 0 0 0 324 0 0 0 700 E
+20 7 -1 8d1+500 4d6+3
+5000 60000
+8 6 1
+E
+#9225
+rei figura coringa~
+o Rei Coringa~
+Uma figura realmente bela (?) personifica a figura do REI!
+~
+Ao olhar para essa figura envolta em um manto multicolorido você sente que
+sua sabedoria e força o levaram a ocupar um cargo tão nobre!
+~
+2267138 0 0 0 324 0 0 0 0 E
+20 7 -1 8d1+500 4d6+3
+5000 60000
+8 6 1
+E
+#9226
+ás pacificador copas figura~
+o Ás de copas~
+Uma figura muito habilidosa entra de repente.
+~
+Não há o que dizer ...  Ele é mesmo o ÁS - também conhecido como O
+Pacificador do Rei!  Você não mexeria com ele impunemente...
+~
+2353202 0 0 0 67904 0 0 0 -800 E
+20 5 -2 8d1+600 6d4+5
+5000 70000
+8 8 1
+E
+#9227
+ás pacificador ouros figura~
+o Ás de Ouros~
+Uma figura muito habilidosa entra de repente.
+~
+Não há o que dizer ...  Ele é mesmo o ÁS - também conhecido como O
+Pacificador do Rei!  Você não mexeria com ele impunemente...
+~
+2353202 0 0 0 67904 0 0 0 -800 E
+20 5 -2 8d1+600 6d4+5
+5000 70000
+8 8 1
+E
+#9228
+ás pacificador espadas figura~
+o Ás de Espadas~
+Uma figura muito habilidosa entra de repente.
+~
+Não há o que dizer ...  Ele é mesmo o ÁS - também conhecido como O
+Pacificador do Rei!  Você não mexeria com ele impunemente...
+~
+2353202 0 0 0 67904 0 0 0 800 E
+20 5 -2 8d1+600 6d4+5
+5000 70000
+8 8 1
+E
+#9229
+ás pacificador paus figura~
+o Ás de Paus~
+Uma figura muito habilidosa entra de repente.
+~
+Não há o que dizer ...  Ele é mesmo o ÁS - também conhecido como O
+Pacificador do Rei!  Você não mexeria com ele impunemente...
+~
+2353202 0 0 0 67904 0 0 0 800 E
+20 5 -2 8d1+600 6d4+5
+5000 70000
+8 8 1
+E
+#9230
+ás pacificador figura falso~
+o Falso Ás~
+Uma figura muito habilidosa entra de repente.
+~
+Não há o que dizer ...  Ele é mesmo o Falso ÁS - também conhecido como O
+Pacificador do Rei!  Você não mexeria com ele impunemente...
+~
+2353202 0 0 0 67904 0 0 0 0 E
+20 5 -2 8d1+600 6d4+5
+5000 70000
+8 8 1
+E
+#9231
+dama princesa donzela copas~
+a Dama de Copas~
+Uma dama suspira olhando para o retrato do Ás.
+~
+Olhando mais de perto você percebe que a beleza dessa donzela esconde uma
+força descomunal!  Você não deveria mexer com ela.
+~
+2099350 0 0 0 256 0 0 0 -500 E
+19 4 -3 3d5+400 3d6+4
+5000 80000
+8 8 2
+E
+#9232
+dama princesa donzela ouros~
+a Dama de Ouros~
+Uma dama suspira olhando para o retrato do Ás.
+~
+Olhando mais de perto você percebe que a beleza dessa donzela esconde uma
+força descomunal!  Você não deveria mexer com ela.
+~
+2099350 0 0 0 256 0 0 0 -500 E
+19 4 -3 3d5+400 3d6+4
+5000 80000
+8 8 2
+E
+#9233
+dama princesa donzela espadas~
+a Dama de Espadas~
+Uma dama suspira olhando para o retrato do Ás.
+~
+Olhando mais de perto você percebe que a beleza dessa donzela esconde uma
+força descomunal!  Você não deveria mexer com ela.
+~
+2099350 0 0 0 256 0 0 0 500 E
+19 4 -3 3d5+400 3d6+4
+5000 80000
+8 8 2
+E
+#9234
+dama princesa donzela paus~
+a Dama de Paus~
+Uma dama suspira olhando para o retrato do Ás.
+~
+Olhando mais de perto você percebe que a beleza dessa donzela esconde uma
+força descomunal!  Você não deveria mexer com ela.
+~
+2099350 0 0 0 256 0 0 0 500 E
+19 4 -3 3d5+400 3d6+4
+5000 80000
+8 8 2
+E
+#9235
+dama princesa donzela coringa~
+a Dama Coringa~
+Uma dama suspira olhando para o retrato do Ás.
+~
+Olhando mais de perto você percebe que a beleza dessa donzela esconde uma
+força descomunal!  Você não deveria mexer com ela.
+~
+2099350 0 0 0 256 0 0 0 0 E
+19 4 -3 3d5+400 3d6+4
+5000 80000
+8 8 2
+E
+#9236
+pequeno falsificador chaveiro~
+o pequeno chaveiro~
+Um pequeno falsificador ronda o portão, ou melhor .. os guardas do portão.
+~
+Você percebe que esse maroto chaveiro falsifica as chaves para fins nada
+louváveis ...
+~
+2099268 0 0 0 0 0 0 0 0 E
+4 16 7 2d4+50 2d3+1
+250 600
+8 8 1
+E
+$

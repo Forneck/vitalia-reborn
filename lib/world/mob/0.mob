@@ -1,0 +1,113 @@
+#1
+Puff dragão fractal~
+Puff~
+Puff, a Dragão Fractal está aqui, contemplando outra realidade.
+~
+Há algum idéia da coisa estranha e desconhecida da qual ela é feita?
+~
+2351104 0 0 0 67600 0 0 0 1000 E
+80 1 -1 5d10+4950 15d15+3
+10000 155000
+8 8 2
+BareHandAttack: 12
+E
+#10
+clone~
+o clone~
+O velho e tedioso clone está aqui.
+~
+Este clone não parece significar nada.  Não, na verdade, ele é um tanto quanto tedioso.
+~
+2097154 0 0 0 0 0 0 0 0 E
+1 0 0 1d10+48 1d1+1
+0 0
+8 8 0
+E
+#11
+zumbi humanoide~
+o zumbi~
+Um estranho humanóide está aqui.  Que estranho, sua carne parece estar caindo!
+~
+Este estranho humanóide move-se lentamente, e parece ser um corpo, um corpo andante! Deve ser um zumbi ou algo do gênero.
+~
+2097154 0 0 0 0 0 0 0 0 E
+1 0 0 1d1+1 1d1+1
+0 0
+8 8 0
+BareHandAttack: 7
+E
+#12
+corvo~
+um corvo~
+Um corvo negro está voando baixo por aqui
+~
+An undefined string.
+~
+2162690 0 0 0 2192 0 0 0 0 E
+3 10 1 2d8+30 2d4+3
+0 0
+8 8 0
+E
+#13
+lobo~
+um lobo~
+Um grande lobo ronda por aqui.
+~
+An undefined string.
+~
+2097154 0 0 0 67600 0 0 0 0 E
+10 5 -1 2d8+100 2d4+10
+0 0
+8 8 1
+E
+#14
+urso~
+um enorme urso~
+Um enorme urso caminha lentamente.
+~
+An undefined string.
+~
+2162690 0 0 0 2384 0 0 0 0 E
+20 0 -4 2d8+200 2d6+15
+0 0
+8 8 1
+E
+#15
+leão~
+um bravo leão~
+um leão está parado aqui.
+~
+An undefined string.
+~
+2162690 0 0 0 2320 0 0 0 0 E
+40 0 -4 2d8+250 2d6+15
+0 0
+8 8 1
+E
+#19
+aéreo empregado figura~
+o empregado aéreo~
+Uma figura amorfa está flutuando no ar.
+~
+Na medida que você olha esta figura amorfa, ela comeca a tomar a forma de
+um humanóide em forma de núvem.
+~
+2097154 0 0 0 0 0 0 0 0 E
+1 0 0 1d1+1 1d1+1
+0 0
+8 8 0
+E
+#20
+elementar~
+o elementar~
+O elementar está em pé aqui, pacientemente.
+~
+Esta criatura é a essência dos elementos, e parece estar esperando
+pacientemente que algo ocorra.
+~
+2097154 0 0 0 0 0 0 0 0 E
+1 0 0 1d1+1 1d1+1
+0 0
+8 8 0
+E
+$

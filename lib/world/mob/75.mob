@@ -1,0 +1,463 @@
+#7500
+garanh�o orgulhoso~
+um garanh�o orgulhoso~
+Um grande garanh�o orgulhoso fica se mostrando aqui.
+~
+O garanh�o se exibe e fica correndo ao seu redor.  
+~
+2449410 0 0 0 0 0 0 0 0 E
+15 11 0 12d12+300 4d5+7
+0 13427
+8 8 1
+E
+#7501
+gata peluda~
+uma gata muito peluda~
+Uma gata muito peluda anda ao redor de voc� a procura de ratos.
+~
+A gata � bem gorda.  O p�lo dela est� bastante esticado apertando ao redor
+da barriga.  Na ca�a ela parece ser muito boa.
+~
+2097216 0 0 0 0 0 0 0 0 E
+4 15 3 6d8+100 4d4+4
+0 37
+8 8 2
+E
+#7502
+darwin bar�o~
+Bar�o Darwin~
+O Bar�o Darwin est� aqui com um olhar vislumbre e ganancioso.
+~
+O Bar�o Darwin � um homem alto com uma m�dia massa muscular.  Seus longos e
+negros cabelos foram penteados para tr�s e utilizado um amarrador para
+prend�-los.  Os olhos dele lan�am um olhar atormentador.
+~
+2353170 0 0 0 256 0 0 0 -1000 E
+90 -26 -40 12d12+5000 12d7+47
+8900 290000
+8 8 1
+BareHandAttack: 10
+Str: 18
+Dex: 17
+Int: 17
+Wis: 17
+Con: 17
+E
+#7503
+thewin capit�o guardas~
+Capit�o Thewin~
+O capit�o Thewin patrulha a �rea enquanto inspeciona seus guardas.
+~
+Thewin � um homem alto.  A altura dos ombros dele chega facilmente aos 3
+metros.  A face dele demonstra um aspecto de seguran�a, de um homem que
+enfrentou a morte.
+~
+2351106 0 0 0 0 0 0 0 -500 E
+75 -20 -36 11d11+4500 10d7+40
+6000 200000
+8 8 1
+E
+#7504
+mullins tenente guarda~
+Tenente Mullins~
+o tenente Mullins vaga aqui inspecionando a seguran�a.
+~
+Mullins � um homem jovem.  Conforme sua gradua��o deve ser um homem de
+promessa.  Ele est� de p� nos seus imensos 3 metros de altura com um longo
+cabelo louro.
+~
+2351106 0 0 0 0 0 0 0 -500 E
+68 -18 -30 10d10+4000 9d7+37
+5000 160000
+8 8 1
+E
+#7505
+stanchfield sargento guarda~
+Sargento Stanchfield~
+O sargento Stanchfield sussura para ele mesmo.
+~
+O Sargento Stanchfield tem facilmente 3 metros de altura.  Possui marcas no
+rosto que est�o tampadas por longas mechas de cabelo vermelho.  A face dele
+e orelhas s�o completamente vermelhas, e tamb�m possui uma grande cicatriz
+no peito.
+~
+2351106 0 0 0 0 0 0 0 -500 E
+65 -16 -28 10d10+3800 9d7+35
+5000 140000
+8 8 1
+E
+#7506
+morris sargento guarda~
+Sargento Morris~
+O sargento Morris vadia sobre seu beliche.
+~
+Sargento Morris � uma pessoa grande, gorda e fedorenta.  Os olhos dele est�o
+bastante inchados e seu enorme queixo est� repleto de vincos, formados por
+sua gordura.  Sua armadura foi arrancada do corpo e lan�ada com muita for�a
+sobre sua barriga.
+~
+2351106 0 0 0 0 0 0 0 -500 E
+60 -14 -26 10d10+3500 9d7+30
+5000 120000
+5 5 1
+E
+#7507
+martin cozinha chefe homem~
+Chefe Martin~
+O chefe de cozinha continua a preparar a refei��o.
+~
+O chefe de cozinha Martain est� rosnando intensamente para voc�.  Uma grande
+quantidade de cabelo saem para fora do bon� por todos os lados.  Ele possui
+um cabelo preto e bastante oleoso.
+~
+2107394 0 0 0 0 0 0 0 0 E
+45 -4 -18 8d8+2000 7d6+23
+3200 90000
+8 8 1
+E
+#7508
+ajudante cozinha~
+a ajudante de cozinha~
+Uma ajudante de cozinha tem um servi�o dif�cil, manter seu chefe feliz.
+~
+A ajudante de cozinha tem a concentra��o quebrada com a sua chegada.  Ela
+mant�m os olhos fixos no trabalho que est� fazendo.  Possui um pequeno
+ferimento na m�o direita, provavelmente tenha ocorrido no fechamento de
+uma porta.    
+~
+2105474 0 0 0 0 0 0 0 0 E
+40 -3 -16 8d8+1700 6d6+19
+3000 75000
+8 8 2
+E
+#7509
+empregada alegre mulher~
+uma empregada alegre~
+Uma empregada sussurra alegremente como se tivesse fazendo o servi�o. 
+~
+A empregada � at� atraente.  Mas sua face tem um olhar debochado, como seu
+soubesse de alguma piada e n�o quisesse lhe contar.
+~
+2105540 0 0 0 0 0 0 0 0 E
+26 0 -7 7d7+1000 5d6+18
+3000 45909
+8 8 2
+E
+#7510
+mordomo quieto casmurro homem~
+um mordomo casmurro~
+Um homem distinto passeia pelo corredor fazendo o trabalho.
+~
+O mordomo tem um olhar que � um misto de espanto e de severidade em sua
+face.  Sua postura � correta e seu andar � lento e desajeitado.  Ele olha
+para voc� com um olhar elegante.
+~
+2105350 0 0 0 0 0 0 0 0 E
+50 -9 -18 10d10+2000 8d6+28
+3200 63584
+8 8 1
+E
+#7511
+chefe criados~
+a chefe dos criados~
+A chefe dos criados olha desconfiada para voc�.
+~
+A face da velha feiticeira est� enrugada e parece estar rosnando.  Um fino
+cabelo cinza � retirado de cima de um p�o que est� sobre a cabe�a dela.  Sua
+roupa est� passada e bem engomada.
+~
+2107394 0 0 0 0 0 0 0 -350 E
+55 -11 -20 10d10+2180 8d6+32
+3200 76858
+8 8 2
+E
+#7512
+guarda port�o~
+um guarda de port�o~
+Um guarda foi postado antes dos port�es do Pasto.
+~
+O guarda faz parte dos soldados profissionais pessoalmente escolhidos pelo
+Bar�o Darwin.  A armadura dele est� bem conservada e ele n�o parece estar
+chateado, como a maioria dos outros soldados.
+~
+2291730 0 0 0 0 0 0 0 -500 E
+60 -19 -28 11d11+3400 12d7+36
+3200 107448
+8 8 1
+E
+#7513
+guarda perambulando~
+um guarda perambulando~
+Um guarda patrulha os ch�os do Pasto.
+~
+O guarda faz parte dos soldados profissionais pessoalmente escolhidos pelo
+Bar�o Darwin.  A armadura dele est� bem conservada e ele n�o parece estar
+chateado, como a maioria dos outros soldados.
+~
+2285570 0 0 0 0 0 0 0 -500 E
+68 -20 -28 11d11+3600 12d7+39
+4200 107448
+8 8 1
+E
+#7514
+pajem ajudante~
+o pajem~
+O pajem est� pronto para ajudar o Bar�o.
+~
+O jovem menino tem uma express�o de timidez na face.  O cabelo dele foi
+cortado bastante curto e a roupa est� estranhamente limpa para uma crian�a
+da sua idade.
+~
+2105474 0 0 0 0 0 0 0 0 E
+20 9 0 6d6+900 4d4+12
+800 23646
+8 8 1
+E
+#7515
+vigia homem ladr�o~
+o vigia~
+Um vigia monitora toda a zona rural.
+~
+O guarda faz parte dos soldados profissionais pessoalmente escolhidos pelo
+Bar�o Darwin.  A armadura dele est� bem conservada e ele n�o parece estar
+chateado, como a maioria dos outros soldados.
+~
+2351122 0 0 0 0 0 0 0 -500 E
+67 -14 -30 10d10+2900 8d7+35
+3400 153411
+8 8 1
+E
+#7516
+jardineiro homem~
+o jardineiro~
+Um homem velho est� inclinado ajeitando a terra.
+~
+As m�os do velho homem est�o cobertas de grama e sujeira.  O velho acabara
+de se machucar, � o risco que ele corre fazendo este servi�o.
+~
+2105346 0 0 0 0 0 0 0 100 E
+47 -3 -18 10d10+1210 5d6+23
+3200 56858
+8 8 1
+E
+#7517
+aprendiz homem jovem~
+um aprendiz~
+Um jovem homem estuda v�rias artes para sua profiss�o.
+~
+O jovem homem est� repleto de aten��o.  Ele tem a express�o estampada no
+rosto de uma grande excita��o, pois ele acabara de praticar novas
+habilidades.    
+~
+2105346 0 0 0 0 0 0 0 -300 E
+65 -9 -12 10d10+980 5d7+29
+3200 71156
+8 8 1
+E
+#7518
+soldado folga~
+um guarda de folga~
+Um guarda de folga descansa em sua beliche.
+~
+O guarda faz parte dos soldados profissionais pessoalmente escolhidos pelo
+Bar�o Darwin.  Como ele j� trabalhou bastante, tenta descansar um pouco.
+~
+2105346 0 0 0 0 0 0 0 -500 E
+68 -17 -20 10d10+2400 8d7+32
+3200 100448
+4 4 1
+E
+#7519
+soldado homem~
+um soldado~
+Um homem se ap�ia contra a parede de pedras.
+~
+O guarda faz parte dos soldados profissionais pessoalmente escolhidos pelo
+Bar�o Darwin.  A armadura dele est� bem conservada e ele n�o parece estar
+chateado, como a maioria dos outros soldados.
+~
+2285570 0 0 0 0 0 0 0 -500 E
+63 -19 -21 10d10+2100 9d7+33
+3400 131844
+8 8 1
+E
+#7520
+ferreiro homem grande~
+um ferreiro~
+Um homem muito grande coberto com fuligens se senta em um banco.
+~
+O grande e forte homem tem cabelos castanhos claros.  Os bra�os dele s�o t�o
+grandes quanto as pernas de muitas pessoas.  Ele possui antigas cicatrizes
+no rosto.  Cicatrizes providas de metais quentes que se soltam e voam na
+dire��o dele.
+~
+2351122 0 0 0 0 0 0 0 0 E
+57 -13 -19 10d10+1700 5d7+28
+3200 73082
+5 5 1
+E
+#7521
+garoto est�bulo~
+o garoto do est�bulo~
+Um jovem garoto est� limpando os est�bulos.
+~
+O jovem realiza o trabalho com uma express�o de desgosto.  Os p�s dele est�o
+cobertos com adubo e o cabelo est� fedendo muito.
+~
+2105474 0 0 0 0 0 0 0 0 E
+15 11 0 10d10+650 4d4+12
+800 23646
+8 8 1
+E
+#7522
+mestre est�bulo~
+um mestre dos est�bulos~
+O mestre dos est�bulos franzi as sobrancelhas para olhar ao redor.
+~
+O mestre dos est�bulos tem uma face cruel.  Os olhos escuros clareia toda a
+sala com uma luz amea�adora.  Ele esfrega as m�os e segura o cabresto de um
+cavalo.
+~
+2103306 0 0 0 0 0 0 0 -800 E
+54 -10 -17 10d10+1290 5d6+23
+3200 55206
+8 8 1
+E
+#7523
+homem joalheiro~
+o joalheiro~
+Um homem est� sentado aqui trabalhando em algumas j�ias.
+~
+O joalheiro tem m�os pequenas e muito �geis.  Seus olhos piscam quase que
+constantemente.
+~
+2105346 0 0 0 0 0 0 0 -500 E
+65 -14 -20 10d10+1770 7d7+29
+4000 77027
+6 6 1
+E
+#7524
+ourives mulher~
+a ourives~
+Uma mulher se levanta aqui derramando ouro dentro dos moldes.
+~
+A ourives � uma mulher loura e ador�vel.  A face angelical dela � moldada
+pelo seu longo e castanho cabelo que vai at� os ombros.  Os olhos dela o
+olham de um jeito diferente.  Um intenso brilho que sai dela cobre voc�, um
+brilho suave e tranq�ilo.
+~
+2105346 0 0 0 0 0 0 0 -500 E
+63 -16 -19 10d10+1800 5d7+31
+8000 79047
+8 8 2
+E
+#7525
+guarda terra~
+um guarda~
+Um soldado se levanta protegendo este peda�o de terra.
+~
+O guarda faz parte dos soldados profissionais pessoalmente escolhidos pelo
+Bar�o Darwin.  A armadura dele est� bem conservada e ele n�o parece estar
+chateado, como a maioria dos outros soldados.
+~
+2285570 0 0 0 0 0 0 0 -500 E
+65 -17 -30 10d10+2810 8d7+35
+4000 107448
+8 8 1
+E
+#7526
+contadora mulher~
+a contadora~
+Uma mulher est� aqui, conferindo as raz�es.
+~
+A contadora tem manchas de tinta nas m�os e no nariz.  Os ossos da m�o dela
+s�o muito fortes de tanto digitar as cartas e calcular as contas do Bar�o.
+~
+2285570 0 0 0 0 0 0 0 -600 E
+64 -16 -28 10d10+2710 7d7+33
+7000 106318
+8 8 2
+E
+#7527
+estudande artes secretas~
+um estudante~
+Um estudante das artes secretas assiste a aula.
+~
+Um jovem tem a express�o estampada no rosto de uma grande excita��o, pois
+ele acabara de praticar novas habilidades.  Ele estuda intensamente o texto
+das habilidades na qual utilizar� constantemente no futuro.
+~
+2109570 0 0 0 0 0 0 0 -380 E
+48 -10 -17 10d10+1000 5d6+24
+3200 58539
+8 8 1
+E
+#7528
+armeiro homem~
+o armeiro~
+Um homem se levanta aqui inspecionando os bra�os.
+~
+O armeiro � um velho veterano de guerra mas agora ele gasta o tempo cuidando
+das ferramentas e instrumentos que o mantiveram vivo durante todo este
+per�odo.  Ele cheira a �leo e carbono.
+~
+2351122 0 0 0 0 0 0 0 -600 E
+70 -20 -30 10d10+3600 8d7+38
+3333 196371
+8 8 1
+E
+#7529
+mulher costureira~
+a costureira~
+Um mulher est� aqui medindo algumas roupas.
+~
+A costureira � pequena e bastante gorda.  Sua face � vermelha e um pouco
+peluda, ela tenta cumprir todas as ordens do Bar�o e do seu pessoal.
+~
+2105474 0 0 0 0 0 0 0 0 E
+54 -5 -13 10d10+1210 5d6+22
+3200 51991
+8 8 2
+E
+#7530
+ladr�o homem seminu~
+um ladr�o seminu~
+Um homem est� aqui experimentando algumas roupas novas.
+~
+O jovem homem tem um corpo magro e atl�tico.  Ele se levanta vestindo apenas
+suas roupas �ntimas.
+~
+2351250 0 0 0 0 0 0 0 -600 E
+62 -15 -15 10d10+2120 5d7+31
+3200 85300
+8 8 1
+E
+#7531
+homem interrogador~
+o interrogador~
+Um homem se levanta aqui com alguns dispositivos indecentes na m�o.
+~
+Este mal�fico homem possui um olhar sinistro.  Um pequena quantidade de
+saliva est� no canto da boca.  Suas m�os fortes e grandes se parecem muito
+com suas ferramentas de trabalho.
+~
+2287106 0 0 0 0 0 0 0 -900 E
+71 -21 -31 10d10+3110 8d7+39
+4111 190314
+8 8 1
+E
+#7532
+prisioneiro homem~
+um prisioneiro~
+Um homem foi amarrado e deixado no ch�o daqui.
+~
+O homem foi batido severamente.  Seus olhos est�o roxos e muito inchados de
+tanto apanhar.  O l�bio inferior dele possui um enorme corte e se contrai
+irregularmente.
+~
+2105346 0 0 0 0 0 0 0 100 E
+58 -5 -16 10d10+1230 5d7+26
+0 67398
+6 6 1
+E
+$

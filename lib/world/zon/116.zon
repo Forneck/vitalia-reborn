@@ -1,0 +1,229 @@
+#116
+Vitalia~
+Svarga, O Reino Celestial~
+11600 11799 600 1 ade 0 0 0 -1 -1
+-1
+*
+* mobs (e seus eqs)
+*
+M 0 11600 1 11677                Ushas
+E 1 11602 10 7                           tornozeleira de ouro 
+M 0 11601 3 11601                uma Marut
+E 1 11614 10 21                          bindi
+E 1 11616 15 16                          raio
+M 0 11601 3 11606                uma Marut
+E 1 11616 15 16                          raio
+E 1 11617 15 5                           armadura
+M 0 11601 3 11614                uma Marut
+E 1 11616 15 16                          raio
+E 1 11620 15 11                          escudo
+M 0 11608 3 11611                um Marut
+E 1 11614 10 21                          bindi
+E 1 11616 15 16                          raio
+M 0 11608 3 11603                um Marut
+E 1 11616 15 16                          raio
+E 1 11617 15 5                           armadura
+M 0 11608 3 11609                um Marut
+E 1 11616 15 16                          raio
+E 1 11620 15 11                          escudo
+M 0 11610 1 11633                Nidharta
+E 1 11616 15 16                          raio
+E 1 11620 15 11                          escudo
+M 0 11609 1 11642                Kanakajja
+E 1 11618 15 0                           kanakarasa
+E 1 11619 10 13                          cintur�o
+M 0 11602 1 11618                um rouxinol espi�o
+M 0 11603 1 11636                um peixe dourado
+M 0 11604 1 11623                uma yakshini de vento
+M 0 11611 1 11649                Idrksa
+E 1 11621 10 16                          otta
+E 1 11623 10 14                          bracelete
+E 1 11617 15 5                           armadura
+M 0 11612 1 11649                Adrksa
+E 1 11621 10 16                          otta
+E 1 11622 10 21                          m�scara
+E 1 11620 15 11                          escudo
+E 1 11600 1 17                           chave
+M 0 11613 1 11653                est�tua de Jyoti
+M 0 11614 1 11665                est�tua de Rama
+M 0 11615 1 11669                est�tua de Kadru
+M 0 11616 1 11657                est�tua de Nandi
+M 0 11617 1 11661                est�tua de Vyasa
+M 0 11618 1 11685                guarda dorminhoco
+E 1 11632 17 16                          kadaras
+E 1 11634 17 5                           armadura
+M 0 11619 1 11684                guarda faminto
+E 1 11632 17 16                          kadaras
+E 1 11634 17 5                           armadura
+M 0 11620 2 11683                guarda em treinamento
+E 1 11633 17 6                           turbante
+E 1 11635 15 13                          faixa branca
+M 0 11620 2 11683                guarda em treinamento
+E 1 11633 17 6                           turbante
+E 1 11635 15 13                          faixa branca
+M 0 11644 1 11683                treinador da guarda
+E 1 11632 17 16                          kadaras
+E 1 11634 17 5                           armadura
+M 0 11621 1 11682                um guarda
+E 1 11634 17 5                           armadura
+E 1 11632 17 16                          kadaras
+E 1 11612 15 17                          kalaripayat
+M 0 11622 1 11687                cozinheiro
+E 1 11636 12 6                           chap�u
+E 1 11638 15 12                          avental
+E 1 11650 15 17                          sal
+M 0 11605 1 11687                cozinheiro-chefe
+E 1 11636 12 6                           chap�u
+E 1 11638 15 12                          avental
+E 1 11645 15 17                          alho
+M 0 11623 1 11687                ajudante
+E 1 11637 12 6                           touca
+E 1 11638 15 12                          avental
+E 1 11648 15 17                          gergelim
+M 0 11624 1 11687                ajudante
+E 1 11637 12 6                           touca
+E 1 11638 15 12                          avental
+E 1 11639 10 16                          cutelo
+M 0 11625 1 11688                cozinheira
+E 1 11636 12 6                           chap�u
+E 1 11638 15 12                          avental
+E 1 11646 15 17                          coentro
+M 0 11626 1 11688                ajudante
+E 1 11637 12 6                           touca
+E 1 11638 15 12                          avental
+E 1 11647 15 17                          cravo
+M 0 11627 3 11690                servi�al
+E 1 11603 15 17                          bandeja
+P 1 11604 20 11603                       ta�a de vinho
+P 1 11604 20 11603                       ta�a de vinho
+P 1 11604 20 11603                       ta�a de vinho
+P 1 11604 20 11603                       ta�a de vinho
+M 0 11606 2 11693                servi�al
+E 1 11603 15 17                          bandeja
+P 1 11606 20 11603                       prato de samosa
+P 1 11611 20 11603                       ta�a de srikhand
+P 1 11611 20 11603                       ta�a de srikhand
+P 1 11611 20 11603                       ta�a de srikhand
+M 0 11627 3 11692                servi�al
+E 1 11605 20 17                          bandeja de dosa
+M 0 11606 2 11694                servi�al
+E 1 11607 20 17                       bandeja de dhoklas
+M 0 11627 3 11695                servi�al
+E 1 11603 15 17                          bandeja
+P 1 11608 20 11603                       chutney
+P 1 11609 20 11603                       chutney
+P 1 11610 20 11603                       chutney
+M 0 11628 1 11693                nobre
+E 1 11666 15 5                           t�nica azul
+M 0 11629 1 11694                sacerdote
+E 1 11668 15 5                           t�nica cinza
+M 0 11630 1 11694                jovem dama
+E 1 11655 15 5                           sari
+E 1 11656 15 7                           tornozeleira
+M 0 11631 1 11692                dama bem-vestida
+E 1 11686 15 5                           sari
+E 1 11519 15 22                          nath de prata
+M 0 11632 1 11692                senhor elegante
+E 1 11669 15 5                           sherwani alaranjado
+M 0 11633 1 11696                mensageiro
+E 1 11670 15 5                           coura�a negra
+E 1 11671 15 16                          espada amaldi�oada
+M 0 11634 1 11695                apsara
+E 1 11657 15 5                           choli vermelho
+E 1 11658 15 7                           cal�as vermelhas
+E 1 11659 15 9                           henna
+M 0 11635 1 11696                Indrani
+E 1 11659 15 9                           henna
+E 1 11661 10 22                          nath de cristal
+E 1 11685 10 0                           cetro
+M 0 11636 1 11693                Diti
+E 1 11662 15 7                          shalwar
+E 1 11663 15 5                          kamiz
+E 1 11664 15 12                         duppata
+M 0 11637 1 11694                Rudra
+E 1 11667 15 5                          sherwani negro
+M 0 11638 1 11696                Arjuna
+E 1 11674 10 5                          armadura
+E 1 11673 10 16                         Gandiva
+E 1 11675 10 17                         Olho de Krishna
+M 0 11639 1 11695                gandhava
+E 1 11665 15 5                          t�nica
+M 0 11641 1 11695                gandhava
+E 1 11665 15 5                          t�nica
+E 1 11654 15 17                         ravanastron
+M 0 11640 1 11692                Marut
+E 1 11617 15 5                           armadura
+E 1 11616 15 16                          raio
+M 0 11642 1 11695                Urvasi
+E 1 11657 15 5                           choli vermelho
+E 1 11658 15 7                           cal�as vermelhas
+M 0 11643 1 11696                guarda im�vel
+E 1 11632 17 16                          kadaras
+E 1 11634 17 5                           armadura
+*
+* objetos
+*
+O 0 11601 1 11677                        fonte de Ushas
+O 0 11676 1 11654                        est�tua de Vasuratha
+O 0 11677 1 11652                        est�tua de Dyuti e Daksa
+O 0 11679 1 11662                        est�tua do s�bio Bhagirathi
+O 0 11680 1 11660                        est�tua do s�bio Chyavana
+O 0 11681 1 11661                        est�tua do s�bio Valmiki
+O 0 11682 1 11672                        est�tua de Radha
+O 0 11628 1 11664                        est�tua de Arjuna
+O 0 11629 1 11658                        est�tua de Hanuman
+O 0 11630 1 11656                        est�tua de Varaha
+R 0 11683 11613                          tirar estante
+O 0 11613 1 11683                        estante de livros
+P 0 11631 10 11613                       Gatka
+R 0 11668 11678                          tirar flor
+O 0 11678 20 11668                       flor de l�tus no jardim
+R 0 11670 11678                          tirar flor
+O 0 11678 20 11670                       flor de l�tus no jardim
+R 0 11671 11678                          tirar flor
+O 0 11678 20 11671                       flor de l�tus no jardim
+R 0 11673 11678                          tirar flor
+O 0 11678 20 11673                       flor de l�tus no jardim
+O 0 11652 1 11688                        arm�rio
+O 0 11653 1 11688                        estante
+P 1 11641 15 11653                       caril
+P 1 11642 15 11653                       gengibre
+P 1 11643 15 11653                       noz-moscada
+P 1 11649 15 11653                       louro
+O 0 11640 1 11687                        prateleira
+P 1 11651 10 11640                       bacia
+P 1 5457 100 11640                       cenoura
+P 1 5458 100 11640                       tomate
+P 1 11683 10 11640                       saco de arroz
+P 1 3033 100 11640                       caixa
+P 1 5456 100 3033                        ovo
+P 1 5456 100 3033                        ovo
+R 0 11688 11684                          tirar saco de batata
+O 0 11684 20 11688                       saco de batata
+O 0 11687 1 11696                        trono
+P 1 11672 10 11687                       amea�a de Vritra
+*
+* portas
+*
+D 0 11649 1 2                    port�o do pal�cio
+D 0 11650 3 2                    port�o do pal�cio
+D 0 11680 1 1                    p�rtico de entrada
+D 0 11681 3 1                    p�rtico de entrada
+D 0 11686 0 1                    porta da cozinha
+D 0 11687 2 1                    porta da cozinha
+D 0 11687 1 1                    porta da despensa
+D 0 11688 3 1                    porta da despensa
+D 0 11691 1 1                    porta dourada
+D 0 11692 3 1                    porta dourada
+D 0 11701 7 1                    porta de madeira maci�a
+D 0 11702 9 1                    porta de madeira maci�a
+D 0 11704 8 1                    porta de madeira maci�a
+D 0 11705 6 1                    porta de madeira maci�a
+D 0 11707 7 1                    porta de madeira maci�a
+D 0 11708 9 1                    porta de madeira maci�a
+D 0 11709 8 1                    porta de madeira maci�a
+D 0 11710 6 1                    porta de madeira maci�a
+D 0 11697 4 2                    obstru��o
+D 0 11698 4 2                    obstru��o
+S
+$~

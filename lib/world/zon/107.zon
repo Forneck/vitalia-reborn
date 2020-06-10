@@ -1,0 +1,306 @@
+#107
+Vitalia~
+Otávia~
+10700 10799 240 1 bd 0 0 0 -1 -1
+-1
+*
+* Colocar os monstros
+*
+M 0 10701 8 10742    colocar o cidad�o na pra�a florida
+E 1 10700 50 12      entregar o manto otaviano para o cidad�o
+E 1 10701 20 16      entregar a l�mina de diamante para o cidad�o
+M 0 10702 8 10742    colocar a cidad� na pra�a florida
+E 1 10700 50 12      entregar o manto otaviano para a cidad�
+E 1 10702 50 17      entregar a flor colorida para a cidad�
+M 0 10705 12 10742   colocar a crian�a otaviana na pra�a florida
+E 1 10700 50 12      entregar o manto otaviano para a crian�a
+M 0 10720 7 10742    colocar um gumbly na pra�a florida
+E 1 10715 10 3       entregar a coleira de diamante para o gumbly
+M 0 10707 3 10767    colocar o jardineiro na pra�a dos anci�es
+E 1 10717 20 17      entregar um buque de flores ao jardineiro
+M 0 10701 8 10746    colocar o cidad�o na pra�a da alegria
+E 1 10700 50 12      entregar o manto otaviano para o cidad�o
+E 1 10701 20 16      entregar a l�mina de diamante para o cidad�o
+M 0 10702 8 10746    colocar a cidad� na pra�a da alegria
+E 1 10700 50 12      entregar o manto otaviano para a cidad�
+E 1 10702 50 17      entregar a flor colorida para a cidad�
+M 0 10705 12 10746   colocar a crian�a otaviana na pra�a da alegria
+E 1 10700 50 12      entregar o manto otaviano para a crian�a
+M 0 10720 7 10746    colocar um gumbly na pra�a alegria
+E 1 10715 10 3       entregar a coleira de diamante para o gumbly
+M 0 10707 3 10746    colocar o jardineiro na pra�a da alegria
+E 1 10717 20 17      entregar um buque de flores ao jardineiro
+M 0 10716 4 10767    colocar um an�i�o otaviano na pra�a dos anci�es
+E 1 10700 50 12      entregar o manto otaviano para um anci�o
+M 0 10716 4 10767    colocar um an�i�o otaviano na pra�a dos anci�es
+E 1 10700 50 12      entregar o manto otaviano para um anci�o
+M 0 10716 4 10767    colocar um an�i�o otaviano na pra�a dos anci�es
+E 1 10700 50 12      entregar o manto otaviano para um anci�o
+M 0 10707 3 10742    colocar o jardineiro na florida pra�a
+E 1 10717 20 17      entregar um buque de flores ao jardineiro
+M 0 10701 8 10769    colocar o cidad�o na pra�a da amizade
+E 1 10700 50 12      entregar o manto otaviano para o cidad�o
+E 1 10701 20 16      entregar a l�mina de diamante para o cidad�o
+M 0 10702 8 10769    colocar a cidad� na pra�a na pra�a da amizade
+E 1 10700 50 12      entregar o manto otaviano para a cidad�
+E 1 10702 50 17      entregar a flor colorida para a cidad�
+M 0 10705 12 10769   colocar a crian�a otaviana na pra�a da amizade
+E 1 10700 50 12      entregar o manto otaviano para a crian�a
+M 0 10720 7 10769    colocar um gumbly na pra�a da amizade
+E 1 10715 10 3       entregar a coleira de diamante para o gumbly
+M 0 10716 4 10767    colocar um an�i�o otaviano na pra�a da amizade
+E 1 10700 50 12      entregar o manto otaviano para um anci�o
+M 0 10703 1 10730    colocar Fireheart na resid�ncia de Fireheart
+E 1 10703 1 16       entregar a espada de fogo a Fireheart
+M 0 10704 1 10735    colocar Waterheart na resid�ncia de Waterheart
+E 1 10714 1 16       entregar o chicote de �gua a Waterheart
+M 0 10710 1 10766    colocar a profetisa na resid�ncia da profetisa
+E 1 10719 1 19       entregar o brinco lua para a profetisa
+M 0 10728 1 10770    colocar a poetisa na resid�ncia da poetisa
+E 1 10718 1 19       entregar o brinco sol para a poetisa
+G 1 10725 20 -1      entregar uma fruta vermelha a poetisa
+M 0 10708 1 10732    colocar o escultor no edifico das artes
+E 1 10711 20 17      entregar uma picareta ao escultor
+M 0 10709 1 10733    colocar um pintor no atelier
+E 1 10712 20 16      entregar um pincel ao pintor
+E 1 10713 20 17      entregar uma paleta de cores ao pintor
+M 0 10702 8 10740    colocar a cidad� numa casa otaviana
+E 1 10700 50 12      entregar o manto otaviano para a cidad�
+G 1 10725 20 -1      entregar uma fruta vermelha para a cidad�
+M 0 10705 12 10740   colocar a crian�a otaviana numa casa otaviana
+E 1 10700 50 12      entregar o manto otaviano para a crian�a
+M 0 10701 8 10750    colocar um cidad�o numa casa otaviana
+E 1 10700 50 12      entregar o manto otaviano para a cidad�o
+E 1 10701 20 16      entregar a l�mina de diamante para o cidad�o
+M 0 10705 12 10750   colocar a crian�a otaviana numa casa otaviana
+E 1 10700 50 12      entregar o manto otaviano para a crian�a
+M 0 10702 8 10758    colocar a cidad� numa casa otaviana
+E 1 10700 50 12      entregar o manto otaviano para a cidad�
+G 1 10725 20 -1         entregar uma fruta vermelha para a cidad�
+M 0 10705 12 10758   colocar a crian�a otaviana numa casa otaviana
+E 1 10700 50 12      entregar o manto otaviano para a crian�a
+M 0 10701 8 10748    colocar um cidad�o numa casa otaviana
+E 1 10700 50 12      entregar o manto otaviano para a cidad�o
+E 1 10701 20 16      entregar a l�mina de diamante para o cidad�o
+M 0 10705 12 10748   colocar a crian�a otaviana numa casa otaviana
+E 1 10700 50 12      entregar o manto otaviano para a crian�a
+M 0 10705 12 10760   colocar a crian�a otaviana numa casa otaviana
+E 1 10700 50 12      entregar o manto otaviano para a crian�a
+M 0 10705 12 10760   colocar a crian�a otaviana numa casa otaviana
+E 1 10700 50 12      entregar o manto otaviano para a crian�a
+M 0 10720 7 10760    colocar um gumbly numa casa otaviana
+E 1 10715 10 3       entregar a coleira de diamante para o gumbly
+M 0 10705 12 10764   colocar a crian�a otaviana numa casa otaviana
+E 1 10700 50 12      entregar o manto otaviano para a crian�a
+M 0 10702 8 10764    colocar a cidad� numa casa otaviana
+E 1 10700 50 12      entregar o manto otaviano para a cidad�
+G 1 10725 20 -1      entregar uma fruta vermelha para a cidad�
+M 0 10705 12 10764   colocar a crian�a otaviana numa casa otaviana
+E 1 10700 50 12      entregar o manto otaviano para a crian�a
+M 0 10720 7 10760    colocar um gumbly numa casa otaviana
+E 1 10715 10 3       entregar a coleira de diamante para o gumbly
+M 0 10716 1 10757    colocar um anci�o no observat�rio
+E 1 10700 50 12      entregar o manto otaviano para um anci�o
+M 0 10701 8 10757    colocar um cidad�o no observat�rio
+E 1 10700 50 12      entregar o manto otaviano para a cidad�o
+E 1 10701 20 16      entregar a l�mina de diamante para o cidad�o
+M 0 10705 12 10764   colocar a crian�a otaviana no observat�rio
+E 1 10700 50 12      entregar o manto otaviano para a crian�a
+M 0 10712 14 10751   colocar um guarda real na sala dos lend�rios
+E 1 10722 15 16      entregar a besta otaviana para o guarda real
+E 1 10700 50 12      entregar o manto otaviano para o guarda real
+M 0 10712 14 10751   colocar um guarda real na sala dos lend�rios
+E 1 10722 15 16      entregar a besta otaviana para o guarda real
+E 1 10700 50 12      entregar o manto otaviano para o guarda real
+M 0 10712 14 10727   colocar um guarda real na entrada oeste
+E 1 10722 15 16      entregar a besta otaviana para o guarda real
+E 1 10700 50 12      entregar o manto otaviano para o guarda real
+M 0 10712 14 10727   colocar um guarda real na entrada oeste
+E 1 10722 15 16      entregar a besta otaviana para o guarda real
+E 1 10700 50 12      entregar o manto otaviano para o guarda real
+M 0 10712 14 10738   colocar um guarda real na entrada leste
+E 1 10722 15 16      entregar a besta otaviana para o guarda real
+E 1 10700 50 12      entregar o manto otaviano para o guarda real
+M 0 10712 14 10738   colocar um guarda real na entrada leste
+E 1 10722 15 16      entregar a besta otaviana para o guarda real
+E 1 10700 50 12      entregar o manto otaviano para o guarda real
+M 0 10711 1 10771    colocar o trovador nos jardins reais
+E 1 10700 50 12      entregar o manto otaviano para o trovador
+M 0 10712 14 10771   colocar um guarda real nos jardins reais
+E 1 10722 15 16      entregar a besta otaviana para o guarda real
+E 1 10700 50 12      entregar o manto otaviano para o guarda real
+M 0 10712 14 10771   colocar um guarda real nos jardins reais
+E 1 10722 15 16      entregar a besta otaviana para o guarda real
+E 1 10700 50 12      entregar o manto otaviano para o guarda real
+M 0 10726 5 10771    colocar um p�ssaro azul nos jardins reais
+M 0 10726 5 10731    colocar um p�ssaro azul numa passarela
+M 0 10726 5 10738    colocar um p�ssaro azul na entrada leste
+M 0 10726 5 10752    colocar um p�ssaro azul numa passarela
+M 0 10706 3 10741    colocar um cidad�o da limpeza numa passarela
+M 0 10706 3 10765    colocar um cidad�o da limpeza numa passarela
+M 0 10706 3 10762    colocar um cidad�o da limpeza no templo
+M 0 10701 8 10762    colocar o cidad�o no templo
+E 1 10700 50 12      entregar o manto otaviano para o cidad�o
+E 1 10701 20 16      entregar a l�mina de diamante para o cidad�o
+M 0 10702 8 10762    colocar a cidad� no templo
+E 1 10700 50 12      entregar o manto otaviano para a cidad�
+E 1 10702 50 17      entregar a flor colorida para a cidad�
+M 0 10717 1 10781    colocar Yasmim na varanda dos aposentos reais
+E 1 10716 1 12       entregar a redoma de ar para Yasmim
+E 1 10722 15 16      entregar a besta otaviana para Yasmim
+E 1 10737 1 6        entregar a coroa de diamante para Yasmim
+M 0 10712 14 10781   colocar um guarda real na varanda do aposento
+E 1 10722 15 16      entregar a besta otaviana para o guarda real
+E 1 10700 50 12      entregar o manto otaviano para o guarda real
+M 0 10712 14 10781   colocar um guarda real na varanda do aposento
+E 1 10722 15 16      entregar a besta otaviana para o guarda real
+E 1 10700 50 12      entregar o manto otaviano para o guarda real
+M 0 10712 14 10775   colocar um guarda real um corredor do palacio
+E 1 10722 15 16      entregar a besta otaviana para o guarda real
+E 1 10700 50 12      entregar o manto otaviano para o guarda real
+M 0 10712 14 10777   colocar um guarda real na sala da guarda
+E 1 10722 15 16      entregar a besta otaviana para o guarda real
+E 1 10700 50 12      entregar o manto otaviano para o guarda real
+M 0 10729 1 10776    colocar a cozinheira na cozinha do palacio
+E 1 10700 50 12      entregar o manto otaviano para a cozinheira
+M 0 10712 14 10772   colocar um guarda real na entrada do palacio
+E 1 10722 15 16      entregar a besta otaviana para o guarda real
+E 1 10700 50 12      entregar o manto otaviano para o guarda real
+M 0 10712 14 10772   colocar um guarda real na entrada do palacio
+E 1 10722 15 16      entregar a besta otaviana para o guarda real
+E 1 10700 50 12      entregar o manto otaviano para o guarda real
+M 0 10720 7 10780    colocar um gumbly nos aposentos reais
+E 1 10715 10 3       entregar a coleira de diamante para o gumbly
+M 0 10701 8 10755    colocar o cidad�o no museu de Ot�via
+E 1 10700 50 12      entregar o manto otaviano para o cidad�o
+E 1 10701 20 16      entregar a l�mina de diamante para o cidad�o
+M 0 10702 8 10763    colocar a cidad� na biblioteca de Ot�via
+E 1 10700 50 12      entregar o manto otaviano para a cidad�
+E 1 10702 50 17      entregar a flor colorida para a cidad�
+M 0 10705 12 10755   colocar a crian�a otaviana no museu de Ot�via
+E 1 10700 50 12      entregar o manto otaviano para a crian�a
+M 0 10718 2 10782    colocar um grifo dourado no topo da montanha
+E 1 10704 5 2        entregar anel armiliano para o grifo dourado
+M 0 10718 2 10721    colocar um grifo dourado no topo da montanha
+E 1 10705 5 2        entregar anel diomiriano para o grifo dourado
+M 0 10724 1 10722    colocar o guardi�o da terra no arco-�ris
+E 1 10709 1 17       entregar o elemento terra para o guardi�o
+M 0 10723 1 10723    colocar o guardi�o do ar no arco-�ris
+E 1 10708 1 17       entregar o elemento ar para o guardi�o
+M 0 10725 1 10724    colocar o guardi�o do amor no arco-�ris
+E 1 10710 1 17       entregar o quinto elemento para o guardi�o
+M 0 10722 1 10725    colocar o guardi�o da �gua no arco-�ris
+E 1 10707 1 17       entregar o elemento �gua para o guardi�o
+M 0 10721 1 10726    colocar o guardi�o do fogo no arco-�ris
+E 1 10706 1 17       entregar o elemento fogo para o guardi�o
+M 0 10727 10 10700   colocar um esquilo cinza na floresta boreal
+M 0 10720 7  10700   colocar um gumbly na floresta boreal
+M 0 10719 1 10702    colocar um cedro gigante na floresta boreal
+M 0 10726 5 10702    colocar um p�ssaro azul na floresta boreal
+*
+* Colocar os objetos
+*
+R 0 10706 10723      retirar a piscina diomiriana 
+O 0 10723 2 10706    colocar uma nova piscina diomiriana
+R 0 10707 10723      retirar a piscina diomiriana 
+O 0 10723 2 10707    colocar uma nova piscina diomiriana
+R 0 10742 10724      retirar uma �rvore otaviana
+O 0 10724 4 10742    colocar uma nova �rvore otavaina
+P 1 10725 16 10724   colocar uma fruta vermelha dentro da �rvore
+P 1 10725 16 10724   colocar uma fruta vermelha dentro da �rvore
+P 1 10725 16 10724   colocar uma fruta vermelha dentro da �rvore
+P 1 10725 16 10724   colocar uma fruta vermelha dentro da �rvore
+R 0 10746 10724      retirar uma �rvore otaviana
+O 0 10724 4 10746    colocar uma nova �rvore otavaina
+P 1 10725 16 10724   colocar uma fruta vermelha dentro da �rvore
+P 1 10725 16 10724   colocar uma fruta vermelha dentro da �rvore
+P 1 10725 16 10724   colocar uma fruta vermelha dentro da �rvore
+P 1 10725 16 10724   colocar uma fruta vermelha dentro da �rvore
+R 0 10767 10724      retirar uma �rvore otaviana
+O 0 10724 4 10767    colocar uma nova �rvore otavaina
+P 1 10725 16 10724   colocar uma fruta vermelha dentro da �rvore
+P 1 10725 16 10724   colocar uma fruta vermelha dentro da �rvore
+P 1 10725 16 10724   colocar uma fruta vermelha dentro da �rvore
+P 1 10725 16 10724   colocar uma fruta vermelha dentro da �rvore
+R 0 10769 10724      retirar uma �rvore otaviana
+O 0 10724 4 10769    colocar uma nova �rvore otavaina
+P 1 10725 16 10724   colocar uma fruta vermelha dentro da �rvore
+P 1 10725 16 10724   colocar uma fruta vermelha dentro da �rvore
+P 1 10725 16 10724   colocar uma fruta vermelha dentro da �rvore
+P 1 10725 16 10724   colocar uma fruta vermelha dentro da �rvore
+R 0 10742 10726      retirar a fonte da pra�a florida
+O 0 10726 2 10742    colocar uma nova fonte na pra�a florida
+R 0 10769 10726      retirar a fonte da pra�a amizade
+O 0 10726 2 10769    colocar uma nova fonte na pra�a amizade
+R 0 10751 10727      retirar estatua da sala dos lend�rios
+O 0 10727 1 10751    colocar nova estatua na sala dos lend�rios
+R 0 10732 10728      retirar escultura do edif�cio das artes
+O 0 10728 1 10732    colocar nova escultura no edif�cio das artes
+R 0 10733 10729      retirar uma pintura do atelier de artes
+O 0 10729 1 10733    colocar uma nova pintura no atelier de artes
+R 0 10730 10730      retirar uma mesa de madeira
+O 0 10730 10 10730   colocar uma nova mesa de madeira
+R 0 10730 10731      retirar uma cama de madeira
+O 0 10731 10 10730   colocar uma nova cama de madeira
+R 0 10735 10730      retirar uma mesa de madeira
+O 0 10730 10 10735   colocar uma nova mesa de madeira
+R 0 10735 10731      retirar uma cama de madeira
+O 0 10731 10 10735   colocar uma nova cama de madeira
+R 0 10740 10730      retirar uma mesa de madeira
+O 0 10730 10 10740   colocar uma nova mesa de madeira
+R 0 10740 10731      retirar uma cama de madeira
+O 0 10731 10 10740   colocar uma nova cama de madeira
+R 0 10748 10730      retirar uma mesa de madeira
+O 0 10730 10 10748   colocar uma nova mesa de madeira
+R 0 10748 10731      retirar uma cama de madeira
+O 0 10731 10 10748   colocar uma nova cama de madeira
+R 0 10750 10730      retirar uma mesa de madeira
+O 0 10730 10 10750   colocar uma nova mesa de madeira
+R 0 10750 10731      retirar uma cama de madeira
+O 0 10731 10 10750   colocar uma nova cama de madeira
+R 0 10758 10730      retirar uma mesa de madeira
+O 0 10730 10 10758   colocar uma nova mesa de madeira
+R 0 10758 10731      retirar uma cama de madeira
+O 0 10731 10 10758   colocar uma nova cama de madeira
+R 0 10760 10730      retirar uma mesa de madeira
+O 0 10730 10 10760   colocar uma nova mesa de madeira
+R 0 10760 10731      retirar uma cama de madeira
+O 0 10731 10 10760   colocar uma nova cama de madeira
+R 0 10764 10730      retirar uma mesa de madeira
+O 0 10730 10 10764   colocar uma nova mesa de madeira
+R 0 10764 10731      retirar uma cama de madeira
+O 0 10731 10 10764   colocar uma nova cama de madeira
+R 0 10766 10730      retirar uma mesa de madeira
+O 0 10730 10 10766   colocar uma nova mesa de madeira
+R 0 10766 10731      retirar uma cama de madeira
+O 0 10731 10 10766   colocar uma nova cama de madeira
+R 0 10770 10730      retirar uma mesa de madeira
+O 0 10730 10 10770   colocar uma nova mesa de madeira
+R 0 10770 10731      retirar uma cama de madeira
+O 0 10731 10 10770   colocar uma nova cama de madeira
+R 0 10763 10732      retirar estante de madeira
+O 0 10732 1 10763    colocar nova estante de madeira
+P 1 10733 1 10732    colocar livro do ar dentro da estante
+P 1 10734 1 10732    colocar livro do fogo dentro da estante
+P 1 10735 1 10732    colocar livro da �gua dentro da estante
+P 1 10736 1 10732    colocar livro da terra dentro da estante
+*
+* Ajustar as passagens
+*
+D 0 10705 5 2        ajustar o al�ap�o do lado de fora de Diomira
+D 0 10706 4 2        ajustar o al�ap�o do lado de dentro de Diomira
+D 0 10706 6 1        ajustar port�o de ferro (lado de fora)
+D 0 10709 8 1        ajustar port�o de ferro (lado de dentro)
+D 0 10710 0 1        ajustar porta de ferro (lado de fora)
+D 0 10711 2 1        ajustar porta de ferro (lado de dentro)
+D 0 10775 0 1        ajustar porta de madeira (lado de fora)
+D 0 10775 2 1        ajustar porta de madeira (lado de fora)
+D 0 10775 7 1        ajustar porta de madeira (lado de fora)
+D 0 10776 2 1        ajustar porta de madeira (lado de dentro)
+D 0 10779 0 1        ajustar porta de madeira (lado de dentro)
+D 0 10777 9 1        ajustar porta de madeira (lado de dentro)
+D 0 10778 5 1        ajustar porta de madeira (lado de fora)
+D 0 10780 4 1        ajustar porta de madeira (lado de dentro)
+D 0 10792 5 2        ajustar o al�ap�o do lado de fora de Armila
+D 0 10793 4 2        ajustar o al�ap�o do lado de dentro de Armila
+S

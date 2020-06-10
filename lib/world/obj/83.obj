@@ -1,0 +1,193 @@
+#8301
+chave loctus~
+a Chave de Loctus~
+Uma estranha chave foi deixada aqui.~
+~
+18 bcdegq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 1 0
+#8302
+chave gelo~
+uma chave de gelo~
+Uma Chave de gelo est� aqui.~
+~
+18 cdegq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 1 0
+#8303
+chave arenosa~
+uma chave arenosa~
+Uma chave arenosa est� aqui.~
+~
+18 cdegq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 1 0
+#8304
+chave pedra~
+a Chave de Pedra~
+A chave de pedra est� aqui.~
+~
+18 acdegq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 1 0
+#8305
+chave liberdade~
+a Chave para Liberdade~
+Uma linda chave brilha no ch�o.~
+~
+18 acdegq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+2 0 0 1 0
+#8306
+dente morcego~
+um dente de morcego~
+Um pequeno dente est� aqui.~
+~
+11 gjmn 0 0 0 as 0 0 0 0 0 0 0
+0 0 0 0
+3 300 0 8 0
+E
+dente morcego~
+Este dente parece ser muito afiado.
+~
+A
+18 1
+A
+17 -2
+#8307
+brinco fogo avermelhado~
+o brinco de fogo~
+Um avermelhado brinco brilha no ch�o.~
+~
+11 bdghjq 0 0 0 aq 0 0 0 0 0 0 0
+0 0 0 0
+5 2000000 100000 73 0
+E
+brinco fogo avermelhado~
+Um brinco em forma de argola todo em chamas mas, incr�vel, voc� n�o �
+queimado.
+~
+A
+19 1
+A
+5 3
+#8308
+brinco gelo resistente brilhante artefato~
+o brinco de gelo~
+Um resistente e brilhante artefato est� aqui.~
+~
+11 bdghjq 0 0 0 aq 0 0 0 0 0 0 0
+0 0 0 0
+5 2100000 150000 76 0
+E
+brinco gelo~
+Um brinco formado do mais puro gelo e, aparentemente, indestrut�vel.
+~
+A
+19 1
+A
+1 3
+#8309
+colar loctus magn�fico~
+o colar de Loctus~
+Um magn�fico colar est� aqui.~
+~
+11 begjn 0 0 0 ac 0 0 0 0 0 0 0
+0 0 0 0
+10 10000 1000 90 0
+E
+loctus colar~
+Um colar de um estranho material prateado brilhante, todo ornado com 
+estranhos grifos em ouro.  Este colar parece ter um estranho tremeluzir.
+~
+A
+18 1
+A
+19 3
+A
+17 -5
+#8310
+luz bast�o~
+o Bast�o da Luz~
+Voc� v� algo parecido com uma bast�o emitindo uma forte luz.~
+$n aponta o Bast�o de Luz para a entrada da Caverna, que dissolve ante a a��o da poderosa luz.~
+18 cdgkq 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+5 10000 0 20 0
+E
+bast�o luz~
+Voc� tenta, mas assim que voc� olha para o Bast�o da Luz, seus olhos queimam e voc� rapidamente desiste de uma outra tentativa.
+~
+#8311
+ardelune met�lico metal pedras cintilantes~
+um ardelune met�lico~
+Um pequeno ardelune, feito com estranho metal e cintilantes pedras, foi
+deixado aqui.~
+~
+13 q 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+3 3000 300 30 0
+E
+ardelune met�lico metal pedras cintilantes~
+Esse bem-feito ardelune de metal avermelhado, possui pequenos cristais
+transl�cidos em suas bordas. O cintilar das pedras n�o lhe parece normal,
+sendo talvez fruto de algum encantamento do grande anci�o da aldeia.
+~
+#8312
+draenan~
+uma draenan~
+Uma draenan foi cuidadosamente deixada aqui.~
+~
+9 a 0 0 0 ad 0 0 0 0 0 0 0
+4 0 0 0
+2 100 10 10 0
+E
+draenan~
+Essa bela t�nica, usada tanto por homens quanto mulheres, � feita com um
+tecido que, al�m de resistente, � muito macio.  Seus bordados caracter�scos,
+feitos � m�o pelas talentosas bordadeiras da aldeia, embelezam e enriquecem
+a pe�a.
+~
+#8313
+grande t�bua~
+uma grande t�bua~
+Uma grande t�bua, escrita com sangue est� aqui.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+100 0 0 0 0
+E
+t�bua pedra~
+"N�o v� embora! Por favor, deixe-nos contar o que aconteceu conosco, 
+ apenas voc� pode nos ajudar! Por favor! Nossos maridos foram 
+ aprisionados por um monstro que assombra nossa aldeia por muitos anos.
+ Eles estavam tentando finalmente mata-lo, mas a tentativa foi em v�o,
+ e eles foram aprisionados pelo monstro. Na tentativa de ajuda-los,
+ n�s, esposas, invadimos a caverna aonde esse terr�vel ser vive, mas
+ tamb�m fracassamos, e fomos trancadas aqui. Durante todos esses anos
+ que j� se passaram, usamos todos nossos conhecimentos para criar algo 
+ que fizessem com que as rochas que tampam a entrada da caverna onde o
+ monstro vive, se abrissem, para que nossa tribo pudesse entrar na
+ caverna, e libertar nossos maridos, mas temos muito medo de falharmos
+ novamente, e morrermos. Precisamos que voc� mate esse monstro! Ao 
+ contr�rio, ficaremos aqui, at� morrer de tristeza, sabendo que nossos
+ maridos est�o morrendo, e nada podemos fazer. Por favor, caso aceite
+ em nos ajudar, abra a passagem para cima, e pegue o item que fizemos."
+~
+#8314
+brinco areia~
+o brinco de areia~
+Um estranho brinco foi esquecido aqui.~
+~
+11 bdghjq 0 0 0 aq 0 0 0 0 0 0 0
+0 0 0 0
+5 2200000 200000 75 0
+E
+brinco areia~
+Um estranho brinco formado por areia, parecendo esconder um tremendo poder.
+~
+A
+19 1
+A
+17 -6
+$~

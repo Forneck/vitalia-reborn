@@ -1,0 +1,491 @@
+#29000
+bar�o cailveh~
+o Bar�o de Cailveh~
+O Bar�o est� sentado confortavelmente em sua poltrona, lendo um grosso livro.
+~
+Ele � um homem baixinho e atravancado que parece precisar de ajuda para se
+tornar quem ele deveria ser.  Seus olhos est�o um pouco vermelhos, como os
+de algu�m que tenha gasto muito tempo lendo.  Seus cabelos s�o quase
+impercept�veis, com exce��o das duas finas linhas dos lados de sua cabe�a.
+~
+2344962 0 0 0 16432 0 0 0 800 E
+100 -30 -60 13d11+2600 6d7+46
+80200 1016419
+8 8 1
+Dex: 18
+Int: 18
+Wis: 18
+E
+#29001
+melinna cailveh baronesa esposa~
+Melinna, a Baronesa~
+Melinna, a esposa de Cailveh, est� honrando suas obriga��es enquanto seu marido n�o retorna.
+~
+A maioria das tarefas di�rias s�o deixadas para Melinna, uma mulher astuta
+politicamente.  H� um tipo de acordo n�o expl�cito entre o Bar�o e sua
+esposa, ela fica encarregada da maioria dos problemas mundanos para que ele
+possa continuar seus estudos sem interrup��es desnecess�rias.
+~
+2121730 0 0 0 0 0 0 0 900 E
+92 -20 -40 10d10+1405 5d7+32
+49500 787909
+8 8 2
+E
+#29002
+gilzaan filho velho~
+Gilzaan~
+O filho mais velho de Cailveh, Gilzaan, anda por aqui, cumprimentando as pessoas.
+~
+Esse � Gilzaan, aquele que vai eventualmente prosperar o t�tulo que seus
+pais lhe deram.  Gilzaan leva sua responsabilidade a s�rio, a ponto de fazer
+com que todos os homem proeminentes de suas terras o conhe�am.
+~
+2103298 0 0 0 0 0 0 0 500 E
+86 -19 -39 10d10+1240 5d6+30
+36215 385396
+8 8 1
+E
+#29003
+necromocis filho novo~
+Necromocis~
+Necromocis, o filho mais novo de Cailveh, trabalha diligentemente em sua mesa.
+~
+Embora n�o t�o forte ou imponente quanto seu irm�o mais velho, Necromocis
+possui suas habilidades em outras �reas.  Ele possui um intelecto bem
+desenvolvido, alcan�ado devido a muitos anos de estudo e dedica��o.  Ele
+certamente substituir� seu pai na hora em que for preciso.
+~
+2117634 0 0 0 112 0 0 0 600 E
+81 -15 -40 10d10+1135 5d6+29
+21150 273866
+8 8 1
+E
+#29004
+astr�nomo~
+o astr�nomo da corte~
+O astr�nomo da corte est� aqui, completamente desligado do mundo, observando o telesc�pio.
+~
+Ele � um velho homem, que n�o parece ter muito tempo nesse plano de
+exist�ncia.  Ele rascunha algumas notas em um pequeno bloco de notas.
+~
+2097154 0 0 0 0 0 0 0 300 E
+53 -11 -32 10d10+900 4d5+24
+1650 160665
+8 8 1
+E
+#29005
+servo~
+um servo~
+Um servo desliza silenciosamente pela torre, servindo os h�spedes.
+~
+Ele � um elegante senhor com um longo cabelo escuro, jogado sobre seu casaco. 
+~
+2097220 0 0 0 0 0 0 0 400 E
+50 -9 -28 5d5+650 4d5+25
+900 138481
+8 8 1
+E
+#29006
+homem elegante~
+um elegante homem~
+Um elegante homem aguarda pacientemente para falar com o Bar�o.
+~
+Ele espera dentro dos confort�veis confins da torre.  Ele veste um grosso
+manto negro com o capuz jogado em sua costas.  Ele irradia uma aura
+misteriosa.
+~
+2097154 0 0 0 0 0 0 0 -500 E
+94 -34 -40 10d10+1450 6d7+51
+5150 374488
+8 8 1
+E
+#29007
+humilde peticion�rio~
+um humilde peticion�rio~
+Um humilde peticion�rio pleiteia sua causa � Baronesa.
+~
+Ele parece ser um lenhador ou qualquer outro trabalhador comum, por�m ele,
+com uma postura forte, fala em voz firme � Baronesa sobre sua causa.
+~
+2097154 0 0 0 0 0 0 0 400 E
+54 -12 -32 10d10+987 4d5+27
+1243 168509
+8 8 1
+E
+#29008
+arrogante propriet�ria~
+uma arrogante propriet�ria~
+Uma arrogante propriet�ria de terras limpa sua garganta ruidosamente assim que voc� chega.
+~
+Ela veste apenas roupas finas, e sua postura s� n�o � bela devido a todo
+seu orgulho e mal-humor.
+~
+2097154 0 0 0 0 0 0 0 200 E
+56 -13 -32 10d10+780 4d6+28
+2800 184883
+8 8 2
+E
+#29009
+fazendeiro~
+um fazendeiro~
+Um fazendeiro pacientemente aguarda a audi�ncia com sua cabe�a abaixada.
+~
+Ele segura seu chap�u amassado em suas m�os, amassando-o ainda mais com seu nervosismo. 
+~
+2097154 0 0 0 0 0 0 0 600 E
+51 -10 -32 10d10+999 4d5+25
+770 145654
+8 8 1
+E
+#29010
+assistente~
+uma assistente~
+Uma assistente est� em uma das mesas, trabalhando com alguns frascos.
+~
+Ela parece ser uma mulher de meia idade, competente e respons�vel. 
+~
+2097154 0 0 0 0 0 0 0 600 E
+67 -18 -40 9d9+1340 5d6+33
+1350 292085
+8 8 2
+E
+#29011
+seguran�a quarto~
+o seguran�a do quarto~
+O seguran�a do quarto est� diante da porta. Ele bate os calcanhares rapidamente assim que voc� entra.
+~
+Ele parece ser mais uma parte da decora��o do que qualquer outra coisa, mas
+ele obviamente leva seu trabalho muito a s�rio.
+~
+2097154 0 0 0 0 0 0 0 400 E
+79 -21 -40 8d11+1476 5d6+39
+1950 444598
+8 8 1
+E
+#29012
+empregada~
+uma empregada~
+Uma empregada anda sutilmente por aqui, limpando e organizando o aposento.
+~
+Ela cantarola uma bonita melodia, o que ela parece gostar bastante de fazer.
+Ela parece n�o ter notado sua presen�a.
+~
+2097154 0 0 0 0 0 0 0 600 E
+52 -12 -32 1d1+990 4d5+26
+600 153048
+8 8 2
+E
+#29013
+primo visitante~
+um primo visitante~
+Um primo visitante se senta relaxadamente em uma cadeira de balan�o, esperando a comida.
+~
+Ele parece ter vindo correndo sabendo que o Bar�o serviria a comida logo mais. 
+~
+2115586 0 0 0 0 0 0 0 100 E
+84 -20 -40 1d1+1890 5d6+42
+300 319913
+8 8 1
+E
+#29014
+colono~
+o colono da fazenda~
+O colono da fazenda anda pelo celeiro, fazendo suas tarefas di�rias.
+~
+Ele n�o parece ser muito simp�tico. Ele continua a trabalhar sem notar sua presen�a. 
+~
+2097154 0 0 0 0 0 0 0 500 E
+51 -10 -32 9d9+990 4d5+25
+550 145654
+8 8 1
+E
+#29015
+vaca~
+uma vaca~
+Uma enorme vaca pasta por aqui, mascando grama.
+~
+N�o importa o quanto voc� olhe, ela ainda parece uma imensa vaca gorda mascando grama. 
+~
+2097216 0 0 0 0 0 0 0 0 E
+21 0 2 6d6+870 2d3+10
+0 15159
+8 8 1
+E
+#29016
+mulher dona casa~
+uma dona de casa~
+Uma dona de casa anda incessantemente pela casa, limpando tudo o que v�.
+~
+Ela ainda n�o deve ter percebido que voc� entrou em sua casa. 
+~
+2097154 0 0 0 0 0 0 0 400 E
+43 -4 -24 6d6+760 4d5+21
+800 94267
+8 8 2
+E
+#29017
+fazendeiro~
+um fazendeiro~
+Um fazendeiro est� aqui, tirando um cochilo em sua cadeira de balan�o, voc� pode ouvir seu ronco de longe.
+~
+Ele parece ser um fazendeiro comum: um homem alto e magro, vestido com
+roupas velhas que cheiram a gado.
+~
+2097154 0 0 0 0 0 0 0 400 E
+50 -9 -28 7d7+980 4d5+25
+500 118481
+8 8 1
+E
+#29018
+lenhador desocupado~
+um lenhador desocupado~
+Um lenhador, ainda vestido com suas roupas de trabalho, descansa em uma poltrona.
+~
+Ele parece estar muito cansado, parece bem relaxado em sua poltrona.  Voc�
+precisa mesmo incomod�-lo?
+~
+2097154 0 0 0 0 0 0 0 300 E
+52 -8 -32 4d7+1000 4d5+26
+1600 133048
+8 8 1
+E
+#29019
+velho homem~
+um velho homem~
+Um velho homem sentado em uma cadeira de balan�o olha para voc�.
+~
+Ele parece ter algo a dizer, mas apenas continua sentado. 
+~
+2097154 0 0 0 0 0 0 0 400 E
+46 -8 -24 5d5+920 4d5+23
+2625 81957
+8 8 1
+E
+#29020
+dona casa mulher~
+a dona da casa~
+A dona da casa olha para voc� assustada assim que voc� entra em sua casa.
+~
+Ela n�o diz nada, apenas olha assustada para voc� esperando algo. H� medo em sua express�o.
+~
+2097154 0 0 0 0 0 0 0 800 E
+41 -2 -24 6d6+820 4d5+20
+300 73486
+8 8 2
+E
+#29021
+homem~
+um homem~
+H� um homem sentado em sua pequena mesa no fundo, terminando de comer um assado.
+~
+Ele lhe cumprimenta assim que voc� entra, ele parece ligeiramente confuso. 
+~
+2097154 0 0 0 0 0 0 0 499 E
+48 -7 -28 6d11+543 4d5+24
+2900 104791
+8 8 1
+E
+#29022
+professora~
+a professora~
+A professora est� em sua mesa, fazendo algumas anota��es.
+~
+Ela mal olha para voc� quando voc� entra, dando-lhe um 'Em que posso te ajudar?' seco. 
+~
+2097154 0 0 0 0 0 0 0 800 E
+44 18 -24 7d8+1231 4d5+22
+900 99959
+8 8 2
+E
+#29023
+balconista~
+o balconista~
+O balconista sorri simpaticamente para voc�, cumprimentando-lhe.
+~
+Ele aponta para uma de suas mesas desocupadas, oferecendo-a a voc�.  Relaxe
+enquanto ele traz um belo assado.
+~
+2097154 0 0 0 0 0 0 0 400 E
+77 -23 -40 5d8+1110 5d6+38
+1850 116457
+8 8 1
+E
+#29024
+contador hist�rias~
+um contador de hist�rias~
+H� um homem sentado em uma poltrona, falando alto, contando hist�rias sobre bravura e hero�smo.
+~
+As hist�rias que ele conta n�o s�o hist�rias pr�prias, mas daqueles que
+fizeram parte delas.  Se tais homens realmente existiram n�o � poss�vel
+saber, mas hist�rias s�o sempre boas.
+~
+2097154 0 0 0 0 0 0 0 400 E
+61 -18 -40 7d7+760 4d6+30
+2050 209937
+8 8 1
+E
+#29025
+homem~
+um homem~
+Um homem est� sentado em sua poltrona, ouvindo o contador de hist�rias.
+~
+Seus olhos parecem um pouco turvos, ele sem d�vida est� cansado devido ao seu longo dia. 
+~
+2097154 0 0 0 0 0 0 0 600 E
+63 -20 -40 5d4+1000 5d6+31
+1150 229653
+8 8 1
+E
+#29026
+elegante cavalheiro~
+um elegante cavalheiro~
+Um elegante cavalheiro est� no balc�o, degustando um copo de u�sque.
+~
+Ele possui um semblante calmo, parecendo n�o querer interagir com ningu�m.
+Ele n�o parece ser daqui.
+~
+2097154 0 0 0 0 0 0 0 100 E
+88 -25 -40 9d6+1530 5d6+44
+3722 485396
+8 8 1
+E
+#29027
+bela mulher~
+uma bela mulher~
+Uma bela mulher inclina-se em seu balc�o, sorrindo.
+~
+Ela sorri carinhosamente para voc�. 
+~
+2097154 0 0 0 0 0 0 0 300 E
+76 -21 -40 10d10+750 5d6+38
+1800 152804
+8 8 2
+E
+#29028
+calintra herborista~
+Calintra, a herborista~
+Calintra, a herborista, moe algumas ervas em uma tigela enquanto sorri para voc�.
+~
+Calintra � uma jovem mulher, uma das pessoas mais ocupadas da cidade, assim
+como uma das mais belas.  Seus longos cabelos negros caem em sua face
+suavemente conforme ela moe as ervas, fazendo com que ela tenha de joga-los
+para tr�s constantemente.
+~
+2351106 0 0 0 0 0 0 0 300 E
+101 0 -32 1d1+10000 4d5+25
+550 145654
+8 8 2
+E
+#29029
+salaylia mulher~
+Salaylia~
+Uma mulher rechonchuda lan�a um largo sorriso para voc� assim que voc� entra.
+~
+Ela enxuga suas m�os em seu avental, e educadamente lhe aponta uma mesa vazia. 
+~
+2351106 0 0 0 0 0 0 0 300 E
+101 0 -32 1d1+10000 4d5+25
+550 145654
+8 8 2
+E
+#29030
+homem ferraria dono~
+o dono da ferraria~
+Um pequeno homem est� aqui, moendo um peda�o de ferro.
+~
+Com exce��o de sua altura, o homem � a imagem perfeita de um ferreiro.
+Forte, rude, um pouco sujo..
+~
+2097154 0 0 0 0 0 0 0 400 E
+51 -12 -32 7d8+1231 4d5+25
+550 145654
+8 8 1
+E
+#29031
+farmac�utico~
+o farmac�utico~
+O farmac�utico est� sentado confortavelmente em sua poltrona.
+~
+Ele parece j� ter terminado todo seu trabalho di�rio e agora est� descansando um pouco. 
+~
+2351106 0 0 0 0 0 0 0 300 E
+101 0 -32 1d1+10000 4d5+25
+550 145654
+8 8 1
+E
+#29032
+mochaaska~
+Mochaaska~
+Mochaaska est� aqui, entre seus v�rios barris de �gua, sorrindo para voc�.
+~
+Mochaaska possui uma simpatia contagiante. Seus dentes s�o muito brancos. 
+~
+2351106 0 0 0 0 0 0 0 300 E
+101 0 -32 1d1+10000 4d5+25
+550 145654
+8 8 1
+E
+#29033
+propriet�ria dona loja~
+a propriet�ria da loja~
+A dona da loja est� aqui, limpado sua caixa registradora.
+~
+Ela olha para voc� assim que voc� entra, lan�ando-lhe um leve aceno, e volta � sua limpeza. 
+~
+2351106 0 0 0 0 0 0 0 300 E
+101 0 -32 1d1+10000 4d5+25
+550 145654
+8 8 2
+E
+#29034
+ministro cidade~
+o ministro da cidade~
+O estranho ministro da cidade caminha por aqui. Ele n�o parece estar muito bem.
+~
+Apesar de sua sa�de estar visivelmente afetada, ningu�m consegue convenc�-lo
+de se abster de suas tarefas di�rias.  Todos os dias ele anda pela cidade
+oferecendo aux�lio para qualquer um que precise, at� para aqueles que apenas
+precisam sentar e conversar.
+~
+2097216 0 0 0 0 0 0 0 900 E
+57 -15 -32 7d8+1231 4d6+28
+350 173419
+8 8 1
+E
+#29035
+cidad�o~
+um cidad�o~
+Um cidad�o passa por voc� rapidamente.
+~
+Ele n�o parece estar muito feliz.
+~
+2097216 0 0 0 0 0 0 0 600 E
+44 4 -24 7d7+1059 4d5+22
+789 79959
+8 8 1
+E
+#29036
+garotinha~
+uma garotinha~
+Uma garotinha est� aqui, pulando alegremente.
+~
+Sua face sardenta se abre em um lindo sorriso. Ela passa e pisca rapidamente para voc�.
+~
+2097216 0 0 0 0 0 0 0 800 E
+15 10 4 4d3+300 1d5+7
+25 6427
+8 8 2
+E
+#29037
+alfaite~
+o alfaite~
+O alfaiate est� aqui, esperando para lhe servir.
+~
+Ele n�o lhe diz nada, apenas aguarda com um sorriso simp�tico e paciente.
+~
+2351106 0 0 0 0 0 0 0 300 E
+101 0 -32 1d1+10000 4d5+25
+550 145654
+8 8 1
+E
+$

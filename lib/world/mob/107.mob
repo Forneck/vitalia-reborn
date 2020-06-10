@@ -1,0 +1,626 @@
+#10701
+cidad�o otaviano~
+um cidad�o otaviano~
+Um cidad�o otaviano est� aqui, olhando para voc� pacificamente.
+~
+Os cidad�es otavianos possuem uma pele suave de cor azul, seus cabelos s�o 
+negros e seus olhos s�o  cintilantes.  S�o fortes e altos, contudo quando 
+est�o presentes em algum local semeiam a paz e a fraternidade dos povos.  Os
+otavianos s�o por natureza pacificadores e conselheiros, principalmente 
+quando existe conflitos entre povos vitalianos.
+~
+2781248 0 0 0 67176472 0 0 0 700 E
+26 6 -2 4d5+700 3d6+5
+8000 63000
+8 8 1
+BareHandAttack: 12
+Str: 13
+Dex: 18
+Int: 12
+Wis: 12
+Cha: 18
+E
+#10702
+cidad� otaviana~
+uma cidad� otaviana~
+Uma cidad� otaviana est� aqui, com toda a sua beleza encantando a todos.
+~
+As cidad�s otavianas possuem uma pele suave de cor azul, seus cabelos s�o
+negros e seus olhos s�o  cintilantes.  S�o fortes e altas, contudo quando 
+est�o presentes em algum local semeiam a paz e a fraternidade dos povos.  As
+otavianas s�o por natureza pacificadoras e conselheiras, principalmente 
+quando existe conflitos entre povos vitalianos.
+~
+2781248 0 0 0 67176472 0 0 0 750 E
+25 7 -1 4d5+580 3d5+5
+6000 60000
+8 8 2
+BareHandAttack: 12
+Dex: 16
+Int: 13
+Wis: 13
+Cha: 20
+E
+#10703
+fireheart diomiriano~
+Fireheart~
+Fireheart, o �nico remanescente da cidade de Diomira, est� aqui em p�.
+~
+Fireheart � o �nico sobrevivente dos diomirianos.  Que foram dizimados pelas
+guerras e conflitos com os armilianos pela posse das terras que hoje s�o
+chamadas de terras esquecidas.  Fireheart � alto e forte, voc� n�o consegue
+observa a sua pele, pois ele � totalmente coberto de chamas.  Contudo as 
+suas chamas de fogo, s� queimam o que ele quiser, ou seja os seus inimigos.
+Fireheart atualmente faz parte da tr�ade otaviana, tr�ade que prega a paz e
+a justi�a entre os povos.
+~
+2291714 0 0 0 262144 0 0 0 350 E
+35 3 -4 4d5+1200 3d6+10
+10000 120000
+8 8 1
+BareHandAttack: 12
+Str: 16
+Dex: 18
+Int: 13
+Wis: 13
+Cha: 20
+E
+#10704
+Waterheart armiliano~
+Waterheart~
+Waterheart, o �nico remanescente da cidade de Armila, est� aqui em p�.
+~
+Waterheart � o �nico sobrevivente dos Armilianos.  Que foram dizimados 
+pelas guerras e conflitos com os diomirianos pela posse das terras que hoje 
+s�o chamadas de terras esquecidas.  Waterheart � alto e forte, voc� observa
+a pele dele e percebe o fluxo de �gua correndo dentro de suas veias.  
+Waterheart atualmente faz parte da tr�ade otaviana, tr�ade que prega a paz e 
+a justi�a entre os povos.
+~
+2291714 0 0 0 18350208 0 0 0 350 E
+35 4 -4 4d5+1150 3d6+8
+10000 120000
+8 8 1
+BareHandAttack: 12
+Str: 13
+Dex: 18
+Int: 16
+Wis: 16
+Cha: 20
+E
+#10705
+crian�a otaviana~
+uma crian�a otaviana~
+Uma crian�a otaviana est� aqui, brincando de corre-corre com as outras.
+~
+As crian�as otavianas s�o maravilhosas, brincalhonas e puras como todas as
+crian�as.  Contudo elas possuem um poder �nico entre todas as crian�as 
+vitalianas: o poder de conversar telepaticamente com os animais.
+~
+2769088 0 0 0 68747272 0 0 0 700 E
+18 7 2 4d5+400 3d5+4
+5000 35000
+8 8 2
+BareHandAttack: 12
+Str: 10
+Dex: 15
+Int: 13
+Wis: 13
+Con: 10
+Cha: 20
+E
+#10706
+cidad�o limpeza~
+um cidad�o da limpeza~
+Um cidad�o otaviano est� aqui, limpando sua bela cidade.
+~
+O cidad�o disse: Ol� !  N�o jogue lixo em nossas passarelas e nem em nossas 
+pra�as, ajude a manter Ot�via sempre bela.  Voc� observa um cidad�o otaviano
+limpando sua cidade, ele � alto e forte como todos os otavianos.
+~
+2781248 0 0 0 67176472 0 0 0 700 E
+26 6 0 4d5+700 3d6+5
+5000 45000
+8 8 1
+BareHandAttack: 12
+Str: 13
+Dex: 18
+Int: 12
+Wis: 12
+Cha: 16
+E
+#10707
+jardineiro otaviano~
+um jardineiro otaviano~
+Um jardineiro otaviano est� aqui, semeando novas �rvores e flores.
+~
+O jardineiro otaviano trabalha com muita efici�ncia.  A prova disso est�
+aqui, � s� voc� olhar ao seu redor e observa a linda pra�a e suas magn�ficas
+flores.  Seus olhos s�o cintilantes e sua pele � azul, como todos os 
+otavianos.
+~
+2781250 0 0 0 67176472 0 0 0 700 E
+26 6 2 4d5+700 3d6+5
+5200 45000
+8 8 1
+BareHandAttack: 12
+Str: 13
+Dex: 18
+Int: 12
+Wis: 12
+Cha: 16
+E
+#10708
+escultor otaviano~
+um escultor otaviano~
+Um escultor otaviano est� aqui, expressando seus sentimentos fazendo arte.
+~
+Voc� observa um escultor otaviano expressando seus sentimentos atrav�s da
+arte.  Seus olhos cintilantes brilham como o sol, suas m�os trabalham de 
+forma harm�nica e suave em sua obra de arte.
+~
+2781250 0 0 0 67176472 0 0 0 700 E
+26 6 1 4d5+650 3d6+5
+10000 40000
+8 8 1
+BareHandAttack: 12
+Dex: 13
+Int: 15
+Wis: 15
+Con: 10
+Cha: 16
+E
+#10709
+pintor otaviano~
+um pintor otaviano~
+Um pintor otaviano est� aqui, pintando as terras sagradas de Vit�lia.
+~
+Voc� observa um pintor otaviano pintando em sua tela as terras sagradas de
+Vit�lia.  Montanhas, desertos, rios, lagos, mares, reinos inteiros s�o
+retratados em seus quadros.
+~
+2781250 0 0 0 67176472 0 0 0 700 E
+26 6 1 4d5+650 3d6+5
+10000 40000
+8 8 1
+BareHandAttack: 12
+Dex: 13
+Int: 15
+Wis: 15
+Con: 10
+Cha: 16
+E
+#10710
+profetisa otaviana~
+a profetisa otaviana~
+A profetisa otaviana est� aqui, escrevendo suas anota��es sobre o futuro.
+~
+A profetisa otaviana possui uma pele suave de cor azul, seus cabelos s�o
+negros e seus olhos s�o cintilantes.  Suas profecias s�o verdadeiros 
+mist�rios cabe a todos n�s acreditarmos ou n�o.  O que ocorrer� no futuro ?
+~
+2781250 0 0 0 67176472 0 0 0 750 E
+25 5 -3 4d5+580 3d5+5
+8000 43000
+8 8 2
+BareHandAttack: 12
+Str: 10
+Dex: 14
+Int: 13
+Wis: 13
+Cha: 20
+E
+#10711
+trovador otaviano~
+o trovador otaviano~
+O trovador otaviano est� aqui, cantando e emocionando todos os presentes.
+~
+O trovador otaviano possui uma pele suave de cor azul, seus cabelos s�o
+negros e seus olhos s�o cintilantes.  Ele � forte e alto.  Suas can��es
+emocionam e alegram a todos.
+~
+2781248 0 0 0 67176472 0 0 0 700 E
+26 6 -1 4d5+700 3d6+5
+5000 63000
+8 8 1
+BareHandAttack: 12
+Str: 13
+Dex: 18
+Int: 12
+Wis: 12
+Cha: 18
+E
+#10712
+guarda real otaviano~
+um guarda-real otaviano~
+Um guarda-real otaviano est� aqui, protegendo seu povo e sua cidade.
+~
+Os cidad�es otavianos possuem uma pele suave de cor azul, seus cabelos s�o 
+negros e seus olhos s�o  cintilantes.  S�o fortes, altos e protegeram Ot�via
+de todos os males.
+~
+2781250 0 0 0 67176472 0 0 0 700 E
+30 2 -5 4d5+900 3d6+15
+8000 63000
+8 8 1
+BareHandAttack: 12
+Str: 18
+Dex: 18
+Int: 15
+Wis: 13
+Con: 13
+Cha: 18
+E
+#10713
+cavaleiro lend�rio otaviano~
+um lend�rio cavaleiro otaviano~
+Um lend�rio cavaleiro otaviano est� aqui, pregando a paz e a harmonia.
+~
+Voc� observa um lend�rio cavaleiro otaviano.  Todos achavam que os cavaleiros 
+lend�rios n�o existiam mais, contudo isso foi um grande engano.  O cavaleiro
+otaviano � uma verdadeira fortaleza.  Forte e imponente, ele causaria temor
+a qualquer inimigo.
+~
+2781248 0 0 0 67176728 0 0 0 700 E
+40 2 -10 4d5+1550 3d6+25
+40000 300000
+8 8 1
+BareHandAttack: 12
+Str: 18
+Dex: 18
+Int: 18
+Wis: 15
+Con: 15
+Cha: 18
+E
+#10714
+cavaleiro lend�rio diomiriano~
+um lend�rio cavaleiro diomiriano~
+Um lend�rio cavaleiro diomiriano est� aqui, em chamas de fogo.
+~
+Voc� observa uma lenda viva, um lend�rio cavaleiro diomiriano.  Os 
+cavaleiros n�o s�o visto desde a �ltima batalha entre Diomirianos e
+Armilianos.  Os cavaleiros s�o verdadeiras fortalezas, capazes de espalhar
+temor e medo em qualquer advers�rio.
+~
+2291714 0 0 0 262400 0 0 0 350 E
+40 2 -10 4d5+1500 3d6+20
+40000 300000
+8 8 1
+BareHandAttack: 12
+Str: 18
+Dex: 18
+Int: 18
+Wis: 14
+Con: 14
+Cha: 20
+E
+#10715
+cavaleiro lend�rio armiliano~
+um lend�rio cavaleiro armiliano~
+Um lend�rio cavaleiro armiliano est� aqui, com o seu olhar imponente.
+~
+Voc� observa uma lenda viva, um lend�rio cavaleiro armiliano.  Os 
+cavaleiros n�o s�o visto desde a �ltima batalha entre Diomirianos e
+Armilianos.  Os cavaleiros s�o verdadeiras fortalezas, capazes de espalhar
+temor e medo em qualquer advers�rio.
+~
+2291714 0 0 0 18350464 0 0 0 350 E
+40 2 -10 4d5+1500 3d6+20
+40000 300000
+8 8 1
+BareHandAttack: 12
+Str: 18
+Dex: 18
+Int: 18
+Wis: 16
+Con: 15
+Cha: 20
+E
+#10716
+anci�o otaviano~
+um anci�o otaviano~
+Um anci�o otaviano est� aqui, espalhando sua sabedoria com todos.
+~
+O anci�o otaviano � o ser mais s�bio de toda Ot�via, eles adoram se reunirem
+em pra�as e ensinar os mais jovens os caminhos certos da vida.  Sua pele 
+azul j� n�o � t�o suave, mas os seus olhos possuem um brilho cintilantes de
+um jovem.
+~
+2781250 0 0 0 67176472 0 0 0 700 E
+28 4 -3 4d5+800 3d6+8
+8000 70000
+8 8 1
+BareHandAttack: 12
+Str: 16
+Dex: 17
+Int: 15
+Wis: 18
+Cha: 18
+E
+#10717
+yasmim l�der otaviana~
+Yasmim, a l�der dos otavianos~
+Yasmim, a l�der dos otavianos, est� aqui, trazendo em seus olhos uni�o e paz.
+~
+Yasmim � a l�der dos otavianos e representante de seu povo na tr�ade da 
+justi�a.  Sua pele � suave e de cor azul, seus cabelos s�o negros e seus 
+olhos s�o cintilantes.  Yasmim � generosa e pac�fica, lidera seu povo com
+justi�a e uni�o, diferente de alguns l�deres que governam com terror e 
+trevas.
+~
+2781250 0 0 0 67176472 0 0 0 700 E
+35 0 -10 4d5+1100 3d6+20
+40000 130000
+8 8 2
+BareHandAttack: 12
+Str: 16
+Dex: 18
+Int: 18
+Wis: 18
+Con: 15
+Cha: 18
+E
+#10718
+grifo dourado~
+um grifo dourado~
+Um grifo dourado est� aqui, com sua beleza e impon�ncia.
+~
+O Grifo dourado � uma das criaturas mais belas de toda Vit�lia.  Suas penas
+e p�los dourados refletem os raios do sol que atingem seu corpo.  Suas asas
+s�o enormes e suas garras poderiam retalhar em peda�os um gigante.  Uma 
+antiga lenda vitaliana diz que: Dois jovens que juravam amor eterno fugiram
+por causa dos seus pais que pertenciam a fam�lias rivais: os armilianos e
+diomirianos, e nunca mais foram visto.  Ser� que os grifos s�o a chave para 
+este mist�rio.
+~
+2873362 0 0 0 67109120 0 0 0 600 E
+80 -5 -17 4d5+2700 5d7+20
+60000 380000
+8 8 1
+BareHandAttack: 4
+Str: 20
+Dex: 20
+Int: 20
+Wis: 20
+Con: 20
+Cha: 20
+E
+#10719
+cedro gigante~
+o cedro gigante~
+O Cedro gigante est� aqui, fingindo ser uma �rvore normal.
+~
+O cedro gigante � uma criatura centen�ria, sua pele � extremamente 
+resistente e seu mal humor � incr�vel.  Se o dia estiver chuvoso saia de 
+perto dele.
+~
+2353170 0 0 0 1048580 0 0 0 350 E
+50 -7 -16 4d5+1800 5d7+25
+30000 230000
+8 8 1
+BareHandAttack: 5
+Str: 20
+Dex: 15
+Int: 20
+Wis: 20
+Con: 16
+Cha: 13
+E
+#10720
+gumbly~
+um gumbly~
+Um gumbly est� aqui, olhando para voc� pedindo carinho.
+~
+Os gumblys s�o pequeninos seres que vivem na floresta m�stica boreal e foram
+domesticados e trazidos para Ot�via como animais de estima��o.  S�o 
+carinhosos e adoram crian�as.
+~
+2097344 0 0 0 526336 0 0 0 350 E
+3 10 8 4d5+25 3d4+2
+0 3000
+8 8 1
+BareHandAttack: 4
+Str: 5
+Dex: 10
+Int: 8
+Wis: 6
+Con: 8
+Cha: 15
+E
+#10721
+guardi�o fogo~
+o guardi�o do fogo~
+O guardi�o do fogo est� aqui, protegendo com muito ardor sua fonte de vida.
+~
+O guardi�o do fogo � um ser vitaliano, que possui toda sua pele coberta por
+chamas de fogo.  � por essa raz�o que muitos dizem que os diomirianos s�o
+filhos do gurdi�o do fogo.  Seus olhos possuem um brilho azul que fascina
+qualquer pessoa.  Ele defender� com muito ardor, fervor e paix�o a ess�ncia
+de sua vida.
+~
+2353170 0 0 0 264448 0 0 0 350 E
+85 -12 -19 4d5+2900 5d7+29
+55000 600000
+8 8 1
+BareHandAttack: 12
+Str: 22
+Dex: 22
+Int: 22
+Wis: 22
+Con: 22
+Cha: 22
+E
+#10722
+guardi�o �gua~
+o guardi�o da �gua~
+O guardi�o da �gua est� aqui, protegendo a ess�ncia da sua vida.
+~
+O guardi�o da �gua � um ser vitaliano, que possui um corpo quase 
+transparente.  A forma do seu corpo se molda como a mente dele quiser, por
+isso numa batalha contra ele, � muito dif�cil de atingi-lo.  Seus olhos s�o
+dois pontos vermelhos que brilham em contraste com toda sua limpidez.
+~
+2353170 0 0 0 17826176 0 0 0 350 E
+85 -13 -18 4d5+2850 5d7+26
+50000 430000
+8 8 1
+BareHandAttack: 12
+Str: 20
+Dex: 25
+Int: 22
+Wis: 22
+Con: 20
+Cha: 22
+E
+#10723
+guardi�o ar~
+o guardi�o do ar~
+O guardi�o do ar est� aqui, protegendo seu elemento vital.
+~
+O guardi�o do ar � um ser vitaliano, que n�o possui forma definida.  Seu 
+corpo pode ser de um grande cavaleiro como de uma hora para outra ele tomar 
+outra forma.  Contudo s� a forma � modificada.  O guardi�o � quase 
+impercept�vel aos olhos humanos, apenas com magia os mortais conseguem
+observ�-lo.
+~
+2877458 0 0 0 68681988 0 0 0 350 E
+85 -12 -16 4d5+2300 5d7+27
+50000 430000
+8 8 1
+BareHandAttack: 12
+Str: 18
+Dex: 25
+Int: 22
+Wis: 22
+Con: 20
+Cha: 20
+E
+#10724
+guardi�o terra~
+o guardi�o da terra~
+O guardi�o da terra est� aqui, protegendo com muito fervor sua fonte de vida.
+~
+O guardi�o da terra � um ser vitaliano, que possui uma resist�ncia muito
+grande e dificilmente encontrado por todas as terras sagradas de Vit�lia.
+Seu corpo � constitu�do por terra e rochas resistentes, seus s�o dois pontos
+de luz brancos.  O guardi�o da terra proteger� o seu elemento de todas os
+males, principalmente da infertilidade.
+~
+2353170 0 0 0 17826176 0 0 0 350 E
+85 -12 -18 4d5+2500 5d7+22
+50000 430000
+8 8 1
+BareHandAttack: 5
+Str: 25
+Dex: 25
+Int: 20
+Wis: 20
+Con: 25
+Cha: 18
+E
+#10725
+guardi�o quinto~
+o guardi�o do quinto elemento~
+O guardi�o do quinto elemento est� aqui, semeando o amor em seu cora��o.
+~
+O guardi�o do amor � um ser vitaliano, que diferente dos outros guardi�es
+n�o possui tal for�a ou resist�ncia.  Suas batalhas s�o ganhas atrav�s do 
+olhar e da conversar, que atingem diretamente no cora��o e nos sentimentos
+das pessoas.
+~
+2353170 0 0 0 256 0 0 0 800 E
+85 -15 -20 4d5+2800 5d7+29
+40000 430000
+8 8 1
+Str: 18
+Dex: 18
+Int: 25
+Wis: 25
+Con: 25
+Cha: 25
+E
+#10726
+p�ssaro azul~
+um p�ssaro azul~
+Um p�ssaro azul est� aqui, cantando sem parar uma melodia maravilhosa.
+~
+O p�ssaro azul habita a floresta boreal m�stica e a bela cidade delgada de 
+Ot�via.  Suas penas s�o suaves como as nuvens e azuis como o c�u.  S�o
+sempre bem vindos por causa do seu canto mel�dico e magn�fico.
+~
+2353170 0 0 0 17826176 0 0 0 350 E
+2 12 8 4d5+8 3d2+2
+0 200
+8 8 1
+BareHandAttack: 4
+Str: 5
+Dex: 12
+Int: 12
+Wis: 5
+Con: 8
+Cha: 18
+E
+#10727
+esquilo cinza~
+um esquilo cinza~
+Um esquilo cinza est� aqui, olhando curiosamente para voc�.
+~
+O esquilo cinza habita a floresta boreal m�stica.  Ele sobrevive se 
+alimentando de ra�zes e frutinhas que consegue achar na floresta.  O esquilo
+cinza adora seguir e bisbilhotar os aventureiros que atravessam a floresta.
+~
+2353170 0 0 0 17826176 0 0 0 350 E
+2 10 8 4d5+12 3d2+3
+0 300
+8 8 1
+BareHandAttack: 4
+Str: 6
+Dex: 13
+Int: 12
+Wis: 5
+Con: 9
+Cha: 13
+E
+#10728
+poetisa otaviana~
+a poetisa otaviana~
+A poetisa otaviana est� aqui, recitando suas belas poesias.
+~
+A poetisa otaviana possui uma pele suave de cor azul, seus cabelos s�o
+loiros e seus olhos s�o cintilantes.  Suas poesias encantam qualquer pessoa,
+inclusive a l�der dos otavianos, Yasmim que � uma das admiradoras das belas
+poesias desta nobre otaviana.
+~
+2781250 0 0 0 67176472 0 0 0 750 E
+25 5 -3 4d5+580 3d5+13
+8000 43000
+8 8 2
+BareHandAttack: 12
+Str: 10
+Dex: 14
+Int: 13
+Wis: 13
+Cha: 20
+E
+#10729
+cozinheira otaviana~
+a cozinheira otaviana~
+A cozinheira otaviana est� aqui, preparando uma nova receita.
+~
+A cozinheira otaviana possui os maiores segredos do paladar.  Ela 
+conquistaria qualquer coisa com seus dons.
+~
+2781186 0 0 0 67176472 0 0 0 750 E
+25 5 -4 4d5+650 3d5+15
+8000 50000
+8 8 2
+BareHandAttack: 12
+Str: 13
+Dex: 14
+Int: 13
+Wis: 13
+Con: 13
+Cha: 20
+E
+$

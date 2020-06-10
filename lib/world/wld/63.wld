@@ -1,0 +1,840 @@
+#6301
+A Entrada com Teias~
+   Grudento, Grudento, Grudento!  O ch�o est� coberto de folhas, restos
+mortais de grilos, besouros, ratos, c�es e at� de humanos envoltos por 
+teias.   Voc� come�a a imaginar o que lhe espera � frente.  O ar � 
+viciado aqui, e at� a pouca luz que vem de cima parece ser absorvida 
+pelas teias.
+~
+63 4 0 0 0 1
+D0
+~
+~
+0 -1 6302
+D2
+~
+~
+0 -1 6132
+S
+#6302
+A Passagem com Teias~
+   Voc� sente que andar aqui � muito bom, talvez bom at� demais.  Os 
+galhos est�o cobertos de teias de aranha e parecem mais fortes que 
+galhos comuns.   H� caminhos em quatro dire��es.  O da direita desce um
+pouco.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6304
+D1
+~
+~
+0 -1 6305
+D2
+~
+~
+0 -1 6301
+D3
+~
+~
+0 -1 6303
+S
+#6303
+A Colm�ia das Vespas~
+   Zang�es voam nessa sala.  As aberturas na parede t�m forma de favo 
+de mel e muitas das larvas e vespas que voc� v�, t�m marcas em seus 
+corpos.  Voc� percebe alguma ordem nas marca��es.
+~
+63 0 0 0 0 2
+D1
+~
+~
+0 -1 6302
+S
+#6304
+A Passagem com Teias~
+   Outra passagem com teias, totalmente grudenta e �mida.  Pequenas 
+aranhas enchem o ar.  Parece que elas s�o rec�m-nascidas.
+~
+63 0 0 0 0 2
+D1
+~
+~
+0 -1 6305
+D2
+~
+~
+0 -1 6302
+S
+#6305
+Abaixo do Caminho Ocupado~
+   Voc� ouve os sons dos aracn�deos se movendo acima.  O ritmo dos 
+passos sugere uma ordem no movimento deles.  A luz parece mais forte 
+acima.
+~
+63 0 0 0 0 2
+D3
+~
+~
+0 -1 6304
+D4
+~
+~
+0 -1 6306
+S
+#6306
+No Caminho Ocupado~
+   Aranhas, aranhas, por todas as partes!  S�o quase t�o eficazes quanto
+as formigas, mas com uma grande diferen�a: as aranhas aqui est�o 
+carregando corpos de formigas, e tamb�m corpos de ratos, lobos e 
+humanos.
+~
+63 0 0 0 0 2
+D2
+~
+~
+0 -1 6307
+D5
+~
+~
+0 -1 6305
+S
+#6307
+No Caminho Ocupado~
+   Aranhas, aranhas, por todas as partes!  S�o quase t�o eficazes quanto
+as formigas, mas com uma grande diferen�a: as aranhas aqui est�o 
+carregando corpos de formigas, e tamb�m corpos de ratos, lobos e humanos.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6306
+D1
+~
+~
+0 -1 6308
+S
+#6308
+No Caminho Ocupado~
+   Aranhas, aranhas, por todas as partes!  S�o quase t�o eficazes quanto
+as formigas, mas com uma grande diferen�a: as aranhas aqui est�o 
+carregando corpos de formigas, e tamb�m corpos de ratos, lobos e humanos.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6307
+D1
+~
+~
+0 -1 6306
+D2
+~
+~
+0 -1 6305
+D3
+~
+~
+0 -1 6309
+S
+#6309
+Uma Bifurca��o no Caminho~
+   Como sempre, h� uma bifurca��o no caminho.  Um caminho est� coberto 
+de antenas de grilos.  O outro � bem cuidado e adequado para uma 
+caminhada sem problemas.  As teias, que predominavam nas salas 
+anteriores, s�o quase inexistentes nesta.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6310
+D1
+~
+~
+0 -1 6308
+D2
+~
+~
+0 -1 6320
+S
+#6310
+Um Tronco Felpudo~
+   Voc� est� em um tronco 'felpudo'.  Interessante, uma vez que os 
+galhos parecem ter 'cabelos' brotando de suas cascas.  Quando voc� olha
+mais de perto, voc� v� milh�es de pequenos insetos cobrindo cada galho.
+~
+63 0 0 0 0 2
+D2
+~
+~
+0 -1 6309
+D3
+~
+~
+0 -1 6311
+S
+#6311
+O Tronco da �rvore~
+   Voc� sente que pode descansar tranquilamente nesse local.  H� teias 
+aqui, mas ela s�o de um tipo mais fino.
+~
+63 4 0 0 0 2
+D1
+~
+~
+0 -1 6310
+D2
+~
+~
+0 -1 6312
+S
+#6312
+A Entrada da Toca na �rvore~
+   Parece que o habitante desse local n�o prende suas v�timas em teias,
+e isso fica evidente pelos restos que est�o � sua frente.  A �rea est� 
+cheia de corpos dissecados, aparentemente mordidos e com seus sucos 
+vitais sugados, mas sem teias.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6311
+D3
+~
+~
+0 -1 6313
+S
+#6313
+O Covil da Aranha-Lobo~
+   Muito escuro, como todas as tocas de aranha s�o.  N�o existem muitas
+sa�das seguras aqui.  A aranha-lobo n�o guarda nenhum corpo aqui, 
+preferindo jog�-los fora a seu bel prazer.
+~
+63 0 0 0 0 2
+D1
+~
+~
+0 -1 6312
+S
+#6320
+O Caminho Sem Teia~
+   Estranho.  N�o h� teias aqui.  Na verdade, nem sons podem ser ouvidos.
+O caminho continua a oeste, onde voc� v� que provavelmente ter� que 
+andar sobre uma corda fina, que passa sobre a ravina.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6309
+D3
+~
+~
+0 -1 6321
+S
+#6321
+Acima da Ravina~
+   Muito estranho.  Seus p�s t�m uma firmeza incr�vel na tal "corda".
+Voc� est� sobre uma ravina profunda.  A "corda" est� ligada entre duas 
+�rvores.   Abaixo voc� pode ver uma teia prism�tica, com montes de ossos
+de animais presos nela: ossos de ursos e de pequenos veados, de verdade.
+Nenhum esqueleto humano pode ser visto (ainda).
+~
+63 0 0 0 0 2
+D1
+~
+~
+0 -1 6320
+D2
+~
+~
+0 -1 6323
+D5
+~
+~
+0 -1 6322
+S
+#6322
+A Teia Arco-�ris~
+   Esta � a teia arco-�ris -- cada fio, cada elo, uma profus�o de cores
+e contrastes.  Quem reside aqui parece ter controle sobre a luz tamb�m.
+~
+63 0 0 0 0 2
+D4
+~
+~
+0 -1 6321
+S
+#6323
+A Floresta de Teia~
+   As �rvores aqui t�m uma apar�ncia diferente -- elas n�o s�o mais 
+�rvores, mas sim troncos desconexos e sedosos, grudentos ao toque e com
+textura semelhante � da teia.  Isso parece ser um outro mundo.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6321
+D5
+~
+~
+0 -1 6324
+S
+#6324
+O Po�o dos Escravos~
+   Voc� entrou no po�o de uma mina.  Uma voz retumba � dist�ncia, 
+'Voltem ao trabalho, vermes!'.  Carrinhos e mais carrinhos de ouro e 
+prata minerados enchem o caminho abaixo de voc�.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6325
+D4
+~
+~
+0 -1 6323
+S
+#6325
+O Caminho Suspenso~
+   Outro caminho na teia, igual ao resto deles.  Surpreendentemente bem 
+iluminado pelos orbes dourados que pendem dos dois lados, voc� pode ver
+as sa�das se tornarem mais e mais claras.
+~
+63 0 0 0 0 2
+D1
+~
+~
+0 -1 6326
+D3
+~
+~
+0 -1 6324
+S
+#6326
+Um Cruzamento~
+   Outro emaranhado de pequenas teias, quase et�reas em sua natureza.
+~
+63 0 0 0 0 2
+D3
+~
+~
+0 -1 6325
+D4
+~
+~
+0 -1 6327
+S
+#6327
+Um Fio Principal~
+   Esta teia � pesada, mais robusta.  Ela cintila quando voc� pisa nela.
+Voc� definitivamente n�o est� mais nos reinos de Midgaard.  Por�m voc� 
+n�o sabe dizer que lugar � este.  Parece que voc� est� se movendo pelo 
+�ter.   Voc� ainda pode voltar para baixo, para um local mais seguro.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6328
+D5
+~
+~
+0 -1 6326
+S
+#6328
+A Entrada da Teia Et�rea~
+   Voc� est� na entrada para a teia et�rea.  Tremeluzindo, cada fio 
+revela um tom diferente, indo do preto ao verde, do verde ao azul.
+~
+63 0 0 0 0 2
+D2
+~
+~
+0 -1 6331
+S
+#6330
+O Cercado do Pequeno Wormkin~
+   Voc� est� em um ber�o, com vermes de vespas e de outros tipos pelo 
+ch�o.   Voc� sente que humanos foram usados como brinquedo aqui, e 
+comidos depois.   Algo te diz que a pessoa que construiu esse lugar 
+gosta de carne de drag�o, e usa esta sala como um local para cri�-los.
+~
+63 0 0 0 0 2
+D4
+~
+~
+0 -1 6331
+S
+#6331
+A Base da Teia~
+   Grandes teias se conectam neste ponto.  O ponto onde se cruzam brilha
+e tremeluz no �ter.  Voc� v� muitas criaturas voadoras -- insetos, 
+p�gasos, e drag�es wormkins -- passando pelos perigosos caminhos da teia.
+H� sa�das em muitas dire��es.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6330
+D1
+~
+~
+0 -1 6332
+D2
+~
+~
+0 -1 6333
+D3
+~
+~
+0 -1 6334
+S
+#6332
+Atrav�s das �rvores~
+   Esta parte da teia passa atrav�s dos galhos de algumas �rvores.
+V�rias folhas e outras coisas que os muitos zang�es ainda n�o pegaram 
+est�o aqui no ch�o.
+~
+63 0 0 0 0 2
+D1
+~
+~
+0 -1 6331
+D2
+~
+~
+0 -1 6335
+D3
+~
+~
+0 -1 6333
+S
+#6333
+Acima das Nuvens~
+   Voc� pode ver toda Midgaard nesta teia et�rea. Muitos dos drag�es 
+maiores que por aqui voam parecem se desviar dos fios grudentos da teia.
+~
+63 0 0 0 0 2
+D1
+~
+~
+0 -1 6331
+D2
+~
+~
+0 -1 6334
+D3
+~
+~
+0 -1 6335
+S
+#6334
+Sobre uma Nuvem~
+   Esta nuvem � particularmente densa em sua consist�ncia.  Voc�
+repentinamente se d� conta de que esta n�o � uma nuvem comum, mas
+pode ser o ninho de uma criatura a�rea.
+~
+63 0 0 0 0 2
+D5
+~
+~
+0 -1 6331
+S
+#6335
+Uma Liga��o na Teia Et�rea~
+   Esta � outra liga��o na teia et�rea. V�rias criaturas parecem ser 
+pegas (ou hipnotizadas) por seus fios grudentos.
+~
+63 0 0 0 0 2
+D1
+~
+~
+0 -1 6336
+D3
+~
+~
+0 -1 6331
+S
+#6336
+O Fio T�nue~
+   Venta muito aqui, uma vez que esse fio est� a uma altura consider�vel.
+Ainda assim, este local � seguro para que voc� se movimente.
+~
+63 0 0 0 0 2
+D2
+~
+~
+0 -1 6340
+D3
+~
+~
+0 -1 6341
+D5
+~
+~
+0 -1 6331
+S
+#6340
+A Sala do Wormkin Velho~
+   Um wormkin mais maduro parece residir aqui.  V�rios livros de 
+doutrinas misteriosas est�o por aqui, juntamente com cacos de armaduras
+e armas.
+~
+63 0 0 0 0 2
+D5
+~
+~
+0 -1 6331
+S
+#6341
+Um Outro Tronco~
+   Novamente as teias passam por um tronco. Ao lado, voc� v� o que 
+parece ser uma entrada para a toca de alguma criatura.
+~
+63 0 0 0 0 2
+D1
+~
+~
+0 -1 6342
+D2
+~
+~
+0 -1 6334
+D3
+~
+~
+0 -1 6345
+S
+#6342
+A Toca da Aranha-P�ssaro~
+   Ela � uma grande ca�adora dentre as aranhas.  J�ias e armas quebradas
+sugerem que ela deve ter poderosas mand�bulas.  Cuidado!
+~
+63 0 0 0 0 2
+D5
+~
+~
+0 -1 6331
+S
+#6345
+Uma Liga��o na Teia Et�rea~
+   Esta � outra liga��o na teia et�rea. V�rias criaturas parecem ser 
+pegas (ou hipnotizadas) por seus fios grudentos.
+~
+63 0 0 0 0 2
+D2
+~
+~
+0 -1 6350
+D3
+~
+~
+0 -1 6346
+D4
+~
+~
+0 -1 6345
+S
+#6346
+O Topo Silencioso~
+Este � um silencioso topo de �rvore.  Abaixo voc� 
+v� um caminho familiar, que pode te levar de volta para Midgaard.
+~
+63 0 0 0 0 2
+D1
+~
+~
+0 -1 6345
+D3
+~
+~
+0 -1 6347
+D5
+~
+~
+0 -1 6132
+S
+#6347
+Na Teia~
+   RRRRRRRRRRROOOOOOOOOOOOOAAAAAAAAAAAAAARR!  Voc� ouve o rugido de uma
+poderosa besta.  Drag�o, voc� imagina.  Voc� se encolhe todo enquanto 
+anda nas pontas p�s atrav�s desta parte da teia.
+~
+63 0 0 0 0 2
+D1
+~
+~
+0 -1 6346
+D2
+~
+~
+0 -1 6355
+D5
+~
+~
+0 -1 6331
+S
+#6350
+A C�mara da Ki-Rin~
+   Uma s�bia ki-rin foi presa aqui muitos anos atr�s.  � dela que a 
+imperatriz deste reino suga for�a m�gica.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6347
+S
+#6355
+Uma Liga��o na Teia Et�rea~
+   Esta � outra liga��o na teia et�rea. V�rias criaturas parecem ser 
+pegas (ou hipnotizadas) por seus fios grudentos.  Ao norte voc� sente a
+forte respira��o de um en�rgico animal. 
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6360
+D2
+~
+~
+0 -1 6365
+S
+#6360
+O Covil de Yevaud~
+   Yevaud, o Usurpador de Midgaard, reside aqui.  Uma voz grita, 
+'CUIDADO, o Usurpador de Midgaard vive aqui!  FUJA enquanto pode!'.
+Mas at� Yevaud tem seu meste... ou assim voc� deduz.
+~
+63 0 0 0 0 2
+D2
+~
+~
+0 -1 6355
+S
+#6365
+Uma Liga��o na Teia Et�rea~
+   Esta � outra liga��o na teia et�rea. V�rias criaturas parecem ser 
+pegas (ou hipnotizadas) por seus fios grudentos.  Um �nico fio de teia 
+vai para o norte, enquanto h� um caminho horripilante ao sul.  A 
+sat�nica entrada do Covil de Arachnos � logo abaixo.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6371
+D1
+~
+~
+0 -1 6331
+D2
+~
+~
+0 -1 6366
+D5
+~
+~
+0 -1 6390
+S
+#6366
+A Entrada para a Guarda da Torre~
+   Voc� se encontra num caminho escuro, ao final do fio de teia. � 
+frente voc� v� uma c�mara iluminada por uma tocha, onde almas de 
+aventureiros que n�o foram vingados v�m e rangem seus dentes.  Os uivos
+e gritos de muitos ecoam pelas paredes.  Voc� pode ver um caminho bem 
+definido, seguindo adiante.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6367
+S
+#6367
+A Sala do Guardi�o~
+   Uma cadeira est� aqui para um guardi�o incans�vel, que garante que
+nenhuma alma escape.  Al�m da cadeira, a sala n�o apresenta qualquer
+decora��o.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6368
+E
+cadeira~
+Uma cadeira normal, bem gasta, colada ao ch�o por teias de aranha.
+~
+S
+#6368
+O Reino dos sem Esperan�a~
+   Aqui voc� v� muitas almas que pensam que ainda vivem.  Elas procuram
+por aqueles que as mataram sem justificativa, e perseguem almas livres 
+de seres viventes, para habitarem e talvez se aventurarem mais uma vez.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6369
+S
+#6369
+O Reino dos sem Esperan�a~
+   Aqui voc� v� muitas almas que pensam que ainda vivem.  Elas procuram
+por aqueles que as mataram sem justificativa, e perseguem almas livres 
+de seres viventes, para habitarem e talvez se aventurarem mais uma vez.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6368
+D2
+~
+~
+0 -1 6370
+S
+#6370
+A Guarda da Torre~
+   Nenhuma alma jamais viveu neste local.  O pranto de escravos e os 
+uivos de lobos s�o os sons que voc� ouve.  As paredes sao finas e 
+pequenas.  A �nica luz que voc� recebe vem do brilhar do fio de teia 
+et�rea que voc� usou para chegar aqui.
+~
+63 0 0 0 0 2
+D1
+~
+~
+0 -1 6371
+S
+#6371
+O Fio de Teia de Aranha~
+   Um �nico fio de teia de aranha te sustenta novamente.  Ao olhar 
+atrav�s do �ter voc� v� uma �nica cabana adiante, com uma luz na janela.
+Voc� percebe um grande mal vindo do sul, e sente vontade de voltar para
+a teia et�rea e tentar sua sorte l�.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6331
+D2
+~
+~
+0 -1 6372
+S
+#6372
+O Fio de Teia de Aranha~
+   Um �nico fio de teia de aranha lhe sustenta novamente.  A cabana se
+aproxima, e voc� se sente com mais vontade de ir embora agora.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6371
+D2
+~
+~
+0 -1 6373
+S
+#6373
+O Canto do Eremita~
+   Aqui voc� v� evidencias de uma moradia errante.  A cabana � ao sul, 
+caso voc� ouse entrar nela.  Voc� tem uma sensa��o inconsciente de que 
+deveria ir embora agora.  O c�u acima de voc� escurece, e urra com os 
+sons de trov�es.
+~
+63 0 0 0 0 2
+D0
+~
+~
+0 -1 6372
+D2
+~
+~
+0 -1 6380
+S
+#6380
+A Armadilha Mortal de Mahatma~
+   Mahatma, aquele ladr�o tolo, est� aqui, e ele rouba tudo o que voc� 
+tem.   Ele diz 'Aqui, voc� tem uma viagem r�pida de volta ao 
+Templo de Midgaard.', e enterra uma adaga negra em suas costas...
+~
+63 10 0 0 0 0
+S
+#6390
+A Entrada para o Covil de Arachnos~
+   Todos os fios inevitavelmente v�m para c�, o centro da teia, a 
+entrada para o covil de Arachnos.
+~
+63 0 0 0 0 2
+D1
+~
+~
+0 -1 6391
+S
+#6391
+A C�mara Pegajosa~
+   Voc� ainda pode fugir, uma vez que seus joelhos est�o tremendo por
+causa da ansiedade (ou seria medo?).  O c�u � claro neste fio de teia, 
+que surpreendentemente n�o � pegajoso.  Esta teia n�o vibra como as 
+outras.   Algumas aranhas passam por aqui, gargalhando, 'Voc� vai 
+morrer, voc� est� frito!  Adeus!'.
+~
+63 0 0 0 0 2
+D1
+~
+~
+0 -1 6392
+D5
+~
+~
+0 -1 6331
+S
+#6392
+A Grande Porta~
+   Adiante voc� v� uma grande porta em forma de teia.  V�rios desenhos
+de runas antigas e nomes de her�is de Midgaard est�o entalhados nela.
+Talvez a lista de v�timas?  Voc� n�o tem como saber.  
+~
+63 8 0 0 0 2
+D0
+~
+porta~
+2 6300 6399
+D3
+~
+~
+0 -1 6391
+S
+#6399
+O Covil de Arachnos~
+   Este � o covil da Aranha Rainha, Arachnos.  Voc� pode ver uma
+abundantemente adornada teia de arco-�ris.  O covil permite que 
+Arachnos se mova para qualquer universo que deseje, usando seus
+fios m�gicos no Plano Material Principal.  Cofres e mais cofres
+de ouro, j�ias e gemas te esperam.  Infelizmente, Arachnos � uma
+aranha avarenta, e prende todos seus tesouros em seu belo corpo
+sedoso.
+~
+63 64 0 0 0 2
+D2
+~
+porta~
+2 6300 6392
+S
+$~

@@ -1,0 +1,1863 @@
+#6900
+O Jardim~
+   Voc� est� agora em um pequeno jardim.  H� muitas plantas aqui, mas a
+grande maioria da flora local s�o v�rios tipos de vit�ria-r�gia.  Este
+jardim do Templo parece ser bem cuidado e todas as plantas est�o
+florescendo.
+~
+69 64 0 0 0 2
+D2
+Voc� v� dentro do Templo.
+~
+~
+0 -1 6903
+S
+#6901
+Fora dos Muros do Templo~
+   Voc� se encontra fora dos muros do primeiro Templo de Anura.  O muro �
+feito de pedra marrom e � muito alto para manter alguma coisa dentro ou
+fora.
+~
+69 64 0 0 0 2
+D2
+Voc� v� as depend�ncias do Templo.
+~
+~
+0 -1 6906
+S
+#6902
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo construido de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D1
+Voc� v� o Templo.
+~
+~
+0 -1 6903
+D2
+~
+~
+0 -1 6907
+S
+#6903
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo construido de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D0
+Voc� v� um pequeno jardim
+~
+~
+0 -1 6900
+D1
+Voc� v� o Templo.
+~
+~
+0 -1 6904
+D2
+Voc� v� o Templo.
+~
+~
+0 -1 6908
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6902
+S
+#6904
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo construido de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D2
+Voc� v� uma piscina de �gua.
+~
+~
+0 -1 6909
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6903
+S
+#6905
+Fora do Primeiro Templo~
+   Voc� se encontra fora de um grande Templo no final da trilha estreita.  Uma
+subida �ngreme leva para o Templo ao leste, e a trilha � para oeste.  Esse
+Templo cont�m importantes informa��es de onde se encontra os outros Templos
+de Anura, uma pe�a de quebra-cabe�a que quando resolvido levar� voc� para o
+grande Templo de Anura, onde a riqueza est� fora da sua imagina��o.
+~
+69 64 0 0 0 2
+D1
+Voc� v� as depend�ncias do Templo.
+~
+~
+0 -1 6906
+D3
+Voc� v� a avenida real.
+~
+~
+0 -1 3301
+S
+#6906
+As Depend�ncias do Templo~
+   Voc� se encontra em um lugar �ngreme das depend�ncias do Templo.  Elas
+s�o feitas de uma esp�cie de rocha marrom que foi bem cuidada e � bem macia.
+Voc� v� algumas plantas florescendo nas fendas das depend�ncias e indo em
+dire��o ao sol.
+~
+69 64 0 0 0 0
+D0
+Voc� v� o muro.
+~
+~
+0 -1 6901
+D1
+Voc� v� um corredor sombrio.
+~
+~
+0 -1 6907
+D2
+Voc� v� o muro.
+~
+~
+0 -1 6912
+D3
+Voc� v� o fundo das depend�ncias.
+~
+~
+0 -1 6905
+S
+#6907
+Corredor Sombrio~
+   Voc� se encontra em um longo corredor sombrio.  Voc� pode ver algumas
+fracas sombras, mas voc� acaba n�o vendo um palmo na sua frente.
+~
+69 65 0 0 0 0
+D0
+Voc� v� o Templo.
+~
+~
+0 -1 6902
+D1
+Voc� v� um corredor sombrio.
+~
+~
+0 -1 6908
+D2
+Voc� v� um corredor sombrio.
+~
+~
+0 -1 6913
+D3
+Voc� v� as depend�ncias do Templo.
+~
+~
+0 -1 6906
+S
+#6908
+Corredor Sombrio~
+   Voc� se encontra em um longo corredor sombrio.  Voc� pode ver algumas
+fracas sombras, mas voc� acaba n�o vendo um palmo na sua frente.
+~
+69 65 0 0 0 0
+D0
+Voc� v� o Templo.
+~
+~
+0 -1 6903
+D1
+Voc� v� uma piscina de �gua.
+~
+~
+0 -1 6909
+D2
+Voc� v� o Templo.
+~
+~
+0 -1 6914
+D3
+Voc� v� um corredor sombrio.
+~
+~
+0 -1 6907
+S
+#6909
+Piscina de �gua~
+   Voc� est� em uma piscina de �gua antes do altar onde v� v�rias criaturas
+nadando, parecendo pertubadas com sua presen�a.
+~
+69 64 0 0 0 8
+D0
+Voc� v� o Templo.
+~
+~
+0 -1 6904
+D1
+Voc� v� o altar.
+~
+~
+0 -1 6910
+D2
+Voc� v� o Templo.
+~
+~
+0 -1 6915
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6908
+S
+#6910
+Um Altar para Anura~
+   Voc� v� um grande altar dourado com uma est�tua de um sapo gigante.  Voc�
+v� outra sala para leste.
+~
+69 64 0 0 0 0
+D1
+Voc� v� uma pequena sala atr�s do altar.
+~
+~
+0 -1 6911
+D3
+Voc� v� uma piscina de �gua.
+~
+~
+0 -1 6909
+D5
+Ali h� uma pequena sala.
+~
+barreira m�gica~
+0 -1 6917
+S
+#6911
+Atr�s do Altar~
+   Voc� est� em uma pequena sala atr�s do altar.  Ela � escura mas parece
+haver escrituras na parede e h� uma grande rocha no meio da sala.  As
+escrituras dizem a voc� que voc� pode usar as quatro tabuletas juntas para
+achar as chaves para o grande Templo de Anura.  Elas ainda falam sobre outro
+Templo ao sudeste de Nova Thalos.
+~
+69 64 0 0 0 0
+D3
+Voc� v� um altar.
+~
+~
+0 -1 6910
+S
+#6912
+Fora dos Muros do Templo~
+   Voc� se encontra fora dos muros do primeiro Templo de Anura.  O muro �
+feito de pedra marrom e � muito alto para manter alguma coisa dentro ou
+fora.
+~
+69 64 0 0 0 1
+D0
+Voc� v� as depend�ncias do Templo.
+~
+~
+0 -1 6906
+S
+#6913
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo construido de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D0
+Voc� v� um corredor sombrio.
+~
+~
+0 -1 6907
+D1
+Voc� v� o Templo.
+~
+~
+0 -1 6914
+S
+#6914
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo construido de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D0
+Voc� v� um corredor sombrio.
+~
+~
+0 -1 6908
+D1
+Voc� v� o Templo.
+~
+~
+0 -1 6915
+D2
+Voc� v� um pequeno jardim.
+~
+~
+0 -1 6916
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6913
+S
+#6915
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo construido de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D0
+Voc� v� uma piscina de �gua.
+~
+~
+0 -1 6909
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6914
+S
+#6916
+O Jardim~
+   Voc� est� agora em um pequeno jardim.  H� muitas plantas aqui, mas a
+grande maioria da flora local s�o v�rios tipos de vit�ria-r�gia.  Este
+jardim do Templo parece ser bem cuidado e todas as plantas est�o
+florescendo.
+~
+69 64 0 0 0 2
+D0
+Voc� v� dentro do Templo.
+~
+~
+0 -1 6914
+S
+#6917
+Sob o Altar~
+   Voc� se encontra em uma pequena sala sob o altar.  O ch�o � coberto de
+areia, mas se voc� procurar bem saber� que pode encontrar alguma coisa ali.
+~
+69 64 0 0 0 0
+D4
+~
+~
+0 -1 6910
+S
+#6918
+Fora do Segundo Templo~
+   Voc� se encontra fora de um Templo retangular constru�do para Anura.
+Para o sul est� as depend�ncias do Templo, e para norte se encontra a cidade
+de Nova Thalos.
+~
+69 68 0 0 0 1
+D2
+Voc� v� as depend�ncias do Templo.
+~
+~
+0 -1 6920
+D6
+Voc� v� a cidade de Nova Thalos.
+~
+~
+0 -1 5411
+S
+#6919
+O Jardim~
+   Voc� est� agora em um pequeno jardim.  H� muitas plantas aqui, mas a
+grande maioria da flora local s�o v�rios tipos de vit�ria-r�gia.  Este
+jardim do Templo parece ser bem cuidado e todas as plantas est�o
+florescendo.
+~
+69 64 0 0 0 2
+D1
+Voc� v� as depend�ncias do Templo.
+~
+~
+0 -1 6920
+S
+#6920
+As Depend�ncias do Templo~
+   Voc� se encontra em um lugar �ngreme das depend�ncias do Templo.  Elas
+s�o feitas de uma esp�cie de rocha marrom que foi bem cuidada e � bem macia.
+Voc� v� algumas plantas florescendo nas fendas das depend�ncias e indo em
+dire��o ao sol.
+~
+69 64 0 0 0 4
+D0
+Voc� v� o fundo das depend�ncias.
+~
+~
+0 -1 6918
+D1
+Voc� v� um jardim.
+~
+~
+0 -1 6921
+D2
+Voc� v� o Templo.
+~
+~
+0 -1 6923
+D3
+Voc� v� um jardim.
+~
+~
+0 -1 6919
+S
+#6921
+O Jardim~
+   Voc� est� agora em um pequeno jardim.  H� muitas plantas aqui, mas a
+grande maioria da flora local s�o v�rios tipos de vit�ria-r�gia.  Este
+jardim do Templo parece ser bem cuidado e todas as plantas est�o
+florescendo.
+~
+69 64 0 0 0 2
+D3
+Voc� v� as depend�ncias do Templo.
+~
+~
+0 -1 6920
+D5
+Voc� v� um buraco.
+~
+barreira m�gica~
+0 -1 6934
+S
+#6922
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo construido de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D1
+Voc� v� o Templo.
+~
+~
+0 -1 6923
+D2
+Voc� v� o Templo.
+~
+~
+0 -1 6925
+S
+#6923
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo construido de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D0
+Voc� v� as depend�ncias do Templo.
+~
+~
+0 -1 6920
+D1
+Voc� v� o Templo.
+~
+~
+0 -1 6924
+D2
+Voc� v� o altar norte
+~
+~
+0 -1 6926
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6922
+S
+#6924
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo construido de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D2
+Voc� v� o Templo.
+~
+~
+0 -1 6927
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6923
+S
+#6925
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo construido de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D0
+Voc� v� o Templo.
+~
+~
+0 -1 6922
+D1
+Voc� v� o altar norte
+~
+~
+0 -1 6926
+D2
+Voc� v� o altar oeste
+~
+~
+0 -1 6928
+S
+#6926
+O Altar Norte~
+   Voc� se encontra no altar norte de um dos Templos constru�dos para Anura.
+~
+69 64 0 0 0 0
+D0
+Voc� v� o Templo.
+~
+~
+0 -1 6923
+D1
+Voc� v� o Templo.
+~
+~
+0 -1 6927
+D2
+Voc� v� o altar central.
+~
+~
+0 -1 6929
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6925
+S
+#6927
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo construido de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D0
+Voc� v� o Templo.
+~
+~
+0 -1 6924
+D2
+Voc� v� o altar leste.
+~
+~
+0 -1 6930
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6926
+S
+#6928
+O Altar Oeste~
+   Voc� se encontra no altar oeste de um dos Templos constru�dos para Anura.
+~
+69 64 0 0 0 0
+D0
+Voc� v� o Templo.
+~
+~
+0 -1 6925
+D1
+Voc� v� o altar central.
+~
+~
+0 -1 6929
+D2
+Voc� v� o Templo.
+~
+~
+0 -1 6931
+S
+#6929
+O Altar Central~
+   Voc� se encontra no altar central de um dos Templos constru�dos para
+Anura.  Algumas inscri��es dizem a voc� que existe outro Templo aos
+arredores.
+~
+69 64 0 0 0 0
+D0
+Voc� v� o altar norte.
+~
+~
+0 -1 6926
+D1
+Voc� v� o altar leste.
+~
+~
+0 -1 6930
+D2
+Voc� v� o altar sul.
+~
+~
+0 -1 6932
+D3
+Voc� v� o altar oeste.
+~
+~
+0 -1 6928
+S
+#6930
+O Altar Leste~
+   Voc� se encontra no altar leste de um dos Templos constru�dos para Anura.
+~
+69 64 0 0 0 0
+D0
+Voc� v� o Templo.
+~
+~
+0 -1 6927
+D2
+Voc� v� o Templo.
+~
+~
+0 -1 6933
+D3
+Voc� v� o altar central.
+~
+~
+0 -1 6929
+S
+#6931
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo construido de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D0
+Voc� v� o altar oeste
+~
+~
+0 -1 6928
+D1
+Voc� v� o Templo.
+~
+~
+0 -1 6932
+S
+#6932
+O Altar Sul~
+   Voc� se encontra no altar sul de um dos Templos constru�dos para Anura.
+~
+69 64 0 0 0 0
+D0
+Voc� v� o altar central.
+~
+~
+0 -1 6929
+D1
+Voc� v� o Templo.
+~
+~
+0 -1 6933
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6931
+S
+#6933
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo construido de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D0
+Voc� v� o altar leste.
+~
+~
+0 -1 6930
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6932
+S
+#6934
+Sob o Jardim~
+   Voc� se encontra em um buraco no ch�o.  Areia solta cobre o fundo do
+buraco.
+~
+69 64 0 0 0 0
+D4
+Voc� v� um jardim.
+~
+~
+0 -1 6921
+S
+#6935
+O Lago~
+   Voc� est� em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+est� tranq�ilo e sem ondas e existe uma fina camada de limo sobre a �gua.
+~
+69 64 0 0 0 0
+D1
+Voc� v� o lago.
+~
+~
+0 -1 6936
+D2
+Voc� v� o lago.
+~
+~
+0 -1 6940
+S
+#6936
+O Lago~
+   Voc� est� em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+est� tranq�ilo e sem ondas e existe uma fina camada de limo sobre a �gua.
+~
+69 64 0 0 0 6
+D1
+Voc� v� o lago.
+~
+~
+0 -1 6937
+D3
+Voc� v� o lago.
+~
+~
+0 -1 6935
+S
+#6937
+O Lago~
+   Voc� est� em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+est� tranq�ilo e sem ondas e existe uma fina camada de limo sobre a �gua.
+~
+69 64 0 0 0 6
+D1
+Voc� v� o lago.
+~
+~
+0 -1 6938
+D3
+Voc� v� o lago.
+~
+~
+0 -1 6936
+S
+#6938
+O Lago~
+   Voc� est� em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+est� tranq�ilo e sem ondas e existe uma fina camada de limo sobre a �gua.
+~
+69 64 0 0 0 6
+D1
+Voc� v� o lago.
+~
+~
+0 -1 6939
+D3
+Voc� v� o lago.
+~
+~
+0 -1 6937
+S
+#6939
+O Lago~
+   Voc� est� em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+est� tranq�ilo e sem ondas e existe uma fina camada de limo sobre a �gua.
+~
+69 64 0 0 0 6
+D2
+Voc� v� o lago.
+~
+~
+0 -1 6944
+D3
+Voc� v� o lago.
+~
+~
+0 -1 6938
+S
+#6940
+O Lago~
+   Voc� est� em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+est� tranq�ilo e sem ondas e existe uma fina camada de limo sobre a �gua.
+~
+69 64 0 0 0 6
+D0
+Voc� v� o lago.
+~
+~
+0 -1 6935
+D2
+Voc� v� o lago.
+~
+~
+0 -1 6946
+S
+#6941
+As Depend�ncias do Templo~
+   Voc� se encontra em um lugar �ngreme das depend�ncias do Templo.  Elas
+s�o feitas de uma esp�cie de rocha marrom que foi bem cuidada e � bem macia.
+Voc� v� algumas plantas florescendo nas fendas das depend�ncias e indo em
+dire��o ao sol.
+~
+69 64 0 0 0 4
+D1
+Voc� v� as depend�ncias do Templo.
+~
+~
+0 -1 6942
+D2
+Voc� v� as depend�ncias do Templo.
+~
+~
+0 -1 6947
+S
+#6942
+As Depend�ncias do Templo~
+   Voc� se encontra em um lugar �ngreme das depend�ncias do Templo.  Elas
+s�o feitas de uma esp�cie de rocha marrom que foi bem cuidada e � bem macia.
+Voc� v� algumas plantas florescendo nas fendas das depend�ncias e indo em
+dire��o ao sol.
+~
+69 64 0 0 0 4
+D1
+Voc� v� o Templo.
+~
+~
+0 -1 6943
+D2
+Voc� v� o grande altar.
+~
+~
+0 -1 6948
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6941
+S
+#6943
+As Depend�ncias do Templo~
+   Voc� se encontra em um lugar �ngreme das depend�ncias do Templo.  Elas
+s�o feitas de uma esp�cie de rocha marrom que foi bem cuidada e � bem macia.
+Voc� v� algumas plantas florescendo nas fendas das depend�ncias e indo em
+dire��o ao sol.
+~
+69 64 0 0 0 4
+D2
+Voc� v� o Templo.
+~
+~
+0 -1 6949
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6942
+S
+#6944
+O Lago~
+   Voc� est� em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+est� tranq�ilo e sem ondas e existe uma fina camada de limo sobre a �gua.
+~
+69 64 0 0 0 4
+D0
+Voc� v� o lago.
+~
+~
+0 -1 6939
+D2
+Voc� v� uma ponte.
+~
+~
+0 -1 6950
+S
+#6945
+Sob o Lago~
+   Voc� se encontra em um buraco de ar cheio de lodo sob o lago.
+~
+69 64 0 0 0 0
+D4
+Voc� v� o lago.
+~
+~
+0 -1 6957
+S
+#6946
+O Lago~
+   Voc� est� em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+est� tranq�ilo e sem ondas e existe uma fina camada de limo sobre a �gua.
+~
+69 64 0 0 0 6
+D0
+Voc� v� o lago.
+~
+~
+0 -1 6940
+D2
+Voc� v� o lago.
+~
+~
+0 -1 6952
+S
+#6947
+As Depend�ncias do Templo~
+   Voc� se encontra em um lugar �ngreme das depend�ncias do Templo.  Elas
+s�o feitas de uma esp�cie de rocha marrom que foi bem cuidada e � bem macia.
+Voc� v� algumas plantas florescendo nas fendas das depend�ncias e indo em
+dire��o ao sol.
+~
+69 64 0 0 0 4
+D0
+Voc� v� o Templo.
+~
+~
+0 -1 6941
+D1
+Voc� v� o grande altar.
+~
+~
+0 -1 6948
+D2
+Voc� v� o Templo.
+~
+~
+0 -1 6953
+S
+#6948
+O Grande Altar~
+   Voc� se encontra no altar do terceiro Templo de Anura.  Algumas
+inscri��es no altar dizem a voc� que h� outro Templo nos t�neis a norte de
+Nova Thalos.
+~
+69 64 0 0 0 0
+D0
+Voc� v� as depend�ncias do Templo.
+~
+~
+0 -1 6942
+D1
+Voc� v� as depend�ncias do Templo.
+~
+~
+0 -1 6949
+D2
+Voc� v� as depend�ncias do Templo.
+~
+~
+0 -1 6954
+D3
+Voc� v� as depend�ncias do Templo.
+~
+~
+0 -1 6947
+S
+#6949
+As Depend�ncias do Templo~
+   Voc� se encontra em um lugar �ngreme das depend�ncias do Templo.  Elas
+s�o feitas de uma esp�cie de rocha marrom que foi bem cuidada e � bem macia.
+Voc� v� algumas plantas florescendo nas fendas das depend�ncias e indo em
+dire��o ao sol.
+~
+69 64 0 0 0 4
+D0
+Voc� v� o Templo.
+~
+~
+0 -1 6943
+D1
+Voc� v� uma ponte.
+~
+~
+0 -1 6950
+D2
+Voc� v� o Templo.
+~
+~
+0 -1 6955
+D3
+Voc� v� o altar.
+~
+~
+0 -1 6948
+S
+#6950
+Na Ponte~
+   Voc� se encontra em uma ponte sobre um pequeno lago fora do terceiro
+Templo de Anura.  O Templo est� a oeste e o lago corre para norte e sul.
+~
+69 64 0 0 0 2
+D0
+Voc� v� o lago.
+~
+~
+0 -1 6944
+D1
+Voc� v� a borda da ponte.
+~
+~
+0 -1 6951
+D2
+Voc� v� o lago.
+~
+~
+0 -1 6956
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6949
+S
+#6951
+Fora do Terceiro Templo~
+   Voc� se encontra fora de um Templo em forma piramidal que foi constru�do
+para Anura.  A oeste est� uma ponte atravessando o lago que circunda o
+Templo.
+~
+69 64 0 0 0 1
+D1
+Voc� v� um estreito caminho.
+~
+~
+0 -1 5023
+D3
+Voc� v� uma ponte.
+~
+~
+0 -1 6950
+S
+#6952
+O Lago~
+   Voc� est� em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+est� tranq�ilo e sem ondas e existe uma fina camada de limo sobre a �gua.
+~
+69 64 0 0 0 6
+D0
+Voc� v� o lago.
+~
+~
+0 -1 6946
+D2
+Voc� v� o lago.
+~
+~
+0 -1 6957
+S
+#6953
+As Depend�ncias do Templo~
+   Voc� se encontra em um lugar �ngreme das depend�ncias do Templo.  Elas
+s�o feitas de uma esp�cie de rocha marrom que foi bem cuidada e � bem macia.
+Voc� v� algumas plantas florescendo nas fendas das depend�ncias e indo em
+dire��o ao sol.
+~
+69 64 0 0 0 4
+D0
+Voc� v� o Templo.
+~
+~
+0 -1 6947
+D1
+Voc� v� o Templo.
+~
+~
+0 -1 6954
+S
+#6954
+As Depend�ncias do Templo~
+   Voc� se encontra em um lugar �ngreme das depend�ncias do Templo.  Elas
+s�o feitas de uma esp�cie de rocha marrom que foi bem cuidada e � bem macia.
+Voc� v� algumas plantas florescendo nas fendas das depend�ncias e indo em
+dire��o ao sol.
+~
+69 64 0 0 0 4
+D0
+Voc� v� o altar.
+~
+~
+0 -1 6948
+D1
+Voc� v� o Templo.
+~
+~
+0 -1 6955
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6953
+S
+#6955
+As Depend�ncias do Templo~
+   Voc� se encontra em um lugar �ngreme das depend�ncias do Templo.  Elas
+s�o feitas de uma esp�cie de rocha marrom que foi bem cuidada e � bem macia.
+Voc� v� algumas plantas florescendo nas fendas das depend�ncias e indo em
+dire��o ao sol.
+~
+69 64 0 0 0 4
+D1
+Voc� v� o Templo.
+~
+~
+0 -1 6949
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6954
+S
+#6956
+O Lago~
+   Voc� est� em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+est� tranq�ilo e sem ondas e existe uma fina camada de limo sobre a �gua.
+~
+69 64 0 0 0 6
+D0
+Voc� v� uma ponte.
+~
+~
+0 -1 6950
+D2
+Voc� v� o lago.
+~
+~
+0 -1 6961
+S
+#6957
+O Lago~
+   Voc� est� em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+est� tranq�ilo e sem ondas e existe uma fina camada de limo sobre a �gua.
+~
+69 64 0 0 0 6
+D0
+Voc� v� o lago.
+~
+~
+0 -1 6952
+D1
+Voc� v� o lago.
+~
+~
+0 -1 6958
+D5
+Voc� v� ume esp�cie de bolha de ar ali.
+~
+barreira m�gica~
+0 -1 6945
+S
+#6958
+O Lago~
+   Voc� est� em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+est� tranq�ilo e sem ondas e existe uma fina camada de limo sobre
+a �gua.
+~
+69 64 0 0 0 6
+D1
+Voc� v� o lago.
+~
+~
+0 -1 6959
+D3
+Voc� v� o lago.
+~
+~
+0 -1 6957
+S
+#6959
+O Lago~
+   Voc� est� em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+est� tranq�ilo e sem ondas e existe uma fina camada de limo sobre a �gua.
+~
+69 64 0 0 0 6
+D1
+Voc� v� o lago.
+~
+~
+0 -1 6960
+D3
+Voc� v� o lago.
+~
+~
+0 -1 6958
+S
+#6960
+O Lago~
+Voc� est� em um pequeno lago que rodeia o terceiro Templo de Anura.
+Ele est� tranq�ilo e sem ondas e existe uma fina camada de limo sobre
+a �gua.
+~
+69 64 0 0 0 6
+D1
+Voc� v� o lago.
+~
+~
+0 -1 6961
+D3
+Voc� v� o lago.
+~
+~
+0 -1 6959
+S
+#6961
+O Lago~
+   Voc� est� em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+est� tranq�ilo e sem ondas e existe uma fina camada de limo sobre a �gua.
+~
+69 64 0 0 0 6
+D0
+Voc� v� o lago.
+~
+~
+0 -1 6956
+D3
+Voc� v� o lago.
+~
+~
+0 -1 6960
+S
+#6962
+O Altar~
+   Voc� se encontra agora no altar do quarto Templo de Anura.  Algumas
+inscri��es no altar dizem a voc� que voc� deve reunir as quatro tabuletas
+para encontrar as chaves para o quinto Templo.
+~
+69 64 0 0 0 0
+D2
+Voc� v� um po�o de fogo.
+~
+~
+0 -1 6964
+S
+#6963
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo construido de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D1
+Voc� v� um po�o de fogo.
+~
+~
+0 -1 6964
+D2
+Voc� v� o Templo.
+~
+~
+0 -1 6966
+S
+#6964
+Po�o de Fogo~
+   Voc� est� em frente � um grande po�o no ch�o da onde pulam labaredas de
+fogo.  Ele � muito quente e ser� melhor andar nas bordas do po�o se
+poss�vel.
+~
+69 64 0 0 0 0
+D0
+Voc� v� o altar.
+~
+~
+0 -1 6962
+D1
+Voc� v� o Templo.
+~
+~
+0 -1 6965
+D2
+Voc� v� o Templo.
+~
+~
+0 -1 6967
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6963
+D5
+Voc� v� fogo.
+~
+barreira m�gica~
+0 -1 6970
+S
+#6965
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo construido de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D2
+Voc� v� o Templo.
+~
+~
+0 -1 6968
+D3
+Voc� v� um po�o de fogo.
+~
+~
+0 -1 6964
+S
+#6966
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo construido de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D0
+Voc� v� o Templo.
+~
+~
+0 -1 6963
+D1
+Voc� v� o Templo.
+~
+~
+0 -1 6967
+S
+#6967
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo constru�do de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D0
+Voc� v� um po�o de fogo.
+~
+~
+0 -1 6964
+D1
+Voc� v� o Templo.
+~
+~
+0 -1 6968
+D2
+Voc� v� o Templo.
+~
+~
+0 -1 6969
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6966
+S
+#6968
+Dentro do Templo~
+   Voc� se encontra dentro de um pequeno Templo construido de pedras.  A
+sala � iluminada por tochas que est�o presas nas paredes, mas elas n�o
+produzem muita luz, e as chamas est�o come�ando a desaparecer.
+~
+69 64 0 0 0 0
+D0
+Voc� v� o Templo.
+~
+~
+0 -1 6965
+D3
+Voc� v� o Templo.
+~
+~
+0 -1 6967
+S
+#6969
+Fora do Quarto Templo~
+   Voc� se encontra antes de um pequeno Templo constru�do para Anura.  A
+entrada do Templo est� a norte, enquanto um labirinto de t�neis est� a sul.
+~
+69 68 0 0 0 0
+D0
+Voc� v� o Templo.
+~
+~
+0 -1 6967
+D2
+Voc� v� um t�nel escuro.
+~
+~
+0 -1 4013
+S
+#6970
+No Fogo~
+   Voc� est� sobre uma pilha de cinzas, rodeado de ardentes labaredas.
+~
+69 84 0 0 0 0
+D4
+Voc� v� a beirada do po�o.
+~
+~
+0 -1 6964
+S
+#6971
+Uma Caverna Escura~
+   Voc� est� em uma escura caverna que cont�m uma porta de madeira no seu
+ch�o.
+~
+69 69 0 0 0 0
+D3
+Voc� v� uma estranha toca.
+~
+~
+0 -1 7201
+D5
+Voc� v� um po�o sombrio.
+~
+porta~
+0 6911 6972
+S
+#6972
+Um Po�o Sombrio~
+   Voc� est� caindo em um po�o sombrio, mas uma porta de madeira parou a sua
+queda temporariamente.
+~
+69 65 0 0 0 0
+D5
+Voc� v� um po�o sombrio.
+~
+porta~
+0 6912 6973
+S
+#6973
+Um Po�o Sombrio~
+   Voc� est� caindo em um po�o sombrio, mas uma porta de madeira parou a sua
+queda temporariamente.
+~
+69 65 0 0 0 0
+D5
+Voc� v� um po�o sombrio.
+~
+porta~
+0 6913 6974
+S
+#6974
+Um Po�o Sombrio~
+   Voc� est� caindo em um po�o sombrio, mas uma porta de madeira parou a sua
+queda temporariamente.
+~
+69 65 0 0 0 0
+D5
+Voc� v� um po�o sombrio.
+~
+porta~
+0 6914 6975
+S
+#6975
+Um Po�o Sombrio~
+   Voc� est� caindo em um po�o sombrio, mas uma porta de madeira parou a sua
+queda temporariamente.
+~
+69 65 0 0 0 0
+D5
+Voc� v� um po�o sombrio.
+~
+porta~
+0 6919 6982
+S
+#6976
+Altar Principal~
+   Voc� se encontra no altar principal do grande Templo de Anura que voc�
+encontrou com sucesso.
+~
+69 64 0 0 0 0
+D2
+Voc� v� um corredor com porta.
+~
+~
+0 -1 6977
+D5
+Voc� v� uma pequena sala.
+~
+barreira m�gica~
+0 -1 6987
+S
+#6977
+Antes do Altar Principal~
+   Voc� se encontra antes do altar principal.  O altar se encontra a norte
+atr�s de uma porta de madeira.
+~
+69 64 0 0 0 0
+D0
+Voc� v� o altar principal.
+~
+porta~
+0 6915 6976
+D2
+Voc� v� somente ar.
+~
+~
+0 -1 6978
+S
+#6978
+No Ar~
+   Voc� est� flutuando no ar sobre um po�o sem fundo no Templo gra�as a uma
+intensa coluna de ar que o impele para o alto.  Voc� provavelmente n�o est�
+seguro ficando aqui, sendo melhor voc� pisar em um solo firme antes que o
+vento que o mant�m resolva desaparecer.
+~
+69 262208 0 0 0 11
+D0
+Voc� v� o altar principal.
+~
+~
+0 -1 6977
+D1
+Voc� v� o altar norte.
+~
+~
+0 -1 6979
+D2
+Voc� v� o altar oeste.
+~
+~
+0 -1 6981
+D5
+Voc� n�o consegue ver nada.
+~
+~
+0 -1 6988
+S
+#6979
+O Altar Norte~
+   Voc� se encontra no altar norte de Anura.
+~
+69 64 0 0 0 0
+D1
+Voc� v� somente ar.
+~
+~
+0 -1 6980
+D2
+Voc� v� o fundo de um po�o sombrio.
+~
+~
+0 -1 6982
+D3
+Voc� v� somente ar.
+~
+~
+0 -1 6978
+S
+#6980
+No Ar~
+   Voc� est� flutuando no ar sobre um po�o sem fundo no Templo gra�as a uma
+intensa coluna de ar que o impele para o alto.  Voc� provavelmente n�o est�
+seguro ficando aqui, sendo melhor voc� pisar em um solo firme antes que o
+vento que o mant�m resolva desaparecer.
+~
+69 262208 0 0 0 11
+D2
+Voc� v� o altar leste.
+~
+~
+0 -1 6983
+D3
+Voc� v� o altar norte.
+~
+~
+0 -1 6979
+D5
+Voc� n�o consegue ver nada.
+~
+~
+0 -1 6988
+S
+#6981
+O Altar Oeste~
+   Voc� se encontra no altar oeste de Anura.
+~
+69 64 0 0 0 0
+D0
+Voc� v� somente ar.
+~
+~
+0 -1 6978
+D1
+Voc� v� o fundo de um po�o.
+~
+~
+0 -1 6982
+D2
+Voc� v� somente ar.
+~
+~
+0 -1 6984
+S
+#6982
+O Fundo do Po�o Sombrio~
+   Voc� chegou no fundo do po�o.  H� altares para todas as dire��es, e
+existe muita areia no ch�o aqui.
+~
+69 65 0 0 0 0
+D0
+Voc� v� um altar.
+~
+~
+0 -1 6979
+D1
+Voc� v� um altar.
+~
+~
+0 -1 6983
+D2
+Voc� v� um altar.
+~
+~
+0 -1 6985
+D3
+Voc� v� um altar.
+~
+~
+0 -1 6981
+S
+#6983
+O Altar Leste~
+   Voc� se encontra no altar leste de Anura.
+~
+69 64 0 0 0 0
+D0
+Voc� v� somente ar.
+~
+~
+0 -1 6980
+D2
+Voc� v� somente ar.
+~
+~
+0 -1 6986
+D3
+Voc� v� somente ar.
+~
+~
+0 -1 6982
+S
+#6984
+No Ar~
+   Voc� est� flutuando no ar sobre um po�o sem fundo no Templo gra�as a uma
+intensa coluna de ar que o impele para o alto.  Voc� provavelmente n�o est�
+seguro ficando aqui, sendo melhor voc� pisar em um solo firme antes que o
+vento que o mant�m resolva desaparecer.
+~
+69 262208 0 0 0 11
+D0
+Voc� v� o altar oeste.
+~
+~
+0 -1 6981
+D1
+Voc� v� o altar sul.
+~
+~
+0 -1 6985
+D5
+Voc� n�o consegue ver nada.
+~
+~
+0 -1 6988
+S
+#6985
+O Altar Sul~
+   Voc� se encontra no altar sul de Anura.
+~
+69 64 0 0 0 0
+D0
+Voc� v� o fundo de um po�o.
+~
+~
+0 -1 6982
+D1
+Voc� v� somente ar.
+~
+~
+0 -1 6986
+D3
+Voc� v� somente ar.
+~
+~
+0 -1 6984
+S
+#6986
+No Ar~
+   Voc� est� flutuando no ar sobre um po�o sem fundo no Templo gra�as a uma
+intensa coluna de ar que o impele para o alto.  Voc� provavelmente n�o est�
+seguro ficando aqui, sendo melhor voc� pisar em um solo firme antes que o
+vento que o mant�m resolva desaparecer.
+~
+69 262208 0 0 0 11
+D0
+Voc� v� o altar leste.
+D3
+~
+~
+0 -1 6983
+D5
+Voc� n�o consegue ver nada.
+~
+~
+0 -1 6988
+S
+#6987
+Sob o Altar Principal~
+   Voc� est� sob o altar principal de Anura.
+~
+69 64 0 0 0 0
+D4
+Voc� v� o altar principal.
+~
+~
+0 -1 6976
+D5
+Voc� v�... nada?
+~
+~
+0 -1 50
+S
+#6988
+Um Po�o Quase Sem Fim~
+   Voc� come�a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que voc� est� em um po�o sem fim.
+~
+69 229 0 0 0 9
+D5
+O po�o n�o parece ter fim...
+~
+~
+0 -1 6989
+S
+#6989
+Um Po�o Quase Sem Fim~
+   Voc� come�a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que voc� est� em um po�o sem fim.
+~
+69 229 0 0 0 9
+D5
+O po�o n�o parece ter fim...
+~
+~
+0 -1 6990
+S
+#6990
+Um Po�o Quase Sem Fim~
+   Voc� come�a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que voc� est� em um po�o sem fim.
+~
+69 229 0 0 0 9
+D5
+O po�o n�o parece ter fim...
+~
+~
+0 -1 6991
+S
+#6991
+Um Po�o Quase Sem Fim~
+   Voc� come�a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que voc� est� em um po�o sem fim.
+~
+69 229 0 0 0 9
+D5
+O po�o n�o parece ter fim...
+~
+~
+0 -1 6992
+S
+#6992
+Um Po�o Quase Sem Fim~
+   Voc� come�a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que voc� est� em um po�o sem fim.
+~
+69 229 0 0 0 9
+D5
+O po�o n�o parece ter fim...
+~
+~
+0 -1 6993
+S
+#6993
+Um Po�o Quase Sem Fim~
+   Voc� come�a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que voc� est� em um po�o sem fim.
+~
+69 229 0 0 0 9
+D5
+O po�o n�o parece ter fim...
+~
+~
+0 -1 6994
+S
+#6994
+Um Po�o Quase Sem Fim~
+   Voc� come�a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que voc� est� em um po�o sem fim.
+~
+69 229 0 0 0 9
+D5
+O po�o n�o parece ter fim...
+~
+~
+0 -1 6995
+S
+#6995
+Um Po�o Quase Sem Fim~
+   Voc� come�a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que voc� est� em um po�o sem fim.
+~
+69 229 0 0 0 9
+D5
+O po�o n�o parece ter fim...
+~
+~
+0 -1 6996
+S
+#6996
+Um Po�o Quase Sem Fim~
+   Voc� come�a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que voc� est� em um po�o sem fim.
+~
+69 229 0 0 0 9
+D5
+O po�o n�o parece ter fim...
+~
+~
+0 -1 6997
+S
+#6997
+Um Po�o Quase Sem Fim~
+   Voc� come�a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que voc� est� em um po�o sem fim.
+~
+69 229 0 0 0 9
+D5
+O po�o n�o parece ter fim...
+~
+~
+0 -1 6998
+S
+#6998
+O Fim do Po�o~
+   Voc� caiu bem no fim do po�o. Aqui � muito escuro, frio e �mido,
+sendo que estranhas coisas peludas passam a todo instante por sobre
+voc�. N�o h� sa�da aparente.
+~
+69 101 0 0 0 0
+S
+$~

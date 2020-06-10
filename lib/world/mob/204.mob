@@ -1,0 +1,249 @@
+#20400
+mago desapontado~
+um mago desapontado~
+Um mago vaga pelo matagal, somente olhando os estragos.
+~
+Este pobre sujeito LANÇA o olhar para a destruição!  Ele o olha
+penetrantemente, começa a falar alguma coisa, mas algo em sua mente ocorre,
+e ele volta a caminhar.
+~
+2123840 0 0 0 0 0 0 0 1000 E
+35 11 -4 4d10+2400 5d8+19
+500 97654
+8 8 1
+E
+#20401
+clérigo desapontado~
+um clérigo desapontado~
+Um clérigo passa por você, não notando sua presença, resmungando sozinho.
+~
+Este homem, usando roupas de clérigo, tem o olhar de alguém que
+quase pudesse matar a sangue frio! Atípico para um religioso...
+~
+2123840 0 0 0 0 0 0 0 1000 E
+35 12 -3 5d60+2400 5d8+18
+500 92756
+8 8 1
+E
+#20402
+guerreiro furioso~
+um guerreiro furioso~
+Um guerreiro pronto para a batalha, passa por você furiosamente com passos 
+largos, com uma espada na mão.
+~
+Ele está franzindo a sobrancelhas, mau-humorado, ele realmente tem um mau 
+aspecto.
+~
+2123840 0 0 0 0 0 0 0 1000 E
+35 10 -3 5d76+2400 5d10+19
+500 106452
+8 8 1
+E
+#20403
+ladrão furioso~
+um ladrão furioso~
+Um agitado ladrão vaga por este confim, disposto a matá-lo apenas para 
+treinar.
+~
+Ele simplesmente o olha e resmunga, nada mais.
+~
+2123840 0 0 0 0 0 0 0 0 E
+35 10 -5 3d56+2400 5d9+19
+500 113241
+8 8 1
+E
+#20404
+druidesa desatenta~
+uma druidesa desatenta~
+Uma pequena druida tenta passar por você, mas parece apenas um pouco fora do 
+caminho.
+~
+Ela continua sem ao menos olhar em sua direção.
+~
+2123840 0 0 0 0 0 0 0 0 E
+35 11 -5 30d5+2400 5d7+19
+500 94023
+8 8 2
+E
+#20405
+garçom de bar ladrão~
+o garçom de bar~
+Um ladrão aposentado serve bebida para todo mundo, às vezes servindo uma para 
+ele.
+~
+Ele parece distrair os outros à medida que ele serve cinco bebidas de uma vez
+só sem errar.
+~
+2156546 0 0 0 16 0 0 0 900 E
+108 2 2 1d1+30000 2d8+18
+30000 160000
+8 8 1
+E
+#20406
+ladrão vestido~
+um ladrão vestido~
+Um ladrão vestido passeia por aqui, cabisbaixo em contemplação, com as mãos 
+dentro da manga.
+~
+Você olha o forte ladrão que, protegido por grande manto, cabisbaixo.  Sua 
+forma de andar graciosa, sinuosa, não deixa dúvida que ele é um ladrão.
+~
+2121808 0 0 0 0 0 0 0 0 E
+15 0 -5 3d5+3000 10d5+15
+27 112000
+8 8 1
+E
+#20407
+menino da cerveja~
+o menino da cerveja~
+O Menino da Cerveja está em pé aqui, olhando a Santa Cerveja.
+~
+Provavelmente é filho de um grande ladrão, pois todos o respeitam.
+~
+2121874 0 0 0 0 0 0 0 0 E
+10 15 -1 10d1+700 4d4+15
+45 40000
+8 8 1
+E
+#20408
+clérigo do altar~
+o Clérigo do Altar~
+Um clérigo está em pé aqui no altar, pronto para dar a benção para qualquer 
+um que se ajoelhar no altar.
+~
+Vivendo uma vida dedicada a melhorar os ladrões, este homem é um modelo de 
+virtude.
+~
+2121746 0 0 0 0 0 0 0 0 E
+30 0 -5 10d1+1230 5d8+10
+90 80000
+8 8 1
+E
+#20409
+clérigo ladrão está sentado e lendo~
+o clérigo~
+Um clérigo está sentado aqui, lendo um livro.
+~
+Seu olhar não demonstra preocupação alguma com esse mundo.  Apenas vendo o 
+tempo passar.
+~
+2121746 0 0 0 0 0 0 0 0 E
+30 5 1 10d1+1100 5d9+5
+81 80000
+6 6 1
+E
+#20410
+vendedor de armas~
+O vendedor de armas~
+O vendedor de armas está em pé aqui, vendendo suas armas.
+~
+Estranho um vendedor de armas vestindo roupas de mendigo.  Ele realmente tem que
+saber como usar suas armas.
+~
+2156546 0 0 0 16 0 0 0 900 E
+108 2 2 1d1+30000 2d8+18
+30000 160000
+8 8 1
+E
+#20411
+lojista~
+o lojista~
+O lojista está em pé aqui.
+~
+Este homem sabe usar todos os artigos que vende aqui - e mais.
+~
+2156546 0 0 0 16 0 0 0 900 E
+108 2 2 1d1+30000 2d8+18
+30000 160000
+8 8 1
+E
+#20412
+grande clérigo ladrão~
+o Grande Clérigo~
+O Grande Clérigo ladrão está em pé aqui, parecendo um pouco perdido nos 
+próprios pensamentos.
+~
+Os olhos dele parecem um pouco vermelho, os passos um pouco fora do rumo.
+Homem, este cara parece ter bebido muito.
+~
+2123864 0 0 0 0 0 0 0 0 E
+10 0 -7 1d1+3000 6d6+18
+100 120000
+8 8 1
+E
+#20413
+vendedor de armadura ladrão~
+o ladrão vendedor de armadura~
+O ladrão vendedor de armaduras convida você a entrar e olhar suas mercadorias.
+~
+Ele está usando uma armadura enfeitada, a mais estranha que você já viu!
+~
+2156546 0 0 0 16 0 0 0 900 E
+108 2 2 1d1+30000 2d8+18
+30000 160000
+8 8 1
+E
+#20414
+ladra enviada~
+a enviada de Dimas~
+A enviada de Dimas está aqui, pronta para espalhar os ensinamentos do herói.
+~
+Uma mulher esbelta se levanta antes de você entrar, sorrindo.
+~
+2156546 0 0 0 16 0 0 0 900 E
+108 2 2 1d1+30000 2d8+18
+30000 160000
+8 8 2
+E
+#20415
+arrumadeira~
+a arrumadeira~
+Uma bonita arrumadeira vaga pelo local pegando lixo.
+~
+Escolhida pelo próprio Grande Clérigo, esta pequena ladra veio de Midgaard.
+~
+2099408 0 0 0 0 0 0 0 0 E
+35 0 0 1d1+1000 5d5+5
+100 80000
+8 8 2
+E
+#20416
+ladrão jardineiro~
+o ladrão jardineiro~
+Um ladrão jardineiro está em pé aqui, mantendo as colheitas abundantes.
+~
+Ele faz muito bem o seu trabalho, pois o jardim floresce exuberante.
+~
+2099280 0 0 0 0 0 0 0 0 E
+35 0 -3 1d1+1200 6d5+5
+100 82000
+8 8 1
+E
+#20417
+balconista da hospedaria ladrão~
+o balconista da hospedaria~
+O balconista do Descanso para Ladrões espera mostrar um quarto para você.
+~
+Este homem tem um olhar notável, notavelmente notável.
+~
+2156546 0 0 0 16 0 0 0 900 E
+108 2 2 1d1+30000 2d8+18
+30000 160000
+8 8 1
+E
+#20459
+guarda ladrão bêbado~
+o guarda bêbado~
+Um guarda está em pé aqui, compartilhando uma cerveja com outro guarda.  
+Ele te olha rapidamente, acha que você é uma boa pessoa, e volta a beber.
+~
+Este homem parece estar bebendo o dia todo. As pernas estão balançando, seus 
+olhos são avermelhados, e ele fede cerveja.  Porém, ele mantém o punhal em 
+sua mão.
+~
+2291730 0 0 0 0 0 0 0 0 E
+40 -1 -10 2d5+2800 5d9+12
+100 112000
+8 8 1
+E
+$

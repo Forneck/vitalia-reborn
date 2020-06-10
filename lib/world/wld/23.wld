@@ -1,0 +1,1496 @@
+#2300
+O Baixo Gramado~
+   A grama amarelada daqui foi bem pisoteada, em sua grande maioria pelo
+tr�nsito constante de pedestres e rodas de carro�as.  As pegadas seguem em
+dire��o ao sul, para uma �rea aberta onde um n�mero bastante grande de
+pessoas se encontram.  Um pouco para o sul daqui, est�o alguns vag�es de
+carro�as parados � margem da estrada.
+~
+23 0 0 0 0 2
+D2
+~
+~
+0 -1 2301
+D3
+~
+~
+0 -1 1107
+S
+#2301
+O Baixo Gramado~
+   O caminho possui um tr�nsito razoavelmente grande por n�o ser uma
+estrada, e o volume de tr�fego que tomou esta dire��o, acabou transformando
+este caminho, numa estrada transit�vel.  Ao leste h� um vag�o colorido com
+um homem sentado dentro acenando para voc�.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2300
+D1
+~
+~
+0 -1 2303
+D2
+~
+~
+0 -1 2302
+S
+#2302
+Um Caminho Gramado Batido~
+   Outro vag�o est� parado na estrada, do lado oeste.  O gramado foi t�o
+intensamente pisoteado que existem peda�os onde se pode ver o ch�o de terra
+batida.  Bem ao sul, h� uma enorme �rea, onde se existe um grande n�mero de
+ex�ticos homens e mulheres dan�ando, saltitando e brincando com as pessoas
+que passam ali por perto.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2301
+D2
+~
+~
+0 -1 2305
+D3
+~
+~
+0 -1 2304
+S
+#2303
+O Vag�o do T�nico~
+   O vag�o colorido que est� parado na lateral da estrada parece que j�
+viajou pelos lugares mais ex�ticos do mundo.  Pequenos sinos prateados foram
+pendurados nas lonas da carro�a, pelo lado de fora e conforme o vento bate,
+eles batem delicadamente, como se entoassem uma suave melodia.
+~
+23 0 0 0 0 2
+D3
+~
+~
+0 -1 2301
+S
+#2304
+O Vag�o Berrante~
+   Este vag�o se parece exatamente com a vis�o selvagem e excitante que
+envolve este lugar.  Foram pintadas em sua lona, paisagens que retratam
+cachoeiras e pradarias r�sticas, em cores berrantes e fortes.  Certamente
+este � um vag�o que chama a aten��o de todos.
+~
+23 0 0 0 0 2
+D1
+~
+~
+0 -1 2302
+S
+#2305
+�rea do Festival~
+   Um permanente festival acontece aqui, dia e noite sem parar.  Sempre que
+uma caravana de ciganos ou uma companhia de artores parte surgem outros, no
+lugar.  Um grande panorama de espet�culos e de maravilhas est�o � sua
+espera.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2302
+D1
+~
+~
+0 -1 2306
+D2
+~
+~
+0 -1 2309
+D3
+~
+~
+0 -1 2307
+S
+#2306
+�rea do Festival~
+   Um povo sorridente toma conta desta grande �rea aberta onde todos os
+tipos de homens e mulheres alegres se surpreendem e se deleitam diante dos
+in�meros espet�culos que acontecem o tempo todo.  Esta � a esquina do lado
+nordeste da �rea - e a maioria das atividades est�o mais para o sul e oeste.
+~
+23 0 0 0 0 2
+D2
+~
+~
+0 -1 2310
+D3
+~
+~
+0 -1 2305
+S
+#2307
+�rea do Festival~
+   Este lugar era at� bem recentemente, um simples campo aberto, destitu�do
+de quqlquer beleza e igual a tantos outros campos comuns.  A grama amarelada
+foi pisoteada por mil p�s parece pedir um descanso.  Neste local pode-se ver
+toda uma infinita gama das coisas mais curiosas e diferentes e
+originais...em sua grande a maioria ao sul e leste.
+~
+23 0 0 0 0 2
+D1
+~
+~
+0 -1 2305
+D2
+~
+~
+0 -1 2308
+S
+#2308
+�rea do Festival~
+   Uma fileira aberta atrav�s das �rvores segue para o oeste e as maravilhas
+que est�o nesta �rea continuam naquela dire��o.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2307
+D1
+~
+~
+0 -1 2309
+D2
+~
+~
+0 -1 2311
+D3
+~
+~
+0 -1 2335
+S
+#2309
+�rea do Festival~
+   Os sons das pessoas que andam sem parar por aqui junta-se aos gritos dos
+in�meros vendedores ambulantes que perambulam pela feira, bem como ao ru�do
+incessante dos artitas, que convidam as pessoas para assistirem aos seus
+espet�culos, dando ao ambiente um ar de aventura e de espanto.  Os tipos
+mais estranhos circulam por todas as dire��es e seria preciso ter muito mal
+humor para n�o se divertir aqui.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2305
+D1
+~
+~
+0 -1 2310
+D2
+~
+~
+0 -1 2312
+D3
+~
+~
+0 -1 2308
+S
+#2310
+�rea do Festival~
+   Uma grande �rea se abre para o leste e mais e mais atra��es parecem se
+aglutinar aqui.  Mais para o sul, algumas pessoas est�o desempenhando seus
+n�meros.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2306
+D1
+~
+~
+0 -1 2318
+D2
+~
+~
+0 -1 2313
+D3
+~
+~
+0 -1 2309
+S
+#2311
+�rea do Festival~
+   Aqui, a clareira chega at� a extremidade da floresta, contudo, h� uma
+pequena trilha que segue atrav�s das �rvores, indo para o oeste.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2308
+D1
+~
+~
+0 -1 2312
+D2
+~
+~
+0 -1 2314
+D3
+~
+~
+0 -1 2345
+S
+#2312
+�rea do Festival~
+   Voc� se encontra exatamente no centro deste lugar cheio de alegria e
+muita divers�o.  As pessoas circulam por todos os lados, empurrando e dando
+cotoveladas em todos.  Para qualquer lado que se olhe � poss�vel ver algo
+novo e maravilhoso.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2309
+D1
+~
+~
+0 -1 2313
+D2
+~
+~
+0 -1 2315
+D3
+~
+~
+0 -1 2311
+S
+#2313
+�rea do Festival~
+   Com tantas pessoas passado por voc�, sem pressa, absolutamente entregues
+� divers�o, fica dif�cil ficar sem relaxar ou gastar um pouco de dinheiro
+neste lugar.  Este lugar deve ser meio m�gico, pois com tanta gente pisando
+na grama, esta ainda consegue se manter viva sob os milhares de p�s.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2310
+D1
+~
+~
+0 -1 2317
+D2
+~
+~
+0 -1 2316
+D3
+~
+~
+0 -1 2312
+S
+#2314
+�rea do Festival~
+   Esta � o lado ocidental da clareira - a maioria dos transeuntes est� indo
+para o norte, sul e leste.  Realmente � surpreendente como tantas pessoas
+podem passar por este lugar, todos eles de diferentes ra�as, tamanhos e
+estatura e ainda assim, todos parecem estar pac�ficamente entrosados- at�
+mesmo felizes por estarem juntos.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2311
+D1
+~
+~
+0 -1 2315
+D2
+~
+~
+0 -1 2349
+S
+#2315
+�rea do Festival~
+   Logo ao sul, h� um pequeno palco onde um grupo de artistas est�
+representando algum tipo de s�tira.  Para o norte, leste e oeste est�o
+muitas outras atra��es.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2312
+D1
+~
+~
+0 -1 2316
+D2
+~
+~
+0 -1 2350
+D3
+~
+~
+0 -1 2314
+S
+#2316
+�rea do Festival~
+   Este � o lado oriental da clareira.  A maior parte do movimento acontece
+no leste e no norte.  Para o sul fica o final da clareira, onde um pequeno
+caminho foi aberto, atrav�s dos bosques.
+~
+23 8 0 0 0 2
+D0
+~
+~
+0 -1 2313
+D2
+~
+~
+0 -1 2351
+D3
+~
+~
+0 -1 2315
+S
+#2317
+Estrada ~
+   Um grande peda�o da clareira segue para o leste, encontrando-se com outra
+grande �rea aberta, onde mais jogos e atra��es divertidas est�o acontecendo.
+H� vag�esde carro�as estacionados ao lado do gramado, com pequenas
+dist�ncias entre si.  Cada uma das carro�as est� mais cheia com mercadorias
+ex�ticas, para serem vendidas aos transeuntes da feira.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2318
+D1
+~
+~
+0 -1 2321
+D3
+~
+~
+0 -1 2313
+S
+#2318
+O Gramado do Leste~
+   Uma grande �rea gramada do lado leste vai avan�ando at� outra �rea
+aberta, onde mais pessoas se juntam para assistir aos espet�culos e comprar
+mercadorias.Vag�es est�o estacionados ao longo deste gramado, e voc� percebe
+que h� um estacionado bem ao norte de onde voc� est� parado.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2319
+D1
+~
+~
+0 -1 2320
+D2
+~
+~
+0 -1 2317
+D3
+~
+~
+0 -1 2310
+S
+#2319
+Carro��o Colorido~
+   A grande carro�a que est� estacionada neste pequeno nicho entre o
+arvoredo, est� toda coberta por lonas coloridas e enfeitada por tape�aciras
+muito ex�ticas e bonitas.  Parece que os donos destes carro��es competem
+entre si para ver de quem � o mais extravagante.  Ao observar esta carro�a,
+voc� tem a n�tida impress�o de que o dono deste vag�o ganha a vida vendendo
+roupas e tecidos.
+~
+23 0 0 0 0 2
+D2
+~
+~
+0 -1 2318
+S
+#2320
+O Gramado do Leste~
+   E estas pessoas ex�ticas e t�o coloridas continuam tentando vender suas
+mercadorias aos transeuntes, enquqnto os artistas se exibem, mostrando seus
+talentos a todos que queiram lhes dar algumas moedas.  H� uma grande
+concentra��o de pessoas ao leste, assistindo a algum espet�culo ou jogando
+qualquer tipo de jogo.
+~
+23 0 0 0 0 2
+D1
+~
+~
+0 -1 2323
+D2
+~
+~
+0 -1 2321
+D3
+~
+~
+0 -1 2318
+S
+#2321
+O Gramado do Leste~
+   As pessoas v�o andando e se empurram umas �s outras, chegando mesmo a
+darem algumas cotoveladas uns nos outros, sem contudo deixarem de se sentir
+felizes e se divertindo muito.  Ao sul h� um vag�o muito colorido, onde
+est�o sendo vendidas uns adornos muito bonitos, muito parecidos com j�ias.
+~
+23 0 0 0 0 0
+D0
+~
+~
+0 -1 2320
+D1
+~
+~
+0 -1 2324
+D2
+~
+~
+0 -1 2322
+D3
+~
+~
+0 -1 2317
+S
+#2322
+O Vag�o da Bijouteria~
+   O vag�o est� todo enfeitado com quadros de reis e rainhas, vestidos com
+suas vestimentas reais e repletos de j�ias.  Mais abaixo, est�o alguns
+quadros mostrando m�os cheias de an�is e pulseiras cintilantes, que chamam a
+aten��o dos fregueses que espiam fascinados atrav�s da janela do vag�o.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2321
+S
+#2323
+O Gramado do Leste~
+   Ao leste h� uma grande �rea aberta, onde foi constru�do um palco para que
+os atores possam encenar suas pe�as que v�o do mais profundo drama at� a
+mais espalhafatosa com�dia.  Uma grande multid�o aguarda ansiosa pelo in�cio
+do espet�culo.
+~
+23 0 0 0 0 2
+D1
+~
+~
+0 -1 2326
+D2
+~
+~
+0 -1 2324
+D3
+~
+~
+0 -1 2320
+S
+#2324
+O Gramado do Leste~
+   Ao leste h� uma grande clareira.  N�o � t�o grande quanto a �rea onde
+ficam as principais atra��es, mas serve bem ao prop�sito.  Um grande palco
+foi montado no lado leste da clareira, onde pe�as sat�ricas e dramalh�es
+pesados v�o sendo encenados para o deleite da plat�ia entusiasmada.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2323
+D1
+~
+~
+0 -1 2327
+D3
+~
+~
+0 -1 2321
+S
+#2325
+O P�tio~
+   H� um palco a sudeste daqui, onde uma pe�a est� sendo encenada para um
+grande n�mero de pessoas atentas e emocionadas.  Ao norte, h� um restaurante
+ao ar livre - voc� pode sentir o delicioso cheiro do tempero da comida
+cigana, que enche o ar.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2331
+D1
+~
+~
+0 -1 2373
+D2
+~
+~
+0 -1 2326
+S
+#2326
+O P�tio Cigano~
+   O palco que est� no leste est� em constante atividade.  Pode-se ver o
+movimento constante de atores que entram e saem de cena.  Ao norte daqui, h�
+uma �rea onde muitas pessoas est�o confortavelmente sentadas em coloridas
+mesas de piquenique, degustando os pratos que foram comprados no pequeno
+restaurante cigano.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2325
+D2
+~
+~
+0 -1 2327
+D3
+~
+~
+0 -1 2323
+S
+#2327
+O P�tio Cigano~
+   O palco que est� no leste est� em constante atividade.  Pode-se ver o
+movimento constante de atores que entram e saem de cena.  Para o sul, h� uma
+enorme barraca de lona, sob a qual, muitos homens est�o em p�, enquanto
+segurando firmes suas canecas de cerveja e ao mesmo tempo assistem � pe�a
+que vai sendo exibida no palco.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2326
+D2
+~
+~
+0 -1 2328
+D3
+~
+~
+0 -1 2324
+S
+#2328
+O P�tio Cigano~
+   Logo ali ao sul, est� a Barraca de Cerveja Inglesa, onde um grande n�mero
+de pessoas - em sua grande maioria homens - est� em p�, enquanto bebe sua
+cerveja entre seus companheiros, desfrutando o dia de festa e alegrias.  O
+palco principal fica ao nordeste, e ao leste h� uma �rea lateral.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2327
+D1
+~
+~
+0 -1 2372
+D2
+~
+~
+0 -1 2329
+S
+#2329
+Barraca de Cerveja Inglesa~
+   Homens est�o em p� ali, se acotovelando uns aos outros, e enquanto bebem
+suas cervejas, v�o falando sobre tudo que eles t�m vontade de falar.  O mais
+importante de tudo isso � que eles est�o todos bebendo a t�o saborosa
+cerveja inglesa que os ciganos sabem t�o bem fabricar.  Em todo o caso - de
+verdade - eles poderiam estar at� discutindo sobre o sexo dos anjos que n�o
+teria o menor problema, j� que todos est�o ali por um �nico motivo: tomar a
+deliciosa cerveja.
+~
+23 8 0 0 0 0
+D0
+~
+~
+0 -1 2328
+D1
+~
+~
+0 -1 2330
+S
+#2330
+Uma Carro�a Cigana~
+   Esta � uma carro�a muito confort�vel e bastante colorida, que o cigano
+que � dono da Barraca de Cerveja transformou na casa dele.  Sempre que a
+feira termina ou se muda, ele simplesmente coloca os cavalos em marcha e
+leva sua casa para um novo local onde ele possa novamente vender sua cerveja
+inglesa.
+~
+23 8 0 0 0 0
+D3
+~
+~
+0 -1 2329
+S
+#2331
+Vag�o Restaurante~
+   Uma grande quantidade de mesinhas para piquenique foi colocada aqui, para
+que as pessoas possam se sentar enquanto saboreiam a deliciosa comida que �
+vendida neste pequeno e original restaurante.  O cheiro da comida � t�o bom
+que chega a dar �gua na boca daqueles que daqui se aproximam.
+~
+23 0 0 0 0 2
+D1
+~
+~
+0 -1 2332
+D2
+~
+~
+0 -1 2325
+S
+#2332
+Vag�o Cigano~
+   Esta � a casa dos atores ciganos.  Um grande n�mero deles est� amontoado
+nos pequenos beliches que ficam dentro do vag�o.  Eles fazem turnos,
+revezando-se para que os que ficaram fora do conforto do vag�o durante o
+dia, possam descansar na parte de dentro, � noite.  Por que ser� que as
+pessoas n�o podem ter um tipo de vida simples como este...  Quem pode
+responder?
+~
+23 0 0 0 0 0
+D3
+~
+~
+0 -1 2331
+S
+#2333
+O Palco~
+   Hum rum...Voc� se encontra exatamente no meio de um grande palco.  Por
+favor, siga para baixo, indo para o norte ou para o sul, mas SAIA DESTE
+PALCO AGORA MESMO!!
+~
+23 0 0 0 0 2
+D2
+~
+~
+0 -1 2334
+D5
+~
+~
+0 -1 2373
+S
+#2334
+O Palco~
+   Hum rum...Voc� se encontra exatamente no meio de um grande palco.  Por
+favor, siga para baixo, indo para o norte ou para o sul, mas SAIA DESTE
+PALCO AGORA MESMO!!
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2333
+D5
+~
+~
+0 -1 2372
+S
+#2335
+O Caminho Gramado~
+   A floresta se abre, dando passagem para mais uma grande �rea aberta a
+oeste.  O mesmo tipo de felicidade e atmosfera festiva que toma conta de
+todo que est�o no leste, parece tomar conta tamb�m dos que est�o no oeste.
+~
+23 0 0 0 0 2
+D1
+~
+~
+0 -1 2308
+D3
+~
+~
+0 -1 2336
+S
+#2336
+O Caminho Gramado~
+   Um grande campo aberto se estende a oeste, onde algumas estruturas foram
+erguidas para serem usadas apenas enquanto a grande feira durar.  Esta �rea
+� mais usada pelas fam�lias que est�o visitando o festival, pois aqui
+existem tanto atra��es para adultos como para as crian�as.
+~
+23 0 0 0 0 2
+D1
+~
+~
+0 -1 2335
+D3
+~
+~
+0 -1 2337
+S
+#2337
+P�tio Gramado~
+   Um grande pavilh�o se estende ao oeste, e o cheiro de vapor e de comida
+grelhada chega abundante daquela dire��o.  Para o norte e sul, est�o as
+extens�es deste grande p�tio, onde todos os tipos de atividades est�o
+constantemente acontecendo.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2339
+D1
+~
+~
+0 -1 2336
+D2
+~
+~
+0 -1 2338
+D3
+~
+~
+0 -1 2344
+S
+#2338
+P�tio Gramado~
+   Ao sul, h� uma fila de crian�as esperando que o maquiador pinte suas
+faces, transformando-os em pequeninos exemplares de animais
+selvagens...lindinhos e graciosos.  Para o leste, h� uma pequena �rea onde
+uma mulher l� um grosso tomo, contando uma vibrante hist�ria para uma
+multid�o de crian�as com olhos arregalados.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2337
+D1
+~
+~
+0 -1 2377
+D2
+~
+~
+0 -1 2343
+S
+#2339
+P�tio Gramado~
+   Logo ao norte daqui, h� um pequeno castelo feito de madeira, com
+aproximadamente cinco p�s de altura.  Suas paredes internas foram pintadas
+com cores luminosas e vibrantes.  L� dentro, marionetes e pequenos bonecos
+dan�am e saltam, para o deleite das crian�as, que gritam de alegria,
+sentadas que est�o no ch�o do pequenino castelo.  Para o leste h� uma �rea
+pequena onde est�o alguns animais raros, enjaulados para que possam ser
+vistos pelo p�blico de forma segura.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2340
+D1
+~
+~
+0 -1 2341
+D2
+~
+~
+0 -1 2337
+S
+#2340
+Espet�culo de Marionetes~
+   Um pequeno castelo de madeira est� aqui.  Foi pintado de forma t�o
+perfeita, que d� n�tida impress�o de ter sido feito com pedras e argamassa.
+Uma grande janela se abre na parte de cima do pequeno castelo, dando lugar a
+uma esp�cie de palco, onde pequenos bonecos, feitos de pano e de madeira,
+s�o controlados por homens e mulheres, mestres na arte dos fantoches.  Os
+pequenos marionetes cantam, dan�am, brigam entre si, causando nas crian�as
+uma avalanche de barulhentas gargalhadas.
+~
+23 0 0 0 0 2
+D2
+~
+~
+0 -1 2339
+S
+#2341
+Exposi��o de Animais~
+   Pequenas e grandes jaulas foram colocadas em c�rculo, aqui.  Cada uma com
+um animal ex�tico e raro dentro.  Para o norte est�o mais jaulas com
+animais.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2342
+D3
+~
+~
+0 -1 2339
+S
+#2342
+Exposi��o de Animais~
+   Pequenos animais parecem gemer baixinho, enquanto outros rosnam ou at�
+mesmo dormem.  O lugar n�o cheira muito bem - a cada vez que voc� inspira o
+ar, sente o odor f�tido e forte.  Contudo, a beleza dos animais compensa o
+sacrif�cio...  Bem, pelo menos, parece que compensa.
+~
+23 0 0 0 0 2
+D2
+~
+~
+0 -1 2341
+S
+#2343
+Pintura de Face~
+   Crian�as fazem uma longa fila, para terem seus rostinhos cobertos com
+pinturas que os transformam em monstrinhos assustadores, palhacinhos felizes
+ou qualquer outro tipo de pintura engra�ada.  Um ap�s o outro, v�o se
+transformando e saem dali rindo alto, prontos para assustar as pessoas.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2338
+S
+#2344
+Restaurante ao Ar Livre~
+   N�o h� nenhuma parede neste lugar, apenas quatro colunas que sustentam um
+tipo de telhado r�stico e bem prec�rio.  Uma grelha para assar carnes e um
+barril cheio com um suco delicioso, foram colocados no fundo do restaurante,
+para atender os trabalhadores.  Este seria, certamente, um lugar relaxante
+para se sentar, comer e descansar um tempo.
+~
+23 0 0 0 0 0
+D1
+~
+~
+0 -1 2337
+S
+#2345
+O Caminho~
+   Pela apar�ncia do ch�o, algum tipo de objeto com rodas grandes como as de
+um vag�o passou por aqui.  A grama est� amassada, formando duas linhas
+paralelas, que seguem em dire��o aos bosques do sul.  O caminho principal
+que v�o para o festival s�o os do leste.
+~
+23 0 0 0 0 3
+D1
+~
+~
+0 -1 2311
+D2
+~
+~
+0 -1 2346
+S
+#2346
+O Caminho~
+   O caminho sul segue diretamente em dire��o aos bosques.  Pequenas �rvores
+quebradas e arbustos amassados evidenciam que algum tipo de ve�culo grande e
+pesado passou por aqui.  O caminho para voltar para a �rea principal fica ao
+norte.
+~
+23 0 0 0 0 3
+D0
+~
+~
+0 -1 2345
+D2
+~
+~
+0 -1 2347
+S
+#2347
+O Caminho~
+   Parece que o fim deste caminho est� pr�ximo - bastante perto, na verdade.
+Bem ao sul, h� um vag�o de cor parda, com uma lua crescente pintada bem no
+centro da porta.  Nenhum som vem de dentro, as cortinas est�o todas fechados
+- pelo jeito, este carro��o parece ter sido abandonado aqui por algum cigano
+que est� no festival e que decidiu que n�o quer mais isto aqui.
+~
+23 0 0 0 0 3
+D0
+~
+~
+0 -1 2346
+D2
+~
+vag�o~
+1 0 2348
+S
+#2348
+O Vag�o da Senhora Zayla~
+   Se voc� apenas olhar para dentro deste pequeno quarto de vag�o, pode
+muito f�cilmente achar que ele foi abandonado.  Tudo neste vag�o � muito
+velho e est� meio apodrecido.  O cheiro daqui � forte o suficiente para
+fazer com que a maioria das pessoas d�m a meia volta para tr�s.  E isso �
+pouco.  Uma mesa pequena redonda foi colocado no centro do aposento, com uma
+bola de cristal brilhante sobre ela.
+~
+23 8 0 0 0 0
+D0
+~
+porta~
+1 0 2347
+S
+#2349
+�rea do Festival~
+   Este � o lado mais sudoeste da clareira, toda a a��o est� acontecendo no
+lado nordeste.  Um pequeno palco desmont�vel foi montado bem perto daqui, ao
+leste, onde um grupo de atores representam uma pe�a sat�rica.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2314
+D1
+~
+~
+0 -1 2350
+S
+#2350
+A Representa��o~
+   Um pequeno grupo de atores representa uma pe�a chamada "O Grande Outono
+de Cyrrian", a hist�ria que conta como as escolhas ego�stas de um homem
+podem afetar o curso da hist�ria de uma cidade inteira.  A �rea principal do
+festival fica ao norte.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2315
+D1
+~
+~
+0 -1 2351
+D3
+~
+~
+0 -1 2349
+S
+#2351
+�rea do Festival~
+   Um pequeno caminho foi aberto atrav�s da floresta, seguindo em dire��o
+sul, distanciando-se desta �rea principal.  A oeste h� um pequeno palco
+desmont�vel, onde um diminuto grupo de atores representa uma pe�a sat�rica.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2316
+D2
+~
+~
+0 -1 2352
+D3
+~
+~
+0 -1 2350
+S
+#2352
+O Caminho de Terra Batida~
+   A estradinha que vai para o sul n�o foi muito bem delineada, pois para se
+encontrar o caminho sem se perder requer muita concentra��o.  Por causa da
+lentid�o, voc� consegue ouvir o motivo pelo qual os outros viajantes parecem
+ter escolhido o mesmo caminho que voc� - o som de �gua correndo.
+~
+23 0 0 0 0 3
+D0
+~
+~
+0 -1 2351
+D2
+~
+~
+0 -1 2353
+S
+#2353
+O Caminho de Terra Batida~
+   Encontrar um caminho aqui, atrav�s desta confus�o, � bastante dif�cil.  A
+melhor maneira � tentar seguir o trilho de grama amassada e de ramos
+quebrados e arrebentados.  Parece que voc� poderia ir para qualquer uma das
+tr�s dire��es que seguem para oeste, sul ou norte.
+~
+23 0 0 0 0 3
+D0
+~
+~
+0 -1 2352
+D2
+~
+~
+0 -1 2354
+D3
+~
+~
+0 -1 2376
+S
+#2354
+O Caminho de Terra Batida~
+   O som da �gua corrente est� agora muito mais claro.  N�o � o som de uma
+grande quantidade de �gua, apenas o fluxo tranquilo do que parece ser um
+riacho.  H� um caminho aberto atrav�s da floresta que vai para o norte,
+leste e sul.
+~
+23 0 0 0 0 3
+D0
+~
+~
+0 -1 2353
+D1
+~
+~
+0 -1 2355
+D2
+~
+~
+0 -1 2374
+S
+#2355
+A Trilha da Floresta~
+   O caminho segue para o leste para uma pequena clareira, onde podem ser
+vistas muitas pessoas em plenas atividades.  Foram erguidas estruturas de
+algum tipo de material que n�o se pode reconhecer daqui.  A maneira de se
+voltar para o festival � seguir para o oeste.
+~
+23 0 0 0 0 3
+D1
+~
+~
+0 -1 2356
+D3
+~
+~
+0 -1 2354
+D8
+~
+~
+0 -1 4300
+S
+#2356
+A Trilha da Floresta~
+   Esta trilha parece ter sido um caminho que alguns animais da floresta,
+costumavam usar antes que os primeiros ciganos chegassem.  Provavelmente,
+eles estacionavam seus vag�es e suas barracas aqui para acampar exatamente
+por causa disso, pois ca�ar ali seria bem f�cil e o jantar estaria
+garantido.  Os vag�es e as barracas se distribuem ao leste, formando um
+grande c�rculo em volta da clareira.
+~
+23 0 0 0 0 3
+D1
+~
+~
+0 -1 2357
+D3
+~
+~
+0 -1 2355
+S
+#2357
+A Grande Clareira Aberta~
+   Apenas algumas �rvores se encontram nesta pequena clareira, onde barracas
+e vag�es foram estacionados um pouco abaixo da extremidade onde ficam as
+�rvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
+lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
+depois de suas atividades no festival.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2359
+D1
+~
+~
+0 -1 2358
+D2
+~
+~
+0 -1 2361
+D3
+~
+~
+0 -1 2356
+S
+#2358
+A Grande Clareira Aberta~
+   Apenas algumas �rvores se encontram nesta pequena clareira, onde barracas
+e vag�es foram estacionados um pouco abaixo da extremidade onde ficam as
+�rvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
+lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
+depois de suas atividades no festival.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2360
+D1
+~
+~
+0 -1 2367
+D2
+~
+~
+0 -1 2362
+D3
+~
+~
+0 -1 2357
+S
+#2359
+A Grande Clareira Aberta~
+   Apenas algumas �rvores se encontram nesta pequena clareira, onde barracas
+e vag�es foram estacionados um pouco abaixo da extremidade onde ficam as
+�rvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
+lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
+depois de suas atividades no festival.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2364
+D1
+~
+~
+0 -1 2360
+D2
+~
+~
+0 -1 2357
+D3
+~
+~
+0 -1 2363
+S
+#2360
+A Grande Clareira Aberta~
+   Apenas algumas �rvores se encontram nesta pequena clareira, onde barracas
+e vag�es foram estacionados um pouco abaixo da extremidade onde ficam as
+�rvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
+lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
+depois de suas atividades no festival.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2365
+D1
+~
+~
+0 -1 2366
+D2
+~
+~
+0 -1 2358
+D3
+~
+~
+0 -1 2359
+S
+#2361
+A Grande Clareira Aberta~
+   Apenas algumas �rvores se encontram nesta pequena clareira, onde barracas
+e vag�es foram estacionados um pouco abaixo da extremidade onde ficam as
+�rvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
+lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
+depois de suas atividades no festival.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2357
+D1
+~
+~
+0 -1 2362
+D2
+~
+~
+0 -1 2370
+D3
+~
+~
+0 -1 2371
+S
+#2362
+A Grande Clareira Aberta~
+   Apenas algumas �rvores se encontram nesta pequena clareira, onde barracas
+e vag�es foram estacionados um pouco abaixo da extremidade onde ficam as
+�rvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
+lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
+depois de suas atividades no festival.
+~
+23 0 0 0 0 2
+D0
+~
+~
+0 -1 2358
+D1
+~
+~
+0 -1 2368
+D2
+~
+~
+0 -1 2369
+D3
+~
+~
+0 -1 2361
+S
+#2363
+Um Vag�o~
+   Este carro��o coberto por grossa lona, possui em seu interior um grande
+n�mero de mantas de l�, que parecem estar guardadas aqui � espera daqueles
+que ir�o se deitar aqui, para dormir, mais tarde.  A grossa lona que protege
+esta grande carro�a evita que a chuva caia e molhe as cobertas que foram
+guardadas aqui dentro, bem como as pessoas que estiverem deitadas aqui
+dentro, mantendo assim, uma certa privacidade ao local.
+~
+23 8 0 0 0 0
+D1
+~
+~
+0 -1 2359
+S
+#2364
+Um Vag�o~
+   Este carro��o coberto por grossa lona, possui em seu interior um grande
+n�mero de mantas de l�, que parecem estar guardadas aqui � espera daqueles
+que ir�o se deitar aqui, para dormir, mais tarde.  A grossa lona que protege
+esta grande carro�a evita que a chuva caia e molhe as cobertas que foram
+guardadas aqui dentro, bem como as pessoas que estiverem deitadas aqui
+dentro, mantendo assim, uma certa privacidade ao local.
+~
+23 8 0 0 0 0
+D2
+~
+~
+0 -1 2359
+S
+#2365
+Um Vag�o~
+   Este carro��o coberto por grossa lona, possui em seu interior um grande
+n�mero de mantas de l�, que parecem estar guardadas aqui � espera daqueles
+que ir�o se deitar aqui, para dormir, mais tarde.  A grossa lona que protege
+esta grande carro�a evita que a chuva caia e molhe as cobertas que foram
+guardadas aqui dentro, bem como as pessoas que estiverem deitadas aqui
+dentro, mantendo assim, uma certa privacidade ao local.
+~
+23 8 0 0 0 0
+D2
+~
+~
+0 -1 2360
+S
+#2366
+Uma Barraca~
+   Esta pequena barraca parece ter sido erguida apressadamente, aparentemente
+sem grandes preocupa��es com conforto.  Seu dono parece que s� vem at� aqui
+para dormir, sem nenhum tempo por relaxar.
+~
+23 8 0 0 0 0
+D3
+~
+~
+0 -1 2360
+S
+#2367
+Uma Barraca~
+   Esta pequena barraca parece ter sido erguida apressadamente, aparentemente
+sem grandes preocupa��es com conforto.  Seu dono parece que s� vem at� aqui
+para dormir, sem nenhum tempo por relaxar.
+~
+23 8 0 0 0 0
+D3
+~
+~
+0 -1 2358
+S
+#2368
+Uma Barraca~
+   Esta pequena barraca parece ter sido erguida apressadamente, aparentemente
+sem grandes preocupa��es com conforto.  Seu dono parece que s� vem at� aqui
+para dormir, sem nenhum tempo por relaxar.
+~
+23 8 0 0 0 0
+D3
+~
+~
+0 -1 2362
+S
+#2369
+Uma Barraca Maior~
+   H� uma outra barraca neste acampamento, bem maior, e em cujo topo h� uma
+esp�cie de abertura, que permite que a fuma�a acumulada dentro da barraca
+possa sair para fora, sem que as pessoas que est�o em seu interior corram
+nenhum risco de se intoxicarem. Parece que aqui dentro poderiam dormir umas
+seis pessoas confortavelmente e pelo n�mero de mantas espalhadas sobre o ch�o,
+o n�mero deve estar mesmo bem pr�ximo disso.
+~
+23 8 0 0 0 0
+D0
+~
+~
+0 -1 2362
+S
+#2370
+Uma Barraca Maior~
+   H� uma outra barraca neste acampamento, bem maior, e em cujo topo h� uma
+esp�cie de abertura, que permite que a fuma�a acumulada dentro da barraca
+possa sair para fora, sem que as pessoas que est�o em seu interior corram
+nenhum risco de se intoxicarem. Parece que aqui dentro poderiam dormir umas
+seis pessoas confortavelmente e pelo n�mero de mantas espalhadas sobre o ch�o,
+o n�mero deve estar mesmo bem pr�ximo disso.
+~
+23 8 0 0 0 0
+D0
+~
+~
+0 -1 2361
+S
+#2371
+Uma Barraca Maior~
+   H� uma outra barraca neste acampamento, bem maior, e em cujo topo h� uma
+esp�cie de abertura, que permite que a fuma�a acumulada dentro da barraca
+possa sair para fora, sem que as pessoas que est�o em seu interior corram
+nenhum risco de se intoxicarem. Parece que aqui dentro poderiam dormir umas
+seis pessoas confortavelmente e pelo n�mero de mantas espalhadas sobre o ch�o,
+o n�mero deve estar mesmo bem pr�ximo disso.
+~
+23 8 0 0 0 0
+D1
+~
+~
+0 -1 2361
+S
+#2372
+A Sa�da do Lado Esquerdo do Palco~
+   � por aqui que os atores saem do palco e � tamb�m aqui o lugar onde eles
+descansam um pouco depois de uma apresenta��o e podem ent�o tomar uma gostosa
+cerveja inglesa, trazida por um dos membros do grupo. O palco, propriamente
+dito, fica ao norte.
+~
+23 0 0 0 0 2
+D3
+~
+~
+0 -1 2328
+D4
+~
+~
+0 -1 2334
+S
+#2373
+A Sa�da do Lado Direito do Palco~
+   Esta � o lugar onde os atores e atrizes se preparam antes de entrar em cena
+no palco, ensaiando suas falas ou simplesmente esperando quietos, pela sua vez.
+Muitas risadas nervosas e ajustes de �ltima hora nos trajes que ser�o usados
+em cena, s�o feitos aqui mesmo.
+~
+23 0 0 0 0 2
+D3
+~
+~
+0 -1 2325
+D4
+~
+~
+0 -1 2333
+S
+#2374
+� Margem de um Riacho~
+   Um pequeno riacho flui por sobre as pedras lisas de seu leito.  Seu ponto
+mais profundo n�o deve ter mais do que tr�s ou quatro p�s, e sua largura n�o
+deve exceder uns oito p�s.  Os sons produzidos pela �gua s�o muito
+relaxantes, e este � o tipo de lugar que os artistas procuram para se
+inspirar.
+~
+23 0 0 0 0 3
+D0
+~
+~
+0 -1 2354
+D2
+~
+~
+0 -1 2375
+S
+#2375
+No Riacho~
+   Bem, seus p�s com certeza est�o totalmente molhados agora!  A �gua est�
+fria e muito clara e certamente � boa para se beber.  O caminho para a
+floresta fica ao norte.
+~
+23 0 0 0 0 6
+D0
+~
+~
+0 -1 2374
+S
+#2376
+O Toco do Bardo~
+   O caminho est� intransit�vel em qualquer dire��o que se olhe, com
+excess�o daquele pelo qual voc� veio.  Contudo, o toco de um imenso carvalho
+que est� ca�do neste local parece ser exatamente o lugar para se fazer um
+feiti�o, ou at� mesmo, quem sabe, para se passar a noite...
+~
+23 0 0 0 0 3
+D1
+~
+~
+0 -1 2353
+S
+#2377
+O Toco do Contador de Hist�rias~
+   Este pequeno lugar � onde, ao final de todas as horas, uma nova hist�ria
+� contada para as crian�as (e adultos tamb�m, em muitos casos) que estiverem
+reunidas ao redor do Toco, prontas para ouvir mais um dos contos tirados do
+Grande Tomo de Aventuras.  Com seus olhos muito abertos e em absoluto
+sil�ncio, elas se sentam no ch�o, mordendo seus l�bios por causa do medo e
+da excita��o - mas nunca saem antes do fim.
+~
+23 0 0 0 0 2
+D3
+~
+~
+0 -1 2338
+S
+#2398
+Uma Sala Estranhamente Vazia~
+   Voc� se encontra em uma sala estranha...vazia...desprovida de vida,
+desprovida de sons, absolutamente vazia.
+~
+23 0 0 0 0 0
+S
+#2399
+Uma Sala Estranhamente Vazia~
+    Voc� se encontra em uma sala estranha...vazia...desprovida de vida,
+desprovida de sons, absolutamente vazia.
+~
+23 0 0 0 0 0
+S
+$~

@@ -1,0 +1,375 @@
+#1800
+Um Caminho Esquecido~
+   Você está caminhando por uma estrada esquecida.  Há bonitas plantas ao
+redor da estrada, que dão a impressão que poucos passam por aqui.  Contudo,
+a estrada foi construída com grandes pedras redondas, perfeitamente colocadas
+umas ao lado das outras.
+   Ao leste você vê a verdejante zona rural de Midgaard, e a noroeste há um
+campo aberto.
+~
+18 4 0 0 0 2
+D1
+Você vê o verdejante campo de Midgaard.
+~
+~
+0 -1 3060
+D6
+O caminho segue em direção a um campo aberto.
+~
+~
+0 -1 1801
+S
+#1801
+Um Campo Aberto~
+   Você está em um campo aberto, com algumas árvores e várias plantas.  
+O chão de grama verde está de certa forma, bem cuidada, o que lhe faz pensar
+que esse lugar não é tão esquecido quanto parece.  O caminho continua para
+oeste, e ao norte você vê uma cabana.
+~
+18 0 0 0 0 2
+D0
+Você pode seguir por um caminho que o levará até uma simples cabana.
+~
+~
+0 -1 1802
+D3
+O caminho continua para oeste, e mais ao longe, você pode ver uma pequena
+casa.
+~
+~
+0 -1 1804
+D8
+Um caminho construído com grandes pedras redondas leva devolta à Midgaard.
+~
+~
+0 -1 1800
+S
+#1802
+O Caminho Para a Cabana~
+   Este caminho é bem simples, e foi trilhado sobre a grama.  Não há muito
+para se ver ao redor, exceto a cabana, logo ao oeste.  Há uma luz azul saindo
+pela porta da cabana, e você sente uma profunda paz ao olhar para ela.
+   Ao sul você retorna para o campo aberto.
+~
+18 4 0 0 0 2
+D0
+Você consegue ver, seguindo dessa direção, a Trilha do Destino.
+~
+~
+0 -1 9401
+D2
+O caminho segue em direção ao campo aberto.
+~
+~
+0 -1 1801
+D3
+Você vê a cabana.
+~
+~
+0 -1 1803
+E
+cabana~
+A cabana é bem simples.  Pela porta você vê uma luz azul.
+~
+S
+#1803
+A Cabana da Ressurreição~
+   Você está dentro da cabana.  Uma suave luz azul ilumina todo o ambiente,
+lhe proporcionando uma incrível sensação de paz.  Ao chão há vários corpos
+de buscadores que morreram em suas viagens pelo mundo.  Os corpos estão
+bem preservados, e é isso que faz o ambiente não parecer como um cemitério.
+Provavelmente é a magia dos sacerdotes de Midgaard que preservam estes corpos
+aqui, até que algum amigo venha tentar os trazer devolta à vida.
+~
+18 60 0 0 0 0
+D1
+Por esta direção você sai da cabana.
+~
+~
+0 -1 1802
+E
+corpos~
+Eles paracem muito bem preservados.  Mas alguns, que aparentam estar aqui
+por muito tempo, estão lentamente se decompondo...  Talvez a magia dos
+sacerdotes não possa manter os corpos aqui para sempre.
+~
+S
+#1804
+Um Caminho~
+   Você está em um caminho construído com grandes pedras redondas.  A uma
+certa distância, ao norte, você pode ver uma cabana.  Há grandes arbustos e
+altas árvores nas laterais do caminho, que tornam cada vez mais densos
+conforme você caminha para oeste.  Para leste você volta para o campo
+aberto.
+~
+18 0 0 0 0 2
+D0
+O caminho continua a oeste.  Você pode ver uma casa a uma certa distância.
+~
+~
+0 -1 1805
+S
+#1805
+Um Caminho~
+   Você está em um caminho construído com grandes pedras redondas.  Aqui o
+campo é mais fechado.  Nas laterais do caminho, há uma mata tão densa que
+não lhe permite enxergar nada a mais que 5 metros adentro.  Os galhos mais
+altos das árvores à beira do caminho se cruzam sobre você, bloqueando os
+raios solares, e tornando o caminho mais úmido.  A oeste você pode ver uma
+área mais aberta, e uma pequena casa.
+~
+18 0 0 0 0 2
+D0
+Para oeste você você ver uma área mais aberta, e uma pequena casa.
+~
+~
+0 -1 1806
+S
+#1806
+Em Frente a uma Pequena Casa~
+   A área aqui é aberta, na forma de um círculo, e o no centro desse círculo
+há uma pequena casa.  Você pode andar em volta da casa.  Você nota, agora,
+que atrás da casa está o pé de uma grande montanha, que parece tocar as
+núvens.  A leste, a mata se abre para o caminho que leva devolta à Midgaard.
+~
+18 0 0 0 0 2
+D0
+Por este caminho, você irá até o lado esquerdo da casa.
+~
+~
+0 -1 1808
+E
+casa~
+A pequena casa é feita com pedras, muito como um minúsculo castelo, só que com
+telhado e uma porta de casa comum. A arquitetura é muito incomum.
+~
+E
+montanha~
+A montanha é extremamente alta, parece tocar as núvens.  Mas você indaga
+que, a montanha é alta demais, deveria ser visível de Midgaard ou de outras
+cidades próximas...  Estranho...
+~
+S
+#1807
+Ao Lado da Pequena Casa~
+   Você está caminhando em volta da casa.  Há uma janela deste lado da casa.
+Não há mais nada de especial aqui.
+~
+18 0 0 0 0 2
+D0
+Por este caminho, você irá até a parte da frente da casa.
+~
+~
+0 -1 1806
+E
+janela~
+A janela está fechada.  Você não pode ver nada por ela, pois está muito
+escuro.
+~
+S
+#1808
+Ao Lado da Pequena Casa~
+   Você está caminhando em volta da casa.  Há duas janelas deste lado da
+casa.  Não há mais nada de especial aqui.
+~
+18 0 0 0 0 2
+D0
+Por este caminho, você irá até a parte da frente da casa.
+~
+~
+0 -1 1806
+E
+janelas~
+As janelas estão fechadas.  Você não pode ver nada por elas, pois está muito
+escuro.
+~
+S
+#1809
+Atrás da Pequena Casa~
+   Você está atrás da pequena casa.  Há uma outra porta desse lado da casa
+(provavelmente a porta dos fundos).  Você pode andar em volta da casa.
+   Daqui é possível ver melhor a grande montanha.  Ela é muito íngreme, e
+não é qualquer um que poderia escalá-la.  Contudo, você é incapaz de
+encontrar uma forma de chegar até ela, pois a mata é densa demais para se
+atravessar.
+~
+18 0 0 0 0 2
+D0
+Por este caminho, você irá até o lado esquerdo da casa.
+~
+~
+0 -1 1808
+S
+#1810
+A Sala~
+   A casa é um tanto quanto simples, e ao mesmo tempo, moderna.  Você pode
+ver uma lareira, uma mesa, uma poltrona grande e um armário.  Sobre a
+lareira há um quadro com uma paisagem pintada.  Na parede, há um espada e
+um escudo pendurados.
+   A leste está porta de entrada da casa.  Há ainda uma passagem para oeste,
+e portas para norte e sul.
+~
+18 131112 0 0 0 0
+D0
+Parece levar até a cozinha.
+~
+~
+0 -1 1811
+E
+lareira~
+A lareira está acesa.  A fuligem negra por todas as suas laterais denuncia
+já ter sido usada muitas e muitas vezes.  A lenha ainda não está muito
+queimada, o que indica que deve ter sido acesa a pouco tempo.
+~
+E
+poltrona~
+A grande poltrona foi feita em madeira, e possui ornamentos que parecem
+terem sido feitos por um escultor.  Parece muito macia e confortável.
+~
+E
+espada~
+É uma espada muito bonita, parece ter sido feita de ouro.  Possui uma longa
+lâmina, com um rubi encrustado muito próximo ao punho.  Certamente, é de
+alguém com muito bom gosto.
+~
+E
+escudo~
+É um escudo de uma cor muito escura, com um grande rubi encrustado em seu
+centro.  Esse rubi brilha quando você se aproxima, e parece impedir que você
+chegue perto o suficiente para tocá-lo.
+~
+E
+quadro paisagem~
+É uma paisagem de um campo aberto, muito bonito, com poucas árvores e
+arbustos.  Há uma pessoa nessa pintura, de costas, vestida como um mago,
+segurando um longo báculo na mão direita.  Há uma montanha ao fundo, que se
+parece muito com a que está logo atrás da casa.
+~
+S
+#1811
+A Cozinha~
+   É uma pequena cozinha, preciosamente arrumada.  A pia e os armários estão
+tão limpos que brilham.  Há alguns frutos sobre uma mesa.  Você pode voltar
+para a sala para leste.  Há uma porta para oeste.
+~
+18 131112 0 0 0 0
+D0
+Esta é a porta dos fundos da casa.
+~
+porta~
+1 1801 1809
+E
+frutos~
+Você conta: 2 maçãs, 3 peras e uma laranja.  Nada incomum.
+~
+S
+#1812
+O Banheiro~
+   Esse é o recinto mais particular da casa.  Não está sujo, não muito...
+Comparando com outros, este certamente é um dos banheiros mais limpos que
+existe.  É muito luxuoso, possui latrina, pia e um chuveiro.
+~
+18 131112 0 0 0 0
+D0
+Uma porta, simples.
+~
+porta~
+1 -1 1810
+S
+#1813
+O Quarto~
+   Você está no quarto.  O que mais lhe chama a atenção é o tamanho da estante
+de livros que tem aqui.  Tem centenas de livros.  O quarto também possui uma
+cama, uma pequena mesa e uma cadeira.
+~
+18 131624 0 0 0 0
+D0
+Uma porta, simples.
+~
+porta~
+1 -1 1810
+S
+#1890
+A Entrada do Reino da Morte~
+   Você está no início de um longo corredor fechado.  As paredes são bem
+altas e o corredor é largo.  O chão sob você foi feito com uma rocha cinza,
+muito resistente.  O teto é feito de uma espécie de fumaça brilhante, que
+ilumina a sala de maneira uniforme, não deixando nenhuma sombra.
+   O corredor continua para o norte, e há um grande portão de energia ao
+sul.
+~
+18 65768 0 0 0 0
+D0
+Um grande portão de energia impede a passagem tanto dos vivos, quanto dos
+mortos.
+~
+portão~
+1 -1 1891
+S
+#1891
+A Entrada do Reino da Morte~
+   Você está no corredor que leva para o Reino da Morte.  O corredor continua
+para o norte e para o sul.  Você nota uma pequena placa fixada na parede.
+~
+18 65768 0 0 0 0
+D0
+~
+~
+0 0 1892
+D2
+~
+~
+0 0 1890
+E
+placa~
+            ,---------------------------------------------------.
+            |    Lembre-se do WIMP na sua próxima batalha...    |
+            '---------------------------------------------------'
+~
+S
+#1892
+A Entrada do Reino da Morte~
+   Você chegou ao final do corredor.  Uma grande plataforma foi montada aqui,
+provavelmente para algum tipo de palestra.  Há algumas faixas presas na
+plataforma.  Há um grande portão ao norte.  O corredor continua para o sul.
+~
+18 65768 0 0 0 0
+D0
+O corredor continua para o sul.
+~
+portao~
+1 -1 1899
+D2
+~
+~
+0 0 1891
+E
+faixa faixas plataforma~
+As faixas dizem:
+"Sejam bem-vindos ao Reino da Morte!"
+~
+S
+#1899
+O Reino da Morte~
+   Você está em um imenso solo de pedras cinzas, que se extende até aonde
+sua visão alcança, por todas as direções.  Ventos desagradáveis mergulhando
+do céu escuro e sem estrelas, batem selvagemente em seu fragil espírito.
+~
+18 65736 0 0 0 0
+D0
+O grande solo parece ir ao infinito.
+~
+~
+0 -1 1899
+E
+solo~
+O solo de predras é cinza, e completamente plano, sem nenhum arranhão.
+É provavelmente tão duro que seria impossível alguma coisa fazer um mínimo
+arranhao nele.
+~
+E
+céu ventos~
+Ventos gelados mergulham sobre você, vindos do céu escuro e sem núvens.
+~
+S
+$~

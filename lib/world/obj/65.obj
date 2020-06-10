@@ -1,0 +1,153 @@
+#6500
+chave tesouraria~
+a chave da tesouraria~
+Existe uma chave para a tesouraria aqui.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+6500 0 0 0
+1 0 0 0 0
+#6501
+ouro tesouro moedas~
+o tesouro da Rainha~
+Uma grande pilha de tesouro foi deixada aqui. Ela deve pertencer à Rainha.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+65000 0 0 0
+20 65000 0 0 0
+#6502
+chave mina~
+uma chave da mina~
+Existe uma chave para as minas aqui no chão.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+6502 0 0 0
+1 0 0 0 0
+#6503
+chave brilhante ouro~
+uma chave de ouro brilhante~
+Existe uma chave de ouro brilhante aqui no chão.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+6503 0 0 0
+1 0 0 0 0
+#6504
+martelo anão~
+um martelo de anão~
+Existe um martelo de anão aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 6 7
+13 5500 1000 0 0
+#6505
+placa anão armadura~
+uma armadura de placas de anão~
+Uma armadura de placas de anão encontra-se aqui.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+6 0 0 0
+80 4500 300 0 0
+#6506
+bastão preto longo~
+um bastão longo e preto~
+Um bastão longo e preto jaz aqui.~
+~
+4 q 0 0 0 ao 0 0 0 0 0 0 0
+4 2 2 28
+1 100 6000 0 0
+#6507
+bastão preto longo~
+um bastão longo e preto~
+Existe um bastão longo e preto aqui.~
+~
+1 q 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 100 6000 0 0
+#6508
+clava anão~
+uma clava de anão~
+Uma clava de anão encontra-se aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 3 3
+12 3000 300 0 0
+#6509
+machado anão~
+um machado de duas mãos anão~
+Um machado de duas mãos anão está aqui.~
+~
+5 gr 0 0 0 an 0 0 0 0 0 0 0
+0 2 7 3
+14 5000 3000 0 0
+A
+18 2
+A
+1 2
+#6510
+elmo anão~
+um elmo de anão~
+Um elmo de anão está aqui.~
+~
+9 0 0 0 0 ae 0 0 0 0 0 0 0
+4 0 0 0
+4 2500 500 0 0
+#6511
+anel ouro anão~
+um anel de anão feito de ouro~
+Um anel de anão feito de ouro encontra-se aqui.~
+~
+11 g 0 0 0 ab 0 0 0 0 0 0 0
+0 0 0 0
+1 10000 10000 0 0
+A
+18 1
+A
+19 1
+#6512
+luvas anão~
+um par de luvas de anão~
+Um par de grossas luvas de anão jaz aqui.~
+~
+9 0 0 0 0 ah 0 0 0 0 0 0 0
+1 0 0 0
+2 4000 200 0 0
+A
+5 1
+A
+2 1
+#6513
+carvão pilha~
+uma pilha de carvão~
+Existe uma pilha de carvão aqui.~
+~
+13 0 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+100 0 0 0 0
+#6514
+picareta escavar~
+uma picareta de escavar~
+Existe uma picareta usada para escavação aqui.~
+~
+5 i 0 0 0 an 0 0 0 0 0 0 0
+0 2 3 11
+9 300 10 0 0
+E
+picareta escavar~
+Ela parece ser abençoada!
+~
+#6515
+chave escuro verde~
+uma chave verde escuro~
+Existe uma chave verde escuro aqui no chão.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+6515 0 0 0
+10 0 0 0 0
+#6516
+chave antiga~
+uma chave antiga~
+Alguém parece ter deixado uma chave antiga.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+6516 0 0 0
+1 0 0 0 0
+$~

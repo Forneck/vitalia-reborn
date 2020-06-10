@@ -1,0 +1,297 @@
+#19700
+chave enferrujada~
+uma chave enferrujada~
+Uma chave enferrujada foi deixada aqui.~
+~
+18 c 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#19701
+chave calabouço~
+a chave do calabouço~
+A chave do calabouço parece ter caido no chão em meio a confusão~
+~
+18 df 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+#19702
+espada orc~
+uma espada curta de orc~
+Uma espada curta está jogada no chão~
+~
+5 ijln 0 0 0 an 0 0 0 0 0 0 0
+0 2 6 3
+3 10000 0 0 0
+E
+espada orc~
+É uma bela espada negra curta.
+~
+#19703
+faca orc~
+uma faca orc~
+Uma faca enferrujada está fincada aqui no chão.~
+~
+5 jln 0 0 0 ano 0 0 0 0 0 0 0
+0 3 5 14
+2 10000 0 0 0
+E
+faca orc~
+'...quantas gargantas não foram cortadas por esta faca', você pensa...
+~
+#19704
+poção negra~
+uma poção negra~
+Um frasco com algum liguido negro está aqui~
+~
+10 c 0 0 0 a 0 0 0 0 0 0 0
+20 21 64 -1
+1 12000 0 0 0
+E
+poção negra~
+Há um liquido preto dentro desse frasco ...
+~
+#19705
+sangue orc~
+sangue de orc~
+Um pouco de sangue orc foi derramado aqui~
+~
+10 c 0 0 0 a 0 0 0 0 0 0 0
+20 63 28 29
+2 1000 0 0 0
+E
+sangue orc~
+Você vê um líquido de cor indefinida e pegajoso neste pequeno frasco.
+~
+#19706
+martelo orc~
+um enorme martelo de orc~
+Um enorme martelo de orc foi deixado aqui~
+~
+5 jl 0 0 0 an 0 0 0 0 0 0 0
+0 4 5 6
+7 15000 0 30 0
+E
+martelo orc~
+Um pouco de sangue manchou a ponta deste martelo.  Parece uma arma bem
+poderosa e deve ter sido usado por um orc bastante forte.
+~
+A
+19 2
+#19707
+machado orc~
+um grande machado de orc~
+Um machado com lâmina enferrujada foi deixado no chão~
+~
+5 gjl 0 0 0 an 0 0 0 0 0 0 0
+0 4 5 3
+15 12000 50 0 0
+E
+machado orc~
+'Um machado muito afiado', você pensa.
+~
+A
+19 4
+A
+18 4
+#19708
+escudo negro orc~
+um escudo negro de orc~
+Um estranho escudo negro está qui no chão~
+~
+9 jl 0 0 0 aj 0 0 0 0 0 0 0
+5 0 0 0
+12 12000 0 0 0
+E
+palavras idioma~
+/\/\/\/\-=+=-/\/\/\/\
+~
+E
+escudo negro~
+Há um desenho de um grande orc nele.  Em baixo algumas palavras num idioma
+que você não consegue decifrar...
+~
+A
+1 1
+#19709
+cota malha orc~
+uma cota de malha de orc~
+Uma cota de malha negra está jogada no chão aqui.~
+~
+9 jl 0 0 0 ad 0 0 0 0 0 0 0
+10 0 0 0
+12 35000 0 15 0
+E
+cota malha orc~
+..uma cota de malha comum..  Boa para proteger contra as investidas de seus
+inimigos.
+~
+A
+5 1
+#19710
+elmo orc~
+um grande elmo de orc~
+Um grande elmo típico dos orcs está jogado aqui no chão~
+~
+9 jl 0 0 0 ae 0 0 0 0 0 0 0
+6 0 0 0
+10 15000 0 10 0
+E
+elmo orc~
+Este elmo tem algumas presas postas em volta da borda para decoração.
+~
+A
+4 -1
+#19711
+pequeno elmo orc~
+um pequeno elmo de orc~
+Um pequeno elmo de orc está aqui jogado.~
+~
+9 jl 0 0 0 ae 0 0 0 0 0 0 0
+2 0 0 0
+10 1000 0 0 0
+E
+pequeno elmo~
+Este elmo parece pertencer a uma criança...
+~
+A
+9 -3
+#19712
+espada aventureiro~
+a espada do aventureiro~
+Uma digna espada está fincada no chão brilhando~
+~
+5 agio 0 0 0 an 0 0 0 0 0 0 0
+0 2 10 3
+12 20000 0 50 0
+E
+espada aventureiro~
+Esta espada parece ter pertencido a um honrado guerreiro.
+~
+A
+19 4
+#19713
+poção verde sangue cobra~
+o sangue da cobra verde~
+Um pouco do sangue da cobra verde foi deixado aqui.~
+~
+10 0 0 0 0 a 0 0 0 0 0 0 0
+0 19 -1 25
+1 0 0 0 0
+E
+sangue cobra~
+O sangue que escorreu da cobra foi juntado num recipiente, ou melhor, na
+pele da PRÓPRIA cobra.
+~
+#19714
+luvas orc~
+um par de luvas de orc~
+Um par de luvas de orc foi deixado no chão.~
+~
+9 ijl 0 0 0 ah 0 0 0 0 0 0 0
+6 0 0 0
+2 10000 0 0 0
+E
+luvas orc~
+Um par de confortáveis luvas. Ele serviria direitinho na sua mão...
+~
+#19715
+botas orc negro~
+um par de botas de orc~
+Um par de botas de couro negro está no chão aqui.~
+~
+9 jl 0 0 0 ag 0 0 0 0 0 0 0
+4 0 0 0
+2 12000 0 0 0
+E
+botas negro orc~
+Você sente que caminharia por horas com essas botas de orc.
+~
+A
+14 50
+#19716
+cinto negro orc~
+um cinto negro de orc~
+Um cinto negro com fivela enferrujada está aqui.~
+~
+9 jl 0 0 0 al 0 0 0 0 0 0 0
+5 0 0 0
+3 12000 0 0 0
+E
+cinto negro orc~
+Você vê apenas um cinto com a fivela enferrujada.
+~
+#19717
+poção violeta~
+uma poção violeta~
+Uma poção exalando uma suave fragância de violeta está aqui.~
+~
+10 ac 0 0 0 a 0 0 0 0 0 0 0
+20 61 61 76
+1 10000 0 0 0
+E
+poção violeta~
+Um frasco com um líquido violeta.
+~
+#19718
+mochila negra~
+uma grande mochila~
+Uma mochila negra está jogada no chão~
+~
+15 j 0 0 0 ak 0 0 0 0 0 0 0
+500 0 0 0
+3 12000 0 20 0
+E
+mochila negra~
+Uma mochila de couro negro.
+~
+#19719
+negra túnica~
+uma túnica negra~
+Uma túnica negra foi dobrada e posta ali no canto.~
+~
+9 jl 0 0 0 ak 0 0 0 0 0 0 0
+7 0 0 0
+3 1000 0 15 0
+E
+detalhes dourados~
+&Y*.*.*.*.*.&n
+~
+E
+túnica~
+É uma túnica negra com alguns detalhes dourados.
+~
+#19720
+poncho lã ovelha negra pele~
+um poncho de lã negra~
+Uma pele de ovelha negra foi deixada no chão~
+~
+9 jl 0 0 0 ak 0 0 0 0 0 0 0
+9 0 0 0
+2 0 0 20 0
+E
+poncho lã pele ovelha~
+Feito com a mais pura lã de ovelha este poncho parece poder protegê-lo bastante.
+~
+A
+13 20
+A
+19 1
+#19721
+grilhões~
+grilhões de orc~
+Um par de grilhões está jogado no chão.~
+~
+9 h 0 0 0 acfhlm 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
+E
+grilhões~
+Chega a dar medo olhar para isso.
+~
+A
+1 -3
+A
+2 -3
+A
+14 -100
+$~

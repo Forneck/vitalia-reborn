@@ -1,0 +1,220 @@
+
+@B                 __   __   _    ________   ___ o�  __       _     ___
+@W       O MUNDO  @B|  |.' .'.'_| .'_    _.' .' _ `.  |  |    .'_|  .' _ `.
+@W            DE  @B|  ' .'  |  |    |  |   |  ' |  | |  |    |  | |  ' |  |
+@B                |  .'    |  |    |  |   |  .-.  | |  |___ |  | |  .-.  |
+@B                |.'      |_.'    |_.'   |_.' |_.' |____.' |_.' |_.' |_.'@n
+@B _______________________________________________________________[@W INFO @B]_______@n
+
+{#109 todo}
+- drink, sip, eat, taste
+- get, drop, put, donate
+- wear, wield, hold, remove
+- consider, hit, kill
+- alias
+- habilidades e magias
+- clan
+{index}
+   Esse texto existe para servir como um guia para os novos jogadores do
+Mundo de Vit�lia.  Aqui voc� encontrar� informa��es �teis para iniciar seu
+jogo, dicas para uma melhor jogabilidade e uma fonte r�pida para consultas
+de comandos.
+
+   Para facilitar a leitura e organizar as informa��es, o INFO � dividido em
+diversas partes.  Para acessar cada uma das partes, voc� deve digitar o
+comando @gINFO@n seguido do nome da parte que voc� quer ler.  Exemplo: @gINFO
+COMIDA@n.  N�o � necess�rio escrever em mai�sculas, elas s�o usadas aqui
+apenas para destacar os comandos.
+
+   Eis os seguintes t�picos abordados no INFO:
+   @gINFO AJUDA           @nComo obter ajuda com comandos e outras informa��es.
+   @gINFO CONFIG          @nConfigura��es iniciais para jogar.
+   @gINFO OBSERV          @nAprendendo a observar os lugares.
+   @gINFO COMUNIC         @nConhe�a e se comunique com os outros jogadores.
+   @gINFO MOVIM           @nAnde pelo mundo e explore novos lugares.
+{ajuda help}
+   No Mundo de Vit�lia h� um completo sistema de ajuda que abrange todos os
+comandos, habilidades e magias, e tamb�m v�rias outras informa��es sobre o
+Mundo de Vit�lia.  Para acessar o sistema de ajuda, voc� deve digitar o
+comando @gHELP@n, opcionalmente seguido do nome do comando que voc� deseja
+consultar.  Digitando apenas @gHELP@n, voc� ver� o �ndice de todos os cap�tulos
+da ajuda.  � uma forma de se conhecer a maior parte dos comandos do jogo.
+
+   No sistema de ajuda tamb�m h� informa��es que n�o est�o relacionadas
+diretamente com comandos, como as magias e outras informa��es
+caracter�sticas do jogo.
+
+   Tente digitar estes comandos:
+   @gHELP@n
+   @gHELP OBJETOS@n
+   @gHELP INFORMACOES@n
+   @gHELP AC@n
+{configurar terminal cores}
+   Uma das caracter�sticas mais marcantes do MUD, � a portabilidade e a
+facilidade para se acessar.  A portabilidade � decorrente do protocolo que �
+usado para a conex�o: o TelNet.  O TelNet � um protocolo muito antigo, que �
+usado desde pouco tempo ap�s o surgimento da InterNet, e portanto,
+praticamente todo sistema operacional possui um cliente de TelNet.  Contudo,
+o protocolo nem sempre � implementado da mesma forma em todos os sistemas.
+Voc� pode configurar o MUD para que haja maior compatibilidade com o seu
+cliente de TelNet.
+
+   Um recurso que pode ser ativado s�o as cores.  Elas facilitam a leitura
+das informa��es apresentadas pelo MUD.  Se o programa que voc� est� usando
+para jogar MUD suporta cores, � recomend�vel que voc� ative, atrav�s do
+comando @gCOLOR NORM@n.  Logo que voc� digitar esse comando, voc� dever� ver uma
+frase onde a palavra "cores" aparece colorida.  Se a palavra n�o aparecer
+colorida, ou se aparecerem s�mbolos estranhos, ent�o significa que seu
+programa n�o as suporta, e voc� pode desligar as cores pelo comando @gCOLOR
+DESL@n.
+
+   Alguns programas usam uma codifica��o diferente para cores, e elas podem
+aparecer trocadas para voc�.  Nesse caso, voc� pode consultar a ajuda para o
+comando @gTERM@n, que serve para selecionar o tipo de terminal (programa de
+TelNet) que voc� usa.
+{observar ver olhar}
+   Uma das coisas mais importantes � saber observar onde voc� est�, e o que
+h� a sua volta.  Os comandos para observar s�o: @gLOOK@n, @gEXAMINE@n e @gREAD@n.
+
+   Quando voc� digita @gLOOK@n apenas, voc� olha ao redor de voc� mesmo, para a
+sala onde voc� est�.  O comando lhe fornecer� o nome da sala que voc� est�,
+a descri��o de como ela �, as dire��es para onde voc� pode ir, as pessoas e
+os objetos que voc� pode ver, dessa forma:
+
+@cO Templo de Midgaard@n                      <---- t�tulo da sala
+   Voc� est� a sul do hall do Templo...   <-.
+com blocos gigantes de m�rmore, com...      |
+s�o cobertas por velhas pinturas de...      |
+   Grandes degraus descem logo ap�s...       >- descri��o
+monte sobre o qual o templo est�...         |
+logo abaixo. Para oeste voc� pode...        |
+Doa��es � uma pequena sala para o...      <-'
+@c[ Sa�das: n e s w d ]@n                     <---- sa�das
+@gUm caixa autom�tico est� aqui.@n            <---- objetos
+@yUm pequeno gatinho leal est� aqui.@n        <---- personagens
+
+   Voc� pode tamb�m pode olhar para os objetos, para ver como eles s�o, ou
+personagens, para ver sua descri��o e o qu� est�o vestindo.  Para isso, voc�
+deve usar o comando @gLOOK@n, seguido do nome do objeto ou personagem que voc�
+quer ver.
+
+   Como exemplo, digitando @gLOOK CAIXA@n, o jogo lhe dir�:
+
+H� uma pequena nota no caixa, onde se l�:
+Para usar, digite 'BALANCE', 'WITHDRAW' <quantia>, ou 'DEPOSIT <quantia>'.
+Por favor, informe qualquer estranha ocorr�ncia ao gerente do banco.
+
+   Neste caso, o jogo at� lhe ensina como se usa o caixa autom�tico.  Veja o
+exemplo de um personagem.  Digitando @gLOOK GATINHO@n, o jogo lhe dir�:
+
+O gatinho parece ser um gracioso, pequenino e destemido lutador.
+O gatinho est� em excelente condi��o.
+
+   O jogo permite que voc� abrevie os comandos e os nomes dos objetos, para
+tornar a digita��o mais r�pida e pr�tica.  Os comandos acima poderiam ser
+digitados apenas @gL CAI@n (look caixa) ou @gL GAT@n (look gatinho).  Tome cuidado
+quando for abreviar, pois voc� pode atacar o monstro errado, falar com a
+pessoa errada, ou descartar o objeto errado.
+
+   O comando @gEXAMINE@n (pode ser abreviado @gEXA@n) serve para examinar o interior
+de um objeto.  � �til principalmente para ver quais objetos est�o guardados
+dentro de caixas ou sacolas, ou quais objetos est�o no corpo de um monstro
+que foi morto.
+
+   O comando @gREAD@n serve para ler anota��es, placas, quadros e outros
+objetos.
+{comunicar conversar}
+   O MUD � um �timo lugar para conversar e conhecer novos amigos. Para saber
+quem est� jogando MUD ao mesmo tempo que voc�, use o comando @gWHO@n. Ao
+digitar esse comando, o jogo lhe mostrar� uma lista com os jogadores que est�o
+conectados. A lista cont�m essas informa��es:
+
+  [ 91 @cBrd@n ] @BNausicaa@n a Trovadora
+  [ 14 @cDru@n ] @BMoira@n a Iniciada no Primeiro C�rculo
+  [ 70 @cCle@n ] @BBeatus@n o Curador
+  [ 30 @cLad@n ] @BMichaelis@n o Arrancador              (notell)   <-- flags
+  [ 86 @cGue@n ] @BRasmussen@n o Dragoon                 (2� Enc)   <-- encarna��es
+  [ 56 @cMag@n ] @BMargaux@n a Bruxa             [SoMagos: L�der]
+    ^   ^       ^        ^                    ^
+    |   |       |        |                    |
+  n�vel |     nomes    t�tulos               cl�
+        classe
+
+   H� v�rias formas de conversar com outros jogadores.  A primeira e mais
+simples � usando o comando @gSAY@n. Esse comando serve para dizer uma frase
+para as pessoas que est�o na mesma sala que voc�. Voc� pode usar o comando
+@gLOOK@n para ver quem lhe faz companhia.  Para dizer uma frase, digite o
+comando @gSAY@n seguido da frase que voc� quer falar, por exemplo:
+
+@gsay ol�! todos est�o bem?@n
+
+   Voc� pode conversar com outros jogadores que estejam distantes de voc�, mas
+para isso voc� precisa de um comando diferente, para falar por telepatia. O
+comando � o @gTELL@n, e voc� deve digit�-lo seguido do nome da pessoa que voc�
+quer conversar, e da frase, assim:
+
+@gtell beatus ol� beatus, voc� n�o quer me ajudar?@n
+
+   Uma forma de falar com a maior parte dos jogadores ao mesmo tempo, n�o
+precisando necessariamente estarem na mesma sala que voc�, � usando
+o canal "tagarelar". Contudo, para usar esse canal voc� dever� alcan�ar pelo
+menos o n�vel 3 no jogo. Ent�o, quando quiser dizer uma frase nesse canal, use
+o comando @gGOSSIP@n, dessa maneira:
+
+@ggoss ol� a todos!@n
+
+   Lembre-se que a maioria dos comandos podem ser abreviados.  No caso
+especial dos comandos @gSAY@n e @gGOSSIP@n, voc� pode usar as abrevia��es @g'@n
+(ap�strofo ou aspas-simples) e @g.@n (ponto-final) respectivamente:
+
+@g' ol�! todos est�o bem?@n      (equivale ao SAY)
+@g. ol� a todos!@n               (equivale ao GOSSIP)
+{movimentar andar}
+   Neste jogo, h� muitos lugares para serem explorados: cidades, castelos,
+rios, reinos, lojas, etc. Atualmente, o Mundo de Vit�lia possui mais de 3000
+salas, todas em portugu�s. Mas voc� deve estar pensando agora em como � que
+voc� visita todos estes lugares, n�o est�?
+
+   Pois bem, a primeira coisa que voc� precisa conhecer quanto a isso � que
+h� 10 dire��es poss�veis para se andar de uma sala para outra.  Essas
+dire��es s�o: Norte (@gN@n), Sul (@gS@n), Leste (@gE@n), Oeste (@gW@n), Noroeste (@gNW@n),
+Nordeste (@gNE@n), Sudeste (@gSE@n), Sudoeste (@gSW@n), para cima (@gU@n), e para baixo (@gD@n).
+Todos os comandos s�o as abrevia��es dos nomes em ingl�s.
+
+   Nem todas as salas possuem todas essas dire��es.  Voc� poder� ver para
+quais dire��es voc� pode andar atrav�s do comando @gLOOK@n, onde mostra as
+sa�das da sala em que voc� est�.  Ao digitar o comando @gLOOK@n, uma das
+informa��es que aparece � essa:
+
+@c[ Sa�das: n e s w d ]@n
+
+   Esse exemplo indica que a partir de tal sala, voc� pode caminhar para as
+dire��es norte, leste, sul, oeste ou para baixo.  Para seguir, por exemplo,
+para o norte, voc� digita o comando @gN@n (abrevia��o de @gNORTH@n), e seu
+personagem sair� da sala que est� e entrar� na sala adjacente.  Ao entrar na
+sala adjacente, o jogo automaticamente lhe dar� a descri��o da sala, sem que
+voc� precise digitar o comando @gLOOK@n.
+
+   Sempre � bom olhar para onde voc� est� indo antes de caminhar at� tal
+lugar.  H� duas maneiras de fazer isso.  A primeira � atrav�s do comando
+@gEXITS@n (ou @gEX@n, abreviado), que mostra as sa�das da sala em que voc� se
+encontra, junto com o t�tulo de cada sala.  Atrav�s do t�tulo voc� pode
+decidir se � seguro seguir tal dire��o.  A segunda maneira � olhando para a
+sa�da, usando o @gLOOK@n.  Para isso voc� indica a dire��o para a qual voc� quer
+olhar, por exemplo: @gLOOK NORTH@n (ou @gL N@n, abreviado).
+
+   H� alguns lugares onde voc� encontrar� portas fechadas, ou at� mesmo
+trancadas.  Para abrir, fechar, trancar ou destrancar uma porta, s�o usados
+os seguintes comandos: @gOPEN@n, @gCLOSE@n, @gLOCK@n e @gUNLOCK@n.  As portas costumam ter
+nomes (isso quando n�o s�o chamadas simplesmente de "portas").  Quando voc�
+tentar caminhar para a dire��o de uma porta fechada, o jogo lhe responder�
+algo assim:
+
+A grade est� fechada.
+
+   Neste exemplo a porta �, na verdade, uma grade.  Voc� deve tentar abrir a
+grade atrav�s do comando @gOPEN GRADE@n.  Se a grade possuir fechadura e estiver
+trancada, o comando @gOPEN@n n�o funcionar�.  Voc� dever� estar carregando a
+chave dessa grade, e usar o comando @gUNLOCK GRADE@n, para s� ent�o conseguir
+usar o @gOPEN@n para abr�-la.  Analogamente, os comandos @gCLOSE@n e @gLOCK@n s�o usados
+para fechar e trancar portas.

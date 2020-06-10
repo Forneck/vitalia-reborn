@@ -1,0 +1,2692 @@
+#24400
+O Início do Desafio~
+   A paisagem a seu redor repentinamente muda e você de repente se encontra
+em uma sala clara e aconchegante.  Você foi convocado pelos deuses para o
+&RGrande Desafio de Vitália&n.  A ocasião é realmente especial e você se
+sente honrado em participar desta aventura.  Outros aventureiros também
+foram trazidos para esta sala e você deverá eliminá-los um a um usando
+&Wpergaminhos especiais de retorno&n que foram cuidadosamente espalhados
+pelos deuses.  Espere o sinal dos deuses, escolha uma direção e &YBoa
+Sorte&n.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24485
+D1
+~
+~
+0 -1 24402
+D2
+~
+~
+0 -1 24475
+D3
+~
+~
+0 -1 24485
+S
+#24401
+O Desafio de Vitália~
+   Você fez sua escolha e aqui inicia a sua longa jornada rumo ao
+desconhecido.  Este lugar é realmente mágico e você nota um grande poder
+emanando de todos os lados.  Um caminho estreito se estende para o leste e
+você parece ouvir um estranho som vindo desta direção.  Você verifica seus
+mantimentos, prepara seu coração para grandes emoções e, antes de seguir,
+faz suas últimas orações.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24402
+S
+#24402
+O Desafio de Vitália~
+   Você se encontra em um ambiente amplo e quase indescritível.  Um suave
+cheiro doce (de frutas talvez?) invade o ar provavelmente vindo dos arbustos
+que parecem estar sempre em um movimento suspeito.  O caminho segue para
+leste, oeste e norte.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24478
+D1
+~
+~
+0 -1 24403
+D3
+~
+~
+0 -1 24475
+S
+#24403
+O Desafio de Vitália~
+   O caminho segue amplo e arejado.  As marcas de seus pés misturam-se às
+inúmeras pegadas que já se encontravam antes aqui.  Muitas pessoas devem
+passar por este caminho e você dobra sua atenção pois a qualquer momento
+alguém pode recitar sobre você um pergaminho especial a acabar com sua
+jornada por este caminho.  Você se apressa e verifica as possibilidades:
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24404
+D3
+~
+~
+0 -1 24402
+S
+#24404
+O Desafio de Vitália~
+   Abruptamente o caminho se fecha para o norte e para o leste.  Tudo leva a
+crer que você somente pode seguir para oeste ou sul, entretanto olhando mais
+de perto você percebe duas pequenas portas nas direções norte e leste.
+~
+244 0 0 0 0 0
+D0
+~
+porta~
+1 -1 24495
+D1
+~
+porta~
+1 -1 24496
+D2
+~
+~
+0 -1 24405
+D3
+~
+~
+0 -1 24403
+S
+#24405
+O Desafio de Vitália~
+   O Caminho continua amplo e fresco.  A terra sob seus pés já não parece
+tão macia, o que dificulta a visão das pegadas.  Para leste o oeste há
+vários arbustos que impedem uma visão além.  O caminho segue amplo para o
+norte e para o sul.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24404
+D2
+~
+~
+0 -1 24406
+S
+#24406
+O Desafio de Vitália~
+   Um vento suave toca seu rosto e você sente uma sensação agradável.  Você
+olha ao redor e analisando as opções.  Longe ao leste, um grande castelo
+dourado parece ter o portão destrancado.  Para o norte o caminho segue
+desobstruído e um emaranhado de ervas daninhas impede a visão, assim como o
+avanço, em qualquer outra direção.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24405
+D1
+~
+~
+0 -1 24407
+S
+#24407
+O Desafio de Vitália~
+   Você se aproxima do castelo o suficiente para perceber quer provavelmente
+seus oponentes estão dentro dele.  Há duas entradas visíveis para o castelo:
+O grande portão logo a leste e um alçapão enferrujado que você provavelmente
+conseguirá mover com algum esforço.  Para o sul uma trilha estreita se abre
+e você pode ver um pequeno bosque.
+~
+244 0 0 0 0 0
+D1
+~
+portão grande~
+1 -1 24408
+D2
+~
+~
+0 -1 24484
+D3
+~
+~
+0 -1 24406
+D5
+~
+alçapão enferrujado~
+1 -1 24419
+S
+#24408
+O Desafio de Vitália~
+   Você entra no grande castelo dourado e sente que daqui por diante tudo é
+imprevisível.  Talvez alguns oponentes estejam espreitando você logo na sala
+ao lado e portanto é necessária muita calma para prosseguir.  Você pode
+seguir a parede do castelo para o norte ou para o sul.  Um longo corredor
+segue para o leste.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24409
+D1
+~
+~
+0 -1 24456
+D2
+~
+~
+0 -1 24474
+D3
+~
+portão grande~
+1 -1 24407
+S
+#24409
+O Desafio de Vitália~
+   A parede segue interminavelmente para o norte e um longo corredor se abre
+ao leste.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24409
+D1
+~
+~
+0 -1 24410
+D2
+~
+~
+0 -1 24408
+S
+#24410
+O Desafio de Vitália~
+   Você se encontra no início de um grande corredor.  A largura do corredor
+é confortável e possivelmente um grupo de cinco ou seis pessoas não teriam
+problemas em passar lado a lado por ele.  O teto é dourado e parece ficar
+cada vez mais baixo.  O corredor é muito longo e você não consegue ver seu
+fim.  Logo a leste uma parede marca seu início.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24411
+D3
+~
+~
+0 -1 24409
+S
+#24411
+O Desafio de Vitália~
+   O Corredor segue no sentido leste-oeste.  O teto está cada vez mais
+próximo de sua cabeça, embora a distância pareça ser de aproximadamente uns
+vinte pés.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24412
+D3
+~
+~
+0 -1 24410
+S
+#24412
+O Desafio de Vitália~
+   O Corredor segue no sentido leste-oeste.  O teto está cada vez mais
+próximo de sua cabeça, embora a distância pareça ser de aproximadamente uns
+quinze pés.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24413
+D3
+~
+~
+0 -1 24411
+S
+#24413
+O Desafio de Vitália~
+   O Corredor segue no sentido leste-oeste.  O teto está cada vez mais
+próximo de sua cabeça, embora a distância pareça ser de aproximadamente uns
+dez pés.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24414
+D3
+~
+~
+0 -1 24412
+S
+#24414
+O Desafio de Vitália~
+   O Longo corredor enfim termina e você se vê diante de uma enorme escada
+em forma de espiral para o andar de cima.  Para o norte uma entrada o conduz
+a uma sala que parece estar fechada.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24415
+D1
+~
+~
+0 -1 24431
+D3
+~
+~
+0 -1 24413
+S
+#24415
+O Desafio de Vitália~
+   Uma porta vermelha para o norte impede a visão da sala.  Você hesita um
+instante e pensa se é seguro entrar nesta sala.
+~
+244 0 0 0 0 0
+D0
+Uma linda porta vermelha e dourada impede sua visão da sala.
+~
+porta vermelha dourada~
+1 -1 24416
+D2
+~
+~
+0 -1 24414
+S
+#24416
+A Sala Esquecida~
+   Você entra em uma enorme sala com vários artefatos jogados no chão.
+Parece que há muito ninguém visita este lugar e a poeira já toma conta do
+piso.  Olhando com mais cuidado você pode ver algumas pegadas recentes mais
+a norte mas não é possível precisar quanto a quanto tempo elas foram
+deixadas aqui.  Pelo tamanho algum aventureiro MUITO forte andou passeando
+por esta parte do castelo.  Nas paredes leste e oeste há portas vermelha e
+dourada, respectivamente.
+~
+244 0 0 0 0 0
+D1
+~
+porta vermelha~
+1 -1 24418
+D2
+~
+porta vermelha~
+1 -1 24415
+D3
+~
+porta dourada~
+1 -1 24417
+S
+#24417
+O Desafio de Vitália~
+   A sala parece vazia e você pode perceber um alçapão bem no centro.
+~
+244 0 0 0 0 0
+D1
+~
+porta dourada~
+1 -1 24416
+D5
+~
+alçapão~
+1 -1 24430
+S
+#24418
+O Desafio de Vitália~
+   A sala está vazia e você percebe um pequeno alçapão bem no centro.
+~
+244 0 0 0 0 0
+D3
+~
+porta vermelha~
+1 -1 24416
+D5
+~
+~
+0 -1 24497
+S
+#24419
+O Desafio de Vitália~
+   Você se encontra parado no início de um corredor com água até a sua
+cintura.  A dificuldade de locomoção é imensa mas você não parece precisar
+usar seu bote ainda.  Um longo corredor semi-inundado segue para o leste e
+você pode, num esforço sobre humano alcançar o alçapão que está logo acima
+da sua cabeça.
+~
+244 0 0 0 0 6
+D1
+~
+~
+0 -1 24420
+D4
+~
+alçapão~
+1 -1 24407
+S
+#24420
+O Desafio de Vitália~
+   A água deste corredor é limpa, embora não seja nada agradável a
+necessidade do esforço para locomoção.  A água bate agora na altura de sua
+cintura e você começa a ficar um pouco cansado.  Seu pensamento é totalmente
+voltado para arranjar um lugar seco e seguro.  O corredor continua para
+leste e oeste.
+~
+244 0 0 0 0 6
+D1
+~
+~
+0 -1 24421
+D3
+~
+~
+0 -1 24419
+S
+#24421
+O Desafio de Vitália~
+   Você chega a um cruzamento de corredores.  A água limpa bate agora na
+altura de sua cintura e você se move com muita dificuldade.  Os corredores
+seguem para norte, sul, leste e oeste.  Bem acima de sua cabeça você pode
+ver uma entrada que você poderia alcançar com algum esforço.
+~
+244 0 0 0 0 6
+D0
+~
+~
+0 -1 24428
+D1
+~
+~
+0 -1 24422
+D2
+~
+~
+0 -1 24425
+D3
+~
+~
+0 -1 24420
+D4
+~
+~
+0 -1 24494
+S
+#24422
+O Desafio de Vitália~
+   A água deste corredor é limpa, embora não seja nada agradável a
+necessidade do esforço para locomoção.  A água bate agora na altura de sua
+cintura e você começa a ficar um pouco cansado.  Seu pensamento é totalmente
+voltado para arranjar um lugar seco e seguro.  O corredor continua para
+leste e oeste.
+~
+244 0 0 0 0 6
+D1
+~
+~
+0 -1 24423
+D3
+~
+~
+0 -1 24421
+S
+#24423
+O Desafio de Vitália~
+   A água deste corredor é limpa, embora não seja nada agradável a
+necessidade do esforço para locomoção.  A água bate agora na altura de sua
+cintura e você começa a ficar um pouco cansado.  Seu pensamento é totalmente
+voltado para arranjar um lugar seco e seguro.  O corredor continua para
+leste e oeste.
+~
+244 0 0 0 0 6
+D1
+~
+~
+0 -1 24424
+D3
+~
+~
+0 -1 24422
+S
+#24424
+O Desafio de Vitália~
+   A água deste corredor é limpa, embora não seja nada agradável a
+necessidade do esforço para locomoção.  A água bate agora na altura de sua
+cintura e você começa a ficar um pouco cansado.  Seu pensamento é totalmente
+voltado para arranjar um lugar seco e seguro.  O corredor continua para
+leste e oeste.
+~
+244 0 0 0 0 6
+D1
+~
+~
+0 -1 24421
+D3
+~
+~
+0 -1 24423
+S
+#24425
+O Desafio de Vitália~
+   A água deste corredor é limpa, embora não seja nada agradável a
+necessidade do esforço para locomoção.  A água bate agora na altura de sua
+cintura e você começa a ficar um pouco cansado.  Seu pensamento é totalmente
+voltado para arranjar um lugar seco e seguro.  O corredor continua para
+norte e sul.
+~
+244 0 0 0 0 6
+D0
+~
+~
+0 -1 24421
+D2
+~
+~
+0 -1 24426
+S
+#24426
+O Desafio de Vitália~
+   A água deste corredor é limpa, embora não seja nada agradável a
+necessidade do esforço para locomoção.  A água bate agora na altura de sua
+cintura e você começa a ficar um pouco cansado.  Seu pensamento é totalmente
+voltado para arranjar um lugar seco e seguro.  O corredor continua para
+norte e sul.
+~
+244 0 0 0 0 6
+D0
+~
+~
+0 -1 24425
+D2
+~
+~
+0 -1 24427
+S
+#24427
+O Desafio de Vitália~
+   Você se encontra parado no início de um corredor com água até a sua
+cintura.  A dificuldade de locomoção é imensa mas você não parece precisar
+usar seu bote ainda.  Um longo corredor semi-inundado segue para o norte e
+você pode, num esforço sobre humano alcançar o alçapão que está logo acima
+da sua cabeça.
+~
+244 0 0 0 0 6
+D0
+~
+~
+0 -1 24426
+D4
+~
+alçapão~
+1 -1 24471
+S
+#24428
+O Desafio de Vitália~
+   A água deste corredor é limpa, embora não seja nada agradável a
+necessidade do esforço para locomoção.  A água bate agora na altura de sua
+cintura e você começa a ficar um pouco cansado.  Seu pensamento é totalmente
+voltado para arranjar um lugar seco e seguro.  O corredor continua para
+norte e sul.
+~
+244 0 0 0 0 6
+D0
+~
+~
+0 -1 24429
+D2
+~
+~
+0 -1 24421
+S
+#24429
+O Desafio de Vitália~
+   A água deste corredor é limpa, embora não seja nada agradável a
+necessidade do esforço para locomoção.  A água bate agora na altura de sua
+cintura e você começa a ficar um pouco cansado.  Seu pensamento é totalmente
+voltado para arranjar um lugar seco e seguro.  O corredor continua para
+norte e sul.
+~
+244 0 0 0 0 6
+D0
+~
+~
+0 -1 24430
+D2
+~
+~
+0 -1 24428
+S
+#24430
+O Desafio de Vitália~
+   Você se encontra parado no início de um corredor com água até a sua
+cintura.  A dificuldade de locomoção é imensa mas você não parece precisar
+usar seu bote ainda.  Um longo corredor semi-inundado segue para o sul e
+você pode, num esforço sobre humano alcançar o alçapão que está logo acima
+da sua cabeça.
+~
+244 0 0 0 0 6
+D2
+~
+~
+0 -1 24429
+D4
+~
+alçapão~
+1 -1 24417
+S
+#24431
+O Desafio de Vitália~
+   A escada segue subindo para o leste.  Logo ao este você consegue ver um
+corredor muito longo.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24432
+D3
+~
+~
+0 -1 24414
+S
+#24432
+O Desafio de Vitália~
+   A escada continua subindo no sentido oeste leste.  Um tapete vermelho
+cobre os degraus e um friso dourado brilha tanto que ilumina seu caminho.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24433
+D3
+~
+~
+0 -1 24431
+S
+#24433
+O Desafio de Vitália~
+   A escada continua subindo no sentido oeste leste.  Um tapete vermelho
+cobre os degraus e um friso dourado brilha tanto que ilumina seu caminho.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24434
+D3
+~
+~
+0 -1 24432
+S
+#24434
+O Desafio de Vitália~
+   A escada continua subindo no sentido oeste leste.  Um tapete vermelho
+cobre os degraus e um friso dourado brilha tanto que ilumina seu caminho.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24435
+D3
+~
+~
+0 -1 24433
+S
+#24435
+O Desafio de Vitália~
+   Neste ponto a escada se dobra subindo para o sul.  Olhando para oeste
+você pode ver o quanto você subiu!  O corredor mal pode ser visto daqui.
+~
+244 0 0 0 0 0
+D2
+~
+~
+0 -1 24436
+D3
+~
+~
+0 -1 24434
+S
+#24436
+O Desafio de Vitália~
+   A escada continua subindo no sentido norte sul.  Um tapete vermelho cobre
+os degraus e um friso dourado brilha tanto que ilumina seu caminho.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24435
+D2
+~
+~
+0 -1 24437
+S
+#24437
+O Desafio de Vitália~
+   A escada continua subindo no sentido norte sul.  Um tapete vermelho cobre
+os degraus e um friso dourado brilha tanto que ilumina seu caminho.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24436
+D2
+~
+~
+0 -1 24438
+S
+#24438
+O Desafio de Vitália~
+   A escada continua subindo no sentido norte sul.  Um tapete vermelho cobre
+os degraus e um friso dourado brilha tanto que ilumina seu caminho.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24437
+D2
+~
+~
+0 -1 24439
+S
+#24439
+O Desafio de Vitália~
+   Neste ponto a escada se dobra subindo para oeste.  Olhando para o norte
+você pode ver o quanto você subiu!  A curva da escada mal pode ser vista
+daqui.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24438
+D3
+~
+~
+0 -1 24440
+S
+#24440
+O Desafio de Vitália~
+   A escada continua subindo no sentido leste oeste.  Um tapete vermelho
+cobre os degraus e um friso dourado brilha tanto que ilumina seu caminho.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24439
+D3
+~
+~
+0 -1 24441
+S
+#24441
+O Desafio de Vitália~
+   A escada continua subindo no sentido leste oeste.  Um tapete vermelho
+cobre os degraus e um friso dourado brilha tanto que ilumina seu caminho.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24440
+D3
+~
+~
+0 -1 24442
+S
+#24442
+O Desafio de Vitália~
+   A escada continua subindo no sentido leste oeste.  Um tapete vermelho
+cobre os degraus e um friso dourado brilha tanto que ilumina seu caminho.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24441
+D3
+~
+~
+0 -1 24443
+S
+#24443
+O Desafio de Vitália~
+   Neste ponto a escada se dobra subindo para o norte.  Olhando para oeste
+você pode ver o quanto você subiu!  A curva da escada mal pode ser vista
+daqui.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24444
+D1
+~
+~
+0 -1 24442
+S
+#24444
+O Desafio de Vitália~
+   A escada continua subindo no sentido sul norte.  Um tapete vermelho cobre
+os degraus e um friso dourado brilha tanto que ilumina seu caminho.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24445
+D2
+~
+~
+0 -1 24443
+S
+#24445
+O Desafio de Vitália~
+   A escada continua subindo no sentido sul norte.  Um tapete vermelho cobre
+os degraus e um friso dourado brilha tanto que ilumina seu caminho.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24446
+D2
+~
+~
+0 -1 24444
+S
+#24446
+O Desafio de Vitália~
+   Neste ponto a escada se dobra subindo para o leste.  Olhando para o sul
+você pode ver o quanto você subiu!  A curva da escada mal pode ser vista
+daqui.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24447
+D2
+~
+~
+0 -1 24445
+S
+#24447
+O Desafio de Vitália~
+   A escada continua subindo no sentido oeste leste.  Um tapete vermelho
+cobre os degraus e um friso dourado brilha tanto que ilumina seu caminho.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24448
+D3
+~
+~
+0 -1 24446
+S
+#24448
+O Desafio de Vitália~
+   A escada continua subindo no sentido oeste leste.  Um tapete vermelho
+cobre os degraus e um friso dourado brilha tanto que ilumina seu caminho.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24449
+D3
+~
+~
+0 -1 24447
+S
+#24449
+O Desafio de Vitália~
+   Neste ponto a escada se dobra subindo para sul.  Olhando para o oeste
+você pode ver o quanto você subiu!  A curva da escada mal pode ser vista
+daqui.
+~
+244 0 0 0 0 0
+D2
+~
+~
+0 -1 24450
+D3
+~
+~
+0 -1 24448
+S
+#24450
+O Desafio de Vitália~
+   A escada continua subindo no sentido norte sul.  Um tapete vermelho cobre
+os degraus e um friso dourado brilha tanto que ilumina seu caminho.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24449
+D2
+~
+~
+0 -1 24451
+S
+#24451
+O Desafio de Vitália~
+   Neste ponto a escada se dobra subindo para oeste.  Olhando para o norte
+você pode ver o quanto você subiu!  A curva da escada mal pode ser vista
+daqui.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24450
+D3
+~
+~
+0 -1 24452
+S
+#24452
+O Desafio de Vitália~
+   A escada continua subindo no sentido leste oeste.  Um tapete vermelho cobre
+os degraus e um friso dourado brilha tanto que ilumina seu caminho.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24451
+D3
+~
+~
+0 -1 24453
+S
+#24453
+O Desafio de Vitália~
+   Neste ponto a escada se dobra subindo para o norte.  Olhando para oeste
+você pode ver o quanto você subiu!  A curva da escada mal pode ser vista
+daqui.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24454
+D1
+~
+~
+0 -1 24452
+S
+#24454
+O Desafio de Vitália~
+   Neste ponto a escada se dobra subindo para o leste.  Olhando para o sul
+você pode ver o quanto você subiu!  A curva da escada mal pode ser vista
+daqui.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24455
+D2
+~
+~
+0 -1 24453
+S
+#24455
+O Desafio de Vitália~
+   Você chega ao topo da escada em espiral.  Para o leste você pode ver o
+segundo andar do castelo.  Você não consegue muito bem saber o quanto você
+subiu, mas pelo tamanho da escada e pelo cansaço você pode supor que o
+castelo é realmente muito maior do que parecia inicialmente.
+~
+244 0 0 0 0 0
+D1
+EXIT TO SECOND FLOOR
+~
+~
+0 -1 24500
+D3
+~
+~
+0 -1 24454
+D4
+~
+~
+0 -1 24501
+S
+#24456
+O Desafio de Vitália~
+   Você está no início de um corredor muito longo.  Várias tochas foram
+colocadas nas paredes deixando o caminho bastante iluminado.  Um tapete
+vermelho cobre o chão e as paredes são muito limpas.  Olhando para oeste
+você pode ver ainda a entrada do castelo.  O corredor segue para o leste.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24457
+D3
+~
+~
+0 -1 24408
+S
+#24457
+O Desafio de Vitália~
+   O longo corredor continua no sentido leste oeste.  A luminosidade é
+intensa vinda das tochas das paredes e você caminha com razoável facilidade.
+O teto está muito acima de sua cabeça, uns quarenta pés, você calcula.  A
+tensão aumenta a cada instante já que nunca se sabe quando aparecerá um
+oponente tentando enviar você para longe e acabar com seu sonho de ser o
+grande vencedor do desafio.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24458
+D3
+~
+~
+0 -1 24456
+S
+#24458
+O Desafio de Vitália~
+   O longo corredor continua no sentido leste oeste.  A luminosidade é
+intensa vinda das tochas das paredes e você caminha com razoável facilidade.
+O teto está muito acima de sua cabeça, uns quarenta pés, você calcula.  A
+tensão aumenta a cada instante já que nunca se sabe quando aparecerá um
+oponente tentando enviar você para longe e acabar com seu sonho de ser o
+grande vencedor do desafio.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24459
+D3
+~
+~
+0 -1 24457
+S
+#24459
+O Desafio de Vitália~
+   O longo corredor continua no sentido leste oeste.  A luminosidade é
+intensa vinda das tochas das paredes e você caminha com razoável facilidade.
+O teto está muito acima de sua cabeça, uns quarenta pés, você calcula.  A
+tensão aumenta a cada instante já que nunca se sabe quando aparecerá um
+oponente tentando enviar você para longe e acabar com seu sonho de ser o
+grande vencedor do desafio.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24460
+D3
+~
+~
+0 -1 24458
+S
+#24460
+O Desafio de Vitália~
+   O longo corredor continua no sentido leste oeste.  A luminosidade é
+intensa vinda das tochas das paredes e você caminha com razoável facilidade.
+O teto está muito acima de sua cabeça, uns quarenta pés, você calcula.  A
+tensão aumenta a cada instante já que nunca se sabe quando aparecerá um
+oponente tentando enviar você para longe e acabar com seu sonho de ser o
+grande vencedor do desafio.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24461
+D3
+~
+~
+0 -1 24459
+S
+#24461
+O Desafio de Vitália~
+   O longo corredor continua no sentido leste oeste.  A luminosidade é
+intensa vinda das tochas das paredes e você caminha com razoável facilidade.
+O teto está muito acima de sua cabeça, uns quarenta pés, você calcula.  A
+tensão aumenta a cada instante já que nunca se sabe quando aparecerá um
+oponente tentando enviar você para longe e acabar com seu sonho de ser o
+grande vencedor do desafio.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24462
+D3
+~
+~
+0 -1 24460
+S
+#24462
+O Desafio de Vitália~
+   O longo corredor continua no sentido leste oeste.  A luminosidade é
+intensa vinda das tochas das paredes e você caminha com razoável facilidade.
+O teto está muito acima de sua cabeça, uns quarenta pés, você calcula.  A
+tensão aumenta a cada instante já que nunca se sabe quando aparecerá um
+oponente tentando enviar você para longe e acabar com seu sonho de ser o
+grande vencedor do desafio.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24463
+D3
+~
+~
+0 -1 24461
+S
+#24463
+O Desafio de Vitália~
+   O longo corredor continua no sentido leste oeste.  A luminosidade é
+intensa vinda das tochas das paredes e você caminha com razoável facilidade.
+O teto está muito acima de sua cabeça, uns quarenta pés, você calcula.  A
+tensão aumenta a cada instante já que nunca se sabe quando aparecerá um
+oponente tentando enviar você para longe e acabar com seu sonho de ser o
+grande vencedor do desafio.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24464
+D3
+~
+~
+0 -1 24462
+S
+#24464
+O Desafio de Vitália~
+   O longo corredor continua no sentido leste oeste.  A luminosidade é
+intensa vinda das tochas das paredes e você caminha com razoável facilidade.
+O teto está muito acima de sua cabeça, uns quarenta pés, você calcula.  A
+tensão aumenta a cada instante já que nunca se sabe quando aparecerá um
+oponente tentando enviar você para longe e acabar com seu sonho de ser o
+grande vencedor do desafio.  Uma passagem se abre para o sul.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24457
+D2
+~
+~
+0 -1 24465
+D3
+~
+~
+0 -1 24463
+S
+#24465
+O Desafio de Vitália~
+   A passagem não é tão iluminada quanto o corredor ao mnorte, entretanto
+não chega a ser totalmente escuro, embora você não deixe de achar o caminho
+um pouco assustador.  Ao norte você vê a luminosidade de um corredor e a
+passagem continua para o sul.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24464
+D2
+~
+~
+0 -1 24466
+S
+#24466
+O Desafio de Vitália~
+   A passagem continua para o sul e uma pequena abertura na parede leste
+pode ser notada embora esteja um tanto camuflada.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24465
+D1
+~
+abertura parede porta~
+1 -1 24467
+D2
+~
+~
+0 -1 24466
+S
+#24467
+O Desafio de Vitália~
+   Você entra em uma antecâmara mal iluminada.  A parede oeste mal revela a
+passagem camuflada pela sombra que paira no ar.  A leste você pode ver um
+arco dourado que revela um lindo salão de tamanho considerável.  A
+luminosidade do salão mal pode ser notada nesta sala.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24468
+D3
+~
+passagem camuflada~
+1 -1 24466
+S
+#24468
+O Desafio de Vitália~
+   Você se encontra diante de um grande salão bastante iluminado pelas
+milhares de velas que flutuam magicamente bastante acima de sua cabeça.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24469
+D1
+~
+~
+0 -1 24471
+D2
+~
+~
+0 -1 24473
+D3
+~
+~
+0 -1 24467
+S
+#24469
+O Desafio de Vitália~
+   Este canto do salão parece vazio e as paredes norte e oeste estão
+revestidas por grossas cortinas vermelhas bordadas em dourado.  Você pode ir
+para o sul ou para o leste.
+~
+244 0 0 0 0 0
+D0
+~
+cortinas~
+1 -1 24503
+D1
+~
+~
+0 -1 24470
+D2
+~
+~
+0 -1 24468
+S
+#24470
+O Desafio de Vitália~
+   Este canto do salão parece vazio e as paredes norte e leste estão
+revestidas por grossas cortinas vermelhas bordadas em dourado.  Olhando para
+o sul você percebe um grande trono dourado e você ainda pode seguir para
+oeste.
+~
+244 0 0 0 0 0
+D2
+~
+~
+0 -1 24471
+D3
+~
+~
+0 -1 24469
+S
+#24471
+O Desafio de Vitália~
+   Você se encontra diante de um lindo trono dourado.  Diversas jóias foram
+usadas na construção deste trono que parece tão pesado que provavelmente dez
+homens não conseguiriam levanta-lo.  Olhando atrás do trono você percebe uma
+pequena grade que você poderia mover.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24470
+D2
+~
+~
+0 -1 24472
+D3
+~
+~
+0 -1 24468
+D5
+~
+grade~
+1 -1 24427
+S
+#24472
+O Desafio de Vitália~
+   Este canto do salão parece vazio e as paredes sul e leste estão
+revestidas por grossas cortinas vermelhas bordadas em dourado.  Olhando para
+o norte você percebe um grande trono dourado e você ainda pode seguir para
+oeste.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24471
+D3
+~
+~
+0 -1 24473
+S
+#24473
+O Desafio de Vitália~
+   Este canto do salão parece vazio e as paredes sul e oeste estão
+revestidas por grossas cortinas vermelhas bordadas em dourado.  Você pode ir
+para o norte ou para o leste.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24468
+D1
+~
+~
+0 -1 24472
+S
+#24474
+O Desafio de Vitália~
+   A parede do castelo segue interminavelmente para o sul.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24408
+S
+#24475
+O Desafio de Vitália~
+   Você fez sua escolha e aqui inicia a sua longa jornada rumo ao
+desconhecido.  Este lugar é realmente mágico e você nota um grande poder
+emanando de todos os lados.  Um caminho estreito se estende para o sul e
+você parece ouvir um estranho som vindo desta direção.  Você verifica seus
+mantimentos, prepara seu coração para grandes emoções e, antes de seguir,
+faz suas últimas orações.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24499
+D2
+~
+~
+0 -1 24476
+S
+#24476
+O Desafio de Vitália~
+   Você segue pelo caminho estreito que continua para o sul.  Muitas
+sensações invadem sua mente e você não consegue prever ao certo o que
+acontecerá daqui por diante.  Algumas árvores cobrem um pouco da luz mas o
+caminho ainda sim é iluminado o bastante.  A terra fofa mostra algumas
+pegadas suas e de outros aventureiros.  Você se movimenta com cuidado pois
+qualquer passo em falso pode ser fatal.
+~
+244 0 0 0 0 2
+D0
+~
+~
+0 -1 24401
+D2
+~
+~
+0 -1 24477
+S
+#24477
+O Desafio de Vitália~
+   Você segue pelo caminho estreito que continua para o sul.  Muitas
+sensações invadem sua mente e você não consegue prever ao certo o que
+acontecerá daqui por diante.  Algumas árvores cobrem um pouco da luz mas o
+caminho ainda sim é iluminado o bastante.  A terra fofa mostra algumas
+pegadas suas e de outros aventureiros.  Você se movimenta com cuidado pois
+qualquer passo em falso pode ser fatal.
+~
+244 0 0 0 0 2
+D0
+~
+~
+0 -1 24476
+D2
+~
+~
+0 -1 24478
+S
+#24478
+O Desafio de Vitália~
+   Você segue pelo caminho estreito que continua para o leste.  Muitas
+sensações invadem sua mente e você não consegue prever ao certo o que
+acontecerá daqui por diante.  Algumas árvores cobrem um pouco da luz mas o
+caminho ainda sim é iluminado o bastante.  A terra fofa mostra algumas
+pegadas suas e de outros aventureiros.  Você se movimenta com cuidado pois
+qualquer passo em falso pode ser fatal.
+~
+244 0 0 0 0 2
+D0
+~
+~
+0 -1 24477
+D1
+~
+~
+0 -1 24479
+S
+#24479
+O Desafio de Vitália~
+   Você segue pelo caminho estreito que continua para o leste.  Muitas
+sensações invadem sua mente e você não consegue prever ao certo o que
+acontecerá daqui por diante.  Algumas árvores cobrem um pouco da luz mas o
+caminho ainda sim é iluminado o bastante.  A terra fofa mostra algumas
+pegadas suas e de outros aventureiros.  Você se movimenta com cuidado pois
+qualquer passo em falso pode ser fatal.
+~
+244 0 0 0 0 2
+D1
+~
+~
+0 -1 24480
+D3
+~
+~
+0 -1 24478
+S
+#24480
+O Desafio de Vitália~
+   Conforme você vai andando o caminho vai ficando cada vez mais claro e um
+cheiro úmido anuncia uma espécie de pântano mais à frente.  O caminho
+continua para leste e oeste.
+~
+244 0 0 0 0 2
+D1
+~
+~
+0 -1 24481
+D3
+~
+~
+0 -1 24479
+S
+#24481
+O Desafio de Vitália~
+   Você continua caminhando com muito cuidado.  A água lodosa do pântano mal
+chega a seu joelho e você caminha com certa dificuldade.  A luminosidade é
+razoável e a sensação constante de estar sendo observado incomoda um pouco.
+~
+244 0 0 0 0 6
+D1
+~
+~
+0 -1 24482
+D3
+~
+~
+0 -1 24480
+S
+#24482
+O Desafio de Vitália~
+   Subitamente o caminho sobre o pântano se fecha nas direções leste e sul.
+Uma trilha para o norte (um tanto mais seca poderíamos dizer) parece levar a
+um castelo que você não consegue ver com detalhes deste ponto.
+~
+244 0 0 0 0 6
+D0
+~
+~
+0 -1 24483
+D3
+~
+~
+0 -1 24481
+S
+#24483
+O Desafio de Vitália~
+   O Castelo ao norte se torna mais visível neste ponto e você pode
+contemplar toda sua beleza.  As árvores balançam e uma brisa fresca toca seu
+rosto fazendo você se sentir muito bem.  Seu propósitos nestas terras
+longínquas, entretanto não permite muito descanso e você se prepara para o
+desafio.  O castelo está logo ao norte.
+~
+244 0 0 0 0 3
+D0
+~
+~
+0 -1 24484
+D2
+~
+~
+0 -1 24482
+S
+#24484
+O Desafio de Vitália~
+   O caminho para a entrada do castelo está desobstruído e você pode ver sua
+entrada daqui.  Você precisa contornar a parede que segue para o norte para
+chegar até ela.
+~
+244 0 0 0 0 3
+D0
+~
+~
+0 -1 24407
+D2
+~
+~
+0 -1 24483
+S
+#24485
+O Desafio de Vitália~
+   Você fez sua escolha e aqui inicia a sua longa jornada rumo ao
+desconhecido.  Este lugar é realmente mágico e você nota um grande poder
+emanando de todos os lados.  Um caminho estreito subindo a encosta da colina
+logo ao se abre para o norte e você parece ouvir um estranho som vindo
+desta direção.  Você verifica seus mantimentos, prepara seu coração para
+grandes emoções e, antes de seguir, faz suas últimas orações.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24486
+S
+#24486
+O Desafio de Vitália~
+   Você inicia sua jornada pela encosta de uma colina íngreme.  O caminho
+estreito segue para o norte e você pode ver que sua subida logo ficará mais
+difícil e cansativa.  O chão é pedregoso e você nota algumas pegadas que
+misturam-se com as suas.
+~
+244 0 0 0 0 4
+D0
+~
+~
+0 -1 24487
+D2
+~
+~
+0 -1 24475
+S
+#24487
+O Desafio de Vitália~
+   A subida parece realmente difícil para o norte mas você não desanima.
+Todo cuidado é pouco e você olha ao seu redor procurando um possível
+oponente.
+~
+244 0 0 0 0 5
+D0
+~
+~
+0 -1 24488
+D2
+~
+~
+0 -1 24486
+S
+#24488
+O Desafio de Vitália~
+   O caminho subitamente muda de direção indo agora para o leste em uma
+subida cada vez mais difícil.  Você hesita um pouco antes de continuar mas
+seus objetivos estão muito claros em sua cabeça e você se sente encorajado a
+seguir nesta direção.  Você ainda poderia voltar e recomeçar sua jornada
+indo para o sul.
+~
+244 0 0 0 0 5
+D1
+~
+~
+0 -1 24489
+D2
+~
+~
+0 -1 24487
+S
+#24489
+O Desafio de Vitália~
+   Finalmente você chega ao cume desta enorme colina e a partir de agora sua
+movimentação é menos pesarosa.  O chão remexido mostra que muitos já
+passaram por aqui e você se sente um pouco..  Atrasado.  Redobrando a
+atenção você verifica se não há aventureiro a sua espreita e toma um bom
+fôlego para continuar sua jornada.
+~
+244 0 0 0 0 5
+D1
+~
+~
+0 -1 24490
+D3
+~
+~
+0 -1 24488
+S
+#24490
+O Desafio de Vitália~
+   A descida é íngreme e você caminha com cuidado, já que qualquer erro pode
+ser fatal.  O caminho segue para o leste.  Neste ponto alguma vegetação pode
+ser vista e um cheiro de mato invade suas narinas.
+~
+244 0 0 0 0 5
+D1
+~
+~
+0 -1 24491
+D3
+~
+~
+0 -1 24489
+S
+#24491
+O Desafio de Vitália~
+   Uma curva fechada para o sul faz você balançar e quase cair.  Antes de
+prosseguir você agradece aos deuses e olha atentamente para todas as
+direções para ver se encontra algo (ou alguém talvez?)
+~
+244 0 0 0 0 5
+D2
+~
+~
+0 -1 24492
+D3
+~
+~
+0 -1 24490
+S
+#24492
+O Desafio de Vitália~
+   A descida segue suave para o sul e logo ao norte uma curva muito perigosa
+ainda pode ser vista.  Você por um momento pensa aonde este caminho irá
+chegar mas isto é algo que infelizmente não é possível prever.
+~
+244 0 0 0 0 5
+D0
+~
+~
+0 -1 24491
+D2
+~
+~
+0 -1 24493
+S
+#24493
+O Desafio de Vitália~
+   Uma curva para oeste e você se vê em chão plano novamente.  Uma estranha
+sensação de tontura toma conta de sua mente.  Provavelmente devido a grande
+mudança de altitude em tão pouco tempo.  Para o norte você vê uma subida
+íngreme.
+~
+244 0 0 0 0 4
+D0
+~
+~
+0 -1 24492
+D3
+~
+~
+0 -1 24494
+S
+#24494
+O Desafio de Vitália~
+   Você se vê em um grande campo aberto e plano.  O ar é fresco e agradável
+um pequeno buraco no chão parece sua única saída alem da volta ao topo da
+colina pelo caminho a leste.
+~
+244 0 0 0 0 2
+D1
+~
+~
+0 -1 24493
+D5
+~
+~
+0 -1 24421
+S
+#24495
+O Desafio de Vitália~
+   Você entra em uma espécie de labirinto.  Tudo parece ser igual.  A porta
+ao sul desaparece magicamente e você se sente angustiado com a falta de
+senso de direção.  Você ainda pode seguir para o leste.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24497
+S
+#24496
+O Desafio de Vitália~
+   Você entra em uma espécie de labirinto.  Tudo parece ser igual.  A porta
+a oeste desaparece magicamente e você se sente angustiado com a falta de
+senso de direção.  Você ainda pode seguir para o leste.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24497
+S
+#24497
+O Desafio de Vitália~
+   O Labirinto parece não mostrar nenhuma direção certa.  Você pode ir para
+norte, sul, leste ou oeste.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24497
+D1
+~
+~
+0 -1 24498
+D2
+~
+~
+0 -1 24497
+D3
+~
+~
+0 -1 24497
+S
+#24498
+O Desafio de Vitália~
+   O Labirinto parece não mostrar nenhuma direção certa.  Você pode ir para
+norte, sul, leste ou oeste.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24499
+D1
+~
+~
+0 -1 24498
+D2
+~
+~
+0 -1 24498
+D3
+~
+~
+0 -1 24498
+S
+#24499
+O Desafio de Vitália~
+   O Labirinto parece não mostrar nenhuma direção certa.  Você pode ir para
+norte, sul, leste ou oeste.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24499
+D1
+~
+~
+0 -1 24497
+D2
+~
+~
+0 -1 24499
+D3
+~
+~
+0 -1 24475
+S
+#24500
+O Desafio de Vitália~
+   Você se vê diante de um enorme corredor com diversas portas.  Um tapete
+vermelho com detalhes em dourado dão um tom nobre a este ambiente.  Algumas
+tochas acesas iluminam todo o corredor que segue para o leste.  A oeste você
+ainda pode ver o fim da escada.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24503
+D3
+~
+~
+0 -1 24455
+S
+#24501
+O Desafio de Vitália~
+   Você entra em um grande quarto digno do mais nobre de todos os homens.
+Tudo é bastante limpo e arrumado.  No canto do chão você pode ver uma
+passagem provavelmente usada em fugas ou em ocasiões que merecem algum
+sigilo.  Para leste você vê uma passagem desobstruída.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24518
+D5
+~
+~
+0 -1 24469
+S
+#24502
+O Desafio de Vitália~
+   Você se vê diante de uma pequena sala úmida e quente.  A iluminação é
+parca e você se sente um pouco enjoado neste lugar.  Aqui provavelmente é a
+entrada para as masmorras, visto que não combina em nada com o resto do
+castelo.  Tudo é cinzento e fúnebre.  Um bom lugar para se esconder, você
+diria...
+   A única abertura é para o sul e há um pequeno buraco no chão por onde
+você pode ver a escadaria do castelo.
+~
+244 0 0 0 0 0
+D2
+~
+~
+0 -1 24522
+D5
+~
+~
+0 -1 24455
+S
+#24503
+O Desafio de Vitália~
+   O longo corredor segue no sentido leste oeste e você pode ver com
+detalhes cada canto desta sala.  Você se sente vigiado o tempo todo e sabe
+que a qualquer momento pode aparecer alguém para estragar seus planos.  Você
+percebe uma porta ao sul.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24504
+D2
+~
+porta~
+1 -1 24553
+D3
+~
+~
+0 -1 24500
+S
+#24504
+O Desafio de Vitália~
+   O longo corredor segue no sentido leste oeste e você pode ver com
+detalhes cada canto desta sala.  Você se sente vigiado o tempo todo e sabe
+que a qualquer momento pode aparecer alguém para estragar seus planos.  Você
+percebe uma porta ao norte.
+~
+244 0 0 0 0 0
+D0
+~
+porta~
+1 -1 24505
+D1
+~
+~
+0 -1 24506
+D3
+~
+~
+0 -1 24503
+S
+#24505
+O Desafio de Vitália~
+   Você entra em um pequeno quarto limpo e claro.  Provavelmente quando este
+castelo estava ativado este aposento era usado como quarto de hóspedes e
+deve ter hospedado muitos visitantes ilustres.  Hoje ele serve de refúgio e
+de esconderijo para aventureiros como você que vêm até aqui em busca da
+glória de vencer o grande desafio.  A porta está na parede sul.
+~
+244 0 0 0 0 0
+D2
+~
+porta~
+1 -1 24504
+S
+#24506
+O Desafio de Vitália~
+   O longo corredor segue no sentido leste oeste e você pode ver com
+detalhes cada canto desta sala.  Você se sente vigiado o tempo todo e sabe
+que a qualquer momento pode aparecer alguém para estragar seus planos.  Você
+percebe uma porta ao sul.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24508
+D2
+~
+porta~
+1 -1 24507
+D3
+~
+~
+0 -1 24504
+S
+#24507
+O Desafio de Vitália~
+   Você entra em um pequeno quarto limpo e claro.  Provavelmente quando este
+castelo estava ativado este aposento era usado como quarto de hóspedes e
+deve ter hospedado muitos visitantes ilustres.  Hoje ele serve de refúgio e
+de esconderijo para aventureiros como você que vêm até aqui em busca da
+glória de vencer o grande desafio.  A porta está na parede Norte.
+~
+244 0 0 0 0 0
+D0
+~
+porta~
+1 -1 24506
+S
+#24508
+O Desafio de Vitália~
+   O longo corredor segue no sentido leste oeste e você pode ver com
+detalhes cada canto desta sala.  Você se sente vigiado o tempo todo e sabe
+que a qualquer momento pode aparecer alguém para estragar seus planos.  Você
+percebe uma porta ao norte.
+~
+244 0 0 0 0 0
+D0
+~
+porta~
+1 -1 24509
+D1
+~
+~
+0 -1 24510
+D3
+~
+~
+0 -1 24506
+S
+#24509
+O Desafio de Vitália~
+   Você entra em um pequeno quarto limpo e claro.  Provavelmente quando este
+castelo estava ativado este aposento era usado como quarto de hóspedes e
+deve ter hospedado muitos visitantes ilustres.  Hoje ele serve de refúgio e
+de esconderijo para aventureiros como você que vêm até aqui em busca da
+glória de vencer o grande desafio.  A porta está na parede sul.
+~
+244 0 0 0 0 0
+D2
+~
+porta~
+1 -1 24508
+S
+#24510
+O Desafio de Vitália~
+   O longo corredor segue no sentido leste oeste e você pode ver com
+detalhes cada canto desta sala.  Você se sente vigiado o tempo todo e sabe
+que a qualquer momento pode aparecer alguém para estragar seus planos.  Você
+percebe uma porta ao sul e uma outra ao norte.
+~
+244 0 0 0 0 0
+D0
+~
+porta~
+1 -1 24552
+D1
+~
+~
+0 -1 24504
+D2
+~
+porta~
+1 -1 24511
+D3
+~
+~
+0 -1 24508
+S
+#24511
+O Desafio de Vitália~
+   Você entra em uma pequeno hall de passagem.  Uma bela porta na parede
+norte está fechada e uma passagem desobstruída segue para o sul.
+~
+244 0 0 0 0 0
+D0
+~
+porta bela~
+1 -1 24510
+D2
+~
+~
+0 -1 24512
+S
+#24512
+O Desafio de Vitália~
+   Um pequeno corredor pouco iluminado segue no sentido norte sul.  Na
+parede leste você pode ver uma porta.  O piso de madeira faz um estranho
+barulho e você tenta andar mais suavemente para não despertar a atenção dos
+outros aventureiros que devem estar por perto a sua espreita.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24511
+D1
+
+~
+porta~
+1 -1 24514
+D2
+~
+~
+0 -1 24513
+S
+#24513
+O Desafio de Vitália~
+   Um pequeno corredor pouco iluminado segue no sentido norte sul.  Nas
+paredes leste e oeste você pode ver portas.  O piso de madeira faz um
+estranho barulho e você tenta andar mais suavemente para não despertar a
+atenção dos outros aventureiros que devem estar por perto a sua espreita.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24512
+D1
+~
+porta~
+1 -1 24534
+D2
+~
+~
+0 -1 24516
+D3
+~
+porta~
+1 -1 24515
+S
+#24514
+O Desafio de Vitália~
+   Você entra em um pequeno quarto limpo e claro.  Provavelmente quando este
+castelo estava ativado este aposento era usado como quarto de hóspedes e
+deve ter hospedado muitos visitantes ilustres.  Hoje ele serve de refúgio e
+de esconderijo para aventureiros como você que vêm até aqui em busca da
+glória de vencer o grande desafio.  A porta está na parede oeste.
+~
+244 0 0 0 0 0
+D3
+~
+porta~
+1 -1 24512
+S
+#24515
+O Desafio de Vitália~
+   Um pequeno corredor segue no sentido leste oeste com iluminação razoável
+vinda das tochas que queimam bem acima de sua cabeça.  Você nota ainda uma
+porta na parede leste.
+~
+244 0 0 0 0 0
+D1
+~
+porta~
+1 -1 24513
+D3
+~
+~
+0 -1 24521
+S
+#24516
+O Desafio de Vitália~
+   Um pequeno corredor pouco iluminado segue no sentido norte sul.  Nas
+paredes você não pode ver portas.  O piso de madeira faz um estranho barulho
+e você tenta andar mais suavemente para não despertar a atenção dos outros
+aventureiros que devem estar por perto a sua espreita.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24513
+D2
+~
+~
+0 -1 24517
+S
+#24517
+O Desafio de Vitália~
+   Um pequeno corredor pouco iluminado segue no sentido norte sul.  Nas
+paredes você não pode ver portas.  O piso de madeira faz um estranho barulho
+e você tenta andar mais suavemente para não despertar a atenção dos outros
+aventureiros que devem estar por perto a sua espreita.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24516
+D2
+~
+~
+0 -1 24516
+S
+#24518
+O Desafio de Vitália~
+   Você entra em um pequeno quarto de preparação.  provavelmente aqui o
+senhor deste enorme castelo vestia-se para as ocasiões especiais.  Na parede
+norte você vê um enorme espelho.  Você examina a pequena porta ao sul e a
+outra porta ao leste.  Pelo espelho você nota um movimento estranho e isso
+faz você se lembrar de seus propósitos neste castelo.
+~
+244 0 0 0 0 0
+D1
+~
+porta~
+1 -1 24520
+D2
+~
+porta~
+1 -1 24519
+D3
+~
+~
+0 -1 24501
+S
+#24519
+O Desafio de Vitália~
+   Você entra em uma pequena sala de banho.  Uma banheira prateada foi
+colocada bem no centro da sala alguns espelhos foram espalhados pelas
+paredes sul e leste.  Tudo a sua volta é bastante limpo e a sala é bastante
+iluminada.  A única saída é para o norte, por onde você entrou.
+~
+244 0 0 0 0 0
+D0
+~
+porta~
+1 -1 24518
+S
+#24520
+O Desafio de Vitália~
+   Um pequeno corredor segue no sentido leste oeste com iluminação razoável
+vinda das tochas que queimam bem acima de sua cabeça.  Você nota ainda uma
+porta na parede oeste.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24521
+D3
+~
+porta~
+1 -1 24518
+S
+#24521
+O Desafio de Vitália~
+   Um pequeno corredor segue no sentido leste oeste com iluminação razoável
+vinda das tochas que queimam bem acima de sua cabeça
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24515
+D3
+~
+~
+0 -1 24520
+S
+#24522
+O Desafio de Vitália~
+   Um longo corredor mal iluminado segue no sentido norte sul.  O ar é
+úmido e não muito agradável e as paredes de pedras disformes são geladas
+como a morte.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24502
+D2
+~
+~
+0 -1 24523
+S
+#24523
+O Desafio de Vitália~
+   Um longo corredor mal iluminado segue no sentido norte sul.  O ar é
+úmido e não muito agradável e as paredes de pedras disformes são geladas
+como a morte.  Você nota uma cela na parede oeste.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24522
+D2
+~
+~
+0 -1 24524
+D3
+~
+cela~
+1 -1 24535
+S
+#24524
+O Desafio de Vitália~
+   Um longo corredor mal iluminado segue no sentido norte sul.  O ar é
+úmido e não muito agradável e as paredes de pedras disformes são geladas
+como a morte.  Na parede leste você pode ver uma cela fechada.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24523
+D1
+~
+cela~
+1 -1 24536
+D2
+~
+~
+0 -1 24525
+S
+#24525
+O Desafio de Vitália~
+   Um longo corredor mal iluminado segue no sentido norte sul.  O ar é
+úmido e não muito agradável e as paredes de pedras disformes são geladas
+como a morte.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24524
+D2
+~
+~
+0 -1 24526
+S
+#24526
+O Desafio de Vitália~
+   O longo corredor mal iluminado vira para o oeste e ainda segue para o
+norte.  O ar é úmido e não muito agradável.  As paredes de pedras disformes
+são geladas como a morte.  Nas paredes leste e sul você pode ver celas
+fechadas.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24525
+D1
+~
+cela~
+1 -1 24538
+D2
+~
+cela~
+1 -1 24537
+D3
+~
+~
+0 -1 24527
+S
+#24527
+O Desafio de Vitália~
+   Um longo corredor mal iluminado segue no sentido leste-oeste.  O ar é
+úmido e não muito agradável e as paredes de pedras disformes são geladas
+como a morte.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24526
+D3
+~
+~
+0 -1 24528
+S
+#24528
+O Desafio de Vitália~
+   Um longo corredor mal iluminado segue no sentido leste-oeste.  O ar é
+úmido e não muito agradável e as paredes de pedras disformes são geladas
+como a morte.  Na parede sul você pode ver uma cela fechada.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24527
+D2
+
+~
+cela~
+1 -1 24539
+D3
+~
+~
+0 -1 24529
+S
+#24529
+O Desafio de Vitália~
+Empty room.~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24540
+D1
+
+~
+~
+0 -1 24528
+D3
+~
+~
+0 -1 24530
+S
+#24530
+O Desafio de Vitália~
+   Um longo corredor mal iluminado segue no sentido leste-oeste.  O ar é
+úmido e não muito agradável e as paredes de pedras disformes são geladas
+como a morte.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24529
+D3
+~
+~
+0 -1 24531
+S
+#24531
+O Desafio de Vitália~
+   Um longo corredor mal iluminado segue no sentido leste-oeste.  O ar é
+úmido e não muito agradável e as paredes de pedras disformes são geladas
+como a morte.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24530
+D3
+
+~
+~
+0 -1 24532
+S
+#24532
+O Desafio de Vitália~
+   Um longo corredor mal iluminado segue no sentido leste-oeste.  O ar é
+úmido e não muito agradável e as paredes de pedras disformes são geladas
+como a morte.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24531
+D3
+
+~
+~
+0 -1 24533
+S
+#24533
+O Desafio de Vitália~
+   Uma pequena rampa que desce para o oeste.  Para o leste você pode ver o
+grande corredor e algumas celas.  Aqui o ar não é tão úmido mas você pode
+sentir um cheiro diferente no ar.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24532
+D3
+~
+~
+0 -1 24534
+S
+#24534
+O Desafio de Vitália~
+   Você se encontra no início de uma rampa que sobe para o leste.  A rampa é
+bastante limpa mas olhando para o leste você não consegue ver muito alem.  A
+inclinação é suave e não parece ser necessário muito esforço para subi-la.
+A oeste você vê uma porta.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24533
+D3
+~
+porta~
+1 -1 24513
+S
+#24535
+O Desafio de Vitália~
+   A pequena cela está vazia a não ser pelo pequeno banco junto à parede
+norte e você nota algumas correntes presas nas paredes.  Pela porta da cela,
+logo a leste, você mal pode ver o corredor.
+~
+244 0 0 0 0 0
+D1
+~
+cela~
+1 -1 24523
+S
+#24536
+O Desafio de Vitália~
+   A pequena cela está vazia a não ser pelo pequeno banco junto à parede
+norte e você nota algumas correntes presas nas paredes.  Pela porta da cela,
+logo a oeste, você mal pode ver o corredor.
+~
+244 0 0 0 0 0
+D3
+~
+cela~
+1 -1 24524
+S
+#24537
+O Desafio de Vitália~
+   A pequena cela está vazia a não ser pelo pequeno banco junto à parede
+norte e você nota algumas correntes presas nas paredes.  Pela porta da cela,
+logo o norte, você mal pode ver o corredor.
+~
+244 0 0 0 0 0
+D0
+~
+cela~
+1 -1 24526
+S
+#24538
+O Desafio de Vitália~
+   A pequena cela está vazia a não ser pelo pequeno banco junto à parede
+norte e você nota algumas correntes presas nas paredes.  Pela porta da cela,
+logo a oeste, você mal pode ver o corredor.
+~
+244 0 0 0 0 0
+D3
+~
+cela~
+1 -1 24526
+S
+#24539
+O Desafio de Vitália~
+   A pequena cela está vazia a não ser pelo pequeno banco junto à parede
+norte e você nota algumas correntes presas nas paredes.  Pela porta da cela,
+logo ao norte, você mal pode ver o corredor.
+~
+244 0 0 0 0 0
+D0
+~
+cela~
+1 -1 24528
+S
+#24540
+O Desafio de Vitália~
+   Um longo corredor mal iluminado segue no sentido norte sul.  O ar é
+úmido e não muito agradável e as paredes de pedras disformes são geladas
+como a morte.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24541
+D2
+~
+~
+0 -1 24529
+S
+#24541
+O Desafio de Vitália~
+   Um longo corredor mal iluminado segue no sentido norte sul.  O ar é
+úmido e não muito agradável e as paredes de pedras disformes são geladas
+como a morte.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24542
+D2
+~
+~
+0 -1 24540
+S
+#24542
+O Desafio de Vitália~
+   O longo corredor mal iluminado vira para o oeste e ainda segue para o sul.
+O ar é úmido e não muito agradável.  As paredes de pedras disformes são
+geladas como a morte.  Na parede norte você vê uma pequena cela.
+~
+244 0 0 0 0 0
+D0
+~
+cela~
+1 -1 24543
+D2
+~
+~
+0 -1 24541
+D3
+~
+~
+0 -1 24544
+S
+#24543
+O Desafio de Vitália~
+   A pequena cela está vazia a não ser pelo pequeno banco junto à parede
+norte e você nota algumas correntes presas nas paredes.  Pela porta da cela,
+logo ao sul, você mal pode ver o corredor.
+~
+244 0 0 0 0 0
+D2
+~
+cela~
+1 -1 24542
+S
+#24544
+O Desafio de Vitália~
+   O corredor segue no sentido leste-oeste.  Tudo é muito sujo e mal
+iluminado nesta parte do castelo.  A carga negativa vinda da dor dos
+prisioneiros e acumulada ao longo dos anos deu a esta atmosfera um tom
+intragável e uma sede de liberdade (ou seria de ar fresco?) toma conta de
+seus sentidos.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24542
+D3
+~
+~
+0 -1 24545
+S
+#24545
+O Desafio de Vitália~
+   O corredor segue no sentido leste-oeste.  Tudo é muito sujo e mal
+iluminado nesta parte do castelo.  A carga negativa vinda da dor dos
+prisioneiros e acumulada ao longo dos anos deu a esta atmosfera um tom
+intragável e uma sede de liberdade (ou seria de ar fresco?) toma conta de
+seus sentidos.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24544
+D3
+~
+~
+0 -1 24547
+S
+#24547
+O Desafio de Vitália~
+   O corredor mal iluminado segue para o leste e uma pequena sala pode ser
+vista ao norte.  Um forte cheiro de morte exala das paredes que parecem não
+ser lavadas há muito tempo.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24548
+D1
+~
+~
+0 -1 24545
+S
+#24548
+O Desafio de Vitália~
+   Você entra em uma pequena sala bem iluminada com uma pequena mesa e
+cadeira colocadas na parede leste.  Um grande arco se abre ao sul mostrando
+um corredor sombrio.  O ar é pesado nesta parte do castelo e a respiração é
+bastante difícil.  O início de uma escada pode ser vista para o norte.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24549
+D2
+~
+~
+0 -1 24547
+S
+#24549
+O Desafio de Vitália~
+   Você se vê diante de uma escada que desce para oeste.  O ar é muito
+úmido o que dificulta a respiração.  Alguns archotes iluminam o caminho que
+segue para o sul.
+~
+244 0 0 0 0 0
+D2
+~
+~
+0 -1 24548
+D3
+~
+~
+0 -1 24550
+S
+#24550
+O Desafio de Vitália~
+   A escada segue subindo no sentido oeste-leste.  A iluminação é suficiente
+e o cheiro não é dos melhores.  Muita poeira no chão revela algumas pegadas
+que se confundem com as suas.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24549
+D3
+~
+~
+0 -1 24551
+S
+#24551
+O Desafio de Vitália~
+   A escada faz uma curva para leste e sul aqui.  A subida não é muito
+cansativa, embora descer seja muito mais fácil.  A iluminação é suficiente
+para mostrar todos os detalhes e você não nota muito zelo nesta parte do
+castelo.
+~
+244 0 0 0 0 0
+D1
+~
+~
+0 -1 24550
+D2
+
+~
+~
+0 -1 24552
+S
+#24552
+O Desafio de Vitália~
+   Você se vê diante de uma pequena escada que segue para o norte.  A escada
+não é muito inclinada e seus degraus são curtos.  Alguns archotes foram
+colocados nas paredes leste e oeste para iluminar o seu caminho.  VocÊ ainda
+pode ver uma pequena porta ao sul.
+~
+244 0 0 0 0 0
+D0
+~
+~
+0 -1 24551
+D2
+~
+porta~
+1 -1 24510
+S
+#24553
+O Desafio de Vitália~
+   Você entra em um pequeno quarto limpo e claro.  Provavelmente quando este
+castelo estava ativado este aposento era usado como quarto de hóspedes e
+deve ter hospedado muitos visitantes ilustres.  Hoje ele serve de refúgio e
+de esconderijo para aventureiros como você que vêm até aqui em busca da
+glória de vencer o grande desafio.  A porta está na parede Norte.
+~
+244 0 0 0 0 0
+D0
+~
+porta~
+1 -1 24503
+S
+#24599
+O Desafio de Vitália~
+   Você sente tudo a sua volta mudar. Um enorme vazio preenche seu corpo e
+quando você menos espera o castelo e tudo o mais desaparece. Você foi
+&Rretornado&n. Sua aventura termina por aqui. A única saída é para baixo,
+de onde parece vir bastante barulho.
+~
+244 0 0 0 0 0
+D5
+~
+porta~
+0 -1 3001
+S
+$~

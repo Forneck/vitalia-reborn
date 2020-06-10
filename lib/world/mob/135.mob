@@ -1,0 +1,226 @@
+#13500
+urso negro~
+um urso negro~
+Um grande urso negro se levanta diante de você.
+~
+Assim que você olha para este urso você percebe se tratar de uma criatura
+perigosa.
+~
+2097216 0 0 0 0 0 0 0 0 E
+14 6 4 1d1+400 6d1+14
+0 27000
+8 8 1
+E
+#13501
+elfo caçador~
+um elfo caçador~
+Um elfo caçador anda por aqui, procurando comida.
+~
+Ele é perspicaz.  Olha para você com paciencia parecendo não querer espantar
+uma possível presa.
+~
+2097216 0 0 0 0 0 0 0 0 E
+16 4 3 1d1+600 6d1+16
+275 30000
+8 8 2
+E
+#13502
+fada~
+uma fada~
+Uma majestosa fada voa por aqui.
+~
+Que bela fada você pode ver deste ângulo.
+~
+2097216 0 0 0 598032 0 0 0 0 E
+16 4 3 1d1+600 6d1+16
+275 30000
+8 8 2
+E
+#13503
+inseto folha inseto-folha~
+um inseto-folha~
+Uma folha foi jogada aqui.
+~
+An undefined string.
+~
+2097216 0 0 0 0 0 0 0 0 E
+13 7 4 1d1+350 6d1+13
+0 12000
+8 8 1
+E
+#13504
+inseto galho inseto-galho~
+um inseto-galho~
+Um galho foi deixado aqui.
+~
+An undefined string.
+~
+2097216 0 0 0 0 0 0 0 0 E
+13 7 4 1d1+350 6d1+13
+0 12000
+8 8 1
+E
+#13505
+inseto folha cinza~
+um inseto cinza~
+Uma folha seca caída de alguma árvore está no chão.
+~
+An undefined string.
+~
+2097216 0 0 0 0 0 0 0 0 E
+20 0 2 1d1+1000 8d1+20
+0 40000
+8 8 0
+E
+#13506
+hierofante velho homem~
+um Hierofante~
+Um velho Hierofante do bosque sagrado anda calmamente por aqui.
+~
+Ele é um homem muito velho, vestindo velhos mantos.  Em seus claros olhos
+azuis você vê conhecimento, ele parece ter vivido muito tempo.
+~
+2097216 0 0 0 671088640 0 0 0 1000 E
+50 -11 -2 1d1+2300 14d1+31
+650 125000
+8 8 1
+E
+#13507
+hierofant velha mulher~
+uma Hierofante~
+Uma velha Hierofante do bosque sagrado está aqui.
+~
+Ela parece ser uma mulher bem velha, vestindo uma velha toga.  Seus olhos
+azuis lhe mostram confiança e poder, ela parece ser muito sábia.
+~
+2097216 0 0 0 671088640 0 0 0 1000 E
+50 -11 -2 1d1+2300 14d1+31
+650 125000
+8 8 2
+E
+#13508
+druida ancião~
+um druida ancião~
+Um Druida Ancião está aqui, contemplando a beleza da flora e flora selvagens daqui.
+~
+Ele parece ter centenas de anos.  Sua barba cinza contrasta fortemente com a
+falta de rugas em seu rosto.
+~
+2097216 0 0 0 134225920 0 0 0 1000 E
+45 -2 1 1d1+1400 9d1+22
+425 100000
+8 8 1
+E
+#13509
+druidesa anciã~
+uma druidesa anciã~
+Uma Druidesa Anciã está aqui, alimentando alguns coelhos.
+~
+Ela também parece ter incontáveis anos.  Ela sorri carinhosamente para você.
+~
+2097216 0 0 0 536879104 0 0 0 1000 E
+45 -1 1 1d1+1200 9d1+21
+400 100000
+8 8 2
+E
+#13510
+corça~
+uma corça~
+Uma bela corça anda pela grama.
+~
+Essa bela criatura possui grandes olhos negros.  Ela mira seu nariz para
+você, parecendo procurar algo, mas logo volta a comer a grama.
+~
+2097216 0 0 0 0 0 0 0 0 E
+12 8 5 1d1+300 5d1+12
+0 12105
+8 8 2
+E
+#13511
+cervo~
+um cervo~
+Um grande cervo está aqui, fitando seus olhos profundamente.
+~
+O cervo parece incomodado com sua presença.  Ele raspa sua pata no chão e
+aponta a parte superior de sua cabeça para você.
+~
+2097216 0 0 0 0 0 0 0 0 E
+13 7 4 1d1+350 6d1+13
+0 13880
+8 8 1
+E
+#13512
+veado~
+um veado~
+Um grande veado está aqui, protegendo seu território.
+~
+Seus olhos possuem uma expressão não muito amigável.  
+~
+2097248 0 0 0 0 0 0 0 0 E
+14 6 4 1d1+400 6d1+14
+0 13496
+8 8 1
+E
+#13513
+coelho pequeno~
+um pequeno coelho~
+Um pequeno coelho está aqui, pulando de um lado ao outro.
+~
+Ele é simplesmente adorável, você queria ter um igual a esse!
+~
+2097216 0 0 0 0 0 0 0 0 E
+8 12 6 1d1+150 4d1+8
+0 10333
+8 8 1
+E
+#13514
+cobra cega~
+uma cobra cega~
+Uma pequena cobra desliza através da grama.
+~
+Olhando bem você percebe que isso NÃO é uma cobra!
+~
+2097216 0 0 0 0 0 0 0 0 E
+9 11 6 1d1+175 4d1+9
+0 11371
+8 8 2
+E
+#13515
+druida~
+um druida~
+Um druida está aqui, meditando.
+~
+Ele não parece muito feliz por você tê-lo interrompido, mas ele é educado
+demais para pedir que você saia.
+~
+2097216 0 0 0 134225936 0 0 0 1000 E
+18 2 2 1d1+800 7d1+18
+325 20769
+8 8 1
+E
+#13516
+druidesa~
+uma druidesa~
+Uma druidesa está aqui, olhando para você.
+~
+Ela parece se perguntar o motivo de você estar olhando para ela, e como você
+entrou aqui.
+~
+2097216 0 0 0 536879120 0 0 0 1000 E
+13 7 4 1d1+350 6d1+13
+200 12880
+8 8 2
+E
+#13517
+rã~
+uma rã~
+Uma rã está aqui.
+~
+Rã, sabe?  Apenas uma rã.
+~
+2097216 0 0 0 0 0 0 0 0 E
+8 12 6 1d1+150 4d1+8
+0 1333
+8 8 0
+E
+$

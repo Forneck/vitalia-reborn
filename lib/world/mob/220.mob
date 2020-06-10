@@ -1,0 +1,76 @@
+#22020
+recepcionista mulher~
+a recepcionista~
+A recepcionista está aqui, sentada, disposta a lhe dar uma informação.
+~
+A recepcionista é uma bela mulher, ostentando longos cabelos negros e uma
+face sem defeitos.  Ela está sentada em frente ao balcão, pronta para dar
+uma informação.
+~
+2285570 0 0 0 16 0 0 0 150 E
+108 0 -10 1d1+30000 2d8+18
+0 160000
+8 8 2
+E
+#22021
+vendedor jornaleiro garoto~
+o vendedor de jornais~
+O vendedor de jornais está aqui, carregando um fardo de jornais.
+~
+O vendedor de jornais é um garoto gordinho e baixo, que sua muito.  Em seu
+pescoço, está pendurada uma placa, que diz "Jornal de Vitália,
+Imparcialidade e Preço Baixo".  Quando ele o vê, corre em sua direção,
+oferecendo o jornal.  Ele carrega um fardo de jornais embaixo do braço.
+~
+2285634 0 0 0 16 0 0 0 150 E
+108 0 -10 1d1+30000 2d8+18
+0 160000
+8 8 1
+E
+#22022
+mensageiro garoto~
+o mensageiro~
+O mensageiro está aqui, levando notícias para a redação.
+~
+O mensageiro é um garoto magro e mirrado, vestindo roupas vermelhas.  Ele
+carrega um saco cheio de papéis, parecendo ser muito pesado, mas sem se
+preocupar.
+~
+2285632 0 0 0 16 0 0 0 150 E
+108 0 -10 1d1+30000 2d8+18
+0 160000
+8 8 1
+E
+#22023
+operador~
+o operador da máquina~
+Um homem está aqui, operando a máquina, com os ouvidos tampados.
+~
+O operador da máquina é um homem com um longo bigode branco e um par de
+óculos, aparentando ser muito simpático.  Ele faz seu trabalho com
+determinação, abaixando e levantando manivelas, girando roletes e trocando
+letras da prensa.  Ele usa uma tiara protegendo seus ouvidos do barulho.  É
+melhor não atrapalhá-lo em seu serviço.
+~
+2285570 0 0 0 16 0 0 0 150 E
+108 0 -10 1d1+30000 2d8+18
+0 160000
+8 8 1
+E
+#22030
+Honireves ser amigo luz iluminado~
+Honireves, um amigo iluminado~
+Honireves, um ser envolto em Luz, sorri para você e lhe oferece uma mensagem.
+~
+Honireves é um ser iluminado, que emana paz e amor e acima de tudo, consegue
+lhe transmitir a certeza de que você é alguém muito especial e que todas as
+criaturas são por ele amadas de forma incondicional.  Ele estende suas mãos
+em sua direção e lhe oferece uma das suas maravilhosas mensagens.  Leia com
+atenção.
+~
+2156550 0 0 0 2320 0 0 0 300 E
+108 0 -10 1d1+30000 1d8+18
+1200 200000
+8 8 1
+E
+$

@@ -1,0 +1,236 @@
+#4900
+jaguar marrom furtivo~
+um furtivo jaguar marrom~
+Um jaguar marrom caminha sutilmente por aqui.
+~
+Ele olha calmamente para você e continua a andar lenta e graciosamente.
+~
+2097252 0 0 0 0 0 0 0 0 E
+2 19 9 2d4+16 1d4+1
+0 400
+8 8 1
+E
+#4901
+elfo gato~
+um gato elfo~
+Um estranho gato dorme entre alguns galhos no chão.
+~
+Ele dorme despreocupadamente sob uma sombra fresca de uma árvore.
+~
+2097154 0 0 0 0 0 0 0 0 E
+3 18 7 2d6+34 1d7+0
+0 800
+4 4 1
+E
+#4902
+leopardo manchado~
+um leopardo manchado~
+Há um leopardo manchado entre os arbustos, cujo pele o torna quase imperceptível.
+~
+Ele parece não se preocupar com você, e continua a se banhar.
+~
+2097154 0 0 0 0 0 0 0 0 E
+2 18 10 2d4+20 1d3+1
+0 500
+8 8 1
+E
+#4903
+cobra madeira jaculi~
+um jaculi~
+Uma pequena cobra madeira desliza rapidamente por aqui.
+~
+Ela parece não se importar muito com sua presença.
+~
+2097216 0 0 0 0 0 0 0 0 E
+3 18 8 6d5+22 1d7+1
+0 600
+8 8 1
+E
+#4904
+rã~
+uma rã~
+Uma pequena rã está aqui, caçando algumas moscas.
+~
+Ela parece estar faminta.
+~
+2097216 0 0 0 0 0 0 0 0 E
+2 18 10 2d4+20 1d3+1
+0 500
+8 8 2
+E
+#4905
+babuíno selvagem~
+um babuíno selvagem~
+Um babuíno selvagem caminha lentamente por aqui.
+~
+Ele pula rapidamente pelas árvores, procurando algo para mastigar.
+~
+2097216 0 0 0 0 0 0 0 0 E
+4 17 6 8d5+20 1d6+1
+0 500
+8 8 1
+E
+#4906
+macaco carnívoro~
+um macaco carnívoro~
+Um grande macaco pula rapidamente entre os galho e vem em sua direção.
+~
+Sua face estúpida lhe fita profundamente.  Essa criatura faz sua
+sobrevivência de outros animais.
+~
+2097344 0 0 0 0 0 0 0 0 E
+2 18 10 2d4+20 1d3+1
+0 500
+8 8 1
+E
+#4907
+xamã atom~
+um xamã atom~
+Um xamã atom anda calmamente por aqui.
+~
+Em sua face você vê uma plena seriedade, uma profunda expressão de
+concentração.
+~
+2097216 0 0 0 0 0 0 0 0 E
+4 17 6 8d5+20 1d6+1
+250 500
+8 8 1
+E
+#4908
+atom~
+um atom~
+Um atom está aqui, trabalhando diligentemente para sua familia.
+~
+Os atoms são uma raça altamente inteligente, como elfos, que trabalham duro
+nas árvores em que residem.
+~
+2097154 0 0 0 0 0 0 0 350 E
+4 17 5 1d8+46 2d4+0
+300 600
+8 8 1
+E
+#4909
+atom~
+uma atom~
+Uma atom anda apressada por aqui, arrumando e limpando tudo que vê.
+~
+Sua face possui um ar aflito, mas muito amoroso.  Ela trabalha para o seu
+povo, e parece um tanto quanto prematura.
+~
+2097154 0 0 0 0 0 0 0 350 E
+4 17 5 1d8+46 2d4+0
+300 600
+8 8 2
+E
+#4910
+criança atom~
+uma criança atom~
+Uma criança atom brinca por aqui.
+~
+Ela corre e pula por todos os lados, completamente despreocupada com
+qualquer coisa.
+~
+2097282 0 0 0 0 0 0 0 250 E
+3 18 7 1d10+30 1d4+1
+0 300
+8 8 1
+E
+#4911
+dríade~
+uma dríade~
+Uma dríade caminha sutilmente por aqui.
+~
+Ela acena educadamente para você e continua seu caminho.
+~
+2097344 0 0 0 0 0 0 0 450 E
+5 17 5 4d6+42 1d5+1
+109 1200
+8 8 2
+E
+#4912
+sílfide~
+uma sílfide~
+Uma sílfide balança de um galho acima de você.
+~
+Ela sorri alegremente para você assim que você passa, sua alegria é
+contagiante.
+~
+2097344 0 0 0 0 0 0 0 450 E
+5 17 5 4d6+43 1d5+1
+118 1200
+8 8 2
+E
+#4913
+duende pequeno~
+um pequeno duende~
+Um pequeno duende está aqui, sorrindo. Ele parece estar tramando algo.
+~
+Ele olha para você com um sorriso maldoso. Assim que você pisca ele some.
+~
+2097344 0 0 0 0 0 0 0 450 E
+5 17 5 4d6+45 1d5+1
+127 1200
+8 8 1
+E
+#4914
+ettercap~
+um ettercap~
+Um ettercap balança em um pequeno galho da árvore.
+~
+Ele parece estar acordado, mas sua cabeça tomba a todo momento.
+~
+2097282 0 0 0 0 0 0 0 -300 E
+5 16 5 4d6+38 2d4+0
+900 1200
+8 8 1
+E
+#4915
+xamã grigue~
+um xamã grigue~
+Um xamã grigue se move despreocupadamente por aqui.
+~
+Ele está mergulhado em seus pensamentos, sem notar qualquer coisa que haja
+ao seu redor.
+~
+2097154 0 0 0 0 0 0 0 100 E
+4 17 6 1d4+50 1d6+1
+390 1000
+8 8 1
+E
+#4916
+grigue~
+um grigue~
+Um grigue está aqui, trabalhando na árvore.
+~
+Ele trabalha duro para o bem-estar da árvore.
+~
+2097154 0 0 0 0 0 0 0 0 E
+3 18 7 2d6+40 1d7+0
+200 800
+8 8 1
+E
+#4917
+grigue~
+uma grigue~
+Uma grigue anda ao redor, supervisionando a ordem da árvore.
+~
+Ela parece preocupada.  Ela anda incessantemente procurando algo errado.
+~
+2097154 0 0 0 0 0 0 0 0 E
+3 18 6 2d6+34 1d7+0
+200 850
+8 8 2
+E
+#4918
+grigue criança~
+uma criança grigue~
+Uma criança grigue está aqui, fazendo algumas tarefas domésticas.
+~
+Ela parece calma, muito mais do que todos os grigues na árvore.
+~
+2097282 0 0 0 0 0 0 0 0 E
+3 19 7 1d10+30 1d4+1
+0 300
+8 8 1
+E
+$

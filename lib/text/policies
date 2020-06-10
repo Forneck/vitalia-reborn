@@ -1,0 +1,511 @@
+{header}
+@B                 __   __   _    ________   ___ o�  __       _     ___
+@W       O MUNDO  @B|  |.' .'.'_| .'_    _.' .' _ `.  |  |    .'_|  .' _ `.
+@W            DE  @B|  ' .'  |  |    |  |   |  ' |  | |  |    |  | |  ' |  |
+@B                |  .'    |  |    |  |   |  .-.  | |  |___ |  | |  .-.  |
+@B                |.'      |_.'    |_.'   |_.' |_.' |____.' |_.' |_.' |_.'@n
+@B ______________________________________________________[@W Livro de Leis @B]_______@n
+
+{index}
+   O Mundo de Vit�lia � jogo aberto e gratuito, mantido por um grupo de
+pessoas que n�o vivem exclusivamente em fun��o dele.  Os mantenedores do
+Mundo de Vitalia (ver @gCREDITS@n), assim como os outros deuses que os ap�iam,
+n�o recebem qualquer tipo remunera��o ou lucro por manterem ou trabalharem
+no jogo.
+
+   Isso significa que, uma vez que voc� n�o paga nada para usufruir deste
+jogo, voc� ter� que, em troca, se submeter a algumas leis aqui
+estabelecidas.  O objetivo destas leis n�o � tornar o jogo restritivo, mas
+sim, garantir que este seja agrad�vel a todos.
+
+   O @Gconhecimento@n e a @Gaceita��o@n das leis aqui apresentadas s�o obrigat�rios
+a todos os jogadores do Mundo de Vit�lia.  Se voc� n�o concorda ou pretende
+desobedecer qualquer uma das leis aqui apresentadas, seu direito de jogar
+no Mundo de Vit�lia est� automaticamente revogado, e voc� deve apagar o seu
+personagem.
+
+   Este livro de leis est� dividido em diversos cap�tulos, conforme
+listados abaixo.  Para ler um determinado cap�tulo, digite o comando @gPOLICY@n
+(ou @gLEIS@n, se seus comandos estiverem em portugu�s) seguido do nome do
+cap�tulo desejado (por ex: @gPOLICY CANAIS@n, ou @gLEIS CANAIS@n).  Voc� pode ler
+todos os cap�tulos de uma �nica vez atrav�s do comando @gPOLICY TUDO@n (ou @gLEIS
+TUDO@n).
+
+@B[@W Cap�tulos @B]@n
+   I. @gP1@n            Parte I: Leis Gerais
+      1. @gOBJETIVO@n      Sobre o objetivo da exist�ncia do Mundo de Vit�lia.
+      2. @gUTILIZACAO@n    Sobre a utiliza��o do jogo e do seu personagem.
+      3. @gRESPEITO@n      Sobre o respeito aos outros jogadores.
+      4. @gDEUSES@n        Sobre a fun��o dos deuses.
+      5. @gCANAIS@n        Sobre os canais de comunica��o.
+      6. @gOBJETOS@n       Sobre objetos e equipamentos.
+      7. @gMAGIAS@n        Sobre o uso de magias.
+      8. @gSCRIPTS@n       Sobre o uso de scripts, triggers e bases de dados.
+      9. @gDEFEITOS@n      Sobre os eventuais defeitos do jogo.
+   II. @gP2@n           Parte II: Leis Espec�ficas
+     10. @gCASAS@n         Sobre o aluguel e o uso das resid�ncias.
+     11. @gFAMILIAS@n      Sobre as fam�lias e uso de sobrenomes.
+     12. @gDESAFIOS@n      Sobre os desafios e aventuras (quests).
+     13. @gCLAS@n          Sobre os cl�s (@gCLAN POLICY@n).
+     14. @gIMORTAIS@n      Sobre os jogadores que atingem a imortalidade.
+
+@G****************************************************************************
+@G @WO MUNDO DE VIT�LIA DEVE SER USADO COMO UM PRIVIL�GIO, N�O COMO UM DIREITO!
+@G****************************************************************************@n
+
+        Tenha um bom jogo!
+{tudo p1}
+                              @RPARTE I@W: LEIS GERAIS@n
+                              @W~~~~~~~~~~~~~~~~~~~~@n
+
+{tudo p1 1 objetivo}
+@B[@W 1. Sobre o objetivo da exist�ncia do Mundo de Vit�lia @B]@n
+
+   O Mundo de Vit�lia foi criado e � mantido com o objetivo de levar
+descontra��o e divers�o sadia a jogadores brasileiros ou que falam a l�ngua
+portuguesa, em um ambiente medieval, podendo se aventurar em busca de
+mundos fant�sticos e travar batalhas �picas contra monstros e outros seres
+poderosos.
+
+   N�o � o nosso objetivo competir com outros MUDs, contudo, manter e
+gerenciar um MUD n�o � uma tarefa f�cil, e damos muito valor ao nosso
+trabalho.  Por isso, exigimos que os jogadores compreendam e respeitem o
+nosso trabalho.
+
+   N�o permitimos a divulga��o de nomes ou endere�os de outros MUDs ou
+jogos aqui, seja publicamente ou em mensagens privadas.  Tamb�m n�o
+desejamos que ningu�m divulgue o Mundo de Vit�lia em outros MUDs.
+
+   Esperamos que todos os jogadores do Mundo de Vit�lia tenham um objetivo
+compat�vel ao nosso, de procurar descontra��o e divers�o, sem prejudicar a
+divers�o de outros jogadores.
+
+{tudo p1 2 utilizacao}
+@B[@W 2. Sobre a utiliza��o do jogo e do seu personagem @B]@n
+
+   Cada jogador tem direito a apenas um personagem no jogo, e cada
+personagem s� pode ser usado por um �nico jogador.  Cada jogador deve
+cuidar para que sua senha n�o seja descoberta e seu personagem n�o seja
+usado por outras pessoas.  Tamb�m � proibido ceder personagens a outros
+jogadores.
+
+   A dele��o do seu personagem indica sua desist�ncia do jogo.  Voc� n�o
+ter� benef�cios caso queira "trocar" de personagem.  Se voc� insistir na
+troca, considere seu personagem antigo como morto.  N�o ser� aceita a
+transfer�ncia de objetos e/ou n�veis.
+
+   Para manter o seu personagem no jogo, voc� precisa acessar e se
+identificar regularmente, caso contr�rio, voc� corre o risco de perder seus
+objetos ou at� mesmo o personagem por inatividade, pois o servidor faz uma
+limpeza peri�dica das bases de dados.  O tempo de ociosidade necess�rio
+para que um personagem seja considerado inativo e apagado do sistema varia
+de acordo com o n�vel e o n�mero de encarna��es.  Se voc� tiver que se
+afastar do jogo por algum tempo, avise-nos para que possamos configurar seu
+personagem para que n�o seja apagado automaticamente.
+
+   Seu personagem tem o livre-arb�trio no jogo para fazer qualquer coisa
+que n�o � abordada direta ou indiretamente neste livro de leis, levando em
+considera��o o bom-senso.
+
+{tudo p1 2 2a utilizacao}
+@G2.a. Nome do seu personagem.@n
+   Uma vez que o tema do jogo � medieval, e o idioma padr�o � o portugu�s,
+o nome de todos os jogadores devem estar dentro deste tema e devem ser
+pronunci�veis na l�ngua portuguesa.  A primeira verifica��o dessa lei �
+feita logo na cria��o do personagem, onde este ser� rejeitado se o nome n�o
+for adequado.
+
+   Note que o Mundo de Vit�lia n�o � um messenger ou uma sala de bate-papo. 
+Mesmo que voc� seja conhecido por um determinado apelido em outras
+comunidades na Internet, isso n�o significa que voc� poder� usar o mesmo
+nome aqui, especialmente se tal nome n�o for adequado ao tema do jogo.
+
+{tudo p1 2 2b utilizacao}
+@G2.b. Multi-conex�o.@n
+   A cada conex�o f�sica com a Internet � associado um n�mero distinto, que
+chamamos de endere�o IP.  Isso significa que dois acessos ter�o o mesmo
+endere�o IP somente se ambos forem realizadas atrav�s da mesma conex�o
+f�sica com a Internet.
+
+   Para garantir que cada jogador tenha apenas um personagem no jogo, n�s
+fazemos uma verifica��o simples, baseada no endere�o IP de cada acesso.
+
+   Contudo, h� casos em que uma �nica conex�o f�sica � compartilhada por
+dois ou mais computadores, como � o caso de empresas, redes dom�sticas,
+lan-houses e algumas escolas ou universidades.
+
+   Nestes casos, n�s permitimos que mais de uma pessoa acesse o Mundo de
+Vit�lia atrav�s da mesma conex�o, mas para isso, n�s precisamos ser
+informados que voc� estar� acessando atrav�s de uma rede local.  Voc�
+dever� enviar um e-mail para @Bajuda@mud.linkway.com.br@n solicitando uma
+autoriza��o para multi-conex�o, informando que tipo de rede se trata e
+quais os jogadores que ir�o acessar atrav�s da conex�o.
+
+{tudo p1 3 respeito}
+@B[@W 3. Sobre o respeito aos outros jogadores @B]@n
+
+   Todo jogador deve respeitar o pr�ximo, independente de sexo, classe,
+posi��o ou experi�ncia de jogo.  O uso de palavras ofensivas ou de baixo
+cal�o em qualquer canal � considerado desrespeito e n�o ser� tolerado.
+
+   N�o � permitido ofender, depreciar, aborrecer ou incomodar outros
+jogadores.  Mesmo que voc� esteja interpretando o seu personagem, se um
+outro jogador para o qual voc� se dirigiu se sentir incomodado com as suas
+palavras ou atitudes, voc� dever� se abster da palavra ou das atitudes para
+o jogador em quest�o.
+
+   Tamb�m � considerado desrespeito usar magias como 'summon', 'word of
+recall', 'portal' ou 'teleport' em outros jogadores sem sua permiss�o.
+
+   Quando for jogar no Mundo de Vit�lia, traga consigo a educa��o.
+
+{tudo p1 3 3a respeito}
+@G3.a. Roubo e assassinado de outros personagens.@n
+   O Mundo de Vit�lia � um mundo civilizado, sendo portanto um lugar onde
+existem leis claras e que devem ser seguidas por todos, indistintamente. 
+Se voc� atacar ou roubar personagens, ter� que arcar com as consequ�ncias
+dos seus atos, pois ter� se tornado um criminoso.
+
+   Como criminoso, voc�: recebe uma flag de @RASSASSINO@n ou @RLADR�O@n, vis�vel a
+todos os jogadores atrav�s do comando @gWHO@n e passar� a receber uma
+quantidade muito menor de experi�ncia, bem como ter� sua capacidade de luta
+reduzida durante futuras batalhas.  Alem disso tudo, ainda ser� atacado
+pelos mobs que fazem a seguran�a das cidades.
+
+   Se houver um deus presente no momento do crime, este ir� transfer�-lo
+para ouvir seus argumentos e ir� ent�o julgar seus atos e seu futuro.  Caso
+ele n�o o perdoe, voc� ser� punido em acordo com a senten�a proferida pelo
+deus em quest�o.  Se n�o houverem deuses presentes no momento, e se o
+jogador tiver de fato agido de m� f�, ser� permitido aos outros jogadores
+presentes atacarem ou lan�arem qualquer magia nos eventuais criminosos, sem
+nenhuma puni��o por isso.
+
+{tudo p1 4 deuses}
+@B[@W 4. Sobre a fun��o dos deuses @B]@n
+
+   Os deuses, de certa forma, tamb�m s�o jogadores no Mundo de Vit�lia. 
+Contudo, lhes s�o atribu�das grandes responsabilidades e concedidos grandes
+poderes para que possam zelar pelo jogo, guiar os jogadores inexperientes e
+punir os jogadores que perturbam a boa jogabilidade.
+
+   O desenvolvimento normal do jogo n�o deve ter a interven��o dos deuses,
+portanto, mesmo quando presentes os deuses permanecem invis�veis a maior
+parte do tempo.
+
+   O trabalho dos deuses � dif�cil, e � esperado uma compreens�o por parte
+dos jogadores quanto a isso.  N�o chame a aten��o dos deuses
+desnecessariamente.  Quando se dirigir a um deus, evite o uso de g�rias ou
+vocabul�rio pobre.  Seja objetivo e conciso para que o seu problema seja
+solucionado mais rapidamente.
+
+   A palavra de um Deus Legislador ou superior prevalece sobre todas as
+leis descritas neste livro.
+
+{tudo p1 5 canais}
+@B[@W 5. Sobre os canais de comunica��o @B]@n
+
+   O Mundo de Vitalia fornece diversos canais de comunica��o, cada um deles
+� destinado a um determinado tipo de comunica��o.  Dessa forma, os
+jogadores que n�o desejarem receber um determinado tipo de comunica��o pode
+facilmente desligar o canal correspondente.
+
+   Os canais p�blicos de comunica��o s�o:
+   - GOSSIP:  Mensagens gen�ricas, relativas ao jogo.
+   - GRATS:   Para anunciar ganhos de n�veis, e para parabenizar outros
+              jogadores.
+   - AUCTION: Para promover leil�o de objetos.
+   - SHOUT:   Para comunica��o com jogadores na mesma �rea que voc�.
+   - CLAN:    Para comunica��o com outros membros do seu cl�.
+   - QUEST:   Para comunica��o com os participantes da aventura atual.
+
+   Procure enviar apenas mensagens adequadas para cada canal.  Ao enviar
+atrav�s de um canal mensagens cujo contexto n�o � compat�vel com o do canal
+voc� pode estar atrapalhando jogadores que gostariam de n�o receber tais
+mensagens.
+
+{tudo p1 5 5a canais}
+@G5.a. O tema medieval.@n
+   O Mundo de Vitalia foi criado sobre um tema medieval, de forma a fazer
+com que os jogadores se sintam realmente vivendo uma aventura em uma �poca
+medieval.
+
+   As conversas p�blicas n�o devem distanciar muito deste tema e assuntos
+que nada tem a ver com o tema devem ser ditas usando os canais privados:
+TELL e GTELL.
+
+   S�o proibidas as conversas p�blicas sobre assuntos que podem ofender
+outros jogadores, como religi�o.  Como alguns dos jogadores do Mundo de
+Vit�lia s�o muito jovens, conversas sobre temas maduros tamb�m s�o
+proibidas.
+
+{tudo p1 5 5b canais}
+@G5.b. Canal PRAY.@n
+   O canal PRAY foi criado para que jogadores pudessem enviar mensagens para
+os deuses, expondo problemas onde a interven��o destes fosse necess�ria.
+Todas as mensagens enviadas por este canal s�o mostradas imediatamente a
+todos os deuses que est�o conectados, e s�o gravadas para que todos os
+deuses as vejam e possam cuidar de cada caso.
+
+   N�o se deve usar o canal PRAY simplesmente para chamar a aten��o dos
+deuses, ou enviar mensagens sem conte�do.  N�o espere o atendimento imediato
+de um deus para a mensagem que voc� enviar pelo canal PRAY, pode ser que n�o
+haja um deus dispon�vel no momento.
+
+   Se voc� se tornar assassino ou ladr�o (conforme descrito no cap�tulo 3) e
+desejar o perd�o divino, envie apenas uma mensagem explicando o erro
+cometido.
+
+   N�o repita o seu problema no canal, diga-o apenas uma vez.  Lembre-se que
+as mensagens s�o gravadas e depois revistas.  S� envie denovo o seu problema
+se se passarem 12 horas sem receber nenhuma ajuda ou resposta.
+
+{tudo p1 6 objetos}
+@B[@W 6. Sobre objetos e equipamentos @B]@n
+
+   Os equipamentos forjados pelos deuses n�o podem ser doados, emprestados,
+vendidos ou identificados por outros jogadores.  O equipamento deve ser
+considerado como um trof�u que pertence apenas ao aventureiro.  Esses
+equipamentos, se forem perdidos em armadilhas, poder�o ser devolvidos no
+m�ximo duas vezes.
+
+   A quantidade de objetos que o MUD carrega � limitada, para evitar o
+supercarregamento de objetos e a desvaloriza��o de objetos raros.  Qualquer
+tentativa de contornar esse limite, incluindo "empr�stimos" ou outras formas
+de tirar objetos do jogo com essa finalidade, ser� rigorosamente punida.
+
+{tudo p1 7 magias}
+@B[@W 7. Sobre o uso de magias @B]@n
+
+   Os jogadores devem empregar as magias que lhes s�o poss�veis usar de
+forma respons�vel e s�bia.  � expressamente proibido lan�ar magias em
+personagens de nivel muito inferior.
+
+   Esse tipo de prote��o torna o jogador extremamente forte e, sendo ele de
+n�vel mais baixo, n�o s� atrapalha sua evolu��o e aprendizado no jogo, como
+tamb�m o torna viciado prematuramente em magias fortes.
+
+   Visando o equil�brio do jogo, o limite estipulado � o mesmo para a
+forma��o de grupo: 15 n�veis de diferen�a.  Ou seja: S� lance magias em um
+jogador com no m�ximo 15 n�veis a menos que voc�.  Acima desse limite, n�o
+pode e n�o deve.
+
+{tudo p1 8 scripts}
+@B[@W 8. Sobre o uso de scripts, triggers e bases de dados @B]@n
+
+   Alguns clientes de MUD permitem o uso de scripts ou triggers para
+automatizar as a��es de seu personagem.  O uso destes recursos, para
+qualquer finalidade, � proibido.
+
+   N�o recomendamos o uso de caminhos prontos ou "speedwalks".  Esse � um
+recurso perigoso, pois um caminho pode mudar, ou voc� pode ter problemas
+com alguma passagem fechada, e acabar terminando o trajeto em um lugar
+inesperado, possivelmente colocando em risco a sua vida.
+
+   N�o permitimos a distribui��o ou uso de caminhos tra�ados ou arquivos
+contendo informa��es ou identifica��es dos objetos ou monstros do jogo.  Se
+voc� quiser, voc� poder� criar os seus arquivos ou caminhos, mas a partir
+do momento que soubermos que voc� distribuiu ou usou arquivos feitos por
+outro jogador, poder� perder o direito de jogar aqui.
+
+   Estes recursos tomam do jogador o sabor do jogo, da aventura, e os
+tornam dependentes.  Entenda tamb�m que o MUD foi constru�do para voc�
+jogar, n�o o seu computador.
+
+{tudo p1 9 defeitos}
+@B[@W 9. Sobre os eventuais defeitos do jogo. @B]@n
+
+   O Mundo de Vit�lia est� sempre em constante atualiza��o.  Durante a
+programa��o do MUD, assim como qualquer outro programa de computador,
+alguns defeitos e incoer�ncias s�o inadvertidamente deixados.  Estes
+defeitos s�o chamados @Wbug@ns.
+
+   � proibido utilizar-se destes eventuais defeitos para benef�cio pr�prio
+ou de outros.  A puni��o ser� a exclus�o definitiva do seu personagem no
+jogo, sem possibilidades de se criar novos personagens.
+
+   Se voc� encontrar um bug, alguma coisa aparentemente errada no jogo como
+uma magia ou arma com dano muito alto, um monstro que esteja dando
+experi�ncia desproporcional � sua dificuldade, algum comando que fa�a o
+servidor cair, ou qualquer outro problema que o seu bom-senso perceber,
+avise-nos atrav�s do comando @gBUG@n.  Problemas mais graves tamb�m devem ser
+comunicados atrav�s do canal @gPRAY@n.
+
+{tudo p2}
+                           @RPARTE II@W: LEIS ESPEC�FICAS@n
+                           @W~~~~~~~~~~~~~~~~~~~~~~~~~~@n
+
+{tudo p2 10 casas}
+@B[@W 10. Sobre o aluguel e o uso das resid�ncias. @B]@n
+
+   Casas s�o lugares especiais, lares de nobres aventureiros, capazes de
+sustentar seu pr�prio lugar para morar.  Uma casa pode lhe oferecer v�rios
+benef�cios, mas tamb�m traz algumas obriga��es.
+
+   Uma casa oferece v�rios benef�cios, tais como um lugar tranq�ilo e
+protegido para se descansar, pr�ximo de sua cidade e um espa�o para guardar
+objetos de valor, ou que n�o se deseja carregar durante suas explora��es. 
+Uma casa tamb�m pode ser compartilhada com mais dois h�spedes, e pode ser
+decorada com janelas, arm�rios, ba�s e outros utens�lios.
+
+{tudo p2 10 10a casas}
+@G10.a. Obriga��es do locat�rio.@n
+   Para possuir uma casa, o locat�rio deve ter como cidade natal a cidade
+onde sua casa ser� constru�da.  Cada jogador pode ter apenas uma casa no
+Mundo de Vit�lia.  Voc� pode mudar de cidade somente se n�o possuir uma
+casa ou caso haja casas dispon�veis em outra cidade.
+
+   O locat�rio deve pagar regularmente o aluguel, que � debitado
+automaticamente da sua conta banc�ria a cada 30 dias reais.  Caso n�o haja
+saldo suficiente, o locat�rio ser� avisado e � dado o prazo de uma semana
+para o pagamento, ap�s esse per�odo o aluguel ser� cancelado, todos os
+pertences ser�o destru�dos e a casa ficar� a disposi��o de outro locat�rio.
+
+   O aluguel inicial, para a obten��o da casa � 2.000.000 moedas de ouro. 
+O valor do aluguel mensal varia de acordo com a cidade onde a casa foi
+constru�da.
+   - Midgaard:          1.000.000 moedas de ouro;
+   - Nova Thalos:         500.000 moedas de ouro.
+
+   Cada utens�lio custa 100.000 moedas, cobrado apenas uma vez na
+solicita��o de sua compra.
+
+{tudo p2 10 10b casas}
+@G10.b. Solicita��o de aluguel de casa.@n
+   Para solicitar o aluguel de uma casa, voc� deve enviar uma mensagem de
+e-mail para @Bajuda@mud.linkway.com.br@n fazendo o pedido, fornecendo
+claramente o seu nome no jogo.
+
+   Mantenha em sua conta banc�ria a quantia necess�ria para o pagamento do
+primeiro aluguel, que � feito na entregua da casa.  Por seguran�a, a
+mensagem deve ser enviada pelo mesmo endere�o de e-mail cadastrado no seu
+personagem.
+
+   Nem sempre h� casas dispon�veis na sua cidade natal.  Nesse caso, �
+poss�vel mudar de cidade para adquirir uma casa.  Caso n�o esteja disposto
+a mudar de cidade, voc� pode entrar na lista de espera por casas em sua
+cidade.
+
+   Voc� pode tamb�m optar por mudar de cidade, e, ao mesmo tempo, entrar na
+lista de espera por casas onde desejar, por�m h� algumas desvantagens: os
+jogadores que n�o possuem casas possuem privil�gio diante daqueles que
+possuem em outras cidades; e os gastos da constru��o e imposto devem ser
+pagos novamente.
+
+{tudo p2 10 10c casas}
+@G10.c. Armazenamento de objetos.@n
+   A capacidade m�xima de uma casa � 60 objetos, incluindo as mob�lias.  O
+controle � feito automaticamente pelo MUD.  Qualquer tentativa de driblar
+esse limite leva o locat�rio a perder a casa.
+
+   N�o � permitido guardar chaves dentro da casa.  � permitido guardar no
+m�ximo dois objetos iguais na casa; sendo permitido guardar po��es,
+pergaminhos, comida e objetos forjados pelos deuses em qualquer quantidade.
+
+   Entende-se por objetos iguais aqueles que possuem o mesmo nome.  Sendo
+assim, objetos com o mesmo nome que possuem n�veis ou atributos diferentes
+s�o considerados iguais.
+
+   Se forem encontrados objetos n�o permitidos dentro das casas, estes
+ser�o confiscados e n�o ser�o devolvidos em hip�tese alguma.  Reincid�ncias
+gerar�o pesadas multas e o locat�rio pode vir a perder o direito de possuir
+uma casa.
+
+   A obriga��o de manter a casa organizada e dentro das leis � unicamente
+do locat�rio da casa.
+
+{tudo p2 10 10d casas}
+@G10.d. Cancelamento do aluguel.@n
+   Se o locat�rio n�o acessar o jogo com freq��ncia e n�o mantiver a
+quantia necess�ria para o pagamento do aluguel em sua conta banc�ria, o
+aluguel ser� cancelado, e todo o conte�do ser� destru�do.  Certifique-se de
+manter a quantia necess�ria em sua conta banc�ria se precisar se afastar do
+jogo por um longo tempo.
+
+   Jogadores imortais n�o podem possuir casas, portanto, antes de se tornar
+imortal o locat�rio da casa deve solicitar o cancelamento do aluguel da
+casa para evitar maiores complica��es.
+
+   As casas cujos alugu�is foram cancelados ser�o disponibilizadas aos
+jogadores que est�o na lista de espera.  N�o � poss�vel transferir o
+aluguel de uma casa para outro jogador, mesmo que seja h�spede da casa.
+
+   O jogador que utilizar sua casa de forma ilegal, alem de ser punido
+conforme definido pelos deuses, perder� a casa com todos os equipamentos. 
+Quaisquer vantagens adquiridas atrav�s das casas que n�o estejam entre as
+informadas aqui podem ser consideradas como BUGs.
+
+{tudo p2 11 familias}
+@B[@W 11. Sobre as fam�lias e uso de sobrenomes. @B]@n
+
+   O Mundo de Vit�lia permite que seus jogadores formem fam�lias,
+associando assim um sobrenome aos seus personagens.
+
+   Cada grupo familiar dever� estipular um Patriarca ou Matriarca, sendo
+que este ser� o respons�vel pela fam�lia.  Para formar uma nova fam�lia s�o
+necess�rios 3 membros iniciais al�m de o respons�vel ter chego ao n�vel 50
+da primeira encarna��o, no m�nimo.  A cria��o da fam�lia � gratuita.
+
+   A partir do momento em que uma familia � criada, cria-se o compromisso
+de manter sempre, no m�nimo, 3 membros na fam�lia.  Fam�lias com menos que
+3 membros correr�o o risco de serem apagadas.
+
+   Os novos membros ser�o aplicados mediante uma carta que deve ser enviada
+tanto a partir do novo membro, aceitando a sua ado��o na fam�lia, como do
+patriarca ou matriarca da fam�lia, que pedir� a ado��o deste novo membro na
+sua fam�lia.  Ambas as cartas dever�o ser enviadas para o atual Deus
+respons�vel pelas fam�lias.  Novos membros somente poder�o ser inclu�dos na
+fam�lia se estiverem, no m�nimo, no n�vel 10.
+
+   Al�m do sobrenome, cada fam�lia poder� criar duas salas, sendo uma de
+acesso p�blico e uma privada, para os encontros familiares, uma esp�cie de
+confraria.  Para que a constru��o possa ser realizada dois dos membros
+desta fam�lia devem ter renascido.
+
+   Ap�s ser adotado em uma fam�lia, n�o ser� permitida a ado��o em nenhuma
+outra fam�lia.
+
+{tudo p2 12 desafios quests}
+@B[@W 12. Sobre os desafios e aventuras (quests). @B]@n
+
+   Eventualmente, os deuses do Mundo de Vit�lia promovem desafios e
+aventuras (quests) para promover a divers�o e a interpreta��o de seus
+personagens em um mundo medieval, como em um verdadeiro RPG de mesa.
+
+   Nos desafios e aventuras, assim como em nosso dia a dia, � muito
+importante manter o respeito entre os jogadores e aos Deuses.  Sempre que
+um desafio for lan�ado pelos deuses, voc� deve observar e respeitar as
+instru��es espec�ficas que aquele desafio esteja requerendo.
+
+   Ao entrar em um desafio, procure sempre interpretar o seu personagem,
+entrando no clima que est� sendo proposto.  Se n�o quiser ou n�o for capaz,
+procure n�o atrapalhar os que quiserem viver de fato seus personagens.
+
+{tudo p2 13 clas}
+@B[@W 13. Sobre os cl�s. @B]@n
+
+   Os cl�s possuem um livro de leis pr�prio, que voc� pode ler atrav�s do
+comando @gCLAN POLICY@n (ou @gCLA LEIS@n).  Cada cl� tamb�m possui um livro de leis
+pr�prio, que voc� poder� consultar se fizer parte do cl�, ou entrando em
+contato com um dos l�deres do cl�.
+
+{tudo p2 14 imortais}
+@B[@W 14. Sobre os jogadores que atingem a imortalidade. @B]@n
+
+   Ao atingir o cent�simo n�vel e obter toda a experi�ncia poss�vel em sua
+vida como mortal, o seu personagem ir� transcender, isto �, n�o h� mais
+nada que ele possa aprender com batalhas nessa vida.
+
+   Neste ponto, o jogador pode escolher entre reencarnar, come�ando assim
+uma nova vida de mortal em uma classe diferente para obter novas
+experi�ncias, ou se elevar, tornando-se imortal, caso o personagem j� tenha
+passado por quatro encarna��es ou mais.
+
+   Tornando-se imortal, seu personagem ter� poderes muito maiores do que os
+outros personagens mortais, e tais poderes devem ser usados de forma s�bia. 
+H� um livro de leis pr�prio para os jogadores imortais.  Ao se tornar
+imortal, a primeira coisa que voc� dever� fazer � digitar o comando
+@gHANDBOOK@n e ler cuidadosamente suas instru��es.
+
+   Provavelmente, ao tornar-se imortal, um deus ir� cham�-lo para lhe
+passar instru��es adicionais e sanar quaisquer d�vidas.  Se isso n�o
+acontecer, solicite atrav�s do canal PRAY.

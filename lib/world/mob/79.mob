@@ -1,0 +1,45 @@
+#7900
+paladino grande cavaleiro~
+o Grande Cavaleiro dos Paladinos~
+O Grande Cavaleiro está de pé aqui, esperando alguém para ajudar.
+~
+O Cavaleiro está aqui, sorrindo para você.  Ele está todo vestido de branco,
+azul e prateado.  Ele parece ser MUITO forte. E está aqui, pronto a ajudar os
+inocentes.
+~
+2124070 0 0 0 2320 0 0 0 1000 E
+26 0 -2 10d8+550 2d6+16
+31570 170000
+8 8 1
+E
+#7901
+rato grande~
+o grande rato~
+Há um grande rato aqui, passando através dos víveres que aqui estão.
+~
+O rato tem aproximadamente sessenta centímetros medidos da cabeça à cauda
+e tem garras do tamanho de seus dedos, mostrando-se muito asqueroso.
+Ele parece bastante ocupado mastigando todos os víveres que estão espalhados
+pela sala.
+~
+2097186 0 0 0 2048 0 0 0 -800 E
+12 9 2 1d10+150 2d6+2
+2513 13000
+8 8 0
+E
+#7902
+cutelo~
+o Cutelo~
+O Cutelo está olhando para você com ar faminto, na expectativa de que você
+sirva de próxima refeição a ele.
+~
+O Cutelo é uma grande criatura parecida com uma aranha, com quatro grandes
+braços terminados em garras parecidas com um cutelo de açougueiro, que
+certamente irão cortar você em pequenas tiras.
+~
+2353264 0 0 0 67856 0 0 0 0 E
+20 3 -1 5d8+340 8d4+4
+2000 65000
+8 8 0
+E
+$

@@ -1,0 +1,154 @@
+#4000
+anel amarelo verde~
+um anel amarelo e verde~
+Um anel está aqui, com ornamentos em amarelo e verde.  Ele parece muito antigo.~
+~
+9 dhq 0 0 0 ab 0 0 0 0 0 0 0
+0 0 0 0
+1 50 20 0 0
+E
+anel amarelo verde~
+Você sente que ele é muito pesado.
+~
+A
+1 -2
+#4001
+corpo goblin~
+um corpo de goblin~
+Um corpo de goblin em estado de putrefação está aqui, exalando um terrível mau cheiro~
+~
+15 0 0 0 0 a 0 0 0 0 0 0 0
+1 0 -1 0
+20 0 500 0 0
+#4002
+moeda moedas~
+algumas moedas~
+Um punhado de moedas está jogado no chão.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+500 0 0 0
+5 0 0 0 0
+#4050
+poção púrpura~
+uma poção púrpura~
+Uma poção púrpura está aqui.~
+~
+10 0 0 0 0 ao 0 0 0 0 0 0 0
+17 14 36 33
+1 35500 2000 0 0
+E
+poção púrpura~
+Ela parece muito estranha!
+~
+#4051
+elmo metal~
+um elmo de metal~
+Um elmo de metal jogado por aqui.~
+~
+9 g 0 0 0 ae 0 0 0 0 0 0 0
+-5 0 0 0
+4 3000 100 0 0
+E
+elmo metal~
+Ele parece ter algo de mágico!
+~
+A
+24 -2
+A
+23 -2
+#4052
+cogumelo~
+um cogumelo~
+Um pequeno cogumelo está aqui.~
+~
+19 0 0 0 0 ao 0 0 0 0 0 0 0
+2 0 0 1
+1 9 3 0 0
+E
+cogumelo~
+Vejamos assim... - Eu NÃO comeria isso!!!
+~
+#4053
+punhal~
+um punhal de ladrão~
+Um punhal belamente forjado foi deixado aqui.~
+~
+5 np 0 0 0 an 0 0 0 0 0 0 0
+0 2 4 11
+2 850 500 0 0
+E
+punhal~
+É um punhal de tamanho médio, belamente forjado de uma liga mertálica 
+cinzenta.   Sua lâmina tem duas pontas muito finas.. esta parece ser uma 
+boa arma de ladrões.
+~
+A
+18 1
+A
+19 1
+#4100
+lâmina negra demônio~
+uma lâmina do demônio negro~
+Uma lâmina do demônio negro está aqui.~
+~
+5 jlm 0 0 0 an 0 0 0 0 0 0 0
+0 3 4 11
+8 10000 800 0 0
+E
+lâmina negra demônio~
+Você se tornará tão mau quanto a arma se vier a usá-la, pois você sente forças
+malígnas controlando a arma...
+~
+#4101
+luvas espadachim~
+Um par de luvas de espadachim~
+Um par de belíssimas luvas feitas a mão está jogado no chão aqui.~
+~
+9 j 0 0 0 ah 0 0 0 0 0 0 0
+0 0 0 0
+1 3500 800 0 0
+E
+luvas espadachim~
+Elas parecem ser o equipamento correto para se usar numa luta.
+~
+A
+18 2
+A
+19 1
+#4102
+pergaminho ysafg~
+um pergaminho onde se lê 'ysafg'~
+Um pergaminho onde se lê 'ysafg', ele parece muito frágil e bastante antigo.~
+~
+2 0 0 0 0 a 0 0 0 0 0 0 0
+1 53 -1 -1
+1 1500 10 0 0
+E
+pergaminho ysafg~
+Ele parece instrutivo.
+~
+#4103
+limo mofado mofo verde~
+Um limo verde e mofado~
+Um limo verde e mofado está aqui.  Você não acredita o quanto isso fede!~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+24 0 0 0
+1 20 8 0 0
+E
+limo mofado mofo verde~
+Isso não parece ser comida -- ao menos não para humanos.
+~
+#4104
+limo mofado mofo verde~
+Um limo verde e mofado~
+Um limo verde e mofado está aqui.  Você não acredita o quanto isso fede!~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+24 0 0 1
+1 20 8 0 0
+E
+limo mofado mofo verde~
+Isso não parece ser comida -- ao menos não para humanos.
+~
+$~

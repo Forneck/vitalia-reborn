@@ -1,0 +1,1218 @@
+#9800
+A Entrada do Abismo~
+   Você foi transportado para entrada de um estranho abismo negro.  Uma
+grande escuridão invade esse local.  Você pode ver para baixo um buraco, que
+talvez seja sua única saída.
+~
+98 73 0 0 0 0
+D0
+Um pequeno buraco no chão. Nada é possivel se ver além da escuridão.
+~
+~
+0 -1 9801
+S
+#9801
+Um Buraco no Chão~
+   Você está dentro de um buraco no chão.  Parece não haver nada aqui alem
+da escuridão.  A leste você vê um buraco na parede e para baixo o buraco no
+chão continua, estranhamente não é mais possivel ver o buraco na parte de
+cima de onde você saiu.
+~
+98 262473 0 0 0 0
+D0
+Um pequeno e estreito buraco no chão.
+~
+~
+0 -1 9803
+S
+#9802
+Um Buraco na Parede~
+   Você está dentro de um buraco na parede.  Parece não haver nada aqui alem
+da escuridão.  A oeste você retorna.
+~
+98 262473 0 0 0 0
+D0
+Um pequeno buraco no chão.  Nada é possivel se ver além da escuridão.
+~
+~
+0 -1 9801
+S
+#9803
+Um Pequeno Buraco no Chão~
+   Você está dentro de um buraco cavado no chão, que parece ter muitos
+séculos de vida.  Este buraco continua a descer pela escuridão e para cima
+parece retornar ao inicio.
+~
+98 262473 0 0 0 0
+D0
+Um pequeno buraco no chão. Nada é possivel se ver além da escuridão.
+~
+~
+0 -1 9804
+S
+#9804
+Um Pequeno Buraco no Chão~
+   Você está dentro de um buraco cavado no chão, que parece ter muitos
+séculos de vida.  É possível ver que para baixo este buraco continua a
+descer pela escuridão, dando a impressão de nunca ter fim e para cima parece
+retornar ao inicio desse buraco.
+~
+98 262473 0 0 0 0
+D0
+Um pequeno buraco no chão. Nada é possivel se ver além da escuridão.
+~
+~
+0 -1 9805
+S
+#9805
+Fim da Descida~
+   Você chegou ao fim da descida, talvez fosse melhor repensar se realmente
+vale a pena entrar nesse local misterioso.  A leste você vê uma porta feita
+em ferro, com aparência muito antiga e que contém algumas inscrições.
+Talvez seja melhor você ler isto antes de entrar.  Para cima você retorna ao
+buraco de onde saiu.
+~
+98 73 0 0 0 0
+D0
+Uma enorme porta de ferro, aparentemente muito antiga e pesada.  É impossivel
+imaginar o que pode existir por de trás dela.
+~
+porta ferro~
+1 -1 9806
+E
+inscrição inscrições~
+As inscrições foram feitas usando aparentemente um liquido vermelho, como se
+fosse...sangue !!! E diz  &R " Afaste-se enquanto há tempo" &n .
+~
+S
+#9806
+A Porta de Entrada~
+   Você está atravessando a porta de entrada desse local horripilante.  Não
+é possivel mais voltar a partir daqui, a porta pelo qual você passou some
+como em um passe de mágica.  Sua única saída é a leste onde há um pequeno
+corredor.
+~
+98 73 0 0 0 0
+D0
+Um pequeno corredor. Nada é possivel se ver além da escuridão.
+~
+~
+0 -1 9807
+S
+#9807
+Um Pequeno Corredor~
+   Você está dentro de um pequeno corredor sombrio e frio, as paredes aqui
+são feitas de pedras com aparência ancestral.  A oeste fica a porta de
+entrada e a leste parece ser o fim do corredor.
+~
+98 73 0 0 0 0
+D0
+Parece ser o fim do corredor, mas a escuridão confunde seus olhos.
+~
+~
+0 -1 9808
+S
+#9808
+Fim do Corredor~
+   Você está no fim do corredor, daqui é possível ver que há um canil ao
+norte, uma pequena passagen ao sul e a oeste existe um corredor.
+~
+98 73 0 0 0 0
+D0
+Uma pequena passagem e sombria passagem.
+~
+~
+0 -1 9810
+S
+#9809
+O Canil~
+   Este é o grande canil do guardião do abismo.  Você sente um cheiro forte
+de carne, provavelmente esse cãozinho deve ser alimentado somente com carne.
+Você só vê uma saída a sul.
+~
+98 73 0 0 0 0
+D0
+O fim do pequeno corredor.
+~
+~
+0 -1 9808
+S
+#9810
+Uma Pequena Passagem~
+   Você está numa pequena passagem, a cada passo é possivel sentir que o mal
+impera nesse lugar.  Ao sul continua adentrar no desconhecido e a norte você
+retorna.
+~
+98 73 0 0 0 0
+D0
+Só é possivel ver a continuação dessa pequena passagem.
+~
+~
+0 -1 9811
+S
+#9811
+Uma Pequena Passagem~
+   Dentro dessa pequena passagem tudo é muito escuro, assim com todo esse
+local.  Ao norte você retorna, leste você vê um buraco lateral e ao sul
+existe uma sala aparentemente quente.
+~
+98 73 0 0 0 0
+D0
+Um buraco na parte lateral que parece ter sido escavado a muitos séculos
+atrás, alem de ser muito apertado.
+~
+~
+0 -1 9812
+S
+#9812
+Um Buraco Lateral~
+   Aqui você está dentro desse buraco apertado.  A oeste e possível ver uma
+pequena passagem, a leste você pode ver um sala bastante grande.
+~
+98 262473 0 0 0 0
+D0
+Um lugar aparentemente muito grande para uma pessoa normal.  Depois de sair
+desse aperto talvez seja até confortavél.
+~
+~
+0 -1 9814
+S
+#9813
+Uma Sala Ardente~
+   Você está numa sala muito quente, é possivel ver que labaretas de fogo
+surgem do chão.  Ao norte você retorna e ao sul você pode ver enormes chamas
+de fogo ardente, talvez não seja uma boa opção continuar.
+~
+98 73 0 0 0 0
+D0
+Um calor intenso e enormes labaredas de fogo, capazes de derreter a mais
+resistente das armaduras.
+~
+~
+0 -1 -1
+S
+#9814
+Uma Sala Gigantesca~
+   Está é uma sala gigante, tudo aqui é muito grande.  É possivel ver
+enormes pegadas no chão.  A oeste você pode ver um buraco lateral e a leste
+a um desvio.
+~
+98 73 0 0 0 0
+D0
+Parece ser um desvio onde seu caminho se divide.
+~
+~
+0 -1 9815
+S
+#9815
+O Desvio~
+   Este desvio parece levar para uma parte pouco explorada.  Nada se pode
+ver além de pedras muito antigas.  Para cima existe um buraco superior e
+para leste um buraco lateral estreito e para oeste está uma sala gigantesca.
+~
+98 73 0 0 0 0
+D0
+A continuação do buraco lateral que volta a ser muito apertado.
+~
+~
+0 -1 9824
+S
+#9816
+Um Buraco Superior~
+   Você está dentro de um buraco estreito num nivel superior.  Tudo aqui é
+muito apertado, esse buraco parece ter sido cavado a séculos e mais séculos.
+   A leste o buraco continua e para baixo está o desvio.
+~
+98 262473 0 0 0 0
+D0
+A continuação do buraco estreito, talvez fosse melhor retornar.
+~
+~
+0 -1 9817
+S
+#9817
+O Buraco Estreito~
+   Este buraco parece ser longo e muito estreito.  A leste e a oeste o
+buraco continua.
+~
+98 262473 0 0 0 0
+D0
+Muito escuro para se ver.
+~
+~
+0 -1 9818
+S
+#9818
+O Buraco Estreito~
+   Você continua a se arrastar por dentro desse buraco estreito.  Existe uma
+passagem acima e a oeste parece retornar para o inicio do buraco.
+~
+98 262473 0 0 0 0
+D0
+Muito escuro e muito apertado.
+~
+~
+0 -1 9819
+S
+#9819
+O Buraco Estreito~
+   Esse buraco parece não ter fim, a medida que você anda o cansaço toma
+conta de seu corpo.  Para baixo existe um buraco que parece retornar e para
+leste você adentar ainda mais.
+~
+98 262473 0 0 0 0
+D0
+Muito escuro e apertado.
+~
+~
+0 -1 9820
+S
+#9820
+O Buraco Estreito~
+   A medida que você adentra esse buraco é possivel escutar uns sons
+estranhos e nunca ouvidos por você.  Para cima os sons aumentam e a oeste
+você retorna para o inico desse apertado buraco.
+~
+98 262473 0 0 0 0
+D0
+Muito escuro e sombrio.
+~
+~
+0 -1 9821
+S
+#9821
+O Buraco Estreito~
+   Você se está cada vez mais perto do que parece ser o fim desse local, a
+medida que você anda os sons aumentam.  Ao leste você pode ver uma porta e
+para baixo o corredor estreito se alonga.
+~
+98 262473 0 0 0 0
+D0
+Um pequena porta.
+~
+~
+0 -1 9822
+S
+#9822
+A Ante-sala~
+   Você está diante de uma grande porta feita de ferro puro e antigo.  Os
+sons que você estava ouvindo parece vir de dentro dessa porta, soa como uma
+musica suave e calma, uma canto limpo e angelical.  A leste está a grande
+porta de ferro e a oeste está a porta que da acesso ao buraco estreito.
+~
+98 73 0 0 0 0
+D0
+Uma enorme porta de ferro, aparentemente muito antiga e pesada.  É impossivel
+imaginar o que pode existir por de trás dela.  Porém pode se ouvir cantos
+muito melódicos nunca ouvidos por você.
+~
+porta ferro~
+2 9801 9823
+S
+#9823
+O Calabouço dos Anjos~
+   Uma grande luz invade essa sala, os sons ecoam por toda parte, apesar de
+parecer mais um calabouço os sons e as luzes fazem você se sentir agraciado
+por uma sensação de paz, essa sala parece ser abençoada.  A oeste está a
+grande porta de ferro.
+~
+98 524408 0 0 0 0
+D0
+Uma enorme porta de ferro, aparentemente muito antiga e pesada.  Através
+dela você tem acesso a uma ante-sala.
+~
+porta ferro~
+1 -1 9822
+S
+#9824
+O Buraco Lateral~
+   Esse buraco é muito apertado.  A oeste está um desvio e para leste você
+pode ver o fim de desse buraco lateral.
+~
+98 262473 0 0 0 0
+D0
+A continuação desse buraco apertado, porém parece estra chegando ao fim.
+~
+~
+0 -1 9825
+S
+#9825
+Fim do Buraco~
+   Finalmente você atingiu o final desse buraco estreito, parece que agora
+os caminhos são menos apertados porém a sensação de perigo continua.  A
+oeste você vê o buraco lateral e para baixo há uma longa escada.
+~
+98 262473 0 0 0 0
+D0
+Um longa escadaria, que foi esculpida nas próprias rochas.
+~
+~
+0 -1 9826
+S
+#9826
+Uma Longa Escada~
+   Você está numa grande escada esculpida nas pedras.  Para cima existe um
+buraco, para baixo a escada se alonga e para leste há uma passagem lateral.
+~
+98 73 0 0 0 0
+D0
+Parece ser uma entrada lateral.
+~
+~
+0 -1 9831
+S
+#9827
+Uma Longa Escada~
+   Você está descendo por uma grande escada de pedras, a sensação de perigo
+é grande por toda a extensão desse lugar.  Para cima e para baixo você vê a
+escada de pedras.
+~
+98 73 0 0 0 0
+D0
+Um longa escada cheia de degraus esculpidos em pedras.
+~
+~
+0 -1 9828
+S
+#9828
+Uma Longa Escada~
+   A cada degrau, é possivel sentir a estranha sensação de estar sendo
+observado.  Para cima e para baixo só é possivel ver escadas.
+~
+98 73 0 0 0 0
+D0
+Um longa escada cheia de degraus esculpidos em pedras.
+~
+~
+0 -1 9829
+S
+#9829
+Uma Longa Escada~
+   Essa longa escada parece não ter fim.  Para cima e para baixo só é
+possivel ver escadas.
+~
+98 73 0 0 0 0
+D0
+Um longa escada cheia de degraus esculpidos em pedras.
+~
+~
+0 -1 9830
+S
+#9830
+Uma Longa Escada~
+   Aparentemente a escada parece estar chegando ao fim.  Para baixo você vê
+o final da escada, mas estranhamente parece haver um circulo de luz como se
+fosse um portal ou algo parecido, talvez fosse melhor tomar cuidado com essa
+estranha passagem.  Para cima a escadaria é extensa a para oeste existe uma
+porta.
+~
+98 73 0 0 0 0
+D0
+Uma porta de ferro, aparentemente muito antiga e impossível de ser arrombada.
+Não da pra imaginar o que possa existir por de trás dela.  porém existem
+inscrições nela, que talvez possam ajudar e com certeza deveriam ser lidas.
+~
+porta ferro~
+1 -1 9841
+E
+inscrição inscrições~
+&R " Aqui jás os exploradores , o que entram jamais retornam e os que não
+entram jamais descobrem seus secredos " &n .
+~
+S
+#9831
+Uma Entrada Lateral~
+   Esta entrada parece levar a um corredor sem saída.  Feito em pedras muito
+antigas e grandes esse lugar é cada vez mais misterioso.  Para Oeste é
+possível ver uma longa escada e para leste o corredor.
+~
+98 73 0 0 0 0
+D0
+Um pequeno corredor.
+~
+~
+0 -1 9832
+S
+#9832
+O Corredor Lateral~
+   Esse corredor com paredes enormes parece estar chegando ao fim.  A oeste
+e a leste você pode ver toda a extensão desse pequemo corredor.
+~
+98 73 0 0 0 0
+D0
+Um pequeno corredor aparentemente sem saída.
+~
+~
+0 -1 9833
+S
+#9833
+Fim do Corredor Lateral~
+   Você está no final do corredor, aparentemente ele não tinha saída, mas
+você nota que há um pequeno alçapão no chão.  Para oeste você vai para o
+inicio do corredor e para baixo há um alçapão.
+~
+98 73 0 0 0 0
+D0
+Um alçapão muito antigo, feito em madeira e ferragens.  Aparentemente não é
+muito pesado e pode ser facilmente aberto.
+~
+alçapão~
+1 -1 9834
+S
+#9834
+O Alçapão~
+   Você está dentro de um alçapão apertado e muito escuro, é possivel sentir
+um ar gélido vindo do fundo.  Para cima está o alçapão e para baixo uma
+estreita escada te leva cada vez mais fundo.
+~
+98 262473 0 0 0 0
+D0
+Um longa escada cheia de degraus.
+~
+~
+0 -1 9835
+S
+#9835
+O Alçapão~
+   Dentro desde alçapão é frio e apertado, talvez fosse melhor voltar.  Para
+cima e para baixo nada é possivel se ver além dessa escada.
+~
+98 262473 0 0 0 0
+D0
+Um longa escada.
+~
+~
+0 -1 9836
+S
+#9836
+O Alçapão~
+   Com certeza se você fosse um pouco mais gordo não passaria por aqui,
+talvez fosse melhor voltar e garatir que não ficará entalado nesse estreito
+local.  Para cima e para baixo só há escadas alem da escuridão.
+~
+98 262473 0 0 0 0
+D0
+Uma escuridão intensa.
+~
+~
+0 -1 9837
+S
+#9837
+O Alçapão~
+   Parece que o fim desse alçapão está chegando ao fim.  É possivel ver uma
+certa luminosidade vinda de baixo, mas o sentimentos de maldade e os
+calafrios aumentam cada vez mais.  Para cima a escada continua e para baixo
+parece ser o fim da escada.
+~
+98 262473 0 0 0 0
+D0
+Apesar da escuridão parece que essa escada está chegando ao fim.
+~
+~
+0 -1 9838
+S
+#9838
+Fim do Alçapão~
+   Esse alçapão chegou ao fim, mas parece que seu sofrimento apenas está
+começando.  Para cima há uma longa escada e nada para se ver e para leste
+você pode ver uma sala iluminada
+~
+98 262473 0 0 0 0
+D0
+Uma sala aparentemente iluminada por tochas.
+~
+~
+0 -1 9839
+S
+#9839
+Entrada da Sala do Trono~
+   Uma grande sala iluminada por tochas de fogo que parecem nunca se apagar.
+Algo parece lhe dizer que seria melhor partir rapidamente desse local.  Para
+oeste está o fim do alçapão e para leste está uma porta gigantesca, talvez
+guardando algum tesouro, porém gritos vem de trás dessa porta.  Há estranhas
+inscrições nessa porta, talvez fosse melhor le-las antes de entrar.
+~
+98 72 0 0 0 0
+D0
+Uma porta de madeira gigantesca, é impossível imaginar como alguem poderia
+trazer madeiras tão grandes para se construir uma porta fortíssima nessa
+area tão abaixo do solo.
+~
+porta madeira~
+2 9803 9840
+E
+inscrição inscrições~
+&R " Os que aqui descansam jamais retornam a vida, jamais entre sem antes
+repensar se realmenrte está preparado para enfrentar a morte, pois somente
+os dignos e honrados voltarão com vida" &n .
+~
+S
+#9840
+Sala do Trono~
+   É horrivel esse lugar, gritos ecoam por toda a parte, as paredes parecem
+ter olhos e ouvidos.  Um sentimento maléfico invade essa sala somente seus
+mais puros e verdadeiros sentimentos podem anular esse mal.  Infelizmente
+você não vê nenhuma saída.
+~
+98 73 0 0 0 0
+S
+#9841
+O Labirinto~
+   Você está dentro de algo que parece ser um grande labirinto.  A leste
+existe uma grande porta e oeste parece ser uma sala um tanto parecida com
+essa aqui.
+~
+98 73 0 0 0 0
+D0
+Uma enorme porta de ferro, aparentemente muito antiga e pesada.
+Provavelmente é sua única saída daqui.
+~
+porta ferro~
+2 9802 9830
+S
+#9842
+O Labirinto~
+   Você está dentro de algo que parece ser um grande labirinto.  Por todos
+os lados há saídas que lhe confundem cada vez mais.
+~
+98 73 0 0 0 0
+D0
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9852
+S
+#9843
+O Labirinto~
+   Você está dentro de algo que parece ser um grande labirinto.  Por todos
+os lados há saídas que lhe confundem cada vez mais.
+~
+98 73 0 0 0 0
+D0
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9852
+S
+#9844
+O Labirinto~
+   Você está dentro de algo que parece ser um grande labirinto.  Por todos
+os lados há saídas que lhe confundem cada vez mais, porém existe uma porta
+a leste.
+~
+98 73 0 0 0 0
+D0
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9852
+S
+#9845
+O Labirinto~
+   Você está dentro de algo que parece ser um grande labirinto.  Por todos
+os lados há saídas que lhe confundem cada vez mais, parecendo que você está
+andando em circulos.
+~
+98 73 0 0 0 0
+D0
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9846
+S
+#9846
+O Labirinto~
+   Você está dentro de algo que parece ser um grande labirinto.  Por todos
+os lados há saídas que lhe confundem cada vez mais.
+~
+98 73 0 0 0 0
+D0
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9852
+S
+#9847
+O Labirinto~
+   Você está dentro de algo que parece ser um grande labirinto.  Por todos
+os lados há saídas, mas qual é a melhor opção ?
+~
+98 73 0 0 0 0
+D0
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9852
+S
+#9848
+O Labirinto~
+   Você está dentro de algo que parece ser um grande labirinto.  Por todos
+os lados há saídas que lhe confundem cada vez mais.
+~
+98 73 0 0 0 0
+D0
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9849
+S
+#9849
+O Labirinto~
+   Você está cada vez mais confuso.  Há saídas por todos os lados, talvez
+fosse melhor ajoelhar-se e rezar.
+~
+98 73 0 0 0 0
+D0
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9846
+S
+#9850
+O Labirinto~
+   Você está dentro de algo que parece ser um grande labirinto.  Por todos
+os lados há saídas que lhe confundem cada vez mais.
+~
+98 73 0 0 0 0
+D0
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9849
+S
+#9851
+O Labirinto~
+   Você está dentro de algo que parece ser um grande labirinto.  Por todos
+os lados há saídas que lhe confundem cada vez mais.
+~
+98 73 0 0 0 0
+D0
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9849
+S
+#9852
+O Labirinto~
+   Você está dentro de algo que parece ser um grande labirinto.  Por todos
+os lados há saídas que lhe confundem cada vez mais.
+~
+98 73 0 0 0 0
+D0
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9851
+S
+#9853
+O Labirinto~
+   Você está dentro de algo que parece ser um grande labirinto.  Por todos
+os lados há saídas que lhe confundem cada vez mais.
+~
+98 73 0 0 0 0
+D0
+Uma sala muito grande e espaçosa.
+~
+~
+0 -1 9852
+S
+#9854
+O Caminho dos Sábios~
+   Estranhamente tudo que você deixou para trás sumiu.  Daqui para frente
+somente o sábios de espirito, leais e honestos aventureiros serão bem
+aventurados.  Siga seu seu coração...  O seu caminho trilha a leste.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9855
+S
+#9855
+O Caminho dos Sábios~
+   A cada passo você pode sentir uma estranha sensação de que está sendo
+observado.  Tudo ao seu redor é muito lindo, um belo campo florido, talvez
+este o verdadeiro paraiso.  Para oeste você o inicio do caminho e para leste
+a trilha se alonga.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9854
+S
+#9856
+O Caminho dos Sábios~
+   O cheiro de lugar é muito inspirador, uma suave fragância de lavanda se
+espalha por todo esse campo.  Sua trilha retorna a oeste e continua ao sul.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9857
+S
+#9857
+O Caminho dos Sábios~
+   A trilha é estreita, por todos os lados há flores campestres.  Até onde
+sua vista alcança há somente flores e um bonito céu azul.  A trilha segue
+para norte e leste.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9858
+S
+#9858
+O Caminho dos Sábios~
+   A cada passo a curiosidade aumenta.  Talvez seja melhor começar a pensar
+em qual é seu verdadeiro objetivo, a sensação de observado aumenta cada vez
+mais.  Sua trilha segue a oeste e a leste.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9859
+S
+#9859
+O Destino~
+   Você está diante da escolha de seu verdadeiro objetivo, a sua escolha
+mudará toda sua trajetória.  Se seu objetivo nesse mundo é explorar e ganhar
+muita experiência e acha que já sabio o suficiente então parta rumo ao
+norte, pois lá encontrará terras inexploradas.  Se seu objetivo, seja esse
+mesmo, mas acha que ainda não é sabio o bastante, então parta rumo ao sul,
+pois lá existe o aprendizado.  Diante dessas duas escolhas se você se achar
+um aventureiro que tem medo de explorar e prefere voltar as suas origens
+para repensar no seu destino, então siga a leste, pois lá está o inicio de
+tudo.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9860
+S
+#9860
+O Caminho dos Sábios~
+   Você está no caminho dos que querem voltar e rever suas origens.  Siga a
+leste e veja onde tudo começou.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 50
+S
+#9861
+O Caminho dos Sábios~
+   Você está no caminho dos exploradores que acham que já sabem o suficiente
+Siga ao norte e explore terras jamais conhecidas.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9800
+S
+#9862
+O Caminho dos Sábios~
+   Você está no caminho dos exploradores que acham que os sábios são aqueles
+que reconhecem que ainda existe muito para se aprender.  Siga ao sul e vá
+ao encontro da sabedoria.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9863
+S
+#9863
+O Caminho para a Ascensão~
+   Certamente você fez a escolha mais correta.  "O mais sábios de todos é
+aquele que reconhece sua burrice".  Daqui pra frente sua dignidade e honra
+serão provadas, se você passar por essa provação, será merecedor de conhecer
+os segredos da vitória.  Seu caminho é para leste...
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9864
+S
+#9864
+A Entrada da Ascensão~
+   Você está diante de uma bonita entrada, feita no mais puro dos mármores
+sua beleza é magnífica.  O caminho a ser seguido é ao norte, onde pode ser
+visto um camiho florido e enfeitado com lindas pedras.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9865
+S
+#9865
+O Caminho da Ascensão~
+   O caminho seguido por você é muito pessoal, aqui ninguem pode lhe ajudar
+e a cada escolha você jamais verá que jamais poderá voltar.  Seja digno e
+honrado pois só assim poderá realmente ser aclamado como um sábio.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9866
+S
+#9866
+O Caminho da Ascensão~
+   Nada existe ao seu redor, por onde você olha só existe uma névoa, tudo
+que era florido agora sumiu e a cada passo você nota que o caminho na suas
+costas some.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9867
+S
+#9867
+A Primeira Provação~
+   Há névoa por toda parte, mesmo a mais intensa das luzes não é capaz de
+iluminar seu caminho nesse nevoeiro.  Aqui é sua primeira provação, pense
+bem antes de fazer sua escolha, pois NÃO poderá voltar atrás.
+   Ao norte você pode ver alguns equipamentos, alguns deles jamais visto em
+todo esse mundo, talvez algum deles possa iluminar seu caminho.
+   Ao sul seu caminho parece ficar um pouco mais claro, é possivel ver a
+sala de doações de um clan, que com certeza não é de seus amigos, mas lá
+existem equipamentos que podem iluminar esse nevoeiro.
+   A leste a escuridão é cada vez mais intensa, porem lá no fundo é possivel
+notar um velho mago, certamente ela está perdido no meio dessa nevoa tambem.
+~
+98 372 0 0 0 2
+D0
+Nada é possivel ver nessa névoa intensa...
+~
+~
+0 -1 9868
+S
+#9868
+A Escolha~
+  É possivel ver aquele pobre velho.  Siga a leste ao seu encontro.
+~
+98 372 0 0 0 2
+D0
+Nada é possivel ver nessa névoa intensa...
+~
+~
+0 -1 9871
+S
+#9869
+A Escolha~
+  É possivel ver uma grande sala de equipamentos.  Siga ao sul para entrar.
+~
+98 372 0 0 0 2
+D0
+Um monte com varios equipamentos...
+~
+~
+0 -1 3063
+S
+#9870
+A Escolha~
+  É possivel ver um enorme monte de equipamentos.  Siga ao norte para entrar.
+~
+98 372 0 0 0 2
+D0
+Um monte com varios equipamentos...
+~
+~
+0 -1 3063
+S
+#9871
+O Templo da Luz~
+   Certamente você preferiu ajudar esse pobre mago....um vento muito forte
+faz com que essa névoa se espalhe, uma luz intensa transforma aquele velho
+mago em um magnífico anjo.  Siga seu ensinamentos, pois o que lhe for dito
+será de grande utilidade no futuro próximo.  Após ouvir seus ensinamentos
+siga seu caminho a norte.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9872
+S
+#9872
+O Caminho da Ascensão~
+   Tudo volta a ser florido, e aquele cheiro de lavanda invade suas narinas.
+O caminho é muito belo e segue a leste.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9873
+S
+#9873
+O Caminho da Ascensão~
+   O cheiro de lavanda aumenta cada vez mais.  Provavelmente a mais bela
+das mulheres é merecedora de tal perfume.  Com essa fragância seria capaz de
+amolecer o coração das mais terrivel das víboras.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9874
+S
+#9874
+A Segunda Provação~
+   Você está diante da sua segunda escolha, seu caminho pode ser dificil ou
+fácil basta que sua sabia experiencia lhe guie.
+   Ao leste vem um cheiro insuportável, é possível ver um campo de guerra, o
+cheiro que invade suas narinas é o de seus companheiro mortos, talvez seja
+melhor abandonar essa provação e ir ajuda-los.
+   Ao norte o cheiro de lavanda aumenta, um caminho florido e bonito, é
+possível notar que há pedras de cores douradas por todo a chão.
+   A oeste é o inicio do caminho, você pode retornar ao principio e refazer
+escolhas.
+~
+98 372 0 0 0 2
+D0
+Onde tudo parece ter começado...
+~
+~
+0 -1 9877
+S
+#9875
+A Escolha~
+   É possível ver um campo de batalha e um corpo ferido caído ao chão. Siga
+a leste, pois é seu destino.
+~
+98 372 0 0 0 2
+D0
+Um campo de batalha...
+~
+~
+0 -1 9878
+S
+#9876
+A Escolha~
+   É possível ver um caminho muito florido e lindo.  Siga seu destino ao
+norte.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 3065
+S
+#9877
+A Escolha~
+   É possível ver o inicio.  Siga a oeste e parta do principio.
+~
+98 372 0 0 0 2
+D0
+Onde tudo parece ter começado...
+~
+~
+0 -1 50
+S
+#9878
+O Templo do Amor~
+   Mais uma vez sua escolha foi sabia.  Uma luz azulada invade todo esse
+campo, lentamente o corpo caido se levanta, como que por milagre ou por amor
+divino, ele se transforma em um anjo muito bonito.  Escute o que esse anjo
+tem a lhe falar.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9879
+S
+#9879
+O Caminho da Ascensão~
+   O maravilhoso cheiro de lavanda e o céu são dignos dos deuses.  Você pode
+sentir que está próximo do céu pois um sentimento puro invade seu coração.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9880
+S
+#9880
+O Caminho da Ascensão~
+   Estranhamento toda aquela alegria sumiu, aparentemente nada mais existe,
+é como se você estivesse num plano vazio, por todos os lados nada existe e
+nada há para ser contemplado.
+~
+98 372 0 0 0 2
+D0
+Não existe nada...
+~
+~
+0 -1 9881
+S
+#9881
+A Terceira Provação~
+   Você está diante de mais teste, ao seu redor nada existe além dos
+caminhos a serem por você trilhados.  Escute seu coração e construa sua
+história.  O vazio ao seu redor, só será preenchido com sua fé.
+~
+98 372 0 0 0 2
+D0
+Não existe nada...
+~
+~
+0 -1 9882
+S
+#9882
+O Vazio~
+   Nada existe além da sua imaginação, por todos os lados há somente um
+abismo infinito.  Dê mais um passo rumo a sua sorte...siga a oeste.
+~
+98 372 0 0 0 2
+D0
+Não existe nada...
+~
+~
+0 -1 9886
+S
+#9883
+O Vazio~
+   Nada existe além da sua imaginação, por todos os lados há somente um
+abismo infinito.  Dê mais um passo rumo a sua sorte...siga ao norte.
+~
+98 372 0 0 0 2
+D0
+Não existe nada...
+~
+~
+0 -1 50
+S
+#9884
+O Vazio~
+   Nada existe além da sua imaginação, por todos os lados há somente um
+abismo infinito.  Dê mais um passo rumo a sua sorte...siga a leste.
+~
+98 372 0 0 0 2
+D0
+Não existe nada...
+~
+~
+0 -1 50
+S
+#9885
+O Vazio~
+   Nada existe além da sua imaginação, por todos os lados há somente um
+abismo infinito.  Dê mais um passo rumo a sua sorte...siga ao sul.
+~
+98 372 0 0 0 2
+D0
+Não existe nada...
+~
+~
+0 -1 50
+S
+#9886
+O Templo da Honestidade~
+   Você percebe que o chão se forma aos seus pés, o abismo por você temido
+agora é um belissimo campo florido, que outrora você havia comtemplado.  O
+maravilhoso cheiro de lavanda, volta a invadir sua narinas.  E como que por
+milagre uma maravilhosa flor começa a se desabrochar, emitindo um luz
+intensa capaz de cega-lo...  E essa imensa luz começa a tomar forma do mais
+belo de todos o anjos, ouça o que ele tem a lhe ensinar...  Após ouvi-lo seu
+caminho é para o norte.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9887
+S
+#9887
+O Caminho da Ascensão~
+   Você está no caminho que poucos conseguirão trilhar, demonstre ser
+realmente digno de por seus pés nesse caminho, pois somente os deuses de
+Vitalia, outrora percorreram esse caminho.  Ao norte você pode uma luz
+intensa e talvez seu unico destino.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9888
+S
+#9888
+O Caminho da Ascensão~
+   Por todos os lados você ver imagens incríveis, é como se fosse pintado um
+belíssimo quadro diante de seus olhos.  Batalhas sangrentas entre os deuses
+de Vitalia e o mal, lindas paisagens jamais vistas por você, a ira e a
+tristeza dos deuses diante dos traidores, a festa dos que com fé, muita
+dignidade e acima de tudo honra, escreveram a história de suas vidas.  Seu
+caminho chega a uma bela escada, apenas suba.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9889
+S
+#9889
+A Escadaria de Mármore~
+   Você sobe cada vez mais em uma magnífica escada feita em mármore, é
+incrível a beleza desse lugar, além de todo aquele jardim, o cheiro de
+lavanda as imagens passadas diantes de seus olhos, você pode ver um Altar de
+pedra polida.  Uma beleza nunca vista por seus olhos, suba diante desse
+altar pois é seu destino.
+~
+98 372 0 0 0 2
+D0
+Um belo caminho...
+~
+~
+0 -1 9890
+S
+#9890
+O Altar dos Dignos~
+   Um magnífico altar, em suas paredes é possivel toda a história e lendas
+de Vitalia, imagens dos grandes deuses desse mundo são aqui retradas, a
+beleza e coragem desses deuses parecem ser passadas para você.  Lá no alto
+você a imagem de um belo anjo, estranhamente essa imagens parece criar vida.
+   A imagem cria vida e uma anjo em forma de luz se faz presente, ouça o que
+ele tem lhe dizer, depois dê um passo atrás para que seu destino se abra...
+~
+98 372 0 0 0 2
+D0
+Uma terra inexplorada...
+~
+~
+0 -1 9800
+S
+$~

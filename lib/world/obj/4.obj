@@ -1,0 +1,95 @@
+#400
+estátua protetor~
+a Estátua do Guardião~
+A estátua do protetor dos clãs permanece aqui, intocada há décadas.~
+~
+8 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+100 100000 1000 0 0
+E
+estátua protetor~
+Uma grande e bela obra da arquitetura divina Vitaliana.  Esculpida em tempos
+idos, a estátua é a representação perfeita de um grande Griffo, que
+mantém-se em pé sobre suas patas traseiras e levanta as dianteiras,
+parecendo saudar-lhe, ao mesmo tempo que ameaça lhe atacar.  Se não fosse
+feita de sólido granito, certamente poderia tomar vida e avançar em sua
+direção.  Se bem que, vindo dos deuses, eu não duvidaria disso...
+~
+#401
+vàssëssar vallessar rúnica espada guardiã~
+Vàllëssâr, a Guardiã~
+Vàllëssâr, a Rúnica Espada Élfica está brilhando fracamente no canto desta sala.~
+~
+5 giqr 0 0 0 an 0 0 0 0 0 0 0
+0 4 8 3
+17 1000000 12000 100 0
+E
+runas~
+Com pouco esforço você pode ler tudo que está cravejado, mas pouco está ao
+alcance de sua compreensão.  Pouca coisa além de "Yrch swallm Vàllëssâr
+Easmorh" e "Güînmol hain echant: " pode ser traduzida, tendo seu significado
+aproximadamente como "Vàllëssâr Easmorch matadora de Orcs" e "Forjada por
+Güînmol", respectivamente.
+~
+E
+gume~
+Com meia polegada de longitude, o fino gume parece indefectível.
+Astutamente afiado com finos sulcos finos e compridos ao longo de si, é dono
+um brilho azulado magnânimo.
+~
+E
+lâmina~
+É maravilhosamente forjada com um gume simples e reluzente em um azul
+celeste.  Com não mais de duas polegadas de largura, possui runas élficas
+bem desenhadas ao longo de si, do cabo até a ponta, em relevo baixo o
+suficiente para serem lidas e para não atrapalharem na hora de cortar a
+cabeça do inimigo.
+~
+E
+espada vallessar rúnica guardiã~
+A lendária espada rúnica élfica é extremamente leve para seu tamanho e
+poder.  Sua curta empunhadura é grossa e revestida de um couro
+marrom-esverdeado, enquanto sua lâmina clara feito o céu da aurora e
+reluzente feito prata polida, é resistente como o mais duro mithril e seu
+gume é afiado feito aço-das-fadas.  Suas laterais são repletas de runas
+élficas escuras e em baixo relevo, e o gume é levemente riscado e brilhante.
+~
+A
+18 4
+A
+19 4
+A
+1 3
+A
+13 30
+A
+24 -2
+#402
+chave aço~
+Uma grande chave de aço fundido~
+Uma chave parece ter sido propositadamente deixada aqui.~
+~
+12 deq 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+5 550 50 0 0
+E
+chave aço~
+Esta chave se parece muito com... Uma chave!
+~
+#403
+quadro carvalho~
+um imenso quadro feito de carvalho~
+Um grande quadro de mensagens parece flutuar aqui.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+mensagens~
+Use 'look quadro' para ler o quadro.
+~
+E
+quadro~
+Se você está lendo isso, este quadro não está funcionando.
+~
+$~

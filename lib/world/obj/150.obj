@@ -1,0 +1,250 @@
+#15000
+insignificância universal~
+Insignificância Universal de Sapowox~
+Você é práticamente incapaz de perceber a Insignificância Universal de Sapowox aqui.~
+~
+5 bcg 0 0 0 an 0 0 0 0 0 0 0
+0 6 4 1
+40 0 200000 0 0
+E
+texto escrita inscriçao~
+Ela somente diz: ' (void *) '
+Nada muito esclarecedor, não é?
+~
+E
+insignificância universal~
+Você não está certo, mas você não parece ser capaz de avaliar o que isto
+seja, porque não se parece com nada que você já tenha visto.  Você sente uma
+pequena confusão mas você nota uma pequena inscrição nela.
+~
+A
+18 2
+A
+19 2
+#15001
+ouro moedas~
+o ouro~
+Um monte de ouro encontra-se aqui.~
+~
+20 0 0 0 0 a 0 0 0 0 0 0 0
+32385 0 0 0
+5 0 0 0 0
+#15002
+cetro real dourado~
+um cetro dourado~
+Um cetro real dourado encontra-se no chão.~
+~
+12 gk 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+20 15000 3000 0 0
+A
+18 2
+#15003
+coroa dourada~
+uma coroa dourada~
+Uma magnífica coroa dourada adornada com jóias foi deixada aqui.~
+~
+9 gk 0 0 0 ae 0 0 0 0 0 0 0
+7 0 0 0
+40 12000 10000 0 0
+A
+12 30
+A
+3 1
+#15004
+maça dourada~
+uma maçã dourada~
+Existe uma maçã dourada aqui.~
+~
+1 gk 0 0 0 ao 0 0 0 0 0 0 0
+0 0 -1 0
+5 8000 400 0 0
+#15005
+telescopio~
+um largo telescópio~
+Existe um largo telescópio aqui, apontando para o céu.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+telescopio~
+Um pequeno sinal versa:
+
+Feito na Sibéria.
+~
+#15006
+espada treinamento~
+uma espada de treinamento~
+Uma espada de treinamento com o fio cego está encostada contra a parede.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 1 4 3
+7 300 5 0 0
+A
+18 -2
+#15007
+chave enorme~
+uma enorme chave~
+Existe uma enorme e aparentemente pesada chave aqui no chão.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+15007 0 0 0
+1 0 0 0 0
+#15008
+Verminator espada~
+Verminator~
+Uma espada de aparência estranha encontra-se sobre o chão aqui.~
+~
+5 adjmnoqt 0 0 0 an 0 0 0 0 0 0 0
+0 3 4 11
+2 1 4000 0 0
+E
+verminator espada~
+Esta estranha espada parece ser feita de metal negro e um misterioso e
+resplandecende verde envolve a lâmina.
+~
+#15009
+chave mordomos mordomo~
+a chave do Mordomo~
+A chave do Mordomo está aqui.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+15009 0 0 0
+3 0 0 0 0
+#15010
+chave pequena~
+uma pequena chave~
+Uma pequena chave encontra-se aqui.~
+~
+18 c 0 0 0 ao 0 0 0 0 0 0 0
+15010 0 0 0
+1 0 100 0 0
+#15011
+bau madeira~
+um grande baú de madeira~
+Um grande baú de madeira encontra-se aqui no canto.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+800 13 15010 0
+450 400 100 0 0
+E
+bau~
+Ele é equipado com um pequeno cadeado que qualquer ladrão seria
+capaz de arrombar.
+~
+#15012
+frasco pocao marrom~
+um grande frasco~
+Um grande frasco foi deixado aqui.~
+~
+10 g 0 0 0 a 0 0 0 0 0 0 0
+15 15 -1 -1
+14 2000 2000 0 0
+E
+frasco pocao marrom~
+Ela está cheia com um nojento líquido marrom.
+~
+#15013
+estandarte real~
+o estandarte real~
+O estandarte real foi firmemente colocado aqui no chão.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+bandeira~
+Na bandeira existe o símbolo da casa do Rei Welmar: um veado empinando.
+~
+E
+estandarte real bandeira~
+É largo e muito pesado. No topo do estandarte agita-se orgulhosamente
+a bandeira do Rei Welmar.
+~
+#15014
+chave~
+uma chave~
+Uma chave encontra-se no chão.~
+~
+18 c 0 0 0 a 0 0 0 0 0 0 0
+15014 0 0 0
+13 0 0 0 0
+E
+chave~
+Ela tem uma letra 'W' adornada, inscrita nela.
+~
+#15015
+armadura escamas corrente~
+uma armadura de escamas~
+Uma armadura de escamas está no chão.~
+~
+9 0 0 0 0 ad 0 0 0 0 0 0 0
+5 0 0 0
+60 2000 500 0 0
+#15016
+espada larga~
+uma espada larga~
+Existe uma espada larga deitada aqui.~
+~
+5 0 0 0 0 an 0 0 0 0 0 0 0
+0 2 6 3
+14 1300 3000 0 0
+#15017
+chave cela~
+a chave da cela~
+Uma chave encontra-se deitada no chão.~
+~
+18 c 0 0 0 a 0 0 0 0 0 0 0
+15017 0 0 0
+3 0 0 0 0
+E
+chave cela~
+Esta parece ser a chave para as celas do castelo.
+~
+#15018
+corpo~
+um corpo~
+Existe aqui um corpo deitado no meio do chão desta sala.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+#15019
+lagosta~
+uma deliciosa lagosta~
+Uma deliciosa lagosta está deitada aqui, atraindo seu apetite.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+7 0 0 0
+5 100 10 0 0
+#15020
+caviar~
+algum caviar Russo~
+Existe um pouco de um delicioso caviar Russo aqui, dando-lhe água na boca.~
+~
+19 0 0 0 0 a 0 0 0 0 0 0 0
+2 0 0 0
+1 250 20 0 0
+#15021
+resplandecimento~
+o resplandecimento do oeste~
+Há um estranho resplandecimento vindo do oeste.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+resplandecimento~
+O resplandecimento vindo do oeste parece ser um pouco forte, mas não lhe
+fornece luz suficiente para se ver daqui, e vc não pode ver a origem dele.
+~
+#15022
+lamento lamentos som~
+o som de lamentos vindos do leste~
+Existe um sombrio som de lamentos vindos da casa para o leste.~
+~
+13 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+$~

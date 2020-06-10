@@ -1,0 +1,663 @@
+#11600
+ushas alvorada donzela~
+Ushas, a Alvorada~
+Uma linda donzela de pele carmesim canta sobre as águas douradas.
+~
+Ushas, a Sempre-Jovem, é a Alvorada que canta e dança embelezando esse reino
+celeste.  Sua pele é carmesim, como os céus do raiar do dia e seus cabelos
+azuis como o céu em plena luz.  De gestos muito graciosos, Ushas dança
+enquanto canta, convidando-o a ficar ali e apreciar o espetáculo de sua
+fonte de luz.  Cuidado, pois uma vez enfeitiçado por Ushas, sempre seu
+escravo.
+~
+2285586 0 0 0 264256 0 0 0 900 E
+70 -19 -20 10d100+4900 7d7+30
+9000 250020
+8 8 2
+E
+#11601
+marut menina graciosa radiante~
+uma Marut~
+Uma graciosa menina de rosto radiante protege essas escadarias.
+~
+A bela menina, de pele azul como os céus e rosto radiante como as estrelas,
+faz parte da extensa corte que reside em Svarga.  Junto com seus 48 irmãos,
+ela auxilia Lorde Indra na condução de seu terrítorio.  Seus longos cabelos
+negros estão presos em uma grande trança e enfeitados com diversas pedras
+preciosas.  Apesar de sua aparência de indefesa menina, ela é muito mais
+velha que as vidas de vários anciões unidas, sabendo muito bem se defender.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+54 -2 -12 10d10+900 4d4+20
+1000 90020
+8 8 2
+E
+#11602
+rouxinol espião pequena ave~
+um rouxinol espião~
+Uma pequena ave parece o seguir, espionando.
+~
+O pequeno rouxinol parece ter sido mandado aqui para saber quem é o intruso
+que encontrou a entrada de Svarga. Ele parece bastante inofensivo.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+10 13 -1 10d10+60 2d2+5
+0 1020
+8 8 1
+E
+#11603
+peixe peixinho pequeno dourado~
+um peixinho dourado~
+Um pequeno peixe dourado nada em sua direção.
+~
+O pequeno peixe parece ter vindo da parte mais larga do regato, onde suas
+dimensões já são de um verdadeiro rio.  Provavelmente ele ficou curioso com
+sua presença, coisa que não acontece normalmente com peixes (pelo menos os
+que você conhece).
+~
+2285570 0 0 0 2128 0 0 0 0 E
+8 14 2 10d10+50 2d2+4
+0 520
+8 8 1
+E
+#11604
+yakshini vento ser estranho demônio~
+uma yakshini de vento~
+Um estranho ser de vento tenta derrubar você.
+~
+Essa yakshini, feita de vento, parece ter sido mandada para atrapalhar sua
+vida.  Seu corpo é estranhamente feito de vento, sendo que sua aproximação
+dá-lhe a mesma sensação de quando se corre contra uma ventania.  Você a vê
+como sendo um pequeno tornado negro, com dois pequenos olhos brilhantes em
+seu centro.
+~
+2285570 0 0 0 2128 0 0 0 -500 E
+18 10 -2 10d10+350 4d3+14
+0 12520
+8 8 2
+E
+#11605
+cozinheiro chefe~
+o cozinheiro-chefe~
+O cozinheiro chefe está supervisionando um dos fogões, apreensivo.
+~
+O cozinheiro-chefe é um senhor que não só pratica a arte de cozinhar, como
+também a de saborear...  Ele, como em todo dia de festa, está bastante
+compenetrado em seus afazares, caprichando o máximo que pode na comida feita
+com carinho.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+26 4 -8 10d10+666 4d3+15
+1000 30020
+8 8 1
+E
+#11606
+serviaçal~
+uma serviçal~
+Uma serviçal atende alguns convidados.
+~
+Sempre sorridente, essa serviçal atende a todos os convidados que precisarem
+de sua ajuda. Afinal, ela é paga para isso...
+~
+2285570 0 0 0 2128 0 0 0 0 E
+15 8 -3 10d10+300 3d3+9
+1000 10020
+8 8 2
+E
+#11608
+marut menino belo azulada~
+um Marut~
+Um belo menino de pele azulada protege essas escadarias.
+~
+Esse menino é um dos famosos 49 Maruts que auxiliam Indra em seus afazeres.
+Sua pele parece imitar o tom dos céus, podendo passar do mais profundo
+negror ao mais radiante vermelho.  Longos cabelos negros tentam esconder um
+par de olhos brilhantes como estrelas.  Cuidado com ele...  Lembre-se que nem
+sempre os rostos mais inocentes são os mais indefesos.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+54 -2 -12 10d10+800 4d4+20
+1000 90020
+8 8 1
+E
+#11609
+kanakajja naga dourado lótus ouro~
+Kanakajja~
+Um monstruoso naga dourado se ergue das águas do rio de ouro, ameaçando-o com sua arma.
+~
+Kanakajja, ou Lótus de Ouro, é um naga extremamente grande e musculoso.  Sua
+pele é inteira dourada, não havendo sequer uma listra de outra cor.  Apenas
+seus olhos não são como ouro, sendo, na verdade, completa e assustadoramente
+negros.  Você não tem idéia do motivo que leva esse imenso naga a não
+deixá-lo prosseguir, mas pensa que talvez seja melhor não contrariá-lo...
+~
+2154514 0 0 0 264312 0 0 0 0 E
+90 -23 -29 10d10+5000 7d7+34
+10000 300020
+8 8 1
+BareHandAttack: 8
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#11610
+nidharta marut atento~
+Nidharta~
+Um atento Marut tenta impedir que você acompanhe o filete.
+~
+Nidharta, um dos 49 Maruts, todos filhos de Diti, leva muito a sério sua
+tarefa de auxiliar Indra.  Ele tenta de todas as maneiras impedir que você
+chegue até o que há no fim do muro.  Cuidado, Maruts sabem ser mortais...
+~
+2285570 0 0 0 2128 0 0 0 0 E
+57 -4 -13 10d10+900 5d4+22
+1000 80020
+8 8 1
+E
+#11611
+idrksa marut guarda~
+Idrksa~
+Um Marut guarda impassivelmente os portões do palácio.
+~
+Idrksa percebe que você o está olhando e lentamente abre seus olhos.  Você
+fica quase cego com o brilho deles, o que faz o sério Idrksa dar uma
+repentina gargalhada.  Ele parece não considerá-lo uma ameaça pois novamente
+assume sua impassível posição, de olhos cerrados.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+59 -7 -14 10d10+1000 5d5+25
+1000 95020
+8 8 1
+E
+#11612
+adrksa marut guarda~
+Adrksa~
+Um entediado Marut guarda os portões do palácio.
+~
+Adrksa parece profundamente entediado.  Bocejando constantemente, ele tenta
+se distrair exercitando alguns golpes com sua arma.  Cuidado para não chamar
+muito a atenção dele: não será nada bom se você for escolhido para
+"ajudá-lo" em seus exercícios...
+~
+2285570 0 0 0 2128 0 0 0 0 E
+59 -7 -14 10d10+1000 5d5+25
+1000 95020
+8 8 1
+E
+#11613
+menina estátua jyoti marut~
+a estátua de Jyoti~
+A estátua de uma menina dançando parece tentar impedir que você saia daqui.
+~
+A estátua da pequena Marut graciosamente executa os passos de uma antiga
+dança.  Você fica extremamente surpreso com o espetáculo, principalmente
+porque essa não é Jyoti, e sim uma estátua dela.  As estátuas desse lugar
+parecem todas enfeitiçadas...
+~
+2285570 0 0 0 2128 0 0 0 0 E
+34 2 -12 10d10+800 4d4+16
+1000 40020
+8 8 2
+E
+#11614
+jovem herói rama estátua~
+a estátua de Rama~
+A estátua de um jovem herói exercita suas habilidades com armas.
+~
+O jovem príncipe Rama, ou melhor, sua estátua, conta-lhe qual motivo o traz
+aqui: sua querida esposa, Sita, foi raptada pelo terrível rei dos rakshasas,
+Ravana.  Sendo assim, ele escolheu aquele lugar para treinar antes de
+travar a batalha final contra o demônio e resgatar sua amada.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+34 0 -15 10d10+1000 4d5+18
+1000 60020
+8 8 2
+E
+#11615
+estátua kadru nagini~
+a estátua de Kadru~
+A estátua de uma gigantesca nagini monopoliza toda sua atenção.
+~
+Kadru, antiga ancestral dos nagas, é uma das mulheres de Kasyapa.  Sua
+estátua consegue afetá-lo da mesma maneira que uma verdadeira nagini
+afetaria: hipnotiza-o com sua beleza e com sua lenta e perigosa dança.
+Cuidado com Kadru...  Ela é extremamente inteligente e astuta, já tendo
+enganado até o sábio Indra ao roubar a amritá que estava sob sua guarda.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+36 -1 -16 10d10+1116 4d5+19
+1000 66020
+8 8 2
+E
+#11616
+touro branco robusto nandi estátua~
+a estátua de Nandi~
+A estátua de um robusto touro branco parece preparar-se para atacar.
+~
+O robusto Nandi flexiona uma de suas patas dianteiras e bufa, olhando-o
+desconfiado. Ele é considerado o guardião da entrada dos templos, o que
+o faz realmente detestar estranhos... Cuidado com essa estátua...
+~
+2285570 0 0 0 2128 0 0 0 0 E
+36 -1 -16 10d10+1116 4d5+19
+1000 66020
+8 8 2
+E
+#11617
+vyasa sábio estátua~
+a estátua do sábio Vyasa~
+A estátua de um senhor escrevendo aparece do nada na sua frente.
+~
+Essa estátua representa um renomado sábio a quem é atribuída a atual
+organização dos Vedas.  Vyasa também é o autor do Mahabharata, dos dezoito
+Puranas e dos Brahma Sutras.  Que senhor importante, não?
+~
+2285570 0 0 0 2128 0 0 0 0 E
+35 0 -13 10d10+1000 4d5+15
+1000 39020
+8 8 2
+E
+#11618
+guarda dorminhoco~
+o guarda dorminhoco~
+Um dos guardas do palácio dorme tranqüilamente em uma das camas.
+~
+Ele parece ter tirado uma "folguinha" para tirar um cochilo... Se bem que
+é provável que ninguém consiga acordá-lo, pois nem o barulho que você fez nessa
+ala fez com que ele parasse de roncar.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+40 -3 -13 10d10+600 4d5+20
+1000 70020
+4 4 1
+E
+#11619
+guarda faminto~
+o guarda faminto~
+Um guarda está batendo seus talheres na mesa, exigindo que a comida chegue logo.
+~
+Ele parece realmente com fome, o que piora com o delicioso cheiro da refeição sendo
+preparada na cozinha, bem próxima daqui. 
+~
+2285570 0 0 0 2128 0 0 0 0 E
+40 -3 -13 10d10+600 4d5+20
+1000 70020
+8 8 1
+E
+#11620
+guarda treinamento~
+um guarda em treinamento~
+Um guarda está aqui, treinando combate sem armas.
+~
+Muito alto, esse homem é realmente forte. Ele parece estar passando por um treino
+intensivo de combate desarmado e, apesar da aparência cansada, continua obtinadamente
+a atingir uma estranha máquina.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+45 -4 -14 10d10+800 4d5+22
+1000 80020
+8 8 1
+E
+#11621
+guarda~
+um guarda~
+Um dos guarda parece entretido com a leitura de um livro.
+~
+Esse homem de feições sérias parece estar estudando atentamente um livro que
+parece ser bastante velho e precioso.  Ele parece alheio a tudo que acontece
+a seu redor, mas seria melhor você não chamar sua atenção...
+~
+2285570 0 0 0 2128 0 0 0 0 E
+40 -3 -13 10d10+600 4d5+20
+1000 70020
+5 5 1
+E
+#11622
+cozinheiro~
+um cozinheiro~
+Um dos cozinheiro parece muito zangado com seus ajudantes.
+~
+Ele está muito atarefado... Uma festa de gala está sendo dada no palácio,
+e os cozinheiros estão desesperados tentando fazer com que tudo relacionado
+à comida saia perfeito. Tente não atrapalhar.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+20 7 -6 10d10+500 4d3+13
+1000 20020
+8 8 1
+E
+#11623
+ajudante cozinha~
+uma ajudante de cozinha~
+Uma ajudante separa alguns vegetais que ainda serão usados.
+~
+A jovem ajudante separa alguns vegetais já lavados e entrega-os para
+outro ajudante cortar. O trabalho quase mecânico, initerrupto, parece
+não cansá-la.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+15 8 -3 10d10+300 3d3+9
+1000 10020
+8 8 2
+E
+#11624
+ajudante cozinha~
+um ajudante de cozinha~
+Um ajudante de cozinha corta alguns ingredientes.
+~
+O simpático rapaz é muito habilidoso no manejo do cutelo. Ele
+corta e pica rapidamente qualquer tipo de ingrediente, sempre no
+mesmo ritmo e sempre deixando tudo do mesmo tamanho.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+15 8 -3 10d10+300 3d3+9
+1000 10020
+8 8 1
+E
+#11625
+cozinheira~
+uma cozinheira~
+Uma cozinheira procura na despensa os ingredientes que precisa.
+~
+A cozinheira parece bastante aborrecida por não encontrar tudo
+que precisa... Talvez ela seja nova aqui.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+20 6 -5 10d10+400 3d3+9
+1000 10020
+8 8 2
+E
+#11626
+ajudante cozinha~
+um ajudante de cozinha~
+Um ajudante de cozinha está pegando alguns ingredientes.
+~
+Ele parece estar com pressa, pegando todos os ingredientes que acabaram
+na cozinha e são indispensáveis na preparação dos petiscos e do banquete.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+15 8 -3 10d10+300 3d3+9
+1000 10020
+8 8 2
+E
+#11627
+serviçal~
+um serviçal~
+Um serviçal passa apressado.
+~
+O pobre homem está como a maioria dos empregados do palácio: fazendo de
+tudo para que nada saia errado.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+15 8 -3 10d10+300 3d3+9
+1000 10020
+8 8 1
+E
+#11628
+convidado nobre homem arrogante~
+um nobre convidado~
+Um homem de aparência arrogante fala sem parar.
+~
+Ele é muito chato. Todo pomposo, fala sem parar sobre a vida da nobreza
+e como os "plebeus" são desagradáveis. Você conclui que não gosta dele...
+~
+2285570 0 0 0 2128 0 0 0 0 E
+45 3 -4 10d10+700 4d3+15
+8000 34020
+8 8 1
+E
+#11629
+convidado sacerdote~
+um sacerdote convidado~
+Um sacerdote muito velho escuta os problemas de uma jovem senhora.
+~
+Apesar de muito velho, esse senhor é muito saudável. Suas roupas humildes
+escondem um homem riquíssimo em conhecimento e sabedoria. No momento, ele
+pacientemente ouve uma jovem relatando seus problemas.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+49 2 -4 10d10+750 4d3+16
+1000 40020
+8 8 1
+E
+#11630
+convidada dama refinada jovem~
+uma dama convidada~
+Uma refinada jovem, um tanto aflita, parece procurar a ajuda do sacerdote.
+~
+Muito bonita e educada, a jovem dama parece estar com algum problema grave.
+Ela, procurando os conselhos de alguém sábio, relata seus problemas ao velho
+sacerdote.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+40 4 -3 10d10+500 4d3+14
+8000 24020
+8 8 2
+E
+#11631
+senhora convidada bem-vestida~
+uma senhora bem-vestida~
+Uma senhora muito bem-vestida sorri para você.
+~
+De impecável postura, essa senhora parece ver mais do que se pensa.  Ela
+olha para você e sorri, pois percebeu que você não foi exatamente convidado
+para a festa.  E agora?
+~
+2285570 0 0 0 2128 0 0 0 0 E
+47 3 -4 10d10+670 4d3+17
+8000 44020
+8 8 2
+E
+#11632
+senhor elegante~
+um senhor elegante~
+Um elegante senhor assiste maravilhado o movimento das dançarinas.
+~
+Esse elegante homem já não é jovem, mas conserva os traços da beleza da mocidade. 
+Ele parece encantado com a dança das ninfas do castelo, assim como muitos outros
+convidados...
+~
+2285570 0 0 0 2128 0 0 0 0 E
+47 3 -4 10d10+670 4d3+17
+8000 44020
+8 8 2
+E
+#11633
+mensageiro estranho~
+o estranho mensageiro~
+Um estranho mensageiro espera ser dispensado.
+~
+Ele é uma estranha criatura... Não é meio homem, meio serpente, como são
+os nagas. É um enorme homem de traços reptilianos, como se um crocodilo tivesse,
+por estranha magia, se transformado parcialmente. Sua pele possui indícios de
+escamas, sendo esverdeada. Seu nariz resume-se em apenas dois orifícios logo acima
+da larga boca, esta repleta de pontiagudos dentes. Parece que ele trouxe um recado
+que fez com que Lorde Indra saísse imediatamente do salão...
+~
+2285570 0 0 0 2128 0 0 0 -500 E
+67 -4 -8 10d10+970 4d5+23
+10000 104020
+8 8 1
+E
+#11634
+dançarina ninfa apsara~
+uma linda apsara~
+Uma linda ninfa dança graciosamente ao som de uma música.
+~
+Nascida da espuma do mar de leite, essa apsara, assim como todas as outras,
+foi trazida por Lorde Indra para essa palácio no intuito de, além de
+permanecer a salvo, entreter o grande senhor com sua dança.  Ela usa uma
+estranha maquiagem que realça seus belos olhos, destacando ainda a brancura
+de sua pele e os longos cabelos negros, que estão soltos. Você agora sabe
+porque a dança das apsaras é tão famosa: elas simplesmente parecem flutuar...
+~
+2285570 0 0 0 2128 0 0 0 0 E
+55 0 -6 10d10+777 4d3+17
+1000 44020
+8 8 2
+E
+#11635
+indrani mulher rainha~
+Indrani~
+Uma verdadeira rainha está sentada em um dos tronos.
+~
+Indrani, esposa de Indra, é uma belíssima mulher de pele azeitonada e
+cabelos e olhos negros como azeviche. Seus traços fortes foram destacados
+com a tradicional maquiagem usada pelas mulheres daqui, e sua aparência é
+ainda mais majestosa devido às ricas jóias que ostenta. Conhecida por ser
+implacável, Indrani parece muito contrariada. Alguma coisa está acontecendo
+por aqui e ela não está gostando disso...
+~
+2351218 0 0 0 2424 0 0 0 0 E
+95 -22 -29 10d10+8900 14d5+40
+20000 600020
+8 8 2
+BareHandAttack: 8
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+E
+#11636
+diti sorridente mulher~
+Diti~
+Uma sorridente mulher parece fazer uma lista de nomes que nunca acaba.
+~
+Muito velha, mas aparentando juventude, Diti é uma mãe muito orgulhosa.
+Ela, tendo muito filhos, enumera no momento o nome de cada um e diz o que
+eles estão fazendo. Pelo que você entendeu, quarenta e nove deles moram no
+palácio, sendo que você já pode considerá-los "velhos conhecidos"...
+~
+2285570 0 0 0 2128 0 0 0 0 E
+77 -11 -12 10d10+1270 7d5+29
+5000 124020
+8 8 2
+E
+#11637
+rudra homem sinistro~
+Rudra~
+Um homem de aparência sinistra observa todos os seus movimentos.
+~
+Rudra é perigoso...  Possuidor de grande poder, ele é cruel com aqueles que
+lhe desagradam, mas assim como facilmente se torna devastador, pode ser
+compreensivo e bondoso.  Ele é exatamente como os ventos, sua arma
+favorita...
+~
+2285570 0 0 0 264272 0 0 0 0 E
+93 -14 -19 10d10+1670 9d6+32
+12000 244020
+8 8 1
+E
+#11638
+arjuna belo jovem guerreiro~
+Arjuna~
+Um belo e jovem guerreiro demonstra estar muito preocupado.
+~
+Arjuna, um dos filhos de Indra, é um renomado guerreiro e explorador.  Ele é
+um dos poucos homens que se atreveram a explorar Patala inteira, sendo esse
+motivo de orgulho para seu pai.  Tendo participado de muitas aventuras,
+Arjuna pode lhe dizer que um dos acontecimentos mais importantes de sua vida
+foi o emprendizado com Krishna, na época considerado apenas um simples
+auriga.  No momento, o jovem príncipe está preocupado com a movimentação no
+palácio...
+~
+2285570 0 0 0 2384 0 0 0 0 E
+97 -25 -33 10d10+8670 12d6+42
+18000 744020
+8 8 1
+E
+#11639
+cantor gandhava~
+um gandhava~
+Um magnífico cantor preenche seus ouvidos com uma bela canção.
+~
+Membro da corte de Lorde Indra, esse cantor é um dos estranhos seres
+celestiais cujos poderes e sabedoria vão além do que aparenta.  Sua canção
+sublime, chamada a "Voz da Natureza", faz com que você realmente tenha a
+impressão de estar ouvindo a música por trás do Mundo.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+47 3 -4 10d10+670 4d3+17
+8000 44020
+8 8 1
+E
+#11640
+guardião marut~
+um guardião Marut~
+Um preocupado Marut ronda o salão.
+~
+Esse Marut parece muito preocupado.  Seu senhor, Lorde Indra, teve de deixar
+às pressas o salão para cuidar de um problema.  Ele e alguns de seus irmãos,
+então, se prontificaram a proteger a corte caso alguma coisa de ruim
+acontecesse...
+~
+2285570 0 0 0 2128 0 0 0 0 E
+60 -2 -12 10d10+870 5d4+23
+1000 84020
+8 8 1
+E
+#11641
+gandhava músico~
+um gandhava~
+Um dos músicos celestiais toca com maestria seu intrumento.
+~
+Dizem as lendas que quando um mortal ouve a canção dos gandhavas,
+ele passa a saber coisas que nunca saberia nem que vivesse milhares de
+vidas. Sendo assim, você se sente um pouco mais sábio ao ouvir a "Voz da
+Natureza", a música daqueles que sabem o segredo da fabricação do soma.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+47 3 -4 10d10+670 4d3+17
+1000 44020
+8 8 1
+E
+#11642
+urvasi apsara~
+Urvasi~
+Uma apsara descansa sentada em algumas almofadas.
+~
+Uma das mais conhecidas apsaras, Urvasi acabou de se apresentar.
+Ela está muito cansada e no momento descansa sobre algumas almofadas.
+Não a perturbe.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+48 2 -5 10d10+770 4d4+19
+1000 54020
+8 8 2
+E
+#11643
+guarda~
+um guarda~
+Um guarda está imóvel em sua posição de guardar o salão.
+~
+Ele nem pisca... Você pode fazer qualquer coisa que ele não se moverá.
+Esse guarda apenas deixará sua posição caso ocorra alguma coisa que
+realmente exija sua interferência.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+55 0 -10 10d10+870 4d3+23
+1000 54020
+8 8 1
+E
+#11644
+guarda velho treinador~
+um treinador da guarda~
+Um dos guardas mais velhos está aqui, treinando outros guardas.
+~
+Um sábio na antiga prática da luta, o velho guarda é um dos mestres
+preferidos dos mais jovens.  Sabendo impor disciplina, com paciência ensina
+sua arte, conseguindo ainda passar importantes lições sobre a vida.
+Ele é um respeitado nobre da casta guerreira.
+~
+2285570 0 0 0 2128 0 0 0 0 E
+55 -6 -17 10d10+1000 4d5+27
+1000 75020
+8 8 1
+E
+$

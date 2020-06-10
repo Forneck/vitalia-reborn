@@ -1,0 +1,83 @@
+#22
+Vitalia~
+O Safári no Covil dos Lagartos~
+2200 2299 45 1 0 0 0 0 -1 -1
+-1
+* Mobiles
+M 0 2200 8 2202         Serpente
+M 0 2200 8 2202         Serpente
+M 0 2200 8 2202         Serpente
+M 0 2200 8 2202         Serpente
+M 0 2200 8 2202         Serpente
+M 0 2200 8 2202         Serpente
+M 0 2200 8 2202         Serpente
+M 0 2200 8 2202         Serpente
+M 0 2201 2 2203         Sentinela
+E 1 2201 100 16                 Espada Medieval
+E 1 2207 100 11                 Escudo
+E 1 2202 100 12                 Manto
+M 0 2201 2 2203         Sentinela
+E 1 2201 100 16                 Espada Medieval
+E 1 2207 100 11                 Escudo
+E 1 2202 100 12                 Manto
+M 0 2202 1 2206         Feiticeiro
+G 1 2206 10 -1                 Pergaminho M�gico 
+E 1 2202 100 12                 Mantos
+M 0 2203 1 2206         Elemental
+M 0 2204 12 2211        Guarda
+E 1 2201 100 16                 Espada Medieval
+E 1 2202 100 12                 Manto
+M 0 2204 12 2211        Guarda
+E 1 2201 100 16                 Espada Medieval
+E 1 2202 100 12                 Manto
+M 0 2204 12 2211        Guarda
+E 1 2201 100 16                 Espada Medieval
+E 1 2202 100 12                 Manto
+M 0 2204 12 2211        Guarda
+E 1 2201 100 16                 Espada Medieval
+E 1 2202 100 12                 Manto
+E 1 3836 7 17             Card Lagarto(3836) com Lagarto(2204)
+M 0 2204 12 2212        Guarda
+E 1 2201 100 16                 Espada Medieval
+E 1 2202 100 12                 Manto
+M 0 2204 12 2212        Guarda
+E 1 2201 100 16                 Espada Medieval
+E 1 2202 100 12                 Manto
+M 0 2204 12 2212        Guarda
+E 1 2201 100 16                 Espada Medieval
+E 1 2202 100 12                 Manto
+M 0 2204 12 2212        Guarda
+E 1 2201 100 16                 Espada Medieval
+E 1 2202 100 12                 Manto
+M 0 2204 12 2213        Guarda
+E 1 2201 100 16                 Espada Medieval
+E 1 2202 100 12                 Manto
+M 0 2204 12 2213        Guarda
+E 1 2201 100 16                 Espada Medieval
+E 1 2202 100 12                 Manto
+M 0 2204 12 2213        Guarda
+E 1 2201 100 16                 Espada Medieval
+E 1 2202 100 12                 Manto
+M 0 2204 12 2213        Guarda
+E 1 2201 100 16                 Espada Medieval
+E 1 2202 100 12                 Manto
+M 0 2205 1 2213         Pr�ncipe
+G 1 2205 1 -1                   Chave Verde Para A Sa�da
+E 1 2200 20 6                   Coroa
+E 1 2201 100 16                 Espada Medieval
+M 0 2206 1 2218         Senhor Hooper - Lojista
+* Objects
+O 0 2208 1 2216         SORTUDO (chave)
+O 0 2203 1 2208         In�til Chave
+O 0 2204 1 2213         Altar
+* Doors
+D 0 2202 0 1            SORTUDO (Sala) Porta
+D 0 2216 2 1            
+D 0 2205 3 2            Porta da C�mara de Magias
+D 0 2206 1 2            
+D 0 2213 1 2            Porta Final
+D 0 2214 3 2            
+D 0 2217 2 1            Porta Falsa No Fim Do Mundo 
+D 0 2202 1 2
+D 0 2203 3 2
+S

@@ -1,0 +1,1038 @@
+#9501
+Dentro de uma Taverna~
+   Você está dentro de um quarto vagamente iluminado.  A atmosfera faz você
+se sentir desconfortável.  À sua frente há uma misteriosa cigana.  Ela
+sussurra 'Seu destino pertence a este mundo.' Você ainda esta se perguntando
+o que ela quis dizer, quando você nota sua bola de cristal...  Ela brilha
+intensamente e mostra a Galáxia!
+~
+95 8 0 0 0 0
+D1
+~
+~
+0 -1 7917
+D5
+~
+~
+0 -1 9502
+S
+#9502
+Dentro da Bola de Cristal~
+   Você tocou a bola de cristal e descobriu que foi parar dentro dela: um
+mundo de estrelas e sonhos!  Assim que você olha para trás você vê que não
+há escolha a não ser seguir adiante.
+~
+95 0 0 0 0 2
+D0
+~
+~
+0 -1 9503
+S
+#9503
+Dentro da Galáxia~
+   Você está agora dentro da galáxia, a sua volta, você vê estrelas e poeira
+estelar sorrindo com sua presença, cometas e meteoros vagando a seu redor.
+Você percebe que este mundo pode não ser a verdadeira galáxia, apenas mais
+uma área de fantasia.  A saída parece estar em qualquer direção.
+~
+95 0 0 0 0 1
+D0
+~
+~
+0 -1 9504
+D1
+~
+~
+0 -1 9508
+D2
+~
+~
+0 -1 9502
+D3
+~
+~
+0 -1 9521
+S
+#9504
+Em um Caminho Intergaláctico~
+   Você está em um caminho bem feito que parece feito deliberadamente para
+visitantes como você.  O caminho continua a norte e uma pequena saída fica
+ao oeste.
+~
+95 0 0 0 0 1
+D0
+~
+~
+0 -1 9505
+D2
+~
+~
+0 -1 9503
+D3
+~
+~
+0 -1 9522
+S
+#9505
+O Fim do Caminho Intergaláctico~
+   Você percebe que o caminho termina abruptamente e você se pergunta por
+quê.  Você vê que há ainda uma pequena trilha levando ao norte e outra ao
+oeste.  Ao leste fica uma ponte.
+~
+95 0 0 0 0 1
+D0
+~
+~
+0 -1 9506
+D1
+~
+~
+0 -1 9509
+D2
+~
+~
+0 -1 9504
+D3
+~
+~
+0 -1 9523
+S
+#9506
+Em Uma Parte Deserta da Galáxia~
+   Este lugar parece abandonado, coberto por escombros.  Não há
+sinal de vida ao redor.
+~
+95 0 0 0 0 1
+D2
+~
+~
+0 -1 9505
+D3
+~
+~
+0 -1 9524
+S
+#9508
+Na Ponte de Estrelas~
+   Esta ponte foi feita pelas estrelas em honra a seus ancestrais.  Ela
+brilha intensamente e o faz sentir como se estivesse andando em um caminho
+de luz.  Uma entrada para uma antiga construção fica ao norte e ao leste
+fica a Via Láctea.
+~
+95 0 0 0 0 1
+D0
+~
+~
+0 -1 9531
+D1
+~
+~
+0 -1 9512
+D3
+~
+~
+0 -1 9503
+S
+#9509
+Na Ponte Nebulosa~
+   Esta ponte, assim como a outra, foi feita como um memorial.  As névoas
+fizeram uma, apenas para mostrar que são tão capazes quanto as estrelas.  Ao
+norte fica a sala do trono.
+~
+95 1 0 0 0 1
+D0
+~
+~
+0 -1 9510
+D1
+~
+~
+0 -1 9514
+D3
+~
+~
+0 -1 9505
+S
+#9510
+A Sala do Trono da Nebulosa Rainha~
+   Você mal pode ver que é a sala do trono pois está muito escuro aqui.  Ao
+olhar o trono vazio, você se pergunta para onde a Rainha foi, será que ela está
+se escondendo de você?
+~
+95 9 0 0 0 0
+D2
+~
+~
+0 -1 9509
+S
+#9512
+No Começo da Via Láctea~
+   É aqui que a famosa Via Láctea começa a fluir.  Você é cercado por
+fluxos de névoa no momento em que você pisa nela.  Você não pode ver direito
+aqui ...  Por sorte, você ainda não caiu!
+~
+95 0 0 0 0 4
+D0
+~
+~
+0 -1 9513
+D3
+~
+~
+0 -1 9508
+S
+#9513
+Pela Via Láctea~
+   Você está ainda viajando neste caminho enevoado.  Você percebe uma
+pequena abertura ao leste.
+~
+95 0 0 0 0 4
+D0
+~
+~
+0 -1 9514
+D1
+~
+~
+0 -1 9517
+D2
+~
+~
+0 -1 9512
+S
+#9514
+O Fim da Via Láctea~
+   Justo quando você estava começando a gostar desta viajem pela névoa, você
+chega a seu fim.  O oeste leva a uma ponte e o leste leva a algum outro
+lugar.
+~
+95 0 0 0 0 4
+D1
+~
+~
+0 -1 9518
+D2
+~
+~
+0 -1 9513
+D3
+~
+~
+0 -1 9509
+S
+#9517
+Uma Pequena Clareira~
+   Você está dentro de uma pequena clareira.  Você pode ver que aqui há
+sinais de seres viventes por perto.
+~
+95 0 0 0 0 2
+D0
+~
+~
+0 -1 9518
+D3
+~
+~
+0 -1 9513
+S
+#9518
+Um Limite da Galáxia~
+   Você está em um dos limites da galáxia.  Não há nada aqui, exceto um
+caminho que leva para baixo.
+~
+95 0 0 0 0 1
+D2
+~
+~
+0 -1 9517
+D3
+~
+~
+0 -1 9514
+D5
+~
+~
+0 -1 9519
+S
+#9519
+Bem Perto da Estrela Gigante~
+   Você está bem perto de uma gigantesca estrela vermelha.  Enquanto você
+ainda está fascinado por sua beleza, a estrela continua crescendo ...
+Subitamente você percebe que é melhor sair daqui.
+~
+95 4 0 0 0 1
+D0
+~
+~
+0 -1 9520
+D1
+~
+~
+0 -1 9520
+D2
+~
+~
+0 -1 9520
+D3
+~
+~
+0 -1 9520
+S
+#9520
+Brilhante Demais Para Descrever~
+   De fato, é brilhante demais para descrever.  Por que o que você está
+presenciando é um evento de uma Supernova, como uma estrela explode em
+poeira galáctica.  Você pode se achar sortudo por presenciar este evento, e
+ainda mais sortudo por ter conseguido sair desta galáxia a medida que seu
+corpo torna-se poeira.  Isso realmente DÓI!
+~
+95 6 0 0 0 0
+S
+#9521
+O Agrupamento de Estrelas~
+   Você está dentro da morada das estrelas.  Tudo o que você pode ver são
+estrelas e nada mais.  Seus olhos se machucam e doem quando você olha para
+elas.
+~
+95 8 0 0 0 1
+D0
+~
+~
+0 -1 9522
+D1
+~
+~
+0 -1 9503
+S
+#9522
+Outro Limite da Galáxia~
+   Este é um outro lugar inabitado.  Saídas ficam ao norte, leste e sul.
+~
+95 0 0 0 0 2
+D0
+~
+~
+0 -1 9523
+D1
+~
+~
+0 -1 9504
+D2
+~
+~
+0 -1 9521
+S
+#9523
+Um Canto da Galáxia~
+   Você se pergunta por que a galáxia é limitada.  Tudo o que você aprendeu
+sobre Astronomia agora, parece sem valor.  Bem, quem lhe disse para estudar
+Astronomia?
+~
+95 0 0 0 0 1
+D0
+~
+~
+0 -1 9524
+D1
+~
+~
+0 -1 9505
+D2
+~
+~
+0 -1 9522
+S
+#9524
+Perdido no Espaço~
+   Você está agora perdido no espaço.  O que mais lhe incomoda é a
+escuridão que parece querer devorar-te.  Melhor você sair daqui rápido.
+~
+95 1 0 0 0 2
+D0
+~
+~
+0 -1 9525
+D1
+~
+~
+0 -1 9506
+D2
+~
+~
+0 -1 9523
+S
+#9525
+O Buraco Negro~
+   Bem, você escolheu o caminho errado, sinto muito.  Nada pode escapar
+deste monstro, nem mesmo a luz.  Pânico!  Você não tem escapatória.
+~
+95 7 0 0 0 0
+S
+#9526
+A Morada das Plêiades~
+   Aqui é onde as famosas sete irmãs moram.  Melhor você não perturbá-las.
+~
+95 0 0 0 0 1
+D1
+~
+~
+0 -1 9529
+D2
+~
+~
+0 -1 9527
+S
+#9527
+O Lado Oeste do Templo~
+   Você está ainda vagando ao redor deste templo.  Você nota saídas em todas
+as direções menos ao oeste.
+~
+95 0 0 0 0 1
+D0
+~
+~
+0 -1 9526
+D1
+~
+~
+0 -1 9530
+D2
+~
+~
+0 -1 9528
+S
+#9528
+O Templo da Caça de Órion~
+   Este é dedicado ao Maior Caçador de todos os tempos - Órion.  Espalhados
+pelo chão, estão os famosos equipamentos usados por ele.
+~
+95 0 0 0 0 1
+D0
+~
+~
+0 -1 9527
+D1
+~
+~
+0 -1 9531
+S
+#9529
+O Lado Sul do Templo~
+   Você está ainda vagando ao redor deste templo.  Você nota saídas em todas
+as direções menos ao norte.
+~
+95 0 0 0 0 1
+D1
+~
+~
+0 -1 9532
+D2
+~
+~
+0 -1 9530
+D3
+~
+~
+0 -1 9526
+S
+#9530
+A Câmara das Oferendas~
+   Está é a sagrada câmara de oferendas, onde os sacrifícios são feitos.
+Você vê uma jovem garota aqui, acorrentada à parede, como se ela estivesse
+esperando pela execução.  Você olha para cima e percebe que as correntes não
+vêm de cima.  Abaixo, você reconhece o templo de Thalos.
+~
+95 0 0 0 0 1
+D0
+~
+~
+0 -1 9529
+D1
+~
+~
+0 -1 9533
+D2
+~
+~
+0 -1 9531
+D3
+~
+~
+0 -1 9527
+D4
+~
+~
+0 -1 9539
+D5
+~
+~
+0 -1 5250
+S
+#9531
+A Entrada do Antigo Templo~
+   Você entrou neste velho templo, o qual foi construído originalmente pelos
+deuses do Monte Olimpo, mas agora é deserto como se alguém tivesse tomado
+conta deste pedaço do universo.
+~
+95 0 0 0 0 1
+D0
+~
+~
+0 -1 9530
+D1
+~
+~
+0 -1 9534
+D2
+~
+~
+0 -1 9508
+D3
+~
+~
+0 -1 9528
+S
+#9532
+O Poderoso Trono de Hércules~
+   Você está diante do trono de um herói há muito tempo esquecido.  Ele está
+rodeado por riquezas que o herói acumulou durante os Dez (que no fim seriam
+Doze) Trabalhos.
+~
+95 0 0 0 0 1
+D2
+~
+~
+0 -1 9533
+D3
+~
+~
+0 -1 9529
+S
+#9533
+O Lado Leste do Templo~
+   Você está ainda vagando ao redor deste templo.  Você nota saídas em todas
+as direções menos ao leste.
+~
+95 0 0 0 0 1
+D0
+~
+~
+0 -1 9532
+D2
+~
+~
+0 -1 9534
+D3
+~
+~
+0 -1 9530
+S
+#9534
+A Câmara de Perseu~
+   Esta é a câmara do príncipe Perseu.  No entanto, ele não parece estar
+aqui.  Talvez ele tenha ido buscar Pégasus para poder, com a ajuda do cavalo
+alado, salvar a pobre Andrômeda...
+~
+95 0 0 0 0 1
+D0
+~
+~
+0 -1 9533
+D3
+~
+~
+0 -1 9531
+S
+#9539
+Nas Correntes Místicas~
+   Você está caminhando nas correntes, vacilante.  Você percebe saídas em
+todas as direções.  Acima de você, as correntes continuam para cima.  Mas um
+campo de força o impede de ir adiante.
+~
+95 0 0 0 0 5
+D0
+~
+~
+0 -1 9548
+D1
+~
+~
+0 -1 9551
+D2
+~
+~
+0 -1 9542
+D3
+~
+~
+0 -1 9545
+D4
+Você sente o campo de força da Primavera.
+~
+campo força~
+1 9524 9554
+D5
+~
+~
+0 -1 9530
+S
+#9542
+Em Uma Encosta~
+   Subitamente você se encontra em uma encosta.  Ao olhar em volta, você
+percebe que a Primavera subitamente tomou conta do lugar.
+~
+95 0 0 0 0 4
+D0
+~
+~
+0 -1 9539
+D1
+~
+~
+0 -1 9553
+D3
+~
+~
+0 -1 9543
+S
+#9543
+Dentro de uma Arena~
+   Você está dentro do que costumava ser uma grande arena onde toureiros
+enfrentavam ferozes touros.  Apreensivo, você percebe que não há ninguém por
+aqui.  Talvez estejam todos mortos?
+~
+95 0 0 0 0 2
+D1
+~
+~
+0 -1 9542
+D3
+~
+~
+0 -1 9544
+S
+#9544
+Dentro de um Gabinete~
+   Este é um estranho gabinete.  Além das mesas e cadeiras, você também vê um
+enorme espelho na parede.  Então você se pergunta: é assim que se torna um
+Gêmeo em dois Gêmeos?
+~
+95 0 0 0 0 0
+D1
+~
+~
+0 -1 9543
+S
+#9545
+À Beira-Mar~
+   Você começa a sentir o calor do Verão.  Na parte rochosa da praia você
+percebe estranhas formas que, tentando se esconder, podem ser caranguejos
+camuflados.
+~
+95 0 0 0 0 2
+D1
+~
+~
+0 -1 9539
+D3
+~
+~
+0 -1 9546
+S
+#9546
+Dentro de uma Selva Profunda~
+   Perto daqui, você pode ouvir o estranho som emitido por um animal.
+Perscrutando através da densa vegetação você pensa ter visto um ameaçador
+par de olhos.
+~
+95 0 0 0 0 3
+D1
+~
+~
+0 -1 9545
+S
+#9547
+Dentro de um Luxuoso Quarto~
+   Um sentimento de paz invade seu espírito.  Você vê uma magnífica cama.  A
+cama é de casal, mas no quarto só há espaço para uma pessoa!  E agora...?
+~
+95 8 0 0 0 1
+D3
+~
+~
+0 -1 9548
+S
+#9548
+A Corte Suprema~
+   Você está dentro de um tribunal.  Você sente um incrível sentimento de
+culpa e quer provar sua inocência!  Um estranho medo se apodera de você
+pois você se sente totalmente exposto, assim como as árvores ficam no outono
+quando todas suas folhas caem... Você teme ser punido...
+~
+95 8 0 0 0 1
+D1
+~
+~
+0 -1 9547
+D2
+~
+~
+0 -1 9539
+D3
+~
+~
+0 -1 9549
+S
+#9549
+No Seco Deserto~
+   Você está confuso pelas dunas que constantemente mudam ao sabor do vento.
+Através do calor estonteante, você vê um enorme escorpião ...  Será uma
+miragem?
+~
+95 0 0 0 0 2
+D1
+~
+~
+0 -1 9548
+D3
+~
+~
+0 -1 9550
+S
+#9550
+Nos Bosques~
+   Você está no centro da área de caça de um Centauro.  Seria melhor você se
+esconder antes de se tornar o 'centro das atenções'!
+~
+95 0 0 0 0 3
+D1
+~
+~
+0 -1 9549
+S
+#9551
+No Cume da Montanha~
+   Você está no mais alto cume da Galáxia.  Você olha em volta e percebe
+nuvens abaixo de você.  Uma das nuvens lembra a forma de um bode.
+~
+95 0 0 0 0 5
+D1
+~
+~
+0 -1 9552
+D3
+~
+~
+0 -1 9539
+S
+#9552
+Dentro de uma Cachoeira~
+   O barulho é ensurdecedor.  Você estava quase parando para beber água quando
+percebe que ela está sendo despejada de um vaso de impressionantes proporções.
+~
+95 0 0 0 0 5
+D3
+~
+~
+0 -1 9551
+S
+#9553
+Dentro de um Molusco Gigante~
+   Você não se sente tranqüilo aqui, como se alguma magia maligna estivesse
+sendo lançada sobre você.  Você desconfia que algo suspeito esteja acontecendo
+aqui.
+~
+95 0 0 0 0 5
+D3
+~
+~
+0 -1 9542
+S
+#9554
+O Fim das Correntes Misteriosas~
+   Você chegou ao fim das correntes misteriosas.  Olhando para cima, você vê
+uma pequena fissura, onde você pode escalar.  De qualquer forma, parece que há
+outro campo de força bloqueando seu caminho.
+~
+95 0 0 0 0 5
+D4
+Você vê o campo de força do Verão.
+~
+campo força verão~
+1 9525 9555
+D5
+Você vê o campo de força da Primavera.
+~
+campo força primavera~
+1 9524 9539
+S
+#9555
+Em Draco~
+   Você percebe que está em um chão escamoso.  Enquanto você se pergunta de
+que é feito o chão, você sente o mesmo se mover embaixo de seus pés.
+~
+95 1 0 0 0 4
+D0
+~
+~
+0 -1 9556
+D5
+Você vê o campo de força do Verão.
+~
+campo força verão~
+1 9525 9554
+S
+#9556
+A Trilha de Draco~
+   Finalmente você percebe que está em um gigantesco dragão (cujo corpo se
+assemelha em muito com o de uma cobra) chamado Draco, o guardião da Galáxia
+interna.
+   Você percebe que Draco na verdade está voando agora!
+~
+95 1 0 0 0 4
+D0
+~
+~
+0 -1 9557
+D2
+~
+~
+0 -1 9555
+S
+#9557
+A Cauda de Draco~
+   Enquanto você caminha ao longo desta criatura escamosa, você percebe que
+o único modo de você conseguir chegar até a Galáxia interior é seguindo por todo
+o dorso do dragão até chegar na cabeça da criatura.
+~
+95 1 0 0 0 4
+D0
+~
+~
+0 -1 9558
+D2
+~
+~
+0 -1 9556
+S
+#9558
+Perto das Pernas de Draco~
+   Você está se aproximando das pernas desta criatura.  Você olha em volta e
+nota que tudo que o cerca é escuridão, exceto algumas fracas luzes das
+estrelas distantes.
+~
+95 1 0 0 0 4
+D0
+~
+~
+0 -1 9559
+D2
+~
+~
+0 -1 9557
+S
+#9559
+Nas Costas de Draco~
+   Finalmente você está na metade deste cansativo caminho.  Você pode ver
+que as asas ficam ao leste, mas parece que há outro campo de força no
+caminho.
+~
+95 1 0 0 0 4
+D1
+Você vê o campo de força do Outono.
+~
+campo força~
+1 9526 9560
+D2
+~
+~
+0 -1 9558
+S
+#9560
+Entre as Asas de Draco~
+   Você ouve o bater de gigantescas asas por perto.  Você desesperadamente
+tenta se segurar em alguma coisa para que as fortes rajadas não o levem.
+~
+95 1 0 0 0 4
+D1
+~
+~
+0 -1 9561
+D3
+~
+~
+2 9526 9559
+S
+#9561
+Perto dos Braços de Draco~
+   De cima você mal pode ver os gigantescos braços que se estendem pela escuridão.
+~
+95 1 0 0 0 4
+D2
+~
+~
+0 -1 9562
+D3
+~
+~
+0 -1 9560
+S
+#9562
+No Pescoço de Draco~
+   Sua jornada está agora se aproximando do fim.  De qualquer forma, este
+pescoço parece não ter fim.
+~
+95 1 0 0 0 4
+D0
+~
+~
+0 -1 9561
+D3
+~
+~
+0 -1 9563
+S
+#9563
+Se Aproximando da Cabeça de Draco~
+   Você chegou ao fim de Draco, mas você não consegue achar a cabeça!  Você
+vê um campo de força ao sul, a alguma distância.  Se ao menos a cabeça
+estivesse aqui...
+~
+95 1 0 0 0 4
+D1
+~
+~
+0 -1 9562
+D2
+Você vê o campo de força do Inverno.
+~
+campo força~
+1 9527 9564
+S
+#9564
+No Caminho da Ursa Menor~
+   Agora você está parte mais interna da galáxia.  O caminho pelo qual você
+está caminhando agora é o caminho da Ursa Menor, ou o Navio.  Você nota que
+há sete quartos aqui, representando as sete estrelas da Ursa.
+~
+95 0 0 0 0 1
+D0
+Você vê o campo de força do Inverno.
+~
+campo força~
+1 9527 9563
+D2
+~
+~
+0 -1 9565
+D3
+~
+~
+0 -1 9566
+S
+#9565
+O Trono de Cassiopéia~
+   Este é a sala do trono da Rainha da Galáxia.  Daqui você pode ver cada
+estrela e constelação do Universo.
+~
+95 0 0 0 0 1
+D0
+~
+~
+0 -1 9564
+D3
+~
+~
+0 -1 9567
+S
+#9566
+Ao Longo do Caminho da Ursa Menor~
+   Você vê estrelas a sua volta mas nada em especial o interessa.
+~
+95 0 0 0 0 1
+D1
+~
+~
+0 -1 9564
+D2
+~
+~
+0 -1 9567
+S
+#9567
+O Trono de Cefeu~
+   Este é a sala do Trono do Rei da Galáxia.  Daqui você pode ver cada
+estrela e constelação do Universo.
+~
+95 0 0 0 0 1
+D0
+~
+~
+0 -1 9566
+D1
+~
+~
+0 -1 9565
+D2
+~
+~
+0 -1 9568
+S
+#9568
+Ao Longo do Caminho da Ursa Menor~
+   Você vê estrelas a sua volta mas nada em especial o interessa.
+~
+95 0 0 0 0 1
+D0
+~
+~
+0 -1 9567
+D3
+~
+~
+0 -1 9569
+S
+#9569
+Ao Longo do Caminho da Ursa Menor~
+   Você vê estrelas a sua volta mas nada em especial o interessa.
+~
+95 0 0 0 0 1
+D1
+~
+~
+0 -1 9568
+D2
+~
+~
+0 -1 9570
+S
+#9570
+O Final da Ursa Menor~
+   Você terminou o caminho da Ursa Menor.  Aqui, a característica mais
+proeminente são algumas marcas de garra.  Você também nota um lugar ao sul;
+provavelmente é onde a Estrela Polar costuma ficar.
+~
+95 0 0 0 0 1
+D0
+~
+~
+0 -1 9569
+D2
+~
+~
+0 -1 9571
+S
+#9571
+A Estrela Polar~
+   Você entrou na câmara privada de Polaris.  Este é um quarto de grande
+importância.  Você pode ver um poderoso telescópio apontando para o universo
+(BISBILHOTANDO!).  É daqui que Polaris comanda a Galáxia.  Você sente que
+chegou ao fim de sua procura nestes confins do Universo.
+~
+95 0 0 0 0 1
+D0
+~
+~
+0 0 9570
+S
+$~

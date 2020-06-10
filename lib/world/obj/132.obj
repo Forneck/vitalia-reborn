@@ -1,0 +1,29 @@
+#13200
+escrivaninha mogno~
+uma escrivaninha de mogno~
+Uma escrivaninha de mogno está aqui, em frente à parede leste.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+2000 5 -1 0
+10000 0 10 0 0
+E
+gaveta~
+Parece com qualquer gaveta - com puxador e tudo.
+~
+#13201
+chave~
+uma chave em forma de oito~
+Uma pequena chave em forma de oito foi esquecida aqui.~
+~
+18 c 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+2 1500 0 0 0
+#13202
+chave~
+a chave da cela~
+A chave da cela está caida aqui, em meio a sujeira.~
+~
+18 c 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+2 1500 0 0 0
+$~

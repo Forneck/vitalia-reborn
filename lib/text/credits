@@ -1,0 +1,92 @@
+@B                 __   __   _    ________   ___ o�  __       _     ___
+@W       O MUNDO  @B|  |.' .'.'_| .'_    _.' .' _ `.  |  |    .'_|  .' _ `.
+@W            DE  @B|  ' .'  |  |    |  |   |  ' |  | |  |    |  | |  ' |  |
+@B                |  .'    |  |    |  |   |  .-.  | |  |___ |  | |  .-.  |
+@B                |.'      |_.'    |_.'   |_.' |_.' |____.' |_.' |_.' |_.'@n
+@B ___________________________________________________________[@W Cr�ditos @B]_______@n
+
+ @R*@W Atualmente, O Mundo de Vit�lia � mantido por:@n
+
+   @GBlug@n: criador e respons�vel pela cria��o de novos recursos ao MUD;
+   @GNemesis@n: administra e organiza a constru��o de �reas para o MUD;
+   @GMaegali@n: administra e supervisiona projetos;
+
+   Nossos agradecimentos especiais a todos aqueles que ajudam a manter e que
+contribuem com o desenvolvimento do Mundo de Vit�lia:
+
+   A todos os deuses que participaram desta implementa��o e que tornaram
+poss�vel a realiza��o deste sonho de todos n�s, de tornar Vit�lia um mundo
+cada vez melhor:
+
+   @GTantalus@n, @GPorter@n, @GJarkeld@n, @GAlexander@n, @GSilverbolt@n e @GEomer@n, que
+traduziram/criaram �reas para nosso mundo e nossos agradecimentos especiais
+aos deuses @GTork@n, @GEomer@n, @GSilverbolt@n e @GTantalus@n, que se desdobraram para que
+pud�ssemos vencer o inimigo chamado @RTempo.@n
+
+   Aos deuses: @GJewel@n, @GPorter@n, @GBragi@n, @GDarkland@n, @GAlexander@n e @GSlinquer@n, que se
+desdobraram em suas fun��es para que os outros pudessem trabalhar com
+tranquilidade e realizar este projeto.
+
+   Nossos agradecimentos especiais aos mortais: @RAqua@n, @RKidaf@n, @RKen@n, @RAzlan@n,
+@RPhillipe@n e ao imortal @WKestor@n, que se desdobraram para que um sonho se
+tornasse realidade.
+
+   Tamb�m agradecemos ao deus @GBragi@n, que supervisiona o nosso site e aos
+mortais, @WAstus@n, @WEndelion@n e @WSethik@n, que s�o os atuais criadores de nosso
+site.
+
+   E tamb�m os nossos agradecimentos aos escritores de Vit�lia, que se
+imortalizaram atrav�s dos seus livros.
+
+   Nossos eternos agradecimentos a todos os que, embora n�o tenham sido
+citados aqui, j� contribuiram com tradu��es ou cria��es de �reas no passado,
+ou simplesmente nos dando id�ias, contribuindo tamb�m para que Vit�lia se
+tornasse cada vez melhor.
+
+   Finalmente, nosso agradecimento a @GVOC�@n amigo, que acredita em nosso
+trabalho, que compartilha do nosso sonho e que nos faz t�o agrad�vel
+companhia.
+
+                       @R*@W Equipe de Vit�lia, unidos em um sonho real.
+   
+
+   @WVisite a p�gina do Mundo de Vit�lia: @Rhttp://www.mud.com.br/@n
+
+@B[@W Outras contribui��es @B]@n
+
+   O ASCII Art da espada pequena que � vista no menu principal foi criado
+por Joan G. Stark <http://www.ascii-art.com>.  A espada maior, que aparece
+nos v�rios t�tulos, foi encontrada sem autor conhecido, e aperfei�oada pela
+equipe do VitaliaMUD.
+
+@B[@W CircleMUD @B]@n
+
+                    C  I  R  C  L  E  M  U  D     3  .  0
+
+CircleMUD was developed from DikuMUD (Gamma 0.0) by Jeremy "Ras" Elson at
+Johns Hopkins University's Department of Computer Science.  All code unique
+to CircleMUD is protected under a copyright by the Trustees of the Johns
+Hopkins University.
+
+CircleMUD is freeware and can be downloaded via anonymous FTP from
+ftp.circlemud.org or ftp2.circlemud.org in pub/CircleMUD.  Its author can
+be contacted at jelson@circlemud.org.
+
+Type HELP CIRCLEMUD for more information.
+
+============================================================================
+
+                   Original game idea, concept, and design:
+
+          Katja Nyboe               [Superwoman] (katz@freja.diku.dk)
+          Tom Madsen              [Stormbringer] (noop@freja.diku.dk)
+          Hans Henrik Staerfeldt           [God] (bombman@freja.diku.dk)
+          Michael Seifert                 [Papi] (seifert@freja.diku.dk)
+          Sebastian Hammer               [Quinn] (quinn@freja.diku.dk)
+
+------------------------------------------------------------------------------
+Additional contributions from Michael Curran, Bill Wisner, Mads Haar, and
+Stephan Dahl.
+
+Originally developed at:
+  DIKU - The Department of Computer Science at the University of Copenhagen.
