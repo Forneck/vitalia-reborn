@@ -28,17 +28,21 @@ ACMD(do_assist)
 
 	if (FIGHTING(ch))
 	{
-		send_to_char(ch, "You're already fighting!  How can you assist someone else?\r\n");
+		send_to_char(ch, "Você já está lutando!  Como você pretende dar assistência a mais alguém?\r\n");
 		return;
 	}
+	  if IS_DEAD(ch) {
+    send_to_char(ch,"Você não pode dar assistência a ninguém, você está mort%c!",OA(ch));
+    return;
+  }
 	one_argument(argument, arg);
 
 	if (!*arg)
-		send_to_char(ch, "Whom do you wish to assist?\r\n");
+		send_to_char(ch, "Para quem você deseja dar assistência?\r\n");
 	else if (!(helpee = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)))
 		send_to_char(ch, "%s", CONFIG_NOPERSON);
 	else if (helpee == ch)
-		send_to_char(ch, "You can't help yourself any more than this!\r\n");
+		send_to_char(ch, "Você não pode ajudar a si mesm%c!\r\n",OA(ch));
 	else
 	{
 		/* 
@@ -51,17 +55,17 @@ ACMD(do_assist)
 				 opponent && (FIGHTING(opponent) != helpee); opponent = opponent->next_in_room);
 
 		if (!opponent)
-			act("But nobody is fighting $M!", FALSE, ch, 0, helpee, TO_CHAR);
+			act("Mas $L não está lutando com ninguém!", FALSE, ch, 0, helpee, TO_CHAR);
 		else if (!CAN_SEE(ch, opponent))
-			act("You can't see who is fighting $M!", FALSE, ch, 0, helpee, TO_CHAR);
+			act("Você não pode ver com quem $L está lutando!", FALSE, ch, 0, helpee, TO_CHAR);
 		/* prevent accidental pkill */
 		else if (!CONFIG_PK_ALLOWED && !IS_NPC(opponent))
-			send_to_char(ch, "You cannot kill other players.\r\n");
+			send_to_char(ch, "Use 'murder' se você deseja realmente atacar!\r\n");
 		else
 		{
-			send_to_char(ch, "You join the fight!\r\n");
-			act("$N assists you!", 0, helpee, 0, ch, TO_CHAR);
-			act("$n assists $N.", FALSE, ch, 0, helpee, TO_NOTVICT);
+			send_to_char(ch, "Você entra para a luta!\r\n");
+			act("$N da assistência a você !", 0, helpee, 0, ch, TO_CHAR);
+			act("$n da assistência a  $N.", FALSE, ch, 0, helpee, TO_NOTVICT);
 			hit(ch, opponent, TYPE_UNDEFINED);
 		}
 	}
