@@ -1,15 +1,15 @@
 #2200
-A Entrada Para o Safári no Covil Dos Lagartos~
-   Esta é a entrada principal para o excitante Parque Safári no Covil dos
-Lagartos.  Ao seu redor, estão em pé muitos outros aventureiros que esperam
-sua chance para tentar a sorte na busca.  E você também.  Esta busca
-consiste na recuperação do tesouro Dourado nas profundezas da toca do homem
-lagarto.  Se você desejar testar sua sorte, você pode seguir o caminho pela
-saída ao sul... Caso contrário, você pode deixar o Parque do Safári
+A Entrada Para o Safï¿½ri no Covil Dos Lagartos~
+   Esta ï¿½ a entrada principal para o excitante Parque Safï¿½ri no Covil dos
+Lagartos.  Ao seu redor, estï¿½o em pï¿½ muitos outros aventureiros que esperam
+sua chance para tentar a sorte na busca.  E vocï¿½ tambï¿½m.  Esta busca
+consiste na recuperaï¿½ï¿½o do tesouro Dourado nas profundezas da toca do homem
+lagarto.  Se vocï¿½ desejar testar sua sorte, vocï¿½ pode seguir o caminho pela
+saï¿½da ao sul... Caso contrï¿½rio, vocï¿½ pode deixar o Parque do Safï¿½ri
 seguindo norte... ou leste...
-   Há um grande aviso aqui.
+   Hï¿½ um grande aviso aqui.
 ~
-22 cd 4
+22 12 0 0 0 4
 D0
 ~
 ~
@@ -20,7 +20,7 @@ O Mundo Real termina a leste.
 ~
 0 -1 2217
 D2
-A busca começa a sul.
+A busca comeï¿½a a sul.
 ~
 ~
 0 -1 2201
@@ -28,137 +28,135 @@ E
 aviso grande~
 O aviso diz o seguinte:
  
-      Esta área é apropriada para jogadores que ainda estão iniciando
+      Esta ï¿½rea ï¿½ apropriada para jogadores que ainda estï¿½o iniciando
      sua vida de aventuras.  Mas tenham cuidado pois os monstros daqui
-       são muito agressivos.  É essencial que se tenha uma ou duas 
+       sï¿½o muito agressivos.  ï¿½ essencial que se tenha uma ou duas 
       habilidades...  Principalmente a habilidade para se destrancar 
-      fechaduras.  Se você estiver COM SORTE poderá encontrar um item
-                           para destrancá-las....
+      fechaduras.  Se vocï¿½ estiver COM SORTE poderï¿½ encontrar um item
+                           para destrancï¿½-las....
  
-                                                Deuses de Vitália
+                                                Deuses de Vitï¿½lia
  
 ~
 S
 #2201
-A Sala Preparatória Para A Busca~
-   Nesta sala existem vários itens de preparação para o início da busca.  
-Um guia explica a você qual é o objetivo:  Recuperar o ouro.
-Olhando ao seu redor, você vê uma saída a norte, que desaparece e você acaba
-se sentindo muito só e agora a única saída é para baixo... na água.
-   Você está pronto para começar a busca, o guia lhe dá uma poção e lhe diz
-para beber isto. Você faz isso e sente que seus movimentos estão mais
-fáceis e muito mais leves. O guia desaparece de repente e você começa a busca.
+A Sala Preparatï¿½ria Para A Busca~
+   Nesta sala existem vï¿½rios itens de preparaï¿½ï¿½o para o inï¿½cio da busca.  
+Um guia explica a vocï¿½ qual ï¿½ o objetivo:  Recuperar o ouro.
+Olhando ao seu redor, vocï¿½ vï¿½ uma saï¿½da a norte, que desaparece e vocï¿½ acaba
+se sentindo muito sï¿½ e agora a ï¿½nica saï¿½da ï¿½ para baixo... na ï¿½gua.
+   Vocï¿½ estï¿½ pronto para comeï¿½ar a busca, o guia lhe dï¿½ uma poï¿½ï¿½o e lhe diz
+para beber isto. Vocï¿½ faz isso e sente que seus movimentos estï¿½o mais
+fï¿½ceis e muito mais leves. O guia desaparece de repente e vocï¿½ comeï¿½a a busca.
 ~
-22 cd 0
+22 12 0 0 0 0
 D5
-A água abaixo de você parece ser bastante sinistra.
+A ï¿½gua abaixo de vocï¿½ parece ser bastante sinistra.
 ~
 ~
 0 -1 2202
 S
 #2202
-Um Túnel~
-   Este túnel está repleto de água e a luz vai enfraquecendo, chegando a perder a
-luminosidade. Existem duas saídas.  Uma está a leste e outra sobre você.
+Um Tï¿½nel~
+   Este tï¿½nel estï¿½ repleto de ï¿½gua e a luz vai enfraquecendo, chegando a perder a
+luminosidade. Existem duas saï¿½das.  Uma estï¿½ a leste e outra sobre vocï¿½.
 ~
-22 ad 6
+22 9 0 0 0 6
 D0
-Um SORTUDO bloqueia a visão de tudo que está ao norte.
+Um SORTUDO bloqueia a visï¿½o de tudo que estï¿½ ao norte.
 ~
 sortudo~
 1 -1 2216
 D1
-O túnel continua a leste.
+O tï¿½nel continua a leste.
 ~
 porta~
-:n 2 a porta
-ag 2208 2203
+0 2208 2203
 D4
-O quarto de preparação da busca está sobre você. 
+O quarto de preparaï¿½ï¿½o da busca estï¿½ sobre vocï¿½. 
 ~
 ~
 0 -1 2215
 E
 porta~
-Você tem que saber arrombar uma porta para abrir esta, a menos
-que você esteja com SORTE.
+Vocï¿½ tem que saber arrombar uma porta para abrir esta, a menos
+que vocï¿½ esteja com SORTE.
 ~
 S
 #2203
-Um Túnel~
-   Este túnel está repleto de água.  Existem duas saídas para o leste e para
+Um Tï¿½nel~
+   Este tï¿½nel estï¿½ repleto de ï¿½gua.  Existem duas saï¿½das para o leste e para
 o oeste.
-   O túnel continua em ambas as direções.
+   O tï¿½nel continua em ambas as direï¿½ï¿½es.
 ~
-22 ad 6
+22 9 0 0 0 6
 D1
-O túnel continua a leste.
+O tï¿½nel continua a leste.
 ~
 ~
 0 -1 2204
 D3
-O túnel continua a oeste.
+O tï¿½nel continua a oeste.
 ~
 porta~
-:n 2 a porta
-ag 2208 2202
+0 2208 2202
 E
 porta~
-Você tem que saber arrombar uma porta para abrir esta, a menos
-que você esteja com SORTE.
+Vocï¿½ tem que saber arrombar uma porta para abrir esta, a menos
+que vocï¿½ esteja com SORTE.
 ~
 S
 #2204
-Um Túnel~
-   A medida que o túnel termina, dá para ver uma parede de pedra, exatamente
-à sua frente.  Felizmente, existem duas saídas, uma para o oeste e outra por
-um buraco no chão.
+Um Tï¿½nel~
+   A medida que o tï¿½nel termina, dï¿½ para ver uma parede de pedra, exatamente
+ï¿½ sua frente.  Felizmente, existem duas saï¿½das, uma para o oeste e outra por
+um buraco no chï¿½o.
 ~
-22 ad 6
+22 9 0 0 0 6
 D3
-O túnel continua a oeste.
+O tï¿½nel continua a oeste.
 ~
 ~
 0 -1 2203
 D5
-Existe um buraco no chão que conduz abaixo.
+Existe um buraco no chï¿½o que conduz abaixo.
 ~
 ~
 0 -1 2205
 S
 #2205
-Fim do Túnel~
-   O túnel termina aqui. Existe um buraco no teto e uma grande porta a oeste.
+Fim do Tï¿½nel~
+   O tï¿½nel termina aqui. Existe um buraco no teto e uma grande porta a oeste.
 ~
-22 ad 6
+22 9 0 0 0 6
 D3
 Existe uma porta aqui.
 ~
 porta~
-ag 2208 2206
+0 2208 2206
 D4
 Existe um buraco no teto que conduz acima.
 ~
 ~
 0 -1 2204
 E
-buraco~
-O buraco segue para cima.  Foi uma grande surpresa desde que você avistou isto.
+porta~
+Vocï¿½ tem que saber arrombar uma porta para abrir esta, a menos
+que vocï¿½ esteja com SORTE.
 ~
 E
-porta~
-Você tem que saber arrombar uma porta para abrir esta, a menos
-que você esteja com SORTE.
+buraco~
+O buraco segue para cima.  Foi uma grande surpresa desde que vocï¿½ avistou isto.
 ~
 S
 #2206
-A Câmara De Magias~
-   Esta grande sala está dominada pelo redemoinho.  Existem duas saídas.  Para
-o leste, você consegue ver uma porta e para o oeste você vê um corredor
-repleto com água. O redemoinho está ameaçando puxá-lo e você tem absoluta
+A Cï¿½mara De Magias~
+   Esta grande sala estï¿½ dominada pelo redemoinho.  Existem duas saï¿½das.  Para
+o leste, vocï¿½ consegue ver uma porta e para o oeste vocï¿½ vï¿½ um corredor
+repleto com ï¿½gua. O redemoinho estï¿½ ameaï¿½ando puxï¿½-lo e vocï¿½ tem absoluta
 certeza que se afogaria.
 ~
-22 ad 6
+22 9 0 0 0 6
 D0
 Existe uma loja muito estranha e suspeita, que parece estar fora do lugar ao
 norte.
@@ -166,39 +164,39 @@ norte.
 ~
 0 -1 2218
 D1
-Uma porta bloqueia seu caminho, a menos que ela esteja aberta para não mais
+Uma porta bloqueia seu caminho, a menos que ela esteja aberta para nï¿½o mais
 bloquear seu caminho.
 ~
 porta~
-ag 2208 2205
+0 2208 2205
 D3
-Um corredor começa a aparecer ao leste.
+Um corredor comeï¿½a a aparecer ao leste.
 ~
 ~
 0 -1 2208
 D5
-O remoinho de água está ameaçando o sugar para a morte.
+O remoinho de ï¿½gua estï¿½ ameaï¿½ando o sugar para a morte.
 ~
 ~
 0 -1 2207
 E
-porta~
-Esta é uma grande porta, mas não tão grande quanto vista do outro lado.
-~
-E
 remoinho~
 Isto parece assustador e EXTREMAMENTE perigoso.
 ~
+E
+porta~
+Esta ï¿½ uma grande porta, mas nï¿½o tï¿½o grande quanto vista do outro lado.
+~
 S
 #2207
-O Redemoinho de Água~
+O Redemoinho de ï¿½gua~
  
  
-                Não foi uma boa idéia ter vindo aqui.
+                Nï¿½o foi uma boa idï¿½ia ter vindo aqui.
  
-                  Você acabou morrendo afogado.
+                  Vocï¿½ acabou morrendo afogado.
  
-                          Você está morto.
+                          Vocï¿½ estï¿½ morto.
  
  
  
@@ -206,7 +204,7 @@ O Redemoinho de Água~
 
 
 ~
-22 bdc 0
+22 14 0 0 0 0
 D4
 ~
 ~
@@ -215,9 +213,9 @@ S
 #2208
 Um Corredor~
    O corredor naturalmente se curva de um modo que parece ir para leste e
-abaixo, mas não parecendo se curvar em qualquer direção.
+abaixo, mas nï¿½o parecendo se curvar em qualquer direï¿½ï¿½o.
 ~
-22 ad 6
+22 9 0 0 0 6
 D1
 Existe uma grande sala a leste.
 ~
@@ -229,123 +227,123 @@ O corredor continua a sul... er... abaixo.
 ~
 0 -1 2209
 E
-corredor saguão~
-É uma morte rápida mas isto se for para baixo e leste...
+corredor saguï¿½o~
+ï¿½ uma morte rï¿½pida mas isto se for para baixo e leste...
 ~
 S
 #2209
 Um Corredor~
    O corredor aqui se abre num grande caminho que sobe para leste.
 ~
-22 ad 6
+22 9 0 0 0 6
 D1
-Existe uma grande câmara a leste.
+Existe uma grande cï¿½mara a leste.
 ~
 ~
 0 -1 2211
 D4
-O saguão continua acima.
+O saguï¿½o continua acima.
 ~
 ~
 0 -1 2208
 E
-corredor saguão~
-O saguão é CURVO!
+corredor saguï¿½o~
+O saguï¿½o ï¿½ CURVO!
 ~
 S
 #2210
-Uma Sala Completamente Inútil~
-   Esta sala foi feita para confundir os que se acham espertos.   E se você está aqui parado,
-lendo o que foi escrito nestas paredes...sorria: Você não é nada esperto!
+Uma Sala Completamente Inï¿½til~
+   Esta sala foi feita para confundir os que se acham espertos.   E se vocï¿½ estï¿½ aqui parado,
+lendo o que foi escrito nestas paredes...sorria: Vocï¿½ nï¿½o ï¿½ nada esperto!
 ~
-22 0 0
+22 0 0 0 0 0
 S
 #2211
 A Sala Do Trono Anexo~
-   Esta é a entrada para a sala do Trono sendo que segue para o leste.   Um
-saguão inicia a oeste.  A sala é bastante luxuosa e decorada mas não há
+   Esta ï¿½ a entrada para a sala do Trono sendo que segue para o leste.   Um
+saguï¿½o inicia a oeste.  A sala ï¿½ bastante luxuosa e decorada mas nï¿½o hï¿½
 muito o que se observar.
 ~
-22 ad 6
+22 9 0 0 0 6
 D1
 A Sala do Trono aparece a leste.
 ~
 ~
 0 -1 2212
 D3
-O saguão aparece a oeste.
+O saguï¿½o aparece a oeste.
 ~
 ~
 0 -1 2209
 E
 aparece~
-Que palavra é essa:  Aparece.
+Que palavra ï¿½ essa:  Aparece.
 ~
 S
 #2212
 Sala do Trono~
-   Esta grande sala é bastante extensa.  Um trono está situado na parede
+   Esta grande sala ï¿½ bastante extensa.  Um trono estï¿½ situado na parede
 leste, debaixo de um buraco no teto.  O trono quase preenche toda a sala.
-Ninguém está sentado nele.  A parede está decorada e alguns pilares cercam a
-sala.  O anexo está a oeste você ainda não tem certeza do que se trata.
+Ninguï¿½m estï¿½ sentado nele.  A parede estï¿½ decorada e alguns pilares cercam a
+sala.  O anexo estï¿½ a oeste vocï¿½ ainda nï¿½o tem certeza do que se trata.
 ~
-22 ad 6
+22 9 0 0 0 6
 D3
-A Sala do Trono Anexo está a oeste.
+A Sala do Trono Anexo estï¿½ a oeste.
 ~
 ~
 0 -1 2211
 D4
-Você não pode ver o que está sobre esta sala.
+Vocï¿½ nï¿½o pode ver o que estï¿½ sobre esta sala.
 ~
 ~
 0 -1 2213
 E
-trono~
-Este é um objeto grande e feio, e você foi  recusado por ele.   Você não
-acredita em um motivo que o homem lagarto teria para manter isto.
+pilares parede~
+Isso ï¿½ um conceito inï¿½til.  Porque o arquiteto nï¿½o colocou somente pilares
+modernos aqui?
 ~
 E
-pilares parede~
-Isso é um conceito inútil.  Porque o arquiteto não colocou somente pilares
-modernos aqui?
+trono~
+Este ï¿½ um objeto grande e feio, e vocï¿½ foi  recusado por ele.   Vocï¿½ nï¿½o
+acredita em um motivo que o homem lagarto teria para manter isto.
 ~
 S
 #2213
 Templo De Morgash~
-   Este é o templo do maléfico deus Homem Lagarto, Morgash. Ele é bastante
-feio. Pelo menos é o que você acha... você tem certeza que o homem lagarto
-entretanto gosta disto. Existem duas saídas.  Abaixo e também pela grande
+   Este ï¿½ o templo do malï¿½fico deus Homem Lagarto, Morgash. Ele ï¿½ bastante
+feio. Pelo menos ï¿½ o que vocï¿½ acha... vocï¿½ tem certeza que o homem lagarto
+entretanto gosta disto. Existem duas saï¿½das.  Abaixo e tambï¿½m pela grande
 porta a leste.
 ~
-22 ad 6
+22 9 0 0 0 6
 D1
 Uma grande porta bloqueia seu caminho.
 ~
 porta~
-abg 2205 2214
+0 2205 2214
 D5
-Existe um buraco que conduz abaixo.  Evidente não é?
+Existe um buraco que conduz abaixo.  Evidente nï¿½o ï¿½?
 ~
 ~
 0 -1 2212
 E
 porta~
-Ela é muito grande com um pequeno buraco na fechadura.
+Ela ï¿½ muito grande com um pequeno buraco na fechadura.
 ~
 S
 #2214
 O Fim Da Busca~
-   Você completou a busca!
+   Vocï¿½ completou a busca!
  
-PARABÉNS!!
+PARABï¿½NS!!
 
-   Existem duas saídas que retrocedem para a busca e pela porta que está a
-leste você retornará para o mundo exterior.
+   Existem duas saï¿½das que retrocedem para a busca e pela porta que estï¿½ a
+leste vocï¿½ retornarï¿½ para o mundo exterior.
 ~
-22 c 0
+22 4 0 0 0 0
 D1
-O caminho de retorno ao mundo real é a leste.
+O caminho de retorno ao mundo real ï¿½ a leste.
 ~
 ~
 0 -1 2217
@@ -356,24 +354,24 @@ porta~
 2 2201 2213
 S
 #2215
-A Sala Preparatória Da Busca~
-   Esta sala está exatamente como você a deixou.  Uma saída... abaixo...
+A Sala Preparatï¿½ria Da Busca~
+   Esta sala estï¿½ exatamente como vocï¿½ a deixou.  Uma saï¿½da... abaixo...
 ~
-22 cd 0
+22 12 0 0 0 0
 D5
-A água abaixo de você ainda parece estar bastante ominosa.
+A ï¿½gua abaixo de vocï¿½ ainda parece estar bastante ominosa.
 ~
 ~
 0 -1 2202
 S
 #2216
 SORTUDO~
-   Esta sala está vazia.  Existe um SORTUDO bloqueando seu caminho a sul.
+   Esta sala estï¿½ vazia.  Existe um SORTUDO bloqueando seu caminho a sul.
 Existe um sinal na parede.
 ~
-22 d 0
+22 8 0 0 0 0
 D2
-Existe um SORTUDO bloqueando sua visão.
+Existe um SORTUDO bloqueando sua visï¿½o.
 ~
 sortudo~
 1 -1 2202
@@ -381,52 +379,51 @@ E
 sinal~
 O sinal diz:
  
-                        Garoto você será sempre SORTUDO!!!!
+                        Garoto vocï¿½ serï¿½ sempre SORTUDO!!!!
  
 ~
 S
 #2217
 O Mundo Real Termina Aqui~
-   Este é o ponto onde o mundo real termina...
+   Este ï¿½ o ponto onde o mundo real termina...
  
-              CONTINUE PELO SEU PRÓPRIO RISCO!     
+              CONTINUE PELO SEU PRï¿½PRIO RISCO!     
  
-   A entrada para o Safári no Covil dos Lagartos é para o oeste.
+   A entrada para o Safï¿½ri no Covil dos Lagartos ï¿½ para o oeste.
 Existe uma enorme porta de metal ao sul.
 ~
-22 0 0
+22 0 0 0 0 0
 D2
-Uauu, isto se parece muito com uma dessas enormes portas de estúdio!  Eu
-gostaria muito de saber o que poderia estar além disto.
+Uauu, isto se parece muito com uma dessas enormes portas de estï¿½dio!  Eu
+gostaria muito de saber o que poderia estar alï¿½m disto.
 ~
 porta metal enorme~
-:n 2 a enorme porta de metal
-a -1 3700
+1 -1 3700
 D3
-Este é o caminho de entrada para o Safári.
+Este ï¿½ o caminho de entrada para o Safï¿½ri.
 ~
 ~
 0 -1 2200
 E
 porta metal enorme~
-É uma dessas enormes portas.  Parece serem muito fortes.
+ï¿½ uma dessas enormes portas.  Parece serem muito fortes.
 ~
 S
 #2218
 A Loja do Sr. Hooper~
-   Esta é uma amigável loja de conveniências do bairro e também um
+   Esta ï¿½ uma amigï¿½vel loja de conveniï¿½ncias do bairro e tambï¿½m um
 restaurante.
-Existem muitas coisas interessantes que você pode comprar aqui.
+Existem muitas coisas interessantes que vocï¿½ pode comprar aqui.
 ~
-22 dc 1
+22 12 0 0 0 1
 D2
-A câmara de suplicação ainda é para o sul.
+A cï¿½mara de suplicaï¿½ï¿½o ainda ï¿½ para o sul.
 ~
 ~
 0 -1 2206
 E
-balcão~
-O balcão é agradável e limpo.   O Sr. Hooper olha esperançosamente para você.
+balcï¿½o~
+O balcï¿½o ï¿½ agradï¿½vel e limpo.   O Sr. Hooper olha esperanï¿½osamente para vocï¿½.
 ~
 S
-$
+$~
