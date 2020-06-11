@@ -1791,7 +1791,7 @@ static void perform_remove(struct char_data *ch, int pos)
 			return;
 
 		obj_to_char(unequip_char(ch, pos), ch);
-		act("Você para de usar $p", FALSE, ch, obj, 0, TO_CHAR);
+		act("Você para de usar $p.", FALSE, ch, obj, 0, TO_CHAR);
 		act("$n parou de usar $p.", TRUE, ch, obj, 0, TO_ROOM);
 	}
 }
