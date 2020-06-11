@@ -101,26 +101,6 @@ serem realizadas com um simples alias.
 
   > alias comer get p�o mochila; eat p�o
 
-   As vari�veis $1, $2, ... $9 podem ser usadas para representar argumentos
-dados junto com o alias.
-
-Exemplos:
-
-  > alias killem cast 'fireball' $1; cast 'harm' $2
-  > killem fido mago
-
-   A magia fireball seria lan�ada no fido, seguida pelo harm no mago.
-Vari�veis podem ser usadas repetitivamente e em qualquer ordem:
-
-  > alias helpem cast 'heal' $1; cast 'bless' $1; cast 'armor' $1
-
-   A vari�vel especial $* respresenta toda a linha do receptor depois de um
-alias:
-
-  > alias tr tell rasmussen $*
-  > tr Ola, como voc� est�?
-  Voc� falou por telepatia com Tasmussen, 'Ola, como voc� est�?'
-
 Veja tamb�m: ! ^
 #0
 ASCII
