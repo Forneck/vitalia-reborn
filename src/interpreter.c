@@ -126,6 +126,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"cls", "cls", POS_DEAD, do_gen_ps, 0, SCMD_CLEAR},
 	{"consider", "con", POS_RESTING, do_consider, 0, 0},
 	{"commands", "com", POS_DEAD, do_commands, 0, SCMD_COMMANDS},
+		{"combo", "comb", POS_FIGHTING, do_cast, 1, SKILL_COMBO_ATTACK},
 	{"compact", "comp", POS_DEAD, do_gen_tog, 0, SCMD_COMPACT},
 	{"copyover", "copyover", POS_DEAD, do_copyover, LVL_GRGOD, 0},
 	{"credits", "cred", POS_DEAD, do_gen_ps, 0, SCMD_CREDITS},
