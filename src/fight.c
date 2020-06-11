@@ -1171,10 +1171,9 @@ void beware_lightning()
 	struct char_data *victim = NULL, *temp = NULL;
 	char buf[256];
 	struct weather_data *weather;
-	struct zone_data zone;
 	zone_rnum i;
 
-	for (i = 0; i <= top_of_zone_table; i++)
+	for (i = 1; i <= top_of_zone_table; i++)
 	{
 		weather = zone_table[i].weather;
 
