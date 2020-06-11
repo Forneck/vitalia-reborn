@@ -1,72 +1,72 @@
 MOVIMENTACAO
 
-   Os seguintes comandos permitem que você se movimente através das salas e
-ruas que compõe o MUD e também para abrir portas, dormir, olhar, etc.  Para
+   Os seguintes comandos permitem que vocï¿½ se movimente atravï¿½s das salas e
+ruas que compï¿½e o MUD e tambï¿½m para abrir portas, dormir, olhar, etc.  Para
 obter ajuda para um comando, digite HELP (comando).
 
-   &gENTER LEAVE          &nEntrar ou sair de lugares fechados.
-   &gEXITS                &nPara saber para quais lados voce pode ir.
-   &gFLY LAND             &nVoar e aterrissar.
-   &gLOCK UNLOCK          &nTrancar e destrancar portas.
-   &gLOOK                 &nPara olhar para a sala, itens ou pessoas.
-   &gNORTH SOUTH EAST WEST UP DOWN
-                        &nUsados para se movimentar entre salas.
-   &gOPEN CLOSE           &nAbrir e fechar portas.
-   &gRECALL               &nVoltar à sala inicial rapidamente
-   &gREST SLEEP SIT       &nDescansar, dormir, e sentar.
-   &gTOC KNOCK            &nBater em portas.
-   &gWAKE STAND           &nAcordar e levantar.
-#
+   @gENTER LEAVE          @nEntrar ou sair de lugares fechados.
+   @gEXITS                @nPara saber para quais lados voce pode ir.
+   @gFLY LAND             @nVoar e aterrissar.
+   @gLOCK UNLOCK          @nTrancar e destrancar portas.
+   @gLOOK                 @nPara olhar para a sala, itens ou pessoas.
+   @gNORTH SOUTH EAST WEST UP DOWN
+                        @nUsados para se movimentar entre salas.
+   @gOPEN CLOSE           @nAbrir e fechar portas.
+   @gRECALL               @nVoltar ï¿½ sala inicial rapidamente
+   @gREST SLEEP SIT       @nDescansar, dormir, e sentar.
+   @gTOC KNOCK            @nBater em portas.
+   @gWAKE STAND           @nAcordar e levantar.
+#0
 ENTER
 
 Uso: enter [local]
 
-   Se você digitar ENTER enquanto estiver em um local aberto, você irá
-entrar no local abrigado mais próximo.  Você também pode usar o comando
+   Se vocï¿½ digitar ENTER enquanto estiver em um local aberto, vocï¿½ irï¿½
+entrar no local abrigado mais prï¿½ximo.  Vocï¿½ tambï¿½m pode usar o comando
 ENTER com um argumento, por exemplo, ENTER ESCOTILHA.
-#
+#0
 EXITS
 
 Uso: exits
 
-   Lhe dá a lista de saídas óbvias a partir da sala em que você está.  É
-claro que uma saída não óbvia não apareceria aqui - você teria que pensar
-para encontrá-la.
+   Lhe dï¿½ a lista de saï¿½das ï¿½bvias a partir da sala em que vocï¿½ estï¿½.  ï¿½
+claro que uma saï¿½da nï¿½o ï¿½bvia nï¿½o apareceria aqui - vocï¿½ teria que pensar
+para encontrï¿½-la.
 
 Veja tambem: AUTOEXIT
-#
+#0
 FLY LAND
 
 Uso: fly
      land
 
-   Se você puder, o comando FLY irá fazê-lo voar.  Voando, você terá acesso
+   Se vocï¿½ puder, o comando FLY irï¿½ fazï¿½-lo voar.  Voando, vocï¿½ terï¿½ acesso
 a lugares especiais que apenas criaturas voadoas podem ir.  Criaturas
-voadoras não podem ser atacadas por criaturas que estiverem com seus pés ao
-chão, a menos que ela ataque antes.
+voadoras nï¿½o podem ser atacadas por criaturas que estiverem com seus pï¿½s ao
+chï¿½o, a menos que ela ataque antes.
 
-   O comando LAND pode ser usado para aterrissar ao chão.
+   O comando LAND pode ser usado para aterrissar ao chï¿½o.
 
-   Tome cuidado quando estiver voando com magia.  Se você estiver voando
-muito alto e a magia terminar, você morrerá!
+   Tome cuidado quando estiver voando com magia.  Se vocï¿½ estiver voando
+muito alto e a magia terminar, vocï¿½ morrerï¿½!
 
-   OBS: É possível montar criaturas amigáveis que possuam a habilidade de
-voar, e ordená-las a voar com você.
+   OBS: ï¿½ possï¿½vel montar criaturas amigï¿½veis que possuam a habilidade de
+voar, e ordenï¿½-las a voar com vocï¿½.
 
-Veja também: MAGIA FLY
-#
+Veja tambï¿½m: MAGIA FLY
+#0
 LEAVE
 
 Uso: leave
 
-   Se você se sentir claustrofóbico, digitando 'leave' fará com que você use
-a mais próxima e óbvia saída para céu aberto.
-#
+   Se vocï¿½ se sentir claustrofï¿½bico, digitando 'leave' farï¿½ com que vocï¿½ use
+a mais prï¿½xima e ï¿½bvia saï¿½da para cï¿½u aberto.
+#0
 LOOK
 
 Uso: look
      look [em] <item>
-     look <direção>
+     look <direï¿½ï¿½o>
 
    Para estudar as redondezas.
 
@@ -74,14 +74,14 @@ Exemplos:
   > look
   > look anjo
   > look em sacola
-  > look south (lhe dá alguma informação do que pode conter ao sul)
+  > look south (lhe dï¿½ alguma informaï¿½ï¿½o do que pode conter ao sul)
 
-   Note que se você digitar 'LOOK CORPO', você não verá o seu inventorio.
-Para ver o que há dentro de um recipiente (i.e.  Um corpo) use 'LOOK EM
+   Note que se vocï¿½ digitar 'LOOK CORPO', vocï¿½ nï¿½o verï¿½ o seu inventorio.
+Para ver o que hï¿½ dentro de um recipiente (i.e.  Um corpo) use 'LOOK EM
 <objeto>'.
 
-Veja também: EXAMINE, GET, READ, TAKE
-#
+Veja tambï¿½m: EXAMINE, GET, READ, TAKE
+#0
 NORTH SOUTH EAST WEST UP DOWN NORTHWEST NORTHEAST SOUTHWEST SOUTHEAST
 
 Uso: north
@@ -91,57 +91,57 @@ Uso: north
      up
      down
 
-   Anda para a direção fornecida.
+   Anda para a direï¿½ï¿½o fornecida.
 
-Veja também: EXITS
-#
+Veja tambï¿½m: EXITS
+#0
 OPEN CLOSE LOCK UNLOCK
 
-Uso: open | close | lock | unlock <porta> [direção]
+Uso: open | close | lock | unlock <porta> [direï¿½ï¿½o]
 
-   Para abrir, fechar, trancar e destrancar portas, é claro.
+   Para abrir, fechar, trancar e destrancar portas, ï¿½ claro.
 
 Exemplos:
   > open portal
   > lock porta
   > unlock porta south
-  > close portão
+  > close portï¿½o
 
 Veja tambem: ENTER, LEAVE
-#
+#0
 RECALL
 
 Uso: recall
 
-   Esse comando transporta você rapidamente devolta à sala inicial do jogo.
-Esse comando só está disponível até o nível 8.  A partir desse nível será
-necessário que você use pergaminhos ou magias quando quiser retornar
+   Esse comando transporta vocï¿½ rapidamente devolta ï¿½ sala inicial do jogo.
+Esse comando sï¿½ estï¿½ disponï¿½vel atï¿½ o nï¿½vel 8.  A partir desse nï¿½vel serï¿½
+necessï¿½rio que vocï¿½ use pergaminhos ou magias quando quiser retornar
 rapidamente para a sala inicial do jogo.
 
-Veja também: MAGIA WORD OF RECALL
-#
+Veja tambï¿½m: MAGIA WORD OF RECALL
+#0
 SLEEP
 
-   O comando SLEEP faz com que você durma, permitindo que você recupere sua
-saúde (HP) de uma maneira mais rápida.  Você ficará inconsciente sobre o que
+   O comando SLEEP faz com que vocï¿½ durma, permitindo que vocï¿½ recupere sua
+saï¿½de (HP) de uma maneira mais rï¿½pida.  Vocï¿½ ficarï¿½ inconsciente sobre o que
 acontece a sua volta enquanto estiver dormindo.
 
-   Você pode acordar com o comando WAKE.
+   Vocï¿½ pode acordar com o comando WAKE.
 
 Veja tambem: WAKE, MAGIA SLEEP
-#
+#0
 TOC KNOCK
 
-Uso: toc <porta> [direção]
+Uso: toc <porta> [direï¿½ï¿½o]
 
-   Esse comando é usado para bater em portas.  As pessoas na sala adjacente
-irão ouvir a batida na porta.  Só pode ser usado em algumas portas fechadas.
+   Esse comando ï¿½ usado para bater em portas.  As pessoas na sala adjacente
+irï¿½o ouvir a batida na porta.  Sï¿½ pode ser usado em algumas portas fechadas.
 
-Veja também: OPEN, CLOSE
-#
+Veja tambï¿½m: OPEN, CLOSE
+#0
 WAKE REST SIT STAND
 
-   Para mudar a sua posição.  Se você se sentir cansado, provavelmente pode
-ser uma boa idéia se sentar, ou talvez dormir um pouco.
-#
+   Para mudar a sua posiï¿½ï¿½o.  Se vocï¿½ se sentir cansado, provavelmente pode
+ser uma boa idï¿½ia se sentar, ou talvez dormir um pouco.
+#0
 $
