@@ -331,7 +331,7 @@ ACMD(do_steal)
 		hit(vict, ch, TYPE_UNDEFINED);
 		
 		 if (!IS_NPC(ch) && !IS_NPC(vict))
-    SET_BIT(PLR_FLAGS(ch), PLR_H_THIEF);
+    SET_BIT(PLR_FLAGS(ch), PLR_HTHIEF);
     
      if (ohoh && CONFIG_PT_ALLOWED)		/* -- jr - 03/07/99 */
     check_thief(ch, vict);
