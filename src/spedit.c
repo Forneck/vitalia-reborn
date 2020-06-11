@@ -2005,8 +2005,11 @@ ACMD(do_splist) {
                     "splist mu  - list all in class magical user\r\n" 
                     "splist cl  - list all in class cleric\r\n" 
                     "splist th  - list all in class thief\r\n" 
-                    "splist wa  - list all in class warrior\r\n"
-                        "splist ra  - list all in class warrior\r\n" 
+                    "splist wa  - list all in class warrior\r\n"  
+                        "splist dru - list all in class druid\r\n" 
+                      "splist ba  - list all in class bard\r\n" 
+                        "splist ra  - list all in class ranger\r\n" 
+                      
                     "splist not - list all not assigned\r\n"
                     "splist off - list all disabled\r\n"
                     "splist spec - list all with a special function\r\n"
@@ -2028,6 +2031,12 @@ ACMD(do_splist) {
     else
  if(!strcmp(argument, "ra"))
    search_by_class = CLASS_RANGER;
+       else
+ if(!strcmp(argument, "ba"))
+   search_by_class = CLASS_BARD;
+       else
+ if(!strcmp(argument, "dru"))
+   search_by_class = CLASS_DRUID;
  else
  if(!strcmp(argument, "sk"))
    search_by_skill = 1;
@@ -2051,7 +2060,7 @@ ACMD(do_splist) {
  
  for (ptr = list_spells; ptr; ptr = ptr->next) {
    char classes[80] = "";
-   int mu, cl, th, wa, ra;
+   int mu, cl, th, wa, ra, dru,ba;
 
    if ((mu = (get_spell_class(ptr, CLASS_MAGIC_USER) != -1))) strcat(classes, "Mu ");
    if ((search_by_class == CLASS_MAGIC_USER) && !mu) continue;
@@ -2067,6 +2076,12 @@ ACMD(do_splist) {
    
       if ((ra = (get_spell_class(ptr, CLASS_RANGER) != -1))) strcat(classes, "Ra");
    if ((search_by_class == CLASS_RANGER) && !ra) continue;
+   
+         if ((ba = (get_spell_class(ptr, CLASS_BARD) != -1))) strcat(classes, "Ba");
+   if ((search_by_class == CLASS_BARD) && !ba) continue;
+   
+         if ((dru = (get_spell_class(ptr, CLASS_DRUID) != -1))) strcat(classes, "Dru");
+   if ((search_by_class == CLASS_DRUID) && !dru) continue;
 
    if (search_disabled && (ptr->status == available)) continue;
 
