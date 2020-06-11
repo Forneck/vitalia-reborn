@@ -1382,10 +1382,8 @@ struct weather_data
   int sky; /**< How is the sky? */
   int before; /* How was the sky.			 */
   int sunlight; /**< And how much sun? */
-  int pressure, press_diff;
   float humidity;
   float winds;
-  int temperature, temp_diff;
 };
 
 /** Element in monster and object index-tables.
