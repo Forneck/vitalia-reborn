@@ -15,7 +15,7 @@ pelos seus atuais mantenedores, e nunca se espera que o Mundo de Vit�lia se
 torne uma fonte de lucro ou preju�zo.
 
 
-#
+#0
 AC
 
    "AC" (armor class) � seu nivel de armadura.  � representado por um n�mero
@@ -32,7 +32,7 @@ que varia entre 10 e -20, definido assim:
 Isso indica 78 em uma escala de -200 a 100 (ou 7.8 na escala de -20 a 10).
 
 Veja tamb�m: SCORE
-#
+#0
 ALINHAMENTO
 
    O alinhamento indica se um personagem � bom ou mau.  � um n�mero que pode
@@ -57,7 +57,7 @@ personagens bons.  H� tamb�m, monstros que atacam personagens de determinado
 alinhamento, como por exemplo, as l�mias, que s� atacam personagens bons.
 
 Veja tamb�m: SCORE
-#
+#0
 �REAS AREAS
 
    Aqui est�o listadas todas as �reas do Mundo de Vit�lia.
@@ -203,7 +203,7 @@ Veja tamb�m: SCORE
  @R*@g Os Esgotos                             @wMaegali/Morpheus
  @R*@g Nova Thalos                            @wMelchiah
  @R*@g A Floresta Haon-Dor                    @wMaegali@n
-#
+#0
 ASSOCIACOES
 
 As associa��es s�o os lugares onde os mortais podem ir para escapar dos
@@ -213,7 +213,7 @@ lugares onde as pessoas v�o para aprender e praticar as habilidades de sua
 classe.
 
 Veja tamb�m: PRACTICE
-#
+#0
 BARDO BARD
 
 Cantor nato, mestre nos instrumentos, quem pertence a essa classe tem o
@@ -225,7 +225,7 @@ Voc� pode melhorar suas can��es, magias e habilidades usando o comando
 PRACTICE.
 
 Veja tamb�m: PRACTICE
-#
+#0
 CARDS CARTAS
 
    H� muito tempo atr�s, existiu em Vit�lia um grande aventureiro.  Este
@@ -327,7 +327,7 @@ as suas Cartas confiscados, incondicionalmente.
 
    4- O verdadeiro colecionador entende o objetivo desse sistema de Cartas e
 o valoriza.
-#
+#0
 CASAMENTO CASAMENTOS
 
                @B*@C @uInforma��es sobre casamentos @B*@n
@@ -337,7 +337,7 @@ anteced�ncia, avisar os Deuses do Mundo de Vit�lia, e marcar o casamento.
 
    @c*@n A cerim�nia de casamento � oferecida � todos os jogadores de Vit�lia 
 gratuitamente.
-#
+#0
 CASAS
 
    Casas s�o lugares especiais, lares de nobres aventureiros, capazes de
@@ -377,7 +377,7 @@ perder sua propriedade.
 mesmo endere�o de e-mail cadastrado no seu personagem.
 
 Veja tamb�m: HOUSE
-#
+#0
 QUADROS
 
    Quadros s�o o f�rum de comunica��o entre os jogadores do Mundo de
@@ -410,7 +410,7 @@ Exemplos:
   > remove 6
 
 Veja tamb�m: EDITOR, READ, WRITE, MAIL
-#
+#0
 CLASSES
 
    No VitaliaMUD, existem atualmente 6 classes: Clerigos, Guerreiros, Magos,
@@ -419,7 +419,7 @@ exclusivas.  Para obter mais ajuda sobre sua classe, consulte o HELP seguido
 para sua classe.
 
 Veja tamb�m: CLERIGO, GUERREIRO, MAGO, LADRAO, DRUIDA, BARDO
-#
+#0
 CLERIGO CLERIC
 
 Clerigos tem uma velha crenca em nao carregar armas afiadas.  Portanto, eles
@@ -432,7 +432,7 @@ Voce pode melhorar suas magias usando o comando PRACTICE.
 Utilize o comando SPELL para uma lista das magias disponiveis.
 
 Veja tamb�m: PRACTICE, SPELL
-#
+#0
 CONEXAO LINK
 
 Varios jogadores tem problemas com suas conexoes com o jogo.  Isto pode ser
@@ -449,7 +449,7 @@ II. Se a sua conexao parar (congelar), voce tem um problema.  A unica solucao
 
     Nao tente escapar de uma luta cortando a conexao.  Voce vai receber nenhuma
     experiencia ou equipamento se voce propositalmente cortar sua conexao.
-#
+#0
 CORES ANSI
 
    No VitaliaMUD, voce pode escrever mensagens utilizando cores se o seu nivel
@@ -477,7 +477,7 @@ cores.
 (especialmente as piscantes) sao incomodas.
 
 Veja tamb�m: COLOR
-#
+#0
 DEUSES GODS
 
 Deuses sao jogadores de muita experiencia no mud, portanto nao e' recomendavel
@@ -488,7 +488,7 @@ costumam ficar visiveis para os jogadores.
 Os Deuses tamb�m contribuem com as implementacoes do mud.
 
 Veja tamb�m: IMORTAIS
-#
+#0
 DRUIDA
 
 Essa � a classe dos aliados da Natureza, o que os torna seus protetores e
@@ -501,7 +501,7 @@ Voc� pode melhorar suas magias usando o comando PRACTICE.
 Utilize o comando SPELL para uma lista das magias dispon�veis.
 
 Veja tamb�m: PRACTICE, SPELL
-#
+#0
 EXPERIENCIA XP
 
 Quando voce mata um monstro, voce recebe pontos de experiencia. Quando voce
@@ -516,7 +516,7 @@ Coisa que voce deve saber sobre pontos de experiencia:
     ganhar menos pontos de experiencia.
 
 Veja tamb�m: GROUP, SCORE
-#
+#0
 FAMILIAS FAM�LIAS
 
    @R*@n @u@YSauda��es � todas as Ilustres Fam�lias de Vit�lia!@n @R*@n
@@ -551,7 +551,7 @@ fam�lia devem ter renascido.
 
    � importante observar que n�o trocamos simplesmente a nossa fam�lia,
 portanto, os membros de uma ter�o a sua entrada a outras vedada.
-#
+#0
 FLAGS
 
 Jogadores as vezes tem "flags" apos seus nomes na lista do comando WHO.
@@ -574,7 +574,7 @@ Estas "flags" estao sempre entre parenteses.
                ordenada pelos Deuses.
 
 Veja tamb�m: NOSHOUT, NOTELL, QUEST, STEAL, VISIBLE
-#
+#0
 HER�IS HEROES
 
    @R*@g O que � um Her�i?@n
@@ -628,7 +628,7 @@ HER�IS HEROES
    cerim�nia aberta a todo o povo de Vit�lia.@n
 
    @R*@g Lute por essa conquista... Torne-se um verdadeiro Her�i.@n
-#
+#0
 "HIT POINTS" HP
 
 Hit points, ou simplesmente 'hp', sao seus pontos de vida. Cada vez que voce e'
@@ -645,7 +645,7 @@ variando de acordo com sua classe, seu nivel, sua idade, sua constituicao e sua
 sorte.
 
 Veja tamb�m: CONSTITUTION, SLEEP, SCORE, DISPLAY
-#
+#0
 IDADE
 
    A idade do personagem define basicamente a velocidade da recupera��o dos
@@ -684,7 +684,7 @@ pontos (hp, mn, mv) na passagem de cada hora/mud.
    -+----------------------------------------------------------------> idade
     ' 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72
 
-#
+#0
 IMORTAIS IMMORTALS
 
 Quando um jogador completar seu centesimo nivel, chegando ao nivel 101, ele se
@@ -697,7 +697,7 @@ Imortais tem acesso a uma area especial, e podem ver e conversar com Deuses
 mais livremente.
 
 Veja tamb�m: DEUSES
-#
+#0
 MAGO MAGE
 
 Esta e' a classe das magias poderosas e violentas, mas o mago nao pode
@@ -708,7 +708,7 @@ Voce pode melhorar suas magias usando o comando PRACTICE.
 Utilize o comando SPELL para uma lista das magias disponiveis.
 
 Veja tamb�m: PRACTICE, SPELL
-#
+#0
 MANA MN
 
 Mana sao seus pontos de magia, e sao usadas quando voce lanca magias.  Voce
@@ -717,7 +717,7 @@ Se voce nao tem mana suficiente para lancar uma magia, voce deve descansar ou
 meditar enquanto voce ganha os pontos suficientes.
 
 Veja tamb�m: SPELL, REST, MEDITATE, SCORE
-#
+#0
 MESNADAS
 
 @YSauda��es a todas as ilustres Casas de Vit�lia.@n
@@ -770,7 +770,7 @@ sem saber se � permitido.
 evitando que ocorram incidentes que apaguem o brilho das Mesnadas de
 Vit�lia.  Lembrem-se, qualquer duvida sempre perguntem antes de agir, afinal
 os deuses est�o aqui para auxilia-los.@n
-#
+#0
 MOVIMENTOS MV
 
 Define quanto voce ainda pode andar.  Os pontos de movimento sao gastos a cada
@@ -778,7 +778,7 @@ comando de movimento que voce usa.  Quando voce estiver muito cansado, voce
 precisara' sentar ou descansar para poder continuar sua jornada.
 
 Veja tamb�m: SIT, REST, SCORE
-#
+#0
 MAP
 
 Agora o mapa de Midgaard deve ser comprado.
@@ -787,7 +787,7 @@ comprar o mapa de Midgaard e tamb�m de outras areas do mundo.
 
 Para chegar na loja de mapas, a partir do templo, ande tres passos para o sul,
 tres passos para o leste e um passo para o norte.
-#
+#0
 LOJAS
 
    As lojas s�o os lugares onde o aventureiro pode comprar equipamento para
@@ -802,7 +802,7 @@ pessoas fortes e capazes; carregando muitos anos de experi�ncia nos neg�cios
 e, tamb�m, sobrevivendo em um mundo onde a �nica certeza � a morte no final.
 
 Veja tamb�m: BUY, SELL, LIST, VALUE
-#
+#0
 LADRAO THIEF
 
 Ladroes sao conhecidos por terem qualidades muito especiais, que nenhuma outra
@@ -816,7 +816,7 @@ Utilize o comando SKILLS para uma lista das habilidades disponiveis.
 Veja a ajuda para cada habilidade para maiores informacoes.
 
 Veja tamb�m: PRACTICE
-#
+#0
 GUERREIRO WARRIOR
 
 Guerreiros sao conhecidos por serem mais fortes que os outros jogadores.
@@ -830,7 +830,7 @@ Utilize o comando SKILLS para uma lista das habilidades disponiveis.
 Veja a ajuda para cada habilidade para maiores informacoes.
 
 Veja tamb�m: PRACTICE
-#
+#0
 STR STRENGTH
 
    E' a forca do personagem.  E' um numero no formato nn/aaa, onde o primeiro
@@ -843,7 +843,7 @@ padrao e' zero, e aumenta ate' 100.  A forca adicional so aparece depois que a
 forca padrao tiver atingido 18 pontos.
 
 Veja tamb�m: MAGIA STRENGTH
-#
+#0
 INT INTELLIGENCE
 
    E' a inteligencia do personagem.  Quanto maior a inteligencia, menos sera'
@@ -854,7 +854,7 @@ automaticamente quando voce cria um novo personagem no MUD.  O valor da
 inteligencia pode ser modificado com alguns itens que estao pelo mundo.
 
 Veja tamb�m: PRACTICE, GUILD
-#
+#0
 WIS WISDOM
 
    Sabedoria do personagem.  Quanto maior, mais praticas ganhara' a cada nivel
@@ -865,7 +865,7 @@ quando voce cria um novo personagem no MUD.  O valor da sabedoria pode ser
 modificado com alguns itens que estao pelo mundo.
 
 Veja tamb�m: PRACTICE, GUILD
-#
+#0
 DEX DEXTERITY
 
    Destreza do personagem.  Quanto maior, mais o personagem acertara' golpes e
@@ -875,7 +875,7 @@ bonus natural para o seu AC.
    A destreza pode variar de 3 ate' 18 pontos, e e' sorteada automaticamente
 quando voce cria um novo personagem no MUD.  O valor da destreza pode ser
 modificado com alguns itens que estao pelo mundo.
-#
+#0
 CON CONSTITUTION
 
    Constituicao.  Quanto maior, mais pontos de energia o personagem ganhara' a
@@ -884,7 +884,7 @@ cada nivel que atingir.
    A constituicao pode variar de 3 ate' 18 pontos, e e' sorteada
 automaticamente quando voce cria um novo personagem no MUD.  O valor da
 constituicao pode ser modificado com alguns itens que estao pelo mundo.
-#
+#0
 CHA CHARISMA
 
    A simpatia do personagem.  Quanto maior, menor sao as chances de um monstro
@@ -893,7 +893,7 @@ agressivo atacar.
    A simpatia pode variar de 3 ate' 18 pontos, e e' sorteada automaticamente
 quando voce cria um novo personagem no MUD.  O valor do carisma pode ser
 modificado com alguns itens que estao pelo mundo.
-#
+#0
 HITROLL
 
    Quanto maior, mais chances de acertar os golpes o personagem ter� durante
@@ -901,14 +901,14 @@ a luta.
 
    O HitRoll pode variar de -100 at� 100 pontos.  Por padr�o, ele � sempre
 zero, mas voc� pode alter�-lo usando alguns itens que est�o pelo mundo.
-#
+#0
 DAMROLL
 
    Quanto maior, mais destrutivos ser�o os golpes do personagem.
 
    O DamRoll pode variar de -100 at� 100 pontos.  Por padr�o, ele � sempre
 zero, mas voc� pode alter�-lo usando alguns itens que est�o pelo mundo.
-#
+#0
 ZMUD "ZMUD BUGS"
 
    Vers�es antigas do zMud (cliente de MUD para Windows), anteriores �
@@ -940,7 +940,7 @@ as cores corretamente.  Neste caso, voc� deve digitar o comando "TERM
 DOSANSI" e em seguida consultar este HELP novamente, digitando "HELP ZMUD".
 
 Veja tamb�m: COLOR, CORES, TERM
-#
+#0
 QUESTS
 
    Quests s�o desafios oferecidos pelos Deuses para promover a divers�o e
@@ -1004,7 +1004,7 @@ FATO seus personagens, e lembre-se de manter-se sempre dentro da tem�tica
 medieval, afim de manter um clima �pico e emocionante.
 
 Veja tamb�m: QUEST, QSAY
-#
+#0
 CIRCLEMUD
                     C  I  R  C  L  E  M  U  D     3  .  0
 
@@ -1046,5 +1046,5 @@ Thanks everyone!
                   (write "subscribe circle <first name> <last name>")
 
 --Jeremy Elson (jelson@circlemud.org)
-#
+#0
 $
