@@ -1036,14 +1036,20 @@ ACMD(do_bandage)
 		send_to_char(ch, "Você não está na posição adequada!\r\n");
 		return;
 	}
-
+  if (IS_DEAD(ch)) {
+    act("Você está mort$r!! Não pode fazer curativos em ninguém!", FALSE, ch, NULL, NULL, TO_CHAR);
+    return;
+}
 	one_argument(argument, arg);
 	if (!(vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)))
 	{
 		send_to_char(ch, "Quem você quer fazer estabilizar a condição?\r\n");
 		return;
 	}
-
+   if (IS_DEAD(vict)) {
+    act("$L está mort$R!! Como você pretende fazer curativos??", FALSE, ch, NULL, vict, TO_CHAR);
+    return;
+   }
 	if (GET_HIT(vict) >= 0)
 	{
 		send_to_char(ch, "Você só pode estabilizar quem está \x1B[0;31mpróximo da morte!\tn\r\n");
