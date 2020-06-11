@@ -198,6 +198,7 @@ ACMD(do_order);
 ACMD(do_rescue);
 ACMD(do_whirlwind);
 ACMD(do_bandage);
+ACMD(do_trip);
 
 /*****************************************************************************
  * Begin Functions and defines for act.other.c
