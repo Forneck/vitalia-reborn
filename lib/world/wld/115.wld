@@ -1,985 +1,985 @@
 #11500
-O Portão Externo Para Patala~
-   Você está bem em frente a um grande portão de ferro.  Do outro lado, por
-entre as grades, é possível avistar uma pequena trilha adentrando por um
-grande pântano.  Altos muros de pedra negra seguem em ambos os lados até
-além do que sua vista pode alcançar, protegendo e ocultando o resto da
-paisagem.  Na parede do muro à esquerda, foi afixado um pergaminho de aviso.
+O Portï¿½o Externo Para Patala~
+   Vocï¿½ estï¿½ bem em frente a um grande portï¿½o de ferro.  Do outro lado, por
+entre as grades, ï¿½ possï¿½vel avistar uma pequena trilha adentrando por um
+grande pï¿½ntano.  Altos muros de pedra negra seguem em ambos os lados atï¿½
+alï¿½m do que sua vista pode alcanï¿½ar, protegendo e ocultando o resto da
+paisagem.  Na parede do muro ï¿½ esquerda, foi afixado um pergaminho de aviso.
 ~
 115 gia 1
 ON patala
 D2
-Você vê a trilha entre as rochas.
+Vocï¿½ vï¿½ a trilha entre as rochas.
 ~
 ~
 0 -1 11439
 D0
-O portão se abre para uma pequena trilha que adentra em um estranho pântano
+O portï¿½o se abre para uma pequena trilha que adentra em um estranho pï¿½ntano
 ~
-portão ferro~
-:n 1 o grande portão de ferro
+portï¿½o ferro~
+:n 1 o grande portï¿½o de ferro
 abc 11507 11530
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11501
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11511
 E
 aviso parede esquerda pergaminho~
-Está escrito:
+Estï¿½ escrito:
 &R* &B======================================================================== &R*&n
 &B|   &WDecreto Real Emitido por Sua Majestade o Rei Vasuki IV, Soberano&n       &B|   
 &B|      &Wdo Reino de Patala e Representante de Sesha entre seu povo&n          &B|          
 &B|                                                                          &B|
-&B|     &g" Aqui, apenas serão bem-vindos os descendentes da raça de Sesha.    &B|
-&B|       &gÀquele que, não tendo correndo em suas veias o divino sangue       &B|
+&B|     &g" Aqui, apenas serï¿½o bem-vindos os descendentes da raï¿½a de Sesha.    &B|
+&B|       &gï¿½quele que, nï¿½o tendo correndo em suas veias o divino sangue       &B|
 &B|       &gdo Grande Senhor dos Nagas, pisar no sagrado solo do Reino         &B|
-&B|       &gOculto, será caçado e aniquilado por todo e qualquer filho         &B|
+&B|       &gOculto, serï¿½ caï¿½ado e aniquilado por todo e qualquer filho         &B|
 &B|       &gda Grande Serpente, seja naga ou nagini, rico ou pobre.            &B|
 &B|                                                                          &B|
-&B|       &gSerão bem-vindos também aqueles que trouxerem o selo naga          &B|
+&B|       &gSerï¿½o bem-vindos tambï¿½m aqueles que trouxerem o selo naga          &B|
 &B|       &gconsigo.                                                           &B|
-&B|       &gTerá uma morte lenta e insuportavelmente dolorosa quem se          &B|
-&B|       &gatrever a tentar enganar os olhos de nossos guardiães usando       &B|
-&B|       &gum selo roubado ou falsificado. Acredite, nós saberemos.           &B|
+&B|       &gTerï¿½ uma morte lenta e insuportavelmente dolorosa quem se          &B|
+&B|       &gatrever a tentar enganar os olhos de nossos guardiï¿½es usando       &B|
+&B|       &gum selo roubado ou falsificado. Acredite, nï¿½s saberemos.           &B|
 &B|                                                                          &B|
-&B|       &gAssim escrito, assim é lei.                                        &B|
+&B|       &gAssim escrito, assim ï¿½ lei.                                        &B|
 &B|                                                                          &B|
-&B|       &gPela glória de Sesha, o Grande Senhor."                            &B|
+&B|       &gPela glï¿½ria de Sesha, o Grande Senhor."                            &B|
 &B|                                                                          &B|
-&B|                               &YVasuki IV&L, Soberano do Sétimo Submundo     &B|
+&B|                               &YVasuki IV&L, Soberano do Sï¿½timo Submundo     &B|
 &R* &B======================================================================== &R*   
 ~
 E
-portão ferro~
-De ferro negro, esse portão parece extremamente pesado.  As grades foram
-feitas sob a forma de enormes cobras com a cabeça voltada para o alto, de
-línguas bifurcadas afiadas como pequenas lanças.  Você não se atreveria a
-tentar escalá-lo... 
+portï¿½o ferro~
+De ferro negro, esse portï¿½o parece extremamente pesado.  As grades foram
+feitas sob a forma de enormes cobras com a cabeï¿½a voltada para o alto, de
+lï¿½nguas bifurcadas afiadas como pequenas lanï¿½as.  Vocï¿½ nï¿½o se atreveria a
+tentar escalï¿½-lo... 
 ~
 E
 muros altos~
-Gigantescas pedras negras, perfeitamente encaixadas umas às outras, formam
-um muro que segue até...  Hum...  Você não consegue ver se há fim...  Mas,
+Gigantescas pedras negras, perfeitamente encaixadas umas ï¿½s outras, formam
+um muro que segue atï¿½...  Hum...  Vocï¿½ nï¿½o consegue ver se hï¿½ fim...  Mas,
 pelas suas contas, ele tem cerca de doze metros de altura e, olhando pelo
-portão, dois metros de largura.  Você sente calafrios ao tentar imaginar
+portï¿½o, dois metros de largura.  Vocï¿½ sente calafrios ao tentar imaginar
 quem construiu isso...
 ~
 S
 #11501
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D3
-O portão fica bem ali.
+O portï¿½o fica bem ali.
 ~
 ~
 0 -1 11500
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11502
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11502
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11503
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11501
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11503
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11504
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11502
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11504
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11505
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11503
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11505
 Um Posto de Guarda~
-   Você está seguindo em frente a alta muralha de pedras negras, pensando na
-vida enquanto perde qualquer esperança de encontrar o fim desses muros,
+   Vocï¿½ estï¿½ seguindo em frente a alta muralha de pedras negras, pensando na
+vida enquanto perde qualquer esperanï¿½a de encontrar o fim desses muros,
 quando depara-se com um "pequena" torre esculpida por dentro das pedras.  Um
 estandarte brasonado com as armas da Casa Real de Patala foi preso num
-suporte acima da porta e, olhando pela janela, é possível ver um grande mapa
-foi grudado na parede.  Você estranha não haver ninguém ali...
+suporte acima da porta e, olhando pela janela, ï¿½ possï¿½vel ver um grande mapa
+foi grudado na parede.  Vocï¿½ estranha nï¿½o haver ninguï¿½m ali...
 ~
 115 ga 1
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11504
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11506
 E
 estandarte brasonado armas casa real patala porta~
-O vento parece querer impedir você de examinar o estandarte...  Só é
-possível ver que, num fundo negro como breu, uma enorme serpente de
-... uma... duas... três... quatro... VÁRIAS cabeças enrola-se em torno de
-uma esfera celeste e... melhor desistir, está difícil demais de ver...
+O vento parece querer impedir vocï¿½ de examinar o estandarte...  Sï¿½ ï¿½
+possï¿½vel ver que, num fundo negro como breu, uma enorme serpente de
+... uma... duas... trï¿½s... quatro... Vï¿½RIAS cabeï¿½as enrola-se em torno de
+uma esfera celeste e... melhor desistir, estï¿½ difï¿½cil demais de ver...
 ~
 E
 mapa grande~
-Esse mapa representa essa região de Vitália e assinala suas principais
-cidades.  Você consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
-segundo está escrito, uma cidade chamada Bhogavati.
+Esse mapa representa essa regiï¿½o de Vitï¿½lia e assinala suas principais
+cidades.  Vocï¿½ consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
+segundo estï¿½ escrito, uma cidade chamada Bhogavati.
 ~
 S
 #11506
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11505
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11507
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11507
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11508
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11506
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11508
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11509
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11507
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11509
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11510
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11508
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11510
 Um Posto de Guarda~
-   Você está seguindo em frente a alta muralha de pedras negras, pensando na
-vida enquanto perde qualquer esperança de encontrar o fim desses muros,
+   Vocï¿½ estï¿½ seguindo em frente a alta muralha de pedras negras, pensando na
+vida enquanto perde qualquer esperanï¿½a de encontrar o fim desses muros,
 quando depara-se com um "pequena" torre esculpida por dentro das pedras.  Um
 estandarte brasonado com as armas da Casa Real de Patala foi preso num
-suporte acima da porta e, olhando pela janela, é possível ver um grande mapa
-foi grudado na parede.  Você estranha não haver ninguém ali...
+suporte acima da porta e, olhando pela janela, ï¿½ possï¿½vel ver um grande mapa
+foi grudado na parede.  Vocï¿½ estranha nï¿½o haver ninguï¿½m ali...
 ~
 115 ga 1
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11509
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11529
 E
 estandarte brasonado armas casa real patala porta~
-O vento parece querer impedir você de examinar o estandarte...  Só é
-possível ver que, num fundo negro como breu, uma enorme serpente de
-... uma... duas... três... quatro... VÁRIAS cabeças enrola-se em torno de
-uma esfera celeste e... melhor desistir, está difícil demais de ver...
+O vento parece querer impedir vocï¿½ de examinar o estandarte...  Sï¿½ ï¿½
+possï¿½vel ver que, num fundo negro como breu, uma enorme serpente de
+... uma... duas... trï¿½s... quatro... Vï¿½RIAS cabeï¿½as enrola-se em torno de
+uma esfera celeste e... melhor desistir, estï¿½ difï¿½cil demais de ver...
 ~
 E
 mapa grande~
-Esse mapa representa essa região de Vitália e assinala suas principais
-cidades.  Você consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
-segundo está escrito, uma cidade chamada Bhogavati.
+Esse mapa representa essa regiï¿½o de Vitï¿½lia e assinala suas principais
+cidades.  Vocï¿½ consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
+segundo estï¿½ escrito, uma cidade chamada Bhogavati.
 ~
 S
 #11511
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D1
-O portão fica bem ali.
+O portï¿½o fica bem ali.
 ~
 ~
 0 -1 11500
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11512
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11512
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11513
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11511
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11513
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11514
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11512
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11514
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11515
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11513
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11515
 Um Posto de Guarda~
-   Você está seguindo em frente a alta muralha de pedras negras, pensando na
-vida enquanto perde qualquer esperança de encontrar o fim desses muros,
+   Vocï¿½ estï¿½ seguindo em frente a alta muralha de pedras negras, pensando na
+vida enquanto perde qualquer esperanï¿½a de encontrar o fim desses muros,
 quando depara-se com um "pequena" torre esculpida por dentro das pedras.  Um
 estandarte brasonado com as armas da Casa Real de Patala foi preso num
-suporte acima da porta e, olhando pela janela, é possível ver um grande mapa
-foi grudado na parede.  Você estranha não haver ninguém ali...
+suporte acima da porta e, olhando pela janela, ï¿½ possï¿½vel ver um grande mapa
+foi grudado na parede.  Vocï¿½ estranha nï¿½o haver ninguï¿½m ali...
 ~
 115 ga 1
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11514
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11516
 E
 estandarte brasonado armas casa real patala porta~
-O vento parece querer impedir você de examinar o estandarte...  Só é
-possível ver que, num fundo negro como breu, uma enorme serpente de
-... uma... duas... três... quatro... VÁRIAS cabeças enrola-se em torno de
-uma esfera celeste e... melhor desistir, está difícil demais de ver...
+O vento parece querer impedir vocï¿½ de examinar o estandarte...  Sï¿½ ï¿½
+possï¿½vel ver que, num fundo negro como breu, uma enorme serpente de
+... uma... duas... trï¿½s... quatro... Vï¿½RIAS cabeï¿½as enrola-se em torno de
+uma esfera celeste e... melhor desistir, estï¿½ difï¿½cil demais de ver...
 ~
 E
 mapa grande~
-Esse mapa representa essa região de Vitália e assinala suas principais
-cidades.  Você consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
-segundo está escrito, uma cidade chamada Bhogavati.
+Esse mapa representa essa regiï¿½o de Vitï¿½lia e assinala suas principais
+cidades.  Vocï¿½ consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
+segundo estï¿½ escrito, uma cidade chamada Bhogavati.
 ~
 S
 #11516
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11515
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11517
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11517
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11518
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11516
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11518
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11519
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11517
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11519
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11520
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11518
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11520
 Um Posto de Guarda~
-   Você está seguindo em frente a alta muralha de pedras negras, pensando na
-vida enquanto perde qualquer esperança de encontrar o fim desses muros,
+   Vocï¿½ estï¿½ seguindo em frente a alta muralha de pedras negras, pensando na
+vida enquanto perde qualquer esperanï¿½a de encontrar o fim desses muros,
 quando depara-se com um "pequena" torre esculpida por dentro das pedras.  Um
 estandarte brasonado com as armas da Casa Real de Patala foi preso num
-suporte acima da porta e, olhando pela janela, é possível ver um grande mapa
-foi grudado na parede.  Você estranha não haver ninguém ali...
+suporte acima da porta e, olhando pela janela, ï¿½ possï¿½vel ver um grande mapa
+foi grudado na parede.  Vocï¿½ estranha nï¿½o haver ninguï¿½m ali...
 ~
 115 ga 1
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11519
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11521
 E
 estandarte brasonado armas casa real patala porta~
-O vento parece querer impedir você de examinar o estandarte...  Só é
-possível ver que, num fundo negro como breu, uma enorme serpente de
-... uma... duas... três... quatro... VÁRIAS cabeças enrola-se em torno de
-uma esfera celeste e... melhor desistir, está difícil demais de ver...
+O vento parece querer impedir vocï¿½ de examinar o estandarte...  Sï¿½ ï¿½
+possï¿½vel ver que, num fundo negro como breu, uma enorme serpente de
+... uma... duas... trï¿½s... quatro... Vï¿½RIAS cabeï¿½as enrola-se em torno de
+uma esfera celeste e... melhor desistir, estï¿½ difï¿½cil demais de ver...
 ~
 E
 mapa grande~
-Esse mapa representa essa região de Vitália e assinala suas principais
-cidades.  Você consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
-segundo está escrito, uma cidade chamada Bhogavati.
+Esse mapa representa essa regiï¿½o de Vitï¿½lia e assinala suas principais
+cidades.  Vocï¿½ consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
+segundo estï¿½ escrito, uma cidade chamada Bhogavati.
 ~
 S
 #11521
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11522
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11520
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11522
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11523
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11521
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11523
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11524
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11512
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11524
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11525
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11523
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11525
 Um Posto de Guarda~
-   Você está seguindo em frente a alta muralha de pedras negras, pensando na
-vida enquanto perde qualquer esperança de encontrar o fim desses muros,
+   Vocï¿½ estï¿½ seguindo em frente a alta muralha de pedras negras, pensando na
+vida enquanto perde qualquer esperanï¿½a de encontrar o fim desses muros,
 quando depara-se com um "pequena" torre esculpida por dentro das pedras.  Um
 estandarte brasonado com as armas da Casa Real de Patala foi preso num
-suporte acima da porta e, olhando pela janela, é possível ver um grande mapa
-foi grudado na parede.  Você estranha não haver ninguém ali...
+suporte acima da porta e, olhando pela janela, ï¿½ possï¿½vel ver um grande mapa
+foi grudado na parede.  Vocï¿½ estranha nï¿½o haver ninguï¿½m ali...
 ~
 115 ga 1
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11524
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11526
 E
 estandarte brasonado armas casa real patala porta~
-O vento parece querer impedir você de examinar o estandarte...  Só é
-possível ver que, num fundo negro como breu, uma enorme serpente de
-... uma... duas... três... quatro... VÁRIAS cabeças enrola-se em torno de
-uma esfera celeste e... melhor desistir, está difícil demais de ver...
+O vento parece querer impedir vocï¿½ de examinar o estandarte...  Sï¿½ ï¿½
+possï¿½vel ver que, num fundo negro como breu, uma enorme serpente de
+... uma... duas... trï¿½s... quatro... Vï¿½RIAS cabeï¿½as enrola-se em torno de
+uma esfera celeste e... melhor desistir, estï¿½ difï¿½cil demais de ver...
 ~
 E
 mapa grande~
-Esse mapa representa essa região de Vitália e assinala suas principais
-cidades.  Você consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
-segundo está escrito, uma cidade chamada Bhogavati.
+Esse mapa representa essa regiï¿½o de Vitï¿½lia e assinala suas principais
+cidades.  Vocï¿½ consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
+segundo estï¿½ escrito, uma cidade chamada Bhogavati.
 ~
 S
 #11526
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11525
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11527
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11527
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11528
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11526
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11528
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11529
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11527
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11529
 Seguindo Os Altos Muros~
-   Você está seguindo em frente aos altos muros (na verdade, a alta muralha)
-que ocultam a estranha terra de nome Patala.  Você não consegue ver o fim da
-muralha mesmo apertando os olhos nas duas direções que ela segue.  Uma
-estranha força mantém as negras e imensas pedras desses muros unidas,
-formando uma maciça parede de cerca de dois metros de altura e dois de
-largura.  Gigantesco é a palavra certa para descrever isso.
+   Vocï¿½ estï¿½ seguindo em frente aos altos muros (na verdade, a alta muralha)
+que ocultam a estranha terra de nome Patala.  Vocï¿½ nï¿½o consegue ver o fim da
+muralha mesmo apertando os olhos nas duas direï¿½ï¿½es que ela segue.  Uma
+estranha forï¿½a mantï¿½m as negras e imensas pedras desses muros unidas,
+formando uma maciï¿½a parede de cerca de dois metros de altura e dois de
+largura.  Gigantesco ï¿½ a palavra certa para descrever isso.
 ~
 115 ga 1
 D3
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11510
 D1
-Os altos muros seguem até além de onde sua vista alcança...
+Os altos muros seguem atï¿½ alï¿½m de onde sua vista alcanï¿½a...
 ~
 ~
 0 -1 11528
 E
-pedras negras imensas parede muros altos muralha~ 
-As imensas pedras dessa muralha estão tão unidas que parecem ser uma única e
-colossal rocha.  Você examina-as mais de perto, mas não reconhece que tipo
-de pedras são: negras e de aspecto vítreo, são resistentes demais para serem
-de simples obsidiana (como você chegou a pensar).
+pedras negras imensas parede muros altos muralha~
+As imensas pedras dessa muralha estï¿½o tï¿½o unidas que parecem ser uma ï¿½nica e
+colossal rocha.  Vocï¿½ examina-as mais de perto, mas nï¿½o reconhece que tipo
+de pedras sï¿½o: negras e de aspecto vï¿½treo, sï¿½o resistentes demais para serem
+de simples obsidiana (como vocï¿½ chegou a pensar).
 ~
 S
 #11530
 No Reino Oculto~
-   Você conseguiu passar pela Guardiã dos Portões de Patala.  Isso não é
-tarefa para qualquer um...  Mas há muita coisa ainda para acontecer aqui,
-não se esqueça disso.  Por hora, você só consegue ver que o caminho à sua
-frente segue em direção a um grande pântano, sumindo por entre o breu que
-paira sobre aquele lugar.  Você pode voltar ainda, é só seguir sul...
+   Vocï¿½ conseguiu passar pela Guardiï¿½ dos Portï¿½es de Patala.  Isso nï¿½o ï¿½
+tarefa para qualquer um...  Mas hï¿½ muita coisa ainda para acontecer aqui,
+nï¿½o se esqueï¿½a disso.  Por hora, vocï¿½ sï¿½ consegue ver que o caminho ï¿½ sua
+frente segue em direï¿½ï¿½o a um grande pï¿½ntano, sumindo por entre o breu que
+paira sobre aquele lugar.  Vocï¿½ pode voltar ainda, ï¿½ sï¿½ seguir sul...
 ~
 115.1 ac 2
 D2
-Você vê o grande portão de ferro que separa o Mundo Exterior do Mundo Oculto
+Vocï¿½ vï¿½ o grande portï¿½o de ferro que separa o Mundo Exterior do Mundo Oculto
 ~
-portão ferro~
-:n 1 o grande portão de ferro
+portï¿½o ferro~
+:n 1 o grande portï¿½o de ferro
 abc 11507 11500
 D0
-A trilha parece entrar direto no pântano.
+A trilha parece entrar direto no pï¿½ntano.
 ~
 ~
 0 -1 11531
 S
 #11531
-Uma Trilha Para o Pântano~
-   Você está andando por uma estranha trilha coberta por minúsculas pedras
-negras.  Não se consegue ver nada ao redor pois grandes arbustos parecem
-querer esconder o máximo possível desse lugar misterioso.  Você pode seguir
-em direção a um grande pântano, a norte, ou voltar pelo sul.
+Uma Trilha Para o Pï¿½ntano~
+   Vocï¿½ estï¿½ andando por uma estranha trilha coberta por minï¿½sculas pedras
+negras.  Nï¿½o se consegue ver nada ao redor pois grandes arbustos parecem
+querer esconder o mï¿½ximo possï¿½vel desse lugar misterioso.  Vocï¿½ pode seguir
+em direï¿½ï¿½o a um grande pï¿½ntano, a norte, ou voltar pelo sul.
 ~
 115.1 ac 2
 D0
-A trilha parece entrar direto no pântano.
+A trilha parece entrar direto no pï¿½ntano.
 ~
 ~
 0 -1 11532
 D2
-Você ainda consegue ver o portão.
+Vocï¿½ ainda consegue ver o portï¿½o.
 ~
 ~
 0 -1 11530
 S
 #11532
-Uma Trilha Para o Pântano~
-   Você está andando por uma estranha trilha coberta por minúsculas pedras
-negras.  Não se consegue ver nada ao redor pois grandes arbustos parecem
-querer esconder o máximo possível desse lugar misterioso.  Você pode seguir
-em direção a um grande pântano, a norte, ou voltar pelo sul.
+Uma Trilha Para o Pï¿½ntano~
+   Vocï¿½ estï¿½ andando por uma estranha trilha coberta por minï¿½sculas pedras
+negras.  Nï¿½o se consegue ver nada ao redor pois grandes arbustos parecem
+querer esconder o mï¿½ximo possï¿½vel desse lugar misterioso.  Vocï¿½ pode seguir
+em direï¿½ï¿½o a um grande pï¿½ntano, a norte, ou voltar pelo sul.
 ~
 115.1 ac 2
 D0
-A trilha parece entrar direto no pântano.
+A trilha parece entrar direto no pï¿½ntano.
 ~
 ~
 0 -1 11555
 D2
-Você ainda consegue ver o portão.
+Vocï¿½ ainda consegue ver o portï¿½o.
 ~
 ~
 0 -1 11530
 S
 #11533
-Khura, O Pântano Arredio~
-   A trilha pela qual você veio tornou-se, de repente, totalmente de terra.
-Sumiram as pedras, restou lama e espinhos.  Árvores escuras e retorcidas,
-com raízes aéreas, crescem a seu redor nas áreas alagadas, enquanto grandes
-espinhais seguem acompanhando caminho.  Vez ou outra você escuta o estranho
-canto de pássaros nativos, mas não consegue ver nenhum.  A névoa densa que
-cobre você não permite que você enxergue direito, fazendo-o escorregar na
+Khura, O Pï¿½ntano Arredio~
+   A trilha pela qual vocï¿½ veio tornou-se, de repente, totalmente de terra.
+Sumiram as pedras, restou lama e espinhos.  ï¿½rvores escuras e retorcidas,
+com raï¿½zes aï¿½reas, crescem a seu redor nas ï¿½reas alagadas, enquanto grandes
+espinhais seguem acompanhando caminho.  Vez ou outra vocï¿½ escuta o estranho
+canto de pï¿½ssaros nativos, mas nï¿½o consegue ver nenhum.  A nï¿½voa densa que
+cobre vocï¿½ nï¿½o permite que vocï¿½ enxergue direito, fazendo-o escorregar na
 lama repetidas vezes.  O caminho segue para sul, norte e sudeste.
 ~
 115.2 adgsr 3
@@ -997,13 +997,13 @@ D0
 0 -1 11544
 S
 #11534
-Khura, O Pântano Arredio~
-   A trilha pela qual você veio tornou-se, de repente, totalmente de terra.
-Sumiram as pedras, restou lama e espinhos.  Árvores escuras e retorcidas,
-com raízes aéreas, crescem a seu redor nas áreas alagadas, enquanto grandes
-espinhais seguem acompanhando caminho.  Vez ou outra você escuta o estranho
-canto de pássaros nativos, mas não consegue ver nenhum.  A névoa densa que
-cobre você não permite que você enxergue direito, fazendo-o escorregar na
+Khura, O Pï¿½ntano Arredio~
+   A trilha pela qual vocï¿½ veio tornou-se, de repente, totalmente de terra.
+Sumiram as pedras, restou lama e espinhos.  ï¿½rvores escuras e retorcidas,
+com raï¿½zes aï¿½reas, crescem a seu redor nas ï¿½reas alagadas, enquanto grandes
+espinhais seguem acompanhando caminho.  Vez ou outra vocï¿½ escuta o estranho
+canto de pï¿½ssaros nativos, mas nï¿½o consegue ver nenhum.  A nï¿½voa densa que
+cobre vocï¿½ nï¿½o permite que vocï¿½ enxergue direito, fazendo-o escorregar na
 lama repetidas vezes.  O caminho segue para leste ou volta para sudoeste.
 ~
 115.2 adgsr 3
@@ -1017,12 +1017,12 @@ D9
 0 -1 11555
 S
 #11535
-Khura, O Pântano Arredio~
-   Você está caminhando por sobre o terreno enlameado do pântano.  Ao seu
-redor, grandes espinhais parecem tentar mantê-lo na mesma trilha, além de
-esconder o terreno a seu redor.  Vez ou outra você vê o outro lado desses
-arbustos e percebe que está na parte mais segura do lugar pois é a única
-região que não está coberta por borbulhante água lamacenta.
+Khura, O Pï¿½ntano Arredio~
+   Vocï¿½ estï¿½ caminhando por sobre o terreno enlameado do pï¿½ntano.  Ao seu
+redor, grandes espinhais parecem tentar mantï¿½-lo na mesma trilha, alï¿½m de
+esconder o terreno a seu redor.  Vez ou outra vocï¿½ vï¿½ o outro lado desses
+arbustos e percebe que estï¿½ na parte mais segura do lugar pois ï¿½ a ï¿½nica
+regiï¿½o que nï¿½o estï¿½ coberta por borbulhante ï¿½gua lamacenta.
 ~
 115.2 adgsr 3
 D0
@@ -1035,10 +1035,10 @@ D3
 0 -1 11534
 S
 #11536
-Khura, O Pântano Arredio~
-   Os espinhos que acompanham o caminho estão cada vez mais próximos de
-você, arranhando-o seguidas vezes.  Você sente que terá dificuldade para
-caminhar daqui pra frente pois, seguindo com os olhos até onde a trilha
+Khura, O Pï¿½ntano Arredio~
+   Os espinhos que acompanham o caminho estï¿½o cada vez mais prï¿½ximos de
+vocï¿½, arranhando-o seguidas vezes.  Vocï¿½ sente que terï¿½ dificuldade para
+caminhar daqui pra frente pois, seguindo com os olhos atï¿½ onde a trilha
 parece ir, percebe que ela fica cada vez mais estreita e perigosa.
 ~
 115.2 adgsr 3
@@ -1060,12 +1060,12 @@ D3
 0 -1 11553
 S
 #11537
-Khura, O Pântano Arredio~
-   Você está caminhando por uma estreita trilha que segue, ladeada por
-grandes espinhais, dentro do pântano.  Está cada vez mais difícil caminhar
-por aqui pois, além de uma densa névoa cobrir todo o percurso e os espinhos
-o arranharem, a lama chega agora até seus joelhos.  Você também não gosta
-muito do som de água borbulhando que parece estar cada vez mais perto...
+Khura, O Pï¿½ntano Arredio~
+   Vocï¿½ estï¿½ caminhando por uma estreita trilha que segue, ladeada por
+grandes espinhais, dentro do pï¿½ntano.  Estï¿½ cada vez mais difï¿½cil caminhar
+por aqui pois, alï¿½m de uma densa nï¿½voa cobrir todo o percurso e os espinhos
+o arranharem, a lama chega agora atï¿½ seus joelhos.  Vocï¿½ tambï¿½m nï¿½o gosta
+muito do som de ï¿½gua borbulhando que parece estar cada vez mais perto...
 ~
 115.2 adgsr 3
 D0
@@ -1082,12 +1082,12 @@ D1
 0 -1 11539
 S
 #11538
-Khura, O Pântano Arredio~
-   Você está caminhando por uma estreita trilha que segue, ladeada por
-grandes espinhais, dentro do pântano.  Está cada vez mais difícil caminhar
-por aqui pois, além de uma densa névoa cobrir todo o percurso e os espinhos
-o arranharem, a lama chega agora até seus joelhos.  Você também não gosta
-muito do som de água borbulhando que parece estar cada vez mais perto...
+Khura, O Pï¿½ntano Arredio~
+   Vocï¿½ estï¿½ caminhando por uma estreita trilha que segue, ladeada por
+grandes espinhais, dentro do pï¿½ntano.  Estï¿½ cada vez mais difï¿½cil caminhar
+por aqui pois, alï¿½m de uma densa nï¿½voa cobrir todo o percurso e os espinhos
+o arranharem, a lama chega agora atï¿½ seus joelhos.  Vocï¿½ tambï¿½m nï¿½o gosta
+muito do som de ï¿½gua borbulhando que parece estar cada vez mais perto...
 ~
 115.2 adgsr 3
 D1
@@ -1108,12 +1108,12 @@ D0
 0 -1 11543
 S
 #11539
-Khura, O Pântano Arredio~
-   Você caminha por entre os espinhais com muito cuidado, tentando não se
-arranhar nem atolar na lama.  A névoa densa que cobre tudo aqui não permite
-que você veja nem um palmo diante do nariz, mas não impede que você ouça o
-som de alguma coisa (parece água) borbulhando.  É possível seguir nas quatro
-direções cardeais.
+Khura, O Pï¿½ntano Arredio~
+   Vocï¿½ caminha por entre os espinhais com muito cuidado, tentando nï¿½o se
+arranhar nem atolar na lama.  A nï¿½voa densa que cobre tudo aqui nï¿½o permite
+que vocï¿½ veja nem um palmo diante do nariz, mas nï¿½o impede que vocï¿½ ouï¿½a o
+som de alguma coisa (parece ï¿½gua) borbulhando.  ï¿½ possï¿½vel seguir nas quatro
+direï¿½ï¿½es cardeais.
 ~
 115.2 adgsr 3
 D1
@@ -1134,12 +1134,12 @@ D3
 0 -1 11537
 S
 #11540
-Khura, O Pântano Arredio~
-   Você está caminhando por uma estreita trilha que segue, ladeada por
-grandes espinhais, dentro do pântano.  Está cada vez mais difícil caminhar
-por aqui pois, além de uma densa névoa cobrir todo o percurso e os espinhos
-o arranharem, a lama chega agora até seus joelhos.  Você também não gosta
-muito do som de água borbulhando que parece estar cada vez mais perto...
+Khura, O Pï¿½ntano Arredio~
+   Vocï¿½ estï¿½ caminhando por uma estreita trilha que segue, ladeada por
+grandes espinhais, dentro do pï¿½ntano.  Estï¿½ cada vez mais difï¿½cil caminhar
+por aqui pois, alï¿½m de uma densa nï¿½voa cobrir todo o percurso e os espinhos
+o arranharem, a lama chega agora atï¿½ seus joelhos.  Vocï¿½ tambï¿½m nï¿½o gosta
+muito do som de ï¿½gua borbulhando que parece estar cada vez mais perto...
 ~
 115.2 adgsr 3
 D0
@@ -1156,11 +1156,11 @@ D3
 0 -1 11541
 S
 #11541
-Khura, O Pântano Arredio~
-   Você está coberto de lama até a cintura, foi arranhado impiedosamente
-pelos espinhais, não enxerga nada além de névoa, sente um cheiro muito
-esquisito vindo do norte, ouve o som parecido com água na fervura e continua
-firme em sua exploração...  Boa sorte, mas ninguém lhe promete sucesso
+Khura, O Pï¿½ntano Arredio~
+   Vocï¿½ estï¿½ coberto de lama atï¿½ a cintura, foi arranhado impiedosamente
+pelos espinhais, nï¿½o enxerga nada alï¿½m de nï¿½voa, sente um cheiro muito
+esquisito vindo do norte, ouve o som parecido com ï¿½gua na fervura e continua
+firme em sua exploraï¿½ï¿½o...  Boa sorte, mas ninguï¿½m lhe promete sucesso
 aqui...
 ~
 115.2 adgsr 3
@@ -1179,25 +1179,25 @@ D3
 S
 #11542
 O Ataque de Khura~
-Definitivamente, você não é sábio!
+Definitivamente, vocï¿½ nï¿½o ï¿½ sï¿½bio!
 
 E por isso, foi tragado por uma das gargantas de Khura!
 
 HAHAHAHA!!!!!!!!
 
-.... sinta seu corpo se dissolver na lama fervente do Segundo Guardião ....
+.... sinta seu corpo se dissolver na lama fervente do Segundo Guardiï¿½o ....
 
-.... é, você já morreu ....
+.... ï¿½, vocï¿½ jï¿½ morreu ....
 ~
 115.2 bc 0
 S
 #11543
-Khura, O Pântano Arredio~
-   Você está caminhando por sobre o terreno enlameado do pântano.  Ao seu
-redor, grandes espinhais parecem tentar mantê-lo na mesma trilha, além de
-esconder o terreno a seu redor.  Vez ou outra você vê o outro lado desses
-arbustos e percebe que está na parte mais segura do lugar pois é a única
-região que não está coberta por borbulhante água lamacenta.
+Khura, O Pï¿½ntano Arredio~
+   Vocï¿½ estï¿½ caminhando por sobre o terreno enlameado do pï¿½ntano.  Ao seu
+redor, grandes espinhais parecem tentar mantï¿½-lo na mesma trilha, alï¿½m de
+esconder o terreno a seu redor.  Vez ou outra vocï¿½ vï¿½ o outro lado desses
+arbustos e percebe que estï¿½ na parte mais segura do lugar pois ï¿½ a ï¿½nica
+regiï¿½o que nï¿½o estï¿½ coberta por borbulhante ï¿½gua lamacenta.
 ~
 115.2 adgsr 3
 D0
@@ -1218,10 +1218,10 @@ D1
 0 -1 11550
 S
 #11544
-Khura, O Pântano Arredio~
-   Os espinhos que acompanham o caminho estão cada vez mais próximos de
-você, arranhando-o seguidas vezes.  Você sente que terá dificuldade para
-caminhar daqui pra frente pois, seguindo com os olhos até onde a trilha
+Khura, O Pï¿½ntano Arredio~
+   Os espinhos que acompanham o caminho estï¿½o cada vez mais prï¿½ximos de
+vocï¿½, arranhando-o seguidas vezes.  Vocï¿½ sente que terï¿½ dificuldade para
+caminhar daqui pra frente pois, seguindo com os olhos atï¿½ onde a trilha
 parece ir, percebe que ela fica cada vez mais estreita e perigosa.
 ~
 115.2 adgsr 3
@@ -1243,12 +1243,12 @@ D9
 0 -1 11552
 S
 #11545
-Khura, O Pântano Arredio~
-   Você está caminhando por uma estreita trilha que segue, ladeada por
-grandes espinhais, dentro do pântano.  Está cada vez mais difícil caminhar
-por aqui pois, além de uma densa névoa cobrir todo o percurso e os espinhos
-o arranharem, a lama chega agora até seus joelhos.  Mais além, ao norte,
-você percebe que uma luz avermelhada atravessando a névoa.
+Khura, O Pï¿½ntano Arredio~
+   Vocï¿½ estï¿½ caminhando por uma estreita trilha que segue, ladeada por
+grandes espinhais, dentro do pï¿½ntano.  Estï¿½ cada vez mais difï¿½cil caminhar
+por aqui pois, alï¿½m de uma densa nï¿½voa cobrir todo o percurso e os espinhos
+o arranharem, a lama chega agora atï¿½ seus joelhos.  Mais alï¿½m, ao norte,
+vocï¿½ percebe que uma luz avermelhada atravessando a nï¿½voa.
 ~
 115.2 adgsr 3
 D0
@@ -1261,12 +1261,12 @@ D2
 0 -1 11544
 S
 #11546
-Khura, O Pântano Arredio~
-   Você caminha por entre os espinhais com muito cuidado, tentando não se
-arranhar nem atolar na lama.  A névoa densa que cobre tudo aqui não permite
-que você veja nem um palmo diante do nariz, mas uma estranha luz avermelhada
-parece atravessar essa barreira e sinalizar para você.  As únicas direções
-que você pode seguir são norte e sul.
+Khura, O Pï¿½ntano Arredio~
+   Vocï¿½ caminha por entre os espinhais com muito cuidado, tentando nï¿½o se
+arranhar nem atolar na lama.  A nï¿½voa densa que cobre tudo aqui nï¿½o permite
+que vocï¿½ veja nem um palmo diante do nariz, mas uma estranha luz avermelhada
+parece atravessar essa barreira e sinalizar para vocï¿½.  As ï¿½nicas direï¿½ï¿½es
+que vocï¿½ pode seguir sï¿½o norte e sul.
 ~
 115.2 adgsr 3
 D0
@@ -1283,19 +1283,19 @@ D3
 0 -1 11547
 S
 #11547
-Khura, O Pântano Arredio~
-   Você está bem no meio de um círculo de altos espinhais.  O solo não é
-firme aqui, fazendo com que você se sinta afundando na lama quente.  Opa!
-Você está realmente afundando!  Mas.. espere!  Onde está a saída??
+Khura, O Pï¿½ntano Arredio~
+   Vocï¿½ estï¿½ bem no meio de um cï¿½rculo de altos espinhais.  O solo nï¿½o ï¿½
+firme aqui, fazendo com que vocï¿½ se sinta afundando na lama quente.  Opa!
+Vocï¿½ estï¿½ realmente afundando!  Mas.. espere!  Onde estï¿½ a saï¿½da??
 ~
 115.2 adgsr 3
 S
 #11548
-Khura, O Pântano Arredio~
-   Você caminha com dificuldade sobre o solo lamacento do pântano.  Grandes
-espinhais limitam o espaço que você pode andar, além de dificultarem a visão
-dos arredores.  Uma densa névoa cobre a trilha, acabando com suas esperanças
-de ver pelo menos para onde você está indo.  Uma luz avermelhada, vinda do
+Khura, O Pï¿½ntano Arredio~
+   Vocï¿½ caminha com dificuldade sobre o solo lamacento do pï¿½ntano.  Grandes
+espinhais limitam o espaï¿½o que vocï¿½ pode andar, alï¿½m de dificultarem a visï¿½o
+dos arredores.  Uma densa nï¿½voa cobre a trilha, acabando com suas esperanï¿½as
+de ver pelo menos para onde vocï¿½ estï¿½ indo.  Uma luz avermelhada, vinda do
 norte, parece indicar-lhe o caminho.
 ~
 115.2 adgsr 3
@@ -1313,13 +1313,13 @@ D2
 0 -1 11546
 S
 #11549
-Khura, O Pântano Arredio~
-   A lama agora o cobre até a região dos quadris.  É difícil continuar pois
-você se sente muito cansado.  O ar aqui também parece mais pesado, e a névoa
-tão densa que você imagina conseguir apalpá-la.  Os espinhos se tornaram
-mais compridos e afiados, machucando-o ainda mais.  Realmente, não há muita
-coisa o impelindo a continuar...  Só essa curiosidade mórbida em
-descobrir que estranha luz é essa que parece o chamar...
+Khura, O Pï¿½ntano Arredio~
+   A lama agora o cobre atï¿½ a regiï¿½o dos quadris.  ï¿½ difï¿½cil continuar pois
+vocï¿½ se sente muito cansado.  O ar aqui tambï¿½m parece mais pesado, e a nï¿½voa
+tï¿½o densa que vocï¿½ imagina conseguir apalpï¿½-la.  Os espinhos se tornaram
+mais compridos e afiados, machucando-o ainda mais.  Realmente, nï¿½o hï¿½ muita
+coisa o impelindo a continuar...  Sï¿½ essa curiosidade mï¿½rbida em
+descobrir que estranha luz ï¿½ essa que parece o chamar...
 ~
 115.2 adgsr 3
 D2
@@ -1336,14 +1336,14 @@ D6
 0 -1 11555
 S
 #11550
-Khura, O Pântano Arredio~
-   Você está praticamente nadando nessa lama.  Além da dificuldade de
-caminhar por esse solo lodoso, você ainda tem que ter o máximo de cuidado ao
-se mexer devido aos espinhais cada vez mais próximos...  - Você agora sabe o
-motivo desse lugar ser chamado de Pântano Arredio...  E o que será Khura?
-- Mas, como você não é bobo a ponto de parar pra pensar nesse tipo de coisa
-justamente agora, você segue em direção àquela estranha luz avermelhada que,
-cada vez mais forte, atravessa até a densa névoa que cobre tudo.
+Khura, O Pï¿½ntano Arredio~
+   Vocï¿½ estï¿½ praticamente nadando nessa lama.  Alï¿½m da dificuldade de
+caminhar por esse solo lodoso, vocï¿½ ainda tem que ter o mï¿½ximo de cuidado ao
+se mexer devido aos espinhais cada vez mais prï¿½ximos...  - Vocï¿½ agora sabe o
+motivo desse lugar ser chamado de Pï¿½ntano Arredio...  E o que serï¿½ Khura?
+- Mas, como vocï¿½ nï¿½o ï¿½ bobo a ponto de parar pra pensar nesse tipo de coisa
+justamente agora, vocï¿½ segue em direï¿½ï¿½o ï¿½quela estranha luz avermelhada que,
+cada vez mais forte, atravessa atï¿½ a densa nï¿½voa que cobre tudo.
 ~
 115.2 adgsr 3
 D3
@@ -1364,13 +1364,13 @@ D8
 0 -1 11547
 S
 #11551
-Khura, O Pântano Arredio~
-   Você está tentando caminhar com segurança na estreita trilha de lama que
-passa pelo pântano, mas a dificuldade é tamanha que parece que o fim dessa
-jornada será sua morte.  Os espinhais continuam arranhando-o, mas você está
-começando a se acostumar com as constante dilacerações.  Pensando bem, você
-se sente tranqüilizado por haver uma densa névoa cobrindo tudo, impedindo
-que você se desanime ainda mais com o que há pela frente.
+Khura, O Pï¿½ntano Arredio~
+   Vocï¿½ estï¿½ tentando caminhar com seguranï¿½a na estreita trilha de lama que
+passa pelo pï¿½ntano, mas a dificuldade ï¿½ tamanha que parece que o fim dessa
+jornada serï¿½ sua morte.  Os espinhais continuam arranhando-o, mas vocï¿½ estï¿½
+comeï¿½ando a se acostumar com as constante dilaceraï¿½ï¿½es.  Pensando bem, vocï¿½
+se sente tranqï¿½ilizado por haver uma densa nï¿½voa cobrindo tudo, impedindo
+que vocï¿½ se desanime ainda mais com o que hï¿½ pela frente.
 ~
 115.2 adgsr 3
 D0
@@ -1391,12 +1391,12 @@ D3
 0 -1 11539
 S
 #11552
-Khura, O Pântano Arredio~
-   Você está caminhando por uma estreita trilha que segue, ladeada por
-grandes espinhais, dentro do pântano.  Está cada vez mais difícil caminhar
-por aqui pois, além de uma densa névoa cobrir todo o percurso e os espinhos
-o arranharem, a lama chega agora até seus joelhos.  Mais além, a leste,
-você percebe que uma luz avermelhada atravessando a névoa.
+Khura, O Pï¿½ntano Arredio~
+   Vocï¿½ estï¿½ caminhando por uma estreita trilha que segue, ladeada por
+grandes espinhais, dentro do pï¿½ntano.  Estï¿½ cada vez mais difï¿½cil caminhar
+por aqui pois, alï¿½m de uma densa nï¿½voa cobrir todo o percurso e os espinhos
+o arranharem, a lama chega agora atï¿½ seus joelhos.  Mais alï¿½m, a leste,
+vocï¿½ percebe que uma luz avermelhada atravessando a nï¿½voa.
 ~
 115.2 adgsr 3
 D0
@@ -1417,17 +1417,17 @@ D3
 0 -1 11562
 S
 #11553
-Khura, O Pântano Arredio~
-   Você caminha por entre os espinhais com muito cuidado, tentando não se
-arranhar nem atolar na lama.  A névoa densa que cobre tudo aqui não permite
-que você veja nem um palmo diante do nariz, mas uma estranha luz avermelhada
-parece atravessar essa barreira e sinalizar para você.  As direções que você
-pode seguir são norte, leste e oeste.
+Khura, O Pï¿½ntano Arredio~
+   Vocï¿½ caminha por entre os espinhais com muito cuidado, tentando nï¿½o se
+arranhar nem atolar na lama.  A nï¿½voa densa que cobre tudo aqui nï¿½o permite
+que vocï¿½ veja nem um palmo diante do nariz, mas uma estranha luz avermelhada
+parece atravessar essa barreira e sinalizar para vocï¿½.  As direï¿½ï¿½es que vocï¿½
+pode seguir sï¿½o norte, leste e oeste.
 ~
 115.2 adgsr 3
 D0
 ~
-~ 
+~
 0 -1 11554
 D1
 ~
@@ -1439,10 +1439,10 @@ D3
 0 -1 11552
 S
 #11554
-Khura, O Pântano Arredio~
-   Você se sente em um verdadeiro labirinto de espinhos e lama.  O solo
-pantanoso o cobre até a cintura, dificultando sua locomoção.  Além dos altos
-espinhais que dilaceram constantemente sua carne, você vê apenas névoa densa
+Khura, O Pï¿½ntano Arredio~
+   Vocï¿½ se sente em um verdadeiro labirinto de espinhos e lama.  O solo
+pantanoso o cobre atï¿½ a cintura, dificultando sua locomoï¿½ï¿½o.  Alï¿½m dos altos
+espinhais que dilaceram constantemente sua carne, vocï¿½ vï¿½ apenas nï¿½voa densa
 e, atravessando-a, uma estranha luz avermelhada que parece o atrair.
 ~
 115.2 adgsr 3
@@ -1460,12 +1460,12 @@ D3
 0 -1 11551
 S
 #11555
-Uma Trilha Para o Pântano~
-   Você está andando por uma estranha trilha coberta por minúsculas pedras
+Uma Trilha Para o Pï¿½ntano~
+   Vocï¿½ estï¿½ andando por uma estranha trilha coberta por minï¿½sculas pedras
 negras.  Os arbustos que ladeavam esse caminho param de crescer exatamente
-quando você chega no pântano, tendo seu lugar tomado por grandes e perigosos
-espinhais.  Você pode entrar no pântano seguindo nordeste ou noroeste, já
-que a trilha se bifurca.  Apenas cuidado para não se arranhar com os
+quando vocï¿½ chega no pï¿½ntano, tendo seu lugar tomado por grandes e perigosos
+espinhais.  Vocï¿½ pode entrar no pï¿½ntano seguindo nordeste ou noroeste, jï¿½
+que a trilha se bifurca.  Apenas cuidado para nï¿½o se arranhar com os
 espinhos.
 ~
 115.2 adcgsr 3
@@ -1483,12 +1483,12 @@ D2
 0 -1 11532
 S
 #11556
-Khura, O Pântano Arredio~
-   Tudo de repente ficou escuro.  Você sente a textura pegajosa da lama em
-seu corpo, assim como percebe ainda estar rodeado pelos espinhos.  Você não
-tem a mínima idéia de para onde deve ir agora, mas consegue identificar de
+Khura, O Pï¿½ntano Arredio~
+   Tudo de repente ficou escuro.  Vocï¿½ sente a textura pegajosa da lama em
+seu corpo, assim como percebe ainda estar rodeado pelos espinhos.  Vocï¿½ nï¿½o
+tem a mï¿½nima idï¿½ia de para onde deve ir agora, mas consegue identificar de
 onde a luz avermelhada vinha: do norte e noroeste...  Interessante ela
-atraí-lo assim de tão longe....
+atraï¿½-lo assim de tï¿½o longe....
 ~
 115.2 adgsr 3
 D0
@@ -1512,73 +1512,73 @@ D2
 S
 #11557
 O Ataque de Khura~
-Você está justamente em frente a um dos olhos do Segundo Guardião!!
+Vocï¿½ estï¿½ justamente em frente a um dos olhos do Segundo Guardiï¿½o!!
 
-Khura o abre completamente, fazendo incidir sobre você a mortal luz de seu olhar!
+Khura o abre completamente, fazendo incidir sobre vocï¿½ a mortal luz de seu olhar!
 
-... você desintegra...
+... vocï¿½ desintegra...
 
                                e...
 
-                                    ... xi! virou pó...
+                                    ... xi! virou pï¿½...
 
 ~
 115.2 bc 0
 S
 #11558
 O Ataque de Khura~
-Você está justamente em frente a um dos olhos do Segundo Guardião!!
+Vocï¿½ estï¿½ justamente em frente a um dos olhos do Segundo Guardiï¿½o!!
 
-Khura o abre completamente, fazendo incidir sobre você a mortal luz de seu olhar!
+Khura o abre completamente, fazendo incidir sobre vocï¿½ a mortal luz de seu olhar!
 
-... você desintegra...
+... vocï¿½ desintegra...
 
                                e...
 
-                                    ... xi! virou pó...
+                                    ... xi! virou pï¿½...
 
 ~
 115.2 bc 0
 S
 #11559
 O Ataque de Khura~
-   Você está cercado por altos espinhais.  Infelizmente, parece que seu
-caminho foi bloqueado por um muro de espinhos, sendo muito difícil.
-A densa névoa do pântano parece impregnar tudo aqui, além do borbulhar
+   Vocï¿½ estï¿½ cercado por altos espinhais.  Infelizmente, parece que seu
+caminho foi bloqueado por um muro de espinhos, sendo muito difï¿½cil.
+A densa nï¿½voa do pï¿½ntano parece impregnar tudo aqui, alï¿½m do borbulhar
 constante que preenche seus ouvidos. Algo lhe diz para ter muita cautela
-aqui, pois quando se diz pântano arredio, não é brincadeira...  Cuidado!
+aqui, pois quando se diz pï¿½ntano arredio, nï¿½o ï¿½ brincadeira...  Cuidado!
 ~
 115.2 acgs 3
 D1
-Você vê apenas um enorme muro de espinhos...
+Vocï¿½ vï¿½ apenas um enorme muro de espinhos...
 ~
-orifício fechadura~
+orifï¿½cio fechadura~
 :n 2 a estranha fechadura
 abcd 11509 11563
 D0
-Há uma estranha luz avermelhada vindo dali...
+Hï¿½ uma estranha luz avermelhada vindo dali...
 ~
 ~
 0 -1 11556 
 E
 muro~
-O muro, enorme e repleto de espinhos afiadíssimos, possui um orifício, na
-altura de sua cabeça, do tamanho de um pulso.  Uma estranha luz passa por
+O muro, enorme e repleto de espinhos afiadï¿½ssimos, possui um orifï¿½cio, na
+altura de sua cabeï¿½a, do tamanho de um pulso.  Uma estranha luz passa por
 ele.
 ~
 E
-orifício fechadura~
-Está tudo claro do outro lado!  Você consegue avistar um belíssimo campo e,
+orifï¿½cio fechadura~
+Estï¿½ tudo claro do outro lado!  Vocï¿½ consegue avistar um belï¿½ssimo campo e,
 bem mais a frente... Algo grande, mas muito distante.
 ~
 S
 #11560
-Khura, O Pântano Arredio~
-   Você está caminhando por uma estreita trilha que segue, ladeada por
-grandes espinhais, dentro do pântano.  Está cada vez mais difícil caminhar
-por aqui pois, além de uma densa névoa cobrir todo o percurso e os espinhos
-o arranharem, a lama chega agora até seus joelhos.  Mais além, a oeste,
-você percebe que uma luz avermelhada atravessando a névoa.
+Khura, O Pï¿½ntano Arredio~
+   Vocï¿½ estï¿½ caminhando por uma estreita trilha que segue, ladeada por
+grandes espinhais, dentro do pï¿½ntano.  Estï¿½ cada vez mais difï¿½cil caminhar
+por aqui pois, alï¿½m de uma densa nï¿½voa cobrir todo o percurso e os espinhos
+o arranharem, a lama chega agora atï¿½ seus joelhos.  Mais alï¿½m, a oeste,
+vocï¿½ percebe que uma luz avermelhada atravessando a nï¿½voa.
 ~
 115.2 adgsr 3
 D3
@@ -1587,10 +1587,10 @@ D3
 0 -1 11550
 S
 #11561
-Khura, O Pântano Arredio~
-   Os espinhos que acompanham o caminho estão cada vez mais próximos de
-você, arranhando-o seguidas vezes.  Você sente que terá dificuldade para
-caminhar daqui pra frente pois, seguindo com os olhos até onde a trilha
+Khura, O Pï¿½ntano Arredio~
+   Os espinhos que acompanham o caminho estï¿½o cada vez mais prï¿½ximos de
+vocï¿½, arranhando-o seguidas vezes.  Vocï¿½ sente que terï¿½ dificuldade para
+caminhar daqui pra frente pois, seguindo com os olhos atï¿½ onde a trilha
 parece ir, percebe que ela fica cada vez mais estreita e perigosa.
 ~
 115.2 adgsr 3
@@ -1608,10 +1608,10 @@ D2
 0 -1 11537
 S
 #11562
-Khura, O Pântano Arredio~
-   Os espinhos que acompanham o caminho estão cada vez mais próximos de
-você, arranhando-o seguidas vezes.  Você sente que terá dificuldade para
-caminhar daqui pra frente pois, seguindo com os olhos até onde a trilha
+Khura, O Pï¿½ntano Arredio~
+   Os espinhos que acompanham o caminho estï¿½o cada vez mais prï¿½ximos de
+vocï¿½, arranhando-o seguidas vezes.  Vocï¿½ sente que terï¿½ dificuldade para
+caminhar daqui pra frente pois, seguindo com os olhos atï¿½ onde a trilha
 parece ir, percebe que ela fica cada vez mais estreita e perigosa.
 ~
 115.2 adgsr 3
@@ -1633,735 +1633,735 @@ D3
 0 -1 11541
 S
 #11563
-O Outro Lado do Portão~
-   Você fica tão estupefato com a mudança de paisagem que perde o fôlego.
-Um caudaloso rio de águas límpidas corre em um pequeno vale entre campos e
+O Outro Lado do Portï¿½o~
+   Vocï¿½ fica tï¿½o estupefato com a mudanï¿½a de paisagem que perde o fï¿½lego.
+Um caudaloso rio de ï¿½guas lï¿½mpidas corre em um pequeno vale entre campos e
 colinas cobertas de grama verde-esmeralda e flores multicoloridas.  Quando
-você se volta para dar uma última olhada no portão que leva a Khura, a
-surpresa é ainda maior: Khura sumiu sem deixar rastros.  É como se nunca
-tivesse existido o grande pântano...
+vocï¿½ se volta para dar uma ï¿½ltima olhada no portï¿½o que leva a Khura, a
+surpresa ï¿½ ainda maior: Khura sumiu sem deixar rastros.  ï¿½ como se nunca
+tivesse existido o grande pï¿½ntano...
 ~
 115.3 g 2
 D1
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11564
 D0
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11598
 D3
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11564
 D2
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11594
 S
 #11564
-Vastos Campos e Infidáveis Colinas~
-   Você está caminhando pelos extensos campos e subindo o suave declive das
-colinas desse lugar.  Não há sinal de ser vivo algum aqui, o que o deixa
+Vastos Campos e Infidï¿½veis Colinas~
+   Vocï¿½ estï¿½ caminhando pelos extensos campos e subindo o suave declive das
+colinas desse lugar.  Nï¿½o hï¿½ sinal de ser vivo algum aqui, o que o deixa
 mais temeroso ainda...  Seu instinto de aventureiro lhe diz para seguir em
-direção ao rio, acompanhando o caminho entre as colinas.
+direï¿½ï¿½o ao rio, acompanhando o caminho entre as colinas.
 ~
 115.3 g 2
 D3
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11563
 D0
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11565
 D2
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11596
 D1
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11563
 S
 #11565
-Vastos Campos e Infidáveis Colinas~
-   Você está caminhando pelos extensos campos e subindo o suave declive das
-colinas desse lugar.  Não há sinal de ser vivo algum aqui, o que o deixa
-mais temeroso ainda...  Você decidiu seguir o conselho que seus instintos
+Vastos Campos e Infidï¿½veis Colinas~
+   Vocï¿½ estï¿½ caminhando pelos extensos campos e subindo o suave declive das
+colinas desse lugar.  Nï¿½o hï¿½ sinal de ser vivo algum aqui, o que o deixa
+mais temeroso ainda...  Vocï¿½ decidiu seguir o conselho que seus instintos
 lhe deram e se dirige ao imenso rio.
 ~
 115.3 g 2
 D2
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11564
 D0
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11591
 D1
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11598
 D3
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11564
 S
 #11566
 O Rio Ikshumati~
-   Você navega nas revoltosas águas de Ikshumati.  A sua maior preocupação
-no momento é não cair de sua embarcação, pois, definitivamente, esse rio é
-bem mais profundo do que você gostaria...  Uma estranha luz parece guiá-lo
-para longe da margem, sendo emitida do fundo das águas. A voz continua a
-atormentá-lo, assim como uma melodia que parece quase deixá-lo em estado
+   Vocï¿½ navega nas revoltosas ï¿½guas de Ikshumati.  A sua maior preocupaï¿½ï¿½o
+no momento ï¿½ nï¿½o cair de sua embarcaï¿½ï¿½o, pois, definitivamente, esse rio ï¿½
+bem mais profundo do que vocï¿½ gostaria...  Uma estranha luz parece guiï¿½-lo
+para longe da margem, sendo emitida do fundo das ï¿½guas. A voz continua a
+atormentï¿½-lo, assim como uma melodia que parece quase deixï¿½-lo em estado
 de transe...
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11567
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11573
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11569
 S
 #11567
 O Rio Ikshumati~
-   Ikshumati não parece nada satisfeito com sua presença aqui...  Suas águas
-parecem pequenas mãos tentando virar seu barco para depois o afogar.  Uma
-lânguida voz sussurra em seu ouvidos: ela manda-o embora daqui.  Já a
-melodia que ressoa dentro de sua cabeça parece ficar mais forte à medida que
-você se afasta da margem, dando-lhe a sensação de que ela está relacionada
+   Ikshumati nï¿½o parece nada satisfeito com sua presenï¿½a aqui...  Suas ï¿½guas
+parecem pequenas mï¿½os tentando virar seu barco para depois o afogar.  Uma
+lï¿½nguida voz sussurra em seu ouvidos: ela manda-o embora daqui.  Jï¿½ a
+melodia que ressoa dentro de sua cabeï¿½a parece ficar mais forte ï¿½ medida que
+vocï¿½ se afasta da margem, dando-lhe a sensaï¿½ï¿½o de que ela estï¿½ relacionada
 com a estranha luz emitida no fundo do rio.  Cuidado...
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11568
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11572
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11566
 S
 #11568
 O Rio Ikshumati~
-   Você tomou coragem e decidiu entrar no rio.  Uma estranha melodia começa
-a ressoar dentro de sua cabeça, e um voz lânguida parece sussurar em seus
-ouvidos: " Saia de Ikshumati...  Você nele não é bem-vindo...  Não profane
-as águas de Ikshumati..." As águas do rio se tornaram mais revoltas, e você
-tem dificuldade em manter sua embarcação inteira.  Procurando avistar a
-outra margem do rio, você vê uma estranha luz sendo emitida do fundo do
+   Vocï¿½ tomou coragem e decidiu entrar no rio.  Uma estranha melodia comeï¿½a
+a ressoar dentro de sua cabeï¿½a, e um voz lï¿½nguida parece sussurar em seus
+ouvidos: " Saia de Ikshumati...  Vocï¿½ nele nï¿½o ï¿½ bem-vindo...  Nï¿½o profane
+as ï¿½guas de Ikshumati..." As ï¿½guas do rio se tornaram mais revoltas, e vocï¿½
+tem dificuldade em manter sua embarcaï¿½ï¿½o inteira.  Procurando avistar a
+outra margem do rio, vocï¿½ vï¿½ uma estranha luz sendo emitida do fundo do
 rio...
 ~
 115.4 grs 7
 D3
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11593
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11578
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11567
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11571
 S
 #11569
 O Rio Ikshumati~
-   As águas do rio parecem ser suas verdadeiras inimigas no momento.  É
-quase impossível se manter em sua embarcação ou pelo menos mantê-la
+   As ï¿½guas do rio parecem ser suas verdadeiras inimigas no momento.  ï¿½
+quase impossï¿½vel se manter em sua embarcaï¿½ï¿½o ou pelo menos mantï¿½-la
 inteira...  A luz emitida do fundo do rio parece mais intensa a medida que
-você se afasta da margem, o que não é consolo algum...  A melodia continua a
-ressoar, e a voz sussurra cada vez mais repetitiva...  Seu corpo balança de
+vocï¿½ se afasta da margem, o que nï¿½o ï¿½ consolo algum...  A melodia continua a
+ressoar, e a voz sussurra cada vez mais repetitiva...  Seu corpo balanï¿½a de
 um lado para o outro, como que em transe.
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11570
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11570
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11574
 S
 #11570
 O Rio Ikshumati~
-   Você está navegando pelo Ikshumati, um rio de belas e revoltas águas de
-tom violáceo.  O rio parece extremamente disposto a não deixá-lo permanecer
-muito tempo vivo, jogando sua embarcação de um lado para outro como se fosse
-um brinquedo.  Uma luz, vindo do fundo das águas, se intensifica cada vez
-mais, atraindo-o, enquanto uma voz repetitiva tenta afastá-lo daqui.  Você,
-como que em transe, balança o corpo acompanhando o ritmo de uma monótona
+   Vocï¿½ estï¿½ navegando pelo Ikshumati, um rio de belas e revoltas ï¿½guas de
+tom violï¿½ceo.  O rio parece extremamente disposto a nï¿½o deixï¿½-lo permanecer
+muito tempo vivo, jogando sua embarcaï¿½ï¿½o de um lado para outro como se fosse
+um brinquedo.  Uma luz, vindo do fundo das ï¿½guas, se intensifica cada vez
+mais, atraindo-o, enquanto uma voz repetitiva tenta afastï¿½-lo daqui.  Vocï¿½,
+como que em transe, balanï¿½a o corpo acompanhando o ritmo de uma monï¿½tona
 melodia.
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11569
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11575
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11575
 S
 #11571
 O Rio Ikshumati~
-   Ikshumati não parece nada satisfeito com sua presença aqui...  Suas águas
-parecem pequenas mãos tentando virar seu barco para depois o afogar.  Uma
-lânguida voz sussurra em seu ouvidos: ela manda-o embora daqui.  Já a
-melodia que ressoa dentro de sua cabeça parece ficar mais forte à medida que
-você se afasta da margem, dando-lhe a sensação de que ela está relacionada
+   Ikshumati nï¿½o parece nada satisfeito com sua presenï¿½a aqui...  Suas ï¿½guas
+parecem pequenas mï¿½os tentando virar seu barco para depois o afogar.  Uma
+lï¿½nguida voz sussurra em seu ouvidos: ela manda-o embora daqui.  Jï¿½ a
+melodia que ressoa dentro de sua cabeï¿½a parece ficar mais forte ï¿½ medida que
+vocï¿½ se afasta da margem, dando-lhe a sensaï¿½ï¿½o de que ela estï¿½ relacionada
 com a estranha luz emitida no fundo do rio.  Cuidado...
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11573
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11572
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11578
 D3
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11578
 S
 #11572
 O Rio Ikshumati~
-   Sua embarcação é quase destruída pelas revoltas águas do rio Ikshumati,
-cuja disposição em deixá-lo permanecer mais tempo vivo parece ser cada vez
-menor.  Mas você continua pois, ao fixar seus olhos na estranha luz do fundo
-das águas, sente uma força maior atraindo, mais forte até que a repetitiva
-voz que o manda embora e que a monótona melodia que faz seu corpo vibrar.
+   Sua embarcaï¿½ï¿½o ï¿½ quase destruï¿½da pelas revoltas ï¿½guas do rio Ikshumati,
+cuja disposiï¿½ï¿½o em deixï¿½-lo permanecer mais tempo vivo parece ser cada vez
+menor.  Mas vocï¿½ continua pois, ao fixar seus olhos na estranha luz do fundo
+das ï¿½guas, sente uma forï¿½a maior atraindo, mais forte atï¿½ que a repetitiva
+voz que o manda embora e que a monï¿½tona melodia que faz seu corpo vibrar.
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11571
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11582
 D3
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11567
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11573
 S
 #11573
 O Rio Ikshumati~
-   As águas do rio parecem ser suas verdadeiras inimigas no momento.  É
-quase impossível se manter em sua embarcação ou pelo menos mantê-la
+   As ï¿½guas do rio parecem ser suas verdadeiras inimigas no momento.  ï¿½
+quase impossï¿½vel se manter em sua embarcaï¿½ï¿½o ou pelo menos mantï¿½-la
 inteira...  A luz emitida do fundo do rio parece mais intensa a medida que
-você se afasta da margem, o que não é consolo algum...  A melodia continua a
-ressoar, e a voz sussurra cada vez mais repetitiva...  Seu corpo balança de
+vocï¿½ se afasta da margem, o que nï¿½o ï¿½ consolo algum...  A melodia continua a
+ressoar, e a voz sussurra cada vez mais repetitiva...  Seu corpo balanï¿½a de
 um lado para o outro, como que em transe.
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11572
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11579
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11574
 D3
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11566
 S
 #11574
 O Rio Ikshumati~
-   Ikshumati parece cada vez mais bravio: suas águas parecem inúmeras mãos
-tentando agarrá-lo, segurando seus braços e pernas enquanto tentam virar sua
-embarcação.  Uma intensa luz sai do fundo das águas, vinda de longe, mas
-extremamente intensa.  Uma suave melodia preenche sua cabeça, enquanto uma
+   Ikshumati parece cada vez mais bravio: suas ï¿½guas parecem inï¿½meras mï¿½os
+tentando agarrï¿½-lo, segurando seus braï¿½os e pernas enquanto tentam virar sua
+embarcaï¿½ï¿½o.  Uma intensa luz sai do fundo das ï¿½guas, vinda de longe, mas
+extremamente intensa.  Uma suave melodia preenche sua cabeï¿½a, enquanto uma
 repetitiva voz sussurra em seu ouvido, pedindo para que parta do rio.
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11573
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11579
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11576
 D3
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11569
 S
 #11575
 O Rio Ikshumati~
-   Você navega nas revoltosas águas de Ikshumati.  A sua maior preocupação
-no momento é não cair de sua embarcação, pois, definitivamente, esse rio é
-bem mais profundo do que você gostaria...  Uma estranha luz parece guiá-lo
-para longe da margem, sendo emitida do fundo das águas. A voz continua a
-atormentá-lo, assim como uma melodia que parece quase deixá-lo em estado
+   Vocï¿½ navega nas revoltosas ï¿½guas de Ikshumati.  A sua maior preocupaï¿½ï¿½o
+no momento ï¿½ nï¿½o cair de sua embarcaï¿½ï¿½o, pois, definitivamente, esse rio ï¿½
+bem mais profundo do que vocï¿½ gostaria...  Uma estranha luz parece guiï¿½-lo
+para longe da margem, sendo emitida do fundo das ï¿½guas. A voz continua a
+atormentï¿½-lo, assim como uma melodia que parece quase deixï¿½-lo em estado
 de transe...
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11574
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11567
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11580
 D3
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11570
 S
 #11576
 O Rio Ikshumati~
-   Sua embarcação é quase destruída pelas revoltas águas do rio Ikshumati,
-cuja disposição em deixá-lo permanecer mais tempo vivo parece ser cada vez
-menor.  Mas você continua pois, ao fixar seus olhos na estranha luz do fundo
-das águas, sente uma força maior atraindo, mais forte até que a repetitiva
-voz que o manda embora e que a monótona melodia que faz seu corpo vibrar.
+   Sua embarcaï¿½ï¿½o ï¿½ quase destruï¿½da pelas revoltas ï¿½guas do rio Ikshumati,
+cuja disposiï¿½ï¿½o em deixï¿½-lo permanecer mais tempo vivo parece ser cada vez
+menor.  Mas vocï¿½ continua pois, ao fixar seus olhos na estranha luz do fundo
+das ï¿½guas, sente uma forï¿½a maior atraindo, mais forte atï¿½ que a repetitiva
+voz que o manda embora e que a monï¿½tona melodia que faz seu corpo vibrar.
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11581
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11581
 D3
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11574
 S
 #11577
 O Rio Ikshumati~
-   Você está desesperado pois, navegando pelo Ikshumati, tem a impressão que
-só a morte fará com que você saia daqui.  Até que todas as atividades das
-águas param...  A entranha luz, a única coisa que lhe dava forças para
-continuar, parece ter formado um círculo de luz que o envolve e sobe até os
-céus.  Você se sente protegido...  e tentado a mergulhar e descobrir qual é
+   Vocï¿½ estï¿½ desesperado pois, navegando pelo Ikshumati, tem a impressï¿½o que
+sï¿½ a morte farï¿½ com que vocï¿½ saia daqui.  Atï¿½ que todas as atividades das
+ï¿½guas param...  A entranha luz, a ï¿½nica coisa que lhe dava forï¿½as para
+continuar, parece ter formado um cï¿½rculo de luz que o envolve e sobe atï¿½ os
+cï¿½us.  Vocï¿½ se sente protegido...  e tentado a mergulhar e descobrir qual ï¿½
 a fonte de tal...  magia?
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11590
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11582
 D3
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11569
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11572
 D5
-Ali parece haver uma benéfica magia... Parece...
+Ali parece haver uma benï¿½fica magia... Parece...
 ~
 ~
 0 -1 11300
 S
 #11578
 O Rio Ikshumati~
-   Você está navegando pelo Ikshumati, um rio de belas e revoltas águas de
-tom violáceo.  O rio parece extremamente disposto a não deixá-lo permanecer
-muito tempo vivo, jogando sua embarcação de um lado para outro como se fosse
-um brinquedo.  Uma luz, vindo do fundo das águas, se intensifica cada vez
-mais, atraindo-o, enquanto uma voz repetitiva tenta afastá-lo daqui.  Você,
-como que em transe, balança o corpo acompanhando o ritmo de uma monótona
+   Vocï¿½ estï¿½ navegando pelo Ikshumati, um rio de belas e revoltas ï¿½guas de
+tom violï¿½ceo.  O rio parece extremamente disposto a nï¿½o deixï¿½-lo permanecer
+muito tempo vivo, jogando sua embarcaï¿½ï¿½o de um lado para outro como se fosse
+um brinquedo.  Uma luz, vindo do fundo das ï¿½guas, se intensifica cada vez
+mais, atraindo-o, enquanto uma voz repetitiva tenta afastï¿½-lo daqui.  Vocï¿½,
+como que em transe, balanï¿½a o corpo acompanhando o ritmo de uma monï¿½tona
 melodia.
 ~
 115.4 grs 7
 D3
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11571
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11583
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11584
 S
 #11579
 O Rio Ikshumati~
-   Você navega nas revoltosas águas de Ikshumati.  A sua maior preocupação
-no momento é não cair de sua embarcação, pois, definitivamente, esse rio é
-bem mais profundo do que você gostaria...  Uma estranha luz parece guiá-lo
-para longe da margem, sendo emitida do fundo das águas. A voz continua a
-atormentá-lo, assim como uma melodia que parece quase deixá-lo em estado
+   Vocï¿½ navega nas revoltosas ï¿½guas de Ikshumati.  A sua maior preocupaï¿½ï¿½o
+no momento ï¿½ nï¿½o cair de sua embarcaï¿½ï¿½o, pois, definitivamente, esse rio ï¿½
+bem mais profundo do que vocï¿½ gostaria...  Uma estranha luz parece guiï¿½-lo
+para longe da margem, sendo emitida do fundo das ï¿½guas. A voz continua a
+atormentï¿½-lo, assim como uma melodia que parece quase deixï¿½-lo em estado
 de transe...
 ~
 115.4 grs 7
 D3
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11573
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11580
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11585
 S
 #11580
 O Rio Ikshumati~
-   Você está navegando pelo Ikshumati, um rio de belas e revoltas águas de
-tom violáceo.  O rio parece extremamente disposto a não deixá-lo permanecer
-muito tempo vivo, jogando sua embarcação de um lado para outro como se fosse
-um brinquedo.  Uma luz, vindo do fundo das águas, se intensifica cada vez
-mais, atraindo-o, enquanto uma voz repetitiva tenta afastá-lo daqui.  Você,
-como que em transe, balança o corpo acompanhando o ritmo de uma monótona
+   Vocï¿½ estï¿½ navegando pelo Ikshumati, um rio de belas e revoltas ï¿½guas de
+tom violï¿½ceo.  O rio parece extremamente disposto a nï¿½o deixï¿½-lo permanecer
+muito tempo vivo, jogando sua embarcaï¿½ï¿½o de um lado para outro como se fosse
+um brinquedo.  Uma luz, vindo do fundo das ï¿½guas, se intensifica cada vez
+mais, atraindo-o, enquanto uma voz repetitiva tenta afastï¿½-lo daqui.  Vocï¿½,
+como que em transe, balanï¿½a o corpo acompanhando o ritmo de uma monï¿½tona
 melodia.
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11579
 D3
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11575
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11569
 S
 #11581
 O Rio Ikshumati~
-   Sua embarcação é quase destruída pelas revoltas águas do rio Ikshumati,
-cuja disposição em deixá-lo permanecer mais tempo vivo parece ser cada vez
-menor.  Mas você continua pois, ao fixar seus olhos na estranha luz do fundo
-das águas, sente uma força maior atraindo, mais forte até que a repetitiva
-voz que o manda embora e que a monótona melodia que faz seu corpo vibrar.
+   Sua embarcaï¿½ï¿½o ï¿½ quase destruï¿½da pelas revoltas ï¿½guas do rio Ikshumati,
+cuja disposiï¿½ï¿½o em deixï¿½-lo permanecer mais tempo vivo parece ser cada vez
+menor.  Mas vocï¿½ continua pois, ao fixar seus olhos na estranha luz do fundo
+das ï¿½guas, sente uma forï¿½a maior atraindo, mais forte atï¿½ que a repetitiva
+voz que o manda embora e que a monï¿½tona melodia que faz seu corpo vibrar.
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11576
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11576
 S
 #11582
 O Rio Ikshumati~
-   Ikshumati parece cada vez mais bravio: suas águas parecem inúmeras mãos
-tentando agarrá-lo, segurando seus braços e pernas enquanto tentam virar sua
-embarcação.  Uma intensa luz sai do fundo das águas, vinda de longe, mas
-extremamente intensa.  Uma suave melodia preenche sua cabeça, enquanto uma
+   Ikshumati parece cada vez mais bravio: suas ï¿½guas parecem inï¿½meras mï¿½os
+tentando agarrï¿½-lo, segurando seus braï¿½os e pernas enquanto tentam virar sua
+embarcaï¿½ï¿½o.  Uma intensa luz sai do fundo das ï¿½guas, vinda de longe, mas
+extremamente intensa.  Uma suave melodia preenche sua cabeï¿½a, enquanto uma
 repetitiva voz sussurra em seu ouvido, pedindo para que parta do rio.
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11581
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11588
 S
 #11583
 O Rio Ikshumati~
-   Você navega nas revoltosas águas de Ikshumati.  A sua maior preocupação
-no momento é não cair de sua embarcação, pois, definitivamente, esse rio é
-bem mais profundo do que você gostaria...  Uma estranha luz parece guiá-lo
-para longe da margem, sendo emitida do fundo das águas. A voz continua a
-atormentá-lo, assim como uma melodia que parece quase deixá-lo em estado
+   Vocï¿½ navega nas revoltosas ï¿½guas de Ikshumati.  A sua maior preocupaï¿½ï¿½o
+no momento ï¿½ nï¿½o cair de sua embarcaï¿½ï¿½o, pois, definitivamente, esse rio ï¿½
+bem mais profundo do que vocï¿½ gostaria...  Uma estranha luz parece guiï¿½-lo
+para longe da margem, sendo emitida do fundo das ï¿½guas. A voz continua a
+atormentï¿½-lo, assim como uma melodia que parece quase deixï¿½-lo em estado
 de transe...
 ~
 115.4 grs 7
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11587
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11584
 D3
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11577
 S
 #11584
 O Rio Ikshumati~
-   Sua embarcação é quase destruída pelas revoltas águas do rio Ikshumati,
-cuja disposição em deixá-lo permanecer mais tempo vivo parece ser cada vez
-menor.  Mas você continua pois, ao fixar seus olhos na estranha luz do fundo
-das águas, sente uma força maior atraindo, mais forte até que a repetitiva
-voz que o manda embora e que a monótona melodia que faz seu corpo vibrar.
+   Sua embarcaï¿½ï¿½o ï¿½ quase destruï¿½da pelas revoltas ï¿½guas do rio Ikshumati,
+cuja disposiï¿½ï¿½o em deixï¿½-lo permanecer mais tempo vivo parece ser cada vez
+menor.  Mas vocï¿½ continua pois, ao fixar seus olhos na estranha luz do fundo
+das ï¿½guas, sente uma forï¿½a maior atraindo, mais forte atï¿½ que a repetitiva
+voz que o manda embora e que a monï¿½tona melodia que faz seu corpo vibrar.
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11578
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11589
 D3
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11575
 S
 #11585
 O Rio Ikshumati~
-   Você está navegando pelo Ikshumati, um rio de belas e revoltas águas de
-tom violáceo.  O rio parece extremamente disposto a não deixá-lo permanecer
-muito tempo vivo, jogando sua embarcação de um lado para outro como se fosse
-um brinquedo.  Uma luz, vindo do fundo das águas, se intensifica cada vez
-mais, atraindo-o, enquanto uma voz repetitiva tenta afastá-lo daqui.  Você,
-como que em transe, balança o corpo acompanhando o ritmo de uma monótona
+   Vocï¿½ estï¿½ navegando pelo Ikshumati, um rio de belas e revoltas ï¿½guas de
+tom violï¿½ceo.  O rio parece extremamente disposto a nï¿½o deixï¿½-lo permanecer
+muito tempo vivo, jogando sua embarcaï¿½ï¿½o de um lado para outro como se fosse
+um brinquedo.  Uma luz, vindo do fundo das ï¿½guas, se intensifica cada vez
+mais, atraindo-o, enquanto uma voz repetitiva tenta afastï¿½-lo daqui.  Vocï¿½,
+como que em transe, balanï¿½a o corpo acompanhando o ritmo de uma monï¿½tona
 melodia.
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11581
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11586
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11580
 S
 #11586
 O Rio Ikshumati~
-   Você navega nas revoltosas águas de Ikshumati.  A sua maior preocupação
-no momento é não cair de sua embarcação, pois, definitivamente, esse rio é
-bem mais profundo do que você gostaria...  Uma estranha luz parece guiá-lo
-para longe da margem, sendo emitida do fundo das águas. A voz continua a
-atormentá-lo, assim como uma melodia que parece quase deixá-lo em estado
+   Vocï¿½ navega nas revoltosas ï¿½guas de Ikshumati.  A sua maior preocupaï¿½ï¿½o
+no momento ï¿½ nï¿½o cair de sua embarcaï¿½ï¿½o, pois, definitivamente, esse rio ï¿½
+bem mais profundo do que vocï¿½ gostaria...  Uma estranha luz parece guiï¿½-lo
+para longe da margem, sendo emitida do fundo das ï¿½guas. A voz continua a
+atormentï¿½-lo, assim como uma melodia que parece quase deixï¿½-lo em estado
 de transe...
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11578
 D3
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11585
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11587
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11567
 S
 #11587
 O Rio Ikshumati~
-   Sua embarcação é quase destruída pelas revoltas águas do rio Ikshumati,
-cuja disposição em deixá-lo permanecer mais tempo vivo parece ser cada vez
-menor.  Mas você continua pois, ao fixar seus olhos na estranha luz do fundo
-das águas, sente uma força maior atraindo, mais forte até que a repetitiva
-voz que o manda embora e que a monótona melodia que faz seu corpo vibrar.
+   Sua embarcaï¿½ï¿½o ï¿½ quase destruï¿½da pelas revoltas ï¿½guas do rio Ikshumati,
+cuja disposiï¿½ï¿½o em deixï¿½-lo permanecer mais tempo vivo parece ser cada vez
+menor.  Mas vocï¿½ continua pois, ao fixar seus olhos na estranha luz do fundo
+das ï¿½guas, sente uma forï¿½a maior atraindo, mais forte atï¿½ que a repetitiva
+voz que o manda embora e que a monï¿½tona melodia que faz seu corpo vibrar.
 ~
 115.4 grs 7
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11566
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11586
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11588
 D3
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11584
 S
 #11588
 O Rio Ikshumati~
-   Ikshumati não parece nada satisfeito com sua presença aqui...  Suas águas
-parecem pequenas mãos tentando virar seu barco para depois o afogar.  Uma
-lânguida voz sussurra em seu ouvidos: ela manda-o embora daqui.  Já a
-melodia que ressoa dentro de sua cabeça parece ficar mais forte à medida que
-você se afasta da margem, dando-lhe a sensação de que ela está relacionada
-com a estranha luz emitida no fundo do rio.  Por um momento, você parece
-vislumbrar algo diferente nos céus, um estranho brilho que se aproxima e,
-trazendo o som dos trovões, desenha um imenso raio sobre sua cabeça.  Para
-sua surpresa, ele não se apagou, estando a apenas alguns metros acima de
-você.
+   Ikshumati nï¿½o parece nada satisfeito com sua presenï¿½a aqui...  Suas ï¿½guas
+parecem pequenas mï¿½os tentando virar seu barco para depois o afogar.  Uma
+lï¿½nguida voz sussurra em seu ouvidos: ela manda-o embora daqui.  Jï¿½ a
+melodia que ressoa dentro de sua cabeï¿½a parece ficar mais forte ï¿½ medida que
+vocï¿½ se afasta da margem, dando-lhe a sensaï¿½ï¿½o de que ela estï¿½ relacionada
+com a estranha luz emitida no fundo do rio.  Por um momento, vocï¿½ parece
+vislumbrar algo diferente nos cï¿½us, um estranho brilho que se aproxima e,
+trazendo o som dos trovï¿½es, desenha um imenso raio sobre sua cabeï¿½a.  Para
+sua surpresa, ele nï¿½o se apagou, estando a apenas alguns metros acima de
+vocï¿½.
 ~
 115.4 grs 7
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11569
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11587
 D3
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11582
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11589
@@ -2373,329 +2373,329 @@ S
 
 #11589
 O Rio Ikshumati~
-   Ikshumati parece cada vez mais bravio: suas águas parecem inúmeras mãos
-tentando agarrá-lo, segurando seus braços e pernas enquanto tentam virar sua
-embarcação.  Uma intensa luz sai do fundo das águas, vinda de longe, mas
-extremamente intensa.  Uma suave melodia preenche sua cabeça, enquanto uma
+   Ikshumati parece cada vez mais bravio: suas ï¿½guas parecem inï¿½meras mï¿½os
+tentando agarrï¿½-lo, segurando seus braï¿½os e pernas enquanto tentam virar sua
+embarcaï¿½ï¿½o.  Uma intensa luz sai do fundo das ï¿½guas, vinda de longe, mas
+extremamente intensa.  Uma suave melodia preenche sua cabeï¿½a, enquanto uma
 repetitiva voz sussurra em seu ouvido, pedindo para que parta do rio.
 ~
 115.4 grs 7
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11570
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11588
 D3
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11584
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11590
 S
 #11590
 O Rio Ikshumati~
-   Sua embarcação é quase destruída pelas revoltas águas do rio Ikshumati,
-cuja disposição em deixá-lo permanecer mais tempo vivo parece ser cada vez
-menor.  Mas você continua pois, ao fixar seus olhos na estranha luz do fundo
-das águas, sente uma força maior atraindo, mais forte até que a repetitiva
-voz que o manda embora e que a monótona melodia que faz seu corpo vibrar.
+   Sua embarcaï¿½ï¿½o ï¿½ quase destruï¿½da pelas revoltas ï¿½guas do rio Ikshumati,
+cuja disposiï¿½ï¿½o em deixï¿½-lo permanecer mais tempo vivo parece ser cada vez
+menor.  Mas vocï¿½ continua pois, ao fixar seus olhos na estranha luz do fundo
+das ï¿½guas, sente uma forï¿½a maior atraindo, mais forte atï¿½ que a repetitiva
+voz que o manda embora e que a monï¿½tona melodia que faz seu corpo vibrar.
 ~
 115.4 grs 7
 D0
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11589
 D1
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11575
 D2
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11569
 D3
-Você vê Ikshumati... e mais nada...
+Vocï¿½ vï¿½ Ikshumati... e mais nada...
 ~
 ~
 0 -1 11581
 S
 #11591
-Vastos Campos e Infidáveis Colinas~
-   Você está caminhando nesse lugar completamente estranho e pensa: "Isso
-não é exatamente como eu imaginava que Patala seria...".  O Mundo Oculto, o
+Vastos Campos e Infidï¿½veis Colinas~
+   Vocï¿½ estï¿½ caminhando nesse lugar completamente estranho e pensa: "Isso
+nï¿½o ï¿½ exatamente como eu imaginava que Patala seria...".  O Mundo Oculto, o
 mais baixo plano que existe, parece prometer mais surpresas...  Enquanto
-isso, você observa o rio, agora mais próximo, e se assusta ao constatar que
-só é possível enxergar uma das margens...
+isso, vocï¿½ observa o rio, agora mais prï¿½ximo, e se assusta ao constatar que
+sï¿½ ï¿½ possï¿½vel enxergar uma das margens...
 ~
 115.3 g 2
 D2
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11565
 D1
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11592
 D3
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11596
 D0
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11564
 S
 #11592
-Vastos Campos e Infidáveis Colinas~
-   Você está seguindo em direção a um grande rio, subindo o suave
+Vastos Campos e Infidï¿½veis Colinas~
+   Vocï¿½ estï¿½ seguindo em direï¿½ï¿½o a um grande rio, subindo o suave
 arredondado de colinas e passando por extensos campos.  Pela primeira vez em
-sua jornada, você tem tempo de olhar para o estranho céu de Patala.
-Acompanhando o curso do rio com os olhos, você novamente se surpreende: ele
-segue até além do horizonte, vindo de algum lugar antes do nada...
+sua jornada, vocï¿½ tem tempo de olhar para o estranho cï¿½u de Patala.
+Acompanhando o curso do rio com os olhos, vocï¿½ novamente se surpreende: ele
+segue atï¿½ alï¿½m do horizonte, vindo de algum lugar antes do nada...
 ~
 115.3 g 2
 D0
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11593
 D3
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11591
 D1
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11599
 D2
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11564
 S
 #11593
 A Margem do Rio~
-   Você está lentamente se aproximando da margem do grande rio.  Quando
-chega, observa o que há pela frente...  As águas refletem o tom violáceo dos
-céus, parecendo terem roubado a cor da mais sacra flor de lótus.  Tentando
-descobrir se o rio é muito fundo, você percebe que alguém que não sabe nadar
+   Vocï¿½ estï¿½ lentamente se aproximando da margem do grande rio.  Quando
+chega, observa o que hï¿½ pela frente...  As ï¿½guas refletem o tom violï¿½ceo dos
+cï¿½us, parecendo terem roubado a cor da mais sacra flor de lï¿½tus.  Tentando
+descobrir se o rio ï¿½ muito fundo, vocï¿½ percebe que alguï¿½m que nï¿½o sabe nadar
 facilmente se afogaria aqui.
 ~
 115.3 g 2
 D1
-Um rio de exóticas águas violáceas margeia esse lado das colinas.
+Um rio de exï¿½ticas ï¿½guas violï¿½ceas margeia esse lado das colinas.
 ~
 ~
 0 -1 11568
 D2
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11593
 D3
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11598
 D0
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11591
 S
 #11594
-Vastos Campos e Infidáveis Colinas~
-   Você está caminhando pelos extensos campos e subindo o suave declive das
-colinas desse lugar.  Não há sinal de ser vivo algum aqui, o que o deixa
+Vastos Campos e Infidï¿½veis Colinas~
+   Vocï¿½ estï¿½ caminhando pelos extensos campos e subindo o suave declive das
+colinas desse lugar.  Nï¿½o hï¿½ sinal de ser vivo algum aqui, o que o deixa
 mais temeroso ainda...  Seu instinto de aventureiro lhe diz para seguir em
-direção ao rio, acompanhando o caminho entre as colinas.
+direï¿½ï¿½o ao rio, acompanhando o caminho entre as colinas.
 ~
 115.3 g 2
 D0
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11563
 D2
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11595
 D3
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11564
 D1
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11596
 S
 #11595
-Vastos Campos e Infidáveis Colinas~
-   Você está caminhando pelos extensos campos e subindo o suave declive das
-colinas desse lugar.  Não há sinal de ser vivo algum aqui, o que o deixa
-mais temeroso ainda...  Você decidiu seguir o conselho que seus instintos
+Vastos Campos e Infidï¿½veis Colinas~
+   Vocï¿½ estï¿½ caminhando pelos extensos campos e subindo o suave declive das
+colinas desse lugar.  Nï¿½o hï¿½ sinal de ser vivo algum aqui, o que o deixa
+mais temeroso ainda...  Vocï¿½ decidiu seguir o conselho que seus instintos
 lhe deram e se dirige ao imenso rio.
 ~
 115.3 g 2
 D2
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11563
 D0
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11594
 D3
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11598
 D1
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11597
 S
 #11596
-Vastos Campos e Infidáveis Colinas~
-   Você está caminhando nesse lugar completamente estranho e pensa: "Isso
-não é exatamente como eu imaginava que Patala seria...".  O Mundo Oculto, o
+Vastos Campos e Infidï¿½veis Colinas~
+   Vocï¿½ estï¿½ caminhando nesse lugar completamente estranho e pensa: "Isso
+nï¿½o ï¿½ exatamente como eu imaginava que Patala seria...".  O Mundo Oculto, o
 mais baixo plano que existe, parece prometer mais surpresas...  Enquanto
-isso, você observa o rio, agora mais próximo, e se assusta ao constatar que
-só é possível enxergar uma das margens...
+isso, vocï¿½ observa o rio, agora mais prï¿½ximo, e se assusta ao constatar que
+sï¿½ ï¿½ possï¿½vel enxergar uma das margens...
 ~
 115.3 g 2
 D0
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11564
 D1
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11591
 D2
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11597
 D3
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11597
 S
 #11597
-Vastos Campos e Infidáveis Colinas~
-   Você está seguindo em direção a um grande rio, subindo o suave
+Vastos Campos e Infidï¿½veis Colinas~
+   Vocï¿½ estï¿½ seguindo em direï¿½ï¿½o a um grande rio, subindo o suave
 arredondado de colinas e passando por extensos campos.  Pela primeira vez em
-sua jornada, você tem tempo de olhar para o estranho céu de Patala.
-Acompanhando o curso do rio com os olhos, você novamente se surpreende: ele
-segue até além do horizonte, vindo de algum lugar antes do nada...
+sua jornada, vocï¿½ tem tempo de olhar para o estranho cï¿½u de Patala.
+Acompanhando o curso do rio com os olhos, vocï¿½ novamente se surpreende: ele
+segue atï¿½ alï¿½m do horizonte, vindo de algum lugar antes do nada...
 ~
 115.3 g 2
 D0
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11596
 D1
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11594
 D2
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11599
 D3
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11595
 
 S
 #11598
-Vastos Campos e Infidáveis Colinas~
-   Você está caminhando nesse lugar completamente estranho e pensa: "Isso
-não é exatamente como eu imaginava que Patala seria...".  O Mundo Oculto, o
+Vastos Campos e Infidï¿½veis Colinas~
+   Vocï¿½ estï¿½ caminhando nesse lugar completamente estranho e pensa: "Isso
+nï¿½o ï¿½ exatamente como eu imaginava que Patala seria...".  O Mundo Oculto, o
 mais baixo plano que existe, parece prometer mais surpresas...  Enquanto
-isso, você observa o rio, agora mais próximo, e se assusta ao constatar que
-só é possível enxergar uma das margens...
+isso, vocï¿½ observa o rio, agora mais prï¿½ximo, e se assusta ao constatar que
+sï¿½ ï¿½ possï¿½vel enxergar uma das margens...
 ~
 115.3 g 2
 D0
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11565
 D1
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11563
 D2
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11595
 D3
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11565
 S
 #11599
-Vastos Campos e Infidáveis Colinas~
-   Você está seguindo em direção a um grande rio, subindo o suave
+Vastos Campos e Infidï¿½veis Colinas~
+   Vocï¿½ estï¿½ seguindo em direï¿½ï¿½o a um grande rio, subindo o suave
 arredondado de colinas e passando por extensos campos.  Pela primeira vez em
-sua jornada, você tem tempo de olhar para o estranho céu de Patala.
-Acompanhando o curso do rio com os olhos, você novamente se surpreende: ele
-segue até além do horizonte, vindo de algum lugar antes do nada...
+sua jornada, vocï¿½ tem tempo de olhar para o estranho cï¿½u de Patala.
+Acompanhando o curso do rio com os olhos, vocï¿½ novamente se surpreende: ele
+segue atï¿½ alï¿½m do horizonte, vindo de algum lugar antes do nada...
 ~
 115.3 g 2
 D0
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11597
 D3
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11592
 D2
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11591
 D1
-Você vê apenas vastos campos e colinas...
+Vocï¿½ vï¿½ apenas vastos campos e colinas...
 ~
 ~
 0 -1 11564
