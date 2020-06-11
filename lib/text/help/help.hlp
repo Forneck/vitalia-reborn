@@ -2,18 +2,6 @@
 
 Use ! to repeat the last command typed 
 #0
-SKY STARS STARMAP CONSTELLATION
-The night sky in the Vitalia is host to many stars.
-The ancients recognized patterns in these stars and named many
-constellations after them.  Throughout the year you may be able
-to 'look sky' and see some of the most famous ones, including:
-
-&OCygnus      &cUrsa Minor  &GOrion   &WDragon  &PLeo    &gVenus  &RMars
-&CCassiopeia  &BMercurius   &bUranus  &pCrown   &rPluto  &YRaptor   
-
-StarMap was written by Nebseni of Clandestine MUD and ported to Smaug
-by Desden, el Chaman Tibetano.
-#0
 %ASOUND% OASOUND MASOUND WASOUND ASOUND
 
 %asound% <message>
@@ -878,7 +866,7 @@ AUTOQUESTS QUESTS QUESTMASTERS QUEST-MOBS QUESTMOBS
 
    An autoquest is a quest that can be automatically started and completed 
 without the intervention of an immortal.  Simply visit a questmaster and join 
-an available quest, and get rewarded on it�s completion. Keep an eye out for
+an available quest, and get rewarded on its completion. Keep an eye out for
 autoquests scattered throughout the World.
 
 See Also: QUEST-FLAG, QUESTPOINTS
@@ -13526,4 +13514,4 @@ zlock - Locks one or all zones. Type zlock for usage.
 zunlock - Locks one or all zones. Type zunlock for usage. 
 
 #31
-$~
+$
