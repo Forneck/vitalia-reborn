@@ -1,21 +1,24 @@
 VITALIAMUD ABBAMUD
 
-   O Mundo de Vitália (originalmente como AbbaMUD) foi criado em agosto de
+   O Mundo de VitÃ¡lia (originalmente como AbbaMUD) foi criado em agosto de
 1995, na Universidade de Campinas (UNICAMP), por Vitor de Paula.  Em 1996, o
 MUD foi temporariamente fechado, para depois, em dezembro do mesmo ano, ser
-reaberto de forma definitiva no provedor onde até hoje está hospedado.
+reaberto.
 
-   Em outubro de 2000, devido a mudanças na estrutura e na equipe de
-trabalho, mudou de nome para "O Mundo de Vitália" (VitaliaMUD).
+   Em outubro de 2000, devido a mudanï¿½as na estrutura e na equipe de
+trabalho, mudou de nome para "O Mundo de Vitï¿½lia" (VitaliaMUD). Ao redor de 2003 ele foi fechado, mas reaberto depois de quase 20 anos com outra equipe.
+   Em 2020, houve uma reformulaÃ§Ã£o e atualizacÃ£o do sistema interno passando a se chamar "O Mundo de VitÃ¡lia - Reborn", com referencia a reabertura.
 
-   O serviço é disponibilizado de forma gratuita a todos os jogadores
-brasileiros, ou que falem a língua portuguesa.  Ele é mantido como um hobby
-pelos seus atuais mantenedores, e nunca se espera que o Mundo de Vitália se
-torne uma fonte de lucro ou prejuízo.
+   O serviÃ§o Ã© disponibilizado de forma gratuita a todos os jogadores
+brasileiros, ou que falem a lï¿½ngua portuguesa.  Ele ï¿½ mantido como um hobby
+pelos seus atuais mantenedores, e nunca se espera que o Mundo de Vitï¿½lia se
+torne uma fonte de lucro ou prejuï¿½zo.
+
+
 #
 AC
 
-   "AC" (armor class) é seu nivel de armadura.  É representado por um número
+   "AC" (armor class) ï¿½ seu nivel de armadura.  ï¿½ representado por um nï¿½mero
 que varia entre 10 e -20, definido assim:
 
      AC:          Equivalente a:
@@ -25,274 +28,274 @@ que varia entre 10 e -20, definido assim:
     -10 (-100/10) Pessoa muito bem protegida (armadura completa)
     -20 (-200/10) Tanque de Guerra
 
-   O comando SCORE mostra sua armadura como um número parecido com 78/10.
+   O comando SCORE mostra sua armadura como um nï¿½mero parecido com 78/10.
 Isso indica 78 em uma escala de -200 a 100 (ou 7.8 na escala de -20 a 10).
 
-Veja também: SCORE
+Veja tambï¿½m: SCORE
 #
 ALINHAMENTO
 
-   O alinhamento indica se um personagem é bom ou mau.  É um número que pode
-variar de -1000 até +1000.  Quanto mais positivo for seu alinhamento, maior
-será sua bondade, e quanto mais negativo, maior será sua maldade.
+   O alinhamento indica se um personagem ï¿½ bom ou mau.  ï¿½ um nï¿½mero que pode
+variar de -1000 atï¿½ +1000.  Quanto mais positivo for seu alinhamento, maior
+serï¿½ sua bondade, e quanto mais negativo, maior serï¿½ sua maldade.
 
    Em regra geral, usa-se a seguinte escala:
 
    -1000                 -350          0          350                  +1000
-   &R|-----------------------|&g-----------&W|&g-----------&B|-----------------------|&n
-        &RPersonagem Mau         &gPersonagem Neutro         &BPersonagem Bom&n
+   @R|-----------------------|@g-----------@W|@g-----------@B|-----------------------|@n
+        @RPersonagem Mau         @gPersonagem Neutro         @BPersonagem Bom@n
 
    O alinhamento de um personagem se altera ao se matar outros personagens.
 Ao matar outro personagem, o alinhamento do agressor tende a se tornar o
-inverso do alinhamento da vítima.  Assim, por exemplo, matando-se vários
+inverso do alinhamento da vï¿½tima.  Assim, por exemplo, matando-se vï¿½rios
 personagens de alinhamento -800, seu alinhamento tende a se aproximar de
 +800.
 
-   Há objetos que só podem ser usados por personagens de determinado
-alinhamento, como por exemplo, o elmo prateado, que só pode ser usado por
-personagens bons.  Há também, monstros que atacam personagens de determinado
-alinhamento, como por exemplo, as lâmias, que só atacam personagens bons.
+   Hï¿½ objetos que sï¿½ podem ser usados por personagens de determinado
+alinhamento, como por exemplo, o elmo prateado, que sï¿½ pode ser usado por
+personagens bons.  Hï¿½ tambï¿½m, monstros que atacam personagens de determinado
+alinhamento, como por exemplo, as lï¿½mias, que sï¿½ atacam personagens bons.
 
-Veja também: SCORE
+Veja tambï¿½m: SCORE
 #
-ÁREAS AREAS
+ï¿½REAS AREAS
 
-   Aqui estão listadas todas as áreas do Mundo de Vitália.
+   Aqui estï¿½o listadas todas as ï¿½reas do Mundo de Vitï¿½lia.
 
-   &WNOVAS ÁREAS EXCLUSIVAS DO MUNDO DE VITÁLIA:&n
+   @WNOVAS ï¿½REAS EXCLUSIVAS DO MUNDO DE VITï¿½LIA:@n
 
-&R   Nome da Área                           Criação&n
+@R   Nome da ï¿½rea                           Criaï¿½ï¿½o@n
 
- &R*&g Gondolin, o Reino Oculto               &WEomer
- &R*&g Valfenda                               &WSilverbolt
- &R*&g O Império Chinês                       &WTantalus
+ @R*@g Gondolin, o Reino Oculto               @WEomer
+ @R*@g Valfenda                               @WSilverbolt
+ @R*@g O Impï¿½rio Chinï¿½s                       @WTantalus
 
- &R*&g Embaixada dos Clãs de Vitália          &WEomer, Tantalus
-       &gÁrea desenvolvida e construída
-       &ga partir de idéias e conceitos
-       &genviados por:                      &WKen, Kidaf, Aqua e Azlan.
+ @R*@g Embaixada dos Clï¿½s de Vitï¿½lia          @WEomer, Tantalus
+       @gï¿½rea desenvolvida e construï¿½da
+       @ga partir de idï¿½ias e conceitos
+       @genviados por:                      @WKen, Kidaf, Aqua e Azlan.
 
- &R*&g O Museu do Colecionador                &WEomer
-       &gÁrea desenvolvida e construída
-       &ga partir de idéias e conceitos
-       &genviados por:                      &WKestor e Phillipe
+ @R*@g O Museu do Colecionador                @WEomer
+       @gï¿½rea desenvolvida e construï¿½da
+       @ga partir de idï¿½ias e conceitos
+       @genviados por:                      @WKestor e Phillipe
 
-   &WÁREA EXCLUSIVA PARA IMORTAIS DO MUNDO DE VITÁLIA:&n
+   @Wï¿½REA EXCLUSIVA PARA IMORTAIS DO MUNDO DE VITï¿½LIA:@n
 
-&R   Nome da Área                           Criação&n
- &R*&g O Arquipélago de Yo                    &WSilverbolt
+@R   Nome da ï¿½rea                           Criaï¿½ï¿½o@n
+ @R*@g O Arquipï¿½lago de Yo                    @WSilverbolt
 
-    &WNOVAS ÁREAS TRADUZIDAS DO MUNDO DE VITÁLIA:&n
+    @WNOVAS ï¿½REAS TRADUZIDAS DO MUNDO DE VITï¿½LIA:@n
 
-&R   Nome da Área                           Tradução&n
+@R   Nome da ï¿½rea                           Traduï¿½ï¿½o@n
 
- &R*&g Templo dos Ladrões                     &WAlexander
- &R*&g Ghenna                                 &WEomer
- &R*&g O Moinho de Vento                      &WTantalus
- &R*&g As Cavernas dos Homens Brancos         &WPorter e Tantalus
- &R*&g O Asilo dos Novos                      &WJarkeld
- &R*&g O Farol da Praia                       &WPorter e Tantalus
+ @R*@g Templo dos Ladrï¿½es                     @WAlexander
+ @R*@g Ghenna                                 @WEomer
+ @R*@g O Moinho de Vento                      @WTantalus
+ @R*@g As Cavernas dos Homens Brancos         @WPorter e Tantalus
+ @R*@g O Asilo dos Novos                      @WJarkeld
+ @R*@g O Farol da Praia                       @WPorter e Tantalus
  
-   &WÁREAS EXCLUSIVAS DO MUNDO DE VITÁLIA:&n
+   @Wï¿½REAS EXCLUSIVAS DO MUNDO DE VITï¿½LIA:@n
 
-&R   Nome da Área                           Construção&n
+@R   Nome da ï¿½rea                           Construï¿½ï¿½o@n
  
- &R*&g Os Estrategistas de Vitália            &WEomer
- &R*&g Aldeia Maldita                         &WHarry e Tantalus
- &R*&g O Condado                              &WSilverbolt
- &R*&g A Aldeia de Bri                        &WSilverbolt
- &R*&g Lothlórien                             &WSilverbolt
- &R*&g A Fenda Entre Mundos                   &WNemesis
- &R*&g Svarga, O Reino Celestial              &WNemesis
- &R*&g O Sétimo Mundo Oculto, Patala          &WNemesis
- &R*&g Bhogavati, A Cidade das Jóias          &WNemesis
- &R*&g O Palácio Ancestral de Sesha           &WNemesis&n
- &R*&g O Castelo de Flyre                     &WHarry
- &R*&g Os Campos de Midgaard                  &WBlug
- &R*&g A Trilha do Destino                    &WInfernal
- &R*&g Os Cinco Reinos                        &WBoromir
- &R*&g Templos Imortais                       &WBoromir
- &R*&g O Abismo                               &WInfernal
- &R*&g O Subterrâneo                          &WInfernal
- &R*&g O Paraíso dos Dragões                  &WSilverbolt
- &R*&g O Egito                                &WMelchiah
- &R*&g Os Caminhos Iniciais                   &WMaegali
- &R*&g As Mesnadas de Vitália                 &WMaegali
- &R*&g O Labirinto das Almas Perdidas         &WBoromir
- &R*&g O Vale dos Orcs Negros                 &WBoromir
- &R*&g Lindrel                                &WNemesis
- &R*&g Escandinávia, a Terra do Gelo          &WSilverbolt
- &R*&g O Reino das Pedras                     &WInfernal
- &R*&g A Cidade de Tróia                      &WSilverbolt
- &R*&g Otávia                                 &WSilverbolt
- &R*&g Os Desafios de Vitália                 &WBoromir
- &R*&g O Santuário das Glórias                &WMaegali
- &R*&g O Banco de Vitália                     &WBlug
- &R*&g A Confraria de Vitália                 &WBlug
- &R*&g O Jornal de Vitália                    &WBlug
- &R*&g A Biblioteca de Vitália                &WMaegali
+ @R*@g Os Estrategistas de Vitï¿½lia            @WEomer
+ @R*@g Aldeia Maldita                         @WHarry e Tantalus
+ @R*@g O Condado                              @WSilverbolt
+ @R*@g A Aldeia de Bri                        @WSilverbolt
+ @R*@g Lothlï¿½rien                             @WSilverbolt
+ @R*@g A Fenda Entre Mundos                   @WNemesis
+ @R*@g Svarga, O Reino Celestial              @WNemesis
+ @R*@g O Sï¿½timo Mundo Oculto, Patala          @WNemesis
+ @R*@g Bhogavati, A Cidade das Jï¿½ias          @WNemesis
+ @R*@g O Palï¿½cio Ancestral de Sesha           @WNemesis@n
+ @R*@g O Castelo de Flyre                     @WHarry
+ @R*@g Os Campos de Midgaard                  @WBlug
+ @R*@g A Trilha do Destino                    @WInfernal
+ @R*@g Os Cinco Reinos                        @WBoromir
+ @R*@g Templos Imortais                       @WBoromir
+ @R*@g O Abismo                               @WInfernal
+ @R*@g O Subterrï¿½neo                          @WInfernal
+ @R*@g O Paraï¿½so dos Dragï¿½es                  @WSilverbolt
+ @R*@g O Egito                                @WMelchiah
+ @R*@g Os Caminhos Iniciais                   @WMaegali
+ @R*@g As Mesnadas de Vitï¿½lia                 @WMaegali
+ @R*@g O Labirinto das Almas Perdidas         @WBoromir
+ @R*@g O Vale dos Orcs Negros                 @WBoromir
+ @R*@g Lindrel                                @WNemesis
+ @R*@g Escandinï¿½via, a Terra do Gelo          @WSilverbolt
+ @R*@g O Reino das Pedras                     @WInfernal
+ @R*@g A Cidade de Trï¿½ia                      @WSilverbolt
+ @R*@g Otï¿½via                                 @WSilverbolt
+ @R*@g Os Desafios de Vitï¿½lia                 @WBoromir
+ @R*@g O Santuï¿½rio das Glï¿½rias                @WMaegali
+ @R*@g O Banco de Vitï¿½lia                     @WBlug
+ @R*@g A Confraria de Vitï¿½lia                 @WBlug
+ @R*@g O Jornal de Vitï¿½lia                    @WBlug
+ @R*@g A Biblioteca de Vitï¿½lia                @WMaegali
 
-   &WÁREAS TRADUZIDAS E ADAPTADAS PARA O MUNDO DE VITÁLIA:&N
+   @Wï¿½REAS TRADUZIDAS E ADAPTADAS PARA O MUNDO DE VITï¿½LIA:@N
 
-&R   Nome da Área                           Tradução&n
+@R   Nome da ï¿½rea                           Traduï¿½ï¿½o@n
  
- &R*&g Os Mistérios de Midantra               &wEdin
- &R*&g Notre Dame                             &wTantalus
- &R*&g O Canyon dos Elementais                &wEomer
- &R*&g Torin                                  &wLork
- &R*&g O Castelo dos Vampiros                 &wTantalus
- &R*&g A Selva de Makira                      &wZibaus
- &R*&g Mordecai                               &wKafei
- &R*&g O Navio Fantasma                       &wTantalus
- &R*&g O Reino dos Mortos Vivos               &wTantalus
- &R*&g O Labirinto do Minotauro               &wTantalus
- &R*&g A Vila de Villspah                     &wTantalus
- &R*&g Templo Samurai                         &wGalaaz
- &R*&g O Grande Festival                      &wMaegali
- &R*&g A Vila dos Gnomos                      &wMaegali
- &R*&g Camelot                                &wNemesis
- &R*&g Os Bosques Elfos                       &wBoromir
- &R*&g Graye                                  &wBoromir
- &R*&g O Templo do Grande Búfalo              &wBoromir
- &R*&g As Planícies de Callyus                &wMaegali
- &R*&g A Torre do Barão de Cailveh            &wMaegali/Melchiah
- &R*&g Bandar, A Cidade Maldita               &wMaegali/Melchiah
- &R*&g O Safári no Covil dos Lagartos         &wLork
- &R*&g O Escaldante Deserto de Kubalai        &wMaegali/Melchiah
- &R*&g Galáxia                                &wNemesis
- &R*&g O Altar de Sacrifícios de Raantra      &wMaegali/Melchiah
- &R*&g A Floresta Sombria                     &wBoromir/Melchiah
- &R*&g O Abismo Profundo                      &wBoromir/Melchiah
- &R*&g A Cidade de Thewster                   &wBoromir/Melchiah
- &R*&g A Floresta Tropical de Thewster        &wBoromir/Melchiah
- &R*&g A Floresta Leste de Thewster           &wBoromir/Melchiah
- &R*&g O Labirinto do Milharal                &wWery
- &R*&g A Grande Árvore dos Iniciantes         &wMaegali
- &R*&g Ancalador e a Guilda dos Necromantes   &wMaegali
- &R*&g Nos Domínios do Barão Darwin           &wLork
- &R*&g O Castelo de Jareth                    &wMaegali
- &R*&g Os Templos de Anura                    &wKafei
- &R*&g Qui'Lur                                &wEomer
+ @R*@g Os Mistï¿½rios de Midantra               @wEdin
+ @R*@g Notre Dame                             @wTantalus
+ @R*@g O Canyon dos Elementais                @wEomer
+ @R*@g Torin                                  @wLork
+ @R*@g O Castelo dos Vampiros                 @wTantalus
+ @R*@g A Selva de Makira                      @wZibaus
+ @R*@g Mordecai                               @wKafei
+ @R*@g O Navio Fantasma                       @wTantalus
+ @R*@g O Reino dos Mortos Vivos               @wTantalus
+ @R*@g O Labirinto do Minotauro               @wTantalus
+ @R*@g A Vila de Villspah                     @wTantalus
+ @R*@g Templo Samurai                         @wGalaaz
+ @R*@g O Grande Festival                      @wMaegali
+ @R*@g A Vila dos Gnomos                      @wMaegali
+ @R*@g Camelot                                @wNemesis
+ @R*@g Os Bosques Elfos                       @wBoromir
+ @R*@g Graye                                  @wBoromir
+ @R*@g O Templo do Grande Bï¿½falo              @wBoromir
+ @R*@g As Planï¿½cies de Callyus                @wMaegali
+ @R*@g A Torre do Barï¿½o de Cailveh            @wMaegali/Melchiah
+ @R*@g Bandar, A Cidade Maldita               @wMaegali/Melchiah
+ @R*@g O Safï¿½ri no Covil dos Lagartos         @wLork
+ @R*@g O Escaldante Deserto de Kubalai        @wMaegali/Melchiah
+ @R*@g Galï¿½xia                                @wNemesis
+ @R*@g O Altar de Sacrifï¿½cios de Raantra      @wMaegali/Melchiah
+ @R*@g A Floresta Sombria                     @wBoromir/Melchiah
+ @R*@g O Abismo Profundo                      @wBoromir/Melchiah
+ @R*@g A Cidade de Thewster                   @wBoromir/Melchiah
+ @R*@g A Floresta Tropical de Thewster        @wBoromir/Melchiah
+ @R*@g A Floresta Leste de Thewster           @wBoromir/Melchiah
+ @R*@g O Labirinto do Milharal                @wWery
+ @R*@g A Grande ï¿½rvore dos Iniciantes         @wMaegali
+ @R*@g Ancalador e a Guilda dos Necromantes   @wMaegali
+ @R*@g Nos Domï¿½nios do Barï¿½o Darwin           @wLork
+ @R*@g O Castelo de Jareth                    @wMaegali
+ @R*@g Os Templos de Anura                    @wKafei
+ @R*@g Qui'Lur                                @wEomer
 
-   &WÁREAS HERDADAS DO CIRCLEMUD&n
+   @Wï¿½REAS HERDADAS DO CIRCLEMUD@n
 
-&R   Nome da Área                           Tradução&n
- &R*&g Midgaard                               &wBlug/Maegali/Nemesis
- &R*&g Zona dos Iniciantes                    &wMaegali
- &R*&g Roma                                   &wMaegali
- &R*&g O Tabuleiro de Xadrez                  &wMaegali
- &R*&g Moria                                  &wBoromir
- &R*&g O Grande Deserto Oriental              &wMelchiah
- &R*&g O Caminho da Virtude                   &wMaegali/Melchiah
- &R*&g A Cidade Drow                          &wJunior
- &R*&g O Castelo do Rei Welmar                &wJunior
- &R*&g O Três de Espadas                      &wJunior
- &R*&g O Reino dos Anões                      &wJunior
- &R*&g A Torre de Rand                        &wHellraiser
- &R*&g A Cidade de Thalos                     &wZarathus
- &R*&g Ilha do Rio de Minos                   &wAvispom
- &R*&g Miden'Nir                              &wAzmodan
- &R*&g A Residência de Redferne               &wAzmodan
- &R*&g Arachnos                               &wGalaaz
- &R*&g A Alta Torre da Magia                  &wAvispom
- &R*&g A Grande Pirâmide                      &wMaegali/Melchiah
- &R*&g A Planície dos Orcs                    &wMaegali/Morpheus
- &R*&g Os Esgotos                             &wMaegali/Morpheus
- &R*&g Nova Thalos                            &wMelchiah
- &R*&g A Floresta Haon-Dor                    &wMaegali&n
+@R   Nome da ï¿½rea                           Traduï¿½ï¿½o@n
+ @R*@g Midgaard                               @wBlug/Maegali/Nemesis
+ @R*@g Zona dos Iniciantes                    @wMaegali
+ @R*@g Roma                                   @wMaegali
+ @R*@g O Tabuleiro de Xadrez                  @wMaegali
+ @R*@g Moria                                  @wBoromir
+ @R*@g O Grande Deserto Oriental              @wMelchiah
+ @R*@g O Caminho da Virtude                   @wMaegali/Melchiah
+ @R*@g A Cidade Drow                          @wJunior
+ @R*@g O Castelo do Rei Welmar                @wJunior
+ @R*@g O Trï¿½s de Espadas                      @wJunior
+ @R*@g O Reino dos Anï¿½es                      @wJunior
+ @R*@g A Torre de Rand                        @wHellraiser
+ @R*@g A Cidade de Thalos                     @wZarathus
+ @R*@g Ilha do Rio de Minos                   @wAvispom
+ @R*@g Miden'Nir                              @wAzmodan
+ @R*@g A Residï¿½ncia de Redferne               @wAzmodan
+ @R*@g Arachnos                               @wGalaaz
+ @R*@g A Alta Torre da Magia                  @wAvispom
+ @R*@g A Grande Pirï¿½mide                      @wMaegali/Melchiah
+ @R*@g A Planï¿½cie dos Orcs                    @wMaegali/Morpheus
+ @R*@g Os Esgotos                             @wMaegali/Morpheus
+ @R*@g Nova Thalos                            @wMelchiah
+ @R*@g A Floresta Haon-Dor                    @wMaegali@n
 #
 ASSOCIACOES
 
-As associações são os lugares onde os mortais podem ir para escapar dos
-problemas e perigos do mundo cruel.  Cada associação é fortemente protegida,
-para que apenas seus membros possam entrar.  As associações são também os
-lugares onde as pessoas vão para aprender e praticar as habilidades de sua
+As associaï¿½ï¿½es sï¿½o os lugares onde os mortais podem ir para escapar dos
+problemas e perigos do mundo cruel.  Cada associaï¿½ï¿½o ï¿½ fortemente protegida,
+para que apenas seus membros possam entrar.  As associaï¿½ï¿½es sï¿½o tambï¿½m os
+lugares onde as pessoas vï¿½o para aprender e praticar as habilidades de sua
 classe.
 
-Veja também: PRACTICE
+Veja tambï¿½m: PRACTICE
 #
 BARDO BARD
 
 Cantor nato, mestre nos instrumentos, quem pertence a essa classe tem o
-talento de preencher os sons com magia e controlá-los.  É associado à
-alegre figura que freqüenta as tavernas, onde se mostra hábil lutador, ou à
-voz saudosa que canta, em volta das fogueiras, as histórias de outrora.
+talento de preencher os sons com magia e controlï¿½-los.  ï¿½ associado ï¿½
+alegre figura que freqï¿½enta as tavernas, onde se mostra hï¿½bil lutador, ou ï¿½
+voz saudosa que canta, em volta das fogueiras, as histï¿½rias de outrora.
 
-Você pode melhorar suas canções, magias e habilidades usando o comando
+Vocï¿½ pode melhorar suas canï¿½ï¿½es, magias e habilidades usando o comando
 PRACTICE.
 
-Veja também: PRACTICE
+Veja tambï¿½m: PRACTICE
 #
 CARDS CARTAS
 
-   Há muito tempo atrás, existiu em Vitália um grande aventureiro.  Este
-aventureiro ao contrário da maioria, queria mais conhecer e ver todos os
-lugares e seres de Vitália do que ser um grande héroi.
+   Hï¿½ muito tempo atrï¿½s, existiu em Vitï¿½lia um grande aventureiro.  Este
+aventureiro ao contrï¿½rio da maioria, queria mais conhecer e ver todos os
+lugares e seres de Vitï¿½lia do que ser um grande hï¿½roi.
 
-   Durante anos e anos ele caminhou por Vitália e conheceu várias culturas,
-cidades e pálacios.  Lugares tão belos que pareciam lares de Deuses, e
-outros tão sombrios que fariam estes Deuses se assustarem.
+   Durante anos e anos ele caminhou por Vitï¿½lia e conheceu vï¿½rias culturas,
+cidades e pï¿½lacios.  Lugares tï¿½o belos que pareciam lares de Deuses, e
+outros tï¿½o sombrios que fariam estes Deuses se assustarem.
 
    Nestas viagens ele foi colecionando itens e pintando tudo o que ele via.
-Afinal, seus hobies favoritos eram justamente a pintura e montar coleções.
+Afinal, seus hobies favoritos eram justamente a pintura e montar coleï¿½ï¿½es.
 Quando ele finalmente achou ter conhecido todos os seres e lugares de
-Vitália, resolveu se aposentar para ver tudo o que ele coletara em sua longa
+Vitï¿½lia, resolveu se aposentar para ver tudo o que ele coletara em sua longa
 jornada.
 
-   Foi ao rever suas pinturas e memórias que ele percebeu não só o quanto
-Vitália era bela, mas que todos as pessoas também deveriam ter o direito de
-ver seus tesouros.  Então, com o dinheiro que ele juntou em suas viagens,
-ele montou um grande museu, o Museu do Colecionador, e colocou lá todas os
-seus tesouros.  Com suas pinturas, ele criou vários tipos de Card's
+   Foi ao rever suas pinturas e memï¿½rias que ele percebeu nï¿½o sï¿½ o quanto
+Vitï¿½lia era bela, mas que todos as pessoas tambï¿½m deveriam ter o direito de
+ver seus tesouros.  Entï¿½o, com o dinheiro que ele juntou em suas viagens,
+ele montou um grande museu, o Museu do Colecionador, e colocou lï¿½ todas os
+seus tesouros.  Com suas pinturas, ele criou vï¿½rios tipos de Card's
 ilustrados, mostrando tudo o que ele havia visto nas viagens.  E para que os
 outros pudessem pertilhar de sua jornada, ele pediu para uma fada que havia
-conhecido em suas andanças que espalhasse os Card's por todos os cantos de
-Vitália.
+conhecido em suas andanï¿½as que espalhasse os Card's por todos os cantos de
+Vitï¿½lia.
 
-   Esta é a história dos card's de Vitália e do Museu do Colecionador.
+   Esta ï¿½ a histï¿½ria dos card's de Vitï¿½lia e do Museu do Colecionador.
 
 
-   &WInformações Gerais&n
+   @WInformaï¿½ï¿½es Gerais@n
 
-   As Cartas Colecionáveis de Vitália ou apenas Card's de Vitália, são mais
-uma opção de diversão e buscas para os aventureiros de Vitália.
+   As Cartas Colecionï¿½veis de Vitï¿½lia ou apenas Card's de Vitï¿½lia, sï¿½o mais
+uma opï¿½ï¿½o de diversï¿½o e buscas para os aventureiros de Vitï¿½lia.
 
-   Os Card's estão espalhados por toda Vitália, alguns em MoB's e outros em
-lugares inusitados.  Por isso olhe novamente as áreas que você já conhece e
+   Os Card's estï¿½o espalhados por toda Vitï¿½lia, alguns em MoB's e outros em
+lugares inusitados.  Por isso olhe novamente as ï¿½reas que vocï¿½ jï¿½ conhece e
 procure atentamente.
 
-   Os Card's são separados em quatro séries distintas sendo elas:
+   Os Card's sï¿½o separados em quatro sï¿½ries distintas sendo elas:
 
 
-   &WPersonalidades&n
+   @WPersonalidades@n
 
-   Série dedicada aos Deuses, Clans e Heróis de Vitália.  Esta será uma
-série muito especial, pois aqui teremos as pessoas que são (ou foram)
-exemplos para todos nós.
-
-
-   &WMOB's&n
-
-   Série dedicada aos MOB's de Vitália, aqui se encontrará séries sobres
-tipos especificos de MOB's, raças, bons, maus, enfim todo o tipo de criatura
-que habite Vitália poderá ser encontrado nesta série.
+   Sï¿½rie dedicada aos Deuses, Clans e Herï¿½is de Vitï¿½lia.  Esta serï¿½ uma
+sï¿½rie muito especial, pois aqui teremos as pessoas que sï¿½o (ou foram)
+exemplos para todos nï¿½s.
 
 
-   &WItens&n
+   @WMOB's@n
 
-   Série dedicada aos equipamentos de Vitália, será compostas por séries de
+   Sï¿½rie dedicada aos MOB's de Vitï¿½lia, aqui se encontrarï¿½ sï¿½ries sobres
+tipos especificos de MOB's, raï¿½as, bons, maus, enfim todo o tipo de criatura
+que habite Vitï¿½lia poderï¿½ ser encontrado nesta sï¿½rie.
+
+
+   @WItens@n
+
+   Sï¿½rie dedicada aos equipamentos de Vitï¿½lia, serï¿½ compostas por sï¿½ries de
 grupos de equipamentos que tenham, de certa forma, algum tipo de
 relacionamento.
 
 
-   &WÁreas&n
+   @Wï¿½reas@n
 
-   Série dedicada às áreas de Vitália, será composta por cartas que mostram
-as belezas e os horrores de Vitália, contendo cartas dos quatro cantos de
-Vitália.
+   Sï¿½rie dedicada ï¿½s ï¿½reas de Vitï¿½lia, serï¿½ composta por cartas que mostram
+as belezas e os horrores de Vitï¿½lia, contendo cartas dos quatro cantos de
+Vitï¿½lia.
 
 
-   Todas as cartas são classificas em 5 tipos:
+   Todas as cartas sï¿½o classificas em 5 tipos:
 
    (E)  Especial
    (R)  Rara
@@ -300,102 +303,102 @@ Vitália.
    (C)  Comum
    (Co) Coringa
 
-   Ao completar qualquer uma das séries de cartas você poderá trocá-las por
-UM dos itens referente a esta série.
+   Ao completar qualquer uma das sï¿½ries de cartas vocï¿½ poderï¿½ trocï¿½-las por
+UM dos itens referente a esta sï¿½rie.
 
-   Para realizar a troca, você precisará estar com TODAS as cartas da mesma
-série em mãos e solicitar via pray que um Deus faça a troca.
+   Para realizar a troca, vocï¿½ precisarï¿½ estar com TODAS as cartas da mesma
+sï¿½rie em mï¿½os e solicitar via pray que um Deus faï¿½a a troca.
 
-   Deve-se observar que cada série de cartas possui regras próprias para as
+   Deve-se observar que cada sï¿½rie de cartas possui regras prï¿½prias para as
 trocas, estas regras se encontram nas listas de card's fixadas no museu.
 
 
-   &WRegras Gerais para as cartas&n
+   @WRegras Gerais para as cartas@n
 
-   1- É &Rproibido&n o uso de mais de um Coringa na mesma série;
+   1- ï¿½ @Rproibido@n o uso de mais de um Coringa na mesma sï¿½rie;
 
-   2- É &Rproibido&n VENDER ou LEILOAR qualquer tipo de Carta.  As vendas
-deverão ser feitas APENAS no MUSEU DO COLECIONADOR ou poderão ser livremente
+   2- ï¿½ @Rproibido@n VENDER ou LEILOAR qualquer tipo de Carta.  As vendas
+deverï¿½o ser feitas APENAS no MUSEU DO COLECIONADOR ou poderï¿½o ser livremente
 trocadas pelos jogadores que as estejam colecionando.  Se for observado que
-estão tentando desvirtuar o objetivo dessa função, os envolvidos terão TODAS
+estï¿½o tentando desvirtuar o objetivo dessa funï¿½ï¿½o, os envolvidos terï¿½o TODAS
 as suas Cartas confiscados, incondicionalmente.
 
-   3- Deve-se respeitar as regras de trocas de cada série.
+   3- Deve-se respeitar as regras de trocas de cada sï¿½rie.
 
    4- O verdadeiro colecionador entende o objetivo desse sistema de Cartas e
 o valoriza.
 #
 CASAMENTO CASAMENTOS
 
-               &B*&C &uInformações sobre casamentos &B*&n
+               @B*@C @uInformaï¿½ï¿½es sobre casamentos @B*@n
 
-   &c*&n Os jogadores que desejam se casar, devem com pelo menos uma semana de 
-antecedência, avisar os Deuses do Mundo de Vitália, e marcar o casamento.
+   @c*@n Os jogadores que desejam se casar, devem com pelo menos uma semana de 
+antecedï¿½ncia, avisar os Deuses do Mundo de Vitï¿½lia, e marcar o casamento.
 
-   &c*&n A cerimônia de casamento é oferecida à todos os jogadores de Vitália 
+   @c*@n A cerimï¿½nia de casamento ï¿½ oferecida ï¿½ todos os jogadores de Vitï¿½lia 
 gratuitamente.
 #
 CASAS
 
-   Casas são lugares especiais, lares de nobres aventureiros, capazes de
-sustentar seu próprio lugar para morar.  Uma casa pode lhe oferecer vários
-benefícios, como: um lugar tranqüilo e protegido para se descansar, próximo
-de sua cidade, e pode ser usado para guardar objetos de valor, ou que não se
-deseja carregar durante suas explorações.
+   Casas sï¿½o lugares especiais, lares de nobres aventureiros, capazes de
+sustentar seu prï¿½prio lugar para morar.  Uma casa pode lhe oferecer vï¿½rios
+benefï¿½cios, como: um lugar tranqï¿½ilo e protegido para se descansar, prï¿½ximo
+de sua cidade, e pode ser usado para guardar objetos de valor, ou que nï¿½o se
+deseja carregar durante suas exploraï¿½ï¿½es.
 
-   Cada casa pode ter até dois hóspedes, que podem ser escolhidos pelo
-proprietário da casa.  Estes hóspedes poderão entrar na casa, e poderão
-colocar ou tirar objetos de dentro da casa.  Qualquer outro jogador, além do
-proprietário e dos hóspedes, não terá permissão para entrar na casa.
+   Cada casa pode ter atï¿½ dois hï¿½spedes, que podem ser escolhidos pelo
+proprietï¿½rio da casa.  Estes hï¿½spedes poderï¿½o entrar na casa, e poderï¿½o
+colocar ou tirar objetos de dentro da casa.  Qualquer outro jogador, alï¿½m do
+proprietï¿½rio e dos hï¿½spedes, nï¿½o terï¿½ permissï¿½o para entrar na casa.
 
-   Para definir os hóspedes, que poderão entrar em sua casa, você deve usar
-o comando HOUSE enquanto estiver dentro dela.  Para maiores informações,
+   Para definir os hï¿½spedes, que poderï¿½o entrar em sua casa, vocï¿½ deve usar
+o comando HOUSE enquanto estiver dentro dela.  Para maiores informaï¿½ï¿½es,
 consulte a ajuda para o comando HOUSE.
 
-   Há um limite para o número de objetos que podem ser guardados em sua
+   Hï¿½ um limite para o nï¿½mero de objetos que podem ser guardados em sua
 casa.
 
-   Certamente, há um preço a ser pago para se obter todos os benefícios de
+   Certamente, hï¿½ um preï¿½o a ser pago para se obter todos os benefï¿½cios de
 uma casa, como segue:
 
    --------------------------------------------------------------------------
-                    &gConstrução: &n        2.000.000 moedas
-                    &gImposto...: &n        1.000.000 moedas
+                    @gConstruï¿½ï¿½o: @n        2.000.000 moedas
+                    @gImposto...: @n        1.000.000 moedas
    --------------------------------------------------------------------------
 
-   O imposto é cobrado pela prefeitura de sua cidade, e o valor é debitado
-automaticamente todos os meses (na vida real) da conta bancária do
-proprietário da casa.  O proprietário da casa deverá ter saldo suficiente em
-sua conta bancária no dia do pagamento, ou caso contrário correrá o risco de
+   O imposto ï¿½ cobrado pela prefeitura de sua cidade, e o valor ï¿½ debitado
+automaticamente todos os meses (na vida real) da conta bancï¿½ria do
+proprietï¿½rio da casa.  O proprietï¿½rio da casa deverï¿½ ter saldo suficiente em
+sua conta bancï¿½ria no dia do pagamento, ou caso contrï¿½rio correrï¿½ o risco de
 perder sua propriedade.
 
-   Se você deseja ter a sua casa, envie uma mensagem de e-mail para
-&Bajuda@mud.linkway.com.br&n.  Por segurança, a mensagem deve ser enviada pelo
-mesmo endereço de e-mail cadastrado no seu personagem.
+   Se vocï¿½ deseja ter a sua casa, envie uma mensagem de e-mail para
+@Bajuda@mud.linkway.com.br@n.  Por seguranï¿½a, a mensagem deve ser enviada pelo
+mesmo endereï¿½o de e-mail cadastrado no seu personagem.
 
-Veja também: HOUSE
+Veja tambï¿½m: HOUSE
 #
 QUADROS
 
-   Quadros são o fórum de comunicação entre os jogadores do Mundo de
-Vitália.  Existem diferentes quadros para diferentes propósitos, por
+   Quadros sï¿½o o fï¿½rum de comunicaï¿½ï¿½o entre os jogadores do Mundo de
+Vitï¿½lia.  Existem diferentes quadros para diferentes propï¿½sitos, por
 exemplo, um quadro para mortais, um quadro para imortais, um quadro para
-recreações sociais, etc.  Naturalmente, nem todos os jogadores tem permissão
+recreaï¿½ï¿½es sociais, etc.  Naturalmente, nem todos os jogadores tem permissï¿½o
 para ler todos os tipos de quadros existentes.
 
    Para ver quais as mensagens que foram escritas no quadro, use o comando
-"LOOK QUADRO" na sala onde o quadro que você deseja ler está.  Para ler uma
+"LOOK QUADRO" na sala onde o quadro que vocï¿½ deseja ler estï¿½.  Para ler uma
 determinada mensagem, digite "READ <num>", e para escrever, digite "WRITE
 QUADRO <assunto>".  Termine sua mensagem com ou '/s' em uma linha em branco.
 
-   Você pode remover uma mensagem que foi escrita incorretamente no quadro,
-usando "REMOVE <num>".  Você precisa ser Deus ou ter um posto alto (para
-quadros de clãs) para poder remover mensagens de outras pessoas.
+   Vocï¿½ pode remover uma mensagem que foi escrita incorretamente no quadro,
+usando "REMOVE <num>".  Vocï¿½ precisa ser Deus ou ter um posto alto (para
+quadros de clï¿½s) para poder remover mensagens de outras pessoas.
 
-   É possível escrever mensagens especiais, tratadas como "avisos
+   ï¿½ possï¿½vel escrever mensagens especiais, tratadas como "avisos
 importantes", prefixando o assunto da mensagem com a palavra "{aviso}".
 Naturalmente, apenas Deuses podem escrever avisos importantes em quadros
-públicos, e apenas os postos mais altos em quadros de clãs.
+pï¿½blicos, e apenas os postos mais altos em quadros de clï¿½s.
 
 Exemplos:
 
@@ -406,7 +409,7 @@ Exemplos:
   > read 6
   > remove 6
 
-Veja também: EDITOR, READ, WRITE, MAIL
+Veja tambï¿½m: EDITOR, READ, WRITE, MAIL
 #
 CLASSES
 
@@ -415,7 +418,7 @@ Ladroes, Druidas e Bardos.  Cada classe possui habilidades ou magias
 exclusivas.  Para obter mais ajuda sobre sua classe, consulte o HELP seguido
 para sua classe.
 
-Veja também: CLERIGO, GUERREIRO, MAGO, LADRAO, DRUIDA, BARDO
+Veja tambï¿½m: CLERIGO, GUERREIRO, MAGO, LADRAO, DRUIDA, BARDO
 #
 CLERIGO CLERIC
 
@@ -428,7 +431,7 @@ Voce pode melhorar suas magias usando o comando PRACTICE.
 
 Utilize o comando SPELL para uma lista das magias disponiveis.
 
-Veja também: PRACTICE, SPELL
+Veja tambï¿½m: PRACTICE, SPELL
 #
 CONEXAO LINK
 
@@ -456,24 +459,24 @@ exceto no titulo e na linha de assunto em uma mensagem no quadro.
    Para adicionar cores as suas mensagens, utilize os seguintes codigos em
 suas mensagens:
 
-  &vCores de letra:                       &n   &vCores de fundo:&n   &vOutros:        &n
-  &n&&l = &lPreto      &n   &&L = &LCinza escuro  &n   &&0 = &w&0Preto     &n   &&n = Normal
-  &n&&r = &rVermelho   &n   &&R = &RVermelho claro&n   &&1 = &w&1Vermelho  &n   &&v = &vReverso   &n
-  &n&&m = &mMagenta    &n   &&M = &MMagenta claro &n   &&2 = &w&2Magenta   &n   &&u = &uSublinhado&n
-  &n&&b = &bAzul       &n   &&B = &BAzul claro    &n   &&3 = &w&3Azul      &n   &&f = &fPiscante  &n
-  &n&&c = &cCiano      &n   &&C = &CCiano claro   &n   &&4 = &l&4Ciano     &n
-  &n&&g = &gVerde      &n   &&G = &GVerde claro   &n   &&5 = &l&5Verde     &n
-  &n&&y = &yMarrom     &n   &&Y = &YAmarelo       &n   &&6 = &l&6Marrom    &n
-  &n&&w = &wCinza claro&n   &&W = &WBranco        &n   &&7 = &l&7Cinza     &n
+  @vCores de letra:                       @n   @vCores de fundo:@n   @vOutros:        @n
+  @n@@l = @lPreto      @n   @@L = @LCinza escuro  @n   @@0 = @w@0Preto     @n   @@n = Normal
+  @n@@r = @rVermelho   @n   @@R = @RVermelho claro@n   @@1 = @w@1Vermelho  @n   @@v = @vReverso   @n
+  @n@@m = @mMagenta    @n   @@M = @MMagenta claro @n   @@2 = @w@2Magenta   @n   @@u = @uSublinhado@n
+  @n@@b = @bAzul       @n   @@B = @BAzul claro    @n   @@3 = @w@3Azul      @n   @@f = @fPiscante  @n
+  @n@@c = @cCiano      @n   @@C = @CCiano claro   @n   @@4 = @l@4Ciano     @n
+  @n@@g = @gVerde      @n   @@G = @GVerde claro   @n   @@5 = @l@5Verde     @n
+  @n@@y = @yMarrom     @n   @@Y = @YAmarelo       @n   @@6 = @l@6Marrom    @n
+  @n@@w = @wCinza claro@n   @@W = @WBranco        @n   @@7 = @l@7Cinza     @n
 
-   Termine sempre as mensagens com o codigo '&&n', que desativa todas as
-cores.  Tenha em mente também que nem todos os terminais sao capazes de exibir
+   Termine sempre as mensagens com o codigo '@@n', que desativa todas as
+cores.  Tenha em mente tambï¿½m que nem todos os terminais sao capazes de exibir
 cores.
 
    Nao abuse das cores.  Elas geralmente nao sao necessarias, e algumas
 (especialmente as piscantes) sao incomodas.
 
-Veja também: COLOR
+Veja tambï¿½m: COLOR
 #
 DEUSES GODS
 
@@ -482,22 +485,22 @@ ofende-los ou desrespeita'-los. Eles observam a atitude dos jogadores e os
 punem ou ajudam quando necessario. Por serem seres superiores, eles nao
 costumam ficar visiveis para os jogadores.
 
-Os Deuses também contribuem com as implementacoes do mud.
+Os Deuses tambï¿½m contribuem com as implementacoes do mud.
 
-Veja também: IMORTAIS
+Veja tambï¿½m: IMORTAIS
 #
 DRUIDA
 
-Essa é a classe dos aliados da Natureza, o que os torna seus protetores e
-protegidos.  Sua tradição e conhecimentos os torna uma respeitada classe,
+Essa ï¿½ a classe dos aliados da Natureza, o que os torna seus protetores e
+protegidos.  Sua tradiï¿½ï¿½o e conhecimentos os torna uma respeitada classe,
 possuidora de poderosas magias que agem sobre os elementos, animais e
 plantas.
 
-Você pode melhorar suas magias usando o comando PRACTICE.
+Vocï¿½ pode melhorar suas magias usando o comando PRACTICE.
 
-Utilize o comando SPELL para uma lista das magias disponíveis.
+Utilize o comando SPELL para uma lista das magias disponï¿½veis.
 
-Veja também: PRACTICE, SPELL
+Veja tambï¿½m: PRACTICE, SPELL
 #
 EXPERIENCIA XP
 
@@ -512,42 +515,42 @@ Coisa que voce deve saber sobre pontos de experiencia:
     de pontos de experiencia.  Se matar um monstro de nivel menor, voce ira'
     ganhar menos pontos de experiencia.
 
-Veja também: GROUP, SCORE
+Veja tambï¿½m: GROUP, SCORE
 #
-FAMILIAS FAMÍLIAS
+FAMILIAS FAMï¿½LIAS
 
-   &R*&n &u&YSaudações à todas as Ilustres Famílias de Vitália!&n &R*&n
+   @R*@n @u@YSaudaï¿½ï¿½es ï¿½ todas as Ilustres Famï¿½lias de Vitï¿½lia!@n @R*@n
 
-   Dado o grande número de Famílias existentes em nosso mundo, e, visando
-dar a elas um mecanismo que lhes facilite a devida organização, foi criado
-um dispositivo especial, cujo uso possibilitará aos membros adicionarem um
-segundo nome, ou seja, o sobrenome de sua família.
+   Dado o grande nï¿½mero de Famï¿½lias existentes em nosso mundo, e, visando
+dar a elas um mecanismo que lhes facilite a devida organizaï¿½ï¿½o, foi criado
+um dispositivo especial, cujo uso possibilitarï¿½ aos membros adicionarem um
+segundo nome, ou seja, o sobrenome de sua famï¿½lia.
 
-   Cada grupo familiar deverá estipular um Patriarca ou Matriarca, sendo que
-este será o responsável pelo grupo (a família).  Para formar nova família são
-necessários 3 membros iniciais além de o responsável ter chego ao nível 50
-da primeira encarnação, no mínimo.  A criação da família é gratuita.
+   Cada grupo familiar deverï¿½ estipular um Patriarca ou Matriarca, sendo que
+este serï¿½ o responsï¿½vel pelo grupo (a famï¿½lia).  Para formar nova famï¿½lia sï¿½o
+necessï¿½rios 3 membros iniciais alï¿½m de o responsï¿½vel ter chego ao nï¿½vel 50
+da primeira encarnaï¿½ï¿½o, no mï¿½nimo.  A criaï¿½ï¿½o da famï¿½lia ï¿½ gratuita.
 
-   Lembramos que a partir do momento em que uma familia é criada, cria-se o
-compromisso de manter sempre, no mínimo, 3 membros na família.  Se alguma
-familia apresentar um número menor do que 3 membros, ela correrá o risco de
+   Lembramos que a partir do momento em que uma familia ï¿½ criada, cria-se o
+compromisso de manter sempre, no mï¿½nimo, 3 membros na famï¿½lia.  Se alguma
+familia apresentar um nï¿½mero menor do que 3 membros, ela correrï¿½ o risco de
 ser apagada.
 
-   Os membros de famílias, novas ou mesmo as já existentes, serão aplicados
+   Os membros de famï¿½lias, novas ou mesmo as jï¿½ existentes, serï¿½o aplicados
 mediante uma carta que deve ser enviada tanto a partir do novo membro,
-aceitando a sua entrada na família, como do patriarca ou matriarca da familia
-no caso, que pedira a entrada deste novo membro na sua família.  Ambas as
-cartas deverão ser enviadas para o atual Deus responsável pelas famílias.
-Novos membros somente poderão ser incluídos na família se estiverem, no
-mínimo, no nível 10.
+aceitando a sua entrada na famï¿½lia, como do patriarca ou matriarca da familia
+no caso, que pedira a entrada deste novo membro na sua famï¿½lia.  Ambas as
+cartas deverï¿½o ser enviadas para o atual Deus responsï¿½vel pelas famï¿½lias.
+Novos membros somente poderï¿½o ser incluï¿½dos na famï¿½lia se estiverem, no
+mï¿½nimo, no nï¿½vel 10.
 
-   Além do sobrenome, cada família poderá criar duas salas, sendo uma de
-acesso público e uma privada, para os encontros familiares, uma espécie de
-confraria.  Para que a construção possa ser realizada dois dos membros desta
-família devem ter renascido.
+   Alï¿½m do sobrenome, cada famï¿½lia poderï¿½ criar duas salas, sendo uma de
+acesso pï¿½blico e uma privada, para os encontros familiares, uma espï¿½cie de
+confraria.  Para que a construï¿½ï¿½o possa ser realizada dois dos membros desta
+famï¿½lia devem ter renascido.
 
-   É importante observar que não trocamos simplesmente a nossa família,
-portanto, os membros de uma terão a sua entrada a outras vedada.
+   ï¿½ importante observar que nï¿½o trocamos simplesmente a nossa famï¿½lia,
+portanto, os membros de uma terï¿½o a sua entrada a outras vedada.
 #
 FLAGS
 
@@ -570,61 +573,61 @@ Estas "flags" estao sempre entre parenteses.
   (quest)      O jogador esta participando de uma busca atualmente em andamento
                ordenada pelos Deuses.
 
-Veja também: NOSHOUT, NOTELL, QUEST, STEAL, VISIBLE
+Veja tambï¿½m: NOSHOUT, NOTELL, QUEST, STEAL, VISIBLE
 #
-HERÓIS HEROES
+HERï¿½IS HEROES
 
-   &R*&g O que é um Herói?&n
-   É aquele que coloca seu companheiro acima de si mesmo
-   e torna-se verdadeira fonte de inspiração para muitos.
+   @R*@g O que ï¿½ um Herï¿½i?@n
+   ï¿½ aquele que coloca seu companheiro acima de si mesmo
+   e torna-se verdadeira fonte de inspiraï¿½ï¿½o para muitos.
 
-   &R*&g Qual o maior sonho de qualquer Vitaliano?&n
-   Tornar-se um Herói, uma Lenda.
+   @R*@g Qual o maior sonho de qualquer Vitaliano?@n
+   Tornar-se um Herï¿½i, uma Lenda.
 
-   São 3 os objetivos desta Lista:
+   Sï¿½o 3 os objetivos desta Lista:
 
 -  Incentivar os jogadores a serem dignos e honrados e cumpridores das Leis.
 
--  Despertar a consciência daqueles que não acreditam mais em mudanças.
+-  Despertar a consciï¿½ncia daqueles que nï¿½o acreditam mais em mudanï¿½as.
 
 -  Mostrar que todos somos capazes de ser muito mais do que somos, que
-   há um herói dentro de cada um de nós de verdade, basta acreditarmos e
-   realmente desejarmos sê-lo.
+   hï¿½ um herï¿½i dentro de cada um de nï¿½s de verdade, basta acreditarmos e
+   realmente desejarmos sï¿½-lo.
 
-   Para se tornar um verdadeiro Herói:
+   Para se tornar um verdadeiro Herï¿½i:
 
-   &R*&g- É preciso ser um Aventureiro digno e honrado, não possuir
+   @R*@g- ï¿½ preciso ser um Aventureiro digno e honrado, nï¿½o possuir
    antecedentes criminais, mas, se os tiver, transformar seu passado em
-   exemplo e seguir em frente, dando bons exemplos.&n
+   exemplo e seguir em frente, dando bons exemplos.@n
 
-   &R*&g- Ter participado de pelo menos um Grande Desafio, realizado um
-   grande feito ou uma grande conquista.  Não estão incluídas as Quests
-   realizadas pelos Deuses.&n
+   @R*@g- Ter participado de pelo menos um Grande Desafio, realizado um
+   grande feito ou uma grande conquista.  Nï¿½o estï¿½o incluï¿½das as Quests
+   realizadas pelos Deuses.@n
 
-   &R*&g- Ser um verdadeiro Aventureiro.  Alguém que cultua a humildade, a
+   @R*@g- Ser um verdadeiro Aventureiro.  Alguï¿½m que cultua a humildade, a
    gentileza e acima de tudo, aquele que respeita seu semelhante, tratando-o
-   sempre em acordo com os princípios da igualdade e fraternidade.
-   O Aventureiro não faz diferença entre nível ou status entre seus
-   semelhantes.  E precisa ser, exímio conhecedor e explorador de seu mundo.
-   Não um caçador de Xp e de equipamentos.&n
+   sempre em acordo com os princï¿½pios da igualdade e fraternidade.
+   O Aventureiro nï¿½o faz diferenï¿½a entre nï¿½vel ou status entre seus
+   semelhantes.  E precisa ser, exï¿½mio conhecedor e explorador de seu mundo.
+   Nï¿½o um caï¿½ador de Xp e de equipamentos.@n
 
-   &R*&g- Ser uma pessoa de bem, que sabe discutir com equilíbrio e
+   @R*@g- Ser uma pessoa de bem, que sabe discutir com equilï¿½brio e
    sabedoria e que jamais se sente menor quando percebe que errou e se
-   desculpa.&n
+   desculpa.@n
 
-   &R*&g- E acima de tudo, ter um bom coração.  Fazer o bem pelo simples
-   fato de fazê-lo, sem interesses ou motivos torpes.&n
+   @R*@g- E acima de tudo, ter um bom coraï¿½ï¿½o.  Fazer o bem pelo simples
+   fato de fazï¿½-lo, sem interesses ou motivos torpes.@n
 
-   &R*&g- Ao alcançar a Lista de Heróis, o jogador passará a fazer parte
+   @R*@g- Ao alcanï¿½ar a Lista de Herï¿½is, o jogador passarï¿½ a fazer parte
    desta preciosa galeria de pessoas dignas que passaram por este mundo e
-   deixaram sua mensagem.  Terão seus nomes homenageados na lista e uma
-   estátua, que será erigida no Santuário das Glórias.  Seu nome sómente
-   será retirado da Lista se o jogador se tornar imortal ou se sua conduta
-   se modificar radicalmente.  E para que ele mesmo jamais se esqueça desta
-   honra, levará consigo uma Medalha, que será entregue por um Deus, em
-   cerimônia aberta a todo o povo de Vitália.&n
+   deixaram sua mensagem.  Terï¿½o seus nomes homenageados na lista e uma
+   estï¿½tua, que serï¿½ erigida no Santuï¿½rio das Glï¿½rias.  Seu nome sï¿½mente
+   serï¿½ retirado da Lista se o jogador se tornar imortal ou se sua conduta
+   se modificar radicalmente.  E para que ele mesmo jamais se esqueï¿½a desta
+   honra, levarï¿½ consigo uma Medalha, que serï¿½ entregue por um Deus, em
+   cerimï¿½nia aberta a todo o povo de Vitï¿½lia.@n
 
-   &R*&g Lute por essa conquista... Torne-se um verdadeiro Herói.&n
+   @R*@g Lute por essa conquista... Torne-se um verdadeiro Herï¿½i.@n
 #
 "HIT POINTS" HP
 
@@ -641,14 +644,14 @@ Sua quantidade maxima de hit points e' aumentada a cada nivel que voce passa,
 variando de acordo com sua classe, seu nivel, sua idade, sua constituicao e sua
 sorte.
 
-Veja também: CONSTITUTION, SLEEP, SCORE, DISPLAY
+Veja tambï¿½m: CONSTITUTION, SLEEP, SCORE, DISPLAY
 #
 IDADE
 
-   A idade do personagem define basicamente a velocidade da recuperação dos
+   A idade do personagem define basicamente a velocidade da recuperaï¿½ï¿½o dos
 pontos (hp, mn, mv) na passagem de cada hora/mud.
 
-   Recuperação de saúde por hora:
+   Recuperaï¿½ï¿½o de saï¿½de por hora:
  34-|                                  __
  30-|                              ,--'  |__
  26-|                         __,--'        '--.
@@ -659,7 +662,7 @@ pontos (hp, mn, mv) na passagem de cada hora/mud.
    -+----------------------------------------------------------------> idade
     ' 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72
 
-   Recuperação de magia por hora:
+   Recuperaï¿½ï¿½o de magia por hora:
  16-|                               __,--.__
  14-|                      __,-----'        '-----.__
  12-|                __,--'                          '-----._____
@@ -670,7 +673,7 @@ pontos (hp, mn, mv) na passagem de cada hora/mud.
    -+----------------------------------------------------------------> idade
     ' 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72
 
-   Recuperação de movimento por hora:
+   Recuperaï¿½ï¿½o de movimento por hora:
  24-|                __,--.__
  22-|       __,-----'        '-----.__
  20-|   ,--'                          '--.__
@@ -693,18 +696,18 @@ locomover rapidamente de uma sala para outra.
 Imortais tem acesso a uma area especial, e podem ver e conversar com Deuses
 mais livremente.
 
-Veja também: DEUSES
+Veja tambï¿½m: DEUSES
 #
 MAGO MAGE
 
 Esta e' a classe das magias poderosas e violentas, mas o mago nao pode
-controlar a natureza, e também nao pode curar ou abencoar.
+controlar a natureza, e tambï¿½m nao pode curar ou abencoar.
 
 Voce pode melhorar suas magias usando o comando PRACTICE.
 
 Utilize o comando SPELL para uma lista das magias disponiveis.
 
-Veja também: PRACTICE, SPELL
+Veja tambï¿½m: PRACTICE, SPELL
 #
 MANA MN
 
@@ -713,60 +716,60 @@ deve ter uma certa quantidade de mana para poder lancar qualquer magia.
 Se voce nao tem mana suficiente para lancar uma magia, voce deve descansar ou
 meditar enquanto voce ganha os pontos suficientes.
 
-Veja também: SPELL, REST, MEDITATE, SCORE
+Veja tambï¿½m: SPELL, REST, MEDITATE, SCORE
 #
 MESNADAS
 
-&YSaudações a todas as ilustres Casas de Vitália.&n
+@YSaudaï¿½ï¿½es a todas as ilustres Casas de Vitï¿½lia.@n
 
-   &yViemos através desta mensagem fazer algumas considerações sobre a postura
-dos membros dos clãs em uma mesnadas, ou seja, o controlador do campeão e
-também a torcida, desta forma podemos evitar aborrecimentos para todos nós.&n
+   @yViemos atravï¿½s desta mensagem fazer algumas consideraï¿½ï¿½es sobre a postura
+dos membros dos clï¿½s em uma mesnadas, ou seja, o controlador do campeï¿½o e
+tambï¿½m a torcida, desta forma podemos evitar aborrecimentos para todos nï¿½s.@n
 
-&u&RComportamento Geral:&n
+@u@RComportamento Geral:@n
 
-   &G*&n As mesnadas são realizadas para divertimento de todos, logo, trate com
-respeito os participantes dos outros clãs, assim também será respeitado.
+   @G*@n As mesnadas sï¿½o realizadas para divertimento de todos, logo, trate com
+respeito os participantes dos outros clï¿½s, assim tambï¿½m serï¿½ respeitado.
 
-   &G*&n As regras do policy continuam validas, portanto não há motivo algum
+   @G*@n As regras do policy continuam validas, portanto nï¿½o hï¿½ motivo algum
 para desrespeitar nenhuma.
 
-   &G*&n É proibido lançar qualquer magia nos campões dos outros clãs sem a sua
-devida autorização, isto inclui identificá-lo.
+   @G*@n ï¿½ proibido lanï¿½ar qualquer magia nos campï¿½es dos outros clï¿½s sem a sua
+devida autorizaï¿½ï¿½o, isto inclui identificï¿½-lo.
 
-&u&RComportamento das Torcidas:&n
+@u@RComportamento das Torcidas:@n
 
-   &G*&n Torcer não é enviar diversas mensagens repetidas, afinal isto é
+   @G*@n Torcer nï¿½o ï¿½ enviar diversas mensagens repetidas, afinal isto ï¿½
 proibido, seja criativo.
 
-   &G*&n Jamais conte vantagem ou menospreze outro clã, não estamos participando
-de uma guerra e sim de um torneio de integração, onde todos são vencedores
+   @G*@n Jamais conte vantagem ou menospreze outro clï¿½, nï¿½o estamos participando
+de uma guerra e sim de um torneio de integraï¿½ï¿½o, onde todos sï¿½o vencedores
 apenas por estar participando.
 
-   &G*&n Caso seja transferido para a arena, lembre-se que está representando
-seu clã, portanto porte-se com a honra devida a ocasião.
+   @G*@n Caso seja transferido para a arena, lembre-se que estï¿½ representando
+seu clï¿½, portanto porte-se com a honra devida a ocasiï¿½o.
 
-&u&RComportamento dos Controladores:&n
+@u@RComportamento dos Controladores:@n
 
-   &G*&n Concentre-se em seu objetivo, ou seja, representar sua casa nas
+   @G*@n Concentre-se em seu objetivo, ou seja, representar sua casa nas
 mesnadas.
 
-   &G*&n Tenha certeza que irá poder permanecer até o final do torneio caso se
+   @G*@n Tenha certeza que irï¿½ poder permanecer atï¿½ o final do torneio caso se
 candidate a ser o controlador.
 
-   &G*&n O 'wiznet' é um canal sagrado, portanto você só deve utiliza-lo para
+   @G*@n O 'wiznet' ï¿½ um canal sagrado, portanto vocï¿½ sï¿½ deve utiliza-lo para
 assuntos relacionados as mesnadas.
 
-   &G*&n Não podem e não deve usar o 'goto' para se deslocar para qualquer local
-sem autorização, principalmente saindo da área onde ocorrem as mesnadas.
+   @G*@n Nï¿½o podem e nï¿½o deve usar o 'goto' para se deslocar para qualquer local
+sem autorizaï¿½ï¿½o, principalmente saindo da ï¿½rea onde ocorrem as mesnadas.
 
-   &G*&n Sempre que não souber o que é ou não permitido pergunte, não faça nada
-sem saber se é permitido.
+   @G*@n Sempre que nï¿½o souber o que ï¿½ ou nï¿½o permitido pergunte, nï¿½o faï¿½a nada
+sem saber se ï¿½ permitido.
 
-   &yEstas observações foram criadas para que todos possam se divertir,
+   @yEstas observaï¿½ï¿½es foram criadas para que todos possam se divertir,
 evitando que ocorram incidentes que apaguem o brilho das Mesnadas de
-Vitália.  Lembrem-se, qualquer duvida sempre perguntem antes de agir, afinal
-os deuses estão aqui para auxilia-los.&n
+Vitï¿½lia.  Lembrem-se, qualquer duvida sempre perguntem antes de agir, afinal
+os deuses estï¿½o aqui para auxilia-los.@n
 #
 MOVIMENTOS MV
 
@@ -774,31 +777,31 @@ Define quanto voce ainda pode andar.  Os pontos de movimento sao gastos a cada
 comando de movimento que voce usa.  Quando voce estiver muito cansado, voce
 precisara' sentar ou descansar para poder continuar sua jornada.
 
-Veja também: SIT, REST, SCORE
+Veja tambï¿½m: SIT, REST, SCORE
 #
 MAP
 
 Agora o mapa de Midgaard deve ser comprado.
 Para conseguir um mapa para voce, va' ate' a loja de mapas. La' voce podera'
-comprar o mapa de Midgaard e também de outras areas do mundo.
+comprar o mapa de Midgaard e tambï¿½m de outras areas do mundo.
 
 Para chegar na loja de mapas, a partir do templo, ande tres passos para o sul,
 tres passos para o leste e um passo para o norte.
 #
 LOJAS
 
-   As lojas são os lugares onde o aventureiro pode comprar equipamento para
+   As lojas sï¿½o os lugares onde o aventureiro pode comprar equipamento para
 suas buscas, e onde ele pode vender tesouros se ele desejar sobreviver os
-perigos com sua vida e saniedades intactos.  Várias lojas possuem somente
-com um tipo especáfico de produto.  Como um padeiro, que vai certamente
+perigos com sua vida e saniedades intactos.  Vï¿½rias lojas possuem somente
+com um tipo especï¿½fico de produto.  Como um padeiro, que vai certamente
 recusar comprar sua armadura mesmo se for de alta qualidade!
 
-   Para algumas pessoas, a idéia de obter o inventário completo de uma loja
-atacando o lojista pode parecer interessante - mas cuidado: Os lojistas são
-pessoas fortes e capazes; carregando muitos anos de experiência nos negócios
-e, também, sobrevivendo em um mundo onde a única certeza é a morte no final.
+   Para algumas pessoas, a idï¿½ia de obter o inventï¿½rio completo de uma loja
+atacando o lojista pode parecer interessante - mas cuidado: Os lojistas sï¿½o
+pessoas fortes e capazes; carregando muitos anos de experiï¿½ncia nos negï¿½cios
+e, tambï¿½m, sobrevivendo em um mundo onde a ï¿½nica certeza ï¿½ a morte no final.
 
-Veja também: BUY, SELL, LIST, VALUE
+Veja tambï¿½m: BUY, SELL, LIST, VALUE
 #
 LADRAO THIEF
 
@@ -812,7 +815,7 @@ Voce pode melhorar suas habilidades usando o comando PRACTICE.
 Utilize o comando SKILLS para uma lista das habilidades disponiveis.
 Veja a ajuda para cada habilidade para maiores informacoes.
 
-Veja também: PRACTICE
+Veja tambï¿½m: PRACTICE
 #
 GUERREIRO WARRIOR
 
@@ -826,7 +829,7 @@ Voce pode melhorar suas habilidades usando o comando PRACTICE.
 Utilize o comando SKILLS para uma lista das habilidades disponiveis.
 Veja a ajuda para cada habilidade para maiores informacoes.
 
-Veja também: PRACTICE
+Veja tambï¿½m: PRACTICE
 #
 STR STRENGTH
 
@@ -839,7 +842,7 @@ obtem usando magia.
 padrao e' zero, e aumenta ate' 100.  A forca adicional so aparece depois que a
 forca padrao tiver atingido 18 pontos.
 
-Veja também: MAGIA STRENGTH
+Veja tambï¿½m: MAGIA STRENGTH
 #
 INT INTELLIGENCE
 
@@ -850,7 +853,7 @@ necessario praticar as magias ou habilidades novas.
 automaticamente quando voce cria um novo personagem no MUD.  O valor da
 inteligencia pode ser modificado com alguns itens que estao pelo mundo.
 
-Veja também: PRACTICE, GUILD
+Veja tambï¿½m: PRACTICE, GUILD
 #
 WIS WISDOM
 
@@ -861,12 +864,12 @@ que atingir.
 quando voce cria um novo personagem no MUD.  O valor da sabedoria pode ser
 modificado com alguns itens que estao pelo mundo.
 
-Veja também: PRACTICE, GUILD
+Veja tambï¿½m: PRACTICE, GUILD
 #
 DEX DEXTERITY
 
    Destreza do personagem.  Quanto maior, mais o personagem acertara' golpes e
-desviara' de golpes durante uma luta.  A destreza também lhe proporciona um
+desviara' de golpes durante uma luta.  A destreza tambï¿½m lhe proporciona um
 bonus natural para o seu AC.
 
    A destreza pode variar de 3 ate' 18 pontos, e e' sorteada automaticamente
@@ -893,114 +896,114 @@ modificado com alguns itens que estao pelo mundo.
 #
 HITROLL
 
-   Quanto maior, mais chances de acertar os golpes o personagem terá durante
+   Quanto maior, mais chances de acertar os golpes o personagem terï¿½ durante
 a luta.
 
-   O HitRoll pode variar de -100 até 100 pontos.  Por padrão, ele é sempre
-zero, mas você pode alterá-lo usando alguns itens que estão pelo mundo.
+   O HitRoll pode variar de -100 atï¿½ 100 pontos.  Por padrï¿½o, ele ï¿½ sempre
+zero, mas vocï¿½ pode alterï¿½-lo usando alguns itens que estï¿½o pelo mundo.
 #
 DAMROLL
 
-   Quanto maior, mais destrutivos serão os golpes do personagem.
+   Quanto maior, mais destrutivos serï¿½o os golpes do personagem.
 
-   O DamRoll pode variar de -100 até 100 pontos.  Por padrão, ele é sempre
-zero, mas você pode alterá-lo usando alguns itens que estão pelo mundo.
+   O DamRoll pode variar de -100 atï¿½ 100 pontos.  Por padrï¿½o, ele ï¿½ sempre
+zero, mas vocï¿½ pode alterï¿½-lo usando alguns itens que estï¿½o pelo mundo.
 #
 ZMUD "ZMUD BUGS"
 
-   Versões antigas do zMud (cliente de MUD para Windows), anteriores à
-versão 6.x, entre vários outros clientes de MUD e terminais de TELNET para
+   Versï¿½es antigas do zMud (cliente de MUD para Windows), anteriores ï¿½
+versï¿½o 6.x, entre vï¿½rios outros clientes de MUD e terminais de TELNET para
 Windows, possuem um falha que os impedem de reconhecer corretamente as cores
-que são enviadas pelo MUD.  Por esse motivo, as cores aparecem trocadas, ou
-simplesmente não aparecem nestes terminais.
+que sï¿½o enviadas pelo MUD.  Por esse motivo, as cores aparecem trocadas, ou
+simplesmente nï¿½o aparecem nestes terminais.
 
-   A decorrência disso é que estes terminais foram programados baseando-se
-em uma versão muito antiga da especificação ANSI, que era usada no MS-DOS.
+   A decorrï¿½ncia disso ï¿½ que estes terminais foram programados baseando-se
+em uma versï¿½o muito antiga da especificaï¿½ï¿½o ANSI, que era usada no MS-DOS.
 
    O sistema de cores usado no VitaliaMUD foi codificado desde sua base,
-usando as novas especificações ANSI ECMA-48, e portanto, usa códigos de
-cores que não são compatíveis com estes terminais.  Por esse motivo, o
+usando as novas especificaï¿½ï¿½es ANSI ECMA-48, e portanto, usa cï¿½digos de
+cores que nï¿½o sï¿½o compatï¿½veis com estes terminais.  Por esse motivo, o
 VitaliaMUD possui um recurso que permite determinar o tipo de terminal usado
-pelo jogador, para que o MUD possa enviar as cores usando códigos
-diferentes, que sejam compatíveis com estes programas.
+pelo jogador, para que o MUD possa enviar as cores usando cï¿½digos
+diferentes, que sejam compatï¿½veis com estes programas.
 
-   Para saber se o seu programa está mostrando as cores corretamente, repare
+   Para saber se o seu programa estï¿½ mostrando as cores corretamente, repare
 nas duas linhas de asteriscos a seguir:
 
-          &+3 &+W* &+n&+3&+w***** &+n&+3&+C* &+n&+3&+c***** &+n&+3&+M* &+n&+3&+m***** &+n&+3&+Y* &+n&+3&+y***** &+n &+R* &+n&+r***** &+n&+G* &+n&+g***** &+n&+B* &+n&+b***** &+n
-          &+3 &+W* &+w***** &+C* &+c***** &+M* &+m***** &+Y* &+y***** &+n &+R* &+r***** &+G* &+g***** &+B* &+b***** &+n
+          @+3 @+W* @+n@+3@+w***** @+n@+3@+C* @+n@+3@+c***** @+n@+3@+M* @+n@+3@+m***** @+n@+3@+Y* @+n@+3@+y***** @+n @+R* @+n@+r***** @+n@+G* @+n@+g***** @+n@+B* @+n@+b***** @+n
+          @+3 @+W* @+w***** @+C* @+c***** @+M* @+m***** @+Y* @+y***** @+n @+R* @+r***** @+G* @+g***** @+B* @+b***** @+n
 
-   Se as duas linhas acima estiverem EXATAMENTE IGUAIS, significa que você
-está enxergando as cores corretamente.  Se elas estiverem diferentes,
-significa que seu programa de terminal ou cliente de MUD não está mostrando
-as cores corretamente.  Neste caso, você deve digitar o comando "TERM
+   Se as duas linhas acima estiverem EXATAMENTE IGUAIS, significa que vocï¿½
+estï¿½ enxergando as cores corretamente.  Se elas estiverem diferentes,
+significa que seu programa de terminal ou cliente de MUD nï¿½o estï¿½ mostrando
+as cores corretamente.  Neste caso, vocï¿½ deve digitar o comando "TERM
 DOSANSI" e em seguida consultar este HELP novamente, digitando "HELP ZMUD".
 
-Veja também: COLOR, CORES, TERM
+Veja tambï¿½m: COLOR, CORES, TERM
 #
 QUESTS
 
-   Quests são desafios oferecidos pelos Deuses para promover a diversão e
-também para quebrar a monotonia de quem só quer lutar para ganhar
-experiência.  Estes desafios permitem que sejam testadas a sabedoria, a
+   Quests sï¿½o desafios oferecidos pelos Deuses para promover a diversï¿½o e
+tambï¿½m para quebrar a monotonia de quem sï¿½ quer lutar para ganhar
+experiï¿½ncia.  Estes desafios permitem que sejam testadas a sabedoria, a
 sagacidade e outras diversas habilidades dos aventureiros e permite que os
 menos experientes possam explorar os mais diversos locais desse mundo.
 
-   Os Desafios (ou Quests) de Vitália também visam promover a verdadeira
-interpretação de seus personagens em um mundo medieval.  É o que mais
+   Os Desafios (ou Quests) de Vitï¿½lia tambï¿½m visam promover a verdadeira
+interpretaï¿½ï¿½o de seus personagens em um mundo medieval.  ï¿½ o que mais
 aproxima nosso mundo a um verdadeiro RPG de mesa.
 
-   Nos Desafios (Quests) assim como em nosso dia a dia, é muito importante
+   Nos Desafios (Quests) assim como em nosso dia a dia, ï¿½ muito importante
 manter o respeito entre os Jogadores, aos Deuses e ao Policy.  E toda vez
-que um desafio for lançado pelos Deuses, observar e respeitar as instruções
-específicas que aquele desafio esteja requerendo.
+que um desafio for lanï¿½ado pelos Deuses, observar e respeitar as instruï¿½ï¿½es
+especï¿½ficas que aquele desafio esteja requerendo.
 
-   Os Desafios consistem em buscas a monstros específicos, ou de
-equipamentos ou salas; a elucidação de enigmas e o decifrar de mistérios,
-entre muitas outras coisas.  Podem ser dados específicamente para jogadores
-entre determinados níveis ou para todos os que queiram simplesmente
-participar.  Mas é sempre uma verdadeira aventura.
+   Os Desafios consistem em buscas a monstros especï¿½ficos, ou de
+equipamentos ou salas; a elucidaï¿½ï¿½o de enigmas e o decifrar de mistï¿½rios,
+entre muitas outras coisas.  Podem ser dados especï¿½ficamente para jogadores
+entre determinados nï¿½veis ou para todos os que queiram simplesmente
+participar.  Mas ï¿½ sempre uma verdadeira aventura.
 
-   Podem existir também outros tipos diferentes de desafios, que podem ser
-os famosos desafios de retorno, que tem por objetivo aguçar nos jogadores o
-senso de astúcia, de estratégia e de orientação espacial, já que os
-aventureiros são colocados em verdadeiros labirintos com o objetivo de
-procurar pergaminhos de retorno especiais e usá-los para retirar o maior
-número possível de jogadores da área: vence o último que permanecer, sem ser
+   Podem existir tambï¿½m outros tipos diferentes de desafios, que podem ser
+os famosos desafios de retorno, que tem por objetivo aguï¿½ar nos jogadores o
+senso de astï¿½cia, de estratï¿½gia e de orientaï¿½ï¿½o espacial, jï¿½ que os
+aventureiros sï¿½o colocados em verdadeiros labirintos com o objetivo de
+procurar pergaminhos de retorno especiais e usï¿½-los para retirar o maior
+nï¿½mero possï¿½vel de jogadores da ï¿½rea: vence o ï¿½ltimo que permanecer, sem ser
 retirado.
 
    Os aventureiros que conseguem concluir um destes Desafios, podem receber
 uma recompensa dos Deuses.  Esta recompensa pode ser tanto em dinheiro, ou
-itens raros, itens Sagrados ou podem não haver nenhuma recompensa, mas
-apenas o prazer de poder ter vencido um grande Desafio.  O que importa é a
-diversão.
+itens raros, itens Sagrados ou podem nï¿½o haver nenhuma recompensa, mas
+apenas o prazer de poder ter vencido um grande Desafio.  O que importa ï¿½ a
+diversï¿½o.
 
-   Também pode acontecer que o desafio não tenha ocorrido exatamente
-conforme o pretendido pelos deuses desafiantes e que não hajam prêmios.
-Aquele que não possui espírito de aventura, que esteja apenas visando
-obter os prêmios, não compreendeu o verdadeiro sentido destes desafios.
+   Tambï¿½m pode acontecer que o desafio nï¿½o tenha ocorrido exatamente
+conforme o pretendido pelos deuses desafiantes e que nï¿½o hajam prï¿½mios.
+Aquele que nï¿½o possui espï¿½rito de aventura, que esteja apenas visando
+obter os prï¿½mios, nï¿½o compreendeu o verdadeiro sentido destes desafios.
 
-   Para participar de uma Quest em andamento, basta digitar &RQUEST&N.  A partir
-deste instante, o aventureiro ganha então, acesso ao canal &CQSAY&n, e poderá
+   Para participar de uma Quest em andamento, basta digitar @RQUEST@N.  A partir
+deste instante, o aventureiro ganha entï¿½o, acesso ao canal @CQSAY@n, e poderï¿½
 neste canal, discutir com seus colegas aventureiros sobre o tema do desafio
-bem como ouvir ali as instruções que possam estar sendo dadas pelos Deuses
+bem como ouvir ali as instruï¿½ï¿½es que possam estar sendo dadas pelos Deuses
 desafiantes.
 
-   &ROS COMANDOS PARA A PARTICIPAÇÃO EM UMA QUEST SÃO:&n
+   @ROS COMANDOS PARA A PARTICIPAï¿½ï¿½O EM UMA QUEST Sï¿½O:@n
 
-     &CQUEST&n: Serve para que você faça parte do grupo da Quest em andamento.
-     &CQSAY&n:  Serve para falar com todos os integrantes que estão na Quest.
-            É proibido aos participantes de um desafio usarem cores
+     @CQUEST@n: Serve para que vocï¿½ faï¿½a parte do grupo da Quest em andamento.
+     @CQSAY@n:  Serve para falar com todos os integrantes que estï¿½o na Quest.
+            ï¿½ proibido aos participantes de um desafio usarem cores
             no comando QSAY.
 
-   Procure sempre &RINTERPRETAR SEU PERSONAGEM&n, entrando no clima que está
+   Procure sempre @RINTERPRETAR SEU PERSONAGEM@n, entrando no clima que estï¿½
 sendo proposto, agindo como se fosse de fato aquele que passou a ser seu
-companheiro de tantas e tantas horas.  Se dê esta chance...  Mas se não
-quiser ou não for capaz, procure não atrapalhar os que quiserem viver de
-FATO seus personagens, e lembre-se de manter-se sempre dentro da temática
-medieval, afim de manter um clima épico e emocionante.
+companheiro de tantas e tantas horas.  Se dï¿½ esta chance...  Mas se nï¿½o
+quiser ou nï¿½o for capaz, procure nï¿½o atrapalhar os que quiserem viver de
+FATO seus personagens, e lembre-se de manter-se sempre dentro da temï¿½tica
+medieval, afim de manter um clima ï¿½pico e emocionante.
 
-Veja também: QUEST, QSAY
+Veja tambï¿½m: QUEST, QSAY
 #
 CIRCLEMUD
                     C  I  R  C  L  E  M  U  D     3  .  0
