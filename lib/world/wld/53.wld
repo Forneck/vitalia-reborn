@@ -1,104 +1,104 @@
 #5300
 O Grande Deserto Oriental~
    O vasto deserto se estende por milhas, as areias mudando constantemente a
-sua volta.  Ao norte, se erguendo da areia, você vê uma poderosa pirâmide.
+sua volta.  Ao norte, se erguendo da areia, vocï¿½ vï¿½ uma poderosa pirï¿½mide.
 ~
-53 0 2
+53 0 0 0 0 2
 D0
-As areias do deserto continuam a frente, pela pirâmide.
+As areias do deserto continuam a frente, pela pirï¿½mide.
 ~
 ~
 0 -1 5301
 D1
-Areia até onde seus olhos podem ver.
+Areia atï¿½ onde seus olhos podem ver.
 ~
 ~
 0 -1 5040
 D2
-Areia até onde seus olhos podem ver.
+Areia atï¿½ onde seus olhos podem ver.
 ~
 ~
 0 -1 5050
 D3
-Areia até onde seus olhos podem ver.
+Areia atï¿½ onde seus olhos podem ver.
 ~
 ~
 0 -1 5035
 E
-pirâmide~
-A volumosa pirâmide se levanta da areia, um monumento para os faraós mortos.
+pirï¿½mide~
+A volumosa pirï¿½mide se levanta da areia, um monumento para os faraï¿½s mortos.
 ~
 S
 #5301
-Na Base da Pirâmide~
-   A volumosa pirâmide se eleva a sua frente das areias quentes do deserto,
-feita de enormes blocos de pedra cobertos com uma grossa camada de gêsso
-arenoso, ou algo assim.  A face da pirâmide é íngreme mas você acha que
+Na Base da Pirï¿½mide~
+   A volumosa pirï¿½mide se eleva a sua frente das areias quentes do deserto,
+feita de enormes blocos de pedra cobertos com uma grossa camada de gï¿½sso
+arenoso, ou algo assim.  A face da pirï¿½mide ï¿½ ï¿½ngreme mas vocï¿½ acha que
 consegue escalar isso.
 ~
-53 0 2
+53 0 0 0 0 2
 D2
-Areia até onde seus olhos podem ver.
+Areia atï¿½ onde seus olhos podem ver.
 ~
 ~
 0 -1 5300
 D4
-O declive íngreme da pirâmide se ergue a sua frente.
+O declive ï¿½ngreme da pirï¿½mide se ergue a sua frente.
 ~
 ~
 0 -1 5302
 E
-pirâmide~
-Você se pergunta como alguém pode construir algo tão volumoso neste calor.
+pirï¿½mide~
+Vocï¿½ se pergunta como alguï¿½m pode construir algo tï¿½o volumoso neste calor.
 ~
 S
 #5302
-Escalando a Grande Pirâmide~
-   Ar quente sopra dos lados da pirâmide e o vento atinge você com a fúria
-de uma tempestade de areia e poeira.  A esta altura você já cumpriu metade
-do caminho.  As paredes da pirâmide são bastante íngremes.
+Escalando a Grande Pirï¿½mide~
+   Ar quente sopra dos lados da pirï¿½mide e o vento atinge vocï¿½ com a fï¿½ria
+de uma tempestade de areia e poeira.  A esta altura vocï¿½ jï¿½ cumpriu metade
+do caminho.  As paredes da pirï¿½mide sï¿½o bastante ï¿½ngremes.
 ~
-53 0 5
+53 0 0 0 0 5
 D0
-Se você é ousado, você poderia tentar rodear em volta do lado norte.
+Se vocï¿½ ï¿½ ousado, vocï¿½ poderia tentar rodear em volta do lado norte.
 ~
 ~
 0 -1 5303
 D2
-Se você é ousado, você poderia tentar rodear em volta do lado sul.
+Se vocï¿½ ï¿½ ousado, vocï¿½ poderia tentar rodear em volta do lado sul.
 ~
 ~
 0 -1 5304
 D4
-Parece perigoso tentar escalar tão alto.
+Parece perigoso tentar escalar tï¿½o alto.
 ~
 ~
 0 -1 5307
 D5
-Abaixo de você, ao longe, estão as ardentes areias do deserto.
+Abaixo de vocï¿½, ao longe, estï¿½o as ardentes areias do deserto.
 ~
 ~
 0 -1 5301
 E
-pirâmide~
-Você se pergunta como alguém pode construir algo tão volumoso neste calor.
+pirï¿½mide~
+Vocï¿½ se pergunta como alguï¿½m pode construir algo tï¿½o volumoso neste calor.
 ~
 S
 #5303
-Escalando a Grande Pirâmide~
-   Ar quente sopra dos lados da pirâmide e o vento atinge você com a fúria
-de uma tempestade de areia e poeira.  A esta altura você já cumpriu metade
-do caminho.  As paredes da pirâmide são bastante íngremes e você está tendo
-dificuldades para não escorregar para as areias abaixo.
+Escalando a Grande Pirï¿½mide~
+   Ar quente sopra dos lados da pirï¿½mide e o vento atinge vocï¿½ com a fï¿½ria
+de uma tempestade de areia e poeira.  A esta altura vocï¿½ jï¿½ cumpriu metade
+do caminho.  As paredes da pirï¿½mide sï¿½o bastante ï¿½ngremes e vocï¿½ estï¿½ tendo
+dificuldades para nï¿½o escorregar para as areias abaixo.
 ~
-53 0 5
+53 0 0 0 0 5
 D1
-Se você é ousado, você poderia tentar rodear em volta do lado leste.
+Se vocï¿½ ï¿½ ousado, vocï¿½ poderia tentar rodear em volta do lado leste.
 ~
 ~
 0 -1 5305
 D3
-Se você é ousado, você poderia tentar rodear em volta do lado oeste.
+Se vocï¿½ ï¿½ ousado, vocï¿½ poderia tentar rodear em volta do lado oeste.
 ~
 ~
 0 -1 5302
@@ -108,30 +108,30 @@ Parece perigoso tentar escalar mais alto.
 ~
 0 -1 5307
 D5
-Este lado da pirâmide tem uma perigosa queda antes do chão arenoso.
+Este lado da pirï¿½mide tem uma perigosa queda antes do chï¿½o arenoso.
 ~
 ~
 0 -1 5307
 E
-pirâmide~
-Você se pergunta como alguém pode construir algo tão volumoso neste calor
+pirï¿½mide~
+Vocï¿½ se pergunta como alguï¿½m pode construir algo tï¿½o volumoso neste calor
 ~
 S
 #5304
-Escalando a Grande Pirâmide~
-   Ar quente sopra dos lados da pirâmide e o vento atinge você com a fúria
-de uma tempestade de areia e poeira.  A esta altura você já cumpriu metade
-do caminho.  As paredes da pirâmide são bastante íngremes e você está tendo
-dificuldade em não escorregar para as areias abaixo.
+Escalando a Grande Pirï¿½mide~
+   Ar quente sopra dos lados da pirï¿½mide e o vento atinge vocï¿½ com a fï¿½ria
+de uma tempestade de areia e poeira.  A esta altura vocï¿½ jï¿½ cumpriu metade
+do caminho.  As paredes da pirï¿½mide sï¿½o bastante ï¿½ngremes e vocï¿½ estï¿½ tendo
+dificuldade em nï¿½o escorregar para as areias abaixo.
 ~
-53 0 5
+53 0 0 0 0 5
 D1
-Se você é ousado, você poderia tentar rodear em volta do lado leste.
+Se vocï¿½ ï¿½ ousado, vocï¿½ poderia tentar rodear em volta do lado leste.
 ~
 ~
 0 -1 5305
 D3
-Se você é ousado, você poderia tentar rodear em volta do lado oeste.
+Se vocï¿½ ï¿½ ousado, vocï¿½ poderia tentar rodear em volta do lado oeste.
 ~
 ~
 0 -1 5302
@@ -141,148 +141,148 @@ Parece muito perigoso tentar escalar mais alto.
 ~
 0 -1 5307
 D5
-Este lado da pirâmide tem uma perigosa queda antes do chão arenoso.
+Este lado da pirï¿½mide tem uma perigosa queda antes do chï¿½o arenoso.
 ~
 ~
 0 -1 5307
 E
-pirâmide~
-Você se pergunta como alguém pode construir algo tão volumoso neste calor
+pirï¿½mide~
+Vocï¿½ se pergunta como alguï¿½m pode construir algo tï¿½o volumoso neste calor
 ~
 S
 #5305
-Escalando a Grande Pirâmide~
-   Aqui o lado leste da pirâmide é mais protegido do calor e do vento.  Este
-lado de pedra não é tão escorregadio e liso.  E você acha que poderia
-alcançar o topo.
+Escalando a Grande Pirï¿½mide~
+   Aqui o lado leste da pirï¿½mide ï¿½ mais protegido do calor e do vento.  Este
+lado de pedra nï¿½o ï¿½ tï¿½o escorregadio e liso.  E vocï¿½ acha que poderia
+alcanï¿½ar o topo.
 ~
-53 0 5
+53 0 0 0 0 5
 D0
-Se você é ousado, você poderia tentar rodear em volta do lado norte.
+Se vocï¿½ ï¿½ ousado, vocï¿½ poderia tentar rodear em volta do lado norte.
 ~
 ~
 0 -1 5303
 D2
-Se você é ousado, você poderia tentar rodear em volta do lado sul.
+Se vocï¿½ ï¿½ ousado, vocï¿½ poderia tentar rodear em volta do lado sul.
 ~
 ~
 0 -1 5304
 D4
-Você vê o ápice da pirâmide muitas jardas sobre você.
+Vocï¿½ vï¿½ o ï¿½pice da pirï¿½mide muitas jardas sobre vocï¿½.
 ~
 ~
 0 -1 5306
 D5
-Este lado da pirâmide tem uma perigosa queda antes do chão arenoso.
+Este lado da pirï¿½mide tem uma perigosa queda antes do chï¿½o arenoso.
 ~
 ~
 0 -1 5307
 E
-pirâmide~
-Você se pergunta como alguém pôde construir algo tão volumoso neste calor
+pirï¿½mide~
+Vocï¿½ se pergunta como alguï¿½m pï¿½de construir algo tï¿½o volumoso neste calor
 ~
 S
 #5306
-O Ápice da Grande Pirâmide~
-   Banhado em suor, você conseguiu alcançar o ápice da grande pirâmide.  Os
-quatro lados da pirâmide se inclinam nítidamente para as quentes areias, em
-todas as direções cardinais.
+O ï¿½pice da Grande Pirï¿½mide~
+   Banhado em suor, vocï¿½ conseguiu alcanï¿½ar o ï¿½pice da grande pirï¿½mide.  Os
+quatro lados da pirï¿½mide se inclinam nï¿½tidamente para as quentes areias, em
+todas as direï¿½ï¿½es cardinais.
 ~
-53 0 1
+53 0 0 0 0 1
 D0
-O lado norte da pirâmide se inclina para as areias abaixo.
-Parece muito perigoso.   Eu não iria neste caminho.
+O lado norte da pirï¿½mide se inclina para as areias abaixo.
+Parece muito perigoso.   Eu nï¿½o iria neste caminho.
 ~
 ~
 0 -1 5307
 D1
-O lado leste da pirâmide se inclina para as areias abaixo.
+O lado leste da pirï¿½mide se inclina para as areias abaixo.
 ~
 ~
 0 -1 5305
 D2
-O lado sul da pirâmide se inclina para as areias abaixo.
-Parece muito perigoso.   Eu não iria neste caminho.
+O lado sul da pirï¿½mide se inclina para as areias abaixo.
+Parece muito perigoso.   Eu nï¿½o iria neste caminho.
 ~
 ~
 0 -1 5307
 D3
-O lado oeste da pirâmide se inclina para as areias abaixo.
-Parece muito perigoso.   Eu não iria neste caminho.
+O lado oeste da pirï¿½mide se inclina para as areias abaixo.
+Parece muito perigoso.   Eu nï¿½o iria neste caminho.
 ~
 ~
 0 -1 5307
 D5
-Você vê algumas pedras de areia apertadas, formando uma dura superfície.
+Vocï¿½ vï¿½ algumas pedras de areia apertadas, formando uma dura superfï¿½cie.
 ~
 pedras~
 1 -1 5308
 E
-pedras~
-Assim que você olha mais de perto, você pode ver uma rachadura no centro das
-pedras embaixo de seus pés.  Com algum esforço você seria capaz de levantar
-isso e conseguir entrar!
+placa~
+A placa lï¿½:
+
+                        Bem vindo ï¿½ Grande Pirï¿½mide
+                                  do
+                            *Mundo de Vitï¿½lia*
+
 ~
 E
-placa~
-A placa lê:
-
-                        Bem vindo À Grande Pirâmide
-                                  do
-                            *Mundo de Vitália*
-
+pedras~
+Assim que vocï¿½ olha mais de perto, vocï¿½ pode ver uma rachadura no centro das
+pedras embaixo de seus pï¿½s.  Com algum esforï¿½o vocï¿½ seria capaz de levantar
+isso e conseguir entrar!
 ~
 S
 #5307
 As Pedras Perigosas~
-   Aqui as pedras foram esculpidas para fora dos lados da pirâmide.  Você
-não está tão certo de sua segurança agora...
+   Aqui as pedras foram esculpidas para fora dos lados da pirï¿½mide.  Vocï¿½
+nï¿½o estï¿½ tï¿½o certo de sua seguranï¿½a agora...
 
-Subitamente o vento apanha você, e você perde o equilíbrio!
-Você tomba para baixo, e cai para a morte!
+Subitamente o vento apanha vocï¿½, e vocï¿½ perde o equilï¿½brio!
+Vocï¿½ tomba para baixo, e cai para a morte!
 
 
 SPLAT.
 
 Aiiiiiiiiiiiiiiiiiiiiiiiiiiii...
 ~
-53 b 0
+53 2 0 0 0 0
 S
 #5308
 A Escada~
-   Você está escalando uma antiga escada que leva você até as profundezas da
-pirâmide.  O ar ao seu redor é grosso, com camadas de pó e um estranho
-cheiro de mofo.  Acima de sua cabeça, você vê finos raios de luz que
+   Vocï¿½ estï¿½ escalando uma antiga escada que leva vocï¿½ atï¿½ as profundezas da
+pirï¿½mide.  O ar ao seu redor ï¿½ grosso, com camadas de pï¿½ e um estranho
+cheiro de mofo.  Acima de sua cabeï¿½a, vocï¿½ vï¿½ finos raios de luz que
 atravessam as pedras do teto.
 ~
-53 cd 0
+53 12 0 0 0 0
 D4
-Você vê as pedras arenosas do teto.
+Vocï¿½ vï¿½ as pedras arenosas do teto.
 ~
 pedras~
 1 -1 5306
 D5
-Você vê uma pequena câmara empoeirada.
+Vocï¿½ vï¿½ uma pequena cï¿½mara empoeirada.
 ~
 ~
 0 -1 5309
 E
 pedras~
-Assim que você olha mais de perto, você pode ver uma rachadura no centro das
-pedras acima de você.  Com algum esforço você pode ser capaz de levantar
-isso e alcançar a luz do dia!
+Assim que vocï¿½ olha mais de perto, vocï¿½ pode ver uma rachadura no centro das
+pedras acima de vocï¿½.  Com algum esforï¿½o vocï¿½ pode ser capaz de levantar
+isso e alcanï¿½ar a luz do dia!
 ~
 S
 #5309
-Uma Câmara Mofada~
-   Você está em uma úmida e mofada câmara no interior da pirâmide.  Pegadas
-e outras estranhas marcas estão fixas no chão empoeirado.  Parece que alguns
-dos moradores deste monumento ainda estão vivos.  Saídas levam a todas as
-direções.  A porta ao oeste está coberta com inscrições.
+Uma Cï¿½mara Mofada~
+   Vocï¿½ estï¿½ em uma ï¿½mida e mofada cï¿½mara no interior da pirï¿½mide.  Pegadas
+e outras estranhas marcas estï¿½o fixas no chï¿½o empoeirado.  Parece que alguns
+dos moradores deste monumento ainda estï¿½o vivos.  Saï¿½das levam a todas as
+direï¿½ï¿½es.  A porta ao oeste estï¿½ coberta com inscriï¿½ï¿½es.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
-Você vê um pequeno caminho que se elevou a três pés do chão.
+Vocï¿½ vï¿½ um pequeno caminho que se elevou a trï¿½s pï¿½s do chï¿½o.
 ~
 ~
 0 -1 5312
@@ -292,58 +292,58 @@ Um caminho coberto de poeira leva ao leste.
 ~
 0 -1 5339
 D2
-Você vê uma pequena rachadura na parede, entre a qual você pode conseguir
+Vocï¿½ vï¿½ uma pequena rachadura na parede, entre a qual vocï¿½ pode conseguir
 passar.
 ~
 ~
 0 -1 5324
 D3
-Você vê uma larga porta de pedra, coberta de hieróglifos e segredos.
+Vocï¿½ vï¿½ uma larga porta de pedra, coberta de hierï¿½glifos e segredos.
 ~
 porta pedra~
 1 -1 5310
 D4
-Uma pequena e raquítica escada de mão segue por aqui.
+Uma pequena e raquï¿½tica escada de mï¿½o segue por aqui.
 ~
 ~
 0 -1 5308
 E
-porta pedra~
-A porta de pedra é coberta por estranhas inscrições e hieróglifos que o
-avisam para não seguir adiante.
+hierï¿½glifos inscriï¿½ï¿½es escritas~
+Vocï¿½ nï¿½o pode entender a escrita que cobre a porta mas a maioria deles
+parece descrever cenas de fogo e grandes criaturas aparentemente muito
+fortes.  Vocï¿½ tem um pressentimento que as inscriï¿½ï¿½es servem de aviso.
 ~
 E
-hieróglifos inscrições escritas~
-Você não pode entender a escrita que cobre a porta mas a maioria deles
-parece descrever cenas de fogo e grandes criaturas aparentemente muito
-fortes.  Você tem um pressentimento que as inscrições servem de aviso.
+porta pedra~
+A porta de pedra ï¿½ coberta por estranhas inscriï¿½ï¿½es e hierï¿½glifos que o
+avisam para nï¿½o seguir adiante.
 ~
 S
 #5310
 A Piscina de Fogo~
-   Este lugar é dominado por uma volumosa piscina que é preenchida, não com
-água, mas com chamas de intenso calor.  As chamas multicoloridas lambem
-você, procurando queima-lo.  A piscina segue ao leste em uma pequena câmara.
+   Este lugar ï¿½ dominado por uma volumosa piscina que ï¿½ preenchida, nï¿½o com
+ï¿½gua, mas com chamas de intenso calor.  As chamas multicoloridas lambem
+vocï¿½, procurando queima-lo.  A piscina segue ao leste em uma pequena cï¿½mara.
 ~
-53 cd 0
+53 12 0 0 0 0
 D1
-Você vê uma larga porta de pedra.
+Vocï¿½ vï¿½ uma larga porta de pedra.
 ~
 porta pedra~
 1 -1 5309
 D3
-Você vê uma pequena câmara coberta por fogo.
+Vocï¿½ vï¿½ uma pequena cï¿½mara coberta por fogo.
 ~
 ~
 0 -1 5311
 S
 #5311
-A Câmara de Efreeti~
-   Você atravessa a piscina de fogo até uma pequena câmara de pedra.  Aqui
-as chamas estão tão altas quanto você, chamuscando sua face e evaporando seu
+A Cï¿½mara de Efreeti~
+   Vocï¿½ atravessa a piscina de fogo atï¿½ uma pequena cï¿½mara de pedra.  Aqui
+as chamas estï¿½o tï¿½o altas quanto vocï¿½, chamuscando sua face e evaporando seu
 suor instantaneamente.
 ~
-53 d 7
+53 8 0 0 0 7
 D1
 A piscina de fogo acaba ao leste.
 ~
@@ -352,34 +352,34 @@ A piscina de fogo acaba ao leste.
 S
 #5312
 Um Caminho Apertado~
-   Você tem de se abaixar sobre suas mãos e joelhos para caber neste espaço
-apertado.  O caminho é cheio de areia e poeira e de marcas da passagem de
+   Vocï¿½ tem de se abaixar sobre suas mï¿½os e joelhos para caber neste espaï¿½o
+apertado.  O caminho ï¿½ cheio de areia e poeira e de marcas da passagem de
 outras criaturas.
 ~
-53 ad 0
+53 9 0 0 0 0
 D0
 O caminho continua ao norte.
 ~
 ~
 0 -1 5313
 D2
-O caminho termina ao sul, em uma câmara mofada.
+O caminho termina ao sul, em uma cï¿½mara mofada.
 ~
 ~
 0 -1 5309
 D4
-Um pequeno buraco sobre sua cabeça leva à uma câmara escura.
+Um pequeno buraco sobre sua cabeï¿½a leva ï¿½ uma cï¿½mara escura.
 ~
 ~
 0 -1 5337
 S
 #5313
 Um Caminho Apertado~
-   Você tem de se abaixar sobre suas mãos e joelhos para caber neste espaço
-apertado.  O caminho é cheio de areia e poeira e de marcas da passagem de
+   Vocï¿½ tem de se abaixar sobre suas mï¿½os e joelhos para caber neste espaï¿½o
+apertado.  O caminho ï¿½ cheio de areia e poeira e de marcas da passagem de
 outras criaturas.
 ~
-53 ad 0
+53 9 0 0 0 0
 D2
 O caminho apertado segue ao sul.
 ~
@@ -393,11 +393,11 @@ O caminho apertado segue ao oeste.
 S
 #5314
 Um Caminho Apertado~
-   Você tem de se abaixar sobre suas mãos e joelhos para caber neste espaço
-apertado.  O caminho é cheio de areia e poeira e de marcas da passagem de
+   Vocï¿½ tem de se abaixar sobre suas mï¿½os e joelhos para caber neste espaï¿½o
+apertado.  O caminho ï¿½ cheio de areia e poeira e de marcas da passagem de
 outras criaturas.
 ~
-53 ad 0
+53 9 0 0 0 0
 D1
 O caminho continua ao leste.
 ~
@@ -411,11 +411,11 @@ O caminho se torna mais apertado ao oeste.
 S
 #5315
 Um Estreitamento no Caminho~
-   Aqui você é forçado a deslizar sobre sua barriga através desse
-estreitamento no caminho, quando as pedras da pirâmide se fecham sobre você.
-Abaixo de você, há um escorregadio buraco que mergulha na escuridão.
+   Aqui vocï¿½ ï¿½ forï¿½ado a deslizar sobre sua barriga atravï¿½s desse
+estreitamento no caminho, quando as pedras da pirï¿½mide se fecham sobre vocï¿½.
+Abaixo de vocï¿½, hï¿½ um escorregadio buraco que mergulha na escuridï¿½o.
 ~
-53 ad 0
+53 9 0 0 0 0
 D1
 O caminho se torna mais largo ao leste.
 ~
@@ -435,10 +435,10 @@ S
 #5316
 O Fim do Caminho~
    O caminho vai se estreitando de tal forma, que entre as pedras da
-pirâmide somente poderia caber uma cobra.  Mal há espaço suficiente para
-você se virar e voltar pelo caminho ao norte.
+pirï¿½mide somente poderia caber uma cobra.  Mal hï¿½ espaï¿½o suficiente para
+vocï¿½ se virar e voltar pelo caminho ao norte.
 ~
-53 ad 0
+53 9 0 0 0 0
 D0
 O caminho se alarga um pouco ao norte.
 ~
@@ -447,19 +447,19 @@ O caminho se alarga um pouco ao norte.
 S
 #5317
 O Buraco Escorregadio~
-   Os lados deste buraco são lisos e escorregadios.  Você se abaixa e tenta
-se mover para baixo...  Quando subitamente você perde sua força!  Você
+   Os lados deste buraco sï¿½o lisos e escorregadios.  Vocï¿½ se abaixa e tenta
+se mover para baixo...  Quando subitamente vocï¿½ perde sua forï¿½a!  Vocï¿½
 parece cair por uma eternidade, e se esmaga nas pedras abaixo.
 
 
 Debaixo do Buraco
-   Você está em uma câmara pequena debaixo do buraco escorregadio, debaixo
-da pirâmide agora.  O chão está repleto de ossos.  Ao sul há uma pequena
+   Vocï¿½ estï¿½ em uma cï¿½mara pequena debaixo do buraco escorregadio, debaixo
+da pirï¿½mide agora.  O chï¿½o estï¿½ repleto de ossos.  Ao sul hï¿½ uma pequena
 fenda rochosa.
 ~
-53 acd 0
+53 13 0 0 0 0
 D2
-Você vê uma pequena fenda rochosa ao sul.
+Vocï¿½ vï¿½ uma pequena fenda rochosa ao sul.
 ~
 ~
 0 -1 5319
@@ -471,18 +471,18 @@ O buraco parece muito escorregadio para se escalar de volta.
 E
 ossos~
 Os ossos embranqueceram e racharam no ar seco.  Aparentemente foi o que
-restou de aventureiros, ladrões, e criaturas que não sobreviveram à queda.
+restou de aventureiros, ladrï¿½es, e criaturas que nï¿½o sobreviveram ï¿½ queda.
 ~
 S
 #5318
 Debaixo do Buraco~
-   Você está em uma câmara pequena debaixo do buraco escorregadio, debaixo
-da pirâmide agora.  O chão está repleto de ossos.  Ao sul há uma pequena
+   Vocï¿½ estï¿½ em uma cï¿½mara pequena debaixo do buraco escorregadio, debaixo
+da pirï¿½mide agora.  O chï¿½o estï¿½ repleto de ossos.  Ao sul hï¿½ uma pequena
 fenda rochosa.
 ~
-53 ad 0
+53 9 0 0 0 0
 D2
-Você vê uma pequena fenda rochosa que segue abaixo da pirâmide.
+Vocï¿½ vï¿½ uma pequena fenda rochosa que segue abaixo da pirï¿½mide.
 ~
 ~
 0 -1 5319
@@ -494,34 +494,34 @@ O buraco parece muito escorregadio para se escalar de volta.
 E
 ossos~
 Os ossos embranqueceram e racharam no ar seco, aparentemente foi o que
-restou de aventureiros, ladrões, e criaturas que não sobreviveram à queda.
+restou de aventureiros, ladrï¿½es, e criaturas que nï¿½o sobreviveram ï¿½ queda.
 ~
 S
 #5319
-Uma Fenda Áspera~
-   Você está agora explorando dentro de uma estranha fenda rochosa que
-mergulha para a pedra sobre a qual a pirâmide foi construída.  Ao sul você
-vê a luz bruxuleante de um fogo e a fenda segue abaixo.
+Uma Fenda ï¿½spera~
+   Vocï¿½ estï¿½ agora explorando dentro de uma estranha fenda rochosa que
+mergulha para a pedra sobre a qual a pirï¿½mide foi construï¿½da.  Ao sul vocï¿½
+vï¿½ a luz bruxuleante de um fogo e a fenda segue abaixo.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
-Você vê uma pequena câmara de madeira cheia de ossos.
+Vocï¿½ vï¿½ uma pequena cï¿½mara de madeira cheia de ossos.
 ~
 ~
 0 -1 5318
 D2
-Você vê a bruxuleante luz de um fogo.
+Vocï¿½ vï¿½ a bruxuleante luz de um fogo.
 ~
 ~
 0 -1 5320
 D5
-A fenda continua abaixo na total escuridão.
+A fenda continua abaixo na total escuridï¿½o.
 ~
 ~
 0 -1 5321
 E
-áspero~
-Assim que você olha através do áspero terreno, seus olhos captam um pequeno
+ï¿½spero~
+Assim que vocï¿½ olha atravï¿½s do ï¿½spero terreno, seus olhos captam um pequeno
 brilho de luz!
 ~
 S
@@ -529,39 +529,39 @@ S
 Uma Pequena Fogueira~
    Aqui uma pequena fogueira queima em um canto das pedras, dando algum
 aquecimento e conforto ao frio, escuro e seco ar.  Um estranho homem bem
-velho está aqui e ele o encara, perdido em seus pensamentos.
+velho estï¿½ aqui e ele o encara, perdido em seus pensamentos.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
-Você vê uma volumosa fenda que mergulha na escuridão.
+Vocï¿½ vï¿½ uma volumosa fenda que mergulha na escuridï¿½o.
 ~
 ~
 0 -1 5319
 E
 velho homem~
-O velho homem parece ter sido deixado aqui por muito tempo e está começando
+O velho homem parece ter sido deixado aqui por muito tempo e estï¿½ comeï¿½ando
 a perder a sanidade.  Ele se move lentamente, gritando consigo mesmo.
 
 
-Ele se vira para você e grita, "Não perturbe! Não perturbe!', então
+Ele se vira para vocï¿½ e grita, "Nï¿½o perturbe! Nï¿½o perturbe!', entï¿½o
 se vira e volta a fitar a fogueira.
-....Que pessoa estranha', você pensa para si mesmo.
+....Que pessoa estranha', vocï¿½ pensa para si mesmo.
 ~
 S
 #5321
 Abaixo na Fenda~
    A fenda prossegue para baixo, nas escuras profundezas da terra.  O ar a
-sua volta agora é frio e bastante seco e sua fonte luminosa dança em uma
-fria brisa que vêm de baixo.
+sua volta agora ï¿½ frio e bastante seco e sua fonte luminosa danï¿½a em uma
+fria brisa que vï¿½m de baixo.
 ~
-53 ad 0
+53 9 0 0 0 0
 D4
-Está muito escuro para você ver ao longo da fenda.
+Estï¿½ muito escuro para vocï¿½ ver ao longo da fenda.
 ~
 ~
 0 -1 5319
 D5
-Está muito escuro para você ver ao longo da fenda.
+Estï¿½ muito escuro para vocï¿½ ver ao longo da fenda.
 ~
 ~
 0 -1 5322
@@ -569,364 +569,364 @@ S
 #5322
 No Final da Fenda~
    Aqui a fenda abruptamente acaba.  O que vento uiva em seu rosto, vem de
-uma estranha forma ao sul mas sua luz é escassa demais para saber exatamente
+uma estranha forma ao sul mas sua luz ï¿½ escassa demais para saber exatamente
 do que se trata.
 ~
-53 ad 0
+53 9 0 0 0 0
 D2
-Você vê uma estranha forma negra.
+Vocï¿½ vï¿½ uma estranha forma negra.
 ~
 sesame~
 2 5323 5323
 D4
-Está muito escuro para você ver ao longo da fenda.
+Estï¿½ muito escuro para vocï¿½ ver ao longo da fenda.
 ~
 ~
 0 -1 5321
 E
-forma negra~
-Os rugidos do vento sopram em suas orelhas como rugidos de uma fera.  Quando
-seus olhos se ajustam à luz, a forma parece ser a da cabeça de um tigre.
+tigre cabeï¿½a animal~
+
+Vocï¿½ tem agora certeza que o vento ï¿½ a respiraï¿½ï¿½o fria de algum animal
+sobrenatural e gigantesco, cujo urro permanece sendo carregado pela brisa e
+de que suas mandï¿½bulas volumosas poderiam facilmente engolir vocï¿½.
+
+Vocï¿½ se aproxima para olhar melhor, quando um par de olhos brilham.
+Uma voz fria ecoa: 'BUSQUE O DIAMANTE...NO ï¿½SPERO...'
+
+... E entï¿½o tudo ï¿½ silï¿½ncio.
 ~
 E
-tigre cabeça animal~
-
-Você tem agora certeza que o vento é a respiração fria de algum animal
-sobrenatural e gigantesco, cujo urro permanece sendo carregado pela brisa e
-de que suas mandíbulas volumosas poderiam facilmente engolir você.
-
-Você se aproxima para olhar melhor, quando um par de olhos brilham.
-Uma voz fria ecoa: 'BUSQUE O DIAMANTE...NO ÁSPERO...'
-
-... E então tudo é silêncio.
+forma negra~
+Os rugidos do vento sopram em suas orelhas como rugidos de uma fera.  Quando
+seus olhos se ajustam ï¿½ luz, a forma parece ser a da cabeï¿½a de um tigre.
 ~
 S
 #5323
-A Abóbada de uma Lâmpada~
-   As mandíbulas do enorme tigre de pedra revelam uma grande abóbada.  Um
-teto curvado está a metros de sua cabeça...  Em toda parte ouve-se um
+A Abï¿½bada de uma Lï¿½mpada~
+   As mandï¿½bulas do enorme tigre de pedra revelam uma grande abï¿½bada.  Um
+teto curvado estï¿½ a metros de sua cabeï¿½a...  Em toda parte ouve-se um
 estrondoso barulho gutural e um vento frio soprando.  Gigantescos montes de
-antigos tesouros, moedas de ouro e outros valores, cercam você em todas as
-direções.
+antigos tesouros, moedas de ouro e outros valores, cercam vocï¿½ em todas as
+direï¿½ï¿½es.
 ~
-53 ad 0
+53 9 0 0 0 0
 D0
-Através das mandíbulas do tigre você vê a escuridão da fenda.
+Atravï¿½s das mandï¿½bulas do tigre vocï¿½ vï¿½ a escuridï¿½o da fenda.
 ~
 ~
 2 5323 5322
 E
 tesouro moedas ouro~
-Você alcança alguns dos desejados bens mas ouve um alto e estrondoso
-som e vê um brilhante flash de luz...
+Vocï¿½ alcanï¿½a alguns dos desejados bens mas ouve um alto e estrondoso
+som e vï¿½ um brilhante flash de luz...
 
-Então as palavras: 'PEGUE APENAS A LÂMPADA... NÃO TOQUE EM MAIS NADA.'
+Entï¿½o as palavras: 'PEGUE APENAS A Lï¿½MPADA... Nï¿½O TOQUE EM MAIS NADA.'
 
-... e tudo é silêncio novamente.
+... e tudo ï¿½ silï¿½ncio novamente.
 ~
 S
 #5324
 Uma Rachadura na Parede~
-   Você se aperta na estreita rachadura na parede.  A poeira cobre seus
-olhos, perturbando-os e pedaços de pedras misturadas com areia caem sobre
-você, assim que você consegue, com muita dificuldade, seguir o seu caminho.
+   Vocï¿½ se aperta na estreita rachadura na parede.  A poeira cobre seus
+olhos, perturbando-os e pedaï¿½os de pedras misturadas com areia caem sobre
+vocï¿½, assim que vocï¿½ consegue, com muita dificuldade, seguir o seu caminho.
 ~
-53 ad 0
+53 9 0 0 0 0
 D0
-Você vê uma câmara mofada.
+Vocï¿½ vï¿½ uma cï¿½mara mofada.
 ~
 ~
 0 -1 5309
 D2
-Você vê uma tumba.
+Vocï¿½ vï¿½ uma tumba.
 ~
 ~
 0 -1 5325
 S
 #5325
 Uma Tumba Cheia~
-   No chão desta pequena tumba estão empilhados as tampas dos sarcófagos
-profanados, alguns tesouros foram esquecidos por ladrões e corpos arrancados
+   No chï¿½o desta pequena tumba estï¿½o empilhados as tampas dos sarcï¿½fagos
+profanados, alguns tesouros foram esquecidos por ladrï¿½es e corpos arrancados
 de seu local de repouso.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
-Você vê uma pequena rachadura na parede, a qual você poderia atravessar.
+Vocï¿½ vï¿½ uma pequena rachadura na parede, a qual vocï¿½ poderia atravessar.
 ~
 ~
 0 -1 5324
 D1
-Ao leste é outra tumba.
+Ao leste ï¿½ outra tumba.
 ~
 ~
 0 -1 5333
 D3
-Ao oeste é outra tumba.
+Ao oeste ï¿½ outra tumba.
 ~
 ~
 0 -1 5326
 S
 #5326
 Uma Tumba Demolida~
-   Esta tumba foi totalmente destruída pelos ladrões à procura dos tesouros
-do faraós.  Não há nada que interesse neste quarto, a não ser um grande
-caixão de pedra apoiado contra a parede ocidental.
+   Esta tumba foi totalmente destruï¿½da pelos ladrï¿½es ï¿½ procura dos tesouros
+do faraï¿½s.  Nï¿½o hï¿½ nada que interesse neste quarto, a nï¿½o ser um grande
+caixï¿½o de pedra apoiado contra a parede ocidental.
 ~
-53 d 0
+53 8 0 0 0 0
 D1
-Ao leste é outra tumba.
+Ao leste ï¿½ outra tumba.
 ~
 ~
 0 -1 5325
 D3
-Você vê um largo caixão de pedra.
+Vocï¿½ vï¿½ um largo caixï¿½o de pedra.
 ~
-tampa caixão~
+tampa caixï¿½o~
 2 5312 5327
 E
-tampa caixão~
-O caixão é esculpido na forma de um homem, que fica a vários pés acima de
-você e vestido com a elegância dos faraós.  Isso aparentemente tem
-permanecido intocado pela ação do tempo ou das atividades dos ladrões.
-Diversas marcas em um dos lados indicam as tentativas mal sucedidas para
-abrir o caixão.
-
-Você não pode imaginar um jeito de abrir isso.
-~
-E
-homem elegância faraós~
-Assim que você olha mais perto para a figura esculpida no caixão de pedra,
-você percebe uma pequena marca esculpida em seu peito.  Parece que um
-escaravelho ou um pequeno besouro caberia neste espaço, se corretamente
+homem elegï¿½ncia faraï¿½s~
+Assim que vocï¿½ olha mais perto para a figura esculpida no caixï¿½o de pedra,
+vocï¿½ percebe uma pequena marca esculpida em seu peito.  Parece que um
+escaravelho ou um pequeno besouro caberia neste espaï¿½o, se corretamente
 classificado segundo o tamanho.
 
 Hmmm.
 ~
+E
+tampa caixï¿½o~
+O caixï¿½o ï¿½ esculpido na forma de um homem, que fica a vï¿½rios pï¿½s acima de
+vocï¿½ e vestido com a elegï¿½ncia dos faraï¿½s.  Isso aparentemente tem
+permanecido intocado pela aï¿½ï¿½o do tempo ou das atividades dos ladrï¿½es.
+Diversas marcas em um dos lados indicam as tentativas mal sucedidas para
+abrir o caixï¿½o.
+
+Vocï¿½ nï¿½o pode imaginar um jeito de abrir isso.
+~
 S
 #5327
 Uma Escada~
-   Você está agora no topo de uma escada que segue na escuridão.  Os degraus
-e paredes são escorregadios blocos de pedra arenosa, coberto com uma grossa
-camada de poeira.  Algumas inscrições foram esculpidas nas paredes daqui.
+   Vocï¿½ estï¿½ agora no topo de uma escada que segue na escuridï¿½o.  Os degraus
+e paredes sï¿½o escorregadios blocos de pedra arenosa, coberto com uma grossa
+camada de poeira.  Algumas inscriï¿½ï¿½es foram esculpidas nas paredes daqui.
 ~
-53 ad 0
+53 9 0 0 0 0
 D1
-Você vê as costas da tampa de um caixão de pedra lisa.
+Vocï¿½ vï¿½ as costas da tampa de um caixï¿½o de pedra lisa.
 ~
-tampa caixão~
+tampa caixï¿½o~
 2 -1 5326
 D5
-Está muito escuro para ver abaixo na escada.
+Estï¿½ muito escuro para ver abaixo na escada.
 ~
 ~
 0 -1 5328
 E
-inscrições~
-Você assopra a poeira das inscrições e lê:
-
-Cuidado com a maldição da múmia!
+tampa caixï¿½o~
+Deste lado do caixï¿½o estï¿½ uma opaca pedra lisa.
 ~
 E
-tampa caixão~
-Deste lado do caixão está uma opaca pedra lisa.
+inscriï¿½ï¿½es~
+Vocï¿½ assopra a poeira das inscriï¿½ï¿½es e lï¿½:
+
+Cuidado com a maldiï¿½ï¿½o da mï¿½mia!
 ~
 S
 #5328
 Uma Escada~
-   Você está em uma escada que desaparece na escuridão em ambas as direções.
-Os escorregadios degraus desiguais da escada parecem que não foram pisados
-por séculos.
+   Vocï¿½ estï¿½ em uma escada que desaparece na escuridï¿½o em ambas as direï¿½ï¿½es.
+Os escorregadios degraus desiguais da escada parecem que nï¿½o foram pisados
+por sï¿½culos.
 ~
-53 ad 0
+53 9 0 0 0 0
 D4
-Está muito escuro para ver acima na escada.
+Estï¿½ muito escuro para ver acima na escada.
 ~
 ~
 0 -1 5327
 D5
-Está muito escuro para ver abaixo na escada.
+Estï¿½ muito escuro para ver abaixo na escada.
 ~
 ~
 0 -1 5329
 S
 #5329
 Uma Escada~
-   Você está agora na base de uma escada de degraus desiguais.  As paredes,
-o chão e teto desta pequena escada estão cobertos com estranhos hieróglifos.
+   Vocï¿½ estï¿½ agora na base de uma escada de degraus desiguais.  As paredes,
+o chï¿½o e teto desta pequena escada estï¿½o cobertos com estranhos hierï¿½glifos.
 ~
-53 ad 0
+53 9 0 0 0 0
 D2
-Você vê uma costura na parede de pedra.
+Vocï¿½ vï¿½ uma costura na parede de pedra.
 ~
 pedra~
 1 -1 5330
 D4
-Está muito escuro para ver acima na escada.
+Estï¿½ muito escuro para ver acima na escada.
 ~
 ~
 0 -1 5328
 E
-paredes chão teto hieróglifos~
-Os hieróglifos estão cobertos com uma grossa camada de poeira.  Você limpa a
-poeira com as mãos e descobre que absolutamente não consegue compreendê-los.
+paredes chï¿½o teto hierï¿½glifos~
+Os hierï¿½glifos estï¿½o cobertos com uma grossa camada de poeira.  Vocï¿½ limpa a
+poeira com as mï¿½os e descobre que absolutamente nï¿½o consegue compreendï¿½-los.
 ~
 S
 #5330
 O Corredor Antigo~
-   Aqui o ar ainda é respirável.  O pó obscurece densamente sua visão.
-Várias estátuas de pedra revestem as paredes do corredor, descrevendo os
-deuses de uma sociedade antiga.  Hieróglifos estranhos cobrem as paredes,
-nesta forma pictórica e peculiar de idioma escrito, que você não entende.
+   Aqui o ar ainda ï¿½ respirï¿½vel.  O pï¿½ obscurece densamente sua visï¿½o.
+Vï¿½rias estï¿½tuas de pedra revestem as paredes do corredor, descrevendo os
+deuses de uma sociedade antiga.  Hierï¿½glifos estranhos cobrem as paredes,
+nesta forma pictï¿½rica e peculiar de idioma escrito, que vocï¿½ nï¿½o entende.
 Alguns passos conduzem a um elevado altar para o sul.
 ~
-53 ad 0
+53 9 0 0 0 0
 D0
-Você vê uma costura na parede de pedra.
+Vocï¿½ vï¿½ uma costura na parede de pedra.
 ~
 pedra~
 1 -1 5329
 D2
-Você vê um pequeno altar por aqui.
+Vocï¿½ vï¿½ um pequeno altar por aqui.
 ~
 ~
 0 -1 5331
 E
-escritas símbolos hieróglifos~
-Você não entende o significado destes símbolos.
+escritas sï¿½mbolos hierï¿½glifos~
+Vocï¿½ nï¿½o entende o significado destes sï¿½mbolos.
 ~
 S
 #5331
 O Altar Elevado~
-   Você está no final do antigo corredor sul.  A escuridão e a poeira
-absorvem toda sua luz, de modo que você não vê nada além do altar.  Um baixo
-pedestal repousa aqui.  Você vê algo escrito em sua face.
+   Vocï¿½ estï¿½ no final do antigo corredor sul.  A escuridï¿½o e a poeira
+absorvem toda sua luz, de modo que vocï¿½ nï¿½o vï¿½ nada alï¿½m do altar.  Um baixo
+pedestal repousa aqui.  Vocï¿½ vï¿½ algo escrito em sua face.
 ~
-53 ad 0
+53 9 0 0 0 0
 D0
-Você não pode ver nada além a sua frente.
+Vocï¿½ nï¿½o pode ver nada alï¿½m a sua frente.
 ~
 ~
 0 -1 5330
 D5
-Você vê uma costura no chão de pedra.
+Vocï¿½ vï¿½ uma costura no chï¿½o de pedra.
 ~
 tumba~
 1 -1 5332
 E
 escritas pedestal~
-As escritas estão cobertas de areia: 'Eu sou Ramsés- o Maldito, que uma vez
-foi o conselheiro e ajudante dos mais poderosos faraós e rainhas destas
-terras.  Muito tempo se passou desde a última vez em que andei pela terra.
-Perturbe meu descanso e arque com as consequências.'
+As escritas estï¿½o cobertas de areia: 'Eu sou Ramsï¿½s- o Maldito, que uma vez
+foi o conselheiro e ajudante dos mais poderosos faraï¿½s e rainhas destas
+terras.  Muito tempo se passou desde a ï¿½ltima vez em que andei pela terra.
+Perturbe meu descanso e arque com as consequï¿½ncias.'
 ~
 S
 #5332
-A Tumba de Ramsés~
-  Você está em uma tumba vazia, um cubículo de não mais que dez pés de
+A Tumba de Ramsï¿½s~
+  Vocï¿½ estï¿½ em uma tumba vazia, um cubï¿½culo de nï¿½o mais que dez pï¿½s de
 comprimento.
 ~
-53 ad 0
+53 9 0 0 0 0
 D4
-Leva ao caminho de onde você veio.
+Leva ao caminho de onde vocï¿½ veio.
 ~
 tumba~
 1 -1 5331
 S
 #5333
 Uma Tumba Saqueada~
-   Esta tumba foi completamente saqueada e destruída pelos atos dos ladrões
-de pirâmides.  O chão está coberto de lixo.
+   Esta tumba foi completamente saqueada e destruï¿½da pelos atos dos ladrï¿½es
+de pirï¿½mides.  O chï¿½o estï¿½ coberto de lixo.
 ~
-53 d 0
+53 8 0 0 0 0
 D1
-Ao leste há um túnel de teto mais baixo.
+Ao leste hï¿½ um tï¿½nel de teto mais baixo.
 ~
 ~
 0 -1 5334
 D3
-Ao oeste há outra tumba.
+Ao oeste hï¿½ outra tumba.
 ~
 ~
 0 -1 5325
 S
 #5334
-Um Túnel~
-   O túnel de teto mais baixo segue leste-oeste.
+Um Tï¿½nel~
+   O tï¿½nel de teto mais baixo segue leste-oeste.
 ~
-53 ad 0
+53 9 0 0 0 0
 D1
-Você não pode ver nada através da escuridão.
+Vocï¿½ nï¿½o pode ver nada atravï¿½s da escuridï¿½o.
 ~
 ~
 0 -1 5335
 D3
-Você vê uma tumba.
+Vocï¿½ vï¿½ uma tumba.
 ~
 ~
 0 -1 5333
 S
 #5335
-Um Cruzamento no Túnel~
-   Aqui o túnel cruza um buraco na parede sul, continuando ao leste e ao
+Um Cruzamento no Tï¿½nel~
+   Aqui o tï¿½nel cruza um buraco na parede sul, continuando ao leste e ao
 oeste.
 ~
-53 ad 0
+53 9 0 0 0 0
 D1
-Você não pode ver nada através da escuridão.
+Vocï¿½ nï¿½o pode ver nada atravï¿½s da escuridï¿½o.
 ~
 ~
 0 -1 5336
 D2
-Há um buraco ali.
+Hï¿½ um buraco ali.
 ~
 ~
 0 -1 -1
 D3
-Você não pode ver na escuridão do túnel.
+Vocï¿½ nï¿½o pode ver na escuridï¿½o do tï¿½nel.
 ~
 ~
 0 -1 5334
 D5
-Através do buraco você vê lixo e areia.
+Atravï¿½s do buraco vocï¿½ vï¿½ lixo e areia.
 ~
 ~
 0 -1 5346
 E
 buraco~
-O buraco é raso, no chão da parede sul.
+O buraco ï¿½ raso, no chï¿½o da parede sul.
 ~
 S
 #5336
-Uma Bifurcação~
-   O túnel baixo, faz uma curva ao oeste e termina ao norte, em uma
-empoeirada câmara.
+Uma Bifurcaï¿½ï¿½o~
+   O tï¿½nel baixo, faz uma curva ao oeste e termina ao norte, em uma
+empoeirada cï¿½mara.
 ~
-53 ad 0
+53 9 0 0 0 0
 D0
-A boca do túnel é uma pedra que foi estourada pelos ladrões.
+A boca do tï¿½nel ï¿½ uma pedra que foi estourada pelos ladrï¿½es.
 ~
 ~
 0 -1 5342
 D3
-Você não poder ver nada na escuridão do túnel.
+Vocï¿½ nï¿½o poder ver nada na escuridï¿½o do tï¿½nel.
 ~
 ~
 0 -1 5335
 S
 #5337
-Uma Câmara Úmida~
-   Esta câmara tem um úmido e mofado.  Pequenas pegadas na poeira delatam a
-passagem recente de algum tipo de criatura.  Há um buraco no chão ao oeste e
+Uma Cï¿½mara ï¿½mida~
+   Esta cï¿½mara tem um ï¿½mido e mofado.  Pequenas pegadas na poeira delatam a
+passagem recente de algum tipo de criatura.  Hï¿½ um buraco no chï¿½o ao oeste e
 a escada fica ao leste.
 ~
-53 d 0
+53 8 0 0 0 0
 D1
-Você vê uma escada de pedra espiral.
+Vocï¿½ vï¿½ uma escada de pedra espiral.
 ~
 ~
 0 -1 5338
 D3
-Você vê apenas escuridão através do buraco no chão.
+Vocï¿½ vï¿½ apenas escuridï¿½o atravï¿½s do buraco no chï¿½o.
 ~
 ~
 0 -1 5312
@@ -934,27 +934,27 @@ S
 #5338
 A Escada Espiral~
    Alguns empoeirados e quebrados degraus espiralam lentamente para baixo
-levando até um corredor empoeirado.
+levando atï¿½ um corredor empoeirado.
 ~
-53 d 0
+53 8 0 0 0 0
 D4
-Os degraus em espiral para a câmara úmida.
+Os degraus em espiral para a cï¿½mara ï¿½mida.
 ~
 ~
 0 -1 5337
 D5
-Os degraus em espiral para a câmara úmida.
+Os degraus em espiral para a cï¿½mara ï¿½mida.
 ~
 ~
 0 -1 5341
 S
 #5339
-Uma Câmara Coberta de Poeira~
-   Este corredor está coberto com poeira acumulada pelos séculos que a
-pirâmide atravessou.  Pequenas marcas e pegadas na poeira indicam a recente
-passagem de outros -- seriam ladrões?
+Uma Cï¿½mara Coberta de Poeira~
+   Este corredor estï¿½ coberto com poeira acumulada pelos sï¿½culos que a
+pirï¿½mide atravessou.  Pequenas marcas e pegadas na poeira indicam a recente
+passagem de outros -- seriam ladrï¿½es?
 ~
-53 d 0
+53 8 0 0 0 0
 D1
 O corredor segue ao leste de onde vem um estranho cheiro.
 ~
@@ -967,36 +967,36 @@ O corredor segue ao oeste de onde vem um estranho cheiro.
 0 -1 5309
 S
 #5340
-Uma Câmara Mal Cheirosa~
-   Esta câmara tem um cheiro pútrido, o cheiro de natrão e de outros
-ingredientes usados para preservar os corpos daqueles que morreram há anos.
+Uma Cï¿½mara Mal Cheirosa~
+   Esta cï¿½mara tem um cheiro pï¿½trido, o cheiro de natrï¿½o e de outros
+ingredientes usados para preservar os corpos daqueles que morreram hï¿½ anos.
 ~
-53 d 0
+53 8 0 0 0 0
 D1
-Você vê uma câmara empoeirada.
+Vocï¿½ vï¿½ uma cï¿½mara empoeirada.
 ~
 ~
 0 -1 5341
 D3
-Você vê uma câmara empoeirada.
+Vocï¿½ vï¿½ uma cï¿½mara empoeirada.
 ~
 ~
 0 -1 5339
 S
 #5341
 Um Corredor Coberto de Poeira~
-   Este corredor está coberto com uma grossa e sufocante camada de pó, que
+   Este corredor estï¿½ coberto com uma grossa e sufocante camada de pï¿½, que
 acaba por obscurecer sua luz.  Pequenas marcas e pegadas indicam a recente
-passagem de alguém ou alguma coisa...
+passagem de alguï¿½m ou alguma coisa...
 ~
-53 d 0
+53 8 0 0 0 0
 D1
 O corredor vira ao norte.
 ~
 ~
 0 -1 5342
 D3
-Você sente o cheiro de algo peculiar vindo de lá.
+Vocï¿½ sente o cheiro de algo peculiar vindo de lï¿½.
 ~
 ~
 0 -1 5340
@@ -1008,18 +1008,18 @@ Uma escada em espiral segue para cima.
 S
 #5342
 Uma Curva no Corredor~
-   Você está em uma acentuada curva no corredor coberto de poeira, que acaba
-ao norte e segue para oeste.  Ao sul as pedras da pirâmide foram rachadas
-por ladrões.
+   Vocï¿½ estï¿½ em uma acentuada curva no corredor coberto de poeira, que acaba
+ao norte e segue para oeste.  Ao sul as pedras da pirï¿½mide foram rachadas
+por ladrï¿½es.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
 O corredor acaba ao norte.
 ~
 ~
 0 -1 5343
 D2
-O túnel esta escuro.
+O tï¿½nel esta escuro.
 ~
 ~
 0 -1 5336
@@ -1030,63 +1030,63 @@ O corredor coberto de poeira continua ao oeste.
 0 -1 5341
 S
 #5343
-Uma Sala sem Saída~
+Uma Sala sem Saï¿½da~
    O corredor coberto de poeira termina abruptamente em uma parede de pedra
-lisa.  Aqui e acolá percebem-se as marcas da passagem de alguma coisa.
+lisa.  Aqui e acolï¿½ percebem-se as marcas da passagem de alguma coisa.
 ~
-53 d 0
+53 8 0 0 0 0
 D2
 O corredor empoeirado continua ao sul.
 ~
 ~
 0 -1 5342
 D5
-O chão é bastante empoeirado e feito de pedra.   Você vê algumas rachaduras.
+O chï¿½o ï¿½ bastante empoeirado e feito de pedra.   Vocï¿½ vï¿½ algumas rachaduras.
 ~
-chão~
+chï¿½o~
 1 -1 5344
 E
 rachaduras~
-As rachaduras lhe dão a impressão de que se você conseguisse retirar alguns
-pedaços do chão, talvez conseguisse passar neste espaço que você fizesse.
+As rachaduras lhe dï¿½o a impressï¿½o de que se vocï¿½ conseguisse retirar alguns
+pedaï¿½os do chï¿½o, talvez conseguisse passar neste espaï¿½o que vocï¿½ fizesse.
 ~
 S
 #5344
 A Entrada da Tumba~
-   Você está em uma pequena câmara escura, que não é perturbada há muitos
-anos.  Ao norte, você nota uma volumosa tumba de pedra, que está coberta por
-hieróglifos e esculpida em ouro, o que representa o lugar de descanso final
-dos poderosos faraós desta terra.
+   Vocï¿½ estï¿½ em uma pequena cï¿½mara escura, que nï¿½o ï¿½ perturbada hï¿½ muitos
+anos.  Ao norte, vocï¿½ nota uma volumosa tumba de pedra, que estï¿½ coberta por
+hierï¿½glifos e esculpida em ouro, o que representa o lugar de descanso final
+dos poderosos faraï¿½s desta terra.
 ~
-53 acd 0
+53 13 0 0 0 0
 D0
-Você vê a tumba dos faraós.
+Vocï¿½ vï¿½ a tumba dos faraï¿½s.
 ~
 tumba~
 1 -1 5345
 D4
-O teto de pedra tem algumas rachaduras, através das quais uma fina luz brilha.
+O teto de pedra tem algumas rachaduras, atravï¿½s das quais uma fina luz brilha.
 ~
 teto~
 1 -1 5343
 E
-tumba~
-A tumba parede muito antiga, bem mais que a pirâmide que a guarda.   Está
-coberta por pequenos hieróglifos.
+hierï¿½glifos~
+As marcas indicam que a tumba ï¿½ realmente a tumba dos grandes faraï¿½s da antiga
+civilizaï¿½ï¿½o que construiu a gigantesca pirï¿½mide.
 ~
 E
-hieróglifos~
-As marcas indicam que a tumba é realmente a tumba dos grandes faraós da antiga
-civilização que construiu a gigantesca pirâmide.
+tumba~
+A tumba parede muito antiga, bem mais que a pirï¿½mide que a guarda.   Estï¿½
+coberta por pequenos hierï¿½glifos.
 ~
 S
 #5345
-A Tumba dos Faraós~
-   Grandes sarcófagos dourados revestem as paredes da tumba.  Os sarcófagos
-conseguiram passar intactos pelas mãos do tempo e intocados pelos ladroes.
-Os tesouros levados pelos faraós em suas tumbas ainda repousam pelo chão.
+A Tumba dos Faraï¿½s~
+   Grandes sarcï¿½fagos dourados revestem as paredes da tumba.  Os sarcï¿½fagos
+conseguiram passar intactos pelas mï¿½os do tempo e intocados pelos ladroes.
+Os tesouros levados pelos faraï¿½s em suas tumbas ainda repousam pelo chï¿½o.
 ~
-53 ad 0
+53 9 0 0 0 0
 D2
 O caminho leva para fora da tumba.
 ~
@@ -1094,49 +1094,49 @@ tumba~
 1 -1 5344
 E
 tesouro~
-Os tesouros estão empoeirados e frágeis mas ainda bastante valiosos. Você opta
-por não pega-los, em respeito aos antigos mortos.
+Os tesouros estï¿½o empoeirados e frï¿½geis mas ainda bastante valiosos. Vocï¿½ opta
+por nï¿½o pega-los, em respeito aos antigos mortos.
 ~
 S
 #5346
 Um Corredor Cheio de Pedregulhos~
    Este corredor antigamente possuia um arco no teto, que cedeu por causa do
-peso das imensas pedras usadas na pirâmide, tendo se transformado apenas em
+peso das imensas pedras usadas na pirï¿½mide, tendo se transformado apenas em
 um enorme monte de entulho, com muitos pedregulhos e pedras.  Agora esta
 montanha de entulho chega quase a tomar uma parte do corredor norte.  Ao
-sul, em meio às pedras e pedregulhos, você vê uma cripta de arenito.
+sul, em meio ï¿½s pedras e pedregulhos, vocï¿½ vï¿½ uma cripta de arenito.
 ~
-53 acd 0
+53 13 0 0 0 0
 D2
-Você vê uma cripta de arenito.
+Vocï¿½ vï¿½ uma cripta de arenito.
 ~
 ~
 0 -1 5347
 D4
-Daqui, você vê apenas escuridão.
+Daqui, vocï¿½ vï¿½ apenas escuridï¿½o.
 ~
 ~
 0 -1 5335
 S
 #5347
 Um Cripta de Arenito~
-   Uma pequena cripta é iluminada por um buraco na parede ao sul, através do
+   Uma pequena cripta ï¿½ iluminada por um buraco na parede ao sul, atravï¿½s do
 qual a areia do deserto entra.  Um quente vento sopra do deserto, secando
 sua pele constantemente.  Ao leste e ao norte o corredor continua.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
 O corredor continua ao norte.
 ~
 ~
 0 -1 5346
 D1
-Você vê um corredor graciosamente curvado.
+Vocï¿½ vï¿½ um corredor graciosamente curvado.
 ~
 ~
 0 -1 5348
 D2
-Você vê montes de areia.
+Vocï¿½ vï¿½ montes de areia.
 ~
 ~
 0 -1 5353
@@ -1144,18 +1144,18 @@ S
 #5348
 Um Corredor Curvado~
    Este corredor possui um belo arco, esculpido nas pedras arenosas da
-pirâmide.  A poeira, que cobre a maior parte do interior da pirâmide, não se
+pirï¿½mide.  A poeira, que cobre a maior parte do interior da pirï¿½mide, nï¿½o se
 faz presente aqui, espanada pelo sopro das areias do deserto que uiva em
 seus ouvidos.
 ~
-53 d 0
+53 8 0 0 0 0
 D1
 O corredor segue ao leste.
 ~
 ~
 0 -1 5349
 D3
-O corredor segue até uma cripta de arenito.
+O corredor segue atï¿½ uma cripta de arenito.
 ~
 ~
 0 -1 5347
@@ -1163,10 +1163,10 @@ S
 #5349
 Um Corredor Curvado~
    Este corredor possui um belo arco, esculpido nas pedras arenosas da
-pirâmide.  Ao leste, há uma pequena cripta dourada e a sala segue ao sul e
+pirï¿½mide.  Ao leste, hï¿½ uma pequena cripta dourada e a sala segue ao sul e
 ao norte.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
 O corredor segue ao norte.
 ~
@@ -1185,266 +1185,266 @@ O corredor arcado segue ao sul.
 S
 #5350
 Uma Cripta Dourada~
-   Você se encontra em uma pequena cripta com paredes e teto feitos de
-tijolos dourados, que ofuscam as largas pedras arenosas da pirâmide.
-Pequenos tapetes estão espalhados pelo chão e eles parecem ter sido
+   Vocï¿½ se encontra em uma pequena cripta com paredes e teto feitos de
+tijolos dourados, que ofuscam as largas pedras arenosas da pirï¿½mide.
+Pequenos tapetes estï¿½o espalhados pelo chï¿½o e eles parecem ter sido
 recentemente usados.
 ~
-53 d 0
+53 8 0 0 0 0
 D3
-Você vê um corredor arcado.
+Vocï¿½ vï¿½ um corredor arcado.
 ~
 ~
 0 -1 5349
 E
-tapetes~
-Os finos tapetes parecem ser muito antigos, suas cores estão desbotadas.
-Eles mostram cenas do cotidiano da antiga civilização do deserto.
+tijolos~
+Os pequenos tijolos dourados sï¿½o muito lisos e bastante macios.
 ~
 E
-tijolos~
-Os pequenos tijolos dourados são muito lisos e bastante macios.
+tapetes~
+Os finos tapetes parecem ser muito antigos, suas cores estï¿½o desbotadas.
+Eles mostram cenas do cotidiano da antiga civilizaï¿½ï¿½o do deserto.
 ~
 S
 #5351
 Um Corredor Curvado~
    Este corredor possui um belo arco, esculpido nas pedras arenosas da
-pirâmide.  A poeira, que cobre a maior parte do interior da pirâmide, não se
+pirï¿½mide.  A poeira, que cobre a maior parte do interior da pirï¿½mide, nï¿½o se
 faz presente aqui, espanada pelo sopro das areias do deserto que uiva em
-seus ouvidos.  O corredor segue ao norte e termina ao sul, em uma abóbada.
+seus ouvidos.  O corredor segue ao norte e termina ao sul, em uma abï¿½bada.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
 O corredor continua aqui.
 ~
 ~
 0 -1 5349
 D2
-Você vê uma pequena abóbada de onde uma luz irradia.
+Vocï¿½ vï¿½ uma pequena abï¿½bada de onde uma luz irradia.
 ~
 ~
 0 -1 5352
 S
 #5352
-Uma Abóbada Iluminada~
-   As pedras da pirâmide aqui assumem uma estranha qualidade, quase
-parecendo ter luz própria.  Assim que você se aproxima, você vê pequenas
-partículas de vidro dentro das pedras, que refletem tão perfeitamente a sua
-fonte de luz, que elas parecem brilhar por si só.
+Uma Abï¿½bada Iluminada~
+   As pedras da pirï¿½mide aqui assumem uma estranha qualidade, quase
+parecendo ter luz prï¿½pria.  Assim que vocï¿½ se aproxima, vocï¿½ vï¿½ pequenas
+partï¿½culas de vidro dentro das pedras, que refletem tï¿½o perfeitamente a sua
+fonte de luz, que elas parecem brilhar por si sï¿½.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
-Você vê uma sala com um belo teto arcado.
+Vocï¿½ vï¿½ uma sala com um belo teto arcado.
 ~
 ~
 0 -1 5351
 E
-partículas vidro~
-As partículas de vidro refletem e refratam sua fonte de luz em uma miriade
-de cores deslumbrantes, que dançam diante de seus olhos, fazendo-o rir.
+partï¿½culas vidro~
+As partï¿½culas de vidro refletem e refratam sua fonte de luz em uma miriade
+de cores deslumbrantes, que danï¿½am diante de seus olhos, fazendo-o rir.
 ~
 S
 #5353
 Uma Grande Duna de Areia~
-   Você está em uma grande duna de areia no lado sul da pirâmide.  Aos pés
-da duna de areia, você vê um pequeno buraco, onde as pedras da pirâmide se
-romperam.  Não muito longe, ao sul, se aproxima uma tempestade de areia: o
+   Vocï¿½ estï¿½ em uma grande duna de areia no lado sul da pirï¿½mide.  Aos pï¿½s
+da duna de areia, vocï¿½ vï¿½ um pequeno buraco, onde as pedras da pirï¿½mide se
+romperam.  Nï¿½o muito longe, ao sul, se aproxima uma tempestade de areia: o
 vento da tempestade uiva em seu rosto.
 ~
-53 c 2
+53 4 0 0 0 2
 D0
-Você vê um buraco pequeno atrás principal na pirâmide.
+Vocï¿½ vï¿½ um buraco pequeno atrï¿½s principal na pirï¿½mide.
 ~
 ~
 0 -1 5347
 D2
-Você vê só uma parede de vento e areia.
+Vocï¿½ vï¿½ sï¿½ uma parede de vento e areia.
 ~
 ~
 0 -1 5354
 E
 duna areia tempestade~
-A areia é bastante branca e muito quente.   Com certeza há muita por aqui.
+A areia ï¿½ bastante branca e muito quente.   Com certeza hï¿½ muita por aqui.
 ~
 S
 #5354
 Uma Conturbada Tempestade de Areia~
-   Você foi envolto por uma grande tempestade de areia.  Ventos uivantes o
-açoitam por todos os lados e a areia rasga sua pele, cegando você.  Você
-perde seu senso de direção.
+   Vocï¿½ foi envolto por uma grande tempestade de areia.  Ventos uivantes o
+aï¿½oitam por todos os lados e a areia rasga sua pele, cegando vocï¿½.  Vocï¿½
+perde seu senso de direï¿½ï¿½o.
 ~
-53 0 2
+53 0 0 0 0 2
 D0
-Você vê apenas areia seca, que sopra em sua face.
+Vocï¿½ vï¿½ apenas areia seca, que sopra em sua face.
 ~
 ~
 0 -1 5353
 D1
-Você vê apenas areia seca, que sopra em sua face.
+Vocï¿½ vï¿½ apenas areia seca, que sopra em sua face.
 ~
 ~
 0 -1 5354
 D2
-Você vê apenas areia seca, que sopra em sua face.
+Vocï¿½ vï¿½ apenas areia seca, que sopra em sua face.
 ~
 ~
 0 -1 5355
 D3
-Você vê apenas areia seca, que sopra em sua face.
+Vocï¿½ vï¿½ apenas areia seca, que sopra em sua face.
 ~
 ~
 0 -1 5354
 E
 areia~
-Areia é tudo o que você pode ver agora.   Infelizmente, areia não é algo
+Areia ï¿½ tudo o que vocï¿½ pode ver agora.   Infelizmente, areia nï¿½o ï¿½ algo
 interessante, apenas areia branca, soprando por todo o lugar.
 ~
 S
 #5355
 Uma Conturbada Tempestade de Areia~
-   Você foi envolto por uma grande tempestade de areia.  Ventos uivantes o
-açoitam por todos os lados e a areia rasga sua pele, cegando você.  Você
-perde seu senso de direção.
+   Vocï¿½ foi envolto por uma grande tempestade de areia.  Ventos uivantes o
+aï¿½oitam por todos os lados e a areia rasga sua pele, cegando vocï¿½.  Vocï¿½
+perde seu senso de direï¿½ï¿½o.
 ~
-53 0 2
+53 0 0 0 0 2
 D0
-Você vê apenas areia seca, que sopra em sua face.
+Vocï¿½ vï¿½ apenas areia seca, que sopra em sua face.
 ~
 ~
 0 -1 5354
 D1
-Você vê apenas areia seca, que sopra em sua face.
+Vocï¿½ vï¿½ apenas areia seca, que sopra em sua face.
 ~
 ~
 0 -1 5355
 D2
-Você vê apenas areia seca, que sopra em sua face.
+Vocï¿½ vï¿½ apenas areia seca, que sopra em sua face.
 ~
 ~
 0 -1 5356
 D3
-Você vê apenas areia seca, que sopra em sua face.
+Vocï¿½ vï¿½ apenas areia seca, que sopra em sua face.
 ~
 ~
 0 -1 5355
 E
 areia~
-Areia é tudo o que você pode ver agora.   Infelizmente, areia não é algo
+Areia ï¿½ tudo o que vocï¿½ pode ver agora.   Infelizmente, areia nï¿½o ï¿½ algo
 interessante, apenas areia branca, soprando por todo o lugar.
 ~
 S
 #5356
 Uma Conturbada Tempestade de Areia~
-   Você foi envolto por uma grande tempestade de areia.  Ventos uivantes o
-açoitam por todos os lados e a areia rasga sua pele, cegando você.  Você
-perde seu senso de direção.
+   Vocï¿½ foi envolto por uma grande tempestade de areia.  Ventos uivantes o
+aï¿½oitam por todos os lados e a areia rasga sua pele, cegando vocï¿½.  Vocï¿½
+perde seu senso de direï¿½ï¿½o.
 ~
-53 0 2
+53 0 0 0 0 2
 D0
-Você vê apenas areia seca, que sopra em sua face.
+Vocï¿½ vï¿½ apenas areia seca, que sopra em sua face.
 ~
 ~
 0 -1 5355
 D1
-Você vê apenas areia seca, que sopra em sua face.
+Vocï¿½ vï¿½ apenas areia seca, que sopra em sua face.
 ~
 ~
 0 -1 5356
 D2
-Você vê apenas areia seca, que sopra em sua face.
+Vocï¿½ vï¿½ apenas areia seca, que sopra em sua face.
 ~
 ~
 0 -1 5357
 D3
-Você vê apenas areia seca, que sopra em sua face.
+Vocï¿½ vï¿½ apenas areia seca, que sopra em sua face.
 ~
 ~
 0 -1 5356
 E
 areia~
-Areia é tudo o que você pode ver agora.   Infelizmente, areia não é algo
+Areia ï¿½ tudo o que vocï¿½ pode ver agora.   Infelizmente, areia nï¿½o ï¿½ algo
 interessante, apenas areia branca, soprando por todo o lugar.
 ~
 S
 #5357
 Uma Conturbada Tempestade de Areia~
-   Você foi envolto por uma grande tempestade de areia.  Ventos uivantes o
-açoitam por todos os lados e a areia rasga sua pele, cegando você.  Você
-perde seu senso de direção.
+   Vocï¿½ foi envolto por uma grande tempestade de areia.  Ventos uivantes o
+aï¿½oitam por todos os lados e a areia rasga sua pele, cegando vocï¿½.  Vocï¿½
+perde seu senso de direï¿½ï¿½o.
 ~
-53 0 2
+53 0 0 0 0 2
 D0
-Você vê apenas areia seca, que sopra em sua face.
+Vocï¿½ vï¿½ apenas areia seca, que sopra em sua face.
 ~
 ~
 0 -1 5356
 D1
-Você vê apenas areia seca, que sopra em sua face.
+Vocï¿½ vï¿½ apenas areia seca, que sopra em sua face.
 ~
 ~
 0 -1 5357
 D2
-Você vê apenas areia seca, que sopra em sua face.
+Vocï¿½ vï¿½ apenas areia seca, que sopra em sua face.
 ~
 ~
 0 -1 5358
 D3
-Você vê apenas areia seca, que sopra em sua face.
+Vocï¿½ vï¿½ apenas areia seca, que sopra em sua face.
 ~
 ~
 0 -1 5357
 E
 areia~
-Areia é tudo o que você pode ver agora.  Infelizmente, areia não é algo
+Areia ï¿½ tudo o que vocï¿½ pode ver agora.  Infelizmente, areia nï¿½o ï¿½ algo
 interessante, apenas areia branca, soprando por todo o lugar.
 ~
 S
 #5358
 Uma Volumosa Duna de Areia~
-   De alguma forma, você conseguiu atravessar os ventos uivantes da
-tempestade de areia e subir pela duna de areia.  Você pode ver a tempestade
-ao norte e, supostamente, a pirâmide está em algum lugar além dela.  Nada
-além de dunas planas em todas as direções.
+   De alguma forma, vocï¿½ conseguiu atravessar os ventos uivantes da
+tempestade de areia e subir pela duna de areia.  Vocï¿½ pode ver a tempestade
+ao norte e, supostamente, a pirï¿½mide estï¿½ em algum lugar alï¿½m dela.  Nada
+alï¿½m de dunas planas em todas as direï¿½ï¿½es.
 ~
-53 0 2
+53 0 0 0 0 2
 D0
-Você vê apenas areia seca que sopra em sua face.
+Vocï¿½ vï¿½ apenas areia seca que sopra em sua face.
 ~
 ~
 0 -1 5357
 D2
-Ao sul da duna de areia, há um pequeno buraco na areia.   Por alguma razão,
-você parece ser incapaz de atravessá-lo.
+Ao sul da duna de areia, hï¿½ um pequeno buraco na areia.   Por alguma razï¿½o,
+vocï¿½ parece ser incapaz de atravessï¿½-lo.
 ~
 enigma~
 2 5317 5359
 E
-duna areia~
-Areia é tudo o que você pode ver agora.  Infelizmente, areia não é algo
-interessante, apenas areia branca, soprando por todo o lugar.
+hieroglifos~
+Como a maioria dos hierï¿½glifos antigos desta terra, os sï¿½mbolos sï¿½o
+completamente incompreensï¿½veis para vocï¿½.  Talvez a Esfinge possua a
+resposta deste antigo enigma.
 ~
 E
 enigma~
-Uma visão se forma diante de seus olhos, de brilhantes hieróglifos.
+Uma visï¿½o se forma diante de seus olhos, de brilhantes hierï¿½glifos.
 ~
 E
-hieroglifos~
-Como a maioria dos hieróglifos antigos desta terra, os símbolos são
-completamente incompreensíveis para você.  Talvez a Esfinge possua a
-resposta deste antigo enigma.
+duna areia~
+Areia ï¿½ tudo o que vocï¿½ pode ver agora.  Infelizmente, areia nï¿½o ï¿½ algo
+interessante, apenas areia branca, soprando por todo o lugar.
 ~
 S
 #5359
-Através do Buraco de Areia~
-   Você se espreme através do pequeno buraco de areia e alcança uma câmara
-branca.  Sobre você, há um pequeno buraco, alcançável apenas pela rampa de
-areia pela qual você desceu.
+Atravï¿½s do Buraco de Areia~
+   Vocï¿½ se espreme atravï¿½s do pequeno buraco de areia e alcanï¿½a uma cï¿½mara
+branca.  Sobre vocï¿½, hï¿½ um pequeno buraco, alcanï¿½ï¿½vel apenas pela rampa de
+areia pela qual vocï¿½ desceu.
 ~
-53 acd 0
+53 13 0 0 0 0
 D4
-Você vê uma duna de areia.
+Vocï¿½ vï¿½ uma duna de areia.
 ~
 ~
 0 -1 5358
 S
-$
+$~
