@@ -115,7 +115,7 @@ ACMD(do_gassist)
 					helpee = k;
 			}
 		}
-		if ((!k) ||  (!helpee)) {
+		if  (!helpee){
 		send_to_char(ch, "Você não vê ninguém lutando em seu grupo.\r\n");
 		return;
 	 }
