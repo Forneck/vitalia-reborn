@@ -4,13 +4,8 @@ Dentro da Lagoa Escura~
 imposs�vel de se ver qualquer coisa a sua frente.  Para cima e para baixo
 nada h� al�m da escurid�o.
 ~
-97 acfgrs 8
-D U
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 1110
-D D
+97 393317 0 0 0 8
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -21,13 +16,8 @@ Dentro da Lagoa Escura~
    Esse lugar � t�o escuro que provavelmente nem peixes vivem aqui.  Para
 cima e para baixo s� existe uma imensid�o de �gua turva.
 ~
-97 acfgrs 8
-D U
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9700
-D D
+97 393317 0 0 0 8
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -38,13 +28,8 @@ Dentro da Lagoa Escura~
    Cada vez mais fundo...  e mais fundo...  o que poderia existir numa
 escurid�o como essa?  Somente um louco poderia nadar t�o fundo.
 ~
-97 acfgrs 8
-D U
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9701
-D D
+97 393317 0 0 0 8
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -55,13 +40,8 @@ Dentro da Lagoa Escura~
    Nada h� para se ver, escurid�o intensa e um frio insuport�vel.  Al�m de
 escura essa lagoa est� se tornando cada vez mais fria....
 ~
-97 acfgrs 8
-D U
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9702
-D D
+97 393317 0 0 0 8
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -72,13 +52,8 @@ Dentro da Lagoa Escura~
    A melhor id�ia seria subir para a superf�cie, o frio se torna cada vez
 mais terr�vel.  Nada se pode ver tanto para cima como para baixo.
 ~
-97 acfgrs 8
-D U
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9703
-D D
+97 393317 0 0 0 8
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -90,13 +65,8 @@ Dentro da Lagoa Escura~
 Morrer nessa profunda lagoa, solit�rio e sem desvendar os mist�rios nela
 contidos...  Talvez ainda haja tempo de voltar...
 ~
-97 acfgrs 8
-D U
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9704
-D D
+97 393317 0 0 0 8
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -107,13 +77,8 @@ Dentro da Lagoa Escura~
    A melhor id�ia seria subir para a superf�cie, o frio se torna cada vez
 mais terr�vel.  Nada se pode ver tanto para cima como para baixo.
 ~
-97 acfgrs 8
-D U
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9705
-D D
+97 393317 0 0 0 8
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -125,13 +90,8 @@ O Fundo da Lagoa Escura~
 N�o � possivel ver nada, mas aparentemente h� um buraco no lado leste da
 lagoa, talvez seria melhor voltar a superficie.
 ~
-97 acfgrs 8
-D U
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9706
-D E
+97 393317 0 0 0 8
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -142,13 +102,8 @@ Um Buraco no Fundo da Lagoa~
    Este buraco parece lev�-lo para cima, estranhamente parece ser uma
 superf�cie...  O frio ainda � intenso mas a escurid�o parece terminar.
 ~
-97 acfgrs 8
-D W
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9707
-D U
+97 393317 0 0 0 8
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -162,18 +117,8 @@ possivel ver algumas labaredas de fogo, talvez aqui seja uma esp�cie de
 vulc�o.  Para baixo voc� v� o buraco do fundo da lagoa, para leste esta �rea
 se alonga e ao norte voc� v� a entrada de uma grande caverna,
 ~
-97 adfgrs 0
-D D
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9708
-D E
-Parece ser toda a extens�o dessa �rea.
-~
-~
-0 -1 9714
-D N
+97 393321 0 0 0 0
+D0
 A entrada de uma caverna.
 ~
 ~
@@ -186,13 +131,8 @@ a entrada dessa caverna, pois parece uma enorme boca esculpida nas rochas.
 Uma larva gosmenta est� brilhando pelo ch�o e pelas paredes da caverna.
 Ao norte a caverna se alonga e a sul voc� pode ver o corredor do subterr�neo.
 ~
-97 adfgrs 0
-D S
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9709
-D N
+97 393321 0 0 0 0
+D0
 Parece ser uma caverna.
 ~
 ~
@@ -205,13 +145,8 @@ pelo ch�o da caverna.  � imposs�vel de caminhar sem que se escorregue ness
 gosma.  Ao leste a caverna continua a se extender e ao sul voc� pode ver sua 
 entrada.
 ~
-97 adfgrs 0
-D S
-Aparentemente a entrada.
-~
-~
-0 -1 9710
-D E
+97 393321 0 0 0 0
+D0
 O fundo da caverna.
 ~
 ~
@@ -224,19 +159,14 @@ quantia de larva gosmenta e pelos barulhos estranhos que est�o vindo do
 fundo da caverna. Ao leste parece ser o fundo da caverna e o oeste a 
 caverna continua.
 ~
-97 adfgrs 0
-D W
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9711
-D E
+97 393321 0 0 0 0
+D0
 Parece ser o fundo caverna.
 ~
 ~
 0 -1 9713
 S
-#9713 
+#9713
 O Ninho da Serpente~
    Nosssaaaa!!!  � inacredit�vel!!!  Voc� est� diante de uma serpente enorme
 e horrivel.  Com um corpo gigantesco e com tr�s cabe�as, felizmente ela n�o
@@ -244,26 +174,21 @@ notou sua presen�a...  Parece que ela n�o consegue v�-lo, talvez seja
 cega...  A �nica sa�da � retornar pelo lado oeste, talvez fosse melhor fazer
 isso antes que sua presen�a seja notada.
 ~
-97 adfgrs 0
-D W
+97 393321 0 0 0 0
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
 0 -1 9712
 S
-#9714 
+#9714
 O Subterr�neo~
    Voc� est� caminhando pelo subterr�neo, aqui tudo � magn�fico.  A natureza
 com certeza levou mil�nios pra esculpir tudo isso.  No lado leste e oeste
 voc� a grande extens�o desse subterr�neo.
 ~
-97 adfgrs 0
-D W
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9709
-D E
+97 393321 0 0 0 0
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -276,18 +201,8 @@ natureza, mas ao mesmo tempo fica assombrado com o ar assustador e a
 escurid�o.  A oeste o suberr�neo tem continuidade e ao sul voc� pode
 ver uma pequena passagem e a leste uma sala um tanto quente.
 ~
-97 adfgrs 0
-D W
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9714
-D S
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9717
-D E
+97 393321 0 0 0 0
+D0
 O Fogo Eterno.
 ~
 ~
@@ -299,7 +214,7 @@ O Fogo Eterno~
 extremo seus equipamentos se derretem e sua pele arde em chamas.....
 Voc� est� completamente queimado pelo fogo eterno.....!!!
 ~
-97 b 0
+97 2 0 0 0 0
 S
 #9717
 Uma Passagem pelas Pedras~
@@ -307,31 +222,21 @@ Uma Passagem pelas Pedras~
 mais gordo jamais passaria por aqui.  Ao norte voc� segue pelo subterr�neo,
 para baixo voc� entra ainda mais nessa passagem estreita. 
 ~
-97 adfgirs 0
-D N
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9715
-D D
+97 393577 0 0 0 0
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
 0 -1 9718
 S
-#9718 
+#9718
 Uma Passagem pelas Pedras~
    Cada vez fica mais apertada essa passagem.  Nas paredes h� muita umidade
 e muitas rochas cortantes.  Para cima parece um pouco mais f�cil de passar e
 para leste ela se aprofunda.
 ~
-97 adfgirs 0
-D U
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9717
-D E
+97 393577 0 0 0 0
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -343,13 +248,8 @@ Uma Passagem pelas Pedras~
 forte � capaz de ficar preso.  Para oeste a passagem se alonga e para leste
 parece que h� uma sala maior.
 ~
-97 adfgirs 0
-D W
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9718
-D E
+97 393577 0 0 0 0
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -361,13 +261,8 @@ Uma Passagem pelas Pedras~
 confort�vel daqui para frente.  Para baixo um enorme v�o e para oeste a
 passagem estreita por entre as pedras.
 ~
-97 adfgirs 0
-D W
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9719
-D D
+97 393577 0 0 0 0
+D0
 Parece ser um buraco no ch�o.
 ~
 ~
@@ -378,8 +273,8 @@ Uma Passagem pelas Pedras~
    Voc� se escorrega pelas pedras, � muito alto para poder voltar.  Sua
 �nica alternativa � continuar descendo.  Voc� s� v� a sa�da para baixo.
 ~
-97 adfgirs 0
-D D
+97 393577 0 0 0 0
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -391,8 +286,8 @@ A Margem do Rio das Almas~
 quentes, com certeza qualquer um que caisse nelas seria cozido.  Para o sul
 voc� v� o rio de �guas muitos sujas.
 ~
-97 adfgrs 0
-D S
+97 393321 0 0 0 0
+D0
 Um extenso rio de �guas escuras.
 ~
 ~
@@ -404,13 +299,8 @@ O Rio das Almas~
 borbulhas e algo parece se mexer debaixo d'agua.  Ao norte voc� v� a margem
 e a leste o rio continua.
 ~
-97 adfgrs 7
-D N
-Parece ser uma margem.
-~
-~
-0 -1 9722
-D E
+97 393321 0 0 0 7
+D0
 Um extenso rio de �guas escuras.
 ~
 ~
@@ -423,8 +313,8 @@ observado.  N�o existe correnteza, mas voc� percebe que � imposs�vel vol
 como se algo arrastasse voc� cada vez mais para frente.  Sua �nica sa�da �
 continuar seguindo pelo lado sul.
 ~
-97 adfgrs 7
-D S
+97 393321 0 0 0 7
+D0
 Um extenso rio de �guas escuras.
 ~
 ~
@@ -436,8 +326,8 @@ O Rio das Almas~
 extremamente, no meio do rio um rodamoinho se forma, � imposs�vel de
 voltar... voc� est� sendo puxado.  Sua �nica sa�da � a curva ao leste.
 ~
-97 adfgrs 7
-D E
+97 393321 0 0 0 7
+D0
 Um extenso rio de �guas escuras.
 ~
 ~
@@ -449,8 +339,8 @@ O Centro do Rodamoinho~
 pesado.  Esse � um caminho sem volta.  Ao norte voc� v� a �nica sa�da
 poss�vel.
 ~
-97 adfgrs 7
-D N
+97 393321 0 0 0 7
+D0
 Um extenso rio de �guas escuras.
 ~
 ~
@@ -462,8 +352,8 @@ O Rio das Almas~
 infelizmente n�o h� como voltar.  Por todos os lados somente escurid�o.
 Voc� v� outra curva ao leste.
 ~
-97 adfgrs 7
-D E
+97 393321 0 0 0 7
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -476,8 +366,8 @@ com um barco muito grande, com certeza n�o conseguiria seguir viagem.  H�
 muitos morcegos por aqui e o cheiro de suas fezes � insuport�vel.  A �nica
 passagem � do lado norte, onde h� uma curva.
 ~
-97 adfgrs 7
-D N
+97 393321 0 0 0 7
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -491,19 +381,14 @@ sinais estranhos talvez alguma civiliza��o tenha vivido aqui, mas �
 impossivel de se ler dessa dist�ncia.  Voc� pode ver um passagem estreita a
 leste, saindo do rio.  E ao sul parece que o rio continua.
 ~
-97 adfgrs 7
-D S
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9744
-D E
+97 393321 0 0 0 7
+D0
 Parece ser uma margem.
 ~
 ~
 0 -1 9730
 S
-#9730 
+#9730
 Uma Margem do lado leste do Rio~
    � incr�vel a sensa��o que mais alguem est� aqui.  A impress�o que voc�
 tem � que essa ampla caverna � tomada por algo m�gico e talvez muito
@@ -511,13 +396,8 @@ mal�fico.  No lado leste voc� v� uma grande trilha pelas pedras, e a oeste
 o rio continua, e voc� percebe que parece haver a possibilidade de haver
 uma caverna submersa dentro da �gua, talvez fosse interessante explora-la.
 ~
-97 adfgrs 0
-D W
-Um extenso rio de �guas escuras.
-~
-~
-0 -1 9729
-D E
+97 393321 0 0 0 0
+D0
 Uma trilha.
 ~
 ~
@@ -529,13 +409,8 @@ Uma Trilha na Caverna~
 de ranhuras, algo estranho passou por aqui.  Ao leste a trilha parece ser
 profunda e a oeste voc� a margem do rio.
 ~
-97 adfgirs 0
-D W
-Parece ser a margem do rio.
-~
-~
-0 -1 9730
-D E
+97 393577 0 0 0 0
+D0
 A trilha se extende...
 ~
 ~
@@ -546,13 +421,8 @@ A Trilha~
    O cheiro de fezes de morcego aqui � horr�vel, voc� sente sua narinas
 arderem.  Arrrghhhhh...  A oeste e ao sul a trilha continua.
 ~
-97 adfgirs 0
-D W
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9731
-D S
+97 393577 0 0 0 0
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -563,13 +433,8 @@ A Trilha~
    Essa trilha � muito dif�cil de ser percorrida, as pedras est�o cada vez
 mais escorregadias.  A trilha continua ao sul e ao norte.
 ~
-97 adfgirs 0
-D N
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9732
-D S
+97 393577 0 0 0 0
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -582,13 +447,8 @@ foi te castigar tanto, com certeza ap�s sair daqui seus p�s estar�o mo�d
 Ao norte voc� pode ver a trilha se aprofundar e ao leste parece ser uma
 clareira.
 ~
-97 adfgirs 0
-D N
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9733
-D E
+97 393577 0 0 0 0
+D0
 Uma certa claridade surge daquele lado.
 ~
 ~
@@ -600,13 +460,8 @@ Uma Trilha na Caverna~
 cheiro horr�vel emana de dentro dela, com certeza deve estar infestada de
 morcegos.  Ao sul est� a margem do rio e a oeste o come�o da trilha.
 ~
-97 adfgirs 0
-D W
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9734
-D S
+97 393577 0 0 0 0
+D0
 A margem do rio.
 ~
 ~
@@ -618,7 +473,7 @@ Uma Margem do lado sudeste do Rio~
 no meio das rochas, ser� que h� uma passagem no meio das rochas?  A oeste o
 rio aparentemente � bem longo e ao norte h� uma trilha.
 ~
-97 adfgrs 0
+97 393321 0 0 0 0
 D0
 Uma trilha.
 ~
@@ -642,13 +497,8 @@ oeste voc� pode ver uma grande extens�o de �gua, mas olhando para dentro d
 agua voc� v� o que parece ser uma caverna submersa, e algo est� se mexendo
 l� dentro.
 ~
-97 adfgrs 7
-D W
-Um rio extenso e muito sujo.
-~
-~
-0 -1 9736
-D D
+97 393321 0 0 0 7
+D0
 Parece ser... algo estranho.
 ~
 ~
@@ -660,7 +510,7 @@ A Caverna Submersa~
 passar� o resto de seu dias aqui juntamente com essas horr�veis....
 caveeeiiiirasss.  Seu destino parece estar tra�ado!!! 
 ~
-97 adfgrs 7
+97 393321 0 0 0 7
 S
 #9739
 O Rio das Almas~
@@ -668,13 +518,8 @@ O Rio das Almas~
 e cristalina, outros trechos como esse aqui a �gua � extremamente
 turva.  A leste voc� v� uma margem do rio e a oeste ele segue seu rumo.
 ~
-97 adfgrs 7
-D E
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9736
-D W
+97 393321 0 0 0 7
+D0
 Um rio extenso e muito sujo.
 ~
 ~
@@ -685,13 +530,8 @@ O Rio das Almas~
    O rio est� calmo porem suas �guas s�o muito escuras, a oeste e a leste
 voc� v� que ele � longo.
 ~
-97 adfgrs 7
-D E
-Um rio extenso e muito sujo.
-~
-~
-0 -1 9739
-D W
+97 393321 0 0 0 7
+D0
 Um rio extenso e muito sujo.
 ~
 ~
@@ -702,13 +542,8 @@ O Rio das Almas~
    Esse rio � muito extenso, uma pessoa sem seu preparo f�sico com certeza
 n�o conseguiria proseguir.  A leste e oeste o rio avan�a.
 ~
-97 adfgrs 7
-D E
-Um rio extenso e muito sujo.
-~
-~
-0 -1 9740
-D W
+97 393321 0 0 0 7
+D0
 Um rio extenso e muito sujo.
 ~
 ~
@@ -719,13 +554,8 @@ O Rio das Almas~
    Voc� est� bem perto da margem do rio.  A norte e a leste ele continua com
 suas �guas escuras.
 ~
-97 adfgrs 7
-D E
-Um rio extenso e muito sujo.
-~
-~
-0 -1 9741
-D N
+97 393321 0 0 0 7
+D0
 Um rio extenso e muito sujo.
 ~
 ~
@@ -736,13 +566,8 @@ O Rio das Almas~
    Voc� navega incans�velmente por essas �guas.  A norte voc� a vista uma
 parte pr�xima da margem, ao sul o rio continua num trecho muito estreito.
 ~
-97 adfgrs 7
-D S
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9709
-D N
+97 393321 0 0 0 7
+D0
 Parece ser uma caverna.
 ~
 ~
@@ -754,18 +579,8 @@ O Rio das Almas~
 Do lado sul ele segue longamente, ao norte parece haver uma pequena curva e
 ao oeste existe um pequeno canal.
 ~
-97 adfgrs 7
-D S
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9743
-D N
-Parece ser uma curva.
-~
-~
-0 -1 9729
-D W
+97 393321 0 0 0 7
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -776,13 +591,8 @@ Um Pequeno Canal~
    Voc� est� num pequeno e estreito canal, a leste voc� avista o rio extenso
 e ao oeste parece ser o final desse pequeno canal.
 ~
-97 adfgirs 7
-D E
-Um rio extenso e muito sujo.
-~
-~
-0 -1 9744
-D W
+97 393577 0 0 0 7
+D0
 Um pequeno canal.
 ~
 ~
@@ -794,13 +604,8 @@ Um Pequeno Canal~
 estranho!  Voc� pode ver uma margem aparentemente segura do lado sul, do
 lado leste o canal tem continuidade.
 ~
-97 adfgrs 7
-D E
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9745
-D S
+97 393321 0 0 0 7
+D0
 Parece ser uma margem do rio.
 ~
 ~
@@ -812,18 +617,8 @@ A Margem Sudoeste do Rio~
 de areia.  Ao norte voc� v� um pequeno canal, ao sul h� uma entrada bem
 pequena nas rochas e a oeste h� um caminho arenoso.
 ~
-97 adfgrs 0
-D N
-Parece ser um pequeno canal.
-~
-~
-0 -1 9746
-D S
-Parece ser uma pequena entrada no meio das rochas.
-~
-~
-0 -1 9717
-D W
+97 393321 0 0 0 0
+D0
 Nada � possivel ver al�m da escurid�o.
 ~
 ~
@@ -836,13 +631,8 @@ estranho, como se fosse lava vulc�nica, por�m muito menos quente.  A leste
 est� a margem de um canal do rio e ao sul voc� pode ver o camiho arenoso
 seguir por entre a escurid�o e as pedras.
 ~
-97 adfgrs 0
-D E
-Nada � possivel ver al�m da pequena margem do rio.
-~
-~
-0 -1 9747
-D S
+97 393321 0 0 0 0
+D0
 Parece ser um caminho.
 ~
 ~
@@ -854,13 +644,8 @@ Um Caminho~
 toda a extens�o do caminho e ao oeste voc� pode ver uma enorme forma��o
 rochosa, distribuida de forma que parece um or�culo feito em pedras.
 ~
-97 adfgrs 0
-D N
-Um pequeno caminho.
-~
-~
-0 -1 9748
-D W
+97 393321 0 0 0 0
+D0
 Parece ser um um grande or�culo sacrado.
 ~
 ~
@@ -873,13 +658,8 @@ voc� do mundo desconhecido.  Desenhos e inscri��es muito antigas cincundam
 todo o batente desse enorme port�o.  A oeste voc� entra pelo portal do
 desconhecido e a leste voc� retorna ao seu caminho.
 ~
-97 adfgrs 0
-D E
-Apenas um caminho.
-~
-~
-0 -1 9749
-D W
+97 393321 0 0 0 0
+D0
 Um grande portal feito de pedras muito antigas.
 ~
 ~
@@ -893,13 +673,8 @@ grande anel rochoso.  H� uma grande pedra com inscri��es muito antigas e
 aparentemente importantes.  A oeste voc� cruza o or�culo seguindo um caminho
 escuro e a leste voc� retorna ao portal.
 ~
-97 adfgrs 0
-D E
-Um grande portal feito de pedras muito antigas.
-~
-~
-0 -1 9764
-D W
+97 393321 0 0 0 0
+D0
 A sa�da do or�culo.
 ~
 ~
@@ -907,8 +682,8 @@ A sa�da do or�culo.
 E
 inscri��o inscri��es~
 Uma inscri��o muito antiga esculpida numa grande pedra diz:
-&R"Somente os s�bios teem o entendimento, antes de entrar volte e fa�a
-rever�ncia ao seu deus, pois os fi�s ganhar�o conhecimento e gl�ria."&n
+@R"Somente os s�bios teem o entendimento, antes de entrar volte e fa�a
+rever�ncia ao seu deus, pois os fi�s ganhar�o conhecimento e gl�ria."@n
 ~
 S
 #9752
@@ -918,8 +693,8 @@ visto voc� agora n�o tem mais escolha.  Voc� est� dentro de uma grande
 caverna sua �nica saida � seguir a oeste e adentrar cada vez mais dentro
 dessa caverna.
 ~
-97 adfgrs 0
-D W
+97 393321 0 0 0 0
+D0
 Nada se pode ver al�m da escurid�o.
 ~
 ~
@@ -932,13 +707,8 @@ morcegos voam e derrubam fezes em sua cabe�a, arrghhh... que horrivel!
 A leste voc� retorna ao come�o da caverna e acima voc� v� uma pequena
 passagem.
 ~
-97 adfgrs 0
-D E
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9752
-D U
+97 393321 0 0 0 0
+D0
 Parece ser uma pequena entrada nas rochas.
 ~
 ~
@@ -950,13 +720,8 @@ Uma Pequena Passagem~
 daqui com certeza n�o ser� muito agrad�vel.  Para cima a passagem fica cada
 vez mais lisa e perigosa e para baixo est� a grande caverna.
 ~
-97 adfgirs 0
-D D
-Um pequena entrada...
-~
-~
-0 -1 9753
-D U
+97 393577 0 0 0 0
+D0
 Nada se pode ver al�m da escurid�o.
 ~
 ~
@@ -968,13 +733,8 @@ Fim da Pequena Passagem~
 a passagem se estende e pra cima voc� percebe que tem acesso a uma outra
 grande c�mara.
 ~
-97 adfgirs 0
-D D
-Nada � possivel ver al�m da escurid�o.
-~
-~
-0 -1 9754
-D U
+97 393577 0 0 0 0
+D0
 Uma grande c�mara.
 ~
 ~
@@ -986,13 +746,8 @@ A Grande C�mara~
 sensa��o que est� observado, como se essas pedras tivesse vida pr�pria.  A
 leste a grande c�mara continua e para baixo h� uma pequena passagem.
 ~
-97 adfgrs 0
-D D
-A pequena passagem.
-~
-~
-0 -1 9755
-D E
+97 393321 0 0 0 0
+D0
 A grande c�mara.
 ~
 ~
@@ -1004,13 +759,8 @@ A Grande C�mara~
 mexem...  Voc� parece ter visto essa pedra l� na entrada!!!  Para oeste e
 para norte a grande c�mara continua... repleta de pedras estranhas!
 ~
-97 adfgrs 0
-D W
-A grande c�mara.
-~
-~
-0 -1 9756
-D N
+97 393321 0 0 0 0
+D0
 A grande c�mara.
 ~
 ~
@@ -1022,13 +772,8 @@ A Grande C�mara~
 agora pode notar elas parecem... ser guerreiros petrificados!!!  Ao sul e
 ao norte a grande c�mara se alonga.
 ~
-97 adfgrs 0
-D S
-A grande c�mara.
-~
-~
-0 -1 9757
-D N
+97 393321 0 0 0 0
+D0
 A grande c�mara.
 ~
 ~
@@ -1040,13 +785,8 @@ A Grande C�mara~
 parece que alguem utiliza essa mesa de pedras para fazer reverencias a algum
 deus.  Ao sul e a oeste voc� pode ver pedras.
 ~
-97 adfgrs 0
-D S
-A grande c�mara.
-~
-~
-0 -1 9758
-D W
+97 393321 0 0 0 0
+D0
 A grande c�mara.
 ~
 ~
@@ -1058,19 +798,13 @@ A Grande C�mara~
 feita de pedra, com inscri��es muito antigas nela.  A leste voc� v� a grande
 c�mara e norte a grande porta de pedra.
 ~
-97 adfgrs 0
-D E
-A grande c�mara.
-~
-~
-0 -1 9759
-D N
+97 393321 0 0 0 0
+D0
 As portas s�o feitas de pedras muito grandes e extremamente pesadas.
 N�o � poss�vel imaginar o pode existir de t�o valioso assim por de
 tr�s delas.
 ~
 portas pedras~
-:n 2 a porta de pedra
 1 2 9761
 S
 #9761
@@ -1081,16 +815,8 @@ batalha pois h� muitas armas jogadas por todos os lados.  Ao sul a grande
 porta de pedra est� aparentemente trancada e a norte a sala continua repleta
 de ossos.
 ~
-97 adfgrs 0
-D S
-As portas s�o feitas e pedras muito grandes e extremamente pesadas.
-N�o � poss�vel imaginar o pode existir de t�o valioso assim por de
-tr�s delas.
-~
-portas pedras~
-:n 2 a porta de pedra
-1 -1 9760
-D N
+97 393321 0 0 0 0
+D0
 A grande sala.
 ~
 ~
@@ -1102,13 +828,8 @@ Sala dos Ossos~
 pra seu deus...  Ao sul voc� retorna e a oeste voc� uma pequena entrada para
 uma outra sala.  Aparentemente uma luz emana dessa sala.
 ~
-97 adfgrs 0
-D S
-A grande sala.
-~
-~
-0 -1 9761
-D W
+97 393321 0 0 0 0
+D0
 Um pequena e intrigante sala.
 ~
 ~
@@ -1124,8 +845,8 @@ insuport�vel... parece que voc� n�o foi t�o sabio como teve oportunidade
 ser.  Sua �nica sa�da � um portal de luzes que emite muita claridade a
 oeste, por�m � imposs�vel olhar para ele.
 ~
-97 adfgrs 0
-D W
+97 393321 0 0 0 0
+D0
 Um portal de luzes capaz de cega-lo.
 ~
 ~
@@ -1138,16 +859,11 @@ voc� do mundo desconhecido.  Desenhos e inscri��es muito antigas cincundam
 todo o batente desse enorme port�o.  A oeste voc� entra pelo portal do
 desconhecido e a leste voc� retorna ao seu caminho.
 ~
-97 adfgrs 0
-D E
-Apenas um caminho.
-~
-~
-0 -1 9749
-D W
+97 393321 0 0 0 0
+D0
 Um grande portal feito de pedras muito antigas.
 ~
 ~
 0 -1 9854
 S
-$
+$~
