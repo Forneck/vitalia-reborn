@@ -292,6 +292,7 @@ ACMD(do_backstab)
  */
 ACMD(do_backflip)
 {
+   	char arg[MAX_INPUT_LENGTH];
 	struct char_data *vict;
 	int percent, prob;
 
