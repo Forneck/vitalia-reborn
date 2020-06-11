@@ -11,7 +11,7 @@
    Atualização do sistema interno do mundo para a versão mais recente.
    O Mundo de Vitália agora conta com uma nova classe de personagem, @RRanger@n.
 
-   Novos tipos de item (@GPlanta@n e @YMobilia@n).
+   Novos tipos de item (@GPlanta@n e @GMobilia@n).
    Os jogadores podem sentar, descansar e deitar nas mobilias.
    É possivel beber direto em algumas salas.
    Mais opções no toggle/prefedit.
@@ -19,10 +19,13 @@
    Adicionado historico para canais de comunicação.
    É possível olhar para o céu e ver a posição do sol, lua e estrelas.
    Look around tambêm pode dar mais informações das salas.
-  Habilidade Scan, mostra os mobs nas salas próximas, para @RLadrões@n e @RRanger@n.
+  Habilidade @YScan@n, mostra os mobs nas salas próximas, para @RLadrões@n e @RRanger@n.
    Sistema de grupos modificado, agora mostra lista de grupos @Gabertos@n e @Rfechados@n para novos membros e em qual área está o líder.
   Who mostra separado personagens até nível 10.
   Sistema de Happyhour com bonus de ouro e xp.
   Where mostra o nome da área.
   Comando sacrifice para sacrificar corpos e objetos. 
   Dex agora influencia na hora do primeiro hit.
+  Intervalo depois do @YBackstab@n, @YBash@n diminuido.
+  Habilidade @YBackflip@n modificada.
+  Habilidade @YMount@n temporariamente desabilitada.
