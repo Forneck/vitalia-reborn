@@ -114,8 +114,7 @@ void set_spells_function()
    
        if ((spell = get_spell_by_vnum(SKILL_COMBO_ATTACK)))
    spell->function = do_combo;
-   
-   
+    
        if ((spell = get_spell_by_vnum(SKILL_MEDITATE)))
    spell->function = do_meditate;
 }
