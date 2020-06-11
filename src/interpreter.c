@@ -219,6 +219,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"mlist", "mlist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_MLIST},
 	{"mcopy", "mcopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_MEDIT},
 	{"msgedit", "msgedit", POS_DEAD, do_msgedit, LVL_GOD, 0},
+		{"murder", "mur", POS_FIGHTING, do_hit, 0, SCMD_MURDER},
 	{"mute", "mute", POS_DEAD, do_wizutil, LVL_GOD, SCMD_MUTE},
 
 	{"news", "news", POS_SLEEPING, do_gen_ps, 0, SCMD_NEWS},
