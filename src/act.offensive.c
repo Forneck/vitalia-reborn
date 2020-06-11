@@ -118,10 +118,11 @@ ACMD(do_gassist)
 			}
 		}
 
-		if  (!helpee){
+	if (!helpee)
+	{
 		send_to_char(ch, "Você não vê ninguém lutando em seu grupo.\r\n");
 		return;
-	 }
+	}
 	else
 	{
 		opponent = FIGHTING(helpee);
@@ -228,7 +229,7 @@ ACMD(do_backstab)
 
 	if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_BACKSTAB))
 	{
-		send_to_char(ch, "You have no idea how to do that.\r\n");
+		send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
 		return;
 	}
 
@@ -236,35 +237,40 @@ ACMD(do_backstab)
 
 	if (!(vict = get_char_vis(ch, buf, NULL, FIND_CHAR_ROOM)))
 	{
-		send_to_char(ch, "Backstab who?\r\n");
+		send_to_char(ch, "Esfaquear as costas de quem?\r\n");
 		return;
 	}
 	if (vict == ch)
 	{
-		send_to_char(ch, "How can you sneak up on yourself?\r\n");
+		send_to_char(ch, "Como você pretende pegar você mesmo de surpresa?\r\n");
 		return;
 	}
+	if (!CONFIG_PK_ALLOWED && !IS_NPC(opponent))	/* prevent accidental
+													   pkill */
+		act("Use 'murder' se voce realmente deseja atacar $N.", FALSE, ch, 0, opponent, TO_CHAR);
 	if (!GET_EQ(ch, WEAR_WIELD))
 	{
-		send_to_char(ch, "You need to wield a weapon to make it a success.\r\n");
+		send_to_char(ch, "Voce precisa empunhar uma arma para fazer isso.\r\n");
 		return;
 	}
 	if (GET_OBJ_VAL(GET_EQ(ch, WEAR_WIELD), 3) != TYPE_PIERCE - TYPE_HIT)
 	{
-		send_to_char(ch, "Only piercing weapons can be used for backstabbing.\r\n");
+		send_to_char(ch,
+					 "Somente armas perfurantes podem ser usadas para esfaquear alguém pelas costas.\r\n");
 		return;
 	}
 	if (FIGHTING(vict))
 	{
-		send_to_char(ch, "You can't backstab a fighting person -- they're too alert!\r\n");
+		send_to_char(ch,
+					 "Você não pode pegar de surpresa uma pessoa lutando -- ela provavelmente está alerta!\r\n");
 		return;
 	}
 
 	if (MOB_FLAGGED(vict, MOB_AWARE) && AWAKE(vict))
 	{
-		act("You notice $N lunging at you!", FALSE, vict, 0, ch, TO_CHAR);
-		act("$e notices you lunging at $m!", FALSE, vict, 0, ch, TO_VICT);
-		act("$n notices $N lunging at $m!", FALSE, vict, 0, ch, TO_NOTVICT);
+		act("Você percebe $N tentando pegar você desprevenid$r!", FALSE, vict, 0, ch, TO_CHAR);
+		act("$l percebeu você tentando pegá-l$r desprevenid$r!", FALSE, vict, 0, ch, TO_VICT);
+		act("$n percebeu que $N iria pegá-l$r desprevenid$r!", FALSE, vict, 0, ch, TO_NOTVICT);
 		hit(vict, ch, TYPE_UNDEFINED);
 		return;
 	}
@@ -277,7 +283,93 @@ ACMD(do_backstab)
 	else
 		hit(ch, vict, SKILL_BACKSTAB);
 
-	WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
+	if (GET_LEVEL(ch) < LVL_GOD)
+	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+}
+
+/* 
+ * BACKFLIP skill
+ */
+ACMD(do_backflip)
+{
+	struct char_data *vict;
+	int percent, prob;
+
+	if (IS_NPC(ch)
+		|| !GET_SKILL(ch, SKILL_BACKFLIP)
+		|| !GET_SKILL(ch, SKILL_BACKSTAB) || PLR_FLAGGED(ch, PLR_TRNS))
+	{
+		send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
+		return;
+	}
+	else if (GET_POS(ch) != POS_FIGHTING)
+	{
+		send_to_char(ch, "Você deve estar lutando para ter sucesso.\r\n");
+		return;
+	}
+
+	one_argument(argument, arg);
+
+	if (*arg)
+	{
+		if ((vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)) == NULL)
+		{
+			send_to_char(ch, "Quem?\r\n");
+			return;
+		}
+	}
+	else if (FIGHTING(ch) && IN_ROOM(ch) == IN_ROOM(FIGHTING(ch)))
+	{
+		vict = FIGHTING(ch);
+	}
+	else
+	{
+		send_to_char(ch, "Quem?\r\n");
+		return;
+	}
+
+	if (vict == ch)
+	{
+		send_to_char(ch, "Tá... entendí... faz muito sentido...\r\n");
+		return;
+	}
+	if (FIGHTING(vict) == NULL || FIGHTING(vict) != ch)
+	{
+		act("$N não está lutando com você...", FALSE, ch, NULL, vict, TO_CHAR);
+		return;
+	}
+
+	if (IS_DEAD(ch))
+	{
+		act("Como você pretende fazer isso? Você está mort$r!", FALSE, ch, NULL, vict, TO_CHAR);
+		return;
+	}
+
+	percent = rand_number(1, 101);
+	prob = GET_SKILL(ch, SKILL_BACKFLIP);
+
+	percent += (25 - GET_DEX(ch));
+	percent += (25 - GET_STR(ch)) / 2;
+
+	if (percent > prob)
+	{
+		act("Você tenta fazer uma cambalhota por sobre $N, mas perde o equilíbrio e cai sentad$r.", FALSE, ch, NULL, vict, TO_CHAR);
+		act("$n faz um lindo giro no ar e cai sentad$r no chão, que ridículo...", FALSE, ch,
+			NULL, vict, TO_ROOM);
+		GET_POS(ch) = POS_SITTING;
+	WAIT_STATE(ch, PULSE_VIOLENCE * 3);
+	}
+	else
+	{
+		act("Que cambalhota perfeita! $U$N não sabe onde você está e ficou perdid$R!", FALSE,
+			ch, NULL, vict, TO_CHAR);
+		act("$n faz uma cambalhota por sobre $N, que fica confus$R!", FALSE, ch, NULL, vict,
+			TO_NOTVICT);
+		act("$n faz uma cambalhota e você $r perde de vista.", FALSE, ch, NULL, vict, TO_VICT);
+	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+		/* it is assured that vict will be fighting ch */
+		stop_fighting(vict);
+	}
 }
 
 ACMD(do_order)
@@ -290,29 +382,29 @@ ACMD(do_order)
 	half_chop(argument, name, message);
 
 	if (!*name || !*message)
-		send_to_char(ch, "Order who to do what?\r\n");
+		send_to_char(ch, "Ordenar quem a fazer o quê?\r\n");
 	else if (!(vict = get_char_vis(ch, name, NULL, FIND_CHAR_ROOM))
-			 && !is_abbrev(name, "followers"))
-		send_to_char(ch, "That person isn't here.\r\n");
+			 && !is_abbrev(name, "seguidores") && !is_abbrev(name, "followers"))
+		send_to_char(ch, "Esta pessoa não está aqui.\r\n");
 	else if (ch == vict)
-		send_to_char(ch, "You obviously suffer from skitzofrenia.\r\n");
+		send_to_char(ch, "Você evidentemente sofre de esquisofrenia.\r\n");
 	else
 	{
 		if (AFF_FLAGGED(ch, AFF_CHARM))
 		{
-			send_to_char(ch, "Your superior would not aprove of you giving orders.\r\n");
+			send_to_char(ch, "Seu superior não irá aprovar você dando ordens.\r\n");
 			return;
 		}
 		if (vict)
 		{
 			char buf[MAX_STRING_LENGTH];
 
-			snprintf(buf, sizeof(buf), "$N orders you to '%s'", message);
+			snprintf(buf, sizeof(buf), "$N ordena você a '%s'", message);
 			act(buf, FALSE, vict, 0, ch, TO_CHAR);
-			act("$n gives $N an order.", FALSE, ch, 0, vict, TO_ROOM);
+			act("$n dá uma ordem a $N ", FALSE, ch, 0, vict, TO_ROOM);
 
 			if ((vict->master != ch) || !AFF_FLAGGED(vict, AFF_CHARM))
-				act("$n has an indifferent look.", FALSE, vict, 0, 0, TO_ROOM);
+				act("$n tem um olhar indiferente.", FALSE, vict, 0, 0, TO_ROOM);
 			else
 			{
 				send_to_char(ch, "%s", CONFIG_OK);
@@ -323,7 +415,7 @@ ACMD(do_order)
 		{						/* This is order "followers" */
 			char buf[MAX_STRING_LENGTH];
 
-			snprintf(buf, sizeof(buf), "$n issues the order '%s'.", message);
+			snprintf(buf, sizeof(buf), "$ndita a ordem '%s'.", message);
 			act(buf, FALSE, ch, 0, 0, TO_ROOM);
 
 			for (k = ch->followers; k; k = k->next)
@@ -338,7 +430,7 @@ ACMD(do_order)
 			if (found)
 				send_to_char(ch, "%s", CONFIG_OK);
 			else
-				send_to_char(ch, "Nobody here is a loyal subject of yours!\r\n");
+				send_to_char(ch, "Ninguém aqui é fiel a você!\r\n");
 		}
 	}
 }
@@ -346,11 +438,24 @@ ACMD(do_order)
 ACMD(do_flee)
 {
 	int i, attempt, loss;
+	int perc, prob, escape = false;
 	struct char_data *was_fighting;
+
+	if (subcmd == SCMD_ESCAPE)
+	{
+		if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_ESCAPE))
+		{
+			send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
+			return;
+		}
+		perc = rand_number(1, 101);	/* 101% is a complete failure */
+		prob = GET_SKILL(ch, SKILL_ESCAPE);
+		escape = prob > perc;
+	}
 
 	if (GET_POS(ch) < POS_FIGHTING)
 	{
-		send_to_char(ch, "You are in pretty bad shape, unable to flee!\r\n");
+		send_to_char(ch, "Você não está em condições de fugir!\r\n");
 		return;
 	}
 
@@ -361,9 +466,17 @@ ACMD(do_flee)
 		if (CAN_GO(ch, attempt) && !ROOM_FLAGGED(EXIT(ch, attempt)->to_room, ROOM_DEATH))
 		{
 			act("$n entra em pânico e tenta fugir!", TRUE, ch, 0, 0, TO_ROOM);
-			was_fighting = FIGHTING(ch);
+			if (!escape)
+				was_fighting = FIGHTING(ch);
+
+			if (AFF_FLAGGED(ch, AFF_PARALIZE))
+			{
+				send_to_char(ch, "Você está paralisado! Não pode fugir! Comece a rezar...\r\n");
+				act("$n não pode fugir, $l está paralisad$r!", TRUE, ch, 0, 0, TO_ROOM);
+			}
 			if (do_simple_move(ch, attempt, TRUE))
 			{
+				send_to_char(ch, "Você foge de pernas para o ar.\r\n");
 				if (was_fighting && !IS_NPC(ch))
 				{
 					loss = GET_MAX_HIT(was_fighting) - GET_HIT(was_fighting);
@@ -378,12 +491,13 @@ ACMD(do_flee)
 			}
 			else
 			{
+				send_to_char(ch, "Você tenta fugir, mas não consegue!\r\n");
 				act("$n tenta fugir mas não consegue!", TRUE, ch, 0, 0, TO_ROOM);
 			}
 			return;
 		}
 	}
-	send_to_char(ch, "PANICO!  Você não pode escapar!\r\n");
+	send_to_char(ch, "@WPANICO!  Você não tem escapatória!@n\r\n");
 }
 
 ACMD(do_bash)
@@ -397,19 +511,20 @@ ACMD(do_bash)
 
 	if (!IS_NPC(ch) && !GET_SKILL(ch, SKILL_BASH))
 	{
-		send_to_char(ch, "You have no idea how.\r\n");
+		send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
 		return;
 	}
 	if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_PEACEFUL))
 	{
-		send_to_char(ch, "This room just has such a peaceful, easy feeling...\r\n");
+		send_to_char(ch, "Este lugar é muito calmo, sem violências...\r\n");
 		return;
 	}
 	if (!GET_EQ(ch, WEAR_WIELD))
 	{
-		send_to_char(ch, "You need to wield a weapon to make it a success.\r\n");
+		send_to_char(ch, "Você precisa empunhar uma arma para ter sucesso.\r\n");
 		return;
 	}
+
 	if (!(vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)))
 	{
 		if (FIGHTING(ch) && IN_ROOM(ch) == IN_ROOM(FIGHTING(ch)))
@@ -418,18 +533,24 @@ ACMD(do_bash)
 		}
 		else
 		{
-			send_to_char(ch, "Bash who?\r\n");
+			send_to_char(ch, "Derrubar quem?\r\n");
 			return;
 		}
 	}
 	if (vict == ch)
 	{
-		send_to_char(ch, "Aren't we funny today...\r\n");
+		send_to_char(ch, "Sem gracinhas hoje...\r\n");
 		return;
 	}
 	if (MOB_FLAGGED(vict, MOB_NOKILL))
 	{
-		send_to_char(ch, "This mob is protected.\r\n");
+		send_to_char(ch, "Você não pode lutar.\r\n");
+		return;
+	}
+	if (!CONFIG_PK_ALLOWED && !IS_NPC(vict))
+	{
+		/* prevent accidental pkill */
+		act("Use 'murder' se voce realmente deseja atacar $N.", FALSE, ch, 0, vict, TO_CHAR);
 		return;
 	}
 
@@ -445,7 +566,11 @@ ACMD(do_bash)
 	if (percent > prob)
 	{
 		damage(ch, vict, 0, SKILL_BASH);
-		GET_POS(ch) = POS_SITTING;
+		if (GET_LEVEL(ch) < LVL_GOD)
+		{
+			GET_POS(ch) = POS_SITTING;
+			WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+		}
 	}
 	else
 	{
@@ -457,13 +582,13 @@ ACMD(do_bash)
 		 */
 		if (damage(ch, vict, 1, SKILL_BASH) > 0)
 		{						/* -1 = dead, 0 = miss */
-			WAIT_STATE(vict, PULSE_VIOLENCE);
+			WAIT_STATE(vict, PULSE_VIOLENCE * 2);
 			if (IN_ROOM(ch) == IN_ROOM(vict))
 				GET_POS(vict) = POS_SITTING;
 		}
 	}
 
-
+if (GET_LEVEL(ch) < LVL_GOD)
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
