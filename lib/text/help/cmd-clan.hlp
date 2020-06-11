@@ -2,321 +2,321 @@ CLAN
 
 Uso: clan <subcomando>
 
-   O comando CLAN é genérico, permitindo o uso de vários outros comandos
+   O comando CLAN ï¿½ genï¿½rico, permitindo o uso de vï¿½rios outros comandos
 (sub-comandos do comando CLAN), cada um para uma determinada tarefa, todas
-relativas ao controle e interação em clãs.
+relativas ao controle e interaï¿½ï¿½o em clï¿½s.
 
-   Para saber quais são os sub-comandos disponíveis para você, digite apenas
+   Para saber quais sï¿½o os sub-comandos disponï¿½veis para vocï¿½, digite apenas
 o comando CLAN, sem nenhum outro argumento.
 
-   Para obter ajuda específica para um sub-comando do comando CLAN, use o
-comando HELP, seguido do comando que você quer obter ajuda.  Ex: HELP CLAN
+   Para obter ajuda especï¿½fica para um sub-comando do comando CLAN, use o
+comando HELP, seguido do comando que vocï¿½ quer obter ajuda.  Ex: HELP CLAN
 WHO
-#
+#0
 "CLAN APPLY"
 
-Uso: clan apply <clã>
+Uso: clan apply <clï¿½>
 
-   O comando CLAN APPLY permite que você solicite inscrição em um
-determinado clã.  Você ficará como solicitante até o momento que um mestre
-decidir se você pode ou não fazer parte do clã.
+   O comando CLAN APPLY permite que vocï¿½ solicite inscriï¿½ï¿½o em um
+determinado clï¿½.  Vocï¿½ ficarï¿½ como solicitante atï¿½ o momento que um mestre
+decidir se vocï¿½ pode ou nï¿½o fazer parte do clï¿½.
 
-Veja também: CLAN RESIGN
-#
+Veja tambï¿½m: CLAN RESIGN
+#0
 "CLAN RESIGN"
 
 Uso: clan resign
 
-   O comando CLAN RESIGN permite que você deixe seu clã, a qualquer momento.
-Após o uso deste comando, só será possível voltar ao clã com a permissão de
+   O comando CLAN RESIGN permite que vocï¿½ deixe seu clï¿½, a qualquer momento.
+Apï¿½s o uso deste comando, sï¿½ serï¿½ possï¿½vel voltar ao clï¿½ com a permissï¿½o de
 um mestre do mesmo.
 
-Veja também: CLAN APPLY
-#
+Veja tambï¿½m: CLAN APPLY
+#0
 "CLAN INFO"
 
-Uso: clan info <clã>
+Uso: clan info <clï¿½>
 
-   Este comando mostra informações sobre o clã especificado.  O número de
-informações mostradas varia de acordo com o nível, posição ou se você faz
-parte ou não do clã especificado.
+   Este comando mostra informaï¿½ï¿½es sobre o clï¿½ especificado.  O nï¿½mero de
+informaï¿½ï¿½es mostradas varia de acordo com o nï¿½vel, posiï¿½ï¿½o ou se vocï¿½ faz
+parte ou nï¿½o do clï¿½ especificado.
 
-Veja também: CLAN LIST
-#
+Veja tambï¿½m: CLAN LIST
+#0
 "CLAN HISTORY"
 
-Uso: clan history <clã>
+Uso: clan history <clï¿½>
 
-   Este comando mostra a história do clã especificado.
+   Este comando mostra a histï¿½ria do clï¿½ especificado.
 
-Veja também: CLAN INFO
-#
+Veja tambï¿½m: CLAN INFO
+#0
 "CLAN LIST"
 
 Uso: clan list
 
-   Mostra uma lista dos clãs atualmente definidos, e visíveis a você.
+   Mostra uma lista dos clï¿½s atualmente definidos, e visï¿½veis a vocï¿½.
 
-Veja também: CLAN INFO
-#
+Veja tambï¿½m: CLAN INFO
+#0
 "CLAN POLICY"
 
 Uso: clan policy
 
-   Mostra as políticas para formação e participação dos membros em seus
-clãs.  Muito importante para qualquer jogador que esteja participando de
-clãs.
+   Mostra as polï¿½ticas para formaï¿½ï¿½o e participaï¿½ï¿½o dos membros em seus
+clï¿½s.  Muito importante para qualquer jogador que esteja participando de
+clï¿½s.
 
-Veja também: POLICY
-#
+Veja tambï¿½m: POLICY
+#0
 "CLAN WHO"
 
-Uso: clan who <clã>
+Uso: clan who <clï¿½>
 
-   Este comando mostra uma lista dos membros de seu clã que estão jogando.
-O resultado é semelhante ao do comando WHO.
+   Este comando mostra uma lista dos membros de seu clï¿½ que estï¿½o jogando.
+O resultado ï¿½ semelhante ao do comando WHO.
 
-Veja também: CLAN MEMBERS
-#
+Veja tambï¿½m: CLAN MEMBERS
+#0
 "CLAN MEMBERS"
 
 Uso: clan members
 
-   Este comando mostra uma lista de todos os membros do clã (incluindo os
-que não estiverem jogando no momento) e suas atuais posições.
+   Este comando mostra uma lista de todos os membros do clï¿½ (incluindo os
+que nï¿½o estiverem jogando no momento) e suas atuais posiï¿½ï¿½es.
 
-Veja também: CLAN WHO
-#
+Veja tambï¿½m: CLAN WHO
+#0
 "CLAN WITHDRAW" "CLAN DEPOSIT" "CLAN BALANCE"
 
 Uso: clan withdraw <quantia>
      clan deposit <quantia>
      clan balance
 
-   Estes comandos permitem sacar, depositar e consultar o número de moedas
-que o clã tem guardado em sua conta bancária.  Estes comandos só funcionam
-se você estiver em uma sala com um caixa automático, ou possuir um cartão de
-crédito.
+   Estes comandos permitem sacar, depositar e consultar o nï¿½mero de moedas
+que o clï¿½ tem guardado em sua conta bancï¿½ria.  Estes comandos sï¿½ funcionam
+se vocï¿½ estiver em uma sala com um caixa automï¿½tico, ou possuir um cartï¿½o de
+crï¿½dito.
 
 Exemplos:
   > clan deposit 400
   > clan withdraw 1000
   > clan balance
 
-Veja também: BANK
-#
+Veja tambï¿½m: BANK
+#0
 "CLAN DONATE"
 
 Uso: clan donate [<numero>] <objeto>
      clan donate <numero> moedas
 
-   Como o comando DONATE, esse comando serve para doar um objeto que você
-não mais necessita, levando-o para a sala de doações de seu clã.
+   Como o comando DONATE, esse comando serve para doar um objeto que vocï¿½
+nï¿½o mais necessita, levando-o para a sala de doaï¿½ï¿½es de seu clï¿½.
 
-   &WCuidado:&n Apesar do objeto não sofrer os 25% de chance de perda como o
-comando DONATE, objetos com determinadas características (flag NODONATE)
-serão perdidos mesmo quando doados com esse comando.
+   @WCuidado:@n Apesar do objeto nï¿½o sofrer os 25% de chance de perda como o
+comando DONATE, objetos com determinadas caracterï¿½sticas (flag NODONATE)
+serï¿½o perdidos mesmo quando doados com esse comando.
 
 Exemplos:
   > clan donate escudo
   > clan donate all.pao
   > clan donate 1500 moedas
 
-Veja também: DONATE
-#
+Veja tambï¿½m: DONATE
+#0
 "CLAN SAY" ,
 
 Uso: clan say <mensagem>
      ' <mensagem>
 
-   Permite comunicar-se telepaticamente com todos os membros de seu clã,
-seja qual for o lugar onde cada membro esteja.  O comando ", " (vírgula)
-pode ser usado como abreviação para o comando.
+   Permite comunicar-se telepaticamente com todos os membros de seu clï¿½,
+seja qual for o lugar onde cada membro esteja.  O comando ", " (vï¿½rgula)
+pode ser usado como abreviaï¿½ï¿½o para o comando.
 
 Exemplos:
-  > clan say Olá meu clã! Todos bem?
+  > clan say Olï¿½ meu clï¿½! Todos bem?
   > , Venham todos para a nossa sede!
 
-Veja também: TELL, GSAY
-#
+Veja tambï¿½m: TELL, GSAY
+#0
 "CLAN ENROLL" "CLAN KICK"
 
 Uso: clan enroll <jogador>
      clan kick <jogador>
 
-   O comando CLAN ENROLL matricula um determinado jogador em seu clã.  Para
-isso, o jogador deve previamente ter solicitado o ingresso em seu clã,
-através do comando CLAN APPLY.
+   O comando CLAN ENROLL matricula um determinado jogador em seu clï¿½.  Para
+isso, o jogador deve previamente ter solicitado o ingresso em seu clï¿½,
+atravï¿½s do comando CLAN APPLY.
 
    O comando CLAN KICK serve para desmatricular um determinado membro de seu
-clã.  Só é possível desmatricular membros de posição inferior a sua dentro
-do clã.
+clï¿½.  Sï¿½ ï¿½ possï¿½vel desmatricular membros de posiï¿½ï¿½o inferior a sua dentro
+do clï¿½.
 
 Exemplos:
   > clan enroll catje
   > clan kick rasmussen
 
-Veja também: CLAN APPLY
-#
+Veja tambï¿½m: CLAN APPLY
+#0
 "CLAN MAIL"
 
 Uso: clan mail <posto> [assunto]
-     clan mail clan:<clã> <posto> [assunto]      (apenas deuses)
+     clan mail clan:<clï¿½> <posto> [assunto]      (apenas deuses)
 
    O comando CLAN MAIL permite enviar um mudmail para todos os membros de
-um determinado posto e superiores, de um determinado clã.  O posto deve ser
-fornecido como um número, o mesmo que aparece no comando CLAN INFO.  Para
+um determinado posto e superiores, de um determinado clï¿½.  O posto deve ser
+fornecido como um nï¿½mero, o mesmo que aparece no comando CLAN INFO.  Para
 enviar uma mensagem para todos os membros, usa-se 1 como posto.
 
 Exemplos:
   > clan mail 1
 
-Veja também: CLAN INFO, MAIL
-#
+Veja tambï¿½m: CLAN INFO, MAIL
+#0
 "CLAN DEMOTE" "CLAN PROMOTE"
 
 Uso: clan demote <jogador>
      clan promote <jogador>
 
    Estes comandos servem para rebaixar e elevar, respectivamente, um
-determinado membro de seu clã.  Estes comandos só podem ser usados em
-membros de posição inferior a sua dentro do clã.
+determinado membro de seu clï¿½.  Estes comandos sï¿½ podem ser usados em
+membros de posiï¿½ï¿½o inferior a sua dentro do clï¿½.
 
 Exemplos:
   > clan demote rasmussen
   > clan promote catje
-#
+#0
 "CLAN DESCRIPT"
 
 Uso: clan descript
 
-   O comando CLAN DESCRIPT permite alterar a atual descrição do clã, que é
-visível a todos os jogadores (incluindo os não-membros) através do comando
+   O comando CLAN DESCRIPT permite alterar a atual descriï¿½ï¿½o do clï¿½, que ï¿½
+visï¿½vel a todos os jogadores (incluindo os nï¿½o-membros) atravï¿½s do comando
 CLAN INFO.
 
-Veja também: CLAN INFO
-#
+Veja tambï¿½m: CLAN INFO
+#0
 "CLAN KARMA"
 
-Uso: clan karma [ jogador [ pontuação ] ]
+Uso: clan karma [ jogador [ pontuaï¿½ï¿½o ] ]
 
-   Mostra ou altera a pontuação de Karma de um clã.
+   Mostra ou altera a pontuaï¿½ï¿½o de Karma de um clï¿½.
 
-   O Karma de um clã define seu passado, podendo ser ele positivo ou
-negativo.  Com este comando, é possivel exibir o Karma dos clãs existentes
+   O Karma de um clï¿½ define seu passado, podendo ser ele positivo ou
+negativo.  Com este comando, ï¿½ possivel exibir o Karma dos clï¿½s existentes
 e alterar seu Karma, podendo ser um valor negativo para extrair pontos, ou
 um valor positivo, para ceder pontos.
 
 Exemplos:
   > clan karma
-  Num. Título                                   Nome           Karma
+  Num. Tï¿½tulo                                   Nome           Karma
     1. Jogadores Unidos                         (Unidos)          +1
 
   > clan karma unidos -2
-  O clã Unidos perdeu 2 pontos de Karma, ficando com -1.
-#107
+  O clï¿½ Unidos perdeu 2 pontos de Karma, ficando com -1.
+#0107
 "CLAN DEBIT"
 
-Uso: clan debit <clã> <valor>
+Uso: clan debit <clï¿½> <valor>
 
-   Faz um débito de um determinado valor em moedas da conta bancária de um
-clã.  Este comando pode ser usado para a cobrança do pagamento mensal, ou
-para aplicação de multas.
+   Faz um dï¿½bito de um determinado valor em moedas da conta bancï¿½ria de um
+clï¿½.  Este comando pode ser usado para a cobranï¿½a do pagamento mensal, ou
+para aplicaï¿½ï¿½o de multas.
 
 Exemplos:
   > clan debit 1 2000000
-#108
+#0108
 "CLAN CREATE"
 
-Uso: clan create <número> <nome>
+Uso: clan create <nï¿½mero> <nome>
 
-   Este comando é usado para definir um novo clã no jogo.  Deve-se fornecer
-o número do clã, que não poderá mais ser mudado, e o nome curto que definirá
-o clã.
+   Este comando ï¿½ usado para definir um novo clï¿½ no jogo.  Deve-se fornecer
+o nï¿½mero do clï¿½, que nï¿½o poderï¿½ mais ser mudado, e o nome curto que definirï¿½
+o clï¿½.
 
-   O clã será criado com informações padrões, sendo necessário, logo em
-seguida, sua edição através dos comandos CLAN EDIT e CLAN SET.
+   O clï¿½ serï¿½ criado com informaï¿½ï¿½es padrï¿½es, sendo necessï¿½rio, logo em
+seguida, sua ediï¿½ï¿½o atravï¿½s dos comandos CLAN EDIT e CLAN SET.
 
-Veja também: CLAN EDIT, CLAN DELETE
-#109
+Veja tambï¿½m: CLAN EDIT, CLAN DELETE
+#0109
 "CLAN DELETE"
 
-Uso: clan delete <clã>
+Uso: clan delete <clï¿½>
 
-   Este comando é usado para se excluir um clã do jogo.  Todos os membros do
-clã que estiverem jogando serão informados de sua exclusão, e serão
-automaticamente retirados do clã antes de sua exclusão.
+   Este comando ï¿½ usado para se excluir um clï¿½ do jogo.  Todos os membros do
+clï¿½ que estiverem jogando serï¿½o informados de sua exclusï¿½o, e serï¿½o
+automaticamente retirados do clï¿½ antes de sua exclusï¿½o.
 
-   Atualmente, o jogo não pede confirmação para a execução deste comando,
+   Atualmente, o jogo nï¿½o pede confirmaï¿½ï¿½o para a execuï¿½ï¿½o deste comando,
 portanto, deve-se ter cuidado.
 
-Veja também: CLAN CREATE
-#109
+Veja tambï¿½m: CLAN CREATE
+#0109
 "CLAN EDIT" "CLAN SET"
 
-Uso: clan edit <clã>
+Uso: clan edit <clï¿½>
      clan set <campo> <valor>
 
-   Estes comandos servem para alterar as definições de um determinado clã.
-Usa-se o comando CLAN EDIT para iniciar a edição do clã.  Após, usa-se CLAN
-SET uma ou mais vezes para alterar as definições do clã.  Para encerrar a
-edição do clã, usa-se CLAN EDIT sem nenhum argumento.
+   Estes comandos servem para alterar as definiï¿½ï¿½es de um determinado clï¿½.
+Usa-se o comando CLAN EDIT para iniciar a ediï¿½ï¿½o do clï¿½.  Apï¿½s, usa-se CLAN
+SET uma ou mais vezes para alterar as definiï¿½ï¿½es do clï¿½.  Para encerrar a
+ediï¿½ï¿½o do clï¿½, usa-se CLAN EDIT sem nenhum argumento.
 
-   Para obter uma lista dos campos possíveis de se alterar, use CLAN SET sem
-nenhum parâmetro.
+   Para obter uma lista dos campos possï¿½veis de se alterar, use CLAN SET sem
+nenhum parï¿½metro.
 
 Exemplo:
   > clan edit 2
-  Iniciando edição do clã 2.
-  (o jogo mostra todas as informações atuais sobre o clã)
+  Iniciando ediï¿½ï¿½o do clï¿½ 2.
+  (o jogo mostra todas as informaï¿½ï¿½es atuais sobre o clï¿½)
 
   > clan set color r
-  (o jogo altera a cor do clã e mostra novamente as informações)
+  (o jogo altera a cor do clï¿½ e mostra novamente as informaï¿½ï¿½es)
 
   > clan set gold 0
-  (o jogo altera o dinheiro do banco e mostra as informações)
+  (o jogo altera o dinheiro do banco e mostra as informaï¿½ï¿½es)
 
   > clan edit
-  Encerrando edição do clã 2.
-  (o jogo salva o clã e encerra a edição)
-#109
+  Encerrando ediï¿½ï¿½o do clï¿½ 2.
+  (o jogo salva o clï¿½ e encerra a ediï¿½ï¿½o)
+#0109
 "CLAN ADDRANK" "CLAN DELRANK"
 
-Uso: clan addrank <poder> <título-masc> <título-fem>
-     clan delrank <número>
+Uso: clan addrank <poder> <tï¿½tulo-masc> <tï¿½tulo-fem>
+     clan delrank <nï¿½mero>
 
    Estes comandos servem para adicionar e remover os postos de um
-determinado clã.  Deve-se usar o comando CLAN EDIT antes de usar estes
-comandos, para iniciar a edição do clã.
+determinado clï¿½.  Deve-se usar o comando CLAN EDIT antes de usar estes
+comandos, para iniciar a ediï¿½ï¿½o do clï¿½.
 
-   Cada posto tem um determinado nível de poderes dentro do clã, podendo ser
+   Cada posto tem um determinado nï¿½vel de poderes dentro do clï¿½, podendo ser
 um dos seguintes:
 
-   apply           Nenhum privilégio, apenas para jogadores que estiverem
-                   solicitando a matrícula no clã.
+   apply           Nenhum privilï¿½gio, apenas para jogadores que estiverem
+                   solicitando a matrï¿½cula no clï¿½.
    novice          Novato.  Pode usar o canal clan-say, depositar dinheiro
-                   na conta bancária do clã e doar objetos.
+                   na conta bancï¿½ria do clï¿½ e doar objetos.
    member          Membro.  Pode consultar e sacar o dinheiro depositado na
-                   conta bancária do clã.
-   master          Mestre.  Pode aprovar a entrada de novos membros no clã
-                   ou retirar forçadamente outros membros do clã.
+                   conta bancï¿½ria do clï¿½.
+   master          Mestre.  Pode aprovar a entrada de novos membros no clï¿½
+                   ou retirar forï¿½adamente outros membros do clï¿½.
    regent          Regente.  Pode promover ou rebaixar outros membros dentro
-                   do clã.
-   leader          Líder.  Tem poder absoluto dentro do clã.
+                   do clï¿½.
+   leader          Lï¿½der.  Tem poder absoluto dentro do clï¿½.
 
-   Não é necessário que o clã tenha todos os níveis de poder, mas é
-necessário que tenha um posto como "apply", um ou mais postos como "novice"
+   Nï¿½o ï¿½ necessï¿½rio que o clï¿½ tenha todos os nï¿½veis de poder, mas ï¿½
+necessï¿½rio que tenha um posto como "apply", um ou mais postos como "novice"
 (para os novos membros), e um ou mais postos como "leader", para o controle
-do clã.
+do clï¿½.
 
-   Pode-se cadastrar mais de um posto com o mesmo nível de poder.  O
-VitaliaMUD irá colocar o último posto cadastrado logo acima dos outros
-postos com o mesmo nível.  Portanto, ao cadastrar os postos de um clã,
-comece pelos postos mais baixos, indo até os postos mais altos.
+   Pode-se cadastrar mais de um posto com o mesmo nï¿½vel de poder.  O
+VitaliaMUD irï¿½ colocar o ï¿½ltimo posto cadastrado logo acima dos outros
+postos com o mesmo nï¿½vel.  Portanto, ao cadastrar os postos de um clï¿½,
+comece pelos postos mais baixos, indo atï¿½ os postos mais altos.
 
-   Para se remover um posto, basta fornecer seu número, que aparece no
+   Para se remover um posto, basta fornecer seu nï¿½mero, que aparece no
 comando CLAN INFO.
 
-Veja também: CLAN EDIT, CLAN INFO
-#
+Veja tambï¿½m: CLAN EDIT, CLAN INFO
+#0
 $
