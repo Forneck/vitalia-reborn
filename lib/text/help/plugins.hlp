@@ -2,44 +2,44 @@ SMS
 
 Uso: sms <nome> <mensagem>
 
-   Envia uma mensagem curta (SMS) para o Deus indicado.  O Deus que receberá
-a mensagem deve ter previamente configurado o seu endereço de envio.  A
-mensagem é enviada via e-mail para a central cadastrada, e em segundos
-chegará ao dispositivo (pager ou telefone celular) do Deus.
+   Envia uma mensagem curta (SMS) para o Deus indicado.  O Deus que receberï¿½
+a mensagem deve ter previamente configurado o seu endereï¿½o de envio.  A
+mensagem ï¿½ enviada via e-mail para a central cadastrada, e em segundos
+chegarï¿½ ao dispositivo (pager ou telefone celular) do Deus.
 
-   Devido ao limite do sistema e dos dispositivos, o tamanho da mensagem é
-muito limitado.  Escreva mensagens com até 100 letras, para evitar que esta
+   Devido ao limite do sistema e dos dispositivos, o tamanho da mensagem ï¿½
+muito limitado.  Escreva mensagens com atï¿½ 100 letras, para evitar que esta
 seja cortada.
 
-   Para ajustar o endereço que deverá ser usado para que você receba
-mensagens SMS, você deve utilizar o comando SMSSET.
+   Para ajustar o endereï¿½o que deverï¿½ ser usado para que vocï¿½ receba
+mensagens SMS, vocï¿½ deve utilizar o comando SMSSET.
 
 Exemplo:
-  > sms Blug Rápido, precisamos da sua ajuda aqui!
+  > sms Blug Rï¿½pido, precisamos da sua ajuda aqui!
 
 Plugin: sms-notify
 
-Veja também: SMSSET
+Veja tambï¿½m: SMSSET
 #106
 SMSSET
 
-Uso: smsset <endereço>
+Uso: smsset <endereï¿½o>
 
-   Configura o endereço de e-mail para o qual o MUD deve enviar mensagens
-SMS (pagers e telefones celulares) destinadas a você.  Quando um outro Deus
-usar o comando SMS para enviar uma mensagem para você, o MUD enviará uma
-mensagem para esse e-mail para que seja então, enviado para o seu pager ou
-telefone celular.  Cada Deus deve configurar seu prório endereço de SMS.
+   Configura o endereï¿½o de e-mail para o qual o MUD deve enviar mensagens
+SMS (pagers e telefones celulares) destinadas a vocï¿½.  Quando um outro Deus
+usar o comando SMS para enviar uma mensagem para vocï¿½, o MUD enviarï¿½ uma
+mensagem para esse e-mail para que seja entï¿½o, enviado para o seu pager ou
+telefone celular.  Cada Deus deve configurar seu prï¿½rio endereï¿½o de SMS.
 
-   Geralmente, o endereço SMS é o número do seu telefone celular ou o código
-do seu pager, seguido de '@' e o endereço da operadora de SMS.  Por exemplo,
-um telefone de número (11) 5555-1234 da Telesp Celular deve cadastrar
+   Geralmente, o endereï¿½o SMS ï¿½ o nï¿½mero do seu telefone celular ou o cï¿½digo
+do seu pager, seguido de '@' e o endereï¿½o da operadora de SMS.  Por exemplo,
+um telefone de nï¿½mero (11) 5555-1234 da Telesp Celular deve cadastrar
 1155551234@torpedoinfo.com.br.
 
 Exemplo:
   > smsset 1155551234@torpedoinfo.com.br
 
 Plugin: sms-notify
-Veja também: SMS
+Veja tambï¿½m: SMS
 #106
-$
+$~
