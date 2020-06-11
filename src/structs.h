@@ -1382,10 +1382,6 @@ struct weather_data
   int sky; /**< How is the sky? */
   int before; /* How was the sky.			 */
   int sunlight; /**< And how much sun? */
- 
-};
-
-struct climate_data {
   int pressure, press_diff;
   float humidity;
   float winds;
