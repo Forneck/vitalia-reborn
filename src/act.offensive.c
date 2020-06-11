@@ -718,13 +718,14 @@ ACMD(do_bandage)
 
 ACMD(do_trip)
 {
+   char arg[MAX_INPUT_LENGTH];
  struct char_data *vict;
   int percent, prob;
 
   one_argument(argument, arg);
 
   if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_TRIP)) {
-    send_to_char(ch, "Voc� n�o tem id�ia de como fazer isso.\r\n");
+    send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
     return;
   } else if ((vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)) == NULL) {
     if (FIGHTING(ch) && IN_ROOM(ch) == IN_ROOM(FIGHTING(ch))) {
