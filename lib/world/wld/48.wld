@@ -1,14 +1,14 @@
 #4800
 Entrando na Escurid�o~
    Uma rajada de vento gelado sobe das profundezas das cavernas, um ar t�o 
-gelado que poderia congelar um gigante.  As imensas paredes de granito 
-negro refletem a luz oscilante de mil maneiras, dando a este lugar um 
+gelado que poderia congelar um gigante. 
+As imensas paredes de granito negro refletem a luz oscilante de mil maneiras, dando a este lugar um 
 aspecto surreal, quase sobrenatural.   Uma ladeira inclina-se para o 
 leste, aprofundando-se na escurid�o.   N�o h� absolutamente um �nico som 
 de movimento ou de vozes neste lugar, apenas o constante gotejar nas 
 paredes �midas da caverna.
 ~
-48 acdfg 3
+48 109 0 0 0 3
 D1
 ~
 ~
@@ -26,7 +26,7 @@ passo dado, vai se tornando cada vez mais �ngreme.   Logo, qualquer um que
 tentasse seguir para leste, teria que se inclinar para tr�s, para conseguir 
 manter o equil�brio ao caminhar.
 ~
-48 adf 3
+48 41 0 0 0 3
 D1
 ~
 ~
@@ -46,7 +46,7 @@ escurid�o � t�o pesada e sombria quanto poderia ser.   Qualquer som
 produzido nesta escurid�o solit�ria reproduzir� um eco mil vezes mais alto, 
 tornando o lugar ainda mais sombrio e apavorante.
 ~
-48 adfg 3
+48 105 0 0 0 3
 D1
 ~
 ~
@@ -64,7 +64,7 @@ ser visto a oeste e acima daqui.  Estranho, n�o parece haver mudan�a alguma
 na cor das rochas ao longo da parede do tunel.  S�o rochas resistentes e 
 negras, que refletem a luz como se estivesem molhadas - isso � desanimador.
 ~
-48 adfg 3
+48 105 0 0 0 3
 D1
 ~
 ~
@@ -81,7 +81,7 @@ se perder em lugares como este, totalmente escuros e sem chances de fazer
 qualquer tipo de contato.  Uma goteira pinga frequentemente, quebrando o 
 sil�ncio deste lugar sombrio, que voc� est� atravessando.
 ~
-48 adfg 3
+48 105 0 0 0 3
 D1
 ~
 ~
@@ -98,7 +98,7 @@ plano.  Para oeste a caverna come�a uma subida �ngreme que leva � sa�da 
 ao ar livre.  Em algum lugar - distante ou pr�ximo - pode-se ouvir um som 
 de respira��o, pelo menos � o que parece.
 ~
-48 adfg 3
+48 105 0 0 0 3
 D2
 ~
 ~
@@ -115,7 +115,7 @@ a parede daqui n�o parecem naturais, parecem feitos de m�rmore.  O som da
 respira��o pode ser ouvido mais forte agora, � uma respira��o ruidosa que 
 parece o ronco de algum gigante adormecido.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -136,7 +136,7 @@ impress�o de que alguma coisa esta escondida dentro dela.  Com certeza o
 som da respira��o est� vindo da pequena abertura a oeste, onde parece haver 
 uma aura de terror.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -155,7 +155,7 @@ que o Feyr descansa em lugares como este durante o dia, e � noite sai para
 aterrorizar as pessoas desconhecidas.  Dizem que apenas um mago bastante 
 poderoso pode destruir ou at� mesmo ferir essa criatura.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -168,7 +168,7 @@ continuam lisas ao toque.  Certamente n�o h� nenhuma ponta aguda nesta
 parede.  Em algum lugar - distante ou pr�ximo - pode-se ouvir um som de 
 respira��o, pelo menos � o que parece.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -186,7 +186,7 @@ oeste a caverna faz uma curva para o norte, conduzindo � escurid�o.  As
 duas dire��es s�o interessantes, mas o que � realmente interessante nesta 
 jun��o � a alcova ao norte que parece esconder algo.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -208,7 +208,7 @@ que fica aqui n�o precisa estar limpa e arrumada.  Apenas parece que ela
 come muito bem, pelo n�mero de esqueletos e ossos perdidos que est�o 
 espalhados pelo feno.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D2
 ~
 ~
@@ -221,7 +221,7 @@ subterr�nea.  Um som de �gua correndo vem de algum lugar da caverna,
 entretanto � dif�cil saber exatamente a dire��o, pois o eco � muito grande. 
 Para oeste a passagem � a mesma pela qual voc� veio.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -239,7 +239,7 @@ brilha e treme bastante, talvez refletindo a �gua, a medida que a parede
 inteira est� coberta por uma cascata de �gua, que desliza atrav�s de uma 
 abertura no teto.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -263,7 +263,7 @@ Uma Caverna Enorme~
 ex�rcito inteiro com sua cavalaria.  O teto � t�o alto que seu topo n�o 
 pode ser visto por causa da escurid�o.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -279,7 +279,7 @@ Uma Caverna Enorme~
 ex�rcito inteiro com sua cavalaria.  O teto � t�o alto que seu topo n�o 
 pode ser visto por causa da escurid�o.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -303,7 +303,7 @@ Uma Caverna Enorme~
 ex�rcito inteiro com sua cavalaria.  O teto � t�o alto que seu topo n�o 
 pode ser visto por causa da escurid�o.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -327,7 +327,7 @@ Uma Caverna Enorme~
 mas n�o deixa de ser um canto.  Ao sul ha uma pequena fissura na rocha, tem 
 tamanho suficiente para um homem passar se expremendo.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -348,7 +348,7 @@ tomando conta dela.  Na parede a leste ha uma cascata de �gua que desliza
 atrav�s de uma abertura no teto e desaparece em outra abertura no ch�o.  A 
 caverna � bastante larga e as paredes negras refletem uma luz fraca.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -370,7 +370,7 @@ cristalina, � fresca e tem um cheiro diferente do odor abafado da caverna.
 Para o leste h� uma aberturta no teto logo acima da cascata, talvez voc� 
 consiga passar por ali.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -391,7 +391,7 @@ devolvem todos os sons � voc� em um coro de estalos e rangidos.  O ar livre
 sobre sua cabe�a assovia atrav�s de fendas e aberturas escondidas no teto
 escuro da caverna.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -416,7 +416,7 @@ farfalhar de asas de morcegos, ou as gotas de �gua da parede ao sul.  A
 escurid�o em sua volta agora � total.  Este lugar � terrivel para pessoas 
 que tem claustrofobia.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -440,7 +440,7 @@ Uma Caverna Enorme~
 A caverna abre-se convidando para oeste sul.  O som da �gua � muito 
 barulhento por aqui.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -461,7 +461,7 @@ poderia ser visto a olho n� por algu�m no ch�o.  Um corredor foge da pared
 a leste, logo ao norte daqui, conduzindo mais ainda para o interior da 
 caverna.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -480,7 +480,7 @@ Uma Caverna Enorme~
    Voc� est� em frente a cascata, a abertura acima dela conduz � escurid�o. 
 A caverna abre-se, e fica mais escura ao norte e oeste.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -502,7 +502,7 @@ curva, terminando em um quarto pequeno a oeste.  Est� completamente escuro
 no quarto, mas um som pode ser ouvido - o eco de um ruido seco que lembra 
 unhas batendo contra algo.
 ~
-48 adfgi 0
+48 361 0 0 0 0
 D0
 ~
 ~
@@ -518,7 +518,7 @@ C�mara do Horror~
 O fedor aqui � insuport�vel, e voc� pode ver que as paredes est�o 
 arranhadas e cortadas em v�rios lugares.  N�o � um lugar confort�vel.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -531,7 +531,7 @@ estas dire��es.  Seguindo para oeste, voc� ir� encontrar uma abertura na
 parede a norte, um largo t�nel que conduz � escurid�o.  A caverna 
 estende-se para o sul.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D2
 ~
 ~
@@ -548,7 +548,7 @@ recentemente.  O ch�o est� cheio de sujeiras e imundices, existem v�rias
 pegadas neste caminho.  Ao norte, nota-se um caminho bastante largo, parece 
 que � um caminho usado com bastante freq��ncia e que segue para o norte.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -568,7 +568,7 @@ Uma Passagem Larga~
 saber estando t�o longe.  Mais na frente existe um desvio para leste e
 parece que est�o vindo vozes de l� - muitas, muitas vozes.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -584,7 +584,7 @@ Uma Jun��o Tripla~
 leste.  O som das vozes � extremamente alto aqui, talvez o barulho esteja 
 vindo do leste.
 ~
-48 acdfg 0
+48 109 0 0 0 0
 D0
 ~
 ~
@@ -605,7 +605,7 @@ corcundas, criaturas pequenas e sujas que lutam em grande n�mero.  Eles
 devem comer e dormir em qualquer lugar, pois todo o ch�o e as paredes est�o 
 cobertos de gorduras e de sujeira, mas isso s� Deus sabe.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -621,7 +621,7 @@ Milhares de Pequenas Vozes~
 diretamente para o inferno.  Isso acompanhado do perturbante fato de estas 
 criaturas adorarem carne humana crua.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -637,7 +637,7 @@ Um Ruido Enorme~
 criaturas.  Com todo este limo e gordura abaixo dos p�s, fica dif�cil de se 
 negociar, mas negociar � o �nico jeito de adentrar em suas casas.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -657,7 +657,7 @@ Uma C�mara Privada~
 barulho e confus�o que os corcundas fazem tornam as condi��es imposs�veis, 
 eles est�o deixando voc� a beira da loucura.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -670,7 +670,7 @@ criaturas passam toda sua exist�ncia convivendo com isso � alucinante.  Os
 corcundas se deliciam com a ang�stia que causam na mente de suas presas, 
 observando elas se torcendo e retorcendo antes de serem atacadas.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -691,7 +691,7 @@ onde fazem suas �ltimas reuni�es antes das Invas�es Bugbear.  Ossos est�
 espalhados por aqui, n�o de modo assustador, simplesmente jogados.  Tudo 
 est� coberto pela mesma sujeira e subt�ncia pegajosa de toda essa �rea.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D3
 ~
 ~
@@ -703,7 +703,7 @@ Uma C�mara Privada~
 barulho e confus�o que os corcundas fazem tornam as condi��es imposs�veis, 
 eles est�o deixando voc� a beira da loucura.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D2
 ~
 ~
@@ -715,7 +715,7 @@ Uma Passagem Larga~
 leste.  Para o norte h� uma esp�cie de habita��o - nota-se algum tipo de 
 luz.  N�o � mais apenas um brilho, � uma luz ao norte.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -731,7 +731,7 @@ A Passagem Larga~
 uma em cada parede.  Sons podem ser ouvidos, s�o vozes de alguma esp�cie de 
 criatura.  E tamb�m o som do movimento de um bando de p�s.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -748,7 +748,7 @@ ocupar quase toda esta parte da caverna.  N�o parece que eles se
 aventurariam em se apropriar de todo o lugar, embora em seu dom�nio eles se 
 mostrem bastante corajosos.
 ~
-48 cdfg 0
+48 108 0 0 0 0
 D1
 ~
 ~
@@ -765,7 +765,7 @@ seus murmurios e ruidos a uma boa dist�ncia.  Ruidos causados por gritos ou
 pancadas que cada um faz, as vezes o som estridente de metal contra metal, 
 ou passadas ligeiras e pesadas.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D1
 ~
 ~
@@ -781,7 +781,7 @@ Alojamento dos Bugbears~
 o homem p�lido deixou que eles ocupassem e ir�o lutar at� a morte para 
 manter o seu dom�nio.  O largo caldeir�o � norte � uma prova deste fato.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D0
 ~
 ~
@@ -797,7 +797,7 @@ Alojamento dos Bugbears~
 o homem p�lido deixou que eles ocupassem e ir�o lutar at� a morte para 
 manter o seu dom�nio.  O largo caldeir�o a norte � uma prova deste fato.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D0
 ~
 ~
@@ -813,7 +813,7 @@ Sala Principal do Alojamento~
 cerim�nias s�o organizados aqui, assim como festas de natureza horr�vel.  
 Este � um lugar sagrado para os membros do clan - sua vida corre perigo.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D0
 ~
 ~
@@ -837,7 +837,7 @@ Alojamento dos Bugbears~
 o homem p�lido deixou que eles ocupassem e ir�o lutar at� a morte para 
 manter o seu dom�nio.  O largo caldeir�o a oeste � uma prova deste fato.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D0
 ~
 ~
@@ -853,7 +853,7 @@ Alojamento dos Bugbears~
 o homem p�lido deixou que eles ocupassem e ir�o lutar at� a morte para 
 manter o seu dom�nio.  Os intrusos ser�o gravemente punidos.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D2
 ~
 ~
@@ -869,7 +869,7 @@ Alojamento dos Bugbears~
 o homem p�lido deixou que eles ocupassem e ir�o lutar at� a morte para 
 manter o seu dom�nio.  O largo caldeir�o ao sul � uma prova deste fato.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D1
 ~
 ~
@@ -888,7 +888,7 @@ dizem que os Bugbears devem sair do alojamento e assassinar o m�ximo de
 vizinhos corcundas que puderem, parece que o Bugbear xam� gosta muito da 
 carne dos corcundas.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D2
 ~
 ~
@@ -901,7 +901,7 @@ partes diferentes, umas onde ficam as pessoas mais importantes e outra
 maior onde ficam os membros em geral.  As casas prestigiosas ficam mais 
 para o norte, sul e oeste.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D0
 ~
 ~
@@ -928,7 +928,7 @@ a maioria dos ataques, o l�der sempre � trocado por outro quando tem
 necessidade - os bugbears n�o s�o totalmente est�pidos, mas nenhum � muito 
 esperto.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D1
 ~
 ~
@@ -943,7 +943,7 @@ morre aqui mesmo.  O chefe Bugbear s� ser� substituido caso algum outro
 membro do clan o desafie e ven�a, ent�o o chefe Bugbear ser� sempre um 
 jovem robusto e saud�vel.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D0
 ~
 ~
@@ -955,7 +955,7 @@ Uma Escalada~
 cima atrav�s das rochas.  A �gua n�o chega aqui e as rochas podem ser 
 seguradas facilmente, facilitando a escalada.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D4
 ~
 ~
@@ -971,7 +971,7 @@ Subindo para o Ar Livre~
 embaixo.  Ser� que a nascente da cascata vem de algum lugar por aqui?  O 
 sentimento de esperan�a estimula cada vez mais a sua escalada.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D4
 ~
 ~
@@ -991,7 +991,7 @@ pode desabar a qualquer momento.  Para oeste, o peitoril d� a volta no
 lago, al�m disso uma pequena caverna conduz para longe do lago ainda mais 
 para oeste.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -1012,7 +1012,7 @@ Parece que a �gua que derrama no lago vem do leste, e deve desaguar em
 algum lugar disfar�ado da caverna abaixo, caindo como uma cascata e 
 penetrando nas profundezas terra.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -1028,7 +1028,7 @@ Ao longo da Borda~
 derrama da parede por uma abertura n�o muito grande atrav�s de um buraco 
 menor que sua cintura.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -1045,7 +1045,7 @@ A Queda D'�gua~
 Existe uma passagem estreita ao norte, uma passagem dificilmente not�vel, 
 que leva para longe da borda.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -1061,7 +1061,7 @@ Uma Fenda Estreira~
 n�o parece natural.  A sua intui��o lhe diz que neste lugar voc� n�o vai 
 encontrar nenhum tipo de vida.  Um leve frio percorre sua espinha.
 ~
-48 adfgi 0
+48 361 0 0 0 0
 D0
 ~
 ~
@@ -1077,7 +1077,7 @@ O Beijo da Morte~
 e sim da coisa desagrad�vel que mora aqui.  A fenda ao sul parece mais 
 convidativa do que o sentimento de horror que emana desta sala.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D2
 ~
 ~
@@ -1089,7 +1089,7 @@ A Margem do Lago~
 a volta nele e acabando na parede de rocha.  Pequenas ondas dan�am na 
 superficie do lago - mesmo assim o lago continua calmo.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -1110,7 +1110,7 @@ causa da umidade causada pelo lago pr�ximo daqui.  O mofo cresce com uma
 estranha luz.  Isso � confortante comparado com a escurid�o de onde voc� 
 veio.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -1126,7 +1126,7 @@ Uma Passagem Cheia de Mofo~
 andando em um grosso carpete.  E de certa forma voc� est�.  Um quarto 
 bastante largo esta coberto por ele.
 ~
-48 cdfg 0
+48 108 0 0 0 0
 D1
 ~
 ~
@@ -1143,7 +1143,7 @@ paredes, do ch�o e do teto est�o cobertas de mofo.  Todo o som que voc�
 estava acostumado a ouvir l� fora - o vendo soprando forte contra 
 voc� - tudo se foi sobrando apenas o sil�ncio penetrante.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D0
 ~
 ~
@@ -1164,7 +1164,7 @@ paredes, do ch�o e do teto est�o cobertas de mofo.  Todo o som que voce
 estava acostumado a ouvir l� fora - o vendo soprando forte contra 
 voc� - tudo se foi sobrando apenas o sil�ncio penetrante.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D1
 ~
 ~
@@ -1181,7 +1181,7 @@ ligeiro frio que talvez esteja vindo de algum lugar ao leste.  Voc� come�a
 a sentir o calor do seu corpo ser totalmente drenado enquanto tenta 
 descobrir o que � esta coisa no ch�o.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D1
 ~
 ~
@@ -1195,7 +1195,7 @@ estava acostumado a ouvir l� fora - o vendo soprando forte contra
 voc� - tudo se foi sobrando apenas o sil�ncio penetrante.  A oeste h� uma 
 c�mara que parece guardar alguma esp�cie de massa no ch�o.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D0
 ~
 ~
@@ -1216,7 +1216,7 @@ paredes, do ch�o e do teto est�o cobertas de mofo.  Todo o som que voc�
 estava acostumado a ouvir l� fora - o vendo soprando forte contra 
 voc� - tudo se foi sobrando apenas o sil�ncio penetrante.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D0
 ~
 ~
@@ -1233,7 +1233,7 @@ seguir para o norte ou sul acompanhando a borda do lago.  Voce v� alguma
 coisa... OPS!!! Uma pilha de alguma coisa fugiu para o sul entrando na 
 terra logo depois.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -1250,7 +1250,7 @@ impossivel continuar seguindo a margem nesta dire��o.  Alguma coisa n�o
 est� cheirando bem aqui, parece algo morto, peixe morto - s� que muito mais 
 fedorento.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -1268,7 +1268,7 @@ teto � em forma de arcos at� tocar as paredes como uma abobada, fazendo
 este lugar parecer sagrado - talvez conduza at� alguma esp�cie de homem 
 sagrado.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -1284,7 +1284,7 @@ Uma C�mara com Abobada~
 e as paredes n�o tem mais a forma da entrada, realmente elas s� tomam a 
 forma de abobada depois do buraco, continuando at� a parede a leste.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -1300,7 +1300,7 @@ O Topo do Buraco~
 as rochas.  Com certeza foi feito por algum homem, pois � bastante liso e
 foram feitos v�rios degraus que facilitam a escalada.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D3
 ~
 ~
@@ -1316,7 +1316,7 @@ Dentro do Buraco~
 daqui como no ch�o da c�mara acima.  Qualquer um destes lugares promete uma 
 noite de ferro.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D4
 ~
 ~
@@ -1332,7 +1332,7 @@ O Fundo do Buraco~
 com rochas negras.  Uma passagem com teto parecido com uma abobada conduz 
 ao leste.  Na verdade � em forma de abobada.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -1350,7 +1350,7 @@ sujeiras, este ch�o parece que � varrido e esfregado com freq��ncia.  A
 passagem continua seguindo a leste at� virar para o norte, e o teto em 
 abobada segue por toda a passagem.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -1370,7 +1370,7 @@ perdidamente o espa�o em volta.  Para o leste a caverna continua,
 entretanto as paredes e o teto s�o toscos, deixam de ser esculpidos como o 
 daqui.  O caminho a leste se torna mais e mais largo a cada passo.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -1392,7 +1392,7 @@ Mais a frente tochas presas � parede queimam fortemente, iluminando todo o
 caminho.  Voc� pode ver que este caminho percorre uma grande distancia para 
 o norte antes de fazer a curva para o leste.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D0
 ~
 ~
@@ -1408,7 +1408,7 @@ Um Caminho Coberto por Tapete~
 e as paredes lisas e limpas como um pal�cio.  O habitante deste lugar deve 
 ter orgulho de sua casa.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D0
 ~
 ~
@@ -1423,7 +1423,7 @@ Um Caminho Coberto por Tapete~
    O caminho faz a curva logo ao norte com o tapete acompanhando.  Para o 
 sul o caminho leva para a caverna com abobada e para a caverna principal.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D0
 ~
 ~
@@ -1439,7 +1439,7 @@ Antes da c�mara~
 encostado na parede, pr�ximo ao trono em cada canto, est� um criado.  O 
 tapete negro conduz direto ao trono.
 ~
-48 cdfg 0
+48 108 0 0 0 0
 D1
 ~
 ~
@@ -1456,7 +1456,7 @@ P�lido, que dizem ter o poder da escurid�o.  A lenda diz que o Homem P�lid
 viveu por centenas de anos e que viver� ainda mais.  Ninguem disputa com 
 ele, o Homem P�lido mata qualquer tolo desleal que pensar em destrui-lo.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D2
 ~
 ~
@@ -1469,7 +1469,7 @@ P�lido, que dizem ter o poder da escurid�o.  A lenda diz que o Homem P�lid
 viveu por centenas de anos e que viver� ainda mais.  Ninguem disputa com 
 ele, o Homem P�lido mata qualquer tolo desleal que pensar em destrui-lo.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D2
 ~
 ~
@@ -1480,7 +1480,7 @@ Entrando na C�mara~
    O sal�o continua a leste at� o trono.  Nos cantos algumas criaturas 
 esperam a chance de fazer um pedido ao Homem P�lido.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D0
 ~
 ~
@@ -1503,7 +1503,7 @@ A C�mara do Homem P�lido~
    O sal�o continua a leste at� o trono.  Nos cantos algumas criaturas 
 esperam a chance de fazer um pedido ao Homem P�lido.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D0
 ~
 ~
@@ -1529,7 +1529,7 @@ Homem P�lido atrav�s da doa��o do talento para embelezar a morada dele.
 Nenhuma escultura � t�o bonita comparada ao exagerado trono negro encostado 
 na parede da sala.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D3
 ~
 ~
@@ -1542,7 +1542,7 @@ P�lido, que dizem ter o poder da escurid�o.  A lenda diz que o Homem P�lid
 viveu por centenas de anos e que viver� ainda mais.  Ninguem disputa com 
 ele, o Homem P�lido mata qualquer tolo desleal que pensar em destrui-lo.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D0
 ~
 ~
@@ -1555,7 +1555,7 @@ P�lido, que dizem ter o poder da escurid�o.  A lenda diz que o Homem P�lid
 viveu por centenas de anos e que viver� ainda mais.  Ninguem disputa com 
 ele, o Homem P�lido mata qualquer tolo desleal que pensar em destrui-lo.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D0
 ~
 ~
@@ -1567,7 +1567,7 @@ A Caverna Ampla~
 circular.  Uma c�mara pequena ao sul n�o parece convidativa, entretanto 
 nada impede de dar uma olhada.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -1587,7 +1587,7 @@ A C�mara do Diabinho~
 que mora neste lugar n�o parece nada hospedeira, e se ela n�o est� aqui 
 agora, pode voltar a qualquer instante.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -1600,7 +1600,7 @@ significa que n�o tenha um - n�o tenha medo.  Jogando uma pedra voc�
 ouve... Nada!  Isso ainda n�o significa que n�o tem fundo - n�o tenha 
 medo.  Parece que estas rochas no interior do po�o s�o boas para escalar.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D3
 ~
 ~
@@ -1615,7 +1615,7 @@ Dentro do Po�o~
    O apoio parece firme, permitindo o acesso ao topo ou ao fundo do po�o.  
 O fundo do po�o pode ser visto agora, totalmente seco.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D4
 ~
 ~
@@ -1631,7 +1631,7 @@ A Base do Po�o~
 parece conduzir para outra c�mara aberta.  Aqui embaixo parece muito mais 
 quente.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -1647,7 +1647,7 @@ Cruzamento~
 leste.  A passagem � mais larga para o leste, entretanto algum sentimento 
 lhe diz que l� � o melhor caminho - talvez, um sinal?
 ~
-48 adfg 0
+48 105 0 0 0 0
 D1
 ~
 ~
@@ -1668,7 +1668,7 @@ de terra foi deixada no ch�o da sala a leste.  O brilho treme e ofusca, o
 calor est� ficando insuport�vel, voc� pode sentir seu rosto e suas m�os 
 queimando levemente, e ficando vermelhas.
 ~
-48 dfg 0
+48 104 0 0 0 0
 D1
 ~
 ~
@@ -1684,7 +1684,7 @@ O Tesouro do Drag�o~
 isso... O que?  Um DRAG�O!  Talvez fosse melhor ter ficado em Jareth ou 
 talvez algum bar tomando cerveja...
 ~
-48 dfg 0
+48 104 0 0 0 0
 D3
 ~
 ~
@@ -1696,7 +1696,7 @@ T�nel Lateral~
 Entretanto, isso n�o ir� ajudar em nada.  Alguma coisa ou algu�m est� 
 deitado ao sul, e n�o � algo bom.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -1712,7 +1712,7 @@ T�nel Lateral~
 de ouro!  Talvez o mal pressentimento tenha sido a preocupa��o em como 
 carregar todo este ouro para o banco.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D0
 ~
 ~
@@ -1728,7 +1728,7 @@ Quarto Profundo~
 profundezas.  Voc� percebe que em algum lugar, � oeste de Jareth, deve ter 
 tomado o caminho errado.
 ~
-48 adfg 0
+48 105 0 0 0 0
 D3
 ~
 ~
@@ -1739,7 +1739,7 @@ O Lar dos Aboleth's~
    Ent�o � por isso que o Aboleth atacava tanto a beira do lago!  Ela 
 estava protegento o beb�.  Isso sem falar no tesouro...
 ~
-48 afg 8
+48 97 0 0 0 8
 D4
 ~
 ~
