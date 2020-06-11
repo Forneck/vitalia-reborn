@@ -198,6 +198,7 @@ ACMD(do_flee);
 ACMD(do_kick);
 ACMD(do_kill);
 ACMD(do_order);
+ACMD(do_combo);
 ACMD(do_rescue);
 ACMD(do_whirlwind);
 ACMD(do_bandage);
