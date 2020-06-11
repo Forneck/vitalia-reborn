@@ -12,7 +12,7 @@ o comando CLAN, sem nenhum outro argumento.
    Para obter ajuda especï¿½fica para um sub-comando do comando CLAN, use o
 comando HELP, seguido do comando que vocï¿½ quer obter ajuda.  Ex: HELP CLAN
 WHO
-#0
+#
 "CLAN APPLY"
 
 Uso: clan apply <clï¿½>
@@ -22,7 +22,7 @@ determinado clï¿½.  Vocï¿½ ficarï¿½ como solicitante atï¿½ o momento que um mest
 decidir se vocï¿½ pode ou nï¿½o fazer parte do clï¿½.
 
 Veja tambï¿½m: CLAN RESIGN
-#0
+#
 "CLAN RESIGN"
 
 Uso: clan resign
@@ -32,7 +32,7 @@ Apï¿½s o uso deste comando, sï¿½ serï¿½ possï¿½vel voltar ao clï¿½ com a permiss
 um mestre do mesmo.
 
 Veja tambï¿½m: CLAN APPLY
-#0
+#
 "CLAN INFO"
 
 Uso: clan info <clï¿½>
@@ -42,7 +42,7 @@ informaï¿½ï¿½es mostradas varia de acordo com o nï¿½vel, posiï¿½ï¿½o ou se vocï¿
 parte ou nï¿½o do clï¿½ especificado.
 
 Veja tambï¿½m: CLAN LIST
-#0
+#
 "CLAN HISTORY"
 
 Uso: clan history <clï¿½>
@@ -50,7 +50,7 @@ Uso: clan history <clï¿½>
    Este comando mostra a histï¿½ria do clï¿½ especificado.
 
 Veja tambï¿½m: CLAN INFO
-#0
+#
 "CLAN LIST"
 
 Uso: clan list
@@ -58,7 +58,7 @@ Uso: clan list
    Mostra uma lista dos clï¿½s atualmente definidos, e visï¿½veis a vocï¿½.
 
 Veja tambï¿½m: CLAN INFO
-#0
+#
 "CLAN POLICY"
 
 Uso: clan policy
@@ -68,7 +68,7 @@ clï¿½s.  Muito importante para qualquer jogador que esteja participando de
 clï¿½s.
 
 Veja tambï¿½m: POLICY
-#0
+#
 "CLAN WHO"
 
 Uso: clan who <clï¿½>
@@ -77,7 +77,7 @@ Uso: clan who <clï¿½>
 O resultado ï¿½ semelhante ao do comando WHO.
 
 Veja tambï¿½m: CLAN MEMBERS
-#0
+#
 "CLAN MEMBERS"
 
 Uso: clan members
@@ -86,7 +86,7 @@ Uso: clan members
 que nï¿½o estiverem jogando no momento) e suas atuais posiï¿½ï¿½es.
 
 Veja tambï¿½m: CLAN WHO
-#0
+#
 "CLAN WITHDRAW" "CLAN DEPOSIT" "CLAN BALANCE"
 
 Uso: clan withdraw <quantia>
@@ -104,7 +104,7 @@ Exemplos:
   > clan balance
 
 Veja tambï¿½m: BANK
-#0
+#
 "CLAN DONATE"
 
 Uso: clan donate [<numero>] <objeto>
@@ -113,7 +113,7 @@ Uso: clan donate [<numero>] <objeto>
    Como o comando DONATE, esse comando serve para doar um objeto que vocï¿½
 nï¿½o mais necessita, levando-o para a sala de doaï¿½ï¿½es de seu clï¿½.
 
-   @WCuidado:@n Apesar do objeto nï¿½o sofrer os 25% de chance de perda como o
+   &WCuidado:&n Apesar do objeto nï¿½o sofrer os 25% de chance de perda como o
 comando DONATE, objetos com determinadas caracterï¿½sticas (flag NODONATE)
 serï¿½o perdidos mesmo quando doados com esse comando.
 
@@ -123,7 +123,7 @@ Exemplos:
   > clan donate 1500 moedas
 
 Veja tambï¿½m: DONATE
-#0
+#
 "CLAN SAY" ,
 
 Uso: clan say <mensagem>
@@ -138,7 +138,7 @@ Exemplos:
   > , Venham todos para a nossa sede!
 
 Veja tambï¿½m: TELL, GSAY
-#0
+#
 "CLAN ENROLL" "CLAN KICK"
 
 Uso: clan enroll <jogador>
@@ -157,7 +157,7 @@ Exemplos:
   > clan kick rasmussen
 
 Veja tambï¿½m: CLAN APPLY
-#0
+#
 "CLAN MAIL"
 
 Uso: clan mail <posto> [assunto]
@@ -172,7 +172,7 @@ Exemplos:
   > clan mail 1
 
 Veja tambï¿½m: CLAN INFO, MAIL
-#0
+#
 "CLAN DEMOTE" "CLAN PROMOTE"
 
 Uso: clan demote <jogador>
@@ -185,7 +185,7 @@ membros de posiï¿½ï¿½o inferior a sua dentro do clï¿½.
 Exemplos:
   > clan demote rasmussen
   > clan promote catje
-#0
+#
 "CLAN DESCRIPT"
 
 Uso: clan descript
@@ -195,7 +195,7 @@ visï¿½vel a todos os jogadores (incluindo os nï¿½o-membros) atravï¿½s do comando
 CLAN INFO.
 
 Veja tambï¿½m: CLAN INFO
-#0
+#
 "CLAN KARMA"
 
 Uso: clan karma [ jogador [ pontuaï¿½ï¿½o ] ]
@@ -214,7 +214,7 @@ Exemplos:
 
   > clan karma unidos -2
   O clï¿½ Unidos perdeu 2 pontos de Karma, ficando com -1.
-#0107
+#107
 "CLAN DEBIT"
 
 Uso: clan debit <clï¿½> <valor>
@@ -225,7 +225,7 @@ para aplicaï¿½ï¿½o de multas.
 
 Exemplos:
   > clan debit 1 2000000
-#0108
+#108
 "CLAN CREATE"
 
 Uso: clan create <nï¿½mero> <nome>
@@ -238,7 +238,7 @@ o clï¿½.
 seguida, sua ediï¿½ï¿½o atravï¿½s dos comandos CLAN EDIT e CLAN SET.
 
 Veja tambï¿½m: CLAN EDIT, CLAN DELETE
-#0109
+#109
 "CLAN DELETE"
 
 Uso: clan delete <clï¿½>
@@ -251,7 +251,7 @@ automaticamente retirados do clï¿½ antes de sua exclusï¿½o.
 portanto, deve-se ter cuidado.
 
 Veja tambï¿½m: CLAN CREATE
-#0109
+#109
 "CLAN EDIT" "CLAN SET"
 
 Uso: clan edit <clï¿½>
@@ -279,7 +279,7 @@ Exemplo:
   > clan edit
   Encerrando ediï¿½ï¿½o do clï¿½ 2.
   (o jogo salva o clï¿½ e encerra a ediï¿½ï¿½o)
-#0109
+#109
 "CLAN ADDRANK" "CLAN DELRANK"
 
 Uso: clan addrank <poder> <tï¿½tulo-masc> <tï¿½tulo-fem>
@@ -318,5 +318,6 @@ comece pelos postos mais baixos, indo atï¿½ os postos mais altos.
 comando CLAN INFO.
 
 Veja tambï¿½m: CLAN EDIT, CLAN INFO
-#0
-$~
+#
+$
+~
