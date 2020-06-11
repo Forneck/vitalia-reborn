@@ -1,9 +1,9 @@
 #28000
 Uma Pequena Floresta~
-   Você está em uma floresta.  Existem muitas árvores grandes por aqui.  A
-densa folhagem se expande até onde sua vista pode alcançar.  Ao norte você
+   Vocï¿½ estï¿½ em uma floresta.  Existem muitas ï¿½rvores grandes por aqui.  A
+densa folhagem se expande atï¿½ onde sua vista pode alcanï¿½ar.  Ao norte vocï¿½
 consegue ver apenas a silhueta de uma montanha muito grande que parece bem
-diferente de todas as outras montanhas que você já viu.
+diferente de todas as outras montanhas que vocï¿½ jï¿½ viu.
 ~
 280 0 3
 D3
@@ -16,14 +16,14 @@ D0
 0 -1 28001
 E
 montanha~
-Está muito longe para você vêr.
+Estï¿½ muito longe para vocï¿½ vï¿½r.
 ~
 S
 #28001
 Uma Trilha na Floresta~
-   Você está em uma trilha na floresta.  Existem muitas árvores à sua volta.
-O solo está bastante úmido e seus pés afundam no chão, à medida que você
-caminha.  A floresta é bem densa e você não tem outra saída além desta
+   Vocï¿½ estï¿½ em uma trilha na floresta.  Existem muitas ï¿½rvores ï¿½ sua volta.
+O solo estï¿½ bastante ï¿½mido e seus pï¿½s afundam no chï¿½o, ï¿½ medida que vocï¿½
+caminha.  A floresta ï¿½ bem densa e vocï¿½ nï¿½o tem outra saï¿½da alï¿½m desta
 trilha.
 ~
 280 0 3
@@ -39,8 +39,8 @@ S
 #28002
 A Encruzilhada da Trilha~
    Neste ponto a trilha se divide.  Um caminho segue para o norte e o outro
-para o leste, em direção a um barulho de água caindo.  Pequenos vãos entre
-os arbustos permitem que a luz penetre na floresta.  Você pode ver a
+para o leste, em direï¿½ï¿½o a um barulho de ï¿½gua caindo.  Pequenos vï¿½os entre
+os arbustos permitem que a luz penetre na floresta.  Vocï¿½ pode ver a
 silhueta de uma enorme montanha ao norte.
 ~
 280 0 3
@@ -58,16 +58,16 @@ D2
 0 -1 28001
 E
 montanha~
-A montanha tem o formato de um cone mas em seu cume há uma estranha
-estrutura que você nem imagina o que seja.
+A montanha tem o formato de um cone mas em seu cume hï¿½ uma estranha
+estrutura que vocï¿½ nem imagina o que seja.
 ~
 S
 #28003
 O Final da Trilha~
-   Um grande número de árvores foram cortadas recentemente aqui.  Arbustos e
-troncos estão jogados sobre o solo úmido.  Alguns pequenos insetos passeiam
-sobre a madeira que está aos seus pés, à procura de qualquer tipo de comida.
-Não existe nenhuma saída a não ser voltar.
+   Um grande nï¿½mero de ï¿½rvores foram cortadas recentemente aqui.  Arbustos e
+troncos estï¿½o jogados sobre o solo ï¿½mido.  Alguns pequenos insetos passeiam
+sobre a madeira que estï¿½ aos seus pï¿½s, ï¿½ procura de qualquer tipo de comida.
+Nï¿½o existe nenhuma saï¿½da a nï¿½o ser voltar.
 ~
 280 0 3
 D2
@@ -77,12 +77,12 @@ D2
 S
 #28004
 Uma Clareira na Floresta~
-   Este lugar parece ser ideal para um descanso.  Não há nada encobrindo a
-sua visão do céu além de alguns pequeninos passarinhos, que traçam vôos
-rasantes em direção à folhagem das árvores.  Ao leste, um pequeno lago
-parece convidar os animais da floresta para que matem sua sede em suas águas
-claras.  O barulho das águas de uma chachoeira mostra que você está bem
-próximo dela.  Alguns coelhos e gazelas cruzam rápidamente a clareira, indo
+   Este lugar parece ser ideal para um descanso.  Nï¿½o hï¿½ nada encobrindo a
+sua visï¿½o do cï¿½u alï¿½m de alguns pequeninos passarinhos, que traï¿½am vï¿½os
+rasantes em direï¿½ï¿½o ï¿½ folhagem das ï¿½rvores.  Ao leste, um pequeno lago
+parece convidar os animais da floresta para que matem sua sede em suas ï¿½guas
+claras.  O barulho das ï¿½guas de uma chachoeira mostra que vocï¿½ estï¿½ bem
+prï¿½ximo dela.  Alguns coelhos e gazelas cruzam rï¿½pidamente a clareira, indo
 de um lado para o outro, algumas vezes silenciosamente outras nem tanto,
 perturbando seu descanso.
 ~
@@ -97,12 +97,12 @@ D3
 0 -1 28002
 S
 #28005
-Lago das Águas Cristalinas~
-   Este lago de águas tão claras parece um enorme espelho, quando visto de
-cima.  O reflexo das nuvens em sua superfície mistura-se à silhueta dos
-peixes que nadam em suas águas.  O fundo do lago é rochoso e a maré está
-bastante calma.  Esta situação é um tanto estranha pois você percebe que uma
-poderosa cachoeira está bem próxima, ao norte.
+Lago das ï¿½guas Cristalinas~
+   Este lago de ï¿½guas tï¿½o claras parece um enorme espelho, quando visto de
+cima.  O reflexo das nuvens em sua superfï¿½cie mistura-se ï¿½ silhueta dos
+peixes que nadam em suas ï¿½guas.  O fundo do lago ï¿½ rochoso e a marï¿½ estï¿½
+bastante calma.  Esta situaï¿½ï¿½o ï¿½ um tanto estranha pois vocï¿½ percebe que uma
+poderosa cachoeira estï¿½ bem prï¿½xima, ao norte.
 ~
 280 4 6
 D0
@@ -115,13 +115,13 @@ D3
 0 -1 28004
 S
 #28006
-Uma Poderosa Cachoeira Entre Sólidas Rochas~
-   Uma esplêndida cachoeira pulveriza água em seu rosto.  A sensação é
+Uma Poderosa Cachoeira Entre Sï¿½lidas Rochas~
+   Uma esplï¿½ndida cachoeira pulveriza ï¿½gua em seu rosto.  A sensaï¿½ï¿½o ï¿½
 deliciosa e refrescante e uma suave brisa o envolve, dando ao lugar uma
-sensação de paz.  Ao sul existem apenas as águas claras do lago e ao norte,
-uma poderosa e talvez perigosa cachoeira.  Para onde será que toda esta água
-vai?  Não há nem rios ou canais.  Esta incerteza lhe causa uma apreensão e
-desperta em você a curiosidade.
+sensaï¿½ï¿½o de paz.  Ao sul existem apenas as ï¿½guas claras do lago e ao norte,
+uma poderosa e talvez perigosa cachoeira.  Para onde serï¿½ que toda esta ï¿½gua
+vai?  Nï¿½o hï¿½ nem rios ou canais.  Esta incerteza lhe causa uma apreensï¿½o e
+desperta em vocï¿½ a curiosidade.
 ~
 280 4 6
 D0
@@ -135,10 +135,10 @@ D2
 S
 #28007
 Sob a Cachoeira~
-   Água, água e água.  Você nunca viu tanta água caindo sobre sua cabeça.
-Suas roupas e equipamentos estão ensopados e apesar disso, você não se
-importa, afinal a visão do maravilhoso arco-íris compensa qualquer
-sacrifício.  Talvez seja uma boa idéia retornar antes que você se resfrie e
+   ï¿½gua, ï¿½gua e ï¿½gua.  Vocï¿½ nunca viu tanta ï¿½gua caindo sobre sua cabeï¿½a.
+Suas roupas e equipamentos estï¿½o ensopados e apesar disso, vocï¿½ nï¿½o se
+importa, afinal a visï¿½o do maravilhoso arco-ï¿½ris compensa qualquer
+sacrifï¿½cio.  Talvez seja uma boa idï¿½ia retornar antes que vocï¿½ se resfrie e
 pegue uma pneumonia.
 ~
 280 4 6
@@ -153,12 +153,12 @@ D2
 0 -1 28006
 S
 #28008
-Um Lago Escondido Atrás da Cachoeira~
-   Então é para cá que toda a água vai!!  Um lago escondido pela grande
-cachoeira.  À primeira vista, este lugar parece ser uma galeria subterrânea,
-com formações calcáreas bastante interessantes em seu lado oeste.  A água
-desce para cá passando pela rede e cria uma segunda queda, que é menor do
-que aquela que esta lá fora mas suficientemente alta para obstruir seu
+Um Lago Escondido Atrï¿½s da Cachoeira~
+   Entï¿½o ï¿½ para cï¿½ que toda a ï¿½gua vai!!  Um lago escondido pela grande
+cachoeira.  ï¿½ primeira vista, este lugar parece ser uma galeria subterrï¿½nea,
+com formaï¿½ï¿½es calcï¿½reas bastante interessantes em seu lado oeste.  A ï¿½gua
+desce para cï¿½ passando pela rede e cria uma segunda queda, que ï¿½ menor do
+que aquela que esta lï¿½ fora mas suficientemente alta para obstruir seu
 caminho de volta.
 ~
 280 acd 6
@@ -172,14 +172,14 @@ D3
 0 -1 28009
 S
 #28009
-Formações Calcáreas do Lago~
-   Um número imenso de colunas de calcáreo estão espalhadas pela sala.
-Estas colunas foram formadas há séculos, através de um paciente e constante
-trabalho da Natureza, que depósita minúsculas gotas de água contendo
-partículas de calcáreo.  E este trabalho prossegue pois as colunas continuam
+Formaï¿½ï¿½es Calcï¿½reas do Lago~
+   Um nï¿½mero imenso de colunas de calcï¿½reo estï¿½o espalhadas pela sala.
+Estas colunas foram formadas hï¿½ sï¿½culos, atravï¿½s de um paciente e constante
+trabalho da Natureza, que depï¿½sita minï¿½sculas gotas de ï¿½gua contendo
+partï¿½culas de calcï¿½reo.  E este trabalho prossegue pois as colunas continuam
 a se formar.  Algumas esculturas parecem altares e outras lembram seres
 humanos e semi-humanos.
-   Você sente que a água corre com mais força ao oeste.
+   Vocï¿½ sente que a ï¿½gua corre com mais forï¿½a ao oeste.
 ~
 280 ad 6
 D1
@@ -193,10 +193,10 @@ D3
 S
 #28010
 Um Canal com Forte Correnteza~
-   Você está em um canal que foi construído por mãos humanas.  Você precisa
-de muita habilidade para manter sua estabilidade e para não se chocar contra
-as paredes.  O canal é bastante extenso mas a velocidade da água faz com que
-você o atravesse rápidamente.
+   Vocï¿½ estï¿½ em um canal que foi construï¿½do por mï¿½os humanas.  Vocï¿½ precisa
+de muita habilidade para manter sua estabilidade e para nï¿½o se chocar contra
+as paredes.  O canal ï¿½ bastante extenso mas a velocidade da ï¿½gua faz com que
+vocï¿½ o atravesse rï¿½pidamente.
 ~
 280 13 6
 D0
@@ -210,13 +210,13 @@ D1
 S
 #28011
 Uma Estranha Piscina~
-   Um lugar bastante estranho para se encontrar uma piscina.  Você chega até
+   Um lugar bastante estranho para se encontrar uma piscina.  Vocï¿½ chega atï¿½
 sua borda com um certo cuidado pois percebe algo muito peculiar acontecendo.
-Toda a água que entra nesta piscina simplesmente desaparece, deixando aquele
-imenso buraco exposto.  Não existe jeito de sair desta cratera.  Sem
-escadas, sem degraus, sem nada.  As paredes são lisas, escorregadias e pelo
-jeito muitos curiosos não tiveram a mesma sorte que você.  Para onde será
-que esta água está indo?
+Toda a ï¿½gua que entra nesta piscina simplesmente desaparece, deixando aquele
+imenso buraco exposto.  Nï¿½o existe jeito de sair desta cratera.  Sem
+escadas, sem degraus, sem nada.  As paredes sï¿½o lisas, escorregadias e pelo
+jeito muitos curiosos nï¿½o tiveram a mesma sorte que vocï¿½.  Para onde serï¿½
+que esta ï¿½gua estï¿½ indo?
 ~
 280 13 6
 D2
@@ -229,16 +229,16 @@ buraco piscina~
 1 -1 28012
 S
 #28012
-O Rio dos Heróis~
-   Woooooow!!!!!  Repentinamente você é tragado por um poderoso turbilhão.
-Você passa por um longo tubo a uma velocidade impressionante e embora tente
-desesperadamente ver algo, a única coisa possível é prender a respiração e
-rezar para que alguma entidade divina o proteja.  E da mesma forma rápida
-com que foi tragado, você emerge em um rio sinuoso.  Feliz, você percebe que
-o céu está azul e o sol brilhante e você faz uma prece em agradecimento aos
-Deuses pela benção de sua salvação.
-   O rio é repleto por pequenas quedas d'água com uns 10 pés de altura, cada
-uma.  Você sabe que se seguir em frente, muito possívelmente não poderá
+O Rio dos Herï¿½is~
+   Woooooow!!!!!  Repentinamente vocï¿½ ï¿½ tragado por um poderoso turbilhï¿½o.
+Vocï¿½ passa por um longo tubo a uma velocidade impressionante e embora tente
+desesperadamente ver algo, a ï¿½nica coisa possï¿½vel ï¿½ prender a respiraï¿½ï¿½o e
+rezar para que alguma entidade divina o proteja.  E da mesma forma rï¿½pida
+com que foi tragado, vocï¿½ emerge em um rio sinuoso.  Feliz, vocï¿½ percebe que
+o cï¿½u estï¿½ azul e o sol brilhante e vocï¿½ faz uma prece em agradecimento aos
+Deuses pela benï¿½ï¿½o de sua salvaï¿½ï¿½o.
+   O rio ï¿½ repleto por pequenas quedas d'ï¿½gua com uns 10 pï¿½s de altura, cada
+uma.  Vocï¿½ sabe que se seguir em frente, muito possï¿½velmente nï¿½o poderï¿½
 voltar.
 ~
 280 4 6
@@ -248,10 +248,10 @@ D0
 0 -1 28013
 S
 #28013
-O Rio dos Heróis~
-   Você passou por uma cachoeira.  Você vê nas margens do rio um grande
-número de canos.  Estes canos levam a água para alguns povoados da região.
-Além do aqueduto estão algumas árvores e um pequeno prédio ao nordeste.
+O Rio dos Herï¿½is~
+   Vocï¿½ passou por uma cachoeira.  Vocï¿½ vï¿½ nas margens do rio um grande
+nï¿½mero de canos.  Estes canos levam a ï¿½gua para alguns povoados da regiï¿½o.
+Alï¿½m do aqueduto estï¿½o algumas ï¿½rvores e um pequeno prï¿½dio ao nordeste.
 ~
 280 4 6
 D0
@@ -260,10 +260,10 @@ D0
 0 -1 28014
 S
 #28014
-O Rio dos Heróis~
-   O rio começa a fazer uma curva aqui.  Um estranho ruído chega do leste,
-como se fossem inúmeros tambores.  O som parece estar vindo daquele pequeno
-prédio na margem leste.  A água produz pequenas ondas, produzindo pequenas
+O Rio dos Herï¿½is~
+   O rio comeï¿½a a fazer uma curva aqui.  Um estranho ruï¿½do chega do leste,
+como se fossem inï¿½meros tambores.  O som parece estar vindo daquele pequeno
+prï¿½dio na margem leste.  A ï¿½gua produz pequenas ondas, produzindo pequenas
 gotas que refletem a luz.
 ~
 280 4 6
@@ -277,11 +277,11 @@ D1
 0 -1 28015
 S
 #28015
-Fora do Pequeno Prédio da Margem do Rio~
-   Você está do lado de fora do pequeno prédio.  A construção é branca e
-possui uma torre de observação.  Canos vindos do sul entram no prédio e saem
-para o norte.  Um forte ruído sai de dentro do prédio.  A grama cresce
-bastante alta aqui e em alguns lugares chega a bater em sua cintura.  Há uma
+Fora do Pequeno Prï¿½dio da Margem do Rio~
+   Vocï¿½ estï¿½ do lado de fora do pequeno prï¿½dio.  A construï¿½ï¿½o ï¿½ branca e
+possui uma torre de observaï¿½ï¿½o.  Canos vindos do sul entram no prï¿½dio e saem
+para o norte.  Um forte ruï¿½do sai de dentro do prï¿½dio.  A grama cresce
+bastante alta aqui e em alguns lugares chega a bater em sua cintura.  Hï¿½ uma
 porta de ferro no leste.
 ~
 280 0 1
@@ -296,11 +296,11 @@ D3
 0 -1 28014
 S
 #28016
-Dentro do Prédio da Bomba D'Água~ 
-   Que som terrível!  Há uma enorme máquina que vibra tremendamente e
-bombeia a água.  Esta máquina foi construída com centenas de engrenagens e
-peças desconhecidas.  O lugar onde você se encontra é enorme.  A luz penetra
-no ambiente através de pequenos buracos localizados na parede e são
+Dentro do Prï¿½dio da Bomba D'ï¿½gua~
+   Que som terrï¿½vel!  Hï¿½ uma enorme mï¿½quina que vibra tremendamente e
+bombeia a ï¿½gua.  Esta mï¿½quina foi construï¿½da com centenas de engrenagens e
+peï¿½as desconhecidas.  O lugar onde vocï¿½ se encontra ï¿½ enorme.  A luz penetra
+no ambiente atravï¿½s de pequenos buracos localizados na parede e sï¿½o
 suficientes para iluminar apenas pequenas partes da sala.
 ~
 280 41 0
@@ -316,16 +316,16 @@ porta~
 1 -1 28015
 D4
 ~
-alçapão~
+alï¿½apï¿½o~
 :n 1
 1 -1 28018
 S
 #28017
-O Depósito do Prédio da Bomba D'Água~
-   Você está dentro de um pequeno quarto.  É muito mal iluminado e você pode
-ver apenas algumas ferramentas, canos e alguns utensílios mecânicos.  Nas
-paredes estão presos alguns mapas e esquemas de máquinas para explicar como
-repará-las.
+O Depï¿½sito do Prï¿½dio da Bomba D'ï¿½gua~
+   Vocï¿½ estï¿½ dentro de um pequeno quarto.  ï¿½ muito mal iluminado e vocï¿½ pode
+ver apenas algumas ferramentas, canos e alguns utensï¿½lios mecï¿½nicos.  Nas
+paredes estï¿½o presos alguns mapas e esquemas de mï¿½quinas para explicar como
+reparï¿½-las.
 ~
 280 41 0
 D0
@@ -335,27 +335,27 @@ porta~
 2 28099 28016
 S
 #28018
-A Torre de Vigia do Prédio~
-   A luz de fora repentinamente preenche este lugar.  Você nota que está na
-torre de vigia.  Aqui você pode ver toda a amplidão da paisagem à sua volta.
-Ao leste você vê muitas colinas, ao norte existem muitos navios que estão no
-grande rio, ao oeste há um imenso campo e para o sul estão as montanhas
-rochosas.  Mais além ao norte, você vê uma cidade que foi construída aos pés
-de um enorme vulcão.
+A Torre de Vigia do Prï¿½dio~
+   A luz de fora repentinamente preenche este lugar.  Vocï¿½ nota que estï¿½ na
+torre de vigia.  Aqui vocï¿½ pode ver toda a amplidï¿½o da paisagem ï¿½ sua volta.
+Ao leste vocï¿½ vï¿½ muitas colinas, ao norte existem muitos navios que estï¿½o no
+grande rio, ao oeste hï¿½ um imenso campo e para o sul estï¿½o as montanhas
+rochosas.  Mais alï¿½m ao norte, vocï¿½ vï¿½ uma cidade que foi construï¿½da aos pï¿½s
+de um enorme vulcï¿½o.
 ~
 280 8 0
 D5
 ~
-alçapão~
+alï¿½apï¿½o~
 :n 1
 1 -1 28016
 S
 #28019
-O Rio dos Heróis~
-   Neste lugar, a água parece ser calma e alguns insetos dão mergulhos em
-sua superfície.  Existem apenas umas três árvores na margem e alguns canos.
-Porém ao norte, você vê um grande vulcão e aos seus pés, um número grande de
-bonitas construções.  Você tem certeza de que aquilo é uma cidade.
+O Rio dos Herï¿½is~
+   Neste lugar, a ï¿½gua parece ser calma e alguns insetos dï¿½o mergulhos em
+sua superfï¿½cie.  Existem apenas umas trï¿½s ï¿½rvores na margem e alguns canos.
+Porï¿½m ao norte, vocï¿½ vï¿½ um grande vulcï¿½o e aos seus pï¿½s, um nï¿½mero grande de
+bonitas construï¿½ï¿½es.  Vocï¿½ tem certeza de que aquilo ï¿½ uma cidade.
 ~
 280 4 6
 D0
@@ -368,11 +368,11 @@ D2
 0 -1 28014
 S
 #28020
-O Rio dos Heróis~
-   Você está em um lugar curioso.  Existem três rios que convergem para cá.
-Ao sul está o Rio dos Heróis, ao leste, o Rio dos Vencedores e ao oeste está
-o Rio dos Bravos.  Os dois últimos rios desembocam no primeiro.  Ao norte,
-há um pequeno porto e uma praça.
+O Rio dos Herï¿½is~
+   Vocï¿½ estï¿½ em um lugar curioso.  Existem trï¿½s rios que convergem para cï¿½.
+Ao sul estï¿½ o Rio dos Herï¿½is, ao leste, o Rio dos Vencedores e ao oeste estï¿½
+o Rio dos Bravos.  Os dois ï¿½ltimos rios desembocam no primeiro.  Ao norte,
+hï¿½ um pequeno porto e uma praï¿½a.
 ~
 280 4 6
 D0
@@ -394,8 +394,8 @@ D3
 S
 #28021
 O Rio dos Vencedores~
-   A água está mais clara aqui.  Você se pergunta se isso é devido ao fato
-do rio fazer ser bem mais estreito aqui e das margens estarem mais próximas
+   A ï¿½gua estï¿½ mais clara aqui.  Vocï¿½ se pergunta se isso ï¿½ devido ao fato
+do rio fazer ser bem mais estreito aqui e das margens estarem mais prï¿½ximas
 uma da outra do que ao oeste.
 ~
 280 0 6
@@ -410,12 +410,12 @@ D3
 S
 #28022
 O Rio dos Vencedores~
-   As margens do rio estão realmente bem mais próximas uma da outra, a ponto
-de se concluir que a navegação com grandes embarcações deve ser práticamente
-impossível.  Você também nota que nesta parte, o rio é bem raso, como se
-você estivesse perto de sua nascente.
-   A vegetação nestas margens é quase que totalmente composta por grama e
-pequenas árvores.
+   As margens do rio estï¿½o realmente bem mais prï¿½ximas uma da outra, a ponto
+de se concluir que a navegaï¿½ï¿½o com grandes embarcaï¿½ï¿½es deve ser prï¿½ticamente
+impossï¿½vel.  Vocï¿½ tambï¿½m nota que nesta parte, o rio ï¿½ bem raso, como se
+vocï¿½ estivesse perto de sua nascente.
+   A vegetaï¿½ï¿½o nestas margens ï¿½ quase que totalmente composta por grama e
+pequenas ï¿½rvores.
 ~
 280 0 6
 D1
@@ -429,9 +429,9 @@ D2
 S
 #28023
 A Parte Canalizada do Rio dos Vencedores~
-   Você percebe com surpresa porque o rio é tão raso e tão estreito: ele foi
-canalizado por alguém.  Por causa disso e pelo fato da terra ser tão plana,
-você acaba achando que a grama das margens não é grama de verdade mas talvez
+   Vocï¿½ percebe com surpresa porque o rio ï¿½ tï¿½o raso e tï¿½o estreito: ele foi
+canalizado por alguï¿½m.  Por causa disso e pelo fato da terra ser tï¿½o plana,
+vocï¿½ acaba achando que a grama das margens nï¿½o ï¿½ grama de verdade mas talvez
 algum tipo de planta cultivada e irrigada pelo rio.
 ~
 280 0 6
@@ -446,9 +446,9 @@ D2
 S
 #28024
 A Parte Canalizada do Rio dos Vencedores~
-   O rio que na verdade é um canal, se divide em dois braços.  Para o leste,
+   O rio que na verdade ï¿½ um canal, se divide em dois braï¿½os.  Para o leste,
 o rio penetra naquilo que parece ser um campo de arroz.  Para o oeste, ele
-vai seguindo em direção ao que parece ser um campo de trigo.  O canal
+vai seguindo em direï¿½ï¿½o ao que parece ser um campo de trigo.  O canal
 principal segue para o norte e o sul.
 ~
 280 0 6
@@ -471,11 +471,11 @@ D3
 S
 #28025
 A Parte Canalizada do Rio dos Vencedores~
-   Ao prosseguir pelo canal, você percebe que provavelmente este seja um
-local agrícola: existem muitos campos cultivados em todas as margens do rio.
-Você pondera que este deve ser um belo lugar para se viver, quando você
+   Ao prosseguir pelo canal, vocï¿½ percebe que provavelmente este seja um
+local agrï¿½cola: existem muitos campos cultivados em todas as margens do rio.
+Vocï¿½ pondera que este deve ser um belo lugar para se viver, quando vocï¿½
 tiver finalmente decidido a se aposentar desta sua vida de lutas, aventuras
-e...  Matanças!
+e...  Matanï¿½as!
 ~
 280 0 6
 D0
@@ -491,9 +491,9 @@ D2
 S
 #28026
 A Parte Canalizada do Rio dos Vencedores~
-   O canal novamente se divide em dois braços.  Para o leste o rio penetra
+   O canal novamente se divide em dois braï¿½os.  Para o leste o rio penetra
 naquilo que parece ser um campo de soja.  E para o oeste, ele segue na
-direção de um campo de aveia.  O canal também continua para o norte e sul.
+direï¿½ï¿½o de um campo de aveia.  O canal tambï¿½m continua para o norte e sul.
 ~
 280 0 6
 D0
@@ -515,11 +515,11 @@ D3
 S
 #28027
 A Parte Canalizada do Rio dos Vencedores~
-   Ao prosseguir pelo canal, você percebe que realmente este é um local
-agrícola: existem muitos campos cultivados em todas as margens do rio.  Você
-pondera que este deve ser um belo lugar para se viver, quando você tiver
+   Ao prosseguir pelo canal, vocï¿½ percebe que realmente este ï¿½ um local
+agrï¿½cola: existem muitos campos cultivados em todas as margens do rio.  Vocï¿½
+pondera que este deve ser um belo lugar para se viver, quando vocï¿½ tiver
 finalmente decidido a se aposentar desta sua vida de lutas, aventuras e...
-Matanças!
+Matanï¿½as!
 ~
 280 0 6
 D0
@@ -533,11 +533,11 @@ D2
 S
 #28028
 A Parte Canalizada do Rio dos Vencedores~
-   O canal novamente se divide em dois braços.  Para o leste, o rio penetra
+   O canal novamente se divide em dois braï¿½os.  Para o leste, o rio penetra
 naquilo que parece ser um campo de milho...e isto o faz se lembrar do quanto
-você adora milho assado...talvez você possa ir até lá e pegar algumas
+vocï¿½ adora milho assado...talvez vocï¿½ possa ir atï¿½ lï¿½ e pegar algumas
 espigas para comer.
-   Para o oeste, o canal segue em direção a um campo de cevada.  E segue
+   Para o oeste, o canal segue em direï¿½ï¿½o a um campo de cevada.  E segue
 para o norte e sul.
 ~
 280 0 6
@@ -560,10 +560,10 @@ D3
 S
 #28029
 A Parte Canalizada do Rio dos Vencedores~
-   Enquanto você segue através do canal, você começa a pensar que isto é
-realmente um lugar muito entediante....apenas água e campos cultivados...e
-você quer alguma ação!!  Contudo, parece que esta parte do rio está mais
-funda e mais larga...quem sabe você não encontra alguma coisa mais
+   Enquanto vocï¿½ segue atravï¿½s do canal, vocï¿½ comeï¿½a a pensar que isto ï¿½
+realmente um lugar muito entediante....apenas ï¿½gua e campos cultivados...e
+vocï¿½ quer alguma aï¿½ï¿½o!!  Contudo, parece que esta parte do rio estï¿½ mais
+funda e mais larga...quem sabe vocï¿½ nï¿½o encontra alguma coisa mais
 interessante pela frente.
 ~
 280 0 6
@@ -578,9 +578,9 @@ D2
 S
 #28030
 O Rio dos Vencedores~
-   As margens do canal estão repletas de plantas cultivadas.  A cor da água
-é bem clara, ficando mais clara ao norte e mais escura ao sul.  A terra é
-plana e o ar está impregnado com o cheiro de seiva das plantas.
+   As margens do canal estï¿½o repletas de plantas cultivadas.  A cor da ï¿½gua
+ï¿½ bem clara, ficando mais clara ao norte e mais escura ao sul.  A terra ï¿½
+plana e o ar estï¿½ impregnado com o cheiro de seiva das plantas.
 ~
 280 0 6
 D0
@@ -594,8 +594,8 @@ D2
 S
 #28031
 O Rio dos Vencedores~
-   O rio termina aqui.  Este local é muito calmo e apenas pequeninos
-pássaros quebram a serenidade do lugar.
+   O rio termina aqui.  Este local ï¿½ muito calmo e apenas pequeninos
+pï¿½ssaros quebram a serenidade do lugar.
 ~
 280 0 6
 D0
@@ -605,10 +605,10 @@ D0
 S
 #28032
 O Canal Estreito Entre Campos de Arroz~
-   Você está em um canal muito estreito entre dois campos de arroz.  Você
-não consegue ver muita coisa dos campos porque as margens são muito altas.
-Contudo, você pode entrar nos campos pelo norte e pelo sul, para satisfazer
-sua curiosidade.  A outra alternativa é ir pelo oeste, na direção do canal
+   Vocï¿½ estï¿½ em um canal muito estreito entre dois campos de arroz.  Vocï¿½
+nï¿½o consegue ver muita coisa dos campos porque as margens sï¿½o muito altas.
+Contudo, vocï¿½ pode entrar nos campos pelo norte e pelo sul, para satisfazer
+sua curiosidade.  A outra alternativa ï¿½ ir pelo oeste, na direï¿½ï¿½o do canal
 principal.
 ~
 280 0 6
@@ -627,9 +627,9 @@ D3
 S
 #28033
 O Lado Norte do Campo de Arroz~
-   Você está no lado norte de um campo de arroz.  Os pés de arroz são
-plantas altas e mesmo sem você saber muita coisa sobre agricultura, você
-percebe que o arroz está pronto para ser colhido.  O solo é úmido e o som
+   Vocï¿½ estï¿½ no lado norte de um campo de arroz.  Os pï¿½s de arroz sï¿½o
+plantas altas e mesmo sem vocï¿½ saber muita coisa sobre agricultura, vocï¿½
+percebe que o arroz estï¿½ pronto para ser colhido.  O solo ï¿½ ï¿½mido e o som
 dos insetos parece tomar conta do lugar.
 ~
 280 0 2
@@ -640,10 +640,10 @@ D2
 S
 #28034
 O Lado Sul do Campo de Arroz~
-   Você está no lado norte de um campo de arroz.  Ao norte está um canal
-estreito separando a plantação de arroz em dois campos distintos.  Ao sul, a
-vegetação abruptamente se transforma em algo parecido com soja.  Olhando
-para as plantas, você imagina onde estariam as pessoas que fazem a colheita.
+   Vocï¿½ estï¿½ no lado norte de um campo de arroz.  Ao norte estï¿½ um canal
+estreito separando a plantaï¿½ï¿½o de arroz em dois campos distintos.  Ao sul, a
+vegetaï¿½ï¿½o abruptamente se transforma em algo parecido com soja.  Olhando
+para as plantas, vocï¿½ imagina onde estariam as pessoas que fazem a colheita.
 ~
 280 0 2
 D0
@@ -657,10 +657,10 @@ D2
 S
 #28035
 O Canal Estreito Entre Campos de Soja~
-   Você está em um canal estreito entre dois campos de soja.  Você não pode
-ver muito da soja porque as margens são bem altas.  Contudo, você pode
+   Vocï¿½ estï¿½ em um canal estreito entre dois campos de soja.  Vocï¿½ nï¿½o pode
+ver muito da soja porque as margens sï¿½o bem altas.  Contudo, vocï¿½ pode
 entrar nos campos pelo norte e pelo sul, para satisfazer sua curiosidade.  A
-outra alternativa é ir para o oeste, para o canal principal.
+outra alternativa ï¿½ ir para o oeste, para o canal principal.
 ~
 280 0 6
 D0
@@ -678,10 +678,10 @@ D3
 S
 #28036
 O Lado Norte do Campo de Soja~
-   Você está no lado norte de um campo de soja.  Ao sul está um canal
-estreito separando a plantação de soja em dois campos distintos.  Ao norte,
-a vegetação abruptamente se transforma em algo parecido com arroz.  Mesmo
-sem você saber muita coisa sobre agricultura, você percebe que a soja está
+   Vocï¿½ estï¿½ no lado norte de um campo de soja.  Ao sul estï¿½ um canal
+estreito separando a plantaï¿½ï¿½o de soja em dois campos distintos.  Ao norte,
+a vegetaï¿½ï¿½o abruptamente se transforma em algo parecido com arroz.  Mesmo
+sem vocï¿½ saber muita coisa sobre agricultura, vocï¿½ percebe que a soja estï¿½
 pronta para ser colhida.
 ~
 280 0 2
@@ -696,11 +696,11 @@ D2
 S
 #28037
 O Lado Sul do Campo de Soja~
-   Você está no lado sul de um campo de soja.  Ao norte está um canal
-estreito separando a plantação de soja em dois campos distintos.  Ao sul, a
-vegetação abruptamente se transforma em algo parecido com milho.  A soja
-está pronta para ser colhida e você se pergunta onde estariam as pessoas
-responsáveis pela colheita.
+   Vocï¿½ estï¿½ no lado sul de um campo de soja.  Ao norte estï¿½ um canal
+estreito separando a plantaï¿½ï¿½o de soja em dois campos distintos.  Ao sul, a
+vegetaï¿½ï¿½o abruptamente se transforma em algo parecido com milho.  A soja
+estï¿½ pronta para ser colhida e vocï¿½ se pergunta onde estariam as pessoas
+responsï¿½veis pela colheita.
 ~
 280 0 2
 D0
@@ -714,11 +714,11 @@ D2
 S
 #28038
 O Canal Estreito Entre Campos de Milho~
-   Você está em um canal estreito entre dois campos de milho.  Você consegue
-ver os altos pés-de-milho que estão ao norte, sul e leste.  Você pensa que
-poderia ir até lá e colher uma espiga....afinal existem tantas ali...e os
-donos da plantação talvez nem fossem dar pela falta de apenas uma delas...ou
-será que dariam?
+   Vocï¿½ estï¿½ em um canal estreito entre dois campos de milho.  Vocï¿½ consegue
+ver os altos pï¿½s-de-milho que estï¿½o ao norte, sul e leste.  Vocï¿½ pensa que
+poderia ir atï¿½ lï¿½ e colher uma espiga....afinal existem tantas ali...e os
+donos da plantaï¿½ï¿½o talvez nem fossem dar pela falta de apenas uma delas...ou
+serï¿½ que dariam?
 ~
 280 0 6
 D0
@@ -740,10 +740,10 @@ D1
 S
 #28039
 O Lado Norte do Campo de Milho~
-   Você está no lado norte de um campo de milho.  Ao sul está um canal
-estreito separando a plantação de milho em dois campos distintos.  Ao norte,
-a vegetação abruptamente se transforma em algo parecido com soja.  Olhando
-para as plantas, você imagina onde estariam as pessoas que fazem a colheita.
+   Vocï¿½ estï¿½ no lado norte de um campo de milho.  Ao sul estï¿½ um canal
+estreito separando a plantaï¿½ï¿½o de milho em dois campos distintos.  Ao norte,
+a vegetaï¿½ï¿½o abruptamente se transforma em algo parecido com soja.  Olhando
+para as plantas, vocï¿½ imagina onde estariam as pessoas que fazem a colheita.
 ~
 280 0 2
 D0
@@ -757,11 +757,11 @@ D2
 S
 #28040
 O Lado Sul do Campo de Milho~
-   Você está no lado sul de um campo de milho.  Os pés-de-milho são altos,
-as espigas são grandes.  Tudo o que você entende sobre milho se consiste em
-colocá-lo em uma panela com água fervendo e cozinhar devagar mas ainda assim
-você percebe que todo o milho está pronto para ser colhido.  O som dos
-insetos toma conta do lugar e a única saída possível parece ser ao norte,
+   Vocï¿½ estï¿½ no lado sul de um campo de milho.  Os pï¿½s-de-milho sï¿½o altos,
+as espigas sï¿½o grandes.  Tudo o que vocï¿½ entende sobre milho se consiste em
+colocï¿½-lo em uma panela com ï¿½gua fervendo e cozinhar devagar mas ainda assim
+vocï¿½ percebe que todo o milho estï¿½ pronto para ser colhido.  O som dos
+insetos toma conta do lugar e a ï¿½nica saï¿½da possï¿½vel parece ser ao norte,
 para o canal
 ~
 280 0 2
@@ -772,10 +772,10 @@ D0
 S
 #28041
 O Canal Estreito Entre Campos de Trigo~
-   Você está em um canal estreito entre dois campos de trigo.  Você não pode
-ver muito do trigo porque as margens são bem altas.  Contudo, você pode
+   Vocï¿½ estï¿½ em um canal estreito entre dois campos de trigo.  Vocï¿½ nï¿½o pode
+ver muito do trigo porque as margens sï¿½o bem altas.  Contudo, vocï¿½ pode
 entrar nos campos pelo norte e pelo sul, para satisfazer sua curiosidade.  A
-outra alternativa é ir para o leste, para o canal principal.  Um barco
+outra alternativa ï¿½ ir para o leste, para o canal principal.  Um barco
 pequeno desce o rio para o oeste.
 ~
 280 0 6
@@ -798,10 +798,10 @@ D3
 S
 #28042
 O Lado Norte do Campo de Trigo~
-   Um imenso campo de trigo se extende em direção ao norte.  A plantação
-cobre completamente cada centímetro da terra, criando um vasto tapete que
-parece dançar ao vento.  A cena enche sua vista e você procura pelos
-trabalhadores que irão fazer a colheita do trigo.
+   Um imenso campo de trigo se extende em direï¿½ï¿½o ao norte.  A plantaï¿½ï¿½o
+cobre completamente cada centï¿½metro da terra, criando um vasto tapete que
+parece danï¿½ar ao vento.  A cena enche sua vista e vocï¿½ procura pelos
+trabalhadores que irï¿½o fazer a colheita do trigo.
 ~
 280 0 2
 D2
@@ -811,8 +811,8 @@ D2
 S
 #28043
 O Lado Sul do Campo de Trigo~
-   Trigo é o ingrediente básico para se fazer pão.  Você percebe que o trigo
-usado para fazer os famosos pães romanos e Midgaardianos pode ter sido
+   Trigo ï¿½ o ingrediente bï¿½sico para se fazer pï¿½o.  Vocï¿½ percebe que o trigo
+usado para fazer os famosos pï¿½es romanos e Midgaardianos pode ter sido
 produzido aqui.  Esse campo de trigo tem um tom forte de amarelo e quando a
 luz do sol incide sobre o trigal, este brilha como se fosse ouro.
 ~
@@ -828,10 +828,10 @@ D2
 S
 #28044
 O Canal Estreito Entre Campos de Aveia~
-   Você está em um canal estreito entre dois campos de aveia.  Você não pode
-ver muito da aveia porque as margens são bem altas.  Contudo, você pode
+   Vocï¿½ estï¿½ em um canal estreito entre dois campos de aveia.  Vocï¿½ nï¿½o pode
+ver muito da aveia porque as margens sï¿½o bem altas.  Contudo, vocï¿½ pode
 entrar nos campos pelo norte e pelo sul, para satisfazer sua curiosidade.  A
-outra alternativa é ir para o leste, para o canal principal.
+outra alternativa ï¿½ ir para o leste, para o canal principal.
 ~
 280 0 6
 D0
@@ -849,10 +849,10 @@ D2
 S
 #28045
 O Lado Norte do Campo de Aveia~
-   Enquanto você vê este campo de aveia, você se lembra de quando era uma
-linda criança e sua queria mãe sempre lhe dizia para comer aveia para ficar
-forte e saudável.  Você fica emocionado e por um momento gostaria de voltar
-para sua casa materna.  Contudo, rapidamente você se recupera e volta ao seu
+   Enquanto vocï¿½ vï¿½ este campo de aveia, vocï¿½ se lembra de quando era uma
+linda crianï¿½a e sua queria mï¿½e sempre lhe dizia para comer aveia para ficar
+forte e saudï¿½vel.  Vocï¿½ fica emocionado e por um momento gostaria de voltar
+para sua casa materna.  Contudo, rapidamente vocï¿½ se recupera e volta ao seu
 estado normal, esquecendo todas essas bobagens sentimentais.
 ~
 280 0 2
@@ -867,9 +867,9 @@ D2
 S
 #28046
 O Lado Sul do Campo de Aveia~
-   O campo de aveia parece terminar.  As plantas dançam ao vento.  Você vê
-inúmeros homens e mulheres trabalhando, colhendo e carregando várias
-carroças com a aveia colhida.
+   O campo de aveia parece terminar.  As plantas danï¿½am ao vento.  Vocï¿½ vï¿½
+inï¿½meros homens e mulheres trabalhando, colhendo e carregando vï¿½rias
+carroï¿½as com a aveia colhida.
 ~
 280 0 2
 D0
@@ -883,10 +883,10 @@ D2
 S
 #28047
 O Canal Estreito Entre Campos de Cevada~
-   Você está em um canal estreito entre dois campos de cevada.  Você não
-pode ver muito da aveia porque as margens são bem altas.  Contudo, você pode
+   Vocï¿½ estï¿½ em um canal estreito entre dois campos de cevada.  Vocï¿½ nï¿½o
+pode ver muito da aveia porque as margens sï¿½o bem altas.  Contudo, vocï¿½ pode
 entrar nos campos pelo norte e pelo sul, para satisfazer sua curiosidade.  A
-outra alternativa é ir para o leste, para o canal principal.
+outra alternativa ï¿½ ir para o leste, para o canal principal.
 ~
 280 0 6
 D0
@@ -904,11 +904,11 @@ D2
 S
 #28048
 O Lado Norte do Campo de Cevada~
-   Você está no lado norte de um campo de cevada.  Ao sul está um canal
-estreito separando a plantação de cevada em dois campos distintos.  Ao
-norte, a vegetação abruptamente se transforma em algo parecido com aveia.
-Mesmo sem entender nada de agricultura, você tem plena certeza de que esta
-cevada está pronta para ser colhida.
+   Vocï¿½ estï¿½ no lado norte de um campo de cevada.  Ao sul estï¿½ um canal
+estreito separando a plantaï¿½ï¿½o de cevada em dois campos distintos.  Ao
+norte, a vegetaï¿½ï¿½o abruptamente se transforma em algo parecido com aveia.
+Mesmo sem entender nada de agricultura, vocï¿½ tem plena certeza de que esta
+cevada estï¿½ pronta para ser colhida.
 ~
 280 0 2
 D0
@@ -923,9 +923,9 @@ S
 #28049
 O Lado Sul do Campo de Cevada~
    Um imenso campo de cevada segue daqui e se extende para o sul.  A
-plantação cobre completamente cada centímetro da terra, criando um tapete
-amarelo que parece dançar ao vento.  A cena enche sua vista e você procura
-pelos trabalhadores que irão fazer a colheita da cevada.
+plantaï¿½ï¿½o cobre completamente cada centï¿½metro da terra, criando um tapete
+amarelo que parece danï¿½ar ao vento.  A cena enche sua vista e vocï¿½ procura
+pelos trabalhadores que irï¿½o fazer a colheita da cevada.
 ~
 280 0 2
 D0
@@ -935,8 +935,8 @@ D0
 S
 #28050
 Caminho das Pastagens~
-   Há um caminho estreito que segue rumo ao norte.  Em um dos lados da
-estradinha, você vê uma placa onde esta escrito "Área de Pastagem".  O
+   Hï¿½ um caminho estreito que segue rumo ao norte.  Em um dos lados da
+estradinha, vocï¿½ vï¿½ uma placa onde esta escrito "ï¿½rea de Pastagem".  O
 caminho parece ser precariamente mantido, indicando que talvez esteja
 abandonado.
 ~
@@ -952,10 +952,10 @@ D1
 S
 #28051
 No Caminho Perto das Pastagens~
-   Você está perto da área de pastagem.  Não há nada de interessante aqui,
+   Vocï¿½ estï¿½ perto da ï¿½rea de pastagem.  Nï¿½o hï¿½ nada de interessante aqui,
 apenas algumas ferramentas de madeira jogadas ao longo do caminho e algumas
-ervas daninhas que cresceram em volta das velhas árvores.  As pastagens
-começam ao norte e você sente que irá encontrar coisas mais interessantes
+ervas daninhas que cresceram em volta das velhas ï¿½rvores.  As pastagens
+comeï¿½am ao norte e vocï¿½ sente que irï¿½ encontrar coisas mais interessantes
 neste lugar.
 ~
 280 4 2
@@ -970,8 +970,8 @@ D2
 S
 #28052
 A Pastagem Descoberta~
-   Este pasto está pobremente plantado.  A grama é rara e pouca e parece que
-a terra está a espera de alguém que a plante.
+   Este pasto estï¿½ pobremente plantado.  A grama ï¿½ rara e pouca e parece que
+a terra estï¿½ a espera de alguï¿½m que a plante.
 ~
 280 4 2
 D0
@@ -989,10 +989,10 @@ D2
 S
 #28053
 A Pastagem~
-   Um número imenso de cabeças de gado se espalham pelo rico verde do pasto.
-Alguns trabalhadores estão aqui, lidando com os bois e vacas que comem sem
-pressa a grama apetitosa.  Os tonéis de leite foram deixados próximos às
-ferramentas dos camponeses.  Um dos tonéis parece estar cheio.
+   Um nï¿½mero imenso de cabeï¿½as de gado se espalham pelo rico verde do pasto.
+Alguns trabalhadores estï¿½o aqui, lidando com os bois e vacas que comem sem
+pressa a grama apetitosa.  Os tonï¿½is de leite foram deixados prï¿½ximos ï¿½s
+ferramentas dos camponeses.  Um dos tonï¿½is parece estar cheio.
 ~
 280 0 2
 D1
@@ -1006,10 +1006,10 @@ D2
 S
 #28054
 A Pastagem Perto do Rio~
-   Este lugar é uma rica área para pastagem.  Está dividido em diversas
-áreas menores, que estão divididas para as diferentes espécies de animais.
-Ali estão cavalos, bois, carneiros e porcos.  Tamanha diversidade de carne
-excita sua mente.  Por que não presentear seu estômago com um grande e
+   Este lugar ï¿½ uma rica ï¿½rea para pastagem.  Estï¿½ dividido em diversas
+ï¿½reas menores, que estï¿½o divididas para as diferentes espï¿½cies de animais.
+Ali estï¿½o cavalos, bois, carneiros e porcos.  Tamanha diversidade de carne
+excita sua mente.  Por que nï¿½o presentear seu estï¿½mago com um grande e
 suculento assado?
 ~
 280 0 2
@@ -1024,10 +1024,10 @@ D3
 S
 #28055
 A Pastagem~
-   Há um grande número de cavalos aqui.  Alguns são realmente maravilhosos,
+   Hï¿½ um grande nï¿½mero de cavalos aqui.  Alguns sï¿½o realmente maravilhosos,
 fortes e parecem excelentes para cavalgar.  Em uma das extremidades do
-pasto, você vê trabalhadores treinando alguns animais que com certeza serão
-usados para auxiliar na lavoura ou para entretenimento.  Essa raça de
+pasto, vocï¿½ vï¿½ trabalhadores treinando alguns animais que com certeza serï¿½o
+usados para auxiliar na lavoura ou para entretenimento.  Essa raï¿½a de
 cavalos produz excelente animais, extremamente vigorosos e velozes.
 ~
 280 0 2
@@ -1045,15 +1045,15 @@ D3
 0 -1 28053
 S
 #28056
-A Estrada Paralela à Margem do Rio~
-   Você está em uma estrada bastante estreita, perto da área de pastagem.
-Você vê algumas cabeças de gado e trabalhadores lidando com eles no pasto.
-A estrada segue pelo lado oeste dos pastos e para uma praça que está bem
+A Estrada Paralela ï¿½ Margem do Rio~
+   Vocï¿½ estï¿½ em uma estrada bastante estreita, perto da ï¿½rea de pastagem.
+Vocï¿½ vï¿½ algumas cabeï¿½as de gado e trabalhadores lidando com eles no pasto.
+A estrada segue pelo lado oeste dos pastos e para uma praï¿½a que estï¿½ bem
 distante, ao leste.
-   Você olha para o sul e vê um rio e mais além, um imenso e colorido campo.
-Esse campo é composto por grandes quadrados cobertos por diferentes tipos de
-plantas.  Cada um dos quadrados possui uma cor e estão cobertos por um tipo
-plantação.
+   Vocï¿½ olha para o sul e vï¿½ um rio e mais alï¿½m, um imenso e colorido campo.
+Esse campo ï¿½ composto por grandes quadrados cobertos por diferentes tipos de
+plantas.  Cada um dos quadrados possui uma cor e estï¿½o cobertos por um tipo
+plantaï¿½ï¿½o.
 ~
 280 4 2
 D1
@@ -1066,12 +1066,12 @@ D3
 0 -1 28055
 S
 #28057
-A Estrada Paralela à Margem do Rio~
-   Essa estrada estreita segue para o leste.  Você pode ver daqui uma linda
-vista, com ricas colinas, vales e uma grande área de pastos.  Estão bem
+A Estrada Paralela ï¿½ Margem do Rio~
+   Essa estrada estreita segue para o leste.  Vocï¿½ pode ver daqui uma linda
+vista, com ricas colinas, vales e uma grande ï¿½rea de pastos.  Estï¿½o bem
 distantes, contudo, pode-se perceber pequenos pontos brancos, marrons e
-pretos, que parecem ser cabeças de gado.  Se isso for verdade, você está
-olhando para o melhor gado que você jamais viu.
+pretos, que parecem ser cabeï¿½as de gado.  Se isso for verdade, vocï¿½ estï¿½
+olhando para o melhor gado que vocï¿½ jamais viu.
 ~
 280 4 2
 D1
@@ -1085,10 +1085,10 @@ D3
 S
 #28058
 O Rio dos Bravos~
-   Você está chegando perto de um cais e pode ver diversos navios mercantes,
-bem como navios de batalha, que estão ancorados ao longo do porto.  O rio é
-bastante largo e profundo e permite a navegação de grandes naus.  A água não
-é muito poluída mas vai ficando mais suja a medida em que você segue para o
+   Vocï¿½ estï¿½ chegando perto de um cais e pode ver diversos navios mercantes,
+bem como navios de batalha, que estï¿½o ancorados ao longo do porto.  O rio ï¿½
+bastante largo e profundo e permite a navegaï¿½ï¿½o de grandes naus.  A ï¿½gua nï¿½o
+ï¿½ muito poluï¿½da mas vai ficando mais suja a medida em que vocï¿½ segue para o
 leste.
 ~
 280 0 6
@@ -1103,10 +1103,10 @@ D3
 S
 #28059
 O Rio dos Bravos~
-   O rio se torna mais largo e mais poluído aqui.  Na estrada paralela à
-margem do rio, você pode ver alguns marinheiros que estão à procura de
-diversão e alguns trabalhadores estão embarcando mercadorias nos navios,
-comida, roupas, utensílios, metais e outros coisas que você não consegue
+   O rio se torna mais largo e mais poluï¿½do aqui.  Na estrada paralela ï¿½
+margem do rio, vocï¿½ pode ver alguns marinheiros que estï¿½o ï¿½ procura de
+diversï¿½o e alguns trabalhadores estï¿½o embarcando mercadorias nos navios,
+comida, roupas, utensï¿½lios, metais e outros coisas que vocï¿½ nï¿½o consegue
 imaginar.
 ~
 280 0 6
@@ -1121,10 +1121,10 @@ D3
 S
 #28060
 O Rio dos Bravos~
-   Você está em um estuário.  A água do rio se mistura à água do oceano.  Ao
-leste você vê apenas uma quantidade imensa de água.  Ao norte existe uma
-grande rampa por onde os navios são içados para serem reparados e um prédio
-grande, que parece ser um galpão.
+   Vocï¿½ estï¿½ em um estuï¿½rio.  A ï¿½gua do rio se mistura ï¿½ ï¿½gua do oceano.  Ao
+leste vocï¿½ vï¿½ apenas uma quantidade imensa de ï¿½gua.  Ao norte existe uma
+grande rampa por onde os navios sï¿½o iï¿½ados para serem reparados e um prï¿½dio
+grande, que parece ser um galpï¿½o.
 ~
 280 4 6
 D0
@@ -1142,9 +1142,9 @@ D3
 S
 #28061
 As Docas de Calyus~
-   Você está se encontra em um pequeno pátio.  Há um grande prédio aqui onde
-as pessoas entram e saem.  Atravessando o pátio existe uma rua bastante
-larga com um grande número de galpões.
+   Vocï¿½ estï¿½ se encontra em um pequeno pï¿½tio.  Hï¿½ um grande prï¿½dio aqui onde
+as pessoas entram e saem.  Atravessando o pï¿½tio existe uma rua bastante
+larga com um grande nï¿½mero de galpï¿½es.
 ~
 280 0 1
 D0
@@ -1166,9 +1166,9 @@ D3
 S
 #28062
 A Rua Leste das Docas~
-   Há uma pequena quantidade de pessoas neste lugar.  A maioria são
+   Hï¿½ uma pequena quantidade de pessoas neste lugar.  A maioria sï¿½o
 guerreiros locais que se alistaram para defender sua terra natal.  Nas
-margens estão ancorados um grande número de navios de guerra que parecem
+margens estï¿½o ancorados um grande nï¿½mero de navios de guerra que parecem
 terem estado em grandes batalhas.
 ~
 280 0 1
@@ -1183,10 +1183,10 @@ D3
 S
 #28063
 A Rua Leste das Docas~
-   Você está em uma rua muito larga.  Esta área parece ser zona militar
-porque em suas margens estão ancorados apenas navios de guerra.  Em um dos
-lados da rua, você vê um grande número de galpões mas todas as portas estão
-fechadas e muito bem guardadas.  O chão está sujo e alguns dos guerreiros
+   Vocï¿½ estï¿½ em uma rua muito larga.  Esta ï¿½rea parece ser zona militar
+porque em suas margens estï¿½o ancorados apenas navios de guerra.  Em um dos
+lados da rua, vocï¿½ vï¿½ um grande nï¿½mero de galpï¿½es mas todas as portas estï¿½o
+fechadas e muito bem guardadas.  O chï¿½o estï¿½ sujo e alguns dos guerreiros
 entram e saem dos navios.
 ~
 280 0 1
@@ -1201,8 +1201,8 @@ D3
 S
 #28064
 A Rua Leste das Docas~
-   A rua termina aqui.  Esta área parece estar reservada para futuras
-expansões.  Apenas alguns galpões foram construídos aqui.
+   A rua termina aqui.  Esta ï¿½rea parece estar reservada para futuras
+expansï¿½es.  Apenas alguns galpï¿½es foram construï¿½dos aqui.
 ~
 280 0 1
 D3
@@ -1212,14 +1212,14 @@ D3
 S
 #28065
 A Rua Oeste das Docas~
-   Você vê um grupo de galpões ao longo da rua.  Alguns estão com suas
+   Vocï¿½ vï¿½ um grupo de galpï¿½es ao longo da rua.  Alguns estï¿½o com suas
 portas abertas, permitindo que se possa ver o que guardam em seus
-interiores.  Incontáveis sacos de grãos recém colhidos estão armazenados
-ali.  Carregadores levam estes sacos até os navios.  Você percebe que esta é
+interiores.  Incontï¿½veis sacos de grï¿½os recï¿½m colhidos estï¿½o armazenados
+ali.  Carregadores levam estes sacos atï¿½ os navios.  Vocï¿½ percebe que esta ï¿½
 a zona cerealista do porto e que os produtores embarcam seus produtos aqui
-para vendê-los em regiões remotas.  Você pensa se aquele trigo que está ali
+para vendï¿½-los em regiï¿½es remotas.  Vocï¿½ pensa se aquele trigo que estï¿½ ali
 seria o trigo com o qual os padeiros de Midgaard fazem seus deliciosos
-pãezinhos de viagem.
+pï¿½ezinhos de viagem.
 ~
 280 0 1
 D1
@@ -1233,13 +1233,13 @@ D3
 S
 #28066
 A Rua Oeste das Docas~
-   Esta é uma rua bastante comprida, calçada com pequenos blocos de pedras e
-que segue em direção ao leste.  Os navios mercantes estão ancorados lado a
+   Esta ï¿½ uma rua bastante comprida, calï¿½ada com pequenos blocos de pedras e
+que segue em direï¿½ï¿½o ao leste.  Os navios mercantes estï¿½o ancorados lado a
 lado, ao longo da margem do rio e os ancoradouros de madeira se espalham por
 entre eles.  Marinheiros desocupados, andam despreocupadamente pelas ruas,
-em busca de diversão e prazer e falam com algumas garotas que estão por ali.
-   Ao oeste você percebe uma praça onde crianças cantam alegres músicas e
-dezenas de vendedores oferecem suas mercadorias.  Há uma bonita fonte ali.
+em busca de diversï¿½o e prazer e falam com algumas garotas que estï¿½o por ali.
+   Ao oeste vocï¿½ percebe uma praï¿½a onde crianï¿½as cantam alegres mï¿½sicas e
+dezenas de vendedores oferecem suas mercadorias.  Hï¿½ uma bonita fonte ali.
 ~
 280 0 1
 D1
@@ -1252,12 +1252,12 @@ D3
 0 -1 28078
 S
 #28067
-O Escritório Central das Docas de Calyus~
-   A recepção é um lugar bastante movimentado.  Ali estão trabalhadores,
-vendedores, marinheiros, guerreiros e guardas.  Você vê uma grande mesa no
+O Escritï¿½rio Central das Docas de Calyus~
+   A recepï¿½ï¿½o ï¿½ um lugar bastante movimentado.  Ali estï¿½o trabalhadores,
+vendedores, marinheiros, guerreiros e guardas.  Vocï¿½ vï¿½ uma grande mesa no
 centro da sala, onde alguns homens contratam trabalhadores para trabalharem
-no carregamento dos navios.  Alguns homens estão recebendo seus pagamentos.
-Ao leste há uma porta e ao oeste um corredor.
+no carregamento dos navios.  Alguns homens estï¿½o recebendo seus pagamentos.
+Ao leste hï¿½ uma porta e ao oeste um corredor.
 ~
 280 0 0
 D1
@@ -1276,11 +1276,11 @@ D3
 S
 #28068
 O Corredor~
-   Este corredor se extende para o leste.  Suas paredes são limpas e claras
-e alguns quadros com a figura de militares foram penduradas ali.  O chão
-está coberto por um grosso tapete que parece ser bastante macio.  Existem
+   Este corredor se extende para o leste.  Suas paredes sï¿½o limpas e claras
+e alguns quadros com a figura de militares foram penduradas ali.  O chï¿½o
+estï¿½ coberto por um grosso tapete que parece ser bastante macio.  Existem
 pequenos pontos abertos no teto, que deixam a luz penetrar, dando ao
-ambiente uma sensação de paz.
+ambiente uma sensaï¿½ï¿½o de paz.
 ~
 280 0 0
 D1
@@ -1294,9 +1294,9 @@ D3
 S
 #28069
 O Corredor~
-   O corredor faz uma curva aqui.  Há um bonito quadro a óleo pendurado em
-uma de suas paredes pendurado aqui.  É a figura de uma baleia azul.  As
-escadas sobem até o segundo andar.
+   O corredor faz uma curva aqui.  Hï¿½ um bonito quadro a ï¿½leo pendurado em
+uma de suas paredes pendurado aqui.  ï¿½ a figura de uma baleia azul.  As
+escadas sobem atï¿½ o segundo andar.
 ~
 280 0 0
 D0
@@ -1309,14 +1309,14 @@ D1
 0 -1 28068
 S
 #28070
-O Escritório do Mestre do Estaleiro~
-   Esse quarto é bem amplo, com prateleiras nas paredes, umas mesinhas e
-cadeiras.  É um comodo bem claro e foi decorado com um grande número de
-gravuras de peixes.  Há uma interessante escultura de metal de um tubarão
-baleia em um dos cantos do ambiente.  Deve ter uns 8 pés de comprimento e
+O Escritï¿½rio do Mestre do Estaleiro~
+   Esse quarto ï¿½ bem amplo, com prateleiras nas paredes, umas mesinhas e
+cadeiras.  ï¿½ um comodo bem claro e foi decorado com um grande nï¿½mero de
+gravuras de peixes.  Hï¿½ uma interessante escultura de metal de um tubarï¿½o
+baleia em um dos cantos do ambiente.  Deve ter uns 8 pï¿½s de comprimento e
 parece bem real.  Existem muitas folhas de papel espalhadas sobre a mesa e
-algumas delas voaram quando você abriu a porta.
-   Uma outra porta ao leste chama a sua atenção.
+algumas delas voaram quando vocï¿½ abriu a porta.
+   Uma outra porta ao leste chama a sua atenï¿½ï¿½o.
 ~
 280 0 0
 D1
@@ -1332,11 +1332,11 @@ porta~
 S
 #28071
 O Quarto do Mestre do Estaleiro~
-   Sim!  O quarto do Mestre!  Exatamente aquilo que você procurava.  O
-quarto é pequeno mas parece ser bem confortável.  Há uma mesa, uma linda
-poltrona e um sofá que o convida para uma pequena soneca.  Mas o que você
-está realmente procurando não é descanso mas sim dinheiro, um equipamento
-melhor e...sangue!  Se alguma dessas coisas estiverem aqui você irá
+   Sim!  O quarto do Mestre!  Exatamente aquilo que vocï¿½ procurava.  O
+quarto ï¿½ pequeno mas parece ser bem confortï¿½vel.  Hï¿½ uma mesa, uma linda
+poltrona e um sofï¿½ que o convida para uma pequena soneca.  Mas o que vocï¿½
+estï¿½ realmente procurando nï¿½o ï¿½ descanso mas sim dinheiro, um equipamento
+melhor e...sangue!  Se alguma dessas coisas estiverem aqui vocï¿½ irï¿½
 descobrir...
 ~
 280 0 0
@@ -1349,8 +1349,8 @@ S
 #28072
 A Escadaria para o Segundo Andar~
    As escadas sobem para o segundo andar.  Ao longo da escadaria, existem
-janelinhas redondas e alguns painéis pendurados na parede.  Você percebe que
-se dirige para um lugar bastante reservado assim que lê a placa informando
+janelinhas redondas e alguns painï¿½is pendurados na parede.  Vocï¿½ percebe que
+se dirige para um lugar bastante reservado assim que lï¿½ a placa informando
 que apenas pessoas autorizadas podem subir.
 ~
 280 0 0
@@ -1364,11 +1364,11 @@ D4
 0 -1 28073
 S
 #28073
-A Escadaria para o Andar Térreo~
-   Estas escadas vão para o andar térreo.  Acima de sua cabeça foram
-colocadas pinturas a óleo de golfinhos e ao sul você pode ver um pequeno
-vestíbulo.  Alguns vasos com flores foram colocados sobre uma mesa console e
-há uma clarabóia no teto que está entreaberta, permitindo que uma brisa
+A Escadaria para o Andar Tï¿½rreo~
+   Estas escadas vï¿½o para o andar tï¿½rreo.  Acima de sua cabeï¿½a foram
+colocadas pinturas a ï¿½leo de golfinhos e ao sul vocï¿½ pode ver um pequeno
+vestï¿½bulo.  Alguns vasos com flores foram colocados sobre uma mesa console e
+hï¿½ uma clarabï¿½ia no teto que estï¿½ entreaberta, permitindo que uma brisa
 fresca entre e refresque o ambiente um pouco.
 ~
 280 0 0
@@ -1382,11 +1382,11 @@ D5
 0 -1 28072
 S
 #28074
-O Vestíbulo~
-   Este é um cômodo realmente luxuoso.  As paredes são revestidas por placas
-de mármore rosado e tapetes persas ornamentam o chão, cuja iluminação chega
-através de um maravilhoso lustre folhado a ouro.  Há uma enorme parede
-envidraçada que descortina o cenário magnífico de todo o estaleiro.
+O Vestï¿½bulo~
+   Este ï¿½ um cï¿½modo realmente luxuoso.  As paredes sï¿½o revestidas por placas
+de mï¿½rmore rosado e tapetes persas ornamentam o chï¿½o, cuja iluminaï¿½ï¿½o chega
+atravï¿½s de um maravilhoso lustre folhado a ouro.  Hï¿½ uma enorme parede
+envidraï¿½ada que descortina o cenï¿½rio magnï¿½fico de todo o estaleiro.
 ~
 280 0 0
 D0
@@ -1399,11 +1399,11 @@ D1
 0 -1 28075
 S
 #28075
-A Antecâmara dos Aposentos do Almirante~
-   Você está dentro de um pequeno quarto.  Há uma mesa, uma estante de
-livros e um grande vaso com rosas vermelhas.  Sobre a mesa estão vários
-papéis espalhados e alguns deles estão marcados com o selo Docas de Calyus.
-Você percebe que este é um escritório assim que vê que dentro de uma das
+A Antecï¿½mara dos Aposentos do Almirante~
+   Vocï¿½ estï¿½ dentro de um pequeno quarto.  Hï¿½ uma mesa, uma estante de
+livros e um grande vaso com rosas vermelhas.  Sobre a mesa estï¿½o vï¿½rios
+papï¿½is espalhados e alguns deles estï¿½o marcados com o selo Docas de Calyus.
+Vocï¿½ percebe que este ï¿½ um escritï¿½rio assim que vï¿½ que dentro de uma das
 gavetas abertas existem um espelho e alguns batons.
 ~
 280 0 0
@@ -1419,14 +1419,14 @@ D3
 S
 #28076
 Os Aposentos do Almirante~
-   Este é um lugar soberbo.  As paredes estão cobertas por madeira escura,
-de lei, o chão coberto por um felpudo tapete vermelho e o teto iluminado por
-dezenas das velas de um magnífico lustre de cristal.  Penduradas nas
-paredes, as inúmeras medalhas de ouro e prata que foram conquistadas pelo
-Almirante.  Há um bonito aquário com dezenas com peixes exóticos em cima de
-uma mesinha de canto.  Sobre uma imensa mesa de madeira maciça há uma
-pequena placa com os dizeres: "Almirante Dasher".  Você sabe que está dentro
-dos aposentos do chefão e que talvez possa haver alguma ação aqui.
+   Este ï¿½ um lugar soberbo.  As paredes estï¿½o cobertas por madeira escura,
+de lei, o chï¿½o coberto por um felpudo tapete vermelho e o teto iluminado por
+dezenas das velas de um magnï¿½fico lustre de cristal.  Penduradas nas
+paredes, as inï¿½meras medalhas de ouro e prata que foram conquistadas pelo
+Almirante.  Hï¿½ um bonito aquï¿½rio com dezenas com peixes exï¿½ticos em cima de
+uma mesinha de canto.  Sobre uma imensa mesa de madeira maciï¿½a hï¿½ uma
+pequena placa com os dizeres: "Almirante Dasher".  Vocï¿½ sabe que estï¿½ dentro
+dos aposentos do chefï¿½o e que talvez possa haver alguma aï¿½ï¿½o aqui.
 ~
 280 0 0
 D3
@@ -1437,8 +1437,8 @@ porta~
 S
 #28077
 A Baia de Calyus~
-   O oceano começa aqui.  Além de água, você só consegue ver navios partindo
-em direção a terras desconhecidas.
+   O oceano comeï¿½a aqui.  Alï¿½m de ï¿½gua, vocï¿½ sï¿½ consegue ver navios partindo
+em direï¿½ï¿½o a terras desconhecidas.
 ~
 280 4 6
 D3
@@ -1447,13 +1447,13 @@ D3
 0 -1 28060
 S
 #28078
-A Praça do Porto~
-   Você se encontra em uma grande praça central.  Algumas crianças estão
-cantando cânticos natalinos, um grande número de vendedores oferecem seus
-artigos e uma cascata cristalina de água jorra de uma bonita fonte.  Ao sul
-você vê uma rampa para barcos e ao oeste está uma estrada estreita que segue
-em direção às colinas.  Ao leste há outra estrada que parece seguir em
-direção às docas.
+A Praï¿½a do Porto~
+   Vocï¿½ se encontra em uma grande praï¿½a central.  Algumas crianï¿½as estï¿½o
+cantando cï¿½nticos natalinos, um grande nï¿½mero de vendedores oferecem seus
+artigos e uma cascata cristalina de ï¿½gua jorra de uma bonita fonte.  Ao sul
+vocï¿½ vï¿½ uma rampa para barcos e ao oeste estï¿½ uma estrada estreita que segue
+em direï¿½ï¿½o ï¿½s colinas.  Ao leste hï¿½ outra estrada que parece seguir em
+direï¿½ï¿½o ï¿½s docas.
 ~
 280 0 1
 D1
