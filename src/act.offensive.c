@@ -556,7 +556,7 @@ ACMD(do_flee)
 			return;
 		}
 	}
-	send_to_char(ch, "%sPANICO!  Você não tem escapatória!%s\r\n",CCWHT(ch,C_NRM) CCNRM(ch,C_NRM));
+	send_to_char(ch, "%sPANICO!  Você não tem escapatória!%s\r\n",CCWHT(ch,C_NRM), CCNRM(ch,C_NRM));
 }
 
 ACMD(do_bash)
