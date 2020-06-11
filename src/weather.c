@@ -90,7 +90,8 @@ static void another_hour(int mode)
 static void weather_change(void)
 {
   int diff, change;
-  
+    weather_info.before = weather_info.sky;
+    
   if ((time_info.month >= 9) && (time_info.month <= 16))
     diff = (weather_info.pressure > 985 ? -2 : 2);
   else
@@ -187,5 +188,4 @@ static void weather_change(void)
     break;
   }
 }
-
 
