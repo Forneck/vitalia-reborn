@@ -28,13 +28,17 @@ ACMD(do_assist)
 
 	if (FIGHTING(ch))
 	{
-		send_to_char(ch, "Você já está lutando!  Como você pretende dar assistência a mais alguém?\r\n");
+		send_to_char(ch,
+					 "Você já está lutando!  Como você pretende dar assistência a mais alguém?\r\n");
 		return;
 	}
-	  if IS_DEAD(ch) {
-    send_to_char(ch,"Você não pode dar assistência a ninguém, você está mort%c!",OA(ch));
-    return;
-  }
+	if IS_DEAD
+		(ch)
+	{
+		send_to_char(ch, "Você não pode dar assistência a ninguém, você está mort%c!",
+					 OA(ch));
+		return;
+	}
 	one_argument(argument, arg);
 
 	if (!*arg)
@@ -42,7 +46,7 @@ ACMD(do_assist)
 	else if (!(helpee = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)))
 		send_to_char(ch, "%s", CONFIG_NOPERSON);
 	else if (helpee == ch)
-		send_to_char(ch, "Você não pode ajudar a si mesm%c!\r\n",OA(ch));
+		send_to_char(ch, "Você não pode ajudar a si mesm%c!\r\n", OA(ch));
 	else
 	{
 		/* 
@@ -70,56 +74,70 @@ ACMD(do_assist)
 		}
 	}
 }
-/* -- VP
- * -- jr - 23/06/99 * Rotina reestruturada, para eliminar bugs.
- * -- jr - Apr 16, 2000 * Nova reestrutura��o da rotina.
- * -- Cansian - Jun, 11, 2020 * Atualizado para nova estrutura de grupo.
- */
+
+/* -- VP -- jr - 23/06/99 * Rotina reestruturada, para eliminar bugs. -- jr -
+   Apr 16, 2000 * Nova reestrutura��o da rotina. -- Cansian - Jun, 11,
+   2020 * Atualizado para nova estrutura de grupo. */
 ACMD(do_gassist)
 {
-struct char_data  *k, *helpee, *opponent;
-struct group_data *group;
+	struct char_data *k, *helpee, *opponent;
+	struct group_data *group;
 
 	if ((group = GROUP(ch)) == NULL)
 	{
 		send_to_char(ch, "Mas você não é membro de um grupo!\r\n");
 		return;
 	}
-	
-  if (FIGHTING(ch)) {
-    send_to_char(ch, "Você já está lutando!  Como você pretente dar assistência a alguém?\r\n");
-    return;
-  }
 
-  if IS_DEAD(ch) {
-    send_to_char(ch,"Você não pode dar assistência a ninguém, você está mort%c!",OA(ch));
-    return;
-  }
-		if (GROUP(ch))
-			while ((k = (struct char_data *)simple_list(GROUP(ch)->members)) != NULL)
-  if ((k != ch) && CAN_SEE(ch, k) && (IN_ROOM(k) == IN_ROOM(ch))
-      && FIGHTING(k)) {
-    if (!CAN_SEE(ch, FIGHTING(k)))
-      act("Você não pode ver com quem $N está lutando.", FALSE, ch, NULL, k, TO_CHAR);
-    else
-      helpee = k;
-  }
-  
-  if (!helpee)
-    send_to_char(ch, "Você não vê ninguém lutando em seu grupo.\r\n");
-  else {
-    opponent = FIGHTING(helpee);
-    act("Você dá assistência a $N.", FALSE, ch, 0, helpee, TO_CHAR);
+	if (FIGHTING(ch))
+	{
+		send_to_char(ch,
+					 "Você já está lutando!  Como você pretente dar assistência a alguém?\r\n");
+		return;
+	}
 
-    if (!CONFIG_PK_ALLOWED && !IS_NPC(opponent))	/* prevent accidental pkill */
-      act("Use 'murder' se voce realmente deseja atacar $N.", FALSE, ch, 0, opponent, TO_CHAR);
-    else {
-      act("$N dá assistência a você!", FALSE, helpee, 0, ch, TO_CHAR);
-      send_to_group(NULL,group, "%s dá assistência a um membro do grupo!\r\n",GET_NAME(ch));
-      act("$n dá assistência a $N.", TRUE, ch, 0, helpee, TO_NOTVICT);
-      hit(ch, opponent, TYPE_UNDEFINED);
-    }
-  }
+	if IS_DEAD
+		(ch)
+	{
+		send_to_char(ch, "Você não pode dar assistência a ninguém, você está mort%c!",
+					 OA(ch));
+		return;
+	}
+	if (GROUP(ch))
+		while ((k = (struct char_data *)simple_list(GROUP(ch)->members)) != NULL)
+		{
+			if ((k != ch) && CAN_SEE(ch, k) && (IN_ROOM(k) == IN_ROOM(ch)) && FIGHTING(k))
+			{
+				if (!CAN_SEE(ch, FIGHTING(k)))
+					act("Você não pode ver com quem $N está lutando.", FALSE, ch, NULL, k,
+						TO_CHAR);
+				else
+					helpee = k;
+			}
+		}
+		
+	 if (!helpee){
+		send_to_char(ch, "Você não vê ninguém lutando em seu grupo.\r\n");
+		return;
+	 }
+	else
+	{
+		opponent = FIGHTING(helpee);
+		act("Você dá assistência a $N.", FALSE, ch, 0, helpee, TO_CHAR);
+
+		if (!CONFIG_PK_ALLOWED && !IS_NPC(opponent))	/* prevent accidental
+														   pkill */
+			act("Use 'murder' se voce realmente deseja atacar $N.", FALSE, ch, 0, opponent,
+				TO_CHAR);
+		else
+		{
+			act("$N dá assistência a você!", FALSE, helpee, 0, ch, TO_CHAR);
+			send_to_group(NULL, group, "%s dá assistência a um membro do grupo!\r\n",
+						  GET_NAME(ch));
+			act("$n dá assistência a $N.", TRUE, ch, 0, helpee, TO_NOTVICT);
+			hit(ch, opponent, TYPE_UNDEFINED);
+		}
+	}
 }
 
 ACMD(do_hit)
@@ -135,22 +153,23 @@ ACMD(do_hit)
 		send_to_char(ch, "Esta pessoa não parece estar aqui.\r\n");
 	else if (vict == ch)
 	{
-		send_to_char(ch, "Você bate em si mesm%s... AI!\r\n",OA(ch));
+		send_to_char(ch, "Você bate em si mesm%s... AI!\r\n", OA(ch));
 		act("$n bate em si mesm$r, e diz AI!", FALSE, ch, 0, vict, TO_ROOM);
 	}
 	else if (AFF_FLAGGED(ch, AFF_CHARM) && (ch->master == vict))
-		act("$N é amig$R e você não pode atacá-l$R.", FALSE, ch, 0, vict,
-			TO_CHAR);
+		act("$N é amig$R e você não pode atacá-l$R.", FALSE, ch, 0, vict, TO_CHAR);
 	else
 	{
-	     if (AFF_FLAGGED(ch, AFF_CHARM) && !IS_NPC(ch->master) && !IS_NPC(vict))
-      return;	/* you can't order a charmed pet to attack a player */
-  
+		if (AFF_FLAGGED(ch, AFF_CHARM) && !IS_NPC(ch->master) && !IS_NPC(vict))
+			return;				/* you can't order a charmed pet to attack a
+								   player */
+
 		if (!CONFIG_PK_ALLOWED && !IS_NPC(vict) && !IS_NPC(ch))
-		if (!SCMD_MURDER)
-		 send_to_char(ch, "Use 'murder' se você realmente deseja atacar outro jogador.\r\n");
-		 else
-		check_killer(ch, vict);
+			if (!SCMD_MURDER)
+				send_to_char(ch,
+							 "Use 'murder' se você realmente deseja atacar outro jogador.\r\n");
+			else
+				check_killer(ch, vict);
 
 		if ((GET_POS(ch) == POS_STANDING) && (vict != FIGHTING(ch)))
 		{
@@ -370,8 +389,8 @@ ACMD(do_bash)
 	char arg[MAX_INPUT_LENGTH];
 	struct char_data *vict;
 	int percent, prob;
-   
-   
+
+
 	one_argument(argument, arg);
 
 	if (!IS_NPC(ch) && !GET_SKILL(ch, SKILL_BASH))
@@ -414,9 +433,9 @@ ACMD(do_bash)
 
 	percent = rand_number(1, 101);	/* 101% is a complete failure */
 	if (!IS_NPC(ch))
-	prob = GET_SKILL(ch, SKILL_BASH);
-   else
-   prob = GET_LEVEL(ch);
+		prob = GET_SKILL(ch, SKILL_BASH);
+	else
+		prob = GET_LEVEL(ch);
 
 	if (MOB_FLAGGED(vict, MOB_NOBASH))
 		percent = 101;
@@ -441,7 +460,7 @@ ACMD(do_bash)
 				GET_POS(vict) = POS_SITTING;
 		}
 	}
-	
+
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
@@ -724,53 +743,66 @@ ACMD(do_bandage)
 
 ACMD(do_trip)
 {
-   char arg[MAX_INPUT_LENGTH];
- struct char_data *vict;
-  int percent, prob;
+	char arg[MAX_INPUT_LENGTH];
+	struct char_data *vict;
+	int percent, prob;
 
-  one_argument(argument, arg);
+	one_argument(argument, arg);
 
-  if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_TRIP)) {
-    send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
-    return;
-  } else if ((vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)) == NULL) {
-    if (FIGHTING(ch) && IN_ROOM(ch) == IN_ROOM(FIGHTING(ch))) {
-      vict = FIGHTING(ch);
-    } else {
-      send_to_char(ch, "Dar uma rasteira em quem?\r\n");
-      return;
-    }
-  } else if (vict == ch) {
-    send_to_char(ch, "Haha... Muito engraçado... Você é palhaço de circo?\r\n");
-    return;
-  }
-  else if ((!CONFIG_PK_ALLOWED && !IS_NPC(vict))) {
-    act("Use 'murder' se você realmente deseja atacar $N.", FALSE, ch, 0, vict, TO_CHAR);
-    return;
-  }
+	if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_TRIP))
+	{
+		send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
+		return;
+	}
+	else if ((vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)) == NULL)
+	{
+		if (FIGHTING(ch) && IN_ROOM(ch) == IN_ROOM(FIGHTING(ch)))
+		{
+			vict = FIGHTING(ch);
+		}
+		else
+		{
+			send_to_char(ch, "Dar uma rasteira em quem?\r\n");
+			return;
+		}
+	}
+	else if (vict == ch)
+	{
+		send_to_char(ch, "Haha... Muito engraçado... Você é palhaço de circo?\r\n");
+		return;
+	}
+	else if ((!CONFIG_PK_ALLOWED && !IS_NPC(vict)))
+	{
+		act("Use 'murder' se você realmente deseja atacar $N.", FALSE, ch, 0, vict, TO_CHAR);
+		return;
+	}
 
-  percent = rand_number(1, 101);	/* 101% is a complete failure */
-  prob = GET_SKILL(ch, SKILL_TRIP);
+	percent = rand_number(1, 101);	/* 101% is a complete failure */
+	prob = GET_SKILL(ch, SKILL_TRIP);
 
-  if (MOB_FLAGGED(vict, MOB_NOBASH) || MOB_FLAGGED(vict, MOB_MOUNTABLE) ||
-      MOB_FLAGGED(vict, MOB_CAN_FLY))
-    percent = 101;
+	if (MOB_FLAGGED(vict, MOB_NOBASH) || MOB_FLAGGED(vict, MOB_MOUNTABLE) ||
+		MOB_FLAGGED(vict, MOB_CAN_FLY))
+		percent = 101;
 
-  if (percent > prob) {
-    damage(ch, vict, 0, SKILL_TRIP);
-    if (damage(ch, ch, 2, TYPE_UNDEFINED) > 0 &&
-(GET_LEVEL(ch) < LVL_GOD)) {
-      GET_POS(ch) = POS_SITTING;
-      GET_WAIT_STATE(ch) += 3 * PULSE_VIOLENCE;
-    }
-  } else {
-    if (damage(ch, vict, 2, SKILL_TRIP) > 0) {	// -1 = dead, 0 = miss
-      GET_WAIT_STATE(vict) += 2 * PULSE_VIOLENCE;
-      if (IN_ROOM(ch) == IN_ROOM(vict))
-        GET_POS(vict) = POS_SITTING;
-    }
+	if (percent > prob)
+	{
+		damage(ch, vict, 0, SKILL_TRIP);
+		if (damage(ch, ch, 2, TYPE_UNDEFINED) > 0 && (GET_LEVEL(ch) < LVL_GOD))
+		{
+			GET_POS(ch) = POS_SITTING;
+			GET_WAIT_STATE(ch) += 3 * PULSE_VIOLENCE;
+		}
+	}
+	else
+	{
+		if (damage(ch, vict, 2, SKILL_TRIP) > 0)
+		{						// -1 = dead, 0 = miss
+			GET_WAIT_STATE(vict) += 2 * PULSE_VIOLENCE;
+			if (IN_ROOM(ch) == IN_ROOM(vict))
+				GET_POS(vict) = POS_SITTING;
+		}
 
-    if (GET_LEVEL(ch) < LVL_GOD)
-      GET_WAIT_STATE(ch) += 4 * PULSE_VIOLENCE;
-  }
+		if (GET_LEVEL(ch) < LVL_GOD)
+			GET_WAIT_STATE(ch) += 4 * PULSE_VIOLENCE;
+	}
 }
