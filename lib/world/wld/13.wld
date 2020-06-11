@@ -1,468 +1,466 @@
 #1300
 Rua Residencial Midgaard~
-   Você está caminhando em uma limpa e arborizada rua da cidade de Midgaard,
-construções variadas podem ser observadas por toda a sua extensão.  Mesmo
-com o contraste entre todas estas edificações, você sente um clima de paz e
-amizade no ar.  Uma suave voz o convida a entrar em cada residência, pois és
-bem vindo ao lar das nobres famílias de Vitália.
-   Ao sul está a movimentada Avenida Midgaard e ao norte você segue por esta
-tranqüila rua; ao leste e oeste há belas construções.
+   Vocï¿½ estï¿½ caminhando em uma limpa e arborizada rua da cidade de Midgaard,
+construï¿½ï¿½es variadas podem ser observadas por toda a sua extensï¿½o.  Mesmo
+com o contraste entre todas estas edificaï¿½ï¿½es, vocï¿½ sente um clima de paz e
+amizade no ar.  Uma suave voz o convida a entrar em cada residï¿½ncia, pois ï¿½s
+bem vindo ao lar das nobres famï¿½lias de Vitï¿½lia.
+   Ao sul estï¿½ a movimentada Avenida Midgaard e ao norte vocï¿½ segue por esta
+tranqï¿½ila rua; ao leste e oeste hï¿½ belas construï¿½ï¿½es.
 ~
-13 ce 1
-D 2
-~
-~
-0 -1 3077
-D 0
+13 20 0 0 0 1
+D0
 ~
 ~
 0 -1 1301
-D 1
-Família Lindyhurst.
+D1
+Famï¿½lia Lindyhurst.
 ~
 ~
 0 -1 1310
-D 3
-Família Ravenloft.
+D2
+~
+~
+0 -1 3077
+D3
+Famï¿½lia Ravenloft.
 ~
 ~
 0 -1 1312
 S
 #1301
 Rua Residencial Midgaard~
-   Você está caminhando em uma limpa e arborizada rua da cidade de Midgaard,
-construções variadas podem ser observadas por toda a sua extensão.  Mesmo
-com o contraste entre todas estas edificações, você sente um clima de paz e
-amizade no ar.  Uma suave voz o convida a entrar em cada residência, pois és
-bem vindo ao lar das nobres famílias de Vitália.
-   Ao sul você segue por esta tranqüila rua; ao leste e oeste há belas
-construções, enquanto que ao norte há uma praça.
+   Vocï¿½ estï¿½ caminhando em uma limpa e arborizada rua da cidade de Midgaard,
+construï¿½ï¿½es variadas podem ser observadas por toda a sua extensï¿½o.  Mesmo
+com o contraste entre todas estas edificaï¿½ï¿½es, vocï¿½ sente um clima de paz e
+amizade no ar.  Uma suave voz o convida a entrar em cada residï¿½ncia, pois ï¿½s
+bem vindo ao lar das nobres famï¿½lias de Vitï¿½lia.
+   Ao sul vocï¿½ segue por esta tranqï¿½ila rua; ao leste e oeste hï¿½ belas
+construï¿½ï¿½es, enquanto que ao norte hï¿½ uma praï¿½a.
 ~
-13 ce 1
-D 2
-~
-~
-0 -1 1300
-D 0
+13 20 0 0 0 1
+D0
 ~
 ~
 0 -1 1302
-D 1
-Família Iergonov.
+D1
+Famï¿½lia Iergonov.
 ~
 ~
 0 -1 1314
-D 3
-Família Valeth.
+D2
+~
+~
+0 -1 1300
+D3
+Famï¿½lia Valeth.
 ~
 ~
 0 -1 1316
 S
 #1302
-A Praça Central~
-   Esta é a bela praça onde os habitantes de Midgaard e seus visitantes
-reúnem-se para confraternizar e, também, recuperar as energias para viver
+A Praï¿½a Central~
+   Esta ï¿½ a bela praï¿½a onde os habitantes de Midgaard e seus visitantes
+reï¿½nem-se para confraternizar e, tambï¿½m, recuperar as energias para viver
 novas e emocionantes aventuras.
-   Há muitas árvores que proporcionam sombra, e belos bancos de madeira
-espalhados.  Exatamente no centro da confluência das ruas que dão acesso
-a este local foi construído um poço de pedra para que os habitantes possam
+   Hï¿½ muitas ï¿½rvores que proporcionam sombra, e belos bancos de madeira
+espalhados.  Exatamente no centro da confluï¿½ncia das ruas que dï¿½o acesso
+a este local foi construï¿½do um poï¿½o de pedra para que os habitantes possam
 saciar a sede.
 ~
-13 cent 1
-D 0
+13 532500 0 0 0 1
+D0
 ~
 ~
 0 -1 1303
-D 1
+D1
 ~
 ~
 0 -1 1306
-D 2
+D2
 ~
 ~
 0 -1 1301
-D 3
+D3
 ~
 ~
 0 -1 1308
 S
 #1303
 Rua Residencial Midgaard~
-   Você está caminhando em uma limpa e arborizada rua da cidade de Midgaard,
-construções variadas podem ser observadas por toda a sua extensão.  Mesmo
-com o contraste entre todas estas edificações, você sente um clima de paz e
-amizade no ar.  Uma suave voz o convida a entrar em cada residência, pois és
-bem vindo ao lar das nobres famílias de Vitália.
-   Ao norte você segue por esta tranqüila rua; ao leste e oeste há belas
-construções, enquanto que ao sul há uma praça.
+   Vocï¿½ estï¿½ caminhando em uma limpa e arborizada rua da cidade de Midgaard,
+construï¿½ï¿½es variadas podem ser observadas por toda a sua extensï¿½o.  Mesmo
+com o contraste entre todas estas edificaï¿½ï¿½es, vocï¿½ sente um clima de paz e
+amizade no ar.  Uma suave voz o convida a entrar em cada residï¿½ncia, pois ï¿½s
+bem vindo ao lar das nobres famï¿½lias de Vitï¿½lia.
+   Ao norte vocï¿½ segue por esta tranqï¿½ila rua; ao leste e oeste hï¿½ belas
+construï¿½ï¿½es, enquanto que ao sul hï¿½ uma praï¿½a.
 ~
-13 ce 1
-D 2
-~
-~
-0 -1 1302
-D 0
+13 20 0 0 0 1
+D0
 ~
 ~
 0 -1 1304
-D 1
-Família Amarillis.
+D1
+Famï¿½lia Amarillis.
 ~
 ~
 0 -1 1318
-D 3
-Família Paice.
+D2
+~
+~
+0 -1 1302
+D3
+Famï¿½lia Paice.
 ~
 ~
 0 -1 1320
 S
 #1304
 Rua Residencial Midgaard~
-   Você está caminhando em uma limpa e arborizada rua da cidade de Midgaard,
-construções variadas podem ser observadas por toda a sua extensão.  Mesmo
-com o contraste entre todas estas edificações, você sente um clima de paz e
-amizade no ar.  Uma suave voz o convida a entrar em cada residência, pois és
-bem vindo ao lar das nobres famílias de Vitália.
-   Ao norte e ao sul você segue por esta tranqüila rua; ao leste e oeste há
-belas construções.
+   Vocï¿½ estï¿½ caminhando em uma limpa e arborizada rua da cidade de Midgaard,
+construï¿½ï¿½es variadas podem ser observadas por toda a sua extensï¿½o.  Mesmo
+com o contraste entre todas estas edificaï¿½ï¿½es, vocï¿½ sente um clima de paz e
+amizade no ar.  Uma suave voz o convida a entrar em cada residï¿½ncia, pois ï¿½s
+bem vindo ao lar das nobres famï¿½lias de Vitï¿½lia.
+   Ao norte e ao sul vocï¿½ segue por esta tranqï¿½ila rua; ao leste e oeste hï¿½
+belas construï¿½ï¿½es.
 ~
-13 ce 1
-D 2
-~
-~
-0 -1 1303
-D 0
+13 20 0 0 0 1
+D0
 ~
 ~
 0 -1 1305
-D 1
-Família Depok.
+D1
+Famï¿½lia Depok.
 ~
 ~
 0 -1 1322
-D 3
-Família Pathfinder.
+D2
+~
+~
+0 -1 1303
+D3
+Famï¿½lia Pathfinder.
 ~
 ~
 0 -1 1324
 S
 #1305
 Rua Residencial Midgaard~
-   Você está caminhando em uma limpa e arborizada rua da cidade de Midgaard,
-construções variadas podem ser observadas por toda a sua extensão.  Mesmo
-com o contraste entre todas estas edificações, você sente um clima de paz e
-amizade no ar.  Uma suave voz o convida a entrar em cada residência, pois és
-bem vindo ao lar das nobres famílias de Vitália.
-   Ao sul você segue por esta tranqüila rua; ao leste e oeste há belas
-construções.
+   Vocï¿½ estï¿½ caminhando em uma limpa e arborizada rua da cidade de Midgaard,
+construï¿½ï¿½es variadas podem ser observadas por toda a sua extensï¿½o.  Mesmo
+com o contraste entre todas estas edificaï¿½ï¿½es, vocï¿½ sente um clima de paz e
+amizade no ar.  Uma suave voz o convida a entrar em cada residï¿½ncia, pois ï¿½s
+bem vindo ao lar das nobres famï¿½lias de Vitï¿½lia.
+   Ao sul vocï¿½ segue por esta tranqï¿½ila rua; ao leste e oeste hï¿½ belas
+construï¿½ï¿½es.
 ~
-13 ce 1
-D 2
-~
-~
-0 -1 1304
-D 1
-Família Guireli.
+13 20 0 0 0 1
+D1
+Famï¿½lia Guireli.
 ~
 ~
 0 -1 1326
-D 3
-Família Celebithil.
+D2
+~
+~
+0 -1 1304
+D3
+Famï¿½lia Celebithil.
 ~
 ~
 0 -1 1328
 S
 #1306
 Rua Residencial Midgaard~
-   Você está caminhando em uma limpa e arborizada rua da cidade de Midgaard,
-construções variadas podem ser observadas por toda a sua extensão.  Mesmo
-com o contraste entre todas estas edificações, você sente um clima de paz e
-amizade no ar.  Uma suave voz o convida a entrar em cada residência, pois és
-bem vindo ao lar das nobres famílias de Vitália.
+   Vocï¿½ estï¿½ caminhando em uma limpa e arborizada rua da cidade de Midgaard,
+construï¿½ï¿½es variadas podem ser observadas por toda a sua extensï¿½o.  Mesmo
+com o contraste entre todas estas edificaï¿½ï¿½es, vocï¿½ sente um clima de paz e
+amizade no ar.  Uma suave voz o convida a entrar em cada residï¿½ncia, pois ï¿½s
+bem vindo ao lar das nobres famï¿½lias de Vitï¿½lia.
 ~
-13 ce 1
-D 1
-~
-~
-0 -1 1307
-D 3
-~
-~
-0 -1 1302
-D 0
-Família Galad.
+13 20 0 0 0 1
+D0
+Famï¿½lia Galad.
 ~
 ~
 0 -1 1330
+D1
+~
+~
+0 -1 1307
+D3
+~
+~
+0 -1 1302
 S
 #1307
 Rua Residencial Midgaard~
-   Você está caminhando em uma limpa e arborizada rua da cidade de Midgaard,
-construções variadas podem ser observadas por toda a sua extensão.  Mesmo
-com o contraste entre todas estas edificações, você sente um clima de paz e
-amizade no ar.  Uma suave voz o convida a entrar em cada residência, pois és
-bem vindo ao lar das nobres famílias de Vitália.
+   Vocï¿½ estï¿½ caminhando em uma limpa e arborizada rua da cidade de Midgaard,
+construï¿½ï¿½es variadas podem ser observadas por toda a sua extensï¿½o.  Mesmo
+com o contraste entre todas estas edificaï¿½ï¿½es, vocï¿½ sente um clima de paz e
+amizade no ar.  Uma suave voz o convida a entrar em cada residï¿½ncia, pois ï¿½s
+bem vindo ao lar das nobres famï¿½lias de Vitï¿½lia.
 ~
-13 ce 1
-D 3
+13 20 0 0 0 1
+D3
 ~
 ~
 0 -1 1306
 S
 #1308
 Rua Residencial Midgaard~
-   Você está caminhando em uma limpa e arborizada rua da cidade de Midgaard,
-construções variadas podem ser observadas por toda a sua extensão.  Mesmo
-com o contraste entre todas estas edificações, você sente um clima de paz e
-amizade no ar.  Uma suave voz o convida a entrar em cada residência, pois és
-bem vindo ao lar das nobres famílias de Vitália.
+   Vocï¿½ estï¿½ caminhando em uma limpa e arborizada rua da cidade de Midgaard,
+construï¿½ï¿½es variadas podem ser observadas por toda a sua extensï¿½o.  Mesmo
+com o contraste entre todas estas edificaï¿½ï¿½es, vocï¿½ sente um clima de paz e
+amizade no ar.  Uma suave voz o convida a entrar em cada residï¿½ncia, pois ï¿½s
+bem vindo ao lar das nobres famï¿½lias de Vitï¿½lia.
 ~
-13 ce 1
-D 1
+13 20 0 0 0 1
+D1
 ~
 ~
 0 -1 1302
-D 3
+D3
 ~
 ~
 0 -1 1309
 S
 #1309
 Rua Residencial Midgaard~
-   Você está caminhando em uma limpa e arborizada rua da cidade de Midgaard,
-construções variadas podem ser observadas por toda a sua extensão.  Mesmo
-com o contraste entre todas estas edificações, você sente um clima de paz e
-amizade no ar.  Uma suave voz o convida a entrar em cada residência, pois és
-bem vindo ao lar das nobres famílias de Vitália.
+   Vocï¿½ estï¿½ caminhando em uma limpa e arborizada rua da cidade de Midgaard,
+construï¿½ï¿½es variadas podem ser observadas por toda a sua extensï¿½o.  Mesmo
+com o contraste entre todas estas edificaï¿½ï¿½es, vocï¿½ sente um clima de paz e
+amizade no ar.  Uma suave voz o convida a entrar em cada residï¿½ncia, pois ï¿½s
+bem vindo ao lar das nobres famï¿½lias de Vitï¿½lia.
 ~
-13 ce 1
-D 1
+13 20 0 0 0 1
+D1
 ~
 ~
 0 -1 1308
 S
 #1310
-Os Jardins da Família Lindyhurst~
-   Adentrando os portões deste muito bem cuidado jardim élfico, você não
+Os Jardins da Famï¿½lia Lindyhurst~
+   Adentrando os portï¿½es deste muito bem cuidado jardim ï¿½lfico, vocï¿½ nï¿½o
 poderia imaginar que tanta paz e serenidade pudessem existir no meio desta
-cidade tão movimentada.
-   Você está em um agradável caminho de pedras, cercado por árvores
-exuberantes e frondosas.  O jardim é coberto por uma infinidade de plantas
-belas e majestosas que dão mais harmonia ao jardim.
-   Daqui você pode ver um pequeno riacho delimitando o jardim por um dos
+cidade tï¿½o movimentada.
+   Vocï¿½ estï¿½ em um agradï¿½vel caminho de pedras, cercado por ï¿½rvores
+exuberantes e frondosas.  O jardim ï¿½ coberto por uma infinidade de plantas
+belas e majestosas que dï¿½o mais harmonia ao jardim.
+   Daqui vocï¿½ pode ver um pequeno riacho delimitando o jardim por um dos
 lados e uma pequena capela pelo outro.  O caminho de pedras passa pelo
-jardim, levando a uma bela casa ao norte e à vida cotidiana da Cidade de
+jardim, levando a uma bela casa ao norte e ï¿½ vida cotidiana da Cidade de
 Midgaard.
 ~
-13 ce 1
-D 0
+13 20 0 0 0 1
+D0
 ~
 porta~
-:n 2
-a -1 1311
-D 3
+1 -1 1311
+D3
 ~
 ~
 0 -1 1300
 E
-riacho~
-A água parece estar limpa e refrescante.
+pintura panteï¿½o~
+Vocï¿½ vï¿½ uma exuberante pintura, onde estï¿½o representados todos os deuses
+deste mundo.  Vocï¿½ se sente mais completo e protegido diante de tanta beleza.
 ~
 E
-jardim~
-Você sente-se bem rodeado de tanta beleza.
-~
-E
-casa~
-Você vê a casa da Família Lindyhurst.  Prestando atenção, você percebe que
-de lá vem uma suave melodia élfica.
+estï¿½tua~
+Vocï¿½ vï¿½ a Deusa Diana, com suas vestes amazonas.  Sua suave expressï¿½o
+ï¿½lfica faz com que vocï¿½ se sinta em paz e sintonia com os seres da floresta.
 ~
 E
 capela~
-Você vê a capela da Deusa Diana.  Você tem a sensação de que toda a paz do
-jardim vem de lá.  A capela foi construída com pedras de granito, e suas
+Vocï¿½ vï¿½ a capela da Deusa Diana.  Vocï¿½ tem a sensaï¿½ï¿½o de que toda a paz do
+jardim vem de lï¿½.  A capela foi construï¿½da com pedras de granito, e suas
 paredes laterais possuem belos arranjos de flores.
-Observando-a melhor, você vê em seu altar, uma pequena estátua de um metro
+Observando-a melhor, vocï¿½ vï¿½ em seu altar, uma pequena estï¿½tua de um metro
 e meio da Deusa Diana e na parede ao fundo uma pintura representando o
-Panteão.  Em uma das laterais você pode ver escrito em élfico a história da
+Panteï¿½o.  Em uma das laterais vocï¿½ pode ver escrito em ï¿½lfico a histï¿½ria da
 Deusa Diana em uma bela tabuleta dourada.
 ~
 E
-estátua~
-Você vê a Deusa Diana, com suas vestes amazonas.  Sua suave expressão
-élfica faz com que você se sinta em paz e sintonia com os seres da floresta.
+casa~
+Vocï¿½ vï¿½ a casa da Famï¿½lia Lindyhurst.  Prestando atenï¿½ï¿½o, vocï¿½ percebe que
+de lï¿½ vem uma suave melodia ï¿½lfica.
 ~
 E
-pintura panteão~
-Você vê uma exuberante pintura, onde estão representados todos os deuses
-deste mundo.  Você se sente mais completo e protegido diante de tanta beleza.
+jardim~
+Vocï¿½ sente-se bem rodeado de tanta beleza.
+~
+E
+riacho~
+A ï¿½gua parece estar limpa e refrescante.
 ~
 S
 #1311
-A Casa da Família Lindyhurst~
+A Casa da Famï¿½lia Lindyhurst~
    Ao adentrar nesta casa simples, feita de carvalho, com belas janelas para
-o jardim e na parede oposta por sobre a lareira, um belo Brasão da Família
-Lindyhurst.  Você sente aqui um clima especial, fortalecido com uma suave
-melodia élfica que repara até o espírito mais despedaçado, que renova todas
-as esperanças e reaviva o fogo da coragem.
-   Você vê uma mesa redonda ao centro, rodeada por cadeiras um pouco fora do
-lugar... é... este é um lugar de amigos, de elfos alegres e elfos majestosos.
-Um lugar de poesia, mistério, canções e lendas.
-   Aqui você se sente como se estivesse em uma fortaleza contra o mal, que
-não pode ser derrubada até que todo o resto o tenha sido.  Um lugar perfeito
+o jardim e na parede oposta por sobre a lareira, um belo Brasï¿½o da Famï¿½lia
+Lindyhurst.  Vocï¿½ sente aqui um clima especial, fortalecido com uma suave
+melodia ï¿½lfica que repara atï¿½ o espï¿½rito mais despedaï¿½ado, que renova todas
+as esperanï¿½as e reaviva o fogo da coragem.
+   Vocï¿½ vï¿½ uma mesa redonda ao centro, rodeada por cadeiras um pouco fora do
+lugar... ï¿½... este ï¿½ um lugar de amigos, de elfos alegres e elfos majestosos.
+Um lugar de poesia, mistï¿½rio, canï¿½ï¿½es e lendas.
+   Aqui vocï¿½ se sente como se estivesse em uma fortaleza contra o mal, que
+nï¿½o pode ser derrubada atï¿½ que todo o resto o tenha sido.  Um lugar perfeito
 para conversar, buscar conselhos, alegrar-se, descansar, trabalhar.  Um
-refúgio calmo nestes dias turbulentos.  Ao lado da porta está um aviso
-escrito em élfico e adornado com pedras preciosas.
+refï¿½gio calmo nestes dias turbulentos.  Ao lado da porta estï¿½ um aviso
+escrito em ï¿½lfico e adornado com pedras preciosas.
 ~
-13 cde 0
-D 2
+13 28 0 0 0 0
+D2
 ~
 porta~
-:n 2
 1 -1 1310
 E
-brasão~
-Um Símbolo do arco e flecha de prata, abençoando esta família de elfos e
-protegendo-os em sua morada.
-~
-E
-lareira~
-Uma temperatura agradável vem das brandas chamas da lareira.
-~
-E
-mesa~
-Há uma travessa cheia de lembas por sobre a mesa, acompanhada por uma
-jarra de hidromel e alguns copos de um fino cristal.
+aviso~
+Hï¿½ em um belo aviso escrito em ï¿½lfico e adornado com pedras preciosas os
+seguintes dizeres:
+Este aviso ï¿½ para lembrar-lhe que devemos honrar o nome de nossa famï¿½lia.
+Para tanto, devemos respeitar aos deuses e cidadï¿½os de Vitï¿½lia, tentando
+criar amizade com todas as pessoas.
+Acredito em vocï¿½.  Sei que nï¿½o estï¿½ nesta famï¿½lia por acaso, e sim porque
+temos a missï¿½o de evoluir em conjunto.
+Sei que vocï¿½ pode melhorar Vitï¿½lia a cada dia, honrando assim nosso nome.
+Ajude sempre os membros de nossa famï¿½lia, assim como aos novos cidadï¿½es de
+Vitï¿½lia.
+Mas lembrem-se, nï¿½o estamos auxiliando os novos cidadï¿½os para entrarem em
+nossa famï¿½lia ... nï¿½o estamos em disputas por membros ...
+Estamos em uma famï¿½lia em que vosso patriarca conhece e ama a todos e espera
+que todos se amem tambï¿½m, como irmï¿½os, pais, filhos, tios, primos, sobrinhos,
+dentre outros ... como uma feliz famï¿½lia.
+Um abraï¿½o paternal,
+Endelion Lindyhurst, o patriarca da famï¿½lia Lindyhurst.
 ~
 E
 janela~
-Você observa calmamente a serenidade dos jardins da Família Lindyhurst.
+Vocï¿½ observa calmamente a serenidade dos jardins da Famï¿½lia Lindyhurst.
 ~
 E
-aviso~
-Há em um belo aviso escrito em élfico e adornado com pedras preciosas os
-seguintes dizeres:
-Este aviso é para lembrar-lhe que devemos honrar o nome de nossa família.
-Para tanto, devemos respeitar aos deuses e cidadãos de Vitália, tentando
-criar amizade com todas as pessoas.
-Acredito em você.  Sei que não está nesta família por acaso, e sim porque
-temos a missão de evoluir em conjunto.
-Sei que você pode melhorar Vitália a cada dia, honrando assim nosso nome.
-Ajude sempre os membros de nossa família, assim como aos novos cidadões de
-Vitália.
-Mas lembrem-se, não estamos auxiliando os novos cidadãos para entrarem em
-nossa família ... não estamos em disputas por membros ...
-Estamos em uma família em que vosso patriarca conhece e ama a todos e espera
-que todos se amem também, como irmãos, pais, filhos, tios, primos, sobrinhos,
-dentre outros ... como uma feliz família.
-Um abraço paternal,
-Endelion Lindyhurst, o patriarca da família Lindyhurst.
+mesa~
+Hï¿½ uma travessa cheia de lembas por sobre a mesa, acompanhada por uma
+jarra de hidromel e alguns copos de um fino cristal.
+~
+E
+lareira~
+Uma temperatura agradï¿½vel vem das brandas chamas da lareira.
+~
+E
+brasï¿½o~
+Um Sï¿½mbolo do arco e flecha de prata, abenï¿½oando esta famï¿½lia de elfos e
+protegendo-os em sua morada.
 ~
 S
 #1312
-Mansão Ravenloft~
-   Nos tempos antigos, há muitos e muitos anos esta casa pertenceu aos
-ancestrais da família Ravenloft que já haviam se aventurado por terras além
+Mansï¿½o Ravenloft~
+   Nos tempos antigos, hï¿½ muitos e muitos anos esta casa pertenceu aos
+ancestrais da famï¿½lia Ravenloft que jï¿½ haviam se aventurado por terras alï¿½m
 do reino.  A casa fica num lugar muito bonito perto de um vale onde corre
-um riacho.  Quando o vento do inverno sopra com força os Ravenloft se
-esquentam numa grande lareira da sala, descansam num antigo sofá muito
-confortável e tem seus pés acariciados por um macio tapete persa, que cobre
-quase toda a sala.  A casa é decorada com mobílias muito bonitas da era
-hiboriana.  Na parede pode-se ver quadros por toda parede e o brasão da
-família.  Definitivamente, um ótimo lugar para se morar.
+um riacho.  Quando o vento do inverno sopra com forï¿½a os Ravenloft se
+esquentam numa grande lareira da sala, descansam num antigo sofï¿½ muito
+confortï¿½vel e tem seus pï¿½s acariciados por um macio tapete persa, que cobre
+quase toda a sala.  A casa ï¿½ decorada com mobï¿½lias muito bonitas da era
+hiboriana.  Na parede pode-se ver quadros por toda parede e o brasï¿½o da
+famï¿½lia.  Definitivamente, um ï¿½timo lugar para se morar.
 ~
-13 ce 1
-D 1
+13 20 0 0 0 1
+D1
 ~
 ~
 0 -1 1300
-D 4
+D4
 ~
 ~
 0 -1 1313
 S
 #1313
-Sala de Reuniões da Família~
-   Está é uma sala decorada com uma mobília séria, porém mantém o tom de harmonia
-e paz.  Nos antepassados, nesta sala, foram tomadas decisões muito importantes
-para a família.  No centro há uma grande mesa onde todos da família sentam e
-conversam.  Tem estantes cheias de livros por todos os lados e também um lustre
+Sala de Reuniï¿½es da Famï¿½lia~
+   Estï¿½ ï¿½ uma sala decorada com uma mobï¿½lia sï¿½ria, porï¿½m mantï¿½m o tom de harmonia
+e paz.  Nos antepassados, nesta sala, foram tomadas decisï¿½es muito importantes
+para a famï¿½lia.  No centro hï¿½ uma grande mesa onde todos da famï¿½lia sentam e
+conversam.  Tem estantes cheias de livros por todos os lados e tambï¿½m um lustre
 muito bonito que ilumina toda a sala.
-   Um pergaminho muito antigo e amarelado está aqui pregado na parede e protegido
+   Um pergaminho muito antigo e amarelado estï¿½ aqui pregado na parede e protegido
 por um fino vidro... ele parece importante.
 ~
-13 cde 0
-D 5
+13 28 0 0 0 0
+D5
 ~
 ~
 0 -1 1312
 E
 pergaminho~
-                            Oração da Família
+                            Oraï¿½ï¿½o da Famï¿½lia
 
-	"Senhor, veja nossa família aqui reunida. Nós te agradecemos por este
+	"Senhor, veja nossa famï¿½lia aqui reunida. Nï¿½s te agradecemos por este
 lugar onde moramos; pelas pessoas que nos unem; pela nossa paz no dia de hoje;
-pela esperança com que aguardamos o amanhã; pela saúde, trabalho, alimento e
-pelos céus claros que tornam felizes as nossas vidas; e por nossos amigos em
+pela esperanï¿½a com que aguardamos o amanhï¿½; pela saï¿½de, trabalho, alimento e
+pelos cï¿½us claros que tornam felizes as nossas vidas; e por nossos amigos em
 todo o mundo.
-	Que a tua paz habite em nossa humilde companhia.  Livra nossos corações
-do ressentimento.  Dá-nos graça e força para mantermos o controle e a
-perseverança.  Se nós ofendemos, dá-nos a graça de aceitar e perdoar aos que nos
-ofendem.  Se nós esquecemos, ajuda-nos a tolerar com leveza o esquecimento dos
+	Que a tua paz habite em nossa humilde companhia.  Livra nossos coraï¿½ï¿½es
+do ressentimento.  Dï¿½-nos graï¿½a e forï¿½a para mantermos o controle e a
+perseveranï¿½a.  Se nï¿½s ofendemos, dï¿½-nos a graï¿½a de aceitar e perdoar aos que nos
+ofendem.  Se nï¿½s esquecemos, ajuda-nos a tolerar com leveza o esquecimento dos
 outros.
-	Dá-nos coragem, alegria e serenidade mental.  Protege nossos amigos e
-suaviza nossos inimigos.  Abençoa, se for para o bem, nossos sonhos inocentes.
-Se não, dá-nos força para enfrentar o que vier; que sejamos bravos frente ao
-perigo, constante nas tribulações, temperados na indignação e em todas as
-mudanças da sorte; e até os portais da morte, que tenhamos lealdade e amor
-entre nós.
+	Dï¿½-nos coragem, alegria e serenidade mental.  Protege nossos amigos e
+suaviza nossos inimigos.  Abenï¿½oa, se for para o bem, nossos sonhos inocentes.
+Se nï¿½o, dï¿½-nos forï¿½a para enfrentar o que vier; que sejamos bravos frente ao
+perigo, constante nas tribulaï¿½ï¿½es, temperados na indignaï¿½ï¿½o e em todas as
+mudanï¿½as da sorte; e atï¿½ os portais da morte, que tenhamos lealdade e amor
+entre nï¿½s.
 	Como a argila para o oleiro, como o vento para o moinho, como filhos
-para o pai, rogamos a ti essa misericórdia, pelo amor do senhor."
+para o pai, rogamos a ti essa misericï¿½rdia, pelo amor do senhor."
 ~
 S
 #1314
 Corredor dos Iergonov~
-   São muitas estátuas enfileiradas dos dois lados formando um corredor a
-campo aberto.  Você percebe que muitas dessas estátuas são de falecidos
-membros da família Iergonov, conforme você anda você percebe que o corredor
-acaba, pois há Duas Estátuas barrando sua passagem.
+   Sï¿½o muitas estï¿½tuas enfileiradas dos dois lados formando um corredor a
+campo aberto.  Vocï¿½ percebe que muitas dessas estï¿½tuas sï¿½o de falecidos
+membros da famï¿½lia Iergonov, conforme vocï¿½ anda vocï¿½ percebe que o corredor
+acaba, pois hï¿½ Duas Estï¿½tuas barrando sua passagem.
 ~
-13 ce 1
-D 1
+13 20 0 0 0 1
+D1
 ~
 ~
 0 -1 1315
-D 3
+D3
 ~
 ~
 0 -1 1301
 E
-estátuas~
-Ao ver as estátuas mais de perto, você percebe que são os irmãos Loki
-e Ivanov, essas estátuas apenas deixam passar os membros da família
+estï¿½tuas~
+Ao ver as estï¿½tuas mais de perto, vocï¿½ percebe que sï¿½o os irmï¿½os Loki
+e Ivanov, essas estï¿½tuas apenas deixam passar os membros da famï¿½lia
 Iergonov.
 ~
 S
 #1315
-Santuário de Pedras dos Iergonov~
-   Logo ao entrar você vê muitas pedras negras formando uma espécie de arco,
-são duas pedras como trave e uma como travessão, todas formando um circulo em
-volta de uma pedra maior deitada no chão, ao olhar de perto a pedra deitada
-você vê um símbolo que parece ser o Brasão da família Iergonov.  Você percebe
-todos os espíritos das estátuas do corredor estão aqui andando livremente e
+Santuï¿½rio de Pedras dos Iergonov~
+   Logo ao entrar vocï¿½ vï¿½ muitas pedras negras formando uma espï¿½cie de arco,
+sï¿½o duas pedras como trave e uma como travessï¿½o, todas formando um circulo em
+volta de uma pedra maior deitada no chï¿½o, ao olhar de perto a pedra deitada
+vocï¿½ vï¿½ um sï¿½mbolo que parece ser o Brasï¿½o da famï¿½lia Iergonov.  Vocï¿½ percebe
+todos os espï¿½ritos das estï¿½tuas do corredor estï¿½o aqui andando livremente e
 conversando um com o outro.
 ~
-13 cde 0
-D 3
+13 28 0 0 0 0
+D3
 ~
 ~
 0 -1 1314
 E
-símbolo~
+sï¿½mbolo~
               &n&y/\&n
            &n&y__/  \__&n
          &n&y.'   &n&R..&n   &n&y'.&n
-       &n&y.´&n&r.    &n&R||    &n&r.&n&y`.&n
+       &n&y.ï¿½&n&r.    &n&R||    &n&r.&n&y`.&n
        &n&y\ &n&r\\   &n&R||   &n&r// &n&y/&n
         &n&y\ &n&r\\  &n&R||  &n&r// &n&y/&n
          &n&y\ &n&r\\ &n&R|| &n&r// &n&y/&n
@@ -474,265 +472,267 @@ símbolo~
 ~
 S
 #1316
-O Hall de Entrada da Família Valeth~
-   Você se encontra em um grande salão muito bem decorado, que parece ser
-para receber os visitantes.  Há lindos tapetes cobrindo todo o chão e alguns
-sofás bem macios e confortáveis para descansar um pouco e conversar.  Nas
-paredes existem alguns quadros com os retratos de um dos membros da família
+O Hall de Entrada da Famï¿½lia Valeth~
+   Vocï¿½ se encontra em um grande salï¿½o muito bem decorado, que parece ser
+para receber os visitantes.  Hï¿½ lindos tapetes cobrindo todo o chï¿½o e alguns
+sofï¿½s bem macios e confortï¿½veis para descansar um pouco e conversar.  Nas
+paredes existem alguns quadros com os retratos de um dos membros da famï¿½lia
 Valeth.
 ~
-13 cde 0
-D 3
-~
-~
-0 -1 1317
-D 1
+13 28 0 0 0 0
+D1
 ~
 ~
 0 -1 1301
+D3
+~
+~
+0 -1 1317
 S
 #1317
-A Sala de Estar da Família Valeth~
-   Esta é a sala onde os membros da família Valeth se reúnem para conversar
-e se descontrair um pouco.  Há uma bela estante com vários livros para ler,
-uma lareira com poltronas próximas para relaxar, uma adega com excelentes
+A Sala de Estar da Famï¿½lia Valeth~
+   Esta ï¿½ a sala onde os membros da famï¿½lia Valeth se reï¿½nem para conversar
+e se descontrair um pouco.  Hï¿½ uma bela estante com vï¿½rios livros para ler,
+uma lareira com poltronas prï¿½ximas para relaxar, uma adega com excelentes
 vinhos e uma grande mesa para os banquetes.
 ~
-13 cde 0
-D 1
+13 28 0 0 0 0
+D1
 ~
 ~
 0 -1 1316
 S
 #1318
 Uma Bela Cachoeira~
-   Você está diante de uma bela cachoeira, e escuta apenas o som da água
+   Vocï¿½ estï¿½ diante de uma bela cachoeira, e escuta apenas o som da ï¿½gua
 batendo nas pedras e correndo pelo riacho e o piado de alguns passarinhos
-nas redondezas.  Você tenta olhar através da cachoeira e vê... Uma passagem
-Secreta!  Há uma placa cuidadosamente esculpida em madeira onde se lê:
-Família Amarillis.
+nas redondezas.  Vocï¿½ tenta olhar atravï¿½s da cachoeira e vï¿½... Uma passagem
+Secreta!  Hï¿½ uma placa cuidadosamente esculpida em madeira onde se lï¿½:
+Famï¿½lia Amarillis.
 ~
-13 ce 1
-D 1
+13 20 0 0 0 1
+D1
 ~
 ~
 0 -1 1319
-D 3
+D3
 ~
 ~
 0 -1 1303
 S
 #1319
 Dentro da Gruta~
-   Você fica surpreso com o tamanho da gruta ao entrar.  Tudo é muito claro,
+   Vocï¿½ fica surpreso com o tamanho da gruta ao entrar.  Tudo ï¿½ muito claro,
 pois em toda parte existem cristais que refletem a luz que entra por uma
-pequena falha na rocha.  Há muitos tapetes pelo chão, assim como quadros de
+pequena falha na rocha.  Hï¿½ muitos tapetes pelo chï¿½o, assim como quadros de
 pessoas antigas na parede circular.  Quatro belas estantes de madeira escura,
 com antigos livros e pergaminhos foram simetricamente colocadas na sala.
 ~
-13 cde 0
-D 3
+13 28 0 0 0 0
+D3
 ~
 ~
 0 -1 1318
 S
 #1320
-Entrada da Confraria da Família Paice~
-   Ao passar por aqui você nota um grande brasão dourado com a letra "p" em
+Entrada da Confraria da Famï¿½lia Paice~
+   Ao passar por aqui vocï¿½ nota um grande brasï¿½o dourado com a letra "p" em
 relevo no centro, com as palavras Honra, Sabedoria, Dignidade e Respeito
-escritas em um grande portão.
-   Você logo percebe que esta é a entrada da confraria da família Paice, uma
-dentre as mais honradas famílias de Vitália.
+escritas em um grande portï¿½o.
+   Vocï¿½ logo percebe que esta ï¿½ a entrada da confraria da famï¿½lia Paice, uma
+dentre as mais honradas famï¿½lias de Vitï¿½lia.
 ~
-13 ce 1
-D 1
+13 20 0 0 0 1
+D1
 ~
 ~
 0 -1 1303
-D 3
+D3
 ~
-portão~
-:n 1
+portï¿½o~
 1 -1 1321
 S
 #1321
-Sala de Reunião da Família Paice~
+Sala de Reuniï¿½o da Famï¿½lia Paice~
    Esta sala parecia simples como qualquer outra, com uma grande mesa
-circular ao centro e várias cadeiras ao redor, mas ao entrar você tem uma
-sensação de paz e alegria.
-   De repente você ouve uma voz dizendo:  "Entre e sente-se, Pois Tu és bem
-vindo aqui".  Ao ouvir essa voz você nota que uma cadeira inexplicavelmente
-recua sozinha e você fica espantado ao ver seu nome sendo escrito em fogo
+circular ao centro e vï¿½rias cadeiras ao redor, mas ao entrar vocï¿½ tem uma
+sensaï¿½ï¿½o de paz e alegria.
+   De repente vocï¿½ ouve uma voz dizendo:  "Entre e sente-se, Pois Tu ï¿½s bem
+vindo aqui".  Ao ouvir essa voz vocï¿½ nota que uma cadeira inexplicavelmente
+recua sozinha e vocï¿½ fica espantado ao ver seu nome sendo escrito em fogo
 nas costas dessa cadeira.
-Certamente uma alma poderosa reservou este lugar para você.  Sente-se.
+Certamente uma alma poderosa reservou este lugar para vocï¿½.  Sente-se.
 ~
-13 cde 0
-D 1
+13 28 0 0 0 0
+D1
 ~
-portão~
-:n 1
+portï¿½o~
 1 -1 1320
 S
 #1322
 A Sala de Visitas~
-   Essa é uma sala grande, com várias poltronas e cadeiras.  No centro há
-uma mesa.  As paredes estão decoradas com alguns quadros de familiares Depok
-famosos.  A porta é de mogno com trinco de marfim e batente de prata.  Do
-outro lado há uma porta dourada com batente de prata e trinco de marfim e
-acima dela há o brasão da família.
+   Essa ï¿½ uma sala grande, com vï¿½rias poltronas e cadeiras.  No centro hï¿½
+uma mesa.  As paredes estï¿½o decoradas com alguns quadros de familiares Depok
+famosos.  A porta ï¿½ de mogno com trinco de marfim e batente de prata.  Do
+outro lado hï¿½ uma porta dourada com batente de prata e trinco de marfim e
+acima dela hï¿½ o brasï¿½o da famï¿½lia.
 ~
-13 cde 0
-D 3
+13 28 0 0 0 0
+D1
+~
+porta~
+1 -1 1323
+D3
 ~
 ~
 0 -1 1304
-D 1
-~
-porta~
-:n 2
-1 -1 1323
 S
 #1323
 A Sala de Estar~
-   Esta sala é enorme, com uma mesa comprida e várias cadeiras no centro.
-Na parede há uma árvore genealógica da família, várias armas e armaduras com
-o brasão da família.  Essa sala é usada para reuniões.
+   Esta sala ï¿½ enorme, com uma mesa comprida e vï¿½rias cadeiras no centro.
+Na parede hï¿½ uma ï¿½rvore genealï¿½gica da famï¿½lia, vï¿½rias armas e armaduras com
+o brasï¿½o da famï¿½lia.  Essa sala ï¿½ usada para reuniï¿½es.
 ~
-13 cde 0
-D 3
+13 28 0 0 0 0
+D3
 ~
 porta~
-:n 2
 1 -1 1322
 S
 #1324
-Nas Escadarias de Mármore~
-   Olhando para cima, você não consegue localizar o final desta escadaria.
-   Olhando em volta, nos claros vazios, você vê cenas de guerreiros lutando
-bravamente contra o mal, sábios que fazem parte da história vitaliana e
-algumas frases élficas que ficam vagando sem rumo.
-   Pisando no primeiro degrau, uma voz soa como um longo e duradouro trovão,
+Nas Escadarias de Mï¿½rmore~
+   Olhando para cima, vocï¿½ nï¿½o consegue localizar o final desta escadaria.
+   Olhando em volta, nos claros vazios, vocï¿½ vï¿½ cenas de guerreiros lutando
+bravamente contra o mal, sï¿½bios que fazem parte da histï¿½ria vitaliana e
+algumas frases ï¿½lficas que ficam vagando sem rumo.
+   Pisando no primeiro degrau, uma voz soa como um longo e duradouro trovï¿½o,
 fazendo tremer o local inteiro e tornando o claro vazio em um vermelho
-sangue, ´Pisas em local privado, vitaliano, se não pertences a este local,
-volte!!!´.
+sangue, ï¿½Pisas em local privado, vitaliano, se nï¿½o pertences a este local,
+volte!!!ï¿½.
 ~
-13 ce 0
-D 4
-~
-~
-0 -1 1325
-D 1
+13 20 0 0 0 0
+D1
 ~
 ~
 0 -1 1304
+D4
+~
+~
+0 -1 1325
 S
 #1325
 No Altar~
-   Chegando ao topo, algo faz o claro vazio se dissipar e logo você vê um
+   Chegando ao topo, algo faz o claro vazio se dissipar e logo vocï¿½ vï¿½ um
 belo e enorme jardim.  No meio do jardim existe um grande altar com uma
-estátua acima dela, a balança da justiça.  Em um dos lados da balança está
+estï¿½tua acima dela, a balanï¿½a da justiï¿½a.  Em um dos lados da balanï¿½a estï¿½
 uma chama fria e negra, na outra, uma luz clara e amarelada.
-   Você olha ao alto e logo vê arcanjos voando e anjos cantando.  Ao redor,
+   Vocï¿½ olha ao alto e logo vï¿½ arcanjos voando e anjos cantando.  Ao redor,
 seres misteriosos encapuzados que lhe observam silenciosamente.  Olhando ao
-fundo você percebe que existem vários tronos feitos de um aço brilhante,
-todos com nomes gravados e... olhe... o seu está lá... tome o seu lugar e
-lute a favor de sua família.  Honrado sejam os Pathfinder que nasceram da
-bondade dos anjos e da sabedoria dos maléficos.
-   Uma nova vida brilha sobre Vitália, e, cabe a você protege-la.
+fundo vocï¿½ percebe que existem vï¿½rios tronos feitos de um aï¿½o brilhante,
+todos com nomes gravados e... olhe... o seu estï¿½ lï¿½... tome o seu lugar e
+lute a favor de sua famï¿½lia.  Honrado sejam os Pathfinder que nasceram da
+bondade dos anjos e da sabedoria dos malï¿½ficos.
+   Uma nova vida brilha sobre Vitï¿½lia, e, cabe a vocï¿½ protege-la.
 ~
-13 cde 0
-D 5
+13 28 0 0 0 0
+D5
 ~
 ~
 0 -1 1324
 S
 #1326
 O Hall Guireli~
-   Você encontra um salão bastante amplo em madeira de lei.  No centro há
-um grande tapete vermelho.  Este tapete vem da entrada até uma escada
-circular que sobe até uma sala cujo teto você percebe que é de mármore.
-   Ao canto você vê o busto de um homem, talhado em platina com escritas em
-diamante.  Nas paredes você percebe alguns quadros com os membros da família
-Guireli.  Quadros com molduras de cristal que flutuam sem a presença de um
+   Vocï¿½ encontra um salï¿½o bastante amplo em madeira de lei.  No centro hï¿½
+um grande tapete vermelho.  Este tapete vem da entrada atï¿½ uma escada
+circular que sobe atï¿½ uma sala cujo teto vocï¿½ percebe que ï¿½ de mï¿½rmore.
+   Ao canto vocï¿½ vï¿½ o busto de um homem, talhado em platina com escritas em
+diamante.  Nas paredes vocï¿½ percebe alguns quadros com os membros da famï¿½lia
+Guireli.  Quadros com molduras de cristal que flutuam sem a presenï¿½a de um
 prego ou qualquer coisa que os fixe a parede.
-   Neste Hall você ainda observa dois sofás que os Guireli usam para suas
+   Neste Hall vocï¿½ ainda observa dois sofï¿½s que os Guireli usam para suas
 visitas, e um mordomo sobe e desce as escadas trazendo champanhe e vinho em
 sua bandeja.
 ~
-13 d 0
-D 3
+13 8 0 0 0 0
+D3
 ~
 ~
 0 -1 1305
-D 4
+D4
 ~
 ~
 0 -1 1327
 E
-busto~
-Você lê em escritas de brilhantes como diamantes.  Rhapsody Guireli líder e
-fundador desta família.
-Imortalizado pelos seus grandes feitos.  Ao tocar neste busto você percebe
-que ele é frio como o gelo e talvez você não perceba que em sua base está
-escrito: The Warrior of Ice.
+mordomo~
+Ele parece apressado em servir seus amos, mas percebe seu olhar e lhe
+oferece vinho, ou champanhe.  Mas antes que vocï¿½ pudesse falar ele responde,
+perdoe-me senhor preciso buscar o Foundi de Chocolate para servir com
+licenï¿½a.
 ~
 E
-quadros~
-Quadros dos membros da família Guireli:
-Rhapsody, Rheinda, Frake e Artemisia.
-~
-E
-sofá~
-São sofás luxuosos, muito macios e não seria uma má idéia sentar neles e
-tirar um cochilo o difícil é acordar.  Feito de Couro de Leão, em forma
-de L eles dão a vista de quem entra.
-Você ainda percebe que existe cinzas de charuto no belo cinzeiro de Rubi,
+sofï¿½~
+Sï¿½o sofï¿½s luxuosos, muito macios e nï¿½o seria uma mï¿½ idï¿½ia sentar neles e
+tirar um cochilo o difï¿½cil ï¿½ acordar.  Feito de Couro de Leï¿½o, em forma
+de L eles dï¿½o a vista de quem entra.
+Vocï¿½ ainda percebe que existe cinzas de charuto no belo cinzeiro de Rubi,
 parece que um dos Guireli recebeu uma visita.
 ~
 E
-mordomo~
-Ele parece apressado em servir seus amos, mas percebe seu olhar e lhe
-oferece vinho, ou champanhe.  Mas antes que você pudesse falar ele responde,
-perdoe-me senhor preciso buscar o Foundi de Chocolate para servir com
-licença.
+quadros~
+Quadros dos membros da famï¿½lia Guireli:
+Rhapsody, Rheinda, Frake e Artemisia.
+~
+E
+busto~
+Vocï¿½ lï¿½ em escritas de brilhantes como diamantes.  Rhapsody Guireli lï¿½der e
+fundador desta famï¿½lia.
+Imortalizado pelos seus grandes feitos.  Ao tocar neste busto vocï¿½ percebe
+que ele ï¿½ frio como o gelo e talvez vocï¿½ nï¿½o perceba que em sua base estï¿½
+escrito: The Warrior of Ice.
 ~
 S
 #1327
 Aconchego Guireli~
    Nesta sala existem camas e uma bela adega de vinho, onde os Guireli
-compartilham juntos em seu momento em família.
-   A sala com teto de mármore tem o chão cor de pérola, e as paredes são
-ornadas com belos quadros dos deuses de Vitália.
+compartilham juntos em seu momento em famï¿½lia.
+   A sala com teto de mï¿½rmore tem o chï¿½o cor de pï¿½rola, e as paredes sï¿½o
+ornadas com belos quadros dos deuses de Vitï¿½lia.
    Cada um tem seu criado mudo com livros e objetos pessoais, parece que aqui
-é um lugar de sossego e paz, depois de uma dura jornada.
+ï¿½ um lugar de sossego e paz, depois de uma dura jornada.
 ~
-13 d 0
-D 5
+13 8 0 0 0 0
+D5
 ~
 ~
 0 -1 1326
 S
 #1328
-A Casa da Família Celebithil~
-   Você está num campo aberto, cheio de árvores.  Ao pé delas, e por toda a
-volta, o gramado está salpicado de pequenas flores douradas, com o formato
-de estrelas - são as Elanores e Niphredil.
-   Você vê uma gigantesca árvore, com uma enorme escadaria que a circunda.
-É um Mallorn, árvore onde moram os Elfos e os seus descendentes.  Os galhos
-brotam quase em ângulo reto com o tronco, mas perto da copa o galho principal
-ramifica-se numa coroa de muitos ramos; em meio a estes você vê que existe
-uma construção, que parece ser um salão, no meio dos galhos.  Os Elfos o
-chamam de Talan.  Existe um desenho e uma inscrição na árvore.
+A Casa da Famï¿½lia Celebithil~
+   Vocï¿½ estï¿½ num campo aberto, cheio de ï¿½rvores.  Ao pï¿½ delas, e por toda a
+volta, o gramado estï¿½ salpicado de pequenas flores douradas, com o formato
+de estrelas - sï¿½o as Elanores e Niphredil.
+   Vocï¿½ vï¿½ uma gigantesca ï¿½rvore, com uma enorme escadaria que a circunda.
+ï¿½ um Mallorn, ï¿½rvore onde moram os Elfos e os seus descendentes.  Os galhos
+brotam quase em ï¿½ngulo reto com o tronco, mas perto da copa o galho principal
+ramifica-se numa coroa de muitos ramos; em meio a estes vocï¿½ vï¿½ que existe
+uma construï¿½ï¿½o, que parece ser um salï¿½o, no meio dos galhos.  Os Elfos o
+chamam de Talan.  Existe um desenho e uma inscriï¿½ï¿½o na ï¿½rvore.
 ~
-13 0 1
-D 1
+13 0 0 0 0 1
+D1
 ~
 ~
 0 -1 1305
-D 4
+D4
 ~
 ~
 0 -1 1329
+E
+inscriï¿½ï¿½o~
+Vocï¿½ vï¿½ uma frase escrita na lï¿½ngua ï¿½lfica, cuja traduï¿½ï¿½o em lï¿½ngua geral ï¿½:
+Bem-vindos a casa dos Celebithil (Lua de Prata).  Somente os que se dedicam
+a busca alcanï¿½am o conhecimento e a sabedoria.
+~
 E
 desenho~
 Celebithil
@@ -744,190 +744,184 @@ Celebithil
     `. '::::::'
       `-.::''
 ~
-E
-inscrição~
-Você vê uma frase escrita na língua Élfica, cuja tradução em língua geral é:
-Bem-vindos a casa dos Celebithil (Lua de Prata).  Somente os que se dedicam
-a busca alcançam o conhecimento e a sabedoria.
-~
 S
 #1329
-O Salão de Reuniões da Família Celebithil~
-   Nossa! Quantos degraus havia nessa escada! Você parece realmente cansado,
-mas outra emoção toma conta de sua pessoa: a beleza deste salão.  É um cômodo
+O Salï¿½o de Reuniï¿½es da Famï¿½lia Celebithil~
+   Nossa! Quantos degraus havia nessa escada! Vocï¿½ parece realmente cansado,
+mas outra emoï¿½ï¿½o toma conta de sua pessoa: a beleza deste salï¿½o.  ï¿½ um cï¿½modo
 oval, no meio do qual cresce o tronco do grande Mallorn.  Repleto de uma luz
-suave, suas paredes são verdes e prateadas.
-   O teto, por alguma magia élfica, é azul como a noite, e tem estrelas tão
-brilhantes quanto as de verdade.  Uma grande Lua prateada, Brasão da Família
-Celebithil está nesse maravilhoso teto.
-   Uma grande mesa oval com muitas cadeiras está aqui, esperando pelo próximo
-encontro dos Celebithil.  Uma estante com livros está aqui.  Existem diversos
-retratos dos integrantes da família.  Um livro, com a história da Família
-Celebithil está aqui.
+suave, suas paredes sï¿½o verdes e prateadas.
+   O teto, por alguma magia ï¿½lfica, ï¿½ azul como a noite, e tem estrelas tï¿½o
+brilhantes quanto as de verdade.  Uma grande Lua prateada, Brasï¿½o da Famï¿½lia
+Celebithil estï¿½ nesse maravilhoso teto.
+   Uma grande mesa oval com muitas cadeiras estï¿½ aqui, esperando pelo prï¿½ximo
+encontro dos Celebithil.  Uma estante com livros estï¿½ aqui.  Existem diversos
+retratos dos integrantes da famï¿½lia.  Um livro, com a histï¿½ria da Famï¿½lia
+Celebithil estï¿½ aqui.
 ~
-13 d 0
-D 5
+13 8 0 0 0 0
+D5
 ~
 ~
 0 -1 1328
 E
-brasão~
-Quando você olha para ele, seus sentidos se confundem.  Você não consegue
-distinguir se essa é realmente a Lua verdadeira ou se é apenas um brasão,
-feito da mais pura prata.
-O símbolo da família é, com certeza, impressionante.
-~
-E
-mesa~
-É uma pesada mesa de madeira, belamente entalhada, com uma grande Lua de
-Prata incrustada no seu centro.
-~
-E
-estante~
-Esta estante está repleta de preciosos livros e pergaminhos sagrados,
-trazidos durante as viagens dos integrantes desta família. Parece que
-a cultura e o conhecimento são muito importantes para  eles!
-~
-E
-retratos~
-Existem diversos retratos, onde você pode reconhecer algumas pessoas da
-família: A Matriarca Farfalla e seus irmãos Thorgrim e Sirlouis.
-Num outro retrato, Torvante, Hera, Sethik e Ghede.
-~
-E
 livro~
-   Você abre esse bonito livro, onde você lê a história dos Celebithil:
-   "Celebithil - Oriundo de Celeb - Prata e Ithil, Lua.  Esta família
+   Vocï¿½ abre esse bonito livro, onde vocï¿½ lï¿½ a histï¿½ria dos Celebithil:
+   "Celebithil - Oriundo de Celeb - Prata e Ithil, Lua.  Esta famï¿½lia
 descende dos antigos Elfos, que apreciavam a beleza das noites de luar.
    Conta-se que a bela elfa Isiliel (Donzela da Lua), casou-se com um
 cavaleiro de Camelot, de nome Aliaga, pelo qual era apaixonada.  Esse
-casamento gerou três filhos: Farfalla, Sirlouis e Thorgrim, meio-elfos
-que vivem suas aventuras nas terras de Vitália.
-   Após a morte de Aliaga, Isiliel tomou um barco em Portos Cinzentos,
+casamento gerou trï¿½s filhos: Farfalla, Sirlouis e Thorgrim, meio-elfos
+que vivem suas aventuras nas terras de Vitï¿½lia.
+   Apï¿½s a morte de Aliaga, Isiliel tomou um barco em Portos Cinzentos,
 voltando para a Terra dos Valar, assim passando o posto de matriarca para
-sua filha mais velha, a exuberante e sábia feiticeira Farfalla.
-   Ela casou-se com Panoramix, estabelecendo assim vínculo com outra
-importante família de Vitália, os Pendragon.  Desta união nasceram Azlan
+sua filha mais velha, a exuberante e sï¿½bia feiticeira Farfalla.
+   Ela casou-se com Panoramix, estabelecendo assim vï¿½nculo com outra
+importante famï¿½lia de Vitï¿½lia, os Pendragon.  Desta uniï¿½o nasceram Azlan
 e Lunatigad, que por sua vez tiveram numerosos herdeiros.
-   Thorgrim teve dois filhos, uma moça de nome Morrigan e um rapaz chamado
+   Thorgrim teve dois filhos, uma moï¿½a de nome Morrigan e um rapaz chamado
 Tantalus que, por seus numerosos feitos, ascendeu a divindade e hoje vela
-pela família dos céus.  Mas a Elfa Isiliel tinha também uma irmã, de nome
+pela famï¿½lia dos cï¿½us.  Mas a Elfa Isiliel tinha tambï¿½m uma irmï¿½, de nome
 Idril, cujo herdeiro mais famoso se chama Torvante.  Em suas aventuras,
-sofreu um naufrágio, aportando numa ilha onde havia uma árvore de ouro.
-Foi amparado pela guardiã do lugar, a bela Hera, com quem se casou e teve
-filhos.  Hoje, o único herdeiro deles que ainda transita por estas terras
-é Sethik, pai de Ghede.  Mas muitas páginas deste livro ainda estão em
-branco, indicando que muitos herdeiros estão por vir assim como muitas
-histórias desta família ainda estão para serem escritas....."
+sofreu um naufrï¿½gio, aportando numa ilha onde havia uma ï¿½rvore de ouro.
+Foi amparado pela guardiï¿½ do lugar, a bela Hera, com quem se casou e teve
+filhos.  Hoje, o ï¿½nico herdeiro deles que ainda transita por estas terras
+ï¿½ Sethik, pai de Ghede.  Mas muitas pï¿½ginas deste livro ainda estï¿½o em
+branco, indicando que muitos herdeiros estï¿½o por vir assim como muitas
+histï¿½rias desta famï¿½lia ainda estï¿½o para serem escritas....."
+~
+E
+retratos~
+Existem diversos retratos, onde vocï¿½ pode reconhecer algumas pessoas da
+famï¿½lia: A Matriarca Farfalla e seus irmï¿½os Thorgrim e Sirlouis.
+Num outro retrato, Torvante, Hera, Sethik e Ghede.
+~
+E
+estante~
+Esta estante estï¿½ repleta de preciosos livros e pergaminhos sagrados,
+trazidos durante as viagens dos integrantes desta famï¿½lia. Parece que
+a cultura e o conhecimento sï¿½o muito importantes para  eles!
+~
+E
+mesa~
+ï¿½ uma pesada mesa de madeira, belamente entalhada, com uma grande Lua de
+Prata incrustada no seu centro.
+~
+E
+brasï¿½o~
+Quando vocï¿½ olha para ele, seus sentidos se confundem.  Vocï¿½ nï¿½o consegue
+distinguir se essa ï¿½ realmente a Lua verdadeira ou se ï¿½ apenas um brasï¿½o,
+feito da mais pura prata.
+O sï¿½mbolo da famï¿½lia ï¿½, com certeza, impressionante.
 ~
 S
 #1330
 A Grande Fortaleza Galad~
-   Ao adentrar na sala você se depara com uma visão radiante que enche seu
-coração de glória e tristeza.  Olhando ao redor você vê uma fortaleza com
+   Ao adentrar na sala vocï¿½ se depara com uma visï¿½o radiante que enche seu
+coraï¿½ï¿½o de glï¿½ria e tristeza.  Olhando ao redor vocï¿½ vï¿½ uma fortaleza com
 vidros grossos e brilhantes e, na parece ilustrada, grandes batalhas.
-   Apesar do ar de tristeza, você repara que a sala é muito extravagante com
-traços de mármore e pedras muito bem lapidadas, sua iluminação é verde, o que
-parece ser magia, e dá um tom de realidade nas expressões das ilustrações.
-   No centro da Sala há um pilar com um Pergaminho Dourado.
-   Aqui você pode ver uma linda estátua.
+   Apesar do ar de tristeza, vocï¿½ repara que a sala ï¿½ muito extravagante com
+traï¿½os de mï¿½rmore e pedras muito bem lapidadas, sua iluminaï¿½ï¿½o ï¿½ verde, o que
+parece ser magia, e dï¿½ um tom de realidade nas expressï¿½es das ilustraï¿½ï¿½es.
+   No centro da Sala hï¿½ um pilar com um Pergaminho Dourado.
+   Aqui vocï¿½ pode ver uma linda estï¿½tua.
 ~
-13 d 0
-D 2
+13 8 0 0 0 0
+D2
 ~
 ~
 0 -1 1306
-D 4
+D4
 ~
 ~
 0 -1 1331
 E
-pergaminho dourado~
-&YHistória da Família Galad&n
+estï¿½tua~
+   Quando vocï¿½ focaliza seu olhar na estï¿½tua, vocï¿½ vï¿½ que ï¿½ um grande muro de uma
+fortaleza, nesse muro hï¿½ vï¿½rios arqueiros e homens entusiasmados.  Ao meio vocï¿½ vï¿½
+Hajime com seus Familiares: Karion, Soveliss e Cedric. Sobre eles, os abenï¿½oando,
+estï¿½ a imagem do Deus Porter.
+   Embaixo, no canto vocï¿½ lï¿½ uma escrita em alto relevo:
 
-   Desde a época em que os magos reinavam, existe uma família de aventureiros
-que luta pela Paz e pela Sabedoria, seu nome é "Família Galad", cujo regente
-é o anão guerreiro denominado "Hajime".
+   A fortaleza da Vitï¿½ria, Galad.
+~
+E
+pergaminho dourado~
+&YHistï¿½ria da Famï¿½lia Galad&n
+
+   Desde a ï¿½poca em que os magos reinavam, existe uma famï¿½lia de aventureiros
+que luta pela Paz e pela Sabedoria, seu nome ï¿½ "Famï¿½lia Galad", cujo regente
+ï¿½ o anï¿½o guerreiro denominado "Hajime".
    Certo dia, um mago muito conhecido e admirado por todos contratou os
-serviços da Família Galad.  Ele dizia que o mal estava crescendo no "Grande
-Templo".  Este local sempre foi um símbolo de grande poder, e era dever dos
+serviï¿½os da Famï¿½lia Galad.  Ele dizia que o mal estava crescendo no "Grande
+Templo".  Este local sempre foi um sï¿½mbolo de grande poder, e era dever dos
 Galad dominar e destruir o mal.
-   Sem muitas informações, Hajime convocou seus familiares mais instruídos em
+   Sem muitas informaï¿½ï¿½es, Hajime convocou seus familiares mais instruï¿½dos em
 batalhas: Karion, Soveliss e Cedric, que por sua vez conduziram os Galad para
-a batalha mais difícil de suas vidas: "A Batalha da Traição".  Sem saber de
+a batalha mais difï¿½cil de suas vidas: "A Batalha da Traiï¿½ï¿½o".  Sem saber de
 nada, eles organizaram as tropas nos bosques ao redor da casa do Patriarca dos
 Galad.  A caminho do Templo sagrado, eles se separaram para atacar um de cada
-lado.  Pensaram: "por pior que seja o mal, ele não poderá resistir à uma
-investida tripla".  Chegando ao templo se depararam com a maior traição
-possível: O Mago supremo (que os havia contratado), juntamente com seus
-discípulos paralisaram os Galad.  E o mago traiçoeiro falou em tom de deboche:
-"Sem os Galad nada poderá interferir nos meus planos".  Todos os Galad foram
+lado.  Pensaram: "por pior que seja o mal, ele nï¿½o poderï¿½ resistir ï¿½ uma
+investida tripla".  Chegando ao templo se depararam com a maior traiï¿½ï¿½o
+possï¿½vel: O Mago supremo (que os havia contratado), juntamente com seus
+discï¿½pulos paralisaram os Galad.  E o mago traiï¿½oeiro falou em tom de deboche:
+"Sem os Galad nada poderï¿½ interferir nos meus planos".  Todos os Galad foram
 encarcerados.
-   Enquanto isso Hajime, o líder dos Galad havia ido se encontrar com Porter no
+   Enquanto isso Hajime, o lï¿½der dos Galad havia ido se encontrar com Porter no
 "Altar Sagrado".  Porter sendo Deus dos Galad contou a Hajime que esta batalha
-era uma traição do mago supremo.  Que o mago havia ficado louco por poder.
-Porter contou também que não havia limites no poder do mago, e que só haveria um
-modo de vencê-lo: Destruindo sua fonte de poder ilimitado.  O único problema: que
-esta fonte de poder era um colar que ficava em seu pescoço.
-   Hajime organizou então, um grande batalhão com o restante da Família Galad,
-enquanto a parte da família que tinha ido lutar contra o mal era torturada.  O
+era uma traiï¿½ï¿½o do mago supremo.  Que o mago havia ficado louco por poder.
+Porter contou tambï¿½m que nï¿½o havia limites no poder do mago, e que sï¿½ haveria um
+modo de vencï¿½-lo: Destruindo sua fonte de poder ilimitado.  O ï¿½nico problema: que
+esta fonte de poder era um colar que ficava em seu pescoï¿½o.
+   Hajime organizou entï¿½o, um grande batalhï¿½o com o restante da Famï¿½lia Galad,
+enquanto a parte da famï¿½lia que tinha ido lutar contra o mal era torturada.  O
 plano de Hajime era audacioso: ele iria libertar seus Parentes e depois destruir
-o mago.  Hajime então, com a ajuda de Porter conseguiu chegar ao calabouço e
-libertar seus entes queridos.  Logo, com a força reunida de Hajime, Karion,
-Soveliss e Cedric, além do fato de já conhecerem bem seu inimigo, foram confiantes
+o mago.  Hajime entï¿½o, com a ajuda de Porter conseguiu chegar ao calabouï¿½o e
+libertar seus entes queridos.  Logo, com a forï¿½a reunida de Hajime, Karion,
+Soveliss e Cedric, alï¿½m do fato de jï¿½ conhecerem bem seu inimigo, foram confiantes
 ao encontro do perigoso e temido mago supremo.
    Logo se depararam com uma figura escura e tenebrosa.  Os Guerreiros retiraram
 as espadas da bainha e correram ao encontro do mago enquanto Soveliss fazia uma
-grande bola de fogo com todo o seu ódio.  Mas disso nada adiantou, quando os dois
-iam atacar o mago, ele ergueu a mão, Hajime e Karion ficaram paralisados e suas
-espadas caíram no chão, ele olhou para o lado e viu que aconteceu o mesmo com todos
+grande bola de fogo com todo o seu ï¿½dio.  Mas disso nada adiantou, quando os dois
+iam atacar o mago, ele ergueu a mï¿½o, Hajime e Karion ficaram paralisados e suas
+espadas caï¿½ram no chï¿½o, ele olhou para o lado e viu que aconteceu o mesmo com todos
 os seus companheiros.
    - Seus tolos, acham que podem me derrotar?
-   Nisso Soveliss, que não foi paralisado, lançou a gigantesca bola de fogo contra
-o mago.  Quando a bola estava se aproximando, começou a escurecer até ficar negra,
-parando a seguir.  De repente aquela bola enorme de chamas negras começou a ir na
-direção de Soveliss, que ficou paralisado como os outros.
+   Nisso Soveliss, que nï¿½o foi paralisado, lanï¿½ou a gigantesca bola de fogo contra
+o mago.  Quando a bola estava se aproximando, comeï¿½ou a escurecer atï¿½ ficar negra,
+parando a seguir.  De repente aquela bola enorme de chamas negras comeï¿½ou a ir na
+direï¿½ï¿½o de Soveliss, que ficou paralisado como os outros.
    - Tolos - disse o Mago Supremo em ar de deboche - Eu me alimento do mal.  Quanto
-mais mal vocês quiserem me causar, quanto mais ódio tiverem de mim, mais poder me
-darão. Mas eu não preciso de vocês.  Já há mal suficiente no mundo para alimentar
+mais mal vocï¿½s quiserem me causar, quanto mais ï¿½dio tiverem de mim, mais poder me
+darï¿½o. Mas eu nï¿½o preciso de vocï¿½s.  Jï¿½ hï¿½ mal suficiente no mundo para alimentar
 meus poderes. Por isso, MORRAM.
-   Os olhos de Hajime se encheram de temor, ele temia pelo fim de sua família, de
-seus entes queridos e amados, seus filhos, irmão e sobrinhos adorados.  Neste momento
-apareceu uma luz branca e ofuscante, enchendo os corações dos Galads de esperança.
-   Porter apareceu cegando o mal com sua luz (Hajime havia, naquela faísca de amor
-por sua família, dado a chance desta Divindade adentrar este lugar profanado).  E,
+   Os olhos de Hajime se encheram de temor, ele temia pelo fim de sua famï¿½lia, de
+seus entes queridos e amados, seus filhos, irmï¿½o e sobrinhos adorados.  Neste momento
+apareceu uma luz branca e ofuscante, enchendo os coraï¿½ï¿½es dos Galads de esperanï¿½a.
+   Porter apareceu cegando o mal com sua luz (Hajime havia, naquela faï¿½sca de amor
+por sua famï¿½lia, dado a chance desta Divindade adentrar este lugar profanado).  E,
 enquanto Porter cegava o mago com sua luz divina, Hajime num impulso desesperado
-pegou sua espada e destruiu o colar do mago.  Porter para garantir a Vitória, destruiu
+pegou sua espada e destruiu o colar do mago.  Porter para garantir a Vitï¿½ria, destruiu
 o mago.  Nesta grande batalha muitos morreram, mas os que sobraram prometeram sempre
-combater o mal, em nome dos mortos da Família Galad.
-~
-E
-estátua~
-   Quando você focaliza seu olhar na estátua, você vê que é um grande muro de uma
-fortaleza, nesse muro há vários arqueiros e homens entusiasmados.  Ao meio você vê
-Hajime com seus Familiares: Karion, Soveliss e Cedric. Sobre eles, os abençoando,
-está a imagem do Deus Porter.
-   Embaixo, no canto você lê uma escrita em alto relevo:
-
-   A fortaleza da Vitória, Galad.
+combater o mal, em nome dos mortos da Famï¿½lia Galad.
 ~
 S
 #1331
 A Sala Superior~
-   Ao adentrar nesta sala seus olhos brilham e você se sente um imperador ao
-meio de tanta riqueza, você olha ao redor e vê que tudo é adornado por ouro
+   Ao adentrar nesta sala seus olhos brilham e vocï¿½ se sente um imperador ao
+meio de tanta riqueza, vocï¿½ olha ao redor e vï¿½ que tudo ï¿½ adornado por ouro
 e pedras preciosas.
-   Em meio a tanta riqueza o que mais lhe chama a atenção e aparece à sua
-frente, com a escrita em várias línguas, em que uma palavra é destacada em
+   Em meio a tanta riqueza o que mais lhe chama a atenï¿½ï¿½o e aparece ï¿½ sua
+frente, com a escrita em vï¿½rias lï¿½nguas, em que uma palavra ï¿½ destacada em
 ouro branco e rubi:  Galad.
-   No meio, há uma gigantesca mesa de mármore e diamantes, além de cadeiras
-para um exército inteiro.  Logo que você entra na sala os seus ferimentos
-começam a cicatrizar.
+   No meio, hï¿½ uma gigantesca mesa de mï¿½rmore e diamantes, alï¿½m de cadeiras
+para um exï¿½rcito inteiro.  Logo que vocï¿½ entra na sala os seus ferimentos
+comeï¿½am a cicatrizar.
 ~
-13 dt 0
-D 5
+13 524296 0 0 0 0
+D5
 ~
 ~
 0 -1 1330
 S
-$
+$~
