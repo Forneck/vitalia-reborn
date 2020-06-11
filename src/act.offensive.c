@@ -429,7 +429,8 @@ EVENTFUNC(event_backflip)
 
 		tch = random_from_list(room_list);
 	  stop_fighting(tch);
-	
+	   stop_fighting(ch);
+	   
 	/* Now that our backflip is done, let's free out list */
 	free_list(room_list);
 
