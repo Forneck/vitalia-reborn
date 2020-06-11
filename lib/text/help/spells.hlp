@@ -9,17 +9,17 @@ utiliz�-la.
    Os seguintes comandos est�o relacionados com o uso de magias:
 Para obter ajuda para um comando, digite HELP (comando).
 
-   @gCAST                 @nLan�ar magias sobre algu�m ou algo.
-   @gNOSUMMON             @nPermitir a convoca��o pela magia summon.
-   @gORDER                @nOrdenar algu�m encantado a fazer algo.
-   @gPRACTICE             @nPara mostrar suas magias e pratic�-las.
-   @gSPELL                @nMostrar todas as magias que voc� pode vir a ter.
-   @gVISIBLE              @nPara cancelar o efeito da magia 'invisibility'.
+   &gCAST                 &nLan�ar magias sobre algu�m ou algo.
+   &gNOSUMMON             &nPermitir a convoca��o pela magia summon.
+   &gORDER                &nOrdenar algu�m encantado a fazer algo.
+   &gPRACTICE             &nPara mostrar suas magias e pratic�-las.
+   &gSPELL                &nMostrar todas as magias que voc� pode vir a ter.
+   &gVISIBLE              &nPara cancelar o efeito da magia 'invisibility'.
 
    As seguintes magias est�o documentadas no VitaliaMUD:
 Para obter ajuda para uma magia, digite HELP MAGIA (nome da magia).
 
-   @WMagias de cura@n                        @WMagias de protecao@n
+   &WMagias de cura&n                        &WMagias de protecao&n
    [ -  Cle  -   - ] AID                 [Mag Cle  -   - ] ARMOR
    [ -  Cle  -   - ] CURE BLIND          [Mag Cle  -   - ] IMPROVED ARMOR
    [ -  Cle  -   - ] CURE CRITIC         [ -  Cle  -   - ] PROTECTION FROM EVIL
@@ -32,7 +32,7 @@ Para obter ajuda para uma magia, digite HELP MAGIA (nome da magia).
    [ -   -  Dru  - ] SKIN LIKE ROCK      [ -   -   -  Brd] SOUNDBARRIER
    [ -   -  Dru  - ] SKIN LIKE STEEL
 
-   @WMagias de ataque@n                      @WMagias de afetamento@n
+   &WMagias de ataque&n                      &WMagias de afetamento&n
    [Mag  -   -  Brd] MAGIC MISSILE       [ -  Cle  -   - ] BLESS
    [Mag  -   -   - ] CHILL TOUCH         [Mag Cle  -   - ] BLINDNESS
    [Mag  -   -   - ] BURNING HANDS       [Mag Cle Dru  - ] BREATH
@@ -44,34 +44,34 @@ Para obter ajuda para uma magia, digite HELP MAGIA (nome da magia).
    [Mag  -   -   - ] CURSE               [Mag  -   -   - ] STRENGTH
    [Mag  -   -   - ] FIREBALL            [Mag Cle Dru  - ] WATERWALK
    [Mag  -   -   - ] FIRESHIELD
-   [Mag  -   -   - ] DISINTEGRATE            @WMagias sobrenaturais@n
+   [Mag  -   -   - ] DISINTEGRATE            &WMagias sobrenaturais&n
    [Mag Cle  -   - ] POISON              [ -  Cle  -   - ] RAISE DEAD
    [ -  Cle Dru  - ] EARTHQUAKE          [ -  Cle  -   - ] RESSURECT
    [ -  Cle  -   - ] DISPEL EVIL         [ -  Cle  -   - ] TALK WITH DEAD
    [ -  Cle  -   - ] DISPEL GOOD
-   [ -  Cle  -   - ] CALL LIGHTNING          @WMagias de grupo@n
+   [ -  Cle  -   - ] CALL LIGHTNING          &WMagias de grupo&n
    [ -  Cle  -   - ] HARM                [ -  Cle  -   - ] GROUP HEAL
    [ -   -  Dru  - ] BURST OF FLAME      [ -  Cle  -   - ] GROUP ARMOR
    [ -   -  Dru  - ] BURST OF FIRE       [ -   -   -   - ] GROUP RECALL
    [ -   -  Dru  - ] IGNITE
-   [ -   -  Dru  - ] CASCADE OF HAIL         @WMagias de enfeiticamento@n
+   [ -   -  Dru  - ] CASCADE OF HAIL         &WMagias de enfeiticamento&n
    [ -   -  Dru  - ] FURY OF AIR         [Mag Cle Dru  - ] CHARM PERSON
    [ -   -  Dru  - ] LIGHTNING BLAST     [ -   -   -   - ] VENTRILOQUATE
    [ -   -  Dru  - ] THISTLECOAT         [ -   -  Dru  - ] STINGING SWARM
    [ -   -  Dru  - ] STINGING SWARM
    [ -   -   -  Brd] VOICE EXPLOSION
 
-   @WMagias de criacao@n                     @WMagias de invoca��o@n
+   &WMagias de criacao&n                     &WMagias de invoca��o&n
    [ -  Cle  -   - ] CREATE FOOD         [ -   -   -   - ] ANIMATE DEAD
    [ -  Cle  -   - ] CREATE WATER        [ -   -   -   - ] CLONE
    [Mag  -   -   - ] PORTAL              [ -   -  Dru  - ] EVOKE CROW
                                          [ -   -  Dru  - ] EVOKE WOLF
-   @WMagias de transporte@n                  [ -   -  Dru  - ] EVOKE BEAR
+   &WMagias de transporte&n                  [ -   -  Dru  - ] EVOKE BEAR
    [ -   -   -   - ] TELEPORT            [ -   -  Dru  - ] EVOKE LION
    [Mag Cle Dru  - ] WORD OF RECALL
    [Mag Cle  -   - ] SUMMON
 
-   @WMagias de sensibilidade@n               @WMagias de controle da natureza@n
+   &WMagias de sensibilidade&n               &WMagias de controle da natureza&n
    [ -  Cle  -   - ] DETECT ALIGN        [ -  Cle Dru  - ] CONTROL WEATHER
    [Mag Cle  -   - ] DETECT INVIS        [ -   -  Dru  - ] DANCE OF FIREFLIES
    [Mag  -   -   - ] DETECT MAGIC        [ -   -  Dru  - ] STINGING SWARM
@@ -84,7 +84,7 @@ Para obter ajuda para uma magia, digite HELP MAGIA (nome da magia).
    Note que, para as magias de prote��o, afetamento e sensibilidade, h� um
 limite de dura��o de 24 horas-mud para cada lan�amento, e 168 horas-mud no
 total da dura��o.
-#0
+#
 CAST
 
 Uso: cast '<nome da magia>' [alvo]
@@ -106,7 +106,7 @@ Veja tamb�m a ajuda para cada magia, por exemplo:
   > help magia cure light
   > help magia burning hands
   > help magia energy drain
-#0
+#
 NOSUMMON
 
 Uso: nosummon
@@ -121,7 +121,7 @@ para desligar a prote��o do "summon".  Voc� depois pode digitar NOSUMMON
 para voltar a ter tal prote��o.
 
 Veja tamb�m: SUMMON, TOGGLE
-#0
+#
 VISIBLE
 
 Uso: visible
@@ -130,7 +130,7 @@ Uso: visible
 efeito da magia 'invisibility', antes que a dura��o da magia acabe.
 
 Veja tamb�m: INVISIBILITY
-#0
+#
 "MAGIA ARMOR"
 
 Uso        : cast 'armor' <alvo>
@@ -141,7 +141,7 @@ N�vel      : Mago N�vel 3, Cl�rigo N�vel 1.
 A magia armor melhora o AC do alvo em 20.
 
 Veja Tamb�m: "AC"
-#0
+#
 "MAGIA BLESS"
 
 Uso        : cast 'bless' <alvo | arma>
@@ -156,7 +156,7 @@ ponto adicional ser� aplicado.
 Bless em armas aumenta permanentemente o hitroll em 2. Ela � apenas
 poss�vel em armas que sejam !EVIL, e a arma n�o poder� pesar
 mais que 5 libras por n�vel do cl�rigo.
-#0
+#
 "MAGIA BLINDNESS"
 
 Uso        : cast 'blindness' <alvo>
@@ -168,7 +168,7 @@ Blindness deixa o alvo cego caso ele falhe em um teste de resist�ncia.
 Um alvo cego tera uma penalidade de -4 no Hitroll e AC.
 
 Veja Tamb�m: "AC"
-#0
+#
 "MAGIA BURNING HANDS"
 
 Uso        : cast 'burning hands' <alvo>
@@ -181,7 +181,7 @@ Com essa magia o mago cria chamas em suas m�os, lan�ando-as no inimigo.
 Ela e mais poderosa que chill touch.
 
 Veja Tamb�m: "CHILL TOUCH"
-#0
+#
 "MAGIA CALL LIGHTNING"
 
 Uso        : cast 'call lightning' <alvo>
@@ -195,7 +195,7 @@ Essa magia usara a for�a da natureza para atingir o alvo. Somente
 chuvoso ou pior.
 
 Veja Tamb�m: "CONTROL WEATHER", "WEATHER"
-#0
+#
 "MAGIA CHARM PERSON"
 
 Uso        : cast 'charm person' <alvo>
@@ -215,7 +215,7 @@ Se o seu alvo for outro jogador e este estiver com a prote��o de
 summon (nosummon) ativada, n�o ser� poss�vel encant�-lo.
 
 Veja Tamb�m: "FOLLOW", "ORDER", "NOSUMMON"
-#0
+#
 "MAGIA CHILL TOUCH"
 
 Uso        : cast 'chill touch' <alvo>
@@ -229,7 +229,7 @@ O alvo que n�o passar em um teste de resist�ncia
 perder� um ponto de for�a.
 
 Veja Tamb�m: "MAGIC MISSILE"
-#0
+#
 "MAGIA COLOR SPRAY"
 
 Uso        : cast 'color spray' <alvo>
@@ -241,7 +241,7 @@ Resist�ncia: Contra magia para metade do dano
 Esta magia � mais poderosa que lightning bolt.
 
 Veja Tamb�m: "LIGHTNING BOLT"
-#0
+#
 "MAGIA CONTROL WEATHER"
 
 Uso        : cast 'control weather' <'better' | 'worse'>
@@ -254,7 +254,7 @@ Esta magia muda as condi�oes clim�ticas atuais.
 Exemplo:
 
   > cast 'control weather' worse
-#0
+#
 "MAGIA CREATE FOOD"
 
 Uso        : cast 'create food'
@@ -266,7 +266,7 @@ Com essa magia um cl�rigo cria, instantaneamente, um p�o de viagem,
 enquanto um druida cria morangos silvestres.
 
 Veja Tamb�m: "MAGIA CREATE WATER", "MAGIA CREATE NECTAR"
-#0
+#
 "MAGIA CREATE WATER"
 
 Uso        : cast 'create water' <recipiente>
@@ -282,7 +282,7 @@ ser�o preenchidos normalmente.
 O dobro de �gua ser� criado se o clima estiver chuvoso (ou pior).
 
 Veja Tamb�m: "MAGIA CREATE FOOD", "MAGIA CREATE NECTAR"
-#0
+#
 "MAGIA CURE BLIND"
 
 Uso        : cast 'cure blind' <alvo>
@@ -292,7 +292,7 @@ N�vel      : Cl�rigo N�vel 5
 
 Essa magia cura quem estiver sendo afetado pela magia "blindness",
 mas n�o pode remover cegueira causada por itens amaldi�oados.
-#0
+#
 "MAGIA CURE CRITIC"
 
 Uso        : cast 'cure critic' <alvo>
@@ -301,7 +301,7 @@ Dura��o    : Instant�nea
 N�vel      : Cl�rigo N�vel 14
 
 Essa magia cura 3d8+3 pontos de vida.
-#0
+#
 "MAGIA CURE LIGHT"
 
 Uso        : cast 'cure light' <alvo>
@@ -310,7 +310,7 @@ Dura��o    : Instant�nea
 N�vel      : Cl�rigo N�vel 1
 
 Cura ferimentos leves.
-#0
+#
 "MAGIA CURSE"
 
 Uso        : cast 'curse' <alvo | objeto>
@@ -324,7 +324,7 @@ o damroll do alvo em um ponto cada 50 n�veis de quem lan�ou.
 Quando lan�ada em objetos, este n�o poder� mais ser removido.
 
 Veja tamb�m: "MAGIA REMOVE CURSE"
-#0
+#
 "MAGIA DETECT ALIGNMENT"
 
 Uso        : cast 'detect alignment'
@@ -336,7 +336,7 @@ Permite que se veja o alinhamento de todos que est�o a sua volta.
 Os maus (evil) ter�o uma aura vermelha e os bons (good) uma aura azul.
 
 Veja Tamb�m: "DETECT INVISIBILITY"
-#0
+#
 "MAGIA DETECT INVISIBILITY"
 
 Uso        : cast 'detect invisibility' [somente em si mesmo]
@@ -345,7 +345,7 @@ Dura��o    : 12 Horas + N�vel/4
 N�vel      : Mago N�vel 2, Cl�rigo N�vel 8
 
 Esta magia habilita voc� a enxergar pessoas e objetos invis�veis.
-#0
+#
 "MAGIA DETECT MAGIC"
 
 Uso        : cast 'detect magic' [somente em si mesmo]
@@ -354,7 +354,7 @@ Dura��o    : 12 Horas + N�vel
 N�vel      : Mago N�vel 2
 
 Essa magia permite que voc� veja as auras de objetos m�gicos.
-#0
+#
 "MAGIA DETECT POISON"
 
 Uso        : cast 'detect poison' <alvo | comida | bebida>
@@ -363,7 +363,7 @@ Dura��o    : Instant�nea
 N�vel      : Mago N�vel 16, Cl�rigo N�vel 4, Druida N�vel 4
 
 Permite a voc� ver se uma pessoa, alimento ou bebida est�o envenenados.
-#0
+#
 "MAGIA DISPEL EVIL"
 
 Uso        : cast 'dispel evil' <alvo>
@@ -379,7 +379,7 @@ Se o alvo tiver n�vel maior que o seu, a magia causara
 (seu n�vel)d4 de dano, com teste de resist�ncia p/ metade do dano.
 
 Veja Tamb�m: "DISPEL GOOD"
-#0
+#
 "MAGIA DISPEL GOOD"
 
 Uso        : cast 'dispel good' <alvo>
@@ -396,7 +396,7 @@ Se o alvo tiver n�vel maior que o seu, a magia causara
 (seu n�vel)d4 de dano, com teste de resist�ncia p/ metade do dano.
 
 Veja Tamb�m: "DISPEL EVIL"
-#0
+#
 "MAGIA EARTHQUAKE"
 
 Uso        : cast 'earthquake'
@@ -407,7 +407,7 @@ Resist�ncia: -
 
 Essa magia causa dano em todos que estiverem na sala menos
 em quem a lan�ou, causando 1d8+(n�vel) de dano.
-#0
+#
 "MAGIA ENCHANT WEAPON"
 
 Uso        : cast 'enchant weapon' <arma>
@@ -432,7 +432,7 @@ O encantamento ir� afetar a arma da seguinte forma:
     55..59     +4        +4        30
     60..64     +5        +4        40
     65+        +5        +5        50
-#0
+#
 "MAGIA ENERGY DRAIN"
 
 Uso        : cast 'energy drain' <alvo>
@@ -446,7 +446,7 @@ de resist�ncia far� a v�tima perder mais de 40,000 pontos de XP.
 Voc� ganhar� 1/4 desse XP.
 
 Fique atento pois essa magia diminui consideravelmente seu alinhamento.
-#0
+#
 "MAGIA FIREBALL"
 
 Uso        : cast 'fireball' <alvo>
@@ -459,7 +459,7 @@ Essa magia � mais poderosa que color spray. Com ela o mago cria
 uma bola de fogo, causando bons estragos no inimigo.
 
 Veja Tamb�m: "COLOR SPRAY"
-#0
+#
 "MAGIA HARM"
 
 Uso        : cast 'harm' <alvo>
@@ -471,7 +471,7 @@ Resist�ncia: Contra magia para metade do dano
 Essa magia retira todos menos 1d4 pontos de vida do alvo.
 O n�mero m�ximo que pode ser retirado � 100.  N�o � poss�vel
 matar usando essa magia.
-#0
+#
 "MAGIA HEAL"
 
 Uso        : cast 'heal' <alvo>
@@ -484,7 +484,7 @@ m�ximo 100 pontos de vida podem ser recuperados. Uma pessoa afetada
 por blindness tamb�m ter� essa magia removida.
 
 Veja Tamb�m: "CURE BLINDNESS"
-#0
+#
 "MAGIA INFRAVISION"
 
 Uso        : cast 'infravision' [somente em si mesmo]
@@ -495,7 +495,7 @@ N�vel      : Mago N�vel 4, Cl�rigo N�vel 10
 Habilita ao jogador enxergar no escuro, e ver claramente todas as sa�das.
 
 Veja Tamb�m: "DETECT INVISIBILITY", "DANCE OF FIREFLIES"
-#0
+#
 "MAGIA INVISIBILITY"
 
 Uso        : cast 'invisibility' <jogador | objeto>
@@ -509,7 +509,7 @@ exceto para aqueles que tem "detect invisibility".
 Se voc� atacar ou for atacado invis�vel, voltar� imediatamente a ser vis�vel.
 
 Veja Tamb�m: "DETECT INVISIBILITY"
-#0
+#
 "MAGIA LIGHTNING BOLT"
 
 Uso        : cast 'lightning bolt' <alvo>
@@ -521,7 +521,7 @@ Resist�ncia: Contra magia para metade do dano
 Essa magia � mais poderosa que shocking grasp.
 
 Veja Tamb�m: "SHOCKING GRASP"
-#0
+#
 "MAGIA LOCATE OBJECT"
 
 Uso        : cast 'locate object' <objeto>
@@ -534,7 +534,7 @@ nome de quem est� usando.  Se existir mais de um objeto com
 o mesmo nome, voc� receber� uma lista com v�rios.
 O n�mero m�ximo que voc� poder� visualizar � o seu n�vel
 dividido por dois.
-#0
+#
 "MAGIA MAGIC MISSILE"
 
 Uso        : cast 'magic missile' <alvo>
@@ -544,7 +544,7 @@ N�vel      : Mago N�vel 1, Bardo N�vel 2
 Resist�ncia: Contra magia para metade do dano
 
    Lan�a um m�ssil magico das suas m�os para o alvo que voc� escolheu.
-#0
+#
 "MAGIA POISON"
 
 Uso        : cast 'poison' <alvo | comida | bebida>
@@ -559,7 +559,7 @@ bebendo coisas envenenadas far� com que voc� se envenene tamb�m.
 pontos de vida.
 
 Veja Tamb�m: "REMOVE POISON", "DETECT POISON"
-#0
+#
 "MAGIA PORTAL"
 Uso        : cast 'portal' <alvo>
 Acumulativa: -
@@ -579,7 +579,7 @@ sala diferente do destino do portal.
    OBS: Apenas jogadores com no m�ximo 5 n�veis de diferen�a abaixo do n�vel
 do mago que lan�ou a magia poder�o utilizar o portal.  Jogadores com n�vel
 igual ou superior ao do mago tamb�m poder�o utilizar o portal.
-#0
+#
 "MAGIA PROTECTION FROM EVIL"
 
 Uso        : cast 'protection from evil' [somente em voc� mesmo]
@@ -589,7 +589,7 @@ N�vel      : Cl�rigo N�vel 11
 
    O personagem que for protegido por essa magia, quando estiver recebendo
 dano de um oponente mal�gno, sofrer� apenas 75% do dano real.
-#0
+#
 "MAGIA REMOVE CURSE"
 
 Uso        : cast 'remove curse' <alvo | objeto>
@@ -598,7 +598,7 @@ Dura��o    : Instant�nea
 N�vel      : Cl�rigo N�vel 34
 
    Remove maldi��es em qualquer alvo ou objeto.
-#0
+#
 "MAGIA REMOVE POISON"
 
 Uso        : cast 'remove poison' <alvo | comida | bebida>
@@ -609,7 +609,7 @@ N�vel      : Cl�rigo N�vel 18, Druida N�vel 4
 Remover� o veneno de uma pessoa ou um objeto.
 
 Veja Tamb�m: "POISON"
-#0
+#
 "MAGIA SANCTUARY"
 
 Uso        : cast 'sanctuary' <alvo>
@@ -621,7 +621,7 @@ Quando protegido pelo santu�rio voc� sofrer� apenas metade
 do dano que sofreria normalmente.
 
 Veja Tamb�m: "ARMOR", "BLESS"
-#0
+#
 "MAGIA SHOCKING GRASP"
 
 Uso        : cast 'shocking grasp' <alvo>
@@ -633,7 +633,7 @@ Resist�ncia: Contra magia para metade do dano
 Essa magia � mais poderosa que burning hands.
 
 Veja Tamb�m: "BURNING HANDS"
-#0
+#
 "MAGIA SENSE LIFE"
 
 Uso        : cast 'sense life'
@@ -644,7 +644,7 @@ N�vel      : Cl�rigo N�vel 15, Mago N�vel 28, Druida N�vel 29
 Com essa magia voc� poder� ver pessoas/monstros usando hide.
 
 Veja Tamb�m: "HIDE"
-#0
+#
 "MAGIA STRENGTH"
 
 Uso        : cast 'strength' <alvo>
@@ -654,7 +654,7 @@ N�vel      : Mago N�vel 8
 
 O alvo ganha 1 ponto de for�a a cada magia (2 pontos se o n�vel
 do mago for maior que 50). A for�a m�xima que pode ser obtida � 18/100.
-#0
+#
 "MAGIA SUMMON"
 
 Uso        : cast 'summon' <alvo>
@@ -669,7 +669,7 @@ transferir um monstro, ele far� um teste de resist�ncia.
 Alguns monstros s�o agressivos e n�o podem ser transportados.
 
 Veja Tamb�m: "NOSUMMON"
-#0
+#
 "MAGIA VENTRILOQUATE"
 
 Uso        : cast 'ventriloquate' <alvo | objeto> <texto>
@@ -684,7 +684,7 @@ a magia far� a pessoa a dizer o que voc� quiser.
 Exemplo:
 
   > cast 'ventriloquate' Riker Eu ganhei as Mesnadas de hoje, uhu!
-#0
+#
 "MAGIA WORD OF RECALL"
 
 Uso        : cast 'word of recall' <alvo>
@@ -693,7 +693,7 @@ Dura��o    : Instant�nea
 N�vel      : Cl�rigo N�vel 18, Mago N�vel 65, Druida N�vel 37
 
 O alvo ser� enviado de volta para a cidade natal do jogador.
-#0
+#
 "MAGIA TALK WITH DEAD"
 
 Uso        : cast 'talk with dead'
@@ -706,7 +706,7 @@ RESSURECT em algu�m, ter� que usar primeiro TALK WITH DEAD, para poder
 ver o jogador morto.
 
 Veja Tamb�m: "RAISE DEAD", "RESSURRECT"
-#0
+#
 "MAGIA TELEPORT"
 
 Uso        : cast 'teleport' <v�tima>
@@ -716,7 +716,7 @@ N�vel      : -
 
    Transporta a v�tima da magia para uma sala qualquer do jogo.  N�o h� como
 definir qual ser� o destino.
-#0
+#
 "MAGIA RAISE DEAD"
 
 Uso        : cast 'raise dead' <corpo>
@@ -733,7 +733,7 @@ Se o jogador possuir 3 pontos ou menos de constitui��o, ele n�o
 poder� ser revivido.
 
 Veja Tamb�m: "RESSURRECT", "TALK WITH DEAD"
-#0
+#
 "MAGIA PARALYSE"
 
 Uso        : cast 'paralyse' <alvo>
@@ -746,7 +746,7 @@ Faz com que o alvo afetado n�o possa se mover durante a dura��o da magia.
 Note que essa magia n�o paralisa totalmente o alvo, apenas
 faz com que ele n�o consiga andar. Ainda � possivel que ele
 faca outras coisas, como lutar.
-#0
+#
 "MAGIA RESSURECT"
 
 Uso        : cast 'ressurect' <alvo | corpo>
@@ -765,7 +765,7 @@ mesma sala que voc� estiver, e o esp�rito ser� transferido para
 o novo corpo.
 
 Veja Tamb�m: "RAISE DEAD", "TALK WITH DEAD"
-#0
+#
 "MAGIA STONESKIN"
 
 Uso        : cast 'stoneskin' <alvo>
@@ -780,7 +780,7 @@ batalha, ele perde 1 ponto de pedra, mas n�o leva dano algum. Quando
 os pontos acabam, o jogador volta a sofrer dano normalmente.
 
 S� se pode acumular um m�ximo de 168 pontos de stoneskin.
-#0
+#
 "MAGIA IDENTIFY"
 
 Uso        : cast 'identify' <alvo>
@@ -792,7 +792,7 @@ D� ao jogador v�rias informa��es sobre um item ou jogador.
 
 Veja Tamb�m: "MAGIA ENCHANT WEAPON" "MAGIA DETECT MAGIC"
              "MAGIA DETECT INVISIBILITY"
-#0
+#
 "MAGIA SLEEP"
 
 Uso        : cast 'sleep' <alvo>
@@ -805,7 +805,7 @@ acordar por meios normais. Se ele for atingido ou o efeito da magia
 acabar, o alvo acorda.
 
 Veja tamb�m: "WAKE"
-#0
+#
 "MAGIA VAMPIRIC TOUCH"
 
 Uso        : cast 'vampiric touch' <alvo>
@@ -815,7 +815,7 @@ N�vel      : Mago N�vel 15
 
 O mago ir� drenar pontos de vida do alvo (HP). O dano � de 1d6 para cada
 dois n�veis acima de 10, para um m�ximo de 6d6.
-#0
+#
 "MAGIA FIRESHIELD"
 
 Uso        : cast 'fireshield' <alvo>
@@ -830,7 +830,7 @@ em 5 pontos. Se dois oponentes se enfrentarem com fireshield,
 o dano � anulado para ambas as partes.
 
 Veja tamb�m: "THISTLECOAT"
-#0
+#
 "MAGIA DISINTEGRATE"
 
 Uso        : cast 'disintegrate' <alvo>
@@ -845,7 +845,7 @@ Se o alvo possuir mais que 100, um maximo de 100 pontos de vida ser�o
 desintegrados para cada vez que a magia for lan�ada. Se o alvo passar
 em um teste de resist�ncia, a v�tima perde apenas metade do seu total
 de pontos de vida, para um m�ximo de 100.
-#0
+#
 "MAGIA FLY"
 
 Uso        : cast 'fly' <alvo>
@@ -857,7 +857,7 @@ O alvo afetado por esta magia ganha a habilidade de voar, como tamb�m
 um bonus de +1 em sua destreza, enquanto durar a magia.
 
 Veja Tamb�m : "FLY", "NOFLY"
-#0
+#
 "MAGIA WATERWALK"
 
 Uso        : cast 'waterwalk' <alvo>
@@ -867,7 +867,7 @@ N�vel      : Mago N�vel 70, Cl�rigo N�vel 40, Druida N�vel 43
 
 Com essa magia voc� poder� mover-se livremente na agua, n�o necessitando
 de nada como canoas, botes, etc.
-#0
+#
 "MAGIA AID"
 
 Uso        : cast 'aid' <alvo>
@@ -878,7 +878,7 @@ N�vel      : Cl�rigo N�vel 45
 Essa poderosa magia alem de curar, aumenta temporariamente seus pontos
 de vida. Ela cura 50% mais que a magia heal, al�m de adicionar ao HP do
 alvo 1/6 do total de HP que ele possui, temporariamente.
-#0
+#
 "MAGIA BREATH"
 
 Uso        : cast 'breath' <alvo>
@@ -888,7 +888,7 @@ N�vel      : Mago N�vel 7, Cl�rigo N�vel 6, Druida N�vel 6
 
 Com essa magia voc� conseguir� manter a sua respira��o, mesmo em lugares
 in�spitos, como em montanhas altas e no fundo de um rio.
-#0
+#
 "MAGIA IMPROVED ARMOR"
 
 Uso        : cast 'improved armor' <alvo>
@@ -901,7 +901,7 @@ O AC que ela diminui varia com o n�vel de quem a lancou, indo de 30 a 80 AC.
 
 OBS: Os efeitos de "armor", "improved armor" e qualquer uma das "skin like"s
 n�o s�o acumulativos.
-#0
+#
 "MAGIA GROUP ARMOR"
 
 Uso        : cast 'group armor'
@@ -912,7 +912,7 @@ N�vel      : Cl�rigo N�vel 13
 Essa magia possui o mesmo efeito de armor, com a diferen�a de que quando
 lan�ada n�o afeta somente um alvo, mas todos os jogadores que estiverem
 no seu grupo.
-#0
+#
 "MAGIA GROUP HEAL"
 
 Uso        : cast 'group heal'
@@ -923,7 +923,7 @@ N�vel      : Cl�rigo N�vel 32
 Essa magia possui o mesmo efeito de heal, com a diferen�a de que quando
 lancada n�o afeta somente um alvo, mas todos os jogadores que estiverem
 no seu grupo.
-#0
+#
 "MAGIA BURST OF FLAME"
 
 Uso        : cast 'burst of flame' <alvo>
@@ -933,7 +933,7 @@ N�vel      : Druida N�vel 1
 
 As labaredas de uma explos�o criada por voc� s�o usadas para queimar a
 carne do oponente.
-#0
+#
 "MAGIA SKIN LIKE WOOD"
 
 Uso        : cast 'skin like wood'
@@ -945,7 +945,7 @@ Lan�ada somente sobre o pr�prio druida, essa magia de prote��o deixa sua
 pele com a resist�ncia da madeira. Diminui seu AC em 15 pontos.
 
 Veja tamb�m : "SKIN LIKE ROCK", "SKIN LIKE STEEL", "SKIN LIKE DIAMOND"
-#0
+#
 "MAGIA SKIN LIKE ROCK"
 
 Uso        : cast 'skin like rock'
@@ -960,7 +960,7 @@ Tamb�m recupera 4d8 pontos de sa�de do alvo.
 N�o � acumulada com magias como ARMOR e outros tipos de SKIN LIKEs
 
 Veja tamb�m : "SKIN LIKE WOOD", "SKIN LIKE STEEL", "SKIN LIKE DIAMOND"
-#0
+#
 "MAGIA SKIN LIKE STEEL"
 
 Uso        : cast 'skin like steel'
@@ -976,7 +976,7 @@ N�o � acumulada com magias como ARMOR e outros tipos de SKIN LIKEs.
 
 Veja tamb�m : "SKIN LIKE WOOD", "SKIN LIKE ROCK", "SKIN LIKE DIAMOND"
 
-#0
+#
 "MAGIA SKIN LIKE DIAMOND"
 
 Uso        : cast 'skin like diamond'
@@ -990,7 +990,7 @@ Diminui seu AC em at� 90 pontos ao tornar sua pele resistente como diamante.
 N�o � acumulada com magias como IMPROVED ARMOR e outros tipos de SKIN LIKEs.
 
 Veja tamb�m : "SKIN LIKE WOOD", "SKIN LIKE ROCK", "SKIN LIKE STEEL"
-#0
+#
 "MAGIA BURST OF FIRE"
 
 Uso        : cast 'burst of fire' <alvo>
@@ -1000,7 +1000,7 @@ N�vel      : Druida N�vel 5
 
 O fogo de uma explos�o criada por voc� � usado para queimar a
 carne do oponente.
-#0
+#
 "MAGIA FURY OF AIR"
 
 Uso        : cast 'fury of air' <alvo>
@@ -1013,7 +1013,7 @@ impossibilitando-o de jogar por 2 turnos. O uso dessa magia requere muita
 energia por parte de quem a lan�a, portanto deve ser usada com sabedoria.
 
 Veja tamb�m: BASH
-#0
+#
 "MAGIA IGNITE"
 
 Uso        : cast 'ignite' <alvo>
@@ -1022,7 +1022,7 @@ Dura��o    : Instant�nea
 N�vel      : Druida N�vel 9
 
 Usando essa magia, voc� incendeia a carne do oponente.
-#0
+#
 "MAGIA INVIGOR"
 
 Uso        : cast 'invigor' <alvo>
@@ -1031,7 +1031,7 @@ Dura��o    : Instant�nea
 N�vel      : Druida N�vel 13
 
 Essa magia recupera 8+1d8 pontos de movimento.
-#0
+#
 "MAGIA REGENERATION"
 
 Uso        : cast 'regeneration' <alvo>
@@ -1041,7 +1041,7 @@ N�vel      : Druida N�vel 40
 
 Essa � uma poderosa magia de cura. Recupera 6d8 pontos de vida e
 10+2d6 pontos de movimento.
-#0
+#
 "MAGIA CREATE NECTAR"
 
 Uso        : cast 'create nectar' <recipiente>
@@ -1053,7 +1053,7 @@ Voc� ter� resultados desastrosos se usar essa magia
 em um recipiente que j� tenha outro l�quido.
 Recipientes vazios ou parcialmente cheios de n�ctar
 ser�o preenchidos normalmente.
-#0
+#
 "MAGIA EVOKE CROW"
 
 Uso        : cast 'evoke crow'
@@ -1067,7 +1067,7 @@ a seu grupo e receber ordens.
 Sua chance de ter sucesso na evoca��o � de 50%.
 
 Veja tamb�m: "EVOKE WOLF", "EVOKE BEAR", "EVOKE LION", ORDER
-#0
+#
 "MAGIA EVOKE WOLF"
 
 Uso        : cast 'evoke wolf'
@@ -1081,7 +1081,7 @@ a seu grupo e receber ordens.
 Sua chance de ter sucesso na evoca��o � de 50%.
 
 Veja tamb�m: "EVOKE CROW", "EVOKE BEAR", "EVOKE LION", ORDER
-#0
+#
 "MAGIA EVOKE BEAR"
 
 Uso        : cast 'evoke bear'
@@ -1095,7 +1095,7 @@ a seu grupo e receber ordens.
 Sua chance de ter sucesso na evoca��o � de 50%.
 
 Veja tamb�m: "EVOKE CROW", "EVOKE WOLF", "EVOKE LION", ORDER
-#0
+#
 "MAGIA EVOKE LION"
 
 Uso        : cast 'evoke lion'
@@ -1109,7 +1109,7 @@ a seu grupo e receber ordens.
 Sua chance de ter sucesso na evoca��o � de 50%.
 
 Veja tamb�m: "EVOKE CROW", "EVOKE WOLF", "EVOKE BEAR", ORDER
-#0
+#
 "MAGIA STINGING SWARM"
 
 Uso        : cast 'stinging swarm' <alvo>
@@ -1119,7 +1119,7 @@ N�vel      : Druida N�vel 25
 
 Essa magia convoca um enorme enxame de abelhas que retiram
 pontos de vida com suas in�meras picadas.
-#0
+#
 "MAGIA DANCE OF FIREFLIES"
 
 Uso        : cast 'dance of fireflies' <alvo>
@@ -1132,7 +1132,7 @@ A pessoa ficar� rodeada pelos pequenos insetos, sendo poss�vel
 v�-los quando se estiver na mesma sala.
 
 Veja tamb�m: "INFRAVISION"
-#0
+#
 "MAGIA THISTLECOAT"
 
 Uso        : cast 'thistlecoat' <alvo>
@@ -1146,7 +1146,7 @@ passar por um teste de resist�ncia, sofrer� um ter�o do dano.
 Ele tamb�m melhora o AC em 3 pontos.
 
 Veja tamb�m: "FIRESHIELD"
-#0
+#
 "MAGIA CASCADE OF HAIL"
 
 Uso        : cast 'cascade of hail' <alvo>
@@ -1156,7 +1156,7 @@ N�vel      : Druida N�vel 17
 
 Essa magia de ataque cria tr�s ondas de granizo que atingem a todos
 em uma sala. Deve-se ter cuidado ao us�-la.
-#0
+#
 "MAGIA LIGHTNING BLAST"
 
 Uso        : cast 'lightning blast' <alvo>
@@ -1168,7 +1168,7 @@ N�vel      : Druida N�vel 80
 for atingido pela descarga de raios, n�o passando pelo teste
 de resist�ncia, pode perder at� 200 pontos de vida.
 Passando pelo teste, perder� at� cerca de 100 pontos de vida.
-#0
+#
 "MAGIA MINOR HEALING"
 
 Uso        : cast 'minor healing' <alvo>
@@ -1177,7 +1177,7 @@ Dura��o    : Instant�nea
 N�vel      : Druida N�vel 15
 
 Essa magia recupera 2+2d8 pontos de vida.
-#0
+#
 "MAGIA SOUNDBARRIER"
 
 Uso        : cast 'soundbarrier' <alvo>
@@ -1190,7 +1190,7 @@ lan�adas diretamente ou por meio de varinhas. Tamb�m melhora o f�lego do
 jogador. Consegue diminuir o AC numa quantidade proporcional ao n�vel do
 alvo, tendo um limite m�ximo de a��o fixo em -70.
 
-#0
+#
 "MAGIA VOICE EXPLOSION"
 
 Uso        : cast 'voice explosion'
@@ -1200,5 +1200,6 @@ N�vel      : Bardo N�vel 23
 
 O som emitido por essa magia atinge a todos da sala, menos aquele que a lan�a,
 causando um dano de (3d6)+n�vel.
-#0
-$~
+#
+$
+~
