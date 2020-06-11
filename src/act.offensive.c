@@ -245,7 +245,7 @@ ACMD(do_backstab)
 		send_to_char(ch, "Como você pretende pegar você mesmo de surpresa?\r\n");
 		return;
 	}
-	if (!CONFIG_PK_ALLOWED && !IS_NPC(opponent))	/* prevent accidental
+	if (!CONFIG_PK_ALLOWED && !IS_NPC(vict))	/* prevent accidental
 													   pkill */
 		act("Use 'murder' se voce realmente deseja atacar $N.", FALSE, ch, 0, opponent, TO_CHAR);
 	if (!GET_EQ(ch, WEAR_WIELD))
