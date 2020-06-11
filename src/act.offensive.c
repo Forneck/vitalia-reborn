@@ -826,9 +826,9 @@ ACMD(do_rescue)
 		return;
 	}
 
-	if ((!CONFIG_PK_ALLOWED && !IS_NPC(temp_ch)))
+	if ((!CONFIG_PK_ALLOWED && !IS_NPC(tmp_ch)))
 	{
-		act("Use 'murder' se você realmente deseja atacar $N.", FALSE, ch, 0, temp_ch, TO_CHAR);
+		act("Use 'murder' se você realmente deseja atacar $N.", FALSE, ch, 0, tmp_ch, TO_CHAR);
 		return;
 	}
 	percent = rand_number(1, 101);	/* 101% is a complete failure */
