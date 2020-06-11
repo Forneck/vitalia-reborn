@@ -2297,7 +2297,7 @@ Veja tamb�m: BAN
 #109
 WIZNET ;
 
-Uso: wiznet [#<n�vel>] [*] <texto>
+Uso: wiznet [#0<n�vel>] [*] <texto>
 
    O canal de comunica��o Imortal.  Atrav�s deste canal os imortais podem
 trocar mensagens entre s�.  O canal � dividido em v�rios n�veis,
@@ -2310,7 +2310,7 @@ Exemplos:
   > ; #105 <texto> - envia a mensagem no n�vel especificado
 
    Pode-se abreviar o n�mero do n�vel para seu �ltimo d�gito significativo.
-Assim, ";#5" tem o mesmo efeito que ";#105".
+Assim, ";#05" tem o mesmo efeito que ";#105".
 
 Veja tamb�m: CHANNEL
 #101
