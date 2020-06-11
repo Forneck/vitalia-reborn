@@ -9,15 +9,8 @@ coloridos que formam uma imagem distinta.
    Para norte h� uma pesada porta de pedra que leva ao cofre do banco.  Ao
 sul voc� v� um port�o.  H� um pequeno aviso aqui.
 ~
-220.1 cdrs 0
-ON banco
-D N
-Para norte h� uma pesada porta de pedra que leva ao cofre do banco.
-~
-porta pedra cofre~
-:n 2 a porta do cofre
-ab -1 22011
-D S
+220 393228 0 0 0 0
+D0
 ~
 ~
 0 -1 3076
@@ -42,19 +35,13 @@ temperatura amena.  Algumas esferas emitem uma boa ilumina��o.  H� algumas
 estantes com gavetas numeradas.
    Para sul h� o Banco de Vit�lia.
 ~
-220.1 cdfrs 0
-D S
+220 393260 0 0 0 0
+D0
 Para sul est� o Banco de Vit�lia.
 ~
 porta pedra cofre~
-:n 2 a porta do cofre
-ab -1 22010
+1 -1 22010
 S
-
-********************************************************************************
-* A Confraria da Fam�lia Daguerreo
-********************************************************************************
-
 #22015
 A Confraria da Fam�lia Daguerreo~
    Voc� est� em um amplo sal�o onde v�rias mesas e cadeiras est�o postas ao
@@ -70,13 +57,8 @@ Ipsen, ber�o do primeiro Daguerreo, e de fatos importantes ocorridos durante
 toda a hist�ria dessa grande fam�lia.  H� uma porta no final do sal�o,
 aproximando-se dela voc� pode ouvir barulhos de poucas pessoas conversando.
 ~
-220.2 dr 0
-ON confraria
-D N
-~
-~
-0 -1 22016
-D S
+220 131080 0 0 0 0
+D0
 ~
 ~
 0 -1 3079
@@ -92,17 +74,12 @@ s�o de cores claras e alegres, e as paredes azuis e brancas.  Se olhar bem,
 parece que um arco-�ris passa pela sala, deixando um rastro de paz e
 harmonia em sua extens�o.
 ~
-220.2 dfr 0
-D S
+220 131112 0 0 0 0
+D0
 ~
 ~
 0 -1 22015
 S
-
-********************************************************************************
-* O Jornal de Vit�lia
-********************************************************************************
-
 #22020
 A Torre do Jornal de Vit�lia~
    Voc� est� na Sede do Jornal de Vit�lia.  Um grande sal�o se apresenta �
@@ -110,13 +87,8 @@ sua frente, com v�rias janelas mostrando toda a cidade de Midgaard.  No
 centro h� um balc�o com um bela recepcionista e um garoto vendendo jornais.
 Na sala acima, subindo uma grande escadaria, voc� ouve um barulho infernal.
 ~
-220.3 dehr 0
-ON jornal
-D U
-~
-~
-0 -1 22021
-D N
+220 131224 0 0 0 0
+D0
 ~
 ~
 0 -1 3080
@@ -134,12 +106,8 @@ percebe que h� uma grande m�quina no centro, sendo manipulada por um
 simp�tico homem.  Subindo as escadas pode-se ouvir v�rias vozes, e
 descendo-as se retorna ao sal�o da Torre.
 ~
-220.3 defr 0
-D U
-~
-~
-0 -1 22022
-D D
+220 131128 0 0 0 0
+D0
 ~
 ~
 0 -1 22020
@@ -151,14 +119,8 @@ forram o ch�o, enquanto mesas de madeira desorganizadas est�o espalhadas
 pela sala.  Ao leste, h� uma porta de carvalho, com algo escrito arranhado.
 Descendo o lance de escadas, voc� volta para a Sala da Imprensa.
 ~
-220.3 der 0
-D E
-A porta de carvalho est� riscada com os dizeres "O editor-chefe fede".
-~
-porta carvalho~
-:n 2 a porta de carvalho
-ab -1 22023
-D D
+220 131096 0 0 0 0
+D0
 ~
 ~
 0 -1 22021
@@ -171,18 +133,12 @@ amarela, em contraste com a verde mesa e v�rias plantas.  Pinturas est�o
 espalhadas pelas paredes, junto com uma tabela de dardos.  A organiza��o da
 sala � incr�vel.  Ao oeste, se retorna � sala da Reda��o.
 ~
-220.3 der 0
-D W
+220 131096 0 0 0 0
+D0
 ~
 porta carvalho~
-:n 2 a porta de carvalho
-ab -1 22022
+1 -1 22022
 S
-
-********************************************************************************
-* Os Jardins de Videl
-********************************************************************************
-
 #22025
 Os Jardins de Videl~
    Voc� acabou de entrar em um jardim absolutamente maravilhoso.  S�o tantas
@@ -193,7 +149,7 @@ pensando na vida e usufruindo de toda essa beleza.  H� uma pequena trilha
 que segue em dire��o sul, que serpenteia todo o jardim e voc� decide
 segui-la, para ver onde esse caminho vai dar.
 ~
-220.4 ce 2
+220 20 0 0 0 2
 D1
 Voc� v� o Grande Campo de Midgaard.
 ~
@@ -212,10 +168,10 @@ criaturas m�gicas e ador�veis, pois, embora voc� n�o as veja, consegue
 sentir suas presen�as suaves e, aparentemente, curiosas.  Um pequenino
 riacho mata a sede de todos os p�ssaros que aqui v�m, em busca de abrigo.
 No fundo do jardim, h� uma pequena cerquinha branca e parece que algu�m
-muito caprichoso, colocou uma delicada &Wplaquinha&n, feita de madeira e toda
+muito caprichoso, colocou uma delicada @Wplaquinha@n, feita de madeira e toda
 enfeitada por flores entalhadas na pr�pria madeira.
 ~
-220.4 ec 2
+220 20 0 0 0 2
 D0
 Que bel�ssimo jardim! T�o bem cuidado que voc� acredita que ali deve ser o lar
 de algu�m muito especial.
@@ -227,23 +183,18 @@ Al�m da cerquinha branca, parece haver um lugar extraordin�riamente bonito.
 O que ser� aquele lugar? Quem ser� o propriet�rio deste oasis?
 ~
 cerquinha~
-:n 2 a cerquinha
-a -1 22027
-E
-cerquinha cerca~
-Uma linda cerquinha branca, feita de madeira.
-~
+1 -1 22027
 E
 placa plaquinha~
   
-    &C"Este � o meu jardim. � aqui que eu trago os meus amigos queridos, os 
+    @C"Este � o meu jardim. � aqui que eu trago os meus amigos queridos, os 
 amigos que acima de tudo, amam a Natureza com a mesma for�a que eu.  Se voc�
 chegou at� aqui e n�o consegue passar, n�o se sinta magoado e aguarde pelo meu
 convite. Se conseguiu entrar, seja Bem-Vindo, eu o recebo com o cora��o aberto
 e um imenso sorriso nos l�bios. Lembre-se por�m de seguir as minhas regras, que
 por sinal s�o bem simples:
  
- &W1- N�o apanhe nenhuma das flores do meu jardim.
+ @W1- N�o apanhe nenhuma das flores do meu jardim.
 
  2- N�o d� nenhuma comida aos p�ssaros que n�o seja adequada.
 
@@ -257,7 +208,11 @@ por sinal s�o bem simples:
     poderes m�gicos.  Elfos, fadas e duendes; s�lfides e ondinas; dr�ades e
     n�iades s�o os moradores desse lugar m�gico. 
  
-    &MVidel Pendragon Daguereo  * &CA Sereia Amiga da Princesa das Aguas *&n
+    @MVidel Pendragon Daguereo  * @CA Sereia Amiga da Princesa das Aguas *@n
+~
+E
+cerquinha cerca~
+Uma linda cerquinha branca, feita de madeira.
 ~
 S
 #22027
@@ -275,24 +230,18 @@ lugar, em verdadeiro oasis.  Uma jovem se aproxima de voc� e o convida para
 fazer parte dessa imensa mesa, repleta da melhor comida que voc� jamais
 provou.  Aproveite!
 ~
-220.4 ecgl 2
+220 2132 0 0 0 2
 D0
 Que bel�ssimo jardim! T�o bem cuidado que voc� acredita que ali deve ser o lar
 de algu�m muito especial.
 ~
 cerquinha~
-:n 2 a cerquinha
-a -1 22026
+1 -1 22026
 E
 cerquinha cerca~
 Uma linda cerquinha branca, feita de madeira.
 ~
 S
-
-********************************************************************************
-* A Caminho da Paz
-********************************************************************************
-
 #22030
 A Sala da Amizade~
    Voc� entra neste ambiente e sabe que est� entre amigos que gostam e acima
@@ -303,18 +252,17 @@ de cima, contudo, voc� n�o consegue dizer com precis�o exatamente de onde.
 Uma doce melodia envolve o ambiente e aos poucos, voc� sente que seu
 esp�rito vai se preenchendo com sentimento de amor e carinho.
 ~
-220.5 cdefgrsu 1
-ON paz
-D9
-Voc� v� uma Pra�a.
-~
-~
-0 -1 3005
+220 1441916 0 0 0 1
 D4
 Voc� v� pequenina sala.
 ~
 ~
 0 -1 22031
+D9
+Voc� v� uma Pra�a.
+~
+~
+0 -1 3005
 S
 #22031
 A Sala dos Conselhos Dados~
@@ -324,28 +272,26 @@ que somos.  Por aqui passaram todos aqueles que procuraram ajuda e
 encontraram.  Lembran�as boas e amargas foram aqui compartilhadas e por
 isso, ela se tornou um verdadeiro santu�rio.  H� apenas um imenso mural
 neste lugar, onde se pode ler a palavra dos que possuem algo dentro de si
-para compartilhar.  Este � um &Rlugar sagrado&n...n�o se esque�a disso.  Suave
+para compartilhar.  Este � um @Rlugar sagrado@n...n�o se esque�a disso.  Suave
 claridade vinda tanto do norte, quanto do sul, desperta a sua aten��o e uma
 onda de energia positiva o envolve, despertando em voc� fraternidade e amor.
 ~
-220.5 cdefgrsu 1
+220 1441916 0 0 0 1
+D0
+Suave luz azulada atrai a sua aten��o.
+~
+porta~
+1 -1 22033
+D2
+Suave luz em tom r�seo atrai a sua aten��o.
+~
+porta~
+1 -1 22032
 D5
 Voc� v� uma linda sala.
 ~
 ~
 0 -1 22030
-D2
-Suave luz em tom r�seo atrai a sua aten��o.
-~
-porta~
-:n 2
-a -1 22032
-D0
-Suave luz azulada atrai a sua aten��o.
-~
-porta~
-:n 2
-a -1 22033
 S
 #22032
 A Sala dos Sentimentos Puros~
@@ -357,25 +303,22 @@ amor.  � como se todas as suas palavras pudessem se transformar em brilho e
 estivessem iluminando este lugar e a voc� tamb�m.  E voc� ent�o tem a
 certeza plena de que n�o est� s� neste mundo e que pode enfim sorrir.
 ~
-220.5 cdefgrsu 1
+220 1441916 0 0 0 1
 D0
 Voc� pode ver uma sala aconchegante e quase et�rea.
 ~
 porta~
-:n 2
-a -1 22031
-D4
-O doce ru�do de �gua corrente parece vir daquela dire��o.
-~
-porta~
-:n 2
-a -1 22034
+1 -1 22031
 D1
 Um pequeno e s�brio aposento pode ser visto.
 ~
 porta~
-:n 2
-a -1 22035
+1 -1 22035
+D4
+O doce ru�do de �gua corrente parece vir daquela dire��o.
+~
+porta~
+1 -1 22034
 S
 #22033
 A Sala dos Sentimentos Nobres~
@@ -387,25 +330,22 @@ amor.  � como se todas as suas palavras pudessem se transformar em brilho e
 estivessem iluminando este lugar e a voc� tamb�m.  E voc� ent�o tem a
 certeza plena de que n�o est� s� neste mundo e que pode enfim sorrir.
 ~
-220.5 cdefgrsu 1
+220 1441916 0 0 0 1
 D2
 Voc� pode ver uma sala aconchegante e quase et�rea.
 ~
 porta~
-:n 2
-a -1 22031
-D4
-O doce ru�do de �gua corrente parece vir daquela dire��o.
-~
-porta~
-:n 2
-a -1 22034
+1 -1 22031
 D3
 Um pequeno e s�brio aposento pode ser visto.
 ~
 porta~
-:n 2
-a -1 22035
+1 -1 22035
+D4
+O doce ru�do de �gua corrente parece vir daquela dire��o.
+~
+porta~
+1 -1 22034
 S
 #22034
 Ouvindo as Palavras da Vida~
@@ -420,7 +360,7 @@ majestosas, produzem sombra fresca e parecem convidar voc� � medita��o.
 Ou�a o som do vento, ou�a o som da �gua...ou�a seu cora��o...e encontre o
 caminho para a felicidade.
 ~
-220.5 cdefgrsu 1
+220 1441916 0 0 0 1
 D5
 Voc� pode ver uma sala aconchegante e quase et�rea.
 ~
@@ -438,18 +378,16 @@ Tamb�m se pode ouvir daqui, o som suave de �gua corrente.  A vida parece
 tomar conta desta sala.  Um pequeno mural est� fixado na parede e este
 parece ser um importante meio de comunica��o.
 ~
-220.5 cdefgrsu 1
-D3
-Voc� pode ver daqui uma luz suavemente rosada.
-~
-porta~
-:n 2
-a -1 22032
+220 1441916 0 0 0 1
 D1
 Voc� pode ver daqui uma luz suavemente azulada.
 ~
 porta~
-:n 2
-a -1 22033
+1 -1 22033
+D3
+Voc� pode ver daqui uma luz suavemente rosada.
+~
+porta~
+1 -1 22032
 S
-$
+$~
