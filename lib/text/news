@@ -19,7 +19,6 @@
    Adicionado historico para canais de comunicação.
    É possível olhar para o céu e ver a posição do sol, lua e estrelas.
    Look around tambêm pode dar mais informações das salas.
-  Habilidade @YScan@n, mostra os mobs nas salas próximas, para @RLadrões@n e @RRanger@n.
    Sistema de grupos modificado, agora mostra lista de grupos @Gabertos@n e @Rfechados@n para novos membros e em qual área está o líder.
   Who mostra separado personagens até nível 10.
   Sistema de Happyhour com bonus de ouro e xp.
@@ -29,3 +28,5 @@
   Intervalo depois do @YBackstab@n, @YBash@n diminuido.
   Habilidade @YBackflip@n modificada.
   Habilidades @YMount@n, @YEscape@n temporariamente desabilitadas.
+   Habilidade @YScan@n, mostra os mobs nas salas próximas, para @RLadrões@n e @RRanger@n.
+   Habilidade @RBandage@n para estabilizar feridos criticos.
