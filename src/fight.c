@@ -1170,12 +1170,8 @@ void beware_lightning()
 	int dam = 0;
 	struct char_data *victim = NULL, *temp = NULL;
 	char buf[256];
-
-	zone_rnum i;
-
-	switch (weather_info.sky)
-	{
-	case (SKY_LIGHTNING):
+	if (!(weather_info.sky == SKY_LIGHTNING))
+		return;					/* go away if its not even stormy! */
 		if (!(rand_number(0, 9) == 0))
 			return;				/* Bolt only 10% of time */
 		if (rand_number(0, 99) == 0)
@@ -1278,7 +1274,6 @@ void beware_lightning()
 				}
 			}					/* if outside=true */
 		}						/* of for victim hunt */
-	}
 }				/* of procedure */
 
 	/* -- jr - 24/08/99 * Weapon Proficiencies -- (C) 1999 by Fabrizio Baldi */
