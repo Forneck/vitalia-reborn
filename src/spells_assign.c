@@ -28,6 +28,8 @@ ACMD(do_bandage);
 ACMD(do_scan);
 ACMD(do_meditate);
 ACMD(do_trip);
+ACMD(do_backflip);
+ACMD(do_combo);
 
 void set_spells_function()
 {
@@ -106,6 +108,13 @@ void set_spells_function()
    
        if ((spell = get_spell_by_vnum(SKILL_TRIP)))
    spell->function = do_trip;
+   
+      if ((spell = get_spell_by_vnum(SKILL_BACKFLIP)))
+   spell->function = do_backflip;
+   
+       if ((spell = get_spell_by_vnum(SKILL_COMBO_ATTACK)))
+   spell->function = do_combo;
+   
    
        if ((spell = get_spell_by_vnum(SKILL_MEDITATE)))
    spell->function = do_meditate;
@@ -1753,6 +1762,34 @@ void create_spells_db()
  new_spell->effectiveness = strdup("100");
   new_spell->assign[0].class_num = CLASS_BARD;
  new_spell->assign[0].level = 35;
+
+ spedit_save_internally(new_spell);
+
+  /*BACKFLIP*/
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+ new_spell->vnum = SKILL_BACKFLIP;
+ new_spell->status = available;
+ new_spell->name = strdup("backflip");
+ new_spell->function = do_backflip;
+ new_spell->type = SKILL;
+ new_spell->effectiveness = strdup("100");
+  new_spell->assign[0].class_num = CLASS_THIEF;
+ new_spell->assign[0].level = 24;
+
+ spedit_save_internally(new_spell);
+
+ /*COMBO*/
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+ new_spell->vnum = SKILL_COMBO_ATTACK;
+ new_spell->status = available;
+ new_spell->name = strdup("combo attack");
+ new_spell->function = do_combo;
+ new_spell->type = SKILL;
+ new_spell->effectiveness = strdup("100");
+  new_spell->assign[0].class_num = CLASS_WARRIOR;
+ new_spell->assign[0].level = 30;
 
  spedit_save_internally(new_spell);
 
