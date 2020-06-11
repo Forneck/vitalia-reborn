@@ -1585,11 +1585,7 @@ void parse_room(FILE * fl, int virtual_nr)
 		switch (*line)
 		{
 		case 'D':
-		
-		if (isdigit(*line + 1))
 			setup_dir(fl, room_nr, atoi(line + 1));
-	 else
-	 setup_dir(fl, room_nr,search_block((line + 1), autoexits, true));
 			break;
 		case 'E':
 			CREATE(new_descr, struct extra_descr_data, 1);
