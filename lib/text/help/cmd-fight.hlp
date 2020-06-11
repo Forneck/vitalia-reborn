@@ -3,16 +3,16 @@ COMBATE
    Os seguintes comandos s�o usados durante um combate, ou para iniciar um
 combate.  Para obter ajuda para um comando, digite HELP <comando>.
 
-   @gASSIST GASSIST       @nPresta assist�ncia a outros lutadores na sala.
-   @gCONSIDER             @nAnalisar a dificuldade para se matar um monstro.
-   @gDIAGNOSE             @nMostra o estado de sa�de de algu�m.
-   @gFLEE                 @nFoge de um combate.
-   @gHITBAR               @nExibe a barra de energia do oponete automaticamente.
-   @gKILL HIT             @nInicia o ataque a um oponente.
-   @gMURDER               @nInicia o ataque a outro jogador.
-   @gWIELD                @nEmpunha uma arma.
-   @gWIMPY                @nFoge automaticamente de um combate.
-#0
+   &gASSIST GASSIST       &nPresta assist�ncia a outros lutadores na sala.
+   &gCONSIDER             &nAnalisar a dificuldade para se matar um monstro.
+   &gDIAGNOSE             &nMostra o estado de sa�de de algu�m.
+   &gFLEE                 &nFoge de um combate.
+   &gHITBAR               &nExibe a barra de energia do oponete automaticamente.
+   &gKILL HIT             &nInicia o ataque a um oponente.
+   &gMURDER               &nInicia o ataque a outro jogador.
+   &gWIELD                &nEmpunha uma arma.
+   &gWIMPY                &nFoge automaticamente de um combate.
+#
 ASSIST
 
 Uso: ASSIST <jogador>
@@ -27,7 +27,7 @@ Exemplo:
    > assist Doctor
 
 Veja tamb�m: FLEE, KILL, RESCUE, GASSIST
-#0
+#
 CONSIDER
 
 Uso: consider <monstro>
@@ -41,7 +41,7 @@ Exemplo:
    > consider fido
 
 Veja tamb�m: HIT, KILL
-#0
+#
 DIAGNOSE
 
 Uso: diagnose [personagem]
@@ -56,7 +56,7 @@ Exemplos:
    > diagnose rasmussen
 
 Veja tamb�m: CONSIDER
-#0
+#
 FLEE
 
 Uso: flee
@@ -67,7 +67,7 @@ totalmente eficaz, pois para poder fugir, a sala em que voc� est� precisa
 ter uma sa�da adequada.  Mas tamb�m, quem quer viver para sempre?
 
 Veja tamb�m: WIMPY
-#0
+#
 HITBAR
 
 Uso: hitbar
@@ -76,7 +76,7 @@ Uso: hitbar
 mostra, logo acima do prompt, a sa�de do seu oponente.
 
 Veja tamb�m: DIAGNOSE
-#0
+#
 KILL HIT
 
 Uso: kill <v�tima>
@@ -86,7 +86,7 @@ Uso: kill <v�tima>
 comando em outros jogadores.
 
 Veja tamb�m: FLEE, WIMPY
-#0
+#
 MURDER
 
 Uso: murder <v�tima>
@@ -100,7 +100,7 @@ dano, e os outros jogadores poder�o usar o comando MURDER para lhe atacar
 sem se tornarem assassinos.
 
 Veja tamb�m: FLAGS
-#0
+#
 WIMPY
 
 Uso: wimpy [hp]
@@ -116,5 +116,6 @@ Exemplos:
    > wimpy       Mostrar� o status do seu 'wimpy' atual.
 
 Veja tamb�m: FLEE, TOGGLE
-#0
-$~
+#
+$
+~
