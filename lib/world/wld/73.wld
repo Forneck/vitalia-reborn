@@ -1,55 +1,55 @@
 #7300
 A Entrada da Caverna~
-   Você está em frente a entrada da caverna.  Abaixo daqui está muito
-escuro.  Há uma inscrição na parede.  Há uma saída ao norte.  Uma escada
+   Vocï¿½ estï¿½ em frente a entrada da caverna.  Abaixo daqui estï¿½ muito
+escuro.  Hï¿½ uma inscriï¿½ï¿½o na parede.  Hï¿½ uma saï¿½da ao norte.  Uma escada
 conduz para cima.
 ~
 73 9 0 0 0 1
 D0
-Ao norte você pode ver um pequeno túnel.
+Ao norte vocï¿½ pode ver um pequeno tï¿½nel.
 ~
 ~
 0 -1 7301
 D4
-Você pode ver escadas levando para cima, para a escuridão.
+Vocï¿½ pode ver escadas levando para cima, para a escuridï¿½o.
 ~
 ~
 2 -1 7102
 E
-inscrição parede~
-A inscrição diz &R'CUIDADO AVENTUREIRO'&n
+inscriï¿½ï¿½o parede~
+A inscriï¿½ï¿½o diz @R'CUIDADO AVENTUREIRO'@n
 ~
 S
 #7301
-Túnel da Caverna~
-   Você está andando num túnel.  Está muito frio.  Você pode sentir a
-presença de um ser vivo...  Em algum lugar.
+Tï¿½nel da Caverna~
+   Vocï¿½ estï¿½ andando num tï¿½nel.  Estï¿½ muito frio.  Vocï¿½ pode sentir a
+presenï¿½a de um ser vivo...  Em algum lugar.
 ~
 73 9 0 0 0 1
 D0
-Ao norte você pode ver o túnel continuando.
+Ao norte vocï¿½ pode ver o tï¿½nel continuando.
 ~
 ~
 0 -1 7302
 D2
-O túnel continua ao sul.
+O tï¿½nel continua ao sul.
 ~
 ~
 0 -1 7300
 S
 #7302
 Sala da Caverna~
-   Você está numa sala.  Está ainda mais frio aqui.  As paredes estão
+   Vocï¿½ estï¿½ numa sala.  Estï¿½ ainda mais frio aqui.  As paredes estï¿½o
 brilhando.
 ~
 73 8 0 0 0 1
 D1
-Ao leste você vê o túnel indo para baixo.
+Ao leste vocï¿½ vï¿½ o tï¿½nel indo para baixo.
 ~
 ~
 0 -1 7303
 D2
-Ao sul você um túnel escuro.
+Ao sul vocï¿½ um tï¿½nel escuro.
 ~
 ~
 0 -1 7301
@@ -60,12 +60,12 @@ D3
 S
 #7303
 O Cruzamento em T da Caverna~
-   Você está em pé numa substância lamaçenta.  O cheiro é terrível, parece
-com o cheiro de algo estragado.  Ao oeste você pode ver uma luz.
+   Vocï¿½ estï¿½ em pï¿½ numa substï¿½ncia lamaï¿½enta.  O cheiro ï¿½ terrï¿½vel, parece
+com o cheiro de algo estragado.  Ao oeste vocï¿½ pode ver uma luz.
 ~
 73 9 0 0 0 2
 D1
-Ao leste o túnel ainda continua descendo.
+Ao leste o tï¿½nel ainda continua descendo.
 ~
 ~
 0 -1 7304
@@ -74,28 +74,28 @@ D2
 ~
 0 -1 7308
 D3
-Você pode ver uma luz ao oeste.
+Vocï¿½ pode ver uma luz ao oeste.
 ~
 ~
 0 -1 7302
 E
 vermes~
-Os vermes são roxos.  Eles não parecem ser comestíveis.
+Os vermes sï¿½o roxos.  Eles nï¿½o parecem ser comestï¿½veis.
 ~
 E
 lama~
-Quando você examina a lama, você observa pequenos vermes rastejando nela.
+Quando vocï¿½ examina a lama, vocï¿½ observa pequenos vermes rastejando nela.
 ~
 S
 #7304
 O Ponto de Retorno da Caverna~
-   A lama está ficando mais funda.  Você se pergunta. 'Seria uma boa idéia
-sair daqui antes de desaparecer?'.  Ao sul você nota uma pedra lisa circular
-bloqueando o caminho.  Ao oeste você pode ver mais lama.
+   A lama estï¿½ ficando mais funda.  Vocï¿½ se pergunta. 'Seria uma boa idï¿½ia
+sair daqui antes de desaparecer?'.  Ao sul vocï¿½ nota uma pedra lisa circular
+bloqueando o caminho.  Ao oeste vocï¿½ pode ver mais lama.
 ~
 73 9 0 0 0 2
 D2
-Você pode ver uma abertura atrás da pedra.
+Vocï¿½ pode ver uma abertura atrï¿½s da pedra.
 ~
 pedra lisa circular~
 1 -1 7305
@@ -105,46 +105,46 @@ D3
 0 -1 7303
 E
 pedra lisa circular~
-A pedra não parece ser interessante.  Mas quando você vira-se para voltar,
-você vê uma faixa de luz vindo de um pequeno buraco.  Conclusão: A pedra é
-móvel.
+A pedra nï¿½o parece ser interessante.  Mas quando vocï¿½ vira-se para voltar,
+vocï¿½ vï¿½ uma faixa de luz vindo de um pequeno buraco.  Conclusï¿½o: A pedra ï¿½
+mï¿½vel.
 ~
 S
 #7305
 A Sala Secreta~
-   Há poeira por todos os lados.  Parece que ningém vem aqui há décadas.  No
-centro da sala você vê um pedestal com uma bola de cristal.  A bola brilha
+   Hï¿½ poeira por todos os lados.  Parece que ningï¿½m vem aqui hï¿½ dï¿½cadas.  No
+centro da sala vocï¿½ vï¿½ um pedestal com uma bola de cristal.  A bola brilha
 com uma luz pulsante.
 ~
 73 8 0 0 0 1
 D0
-Você vê uma porta circular de pedra.
+Vocï¿½ vï¿½ uma porta circular de pedra.
 ~
 porta circular pedra~
 1 -1 7304
 D2
-Você vê um bloco cinzento.
+Vocï¿½ vï¿½ um bloco cinzento.
 ~
 bloco cinzento~
 1 -1 7306
 E
 bola cristal~
-A bola de cristal está brilhando com uma luz pulsante.  Parece haver uma
-fumaça dentro dele.
+A bola de cristal estï¿½ brilhando com uma luz pulsante.  Parece haver uma
+fumaï¿½a dentro dele.
 ~
 E
 pedestal~
-O pedestal parece um trabalho de anão.  Ele é MUITO bonito.
+O pedestal parece um trabalho de anï¿½o.  Ele ï¿½ MUITO bonito.
 ~
 S
 #7306
 O Bueiro~
-   Você está em meio a muita lama.  A lama chega até o seu peito.  Você
-sente a presença de alguma coisa na lama.  A única saída fica a oeste.
+   Vocï¿½ estï¿½ em meio a muita lama.  A lama chega atï¿½ o seu peito.  Vocï¿½
+sente a presenï¿½a de alguma coisa na lama.  A ï¿½nica saï¿½da fica a oeste.
 ~
 73 9 0 0 0 6
 D0
-Você não pode ver nada.
+Vocï¿½ nï¿½o pode ver nada.
 ~
 bloco cinzento~
 1 -1 7305
@@ -154,8 +154,8 @@ D3
 0 -1 7307
 S
 #7307
-Um Túnel~
-   A lama está nos seus joelhos.  Fora isso, o túnel parece ser bastante
+Um Tï¿½nel~
+   A lama estï¿½ nos seus joelhos.  Fora isso, o tï¿½nel parece ser bastante
 normal.
 ~
 73 9 0 0 0 5
@@ -164,7 +164,7 @@ D0
 ~
 0 -1 7308
 D1
-Você pode ver um bueiro.
+Vocï¿½ pode ver um bueiro.
 ~
 ~
 0 -1 7306
@@ -174,66 +174,66 @@ D2
 0 -1 7309
 S
 #7308
-O Túnel Longo~
-   Aqui quase não há mais lama.  Ao seu lado está um aviso que diz &R'PERIGO!
-Os vermes são perigosos!'&n
+O Tï¿½nel Longo~
+   Aqui quase nï¿½o hï¿½ mais lama.  Ao seu lado estï¿½ um aviso que diz @R'PERIGO!
+Os vermes sï¿½o perigosos!'@n
 ~
 73 9 0 0 0 1
 D0
-Você pode ver muita lama...ECA!
+Vocï¿½ pode ver muita lama...ECA!
 ~
 ~
 0 -1 7303
 D2
-O túnel desce levemente.
+O tï¿½nel desce levemente.
 ~
 ~
 0 -1 7307
 S
 #7309
 A Sala Quente~
-   Você está muito surpreso, como esta sala está quente ao invés de estar
-fria.  Ao norte há uma descida para mais lama.  Há também uma saída para o
+   Vocï¿½ estï¿½ muito surpreso, como esta sala estï¿½ quente ao invï¿½s de estar
+fria.  Ao norte hï¿½ uma descida para mais lama.  Hï¿½ tambï¿½m uma saï¿½da para o
 oeste.
 ~
 73 9 0 0 0 1
 D0
-Você vê muita lama.
+Vocï¿½ vï¿½ muita lama.
 ~
 ~
 0 -1 7307
 D3
-Você vê uma entrada para uma pequena sala.
+Vocï¿½ vï¿½ uma entrada para uma pequena sala.
 ~
 ~
 0 -1 7310
 S
 #7310
 A Pequena Sala~
-   Olhando ao redor você nota uma pequena estátua.  Há saídas ao oeste e ao
+   Olhando ao redor vocï¿½ nota uma pequena estï¿½tua.  Hï¿½ saï¿½das ao oeste e ao
 leste.
 ~
 73 9 0 0 0 1
 D1
-Está muito escuro lá.
+Estï¿½ muito escuro lï¿½.
 ~
 ~
 0 -1 7309
 D3
-Você vê um corredor MUITO longo.
+Vocï¿½ vï¿½ um corredor MUITO longo.
 ~
 ~
 0 -1 7311
 E
-estátua pequena~
-Esta é a estátua de um demônio, apontando para o oeste.  O demônio parece
+estï¿½tua pequena~
+Esta ï¿½ a estï¿½tua de um demï¿½nio, apontando para o oeste.  O demï¿½nio parece
 um homem com chifres e um rabo.
 ~
 S
 #7311
 A Caverna da Estalagmite~
-   Você está numa caverna cheia de estalagmites.  Água está pingando das
-paredes.  Está muito frio aqui.
+   Vocï¿½ estï¿½ numa caverna cheia de estalagmites.  ï¿½gua estï¿½ pingando das
+paredes.  Estï¿½ muito frio aqui.
 ~
 73 9 0 0 0 2
 D0
@@ -241,7 +241,7 @@ D0
 ~
 0 -1 7314
 D1
-Você vê um longo corredor, e um pouco de lama.
+Vocï¿½ vï¿½ um longo corredor, e um pouco de lama.
 ~
 ~
 0 -1 7310
@@ -251,17 +251,17 @@ D2
 0 -1 7312
 E
 estalagmite~
-As estalagmites são muito altas e bonitas.
+As estalagmites sï¿½o muito altas e bonitas.
 ~
 S
 #7312
-O Túnel da Estalagmite~
-   Você entrou num pequeno túnel.  Aqui é bastante seco.  Talvez fosse uma
-boa idéia descansar aqui.
+O Tï¿½nel da Estalagmite~
+   Vocï¿½ entrou num pequeno tï¿½nel.  Aqui ï¿½ bastante seco.  Talvez fosse uma
+boa idï¿½ia descansar aqui.
 ~
 73 9 0 0 0 1
 D0
-Você pode ver uma pequena caverna ao norte.
+Vocï¿½ pode ver uma pequena caverna ao norte.
 ~
 ~
 0 -1 7311
@@ -272,8 +272,8 @@ D3
 S
 #7313
 A Sala Esponjosa~
-   Você definitivamente não gosta dessa área.  Ela é muito úmida e a maior
-parte da sala está molhada.
+   Vocï¿½ definitivamente nï¿½o gosta dessa ï¿½rea.  Ela ï¿½ muito ï¿½mida e a maior
+parte da sala estï¿½ molhada.
 ~
 73 12 0 0 0 3
 D1
@@ -287,12 +287,12 @@ D3
 S
 #7314
 Um Cruzamento em T da Estalagmite~
-   Você está num cruzamento.  Ao norte você pode ver uma luz.  De qualquer
-forma está escuro.
+   Vocï¿½ estï¿½ num cruzamento.  Ao norte vocï¿½ pode ver uma luz.  De qualquer
+forma estï¿½ escuro.
 ~
 73 12 0 0 0 1
 D0
-Você vê uma luz, à frente.
+Vocï¿½ vï¿½ uma luz, ï¿½ frente.
 ~
 ~
 0 -1 7317
@@ -307,13 +307,13 @@ D2
 S
 #7315
 O Esconderijo~
-   Esta sala é obviamente um esconderijo.  Ao norte você vê uma pintura
+   Esta sala ï¿½ obviamente um esconderijo.  Ao norte vocï¿½ vï¿½ uma pintura
 primitiva.
 ~
 73 9 0 0 0 1
 D0
-Você vê uma pintura primitiva de pessoas dançando ao redor de um gigantesco
-sol.  O sol tem uns 7 pés de diâmetro, é o que mostra o tamanho da pintura.
+Vocï¿½ vï¿½ uma pintura primitiva de pessoas danï¿½ando ao redor de um gigantesco
+sol.  O sol tem uns 7 pï¿½s de diï¿½metro, ï¿½ o que mostra o tamanho da pintura.
 ~
 sol~
 1 -1 7316
@@ -323,27 +323,27 @@ D3
 0 -1 7314
 E
 pintura primitiva~
-Você vê pessoas dançando ao redor de um gigantesco sol.  O sol tem uns 7
-pés de diâmetro, é o que mostra o tamanho da pintura.
+Vocï¿½ vï¿½ pessoas danï¿½ando ao redor de um gigantesco sol.  O sol tem uns 7
+pï¿½s de diï¿½metro, ï¿½ o que mostra o tamanho da pintura.
 ~
 S
 #7316
 A Sala do Tesouro~
-   Esta sala é ricamente ornamentada.  As paredes foram esculpidas com uma
-figura de pessoas dançando ao redor de uma lua que está no chão.  Ela parece
-muito velha e muito empoeirada.  Ao sul você vê uma porta secreta.
+   Esta sala ï¿½ ricamente ornamentada.  As paredes foram esculpidas com uma
+figura de pessoas danï¿½ando ao redor de uma lua que estï¿½ no chï¿½o.  Ela parece
+muito velha e muito empoeirada.  Ao sul vocï¿½ vï¿½ uma porta secreta.
 ~
 73 521 0 0 0 1
 D2
-Você pode ver uma pintura de pessoas rastejando ao redor de uma lua imensa.
+Vocï¿½ pode ver uma pintura de pessoas rastejando ao redor de uma lua imensa.
 ~
 porta lua~
 1 -1 7315
 S
 #7317
 A Toca Quadrada~
-   Você está na parte sudeste da toca.  Você pode ver um esqueleto deitado
-no chão.
+   Vocï¿½ estï¿½ na parte sudeste da toca.  Vocï¿½ pode ver um esqueleto deitado
+no chï¿½o.
 ~
 73 8 0 0 0 1
 D0
@@ -362,17 +362,17 @@ Outra parte da toca.
 0 -1 7320
 E
 esqueleto~
-Ele parece ser um aventureiro que não teve muita sorte.  É melhor você ter
+Ele parece ser um aventureiro que nï¿½o teve muita sorte.  ï¿½ melhor vocï¿½ ter
 cuidado...
 ~
 S
 #7318
 A Toca Quadrada~
-   Você está na parte nordeste da toca.  Você vê um aviso na parede.
+   Vocï¿½ estï¿½ na parte nordeste da toca.  Vocï¿½ vï¿½ um aviso na parede.
 ~
 73 9 0 0 0 1
 D1
-Você vê uma porta de madeira.
+Vocï¿½ vï¿½ uma porta de madeira.
 ~
 porta madeira~
 1 -1 7321
@@ -388,19 +388,19 @@ Outra parte da toca.
 0 -1 7319
 E
 aviso parede~
-O aviso diz 'Deuses da Guerra Eu vos chamo, minha espada está o meu lado,
+O aviso diz 'Deuses da Guerra Eu vos chamo, minha espada estï¿½ o meu lado,
 eu procuro uma luz que me livre de todo o orgulho falso'
                                    Reyemle Grug...
 ~
 S
 #7319
 A Toca Quadrada~
-   Você está na parte sudoeste da toca.  Aqui há outro aviso.  Há uma saída
+   Vocï¿½ estï¿½ na parte sudoeste da toca.  Aqui hï¿½ outro aviso.  Hï¿½ uma saï¿½da
 da toca ao norte.
 ~
 73 9 0 0 0 1
 D0
-Você vê um pequeno túnel que leva ao norte.
+Vocï¿½ vï¿½ um pequeno tï¿½nel que leva ao norte.
 ~
 ~
 0 -1 7322
@@ -423,8 +423,8 @@ recuperar meu orgulho'
 S
 #7320
 O Final da Toca~
-   Você pode ver uma mesa à sua frente.  Ela está coberta por poeira.
-Cinco esqueletos estão sentados à mesa.  Saídas a norte e leste.
+   Vocï¿½ pode ver uma mesa ï¿½ sua frente.  Ela estï¿½ coberta por poeira.
+Cinco esqueletos estï¿½o sentados ï¿½ mesa.  Saï¿½das a norte e leste.
 ~
 73 9 0 0 0 1
 D0
@@ -438,64 +438,64 @@ A parte leste da toca.
 ~
 0 -1 7317
 E
-dragão estátua~
-Ele parece ser um dragão de prata.  Ele está cravado no centro da mesa.  O
-dragão está em cima de um dragão vermelho que parece estar morto.  Mas os
-olhos do dragão vermelho estão brilhando, com uma cor vermelha.  Você
+dragï¿½o estï¿½tua~
+Ele parece ser um dragï¿½o de prata.  Ele estï¿½ cravado no centro da mesa.  O
+dragï¿½o estï¿½ em cima de um dragï¿½o vermelho que parece estar morto.  Mas os
+olhos do dragï¿½o vermelho estï¿½o brilhando, com uma cor vermelha.  Vocï¿½
 sente-se drenado.
 ~
 E
 esqueletos esqueleto~
-Eles foram, obviamente, mortos de alguma maneira, mas não parece ter sido
-por uma espada ou maça.
+Eles foram, obviamente, mortos de alguma maneira, mas nï¿½o parece ter sido
+por uma espada ou maï¿½a.
 ~
 E
 mesa~
-Na mesa há muita poeira, no centro há uma pequena estátua de um Dragão dormindo.
+Na mesa hï¿½ muita poeira, no centro hï¿½ uma pequena estï¿½tua de um Dragï¿½o dormindo.
 ~
 S
 #7321
-O Túnel Leste~
-   Você está num túnel escuro, as saídas ficam a leste e oeste.  Ao oeste
-você vê uma porta de madeira.
+O Tï¿½nel Leste~
+   Vocï¿½ estï¿½ num tï¿½nel escuro, as saï¿½das ficam a leste e oeste.  Ao oeste
+vocï¿½ vï¿½ uma porta de madeira.
 ~
 73 12 0 0 0 1
 D1
-Você pode ver um túnel lamaçento.
+Vocï¿½ pode ver um tï¿½nel lamaï¿½ento.
 ~
 ~
 0 -1 7302
 D3
-Você pode ver uma porta de madeira.
+Vocï¿½ pode ver uma porta de madeira.
 ~
 porta madeira~
 1 -1 7318
 S
 #7322
-O Túnel Norte~
-   Você está num túnel escuro, ele leva para cima.
+O Tï¿½nel Norte~
+   Vocï¿½ estï¿½ num tï¿½nel escuro, ele leva para cima.
 ~
 73 9 0 0 0 1
 D0
-O túnel escuro continua.
+O tï¿½nel escuro continua.
 ~
 ~
 0 -1 7323
 D2
-Você pode ver a toca.
+Vocï¿½ pode ver a toca.
 ~
 ~
 0 -1 7319
 D3
-Você pode ver a entrada da caverna.
+Vocï¿½ pode ver a entrada da caverna.
 ~
 ~
 0 -1 7336
 S
 #7323
 A Sala em L~
-   Você está na escuridão total.  Ao sul há uma pequena saída.  Ao leste
-você pode ver um buraco entreaberto.
+   Vocï¿½ estï¿½ na escuridï¿½o total.  Ao sul hï¿½ uma pequena saï¿½da.  Ao leste
+vocï¿½ pode ver um buraco entreaberto.
 ~
 73 9 0 0 0 1
 D1
@@ -508,71 +508,71 @@ D2
 0 -1 7322
 S
 #7324
-O Salão Circular~
-   Você está num salão circular.  Ao norte, leste e sul você pode ver
-cabeças petrificadas penduradas na parede.
+O Salï¿½o Circular~
+   Vocï¿½ estï¿½ num salï¿½o circular.  Ao norte, leste e sul vocï¿½ pode ver
+cabeï¿½as petrificadas penduradas na parede.
 ~
 73 9 0 0 0 1
 D0
-Você vê a cabeça de um dragão vermelho pendurada na parede.
+Vocï¿½ vï¿½ a cabeï¿½a de um dragï¿½o vermelho pendurada na parede.
 ~
-cabeça vermelha~
+cabeï¿½a vermelha~
 2 0 7324
 D1
-Você vê a cabeça de um dragão verde pendurada na parede.
+Vocï¿½ vï¿½ a cabeï¿½a de um dragï¿½o verde pendurada na parede.
 ~
-cabeça verde~
+cabeï¿½a verde~
 1 -1 7325
 D2
-Você vê a cabeça de um dragão azul pendurada na parede.
+Vocï¿½ vï¿½ a cabeï¿½a de um dragï¿½o azul pendurada na parede.
 ~
-cabeça azul~
+cabeï¿½a azul~
 2 0 7324
 D3
-Você vê uma sala, ao longe.
+Vocï¿½ vï¿½ uma sala, ao longe.
 ~
 ~
 0 -1 7323
 E
 azul~
-Este parece ser um dragão bom.
+Este parece ser um dragï¿½o bom.
 ~
 E
 vermelho~
-Este parece ser um dragão neutro.
+Este parece ser um dragï¿½o neutro.
 ~
 E
 verde~
-Este parece ser um dragão mau.
+Este parece ser um dragï¿½o mau.
 ~
 E
-cabeça cabeças~
-Quando você observa os rostos das cabeças você vê que são rostos de dragões.
-O rosto ao norte é vermelho, o rosto ao leste é verde e o rosto ao sul é azul.
+cabeï¿½a cabeï¿½as~
+Quando vocï¿½ observa os rostos das cabeï¿½as vocï¿½ vï¿½ que sï¿½o rostos de dragï¿½es.
+O rosto ao norte ï¿½ vermelho, o rosto ao leste ï¿½ verde e o rosto ao sul ï¿½ azul.
 ~
 S
 #7325
-O Túnel Empoeirado~
-   Você está em meio a poeira.  Este lugar não foi tocado há muito tempo,
-Entretanto é muito monótono aqui, parece ser um bom lugar para descansar!
-Ao oeste você vê os contornos de uma porta.  Um túnel leva ao leste.
+O Tï¿½nel Empoeirado~
+   Vocï¿½ estï¿½ em meio a poeira.  Este lugar nï¿½o foi tocado hï¿½ muito tempo,
+Entretanto ï¿½ muito monï¿½tono aqui, parece ser um bom lugar para descansar!
+Ao oeste vocï¿½ vï¿½ os contornos de uma porta.  Um tï¿½nel leva ao leste.
 ~
 73 12 0 0 0 1
 D1
-Você vê um túnel que leva para baixo.  Ele é muito escuro.
+Vocï¿½ vï¿½ um tï¿½nel que leva para baixo.  Ele ï¿½ muito escuro.
 ~
 ~
 0 -1 7326
 D3
-Você pode ver os contornos de uma porta.
+Vocï¿½ pode ver os contornos de uma porta.
 ~
 porta~
 1 -1 7324
 S
 #7326
 O Cruzamento~
-   Você está num cruzamento de corredores.  Você pode deixar este lugar por
-todas as direções, exceto por cima ou por baixo.  Em meio a poeira você nota
+   Vocï¿½ estï¿½ num cruzamento de corredores.  Vocï¿½ pode deixar este lugar por
+todas as direï¿½ï¿½es, exceto por cima ou por baixo.  Em meio a poeira vocï¿½ nota
 estranhas pegadas.
 ~
 73 9 0 0 0 1
@@ -593,14 +593,14 @@ D3
 ~
 0 -1 7325
 E
-pegadas pé~
-Você nunca tinha visto pegadas como estas antes!
+pegadas pï¿½~
+Vocï¿½ nunca tinha visto pegadas como estas antes!
 ~
 S
 #7327
 A Sala em L~
-   Você está numa sala em L.  Você pode ouvir barulhos vindos do longo
-túnel ao leste.  Você está com muito medo.  Um aviso está pendurado na parede.
+   Vocï¿½ estï¿½ numa sala em L.  Vocï¿½ pode ouvir barulhos vindos do longo
+tï¿½nel ao leste.  Vocï¿½ estï¿½ com muito medo.  Um aviso estï¿½ pendurado na parede.
 ~
 73 9 0 0 0 2
 D0
@@ -618,32 +618,32 @@ PERIGO!!
 ~
 S
 #7328
-A Toca do Dragão~
-   Você pode ver paredes queimadas, as pedras que compõem o chão sao de um
-vermelho fogoso.  Todos os tipos de ossos estão espalhados pelo chão.  Nas
-paredes você pode ver alguns corpos queimados.  Você cheira a carne queimada.
-Duas criaturas estão parcialmente derretidas no chão.
+A Toca do Dragï¿½o~
+   Vocï¿½ pode ver paredes queimadas, as pedras que compï¿½em o chï¿½o sao de um
+vermelho fogoso.  Todos os tipos de ossos estï¿½o espalhados pelo chï¿½o.  Nas
+paredes vocï¿½ pode ver alguns corpos queimados.  Vocï¿½ cheira a carne queimada.
+Duas criaturas estï¿½o parcialmente derretidas no chï¿½o.
 ~
 73 8 0 0 0 2
 D0
-Você pode ver um longo túnel.
+Vocï¿½ pode ver um longo tï¿½nel.
 ~
 ~
 0 -1 7329
 D3
-Você não pode ver nada nessa escuridão.
+Vocï¿½ nï¿½o pode ver nada nessa escuridï¿½o.
 ~
 ~
 0 -1 7327
 S
 #7329
 A Sala Queimada~
-   Você está numa sala que possui as paredes queimadas.  Há uma inscrição
+   Vocï¿½ estï¿½ numa sala que possui as paredes queimadas.  Hï¿½ uma inscriï¿½ï¿½o
 na parede.
 ~
 73 9 0 0 0 1
 D2
-Você vê um brilho vermelho...
+Vocï¿½ vï¿½ um brilho vermelho...
 ~
 ~
 0 -1 7328
@@ -652,18 +652,18 @@ D3
 ~
 0 -1 7330
 E
-inscrição~
-A inscrição diz:
+inscriï¿½ï¿½o~
+A inscriï¿½ï¿½o diz:
                         PERIGO
 ~
 S
 #7330
-O Túnel Ventilado~
-   Você está num túnel.  Acima de você, você sente uma brisa.
+O Tï¿½nel Ventilado~
+   Vocï¿½ estï¿½ num tï¿½nel.  Acima de vocï¿½, vocï¿½ sente uma brisa.
 ~
 73 9 0 0 0 1
 D1
-É muito escuro para dizer.
+ï¿½ muito escuro para dizer.
 ~
 ~
 0 -1 7329
@@ -673,12 +673,12 @@ D3
 0 -1 7326
 E
 brisa~
-A brisa vem de um buraco acima de você.  Não há como subir lá.
+A brisa vem de um buraco acima de vocï¿½.  Nï¿½o hï¿½ como subir lï¿½.
 ~
 S
 #7331
 A Sala Brilhante~
-   Esta sala é muito brilhante.  Nas paredes você pode ver prata.  Saídas
+   Esta sala ï¿½ muito brilhante.  Nas paredes vocï¿½ pode ver prata.  Saï¿½das
 a: oeste, leste e sul.
 ~
 73 8 0 0 0 1
@@ -701,53 +701,53 @@ A prata brilhante parece estar DENTRO das paredes.
 S
 #7332
 A Passagem Secreta~
-   Você entrou numa sala apertada.  Há apenas uma saída a oeste.
+   Vocï¿½ entrou numa sala apertada.  Hï¿½ apenas uma saï¿½da a oeste.
 ~
 73 9 0 0 0 1
 D3
-Você pode ver uma luz a oeste daqui.
+Vocï¿½ pode ver uma luz a oeste daqui.
 ~
 ~
 0 -1 7331
 S
 #7333
-O Fim do Longo Túnel~
-   Você está no fim do longo túnel.  A sua frente, você pode ver uma massa
-cinzenta.   Ao leste você pode ver um túnel extremamente longo, mas você
-sabe disso, você acabou de sair de lá.
+O Fim do Longo Tï¿½nel~
+   Vocï¿½ estï¿½ no fim do longo tï¿½nel.  A sua frente, vocï¿½ pode ver uma massa
+cinzenta.   Ao leste vocï¿½ pode ver um tï¿½nel extremamente longo, mas vocï¿½
+sabe disso, vocï¿½ acabou de sair de lï¿½.
 ~
 73 9 0 0 0 5
 D1
-Um longo túnel.
+Um longo tï¿½nel.
 ~
 ~
 0 -1 7331
 D3
-Uma massa cinzenta está bloqueando o caminho.
+Uma massa cinzenta estï¿½ bloqueando o caminho.
 ~
 massa cinzenta~
 1 -1 7334
 E
 massa cinzenta~
-A massa não é nada além de massa, mas é muito suspeita!
+A massa nï¿½o ï¿½ nada alï¿½m de massa, mas ï¿½ muito suspeita!
 ~
 S
 #7334
 A Sala da Escada~
-   Você está numa pequena sala.  Desenhos de rostos sofrendo estão nas paredes.
-Você pode sentir que a escuridão domina o lugar.  Só há uma saída: sul.
+   Vocï¿½ estï¿½ numa pequena sala.  Desenhos de rostos sofrendo estï¿½o nas paredes.
+Vocï¿½ pode sentir que a escuridï¿½o domina o lugar.  Sï¿½ hï¿½ uma saï¿½da: sul.
 ~
 73 9 0 0 0 1
 D2
-Nada além da escuridão...
+Nada alï¿½m da escuridï¿½o...
 ~
 ~
 0 -1 7335
 S
 #7335
-Um Túnel Escuro~
-   Você está num túnel escuro.  Ele continua ao norte e ao sul.  Ossos estão
-espalhados pelo chão.
+Um Tï¿½nel Escuro~
+   Vocï¿½ estï¿½ num tï¿½nel escuro.  Ele continua ao norte e ao sul.  Ossos estï¿½o
+espalhados pelo chï¿½o.
 ~
 73 9 0 0 0 1
 D0
@@ -765,7 +765,7 @@ Parecem ser ossos humanos.
 S
 #7336
 A Entrada Para a Toca~
-   O cheiro é terrível.  Ao sul você pode ver uma fumaça.  Um túnel leva ao
+   O cheiro ï¿½ terrï¿½vel.  Ao sul vocï¿½ pode ver uma fumaï¿½a.  Um tï¿½nel leva ao
 norte e ao leste.
 ~
 73 13 0 0 0 2
@@ -774,20 +774,20 @@ D0
 ~
 0 -1 7335
 D1
-Uma pequena caverna está ao leste.
+Uma pequena caverna estï¿½ ao leste.
 ~
 ~
 0 -1 7322
 D2
-A única coisa que você consegue ver é a fumaça.
+A ï¿½nica coisa que vocï¿½ consegue ver ï¿½ a fumaï¿½a.
 ~
 ~
 0 -1 7337
 S
 #7337
 A Parte Nordeste da Caverna do Basilisco~
-   É difícil enxergar por causa da fumaça.  Ao norte você enxerga muito
-mal um pequeno túnel.  Outras saídas estão ao sul e ao oeste.
+   ï¿½ difï¿½cil enxergar por causa da fumaï¿½a.  Ao norte vocï¿½ enxerga muito
+mal um pequeno tï¿½nel.  Outras saï¿½das estï¿½o ao sul e ao oeste.
 ~
 73 9 0 0 0 2
 D0
@@ -805,30 +805,30 @@ D3
 S
 #7338
 A Parte Sudeste da Caverna do Basilisco~
-   Há um pequeno buraco na parede de onde sai a fumaça.  Continua muito
-escuro.  Saídas ao norte e oeste.
+   Hï¿½ um pequeno buraco na parede de onde sai a fumaï¿½a.  Continua muito
+escuro.  Saï¿½das ao norte e oeste.
 ~
 73 9 0 0 0 2
 D0
-Você não pode ver nada além da fumaça.
+Vocï¿½ nï¿½o pode ver nada alï¿½m da fumaï¿½a.
 ~
 ~
 0 -1 7337
 D3
-Você não pode ver nada além da fumaça.
+Vocï¿½ nï¿½o pode ver nada alï¿½m da fumaï¿½a.
 ~
 ~
 0 -1 7340
 E
 buraco pequeno~
-Ele parece ser um pequeno buraco, com mais ou menos 1 pé de diâmetro.
+Ele parece ser um pequeno buraco, com mais ou menos 1 pï¿½ de diï¿½metro.
 ~
 S
 #7339
 A Parte Noroeste da Caverna do Basilisco~
-   Você pode ver folhagem espalhada pelo chão.  O cheiro aqui tão terrível que
-faz você sentir-se mal.  Este é o lugar onde dorme o Basilisco.
-Cuidado... talvez ele não esteja longe daqui...
+   Vocï¿½ pode ver folhagem espalhada pelo chï¿½o.  O cheiro aqui tï¿½o terrï¿½vel que
+faz vocï¿½ sentir-se mal.  Este ï¿½ o lugar onde dorme o Basilisco.
+Cuidado... talvez ele nï¿½o esteja longe daqui...
 ~
 73 9 0 0 0 2
 D1
@@ -841,12 +841,12 @@ D2
 0 -1 7340
 E
 feno~
-A folhagem está coberta pela sujeira.  O cheiro disto faz você sentir-se mal.
+A folhagem estï¿½ coberta pela sujeira.  O cheiro disto faz vocï¿½ sentir-se mal.
 ~
 S
 #7340
 A Parte Sudoeste da Caverna do Basilisco~
-   Você não consegue ver nada, além da fumaça.
+   Vocï¿½ nï¿½o consegue ver nada, alï¿½m da fumaï¿½a.
 ~
 73 9 0 0 0 5
 D0
@@ -864,79 +864,79 @@ D2
 S
 #7341
 A Pequena Caverna~
-   Você está numa pequena caverna.  Você pode ver uma luz no final.  Saídas
+   Vocï¿½ estï¿½ numa pequena caverna.  Vocï¿½ pode ver uma luz no final.  Saï¿½das
 ao norte e sul.
 ~
 73 13 0 0 0 2
 D0
-Você pode ver apenas fumaça.
+Vocï¿½ pode ver apenas fumaï¿½a.
 ~
 ~
 0 -1 7340
 D2
-Você pode ver um brilho azul.  E você sente uma brisa fresca...ahhhh...
+Vocï¿½ pode ver um brilho azul.  E vocï¿½ sente uma brisa fresca...ahhhh...
 ~
 ~
 0 -1 7342
 S
 #7342
 O Fim Norte da Lagoa~
-   Você está com os pés úmidos, você está na água.  A água parece calma.
-Você pode ver que é um grande lago.  Luz penetra na água.
+   Vocï¿½ estï¿½ com os pï¿½s ï¿½midos, vocï¿½ estï¿½ na ï¿½gua.  A ï¿½gua parece calma.
+Vocï¿½ pode ver que ï¿½ um grande lago.  Luz penetra na ï¿½gua.
 ~
 73 8 0 0 0 4
 D0
-Você vê uma pequena caverna.
+Vocï¿½ vï¿½ uma pequena caverna.
 ~
 ~
 0 -1 7341
 D1
-Você vê mais água.
+Vocï¿½ vï¿½ mais ï¿½gua.
 ~
 ~
 0 -1 7343
 D2
-Você pode ver água.
+Vocï¿½ pode ver ï¿½gua.
 ~
 ~
 0 -1 7344
 S
 #7343
 A Lagoa~
-   Você está nadando na água.  Está muito fundo aqui.  Está muito escuro
+   Vocï¿½ estï¿½ nadando na ï¿½gua.  Estï¿½ muito fundo aqui.  Estï¿½ muito escuro
 no final.
 ~
 73 9 0 0 0 8
 D2
-Você pode ver bolhas na água.
+Vocï¿½ pode ver bolhas na ï¿½gua.
 ~
 ~
 0 -1 7345
 D3
-Você vê a água calma.
+Vocï¿½ vï¿½ a ï¿½gua calma.
 ~
 ~
 0 -1 7342
 S
 #7344
 O Final Sul da Lagoa~
-   Você está com água acima de seu pescoço!  Você só consegue ver água.
+   Vocï¿½ estï¿½ com ï¿½gua acima de seu pescoï¿½o!  Vocï¿½ sï¿½ consegue ver ï¿½gua.
 ~
 73 8 0 0 0 5
 D0
-Você pode ver a água calma.
+Vocï¿½ pode ver a ï¿½gua calma.
 ~
 ~
 0 -1 7342
 D1
-Muito escuro para falar, mas você pode sentir algo se aproximando.
+Muito escuro para falar, mas vocï¿½ pode sentir algo se aproximando.
 ~
 ~
 0 -1 7345
 S
 #7345
 A Lagoa~
-   Você está nadando na ESCURIDÃO.  Você sente algo tocando sua perna direita.
+   Vocï¿½ estï¿½ nadando na ESCURIDï¿½O.  Vocï¿½ sente algo tocando sua perna direita.
 ~
 73 9 0 0 0 8
 D0
@@ -945,7 +945,7 @@ Muito escuro para falar.
 ~
 0 -1 7343
 D1
-Você sente uma brisa quente.
+Vocï¿½ sente uma brisa quente.
 ~
 ~
 0 -1 7313
