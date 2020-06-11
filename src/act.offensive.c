@@ -104,7 +104,7 @@ ACMD(do_gassist)
 		return;
 	}
 	if (GROUP(ch))
-		while ((k = (struct char_data *)simple_list(GROUP(ch)->members)) != NULL)
+		while ((k = (struct char_data *)simple_list(ch->group->members)) != NULL)
 		{
 			if ((k != ch) && CAN_SEE(ch, k) && (IN_ROOM(k) == IN_ROOM(ch)) && FIGHTING(k))
 			{
@@ -115,8 +115,7 @@ ACMD(do_gassist)
 					helpee = k;
 			}
 		}
-		
-	 if (!helpee){
+		if ((!k) ||  (!helpee)) {
 		send_to_char(ch, "Você não vê ninguém lutando em seu grupo.\r\n");
 		return;
 	 }
