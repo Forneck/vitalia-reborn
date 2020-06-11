@@ -27,6 +27,7 @@ ACMD(do_whirlwind);
 ACMD(do_bandage);
 ACMD(do_scan);
 ACMD(do_meditate);
+ACMD(do_trip);
 
 void set_spells_function()
 {
@@ -102,6 +103,9 @@ void set_spells_function()
    
     if ((spell = get_spell_by_vnum(SKILL_SCAN)))
    spell->function = do_scan;
+   
+       if ((spell = get_spell_by_vnum(SKILL_TRIP)))
+   spell->function = do_trip;
    
        if ((spell = get_spell_by_vnum(SKILL_MEDITATE)))
    spell->function = do_meditate;
@@ -1711,6 +1715,8 @@ void create_spells_db()
  new_spell->effectiveness = strdup("100");
  new_spell->assign[0].class_num = CLASS_RANGER;
  new_spell->assign[0].level = 10;
+  new_spell->assign[1].class_num = CLASS_THIEF;
+ new_spell->assign[1].level = 7;
 
  spedit_save_internally(new_spell);
 
@@ -1733,6 +1739,20 @@ void create_spells_db()
  new_spell->assign[3].level = 8;
   new_spell->assign[4].class_num = CLASS_BARD;
  new_spell->assign[4].level = 56;
+
+ spedit_save_internally(new_spell);
+ 
+  /*TRIP*/
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+ new_spell->vnum = SKILL_TRIP;
+ new_spell->status = available;
+ new_spell->name = strdup("trip");
+ new_spell->function = do_trip;
+ new_spell->type = SKILL;
+ new_spell->effectiveness = strdup("100");
+  new_spell->assign[0].class_num = CLASS_BARD;
+ new_spell->assign[0].level = 35;
 
  spedit_save_internally(new_spell);
 
