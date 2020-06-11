@@ -1,21 +1,18 @@
 VITALIAMUD ABBAMUD
 
-   O Mundo de Vitália (originalmente como AbbaMUD) foi criado em agosto de
+   O Mundo de Vit�lia (originalmente como AbbaMUD) foi criado em agosto de
 1995, na Universidade de Campinas (UNICAMP), por Vitor de Paula.  Em 1996, o
 MUD foi temporariamente fechado, para depois, em dezembro do mesmo ano, ser
-reaberto.
+reaberto de forma definitiva no provedor onde at� hoje est� hospedado.
 
    Em outubro de 2000, devido a mudan�as na estrutura e na equipe de
-trabalho, mudou de nome para "O Mundo de Vit�lia" (VitaliaMUD). Ao redor de 2003 ele foi fechado, mas reaberto depois de quase 20 anos com outra equipe.
-   Em 2020, houve uma reformulação e atualizacão do sistema interno passando a se chamar "O Mundo de Vitália - Reborn", com referencia a reabertura.
+trabalho, mudou de nome para "O Mundo de Vit�lia" (VitaliaMUD).
 
-   O serviço é disponibilizado de forma gratuita a todos os jogadores
+   O servi�o � disponibilizado de forma gratuita a todos os jogadores
 brasileiros, ou que falem a l�ngua portuguesa.  Ele � mantido como um hobby
 pelos seus atuais mantenedores, e nunca se espera que o Mundo de Vit�lia se
 torne uma fonte de lucro ou preju�zo.
-
-
-#0
+#
 AC
 
    "AC" (armor class) � seu nivel de armadura.  � representado por um n�mero
@@ -32,7 +29,7 @@ que varia entre 10 e -20, definido assim:
 Isso indica 78 em uma escala de -200 a 100 (ou 7.8 na escala de -20 a 10).
 
 Veja tamb�m: SCORE
-#0
+#
 ALINHAMENTO
 
    O alinhamento indica se um personagem � bom ou mau.  � um n�mero que pode
@@ -42,8 +39,8 @@ ser� sua bondade, e quanto mais negativo, maior ser� sua maldade.
    Em regra geral, usa-se a seguinte escala:
 
    -1000                 -350          0          350                  +1000
-   @R|-----------------------|@g-----------@W|@g-----------@B|-----------------------|@n
-        @RPersonagem Mau         @gPersonagem Neutro         @BPersonagem Bom@n
+   &R|-----------------------|&g-----------&W|&g-----------&B|-----------------------|&n
+        &RPersonagem Mau         &gPersonagem Neutro         &BPersonagem Bom&n
 
    O alinhamento de um personagem se altera ao se matar outros personagens.
 Ao matar outro personagem, o alinhamento do agressor tende a se tornar o
@@ -57,153 +54,153 @@ personagens bons.  H� tamb�m, monstros que atacam personagens de determinado
 alinhamento, como por exemplo, as l�mias, que s� atacam personagens bons.
 
 Veja tamb�m: SCORE
-#0
+#
 �REAS AREAS
 
    Aqui est�o listadas todas as �reas do Mundo de Vit�lia.
 
-   @WNOVAS �REAS EXCLUSIVAS DO MUNDO DE VIT�LIA:@n
+   &WNOVAS �REAS EXCLUSIVAS DO MUNDO DE VIT�LIA:&n
 
-@R   Nome da �rea                           Cria��o@n
+&R   Nome da �rea                           Cria��o&n
 
- @R*@g Gondolin, o Reino Oculto               @WEomer
- @R*@g Valfenda                               @WSilverbolt
- @R*@g O Imp�rio Chin�s                       @WTantalus
+ &R*&g Gondolin, o Reino Oculto               &WEomer
+ &R*&g Valfenda                               &WSilverbolt
+ &R*&g O Imp�rio Chin�s                       &WTantalus
 
- @R*@g Embaixada dos Cl�s de Vit�lia          @WEomer, Tantalus
-       @g�rea desenvolvida e constru�da
-       @ga partir de id�ias e conceitos
-       @genviados por:                      @WKen, Kidaf, Aqua e Azlan.
+ &R*&g Embaixada dos Cl�s de Vit�lia          &WEomer, Tantalus
+       &g�rea desenvolvida e constru�da
+       &ga partir de id�ias e conceitos
+       &genviados por:                      &WKen, Kidaf, Aqua e Azlan.
 
- @R*@g O Museu do Colecionador                @WEomer
-       @g�rea desenvolvida e constru�da
-       @ga partir de id�ias e conceitos
-       @genviados por:                      @WKestor e Phillipe
+ &R*&g O Museu do Colecionador                &WEomer
+       &g�rea desenvolvida e constru�da
+       &ga partir de id�ias e conceitos
+       &genviados por:                      &WKestor e Phillipe
 
-   @W�REA EXCLUSIVA PARA IMORTAIS DO MUNDO DE VIT�LIA:@n
+   &W�REA EXCLUSIVA PARA IMORTAIS DO MUNDO DE VIT�LIA:&n
 
-@R   Nome da �rea                           Cria��o@n
- @R*@g O Arquip�lago de Yo                    @WSilverbolt
+&R   Nome da �rea                           Cria��o&n
+ &R*&g O Arquip�lago de Yo                    &WSilverbolt
 
-    @WNOVAS �REAS TRADUZIDAS DO MUNDO DE VIT�LIA:@n
+    &WNOVAS �REAS TRADUZIDAS DO MUNDO DE VIT�LIA:&n
 
-@R   Nome da �rea                           Tradu��o@n
+&R   Nome da �rea                           Tradu��o&n
 
- @R*@g Templo dos Ladr�es                     @WAlexander
- @R*@g Ghenna                                 @WEomer
- @R*@g O Moinho de Vento                      @WTantalus
- @R*@g As Cavernas dos Homens Brancos         @WPorter e Tantalus
- @R*@g O Asilo dos Novos                      @WJarkeld
- @R*@g O Farol da Praia                       @WPorter e Tantalus
+ &R*&g Templo dos Ladr�es                     &WAlexander
+ &R*&g Ghenna                                 &WEomer
+ &R*&g O Moinho de Vento                      &WTantalus
+ &R*&g As Cavernas dos Homens Brancos         &WPorter e Tantalus
+ &R*&g O Asilo dos Novos                      &WJarkeld
+ &R*&g O Farol da Praia                       &WPorter e Tantalus
  
-   @W�REAS EXCLUSIVAS DO MUNDO DE VIT�LIA:@n
+   &W�REAS EXCLUSIVAS DO MUNDO DE VIT�LIA:&n
 
-@R   Nome da �rea                           Constru��o@n
+&R   Nome da �rea                           Constru��o&n
  
- @R*@g Os Estrategistas de Vit�lia            @WEomer
- @R*@g Aldeia Maldita                         @WHarry e Tantalus
- @R*@g O Condado                              @WSilverbolt
- @R*@g A Aldeia de Bri                        @WSilverbolt
- @R*@g Lothl�rien                             @WSilverbolt
- @R*@g A Fenda Entre Mundos                   @WNemesis
- @R*@g Svarga, O Reino Celestial              @WNemesis
- @R*@g O S�timo Mundo Oculto, Patala          @WNemesis
- @R*@g Bhogavati, A Cidade das J�ias          @WNemesis
- @R*@g O Pal�cio Ancestral de Sesha           @WNemesis@n
- @R*@g O Castelo de Flyre                     @WHarry
- @R*@g Os Campos de Midgaard                  @WBlug
- @R*@g A Trilha do Destino                    @WInfernal
- @R*@g Os Cinco Reinos                        @WBoromir
- @R*@g Templos Imortais                       @WBoromir
- @R*@g O Abismo                               @WInfernal
- @R*@g O Subterr�neo                          @WInfernal
- @R*@g O Para�so dos Drag�es                  @WSilverbolt
- @R*@g O Egito                                @WMelchiah
- @R*@g Os Caminhos Iniciais                   @WMaegali
- @R*@g As Mesnadas de Vit�lia                 @WMaegali
- @R*@g O Labirinto das Almas Perdidas         @WBoromir
- @R*@g O Vale dos Orcs Negros                 @WBoromir
- @R*@g Lindrel                                @WNemesis
- @R*@g Escandin�via, a Terra do Gelo          @WSilverbolt
- @R*@g O Reino das Pedras                     @WInfernal
- @R*@g A Cidade de Tr�ia                      @WSilverbolt
- @R*@g Ot�via                                 @WSilverbolt
- @R*@g Os Desafios de Vit�lia                 @WBoromir
- @R*@g O Santu�rio das Gl�rias                @WMaegali
- @R*@g O Banco de Vit�lia                     @WBlug
- @R*@g A Confraria de Vit�lia                 @WBlug
- @R*@g O Jornal de Vit�lia                    @WBlug
- @R*@g A Biblioteca de Vit�lia                @WMaegali
+ &R*&g Os Estrategistas de Vit�lia            &WEomer
+ &R*&g Aldeia Maldita                         &WHarry e Tantalus
+ &R*&g O Condado                              &WSilverbolt
+ &R*&g A Aldeia de Bri                        &WSilverbolt
+ &R*&g Lothl�rien                             &WSilverbolt
+ &R*&g A Fenda Entre Mundos                   &WNemesis
+ &R*&g Svarga, O Reino Celestial              &WNemesis
+ &R*&g O S�timo Mundo Oculto, Patala          &WNemesis
+ &R*&g Bhogavati, A Cidade das J�ias          &WNemesis
+ &R*&g O Pal�cio Ancestral de Sesha           &WNemesis&n
+ &R*&g O Castelo de Flyre                     &WHarry
+ &R*&g Os Campos de Midgaard                  &WBlug
+ &R*&g A Trilha do Destino                    &WInfernal
+ &R*&g Os Cinco Reinos                        &WBoromir
+ &R*&g Templos Imortais                       &WBoromir
+ &R*&g O Abismo                               &WInfernal
+ &R*&g O Subterr�neo                          &WInfernal
+ &R*&g O Para�so dos Drag�es                  &WSilverbolt
+ &R*&g O Egito                                &WMelchiah
+ &R*&g Os Caminhos Iniciais                   &WMaegali
+ &R*&g As Mesnadas de Vit�lia                 &WMaegali
+ &R*&g O Labirinto das Almas Perdidas         &WBoromir
+ &R*&g O Vale dos Orcs Negros                 &WBoromir
+ &R*&g Lindrel                                &WNemesis
+ &R*&g Escandin�via, a Terra do Gelo          &WSilverbolt
+ &R*&g O Reino das Pedras                     &WInfernal
+ &R*&g A Cidade de Tr�ia                      &WSilverbolt
+ &R*&g Ot�via                                 &WSilverbolt
+ &R*&g Os Desafios de Vit�lia                 &WBoromir
+ &R*&g O Santu�rio das Gl�rias                &WMaegali
+ &R*&g O Banco de Vit�lia                     &WBlug
+ &R*&g A Confraria de Vit�lia                 &WBlug
+ &R*&g O Jornal de Vit�lia                    &WBlug
+ &R*&g A Biblioteca de Vit�lia                &WMaegali
 
-   @W�REAS TRADUZIDAS E ADAPTADAS PARA O MUNDO DE VIT�LIA:@N
+   &W�REAS TRADUZIDAS E ADAPTADAS PARA O MUNDO DE VIT�LIA:&N
 
-@R   Nome da �rea                           Tradu��o@n
+&R   Nome da �rea                           Tradu��o&n
  
- @R*@g Os Mist�rios de Midantra               @wEdin
- @R*@g Notre Dame                             @wTantalus
- @R*@g O Canyon dos Elementais                @wEomer
- @R*@g Torin                                  @wLork
- @R*@g O Castelo dos Vampiros                 @wTantalus
- @R*@g A Selva de Makira                      @wZibaus
- @R*@g Mordecai                               @wKafei
- @R*@g O Navio Fantasma                       @wTantalus
- @R*@g O Reino dos Mortos Vivos               @wTantalus
- @R*@g O Labirinto do Minotauro               @wTantalus
- @R*@g A Vila de Villspah                     @wTantalus
- @R*@g Templo Samurai                         @wGalaaz
- @R*@g O Grande Festival                      @wMaegali
- @R*@g A Vila dos Gnomos                      @wMaegali
- @R*@g Camelot                                @wNemesis
- @R*@g Os Bosques Elfos                       @wBoromir
- @R*@g Graye                                  @wBoromir
- @R*@g O Templo do Grande B�falo              @wBoromir
- @R*@g As Plan�cies de Callyus                @wMaegali
- @R*@g A Torre do Bar�o de Cailveh            @wMaegali/Melchiah
- @R*@g Bandar, A Cidade Maldita               @wMaegali/Melchiah
- @R*@g O Saf�ri no Covil dos Lagartos         @wLork
- @R*@g O Escaldante Deserto de Kubalai        @wMaegali/Melchiah
- @R*@g Gal�xia                                @wNemesis
- @R*@g O Altar de Sacrif�cios de Raantra      @wMaegali/Melchiah
- @R*@g A Floresta Sombria                     @wBoromir/Melchiah
- @R*@g O Abismo Profundo                      @wBoromir/Melchiah
- @R*@g A Cidade de Thewster                   @wBoromir/Melchiah
- @R*@g A Floresta Tropical de Thewster        @wBoromir/Melchiah
- @R*@g A Floresta Leste de Thewster           @wBoromir/Melchiah
- @R*@g O Labirinto do Milharal                @wWery
- @R*@g A Grande �rvore dos Iniciantes         @wMaegali
- @R*@g Ancalador e a Guilda dos Necromantes   @wMaegali
- @R*@g Nos Dom�nios do Bar�o Darwin           @wLork
- @R*@g O Castelo de Jareth                    @wMaegali
- @R*@g Os Templos de Anura                    @wKafei
- @R*@g Qui'Lur                                @wEomer
+ &R*&g Os Mist�rios de Midantra               &wEdin
+ &R*&g Notre Dame                             &wTantalus
+ &R*&g O Canyon dos Elementais                &wEomer
+ &R*&g Torin                                  &wLork
+ &R*&g O Castelo dos Vampiros                 &wTantalus
+ &R*&g A Selva de Makira                      &wZibaus
+ &R*&g Mordecai                               &wKafei
+ &R*&g O Navio Fantasma                       &wTantalus
+ &R*&g O Reino dos Mortos Vivos               &wTantalus
+ &R*&g O Labirinto do Minotauro               &wTantalus
+ &R*&g A Vila de Villspah                     &wTantalus
+ &R*&g Templo Samurai                         &wGalaaz
+ &R*&g O Grande Festival                      &wMaegali
+ &R*&g A Vila dos Gnomos                      &wMaegali
+ &R*&g Camelot                                &wNemesis
+ &R*&g Os Bosques Elfos                       &wBoromir
+ &R*&g Graye                                  &wBoromir
+ &R*&g O Templo do Grande B�falo              &wBoromir
+ &R*&g As Plan�cies de Callyus                &wMaegali
+ &R*&g A Torre do Bar�o de Cailveh            &wMaegali/Melchiah
+ &R*&g Bandar, A Cidade Maldita               &wMaegali/Melchiah
+ &R*&g O Saf�ri no Covil dos Lagartos         &wLork
+ &R*&g O Escaldante Deserto de Kubalai        &wMaegali/Melchiah
+ &R*&g Gal�xia                                &wNemesis
+ &R*&g O Altar de Sacrif�cios de Raantra      &wMaegali/Melchiah
+ &R*&g A Floresta Sombria                     &wBoromir/Melchiah
+ &R*&g O Abismo Profundo                      &wBoromir/Melchiah
+ &R*&g A Cidade de Thewster                   &wBoromir/Melchiah
+ &R*&g A Floresta Tropical de Thewster        &wBoromir/Melchiah
+ &R*&g A Floresta Leste de Thewster           &wBoromir/Melchiah
+ &R*&g O Labirinto do Milharal                &wWery
+ &R*&g A Grande �rvore dos Iniciantes         &wMaegali
+ &R*&g Ancalador e a Guilda dos Necromantes   &wMaegali
+ &R*&g Nos Dom�nios do Bar�o Darwin           &wLork
+ &R*&g O Castelo de Jareth                    &wMaegali
+ &R*&g Os Templos de Anura                    &wKafei
+ &R*&g Qui'Lur                                &wEomer
 
-   @W�REAS HERDADAS DO CIRCLEMUD@n
+   &W�REAS HERDADAS DO CIRCLEMUD&n
 
-@R   Nome da �rea                           Tradu��o@n
- @R*@g Midgaard                               @wBlug/Maegali/Nemesis
- @R*@g Zona dos Iniciantes                    @wMaegali
- @R*@g Roma                                   @wMaegali
- @R*@g O Tabuleiro de Xadrez                  @wMaegali
- @R*@g Moria                                  @wBoromir
- @R*@g O Grande Deserto Oriental              @wMelchiah
- @R*@g O Caminho da Virtude                   @wMaegali/Melchiah
- @R*@g A Cidade Drow                          @wJunior
- @R*@g O Castelo do Rei Welmar                @wJunior
- @R*@g O Tr�s de Espadas                      @wJunior
- @R*@g O Reino dos An�es                      @wJunior
- @R*@g A Torre de Rand                        @wHellraiser
- @R*@g A Cidade de Thalos                     @wZarathus
- @R*@g Ilha do Rio de Minos                   @wAvispom
- @R*@g Miden'Nir                              @wAzmodan
- @R*@g A Resid�ncia de Redferne               @wAzmodan
- @R*@g Arachnos                               @wGalaaz
- @R*@g A Alta Torre da Magia                  @wAvispom
- @R*@g A Grande Pir�mide                      @wMaegali/Melchiah
- @R*@g A Plan�cie dos Orcs                    @wMaegali/Morpheus
- @R*@g Os Esgotos                             @wMaegali/Morpheus
- @R*@g Nova Thalos                            @wMelchiah
- @R*@g A Floresta Haon-Dor                    @wMaegali@n
-#0
+&R   Nome da �rea                           Tradu��o&n
+ &R*&g Midgaard                               &wBlug/Maegali/Nemesis
+ &R*&g Zona dos Iniciantes                    &wMaegali
+ &R*&g Roma                                   &wMaegali
+ &R*&g O Tabuleiro de Xadrez                  &wMaegali
+ &R*&g Moria                                  &wBoromir
+ &R*&g O Grande Deserto Oriental              &wMelchiah
+ &R*&g O Caminho da Virtude                   &wMaegali/Melchiah
+ &R*&g A Cidade Drow                          &wJunior
+ &R*&g O Castelo do Rei Welmar                &wJunior
+ &R*&g O Tr�s de Espadas                      &wJunior
+ &R*&g O Reino dos An�es                      &wJunior
+ &R*&g A Torre de Rand                        &wHellraiser
+ &R*&g A Cidade de Thalos                     &wZarathus
+ &R*&g Ilha do Rio de Minos                   &wAvispom
+ &R*&g Miden'Nir                              &wAzmodan
+ &R*&g A Resid�ncia de Redferne               &wAzmodan
+ &R*&g Arachnos                               &wGalaaz
+ &R*&g A Alta Torre da Magia                  &wAvispom
+ &R*&g A Grande Pir�mide                      &wMaegali/Melchiah
+ &R*&g A Plan�cie dos Orcs                    &wMaegali/Morpheus
+ &R*&g Os Esgotos                             &wMaegali/Morpheus
+ &R*&g Nova Thalos                            &wMelchiah
+ &R*&g A Floresta Haon-Dor                    &wMaegali&n
+#
 ASSOCIACOES
 
 As associa��es s�o os lugares onde os mortais podem ir para escapar dos
@@ -213,7 +210,7 @@ lugares onde as pessoas v�o para aprender e praticar as habilidades de sua
 classe.
 
 Veja tamb�m: PRACTICE
-#0
+#
 BARDO BARD
 
 Cantor nato, mestre nos instrumentos, quem pertence a essa classe tem o
@@ -225,7 +222,7 @@ Voc� pode melhorar suas can��es, magias e habilidades usando o comando
 PRACTICE.
 
 Veja tamb�m: PRACTICE
-#0
+#
 CARDS CARTAS
 
    H� muito tempo atr�s, existiu em Vit�lia um grande aventureiro.  Este
@@ -255,7 +252,7 @@ Vit�lia.
    Esta � a hist�ria dos card's de Vit�lia e do Museu do Colecionador.
 
 
-   @WInforma��es Gerais@n
+   &WInforma��es Gerais&n
 
    As Cartas Colecion�veis de Vit�lia ou apenas Card's de Vit�lia, s�o mais
 uma op��o de divers�o e buscas para os aventureiros de Vit�lia.
@@ -267,28 +264,28 @@ procure atentamente.
    Os Card's s�o separados em quatro s�ries distintas sendo elas:
 
 
-   @WPersonalidades@n
+   &WPersonalidades&n
 
    S�rie dedicada aos Deuses, Clans e Her�is de Vit�lia.  Esta ser� uma
 s�rie muito especial, pois aqui teremos as pessoas que s�o (ou foram)
 exemplos para todos n�s.
 
 
-   @WMOB's@n
+   &WMOB's&n
 
    S�rie dedicada aos MOB's de Vit�lia, aqui se encontrar� s�ries sobres
 tipos especificos de MOB's, ra�as, bons, maus, enfim todo o tipo de criatura
 que habite Vit�lia poder� ser encontrado nesta s�rie.
 
 
-   @WItens@n
+   &WItens&n
 
    S�rie dedicada aos equipamentos de Vit�lia, ser� compostas por s�ries de
 grupos de equipamentos que tenham, de certa forma, algum tipo de
 relacionamento.
 
 
-   @W�reas@n
+   &W�reas&n
 
    S�rie dedicada �s �reas de Vit�lia, ser� composta por cartas que mostram
 as belezas e os horrores de Vit�lia, contendo cartas dos quatro cantos de
@@ -313,11 +310,11 @@ s�rie em m�os e solicitar via pray que um Deus fa�a a troca.
 trocas, estas regras se encontram nas listas de card's fixadas no museu.
 
 
-   @WRegras Gerais para as cartas@n
+   &WRegras Gerais para as cartas&n
 
-   1- � @Rproibido@n o uso de mais de um Coringa na mesma s�rie;
+   1- � &Rproibido&n o uso de mais de um Coringa na mesma s�rie;
 
-   2- � @Rproibido@n VENDER ou LEILOAR qualquer tipo de Carta.  As vendas
+   2- � &Rproibido&n VENDER ou LEILOAR qualquer tipo de Carta.  As vendas
 dever�o ser feitas APENAS no MUSEU DO COLECIONADOR ou poder�o ser livremente
 trocadas pelos jogadores que as estejam colecionando.  Se for observado que
 est�o tentando desvirtuar o objetivo dessa fun��o, os envolvidos ter�o TODAS
@@ -327,17 +324,17 @@ as suas Cartas confiscados, incondicionalmente.
 
    4- O verdadeiro colecionador entende o objetivo desse sistema de Cartas e
 o valoriza.
-#0
+#
 CASAMENTO CASAMENTOS
 
-               @B*@C @uInforma��es sobre casamentos @B*@n
+               &B*&C &uInforma��es sobre casamentos &B*&n
 
-   @c*@n Os jogadores que desejam se casar, devem com pelo menos uma semana de 
+   &c*&n Os jogadores que desejam se casar, devem com pelo menos uma semana de 
 anteced�ncia, avisar os Deuses do Mundo de Vit�lia, e marcar o casamento.
 
-   @c*@n A cerim�nia de casamento � oferecida � todos os jogadores de Vit�lia 
+   &c*&n A cerim�nia de casamento � oferecida � todos os jogadores de Vit�lia 
 gratuitamente.
-#0
+#
 CASAS
 
    Casas s�o lugares especiais, lares de nobres aventureiros, capazes de
@@ -362,8 +359,8 @@ casa.
 uma casa, como segue:
 
    --------------------------------------------------------------------------
-                    @gConstru��o: @n        2.000.000 moedas
-                    @gImposto...: @n        1.000.000 moedas
+                    &gConstru��o: &n        2.000.000 moedas
+                    &gImposto...: &n        1.000.000 moedas
    --------------------------------------------------------------------------
 
    O imposto � cobrado pela prefeitura de sua cidade, e o valor � debitado
@@ -373,11 +370,11 @@ sua conta banc�ria no dia do pagamento, ou caso contr�rio correr� o risco 
 perder sua propriedade.
 
    Se voc� deseja ter a sua casa, envie uma mensagem de e-mail para
-@Bajuda@mud.linkway.com.br@n.  Por seguran�a, a mensagem deve ser enviada pelo
+&Bajuda@mud.linkway.com.br&n.  Por seguran�a, a mensagem deve ser enviada pelo
 mesmo endere�o de e-mail cadastrado no seu personagem.
 
 Veja tamb�m: HOUSE
-#0
+#
 QUADROS
 
    Quadros s�o o f�rum de comunica��o entre os jogadores do Mundo de
@@ -410,7 +407,7 @@ Exemplos:
   > remove 6
 
 Veja tamb�m: EDITOR, READ, WRITE, MAIL
-#0
+#
 CLASSES
 
    No VitaliaMUD, existem atualmente 6 classes: Clerigos, Guerreiros, Magos,
@@ -419,7 +416,7 @@ exclusivas.  Para obter mais ajuda sobre sua classe, consulte o HELP seguido
 para sua classe.
 
 Veja tamb�m: CLERIGO, GUERREIRO, MAGO, LADRAO, DRUIDA, BARDO
-#0
+#
 CLERIGO CLERIC
 
 Clerigos tem uma velha crenca em nao carregar armas afiadas.  Portanto, eles
@@ -432,7 +429,7 @@ Voce pode melhorar suas magias usando o comando PRACTICE.
 Utilize o comando SPELL para uma lista das magias disponiveis.
 
 Veja tamb�m: PRACTICE, SPELL
-#0
+#
 CONEXAO LINK
 
 Varios jogadores tem problemas com suas conexoes com o jogo.  Isto pode ser
@@ -449,7 +446,7 @@ II. Se a sua conexao parar (congelar), voce tem um problema.  A unica solucao
 
     Nao tente escapar de uma luta cortando a conexao.  Voce vai receber nenhuma
     experiencia ou equipamento se voce propositalmente cortar sua conexao.
-#0
+#
 CORES ANSI
 
    No VitaliaMUD, voce pode escrever mensagens utilizando cores se o seu nivel
@@ -459,17 +456,17 @@ exceto no titulo e na linha de assunto em uma mensagem no quadro.
    Para adicionar cores as suas mensagens, utilize os seguintes codigos em
 suas mensagens:
 
-  @vCores de letra:                       @n   @vCores de fundo:@n   @vOutros:        @n
-  @n@@l = @lPreto      @n   @@L = @LCinza escuro  @n   @@0 = @w@0Preto     @n   @@n = Normal
-  @n@@r = @rVermelho   @n   @@R = @RVermelho claro@n   @@1 = @w@1Vermelho  @n   @@v = @vReverso   @n
-  @n@@m = @mMagenta    @n   @@M = @MMagenta claro @n   @@2 = @w@2Magenta   @n   @@u = @uSublinhado@n
-  @n@@b = @bAzul       @n   @@B = @BAzul claro    @n   @@3 = @w@3Azul      @n   @@f = @fPiscante  @n
-  @n@@c = @cCiano      @n   @@C = @CCiano claro   @n   @@4 = @l@4Ciano     @n
-  @n@@g = @gVerde      @n   @@G = @GVerde claro   @n   @@5 = @l@5Verde     @n
-  @n@@y = @yMarrom     @n   @@Y = @YAmarelo       @n   @@6 = @l@6Marrom    @n
-  @n@@w = @wCinza claro@n   @@W = @WBranco        @n   @@7 = @l@7Cinza     @n
+  &vCores de letra:                       &n   &vCores de fundo:&n   &vOutros:        &n
+  &n&&l = &lPreto      &n   &&L = &LCinza escuro  &n   &&0 = &w&0Preto     &n   &&n = Normal
+  &n&&r = &rVermelho   &n   &&R = &RVermelho claro&n   &&1 = &w&1Vermelho  &n   &&v = &vReverso   &n
+  &n&&m = &mMagenta    &n   &&M = &MMagenta claro &n   &&2 = &w&2Magenta   &n   &&u = &uSublinhado&n
+  &n&&b = &bAzul       &n   &&B = &BAzul claro    &n   &&3 = &w&3Azul      &n   &&f = &fPiscante  &n
+  &n&&c = &cCiano      &n   &&C = &CCiano claro   &n   &&4 = &l&4Ciano     &n
+  &n&&g = &gVerde      &n   &&G = &GVerde claro   &n   &&5 = &l&5Verde     &n
+  &n&&y = &yMarrom     &n   &&Y = &YAmarelo       &n   &&6 = &l&6Marrom    &n
+  &n&&w = &wCinza claro&n   &&W = &WBranco        &n   &&7 = &l&7Cinza     &n
 
-   Termine sempre as mensagens com o codigo '@@n', que desativa todas as
+   Termine sempre as mensagens com o codigo '&&n', que desativa todas as
 cores.  Tenha em mente tamb�m que nem todos os terminais sao capazes de exibir
 cores.
 
@@ -477,7 +474,7 @@ cores.
 (especialmente as piscantes) sao incomodas.
 
 Veja tamb�m: COLOR
-#0
+#
 DEUSES GODS
 
 Deuses sao jogadores de muita experiencia no mud, portanto nao e' recomendavel
@@ -488,7 +485,7 @@ costumam ficar visiveis para os jogadores.
 Os Deuses tamb�m contribuem com as implementacoes do mud.
 
 Veja tamb�m: IMORTAIS
-#0
+#
 DRUIDA
 
 Essa � a classe dos aliados da Natureza, o que os torna seus protetores e
@@ -501,7 +498,7 @@ Voc� pode melhorar suas magias usando o comando PRACTICE.
 Utilize o comando SPELL para uma lista das magias dispon�veis.
 
 Veja tamb�m: PRACTICE, SPELL
-#0
+#
 EXPERIENCIA XP
 
 Quando voce mata um monstro, voce recebe pontos de experiencia. Quando voce
@@ -516,10 +513,10 @@ Coisa que voce deve saber sobre pontos de experiencia:
     ganhar menos pontos de experiencia.
 
 Veja tamb�m: GROUP, SCORE
-#0
+#
 FAMILIAS FAM�LIAS
 
-   @R*@n @u@YSauda��es � todas as Ilustres Fam�lias de Vit�lia!@n @R*@n
+   &R*&n &u&YSauda��es � todas as Ilustres Fam�lias de Vit�lia!&n &R*&n
 
    Dado o grande n�mero de Fam�lias existentes em nosso mundo, e, visando
 dar a elas um mecanismo que lhes facilite a devida organiza��o, foi criado
@@ -551,7 +548,7 @@ fam�lia devem ter renascido.
 
    � importante observar que n�o trocamos simplesmente a nossa fam�lia,
 portanto, os membros de uma ter�o a sua entrada a outras vedada.
-#0
+#
 FLAGS
 
 Jogadores as vezes tem "flags" apos seus nomes na lista do comando WHO.
@@ -574,14 +571,14 @@ Estas "flags" estao sempre entre parenteses.
                ordenada pelos Deuses.
 
 Veja tamb�m: NOSHOUT, NOTELL, QUEST, STEAL, VISIBLE
-#0
+#
 HER�IS HEROES
 
-   @R*@g O que � um Her�i?@n
+   &R*&g O que � um Her�i?&n
    � aquele que coloca seu companheiro acima de si mesmo
    e torna-se verdadeira fonte de inspira��o para muitos.
 
-   @R*@g Qual o maior sonho de qualquer Vitaliano?@n
+   &R*&g Qual o maior sonho de qualquer Vitaliano?&n
    Tornar-se um Her�i, uma Lenda.
 
    S�o 3 os objetivos desta Lista:
@@ -596,39 +593,39 @@ HER�IS HEROES
 
    Para se tornar um verdadeiro Her�i:
 
-   @R*@g- � preciso ser um Aventureiro digno e honrado, n�o possuir
+   &R*&g- � preciso ser um Aventureiro digno e honrado, n�o possuir
    antecedentes criminais, mas, se os tiver, transformar seu passado em
-   exemplo e seguir em frente, dando bons exemplos.@n
+   exemplo e seguir em frente, dando bons exemplos.&n
 
-   @R*@g- Ter participado de pelo menos um Grande Desafio, realizado um
+   &R*&g- Ter participado de pelo menos um Grande Desafio, realizado um
    grande feito ou uma grande conquista.  N�o est�o inclu�das as Quests
-   realizadas pelos Deuses.@n
+   realizadas pelos Deuses.&n
 
-   @R*@g- Ser um verdadeiro Aventureiro.  Algu�m que cultua a humildade, a
+   &R*&g- Ser um verdadeiro Aventureiro.  Algu�m que cultua a humildade, a
    gentileza e acima de tudo, aquele que respeita seu semelhante, tratando-o
    sempre em acordo com os princ�pios da igualdade e fraternidade.
    O Aventureiro n�o faz diferen�a entre n�vel ou status entre seus
    semelhantes.  E precisa ser, ex�mio conhecedor e explorador de seu mundo.
-   N�o um ca�ador de Xp e de equipamentos.@n
+   N�o um ca�ador de Xp e de equipamentos.&n
 
-   @R*@g- Ser uma pessoa de bem, que sabe discutir com equil�brio e
+   &R*&g- Ser uma pessoa de bem, que sabe discutir com equil�brio e
    sabedoria e que jamais se sente menor quando percebe que errou e se
-   desculpa.@n
+   desculpa.&n
 
-   @R*@g- E acima de tudo, ter um bom cora��o.  Fazer o bem pelo simples
-   fato de faz�-lo, sem interesses ou motivos torpes.@n
+   &R*&g- E acima de tudo, ter um bom cora��o.  Fazer o bem pelo simples
+   fato de faz�-lo, sem interesses ou motivos torpes.&n
 
-   @R*@g- Ao alcan�ar a Lista de Her�is, o jogador passar� a fazer parte
+   &R*&g- Ao alcan�ar a Lista de Her�is, o jogador passar� a fazer parte
    desta preciosa galeria de pessoas dignas que passaram por este mundo e
    deixaram sua mensagem.  Ter�o seus nomes homenageados na lista e uma
    est�tua, que ser� erigida no Santu�rio das Gl�rias.  Seu nome s�mente
    ser� retirado da Lista se o jogador se tornar imortal ou se sua conduta
    se modificar radicalmente.  E para que ele mesmo jamais se esque�a desta
    honra, levar� consigo uma Medalha, que ser� entregue por um Deus, em
-   cerim�nia aberta a todo o povo de Vit�lia.@n
+   cerim�nia aberta a todo o povo de Vit�lia.&n
 
-   @R*@g Lute por essa conquista... Torne-se um verdadeiro Her�i.@n
-#0
+   &R*&g Lute por essa conquista... Torne-se um verdadeiro Her�i.&n
+#
 "HIT POINTS" HP
 
 Hit points, ou simplesmente 'hp', sao seus pontos de vida. Cada vez que voce e'
@@ -645,7 +642,7 @@ variando de acordo com sua classe, seu nivel, sua idade, sua constituicao e sua
 sorte.
 
 Veja tamb�m: CONSTITUTION, SLEEP, SCORE, DISPLAY
-#0
+#
 IDADE
 
    A idade do personagem define basicamente a velocidade da recupera��o dos
@@ -684,7 +681,7 @@ pontos (hp, mn, mv) na passagem de cada hora/mud.
    -+----------------------------------------------------------------> idade
     ' 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72
 
-#0
+#
 IMORTAIS IMMORTALS
 
 Quando um jogador completar seu centesimo nivel, chegando ao nivel 101, ele se
@@ -697,7 +694,7 @@ Imortais tem acesso a uma area especial, e podem ver e conversar com Deuses
 mais livremente.
 
 Veja tamb�m: DEUSES
-#0
+#
 MAGO MAGE
 
 Esta e' a classe das magias poderosas e violentas, mas o mago nao pode
@@ -708,7 +705,7 @@ Voce pode melhorar suas magias usando o comando PRACTICE.
 Utilize o comando SPELL para uma lista das magias disponiveis.
 
 Veja tamb�m: PRACTICE, SPELL
-#0
+#
 MANA MN
 
 Mana sao seus pontos de magia, e sao usadas quando voce lanca magias.  Voce
@@ -717,60 +714,60 @@ Se voce nao tem mana suficiente para lancar uma magia, voce deve descansar ou
 meditar enquanto voce ganha os pontos suficientes.
 
 Veja tamb�m: SPELL, REST, MEDITATE, SCORE
-#0
+#
 MESNADAS
 
-@YSauda��es a todas as ilustres Casas de Vit�lia.@n
+&YSauda��es a todas as ilustres Casas de Vit�lia.&n
 
-   @yViemos atrav�s desta mensagem fazer algumas considera��es sobre a postura
+   &yViemos atrav�s desta mensagem fazer algumas considera��es sobre a postura
 dos membros dos cl�s em uma mesnadas, ou seja, o controlador do campe�o e
-tamb�m a torcida, desta forma podemos evitar aborrecimentos para todos n�s.@n
+tamb�m a torcida, desta forma podemos evitar aborrecimentos para todos n�s.&n
 
-@u@RComportamento Geral:@n
+&u&RComportamento Geral:&n
 
-   @G*@n As mesnadas s�o realizadas para divertimento de todos, logo, trate com
+   &G*&n As mesnadas s�o realizadas para divertimento de todos, logo, trate com
 respeito os participantes dos outros cl�s, assim tamb�m ser� respeitado.
 
-   @G*@n As regras do policy continuam validas, portanto n�o h� motivo algum
+   &G*&n As regras do policy continuam validas, portanto n�o h� motivo algum
 para desrespeitar nenhuma.
 
-   @G*@n � proibido lan�ar qualquer magia nos camp�es dos outros cl�s sem a sua
+   &G*&n � proibido lan�ar qualquer magia nos camp�es dos outros cl�s sem a sua
 devida autoriza��o, isto inclui identific�-lo.
 
-@u@RComportamento das Torcidas:@n
+&u&RComportamento das Torcidas:&n
 
-   @G*@n Torcer n�o � enviar diversas mensagens repetidas, afinal isto �
+   &G*&n Torcer n�o � enviar diversas mensagens repetidas, afinal isto �
 proibido, seja criativo.
 
-   @G*@n Jamais conte vantagem ou menospreze outro cl�, n�o estamos participando
+   &G*&n Jamais conte vantagem ou menospreze outro cl�, n�o estamos participando
 de uma guerra e sim de um torneio de integra��o, onde todos s�o vencedores
 apenas por estar participando.
 
-   @G*@n Caso seja transferido para a arena, lembre-se que est� representando
+   &G*&n Caso seja transferido para a arena, lembre-se que est� representando
 seu cl�, portanto porte-se com a honra devida a ocasi�o.
 
-@u@RComportamento dos Controladores:@n
+&u&RComportamento dos Controladores:&n
 
-   @G*@n Concentre-se em seu objetivo, ou seja, representar sua casa nas
+   &G*&n Concentre-se em seu objetivo, ou seja, representar sua casa nas
 mesnadas.
 
-   @G*@n Tenha certeza que ir� poder permanecer at� o final do torneio caso se
+   &G*&n Tenha certeza que ir� poder permanecer at� o final do torneio caso se
 candidate a ser o controlador.
 
-   @G*@n O 'wiznet' � um canal sagrado, portanto voc� s� deve utiliza-lo para
+   &G*&n O 'wiznet' � um canal sagrado, portanto voc� s� deve utiliza-lo para
 assuntos relacionados as mesnadas.
 
-   @G*@n N�o podem e n�o deve usar o 'goto' para se deslocar para qualquer local
+   &G*&n N�o podem e n�o deve usar o 'goto' para se deslocar para qualquer local
 sem autoriza��o, principalmente saindo da �rea onde ocorrem as mesnadas.
 
-   @G*@n Sempre que n�o souber o que � ou n�o permitido pergunte, n�o fa�a nada
+   &G*&n Sempre que n�o souber o que � ou n�o permitido pergunte, n�o fa�a nada
 sem saber se � permitido.
 
-   @yEstas observa��es foram criadas para que todos possam se divertir,
+   &yEstas observa��es foram criadas para que todos possam se divertir,
 evitando que ocorram incidentes que apaguem o brilho das Mesnadas de
 Vit�lia.  Lembrem-se, qualquer duvida sempre perguntem antes de agir, afinal
-os deuses est�o aqui para auxilia-los.@n
-#0
+os deuses est�o aqui para auxilia-los.&n
+#
 MOVIMENTOS MV
 
 Define quanto voce ainda pode andar.  Os pontos de movimento sao gastos a cada
@@ -778,7 +775,7 @@ comando de movimento que voce usa.  Quando voce estiver muito cansado, voce
 precisara' sentar ou descansar para poder continuar sua jornada.
 
 Veja tamb�m: SIT, REST, SCORE
-#0
+#
 MAP
 
 Agora o mapa de Midgaard deve ser comprado.
@@ -787,7 +784,7 @@ comprar o mapa de Midgaard e tamb�m de outras areas do mundo.
 
 Para chegar na loja de mapas, a partir do templo, ande tres passos para o sul,
 tres passos para o leste e um passo para o norte.
-#0
+#
 LOJAS
 
    As lojas s�o os lugares onde o aventureiro pode comprar equipamento para
@@ -802,7 +799,7 @@ pessoas fortes e capazes; carregando muitos anos de experi�ncia nos neg�cios
 e, tamb�m, sobrevivendo em um mundo onde a �nica certeza � a morte no final.
 
 Veja tamb�m: BUY, SELL, LIST, VALUE
-#0
+#
 LADRAO THIEF
 
 Ladroes sao conhecidos por terem qualidades muito especiais, que nenhuma outra
@@ -816,7 +813,7 @@ Utilize o comando SKILLS para uma lista das habilidades disponiveis.
 Veja a ajuda para cada habilidade para maiores informacoes.
 
 Veja tamb�m: PRACTICE
-#0
+#
 GUERREIRO WARRIOR
 
 Guerreiros sao conhecidos por serem mais fortes que os outros jogadores.
@@ -830,7 +827,7 @@ Utilize o comando SKILLS para uma lista das habilidades disponiveis.
 Veja a ajuda para cada habilidade para maiores informacoes.
 
 Veja tamb�m: PRACTICE
-#0
+#
 STR STRENGTH
 
    E' a forca do personagem.  E' um numero no formato nn/aaa, onde o primeiro
@@ -843,7 +840,7 @@ padrao e' zero, e aumenta ate' 100.  A forca adicional so aparece depois que a
 forca padrao tiver atingido 18 pontos.
 
 Veja tamb�m: MAGIA STRENGTH
-#0
+#
 INT INTELLIGENCE
 
    E' a inteligencia do personagem.  Quanto maior a inteligencia, menos sera'
@@ -854,7 +851,7 @@ automaticamente quando voce cria um novo personagem no MUD.  O valor da
 inteligencia pode ser modificado com alguns itens que estao pelo mundo.
 
 Veja tamb�m: PRACTICE, GUILD
-#0
+#
 WIS WISDOM
 
    Sabedoria do personagem.  Quanto maior, mais praticas ganhara' a cada nivel
@@ -865,7 +862,7 @@ quando voce cria um novo personagem no MUD.  O valor da sabedoria pode ser
 modificado com alguns itens que estao pelo mundo.
 
 Veja tamb�m: PRACTICE, GUILD
-#0
+#
 DEX DEXTERITY
 
    Destreza do personagem.  Quanto maior, mais o personagem acertara' golpes e
@@ -875,7 +872,7 @@ bonus natural para o seu AC.
    A destreza pode variar de 3 ate' 18 pontos, e e' sorteada automaticamente
 quando voce cria um novo personagem no MUD.  O valor da destreza pode ser
 modificado com alguns itens que estao pelo mundo.
-#0
+#
 CON CONSTITUTION
 
    Constituicao.  Quanto maior, mais pontos de energia o personagem ganhara' a
@@ -884,7 +881,7 @@ cada nivel que atingir.
    A constituicao pode variar de 3 ate' 18 pontos, e e' sorteada
 automaticamente quando voce cria um novo personagem no MUD.  O valor da
 constituicao pode ser modificado com alguns itens que estao pelo mundo.
-#0
+#
 CHA CHARISMA
 
    A simpatia do personagem.  Quanto maior, menor sao as chances de um monstro
@@ -893,7 +890,7 @@ agressivo atacar.
    A simpatia pode variar de 3 ate' 18 pontos, e e' sorteada automaticamente
 quando voce cria um novo personagem no MUD.  O valor do carisma pode ser
 modificado com alguns itens que estao pelo mundo.
-#0
+#
 HITROLL
 
    Quanto maior, mais chances de acertar os golpes o personagem ter� durante
@@ -901,14 +898,14 @@ a luta.
 
    O HitRoll pode variar de -100 at� 100 pontos.  Por padr�o, ele � sempre
 zero, mas voc� pode alter�-lo usando alguns itens que est�o pelo mundo.
-#0
+#
 DAMROLL
 
    Quanto maior, mais destrutivos ser�o os golpes do personagem.
 
    O DamRoll pode variar de -100 at� 100 pontos.  Por padr�o, ele � sempre
 zero, mas voc� pode alter�-lo usando alguns itens que est�o pelo mundo.
-#0
+#
 ZMUD "ZMUD BUGS"
 
    Vers�es antigas do zMud (cliente de MUD para Windows), anteriores �
@@ -930,8 +927,8 @@ diferentes, que sejam compat�veis com estes programas.
    Para saber se o seu programa est� mostrando as cores corretamente, repare
 nas duas linhas de asteriscos a seguir:
 
-          @+3 @+W* @+n@+3@+w***** @+n@+3@+C* @+n@+3@+c***** @+n@+3@+M* @+n@+3@+m***** @+n@+3@+Y* @+n@+3@+y***** @+n @+R* @+n@+r***** @+n@+G* @+n@+g***** @+n@+B* @+n@+b***** @+n
-          @+3 @+W* @+w***** @+C* @+c***** @+M* @+m***** @+Y* @+y***** @+n @+R* @+r***** @+G* @+g***** @+B* @+b***** @+n
+          &+3 &+W* &+n&+3&+w***** &+n&+3&+C* &+n&+3&+c***** &+n&+3&+M* &+n&+3&+m***** &+n&+3&+Y* &+n&+3&+y***** &+n &+R* &+n&+r***** &+n&+G* &+n&+g***** &+n&+B* &+n&+b***** &+n
+          &+3 &+W* &+w***** &+C* &+c***** &+M* &+m***** &+Y* &+y***** &+n &+R* &+r***** &+G* &+g***** &+B* &+b***** &+n
 
    Se as duas linhas acima estiverem EXATAMENTE IGUAIS, significa que voc�
 est� enxergando as cores corretamente.  Se elas estiverem diferentes,
@@ -940,7 +937,7 @@ as cores corretamente.  Neste caso, voc� deve digitar o comando "TERM
 DOSANSI" e em seguida consultar este HELP novamente, digitando "HELP ZMUD".
 
 Veja tamb�m: COLOR, CORES, TERM
-#0
+#
 QUESTS
 
    Quests s�o desafios oferecidos pelos Deuses para promover a divers�o e
@@ -983,20 +980,20 @@ conforme o pretendido pelos deuses desafiantes e que n�o hajam pr�mios.
 Aquele que n�o possui esp�rito de aventura, que esteja apenas visando
 obter os pr�mios, n�o compreendeu o verdadeiro sentido destes desafios.
 
-   Para participar de uma Quest em andamento, basta digitar @RQUEST@N.  A partir
-deste instante, o aventureiro ganha ent�o, acesso ao canal @CQSAY@n, e poder�
+   Para participar de uma Quest em andamento, basta digitar &RQUEST&N.  A partir
+deste instante, o aventureiro ganha ent�o, acesso ao canal &CQSAY&n, e poder�
 neste canal, discutir com seus colegas aventureiros sobre o tema do desafio
 bem como ouvir ali as instru��es que possam estar sendo dadas pelos Deuses
 desafiantes.
 
-   @ROS COMANDOS PARA A PARTICIPA��O EM UMA QUEST S�O:@n
+   &ROS COMANDOS PARA A PARTICIPA��O EM UMA QUEST S�O:&n
 
-     @CQUEST@n: Serve para que voc� fa�a parte do grupo da Quest em andamento.
-     @CQSAY@n:  Serve para falar com todos os integrantes que est�o na Quest.
+     &CQUEST&n: Serve para que voc� fa�a parte do grupo da Quest em andamento.
+     &CQSAY&n:  Serve para falar com todos os integrantes que est�o na Quest.
             � proibido aos participantes de um desafio usarem cores
             no comando QSAY.
 
-   Procure sempre @RINTERPRETAR SEU PERSONAGEM@n, entrando no clima que est�
+   Procure sempre &RINTERPRETAR SEU PERSONAGEM&n, entrando no clima que est�
 sendo proposto, agindo como se fosse de fato aquele que passou a ser seu
 companheiro de tantas e tantas horas.  Se d� esta chance...  Mas se n�o
 quiser ou n�o for capaz, procure n�o atrapalhar os que quiserem viver de
@@ -1004,7 +1001,7 @@ FATO seus personagens, e lembre-se de manter-se sempre dentro da tem�tica
 medieval, afim de manter um clima �pico e emocionante.
 
 Veja tamb�m: QUEST, QSAY
-#0
+#
 CIRCLEMUD
                     C  I  R  C  L  E  M  U  D     3  .  0
 
@@ -1046,5 +1043,6 @@ Thanks everyone!
                   (write "subscribe circle <first name> <last name>")
 
 --Jeremy Elson (jelson@circlemud.org)
-#0
-$~
+#
+$
+~
