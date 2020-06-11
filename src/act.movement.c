@@ -1293,7 +1293,7 @@ ACMD(do_fly)
 			start_flying(ch);
 		}
 	}
-	else if (SCMD_LAND)
+	else if ((subcmd == SCMD_LAND)
 	{
 		if (!AFF_FLAGGED(ch, AFF_FLYING))
 		{
