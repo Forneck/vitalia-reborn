@@ -38,7 +38,7 @@ VitaliaMUD.
    &gLIST                 &nMostra os objetos que est�o � venda em uma loja.
    &gSELL                 &nVende um objeto para um lojista.
    &gVALUE                &nConsultar o pre�o de um objeto seu.
-#
+#0
 BANK WITHDRAW DEPOSIT BALANCE
 
    Comandos para retirar dinheiro do banco, depositar dinheiro, ou ver
@@ -51,14 +51,14 @@ Exemplos:
    > balance
 
 Veja tamb�m: GOLD, SCORE
-#
+#0
 BUY
 
 Uso: buy <nome do item>
-     buy #<n�mero do item>
+     buy #0<n�mero do item>
      buy n.<nome do item>
      buy n <nome do item>
-     buy n #<n�mero do item>
+     buy n #0<n�mero do item>
 
    Se voc� deseja adquirir um item de uma loja e voc� tem o dinheiro
 necess�rio para isso, voc� pode compra-lo.  Itens podem ser comprados pelo
@@ -67,13 +67,13 @@ quantidade.
 
 Exemplos:
    > buy espada        (compra a primeira espada da lista)
-   > buy #3            (compra o terceiro item da lista)
+   > buy #03            (compra o terceiro item da lista)
    > buy 4.espada      (compra a quarta espada da lista)
    > buy 10 p�o        (compra 10 p�es)
-   > buy 10 #2         (compra 10 do segundo item da lista)
+   > buy 10 #02         (compra 10 do segundo item da lista)
 
 Veja tamb�m: LIST, SELL, SHOPS, VALUE
-#
+#0
 DONATE
 
 Uso: donate <objeto>
@@ -89,7 +89,7 @@ doa��es, e 25% de chances deste item ser descartado (JUNK).
    > donate 500 moedas
 
 Veja tamb�m: JUNK
-#
+#0
 DRINK SIP EAT TASTE
 
 Uso: eat <item>
@@ -103,7 +103,7 @@ Uso: eat <item>
    > taste p�o
    > drink from x�cara
    > sip fonte
-#
+#0
 DROP
 
 Uso: drop <item>
@@ -120,7 +120,7 @@ sala em que voc� estiver.
    > drop 1000 moedas
 
 Veja tamb�m: DONATE, GET, JUNK
-#
+#0
 EQUIPMENT
 
 Uso: equipment
@@ -129,7 +129,7 @@ Uso: equipment
 segurando e usando.
 
 Veja tamb�m: INVENTORY, REMOVE, WEAR
-#
+#0
 EXAMINE
 
 Uso: examine <local a ser examinado>
@@ -137,7 +137,7 @@ Uso: examine <local a ser examinado>
    Pode lhe fornecer algumas informa��es �teis sobre um item ou monstro.
 
 Veja tamb�m: LOOK
-#
+#0
 FILL
 
 Uso: fill <item> <local usado para encher>
@@ -149,7 +149,7 @@ Exemplo:
    > fill cantil fonte
 
 Veja tamb�m: POUR
-#
+#0
 GET TAKE
 
    "Get" e "take" s�o exatamente o mesmo comando e podem ser usados
@@ -171,7 +171,7 @@ Exemplos:
    > get tudo.p�o tudo.mochila
 
 Veja tamb�m: DROP, PUT
-#
+#0
 GIVE
 
 Uso: give <objeto> <v�tima>
@@ -184,7 +184,7 @@ que precise.
   > give p�o m�dico
   > give all.bronze mirlen
   > give 40000 moedas nia
-#
+#0
 GOLD
 
 Uso: gold
@@ -192,7 +192,7 @@ Uso: gold
    Mostra o quanto de dinheiro voc� est� carregando.
 
 Veja tamb�m: BALANCE, DEPOSIT, WITHDRAW
-#
+#0
 GRAB HOLD
 
 Uso: grab <objeto>
@@ -206,7 +206,7 @@ Exemplos:
   > grab pedra
 
 Veja tamb�m: EQUIPMENT, REMOVE, WEAR, WIELD
-#
+#0
 INVENTORY
 
 Uso: inventory
@@ -215,7 +215,7 @@ Uso: inventory
 gostaria de checar se nenhum ladr�o o roubou.
 
 Veja tamb�m: EQUIPMENT, GRAB, HOLD, REMOVE, WEAR
-#
+#0
 JUNK
 
 Uso: junk <objeto>
@@ -231,7 +231,7 @@ Exemplos:
    > junk 500 moedas
 
 Veja tamb�m: DONATE, DROP
-#
+#0
 LIST
 
 Uso: list [tipo do item]
@@ -249,7 +249,7 @@ Exemplos:
    > list espada      (lista todas as espadas � venda)
 
 Veja tamb�m: BUY, SELL, SHOPS, VALUE
-#
+#0
 POUR
 
 Uso: pour <recipiente> <recipiente>
@@ -264,7 +264,7 @@ Exemplos:
    > pour x�cara fora
 
 Veja tamb�m: FILL
-#
+#0
 PUT
 
 Uso: put <objeto> <recipiente>
@@ -279,14 +279,14 @@ Exemplos:
    > put tudo cofre
 
 Veja tamb�m: GET
-#
+#0
 QUAFF POCAO POCOES
 
 Uso: quaff <po��o>
 
    O comando 'quaff' � usado para "tomar" uma po��o m�gica.  A magia ir�
 afeta-lo imediatamente, para o bem ou para o mal...
-#
+#0
 RECITE SCROLL SCROLLS
 
 Uso: recite <pergaminho> [alvo]
@@ -295,7 +295,7 @@ Uso: recite <pergaminho> [alvo]
 jogador ou nada (o que significa voc� mesmo).
 
 Veja tamb�m: SPELLS
-#
+#0
 REMOVE
 
 Uso: remove <objeto>
@@ -311,11 +311,11 @@ Exemplos:
    > remove tudo.bronze
 
 Veja tamb�m: GRAB, HOLD, WEAR, WIELD
-#
+#0
 SELL
 
-Uso: sell [#] <item>
-     sell <#>.<item>
+Uso: sell [#0] <item>
+     sell <#0>.<item>
 
    Se voc� gostaria de vender um item para um lojista, pode tentar com esse
 comando.  A maioria das lojas s�o especializadas no que elas ir�o comprar,
@@ -327,7 +327,7 @@ Exemplos:
    > sell 3 espada     (vende as tr�s primeiras espadas de seu inventorio)
 
 Veja tamb�m: BUY, LIST, SHOPS, VALUE
-#
+#0
 USE VARINHA VARINHAS BASTAO BASTOES
 
 Uso: use <bast�o>
@@ -344,7 +344,7 @@ comando 'grab' ou 'hold').  Voc� deve tamb�m digitar o nome da vara ou
 bast�o para evitar confus�o.
 
 Veja tamb�m: RECITE
-#
+#0
 VALUE
 
 Uso: value <item>
@@ -356,7 +356,7 @@ Exemplo:
    > value p�o
 
 Veja tamb�m: BUY, LIST, SELL, SHOPS
-#
+#0
 WEAR
 
 Uso: wear <objeto> [parte do corpo]
@@ -377,7 +377,7 @@ Exemplos:
    > wear anel dedo
 
 Veja tamb�m: EQUIPMENT, REMOVE
-#
+#0
 WIELD
 
 Uso: wield <arma>
@@ -390,6 +390,6 @@ Exemplos:
    > wield 3.espada    (empunha a terceira espada de seu inventorio)
 
 Veja tamb�m: EQUIPMENT, REMOVE, WEAR
-#
+#0
 $
 ~
