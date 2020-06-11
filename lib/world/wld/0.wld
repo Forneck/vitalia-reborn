@@ -1,46 +1,42 @@
 #0
 O Vazio~
-   Você não faz idéia se você está flutuando ou não.  Sobre você, está
+   VocÃª nÃ£o faz idÃ©ia se vocÃª estÃ¡ flutuando ou nÃ£o.  Sobre vocÃª, estÃ¡
 localizado um estranho portal.
 ~
-0 du 1
-ON void
+0 1048584 0 0 0 1
 D4
-Você vê muitas pessoas transitando.
 ~
 ~
-0 -1 50
+0 0 3001
 S
 #1
 Limbo~
-   Você está flutuando em um vazio, sem forma, desprovido de todas as
-sensações da materia tangível, contornado por um furacão de luzes
-brilhantes, que se enfraquecem até chegar à escuridão que o envolve.  Você
-não vê nenhum canto ou sombra.
-   Você vê escrito "SEM GORJETAS" com letras brilhantes, no meio da
-escuridão.
+   VocÃª estÃ¡ flutuando em um vazio, sem forma, desprovido de todas as
+sensaÃ§Ãµes da materia tangÃ­vel, contornado por um furacÃ£o de luzes
+brilhantes, que se enfraquecem atÃ© chegar Ã  escuridÃ£o que o envolve.  VocÃª
+nÃ£o vÃª nenhum canto ou sombra.
+   VocÃª vÃª escrito "SEM GORJETAS" com letras brilhantes, no meio da
+escuridÃ£o.
 ~
-0 dju 1
-ON limbo
+0 1049096 0 0 0 1
 S
 #2
-O Depósito Interno~
-   Você está em uma sala que serve apenas como depósito interno de
-objetos...  Nada especial, exceto por uma placa no canto dizendo: "Você não
+O DepÃ³sito Interno~
+   VocÃª estÃ¡ em uma sala que serve apenas como depÃ³sito interno de
+objetos...  Nada especial, exceto por uma placa no canto dizendo: "VocÃª nÃ£o
 deveria estar aqui."
 ~
-0 cdju 1
-OL 108
+0 1049100 0 0 0 1
 S
 #3
 Uma Sala Totalmente Vazia~
-   As paredes estão completamente vazias...  Não há nada na sala.  Mas...
-absolutamente bizarro e completamente esquisito!  Há um estranho portal
-sobre você, e é como se você visse algum tipo de sala sobre você.
+   As paredes estÃ£o completamente vazias...  NÃ£o hÃ¡ nada na sala.  Mas...
+absolutamente bizarro e completamente esquisito!  HÃ¡ um estranho portal
+sobre vocÃª, e Ã© como se vocÃª visse algum tipo de sala sobre vocÃª.
 ~
-0 dju 0
+0 1049096 0 0 0 0
 D4
-Você percebe que o portal sobre você parece ser de vidro, aliás, um
+VocÃª percebe que o portal sobre vocÃª parece ser de vidro, aliÃ¡s, um
 vidro muito sujo.
 ~
 ~
@@ -48,26 +44,23 @@ vidro muito sujo.
 S
 #50
 R_START~
-   Essa é uma sala usada internamente pelo sistema.  Você não deveria estar
-aqui.  Por favor, reporte pelo comando BUG como você chegou até aqui.
+   Essa Ã© uma sala usada internamente pelo sistema.  VocÃª nÃ£o deveria estar
+aqui.  Por favor, reporte pelo comando BUG como vocÃª chegou atÃ© aqui.
 ~
-0 0 0
-ON r_start
+0 0 0 0 0 0
 S
 #51
 R_DONATION~
-   Essa é uma sala usada internamente pelo sistema.  Você não deveria estar
-aqui.  Por favor, reporte pelo comando BUG como você chegou até aqui.
+   Essa Ã© uma sala usada internamente pelo sistema.  VocÃª nÃ£o deveria estar
+aqui.  Por favor, reporte pelo comando BUG como vocÃª chegou atÃ© aqui.
 ~
-0 0 0
-ON r_donation
+0 0 0 0 0 0
 S
 #52
 R_RESSURECT~
-   Essa é uma sala usada internamente pelo sistema.  Você não deveria estar
-aqui.  Por favor, reporte pelo comando BUG como você chegou até aqui.
+   Essa Ã© uma sala usada internamente pelo sistema.  VocÃª nÃ£o deveria estar
+aqui.  Por favor, reporte pelo comando BUG como vocÃª chegou atÃ© aqui.
 ~
-0 0 0
-ON r_ressurect
+0 0 0 0 0 0
 S
-$
+$~
