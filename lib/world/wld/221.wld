@@ -1,607 +1,514 @@
 #22100
-A Grande Biblioteca de Vitália~
-   Você está na entrada da Biblioteca Central de Vitália.  Um lugar quase
-sagrado, pois aqui estão depositados verdadeiros tesousos.
-   O teto é tão lindo que por alguns instantes, você fica quase sem fôlego,
-e, extasiado, observa atentamente a abóboda, cuja beleza dos afrescos
+A Grande Biblioteca de Vitï¿½lia~
+   Vocï¿½ estï¿½ na entrada da Biblioteca Central de Vitï¿½lia.  Um lugar quase
+sagrado, pois aqui estï¿½o depositados verdadeiros tesousos.
+   O teto ï¿½ tï¿½o lindo que por alguns instantes, vocï¿½ fica quase sem fï¿½lego,
+e, extasiado, observa atentamente a abï¿½boda, cuja beleza dos afrescos
 minuciosamente entalhada no mais puro ouro, revelam algumas figuras divinas.
-   O silêncio do ambiente não o torna lúgubre.  Ao contrário.  Há felicidade
+   O silï¿½ncio do ambiente nï¿½o o torna lï¿½gubre.  Ao contrï¿½rio.  Hï¿½ felicidade
 no ar, pois neste recinto as pessoas crescem, enriquecendo suas mentes com o
 conhecimento trazido por esses livros e pergaminhos.
-   As paredes estão cobertas por inscrições, que parecem narrar os segredos
-deste mundo e de seus deuses e, foram escritas numa língua exótica e
-antiquíssima.
-   No fundo da Biblioteca, uma estante imensa chama a sua atenção e ao
-chegar mais perto, você percebe que há uma pequena placa onde se pode ler
+   As paredes estï¿½o cobertas por inscriï¿½ï¿½es, que parecem narrar os segredos
+deste mundo e de seus deuses e, foram escritas numa lï¿½ngua exï¿½tica e
+antiquï¿½ssima.
+   No fundo da Biblioteca, uma estante imensa chama a sua atenï¿½ï¿½o e ao
+chegar mais perto, vocï¿½ percebe que hï¿½ uma pequena placa onde se pode ler
 alguma coisa.
-   Para o norte, você vê outra sala, onde uma figura sorridente e simpática
+   Para o norte, vocï¿½ vï¿½ outra sala, onde uma figura sorridente e simpï¿½tica
 parece trabalhar.  Para o oeste, existem mais e mais livros e para o sul
-está a entrada da Biblioteca.  Existem dezenas de cadeiras muito
-confortáveis, e até mesmo alguns divãs, onde você pode se acomodar para ler
+estï¿½ a entrada da Biblioteca.  Existem dezenas de cadeiras muito
+confortï¿½veis, e atï¿½ mesmo alguns divï¿½s, onde vocï¿½ pode se acomodar para ler
 seu livro.
 ~
-221 cdehu 0
-D N
-Um bardo parece estar tentando vender livros ali.
-~
-~
-0 -1 22102
-D S
-Você pode ver a Sala de Leitura.
-~
-~
-0 -1 3000
-D W
+221 1048732 0 0 0 0
+D0
 Uma sala abarrotada de livros e pergaminhos.
 ~
 ~
 0 -1 22101
 E
-teto afrescos abóboda~
-Olhando para cima, você observa a grandiosa abóboda do salão, magníficamente
-pintada com a representação das Divindades.  As figuras parecem estar vivas,
-tamanha a perfeição da obra.
-~
-E
-aviso placa~
-&y"Nao se deixe intimidar pela violência,
-O poder de sua mente é toda a sua fortaleza.
-Pouco importa se é barato, bélico, universal...
-Toda força bruta representa, nada mais, que um sintoma de fraqueza.
-O importante é voce crer nessa força incrível que existe dentro de você.
-Meu amigo, meu companheiro, meu irmão,
-Escreva sua história pelas suas próprias mãos.&n
-~
-E
-inscrição inscrições~
-   A &yHistória de Vitália&n ainda é muito obscura para os mortais de ontem e
-hoje.  Muitos a escutaram, a estudaram, a veneraram.  Mas ninguém sabe ainda
+inscriï¿½ï¿½o inscriï¿½ï¿½es~
+   A @yHistï¿½ria de Vitï¿½lia@n ainda ï¿½ muito obscura para os mortais de ontem e
+hoje.  Muitos a escutaram, a estudaram, a veneraram.  Mas ninguï¿½m sabe ainda
 exatamente o que ocorreu.
 
-   Desde o início das coisas os avôs contam para seus netos uma versão dessa
-história, a mesma que os sábios relatam a seus discípulos.
+   Desde o inï¿½cio das coisas os avï¿½s contam para seus netos uma versï¿½o dessa
+histï¿½ria, a mesma que os sï¿½bios relatam a seus discï¿½pulos.
 
-   Aqui será transcrito esse relato, exatamente como ele é passado de
-geração em geração há milhares de anos...
+   Aqui serï¿½ transcrito esse relato, exatamente como ele ï¿½ passado de
+geraï¿½ï¿½o em geraï¿½ï¿½o hï¿½ milhares de anos...
 
-   " ... no início das coisas, tudo que existia era o Vazio.  É muito
-difícil para nós, que vivemos num mundo rico em cores, sons, cheiros e
-emoções pensar que houve um tempo em que nada disso existia.  Mas houve.
+   " ... no inï¿½cio das coisas, tudo que existia era o Vazio.  ï¿½ muito
+difï¿½cil para nï¿½s, que vivemos num mundo rico em cores, sons, cheiros e
+emoï¿½ï¿½es pensar que houve um tempo em que nada disso existia.  Mas houve.
 
-   E é dentro do Vazio que começa tudo.  Aquilo não poderia ficar estático
-por muito tempo, haveria de algo acontecer.  Deu-se então, das entranhas
-daquele grande nada, o nascimento de um pequeno foco de inteligência.  Sim,
-porque para fazer-se alguma coisa realmente boa como é esse mundo,
-precisa-se de inteligência e criatividade.  Mas o Caos (era esse o nome do
+   E ï¿½ dentro do Vazio que comeï¿½a tudo.  Aquilo nï¿½o poderia ficar estï¿½tico
+por muito tempo, haveria de algo acontecer.  Deu-se entï¿½o, das entranhas
+daquele grande nada, o nascimento de um pequeno foco de inteligï¿½ncia.  Sim,
+porque para fazer-se alguma coisa realmente boa como ï¿½ esse mundo,
+precisa-se de inteligï¿½ncia e criatividade.  Mas o Caos (era esse o nome do
 rebento do Vazio) ainda precisava aprender muito.  Quanto mais ele aprendia
 a pensar e sonhar, maior ficava.  Foi crescendo...  Crescendo...  E mudou.
 
-   Caos, antes um pequeno foco de consciência, tornou-se infinitamente
-grande.  E viu que não poderia mais manter tudo que fora criado com sua
-evolução tão desordenado como estava.  Tornou-se então o que agora chamamos
-de Ordem.  Deu a si mesmo um novo nome, na primeira língua que existiu - a
+   Caos, antes um pequeno foco de consciï¿½ncia, tornou-se infinitamente
+grande.  E viu que nï¿½o poderia mais manter tudo que fora criado com sua
+evoluï¿½ï¿½o tï¿½o desordenado como estava.  Tornou-se entï¿½o o que agora chamamos
+de Ordem.  Deu a si mesmo um novo nome, na primeira lï¿½ngua que existiu - a
 linguagem de seu pensamento.  Chamaria-se Blug.
 
-   Blug então começa a realmente criar, agora utilizando todo seu poder de
-Ordem.  Primeiro, criou Tempo, o Eterno.  Na verdade, Tempo é apenas uma
-extensão da própria Ordem.  É complexo pensar nisso, mas é uma mesma
-inteligência regendo dois "indivíduos".
+   Blug entï¿½o comeï¿½a a realmente criar, agora utilizando todo seu poder de
+Ordem.  Primeiro, criou Tempo, o Eterno.  Na verdade, Tempo ï¿½ apenas uma
+extensï¿½o da prï¿½pria Ordem.  ï¿½ complexo pensar nisso, mas ï¿½ uma mesma
+inteligï¿½ncia regendo dois "indivï¿½duos".
 
    O Tempo conhece o passado, o presente e o futuro.  Ele sabe que o homem
-surgirá, que caminhará com seus próprios pés e tomará as suas próprias
-decisões.  Vê que para o homem não se distanciar de seu caminho, precisará
-de guias.  Então o Tempo aconselha a Ordem a criar, segundo as suas próprias
+surgirï¿½, que caminharï¿½ com seus prï¿½prios pï¿½s e tomarï¿½ as suas prï¿½prias
+decisï¿½es.  Vï¿½ que para o homem nï¿½o se distanciar de seu caminho, precisarï¿½
+de guias.  Entï¿½o o Tempo aconselha a Ordem a criar, segundo as suas prï¿½prias
 profecias, o primeiro dos seus descendentes.
 
-   Assim, Blug, a partir das essências que formam os sonhos e que dão origem
-aos sentimentos, molda e cria o Princípio da Magia, o Primeiro Princípio.
-Este, então, é tomado como pupilo do tempo, aprendendo para no futuro
+   Assim, Blug, a partir das essï¿½ncias que formam os sonhos e que dï¿½o origem
+aos sentimentos, molda e cria o Princï¿½pio da Magia, o Primeiro Princï¿½pio.
+Este, entï¿½o, ï¿½ tomado como pupilo do tempo, aprendendo para no futuro
 ensinar sobre as virtudes aos que estavam porvir.  Seria o primeiro e o
-último dos seus.  Após seu aprendizado, a Magia foi enviada para onde estava
-sua verdadeira missão: um lugar chamado V'tah alyia.  Seu destino seria
-impregnar toda V'tah alyia com parte de sua essência, criando um elo entre
-ela e esta terra, que duraria até o seu fim.
+ï¿½ltimo dos seus.  Apï¿½s seu aprendizado, a Magia foi enviada para onde estava
+sua verdadeira missï¿½o: um lugar chamado V'tah alyia.  Seu destino seria
+impregnar toda V'tah alyia com parte de sua essï¿½ncia, criando um elo entre
+ela e esta terra, que duraria atï¿½ o seu fim.
 
-   E vieram os novos Princípios.  Dentre eles dois se destacavam: Fogo e
+   E vieram os novos Princï¿½pios.  Dentre eles dois se destacavam: Fogo e
 Luz.  O Fogo era escuro, sombrio.  Queimava sem dar nenhum sinal, o que
 podia ser devastador.  E a Luz era fria.  Iluminava, mas congelava e cegava
-também.  Mas a Ordem e o Tempo os destinava a serem mais que dois
-Princípios.  Eles se fundiriam.  Foi o que aconteceu.  Um novo ser nasceu.
-Chamada Chama de Luz, carregaria consigo a herança de ser um Princípio e um
+tambï¿½m.  Mas a Ordem e o Tempo os destinava a serem mais que dois
+Princï¿½pios.  Eles se fundiriam.  Foi o que aconteceu.  Um novo ser nasceu.
+Chamada Chama de Luz, carregaria consigo a heranï¿½a de ser um Princï¿½pio e um
 Fim.
 
-   Tempo a tomou como segunda e última pupila.  Ela logo aprenderia que era
-a única que amedrontava a Escuridão, uma parte da Ordem que ainda se
+   Tempo a tomou como segunda e ï¿½ltima pupila.  Ela logo aprenderia que era
+a ï¿½nica que amedrontava a Escuridï¿½o, uma parte da Ordem que ainda se
 lembrava dos seus tempos de Caos.  E conheceria seu poder de criar e recriar
-a matéria e o éter.
+a matï¿½ria e o ï¿½ter.
 
-   Chama de Luz também foi enviada à V'tah alyia.  Abrindo suas imensas
+   Chama de Luz tambï¿½m foi enviada ï¿½ V'tah alyia.  Abrindo suas imensas
 asas, fez nascer o primeiro Dia.  Espalhou alguns fios de seus cabelos, que
 eram de puro fogo, para serem futuramente usados como ela e a Magia haveriam
-de ensinar.  Criou nova matéria e moldou o éter, cobrindo toda a superfície
+de ensinar.  Criou nova matï¿½ria e moldou o ï¿½ter, cobrindo toda a superfï¿½cie
 desse mundo.
 
-   Ordem também se dirigiu a V'tah alyia. Abençoou-a criando a vida ali.
+   Ordem tambï¿½m se dirigiu a V'tah alyia. Abenï¿½oou-a criando a vida ali.
 
-   A benção de Magia foi dar a cada ser de V'tah alyia o poder de entrar em
+   A benï¿½ï¿½o de Magia foi dar a cada ser de V'tah alyia o poder de entrar em
 contato com ela e utilizar parte de seu poder.
 
-   E Chama de Luz a abençoava ensinando seus seres a fazerem uso do que
+   E Chama de Luz a abenï¿½oava ensinando seus seres a fazerem uso do que
 criara utilizando suas chamas.
 
-   E por isso que até hoje os clérigos dirigem suas orações à Ordem, a força
+   E por isso que atï¿½ hoje os clï¿½rigos dirigem suas oraï¿½ï¿½es ï¿½ Ordem, a forï¿½a
 primordial e suprema; os magos reverenciam a Magia, aquela que leva em suas
-mãos as correntes da justiça e da dignidade; e guerreiros e ladinos clamam
-por Chama de Luz, que, carregando a primeira arma, luta pela criação contra
-os resquícios de Escuridão. "
+mï¿½os as correntes da justiï¿½a e da dignidade; e guerreiros e ladinos clamam
+por Chama de Luz, que, carregando a primeira arma, luta pela criaï¿½ï¿½o contra
+os resquï¿½cios de Escuridï¿½o. "
 
-   E até hoje todos os homens que ouvem essa história dizem que eles olham
-por nós: &WBlug, a Ordem; Maegali, a Magia; &ne &WNemesis, a Chama de Luz.&n
+   E atï¿½ hoje todos os homens que ouvem essa histï¿½ria dizem que eles olham
+por nï¿½s: @WBlug, a Ordem; Maegali, a Magia; @ne @WNemesis, a Chama de Luz.@n
+~
+E
+aviso placa~
+@y"Nao se deixe intimidar pela violï¿½ncia,
+O poder de sua mente ï¿½ toda a sua fortaleza.
+Pouco importa se ï¿½ barato, bï¿½lico, universal...
+Toda forï¿½a bruta representa, nada mais, que um sintoma de fraqueza.
+O importante ï¿½ voce crer nessa forï¿½a incrï¿½vel que existe dentro de vocï¿½.
+Meu amigo, meu companheiro, meu irmï¿½o,
+Escreva sua histï¿½ria pelas suas prï¿½prias mï¿½os.@n
+~
+E
+teto afrescos abï¿½boda~
+Olhando para cima, vocï¿½ observa a grandiosa abï¿½boda do salï¿½o, magnï¿½ficamente
+pintada com a representaï¿½ï¿½o das Divindades.  As figuras parecem estar vivas,
+tamanha a perfeiï¿½ï¿½o da obra.
 ~
 S
 #22101
 O Anexo de Leitura da Biblioteca~
-   Esta é a sala de leitura da grandiosa Biblioteca.  Ao entrar, você depara
-com um número infinito de estantes, todas elas absolutamente lotadas por
-livros, pergaminhos e milhares de manuscritos tão antigos quanto a história
-deste mundo.  São tantas as estantes e prateleiras, que você fica com medo
-de se perder.  O ambiente tem cheiro de aventura no ar e você se pergunta
-como alguém pode saber exatamente onde encontrar o que procura sem ficar
+   Esta ï¿½ a sala de leitura da grandiosa Biblioteca.  Ao entrar, vocï¿½ depara
+com um nï¿½mero infinito de estantes, todas elas absolutamente lotadas por
+livros, pergaminhos e milhares de manuscritos tï¿½o antigos quanto a histï¿½ria
+deste mundo.  Sï¿½o tantas as estantes e prateleiras, que vocï¿½ fica com medo
+de se perder.  O ambiente tem cheiro de aventura no ar e vocï¿½ se pergunta
+como alguï¿½m pode saber exatamente onde encontrar o que procura sem ficar
 louco.
-   A iluminação é algo que o intriga, pois não existem nem lâmpadas, nem
-janelas e mesmo assim, a luz é forte e muito clara, ideal para uma boa
+   A iluminaï¿½ï¿½o ï¿½ algo que o intriga, pois nï¿½o existem nem lï¿½mpadas, nem
+janelas e mesmo assim, a luz ï¿½ forte e muito clara, ideal para uma boa
 leitura.
-   Interessante...alguns livros estão dispostos sobre uma espécie de altar e
-há uma espécie de inscrição feita nele, que parece atrair sua atenção.
+   Interessante...alguns livros estï¿½o dispostos sobre uma espï¿½cie de altar e
+hï¿½ uma espï¿½cie de inscriï¿½ï¿½o feita nele, que parece atrair sua atenï¿½ï¿½o.
    Um grande movimento de pessoas parece estar acontecendo ao leste e ao
 norte.
 ~
-221 cdehu 0
-D E
-Você pode ver a Grande Biblioteca de Vitália.
+221 1048732 0 0 0 0
+D0
+Vocï¿½ pode ver a Grande Biblioteca de Vitï¿½lia.
 ~
 ~
 0 -1 22100
 E
-inscrição altar~
-&RSe quiser conhecer a essência das divindades, basta dizer o nome de seu
-Livro nesta sala.&n
+Harry~
+@CA Lenda de Harry@n
+
+   Essa ï¿½ a histï¿½ria de uma pessoa pequena em palavras, porï¿½m grande em
+aventuras.
+
+   Tudo comeï¿½a numa noite onde tudo o que se ouvia era o sussurro do vento,
+em sua mais pura calma e graï¿½a.  De repente, num vilarejo, aos pï¿½s da
+Montanha, ouve-se um choro; um choro de um bebï¿½.  Nascia Romeu, o forte.
+Filho de dois dos maiores guerreiros da histï¿½ria do Universo, Romeu herdou a
+coragem e confianï¿½a de seu pai, e a beleza indescritï¿½vel de sua mï¿½e.  O
+mundo parou perante aquele choro; reverenciou o nascimento daquela crianï¿½a
+que, um dia, mostraria o objetivo pelo qual teria vindo ao mundo.
+
+   Seis anos haviam se passado apï¿½s aquela noite, e Romeu crescia aprendendo
+a arte da guerra.  Ele se tornaria um grande lutador, num futuro prï¿½ximo.  E
+era tï¿½o belo que nï¿½o conseguiria passar despercebido: encantava a todos com
+seu sorriso; revitalizava o ambiente com seu olhar.
+
+   Um dia, nï¿½o se sabe por quï¿½, sua mï¿½e resolveu afastar Romeu de seu pai, e
+fugiu com ele para longe daquele vilarejo.  Para dificultar ainda mais, a
+pobre crianï¿½a foi obrigada a trocar de nome.  Passou a se chamar Harry.  Por
+ser muito ingï¿½nuo, nï¿½o fez perguntas sobre o que estava acontecendo, e
+cresceu acreditando nas palavras de sua mï¿½e, que dizia seu pai ter morrido
+em batalha.
+
+   Os dois passaram a morar em Midgaard, onde tentaram viver da melhor
+maneira possï¿½vel.  Sua mï¿½e, uma grande guerreira, tentava terminar o
+treinamento de seu filho, fazendo com que ele se tornasse tï¿½o bom quanto
+seus pais.  Certo dia, ao praticar habilidades com a espada, Harry sentiu
+estar sendo observado.  Procurou por alguï¿½m, porï¿½m nada encontrou.
+Continuou a treinar e, alguns instantes depois, ouviu uma gargalhada.  Olhou
+a volta novamente, e mais uma vez
+
+   Nï¿½o achou ninguï¿½m.  Atï¿½ que, a sua frente, apareceu uma silhueta, que foi
+ficando cada vez mais nï¿½tida.  Era Nimue, uma mulher nï¿½o muito alta, de
+cabelos ruivos, e estudante das magias, que se divertia ao brincar com
+aquele jovem.
+
+   Harry nï¿½o gostou muito da brincadeira, mas ficou encantado com o que
+aquela aprendiz de Mï¿½gica conseguia fazer recitando apenas algumas palavras.
+Ele largou a espada e pediu que ela o ensinasse a usar Magia.  Inicialmente,
+Nimue nï¿½o gostou muito da idï¿½ia, porï¿½m concordou, depois de muita
+insistï¿½ncia.
+
+   Apï¿½s muitos dias de treino, ele finalmente estava progredindo.  Harry se
+esforï¿½ava muito e, um dia, aprendeu uma magia que nem mesmo Nimue havia
+aprendido atï¿½ entï¿½o: o Portal, uma magia que tinha o poder de
+teletransportar uma pessoa a qualquer lugar que quisesse.  Ela era conhecida
+por muitos, mas desses, poucos tinham total controle sobre aquela magia.
+Entretido com a novidade, Harry passou a usï¿½-la sempre que tinha forï¿½as.
+Contudo, um dia, Harry foi teletransportado para um plano diferente...
+
+   Nï¿½o se ouvia ruï¿½do algum, o silï¿½ncio era assustador; uma densa neblina
+dificultava o reconhecimento do local; nï¿½o se sentia a presenï¿½a de
+ninguï¿½m...  Nem nada.
+
+   Embora nï¿½o soubesse, Harry havia sido transportado para as Nï¿½voas do
+Portal, uma espï¿½cie de fronteira entre as dimensï¿½es.  Nunca ninguï¿½m havia
+conseguido sair vivo daquele lugar, ele foi dado como morto.
+
+   Porï¿½m, morto era a ï¿½ltima coisa que aquele jovem estava.  Depois de
+procurar incansavelmente a saï¿½da e nada conseguir, ele decidiu ficar ali e
+treinar a Magia, com objetivos de ganhar sabedoria suficiente para voltar ao
+seu mundo.
+
+   Meses, talvez anos, se passaram, e Harry estava a ponto de desistir.  A
+insanidade nï¿½o tardaria a chegar.  Por mais que se esforï¿½asse, aquele
+guerreiro nunca teria poderes suficientes para sair daquele local.  E,
+cansado e jï¿½ sem esperanï¿½as, ele sentou-se no que julgava ser o chï¿½o e olhou
+para frente.  Olhava atentamente, mesmo nï¿½o vendo nada.  Parecia rezar aos
+Deuses para que lhe mostrassem uma saï¿½da.
+
+   E um barulho ensurdecedor foi ouvido.  Logo depois, passos.  Gritos.
+Harry se levantou assustado e tentou, com suas ï¿½ltimas forï¿½as, responder aos
+pedidos de socorro.  O eco ali criado era agonizante, e Harry caiu
+desmaiado.
+
+   Quando acordou novamente, ele se sentiu feliz.  Feliz, pois estava no
+colo de sua mï¿½e.  Feliz por finalmente ter encontrado alguï¿½m.  Entretanto,
+ele ainda estava fraco, e quase nï¿½o conseguia abrir os olhos.  Ficou apenas
+ali, ouvindo aquela doce voz que tanto tinha sentido falta.
+
+   Sua mï¿½e estava chorando, e parecia lhe confessar algo.  Ela pedia
+desculpas a ele por ter mentido sobre a morte do seu pai durante todos esses
+anos; ele, afinal, estava vivo.  Ao ouvir isso, uma forï¿½a descomunal invadiu
+o corpo de Harry, e ele levantou como num impulso.
+
+   Seus olhos brilhavam de uma mistura de raiva e desgosto.  A mï¿½e de Harry
+nï¿½o sabia o que dizer, pois esperava que seu filho estivesse morto, e nï¿½o
+que estivesse ouvindo aquilo tudo.  Comeï¿½aram a discutir, atï¿½ que ambos
+travaram uma luta.  Harry usava todos seus conhecimentos de magia, e sua mï¿½e
+(que agora lhe era uma estranha) o retalhava com a espada.  Atï¿½ que, de
+repente, ela o apunhalou pelas costas.  Apesar de toda a dor, Harry juntou
+forï¿½as e concentrou uma imensa energia em volta de seu corpo.  Uma energia
+tï¿½o forte que provocou uma explosï¿½o, cujo barulho pï¿½de ser ouvido em todas
+as dimensï¿½es.
+
+   Dois corpos estavam ali, caï¿½dos ao chï¿½o, perdidos nas Nï¿½voas do Portal.
+Harry estava caï¿½do e iria sangrar atï¿½ morrer.  Sua mï¿½e estava inconsciente,
+com
+
+   Sua alma congelada.  Ninguï¿½m nunca conseguiu explicar o que aconteceu
+depois daquele dia.  Sabe-se apenas que Harry foi retirado das Nï¿½voas do
+Portal e, quando acordou, estava deitado em uma cama confortï¿½vel, dentro de
+um cï¿½modo aquecido com o calor da lareira que se encontrava a sua frente.
+
+   Ao abrir os olhos deparou-se com um homem forte, alto, de olhos da cor do
+cï¿½u.  Seu nome?  Truton.  Ele contou que, hï¿½ uma semana, Harry bateu ï¿½ porta
+dele pedindo abrigo e caiu, logo em seguida, em seus braï¿½os, tï¿½o fraco
+estava.  Truton cuidou de seus ferimentos, o aqueceu e alimentou; atï¿½ aquele
+momento.
+
+   Harry sorriu agradecido, e lhe contou tudo pelo que havia passado.  Sï¿½
+nï¿½o entendia a maneira como foi retirado daquele lugar assombroso.  Ele nï¿½o
+sabia como explicar o que tinha acontecido desde a luta com sua mï¿½e, e
+atribuiu aquele acontecimento aos Deuses.  Harry se sentia feliz por estar ï¿½
+salvo, mas gostaria de saber o paradeiro de sua mï¿½e.  Toda aquela raiva
+havia desaparecido, e ele sentia saudades dela.  Porï¿½m, nunca mais ela foi
+vista e dizem que, atï¿½ os dias de hoje, ela vaga pelas Nï¿½voas do Portal em
+busca de uma saï¿½da.  Depois de longas conversas e histï¿½rias de aventuras
+vividas, os dois descobriram que tinham algo em comum: eram pai e filho.
+Uma grande alegria invadiu a alma dos dois, que haviam se reencontrado apï¿½s
+tantos anos...
+
+   Truton ficou surpreso com tudo o que o filho havia aprendido.  E ficou
+mais ainda quando soube que ele tinha conhecimentos sobre a Magia.  Harry
+tentava ensinar seu pai o que sabia, mas os dois, ali, nï¿½o iriam muito
+longe.  Truton conhecia muitos magos, porï¿½m nunca havia se interessado em
+aprofundar seus conhecimentos nessa ï¿½rea.
+
+   Harry era prestativo, e queria sempre aprender mais, ficar mais cada vez
+mais forte.  Era conhecido por levar amigos para as maiores aventuras e
+fazï¿½-los enfrentar as criaturas mais terrï¿½veis que se podia encontrar.  Mas
+nunca essas "cruzadas" sofreram baixas.  O jovem, que agora nï¿½o era apenas
+um simples guerreiro, era cuidadoso, e sempre pensava nos mï¿½nimos detalhes
+antes de atacar.
+
+   E sua fama foi crescendo.  Logo, todo aquele mundo jï¿½ havia ouvido falar
+de Harry, o Guardiï¿½o da Amizade.  Muitos desafiaram-no e, com isso, muitos
+pereceram perante sua espada.  Harry treinava dia e noite, pois queria
+enfrentar um monstro, dos mais temidos: o Dracolich Anciï¿½o.
+
+   E ele tinha um motivo para isso.  Fora o Dracolich Anciï¿½o, certa vez, que
+matou um de seus melhores amigos.  E matou de forma cruel e covarde,
+atacando-o por trï¿½s.  Harry nï¿½o poderia deixar que aquele ser vivesse por
+muito mais tempo.  Depois de muito, mas muito treino, e noites em claro para
+bolar uma estratï¿½gia perfeita, finalmente chegou o grande dia.  Ele se
+levantou da cadeira em que estava sentado, e empunhou a espada.  Nï¿½o se
+despediu de ninguï¿½m, pois tinha sabia que voltaria vivo da batalha.  Algumas
+pessoas o viram entrar no Paraï¿½so dos Dragï¿½es, e logo toda Vitï¿½lia estava lï¿½
+para presenciar o grande duelo.
+
+   Ao entrar na cova do dragï¿½o, Harry percebeu o quanto era pequeno.  Nunca
+aquela sensaï¿½ï¿½o tinha lhe ocorrido.  Sentiu um frio descer pela espinha, mas
+isso nï¿½o fez com que desistisse.
+
+   Ele respirou fundo, segurou a espada e partiu de encontro ï¿½ criatura.
+Foi uma luta ï¿½rdua e sangrenta, cujas imagens iriam gerar centenas de
+pesadelos para aqueles que as viam.  Apesar de rezar para Harry ganhar,
+ninguï¿½m conseguia dizer quem iria vencer.  Aquilo parecia nï¿½o acabar nunca.
+Os dois lados estavam bastante destruï¿½dos, mas nenhum aceitava se entregar.
+Atï¿½ que uma luz amarelada desce dos cï¿½us, e vai em direï¿½ï¿½o ï¿½ Harry.
+
+   Perante o silï¿½ncio que ali se formou, o jovem guerreiro desapareceu.  O
+Dracolich Anciï¿½o, mal conseguindo ficar de pï¿½, nï¿½o entendeu o que aquilo
+significava.  Diferente do resto das pessoas que assistiram a tudo.  Elas
+sabiam o que tinha acontecido: Harry havia imortalizado, como poucos atï¿½
+entï¿½o.  Ele atingiu um nï¿½vel de sabedoria tï¿½o alto, mas tï¿½o alto, que o
+mundo dos mortais nï¿½o o suportaria mais.
+
+   Porï¿½m, ele nï¿½o desapareceu.  Atï¿½ hoje Harry ï¿½ lembrado por sua coragem e
+determinaï¿½ï¿½o.  E por ser um guerreiro um tanto "diferente", devido ao seu
+grau de conhecimento da Magia, ele tornou-se Harry, o Prï¿½ncipe dos Portais,
+e lembrado tambï¿½m como Guardiï¿½o da Amizade.
 ~
 E
-Blug~
-&CA Lenda de Blug&n
+Eomer~
+@CA Lenda de Eomer@n
 
-   Ninguém sabe, até hoje, quando ou como o universo começou, mas
-acredita-se que nunca houve um início, e provavelmente nunca terá um fim.
-Conta-se que, antes da existência do mundo, do céu e das estrelas, o
-universo era apenas um grande Vazio.  E da necessidade de se preencher o
-Vazio, o Caos surge.
+   Homem do Norte, prï¿½ncipe de Rohan.  ï¿½omer era sobrinho do Rei Thï¿½oden de
+Rohan e como todos de sua raï¿½a ï¿½ alto, forte e de cabelos dourados.  Antes
+da Guerra do Anel, era um Marechal da Terra dos Cavaleiros.
 
-   O Caos, composto de matéria e energia, cresce, tomando para si todo o
-infinito espaço onde antes existia apenas o Vazio.  Conforme crescia, o
-Caos, natural e inevitavelmente, adquiria a consciência primária: de que
-seria necessário existir uma Ordem, o oposto ao Caos, que pudesse reger se u
-crescimento e sua evolução.
+   Durante a Guerra do Anel, lutou com distinï¿½ï¿½o nas batalhas do Forte da
+Trombeta, nos Campos de Pelennor e nos Portï¿½es Negros de Mordor.
 
-   Então, entre os movimentos da matéria e da energia que forma o Caos
-começa a surgir a primeira evidência de inteligência.  Como o bem e o mal, a
-luz e a escuridão, o amor e o ódio, a existência do Caos obrigaria a
-existência de seu oposto, e assim aconteceu: a Ordem surgira.
+   Quando o Rei Thï¿½oden foi atingido mortalmente nos Campos de Pelennor, ele
+nomeou ï¿½omer como seu herdeiro.  ï¿½omer tornou-se o dï¿½cimo oitavo rei de
+Rohan e governou por muitos anos, quando como todo homem mortal teve sua
+passagem para a outra vida, onde os deuses decidindo que tendo ele resolvido
+tudo que lhe tinham designado, deveria ser mandado para outro mundo: o Mundo
+Vitï¿½lia.
 
-   É errado dizer que a Ordem possui inteligência, pois ela é simplesmente a
-própria inteligência, onisciente e primária.  Como conseqüência de sua
-existência, da Ordem se origina o pensamento.  Blug, esse é o nome dado pela
-Ordem à si mesma na linguagem do pensamento.
+   Neste, foi recebido pela Deusa da Magia, a Anciï¿½ das Essï¿½ncias Mï¿½sticas,
+que lhe concedeu a graï¿½a de nï¿½o esquecer seu passado, para que assim
+acumulasse mais conhecimento e forï¿½a para desempenhar suas novas tarefas e
+entï¿½o renasceu ï¿½omer Tahngarth, preparando-se para ser um grande defensor
+precisou separar-se de sua famï¿½lia ainda cedo, e apenas muitos anos depois
+os reencontrando.  Em suas viagens em busca da purificaï¿½ï¿½o, recebeu
+importantes instrumentos para alcanï¿½ar seus objetivos.  Uma luz para afastar
+as sombras, o Olho de Horus.  Uma arma para lutar pela justiï¿½a, a Chave de
+Nabaqila
 
-   A Ordem domina a matéria e a energia que antes formava o Caos,
-transformando-o, recriando-o como algo vivo e pulsante.  A partir do momento
-que o Caos deixa de existir, a Ordem se divide, surgindo Tempo, o Eterno.
+   Quando se sentiu sozinho e desamparado, conheceu um grupo de aventureiros
+por quem teve grande admiraï¿½ï¿½o, e estes apï¿½s testarem suas verdadeiras
+intenï¿½ï¿½es o aceitaram para lhe iniciar em seus mistï¿½rios.  E assim, ï¿½omer
+ingressou no clï¿½ dos observadores e com eles viveram muitas batalhas,
+conquistando dois poderosos artefatos que possuem o emblema de Vitï¿½lia, o
+Amuleto e o Escudo da Pedra do Dragï¿½o.  Com alguns de seus companheiros
+travou a ultima batalha, despediu-se e desapareceu repentinamente.  Depois
+nenhum mortal voltou a ver ï¿½omer por um longo tempo, e quando voltou a
+aparecer estava num nï¿½vel superior, um semi-deus.
 
-   O Tempo conhece e domina o presente, o passado e o futuro.  Ele sabe que
-o homem surgirá, que caminhará com seus próprios pés e tomará as suas
-próprias decisões.  Vê que para o homem não se distanciar de seu caminho,
-precisará de guias.
-
-   Então o Tempo aconselha a Ordem a criar, segundo as suas próprias
-profecias, o primeiro dos seus descendentes: o Princípio da Magia, que é
-tomado pelo Tempo como seu pupilo.  A Ordem envia o Princípio da Magia para
-um lugar chamado V'tah alyia, onde sua missão seria impregná-lo com parte de
-sua essência.
-
-   Novos princípios surgiram, e dentre eles dois se destacavam: Fogo e Luz.
-Destes, após encontrarem a harmonia, nasceu a Chama de Luz, que também foi
-tomada como pupilo pelo Tempo.  A Ordem envia a Chama de Luz a V'tah alyia,
-onde receberia a missão de criar a Luz, fazendo nascer o primeiro Dia.
-
-   O jovem mundo chamado V'tah alyia, impregnado com a essência da Magia e
-iluminado pela Chama da Luz, estava pronto para receber a maior dádiva, a
-Ordem o abençoa criando a Vida alí.
-
-   Dentre as muitas histórias conhecidas sobre o Deus Blug, essa é a mais
-contada e a mais aceita de todas.
+   Mas o destino quis mais, e sempre evoluindo e lutando por seus ideais
+ï¿½omer Tahngarth tornou-se um deus do Mundo de Vitï¿½lia, o Deus da Honra e dos
+Cavaleiros.
 ~
 E
-Maegali~
-&CA Lenda de Maegali&n
+Galaaz~
+@CA Lenda de Galaaz@n
 
-   Nos primórdios do mundo, no início dos tempos, tudo era diferente.  O
-Caos havia a pouco ocupado seu trono no lugar do grande Vazio, mas tudo
-levava a crer que uma nova mudança estava preste a ocorrer.  Os elementos
-ainda não haviam nascido, a humanidade não fora criada.
+   Alguns deuses existem desde o inï¿½cio do Mundo; sï¿½o responsï¿½veis pela
+criaï¿½ï¿½o e habitam na essï¿½ncia das coisas.  Outros, existem para a manutenï¿½ï¿½o
+da ordem; para que a linha da vida seja seguida.  Hï¿½ deuses responsï¿½veis
+pelas virtudes, pelos defeitos, pelos animais, enfim... tudo no Mundo ï¿½
+regido por aï¿½ï¿½es divinas.
 
-   Até que a Ordem começou a imperar.  E por suas mãos deu-se o nascimento
-de todos os Princípios, dos seres vivos e daqueles que herdariam sua tarefa
-de velar pelo mundo.
+   Galaaz surgiu da necessidade de se usar a Inteligï¿½ncia de maneira sï¿½bia.
+Contudo, nï¿½o ï¿½ desde sempre que ele habita o panteï¿½o de deuses de Vitï¿½lia.
 
-   O Tempo conhece o passado, o presente e o futuro.  Ele sabe que o homem
-surgirá, que caminhará com seus próprios pés e tomará as suas próprias
-decisões.  Vê que para o homem não se distanciar de seu caminho, precisará
-de guias.  Então o Tempo aconselha a Ordem a criar, segundo as suas próprias
-profecias, o primeiro dos seus rebentos.  O primeiro dos Princípios.
+   Contarei, entï¿½o, a vocï¿½s, a histï¿½ria de sua vida.  Galaaz foi gerado pela
+prï¿½pria essï¿½ncia da Magia, logo apï¿½s o Tempo produzir seus primeiros
+segundos.
 
-   Então a Ordem, esta força suprema, manipulando as essências que formam os
-sonhos e que dão origem aos sentimentos, transforma, molda e cria o
-Princípio da Magia.
+   Atï¿½ os 16 anos, sua mï¿½e o manteve em uma dimensï¿½o paralela, para que ele
+fosse educado, e tambï¿½m para protegï¿½-lo de qualquer mal.  Porï¿½m, como havia
+a necessidade da certeza de que ele era digno de estar entre os deuses,
+quando Galaaz completou 17 anos ele foi mandado a um mundo distante e
+mantido sob observaï¿½ï¿½o, para que se seu carï¿½ter fosse conhecido.
 
-   O Tempo toma para si a missão de ensinar a Magia, preparando-a para ser a
-primeira e a última de sua espécie.  Ele lhe ensina a arte da dignidade, da
-justiça e da honra.  Prepara-a para ser aquela a quem as gerações do porvir,
-no fim recorrerão.  Faria o papel da Mãe dos Princípios mais novos.
+   Desconhecido por todos naquele mundo muitas vezes hostil, Galaaz foi
+acolhido por trï¿½s senhoritas simpï¿½ticas, que o ajudaram em seus primeiros
+passos.  Desajeitado no manejo das armas, ele se viu mais confortï¿½vel ao ser
+iniciado nas prï¿½ticas da Magia, jï¿½ que Magia era parte de sua essï¿½ncia.
 
-   A Ordem a envia para um mundo em nascimento.  V'tah alyia* estava
-surgindo.  Seu destino era claro e único: impregnar toda V'tah alyia com
-parte de sua essência, criando um elo entre ela e esta terra, que duraria
-até o seu fim.
+   E assim ele viveu por alguns anos: sempre aprimorando seus conhecimentos
+da Magia e sempre procurando aprender sobre aquele mundo estranho e mï¿½gico.
 
-   A Magia plasma então, usando como ingredientes, a dignidade, a honra e a
-justiça, que havia aprendido com o Tempo, correntes etéreas, as quais atou
-em suas mãos e que somente podem ser ligadas e vistas por aqueles cujas
-almas sejam puras.
+   Porï¿½m, ao completar 23 anos, as trevas se abateram sobre ele; Galaaz se
+desviou do caminho da Luz, e caiu no abismo da Escuridï¿½o.
 
-               Maegali é o seu nome. O Princípio mais velho.
-             A Anciã das Essências místicas. A Deusa da Magia.
+   Certo dia, uma forte luz apareceu em seus sonhos, e o alertou do caminho
+torto que ele estava seguindo.  Neste dia, ele aprendeu que nem todas as
+pessoas que habitam o mundo sï¿½o filhos da Luz, e que alguns existem para
+propagar o Mal.  Iniciou, imediatamente, sua escalada de volta ï¿½ Justiï¿½a e ï¿½
+Retidï¿½o, e foi bem sucedido nesta empreitada.
+
+   De volta ao caminho dos Justos, seguiu com sua avidez pelo conhecimento,
+e com sua ï¿½nsia por explorar o Mundo.  Participou de muitas batalhas, ganhou
+muitas cicatrizes, e estas o orgulhavam, pois cada uma era um desafio
+superado.  Andou por todo o Mundo e conheceu cada tesouro e cada armadilha.
+
+   E Galaaz elevou-se, atï¿½ ser aclamado por todos os mortais.  E neste
+momento, ele compreendeu que nï¿½o era um mortal.  Neste momento, a divindade
+presente em seu espï¿½rito manifestou-se, e ele ascendeu ï¿½ Terra dos Imortais.
+
+   Jï¿½ entre os imortais, Galaaz foi recebido por sua mï¿½e, que se mostrou
+muito contente pelo valor que ele mostrara ter.  A Deusa da Magia o ensinou
+dos deveres das divindades, e assim, ao lado dela e de seus outros irmï¿½os,
+pï¿½de se tornar O Deus da Sapiï¿½ncia, e ajudar a zelar pelo bem-estar em toda
+Vitï¿½lia.
+
+   Complicado ï¿½ contar sobre a vida dos deuses, pois suas histï¿½rias remontam
+a eras longï¿½nquas, ou mesmo ï¿½ prï¿½pria criaï¿½ï¿½o do Mundo.  Assim, acabo de
+lhes contar a histï¿½ria mais conhecida da Vida de Galaaz, que me foi contada
+por meu pai, e que a ele foi contada por seu pai, e assim por muitas
+geraï¿½ï¿½es em minha famï¿½lia de contadores de histï¿½rias.  A tradiï¿½ï¿½o reza que
+esta ï¿½ a histï¿½ria.
+
+              Onarien, O Bardo contador de Histï¿½rias, irmï¿½o de Onofre.
 ~
 E
-Nemesis~
-&CA Lenda de Nemesis&n
+Falcone~
+@CA Lenda de Falcone@n
 
-   Nos primórdios do mundo, no início dos tempos, tudo era diferente.  O
-Caos havia a pouco ocupado seu trono no lugar do grande Vazio, mas tudo
-levava a crer que uma nova mudança estava prestes a ocorrer.  Os elementos
-ainda não haviam nascido, a humanidade não fora criada.
+   Falcone ï¿½ um filho bastardo de Jï¿½piter.  Recebeu esse nome porque tem
+olhos como os de um Falcï¿½o.  Olhos que o fazem enxergar o verdadeiro carï¿½ter
+das pessoas.
 
-   Até que a Ordem começou a imperar.  E por suas mãos deu-se o nascimento
-de todos os Princípios, aqueles que herdariam sua tarefa de velar pelo
-mundo, e os seres vivos, inclusive o homem.
+   Quando recï¿½m-nascido, tendo sua mï¿½e morrido no parto, foi enviado para o
+Sol por seu pai, onde foi criado pelo seu irmï¿½o, tambï¿½m filho bastardo de
+Jï¿½piter, Febo.  Febo foi obrigado por Jï¿½piter a cuidar de Falcone.  Durante
+toda a sua infï¿½ncia, Falcone foi explorado e maltratado por seu irmï¿½o.
 
-   Um dos nascimentos mais importantes foi o causado pela união do Fogo e da
-Luz.  O Fogo era escuro, sombrio.  Queimava sem dar nenhum sinal, o que
-podia ser devastador.  E a Luz era fria.  Iluminava, mas congelava e cegava
-também.  Até finalmente esses dois Princípios encontraram a harmonia,
-fundindo-se na Chama de Luz.
+   Quando Febo dormia, o pequeno Falcone ia para as partes mais hostis do
+Sol, onde desenvolvia tï¿½cnicas e estratï¿½gias de luta treinando contra os
+demï¿½nios de fogo que aquela ï¿½rea habitavam e onde ele sentia receber um
+forte poder.  Foi o que o fez crescer e ficar cada vez mais poderoso, atï¿½
+que um dia, ele se tornou mais poderoso que seu irmï¿½o e o derrotou.  Febo,
+humilhado, suicidou - se.
 
-   Essa fusão foi, ainda sob a forma de um bebê, mandada ao primeiro dos
-mundos, onde não só aprenderia com o Tempo, o maior de todos os professores,
-como teria lições com os Sentimentos, a Sabedoria e os Sonhos.  Estaria se
-preparando, então, para no futuro ser uma das entidades que, segundo
-profecias, auxiliaria àqueles que ainda habitariam um mundo que ainda estava
-para nascer.
-
-   E assim ela cresceu.  Aprendeu tudo o que se poderia aprender e já
-começava a mostrar o que teria sua regência no mundo que velaria.  Criou
-minerais e, usando o poder de sua essência, conseguiu manipulá-los como
-desejava.  Também descobriu que era a única que tinha a capacidade de
-amendrotar a sombria Escuridão e que, se quisesse, causava tanto ferimentos
-como os curava.
-
-   Como deveria de ser, a Chama foi mandada ao jovem mundo de V'tah alyia*.
-O primeiro Princípio já havia chegado, sendo agora era sua vez de conceder
-sua graça: abriu suas imensas asas de fogo e luz, fazendo nascer o primeiro
-Dia.  Tirou alguns fios de seus cabelos, que eram de puro fogo, e
-espalhou-os pelo mundo, para futuramente serem usados da maneira que haveria
-de ensinar, nos minerais que criara e trouxera.  Mais tarde também criaria a
-guerra.  Assim, proporcionaria aos homens o que poderia os levar à glória ou
-à ruína, dependendo apenas do caminho que eles escolhessem.
-
-   Era essa sua missão.  Era assim que os abençoava.
-~
-E
-Boromir~
-&CA Lenda de Boromir&n
-
-   ... e quando todos sucumbiram ao ataque fulminante das forças do mal, e
-quando tudo parecia perdido em Minas Tirith, o retumbar de uma corneta
-esfria o coração dos orcs a serviço do mal.  E do alto da Torre branca, o
-brado de um guerreiro que levanta sua espada é ouvido.  Ainda que solitário,
-Boromir atira-se contra todos os seres malignos e uma batalha sangrenta
-acontece em meio à beleza do posto mais avançado de Gondor.  Muitos dias
-passaram-se até que o último orc caísse aos pés do mais temido e respeitado
-guerreiro de Gondor.  Seu nome é lembrado ainda hoje nas canções das
-tavernas mais longínquas da Terra Média.  Cansado e satisfeito por ter
-livrado sua amada terra das forças das trevas, Boromir parte em busca de
-novos mundos, novas batalhas.
-   Por muitos mundos o nome Boromir foi ouvido.  Em todos esse nome é
-sinônimo de perseverança e de força.  Nenhuma batalha foi abandonada e,
-aonde houvesse o Mal, a sua espada lá estava a serviço das pessoas boas."
-
-   Sua chegada ao mundo de Vitália foi sem grandes festejos.  Seu renome não
-o precedia como era de costume.  E essa bela terra foi então escolhida para
-sua última morada.
-
-   Eram tempos difíceis ..  Vitália estava sitiada por cidades em conflito..
-Uma a uma as guerras acabaram por atrair o guerreiro sedento de paz.  Sua
-espada pouco descansou e não houve mal a sua frente que não sucumbisse a sua
-investida em nome do Bem.  Cresceu Boromir dormindo ao relento ou nas
-estalagens de Midennir ...
-
-   Foi ao Paraíso e ao Purgatório a procura do Verdadeiro Deus ..  A serviço
-do livreiro da Torre Mágica conquistou uma arma poderosa que pertencia ao
-renomado Alaric; era dourada sua Lâmina ..  Esta Lâmina, o destino havia de
-tirar de suas mãos em uma armadilha mortal e no fim de seus dias de mortal
-ainda trazia consigo uma espada de aço temperado que conseguiu em suas
-andanças por Roma.
-
-   Duas armadilhas mortais ainda estavam reservadas ao grande Boromir que
-superou cada uma delas reerguendo-se e seguindo seu caminho de Glória.
-
-   Mais tarde, ao evitar uma catástrofe que pairava sobre Vitália, ganhou de
-uma garota do Harem de New Thalos seu Escudo de Fogo que o protegeu até seu
-último dia.  Numa batalha de várias semanas, Boromir conseguiu sua última
-necessidade, uma faixa vermelha pertencente ao Grande Marte, no exato último
-dia que andou por entre os mortais.
-
-   Essa Batalha rendeu-lhe fama de tal forma que a Partir daí passou a ser
-considerado Imortal.  Da sua saga imortal pouco se sabe ...  é um mistério!
-Os que conhecem a história dizem que é muito bonita, pois logo Boromir
-chegou a Semi-Deus.
-
-   Sua lâmina agora não cortava... construía... ajudava.  A última Batalha
-que se sabe ter participado o Guerreiro Boromir foi em Arachnos, onde seu
-pior inimigo, o assassino de Alaric, Yevaud - O Dragão Negro, convocou o
-Príncipe dos dragões - Aglandiir - para uma investida contra Midgaard.
-
-   Nesse dia, o Semi-Deus Boromir liderou um exercito de mortais e imortais
-à vitória mais linda que se pode presenciar.
-
-   O que aconteceu com Boromir?  Ninguém sabe .. sua vida é um mistério
-desde então.  Mas todos sabem que podem dormir mais sossegados porque
-sempre que o Mundo de Vitália estiver em perigo real por forças desse ou de
-outro mundo a Espada de Boromir há de reluzir contra o Sol há de brilhar a
-noite e levar a luz àqueles que estão na escuridão.
-~
-E
-Silverbolt~
-
-&CA Lenda de Silverbolt&n
-
-   Uma antiga lenda de Vitália, conta uma misteriosa história em que uma
-jovem pura, para salvar seu povo, teria sido entregue a um poderoso dragão
-prateado e aprisionada em sua fortaleza áerea.  A partir deste dia, ela
-nunca mais foi vista.
-
-   Anos e anos depois, surgiu uma pequena e misteriosa criança, trazida por
-uma imensa nuvem de pombos brancos, vindos da fortaleza áerea do dragão
-prateado até as terras firmes de Vitália, onde ela encontraria seu caminho
-na vida e seu destino de concórdia.
-
-   A Lenda diz que a pequenina criança teria sido encontrada por um velho
-sábio leproso, que a partir daquele momento adotou a criança e começou a
-ensinar toda sua bondade e sabedoria para a mesma.
-
-   O Nome do velho sábio era Kriphon, ele teria sido expulso da sua cidade
-natal por causa da sua doença, a lepra.  Kriphon era uma pessoa triste e
-solitária, e agradeceu muito aos Deuses de Vitália pela chegada daquela
-criança em sua vida.
-
-   O Tempo foi passando e aquela criança se transformou um grande guerreiro,
-possuidor de um coração puro e bondoso.  Ele lutava incansavelmente contra
-todas as formas de tirania existentes nas terras de Vitália.
-
-   Kriphon, em seu leito de morte, contou todo o passado misterioso do seu
-discípulo e pediu para que ele lutasse contra todas as chagas da humanidade.
-A Partir deste momento o magnificente guerreiro seguiu seu destino até
-Midgaard, onde construiu uma reputação de honra e união.  Neste período da
-sua vida foram travadas várias batalhas em busca do seu maior ideal,
-batalhas essas que lhe renderam várias cicatrizes por todo o corpo, deixando
-intacta apenas uma pequena tatuagem em sua nuca, que trazia uma imagem de
-uma linda jovem e um grande dragão prateado circundados por um círculo
-dourado.
-
-   O Enigmático Guerreiro ficou conhecido por toda Vitália como "os Olhos do
-Coração".
-   Em uma de sua infinitas batalhas em busca da harmonia, algo bem
-misterioso aconteceu em sua vida: Após a queda de mais um tirano, um feixe
-de luz brotou dos céus áureos de Vitalia, fazendo surgir em meio ao sangue e
-aos corpos da cruel batalha, a ternura da Deusa da magia de Vitália, a
-Magnífica Maegali.  O Singelo guerreiro ajoelhou-se frente a Deusa, que lhe
-ofereceu uma missão.  O armipotente e corajoso Vitaliano deveria acabar com
-a fome, a inveja, as injustiças e todas as formas de preconceito, deveria
-espalhar a paz, a bondade e a fraternidade pelos quatro cantos de Vitália.
-Realizando deste modo, os sonhos de seu velho pai adotivo e trilhando seu
-caminho em busca da sabedoria plena, o nome deste impávido guerreiro é
-Silverbolt, conhecido como o Deus da Fraternidade e guardião do paraíso dos
-dragões de Vitália.  Sua arma é seu coração, seu escudo sua bondade e seus
-olhos a prova da sua humildade.
-~
-E
-Jewel~
-&CA Lenda de Jewel&n
-
-   Filho de camponeses, morava numa cidadela pacata aos redores do monte
-Olímpio com seus pais, ajudando -os na colheita anual.  Com apenas oito anos
-de idade presenciou o assassinato de seus pais por uma invasão de bárbaros a
-sua cidade.  Sem família e desorientado começa a vagar pelo mundo, seguindo
-rumo as montanhas, quando se defronta com a imensidão dos aposentos de
-Júpiter, Deus dos Deuses, este por sua bondade e generosidade o acolhe e
-adota como seu filho.  Jewel demonstra com suas brincadeiras e travessuras
-as habilidades que possui com armas, Júpiter prevê em seu futuro um
-guerreiro inigualável, extremamente audaz e forte, imaginando um dia este
-ser o Líder de sua Legião e herdeiro de seus conhecimentos.
-
-   Com 10 anos de idade, Jewel começa a fazer parte desta Legião,
-destacando-se entre os mais experientes e tornando realidade à profecia de
-Júpiter.  Na idade de 18 anos, Jewel recebe de Júpiter a honra do título de
-Líder de sua Legião, recebe como símbolo desta liderança a arma perfeita, o
-Machado Dourado de Júpiter, Um machado feito do mais puro ouro, cujas
-lâminas de mithrill e jóias cravejadas em sua extensão parecem brilhar
-magicamente, uma beleza incomparável, Dom de Vênus, possuidor de um poder
-bélico fenomenal, Dom de Marte.
-
-   Durante uma grande batalha sangrenta e demoníaca, a Legião que Jewel
-liderava foi completamente devastada, sendo ele o único sobrevivente.  Mais
-uma vez Jewel encontra-se solitário no mundo.
-
-   Por se culpar pela morte de seus companheiros, Jewel resolve devolver o
-machado a seu pai, crendo que não foi capaz suficiente de assumir o seu
-destino.  Júpiter numa conversa particular com seu filho adotivo conta que
-este não era seu destino final e sim um aprendizado para algo muito maior
-que esta para surgir em sua vida.
-
-   Quando Jewel alcança a idade de 28 anos recebe a visita de uma pessoa
-inesperada, Gryffindor, um sábio mago guiado por Argon a fundar uma academia
-que não ensinasse somente magia, mas uma postura de princípios para todos os
-seus iniciados.  Deveria ser discreta, sutil e que só aceitasse membros
-indicados pelos mais graduados.  Jewel então se lembra da conversa que teve
-a anos com seu mentor, aceita o convite para fazer parte desta família e ser
-o guardião da academia.  Jurando lutar pelos princípios morais e verdadeiros
-ao lado dos seus irmãos Pendragon, Acyr e Eliar.  Esta academia serviria os
-propósitos de Vitália, onde seria estabelecida.  Por mais uma vez a profecia
-de Júpiter se concretizava.
-
-   Após anos de luta pela honra e justiça em Vitália recebe a benção divina
-de Maegali, sendo convidado a juntar-se aos oradores e protetores de
-Vitália, tornando-se: Jewel Gryffindor o Deus da Benevolência.
-~
-E
-Infernal~
-&CA Lenda de Infernal&n
-
-   Num tempo e numa terra distante onde o bem e o mal travavam uma intensa
-batalha...  Em um pequeno povoado localizado nas terras altas do norte,
-nasceu uma criança predestinada.  Filho de Ghorg, um bravo guerreiro líder
-de um povoado de bárbaros, a criança cresceu brincando com espadas e arcos.
-Em pouco tempo já era uma exíminio lutador como seu velho e já cansado pai e
-já era aclamado por todos da aldeia como o futuro líder bárbaro.
-
-   Numa gelada noite de inverno, sua aldeia foi assolada por uma terrível
-chacina.  Mulheres e crianças foram degoladas, homens foram enforcados com
-suas próprias tripas.  Somente uma criança se salvou...  Claudius, filho do
-líder bárbaro.
-
-   Com grande ajuda do destino, naquela noite, Claudius foi levado por seu
-pai a um pequeno santuário, escavado sob a sua cabana, para visitar o corpo
-de sua bela mãe que havia morrido no dia que Claudius veio ao mundo.  Com a
-aproximação do perigo, Ghorg, o pai de Claudius, deixou-o escondido no
-santuário e foi para batalha, que durou horas.  Mas infelizmente todo seu
-povo foi dizimado, pelas mãos de uma uma tropa sobrenatural de criaturas
-horripilantes e mágicas.
-
-   Com o passar dos tempos, Claudius foi crescendo , vivendo apenas da caça
-e da pesca, como um verdadeiro guerreiro, que vive apenas de sua
-habilidades.
-
-   Vivendo no santuário onde sua mãe havia sido enterrada, e onde agora
-jazia tambem o corpo de seu pai, apenas um sentimento lhe tomava o coração:
-Vingança!!  Por seu pai e por seu povo.
-
-   Durante anos de procura por diversas terras, um dia ele soube que numa
-terra distante, num mundo cheio de magia e misticismo, havia uma terrível
-criatura que liderava uma corja de monstros sobrenaturais.
-
-   Neste mundo tudo seria mais difícil, pois monstros e magias eram
-incompreensíveis para os humanos da terra de Claudius.
-
-   Procurando a ajuda de um ancião extremamente sábio, que vivia numa densa
-floresta, soube que em uma numa distante montanha havia um caverna a qual
-tinha uma passagem que servia de portal para o mundo onde Claudius pretendia
-continuar sua incansável procura.  Esta caverna era tida como um lugar onde
-almas maléficas habitavam.
-
-   O povo daquela terra chamavam aquele lugar de Inferno, pois todos que pra
-lá iam jamais voltavam e suas almas eram tidas como perdidas até o fim dos
-tempos...
-
-   Claudius se aventurou por dias dentro daquela caverna, enfrentou
-terríveis feras, chegou a passar dia abomináveis, de intenso sofriemento mas
-venceu a tudo e a todas as provas que lhe foram impostas.
-
-   Finalmente chegou ao grande portal.  Neste grande portal tomou a decisão
-de partir sem saber se um dia voltaria.  Para ele o importante era achar
-aquele que um dia tirou a vida de seu pai e de seu povo.
-
-   Como num passe de mágica, chegou a uma terra distante e diferente de tudo
-o que havia visto até então em sua terra natal.  O nome desta terra:
-Vitália !!!
-
-   Com o passar dos tempos, descobriu que todos que haviam se aventurado na
-caverna do Inferno, jamais haviam chegado a Vitália e que ele foi o único a
-conhecer aquele mundo mágico.
-
-   Lá fez muitos amigos e cada dia que passava se aventurava cada vez mais a
-procura de seu destino.
-
-   Passaram-se muitos anos e sua experiência foi crescendo.  Enfrentou
-monstros terríveis e a cada dia mostrava mais e mais a sua coragem.  Até que
-um dia ele consegue um grande feito: chega à imortalidade.
-
-   Num caminho de honra e honestidade, atributos herdados de seu pai, foi
-aclamado como Deus, juntando-se aos grandes Deuses de Vitália, onde jurou
-lutar arduamente por aquele mundo.
-
-   E como foi o único ser até hoje, capaz de atravessar os portais do
-inferno e retornar vivo, é aclamado pelo povo de Vitália, como: INFERNAL
-'Infernus Imperator', o Imperador do Inferno".
-
-   Então assim surgiu o Deus Infernal....  Numa história de perseverança,
-honra e honestidade.  E até hoje dizem que ele ainda continua sua busca...
+   Depois disso, Falcone abandonou o Sol e passou a viver com sua irmï¿½
+Minerva, deusa da guerra herï¿½ica, do trabalho e da sabedoria.  Minerva fez
+uma tatuagem no peito de Falcone em forma de um Sol.  Tal tatuagem brilharï¿½
+enquanto o Sol brilhar e transmite sabedoria e forï¿½a infinitas a Falcone
+para que Falcone possa continuar a sua luta para que a justiï¿½a e a paz possam
+continuar existindo.
 ~
 E
 Tork~
-&CA Lenda de Tork&n
+@CA Lenda de Tork@n
 
-   Tork é um Troglodita de Arton.  Um mundo ameaçado por uma tempestade
+   Tork ï¿½ um Troglodita de Arton.  Um mundo ameaï¿½ado por uma tempestade
 rubra chamada Tormenta.  A Tormenta estava dizimando grande parte da
-população de algumas regiões de Arton e, os que conseguiam sobreviver às
+populaï¿½ï¿½o de algumas regiï¿½es de Arton e, os que conseguiam sobreviver ï¿½s
 tempestades ficaram loucos.
 
-   O maior e mais lendário campeão de seu mundo, conhecido apenas como
-Paladino, o único capaz de evitar uma tragédia maior, estav desaparecido.  A
-única maneira de salvar Paladino e toda Arton era reunir 21 jóias,
-conhecidas como Rubis da Virtude.  Essa era a missão de Tork e seus
+   O maior e mais lendï¿½rio campeï¿½o de seu mundo, conhecido apenas como
+Paladino, o ï¿½nico capaz de evitar uma tragï¿½dia maior, estav desaparecido.  A
+ï¿½nica maneira de salvar Paladino e toda Arton era reunir 21 jï¿½ias,
+conhecidas como Rubis da Virtude.  Essa era a missï¿½o de Tork e seus
 companheiros aventureiros.
 
    Algum tempo passou e conseguira eles reunir vinte dos Rubis, faltando
 apenas um, justamente o que adornava a espada de Paladino.  Ouviram boatos
-de que o último rubi estaria em um mundo paralelo, onde o único acesso para
-este era um portal localizado no Deserto da Perdição, o maior deserto de
-Arton, com a fama de que muitos dos que rumavam para lá iam para outros
-mundos e vice-versa.  Então, Tork e seus amigos foramem missão ao deserto.
+de que o ï¿½ltimo rubi estaria em um mundo paralelo, onde o ï¿½nico acesso para
+este era um portal localizado no Deserto da Perdiï¿½ï¿½o, o maior deserto de
+Arton, com a fama de que muitos dos que rumavam para lï¿½ iam para outros
+mundos e vice-versa.  Entï¿½o, Tork e seus amigos foramem missï¿½o ao deserto.
 Ao chegar no deserto, e procurarem o portal, encontraram nada menos de que
 quatro portais.  Tork decidiu que cada um dos componentes do grupo deveria
 entrar em um portal e seguir para um mundo diferente, em busca do tal rubi.
 
-   Tork foi parar em um mundo chamado Vitália e ficou encantado ao ver a
+   Tork foi parar em um mundo chamado Vitï¿½lia e ficou encantado ao ver a
 beleza do lugar, mas nada o desviou de seu objetivo ali, encontrar o Rubi.
 Tork procurou o Rubi durante anos e anos, ganhou tanto conhecimento e
 experiencia que se tornou um imortal.
 
-   Um dia, acompanhado de seu melhor amigo naquele mundo, cujo nome já fora
-esquecido, resolveu enfrentar um dos monstros mais temidos de Vitália:
-Aglandiir, o Rei dos Dragões.  Ao chegar no covil do monstro, que estava
-dormindo, viu, dentre os muitos tesouros de lá, o Rubi que tanto procurava
-ao longo dos anos.  Tratou logo de ir pegando o Rubi, sem tomar o mínimo
-cuidado para não despertar o terrível monstro.  Ao tocar o Rubi, um grande
-clarão foi emitido da peça, acordando o Dragão e despertando sua fúria.
+   Um dia, acompanhado de seu melhor amigo naquele mundo, cujo nome jï¿½ fora
+esquecido, resolveu enfrentar um dos monstros mais temidos de Vitï¿½lia:
+Aglandiir, o Rei dos Dragï¿½es.  Ao chegar no covil do monstro, que estava
+dormindo, viu, dentre os muitos tesouros de lï¿½, o Rubi que tanto procurava
+ao longo dos anos.  Tratou logo de ir pegando o Rubi, sem tomar o mï¿½nimo
+cuidado para nï¿½o despertar o terrï¿½vel monstro.  Ao tocar o Rubi, um grande
+clarï¿½o foi emitido da peï¿½a, acordando o Dragï¿½o e despertando sua fï¿½ria.
 
-Tork lutou ao lado de seu amigo até o quanto poderia agüentar.  Ao perceber
-que não poderia resistir à batalha, resolveu fugir.  Nunca mais ouviu falar
-de seu amigo.  Passou os dias seguintes numa tamanha depressão por ter
-abandonado seu amigo, que não queria mais falar com ninguém, tudo que queria
-era voltar para seu mundo e esquecer que um dia esteve em Vitália.  Mas Tork
-ainda não conhecia uma forma de voltar para Arton.  Resolveu procurar alguém
-mais experiente para ajudá-lo, e encontrou alguém que se dispôs a ajudar:
-era um deus, um Deus dos Desafios, que estava disfarçado, e não revelou sua
-real aparência.  Como era de se esperar, propôs um desafio p a Tork e disse
+Tork lutou ao lado de seu amigo atï¿½ o quanto poderia agï¿½entar.  Ao perceber
+que nï¿½o poderia resistir ï¿½ batalha, resolveu fugir.  Nunca mais ouviu falar
+de seu amigo.  Passou os dias seguintes numa tamanha depressï¿½o por ter
+abandonado seu amigo, que nï¿½o queria mais falar com ninguï¿½m, tudo que queria
+era voltar para seu mundo e esquecer que um dia esteve em Vitï¿½lia.  Mas Tork
+ainda nï¿½o conhecia uma forma de voltar para Arton.  Resolveu procurar alguï¿½m
+mais experiente para ajudï¿½-lo, e encontrou alguï¿½m que se dispï¿½s a ajudar:
+era um deus, um Deus dos Desafios, que estava disfarï¿½ado, e nï¿½o revelou sua
+real aparï¿½ncia.  Como era de se esperar, propï¿½s um desafio p a Tork e disse
 que, se ele conseguisse cumprir o desafio, ele encontraria a maneira de
 voltar para Arton.
 
@@ -610,378 +517,461 @@ desafio de sua vida, quando se tornou um Semideus e encontrou uma forma de
 voltar ao seu mundo.  O Deus dos Desafios reapareceu novamente para ele, mas
 dessa vez em sua forma original.
 
-   Qual não foi a surpresa de Tork quando viu que o deus era o amigo que
-tinha abandonado na batalha contra o dragão.  Ele havia derrotado o Dragão
-graças ao poder do Rubi, que concedia um enorme poder a todos os aliados do
-portador que tivessem um bom coração, e se tornou nada menos que um deus.
+   Qual nï¿½o foi a surpresa de Tork quando viu que o deus era o amigo que
+tinha abandonado na batalha contra o dragï¿½o.  Ele havia derrotado o Dragï¿½o
+graï¿½as ao poder do Rubi, que concedia um enorme poder a todos os aliados do
+portador que tivessem um bom coraï¿½ï¿½o, e se tornou nada menos que um deus.
 
-   O deus, então, mostrou através de uma visão, tudo o que acontecia em
-Arton: estava totalmente dominada por goblinóides liderados por Megalock, o
-Deus dos Monstros de Arton, responsável pela desgraça causada pela Tormenta,
-tendo como seu braço direito um general Bugbear, identificado por Tork como
+   O deus, entï¿½o, mostrou atravï¿½s de uma visï¿½o, tudo o que acontecia em
+Arton: estava totalmente dominada por goblinï¿½ides liderados por Megalock, o
+Deus dos Monstros de Arton, responsï¿½vel pela desgraï¿½a causada pela Tormenta,
+tendo como seu braï¿½o direito um general Bugbear, identificado por Tork como
 Thor Ironfist.
 
-   Não existia mais vida humana em Arton e todo seu esforço em Vitália teria
-sido inútil, se não fosse tudo o que tinha conquistado naquele lugar,
+   Nï¿½o existia mais vida humana em Arton e todo seu esforï¿½o em Vitï¿½lia teria
+sido inï¿½til, se nï¿½o fosse tudo o que tinha conquistado naquele lugar,
 principalmente a amizade, reconhecimento e respeito de mortais, imortais e
 deuses.
 
-   Tork, então, ofereceu ao deus o Rubi, como um pedido de desculpa por um
-dia tê-lo abandonado.  Tork não previa as conseqüências que aquilo causaria:
-como o Rubi também dava grandes poderes ao portador, o deus utilizou-se da
-peça com intenções malignas, e aos poucos o mal começou a dominá-lo,
-dando-lhe sentimentos como ganância, inveja e vingança, e começou a ter
+   Tork, entï¿½o, ofereceu ao deus o Rubi, como um pedido de desculpa por um
+dia tï¿½-lo abandonado.  Tork nï¿½o previa as conseqï¿½ï¿½ncias que aquilo causaria:
+como o Rubi tambï¿½m dava grandes poderes ao portador, o deus utilizou-se da
+peï¿½a com intenï¿½ï¿½es malignas, e aos poucos o mal comeï¿½ou a dominï¿½-lo,
+dando-lhe sentimentos como ganï¿½ncia, inveja e vinganï¿½a, e comeï¿½ou a ter
 problemas com os outros deuses, que viviam em plena harmonia.
 
-   O mal crescia tanto dentro do coração do deus, que chegou uma hora que os
+   O mal crescia tanto dentro do coraï¿½ï¿½o do deus, que chegou uma hora que os
 demais deuses resolveram o punir.  Nunca mais se ouviu falar do deus.
 
-   Era dia Do grande Touro do mês das Longas Sombras, ano de 326 e Tork foi
-chamado pelos deuses de Vitália para uma conversa muito importante, tendo
+   Era dia Do grande Touro do mï¿½s das Longas Sombras, ano de 326 e Tork foi
+chamado pelos deuses de Vitï¿½lia para uma conversa muito importante, tendo
 como assunto o Rubi.
 
-   Foi o dia mais importante na vida de Tork pois, além de conseguir de
+   Foi o dia mais importante na vida de Tork pois, alï¿½m de conseguir de
 volta o Rubi da Virtude conquistado por ele, Tork passou a ser um deus de
-Vitália.
+Vitï¿½lia.
 
-   Atualmente, Tork é um Deus dos Iniciantes, devotado pelos novos
-aventureiros que chegam à Vitália, e está sempre pensando em um futuro
+   Atualmente, Tork ï¿½ um Deus dos Iniciantes, devotado pelos novos
+aventureiros que chegam ï¿½ Vitï¿½lia, e estï¿½ sempre pensando em um futuro
 melhor para esse maravilhoso mundo.
 ~
 E
-Falcone~
-&CA Lenda de Falcone&n
+Infernal~
+@CA Lenda de Infernal@n
 
-   Falcone é um filho bastardo de Júpiter.  Recebeu esse nome porque tem
-olhos como os de um Falcão.  Olhos que o fazem enxergar o verdadeiro caráter
-das pessoas.
+   Num tempo e numa terra distante onde o bem e o mal travavam uma intensa
+batalha...  Em um pequeno povoado localizado nas terras altas do norte,
+nasceu uma crianï¿½a predestinada.  Filho de Ghorg, um bravo guerreiro lï¿½der
+de um povoado de bï¿½rbaros, a crianï¿½a cresceu brincando com espadas e arcos.
+Em pouco tempo jï¿½ era uma exï¿½minio lutador como seu velho e jï¿½ cansado pai e
+jï¿½ era aclamado por todos da aldeia como o futuro lï¿½der bï¿½rbaro.
 
-   Quando recém-nascido, tendo sua mãe morrido no parto, foi enviado para o
-Sol por seu pai, onde foi criado pelo seu irmão, também filho bastardo de
-Júpiter, Febo.  Febo foi obrigado por Júpiter a cuidar de Falcone.  Durante
-toda a sua infância, Falcone foi explorado e maltratado por seu irmão.
+   Numa gelada noite de inverno, sua aldeia foi assolada por uma terrï¿½vel
+chacina.  Mulheres e crianï¿½as foram degoladas, homens foram enforcados com
+suas prï¿½prias tripas.  Somente uma crianï¿½a se salvou...  Claudius, filho do
+lï¿½der bï¿½rbaro.
 
-   Quando Febo dormia, o pequeno Falcone ia para as partes mais hostis do
-Sol, onde desenvolvia técnicas e estratégias de luta treinando contra os
-demônios de fogo que aquela área habitavam e onde ele sentia receber um
-forte poder.  Foi o que o fez crescer e ficar cada vez mais poderoso, até
-que um dia, ele se tornou mais poderoso que seu irmão e o derrotou.  Febo,
-humilhado, suicidou - se.
+   Com grande ajuda do destino, naquela noite, Claudius foi levado por seu
+pai a um pequeno santuï¿½rio, escavado sob a sua cabana, para visitar o corpo
+de sua bela mï¿½e que havia morrido no dia que Claudius veio ao mundo.  Com a
+aproximaï¿½ï¿½o do perigo, Ghorg, o pai de Claudius, deixou-o escondido no
+santuï¿½rio e foi para batalha, que durou horas.  Mas infelizmente todo seu
+povo foi dizimado, pelas mï¿½os de uma uma tropa sobrenatural de criaturas
+horripilantes e mï¿½gicas.
 
-   Depois disso, Falcone abandonou o Sol e passou a viver com sua irmã
-Minerva, deusa da guerra heróica, do trabalho e da sabedoria.  Minerva fez
-uma tatuagem no peito de Falcone em forma de um Sol.  Tal tatuagem brilhará
-enquanto o Sol brilhar e transmite sabedoria e força infinitas a Falcone
-para que Falcone possa continuar a sua luta para que a justiça e a paz possam
-continuar existindo.
+   Com o passar dos tempos, Claudius foi crescendo , vivendo apenas da caï¿½a
+e da pesca, como um verdadeiro guerreiro, que vive apenas de sua
+habilidades.
+
+   Vivendo no santuï¿½rio onde sua mï¿½e havia sido enterrada, e onde agora
+jazia tambem o corpo de seu pai, apenas um sentimento lhe tomava o coraï¿½ï¿½o:
+Vinganï¿½a!!  Por seu pai e por seu povo.
+
+   Durante anos de procura por diversas terras, um dia ele soube que numa
+terra distante, num mundo cheio de magia e misticismo, havia uma terrï¿½vel
+criatura que liderava uma corja de monstros sobrenaturais.
+
+   Neste mundo tudo seria mais difï¿½cil, pois monstros e magias eram
+incompreensï¿½veis para os humanos da terra de Claudius.
+
+   Procurando a ajuda de um anciï¿½o extremamente sï¿½bio, que vivia numa densa
+floresta, soube que em uma numa distante montanha havia um caverna a qual
+tinha uma passagem que servia de portal para o mundo onde Claudius pretendia
+continuar sua incansï¿½vel procura.  Esta caverna era tida como um lugar onde
+almas malï¿½ficas habitavam.
+
+   O povo daquela terra chamavam aquele lugar de Inferno, pois todos que pra
+lï¿½ iam jamais voltavam e suas almas eram tidas como perdidas atï¿½ o fim dos
+tempos...
+
+   Claudius se aventurou por dias dentro daquela caverna, enfrentou
+terrï¿½veis feras, chegou a passar dia abominï¿½veis, de intenso sofriemento mas
+venceu a tudo e a todas as provas que lhe foram impostas.
+
+   Finalmente chegou ao grande portal.  Neste grande portal tomou a decisï¿½o
+de partir sem saber se um dia voltaria.  Para ele o importante era achar
+aquele que um dia tirou a vida de seu pai e de seu povo.
+
+   Como num passe de mï¿½gica, chegou a uma terra distante e diferente de tudo
+o que havia visto atï¿½ entï¿½o em sua terra natal.  O nome desta terra:
+Vitï¿½lia !!!
+
+   Com o passar dos tempos, descobriu que todos que haviam se aventurado na
+caverna do Inferno, jamais haviam chegado a Vitï¿½lia e que ele foi o ï¿½nico a
+conhecer aquele mundo mï¿½gico.
+
+   Lï¿½ fez muitos amigos e cada dia que passava se aventurava cada vez mais a
+procura de seu destino.
+
+   Passaram-se muitos anos e sua experiï¿½ncia foi crescendo.  Enfrentou
+monstros terrï¿½veis e a cada dia mostrava mais e mais a sua coragem.  Atï¿½ que
+um dia ele consegue um grande feito: chega ï¿½ imortalidade.
+
+   Num caminho de honra e honestidade, atributos herdados de seu pai, foi
+aclamado como Deus, juntando-se aos grandes Deuses de Vitï¿½lia, onde jurou
+lutar arduamente por aquele mundo.
+
+   E como foi o ï¿½nico ser atï¿½ hoje, capaz de atravessar os portais do
+inferno e retornar vivo, ï¿½ aclamado pelo povo de Vitï¿½lia, como: INFERNAL
+'Infernus Imperator', o Imperador do Inferno".
+
+   Entï¿½o assim surgiu o Deus Infernal....  Numa histï¿½ria de perseveranï¿½a,
+honra e honestidade.  E atï¿½ hoje dizem que ele ainda continua sua busca...
 ~
 E
-Galaaz~
-&CA Lenda de Galaaz&n
+Jewel~
+@CA Lenda de Jewel@n
 
-   Alguns deuses existem desde o início do Mundo; são responsáveis pela
-criação e habitam na essência das coisas.  Outros, existem para a manutenção
-da ordem; para que a linha da vida seja seguida.  Há deuses responsáveis
-pelas virtudes, pelos defeitos, pelos animais, enfim... tudo no Mundo é
-regido por ações divinas.
+   Filho de camponeses, morava numa cidadela pacata aos redores do monte
+Olï¿½mpio com seus pais, ajudando -os na colheita anual.  Com apenas oito anos
+de idade presenciou o assassinato de seus pais por uma invasï¿½o de bï¿½rbaros a
+sua cidade.  Sem famï¿½lia e desorientado comeï¿½a a vagar pelo mundo, seguindo
+rumo as montanhas, quando se defronta com a imensidï¿½o dos aposentos de
+Jï¿½piter, Deus dos Deuses, este por sua bondade e generosidade o acolhe e
+adota como seu filho.  Jewel demonstra com suas brincadeiras e travessuras
+as habilidades que possui com armas, Jï¿½piter prevï¿½ em seu futuro um
+guerreiro inigualï¿½vel, extremamente audaz e forte, imaginando um dia este
+ser o Lï¿½der de sua Legiï¿½o e herdeiro de seus conhecimentos.
 
-   Galaaz surgiu da necessidade de se usar a Inteligência de maneira sábia.
-Contudo, não é desde sempre que ele habita o panteão de deuses de Vitália.
+   Com 10 anos de idade, Jewel comeï¿½a a fazer parte desta Legiï¿½o,
+destacando-se entre os mais experientes e tornando realidade ï¿½ profecia de
+Jï¿½piter.  Na idade de 18 anos, Jewel recebe de Jï¿½piter a honra do tï¿½tulo de
+Lï¿½der de sua Legiï¿½o, recebe como sï¿½mbolo desta lideranï¿½a a arma perfeita, o
+Machado Dourado de Jï¿½piter, Um machado feito do mais puro ouro, cujas
+lï¿½minas de mithrill e jï¿½ias cravejadas em sua extensï¿½o parecem brilhar
+magicamente, uma beleza incomparï¿½vel, Dom de Vï¿½nus, possuidor de um poder
+bï¿½lico fenomenal, Dom de Marte.
 
-   Contarei, então, a vocês, a história de sua vida.  Galaaz foi gerado pela
-própria essência da Magia, logo após o Tempo produzir seus primeiros
-segundos.
+   Durante uma grande batalha sangrenta e demonï¿½aca, a Legiï¿½o que Jewel
+liderava foi completamente devastada, sendo ele o ï¿½nico sobrevivente.  Mais
+uma vez Jewel encontra-se solitï¿½rio no mundo.
 
-   Até os 16 anos, sua mãe o manteve em uma dimensão paralela, para que ele
-fosse educado, e também para protegê-lo de qualquer mal.  Porém, como havia
-a necessidade da certeza de que ele era digno de estar entre os deuses,
-quando Galaaz completou 17 anos ele foi mandado a um mundo distante e
-mantido sob observação, para que se seu caráter fosse conhecido.
+   Por se culpar pela morte de seus companheiros, Jewel resolve devolver o
+machado a seu pai, crendo que nï¿½o foi capaz suficiente de assumir o seu
+destino.  Jï¿½piter numa conversa particular com seu filho adotivo conta que
+este nï¿½o era seu destino final e sim um aprendizado para algo muito maior
+que esta para surgir em sua vida.
 
-   Desconhecido por todos naquele mundo muitas vezes hostil, Galaaz foi
-acolhido por três senhoritas simpáticas, que o ajudaram em seus primeiros
-passos.  Desajeitado no manejo das armas, ele se viu mais confortável ao ser
-iniciado nas práticas da Magia, já que Magia era parte de sua essência.
+   Quando Jewel alcanï¿½a a idade de 28 anos recebe a visita de uma pessoa
+inesperada, Gryffindor, um sï¿½bio mago guiado por Argon a fundar uma academia
+que nï¿½o ensinasse somente magia, mas uma postura de princï¿½pios para todos os
+seus iniciados.  Deveria ser discreta, sutil e que sï¿½ aceitasse membros
+indicados pelos mais graduados.  Jewel entï¿½o se lembra da conversa que teve
+a anos com seu mentor, aceita o convite para fazer parte desta famï¿½lia e ser
+o guardiï¿½o da academia.  Jurando lutar pelos princï¿½pios morais e verdadeiros
+ao lado dos seus irmï¿½os Pendragon, Acyr e Eliar.  Esta academia serviria os
+propï¿½sitos de Vitï¿½lia, onde seria estabelecida.  Por mais uma vez a profecia
+de Jï¿½piter se concretizava.
 
-   E assim ele viveu por alguns anos: sempre aprimorando seus conhecimentos
-da Magia e sempre procurando aprender sobre aquele mundo estranho e mágico.
-
-   Porém, ao completar 23 anos, as trevas se abateram sobre ele; Galaaz se
-desviou do caminho da Luz, e caiu no abismo da Escuridão.
-
-   Certo dia, uma forte luz apareceu em seus sonhos, e o alertou do caminho
-torto que ele estava seguindo.  Neste dia, ele aprendeu que nem todas as
-pessoas que habitam o mundo são filhos da Luz, e que alguns existem para
-propagar o Mal.  Iniciou, imediatamente, sua escalada de volta à Justiça e à
-Retidão, e foi bem sucedido nesta empreitada.
-
-   De volta ao caminho dos Justos, seguiu com sua avidez pelo conhecimento,
-e com sua ânsia por explorar o Mundo.  Participou de muitas batalhas, ganhou
-muitas cicatrizes, e estas o orgulhavam, pois cada uma era um desafio
-superado.  Andou por todo o Mundo e conheceu cada tesouro e cada armadilha.
-
-   E Galaaz elevou-se, até ser aclamado por todos os mortais.  E neste
-momento, ele compreendeu que não era um mortal.  Neste momento, a divindade
-presente em seu espírito manifestou-se, e ele ascendeu à Terra dos Imortais.
-
-   Já entre os imortais, Galaaz foi recebido por sua mãe, que se mostrou
-muito contente pelo valor que ele mostrara ter.  A Deusa da Magia o ensinou
-dos deveres das divindades, e assim, ao lado dela e de seus outros irmãos,
-pôde se tornar O Deus da Sapiência, e ajudar a zelar pelo bem-estar em toda
-Vitália.
-
-   Complicado é contar sobre a vida dos deuses, pois suas histórias remontam
-a eras longínquas, ou mesmo à própria criação do Mundo.  Assim, acabo de
-lhes contar a história mais conhecida da Vida de Galaaz, que me foi contada
-por meu pai, e que a ele foi contada por seu pai, e assim por muitas
-gerações em minha família de contadores de histórias.  A tradição reza que
-esta é a história.
-
-              Onarien, O Bardo contador de Histórias, irmão de Onofre.
+   Apï¿½s anos de luta pela honra e justiï¿½a em Vitï¿½lia recebe a benï¿½ï¿½o divina
+de Maegali, sendo convidado a juntar-se aos oradores e protetores de
+Vitï¿½lia, tornando-se: Jewel Gryffindor o Deus da Benevolï¿½ncia.
 ~
 E
-Eomer~
-&CA Lenda de Eomer&n
+Silverbolt~
 
-   Homem do Norte, príncipe de Rohan.  Éomer era sobrinho do Rei Théoden de
-Rohan e como todos de sua raça é alto, forte e de cabelos dourados.  Antes
-da Guerra do Anel, era um Marechal da Terra dos Cavaleiros.
+@CA Lenda de Silverbolt@n
 
-   Durante a Guerra do Anel, lutou com distinção nas batalhas do Forte da
-Trombeta, nos Campos de Pelennor e nos Portões Negros de Mordor.
+   Uma antiga lenda de Vitï¿½lia, conta uma misteriosa histï¿½ria em que uma
+jovem pura, para salvar seu povo, teria sido entregue a um poderoso dragï¿½o
+prateado e aprisionada em sua fortaleza ï¿½erea.  A partir deste dia, ela
+nunca mais foi vista.
 
-   Quando o Rei Théoden foi atingido mortalmente nos Campos de Pelennor, ele
-nomeou Éomer como seu herdeiro.  Éomer tornou-se o décimo oitavo rei de
-Rohan e governou por muitos anos, quando como todo homem mortal teve sua
-passagem para a outra vida, onde os deuses decidindo que tendo ele resolvido
-tudo que lhe tinham designado, deveria ser mandado para outro mundo: o Mundo
-Vitália.
+   Anos e anos depois, surgiu uma pequena e misteriosa crianï¿½a, trazida por
+uma imensa nuvem de pombos brancos, vindos da fortaleza ï¿½erea do dragï¿½o
+prateado atï¿½ as terras firmes de Vitï¿½lia, onde ela encontraria seu caminho
+na vida e seu destino de concï¿½rdia.
 
-   Neste, foi recebido pela Deusa da Magia, a Anciã das Essências Místicas,
-que lhe concedeu a graça de não esquecer seu passado, para que assim
-acumulasse mais conhecimento e força para desempenhar suas novas tarefas e
-então renasceu Éomer Tahngarth, preparando-se para ser um grande defensor
-precisou separar-se de sua família ainda cedo, e apenas muitos anos depois
-os reencontrando.  Em suas viagens em busca da purificação, recebeu
-importantes instrumentos para alcançar seus objetivos.  Uma luz para afastar
-as sombras, o Olho de Horus.  Uma arma para lutar pela justiça, a Chave de
-Nabaqila
+   A Lenda diz que a pequenina crianï¿½a teria sido encontrada por um velho
+sï¿½bio leproso, que a partir daquele momento adotou a crianï¿½a e comeï¿½ou a
+ensinar toda sua bondade e sabedoria para a mesma.
 
-   Quando se sentiu sozinho e desamparado, conheceu um grupo de aventureiros
-por quem teve grande admiração, e estes após testarem suas verdadeiras
-intenções o aceitaram para lhe iniciar em seus mistérios.  E assim, Éomer
-ingressou no clã dos observadores e com eles viveram muitas batalhas,
-conquistando dois poderosos artefatos que possuem o emblema de Vitália, o
-Amuleto e o Escudo da Pedra do Dragão.  Com alguns de seus companheiros
-travou a ultima batalha, despediu-se e desapareceu repentinamente.  Depois
-nenhum mortal voltou a ver Éomer por um longo tempo, e quando voltou a
-aparecer estava num nível superior, um semi-deus.
+   O Nome do velho sï¿½bio era Kriphon, ele teria sido expulso da sua cidade
+natal por causa da sua doenï¿½a, a lepra.  Kriphon era uma pessoa triste e
+solitï¿½ria, e agradeceu muito aos Deuses de Vitï¿½lia pela chegada daquela
+crianï¿½a em sua vida.
 
-   Mas o destino quis mais, e sempre evoluindo e lutando por seus ideais
-Éomer Tahngarth tornou-se um deus do Mundo de Vitália, o Deus da Honra e dos
-Cavaleiros.
+   O Tempo foi passando e aquela crianï¿½a se transformou um grande guerreiro,
+possuidor de um coraï¿½ï¿½o puro e bondoso.  Ele lutava incansavelmente contra
+todas as formas de tirania existentes nas terras de Vitï¿½lia.
+
+   Kriphon, em seu leito de morte, contou todo o passado misterioso do seu
+discï¿½pulo e pediu para que ele lutasse contra todas as chagas da humanidade.
+A Partir deste momento o magnificente guerreiro seguiu seu destino atï¿½
+Midgaard, onde construiu uma reputaï¿½ï¿½o de honra e uniï¿½o.  Neste perï¿½odo da
+sua vida foram travadas vï¿½rias batalhas em busca do seu maior ideal,
+batalhas essas que lhe renderam vï¿½rias cicatrizes por todo o corpo, deixando
+intacta apenas uma pequena tatuagem em sua nuca, que trazia uma imagem de
+uma linda jovem e um grande dragï¿½o prateado circundados por um cï¿½rculo
+dourado.
+
+   O Enigmï¿½tico Guerreiro ficou conhecido por toda Vitï¿½lia como "os Olhos do
+Coraï¿½ï¿½o".
+   Em uma de sua infinitas batalhas em busca da harmonia, algo bem
+misterioso aconteceu em sua vida: Apï¿½s a queda de mais um tirano, um feixe
+de luz brotou dos cï¿½us ï¿½ureos de Vitalia, fazendo surgir em meio ao sangue e
+aos corpos da cruel batalha, a ternura da Deusa da magia de Vitï¿½lia, a
+Magnï¿½fica Maegali.  O Singelo guerreiro ajoelhou-se frente a Deusa, que lhe
+ofereceu uma missï¿½o.  O armipotente e corajoso Vitaliano deveria acabar com
+a fome, a inveja, as injustiï¿½as e todas as formas de preconceito, deveria
+espalhar a paz, a bondade e a fraternidade pelos quatro cantos de Vitï¿½lia.
+Realizando deste modo, os sonhos de seu velho pai adotivo e trilhando seu
+caminho em busca da sabedoria plena, o nome deste impï¿½vido guerreiro ï¿½
+Silverbolt, conhecido como o Deus da Fraternidade e guardiï¿½o do paraï¿½so dos
+dragï¿½es de Vitï¿½lia.  Sua arma ï¿½ seu coraï¿½ï¿½o, seu escudo sua bondade e seus
+olhos a prova da sua humildade.
 ~
 E
-Harry~
-&CA Lenda de Harry&n
+Boromir~
+@CA Lenda de Boromir@n
 
-   Essa é a história de uma pessoa pequena em palavras, porém grande em
-aventuras.
+   ... e quando todos sucumbiram ao ataque fulminante das forï¿½as do mal, e
+quando tudo parecia perdido em Minas Tirith, o retumbar de uma corneta
+esfria o coraï¿½ï¿½o dos orcs a serviï¿½o do mal.  E do alto da Torre branca, o
+brado de um guerreiro que levanta sua espada ï¿½ ouvido.  Ainda que solitï¿½rio,
+Boromir atira-se contra todos os seres malignos e uma batalha sangrenta
+acontece em meio ï¿½ beleza do posto mais avanï¿½ado de Gondor.  Muitos dias
+passaram-se atï¿½ que o ï¿½ltimo orc caï¿½sse aos pï¿½s do mais temido e respeitado
+guerreiro de Gondor.  Seu nome ï¿½ lembrado ainda hoje nas canï¿½ï¿½es das
+tavernas mais longï¿½nquas da Terra Mï¿½dia.  Cansado e satisfeito por ter
+livrado sua amada terra das forï¿½as das trevas, Boromir parte em busca de
+novos mundos, novas batalhas.
+   Por muitos mundos o nome Boromir foi ouvido.  Em todos esse nome ï¿½
+sinï¿½nimo de perseveranï¿½a e de forï¿½a.  Nenhuma batalha foi abandonada e,
+aonde houvesse o Mal, a sua espada lï¿½ estava a serviï¿½o das pessoas boas."
 
-   Tudo começa numa noite onde tudo o que se ouvia era o sussurro do vento,
-em sua mais pura calma e graça.  De repente, num vilarejo, aos pés da
-Montanha, ouve-se um choro; um choro de um bebê.  Nascia Romeu, o forte.
-Filho de dois dos maiores guerreiros da história do Universo, Romeu herdou a
-coragem e confiança de seu pai, e a beleza indescritível de sua mãe.  O
-mundo parou perante aquele choro; reverenciou o nascimento daquela criança
-que, um dia, mostraria o objetivo pelo qual teria vindo ao mundo.
+   Sua chegada ao mundo de Vitï¿½lia foi sem grandes festejos.  Seu renome nï¿½o
+o precedia como era de costume.  E essa bela terra foi entï¿½o escolhida para
+sua ï¿½ltima morada.
 
-   Seis anos haviam se passado após aquela noite, e Romeu crescia aprendendo
-a arte da guerra.  Ele se tornaria um grande lutador, num futuro próximo.  E
-era tão belo que não conseguiria passar despercebido: encantava a todos com
-seu sorriso; revitalizava o ambiente com seu olhar.
+   Eram tempos difï¿½ceis ..  Vitï¿½lia estava sitiada por cidades em conflito..
+Uma a uma as guerras acabaram por atrair o guerreiro sedento de paz.  Sua
+espada pouco descansou e nï¿½o houve mal a sua frente que nï¿½o sucumbisse a sua
+investida em nome do Bem.  Cresceu Boromir dormindo ao relento ou nas
+estalagens de Midennir ...
 
-   Um dia, não se sabe por quê, sua mãe resolveu afastar Romeu de seu pai, e
-fugiu com ele para longe daquele vilarejo.  Para dificultar ainda mais, a
-pobre criança foi obrigada a trocar de nome.  Passou a se chamar Harry.  Por
-ser muito ingênuo, não fez perguntas sobre o que estava acontecendo, e
-cresceu acreditando nas palavras de sua mãe, que dizia seu pai ter morrido
-em batalha.
+   Foi ao Paraï¿½so e ao Purgatï¿½rio a procura do Verdadeiro Deus ..  A serviï¿½o
+do livreiro da Torre Mï¿½gica conquistou uma arma poderosa que pertencia ao
+renomado Alaric; era dourada sua Lï¿½mina ..  Esta Lï¿½mina, o destino havia de
+tirar de suas mï¿½os em uma armadilha mortal e no fim de seus dias de mortal
+ainda trazia consigo uma espada de aï¿½o temperado que conseguiu em suas
+andanï¿½as por Roma.
 
-   Os dois passaram a morar em Midgaard, onde tentaram viver da melhor
-maneira possível.  Sua mãe, uma grande guerreira, tentava terminar o
-treinamento de seu filho, fazendo com que ele se tornasse tão bom quanto
-seus pais.  Certo dia, ao praticar habilidades com a espada, Harry sentiu
-estar sendo observado.  Procurou por alguém, porém nada encontrou.
-Continuou a treinar e, alguns instantes depois, ouviu uma gargalhada.  Olhou
-a volta novamente, e mais uma vez
+   Duas armadilhas mortais ainda estavam reservadas ao grande Boromir que
+superou cada uma delas reerguendo-se e seguindo seu caminho de Glï¿½ria.
 
-   Não achou ninguém.  Até que, a sua frente, apareceu uma silhueta, que foi
-ficando cada vez mais nítida.  Era Nimue, uma mulher não muito alta, de
-cabelos ruivos, e estudante das magias, que se divertia ao brincar com
-aquele jovem.
+   Mais tarde, ao evitar uma catï¿½strofe que pairava sobre Vitï¿½lia, ganhou de
+uma garota do Harem de New Thalos seu Escudo de Fogo que o protegeu atï¿½ seu
+ï¿½ltimo dia.  Numa batalha de vï¿½rias semanas, Boromir conseguiu sua ï¿½ltima
+necessidade, uma faixa vermelha pertencente ao Grande Marte, no exato ï¿½ltimo
+dia que andou por entre os mortais.
 
-   Harry não gostou muito da brincadeira, mas ficou encantado com o que
-aquela aprendiz de Mágica conseguia fazer recitando apenas algumas palavras.
-Ele largou a espada e pediu que ela o ensinasse a usar Magia.  Inicialmente,
-Nimue não gostou muito da idéia, porém concordou, depois de muita
-insistência.
+   Essa Batalha rendeu-lhe fama de tal forma que a Partir daï¿½ passou a ser
+considerado Imortal.  Da sua saga imortal pouco se sabe ...  ï¿½ um mistï¿½rio!
+Os que conhecem a histï¿½ria dizem que ï¿½ muito bonita, pois logo Boromir
+chegou a Semi-Deus.
 
-   Após muitos dias de treino, ele finalmente estava progredindo.  Harry se
-esforçava muito e, um dia, aprendeu uma magia que nem mesmo Nimue havia
-aprendido até então: o Portal, uma magia que tinha o poder de
-teletransportar uma pessoa a qualquer lugar que quisesse.  Ela era conhecida
-por muitos, mas desses, poucos tinham total controle sobre aquela magia.
-Entretido com a novidade, Harry passou a usá-la sempre que tinha forças.
-Contudo, um dia, Harry foi teletransportado para um plano diferente...
+   Sua lï¿½mina agora nï¿½o cortava... construï¿½a... ajudava.  A ï¿½ltima Batalha
+que se sabe ter participado o Guerreiro Boromir foi em Arachnos, onde seu
+pior inimigo, o assassino de Alaric, Yevaud - O Dragï¿½o Negro, convocou o
+Prï¿½ncipe dos dragï¿½es - Aglandiir - para uma investida contra Midgaard.
 
-   Não se ouvia ruído algum, o silêncio era assustador; uma densa neblina
-dificultava o reconhecimento do local; não se sentia a presença de
-ninguém...  Nem nada.
+   Nesse dia, o Semi-Deus Boromir liderou um exercito de mortais e imortais
+ï¿½ vitï¿½ria mais linda que se pode presenciar.
 
-   Embora não soubesse, Harry havia sido transportado para as Névoas do
-Portal, uma espécie de fronteira entre as dimensões.  Nunca ninguém havia
-conseguido sair vivo daquele lugar, ele foi dado como morto.
+   O que aconteceu com Boromir?  Ninguï¿½m sabe .. sua vida ï¿½ um mistï¿½rio
+desde entï¿½o.  Mas todos sabem que podem dormir mais sossegados porque
+sempre que o Mundo de Vitï¿½lia estiver em perigo real por forï¿½as desse ou de
+outro mundo a Espada de Boromir hï¿½ de reluzir contra o Sol hï¿½ de brilhar a
+noite e levar a luz ï¿½queles que estï¿½o na escuridï¿½o.
+~
+E
+Nemesis~
+@CA Lenda de Nemesis@n
 
-   Porém, morto era a última coisa que aquele jovem estava.  Depois de
-procurar incansavelmente a saída e nada conseguir, ele decidiu ficar ali e
-treinar a Magia, com objetivos de ganhar sabedoria suficiente para voltar ao
-seu mundo.
+   Nos primï¿½rdios do mundo, no inï¿½cio dos tempos, tudo era diferente.  O
+Caos havia a pouco ocupado seu trono no lugar do grande Vazio, mas tudo
+levava a crer que uma nova mudanï¿½a estava prestes a ocorrer.  Os elementos
+ainda nï¿½o haviam nascido, a humanidade nï¿½o fora criada.
 
-   Meses, talvez anos, se passaram, e Harry estava a ponto de desistir.  A
-insanidade não tardaria a chegar.  Por mais que se esforçasse, aquele
-guerreiro nunca teria poderes suficientes para sair daquele local.  E,
-cansado e já sem esperanças, ele sentou-se no que julgava ser o chão e olhou
-para frente.  Olhava atentamente, mesmo não vendo nada.  Parecia rezar aos
-Deuses para que lhe mostrassem uma saída.
+   Atï¿½ que a Ordem comeï¿½ou a imperar.  E por suas mï¿½os deu-se o nascimento
+de todos os Princï¿½pios, aqueles que herdariam sua tarefa de velar pelo
+mundo, e os seres vivos, inclusive o homem.
 
-   E um barulho ensurdecedor foi ouvido.  Logo depois, passos.  Gritos.
-Harry se levantou assustado e tentou, com suas últimas forças, responder aos
-pedidos de socorro.  O eco ali criado era agonizante, e Harry caiu
-desmaiado.
+   Um dos nascimentos mais importantes foi o causado pela uniï¿½o do Fogo e da
+Luz.  O Fogo era escuro, sombrio.  Queimava sem dar nenhum sinal, o que
+podia ser devastador.  E a Luz era fria.  Iluminava, mas congelava e cegava
+tambï¿½m.  Atï¿½ finalmente esses dois Princï¿½pios encontraram a harmonia,
+fundindo-se na Chama de Luz.
 
-   Quando acordou novamente, ele se sentiu feliz.  Feliz, pois estava no
-colo de sua mãe.  Feliz por finalmente ter encontrado alguém.  Entretanto,
-ele ainda estava fraco, e quase não conseguia abrir os olhos.  Ficou apenas
-ali, ouvindo aquela doce voz que tanto tinha sentido falta.
+   Essa fusï¿½o foi, ainda sob a forma de um bebï¿½, mandada ao primeiro dos
+mundos, onde nï¿½o sï¿½ aprenderia com o Tempo, o maior de todos os professores,
+como teria liï¿½ï¿½es com os Sentimentos, a Sabedoria e os Sonhos.  Estaria se
+preparando, entï¿½o, para no futuro ser uma das entidades que, segundo
+profecias, auxiliaria ï¿½queles que ainda habitariam um mundo que ainda estava
+para nascer.
 
-   Sua mãe estava chorando, e parecia lhe confessar algo.  Ela pedia
-desculpas a ele por ter mentido sobre a morte do seu pai durante todos esses
-anos; ele, afinal, estava vivo.  Ao ouvir isso, uma força descomunal invadiu
-o corpo de Harry, e ele levantou como num impulso.
+   E assim ela cresceu.  Aprendeu tudo o que se poderia aprender e jï¿½
+comeï¿½ava a mostrar o que teria sua regï¿½ncia no mundo que velaria.  Criou
+minerais e, usando o poder de sua essï¿½ncia, conseguiu manipulï¿½-los como
+desejava.  Tambï¿½m descobriu que era a ï¿½nica que tinha a capacidade de
+amendrotar a sombria Escuridï¿½o e que, se quisesse, causava tanto ferimentos
+como os curava.
 
-   Seus olhos brilhavam de uma mistura de raiva e desgosto.  A mãe de Harry
-não sabia o que dizer, pois esperava que seu filho estivesse morto, e não
-que estivesse ouvindo aquilo tudo.  Começaram a discutir, até que ambos
-travaram uma luta.  Harry usava todos seus conhecimentos de magia, e sua mãe
-(que agora lhe era uma estranha) o retalhava com a espada.  Até que, de
-repente, ela o apunhalou pelas costas.  Apesar de toda a dor, Harry juntou
-forças e concentrou uma imensa energia em volta de seu corpo.  Uma energia
-tão forte que provocou uma explosão, cujo barulho pôde ser ouvido em todas
-as dimensões.
+   Como deveria de ser, a Chama foi mandada ao jovem mundo de V'tah alyia*.
+O primeiro Princï¿½pio jï¿½ havia chegado, sendo agora era sua vez de conceder
+sua graï¿½a: abriu suas imensas asas de fogo e luz, fazendo nascer o primeiro
+Dia.  Tirou alguns fios de seus cabelos, que eram de puro fogo, e
+espalhou-os pelo mundo, para futuramente serem usados da maneira que haveria
+de ensinar, nos minerais que criara e trouxera.  Mais tarde tambï¿½m criaria a
+guerra.  Assim, proporcionaria aos homens o que poderia os levar ï¿½ glï¿½ria ou
+ï¿½ ruï¿½na, dependendo apenas do caminho que eles escolhessem.
 
-   Dois corpos estavam ali, caídos ao chão, perdidos nas Névoas do Portal.
-Harry estava caído e iria sangrar até morrer.  Sua mãe estava inconsciente,
-com
+   Era essa sua missï¿½o.  Era assim que os abenï¿½oava.
+~
+E
+Maegali~
+@CA Lenda de Maegali@n
 
-   Sua alma congelada.  Ninguém nunca conseguiu explicar o que aconteceu
-depois daquele dia.  Sabe-se apenas que Harry foi retirado das Névoas do
-Portal e, quando acordou, estava deitado em uma cama confortável, dentro de
-um cômodo aquecido com o calor da lareira que se encontrava a sua frente.
+   Nos primï¿½rdios do mundo, no inï¿½cio dos tempos, tudo era diferente.  O
+Caos havia a pouco ocupado seu trono no lugar do grande Vazio, mas tudo
+levava a crer que uma nova mudanï¿½a estava preste a ocorrer.  Os elementos
+ainda nï¿½o haviam nascido, a humanidade nï¿½o fora criada.
 
-   Ao abrir os olhos deparou-se com um homem forte, alto, de olhos da cor do
-céu.  Seu nome?  Truton.  Ele contou que, há uma semana, Harry bateu à porta
-dele pedindo abrigo e caiu, logo em seguida, em seus braços, tão fraco
-estava.  Truton cuidou de seus ferimentos, o aqueceu e alimentou; até aquele
-momento.
+   Atï¿½ que a Ordem comeï¿½ou a imperar.  E por suas mï¿½os deu-se o nascimento
+de todos os Princï¿½pios, dos seres vivos e daqueles que herdariam sua tarefa
+de velar pelo mundo.
 
-   Harry sorriu agradecido, e lhe contou tudo pelo que havia passado.  Só
-não entendia a maneira como foi retirado daquele lugar assombroso.  Ele não
-sabia como explicar o que tinha acontecido desde a luta com sua mãe, e
-atribuiu aquele acontecimento aos Deuses.  Harry se sentia feliz por estar à
-salvo, mas gostaria de saber o paradeiro de sua mãe.  Toda aquela raiva
-havia desaparecido, e ele sentia saudades dela.  Porém, nunca mais ela foi
-vista e dizem que, até os dias de hoje, ela vaga pelas Névoas do Portal em
-busca de uma saída.  Depois de longas conversas e histórias de aventuras
-vividas, os dois descobriram que tinham algo em comum: eram pai e filho.
-Uma grande alegria invadiu a alma dos dois, que haviam se reencontrado após
-tantos anos...
+   O Tempo conhece o passado, o presente e o futuro.  Ele sabe que o homem
+surgirï¿½, que caminharï¿½ com seus prï¿½prios pï¿½s e tomarï¿½ as suas prï¿½prias
+decisï¿½es.  Vï¿½ que para o homem nï¿½o se distanciar de seu caminho, precisarï¿½
+de guias.  Entï¿½o o Tempo aconselha a Ordem a criar, segundo as suas prï¿½prias
+profecias, o primeiro dos seus rebentos.  O primeiro dos Princï¿½pios.
 
-   Truton ficou surpreso com tudo o que o filho havia aprendido.  E ficou
-mais ainda quando soube que ele tinha conhecimentos sobre a Magia.  Harry
-tentava ensinar seu pai o que sabia, mas os dois, ali, não iriam muito
-longe.  Truton conhecia muitos magos, porém nunca havia se interessado em
-aprofundar seus conhecimentos nessa área.
+   Entï¿½o a Ordem, esta forï¿½a suprema, manipulando as essï¿½ncias que formam os
+sonhos e que dï¿½o origem aos sentimentos, transforma, molda e cria o
+Princï¿½pio da Magia.
 
-   Harry era prestativo, e queria sempre aprender mais, ficar mais cada vez
-mais forte.  Era conhecido por levar amigos para as maiores aventuras e
-fazê-los enfrentar as criaturas mais terríveis que se podia encontrar.  Mas
-nunca essas "cruzadas" sofreram baixas.  O jovem, que agora não era apenas
-um simples guerreiro, era cuidadoso, e sempre pensava nos mínimos detalhes
-antes de atacar.
+   O Tempo toma para si a missï¿½o de ensinar a Magia, preparando-a para ser a
+primeira e a ï¿½ltima de sua espï¿½cie.  Ele lhe ensina a arte da dignidade, da
+justiï¿½a e da honra.  Prepara-a para ser aquela a quem as geraï¿½ï¿½es do porvir,
+no fim recorrerï¿½o.  Faria o papel da Mï¿½e dos Princï¿½pios mais novos.
 
-   E sua fama foi crescendo.  Logo, todo aquele mundo já havia ouvido falar
-de Harry, o Guardião da Amizade.  Muitos desafiaram-no e, com isso, muitos
-pereceram perante sua espada.  Harry treinava dia e noite, pois queria
-enfrentar um monstro, dos mais temidos: o Dracolich Ancião.
+   A Ordem a envia para um mundo em nascimento.  V'tah alyia* estava
+surgindo.  Seu destino era claro e ï¿½nico: impregnar toda V'tah alyia com
+parte de sua essï¿½ncia, criando um elo entre ela e esta terra, que duraria
+atï¿½ o seu fim.
 
-   E ele tinha um motivo para isso.  Fora o Dracolich Ancião, certa vez, que
-matou um de seus melhores amigos.  E matou de forma cruel e covarde,
-atacando-o por trás.  Harry não poderia deixar que aquele ser vivesse por
-muito mais tempo.  Depois de muito, mas muito treino, e noites em claro para
-bolar uma estratégia perfeita, finalmente chegou o grande dia.  Ele se
-levantou da cadeira em que estava sentado, e empunhou a espada.  Não se
-despediu de ninguém, pois tinha sabia que voltaria vivo da batalha.  Algumas
-pessoas o viram entrar no Paraíso dos Dragões, e logo toda Vitália estava lá
-para presenciar o grande duelo.
+   A Magia plasma entï¿½o, usando como ingredientes, a dignidade, a honra e a
+justiï¿½a, que havia aprendido com o Tempo, correntes etï¿½reas, as quais atou
+em suas mï¿½os e que somente podem ser ligadas e vistas por aqueles cujas
+almas sejam puras.
 
-   Ao entrar na cova do dragão, Harry percebeu o quanto era pequeno.  Nunca
-aquela sensação tinha lhe ocorrido.  Sentiu um frio descer pela espinha, mas
-isso não fez com que desistisse.
+               Maegali ï¿½ o seu nome. O Princï¿½pio mais velho.
+             A Anciï¿½ das Essï¿½ncias mï¿½sticas. A Deusa da Magia.
+~
+E
+Blug~
+@CA Lenda de Blug@n
 
-   Ele respirou fundo, segurou a espada e partiu de encontro à criatura.
-Foi uma luta árdua e sangrenta, cujas imagens iriam gerar centenas de
-pesadelos para aqueles que as viam.  Apesar de rezar para Harry ganhar,
-ninguém conseguia dizer quem iria vencer.  Aquilo parecia não acabar nunca.
-Os dois lados estavam bastante destruídos, mas nenhum aceitava se entregar.
-Até que uma luz amarelada desce dos céus, e vai em direção à Harry.
+   Ninguï¿½m sabe, atï¿½ hoje, quando ou como o universo comeï¿½ou, mas
+acredita-se que nunca houve um inï¿½cio, e provavelmente nunca terï¿½ um fim.
+Conta-se que, antes da existï¿½ncia do mundo, do cï¿½u e das estrelas, o
+universo era apenas um grande Vazio.  E da necessidade de se preencher o
+Vazio, o Caos surge.
 
-   Perante o silêncio que ali se formou, o jovem guerreiro desapareceu.  O
-Dracolich Ancião, mal conseguindo ficar de pé, não entendeu o que aquilo
-significava.  Diferente do resto das pessoas que assistiram a tudo.  Elas
-sabiam o que tinha acontecido: Harry havia imortalizado, como poucos até
-então.  Ele atingiu um nível de sabedoria tão alto, mas tão alto, que o
-mundo dos mortais não o suportaria mais.
+   O Caos, composto de matï¿½ria e energia, cresce, tomando para si todo o
+infinito espaï¿½o onde antes existia apenas o Vazio.  Conforme crescia, o
+Caos, natural e inevitavelmente, adquiria a consciï¿½ncia primï¿½ria: de que
+seria necessï¿½rio existir uma Ordem, o oposto ao Caos, que pudesse reger se u
+crescimento e sua evoluï¿½ï¿½o.
 
-   Porém, ele não desapareceu.  Até hoje Harry é lembrado por sua coragem e
-determinação.  E por ser um guerreiro um tanto "diferente", devido ao seu
-grau de conhecimento da Magia, ele tornou-se Harry, o Príncipe dos Portais,
-e lembrado também como Guardião da Amizade.
+   Entï¿½o, entre os movimentos da matï¿½ria e da energia que forma o Caos
+comeï¿½a a surgir a primeira evidï¿½ncia de inteligï¿½ncia.  Como o bem e o mal, a
+luz e a escuridï¿½o, o amor e o ï¿½dio, a existï¿½ncia do Caos obrigaria a
+existï¿½ncia de seu oposto, e assim aconteceu: a Ordem surgira.
+
+   ï¿½ errado dizer que a Ordem possui inteligï¿½ncia, pois ela ï¿½ simplesmente a
+prï¿½pria inteligï¿½ncia, onisciente e primï¿½ria.  Como conseqï¿½ï¿½ncia de sua
+existï¿½ncia, da Ordem se origina o pensamento.  Blug, esse ï¿½ o nome dado pela
+Ordem ï¿½ si mesma na linguagem do pensamento.
+
+   A Ordem domina a matï¿½ria e a energia que antes formava o Caos,
+transformando-o, recriando-o como algo vivo e pulsante.  A partir do momento
+que o Caos deixa de existir, a Ordem se divide, surgindo Tempo, o Eterno.
+
+   O Tempo conhece e domina o presente, o passado e o futuro.  Ele sabe que
+o homem surgirï¿½, que caminharï¿½ com seus prï¿½prios pï¿½s e tomarï¿½ as suas
+prï¿½prias decisï¿½es.  Vï¿½ que para o homem nï¿½o se distanciar de seu caminho,
+precisarï¿½ de guias.
+
+   Entï¿½o o Tempo aconselha a Ordem a criar, segundo as suas prï¿½prias
+profecias, o primeiro dos seus descendentes: o Princï¿½pio da Magia, que ï¿½
+tomado pelo Tempo como seu pupilo.  A Ordem envia o Princï¿½pio da Magia para
+um lugar chamado V'tah alyia, onde sua missï¿½o seria impregnï¿½-lo com parte de
+sua essï¿½ncia.
+
+   Novos princï¿½pios surgiram, e dentre eles dois se destacavam: Fogo e Luz.
+Destes, apï¿½s encontrarem a harmonia, nasceu a Chama de Luz, que tambï¿½m foi
+tomada como pupilo pelo Tempo.  A Ordem envia a Chama de Luz a V'tah alyia,
+onde receberia a missï¿½o de criar a Luz, fazendo nascer o primeiro Dia.
+
+   O jovem mundo chamado V'tah alyia, impregnado com a essï¿½ncia da Magia e
+iluminado pela Chama da Luz, estava pronto para receber a maior dï¿½diva, a
+Ordem o abenï¿½oa criando a Vida alï¿½.
+
+   Dentre as muitas histï¿½rias conhecidas sobre o Deus Blug, essa ï¿½ a mais
+contada e a mais aceita de todas.
+~
+E
+inscriï¿½ï¿½o altar~
+@RSe quiser conhecer a essï¿½ncia das divindades, basta dizer o nome de seu
+Livro nesta sala.@n
 ~
 S
 #22102
 A Livraria dos Aventureiros~
-   Você agora se encontra na Livraria da Biblioteca, e está todo feliz, pois
-sabe que poderá comprar alguns exemplares de livros para ler com calma.
-   São tantos os livros que você gostaria de ler mas seus olhos se sentem
-atraídos especialmente para a prateleira onde estão enfileirados pesados
-volumes e que fazem parte das "Epopéias em Verso e Prosa".  Pelo tamanho dos
+   Vocï¿½ agora se encontra na Livraria da Biblioteca, e estï¿½ todo feliz, pois
+sabe que poderï¿½ comprar alguns exemplares de livros para ler com calma.
+   Sï¿½o tantos os livros que vocï¿½ gostaria de ler mas seus olhos se sentem
+atraï¿½dos especialmente para a prateleira onde estï¿½o enfileirados pesados
+volumes e que fazem parte das "Epopï¿½ias em Verso e Prosa".  Pelo tamanho dos
 volumes, algumas devem ter durado muitos e muitos anos.
-   Há um grande mural nesta parede, onde escreveram algo, numa língua
+   Hï¿½ um grande mural nesta parede, onde escreveram algo, numa lï¿½ngua
 estranha e complexa.
 ~
-221 cdehu 0
-D S
-Você pode ver a Grande Biblioteca de Vitália.
+221 1048732 0 0 0 0
+D0
+Vocï¿½ pode ver a Grande Biblioteca de Vitï¿½lia.
 ~
 ~
 0 -1 22100
 E
 mural aviso placa~
-O verdadeiro aventureiro é aquele que pára para ouvir e aprende.
+O verdadeiro aventureiro ï¿½ aquele que pï¿½ra para ouvir e aprende.
    BUY  - Compra algum livro ou pergaminho.
-   LIST - O bardo-livreiro gentilmente lhe dirá o preço e o tipo de cada
+   LIST - O bardo-livreiro gentilmente lhe dirï¿½ o preï¿½o e o tipo de cada
           livro que estiver sendo vendido na Livraria.
 ~
 S
-$
+$~
