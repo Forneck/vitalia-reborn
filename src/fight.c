@@ -1173,7 +1173,7 @@ void beware_lightning()
 
 	zone_rnum i;
 
-	switch (weather_info->sky)
+	switch (weather_info.sky)
 	{
 	case (SKY_LIGHTNING):
 		if (!(rand_number(0, 9) == 0))
