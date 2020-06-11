@@ -107,6 +107,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"autosplit", "autospl", POS_DEAD, do_gen_tog, 0, SCMD_AUTOSPLIT},
 
 	{"backstab", "ba", POS_STANDING, do_cast, 1, SKILL_BACKSTAB},
+   {"backflip", "bac", POS_FIGHTING, do_cast, 1, SKILL_BACKFLIP},
 	{"ban", "ban", POS_DEAD, do_ban, LVL_GRGOD, 0},
 	{"bandage", "band", POS_RESTING, do_cast, 1, SKILL_BANDAGE},
 	{"balance", "bal", POS_STANDING, do_not_here, 1, 0},
