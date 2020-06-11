@@ -109,12 +109,15 @@ ACMD(do_gassist)
 			if ((k != ch) && CAN_SEE(ch, k) && (IN_ROOM(k) == IN_ROOM(ch)) && FIGHTING(k))
 			{
 				if (!CAN_SEE(ch, FIGHTING(k)))
-					act("Você não pode ver com quem $N está lutando.", FALSE, ch, NULL, k,
-						TO_CHAR);
+					act("Você não pode ver com quem $N está lutando.", FALSE, ch, NULL, k, TO_CHAR);
 				else
+				{
 					helpee = k;
+					break;
+				}
 			}
 		}
+
 		if  (!helpee){
 		send_to_char(ch, "Você não vê ninguém lutando em seu grupo.\r\n");
 		return;
