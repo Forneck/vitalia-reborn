@@ -5,7 +5,7 @@ que o rio parece ser menos violento.  Uma agradï¿½vel luz violeta parece vir
 do fundo, parecendo tentar atraï¿½-lo para si.  Vocï¿½ pode voltar ï¿½ tona,
 subindo, ou descer ainda mais, para o fundo do rio.
 ~
-113.1 cg 8
+113 68 0 0 0 8
 D4
 ~
 ~
@@ -29,19 +29,19 @@ cintilam intensamente.  Esses lï¿½tus formam um cï¿½rculo que parece demarcar a
 na superfï¿½cie.  A partir do cï¿½rculo vocï¿½ vï¿½ ainda que os lï¿½tus,
 enfileirados, seguem oeste.  ï¿½ possï¿½vel ainda nadar para norte ou para cima.
 ~
-113.1 cg 8
-D4
-~
-~
-0 -1 11300
-D3
-~
-~
-0 -1 11302
+113 68 0 0 0 8
 D0
 ~
 ~
 0 -1 11307
+D3
+~
+~
+0 -1 11302
+D4
+~
+~
+0 -1 11300
 S
 #11302
 A Trilha Subaquï¿½tica~
@@ -52,7 +52,7 @@ profundo, cobrem o solo formando estranhos mosaicos que brilham ï¿½ luz das
 flores.  Mais ï¿½ frente vocï¿½ repara que a trilha cintilante termina, levando
 a um local extremamente escuro.
 ~
-113.1 cg 8
+113 68 0 0 0 8
 D1
 ~
 ~
@@ -71,7 +71,7 @@ profundo, cobrem o solo formando estranhos mosaicos que brilham ï¿½ luz das
 flores.  O cintilar dos lï¿½tus para abruptamente abaixo de vocï¿½, logo na
 borda do que parece ser um buraco no rio.  Ali vocï¿½ nï¿½o enxergar luz alguma.
 ~
-113.1 cg 8
+113 68 0 0 0 8
 D1
 ~
 ~
@@ -89,7 +89,7 @@ Ikshumati.  A iluminaï¿½ï¿½o aqui ï¿½ inexistente, sendo extremamente desagradï¿
 a sensaï¿½ï¿½o de estranhos seres de corpo liso nadando ï¿½ sua volta, tocando-o
 vez ou outra. O tï¿½nel segue para baixo e para cima.
 ~
-113.1 acgi 8
+113 325 0 0 0 8
 D4
 Ali hï¿½ luz.
 ~
@@ -109,17 +109,17 @@ a sensaï¿½ï¿½o de estranhos seres de corpo liso nadando ï¿½ sua volta, tocando-o
 vez ou outra.  Hï¿½ uma repentina curva no tï¿½nel, seguindo oeste.  Para cima
 estï¿½ o leito do rio Ikshumati.
 ~
-113.1 acgi 8
-D4
-O tï¿½nel ï¿½ realmente escuro.
-~
-~
-0 -1 11304
+113 325 0 0 0 8
 D3
 Um forte brilho vem dessa direï¿½ï¿½o.
 ~
 ~
 0 -1 11306
+D4
+O tï¿½nel ï¿½ realmente escuro.
+~
+~
+0 -1 11304
 S
 #11306
 A Caverna dos Cristais~
@@ -134,7 +134,7 @@ prï¿½prios cristais, estï¿½ uma enorme flor de lï¿½tus, de diï¿½metro prï¿½ximo 
 altura, fechada como botï¿½o prestes a se abrir.  Ela parece muito bem
 guardada.
 ~
-113.2 cdgfj 0
+113 620 0 0 0 0
 D1
 Vocï¿½ vï¿½ o escuro tï¿½nel.
 ~
@@ -150,15 +150,15 @@ continuar a nadar e procurar uma saï¿½da do que arriscar-se em
 uma interminï¿½vel subida rumo ï¿½ tona.  Nadar a norte ou sul parece
 ser sua ï¿½nica opï¿½ï¿½o.
 ~
-113.1 cg 8
-D2
-~
-~
-0 -1 11301
+113 68 0 0 0 8
 D0
 ~
 ~
 0 -1 11308
+D2
+~
+~
+0 -1 11301
 S
 #11308
 No Fundo do Rio, Sob as ï¿½guas~
@@ -169,15 +169,15 @@ continuar a nadar e procurar uma saï¿½da do que arriscar-se em
 uma interminï¿½vel subida rumo ï¿½ tona.  Nadar para norte ou sul parece
 ser sua ï¿½nica opï¿½ï¿½o.
 ~
-113.1 cg 8
-D2
-~
-~
-0 -1 11307
+113 68 0 0 0 8
 D0
 ~
 ~
 0 -1 11309
+D2
+~
+~
+0 -1 11307
 S
 #11309
 No Fundo do Rio, Sob as ï¿½guas~
@@ -189,15 +189,15 @@ Mais ï¿½ frente vocï¿½ vï¿½ que o rio faz uma curva para oeste, parecendo entrar
 num gigantesco buraco, em uma rocha.  Mas por enquanto, nadar para norte ou
 sul sï¿½o suas ï¿½nicas opï¿½ï¿½es aqui.
 ~
-113.1 cg 8
-D2
-~
-~
-0 -1 11308
+113 68 0 0 0 8
 D0
 ~
 ~
 0 -1 11310
+D2
+~
+~
+0 -1 11308
 S
 #11310
 Em Frente ao Buraco~
@@ -211,15 +211,15 @@ alto, mas vocï¿½ nï¿½o tem como saber...  A correnteza parece ser muito forte
 por ali, sendo que uma vez entrando lï¿½, difï¿½cilmente vocï¿½ voltarï¿½.  Vale a
 pena arriscar?  Se sim, continue a seguir norte.  Se nï¿½o, nada para sul.
 ~
-113.1 cg 8
-D2
-~
-~
-0 -1 11309
+113 68 0 0 0 8
 D0
 ~
 ~
 0 -1 11311
+D2
+~
+~
+0 -1 11309
 S
 #11311
 Atravessando o Buraco~
@@ -227,41 +227,37 @@ Atravessando o Buraco~
 um tï¿½nel.  Ainda ï¿½ possï¿½vel nadar atï¿½ sul, pois a correnteza que segue norte
 nï¿½o estï¿½ tï¿½o forte.
 ~
-113.1 acg 8
-D2
-~
-~
-0 -1 11310
+113 69 0 0 0 8
 D0
 ~
 ~
 0 -1 11312
+D2
+~
+~
+0 -1 11310
 S
 #11312
 No Tï¿½nel~
    Vocï¿½ nï¿½o vï¿½ quase nada. A correnteza aqui tornou-se muito intensa, sendo impossï¿½vel
 nadar para sul. Vocï¿½ nï¿½o vï¿½ saï¿½da alguma.
 ~
-113.1 acg 8
-OX flow-msg $n ï¿½ levad$r, pela correnteza, tï¿½nel acima.
-OX flow-dir up
+113 69 0 0 0 8
 D4
 ~
 ~
-d -1 11313
+1 -1 11313
 S
 #11313
 No Tï¿½nel~
    Vocï¿½ nï¿½o vï¿½ quase nada. A forte correnteza o atrai cada vez mais para cima.
 Lï¿½, parece haver alguma coisa iluminando um dos lados do tï¿½nel.
 ~
-113.1 acg 8
-OX flow-msg $n ï¿½ levad$r, pela correnteza, tï¿½nel acima.
-OX flow-dir up
+113 69 0 0 0 8
 D4
 ~
 ~
-d -1 11314
+1 -1 11314
 S
 #11314
 No Tï¿½nel~
@@ -272,12 +268,11 @@ que atravessa o tï¿½nel, permitindo que vocï¿½ se segure.
 norte no tï¿½nel, rente ï¿½ grade que o mantï¿½m aqui, outra grade, mas dourada,
 que mais parece uma porta. Parece ser sua ï¿½nica saï¿½da.
 ~
-113.1 acg 8
+113 69 0 0 0 8
 D0
 ~
 grade dourada~
-:n 2 a grade dourada
-a -1 11315
+1 -1 11315
 S
 #11315
 O Centro do Templo a Sesha~
@@ -293,18 +288,7 @@ vï¿½ um salï¿½o abarrotado de coisas, a leste vï¿½ uma sala repleta de livros e
 pergaminhos, a sul um local pouco iluminado, a oeste uma espï¿½cie de altar
 e pï¿½tios a noroeste e sudeste, externos ao templo.
 ~
-113.3 deh 0
-ON bhogavati
-D8
-Vocï¿½ vï¿½ um pï¿½tio.
-~
-~
-0 -1 11384
-D6
-Vocï¿½ vï¿½ um pï¿½tio.
-~
-~
-0 -1 11361
+113 152 0 0 0 0
 D0
 Ali fica a Sala de oferendas.
 ~
@@ -329,18 +313,27 @@ D5
 Vocï¿½ vï¿½, na piscina dourada, a grade que leva atï¿½ o Ikshumati.
 ~
 grade dourada~
-:n 2 a grade dourada
-a -1 11314
-E
-pinturas teto~
-Hï¿½ diversas pinturas representando Sesha sustentando o mundo e sendo
-reverenciado pelos senhores de Patala.
+1 -1 11314
+D6
+Vocï¿½ vï¿½ um pï¿½tio.
 ~
+~
+0 -1 11361
+D8
+Vocï¿½ vï¿½ um pï¿½tio.
+~
+~
+0 -1 11384
 E
 pilares~
 O que cobre os pilares parece ser ouro puro. Os desenhos que os adornam,
 feito por ourives de fantï¿½stica habilidade, represetam quatro naginis
 segurando as pedras dos senhores do norte, do sul, do leste e oeste.
+~
+E
+pinturas teto~
+Hï¿½ diversas pinturas representando Sesha sustentando o mundo e sendo
+reverenciado pelos senhores de Patala.
 ~
 S
 #11316
@@ -357,17 +350,17 @@ entanto, o que ocupa maior espaï¿½o sï¿½o os grandes baï¿½s de pedra que parecem
 encerrar em si os maiores tesouros.
   Na parede oeste hï¿½ uma abertura que leva a um pï¿½tio.
 ~
-113.3 deh 0
-D2
-Vocï¿½ vï¿½ o Centro do Templo.
-~
-~
-0 -1 11315
+113 152 0 0 0 0
 D0
 Vocï¿½ vï¿½ a Via Norte.
 ~
 ~
 0 -1 11320
+D2
+Vocï¿½ vï¿½ o Centro do Templo.
+~
+~
+0 -1 11315
 D3
 Vocï¿½ vï¿½ um pï¿½tio.
 ~
@@ -389,7 +382,12 @@ esse lugar.  Uma interessante inscriï¿½ï¿½o em um pilar exatamente no centro da
 sala chama sua atenï¿½ï¿½o.
    A parede sul possui uma abertura, esta levando a um pï¿½tio.
 ~
-113.3 deh 0
+113 152 0 0 0 0
+D1
+Vocï¿½ vï¿½ a Via Leste.
+~
+~
+0 -1 11330
 D2
 Vocï¿½ vï¿½ um pï¿½tio.
 ~
@@ -400,22 +398,18 @@ Vocï¿½ vï¿½ o Centro do Templo.
 ~
 ~
 0 -1 11315
-D1
-Vocï¿½ vï¿½ a Via Leste.
-~
-~
-0 -1 11330
 E
 pilar centro inscriï¿½ï¿½o interessante~
-&wEstï¿½ escrito, na lï¿½ngua antiga:&n
+@wEstï¿½ escrito, na lï¿½ngua antiga:@n
 
-               &w"&n &YSwadeshe pujyathe raja&n 
-                 &YVidwan sarvatra pujyathe&n &w"&n
+               @w"@n @YSwadeshe pujyathe raja@n 
+                 @YVidwan sarvatra pujyathe@n @w"@n
 
-&wMais abaixo vocï¿½ vï¿½ a traduï¿½ï¿½o para sua lï¿½ngua:&n
+@wMais abaixo vocï¿½ vï¿½ a traduï¿½ï¿½o para sua lï¿½ngua:@n
 
-         &w"&n &YO rei ï¿½ venerado em suas prï¿½prias terras,&n
-         &Ymas o homem sï¿½bio ï¿½ venerado em qualquer lugar&n &w"&n
+         @w"@n @YO rei ï¿½ venerado em suas prï¿½prias terras,@n
+         @Ymas o homem sï¿½bio ï¿½ venerado em qualquer lugar@n @w"@n
+
 ~
 S
 #11318
@@ -433,17 +427,17 @@ canaletas de ouro que o atravessam.  O ambiente parece ser ideal para
 meditaï¿½ï¿½o ou simplesmente para o repouso de uma mente e corpo cansados.
    Hï¿½, na parede leste, a passagem para um pï¿½tio externo ao templo. 
 ~
-113.3 adeh 0
-D1
-Vocï¿½ vï¿½ um pï¿½tio.
-~
-~
-0 -1 11384
+113 153 0 0 0 0
 D0
 Vocï¿½ vï¿½ o Centro do Templo.
 ~
 ~
 0 -1 11315
+D1
+Vocï¿½ vï¿½ um pï¿½tio.
+~
+~
+0 -1 11384
 D2
 Vocï¿½ vï¿½ a Via Sul.
 ~
@@ -467,7 +461,12 @@ sem razï¿½o aparente. Diga-se de passagem, vocï¿½ atï¿½ agora nï¿½o entendeu par
 que serve esse salï¿½o.
    Uma passagem, na parede norte, leva a um pï¿½tio externo ao templo.
 ~
-113.3 deh 0
+113 152 0 0 0 0
+D0
+Vocï¿½ vï¿½ um pï¿½tio.
+~
+~
+0 -1 11361
 D1
 Vocï¿½ vï¿½ o Centro do Templo.
 ~
@@ -478,11 +477,6 @@ Vocï¿½ vï¿½ a Via Oeste.
 ~
 ~
 0 -1 11350
-D0
-Vocï¿½ vï¿½ um pï¿½tio.
-~
-~
-0 -1 11361
 S
 #11320
 A Via Norte~
@@ -496,7 +490,7 @@ pungente, mas todos agradï¿½veis.  Vocï¿½ pode seguir pela via por norte ou
 nordeste, voltar para o templo, que fica a sul, ou entrar em uma discreta
 loja a oeste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -525,7 +519,7 @@ atravessadas por rios, nï¿½o possui nenhum cheiro desagradï¿½vel (exceto o seu,
 pungente, mas todos agradï¿½veis.  Vocï¿½ pode seguir pela via por norte, sul
 ou oeste ou entrar em uma grande loja a leste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -554,7 +548,7 @@ atravessadas por rios, nï¿½o possui nenhum cheiro desagradï¿½vel (exceto o seu,
 pungente, mas todos agradï¿½veis.  Vocï¿½ pode seguir pela via por norte, sul,
 entrar em uma grande loja a leste ou em uma barulhenta loja a oeste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -582,7 +576,7 @@ atravessadas por rios, nï¿½o possui nenhum cheiro desagradï¿½vel (exceto o seu,
 ï¿½ claro...), e sim ï¿½ repleta de aromas que vï¿½o do mais suave ao mais
 pungente, mas todos agradï¿½veis.  Vocï¿½ pode seguir pela via leste e oeste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D1
 ~
 ~
@@ -610,16 +604,15 @@ incessantemente, os martelos nï¿½o param nunca de bater, o metal nunca para de
 bilhar aqui.  Nï¿½o ï¿½ algo que costume ser bonito, mas a oficina do velho
 artesï¿½o consegue ser.
 ~
-113.3 dchg 0
-OL 101
-D9
-~
-~
-0 -1 11326
+113 204 0 0 0 0
 D6
 ~
 ~
 0 -1 11325
+D9
+~
+~
+0 -1 11326
 S
 #11325
 O Arsenal de Twashtri~
@@ -634,15 +627,15 @@ maï¿½as em grandes baï¿½s...  Infelizmente, pela qualidade dos itens ser
 excepcional, os preï¿½os tambï¿½m o sï¿½o.  
    A sudeste parece ficar a oficina e a oeste a Via Norte.
 ~
-113.3 cdg 0
-D8
-~
-~
-0 -1 11324
+113 76 0 0 0 0
 D3
 ~
 ~
 0 -1 11322
+D8
+~
+~
+0 -1 11324
 S
 #11326
 A Armoraria de Twashtri~
@@ -659,15 +652,15 @@ algodï¿½o leve e calï¿½as de tecido, provando a variedade dos artigos oferecidos
 pela armoraria.
    A nordeste parece ficar a oficina e a oeste a Via Norte.
 ~
-113.3 dhcg 0
-D7
-~
-~
-0 -1 11324
+113 204 0 0 0 0
 D3
 ~
 ~
 0 -1 11321
+D7
+~
+~
+0 -1 11324
 S
 #11327
 A Joalheria~
@@ -681,7 +674,7 @@ Enormes candelabros de ferro negro, completamente sem adornos, iluminam
 apenas o local em que as jï¿½ias se encontram: tudo aqui parece ser feito para
 que as jï¿½ias pareï¿½am ainda mais majestosa do que sï¿½o, se isso for possï¿½vel.
 ~
-113.3 dchg 0
+113 204 0 0 0 0
 D1
 ~
 ~
@@ -700,7 +693,7 @@ bastï¿½es mï¿½gicos, alï¿½m de pergaminhos, poï¿½ï¿½es e o que mais for
 possï¿½vel. 
    A leste fica a Via Norte.
 ~
-113.3 dchg 0
+113 204 0 0 0 0
 D1
 ~
 ~
@@ -716,7 +709,7 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias. As lï¿½mpidas ï¿½guas douradas
 encontram caminho para norte, sul e leste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -743,7 +736,7 @@ voltar para o templo a oeste, se aproximar da entrada para a Congregaï¿½ï¿½o de
 Clï¿½rigos de Bhogavati indo norte, ou seguir em direï¿½ï¿½o a uma casa de ar
 furtivo, a sul.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -773,7 +766,7 @@ pungente, mas todos agradï¿½veis.  Vocï¿½ pode seguir pela via indo leste, oeste
 ou sul, ou ainda ir em direï¿½ï¿½o ao norte, onde fica a Confraria de Druidas de
 Bhogavati.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -803,7 +796,7 @@ pungente, mas todos agradï¿½veis.  A via segue leste oeste, sendo possï¿½vel
 chegar a norte ï¿½ Associaï¿½ï¿½o de Guerreiros de Bhogavati e a sul para uma
 filial da Irmandade dos Magos.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -832,7 +825,7 @@ atravessadas por rios, nï¿½o possui nenhum cheiro desagradï¿½vel (exceto o seu,
 pungente, mas todos agradï¿½veis.  A via segue nas direï¿½ï¿½es norte, sul, leste
 e oeste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -860,7 +853,7 @@ atravessadas por rios, nï¿½o possui nenhum cheiro desagradï¿½vel (exceto o seu,
 ï¿½ claro...), e sim ï¿½ repleta de aromas que vï¿½o do mais suave ao mais
 pungente, mas todos agradï¿½veis. A via segue oeste, norte e sul.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -880,13 +873,12 @@ A Entrada da Congregaï¿½ï¿½o de Clï¿½rigos de Bhogavati~
 impecï¿½vel com portas e janelas de brilhante azul-escuro.  Um pequeno jardim
 floresce ï¿½s margens da via leste, que estï¿½ a sul.  A casa fica a norte.
 ~
-113.3 gcd 1
+113 76 0 0 0 1
 D0
 A Congregaï¿½ï¿½o fica ali.
 ~
 porta~
-:n 2 a porta
-ag 2 11336
+0 2 11336
 D2
 ~
 ~
@@ -901,13 +893,12 @@ paredes, uma grande estante de livros e um pequeno altar feito de ouro.  O
 ambiente ï¿½ muito calmo, sendo possï¿½vel recuperar suas forï¿½as e sua fï¿½ apenas
 estando aqui por alguns momentos.  A entrada fica a sul.
 ~
-113.3 gcd 0
+113 76 0 0 0 0
 D2
 A entrada da Congregaï¿½ï¿½o fica ali.
 ~
 porta~
-:n 2 a porta
-ag 2 11335
+0 2 11335
 S
 #11337
 A Entrada da Sociedade de Ladinos~
@@ -920,15 +911,15 @@ encapuzados ou de face oculta pela escuridï¿½o cochicham enquanto o examinam,
 apontando para vocï¿½.  A sul fica o coraï¿½ï¿½o da Sociedade, enquanto a norte
 corre a via leste.
 ~
-113.3 agcd 0
-D2
-~
-~
-0 -1 11338
+113 77 0 0 0 0
 D0
 ~
 ~
 0 -1 11330
+D2
+~
+~
+0 -1 11338
 S
 #11338
 A Sociedade de Ladinos~
@@ -939,7 +930,7 @@ apenas quatro tochas, duas ao lado da passagem para o local, uma na parede
 leste e outra a oeste.  Alguns bancos de madeiras foram dispostos em volta
 do centro da sala, facilitando a conversa em uma eventual reuniï¿½o.
 ~
-113.3 agcd 0
+113 77 0 0 0 0
 D0
 ~
 ~
@@ -956,15 +947,15 @@ enormes candelabros fixados ï¿½s paredes.  Aqui os guerreiros parecem parar
 apenas para descansar ou conversar, sentados em poltronas confortï¿½veis,
 enquanto a oeste eles reproduzem o que um guerreiro faz tï¿½o bem.
 ~
-113.3 gcd 0
-D3
-~
-~
-0 -1 11340
+113 76 0 0 0 0
 D2
 ~
 ~
 0 -1 11332
+D3
+~
+~
+0 -1 11340
 S
 #11340
 O Centro da Associaï¿½ï¿½o de Guerreiros~
@@ -975,7 +966,7 @@ centro, havendo atrï¿½s deles uma sï¿½rie de cadeiras e bancos para aqueles que
 querem assistir o que ali ocorre ou para os que estï¿½o se exercitando e
 querem descansar um pouco.
 ~
-113.3 gcd 0
+113 76 0 0 0 0
 D1
 ~
 ~
@@ -989,7 +980,7 @@ pedra, cuja fachada imita a de uma torre de castelo com suas ameias.  A alta
 porta de madeira, de duas folhas, estï¿½ aberta, porï¿½m nï¿½o se vï¿½ o que hï¿½ no
 interior do lugar.  O terraï¿½o desce atï¿½ a via leste por norte.
 ~
-113.3 gcd 1
+113 76 0 0 0 1
 D0
 ~
 ~
@@ -997,8 +988,7 @@ D0
 D1
 ~
 porta portas~
-:n 2 uma das portas
-ag 2 11342
+0 2 11342
 S
 #11342
 A Irmandade dos Magos em Bhogavati~
@@ -1011,12 +1001,11 @@ carvalho espalhadas pelo lugar.  Em um canto hï¿½ uma grande estante
 abarrotada de livros, enquanto em outro parecem estar expostas obras que
 retratam membros ilustres da Irmandade.
 ~
-113.3 gcd 0
+113 76 0 0 0 0
 D3
 ~
 porta portas~
-:n 2 uma das portas
-ag 2 11341
+0 2 11341
 S
 #11343
 A Via Sul~
@@ -1030,7 +1019,7 @@ pungente, mas todos agradï¿½veis.  A via continua a sul, o templo fica a
 norte, havendo ainda a oeste um grande barco ancorado em uma ramificaï¿½ï¿½o do
 rio.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -1055,7 +1044,7 @@ atravessadas por rios, nï¿½o possui nenhum cheiro desagradï¿½vel (exceto o seu,
 pungente, mas todos agradï¿½veis. A via continua a norte, sul e leste,
 e a loja de mï¿½sica Sublime Mï¿½sica fica a oeste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -1084,7 +1073,7 @@ atravessadas por rios, nï¿½o possui nenhum cheiro desagradï¿½vel (exceto o seu,
 pungente, mas todos agradï¿½veis. A via segue norte, sul e oeste, havendo
 a leste uma pequena construï¿½ï¿½o sobre um braï¿½o do rio.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -1112,7 +1101,7 @@ atravessadas por rios, nï¿½o possui nenhum cheiro desagradï¿½vel (exceto o seu,
 ï¿½ claro...), e sim ï¿½ repleta de aromas que vï¿½o do mais suave ao mais
 pungente, mas todos agradï¿½veis. A via segue norte, leste e oeste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -1137,7 +1126,7 @@ que possui uma grande cabine para armazenar coisas e alguns mastros sem
 velas.  Um aviso foi preso a um dos mastros (que parece inï¿½til), havendo ao
 seu lado uma bonita mesa de madeira, tambï¿½m marrom-dourada.
 ~
-113.3 cdhg 0
+113 204 0 0 0 0
 D1
 ~
 ~
@@ -1172,7 +1161,7 @@ da mesma madeira apoiada sobre a de baixo.  Um grande nï¿½mero de barcos foi
 deixado para fora, bioando no braï¿½o do rio, sendo presos por firmes cordas
 de fios de dourado bem escurecido
 ~
-113.3 cdgh 0
+113 204 0 0 0 0
 D3
 ~
 ~
@@ -1189,7 +1178,7 @@ colocados ï¿½ venda, tï¿½o bem feitos que sï¿½o como jï¿½ias.  De uma fonte,
 colocada no extremo oeste na loja, ï¿½ emitida uma suave mï¿½sica que fala sobre
 a beleza da uniï¿½o da luz dos cï¿½us e com as gotas de chuva, o arco-ï¿½ris.
 ~
-113.3 cdgh 0
+113 204 0 0 0 0
 D1
 ~
 ~
@@ -1206,7 +1195,7 @@ atravessadas por rios, nï¿½o possui nenhum cheiro desagradï¿½vel (exceto o seu,
 pungente, mas todos agradï¿½veis. O templo fica a leste e a estalagem
 Pedra Preciosa a sul. A via, por sua vez, continua a oeste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D1
 ~
 ~
@@ -1231,7 +1220,7 @@ atravessadas por rios, nï¿½o possui nenhum cheiro desagradï¿½vel (exceto o seu,
 pungente, mas todos agradï¿½veis.  A via parece continuar a sul, leste e
 oeste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D1
 ~
 ~
@@ -1256,7 +1245,7 @@ atravessadas por rios, nï¿½o possui nenhum cheiro desagradï¿½vel (exceto o seu,
 pungente, mas todos agradï¿½veis. A via segue norte, leste e oeste, estando
 a sul a taverna Cobra Voando.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -1285,7 +1274,7 @@ atravessadas por rios, nï¿½o possui nenhum cheiro desagradï¿½vel (exceto o seu,
 pungente, mas todos agradï¿½veis. A via continua a leste e oeste, enquanto a
 norte fica a loja do senhor Kalidas.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -1314,7 +1303,7 @@ descalï¿½o.  Um largo balcï¿½o de granito negro serve de recepï¿½ï¿½o para a
 estalagem.
    A Via Oeste fica a norte, enquanto que o salï¿½o fica a oeste.
 ~
-113.3 dch 0
+113 140 0 0 0 0
 D0
 ~
 ~
@@ -1336,7 +1325,7 @@ grande balcï¿½o, tambï¿½m de madeira, fica um pouco ï¿½ frente da parede sul,
 oposta ï¿½ entrada.  Sobre a entrada vocï¿½ vï¿½ uma enorme inscriï¿½ï¿½o.
    A Via Oeste fica a norte, enquanto o salï¿½o fica a leste.
 ~
-113.3 dhc 0
+113 140 0 0 0 0
 D0
 ~
 ~
@@ -1350,7 +1339,7 @@ entrada enorme inscriï¿½ï¿½o~
 Estï¿½ escrito, sobre a soleira da grande porta:
 "Taverna Cobra Voando: bons clientes sï¿½ saem daqui depois de verem uma."
 ~
-S 
+S
 #11356
 O Salï¿½o~
    Vocï¿½ estï¿½ num salï¿½o.  Isso: num salï¿½o.  Ele nï¿½o tem um nome ou uma
@@ -1367,7 +1356,7 @@ quadros com alvos para dardos foram pindurados nas paredes.  Alï¿½m deles, hï¿½
 quadros de baralhos de diferentes partes do mundo.  A leste fica a Pedra
 Preciosa, e a oeste a Cobra Voando.
 ~
-113.3 dh 0
+113 136 0 0 0 0
 D1
 ~
 ~
@@ -1387,7 +1376,7 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias.  As ï¿½guas encontram saï¿½da
 para sul, sudeste e oeste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D2
 ~
 ~
@@ -1411,19 +1400,19 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias.  As ï¿½guas encontram saï¿½da
 para noroeste, sudeste e sudoeste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D6
 ~
 ~
 0 -1 11357
-D9
-~
-~
-0 -1 11376
 D8
 ~
 ~
 0 -1 11359
+D9
+~
+~
+0 -1 11376
 S
 #11359
 Um Afluente das Vias~
@@ -1435,19 +1424,19 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias.  As ï¿½guas encontram saï¿½da
 para noroeste, sul e oeste.
 ~
-113.3 gr 7
-D6
-~
-~
-0 -1 11358
-D3
-~
-~
-0 -1 11375
+113 131136 0 0 0 7
 D2
 ~
 ~
 0 -1 11334
+D3
+~
+~
+0 -1 11375
+D6
+~
+~
+0 -1 11358
 S
 #11360
 Um Afluente das Vias~
@@ -1459,7 +1448,7 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias.  As ï¿½guas encontram saï¿½da
 para norte, oeste e sudoeste, passando por baixo uma grande ponte.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -1482,23 +1471,23 @@ esse pï¿½tio atï¿½ a saï¿½da sudeste da cidade passa por cima dela, formando uma
 das ï¿½nicas vias por "terra" daqui.  Vocï¿½ pode entrar no templo seguindo
 sul, leste ou sudeste, alï¿½m de seguir pela ponte noroeste.
 ~
-113.3 cg 1
-D2
-~
-~
-0 -1 11319
+113 68 0 0 0 1
 D1
 ~
 ~
 0 -1 11316
-D8
+D2
 ~
 ~
-0 -1 11315
+0 -1 11319
 D6
 ~
 ~
 0 -1 11364
+D8
+~
+~
+0 -1 11315
 S
 #11362
 Um Afluente das Vias~
@@ -1510,7 +1499,7 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias.  As ï¿½guas encontram saï¿½da
 para norte, oeste e nordeste, passando por baixo uma grande ponte.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -1535,12 +1524,7 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias.  As ï¿½guas correm por norte,
 leste e passam debaixo de uma ponte a noroeste.
 ~
-113.3 gr 7
-D6
-Por ali vocï¿½ passa por baixo de uma ponte.
-~
-~
-0 -1 11365
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -1549,6 +1533,11 @@ D1
 ~
 ~
 0 -1 11346
+D6
+Por ali vocï¿½ passa por baixo de uma ponte.
+~
+~
+0 -1 11365
 S
 #11364
 A Ponte Noroeste~
@@ -1563,7 +1552,7 @@ elas muito diferentes entre si, mas sempre utilizando os metais e pedras
 preciosas tï¿½o caracterï¿½sticos do lugar.
    A ponte segue sudeste e noroeste.
 ~
-113.3 cg 1
+113 68 0 0 0 1
 D6
 ~
 ~
@@ -1584,7 +1573,7 @@ brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias.  As lï¿½mpidas ï¿½guas dour
 encontram caminho livre para norte e leste, passando ainda por baixo de uma
 grande ponte, a sudeste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -1609,7 +1598,7 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias. As lï¿½mpidas ï¿½guas douradas
 encontram caminho para sul, leste e oeste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D1
 ~
 ~
@@ -1633,8 +1622,8 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias. As lï¿½mpidas ï¿½guas douradas
 encontram caminho para norte, sul e oeste.
 ~
-113.3 gr 7
-D0 
+113 131136 0 0 0 7
+D0
 ~
 ~
 0 -1 11329
@@ -1657,7 +1646,7 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias. As lï¿½mpidas ï¿½guas douradas
 encontram caminho para leste, oeste, norte e sul.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -1685,7 +1674,7 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias. As lï¿½mpidas ï¿½guas douradas
 encontram caminho para leste e oeste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D1
 ~
 ~
@@ -1705,7 +1694,7 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias. As ï¿½guas do pequeno rio
 se derramam nas direï¿½ï¿½es norte, sul e sudeste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -1729,15 +1718,15 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias.  As ï¿½guas do pequeno rio
 seguem por leste e noroeste.
 ~
-113.3 gr 7
-D6
-~
-~
-0 -1 11370
+113 131136 0 0 0 7
 D1
 ~
 ~
 0 -1 11345
+D6
+~
+~
+0 -1 11370
 S
 #11372
 Um Afluente das Vias~
@@ -1749,19 +1738,19 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias.  As ï¿½guas do afluente segue
 oeste, sul e norte.
 ~
-113.3 gr 7
-D3
+113 131136 0 0 0 7
+D0
 ~
 ~
-0 -1 11344
+0 -1 11373
 D2
 ~
 ~
 0 -1 11362
-D0
+D3
 ~
 ~
-0 -1 11373 
+0 -1 11344
 S
 #11373
 Um Afluente das Vias~
@@ -1773,7 +1762,7 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias.  As ï¿½guas do rio encontram
 caminho para norte, sul e leste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -1797,7 +1786,7 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias. As ï¿½guas do rio se espalham
 entre a direï¿½ï¿½o norte, sudeste e leste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -1821,7 +1810,7 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias. As ï¿½guas do rio se espalham
 por oeste, leste e sul.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D1
 ~
 ~
@@ -1845,7 +1834,7 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias. As ï¿½guas encontram caminho
 para norte, nordeste, leste e sudoeste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -1873,7 +1862,7 @@ atravessadas por rios, nï¿½o possui nenhum cheiro desagradï¿½vel (exceto o seu,
 ï¿½ claro...), e sim ï¿½ repleta de aromas que vï¿½o do mais suave ao mais
 pungente, mas todos agradï¿½veis. A via segue norte, sul e leste.
 ~
-113.3 gr 7
+113 131136 0 0 0 7
 D0
 ~
 ~
@@ -1897,15 +1886,15 @@ curarem de ferimentos ou doenï¿½as.  Um grande cï¿½rculo de pedras, monï¿½litos
 cinzentos com traï¿½os de musgos e liquens, se ergue, digno de reverï¿½ncia, a
 norte.  A Via Leste corre passando por sul.
 ~
-113.3 gcd 1
-D2
-~
-~
-0 -1 11331
+113 76 0 0 0 1
 D0
 ~
 ~
 0 -1 11379
+D2
+~
+~
+0 -1 11331
 S
 #11379
 A Confraria dos Druidas~
@@ -1917,7 +1906,7 @@ do altar, cada um com cerca de vinte centï¿½metros de diï¿½metro, voltados para
 os pontos cardeais, iluminando o local quando necessï¿½rio.  Hï¿½ sempre um
 experiente druida aqui, zelando pelo pequeno santuï¿½rio.
 ~
-113.3 gcd 2
+113 76 0 0 0 2
 D2
 ~
 ~
@@ -1936,7 +1925,7 @@ elas muito diferentes entre si, mas sempre utilizando os metais e pedras
 preciosas tï¿½o caracterï¿½sticos do lugar.
    A ponte segue sudeste e noroeste.
 ~
-113.3 cg 1
+113 68 0 0 0 1
 D6
 ~
 ~
@@ -1956,11 +1945,7 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias.  As ï¿½guas encontram saï¿½da
 para nordeste, sob uma grande ponte, a leste e a sul.
 ~
-113.3 gr 7
-D7
-~
-~
-0 -1 11382
+113 131136 0 0 0 7
 D1
 ~
 ~
@@ -1969,6 +1954,10 @@ D2
 ~
 ~
 0 -1 11377
+D7
+~
+~
+0 -1 11382
 S
 #11382
 Um Afluente das Vias~
@@ -1980,11 +1969,7 @@ afluente.  Essas folhas tï¿½m odor forte, uma mistura de menta e canela, e
 brilham lindamente ï¿½s luzes da Cidade das Jï¿½ias.  As ï¿½guas encontram saï¿½da
 para sudoeste, sob uma grande ponte, a sul e leste.
 ~
-113.3 gr 7
-D9
-~
-~
-0 -1 11381
+113 131136 0 0 0 7
 D1
 ~
 ~
@@ -1993,6 +1978,10 @@ D2
 ~
 ~
 0 -1 11329
+D9
+~
+~
+0 -1 11381
 S
 #11383
 As Antigï¿½idades e Inutilidades do Senhor Kalidas~
@@ -2006,7 +1995,7 @@ espalhados por sobre as estantes, cadeiras, baï¿½s, cabideiros e tantas e
 tantas caixas que obstruem sua passagem. Hï¿½ um pequeno balcï¿½o no fundo da loja,
 alï¿½m de uma saï¿½da a sul, que leva ï¿½ Via Oeste.
 ~
-113.3 dcg 0
+113 76 0 0 0 0
 D2
 ~
 ~
@@ -2020,7 +2009,7 @@ esse pï¿½tio atï¿½ a saï¿½da sudeste da cidade passa por cima dela, formando uma
 das ï¿½nicas vias por "terra" daqui.  Vocï¿½ pode entrar no templo seguindo
 norte, oeste ou noroeste, alï¿½m de seguir pela ponte sudeste.
 ~
-113.3 cg 1
+113 68 0 0 0 1
 D0
 ~
 ~
@@ -2051,7 +2040,7 @@ elas muito diferentes entre si, mas sempre utilizando os metais e pedras
 preciosas tï¿½o caracterï¿½sticos do lugar.
    A ponte segue noroeste e sudeste.
 ~
-113.3 cg 1
+113 68 0 0 0 1
 D6
 ~
 ~
@@ -2074,7 +2063,7 @@ elas muito diferentes entre si, mas sempre utilizando os metais e pedras
 preciosas tï¿½o caracterï¿½sticos do lugar.
    A ponte segue noroeste e sudeste.
 ~
-113.3 cg 1
+113 68 0 0 0 1
 D6
 ~
 ~
@@ -2094,13 +2083,12 @@ lados do portï¿½o serem abertos, vocï¿½ pouca coisa vï¿½ alï¿½m de ï¿½gua.
 Para seguir pela ponte, vï¿½ para noroeste; e para sair da cidade, siga sul,
 pelo portï¿½o.
 ~
-113.3 cg 1
+113 68 0 0 0 1
 D2
 A saï¿½da de Bhogavati fica por ali.
 ~
 portï¿½o cristal negro~
-:n 1 o portï¿½o de cristal negro
-a -1 11388
+1 -1 11388
 D6
 ~
 ~
@@ -2113,18 +2101,17 @@ alto portï¿½o de cristal negro.  A partir dele, uma estreita estrada de pedra
 azulada segue sul quase em linha reta, cercada esta de ï¿½gua imï¿½vel como
 vidro atï¿½ onde a vista alcanï¿½a.  A cidade fica a norte.
 ~
-113.3 cg 1
+113 68 0 0 0 1
 D0
 A Cidade das Jï¿½ias estï¿½ ali.
 ~
 portï¿½o cristal negro~
-:n 1 o portï¿½o de cristal negro
-a -1 11387
+1 -1 11387
 D2
 A estrada segue nessa direï¿½ï¿½o.
 ~
 ~
-0 -1 -1  (11800)
+0 -1 -1
 S
 #11389
 O Pï¿½tio Noroeste~
@@ -2136,13 +2123,12 @@ lados do portï¿½o serem abertos, vocï¿½ somente vï¿½ escuridï¿½o alï¿½m do canal
 Indo sudeste vocï¿½ atravessa a ponte, enquanto a oeste estï¿½ o outro lado do
 portï¿½o.
 ~
-113.3 cg 1
+113 68 0 0 0 1
 D3
 A saï¿½da de Bhogavati fica por ali.
 ~
 portï¿½o cristal negro~
-:n 1 o portï¿½o de cristal negro
-a -1 11390
+1 -1 11390
 D8
 ~
 ~
@@ -2157,12 +2143,11 @@ ao observar as altas e escuras ï¿½rvores do lugar, tudo parecendo ameaï¿½ador
 demais para ser seguro. A entrada da floresta fica a oeste, enquanto a leste
 estï¿½ a cidade.
 ~
-113.3 cg 1
+113 68 0 0 0 1
 D1
 A Cidade das Jï¿½ias estï¿½ ali.
 ~
 portï¿½o cristal negro~
-:n 1 o portï¿½o de cristal negro
-a -1 11389
+1 -1 11389
 S
 $~
