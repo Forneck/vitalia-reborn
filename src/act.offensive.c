@@ -382,8 +382,8 @@ ACMD(do_backflip)
 		   character. This function below adds a new event of "eBACKFLIP", to
 		   "ch", and passes "NULL" as additional data. The event will be
 		   called in "3 * PASSES_PER_SEC" or 3 seconds */
-		NEW_EVENT(eBACKFLIP, ch, NULL, 3 * PASSES_PER_SEC);
-		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+		NEW_EVENT(eBACKFLIP, ch, NULL, 2 * PASSES_PER_SEC);
+		WAIT_STATE(ch, PULSE_VIOLENCE * 4);
 	}
 }
 
@@ -439,10 +439,12 @@ EVENTFUNC(event_backflip)
 	if (GET_SKILL(ch, SKILL_BACKFLIP) < rand_number(1, 101))
 	{
 		send_to_char(ch, "Você para de se esconder.\r\n");
+		if (IN_ROOM(tch) ==  IN_ROOM(ch))
+		hit(ch, tch, TYPE_UNDEFINED);
 		return 0;
 	}
 	else
-		return 1.5 * PASSES_PER_SEC;
+		return 1 * PASSES_PER_SEC;
 }
 
 ACMD(do_order)
