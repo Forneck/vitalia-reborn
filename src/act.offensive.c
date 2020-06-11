@@ -20,6 +20,7 @@
 #include "act.h"
 #include "fight.h"
 #include "mud_event.h"
+#include "screen.h"
 
 ACMD(do_assist)
 {
@@ -346,6 +347,12 @@ ACMD(do_backflip)
 		return;
 	}
 
+	if (char_has_mud_event(ch, eBACKFLIP))
+	{
+		send_to_char(ch, "Você já está se escondendo de alguém!\r\n");
+		return;
+	}
+
 	percent = rand_number(1, 101);
 	prob = GET_SKILL(ch, SKILL_BACKFLIP);
 
@@ -367,10 +374,75 @@ ACMD(do_backflip)
 		act("$n faz uma cambalhota por sobre $N, que fica confus$R!", FALSE, ch, NULL, vict,
 			TO_NOTVICT);
 		act("$n faz uma cambalhota e você $r perde de vista.", FALSE, ch, NULL, vict, TO_VICT);
-	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-		/* it is assured that vict will be fighting ch */
+				/* it is assured that vict will be fighting ch */
 		stop_fighting(vict);
+		
+			/* NEW_EVENT() will add a new mud event to the event list of the
+	   character. This function below adds a new event of "eBACKFLIP", to
+	   "ch", and passes "NULL" as additional data. The event will be called in 
+	   "3 * PASSES_PER_SEC" or 3 seconds */
+	NEW_EVENT(eBACKFLIP, ch, NULL, 3 * PASSES_PER_SEC);
+	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 	}
+}
+
+EVENTFUNC(event_backflip)
+{
+	struct char_data *ch, *tch;
+	struct mud_event_data *pMudEvent;
+	struct list_data *room_list;
+	int count;
+
+	/* This is just a dummy check, but we'll do it anyway */
+	if (event_obj == NULL)
+		return 0;
+
+	/* For the sake of simplicity, we will place the event data in easily
+	   referenced pointers */
+	pMudEvent = (struct mud_event_data *)event_obj;
+	ch = (struct char_data *)pMudEvent->pStruct;
+
+	/* When using a list, we have to make sure to allocate the list as it uses 
+	   dynamic memory */
+	room_list = create_list();
+
+	/* We search through the "next_in_room", and grab all NPCs and add them to 
+	   our list */
+	for (tch = world[IN_ROOM(ch)].people; tch; tch = tch->next_in_room)
+		if (IS_NPC(tch) && IS_FIGHTING(ch))
+			add_to_list(tch, room_list);
+
+	/* If our list is empty or has "0" entries, we free it from memory and
+	   close off our event */
+	if (room_list->iSize == 0)
+	{
+		free_list(room_list);
+		return 0;
+	}
+
+	/* We spit out some ugly colour, making use of the new colour options, to
+	   let the player know they are performing their backflip */
+	send_to_char(ch, "Você da uma cambalhota e se esconde.\r\n");
+
+	/* Lets grab some a random NPC from the list, and stop them*/
+
+		tch = random_from_list(room_list);
+	  stop_fighting(tch);
+	
+	/* Now that our backflip is done, let's free out list */
+	free_list(room_list);
+
+	/* The "return" of the event function is the time until the event is
+	   called again. If we return 0, then the event is freed and removed from
+	   the list, but any other numerical response will be the delay until the
+	   next call */
+	if (GET_SKILL(ch, SKILL_BACKFLIP) < rand_number(1, 101))
+	{
+		send_to_char(ch, "Você para de se esconder.\r\n");
+		return 0;
+	}
+	else
+		return 1.5 * PASSES_PER_SEC;
 }
 
 ACMD(do_order)
