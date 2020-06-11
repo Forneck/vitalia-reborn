@@ -44,11 +44,11 @@ $n goes 'Abra Cadabra!'
 #
 
 ~accuse accuse 0 5 0 0
-Accuse who??
-$n accuses everyone.
-You look accusingly at $M.
-$n looks accusingly at $N.
-$n looks accusingly at you.
+Acusar quem??
+$n acusa todos.
+Você olha $R acusando.
+$n parece acusar $N.
+$n parece estar acusando você.
 Accuse somebody who's not even there??
 You accuse yourself.
 $n seems to have a bad conscience.
@@ -6109,7 +6109,7 @@ $n looks around for a victim to strangle.
 You throw yourself against $N's throat, trying to squeeze the life out.
 $n throws $mself after $N's throat.
 $n throws $mself after your throat, you try to defend yourself.
-AARGH! They must have left... #&%�@!
+AARGH! They must have left... #&%�@!
 You put your hands around your throat and stop breathing.
 $n tries to strangle $mself, making a very strange noise and getting blue in the face.
 You strangle $M $t.
