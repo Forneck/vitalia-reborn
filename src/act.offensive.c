@@ -21,6 +21,7 @@
 #include "fight.h"
 #include "mud_event.h"
 #include "screen.h"
+#include "constants.h"
 
 ACMD(do_assist)
 {
