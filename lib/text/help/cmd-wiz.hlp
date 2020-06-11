@@ -469,20 +469,20 @@ casas, como tipo (privada, p�blica, etc), limite de objetos, valor do aluguel,
 etc.
 
    Voc� pode obter uma lista das classes definidas pelo comando HCONTROL
-LIST.  Entre as informa��es que cada classe define est� o @Wtipo da casa@n, que
+LIST.  Entre as informa��es que cada classe define est� o &Wtipo da casa&n, que
 define o tipo de propriet�rio que dever� ser fornecido ao comando HCONTROL
 BUILD.  H� 5 tipos de casas que podem ser definidos nas classes de casas:
-@gprivate@n (casas particulares, possivelmente com h�spedes), @gpublic@n (casas
-p�blicas, de livre acesso), @gclan@n (casas para cl�s, onde apenas membros podem
-entrar), @gspecial@n (casas controladas por spec-procs) e @gcluster@n (acesso
+&gprivate&n (casas particulares, possivelmente com h�spedes), &gpublic&n (casas
+p�blicas, de livre acesso), &gclan&n (casas para cl�s, onde apenas membros podem
+entrar), &gspecial&n (casas controladas por spec-procs) e &gcluster&n (acesso
 permitido a jogadores pertencentes a um determinado cluster).
 
-   @WObs:@n Evite confundir a classe da casa com o seu tipo.  O tipo da casa �
+   &WObs:&n Evite confundir a classe da casa com o seu tipo.  O tipo da casa �
 definido na classe, e � a classe que deve ser fornecida ao comando HCONTROL
 BUILD.  Por exemplo, para criar uma casa particular em Midgaard, voc� deve
-usar a classe @gpriv-midgaard@n, que por sua vez � do tipo private.
+usar a classe &gpriv-midgaard&n, que por sua vez � do tipo private.
 
-   @cCasas particulares (private)@n:
+   &cCasas particulares (private)&n:
    Para casas particulares, voc� deve fornecer o nome do jogador que ser� o
 propriet�rio da casa, ou "nobody" se a casa n�o possuir propriet�rio ainda
 (para marcar o lugar de uma futura casa).  Uma casa com o propriet�rio
@@ -493,7 +493,7 @@ mais adiante atrav�s do comando HCONTROL SET.
    Ex:> hc build 1050 priv-midgaard rasmussen
       > hc build 12509 priv-nthalos nobody
 
-   @cCasas p�blicas (public)@n:
+   &cCasas p�blicas (public)&n:
    Casas p�blicas servem apenas para salvar objetos em salas de livre acesso,
 para que possam ser recuperadas ap�s uma queda ou fechamento do MUD.  Um
 t�pico exemplo de casa p�blica � a sala de doa��es: espera-se que todo o
@@ -502,7 +502,7 @@ propriet�rio deve ser fornecido nesse caso.
 
    Ex:> hc build 3063 public
 
-   @cCasas de cl�s (clan)@n:
+   &cCasas de cl�s (clan)&n:
    Para casas de cl�s, voc� deve fornecer o nome ou n�mero do cl� que ser� o
 propriet�rio da casa.  Opcionalmente, voc� pode fornecer o posto m�nimo dentro
 do cl� (de acordo com o CLAN INFO) que ser� necess�rio para entrar na sala.
@@ -510,14 +510,14 @@ do cl� (de acordo com o CLAN INFO) que ser� necess�rio para entrar na sala
    Ex:> hc build 2001 clan 11
       > hc build 2008 clan-saved 11 4
 
-   @cCasas de spec-procs (special)@n:
+   &cCasas de spec-procs (special)&n:
    Para casas de spec-procs, voc� deve fornecer apenas o nome da spec-proc de
 sala que ser� consultada para saber se um determinado jogador pode entrar na
 sala.  Apenas spec-procs espec�ficas podem servir para esse prop�sito.
 
    Ex:> hc build 22021 special journal-room
 
-   @cCasas de clusters (cluster)@n:
+   &cCasas de clusters (cluster)&n:
    Para casas de clusters, voc� deve fornecer o nome do cluster que cont�m os
 jogadores que poder�o entrar na casa.
 
@@ -601,7 +601,7 @@ Uso: hcontrol set <casa> <campo> <valor>
    Esse comando � usado para alterar campos relacionados a determinada casa.
 Os campos poss�veis s�o:
 
-   @cclass@n:
+   &cclass&n:
    Altera a classe da casa.  Apesar de ser poss�vel alterar a classe, n�o �
 poss�vel alterar o tipo.  Se a casa pertence a uma classe do tipo "private",
 a nova classe tamb�m deve ser do tipo "private".  Para alterar o tipo da
@@ -609,26 +609,26 @@ casa, deve-se destru�-la e cri�-la novamente.
 
    Ex:> hc set 1051 class priv-nthalos
 
-   @cowner@n:
+   &cowner&n:
    Altera o propriet�rio de casas particulares.  Esse comando n�o altera a
 lista de h�spedes da casa, portanto, cabe a voc� se certificar que ela est�
 consistente com o novo propriet�rio da casa (talvez ela deve ser limpa).
 
    Ex:> hc set 1051 owner nobody
 
-   @cclan@n, @crank@n:
+   &cclan&n, &crank&n:
    Alteram o cl� ou o posto necess�rios para entrar na casa de cl�.  Ao
 alterar o cl�, o posto (rank) � automaticamente zerado.
 
    Ex:> hc set 2001 clan 12
       > hc set 2008 rank 4
 
-   @ccluster@n:
+   &ccluster&n:
    Altera o cluster que ter� permiss�o para entrar na casa de cluster.
 
    Ex:> hc set 1200 cluster meeting
 
-   @WObs:@n Para alterar a spec-proc a ser executada em casas "special",
+   &WObs:&n Para alterar a spec-proc a ser executada em casas "special",
 pode-se usar o comando ASSIGN ROOM.
 
 Veja tamb�m: HCONTROL, HCONTROL BUILD
@@ -2359,4 +2359,5 @@ serem recolocadas, e '.' for�a a �rea em que voc� est� a ser recolocada.
 
 Veja tamb�m: SHOW ZONES
 #108
-$~
+$
+~
