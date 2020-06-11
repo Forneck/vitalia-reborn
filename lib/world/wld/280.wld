@@ -1,19 +1,21 @@
 #28000
 Uma Pequena Floresta~
    Vocï¿½ estï¿½ em uma floresta.  Existem muitas ï¿½rvores grandes por aqui.  A
-densa folhagem se expande atï¿½ onde sua vista pode alcanï¿½ar.  Ao norte vocï¿½
-consegue ver apenas a silhueta de uma montanha muito grande que parece bem
+densa folhagem se expande atï¿½ onde sua vista pode alcanï¿½ar.
+ Ao norte vocï¿½ 
+consegue ver apenas a silhueta de uma montanha muito grande que 
+parece bem
 diferente de todas as outras montanhas que vocï¿½ jï¿½ viu.
 ~
-280 0 3
-D3
-~
-~
-0 -1 6011
+280 0 0 0 0 3
 D0
 ~
 ~
 0 -1 28001
+D3
+~
+~
+0 -1 6011
 E
 montanha~
 Estï¿½ muito longe para vocï¿½ vï¿½r.
@@ -26,7 +28,7 @@ O solo estï¿½ bastante ï¿½mido e seus pï¿½s afundam no chï¿½o, ï¿½ medida que vo
 caminha.  A floresta ï¿½ bem densa e vocï¿½ nï¿½o tem outra saï¿½da alï¿½m desta
 trilha.
 ~
-280 0 3
+280 0 0 0 0 3
 D0
 ~
 ~
@@ -43,7 +45,7 @@ para o leste, em direï¿½ï¿½o a um barulho de ï¿½gua caindo.  Pequenos vï¿½os ent
 os arbustos permitem que a luz penetre na floresta.  Vocï¿½ pode ver a
 silhueta de uma enorme montanha ao norte.
 ~
-280 0 3
+280 0 0 0 0 3
 D0
 ~
 ~
@@ -69,7 +71,7 @@ troncos estï¿½o jogados sobre o solo ï¿½mido.  Alguns pequenos insetos passeiam
 sobre a madeira que estï¿½ aos seus pï¿½s, ï¿½ procura de qualquer tipo de comida.
 Nï¿½o existe nenhuma saï¿½da a nï¿½o ser voltar.
 ~
-280 0 3
+280 0 0 0 0 3
 D2
 ~
 ~
@@ -86,7 +88,7 @@ prï¿½ximo dela.  Alguns coelhos e gazelas cruzam rï¿½pidamente a clareira, indo
 de um lado para o outro, algumas vezes silenciosamente outras nem tanto,
 perturbando seu descanso.
 ~
-280 0 3
+280 0 0 0 0 3
 D1
 ~
 ~
@@ -104,7 +106,7 @@ peixes que nadam em suas ï¿½guas.  O fundo do lago ï¿½ rochoso e a marï¿½ estï¿½
 bastante calma.  Esta situaï¿½ï¿½o ï¿½ um tanto estranha pois vocï¿½ percebe que uma
 poderosa cachoeira estï¿½ bem prï¿½xima, ao norte.
 ~
-280 4 6
+280 4 0 0 0 6
 D0
 ~
 ~
@@ -123,7 +125,7 @@ uma poderosa e talvez perigosa cachoeira.  Para onde serï¿½ que toda esta ï¿½gua
 vai?  Nï¿½o hï¿½ nem rios ou canais.  Esta incerteza lhe causa uma apreensï¿½o e
 desperta em vocï¿½ a curiosidade.
 ~
-280 4 6
+280 4 0 0 0 6
 D0
 ~
 ~
@@ -141,11 +143,10 @@ importa, afinal a visï¿½o do maravilhoso arco-ï¿½ris compensa qualquer
 sacrifï¿½cio.  Talvez seja uma boa idï¿½ia retornar antes que vocï¿½ se resfrie e
 pegue uma pneumonia.
 ~
-280 4 6
+280 4 0 0 0 6
 D0
 ~
 grade rede~
-:n 2 a grade
 1 -1 28008
 D2
 ~
@@ -161,11 +162,7 @@ desce para cï¿½ passando pela rede e cria uma segunda queda, que ï¿½ menor do
 que aquela que esta lï¿½ fora mas suficientemente alta para obstruir seu
 caminho de volta.
 ~
-280 acd 6
-D2
-~
-~
-0 -1 -1
+280 13 0 0 0 6
 D3
 ~
 ~
@@ -181,7 +178,7 @@ a se formar.  Algumas esculturas parecem altares e outras lembram seres
 humanos e semi-humanos.
    Vocï¿½ sente que a ï¿½gua corre com mais forï¿½a ao oeste.
 ~
-280 ad 6
+280 9 0 0 0 6
 D1
 ~
 ~
@@ -198,7 +195,7 @@ de muita habilidade para manter sua estabilidade e para nï¿½o se chocar contra
 as paredes.  O canal ï¿½ bastante extenso mas a velocidade da ï¿½gua faz com que
 vocï¿½ o atravesse rï¿½pidamente.
 ~
-280 13 6
+280 13 0 0 0 6
 D0
 ~
 ~
@@ -218,7 +215,7 @@ escadas, sem degraus, sem nada.  As paredes sï¿½o lisas, escorregadias e pelo
 jeito muitos curiosos nï¿½o tiveram a mesma sorte que vocï¿½.  Para onde serï¿½
 que esta ï¿½gua estï¿½ indo?
 ~
-280 13 6
+280 13 0 0 0 6
 D2
 ~
 ~
@@ -241,7 +238,7 @@ Deuses pela benï¿½ï¿½o de sua salvaï¿½ï¿½o.
 uma.  Vocï¿½ sabe que se seguir em frente, muito possï¿½velmente nï¿½o poderï¿½
 voltar.
 ~
-280 4 6
+280 4 0 0 0 6
 D0
 ~
 ~
@@ -253,7 +250,7 @@ O Rio dos Herï¿½is~
 nï¿½mero de canos.  Estes canos levam a ï¿½gua para alguns povoados da regiï¿½o.
 Alï¿½m do aqueduto estï¿½o algumas ï¿½rvores e um pequeno prï¿½dio ao nordeste.
 ~
-280 4 6
+280 4 0 0 0 6
 D0
 ~
 ~
@@ -266,7 +263,7 @@ como se fossem inï¿½meros tambores.  O som parece estar vindo daquele pequeno
 prï¿½dio na margem leste.  A ï¿½gua produz pequenas ondas, produzindo pequenas
 gotas que refletem a luz.
 ~
-280 4 6
+280 4 0 0 0 6
 D0
 ~
 ~
@@ -284,11 +281,10 @@ para o norte.  Um forte ruï¿½do sai de dentro do prï¿½dio.  A grama cresce
 bastante alta aqui e em alguns lugares chega a bater em sua cintura.  Hï¿½ uma
 porta de ferro no leste.
 ~
-280 0 1
+280 0 0 0 0 1
 D1
 ~
 porta~
-:n 2
 1 -1 28016
 D3
 ~
@@ -303,21 +299,18 @@ peï¿½as desconhecidas.  O lugar onde vocï¿½ se encontra ï¿½ enorme.  A luz penet
 no ambiente atravï¿½s de pequenos buracos localizados na parede e sï¿½o
 suficientes para iluminar apenas pequenas partes da sala.
 ~
-280 41 0
+280 41 0 0 0 0
 D2
 ~
 porta~
-:n 2
 2 28099 28017
 D3
 ~
 porta~
-:n 2
 1 -1 28015
 D4
 ~
 alï¿½apï¿½o~
-:n 1
 1 -1 28018
 S
 #28017
@@ -327,11 +320,10 @@ ver apenas algumas ferramentas, canos e alguns utensï¿½lios mecï¿½nicos.  Nas
 paredes estï¿½o presos alguns mapas e esquemas de mï¿½quinas para explicar como
 reparï¿½-las.
 ~
-280 41 0
+280 41 0 0 0 0
 D0
 ~
 porta~
-:n 2
 2 28099 28016
 S
 #28018
@@ -343,11 +335,10 @@ grande rio, ao oeste hï¿½ um imenso campo e para o sul estï¿½o as montanhas
 rochosas.  Mais alï¿½m ao norte, vocï¿½ vï¿½ uma cidade que foi construï¿½da aos pï¿½s
 de um enorme vulcï¿½o.
 ~
-280 8 0
+280 8 0 0 0 0
 D5
 ~
 alï¿½apï¿½o~
-:n 1
 1 -1 28016
 S
 #28019
@@ -357,7 +348,7 @@ sua superfï¿½cie.  Existem apenas umas trï¿½s ï¿½rvores na margem e alguns canos
 Porï¿½m ao norte, vocï¿½ vï¿½ um grande vulcï¿½o e aos seus pï¿½s, um nï¿½mero grande de
 bonitas construï¿½ï¿½es.  Vocï¿½ tem certeza de que aquilo ï¿½ uma cidade.
 ~
-280 4 6
+280 4 0 0 0 6
 D0
 ~
 ~
@@ -374,7 +365,7 @@ Ao sul estï¿½ o Rio dos Herï¿½is, ao leste, o Rio dos Vencedores e ao oeste estï
 o Rio dos Bravos.  Os dois ï¿½ltimos rios desembocam no primeiro.  Ao norte,
 hï¿½ um pequeno porto e uma praï¿½a.
 ~
-280 4 6
+280 4 0 0 0 6
 D0
 ~
 ~
@@ -398,7 +389,7 @@ O Rio dos Vencedores~
 do rio fazer ser bem mais estreito aqui e das margens estarem mais prï¿½ximas
 uma da outra do que ao oeste.
 ~
-280 0 6
+280 0 0 0 0 6
 D1
 ~
 ~
@@ -417,7 +408,7 @@ vocï¿½ estivesse perto de sua nascente.
    A vegetaï¿½ï¿½o nestas margens ï¿½ quase que totalmente composta por grama e
 pequenas ï¿½rvores.
 ~
-280 0 6
+280 0 0 0 0 6
 D1
 ~
 ~
@@ -434,7 +425,7 @@ canalizado por alguï¿½m.  Por causa disso e pelo fato da terra ser tï¿½o plana,
 vocï¿½ acaba achando que a grama das margens nï¿½o ï¿½ grama de verdade mas talvez
 algum tipo de planta cultivada e irrigada pelo rio.
 ~
-280 0 6
+280 0 0 0 0 6
 D0
 ~
 ~
@@ -451,7 +442,7 @@ o rio penetra naquilo que parece ser um campo de arroz.  Para o oeste, ele
 vai seguindo em direï¿½ï¿½o ao que parece ser um campo de trigo.  O canal
 principal segue para o norte e o sul.
 ~
-280 0 6
+280 0 0 0 0 6
 D0
 ~
 ~
@@ -477,7 +468,7 @@ Vocï¿½ pondera que este deve ser um belo lugar para se viver, quando vocï¿½
 tiver finalmente decidido a se aposentar desta sua vida de lutas, aventuras
 e...  Matanï¿½as!
 ~
-280 0 6
+280 0 0 0 0 6
 D0
 
 ~
@@ -495,7 +486,7 @@ A Parte Canalizada do Rio dos Vencedores~
 naquilo que parece ser um campo de soja.  E para o oeste, ele segue na
 direï¿½ï¿½o de um campo de aveia.  O canal tambï¿½m continua para o norte e sul.
 ~
-280 0 6
+280 0 0 0 0 6
 D0
 ~
 ~
@@ -521,7 +512,7 @@ pondera que este deve ser um belo lugar para se viver, quando vocï¿½ tiver
 finalmente decidido a se aposentar desta sua vida de lutas, aventuras e...
 Matanï¿½as!
 ~
-280 0 6
+280 0 0 0 0 6
 D0
 ~
 ~
@@ -540,7 +531,7 @@ espigas para comer.
    Para o oeste, o canal segue em direï¿½ï¿½o a um campo de cevada.  E segue
 para o norte e sul.
 ~
-280 0 6
+280 0 0 0 0 6
 D0
 ~
 ~
@@ -566,7 +557,7 @@ vocï¿½ quer alguma aï¿½ï¿½o!!  Contudo, parece que esta parte do rio estï¿½ mais
 funda e mais larga...quem sabe vocï¿½ nï¿½o encontra alguma coisa mais
 interessante pela frente.
 ~
-280 0 6
+280 0 0 0 0 6
 D0
 ~
 ~
@@ -582,7 +573,7 @@ O Rio dos Vencedores~
 ï¿½ bem clara, ficando mais clara ao norte e mais escura ao sul.  A terra ï¿½
 plana e o ar estï¿½ impregnado com o cheiro de seiva das plantas.
 ~
-280 0 6
+280 0 0 0 0 6
 D0
 ~
 ~
@@ -597,7 +588,7 @@ O Rio dos Vencedores~
    O rio termina aqui.  Este local ï¿½ muito calmo e apenas pequeninos
 pï¿½ssaros quebram a serenidade do lugar.
 ~
-280 0 6
+280 0 0 0 0 6
 D0
 ~
 ~
@@ -611,7 +602,7 @@ Contudo, vocï¿½ pode entrar nos campos pelo norte e pelo sul, para satisfazer
 sua curiosidade.  A outra alternativa ï¿½ ir pelo oeste, na direï¿½ï¿½o do canal
 principal.
 ~
-280 0 6
+280 0 0 0 0 6
 D0
 ~
 ~
@@ -632,7 +623,7 @@ plantas altas e mesmo sem vocï¿½ saber muita coisa sobre agricultura, vocï¿½
 percebe que o arroz estï¿½ pronto para ser colhido.  O solo ï¿½ ï¿½mido e o som
 dos insetos parece tomar conta do lugar.
 ~
-280 0 2
+280 0 0 0 0 2
 D2
 ~
 ~
@@ -645,7 +636,7 @@ estreito separando a plantaï¿½ï¿½o de arroz em dois campos distintos.  Ao sul, a
 vegetaï¿½ï¿½o abruptamente se transforma em algo parecido com soja.  Olhando
 para as plantas, vocï¿½ imagina onde estariam as pessoas que fazem a colheita.
 ~
-280 0 2
+280 0 0 0 0 2
 D0
 ~
 ~
@@ -662,7 +653,7 @@ ver muito da soja porque as margens sï¿½o bem altas.  Contudo, vocï¿½ pode
 entrar nos campos pelo norte e pelo sul, para satisfazer sua curiosidade.  A
 outra alternativa ï¿½ ir para o oeste, para o canal principal.
 ~
-280 0 6
+280 0 0 0 0 6
 D0
 ~
 ~
@@ -684,7 +675,7 @@ a vegetaï¿½ï¿½o abruptamente se transforma em algo parecido com arroz.  Mesmo
 sem vocï¿½ saber muita coisa sobre agricultura, vocï¿½ percebe que a soja estï¿½
 pronta para ser colhida.
 ~
-280 0 2
+280 0 0 0 0 2
 D0
 ~
 ~
@@ -702,7 +693,7 @@ vegetaï¿½ï¿½o abruptamente se transforma em algo parecido com milho.  A soja
 estï¿½ pronta para ser colhida e vocï¿½ se pergunta onde estariam as pessoas
 responsï¿½veis pela colheita.
 ~
-280 0 2
+280 0 0 0 0 2
 D0
 ~
 ~
@@ -720,11 +711,15 @@ poderia ir atï¿½ lï¿½ e colher uma espiga....afinal existem tantas ali...e os
 donos da plantaï¿½ï¿½o talvez nem fossem dar pela falta de apenas uma delas...ou
 serï¿½ que dariam?
 ~
-280 0 6
+280 0 0 0 0 6
 D0
 ~
 ~
 0 -1 28039
+D1
+~
+~
+0 -1 9100
 D2
 ~
 ~
@@ -733,10 +728,6 @@ D3
 ~
 ~
 0 -1 28028
-D1
-~
-~
-0 -1 9100
 S
 #28039
 O Lado Norte do Campo de Milho~
@@ -745,7 +736,7 @@ estreito separando a plantaï¿½ï¿½o de milho em dois campos distintos.  Ao norte,
 a vegetaï¿½ï¿½o abruptamente se transforma em algo parecido com soja.  Olhando
 para as plantas, vocï¿½ imagina onde estariam as pessoas que fazem a colheita.
 ~
-280 0 2
+280 0 0 0 0 2
 D0
 ~
 ~
@@ -764,7 +755,7 @@ vocï¿½ percebe que todo o milho estï¿½ pronto para ser colhido.  O som dos
 insetos toma conta do lugar e a ï¿½nica saï¿½da possï¿½vel parece ser ao norte,
 para o canal
 ~
-280 0 2
+280 0 0 0 0 2
 D0
 ~
 ~
@@ -778,7 +769,7 @@ entrar nos campos pelo norte e pelo sul, para satisfazer sua curiosidade.  A
 outra alternativa ï¿½ ir para o leste, para o canal principal.  Um barco
 pequeno desce o rio para o oeste.
 ~
-280 0 6
+280 0 0 0 0 6
 D0
 ~
 ~
@@ -803,7 +794,7 @@ cobre completamente cada centï¿½metro da terra, criando um vasto tapete que
 parece danï¿½ar ao vento.  A cena enche sua vista e vocï¿½ procura pelos
 trabalhadores que irï¿½o fazer a colheita do trigo.
 ~
-280 0 2
+280 0 0 0 0 2
 D2
 ~
 ~
@@ -816,7 +807,7 @@ usado para fazer os famosos pï¿½es romanos e Midgaardianos pode ter sido
 produzido aqui.  Esse campo de trigo tem um tom forte de amarelo e quando a
 luz do sol incide sobre o trigal, este brilha como se fosse ouro.
 ~
-280 0 2
+280 0 0 0 0 2
 D0
 ~
 ~
@@ -833,7 +824,7 @@ ver muito da aveia porque as margens sï¿½o bem altas.  Contudo, vocï¿½ pode
 entrar nos campos pelo norte e pelo sul, para satisfazer sua curiosidade.  A
 outra alternativa ï¿½ ir para o leste, para o canal principal.
 ~
-280 0 6
+280 0 0 0 0 6
 D0
 ~
 ~
@@ -855,7 +846,7 @@ forte e saudï¿½vel.  Vocï¿½ fica emocionado e por um momento gostaria de voltar
 para sua casa materna.  Contudo, rapidamente vocï¿½ se recupera e volta ao seu
 estado normal, esquecendo todas essas bobagens sentimentais.
 ~
-280 0 2
+280 0 0 0 0 2
 D0
 ~
 ~
@@ -871,7 +862,7 @@ O Lado Sul do Campo de Aveia~
 inï¿½meros homens e mulheres trabalhando, colhendo e carregando vï¿½rias
 carroï¿½as com a aveia colhida.
 ~
-280 0 2
+280 0 0 0 0 2
 D0
 ~
 ~
@@ -888,7 +879,7 @@ pode ver muito da aveia porque as margens sï¿½o bem altas.  Contudo, vocï¿½ pode
 entrar nos campos pelo norte e pelo sul, para satisfazer sua curiosidade.  A
 outra alternativa ï¿½ ir para o leste, para o canal principal.
 ~
-280 0 6
+280 0 0 0 0 6
 D0
 ~
 ~
@@ -910,7 +901,7 @@ norte, a vegetaï¿½ï¿½o abruptamente se transforma em algo parecido com aveia.
 Mesmo sem entender nada de agricultura, vocï¿½ tem plena certeza de que esta
 cevada estï¿½ pronta para ser colhida.
 ~
-280 0 2
+280 0 0 0 0 2
 D0
 ~
 ~
@@ -927,7 +918,7 @@ plantaï¿½ï¿½o cobre completamente cada centï¿½metro da terra, criando um tapete
 amarelo que parece danï¿½ar ao vento.  A cena enche sua vista e vocï¿½ procura
 pelos trabalhadores que irï¿½o fazer a colheita da cevada.
 ~
-280 0 2
+280 0 0 0 0 2
 D0
 ~
 ~
@@ -940,7 +931,7 @@ estradinha, vocï¿½ vï¿½ uma placa onde esta escrito "ï¿½rea de Pastagem".  O
 caminho parece ser precariamente mantido, indicando que talvez esteja
 abandonado.
 ~
-280 4 2
+280 4 0 0 0 2
 D0
 ~
 ~
@@ -958,7 +949,7 @@ ervas daninhas que cresceram em volta das velhas ï¿½rvores.  As pastagens
 comeï¿½am ao norte e vocï¿½ sente que irï¿½ encontrar coisas mais interessantes
 neste lugar.
 ~
-280 4 2
+280 4 0 0 0 2
 D0
 ~
 ~
@@ -973,7 +964,7 @@ A Pastagem Descoberta~
    Este pasto estï¿½ pobremente plantado.  A grama ï¿½ rara e pouca e parece que
 a terra estï¿½ a espera de alguï¿½m que a plante.
 ~
-280 4 2
+280 4 0 0 0 2
 D0
 ~
 ~
@@ -994,7 +985,7 @@ Alguns trabalhadores estï¿½o aqui, lidando com os bois e vacas que comem sem
 pressa a grama apetitosa.  Os tonï¿½is de leite foram deixados prï¿½ximos ï¿½s
 ferramentas dos camponeses.  Um dos tonï¿½is parece estar cheio.
 ~
-280 0 2
+280 0 0 0 0 2
 D1
 ~
 ~
@@ -1012,7 +1003,7 @@ Ali estï¿½o cavalos, bois, carneiros e porcos.  Tamanha diversidade de carne
 excita sua mente.  Por que nï¿½o presentear seu estï¿½mago com um grande e
 suculento assado?
 ~
-280 0 2
+280 0 0 0 0 2
 D0
 ~
 ~
@@ -1030,7 +1021,7 @@ pasto, vocï¿½ vï¿½ trabalhadores treinando alguns animais que com certeza serï¿½
 usados para auxiliar na lavoura ou para entretenimento.  Essa raï¿½a de
 cavalos produz excelente animais, extremamente vigorosos e velozes.
 ~
-280 0 2
+280 0 0 0 0 2
 D1
 ~
 ~
@@ -1055,7 +1046,7 @@ Esse campo ï¿½ composto por grandes quadrados cobertos por diferentes tipos de
 plantas.  Cada um dos quadrados possui uma cor e estï¿½o cobertos por um tipo
 plantaï¿½ï¿½o.
 ~
-280 4 2
+280 4 0 0 0 2
 D1
 ~
 ~
@@ -1073,7 +1064,7 @@ distantes, contudo, pode-se perceber pequenos pontos brancos, marrons e
 pretos, que parecem ser cabeï¿½as de gado.  Se isso for verdade, vocï¿½ estï¿½
 olhando para o melhor gado que vocï¿½ jamais viu.
 ~
-280 4 2
+280 4 0 0 0 2
 D1
 ~
 ~
@@ -1091,7 +1082,7 @@ bastante largo e profundo e permite a navegaï¿½ï¿½o de grandes naus.  A ï¿½gua n
 ï¿½ muito poluï¿½da mas vai ficando mais suja a medida em que vocï¿½ segue para o
 leste.
 ~
-280 0 6
+280 0 0 0 0 6
 D1
 ~
 ~
@@ -1109,7 +1100,7 @@ diversï¿½o e alguns trabalhadores estï¿½o embarcando mercadorias nos navios,
 comida, roupas, utensï¿½lios, metais e outros coisas que vocï¿½ nï¿½o consegue
 imaginar.
 ~
-280 0 6
+280 0 0 0 0 6
 D1
 ~
 ~
@@ -1126,7 +1117,7 @@ leste vocï¿½ vï¿½ apenas uma quantidade imensa de ï¿½gua.  Ao norte existe uma
 grande rampa por onde os navios sï¿½o iï¿½ados para serem reparados e um prï¿½dio
 grande, que parece ser um galpï¿½o.
 ~
-280 4 6
+280 4 0 0 0 6
 D0
 ~
 ~
@@ -1146,7 +1137,7 @@ As Docas de Calyus~
 as pessoas entram e saem.  Atravessando o pï¿½tio existe uma rua bastante
 larga com um grande nï¿½mero de galpï¿½es.
 ~
-280 0 1
+280 0 0 0 0 1
 D0
 ~
 ~
@@ -1171,7 +1162,7 @@ guerreiros locais que se alistaram para defender sua terra natal.  Nas
 margens estï¿½o ancorados um grande nï¿½mero de navios de guerra que parecem
 terem estado em grandes batalhas.
 ~
-280 0 1
+280 0 0 0 0 1
 D1
 ~
 ~
@@ -1189,7 +1180,7 @@ lados da rua, vocï¿½ vï¿½ um grande nï¿½mero de galpï¿½es mas todas as portas es
 fechadas e muito bem guardadas.  O chï¿½o estï¿½ sujo e alguns dos guerreiros
 entram e saem dos navios.
 ~
-280 0 1
+280 0 0 0 0 1
 D1
 ~
 ~
@@ -1204,7 +1195,7 @@ A Rua Leste das Docas~
    A rua termina aqui.  Esta ï¿½rea parece estar reservada para futuras
 expansï¿½es.  Apenas alguns galpï¿½es foram construï¿½dos aqui.
 ~
-280 0 1
+280 0 0 0 0 1
 D3
 ~
 ~
@@ -1221,7 +1212,7 @@ para vendï¿½-los em regiï¿½es remotas.  Vocï¿½ pensa se aquele trigo que estï¿½ 
 seria o trigo com o qual os padeiros de Midgaard fazem seus deliciosos
 pï¿½ezinhos de viagem.
 ~
-280 0 1
+280 0 0 0 0 1
 D1
 ~
 ~
@@ -1241,7 +1232,7 @@ em busca de diversï¿½o e prazer e falam com algumas garotas que estï¿½o por ali.
    Ao oeste vocï¿½ percebe uma praï¿½a onde crianï¿½as cantam alegres mï¿½sicas e
 dezenas de vendedores oferecem suas mercadorias.  Hï¿½ uma bonita fonte ali.
 ~
-280 0 1
+280 0 0 0 0 1
 D1
 ~
 ~
@@ -1259,11 +1250,10 @@ centro da sala, onde alguns homens contratam trabalhadores para trabalharem
 no carregamento dos navios.  Alguns homens estï¿½o recebendo seus pagamentos.
 Ao leste hï¿½ uma porta e ao oeste um corredor.
 ~
-280 0 0
+280 0 0 0 0 0
 D1
 ~
 porta~
-:n 2
 1 -1 28070
 D2
 ~
@@ -1282,7 +1272,7 @@ estï¿½ coberto por um grosso tapete que parece ser bastante macio.  Existem
 pequenos pontos abertos no teto, que deixam a luz penetrar, dando ao
 ambiente uma sensaï¿½ï¿½o de paz.
 ~
-280 0 0
+280 0 0 0 0 0
 D1
 ~
 ~
@@ -1298,7 +1288,7 @@ O Corredor~
 uma de suas paredes pendurado aqui.  ï¿½ a figura de uma baleia azul.  As
 escadas sobem atï¿½ o segundo andar.
 ~
-280 0 0
+280 0 0 0 0 0
 D0
 ~
 ~
@@ -1318,16 +1308,14 @@ parece bem real.  Existem muitas folhas de papel espalhadas sobre a mesa e
 algumas delas voaram quando vocï¿½ abriu a porta.
    Uma outra porta ao leste chama a sua atenï¿½ï¿½o.
 ~
-280 0 0
+280 0 0 0 0 0
 D1
 ~
 porta~
-:n 2
 2 28098 28071
 D3
 ~
 porta~
-:n 2
 1 -1 28067
 S
 #28071
@@ -1339,11 +1327,10 @@ estï¿½ realmente procurando nï¿½o ï¿½ descanso mas sim dinheiro, um equipamento
 melhor e...sangue!  Se alguma dessas coisas estiverem aqui vocï¿½ irï¿½
 descobrir...
 ~
-280 0 0
+280 0 0 0 0 0
 D3
 ~
 porta~
-:n 2
 2 28098 28070
 S
 #28072
@@ -1353,7 +1340,7 @@ janelinhas redondas e alguns painï¿½is pendurados na parede.  Vocï¿½ percebe que
 se dirige para um lugar bastante reservado assim que lï¿½ a placa informando
 que apenas pessoas autorizadas podem subir.
 ~
-280 0 0
+280 0 0 0 0 0
 D2
 ~
 ~
@@ -1371,7 +1358,7 @@ vestï¿½bulo.  Alguns vasos com flores foram colocados sobre uma mesa console e
 hï¿½ uma clarabï¿½ia no teto que estï¿½ entreaberta, permitindo que uma brisa
 fresca entre e refresque o ambiente um pouco.
 ~
-280 0 0
+280 0 0 0 0 0
 D2
 ~
 ~
@@ -1388,7 +1375,7 @@ de mï¿½rmore rosado e tapetes persas ornamentam o chï¿½o, cuja iluminaï¿½ï¿½o ch
 atravï¿½s de um maravilhoso lustre folhado a ouro.  Hï¿½ uma enorme parede
 envidraï¿½ada que descortina o cenï¿½rio magnï¿½fico de todo o estaleiro.
 ~
-280 0 0
+280 0 0 0 0 0
 D0
 ~
 ~
@@ -1406,11 +1393,10 @@ papï¿½is espalhados e alguns deles estï¿½o marcados com o selo Docas de Calyus.
 Vocï¿½ percebe que este ï¿½ um escritï¿½rio assim que vï¿½ que dentro de uma das
 gavetas abertas existem um espelho e alguns batons.
 ~
-280 0 0
+280 0 0 0 0 0
 D1
 ~
 porta~
-:n 2
 2 28097 28076
 D3
 ~
@@ -1428,11 +1414,10 @@ uma mesinha de canto.  Sobre uma imensa mesa de madeira maciï¿½a hï¿½ uma
 pequena placa com os dizeres: "Almirante Dasher".  Vocï¿½ sabe que estï¿½ dentro
 dos aposentos do chefï¿½o e que talvez possa haver alguma aï¿½ï¿½o aqui.
 ~
-280 0 0
+280 0 0 0 0 0
 D3
 ~
 porta~
-:n 2
 2 28097 28075
 S
 #28077
@@ -1440,7 +1425,7 @@ A Baia de Calyus~
    O oceano comeï¿½a aqui.  Alï¿½m de ï¿½gua, vocï¿½ sï¿½ consegue ver navios partindo
 em direï¿½ï¿½o a terras desconhecidas.
 ~
-280 4 6
+280 4 0 0 0 6
 D3
 ~
 ~
@@ -1455,7 +1440,7 @@ vocï¿½ vï¿½ uma rampa para barcos e ao oeste estï¿½ uma estrada estreita que seg
 em direï¿½ï¿½o ï¿½s colinas.  Ao leste hï¿½ outra estrada que parece seguir em
 direï¿½ï¿½o ï¿½s docas.
 ~
-280 0 1
+280 0 0 0 0 1
 D1
 ~
 ~
@@ -1469,4 +1454,4 @@ D3
 ~
 0 -1 28057
 S
-$
+$~
