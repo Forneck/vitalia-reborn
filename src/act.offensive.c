@@ -115,7 +115,7 @@ struct group_data *group;
       act("Use 'murder' se voce realmente deseja atacar $N.", FALSE, ch, 0, opponent, TO_CHAR);
     else {
       act("$N dá assistência a você!", FALSE, helpee, 0, ch, TO_CHAR);
-      send_to_group(NULL,group, "%s dá assistência a um membro do grupo!",GET_NAME(ch));
+      send_to_group(NULL,group, "%s dá assistência a um membro do grupo!\r\n",GET_NAME(ch));
       act("$n dá assistência a $N.", TRUE, ch, 0, helpee, TO_NOTVICT);
       hit(ch, opponent, TYPE_UNDEFINED);
     }
@@ -130,21 +130,27 @@ ACMD(do_hit)
 	one_argument(argument, arg);
 
 	if (!*arg)
-		send_to_char(ch, "Hit who?\r\n");
+		send_to_char(ch, "Bater em quem?\r\n");
 	else if (!(vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)))
-		send_to_char(ch, "That player is not here.\r\n");
+		send_to_char(ch, "Esta pessoa não parece estar aqui.\r\n");
 	else if (vict == ch)
 	{
-		send_to_char(ch, "You hit yourself...OUCH!.\r\n");
-		act("$n hits $mself, and says OUCH!", FALSE, ch, 0, vict, TO_ROOM);
+		send_to_char(ch, "Você bate em si mesm%s... AI!\r\n",OA(ch));
+		act("$n bate em si mesm$r, e diz AI!", FALSE, ch, 0, vict, TO_ROOM);
 	}
 	else if (AFF_FLAGGED(ch, AFF_CHARM) && (ch->master == vict))
-		act("$N is just such a good friend, you simply can't hit $M.", FALSE, ch, 0, vict,
+		act("$N é amig$R e você não pode atacá-l$R.", FALSE, ch, 0, vict,
 			TO_CHAR);
 	else
 	{
+	     if (AFF_FLAGGED(ch, AFF_CHARM) && !IS_NPC(ch->master) && !IS_NPC(vict))
+      return;	/* you can't order a charmed pet to attack a player */
+  
 		if (!CONFIG_PK_ALLOWED && !IS_NPC(vict) && !IS_NPC(ch))
-			check_killer(ch, vict);
+		if (!SCMD_MURDER)
+		 send_to_char(ch, "Use 'murder' se você realmente deseja atacar outro jogador.\r\n");
+		 else
+		check_killer(ch, vict);
 
 		if ((GET_POS(ch) == POS_STANDING) && (vict != FIGHTING(ch)))
 		{
@@ -157,7 +163,7 @@ ACMD(do_hit)
 			WAIT_STATE(ch, PULSE_VIOLENCE + 2);
 		}
 		else
-			send_to_char(ch, "You're fighting the best you can!\r\n");
+			send_to_char(ch, "Você está fazendo o melhor que você pode!\r\n");
 	}
 }
 
@@ -175,19 +181,19 @@ ACMD(do_kill)
 
 	if (!*arg)
 	{
-		send_to_char(ch, "Kill who?\r\n");
+		send_to_char(ch, "Matar quem?\r\n");
 	}
 	else
 	{
 		if (!(vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)))
-			send_to_char(ch, "That player is not here.\r\n");
+			send_to_char(ch, "Esta pessoa não está aqui.\r\n");
 		else if (ch == vict)
-			send_to_char(ch, "Your mother would be so sad.. :(\r\n");
+			send_to_char(ch, "Sua mamãe vai ficar triste... :(\r\n");
 		else
 		{
-			act("You chop $M to pieces!  Ah!  The blood!", FALSE, ch, 0, vict, TO_CHAR);
-			act("$N chops you to pieces!", FALSE, vict, 0, ch, TO_CHAR);
-			act("$n brutally slays $N!", FALSE, ch, 0, vict, TO_NOTVICT);
+			act("Você esmigalha $N em pedaços!  Ah!  Sangue!", FALSE, ch, 0, vict, TO_CHAR);
+			act("$N esmigalha você em pedaços!", FALSE, vict, 0, ch, TO_CHAR);
+			act("$nbrutalmente destrói $N!", FALSE, ch, 0, vict, TO_NOTVICT);
 			raw_kill(vict, ch);
 		}
 	}
