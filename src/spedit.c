@@ -2073,19 +2073,17 @@ ACMD(do_splist) {
 
    if ((wa = (get_spell_class(ptr, CLASS_WARRIOR) != -1))) strcat(classes, "Wa ");
    if ((search_by_class == CLASS_WARRIOR) && !wa) continue;
-   
-      if ((ra = (get_spell_class(ptr, CLASS_RANGER) != -1))) strcat(classes, "Ra");
-   if ((search_by_class == CLASS_RANGER) && !ra) continue;
-   
-         if ((ba = (get_spell_class(ptr, CLASS_BARD) != -1))) strcat(classes, "Ba");
+         if ((dru = (get_spell_class(ptr, CLASS_DRUID) != -1))) strcat(classes, "Dru ");
+   if ((search_by_class == CLASS_DRUID) && !dru) continue;
+     if ((ba = (get_spell_class(ptr, CLASS_BARD) != -1))) strcat(classes, "Ba ");
    if ((search_by_class == CLASS_BARD) && !ba) continue;
    
-         if ((dru = (get_spell_class(ptr, CLASS_DRUID) != -1))) strcat(classes, "Dru");
-   if ((search_by_class == CLASS_DRUID) && !dru) continue;
+      if ((ra = (get_spell_class(ptr, CLASS_RANGER) != -1))) strcat(classes, "Ra ");
+   if ((search_by_class == CLASS_RANGER) && !ra) continue;
 
    if (search_disabled && (ptr->status == available)) continue;
 
-   if ((mu || cl || th || wa || ra) && search_not_assigned) continue;
+   if ((mu || cl || th || wa || dru || ba || ra )&& search_not_assigned) continue;
 
    if (search_by_skill && (ptr->type == SPELL)) continue;
 
