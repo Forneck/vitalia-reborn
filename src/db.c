@@ -51,8 +51,6 @@ extern void spedit_free_memory();
 extern void create_spells_db();
 extern void set_spells_function();
 extern int boot_spells();
-extern void boot_net();
-extern void setup_weather(struct zone_data *zone);
 
 /* declarations of most of the 'global' variables */
 struct config_data config_info;	/* Game configuration list.  */
@@ -1004,9 +1002,6 @@ static void reset_time(void)
 
 	log1("   Current Gametime: %dH %dD %dM %dY.", time_info.hours,
 		time_info.day, time_info.month, time_info.year);
-
- setup_weather(NULL);
- setup_weather(zone_table);
 }
 
 /* Write the time in 'when' to the MUD-time file. */
