@@ -1,226 +1,226 @@
-COMUNICAÇÃO COMUNICACAO
+COMUNICAï¿½ï¿½O COMUNICACAO
 
-   Os seguintes comandos permitem que você converse com outras pessoas que
-estiverem jogando no Mundo de Vitália.
+   Os seguintes comandos permitem que vocï¿½ converse com outras pessoas que
+estiverem jogando no Mundo de Vitï¿½lia.
 
    Para obter ajuda para um comando, digite HELP (comando).
 
-   &gSAY ASK WHISPER '    &nConversar com outras pessoas na sala.
-   &gEMOTE :              &nDescriver ações para outras pessoas na sala.
-   &gGSAY QSAY            &nConversar com outras pessoas no seu grupo.
-   &gGOSSIP GRATS         &nConversar com outras pessoas no jogo todo.
-   &gSHOUT                &nConversar com outras pessoas na sua area.
-   &gAUCTION              &nLeiloar itens.
-   &gPRAY                 &nComunicar diretamente com os Deuses.
-   &gTELL REPLY           &nConversar em particular com outras pessoas.
-   &gCHANNEL              &nEscolher quais canais deseja ouvir.
-   &gMAIL CHECK RECEIVE   &nEnviar/receber cartas de outras pessoas.
-   &gWRITE                &nEscrever em papéis ou quadros de mensagem.
-   &gREAD                 &nLer papéis ou mensagens em quadros.
-   &gNOREPEAT             &nRepetir as suas frases para você mesmo.
+   @gSAY ASK WHISPER '    @nConversar com outras pessoas na sala.
+   @gEMOTE :              @nDescriver aï¿½ï¿½es para outras pessoas na sala.
+   @gGSAY QSAY            @nConversar com outras pessoas no seu grupo.
+   @gGOSSIP GRATS         @nConversar com outras pessoas no jogo todo.
+   @gSHOUT                @nConversar com outras pessoas na sua area.
+   @gAUCTION              @nLeiloar itens.
+   @gPRAY                 @nComunicar diretamente com os Deuses.
+   @gTELL REPLY           @nConversar em particular com outras pessoas.
+   @gCHANNEL              @nEscolher quais canais deseja ouvir.
+   @gMAIL CHECK RECEIVE   @nEnviar/receber cartas de outras pessoas.
+   @gWRITE                @nEscrever em papï¿½is ou quadros de mensagem.
+   @gREAD                 @nLer papï¿½is ou mensagens em quadros.
+   @gNOREPEAT             @nRepetir as suas frases para vocï¿½ mesmo.
 
-   Há tambem a possibilidade de usar sociais para expressar seus sentimentos
-e ações para as pessoas que estão em sua sala.  Para obter uma breve
-descrição do uso dos sociais, digite HELP SOCIALS, ou para ver a lista dos
-sociais disponíveis, digite o comando SOCIALS.
-#
+   Hï¿½ tambem a possibilidade de usar sociais para expressar seus sentimentos
+e aï¿½ï¿½es para as pessoas que estï¿½o em sua sala.  Para obter uma breve
+descriï¿½ï¿½o do uso dos sociais, digite HELP SOCIALS, ou para ver a lista dos
+sociais disponï¿½veis, digite o comando SOCIALS.
+#0
 SAY ASK WHISPER '
 
 Uso: say <mensagem>
      whisper | ask <jogador> <mensagem>
 
-   Estes canais permitem conversação particular entre os jogadores em uma
-sala.  Os canais "whisper" e "say" permitem uma conversação privada.  Você
+   Estes canais permitem conversaï¿½ï¿½o particular entre os jogadores em uma
+sala.  Os canais "whisper" e "say" permitem uma conversaï¿½ï¿½o privada.  Vocï¿½
 pode usar ' como um atalho para o comando SAY.
 
 Exemplos:
-  > say Ei, alguém sabe como chegar a Oz?
+  > say Ei, alguï¿½m sabe como chegar a Oz?
   > whisper Catje Acho que vai sair briga aqui.
-  > 'Olá a todos.
+  > 'Olï¿½ a todos.
 
-Veja também: COMUNICAÇÃO
-#
+Veja tambï¿½m: COMUNICAï¿½ï¿½O
+#0
 EMOTE :
 
 Uso: emote <mensagem>
      : <mensagem>
 
-   Descreve ações para outras pessoas em sua sala.  Você pode usar : como
+   Descreve aï¿½ï¿½es para outras pessoas em sua sala.  Vocï¿½ pode usar : como
 atalho para este comando.
 
 Exemplo:
   > emote se sente muito triste hoje.
 
-...irá mostrar...
+...irï¿½ mostrar...
   Helt se sente muito triste hoje.
 
-Veja também: COMUNICAÇÃO, SOCIALS
-#
+Veja tambï¿½m: COMUNICAï¿½ï¿½O, SOCIALS
+#0
 GSAY GTELL
 
 Uso: gsay <mensagem>
      gtell <mensagem>
 
    Diz algo por telepatia para todos os integrantes no seu grupo, mesmo que
-não estejam na mesma sala.
+nï¿½o estejam na mesma sala.
 
-Veja também: COMUNICAÇÃO, GROUP, TELL, SAY
-#
+Veja tambï¿½m: COMUNICAï¿½ï¿½O, GROUP, TELL, SAY
+#0
 QSAY
 
 Uso: qsay <mensagem>
 
    Diz algo para os outros integrantes do grupo de busca (quest) atual.
 
-Veja também: COMUNICAÇÃO, QUEST
-#
+Veja tambï¿½m: COMUNICAï¿½ï¿½O, QUEST
+#0
 GOSSIP GRATS
 
 Uso: gossip <mensagem>
      grats <mensagem>
 
-   Estes são canais usados para comunicação aberta com outros jogadores.  Você
-deve ser pelo menos nível 3 para usar estes canais.  O canal "grats" é
-reservado para congratulações a outros jogadores.  O canal "holler" é usado
-para anúncios importantes, porém seu uso implica em uma penalidade de 20
+   Estes sï¿½o canais usados para comunicaï¿½ï¿½o aberta com outros jogadores.  Vocï¿½
+deve ser pelo menos nï¿½vel 3 para usar estes canais.  O canal "grats" ï¿½
+reservado para congratulaï¿½ï¿½es a outros jogadores.  O canal "holler" ï¿½ usado
+para anï¿½ncios importantes, porï¿½m seu uso implica em uma penalidade de 20
 pontos de movimento.
 
-   O abuso destes canais é punido de acordo com as políticas de jogo.
+   O abuso destes canais ï¿½ punido de acordo com as polï¿½ticas de jogo.
 
 Exemplos:
-  > gossip Olá meus amigos de aventura!
-  > grats NÍVEL!!!!!!!!
-  > grats PARABÉNS CATJE!!!!!!!!
+  > gossip Olï¿½ meus amigos de aventura!
+  > grats Nï¿½VEL!!!!!!!!
+  > grats PARABï¿½NS CATJE!!!!!!!!
 
-Veja também: COMUNICAÇÃO, CHANNEL
-#
+Veja tambï¿½m: COMUNICAï¿½ï¿½O, CHANNEL
+#0
 SHOUT
 
 Uso: shout <mensagem>
 
    O canal "shout" pode ser usado para conversar com outros jogadores na mesma
-área geográfica que você está.
+ï¿½rea geogrï¿½fica que vocï¿½ estï¿½.
 
-Veja também: COMUNICAÇÃO, CHANNEL
-#
+Veja tambï¿½m: COMUNICAï¿½ï¿½O, CHANNEL
+#0
 AUCTION
 
 Uso: auction <mensagem>
 
-   Este canal é reservado para leilão de objetos em geral.  As mensagens
-leiloando cada objeto, e seus lances devem ser feitos todos através deste
-canal.  Você deve ser pelo menos nível 3 para usar estes canais.
+   Este canal ï¿½ reservado para leilï¿½o de objetos em geral.  As mensagens
+leiloando cada objeto, e seus lances devem ser feitos todos atravï¿½s deste
+canal.  Vocï¿½ deve ser pelo menos nï¿½vel 3 para usar estes canais.
 
 Exemplos:
-  > auction espada curta -- lance mínimo: 100k
+  > auction espada curta -- lance mï¿½nimo: 100k
 
-Veja também: COMUNICAÇÃO, CHANNEL
-#
+Veja tambï¿½m: COMUNICAï¿½ï¿½O, CHANNEL
+#0
 PRAY
 
 Uso: pray <mensagem>
 
-   Este canal é reservado para comunicação de mortais para Deuses.  As
-mensagens enviadas usando este canal serão vistas apenas pelos Deuses que
-estiverem conectados no momento.  Esse é o único canal que pode ser usado
-para mensagens direcionadas para os Deuses, mas não é garantido que um Deus
-irá ler ou atender sua mensagem prontamente.
+   Este canal ï¿½ reservado para comunicaï¿½ï¿½o de mortais para Deuses.  As
+mensagens enviadas usando este canal serï¿½o vistas apenas pelos Deuses que
+estiverem conectados no momento.  Esse ï¿½ o ï¿½nico canal que pode ser usado
+para mensagens direcionadas para os Deuses, mas nï¿½o ï¿½ garantido que um Deus
+irï¿½ ler ou atender sua mensagem prontamente.
 
-Veja também: COMUNICAÇÃO
-#
+Veja tambï¿½m: COMUNICAï¿½ï¿½O
+#0
 TELL
 
 Uso: tell <jogador> <mensagem>
 
-   Através do comando TELL você pode conversar em particular com outros
+   Atravï¿½s do comando TELL vocï¿½ pode conversar em particular com outros
 jogadores, seja qual for o lugar em que eles estejam, enviando mensagens
-através de telepatia.
+atravï¿½s de telepatia.
 
 Exemplos:
-  > tell catje Olá, como vai você?
+  > tell catje Olï¿½, como vai vocï¿½?
 
-Veja também: COMUNICAÇÃO, CHANNEL
-#
+Veja tambï¿½m: COMUNICAï¿½ï¿½O, CHANNEL
+#0
 REPLY
 
 Uso: reply <mensagem>
 
-   Este comando enviará uma resposta para a última pessoa que lhe enviou uma
-mensagem telepática (usando o comando TELL).  Funciona como se você digitasse
-o comando 'tell <jogador> <mensagem>', mas de uma forma muito mais fácil.
+   Este comando enviarï¿½ uma resposta para a ï¿½ltima pessoa que lhe enviou uma
+mensagem telepï¿½tica (usando o comando TELL).  Funciona como se vocï¿½ digitasse
+o comando 'tell <jogador> <mensagem>', mas de uma forma muito mais fï¿½cil.
 
 Exemplo:
-  Ras falou por telepatica com você, 'Hi!'
+  Ras falou por telepatica com vocï¿½, 'Hi!'
   > reply ei
-  Você fala por telepatica com Ras, 'ei'
+  Vocï¿½ fala por telepatica com Ras, 'ei'
 
-Veja também: TELL
-#
+Veja tambï¿½m: TELL
+#0
 CHANNEL
 
 Uso: channel [ +all | -all ] [ +canal | -canal ] ...
 
-   Através deste comando você escolhe quais canais você irá ouvir e
-participar.  Usando o comando CHANNEL sem argumentos, você verá de quais
-canais você está participando.  Para desligar o recebimento de mensagens de
+   Atravï¿½s deste comando vocï¿½ escolhe quais canais vocï¿½ irï¿½ ouvir e
+participar.  Usando o comando CHANNEL sem argumentos, vocï¿½ verï¿½ de quais
+canais vocï¿½ estï¿½ participando.  Para desligar o recebimento de mensagens de
 um determinado canal, digite CHANNEL -CANAL.  Para ligar um determinado
 canal, use CHANNEL +CANAL.
 
-   Você pode rapidamente ligar ou desligar todos os canais através dos
+   Vocï¿½ pode rapidamente ligar ou desligar todos os canais atravï¿½s dos
 comandos CHANNEL +ALL ou CHANNEL -ALL.
 
-Veja também: COMUNICAÇÃO, GOSSIP, SHOUT, AUCTION, TELL
-#
+Veja tambï¿½m: COMUNICAï¿½ï¿½O, GOSSIP, SHOUT, AUCTION, TELL
+#0
 MAIL CHECK RECEIVE
 
 Uso: check
      mail <jogador> [assunto]
      receive
 
-   Estes comandos são usados pelo Serviço de Correios de Vitália e só podem
-ser usados enquanto você estiver nos correios.  Você precisa ser pelo menos
-nível 2 para usar o correio.
+   Estes comandos sï¿½o usados pelo Serviï¿½o de Correios de Vitï¿½lia e sï¿½ podem
+ser usados enquanto vocï¿½ estiver nos correios.  Vocï¿½ precisa ser pelo menos
+nï¿½vel 2 para usar o correio.
 
-   Use CHECK para verificar se há alguma correspondência para você.  Use
-RECEIVE para receber suas correspondências, e MAIL para enviar uma
-correspondência para alguém.  Os selos geralmente custam 150 moedas de ouro,
-mas podem custar mais se você for enviar mensagem para algum ser divino.
-#
+   Use CHECK para verificar se hï¿½ alguma correspondï¿½ncia para vocï¿½.  Use
+RECEIVE para receber suas correspondï¿½ncias, e MAIL para enviar uma
+correspondï¿½ncia para alguï¿½m.  Os selos geralmente custam 150 moedas de ouro,
+mas podem custar mais se vocï¿½ for enviar mensagem para algum ser divino.
+#0
 NOREPEAT
 
 Uso: norepeat
 
-   Este comando permite ou não você de ver o eco de suas mensagens
-(i.e. para conandos como SAY, SHOUT, GOSSIP, etc).  Útil para aqueles que
-possuem conexão lenta ou se isso simplesmente o perturba.
+   Este comando permite ou nï¿½o vocï¿½ de ver o eco de suas mensagens
+(i.e. para conandos como SAY, SHOUT, GOSSIP, etc).  ï¿½til para aqueles que
+possuem conexï¿½o lenta ou se isso simplesmente o perturba.
 
-Veja também: TOGGLE
-#
+Veja tambï¿½m: TOGGLE
+#0
 READ
 
 Uso: read <objeto>
-     read <número da mensagem>
+     read <nï¿½mero da mensagem>
 
-   Para ler algo em um objeto (um papel, um papiro, etc).  Também pode ser
+   Para ler algo em um objeto (um papel, um papiro, etc).  Tambï¿½m pode ser
 usado para ler mensagens no quadro de avisos.  Digite HELP QUADROS para mais
-informações.
+informaï¿½ï¿½es.
 
 Exemplo:
   > read papel
 
-Veja também: WRITE, QUADROS
-#
+Veja tambï¿½m: WRITE, QUADROS
+#0
 WRITE
 
 Uso: write <objeto>
-     write quadro <título da mensagem>
+     write quadro <tï¿½tulo da mensagem>
 
-   Para escrever uma anotação, você precisa de um pedaço de papel (ou
-similar), e uma caneta de algum tipo.  Você pode escrever algo como "write on
-the paper with the pen" e será pedido para que você escreva a mensagem.
-Também é usado para colocar mensagens em um quadro.  Digite HELP QUADROS para
-mais informações.
+   Para escrever uma anotaï¿½ï¿½o, vocï¿½ precisa de um pedaï¿½o de papel (ou
+similar), e uma caneta de algum tipo.  Vocï¿½ pode escrever algo como "write on
+the paper with the pen" e serï¿½ pedido para que vocï¿½ escreva a mensagem.
+Tambï¿½m ï¿½ usado para colocar mensagens em um quadro.  Digite HELP QUADROS para
+mais informaï¿½ï¿½es.
 
-Veja também: READ, MAIL, QUADROS
-#
+Veja tambï¿½m: READ, MAIL, QUADROS
+#0
 $
