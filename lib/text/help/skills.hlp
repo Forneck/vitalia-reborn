@@ -1,0 +1,410 @@
+HABILIDADES
+
+   Habilidades podem ser usadas ladrões, bardos e guerreiros.  Para se
+usar uma habilidade, é necessário tê-la praticado anteriormente.
+
+   Os seguintes comandos estão relacionados ao uso de habilidades: Para
+obter ajuda para um comando, digite HELP (comando).
+
+   PRACTICE   - Para mostrar suas habilidades e praticá-las.
+   SKILL      - Para mostrar todas as habilidades que você pode vir a ter.
+
+   As seguintes habilidades estão documentadas no VitaliaMUD: Para obter
+ajuda para uma habilidade, digite HELP (nome da habilidade).
+
+   &WHabilidades de luta&n
+   BACKSTAB      - Esfaqueia o oponente por trás            [Lad            ]
+   BACKFLIP      - Fazer uma cambalhota sobre o oponente    [Lad            ]
+   BASH          - Se chocar contra o oponente              [Gue            ]
+   COMBO ATTACK  - Ataque combinado                         [Gue            ]
+   ESCAPE        - Fuga                                     [Lad            ]
+   KICK          - Chutar o oponente                        [Gue            ]
+   NIGHTHAMMER   - Habilidade noturna                       [Lad            ]
+   RESCUE        - Resgata um companheiro                   [Gue            ]
+   TRIP          - Rasteira                                 [Brd            ]
+
+   &WHabilidades de armas&n
+   SWORDS        - Espadas                                  [Gue            ]
+   DAGGERS       - Facas                                    [Lad Gue Brd    ]
+   WHIPS         - Chicotes                                 [Gue            ]
+   TALONOUS ARMS - Garras                                   [Gue            ]
+   BLUDGEONS     - Clavas                                   [Gue            ]
+   EXOTICS       - Armas exóticas                           [Gue            ]
+   POLEARMS      - Armas de haste                           [Gue            ]
+
+   &WOutras Habilidades&n
+   ENVENOM       - Envenenar armas                          [Lad            ]
+   HIDE          - Esconder                                 [Lad            ]
+   MEDITATE      - Meditar                                  [Mag Cle Dru Brd]
+   MOUNT         - Montar                                   [Cle Gue        ]
+   PICK LOCK     - Destrancar fechaduras                    [Lad            ]
+   SEIZE         - Imobilizar                               [Lad            ]
+   SNEAK         - Andar silenciosamente                    [Lad            ]
+   SPY           - Espiar                                   [Lad            ]
+   STEAL         - Roubar                                   [Lad            ]
+   TRACK         - Rastrear                                 [Lad Gue        ]
+   ADAGIO        - Torna o corpo mais forte                 [Brd            ]
+   ALLEGRO       - Torna o corpo mais hágil                 [Brd            ]
+#
+PRACTICE
+
+Uso: practice [magia|habilidade|canção]
+
+   Você deve praticar suas magias, habilidades e canções para poder usá-las
+ou aperfeiçoar sua técnica.  Você somente pode praticar em sua devida
+guilda, onde seu mestre poderá ajudá-lo a treinar.  Digite "practice
+<habilidade>" para melhorar suas habilidades em sua guilda.  Você pode
+somente praticar um certo número de vezes para cada nível novo que você
+alcança.  Créditos de prática não usados, irão se acumulando para poderem
+ser usados em níveis futuros.
+
+   Se você digitar "practice" em qualquer outro local fora de sua guilda,
+você receberá uma lista de todas as magias, habilidades e/ou canções que
+você possui e seu devido nível de proficiência.
+
+Veja também: MAGIAS, HABILIDADES, CANÇÕES
+#
+ADAGIO
+
+Somente bardos.
+
+Uso: adagio
+
+   Ao usar esta habilidade, o bardo faz com que seu corpo vibre de maneira
+mais forte e lenta, adquirindo força e destrutividade em seus golpes. Todavia,
+isso significa uma proporcional perda de destreza e chances de acerto de
+golpes. 
+   A habilidade oposta a ela é o allegro, não podendo elas serem usadas ao
+mesmo tempo.
+
+Veja Também: ALLEGRO, STRENGTH, DAMROLL, DEXTERITY, HITROLL
+#
+ALLEGRO
+
+Somente bardos.
+
+Uso: allegro
+
+   Ao usar esta habilidade, o bardo faz com que seu corpo vibre de maneira
+mais rápida e leve, adquirindo destreza e capacidade de acerto de seus
+golpes.  Todavia, isso significa uma proporcional perda de força e
+destrutividade.
+   A habilidade oposta a ela é o adagio, não podendo elas serem usadas ao
+mesmo tempo.
+
+Veja Também: ADAGIO, DEXTERITY, HITROLL, STRENGTH, DAMROLL
+#
+BACKFLIP
+
+Somente Ladrões
+
+Uso: backflip <vítima>
+
+   Essa habilidade, quando aplicada com sucesso, faz com que você dê uma
+cambalhota por sobre o oponente, deixando-o perdido.  Você ganha, com isso,
+dois rounds que ficam praticamente interrompidos.  Dessa forma, ganha-se a
+chance de aplicar um BACKSTAB no oponente, mesmo se ele continuar lutando.
+
+Exemplo:
+  > kill aglandiir
+  > backflip aglandiir
+
+Se o golpe foi aplicado com sucesso você poderá atacá-lo com BACKSTAB:
+  > backstab aglandiir
+
+   Do contrário, você ficará dois rounds sem seus sentidos, não podendo agir
+de nenhuma forma.
+
+Veja também: BACKSTAB
+#
+BACKSTAB
+
+   Somente Ladrões.
+
+   Backstab é um movimento que tenta pegar uma pessoa sem ser percebido e
+apunha-lá pelas costas, exatamente no ponto que causaria mais dano.  Um
+sucesso garante um multiplicador de dano, dependendo do nível:
+
+    Níveis    Multiplicador
+    --------- -------------
+      1-10         2
+     11-20         3
+     21-28         4
+     29-36         5
+     37-45         6
+     46-100        7
+    Imortais      10
+
+   A chance de apunhalar com sucesso uma pessoa depende de quanto você
+praticou a habilidade na sua guilda.  Você sempre poderá apunhalar uma
+pessoa adormecida.
+
+Veja também: BACKFLIP
+#
+BASH
+
+   Somente Guerreiros.
+
+   O sucesso na habilidade depende de quanto você a treinou.  Esta
+habilidade consiste em tentar 'derrubar' uma pessoa.  Se você conseguir irá
+causar um pequeno dano pelo impacto, e causará a queda da pessoa.  A vítima
+ficará incapaz de emitir qualquer comando por dois turnos seguidos.  Se você
+errar irá perder o equilíbrio e cair.
+
+   Esta habilidade o torna incapaz de enviar comandos por 2 turnos seguidos.
+
+   Note que acertando uma pessoa que esteja descansando/sentado ira
+inflingir 1.5 vezes o dano.
+
+Veja também: KICK, RESCUE
+#
+COMBO "COMBO ATTACK"
+
+   Somente Guerreiros.
+
+   Uso: combo <vítima>
+
+   Essa habilidade permite iniciar a luta com um ataque combinado, com
+múltiplos golpes.  É possível ocorrer ataques de 2, 3, 4 ou até 5 golpes
+seguidos.  Cada um destes golpes tem em média o dobro da força de um golpe
+comum.  Para poder usar essa habilidade, você deve estar empunhando uma
+espada apropriada, que retalhe.
+
+   A habilidade 'combo attack' possui uma característica especial: é
+possível aperfeiçoar um pouco a técnica cada vez que um ataque combinado
+perfeito for realizado contra um oponente não muito fraco.
+
+   Ao usar a habilidade 'combo attack', você não poderá digitar nenhum
+comando durante 3 rounds de luta.
+#
+ESCAPE
+
+   Somente Ladrões.
+
+   Uso: escape
+
+   Permite fugir de uma luta sem correr o risco de perder experiência,
+como acontece com o comando FLEE.  Contudo, em determinadas situações não
+é possível fugir sem perder experiência.
+
+Veja também: FLEE
+#
+ENVENOM
+
+   Somente Ladrões.
+
+   Uso: envenom <arma> <recipiente>
+
+   Com essa habilidade ladrões poderão envenenar suas armas utilizando o
+veneno contido no recipiente especificado.  O tempo de duração do veneno na
+arma pode variar.  Ao receber o dano de uma arma contaminada, a vítima
+torna-se envenenada também.
+
+Exemplo:
+  > envenom faca fonte
+
+Veja também: MAGIA POISON
+#
+HIDE
+
+   Somente Ladrões.
+
+   Quando você digita o comando hide, existe uma chance de que você se
+esconder.  Quando escondido você só pode ser "sentido" pela magia "sense
+life".  E mesmo assim se você for sentido a sua identidade permanecerá
+desconhecida.  A habilidade é quebrado quando se aperta enter, ou quando
+você digitar e enviar outro comando.
+
+Exemplo:
+  > hide
+  Ok.
+  >  (você espera por ex. 5 minutos então permanecerá escondido por 5 minutos)
+
+  >  (você aperta enter e não está mais sobre o efeito da habilidade)
+
+Veja também: SNEAK
+#
+KICK
+
+   Somente Guerreiros.
+
+   Uso: kick <vítima>
+
+   O sucesso de um chute depende de quanto você o treinou.  O quão maior seu
+nível, mais forte será seu chute.  Existe um pequeno problema -- sempre
+quando você acertar o chute (ou errar) você ficará incapaz de digitar
+qualquer comando por três turnos seguidos -- então tenha certeza de que você
+não precisará fugir da luta.
+
+Veja também: BASH, RESCUE
+#
+MEDITATE
+
+   Uso: meditate
+
+   Essa habilidade permite que magos, clérigos, druidas e bardos meditem. 
+Durante a meditação, a recuperação de magia se intensifica, e a recuperação
+de saúde e movimento cessa.  Durante a meditação também não é possível
+conversar com outros jogadores.
+
+   Tome cuidado, pois nem sempre o quanto você praticou dessa habilidade lhe
+permite meditar imediatamente, e você pode acabar caindo no sono.  Para
+encerrar sua meditação, utilize o comando WAKE.
+
+Veja também: WAKE, SLEEP
+#
+MOUNT UNMOUNT
+
+   Uso: mount
+        unmount
+
+   Essa habilidade permite que guerreiros e clérigos montem e cavalguem sobre
+alguns tipos de monstros e animais, como cavalos.
+#
+NIGHTHAMMER
+
+   Somente Ladrões.
+
+   Essa habilidade, quando treinada, oferece um bônus de AC, HitRoll e DamRoll
+ao personagem quando este lutar durante a noite. A habilidade não possui efeito
+para personagens de níveis inferiores a 50, e o nível da habilidade cresce de
+acordo com o nível, e com a hora da noite.
+
+   Os níveis e afetamentos são mostrados a seguir:
+
+   Nível de Habilidade:      &b[&W 1&b] [&W 2&b] [&W 3&b] [&W 4&b] [&W 5&b] [&W 6&b] [&W 7&b] [&W 8&b]&n
+    Classe de Armadura:        -1   -2   -3   -4   -6   -8  -10  -12
+       Bônus de acerto:         0    1    1    1    2    2    2    2
+         Bônus de dano:         0    0    1    1    1    2    2    2
+
+   &WATENÇÃO: &n Os bônus de acerto e de dano não são visíveis no comando SCORE
+e na magia IDENTIFY.  Eles são aplicados diretamente aos golpes durante a
+luta.  Os valores que aparecem no SCORE e na magia IDENTIFY indicam os
+valores recebidos com equipamentos e magias.
+#
+"PICK LOCKS" PICK
+
+   Somente Ladrões.
+
+   Uso: pick [nome da fechadura] [direção]
+
+   Serve para destrancar fechaduras.  Nem todas as fechaduras podem ser
+destrancadas.
+
+Exemplos:
+  > pick door south
+  > pick safe
+
+Veja também : OPEN, CLOSE, LOCK, UNLOCK
+#
+RESCUE
+
+Somente Guerreiros.
+
+Uso: rescue <vítima>
+
+   Essa habilidade permite que você salve um amigo que está sendo atacado.
+Com ela, o atacante do seu amigo passará a atacar você.  Isto é muito útil
+quando jogando em grupos, é claro.
+
+Exemplo:
+  > rescue Yankee
+#
+SEIZE
+
+   Somente Ladrões.
+
+   Uso: seize [vítima]
+
+   Permite imobilizar a vítima por alguns turnos de luta.  Para obter sucesso
+ao aplicar esta habilidade, dependerá de quanto você a praticou, a sua
+destreza, e o quanto você é mais forte do que a vítima.
+
+   Enquanto a vítima estiver imobilizada, ela não poderá lutar ou fugir.  O
+mesmo ocorre com a pessoa que estiver imobilizando.
+#
+SNEAK
+
+   Somente Ladrões.
+
+   Uso: sneak
+
+   Usado para andar furtivamente (movendo-se entre os quartos sem que niguém
+note).  Quando você digita sneak, não há como saber se você está realmente
+sobre o efeito da habilidade.  Se você conseguir utilizar com sucesso, o
+efeito irá continuar por algum tempo.
+
+Veja também: HIDE
+#
+SPY
+
+   Somente Ladrões.
+
+   Uso: spy <direção>
+
+   Permite espiar em uma sala adjacente à sala atual, sem a necessidade de
+se locomover até ela.  É útil para verificar se a sala em que você deseja
+chegar é realmente segura.
+#
+STEAL
+
+   Somente Ladrões.
+
+   Uso: steal <item> <vítima>
+
+   Use steal para roubar ouro ou itens de outras pessoas.  A chance de não
+ser pego depende do quanto você praticou a habilidade, ou se a pessoa está
+dormindo ou não.
+
+   Devido ao mau uso do comando steal, agora é ilegal roubar de outros
+jogadores.  Se você o fizer irá receber uma marcação, o que será um grande
+problema.
+
+Exemplos:
+  > steal gold drunk
+  > steal sword mercenary
+    (Se a arma estiver sendo usada, só será possível se ele estiver atordoado)
+
+Veja também: FLAGS
+#
+TRACK
+
+   Uso: track <vítima>
+
+   Usado para se saber o caminho da rota mais curta que leva a um monstro.
+
+Exemplo:
+  > track fido
+  Você sente um rastro a sul daqui!
+#
+SWORDS DAGGERS WHIPS "TALONOUS ARMS" BLUDGEONS EXOTICS POLEARMS
+
+   Estas habilidades oferecem bônus nos atributos de luta quando o guerreiro
+ou ladrão empunha uma arma a qual esteja preparado para usar.  Usando uma
+arma nessa categoria, você recebe bônus no acerto (HitRoll), dano (DamRoll),
+armadura (AC) e também a habilidade de desferir mais de um golpe por turno
+de luta.
+
+   Cada tipo de arma necessita uma habilidade diferente.
+
+   &WHabilidade           Ataques&n
+   swords               retalhada
+   daggers              ferroada, furada, esfaqueada
+   whips                açoitada, chicoteada
+   talonous arms        arranhada
+   bludgeons            cacetada, espancada, moída, esmagada
+   exotics              golpe, esmurrada, mordida, explosão
+   polearms             perfurada, espetada, cortada
+#
+TRIP
+
+Somente bardos.
+
+Uso: trip <vítima>
+
+   O bardo tenta dar uma rasteira em seu oponente que, caso venha a ser
+atingido, cairá no chão, ficando vulnerável por um turno.  A queda causa
+dano à vítima.  O sucesso nessa habilidade depende do quanto foi treinada.
+Se o bardo errar seu ataque, irá ao chão e será ferido devido queda.
+#
+$

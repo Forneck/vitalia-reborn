@@ -1,0 +1,21 @@
+SOCIALS SOCIAIS
+
+Uso: <social> [<vítima>]
+
+   Sociais são comandos usados para demonstrar seu estado emocional para
+outros jogadores.  O ator, a vítima e os demais podem receber diferentes
+mensagens.  Normalmente, os comandos Sociais são usados apenas para
+expressar emoções, e não realizar uma ação, mas é possivel que alguns
+personagens (ou jogadores) demonstrem ações baseado no comando.
+
+Exemplo:
+  > shake homer
+  > applaud marge
+  > stare
+
+O comando SOCIALS gera uma listagem de todos os comandos disponíveis.
+  > socials
+
+Veja também: EMOTE
+#
+$

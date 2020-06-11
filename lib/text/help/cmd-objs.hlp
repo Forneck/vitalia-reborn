@@ -1,0 +1,394 @@
+OBJETOS
+
+   Os seguintes comandos permitem que você manuseie os objetos existentes no
+MUD.  Para obter ajuda para um comando, digite HELP <comando>.
+
+   &gDONATE               &nDoar objetos ou dinheiro.
+   &gDRINK SIP            &nBeber ou experimentar bebidas.
+   &gDROP                 &nSoltar objetos ou moedas do chão.
+   &gEAT TASTE            &nComer ou experimentar comidas.
+   &gEQUIPMENT            &nVer o que você está vestindo.
+   &gEXAMINE              &nExaminar objetos.
+   &gFILL POUR            &nEncher ou esvaziar copos, botas ou cantis.
+   &gGET TAKE             &nPegar objetos ou moedas.
+   &gGIVE                 &nDar objetos ou moedas a outras pessoas.
+   &gGRAB HOLD            &nSegurar bastões, sacolas ou outros objetos.
+   &gINVENTORY            &nVer o que você está carregando.
+   &gJUNK                 &nJogar objetos fora.
+   &gPUT                  &nColocar objetos dentro de outros.
+   &gQUAFF                &nTomar poções mágicas.
+   &gRECITE               &nPronunciar pergaminhos mágicos.
+   &gREMOVE               &nRetirar alguma roupa ou armadura do corpo.
+   &gUSE                  &nUsar um objeto mágico.
+   &gWEAR                 &nVestir roupas ou armaduras.
+   &gWIELD                &nEmpunhar armas.
+
+   Os seguintes comandos estão relacionados especificamente com seu dinheiro
+(moedas de ouro) no VitaliaMUD.
+
+   &gBALANCE              &nVerificar o saldo de sua conta bancária.
+   &gDEPOSIT              &nDepositar dinheiro no banco.
+   &gGOLD                 &nMostra quanto dinheiro você carrega.
+   &gWITHDRAW             &nSacar dinheiro do banco.
+
+   Os seguintes comandos estão relacionados especificamente com as lojas do
+VitaliaMUD.
+
+   &gBUY                  &nCompra um ou mais itens de uma loja.
+   &gLIST                 &nMostra os objetos que estão à venda em uma loja.
+   &gSELL                 &nVende um objeto para um lojista.
+   &gVALUE                &nConsultar o preço de um objeto seu.
+#
+BANK WITHDRAW DEPOSIT BALANCE
+
+   Comandos para retirar dinheiro do banco, depositar dinheiro, ou ver
+quanto dinheiro você possui no banco.  Pode ser usado em qualquer caixa
+automático.
+
+Exemplos:
+   > deposit 400
+   > withdraw 1000
+   > balance
+
+Veja também: GOLD, SCORE
+#
+BUY
+
+Uso: buy <nome do item>
+     buy #<número do item>
+     buy n.<nome do item>
+     buy n <nome do item>
+     buy n #<número do item>
+
+   Se você deseja adquirir um item de uma loja e você tem o dinheiro
+necessário para isso, você pode compra-lo.  Itens podem ser comprados pelo
+nome, ou por seu número na lista da loja, e também podem ser comprados em
+quantidade.
+
+Exemplos:
+   > buy espada        (compra a primeira espada da lista)
+   > buy #3            (compra o terceiro item da lista)
+   > buy 4.espada      (compra a quarta espada da lista)
+   > buy 10 pão        (compra 10 pães)
+   > buy 10 #2         (compra 10 do segundo item da lista)
+
+Veja também: LIST, SELL, SHOPS, VALUE
+#
+DONATE
+
+Uso: donate <objeto>
+     donate <número> moedas
+
+   Este comando pega um objeto que você não deseja mais, e o deposita na
+sala de doações de sua cidade natal, para poder ajudar os novatos.  Há 75%
+de chance de que os objetos doados serão transferidos para a sala de
+doações, e 25% de chances deste item ser descartado (JUNK).
+
+   > donate escudo
+   > donate all.pão
+   > donate 500 moedas
+
+Veja também: JUNK
+#
+DRINK SIP EAT TASTE
+
+Uso: eat <item>
+     taste <item>
+     drink <item>
+     sip <item>
+
+   Se você está com fome ou sede, estes comandos são feitos para você!
+
+   > eat pão
+   > taste pão
+   > drink from xícara
+   > sip fonte
+#
+DROP
+
+Uso: drop <item>
+     drop tudo.<item>
+     drop tudo
+     drop <number> moedas
+
+   Se você perder o interesse em determinado item, você pode soltá-lo na
+sala em que você estiver.
+
+   > drop garrafa
+   > drop tudo.pão
+   > drop tudo
+   > drop 1000 moedas
+
+Veja também: DONATE, GET, JUNK
+#
+EQUIPMENT
+
+Uso: equipment
+
+   Lhe dá uma lista de todos os equipamentos que você está empunhando,
+segurando e usando.
+
+Veja também: INVENTORY, REMOVE, WEAR
+#
+EXAMINE
+
+Uso: examine <local a ser examinado>
+
+   Pode lhe fornecer algumas informações úteis sobre um item ou monstro.
+
+Veja também: LOOK
+#
+FILL
+
+Uso: fill <item> <local usado para encher>
+
+   Se você deseja encher um recipiente que você está segurando com líquido
+de uma fonte que esteja na mesma sala que você.
+
+Exemplo:
+   > fill cantil fonte
+
+Veja também: POUR
+#
+GET TAKE
+
+   "Get" e "take" são exatamente o mesmo comando e podem ser usados
+igualmente.
+
+Uso: get | take <objeto>
+     get | take tudo [objeto]
+     get | take tudo tudo.<objeto>
+     get | take tudo.<objeto> tudo.<objeto>
+
+   Se você achar algo interessante que está no chão, você pode usar o
+comando 'get' para pega-lo.  O comando 'get' também pode ser usado para
+pegar itens de conteiners.
+
+Exemplos:
+   > get espada corpo
+   > get tudo corpo
+   > get tudo tudo.mochila
+   > get tudo.pão tudo.mochila
+
+Veja também: DROP, PUT
+#
+GIVE
+
+Uso: give <objeto> <vítima>
+     give <número> moedas <vítima>
+
+   Se você se sentir bondoso, você poderia dar algumas coisas para alguém
+que precise.
+
+  > give all ras
+  > give pão médico
+  > give all.bronze mirlen
+  > give 40000 moedas nia
+#
+GOLD
+
+Uso: gold
+
+   Mostra o quanto de dinheiro você está carregando.
+
+Veja também: BALANCE, DEPOSIT, WITHDRAW
+#
+GRAB HOLD
+
+Uso: grab <objeto>
+     hold <objeto>
+
+   Estes comandos são usados para segurar equipamentos, como uma tocha, por
+exemplo.
+
+Exemplos:
+  > hold tocha
+  > grab pedra
+
+Veja também: EQUIPMENT, REMOVE, WEAR, WIELD
+#
+INVENTORY
+
+Uso: inventory
+
+   Se você não tem certeza o que está carregando, ou se simplesmente
+gostaria de checar se nenhum ladrão o roubou.
+
+Veja também: EQUIPMENT, GRAB, HOLD, REMOVE, WEAR
+#
+JUNK
+
+Uso: junk <objeto>
+     junk <número> moedas
+
+   Use JUNK ao invés de DROP se você deseja manter nosso mundo um pouco mais
+limpo.  Se você usar JUNK em algo, ele irá desaparecer e você ganhará
+algumas moedas ou pontos de experiência.
+
+Exemplos:
+   > junk xícara
+   > junk tudo.bronze
+   > junk 500 moedas
+
+Veja também: DONATE, DROP
+#
+LIST
+
+Uso: list [tipo do item]
+     list
+
+   Se você deseja ver quais itens estão à venda em uma determinada loja, dê
+uma olhada na lista.  A lista contém todos os atuais itens que estão à venda
+nesta loja, e sua quantidade.  O preço de cada item também é mostrado na
+lista.  Se você está interessado em um determinado item, você pode
+especificar quais itens a serem listados.
+
+Exemplos:
+
+   > list             (lista todos os itens à venda)
+   > list espada      (lista todas as espadas à venda)
+
+Veja também: BUY, SELL, SHOPS, VALUE
+#
+POUR
+
+Uso: pour <recipiente> <recipiente>
+     pour <recipiente> fora
+
+   Se você deseja esvaziar algum líquido de um conteiner para outro.
+Digitando o nome do conteiner e depois 'fora' simplesmente irá esvazirar
+totalmente o conteúdo do conteiner, todo no chão.
+
+Exemplos:
+   > pour cantil xícara
+   > pour xícara fora
+
+Veja também: FILL
+#
+PUT
+
+Uso: put <objeto> <recipiente>
+     put tudo.<objeto> <recipiente>
+     put tudo <recipiente>
+
+   Para colocar objetos em recipientes.
+
+Exemplos:
+   > put pão mochila
+   > put tudo.pão mochila
+   > put tudo cofre
+
+Veja também: GET
+#
+QUAFF POCAO POCOES
+
+Uso: quaff <poção>
+
+   O comando 'quaff' é usado para "tomar" uma poção mágica.  A magia irá
+afeta-lo imediatamente, para o bem ou para o mal...
+#
+RECITE SCROLL SCROLLS
+
+Uso: recite <pergaminho> [alvo]
+
+   É usado para "recitar" pergaminhos mágicos.  O alvo pode ser um objeto,
+jogador ou nada (o que significa você mesmo).
+
+Veja também: SPELLS
+#
+REMOVE
+
+Uso: remove <objeto>
+     remove tudo
+     remove tudo.<objeto>
+
+   Se você está cansado de usar alguma armadura, ou de empunhar devida arma.
+
+Exemplos:
+   > remove bota
+   > remove espada
+   > remove tudo
+   > remove tudo.bronze
+
+Veja também: GRAB, HOLD, WEAR, WIELD
+#
+SELL
+
+Uso: sell [#] <item>
+     sell <#>.<item>
+
+   Se você gostaria de vender um item para um lojista, pode tentar com esse
+comando.  A maioria das lojas são especializadas no que elas irão comprar,
+portanto você pode ser que você tenha que dar uma procurada por um comprador
+para um determinado item.
+
+Exemplos:
+   > sell espada       (vende a primeira espada de seu inventorio)
+   > sell 3 espada     (vende as três primeiras espadas de seu inventorio)
+
+Veja também: BUY, LIST, SHOPS, VALUE
+#
+USE VARINHA VARINHAS BASTAO BASTOES
+
+Uso: use <bastão>
+     use <vara> <alvo>
+
+   Usando um bastão (staff), irá automaticamente ter como alvo todos (ou
+tudo) que estão na sala, exceto você.  Portanto bastões são naturalmente
+muito poderosos, e ainda podem ser muito perigosos se usados perto de muitos
+jogadores.  Usando uma vara (wand), você precisa especificar o alvo, que
+pode ser um persongem ou objeto.
+
+   Ambos precisam estar sendo segurados para poderem ser usadas!  (Use o
+comando 'grab' ou 'hold').  Você deve também digitar o nome da vara ou
+bastão para evitar confusão.
+
+Veja também: RECITE
+#
+VALUE
+
+Uso: value <item>
+
+   Antes de vender um item em uma loja, você pode perguntar ao lojista
+quanto ele pagará pelo item.
+
+Exemplo:
+   > value pão
+
+Veja também: BUY, LIST, SELL, SHOPS
+#
+WEAR
+
+Uso: wear <objeto> [parte do corpo]
+
+   Se você deseja vestir alguma roupa, armadura ou algo do gênero.
+
+   Também para poder vestir tudo que está em seu inventorio (inventory),
+(ou pelo menos tentar, pois tentando vestir um pão não é uma boa forma de
+ganhar amigos) você pode digitar "wear tudo".
+
+   Como opção, você pode especificar qual parte do corpo irá vestir o
+equipamento.
+
+Exemplos:
+   > wear bota
+   > wear tudo.bronze
+   > wear tudo
+   > wear anel dedo
+
+Veja também: EQUIPMENT, REMOVE
+#
+WIELD
+
+Uso: wield <arma>
+
+   Quando você estiver cansado de lutar usando suas mãos, você pode
+considerar a opção de empunhar uma arma.
+
+Exemplos:
+   > wield espada
+   > wield 3.espada    (empunha a terceira espada de seu inventorio)
+
+Veja também: EQUIPMENT, REMOVE, WEAR
+#
+$

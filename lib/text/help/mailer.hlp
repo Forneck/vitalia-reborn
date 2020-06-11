@@ -1,0 +1,119 @@
+MAILER
+
+Uso: mailer
+
+   Inicia o Mailer, um módulo que permite um gerenciamento inteligente dos
+seus MudMails, com uma interface mais amigável.  O Mailer oferece mais
+recursos do que os comandos MAIL, RECEIVE e CHECK.  Não há a necessidade de
+se extrair as mensagens em cartas, e é possível manter as mensagens mesmo se
+você precisar sair do jogo.
+
+   Para obter ajuda para os comandos do Mailer, acesse-o e digite o comando
+HELP quando o prompt "Mailer>" aparecer, ou consulte a ajuda para "mailer
+menu".
+
+Veja também: MAIL, RECEIVE, CHECK
+#106
+"MAILER MENU"
+
+   O Mailer permite que você leia e envie mensagens através do sistema de
+MudMail do VitaliaMUD.  Os comandos disponíveis no Mailer são:
+
+   &gquit                   &n Encerra o Mailer e volta para o MUD.
+   &ghelp <comando>         &n Mostra a ajuda para determinado comando.
+   &glist                   &n Lista as mensagens guardadas.
+   &gread <num>             &n Mostra uma mensagem e marca como lida.
+   &gmail <nome> ...        &n Envia uma mensagem para alguém.
+   &greply <num>            &n Responde uma mensagem para seu remetente.
+   &gforward <num> <nome>   &n Encaminha uma mensagem para outra pessoa.
+   &gdelete <num>           &n Apaga uma mensagem.
+   &gclear                  &n Apaga TODAS as mensagens.
+   &gdigest                 &n Envia suas mensagens por e-mail para você.
+#106
+"MAILER QUIT"
+
+Uso: quit
+
+   Encerra o Mailer e retorna ao MUD.  Se ainda existir mensagens na lista,
+elas serão salvas e estarão disponíveis na próxima vez que você acessar o
+Mailer.
+#106
+"MAILER HELP"
+
+Uso: help <comando>
+
+   Quer mesmo que eu explique???
+#106
+"MAILER LIST"
+
+Uso: list
+
+   Lista as mensagens guardadas.
+#106
+"MAILER READ"
+
+Uso: read <mensagem>
+
+   Mostra a mensagem indicada.  Ela é marcada como lida, mas não é apagada.
+#106
+"MAILER MAIL"
+
+Uso: mail <nome> [...]
+
+   Envia uma mensagem para alguém.  É possível mandar a mesma mensagem para
+mais de um jogador de uma única vez.  Você pode fornecer até 12 nomes de
+jogadores para o comando.
+
+   O Mailer irá perguntar o assunto da mensagem (que é opicional), e em
+seguida, a própria mensagem.
+
+Veja também: REPLY, FORWARD
+#106
+"MAILER REPLY"
+
+Uso: reply <mensagem>
+
+   Envia uma resposta para o remetente da mensagem indicada.  O efeito é o
+mesmo de enviar uma mensagem nova, porém, o Mailer facilita a tarefa,
+completando automaticamente o assunto da mensagem, e copiando o texto da
+mensagem original no início da mensagem da resposta, para que sirva como
+referência para o destinatário.
+
+Veja também: MAIL, FORWARD
+#106
+"MAILER FORWARD"
+
+Uso: forward <mensagem> <nome>
+
+   Encaminha a mensagem indicada para outro jogador.  O efeito é o mesmo de
+enviar uma mensagem nova, porém, o Mailer facilita a tarefa, completando
+automaticamente o assunto da mensagem, e copiando o texto da mensagem
+original no início da mensagem de encaminhamento, e abre o editor para que
+você possa colocar alguma anotação adicional na mensagem.
+
+Veja também: MAIL, REPLY
+#106
+"MAILER DELETE"
+
+Uso: delete <mensagem>
+
+   Apaga a mensagem indicada.
+
+Veja também: CLEAR
+#106
+"MAILER CLEAR"
+
+Uso: clear
+
+   Após ler (e responder) todas as mensagens do Mailer, você pode apagar
+todas elas de uma só vez com esse comando.
+#106
+"MAILER DIGEST"
+
+Uso: digest
+
+   Esse comando compõe e envia uma mensagem de e-mail para você, contendo
+todas as mensagens que estiverem na lista de mensagens do Mailer.  O e-mail
+é enviado para o endereço que estiver cadastrado no seu personagem.
+#106
+$

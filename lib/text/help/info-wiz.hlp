@@ -1,0 +1,76 @@
+PRF-FLAGS
+
+   Estas são as flags de preferências (PRF-flags) disponíveis no Mundo de
+Vitália:
+
+   BRIEF
+   Modo breve, suprime o envio das descrições das salas quando o personagem
+se move de uma sala para outra.  Veja o comando BRIEF.
+
+   COMPACT
+   Modo compacto, suprime linhas em branco.  Veja o comando COMPACT.
+
+   APPEAR
+   Deuses apenas.  Indica que o Deus está visível para as pessoas ocupando a
+mesma sala, apesar de continuar invisível para as pessoas em outras salas.
+Veja o comando APPEAR.
+
+   PT
+   Comandos em português.  Veja o comando LANG.
+
+   D_HP, D_MANA, D_MOVE
+   Pontos de saúde, magia e movimento são visíveis no prompt.  Veja o
+comando DISPLAY.
+
+   AUTOEX
+   AutoExits, as saídas da sala são mostradas após sua descrição.  Veja o
+comando AUTOEXITS.
+
+   NOHASS
+   Imortais apenas.  Impede que monstros agressivos o ataquem.  Veja o
+comando NOHASSLE.
+
+   QUEST
+   Participante da QUEST atual. Veja os comandos QUEST e QCONTROL.
+
+   SUMN
+   Convocável, permite que o personagem seja convocado por outros jogadores,
+usando a magia summon.  Veja o comando NOSUMMON e a magia SUMMON.
+
+   NOREP
+   Não repetir, mostra apenas "Pronto." ao usar comandos de comunicação, ao
+invés de ver suas próprias mensagens sendo repetidas.
+
+   LIGHT
+   Imortais apenas.  Luz sagrada, permite que o personagem enxergue mesmo na
+ausência de luz.  Veja o comando HOLYLIGHT.
+
+   C1, C2
+   Cores.  O jogo envia códigos de cores para o terminal do jogador.  Veja o
+comando COLOR.
+
+   NOUSRCLR
+   O jogo filtra as cores enviadas por outros jogadores, mantendo as cores
+originais do jogo.  Veja o comando STRIPCLR.
+
+   A_TITLE
+   Auto título, permite que o jogo altere o título do personagem à cada novo
+nível que for atingido.  Veja o comando AUTOTITLE.
+
+   PWR
+   Deuses apenas.  Poder sagrado, habilita poderes divinos, de acordo com o
+nível do Deus.  Veja o comando HOLYPOWER.
+
+   RMFLG
+   Mostra o número e as flags da sala junto de seu título.  Veja o comando
+ROOMFLAGS.
+
+   HITBAR
+   Barra de acerto, mostra uma pequena barra durante a luta, informando a
+saúde média do oponente.  Veja o comando HITBAR.
+
+   ASCII
+   Modo ASCII, evita que o jogo envie caracteres especiais, que podem não
+ser visíveis em todos os terminais.  Veja o comando ASCII.
+#107
+$

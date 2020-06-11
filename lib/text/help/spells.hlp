@@ -1,0 +1,1204 @@
+MAGIAS
+
+   Magias podem ser usadas apenas por clérigos, magos, druidas e bardos.
+Para se lançar uma magia, é necessário ter pontos de magia (mana)
+suficientes.  A cada nível, mais magias podem ser aprendidas.  A cada magia
+que você aprende, é necessário que você a pratique antes de poder
+utilizá-la.
+
+   Os seguintes comandos estão relacionados com o uso de magias:
+Para obter ajuda para um comando, digite HELP (comando).
+
+   &gCAST                 &nLançar magias sobre alguém ou algo.
+   &gNOSUMMON             &nPermitir a convocação pela magia summon.
+   &gORDER                &nOrdenar alguém encantado a fazer algo.
+   &gPRACTICE             &nPara mostrar suas magias e praticá-las.
+   &gSPELL                &nMostrar todas as magias que você pode vir a ter.
+   &gVISIBLE              &nPara cancelar o efeito da magia 'invisibility'.
+
+   As seguintes magias estão documentadas no VitaliaMUD:
+Para obter ajuda para uma magia, digite HELP MAGIA (nome da magia).
+
+   &WMagias de cura&n                        &WMagias de protecao&n
+   [ -  Cle  -   - ] AID                 [Mag Cle  -   - ] ARMOR
+   [ -  Cle  -   - ] CURE BLIND          [Mag Cle  -   - ] IMPROVED ARMOR
+   [ -  Cle  -   - ] CURE CRITIC         [ -  Cle  -   - ] PROTECTION FROM EVIL
+   [ -  Cle  -   - ] CURE LIGHT          [ -  Cle  -   - ] SANCTUARY
+   [ -  Cle  -   - ] HEAL                [Mag Cle  -   - ] STONESKIN
+   [ -  Cle Dru  - ] REMOVE POISON       [ -   -  Dru  - ] SKIN LIKE WOOD
+   [ -   -  Dru  - ] INVIGOR             [ -   -  Dru  - ] SKIN LIKE ROCK
+   [ -   -  Dru  - ] MINOR HEALING       [ -   -  Dru  - ] SKIN LIKE STEEL
+   [ -   -  Dru  - ] REGENERATION        [ -   -  Dru  - ] SKIN LIKE DIAMOND
+   [ -   -  Dru  - ] SKIN LIKE ROCK      [ -   -   -  Brd] SOUNDBARRIER
+   [ -   -  Dru  - ] SKIN LIKE STEEL
+
+   &WMagias de ataque&n                      &WMagias de afetamento&n
+   [Mag  -   -  Brd] MAGIC MISSILE       [ -  Cle  -   - ] BLESS
+   [Mag  -   -   - ] CHILL TOUCH         [Mag Cle  -   - ] BLINDNESS
+   [Mag  -   -   - ] BURNING HANDS       [Mag Cle Dru  - ] BREATH
+   [Mag  -   -   - ] SHOCKING GRASP      [Mag  -   -   - ] ENCHANT WEAPON
+   [Mag  -   -   - ] LIGHTNING BOLT      [Mag Cle Dru  - ] FLY
+   [Mag  -   -   - ] VAMPIRIC TOUCH      [Mag  -   -   - ] INVISIBILITY
+   [Mag  -   -   - ] COLOR SPRAY         [Mag Cle  -   - ] PARALYSE
+   [Mag  -   -   - ] ENERGY DRAIN        [Mag  -   -   - ] SLEEP
+   [Mag  -   -   - ] CURSE               [Mag  -   -   - ] STRENGTH
+   [Mag  -   -   - ] FIREBALL            [Mag Cle Dru  - ] WATERWALK
+   [Mag  -   -   - ] FIRESHIELD
+   [Mag  -   -   - ] DISINTEGRATE            &WMagias sobrenaturais&n
+   [Mag Cle  -   - ] POISON              [ -  Cle  -   - ] RAISE DEAD
+   [ -  Cle Dru  - ] EARTHQUAKE          [ -  Cle  -   - ] RESSURECT
+   [ -  Cle  -   - ] DISPEL EVIL         [ -  Cle  -   - ] TALK WITH DEAD
+   [ -  Cle  -   - ] DISPEL GOOD
+   [ -  Cle  -   - ] CALL LIGHTNING          &WMagias de grupo&n
+   [ -  Cle  -   - ] HARM                [ -  Cle  -   - ] GROUP HEAL
+   [ -   -  Dru  - ] BURST OF FLAME      [ -  Cle  -   - ] GROUP ARMOR
+   [ -   -  Dru  - ] BURST OF FIRE       [ -   -   -   - ] GROUP RECALL
+   [ -   -  Dru  - ] IGNITE
+   [ -   -  Dru  - ] CASCADE OF HAIL         &WMagias de enfeiticamento&n
+   [ -   -  Dru  - ] FURY OF AIR         [Mag Cle Dru  - ] CHARM PERSON
+   [ -   -  Dru  - ] LIGHTNING BLAST     [ -   -   -   - ] VENTRILOQUATE
+   [ -   -  Dru  - ] THISTLECOAT         [ -   -  Dru  - ] STINGING SWARM
+   [ -   -  Dru  - ] STINGING SWARM
+   [ -   -   -  Brd] VOICE EXPLOSION
+
+   &WMagias de criacao&n                     &WMagias de invocação&n
+   [ -  Cle  -   - ] CREATE FOOD         [ -   -   -   - ] ANIMATE DEAD
+   [ -  Cle  -   - ] CREATE WATER        [ -   -   -   - ] CLONE
+   [Mag  -   -   - ] PORTAL              [ -   -  Dru  - ] EVOKE CROW
+                                         [ -   -  Dru  - ] EVOKE WOLF
+   &WMagias de transporte&n                  [ -   -  Dru  - ] EVOKE BEAR
+   [ -   -   -   - ] TELEPORT            [ -   -  Dru  - ] EVOKE LION
+   [Mag Cle Dru  - ] WORD OF RECALL
+   [Mag Cle  -   - ] SUMMON
+
+   &WMagias de sensibilidade&n               &WMagias de controle da natureza&n
+   [ -  Cle  -   - ] DETECT ALIGN        [ -  Cle Dru  - ] CONTROL WEATHER
+   [Mag Cle  -   - ] DETECT INVIS        [ -   -  Dru  - ] DANCE OF FIREFLIES
+   [Mag  -   -   - ] DETECT MAGIC        [ -   -  Dru  - ] STINGING SWARM
+   [Mag Cle  -   - ] DETECT POISON
+   [Mag  -   -   - ] IDENTIFY
+   [Mag Cle  -   - ] INFRAVISION
+   [Mag Cle Dru  - ] SENSE LIFE
+   [ -  Cle  -   - ] TALK WITH DEAD
+
+   Note que, para as magias de proteção, afetamento e sensibilidade, há um
+limite de duração de 24 horas-mud para cada lançamento, e 168 horas-mud no
+total da duração.
+#
+CAST
+
+Uso: cast '<nome da magia>' [alvo]
+
+   Somente para magos, clérigos, druidas e bardos.  Este comando serve para
+lançar magias.  O nome da magia deve estar entre aspas.  Caso as aspas não
+sejam usadas, o primeiro nome depois do comando cast será considerado como
+sendo o nome da magia, e todo o resto como alvo.
+
+   Note que, para as magias de proteção, afetamento e sensibilidade, há um
+limite de duração de 24 horas-mud para cada lançamento, e 168 horas-mud no
+total da duração.
+
+Exemplos:
+  > cast 'burning hands' gnomo
+  > cast armor
+
+Veja também a ajuda para cada magia, por exemplo:
+  > help magia cure light
+  > help magia burning hands
+  > help magia energy drain
+#
+NOSUMMON
+
+Uso: nosummon
+
+   Devido a problemas que tivemos de jogadores que mataram outros jogadores
+pelo lançamento de "summon", agora todos os jogadores tem já de início a
+proteção de NOSUMMON ligada.  Isso evita que jogadores sejam afetados pelo
+"summon" e lhe mostra uma mensagem de aviso se alguém tenter lhe lançar
+esta magia.  Se você quer ser convocado pelo "summon" de algum jogador
+(i.e. se alguém quer lhe convocar por um motivo legítimo), digite NOSUMMON
+para desligar a proteção do "summon".  Você depois pode digitar NOSUMMON
+para voltar a ter tal proteção.
+
+Veja também: SUMMON, TOGGLE
+#
+VISIBLE
+
+Uso: visible
+
+   Use este comando para ficar visível enquanto você ainda estiver sob o
+efeito da magia 'invisibility', antes que a duração da magia acabe.
+
+Veja também: INVISIBILITY
+#
+"MAGIA ARMOR"
+
+Uso        : cast 'armor' <alvo>
+Acumulativa: Não
+Duração    : 24 Horas
+Nível      : Mago Nível 3, Clérigo Nível 1.
+
+A magia armor melhora o AC do alvo em 20.
+
+Veja Também: "AC"
+#
+"MAGIA BLESS"
+
+Uso        : cast 'bless' <alvo | arma>
+Acumulativa: Sim (duração)
+Duração    : 6 Horas, permanente para armas
+Nível      : Clérigo Nível 6
+
+Quem receber a magia Bless terá seus testes de resistência melhorados em 1
+e seu hitroll melhorado em 2.  A cada 30 níveis de quem lançar a magia, um
+ponto adicional será aplicado.
+
+Bless em armas aumenta permanentemente o hitroll em 2. Ela é apenas
+possível em armas que sejam !EVIL, e a arma não poderá pesar
+mais que 5 libras por nível do clérigo.
+#
+"MAGIA BLINDNESS"
+
+Uso        : cast 'blindness' <alvo>
+Acumulativa: Não
+Duração    : 2 Horas
+Nível      : Mago Nível 14, Clérigo Nível 8
+
+Blindness deixa o alvo cego caso ele falhe em um teste de resistência.
+Um alvo cego tera uma penalidade de -4 no Hitroll e AC.
+
+Veja Também: "AC"
+#
+"MAGIA BURNING HANDS"
+
+Uso        : cast 'burning hands' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Mago Nível 6
+Resistência: Contra magia para metade do dano
+
+Com essa magia o mago cria chamas em suas mãos, lançando-as no inimigo.
+Ela e mais poderosa que chill touch.
+
+Veja Também: "CHILL TOUCH"
+#
+"MAGIA CALL LIGHTNING"
+
+Uso        : cast 'call lightning' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Clérigo Nível 22
+Resistência: Contra magia para metade do dano
+
+Essa magia usara a força da natureza para atingir o alvo. Somente
+é possível usar essa magia em ambientes externos, e com tempo
+chuvoso ou pior.
+
+Veja Também: "CONTROL WEATHER", "WEATHER"
+#
+"MAGIA CHARM PERSON"
+
+Uso        : cast 'charm person' <alvo>
+Acumulativa: Não
+Duração    : (432/Inteligência do alvo) Horas
+Nível      : Mago Nível 25, Clérigo Nível 28, Druida Nível 24
+
+Não é possivel encantar alguém que já esteja encantado, e também
+encantar a si mesmo ou alguém de nível mais alto que o seu.
+O alvo fará um teste contra paralisar, e se não passar fica
+encantado, obedecendo todas as ordens de quem o encantou.
+
+Um alvo encantado seguirá você e não poderá te atacar. Você
+pode comandar um alvo encantado através do comando order.
+
+Se o seu alvo for outro jogador e este estiver com a proteção de
+summon (nosummon) ativada, não será possível encantá-lo.
+
+Veja Também: "FOLLOW", "ORDER", "NOSUMMON"
+#
+"MAGIA CHILL TOUCH"
+
+Uso        : cast 'chill touch' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Mago Nível 3
+Resistência: Contra magia para metade do dano
+
+Esta magia é mais poderosa que magic missile.
+O alvo que não passar em um teste de resistência
+perderá um ponto de força.
+
+Veja Também: "MAGIC MISSILE"
+#
+"MAGIA COLOR SPRAY"
+
+Uso        : cast 'color spray' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Mago Nível 17
+Resistência: Contra magia para metade do dano
+
+Esta magia é mais poderosa que lightning bolt.
+
+Veja Também: "LIGHTNING BOLT"
+#
+"MAGIA CONTROL WEATHER"
+
+Uso        : cast 'control weather' <'better' | 'worse'>
+Acumulativa: Sim
+Duração    : -
+Nível      : Clérigo Nível 26, Druida Nível 55
+
+Esta magia muda as condiçoes climáticas atuais.
+
+Exemplo:
+
+  > cast 'control weather' worse
+#
+"MAGIA CREATE FOOD"
+
+Uso        : cast 'create food'
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Clérigo Nível 2, Druida Nível 7
+
+Com essa magia um clérigo cria, instantaneamente, um pão de viagem,
+enquanto um druida cria morangos silvestres.
+
+Veja Também: "MAGIA CREATE WATER", "MAGIA CREATE NECTAR"
+#
+"MAGIA CREATE WATER"
+
+Uso        : cast 'create water' <recipiente>
+Acumulativa: Não
+Duração    : Instantânea
+Nível      : Clérigo Nível 3
+
+Você terá resultados desastrosos se usar essa magia
+em um recipiente que ja tenha outro líquido.
+Recipientes vazios ou parcialmente cheios de água
+serão preenchidos normalmente.
+
+O dobro de água será criado se o clima estiver chuvoso (ou pior).
+
+Veja Também: "MAGIA CREATE FOOD", "MAGIA CREATE NECTAR"
+#
+"MAGIA CURE BLIND"
+
+Uso        : cast 'cure blind' <alvo>
+Acumulativa: Não
+Duração    : Instantânea
+Nível      : Clérigo Nível 5
+
+Essa magia cura quem estiver sendo afetado pela magia "blindness",
+mas não pode remover cegueira causada por itens amaldiçoados.
+#
+"MAGIA CURE CRITIC"
+
+Uso        : cast 'cure critic' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Clérigo Nível 14
+
+Essa magia cura 3d8+3 pontos de vida.
+#
+"MAGIA CURE LIGHT"
+
+Uso        : cast 'cure light' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Clérigo Nível 1
+
+Cura ferimentos leves.
+#
+"MAGIA CURSE"
+
+Uso        : cast 'curse' <alvo | objeto>
+Acumulativa: Sim
+Duração    : (Nível / 10) horas, permanente em objetos
+Nível      : Mago Nível 20
+
+Em personagens, quando lançada com sucesso, essa magia reduzirá o hitroll e
+o damroll do alvo em um ponto cada 50 níveis de quem lançou.
+
+Quando lançada em objetos, este não poderá mais ser removido.
+
+Veja também: "MAGIA REMOVE CURSE"
+#
+"MAGIA DETECT ALIGNMENT"
+
+Uso        : cast 'detect alignment'
+Acumulativa: Sim (Duração)
+Duração    : 12 Horas + Nível
+Nível      : Clérigo Nível 4
+
+Permite que se veja o alinhamento de todos que estão a sua volta.
+Os maus (evil) terão uma aura vermelha e os bons (good) uma aura azul.
+
+Veja Também: "DETECT INVISIBILITY"
+#
+"MAGIA DETECT INVISIBILITY"
+
+Uso        : cast 'detect invisibility' [somente em si mesmo]
+Acumulativa: Sim (Duração)
+Duração    : 12 Horas + Nível/4
+Nível      : Mago Nível 2, Clérigo Nível 8
+
+Esta magia habilita você a enxergar pessoas e objetos invisíveis.
+#
+"MAGIA DETECT MAGIC"
+
+Uso        : cast 'detect magic' [somente em si mesmo]
+Acumulativa: Sim (Duração)
+Duração    : 12 Horas + Nível
+Nível      : Mago Nível 2
+
+Essa magia permite que você veja as auras de objetos mágicos.
+#
+"MAGIA DETECT POISON"
+
+Uso        : cast 'detect poison' <alvo | comida | bebida>
+Acumulativa: Não
+Duração    : Instantânea
+Nível      : Mago Nível 16, Clérigo Nível 4, Druida Nível 4
+
+Permite a você ver se uma pessoa, alimento ou bebida estão envenenados.
+#
+"MAGIA DISPEL EVIL"
+
+Uso        : cast 'dispel evil' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Clérigo Nível 20
+Resistência: Especial
+
+Essa magia afeta apenas criaturas más (evil). Quem receber a magia
+sofrerá 100 pontos de dano, caso tenha o alinhamento correspondente.
+
+Se o alvo tiver nível maior que o seu, a magia causara
+(seu nível)d4 de dano, com teste de resistência p/ metade do dano.
+
+Veja Também: "DISPEL GOOD"
+#
+"MAGIA DISPEL GOOD"
+
+Uso        : cast 'dispel good' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Clérigo Nível 20
+Resistência: Especial
+
+Essa magia afeta apenas criaturas boas (good). Quem receber
+a magia sofrerá 100 pontos de dano, caso tenha o alinhamento
+correspondente.
+
+Se o alvo tiver nível maior que o seu, a magia causara
+(seu nível)d4 de dano, com teste de resistência p/ metade do dano.
+
+Veja Também: "DISPEL EVIL"
+#
+"MAGIA EARTHQUAKE"
+
+Uso        : cast 'earthquake'
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Clérigo Nível 18, Druida Nível 70
+Resistência: -
+
+Essa magia causa dano em todos que estiverem na sala menos
+em quem a lançou, causando 1d8+(nível) de dano.
+#
+"MAGIA ENCHANT WEAPON"
+
+Uso        : cast 'enchant weapon' <arma>
+Acumulativa: Não
+Duração    : Permanente
+Nível      : Mago Nível 34
+
+Essa magia encanta apenas armas não-mágicas. Para saber se uma arma
+é mágica ou não, identifique-a. Se estiver escrito a palavra MAGIC,
+a arma é mágica e não poderá ser encantada.
+
+O encantamento irá afetar a arma da seguinte forma:
+
+    Nível    HitRoll   DamRoll  Nível Mínimo
+
+     0..35     +1        +1         0
+    36..37     +2        +1         5
+    38..40     +2        +2        10
+    41..44     +3        +2        10
+    45..49     +3        +3        15
+    50..54     +4        +3        20
+    55..59     +4        +4        30
+    60..64     +5        +4        40
+    65+        +5        +5        50
+#
+"MAGIA ENERGY DRAIN"
+
+Uso        : cast 'energy drain' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Mago Nível 18
+Resistência: Contra magia para metade do dano
+
+Essa magia não causa muito dano, mas uma falha no teste
+de resistência fará a vítima perder mais de 40,000 pontos de XP.
+Você ganhará 1/4 desse XP.
+
+Fique atento pois essa magia diminui consideravelmente seu alinhamento.
+#
+"MAGIA FIREBALL"
+
+Uso        : cast 'fireball' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Mago Nível 22
+Resistência: Contra magia para metade do dano
+
+Essa magia é mais poderosa que color spray. Com ela o mago cria
+uma bola de fogo, causando bons estragos no inimigo.
+
+Veja Também: "COLOR SPRAY"
+#
+"MAGIA HARM"
+
+Uso        : cast 'harm' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Clérigo Nível 28
+Resistência: Contra magia para metade do dano
+
+Essa magia retira todos menos 1d4 pontos de vida do alvo.
+O número máximo que pode ser retirado é 100.  Não é possível
+matar usando essa magia.
+#
+"MAGIA HEAL"
+
+Uso        : cast 'heal' <alvo>
+Acumulativa: Não
+Duração    : Instantânea
+Nível      : Clérigo Nível 24
+
+Essa magia cura todos os pontos de vida do alvo, menos 1d4. No
+máximo 100 pontos de vida podem ser recuperados. Uma pessoa afetada
+por blindness também terá essa magia removida.
+
+Veja Também: "CURE BLINDNESS"
+#
+"MAGIA INFRAVISION"
+
+Uso        : cast 'infravision' [somente em si mesmo]
+Acumulativa: Sim (Duração)
+Duração    : 12 Horas + Nível
+Nível      : Mago Nível 4, Clérigo Nível 10
+
+Habilita ao jogador enxergar no escuro, e ver claramente todas as saídas.
+
+Veja Também: "DETECT INVISIBILITY", "DANCE OF FIREFLIES"
+#
+"MAGIA INVISIBILITY"
+
+Uso        : cast 'invisibility' <jogador | objeto>
+Acumulativa: Sim (Duração)
+Duração    : 24 Horas, permanente em objetos
+Nível      : Mago Nível 5
+
+Habilita o jogador ou objeto em que foi lancado ficar invisível,
+exceto para aqueles que tem "detect invisibility".
+
+Se você atacar ou for atacado invisível, voltará imediatamente a ser visível.
+
+Veja Também: "DETECT INVISIBILITY"
+#
+"MAGIA LIGHTNING BOLT"
+
+Uso        : cast 'lightning bolt' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Mago Nível 12
+Resistência: Contra magia para metade do dano
+
+Essa magia é mais poderosa que shocking grasp.
+
+Veja Também: "SHOCKING GRASP"
+#
+"MAGIA LOCATE OBJECT"
+
+Uso        : cast 'locate object' <objeto>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Mago Nível 9
+
+Se possível você saberá a localização exata do objeto, ou o
+nome de quem está usando.  Se existir mais de um objeto com
+o mesmo nome, você receberá uma lista com vários.
+O número máximo que você poderá visualizar é o seu nível
+dividido por dois.
+#
+"MAGIA MAGIC MISSILE"
+
+Uso        : cast 'magic missile' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Mago Nível 1, Bardo Nível 2
+Resistência: Contra magia para metade do dano
+
+   Lança um míssil magico das suas mãos para o alvo que você escolheu.
+#
+"MAGIA POISON"
+
+Uso        : cast 'poison' <alvo | comida | bebida>
+Acumulativa: Sim em jogadores ou monstros
+Duração    : Nível em Horas, e permanente em comida e bebida
+Nível      : Clérigo Nível 12, Mago Nível 20
+
+   Lançando em comida ou bebida, essa se tornará envenenada.  Comendo ou
+bebendo coisas envenenadas fará com que você se envenene também.
+
+   Quem for envenenado sofrerá dano por hora, perderá força e ganhará menos
+pontos de vida.
+
+Veja Também: "REMOVE POISON", "DETECT POISON"
+#
+"MAGIA PORTAL"
+Uso        : cast 'portal' <alvo>
+Acumulativa: -
+Duração    : nível/20
+Nível      : Mago Nível 90
+
+   Com essa magia o mago cria um portal dimensional, que o levará para o
+destino que ele definiu quando lançou a magia (o destino pode ser um mob ou
+um jogador).  Depois de criado, o portal poderá ser usado por qualquer um
+que estiver na mesma sala que ele, bastando para isso digitar "enter
+portal".
+
+   Há uma chance da magia falhar, criando um portal para um destino
+diferente do fornecido, ou ao entrar no portal, de você ser enviado a uma
+sala diferente do destino do portal.
+
+   OBS: Apenas jogadores com no máximo 5 níveis de diferença abaixo do nível
+do mago que lançou a magia poderão utilizar o portal.  Jogadores com nível
+igual ou superior ao do mago também poderão utilizar o portal.
+#
+"MAGIA PROTECTION FROM EVIL"
+
+Uso        : cast 'protection from evil' [somente em você mesmo]
+Acumulativa: Sim (Duração)
+Duração    : 24 Horas
+Nível      : Clérigo Nível 11
+
+   O personagem que for protegido por essa magia, quando estiver recebendo
+dano de um oponente malígno, sofrerá apenas 75% do dano real.
+#
+"MAGIA REMOVE CURSE"
+
+Uso        : cast 'remove curse' <alvo | objeto>
+Acumulativa: Não
+Duração    : Instantânea
+Nível      : Clérigo Nível 34
+
+   Remove maldições em qualquer alvo ou objeto.
+#
+"MAGIA REMOVE POISON"
+
+Uso        : cast 'remove poison' <alvo | comida | bebida>
+Acumulativa: Não
+Duração    : Instantânea
+Nível      : Clérigo Nível 18, Druida Nível 4
+
+Removerá o veneno de uma pessoa ou um objeto.
+
+Veja Também: "POISON"
+#
+"MAGIA SANCTUARY"
+
+Uso        : cast 'sanctuary' <alvo>
+Acumulativa: Sim (Duração)
+Duração    : 4 Horas
+Nível      : Clérigo Nível 21
+
+Quando protegido pelo santuário você sofrerá apenas metade
+do dano que sofreria normalmente.
+
+Veja Também: "ARMOR", "BLESS"
+#
+"MAGIA SHOCKING GRASP"
+
+Uso        : cast 'shocking grasp' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Mago Nível 10
+Resistência: Contra magia para metade do dano
+
+Essa magia é mais poderosa que burning hands.
+
+Veja Também: "BURNING HANDS"
+#
+"MAGIA SENSE LIFE"
+
+Uso        : cast 'sense life'
+Acumulativa: Sim (Duração)
+Duração    : Nível em Horas
+Nível      : Clérigo Nível 15, Mago Nível 28, Druida Nível 29
+
+Com essa magia você poderá ver pessoas/monstros usando hide.
+
+Veja Também: "HIDE"
+#
+"MAGIA STRENGTH"
+
+Uso        : cast 'strength' <alvo>
+Acumulativa: Sim
+Duração    : Nível/2 + 4
+Nível      : Mago Nível 8
+
+O alvo ganha 1 ponto de força a cada magia (2 pontos se o nível
+do mago for maior que 50). A força máxima que pode ser obtida é 18/100.
+#
+"MAGIA SUMMON"
+
+Uso        : cast 'summon' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Mago Nível 11, Clérigo Nível 15
+
+Irá transportar o alvo para onde você está.  Não é possível
+transferir uma pessoa com três níveis acima do seu ou que
+esteja com a proteção ligada (nosummon). Se voce tentar
+transferir um monstro, ele fará um teste de resistência.
+Alguns monstros são agressivos e não podem ser transportados.
+
+Veja Também: "NOSUMMON"
+#
+"MAGIA VENTRILOQUATE"
+
+Uso        : cast 'ventriloquate' <alvo | objeto> <texto>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : -
+Resistência: Contra magia. Sucesso a magia falha
+
+Para todas as pessoas na sala que falhem em um teste de resistência,
+a magia fará a pessoa a dizer o que você quiser.
+
+Exemplo:
+
+  > cast 'ventriloquate' Riker Eu ganhei as Mesnadas de hoje, uhu!
+#
+"MAGIA WORD OF RECALL"
+
+Uso        : cast 'word of recall' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Clérigo Nível 18, Mago Nível 65, Druida Nível 37
+
+O alvo será enviado de volta para a cidade natal do jogador.
+#
+"MAGIA TALK WITH DEAD"
+
+Uso        : cast 'talk with dead'
+Acumulativa: Sim (Duração)
+Duração    : Nível em Horas
+Nível      : Clérigo Nível 10
+
+Habilita ao jogador falar e ver jogadores mortos. Se você for usar
+RESSURECT em alguém, terá que usar primeiro TALK WITH DEAD, para poder
+ver o jogador morto.
+
+Veja Também: "RAISE DEAD", "RESSURRECT"
+#
+"MAGIA TELEPORT"
+
+Uso        : cast 'teleport' <vítima>
+Acumulativa: -
+Duração    : -
+Nível      : -
+
+   Transporta a vítima da magia para uma sala qualquer do jogo.  Não há como
+definir qual será o destino.
+#
+"MAGIA RAISE DEAD"
+
+Uso        : cast 'raise dead' <corpo>
+Acumulativa: -
+Duração    : -
+Nível      : Clérigo Nível 16
+
+Essa magia só funciona em corpos de jogadores mortos. Se o jogador
+estiver conectado no momento, a magia trará automaticamente sua alma
+devolta ao corpo, revivendo-o. O jogador revivido precisa fazer um
+teste de resistência contra colapso para ver se ele não perde
+Constituicao, pois ser revivido pode ser perigoso para a saude.
+Se o jogador possuir 3 pontos ou menos de constituição, ele não
+poderá ser revivido.
+
+Veja Também: "RESSURRECT", "TALK WITH DEAD"
+#
+"MAGIA PARALYSE"
+
+Uso        : cast 'paralyse' <alvo>
+Acumulativa: -
+Duração    : 2 horas
+Nível      : Clérigo Nível 26, Mago Nível 22
+
+Faz com que o alvo afetado não possa se mover durante a duração da magia.
+
+Note que essa magia não paralisa totalmente o alvo, apenas
+faz com que ele não consiga andar. Ainda é possivel que ele
+faca outras coisas, como lutar.
+#
+"MAGIA RESSURECT"
+
+Uso        : cast 'ressurect' <alvo | corpo>
+Acumulativa: -
+Duração    : -
+Nível      : Clérigo Nível 32
+
+Traz um jogador morto devolta à vida. Este modo de ressucitar
+é seguro, pois o jogador não precisa fazer um teste de colapso.
+A magia pode ser lançada sobre o corpo do jogador morto para
+o trazer devolta, ou no espírito.
+
+Caso a magia for lançada no espírito, não é necessário estar no
+mesmo lugar que o espírito estar. O corpo será recriado na
+mesma sala que você estiver, e o espírito será transferido para
+o novo corpo.
+
+Veja Também: "RAISE DEAD", "TALK WITH DEAD"
+#
+"MAGIA STONESKIN"
+
+Uso        : cast 'stoneskin' <alvo>
+Acumulativa: Sim
+Duração    : 1 hora/ponto - 1 ponto/10 Niveis
+Nível      : Mago Nível 34, Clérigo Nível 90
+
+O jogador protegido ganhará 1 ponto de pedra a cada 4 níveis de quem
+lançou a magia, toda vez que ela é utilizada. A cada hora você perde
+1 ponto. Toda vez que um jogador protegido é acertado durante uma
+batalha, ele perde 1 ponto de pedra, mas não leva dano algum. Quando
+os pontos acabam, o jogador volta a sofrer dano normalmente.
+
+Só se pode acumular um máximo de 168 pontos de stoneskin.
+#
+"MAGIA IDENTIFY"
+
+Uso        : cast 'identify' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Mago Nível 10, Bardo Nível 20
+
+Dá ao jogador várias informações sobre um item ou jogador.
+
+Veja Também: "MAGIA ENCHANT WEAPON" "MAGIA DETECT MAGIC"
+             "MAGIA DETECT INVISIBILITY"
+#
+"MAGIA SLEEP"
+
+Uso        : cast 'sleep' <alvo>
+Acumulativa: Sim (Duração)
+Duração    : 4 horas + Nível/4
+Nível      : Mago Nível 12
+
+A magia sleep coloca o alvo em um sono mágico, do qual ele não poderá
+acordar por meios normais. Se ele for atingido ou o efeito da magia
+acabar, o alvo acorda.
+
+Veja também: "WAKE"
+#
+"MAGIA VAMPIRIC TOUCH"
+
+Uso        : cast 'vampiric touch' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Mago Nível 15
+
+O mago irá drenar pontos de vida do alvo (HP). O dano é de 1d6 para cada
+dois níveis acima de 10, para um máximo de 6d6.
+#
+"MAGIA FIRESHIELD"
+
+Uso        : cast 'fireshield' <alvo>
+Acumulativa: Duração
+Duração    : Nível em Horas
+Nível      : Mago Nível 31
+
+Se você estiver usando fireshield, todo o dano que seu oponente
+causar em você, também será causado nele. Se ele passar em um teste
+de resistência, sofre metade do dano. O seu AC também melhora
+em 5 pontos. Se dois oponentes se enfrentarem com fireshield,
+o dano é anulado para ambas as partes.
+
+Veja também: "THISTLECOAT"
+#
+"MAGIA DISINTEGRATE"
+
+Uso        : cast 'disintegrate' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Mago Nível 85
+
+Esta é a magia mais poderosa que um mago pode usar. Se o alvo possuir
+menos que 100 pontos de vida e falhar em um teste de resistência,
+será desintegrado, perdendo todos os bens que carregava ou vestia.
+Se o alvo possuir mais que 100, um maximo de 100 pontos de vida serão
+desintegrados para cada vez que a magia for lançada. Se o alvo passar
+em um teste de resistência, a vítima perde apenas metade do seu total
+de pontos de vida, para um máximo de 100.
+#
+"MAGIA FLY"
+
+Uso        : cast 'fly' <alvo>
+Acumulativa: Sim (Duração)
+Duração    : Nível / 4 em Horas
+Nível      : Mago Nível 18, Clérigo Nível 65, Druida Nível 75
+
+O alvo afetado por esta magia ganha a habilidade de voar, como também
+um bonus de +1 em sua destreza, enquanto durar a magia.
+
+Veja Também : "FLY", "NOFLY"
+#
+"MAGIA WATERWALK"
+
+Uso        : cast 'waterwalk' <alvo>
+Acumulativa: Sim (Duração)
+Duração    : 24 Horas
+Nível      : Mago Nível 70, Clérigo Nível 40, Druida Nível 43
+
+Com essa magia você poderá mover-se livremente na agua, não necessitando
+de nada como canoas, botes, etc.
+#
+"MAGIA AID"
+
+Uso        : cast 'aid' <alvo>
+Acumulativa: Não
+Duração    : Nível/5
+Nível      : Clérigo Nível 45
+
+Essa poderosa magia alem de curar, aumenta temporariamente seus pontos
+de vida. Ela cura 50% mais que a magia heal, além de adicionar ao HP do
+alvo 1/6 do total de HP que ele possui, temporariamente.
+#
+"MAGIA BREATH"
+
+Uso        : cast 'breath' <alvo>
+Acumulativa: Sim (Duração)
+Duração    : 2 Horas
+Nível      : Mago Nível 7, Clérigo Nível 6, Druida Nível 6
+
+Com essa magia você conseguirá manter a sua respiração, mesmo em lugares
+inóspitos, como em montanhas altas e no fundo de um rio.
+#
+"MAGIA IMPROVED ARMOR"
+
+Uso        : cast 'improved armor' <alvo>
+Acumulativa: Sim (Duração)
+Duração    : 24 Horas
+Nível      : Mago Nível 18, Clérigo Nível 80
+
+Essa magia possui o mesmo efeito de armor, mas melhora o AC um pouco mais.
+O AC que ela diminui varia com o nível de quem a lancou, indo de 30 a 80 AC.
+
+OBS: Os efeitos de "armor", "improved armor" e qualquer uma das "skin like"s
+não são acumulativos.
+#
+"MAGIA GROUP ARMOR"
+
+Uso        : cast 'group armor'
+Acumulativa: Não
+Duração    : 24 Horas
+Nível      : Clérigo Nível 13
+
+Essa magia possui o mesmo efeito de armor, com a diferença de que quando
+lançada não afeta somente um alvo, mas todos os jogadores que estiverem
+no seu grupo.
+#
+"MAGIA GROUP HEAL"
+
+Uso        : cast 'group heal'
+Acumulativa: Não
+Duração    : Instantânea
+Nível      : Clérigo Nível 32
+
+Essa magia possui o mesmo efeito de heal, com a diferença de que quando
+lancada não afeta somente um alvo, mas todos os jogadores que estiverem
+no seu grupo.
+#
+"MAGIA BURST OF FLAME"
+
+Uso        : cast 'burst of flame' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Druida Nível 1
+
+As labaredas de uma explosão criada por você são usadas para queimar a
+carne do oponente.
+#
+"MAGIA SKIN LIKE WOOD"
+
+Uso        : cast 'skin like wood'
+Acumulativa: Duração
+Duração    : 24 Horas
+Nível      : Druida Nível 3
+
+Lançada somente sobre o próprio druida, essa magia de proteção deixa sua
+pele com a resistência da madeira. Diminui seu AC em 15 pontos.
+
+Veja também : "SKIN LIKE ROCK", "SKIN LIKE STEEL", "SKIN LIKE DIAMOND"
+#
+"MAGIA SKIN LIKE ROCK"
+
+Uso        : cast 'skin like rock'
+Acumulativa: Não
+Duração    : 24 Horas
+Nível      : Druida Nível 35
+
+Mais poderosa que a magia SKIN LIKE WOOD, somente é lançada sobre o
+próprio druida.
+Diminui seu AC em 35 pontos, tornando sua pele resistente como pedra.
+Também recupera 4d8 pontos de saúde do alvo.
+Não é acumulada com magias como ARMOR e outros tipos de SKIN LIKEs
+
+Veja também : "SKIN LIKE WOOD", "SKIN LIKE STEEL", "SKIN LIKE DIAMOND"
+#
+"MAGIA SKIN LIKE STEEL"
+
+Uso        : cast 'skin like steel'
+Acumulativa: Duração
+Duração    : 24 Horas
+Nível      : Druida Nível 65
+
+Mais poderosa que a magia SKIN LIKE ROCK, somente é lançada sobre o
+próprio druida.
+Diminui seu AC em 60 pontos, tornando sua pele resistente como o aço.
+Também recupera 6d8 pontos de saúde do alvo.
+Não é acumulada com magias como ARMOR e outros tipos de SKIN LIKEs.
+
+Veja também : "SKIN LIKE WOOD", "SKIN LIKE ROCK", "SKIN LIKE DIAMOND"
+
+#
+"MAGIA SKIN LIKE DIAMOND"
+
+Uso        : cast 'skin like diamond'
+Acumulativa: Duração
+Duração    : 24 Horas
+Nível      : Druida Nível 90
+
+Mais poderosa que a magia SKIN LIKE STEEL, somente é lançada sobre o
+próprio druida.
+Diminui seu AC em até 90 pontos ao tornar sua pele resistente como diamante.
+Não é acumulada com magias como IMPROVED ARMOR e outros tipos de SKIN LIKEs.
+
+Veja também : "SKIN LIKE WOOD", "SKIN LIKE ROCK", "SKIN LIKE STEEL"
+#
+"MAGIA BURST OF FIRE"
+
+Uso        : cast 'burst of fire' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Druida Nível 5
+
+O fogo de uma explosão criada por você é usado para queimar a
+carne do oponente.
+#
+"MAGIA FURY OF AIR"
+
+Uso        : cast 'fury of air' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Druida Nível 50
+
+Essa magia provoca uma fortíssima lufada de vento que derruba o adversário,
+impossibilitando-o de jogar por 2 turnos. O uso dessa magia requere muita
+energia por parte de quem a lança, portanto deve ser usada com sabedoria.
+
+Veja também: BASH
+#
+"MAGIA IGNITE"
+
+Uso        : cast 'ignite' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Druida Nível 9
+
+Usando essa magia, você incendeia a carne do oponente.
+#
+"MAGIA INVIGOR"
+
+Uso        : cast 'invigor' <alvo>
+Acumulativa: Não
+Duração    : Instantânea
+Nível      : Druida Nível 13
+
+Essa magia recupera 8+1d8 pontos de movimento.
+#
+"MAGIA REGENERATION"
+
+Uso        : cast 'regeneration' <alvo>
+Acumulativa: Não
+Duração    : Instantânea
+Nível      : Druida Nível 40
+
+Essa é uma poderosa magia de cura. Recupera 6d8 pontos de vida e
+10+2d6 pontos de movimento.
+#
+"MAGIA CREATE NECTAR"
+
+Uso        : cast 'create nectar' <recipiente>
+Acumulativa: Não
+Duração    : Instantânea
+Nível      : Druida Nível 7
+
+Você terá resultados desastrosos se usar essa magia
+em um recipiente que já tenha outro líquido.
+Recipientes vazios ou parcialmente cheios de néctar
+serão preenchidos normalmente.
+#
+"MAGIA EVOKE CROW"
+
+Uso        : cast 'evoke crow'
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Druida Nível 14
+
+Você tentará evocar um aliado, que no caso será um corvo.
+Ele automaticamente irá seguir quem o convocar, podendo pertencer
+a seu grupo e receber ordens.
+Sua chance de ter sucesso na evocação é de 50%.
+
+Veja também: "EVOKE WOLF", "EVOKE BEAR", "EVOKE LION", ORDER
+#
+"MAGIA EVOKE WOLF"
+
+Uso        : cast 'evoke wolf'
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Druida Nível 30
+
+Você tentará evocar um aliado (no caso, um lobo, mais forte que o corvo).
+Ele automaticamente irá seguir quem o convocar, podendo pertencer
+a seu grupo e receber ordens.
+Sua chance de ter sucesso na evocação é de 50%.
+
+Veja também: "EVOKE CROW", "EVOKE BEAR", "EVOKE LION", ORDER
+#
+"MAGIA EVOKE BEAR"
+
+Uso        : cast 'evoke bear'
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Druida Nível 60
+
+Você tentará evocar um aliado (no caso, um urso, mais forte que o lobo).
+Ele automaticamente irá seguir quem o convocar, podendo pertencer
+a seu grupo e receber ordens.
+Sua chance de ter sucesso na evocação é de 50%.
+
+Veja também: "EVOKE CROW", "EVOKE WOLF", "EVOKE LION", ORDER
+#
+"MAGIA EVOKE LION"
+
+Uso        : cast 'evoke lion'
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Druida Nível 85
+
+Você tentará evocar um aliado (no caso, um leão, mais forte que o urso).
+Ele automaticamente irá seguir quem o convocar, podendo pertencer
+a seu grupo e receber ordens.
+Sua chance de ter sucesso na evocação é de 50%.
+
+Veja também: "EVOKE CROW", "EVOKE WOLF", "EVOKE BEAR", ORDER
+#
+"MAGIA STINGING SWARM"
+
+Uso        : cast 'stinging swarm' <alvo>
+Acumulativa: Duração
+Duração    : 4d6 + Nível/4 horas
+Nível      : Druida Nível 25
+
+Essa magia convoca um enorme enxame de abelhas que retiram
+pontos de vida com suas inúmeras picadas.
+#
+"MAGIA DANCE OF FIREFLIES"
+
+Uso        : cast 'dance of fireflies' <alvo>
+Acumulativa: Não
+Duração    : 15 + Nível/2 horas
+Nível      : Druida Nível 19
+
+Você usará a luz fornecida por vaga-lumes para enxergar no escuro.
+A pessoa ficará rodeada pelos pequenos insetos, sendo possível
+vê-los quando se estiver na mesma sala.
+
+Veja também: "INFRAVISION"
+#
+"MAGIA THISTLECOAT"
+
+Uso        : cast 'thistlecoat' <alvo>
+Acumulativa: Não
+Duração    : 13h
+Nível      : Druida Nível 8
+
+Um casaco de espinhos protege seu corpo, fazendo que todo
+dano causado em você seja causado em seu oponente. Se ele
+passar por um teste de resistência, sofrerá um terço do dano.
+Ele também melhora o AC em 3 pontos.
+
+Veja também: "FIRESHIELD"
+#
+"MAGIA CASCADE OF HAIL"
+
+Uso        : cast 'cascade of hail' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Druida Nível 17
+
+Essa magia de ataque cria três ondas de granizo que atingem a todos
+em uma sala. Deve-se ter cuidado ao usá-la.
+#
+"MAGIA LIGHTNING BLAST"
+
+Uso        : cast 'lightning blast' <alvo>
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Druida Nível 80
+
+É a mais poderosa magia druídica de ataque. O oponente que
+for atingido pela descarga de raios, não passando pelo teste
+de resistência, pode perder até 200 pontos de vida.
+Passando pelo teste, perderá até cerca de 100 pontos de vida.
+#
+"MAGIA MINOR HEALING"
+
+Uso        : cast 'minor healing' <alvo>
+Acumulativa: Não
+Duração    : Instantânea
+Nível      : Druida Nível 15
+
+Essa magia recupera 2+2d8 pontos de vida.
+#
+"MAGIA SOUNDBARRIER"
+
+Uso        : cast 'soundbarrier' <alvo>
+Acumulativa: Não
+Duração    : 24 Horas
+Nível      : Bardo Nível 15.
+
+A barreira de som criada em volta da pessoa a protege de magias ofensivas
+lançadas diretamente ou por meio de varinhas. Também melhora o fôlego do
+jogador. Consegue diminuir o AC numa quantidade proporcional ao nível do
+alvo, tendo um limite máximo de ação fixo em -70.
+
+#
+"MAGIA VOICE EXPLOSION"
+
+Uso        : cast 'voice explosion'
+Acumulativa: -
+Duração    : Instantânea
+Nível      : Bardo Nível 23
+
+O som emitido por essa magia atinge a todos da sala, menos aquele que a lança,
+causando um dano de (3d6)+nível.
+#
+$

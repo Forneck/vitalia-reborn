@@ -1,0 +1,166 @@
+GEN-QUERY
+
+   Gen-query é um nome dado à interface usada por comandos de listagem, como
+RLIST, OLIST e MLIST, para selecionar quais itens serão mostrados.
+
+   Cada parâmetro desdes comandos tem um nome, seguido de dois pontos, e os
+valores relacionados àquele parâmetro, por exemplo:
+
+   lvl:5-10
+   flg:soundproof,notrack
+
+   Há 4 tipos de parâmetros que são usados: "NOME", que permite a seleção de
+itens de acordo com um nome para um parâmetro, ou uma lista de nomes;
+"NUMEROS", que permite a seleção de acordo com uma série numérica; "VETOR"
+que seleciona de acordo com um conjunto de valores para o mesmo campo (como
+as flags de objetos, monstros, etc.); e "VETOR NUMERICO", que é usado apenas
+para objetos.
+
+   Cada um destes tipos é explicado em um tópico da ajuda:
+   HELP LISTA NOME
+   HELP LISTA NUMEROS
+   HELP LISTA VETOR
+   HELP LISTA VETOR NUMERICO
+
+Veja também: LISTA NOME, LISTA NUMEROS, LISTA VETOR, LISTA VETOR NUMERICO
+#106
+"LISTA NOME"
+
+Uso: comando param:[!]<nome>[,<nome>...]
+
+   O parâmetro do tipo "NOME" para consultas serve para selecionar itens de
+acordo com um nome de um dos valores do item.  Por exemplo, salas podem ter
+setores dos tipos "inside", "city" ou "field"; ou monstros podem ser
+"masculino", "feminino" ou "neutro".
+
+   Para usar este tipo de parâmetro, basta fornecer os valores possíveis,
+separando-os por vírgulas, como mostrado a seguir:
+
+   rlist sect:city
+   rlist sect:field,forest
+   olist type:liqcontainer,fountain
+   mlist sex:masculino
+
+   Você pode incluir um ponto-de-exclamação logo após os dois pontos, para
+indicar que a listagem indica os tipos que NÃO devem combinar.  Por exemplo,
+o comando a seguir irá mostrar todas as salas que NÃO são submersas, e nem
+aéreas:
+
+   rlist sect:!underwater,flying
+
+   Para saber quais são os possíveis valores para um campo do tipo "NOME",
+forneça um ponto-de-interrogação como valor, por exemplo:
+
+   rlist sect:?
+
+Veja também: GEN-QUERY
+#106
+"LISTA NUMEROS"
+
+Uso: comando param:[!]<intervalo>[,[!]<intervalo>...]
+
+   O parâmetro do tipo "NUMEROS" para consultas serve para selecionar itens
+de acordo com um determinado intervalo numérico.  Por exemplo, salas possuem
+níveis mínimos para poder entrar; ou monstros possuem experiência em forma
+de números.
+
+   Há várias formas de representar quais números são permitidos e quais não
+são.  Os vários intervalos podem ser unidos com vírgulas.
+
+   param:valor
+   Indica que o campo deve ter um valor específico:
+   Ex: rlist lvl:101          (nível da sala igual a 101)
+
+   param:valor-valor
+   Indica que o campo pode ter qualquer um dos valores dentro do intervalo
+indicado.  Os dois valores devem ser separados com um hífem.  Mesmo que um
+ou ambos sejam negativos, o MUD sempre interpreta o primeiro hífem depois
+do primeiro valor como sendo o separador.
+   Ex: mlist align:350-1000   (qualquer alinhamento de 350 até 1000)
+       mlist align:-349-349   (qualquer alinhamento de -349 até 349)
+       mlist align:-1000--350 (qualquer alinhamento de -1000 até -350)
+
+   param:>valor
+   param:>=valor
+   param:<valor
+   param:<=valor
+   Indica que o campo pode ser maior, maior-ou-igual, menor ou
+menor-ou-igual, respectivamente, ao valor indicado.
+   Ex: olist v0:>10           (qualquer v0 maior que 10)
+       olist lvl:<=100        (qualquer nível menor ou igual a 100)
+
+   Antes de cada um destas representações, pode aparecer um
+ponto-de-exclamação, que indica que aquele valor ou intervalo NÃO deve
+combinar.  Por exemplo, para mostrar todas as salas com nível maior ou igual
+a 101, exceto de níveis 105 e 106:
+
+   rlist lvl:>=101,!105-106
+
+Veja também: GEN-QUERY
+#106
+"LISTA VETOR"
+
+Uso: comando param:[!]<valor>,[[!]<valor>...][,|]
+
+   O parâmetro do tipo "VETOR" para consultas serve para selecionar itens de
+acordo com uma série de valores possíveis para um vetor.  Cada um dos
+valores pode estar 'ligado' ou 'desligado' no vetor.  Por exemplo, as flags
+de objetos, salas ou monstros.
+
+   Por padrão, todas os valores que forem indicados devem combinar.  Os
+valores devem ser separados por vírgulas, e cada valor pode ser precedido de
+um ponto-de-exclamação, que indica que aquele valor NÃO deve combinar.
+
+   Como exemplo, uma sala com as flags "PEACEFUL" e "SOUNDPROOF" apareceria
+no comando "rlist flg:peaceful" e também "rlist flg:peaceful,soundproof",
+mas não apareceria no comando "rlist flg:peaceful,notrack", a menos que
+também tivesse a flag "NOTRACK".  A mesma sala, também seria excluída da
+listagem fornecida por "rlist flg:peaceful,!soundproof".
+
+   Caso seja fornecido o valor especial "|" (barra vertical), a atuação do
+parâmetro se modifica.  Não será necessário que todos os valores combinem,
+mas apenas um dos valores já será o suficiente.  Por exemplo, o comando
+"rlist flg:peaceful,soundproof,|" listaria todas as salas que possuírem
+pelo menos uma das flags.
+
+   Para saber quais são os possíveis valores para um campo do tipo "VETOR",
+forneça um ponto-de-interrogação como valor, por exemplo:
+
+   rlist flg:?
+
+Veja também: GEN-QUERY
+#106
+"LISTA VETOR NUMERICO"
+
+Uso: comando param:<valor>[,<valor>...][,|]
+     comando param:valor:<intervalo> [param:valor:<intervalo>...]
+
+   O parâmetro do tipo "VETOR NUMERICO" para consultas serve para selecionar
+itens de acordo com uma série de valores possíveis para cada um dos valores
+de um vetor.  Este tipo é usado apenas no parâmetro "apl:" dos objetos.
+
+   Este tipo de parâmetro funciona como uma mistura dos tipos "NUMEROS" e
+"VETOR".  Você pode, por exemplo, fornecer quais aplicações são necessárias
+em um objeto, independende de quanto cada objeto aplica:
+
+   olist apl:str,dex      (que apliquem Str e Dex ao mesmo tempo)
+   olist apl:str,dex,|    (que apliquem Str ou Dex)
+
+   Ou pode-se especificar os valores que se deseja para cada um dos campos.
+Os intervalos são os mesmos indicados no tipo "NUMEROS".  Neste caso o
+parâmetro pode ser repetido uma vez para cada valor desejado.  Caso se
+deseje usar a barra vertical, como explicado no tipo "VETOR", deve-se
+indicá-la separadamente.  Exemplos:
+
+   olist apl:str:>0 apl:dex:<0
+   olist apl:int:>0 apl:wiz:1-3
+   olist apl:int:>0 apl:wiz:>0 apl:|
+
+   Para saber quais são os possíveis valores para um campo do tipo "VETOR
+NUMERICO", forneça um ponto-de-interrogação como valor, por exemplo:
+
+   olist apl:?
+
+Veja também: GEN-QUERY
+#106
+$

@@ -1,0 +1,404 @@
+UTILITARIOS
+
+   Os seguintes comandos são de utilidade geral.  Para obter ajuda para um
+comando, digite HELP <comando>.
+
+   &g!                    &nRepetir o comando anterior.
+   &g- HÍFEN              &nExecutar comandos no idioma padrão.
+   &gALIAS                &nCria "atalhos" de comandos longos.
+   &gASCII                &nFiltra caracteres acentuados.
+   &gAUTOTITLE            &nAtiva ou desativa a mudança automática de título.
+   &gAWAY                 &nColoca a conexão em estado de 'away'.
+   &gBANDAGE              &nFaz bandagens em alguém que esteja atordoado.
+   &gBRIEF                &nAlternar a exibição das descrições das salas.
+   &gBUG                  &nReportar os bugs que você encontrar no MUD.
+   &gCLEAR CLS            &nLimpa a tela.
+   &gCOLOR                &nAltera o nível de cores.
+   &gCOMMANDS             &nListagem geral de todos os comandos.
+   &gCOMPACT              &nAlternar o modo compacto de exibir informações.
+   &gDISPLAY              &nAltera a visualização do seu prompt no MUD.
+   &gHOUSE                &nPara proprietários de casas.
+   &gIDEA                 &nOferecer idéias para melhoria do MUD.
+   &gLANG                 &nAltera o idioma dos comandos do MUD.
+   &gQUIT                 &nSair do mud.
+   &gSAVE                 &nSalvar seu personagem.
+   &gSTRIPCLR             &nFiltragem de cores usadas por outros jogadores.
+   &gTERM                 &nSeleção do tipo de terminal usado para jogar.
+   &gTITLE                &nAltera seu título.
+   &gTYPO                 &nAvisar sobre erros ortograficos no MUD.
+#
+!
+
+   O comando especial !  Serve para repetir um dos últimos 5 comandos
+digitados.  Use simplesmente !  Para repetir o último comando, ou !<texto>
+para repetir o comando que você digitou que começa com <texto>.
+
+Exemplos:
+
+  > get pao
+  Você pega um pão de viagem.
+
+  > inv
+  Você está carregando:
+  um pão de viagem
+
+  > !
+  Você está carregando:
+  um pão de viagem
+
+  > !get
+  Você pega um pão de viagem.
+
+Veja também: ALIAS
+#
+- HIFEN
+
+Uso: -<comando>
+
+   O hífen (-) é um prefixo especial para os comandos, que permite usar
+comandos no idioma padrão (inglês) mesmo que você esteja usando a tabela de
+comandos em português (vide comando LANG).
+
+Exemplos:
+  > lang pt
+  (agora você está usando comandos em português)
+
+  > -open porta
+  (o comando em inglês é aceito, por ter sido prefixado com '-')
+
+   Note que para o comando CLAN, o hífen só tem efeito na palavra
+imediatamente seguinte.  Usar "-clan history" com o idioma ajustado para
+português não irá funcionar, devendo ser usado "-clan -history", para que a
+tradução seja aplicada tanto em "clan" quanto em "history".
+
+Veja também: LANG
+#
+ALIAS ALIASES
+
+Uso: Alias [nome do alias] [comando]
+
+   Um alias é um simples comando usado para representar um ou mais outros
+comandos.  O comando ALIAS pode ser usado para manipular os seus alias
+atuais.  Digite somente ALIAS para ver uma lista dos seus atuais alias.
+
+  > alias
+
+   Digite ALIAS <nome do alias> <comando> para criar um novo alias.  O nome
+do alias precisa ser formado por uma só palavra.  O comando pode ser formado
+por qualquer sequência.  Os alias não podem ser desrespeitoso ou usado de
+forma repetitiva.  Qualquer comando pode ser também usado normalmente mesmo
+tendo um alias para ele (diferente do comando ALIAS somente, é claro).
+
+  > alias gpp get pão mochila
+  > alias gac get all corpo
+
+   Digite ALIAS <nome do alias> para apagar um alias que já foi definido.
+
+  > alias gbb
+
+   O ponto e vírgula "; " pode ser usado para definir múltiplas ações a
+serem realizadas com um simples alias.
+
+  > alias comer get pão mochila; eat pão
+
+   As variáveis $1, $2, ... $9 podem ser usadas para representar argumentos
+dados junto com o alias.
+
+Exemplos:
+
+  > alias killem cast 'fireball' $1; cast 'harm' $2
+  > killem fido mago
+
+   A magia fireball seria lançada no fido, seguida pelo harm no mago.
+Variáveis podem ser usadas repetitivamente e em qualquer ordem:
+
+  > alias helpem cast 'heal' $1; cast 'bless' $1; cast 'armor' $1
+
+   A variável especial $* respresenta toda a linha do receptor depois de um
+alias:
+
+  > alias tr tell rasmussen $*
+  > tr Ola, como você está?
+  Você falou por telepatia com Tasmussen, 'Ola, como você está?'
+
+Veja também: ! ^
+#
+ASCII
+
+Uso: ASCII
+
+   Define se o texto enviado do MUD para você devem ter seus caracteres
+extensos filtrados.  Entende-se por caracter extenso qualquer letra que
+necessite mais do que 7 bits de informação para ser representada.  Isto
+inclui todos as letras acentuadas da língua portuguesa.  Se o seu software
+de telnet não suporta a exibição de caracteres extensos, você deve manter
+esta opção ativada.
+
+   O atual filtro converte os seguintes caracteres extensos em
+correspondentes próximos de seu significado correto:
+
+  á é í ó ú à è ì ò ù â ê î ô û ä ë ï ö ü ã õ ç
+  Á É Í Ó Ú À È Ì Ò Ù Â Ê Î Ô Û Ä Ë Ï Ö Ü Ã Õ Ç
+  © ® « » ° ¹ ² ³ ¼ ½ ¾
+
+   Quaisquer outros caracteres extensos que não estiverem nesta lista serão
+substituídos por um caractere de interrogação (?).
+
+Veja também: TOGGLE
+#
+AUTOTITLE
+
+Uso: autotitle
+
+   Ativa ou desativa a mudança automática do título do seu personagem quando
+mudar de nível.
+
+Veja também: TITLE, TOGGLE
+#
+AWAY
+
+Uso: away [ -l ]
+
+   Permite que você coloque sua conexão em estado de AWAY, indicando que você
+não está prestando atenção à sua conexão atual ao MUD.
+
+   Utilizando o parâmetro `-l', pode-se fazer com que a conexão também fique
+travada.  Desta forma, para sair do estado AWAY e retornar ao jogo, será
+necessário fornecer a senha de acesso ao seu personagem.
+
+   Se um personagem lhe atacar durante o estado de AWAY, você tentará fugir
+automaticamente.  Não conseguindo, uma força divina o resgatará até o
+momento que você retornar.  Também não será possível receber mensagens
+telepáticas.  Ao digitar qualquer comando no estado de AWAY, você retorna
+ao jogo normal, a menos que tenha usado o parâmetro `-l', neste caso o mud
+irá verificar se você digitou a senha corretamente antes de lhe devolver o
+jogo.
+#
+BANDAGE
+
+Uso: BANDAGE <alvo>
+
+   Se o alvo está machucado ou pior (não morto), este comando pode salvar
+sua vida.  O alvo terá o ferimento atado: curado para 1 ponto de vida e
+recobrará a consciência.
+#
+BRIEF
+
+Uso: brief
+
+   Quando o modo 'breve' (brief) estiver ativo, você não verá as descrições
+da sala em que você está, somente o nome da sala, os objetos e pessoas que
+nela estão.  Entretanto, se você não estiver familiarizado com a área em que
+está, não é prudente que use este comando.  Frequentemente, você achará
+pequenos, mas importantes pontos nas descrições das salas: uma espiada extra
+por sua volta pode ser a diferença entre a vida e a morte!
+
+   Se você digitar 'look', você sempre verá toda a descrição da sala, mesmo
+no modo 'breve'.
+
+Veja também: COMPACT, LOOK
+#
+BUG TYPO IDEA
+
+Uso: bug <descrever o bug>
+     idea <sua ideia>
+     typo <descrever o erro>
+
+   Para fazer proveitosas sugestões e reportar problemas de nosso mundo.
+
+Exemplos:
+   > bug todo o jogo trava quando eu digito 'put mochila mochila'
+   > idea fazer um restaurante em Midgaard
+   > typo 'sentiddo' deveria ser escrito 'sentido'
+#
+CLEAR CLS
+
+Uso: clear
+     cls
+
+   Limpa todo a tela do seu cliente.
+#
+COLOR
+
+Uso: color { desligado | escasso | normal | completo }
+
+   Se o seu cliente é capaz suportar cores, e você deseja ver os textos
+coloridos, use o comando COLOR para ajustar o nível de cores que deseja ver.
+
+   > color desligado
+   Este comando tira todas as cores.
+
+   > color escasso
+   > color normal
+   > color completo
+
+   Estes três comandos mudam os níveis de cores.  Experimente ver qual nível
+lhe agrada mais.  Digitando 'color' sem qualquer argumento mostrará o seu
+atual nível de cores.
+
+   Usando cores, a velocidade da sua conexão diminuirá um pouco.  O efeito é
+mais visível em conexões lentas.  Mesmo que você esteja com as cores
+ligadas, as mensagens sem cores não afetarão a velocidade da conexão.
+
+Veja também: CORES, STRIPCLR
+#
+COMMANDS
+
+Uso: commands
+
+   O comando 'commands' lhe dá uma lista de todos os verbos (comandos)
+conhecidos.
+
+   Cada comando listado deve possuir um 'help', digitando "HELP <comando>".
+
+Veja também: SOCIAL, SOCIALS
+#
+COMPACT
+
+Uso: compact
+
+   Este comando "tira" a linha em branco extra entre cada comando.  Útil se
+a janela do seu cliente de MUD ou a tela do seu monitor não lhe permite ver
+muitas linhas.
+
+Veja também: BRIEF
+#
+DISPLAY PROMPT
+
+Uso: display < [H][M][V] | tudo | nada >
+
+   Modifica o "prompt" que mostra seus pontos de vida, mana e/ou os
+pontos de movimento antes de cada comando.
+
+   > display hv          Mostra dos pontos de vida e movimento.
+   > display nada        Não irá mostrar nada.
+   > display tudo        Mostrará os pontos de vida, movimento e mana.
+
+Veja também: TOGGLE
+#
+HOUSE
+
+   O comando HOUSE é usado para adicionar ou remover convidados à lista de
+convidados da sua casa.  Você precisa estar em sua casa para usar este
+comando.  Somente o proprietário (não convidado) pode mudar a lista de
+convidados usando o comando HOUSE.
+
+Uso: house [<nome do jogador>]
+
+   Digitando 'house' sem argumentos, irá lhe mostrar uma lista das pessoas
+que estão atualmente na sua lista de convidados.  Digitando 'house' com o
+nome de um jogador, irá adiciona-lo para a lista de convidados, se este
+jogador ainda não está nesta lista, ou irá remover o jogador da lista, se
+este jogador já estiver nela.  O jogador especificado não precisa estar
+conectado no momento.
+
+   Convidados de sua casa poderão entrar na casa, até que você os remova da
+lista de convidados.
+
+Veja também: HOUSES
+#
+LANG
+
+Uso: lang [en|pt]
+
+   Altera a sua preferência pelo idioma dos comandos do MUD.  Por padrão,
+todos os comandos estão em inglês, mas usando o comando LANG PT, torna-se
+possível digitar comandos totalmente em português (OPEN se torna ABRIR,
+FOLLOW se torna SEGUIR, e assim por diante).
+
+   Atualmente, um comando não possui tradução para o português: PICK.  O
+próprio comando LANG também não possui tradução, para que o mesmo nome possa
+ser usado independente da escolha do usuário.
+
+   Além disso, ainda não há ajuda para os comandos em português.  Se você
+estiver usando comandos em português e quiser consultar a ajuda para o
+comando PRATICAR, não será possível usar AJUDA PRATICAR.  Você terá que
+digitar AJUDA PRACTICE, que é o nome do comando em inglês.
+
+   Se você quiser experimentar os comandos em português, comece digitando:
+COMANDOS, SOCIAIS e AJUDAWIZ (para imortais).
+
+   Você pode voltar a qualquer momento para o padrão digitando LANG EN.
+
+Veja também: - (hífen)
+#
+QUIT
+
+   Quando você já estiver cansado de jogar, você pode deixar o jogo
+digitando 'quit'.
+
+Veja também: SAVE
+#
+SAVE
+
+Uso: save
+
+   Salva seu atalhos.  O jogo periodicamente auto-salva seu personagem e seu
+equipamento, portanto não é necessário ter em seu cliente um auto-save.
+
+Veja também: ALIAS, QUIT
+#
+STRIPCLR
+
+Uso: stripclr
+
+   Use este comando caso você não queira ver as cores usadas por outros
+jogadores.  Quando este comando é ativado, as cores usadas por outros
+jogadores, que forem usadas em canais de comunicação (SAY, TELL, etc), serão
+eliminadas, e o texto será mostrado para você na cor padrão, definida pelo
+MUD.
+
+Veja também: COLOR, TOGGLE
+#
+TERM
+
+Uso: term [ tipo-de-terminal ] [ linhas=<n> ] [ colunas=<n> ]
+
+   Este comando permite ajustar qual o tipo de terminal você está utilizando
+para acessar o MUD, permitindo assim que o VitaliaMUD envie códigos de cores
+e controle compatíveis.  Atualmente, os tipos disponíveis são: ANSI, XTERM e
+DOSANSI, conforme são descritos a seguir:
+
+   &WANSI&n
+   Esta é a configuração padrão.  Se estiver usando um terminal que seja
+totalmente compatível com ANSI, deve deixar nesta configuração.
+
+   &WXTERM&n
+   Se você estiver usando um programa de TELNET ou similar em uma janela
+XTerm no Linux, pode ajustar para esta configuração.  É similar ao ANSI, mas
+o MUD utilizará de alguns recursos a mais, disponíveis pelo XTerm.
+
+   &WDOSANSI&n
+   Se você estiver usando um terminal que seja compatível apenas com a
+versão antiga do ANSI, usado no MS-DOS, deve usar esta configuração.  Quase
+todos os terminais disponíveis para Windows caem nesta categoria.  Digite
+"HELP ZMUD" para obter maiores informações.
+
+   O comando TERM também é usado para definir o tamanho do terminal (o
+número de linhas e colunas que cabem na sua janela) otimizando assim a
+aprensentação das informações do MUD.  Para isso, usa-se o comando TERM
+seguido das palavras "linhas" ou "colunas", um sinal de igualdade (=) e o
+número desejado.
+
+   Caso o seu terminal ou cliente de MUD não possua suporte a cores, ajuste
+o terminal para DOSANSI e desligue o uso de cores pelo comando "COLOR DESL".
+
+Exemplos:
+  > term dosansi
+  > term linhas=40 colunas=132
+
+Veja também: COLOR, ZMUD
+#
+TITLE
+
+Uso: title <novo título>
+
+   Ajusta um novo título mostrado pelo comando WHO e para quem está na
+mesma sala que você.  Você não pode usar parenteses, colchetes ou chaves,
+pois estes são reservados para as 'flags'.
+
+   Não abuse deste comando.  Se você o fizer, ele pode ser tirado de você.
+
+Veja também: FLAGS, WHO
+#
+$
