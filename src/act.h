@@ -193,6 +193,7 @@ ACMD(do_gassist);
 ACMD(do_bash);
 ACMD(do_backstab);
 ACMD(do_flee);
+#define SCMD_ESCAPE  0
 ACMD(do_kick);
 ACMD(do_kill);
 ACMD(do_order);
