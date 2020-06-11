@@ -1,29 +1,29 @@
 PRF-FLAGS
 
-   Estas são as flags de preferências (PRF-flags) disponíveis no Mundo de
-Vitália:
+   Estas sï¿½o as flags de preferï¿½ncias (PRF-flags) disponï¿½veis no Mundo de
+Vitï¿½lia:
 
    BRIEF
-   Modo breve, suprime o envio das descrições das salas quando o personagem
+   Modo breve, suprime o envio das descriï¿½ï¿½es das salas quando o personagem
 se move de uma sala para outra.  Veja o comando BRIEF.
 
    COMPACT
    Modo compacto, suprime linhas em branco.  Veja o comando COMPACT.
 
    APPEAR
-   Deuses apenas.  Indica que o Deus está visível para as pessoas ocupando a
-mesma sala, apesar de continuar invisível para as pessoas em outras salas.
+   Deuses apenas.  Indica que o Deus estï¿½ visï¿½vel para as pessoas ocupando a
+mesma sala, apesar de continuar invisï¿½vel para as pessoas em outras salas.
 Veja o comando APPEAR.
 
    PT
-   Comandos em português.  Veja o comando LANG.
+   Comandos em portuguï¿½s.  Veja o comando LANG.
 
    D_HP, D_MANA, D_MOVE
-   Pontos de saúde, magia e movimento são visíveis no prompt.  Veja o
+   Pontos de saï¿½de, magia e movimento sï¿½o visï¿½veis no prompt.  Veja o
 comando DISPLAY.
 
    AUTOEX
-   AutoExits, as saídas da sala são mostradas após sua descrição.  Veja o
+   AutoExits, as saï¿½das da sala sï¿½o mostradas apï¿½s sua descriï¿½ï¿½o.  Veja o
 comando AUTOEXITS.
 
    NOHASS
@@ -34,19 +34,19 @@ comando NOHASSLE.
    Participante da QUEST atual. Veja os comandos QUEST e QCONTROL.
 
    SUMN
-   Convocável, permite que o personagem seja convocado por outros jogadores,
+   Convocï¿½vel, permite que o personagem seja convocado por outros jogadores,
 usando a magia summon.  Veja o comando NOSUMMON e a magia SUMMON.
 
    NOREP
-   Não repetir, mostra apenas "Pronto." ao usar comandos de comunicação, ao
-invés de ver suas próprias mensagens sendo repetidas.
+   Nï¿½o repetir, mostra apenas "Pronto." ao usar comandos de comunicaï¿½ï¿½o, ao
+invï¿½s de ver suas prï¿½prias mensagens sendo repetidas.
 
    LIGHT
    Imortais apenas.  Luz sagrada, permite que o personagem enxergue mesmo na
-ausência de luz.  Veja o comando HOLYLIGHT.
+ausï¿½ncia de luz.  Veja o comando HOLYLIGHT.
 
    C1, C2
-   Cores.  O jogo envia códigos de cores para o terminal do jogador.  Veja o
+   Cores.  O jogo envia cï¿½digos de cores para o terminal do jogador.  Veja o
 comando COLOR.
 
    NOUSRCLR
@@ -54,23 +54,24 @@ comando COLOR.
 originais do jogo.  Veja o comando STRIPCLR.
 
    A_TITLE
-   Auto título, permite que o jogo altere o título do personagem à cada novo
-nível que for atingido.  Veja o comando AUTOTITLE.
+   Auto tï¿½tulo, permite que o jogo altere o tï¿½tulo do personagem ï¿½ cada novo
+nï¿½vel que for atingido.  Veja o comando AUTOTITLE.
 
    PWR
    Deuses apenas.  Poder sagrado, habilita poderes divinos, de acordo com o
-nível do Deus.  Veja o comando HOLYPOWER.
+nï¿½vel do Deus.  Veja o comando HOLYPOWER.
 
    RMFLG
-   Mostra o número e as flags da sala junto de seu título.  Veja o comando
+   Mostra o nï¿½mero e as flags da sala junto de seu tï¿½tulo.  Veja o comando
 ROOMFLAGS.
 
    HITBAR
    Barra de acerto, mostra uma pequena barra durante a luta, informando a
-saúde média do oponente.  Veja o comando HITBAR.
+saï¿½de mï¿½dia do oponente.  Veja o comando HITBAR.
 
    ASCII
-   Modo ASCII, evita que o jogo envie caracteres especiais, que podem não
-ser visíveis em todos os terminais.  Veja o comando ASCII.
+   Modo ASCII, evita que o jogo envie caracteres especiais, que podem nï¿½o
+ser visï¿½veis em todos os terminais.  Veja o comando ASCII.
 #107
 $
+~
