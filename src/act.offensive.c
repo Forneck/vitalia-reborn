@@ -111,7 +111,8 @@ ACMD(do_gassist)
 			if ((k != ch) && CAN_SEE(ch, k) && (IN_ROOM(k) == IN_ROOM(ch)) && FIGHTING(k))
 			{
 				if (!CAN_SEE(ch, FIGHTING(k)))
-					act("Você não pode ver com quem $N está lutando.", FALSE, ch, NULL, k, TO_CHAR);
+					act("Você não pode ver com quem $N está lutando.", FALSE, ch, NULL, k,
+						TO_CHAR);
 				else
 				{
 					helpee = k;
@@ -247,8 +248,7 @@ ACMD(do_backstab)
 		send_to_char(ch, "Como você pretende pegar você mesmo de surpresa?\r\n");
 		return;
 	}
-	if (!CONFIG_PK_ALLOWED && !IS_NPC(vict))	/* prevent accidental
-													   pkill */
+	if (!CONFIG_PK_ALLOWED && !IS_NPC(vict))	/* prevent accidental pkill */
 		act("Use 'murder' se voce realmente deseja atacar $N.", FALSE, ch, 0, vict, TO_CHAR);
 	if (!GET_EQ(ch, WEAR_WIELD))
 	{
@@ -286,7 +286,7 @@ ACMD(do_backstab)
 		hit(ch, vict, SKILL_BACKSTAB);
 
 	if (GET_LEVEL(ch) < LVL_GOD)
-	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
 /* 
@@ -294,7 +294,7 @@ ACMD(do_backstab)
  */
 ACMD(do_backflip)
 {
-   	char arg[MAX_INPUT_LENGTH];
+	char arg[MAX_INPUT_LENGTH];
 	struct char_data *vict;
 	int percent, prob;
 
@@ -366,7 +366,7 @@ ACMD(do_backflip)
 		act("$n faz um lindo giro no ar e cai sentad$r no chão, que ridículo...", FALSE, ch,
 			NULL, vict, TO_ROOM);
 		GET_POS(ch) = POS_SITTING;
-	WAIT_STATE(ch, PULSE_VIOLENCE * 3);
+		WAIT_STATE(ch, PULSE_VIOLENCE * 3);
 	}
 	else
 	{
@@ -375,15 +375,15 @@ ACMD(do_backflip)
 		act("$n faz uma cambalhota por sobre $N, que fica confus$R!", FALSE, ch, NULL, vict,
 			TO_NOTVICT);
 		act("$n faz uma cambalhota e você $r perde de vista.", FALSE, ch, NULL, vict, TO_VICT);
-				/* it is assured that vict will be fighting ch */
+		/* it is assured that vict will be fighting ch */
 		stop_fighting(vict);
-		
-			/* NEW_EVENT() will add a new mud event to the event list of the
-	   character. This function below adds a new event of "eBACKFLIP", to
-	   "ch", and passes "NULL" as additional data. The event will be called in 
-	   "3 * PASSES_PER_SEC" or 3 seconds */
-	NEW_EVENT(eBACKFLIP, ch, NULL, 3 * PASSES_PER_SEC);
-	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+
+		/* NEW_EVENT() will add a new mud event to the event list of the
+		   character. This function below adds a new event of "eBACKFLIP", to
+		   "ch", and passes "NULL" as additional data. The event will be
+		   called in "3 * PASSES_PER_SEC" or 3 seconds */
+		NEW_EVENT(eBACKFLIP, ch, NULL, 3 * PASSES_PER_SEC);
+		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 	}
 }
 
@@ -425,12 +425,11 @@ EVENTFUNC(event_backflip)
 	   let the player know they are performing their backflip */
 	send_to_char(ch, "Você da uma cambalhota e se esconde.\r\n");
 
-	/* Lets grab some a random NPC from the list, and stop them*/
+	/* Lets grab some a random NPC from the list, and stop them */
 
-		tch = random_from_list(room_list);
-	  stop_fighting(tch);
-	   stop_fighting(ch);
-	   
+	tch = random_from_list(room_list);
+	stop_fighting(tch);
+
 	/* Now that our backflip is done, let's free out list */
 	free_list(room_list);
 
@@ -528,7 +527,7 @@ ACMD(do_flee)
 		if (CAN_GO(ch, attempt) && !ROOM_FLAGGED(EXIT(ch, attempt)->to_room, ROOM_DEATH))
 		{
 			act("$n entra em pânico e tenta fugir!", TRUE, ch, 0, 0, TO_ROOM);
-				was_fighting = FIGHTING(ch);
+			was_fighting = FIGHTING(ch);
 
 			if (AFF_FLAGGED(ch, AFF_PARALIZE))
 			{
@@ -558,7 +557,8 @@ ACMD(do_flee)
 			return;
 		}
 	}
-	send_to_char(ch, "%sPANICO!  Você não tem escapatória!%s\r\n",CCWHT(ch,C_NRM), CCNRM(ch,C_NRM));
+	send_to_char(ch, "%sPANICO!  Você não tem escapatória!%s\r\n", CCWHT(ch, C_NRM),
+				 CCNRM(ch, C_NRM));
 }
 
 ACMD(do_bash)
@@ -649,12 +649,12 @@ ACMD(do_bash)
 		}
 	}
 
-if (GET_LEVEL(ch) < LVL_GOD)
-	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+	if (GET_LEVEL(ch) < LVL_GOD)
+		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
 
-/*
+/* 
  * -- jr - Dec 29, 2001
  * Slash the opponent 2 to 5 (avg 3) times on first round, with greater
  * damage per slash.
@@ -663,100 +663,108 @@ if (GET_LEVEL(ch) < LVL_GOD)
  */
 ACMD(do_combo)
 {
-   char arg[MAX_INPUT_LENGTH];
-  struct char_data *vict;
-  struct obj_data *weapon;
-  int perc, prob, hits, basedam, dam, i;
-  int can_improve = true;
+	char arg[MAX_INPUT_LENGTH];
+	struct char_data *vict;
+	struct obj_data *weapon;
+	int perc, prob, hits, basedam, dam, i;
+	int can_improve = true;
 
-  one_argument(argument, arg);
+	one_argument(argument, arg);
 
-  if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_COMBO_ATTACK)) {
-    send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
-    return;
-  }
-  if (!(weapon = GET_EQ(ch, WEAR_WIELD))) {
-    send_to_char(ch, "Você precisa empunhar uma arma para ter sucesso.\r\n");
-    return;
-  }
-  if (FIGHTING(ch)) {
-    send_to_char(ch, "Você não sabe como fazer isso durante a luta...\r\n");
-    return;
-  }
-  if (GET_OBJ_TYPE(weapon) != ITEM_WEAPON ||
-      GET_OBJ_VAL(weapon, 3) + TYPE_HIT != TYPE_SLASH) {
-    act("$p não é uma arma apropriada para isso.", FALSE, ch, weapon, NULL, TO_CHAR);
-    return;
-  }
-  if ((vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)) == NULL) {
-    send_to_char(ch, "Atacar quem?\r\n");
-    return;
-  }
-  if (vict == ch) {
-    send_to_char(ch, "Sem gracinhas hoje...\r\n");
-    return;
-  }
+	if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_COMBO_ATTACK))
+	{
+		send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
+		return;
+	}
+	if (!(weapon = GET_EQ(ch, WEAR_WIELD)))
+	{
+		send_to_char(ch, "Você precisa empunhar uma arma para ter sucesso.\r\n");
+		return;
+	}
+	if (FIGHTING(ch))
+	{
+		send_to_char(ch, "Você não sabe como fazer isso durante a luta...\r\n");
+		return;
+	}
+	if (GET_OBJ_TYPE(weapon) != ITEM_WEAPON || GET_OBJ_VAL(weapon, 3) + TYPE_HIT != TYPE_SLASH)
+	{
+		act("$p não é uma arma apropriada para isso.", FALSE, ch, weapon, NULL, TO_CHAR);
+		return;
+	}
+	if ((vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)) == NULL)
+	{
+		send_to_char(ch, "Atacar quem?\r\n");
+		return;
+	}
+	if (vict == ch)
+	{
+		send_to_char(ch, "Sem gracinhas hoje...\r\n");
+		return;
+	}
 	if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_PEACEFUL))
 	{
 		send_to_char(ch, "Este lugar é muito calmo, sem violências...\r\n");
 		return;
 	}
- 	if (!CONFIG_PK_ALLOWED && !IS_NPC(vict))
+	if (!CONFIG_PK_ALLOWED && !IS_NPC(vict))
 	{
 		/* prevent accidental pkill */
 		act("Use 'murder' se voce realmente deseja atacar $N.", FALSE, ch, 0, vict, TO_CHAR);
 		return;
 	}
 
-  perc = rand_number(1, 101);	/* 101% is a complete failure */
-  prob = GET_SKILL(ch, SKILL_COMBO_ATTACK);
+	perc = rand_number(1, 101);	/* 101% is a complete failure */
+	prob = GET_SKILL(ch, SKILL_COMBO_ATTACK);
 
-  if (GET_CLASS(ch) != CLASS_WARRIOR)
-    perc += 5;
-  if (MOB_FLAGGED(vict, MOB_AWARE))
-    perc += 10;
-  if (GET_LEVEL(vict) > GET_LEVEL(ch))
-    perc += GET_LEVEL(vict) - GET_LEVEL(ch);
+	if (GET_CLASS(ch) != CLASS_WARRIOR)
+		perc += 5;
+	if (MOB_FLAGGED(vict, MOB_AWARE))
+		perc += 10;
+	if (GET_LEVEL(vict) > GET_LEVEL(ch))
+		perc += GET_LEVEL(vict) - GET_LEVEL(ch);
 
-  if (perc > prob) {
-    damage(ch, vict, 0, SKILL_COMBO_ATTACK);
-    if (GET_LEVEL(ch) <LVL_GOD) {
-	WAIT_STATE(vict, 2 * PULSE_VIOLENCE);
-    return;
-    }
-  }
+	if (perc > prob)
+	{
+		damage(ch, vict, 0, SKILL_COMBO_ATTACK);
+		if (GET_LEVEL(ch) < LVL_GOD)
+		{
+			WAIT_STATE(vict, 2 * PULSE_VIOLENCE);
+			return;
+		}
+	}
 
-  /*
-   * Calculate how many hits.
-   * After throwing 1 million times, the following expression gave:
-   * 2:  249657 (24.97%)
-   * 3:  459093 (45.91%)
-   * 4:  249631 (24.96%)
-   * 5:   41619 ( 4.16%)
-   */
-  hits = 2 + !rand_number(0, 1) + !rand_number(0, 2) + !rand_number(0, 3);
+	/* 
+	 * Calculate how many hits.
+	 * After throwing 1 million times, the following expression gave:
+	 * 2:  249657 (24.97%)
+	 * 3:  459093 (45.91%)
+	 * 4:  249631 (24.96%)
+	 * 5:   41619 ( 4.16%)
+	 */
+	hits = 2 + !rand_number(0, 1) + !rand_number(0, 2) + !rand_number(0, 3);
 
-  /*
-   * Calculate base damage.
-   */
-  basedam = str_app[STRENGTH_APPLY_INDEX(ch)].todam;
-  basedam += GET_DAMROLL(ch);
+	/* 
+	 * Calculate base damage.
+	 */
+	basedam = str_app[STRENGTH_APPLY_INDEX(ch)].todam;
+	basedam += GET_DAMROLL(ch);
 
-  for (i = 0; i < hits; i++) {
-    /*
-     * Calculate how much damage.
-     * Note the dice is thrown twice.
-     */
-    dam = basedam;
-    dam += dice(GET_OBJ_VAL(weapon, 1), GET_OBJ_VAL(weapon, 2));
-    dam += dice(GET_OBJ_VAL(weapon, 1), GET_OBJ_VAL(weapon, 2));
+	for (i = 0; i < hits; i++)
+	{
+		/* 
+		 * Calculate how much damage.
+		 * Note the dice is thrown twice.
+		 */
+		dam = basedam;
+		dam += dice(GET_OBJ_VAL(weapon, 1), GET_OBJ_VAL(weapon, 2));
+		dam += dice(GET_OBJ_VAL(weapon, 1), GET_OBJ_VAL(weapon, 2));
 
-    if ((dam = damage(ch, vict, dam, TYPE_SLASH)) < 0)	/* -1 = died */
-      break;
- 
-    if (IN_ROOM(ch) != IN_ROOM(vict))
-      break;
-  }
+		if ((dam = damage(ch, vict, dam, TYPE_SLASH)) < 0)	/* -1 = died */
+			break;
+
+		if (IN_ROOM(ch) != IN_ROOM(vict))
+			break;
+	}
 
 	WAIT_STATE(vict, 2 * PULSE_VIOLENCE);
 }
@@ -768,9 +776,15 @@ ACMD(do_rescue)
 	struct char_data *vict, *tmp_ch;
 	int percent, prob;
 
-	if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_RESCUE))
+	if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_RESCUE) || PLR_FLAGGED(ch, PLR_TRNS))
 	{
-		send_to_char(ch, "You have no idea how to do that.\r\n");
+		send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
+		return;
+	}
+
+	if (IS_DEAD(ch))
+	{
+		act("Você não pode ajudar $N, você está mort$r!", FALSE, ch, 0, vict, TO_CHAR);
 		return;
 	}
 
@@ -778,17 +792,18 @@ ACMD(do_rescue)
 
 	if (!(vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)))
 	{
-		send_to_char(ch, "Whom do you want to rescue?\r\n");
+		send_to_char(ch, "Quem você deseja resgatar?\r\n");
 		return;
 	}
 	if (vict == ch)
 	{
-		send_to_char(ch, "What about fleeing instead?\r\n");
+		send_to_char(ch, "Fugir não seria melhor?\r\n");
 		return;
 	}
 	if (FIGHTING(ch) == vict)
 	{
-		send_to_char(ch, "How can you rescue someone you are trying to kill?\r\n");
+		send_to_char(ch,
+					 "Como você pretende resgatar alguém que você está tentando matar?\r\n");
 		return;
 	}
 	for (tmp_ch = world[IN_ROOM(ch)].people; tmp_ch &&
@@ -799,7 +814,7 @@ ACMD(do_rescue)
 		tmp_ch = FIGHTING(vict);
 		if (FIGHTING(tmp_ch) == ch)
 		{
-			send_to_char(ch, "You have already rescued %s from %s.\r\n", GET_NAME(vict),
+			send_to_char(ch, "Mas você já resgatou %s de %s.\r\n", GET_NAME(vict),
 						 GET_NAME(FIGHTING(ch)));
 			return;
 		}
@@ -807,7 +822,13 @@ ACMD(do_rescue)
 
 	if (!tmp_ch)
 	{
-		act("But nobody is fighting $M!", FALSE, ch, 0, vict, TO_CHAR);
+		act("Mas ninguém está lutando com $N!", FALSE, ch, 0, vict, TO_CHAR);
+		return;
+	}
+
+	if ((!CONFIG_PK_ALLOWED && !IS_NPC(temp_ch)))
+	{
+		act("Use 'murder' se você realmente deseja atacar $N.", FALSE, ch, 0, temp_ch, TO_CHAR);
 		return;
 	}
 	percent = rand_number(1, 101);	/* 101% is a complete failure */
@@ -815,12 +836,12 @@ ACMD(do_rescue)
 
 	if (percent > prob)
 	{
-		send_to_char(ch, "You fail the rescue!\r\n");
+		send_to_char(ch, "Você falhou no resgate!\r\n");
 		return;
 	}
-	send_to_char(ch, "Banzai!  To the rescue...\r\n");
-	act("You are rescued by $N, you are confused!", FALSE, vict, 0, ch, TO_CHAR);
-	act("$n heroically rescues $N!", FALSE, ch, 0, vict, TO_NOTVICT);
+	send_to_char(ch, "Banzai!  Ao resgate...\r\n");
+	act("Você foi resgatado por $N! Você fica confuso...", FALSE, vict, 0, ch, TO_CHAR);
+	act("$n heroicamente resgata $N!", FALSE, ch, 0, vict, TO_NOTVICT);
 
 	if (FIGHTING(vict) == tmp_ch)
 		stop_fighting(vict);
@@ -832,7 +853,10 @@ ACMD(do_rescue)
 	set_fighting(ch, tmp_ch);
 	set_fighting(tmp_ch, ch);
 
-	WAIT_STATE(vict, 2 * PULSE_VIOLENCE);
+	if (GET_LEVEL(ch) < LVL_GOD)
+	{
+		WAIT_STATE(vict, 2 * PULSE_VIOLENCE);
+	}
 }
 
 EVENTFUNC(event_whirlwind)
@@ -866,13 +890,13 @@ EVENTFUNC(event_whirlwind)
 	if (room_list->iSize == 0)
 	{
 		free_list(room_list);
-		send_to_char(ch, "There is no one in the room to whirlwind!\r\n");
+		send_to_char(ch, "Não tem ninguem na sala para o ataque giratório!\r\n");
 		return 0;
 	}
 
 	/* We spit out some ugly colour, making use of the new colour options, to
 	   let the player know they are performing their whirlwind strike */
-	send_to_char(ch, "\t[f313]You deliver a vicious \t[f014]\t[b451]WHIRLWIND!!!\tn\r\n");
+	send_to_char(ch, "\t[f313]Você inicia um poderoso \t[f014]\t[b451]ATAQUE GIRATÓRIO!!\tn\r\n");
 
 	/* Lets grab some a random NPC from the list, and hit() them up */
 	for (count = dice(1, 4); count > 0; count--)
@@ -890,7 +914,7 @@ EVENTFUNC(event_whirlwind)
 	   next call */
 	if (GET_SKILL(ch, SKILL_WHIRLWIND) < rand_number(1, 101))
 	{
-		send_to_char(ch, "You stop spinning.\r\n");
+		send_to_char(ch, "Você para de girar.\r\n");
 		return 0;
 	}
 	else
@@ -904,7 +928,7 @@ ACMD(do_whirlwind)
 
 	if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_WHIRLWIND))
 	{
-		send_to_char(ch, "You have no idea how.\r\n");
+		send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
 		return;
 	}
 
@@ -916,7 +940,7 @@ ACMD(do_whirlwind)
 
 	if (GET_POS(ch) < POS_FIGHTING)
 	{
-		send_to_char(ch, "You must be on your feet to perform a whirlwind.\r\n");
+		send_to_char(ch, "Você precisa estar em pé para realizar um ataque giratório.\r\n");
 		return;
 	}
 
@@ -926,12 +950,12 @@ ACMD(do_whirlwind)
 	   currently exists. */
 	if (char_has_mud_event(ch, eWHIRLWIND))
 	{
-		send_to_char(ch, "You are already attempting that!\r\n");
+		send_to_char(ch, "Você já está tentando isto!\r\n");
 		return;
 	}
 
-	send_to_char(ch, "You begin to spin rapidly in circles.\r\n");
-	act("$n begins to rapidly spin in a circle!", FALSE, ch, 0, 0, TO_ROOM);
+	send_to_char(ch, "Você começa a girar rapidamente.\r\n");
+	act("$n começa a girar rapidamente!", FALSE, ch, 0, 0, TO_ROOM);
 
 	/* NEW_EVENT() will add a new mud event to the event list of the
 	   character. This function below adds a new event of "eWHIRLWIND", to
@@ -947,11 +971,9 @@ ACMD(do_kick)
 	struct char_data *vict;
 	int percent, prob;
 
-
-	// if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_KICK))
 	if (!IS_NPC(ch) && !GET_SKILL(ch, SKILL_KICK))
 	{
-		send_to_char(ch, "You have no idea how.\r\n");
+		send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
 		return;
 	}
 
@@ -965,15 +987,22 @@ ACMD(do_kick)
 		}
 		else
 		{
-			send_to_char(ch, "Kick who?\r\n");
+			send_to_char(ch, "Chutar quem?\r\n");
 			return;
 		}
 	}
 	if (vict == ch)
 	{
-		send_to_char(ch, "Aren't we funny today...\r\n");
+		send_to_char(ch, "Chega de gracinhas hoje...\r\n");
 		return;
 	}
+	
+	else if ((!CONFIG_PK_ALLOWED && !IS_NPC(vict)))
+	{
+		act("Use 'murder' se você realmente deseja atacar $N.", FALSE, ch, 0, vict, TO_CHAR);
+		return;
+	}
+	
 	/* 101% is a complete failure */
 	percent = ((10 - (compute_armor_class(vict) / 10)) * 2) + rand_number(1, 101);
 
@@ -985,7 +1014,7 @@ ACMD(do_kick)
 	if (percent > prob)
 		damage(ch, vict, 0, SKILL_KICK);
 	else
-		damage(ch, vict, GET_LEVEL(ch) / 2, SKILL_KICK);
+		damage(ch, vict, GET_LEVEL(ch), SKILL_KICK);
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 3);
 }
@@ -997,26 +1026,26 @@ ACMD(do_bandage)
 	int percent, prob;
 	if (!GET_SKILL(ch, SKILL_BANDAGE))
 	{
-		send_to_char(ch, "You are unskilled in the art of bandaging.\r\n");
+		send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
 		return;
 	}
 
 	if (GET_POS(ch) != POS_STANDING)
 	{
-		send_to_char(ch, "You are not in a proper position for that!\r\n");
+		send_to_char(ch, "Você não está na posição adequada!\r\n");
 		return;
 	}
 
 	one_argument(argument, arg);
 	if (!(vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)))
 	{
-		send_to_char(ch, "Who do you want to bandage?\r\n");
+		send_to_char(ch, "Em quem você quer fazer os primeiros socorros?\r\n");
 		return;
 	}
 
 	if (GET_HIT(vict) >= 0)
 	{
-		send_to_char(ch, "You can only bandage someone who is close to death.\r\n");
+		send_to_char(ch, "Você só pode estabilizar quem está \x1B[0;31mpróximo da morte!\tn\r\n");
 		return;
 	}
 
