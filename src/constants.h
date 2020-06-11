@@ -70,7 +70,4 @@ extern const char *sun_states[];
 extern const struct weapon_prof_data wpn_prof[];
 extern const struct nighthammer_data nighthammer_info[];
 
-extern const struct climate_data climates[];
-
-
 #endif /* _CONSTANTS_H_ */
