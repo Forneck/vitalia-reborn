@@ -247,7 +247,7 @@ ACMD(do_backstab)
 	}
 	if (!CONFIG_PK_ALLOWED && !IS_NPC(vict))	/* prevent accidental
 													   pkill */
-		act("Use 'murder' se voce realmente deseja atacar $N.", FALSE, ch, 0, opponent, TO_CHAR);
+		act("Use 'murder' se voce realmente deseja atacar $N.", FALSE, ch, 0, vict, TO_CHAR);
 	if (!GET_EQ(ch, WEAR_WIELD))
 	{
 		send_to_char(ch, "Voce precisa empunhar uma arma para fazer isso.\r\n");
