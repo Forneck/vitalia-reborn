@@ -1,9 +1,9 @@
 #1700
 Um Vale Selvagem~
-   Você move-se vagarosamente através das verdes videiras e da espessa grama
-   Que cobre o chão do vale.  Parece que este lugar não tem recebido pessoas
-há décadas.  A sul, a terra eleva-se até um paredão coberto de vegetação,
-onde apenas um buraco se destaca.  A leste a vegetação abre-se para um
+   Vocï¿½ move-se vagarosamente atravï¿½s das verdes videiras e da espessa grama
+   Que cobre o chï¿½o do vale.  Parece que este lugar nï¿½o tem recebido pessoas
+hï¿½ dï¿½cadas.  A sul, a terra eleva-se atï¿½ um paredï¿½o coberto de vegetaï¿½ï¿½o,
+onde apenas um buraco se destaca.  A leste a vegetaï¿½ï¿½o abre-se para um
 caminho que leva a uma estranha encosta de pedra.
 ~
 17 gc 4
@@ -22,15 +22,15 @@ A encosta parece com uma imensa besta que foi deixada aqui para apodrecer.
 ~
 S
 #1701
-Diante do Dragão~
-   Você para diante da forma petrificada do Dragão Ancalador.  Você ainda 
-pode perceber seu ódio da terra, que um dia foi sua.  Uma vaga sensação de 
-maldade emana do ser petrificado, que um dia aterrorizou nações.
+Diante do Dragï¿½o~
+   Vocï¿½ para diante da forma petrificada do Dragï¿½o Ancalador.  Vocï¿½ ainda 
+pode perceber seu ï¿½dio da terra, que um dia foi sua.  Uma vaga sensaï¿½ï¿½o de 
+maldade emana do ser petrificado, que um dia aterrorizou naï¿½ï¿½es.
 ~
 17 g 4
 D1
-A imensa goela está gelada.  Você poderia alcançar a língua e escalar para 
-entrar, você adoraria fazê-lo.
+A imensa goela estï¿½ gelada.  Vocï¿½ poderia alcanï¿½ar a lï¿½ngua e escalar para 
+entrar, vocï¿½ adoraria fazï¿½-lo.
 ~
 ~
 0 -1 1702 
@@ -40,9 +40,9 @@ D3
 0 -1 1700
 S
 #1702
-Na Boca do Dragão~
-   Fileiras de dentes de pedra tão grandes que formam muros estão aqui.  Uma
-língua marcada com pedras está a leste,  atrás molares de pedra tão
+Na Boca do Dragï¿½o~
+   Fileiras de dentes de pedra tï¿½o grandes que formam muros estï¿½o aqui.  Uma
+lï¿½ngua marcada com pedras estï¿½ a leste,  atrï¿½s molares de pedra tï¿½o
 grandes quanto escudos de ferro.
 ~
 17 gd 0
@@ -56,8 +56,8 @@ D3
 0 -1 1701
 S   
 #1703
-Pelas Amígdalas de Pedra~
-   Você está atrás da boca do dragão.  A garganta continua para baixo e
+Pelas Amï¿½gdalas de Pedra~
+   Vocï¿½ estï¿½ atrï¿½s da boca do dragï¿½o.  A garganta continua para baixo e
 algo transpira do peito petrificado.
 ~
 17 gda 0
@@ -72,8 +72,8 @@ D5
 S
 #1704
 Uma Garganta de Pedra~
-   O chão é irregular -- o meio da passagem é mais baixo que os lados, que 
-crescem como muros.  A passagem como um todo é ligeiramente inclinada,
+   O chï¿½o ï¿½ irregular -- o meio da passagem ï¿½ mais baixo que os lados, que 
+crescem como muros.  A passagem como um todo ï¿½ ligeiramente inclinada,
 levando para o leste e para baixo.
 ~
 17 gda 0
@@ -88,8 +88,8 @@ D5
 S
 #1705
 Ainda Mais nas Profundezas da Garganta~
-   O túnel começa a perder sua inclinação, seguinto simplesmente na direção
-leste.  As formas do que pode ser músculos petrificados cobrem as paredes.
+   O tï¿½nel comeï¿½a a perder sua inclinaï¿½ï¿½o, seguinto simplesmente na direï¿½ï¿½o
+leste.  As formas do que pode ser mï¿½sculos petrificados cobrem as paredes.
 ~
 17 gda 0
 D1
@@ -102,15 +102,15 @@ D4
 0 -1 1704
 S
 #1706
-Uma Junção~  
-   Você está numa junção de quatro caminhos.  A garganta do dragão continua
-a leste e oeste, mas na espremedura abaixo há  um lábio petrificado, você 
-pode perceber túneis ao norte e ao sul.
+Uma Junï¿½ï¿½o~
+   Vocï¿½ estï¿½ numa junï¿½ï¿½o de quatro caminhos.  A garganta do dragï¿½o continua
+a leste e oeste, mas na espremedura abaixo hï¿½  um lï¿½bio petrificado, vocï¿½ 
+pode perceber tï¿½neis ao norte e ao sul.
 ~
 17 gda 0
 D0
-Você espreita embaixo do lábio petrificado e vê uma fraca luz em meio a
-escuridão.
+Vocï¿½ espreita embaixo do lï¿½bio petrificado e vï¿½ uma fraca luz em meio a
+escuridï¿½o.
 ~
 ~
 0 -1 1707
@@ -119,8 +119,8 @@ D1
 ~
 0 -1 1755
 D2
-Você espreita embaixo do lábio petrificado e vê uma fraca luz em meio a
-escuridão.
+Vocï¿½ espreita embaixo do lï¿½bio petrificado e vï¿½ uma fraca luz em meio a
+escuridï¿½o.
 ~
 ~
 0 -1 1710
@@ -129,13 +129,13 @@ D3
 ~
 0 -1 1705
 E
-lábios lábio~
+lï¿½bios lï¿½bio~
  Quem pode dizer a qual parte da anatomia draconiana pertence isso? 
 ~
 S
 #1707
-Um Túnel de Pedra~
-   Essa passagem circular de pedra encurva-se gradualmente para cima, é um 
+Um Tï¿½nel de Pedra~
+   Essa passagem circular de pedra encurva-se gradualmente para cima, ï¿½ um 
 lugar muito iluminado e quente.
 ~
 17 gda 0
@@ -144,14 +144,14 @@ D2
 ~
 0 -1 1706
 D4
-Você pode ver tudo com uma grande claridade, você sente fortes rajadas de 
+Vocï¿½ pode ver tudo com uma grande claridade, vocï¿½ sente fortes rajadas de 
 vento quente.
 ~
 ~
 0 -1 1708
 S
 #1708
-Um Pulmão do Dragão~
+Um Pulmï¿½o do Dragï¿½o~
    Chamas antigas queimam aqui, esperando o renascimento de seu mestre.
 ~
 17 gd 0
@@ -161,22 +161,22 @@ D5
 0 -1 1707
 S
 #1709
-O Coração do Dragão~
-   Palvras mágicas, que brilham com uma luz azul, estão cravadas nas paredes
-de pedra da câmara do coração de Ancalador.  A pureza da mágica contém
-o mal e forma uma sagrada balança de Neutralidade.  Parece que uma música
-amorosa está tocando aqui.
+O Coraï¿½ï¿½o do Dragï¿½o~
+   Palvras mï¿½gicas, que brilham com uma luz azul, estï¿½o cravadas nas paredes
+de pedra da cï¿½mara do coraï¿½ï¿½o de Ancalador.  A pureza da mï¿½gica contï¿½m
+o mal e forma uma sagrada balanï¿½a de Neutralidade.  Parece que uma mï¿½sica
+amorosa estï¿½ tocando aqui.
 ~
 17 gdj 0
 D0
-Você vê a parede da câmara abrir-se para você, guiando para um túnel.
+Vocï¿½ vï¿½ a parede da cï¿½mara abrir-se para vocï¿½, guiando para um tï¿½nel.
 ~
 ~
 0 -1 1755
 S
 #1710
-Um Túnel de Pedra~
-   Essa passagem de pedra é iluminada por uma grande luz e um calor violento
+Um Tï¿½nel de Pedra~
+   Essa passagem de pedra ï¿½ iluminada por uma grande luz e um calor violento
 parece vir do final da passagem.
 ~
 17 gda 0
@@ -185,16 +185,16 @@ D0
 ~
 0 -1 1706
 D4
-Você deve cobrir seus olhos pois o brilho é muito intenso.
+Vocï¿½ deve cobrir seus olhos pois o brilho ï¿½ muito intenso.
 ~
 ~
 0 -1 1711
 S
 #1711
-Um Pulmão do Dragão~
-   Os fogos nucleares que energizavam o dragão com sua apavorante respiração 
-estão aqui, e eles estão latentes a muito tempo, eles queimam você 
-lentamente e fazem você arrepender-se de estar usando uma armadura de metal.
+Um Pulmï¿½o do Dragï¿½o~
+   Os fogos nucleares que energizavam o dragï¿½o com sua apavorante respiraï¿½ï¿½o 
+estï¿½o aqui, e eles estï¿½o latentes a muito tempo, eles queimam vocï¿½ 
+lentamente e fazem vocï¿½ arrepender-se de estar usando uma armadura de metal.
 ~
 17 gd 0
 D5
@@ -203,11 +203,11 @@ D5
 0 -1 1710
 S
 #1712
-Estômago de Ancalador~
+Estï¿½mago de Ancalador~
    A garganta de Ancalador acaba, revelando uma enorme caverna iluminada por
 assustadoras e difusas luzes verdes e amarelas.  Nada mais maravilhoso!  Uma
-ponte de madeira transpõe a caverna coberta por estalactites.  Um degrau 
-abaixo leva, com segurança, ao chão da caverna, e a ponte segue a leste.
+ponte de madeira transpï¿½e a caverna coberta por estalactites.  Um degrau 
+abaixo leva, com seguranï¿½a, ao chï¿½o da caverna, e a ponte segue a leste.
 ~
 17 gdc 0
 D1
@@ -219,16 +219,16 @@ D3
 ~
 0 -1 1755
 D5
-Apesar do degrau, a descida parece árdua, mas não aparenta ser perigosa.
+Apesar do degrau, a descida parece ï¿½rdua, mas nï¿½o aparenta ser perigosa.
 ~
 ~
 0 -1 1720
 S
 #1713
 Uma Ponte de Madeira~
-   Você não pode imaginar quem construiria uma ponte nesta fantástica
+   Vocï¿½ nï¿½o pode imaginar quem construiria uma ponte nesta fantï¿½stica
 caverna.  Grandes estalagmites crescem enquanto as assustadoras luzes 
-parecem mover-se na névoa ao longe.  A ponte continua para o leste.
+parecem mover-se na nï¿½voa ao longe.  A ponte continua para o leste.
 ~
 17 gd 0
 D1
@@ -236,20 +236,20 @@ D1
 ~
 0 -1 1714
 D3
-Você vê a entrada para a câmara do estômago.
+Vocï¿½ vï¿½ a entrada para a cï¿½mara do estï¿½mago.
 ~
 ~
 0 -1 1712
 D5
-As estalagmites parecem olhar de modo ameaçador para você.
+As estalagmites parecem olhar de modo ameaï¿½ador para vocï¿½.
 ~
 ~
 0 -1 1716
 S
 #1714
 Uma Ponte de Madeira~
-   Você está no meio da ponte de madeira.  Grandes estalagmites crescem ao 
-seu redor e as luzes assustadoras continuam a dançar na névoa ao longe.
+   Vocï¿½ estï¿½ no meio da ponte de madeira.  Grandes estalagmites crescem ao 
+seu redor e as luzes assustadoras continuam a danï¿½ar na nï¿½voa ao longe.
 A ponte continua para o leste e para o oeste.
 ~
 17 gd 0
@@ -262,20 +262,20 @@ D3
 ~
 0 -1 1713
 D5
-As estalagmites parecem olhar de modo ameaçador para você.
+As estalagmites parecem olhar de modo ameaï¿½ador para vocï¿½.
 ~
 ~
 0 -1 1716
 S
 #1715
 Uma Ponte de Madeira~
-   A floresta aqui é velha, semelhante ao resto da ponte. As mortais
+   A floresta aqui ï¿½ velha, semelhante ao resto da ponte. As mortais
 estalagmites continuam ao longe e mais luzes verdes e amarelas podem ser
-vistas na névoa ao longe.  A ponte acaba num pequeno planalto a leste.
+vistas na nï¿½voa ao longe.  A ponte acaba num pequeno planalto a leste.
 ~
 17 gd 0
 D1
-Você vê a ponte coincidir com o fim da caverna.
+Vocï¿½ vï¿½ a ponte coincidir com o fim da caverna.
 ~
 ~
 0 -1 1726
@@ -284,24 +284,24 @@ D3
 ~
 0 -1 1714
 D5
-As estalagmites parecem olhar de modo ameaçador para você.
+As estalagmites parecem olhar de modo ameaï¿½ador para vocï¿½.
 ~
 ~
 0 -1 1716
 S
 #1716
 Uma Floresta de Estalagmite~
-   Você mergulha na ponte de madeira e encontra-se grudado entre várias 
-estalagmites.  Mover-se machuca muito, e você não consegue lembrar-se de 
-nenhuma mágica para escapar dessa situação.
+   Vocï¿½ mergulha na ponte de madeira e encontra-se grudado entre vï¿½rias 
+estalagmites.  Mover-se machuca muito, e vocï¿½ nï¿½o consegue lembrar-se de 
+nenhuma mï¿½gica para escapar dessa situaï¿½ï¿½o.
 ~
 17 gcd 0
 S
 #1717
-A Floresta Ácida~
+A Floresta ï¿½cida~
    Estalagmites afiadas encontram-se aqui, criadas por pingos de mineral
-que caem das estalactites acima.  Poças de ácido preenchem cada fenda do
-duro chão da caverna.  A caverna continua para o sul e leste.
+que caem das estalactites acima.  Poï¿½as de ï¿½cido preenchem cada fenda do
+duro chï¿½o da caverna.  A caverna continua para o sul e leste.
 ~
 17 gd 4
 D1
@@ -314,10 +314,10 @@ D2
 0 -1 1720
 S
 #1718
-A Floresta Ácida~
-   As Estalagmites daqui são grandes e de tom arco-íris.  Poças de ácido
-gástrico estão espalhadas pelo chão.  A caverna expande-se em todas as 
-direções exceto ao norte.
+A Floresta ï¿½cida~
+   As Estalagmites daqui sï¿½o grandes e de tom arco-ï¿½ris.  Poï¿½as de ï¿½cido
+gï¿½strico estï¿½o espalhadas pelo chï¿½o.  A caverna expande-se em todas as 
+direï¿½ï¿½es exceto ao norte.
 ~
 17 gd 4
 D1
@@ -334,9 +334,9 @@ D3
 0 -1 1717
 S
 #1719
-A Floresta Ácida~
+A Floresta ï¿½cida~
    Afiadas estalagmites crescem, criadas por pingos de mineral que caem das
-estalactites acima.  Poças de ácido preenchem cada fenda do duro chão da 
+estalactites acima.  Poï¿½as de ï¿½cido preenchem cada fenda do duro chï¿½o da 
 caverna.
 ~
 17 gd 4
@@ -350,11 +350,11 @@ D3
 0 -1 1718
 S
 #1720
-A Floresta Ácida~
-   Você para em frente a uma maravilhosa visão.  Escondido entre a névoa no
-chão da caverna está uma floresta, de forma diferente, estalagmites afiadas
-rodeadas por poças de algo que deve ser os restos de ácido gástrico do 
-dragão.
+A Floresta ï¿½cida~
+   Vocï¿½ para em frente a uma maravilhosa visï¿½o.  Escondido entre a nï¿½voa no
+chï¿½o da caverna estï¿½ uma floresta, de forma diferente, estalagmites afiadas
+rodeadas por poï¿½as de algo que deve ser os restos de ï¿½cido gï¿½strico do 
+dragï¿½o.
 ~
 17 gd 4
 D0
@@ -370,16 +370,16 @@ D2
 ~
 0 -1 1723
 D4
-Você vê o peitoril de entrada para a caverna do estômago.
+Vocï¿½ vï¿½ o peitoril de entrada para a caverna do estï¿½mago.
 ~
 ~
 0 -1 1712
 S
 #1721
-A Floresta Ácida~
-   Você está no centro da caverna do estômago do dragão.  Uma ponte de
+A Floresta ï¿½cida~
+   Vocï¿½ estï¿½ no centro da caverna do estï¿½mago do dragï¿½o.  Uma ponte de
 madeira aparece ao longe.  Afiadas estalagmites equilibram-se aqui
-encontrando cada pingo que é lançado sobre elas.
+encontrando cada pingo que ï¿½ lanï¿½ado sobre elas.
 ~
 17 gd 4
 D0
@@ -400,9 +400,9 @@ D3
 0 -1 1720
 S
 #1722
-A Floresta Ácida~
-   As estalagmites aqui são grandes e têm um tom de arco-íris.  Poças de 
-ácido gástrico estão espalhadas pelo chão.  Um degrau leva a um grande
+A Floresta ï¿½cida~
+   As estalagmites aqui sï¿½o grandes e tï¿½m um tom de arco-ï¿½ris.  Poï¿½as de 
+ï¿½cido gï¿½strico estï¿½o espalhadas pelo chï¿½o.  Um degrau leva a um grande
 planalto no fim da caverna.
 ~
 17 gd 4
@@ -419,14 +419,14 @@ D3
 ~
 0 -1 1721
 D4
-Aparentemente ele é um degrau que também leva-o de volta.
+Aparentemente ele ï¿½ um degrau que tambï¿½m leva-o de volta.
 ~
 ~
 0 -1 -1
 S
 #1723
-A Floresta Ácida~ 
-   Névoa gira ao redor de um estranho ovo de casca de cristal.  A caverna
+A Floresta ï¿½cida~
+   Nï¿½voa gira ao redor de um estranho ovo de casca de cristal.  A caverna
 continua para o norte e para o leste.
 ~
 17 gd 4
@@ -440,9 +440,9 @@ D1
 0 -1 1724
 S
 #1724
-A Floresta Ácida~
+A Floresta ï¿½cida~
    Afiadas estalagmites crescem, criadas por pingos de mineral que caem das
-estalactites acima.  Poças de ácido preenchem cada fenda do duro chão da 
+estalactites acima.  Poï¿½as de ï¿½cido preenchem cada fenda do duro chï¿½o da 
 caverna.
 ~
 17 gd 4
@@ -460,9 +460,9 @@ D3
 0 -1 1723
 S
 #1725
-A Floresta Ácida~
-   As estalagmites aqui são grandes e têm um tom de arco-íris.  Poças de 
-ácido gástrico estão espalhadas pelo chão.  A caverna continua para norte e 
+A Floresta ï¿½cida~
+   As estalagmites aqui sï¿½o grandes e tï¿½m um tom de arco-ï¿½ris.  Poï¿½as de 
+ï¿½cido gï¿½strico estï¿½o espalhadas pelo chï¿½o.  A caverna continua para norte e 
 oeste.
 ~
 17 gd 4
@@ -476,40 +476,40 @@ D3
 0 -1 1724
 S
 #1726
-O Fim do Estomâgo~
-   A ponte de madeira acaba aqui, num grande planalto acima do chão da 
-caverna.  O planalto tem uma vista panorâmica, por completo, da floresta de
-ácido e pedra ao longe.  Um túnel na parede da caverna ao leste foi escorado
-por uma parede de gesso e ossos.  Duas grandes portas com maçanetas de 
+O Fim do Estomï¿½go~
+   A ponte de madeira acaba aqui, num grande planalto acima do chï¿½o da 
+caverna.  O planalto tem uma vista panorï¿½mica, por completo, da floresta de
+ï¿½cido e pedra ao longe.  Um tï¿½nel na parede da caverna ao leste foi escorado
+por uma parede de gesso e ossos.  Duas grandes portas com maï¿½anetas de 
 caveira foram colocadas aqui.
 ~
 17 gda 0
 D1
-Você vê uma enorme quantidade de portas feitas de ossos.
+Vocï¿½ vï¿½ uma enorme quantidade de portas feitas de ossos.
 ~
 porta portas caveira~
 adbc 1718 1756
 D3
-Você vê uma ponte de madeira.
+Vocï¿½ vï¿½ uma ponte de madeira.
 ~
 ~
 0 -1 1715
 D5
-Você vê um degrau que desce para o chão da caverna.
+Vocï¿½ vï¿½ um degrau que desce para o chï¿½o da caverna.
 ~
 ~
 0 -1 1722
 S
 #1727
-O Pâncreas do Dragão~
-   Você está numa câmara de forma estranha, o mais forte orgão de Ancalador.
-  Uma luz amarelada ilumina a sala.  O pressentimento de maldade é grande 
-aqui, pode-se ler um aviso que diz, 'Memento Mori', ou na nossa língua, 
-'Lembre-se de Morrer'.  A câmara ainda continua para o leste e para baixo.
+O Pï¿½ncreas do Dragï¿½o~
+   Vocï¿½ estï¿½ numa cï¿½mara de forma estranha, o mais forte orgï¿½o de Ancalador.
+  Uma luz amarelada ilumina a sala.  O pressentimento de maldade ï¿½ grande 
+aqui, pode-se ler um aviso que diz, 'Memento Mori', ou na nossa lï¿½ngua, 
+'Lembre-se de Morrer'.  A cï¿½mara ainda continua para o leste e para baixo.
 ~
 17 gd 0
 D0
-Você vê uma fissura na parede do orgão.
+Vocï¿½ vï¿½ uma fissura na parede do orgï¿½o.
 ~
 fissura~
 adbc -1 1756
@@ -524,9 +524,9 @@ D5
 S
 #1728
 O Intestino Delgado~
-   Você entrou num túnel monótono que deve ser o começo do intestino delgado
-do dragão.  Pequenas pilhas de caveiras humanas e restos de armaduras foram
-deixados aqui.  O túnel continua para norte e para o oeste um túnel pode ser
+   Vocï¿½ entrou num tï¿½nel monï¿½tono que deve ser o comeï¿½o do intestino delgado
+do dragï¿½o.  Pequenas pilhas de caveiras humanas e restos de armaduras foram
+deixados aqui.  O tï¿½nel continua para norte e para o oeste um tï¿½nel pode ser
 visto.
 ~
 17 gda 0
@@ -541,7 +541,7 @@ D3
 S
 #1729
 O Intestino Delgado~
-   O túnel segue para o sul e para o leste.
+   O tï¿½nel segue para o sul e para o leste.
 ~
 17 gda 0
 D1
@@ -555,7 +555,7 @@ D2
 S
 #1730
 O Intestino Delgado~
-   O tranquilo túnel encurva-se para o oeste e para o norte.
+   O tranquilo tï¿½nel encurva-se para o oeste e para o norte.
 ~
 17 gda 0
 D2
@@ -569,7 +569,7 @@ D3
 S
 #1731
 O Intestino Delgado~
-   As paredes claras do túnel correm para o norte e para o sul.
+   As paredes claras do tï¿½nel correm para o norte e para o sul.
 ~
 17 gda 0
 D0
@@ -583,7 +583,7 @@ D2
 S
 #1732
 O Intestino Delgado~
-   O Túnel vem do norte e mergulha penetrantemente para baixo.
+   O Tï¿½nel vem do norte e mergulha penetrantemente para baixo.
 ~
 17 gda 0
 D0
@@ -597,8 +597,8 @@ D5
 S
 #1733
 O Intestino Delgado~
-   O descaracterizado túnel leva para o norte e para cima.  Sons ecoam das
-claras paredes, você não pode dizer se estão longe ou perto.
+   O descaracterizado tï¿½nel leva para o norte e para cima.  Sons ecoam das
+claras paredes, vocï¿½ nï¿½o pode dizer se estï¿½o longe ou perto.
 ~
 17 gda 0
 D0
@@ -612,8 +612,8 @@ D4
 S
 #1734
 O Intestino Delgado~
-   Pilhas de equipamento quebrado, de aventureiros há muito tempo mortos,
-foram armazenadas aqui.  O túnel corre para o norte e para o sul.
+   Pilhas de equipamento quebrado, de aventureiros hï¿½ muito tempo mortos,
+foram armazenadas aqui.  O tï¿½nel corre para o norte e para o sul.
 ~
 17 gda 0
 D0
@@ -627,8 +627,8 @@ D2
 S
 #1735
 O Intestino Delgado~
-   O túnel encurva-se do sul para o leste.  Você imagina que muitos restos,
-de bravos guerreiros que desafiaram o dragão, podem estar aqui dilacerados
+   O tï¿½nel encurva-se do sul para o leste.  Vocï¿½ imagina que muitos restos,
+de bravos guerreiros que desafiaram o dragï¿½o, podem estar aqui dilacerados
 e estragados.
 ~
 17 gda 0
@@ -643,7 +643,7 @@ D2
 S
 #1736
 O Intestino Delgado~
-   As paredes claras do túnel seguem para o leste e para o sul.
+   As paredes claras do tï¿½nel seguem para o leste e para o sul.
 ~
 17 gda 0
 D2
@@ -657,7 +657,7 @@ D3
 S
 #1737
 O Intestino Delgado~
-   O tranquilo túnel estreita-se, ao sul daqui, num novo túnel.
+   O tranquilo tï¿½nel estreita-se, ao sul daqui, num novo tï¿½nel.
 ~
 17 gda 0
 D0
@@ -665,15 +665,15 @@ D0
 ~
 0 -1 1736
 D2
-O novo túnel parece ser composto de diferentes texturas.
+O novo tï¿½nel parece ser composto de diferentes texturas.
 ~
 ~
 0 -1 1738
 S
 #1738
 O Intestino Grosso~
-   Diferente do intestino delgado, as paredes aqui têm fendas.  Elas são 
-ásperas e sujas.
+   Diferente do intestino delgado, as paredes aqui tï¿½m fendas.  Elas sï¿½o 
+ï¿½speras e sujas.
 ~
 17 gda 0
 D0
@@ -687,7 +687,7 @@ D1
 S
 #1739
 O Intestino Grosso~
-  O cheiro de lixo é forte nesta parte do túnel que corre para o oeste e 
+  O cheiro de lixo ï¿½ forte nesta parte do tï¿½nel que corre para o oeste e 
 para o norte.
 ~
 17 gda 0
@@ -702,8 +702,8 @@ D3
 S
 #1740
 O Intestino Grosso~
-   As ásperas paredes do túnel arranham sua armadura e corta sua pele 
-desprotegida quando você segue para o norte ou para o sul.
+   As ï¿½speras paredes do tï¿½nel arranham sua armadura e corta sua pele 
+desprotegida quando vocï¿½ segue para o norte ou para o sul.
 ~
 17 gda 0
 D0
@@ -717,7 +717,7 @@ D2
 S
 #1741
 O Intestino Grosso~
-   O túnel segue para o leste mas você acha muitos apoios entre a 
+   O tï¿½nel segue para o leste mas vocï¿½ acha muitos apoios entre a 
 sujeira.
 ~
 17 gda 0
@@ -732,7 +732,7 @@ D2
 S
 #1742
 O Intestino Grosso~
-   O áspero e rachado túnel estreita-se para o sul.
+   O ï¿½spero e rachado tï¿½nel estreita-se para o sul.
 ~
 17 gda 0
 D2
@@ -745,9 +745,9 @@ D3
 0 -1 1741
 S
 #1743
-Uma Sfíncter de Pedra~
-   Você está num túnel estreito, pode-se andar sem bater sua cabeça no teto.
-Uma brisa do sul levanta a poeira e você começa a acreditar que está longe 
+Uma Sfï¿½ncter de Pedra~
+   Vocï¿½ estï¿½ num tï¿½nel estreito, pode-se andar sem bater sua cabeï¿½a no teto.
+Uma brisa do sul levanta a poeira e vocï¿½ comeï¿½a a acreditar que estï¿½ longe 
 de estar seguro.
 ~
 17 gda 0
@@ -761,50 +761,50 @@ D1
 0 -1 1744
 S
 #1744
-No Rabo do Dragão~
-   Você nunca tinha ficado tão feliz por ter visto a luz do dia!  Você está
-no rabo de pedra do dragão, que é coberto de verdes videiras e pequenas 
-violetas.  Os pássaros cantam e você pode perceber um desfalecido pátio 
-para o sul, deixando o monte do dragão.  Uma poste indicador em forma de 
-caveira aponta para um caminho pouco usado ao norte.  Há uma grande porção 
+No Rabo do Dragï¿½o~
+   Vocï¿½ nunca tinha ficado tï¿½o feliz por ter visto a luz do dia!  Vocï¿½ estï¿½
+no rabo de pedra do dragï¿½o, que ï¿½ coberto de verdes videiras e pequenas 
+violetas.  Os pï¿½ssaros cantam e vocï¿½ pode perceber um desfalecido pï¿½tio 
+para o sul, deixando o monte do dragï¿½o.  Uma poste indicador em forma de 
+caveira aponta para um caminho pouco usado ao norte.  Hï¿½ uma grande porï¿½ï¿½o 
 de terra, estrategicamente colocada,para bloquear o caminho para o norte.
 ~
 17 gc 3
 D2
-Você vê um pátio rodeando o dragão, voltando para sua goela.
+Vocï¿½ vï¿½ um pï¿½tio rodeando o dragï¿½o, voltando para sua goela.
 ~
 ~
 0 -1 1701
 D3
-Há um estranho buraco na parede de pedra, com um lado circular.
+Hï¿½ um estranho buraco na parede de pedra, com um lado circular.
 ~
 ~
 0 -1 1743
 E 
 sinal poste indicador~
-No poste indicador lê-se uma antiga escrita rúnica:
+No poste indicador lï¿½-se uma antiga escrita rï¿½nica:
 
-A Penúltima Torre da Magia, uma lenda ou uma realidade? No final desse
-caminho... quem sabe você não ache a verdade?  Dentre aqueles que foram ver
+A Penï¿½ltima Torre da Magia, uma lenda ou uma realidade? No final desse
+caminho... quem sabe vocï¿½ nï¿½o ache a verdade?  Dentre aqueles que foram ver
 nenhum voltou para contar a verdade...
                             
                                  ---Mercutio, o Poeta do Reino
 
 ~
 E
-porção terra estratégica~
-Esta grande e estranha criação é, meramente, uma estratégia muito usado por 
-escritores para desviar pessoas para longe de algo que ele ou ela não queria
-que eles vissem até o presente momento.  Falando nisso, você viu o pátio
-que leva ao sul, não viu?
+porï¿½ï¿½o terra estratï¿½gica~
+Esta grande e estranha criaï¿½ï¿½o ï¿½, meramente, uma estratï¿½gia muito usado por 
+escritores para desviar pessoas para longe de algo que ele ou ela nï¿½o queria
+que eles vissem atï¿½ o presente momento.  Falando nisso, vocï¿½ viu o pï¿½tio
+que leva ao sul, nï¿½o viu?
 ~
 S
 #1745
 Um Jardim Morto-Vivo~
-   Arbustos balançando e palmeiras tremorosas rodeiam algumas árvores
-esqueléticas que formam este horrendo jardim.  A vida, esconde-se nas 
-deformadas paredes da câmara, parece que todas morreram e voltaram da morte   
-de algum modo.  Uma parede abre-se no orgão petrificado levando para o 
+   Arbustos balanï¿½ando e palmeiras tremorosas rodeiam algumas ï¿½rvores
+esquelï¿½ticas que formam este horrendo jardim.  A vida, esconde-se nas 
+deformadas paredes da cï¿½mara, parece que todas morreram e voltaram da morte   
+de algum modo.  Uma parede abre-se no orgï¿½o petrificado levando para o 
 oeste e para baixo.
 ~
 17 gd 0
@@ -818,33 +818,33 @@ D5
 0 -1 1750
 S
 #1746
-As Câmaras Privadas~
-   Esta pequena sala parece ter sido cavada com as mãos de dentro do 
-pâncreas de Ancalador.  Ela tem alguns confortos, como uma confortável
-cama e um pequeno bancada de alquimista, mas se o dragão algum dia
-libertar-se de sua prisão de pedra, ele ficará bastante infeliz com essa
-situação.  A única saída é para o oeste.
+As Cï¿½maras Privadas~
+   Esta pequena sala parece ter sido cavada com as mï¿½os de dentro do 
+pï¿½ncreas de Ancalador.  Ela tem alguns confortos, como uma confortï¿½vel
+cama e um pequeno bancada de alquimista, mas se o dragï¿½o algum dia
+libertar-se de sua prisï¿½o de pedra, ele ficarï¿½ bastante infeliz com essa
+situaï¿½ï¿½o.  A ï¿½nica saï¿½da ï¿½ para o oeste.
 ~
 17 gd 0
 D3
-Do lado de fora é a câmara do anfiteatro.
+Do lado de fora ï¿½ a cï¿½mara do anfiteatro.
 ~
-porta caixão~
+porta caixï¿½o~
 adcb -1 1747
 S
 #1747
 O Anfiteatro Macabro~
-   Você está numa ampla e circular saliência olhando um grande pedaço de 
-pedra na câmara abaixo.  Assentos crus são feitos de rocha porosa e as 
-paredes são decoradas com vários ossos serrados e um pouco de sangue, 
-'Preso sem direito a fiança.' Uma porta de tampa de caixão foi posta na parede 
+   Vocï¿½ estï¿½ numa ampla e circular saliï¿½ncia olhando um grande pedaï¿½o de 
+pedra na cï¿½mara abaixo.  Assentos crus sï¿½o feitos de rocha porosa e as 
+paredes sï¿½o decoradas com vï¿½rios ossos serrados e um pouco de sangue, 
+'Preso sem direito a fianï¿½a.' Uma porta de tampa de caixï¿½o foi posta na parede 
 a leste, enquanto degraus cortam a rocha ao oeste e abaixo.
 ~
 17 gd 0
 D1
-Você vê uma porta feita de tampa de caixão.
+Vocï¿½ vï¿½ uma porta feita de tampa de caixï¿½o.
 ~
-porta caixão~
+porta caixï¿½o~
 abcd -1 1746
 D3
 ~
@@ -857,10 +857,10 @@ D5
 S
 #1748
 O Templo da Morte~
-   Você está num pequeno santuário em homenagem ao 'Pálido Padre das 
-Pessoas Mudas'.  Aqui, o tirano Grim do inferno é desejado como um princípio 
-de inspiração e sabedoria aos membros da guilda.  A paredes da câmara abrem
-para as saídas ao leste e para baixo.
+   Vocï¿½ estï¿½ num pequeno santuï¿½rio em homenagem ao 'Pï¿½lido Padre das 
+Pessoas Mudas'.  Aqui, o tirano Grim do inferno ï¿½ desejado como um princï¿½pio 
+de inspiraï¿½ï¿½o e sabedoria aos membros da guilda.  A paredes da cï¿½mara abrem
+para as saï¿½das ao leste e para baixo.
 ~
 17 gd 0
 D1
@@ -874,11 +874,11 @@ D5
 S
 #1749
 Armazenagem Fria~
-   O fedor dessa câmara de armazenagem faz você ficar tonto por um tempo.  
-Após a náusea ter passado você percebe cadáveres conservados a frio, em 
+   O fedor dessa cï¿½mara de armazenagem faz vocï¿½ ficar tonto por um tempo.  
+Apï¿½s a nï¿½usea ter passado vocï¿½ percebe cadï¿½veres conservados a frio, em 
 montes, nas paredes de pedra.  Barris de poeira e garrafas de sangue enchem 
-a sala. Na parede, marcado com tinta preta, está rabiscado 'Os sonos sem
-sonhos.'  A câmara acaba para cima ou para o sul.
+a sala. Na parede, marcado com tinta preta, estï¿½ rabiscado 'Os sonos sem
+sonhos.'  A cï¿½mara acaba para cima ou para o sul.
 ~
 17 gd 0
 D2
@@ -892,10 +892,10 @@ D4
 S
 #1750
 O Canil dos Mortos~
-   A câmara feita de uma pedra muito dura está totalmente vazia exceto por
+   A cï¿½mara feita de uma pedra muito dura estï¿½ totalmente vazia exceto por
 um anel de ferro posto no centro.  Uma grande e pesada corrente com um 
-colar em cada ponta está preso a corrente. Numa pequena inscrição no colar
-lê-se 'Quietus.'
+colar em cada ponta estï¿½ preso a corrente. Numa pequena inscriï¿½ï¿½o no colar
+lï¿½-se 'Quietus.'
 ~
 17 gd 0
 D2
@@ -908,10 +908,10 @@ D4
 0 -1 1745
 S
 #1751
-A Sala de Operações~
-   Esta câmara circular é dominada por um grande pedaço de pedra no centro
-que parece conter incontáveis manchas de horríveis experiências. O trabalho 
-cruel que é executado aqui é geralmente observado do anfiteatro por 
+A Sala de Operaï¿½ï¿½es~
+   Esta cï¿½mara circular ï¿½ dominada por um grande pedaï¿½o de pedra no centro
+que parece conter incontï¿½veis manchas de horrï¿½veis experiï¿½ncias. O trabalho 
+cruel que ï¿½ executado aqui ï¿½ geralmente observado do anfiteatro por 
 aprendizes da guilda e patronos.
 ~
 17 gd 0
@@ -926,11 +926,11 @@ D4
 S
 #1752
 A Sala da Guilda~
-   Esta é a maior câmara do pâncreas de Ancalador.  Uma longa mesa de 
-banquetes feita de caixões apertados uns contra os outros enche a longa 
-sala.  Na parede, está escrito, com algo que parece ser sangue de demônio,
-'Um débito que todos nós devemos pagar.'  Um par de portas de tampa de 
-caixão está a oeste, e outras saídas estão ao norte e para cima.
+   Esta ï¿½ a maior cï¿½mara do pï¿½ncreas de Ancalador.  Uma longa mesa de 
+banquetes feita de caixï¿½es apertados uns contra os outros enche a longa 
+sala.  Na parede, estï¿½ escrito, com algo que parece ser sangue de demï¿½nio,
+'Um dï¿½bito que todos nï¿½s devemos pagar.'  Um par de portas de tampa de 
+caixï¿½o estï¿½ a oeste, e outras saï¿½das estï¿½o ao norte e para cima.
 ~
 17 gd 0
 D0
@@ -939,8 +939,8 @@ D0
 0 -1 1749
 D3
 ~
-porta portas caixão~
-:n 2 a porta de tampa de caixão
+porta portas caixï¿½o~
+:n 2 a porta de tampa de caixï¿½o
 abcd -1 1753
 D4
 ~
@@ -948,51 +948,51 @@ D4
 0 -1 1748
 S
 #1753
-O Altar da Aniquilação~
-   Você para em frente ao horrível Altar da Aniquilação onde a mágica e o
-poder da extinção e da dissolução são altamente explorados.  Você pode
-sentir as incontáveis cerimônias de extinção que foram executadas aqui,
+O Altar da Aniquilaï¿½ï¿½o~
+   Vocï¿½ para em frente ao horrï¿½vel Altar da Aniquilaï¿½ï¿½o onde a mï¿½gica e o
+poder da extinï¿½ï¿½o e da dissoluï¿½ï¿½o sï¿½o altamente explorados.  Vocï¿½ pode
+sentir as incontï¿½veis cerimï¿½nias de extinï¿½ï¿½o que foram executadas aqui,
 como trevas que impregnam o altar, que parece uma grande gaiola feita de  
-costelas e no centro está a caveira de um demônio.  Em frente ao altar está 
-uma grade de ferro preta que cobre um poço escuro onde a ruína da vida é 
-glorificada em sacrifício.
+costelas e no centro estï¿½ a caveira de um demï¿½nio.  Em frente ao altar estï¿½ 
+uma grade de ferro preta que cobre um poï¿½o escuro onde a ruï¿½na da vida ï¿½ 
+glorificada em sacrifï¿½cio.
 ~
 17 gd 0
 D1
 ~
-porta portas caixão~
-:n 2 a porta de tampa de caixão
+porta portas caixï¿½o~
+:n 2 a porta de tampa de caixï¿½o
 abcd -1 1752
 D5
-Você não pode ver muita coisa, mas você não gosta do pouco que vê.
+Vocï¿½ nï¿½o pode ver muita coisa, mas vocï¿½ nï¿½o gosta do pouco que vï¿½.
 ~
 grade~
 :n 2 a grade
 abcd 1705 1754
 S
 #1754
-O Poço Escuro~
+O Poï¿½o Escuro~
    O mal deste lugar procura extinguir sua luz quando as trevas sugam uma 
-alma maléfica.  Você conhece o verdadeiro medo quando algo move-se na 
-escuridão... em sua direção.
+alma malï¿½fica.  Vocï¿½ conhece o verdadeiro medo quando algo move-se na 
+escuridï¿½o... em sua direï¿½ï¿½o.
 ~
 17 gda 0
 D4
-Você vê uma grade de ferro preta sobre você.
+Vocï¿½ vï¿½ uma grade de ferro preta sobre vocï¿½.
 ~
 grade ferro~
 :n 2 a grade de ferro
 abcd 1705 1753
 S
 #1755
-Um Túnel de Pedra~
-   A garganta do dragão continua para leste e oeste para um pátio que nem
-sobe nem desce.  A parede sul, leva ao lado esquerdo do dragão, um calor
+Um Tï¿½nel de Pedra~
+   A garganta do dragï¿½o continua para leste e oeste para um pï¿½tio que nem
+sobe nem desce.  A parede sul, leva ao lado esquerdo do dragï¿½o, um calor
 pode ser sentido, seguido por um sentimento de pura maldade.
 ~
 17 gda 0
 D1
-Você vê o túnel abrir-se para uma grande caverna.
+Vocï¿½ vï¿½ o tï¿½nel abrir-se para uma grande caverna.
 ~
 ~
 0 -1 1712
@@ -1003,23 +1003,23 @@ D3
 S
 #1756
 Um Corredor de Pedra~
-   Você está num túnel de pedra circular.  As paredes são irregulares e 
-rachadas.  O túnel continua para leste e oeste.
+   Vocï¿½ estï¿½ num tï¿½nel de pedra circular.  As paredes sï¿½o irregulares e 
+rachadas.  O tï¿½nel continua para leste e oeste.
 ~
 17 gacd 0
 D1
-Você vê o começo de um novo e tranquilo túnel.
+Vocï¿½ vï¿½ o comeï¿½o de um novo e tranquilo tï¿½nel.
 ~
 ~
 0 -1 1728
 D2
-Você parece ser capaz de espiar na fissura aberta.
+Vocï¿½ parece ser capaz de espiar na fissura aberta.
 ~
 fissura~
 :n 2 a fissura
 adcb -1 1727
 D3
-Você vê uma porta feita de osso conduzir até a caverna do estômago.
+Vocï¿½ vï¿½ uma porta feita de osso conduzir atï¿½ a caverna do estï¿½mago.
 ~
 porta portas osso~
 :n 2 a porta de osso
@@ -1030,12 +1030,12 @@ Uma pequena fissura surge de um muro ao sul.
 ~
 S
 #1757
-Além da Lareira~
-   Você descobriu uma passagem secreta na lareira das ruínas e acabou
-escorregando por uma espécie de tobogã que passa por um túnel escuro e
-abafado.  O túnel termina, repentinamente, em uma estreita passagem circular
-com alguma iluminação, a norte.  Uma escada feita de corda, ao lado dessa
-passagem, permite que você escale de volta à passagem que o trouxe até aqui.
+Alï¿½m da Lareira~
+   Vocï¿½ descobriu uma passagem secreta na lareira das ruï¿½nas e acabou
+escorregando por uma espï¿½cie de tobogï¿½ que passa por um tï¿½nel escuro e
+abafado.  O tï¿½nel termina, repentinamente, em uma estreita passagem circular
+com alguma iluminaï¿½ï¿½o, a norte.  Uma escada feita de corda, ao lado dessa
+passagem, permite que vocï¿½ escale de volta ï¿½ passagem que o trouxe atï¿½ aqui.
 ~
 17 gadisr 5
 D0
@@ -1050,9 +1050,9 @@ abdc -1 5999
 S
 #1758
 A Passagem~
-   Você caminha, com dificuldade, pelos metros finais do túnel, agora plano
-mas ainda encharcado por água enlameada.  A passagem parece dar,
-inesperadamente, em um vale que se extende por todo norte.  O túnel fica a
+   Vocï¿½ caminha, com dificuldade, pelos metros finais do tï¿½nel, agora plano
+mas ainda encharcado por ï¿½gua enlameada.  A passagem parece dar,
+inesperadamente, em um vale que se extende por todo norte.  O tï¿½nel fica a
 sul.
 ~
 17 gadsir 5
