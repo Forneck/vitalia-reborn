@@ -12,7 +12,7 @@ obter ajuda para um comando, digite HELP (comando).
    As seguintes habilidades estï¿½o documentadas no VitaliaMUD: Para obter
 ajuda para uma habilidade, digite HELP (nome da habilidade).
 
-   @WHabilidades de luta@n
+   &WHabilidades de luta&n
    BACKSTAB      - Esfaqueia o oponente por trï¿½s            [Lad            ]
    BACKFLIP      - Fazer uma cambalhota sobre o oponente    [Lad            ]
    BASH          - Se chocar contra o oponente              [Gue            ]
@@ -23,7 +23,7 @@ ajuda para uma habilidade, digite HELP (nome da habilidade).
    RESCUE        - Resgata um companheiro                   [Gue            ]
    TRIP          - Rasteira                                 [Brd            ]
 
-   @WHabilidades de armas@n
+   &WHabilidades de armas&n
    SWORDS        - Espadas                                  [Gue            ]
    DAGGERS       - Facas                                    [Lad Gue Brd    ]
    WHIPS         - Chicotes                                 [Gue            ]
@@ -32,7 +32,7 @@ ajuda para uma habilidade, digite HELP (nome da habilidade).
    EXOTICS       - Armas exï¿½ticas                           [Gue            ]
    POLEARMS      - Armas de haste                           [Gue            ]
 
-   @WOutras Habilidades@n
+   &WOutras Habilidades&n
    ENVENOM       - Envenenar armas                          [Lad            ]
    HIDE          - Esconder                                 [Lad            ]
    MEDITATE      - Meditar                                  [Mag Cle Dru Brd]
@@ -45,7 +45,7 @@ ajuda para uma habilidade, digite HELP (nome da habilidade).
    TRACK         - Rastrear                                 [Lad Gue        ]
    ADAGIO        - Torna o corpo mais forte                 [Brd            ]
    ALLEGRO       - Torna o corpo mais hï¿½gil                 [Brd            ]
-#0
+#
 PRACTICE
 
 Uso: practice [magia|habilidade|canï¿½ï¿½o]
@@ -63,7 +63,7 @@ vocï¿½ receberï¿½ uma lista de todas as magias, habilidades e/ou canï¿½ï¿½es que
 vocï¿½ possui e seu devido nï¿½vel de proficiï¿½ncia.
 
 Veja tambï¿½m: MAGIAS, HABILIDADES, CANï¿½ï¿½ES
-#0
+#
 ADAGIO
 
 Somente bardos.
@@ -78,7 +78,7 @@ golpes.
 mesmo tempo.
 
 Veja Tambï¿½m: ALLEGRO, STRENGTH, DAMROLL, DEXTERITY, HITROLL
-#0
+#
 ALLEGRO
 
 Somente bardos.
@@ -93,7 +93,7 @@ destrutividade.
 mesmo tempo.
 
 Veja Tambï¿½m: ADAGIO, DEXTERITY, HITROLL, STRENGTH, DAMROLL
-#0
+#
 BACKFLIP
 
 Somente Ladrï¿½es
@@ -116,7 +116,7 @@ Se o golpe foi aplicado com sucesso vocï¿½ poderï¿½ atacï¿½-lo com BACKSTAB:
 de nenhuma forma.
 
 Veja tambï¿½m: BACKSTAB
-#0
+#
 BACKSTAB
 
    Somente Ladrï¿½es.
@@ -140,7 +140,7 @@ praticou a habilidade na sua guilda.  Vocï¿½ sempre poderï¿½ apunhalar uma
 pessoa adormecida.
 
 Veja tambï¿½m: BACKFLIP
-#0
+#
 BASH
 
    Somente Guerreiros.
@@ -157,7 +157,7 @@ errar irï¿½ perder o equilï¿½brio e cair.
 inflingir 1.5 vezes o dano.
 
 Veja tambï¿½m: KICK, RESCUE
-#0
+#
 COMBO "COMBO ATTACK"
 
    Somente Guerreiros.
@@ -176,7 +176,7 @@ perfeito for realizado contra um oponente nï¿½o muito fraco.
 
    Ao usar a habilidade 'combo attack', vocï¿½ nï¿½o poderï¿½ digitar nenhum
 comando durante 3 rounds de luta.
-#0
+#
 ESCAPE
 
    Somente Ladrï¿½es.
@@ -188,7 +188,7 @@ como acontece com o comando FLEE.  Contudo, em determinadas situaï¿½ï¿½es nï¿½o
 ï¿½ possï¿½vel fugir sem perder experiï¿½ncia.
 
 Veja tambï¿½m: FLEE
-#0
+#
 ENVENOM
 
    Somente Ladrï¿½es.
@@ -204,7 +204,7 @@ Exemplo:
   > envenom faca fonte
 
 Veja tambï¿½m: MAGIA POISON
-#0
+#
 HIDE
 
    Somente Ladrï¿½es.
@@ -223,7 +223,7 @@ Exemplo:
   >  (vocï¿½ aperta enter e nï¿½o estï¿½ mais sobre o efeito da habilidade)
 
 Veja tambï¿½m: SNEAK
-#0
+#
 KICK
 
    Somente Guerreiros.
@@ -237,7 +237,7 @@ qualquer comando por trï¿½s turnos seguidos -- entï¿½o tenha certeza de que vocï
 nï¿½o precisarï¿½ fugir da luta.
 
 Veja tambï¿½m: BASH, RESCUE
-#0
+#
 MEDITATE
 
    Uso: meditate
@@ -252,7 +252,7 @@ permite meditar imediatamente, e vocï¿½ pode acabar caindo no sono.  Para
 encerrar sua meditaï¿½ï¿½o, utilize o comando WAKE.
 
 Veja tambï¿½m: WAKE, SLEEP
-#0
+#
 MOUNT UNMOUNT
 
    Uso: mount
@@ -260,7 +260,7 @@ MOUNT UNMOUNT
 
    Essa habilidade permite que guerreiros e clï¿½rigos montem e cavalguem sobre
 alguns tipos de monstros e animais, como cavalos.
-#0
+#
 NIGHTHAMMER
 
    Somente Ladrï¿½es.
@@ -272,16 +272,16 @@ acordo com o nï¿½vel, e com a hora da noite.
 
    Os nï¿½veis e afetamentos sï¿½o mostrados a seguir:
 
-   Nï¿½vel de Habilidade:      @b[@W 1@b] [@W 2@b] [@W 3@b] [@W 4@b] [@W 5@b] [@W 6@b] [@W 7@b] [@W 8@b]@n
+   Nï¿½vel de Habilidade:      &b[&W 1&b] [&W 2&b] [&W 3&b] [&W 4&b] [&W 5&b] [&W 6&b] [&W 7&b] [&W 8&b]&n
     Classe de Armadura:        -1   -2   -3   -4   -6   -8  -10  -12
        Bï¿½nus de acerto:         0    1    1    1    2    2    2    2
          Bï¿½nus de dano:         0    0    1    1    1    2    2    2
 
-   @WATENï¿½ï¿½O: @n Os bï¿½nus de acerto e de dano nï¿½o sï¿½o visï¿½veis no comando SCORE
+   &WATENï¿½ï¿½O: &n Os bï¿½nus de acerto e de dano nï¿½o sï¿½o visï¿½veis no comando SCORE
 e na magia IDENTIFY.  Eles sï¿½o aplicados diretamente aos golpes durante a
 luta.  Os valores que aparecem no SCORE e na magia IDENTIFY indicam os
 valores recebidos com equipamentos e magias.
-#0
+#
 "PICK LOCKS" PICK
 
    Somente Ladrï¿½es.
@@ -296,7 +296,7 @@ Exemplos:
   > pick safe
 
 Veja tambï¿½m : OPEN, CLOSE, LOCK, UNLOCK
-#0
+#
 RESCUE
 
 Somente Guerreiros.
@@ -309,7 +309,7 @@ quando jogando em grupos, ï¿½ claro.
 
 Exemplo:
   > rescue Yankee
-#0
+#
 SEIZE
 
    Somente Ladrï¿½es.
@@ -322,7 +322,7 @@ destreza, e o quanto vocï¿½ ï¿½ mais forte do que a vï¿½tima.
 
    Enquanto a vï¿½tima estiver imobilizada, ela nï¿½o poderï¿½ lutar ou fugir.  O
 mesmo ocorre com a pessoa que estiver imobilizando.
-#0
+#
 SNEAK
 
    Somente Ladrï¿½es.
@@ -335,7 +335,7 @@ sobre o efeito da habilidade.  Se vocï¿½ conseguir utilizar com sucesso, o
 efeito irï¿½ continuar por algum tempo.
 
 Veja tambï¿½m: HIDE
-#0
+#
 SPY
 
    Somente Ladrï¿½es.
@@ -345,7 +345,7 @@ SPY
    Permite espiar em uma sala adjacente ï¿½ sala atual, sem a necessidade de
 se locomover atï¿½ ela.  ï¿½ ï¿½til para verificar se a sala em que vocï¿½ deseja
 chegar ï¿½ realmente segura.
-#0
+#
 STEAL
 
    Somente Ladrï¿½es.
@@ -366,7 +366,7 @@ Exemplos:
     (Se a arma estiver sendo usada, sï¿½ serï¿½ possï¿½vel se ele estiver atordoado)
 
 Veja tambï¿½m: FLAGS
-#0
+#
 TRACK
 
    Uso: track <vï¿½tima>
@@ -376,7 +376,7 @@ TRACK
 Exemplo:
   > track fido
   Vocï¿½ sente um rastro a sul daqui!
-#0
+#
 SWORDS DAGGERS WHIPS "TALONOUS ARMS" BLUDGEONS EXOTICS POLEARMS
 
    Estas habilidades oferecem bï¿½nus nos atributos de luta quando o guerreiro
@@ -387,7 +387,7 @@ de luta.
 
    Cada tipo de arma necessita uma habilidade diferente.
 
-   @WHabilidade           Ataques@n
+   &WHabilidade           Ataques&n
    swords               retalhada
    daggers              ferroada, furada, esfaqueada
    whips                aï¿½oitada, chicoteada
@@ -395,7 +395,7 @@ de luta.
    bludgeons            cacetada, espancada, moï¿½da, esmagada
    exotics              golpe, esmurrada, mordida, explosï¿½o
    polearms             perfurada, espetada, cortada
-#0
+#
 TRIP
 
 Somente bardos.
@@ -406,5 +406,6 @@ Uso: trip <vï¿½tima>
 atingido, cairï¿½ no chï¿½o, ficando vulnerï¿½vel por um turno.  A queda causa
 dano ï¿½ vï¿½tima.  O sucesso nessa habilidade depende do quanto foi treinada.
 Se o bardo errar seu ataque, irï¿½ ao chï¿½o e serï¿½ ferido devido queda.
-#0
-$~
+#
+$
+~
