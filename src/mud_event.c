@@ -24,6 +24,7 @@ struct mud_event_list mud_event_index[] = {
   { "Null"         , NULL           , -1          },  /* eNULL */
   { "Protocol"     , get_protocols  , EVENT_DESC  },  /* ePROTOCOLS */
   { "Whirlwind"    , event_whirlwind, EVENT_CHAR  },  /* eWHIRLWIND */
+   { "Backflip"    , event_backflip, EVENT_CHAR  },  /* eWHIRLWIND */
   { "Spell:Darkness",event_countdown, EVENT_ROOM  }   /* eSPL_DARKNESS */
 };
 
@@ -79,6 +80,7 @@ EVENTFUNC(event_countdown)
       break;
     case eWHIRLWIND:
       break;
+     case eBACKFLIP:
     case eNULL:
       break;
   }
