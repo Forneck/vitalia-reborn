@@ -735,12 +735,11 @@ ACMD(do_trip)
       return;
     }
   } else if (vict == ch) {
-    send_to_char(ch, "Haha... Muito engra�ado... Voc� � palha�o de circo?\r\n");
+    send_to_char(ch, "Haha... Muito engraçado... Você é palhaço de circo?\r\n");
     return;
-  } else if (!can_fight(ch, vict))
-    return;
+  }
   else if ((!CONFIG_PK_ALLOWED && !IS_NPC(vict))) {
-    act("Use 'murder' se vocêrealmente deseja atacar $N.", FALSE, ch, 0, vict, TO_CHAR);
+    act("Use 'murder' se você realmente deseja atacar $N.", FALSE, ch, 0, vict, TO_CHAR);
     return;
   }
 
