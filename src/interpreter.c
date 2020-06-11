@@ -160,6 +160,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"formula", "form", POS_DEAD, do_formula, LVL_GOD, 0},
 	{"freeze", "freeze", POS_DEAD, do_wizutil, LVL_GRGOD, SCMD_FREEZE},
 
+	{"gassist", "gas", POS_FIGHTING, do_gassist, 1, 0},
 	{"get", "g", POS_RESTING, do_get, 0, 0},
 	{"gecho", "gecho", POS_DEAD, do_gecho, LVL_GOD, 0},
 	{"gemote", "gem", POS_SLEEPING, do_gen_comm, 0, SCMD_GEMOTE},
