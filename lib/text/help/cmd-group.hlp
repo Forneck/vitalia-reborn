@@ -14,7 +14,7 @@ Para obter ajuda para um comando, digite HELP <comando>.
    &gUNGROUP              &nChutar algu�m para fora do seu grupo.
    &gQUEST                &nEntrar ou sair do grupo de busca.
    &gQSAY                 &nDizer algo para todos do grupo de busca (quest).
-#
+#0
 FOLLOW
 
 Uso: follow <jogador>
@@ -27,7 +27,7 @@ Exemplos:
    > follow self
 
 Veja tamb�m: GROUP, SNEAK
-#
+#0
 GASSIST
 
 Uso: gassist
@@ -36,7 +36,7 @@ Uso: gassist
 lutando.
 
 Veja tamb�m: ASSIST
-#
+#0
 GROUP
 
 Uso: group [jogador]
@@ -79,7 +79,7 @@ dormindo o tempo todo) ele pode digitar: "GROUP QUIFAEL" para excluir
 Quifael do grupo.
 
 Veja tamb�m: EXPERIENCIA, UNGROUP, XP
-#
+#0
 ORDER
 
 Uso: order <v�tima> <comando>
@@ -94,7 +94,7 @@ Exemplos:
    > order guarda sleep
 
 Veja tamb�m: MAGIA CHARM
-#
+#0
 QUEST
 
 Uso: quest
@@ -107,14 +107,14 @@ oportunidade de participar da aventura.
    Veja mais detalhes no t�pico "QUESTS".
 
 Veja tamb�m: QUESTS, QSAY
-#
+#0
 REPORT
 
 Uso: report
 
    Este comando manda um relato sobre o seu atual estado (sa�de), para os
 outros membros do grupo.
-#
+#0
 SPLIT
 
 Uso: split <quantidade a ser dividida>
@@ -127,7 +127,7 @@ membro do grupo.  (100 moedas s�o divididas em 5; voc� fica com sua parte e
 entrega a outra parte aos membros do grupo).
 
 Veja tamb�m: FOLLOW, GROUP
-#
+#0
 UNGROUP
 
 Uso: ungroup [jogador do grupo]
@@ -142,6 +142,6 @@ Exemplos:
    > ungroup homer
 
 Veja tamb�m: GROUP
-#
+#0
 $
 ~
