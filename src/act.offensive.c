@@ -70,6 +70,57 @@ ACMD(do_assist)
 		}
 	}
 }
+/* -- VP
+ * -- jr - 23/06/99 * Rotina reestruturada, para eliminar bugs.
+ * -- jr - Apr 16, 2000 * Nova reestrutura��o da rotina.
+ * -- Cansian - Jun, 11, 2020 * Atualizado para nova estrutura de grupo.
+ */
+ACMD(do_gassist)
+{
+struct char_data  *k, *helpee, *opponent;
+struct group_data *group;
+
+	if ((group = GROUP(ch)) == NULL)
+	{
+		send_to_char(ch, "Mas você não é membro de um grupo!\r\n");
+		return;
+	}
+	
+  if (FIGHTING(ch)) {
+    send_to_char(ch, "Você já está lutando!  Como você pretente dar assistência a alguém?\r\n");
+    return;
+  }
+
+  if IS_DEAD(ch) {
+    send_to_char(ch,"Você não pode dar assistência a ninguém, você está mort%c!",OA(ch));
+    return;
+  }
+		if (GROUP(ch))
+			while ((k = (struct char_data *)simple_list(GROUP(ch)->members)) != NULL)
+  if ((k != ch) && CAN_SEE(ch, k) && (IN_ROOM(k) == IN_ROOM(ch))
+      && FIGHTING(k)) {
+    if (!CAN_SEE(ch, FIGHTING(k)))
+      act("Você não pode ver com quem $N está lutando.", FALSE, ch, NULL, k, TO_CHAR);
+    else
+      helpee = k;
+  }
+  
+  if (!helpee)
+    send_to_char(ch, "Você não vê ninguém lutando em seu grupo.\r\n");
+  else {
+    opponent = FIGHTING(helpee);
+    act("Você dá assistência a $N.", FALSE, ch, 0, helpee, TO_CHAR);
+
+    if (!CONFIG_PK_ALLOWED && !IS_NPC(opponent))	/* prevent accidental pkill */
+      act("Use 'murder' se voce realmente deseja atacar $N.", FALSE, ch, 0, opponent, TO_CHAR);
+    else {
+      act("$N dá assistência a você!", FALSE, helpee, 0, ch, TO_CHAR);
+      send_to_group(NULL,group, "%s dá assistência a um membro do grupo!",GET_NAME(ch));
+      act("$n dá assistência a $N.", TRUE, ch, 0, helpee, TO_NOTVICT);
+      hit(ch, opponent, TYPE_UNDEFINED);
+    }
+  }
+}
 
 ACMD(do_hit)
 {
@@ -663,4 +714,57 @@ ACMD(do_bandage)
 	act("$n bandages $N, who looks a bit better now.", TRUE, ch, 0, vict, TO_NOTVICT);
 	act("Someone bandages you, and you feel a bit better now.", FALSE, ch, 0, vict, TO_VICT);
 	GET_HIT(vict) = 0;
+}
+
+ACMD(do_trip)
+{
+ struct char_data *vict;
+  int percent, prob;
+
+  one_argument(argument, arg);
+
+  if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_TRIP)) {
+    send_to_char(ch, "Voc� n�o tem id�ia de como fazer isso.\r\n");
+    return;
+  } else if ((vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)) == NULL) {
+    if (FIGHTING(ch) && IN_ROOM(ch) == IN_ROOM(FIGHTING(ch))) {
+      vict = FIGHTING(ch);
+    } else {
+      send_to_char(ch, "Dar uma rasteira em quem?\r\n");
+      return;
+    }
+  } else if (vict == ch) {
+    send_to_char(ch, "Haha... Muito engra�ado... Voc� � palha�o de circo?\r\n");
+    return;
+  } else if (!can_fight(ch, vict))
+    return;
+  else if ((!CONFIG_PK_ALLOWED && !IS_NPC(vict))) {
+    act("Use 'murder' se vocêrealmente deseja atacar $N.", FALSE, ch, 0, vict, TO_CHAR);
+    return;
+  }
+
+  percent = rand_number(1, 101);	/* 101% is a complete failure */
+  prob = GET_SKILL(ch, SKILL_TRIP);
+
+  if (MOB_FLAGGED(vict, MOB_NOBASH) || MOB_FLAGGED(vict, MOB_MOUNTABLE) ||
+      MOB_FLAGGED(vict, MOB_CAN_FLY))
+    percent = 101;
+
+  if (percent > prob) {
+    damage(ch, vict, 0, SKILL_TRIP);
+    if (damage(ch, ch, 2, TYPE_UNDEFINED) > 0 &&
+(GET_LEVEL(ch) < LVL_GOD)) {
+      GET_POS(ch) = POS_SITTING;
+      GET_WAIT_STATE(ch) += 3 * PULSE_VIOLENCE;
+    }
+  } else {
+    if (damage(ch, vict, 2, SKILL_TRIP) > 0) {	// -1 = dead, 0 = miss
+      GET_WAIT_STATE(vict) += 2 * PULSE_VIOLENCE;
+      if (IN_ROOM(ch) == IN_ROOM(vict))
+        GET_POS(vict) = POS_SITTING;
+    }
+
+    if (GET_LEVEL(ch) < LVL_GOD)
+      GET_WAIT_STATE(ch) += 4 * PULSE_VIOLENCE;
+  }
 }
