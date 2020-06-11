@@ -4,10 +4,8 @@ VITALIAMUD ABBAMUD
 1995, na Universidade de Campinas (UNICAMP), por Vitor de Paula.  Em 1996, o
 MUD foi temporariamente fechado, para depois, em dezembro do mesmo ano, ser
 reaberto de forma definitiva no provedor onde at� hoje est� hospedado.
-
    Em outubro de 2000, devido a mudan�as na estrutura e na equipe de
 trabalho, mudou de nome para "O Mundo de Vit�lia" (VitaliaMUD).
-
    O servi�o � disponibilizado de forma gratuita a todos os jogadores
 brasileiros, ou que falem a l�ngua portuguesa.  Ele � mantido como um hobby
 pelos seus atuais mantenedores, e nunca se espera que o Mundo de Vit�lia se
@@ -55,7 +53,7 @@ alinhamento, como por exemplo, as l�mias, que s� atacam personagens bons.
 
 Veja tamb�m: SCORE
 #
-�REAS AREAS
+ÁREAS AREAS
 
    Aqui est�o listadas todas as �reas do Mundo de Vit�lia.
 
@@ -174,7 +172,7 @@ Veja tamb�m: SCORE
  @R*@g Os Templos de Anura                    @wKafei
  @R*@g Qui'Lur                                @wEomer
 
-   @W�REAS HERDADAS DO CIRCLEMUD@n
+   @WÁREAS HERDADAS DO CIRCLEMUD@n
 
 @R   Nome da �rea                           Tradu��o@n
  @R*@g Midgaard                               @wBlug/Maegali/Nemesis
@@ -572,7 +570,7 @@ Estas "flags" estao sempre entre parenteses.
 
 Veja tamb�m: NOSHOUT, NOTELL, QUEST, STEAL, VISIBLE
 #
-HER�IS HEROES
+HERÓIS HEROES
 
    @R*@g O que � um Her�i?@n
    � aquele que coloca seu companheiro acima de si mesmo
@@ -680,7 +678,6 @@ pontos (hp, mn, mv) na passagem de cada hora/mud.
  12-|
    -+----------------------------------------------------------------> idade
     ' 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72
-
 #
 IMORTAIS IMMORTALS
 
