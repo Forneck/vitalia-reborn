@@ -410,7 +410,7 @@ EVENTFUNC(event_backflip)
 	/* We search through the "next_in_room", and grab all NPCs and add them to 
 	   our list */
 	for (tch = world[IN_ROOM(ch)].people; tch; tch = tch->next_in_room)
-		if (IS_NPC(tch) && IS_FIGHTING(ch))
+		if (IS_NPC(tch) && (FIGHTING(tch) == ch))
 			add_to_list(tch, room_list);
 
 	/* If our list is empty or has "0" entries, we free it from memory and
