@@ -177,6 +177,18 @@ void init_spell_levels(void)
   spell_level(CHANSON_ECOS,			CLASS_BARD,  82); /* -- AC */
   spell_level(CHANSON_CLAMOR,			CLASS_BARD,  88); /* -- AC */
   spell_level(CHANSON_DEUSES,			CLASS_BARD,  95); /* -- ac */
+  
+      spell_level(SPELL_ARMOR,          CLASS_RANGER,  2);
+        spell_level(SPELL_BREATH,         CLASS_RANGER,  5);
+        spell_level(SPELL_WORD_OF_RECALL, CLASS_RANGER, 15);
+        spell_level(SKILL_ESCAPE,         CLASS_RANGER, 18);
+        spell_level(SPELL_SENSE_LIFE,     CLASS_RANGER, 20);
+        spell_level(SPELL_DETECT_INVIS,   CLASS_RANGER, 20);
+        spell_level(SKILL_MOUNT,          CLASS_RANGER, 22);
+        spell_level(SKILL_TRACK,          CLASS_RANGER, 25);
+        spell_level(SPELL_WATERWALK,      CLASS_RANGER, 32);
+        spell_level(SPELL_FLY,            CLASS_RANGER, 42);
+        
 }
 
 /* PLAYER SPELLS -- Numbered from 1 to MAX_SPELLS */
