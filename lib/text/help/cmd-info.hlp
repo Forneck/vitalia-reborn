@@ -59,7 +59,7 @@ Para consultar estas informa��es, digite HELP <t�pico>.
    &gSTR FOR�A            &nFor�a do personagem.
    &gWIS SABEDORIA        &nSabedoria do personagem.
    &gZMUD                 &nExplica��o sobre bugs existentes em alguns clientes.
-#
+#0
 AUTOEXIT
 
 Uso: autoexit
@@ -69,7 +69,7 @@ dispon�veis da sala em que voc� est�.  N�o todas as sa�das poss�veis
 mostradas, somente as que est�o imediatamente dispon�veis.
 
 Veja tamb�m: TOGGLE
-#
+#0
 CREDITS INFO NEWS POLICY VERSION
 
    Estes comandos mostram informa��es importantes sobre o MUD.  � uma boa
@@ -80,7 +80,7 @@ id�ia os ler com muita calma e aten��o.
    NEWS                 As �ltimas novidades sobre o MUD.
    POLICY               Regras de comportamento para os jogadores.
    VERSION              Mostra a vers�o atual do VitaliaMUD.
-#
+#0
 HELP
 
 Uso: help [comando]
@@ -97,7 +97,7 @@ Exemplos:
    Uma lista dos t�picos da ajuda, e sobre os comandos mais comuns.
 
 Veja tamb�m: COMMANDS, SOCIALS
-#
+#0
 IMMLIST WIZLIST
 
 Uso: wizlist
@@ -105,14 +105,14 @@ Uso: wizlist
 
    Lista os seres mais poderosos do MUD.  Estes s�o os respons�veis por
 administrar o jogo.
-#
+#0
 LEVELS
 
 Uso: levels
 
    Lista os n�veis da sua classe, a experi�ncia necess�ria e o t�tulo
 autom�tico de cada n�vel.
-#
+#0
 MOTD
 
 Uso: motd
@@ -120,7 +120,7 @@ Uso: motd
    Mostra as mensagens do dia.  Cont�m importantes informa��es relativas ao
 status do MUD.  Voc� deveria ter certeza de que a leu quando conectou ao
 jogo.  Se voc� n�o leu quando conectou, use este comando.
-#
+#0
 SCORE PONTUACAO
 
 Uso: score [+|++]
@@ -132,7 +132,7 @@ etc.  Voc� pode digitar um ou dois sinais de positivo (+) na frente do
 comando para aumentar o n�mero de informa��es fornecidas pelo comando.
 
 Veja tamb�m: AC, EXPERI�NCIA
-#
+#0
 SKILL SPELL CHANSON
 
 Uso: skill   [classe]
@@ -144,7 +144,7 @@ determinada classe.  Digite SKILL, SPELL ou CHANSON sem nenhum argumento
 para mostrar as suas habilidades, magias ou can��es.
 
 Veja tamb�m: INFO, MAGIAS, HABILIDADES, CAN��ES
-#
+#0
 TIME
 
 Uso: time
@@ -153,7 +153,7 @@ Uso: time
 surpresa, mas voc� ter� de se acostumar.  Voc� ter� que se acostumar, pois
 algumas coisas no jogo dependem desta particular no��o do tempo; o hor�rio
 da abertura de lojas, por exemplo.
-#
+#0
 TOGGLE
 
 Uso: toggle
@@ -164,7 +164,7 @@ MUD.  Este comando N�O pode ser usado para mudar estes valores (veja o
 voc� os mude; i.e.  Eles s�o salvos quando voc� sai do jogo (QUIT).
 
 Veja tamb�m: BRIEF, COMPACT, DISPLAY, NOSUMMON, QUEST, NOREPEAT, WIMP
-#
+#0
 WEATHER
 
 Uso: weather
@@ -173,7 +173,7 @@ Uso: weather
 Voc� ter� que estar em locais abertos para poder usar este comando.
 
 Veja tamb�m: "MAGIA CONTROL WEATHER"
-#
+#0
 WHERE
 
 Uso: where <monstro | jogador>
@@ -188,7 +188,7 @@ Exemplo:
    > where
    > where Rassmusen
    > where drag�o
-#
+#0
 WHO
 
 Uso: who [min[-max]] [nome] [-c classes] [-o] [-q] [-r] [-z] [-s] [-l]
@@ -232,13 +232,13 @@ Exemplos:
   > who 15-25 -o -z
   Mostra todos os foras-da-lei entre os n�veis 15 e 25, na mesma �rea em que
   voc� est�.
-#
+#0
 WHOAMI
 
 Uso: whoami
 
    Diz quem voc� �, se voc� estiver confuso ou indeciso sobre a sua
 personalidade...
-#
+#0
 $
 ~
