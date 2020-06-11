@@ -1,110 +1,107 @@
 #600
-A Entrada Para a Prisão~
-   Você está na entrada da prisão.  É uma forte construção, feita de grandes
-blocos, presos por um tipo de cimento.  No alto da construção, vários
-arqueiros estão prontos para atacar.  A leste você vê o deserto, e a oeste
-está o grande portão da prisão.
+A Entrada Para a Prisï¿½o~
+   Vocï¿½ estï¿½ na entrada da prisï¿½o.  ï¿½ uma forte construï¿½ï¿½o, feita de grandes
+blocos, presos por um tipo de cimento.  No alto da construï¿½ï¿½o, vï¿½rios
+arqueiros estï¿½o prontos para atacar.  A leste vocï¿½ vï¿½ o deserto, e a oeste
+estï¿½ o grande portï¿½o da prisï¿½o.
 ~
-6 g 1
+6 64 0 0 0 1
 D1
-Você vê o grande deserto.
+Vocï¿½ vï¿½ o grande deserto.
 ~
 ~
 0 -1 9422
 D3
-Você vê um grande portão de ferro e madeira.
+Vocï¿½ vï¿½ um grande portï¿½o de ferro e madeira.
 ~
-portão~
-:n 1 o portão de ferro e madeira
+portï¿½o~
 2 -1 601
 S
 #601
-Dentro da Prisão~
-   Você está no interior das grandes muralhas da prisão.  Não há nada em
-volta, apenas areia e grandes rochas espalhadas.  Curiosamente há uma abertura
-ao chão, com uma escada.  Será que a prisão mesmo está alí embaixo?  A leste
-está o portão da prisão.
+Dentro da Prisï¿½o~
+   Vocï¿½ estï¿½ no interior das grandes muralhas da prisï¿½o.  Nï¿½o hï¿½ nada em
+volta, apenas areia e grandes rochas espalhadas.  Curiosamente hï¿½ uma abertura
+ao chï¿½o, com uma escada.  Serï¿½ que a prisï¿½o mesmo estï¿½ alï¿½ embaixo?  A leste
+estï¿½ o portï¿½o da prisï¿½o.
 ~
-6 0 1
+6 0 0 0 0 1
 D1
-Por esta direção você sai da prisão.
+Por esta direï¿½ï¿½o vocï¿½ sai da prisï¿½o.
 ~
-portão~
-:n 1 o portão de ferro e madeira
+portï¿½o~
 2 -1 600
 D5
-Há uma sólida escada. Ao olhar pela abertura, você nota certa movimentação no
-subterrâneo.
+Hï¿½ uma sï¿½lida escada. Ao olhar pela abertura, vocï¿½ nota certa movimentaï¿½ï¿½o no
+subterrï¿½neo.
 ~
 ~
 0 -1 602
 S
 #602
-Na Entrada do Subterrâneo~
-   Você está à base da escada do subterrâneo da prisão.  Aqui é tudo muito
-escuro, com uma fraca iluminação pelas tochas que estão afixadas ao longo das
-paredes.  A construção subterrânea é extremamente sólida e bem construída.
-Você vê um longo corredor à oeste.  Há sentinelas, cozinheiras e serviçais
-caminhando pelo corredor.  Acima de você, a escada leva para a parte aberta da
-prisão.
+Na Entrada do Subterrï¿½neo~
+   Vocï¿½ estï¿½ ï¿½ base da escada do subterrï¿½neo da prisï¿½o.  Aqui ï¿½ tudo muito
+escuro, com uma fraca iluminaï¿½ï¿½o pelas tochas que estï¿½o afixadas ao longo das
+paredes.  A construï¿½ï¿½o subterrï¿½nea ï¿½ extremamente sï¿½lida e bem construï¿½da.
+Vocï¿½ vï¿½ um longo corredor ï¿½ oeste.  Hï¿½ sentinelas, cozinheiras e serviï¿½ais
+caminhando pelo corredor.  Acima de vocï¿½, a escada leva para a parte aberta da
+prisï¿½o.
 ~
-6 d 0
+6 8 0 0 0 0
 D3
 O corredor continua a oeste.
 ~
 ~
 0 -1 603
 D4
-Uma sólida escada leva para a parte aberta da prisão.
+Uma sï¿½lida escada leva para a parte aberta da prisï¿½o.
 ~
 ~
 0 -1 601
 S
 #603
 Um Cruzamento de Corredores~
-   Você está caminhando pelos corredores da prisão.  Há saídas para as quatro
-direções.  Sentinelas, cozinheiras e serviçais caminham pelos corredores.  Ao
-norte você pode ver algo que se parece com uma cozinha.  Ao sul há um corredor
-mais sombrio.  A leste você vê uma pequena claridade, que deve indicar a saída
-para a parte aberta da prisão, e a oeste o corredor continua em direção aos
-calabouços.
+   Vocï¿½ estï¿½ caminhando pelos corredores da prisï¿½o.  Hï¿½ saï¿½das para as quatro
+direï¿½ï¿½es.  Sentinelas, cozinheiras e serviï¿½ais caminham pelos corredores.  Ao
+norte vocï¿½ pode ver algo que se parece com uma cozinha.  Ao sul hï¿½ um corredor
+mais sombrio.  A leste vocï¿½ vï¿½ uma pequena claridade, que deve indicar a saï¿½da
+para a parte aberta da prisï¿½o, e a oeste o corredor continua em direï¿½ï¿½o aos
+calabouï¿½os.
 ~
-6 df 0
+6 40 0 0 0 0
 D0
-O corredor segue por um pequeno espaço e termina em um cômodo que, pelo grande
-caldeirão em seu centro, se parece com uma cozinha.
+O corredor segue por um pequeno espaï¿½o e termina em um cï¿½modo que, pelo grande
+caldeirï¿½o em seu centro, se parece com uma cozinha.
 ~
 ~
 0 -1 616
 D1
-A leste você vê o final do corredor.
+A leste vocï¿½ vï¿½ o final do corredor.
 ~
 ~
 0 -1 602
 D2
-Você vê a sala de armamentos ao sul.
+Vocï¿½ vï¿½ a sala de armamentos ao sul.
 ~
 ~
 0 -1 617
 D3
-O corredor continua a oeste, em direção aos calabouços.
+O corredor continua a oeste, em direï¿½ï¿½o aos calabouï¿½os.
 ~
 ~
 0 -1 604
 S
 #604
-O Corredor dos Calabouços~
-   Você está caminhando pelos corredores dos calabouços.  Há pouco movimento
-por aqui.  A pouca iluminação proveniente das toxas afixadas às paredes é
-pouca para que você possa ver tudo com perfeição.  Ao norte e ao sul você pode
-ver calabouços.  O corredor continua a leste e oeste.
+O Corredor dos Calabouï¿½os~
+   Vocï¿½ estï¿½ caminhando pelos corredores dos calabouï¿½os.  Hï¿½ pouco movimento
+por aqui.  A pouca iluminaï¿½ï¿½o proveniente das toxas afixadas ï¿½s paredes ï¿½
+pouca para que vocï¿½ possa ver tudo com perfeiï¿½ï¿½o.  Ao norte e ao sul vocï¿½ pode
+ver calabouï¿½os.  O corredor continua a leste e oeste.
 ~
-6 dfg 0
+6 104 0 0 0 0
 D0
-Você vê um calabouço.
+Vocï¿½ vï¿½ um calabouï¿½o.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 632
 D1
 O corredor continua a leste.
@@ -112,10 +109,9 @@ O corredor continua a leste.
 ~
 0 -1 603
 D2
-Você vê um calabouço.
+Vocï¿½ vï¿½ um calabouï¿½o.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 633
 D3
 O corredor continua a oeste.
@@ -124,18 +120,17 @@ O corredor continua a oeste.
 0 -1 605
 S
 #605
-O Corredor dos Calabouços~
-   Você está caminhando pelos corredores dos calabouços.  Há pouco movimento
-por aqui.  A pouca iluminação proveniente das toxas afixadas às paredes é
-pouca para que você possa ver tudo com perfeição.  Ao norte e ao sul você pode
-ver calabouços.  O corredor continua a leste e oeste.
+O Corredor dos Calabouï¿½os~
+   Vocï¿½ estï¿½ caminhando pelos corredores dos calabouï¿½os.  Hï¿½ pouco movimento
+por aqui.  A pouca iluminaï¿½ï¿½o proveniente das toxas afixadas ï¿½s paredes ï¿½
+pouca para que vocï¿½ possa ver tudo com perfeiï¿½ï¿½o.  Ao norte e ao sul vocï¿½ pode
+ver calabouï¿½os.  O corredor continua a leste e oeste.
 ~
-6 dfg 0
+6 104 0 0 0 0
 D0
-Você vê um calabouço.
+Vocï¿½ vï¿½ um calabouï¿½o.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 634
 D1
 O corredor continua a leste.
@@ -143,10 +138,9 @@ O corredor continua a leste.
 ~
 0 -1 604
 D2
-Você vê um calabouço.
+Vocï¿½ vï¿½ um calabouï¿½o.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 635
 D3
 O corredor continua a oeste.
@@ -155,18 +149,17 @@ O corredor continua a oeste.
 0 -1 606
 S
 #606
-O Corredor dos Calabouços~
-   Você está caminhando pelos corredores dos calabouços.  Há pouco movimento
-por aqui.  A pouca iluminação proveniente das toxas afixadas às paredes é
-pouca para que você possa ver tudo com perfeição.  Ao norte e ao sul você pode
-ver calabouços.  O corredor continua a leste e oeste.
+O Corredor dos Calabouï¿½os~
+   Vocï¿½ estï¿½ caminhando pelos corredores dos calabouï¿½os.  Hï¿½ pouco movimento
+por aqui.  A pouca iluminaï¿½ï¿½o proveniente das toxas afixadas ï¿½s paredes ï¿½
+pouca para que vocï¿½ possa ver tudo com perfeiï¿½ï¿½o.  Ao norte e ao sul vocï¿½ pode
+ver calabouï¿½os.  O corredor continua a leste e oeste.
 ~
-6 dfg 0
+6 104 0 0 0 0
 D0
-Você vê um calabouço.
+Vocï¿½ vï¿½ um calabouï¿½o.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 636
 D1
 O corredor continua a leste.
@@ -174,10 +167,9 @@ O corredor continua a leste.
 ~
 0 -1 605
 D2
-Você vê um calabouço.
+Vocï¿½ vï¿½ um calabouï¿½o.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 637
 D3
 O corredor continua a oeste.
@@ -186,18 +178,17 @@ O corredor continua a oeste.
 0 -1 607
 S
 #607
-O Corredor dos Calabouços~
-   Você está caminhando pelos corredores dos calabouços.  Há pouco movimento
-por aqui.  A pouca iluminação proveniente das toxas afixadas às paredes é
-pouca para que você possa ver tudo com perfeição.  Ao norte e ao sul você pode
-ver calabouços.  O corredor continua a leste e oeste.
+O Corredor dos Calabouï¿½os~
+   Vocï¿½ estï¿½ caminhando pelos corredores dos calabouï¿½os.  Hï¿½ pouco movimento
+por aqui.  A pouca iluminaï¿½ï¿½o proveniente das toxas afixadas ï¿½s paredes ï¿½
+pouca para que vocï¿½ possa ver tudo com perfeiï¿½ï¿½o.  Ao norte e ao sul vocï¿½ pode
+ver calabouï¿½os.  O corredor continua a leste e oeste.
 ~
-6 dfg 0
+6 104 0 0 0 0
 D0
-Você vê um calabouço.
+Vocï¿½ vï¿½ um calabouï¿½o.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 638
 D1
 O corredor continua a leste.
@@ -205,10 +196,9 @@ O corredor continua a leste.
 ~
 0 -1 606
 D2
-Você vê um calabouço.
+Vocï¿½ vï¿½ um calabouï¿½o.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 639
 D3
 O corredor continua a oeste.
@@ -217,18 +207,17 @@ O corredor continua a oeste.
 0 -1 608
 S
 #608
-O Corredor dos Calabouços~
-   Você está caminhando pelos corredores dos calabouços.  Há pouco movimento
-por aqui.  A pouca iluminação proveniente das toxas afixadas às paredes é
-pouca para que você possa ver tudo com perfeição.  Ao norte, sul e oeste você
-pode ver calabouços.  O corredor continua a leste.
+O Corredor dos Calabouï¿½os~
+   Vocï¿½ estï¿½ caminhando pelos corredores dos calabouï¿½os.  Hï¿½ pouco movimento
+por aqui.  A pouca iluminaï¿½ï¿½o proveniente das toxas afixadas ï¿½s paredes ï¿½
+pouca para que vocï¿½ possa ver tudo com perfeiï¿½ï¿½o.  Ao norte, sul e oeste vocï¿½
+pode ver calabouï¿½os.  O corredor continua a leste.
 ~
-6 dfg 0
+6 104 0 0 0 0
 D0
-Você vê um calabouço.
+Vocï¿½ vï¿½ um calabouï¿½o.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 640
 D1
 O corredor continua a leste.
@@ -236,254 +225,241 @@ O corredor continua a leste.
 ~
 0 -1 607
 D2
-Você vê um calabouço.
+Vocï¿½ vï¿½ um calabouï¿½o.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 641
 D3
-Você vê um calabouço.
+Vocï¿½ vï¿½ um calabouï¿½o.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 642
 S
 #616
 A Cozinha~
-   Você está na cozinha desta prisão.  O odor na sala é típico de uma fossa,
-nojento...  Por uma pequena abertura na parede escorre água, que cai em um
-jarro de barro.  No centro da sala há um enorme caldeirão.  A única saída é
+   Vocï¿½ estï¿½ na cozinha desta prisï¿½o.  O odor na sala ï¿½ tï¿½pico de uma fossa,
+nojento...  Por uma pequena abertura na parede escorre ï¿½gua, que cai em um
+jarro de barro.  No centro da sala hï¿½ um enorme caldeirï¿½o.  A ï¿½nica saï¿½da ï¿½
 para o sul.
 ~
-6 df 0
+6 40 0 0 0 0
 D2
-Você vê o corredor.
+Vocï¿½ vï¿½ o corredor.
 ~
 ~
 0 -1 603
 E
 caldeirao~
-Você olha dentro do caldeirão e nota uma sopa marrom. Algo que parece um dia
-ter sido um antílope está boiando na sopa, com seus chifres para fora dela.
-O odor desta sopa é o suficiente para virar seu estômago do avesso.
+Vocï¿½ olha dentro do caldeirï¿½o e nota uma sopa marrom. Algo que parece um dia
+ter sido um antï¿½lope estï¿½ boiando na sopa, com seus chifres para fora dela.
+O odor desta sopa ï¿½ o suficiente para virar seu estï¿½mago do avesso.
 ~
 S
 #617
 A Sala de Armamentos~
-   Esta é uma sala menos movimentada da prisão.  Aqui os sentinelas guardam
-espadas, atiradeiras, arcos e flechas, e até as grandes bolas-de-ferro que são
-presas nos pés dos condenados.  Ao norte você retorna para o corredor, e ao
-oeste você vê uma outra sala.
+   Esta ï¿½ uma sala menos movimentada da prisï¿½o.  Aqui os sentinelas guardam
+espadas, atiradeiras, arcos e flechas, e atï¿½ as grandes bolas-de-ferro que sï¿½o
+presas nos pï¿½s dos condenados.  Ao norte vocï¿½ retorna para o corredor, e ao
+oeste vocï¿½ vï¿½ uma outra sala.
 ~
-6 df 0
+6 40 0 0 0 0
 D0
-Você vê o corredor.
+Vocï¿½ vï¿½ o corredor.
 ~
 ~
 0 -1 603
 D3
-Você vê uma outra sala, com alguns artefatos curiosos.
+Vocï¿½ vï¿½ uma outra sala, com alguns artefatos curiosos.
 ~
 ~
 0 -1 618
 S
 #618
-A Sala de Condenação~
-   Você está em uma sala não muito interessante...  Você vê alguns artefatos
-diferentes por todos os lados, você reconhece uma guilhotina em um dos cantos
-da sala, e uma corda pindurada no teto, com um nó na ponta, suficiente para
-que sua cabeça entre nele...  Glup!  No chão há um buraco grande e fundo,
-e você sente um calafrio ao pensar o que deve haver lá embaixo.
+A Sala de Condenaï¿½ï¿½o~
+   Vocï¿½ estï¿½ em uma sala nï¿½o muito interessante...  Vocï¿½ vï¿½ alguns artefatos
+diferentes por todos os lados, vocï¿½ reconhece uma guilhotina em um dos cantos
+da sala, e uma corda pindurada no teto, com um nï¿½ na ponta, suficiente para
+que sua cabeï¿½a entre nele...  Glup!  No chï¿½o hï¿½ um buraco grande e fundo,
+e vocï¿½ sente um calafrio ao pensar o que deve haver lï¿½ embaixo.
 ~
-6 dfg 0
+6 104 0 0 0 0
 D1
-A leste você vê a sala de armas.
+A leste vocï¿½ vï¿½ a sala de armas.
 ~
 ~
 0 -1 617
 D5
-O buraco é muito fundo, e parece ser impossível para alguém subir por ele. No
-fundo você vê um tipo de fosso, com muitos... muitos crocodilos famintos...
+O buraco ï¿½ muito fundo, e parece ser impossï¿½vel para alguï¿½m subir por ele. No
+fundo vocï¿½ vï¿½ um tipo de fosso, com muitos... muitos crocodilos famintos...
 ~
 ~
 0 -1 619
 S
 #619
 O Fosso~
-   Você cai no fosso de crocodilos...  Eles são muitos, e vem em sua direção,
-famintos...  Você entra em pânico e tenta escapar daqui de qualquer forma, mas
-não consegue escalar as paredes.  Os crocodilos avançam rapidamente em sua
-direção, e sem chances de escapar, você acaba virando almoço de crocodilo...
+   Vocï¿½ cai no fosso de crocodilos...  Eles sï¿½o muitos, e vem em sua direï¿½ï¿½o,
+famintos...  Vocï¿½ entra em pï¿½nico e tenta escapar daqui de qualquer forma, mas
+nï¿½o consegue escalar as paredes.  Os crocodilos avanï¿½am rapidamente em sua
+direï¿½ï¿½o, e sem chances de escapar, vocï¿½ acaba virando almoï¿½o de crocodilo...
 ~
-6 bdf 0
+6 42 0 0 0 0
 D4
 ~
 ~
 0 -1 618
 S
 #632
-O Calabouço~
-   Você está dentro do calabouço.  O chão e as paredes parecem fazer séculos
-que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
-a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
+O Calabouï¿½o~
+   Vocï¿½ estï¿½ dentro do calabouï¿½o.  O chï¿½o e as paredes parecem fazer sï¿½culos
+que nï¿½o sï¿½o lavadas.  ï¿½ ligeiramente escuro, pois nï¿½o hï¿½ aberturas que tragam
+a luz solar para cï¿½, e a luz fornecida pelas tochas presas ï¿½s paredes iluminam
 muito pouco.
 ~
-6 dfghjku 0
+6 1050344 0 0 0 0
 D2
-Você vê o corredor, com vários outros calabouços.
+Vocï¿½ vï¿½ o corredor, com vï¿½rios outros calabouï¿½os.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 604
 S
 #633
-O Calabouço~
-   Você está dentro do calabouço.  O chão e as paredes parecem fazer séculos
-que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
-a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
+O Calabouï¿½o~
+   Vocï¿½ estï¿½ dentro do calabouï¿½o.  O chï¿½o e as paredes parecem fazer sï¿½culos
+que nï¿½o sï¿½o lavadas.  ï¿½ ligeiramente escuro, pois nï¿½o hï¿½ aberturas que tragam
+a luz solar para cï¿½, e a luz fornecida pelas tochas presas ï¿½s paredes iluminam
 muito pouco.
 ~
-6 dfghjku 0
+6 1050344 0 0 0 0
 D0
-Você vê o corredor, com vários outros calabouços.
+Vocï¿½ vï¿½ o corredor, com vï¿½rios outros calabouï¿½os.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 604
 S
 #634
-O Calabouço~
-   Você está dentro do calabouço.  O chão e as paredes parecem fazer séculos
-que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
-a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
+O Calabouï¿½o~
+   Vocï¿½ estï¿½ dentro do calabouï¿½o.  O chï¿½o e as paredes parecem fazer sï¿½culos
+que nï¿½o sï¿½o lavadas.  ï¿½ ligeiramente escuro, pois nï¿½o hï¿½ aberturas que tragam
+a luz solar para cï¿½, e a luz fornecida pelas tochas presas ï¿½s paredes iluminam
 muito pouco.
 ~
-6 dfghjku 0
+6 1050344 0 0 0 0
 D2
-Você vê o corredor, com vários outros calabouços.
+Vocï¿½ vï¿½ o corredor, com vï¿½rios outros calabouï¿½os.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 605
 S
 #635
-O Calabouço~
-   Você está dentro do calabouço.  O chão e as paredes parecem fazer séculos
-que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
-a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
+O Calabouï¿½o~
+   Vocï¿½ estï¿½ dentro do calabouï¿½o.  O chï¿½o e as paredes parecem fazer sï¿½culos
+que nï¿½o sï¿½o lavadas.  ï¿½ ligeiramente escuro, pois nï¿½o hï¿½ aberturas que tragam
+a luz solar para cï¿½, e a luz fornecida pelas tochas presas ï¿½s paredes iluminam
 muito pouco.
 ~
-6 dfghjku 0
+6 1050344 0 0 0 0
 D0
-Você vê o corredor, com vários outros calabouços.
+Vocï¿½ vï¿½ o corredor, com vï¿½rios outros calabouï¿½os.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 605
 S
 #636
-O Calabouço~
-   Você está dentro do calabouço.  O chão e as paredes parecem fazer séculos
-que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
-a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
+O Calabouï¿½o~
+   Vocï¿½ estï¿½ dentro do calabouï¿½o.  O chï¿½o e as paredes parecem fazer sï¿½culos
+que nï¿½o sï¿½o lavadas.  ï¿½ ligeiramente escuro, pois nï¿½o hï¿½ aberturas que tragam
+a luz solar para cï¿½, e a luz fornecida pelas tochas presas ï¿½s paredes iluminam
 muito pouco.
 ~
-6 dfghjku 0
+6 1050344 0 0 0 0
 D2
-Você vê o corredor, com vários outros calabouços.
+Vocï¿½ vï¿½ o corredor, com vï¿½rios outros calabouï¿½os.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 606
 S
 #637
-O Calabouço~
-   Você está dentro do calabouço.  O chão e as paredes parecem fazer séculos
-que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
-a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
+O Calabouï¿½o~
+   Vocï¿½ estï¿½ dentro do calabouï¿½o.  O chï¿½o e as paredes parecem fazer sï¿½culos
+que nï¿½o sï¿½o lavadas.  ï¿½ ligeiramente escuro, pois nï¿½o hï¿½ aberturas que tragam
+a luz solar para cï¿½, e a luz fornecida pelas tochas presas ï¿½s paredes iluminam
 muito pouco.
 ~
-6 dfghjku 0
+6 1050344 0 0 0 0
 D0
-Você vê o corredor, com vários outros calabouços.
+Vocï¿½ vï¿½ o corredor, com vï¿½rios outros calabouï¿½os.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 606
 S
 #638
-O Calabouço~
-   Você está dentro do calabouço.  O chão e as paredes parecem fazer séculos
-que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
-a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
+O Calabouï¿½o~
+   Vocï¿½ estï¿½ dentro do calabouï¿½o.  O chï¿½o e as paredes parecem fazer sï¿½culos
+que nï¿½o sï¿½o lavadas.  ï¿½ ligeiramente escuro, pois nï¿½o hï¿½ aberturas que tragam
+a luz solar para cï¿½, e a luz fornecida pelas tochas presas ï¿½s paredes iluminam
 muito pouco.
 ~
-6 dfghjku 0
+6 1050344 0 0 0 0
 D2
-Você vê o corredor, com vários outros calabouços.
+Vocï¿½ vï¿½ o corredor, com vï¿½rios outros calabouï¿½os.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 607
 S
 #639
-O Calabouço~
-   Você está dentro do calabouço.  O chão e as paredes parecem fazer séculos
-que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
-a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
+O Calabouï¿½o~
+   Vocï¿½ estï¿½ dentro do calabouï¿½o.  O chï¿½o e as paredes parecem fazer sï¿½culos
+que nï¿½o sï¿½o lavadas.  ï¿½ ligeiramente escuro, pois nï¿½o hï¿½ aberturas que tragam
+a luz solar para cï¿½, e a luz fornecida pelas tochas presas ï¿½s paredes iluminam
 muito pouco.
 ~
-6 dfghjku 0
+6 1050344 0 0 0 0
 D0
-Você vê o corredor, com vários outros calabouços.
+Vocï¿½ vï¿½ o corredor, com vï¿½rios outros calabouï¿½os.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 607
 S
 #640
-O Calabouço~
-   Você está dentro do calabouço.  O chão e as paredes parecem fazer séculos
-que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
-a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
+O Calabouï¿½o~
+   Vocï¿½ estï¿½ dentro do calabouï¿½o.  O chï¿½o e as paredes parecem fazer sï¿½culos
+que nï¿½o sï¿½o lavadas.  ï¿½ ligeiramente escuro, pois nï¿½o hï¿½ aberturas que tragam
+a luz solar para cï¿½, e a luz fornecida pelas tochas presas ï¿½s paredes iluminam
 muito pouco.
 ~
-6 dfghjku 0
+6 1050344 0 0 0 0
 D2
-Você vê o corredor, com vários outros calabouços.
+Vocï¿½ vï¿½ o corredor, com vï¿½rios outros calabouï¿½os.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 608
 S
 #641
-O Calabouço~
-   Você está dentro do calabouço.  O chão e as paredes parecem fazer séculos
-que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
-a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
+O Calabouï¿½o~
+   Vocï¿½ estï¿½ dentro do calabouï¿½o.  O chï¿½o e as paredes parecem fazer sï¿½culos
+que nï¿½o sï¿½o lavadas.  ï¿½ ligeiramente escuro, pois nï¿½o hï¿½ aberturas que tragam
+a luz solar para cï¿½, e a luz fornecida pelas tochas presas ï¿½s paredes iluminam
 muito pouco.
 ~
-6 dfghjku 0
+6 1050344 0 0 0 0
 D0
-Você vê o corredor, com vários outros calabouços.
+Vocï¿½ vï¿½ o corredor, com vï¿½rios outros calabouï¿½os.
 ~
 grade~
-:n 2 a grade do calabouço
 2 -1 608
 S
 #642
-O Calabouço~
-   Você está dentro do calabouço.  O chão e as paredes parecem fazer séculos
-que não são lavadas.  É ligeiramente escuro, pois não há aberturas que tragam
-a luz solar para cá, e a luz fornecida pelas tochas presas às paredes iluminam
+O Calabouï¿½o~
+   Vocï¿½ estï¿½ dentro do calabouï¿½o.  O chï¿½o e as paredes parecem fazer sï¿½culos
+que nï¿½o sï¿½o lavadas.  ï¿½ ligeiramente escuro, pois nï¿½o hï¿½ aberturas que tragam
+a luz solar para cï¿½, e a luz fornecida pelas tochas presas ï¿½s paredes iluminam
 muito pouco.
 ~
-6 dfghjku 0
+6 1050344 0 0 0 0
 D1
-Você vê o corredor, com vários outros calabouços.
+Vocï¿½ vï¿½ o corredor, com vï¿½rios outros calabouï¿½os.
 ~
 grade~
-:n 2 a grade do calabouço
-2 -1 608 2
+2 -1 608
 S
-$
+$~
