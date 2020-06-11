@@ -37,31 +37,43 @@ static void display_group_list(struct char_data *ch);
 
 static int can_elevate(struct char_data *ch);
 static int can_rebegin(struct char_data *ch);
+void check_thief(struct char_data *ch, struct char_data *vict);
+
 
 ACMD(do_quit)
 {
+  char buf[128];
+  time_t ct = time(0);
+  struct tm *t = localtime(&ct);
+  
 	if (IS_NPC(ch) || !ch->desc)
 		return;
 
 	if (subcmd != SCMD_QUIT && GET_LEVEL(ch) < LVL_IMMORT)
-		send_to_char(ch, "You have to type quit--no less, to quit!\r\n");
+		send_to_char(ch, "Você tem que escrever o comando inteiro -- não menos do que isso!\r\n");
 	else if (GET_POS(ch) == POS_FIGHTING)
-		send_to_char(ch, "No way!  You're fighting for your life!\r\n");
+		send_to_char(ch, "Sem chances!  Você está lutando pela sua vida!\r\n");
 	else if (GET_POS(ch) < POS_STUNNED)
 	{
-		send_to_char(ch, "You die before your time...\r\n");
+		send_to_char(ch, "Você morreu antes do tempo...\r\n");
 		die(ch, NULL);
 	}
 	else
 	{
-		act("$n has left the game.", TRUE, ch, 0, 0, TO_ROOM);
+		act("$n deixou o jogo.", TRUE, ch, 0, 0, TO_ROOM);
 		mudlog(NRM, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)), TRUE, "%s has quit the game.",
 			   GET_NAME(ch));
 
 		if (GET_QUEST_TIME(ch) != -1)
 			quest_timeout(ch);
 
-		send_to_char(ch, "Goodbye, friend.. Come back soon!\r\n");
+
+sprintf(buf, "Tenha um%s! :-)\r\n\r\n",
+	  (t->tm_hour < 6) ? "a boa madrugada" :
+	  (t->tm_hour < 12) ? " bom dia" :
+	  (t->tm_hour < 18) ? "a boa tarde" : "a boa noite");
+
+		send_to_char(ch, "%s", buf);
 
 		/* We used to check here for duping attempts, but we may as well do it 
 		   right in extract_char(), since there is no check if a player rents
@@ -70,13 +82,30 @@ ACMD(do_quit)
 		if (CONFIG_FREE_RENT)
 			Crash_rentsave(ch, 0);
 
-		GET_LOADROOM(ch) = GET_ROOM_VNUM(GET_HOMETOWN(ch));
+		GET_LOADROOM(ch) = void check_thief(Character * ch, Character * vict)
+{
+  if (IS_PC(ch) && IS_PC(vict) && (ch != vict) &&
+      !PLR_FLAGGED(vict, PLR_KILLER) && !PLR_FLAGGED(vict, PLR_THIEF)) {
+    if (!PLR_FLAGGED(ch, PLR_THIEF)) {
+      SET_BIT(PLR_FLAGS(ch), PLR_THIEF);
+      log(logBrf | logFile, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)),
+	  "PC Thief bit set on %s while trying to steal %s at %s.",
+	  GET_NAME(ch), GET_NAME(vict), IN_ROOM(vict)->name);
+      auto_karma(ch, -2);	/* -- jr - 11/08/99 */
+      send_to_char("Agora voc� � um JOGADOR LADR�O, que pena...\r\n", ch);
+    } else {
+      log(logBrf | logFile, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)),
+	  "PC Thief %s trying to steal %s at %s.",
+	  GET_NAME(ch), GET_NAME(vict), IN_ROOM(vict)->name);
+    }
+  }
+}(GET_HOMETOWN(ch));
 
 		/* Stop snooping so you can't see passwords during deletion or change. 
 		 */
 		if (ch->desc->snoop_by)
 		{
-			write_to_output(ch->desc->snoop_by, "Your victim is no longer among us.\r\n");
+			write_to_output(ch->desc->snoop_by, "A sua vitima não está mais entre nós.\r\n");
 			ch->desc->snoop_by->snooping = NULL;
 			ch->desc->snoop_by = NULL;
 		}
@@ -90,19 +119,23 @@ ACMD(do_save)
 	if (IS_NPC(ch) || !ch->desc)
 		return;
 
-	send_to_char(ch, "Salvando %s.\r\n", GET_NAME(ch));
+	send_to_char(ch, "Salvando atalhos (alias)\r\n");
+	send_to_char(ch, "Salvando personagem %s.\r\n", GET_NAME(ch));
 	save_char(ch);
+	 send_to_char(ch, "Salvando objetos.\r\n");
 	Crash_crashsave(ch);
-	if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE_CRASH))
-		House_crashsave(GET_ROOM_VNUM(IN_ROOM(ch)));
-	GET_LOADROOM(ch) = GET_ROOM_VNUM(IN_ROOM(ch));
+	if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE_CRASH)){
+	send_to_char(ch, "Salvando casa.\r\n");	House_crashsave(GET_ROOM_VNUM(IN_ROOM(ch)));
+		
+}
+	GET_LOADROOM(ch) =  GET_ROOM_VNUM(IN_ROOM(ch));
 }
 
 /* Generic function for commands which are normally overridden by special
    procedures - i.e., shop commands, mail commands, etc. */
 ACMD(do_not_here)
 {
-	send_to_char(ch, "Sorry, but you cannot do that here!\r\n");
+	send_to_char(ch, "Desculpe, mas você não pode fazer isso aqui!\r\n");
 }
 
 ACMD(do_sneak)
@@ -112,10 +145,10 @@ ACMD(do_sneak)
 
 	if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_SNEAK))
 	{
-		send_to_char(ch, "You have no idea how to do that.\r\n");
+		send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
 		return;
 	}
-	send_to_char(ch, "Okay, you'll try to move silently for a while.\r\n");
+	send_to_char(ch, "Ok, você vai tentar mover-se silenciosamente por um tempo.\r\n");
 	if (AFF_FLAGGED(ch, AFF_SNEAK))
 		affect_from_char(ch, SKILL_SNEAK);
 
@@ -126,7 +159,7 @@ ACMD(do_sneak)
 
 	new_affect(&af);
 	af.spell = SKILL_SNEAK;
-	af.duration = GET_LEVEL(ch);
+	af.duration = MIN(GET_LEVEL(ch), 24);
 	SET_BIT_AR(af.bitvector, AFF_SNEAK);
 	affect_to_char(ch, &af);
 }
@@ -137,11 +170,11 @@ ACMD(do_hide)
 
 	if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_HIDE))
 	{
-		send_to_char(ch, "You have no idea how to do that.\r\n");
+		send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
 		return;
 	}
 
-	send_to_char(ch, "You attempt to hide yourself.\r\n");
+	send_to_char(ch, "Você tenta se esconder.\r\n");
 
 	if (AFF_FLAGGED(ch, AFF_HIDE))
 		REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
@@ -163,12 +196,12 @@ ACMD(do_steal)
 
 	if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_STEAL))
 	{
-		send_to_char(ch, "You have no idea how to do that.\r\n");
+		send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
 		return;
 	}
 	if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_PEACEFUL))
 	{
-		send_to_char(ch, "This room just has such a peaceful, easy feeling...\r\n");
+		send_to_char(ch, "Você sente muita paz neste lugar para roubar alguma coisa...\r\n");
 		return;
 	}
 
@@ -176,14 +209,21 @@ ACMD(do_steal)
 
 	if (!(vict = get_char_vis(ch, vict_name, NULL, FIND_CHAR_ROOM)))
 	{
-		send_to_char(ch, "Steal what from who?\r\n");
+		send_to_char(ch, "Roubar o quê de quem?\r\n");
 		return;
 	}
 	else if (vict == ch)
 	{
-		send_to_char(ch, "Come on now, that's rather stupid!\r\n");
+		send_to_char(ch, "Pare, isto é muito estúpido!\r\n");
 		return;
 	}
+	 if (IS_DEAD(ch)) {
+    act("Você não pode roubar d$L, você está mort$r!", FALSE, ch, 0, vict, TO_CHAR);
+    return;
+  } else if (IS_DEAD(vict)) {
+    act("Suas mãos passam por $N... $L é apenas um espírito...", FALSE, ch, 0, vict, TO_CHAR);
+    return;
+  }
 
 	/* 101% is a complete failure */
 	percent = rand_number(1, 101) - dex_app_skill[GET_DEX(ch)].p_pocket;
@@ -199,10 +239,10 @@ ACMD(do_steal)
 
 	/* No stealing if not allowed. If it is no stealing from Imm's or
 	   Shopkeepers. */
-	if (GET_LEVEL(vict) >= LVL_IMMORT || pcsteal || GET_MOB_SPEC(vict) == shop_keeper)
+	if (GET_LEVEL(vict) >= LVL_IMMORT || pcsteal || GET_MOB_SPEC(vict) == shop_keeper || PLR_FLAGGED(vict, PLR_TRNS))
 		percent = 101;			/* Failure */
 
-	if (str_cmp(obj_name, "coins") && str_cmp(obj_name, "gold"))
+	if (str_cmp(obj_name, "moedas") && str_cmp(obj_name, "dinheiro"))
 	{
 
 		if (!(obj = get_obj_in_list_vis(ch, obj_name, NULL, vict->carrying)))
@@ -218,25 +258,25 @@ ACMD(do_steal)
 				}
 			if (!obj)
 			{
-				act("$E hasn't got that item.", FALSE, ch, 0, vict, TO_CHAR);
+				act("$L não tem este objeto.", FALSE, ch, 0, vict, TO_CHAR);
 				return;
 			}
 			else
 			{					/* It is equipment */
 				if ((GET_POS(vict) > POS_STUNNED))
 				{
-					send_to_char(ch, "Steal the equipment now?  Impossible!\r\n");
+					send_to_char(ch, "Roubar equipamento agora?  Impossível!\r\n");
 					return;
 				}
 				else
 				{
 					if (!give_otrigger(obj, vict, ch) || !receive_mtrigger(ch, vict, obj))
 					{
-						send_to_char(ch, "Impossible!\r\n");
+						send_to_char(ch, "Impossível!\r\n");
 						return;
 					}
-					act("You unequip $p and steal it.", FALSE, ch, obj, 0, TO_CHAR);
-					act("$n steals $p from $N.", FALSE, ch, obj, vict, TO_NOTVICT);
+					act("Você desequipa $p e rouba de $N.", FALSE, ch, obj, 0, TO_CHAR);
+					act("$n rouba $p de $N.", FALSE, ch, obj, vict, TO_NOTVICT);
 					obj_to_char(unequip_char(vict, eq_pos), ch);
 				}
 			}
@@ -249,9 +289,9 @@ ACMD(do_steal)
 			if (percent > GET_SKILL(ch, SKILL_STEAL))
 			{
 				ohoh = TRUE;
-				send_to_char(ch, "Oops..\r\n");
-				act("$n tried to steal something from you!", FALSE, ch, 0, vict, TO_VICT);
-				act("$n tries to steal something from $N.", TRUE, ch, 0, vict, TO_NOTVICT);
+				send_to_char(ch, "Opa..\r\n");
+				act("$n tentou roubar algo de você!", FALSE, ch, 0, vict, TO_VICT);
+				act("$n tentou roubar algo de $N.", TRUE, ch, 0, vict, TO_NOTVICT);
 			}
 			else
 			{					/* Steal the item */
@@ -259,18 +299,18 @@ ACMD(do_steal)
 				{
 					if (!give_otrigger(obj, vict, ch) || !receive_mtrigger(ch, vict, obj))
 					{
-						send_to_char(ch, "Impossible!\r\n");
+						send_to_char(ch, "Impossível!\r\n");
 						return;
 					}
 					if (IS_CARRYING_W(ch) + GET_OBJ_WEIGHT(obj) < CAN_CARRY_W(ch))
 					{
 						obj_from_char(obj);
 						obj_to_char(obj, ch);
-						send_to_char(ch, "Got it!\r\n");
+						send_to_char(ch, "Você pegou!\r\n");
 					}
 				}
 				else
-					send_to_char(ch, "You cannot carry that much.\r\n");
+					send_to_char(ch, "Você não pode carregar tanto peso.\r\n");
 			}
 		}
 	}
@@ -279,9 +319,9 @@ ACMD(do_steal)
 		if (AWAKE(vict) && (percent > GET_SKILL(ch, SKILL_STEAL)))
 		{
 			ohoh = TRUE;
-			send_to_char(ch, "Oops..\r\n");
-			act("You discover that $n has $s hands in your wallet.", FALSE, ch, 0, vict, TO_VICT);
-			act("$n tries to steal gold from $N.", TRUE, ch, 0, vict, TO_NOTVICT);
+			send_to_char(ch, "Opa..\r\n");
+			act("Você descobre que $n estava com as mãos em sua carteira.", FALSE, ch, 0, vict, TO_VICT);
+			act("$n tentou roubar dinheiro de $N.", TRUE, ch, 0, vict, TO_NOTVICT);
 		}
 		else
 		{
@@ -293,19 +333,43 @@ ACMD(do_steal)
 				increase_gold(ch, gold);
 				decrease_gold(vict, gold);
 				if (gold > 1)
-					send_to_char(ch, "Bingo!  You got %d gold coins.\r\n", gold);
+					send_to_char(ch, "Feito!  Você conseguiu %d moedas.\r\n", gold);
 				else
-					send_to_char(ch, "You manage to swipe a solitary gold coin.\r\n");
+					send_to_char(ch, "Você conseguiu apenas uma única moeda.\r\n");
 			}
 			else
 			{
-				send_to_char(ch, "You couldn't get any gold...\r\n");
+				send_to_char(ch, "Você não conseguiu roubar nada...\r\n");
 			}
 		}
 	}
 
 	if (ohoh && IS_NPC(vict) && AWAKE(vict))
 		hit(vict, ch, TYPE_UNDEFINED);
+		
+		 if (!IS_NPC(ch) && !IS_NPC(vict))
+    SET_BIT(PLR_FLAGS(ch), PLR_H_THIEF);
+    
+     if (ohoh && CONFIG_PT_ALLOWED)		/* -- jr - 03/07/99 */
+    check_thief(ch, vict);
+}
+
+void check_thief(struct char_data *ch, struct char_data *vict)
+{
+  if (!IS_NPC(ch) && !IS_NPC(vict) && (ch != vict) &&
+      !PLR_FLAGGED(vict, PLR_KILLER) && !PLR_FLAGGED(vict, PLR_THIEF)) {
+    if (!PLR_FLAGGED(ch, PLR_THIEF)) {
+      SET_BIT(PLR_FLAGS(ch), PLR_THIEF);
+      log1(logBrf | logFile, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)),
+	  "PC Thief bit set on %s while trying to steal %s at %s.",
+	  GET_NAME(ch), GET_NAME(vict), IN_ROOM(vict)->name);
+      send_to_char(ch,"Agora você é um JOGADOR LADRÃO, que pena...\r\n");
+    } else {
+      log1(logBrf | logFile, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)),
+	  "PC Thief %s trying to steal %s at %s.",
+	  GET_NAME(ch), GET_NAME(vict), IN_ROOM(vict)->name);
+    }
+  }
 }
 
 ACMD(do_practice)
