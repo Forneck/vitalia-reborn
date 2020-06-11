@@ -1000,16 +1000,6 @@ const char *sky_conditions[] = {
   "\n"
 };
 
-
-cpp_extern const struct climate_data climates[] = {
- /* pressure  humidity  winds  temperature */
-  { 1000, 15,     0.50,  0.00,       25, 4 },
-  { 1000, 20,     0.40,  0.98,       22, 2 },
-  {  980, 10,     0.75,  0.20,       20, 2 },
-  {  975,  5,     0.25,  0.50,       -5, 2 },
-  { 1025,  5,     0.02,  0.50,       45, 3 }
-};
-
 /** The names of the days of the mud week. Not used in sprinttype(). */
 const char *weekdays[] = {
 "Helis",
