@@ -1,2870 +1,1961 @@
 #12400
-A Praça de Vayu~
-   Você está na praça central do região residencial de Nova Thalos.
-Estranhamente, você tem a impressão de não estar mais em Nova Thalos.  Um
+A Praï¿½a de Vayu~
+   Vocï¿½ estï¿½ na praï¿½a central do regiï¿½o residencial de Nova Thalos.
+Estranhamente, vocï¿½ tem a impressï¿½o de nï¿½o estar mais em Nova Thalos.  Um
 forte vento sopra continuamente.  A Rua de Vayu segue para leste e para
 oeste, onde pode-se ver muitas casas.
-   Há um estranho portal sobre sua cabeça.
+   Hï¿½ um estranho portal sobre sua cabeï¿½a.
 ~
-124 0 1
-ON z124
-D N
-~
-~
-0 -1 12401
-D S
-~
-~
-0 -1 12402
-D E
-~
-~
-0 -1 12411
-D W
-~
-~
-0 -1 12410
-D U
-Um estranho portal flutua sobre você.  Você pode ver uma estrada através do
+124 0 0 0 0 1
+D0
+Um estranho portal flutua sobre vocï¿½.  Vocï¿½ pode ver uma estrada atravï¿½s do
 portal.
 ~
 ~
 0 -1 5495
 S
 #12401
-A Praça de Yama~
-   Você está na praça de Yama da região residencial de Nova Thalos.
+A Praï¿½a de Yama~
+   Vocï¿½ estï¿½ na praï¿½a de Yama da regiï¿½o residencial de Nova Thalos.
 Um calafrio toma conta de seu corpo.  A Rua de Yama segue para leste e para
 oeste, onde pode-se ver muitas casas.
 ~
-124 0 1
-D N
-~
-~
-0 -1 12403
-D S
-~
-~
-0 -1 12400
-D E
-~
-~
-0 -1 12421
-D W
+124 0 0 0 0 1
+D0
 ~
 ~
 0 -1 12420
 S
 #12402
-A Praça de Surya~
-   Você está na praça de Surya da região residencial de Nova Thalos.
-O brilho do Sol parece mais intenso nessa praça.  A Rua de Surya segue para
+A Praï¿½a de Surya~
+   Vocï¿½ estï¿½ na praï¿½a de Surya da regiï¿½o residencial de Nova Thalos.
+O brilho do Sol parece mais intenso nessa praï¿½a.  A Rua de Surya segue para
 leste e para oeste, onde pode-se ver muitas casas.
 ~
-124 0 1
-D N
-~
-~
-0 -1 12400
-D S
-~
-~
-0 -1 12404
-D E
-~
-~
-0 -1 12431
-D W
+124 0 0 0 0 1
+D0
 ~
 ~
 0 -1 12430
 S
 #12403
-A Praça de Puchan~
-   Você está na praça de Puchan da região residencial de Nova Thalos.  A Rua
+A Praï¿½a de Puchan~
+   Vocï¿½ estï¿½ na praï¿½a de Puchan da regiï¿½o residencial de Nova Thalos.  A Rua
 de Puchan segue para leste e para oeste, onde pode-se ver muitas casas.
 ~
-124 0 1
-D S
-~
-~
-0 -1 12401
-D E
-~
-~
-0 -1 12441
-D W
+124 0 0 0 0 1
+D0
 ~
 ~
 0 -1 12440
 S
 #12404
-A Praça de Siva~
-   Você está na praça de Siva da região residencial de Nova Thalos.  A Rua
+A Praï¿½a de Siva~
+   Vocï¿½ estï¿½ na praï¿½a de Siva da regiï¿½o residencial de Nova Thalos.  A Rua
 de Siva segue para leste e para oeste, onde pode-se ver muitas casas.
 ~
-124 0 1
-D N
-~
-~
-0 -1 12402
-D E
-~
-~
-0 -1 12451
-D W
+124 0 0 0 0 1
+D0
 ~
 ~
 0 -1 12450
 S
 #12405
 Um Cruzamento de Ruas~
-   Você está em um cruzamento das ruas da região residencial de Nova Thalos.
-Para leste e para oeste está a rua de Vayu, para norte está a rua de Yama e
-para sul está a rua de Surya.
+   Vocï¿½ estï¿½ em um cruzamento das ruas da regiï¿½o residencial de Nova Thalos.
+Para leste e para oeste estï¿½ a rua de Vayu, para norte estï¿½ a rua de Yama e
+para sul estï¿½ a rua de Surya.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12419
-D E
-~
-~
-0 -1 12418
-D N
-~
-~
-0 -1 12406
-D S
+124 0 0 0 0 1
+D0
 ~
 ~
 0 -1 12407
 S
 #12406
 Um Cruzamento de Ruas~
-   Você está em um cruzamento das ruas da região residencial de Nova Thalos.
-Para leste e para oeste está a rua de Yama, para sul está a rua de Vayu e
-para norte está a rua de Puchan.
+   Vocï¿½ estï¿½ em um cruzamento das ruas da regiï¿½o residencial de Nova Thalos.
+Para leste e para oeste estï¿½ a rua de Yama, para sul estï¿½ a rua de Vayu e
+para norte estï¿½ a rua de Puchan.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12429
-D E
-~
-~
-0 -1 12428
-D N
-~
-~
-0 -1 12408
-D S
+124 0 0 0 0 1
+D0
 ~
 ~
 0 -1 12405
 S
 #12407
 Um Cruzamento de Ruas~
-   Você está em um cruzamento das ruas da região residencial de Nova Thalos.
-Para leste e para oeste está a rua de Surya, para norte está a rua de Vayu e
-para sul está a rua de Siva.
+   Vocï¿½ estï¿½ em um cruzamento das ruas da regiï¿½o residencial de Nova Thalos.
+Para leste e para oeste estï¿½ a rua de Surya, para norte estï¿½ a rua de Vayu e
+para sul estï¿½ a rua de Siva.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12439
-D E
-~
-~
-0 -1 12438
-D N
-~
-~
-0 -1 12405
-D S
+124 0 0 0 0 1
+D0
 ~
 ~
 0 -1 12409
 S
 #12408
 Um Cruzamento de Ruas~
-   Você está em um cruzamento das ruas da região residencial de Nova Thalos.
-Para leste e para oeste está a rua de Puchan e para sul está a rua de Yama.
+   Vocï¿½ estï¿½ em um cruzamento das ruas da regiï¿½o residencial de Nova Thalos.
+Para leste e para oeste estï¿½ a rua de Puchan e para sul estï¿½ a rua de Yama.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12449
-D E
-~
-~
-0 -1 12448
-D S
+124 0 0 0 0 1
+D0
 ~
 ~
 0 -1 12406
 S
 #12409
 Um Cruzamento de Ruas~
-   Você está em um cruzamento das ruas da região residencial de Nova Thalos.
-Para leste e para oeste está a rua de Siva e para norte está a rua de Surya.
+   Vocï¿½ estï¿½ em um cruzamento das ruas da regiï¿½o residencial de Nova Thalos.
+Para leste e para oeste estï¿½ a rua de Siva e para norte estï¿½ a rua de Surya.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12459
-D E
-~
-~
-0 -1 12458
-D N
+124 0 0 0 0 1
+D0
 ~
 ~
 0 -1 12407
 S
 #12410
 A Rua de Vayu~
-   Você está caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
+   Vocï¿½ estï¿½ caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
 ter recebido esse nome devido ao constante vento que sopra aqui, a ponto de
 incomodar.
-   Para o norte e para o sul você vê as casas números 1 e 2.  A rua continua
-para oeste, e a praça de Vayu pode ser vista a leste.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 1 e 2.  A rua continua
+para oeste, e a praï¿½a de Vayu pode ser vista a leste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12412
-D E
-~
-~
-0 -1 12400
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12500
-D S
-~
-porta~
-:n 2
-abcg -1 12501
+0 -1 12501
 S
 #12411
 A Rua de Vayu~
-   Você está caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
+   Vocï¿½ estï¿½ caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
 ter recebido esse nome devido ao constante vento que sopra aqui, a ponto de
 incomodar.
-   Para o norte e para o sul você vê as casas números 3 e 4.  A rua continua
-para leste, e a praça de Vayu pode ser vista a oeste.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 3 e 4.  A rua continua
+para leste, e a praï¿½a de Vayu pode ser vista a oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12400
-D E
-~
-~
-0 -1 12413
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12502
-D S
-~
-porta~
-:n 2
-abcg -1 12503
+0 -1 12503
 S
 #12412
 A Rua de Vayu~
-   Você está caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
+   Vocï¿½ estï¿½ caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
 ter recebido esse nome devido ao constante vento que sopra aqui, a ponto de
 incomodar.
-   Para o norte e para o sul você vê as casas números 5 e 6.  A rua continua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 5 e 6.  A rua continua
 para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12414
-D E
-~
-~
-0 -1 12410
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12504
-D S
-~
-porta~
-:n 2
-abcg -1 12505
+0 -1 12505
 S
 #12413
 A Rua de Vayu~
-   Você está caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
+   Vocï¿½ estï¿½ caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
 ter recebido esse nome devido ao constante vento que sopra aqui, a ponto de
 incomodar.
-   Para o norte e para o sul você vê as casas números 7 e 8.  A rua continua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 7 e 8.  A rua continua
 para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12411
-D E
-~
-~
-0 -1 12415
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12506
-D S
-~
-porta~
-:n 2
-abcg -1 12507
+0 -1 12507
 S
 #12414
 A Rua de Vayu~
-   Você está caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
+   Vocï¿½ estï¿½ caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
 ter recebido esse nome devido ao constante vento que sopra aqui, a ponto de
 incomodar.
-   Para o norte e para o sul você vê as casas números 9 e 10.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 9 e 10.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12416
-D E
-~
-~
-0 -1 12412
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12508
-D S
-~
-porta~
-:n 2
-abcg -1 12509
+0 -1 12509
 S
 #12415
 A Rua de Vayu~
-   Você está caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
+   Vocï¿½ estï¿½ caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
 ter recebido esse nome devido ao constante vento que sopra aqui, a ponto de
 incomodar.
-   Para o norte e para o sul você vê as casas números 11 e 12.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 11 e 12.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12413
-D E
-~
-~
-0 -1 12417
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12510
-D S
-~
-porta~
-:n 2
-abcg -1 12511
+0 -1 12511
 S
 #12416
 A Rua de Vayu~
-   Você está caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
+   Vocï¿½ estï¿½ caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
 ter recebido esse nome devido ao constante vento que sopra aqui, a ponto de
 incomodar.
-   Para o norte e para o sul você vê as casas números 13 e 14.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 13 e 14.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12418
-D E
-~
-~
-0 -1 12414
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12512
-D S
-~
-porta~
-:n 2
-abcg -1 12513
+0 -1 12513
 S
 #12417
 A Rua de Vayu~
-   Você está caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
+   Vocï¿½ estï¿½ caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
 ter recebido esse nome devido ao constante vento que sopra aqui, a ponto de
 incomodar.
-   Para o norte e para o sul você vê as casas números 15 e 16.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 15 e 16.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12415
-D E
-~
-~
-0 -1 12419
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12514
-D S
-~
-porta~
-:n 2
-abcg -1 12515
+0 -1 12515
 S
 #12418
 A Rua de Vayu~
-   Você está caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
+   Vocï¿½ estï¿½ caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
 ter recebido esse nome devido ao constante vento que sopra aqui, a ponto de
 incomodar.
-   Para o norte e para o sul você vê as casas números 17 e 18.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 17 e 18.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12405
-D E
-~
-~
-0 -1 12416
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12516
-D S
-~
-porta~
-:n 2
-abcg -1 12517
+0 -1 12517
 S
 #12419
 A Rua de Vayu~
-   Você está caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
+   Vocï¿½ estï¿½ caminhando pela Rua de Vayu, o Deus do Vento.  Essa rua deve
 ter recebido esse nome devido ao constante vento que sopra aqui, a ponto de
 incomodar.
-   Para o norte e para o sul você vê as casas números 19 e 20.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 19 e 20.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12417
-D E
-~
-~
-0 -1 12405
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12518
-D S
-~
-porta~
-:n 2
-abcg -1 12519
+0 -1 12519
 S
 #12420
 A Rua de Yama~
-   Você está caminhando pela Rua de Yama, o Deus da Morte.  Você sente um
+   Vocï¿½ estï¿½ caminhando pela Rua de Yama, o Deus da Morte.  Vocï¿½ sente um
 frio percorrendo a espinha cada vez que ouve o nome desta rua.
-   Para o norte e para o sul você vê as casas números 1 e 2.  A rua continua
-para oeste, e a praça de Yama pode ser vista a leste.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 1 e 2.  A rua continua
+para oeste, e a praï¿½a de Yama pode ser vista a leste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12422
-D E
-~
-~
-0 -1 12401
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12520
-D S
-~
-porta~
-:n 2
-abcg -1 12521
+0 -1 12521
 S
 #12421
 A Rua de Yama~
-   Você está caminhando pela Rua de Yama, o Deus da Morte.  Você sente um
+   Vocï¿½ estï¿½ caminhando pela Rua de Yama, o Deus da Morte.  Vocï¿½ sente um
 frio percorrendo a espinha cada vez que ouve o nome desta rua.
-   Para o norte e para o sul você vê as casas números 3 e 4.  A rua continua
-para leste, e a praça de Yama pode ser vista a oeste.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 3 e 4.  A rua continua
+para leste, e a praï¿½a de Yama pode ser vista a oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12401
-D E
-~
-~
-0 -1 12423
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12522
-D S
-~
-porta~
-:n 2
-abcg -1 12523
+0 -1 12523
 S
 #12422
 A Rua de Yama~
-   Você está caminhando pela Rua de Yama, o Deus da Morte.  Você sente um
+   Vocï¿½ estï¿½ caminhando pela Rua de Yama, o Deus da Morte.  Vocï¿½ sente um
 frio percorrendo a espinha cada vez que ouve o nome desta rua.
-   Para o norte e para o sul você vê as casas números 5 e 6.  A rua continua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 5 e 6.  A rua continua
 para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12424
-D E
-~
-~
-0 -1 12420
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12524
-D S
-~
-porta~
-:n 2
-abcg -1 12525
+0 -1 12525
 S
 #12423
 A Rua de Yama~
-   Você está caminhando pela Rua de Yama, o Deus da Morte.  Você sente um
+   Vocï¿½ estï¿½ caminhando pela Rua de Yama, o Deus da Morte.  Vocï¿½ sente um
 frio percorrendo a espinha cada vez que ouve o nome desta rua.
-   Para o norte e para o sul você vê as casas números 7 e 8.  A rua continua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 7 e 8.  A rua continua
 para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12421
-D E
-~
-~
-0 -1 12425
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12526
-D S
-~
-porta~
-:n 2
-abcg -1 12527
+0 -1 12527
 S
 #12424
 A Rua de Yama~
-   Você está caminhando pela Rua de Yama, o Deus da Morte.  Você sente um
+   Vocï¿½ estï¿½ caminhando pela Rua de Yama, o Deus da Morte.  Vocï¿½ sente um
 frio percorrendo a espinha cada vez que ouve o nome desta rua.
-   Para o norte e para o sul você vê as casas números 9 e 10.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 9 e 10.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12426
-D E
-~
-~
-0 -1 12422
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12528
-D S
-~
-porta~
-:n 2
-abcg -1 12529
+0 -1 12529
 S
 #12425
 A Rua de Yama~
-   Você está caminhando pela Rua de Yama, o Deus da Morte.  Você sente um
+   Vocï¿½ estï¿½ caminhando pela Rua de Yama, o Deus da Morte.  Vocï¿½ sente um
 frio percorrendo a espinha cada vez que ouve o nome desta rua.
-   Para o norte e para o sul você vê as casas números 11 e 12.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 11 e 12.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12423
-D E
-~
-~
-0 -1 12427
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12530
-D S
-~
-porta~
-:n 2
-abcg -1 12531
+0 -1 12531
 S
 #12426
 A Rua de Yama~
-   Você está caminhando pela Rua de Yama, o Deus da Morte.  Você sente um
+   Vocï¿½ estï¿½ caminhando pela Rua de Yama, o Deus da Morte.  Vocï¿½ sente um
 frio percorrendo a espinha cada vez que ouve o nome desta rua.
-   Para o norte e para o sul você vê as casas números 13 e 14.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 13 e 14.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12428
-D E
-~
-~
-0 -1 12424
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12532
-D S
-~
-porta~
-:n 2
-abcg -1 12533
+0 -1 12533
 S
 #12427
 A Rua de Yama~
-   Você está caminhando pela Rua de Yama, o Deus da Morte.  Você sente um
+   Vocï¿½ estï¿½ caminhando pela Rua de Yama, o Deus da Morte.  Vocï¿½ sente um
 frio percorrendo a espinha cada vez que ouve o nome desta rua.
-   Para o norte e para o sul você vê as casas números 15 e 16.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 15 e 16.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12425
-D E
-~
-~
-0 -1 12429
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12534
-D S
-~
-porta~
-:n 2
-abcg -1 12535
+0 -1 12535
 S
 #12428
 A Rua de Yama~
-   Você está caminhando pela Rua de Yama, o Deus da Morte.  Você sente um
+   Vocï¿½ estï¿½ caminhando pela Rua de Yama, o Deus da Morte.  Vocï¿½ sente um
 frio percorrendo a espinha cada vez que ouve o nome desta rua.
-   Para o norte e para o sul você vê as casas números 17 e 18.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 17 e 18.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12406
-D E
-~
-~
-0 -1 12426
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12536
-D S
-~
-porta~
-:n 2
-abcg -1 12537
+0 -1 12537
 S
 #12429
 A Rua de Yama~
-   Você está caminhando pela Rua de Yama, o Deus da Morte.  Você sente um
+   Vocï¿½ estï¿½ caminhando pela Rua de Yama, o Deus da Morte.  Vocï¿½ sente um
 frio percorrendo a espinha cada vez que ouve o nome desta rua.
-   Para o norte e para o sul você vê as casas números 19 e 20.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 19 e 20.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12427
-D E
-~
-~
-0 -1 12406
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12538
-D S
-~
-porta~
-:n 2
-abcg -1 12539
+0 -1 12539
 S
 #12430
 A Rua de Surya~
-   Você está caminhando pela Rua de Surya, o Deus da Natureza.  A rua é muito
+   Vocï¿½ estï¿½ caminhando pela Rua de Surya, o Deus da Natureza.  A rua ï¿½ muito
 bem arborizada, e o Sol brilha muito intensamente aqui.
-   Para o norte e para o sul você vê as casas números 1 e 2.  A rua continua
-para oeste, e a praça de Surya pode ser vista a leste.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 1 e 2.  A rua continua
+para oeste, e a praï¿½a de Surya pode ser vista a leste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12432
-D E
-~
-~
-0 -1 12402
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12540
-D S
-~
-porta~
-:n 2
-abcg -1 12541
+0 -1 12541
 S
 #12431
 A Rua de Surya~
-   Você está caminhando pela Rua de Surya, o Deus da Natureza.  A rua é muito
+   Vocï¿½ estï¿½ caminhando pela Rua de Surya, o Deus da Natureza.  A rua ï¿½ muito
 bem arborizada, e o Sol brilha muito intensamente aqui.
-   Para o norte e para o sul você vê as casas números 3 e 4.  A rua continua
-para leste, e a praça de Surya pode ser vista a oeste.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 3 e 4.  A rua continua
+para leste, e a praï¿½a de Surya pode ser vista a oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12402
-D E
-~
-~
-0 -1 12433
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12542
-D S
-~
-porta~
-:n 2
-abcg -1 12543
+0 -1 12543
 S
 #12432
 A Rua de Surya~
-   Você está caminhando pela Rua de Surya, o Deus da Natureza.  A rua é muito
+   Vocï¿½ estï¿½ caminhando pela Rua de Surya, o Deus da Natureza.  A rua ï¿½ muito
 bem arborizada, e o Sol brilha muito intensamente aqui.
-   Para o norte e para o sul você vê as casas números 5 e 6.  A rua continua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 5 e 6.  A rua continua
 para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12434
-D E
-~
-~
-0 -1 12430
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12544
-D S
-~
-porta~
-:n 2
-abcg -1 12545
+0 -1 12545
 S
 #12433
 A Rua de Surya~
-   Você está caminhando pela Rua de Surya, o Deus da Natureza.  A rua é muito
+   Vocï¿½ estï¿½ caminhando pela Rua de Surya, o Deus da Natureza.  A rua ï¿½ muito
 bem arborizada, e o Sol brilha muito intensamente aqui.
-   Para o norte e para o sul você vê as casas números 7 e 8.  A rua continua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 7 e 8.  A rua continua
 para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12431
-D E
-~
-~
-0 -1 12435
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12546
-D S
-~
-porta~
-:n 2
-abcg -1 12547
+0 -1 12547
 S
 #12434
 A Rua de Surya~
-   Você está caminhando pela Rua de Surya, o Deus da Natureza.  A rua é muito
+   Vocï¿½ estï¿½ caminhando pela Rua de Surya, o Deus da Natureza.  A rua ï¿½ muito
 bem arborizada, e o Sol brilha muito intensamente aqui.
-   Para o norte e para o sul você vê as casas números 9 e 10.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 9 e 10.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12436
-D E
-~
-~
-0 -1 12432
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12548
-D S
-~
-porta~
-:n 2
-abcg -1 12549
+0 -1 12549
 S
 #12435
 A Rua de Surya~
-   Você está caminhando pela Rua de Surya, o Deus da Natureza.  A rua é muito
+   Vocï¿½ estï¿½ caminhando pela Rua de Surya, o Deus da Natureza.  A rua ï¿½ muito
 bem arborizada, e o Sol brilha muito intensamente aqui.
-   Para o norte e para o sul você vê as casas números 11 e 12.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 11 e 12.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12433
-D E
-~
-~
-0 -1 12437
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12550
-D S
-~
-porta~
-:n 2
-abcg -1 12551
+0 -1 12551
 S
 #12436
 A Rua de Surya~
-   Você está caminhando pela Rua de Surya, o Deus da Natureza.  A rua é muito
+   Vocï¿½ estï¿½ caminhando pela Rua de Surya, o Deus da Natureza.  A rua ï¿½ muito
 bem arborizada, e o Sol brilha muito intensamente aqui.
-   Para o norte e para o sul você vê as casas números 13 e 14.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 13 e 14.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12438
-D E
-~
-~
-0 -1 12434
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12552
-D S
-~
-porta~
-:n 2
-abcg -1 12553
+0 -1 12553
 S
 #12437
 A Rua de Surya~
-   Você está caminhando pela Rua de Surya, o Deus da Natureza.  A rua é muito
+   Vocï¿½ estï¿½ caminhando pela Rua de Surya, o Deus da Natureza.  A rua ï¿½ muito
 bem arborizada, e o Sol brilha muito intensamente aqui.
-   Para o norte e para o sul você vê as casas números 15 e 16.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 15 e 16.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12435
-D E
-~
-~
-0 -1 12439
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12554
-D S
-~
-porta~
-:n 2
-abcg -1 12555
+0 -1 12555
 S
 #12438
 A Rua de Surya~
-   Você está caminhando pela Rua de Surya, o Deus da Natureza.  A rua é muito
+   Vocï¿½ estï¿½ caminhando pela Rua de Surya, o Deus da Natureza.  A rua ï¿½ muito
 bem arborizada, e o Sol brilha muito intensamente aqui.
-   Para o norte e para o sul você vê as casas números 17 e 18.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 17 e 18.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12407
-D E
-~
-~
-0 -1 12436
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12556
-D S
-~
-porta~
-:n 2
-abcg -1 12557
+0 -1 12557
 S
 #12439
 A Rua de Surya~
-   Você está caminhando pela Rua de Surya, o Deus da Natureza.  A rua é muito
+   Vocï¿½ estï¿½ caminhando pela Rua de Surya, o Deus da Natureza.  A rua ï¿½ muito
 bem arborizada, e o Sol brilha muito intensamente aqui.
-   Para o norte e para o sul você vê as casas números 19 e 20.  A rua
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 19 e 20.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12437
-D E
-~
-~
-0 -1 12407
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12558
-D S
-~
-porta~
-:n 2
-abcg -1 12559
+0 -1 12559
 S
 #12440
 A Rua de Puchan~
-   Você está caminhando pela Rua de Puchan, o Deus dos Viajantes.
-   Para o norte e para o sul você vê as casas números 1 e 2.  A rua continua
-para oeste, e a praça de Puchan pode ser vista a leste.
+   Vocï¿½ estï¿½ caminhando pela Rua de Puchan, o Deus dos Viajantes.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 1 e 2.  A rua continua
+para oeste, e a praï¿½a de Puchan pode ser vista a leste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12442
-D E
-~
-~
-0 -1 12403
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12560
-D S
-~
-porta~
-:n 2
-abcg -1 12561
+0 -1 12561
 S
 #12441
 A Rua de Puchan~
-   Você está caminhando pela Rua de Puchan, o Deus dos Viajantes.
-   Para o norte e para o sul você vê as casas números 3 e 4.  A rua continua
-para leste, e a praça de Puchan pode ser vista a oeste.
+   Vocï¿½ estï¿½ caminhando pela Rua de Puchan, o Deus dos Viajantes.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 3 e 4.  A rua continua
+para leste, e a praï¿½a de Puchan pode ser vista a oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12403
-D E
-~
-~
-0 -1 12443
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12562
-D S
-~
-porta~
-:n 2
-abcg -1 12563
+0 -1 12563
 S
 #12442
 A Rua de Puchan~
-   Você está caminhando pela Rua de Puchan, o Deus dos Viajantes.
-   Para o norte e para o sul você vê as casas números 5 e 6.  A rua continua
+   Vocï¿½ estï¿½ caminhando pela Rua de Puchan, o Deus dos Viajantes.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 5 e 6.  A rua continua
 para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12444
-D E
-~
-~
-0 -1 12440
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12564
-D S
-~
-porta~
-:n 2
-abcg -1 12565
+0 -1 12565
 S
 #12443
 A Rua de Puchan~
-   Você está caminhando pela Rua de Puchan, o Deus dos Viajantes.
-   Para o norte e para o sul você vê as casas números 7 e 8.  A rua continua
+   Vocï¿½ estï¿½ caminhando pela Rua de Puchan, o Deus dos Viajantes.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 7 e 8.  A rua continua
 para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12441
-D E
-~
-~
-0 -1 12445
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12566
-D S
-~
-porta~
-:n 2
-abcg -1 12567
+0 -1 12567
 S
 #12444
 A Rua de Puchan~
-   Você está caminhando pela Rua de Puchan, o Deus dos Viajantes.
-   Para o norte e para o sul você vê as casas números 9 e 10.  A rua
+   Vocï¿½ estï¿½ caminhando pela Rua de Puchan, o Deus dos Viajantes.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 9 e 10.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12446
-D E
-~
-~
-0 -1 12442
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12568
-D S
-~
-porta~
-:n 2
-abcg -1 12569
+0 -1 12569
 S
 #12445
 A Rua de Puchan~
-   Você está caminhando pela Rua de Puchan, o Deus dos Viajantes.
-   Para o norte e para o sul você vê as casas números 11 e 12.  A rua
+   Vocï¿½ estï¿½ caminhando pela Rua de Puchan, o Deus dos Viajantes.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 11 e 12.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12443
-D E
-~
-~
-0 -1 12447
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12570
-D S
-~
-porta~
-:n 2
-abcg -1 12571
+0 -1 12571
 S
 #12446
 A Rua de Puchan~
-   Você está caminhando pela Rua de Puchan, o Deus dos Viajantes.
-   Para o norte e para o sul você vê as casas números 13 e 14.  A rua
+   Vocï¿½ estï¿½ caminhando pela Rua de Puchan, o Deus dos Viajantes.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 13 e 14.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12448
-D E
-~
-~
-0 -1 12444
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12572
-D S
-~
-porta~
-:n 2
-abcg -1 12573
+0 -1 12573
 S
 #12447
 A Rua de Puchan~
-   Você está caminhando pela Rua de Puchan, o Deus dos Viajantes.
-   Para o norte e para o sul você vê as casas números 15 e 16.  A rua
+   Vocï¿½ estï¿½ caminhando pela Rua de Puchan, o Deus dos Viajantes.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 15 e 16.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12445
-D E
-~
-~
-0 -1 12449
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12574
-D S
-~
-porta~
-:n 2
-abcg -1 12575
+0 -1 12575
 S
 #12448
 A Rua de Puchan~
-   Você está caminhando pela Rua de Puchan, o Deus dos Viajantes.
-   Para o norte e para o sul você vê as casas números 17 e 18.  A rua
+   Vocï¿½ estï¿½ caminhando pela Rua de Puchan, o Deus dos Viajantes.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 17 e 18.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12408
-D E
-~
-~
-0 -1 12446
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12576
-D S
-~
-porta~
-:n 2
-abcg -1 12577
+0 -1 12577
 S
 #12449
 A Rua de Puchan~
-   Você está caminhando pela Rua de Puchan, o Deus dos Viajantes.
-   Para o norte e para o sul você vê as casas números 19 e 20.  A rua
+   Vocï¿½ estï¿½ caminhando pela Rua de Puchan, o Deus dos Viajantes.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 19 e 20.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12447
-D E
-~
-~
-0 -1 12408
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12578
-D S
-~
-porta~
-:n 2
-abcg -1 12579
+0 -1 12579
 S
 #12450
 A Rua de Siva~
-   Você está caminhando pela Rua de Siva, o Deus da Destruição.
-   Para o norte e para o sul você vê as casas números 1 e 2.  A rua continua
-para oeste, e a praça de Siva pode ser vista a leste.
+   Vocï¿½ estï¿½ caminhando pela Rua de Siva, o Deus da Destruiï¿½ï¿½o.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 1 e 2.  A rua continua
+para oeste, e a praï¿½a de Siva pode ser vista a leste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12452
-D E
-~
-~
-0 -1 12404
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12580
-D S
-~
-porta~
-:n 2
-abcg -1 12581
+0 -1 12581
 S
 #12451
 A Rua de Siva~
-   Você está caminhando pela Rua de Siva, o Deus da Destruição.
-   Para o norte e para o sul você vê as casas números 3 e 4.  A rua continua
-para leste, e a praça de Siva pode ser vista a oeste.
+   Vocï¿½ estï¿½ caminhando pela Rua de Siva, o Deus da Destruiï¿½ï¿½o.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 3 e 4.  A rua continua
+para leste, e a praï¿½a de Siva pode ser vista a oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12404
-D E
-~
-~
-0 -1 12453
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12582
-D S
-~
-porta~
-:n 2
-abcg -1 12583
+0 -1 12583
 S
 #12452
 A Rua de Siva~
-   Você está caminhando pela Rua de Siva, o Deus da Destruição.
-   Para o norte e para o sul você vê as casas números 5 e 6.  A rua continua
+   Vocï¿½ estï¿½ caminhando pela Rua de Siva, o Deus da Destruiï¿½ï¿½o.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 5 e 6.  A rua continua
 para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12454
-D E
-~
-~
-0 -1 12450
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12584
-D S
-~
-porta~
-:n 2
-abcg -1 12585
+0 -1 12585
 S
 #12453
 A Rua de Siva~
-   Você está caminhando pela Rua de Siva, o Deus da Destruição.
-   Para o norte e para o sul você vê as casas números 7 e 8.  A rua continua
+   Vocï¿½ estï¿½ caminhando pela Rua de Siva, o Deus da Destruiï¿½ï¿½o.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 7 e 8.  A rua continua
 para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12451
-D E
-~
-~
-0 -1 12455
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12586
-D S
-~
-porta~
-:n 2
-abcg -1 12587
+0 -1 12587
 S
 #12454
 A Rua de Siva~
-   Você está caminhando pela Rua de Siva, o Deus da Destruição.
-   Para o norte e para o sul você vê as casas números 9 e 10.  A rua
+   Vocï¿½ estï¿½ caminhando pela Rua de Siva, o Deus da Destruiï¿½ï¿½o.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 9 e 10.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12456
-D E
-~
-~
-0 -1 12452
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12588
-D S
-~
-porta~
-:n 2
-abcg -1 12589
+0 -1 12589
 S
 #12455
 A Rua de Siva~
-   Você está caminhando pela Rua de Siva, o Deus da Destruição.
-   Para o norte e para o sul você vê as casas números 11 e 12.  A rua
+   Vocï¿½ estï¿½ caminhando pela Rua de Siva, o Deus da Destruiï¿½ï¿½o.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 11 e 12.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12453
-D E
-~
-~
-0 -1 12457
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12590
-D S
-~
-porta~
-:n 2
-abcg -1 12591
+0 -1 12591
 S
 #12456
 A Rua de Siva~
-   Você está caminhando pela Rua de Siva, o Deus da Destruição.
-   Para o norte e para o sul você vê as casas números 13 e 14.  A rua
+   Vocï¿½ estï¿½ caminhando pela Rua de Siva, o Deus da Destruiï¿½ï¿½o.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 13 e 14.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12458
-D E
-~
-~
-0 -1 12454
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12592
-D S
-~
-porta~
-:n 2
-abcg -1 12593
+0 -1 12593
 S
 #12457
 A Rua de Siva~
-   Você está caminhando pela Rua de Siva, o Deus da Destruição.
-   Para o norte e para o sul você vê as casas números 15 e 16.  A rua
+   Vocï¿½ estï¿½ caminhando pela Rua de Siva, o Deus da Destruiï¿½ï¿½o.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 15 e 16.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12455
-D E
-~
-~
-0 -1 12459
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12594
-D S
-~
-porta~
-:n 2
-abcg -1 12595
+0 -1 12595
 S
 #12458
 A Rua de Siva~
-   Você está caminhando pela Rua de Siva, o Deus da Destruição.
-   Para o norte e para o sul você vê as casas números 17 e 18.  A rua
+   Vocï¿½ estï¿½ caminhando pela Rua de Siva, o Deus da Destruiï¿½ï¿½o.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 17 e 18.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12409
-D E
-~
-~
-0 -1 12456
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12596
-D S
-~
-porta~
-:n 2
-abcg -1 12597
+0 -1 12597
 S
 #12459
 A Rua de Siva~
-   Você está caminhando pela Rua de Siva, o Deus da Destruição.
-   Para o norte e para o sul você vê as casas números 19 e 20.  A rua
+   Vocï¿½ estï¿½ caminhando pela Rua de Siva, o Deus da Destruiï¿½ï¿½o.
+   Para o norte e para o sul vocï¿½ vï¿½ as casas nï¿½meros 19 e 20.  A rua
 continua para leste e para oeste.
 ~
-124 0 1
-D W
-~
-~
-0 -1 12457
-D E
-~
-~
-0 -1 12409
-D N
+124 0 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12598
-D S
-~
-porta~
-:n 2
-abcg -1 12599
+0 -1 12599
 S
 #12500
 A Casa 1 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 1.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 1.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12410
+0 -1 12410
 S
 #12501
 A Casa 2 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 2.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 2.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12410
+0 -1 12410
 S
 #12502
 A Casa 3 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 3.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 3.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12411
+0 -1 12411
 S
 #12503
 A Casa 4 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 4.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 4.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12411
+0 -1 12411
 S
 #12504
 A Casa 5 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 5.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 5.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12412
+0 -1 12412
 S
 #12505
 A Casa 6 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 6.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 6.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12412
+0 -1 12412
 S
 #12506
 A Casa 7 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 7.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 7.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12413
+0 -1 12413
 S
 #12507
 A Casa 8 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 8.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 8.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12413
+0 -1 12413
 S
 #12508
 A Casa 9 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 9.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 9.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12414
+0 -1 12414
 S
 #12509
 A Casa 10 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 10.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 10.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12414
+0 -1 12414
 S
 #12510
 A Casa 11 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 11.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 11.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12415
+0 -1 12415
 S
 #12511
 A Casa 12 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 12.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 12.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12415
+0 -1 12415
 S
 #12512
 A Casa 13 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 13.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 13.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12416
+0 -1 12416
 S
 #12513
 A Casa 14 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 14.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 14.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12416
+0 -1 12416
 S
 #12514
 A Casa 15 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 15.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 15.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12417
+0 -1 12417
 S
 #12515
 A Casa 16 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 16.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 16.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12417
+0 -1 12417
 S
 #12516
 A Casa 17 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 17.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 17.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12418
+0 -1 12418
 S
 #12517
 A Casa 18 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 18.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 18.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12418
+0 -1 12418
 S
 #12518
 A Casa 19 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 19.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 19.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12419
+0 -1 12419
 S
 #12519
 A Casa 20 da Rua de Vayu~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Vayu, número 20.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Vayu, nï¿½mero 20.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12419
+0 -1 12419
 S
 #12520
 A Casa 1 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 1.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 1.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12420
+0 -1 12420
 S
 #12521
 A Casa 2 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 2.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 2.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12420
+0 -1 12420
 S
 #12522
 A Casa 3 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 3.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 3.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12421
+0 -1 12421
 S
 #12523
 A Casa 4 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 4.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 4.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12421
+0 -1 12421
 S
 #12524
 A Casa 5 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 5.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 5.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12422
+0 -1 12422
 S
 #12525
 A Casa 6 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 6.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 6.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12422
+0 -1 12422
 S
 #12526
 A Casa 7 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 7.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 7.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12423
+0 -1 12423
 S
 #12527
 A Casa 8 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 8.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 8.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12423
+0 -1 12423
 S
 #12528
 A Casa 9 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 9.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 9.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12424
+0 -1 12424
 S
 #12529
 A Casa 10 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 10.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 10.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12424
+0 -1 12424
 S
 #12530
 A Casa 11 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 11.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 11.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12425
+0 -1 12425
 S
 #12531
 A Casa 12 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 12.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 12.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12425
+0 -1 12425
 S
 #12532
 A Casa 13 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 13.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 13.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12426
+0 -1 12426
 S
 #12533
 A Casa 14 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 14.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 14.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12426
+0 -1 12426
 S
 #12534
 A Casa 15 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 15.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 15.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12427
+0 -1 12427
 S
 #12535
 A Casa 16 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 16.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 16.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12427
+0 -1 12427
 S
 #12536
 A Casa 17 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 17.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 17.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12428
+0 -1 12428
 S
 #12537
 A Casa 18 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 18.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 18.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12428
+0 -1 12428
 S
 #12538
 A Casa 19 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 19.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 19.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12429
+0 -1 12429
 S
 #12539
 A Casa 20 da Rua de Yama~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Yama, número 20.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Yama, nï¿½mero 20.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12429
+0 -1 12429
 S
 #12540
 A Casa 1 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 1.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 1.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12430
+0 -1 12430
 S
 #12541
 A Casa 2 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 2.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 2.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12430
+0 -1 12430
 S
 #12542
 A Casa 3 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 3.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 3.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12431
+0 -1 12431
 S
 #12543
 A Casa 4 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 4.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 4.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12431
+0 -1 12431
 S
 #12544
 A Casa 5 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 5.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 5.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12432
+0 -1 12432
 S
 #12545
 A Casa 6 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 6.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 6.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12432
+0 -1 12432
 S
 #12546
 A Casa 7 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 7.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 7.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12433
+0 -1 12433
 S
 #12547
 A Casa 8 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 8.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 8.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12433
+0 -1 12433
 S
 #12548
 A Casa 9 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 9.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 9.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12434
+0 -1 12434
 S
 #12549
 A Casa 10 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 10.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 10.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12434
+0 -1 12434
 S
 #12550
 A Casa 11 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 11.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 11.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12435
+0 -1 12435
 S
 #12551
 A Casa 12 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 12.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 12.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12435
+0 -1 12435
 S
 #12552
 A Casa 13 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 13.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 13.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12436
+0 -1 12436
 S
 #12553
 A Casa 14 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 14.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 14.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12436
+0 -1 12436
 S
 #12554
 A Casa 15 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 15.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 15.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12437
+0 -1 12437
 S
 #12555
 A Casa 16 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 16.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 16.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12437
+0 -1 12437
 S
 #12556
 A Casa 17 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 17.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 17.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12438
+0 -1 12438
 S
 #12557
 A Casa 18 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 18.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 18.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12438
+0 -1 12438
 S
 #12558
 A Casa 19 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 19.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 19.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12439
+0 -1 12439
 S
 #12559
 A Casa 20 da Rua de Surya~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Surya, número 20.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Surya, nï¿½mero 20.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12439
+0 -1 12439
 S
 #12560
 A Casa 1 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 1.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 1.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12440
+0 -1 12440
 S
 #12561
 A Casa 2 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 2.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 2.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12440
+0 -1 12440
 S
 #12562
 A Casa 3 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 3.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 3.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12441
+0 -1 12441
 S
 #12563
 A Casa 4 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 4.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 4.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12441
+0 -1 12441
 S
 #12564
 A Casa 5 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 5.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 5.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12442
+0 -1 12442
 S
 #12565
 A Casa 6 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 6.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 6.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12442
+0 -1 12442
 S
 #12566
 A Casa 7 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 7.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 7.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12443
+0 -1 12443
 S
 #12567
 A Casa 8 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 8.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 8.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12443
+0 -1 12443
 S
 #12568
 A Casa 9 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 9.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 9.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12444
+0 -1 12444
 S
 #12569
 A Casa 10 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 10.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 10.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12444
+0 -1 12444
 S
 #12570
 A Casa 11 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 11.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 11.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12445
+0 -1 12445
 S
 #12571
 A Casa 12 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 12.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 12.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12445
+0 -1 12445
 S
 #12572
 A Casa 13 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 13.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 13.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12446
+0 -1 12446
 S
 #12573
 A Casa 14 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 14.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 14.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12446
+0 -1 12446
 S
 #12574
 A Casa 15 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 15.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 15.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12447
+0 -1 12447
 S
 #12575
 A Casa 16 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 16.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 16.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12447
+0 -1 12447
 S
 #12576
 A Casa 17 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 17.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 17.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12448
+0 -1 12448
 S
 #12577
 A Casa 18 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 18.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 18.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12448
+0 -1 12448
 S
 #12578
 A Casa 19 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 19.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 19.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12449
+0 -1 12449
 S
 #12579
 A Casa 20 da Rua de Puchan~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Puchan, número 20.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Puchan, nï¿½mero 20.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12449
+0 -1 12449
 S
 #12580
 A Casa 1 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 1.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 1.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12450
+0 -1 12450
 S
 #12581
 A Casa 2 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 2.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 2.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12450
+0 -1 12450
 S
 #12582
 A Casa 3 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 3.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 3.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12451
+0 -1 12451
 S
 #12583
 A Casa 4 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 4.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 4.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12451
+0 -1 12451
 S
 #12584
 A Casa 5 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 5.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 5.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12452
+0 -1 12452
 S
 #12585
 A Casa 6 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 6.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 6.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12452
+0 -1 12452
 S
 #12586
 A Casa 7 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 7.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 7.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12453
+0 -1 12453
 S
 #12587
 A Casa 8 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 8.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 8.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12453
+0 -1 12453
 S
 #12588
 A Casa 9 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 9.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 9.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12454
+0 -1 12454
 S
 #12589
 A Casa 10 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 10.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 10.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12454
+0 -1 12454
 S
 #12590
 A Casa 11 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 11.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 11.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12455
+0 -1 12455
 S
 #12591
 A Casa 12 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 12.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 12.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12455
+0 -1 12455
 S
 #12592
 A Casa 13 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 13.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 13.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12456
+0 -1 12456
 S
 #12593
 A Casa 14 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 14.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 14.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12456
+0 -1 12456
 S
 #12594
 A Casa 15 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 15.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 15.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12457
+0 -1 12457
 S
 #12595
 A Casa 16 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 16.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 16.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12457
+0 -1 12457
 S
 #12596
 A Casa 17 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 17.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 17.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12458
+0 -1 12458
 S
 #12597
 A Casa 18 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 18.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 18.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12458
+0 -1 12458
 S
 #12598
 A Casa 19 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 19.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 19.
 ~
-124 cd 1
-D S
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12459
+0 -1 12459
 S
 #12599
 A Casa 20 da Rua de Siva~
-   Você está dentro de uma casa.  Tudo por aquí é muito simples.  A única
-saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
-Rua de Siva, número 20.
+   Vocï¿½ estï¿½ dentro de uma casa.  Tudo por aquï¿½ ï¿½ muito simples.  A ï¿½nica
+saï¿½da ï¿½ a porta que lhe levarï¿½ devolta para a rua.  O endereï¿½o desta casa ï¿½
+Rua de Siva, nï¿½mero 20.
 ~
-124 cd 1
-D N
+124 12 0 0 0 1
+D0
 ~
 porta~
-:n 2
-abcg -1 12459
+0 -1 12459
 S
-$
+$~
