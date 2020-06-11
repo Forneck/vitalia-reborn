@@ -1,42 +1,42 @@
 #1601
 Entrada da Vila dos Gnomos~
-   Você se encontra em um caminho empoeirado que leva para o norte e para o
-leste.  Vindo do leste você ouve os sons vindos de uma pequena vila.  Há uma
+   Vocï¿½ se encontra em um caminho empoeirado que leva para o norte e para o
+leste.  Vindo do leste vocï¿½ ouve os sons vindos de uma pequena vila.  Hï¿½ uma
 placa de aviso aqui.
 ~
-16 c 2
+16 4 0 0 0 2
 D0
 ~
 ~
 0 -1 3503
 D1
-Você vê um caminho empoeirado.
+Vocï¿½ vï¿½ um caminho empoeirado.
 ~
 ~
 0 -1 1602
 E
 placa~
-Tradução para o português por Maegali.
+Traduï¿½ï¿½o para o portuguï¿½s por Maegali.
 ~
 S
 #1602
 Um Caminho Empoeirado~
-   Este é o caminho que conduz até o vilarejo. Ele segue, indo para leste e
+   Este ï¿½ o caminho que conduz atï¿½ o vilarejo. Ele segue, indo para leste e
 oeste, e seguindo para o norte, encontra-se uma pequena casa.
 ~
-16 0 1
+16 0 0 0 0 1
 D0
-Você vê uma pequena casa.
+Vocï¿½ vï¿½ uma pequena casa.
 ~
 ~
 0 -1 1609
 D1
-Você vê uma estrada.
+Vocï¿½ vï¿½ uma estrada.
 ~
 ~
 0 -1 1603
 D3
-Voê vê um caminho.
+Voï¿½ vï¿½ um caminho.
 ~
 ~
 0 -1 1601
@@ -44,86 +44,86 @@ S
 #1603
 Uma estrada na Vila~
    Esta estrada segue indo de norte a sul e passando pelo centro da vila.
-Algumas pessoas estao por ali, mas não muitas.
+Algumas pessoas estao por ali, mas nï¿½o muitas.
 ~
-16 0 1
+16 0 0 0 0 1
 D0
-Você vê uma estrada.
+Vocï¿½ vï¿½ uma estrada.
 ~
 ~
 0 -1 1605
 D1
-Você vê um caminho.
+Vocï¿½ vï¿½ um caminho.
 ~
 ~
 0 -1 1604
 D2
-Você vê uma estrada.
+Vocï¿½ vï¿½ uma estrada.
 ~
 ~
 0 -1 1607
 D3
-Você vê uma estrada.
+Vocï¿½ vï¿½ uma estrada.
 ~
 ~
 0 -1 1602
 S
 #1604
 Um caminho empoeirado~
-   Você se encontra em um caminho empoeirado num lado distante da Vila.
+   Vocï¿½ se encontra em um caminho empoeirado num lado distante da Vila.
 Casas podem ser vistas ao norte e sul, enquanto o caminho continua a leste.
 Um aviso pode ser visto aqui.
 ~
-16 0 1
+16 0 0 0 0 1
 D0
-Você vê uma casa.
+Vocï¿½ vï¿½ uma casa.
 ~
 ~
 0 -1 1612
 D1
-Você vê um caminho.
+Vocï¿½ vï¿½ um caminho.
 ~
 ~
 0 -1 1659
 D2
-Você vê uma casa.
+Vocï¿½ vï¿½ uma casa.
 ~
 ~
 0 -1 1613
 D3
-Você vê um caminho.
+Vocï¿½ vï¿½ um caminho.
 ~
 ~
 0 -1 1603
 E
 aviso~
-Perigo: A área Leste foi escrita principalmente por Vougon
+Perigo: A ï¿½rea Leste foi escrita principalmente por Vougon
                     (risadinha) - Sandman
 ~
 S
 #1605
 Uma estrada para a Vila~
    Esta estrada segue indo de norte a sul e passando pelo centro da vila.
-Algumas pessoas estão por ali, mas não muitas.
+Algumas pessoas estï¿½o por ali, mas nï¿½o muitas.
 ~
-16 0 1
+16 0 0 0 0 1
 D0
-Você vê uma estrada.
+Vocï¿½ vï¿½ uma estrada.
 ~
 ~
 0 -1 1606
 D1
-Você vê uma casa.
+Vocï¿½ vï¿½ uma casa.
 ~
 ~
 0 -1 1611
 D2
-Você vê uma estrada.
+Vocï¿½ vï¿½ uma estrada.
 ~
 ~
 0 -1 1603
 D3
-Você vê uma casa.
+Vocï¿½ vï¿½ uma casa.
 ~
 ~
 0 -1 1610
@@ -131,16 +131,16 @@ S
 #1606
 Uma estrada para a Vila~
    Esta estrada segue indo de norte a sul e passando pelo centro da vila.
-Algumas pessoas estão por ali, mas não muitas.
+Algumas pessoas estï¿½o por ali, mas nï¿½o muitas.
 ~
-16 0 1
+16 0 0 0 0 1
 D0
-Você vê uma estrada.
+Vocï¿½ vï¿½ uma estrada.
 ~
 ~
 0 -1 1626
 D2
-Você vê uma estrada.
+Vocï¿½ vï¿½ uma estrada.
 ~
 ~
 0 -1 1605
@@ -148,21 +148,21 @@ S
 #1607
 Uma estrada para a Vila~
    Esta estrada segue indo de norte a sul e passando pelo centro da vila.
-Algumas pessoas estão por ali, mas não muitas.
+Algumas pessoas estï¿½o por ali, mas nï¿½o muitas.
 ~
-16 0 1
+16 0 0 0 0 1
 D0
-Você vê uma estrada.
+Vocï¿½ vï¿½ uma estrada.
 ~
 ~
 0 -1 1603
 D2
-Você vê uma estrada.
+Vocï¿½ vï¿½ uma estrada.
 ~
 ~
 0 -1 1608
 D3
-Você vê uma loja.
+Vocï¿½ vï¿½ uma loja.
 ~
 ~
 0 -1 1614
@@ -170,265 +170,265 @@ S
 #1608
 Uma estrada para a Vila~
    Esta estrada segue indo de norte a sul e passando pelo centro da vila.
-Algumas pessoas estão por ali, mas não muitas.
+Algumas pessoas estï¿½o por ali, mas nï¿½o muitas.
 ~
-16 0 1
+16 0 0 0 0 1
 D0
-Você vê uma estrada.
+Vocï¿½ vï¿½ uma estrada.
 ~
 ~
 0 -1 1607
 D1
-Você vê uma loja.
+Vocï¿½ vï¿½ uma loja.
 ~
 ~
 0 -1 1616
 D2
-Você vê um pequeno caminho.
+Vocï¿½ vï¿½ um pequeno caminho.
 ~
 ~
 0 -1 1617
 D3
-Você vê uma loja.
+Vocï¿½ vï¿½ uma loja.
 ~
 ~
 0 -1 1615
 S
 #1609
 Uma pequena casa de Gnomo~
-   Esta é uma pequena casa de subúrbio, feita com madeira da melhor qualidade.
-Você pode ver o exímio trabalho artesanal desta obra, que necessitou de muita
+   Esta ï¿½ uma pequena casa de subï¿½rbio, feita com madeira da melhor qualidade.
+Vocï¿½ pode ver o exï¿½mio trabalho artesanal desta obra, que necessitou de muita
 criatividade.
 ~
-16 d 0
+16 8 0 0 0 0
 D2
-Você vê um caminho.
+Vocï¿½ vï¿½ um caminho.
 ~
 ~
 0 -1 1602
 S
 #1610
 Uma pequena casa de Gnomo~
-   Esta é uma pequena casa de subúrbio, feita com madeira da melhor qualidade.
-Você pode ver o exímio trabalho artesanal desta obra, que necessitou de muita
+   Esta ï¿½ uma pequena casa de subï¿½rbio, feita com madeira da melhor qualidade.
+Vocï¿½ pode ver o exï¿½mio trabalho artesanal desta obra, que necessitou de muita
 criatividade.
 ~
-16 d 0
+16 8 0 0 0 0
 D1
-Você vê um caminho.
+Vocï¿½ vï¿½ um caminho.
 ~
 ~
 0 -1 1605
 S
 #1611
 Uma pequena casa de Gnomo~
-   Esta é uma pequena casa de subúrbio, feita com madeira da melhor qualidade.
-Você pode ver o exímio trabalho artesanal desta obra, que necessitou de muita
+   Esta ï¿½ uma pequena casa de subï¿½rbio, feita com madeira da melhor qualidade.
+Vocï¿½ pode ver o exï¿½mio trabalho artesanal desta obra, que necessitou de muita
 criatividade.
 ~
-16 d 0
+16 8 0 0 0 0
 D3
-Você vê um caminho.
+Vocï¿½ vï¿½ um caminho.
 ~
 ~
 0 -1 1605
 S
 #1612
 Uma pequena casa de Gnomo~
-   Esta é uma pequena casa de subúrbio, feita com madeira da melhor qualidade.
-Você pode ver o exímio trabalho artesanal desta obra, que necessitou de muita
+   Esta ï¿½ uma pequena casa de subï¿½rbio, feita com madeira da melhor qualidade.
+Vocï¿½ pode ver o exï¿½mio trabalho artesanal desta obra, que necessitou de muita
 criatividade.
 ~
-16 d 0
+16 8 0 0 0 0
 D2
-Você vê um caminho.
+Vocï¿½ vï¿½ um caminho.
 ~
 ~
 0 -1 1604
 S
 #1613
 Uma pequena casa de Gnomo~
-   Esta é uma pequena casa de subúrbio, feita com madeira da melhor qualidade.
-Você pode ver o exímio trabalho artesanal desta obra, que necessitou de muita
+   Esta ï¿½ uma pequena casa de subï¿½rbio, feita com madeira da melhor qualidade.
+Vocï¿½ pode ver o exï¿½mio trabalho artesanal desta obra, que necessitou de muita
 criatividade.
 ~
-16 d 0
+16 8 0 0 0 0
 D0
-Você vê um caminho.
+Vocï¿½ vï¿½ um caminho.
 ~
 ~
 0 -1 1604
 S
 #1614
 Uma loja dos Gnomos~
-   Você se encontra em uma das muitas lojas desta agradável cidade.
-Os produtos tem boa aparência, mas infelizmente os gnomos não fazem negócio
+   Vocï¿½ se encontra em uma das muitas lojas desta agradï¿½vel cidade.
+Os produtos tem boa aparï¿½ncia, mas infelizmente os gnomos nï¿½o fazem negï¿½cio
 com forasteiros.
 ~
-16 d 0
+16 8 0 0 0 0
 D1
-Você vê uma estrada.
+Vocï¿½ vï¿½ uma estrada.
 ~
 ~
 0 -1 1607
 S
 #1615
 Uma loja dos Gnomos~
-   Você se encontra em uma das muitas lojas desta agradável cidade.
-Os produtos tem boa aparência, mas infelizmente os gnomos não fazem negócio
+   Vocï¿½ se encontra em uma das muitas lojas desta agradï¿½vel cidade.
+Os produtos tem boa aparï¿½ncia, mas infelizmente os gnomos nï¿½o fazem negï¿½cio
 com forasteiros.
 ~
-16 d 0
+16 8 0 0 0 0
 D1
-Você vê uma estrada.
+Vocï¿½ vï¿½ uma estrada.
 ~
 ~
 0 -1 1608
 S
 #1616
 Uma loja dos Gnomos~
-   Você se encontra em uma das muitas lojas desta agradável cidade.
-Os produtos tem boa aparência, mas infelizmente os gnomos não fazem negócio
+   Vocï¿½ se encontra em uma das muitas lojas desta agradï¿½vel cidade.
+Os produtos tem boa aparï¿½ncia, mas infelizmente os gnomos nï¿½o fazem negï¿½cio
 com forasteiros.
 ~
-16 d 0
+16 8 0 0 0 0
 D3
-Você vê uma estrada.
+Vocï¿½ vï¿½ uma estrada.
 ~
 ~
 0 -1 1608
 S
 #1617
-Caminho do Córrego~
-   Você se encontra num pequeno caminho que segue para o norte e oeste.
-Este caminho é rodeado dos dois lados por um pequeno córrego. A água parece
+Caminho do Cï¿½rrego~
+   Vocï¿½ se encontra num pequeno caminho que segue para o norte e oeste.
+Este caminho ï¿½ rodeado dos dois lados por um pequeno cï¿½rrego. A ï¿½gua parece
 terrivelmente fria.
 ~
-16 c 2
+16 4 0 0 0 2
 D0
-Você vê uma estrada.
+Vocï¿½ vï¿½ uma estrada.
 ~
 ~
 0 -1 1608
 D2
-Você vê um córrego.
+Vocï¿½ vï¿½ um cï¿½rrego.
 ~
 ~
 0 -1 1620
 D3
-Você vê um pequeno caminho.
+Vocï¿½ vï¿½ um pequeno caminho.
 ~
 ~
 0 -1 1618
 E
-córrego~
-O córrego é bem pequeno, e parece ser muito gelado para nadar.
+cï¿½rrego~
+O cï¿½rrego ï¿½ bem pequeno, e parece ser muito gelado para nadar.
 ~
 S
 #1618
-Caminho do Córrego~
-   Você se encontra num caminho que segue rumo leste-oeste. O caminho
-apresenta grama nova, como se tivessem parado de usa-lo há pouco tempo.
+Caminho do Cï¿½rrego~
+   Vocï¿½ se encontra num caminho que segue rumo leste-oeste. O caminho
+apresenta grama nova, como se tivessem parado de usa-lo hï¿½ pouco tempo.
 Ao sul existe um rio e ao oeste existe uma pequena cabana.
 ~
-16 0 2
+16 0 0 0 0 2
 D1
-Você vê um pequeno caminho.
+Vocï¿½ vï¿½ um pequeno caminho.
 ~
 ~
 0 -1 1617
 D2
-Você vê um córrego.
+Vocï¿½ vï¿½ um cï¿½rrego.
 ~
 ~
 0 -1 1621
 D3
-Você vê uma pequena cabana que está começando a cair.
+Vocï¿½ vï¿½ uma pequena cabana que estï¿½ comeï¿½ando a cair.
 ~
 ~
 0 -1 1619
 E
-córrego~
-O córrego é bem pequeno, e parece ser muito gelado para nadar.
+cabana~
+A cabana parece que foi bem construï¿½da, mas parece que o tempo causou alguns estragos nela.
 ~
 E
-cabana~
-A cabana parece que foi bem construída, mas parece que o tempo causou alguns estragos nela.
+cï¿½rrego~
+O cï¿½rrego ï¿½ bem pequeno, e parece ser muito gelado para nadar.
 ~
 S
 #1619
 Uma pequena Cabana~
-   A cabana está uma bagunça! Sangue manchou as paredes tingindo-as com um
-tom carmesin bem forte. Roupas tecidas a mão e lixo esparramam-se por toda
-parte, e parece que você percebe um esqueleto ali no canto.
+   A cabana estï¿½ uma bagunï¿½a! Sangue manchou as paredes tingindo-as com um
+tom carmesin bem forte. Roupas tecidas a mï¿½o e lixo esparramam-se por toda
+parte, e parece que vocï¿½ percebe um esqueleto ali no canto.
 ~
-16 d 0
+16 8 0 0 0 0
 D1
-Você vê um pequeno caminho.
+Vocï¿½ vï¿½ um pequeno caminho.
 ~
 ~
 0 -1 1618
 E
 esqueleto~
-O esqueleto ainda possui um resto de carne grudada nele e é definitivamente
-humanóide. O crânio está rachado e existe uma grande fenda nele.
-Apesar disso, não existem danos exceto aqueles causados pelo tempo.
+O esqueleto ainda possui um resto de carne grudada nele e ï¿½ definitivamente
+humanï¿½ide. O crï¿½nio estï¿½ rachado e existe uma grande fenda nele.
+Apesar disso, nï¿½o existem danos exceto aqueles causados pelo tempo.
 ~
 S
 #1620
-No Córrego~
-   O córrego é gelado e rígido, e no entando, suporta abundância de vida
-abaixo de sua superfície. A correnteza segue lentamente para oeste e existe
+No Cï¿½rrego~
+   O cï¿½rrego ï¿½ gelado e rï¿½gido, e no entando, suporta abundï¿½ncia de vida
+abaixo de sua superfï¿½cie. A correnteza segue lentamente para oeste e existe
 um caminho para o sul.
 ~
-16 0 7
+16 0 0 0 0 7
 D0
-Você vê um pequeno caminho.
+Vocï¿½ vï¿½ um pequeno caminho.
 ~
 ~
 0 -1 1617
 D2
-Você vê um caminho coberto de grama.
+Vocï¿½ vï¿½ um caminho coberto de grama.
 ~
 ~
 0 -1 1622
 D3
-Você vê um pequeno córrego.
+Vocï¿½ vï¿½ um pequeno cï¿½rrego.
 ~
 ~
 0 -1 1621
 S
 #1621
-No Córrego~
+No Cï¿½rrego~
    A correnteza vem do oeste, mas uma imensa tora bloqueando o caminho,
-impede você de seguir seu caminho seguindo em frente.
+impede vocï¿½ de seguir seu caminho seguindo em frente.
 ~
-16 0 7
+16 0 0 0 0 7
 D0
-Você vê um pequeno caminho.
+Vocï¿½ vï¿½ um pequeno caminho.
 ~
 ~
 0 -1 1618
 D1
-Você vê um pequeno córrego.
+Vocï¿½ vï¿½ um pequeno cï¿½rrego.
 ~
 ~
 0 -1 1620
 S
 #1622
 O Campo dos Ratos Sonhadores~
-   Este é um campo bem grande e a grama que cresce nele chega até a sua
-cintura. Você sente que alguma coisa correu por sobre os seus pés.
+   Este ï¿½ um campo bem grande e a grama que cresce nele chega atï¿½ a sua
+cintura. Vocï¿½ sente que alguma coisa correu por sobre os seus pï¿½s.
 A leste existe uma gruta.
 ~
-16 0 2
+16 0 0 0 0 2
 D0
-Você vê um pequeno córrego.
+Vocï¿½ vï¿½ um pequeno cï¿½rrego.
 ~
 ~
 0 -1 1620
 D1
-Você vê uma escura e misteriosa gruta.
+Vocï¿½ vï¿½ uma escura e misteriosa gruta.
 ~
 ~
 0 -1 1623
@@ -436,27 +436,27 @@ S
 #1623
 A Gruta Escura~
    A gruta brilha conforme a luz de sua lanterna bate em suas paredes.
-Conforme você aperta seus olhos e tenta enxergar um pouco mais a frente,
-você tem a impressão que vê algo se mexendo.
+Conforme vocï¿½ aperta seus olhos e tenta enxergar um pouco mais a frente,
+vocï¿½ tem a impressï¿½o que vï¿½ algo se mexendo.
 ~
-16 a 3
+16 1 0 0 0 3
 D0
 ~
 ~
 0 -1 1624
 D3
-Você vê um campo coberto de grama.
+Vocï¿½ vï¿½ um campo coberto de grama.
 ~
 ~
 0 -1 1622
 S
 #1624
 A Gruta Mais Escura~
-   A gruta vai ficando cada vez mais escura e você sente que o terror dentro
-de você também cresce e se torna mais forte. Você teme por sua vida ao
-perceber que alguma coisa começa a emergir das sombras.
+   A gruta vai ficando cada vez mais escura e vocï¿½ sente que o terror dentro
+de vocï¿½ tambï¿½m cresce e se torna mais forte. Vocï¿½ teme por sua vida ao
+perceber que alguma coisa comeï¿½a a emergir das sombras.
 ~
-16 a 3
+16 1 0 0 0 3
 D2
 ~
 ~
@@ -464,216 +464,216 @@ D2
 S
 #1626
 Um Caminho Empoeirado~
-   Você se encontra num caminho bem usado que segue em muitas direções.
-Ao norte existe uma grande casa, e a oeste há uma fortaleza.
+   Vocï¿½ se encontra num caminho bem usado que segue em muitas direï¿½ï¿½es.
+Ao norte existe uma grande casa, e a oeste hï¿½ uma fortaleza.
 ~
-16 c 1
+16 4 0 0 0 1
 D0
-Você vê uma grande casa branca.
+Vocï¿½ vï¿½ uma grande casa branca.
 ~
 ~
 0 -1 1658
 D2
-Você vê uma estrada.
+Vocï¿½ vï¿½ uma estrada.
 ~
 ~
 0 -1 1606
 D3
-Você vê o portão para a grande forteleza.
+Vocï¿½ vï¿½ o portï¿½o para a grande forteleza.
 ~
 ~
 0 -1 1627
 E
 fortaleza~
-A fortaleza é uma grande construção dos gnomos, projetada para defender a
+A fortaleza ï¿½ uma grande construï¿½ï¿½o dos gnomos, projetada para defender a
 cidade.
 ~
 S
 #1627
-O Portão de Ferro~
-   Você pára diante da entrada da fortaleza dos gnomos. O lugar parece que
-está bem fortificado.
+O Portï¿½o de Ferro~
+   Vocï¿½ pï¿½ra diante da entrada da fortaleza dos gnomos. O lugar parece que
+estï¿½ bem fortificado.
 ~
-16 0 1
+16 0 0 0 0 1
 D1
-Você vê um pequeno caminho.
+Vocï¿½ vï¿½ um pequeno caminho.
 ~
 ~
 0 -1 1626
 D3
-Você vê um longo corredor.
+Vocï¿½ vï¿½ um longo corredor.
 ~
 ~
 0 -1 1628
 S
 #1628
 Um Longo Corredor~
-   Você se encontra agora dentro da fortaleza; você deve ter muita sorte pois
-até agora não foi morto pelos guardas. A medida que você explora o lugar,
-você percebe que as paredes e o chão estão impecavelmente limpos. As barracas
-estão ao norte e o depósito fica ao sul.
+   Vocï¿½ se encontra agora dentro da fortaleza; vocï¿½ deve ter muita sorte pois
+atï¿½ agora nï¿½o foi morto pelos guardas. A medida que vocï¿½ explora o lugar,
+vocï¿½ percebe que as paredes e o chï¿½o estï¿½o impecavelmente limpos. As barracas
+estï¿½o ao norte e o depï¿½sito fica ao sul.
 ~
-16 d 0
+16 8 0 0 0 0
 D0
-Você vê as barracas.
+Vocï¿½ vï¿½ as barracas.
 ~
 ~
 0 -1 1630
 D1
-Você vê o portão.
+Vocï¿½ vï¿½ o portï¿½o.
 ~
 ~
 0 -1 1627
 D2
-Você vê o depósito.
+Vocï¿½ vï¿½ o depï¿½sito.
 ~
 ~
 0 -1 1632
 D3
-Você vê um longo corredor.
+Vocï¿½ vï¿½ um longo corredor.
 ~
 ~
 0 -1 1629
 S
 #1629
 Um Longo Corredor~
-   Você se encontra agora dentro da fortaleza; você deve ter muita sorte pois
-até agora não foi morto pelos guardas. A medida que você explora o lugar,
-você percebe que as paredes e o chão estão impecavelmente limpos. Ao sul há
-um salão bagunçado.
+   Vocï¿½ se encontra agora dentro da fortaleza; vocï¿½ deve ter muita sorte pois
+atï¿½ agora nï¿½o foi morto pelos guardas. A medida que vocï¿½ explora o lugar,
+vocï¿½ percebe que as paredes e o chï¿½o estï¿½o impecavelmente limpos. Ao sul hï¿½
+um salï¿½o bagunï¿½ado.
 ~
-16 d 0
+16 8 0 0 0 0
 D1
-Você vê um longo corredor.
+Vocï¿½ vï¿½ um longo corredor.
 ~
 ~
 0 -1 1628
 D2
-Você vê um salão bagunçado.
+Vocï¿½ vï¿½ um salï¿½o bagunï¿½ado.
 ~
 ~
 0 -1 1634
 D3
-Você vê um pequeno quarto.
+Vocï¿½ vï¿½ um pequeno quarto.
 ~
 ~
 0 -1 1635
 S
 #1630
 As Barracas~
-   Você se encontra agora dentro dos aposentos de dormir dos guardas gnomos.
-Todas as camas foram perfeitamente arrumadas e não existe uma única peça de
-roupa no chão. A leste, existe um pequeno depósito.
+   Vocï¿½ se encontra agora dentro dos aposentos de dormir dos guardas gnomos.
+Todas as camas foram perfeitamente arrumadas e nï¿½o existe uma ï¿½nica peï¿½a de
+roupa no chï¿½o. A leste, existe um pequeno depï¿½sito.
 ~
-16 d 0
+16 8 0 0 0 0
 D1
-Você vê um pequeno depósito.
+Vocï¿½ vï¿½ um pequeno depï¿½sito.
 ~
 ~
 0 -1 1631
 D2
-Você vê um longo corredor.
+Vocï¿½ vï¿½ um longo corredor.
 ~
 ~
 0 -1 1628
 S
 #1631
-Um Pequeno Depósito~
-   É aqui que os gnomos guardam todas as suas roupas e armaduras. Não existe
-muita coisa aqui, mas você sempre pode aparecer com alguma coisa.
+Um Pequeno Depï¿½sito~
+   ï¿½ aqui que os gnomos guardam todas as suas roupas e armaduras. Nï¿½o existe
+muita coisa aqui, mas vocï¿½ sempre pode aparecer com alguma coisa.
 ~
-16 d 0
+16 8 0 0 0 0
 D3
-Você vê as barracas.
+Vocï¿½ vï¿½ as barracas.
 ~
 ~
 0 -1 1630
 S
 #1632
-Um Pequeno Depósito~
-   É aqui que os gnomos guardam todo o seu armamento de reserva. Uma porta
+Um Pequeno Depï¿½sito~
+   ï¿½ aqui que os gnomos guardam todo o seu armamento de reserva. Uma porta
 conduz para leste.
 ~
-16 d 0
+16 8 0 0 0 0
 D0
-Você vê um longo corredor.
+Vocï¿½ vï¿½ um longo corredor.
 ~
 ~
 0 -1 1628
 D1
-Você vê um pequeno depósito.
+Vocï¿½ vï¿½ um pequeno depï¿½sito.
 ~
 ~
 0 -1 1633
 S
 #1633
-Um Pequeno Depósito~
-   Este é mais um depósito para guardar coisas dos gnomos. Mapas e planos
-de batalhas estão arrumados em pequenas pilhas sobre as prateleiras.
+Um Pequeno Depï¿½sito~
+   Este ï¿½ mais um depï¿½sito para guardar coisas dos gnomos. Mapas e planos
+de batalhas estï¿½o arrumados em pequenas pilhas sobre as prateleiras.
 ~
-16 d 0
+16 8 0 0 0 0
 D3
-Você vê um pequeno quarto.
+Vocï¿½ vï¿½ um pequeno quarto.
 ~
 ~
 0 -1 1632
 S
 #1634
-O Salão Bagunçado~
-   Você se encontra agora num ambiente onde os guardas chegam para fazer
-suas refeições. Os bancos e mesas estão perfeitamente arrumados e limpos,
-e a louça bonita e muito limpa aguarda para ser usada.
+O Salï¿½o Bagunï¿½ado~
+   Vocï¿½ se encontra agora num ambiente onde os guardas chegam para fazer
+suas refeiï¿½ï¿½es. Os bancos e mesas estï¿½o perfeitamente arrumados e limpos,
+e a louï¿½a bonita e muito limpa aguarda para ser usada.
 ~
-16 d 0
+16 8 0 0 0 0
 D0
-Você vê um longo corredor.
+Vocï¿½ vï¿½ um longo corredor.
 ~
 ~
 0 -1 1629
 S
 #1635
 Um Pequeno Quarto~
-   Este é um quarto pequeno e simples. Seu único ponto interessante é uma
+   Este ï¿½ um quarto pequeno e simples. Seu ï¿½nico ponto interessante ï¿½ uma
 escada que leva para baixo.
 ~
-16 d 0
+16 8 0 0 0 0
 D1
-Você vê um longo corredor.
+Vocï¿½ vï¿½ um longo corredor.
 ~
 ~
 0 -1 1629
 D5
-Você vê trevas.
+Vocï¿½ vï¿½ trevas.
 ~
 ~
 0 -1 1636
 S
 #1636
 Um Pequeno Quarto sem Uso~
-   Você está dentro de um pequeno quarto que se encontra num local pouco
+   Vocï¿½ estï¿½ dentro de um pequeno quarto que se encontra num local pouco
 utilizado da fortaleza. Todo o quarto se encontra coberto por poeira e
 teias-de-aranha. A escada leva de volta para cima, e a leste se encontra
 uma porta enferrujada.
 ~
-16 ad 1
+16 9 0 0 0 1
 D1
-Você vê uma porta enferrujada.
+Vocï¿½ vï¿½ uma porta enferrujada.
 ~
 porta~
 2 1600 1637
 D4
-Você vê um pequeno quarto.
+Vocï¿½ vï¿½ um pequeno quarto.
 ~
 ~
 0 -1 1635
 S
 #1637
 Corredor Escuro~
-   Você se encontra num local muito velho da fortaleza. Você deve ser a
+   Vocï¿½ se encontra num local muito velho da fortaleza. Vocï¿½ deve ser a
 primeira pessoa a entrar aqui, depois de muitos anos. O corredor continua
 ao sul e uma porta se abre para o oeste.
 ~
-16 ad 2
+16 9 0 0 0 2
 D1
 ~
 ~
@@ -683,35 +683,35 @@ D2
 ~
 0 -1 1639
 D3
-Você vê uma porta enferrujada.
+Vocï¿½ vï¿½ uma porta enferrujada.
 ~
 porta~
 2 1600 1636
 S
 #1638
-Câmara de Tortura~
-   Este é o lugar onde antes era usado para se arrancar as confissões falsas
-de vítimas indefesas. As máquinas não parecem estar sendo usadas, mas
+Cï¿½mara de Tortura~
+   Este ï¿½ o lugar onde antes era usado para se arrancar as confissï¿½es falsas
+de vï¿½timas indefesas. As mï¿½quinas nï¿½o parecem estar sendo usadas, mas
 poderiam trabalhar ainda.
 ~
-16 ad 2
+16 9 0 0 0 2
 D3
 ~
 ~
 0 -1 1637
 E
-máquina~
-A máquina consiste numa larga tábua em forma de cruz com manivelas em cada
-extremidade. Você quase pode sentir quando seus braços vão sendo esticados
-até que os ossos se desloquem de seus encaixes.
+mï¿½quina~
+A mï¿½quina consiste numa larga tï¿½bua em forma de cruz com manivelas em cada
+extremidade. Vocï¿½ quase pode sentir quando seus braï¿½os vï¿½o sendo esticados
+atï¿½ que os ossos se desloquem de seus encaixes.
 ~
 S
 #1639
 Corredor Escuro~
-   O corredor continua seguindo na direção norte-sul. O chão está coberto
+   O corredor continua seguindo na direï¿½ï¿½o norte-sul. O chï¿½o estï¿½ coberto
 com algum tipo de lodo escorregadio. Portas seguem a oeste e leste.
 ~
-16 ad 2
+16 9 0 0 0 2
 D0
 ~
 ~
@@ -731,10 +731,10 @@ D3
 S
 #1640
 Corredor Escuro~
-   O corredor continua seguindo na direção norte-sul. O chão está coberto
+   O corredor continua seguindo na direï¿½ï¿½o norte-sul. O chï¿½o estï¿½ coberto
 com algum tipo de lodo escorregadio. Portas seguem a oeste e leste.
 ~
-16 ad 2
+16 9 0 0 0 2
 D0
 ~
 ~
@@ -753,44 +753,44 @@ D3
 0 -1 1645
 S
 #1641
-Cela da Prisão~
-   Você se encontra numa cela escura e imunda. Corpos jazem sobre o chão
-trazendo ao lugar um odor insuportável.
+Cela da Prisï¿½o~
+   Vocï¿½ se encontra numa cela escura e imunda. Corpos jazem sobre o chï¿½o
+trazendo ao lugar um odor insuportï¿½vel.
 ~
-16 ad 2
+16 9 0 0 0 2
 D1
 ~
 ~
 0 -1 1639
 S
 #1642
-Cela da Prisão~
-   Você se encontra numa cela escura e imunda. Corpos jazem sobre o chão
-trazendo ao lugar um odor insuportável.
+Cela da Prisï¿½o~
+   Vocï¿½ se encontra numa cela escura e imunda. Corpos jazem sobre o chï¿½o
+trazendo ao lugar um odor insuportï¿½vel.
 ~
-16 ad 2
+16 9 0 0 0 2
 D3
 ~
 ~
 0 -1 1639
 S
 #1643
-Cela da Prisão~
-   Você se encontra numa cela escura e imunda. Corpos jazem sobre o chão
-trazendo ao lugar um odor insuportável.
+Cela da Prisï¿½o~
+   Vocï¿½ se encontra numa cela escura e imunda. Corpos jazem sobre o chï¿½o
+trazendo ao lugar um odor insuportï¿½vel.
 ~
-16 ad 2
+16 9 0 0 0 2
 D0
 ~
 ~
 0 -1 1640
 S
 #1644
-Cela da Prisão~
-   Você se encontra numa cela escura e imunda. Corpos jazem sobre o chão
-trazendo ao lugar um odor insuportável.
+Cela da Prisï¿½o~
+   Vocï¿½ se encontra numa cela escura e imunda. Corpos jazem sobre o chï¿½o
+trazendo ao lugar um odor insuportï¿½vel.
 ~
-16 ad 2
+16 9 0 0 0 2
 D3
 ~
 ~
@@ -798,27 +798,27 @@ D3
 S
 #1645
 Final do Corredor Escuro~
-   Você acaba de encontrar o final do corredor escuro e talvez o final de
-sua própria vida. Alguma coisa move-se desordenadamente dentro das trevas.
+   Vocï¿½ acaba de encontrar o final do corredor escuro e talvez o final de
+sua prï¿½pria vida. Alguma coisa move-se desordenadamente dentro das trevas.
 ~
-16 ad 2
+16 9 0 0 0 2
 D1
 ~
 ~
 0 -1 1640
 D3
-Você vê uma porta deteriorada.
+Vocï¿½ vï¿½ uma porta deteriorada.
 ~
 porta~
 2 1601 1646
 S
 #1646
 Uma Escada~
-   Você acaba de entrar num tunel vertical com uma escada.
+   Vocï¿½ acaba de entrar num tunel vertical com uma escada.
 ~
-16 ad 3
+16 9 0 0 0 3
 D1
-Você vê uma porta deteriorada.
+Vocï¿½ vï¿½ uma porta deteriorada.
 ~
 porta~
 2 1601 1645
@@ -829,10 +829,10 @@ D5
 S
 #1647
 Covil~
-   Você acaba de entrar em um novo covil da fortaleza. Qualquer coisa
-poderia estar ali a espreita, aguardando aquele que irá virar a esquina.
+   Vocï¿½ acaba de entrar em um novo covil da fortaleza. Qualquer coisa
+poderia estar ali a espreita, aguardando aquele que irï¿½ virar a esquina.
 ~
-16 ad 2
+16 9 0 0 0 2
 D2
 ~
 ~
@@ -843,11 +843,11 @@ D4
 0 -1 1646
 S
 #1648
-Um Corredor Úmido~
-   Você está vagando por um corredor escuro, úmido e sinuoso. A temperatura
-parece ser maior aqui, assim como também o seu medo.
+Um Corredor ï¿½mido~
+   Vocï¿½ estï¿½ vagando por um corredor escuro, ï¿½mido e sinuoso. A temperatura
+parece ser maior aqui, assim como tambï¿½m o seu medo.
 ~
-16 a 0
+16 1 0 0 0 0
 D0
 ~
 ~
@@ -862,11 +862,11 @@ D3
 0 -1 1651
 S
 #1649
-Um Corredor Úmido~
-   Você está vagando por um corredor escuro, úmido e sinuoso. A temperatura
-parece ser maior aqui, assim como também o seu medo.
+Um Corredor ï¿½mido~
+   Vocï¿½ estï¿½ vagando por um corredor escuro, ï¿½mido e sinuoso. A temperatura
+parece ser maior aqui, assim como tambï¿½m o seu medo.
 ~
-16 a 0
+16 1 0 0 0 0
 D2
 ~
 ~
@@ -877,11 +877,11 @@ D3
 0 -1 1648
 S
 #1650
-Um Corredor Úmido~
-   Você está vagando por um corredor escuro, úmido e sinuoso. A temperatura
-parece ser maior aqui, assim como também o seu medo.
+Um Corredor ï¿½mido~
+   Vocï¿½ estï¿½ vagando por um corredor escuro, ï¿½mido e sinuoso. A temperatura
+parece ser maior aqui, assim como tambï¿½m o seu medo.
 ~
-16 a 0
+16 1 0 0 0 0
 D0
 ~
 ~
@@ -892,11 +892,11 @@ D2
 0 -1 1655
 S
 #1651
-Um Corredor Úmido~
-   Você está vagando por um corredor escuro, úmido e sinuoso. A temperatura
-parece ser maior aqui, assim como também o seu medo.
+Um Corredor ï¿½mido~
+   Vocï¿½ estï¿½ vagando por um corredor escuro, ï¿½mido e sinuoso. A temperatura
+parece ser maior aqui, assim como tambï¿½m o seu medo.
 ~
-16 a 0
+16 1 0 0 0 0
 D1
 ~
 ~
@@ -907,11 +907,11 @@ D2
 0 -1 1652
 S
 #1652
-Um Corredor Úmido~
-   Você está vagando por um corredor escuro, úmido e sinuoso. A temperatura
-parece ser maior aqui, assim como também o seu medo.
+Um Corredor ï¿½mido~
+   Vocï¿½ estï¿½ vagando por um corredor escuro, ï¿½mido e sinuoso. A temperatura
+parece ser maior aqui, assim como tambï¿½m o seu medo.
 ~
-16 a 0
+16 1 0 0 0 0
 D0
 ~
 ~
@@ -922,11 +922,11 @@ D2
 0 -1 1653
 S
 #1653
-Um Corredor Úmido~
-   Você está vagando por um corredor escuro, úmido e sinuoso. A temperatura
-parece ser maior aqui, assim como também o seu medo.
+Um Corredor ï¿½mido~
+   Vocï¿½ estï¿½ vagando por um corredor escuro, ï¿½mido e sinuoso. A temperatura
+parece ser maior aqui, assim como tambï¿½m o seu medo.
 ~
-16 a 0
+16 1 0 0 0 0
 D0
 ~
 ~
@@ -937,11 +937,11 @@ D1
 0 -1 1654
 S
 #1654
-Um Corredor Úmido~
-   Você está vagando por um corredor escuro, úmido e sinuoso. A temperatura
-parece ser maior aqui, assim como também o seu medo.
+Um Corredor ï¿½mido~
+   Vocï¿½ estï¿½ vagando por um corredor escuro, ï¿½mido e sinuoso. A temperatura
+parece ser maior aqui, assim como tambï¿½m o seu medo.
 ~
-16 a 0
+16 1 0 0 0 0
 D0
 ~
 ~
@@ -956,11 +956,11 @@ D3
 0 -1 1653
 S
 #1655
-Um Corredor Úmido~
-   Você está vagando por um corredor escuro, úmido e sinuoso. A temperatura
-parece ser maior aqui, assim como também o seu medo.
+Um Corredor ï¿½mido~
+   Vocï¿½ estï¿½ vagando por um corredor escuro, ï¿½mido e sinuoso. A temperatura
+parece ser maior aqui, assim como tambï¿½m o seu medo.
 ~
-16 a 0
+16 1 0 0 0 0
 D0
 ~
 ~
@@ -972,11 +972,11 @@ D3
 S
 #1656
 O Final do Corredor~
-   Você finalmente consegue sair do corredor, apenas para descobrir que se
-encontra metido num perigo ainda maior. Atras de você se encontra a fonte
+   Vocï¿½ finalmente consegue sair do corredor, apenas para descobrir que se
+encontra metido num perigo ainda maior. Atras de vocï¿½ se encontra a fonte
 de grande calor.
 ~
-16 a 0
+16 1 0 0 0 0
 D1
 ~
 ~
@@ -988,11 +988,11 @@ D2
 S
 #1657
 O Altar~
-   Você consegue finalmente encontrar o final deste labirinto. Aqui se
-encontra um grande altar com o formato de morcego. Há uma passagem que
-segue na direção oeste.
+   Vocï¿½ consegue finalmente encontrar o final deste labirinto. Aqui se
+encontra um grande altar com o formato de morcego. Hï¿½ uma passagem que
+segue na direï¿½ï¿½o oeste.
 ~
-16 a 0
+16 1 0 0 0 0
 D3
 ~
 ~
@@ -1000,30 +1000,30 @@ D3
 S
 #1658
 A Casa do Chefe~
-   Você está entrando dentro de uma casa grande e luxuosa. O chão está
-coberto por finos tapetes e as paredes cobertas por tinta. Você se sente
+   Vocï¿½ estï¿½ entrando dentro de uma casa grande e luxuosa. O chï¿½o estï¿½
+coberto por finos tapetes e as paredes cobertas por tinta. Vocï¿½ se sente
 privilegiado simplesmente por ter pisado aqui dentro.
 ~
-16 d 0
+16 8 0 0 0 0
 D2
-Você vê um caminho.
+Vocï¿½ vï¿½ um caminho.
 ~
 ~
 0 -1 1626
 S
 #1659
 Um Caminho Pouco Usado~
-   Você está agora num caminho raramente usado que segue rumo ao oeste da
-Vila. Você se pergunta para onde este caminho levaria.
+   Vocï¿½ estï¿½ agora num caminho raramente usado que segue rumo ao oeste da
+Vila. Vocï¿½ se pergunta para onde este caminho levaria.
 ~
-16 c 1
+16 4 0 0 0 1
 D1
-Você vê um caminho.
+Vocï¿½ vï¿½ um caminho.
 ~
 ~
 0 -1 1660
 D3
-Você vê um caminho.
+Vocï¿½ vï¿½ um caminho.
 ~
 ~
 0 -1 1604
@@ -1031,246 +1031,246 @@ S
 #1660
 O Caminho Crescido~
    Enquanto o caminho segue, a grama vai crescendo cada vez mais alta.
-Você não consegue imaginar aonde exatamente este caminho levaria.
+Vocï¿½ nï¿½o consegue imaginar aonde exatamente este caminho levaria.
 ~
-16 0 2
+16 0 0 0 0 2
 D1
-Você vê uma clareira.
+Vocï¿½ vï¿½ uma clareira.
 ~
 ~
 0 -1 1661
 D3
-Você vê um caminho.
+Vocï¿½ vï¿½ um caminho.
 ~
 ~
 0 -1 1659
 S
 #1661
 A Clareira~
-   Seu progresso é interrompido, inesperadamente, por montanhas de todos
-os tamanhos. O caminho segue, atrás para oeste e indo para o norte, parece
-que existe o poço de uma velha mina.
+   Seu progresso ï¿½ interrompido, inesperadamente, por montanhas de todos
+os tamanhos. O caminho segue, atrï¿½s para oeste e indo para o norte, parece
+que existe o poï¿½o de uma velha mina.
 ~
-16 0 2
+16 0 0 0 0 2
 D0
-Você vê o poço de uma mina.
+Vocï¿½ vï¿½ o poï¿½o de uma mina.
 ~
 ~
 0 -1 1662
 D3
-Você vê um caminho.
+Vocï¿½ vï¿½ um caminho.
 ~
 ~
 0 -1 1660
 S
 #1662
-Entrada para o Poço da Mina~
-   Assim que você entra no poço da mina, você sente um medo repentino de
-que as paredes se fechem sobre você. Você fica surpreso ao perceber que
-não precisa de luz.
+Entrada para o Poï¿½o da Mina~
+   Assim que vocï¿½ entra no poï¿½o da mina, vocï¿½ sente um medo repentino de
+que as paredes se fechem sobre vocï¿½. Vocï¿½ fica surpreso ao perceber que
+nï¿½o precisa de luz.
 ~
-16 d 2
+16 8 0 0 0 2
 D1
-Você vê um poço.
+Vocï¿½ vï¿½ um poï¿½o.
 ~
 ~
 0 -1 1663
 D2
-Você vê uma clareira.
+Vocï¿½ vï¿½ uma clareira.
 ~
 ~
 0 -1 1661
 S
 #1663
-Poço da Mina~
-   O poço desta mina parece ser estável, pelo menos neste local. Os suportes
-de madeira são grossos e fortes. Tochas se enfileiram sobre as paredes da
-mina. Saídas levam a todas as direções.
+Poï¿½o da Mina~
+   O poï¿½o desta mina parece ser estï¿½vel, pelo menos neste local. Os suportes
+de madeira sï¿½o grossos e fortes. Tochas se enfileiram sobre as paredes da
+mina. Saï¿½das levam a todas as direï¿½ï¿½es.
 ~
-16 d 2
+16 8 0 0 0 2
 D0
-Você vê um pequeno poço de mina.
+Vocï¿½ vï¿½ um pequeno poï¿½o de mina.
 ~
 ~
 0 -1 1682
 D1
-Você vê um poço.
+Vocï¿½ vï¿½ um poï¿½o.
 ~
 ~
 0 -1 1664
 D2
-Você vê um poço.
+Vocï¿½ vï¿½ um poï¿½o.
 ~
 ~
 0 -1 1674
 D3
-Você vê uma entrada.
+Vocï¿½ vï¿½ uma entrada.
 ~
 ~
 0 -1 1662
 S
 #1664
-Poço da Mina~
-   O poço desta mina parece ser estável, pelo menos neste local. Os suportes
-de madeira são grossos e fortes. Tochas se enfileiras sobre as paredes da
-mina. Saídas levam a todas as direções.
+Poï¿½o da Mina~
+   O poï¿½o desta mina parece ser estï¿½vel, pelo menos neste local. Os suportes
+de madeira sï¿½o grossos e fortes. Tochas se enfileiras sobre as paredes da
+mina. Saï¿½das levam a todas as direï¿½ï¿½es.
 ~
-16 d 2
+16 8 0 0 0 2
 D0
-Você vê um quarto grande.
+Vocï¿½ vï¿½ um quarto grande.
 ~
 ~
 0 -1 1683
 D1
-Você vê um poço.
+Vocï¿½ vï¿½ um poï¿½o.
 ~
 ~
 0 -1 1665
 D2
-Você vê um quarto grande.
+Vocï¿½ vï¿½ um quarto grande.
 ~
 ~
 0 -1 1673
 D3
-Você vê um poço.
+Vocï¿½ vï¿½ um poï¿½o.
 ~
 ~
 0 -1 1663
 S
 #1665
-Poço da Mina~
-   O poço desta mina parece ser estável, pelo menos neste local. Os suportes
-de madeira são grossos e fortes. Tochas se enfileiras sobre as paredes da
-mina. Saídas levam a todas as direções, exceto ao norte.
+Poï¿½o da Mina~
+   O poï¿½o desta mina parece ser estï¿½vel, pelo menos neste local. Os suportes
+de madeira sï¿½o grossos e fortes. Tochas se enfileiras sobre as paredes da
+mina. Saï¿½das levam a todas as direï¿½ï¿½es, exceto ao norte.
 ~
-16 d 2
+16 8 0 0 0 2
 D1
-Você vê uma passagem.
+Vocï¿½ vï¿½ uma passagem.
 ~
 ~
 0 -1 1666
 D2
-Você vê um quarto grande.
+Vocï¿½ vï¿½ um quarto grande.
 ~
 ~
 0 -1 1672
 D3
-Você vê um poço.
+Vocï¿½ vï¿½ um poï¿½o.
 ~
 ~
 0 -1 1664
 S
 #1666
 Passagem~
-   Você está sobre um caminho muito bem construído, exatamente no meio da
-montanha. Você pressente que existe alguma coisa muito importante a frente,
-apenas levando em consideração todo o trabalho pesado que tiveram para criar
+   Vocï¿½ estï¿½ sobre um caminho muito bem construï¿½do, exatamente no meio da
+montanha. Vocï¿½ pressente que existe alguma coisa muito importante a frente,
+apenas levando em consideraï¿½ï¿½o todo o trabalho pesado que tiveram para criar
 esta passagem.
 ~
-16 d 1
+16 8 0 0 0 1
 D2
-Você vê a passagem.
+Vocï¿½ vï¿½ a passagem.
 ~
 ~
 0 -1 1667
 D3
-Você vê um poço.
+Vocï¿½ vï¿½ um poï¿½o.
 ~
 ~
 0 -1 1665
 S
 #1667
 Passagem~
-   Você está sobre um caminho muito bem construído, exatamente no meio da
-montanha. Você pressente que existe alguma coisa muito importante a frente,
-apenas levando em consideração todo o trabalho pesado que tiveram para criar
+   Vocï¿½ estï¿½ sobre um caminho muito bem construï¿½do, exatamente no meio da
+montanha. Vocï¿½ pressente que existe alguma coisa muito importante a frente,
+apenas levando em consideraï¿½ï¿½o todo o trabalho pesado que tiveram para criar
 esta passagem.
 ~
-16 d 1
+16 8 0 0 0 1
 D0
-Você vê a passagem.
+Vocï¿½ vï¿½ a passagem.
 ~
 ~
 0 -1 1666
 D2
-Você vê um grande saguão.
+Vocï¿½ vï¿½ um grande saguï¿½o.
 ~
 ~
 0 -1 1668
 S
 #1668
-O Grande Saguão~
-   Você acaba de penetrar dentro do Grande Saguão do reino dos Hobgoblin;
+O Grande Saguï¿½o~
+   Vocï¿½ acaba de penetrar dentro do Grande Saguï¿½o do reino dos Hobgoblin;
 sua sorte deve estar bem pequena agora. Grandes pilares dourados se
-enfileiram formando um corredor e você nota que um tapete vermelho se
-estende sob os seus pés.
+enfileiram formando um corredor e vocï¿½ nota que um tapete vermelho se
+estende sob os seus pï¿½s.
 ~
-16 d 0
+16 8 0 0 0 0
 D0
-Você vê a passagem.
+Vocï¿½ vï¿½ a passagem.
 ~
 ~
 0 -1 1667
 D2
-Você vê um quarto grande.
+Vocï¿½ vï¿½ um quarto grande.
 ~
 ~
 0 -1 1669
 S
 #1669
 A Sala do Trono~
-   Este é um ambiente grande e claro cheio de Hobgoblins.  Ao sul existe um
+   Este ï¿½ um ambiente grande e claro cheio de Hobgoblins.  Ao sul existe um
 grande trono dourado bem junto da parede.
 ~
-16 d 0
+16 8 0 0 0 0
 D0
-Você vê um grande salão.
+Vocï¿½ vï¿½ um grande salï¿½o.
 ~
 ~
 0 -1 1668
 S
 #1670
 O Tesouro~
-   Você está dentro da sala do tesouro dos Hobgoblin. Seus olhos quase ficam
+   Vocï¿½ estï¿½ dentro da sala do tesouro dos Hobgoblin. Seus olhos quase ficam
 cegos pelo brilho intenso das moedas de ouro, prata e cobre.
 ~
-16 d 0
+16 8 0 0 0 0
 D0
-Você vê um quarto grande.
+Vocï¿½ vï¿½ um quarto grande.
 ~
 ~
 0 -1 1671
 S
 #1671
 Quarto Protegido~
-   Você está dentro de um quarto muito bem guardado. O lugar consegue ser
-ainda melhor construído do que os poços da mina e está iluminado por lanternas.
+   Vocï¿½ estï¿½ dentro de um quarto muito bem guardado. O lugar consegue ser
+ainda melhor construï¿½do do que os poï¿½os da mina e estï¿½ iluminado por lanternas.
 ~
-16 d 1
+16 8 0 0 0 1
 D0
-Você vê um quarto grande.
+Vocï¿½ vï¿½ um quarto grande.
 ~
 ~
 0 -1 1672
 D2
-Você vê um quarto grande.
+Vocï¿½ vï¿½ um quarto grande.
 ~
 ~
 0 -1 1670
 S
 #1672
 Quarto Protegido~
-   Você está dentro de um quarto muito bem guardado. O lugar consegue ser
-ainda melhor construído do que os poços da mina e está iluminado por lanternas.
+   Vocï¿½ estï¿½ dentro de um quarto muito bem guardado. O lugar consegue ser
+ainda melhor construï¿½do do que os poï¿½os da mina e estï¿½ iluminado por lanternas.
 ~
-16 d 1
+16 8 0 0 0 1
 D0
-Você vê um quarto grande.
+Vocï¿½ vï¿½ um quarto grande.
 ~
 ~
 0 -1 1665
 D2
-Você vê um quarto grande.
+Vocï¿½ vï¿½ um quarto grande.
 ~
 ~
 0 -1 1671
@@ -1279,302 +1279,302 @@ S
 Arsenal Hobgoblin~
    Os guardas estocam suas armas sobressalentes e suas armaduras aqui.
 Existem algumas espadas enferrujadas deixadas sobre prateleiras empoeiradas,
-e armaduras penduradas em cabides ou simplesmente deixadas sobre o chão.
+e armaduras penduradas em cabides ou simplesmente deixadas sobre o chï¿½o.
 ~
-16 d 1
+16 8 0 0 0 1
 D0
-Você vê um poço.
+Vocï¿½ vï¿½ um poï¿½o.
 ~
 ~
 0 -1 1664
 S
 #1674
-Poço da Mina~
-   Você entrou numa parte do poço da mina onde a claridade das tochas estão
-diminuindo lentamente e estão práticamente se apagando. Daquilo que você
+Poï¿½o da Mina~
+   Vocï¿½ entrou numa parte do poï¿½o da mina onde a claridade das tochas estï¿½o
+diminuindo lentamente e estï¿½o prï¿½ticamente se apagando. Daquilo que vocï¿½
 consegue ver, existe uma quantidade imensa de teias-de-aranha recobrindo
-as paredes e muitos ratos aos seus pés.
+as paredes e muitos ratos aos seus pï¿½s.
 ~
-16 d 2
+16 8 0 0 0 2
 D0
-Você vê um poço.
+Vocï¿½ vï¿½ um poï¿½o.
 ~
 ~
 0 -1 1663
 D2
-Você vê um quarto escuro e imundo.
+Vocï¿½ vï¿½ um quarto escuro e imundo.
 ~
 ~
 0 -1 1675
 S
 #1675
-Entrada para o Calabouço~
-   A medida que você caminha dentro deste quarto escuro e imundo, seus pés
-vão grudando no chão. Sua pele se arrepia quando você fita a sujeira das
-paredes e as vê se mexendo. A maioria das saídas conduzem até celas gradeadas.
+Entrada para o Calabouï¿½o~
+   A medida que vocï¿½ caminha dentro deste quarto escuro e imundo, seus pï¿½s
+vï¿½o grudando no chï¿½o. Sua pele se arrepia quando vocï¿½ fita a sujeira das
+paredes e as vï¿½ se mexendo. A maioria das saï¿½das conduzem atï¿½ celas gradeadas.
 ~
-16 d 2
+16 8 0 0 0 2
 D0
-Você vê um poço.
+Vocï¿½ vï¿½ um poï¿½o.
 ~
 ~
 0 -1 1674
 D1
-Você vê uma cela.
+Vocï¿½ vï¿½ uma cela.
 ~
 ~
 0 -1 1677
 D2
-Você vê um quarto escuro e imundo.
+Vocï¿½ vï¿½ um quarto escuro e imundo.
 ~
 ~
 0 -1 1676
 D3
-Você vê uma cela.
+Vocï¿½ vï¿½ uma cela.
 ~
 ~
 0 -1 1681
 S
 #1676
-O Calabouço~
-   Você está no ponto mais escuro e profundo da mina. A luz oriunda das
-tochas mal conseguem alcançar o ponto onde você se encontra. A maioria dos
+O Calabouï¿½o~
+   Vocï¿½ estï¿½ no ponto mais escuro e profundo da mina. A luz oriunda das
+tochas mal conseguem alcanï¿½ar o ponto onde vocï¿½ se encontra. A maioria dos
 caminhos a partir daqui levam a celas gradeadas.
 ~
-16 d 2
+16 8 0 0 0 2
 D0
-Você vê um quarto escuro e imundo.
+Vocï¿½ vï¿½ um quarto escuro e imundo.
 ~
 ~
 0 -1 1675
 D1
-Você vê uma cela.
+Vocï¿½ vï¿½ uma cela.
 ~
 ~
 0 -1 1678
 D2
-Você vê uma cela.
+Vocï¿½ vï¿½ uma cela.
 ~
 ~
 0 -1 1679
 D3
-Você vê uma cela.
+Vocï¿½ vï¿½ uma cela.
 ~
 ~
 0 -1 1680
 S
 #1677
 Uma Cela Gradeada~
-   Você se encontra dentro de uma cela cheia de mofo e com grossas grades.
-Palha úmida e suja cobre todo o chão. As paredes estão cobertas por um bolor
-fétido. Você vê que alguma coisa se mexe no meio da palha.
+   Vocï¿½ se encontra dentro de uma cela cheia de mofo e com grossas grades.
+Palha ï¿½mida e suja cobre todo o chï¿½o. As paredes estï¿½o cobertas por um bolor
+fï¿½tido. Vocï¿½ vï¿½ que alguma coisa se mexe no meio da palha.
 ~
-16 d 2
+16 8 0 0 0 2
 D3
-Você vê um quarto escuro e imundo.
+Vocï¿½ vï¿½ um quarto escuro e imundo.
 ~
 ~
 0 -1 1675
 S
 #1678
 Uma Cela Gradeada~
-   Você se encontra dentro de uma cela cheia de mofo e com grossas grades.
-Palha úmida e suja cobre todo o chão. As paredes estão cobertas por um bolor
-fétido. Você vê que alguma coisa se mexe no meio da palha.
+   Vocï¿½ se encontra dentro de uma cela cheia de mofo e com grossas grades.
+Palha ï¿½mida e suja cobre todo o chï¿½o. As paredes estï¿½o cobertas por um bolor
+fï¿½tido. Vocï¿½ vï¿½ que alguma coisa se mexe no meio da palha.
 ~
-16 d 2
+16 8 0 0 0 2
 D3
-Você vê um quarto escuro e imundo.
+Vocï¿½ vï¿½ um quarto escuro e imundo.
 ~
 ~
 0 -1 1676
 S
 #1679
 Uma Cela Gradeada~
-   Você se encontra dentro de uma cela cheia de mofo e com grossas grades.
-Palha úmida e suja cobre todo o chão. As paredes estão cobertas por um bolor
-fétido. Você vê que alguma coisa se mexe no meio da palha.
+   Vocï¿½ se encontra dentro de uma cela cheia de mofo e com grossas grades.
+Palha ï¿½mida e suja cobre todo o chï¿½o. As paredes estï¿½o cobertas por um bolor
+fï¿½tido. Vocï¿½ vï¿½ que alguma coisa se mexe no meio da palha.
 ~
-16 d 2
+16 8 0 0 0 2
 D0
-Você vê um quarto escuro e imundo.
+Vocï¿½ vï¿½ um quarto escuro e imundo.
 ~
 ~
 0 -1 1676
 S
 #1680
 Uma Cela Gradeada~
-   Você se encontra dentro de uma cela cheia de mofo e com grossas grades.
-Palha úmida e suja cobre todo o chão. As paredes estão cobertas por um bolor
-fétido. Você vê que alguma coisa se mexe no meio da palha.
+   Vocï¿½ se encontra dentro de uma cela cheia de mofo e com grossas grades.
+Palha ï¿½mida e suja cobre todo o chï¿½o. As paredes estï¿½o cobertas por um bolor
+fï¿½tido. Vocï¿½ vï¿½ que alguma coisa se mexe no meio da palha.
 ~
-16 d 2
+16 8 0 0 0 2
 D1
-Você vê um quarto escuro e imundo.
+Vocï¿½ vï¿½ um quarto escuro e imundo.
 ~
 ~
 0 -1 1676
 S
 #1681
 Uma Cela Gradeada~
-   Você se encontra dentro de uma cela cheia de mofo e com grossas grades.
-Palha úmida e suja cobre todo o chão. As paredes estão cobertas por um bolor
-fétido. Você vê que alguma coisa se mexe no meio da palha.
+   Vocï¿½ se encontra dentro de uma cela cheia de mofo e com grossas grades.
+Palha ï¿½mida e suja cobre todo o chï¿½o. As paredes estï¿½o cobertas por um bolor
+fï¿½tido. Vocï¿½ vï¿½ que alguma coisa se mexe no meio da palha.
 ~
-16 d 2
+16 8 0 0 0 2
 D1
-Você vê um quarto escuro e imundo.
+Vocï¿½ vï¿½ um quarto escuro e imundo.
 ~
 ~
 0 -1 1675
 S
 #1682
-Pequeno Poço da Mina~
-   Você está numa pequena extensão do poço da mina. A poeira do chão está
+Pequeno Poï¿½o da Mina~
+   Vocï¿½ estï¿½ numa pequena extensï¿½o do poï¿½o da mina. A poeira do chï¿½o estï¿½
 intacta, sem nenhuma, absolutamente nenhuma pegada.
 ~
-16 d 2
+16 8 0 0 0 2
 D0
-Você vê um pequeno poço de mina.
+Vocï¿½ vï¿½ um pequeno poï¿½o de mina.
 ~
 ~
 0 -1 1688
 D2
-Você vê um poço.
+Vocï¿½ vï¿½ um poï¿½o.
 ~
 ~
 0 -1 1663
 S
 #1683
 Barracas dos Hobgoblins~
-   Você se vê cercado, de repente, por um pequeno grupo de soldados da guarda
-dos Hobgoblins. O quarto, por si só, está uma bagunça, com roupas e armaduras
-por todos os lados. As camas não foram arrumadas e estão sujas.
+   Vocï¿½ se vï¿½ cercado, de repente, por um pequeno grupo de soldados da guarda
+dos Hobgoblins. O quarto, por si sï¿½, estï¿½ uma bagunï¿½a, com roupas e armaduras
+por todos os lados. As camas nï¿½o foram arrumadas e estï¿½o sujas.
 ~
-16 d 2
+16 8 0 0 0 2
 D0
-Você vê um grande quarto.
+Vocï¿½ vï¿½ um grande quarto.
 ~
 ~
 0 -1 1684
 D1
-Você vê um salão bagunçado.
+Vocï¿½ vï¿½ um salï¿½o bagunï¿½ado.
 ~
 ~
 0 -1 1685
 D2
-Você vê um poço.
+Vocï¿½ vï¿½ um poï¿½o.
 ~
 ~
 0 -1 1664
 S
 #1684
 Barracas dos Hobgoblins~
-   Sim! A medida que você segue em frente, o cheiro vai ficando cada vez pior.
-O que você está FAZENDO aqui?
+   Sim! A medida que vocï¿½ segue em frente, o cheiro vai ficando cada vez pior.
+O que vocï¿½ estï¿½ FAZENDO aqui?
 ~
-16 d 2
+16 8 0 0 0 2
 D2
-Você vê um grande quarto.
+Vocï¿½ vï¿½ um grande quarto.
 ~
 ~
 0 -1 1683
 S
 #1685
-Salão Bagunçado~
-   Você se encontra dentro da área de refeições dos hobgoblin. Existem umas
-poucas mesas rotativas e muitos pratos quebrados e sujos largados pelo salão.
-Você escorrega e quase cai, ao pisar num pedaço de carne estragada que está
-jogada no chão, mas consegue se equilibrar em tempo.
+Salï¿½o Bagunï¿½ado~
+   Vocï¿½ se encontra dentro da ï¿½rea de refeiï¿½ï¿½es dos hobgoblin. Existem umas
+poucas mesas rotativas e muitos pratos quebrados e sujos largados pelo salï¿½o.
+Vocï¿½ escorrega e quase cai, ao pisar num pedaï¿½o de carne estragada que estï¿½
+jogada no chï¿½o, mas consegue se equilibrar em tempo.
 ~
-16 d 2
+16 8 0 0 0 2
 D0
-Você vê um pequeno quarto.
+Vocï¿½ vï¿½ um pequeno quarto.
 ~
 ~
 0 -1 1686
 D1
-Você vê a cozinha.
+Vocï¿½ vï¿½ a cozinha.
 ~
 ~
 0 -1 1687
 D3
-Você vê um grande quarto.
+Vocï¿½ vï¿½ um grande quarto.
 ~
 ~
 0 -1 1683
 S
 #1686
 A Dispensa~
-   Você se encontra dentro de um pequeno quarto cheio de farinha, grãos,
+   Vocï¿½ se encontra dentro de um pequeno quarto cheio de farinha, grï¿½os,
 frutas e morcegos pendurados.
 ~
-16 d 1
+16 8 0 0 0 1
 D2
-Você vê o salão bagunçado.
+Vocï¿½ vï¿½ o salï¿½o bagunï¿½ado.
 ~
 ~
 0 -1 1685
 S
 #1687
 A Cozinha~
-   Esta cozinha não é limpa desde a criação dos seres humanos. O lixo e a
-comida estragada se espalham por sobre o chão e chegam a bater em seus
-joelhos. Sobre o fogão, uma panela fervendo. Uma mão humana está ali dentro,
+   Esta cozinha nï¿½o ï¿½ limpa desde a criaï¿½ï¿½o dos seres humanos. O lixo e a
+comida estragada se espalham por sobre o chï¿½o e chegam a bater em seus
+joelhos. Sobre o fogï¿½o, uma panela fervendo. Uma mï¿½o humana estï¿½ ali dentro,
 sendo cozida.
 ~
-16 d 2
+16 8 0 0 0 2
 D3
-Você vê o salão bagunçado.
+Vocï¿½ vï¿½ o salï¿½o bagunï¿½ado.
 ~
 ~
 0 -1 1685
 S
 #1688
-Um pequeno Poço da Mina~
-   Você chega a um lugar do poço da mina onde um tunel segue para baixo.
+Um pequeno Poï¿½o da Mina~
+   Vocï¿½ chega a um lugar do poï¿½o da mina onde um tunel segue para baixo.
 A passagem pequena continua seguindo rumo norte e sul.
 ~
-16 d 2
+16 8 0 0 0 2
 D0
-Você vê uma pequena toca.
+Vocï¿½ vï¿½ uma pequena toca.
 ~
 ~
 0 -1 1689
 D2
-Você vê um pequeno poço de mina.
+Vocï¿½ vï¿½ um pequeno poï¿½o de mina.
 ~
 ~
 0 -1 1682
 D5
-Você vê um buraco.
+Vocï¿½ vï¿½ um buraco.
 ~
 ~
 0 -1 1690
 S
 #1689
 O Covil do Eremita~
-   Você se encontra dentro de uma pequena área da mina onde as paredes ruíram
-revelando uma pequenina toca de um único compartimento. A área está fracamente
-iluminada, mas você consegue perceber o movimento de alguma coisa que está se
-dirigindo diretamente na sua direção.
+   Vocï¿½ se encontra dentro de uma pequena ï¿½rea da mina onde as paredes ruï¿½ram
+revelando uma pequenina toca de um ï¿½nico compartimento. A ï¿½rea estï¿½ fracamente
+iluminada, mas vocï¿½ consegue perceber o movimento de alguma coisa que estï¿½ se
+dirigindo diretamente na sua direï¿½ï¿½o.
 ~
-16 d 2
+16 8 0 0 0 2
 D2
-Você vê um pequeno poço de mina.
+Vocï¿½ vï¿½ um pequeno poï¿½o de mina.
 ~
 ~
 0 -1 1688
 S
 #1690
 Um Buraco~
-   Você está em um buraco.
+   Vocï¿½ estï¿½ em um buraco.
 ~
-16 d 3
+16 8 0 0 0 3
 D4
-Você vê um pequeno poço de mina.
+Vocï¿½ vï¿½ um pequeno poï¿½o de mina.
 ~
 ~
 0 -1 1688
 S
-$
+$~
