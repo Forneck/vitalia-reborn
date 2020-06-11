@@ -1,12 +1,12 @@
 #2300
 O Baixo Gramado~
    A grama amarelada daqui foi bem pisoteada, em sua grande maioria pelo
-trânsito constante de pedestres e rodas de carroças.  As pegadas seguem em
-direção ao sul, para uma área aberta onde um número bastante grande de
-pessoas se encontram.  Um pouco para o sul daqui, estão alguns vagões de
-carroças parados à margem da estrada.
+trï¿½nsito constante de pedestres e rodas de carroï¿½as.  As pegadas seguem em
+direï¿½ï¿½o ao sul, para uma ï¿½rea aberta onde um nï¿½mero bastante grande de
+pessoas se encontram.  Um pouco para o sul daqui, estï¿½o alguns vagï¿½es de
+carroï¿½as parados ï¿½ margem da estrada.
 ~
-23 0 2
+23 0 0 0 0 2
 D2
 ~
 ~
@@ -18,12 +18,12 @@ D3
 S
 #2301
 O Baixo Gramado~
-   O caminho possui um trânsito razoavelmente grande por não ser uma
-estrada, e o volume de tráfego que tomou esta direção, acabou transformando
-este caminho, numa estrada transitável.  Ao leste há um vagão colorido com
-um homem sentado dentro acenando para você.
+   O caminho possui um trï¿½nsito razoavelmente grande por nï¿½o ser uma
+estrada, e o volume de trï¿½fego que tomou esta direï¿½ï¿½o, acabou transformando
+este caminho, numa estrada transitï¿½vel.  Ao leste hï¿½ um vagï¿½o colorido com
+um homem sentado dentro acenando para vocï¿½.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -39,13 +39,13 @@ D2
 S
 #2302
 Um Caminho Gramado Batido~
-   Outro vagão está parado na estrada, do lado oeste.  O gramado foi tão
-intensamente pisoteado que existem pedaços onde se pode ver o chão de terra
-batida.  Bem ao sul, há uma enorme área, onde se existe um grande número de
-exóticos homens e mulheres dançando, saltitando e brincando com as pessoas
+   Outro vagï¿½o estï¿½ parado na estrada, do lado oeste.  O gramado foi tï¿½o
+intensamente pisoteado que existem pedaï¿½os onde se pode ver o chï¿½o de terra
+batida.  Bem ao sul, hï¿½ uma enorme ï¿½rea, onde se existe um grande nï¿½mero de
+exï¿½ticos homens e mulheres danï¿½ando, saltitando e brincando com as pessoas
 que passam ali por perto.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -60,43 +60,39 @@ D3
 0 -1 2304
 S
 #2303
-O Vagão do Tônico~
-   O vagão colorido que está parado na lateral da estrada parece que já
-viajou pelos lugares mais exóticos do mundo.  Pequenos sinos prateados foram
-pendurados nas lonas da carroça, pelo lado de fora e conforme o vento bate,
+O Vagï¿½o do Tï¿½nico~
+   O vagï¿½o colorido que estï¿½ parado na lateral da estrada parece que jï¿½
+viajou pelos lugares mais exï¿½ticos do mundo.  Pequenos sinos prateados foram
+pendurados nas lonas da carroï¿½a, pelo lado de fora e conforme o vento bate,
 eles batem delicadamente, como se entoassem uma suave melodia.
 ~
-23 0 2
+23 0 0 0 0 2
 D3
 ~
 ~
 0 -1 2301
 S
 #2304
-O Vagão Berrante~
-   Este vagão se parece exatamente com a visão selvagem e excitante que
+O Vagï¿½o Berrante~
+   Este vagï¿½o se parece exatamente com a visï¿½o selvagem e excitante que
 envolve este lugar.  Foram pintadas em sua lona, paisagens que retratam
-cachoeiras e pradarias rústicas, em cores berrantes e fortes.  Certamente
-este é um vagão que chama a atenção de todos.
+cachoeiras e pradarias rï¿½sticas, em cores berrantes e fortes.  Certamente
+este ï¿½ um vagï¿½o que chama a atenï¿½ï¿½o de todos.
 ~
-23 0 2
+23 0 0 0 0 2
 D1
 ~
 ~
 0 -1 2302
-D2
-~
-~
-0 -1 -1
 S
 #2305
-Área do Festival~
+ï¿½rea do Festival~
    Um permanente festival acontece aqui, dia e noite sem parar.  Sempre que
 uma caravana de ciganos ou uma companhia de artores parte surgem outros, no
-lugar.  Um grande panorama de espetáculos e de maravilhas estão à sua
+lugar.  Um grande panorama de espetï¿½culos e de maravilhas estï¿½o ï¿½ sua
 espera.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -115,13 +111,13 @@ D3
 0 -1 2307
 S
 #2306
-Área do Festival~
-   Um povo sorridente toma conta desta grande área aberta onde todos os
+ï¿½rea do Festival~
+   Um povo sorridente toma conta desta grande ï¿½rea aberta onde todos os
 tipos de homens e mulheres alegres se surpreendem e se deleitam diante dos
-inúmeros espetáculos que acontecem o tempo todo.  Esta é a esquina do lado
-nordeste da área - e a maioria das atividades estão mais para o sul e oeste.
+inï¿½meros espetï¿½culos que acontecem o tempo todo.  Esta ï¿½ a esquina do lado
+nordeste da ï¿½rea - e a maioria das atividades estï¿½o mais para o sul e oeste.
 ~
-23 0 2
+23 0 0 0 0 2
 D2
 ~
 ~
@@ -132,14 +128,14 @@ D3
 0 -1 2305
 S
 #2307
-Área do Festival~
-   Este lugar era até bem recentemente, um simples campo aberto, destituído
+ï¿½rea do Festival~
+   Este lugar era atï¿½ bem recentemente, um simples campo aberto, destituï¿½do
 de quqlquer beleza e igual a tantos outros campos comuns.  A grama amarelada
-foi pisoteada por mil pés parece pedir um descanso.  Neste local pode-se ver
+foi pisoteada por mil pï¿½s parece pedir um descanso.  Neste local pode-se ver
 toda uma infinita gama das coisas mais curiosas e diferentes e
 originais...em sua grande a maioria ao sul e leste.
 ~
-23 0 2
+23 0 0 0 0 2
 D1
 ~
 ~
@@ -150,11 +146,11 @@ D2
 0 -1 2308
 S
 #2308
-Área do Festival~
-   Uma fileira aberta através das árvores segue para o oeste e as maravilhas
-que estão nesta área continuam naquela direção.
+ï¿½rea do Festival~
+   Uma fileira aberta atravï¿½s das ï¿½rvores segue para o oeste e as maravilhas
+que estï¿½o nesta ï¿½rea continuam naquela direï¿½ï¿½o.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -173,15 +169,15 @@ D3
 0 -1 2335
 S
 #2309
-Área do Festival~
+ï¿½rea do Festival~
    Os sons das pessoas que andam sem parar por aqui junta-se aos gritos dos
-inúmeros vendedores ambulantes que perambulam pela feira, bem como ao ruído
+inï¿½meros vendedores ambulantes que perambulam pela feira, bem como ao ruï¿½do
 incessante dos artitas, que convidam as pessoas para assistirem aos seus
-espetáculos, dando ao ambiente um ar de aventura e de espanto.  Os tipos
-mais estranhos circulam por todas as direções e seria preciso ter muito mal
-humor para não se divertir aqui.
+espetï¿½culos, dando ao ambiente um ar de aventura e de espanto.  Os tipos
+mais estranhos circulam por todas as direï¿½ï¿½es e seria preciso ter muito mal
+humor para nï¿½o se divertir aqui.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -200,12 +196,12 @@ D3
 0 -1 2308
 S
 #2310
-Área do Festival~
-   Uma grande área se abre para o leste e mais e mais atrações parecem se
-aglutinar aqui.  Mais para o sul, algumas pessoas estão desempenhando seus
-números.
+ï¿½rea do Festival~
+   Uma grande ï¿½rea se abre para o leste e mais e mais atraï¿½ï¿½es parecem se
+aglutinar aqui.  Mais para o sul, algumas pessoas estï¿½o desempenhando seus
+nï¿½meros.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -224,11 +220,11 @@ D3
 0 -1 2309
 S
 #2311
-Área do Festival~
-   Aqui, a clareira chega até a extremidade da floresta, contudo, há uma
-pequena trilha que segue através das árvores, indo para o oeste.
+ï¿½rea do Festival~
+   Aqui, a clareira chega atï¿½ a extremidade da floresta, contudo, hï¿½ uma
+pequena trilha que segue atravï¿½s das ï¿½rvores, indo para o oeste.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -247,13 +243,13 @@ D3
 0 -1 2345
 S
 #2312
-Área do Festival~
-   Você se encontra exatamente no centro deste lugar cheio de alegria e
-muita diversão.  As pessoas circulam por todos os lados, empurrando e dando
-cotoveladas em todos.  Para qualquer lado que se olhe é possível ver algo
+ï¿½rea do Festival~
+   Vocï¿½ se encontra exatamente no centro deste lugar cheio de alegria e
+muita diversï¿½o.  As pessoas circulam por todos os lados, empurrando e dando
+cotoveladas em todos.  Para qualquer lado que se olhe ï¿½ possï¿½vel ver algo
 novo e maravilhoso.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -272,13 +268,13 @@ D3
 0 -1 2311
 S
 #2313
-Área do Festival~
-   Com tantas pessoas passado por você, sem pressa, absolutamente entregues
-à diversão, fica difícil ficar sem relaxar ou gastar um pouco de dinheiro
-neste lugar.  Este lugar deve ser meio mágico, pois com tanta gente pisando
-na grama, esta ainda consegue se manter viva sob os milhares de pés.
+ï¿½rea do Festival~
+   Com tantas pessoas passado por vocï¿½, sem pressa, absolutamente entregues
+ï¿½ diversï¿½o, fica difï¿½cil ficar sem relaxar ou gastar um pouco de dinheiro
+neste lugar.  Este lugar deve ser meio mï¿½gico, pois com tanta gente pisando
+na grama, esta ainda consegue se manter viva sob os milhares de pï¿½s.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -297,14 +293,14 @@ D3
 0 -1 2312
 S
 #2314
-Área do Festival~
-   Esta é o lado ocidental da clareira - a maioria dos transeuntes está indo
-para o norte, sul e leste.  Realmente é surpreendente como tantas pessoas
-podem passar por este lugar, todos eles de diferentes raças, tamanhos e
-estatura e ainda assim, todos parecem estar pacíficamente entrosados- até
+ï¿½rea do Festival~
+   Esta ï¿½ o lado ocidental da clareira - a maioria dos transeuntes estï¿½ indo
+para o norte, sul e leste.  Realmente ï¿½ surpreendente como tantas pessoas
+podem passar por este lugar, todos eles de diferentes raï¿½as, tamanhos e
+estatura e ainda assim, todos parecem estar pacï¿½ficamente entrosados- atï¿½
 mesmo felizes por estarem juntos.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -319,12 +315,12 @@ D2
 0 -1 2349
 S
 #2315
-Área do Festival~
-   Logo ao sul, há um pequeno palco onde um grupo de artistas está
-representando algum tipo de sátira.  Para o norte, leste e oeste estão
-muitas outras atrações.
+ï¿½rea do Festival~
+   Logo ao sul, hï¿½ um pequeno palco onde um grupo de artistas estï¿½
+representando algum tipo de sï¿½tira.  Para o norte, leste e oeste estï¿½o
+muitas outras atraï¿½ï¿½es.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -343,12 +339,12 @@ D3
 0 -1 2314
 S
 #2316
-Área do Festival~
-   Este é o lado oriental da clareira.  A maior parte do movimento acontece
+ï¿½rea do Festival~
+   Este ï¿½ o lado oriental da clareira.  A maior parte do movimento acontece
 no leste e no norte.  Para o sul fica o final da clareira, onde um pequeno
-caminho foi aberto, através dos bosques.
+caminho foi aberto, atravï¿½s dos bosques.
 ~
-23 8 2
+23 8 0 0 0 2
 D0
 ~
 ~
@@ -364,13 +360,13 @@ D3
 S
 #2317
 Estrada ~
-   Um grande pedaço da clareira segue para o leste, encontrando-se com outra
-grande área aberta, onde mais jogos e atrações divertidas estão acontecendo.
-Há vagõesde carroças estacionados ao lado do gramado, com pequenas
-distâncias entre si.  Cada uma das carroças está mais cheia com mercadorias
-exóticas, para serem vendidas aos transeuntes da feira.
+   Um grande pedaï¿½o da clareira segue para o leste, encontrando-se com outra
+grande ï¿½rea aberta, onde mais jogos e atraï¿½ï¿½es divertidas estï¿½o acontecendo.
+Hï¿½ vagï¿½esde carroï¿½as estacionados ao lado do gramado, com pequenas
+distï¿½ncias entre si.  Cada uma das carroï¿½as estï¿½ mais cheia com mercadorias
+exï¿½ticas, para serem vendidas aos transeuntes da feira.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -386,12 +382,12 @@ D3
 S
 #2318
 O Gramado do Leste~
-   Uma grande área gramada do lado leste vai avançando até outra área
-aberta, onde mais pessoas se juntam para assistir aos espetáculos e comprar
-mercadorias.Vagões estão estacionados ao longo deste gramado, e você percebe
-que há um estacionado bem ao norte de onde você está parado.
+   Uma grande ï¿½rea gramada do lado leste vai avanï¿½ando atï¿½ outra ï¿½rea
+aberta, onde mais pessoas se juntam para assistir aos espetï¿½culos e comprar
+mercadorias.Vagï¿½es estï¿½o estacionados ao longo deste gramado, e vocï¿½ percebe
+que hï¿½ um estacionado bem ao norte de onde vocï¿½ estï¿½ parado.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -410,15 +406,15 @@ D3
 0 -1 2310
 S
 #2319
-Carroção Colorido~
-   A grande carroça que está estacionada neste pequeno nicho entre o
-arvoredo, está toda coberta por lonas coloridas e enfeitada por tapeçaciras
-muito exóticas e bonitas.  Parece que os donos destes carroções competem
-entre si para ver de quem é o mais extravagante.  Ao observar esta carroça,
-você tem a nítida impressão de que o dono deste vagão ganha a vida vendendo
+Carroï¿½ï¿½o Colorido~
+   A grande carroï¿½a que estï¿½ estacionada neste pequeno nicho entre o
+arvoredo, estï¿½ toda coberta por lonas coloridas e enfeitada por tapeï¿½aciras
+muito exï¿½ticas e bonitas.  Parece que os donos destes carroï¿½ï¿½es competem
+entre si para ver de quem ï¿½ o mais extravagante.  Ao observar esta carroï¿½a,
+vocï¿½ tem a nï¿½tida impressï¿½o de que o dono deste vagï¿½o ganha a vida vendendo
 roupas e tecidos.
 ~
-23 0 2
+23 0 0 0 0 2
 D2
 ~
 ~
@@ -426,13 +422,13 @@ D2
 S
 #2320
 O Gramado do Leste~
-   E estas pessoas exóticas e tão coloridas continuam tentando vender suas
+   E estas pessoas exï¿½ticas e tï¿½o coloridas continuam tentando vender suas
 mercadorias aos transeuntes, enquqnto os artistas se exibem, mostrando seus
-talentos a todos que queiram lhes dar algumas moedas.  Há uma grande
-concentração de pessoas ao leste, assistindo a algum espetáculo ou jogando
+talentos a todos que queiram lhes dar algumas moedas.  Hï¿½ uma grande
+concentraï¿½ï¿½o de pessoas ao leste, assistindo a algum espetï¿½culo ou jogando
 qualquer tipo de jogo.
 ~
-23 0 2
+23 0 0 0 0 2
 D1
 ~
 ~
@@ -448,12 +444,12 @@ D3
 S
 #2321
 O Gramado do Leste~
-   As pessoas vão andando e se empurram umas às outras, chegando mesmo a
+   As pessoas vï¿½o andando e se empurram umas ï¿½s outras, chegando mesmo a
 darem algumas cotoveladas uns nos outros, sem contudo deixarem de se sentir
-felizes e se divertindo muito.  Ao sul há um vagão muito colorido, onde
-estão sendo vendidas uns adornos muito bonitos, muito parecidos com jóias.
+felizes e se divertindo muito.  Ao sul hï¿½ um vagï¿½o muito colorido, onde
+estï¿½o sendo vendidas uns adornos muito bonitos, muito parecidos com jï¿½ias.
 ~
-23 0 0
+23 0 0 0 0 0
 D0
 ~
 ~
@@ -472,13 +468,13 @@ D3
 0 -1 2317
 S
 #2322
-O Vagão da Bijouteria~
-   O vagão está todo enfeitado com quadros de reis e rainhas, vestidos com
-suas vestimentas reais e repletos de jóias.  Mais abaixo, estão alguns
-quadros mostrando mãos cheias de anéis e pulseiras cintilantes, que chamam a
-atenção dos fregueses que espiam fascinados através da janela do vagão.
+O Vagï¿½o da Bijouteria~
+   O vagï¿½o estï¿½ todo enfeitado com quadros de reis e rainhas, vestidos com
+suas vestimentas reais e repletos de jï¿½ias.  Mais abaixo, estï¿½o alguns
+quadros mostrando mï¿½os cheias de anï¿½is e pulseiras cintilantes, que chamam a
+atenï¿½ï¿½o dos fregueses que espiam fascinados atravï¿½s da janela do vagï¿½o.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -486,12 +482,12 @@ D0
 S
 #2323
 O Gramado do Leste~
-   Ao leste há uma grande área aberta, onde foi construído um palco para que
-os atores possam encenar suas peças que vão do mais profundo drama até a
-mais espalhafatosa comédia.  Uma grande multidão aguarda ansiosa pelo início
-do espetáculo.
+   Ao leste hï¿½ uma grande ï¿½rea aberta, onde foi construï¿½do um palco para que
+os atores possam encenar suas peï¿½as que vï¿½o do mais profundo drama atï¿½ a
+mais espalhafatosa comï¿½dia.  Uma grande multidï¿½o aguarda ansiosa pelo inï¿½cio
+do espetï¿½culo.
 ~
-23 0 2
+23 0 0 0 0 2
 D1
 ~
 ~
@@ -507,12 +503,12 @@ D3
 S
 #2324
 O Gramado do Leste~
-   Ao leste há uma grande clareira.  Não é tão grande quanto a área onde
-ficam as principais atrações, mas serve bem ao propósito.  Um grande palco
-foi montado no lado leste da clareira, onde peças satíricas e dramalhões
-pesados vão sendo encenados para o deleite da platéia entusiasmada.
+   Ao leste hï¿½ uma grande clareira.  Nï¿½o ï¿½ tï¿½o grande quanto a ï¿½rea onde
+ficam as principais atraï¿½ï¿½es, mas serve bem ao propï¿½sito.  Um grande palco
+foi montado no lado leste da clareira, onde peï¿½as satï¿½ricas e dramalhï¿½es
+pesados vï¿½o sendo encenados para o deleite da platï¿½ia entusiasmada.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -527,13 +523,13 @@ D3
 0 -1 2321
 S
 #2325
-O Pátio~
-   Há um palco a sudeste daqui, onde uma peça está sendo encenada para um
-grande número de pessoas atentas e emocionadas.  Ao norte, há um restaurante
-ao ar livre - você pode sentir o delicioso cheiro do tempero da comida
+O Pï¿½tio~
+   Hï¿½ um palco a sudeste daqui, onde uma peï¿½a estï¿½ sendo encenada para um
+grande nï¿½mero de pessoas atentas e emocionadas.  Ao norte, hï¿½ um restaurante
+ao ar livre - vocï¿½ pode sentir o delicioso cheiro do tempero da comida
 cigana, que enche o ar.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -548,14 +544,14 @@ D2
 0 -1 2326
 S
 #2326
-O Pátio Cigano~
-   O palco que está no leste está em constante atividade.  Pode-se ver o
-movimento constante de atores que entram e saem de cena.  Ao norte daqui, há
-uma área onde muitas pessoas estão confortavelmente sentadas em coloridas
+O Pï¿½tio Cigano~
+   O palco que estï¿½ no leste estï¿½ em constante atividade.  Pode-se ver o
+movimento constante de atores que entram e saem de cena.  Ao norte daqui, hï¿½
+uma ï¿½rea onde muitas pessoas estï¿½o confortavelmente sentadas em coloridas
 mesas de piquenique, degustando os pratos que foram comprados no pequeno
 restaurante cigano.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -570,14 +566,14 @@ D3
 0 -1 2323
 S
 #2327
-O Pátio Cigano~
-   O palco que está no leste está em constante atividade.  Pode-se ver o
-movimento constante de atores que entram e saem de cena.  Para o sul, há uma
-enorme barraca de lona, sob a qual, muitos homens estão em pé, enquanto
-segurando firmes suas canecas de cerveja e ao mesmo tempo assistem à peça
+O Pï¿½tio Cigano~
+   O palco que estï¿½ no leste estï¿½ em constante atividade.  Pode-se ver o
+movimento constante de atores que entram e saem de cena.  Para o sul, hï¿½ uma
+enorme barraca de lona, sob a qual, muitos homens estï¿½o em pï¿½, enquanto
+segurando firmes suas canecas de cerveja e ao mesmo tempo assistem ï¿½ peï¿½a
 que vai sendo exibida no palco.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -592,13 +588,13 @@ D3
 0 -1 2324
 S
 #2328
-O Pátio Cigano~
-   Logo ali ao sul, está a Barraca de Cerveja Inglesa, onde um grande número
-de pessoas - em sua grande maioria homens - está em pé, enquanto bebe sua
+O Pï¿½tio Cigano~
+   Logo ali ao sul, estï¿½ a Barraca de Cerveja Inglesa, onde um grande nï¿½mero
+de pessoas - em sua grande maioria homens - estï¿½ em pï¿½, enquanto bebe sua
 cerveja entre seus companheiros, desfrutando o dia de festa e alegrias.  O
-palco principal fica ao nordeste, e ao leste há uma área lateral.
+palco principal fica ao nordeste, e ao leste hï¿½ uma ï¿½rea lateral.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -614,12 +610,12 @@ D2
 S
 #2329
 Barraca de Cerveja Inglesa~
-   Homens estão em pé ali, se acotovelando uns aos outros, e enquanto bebem
-suas cervejas, vão falando sobre tudo que eles têm vontade de falar.  O mais
-importante de tudo isso é que eles estão todos bebendo a tão saborosa
-cerveja inglesa que os ciganos sabem tão bem fabricar.  Em todo o caso - de
-verdade - eles poderiam estar até discutindo sobre o sexo dos anjos que não
-teria o menor problema, já que todos estão ali por um único motivo: tomar a
+   Homens estï¿½o em pï¿½ ali, se acotovelando uns aos outros, e enquanto bebem
+suas cervejas, vï¿½o falando sobre tudo que eles tï¿½m vontade de falar.  O mais
+importante de tudo isso ï¿½ que eles estï¿½o todos bebendo a tï¿½o saborosa
+cerveja inglesa que os ciganos sabem tï¿½o bem fabricar.  Em todo o caso - de
+verdade - eles poderiam estar atï¿½ discutindo sobre o sexo dos anjos que nï¿½o
+teria o menor problema, jï¿½ que todos estï¿½o ali por um ï¿½nico motivo: tomar a
 deliciosa cerveja.
 ~
 23 8 0 0 0 0
@@ -633,27 +629,27 @@ D1
 0 -1 2330
 S
 #2330
-Uma Carroça Cigana~
-   Esta é uma carroça muito confortável e bastante colorida, que o cigano
-que é dono da Barraca de Cerveja transformou na casa dele.  Sempre que a
+Uma Carroï¿½a Cigana~
+   Esta ï¿½ uma carroï¿½a muito confortï¿½vel e bastante colorida, que o cigano
+que ï¿½ dono da Barraca de Cerveja transformou na casa dele.  Sempre que a
 feira termina ou se muda, ele simplesmente coloca os cavalos em marcha e
 leva sua casa para um novo local onde ele possa novamente vender sua cerveja
 inglesa.
 ~
-23 8 0
+23 8 0 0 0 0
 D3
 ~
 ~
 0 -1 2329
 S
 #2331
-Vagão Restaurante~
+Vagï¿½o Restaurante~
    Uma grande quantidade de mesinhas para piquenique foi colocada aqui, para
-que as pessoas possam se sentar enquanto saboreiam a deliciosa comida que é
-vendida neste pequeno e original restaurante.  O cheiro da comida é tão bom
-que chega a dar água na boca daqueles que daqui se aproximam.
+que as pessoas possam se sentar enquanto saboreiam a deliciosa comida que ï¿½
+vendida neste pequeno e original restaurante.  O cheiro da comida ï¿½ tï¿½o bom
+que chega a dar ï¿½gua na boca daqueles que daqui se aproximam.
 ~
-23 0 2
+23 0 0 0 0 2
 D1
 ~
 ~
@@ -664,15 +660,15 @@ D2
 0 -1 2325
 S
 #2332
-Vagão Cigano~
-   Esta é a casa dos atores ciganos.  Um grande número deles está amontoado
-nos pequenos beliches que ficam dentro do vagão.  Eles fazem turnos,
-revezando-se para que os que ficaram fora do conforto do vagão durante o
-dia, possam descansar na parte de dentro, à noite.  Por que será que as
-pessoas não podem ter um tipo de vida simples como este...  Quem pode
+Vagï¿½o Cigano~
+   Esta ï¿½ a casa dos atores ciganos.  Um grande nï¿½mero deles estï¿½ amontoado
+nos pequenos beliches que ficam dentro do vagï¿½o.  Eles fazem turnos,
+revezando-se para que os que ficaram fora do conforto do vagï¿½o durante o
+dia, possam descansar na parte de dentro, ï¿½ noite.  Por que serï¿½ que as
+pessoas nï¿½o podem ter um tipo de vida simples como este...  Quem pode
 responder?
 ~
-23 8 0 0
+23 0 0 0 0 0
 D3
 ~
 ~
@@ -680,11 +676,11 @@ D3
 S
 #2333
 O Palco~
-   Hum rum...Você se encontra exatamente no meio de um grande palco.  Por
+   Hum rum...Vocï¿½ se encontra exatamente no meio de um grande palco.  Por
 favor, siga para baixo, indo para o norte ou para o sul, mas SAIA DESTE
 PALCO AGORA MESMO!!
 ~
-23 0 2
+23 0 0 0 0 2
 D2
 ~
 ~
@@ -696,11 +692,11 @@ D5
 S
 #2334
 O Palco~
-   Hum rum...Você se encontra exatamente no meio de um grande palco.  Por
+   Hum rum...Vocï¿½ se encontra exatamente no meio de um grande palco.  Por
 favor, siga para baixo, indo para o norte ou para o sul, mas SAIA DESTE
 PALCO AGORA MESMO!!
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -712,11 +708,11 @@ D5
 S
 #2335
 O Caminho Gramado~
-   A floresta se abre, dando passagem para mais uma grande área aberta a
+   A floresta se abre, dando passagem para mais uma grande ï¿½rea aberta a
 oeste.  O mesmo tipo de felicidade e atmosfera festiva que toma conta de
-todo que estão no leste, parece tomar conta também dos que estão no oeste.
+todo que estï¿½o no leste, parece tomar conta tambï¿½m dos que estï¿½o no oeste.
 ~
-23 0 2
+23 0 0 0 0 2
 D1
 ~
 ~
@@ -729,11 +725,11 @@ S
 #2336
 O Caminho Gramado~
    Um grande campo aberto se estende a oeste, onde algumas estruturas foram
-erguidas para serem usadas apenas enquanto a grande feira durar.  Esta área
-é mais usada pelas famílias que estão visitando o festival, pois aqui
-existem tanto atrações para adultos como para as crianças.
+erguidas para serem usadas apenas enquanto a grande feira durar.  Esta ï¿½rea
+ï¿½ mais usada pelas famï¿½lias que estï¿½o visitando o festival, pois aqui
+existem tanto atraï¿½ï¿½es para adultos como para as crianï¿½as.
 ~
-23 0 2
+23 0 0 0 0 2
 D1
 ~
 ~
@@ -744,13 +740,13 @@ D3
 0 -1 2337
 S
 #2337
-Pátio Gramado~
-   Um grande pavilhão se estende ao oeste, e o cheiro de vapor e de comida
-grelhada chega abundante daquela direção.  Para o norte e sul, estão as
-extensões deste grande pátio, onde todos os tipos de atividades estão
+Pï¿½tio Gramado~
+   Um grande pavilhï¿½o se estende ao oeste, e o cheiro de vapor e de comida
+grelhada chega abundante daquela direï¿½ï¿½o.  Para o norte e sul, estï¿½o as
+extensï¿½es deste grande pï¿½tio, onde todos os tipos de atividades estï¿½o
 constantemente acontecendo.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -769,14 +765,14 @@ D3
 0 -1 2344
 S
 #2338
-Pátio Gramado~
-   Ao sul, há uma fila de crianças esperando que o maquiador pinte suas
+Pï¿½tio Gramado~
+   Ao sul, hï¿½ uma fila de crianï¿½as esperando que o maquiador pinte suas
 faces, transformando-os em pequeninos exemplares de animais
-selvagens...lindinhos e graciosos.  Para o leste, há uma pequena área onde
-uma mulher lê um grosso tomo, contando uma vibrante história para uma
-multidão de crianças com olhos arregalados.
+selvagens...lindinhos e graciosos.  Para o leste, hï¿½ uma pequena ï¿½rea onde
+uma mulher lï¿½ um grosso tomo, contando uma vibrante histï¿½ria para uma
+multidï¿½o de crianï¿½as com olhos arregalados.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -791,16 +787,16 @@ D2
 0 -1 2343
 S
 #2339
-Pátio Gramado~
-   Logo ao norte daqui, há um pequeno castelo feito de madeira, com
-aproximadamente cinco pés de altura.  Suas paredes internas foram pintadas
-com cores luminosas e vibrantes.  Lá dentro, marionetes e pequenos bonecos
-dançam e saltam, para o deleite das crianças, que gritam de alegria,
-sentadas que estão no chão do pequenino castelo.  Para o leste há uma área
-pequena onde estão alguns animais raros, enjaulados para que possam ser
-vistos pelo público de forma segura.
+Pï¿½tio Gramado~
+   Logo ao norte daqui, hï¿½ um pequeno castelo feito de madeira, com
+aproximadamente cinco pï¿½s de altura.  Suas paredes internas foram pintadas
+com cores luminosas e vibrantes.  Lï¿½ dentro, marionetes e pequenos bonecos
+danï¿½am e saltam, para o deleite das crianï¿½as, que gritam de alegria,
+sentadas que estï¿½o no chï¿½o do pequenino castelo.  Para o leste hï¿½ uma ï¿½rea
+pequena onde estï¿½o alguns animais raros, enjaulados para que possam ser
+vistos pelo pï¿½blico de forma segura.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -815,28 +811,28 @@ D2
 0 -1 2337
 S
 #2340
-Espetáculo de Marionetes~
-   Um pequeno castelo de madeira está aqui.  Foi pintado de forma tão
-perfeita, que dá nítida impressão de ter sido feito com pedras e argamassa.
+Espetï¿½culo de Marionetes~
+   Um pequeno castelo de madeira estï¿½ aqui.  Foi pintado de forma tï¿½o
+perfeita, que dï¿½ nï¿½tida impressï¿½o de ter sido feito com pedras e argamassa.
 Uma grande janela se abre na parte de cima do pequeno castelo, dando lugar a
-uma espécie de palco, onde pequenos bonecos, feitos de pano e de madeira,
-são controlados por homens e mulheres, mestres na arte dos fantoches.  Os
-pequenos marionetes cantam, dançam, brigam entre si, causando nas crianças
+uma espï¿½cie de palco, onde pequenos bonecos, feitos de pano e de madeira,
+sï¿½o controlados por homens e mulheres, mestres na arte dos fantoches.  Os
+pequenos marionetes cantam, danï¿½am, brigam entre si, causando nas crianï¿½as
 uma avalanche de barulhentas gargalhadas.
 ~
-23 0 2
+23 0 0 0 0 2
 D2
 ~
 ~
 0 -1 2339
 S
 #2341
-Exposição de Animais~
-   Pequenas e grandes jaulas foram colocadas em círculo, aqui.  Cada uma com
-um animal exótico e raro dentro.  Para o norte estão mais jaulas com
+Exposiï¿½ï¿½o de Animais~
+   Pequenas e grandes jaulas foram colocadas em cï¿½rculo, aqui.  Cada uma com
+um animal exï¿½tico e raro dentro.  Para o norte estï¿½o mais jaulas com
 animais.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -847,13 +843,13 @@ D3
 0 -1 2339
 S
 #2342
-Exposição de Animais~
-   Pequenos animais parecem gemer baixinho, enquanto outros rosnam ou até
-mesmo dormem.  O lugar não cheira muito bem - a cada vez que você inspira o
-ar, sente o odor fétido e forte.  Contudo, a beleza dos animais compensa o
-sacrifício...  Bem, pelo menos, parece que compensa.
+Exposiï¿½ï¿½o de Animais~
+   Pequenos animais parecem gemer baixinho, enquanto outros rosnam ou atï¿½
+mesmo dormem.  O lugar nï¿½o cheira muito bem - a cada vez que vocï¿½ inspira o
+ar, sente o odor fï¿½tido e forte.  Contudo, a beleza dos animais compensa o
+sacrifï¿½cio...  Bem, pelo menos, parece que compensa.
 ~
-23 0 2
+23 0 0 0 0 2
 D2
 ~
 ~
@@ -861,12 +857,12 @@ D2
 S
 #2343
 Pintura de Face~
-   Crianças fazem uma longa fila, para terem seus rostinhos cobertos com
+   Crianï¿½as fazem uma longa fila, para terem seus rostinhos cobertos com
 pinturas que os transformam em monstrinhos assustadores, palhacinhos felizes
-ou qualquer outro tipo de pintura engraçada.  Um após o outro, vão se
+ou qualquer outro tipo de pintura engraï¿½ada.  Um apï¿½s o outro, vï¿½o se
 transformando e saem dali rindo alto, prontos para assustar as pessoas.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -874,13 +870,13 @@ D0
 S
 #2344
 Restaurante ao Ar Livre~
-   Não há nenhuma parede neste lugar, apenas quatro colunas que sustentam um
-tipo de telhado rústico e bem precário.  Uma grelha para assar carnes e um
+   Nï¿½o hï¿½ nenhuma parede neste lugar, apenas quatro colunas que sustentam um
+tipo de telhado rï¿½stico e bem precï¿½rio.  Uma grelha para assar carnes e um
 barril cheio com um suco delicioso, foram colocados no fundo do restaurante,
 para atender os trabalhadores.  Este seria, certamente, um lugar relaxante
 para se sentar, comer e descansar um tempo.
 ~
-23 0 0
+23 0 0 0 0 0
 D1
 ~
 ~
@@ -888,12 +884,12 @@ D1
 S
 #2345
 O Caminho~
-   Pela aparência do chão, algum tipo de objeto com rodas grandes como as de
-um vagão passou por aqui.  A grama está amassada, formando duas linhas
-paralelas, que seguem em direção aos bosques do sul.  O caminho principal
-que vão para o festival são os do leste.
+   Pela aparï¿½ncia do chï¿½o, algum tipo de objeto com rodas grandes como as de
+um vagï¿½o passou por aqui.  A grama estï¿½ amassada, formando duas linhas
+paralelas, que seguem em direï¿½ï¿½o aos bosques do sul.  O caminho principal
+que vï¿½o para o festival sï¿½o os do leste.
 ~
-23 0 3
+23 0 0 0 0 3
 D1
 ~
 ~
@@ -905,12 +901,12 @@ D2
 S
 #2346
 O Caminho~
-   O caminho sul segue diretamente em direção aos bosques.  Pequenas árvores
-quebradas e arbustos amassados evidenciam que algum tipo de veículo grande e
-pesado passou por aqui.  O caminho para voltar para a área principal fica ao
+   O caminho sul segue diretamente em direï¿½ï¿½o aos bosques.  Pequenas ï¿½rvores
+quebradas e arbustos amassados evidenciam que algum tipo de veï¿½culo grande e
+pesado passou por aqui.  O caminho para voltar para a ï¿½rea principal fica ao
 norte.
 ~
-23 0 3
+23 0 0 0 0 3
 D0
 ~
 ~
@@ -922,44 +918,44 @@ D2
 S
 #2347
 O Caminho~
-   Parece que o fim deste caminho está próximo - bastante perto, na verdade.
-Bem ao sul, há um vagão de cor parda, com uma lua crescente pintada bem no
-centro da porta.  Nenhum som vem de dentro, as cortinas estão todas fechados
-- pelo jeito, este carroção parece ter sido abandonado aqui por algum cigano
-que está no festival e que decidiu que não quer mais isto aqui.
+   Parece que o fim deste caminho estï¿½ prï¿½ximo - bastante perto, na verdade.
+Bem ao sul, hï¿½ um vagï¿½o de cor parda, com uma lua crescente pintada bem no
+centro da porta.  Nenhum som vem de dentro, as cortinas estï¿½o todas fechados
+- pelo jeito, este carroï¿½ï¿½o parece ter sido abandonado aqui por algum cigano
+que estï¿½ no festival e que decidiu que nï¿½o quer mais isto aqui.
 ~
-23 0 3
+23 0 0 0 0 3
 D0
 ~
 ~
 0 -1 2346
 D2
 ~
-vagão~
+vagï¿½o~
 1 0 2348
 S
 #2348
-O Vagão da Senhora Zayla~
-   Se você apenas olhar para dentro deste pequeno quarto de vagão, pode
-muito fácilmente achar que ele foi abandonado.  Tudo neste vagão é muito
-velho e está meio apodrecido.  O cheiro daqui é forte o suficiente para
-fazer com que a maioria das pessoas dêm a meia volta para trás.  E isso é
+O Vagï¿½o da Senhora Zayla~
+   Se vocï¿½ apenas olhar para dentro deste pequeno quarto de vagï¿½o, pode
+muito fï¿½cilmente achar que ele foi abandonado.  Tudo neste vagï¿½o ï¿½ muito
+velho e estï¿½ meio apodrecido.  O cheiro daqui ï¿½ forte o suficiente para
+fazer com que a maioria das pessoas dï¿½m a meia volta para trï¿½s.  E isso ï¿½
 pouco.  Uma mesa pequena redonda foi colocado no centro do aposento, com uma
 bola de cristal brilhante sobre ela.
 ~
-23 8 0
+23 8 0 0 0 0
 D0
 ~
 porta~
 1 0 2347
 S
 #2349
-Área do Festival~
-   Este é o lado mais sudoeste da clareira, toda a ação está acontecendo no
-lado nordeste.  Um pequeno palco desmontável foi montado bem perto daqui, ao
-leste, onde um grupo de atores representam uma peça satírica.
+ï¿½rea do Festival~
+   Este ï¿½ o lado mais sudoeste da clareira, toda a aï¿½ï¿½o estï¿½ acontecendo no
+lado nordeste.  Um pequeno palco desmontï¿½vel foi montado bem perto daqui, ao
+leste, onde um grupo de atores representam uma peï¿½a satï¿½rica.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -970,13 +966,13 @@ D1
 0 -1 2350
 S
 #2350
-A Representação~
-   Um pequeno grupo de atores representa uma peça chamada "O Grande Outono
-de Cyrrian", a história que conta como as escolhas egoístas de um homem
-podem afetar o curso da história de uma cidade inteira.  A área principal do
+A Representaï¿½ï¿½o~
+   Um pequeno grupo de atores representa uma peï¿½a chamada "O Grande Outono
+de Cyrrian", a histï¿½ria que conta como as escolhas egoï¿½stas de um homem
+podem afetar o curso da histï¿½ria de uma cidade inteira.  A ï¿½rea principal do
 festival fica ao norte.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -991,12 +987,12 @@ D3
 0 -1 2349
 S
 #2351
-Área do Festival~
-   Um pequeno caminho foi aberto através da floresta, seguindo em direção
-sul, distanciando-se desta área principal.  A oeste há um pequeno palco
-desmontável, onde um diminuto grupo de atores representa uma peça satírica.
+ï¿½rea do Festival~
+   Um pequeno caminho foi aberto atravï¿½s da floresta, seguindo em direï¿½ï¿½o
+sul, distanciando-se desta ï¿½rea principal.  A oeste hï¿½ um pequeno palco
+desmontï¿½vel, onde um diminuto grupo de atores representa uma peï¿½a satï¿½rica.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -1012,12 +1008,12 @@ D3
 S
 #2352
 O Caminho de Terra Batida~
-   A estradinha que vai para o sul não foi muito bem delineada, pois para se
-encontrar o caminho sem se perder requer muita concentração.  Por causa da
-lentidão, você consegue ouvir o motivo pelo qual os outros viajantes parecem
-ter escolhido o mesmo caminho que você - o som de água correndo.
+   A estradinha que vai para o sul nï¿½o foi muito bem delineada, pois para se
+encontrar o caminho sem se perder requer muita concentraï¿½ï¿½o.  Por causa da
+lentidï¿½o, vocï¿½ consegue ouvir o motivo pelo qual os outros viajantes parecem
+ter escolhido o mesmo caminho que vocï¿½ - o som de ï¿½gua correndo.
 ~
-23 0 3
+23 0 0 0 0 3
 D0
 ~
 ~
@@ -1029,12 +1025,12 @@ D2
 S
 #2353
 O Caminho de Terra Batida~
-   Encontrar um caminho aqui, através desta confusão, é bastante difícil.  A
-melhor maneira é tentar seguir o trilho de grama amassada e de ramos
-quebrados e arrebentados.  Parece que você poderia ir para qualquer uma das
-três direções que seguem para oeste, sul ou norte.
+   Encontrar um caminho aqui, atravï¿½s desta confusï¿½o, ï¿½ bastante difï¿½cil.  A
+melhor maneira ï¿½ tentar seguir o trilho de grama amassada e de ramos
+quebrados e arrebentados.  Parece que vocï¿½ poderia ir para qualquer uma das
+trï¿½s direï¿½ï¿½es que seguem para oeste, sul ou norte.
 ~
-23 0 3
+23 0 0 0 0 3
 D0
 ~
 ~
@@ -1050,12 +1046,12 @@ D3
 S
 #2354
 O Caminho de Terra Batida~
-   O som da água corrente está agora muito mais claro.  Não é o som de uma
-grande quantidade de água, apenas o fluxo tranquilo do que parece ser um
-riacho.  Há um caminho aberto através da floresta que vai para o norte,
+   O som da ï¿½gua corrente estï¿½ agora muito mais claro.  Nï¿½o ï¿½ o som de uma
+grande quantidade de ï¿½gua, apenas o fluxo tranquilo do que parece ser um
+riacho.  Hï¿½ um caminho aberto atravï¿½s da floresta que vai para o norte,
 leste e sul.
 ~
-23 0 3
+23 0 0 0 0 3
 D0
 ~
 ~
@@ -1073,10 +1069,10 @@ S
 A Trilha da Floresta~
    O caminho segue para o leste para uma pequena clareira, onde podem ser
 vistas muitas pessoas em plenas atividades.  Foram erguidas estruturas de
-algum tipo de material que não se pode reconhecer daqui.  A maneira de se
-voltar para o festival é seguir para o oeste.
+algum tipo de material que nï¿½o se pode reconhecer daqui.  A maneira de se
+voltar para o festival ï¿½ seguir para o oeste.
 ~
-23 0 3
+23 0 0 0 0 3
 D1
 ~
 ~
@@ -1094,30 +1090,30 @@ S
 A Trilha da Floresta~
    Esta trilha parece ter sido um caminho que alguns animais da floresta,
 costumavam usar antes que os primeiros ciganos chegassem.  Provavelmente,
-eles estacionavam seus vagões e suas barracas aqui para acampar exatamente
-por causa disso, pois caçar ali seria bem fácil e o jantar estaria
-garantido.  Os vagões e as barracas se distribuem ao leste, formando um
-grande círculo em volta da clareira.
+eles estacionavam seus vagï¿½es e suas barracas aqui para acampar exatamente
+por causa disso, pois caï¿½ar ali seria bem fï¿½cil e o jantar estaria
+garantido.  Os vagï¿½es e as barracas se distribuem ao leste, formando um
+grande cï¿½rculo em volta da clareira.
 ~
-23 0 3
+23 0 0 0 0 3
 D1
 ~
 ~
-0 -1 2357 0
+0 -1 2357
 D3
 ~
 ~
-0 -1 2355 0
+0 -1 2355
 S
 #2357
 A Grande Clareira Aberta~
-   Apenas algumas árvores se encontram nesta pequena clareira, onde barracas
-e vagões foram estacionados um pouco abaixo da extremidade onde ficam as
-árvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
+   Apenas algumas ï¿½rvores se encontram nesta pequena clareira, onde barracas
+e vagï¿½es foram estacionados um pouco abaixo da extremidade onde ficam as
+ï¿½rvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
 lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
 depois de suas atividades no festival.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -1137,13 +1133,13 @@ D3
 S
 #2358
 A Grande Clareira Aberta~
-   Apenas algumas árvores se encontram nesta pequena clareira, onde barracas
-e vagões foram estacionados um pouco abaixo da extremidade onde ficam as
-árvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
+   Apenas algumas ï¿½rvores se encontram nesta pequena clareira, onde barracas
+e vagï¿½es foram estacionados um pouco abaixo da extremidade onde ficam as
+ï¿½rvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
 lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
 depois de suas atividades no festival.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -1163,13 +1159,13 @@ D3
 S
 #2359
 A Grande Clareira Aberta~
-   Apenas algumas árvores se encontram nesta pequena clareira, onde barracas
-e vagões foram estacionados um pouco abaixo da extremidade onde ficam as
-árvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
+   Apenas algumas ï¿½rvores se encontram nesta pequena clareira, onde barracas
+e vagï¿½es foram estacionados um pouco abaixo da extremidade onde ficam as
+ï¿½rvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
 lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
 depois de suas atividades no festival.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -1189,13 +1185,13 @@ D3
 S
 #2360
 A Grande Clareira Aberta~
-   Apenas algumas árvores se encontram nesta pequena clareira, onde barracas
-e vagões foram estacionados um pouco abaixo da extremidade onde ficam as
-árvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
+   Apenas algumas ï¿½rvores se encontram nesta pequena clareira, onde barracas
+e vagï¿½es foram estacionados um pouco abaixo da extremidade onde ficam as
+ï¿½rvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
 lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
 depois de suas atividades no festival.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -1215,13 +1211,13 @@ D3
 S
 #2361
 A Grande Clareira Aberta~
-   Apenas algumas árvores se encontram nesta pequena clareira, onde barracas
-e vagões foram estacionados um pouco abaixo da extremidade onde ficam as
-árvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
+   Apenas algumas ï¿½rvores se encontram nesta pequena clareira, onde barracas
+e vagï¿½es foram estacionados um pouco abaixo da extremidade onde ficam as
+ï¿½rvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
 lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
 depois de suas atividades no festival.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -1241,13 +1237,13 @@ D3
 S
 #2362
 A Grande Clareira Aberta~
-   Apenas algumas árvores se encontram nesta pequena clareira, onde barracas
-e vagões foram estacionados um pouco abaixo da extremidade onde ficam as
-árvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
+   Apenas algumas ï¿½rvores se encontram nesta pequena clareira, onde barracas
+e vagï¿½es foram estacionados um pouco abaixo da extremidade onde ficam as
+ï¿½rvores maiores.  Uma fogueira enorme queima no centro deste acampamento,
 lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
 depois de suas atividades no festival.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -1266,45 +1262,45 @@ D3
 0 -1 2361
 S
 #2363
-Um Vagão~
-   Este carroção coberto por grossa lona, possui em seu interior um grande
-número de mantas de lã, que parecem estar guardadas aqui à espera daqueles
-que irão se deitar aqui, para dormir, mais tarde.  A grossa lona que protege
-esta grande carroça evita que a chuva caia e molhe as cobertas que foram
+Um Vagï¿½o~
+   Este carroï¿½ï¿½o coberto por grossa lona, possui em seu interior um grande
+nï¿½mero de mantas de lï¿½, que parecem estar guardadas aqui ï¿½ espera daqueles
+que irï¿½o se deitar aqui, para dormir, mais tarde.  A grossa lona que protege
+esta grande carroï¿½a evita que a chuva caia e molhe as cobertas que foram
 guardadas aqui dentro, bem como as pessoas que estiverem deitadas aqui
 dentro, mantendo assim, uma certa privacidade ao local.
 ~
-23 8 0
+23 8 0 0 0 0
 D1
 ~
 ~
 0 -1 2359
 S
 #2364
-Um Vagão~
-   Este carroção coberto por grossa lona, possui em seu interior um grande
-número de mantas de lã, que parecem estar guardadas aqui à espera daqueles
-que irão se deitar aqui, para dormir, mais tarde.  A grossa lona que protege
-esta grande carroça evita que a chuva caia e molhe as cobertas que foram
+Um Vagï¿½o~
+   Este carroï¿½ï¿½o coberto por grossa lona, possui em seu interior um grande
+nï¿½mero de mantas de lï¿½, que parecem estar guardadas aqui ï¿½ espera daqueles
+que irï¿½o se deitar aqui, para dormir, mais tarde.  A grossa lona que protege
+esta grande carroï¿½a evita que a chuva caia e molhe as cobertas que foram
 guardadas aqui dentro, bem como as pessoas que estiverem deitadas aqui
 dentro, mantendo assim, uma certa privacidade ao local.
 ~
-23 8 0
+23 8 0 0 0 0
 D2
 ~
 ~
 0 -1 2359
 S
 #2365
-Um Vagão~
-   Este carroção coberto por grossa lona, possui em seu interior um grande
-número de mantas de lã, que parecem estar guardadas aqui à espera daqueles
-que irão se deitar aqui, para dormir, mais tarde.  A grossa lona que protege
-esta grande carroça evita que a chuva caia e molhe as cobertas que foram
+Um Vagï¿½o~
+   Este carroï¿½ï¿½o coberto por grossa lona, possui em seu interior um grande
+nï¿½mero de mantas de lï¿½, que parecem estar guardadas aqui ï¿½ espera daqueles
+que irï¿½o se deitar aqui, para dormir, mais tarde.  A grossa lona que protege
+esta grande carroï¿½a evita que a chuva caia e molhe as cobertas que foram
 guardadas aqui dentro, bem como as pessoas que estiverem deitadas aqui
 dentro, mantendo assim, uma certa privacidade ao local.
 ~
-23 8 0
+23 8 0 0 0 0
 D2
 ~
 ~
@@ -1313,10 +1309,10 @@ S
 #2366
 Uma Barraca~
    Esta pequena barraca parece ter sido erguida apressadamente, aparentemente
-sem grandes preocupações com conforto.  Seu dono parece que só vem até aqui
+sem grandes preocupaï¿½ï¿½es com conforto.  Seu dono parece que sï¿½ vem atï¿½ aqui
 para dormir, sem nenhum tempo por relaxar.
 ~
-23 8 0
+23 8 0 0 0 0
 D3
 ~
 ~
@@ -1325,10 +1321,10 @@ S
 #2367
 Uma Barraca~
    Esta pequena barraca parece ter sido erguida apressadamente, aparentemente
-sem grandes preocupações com conforto.  Seu dono parece que só vem até aqui
+sem grandes preocupaï¿½ï¿½es com conforto.  Seu dono parece que sï¿½ vem atï¿½ aqui
 para dormir, sem nenhum tempo por relaxar.
 ~
-23 8 0
+23 8 0 0 0 0
 D3
 ~
 ~
@@ -1337,10 +1333,10 @@ S
 #2368
 Uma Barraca~
    Esta pequena barraca parece ter sido erguida apressadamente, aparentemente
-sem grandes preocupações com conforto.  Seu dono parece que só vem até aqui
+sem grandes preocupaï¿½ï¿½es com conforto.  Seu dono parece que sï¿½ vem atï¿½ aqui
 para dormir, sem nenhum tempo por relaxar.
 ~
-23 8 0
+23 8 0 0 0 0
 D3
 ~
 ~
@@ -1348,14 +1344,14 @@ D3
 S
 #2369
 Uma Barraca Maior~
-   Há uma outra barraca neste acampamento, bem maior, e em cujo topo há uma
-espécie de abertura, que permite que a fumaça acumulada dentro da barraca
-possa sair para fora, sem que as pessoas que estão em seu interior corram
+   Hï¿½ uma outra barraca neste acampamento, bem maior, e em cujo topo hï¿½ uma
+espï¿½cie de abertura, que permite que a fumaï¿½a acumulada dentro da barraca
+possa sair para fora, sem que as pessoas que estï¿½o em seu interior corram
 nenhum risco de se intoxicarem. Parece que aqui dentro poderiam dormir umas
-seis pessoas confortavelmente e pelo número de mantas espalhadas sobre o chão,
-o número deve estar mesmo bem próximo disso.
+seis pessoas confortavelmente e pelo nï¿½mero de mantas espalhadas sobre o chï¿½o,
+o nï¿½mero deve estar mesmo bem prï¿½ximo disso.
 ~
-23 8 0
+23 8 0 0 0 0
 D0
 ~
 ~
@@ -1363,14 +1359,14 @@ D0
 S
 #2370
 Uma Barraca Maior~
-   Há uma outra barraca neste acampamento, bem maior, e em cujo topo há uma
-espécie de abertura, que permite que a fumaça acumulada dentro da barraca
-possa sair para fora, sem que as pessoas que estão em seu interior corram
+   Hï¿½ uma outra barraca neste acampamento, bem maior, e em cujo topo hï¿½ uma
+espï¿½cie de abertura, que permite que a fumaï¿½a acumulada dentro da barraca
+possa sair para fora, sem que as pessoas que estï¿½o em seu interior corram
 nenhum risco de se intoxicarem. Parece que aqui dentro poderiam dormir umas
-seis pessoas confortavelmente e pelo número de mantas espalhadas sobre o chão,
-o número deve estar mesmo bem próximo disso.
+seis pessoas confortavelmente e pelo nï¿½mero de mantas espalhadas sobre o chï¿½o,
+o nï¿½mero deve estar mesmo bem prï¿½ximo disso.
 ~
-23 8 0
+23 8 0 0 0 0
 D0
 ~
 ~
@@ -1378,27 +1374,27 @@ D0
 S
 #2371
 Uma Barraca Maior~
-   Há uma outra barraca neste acampamento, bem maior, e em cujo topo há uma
-espécie de abertura, que permite que a fumaça acumulada dentro da barraca
-possa sair para fora, sem que as pessoas que estão em seu interior corram
+   Hï¿½ uma outra barraca neste acampamento, bem maior, e em cujo topo hï¿½ uma
+espï¿½cie de abertura, que permite que a fumaï¿½a acumulada dentro da barraca
+possa sair para fora, sem que as pessoas que estï¿½o em seu interior corram
 nenhum risco de se intoxicarem. Parece que aqui dentro poderiam dormir umas
-seis pessoas confortavelmente e pelo número de mantas espalhadas sobre o chão,
-o número deve estar mesmo bem próximo disso.
+seis pessoas confortavelmente e pelo nï¿½mero de mantas espalhadas sobre o chï¿½o,
+o nï¿½mero deve estar mesmo bem prï¿½ximo disso.
 ~
-23 8 0
+23 8 0 0 0 0
 D1
 ~
 ~
 0 -1 2361
 S
 #2372
-A Saída do Lado Esquerdo do Palco~
-   É por aqui que os atores saem do palco e é também aqui o lugar onde eles
-descansam um pouco depois de uma apresentação e podem então tomar uma gostosa
+A Saï¿½da do Lado Esquerdo do Palco~
+   ï¿½ por aqui que os atores saem do palco e ï¿½ tambï¿½m aqui o lugar onde eles
+descansam um pouco depois de uma apresentaï¿½ï¿½o e podem entï¿½o tomar uma gostosa
 cerveja inglesa, trazida por um dos membros do grupo. O palco, propriamente
 dito, fica ao norte.
 ~
-23 0 2
+23 0 0 0 0 2
 D3
 ~
 ~
@@ -1409,13 +1405,13 @@ D4
 0 -1 2334
 S
 #2373
-A Saída do Lado Direito do Palco~
-   Esta é o lugar onde os atores e atrizes se preparam antes de entrar em cena
+A Saï¿½da do Lado Direito do Palco~
+   Esta ï¿½ o lugar onde os atores e atrizes se preparam antes de entrar em cena
 no palco, ensaiando suas falas ou simplesmente esperando quietos, pela sua vez.
-Muitas risadas nervosas e ajustes de última hora nos trajes que serão usados
-em cena, são feitos aqui mesmo.
+Muitas risadas nervosas e ajustes de ï¿½ltima hora nos trajes que serï¿½o usados
+em cena, sï¿½o feitos aqui mesmo.
 ~
-23 0 2
+23 0 0 0 0 2
 D3
 ~
 ~
@@ -1426,14 +1422,14 @@ D4
 0 -1 2333
 S
 #2374
-À Margem de um Riacho~
+ï¿½ Margem de um Riacho~
    Um pequeno riacho flui por sobre as pedras lisas de seu leito.  Seu ponto
-mais profundo não deve ter mais do que três ou quatro pés, e sua largura não
-deve exceder uns oito pés.  Os sons produzidos pela água são muito
-relaxantes, e este é o tipo de lugar que os artistas procuram para se
+mais profundo nï¿½o deve ter mais do que trï¿½s ou quatro pï¿½s, e sua largura nï¿½o
+deve exceder uns oito pï¿½s.  Os sons produzidos pela ï¿½gua sï¿½o muito
+relaxantes, e este ï¿½ o tipo de lugar que os artistas procuram para se
 inspirar.
 ~
-23 0 3
+23 0 0 0 0 3
 D0
 ~
 ~
@@ -1445,11 +1441,11 @@ D2
 S
 #2375
 No Riacho~
-   Bem, seus pés com certeza estão totalmente molhados agora!  A água está
-fria e muito clara e certamente é boa para se beber.  O caminho para a
+   Bem, seus pï¿½s com certeza estï¿½o totalmente molhados agora!  A ï¿½gua estï¿½
+fria e muito clara e certamente ï¿½ boa para se beber.  O caminho para a
 floresta fica ao norte.
 ~
-23 0 6
+23 0 0 0 0 6
 D0
 ~
 ~
@@ -1457,27 +1453,27 @@ D0
 S
 #2376
 O Toco do Bardo~
-   O caminho está intransitável em qualquer direção que se olhe, com
-excessão daquele pelo qual você veio.  Contudo, o toco de um imenso carvalho
-que está caído neste local parece ser exatamente o lugar para se fazer um
-feitiço, ou até mesmo, quem sabe, para se passar a noite...
+   O caminho estï¿½ intransitï¿½vel em qualquer direï¿½ï¿½o que se olhe, com
+excessï¿½o daquele pelo qual vocï¿½ veio.  Contudo, o toco de um imenso carvalho
+que estï¿½ caï¿½do neste local parece ser exatamente o lugar para se fazer um
+feitiï¿½o, ou atï¿½ mesmo, quem sabe, para se passar a noite...
 ~
-23 0 3
+23 0 0 0 0 3
 D1
 ~
 ~
 0 -1 2353
 S
 #2377
-O Toco do Contador de Histórias~
-   Este pequeno lugar é onde, ao final de todas as horas, uma nova história
-é contada para as crianças (e adultos também, em muitos casos) que estiverem
+O Toco do Contador de Histï¿½rias~
+   Este pequeno lugar ï¿½ onde, ao final de todas as horas, uma nova histï¿½ria
+ï¿½ contada para as crianï¿½as (e adultos tambï¿½m, em muitos casos) que estiverem
 reunidas ao redor do Toco, prontas para ouvir mais um dos contos tirados do
 Grande Tomo de Aventuras.  Com seus olhos muito abertos e em absoluto
-silêncio, elas se sentam no chão, mordendo seus lábios por causa do medo e
-da excitação - mas nunca saem antes do fim.
+silï¿½ncio, elas se sentam no chï¿½o, mordendo seus lï¿½bios por causa do medo e
+da excitaï¿½ï¿½o - mas nunca saem antes do fim.
 ~
-23 0 2
+23 0 0 0 0 2
 D3
 ~
 ~
@@ -1485,17 +1481,16 @@ D3
 S
 #2398
 Uma Sala Estranhamente Vazia~
-   Você se encontra em uma sala estranha...vazia...desprovida de vida,
+   Vocï¿½ se encontra em uma sala estranha...vazia...desprovida de vida,
 desprovida de sons, absolutamente vazia.
 ~
-23 0 0
+23 0 0 0 0 0
 S
 #2399
 Uma Sala Estranhamente Vazia~
-    Você se encontra em uma sala estranha...vazia...desprovida de vida,
+    Vocï¿½ se encontra em uma sala estranha...vazia...desprovida de vida,
 desprovida de sons, absolutamente vazia.
 ~
-23 0 0
+23 0 0 0 0 0
 S
 $~
-
