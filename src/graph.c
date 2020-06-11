@@ -219,7 +219,7 @@ void hunt_victim(struct char_data *ch)
   if ((dir = find_first_step(IN_ROOM(ch), IN_ROOM(HUNTING(ch)))) < 0) {
     char buf[MAX_INPUT_LENGTH];
 
-    snprintf(buf, sizeof(buf), "Maldi��o!  Eu perdi %s!", ELEA(HUNTING(ch)));
+    snprintf(buf, sizeof(buf), "Maldição!  Eu perdi %s!", ELEA(HUNTING(ch)));
     do_say(ch, buf, 0, 0);
     HUNTING(ch) = NULL;
   } else {
