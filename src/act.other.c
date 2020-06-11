@@ -82,24 +82,7 @@ sprintf(buf, "Tenha um%s! :-)\r\n\r\n",
 		if (CONFIG_FREE_RENT)
 			Crash_rentsave(ch, 0);
 
-		GET_LOADROOM(ch) = void check_thief(Character * ch, Character * vict)
-{
-  if (IS_PC(ch) && IS_PC(vict) && (ch != vict) &&
-      !PLR_FLAGGED(vict, PLR_KILLER) && !PLR_FLAGGED(vict, PLR_THIEF)) {
-    if (!PLR_FLAGGED(ch, PLR_THIEF)) {
-      SET_BIT(PLR_FLAGS(ch), PLR_THIEF);
-      log(logBrf | logFile, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)),
-	  "PC Thief bit set on %s while trying to steal %s at %s.",
-	  GET_NAME(ch), GET_NAME(vict), IN_ROOM(vict)->name);
-      auto_karma(ch, -2);	/* -- jr - 11/08/99 */
-      send_to_char("Agora voc� � um JOGADOR LADR�O, que pena...\r\n", ch);
-    } else {
-      log(logBrf | logFile, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)),
-	  "PC Thief %s trying to steal %s at %s.",
-	  GET_NAME(ch), GET_NAME(vict), IN_ROOM(vict)->name);
-    }
-  }
-}(GET_HOMETOWN(ch));
+		GET_LOADROOM(ch) = GET_ROOM_VNUM(GET_HOMETOWN(ch));
 
 		/* Stop snooping so you can't see passwords during deletion or change. 
 		 */
