@@ -20,7 +20,7 @@ usando o comando especial "/save", ou simplesmente "/s".
    Os comandos de Edi��o s�o detalhados no t�pico "EDITOR CMD".
 
 Veja tamb�m: EDITOR CMD
-#
+#0
 "EDITOR CMD"
 
 &WComandos de edi��o de texto:&n
@@ -41,6 +41,6 @@ Veja tamb�m: EDITOR CMD
    &g/space            &n:: Mostra o espa�o dispon�vel para escrita
 
    Os comandos podem ser abreviados, por exemplo: "/a", "/s".
-#
+#0
 $
 ~
