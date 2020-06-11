@@ -26,7 +26,7 @@ comando, digite HELP <comando>.
    &gTERM                 &nSele��o do tipo de terminal usado para jogar.
    &gTITLE                &nAltera seu t�tulo.
    &gTYPO                 &nAvisar sobre erros ortograficos no MUD.
-#
+#0
 !
 
    O comando especial !  Serve para repetir um dos �ltimos 5 comandos
@@ -50,7 +50,7 @@ Exemplos:
   Voc� pega um p�o de viagem.
 
 Veja tamb�m: ALIAS
-#
+#0
 - HIFEN
 
 Uso: -<comando>
@@ -72,7 +72,7 @@ portugu�s n�o ir� funcionar, devendo ser usado "-clan -history", para que 
 tradu��o seja aplicada tanto em "clan" quanto em "history".
 
 Veja tamb�m: LANG
-#
+#0
 ALIAS ALIASES
 
 Uso: Alias [nome do alias] [comando]
@@ -122,7 +122,7 @@ alias:
   Voc� falou por telepatia com Tasmussen, 'Ola, como voc� est�?'
 
 Veja tamb�m: ! ^
-#
+#0
 ASCII
 
 Uso: ASCII
@@ -145,7 +145,7 @@ correspondentes pr�ximos de seu significado correto:
 substitu�dos por um caractere de interroga��o (?).
 
 Veja tamb�m: TOGGLE
-#
+#0
 AUTOTITLE
 
 Uso: autotitle
@@ -154,7 +154,7 @@ Uso: autotitle
 mudar de n�vel.
 
 Veja tamb�m: TITLE, TOGGLE
-#
+#0
 AWAY
 
 Uso: away [ -l ]
@@ -173,7 +173,7 @@ telep�ticas.  Ao digitar qualquer comando no estado de AWAY, voc� retorna
 ao jogo normal, a menos que tenha usado o par�metro `-l', neste caso o mud
 ir� verificar se voc� digitou a senha corretamente antes de lhe devolver o
 jogo.
-#
+#0
 BANDAGE
 
 Uso: BANDAGE <alvo>
@@ -181,7 +181,7 @@ Uso: BANDAGE <alvo>
    Se o alvo est� machucado ou pior (n�o morto), este comando pode salvar
 sua vida.  O alvo ter� o ferimento atado: curado para 1 ponto de vida e
 recobrar� a consci�ncia.
-#
+#0
 BRIEF
 
 Uso: brief
@@ -197,7 +197,7 @@ por sua volta pode ser a diferen�a entre a vida e a morte!
 no modo 'breve'.
 
 Veja tamb�m: COMPACT, LOOK
-#
+#0
 BUG TYPO IDEA
 
 Uso: bug <descrever o bug>
@@ -210,14 +210,14 @@ Exemplos:
    > bug todo o jogo trava quando eu digito 'put mochila mochila'
    > idea fazer um restaurante em Midgaard
    > typo 'sentiddo' deveria ser escrito 'sentido'
-#
+#0
 CLEAR CLS
 
 Uso: clear
      cls
 
    Limpa todo a tela do seu cliente.
-#
+#0
 COLOR
 
 Uso: color { desligado | escasso | normal | completo }
@@ -241,7 +241,7 @@ mais vis�vel em conex�es lentas.  Mesmo que voc� esteja com as cores
 ligadas, as mensagens sem cores n�o afetar�o a velocidade da conex�o.
 
 Veja tamb�m: CORES, STRIPCLR
-#
+#0
 COMMANDS
 
 Uso: commands
@@ -252,7 +252,7 @@ conhecidos.
    Cada comando listado deve possuir um 'help', digitando "HELP <comando>".
 
 Veja tamb�m: SOCIAL, SOCIALS
-#
+#0
 COMPACT
 
 Uso: compact
@@ -262,7 +262,7 @@ a janela do seu cliente de MUD ou a tela do seu monitor n�o lhe permite ver
 muitas linhas.
 
 Veja tamb�m: BRIEF
-#
+#0
 DISPLAY PROMPT
 
 Uso: display < [H][M][V] | tudo | nada >
@@ -275,7 +275,7 @@ pontos de movimento antes de cada comando.
    > display tudo        Mostrar� os pontos de vida, movimento e mana.
 
 Veja tamb�m: TOGGLE
-#
+#0
 HOUSE
 
    O comando HOUSE � usado para adicionar ou remover convidados � lista de
@@ -296,7 +296,7 @@ conectado no momento.
 lista de convidados.
 
 Veja tamb�m: HOUSES
-#
+#0
 LANG
 
 Uso: lang [en|pt]
@@ -321,14 +321,14 @@ COMANDOS, SOCIAIS e AJUDAWIZ (para imortais).
    Voc� pode voltar a qualquer momento para o padr�o digitando LANG EN.
 
 Veja tamb�m: - (h�fen)
-#
+#0
 QUIT
 
    Quando voc� j� estiver cansado de jogar, voc� pode deixar o jogo
 digitando 'quit'.
 
 Veja tamb�m: SAVE
-#
+#0
 SAVE
 
 Uso: save
@@ -337,7 +337,7 @@ Uso: save
 equipamento, portanto n�o � necess�rio ter em seu cliente um auto-save.
 
 Veja tamb�m: ALIAS, QUIT
-#
+#0
 STRIPCLR
 
 Uso: stripclr
@@ -349,7 +349,7 @@ eliminadas, e o texto ser� mostrado para voc� na cor padr�o, definida pelo
 MUD.
 
 Veja tamb�m: COLOR, TOGGLE
-#
+#0
 TERM
 
 Uso: term [ tipo-de-terminal ] [ linhas=<n> ] [ colunas=<n> ]
@@ -388,7 +388,7 @@ Exemplos:
   > term linhas=40 colunas=132
 
 Veja tamb�m: COLOR, ZMUD
-#
+#0
 TITLE
 
 Uso: title <novo t�tulo>
@@ -400,6 +400,6 @@ pois estes s�o reservados para as 'flags'.
    N�o abuse deste comando.  Se voc� o fizer, ele pode ser tirado de voc�.
 
 Veja tamb�m: FLAGS, WHO
-#
+#0
 $
 ~
