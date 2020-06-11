@@ -16,7 +16,7 @@ obter ajuda para um comando, digite HELP (comando).
    &gREST SLEEP SIT       &nDescansar, dormir, e sentar.
    &gTOC KNOCK            &nBater em portas.
    &gWAKE STAND           &nAcordar e levantar.
-#
+#0
 ENTER
 
 Uso: enter [local]
@@ -24,7 +24,7 @@ Uso: enter [local]
    Se voc� digitar ENTER enquanto estiver em um local aberto, voc� ir�
 entrar no local abrigado mais pr�ximo.  Voc� tamb�m pode usar o comando
 ENTER com um argumento, por exemplo, ENTER ESCOTILHA.
-#
+#0
 EXITS
 
 Uso: exits
@@ -34,7 +34,7 @@ claro que uma sa�da n�o �bvia n�o apareceria aqui - voc� teria que pen
 para encontr�-la.
 
 Veja tambem: AUTOEXIT
-#
+#0
 FLY LAND
 
 Uso: fly
@@ -54,14 +54,14 @@ muito alto e a magia terminar, voc� morrer�!
 voar, e orden�-las a voar com voc�.
 
 Veja tamb�m: MAGIA FLY
-#
+#0
 LEAVE
 
 Uso: leave
 
    Se voc� se sentir claustrof�bico, digitando 'leave' far� com que voc� use
 a mais pr�xima e �bvia sa�da para c�u aberto.
-#
+#0
 LOOK
 
 Uso: look
@@ -81,7 +81,7 @@ Para ver o que h� dentro de um recipiente (i.e.  Um corpo) use 'LOOK EM
 <objeto>'.
 
 Veja tamb�m: EXAMINE, GET, READ, TAKE
-#
+#0
 NORTH SOUTH EAST WEST UP DOWN NORTHWEST NORTHEAST SOUTHWEST SOUTHEAST
 
 Uso: north
@@ -94,7 +94,7 @@ Uso: north
    Anda para a dire��o fornecida.
 
 Veja tamb�m: EXITS
-#
+#0
 OPEN CLOSE LOCK UNLOCK
 
 Uso: open | close | lock | unlock <porta> [dire��o]
@@ -108,7 +108,7 @@ Exemplos:
   > close port�o
 
 Veja tambem: ENTER, LEAVE
-#
+#0
 RECALL
 
 Uso: recall
@@ -119,7 +119,7 @@ necess�rio que voc� use pergaminhos ou magias quando quiser retornar
 rapidamente para a sala inicial do jogo.
 
 Veja tamb�m: MAGIA WORD OF RECALL
-#
+#0
 SLEEP
 
    O comando SLEEP faz com que voc� durma, permitindo que voc� recupere sua
@@ -129,7 +129,7 @@ acontece a sua volta enquanto estiver dormindo.
    Voc� pode acordar com o comando WAKE.
 
 Veja tambem: WAKE, MAGIA SLEEP
-#
+#0
 TOC KNOCK
 
 Uso: toc <porta> [dire��o]
@@ -138,11 +138,11 @@ Uso: toc <porta> [dire��o]
 ir�o ouvir a batida na porta.  S� pode ser usado em algumas portas fechadas.
 
 Veja tamb�m: OPEN, CLOSE
-#
+#0
 WAKE REST SIT STAND
 
    Para mudar a sua posi��o.  Se voc� se sentir cansado, provavelmente pode
 ser uma boa id�ia se sentar, ou talvez dormir um pouco.
-#
+#0
 $
 ~
