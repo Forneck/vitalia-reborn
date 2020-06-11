@@ -352,7 +352,6 @@ static void zedit_save_internally(struct descriptor_data *d)
     zone_table[OLC_ZNUM(d)].max_level = OLC_ZONE(d)->max_level;
     for (i=0; i<ZN_ARRAY_MAX; i++)
       zone_table[OLC_ZNUM(d)].zone_flags[(i)] = OLC_ZONE(d)->zone_flags[(i)];
-      zone_table[OLC_ZNUM(d)].climate = OLC_ZONE(d)->climate;
   }
   add_to_save_list(zone_table[OLC_ZNUM(d)].number, SL_ZON);
 }
@@ -435,8 +434,7 @@ static void zedit_disp_menu(struct descriptor_data *d)
 	  "%sT%s) Top of zone    : %s%d\r\n"
 	  "%sR%s) Reset Mode     : %s%s\r\n"
 	  "%sF%s) Zone Flags     : %s%s\r\n"
-	  "%sM%s) Level Range    : %s%s\r\n"
-	  "%sC%s) Climate     : %s%s%s\r\n"
+	  "%sM%s) Level Range    : %s%s%s\r\n"
 	  "[Command list]\r\n",
 
 	  cyn, OLC_NUM(d), nrm,
@@ -450,7 +448,6 @@ static void zedit_disp_menu(struct descriptor_data *d)
 	  OLC_ZONE(d)->reset_mode ? ((OLC_ZONE(d)->reset_mode == 1) ? "Reset when no players are in zone." : "Normal reset.") : "Never reset",
 	  grn, nrm, cyn, buf1,
 	  grn, nrm, levels_set ? cyn : yel, lev_string,
-	    grn, nrm, yel, OLC_ZONE(d)->climate,
 	  nrm
 	  );
 
@@ -851,16 +848,6 @@ void zedit_parse(struct descriptor_data *d, char *arg)
     case 'M':
       /*** Edit zone level restrictions (sub-menu) ***/
       zedit_disp_levels(d);
-      break;
-     case 'c':
-    case 'C':
-      /* Edit bottom of zone. */
-      if (GET_LEVEL(d->character) < LVL_IMPL)
-	zedit_disp_menu(d);
-      else {
-	write_to_output(d, "Enter new climate type of zone: ");
-	OLC_MODE(d) = ZEDIT_ZONE_CLIM;
-      }
       break;
     default:
       zedit_disp_menu(d);
@@ -1275,17 +1262,6 @@ void zedit_parse(struct descriptor_data *d, char *arg)
       OLC_ZONE(d)->top = LIMIT(atoi(arg), genolc_zonep_bottom(OLC_ZONE(d)), genolc_zone_bottom(OLC_ZNUM(d) + 1) - 1);
     OLC_ZONE(d)->number = 1;
     zedit_disp_menu(d);
-    break;
-  case ZEDIT_ZONE_CLIM:
-    /* Parse and add new climate and return to main menu. */
-    pos = atoi(arg);
-    if (!isdigit(*arg) || pos < CLIM_DEFAULT || pos >= NUM_CLIM_FLAGS)
-      write_to_output(d, "Try again (-1-4) : ");
-    else {
-      OLC_ZONE(d)->climate = pos;
-      OLC_ZONE(d)->number = 1;
-      zedit_disp_menu(d);
-    }
     break;
   default:
     /* We should never get here, but just in case... */
