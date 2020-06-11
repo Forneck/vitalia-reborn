@@ -1,478 +1,457 @@
 #18101
 Sala das Boas Vindas~
-   Olá Aventureiro!  Seja bem-vindo ao Mundo de &YVitália&n.  Este é o ponto de
-partida para um imenso mundo, repleto de aventuras e emoções.  Se você não
-conhece absolutamente nada daqui, não se preocupe, pois ao deixar estas
-salas, você estará apto a enfrentar todos os desafios.  Se você já for
-experiente, basta digitar &WRECALL&n e iniciar seu jogo, normalmente.  Leia
-cuidadosamente todas as informações dos painéis, livros e avisos, que
-estarão espalhados nas próximas salas, adiante.  Agora boa jornada!  Digite
-&WW&n e siga para &WOESTE&n (w) e que bons ventos guiem seus passos!
+   Olï¿½ Aventureiro!  Seja bem-vindo ao Mundo de @YVitï¿½lia@n.  Este ï¿½ o ponto de
+partida para um imenso mundo, repleto de aventuras e emoï¿½ï¿½es.  Se vocï¿½ nï¿½o
+conhece absolutamente nada daqui, nï¿½o se preocupe, pois ao deixar estas
+salas, vocï¿½ estarï¿½ apto a enfrentar todos os desafios.  Se vocï¿½ jï¿½ for
+experiente, basta digitar @WRECALL@n e iniciar seu jogo, normalmente.  Leia
+cuidadosamente todas as informaï¿½ï¿½es dos painï¿½is, livros e avisos, que
+estarï¿½o espalhados nas prï¿½ximas salas, adiante.  Agora boa jornada!  Digite
+@WW@n e siga para @WOESTE@n (w) e que bons ventos guiem seus passos!
 ~
-181 gfj 0
-D W
-Você vê um caminho iluminado que parece não ter fim.
+181 96 0 0 0 0
+D0
+Vocï¿½ vï¿½ um caminho iluminado que parece nï¿½o ter fim.
 ~
 ~
 0 -1 18102
 S
 #18102
 Sala da Rosa-dos-Ventos~
-   Você se encontra numa sala cujas paredes estão forradas por mapas, alguns
-tão antigos que já estão se desfazendo.  Uma imensa &MRosa-dos-Ventos&n foi
-cuidadosamente pintada no chão, mostrando a todos que por aqui passarem os
-Pontos Cardeais.  Um objeto foi deixado no chão.  É um &Wmapa&n.  Pegue-o.  Para
-fazê-lo, digite &WGET MAPA&n.  Na parede, um enorme &Wpainel&n brilha, chamando sua
-atenção.  Seja curioso, digite &WREAD PAINEL&n e descubra o que nele está
-escrito.  Para continuar sua jornada, digite &WU&n e torne-se mais sábio ainda.
+   Vocï¿½ se encontra numa sala cujas paredes estï¿½o forradas por mapas, alguns
+tï¿½o antigos que jï¿½ estï¿½o se desfazendo.  Uma imensa @MRosa-dos-Ventos@n foi
+cuidadosamente pintada no chï¿½o, mostrando a todos que por aqui passarem os
+Pontos Cardeais.  Um objeto foi deixado no chï¿½o.  ï¿½ um @Wmapa@n.  Pegue-o.  Para
+fazï¿½-lo, digite @WGET MAPA@n.  Na parede, um enorme @Wpainel@n brilha, chamando sua
+atenï¿½ï¿½o.  Seja curioso, digite @WREAD PAINEL@n e descubra o que nele estï¿½
+escrito.  Para continuar sua jornada, digite @WU@n e torne-se mais sï¿½bio ainda.
 ~
-181 gfj 0
-D U
-Você vê um caminho iluminado que parece não ter fim.
+181 96 0 0 0 0
+D0
+Vocï¿½ vï¿½ um caminho iluminado que parece nï¿½o ter fim.
 ~
 ~
 0 -1 18103
 E
 painel~
-Em nosso mundo, para se locomover, você deverá se utilizar dos pontos
-cardeais.  Temos disponibilizadas aqui, 10 direções: Norte (N), Sul (S),
+Em nosso mundo, para se locomover, vocï¿½ deverï¿½ se utilizar dos pontos
+cardeais.  Temos disponibilizadas aqui, 10 direï¿½ï¿½es: Norte (N), Sul (S),
 Leste (E), Oeste (W), Noroeste (NW), Nordeste (NE), Sudeste (SE), Sudoeste
 (SW), Cima (U) e Baixo (D).
-Quando quiser saber as saídas de um lugar, digite &WEXIT&n e fique atento também
-para as descricões que todas as salas possuem, pois nestas descrições podem
-existir informações preciosas.  Também é possível usar o comando &WLOOK
-<direçao>&n (ex: LOOK NORTH).
-Para ler o seu mapa, digite &WREAD MAPA.&n Aproveite também para examinar a
-imensa &MRosa-dos-Ventos&n, pintada no chão, digitando &WLOOK ROSA&n.
+Quando quiser saber as saï¿½das de um lugar, digite @WEXIT@n e fique atento tambï¿½m
+para as descricï¿½es que todas as salas possuem, pois nestas descriï¿½ï¿½es podem
+existir informaï¿½ï¿½es preciosas.  Tambï¿½m ï¿½ possï¿½vel usar o comando @WLOOK
+<direï¿½ao>@n (ex: LOOK NORTH).
+Para ler o seu mapa, digite @WREAD MAPA.@n Aproveite tambï¿½m para examinar a
+imensa @MRosa-dos-Ventos@n, pintada no chï¿½o, digitando @WLOOK ROSA@n.
 ~
 E
 rosa rosa-dos-ventos ventos~
-Uma imensa rosa dos ventos pintada no chão com tintas que parecem fulgurar,
-mostrando aos viajantes as 10 direções de Vitália (Norte, Sul, Leste, Oeste,
+Uma imensa rosa dos ventos pintada no chï¿½o com tintas que parecem fulgurar,
+mostrando aos viajantes as 10 direï¿½ï¿½es de Vitï¿½lia (Norte, Sul, Leste, Oeste,
 Noroeste, Nordeste, Sudeste, Sudoeste, Cima e Baixo).
 ~
 S
 #18103
-Alcançando a Sabedoria~
-   Você sobe por uma rampa suspensa sobre um lindo jardim.  Esta rampa
-atravessa este jardim e segue em direção ao Norte.  Há um clima de paz
+Alcanï¿½ando a Sabedoria~
+   Vocï¿½ sobe por uma rampa suspensa sobre um lindo jardim.  Esta rampa
+atravessa este jardim e segue em direï¿½ï¿½o ao Norte.  Hï¿½ um clima de paz
 reinando neste ambiente.
 ~
-181 gfj 0
-D D
-Você vê um lindo jardim.
-~
-~
-0 -1 18102
-D U
-Você vê um lugar repleto de espelhos.
+181 96 0 0 0 0
+D0
+Vocï¿½ vï¿½ um lugar repleto de espelhos.
 ~
 ~
 0 -1 18104
 E
 jardim jardins flores flor~
-É um jardim deslumbrante, com as mais variadas qualidades de flores jamais
+ï¿½ um jardim deslumbrante, com as mais variadas qualidades de flores jamais
 vistas antes.  Seus perfumes penetram em suas narinas dando-lhe uma
-deliciosa sensação de bem-estar.
+deliciosa sensaï¿½ï¿½o de bem-estar.
 ~
 E
 rampa suspensa~
-É uma delicada rampa de madeira de lei, feita artesanalmente por algum
+ï¿½ uma delicada rampa de madeira de lei, feita artesanalmente por algum
 carpinteiro muito experiente e artista.  A madeira de lei, provavelmente
-saída de alguma floresta próxima daqui, possui uma tonalidade forte de
-vermelho, lembrando o pôr-do-sol.
+saï¿½da de alguma floresta prï¿½xima daqui, possui uma tonalidade forte de
+vermelho, lembrando o pï¿½r-do-sol.
 ~
 S
 #18104
 Casa dos Espelhos~
-   Você entra numa sala maravilhosamente iluminada.  Espelhos de cristal
-cobrem todas as paredes, transmitindo a você uma sensação de infinito.  Há
-quatro portas neste lugar.  Que tal se você descobrisse aonde elas vão dar?
+   Vocï¿½ entra numa sala maravilhosamente iluminada.  Espelhos de cristal
+cobrem todas as paredes, transmitindo a vocï¿½ uma sensaï¿½ï¿½o de infinito.  Hï¿½
+quatro portas neste lugar.  Que tal se vocï¿½ descobrisse aonde elas vï¿½o dar?
 ~
-181 gfj 0
-D N
-~
-~
-0 -1 18105
-D E
-~
-~
-0 -1 18106
-D S
-~
-~
-0 -1 18107
-D W
-~
-~
-0 -1 18118
-D D
+181 96 0 0 0 0
+D0
 ~
 ~
 0 -1 18108
 E
 espelho espelhos cristal~
 Enormes espelhos, feitos do mais puro cristal, cobrem todas as paredes da
-sala.  Você observa, impressionado, que estes espelhos parecem refletir não
-apenas a sua figura, mas também o seu caráter.  Teriam sido os Deuses que
+sala.  Vocï¿½ observa, impressionado, que estes espelhos parecem refletir nï¿½o
+apenas a sua figura, mas tambï¿½m o seu carï¿½ter.  Teriam sido os Deuses que
 criaram estes artefatos?
 ~
 E
 porta portas~
-Imensas e maciças, parecem que foram feitas por mãos experientes e
+Imensas e maciï¿½as, parecem que foram feitas por mï¿½os experientes e
 perfeccionistas.  Figuras medievais foram cuidadosamente entalhadas em sua
-superfície, deixando-a com o aspecto de uma grande moldura.
+superfï¿½cie, deixando-a com o aspecto de uma grande moldura.
 ~
 S
 #18105
 Casa dos Espelhos~
-Você entra numa sala maravilhosamente iluminada.  Espelhos de cristal cobrem
-todas as paredes, transmitindo a você uma sensação de infinito.  Há quatro
-portas neste lugar.  Que tal se você descobrisse aonde elas vão dar?
+Vocï¿½ entra numa sala maravilhosamente iluminada.  Espelhos de cristal cobrem
+todas as paredes, transmitindo a vocï¿½ uma sensaï¿½ï¿½o de infinito.  Hï¿½ quatro
+portas neste lugar.  Que tal se vocï¿½ descobrisse aonde elas vï¿½o dar?
 ~
-181 gjf 0
-D S
+181 608 0 0 0 0
+D0
 ~
 ~
 0 -1 18104
 E
 espelho espelhos cristal~
 Enormes espelhos, feitos do mais puro cristal, cobrem todas as paredes da
-sala.  Você observa, impressionado, que estes espelhos parecem refletir não
-apenas a sua figura, mas também o seu caráter.  Teriam sido os Deuses que
+sala.  Vocï¿½ observa, impressionado, que estes espelhos parecem refletir nï¿½o
+apenas a sua figura, mas tambï¿½m o seu carï¿½ter.  Teriam sido os Deuses que
 criaram estes artefatos?
 ~
 E
 porta portas~
-Imensas e maciças, parecem que foram feitas por mãos experientes e
+Imensas e maciï¿½as, parecem que foram feitas por mï¿½os experientes e
 perfeccionistas.  Figuras medievais foram cuidadosamente entalhadas em sua
-superfície, deixando-a com o aspecto de uma grande moldura.
+superfï¿½cie, deixando-a com o aspecto de uma grande moldura.
 ~
 S
 #18106
 Casa dos Espelhos~
-   Você entra numa sala maravilhosamente iluminada.  Espelhos de cristal
-cobrem todas as paredes, transmitindo a você uma sensação de infinito.  Há
-quatro portas neste lugar.  Que tal se você descobrisse aonde elas vão dar?
+   Vocï¿½ entra numa sala maravilhosamente iluminada.  Espelhos de cristal
+cobrem todas as paredes, transmitindo a vocï¿½ uma sensaï¿½ï¿½o de infinito.  Hï¿½
+quatro portas neste lugar.  Que tal se vocï¿½ descobrisse aonde elas vï¿½o dar?
 ~
-181 gfj 0
-D W
+181 608 0 0 0 0
+D0
 ~
 ~
 0 -1 18104
 E
 espelho espelhos cristal~
 Enormes espelhos, feitos do mais puro cristal, cobrem todas as paredes da
-sala.  Você observa, impressionado, que estes espelhos parecem refletir não
-apenas a sua figura, mas também o seu caráter.  Teriam sido os Deuses que
+sala.  Vocï¿½ observa, impressionado, que estes espelhos parecem refletir nï¿½o
+apenas a sua figura, mas tambï¿½m o seu carï¿½ter.  Teriam sido os Deuses que
 criaram estes artefatos?
 ~
 E
 porta portas~
-Imensas e maciças, parecem que foram feitas por mãos experientes e
+Imensas e maciï¿½as, parecem que foram feitas por mï¿½os experientes e
 perfeccionistas.  Figuras medievais foram cuidadosamente entalhadas em sua
-superfície, deixando-a com o aspecto de uma grande moldura.
+superfï¿½cie, deixando-a com o aspecto de uma grande moldura.
 ~
 S
 #18107
 Casa dos Espelhos~
-   Você entra numa sala maravilhosamente iluminada.  Espelhos de cristal
-cobrem todas as paredes, transmitindo a você uma sensação de infinito.  Há
+   Vocï¿½ entra numa sala maravilhosamente iluminada.  Espelhos de cristal
+cobrem todas as paredes, transmitindo a vocï¿½ uma sensaï¿½ï¿½o de infinito.  Hï¿½
 quatro portas neste lugar e de uma delas pode-se notar uma suave
-luminosidade.  Você se sente atraído por esta luz.  Que tal se você voltasse
+luminosidade.  Vocï¿½ se sente atraï¿½do por esta luz.  Que tal se vocï¿½ voltasse
 para o norte e depois seguisse para baixo, para descobrir de onde vem esta
 luz?
 ~
-181 gfj 0
-D N
+181 608 0 0 0 0
+D0
 ~
 ~
 0 -1 18104
 E
 espelho espelhos cristal~
 Enormes espelhos, feitos do mais puro cristal, cobrem todas as paredes da
-sala.  Você observa, impressionado, que estes espelhos parecem refletir não
-apenas a sua figura, mas também o seu caráter.  Teriam sido os Deuses que
-criaram estes espelhos mágicos?
+sala.  Vocï¿½ observa, impressionado, que estes espelhos parecem refletir nï¿½o
+apenas a sua figura, mas tambï¿½m o seu carï¿½ter.  Teriam sido os Deuses que
+criaram estes espelhos mï¿½gicos?
 ~
 E
 porta portas~
-Imensas e maciças, parecem que foram feitas por mãos experientes e
+Imensas e maciï¿½as, parecem que foram feitas por mï¿½os experientes e
 perfeccionistas.  Figuras medievais foram cuidadosamente entalhadas em sua
-superfície, deixando-a com o aspecto de uma grande moldura.
+superfï¿½cie, deixando-a com o aspecto de uma grande moldura.
 ~
 S
 #18108
-Alcançando a Sabedoria~
-   Você desce por uma rampa suspensa sobre um lindo jardim.  Esta rampa
-atravessa o jardim descendo em direção ao Oeste.  Há um clima de paz
-reinando neste ambiente.  Você percebe que seu estômago começou a roncar e
+Alcanï¿½ando a Sabedoria~
+   Vocï¿½ desce por uma rampa suspensa sobre um lindo jardim.  Esta rampa
+atravessa o jardim descendo em direï¿½ï¿½o ao Oeste.  Hï¿½ um clima de paz
+reinando neste ambiente.  Vocï¿½ percebe que seu estï¿½mago comeï¿½ou a roncar e
 pensa que um belo naco de carne seria maravilhoso.  Continue a sua
-caminhada, quem sabe você não encontra algo que possa saciar a sua fome.
+caminhada, quem sabe vocï¿½ nï¿½o encontra algo que possa saciar a sua fome.
 ~
-181 gfj 0
-D D
-Você vê um lindo jardim.
+181 608 0 0 0 0
+D0
+Vocï¿½ vï¿½ um lindo jardim.
 ~
 ~
 0 -1 18109
 E
 jardim jardins flores flor~
-É um jardim deslumbrante, com as mais variadas qualidades de flores jamais
+ï¿½ um jardim deslumbrante, com as mais variadas qualidades de flores jamais
 vistas antes.  Seus perfumes penetram em suas narinas dando-lhe uma
-deliciosa sensação de bem-estar.
+deliciosa sensaï¿½ï¿½o de bem-estar.
 ~
 E
 rampa suspensa~
-É uma delicada rampa de madeira de lei, feita artesalmente por algum
+ï¿½ uma delicada rampa de madeira de lei, feita artesalmente por algum
 carpinteiro muito experiente e artista.  A madeira de lei, provavelmente
-saída de alguma floresta próxima daqui, possui uma tonalidade forte de
-vermelho, lembrando o pôr-do-sol.
+saï¿½da de alguma floresta prï¿½xima daqui, possui uma tonalidade forte de
+vermelho, lembrando o pï¿½r-do-sol.
 ~
 S
 #18109
-Sala das Provisões~
-   Você está no local onde os aventureiros param para se abastecer com
-comida antes de seguirem em suas jornadas.  Se você olhar bem, verá que
-alguma alma caridosa deixou três pães de viagem aqui.  Pode pegar!  É seu
-agora!  É fácil...  Basta digitar &WGET PÃO&n até que todos os pães estejam em
-suas mãos.  E quando a fome bater, basta digitar &WEAT PÃO&n.  É bem saboroso,
-não acha?  Notou que um imenso &Wpainel&n foi colocado na parede?  Que tal
-lê-lo?  Para seguir com a sua jornada, digite W.
+Sala das Provisï¿½es~
+   Vocï¿½ estï¿½ no local onde os aventureiros param para se abastecer com
+comida antes de seguirem em suas jornadas.  Se vocï¿½ olhar bem, verï¿½ que
+alguma alma caridosa deixou trï¿½s pï¿½es de viagem aqui.  Pode pegar!  ï¿½ seu
+agora!  ï¿½ fï¿½cil...  Basta digitar @WGET Pï¿½O@n atï¿½ que todos os pï¿½es estejam em
+suas mï¿½os.  E quando a fome bater, basta digitar @WEAT Pï¿½O@n.  ï¿½ bem saboroso,
+nï¿½o acha?  Notou que um imenso @Wpainel@n foi colocado na parede?  Que tal
+lï¿½-lo?  Para seguir com a sua jornada, digite W.
 ~
-181 gfj 0
-D W
-Você vê um caminho iluminado que parece não ter fim.
+181 608 0 0 0 0
+D0
+Vocï¿½ vï¿½ um caminho iluminado que parece nï¿½o ter fim.
 ~
 ~
 0 -1 18110
 E
 painel parede~
-   Você já sabe o comando para comer:  &WEAT <alimento>&n
-   Para ver quanto de alimento você ainda tem, digite &WINV&n.
-   E quando seu alimento terminar, você deverá comprar mais.  Há uma padaria
-muito boa em Midgaard, onde você poderá comprar pães fresquinhos a toda hora.
-Para ir até lá é bem simples: confira em seu mapa.   Ao chegar digite
-&WLIST&n e faça sua escolha.
-   Para comprar o que você escolheu digite: &WBUY <nome do alimento>&n, ou
-observe o número correspondente ao alimento que você quer comprar e digite:
-&WBUY #<número>&n (ex: &WBUY #1&n, &WBUY #2&n).
-   Se você for esperto, vai aprender a olhar tudo o que pegar em suas mãos,
-minuciosamente.  Para isso é bem simples: &WLOOK <objeto>&n (ex: &WLOOK PÃO&n).
+   Vocï¿½ jï¿½ sabe o comando para comer:  @WEAT <alimento>@n
+   Para ver quanto de alimento vocï¿½ ainda tem, digite @WINV@n.
+   E quando seu alimento terminar, vocï¿½ deverï¿½ comprar mais.  Hï¿½ uma padaria
+muito boa em Midgaard, onde vocï¿½ poderï¿½ comprar pï¿½es fresquinhos a toda hora.
+Para ir atï¿½ lï¿½ ï¿½ bem simples: confira em seu mapa.   Ao chegar digite
+@WLIST@n e faï¿½a sua escolha.
+   Para comprar o que vocï¿½ escolheu digite: @WBUY <nome do alimento>@n, ou
+observe o nï¿½mero correspondente ao alimento que vocï¿½ quer comprar e digite:
+@WBUY #<nï¿½mero>@n (ex: @WBUY #1@n, @WBUY #2@n).
+   Se vocï¿½ for esperto, vai aprender a olhar tudo o que pegar em suas mï¿½os,
+minuciosamente.  Para isso ï¿½ bem simples: @WLOOK <objeto>@n (ex: @WLOOK Pï¿½O@n).
 ~
 S
 #18110
 Gruta da Fonte~
-   Que lugar mais refrescante, não acha?  Perceba que as paredes de pedra
-desta gruta estão úmidas e que dos seus nichos, surgem as mais variadas
-espécies de samambaias, aproveitando-se deste ambiente tão tranquilo e
-repousante.  Feche os seus olhos e ouça o barulho suave e quase hipnótico
-das águas que jorram incessantemente desta imensa fonte natural.  Um pequeno
-objeto foi esquecido aqui.  Que tal pegá-lo e enchê-lo?  Assim você não
-corre o risco de passar sede no futuro.  Para obtê-lo digite &WGET PORUNGA&n e
-leia o &Waviso&n que algum viajante mais experiente parece ter escrito.
+   Que lugar mais refrescante, nï¿½o acha?  Perceba que as paredes de pedra
+desta gruta estï¿½o ï¿½midas e que dos seus nichos, surgem as mais variadas
+espï¿½cies de samambaias, aproveitando-se deste ambiente tï¿½o tranquilo e
+repousante.  Feche os seus olhos e ouï¿½a o barulho suave e quase hipnï¿½tico
+das ï¿½guas que jorram incessantemente desta imensa fonte natural.  Um pequeno
+objeto foi esquecido aqui.  Que tal pegï¿½-lo e enchï¿½-lo?  Assim vocï¿½ nï¿½o
+corre o risco de passar sede no futuro.  Para obtï¿½-lo digite @WGET PORUNGA@n e
+leia o @Waviso@n que algum viajante mais experiente parece ter escrito.
 ~
-181 gfj 0
-D W
-Você vê um caminho iluminado que parece não ter fim.
+181 608 0 0 0 0
+D0
+Vocï¿½ vï¿½ um caminho iluminado que parece nï¿½o ter fim.
 ~
 ~
 0 -1 18111
 E
 aviso~
-   Para beber qualquer tipo de líquido, o comando deverá sempre ser:
-DRINK <nome do recepiente ou líquido>
-   Ex: &WDRINK GARRAFA&n, &WDRINK CANTIL&n, &WDRINK PORUNGA&n.
-   Para tomar poções mágicas, o comando é:
-&WQUAFF <nome da poção>&n.
-   Ex: &WQUAFF INVISIBILIDADE&n, etc.
+   Para beber qualquer tipo de lï¿½quido, o comando deverï¿½ sempre ser:
+DRINK <nome do recepiente ou lï¿½quido>
+   Ex: @WDRINK GARRAFA@n, @WDRINK CANTIL@n, @WDRINK PORUNGA@n.
+   Para tomar poï¿½ï¿½es mï¿½gicas, o comando ï¿½:
+@WQUAFF <nome da poï¿½ï¿½o>@n.
+   Ex: @WQUAFF INVISIBILIDADE@n, etc.
 ~
 S
 #18111
 Sala das Armas~
-   Vitália é um mundo cheio de mistérios e de grandes perigos.  Você terá
-que lutar muitas vezes pela própria vida.  Observe a sala em que você está
+   Vitï¿½lia ï¿½ um mundo cheio de mistï¿½rios e de grandes perigos.  Vocï¿½ terï¿½
+que lutar muitas vezes pela prï¿½pria vida.  Observe a sala em que vocï¿½ estï¿½
 agora.  Veja a quantidade de armas que foram guardadas aqui.  Algumas destas
-armas parecem ser tão antigas quanto as &Winscrições&n que foram feitas na
-parede.  Talvez seja bom você ler o que está escrito.  E quem sabe não seja
-interessante pegar uma destas armas e aprender a usá-la corretamente.
-Afinal, nunca se sabe o dia de amanhã...
+armas parecem ser tï¿½o antigas quanto as @Winscriï¿½ï¿½es@n que foram feitas na
+parede.  Talvez seja bom vocï¿½ ler o que estï¿½ escrito.  E quem sabe nï¿½o seja
+interessante pegar uma destas armas e aprender a usï¿½-la corretamente.
+Afinal, nunca se sabe o dia de amanhï¿½...
 ~
-181 gfj 0
-D W
-Você vê um caminho iluminado que parece não ter fim.
+181 608 0 0 0 0
+D0
+Vocï¿½ vï¿½ um caminho iluminado que parece nï¿½o ter fim.
 ~
 ~
 0 -1 18112
 E
-inscrição inscrições~
-   Acostume-se a checar seus equipamentos.  Digite &WEQUIPMENT&n ou use a forma
-abreviada: &WEQ&n.  Para ver o que você carrega em suas mãos, use &WINVENTORY&nou
-abrevie e use &WINV&n.
+inscriï¿½ï¿½o inscriï¿½ï¿½es~
+   Acostume-se a checar seus equipamentos.  Digite @WEQUIPMENT@n ou use a forma
+abreviada: @WEQ@n.  Para ver o que vocï¿½ carrega em suas mï¿½os, use @WINVENTORY@nou
+abrevie e use @WINV@n.
 
-   Para empunhar uma arma, digite: &WWIELD <nome do objeto>&n.
-   Ex: &WWIELD ESPADA&n, &WWIELD FACA&n
+   Para empunhar uma arma, digite: @WWIELD <nome do objeto>@n.
+   Ex: @WWIELD ESPADA@n, @WWIELD FACA@n
 
-   Em Vitália também é possível segurar alguns objetos.  E para fazê-lo,
-digite: &WHOLD <objeto>&n.
-   Ex: &WHOLD LUZ&n, &WHOLD BASTAO&n.
+   Em Vitï¿½lia tambï¿½m ï¿½ possï¿½vel segurar alguns objetos.  E para fazï¿½-lo,
+digite: @WHOLD <objeto>@n.
+   Ex: @WHOLD LUZ@n, @WHOLD BASTAO@n.
 
-   Alguns objetos, como varinhas, bastões e outros objetos, para serem
-usados, terão que ser seguros (hold).
+   Alguns objetos, como varinhas, bastï¿½es e outros objetos, para serem
+usados, terï¿½o que ser seguros (hold).
 ~
 S
 #18112
 Sala das Armaduras~
-   Vitália é um mundo cheio de mistérios e de grandes perigos.  Você muitas
-vezes terá que lutar pela própria vida.  Observe a sala em que você está
+   Vitï¿½lia ï¿½ um mundo cheio de mistï¿½rios e de grandes perigos.  Vocï¿½ muitas
+vezes terï¿½ que lutar pela prï¿½pria vida.  Observe a sala em que vocï¿½ estï¿½
 agora.  Veja a quantidade de armaduras que foram deixadas aqui.  Algumas
-destas armaduras parecem ser tão antigas quanto as &Winscrições&n que foram
-feitas na parede.  Talvez seja bom você ler o que está escrito.  E quem sabe
-não seja interessante pegar uma destas armaduras e vesti-la da forma
-correta.  Afinal, nunca se sabe o dia de amanhã...
+destas armaduras parecem ser tï¿½o antigas quanto as @Winscriï¿½ï¿½es@n que foram
+feitas na parede.  Talvez seja bom vocï¿½ ler o que estï¿½ escrito.  E quem sabe
+nï¿½o seja interessante pegar uma destas armaduras e vesti-la da forma
+correta.  Afinal, nunca se sabe o dia de amanhï¿½...
 ~
-181 gfj 0
-D W
-Você vê um caminho iluminado que parece não ter fim.
+181 608 0 0 0 0
+D0
+Vocï¿½ vï¿½ um caminho iluminado que parece nï¿½o ter fim.
 ~
 ~
 0 -1 18113
 E
-inscrição inscrições~
-   Para usar uma armadura corretamente, é bem simples. Digite:
-&WWEAR <nome do objeto>&n.
-   Ex: &WWEAR COLETE&n, &WWEAR CALCAS&n.
+inscriï¿½ï¿½o inscriï¿½ï¿½es~
+   Para usar uma armadura corretamente, ï¿½ bem simples. Digite:
+@WWEAR <nome do objeto>@n.
+   Ex: @WWEAR COLETE@n, @WWEAR CALCAS@n.
 
-   Observe as pessoas quando estiver explorando Vitália.  Veja os objetos que
+   Observe as pessoas quando estiver explorando Vitï¿½lia.  Veja os objetos que
 elas costumam usar ao longo do corpo.
-   Existem objetos para serem usados nas pernas, braços, pulsos, dedos, etc.
+   Existem objetos para serem usados nas pernas, braï¿½os, pulsos, dedos, etc.
    Vai ser divertido experimentar trocar suas roupas, vestir armaduras cada vez
-melhores e que mais proteção lhe darão.
-   Lembre-se que: "&CO bom aprendiz é aquele que observa a tudo e a todos&n".
+melhores e que mais proteï¿½ï¿½o lhe darï¿½o.
+   Lembre-se que: "@CO bom aprendiz ï¿½ aquele que observa a tudo e a todos@n".
 ~
 S
 #18113
 Sala da Luminosidade~
-   Você entra num ambiente extremamente claro e iluminado.  Bem no centro da
+   Vocï¿½ entra num ambiente extremamente claro e iluminado.  Bem no centro da
 sala, um imenso globo, feito de um material parecido com cristal, emite uma
-poderosa luz, que quase lhe cega as vistas.  Espalhados pela sala estão
-inúmeros objetos brilhantes que emitem luzes.  Num imenso &Wpainel&n, feito com
-algo parecido com espelho, foram escritas diversas palavras.  Você percebe
+poderosa luz, que quase lhe cega as vistas.  Espalhados pela sala estï¿½o
+inï¿½meros objetos brilhantes que emitem luzes.  Num imenso @Wpainel@n, feito com
+algo parecido com espelho, foram escritas diversas palavras.  Vocï¿½ percebe
 que as letras parecem fogo crepitando e sente necessidade de se aproximar
 para tentar ler aquilo que foi escrito.
 ~
-181 gfj 0
-D W
-Você vê um caminho iluminado que parece não ter fim.
+181 608 0 0 0 0
+D0
+Vocï¿½ vï¿½ um caminho iluminado que parece nï¿½o ter fim.
 ~
 ~
 0 -1 18114
 E
 painel parece aviso~
-   Alguns caminhos são escuros, principalmente quando a noite cai,
-silenciosa e inesperadamente.  Para que você não seja pego desprevinido,
-acostume-se a fazer uso de luzes.  Algumas luzes não possuem longa duração.
-Outras, porém, duram para sempre.
-   Para usar uma luz, é bem simples, digite: &WHOLD <nome do objeto>&n.  Ex:
-&WHOLD LANTERNA&n, &WHOLD JARRO&n.
-   Se a sua luz por algum motivo se apagar, não se preocupe.  Existem lojas
-em Vitália que vendem estes artigos, ou simplesmente procure uma por si
+   Alguns caminhos sï¿½o escuros, principalmente quando a noite cai,
+silenciosa e inesperadamente.  Para que vocï¿½ nï¿½o seja pego desprevinido,
+acostume-se a fazer uso de luzes.  Algumas luzes nï¿½o possuem longa duraï¿½ï¿½o.
+Outras, porï¿½m, duram para sempre.
+   Para usar uma luz, ï¿½ bem simples, digite: @WHOLD <nome do objeto>@n.  Ex:
+@WHOLD LANTERNA@n, @WHOLD JARRO@n.
+   Se a sua luz por algum motivo se apagar, nï¿½o se preocupe.  Existem lojas
+em Vitï¿½lia que vendem estes artigos, ou simplesmente procure uma por si
 mesmo.
 ~
 S
 #18114
 Sala do Fortalecimento~
-   Você entra num ambiente totalmente diferente.  Esta sala parece possuir
-uma atmosfera mágica a envolvê-la.  Nas paredes existem imensos murais, onde
-cenas de batalhas sangrentas foram representadas.  Há todo um clima de
-respeito e mistério envolvendo estas grossas paredes de pedras.  Com
+   Vocï¿½ entra num ambiente totalmente diferente.  Esta sala parece possuir
+uma atmosfera mï¿½gica a envolvï¿½-la.  Nas paredes existem imensos murais, onde
+cenas de batalhas sangrentas foram representadas.  Hï¿½ todo um clima de
+respeito e mistï¿½rio envolvendo estas grossas paredes de pedras.  Com
 certeza, por aqui passaram todos aqueles que resolveram seguir um caminho
-reto e digno.  Bem no centro da sala há um &Wpergaminho&n onde várias anotações
-foram feitas.  Pegue-o e torne-se mais sábio.
+reto e digno.  Bem no centro da sala hï¿½ um @Wpergaminho@n onde vï¿½rias anotaï¿½ï¿½es
+foram feitas.  Pegue-o e torne-se mais sï¿½bio.
 ~
-181 gfj 0
-D W
-Você vê um caminho iluminado que parece não ter fim.
+181 608 0 0 0 0
+D0
+Vocï¿½ vï¿½ um caminho iluminado que parece nï¿½o ter fim.
 ~
 ~
 0 -1 18115
 S
 #18115
 Sala do Aprendizado~
-   Há um profundo silêncio neste local.  Você consegue ouvir as batidas de
-seu próprio coração e percebe que daqui para frente sua vida irá mudar
-totalmente.  As paredes estão cobertas por dezenas de milhares de exemplares
-de livros que, pela aparência, devem ser muito antigos e com certeza já
-foram bastante estudados.  Algo no chão chama a sua atenção.  É um &Wlivro&n
-grosso e pesado e parece que alguém o deixou aqui de propósito.  Nunca se
-sabe o dia de amanhã.  Você gosta de livros?
+   Hï¿½ um profundo silï¿½ncio neste local.  Vocï¿½ consegue ouvir as batidas de
+seu prï¿½prio coraï¿½ï¿½o e percebe que daqui para frente sua vida irï¿½ mudar
+totalmente.  As paredes estï¿½o cobertas por dezenas de milhares de exemplares
+de livros que, pela aparï¿½ncia, devem ser muito antigos e com certeza jï¿½
+foram bastante estudados.  Algo no chï¿½o chama a sua atenï¿½ï¿½o.  ï¿½ um @Wlivro@n
+grosso e pesado e parece que alguï¿½m o deixou aqui de propï¿½sito.  Nunca se
+sabe o dia de amanhï¿½.  Vocï¿½ gosta de livros?
 ~
-181 gfj 0
-D W
-Você vê um caminho iluminado que parece não ter fim.
+181 608 0 0 0 0
+D0
+Vocï¿½ vï¿½ um caminho iluminado que parece nï¿½o ter fim.
 ~
 ~
 0 -1 18116
 S
 #18116
-Sala das Façanhas~
-   Que sala mais estranha...  São dezenas, talvez centenas de cabeças de
-animais empalhados.  Alguns estão expostos como se fossem troféus.  Outros
-parecem estar ali apenas para lembrar às criaturas dos grandes perigos que
-as aguardam.  Você observa que há uma pequenina &Wfrase&n escrita na parede.  O
-local, embora grande, lhe causa um certo mal estar e uma sensação um tanto
-claustrofóbica parece querer tomar conta de você.  Estranho, mas você sente
+Sala das Faï¿½anhas~
+   Que sala mais estranha...  Sï¿½o dezenas, talvez centenas de cabeï¿½as de
+animais empalhados.  Alguns estï¿½o expostos como se fossem trofï¿½us.  Outros
+parecem estar ali apenas para lembrar ï¿½s criaturas dos grandes perigos que
+as aguardam.  Vocï¿½ observa que hï¿½ uma pequenina @Wfrase@n escrita na parede.  O
+local, embora grande, lhe causa um certo mal estar e uma sensaï¿½ï¿½o um tanto
+claustrofï¿½bica parece querer tomar conta de vocï¿½.  Estranho, mas vocï¿½ sente
 como se mil olhos estivessem observando seus movimentos.  Uma sombra surge
-do nada e parece estar chegando bem perto.  São movimentos rasteiros,
-sinuosos e você pressente que alguma coisa está se erguendo à sua frente,
-pronta para atacá-lo.  Lembre-se de tudo aquilo que aprendeu até agora e
-coloque em prática sem medo.  Os Deuses estarão ao seu lado.
+do nada e parece estar chegando bem perto.  Sï¿½o movimentos rasteiros,
+sinuosos e vocï¿½ pressente que alguma coisa estï¿½ se erguendo ï¿½ sua frente,
+pronta para atacï¿½-lo.  Lembre-se de tudo aquilo que aprendeu atï¿½ agora e
+coloque em prï¿½tica sem medo.  Os Deuses estarï¿½o ao seu lado.
 ~
-181 gfj 0
-D W
-Você vê um caminho iluminado que parece não ter fim.
+181 608 0 0 0 0
+D0
+Vocï¿½ vï¿½ um caminho iluminado que parece nï¿½o ter fim.
 ~
 ~
 0 -1 18117
 E
 frase parede~
-   Para atacar esta imensa cobra, certifique-se antes se você tem chances:
-&WCONSIDER COBRA&n.
-   Para observá-la bem &RANTES&n de atacar, digite: &WLOOK COBRA&n.
-   Lembre-se de checar seu comando de fuga automático, ex: &RWIMP 6&n
-   Para atacá-la digite: &WKILL COBRA&n.
-   Depois veja o que tem dentro do corpo: &WEXAMINE CORPO&n, ou simplesmente &WEXA
-CORPO&n.
-   E se achar interessante, pegue o ouro e os objetos que estão dentro dele:
-&WGET COLETE CORPO&n e depois &WGET OURO CORPO&n.
+   Para atacar esta imensa cobra, certifique-se antes se vocï¿½ tem chances:
+@WCONSIDER COBRA@n.
+   Para observï¿½-la bem @RANTES@n de atacar, digite: @WLOOK COBRA@n.
+   Lembre-se de checar seu comando de fuga automï¿½tico, ex: @RWIMP 6@n
+   Para atacï¿½-la digite: @WKILL COBRA@n.
+   Depois veja o que tem dentro do corpo: @WEXAMINE CORPO@n, ou simplesmente @WEXA
+CORPO@n.
+   E se achar interessante, pegue o ouro e os objetos que estï¿½o dentro dele:
+@WGET COLETE CORPO@n e depois @WGET OURO CORPO@n.
 ~
 S
 #18117
-Sala da Esperança~
-   E você começa a perceber que já está mais seguro e que mal pode esperar
-para iniciar suas batalhas.  Esta sala é práticamente o Início de sua
-jornada e você sente que seu coração começa a bater mais forte e observa que
-raios de luz começam a envolver o seu corpo e uma imensa paz envolve seu e
-sua mente.  Você se sente seguro, pois recebeu as bençãos dos Deuses de
-Vitália e compreende que seu caminho será exatamente aquele que você
-escolher para trilhar.  E que as recompensas virão na mesma proporção.
-   É importante seguir conhecendo.  Uma &Wmensagem &n foi escrita para você.
+Sala da Esperanï¿½a~
+   E vocï¿½ comeï¿½a a perceber que jï¿½ estï¿½ mais seguro e que mal pode esperar
+para iniciar suas batalhas.  Esta sala ï¿½ prï¿½ticamente o Inï¿½cio de sua
+jornada e vocï¿½ sente que seu coraï¿½ï¿½o comeï¿½a a bater mais forte e observa que
+raios de luz comeï¿½am a envolver o seu corpo e uma imensa paz envolve seu e
+sua mente.  Vocï¿½ se sente seguro, pois recebeu as benï¿½ï¿½os dos Deuses de
+Vitï¿½lia e compreende que seu caminho serï¿½ exatamente aquele que vocï¿½
+escolher para trilhar.  E que as recompensas virï¿½o na mesma proporï¿½ï¿½o.
+   ï¿½ importante seguir conhecendo.  Uma @Wmensagem @n foi escrita para vocï¿½.
    Antes de deixar esta sala, respire fundo, concentre-se e Boa Jornada.
 ~
-181 gfj 0
-D W
-Você vê um caminho iluminado que parece estar chegando ao fim.
+181 608 0 0 0 0
+D0
+Vocï¿½ vï¿½ um caminho iluminado que parece estar chegando ao fim.
 ~
 ~
 0 -1 50
 S
 #18118
 Casa dos Espelhos~
-   Você entra numa sala maravilhosamente iluminada.  Espelhos de cristal
-cobrem todas as paredes, transmitindo a você uma sensação de infinito.  Há
-quatro portas neste lugar.  Que tal se você descobrisse aonde elas vão dar?
+   Vocï¿½ entra numa sala maravilhosamente iluminada.  Espelhos de cristal
+cobrem todas as paredes, transmitindo a vocï¿½ uma sensaï¿½ï¿½o de infinito.  Hï¿½
+quatro portas neste lugar.  Que tal se vocï¿½ descobrisse aonde elas vï¿½o dar?
 ~
-181 gjf 0
+181 608 0 0 0 0
 D1
 ~
 ~
@@ -480,15 +459,15 @@ D1
 E
 espelho espelhos cristal~
 Enormes espelhos, feitos do mais puro cristal, cobrem todas as paredes da
-sala.  Você observa, impressionado, que estes espelhos parecem refletir não
-apenas a sua figura, mas também o seu caráter.  Teriam sido os Deuses que
+sala.  Vocï¿½ observa, impressionado, que estes espelhos parecem refletir nï¿½o
+apenas a sua figura, mas tambï¿½m o seu carï¿½ter.  Teriam sido os Deuses que
 criaram estes artefatos?
 ~
 E
 porta portas~
-Imensas e maciças, parecem que foram feitas por mãos experientes e
+Imensas e maciï¿½as, parecem que foram feitas por mï¿½os experientes e
 perfeccionistas.  Figuras medievais foram cuidadosamente entalhadas em sua
-superfície, deixando-a com o aspecto de uma grande moldura.
+superfï¿½cie, deixando-a com o aspecto de uma grande moldura.
 ~
 S
-$
+$~
