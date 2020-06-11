@@ -377,7 +377,7 @@ ACMD(do_backflip)
 		act("$n faz uma cambalhota e você $r perde de vista.", FALSE, ch, NULL, vict, TO_VICT);
 		/* it is assured that vict will be fighting ch */
 		stop_fighting(vict);
-
+      stop_fighting(ch);
 		/* NEW_EVENT() will add a new mud event to the event list of the
 		   character. This function below adds a new event of "eBACKFLIP", to
 		   "ch", and passes "NULL" as additional data. The event will be
@@ -426,7 +426,6 @@ EVENTFUNC(event_backflip)
 	send_to_char(ch, "Você da uma cambalhota e se esconde.\r\n");
 
 	/* Lets grab some a random NPC from the list, and stop them */
-
 	tch = random_from_list(room_list);
 	stop_fighting(tch);
 
@@ -1039,7 +1038,7 @@ ACMD(do_bandage)
 	one_argument(argument, arg);
 	if (!(vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)))
 	{
-		send_to_char(ch, "Em quem você quer fazer os primeiros socorros?\r\n");
+		send_to_char(ch, "Quem você quer fazer estabilizar a condição?\r\n");
 		return;
 	}
 
@@ -1054,15 +1053,16 @@ ACMD(do_bandage)
 	prob = GET_SKILL(ch, SKILL_BANDAGE);
 	if (percent <= prob)
 	{
-		act("Your attempt to bandage fails.", FALSE, ch, 0, 0, TO_CHAR);
-		act("$n tries to bandage $N, but fails miserably.", TRUE, ch, 0, vict, TO_NOTVICT);
+		act("A sua tentativa de estabilizar a condição de $N falha.", FALSE, ch, 0, vict, TO_CHAR);
+		act("$n tenta estabilizar a condição de $N mas falha miseravelmente.", TRUE, ch, 0, vict, TO_NOTVICT);
+			act("Alguém tenta estabilizar a tua condição mas falha miseravelmente.", TRUE, ch, 0, vict, TO_VICT);
 		damage(vict, vict, 2, TYPE_SUFFERING);
 		return;
 	}
 
-	act("You successfully bandage $N.", FALSE, ch, 0, vict, TO_CHAR);
-	act("$n bandages $N, who looks a bit better now.", TRUE, ch, 0, vict, TO_NOTVICT);
-	act("Someone bandages you, and you feel a bit better now.", FALSE, ch, 0, vict, TO_VICT);
+	act("Você consegue estabilizar $N com sucesso.", FALSE, ch, 0, vict, TO_CHAR);
+	act("$n estabiliza a condição de $N, que parece um pouco melhor agora.", TRUE, ch, 0, vict, TO_NOTVICT);
+	act("Alguém tenta estabilizar a tua condição, e você se sente melhor agora.", FALSE, ch, 0, vict, TO_VICT);
 	GET_HIT(vict) = 0;
 }
 
