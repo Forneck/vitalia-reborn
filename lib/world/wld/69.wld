@@ -5,8 +5,8 @@ grande maioria da flora local sï¿½o vï¿½rios tipos de vitï¿½ria-rï¿½gia.  Este
 jardim do Templo parece ser bem cuidado e todas as plantas estï¿½o
 florescendo.
 ~
-69 g 2
-D2 
+69 64 0 0 0 2
+D2
 Vocï¿½ vï¿½ dentro do Templo.
 ~
 ~
@@ -18,20 +18,20 @@ Fora dos Muros do Templo~
 feito de pedra marrom e ï¿½ muito alto para manter alguma coisa dentro ou
 fora.
 ~
-69 g 2
-D2 
+69 64 0 0 0 2
+D2
 Vocï¿½ vï¿½ as dependï¿½ncias do Templo.
 ~
 ~
 0 -1 6906
 S
-#6902 
+#6902
 Dentro do Templo~
    Vocï¿½ se encontra dentro de um pequeno Templo construido de pedras.  A
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D1
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -48,7 +48,7 @@ Dentro do Templo~
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ um pequeno jardim
 ~
@@ -64,7 +64,6 @@ Vocï¿½ vï¿½ o Templo.
 ~
 ~
 0 -1 6908
-
 D3
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -77,7 +76,7 @@ Dentro do Templo~
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D2
 Vocï¿½ vï¿½ uma piscina de ï¿½gua.
 ~
@@ -97,7 +96,7 @@ Templo contï¿½m importantes informaï¿½ï¿½es de onde se encontra os outros Templo
 de Anura, uma peï¿½a de quebra-cabeï¿½a que quando resolvido levarï¿½ vocï¿½ para o
 grande Templo de Anura, onde a riqueza estï¿½ fora da sua imaginaï¿½ï¿½o.
 ~
-69 g 2
+69 64 0 0 0 2
 D1
 Vocï¿½ vï¿½ as dependï¿½ncias do Templo.
 ~
@@ -116,7 +115,7 @@ sï¿½o feitas de uma espï¿½cie de rocha marrom que foi bem cuidada e ï¿½ bem maci
 Vocï¿½ vï¿½ algumas plantas florescendo nas fendas das dependï¿½ncias e indo em
 direï¿½ï¿½o ao sol.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ o muro.
 ~
@@ -143,7 +142,7 @@ Corredor Sombrio~
    Vocï¿½ se encontra em um longo corredor sombrio.  Vocï¿½ pode ver algumas
 fracas sombras, mas vocï¿½ acaba nï¿½o vendo um palmo na sua frente.
 ~
-69 ga 0
+69 65 0 0 0 0
 D0
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -170,7 +169,7 @@ Corredor Sombrio~
    Vocï¿½ se encontra em um longo corredor sombrio.  Vocï¿½ pode ver algumas
 fracas sombras, mas vocï¿½ acaba nï¿½o vendo um palmo na sua frente.
 ~
-69 ga 0
+69 65 0 0 0 0
 D0
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -197,7 +196,7 @@ Piscina de ï¿½gua~
    Vocï¿½ estï¿½ em uma piscina de ï¿½gua antes do altar onde vï¿½ vï¿½rias criaturas
 nadando, parecendo pertubadas com sua presenï¿½a.
 ~
-69 g 8 
+69 64 0 0 0 8
 D0
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -219,14 +218,12 @@ Vocï¿½ vï¿½ o Templo.
 ~
 0 -1 6908
 S
-#6910 
+#6910
 Um Altar para Anura~
    Vocï¿½ vï¿½ um grande altar dourado com uma estï¿½tua de um sapo gigante.  Vocï¿½
 vï¿½ outra sala para leste.
 ~
-69 g 0
-OX magik "*BUFONIDAE*" unlock down
-OX magik "*BUFONIDAE*" open down
+69 64 0 0 0 0
 D1
 Vocï¿½ vï¿½ uma pequena sala atrï¿½s do altar.
 ~
@@ -241,8 +238,7 @@ D5
 Ali hï¿½ uma pequena sala.
 ~
 barreira mï¿½gica~
-:n 2 a barreira mï¿½gica
-abch -1 6917
+0 -1 6917
 S
 #6911
 Atrï¿½s do Altar~
@@ -252,7 +248,7 @@ escrituras dizem a vocï¿½ que vocï¿½ pode usar as quatro tabuletas juntas para
 achar as chaves para o grande Templo de Anura.  Elas ainda falam sobre outro
 Templo ao sudeste de Nova Thalos.
 ~
-69 g 0
+69 64 0 0 0 0
 D3
 Vocï¿½ vï¿½ um altar.
 ~
@@ -265,7 +261,7 @@ Fora dos Muros do Templo~
 feito de pedra marrom e ï¿½ muito alto para manter alguma coisa dentro ou
 fora.
 ~
-69 g 1
+69 64 0 0 0 1
 D0
 Vocï¿½ vï¿½ as dependï¿½ncias do Templo.
 ~
@@ -278,7 +274,7 @@ Dentro do Templo~
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ um corredor sombrio.
 ~
@@ -296,7 +292,7 @@ Dentro do Templo~
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ um corredor sombrio.
 ~
@@ -324,7 +320,7 @@ Dentro do Templo~
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ uma piscina de ï¿½gua.
 ~
@@ -343,7 +339,7 @@ grande maioria da flora local sï¿½o vï¿½rios tipos de vitï¿½ria-rï¿½gia.  Este
 jardim do Templo parece ser bem cuidado e todas as plantas estï¿½o
 florescendo.
 ~
-69 g 2
+69 64 0 0 0 2
 D0
 Vocï¿½ vï¿½ dentro do Templo.
 ~
@@ -355,7 +351,7 @@ Sob o Altar~
    Vocï¿½ se encontra em uma pequena sala sob o altar.  O chï¿½o ï¿½ coberto de
 areia, mas se vocï¿½ procurar bem saberï¿½ que pode encontrar alguma coisa ali.
 ~
-69 g 0
+69 64 0 0 0 0
 D4
 ~
 ~
@@ -367,17 +363,17 @@ Fora do Segundo Templo~
 Para o sul estï¿½ as dependï¿½ncias do Templo, e para norte se encontra a cidade
 de Nova Thalos.
 ~
-69 cg 1
-D6
-Vocï¿½ vï¿½ a cidade de Nova Thalos.
-~
-~
-0 -1 5411
+69 68 0 0 0 1
 D2
 Vocï¿½ vï¿½ as dependï¿½ncias do Templo.
 ~
 ~
 0 -1 6920
+D6
+Vocï¿½ vï¿½ a cidade de Nova Thalos.
+~
+~
+0 -1 5411
 S
 #6919
 O Jardim~
@@ -386,7 +382,7 @@ grande maioria da flora local sï¿½o vï¿½rios tipos de vitï¿½ria-rï¿½gia.  Este
 jardim do Templo parece ser bem cuidado e todas as plantas estï¿½o
 florescendo.
 ~
-69 g 2
+69 64 0 0 0 2
 D1
 Vocï¿½ vï¿½ as dependï¿½ncias do Templo.
 ~
@@ -400,7 +396,7 @@ sï¿½o feitas de uma espï¿½cie de rocha marrom que foi bem cuidada e ï¿½ bem maci
 Vocï¿½ vï¿½ algumas plantas florescendo nas fendas das dependï¿½ncias e indo em
 direï¿½ï¿½o ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D0
 Vocï¿½ vï¿½ o fundo das dependï¿½ncias.
 ~
@@ -429,9 +425,7 @@ grande maioria da flora local sï¿½o vï¿½rios tipos de vitï¿½ria-rï¿½gia.  Este
 jardim do Templo parece ser bem cuidado e todas as plantas estï¿½o
 florescendo.
 ~
-69 g 2
-OX magik "*OPISTHOCOELA*" unlock down
-OX magik "*OPISTHOCOELA*" open down
+69 64 0 0 0 2
 D3
 Vocï¿½ vï¿½ as dependï¿½ncias do Templo.
 ~
@@ -441,8 +435,7 @@ D5
 Vocï¿½ vï¿½ um buraco.
 ~
 barreira mï¿½gica~
-:n 2 a barreira mï¿½gica
-abch -1 6934
+0 -1 6934
 S
 #6922
 Dentro do Templo~
@@ -450,7 +443,7 @@ Dentro do Templo~
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D1
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -468,7 +461,7 @@ Dentro do Templo~
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ as dependï¿½ncias do Templo.
 ~
@@ -496,7 +489,7 @@ Dentro do Templo~
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D2
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -514,7 +507,7 @@ Dentro do Templo~
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -535,7 +528,7 @@ S
 O Altar Norte~
    Vocï¿½ se encontra no altar norte de um dos Templos construï¿½dos para Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -563,7 +556,7 @@ Dentro do Templo~
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -584,7 +577,7 @@ S
 O Altar Oeste~
    Vocï¿½ se encontra no altar oeste de um dos Templos construï¿½dos para Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -607,7 +600,7 @@ O Altar Central~
 Anura.  Algumas inscriï¿½ï¿½es dizem a vocï¿½ que existe outro Templo aos
 arredores.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ o altar norte.
 ~
@@ -633,7 +626,7 @@ S
 O Altar Leste~
    Vocï¿½ se encontra no altar leste de um dos Templos construï¿½dos para Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -656,7 +649,7 @@ Dentro do Templo~
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ o altar oeste
 ~
@@ -672,7 +665,7 @@ S
 O Altar Sul~
    Vocï¿½ se encontra no altar sul de um dos Templos construï¿½dos para Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ o altar central.
 ~
@@ -695,7 +688,7 @@ Dentro do Templo~
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ o altar leste.
 ~
@@ -712,19 +705,19 @@ Sob o Jardim~
    Vocï¿½ se encontra em um buraco no chï¿½o.  Areia solta cobre o fundo do
 buraco.
 ~
-69 g 0
+69 64 0 0 0 0
 D4
 Vocï¿½ vï¿½ um jardim.
 ~
 ~
 0 -1 6921
 S
-#6935 
+#6935
 O Lago~
    Vocï¿½ estï¿½ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 estï¿½ tranqï¿½ilo e sem ondas e existe uma fina camada de limo sobre a ï¿½gua.
 ~
-69 g 0
+69 64 0 0 0 0
 D1
 Vocï¿½ vï¿½ o lago.
 ~
@@ -741,7 +734,7 @@ O Lago~
    Vocï¿½ estï¿½ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 estï¿½ tranqï¿½ilo e sem ondas e existe uma fina camada de limo sobre a ï¿½gua.
 ~
-69 g 6
+69 64 0 0 0 6
 D1
 Vocï¿½ vï¿½ o lago.
 ~
@@ -758,7 +751,7 @@ O Lago~
    Vocï¿½ estï¿½ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 estï¿½ tranqï¿½ilo e sem ondas e existe uma fina camada de limo sobre a ï¿½gua.
 ~
-69 g 6
+69 64 0 0 0 6
 D1
 Vocï¿½ vï¿½ o lago.
 ~
@@ -775,7 +768,7 @@ O Lago~
    Vocï¿½ estï¿½ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 estï¿½ tranqï¿½ilo e sem ondas e existe uma fina camada de limo sobre a ï¿½gua.
 ~
-69 g 6
+69 64 0 0 0 6
 D1
 Vocï¿½ vï¿½ o lago.
 ~
@@ -792,7 +785,7 @@ O Lago~
    Vocï¿½ estï¿½ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 estï¿½ tranqï¿½ilo e sem ondas e existe uma fina camada de limo sobre a ï¿½gua.
 ~
-69 g 6
+69 64 0 0 0 6
 D2
 Vocï¿½ vï¿½ o lago.
 ~
@@ -809,7 +802,7 @@ O Lago~
    Vocï¿½ estï¿½ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 estï¿½ tranqï¿½ilo e sem ondas e existe uma fina camada de limo sobre a ï¿½gua.
 ~
-69 g 6
+69 64 0 0 0 6
 D0
 Vocï¿½ vï¿½ o lago.
 ~
@@ -828,7 +821,7 @@ sï¿½o feitas de uma espï¿½cie de rocha marrom que foi bem cuidada e ï¿½ bem maci
 Vocï¿½ vï¿½ algumas plantas florescendo nas fendas das dependï¿½ncias e indo em
 direï¿½ï¿½o ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D1
 Vocï¿½ vï¿½ as dependï¿½ncias do Templo.
 ~
@@ -847,7 +840,7 @@ sï¿½o feitas de uma espï¿½cie de rocha marrom que foi bem cuidada e ï¿½ bem maci
 Vocï¿½ vï¿½ algumas plantas florescendo nas fendas das dependï¿½ncias e indo em
 direï¿½ï¿½o ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D1
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -871,7 +864,7 @@ sï¿½o feitas de uma espï¿½cie de rocha marrom que foi bem cuidada e ï¿½ bem maci
 Vocï¿½ vï¿½ algumas plantas florescendo nas fendas das dependï¿½ncias e indo em
 direï¿½ï¿½o ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D2
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -888,7 +881,7 @@ O Lago~
    Vocï¿½ estï¿½ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 estï¿½ tranqï¿½ilo e sem ondas e existe uma fina camada de limo sobre a ï¿½gua.
 ~
-69 g 4
+69 64 0 0 0 4
 D0
 Vocï¿½ vï¿½ o lago.
 ~
@@ -904,7 +897,7 @@ S
 Sob o Lago~
    Vocï¿½ se encontra em um buraco de ar cheio de lodo sob o lago.
 ~
-69 g 0
+69 64 0 0 0 0
 D4
 Vocï¿½ vï¿½ o lago.
 ~
@@ -916,7 +909,7 @@ O Lago~
    Vocï¿½ estï¿½ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 estï¿½ tranqï¿½ilo e sem ondas e existe uma fina camada de limo sobre a ï¿½gua.
 ~
-69 g 6
+69 64 0 0 0 6
 D0
 Vocï¿½ vï¿½ o lago.
 ~
@@ -935,7 +928,7 @@ sï¿½o feitas de uma espï¿½cie de rocha marrom que foi bem cuidada e ï¿½ bem maci
 Vocï¿½ vï¿½ algumas plantas florescendo nas fendas das dependï¿½ncias e indo em
 direï¿½ï¿½o ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D0
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -958,7 +951,7 @@ O Grande Altar~
 inscriï¿½ï¿½es no altar dizem a vocï¿½ que hï¿½ outro Templo nos tï¿½neis a norte de
 Nova Thalos.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ as dependï¿½ncias do Templo.
 ~
@@ -987,7 +980,7 @@ sï¿½o feitas de uma espï¿½cie de rocha marrom que foi bem cuidada e ï¿½ bem maci
 Vocï¿½ vï¿½ algumas plantas florescendo nas fendas das dependï¿½ncias e indo em
 direï¿½ï¿½o ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D0
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -1014,7 +1007,7 @@ Na Ponte~
    Vocï¿½ se encontra em uma ponte sobre um pequeno lago fora do terceiro
 Templo de Anura.  O Templo estï¿½ a oeste e o lago corre para norte e sul.
 ~
-69 g 2
+69 64 0 0 0 2
 D0
 Vocï¿½ vï¿½ o lago.
 ~
@@ -1042,7 +1035,7 @@ Fora do Terceiro Templo~
 para Anura.  A oeste estï¿½ uma ponte atravessando o lago que circunda o
 Templo.
 ~
-69 g 1
+69 64 0 0 0 1
 D1
 Vocï¿½ vï¿½ um estreito caminho.
 ~
@@ -1059,7 +1052,7 @@ O Lago~
    Vocï¿½ estï¿½ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 estï¿½ tranqï¿½ilo e sem ondas e existe uma fina camada de limo sobre a ï¿½gua.
 ~
-69 g 6
+69 64 0 0 0 6
 D0
 Vocï¿½ vï¿½ o lago.
 ~
@@ -1078,7 +1071,7 @@ sï¿½o feitas de uma espï¿½cie de rocha marrom que foi bem cuidada e ï¿½ bem maci
 Vocï¿½ vï¿½ algumas plantas florescendo nas fendas das dependï¿½ncias e indo em
 direï¿½ï¿½o ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D0
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -1097,7 +1090,7 @@ sï¿½o feitas de uma espï¿½cie de rocha marrom que foi bem cuidada e ï¿½ bem maci
 Vocï¿½ vï¿½ algumas plantas florescendo nas fendas das dependï¿½ncias e indo em
 direï¿½ï¿½o ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D0
 Vocï¿½ vï¿½ o altar.
 ~
@@ -1121,7 +1114,7 @@ sï¿½o feitas de uma espï¿½cie de rocha marrom que foi bem cuidada e ï¿½ bem maci
 Vocï¿½ vï¿½ algumas plantas florescendo nas fendas das dependï¿½ncias e indo em
 direï¿½ï¿½o ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D1
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -1138,7 +1131,7 @@ O Lago~
    Vocï¿½ estï¿½ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 estï¿½ tranqï¿½ilo e sem ondas e existe uma fina camada de limo sobre a ï¿½gua.
 ~
-69 g 6
+69 64 0 0 0 6
 D0
 Vocï¿½ vï¿½ uma ponte.
 ~
@@ -1155,9 +1148,7 @@ O Lago~
    Vocï¿½ estï¿½ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 estï¿½ tranqï¿½ilo e sem ondas e existe uma fina camada de limo sobre a ï¿½gua.
 ~
-69 g 6
-OX magik "*PIPIDAE*" unlock down
-OX magik "*PIPIDAE*" open down
+69 64 0 0 0 6
 D0
 Vocï¿½ vï¿½ o lago.
 ~
@@ -1172,8 +1163,7 @@ D5
 Vocï¿½ vï¿½ ume espï¿½cie de bolha de ar ali.
 ~
 barreira mï¿½gica~
-:n 2 a barreira mï¿½gica
-abch -1 6945
+0 -1 6945
 S
 #6958
 O Lago~
@@ -1181,7 +1171,7 @@ O Lago~
 estï¿½ tranqï¿½ilo e sem ondas e existe uma fina camada de limo sobre
 a ï¿½gua.
 ~
-69 g 6
+69 64 0 0 0 6
 D1
 Vocï¿½ vï¿½ o lago.
 ~
@@ -1198,7 +1188,7 @@ O Lago~
    Vocï¿½ estï¿½ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 estï¿½ tranqï¿½ilo e sem ondas e existe uma fina camada de limo sobre a ï¿½gua.
 ~
-69 g 6
+69 64 0 0 0 6
 D1
 Vocï¿½ vï¿½ o lago.
 ~
@@ -1216,7 +1206,7 @@ Vocï¿½ estï¿½ em um pequeno lago que rodeia o terceiro Templo de Anura.
 Ele estï¿½ tranqï¿½ilo e sem ondas e existe uma fina camada de limo sobre
 a ï¿½gua.
 ~
-69 g 6
+69 64 0 0 0 6
 D1
 Vocï¿½ vï¿½ o lago.
 ~
@@ -1233,7 +1223,7 @@ O Lago~
    Vocï¿½ estï¿½ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 estï¿½ tranqï¿½ilo e sem ondas e existe uma fina camada de limo sobre a ï¿½gua.
 ~
-69 g 6
+69 64 0 0 0 6
 D0
 Vocï¿½ vï¿½ o lago.
 ~
@@ -1251,7 +1241,7 @@ O Altar~
 inscriï¿½ï¿½es no altar dizem a vocï¿½ que vocï¿½ deve reunir as quatro tabuletas
 para encontrar as chaves para o quinto Templo.
 ~
-69 g 0
+69 64 0 0 0 0
 D2
 Vocï¿½ vï¿½ um poï¿½o de fogo.
 ~
@@ -1264,7 +1254,7 @@ Dentro do Templo~
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D1
 Vocï¿½ vï¿½ um poï¿½o de fogo.
 ~
@@ -1282,9 +1272,7 @@ Poï¿½o de Fogo~
 fogo.  Ele ï¿½ muito quente e serï¿½ melhor andar nas bordas do poï¿½o se
 possï¿½vel.
 ~
-69 g 0
-OX magik "*BREVICIPITIDAE*" unlock down
-OX magik "*BREVICIPITIDAE*" open down
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ o altar.
 ~
@@ -1309,8 +1297,7 @@ D5
 Vocï¿½ vï¿½ fogo.
 ~
 barreira mï¿½gica~
-:n 2 a barreira mï¿½gica
-abch -1 6970
+0 -1 6970
 S
 #6965
 Dentro do Templo~
@@ -1318,7 +1305,7 @@ Dentro do Templo~
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D2
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -1336,7 +1323,7 @@ Dentro do Templo~
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -1354,7 +1341,7 @@ Dentro do Templo~
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ um poï¿½o de fogo.
 ~
@@ -1382,7 +1369,7 @@ Dentro do Templo~
 sala ï¿½ iluminada por tochas que estï¿½o presas nas paredes, mas elas nï¿½o
 produzem muita luz, e as chamas estï¿½o comeï¿½ando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -1399,7 +1386,7 @@ Fora do Quarto Templo~
    Vocï¿½ se encontra antes de um pequeno Templo construï¿½do para Anura.  A
 entrada do Templo estï¿½ a norte, enquanto um labirinto de tï¿½neis estï¿½ a sul.
 ~
-69 cg 0
+69 68 0 0 0 0
 D0
 Vocï¿½ vï¿½ o Templo.
 ~
@@ -1415,7 +1402,7 @@ S
 No Fogo~
    Vocï¿½ estï¿½ sobre uma pilha de cinzas, rodeado de ardentes labaredas.
 ~
-69 gce 0
+69 84 0 0 0 0
 D4
 Vocï¿½ vï¿½ a beirada do poï¿½o.
 ~
@@ -1427,7 +1414,7 @@ Uma Caverna Escura~
    Vocï¿½ estï¿½ em uma escura caverna que contï¿½m uma porta de madeira no seu
 chï¿½o.
 ~
-69 acg 0
+69 69 0 0 0 0
 D3
 Vocï¿½ vï¿½ uma estranha toca.
 ~
@@ -1437,69 +1424,62 @@ D5
 Vocï¿½ vï¿½ um poï¿½o sombrio.
 ~
 porta~
-:n 2 a porta de madeira
-abg 6911 6972~
+0 6911 6972
 S
 #6972
 Um Poï¿½o Sombrio~
    Vocï¿½ estï¿½ caindo em um poï¿½o sombrio, mas uma porta de madeira parou a sua
 queda temporariamente.
 ~
-69 ag 0
+69 65 0 0 0 0
 D5
 Vocï¿½ vï¿½ um poï¿½o sombrio.
 ~
 porta~
-:n 2 a porta de madeira
-abg 6912 6973~
+0 6912 6973
 S
 #6973
 Um Poï¿½o Sombrio~
    Vocï¿½ estï¿½ caindo em um poï¿½o sombrio, mas uma porta de madeira parou a sua
 queda temporariamente.
 ~
-69 ga 0
+69 65 0 0 0 0
 D5
 Vocï¿½ vï¿½ um poï¿½o sombrio.
 ~
 porta~
-:n 2 a porta de madeira
-abg 6913 6974
+0 6913 6974
 S
 #6974
 Um Poï¿½o Sombrio~
    Vocï¿½ estï¿½ caindo em um poï¿½o sombrio, mas uma porta de madeira parou a sua
 queda temporariamente.
 ~
-69 ga 0
+69 65 0 0 0 0
 D5
 Vocï¿½ vï¿½ um poï¿½o sombrio.
 ~
 porta~
-:n 2 a porta de madeira
-abg 6914 6975
+0 6914 6975
 S
 #6975
 Um Poï¿½o Sombrio~
    Vocï¿½ estï¿½ caindo em um poï¿½o sombrio, mas uma porta de madeira parou a sua
 queda temporariamente.
 ~
-69 ga 0
+69 65 0 0 0 0
 D5
 Vocï¿½ vï¿½ um poï¿½o sombrio.
 ~
 porta~
-:n 2 a porta de madeira
-abg 6919 6982
+0 6919 6982
 S
 #6976
 Altar Principal~
    Vocï¿½ se encontra no altar principal do grande Templo de Anura que vocï¿½
 encontrou com sucesso.
 ~
-69 g 0
-OX magik "*SALIENTIA*" unlock down
-OX magik "*SALIENTIA*" open down
+69 64 0 0 0 0
 D2
 Vocï¿½ vï¿½ um corredor com porta.
 ~
@@ -1509,21 +1489,19 @@ D5
 Vocï¿½ vï¿½ uma pequena sala.
 ~
 barreira mï¿½gica~
-:n 2 a barreira mï¿½gica
-abch -1 6987
+0 -1 6987
 S
 #6977
 Antes do Altar Principal~
    Vocï¿½ se encontra antes do altar principal.  O altar se encontra a norte
 atrï¿½s de uma porta de madeira.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ o altar principal.
 ~
 porta~
-:n 2 a porta de madeira
-abg 6915 6976
+0 6915 6976
 D2
 Vocï¿½ vï¿½ somente ar.
 ~
@@ -1537,7 +1515,7 @@ intensa coluna de ar que o impele para o alto.  Vocï¿½ provavelmente nï¿½o estï¿
 seguro ficando aqui, sendo melhor vocï¿½ pisar em um solo firme antes que o
 vento que o mantï¿½m resolva desaparecer.
 ~
-69 gs 11 
+69 262208 0 0 0 11
 D0
 Vocï¿½ vï¿½ o altar principal.
 ~
@@ -1563,7 +1541,7 @@ S
 O Altar Norte~
    Vocï¿½ se encontra no altar norte de Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D1
 Vocï¿½ vï¿½ somente ar.
 ~
@@ -1587,7 +1565,7 @@ intensa coluna de ar que o impele para o alto.  Vocï¿½ provavelmente nï¿½o estï¿
 seguro ficando aqui, sendo melhor vocï¿½ pisar em um solo firme antes que o
 vento que o mantï¿½m resolva desaparecer.
 ~
-69 gs 11
+69 262208 0 0 0 11
 D2
 Vocï¿½ vï¿½ o altar leste.
 ~
@@ -1608,7 +1586,7 @@ S
 O Altar Oeste~
    Vocï¿½ se encontra no altar oeste de Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ somente ar.
 ~
@@ -1630,7 +1608,7 @@ O Fundo do Poï¿½o Sombrio~
    Vocï¿½ chegou no fundo do poï¿½o.  Hï¿½ altares para todas as direï¿½ï¿½es, e
 existe muita areia no chï¿½o aqui.
 ~
-69 ag 0
+69 65 0 0 0 0
 D0
 Vocï¿½ vï¿½ um altar.
 ~
@@ -1656,7 +1634,7 @@ S
 O Altar Leste~
    Vocï¿½ se encontra no altar leste de Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ somente ar.
 ~
@@ -1680,7 +1658,7 @@ intensa coluna de ar que o impele para o alto.  Vocï¿½ provavelmente nï¿½o estï¿
 seguro ficando aqui, sendo melhor vocï¿½ pisar em um solo firme antes que o
 vento que o mantï¿½m resolva desaparecer.
 ~
-69 gs 11
+69 262208 0 0 0 11
 D0
 Vocï¿½ vï¿½ o altar oeste.
 ~
@@ -1701,7 +1679,7 @@ S
 O Altar Sul~
    Vocï¿½ se encontra no altar sul de Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Vocï¿½ vï¿½ o fundo de um poï¿½o.
 ~
@@ -1725,7 +1703,7 @@ intensa coluna de ar que o impele para o alto.  Vocï¿½ provavelmente nï¿½o estï¿
 seguro ficando aqui, sendo melhor vocï¿½ pisar em um solo firme antes que o
 vento que o mantï¿½m resolva desaparecer.
 ~
-69 gs 11
+69 262208 0 0 0 11
 D0
 Vocï¿½ vï¿½ o altar leste.
 D3
@@ -1742,7 +1720,7 @@ S
 Sob o Altar Principal~
    Vocï¿½ estï¿½ sob o altar principal de Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D4
 Vocï¿½ vï¿½ o altar principal.
 ~
@@ -1759,7 +1737,7 @@ Um Poï¿½o Quase Sem Fim~
    Vocï¿½ comeï¿½a a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que vocï¿½ estï¿½ em um poï¿½o sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poï¿½o nï¿½o parece ter fim...
 ~
@@ -1771,7 +1749,7 @@ Um Poï¿½o Quase Sem Fim~
    Vocï¿½ comeï¿½a a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que vocï¿½ estï¿½ em um poï¿½o sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poï¿½o nï¿½o parece ter fim...
 ~
@@ -1783,7 +1761,7 @@ Um Poï¿½o Quase Sem Fim~
    Vocï¿½ comeï¿½a a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que vocï¿½ estï¿½ em um poï¿½o sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poï¿½o nï¿½o parece ter fim...
 ~
@@ -1795,7 +1773,7 @@ Um Poï¿½o Quase Sem Fim~
    Vocï¿½ comeï¿½a a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que vocï¿½ estï¿½ em um poï¿½o sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poï¿½o nï¿½o parece ter fim...
 ~
@@ -1807,7 +1785,7 @@ Um Poï¿½o Quase Sem Fim~
    Vocï¿½ comeï¿½a a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que vocï¿½ estï¿½ em um poï¿½o sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poï¿½o nï¿½o parece ter fim...
 ~
@@ -1819,7 +1797,7 @@ Um Poï¿½o Quase Sem Fim~
    Vocï¿½ comeï¿½a a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que vocï¿½ estï¿½ em um poï¿½o sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poï¿½o nï¿½o parece ter fim...
 ~
@@ -1831,7 +1809,7 @@ Um Poï¿½o Quase Sem Fim~
    Vocï¿½ comeï¿½a a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que vocï¿½ estï¿½ em um poï¿½o sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poï¿½o nï¿½o parece ter fim...
 ~
@@ -1843,7 +1821,7 @@ Um Poï¿½o Quase Sem Fim~
    Vocï¿½ comeï¿½a a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que vocï¿½ estï¿½ em um poï¿½o sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poï¿½o nï¿½o parece ter fim...
 ~
@@ -1855,7 +1833,7 @@ Um Poï¿½o Quase Sem Fim~
    Vocï¿½ comeï¿½a a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que vocï¿½ estï¿½ em um poï¿½o sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poï¿½o nï¿½o parece ter fim...
 ~
@@ -1867,7 +1845,7 @@ Um Poï¿½o Quase Sem Fim~
    Vocï¿½ comeï¿½a a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que vocï¿½ estï¿½ em um poï¿½o sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poï¿½o nï¿½o parece ter fim...
 ~
@@ -1880,6 +1858,6 @@ O Fim do Poï¿½o~
 sendo que estranhas coisas peludas passam a todo instante por sobre
 vocï¿½. Nï¿½o hï¿½ saï¿½da aparente.
 ~
-69 acfg 0
+69 101 0 0 0 0
 S
 $~
