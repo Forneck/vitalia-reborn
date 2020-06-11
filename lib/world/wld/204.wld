@@ -1,16 +1,16 @@
 #20400
 Dentro do Labirinto~
-   Você está na entrada do labirinto.  Um grande labirinto, há um prêmio no
-fim.  Mas que prêmio?  E a que custo?  Seja aconselhado que está área não
-é recomendada para iniciantes.  Se você não estiver preparado, pode morrer 
-nessa área.  Há muitas saídas no labirinto, porém nenhuma delas, com exceção
-a uma, tem um prêmio na saída.  A imensidão desde labirinto
-e a magia que mantém isso ira diminuindo ao decorrer que você vai chegando
-nas saídas para Vitália, todo lugar longe dessa entrada.  Alguns desses 
-lugares que você for não será fácil, qualquer um - então seja esperto. Você
+   Vocï¿½ estï¿½ na entrada do labirinto.  Um grande labirinto, hï¿½ um prï¿½mio no
+fim.  Mas que prï¿½mio?  E a que custo?  Seja aconselhado que estï¿½ ï¿½rea nï¿½o
+ï¿½ recomendada para iniciantes.  Se vocï¿½ nï¿½o estiver preparado, pode morrer 
+nessa ï¿½rea.  Hï¿½ muitas saï¿½das no labirinto, porï¿½m nenhuma delas, com exceï¿½ï¿½o
+a uma, tem um prï¿½mio na saï¿½da.  A imensidï¿½o desde labirinto
+e a magia que mantï¿½m isso ira diminuindo ao decorrer que vocï¿½ vai chegando
+nas saï¿½das para Vitï¿½lia, todo lugar longe dessa entrada.  Alguns desses 
+lugares que vocï¿½ for nï¿½o serï¿½ fï¿½cil, qualquer um - entï¿½o seja esperto. Vocï¿½
 foi avisado. Boa Sorte.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -26,11 +26,11 @@ D2
 S
 #20401
 Entrada do Templo~
-   As paredes dessa sala são verdes e as pedras desse prédio são grandes,
-algo impede em pula-la, parecendo ser uma força mágica.  As portas estão
-abertas, porém, os dois guardas parados na porta parecem dar segurança.
+   As paredes dessa sala sï¿½o verdes e as pedras desse prï¿½dio sï¿½o grandes,
+algo impede em pula-la, parecendo ser uma forï¿½a mï¿½gica.  As portas estï¿½o
+abertas, porï¿½m, os dois guardas parados na porta parecem dar seguranï¿½a.
 ~
-204 ace 1
+204 21 0 0 0 1
 D1
 ~
 ~
@@ -42,11 +42,11 @@ D3
 S
 #20402
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -58,11 +58,11 @@ D2
 S
 #20403
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos o lado.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos o lado.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -78,11 +78,11 @@ D3
 S
 #20404
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -102,11 +102,11 @@ D3
 S
 #20405
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D2
 ~
 ~
@@ -118,11 +118,11 @@ D3
 S
 #20406
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -134,11 +134,11 @@ D1
 S
 #20407
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -154,11 +154,11 @@ D3
 S
 #20408
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -174,11 +174,11 @@ D2
 S
 #20409
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -190,11 +190,11 @@ D3
 S
 #20410
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -206,11 +206,11 @@ D3
 S
 #20411
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -226,11 +226,11 @@ D3
 S
 #20412
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -246,11 +246,11 @@ D3
 S
 #20413
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -262,11 +262,11 @@ D2
 S
 #20414
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -278,11 +278,11 @@ D1
 S
 #20415
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -294,11 +294,11 @@ D3
 S
 #20416
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -310,11 +310,11 @@ D3
 S
 #20417
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -326,11 +326,11 @@ D3
 S
 #20418
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -342,11 +342,11 @@ D3
 S
 #20419
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -358,11 +358,11 @@ D3
 S
 #20420
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -374,11 +374,11 @@ D3
 S
 #20421
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -390,11 +390,11 @@ D2
 S
 #20422
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -406,11 +406,11 @@ D3
 S
 #20423
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D2
 ~
 ~
@@ -422,11 +422,11 @@ D3
 S
 #20424
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -438,11 +438,11 @@ D2
 S
 #20425
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -454,11 +454,11 @@ D2
 S
 #20426
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -470,11 +470,11 @@ D1
 S
 #20427
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D3
 ~
 ~
@@ -482,11 +482,11 @@ D3
 S
 #20428
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -498,11 +498,11 @@ D3
 S
 #20429
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -514,11 +514,11 @@ D3
 S
 #20430
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -530,11 +530,11 @@ D2
 S
 #20431
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -546,11 +546,11 @@ D3
 S
 #20432
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -562,11 +562,11 @@ D3
 S
 #20433
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -578,11 +578,11 @@ D3
 S
 #20434
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -594,11 +594,11 @@ D3
 S
 #20435
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D2
 ~
 ~
@@ -606,11 +606,11 @@ D2
 S
 #20436
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -622,11 +622,11 @@ D3
 S
 #20437
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -638,11 +638,11 @@ D2
 S
 #20438
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -654,11 +654,11 @@ D2
 S
 #20439
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -670,11 +670,11 @@ D2
 S
 #20440
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D2
 ~
 ~
@@ -686,11 +686,11 @@ D3
 S
 #20441
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -698,11 +698,11 @@ D1
 S
 #20442
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -714,11 +714,11 @@ D3
 S
 #20443
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -730,11 +730,11 @@ D3
 S
 #20444
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -746,31 +746,31 @@ D2
 S
 #20445
 O Labirinto~
-   As paredes, pintadas de verde, cerca todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cerca todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
 0 -1 20444
-D2
-~
-~
-0 -1 20446
 D1
 ~
 ~
 0 -1 20565
+D2
+~
+~
+0 -1 20446
 S
 #20446
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -782,11 +782,11 @@ D2
 S
 #20447
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -798,11 +798,11 @@ D2
 S
 #20448
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -814,11 +814,11 @@ D2
 S
 #20449
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -830,11 +830,11 @@ D2
 S
 #20450
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -842,11 +842,11 @@ D0
 S
 #20451
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -858,11 +858,11 @@ D3
 S
 #20452
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -874,11 +874,11 @@ D3
 S
 #20453
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D3
 ~
 ~
@@ -886,11 +886,11 @@ D3
 S
 #20454
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -902,11 +902,11 @@ D2
 S
 #20455
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -918,11 +918,11 @@ D2
 S
 #20456
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -934,11 +934,11 @@ D3
 S
 #20457
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -950,11 +950,11 @@ D3
 S
 #20458
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -966,11 +966,11 @@ D3
 S
 #20459
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D3
 ~
 ~
@@ -978,11 +978,11 @@ D3
 S
 #20460
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -994,11 +994,11 @@ D2
 S
 #20461
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -1010,11 +1010,11 @@ D2
 S
 #20462
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -1026,11 +1026,11 @@ D2
 S
 #20463
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -1042,11 +1042,11 @@ D2
 S
 #20464
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -1058,11 +1058,11 @@ D3
 S
 #20465
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D3
 ~
 ~
@@ -1070,11 +1070,11 @@ D3
 S
 #20466
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -1086,11 +1086,11 @@ D1
 S
 #20467
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D2
 ~
 ~
@@ -1102,11 +1102,11 @@ D3
 S
 #20468
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -1118,11 +1118,11 @@ D3
 S
 #20469
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D1
 ~
 ~
@@ -1134,11 +1134,11 @@ D2
 S
 #20470
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar..
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar..
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -1150,11 +1150,11 @@ D2
 S
 #20471
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
@@ -1166,24 +1166,24 @@ D2
 S
 #20472
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
+204 1 0 0 0 1
 D0
 ~
 ~
 0 -1 20471
 S
 #20473
-Corredor Interno para o Templo dos Ladrões~
+Corredor Interno para o Templo dos Ladrï¿½es~
    Este grande corredor vai para leste e oeste, com a entrada principal
 do templo para leste.  Para o norte tem grandes degraus que levam para
-a parte superior do templo.  Há portas para o sul e sudeste aonde você
-está.  A saída do templo é ao oeste.
+a parte superior do templo.  Hï¿½ portas para o sul e sudeste aonde vocï¿½
+estï¿½.  A saï¿½da do templo ï¿½ ao oeste.
 ~
-204 0 1
+204 0 0 0 0 1
 D1
 ~
 ~
@@ -1202,17 +1202,17 @@ D4
 0 -1 20492
 S
 #20474
-Corredor Interno para o Templo dos Ladrões~
-   Este grande corredor parece estar cheio de alvoroço, mas um 
-alvoroço quieto, calmo.  Mas parece estranho com todas essas pessoas
-ao redor, especialmente porque todos são ladrões, mas não há nenhum
-alvoroço.  Há um brilho na direção norte, longe das vistas, embaixo
-das escadarias.  No sul a porta está fechada, vidros coloridos decoram
-todo o local.  Ao seu leste é a entrada do templo, e para o oeste a
-saída para o mundo externo, cheio de guerreiro bobos, inteligentes magos
-lamentosos clérigos, assassinos pomposos, e fedorentos druidas.
+Corredor Interno para o Templo dos Ladrï¿½es~
+   Este grande corredor parece estar cheio de alvoroï¿½o, mas um 
+alvoroï¿½o quieto, calmo.  Mas parece estranho com todas essas pessoas
+ao redor, especialmente porque todos sï¿½o ladrï¿½es, mas nï¿½o hï¿½ nenhum
+alvoroï¿½o.  Hï¿½ um brilho na direï¿½ï¿½o norte, longe das vistas, embaixo
+das escadarias.  No sul a porta estï¿½ fechada, vidros coloridos decoram
+todo o local.  Ao seu leste ï¿½ a entrada do templo, e para o oeste a
+saï¿½da para o mundo externo, cheio de guerreiro bobos, inteligentes magos
+lamentosos clï¿½rigos, assassinos pomposos, e fedorentos druidas.
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1232,15 +1232,15 @@ D3
 S
 #20475
 Sala de Descanso~
-   Esta sala serve como uma área de descanso para os ladrões.  
-Armaduras, armas, e equipamentos estão no chão perto dos seus 
-donos que estão dormindo ou descansando. Certamente existe um código
-de honra entra os ladrões neste templo, sendo que nenhum ladrão rouba
-outro.  Sofás confortáveis, cadeiras e almofadas espalhadas, alguns 
-estão sendo usados, e os outros parecem chamar você para usa-los.
-A saída dessa sala é para o norte.
+   Esta sala serve como uma ï¿½rea de descanso para os ladrï¿½es.  
+Armaduras, armas, e equipamentos estï¿½o no chï¿½o perto dos seus 
+donos que estï¿½o dormindo ou descansando. Certamente existe um cï¿½digo
+de honra entra os ladrï¿½es neste templo, sendo que nenhum ladrï¿½o rouba
+outro.  Sofï¿½s confortï¿½veis, cadeiras e almofadas espalhadas, alguns 
+estï¿½o sendo usados, e os outros parecem chamar vocï¿½ para usa-los.
+A saï¿½da dessa sala ï¿½ para o norte.
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1248,14 +1248,14 @@ D0
 S
 #20476
 O Bar~
-   Sempre aberto, sempre com a melhor cerveja de toda Vitália, este bar - O
-Bar - apenas supre a necessidade de ladras e ladrões.  Nenhuma briga de
-bêbados ocorre aqui, afinal de contas, não há nenhum guerreiro inútil aqui.
-Nenhum mago está jogando xadrez em algum canto - este é um bar, O Bar.  A
-banda está sempre tocando, a cerveja está sempre sendo servida e sempre tem
+   Sempre aberto, sempre com a melhor cerveja de toda Vitï¿½lia, este bar - O
+Bar - apenas supre a necessidade de ladras e ladrï¿½es.  Nenhuma briga de
+bï¿½bados ocorre aqui, afinal de contas, nï¿½o hï¿½ nenhum guerreiro inï¿½til aqui.
+Nenhum mago estï¿½ jogando xadrez em algum canto - este ï¿½ um bar, O Bar.  A
+banda estï¿½ sempre tocando, a cerveja estï¿½ sempre sendo servida e sempre tem
 uma tigela de aperitivo no bar (sem mencionar que eles servem pizza!).
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1266,14 +1266,14 @@ D4
 0 -1 20487
 S
 #20477
-Antecâmara~
-   Está pequena antecâmara permite que os ladrões fiquem um pouco mais
-apresentável para seu herói.  Uma bacia foi erguida para cima por cabos 
+Antecï¿½mara~
+   Estï¿½ pequena antecï¿½mara permite que os ladrï¿½es fiquem um pouco mais
+apresentï¿½vel para seu herï¿½i.  Uma bacia foi erguida para cima por cabos 
 presos em um pedestal, pelos olhares e sorrisos, eles gostam de cerveja.
-O Templo Principal da mentira é para o leste, o Corredor Interno é para o
+O Templo Principal da mentira ï¿½ para o leste, o Corredor Interno ï¿½ para o
 oeste.  Para norte tem uma pequena sala, e para o sul tem uma porta fechada.
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1293,14 +1293,14 @@ D3
 S
 #20478
 O Templo Sagrado a Dimas~
-   Os murmúrios que você ouvia nos corredores, você não ouve mais, nenhum 
-som entra ou sai desse Templo.  Um altar está no fim oriental do Templo
-aonde as pessoas podem se ajoelhar e contemplar as ações dele e do mundo
-ao redor dele.  O Clérigo de Dimas está sentado em uma cadeira perto do 
-altar, lendo um livro, disponível para qualquer necessidade ou preocupações 
-que você pode ter.
+   Os murmï¿½rios que vocï¿½ ouvia nos corredores, vocï¿½ nï¿½o ouve mais, nenhum 
+som entra ou sai desse Templo.  Um altar estï¿½ no fim oriental do Templo
+aonde as pessoas podem se ajoelhar e contemplar as aï¿½ï¿½es dele e do mundo
+ao redor dele.  O Clï¿½rigo de Dimas estï¿½ sentado em uma cadeira perto do 
+altar, lendo um livro, disponï¿½vel para qualquer necessidade ou preocupaï¿½ï¿½es 
+que vocï¿½ pode ter.
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -1311,24 +1311,24 @@ D3
 0 -1 20477
 S
 #20479
-O Quarto do Grande Clérigo~
-   Aqui é o quarto do Grande Clérigo do Altar.  Embora não seja bem um
-clérigo, este homem sempre será um ladrão, ele foi elevado a clérigo e
-reconhecido como 'Ladrão Utópico', um que todos os ladrões deveriam seguir.
+O Quarto do Grande Clï¿½rigo~
+   Aqui ï¿½ o quarto do Grande Clï¿½rigo do Altar.  Embora nï¿½o seja bem um
+clï¿½rigo, este homem sempre serï¿½ um ladrï¿½o, ele foi elevado a clï¿½rigo e
+reconhecido como 'Ladrï¿½o Utï¿½pico', um que todos os ladrï¿½es deveriam seguir.
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
 0 -1 20477
 S
 #20480
-Jardim dos Ladrões~
-   Você entrou no bem cuidado jardim dos ladrões, o qual, não se combina com
-um ladrão, é um lugar extremamente importante.  Este lugar do jardim é usado
-para o cultivo de muitos venenos utilizados pelos ladrões.
+Jardim dos Ladrï¿½es~
+   Vocï¿½ entrou no bem cuidado jardim dos ladrï¿½es, o qual, nï¿½o se combina com
+um ladrï¿½o, ï¿½ um lugar extremamente importante.  Este lugar do jardim ï¿½ usado
+para o cultivo de muitos venenos utilizados pelos ladrï¿½es.
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1343,11 +1343,11 @@ D2
 0 -1 20482
 S
 #20481
-Jardim dos Ladrões~
-   Este jardim é usado para o crescimento de famosas plantas venenosas
-empregadas pelos ladrões.
+Jardim dos Ladrï¿½es~
+   Este jardim ï¿½ usado para o crescimento de famosas plantas venenosas
+empregadas pelos ladrï¿½es.
 ~
-204 0 1
+204 0 0 0 0 1
 D2
 ~
 ~
@@ -1358,11 +1358,11 @@ D3
 0 -1 20480
 S
 #20482
-Jardim dos Ladrões~
-   Este jardim é usado para o cultivo de plantas venenosas empregadas pelos
-ladrões.
+Jardim dos Ladrï¿½es~
+   Este jardim ï¿½ usado para o cultivo de plantas venenosas empregadas pelos
+ladrï¿½es.
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -1377,11 +1377,11 @@ D2
 0 -1 20484
 S
 #20483
-Jardim dos Ladrões~
-   Este jardim é usado para o cultivo de plantas venenosas empregadas pelos
-ladrões.
+Jardim dos Ladrï¿½es~
+   Este jardim ï¿½ usado para o cultivo de plantas venenosas empregadas pelos
+ladrï¿½es.
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -1392,11 +1392,11 @@ D3
 0 -1 20482
 S
 #20484
-Jardim dos Ladrões~
-   Este jardim é usado para o cultivo de plantas venenosas empregadas pelos
-ladrões.
+Jardim dos Ladrï¿½es~
+   Este jardim ï¿½ usado para o cultivo de plantas venenosas empregadas pelos
+ladrï¿½es.
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -1404,11 +1404,11 @@ D0
 S
 #20485
 Sala do Quadro~
-   Está é a sala onde fica o quadro de mensagens dos ladrões.  Qualquer tipo
-de comunicação é permitido, até mesmo piadas ladinas, nesse quadro.  Ao sul
-está a Antecâmara do Templo, e para o oeste é o correio.
+   Estï¿½ ï¿½ a sala onde fica o quadro de mensagens dos ladrï¿½es.  Qualquer tipo
+de comunicaï¿½ï¿½o ï¿½ permitido, atï¿½ mesmo piadas ladinas, nesse quadro.  Ao sul
+estï¿½ a Antecï¿½mara do Templo, e para o oeste ï¿½ o correio.
 ~
-204 0 0
+204 0 0 0 0 0
 D1
 ~
 ~
@@ -1420,35 +1420,35 @@ D2
 S
 #20486
 Correio~
-   Aqui está o Correio.  Simplismente escreva MAIL <pessoa> escreva sua
-carta.  As cartas geralmente são entregues.
+   Aqui estï¿½ o Correio.  Simplismente escreva MAIL <pessoa> escreva sua
+carta.  As cartas geralmente sï¿½o entregues.
 ~
-204 0 0
+204 0 0 0 0 0
 D3
 ~
 ~
 0 -1 20485
 S
 #20487
-Sala de Descanso dos Ladrões~
+Sala de Descanso dos Ladrï¿½es~
    Esta pequena sala conduz para todos os quartos, todas as portas
-dos quartos são aqui.  Qualquer ladrão que queira morar aqui quando
-iniciar seu jogo em Vitália pode ficar aqui.
+dos quartos sï¿½o aqui.  Qualquer ladrï¿½o que queira morar aqui quando
+iniciar seu jogo em Vitï¿½lia pode ficar aqui.
 ~
-204 0 1
+204 0 0 0 0 1
 D5
 ~
 ~
 0 -1 20476
 S
 #20488
-Pátio dos Ladrões~
-   Este pequeno pátio conduz para as três lojas que especificamente
-vendem bons itens para os ladrões.  Os preços são um pouco alto, mas
-a qualidade vale o preço.  Para leste a loja de armas, oeste de armadura,
-e para o norte a loja com itens em geral para ladrões.
+Pï¿½tio dos Ladrï¿½es~
+   Este pequeno pï¿½tio conduz para as trï¿½s lojas que especificamente
+vendem bons itens para os ladrï¿½es.  Os preï¿½os sï¿½o um pouco alto, mas
+a qualidade vale o preï¿½o.  Para leste a loja de armas, oeste de armadura,
+e para o norte a loja com itens em geral para ladrï¿½es.
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1469,9 +1469,9 @@ S
 #20489
 Loja de Armas~
    Este quarto pequeno possui armas de toda forma e tamanho, todos foram
-feitos para ajudar os ladrões em suas aventurar por Vitália.
+feitos para ajudar os ladrï¿½es em suas aventurar por Vitï¿½lia.
 ~
-204 0 0
+204 0 0 0 0 0
 D3
 ~
 ~
@@ -1479,10 +1479,10 @@ D3
 S
 #20490
 Loja de Armaduras~
-   Esta loja possui todas as armaduras para o uso dos ladrões. Prateleiras
-revestem as paredes, exibindo alguma das melhores armaduras de Vitália.
+   Esta loja possui todas as armaduras para o uso dos ladrï¿½es. Prateleiras
+revestem as paredes, exibindo alguma das melhores armaduras de Vitï¿½lia.
 ~
-204 0 0
+204 0 0 0 0 0
 D1
 ~
 ~
@@ -1490,11 +1490,11 @@ D1
 S
 #20491
 Loja de Itens em Geral~
-   Qualquer e todas as mercadorias possíveis está aqui nessa sala, exibidas
-nas estantes. De anéis e pedras para amuletos mágicos, as necessidades de 
-um ladrão pode ser encontrada aqui.
+   Qualquer e todas as mercadorias possï¿½veis estï¿½ aqui nessa sala, exibidas
+nas estantes. De anï¿½is e pedras para amuletos mï¿½gicos, as necessidades de 
+um ladrï¿½o pode ser encontrada aqui.
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -1502,10 +1502,10 @@ D2
 S
 #20492
 Na Escadaria~
-  Esta enorme escadaria vai em direção aos quartos privados desses ladrões
-que possuem níveis mais altos, e também a própria câmara onde Dimas ficava.
+  Esta enorme escadaria vai em direï¿½ï¿½o aos quartos privados desses ladrï¿½es
+que possuem nï¿½veis mais altos, e tambï¿½m a prï¿½pria cï¿½mara onde Dimas ficava.
 ~
-204 0 1
+204 0 0 0 0 1
 D4
 ~
 ~
@@ -1517,16 +1517,15 @@ D5
 S
 #20500
 Corredor~
-   Você entra em um corredor que vai para leste e oeste até aonde seus olhos
-podem ver.  Há portas para sul e norte em todas as direções.  Bem antes de
-você partir, para o norte, tem uma porta com uma placa escrita: Dimas.
+   Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  Bem antes de
+vocï¿½ partir, para o norte, tem uma porta com uma placa escrita: Dimas.
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 porta ferro~
-:n a porta de ferro
-ad -1 20567
+1 -1 20567
 D1
 ~
 ~
@@ -1542,10 +1541,10 @@ D5
 S
 #20501
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Existem portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Existem portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1565,10 +1564,10 @@ D3
 S
 #20502
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1588,10 +1587,10 @@ D3
 S
 #20503
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1611,10 +1610,10 @@ D3
 S
 #20504
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1634,10 +1633,10 @@ D3
 S
 #20505
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1657,10 +1656,10 @@ D3
 S
 #20506
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1680,10 +1679,10 @@ D3
 S
 #20507
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1703,10 +1702,10 @@ D3
 S
 #20508
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1726,10 +1725,10 @@ D3
 S
 #20509
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1749,10 +1748,10 @@ D3
 S
 #20510
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1772,10 +1771,10 @@ D3
 S
 #20511
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1795,10 +1794,10 @@ D3
 S
 #20512
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1818,10 +1817,10 @@ D3
 S
 #20513
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1841,10 +1840,10 @@ D3
 S
 #20514
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1864,10 +1863,10 @@ D3
 S
 #20515
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1887,10 +1886,10 @@ D3
 S
 #20516
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1910,10 +1909,10 @@ D3
 S
 #20517
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1933,10 +1932,10 @@ D3
 S
 #20518
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1956,10 +1955,10 @@ D3
 S
 #20519
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.  
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.  
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -1979,10 +1978,10 @@ D3
 S
 #20520
 Corredor~
-  Você entra em um corredor que vai para leste e oeste até aonde seus olhos 
-podem ver.  Há portas para sul e norte em todas as direções.
+  Vocï¿½ entra em um corredor que vai para leste e oeste atï¿½ aonde seus olhos 
+podem ver.  Hï¿½ portas para sul e norte em todas as direï¿½ï¿½es.
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -2002,12 +2001,12 @@ D3
 S
 #20521
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2015,12 +2014,12 @@ D2
 S
 #20522
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.   
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.   
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2028,12 +2027,12 @@ D0
 S
 #20523
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2041,12 +2040,12 @@ D0
 S
 #20524
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.  
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.  
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2054,12 +2053,12 @@ D2
 S
 #20525
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2067,12 +2066,12 @@ D0
 S
 #20526
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2080,12 +2079,12 @@ D2
 S
 #20527
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.   
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.   
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2093,12 +2092,12 @@ D0
 S
 #20528
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2106,12 +2105,12 @@ D2
 S
 #20529
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.  
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.  
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2119,12 +2118,12 @@ D0
 S
 #20530
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2132,12 +2131,12 @@ D2
 S
 #20531
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.  
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.  
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2145,12 +2144,12 @@ D0
 S
 #20532
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.   
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.   
 ~
-204 0 0
+204 0 0 0 0 0
 D3
 ~
 ~
@@ -2158,12 +2157,12 @@ D3
 S
 #20533
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.   
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.   
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2171,12 +2170,12 @@ D2
 S
 #20534
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2184,12 +2183,12 @@ D0
 S
 #20535
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2197,12 +2196,12 @@ D2
 S
 #20536
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.  
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.  
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2210,12 +2209,12 @@ D0
 S
 #20537
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.   
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.   
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2223,12 +2222,12 @@ D0
 S
 #20538
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.   
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.   
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2236,12 +2235,12 @@ D2
 S
 #20539
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.    
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.    
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2249,12 +2248,12 @@ D2
 S
 #20540
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2262,12 +2261,12 @@ D2
 S
 #20541
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2275,12 +2274,12 @@ D0
 S
 #20542
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2288,12 +2287,12 @@ D0
 S
 #20543
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2301,12 +2300,12 @@ D2
 S
 #20544
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2314,12 +2313,12 @@ D2
 S
 #20545
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.   
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.   
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2327,12 +2326,12 @@ D2
 S
 #20546
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.  
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.  
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2340,12 +2339,12 @@ D2
 S
 #20547
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.    
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.    
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2353,12 +2352,12 @@ D2
 S
 #20548
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.  
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.  
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2366,12 +2365,12 @@ D2
 S
 #20549
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.  
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.  
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2379,12 +2378,12 @@ D2
 S
 #20550
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2392,12 +2391,12 @@ D2
 S
 #20551
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.   
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.   
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2405,12 +2404,12 @@ D2
 S
 #20552
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D2
 ~
 ~
@@ -2418,12 +2417,12 @@ D2
 S
 #20553
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.  
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.  
 ~
-204 0 0
+204 0 0 0 0 0
 D1
 ~
 ~
@@ -2431,12 +2430,12 @@ D1
 S
 #20554
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.   
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.   
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2444,12 +2443,12 @@ D0
 S
 #20555
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2457,12 +2456,12 @@ D0
 S
 #20556
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.    
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.    
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2470,12 +2469,12 @@ D0
 S
 #20557
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2483,12 +2482,12 @@ D0
 S
 #20558
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.    
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.    
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2496,12 +2495,12 @@ D0
 S
 #20559
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 1
+204 0 0 0 0 1
 D0
 ~
 ~
@@ -2509,12 +2508,12 @@ D0
 S
 #20560
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxa0 meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2522,12 +2521,12 @@ D0
 S
 #20561
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2535,12 +2534,12 @@ D0
 S
 #20562
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom. 
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom. 
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2548,12 +2547,12 @@ D0
 S
 #20563
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.  
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.  
 ~
-204 0 0
+204 0 0 0 0 0
 D0
 ~
 ~
@@ -2561,59 +2560,58 @@ D0
 S
 #20564
 Esta Poderia Ser SUA Casa~
-   Isto é certo, este pequeno quarto poderia ser muito bom para descansar,
+   Isto ï¿½ certo, este pequeno quarto poderia ser muito bom para descansar,
 relaxar, meditar, ou (como diria Dimas) um lugar para festas.  Estes quartos
-são oferecidos para os ladrões que atingiu no mínimo o nível cinqüenta por um
-preço muito bom.  
+sï¿½o oferecidos para os ladrï¿½es que atingiu no mï¿½nimo o nï¿½vel cinqï¿½enta por um
+preï¿½o muito bom.  
 ~
-204 0 0
+204 0 0 0 0 0
 S
 #20565
 O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
 ~
-204 1 1
-D3
-~
-~
-0 -1 20445
-D2
-~
-~
-0 -1 20410
+204 1 0 0 0 1
 D1
 ~
 ~
 0 -1 20411
-S
-#20566
-O Labirinto~
-   As paredes, pintadas de verde, cercam todos os lados.  As saídas desse
-pequeno quarto são as rachaduras nas paredes, largo bastante para que
-você possa passar.
+D2
 ~
-204.2 1 1
+~
+0 -1 20410
 D3
 ~
 ~
-0 -1 20416
+0 -1 20445
+S
+#20566
+O Labirinto~
+   As paredes, pintadas de verde, cercam todos os lados.  As saï¿½das desse
+pequeno quarto sï¿½o as rachaduras nas paredes, largo bastante para que
+vocï¿½ possa passar.
+~
+204 1 0 0 0 1
 D1
 ~
 ~
 0 -1 20401
+D3
+~
+~
+0 -1 20416
 S
 #20567
 O Descanso de Dimas~
-   Você está no local onde repousa o corpo do grande Dimas, Patriarca dos
-Ladrões.  Aqui é um local sagrado, não podendo ser visitado.
+   Vocï¿½ estï¿½ no local onde repousa o corpo do grande Dimas, Patriarca dos
+Ladrï¿½es.  Aqui ï¿½ um local sagrado, nï¿½o podendo ser visitado.
 ~
-204 1 1
+204 1 0 0 0 1
 D2
 ~
 porta ferro~
-:n a porta de ferro
-ad -1 20500
+1 -1 20500
 S
 $~
