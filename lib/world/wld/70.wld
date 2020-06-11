@@ -1,191 +1,191 @@
 #7000
 A Fissura Abaixo das Pedras~
-   Esta é uma pequena fissura na sólida rocha.  Abaixo você vê uma escura
-e profunda lagoa.  A água goteja calmamente debaixo das pedras, acima de
-você.  A água tem cheiro de água de esgoto.
+   Esta ï¿½ uma pequena fissura na sï¿½lida rocha.  Abaixo vocï¿½ vï¿½ uma escura
+e profunda lagoa.  A ï¿½gua goteja calmamente debaixo das pedras, acima de
+vocï¿½.  A ï¿½gua tem cheiro de ï¿½gua de esgoto.
 ~
-70 acd 5
+70 13 0 0 0 5
 D4
 ~
 ~
 0 -1 7070
 D5
-O centro da água.
+O centro da ï¿½gua.
 ~
 ~
 0 -1 7100
 S
 #7001
-O Esgoto Lamaçento~
-   Você está com lama até os seus joelhos.  Este não é o tipo de lugar para
-um piquenique.  O esgoto lamaçento estica-se mais adiante para o sul.
+O Esgoto Lamaï¿½ento~
+   Vocï¿½ estï¿½ com lama atï¿½ os seus joelhos.  Este nï¿½o ï¿½ o tipo de lugar para
+um piquenique.  O esgoto lamaï¿½ento estica-se mais adiante para o sul.
 ~
-70 ad 5
+70 9 0 0 0 5
 D2
-Você vê o esgoto lamaçento continuando, na escuridão, para o sul.
+Vocï¿½ vï¿½ o esgoto lamaï¿½ento continuando, na escuridï¿½o, para o sul.
 ~
 ~
 0 -1 7002
 E
 lama~
-Este lugar é escuro como breu e mais se parece com uma imunda latrina com um
+Este lugar ï¿½ escuro como breu e mais se parece com uma imunda latrina com um
 cheiro simplesmente horroroso e nauseabundo.
 ~
 S
 #7002
-A Junção do Esgoto Lamaçento~
-   O esgoto lamaçento expande-se na escuridão para o sul.  Parece que
-ninguém nunca tinha posto seus pés aqui antes.  Mas também, quem iria querer
-andar por aqui, sendo tão lamacento assim...  O esgoto leva ao norte, sul e
+A Junï¿½ï¿½o do Esgoto Lamaï¿½ento~
+   O esgoto lamaï¿½ento expande-se na escuridï¿½o para o sul.  Parece que
+ninguï¿½m nunca tinha posto seus pï¿½s aqui antes.  Mas tambï¿½m, quem iria querer
+andar por aqui, sendo tï¿½o lamacento assim...  O esgoto leva ao norte, sul e
 leste daqui.
 ~
-70 ad 5
+70 9 0 0 0 5
 D0
-O esgoto lamaçento expande-se na escuridão para o norte.
+O esgoto lamaï¿½ento expande-se na escuridï¿½o para o norte.
 ~
 ~
 0 -1 7001
-D2
-Sul.  O esgoto lamaçento acaba em um buraco de lama aqui.
-~
-~
-0 -1 7003
 D1
-Leste.  O esgoto lamaçento leva à uma curva que segue para o sul.
+Leste.  O esgoto lamaï¿½ento leva ï¿½ uma curva que segue para o sul.
 ~
 ~
 0 -1 7007
+D2
+Sul.  O esgoto lamaï¿½ento acaba em um buraco de lama aqui.
+~
+~
+0 -1 7003
 E
 lama~
-Este lugar é escuro como breu e mais se parece com uma imunda latrina com um
+Este lugar ï¿½ escuro como breu e mais se parece com uma imunda latrina com um
 cheiro simplesmente horroroso e nauseabundo.
 ~
 S
 #7003
 O Buraco de Lama~
-   Você está em pé, com lama até acima de suas coxas e isso não é nada
-confortável, mesmo para você, que já frequentou os mais diferentes tipos de
-ambientes.   O esgoto leva para norte daqui.  No meio você pode perceber um
+   Vocï¿½ estï¿½ em pï¿½, com lama atï¿½ acima de suas coxas e isso nï¿½o ï¿½ nada
+confortï¿½vel, mesmo para vocï¿½, que jï¿½ frequentou os mais diferentes tipos de
+ambientes.   O esgoto leva para norte daqui.  No meio vocï¿½ pode perceber um
 enorme cano de drenagem conduzindo para baixo.
 ~
-70 acd 5
+70 13 0 0 0 5
 D0
-Norte.  A junção acaba nesta direção.
+Norte.  A junï¿½ï¿½o acaba nesta direï¿½ï¿½o.
 ~
 ~
 0 -1 7002
 D5
 O cano de drenagem leva para baixo atravessando a lama, de qualquer forma
-ele é absolutamente escuro.
+ele ï¿½ absolutamente escuro.
 ~
 ~
 0 -1 7101
 E
 lama~
-Este lugar é escuro como breu e mais se parece com uma imunda latrina com um
+Este lugar ï¿½ escuro como breu e mais se parece com uma imunda latrina com um
 cheiro simplesmente horroroso e nauseabundo.
 ~
 S
 #7004
-O Poço Escuro~
-   Você está no centro de um poço escuro que leva para baixo até a mais
-profunda escuridão.  >BWWAAADDRR< - O cheiro que vem de baixo é insuportável.
-O esgoto expande-se em meio a escuridão para o leste.
+O Poï¿½o Escuro~
+   Vocï¿½ estï¿½ no centro de um poï¿½o escuro que leva para baixo atï¿½ a mais
+profunda escuridï¿½o.  >BWWAAADDRR< - O cheiro que vem de baixo ï¿½ insuportï¿½vel.
+O esgoto expande-se em meio a escuridï¿½o para o leste.
 ~
-70 ad 0
+70 9 0 0 0 0
 D1
-Leste.  o esgoto leva para a junção do esgoto.
+Leste.  o esgoto leva para a junï¿½ï¿½o do esgoto.
 ~
 ~
 0 -1 7009
 D5
-O Poço Escuro leva cada vez mais para baixo, para baixo, para baixo...para...
-bem você não pode ver o fundo.  Há barras que podem funcionar como escada
+O Poï¿½o Escuro leva cada vez mais para baixo, para baixo, para baixo...para...
+bem vocï¿½ nï¿½o pode ver o fundo.  Hï¿½ barras que podem funcionar como escada
 ao lado.
 ~
 ~
 0 -1 7102
 S
 #7005
-O Esgoto Lamaçento~
-   Você está no meio de uma curva do cano de esgoto.  É muito escuro ao
-redor e a lama está se fixando em suas pernas, não é uma coisa muito agradável.
+O Esgoto Lamaï¿½ento~
+   Vocï¿½ estï¿½ no meio de uma curva do cano de esgoto.  ï¿½ muito escuro ao
+redor e a lama estï¿½ se fixando em suas pernas, nï¿½o ï¿½ uma coisa muito agradï¿½vel.
 O cano leva para o leste e sul daqui.
 ~
-70 ad 4
+70 9 0 0 0 4
 D1
-Leste.  A lama expande-se em meio a escuridão.
+Leste.  A lama expande-se em meio a escuridï¿½o.
 ~
 ~
 0 -1 7011
 D2
-Sul.  Há mais lama nesta direção que em qualquer outro lugar.
-Inacreditável.
+Sul.  Hï¿½ mais lama nesta direï¿½ï¿½o que em qualquer outro lugar.
+Inacreditï¿½vel.
 ~
 ~
 0 -1 7006
 E
 lama~
-Este lugar é escuro como breu e mais se parece com uma imunda latrina com um
+Este lugar ï¿½ escuro como breu e mais se parece com uma imunda latrina com um
 cheiro simplesmente horroroso e nauseabundo.
 ~
 S
 #7006
-O Esgoto Lamaçento~
-   Você está num lugar que lembra muito um mingau e tem a vantagem de não
-ser quente, aliás, está particularmente frio agora. O cano encurva-se para o
+O Esgoto Lamaï¿½ento~
+   Vocï¿½ estï¿½ num lugar que lembra muito um mingau e tem a vantagem de nï¿½o
+ser quente, aliï¿½s, estï¿½ particularmente frio agora. O cano encurva-se para o
 norte e leste.
 ~
-70 ad 5
-D1
-O cano leva a uma curva para o sul.  Interessante, há lama no chão também.
-~
-~
-0 -1 7012
+70 9 0 0 0 5
 D0
-O cano de esgoto lamaçento leva a uma curva para o leste.
+O cano de esgoto lamaï¿½ento leva a uma curva para o leste.
 ~
 ~
 0 -1 7005
+D1
+O cano leva a uma curva para o sul.  Interessante, hï¿½ lama no chï¿½o tambï¿½m.
+~
+~
+0 -1 7012
 E
 lama~
-Este lugar é escuro como breu e mais se parece com uma imunda latrina com um
+Este lugar ï¿½ escuro como breu e mais se parece com uma imunda latrina com um
 cheiro simplesmente horroroso e nauseabundo.
 ~
 S
 #7007
-A Curva no Esgoto Lamaçento~
-   Não é o tipo de lugar que você queira permanecer por muito tempo.  Você
-está até os joelhos com algo que parece-se com lama, mas você não tem certeza
-disso.  A curva em que você está leva ao oeste e ao sul.
+A Curva no Esgoto Lamaï¿½ento~
+   Nï¿½o ï¿½ o tipo de lugar que vocï¿½ queira permanecer por muito tempo.  Vocï¿½
+estï¿½ atï¿½ os joelhos com algo que parece-se com lama, mas vocï¿½ nï¿½o tem certeza
+disso.  A curva em que vocï¿½ estï¿½ leva ao oeste e ao sul.
 ~
-70 ad 5
+70 9 0 0 0 5
+D2
+o cano leva a uma intersecï¿½ï¿½o que vai para o sul e para o leste.  O chï¿½o
+ainda estï¿½ coberto pela lama.
+~
+~
+0 -1 7008
 D3
-O cano (ainda cheio de lama) leva a uma intersecção que vai para o norte
+O cano (ainda cheio de lama) leva a uma intersecï¿½ï¿½o que vai para o norte
 e para o sul.  Interessante.
 ~
 ~
 0 -1 7002
-D2
-o cano leva a uma intersecção que vai para o sul e para o leste.  O chão
-ainda está coberto pela lama.
-~
-~
-0 -1 7008
 E
 lama~
-Este lugar é escuro como breu e mais se parece com uma imunda latrina com um
+Este lugar ï¿½ escuro como breu e mais se parece com uma imunda latrina com um
 cheiro simplesmente horroroso e nauseabundo.
 ~
 S
 #7008
-Uma Intersecção Lamaçenta~
-   Você está com seu dois pés presos na lama.  Não é a lama que lhe incomoda
-tanto mas sim o cheiro, os sons e a escuridão total que cerca você.  Tudo aqui
-é muito deprimente.  O cano leva a uma trilha na grossa lama para o norte,
+Uma Intersecï¿½ï¿½o Lamaï¿½enta~
+   Vocï¿½ estï¿½ com seu dois pï¿½s presos na lama.  Nï¿½o ï¿½ a lama que lhe incomoda
+tanto mas sim o cheiro, os sons e a escuridï¿½o total que cerca vocï¿½.  Tudo aqui
+ï¿½ muito deprimente.  O cano leva a uma trilha na grossa lama para o norte,
 leste e sul.
 ~
-70 ad 4
+70 9 0 0 0 4
 D0
 Norte. o cano leva para uma curva carregada de lama por todos os lados.
 A curva leva ao oeste.
@@ -194,137 +194,137 @@ A curva leva ao oeste.
 0 -1 7007
 D1
 Leste.  Este parece o lugar do festival anual de lama, ainda que o cheiro
-não permita qualquer tipo de felicidade.  O cano leva a uma curva que vai
+nï¿½o permita qualquer tipo de felicidade.  O cano leva a uma curva que vai
 para o norte.
 ~
 ~
 0 -1 7014
 D2
-Sul.  Há pouca lama nesta direção.  Sua luz descobre espaço suficiente para
-você ver algo...que ele leva para um tipo de junção.
+Sul.  Hï¿½ pouca lama nesta direï¿½ï¿½o.  Sua luz descobre espaï¿½o suficiente para
+vocï¿½ ver algo...que ele leva para um tipo de junï¿½ï¿½o.
 ~
 ~
 0 -1 7009
 E
 lama~
-Este lugar é escuro como breu e mais se parece com uma imunda latrina com um
+Este lugar ï¿½ escuro como breu e mais se parece com uma imunda latrina com um
 cheiro simplesmente horroroso e nauseabundo.
 ~
 S
 #7009
-A Junção no Esgoto~
-   Você está no meio de uma fedorenta junção de canos de esgoto, exatamente
+A Junï¿½ï¿½o no Esgoto~
+   Vocï¿½ estï¿½ no meio de uma fedorenta junï¿½ï¿½o de canos de esgoto, exatamente
 embaixo de algo que parece ser uma coluna de ar.  Os canos de esgoto levam
-ao norte, sul, leste e oeste.  Parece ser impossível forçar qualquer
+ao norte, sul, leste e oeste.  Parece ser impossï¿½vel forï¿½ar qualquer
 caminho para cima.
 ~
-70 ad 3
+70 9 0 0 0 3
 D0
-Norte.  Lama é a base do piso nessa direção.  Humm...nhãmnhãm.
+Norte.  Lama ï¿½ a base do piso nessa direï¿½ï¿½o.  Humm...nhï¿½mnhï¿½m.
 ~
 ~
 0 -1 7008
 D1
-SIMMMMMMM!  CLAROOOOO!  Parece um ótimo lugar para CRIATURAS RASTEJANTES.
+SIMMMMMMM!  CLAROOOOO!  Parece um ï¿½timo lugar para CRIATURAS RASTEJANTES.
 ~
 ~
 0 -1 7017
 D2
-Sul.  Esta direção parece boa.  O cano leva a uma curva que vai para o leste.
+Sul.  Esta direï¿½ï¿½o parece boa.  O cano leva a uma curva que vai para o leste.
 ~
 ~
 0 -1 7010
 D3
-Alguns metros adiante - fora da junção - há um poço seguindo para baixo,
-porém o cheiro que vem de lá...>NHACAAAAA<.
+Alguns metros adiante - fora da junï¿½ï¿½o - hï¿½ um poï¿½o seguindo para baixo,
+porï¿½m o cheiro que vem de lï¿½...>NHACAAAAA<.
 ~
 ~
 0 -1 7004
 E
 lama~
-Este lugar é escuro como breu e mais se parece com uma imunda latrina com um
+Este lugar ï¿½ escuro como breu e mais se parece com uma imunda latrina com um
 cheiro simplesmente horroroso e nauseabundo.
 ~
 S
 #7010
 Uma Curva no Cano de Esgoto~
-   Você está numa curva do cano de esgoto.  Um forte cheiro penetra do
+   Vocï¿½ estï¿½ numa curva do cano de esgoto.  Um forte cheiro penetra do
 norte.  O esgoto segue para o norte e para o leste.
 ~
-70 ad 2
+70 9 0 0 0 2
 D0
-Norte.  Você está parado em frente a uma grande junção que sai para todas
-as direções.
+Norte.  Vocï¿½ estï¿½ parado em frente a uma grande junï¿½ï¿½o que sai para todas
+as direï¿½ï¿½es.
 ~
 ~
 0 -1 7009
 D1
-Leste.  O cano leva a escuridão total por esse caminho.
+Leste.  O cano leva a escuridï¿½o total por esse caminho.
 ~
 ~
 0 -1 7018
 S
 #7011
-O Cano do Esgoto Lamaçenta~
-   Você entrou num tipo de intersecção do tubo que leva ao sul, oeste e leste.
-Suas pernas estão cobertas de lama até os joelhos.
+O Cano do Esgoto Lamaï¿½enta~
+   Vocï¿½ entrou num tipo de intersecï¿½ï¿½o do tubo que leva ao sul, oeste e leste.
+Suas pernas estï¿½o cobertas de lama atï¿½ os joelhos.
 ~
-70 ad 5
+70 9 0 0 0 5
 D1
-Leste.  Há menos lama nessa direção, pelo menos essa é a sua impressão.
+Leste.  Hï¿½ menos lama nessa direï¿½ï¿½o, pelo menos essa ï¿½ a sua impressï¿½o.
 ~
 ~
 0 -1 7024
 D2
-Esse caminho se perde na escuridão, inflexível, você pressente que há menos
-lama nessa direção, talvez seja o fim desse lamaçal que o rodeia.
+Esse caminho se perde na escuridï¿½o, inflexï¿½vel, vocï¿½ pressente que hï¿½ menos
+lama nessa direï¿½ï¿½o, talvez seja o fim desse lamaï¿½al que o rodeia.
 ~
 ~
 0 -1 7021
 D3
-Oeste.  A lama alcança esse caminho também, por todas as paredes.
+Oeste.  A lama alcanï¿½a esse caminho tambï¿½m, por todas as paredes.
 ~
 ~
 0 -1 7005
 E
 lama~
-Este lugar é escuro como breu e mais se parece com uma imunda latrina com um
+Este lugar ï¿½ escuro como breu e mais se parece com uma imunda latrina com um
 cheiro simplesmente horroroso e nauseabundo.
 ~
 S
 #7012
-A Curva no Esgoto Lamaçento~
-   Este não é o seu lugar ideal para passar suas férias.  Você está com lama
-acima de seus joelhos.  É absolutamente inconcebível pensar em como toda
+A Curva no Esgoto Lamaï¿½ento~
+   Este nï¿½o ï¿½ o seu lugar ideal para passar suas fï¿½rias.  Vocï¿½ estï¿½ com lama
+acima de seus joelhos.  ï¿½ absolutamente inconcebï¿½vel pensar em como toda
 essa lama foi colocada aqui.  O cano leva para o oeste e para o sul.
 ~
-70 ad 5
+70 9 0 0 0 5
 D2
-Sul.  Há mais lama por esse caminho, incrível!  Embora parece haver uma
-intersecção no sistema de esgoto que leva para o leste e para o sul.
+Sul.  Hï¿½ mais lama por esse caminho, incrï¿½vel!  Embora parece haver uma
+intersecï¿½ï¿½o no sistema de esgoto que leva para o leste e para o sul.
 ~
 ~
 0 -1 7013
 D3
-Oeste.  Tudo que você pode ver, é que o cano leva para uma curva que vai
-para o norte.  Mas há menos lama nessa direção.
+Oeste.  Tudo que vocï¿½ pode ver, ï¿½ que o cano leva para uma curva que vai
+para o norte.  Mas hï¿½ menos lama nessa direï¿½ï¿½o.
 ~
 ~
 0 -1 7006
 E
 lama~
-Este lugar é escuro e pichado e parece ser um tipo de banheiro, no topo
-disto, o cheiro é absolutamente devastador.
+Este lugar ï¿½ escuro e pichado e parece ser um tipo de banheiro, no topo
+disto, o cheiro ï¿½ absolutamente devastador.
 ~
 S
 #7013
-Uma Intersecção Lamaçenta~
-   Você não queria saber como é sentir a lama subir acima de sua cintura.
->NHACAAAA<.  A única coisa em que você pensa agora é num banho quente.  Essa
-NÃO é uma lama MUITO limpa pelo que você sabe.  Lembre-se que você está num
+Uma Intersecï¿½ï¿½o Lamaï¿½enta~
+   Vocï¿½ nï¿½o queria saber como ï¿½ sentir a lama subir acima de sua cintura.
+>NHACAAAA<.  A ï¿½nica coisa em que vocï¿½ pensa agora ï¿½ num banho quente.  Essa
+Nï¿½O ï¿½ uma lama MUITO limpa pelo que vocï¿½ sabe.  Lembre-se que vocï¿½ estï¿½ num
 esgoto!  Os canos levam ao norte, sul e leste.
 ~
-70 ad 5
+70 9 0 0 0 5
 D0
 Norte.  Lama e montes de sedimento enchem este corredor do esgoto que leva a
 uma curva para o oeste.
@@ -332,520 +332,520 @@ uma curva para o oeste.
 ~
 0 -1 7012
 D1
-Leste.  Você não pode ver nada que lhe interesse nesta direção (Talvez esse
-seja o porquê dele ser tão interessante...)  Não há lama nessa direção, ÓTIMO!
+Leste.  Vocï¿½ nï¿½o pode ver nada que lhe interesse nesta direï¿½ï¿½o (Talvez esse
+seja o porquï¿½ dele ser tï¿½o interessante...)  Nï¿½o hï¿½ lama nessa direï¿½ï¿½o, ï¿½TIMO!
 ~
 ~
 0 -1 7026
 D2
-Sul. Tudo que você pode ver é mais lama!  Porém, o cano leva a uma curva que
+Sul. Tudo que vocï¿½ pode ver ï¿½ mais lama!  Porï¿½m, o cano leva a uma curva que
 vai para o oeste.
 ~
 ~
 0 -1 7014
 E
-lama~
-Este lugar é escuro como breu e mais se parece com uma imunda latrina com um
-cheiro simplesmente horroroso e nauseabundo.
+sedimento~
+Este nï¿½o ï¿½ o tipo de substï¿½ncia que normalmente interessa muito a vocï¿½ mas
+como vocï¿½ estï¿½ atolado no meio disto, ele transforma-se em seu principal
+interesse.
 ~
 E
-sedimento~
-Este não é o tipo de substância que normalmente interessa muito a você mas
-como você está atolado no meio disto, ele transforma-se em seu principal
-interesse.
+lama~
+Este lugar ï¿½ escuro como breu e mais se parece com uma imunda latrina com um
+cheiro simplesmente horroroso e nauseabundo.
 ~
 S
 #7014
-O Esgoto Lamaçento~
-   Você está numa curva do sistema de canos do esgoto com lama acima de suas
-coxas.  Contemplar um nível mais alto de existência aqui seria bastante
-inapropriado, o cheiro mantém longe qualquer criatura inteligente, você
+O Esgoto Lamaï¿½ento~
+   Vocï¿½ estï¿½ numa curva do sistema de canos do esgoto com lama acima de suas
+coxas.  Contemplar um nï¿½vel mais alto de existï¿½ncia aqui seria bastante
+inapropriado, o cheiro mantï¿½m longe qualquer criatura inteligente, vocï¿½
 deve pensar em algo para sair desse fim de MUNDO.
 A curva leva para o norte e para o oeste.
 ~
-70 ad 5
+70 9 0 0 0 5
 D0
-Norte.  Cheio de lama, este lugar parece uma impassível e absolutamente extática
-intersecção, com canos levando ao norte e leste.
+Norte.  Cheio de lama, este lugar parece uma impassï¿½vel e absolutamente extï¿½tica
+intersecï¿½ï¿½o, com canos levando ao norte e leste.
 ~
 ~
 0 -1 7013
 D3
-Oeste.  Há menos lama nesse caminho, talvez você esteja no caminho que leva
-à saída deste lugar.
+Oeste.  Hï¿½ menos lama nesse caminho, talvez vocï¿½ esteja no caminho que leva
+ï¿½ saï¿½da deste lugar.
 ~
 ~
 0 -1 7008
 E
 lama~
-Este lugar é escuro como breu e mais se parece com uma imunda latrina com um
+Este lugar ï¿½ escuro como breu e mais se parece com uma imunda latrina com um
 cheiro simplesmente horroroso e nauseabundo.
 ~
 S
 #7015
 A Velha Fonte~
-   Você está em frente a uma antiga e bastante usada fonte do século passado.
-O esgoto segue para o leste daqui e a fonte leva para baixo em meio a escuridão.
+   Vocï¿½ estï¿½ em frente a uma antiga e bastante usada fonte do sï¿½culo passado.
+O esgoto segue para o leste daqui e a fonte leva para baixo em meio a escuridï¿½o.
 Barras de metal implantadas no lado da fonte servem de escada.
 ~
-70 ad 3
+70 9 0 0 0 3
 D1
-Leste.  Você não vê nada, por conta da escuridão que o cerca.  Sua luz não
-é de muito uso a essa distância.
+Leste.  Vocï¿½ nï¿½o vï¿½ nada, por conta da escuridï¿½o que o cerca.  Sua luz nï¿½o
+ï¿½ de muito uso a essa distï¿½ncia.
 ~
 ~
 0 -1 7028
 D5
-Abaixo da fonte há menos luz que acima daqui, você não pode ver nada.  Há
-barras metálicas ao lado levando para baixo em meio a escuridão.
+Abaixo da fonte hï¿½ menos luz que acima daqui, vocï¿½ nï¿½o pode ver nada.  Hï¿½
+barras metï¿½licas ao lado levando para baixo em meio a escuridï¿½o.
 ~
 ~
 0 -1 7105
 E
 barras~
-Essas barras parecem muito escorregadias, não muito seguras, mas talvez
-seguras o bastante para você descer, com as duas mãos nelas.
+Essas barras parecem muito escorregadias, nï¿½o muito seguras, mas talvez
+seguras o bastante para vocï¿½ descer, com as duas mï¿½os nelas.
 ~
 S
 #7016
 A Curva Regular~
-   Você está no meio de uma curva do sistema de canos do sistema de esgoto
+   Vocï¿½ estï¿½ no meio de uma curva do sistema de canos do sistema de esgoto
 QUE lugar!!!  O cano leva para o sul e para o leste.
 ~
-70 ad 1
-D2
-Sul.  Você não vê nada em qualquer direção e é muito escuro para todos os
-lados.
-~
-~
-0 -1 7017
+70 9 0 0 0 1
 D1
-Leste.  Que lugar calmo você encontrou.  Esta é uma intersecção que tem
+Leste.  Que lugar calmo vocï¿½ encontrou.  Esta ï¿½ uma intersecï¿½ï¿½o que tem
 canos levando ao norte e ao leste.
 ~
 ~
 0 -1 7021
+D2
+Sul.  Vocï¿½ nï¿½o vï¿½ nada em qualquer direï¿½ï¿½o e ï¿½ muito escuro para todos os
+lados.
+~
+~
+0 -1 7017
 S
 #7017
-A Junção no Esgoto~
-   Você está numa junção que leva para o norte, oeste e sul.
+A Junï¿½ï¿½o no Esgoto~
+   Vocï¿½ estï¿½ numa junï¿½ï¿½o que leva para o norte, oeste e sul.
 ~
-70 ad 1
+70 9 0 0 0 1
 D0
-Norte.  Você vê uma curva.
+Norte.  Vocï¿½ vï¿½ uma curva.
 ~
 ~
 0 -1 7016
-D3
-Oeste.  Há uma junção com quatro encanamentos nessa direção.
-~
-~
-0 -1 7009
 D2
-Sul.  Esta é uma junção de canos como qualquer outra.  Ela leva apenas ao
+Sul.  Esta ï¿½ uma junï¿½ï¿½o de canos como qualquer outra.  Ela leva apenas ao
 leste e oeste.
 ~
 ~
 0 -1 7018
+D3
+Oeste.  Hï¿½ uma junï¿½ï¿½o com quatro encanamentos nessa direï¿½ï¿½o.
+~
+~
+0 -1 7009
 S
 #7018
-A Junção Regular~
-   Essa parece uma junção regular, atualmente ela está bastante quieta.  Os
+A Junï¿½ï¿½o Regular~
+   Essa parece uma junï¿½ï¿½o regular, atualmente ela estï¿½ bastante quieta.  Os
 encanamentos levam ao oeste, leste e norte.
 ~
-70 acd 1
+70 13 0 0 0 1
 D0
-Ao norte você pode ver uma junção, levando ao norte e ao oeste.
+Ao norte vocï¿½ pode ver uma junï¿½ï¿½o, levando ao norte e ao oeste.
 ~
 ~
 0 -1 7017
 D1
-Para o leste não há nada com particular interesse, há uma junção de
+Para o leste nï¿½o hï¿½ nada com particular interesse, hï¿½ uma junï¿½ï¿½o de
 encanamentos levando ao norte e leste.
 ~
 ~
 0 -1 7031
 D3
-Há uma curva ao oeste levando ao norte.
+Hï¿½ uma curva ao oeste levando ao norte.
 ~
 ~
 0 -1 7010
 S
 #7021
-Uma Calma Junção de Canos~
-   Este é o tipo de lugar feito para descansar, embora pudesse cheirar
+Uma Calma Junï¿½ï¿½o de Canos~
+   Este ï¿½ o tipo de lugar feito para descansar, embora pudesse cheirar
 melhor que isso.  O esgoto vai para leste, norte e oeste daqui.
 ~
-70 acd 1
+70 13 0 0 0 1
 D0
-Nesta direção, você não pode ver nada.  Está muito escuro.
+Nesta direï¿½ï¿½o, vocï¿½ nï¿½o pode ver nada.  Estï¿½ muito escuro.
 ~
 ~
 0 -1 7011
 D1
-Há uma junção regular no sistema de canos ao leste.
+Hï¿½ uma junï¿½ï¿½o regular no sistema de canos ao leste.
 ~
 ~
 0 -1 7029
 D3
-Oeste.  Há uma curva regular levando ao sul no sistema de esgotos nesta
-direção.
+Oeste.  Hï¿½ uma curva regular levando ao sul no sistema de esgotos nesta
+direï¿½ï¿½o.
 ~
 ~
 0 -1 7016
 S
 #7022
 A Sala Estranha com Paredes Polidas~
-   Ao entrar, você ouve um estalido baixo de uma das paredes... e você cai
+   Ao entrar, vocï¿½ ouve um estalido baixo de uma das paredes... e vocï¿½ cai
 cai e cai...
 .
 .
 .
 .
-... e chega a um repentino fim.  Isto é realmente estranho.  Existe uma
-espécie de entrada principal levando para baixo.
+... e chega a um repentino fim.  Isto ï¿½ realmente estranho.  Existe uma
+espï¿½cie de entrada principal levando para baixo.
 ~
-70 ad 5
+70 9 0 0 0 5
 D5
-Baixo.  Este caminho revela-se bastante escuro, porém você pode observar
-uma intersecção de canos de esgoto levando ao oeste, norte e leste.
+Baixo.  Este caminho revela-se bastante escuro, porï¿½m vocï¿½ pode observar
+uma intersecï¿½ï¿½o de canos de esgoto levando ao oeste, norte e leste.
 ~
 ~
 0 -1 7112
 S
 #7024
 O Esgoto~
-   Você está com lama acima de seus tornozelos.  Esta é uma intersecção com
+   Vocï¿½ estï¿½ com lama acima de seus tornozelos.  Esta ï¿½ uma intersecï¿½ï¿½o com
 canos levando ao leste, sul e oeste.
 ~
-70 acd 1
+70 13 0 0 0 1
 D1
-Para o leste há uma sala aparentemente peculiar.
+Para o leste hï¿½ uma sala aparentemente peculiar.
 ~
 ~
 0 -1 7037
 D2
-Ao sul há outra intersecção com canos indo para o sul e leste.
+Ao sul hï¿½ outra intersecï¿½ï¿½o com canos indo para o sul e leste.
 ~
 ~
 0 -1 7025
 D3
-Para o oeste há outra intersecção como esta, com canos de esgoto levando ao
+Para o oeste hï¿½ outra intersecï¿½ï¿½o como esta, com canos de esgoto levando ao
 sul e ao oeste.
 ~
 ~
 0 -1 7011
 S
 #7025
-Outra Intersecção~
-   Você nunca viu nada tão CHATO... Esta é outra intersecção com canos
+Outra Intersecï¿½ï¿½o~
+   Vocï¿½ nunca viu nada tï¿½o CHATO... Esta ï¿½ outra intersecï¿½ï¿½o com canos
 levando ao norte, sul e leste.
 ~
-70 ad 1
+70 9 0 0 0 1
 D0
-Ao norte há uma intersecção, onde os canos estão levando ao oeste e leste.
-Você nota que o chão ao oeste está coberto pela lama.
+Ao norte hï¿½ uma intersecï¿½ï¿½o, onde os canos estï¿½o levando ao oeste e leste.
+Vocï¿½ nota que o chï¿½o ao oeste estï¿½ coberto pela lama.
 ~
 ~
 0 -1 7024
 D1
-Leste.  Você não vê nada de interessante nesta direção, apenas mais uma
-intersecção.  Esta leva ao leste e sul.
+Leste.  Vocï¿½ nï¿½o vï¿½ nada de interessante nesta direï¿½ï¿½o, apenas mais uma
+intersecï¿½ï¿½o.  Esta leva ao leste e sul.
 ~
 ~
 0 -1 7038
 D2
-Outra intersecção está ao sul.  Ela leva ao oeste e ao sul.
+Outra intersecï¿½ï¿½o estï¿½ ao sul.  Ela leva ao oeste e ao sul.
 ~
 ~
 0 -1 7026
 S
 #7026
-Uma Junção~
+Uma Junï¿½ï¿½o~
    Esta parece interessante, bem diferente de todas as outras.  Ela  parece
 mais limpa que as outras.  Sorte.  Algo que parece ser um tubo de ar leva
-para cima, mas parece está muito longe para você alcançá-lo.  Os canos
+para cima, mas parece estï¿½ muito longe para vocï¿½ alcanï¿½ï¿½-lo.  Os canos
 levam ao sul, oeste e norte.
 ~
-70 acd 0
+70 13 0 0 0 0
 D0
-Norte.  Você vê uma intersecção, levando ao norte e ao leste.
+Norte.  Vocï¿½ vï¿½ uma intersecï¿½ï¿½o, levando ao norte e ao leste.
 ~
 ~
 0 -1 7025
 D2
-Ao sul há OUTRA junção levando ao oeste e ao leste.
+Ao sul hï¿½ OUTRA junï¿½ï¿½o levando ao oeste e ao leste.
 ~
 ~
 0 -1 7028
 D3
-Ao oeste você vê uma porção de lama e sedimento no esgoto.  Esta deve ser
-uma interseção mas você não tem certeza.
+Ao oeste vocï¿½ vï¿½ uma porï¿½ï¿½o de lama e sedimento no esgoto.  Esta deve ser
+uma interseï¿½ï¿½o mas vocï¿½ nï¿½o tem certeza.
 ~
 ~
 0 -1 7013
 E
 lama~
-Este lugar é escuro como breu e mais se parece com uma imunda latrina com um
+Este lugar ï¿½ escuro como breu e mais se parece com uma imunda latrina com um
 cheiro simplesmente horroroso e nauseabundo.
 ~
 S
 #7028
-A Junção no Esgoto~
-   Você está em uma junção de canos de esgoto levando ao norte, leste e
+A Junï¿½ï¿½o no Esgoto~
+   Vocï¿½ estï¿½ em uma junï¿½ï¿½o de canos de esgoto levando ao norte, leste e
 oeste.
 ~
-70 ad 1
+70 9 0 0 0 1
 D0
 ~
 ~
 0 -1 7026
 D1
-Ao leste você pode ver uma curva no cano, indo para o sul.
+Ao leste vocï¿½ pode ver uma curva no cano, indo para o sul.
 ~
 ~
 0 -1 7034
 D3
-Para o oeste você pode notar apenas uma velha fonte.
+Para o oeste vocï¿½ pode notar apenas uma velha fonte.
 ~
 ~
 0 -1 7015
 S
 #7029
-A Junção Tripla~
-   Você está no meio de uma enorme junção de canos de esgoto feitos de
-concreto. Os canos levam a três diferentes direções: leste, sul e oeste.
+A Junï¿½ï¿½o Tripla~
+   Vocï¿½ estï¿½ no meio de uma enorme junï¿½ï¿½o de canos de esgoto feitos de
+concreto. Os canos levam a trï¿½s diferentes direï¿½ï¿½es: leste, sul e oeste.
 ~
-70 ad 1
+70 9 0 0 0 1
 D1
-Leste.  Você pode ver uma curva no cano de esgoto levando ao norte.
+Leste.  Vocï¿½ pode ver uma curva no cano de esgoto levando ao norte.
 ~
 ~
 0 -1 7035
 D2
-Para o sul há uma ENORME junção de quatro canos, todos iluminados por uma
+Para o sul hï¿½ uma ENORME junï¿½ï¿½o de quatro canos, todos iluminados por uma
 luz estranha.
 ~
 ~
 0 -1 7030
 D3
-Para o oeste você pode notar outra junção similar a que você está.
+Para o oeste vocï¿½ pode notar outra junï¿½ï¿½o similar a que vocï¿½ estï¿½.
 ~
 ~
 0 -1 7021
 S
 #7030
-A Junção Quadrúpla Abaixo do Depósito de Lixo~
-   Você está em um lugar que lembra a entrada de um formigueiro.  Há
-enormes canos de concreto levando ao norte, sul leste e oeste.  Além disso
-há uma escada de metal construída na parede de concreto levando através
+A Junï¿½ï¿½o Quadrï¿½pla Abaixo do Depï¿½sito de Lixo~
+   Vocï¿½ estï¿½ em um lugar que lembra a entrada de um formigueiro.  Hï¿½
+enormes canos de concreto levando ao norte, sul leste e oeste.  Alï¿½m disso
+hï¿½ uma escada de metal construï¿½da na parede de concreto levando atravï¿½s
 de um amontoado de lixo.
 ~
-70 acd 1
+70 13 0 0 0 1
 D0
-Ao norte você pode ver uma enorme junção tripla com canos levando ao oeste
+Ao norte vocï¿½ pode ver uma enorme junï¿½ï¿½o tripla com canos levando ao oeste
 e ao leste.
 ~
 ~
 0 -1 7029
 D1
-Leste.  Você pode ver um poço no chão.
+Leste.  Vocï¿½ pode ver um poï¿½o no chï¿½o.
 ~
 ~
 0 -1 7036
 D2
-Ao sul há uma grande junção com canos levando ao leste e ao oeste.
+Ao sul hï¿½ uma grande junï¿½ï¿½o com canos levando ao leste e ao oeste.
 ~
 ~
 0 -1 7031
 D3
-Ao oeste há uma sala peculiar com as paredes totalmente polidas.
+Ao oeste hï¿½ uma sala peculiar com as paredes totalmente polidas.
 ~
 ~
 0 -1 7022
 D4
-Acima do lixo você pode notar o que parece ser o depósito de Midgaard.
+Acima do lixo vocï¿½ pode notar o que parece ser o depï¿½sito de Midgaard.
 ~
 ~
 2 3005 3030
 E
 escada~
-Ela parece ser feita de aço inoxidável, e ela poderá funcionar como um
-porrete de força considerável, porém... Você não pode tirá-la do chão, já
-que ela está muito firme na parede de concreto.
+Ela parece ser feita de aï¿½o inoxidï¿½vel, e ela poderï¿½ funcionar como um
+porrete de forï¿½a considerï¿½vel, porï¿½m... Vocï¿½ nï¿½o pode tirï¿½-la do chï¿½o, jï¿½
+que ela estï¿½ muito firme na parede de concreto.
 ~
 S
 #7031
-Uma Junção Tripla~
-   Você está numa junção com canos levando ao oeste, norte e leste.
+Uma Junï¿½ï¿½o Tripla~
+   Vocï¿½ estï¿½ numa junï¿½ï¿½o com canos levando ao oeste, norte e leste.
 ~
-70 ad 1
+70 9 0 0 0 1
 D0
-Ao norte há uma ENORME junção quádrupla de canos, todos iluminados por uma
+Ao norte hï¿½ uma ENORME junï¿½ï¿½o quï¿½drupla de canos, todos iluminados por uma
 estranha luz.
 ~
 ~
 0 -1 7030
 D1
-Leste.  Você pode notar uma junção tripla levando ao norte e ao leste.
+Leste.  Vocï¿½ pode notar uma junï¿½ï¿½o tripla levando ao norte e ao leste.
 ~
 ~
 0 -1 7044
 D3
-Oeste.  Você percebe uma junção tripla levando ao norte e ao oeste.
+Oeste.  Vocï¿½ percebe uma junï¿½ï¿½o tripla levando ao norte e ao oeste.
 ~
 ~
 0 -1 7018
 S
 #7034
 Uma Curva no Cano de Esgoto~
-   Você pode ver em duas direções onde o cano leva: sul e oeste.
+   Vocï¿½ pode ver em duas direï¿½ï¿½es onde o cano leva: sul e oeste.
 ~
-70 ad 2
-D3
-Oeste.  Você pode perceber uma junção tripla levando ao norte e ao oeste.
-~
-~
-0 -1 7028
+70 9 0 0 0 2
 D2
-Ao sul você pode ver outra curva levando ao oeste.
+Ao sul vocï¿½ pode ver outra curva levando ao oeste.
 ~
 ~
 0 -1 7035
+D3
+Oeste.  Vocï¿½ pode perceber uma junï¿½ï¿½o tripla levando ao norte e ao oeste.
+~
+~
+0 -1 7028
 S
 #7035
 A Curva no Cano de Esgoto~
-   Você pode enxergar em duas diferentes direções onde leva o cano: oeste e
+   Vocï¿½ pode enxergar em duas diferentes direï¿½ï¿½es onde leva o cano: oeste e
 norte.
 ~
-70 ad 2
+70 9 0 0 0 2
 D0
-Norte.  Você vê outra curva levando a oeste.
+Norte.  Vocï¿½ vï¿½ outra curva levando a oeste.
 ~
 ~
 0 -1 7034
 D3
-Você pode ver outra junção, embora ela seja uma junção tripla com canos indo
+Vocï¿½ pode ver outra junï¿½ï¿½o, embora ela seja uma junï¿½ï¿½o tripla com canos indo
 para o sul e para o oeste.
 ~
 ~
 0 -1 7029
 S
 #7036
-O Poço~
-   Você está numa secção de um cano sem saída.  No chão há um poço levando
-para baixo.  Há barras colocadas no lado de dentro do poço que servem de
+O Poï¿½o~
+   Vocï¿½ estï¿½ numa secï¿½ï¿½o de um cano sem saï¿½da.  No chï¿½o hï¿½ um poï¿½o levando
+para baixo.  Hï¿½ barras colocadas no lado de dentro do poï¿½o que servem de
 escada.
 ~
-70 ad 5
+70 9 0 0 0 5
 D3
-Oeste.  Você pode ver uma junção quádrupla, pouco iluminada, com uma saída
+Oeste.  Vocï¿½ pode ver uma junï¿½ï¿½o quï¿½drupla, pouco iluminada, com uma saï¿½da
 para cima.
 ~
 ~
 0 -1 7030
 D5
-Abaixo do poço está tão escuro que você não consegue ver nada.
+Abaixo do poï¿½o estï¿½ tï¿½o escuro que vocï¿½ nï¿½o consegue ver nada.
 ~
 ~
 0 -1 7122
 S
 #7037
 A Sala Circular~
-   Assim que você entra na sala ela começa a girar - começando lentamente,
-e depois cada vez mais rápido - Você fica totalmente confuso sem saber onde
-fica o chão ou o teto, porém você está certo que a porta está na direção
-oposta a que você entrou.  Ela leva a leste.  Há apenas esta saída.
+   Assim que vocï¿½ entra na sala ela comeï¿½a a girar - comeï¿½ando lentamente,
+e depois cada vez mais rï¿½pido - Vocï¿½ fica totalmente confuso sem saber onde
+fica o chï¿½o ou o teto, porï¿½m vocï¿½ estï¿½ certo que a porta estï¿½ na direï¿½ï¿½o
+oposta a que vocï¿½ entrou.  Ela leva a leste.  Hï¿½ apenas esta saï¿½da.
 ~
-70 ad 1
+70 9 0 0 0 1
 D1
-Você pode notar uma pequena sala com uma cadeira.
+Vocï¿½ pode notar uma pequena sala com uma cadeira.
 ~
 ~
 0 -1 7050
 S
 #7038
-A Junção com Três Caminhos~
-   Você está numa junção de canos que levam a oeste, leste e sul.
+A Junï¿½ï¿½o com Trï¿½s Caminhos~
+   Vocï¿½ estï¿½ numa junï¿½ï¿½o de canos que levam a oeste, leste e sul.
 ~
-70 ad 1
+70 9 0 0 0 1
 D1
-Leste.  Você percebe uma Sala de Guarda, pouco iluminada.
+Leste.  Vocï¿½ percebe uma Sala de Guarda, pouco iluminada.
 ~
 ~
 0 -1 7045
 D2
-Ao sul você pode ver o que parece ser uma despensa.
+Ao sul vocï¿½ pode ver o que parece ser uma despensa.
 ~
 ~
 0 -1 7039
 D3
-Oeste.  Você vê uma junção similar a esta levando a norte e a sul.
+Oeste.  Vocï¿½ vï¿½ uma junï¿½ï¿½o similar a esta levando a norte e a sul.
 ~
 ~
 0 -1 7025
 S
 #7039
 A Despensa do Esgoto~
-   Você está numa pequena sala iluminada por uma simples tocha colocada na
-parede.  A única saída daqui é para o norte.
+   Vocï¿½ estï¿½ numa pequena sala iluminada por uma simples tocha colocada na
+parede.  A ï¿½nica saï¿½da daqui ï¿½ para o norte.
 ~
-70 d 1
+70 8 0 0 0 1
 D0
-Para o norte você vê uma junção de canos.
+Para o norte vocï¿½ vï¿½ uma junï¿½ï¿½o de canos.
 ~
 ~
 0 -1 7038
 S
 #7041
 O Tubo~
-   Você está no centro de um escuro e profundo tubo.  Uma
-simples escada é seu único meio de entrar nele, se você desejar.  O cano
+   Vocï¿½ estï¿½ no centro de um escuro e profundo tubo.  Uma
+simples escada ï¿½ seu ï¿½nico meio de entrar nele, se vocï¿½ desejar.  O cano
 de esgoto leva a sul daqui.
 ~
-70 ad 1
+70 9 0 0 0 1
 D2
-Ao sul você pode ver o cano levando a sul, em meio a escuridão.
+Ao sul vocï¿½ pode ver o cano levando a sul, em meio a escuridï¿½o.
 ~
 ~
 0 -1 7043
 D5
-Escuridão total e absoluta. Você não pode ver absolutamente nada nesta
-direção.
+Escuridï¿½o total e absoluta. Vocï¿½ nï¿½o pode ver absolutamente nada nesta
+direï¿½ï¿½o.
 ~
 ~
 0 -1 7123
 E
 escada~
-Firmemente grudada a parede do tubo é impossível removê-la.
+Firmemente grudada a parede do tubo ï¿½ impossï¿½vel removï¿½-la.
 ~
 S
 #7043
 A Entrada do Esgoto~
-   Você está no meio de um cano que leva a norte e a sul.  Acima de você
+   Vocï¿½ estï¿½ no meio de um cano que leva a norte e a sul.  Acima de vocï¿½
 um tubo de ar leva para cima em meio a luz do sol.  Parece totalmente
-impossível seguir para cima.
+impossï¿½vel seguir para cima.
 ~
-70 ad 1
+70 9 0 0 0 1
 D0
-Ao norte você pode notar um enorme tubo levado para baixo.
+Ao norte vocï¿½ pode notar um enorme tubo levado para baixo.
 ~
 ~
 0 -1 7041
 D2
-Ao sul você pode ver um junção tripla levando a leste e oeste.
+Ao sul vocï¿½ pode ver um junï¿½ï¿½o tripla levando a leste e oeste.
 ~
 ~
 0 -1 7044
 S
 #7044
-A Junção que Leva a Três Caminhos~
-   Você está numa passagem nos canos do sistema de esgoto levando a norte,
+A Junï¿½ï¿½o que Leva a Trï¿½s Caminhos~
+   Vocï¿½ estï¿½ numa passagem nos canos do sistema de esgoto levando a norte,
 leste e oeste.
 ~
-70 ad 1
+70 9 0 0 0 1
 D0
-Você vê um cano de esgoto levando ao norte.
+Vocï¿½ vï¿½ um cano de esgoto levando ao norte.
 ~
 ~
 0 -1 7043
@@ -854,7 +854,7 @@ D1
 ~
 0 -1 7049
 D3
-Oeste.  Você vê outra junção, muito similar a que você está, que leva ao norte
+Oeste.  Vocï¿½ vï¿½ outra junï¿½ï¿½o, muito similar a que vocï¿½ estï¿½, que leva ao norte
 e a oeste.
 ~
 ~
@@ -862,88 +862,88 @@ e a oeste.
 S
 #7045
 A Sala no Esgoto~
-   Você está numa grande sala com cadeiras encostadas nas paredes.  Você tem
-o pressentimento de estar sendo observado.  Ao sul há uma entrada para uma
-sala maior.  A sala é iluminada por cinco tochas, colocadas nas paredes.
-A oeste há um vão de porta que leva para fora dos canos de esgoto.
+   Vocï¿½ estï¿½ numa grande sala com cadeiras encostadas nas paredes.  Vocï¿½ tem
+o pressentimento de estar sendo observado.  Ao sul hï¿½ uma entrada para uma
+sala maior.  A sala ï¿½ iluminada por cinco tochas, colocadas nas paredes.
+A oeste hï¿½ um vï¿½o de porta que leva para fora dos canos de esgoto.
 ~
-70 d 1
+70 8 0 0 0 1
 D2
-Você pode ver uma sala maior que esta, bastante iluminada.
+Vocï¿½ pode ver uma sala maior que esta, bastante iluminada.
 ~
 ~
 0 -1 7046
 D3
-Para o oeste você pode ver os canos de esgoto.
+Para o oeste vocï¿½ pode ver os canos de esgoto.
 ~
 ~
 2 -1 7038
 S
 #7046
 A Sala no Esgoto~
-   Esta é uma sala com paredes que brilham como ouro, porém não parece ser
-ouro.  Estranho, é como se o brilho estivesse iluminando toda a sala.
-É bastante brilhante.  Ao sul o chão está coberto com água suja.
+   Esta ï¿½ uma sala com paredes que brilham como ouro, porï¿½m nï¿½o parece ser
+ouro.  Estranho, ï¿½ como se o brilho estivesse iluminando toda a sala.
+ï¿½ bastante brilhante.  Ao sul o chï¿½o estï¿½ coberto com ï¿½gua suja.
 O norte leva para um tipo de despensa.
 ~
-70 d 1
+70 8 0 0 0 1
 D0
-Para o norte você pode ver a sala de guarda.
+Para o norte vocï¿½ pode ver a sala de guarda.
 ~
 ~
 0 -1 7045
 D2
-Para o sul não há nada além de água e uma saída leva a leste daqui.
+Para o sul nï¿½o hï¿½ nada alï¿½m de ï¿½gua e uma saï¿½da leva a leste daqui.
 ~
 ~
 0 -1 7047
 S
 #7047
 A Lagoa no Esgoto~
-   Você está com água pela cintura.  Ao norte é a entrada para esta sala.
+   Vocï¿½ estï¿½ com ï¿½gua pela cintura.  Ao norte ï¿½ a entrada para esta sala.
 Uma simples porta leva a leste.
 ~
-70 d 1
+70 8 0 0 0 1
 D0
-Para o norte você vê a entrada para esta sala.
+Para o norte vocï¿½ vï¿½ a entrada para esta sala.
 ~
 ~
 0 -1 7046
 D1
-Você pode ver um enorme salão através do vão da porta.
+Vocï¿½ pode ver um enorme salï¿½o atravï¿½s do vï¿½o da porta.
 ~
 porta~
 1 -1 7053
 S
 #7048
 Os Canos de Esgoto~
-   Você está num lugar sem saída no esgoto.  O único caminho é ao sul.
-Você pode ver um tubo levando para cima mas parece muito difícil chegar até
+   Vocï¿½ estï¿½ num lugar sem saï¿½da no esgoto.  O ï¿½nico caminho ï¿½ ao sul.
+Vocï¿½ pode ver um tubo levando para cima mas parece muito difï¿½cil chegar atï¿½
 ele.
 ~
-70 ad 1
+70 9 0 0 0 1
 D2
 ~
 ~
 0 -1 7049
 S
 #7049
-A Junção~
-   Você está numa junção levando ao norte, oeste e leste.
+A Junï¿½ï¿½o~
+   Vocï¿½ estï¿½ numa junï¿½ï¿½o levando ao norte, oeste e leste.
 ~
-70 ad 1
+70 9 0 0 0 1
 D0
 ~
 ~
 0 -1 7048
 D1
-A escuridão invade uma parte do sistema de esgoto, você não pode ver nada
-nesta direção.
+A escuridï¿½o invade uma parte do sistema de esgoto, vocï¿½ nï¿½o pode ver nada
+nesta direï¿½ï¿½o.
 ~
 ~
 0 -1 7060
 D3
-Oeste.  Você vê outra junção, muito similar a esta em que você está, levando
+Oeste.  Vocï¿½ vï¿½ outra junï¿½ï¿½o, muito similar a esta em que vocï¿½ estï¿½, levando
 ao norte e a oeste.
 ~
 ~
@@ -951,18 +951,18 @@ ao norte e a oeste.
 S
 #7050
 A Pequena Sala~
-   A única coisa desta sala que lhe interessa é a cadeira, que parece ter
-sido pregada ao chão rochoso.  Um vão de porta leva a sul e outro a leste
-para a escuridão.
+   A ï¿½nica coisa desta sala que lhe interessa ï¿½ a cadeira, que parece ter
+sido pregada ao chï¿½o rochoso.  Um vï¿½o de porta leva a sul e outro a leste
+para a escuridï¿½o.
 ~
-70 ad 1
+70 9 0 0 0 1
 D1
-Escuridão...
+Escuridï¿½o...
 ~
 ~
 0 -1 7055
 D2
-Você pode ver uma sala bastante iluminada.  Você não consegue perceber
+Vocï¿½ pode ver uma sala bastante iluminada.  Vocï¿½ nï¿½o consegue perceber
 qualquer detalhe.
 ~
 ~
@@ -970,50 +970,50 @@ qualquer detalhe.
 S
 #7051
 O Cano de Esgoto~
-   Você está em algo que parece ser um cano estragado, como se você gostasse
-de estar aqui!  Você pode ver duas saídas levando ou ao norte ou ao sul.
+   Vocï¿½ estï¿½ em algo que parece ser um cano estragado, como se vocï¿½ gostasse
+de estar aqui!  Vocï¿½ pode ver duas saï¿½das levando ou ao norte ou ao sul.
 ~
-70 d 1
+70 8 0 0 0 1
 D0
 ~
 ~
 0 -1 7050
 D2
-Para o sul você pode ver uma estranha luz.
+Para o sul vocï¿½ pode ver uma estranha luz.
 ~
 ~
 0 -1 7052
 S
 #7052
 O Grandioso Cano de Esgoto~
-   Você está num grandioso cano de esgoto.  Esse caminho leva em direção ao
-sul.  Ele é grande, de fato!  Um vão de porta leva a leste daqui.
+   Vocï¿½ estï¿½ num grandioso cano de esgoto.  Esse caminho leva em direï¿½ï¿½o ao
+sul.  Ele ï¿½ grande, de fato!  Um vï¿½o de porta leva a leste daqui.
 ~
-70 d 1
+70 8 0 0 0 1
 D0
-Ao norte você pode ver um vão de porta.
+Ao norte vocï¿½ pode ver um vï¿½o de porta.
 ~
 ~
 0 -1 7051
 D1
-Você não pode enxergar nada nessa escuridão.
+Vocï¿½ nï¿½o pode enxergar nada nessa escuridï¿½o.
 ~
 ~
 0 -1 7056
 D2
-No fim do caminho sul, o "chão" está completamente coberto pela água.
+No fim do caminho sul, o "chï¿½o" estï¿½ completamente coberto pela ï¿½gua.
 ~
 ~
 0 -1 7053
 S
 #7053
 O Final do Caminho Sul do Grandioso Cano de Esgoto~
-   Você está com água em seus tornozelos.  Um vão de porta leva a oeste
+   Vocï¿½ estï¿½ com ï¿½gua em seus tornozelos.  Um vï¿½o de porta leva a oeste
 daqui.  O cano segue para o norte.
 ~
-70 d 1
+70 8 0 0 0 1
 D0
-Você vê muitas pinturas decorando as paredes.
+Vocï¿½ vï¿½ muitas pinturas decorando as paredes.
 ~
 ~
 0 -1 7052
@@ -1023,13 +1023,13 @@ porta~
 1 -1 7047
 S
 #7055
-O Centro da Água do Esgoto~
-   Você está numa sala onde metade do chão está coberto pela água.  A água
-leva para o leste e um vão de porta leva a oeste.
+O Centro da ï¿½gua do Esgoto~
+   Vocï¿½ estï¿½ numa sala onde metade do chï¿½o estï¿½ coberto pela ï¿½gua.  A ï¿½gua
+leva para o leste e um vï¿½o de porta leva a oeste.
 ~
-70 ad 3
+70 9 0 0 0 3
 D1
-Você pode notar, vagamente, que o próximo lugar é um cano com mais água.
+Vocï¿½ pode notar, vagamente, que o prï¿½ximo lugar ï¿½ um cano com mais ï¿½gua.
 ~
 ~
 0 -1 7061
@@ -1038,42 +1038,42 @@ D3
 ~
 0 -1 7050
 E
-água~
-É escura e espessa, e emana um fedor terrível.
+ï¿½gua~
+ï¿½ escura e espessa, e emana um fedor terrï¿½vel.
 ~
 S
 #7056
 O Corredor Escuro~
-   Você não pode enxergar muito, apenas uma luz.  O corredor segue para uma
-passagem para o sul.  Um vão de porta leva a oeste.
+   Vocï¿½ nï¿½o pode enxergar muito, apenas uma luz.  O corredor segue para uma
+passagem para o sul.  Um vï¿½o de porta leva a oeste.
 ~
-70 ad 1
+70 9 0 0 0 1
 D2
-Você não consegue enxergar nada porque está completamente escuro nesta
-direção.
+Vocï¿½ nï¿½o consegue enxergar nada porque estï¿½ completamente escuro nesta
+direï¿½ï¿½o.
 ~
 ~
 0 -1 7057
 D3
-Você vê muita luz, brilhante como a luz do dia, porém nada de interessante.
+Vocï¿½ vï¿½ muita luz, brilhante como a luz do dia, porï¿½m nada de interessante.
 ~
 ~
 0 -1 7052
 S
 #7057
 A Passagem Escura~
-   Você não pode ver nada além do chão onde pisa.  A passagem parece
+   Vocï¿½ nï¿½o pode ver nada alï¿½m do chï¿½o onde pisa.  A passagem parece
 continuar para o norte e para o sul.
 ~
-70 ad 1
+70 9 0 0 0 1
 D0
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7056
 D2
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
@@ -1081,18 +1081,18 @@ iluminar mais longe.
 S
 #7058
 A Passagem Escura~
-   Você não pode ver nada além do chão onde pisa.  A passagem parece
+   Vocï¿½ nï¿½o pode ver nada alï¿½m do chï¿½o onde pisa.  A passagem parece
 continuar para o norte e para o sul.
 ~
-70 ad 1
+70 9 0 0 0 1
 D0
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7057
 D2
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
@@ -1100,18 +1100,18 @@ iluminar mais longe.
 S
 #7059
 A Passagem Escura~
-   Você não pode ver nada além do chão onde pisa.  A passagem parece
+   Vocï¿½ nï¿½o pode ver nada alï¿½m do chï¿½o onde pisa.  A passagem parece
 continuar para o norte e para o sul.
 ~
-70 ad 1
+70 9 0 0 0 1
 D0
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7058
 D2
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
@@ -1119,270 +1119,270 @@ iluminar mais longe.
 S
 #7060
 A Passagem Escura~
-   Você não pode ver nada além do chão onde pisa.  A passagem parece
-continuar para o norte e para oeste.  Ao leste há água cobrindo o chão e
-leva através de uma entrada em arco para um cano encharcado.
+   Vocï¿½ nï¿½o pode ver nada alï¿½m do chï¿½o onde pisa.  A passagem parece
+continuar para o norte e para oeste.  Ao leste hï¿½ ï¿½gua cobrindo o chï¿½o e
+leva atravï¿½s de uma entrada em arco para um cano encharcado.
 ~
-70 ad 1
+70 9 0 0 0 1
 D0
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7059
 D1
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7068
 D3
-Você pode notar, apenas, uma junção tripla levando ao norte e a oeste.
+Vocï¿½ pode notar, apenas, uma junï¿½ï¿½o tripla levando ao norte e a oeste.
 ~
 ~
 0 -1 7049
 E
-água~
-É escura e espessa, e emama um fedor terrível.
+ï¿½gua~
+ï¿½ escura e espessa, e emama um fedor terrï¿½vel.
 ~
 S
 #7061
 A Curva Encharcada no Esgoto~
-   Você não pode ver nada, mas a água está acima da sua cintura.  O cano de
+   Vocï¿½ nï¿½o pode ver nada, mas a ï¿½gua estï¿½ acima da sua cintura.  O cano de
 esgoto parace curvar-se e levar ao sul e oeste.
 ~
-70 ad 5
+70 9 0 0 0 5
 D2
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7062
 D3
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7055
 E
-água~
-É escura e espessa e emana um fedor terrível.
+ï¿½gua~
+ï¿½ escura e espessa e emana um fedor terrï¿½vel.
 ~
 S
 #7062
 O Cano Encharcado~
-   Você não pode ver nada mas a água está acima da sua cintura.  O cano de
+   Vocï¿½ nï¿½o pode ver nada mas a ï¿½gua estï¿½ acima da sua cintura.  O cano de
 esgoto parece levar para o sul e para o norte.
 ~
-70 ad 5
+70 9 0 0 0 5
 D0
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7061
 D2
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7063
 E
-água~
-É escura e espessa e emana um fedor terrível.
+ï¿½gua~
+ï¿½ escura e espessa e emana um fedor terrï¿½vel.
 ~
 S
 #7063
 O Cano Encharcado~
-   Você não pode ver nada mas a água está acima da sua cintura.  O cano de
+   Vocï¿½ nï¿½o pode ver nada mas a ï¿½gua estï¿½ acima da sua cintura.  O cano de
 esgoto parece levar para o sul e para o norte.
 ~
-70 ad 5
+70 9 0 0 0 5
 D0
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7062
 D2
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7064
 E
-água~
-É escura e espessa, e emana um fedor terrível.
+ï¿½gua~
+ï¿½ escura e espessa, e emana um fedor terrï¿½vel.
 ~
 S
 #7064
-A Junção no Cano Encharcado~
-   Você não pode ver nada mas a água está acima da sua cintura.  O cano de
-esgoto parece levar para uma junção indo para o sul, norte e leste.
+A Junï¿½ï¿½o no Cano Encharcado~
+   Vocï¿½ nï¿½o pode ver nada mas a ï¿½gua estï¿½ acima da sua cintura.  O cano de
+esgoto parece levar para uma junï¿½ï¿½o indo para o sul, norte e leste.
 ~
-70 ad 5
+70 9 0 0 0 5
 D0
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7063
 D1
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7069
 D2
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7065
 E
-água~
-É escura e espessa e emana um fedor terrível.
+ï¿½gua~
+ï¿½ escura e espessa e emana um fedor terrï¿½vel.
 ~
 S
 #7065
 O Cano Encharcado~
-    Você não pode ver nada mas a água está acima da sua cintura.  O cano de
+    Vocï¿½ nï¿½o pode ver nada mas a ï¿½gua estï¿½ acima da sua cintura.  O cano de
 esgoto parece levar o sul e para o norte.
 ~
-70 ad 5
+70 9 0 0 0 5
 D0
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7064
 D2
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7066
 E
-água~
-É escura e espessa e emana um fedor terrível.
+ï¿½gua~
+ï¿½ escura e espessa e emana um fedor terrï¿½vel.
 ~
 S
 #7066
-A Junção no Cano Encharcado~
-   Você não pode ver nada mas a água está acima da sua cintura.  O cano de
-esgoto parece levar para uma junção indo para o sul, norte e leste.
+A Junï¿½ï¿½o no Cano Encharcado~
+   Vocï¿½ nï¿½o pode ver nada mas a ï¿½gua estï¿½ acima da sua cintura.  O cano de
+esgoto parece levar para uma junï¿½ï¿½o indo para o sul, norte e leste.
 ~
-70 ad 5
+70 9 0 0 0 5
 D0
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7065
 D1
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7070
 D2
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7067
 E
-água~
-É escura e espessa e emana um fedor terrível.
+ï¿½gua~
+ï¿½ escura e espessa e emana um fedor terrï¿½vel.
 ~
 S
 #7067
 O Cano Encharcado~
-    Você não pode ver nada mas a água está acima da sua cintura.  O cano de
+    Vocï¿½ nï¿½o pode ver nada mas a ï¿½gua estï¿½ acima da sua cintura.  O cano de
 esgoto parece levar o sul e para o norte.
 ~
-70 ad 5
+70 9 0 0 0 5
 D0
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7066
 D2
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7068
 E
-água~
-É escura e espessa e emana um fedor terrível.
+ï¿½gua~
+ï¿½ escura e espessa e emana um fedor terrï¿½vel.
 ~
 S
 #7068
 A Curva no Cano Encharcado~
-    Você não pode ver nada mas a água está acima da sua cintura.  O cano de
+    Vocï¿½ nï¿½o pode ver nada mas a ï¿½gua estï¿½ acima da sua cintura.  O cano de
 esgoto parece levar para oeste e para o norte.
 ~
-70 ad 5
+70 9 0 0 0 5
 D0
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7067
 D3
-Você não pode ver nada nesta direção e sua luz não é suficiente para
+Vocï¿½ nï¿½o pode ver nada nesta direï¿½ï¿½o e sua luz nï¿½o ï¿½ suficiente para
 iluminar mais longe.
 ~
 ~
 0 -1 7060
 E
-água~
-É escura e espessa e emana um fedor terrível.
+ï¿½gua~
+ï¿½ escura e espessa e emana um fedor terrï¿½vel.
 ~
 S
 #7069
 Uma Margem de uma Escura Lagoa~
-   Você não pode ver muito mas o eco de uma gota caindo, faz com que você
-saiba que o local é calmo.  Você pode notar, por causa do movimento da água,
-que há uma enorme e escura lagoa aqui, perdida em meio a escuridão.  A água do
+   Vocï¿½ nï¿½o pode ver muito mas o eco de uma gota caindo, faz com que vocï¿½
+saiba que o local ï¿½ calmo.  Vocï¿½ pode notar, por causa do movimento da ï¿½gua,
+que hï¿½ uma enorme e escura lagoa aqui, perdida em meio a escuridï¿½o.  A ï¿½gua do
 esgoto que cai torna a margem escorregadia.  Daqui ela cai, como uma cachoeira,
 para dentro da lagoa.
 ~
-70 ad 5
+70 9 0 0 0 5
 D2
-Você não vê nada.  Está muito escuro.
+Vocï¿½ nï¿½o vï¿½ nada.  Estï¿½ muito escuro.
 ~
 ~
 0 -1 7070
 D3
-Você não vê nada.  Está muito escuro.
+Vocï¿½ nï¿½o vï¿½ nada.  Estï¿½ muito escuro.
 ~
 ~
 0 -1 7064
 E
-água~
-É escura e espessa e emana um fedor terrível.
+ï¿½gua~
+ï¿½ escura e espessa e emana um fedor terrï¿½vel.
 ~
 S
 #7070
 Uma Margem de uma Escura Lagoa~
-   Você não pode ver muito mas, o eco de uma gota caindo, faz com que você
-saiba que o local é calmo.  Você pode notar, por causa do movimento da água,
-que há uma enorme e escura lagoa aqui, perdida em meio a escuridão.  A água do
+   Vocï¿½ nï¿½o pode ver muito mas, o eco de uma gota caindo, faz com que vocï¿½
+saiba que o local ï¿½ calmo.  Vocï¿½ pode notar, por causa do movimento da ï¿½gua,
+que hï¿½ uma enorme e escura lagoa aqui, perdida em meio a escuridï¿½o.  A ï¿½gua do
 esgoto que cai torna a margem escorregadia.  Daqui ela cai, como uma cachoeira,
-para dentro da lagoa.  Abaixo de você há uma pequena fissura na rocha.  Parece
+para dentro da lagoa.  Abaixo de vocï¿½ hï¿½ uma pequena fissura na rocha.  Parece
 grande o bastante para conter algumas pessoas.
 ~
-70 ad 5
+70 9 0 0 0 5
 D0
-Você não vê nada.  Está muito escuro.
+Vocï¿½ nï¿½o vï¿½ nada.  Estï¿½ muito escuro.
 ~
 ~
 0 -1 7069
 D3
-Você não vê nada.  Está muito escuro.
+Vocï¿½ nï¿½o vï¿½ nada.  Estï¿½ muito escuro.
 ~
 ~
 0 -1 7066
@@ -1391,8 +1391,8 @@ D5
 ~
 0 -1 7000
 E
-água~
-É escura e espessa e emana um fedor terrível.
+ï¿½gua~
+ï¿½ escura e espessa e emana um fedor terrï¿½vel.
 ~
 S
-$
+$~
