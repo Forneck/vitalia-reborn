@@ -1,78 +1,78 @@
 ADVANCE
 
-Uso: advance <vítima> <nível>
+Uso: advance <vï¿½tima> <nï¿½vel>
 
-   ADVANCE promove ou rebaixa um jogador para um novo nível.
+   ADVANCE promove ou rebaixa um jogador para um novo nï¿½vel.
 
 Exemplo:
   > advance rasmussen 34
 
-Veja também: SET
+Veja tambï¿½m: SET
 #109
 ALIGN
 
 Uso: align [<valor>]
 
-   Este comando permite que qualquer imortal possa ajustar seu próprio
-alinhamento a qualquer momento.  Há sempre uma margem de erro.  Para um ajuste
+   Este comando permite que qualquer imortal possa ajustar seu prï¿½prio
+alinhamento a qualquer momento.  Hï¿½ sempre uma margem de erro.  Para um ajuste
 exato deve-se utilizar SET (apenas Deuses).
 
 Exemplos:
   > align
   > align +300
 
-Veja também: SET -> ALIGN
+Veja tambï¿½m: SET -> ALIGN
 #101
 APPEAR
 
 Uso: appear
 
-   Este comando permite que um Deus fique momentaneamente visível apenas
+   Este comando permite que um Deus fique momentaneamente visï¿½vel apenas
 para as pessoas que estiverem na mesma sala.  Assim, outros personagens,
-mesmo que possuam nível inferior ao nível de invisibilidade do Deus, que
-estiverem na mesma sala, serão capazes de vê-lo.
+mesmo que possuam nï¿½vel inferior ao nï¿½vel de invisibilidade do Deus, que
+estiverem na mesma sala, serï¿½o capazes de vï¿½-lo.
 
-   Qualquer comando que for digitado, que o faça sair da sala atual,
-anula automaticamente o efeito deste comando.  Recomenda-se, por segurança,
+   Qualquer comando que for digitado, que o faï¿½a sair da sala atual,
+anula automaticamente o efeito deste comando.  Recomenda-se, por seguranï¿½a,
 que esse comando seja usado apenas em salas com flag PRIVATE.
 
-   Para voltar ao estado normal, você pode sair da sala que estiver,
-usar o comando INVIS sem parâmetros, ou ainda, repetir o comando APPEAR.
+   Para voltar ao estado normal, vocï¿½ pode sair da sala que estiver,
+usar o comando INVIS sem parï¿½metros, ou ainda, repetir o comando APPEAR.
 
 Exemplo:
   < (i107) > appear
-  (agora, as pessoas na mesma sala que você podem lhe ver)
+  (agora, as pessoas na mesma sala que vocï¿½ podem lhe ver)
 
   < (a107) > goto 1204
-  (ao sair da sala, o efeito é automaticamente anulado)
+  (ao sair da sala, o efeito ï¿½ automaticamente anulado)
 
   < (i107) >
 
-Veja também: INVIS
+Veja tambï¿½m: INVIS
 #108
 APPROVE
 
 Uso: approve <nome> [ <nome> ... ]
 
-   Este comando aprova a inscrição de novos jogadores no VitaliaMUD.  Para
-saber quais jogadores esperam por autorição, utilize o comando INCOMERS.  Um
-ou mais nomes devem ser fornecidos ao comando, para realizar a aprovação.
+   Este comando aprova a inscriï¿½ï¿½o de novos jogadores no VitaliaMUD.  Para
+saber quais jogadores esperam por autoriï¿½ï¿½o, utilize o comando INCOMERS.  Um
+ou mais nomes devem ser fornecidos ao comando, para realizar a aprovaï¿½ï¿½o.
 
-   Ao aprovar um jogador, o MUD enviará um e-mail ao jogador contendo sua
+   Ao aprovar um jogador, o MUD enviarï¿½ um e-mail ao jogador contendo sua
 senha inicial de acesso.
 
 Exemplo:
   > approve rasmussen marloh
 
-   Importante: Consulte as regras para aprovação de jogadores antes de
+   Importante: Consulte as regras para aprovaï¿½ï¿½o de jogadores antes de
 utilizar este comando.
 
-Veja também: INCOMERS, REJECT
+Veja tambï¿½m: INCOMERS, REJECT
 #107
 ASSIGN UNASSIGN
 
-Uso: assign {sala|mob|obj} <número> <specproc>
-     unassign {sala|mob|obj} <número>
+Uso: assign {sala|mob|obj} <nï¿½mero> <specproc>
+     unassign {sala|mob|obj} <nï¿½mero>
 
    Estes comandos permitem atribuir ou desatribuir um procedimento special
 (SpecProc) a uma determinada sala, monstro ou objeto.
@@ -81,20 +81,20 @@ Exemplo:
   > assign mob 1202 puff
   > unassign room 3031
 
-   Observação: Quando atribuir procedimentos a monstros, lembre-se de
-ajustar a flag SPEC aos monstros que já estavam carregados antes da
-atribuição, ou eles não executarão as ações automáticas programadas no
+   Observaï¿½ï¿½o: Quando atribuir procedimentos a monstros, lembre-se de
+ajustar a flag SPEC aos monstros que jï¿½ estavam carregados antes da
+atribuiï¿½ï¿½o, ou eles nï¿½o executarï¿½o as aï¿½ï¿½es automï¿½ticas programadas no
 procedimento.
 
-Veja também: SHOW SPECIALS
+Veja tambï¿½m: SHOW SPECIALS
 #109
 AT
 
 Uso: at <VNUM sala | item | mob | jogador> <comando> <argumentos>
 
-   AT pode ser usado para realizar ações em qualquer outro local do mundo além
-do lugar que você está no momento.  O primeiro argument por ser o número de
-uma sala ou um nome de um personagem ou objeto.  O restante da linha é usado
+   AT pode ser usado para realizar aï¿½ï¿½es em qualquer outro local do mundo alï¿½m
+do lugar que vocï¿½ estï¿½ no momento.  O primeiro argument por ser o nï¿½mero de
+uma sala ou um nome de um personagem ou objeto.  O restante da linha ï¿½ usado
 como comando.
 
 Exemplos:
@@ -103,117 +103,117 @@ Exemplos:
   > at 3.corpse get all corpse
   > at catje wave catje
 
-Veja também: GOTO
+Veja tambï¿½m: GOTO
 #105
 BAN
 
-Uso: ban [-f] [-s] [-w] [-l <nível>] [-e[d|h|m] <duração>] [-i] <endereço>
+Uso: ban [-f] [-s] [-w] [-l <nï¿½vel>] [-e[d|h|m] <duraï¿½ï¿½o>] [-i] <endereï¿½o>
      ban
 
-   Este comando impede a entrada de jogadores, ou a criação de personagens de
-determinados endereços.  O sistema de bans implementado no VitaliaMUD é
-relativamente complexo.  Cada ban tem várias características que devem ser
-definidas no momento em que é criado.
+   Este comando impede a entrada de jogadores, ou a criaï¿½ï¿½o de personagens de
+determinados endereï¿½os.  O sistema de bans implementado no VitaliaMUD ï¿½
+relativamente complexo.  Cada ban tem vï¿½rias caracterï¿½sticas que devem ser
+definidas no momento em que ï¿½ criado.
 
    Se nenhum argumento for fornecido ao comando BAN, uma listagem de todos os
-bans será exibida.  A listagem é a mesma fornecida pelo comando SHOW BAN, você
+bans serï¿½ exibida.  A listagem ï¿½ a mesma fornecida pelo comando SHOW BAN, vocï¿½
 pode consultar a ajuda do comando SHOW BAN para entender esta listagem.
 
-   Caso qualquer argumento for fornecido, o MUD usará as informações forneci-
-das para criar um novo banimento.  É obrigatório fornecer o endereço que será
-banido.  Outras opções podem ser fornecidas para alterar a maneira que o ban
-será criado.
+   Caso qualquer argumento for fornecido, o MUD usarï¿½ as informaï¿½ï¿½es forneci-
+das para criar um novo banimento.  ï¿½ obrigatï¿½rio fornecer o endereï¿½o que serï¿½
+banido.  Outras opï¿½ï¿½es podem ser fornecidas para alterar a maneira que o ban
+serï¿½ criado.
 
-   As opções são:
+   As opï¿½ï¿½es sï¿½o:
 
-   -f    Cria um ban falso, que não impede ninguém de acessar o MUD. É parti-
-         cularmente útil em conjunto com '-w'.
+   -f    Cria um ban falso, que nï¿½o impede ninguï¿½m de acessar o MUD. ï¿½ parti-
+         cularmente ï¿½til em conjunto com '-w'.
 
-   -s    Cria um ban seletivo. Os jogadores que tiverem flag SITEOK poderão
+   -s    Cria um ban seletivo. Os jogadores que tiverem flag SITEOK poderï¿½o
          continuar acessando do site banido.
 
    -w    Faz com que o sistema alerte pelo syslog sempre que o ban for
-         atingido.  Caso você não deseje banir o site, e deseja apenas o
-         alerta, você pode utilizar esta opção em conjunto com '-f'.
+         atingido.  Caso vocï¿½ nï¿½o deseje banir o site, e deseja apenas o
+         alerta, vocï¿½ pode utilizar esta opï¿½ï¿½o em conjunto com '-f'.
 
-   -l <nível>
-         Define o nível do ban.  Apenas personagens de nível inferior ou igual
-         ao indicado atingirá o banimento. Caso for usado o nível 0 (zero),
-         o ban será atingido apenas nas tentativas de se criar novos persona-
-         gens.  Caso esta opção for omitida, será criado um ban total, nenhuma
-         conexão será aceita.
+   -l <nï¿½vel>
+         Define o nï¿½vel do ban.  Apenas personagens de nï¿½vel inferior ou igual
+         ao indicado atingirï¿½ o banimento. Caso for usado o nï¿½vel 0 (zero),
+         o ban serï¿½ atingido apenas nas tentativas de se criar novos persona-
+         gens.  Caso esta opï¿½ï¿½o for omitida, serï¿½ criado um ban total, nenhuma
+         conexï¿½o serï¿½ aceita.
 
    -e[d|h|m] <tempo>
-         Define por quanto tempo o banimento irá existir.  Após este tempo, o
-         banimento irá se expirar, e o sistema irá automaticamente eliminar o
-         ban.  Esta opção pode ser extendida para aceitar dias, horas ou minu-
-         tos.  Por padrão, dias é assumido.
+         Define por quanto tempo o banimento irï¿½ existir.  Apï¿½s este tempo, o
+         banimento irï¿½ se expirar, e o sistema irï¿½ automaticamente eliminar o
+         ban.  Esta opï¿½ï¿½o pode ser extendida para aceitar dias, horas ou minu-
+         tos.  Por padrï¿½o, dias ï¿½ assumido.
 
    -ed <dias>, -eh <horas>, -em <mins>
-         Estas são extensões da opção '-e'.  Você pode fornecer o tempo em que
-         o banimento irá se expirar em dias, horas ou minutos.
+         Estas sï¿½o extensï¿½es da opï¿½ï¿½o '-e'.  Vocï¿½ pode fornecer o tempo em que
+         o banimento irï¿½ se expirar em dias, horas ou minutos.
 
-   -i    Indica que o endereço será considerado como um endereço IP, no forma-
+   -i    Indica que o endereï¿½o serï¿½ considerado como um endereï¿½o IP, no forma-
          hexadecimal (veja a seguir).
 
-   Há duas formas de banir um endereço de acessar o MUD.
+   Hï¿½ duas formas de banir um endereï¿½o de acessar o MUD.
 
-   A primeira, mais comum, é utilizando o endereço em formato de nome.
-Supomos que seja necessário banir alguém que está usando o endereço
-'ppp-01.lammer.com' para se conectar ao MUD.  Neste caso, 'lammer.com' é o
-nome do provedor dele, e provavelmente na próxima vez que ele se conectar,
-estará usando um endereço diferente, por exemplo, 'ppp-15.lammer.com'.
+   A primeira, mais comum, ï¿½ utilizando o endereï¿½o em formato de nome.
+Supomos que seja necessï¿½rio banir alguï¿½m que estï¿½ usando o endereï¿½o
+'ppp-01.lammer.com' para se conectar ao MUD.  Neste caso, 'lammer.com' ï¿½ o
+nome do provedor dele, e provavelmente na prï¿½xima vez que ele se conectar,
+estarï¿½ usando um endereï¿½o diferente, por exemplo, 'ppp-15.lammer.com'.
 Para impedir a entrada desse jogador, deve-se banir '*.lammer.com'. O carac-
-tere '*' é um coringa, e indica que qualquer coisa pode estar alí.
+tere '*' ï¿½ um coringa, e indica que qualquer coisa pode estar alï¿½.
 
-   A segunda forma, mais segura, é utilizando o endereço em formato de número
-IP.  Banir um endereço em formato de número IP é mais complexo.  Antes de mais
-nada, é necessário entender como funciona uma máscara de IP.  A máscara é um
-número, de 0 a 32, que indica quantos bits do endereço deverão combinar para
-considerar que ele combina com o site banido.  Por exemplo, supondo que alguém
-usando o endereço 'ce0c5ca3' deva ser banido.  Neste caso, as próximas
-conexões deste usuário podem cair nos endereços 'ce0c5c17', 'ce0c5c9e' ou
-'ce0c5c6f'.  Cada um dos dígitos são 4 bits, e como sempre os 6 primeiros
-dígitos são iguais, indica que a máscara deve ser 24 (também conhecida como
-'Classe C').  Assim, o endereço IP a ser banido deve ser: 'ce0c5c00/24'.
+   A segunda forma, mais segura, ï¿½ utilizando o endereï¿½o em formato de nï¿½mero
+IP.  Banir um endereï¿½o em formato de nï¿½mero IP ï¿½ mais complexo.  Antes de mais
+nada, ï¿½ necessï¿½rio entender como funciona uma mï¿½scara de IP.  A mï¿½scara ï¿½ um
+nï¿½mero, de 0 a 32, que indica quantos bits do endereï¿½o deverï¿½o combinar para
+considerar que ele combina com o site banido.  Por exemplo, supondo que alguï¿½m
+usando o endereï¿½o 'ce0c5ca3' deva ser banido.  Neste caso, as prï¿½ximas
+conexï¿½es deste usuï¿½rio podem cair nos endereï¿½os 'ce0c5c17', 'ce0c5c9e' ou
+'ce0c5c6f'.  Cada um dos dï¿½gitos sï¿½o 4 bits, e como sempre os 6 primeiros
+dï¿½gitos sï¿½o iguais, indica que a mï¿½scara deve ser 24 (tambï¿½m conhecida como
+'Classe C').  Assim, o endereï¿½o IP a ser banido deve ser: 'ce0c5c00/24'.
 
-   Felizmente, o MUD já reconhece a Classe padrão do endereço, e se o prove-
-dor não utilizar um endereço diferente do padrão, bastará fornecer o IP que
-o MUD já irá escolher a máscara correta.
+   Felizmente, o MUD jï¿½ reconhece a Classe padrï¿½o do endereï¿½o, e se o prove-
+dor nï¿½o utilizar um endereï¿½o diferente do padrï¿½o, bastarï¿½ fornecer o IP que
+o MUD jï¿½ irï¿½ escolher a mï¿½scara correta.
 
-   Em todo ban que for criado, o MUD irá pedir para descrever o motivo que
+   Em todo ban que for criado, o MUD irï¿½ pedir para descrever o motivo que
 leva o site a ser banido do MUD.  Basta explicar brevemente quem deve ser
-mantido longe do MUD pelo ban, o que este fez e quaisquer outras informações
-que forem úteis para futura referência.  No caso de banimentos com alerta,
-utilize a primeira linha desta descrição para uma referência rápida, pois
-ela será exibida nas mensagens de alerta geradas pelo sistema.
+mantido longe do MUD pelo ban, o que este fez e quaisquer outras informaï¿½ï¿½es
+que forem ï¿½teis para futura referï¿½ncia.  No caso de banimentos com alerta,
+utilize a primeira linha desta descriï¿½ï¿½o para uma referï¿½ncia rï¿½pida, pois
+ela serï¿½ exibida nas mensagens de alerta geradas pelo sistema.
 
 Exemplos:
 
   > ban -f -w -i c8e71932
-  Isto emite um alerta sempre que qualquer conexão cujo endereço combine com
-  c8e71900/24. Não impede de conectar, a máscara é gerada automaticamente.
+  Isto emite um alerta sempre que qualquer conexï¿½o cujo endereï¿½o combine com
+  c8e71900/24. Nï¿½o impede de conectar, a mï¿½scara ï¿½ gerada automaticamente.
 
   > ban -s *.supeito.com.br
   Faz com que apenas jogadores com flag de SITEOK conectem-se usando um
-  endereço que termine com '.suspeito.com.br'.
+  endereï¿½o que termine com '.suspeito.com.br'.
 
   > ban -l 0 -ed 5 *.foo.com
-  Impede que novos jogadores sejam criados de qualquer conexão vinda de
-  'foo.com'. Após 5 dias o ban é eliminado automaticamente.
+  Impede que novos jogadores sejam criados de qualquer conexï¿½o vinda de
+  'foo.com'. Apï¿½s 5 dias o ban ï¿½ eliminado automaticamente.
 
-Veja também: WIZLOCK, UNBAN, SHOW BAN
+Veja tambï¿½m: WIZLOCK, UNBAN, SHOW BAN
 #108
 CATCH
 
-Uso: catch <objeto> <vítima>
+Uso: catch <objeto> <vï¿½tima>
 
    Este comando serve para tomar um objeto de um determinado personagem.  O
-objeto pode estar tanto equipado quanto no inventário.  A vítima não recebe
+objeto pode estar tanto equipado quanto no inventï¿½rio.  A vï¿½tima nï¿½o recebe
 nenhuma mensagem avisando da perda do item.
 
-   O uso deste comando é registrado no SysLog quando usado em jogadores
-(PCs).  É possível tomar vários objetos ao mesmo tempo.
+   O uso deste comando ï¿½ registrado no SysLog quando usado em jogadores
+(PCs).  ï¿½ possï¿½vel tomar vï¿½rios objetos ao mesmo tempo.
 
 Exemplos:
   > catch gyroscope rasmussen
@@ -226,9 +226,9 @@ CHPASS
 Uso: chpass <jogador>
 
    Este comando faz com que o MUD sorteie uma nova senha para um determinado
-jogador.  A senha é enviada automaticamente por e-mail para o jogador.
+jogador.  A senha ï¿½ enviada automaticamente por e-mail para o jogador.
 
-   Este comando não pode ser usado se o jogador não houver registrado seu
+   Este comando nï¿½o pode ser usado se o jogador nï¿½o houver registrado seu
 e-mail no MUD.
 
 Exemplo:
@@ -239,45 +239,45 @@ CLADMIN
 Uso: cladmin create <cluster> [child-of <cluster>]
      cladmin delete <cluster>
      cladmin info <cluster>
-     cladmin descr <cluster> <descrição>
-     cladmin admin <cluster> <nível>|<cluster>
+     cladmin descr <cluster> <descriï¿½ï¿½o>
+     cladmin admin <cluster> <nï¿½vel>|<cluster>
 
    Esses comandos servem para administrar os "clusters" de jogadores do
-VitaliaMUD.  Clusters são grupos de jogadores que possuem um acesso em comum
+VitaliaMUD.  Clusters sï¿½o grupos de jogadores que possuem um acesso em comum
 a algum recurso do VitaliaMUD.  Os clusters podem ser usados para, por
 exemplo, controlar quais jogadores podem entrar em uma determinada sala,
 usar um determinado comando (como o journal), ou simplesmente estar presente
 em alguma listagem (como o herolist).
 
-   Um cluster, além de jogadores, pode conter outros clusters.  Todos os
-jogadores pertencentes aos clusters "filhos" também pertencem ao cluster
-"pai", mas não o inverso (há uma forte semelhança com a teoria dos
+   Um cluster, alï¿½m de jogadores, pode conter outros clusters.  Todos os
+jogadores pertencentes aos clusters "filhos" tambï¿½m pertencem ao cluster
+"pai", mas nï¿½o o inverso (hï¿½ uma forte semelhanï¿½a com a teoria dos
 conjuntos).
 
    Para adicionar ou remover jogadores de um cluster, usa-se o comando
-CLUSTER.  Para isso, deve-se ter um nível adequado para controlar o cluster,
+CLUSTER.  Para isso, deve-se ter um nï¿½vel adequado para controlar o cluster,
 ou pertencer a um outro determinado cluster.
 
    Os comandos listados acima servem para, respectivamente: criar um novo
 cluster, apagar um cluster existente (e todos os clusters filhos, se
-existirem), mostrar informações sobre um determinado cluster, alterar a
-descrição de um cluster e alterar o nível ou o cluster de administração de
+existirem), mostrar informaï¿½ï¿½es sobre um determinado cluster, alterar a
+descriï¿½ï¿½o de um cluster e alterar o nï¿½vel ou o cluster de administraï¿½ï¿½o de
 um cluster.
 
-Veja também: CLUSTER
+Veja tambï¿½m: CLUSTER
 #110
 CLUSTER
 
 Uso: cluster [<cluster> [+<jogador> ...] [-<jogador> ...]]
 
-   Esse comando serve para mostrar os clusters que você tem acesso, ou
-adicionar/remover jogadores de um cluster que você tenha acesso.
+   Esse comando serve para mostrar os clusters que vocï¿½ tem acesso, ou
+adicionar/remover jogadores de um cluster que vocï¿½ tenha acesso.
 
-   Para mostrar os clusters que você tem acesso, basta digitar CLUSTER sem
-nenhum parâmetro.  O comando CLUSTER, quando seguido apenas do nome de um
-cluster, mostra informações relacionadas ao cluster.  No caso anterior, se
+   Para mostrar os clusters que vocï¿½ tem acesso, basta digitar CLUSTER sem
+nenhum parï¿½metro.  O comando CLUSTER, quando seguido apenas do nome de um
+cluster, mostra informaï¿½ï¿½es relacionadas ao cluster.  No caso anterior, se
 for fornecido nomes de jogadores, precedidos de + (mais) ou - (menos), estes
-jogadores serão adicionados ou removidos do cluster em questão.
+jogadores serï¿½o adicionados ou removidos do cluster em questï¿½o.
 
    Exemplos:
       > cluster
@@ -286,13 +286,13 @@ jogadores serão adicionados ou removidos do cluster em questão.
 #101
 CMDTIMER
 
-Uso: cmdtimer <comando> <parâmetros do comando>
+Uso: cmdtimer <comando> <parï¿½metros do comando>
 
    Este simples comando serve para medir quanto tempo o MUD gasta para
-processar cada comando.  Apenas o tempo de processamento é medido.
+processar cada comando.  Apenas o tempo de processamento ï¿½ medido.
 
-   A finalidade deste comando é testar a performance dos vários comandos do
-MUD, ou detectar possíveis falhas que causem o congelamento momentâneo do
+   A finalidade deste comando ï¿½ testar a performance dos vï¿½rios comandos do
+MUD, ou detectar possï¿½veis falhas que causem o congelamento momentï¿½neo do
 sistema.
 
 Exemplo:
@@ -302,51 +302,51 @@ COREDUMP
 
 Uso: coredump
 
-   Gera um "arquivo de estado", também conhecido como "coredump", no
-computador onde o VitaliaMUD está sendo executado, permitindo a análise do
+   Gera um "arquivo de estado", tambï¿½m conhecido como "coredump", no
+computador onde o VitaliaMUD estï¿½ sendo executado, permitindo a anï¿½lise do
 estado atual do MUD com o uso de uma ferramenta de "debug".
 #110
 CSTFLAG
 
 Uso: cstflag <jogador> [+<flag>...] [-<flag>...]
 
-   Esse comando é usado para ajustar flags personalizadas nos jogadores.
+   Esse comando ï¿½ usado para ajustar flags personalizadas nos jogadores.
 Use +flag para ativar uma flag e -flag para desativar.  Pode-se ativar e/ou
-desativar várias flags com um único comando.  As flags existentes são:
+desativar vï¿½rias flags com um ï¿½nico comando.  As flags existentes sï¿½o:
 
-   0: INIC             jogador já recebeu instruções de jogo dos Deuses
+   0: INIC             jogador jï¿½ recebeu instruï¿½ï¿½es de jogo dos Deuses
 
    Exemplo:
       > cstflag rasmussen +inic -newbie
 
-Veja também: STAT
+Veja tambï¿½m: STAT
 #101
 DATE
 
-   Mostra a data e hora reais, no servidor onde o MUD é executado.
+   Mostra a data e hora reais, no servidor onde o MUD ï¿½ executado.
 #105
 DC
 
-Uso: dc <número da conexão>
+Uso: dc <nï¿½mero da conexï¿½o>
      dc <nome do jogador>
 
-   DC (DisConnect) é usado para encerrar a conexão de um jogador.  Se for
-usado na conexão de um jogador dentro do jogo, este irá perder seu link,
-mas diferente do comando PURGE, não será extraído do jogo.
+   DC (DisConnect) ï¿½ usado para encerrar a conexï¿½o de um jogador.  Se for
+usado na conexï¿½o de um jogador dentro do jogo, este irï¿½ perder seu link,
+mas diferente do comando PURGE, nï¿½o serï¿½ extraï¿½do do jogo.
 
-   DC pode receber como argumento, tanto o número da conexão a ser encerrada
+   DC pode receber como argumento, tanto o nï¿½mero da conexï¿½o a ser encerrada
 (de acordo com o comando USERS), ou o nome do jogador.
 
-Veja também: USERS
+Veja tambï¿½m: USERS
 #107
 DEBIT
 
 Uso: debit <jogador> <valor>
 
-   Debita um determinado valor da conta bancária de um jogador.  O jogador
-não precisa estar online.
+   Debita um determinado valor da conta bancï¿½ria de um jogador.  O jogador
+nï¿½o precisa estar online.
 
-Veja também: SET
+Veja tambï¿½m: SET
 #108
 ECHO GECHO QECHO
 
@@ -359,62 +359,62 @@ estiverem na sala.  GECHO mostra a frase para todos os jogadores conectados.
 QECHO mostra a frase para todos os participantes da QUEST atual.
 
 Exemplos:
-  > echo Olá a todos na sala.
-  > gecho Olá a todos no jogo, isso aquí não é aborrecedor?
+  > echo Olï¿½ a todos na sala.
+  > gecho Olï¿½ a todos no jogo, isso aquï¿½ nï¿½o ï¿½ aborrecedor?
 #105
 FORCE
 
-Uso: force <vítima> <comando> <argumentos>
+Uso: force <vï¿½tima> <comando> <argumentos>
      force todos|sala <comando> <argumentos>
 
-   FORCE força um personagem, tanto monstro como jogador, a fazer uma
-determinada ação.  FORCE TODOS força todos os jogadores no jogo; FORCE SALA
-força todos na sala.
+   FORCE forï¿½a um personagem, tanto monstro como jogador, a fazer uma
+determinada aï¿½ï¿½o.  FORCE TODOS forï¿½a todos os jogadores no jogo; FORCE SALA
+forï¿½a todos na sala.
 
 Exemplo:
   > force fido drop carne
   > force todos save
   > force sala look fido
 
-   Se você estiver invisível para quem está sendo forçado, o comando será
+   Se vocï¿½ estiver invisï¿½vel para quem estï¿½ sendo forï¿½ado, o comando serï¿½
 executado silenciosamente.
 #107
 FREEZE THAW
 
-Uso: freeze <vítima>
-     thaw <vítima>
+Uso: freeze <vï¿½tima>
+     thaw <vï¿½tima>
 
    O comando FREEZE permite impedir que um jogador jogue, congelando-o.
-Enquanto estiver congelado, o jogador ficará incapacitado de usar qualquer
-comando, inclindo QUIT, até que seja descongelado pelo comando THAW.
+Enquanto estiver congelado, o jogador ficarï¿½ incapacitado de usar qualquer
+comando, inclindo QUIT, atï¿½ que seja descongelado pelo comando THAW.
 
-   Evidentemente, este comando deve ser usado apenas em situações extremas.
+   Evidentemente, este comando deve ser usado apenas em situaï¿½ï¿½es extremas.
 
-Veja também: JAIL, FREE
+Veja tambï¿½m: JAIL, FREE
 #108
 GOTO
 
 Uso: goto <destino>
 
-   Este comando serve para você se transportar para diferentes salas do jogo.
-O destino pode ser o número de uma sala, o nome-de-atalho de uma sala, ou o
+   Este comando serve para vocï¿½ se transportar para diferentes salas do jogo.
+O destino pode ser o nï¿½mero de uma sala, o nome-de-atalho de uma sala, ou o
 nome de um objeto ou monstro no jogo.
 
    Os nomes-de-atalho das salas podem ser vistos apenas pelos imortais
-mais elevados, através do comando SHOW RALIAS.
+mais elevados, atravï¿½s do comando SHOW RALIAS.
 
 Exemplos:
   > goto 3001
   > goto rasmussen
   > goto midgaard
 
-Veja também: SHOW RALIAS, POOFIN, POOFOUT, AT
+Veja tambï¿½m: SHOW RALIAS, POOFIN, POOFOUT, AT
 #101
 HANDBOOK
 
 Uso: handbook
 
-   Regras para ter um personagem imortal -- você deve ler!!!
+   Regras para ter um personagem imortal -- vocï¿½ deve ler!!!
 #101
 HCLASS
 
@@ -423,117 +423,117 @@ Uso: hclass create <classe> <tipo>
      hclass info <classe>
      hclass set <classe> [ <campo> <valor> ]
 
-   Este comando é usado para criar, apagar ou administrar classes de casas.
+   Este comando ï¿½ usado para criar, apagar ou administrar classes de casas.
 
    O comando HCLASS CREATE cria uma nova classe de casas, com o nome
-<classe>, do tipo <tipo>.  A partir de então, a classe poderá ser utilizada
+<classe>, do tipo <tipo>.  A partir de entï¿½o, a classe poderï¿½ ser utilizada
 para criar novas casas.
 
-   O comando HCLASS DELETE apaga uma classe de casa que não esteja mais
-sendo utilizada.  Não é possível apagar uma classe que ainda possua casas.
+   O comando HCLASS DELETE apaga uma classe de casa que nï¿½o esteja mais
+sendo utilizada.  Nï¿½o ï¿½ possï¿½vel apagar uma classe que ainda possua casas.
 
-   O comando HCLASS INFO simplesmente mostra as informações sobre uma
+   O comando HCLASS INFO simplesmente mostra as informaï¿½ï¿½es sobre uma
 determinada classe de casas.
 
-   O comando HCLASS SET altera os parâmetros de uma classe de casas.  Use
-este comando para alterar informações como: salvamento de objetos, aluguel e
-limites de objetos e hóspedes das casas da classe em questão.  Se os dois
-últimos argumentos (campo e valor) forem omitido, uma lista dos campos
-possíveis será mostrada.
+   O comando HCLASS SET altera os parï¿½metros de uma classe de casas.  Use
+este comando para alterar informaï¿½ï¿½es como: salvamento de objetos, aluguel e
+limites de objetos e hï¿½spedes das casas da classe em questï¿½o.  Se os dois
+ï¿½ltimos argumentos (campo e valor) forem omitido, uma lista dos campos
+possï¿½veis serï¿½ mostrada.
 
-Veja também: HCONTROL
+Veja tambï¿½m: HCONTROL
 #109
 HCONTROL
 
-Uso: hcontrol build <sala> <classe> [proprietário]
+Uso: hcontrol build <sala> <classe> [proprietï¿½rio]
      hcontrol destroy <casa>
      hcontrol pay <casa>
      hcontrol rental <casa>|<jogador>
      hcontrol list [classe] [overdue]
      hcontrol set <casa> <campo> <valor>
 
-   Este comando controla a adição, remoção e pagamento de casas.
+   Este comando controla a adiï¿½ï¿½o, remoï¿½ï¿½o e pagamento de casas.
 
    Consulte a ajuda para cada subcomando (ex: HELP HCONTROL BUILD).
 
-Veja também: HOUSE, HCLASS, CASAS.
+Veja tambï¿½m: HOUSE, HCLASS, CASAS.
 #108
 "HCONTROL BUILD" "HC BUILD"
 
-Uso: hcontrol build <sala> <classe> [<proprietário>]
+Uso: hcontrol build <sala> <classe> [<proprietï¿½rio>]
 
-   Esse comando é usado para criar novas casas no VitaliaMUD.  Cada casa
-deve obrigatoriamente pertencer a uma "classe" (não confunda com as classes
-de personagens).  Cada classe de casas define características comuns a várias
-casas, como tipo (privada, pública, etc), limite de objetos, valor do aluguel,
+   Esse comando ï¿½ usado para criar novas casas no VitaliaMUD.  Cada casa
+deve obrigatoriamente pertencer a uma "classe" (nï¿½o confunda com as classes
+de personagens).  Cada classe de casas define caracterï¿½sticas comuns a vï¿½rias
+casas, como tipo (privada, pï¿½blica, etc), limite de objetos, valor do aluguel,
 etc.
 
-   Você pode obter uma lista das classes definidas pelo comando HCONTROL
-LIST.  Entre as informações que cada classe define está o &Wtipo da casa&n, que
-define o tipo de proprietário que deverá ser fornecido ao comando HCONTROL
-BUILD.  Há 5 tipos de casas que podem ser definidos nas classes de casas:
-&gprivate&n (casas particulares, possivelmente com hóspedes), &gpublic&n (casas
-públicas, de livre acesso), &gclan&n (casas para clãs, onde apenas membros podem
-entrar), &gspecial&n (casas controladas por spec-procs) e &gcluster&n (acesso
+   Vocï¿½ pode obter uma lista das classes definidas pelo comando HCONTROL
+LIST.  Entre as informaï¿½ï¿½es que cada classe define estï¿½ o @Wtipo da casa@n, que
+define o tipo de proprietï¿½rio que deverï¿½ ser fornecido ao comando HCONTROL
+BUILD.  Hï¿½ 5 tipos de casas que podem ser definidos nas classes de casas:
+@gprivate@n (casas particulares, possivelmente com hï¿½spedes), @gpublic@n (casas
+pï¿½blicas, de livre acesso), @gclan@n (casas para clï¿½s, onde apenas membros podem
+entrar), @gspecial@n (casas controladas por spec-procs) e @gcluster@n (acesso
 permitido a jogadores pertencentes a um determinado cluster).
 
-   &WObs:&n Evite confundir a classe da casa com o seu tipo.  O tipo da casa é
-definido na classe, e é a classe que deve ser fornecida ao comando HCONTROL
-BUILD.  Por exemplo, para criar uma casa particular em Midgaard, você deve
-usar a classe &gpriv-midgaard&n, que por sua vez é do tipo private.
+   @WObs:@n Evite confundir a classe da casa com o seu tipo.  O tipo da casa ï¿½
+definido na classe, e ï¿½ a classe que deve ser fornecida ao comando HCONTROL
+BUILD.  Por exemplo, para criar uma casa particular em Midgaard, vocï¿½ deve
+usar a classe @gpriv-midgaard@n, que por sua vez ï¿½ do tipo private.
 
-   &cCasas particulares (private)&n:
-   Para casas particulares, você deve fornecer o nome do jogador que será o
-proprietário da casa, ou "nobody" se a casa não possuir proprietário ainda
-(para marcar o lugar de uma futura casa).  Uma casa com o proprietário
-"nobody" será destacada em marrom no comando HCONTROL LIST e não permitirá
-que qualquer jogador as acessem.  O proprietário da casa poderá ser alterado
-mais adiante através do comando HCONTROL SET.
+   @cCasas particulares (private)@n:
+   Para casas particulares, vocï¿½ deve fornecer o nome do jogador que serï¿½ o
+proprietï¿½rio da casa, ou "nobody" se a casa nï¿½o possuir proprietï¿½rio ainda
+(para marcar o lugar de uma futura casa).  Uma casa com o proprietï¿½rio
+"nobody" serï¿½ destacada em marrom no comando HCONTROL LIST e nï¿½o permitirï¿½
+que qualquer jogador as acessem.  O proprietï¿½rio da casa poderï¿½ ser alterado
+mais adiante atravï¿½s do comando HCONTROL SET.
 
    Ex:> hc build 1050 priv-midgaard rasmussen
       > hc build 12509 priv-nthalos nobody
 
-   &cCasas públicas (public)&n:
-   Casas públicas servem apenas para salvar objetos em salas de livre acesso,
-para que possam ser recuperadas após uma queda ou fechamento do MUD.  Um
-típico exemplo de casa pública é a sala de doações: espera-se que todo o
-conteúdo da sala de doações se mantenha durante um fechamento do MUD.  Nenhum
-proprietário deve ser fornecido nesse caso.
+   @cCasas pï¿½blicas (public)@n:
+   Casas pï¿½blicas servem apenas para salvar objetos em salas de livre acesso,
+para que possam ser recuperadas apï¿½s uma queda ou fechamento do MUD.  Um
+tï¿½pico exemplo de casa pï¿½blica ï¿½ a sala de doaï¿½ï¿½es: espera-se que todo o
+conteï¿½do da sala de doaï¿½ï¿½es se mantenha durante um fechamento do MUD.  Nenhum
+proprietï¿½rio deve ser fornecido nesse caso.
 
    Ex:> hc build 3063 public
 
-   &cCasas de clãs (clan)&n:
-   Para casas de clãs, você deve fornecer o nome ou número do clã que será o
-proprietário da casa.  Opcionalmente, você pode fornecer o posto mínimo dentro
-do clã (de acordo com o CLAN INFO) que será necessário para entrar na sala.
+   @cCasas de clï¿½s (clan)@n:
+   Para casas de clï¿½s, vocï¿½ deve fornecer o nome ou nï¿½mero do clï¿½ que serï¿½ o
+proprietï¿½rio da casa.  Opcionalmente, vocï¿½ pode fornecer o posto mï¿½nimo dentro
+do clï¿½ (de acordo com o CLAN INFO) que serï¿½ necessï¿½rio para entrar na sala.
 
    Ex:> hc build 2001 clan 11
       > hc build 2008 clan-saved 11 4
 
-   &cCasas de spec-procs (special)&n:
-   Para casas de spec-procs, você deve fornecer apenas o nome da spec-proc de
-sala que será consultada para saber se um determinado jogador pode entrar na
-sala.  Apenas spec-procs específicas podem servir para esse propósito.
+   @cCasas de spec-procs (special)@n:
+   Para casas de spec-procs, vocï¿½ deve fornecer apenas o nome da spec-proc de
+sala que serï¿½ consultada para saber se um determinado jogador pode entrar na
+sala.  Apenas spec-procs especï¿½ficas podem servir para esse propï¿½sito.
 
    Ex:> hc build 22021 special journal-room
 
-   &cCasas de clusters (cluster)&n:
-   Para casas de clusters, você deve fornecer o nome do cluster que contém os
-jogadores que poderão entrar na casa.
+   @cCasas de clusters (cluster)@n:
+   Para casas de clusters, vocï¿½ deve fornecer o nome do cluster que contï¿½m os
+jogadores que poderï¿½o entrar na casa.
 
    Ex:> hc build 20023 cluster journal-mng
 
-Veja também: HCONTROL, HCLASS, HOUSE
+Veja tambï¿½m: HCONTROL, HCLASS, HOUSE
 #108
 "HCONTROL DESTROY" "HC DESTROY"
 
 Uso: hcontrol destroy <casa>
 
-   Esse comando apaga uma determinada casa.  O acesso à sala torna-se livre,
-e o MUD não mais salvará o conteúdo da sala.  Esse comando não remove os
+   Esse comando apaga uma determinada casa.  O acesso ï¿½ sala torna-se livre,
+e o MUD nï¿½o mais salvarï¿½ o conteï¿½do da sala.  Esse comando nï¿½o remove os
 objetos da casa.
 
-Veja também: HCONTROL, HCONTROL BUILD
+Veja tambï¿½m: HCONTROL, HCONTROL BUILD
 #108
 "HCONTROL LIST" "HC LIST" "SHOW HOUSES"
 
@@ -551,15 +551,15 @@ os seguintes argumentos:
         Mostra as casas de todas as classes.
 
    overdue
-        Quando o argumento "overdue" é especificado, apenas as casas tipo
-        private e que estejam com o pagamento atrasado serão mostradas.
+        Quando o argumento "overdue" ï¿½ especificado, apenas as casas tipo
+        private e que estejam com o pagamento atrasado serï¿½o mostradas.
 
    owner <prop>
-        Apenas as casas do tipo private e cujo proprietário seja <prop>
-        serão mostradas.  "owner nobody" mostra apenas as casas sem
-        proprietário.
+        Apenas as casas do tipo private e cujo proprietï¿½rio seja <prop>
+        serï¿½o mostradas.  "owner nobody" mostra apenas as casas sem
+        proprietï¿½rio.
 
-   Se nenhum argumento for fornecido, as classes disponíveis serão listadas.
+   Se nenhum argumento for fornecido, as classes disponï¿½veis serï¿½o listadas.
 
    Exemplos:
       > hc list
@@ -567,71 +567,71 @@ os seguintes argumentos:
       > hc list overdue
       > hc list owner rasmussen
 
-Veja também: HCONTROL
+Veja tambï¿½m: HCONTROL
 #108
 "HCONTROL PAY" "HC PAY"
 
 Uso: hcontrol pay <casa>
 
-   Esse comando registra o pagamento de uma determinada casa.  Atualmente, é
-preferível o uso do comando HCONTROL RENTAL, que faz o débito e registra o
+   Esse comando registra o pagamento de uma determinada casa.  Atualmente, ï¿½
+preferï¿½vel o uso do comando HCONTROL RENTAL, que faz o dï¿½bito e registra o
 pagamento simultaneamente.
 
-Veja também: HCONTROL, HCONTROL RENTAL
+Veja tambï¿½m: HCONTROL, HCONTROL RENTAL
 #108
 "HCONTROL RENTAL" "HC RENTAL"
 
 Uso: hcontrol rental <casa>
      hcontrol rental <jogador>
 
-   Para casas particulares (private), este comando efetua o débito do valor
-do aluguel da conta do jogador, e também registra o pagamento da casa.  Caso
-seja fornecido o nome do jogador, ao invés do número da casa, todas as casas
-que pertencerem a este jogador serão cobradas.
+   Para casas particulares (private), este comando efetua o dï¿½bito do valor
+do aluguel da conta do jogador, e tambï¿½m registra o pagamento da casa.  Caso
+seja fornecido o nome do jogador, ao invï¿½s do nï¿½mero da casa, todas as casas
+que pertencerem a este jogador serï¿½o cobradas.
 
    Exemplos:
    > hc rental 1050
 
-Veja também: HCONTROL, HCONTROL PAY
+Veja tambï¿½m: HCONTROL, HCONTROL PAY
 #108
 "HCONTROL SET" "HC SET"
 
 Uso: hcontrol set <casa> <campo> <valor>
 
-   Esse comando é usado para alterar campos relacionados a determinada casa.
-Os campos possíveis são:
+   Esse comando ï¿½ usado para alterar campos relacionados a determinada casa.
+Os campos possï¿½veis sï¿½o:
 
-   &cclass&n:
-   Altera a classe da casa.  Apesar de ser possível alterar a classe, não é
-possível alterar o tipo.  Se a casa pertence a uma classe do tipo "private",
-a nova classe também deve ser do tipo "private".  Para alterar o tipo da
-casa, deve-se destruí-la e criá-la novamente.
+   @cclass@n:
+   Altera a classe da casa.  Apesar de ser possï¿½vel alterar a classe, nï¿½o ï¿½
+possï¿½vel alterar o tipo.  Se a casa pertence a uma classe do tipo "private",
+a nova classe tambï¿½m deve ser do tipo "private".  Para alterar o tipo da
+casa, deve-se destruï¿½-la e criï¿½-la novamente.
 
    Ex:> hc set 1051 class priv-nthalos
 
-   &cowner&n:
-   Altera o proprietário de casas particulares.  Esse comando não altera a
-lista de hóspedes da casa, portanto, cabe a você se certificar que ela está
-consistente com o novo proprietário da casa (talvez ela deve ser limpa).
+   @cowner@n:
+   Altera o proprietï¿½rio de casas particulares.  Esse comando nï¿½o altera a
+lista de hï¿½spedes da casa, portanto, cabe a vocï¿½ se certificar que ela estï¿½
+consistente com o novo proprietï¿½rio da casa (talvez ela deve ser limpa).
 
    Ex:> hc set 1051 owner nobody
 
-   &cclan&n, &crank&n:
-   Alteram o clã ou o posto necessários para entrar na casa de clã.  Ao
-alterar o clã, o posto (rank) é automaticamente zerado.
+   @cclan@n, @crank@n:
+   Alteram o clï¿½ ou o posto necessï¿½rios para entrar na casa de clï¿½.  Ao
+alterar o clï¿½, o posto (rank) ï¿½ automaticamente zerado.
 
    Ex:> hc set 2001 clan 12
       > hc set 2008 rank 4
 
-   &ccluster&n:
-   Altera o cluster que terá permissão para entrar na casa de cluster.
+   @ccluster@n:
+   Altera o cluster que terï¿½ permissï¿½o para entrar na casa de cluster.
 
    Ex:> hc set 1200 cluster meeting
 
-   &WObs:&n Para alterar a spec-proc a ser executada em casas "special",
+   @WObs:@n Para alterar a spec-proc a ser executada em casas "special",
 pode-se usar o comando ASSIGN ROOM.
 
-Veja também: HCONTROL, HCONTROL BUILD
+Veja tambï¿½m: HCONTROL, HCONTROL BUILD
 #108
 HERETIC
 
@@ -639,22 +639,22 @@ Uso: heretic <jogador>
 
    O comando HERETIC permite impedir que um jogador use o canal PRAY para
 se comunicar com os Deuses, evitando assim que o canal PRAY seja entulhado
-de mensagens sem conteúdo.
+de mensagens sem conteï¿½do.
 
-Veja também: MUTE
+Veja tambï¿½m: MUTE
 #107
 HOLYLIGHT
 
 Uso: holylight
 
-   Esta chave permite que você veja personagens e objetos invisíveis,
-personagens ocultos, personagens mortos (espíritos), ou salas escuras sem
-que você precise usar as magias 'detect invisibility', 'sense life',
+   Esta chave permite que vocï¿½ veja personagens e objetos invisï¿½veis,
+personagens ocultos, personagens mortos (espï¿½ritos), ou salas escuras sem
+que vocï¿½ precise usar as magias 'detect invisibility', 'sense life',
 'talk with dead', 'infravision', ou carregar uma luz.
 
-   É esperado que a maioria dos imortais mantenham o HOLYLIGHT ligado a maior
-parte do tempo.  Este comando existe para que você tenha a habilidade de ver
-o mesmo que os mortais vêem, para fins de depuração de defeitos.
+   ï¿½ esperado que a maioria dos imortais mantenham o HOLYLIGHT ligado a maior
+parte do tempo.  Este comando existe para que vocï¿½ tenha a habilidade de ver
+o mesmo que os mortais vï¿½em, para fins de depuraï¿½ï¿½o de defeitos.
 #101
 HOLYPOWER
 
@@ -662,85 +662,85 @@ Uso: holypower
 
    Esta chave permite ativar ou desativar os seguintes poderes divinos:
 - (106) A habilidade de abrir e fechar portas DN_OPEN e DN_CLOSE.
-- (106) Ler/escrever em quadros de clãs sem pertencer ao clã.
+- (106) Ler/escrever em quadros de clï¿½s sem pertencer ao clï¿½.
 - (106) A habilidade de falar em salas SOUNDPROOF.
-- (106) Comer objetos que não sejam comida.
+- (106) Comer objetos que nï¿½o sejam comida.
 - (106) Passar por portas fechadas.
-- (106) Comprar em lojas a qualquer horário.
-- (106) Lançar magias sem precisar de mana.
-- (106) Comando WHERE aperfeiçoado.
-- (106) Entrar em casas de clãs.
+- (106) Comprar em lojas a qualquer horï¿½rio.
+- (106) Lanï¿½ar magias sem precisar de mana.
+- (106) Comando WHERE aperfeiï¿½oado.
+- (106) Entrar em casas de clï¿½s.
 - (107) Escrever em quadros estando mudo (MUTE).
-- (107) Escrever avisos em quadros de clãs.
-- (107) Moderar quadros de clãs.
-- (107) Matricular/desmatricular membros de clãs.
+- (107) Escrever avisos em quadros de clï¿½s.
+- (107) Moderar quadros de clï¿½s.
+- (107) Matricular/desmatricular membros de clï¿½s.
 - (107) Imunidade a Wait-states.
-- (107) Soltar/descartar objetos amaldiçoados.
+- (107) Soltar/descartar objetos amaldiï¿½oados.
 - (107) Soltar/entregar mais moedas do que possui.
-- (107) Entregar mais objetos/peso do que a vítima pode agüentar.
+- (107) Entregar mais objetos/peso do que a vï¿½tima pode agï¿½entar.
 - (107) Manusear corpos de jogadores.
 - (107) Trancar/destrancar portas sem a chave adequada.
 - (107) Usar '\' nos comandos ECHO, GECHO, e WIZNET.
-- (107) Magias com duração ilimitada (não implementado ainda).
+- (107) Magias com duraï¿½ï¿½o ilimitada (nï¿½o implementado ainda).
 - (108) Entrar em casas privadas.
-- (108) Adicionar hóspedes imortais a casas de mortais.
+- (108) Adicionar hï¿½spedes imortais a casas de mortais.
 - (108) Iniciar batalhas em salas PEACEFUL.
-- (108) Promover/rebaixar membros de clãs.
-- (108) Criar portais em salas impróprias.
-- (108) Ajustar hóspedes de casas privadas.
-- (108) Lançar magias em salas NOMAGIC.
+- (108) Promover/rebaixar membros de clï¿½s.
+- (108) Criar portais em salas imprï¿½prias.
+- (108) Ajustar hï¿½spedes de casas privadas.
+- (108) Lanï¿½ar magias em salas NOMAGIC.
 
-   É esperado que todos os deuses mantenham o HOLYPOWER ligado a maior parte
-do tempo.  Este comando existe para que você tenha a habilidade de saber
+   ï¿½ esperado que todos os deuses mantenham o HOLYPOWER ligado a maior parte
+do tempo.  Este comando existe para que vocï¿½ tenha a habilidade de saber
 como os comandos e recursos funcionam para os mortais.
 #106
 IMOTD
 
 Uso: imotd
 
-   Mostra a mensagem do dia de Imortais.  Este arquivo geralmente contém
+   Mostra a mensagem do dia de Imortais.  Este arquivo geralmente contï¿½m
 novidades destinadas a imortais, comandos que foram adicionados recentemente,
-novos recursos e outras informações importantes que os imortais devem sempre
+novos recursos e outras informaï¿½ï¿½es importantes que os imortais devem sempre
 estar a par.
 
-Veja também: MOTD
+Veja tambï¿½m: MOTD
 #101
 INCOMERS
 
 Uso: incomers [-a] [-b]
 
    Este comando exibe uma listagem de todos os jogadores que esperam por
-autorização para jogarem.  Essa lista serve como base para o uso dos
+autorizaï¿½ï¿½o para jogarem.  Essa lista serve como base para o uso dos
 comandos APPROVE e REJECT, para respectivamente, aprovar ou rejeitar a
-inscrição destes jogadores.
+inscriï¿½ï¿½o destes jogadores.
 
 O comando INCOMERS aceita estes argumentos:
-  -a    (all)      Exibe inclusive as inscrições já aprovadas.
-  -b    (brief)    Exibe uma listagem mais breve, com menos informações.
+  -a    (all)      Exibe inclusive as inscriï¿½ï¿½es jï¿½ aprovadas.
+  -b    (brief)    Exibe uma listagem mais breve, com menos informaï¿½ï¿½es.
 
-Veja também: APPROVE, REJECT, STAT
+Veja tambï¿½m: APPROVE, REJECT, STAT
 #107
 INVIS
 
-Uso: invis [nível]
+Uso: invis [nï¿½vel]
 
-   INVIS ajusta seu nível de invisibilidade.  Se não for especificado nenhum
-argumento, o comando irá alternar entre totalmente invisível e totalmente
-visível.  Se você especificar o nível, somente jogadores do nível e superiores
-serão capazes de ver você.
+   INVIS ajusta seu nï¿½vel de invisibilidade.  Se nï¿½o for especificado nenhum
+argumento, o comando irï¿½ alternar entre totalmente invisï¿½vel e totalmente
+visï¿½vel.  Se vocï¿½ especificar o nï¿½vel, somente jogadores do nï¿½vel e superiores
+serï¿½o capazes de ver vocï¿½.
 
 Exemplos:
   > invis
   > invis 101
 
-Veja também: VISIBLE
+Veja tambï¿½m: VISIBLE
 #101
 IP
 
-Uso: ip <endereço>
+Uso: ip <endereï¿½o>
 
-   Este comando auxilia na conversão de endereços IPs da forma hexadecimal
-(como são mostrados nos comandos USERS, MULTICONN e LAST) para a forma decimal
+   Este comando auxilia na conversï¿½o de endereï¿½os IPs da forma hexadecimal
+(como sï¿½o mostrados nos comandos USERS, MULTICONN e LAST) para a forma decimal
 (como os humanos costumam escrever), ou vice-versa.
 
 Exemplos:
@@ -752,33 +752,33 @@ Exemplos:
 #106
 JAIL FREE
 
-Uso: jail <vítima>
-     free <vítima>
+Uso: jail <vï¿½tima>
+     free <vï¿½tima>
 
    O comando JAIL permite prender (encarcerar) um jogador.  Enquanto o
-jogador estiver preso, ele ficará isolado em um calabouço, sem contato com o
-mundo externo, recebendo um pouco de comida e água diariamente.  O jogador
-poderá voltar a jogar novamente apenas depois que for liberado, através do
+jogador estiver preso, ele ficarï¿½ isolado em um calabouï¿½o, sem contato com o
+mundo externo, recebendo um pouco de comida e ï¿½gua diariamente.  O jogador
+poderï¿½ voltar a jogar novamente apenas depois que for liberado, atravï¿½s do
 comando FREE.
 
-   Deve-se usar este comando apenas em circunstâncias disciplinares.
+   Deve-se usar este comando apenas em circunstï¿½ncias disciplinares.
 
-Veja também: FREEZE, THAW
+Veja tambï¿½m: FREEZE, THAW
 #107
 KARMA
 
-Uso: karma [ jogador [ pontuação ] ]
+Uso: karma [ jogador [ pontuaï¿½ï¿½o ] ]
 
-   Mostra ou altera a pontuação de Karma de um jogador.
+   Mostra ou altera a pontuaï¿½ï¿½o de Karma de um jogador.
 
    O Karma de um jogador define seu passado, podendo ser ele positivo ou
-negativo.  Com este comando, é possivel exibir o Karma dos jogadores
+negativo.  Com este comando, ï¿½ possivel exibir o Karma dos jogadores
 conectados e alterar seu Karma, podendo ser um valor negativo para extrair
 pontos, ou um valor positivo, para ceder pontos.
 
-   Não é possivel ver ou alterar seu próprio Karma, ou de jogadores no mesmo
-nível que o seu.  Os Deuses menores (nível 106) podem apenas ver o Karma dos
-inferiores, mas não pode alterá-los.
+   Nï¿½o ï¿½ possivel ver ou alterar seu prï¿½prio Karma, ou de jogadores no mesmo
+nï¿½vel que o seu.  Os Deuses menores (nï¿½vel 106) podem apenas ver o Karma dos
+inferiores, mas nï¿½o pode alterï¿½-los.
 
 Exemplos:
   > karma
@@ -792,44 +792,44 @@ LAST
 
 Uso: last [-w num] [-h host|-i ip] [-t data/hora] [-1|-2] [jogador]
 
-   Serve para verificar a última vez que um jogador se conectou, em que
-momento e por qual endereço.  Também é possível saber quando o personagem foi
+   Serve para verificar a ï¿½ltima vez que um jogador se conectou, em que
+momento e por qual endereï¿½o.  Tambï¿½m ï¿½ possï¿½vel saber quando o personagem foi
 criado, e quanto tempo se decorreu.
 
-   O comando LAST serve também para obter uma lista das últimas conexões de
-um ou todos os jogadores ao MUD, e também permite consultas por endereço, ou
-então quais conexões estavam ativas em um determinado momento.  Usando LAST
-sem nenhum argumento fornece as últimas 50 conexões ao MUD.  O comando LAST
-aceita ainda os seguintes opções:
+   O comando LAST serve tambï¿½m para obter uma lista das ï¿½ltimas conexï¿½es de
+um ou todos os jogadores ao MUD, e tambï¿½m permite consultas por endereï¿½o, ou
+entï¿½o quais conexï¿½es estavam ativas em um determinado momento.  Usando LAST
+sem nenhum argumento fornece as ï¿½ltimas 50 conexï¿½es ao MUD.  O comando LAST
+aceita ainda os seguintes opï¿½ï¿½es:
 
    -w num
-         Exibe as <num> últimas conexões ao MUD.
+         Exibe as <num> ï¿½ltimas conexï¿½es ao MUD.
 
    -h host
-         Mostra apenas as conexões que possuírem o endereço <host>.
+         Mostra apenas as conexï¿½es que possuï¿½rem o endereï¿½o <host>.
 
    -i ip
-         Mostra apenas as conexões que combinarem com o endereço <ip>.
-         Pode-se fornecer endereços tanto no formato decimal como
-         hexadecimal, com ou sem máscara de rede.
+         Mostra apenas as conexï¿½es que combinarem com o endereï¿½o <ip>.
+         Pode-se fornecer endereï¿½os tanto no formato decimal como
+         hexadecimal, com ou sem mï¿½scara de rede.
 
    -t data/hora
-         Mostra quais conexões estavam ativas em determinado momento.  O
+         Mostra quais conexï¿½es estavam ativas em determinado momento.  O
          campo <data/hora> pode ser fornecido de duas maneiras: "hh:mm" ou
-         "dd-hh:mm".  Caso seja fornecido como "hh:mm", serão mostradas as
-         conexões ativas no horário indicado no dia atual.  Caso seja
-         fornecido como "dd-hh:mm", serão mostradas as conexões ativas no
-         dia e horário indicados do mes atual, ou do mês anterior, caso o
-         número do dia seja maior do que o dia de hoje.
+         "dd-hh:mm".  Caso seja fornecido como "hh:mm", serï¿½o mostradas as
+         conexï¿½es ativas no horï¿½rio indicado no dia atual.  Caso seja
+         fornecido como "dd-hh:mm", serï¿½o mostradas as conexï¿½es ativas no
+         dia e horï¿½rio indicados do mes atual, ou do mï¿½s anterior, caso o
+         nï¿½mero do dia seja maior do que o dia de hoje.
 
    -1 -2
-         Mostra a listagem de formas diferentes, mostrando informações mais
+         Mostra a listagem de formas diferentes, mostrando informaï¿½ï¿½es mais
          ou menos detalhadas.
 
    Pode-se usar a palavra "system" como nome-de-jogador, para que o comando
-LAST mostre apenas o relatório dos carregamentos e encerramentos do MUD.
-Usando "system" como nome-de-jogador ou simplesmente não fornecendo nenhum
-nome, implica na opção "-w 50".
+LAST mostre apenas o relatï¿½rio dos carregamentos e encerramentos do MUD.
+Usando "system" como nome-de-jogador ou simplesmente nï¿½o fornecendo nenhum
+nome, implica na opï¿½ï¿½o "-w 50".
 
 Exemplos:
   > last
@@ -839,38 +839,38 @@ Exemplos:
   > last -h mud.com.br
   > last -t 05-18:00 -2
 
-Veja também: STAT
+Veja tambï¿½m: STAT
 #106
 LOAD
 
 Uso: load mob|obj <vnum>
 
-   LOAD é usado para criar monstros ou objetos.  O primeiro argumento indica
-se você está tentando criar um monstro ou um objeto, e o segundo é o número
+   LOAD ï¿½ usado para criar monstros ou objetos.  O primeiro argumento indica
+se vocï¿½ estï¿½ tentando criar um monstro ou um objeto, e o segundo ï¿½ o nï¿½mero
 (vnum).
 
 Exemplos:
   > load obj 3099
-  Você criou um quadro de mensagens.
+  Vocï¿½ criou um quadro de mensagens.
 
   > load mob 3005
-  Você criou a recepcionista.
+  Vocï¿½ criou a recepcionista.
 
-Veja também: VNUM
+Veja tambï¿½m: VNUM
 #106
 LOG
 
 Uso: log <mensagem>
 
-   Grava uma anotação qualquer no registro (SysLog) do MUD.
+   Grava uma anotaï¿½ï¿½o qualquer no registro (SysLog) do MUD.
 #109
 MLIST
 
-Uso: mlist [nome] [intervalo] [parâmetros...]
+Uso: mlist [nome] [intervalo] [parï¿½metros...]
 
-   Este comando serve para encontrar e listar os monstros do MUD.  Seu uso é
-relativamente complexo, porém, oferece poderosos recursos para procurar
-monstros com características específicas.  Suas maneiras mais simples são:
+   Este comando serve para encontrar e listar os monstros do MUD.  Seu uso ï¿½
+relativamente complexo, porï¿½m, oferece poderosos recursos para procurar
+monstros com caracterï¿½sticas especï¿½ficas.  Suas maneiras mais simples sï¿½o:
 
    mlist [nome-do-monstro]
    mlist [intervalo]
@@ -883,79 +883,79 @@ nome, por exemplo:
    mlist rei,arthur
 
    O segundo serve para mostrar todos os monstros que possuam uma
-determinada numeração, por exemplo, para ver todos os monstros do tabuleiro
-de xadrêz:
+determinada numeraï¿½ï¿½o, por exemplo, para ver todos os monstros do tabuleiro
+de xadrï¿½z:
 
    mlist 3600-3699
 
-   O comando MLIST aceita ainda vários outros parâmetros que permitem fazer
-consultas detalhadas em toda a lista de monstros.  Os parâmetros são
+   O comando MLIST aceita ainda vï¿½rios outros parï¿½metros que permitem fazer
+consultas detalhadas em toda a lista de monstros.  Os parï¿½metros sï¿½o
 indicados a seguir:
 
-   zon:<áreas>
-        Serão mostradas apenas os monstros das áreas indicadas no parâmetro.
-        O uso deste parâmetro é detalhado no item "LISTA NUMEROS" da ajuda.
+   zon:<ï¿½reas>
+        Serï¿½o mostradas apenas os monstros das ï¿½reas indicadas no parï¿½metro.
+        O uso deste parï¿½metro ï¿½ detalhado no item "LISTA NUMEROS" da ajuda.
 
    sex:<sexo>
-        Serão mostrados apenas os monstros que sejam do sexo indicado.  O
-        uso deste parâmetro é detalhado no item "LISTA NOME" da ajuda.  Para
+        Serï¿½o mostrados apenas os monstros que sejam do sexo indicado.  O
+        uso deste parï¿½metro ï¿½ detalhado no item "LISTA NOME" da ajuda.  Para
         saber os valores que este campo pode receber, use "mlist sex:?".
 
-   lvl:<níveis>
-        Define os monstros de quais níveis deverão ser mostrados.  O uso
-        deste parâmetro é detalhado no item "LISTA NUMEROS" da ajuda.
+   lvl:<nï¿½veis>
+        Define os monstros de quais nï¿½veis deverï¿½o ser mostrados.  O uso
+        deste parï¿½metro ï¿½ detalhado no item "LISTA NUMEROS" da ajuda.
 
    hit:<valores>
-        Serão mostrados apenas os monstros cuja quantidade média de Hp
-        máximo corresponda ao valor indicado no parâmetro.  Ver "LISTA
+        Serï¿½o mostrados apenas os monstros cuja quantidade mï¿½dia de Hp
+        mï¿½ximo corresponda ao valor indicado no parï¿½metro.  Ver "LISTA
         NUMEROS".
 
    ac:<valores>
-        Serão mostrados apenas os monstros cuja classe de armadura
-        corresponda ao valor indicado no parâmetro.  Ver "LISTA NUMEROS".
+        Serï¿½o mostrados apenas os monstros cuja classe de armadura
+        corresponda ao valor indicado no parï¿½metro.  Ver "LISTA NUMEROS".
 
    gold:<valores>
-        Serão mostrados apenas os monstros cuja quantidade de moedas
-        corresponda ao valor indicado no parâmetro.  Ver "LISTA NUMEROS".
+        Serï¿½o mostrados apenas os monstros cuja quantidade de moedas
+        corresponda ao valor indicado no parï¿½metro.  Ver "LISTA NUMEROS".
 
    exp:<valores>
-        Serão mostrados apenas os monstros que possuam experiência
-        correspondente ao valor indicado no parâmetro.  Ver "LISTA NUMEROS".
+        Serï¿½o mostrados apenas os monstros que possuam experiï¿½ncia
+        correspondente ao valor indicado no parï¿½metro.  Ver "LISTA NUMEROS".
 
    avgdam:<valores>
-        Serão mostrados apenas os monstros que possuam um dano médio
-        correspondente ao valor indicado no parâmetro.  Ver "LISTA NUMEROS".
+        Serï¿½o mostrados apenas os monstros que possuam um dano mï¿½dio
+        correspondente ao valor indicado no parï¿½metro.  Ver "LISTA NUMEROS".
 
    bha:<ataques>
-        Serão mostrados apenas os monstros que possuam um dos ataques
-        indicados no parâmetro.  Para saber os valores que este campo pode
+        Serï¿½o mostrados apenas os monstros que possuam um dos ataques
+        indicados no parï¿½metro.  Para saber os valores que este campo pode
         receber, use "mlist bha:?".  Ver "LISTA NOME".
 
    flg:<flags>
-        Serão mostrados apenas os monstros que possuam as flags indicadas no
-        parâmetro.  Para saber os valores que este campo pode receber, use
+        Serï¿½o mostrados apenas os monstros que possuam as flags indicadas no
+        parï¿½metro.  Para saber os valores que este campo pode receber, use
         "mlist flg:?".  Ver "LISTA VETOR".
 
    aff:<flags>
-        Serão mostrados apenas os monstros que possuam as flags de
-        afetamento indicadas no parâmetro.  Para saber os valores que este
+        Serï¿½o mostrados apenas os monstros que possuam as flags de
+        afetamento indicadas no parï¿½metro.  Para saber os valores que este
         campo pode receber, use "mlist aff:?".  Ver "LISTA VETOR".
 
    align:<valores>
-        Serão mostrados apenas os monstros que possuam o alinhamento
-        correspondente ao valor indicado no parâmetro.  Ver "LISTA NUMEROS".
+        Serï¿½o mostrados apenas os monstros que possuam o alinhamento
+        correspondente ao valor indicado no parï¿½metro.  Ver "LISTA NUMEROS".
 
    spec:<specproc>
-        Serão mostrados apenas os monstros que possuam a SpecProc indicada
-        no parâmetro.
+        Serï¿½o mostrados apenas os monstros que possuam a SpecProc indicada
+        no parï¿½metro.
 
-   show:<informações>
-        Indica quais informações sobre cada monstro deseja ser vista na
+   show:<informaï¿½ï¿½es>
+        Indica quais informaï¿½ï¿½es sobre cada monstro deseja ser vista na
         listagem final.  Deve-se fornecer uma lista com o nome de cada
-        campo, separado por vírgulas.  Para saber os valores que este campo
+        campo, separado por vï¿½rgulas.  Para saber os valores que este campo
         pode receber, use "olist show:?".
 
-   Este comando usa uma interface comum para se realizar a consulta à
+   Este comando usa uma interface comum para se realizar a consulta ï¿½
 listagem de monstros do MUD.  Recomenda-se a leitura da ajuda para as
 listagens para entender melhor como funciona o comando MLIST, e os outros
 comandos de listagem (RLIST, OLIST):
@@ -965,12 +965,12 @@ comandos de listagem (RLIST, OLIST):
    HELP LISTA NUMEROS
    HELP LISTA VETOR
 
-   Uma boa forma de se familiarizar com o comando, é olhando seus exemplos
+   Uma boa forma de se familiarizar com o comando, ï¿½ olhando seus exemplos
 de uso:
 
    HELP MLIST EXEMPLOS
 
-Veja também: GEN-QUERY, MLIST EXEMPLOS, RLIST, OLIST
+Veja tambï¿½m: GEN-QUERY, MLIST EXEMPLOS, RLIST, OLIST
 #106
 "MLIST EXEMPLOS"
 
@@ -978,19 +978,19 @@ Veja também: GEN-QUERY, MLIST EXEMPLOS, RLIST, OLIST
 "guarda"):
 > mlist guarda
 
-   Para listar todos os monstros de nível maior ou igual a 101 (que podem
+   Para listar todos os monstros de nï¿½vel maior ou igual a 101 (que podem
 causar danos a imortais):
 > mlist lvl:>=101
 
-   Para listar todos os monstros imortais, que podem ser atacados (que não
+   Para listar todos os monstros imortais, que podem ser atacados (que nï¿½o
 possuem a flag NOKILL):
 > mlist lvl:>=101 flg:!nokill
 
-   Para mostrar o alinhamento, dano médio e nível destes monstros:
+   Para mostrar o alinhamento, dano mï¿½dio e nï¿½vel destes monstros:
 > mlist lvl:>=101 flg:!nokill show:align,dam,lvl
 
    Para listar todos os monstros que arranham (claw) ou espanquem (maul)
-seus oponentes, mostrando o tipo de ataque de cada um, e o dano médio):
+seus oponentes, mostrando o tipo de ataque de cada um, e o dano mï¿½dio):
 > mlist bha:claw,maul show:bha
 
    Para listar todos os monstros que atacam jogadores de baixo alinhamento,
@@ -1006,7 +1006,7 @@ mostrando o alinhamento de cada monstro:
 
    Todos os monstros de alinhamento negativo (o primeiro formato pode
 parecer um pouco confuso, mas lembre-se que o primeiro sinal '-' depois do
-primeiro número significa "até"):
+primeiro nï¿½mero significa "atï¿½"):
 > mlist align:-1000--350 show:align
 > mlist align:<=-350 show:align
 
@@ -1025,19 +1025,19 @@ MULTICONN
 
 Uso: multiconn
 
-   Este comando permite uma rápida verificação de todas as conexões que
-possuem o mesmo endereço IP, permitindo assim a detecção de possíveis abusos.
+   Este comando permite uma rï¿½pida verificaï¿½ï¿½o de todas as conexï¿½es que
+possuem o mesmo endereï¿½o IP, permitindo assim a detecï¿½ï¿½o de possï¿½veis abusos.
 
-Veja também: USERS
+Veja tambï¿½m: USERS
 #106
 MUTE
 
-Uso: mute <vítima>
+Uso: mute <vï¿½tima>
 
-   MUTE é usado para calar um jogador.  Enquanto estiver calado, um jogador
-não será capaz de usar a maioria dos canais de comunicação do jogo.
+   MUTE ï¿½ usado para calar um jogador.  Enquanto estiver calado, um jogador
+nï¿½o serï¿½ capaz de usar a maioria dos canais de comunicaï¿½ï¿½o do jogo.
 
-Veja também: FLAGS
+Veja tambï¿½m: FLAGS
 #107
 NOHASSLE
 
@@ -1052,40 +1052,40 @@ Uso: note list
      note read <nome>
      note erase <mascara>
 
-   O sistema de anotações permite escrever pequenas anotações e gravá-las no
-próprio servidor de MUD.  Cada anotação pode ter um máximo de 2048 letras, e
-todas as anotações juntas podem ter um máximo de 65536 letras.  Este sistema
-é particularmente útil para jogadores que acessam através de mais de um
-local, e não tem um lugar fixo para fazer anotações relativas ao MUD.
+   O sistema de anotaï¿½ï¿½es permite escrever pequenas anotaï¿½ï¿½es e gravï¿½-las no
+prï¿½prio servidor de MUD.  Cada anotaï¿½ï¿½o pode ter um mï¿½ximo de 2048 letras, e
+todas as anotaï¿½ï¿½es juntas podem ter um mï¿½ximo de 65536 letras.  Este sistema
+ï¿½ particularmente ï¿½til para jogadores que acessam atravï¿½s de mais de um
+local, e nï¿½o tem um lugar fixo para fazer anotaï¿½ï¿½es relativas ao MUD.
 
-   NOTE LIST permite ver quais as anotações estão armazenadas.  A primeira
-linha de cada anotação será exibida ao lado de seu nome.
+   NOTE LIST permite ver quais as anotaï¿½ï¿½es estï¿½o armazenadas.  A primeira
+linha de cada anotaï¿½ï¿½o serï¿½ exibida ao lado de seu nome.
 
-   NOTE READ permite ler uma determinada anotação.  Deve-se fornecer o nome da
-anotação desejada para lê-la.
+   NOTE READ permite ler uma determinada anotaï¿½ï¿½o.  Deve-se fornecer o nome da
+anotaï¿½ï¿½o desejada para lï¿½-la.
 
-   NOTE WRITE permite escrever uma nova anotação, ou editar uma anotação já
-existente.  Deve-se fornecer o nome da anotação que se deseja criar/alterar.
+   NOTE WRITE permite escrever uma nova anotaï¿½ï¿½o, ou editar uma anotaï¿½ï¿½o jï¿½
+existente.  Deve-se fornecer o nome da anotaï¿½ï¿½o que se deseja criar/alterar.
 
-   NOTE ERASE permite excluir anotações.  Mais de uma anotação pode ser
-excluída ao mesmo tempo, usando os caracteres coringas '*' ou '?'.
+   NOTE ERASE permite excluir anotaï¿½ï¿½es.  Mais de uma anotaï¿½ï¿½o pode ser
+excluï¿½da ao mesmo tempo, usando os caracteres coringas '*' ou '?'.
 #106
 NOTITLE
 
-Uso: notitle <vítima>
+Uso: notitle <vï¿½tima>
 
-   Impede que um jogador altere seu título, útil quando o jogador usa
-constantemente o título de forma abusiva ou ofensiva.
+   Impede que um jogador altere seu tï¿½tulo, ï¿½til quando o jogador usa
+constantemente o tï¿½tulo de forma abusiva ou ofensiva.
 
-Veja também: TITLE
+Veja tambï¿½m: TITLE
 #107
 OLIST
 
-Uso: olist [nome] [intervalo] [parâmetros...]
+Uso: olist [nome] [intervalo] [parï¿½metros...]
 
-   Este comando serve para encontrar e listar os objetos do MUD.  Seu uso é
-relativamente complexo, porém, oferece poderosos recursos para procurar
-objetos com características específicas.  Suas maneiras mais simples são:
+   Este comando serve para encontrar e listar os objetos do MUD.  Seu uso ï¿½
+relativamente complexo, porï¿½m, oferece poderosos recursos para procurar
+objetos com caracterï¿½sticas especï¿½ficas.  Suas maneiras mais simples sï¿½o:
 
    olist [nome-do-objeto]
    olist [intervalo]
@@ -1095,69 +1095,69 @@ nome, por exemplo:
 
    olist caneta
    olist espada
-   olist poção,vermelha
+   olist poï¿½ï¿½o,vermelha
 
    O segundo serve para mostrar todos os objetos que possuam uma determinada
-numeração, por exemplo, para ver todos os objetos de Midgaard:
+numeraï¿½ï¿½o, por exemplo, para ver todos os objetos de Midgaard:
 
    olist 3000-3099
 
-   O comando OLIST aceita ainda vários outros parâmetros que permitem fazer
-consultas detalhadas em toda a lista de objetos.  Os parâmetros são
+   O comando OLIST aceita ainda vï¿½rios outros parï¿½metros que permitem fazer
+consultas detalhadas em toda a lista de objetos.  Os parï¿½metros sï¿½o
 indicados a seguir:
 
-   zon:<áreas>
-        Serão mostradas apenas os objetos das áreas indicadas no parâmetro.
-        O uso deste parâmetro é detalhado no item "LISTA NUMEROS" da ajuda.
+   zon:<ï¿½reas>
+        Serï¿½o mostradas apenas os objetos das ï¿½reas indicadas no parï¿½metro.
+        O uso deste parï¿½metro ï¿½ detalhado no item "LISTA NUMEROS" da ajuda.
 
    type:<tipos>
-        Define quais tipos de objetos deverão ser mostrados.  O uso deste
-        parâmetro é detalhado no item "LISTA NOME" da ajuda.  Para saber os
+        Define quais tipos de objetos deverï¿½o ser mostrados.  O uso deste
+        parï¿½metro ï¿½ detalhado no item "LISTA NOME" da ajuda.  Para saber os
         valores que este campo pode receber, use "olist type:?".
 
-   lvl:<níveis>
-        Define os objetos de quais níveis deverão ser mostrados.  O uso
-        deste parâmetro é detalhado no item "LISTA NUMEROS" da ajuda.
+   lvl:<nï¿½veis>
+        Define os objetos de quais nï¿½veis deverï¿½o ser mostrados.  O uso
+        deste parï¿½metro ï¿½ detalhado no item "LISTA NUMEROS" da ajuda.
 
    v0:<valores>
    v1:<valores>
    v2:<valores>
    v3:<valores>
-        Serão mostrados apenas os objetos cujos valores (v0-v3) correspondam
-        aos valores indicados nos parâmetros.  Ver "LISTA NUMEROS".
+        Serï¿½o mostrados apenas os objetos cujos valores (v0-v3) correspondam
+        aos valores indicados nos parï¿½metros.  Ver "LISTA NUMEROS".
 
    wear:<flags>
-        Serão mostrados apenas os objetos que possam ser vestidos nas
-        posições do corpo correspondentes ao parâmetro.  Ver "LISTA VETOR".
+        Serï¿½o mostrados apenas os objetos que possam ser vestidos nas
+        posiï¿½ï¿½es do corpo correspondentes ao parï¿½metro.  Ver "LISTA VETOR".
         Para saber os valores que este campo pode receber, use "olist wear:?".
 
    flg:<flags>
-        Serão mostrados apenas os objetos que possuam as flags indicadas no
-        parâmetro.  Ver "LISTA VETOR".  Para saber os valores que este campo
+        Serï¿½o mostrados apenas os objetos que possuam as flags indicadas no
+        parï¿½metro.  Ver "LISTA VETOR".  Para saber os valores que este campo
         pode receber, use "olist flg:?".
 
    aff:<flags>
-        Serão mostrados apenas os objetos que possuam as flags de
-        afetamento indicadas no parâmetro.  Ver "LISTA VETOR".  Para saber
+        Serï¿½o mostrados apenas os objetos que possuam as flags de
+        afetamento indicadas no parï¿½metro.  Ver "LISTA VETOR".  Para saber
         os valores que este campo pode receber, use "olist aff:?".
 
-   apl:<posições>
-   apl:<posição>:<valores>
-        Serão mostrados apenas os objetos que possuam as aplicações de
-        personagem descritas no parâmetro.  Ver "LISTA VETOR NUMERICO".
+   apl:<posiï¿½ï¿½es>
+   apl:<posiï¿½ï¿½o>:<valores>
+        Serï¿½o mostrados apenas os objetos que possuam as aplicaï¿½ï¿½es de
+        personagem descritas no parï¿½metro.  Ver "LISTA VETOR NUMERICO".
         Para saber os valores que este campo pode receber, use "olist apl:?".
 
    spec:<specproc>
-        Serão mostrados apenas os objetos que possuam a SpecProc indicada
-        no parâmetro.
+        Serï¿½o mostrados apenas os objetos que possuam a SpecProc indicada
+        no parï¿½metro.
 
-   show:<informações>
-        Indica quais informações sobre cada objeto deseja ser vista na
+   show:<informaï¿½ï¿½es>
+        Indica quais informaï¿½ï¿½es sobre cada objeto deseja ser vista na
         listagem final.  Deve-se fornecer uma lista com o nome de cada
-        campo, separado por vírgulas.  Para saber os valores que este campo
+        campo, separado por vï¿½rgulas.  Para saber os valores que este campo
         pode receber, use "olist show:?".
 
-   Este comando usa uma interface comum para se realizar a consulta à
+   Este comando usa uma interface comum para se realizar a consulta ï¿½
 listagem de objetos do MUD.  Recomenda-se a leitura da ajuda para as
 listagens para entender melhor como funciona o comando OLIST, e os outros
 comandos de listagem (RLIST, MLIST):
@@ -1168,12 +1168,12 @@ comandos de listagem (RLIST, MLIST):
    HELP LISTA VETOR
    HELP LISTA VETOR NUMERICO
 
-   Uma boa forma de se familiarizar com o comando, é olhando seus exemplos
+   Uma boa forma de se familiarizar com o comando, ï¿½ olhando seus exemplos
 de uso:
 
    HELP OLIST EXEMPLOS
 
-Veja também: GEN-QUERY, OLIST EXEMPLOS, RLIST, MLIST
+Veja tambï¿½m: GEN-QUERY, OLIST EXEMPLOS, RLIST, MLIST
 #106
 "OLIST EXEMPLOS"
 
@@ -1183,7 +1183,7 @@ Veja também: GEN-QUERY, OLIST EXEMPLOS, RLIST, MLIST
    Ou uma forma mais precisa para listar todas as armas:
 > olist type:weapon
 
-   Todas as armas que precisem de duas mãos para empunhar:
+   Todas as armas que precisem de duas mï¿½os para empunhar:
 > olist type:weapon flg:twohands
 
    Mostrar, na mesma listagem anterior, quanto estas armas alteram os stats
@@ -1194,34 +1194,34 @@ Veja também: GEN-QUERY, OLIST EXEMPLOS, RLIST, MLIST
 > olist 3000-3099 type:armor,worn
 
    Listar todas as armaduras e vestimentas de Midgaard, que se vestem no
-corpo OU na cabeça:
+corpo OU na cabeï¿½a:
 > olist 3000-3099 type:armor,worn wear:body,head,|
 
    Listar todas as armaduras do jogo que tenham um AC (v0) maior que 7,
-mostrando o nível (lvl), o próprio AC (v0) e quanto é aplicado ao AC (ac).
+mostrando o nï¿½vel (lvl), o prï¿½prio AC (v0) e quanto ï¿½ aplicado ao AC (ac).
 > olist type:armor v0:>7 show:lvl,v0,ac
 
    Listar todos os objetos que podem (o mesmo objeto) ser vestidos tanto no
-pescoço (neck) quanto sobre o corpo(about):
+pescoï¿½o (neck) quanto sobre o corpo(about):
 > olist wear:neck,about
 
-   Listar todos os objetos que podem ser vestidos no pescoço e os que podem
-ser vestidos sobre o corpo (note a barra vertical "|" no final do parâmetro
-'wear', que indica "OU", ou seja: não é necessário que as duas flags sejam
-definidas no objeto, ou uma ou outra já é suficiente):
+   Listar todos os objetos que podem ser vestidos no pescoï¿½o e os que podem
+ser vestidos sobre o corpo (note a barra vertical "|" no final do parï¿½metro
+'wear', que indica "OU", ou seja: nï¿½o ï¿½ necessï¿½rio que as duas flags sejam
+definidas no objeto, ou uma ou outra jï¿½ ï¿½ suficiente):
 > olist wear:neck,about,|
 
-   Listar todos os objetos que alterem a força E a destreza, mostrando o
+   Listar todos os objetos que alterem a forï¿½a E a destreza, mostrando o
 quanto alteram:
 > olist apl:str,dex show:str,dex
 
-   Listar todos os objetos que alteram a força OU a destreza:
+   Listar todos os objetos que alteram a forï¿½a OU a destreza:
 > olist apl:str,dex,| show:str,dex
 
-   Listar todos os objetos que alteram a força e NÃO alteram a destreza:
+   Listar todos os objetos que alteram a forï¿½a e Nï¿½O alteram a destreza:
 > olist apl:str apl:dex:0 show:str,dex
 
-   Listar todos os objetos que alteram a força positivamente e a destreza
+   Listar todos os objetos que alteram a forï¿½a positivamente e a destreza
 negativamente:
 > olist apl:str:>0 apl:dex:<0 show:str,dex
 #106
@@ -1230,35 +1230,35 @@ OMNI
 Uso: omni
 
    Mostra uma listagem de todos os mortais e imortais conectados, onde eles
-estão, seus estados de saúde, suas posições e com quem estão lutando.
+estï¿½o, seus estados de saï¿½de, suas posiï¿½ï¿½es e com quem estï¿½o lutando.
 #106
 OWHERE
 
 Uso: owhere <objeto>
 
-   Este comando existe provisoriamente, e ainda não foi terminado.  Não há
-certeza se este comando continuará existindo futuramente, ou se continuará
+   Este comando existe provisoriamente, e ainda nï¿½o foi terminado.  Nï¿½o hï¿½
+certeza se este comando continuarï¿½ existindo futuramente, ou se continuarï¿½
 com este mesmo nome.
 #107
 PAGE
 
 Uso: page <jogador>|todos <message>
 
-   PAGE é usado para enviar uma mensagem, junto com um aviso sonoro, para
+   PAGE ï¿½ usado para enviar uma mensagem, junto com um aviso sonoro, para
 outro jogador.  Use PAGE TODOS para enviar uma mensagem para todos os
 jogadores.
 
-   Não abuse deste comando.
+   Nï¿½o abuse deste comando.
 
 Exemplos:
-  > page rasmussen Ei, você ainda está aí?
-  > page todos O JOGO SERÁ FECHADO EM 10 MINUTOS.
+  > page rasmussen Ei, vocï¿½ ainda estï¿½ aï¿½?
+  > page todos O JOGO SERï¿½ FECHADO EM 10 MINUTOS.
 #106
 PARDON
 
-Uso: pardon <vítima>
+Uso: pardon <vï¿½tima>
 
-   Remove as flags de ASSASSINO e LADRÃO de um jogador.
+   Remove as flags de ASSASSINO e LADRï¿½O de um jogador.
 #107
 PEACE
 
@@ -1269,78 +1269,78 @@ todo.
 #106
 PLOAD PUNLOAD
 
-Uso: pload <plugin> [parâmetros]
+Uso: pload <plugin> [parï¿½metros]
      punload <plugin>
 
-   PLOAD é usado para carregar um plugin dinamicamente compilado na memória,
+   PLOAD ï¿½ usado para carregar um plugin dinamicamente compilado na memï¿½ria,
 fornecendo mais recursos sem a necessidade de reiniciar o MUD.  Os plugins
 carregados possuem acesso a algumas chamadas internas do MUD, e podem alterar
 algumas funcionalidades internas.
 
-   É possível passar parâmetros para o plugin sendo carregado, alterando a
-forma como ele irá funcionar. Os parâmetros aceitos dependem do plugin sendo
-carregado, e são fornecidos sempre no formato:
+   ï¿½ possï¿½vel passar parï¿½metros para o plugin sendo carregado, alterando a
+forma como ele irï¿½ funcionar. Os parï¿½metros aceitos dependem do plugin sendo
+carregado, e sï¿½o fornecidos sempre no formato:
 
    parametro[:valor]
 
-   PUNLOAD é usado para descarregar um plugin da memória.
+   PUNLOAD ï¿½ usado para descarregar um plugin da memï¿½ria.
 
 Exemplos:
   > pload stats logsize:8 interval:300
   > pload mrtg
   > punload demo-events
 
-Veja também: SHOW PLUGINS
+Veja tambï¿½m: SHOW PLUGINS
 #110
 PLRLIST
 
 Uso: plrlist [-l <min>[-<max>]] [-n <nome>] [-h <host>] [-c <classes>]
              [-a|-d] [-o] [-p] [-s]
 
-   Faz consultas diretas ao arquivo de jogadores do mud.  São exibidos: o ID
-do jogador, o nível, a classe, o host do último login, a data do último
+   Faz consultas diretas ao arquivo de jogadores do mud.  Sï¿½o exibidos: o ID
+do jogador, o nï¿½vel, a classe, o host do ï¿½ltimo login, a data do ï¿½ltimo
 login, e as flags mais importantes.
 
-   Os parametros que podem ser usados são:
+   Os parametros que podem ser usados sï¿½o:
 
    -l min-max
-         Apenas personagens com nível superior a <min> e, opcionalmente,
+         Apenas personagens com nï¿½vel superior a <min> e, opcionalmente,
          inferior a <max>.
 
    -n nome
          Apenas personagens cujo nome seja <nome>, ou comece com <nome>.
 
    -h host
-         Apenas personagens cujo host da última conexão combine com <host>.
+         Apenas personagens cujo host da ï¿½ltima conexï¿½o combine com <host>.
 
    -i ip
-         Apenas personagens cujo endereço IP da última conexão combine com o
-         endereço <ip>.  Pode-se fornecer endereços tanto no formato decimal
-         como hexadeciman, com ou sem máscara de rede.
+         Apenas personagens cujo endereï¿½o IP da ï¿½ltima conexï¿½o combine com o
+         endereï¿½o <ip>.  Pode-se fornecer endereï¿½os tanto no formato decimal
+         como hexadeciman, com ou sem mï¿½scara de rede.
 
    -c classes
          Apenas personagens das classes indicadas.  Deve-se usar apenas as
          iniciais de cada classe (mgcl).
 
    -a    Lista todos os personagens, inclusive aqueles que foram apagados
-         (que possuem flag DELETED).  Esta opção não pode ser usada junto
-         com a opção '-d'.
+         (que possuem flag DELETED).  Esta opï¿½ï¿½o nï¿½o pode ser usada junto
+         com a opï¿½ï¿½o '-d'.
 
-   -d    Lista apenas os personagens que foram apagados.  Esta opção não pode
-         ser usada junto com a opção '-a'.
+   -d    Lista apenas os personagens que foram apagados.  Esta opï¿½ï¿½o nï¿½o pode
+         ser usada junto com a opï¿½ï¿½o '-a'.
 
    -o    Lista apenas os personagens foras-da-lei (que possuem flags ASSASSINO
-         ou LADRÃO).
+         ou LADRï¿½O).
 
    -p    Lista apenas os personagens punidos (que possuem flags MUTE, JAILED
          ou FROZEN).
 
-   -s    Lista apenas os personagens mortos (espíritos).
+   -s    Lista apenas os personagens mortos (espï¿½ritos).
 
    As letras da coluna 'Flags' significam:
    D (deleted)  personagem apagado       J (jailed)   personagem preso
    S (spirit)   personagem morto         M (mute)     privado de gossip/shout
-   O (outlaw)   assassino ou ladrão      C (connect)  possui flag SITEOK
+   O (outlaw)   assassino ou ladrï¿½o      C (connect)  possui flag SITEOK
    F (frozen)   personagem congelado
 
 Exemplos:
@@ -1349,113 +1349,113 @@ Exemplos:
   > plrlist -l 1 -d
   > plrlist -c gm
 
-Veja também: USERS
+Veja tambï¿½m: USERS
 #107
 PLRLOAD
 
 Uso: plrload <jogador>
 
-   PLRLOAD carrega um jogador que não está no jogo, e toma o controle de
-seu corpo.  O efeito é muito semelhante ao do comando SWITCH.  Para voltar
-ao seu corpo original, você deve usar RETURN (que deixará o corpo do jogador
-"linkless") ou QUIT (que irá extrair o corpo do jogador).
+   PLRLOAD carrega um jogador que nï¿½o estï¿½ no jogo, e toma o controle de
+seu corpo.  O efeito ï¿½ muito semelhante ao do comando SWITCH.  Para voltar
+ao seu corpo original, vocï¿½ deve usar RETURN (que deixarï¿½ o corpo do jogador
+"linkless") ou QUIT (que irï¿½ extrair o corpo do jogador).
 
-   Enquanto você estiver no corpo do jogador, seu corpo original permanecerá
-sem conexão (linkless), porém, ainda aparecerá no WHO.  Alguns comandos, como
+   Enquanto vocï¿½ estiver no corpo do jogador, seu corpo original permanecerï¿½
+sem conexï¿½o (linkless), porï¿½m, ainda aparecerï¿½ no WHO.  Alguns comandos, como
 WHO, funcionam sempre no corpo original.
 
-Veja também: SWITCH
+Veja tambï¿½m: SWITCH
 #109
 POOFIN POOFOUT
 
 Uso: poofin <mensagem>
      poofout <mensagem>
 
-   Ajusta as mensagens que serão vistas pelos jogadores quando você usar o
+   Ajusta as mensagens que serï¿½o vistas pelos jogadores quando vocï¿½ usar o
 comando GOTO para ir para uma sala diferente.  POOFIN sem nenhum argumento
-retorna seu poofin para o padrão "aparece fazendo um barulho estrondoso.",
+retorna seu poofin para o padrï¿½o "aparece fazendo um barulho estrondoso.",
 POOFOUT sem nenhum argumento retorna seu poofout para "desaparece em uma
-nuvem de fumaça."
+nuvem de fumaï¿½a."
 
-Veja também: GOTO
+Veja tambï¿½m: GOTO
 #105
 PORTAL
 
-Uso: portal [-d] [-t <ticks>] [-l <nível>] <vnum da sala>
+Uso: portal [-d] [-t <ticks>] [-l <nï¿½vel>] <vnum da sala>
      portal
 
    Cria um portal ligando duas salas, ou exibe uma lista com todos os portais
-abertos.  Para a criação do portal, o sentido é sempre da sala que você está
-para a sala informada.  É possível alterar a forma do portal criado usando os
+abertos.  Para a criaï¿½ï¿½o do portal, o sentido ï¿½ sempre da sala que vocï¿½ estï¿½
+para a sala informada.  ï¿½ possï¿½vel alterar a forma do portal criado usando os
 seguintes argumentos:
 
-   -d    Cria um portal de duplo sentido, ou seja, a sala de destino também
-         terá um portal trazendo para a sala de onde ele partiu.
+   -d    Cria um portal de duplo sentido, ou seja, a sala de destino tambï¿½m
+         terï¿½ um portal trazendo para a sala de onde ele partiu.
    -t <ticks>
-         Define por quantos ticks o portal permanecerá aberto.
-   -l <nível>
-         Define o nível mínimo necessário para atravessar o portal.
+         Define por quantos ticks o portal permanecerï¿½ aberto.
+   -l <nï¿½vel>
+         Define o nï¿½vel mï¿½nimo necessï¿½rio para atravessar o portal.
 
-   Caso o argumento -t não seja informado, o portal permanecerá aberto até
-que seja destruído, através do comando PURGE.  Em portais de duplo sentido,
-é necessário destruir os dois lados do portal.  Caso o argumento -l não seja
-informado, qualquer jogador poderá atravessar o portal.
+   Caso o argumento -t nï¿½o seja informado, o portal permanecerï¿½ aberto atï¿½
+que seja destruï¿½do, atravï¿½s do comando PURGE.  Em portais de duplo sentido,
+ï¿½ necessï¿½rio destruir os dois lados do portal.  Caso o argumento -l nï¿½o seja
+informado, qualquer jogador poderï¿½ atravessar o portal.
 
    Caso nenhum argumento seja informado, uma lista com todos os portais
-abertos será exibida.
+abertos serï¿½ exibida.
 
 Exemplos:
   > portal -t 5 12020
   > portal -d 1000
 
-Veja também: PURGE, MAGIA PORTAL
+Veja tambï¿½m: PURGE, MAGIA PORTAL
 #106
 PURGE
 
 Uso: purge [nome]
 
    PURGE serve para destruir coisas.  Se usado sem nenhum argumento, a sala
-que você estiver será limpa de todos os monstros e objetos, mas não irá
+que vocï¿½ estiver serï¿½ limpa de todos os monstros e objetos, mas nï¿½o irï¿½
 afetar jogadores.
 
-   Se o argumento for um objeto, este objeto e todo o seu conteúdo serão
-destruídos.  Se o argumento for um monstro, o monstro será destruído,
-deixando todos seus objetos e equipamentos espalhados no chão.
+   Se o argumento for um objeto, este objeto e todo o seu conteï¿½do serï¿½o
+destruï¿½dos.  Se o argumento for um monstro, o monstro serï¿½ destruï¿½do,
+deixando todos seus objetos e equipamentos espalhados no chï¿½o.
 
-   Se o argumento for o nome de um jogador, todo o inventário do jogador
-será deixado no chão, e o jogador será desintegrado, transformando-se em
-apenas um espírito, e será desconectado.  Por esta razão, o comando PURGE só
-deve ser usado em jogadores em circunstâncias disciplinares.
+   Se o argumento for o nome de um jogador, todo o inventï¿½rio do jogador
+serï¿½ deixado no chï¿½o, e o jogador serï¿½ desintegrado, transformando-se em
+apenas um espï¿½rito, e serï¿½ desconectado.  Por esta razï¿½o, o comando PURGE sï¿½
+deve ser usado em jogadores em circunstï¿½ncias disciplinares.
 
-   Deuses mais elevados ainda podem usar os nomes especiais "área" e
+   Deuses mais elevados ainda podem usar os nomes especiais "ï¿½rea" e
 "mundo", que causa o mesmo efeito de ser usado sem argumentos, mas para
-todas as salas de uma determinada área, ou do mundo todo.
+todas as salas de uma determinada ï¿½rea, ou do mundo todo.
 
 Exemplos:
   > purge
   > purge espada
-  > purge dragão
+  > purge dragï¿½o
 
-Veja também: DC
+Veja tambï¿½m: DC
 #106
 QCONTROL
 
 Uso: qcontrol [ comandos ]
 
    Estes comandos permitem o controle do andamento de quests.  Pode-se
-abrir, fechar ou encerrar uma quest, colocar ou tirar um jogador a força da
-quest, ou ajustar quais jogadores poderão participar dela.  Se este comando
-for executado sem nenhum sub-comando, serão exibidas informações breves
+abrir, fechar ou encerrar uma quest, colocar ou tirar um jogador a forï¿½a da
+quest, ou ajustar quais jogadores poderï¿½o participar dela.  Se este comando
+for executado sem nenhum sub-comando, serï¿½o exibidas informaï¿½ï¿½es breves
 sobre a quest atual.
 
-   Os sub-comandos do comando QCONTROL são:
+   Os sub-comandos do comando QCONTROL sï¿½o:
    OPEN   CLOSE   END   OWNER   APPLY   KICK   +O   -O   LEVEL   INC
    WHO
 
    Para obter mais ajuda para um destes comandos, digite:
    HELP QCONTROL <comando>
 
-Veja também: QUEST, QCONTROL OPEN, QCONTROL OWNER, QCONTROL APPLY,
+Veja tambï¿½m: QUEST, QCONTROL OPEN, QCONTROL OWNER, QCONTROL APPLY,
              QCONTROL +O, QCONTROL LEVEL, QCONTROL INC
 #106
 "QCONTROL OPEN" "QCONTROL CLOSE" "QCONTROL END" "QC OPEN" "QC CLOSE" "QC END"
@@ -1465,34 +1465,34 @@ Uso: qcontrol open
      qcontrol end
 
    O comando QCONTROL OPEN permite abrir a quest, para que esta receba novos
-buscadores.  Ao abrir a quest, os jogadores interessados poderão digitar o
+buscadores.  Ao abrir a quest, os jogadores interessados poderï¿½o digitar o
 comando QUEST para manifestarem o desejo de participar da quest atual.  Caso
-não exista nenhuma quest em andamento, este comando inicia a quest, tendo a
+nï¿½o exista nenhuma quest em andamento, este comando inicia a quest, tendo a
 pessoa que digitou o comando como coordenador.
 
    O comando QCONTROL CLOSE fecha a quest.  Ao fechar a quest, os
-participantes da quest continuarão nela, porém, novos participantes não serão
-aceitos, a menos que seja incluído a força, com o comando QCONTROL APPLY.
+participantes da quest continuarï¿½o nela, porï¿½m, novos participantes nï¿½o serï¿½o
+aceitos, a menos que seja incluï¿½do a forï¿½a, com o comando QCONTROL APPLY.
 
    O comando QCONTROL END encerra a quest.  Ao encerrar a quest, todos os
-participantes são retirados da quest, e esta termina.  Não será mais possível
-usar o comando QUEST até que nova quest seja aberta.
+participantes sï¿½o retirados da quest, e esta termina.  Nï¿½o serï¿½ mais possï¿½vel
+usar o comando QUEST atï¿½ que nova quest seja aberta.
 
-Veja também: QCONTROL
+Veja tambï¿½m: QCONTROL
 #106
 "QCONTROL OWNER" "QC OWNER"
 
 Uso: qcontrol owner
      qcontrol owner <jogador>
 
-   Este comando permite transferir os privilégios de coordenador da quest
-atual para outro Deus.  Sempre que uma quest é aberta, o Deus que a abriu
-recebe os privilégios de coordenador.  Como coordenador, ele poderá usar o
-comando QCONTROL para controlá-la.  Se não for fornecido um nome de um Deus
-para o comando, a quest passará a não ter coordenador.  Desta forma, o
-comando QCONTROL estará disponível a qualquer Deus.
+   Este comando permite transferir os privilï¿½gios de coordenador da quest
+atual para outro Deus.  Sempre que uma quest ï¿½ aberta, o Deus que a abriu
+recebe os privilï¿½gios de coordenador.  Como coordenador, ele poderï¿½ usar o
+comando QCONTROL para controlï¿½-la.  Se nï¿½o for fornecido um nome de um Deus
+para o comando, a quest passarï¿½ a nï¿½o ter coordenador.  Desta forma, o
+comando QCONTROL estarï¿½ disponï¿½vel a qualquer Deus.
 
-Veja também: QCONTROL
+Veja tambï¿½m: QCONTROL
 #106
 "QCONTROL APPLY" "QCONTROL KICK" "QC APPLY" "QC KICK"
 
@@ -1509,86 +1509,86 @@ Exemplos:
   > qcontrol apply Rasmussen
   > qcontrol kick Pom
 
-Veja também: QCONTROL
+Veja tambï¿½m: QCONTROL
 #106
 "QCONTROL +O" "QCONTROL -O" "QC +O" "QC -O"
 
 Uso: qcontrol +o <jogador>
      qcontrol -o <jogador>
 
-   O comando QCONTROL +O permite atribuir privilégios de operador de quest
+   O comando QCONTROL +O permite atribuir privilï¿½gios de operador de quest
 para um jogador.  Apenas Grandes Imortais e superiores podem receber
-privilégios de operador de quest.
+privilï¿½gios de operador de quest.
 
-   O comando QCONTROL -O é usado da mesma forma, e permite retirar os
-privilégios de operador de quest de um jogador.
+   O comando QCONTROL -O ï¿½ usado da mesma forma, e permite retirar os
+privilï¿½gios de operador de quest de um jogador.
 
-   Como operador de quest, o Imortal terá acesso a estes comandos:
+   Como operador de quest, o Imortal terï¿½ acesso a estes comandos:
    STAT   WHERE(global)   SWITCH   QECHO
 
 Exemplos:
   > qcontrol +o Rasmussen
   > qcontrol -o Pom
 
-Veja também: QCONTROL
+Veja tambï¿½m: QCONTROL
 #106
 "QCONTROL LEVEL" "QC LEVEL"
 
 Uso: qcontrol level
      qcontrol level <min>[-<max>]
 
-   Este comando permite indicar quais jogadores (baseando-se no nível de cada
-um) que poderão participar da quest atual.  Se este comando for usado sem
-fornecer quais níveis poderão participar, então a quest será aberta para todos
+   Este comando permite indicar quais jogadores (baseando-se no nï¿½vel de cada
+um) que poderï¿½o participar da quest atual.  Se este comando for usado sem
+fornecer quais nï¿½veis poderï¿½o participar, entï¿½o a quest serï¿½ aberta para todos
 os mortais.
 
 Exemplos:
   > qcontrol level
   > qcontrol level 10-40
 
-Veja também: QCONTROL
+Veja tambï¿½m: QCONTROL
 #106
 "QCONTROL INC" "QC INC"
 
 Uso: qcontrol inc
      qcontrol inc <min>[-<max>]
 
-   Este comando permite indicar quais jogadores (baseando-se no número de
-encarnações de cada um) que poderão participar da quest atual.  Se este
-comando for usado sem fornecer o número de encarnações, então a quest será
+   Este comando permite indicar quais jogadores (baseando-se no nï¿½mero de
+encarnaï¿½ï¿½es de cada um) que poderï¿½o participar da quest atual.  Se este
+comando for usado sem fornecer o nï¿½mero de encarnaï¿½ï¿½es, entï¿½o a quest serï¿½
 aberta para todos.
 
 Exemplos:
   > qcontrol inc
   > qcontrol inc 1-2
 
-Veja também: QCONTROL
+Veja tambï¿½m: QCONTROL
 #106
 "QCONTROL WHO" "QC WHO"
 
 Uso: qcontrol who
 
    Este comando apenas mostra uma lista de todos os participantes da quest
-atual, começando pelos operadoes.
+atual, comeï¿½ando pelos operadoes.
 
-Veja também: QCONTROL, WHO
+Veja tambï¿½m: QCONTROL, WHO
 #106
 REJECT
 
 Uso: reject [-m] [-i | <msg>] <nome> [ <nome> ... ]
 
-   Este comando rejeita a inscrição de novos jogadores no VitaliaMUD.  Para
-saber quais jogadores esperam por autorição, utilize o comando INCOMERS.  Um
-ou mais nomes devem ser fornecidos ao comando, para realizar a rejeição.
+   Este comando rejeita a inscriï¿½ï¿½o de novos jogadores no VitaliaMUD.  Para
+saber quais jogadores esperam por autoriï¿½ï¿½o, utilize o comando INCOMERS.  Um
+ou mais nomes devem ser fornecidos ao comando, para realizar a rejeiï¿½ï¿½o.
 
-   Ao rejeitar um jogador, o MUD enviará um e-mail ao jogador avisando-lhe da
-rejeição.  Caso o parâmetro "-i" for fornecido ao comando, nenhum e-mail será
-enviado, e o jogador não será avisado da rejeição.  O comando também pode
-enviar mensagens personalizadas de rejeição para o jogador, explicando o
-motivo de sua rejeição.  Para isso, deve-se fornecer o número da mensagem
-antes dos nomes dos personagens a serem rejeitados.  O parâmetro "-m" pode ser
-usado para obter uma lista das mensagens disponíveis, ou para ler uma das
-mensagens pré-definidas.
+   Ao rejeitar um jogador, o MUD enviarï¿½ um e-mail ao jogador avisando-lhe da
+rejeiï¿½ï¿½o.  Caso o parï¿½metro "-i" for fornecido ao comando, nenhum e-mail serï¿½
+enviado, e o jogador nï¿½o serï¿½ avisado da rejeiï¿½ï¿½o.  O comando tambï¿½m pode
+enviar mensagens personalizadas de rejeiï¿½ï¿½o para o jogador, explicando o
+motivo de sua rejeiï¿½ï¿½o.  Para isso, deve-se fornecer o nï¿½mero da mensagem
+antes dos nomes dos personagens a serem rejeitados.  O parï¿½metro "-m" pode ser
+usado para obter uma lista das mensagens disponï¿½veis, ou para ler uma das
+mensagens prï¿½-definidas.
 
 Exemplos:
   > reject -m
@@ -1596,24 +1596,24 @@ Exemplos:
   > reject astucio
   > reject -i garoto
 
-Importante: Consulte as regras para aprovação de jogadores antes de utilizar
+Importante: Consulte as regras para aprovaï¿½ï¿½o de jogadores antes de utilizar
 este comando.
 
-Veja também: INCOMERS, APPROVE
+Veja tambï¿½m: INCOMERS, APPROVE
 #107
 RELOAD
 
 Uso: reload <arquivo>
 
-   O comando RELOAD é usado para recarregar determinados arquivos do disco
-para a memória.
+   O comando RELOAD ï¿½ usado para recarregar determinados arquivos do disco
+para a memï¿½ria.
 
-Os arquivos válidos são:
+Os arquivos vï¿½lidos sï¿½o:
    help           Sistema de ajuda do MUD (lib/text/help/*)
    socials        Sistema de sociais (lib/etc/socials.bx)
 
-   A maior parte dos arquivos texto do MUD são carregados e recarregados
-automaticamente, conforme a necessidade, não precisando serem recarregados
+   A maior parte dos arquivos texto do MUD sï¿½o carregados e recarregados
+automaticamente, conforme a necessidade, nï¿½o precisando serem recarregados
 manualmente.
 #110
 REROLL
@@ -1623,84 +1623,84 @@ Uso: reroll <jogador>
    REROLL sorteia os atributos de um jogador (ex: Str, Int, Wis, Dex, Con,
 e Cha).
 
-Veja também: STAT
+Veja tambï¿½m: STAT
 #108
 RESSURECT
 
-Uso: ressurect <vítima>
+Uso: ressurect <vï¿½tima>
 
-   Traz um jogador devolta à vida em perfeitas condições de saúde.  Deuses
-devem usar esse comando, ao invés da magia ressurect.
+   Traz um jogador devolta ï¿½ vida em perfeitas condiï¿½ï¿½es de saï¿½de.  Deuses
+devem usar esse comando, ao invï¿½s da magia ressurect.
 #106
 RESTORE
 
 Uso: restore <personagem>
 
-   RESTORE restaura um jogador ou monstro para seu máximo em pontos de
-saúde, magia e movimento.  Se usado em Semi-Deuses ou superiores, ele
-também ajusta todas as habilidades para 100%.
+   RESTORE restaura um jogador ou monstro para seu mï¿½ximo em pontos de
+saï¿½de, magia e movimento.  Se usado em Semi-Deuses ou superiores, ele
+tambï¿½m ajusta todas as habilidades para 100%.
 #107
 RETURN
 
 Uso: return
 
-   RETURN faz você voltar ao seu corpo original depois de usar o comando
+   RETURN faz vocï¿½ voltar ao seu corpo original depois de usar o comando
 SWITCH.
 
-Veja também: SWITCH
+Veja tambï¿½m: SWITCH
 #106
 RLIST
 
-Uso: rlist [intervalo] [parâmetros...]
+Uso: rlist [intervalo] [parï¿½metros...]
 
-   Este comando serve para encontrar e listar as salas do MUD.  Seu uso é
-relativamente complexo, porém, oferece poderosos recursos para procurar
-salas com características específicas.  Sua maneira mais simples é:
+   Este comando serve para encontrar e listar as salas do MUD.  Seu uso ï¿½
+relativamente complexo, porï¿½m, oferece poderosos recursos para procurar
+salas com caracterï¿½sticas especï¿½ficas.  Sua maneira mais simples ï¿½:
 
    rlist [intervalo]
 
-   Serve para mostrar todas as salas que possuam uma determinada numeração,
-por exemplo, para mostrar todas as salas que vão de 3020 até 3050:
+   Serve para mostrar todas as salas que possuam uma determinada numeraï¿½ï¿½o,
+por exemplo, para mostrar todas as salas que vï¿½o de 3020 atï¿½ 3050:
 
    rlist 3020-3050
 
-   O comando RLIST aceita ainda vários outros parâmetros que permitem fazer
-consultas detalhadas em toda a lista de salas.  Os parâmetros são indicados
+   O comando RLIST aceita ainda vï¿½rios outros parï¿½metros que permitem fazer
+consultas detalhadas em toda a lista de salas.  Os parï¿½metros sï¿½o indicados
 a seguir:
 
-   zon:<áreas>
-        Serão mostradas apenas as salas das áreas indicadas no parâmetro.  O
-        uso deste parâmetro é detalhado no item "LISTA NUMEROS" da ajuda.
+   zon:<ï¿½reas>
+        Serï¿½o mostradas apenas as salas das ï¿½reas indicadas no parï¿½metro.  O
+        uso deste parï¿½metro ï¿½ detalhado no item "LISTA NUMEROS" da ajuda.
 
-   lvl:<níveis>
-        Serão mostradas apenas as salas que possuírem os níveis indicados no
-        parâmetro.  Ver "LISTA NUMEROS".
+   lvl:<nï¿½veis>
+        Serï¿½o mostradas apenas as salas que possuï¿½rem os nï¿½veis indicados no
+        parï¿½metro.  Ver "LISTA NUMEROS".
 
    sect:<setores>
-        Serão mostradas apenas as salas que possuírem os tipos de setor
-        indicados no parâmetro.  Ver "LISTA NOME".  Para saber os valores
+        Serï¿½o mostradas apenas as salas que possuï¿½rem os tipos de setor
+        indicados no parï¿½metro.  Ver "LISTA NOME".  Para saber os valores
         que este campo pode receber, use "rlist sect:?".
 
    flg:<flags>
-        Serão mostrados apenas as salas que possuírem as flags indicadas no
-        parâmetro.  Ver "LISTA VETOR".  Para saber os valores que este campo
+        Serï¿½o mostrados apenas as salas que possuï¿½rem as flags indicadas no
+        parï¿½metro.  Ver "LISTA VETOR".  Para saber os valores que este campo
         pode receber, use "rlist flg:?".
 
    link:<sala>
-        Serão mostradas apenas as salas que liguem com a sala fornecida, ou
-        seja, que tenham uma de suas saídas levando até ela.
+        Serï¿½o mostradas apenas as salas que liguem com a sala fornecida, ou
+        seja, que tenham uma de suas saï¿½das levando atï¿½ ela.
 
    spec:<specproc>
-        Serão mostrados apenas as salas que possuam a SpecProc indicada no
-        parâmetro.
+        Serï¿½o mostrados apenas as salas que possuam a SpecProc indicada no
+        parï¿½metro.
 
-   show:<informações>
-        Indica quais informações sobre cada sala deseja ser vista na
+   show:<informaï¿½ï¿½es>
+        Indica quais informaï¿½ï¿½es sobre cada sala deseja ser vista na
         listagem final.  Deve-se fornecer uma lista com o nome de cada
-        campo, separado por vírgulas.  Para saber os valores que este campo
+        campo, separado por vï¿½rgulas.  Para saber os valores que este campo
         pode receber, use "rlist show:?".
 
-   Este comando usa uma interface comum para se realizar a consulta à
+   Este comando usa uma interface comum para se realizar a consulta ï¿½
 listagem de salas do MUD.  Recomenda-se a leitura da ajuda para as
 listagens para entender melhor como funciona o comando RLIST, e os outros
 comandos de listagem (OLIST, MLIST):
@@ -1710,12 +1710,12 @@ comandos de listagem (OLIST, MLIST):
    HELP LISTA NUMEROS
    HELP LISTA VETOR
 
-   Uma boa forma de se familiarizar com o comando, é olhando seus exemplos
+   Uma boa forma de se familiarizar com o comando, ï¿½ olhando seus exemplos
 de uso:
 
    HELP RLIST EXEMPLOS
 
-Veja também: GEN-QUERY, RLIST EXEMPLOS, OLIST, MLIST
+Veja tambï¿½m: GEN-QUERY, RLIST EXEMPLOS, OLIST, MLIST
 #106
 "RLIST EXEMPLOS"
 
@@ -1731,23 +1731,23 @@ Veja também: GEN-QUERY, RLIST EXEMPLOS, OLIST, MLIST
    Para listar as salas a prova de som (SOUNDPROOF):
 > rlist flg:soundproof
 
-   Para listar as salas a prova de som E contra violências (PEACEFUL):
+   Para listar as salas a prova de som E contra violï¿½ncias (PEACEFUL):
 > rlist flg:soundproof,peaceful
 
-   Pala listar as salas a prova de som OU contra violências:
+   Pala listar as salas a prova de som OU contra violï¿½ncias:
 > rlist flg:soundproof,peaceful,|
 
-   Para listar as salas que só podem entrar voando:
+   Para listar as salas que sï¿½ podem entrar voando:
 > rlist sect:flying
 
-   Para listar as salas com água (nadáveis, não nadáveis e submersas),
+   Para listar as salas com ï¿½gua (nadï¿½veis, nï¿½o nadï¿½veis e submersas),
 mostrando o tipo de setor de cada uma:
 > rlist sect:water_swim,water_no_swim,underwater show:sect
 
-   Para listar todas as salas com restrição de nível:
+   Para listar todas as salas com restriï¿½ï¿½o de nï¿½vel:
 > rlist lvl:>0 show:lvl
 
-   Para listar todas as salas que possuam saídas levando até o Templo de
+   Para listar todas as salas que possuam saï¿½das levando atï¿½ o Templo de
 Midgaard:
 > rlist link:3001
 #106
@@ -1755,19 +1755,19 @@ ROOMFLAGS
 
 Uso: roomflags
 
-   Esta chave faz com que o número de cada sala, assim como suas flags,
-sejam mostrados próximos a seu nome.
+   Esta chave faz com que o nï¿½mero de cada sala, assim como suas flags,
+sejam mostrados prï¿½ximos a seu nome.
 #105
 SAVEALL
 
 Uso: saveall
 
-   Este comando faz com que o MUD salve todas as informações relevantes do
-sistema, no disco.  Isso inclúi: jogadores, casas, clans, quadros e a lista
+   Este comando faz com que o MUD salve todas as informaï¿½ï¿½es relevantes do
+sistema, no disco.  Isso inclï¿½i: jogadores, casas, clans, quadros e a lista
 de banimentos.
 
-   Esse comando deve ser usado como precaução, antes do fechamento do MUD
-para manutenção, ou quando o MUD corre risco de "cair", por exemplo, ao
+   Esse comando deve ser usado como precauï¿½ï¿½o, antes do fechamento do MUD
+para manutenï¿½ï¿½o, ou quando o MUD corre risco de "cair", por exemplo, ao
 testar um comando possivelmente defeituoso.
 #109
 SEND
@@ -1775,46 +1775,46 @@ SEND
 Uso: send <jogador> <mensagem>
 
    O comando SEND permite enviar uma mensagem para um determinado jogador,
-que será mostrada diretamente em seu terminal, sem nada lhe identificando.
+que serï¿½ mostrada diretamente em seu terminal, sem nada lhe identificando.
 
 Exemplo:
-  > send rasmussem Você está com sede.
+  > send rasmussem Vocï¿½ estï¿½ com sede.
 
-Veja também: ECHO, TELL
+Veja tambï¿½m: ECHO, TELL
 #106
 SET
 
 Uso: set [ file | player | mob ] <personagem> <campo> <valor>
      set obj <objeto> <campo> <valor>
 
-   O comando SET é extremamente poderoso, capaz de ajustar várias
-características de personagens (jogadores ou monstros), ou objetos.
+   O comando SET ï¿½ extremamente poderoso, capaz de ajustar vï¿½rias
+caracterï¿½sticas de personagens (jogadores ou monstros), ou objetos.
 
-   SET MOB faz com que o comando SET procure por monstros, não jogadores.
-   SET PLAYER faz com que o comando SET procure por jogadores, não monstros.
-   SET FILE lhe permite alterar jogadores que não estão jogando no momento.
-Se você usar SET FILE em um jogador que ESTÁ conectado, sua mudança será
-perdida.  Se você deseja ajustar um jogador que está no jogo, mas está sem
-conexão (linkless), use SET PLAYER.
+   SET MOB faz com que o comando SET procure por monstros, nï¿½o jogadores.
+   SET PLAYER faz com que o comando SET procure por jogadores, nï¿½o monstros.
+   SET FILE lhe permite alterar jogadores que nï¿½o estï¿½o jogando no momento.
+Se vocï¿½ usar SET FILE em um jogador que ESTï¿½ conectado, sua mudanï¿½a serï¿½
+perdida.  Se vocï¿½ deseja ajustar um jogador que estï¿½ no jogo, mas estï¿½ sem
+conexï¿½o (linkless), use SET PLAYER.
 
-   Para ajustar objetos, você deve usar SET OBJ.
+   Para ajustar objetos, vocï¿½ deve usar SET OBJ.
 
-   Para campos "chaveáveis" (binários), os valores devem ser ON, OFF, YES,
+   Para campos "chaveï¿½veis" (binï¿½rios), os valores devem ser ON, OFF, YES,
 ou NO.
 
-   Para obter uma lista de campos disponíveis para você, use SET PLAYER,
+   Para obter uma lista de campos disponï¿½veis para vocï¿½, use SET PLAYER,
 SET MOB ou SET OBJ sem qualquer outro argumento.
 
-Veja também: STAT
+Veja tambï¿½m: STAT
 #106
 SGOTO STRANSFER
 
 Uso: sgoto <destino>
-     stransfer <vítima>
+     stransfer <vï¿½tima>
 
    Estes comandos tem o mesmo efeito dos comandos GOTO e TRANSFER,
-respectivamente, porém estes são silenciosos, nada é mostrado para as
-pessoas da sala, ou a própria pessoa sendo transferida.
+respectivamente, porï¿½m estes sï¿½o silenciosos, nada ï¿½ mostrado para as
+pessoas da sala, ou a prï¿½pria pessoa sendo transferida.
 
    Use estes comandos com resposabilidade.
 #108
@@ -1822,10 +1822,10 @@ SHOW
 
 Uso: show <modo> [argumento]
 
-   O comando SHOW mostra informações diversas do sistema.  Há vários
-informações que este comando fornece, e cada uma funciona de uma maneira
-diferente.  Para uma lista de todas as informações que podem ser exibidas para
-você, digite o comando 'show' simplesmente.  Para ajuda em uma das informações,
+   O comando SHOW mostra informaï¿½ï¿½es diversas do sistema.  Hï¿½ vï¿½rios
+informaï¿½ï¿½es que este comando fornece, e cada uma funciona de uma maneira
+diferente.  Para uma lista de todas as informaï¿½ï¿½es que podem ser exibidas para
+vocï¿½, digite o comando 'show' simplesmente.  Para ajuda em uma das informaï¿½ï¿½es,
 use o comando 'help show <modo>'.
 #105
 "SHOW RALIAS"
@@ -1835,14 +1835,14 @@ Uso: show ralias
    Exibe uma lista com todos os nomes-de-atalho para salas, que podem ser
 usados nos comandos GOTO, TELEPORT ou TRANSFER.
 
-Veja também: GOTO, TELEPORT, TRANSFER
+Veja tambï¿½m: GOTO, TELEPORT, TRANSFER
 #105
 "SHOW ZONES"
 
-Uso: show zones [número]
+Uso: show zones [nï¿½mero]
 
-   Exibe uma lista das áreas disponíveis para exploração no MUD.  Se fornecido
-um número de área, apenas aquela área é exibida.
+   Exibe uma lista das ï¿½reas disponï¿½veis para exploraï¿½ï¿½o no MUD.  Se fornecido
+um nï¿½mero de ï¿½rea, apenas aquela ï¿½rea ï¿½ exibida.
 #105
 "SHOW JAILS"
 
@@ -1852,72 +1852,72 @@ Uso: show jails
 #106
 "SHOW SHOPS"
 
-Uso: show shops [número]
+Uso: show shops [nï¿½mero]
 
-   Exibe uma lista das lojas do MUD.  Se for fornecido um número de loja,
-informações detalhadas sobre a loja serão exibidas.
+   Exibe uma lista das lojas do MUD.  Se for fornecido um nï¿½mero de loja,
+informaï¿½ï¿½es detalhadas sobre a loja serï¿½o exibidas.
 #106
 "SHOW STATS" "SHOW NEWSTAT"
 
 Uso: show stats
      show newstat
 
-   Exibe informações estatísticas sobre o funcionamento do MUD.  O comando
-SHOW NEWSTAT é voltado para medição de tráfego e atividade do MUD.
+   Exibe informaï¿½ï¿½es estatï¿½sticas sobre o funcionamento do MUD.  O comando
+SHOW NEWSTAT ï¿½ voltado para mediï¿½ï¿½o de trï¿½fego e atividade do MUD.
 #106
 "SHOW BAN"
 
-Uso: show ban [número]
+Uso: show ban [nï¿½mero]
 
-   Se usado sem nenhum argumento, o comando SHOW BAN irá exibir uma lista com
-todos os endereços banidos de jogar no VitaliaMUD.  Nesta lista, são
-indicados: o número ordinal do endereço banido, as flags, o nível, as datas
-de criação e expiração, o autor do banimento e o endereço banido.
+   Se usado sem nenhum argumento, o comando SHOW BAN irï¿½ exibir uma lista com
+todos os endereï¿½os banidos de jogar no VitaliaMUD.  Nesta lista, sï¿½o
+indicados: o nï¿½mero ordinal do endereï¿½o banido, as flags, o nï¿½vel, as datas
+de criaï¿½ï¿½o e expiraï¿½ï¿½o, o autor do banimento e o endereï¿½o banido.
 
    As flags podem ser:
 
    D (disabled)
-         Indica que o banimento ainda existe, mas foi desativado, não tem mais
-         efeito real no MUD.  OBS: Ainda não há maneiras de de desativar um
+         Indica que o banimento ainda existe, mas foi desativado, nï¿½o tem mais
+         efeito real no MUD.  OBS: Ainda nï¿½o hï¿½ maneiras de de desativar um
          banimento.
 
    F (fake)
-         Indica um banimento falso.  Mesmo que ele seja atingido, ele não
-         impedirá o jogador de se conectar, mas irá gerar alerta se a flag
+         Indica um banimento falso.  Mesmo que ele seja atingido, ele nï¿½o
+         impedirï¿½ o jogador de se conectar, mas irï¿½ gerar alerta se a flag
          W (warn) estiver ativada.
 
    S (select)
-         Indica que personagens com a flag SITEOK não irão atingir este
-         banimento, e conseqüentemente, poderão conectar e jogar normalmente.
+         Indica que personagens com a flag SITEOK nï¿½o irï¿½o atingir este
+         banimento, e conseqï¿½entemente, poderï¿½o conectar e jogar normalmente.
 
    W (warn)
          Indica que o sistema gera um alerta no canal syslog a cada vez que
          o banimento for atingido.
 
-   Se um número for fornecido como argumento do comando SHOW BAN, então infor-
-mações detalhadas sobre o banimento serão exibidas, incluindo as anotações que
+   Se um nï¿½mero for fornecido como argumento do comando SHOW BAN, entï¿½o infor-
+maï¿½ï¿½es detalhadas sobre o banimento serï¿½o exibidas, incluindo as anotaï¿½ï¿½es que
 foram feitas quando o banimento foi criado.
 
-   Os endereços banidos podem ser escritos de duas formas: por nome e por IP.
-   Endereços por nomes são como '*.foo.com'.  O caractere '*' é um coringa, e
+   Os endereï¿½os banidos podem ser escritos de duas formas: por nome e por IP.
+   Endereï¿½os por nomes sï¿½o como '*.foo.com'.  O caractere '*' ï¿½ um coringa, e
 indica que no ponto em que aparece, pode estar qualquer coisa.  Isso significa
-que, por exemplo, 'modem1.foo.com' seria atingido, mas 'ppp-02.bar.com' não.
+que, por exemplo, 'modem1.foo.com' seria atingido, mas 'ppp-02.bar.com' nï¿½o.
 
-   Endereços por IP são mais complexos, como 'c8e71900/24'.  Esse é uma repre-
-sentação em hexadecimal do IP do jogador.  O número depois da barra (/) é a
-máscara do IP, que indica quantos bits devem ser combinados para que o ban
-seja atingido.  No caso, 24 em números decimais, que significa que os 6
-primeiros dígitos devem combinar.
+   Endereï¿½os por IP sï¿½o mais complexos, como 'c8e71900/24'.  Esse ï¿½ uma repre-
+sentaï¿½ï¿½o em hexadecimal do IP do jogador.  O nï¿½mero depois da barra (/) ï¿½ a
+mï¿½scara do IP, que indica quantos bits devem ser combinados para que o ban
+seja atingido.  No caso, 24 em nï¿½meros decimais, que significa que os 6
+primeiros dï¿½gitos devem combinar.
 
-Veja também: BAN, UNBAN
+Veja tambï¿½m: BAN, UNBAN
 #107
 "SHOW BOARDS"
 
 Uso: show boards
 
-   Exibe uma lista com todos os quadros de mensagens do jogo, e informações
-específicas de cada um dos quadros, como: em que sala estão, a que clã
-pertencem (quando for o caso), quais os níveis necessários para ler,
+   Exibe uma lista com todos os quadros de mensagens do jogo, e informaï¿½ï¿½es
+especï¿½ficas de cada um dos quadros, como: em que sala estï¿½o, a que clï¿½
+pertencem (quando for o caso), quais os nï¿½veis necessï¿½rios para ler,
 escrever e apagar mensagens do quadro, e quantas mensagens o quadro possui
 no momento.
 #107
@@ -1927,14 +1927,14 @@ Uso: show etext <jogador>
      show etext <jogador> <campo>
 
    Exibe o arquivo de campos etext de um determinado jogador.  Os campos etext
-são usados para guardar informações texto, como e-mail, poofin/out, descrição
-do personagem, e anotações.
+sï¿½o usados para guardar informaï¿½ï¿½es texto, como e-mail, poofin/out, descriï¿½ï¿½o
+do personagem, e anotaï¿½ï¿½es.
 #107
 "SHOW RENT"
 
 Uso: show rent <nome>
 
-   Exibe o conteúdo do arquivo de objetos de um determinado jogador.
+   Exibe o conteï¿½do do arquivo de objetos de um determinado jogador.
 #107
 "SHOW SWITCH"
 
@@ -1947,52 +1947,52 @@ no corpo de outros personagens.
 
 Uso: show listen
 
-   Mostra as portas abertas, as quais o MUD espera por conexões dos jogadores.
+   Mostra as portas abertas, as quais o MUD espera por conexï¿½es dos jogadores.
 #108
 "SHOW SNOOP"
 
 Uso: show snoop
 
-   Exibe uma lista dos Deuses utilizando o recurso snoop para ver o conteúdo
-sendo transferido pelas conexões de outros jogadores.
+   Exibe uma lista dos Deuses utilizando o recurso snoop para ver o conteï¿½do
+sendo transferido pelas conexï¿½es de outros jogadores.
 #108
 "SHOW SPECIALS"
 
 Uso: show specials
 
    Exibe uma lista com todos os procedimentos especiais (SpecProcs) que podem
-ser atribuídos a monstros, objetos ou salas.
+ser atribuï¿½dos a monstros, objetos ou salas.
 
-Veja também: ASSIGN
+Veja tambï¿½m: ASSIGN
 #108
 "SHOW AUTOTEXT"
 
 Uso: show autotext
 
    Exibe uma lista com todos os arquivos texto (policy, handbook, etc.) que
-foram definidos no MUD, se estão carregados ou não, e qual o momento que
-foram carregados e lidos pela última vez.
+foram definidos no MUD, se estï¿½o carregados ou nï¿½o, e qual o momento que
+foram carregados e lidos pela ï¿½ltima vez.
 #109
 "SHOW MOBINDEX" "SHOW OBJINDEX"
 
 Uso: show mobindex <nome>
      show objindex <nome>
 
-   Exibe uma lista com todos os objetos ou monstros constantes no índice,
-incluindo o número de cargas.
+   Exibe uma lista com todos os objetos ou monstros constantes no ï¿½ndice,
+incluindo o nï¿½mero de cargas.
 #109
 "SHOW RUSAGE"
 
 Uso: show rusage
 
-   Mostra a utilização dos recursos de sistema (resource usage) pelo MUD.
-Informação de uso técnico.
+   Mostra a utilizaï¿½ï¿½o dos recursos de sistema (resource usage) pelo MUD.
+Informaï¿½ï¿½o de uso tï¿½cnico.
 #109
 "SHOW SCHEDULES"
 
 Uso: show schedules
 
-   Exibe uma lista das tarefas agendadas para execução.  Usado apenas para
+   Exibe uma lista das tarefas agendadas para execuï¿½ï¿½o.  Usado apenas para
 controle interno.
 #109
 "SHOW PLUGINS"
@@ -2000,28 +2000,28 @@ controle interno.
 Uso: show plugins
      show plugin <nome>
 
-   Exibe uma lista dos plugins carregados na memória, ou informações sobre
+   Exibe uma lista dos plugins carregados na memï¿½ria, ou informaï¿½ï¿½es sobre
 um determinado plugin.
 
-Veja também: PLOAD, PUNLOAD
+Veja tambï¿½m: PLOAD, PUNLOAD
 #110
 SHUTDOWN
 
 Uso: shutdown [reboot | die | pause]
 
-   SHUTDOWN é usado para encerrar o MUD.  O comando SHUTDOWN trabalha em
-conjunto com o script 'autorun'.  Se você não estiver usando o autorun, os
-argumentos não tem nenhum significado.  Se você estiver usando o autorun,
+   SHUTDOWN ï¿½ usado para encerrar o MUD.  O comando SHUTDOWN trabalha em
+conjunto com o script 'autorun'.  Se vocï¿½ nï¿½o estiver usando o autorun, os
+argumentos nï¿½o tem nenhum significado.  Se vocï¿½ estiver usando o autorun,
 pode-se usar um dos seguintes argumentos:
 
-   REBOOT   Interrompe o processamento por apenas 5 segundos, ao invés dos
+   REBOOT   Interrompe o processamento por apenas 5 segundos, ao invï¿½s dos
             60 segundos normais.
 
-   DIE      Mata o script autorun, fazendo com que o MUD não se inicie
-            automaticamente até que o autorun seja executado novamente.
+   DIE      Mata o script autorun, fazendo com que o MUD nï¿½o se inicie
+            automaticamente atï¿½ que o autorun seja executado novamente.
 
-   PAUSE    Cria um arquivo chamado 'pause' no diretório raiz do VitaliaMUD,
-            fazendo com que o script autorun fique parado até que este
+   PAUSE    Cria um arquivo chamado 'pause' no diretï¿½rio raiz do VitaliaMUD,
+            fazendo com que o script autorun fique parado atï¿½ que este
             arquivo seja removido, permitindo ao MUD ser reiniciado.
 #110
 SKILLSET
@@ -2032,56 +2032,56 @@ Uso: skillset <nome> '<habilidade>' <valor>
    Esse comando permite alterar a quantidade de treino de determinada
 habilidade, para determinado jogador, em porcentagem.
 
-   Pode-se também, alterar as flags de uma determinada habilidade.  Para
+   Pode-se tambï¿½m, alterar as flags de uma determinada habilidade.  Para
 ativar uma flag, usa-se "+flag", e para desativar, "-flag".  Atualmente,
-a única flag existente é "retain", que permite que uma habilidade possa ser
+a ï¿½nica flag existente ï¿½ "retain", que permite que uma habilidade possa ser
 usada depois que o personagem reencarnar.
 
 Exemplo:
    > skillset rasmussen 'track' 0
    > skillset rasmussen 'fireball' +retain
 
-Veja também: SET
+Veja tambï¿½m: SET
 #108
 SLOWNS
 
 Uso: slowns
 
-   Esta chave permite alterar se os endereços-IP serão resolvidos em nomes
-de hosts.  Quando esta chave é ativada, o MUD não irá resolver os
-endereços-IP, e comandos como USERS ou MULTICONN passarão a mostrar apenas
-os endereços-IP, ao invés dos nomes de hosts.
+   Esta chave permite alterar se os endereï¿½os-IP serï¿½o resolvidos em nomes
+de hosts.  Quando esta chave ï¿½ ativada, o MUD nï¿½o irï¿½ resolver os
+endereï¿½os-IP, e comandos como USERS ou MULTICONN passarï¿½o a mostrar apenas
+os endereï¿½os-IP, ao invï¿½s dos nomes de hosts.
 
-   É útil apenas quando o VitaliaMUD não estiver funcionando com ADNS, e
+   ï¿½ ï¿½til apenas quando o VitaliaMUD nï¿½o estiver funcionando com ADNS, e
 o servidor de nomes se tornar lento, fazendo com que o MUD congele a cada
 novo jogador que se conecta.  Quando o VitaliaMUD estiver funcionando com
-o auxílio do ADNS, esse comando não deve ser usado.
+o auxï¿½lio do ADNS, esse comando nï¿½o deve ser usado.
 
-   Ativando esta chave, e assim fazendo com que os endereços-IP não sejam
+   Ativando esta chave, e assim fazendo com que os endereï¿½os-IP nï¿½o sejam
 resolvidos, pode-se estar abrindo uma forma de jogadores banidos acessarem
-o MUD, pois qualquer banimento por nome que existir, não poderá ser
-verificado neste estado, e o MUD permitirá a conexão.
+o MUD, pois qualquer banimento por nome que existir, nï¿½o poderï¿½ ser
+verificado neste estado, e o MUD permitirï¿½ a conexï¿½o.
 
-Veja também: USERS
+Veja tambï¿½m: USERS
 #109
 SNOOP
 
 Uso: snoop [jogador]
 
-   O comando SNOOP permite que você veja tudo que se passa na conexão de
-outro jogador.  Tudo o que o jogador vê ou digita, será mostrado no seu
-terminal, precedido de uma marcação indicando o nome do jogador.  Se você
-estiver com as cores ativadas, todo o conteúdo da seção do outro jogador
-será mostrado em magenta.
+   O comando SNOOP permite que vocï¿½ veja tudo que se passa na conexï¿½o de
+outro jogador.  Tudo o que o jogador vï¿½ ou digita, serï¿½ mostrado no seu
+terminal, precedido de uma marcaï¿½ï¿½o indicando o nome do jogador.  Se vocï¿½
+estiver com as cores ativadas, todo o conteï¿½do da seï¿½ï¿½o do outro jogador
+serï¿½ mostrado em magenta.
 
-   Evidentemente, há várias considerações éticas para o uso deste comando:
-snoop deve ser usado minimamente, e somente para propósitos disciplinares.
+   Evidentemente, hï¿½ vï¿½rias consideraï¿½ï¿½es ï¿½ticas para o uso deste comando:
+snoop deve ser usado minimamente, e somente para propï¿½sitos disciplinares.
 
    Digite apenas SNOOP para interromper qualquer snoop ativo.
 #107
 SNOWBALL
 
-   SNOWBALL não é nada além de um social, que mostra uma mensagem engraçada,
+   SNOWBALL nï¿½o ï¿½ nada alï¿½m de um social, que mostra uma mensagem engraï¿½ada,
 e nada mais.
 #105
 STAT
@@ -2089,39 +2089,39 @@ STAT
 Uso: stat [ char | player | mobile | file | object ] <nome>
      stat room [ <sala> ]
 
-   O comando STAT fornece informações sobre jogadores, monstros, objetos ou
-salas do jogo.  O segundo argumento indica o tipo de item que você deseja
-obter informações:
+   O comando STAT fornece informaï¿½ï¿½es sobre jogadores, monstros, objetos ou
+salas do jogo.  O segundo argumento indica o tipo de item que vocï¿½ deseja
+obter informaï¿½ï¿½es:
 
    STAT CHAR <nome>
-   Mostra informações sobre qualquer jogador ou monstro que esteja no jogo.
-O personagem pode estar em qualquer sala do jogo, mas o comando dará
-prioridade para os que estiverem na mesma sala que você.
+   Mostra informaï¿½ï¿½es sobre qualquer jogador ou monstro que esteja no jogo.
+O personagem pode estar em qualquer sala do jogo, mas o comando darï¿½
+prioridade para os que estiverem na mesma sala que vocï¿½.
 
    STAT PLAYER <nome>
-   Mostra informações sobre um jogador qualquer que esteja jogando no
+   Mostra informaï¿½ï¿½es sobre um jogador qualquer que esteja jogando no
 momento.
 
    STAT FILE <nome>
-   Mostra informações sobre um jogador qualquer que não esteja jogando no
-momento.  O nome do jogador não pode ser abreviado.
+   Mostra informaï¿½ï¿½es sobre um jogador qualquer que nï¿½o esteja jogando no
+momento.  O nome do jogador nï¿½o pode ser abreviado.
 
    STAT MOBILE <nome>
-   Mostra informações sobre qualquer monstro que esteja no jogo.  O monstro
-pode estar em qualquer sala do jogo, mas o comando dará prioridade para os
-que estiverem na mesma sala que você.
+   Mostra informaï¿½ï¿½es sobre qualquer monstro que esteja no jogo.  O monstro
+pode estar em qualquer sala do jogo, mas o comando darï¿½ prioridade para os
+que estiverem na mesma sala que vocï¿½.
 
    STAT OBJECT <nome>
-   Mostra informações sobre qualquer objeto que esteja no jogo.  O objeto
-pode estar em qualquer lugar, mas o comando dará prioridade para os objetos
-que estiverem em seu inventário, e depois para os que estiverem no chão da
-sala que você estiver.
+   Mostra informaï¿½ï¿½es sobre qualquer objeto que esteja no jogo.  O objeto
+pode estar em qualquer lugar, mas o comando darï¿½ prioridade para os objetos
+que estiverem em seu inventï¿½rio, e depois para os que estiverem no chï¿½o da
+sala que vocï¿½ estiver.
 
-   STAT ROOM [<número>]
-   Mostra informações sobre a sala indicada, ou a sala atual se o número da
-sala não for fornecido.
+   STAT ROOM [<nï¿½mero>]
+   Mostra informaï¿½ï¿½es sobre a sala indicada, ou a sala atual se o nï¿½mero da
+sala nï¿½o for fornecido.
 
-   Caso não for fornecido nenhum tipo de item, o MUD irá procurar por
+   Caso nï¿½o for fornecido nenhum tipo de item, o MUD irï¿½ procurar por
 qualquer jogador, monstro ou objeto que estiver no jogo.
 
 Exemplos:
@@ -2131,205 +2131,205 @@ Exemplos:
   > stat file niandra
   > stat object thunderbolt
 
-Veja também: VSTAT
+Veja tambï¿½m: VSTAT
 #105
 SWITCH
 
 Uso: switch <monstro>
      switch <jogador>
 
-   SWITCH é usado para tomar controle sobre o corpo de monstros; útil para
-a criação de aventuras interativas.  Se o monstro o qual você estiver
-controlando for morto, você retornará para o seu corpo original.
+   SWITCH ï¿½ usado para tomar controle sobre o corpo de monstros; ï¿½til para
+a criaï¿½ï¿½o de aventuras interativas.  Se o monstro o qual vocï¿½ estiver
+controlando for morto, vocï¿½ retornarï¿½ para o seu corpo original.
 
    SWITCH pode ser usado pelos Deuses mais elevados para tomar controle sobre
 o corpo de outros jogadores.
 
-   Enquanto você estiver no corpo do monstro ou de outro jogador, seu corpo
-original permanecerá sem conexão (linkless), porém, ainda aparecerá no WHO.
+   Enquanto vocï¿½ estiver no corpo do monstro ou de outro jogador, seu corpo
+original permanecerï¿½ sem conexï¿½o (linkless), porï¿½m, ainda aparecerï¿½ no WHO.
 Alguns comandos, como WHO, funcionam sempre no corpo original.
 
-Veja também: RETURN
+Veja tambï¿½m: RETURN
 #106
 SYSLOG
 
 Uso: syslog [ desligado | breve | normal | completo ]
 
-   O comando SYSLOG controla se você receberá ou não as informações do
-registro de sistema, e quais mensagens (em nível de importância) você
-receberá.  As mensagens do registro de sistema aparecem entre os marcadores
-'[' e ']', e na cor verde, se você estiver com as cores ligadas.
+   O comando SYSLOG controla se vocï¿½ receberï¿½ ou nï¿½o as informaï¿½ï¿½es do
+registro de sistema, e quais mensagens (em nï¿½vel de importï¿½ncia) vocï¿½
+receberï¿½.  As mensagens do registro de sistema aparecem entre os marcadores
+'[' e ']', e na cor verde, se vocï¿½ estiver com as cores ligadas.
 
-   As mensagens que você recebe são também dependendes do seu nível atual.
+   As mensagens que vocï¿½ recebe sï¿½o tambï¿½m dependendes do seu nï¿½vel atual.
 
 Exemplos:
   > syslog completo
   > syslog desligado
 
-Veja também: COLOR
+Veja tambï¿½m: COLOR
 #101
 TELEPORT TRANSFER
 
-Uso: teleport <vítima> <destino>
-     transfer <vítima>
+Uso: teleport <vï¿½tima> <destino>
+     transfer <vï¿½tima>
 
    O comando TELEPORT permite enviar um determinado personagem de uma sala
 para outra.  O comando TRANSFER permite trazer um personagem para a mesma
-sala que você se encontra.
+sala que vocï¿½ se encontra.
 
-   O comando transfer também permite transferir todos os jogadores para a
+   O comando transfer tambï¿½m permite transferir todos os jogadores para a
 sala atual (TRANSFER TODOS), ou todos os participantes da quest (TRANSFER
 QUEST).
 
-Veja também: GOTO
+Veja tambï¿½m: GOTO
 #106
 TRACKTHRU
 
 Uso: trackthru
 
-   Esta chave permite ativar ou desativar o rastreamento através de portas
-fechadas.  Quando ela é ativada, nenhum jogador com a habilidade 'track'
-poderá usá-la para rastrear um personagem se o caminho para chegar até ele
+   Esta chave permite ativar ou desativar o rastreamento atravï¿½s de portas
+fechadas.  Quando ela ï¿½ ativada, nenhum jogador com a habilidade 'track'
+poderï¿½ usï¿½-la para rastrear um personagem se o caminho para chegar atï¿½ ele
 passar por uma porta fechada.
 
-   Útil durante a realização de determinadas aventuras (quests).
+   ï¿½til durante a realizaï¿½ï¿½o de determinadas aventuras (quests).
 #109
 UNAFFECT
 
-Uso: unaffect <vítima>
+Uso: unaffect <vï¿½tima>
 
    Remove todos os afetamentos (ex: magias) de um jogador.
 
-Veja também: STAT
+Veja tambï¿½m: STAT
 #107
 UNBAN
 
-Uso: unban <número>
-     unban [+|-]<número>
+Uso: unban <nï¿½mero>
+     unban [+|-]<nï¿½mero>
 
    Este comando apaga um site da lista de sites banidos do MUD.  Para ver a
-lista de endereços banidos, e seus números, utilize o comando BAN.
+lista de endereï¿½os banidos, e seus nï¿½meros, utilize o comando BAN.
 
-   Caso você não deseje apagar o banimento, mas apenas desabilitá-lo, basta
-fornecer um sinal de negativo (-) logo antes do número do banimento.  Ou
+   Caso vocï¿½ nï¿½o deseje apagar o banimento, mas apenas desabilitï¿½-lo, basta
+fornecer um sinal de negativo (-) logo antes do nï¿½mero do banimento.  Ou
 ainda, pode-se reabilitar um banimento desabilitado anteriormente,
-fornecendo um sinal de positivo (+) antes do número do banimento.
+fornecendo um sinal de positivo (+) antes do nï¿½mero do banimento.
 
-Ver também: BAN, SHOW BAN
+Ver tambï¿½m: BAN, SHOW BAN
 #108
 UPTIME
 
 Uso: uptime
 
-   Mostra quando o jogo foi iniciado, e quanto tempo se passou desde então.
+   Mostra quando o jogo foi iniciado, e quanto tempo se passou desde entï¿½o.
 #105
 USERS
 
-Uso: users [opções]
+Uso: users [opï¿½ï¿½es]
 
-   O comando USERS mostra uma lista com todas as conexões ativas no MUD.  Esta
-lista mostrará: o número da conexão, (usado no DC), a classe, o nível, o nome
-do jogador conectado, o estado da conexão, o tempo ocioso, o horário de
-acesso, o IP e o endereço.
+   O comando USERS mostra uma lista com todas as conexï¿½es ativas no MUD.  Esta
+lista mostrarï¿½: o nï¿½mero da conexï¿½o, (usado no DC), a classe, o nï¿½vel, o nome
+do jogador conectado, o estado da conexï¿½o, o tempo ocioso, o horï¿½rio de
+acesso, o IP e o endereï¿½o.
 
-   As seguintes opções podem ser usadas:
-   -o    Mostra apenas foras-da-lei (assassinos e ladrões).
-   -p    Mostra apenas conexões de jogadores que estão dentro do jogo.
-   -d    Mostra apenas conexões de jogadores que não estão dentro do jogo
+   As seguintes opï¿½ï¿½es podem ser usadas:
+   -o    Mostra apenas foras-da-lei (assassinos e ladrï¿½es).
+   -p    Mostra apenas conexï¿½es de jogadores que estï¿½o dentro do jogo.
+   -d    Mostra apenas conexï¿½es de jogadores que nï¿½o estï¿½o dentro do jogo
          (peso-morto).
    -1, -2
          Organiza a lista de maneiras diferentes.
    -l <min>-<max>
-         Mostra apenas conexões cujos personagens estão entre os níveis <min>
+         Mostra apenas conexï¿½es cujos personagens estï¿½o entre os nï¿½veis <min>
          e <max>.
    -n <nome>
-         Mostra a conexão pertencente ao personagem <nome>.
+         Mostra a conexï¿½o pertencente ao personagem <nome>.
    -h <endereco>
-         Mostra apenas conexões de <endereço>.
+         Mostra apenas conexï¿½es de <endereï¿½o>.
    -c <lista>
-         Mostra apenas conexões cujos personagens possuam uma das classes na
-         <lista>. O parâmetro <lista> deve conter as iniciais de cada classe
+         Mostra apenas conexï¿½es cujos personagens possuam uma das classes na
+         <lista>. O parï¿½metro <lista> deve conter as iniciais de cada classe
          desejada.
 
-Veja também: DC
+Veja tambï¿½m: DC
 #106
 VNUM
 
 Uso: vnum mob|obj <nome>
 
-   Este comando é obsoleto.  Os comandos MLIST e OLIST devem ser usados para
+   Este comando ï¿½ obsoleto.  Os comandos MLIST e OLIST devem ser usados para
 esta finalidade.
 
-Veja também: MLIST, OLIST
+Veja tambï¿½m: MLIST, OLIST
 #106
 VSTAT
 
 Uso: vstat mob|obj <vnum>
 
-   Usado para obter informações de monstros ou objetos diretamente do
-protótipo, através de seu número (vnum).
+   Usado para obter informaï¿½ï¿½es de monstros ou objetos diretamente do
+protï¿½tipo, atravï¿½s de seu nï¿½mero (vnum).
 
 Exemplos:
   > vstat obj 3000
   > vstat mob 3001
 
-Veja também: LOAD, STAT, OLIST, MLIST
+Veja tambï¿½m: LOAD, STAT, OLIST, MLIST
 #106
 WIZHELP
 
 Uso: wizhelp [jogador]
 
-   Mostra uma lista dos comandos especiais disponíveis para o seu nível, ou
-para o nível de determinado jogador.
+   Mostra uma lista dos comandos especiais disponï¿½veis para o seu nï¿½vel, ou
+para o nï¿½vel de determinado jogador.
 #101
 WIZLOCK
 
 Uso: wizlock [ <valor> | open | approve | automatic ]
 
-   WIZLOCK permite que você restrinja o jogo.  WIZLOCK 1 impede a criação de
-novos jogadores.  WIZLOCK n, 2 <= n <= 110, impede a criação de novos
-jogadores e permite apenas jogadores de nível n e acima a se conectarem.
-WIZLOCK também pode ser utilizado para ajustar o modo de criação de
+   WIZLOCK permite que vocï¿½ restrinja o jogo.  WIZLOCK 1 impede a criaï¿½ï¿½o de
+novos jogadores.  WIZLOCK n, 2 <= n <= 110, impede a criaï¿½ï¿½o de novos
+jogadores e permite apenas jogadores de nï¿½vel n e acima a se conectarem.
+WIZLOCK tambï¿½m pode ser utilizado para ajustar o modo de criaï¿½ï¿½o de
 jogadores, fornecendo "open", "approve" ou "automatic" como argumento.
-WIZLOCK sem nenhum argumento mostra o nível de wizlock atual.
+WIZLOCK sem nenhum argumento mostra o nï¿½vel de wizlock atual.
 
-Veja também: BAN
+Veja tambï¿½m: BAN
 #109
 WIZNET ;
 
-Uso: wiznet [#<nível>] [*] <texto>
+Uso: wiznet [#<nï¿½vel>] [*] <texto>
 
-   O canal de comunicação Imortal.  Através deste canal os imortais podem
-trocar mensagens entre sí.  O canal é dividido em vários níveis,
-correspondendo a cada nível imortal existente.  Você só pode ler as mensagens
-enviadas para o seu nível, ou para níveis inferiores.
+   O canal de comunicaï¿½ï¿½o Imortal.  Atravï¿½s deste canal os imortais podem
+trocar mensagens entre sï¿½.  O canal ï¿½ dividido em vï¿½rios nï¿½veis,
+correspondendo a cada nï¿½vel imortal existente.  Vocï¿½ sï¿½ pode ler as mensagens
+enviadas para o seu nï¿½vel, ou para nï¿½veis inferiores.
 
 Exemplos:
   > ; <texto>      - envia a mensagem
   > ; * <emote>    - envia o emote pelo canal
-  > ; #105 <texto> - envia a mensagem no nível especificado
+  > ; #105 <texto> - envia a mensagem no nï¿½vel especificado
 
-   Pode-se abreviar o número do nível para seu último dígito significativo.
+   Pode-se abreviar o nï¿½mero do nï¿½vel para seu ï¿½ltimo dï¿½gito significativo.
 Assim, ";#5" tem o mesmo efeito que ";#105".
 
-Veja também: CHANNEL
+Veja tambï¿½m: CHANNEL
 #101
 WIZUPD
 
 Uso: WIZUPD
 
-   Força a atualização das listas de Deuses e Imortais.
+   Forï¿½a a atualizaï¿½ï¿½o das listas de Deuses e Imortais.
 
-Veja também: WIZLIST, IMMLIST
+Veja tambï¿½m: WIZLIST, IMMLIST
 #109
 WWHO
 
 Uso: wwho
 
-   Simplesmente exibe os imortais conectados no jogo, indicando quais estão
+   Simplesmente exibe os imortais conectados no jogo, indicando quais estï¿½o
 online (com o canal "wiznet" ligado) e offline ("wiznet" desligado).
 
-Veja também: WHO
+Veja tambï¿½m: WHO
 #101
 XNAMES XUSERS XHOSTS
 
@@ -2339,24 +2339,24 @@ Uso: <comando>
      <comando> reload
 
    Estes comandos permitem mostrar, adicionar, apagar ou recarregar os
-registros das listas de nomes inválidos (comando XNAMES), de usuários de
-e-mail bloqueados (comando XUSERS) e de domínios de e-mail bloqueados
+registros das listas de nomes invï¿½lidos (comando XNAMES), de usuï¿½rios de
+e-mail bloqueados (comando XUSERS) e de domï¿½nios de e-mail bloqueados
 (comando XHOSTS).
 
    Para estas listas xnames e xhosts, basta que apenas uma parte do nome
 combine com o registro da lista para que ele seja bloqueado.  Por exemplo,
-se na lista de nomes inválidos contiver um registro "xxx", o MUD bloqueará
+se na lista de nomes invï¿½lidos contiver um registro "xxx", o MUD bloquearï¿½
 todos os nomes que contenham "xxx", como "abcxxxdef", "xxxy" ou "vwxxx".
 
    Tenha cuidado ao adicionar registros a estas listas.
 #108
 ZRESET
 
-Uso: zreset < área | * | . >
+Uso: zreset < ï¿½rea | * | . >
 
-   Usado para forçar uma área a ser recolocada.  '*' forca todas as áreas a
-serem recolocadas, e '.' força a área em que você está a ser recolocada.
+   Usado para forï¿½ar uma ï¿½rea a ser recolocada.  '*' forca todas as ï¿½reas a
+serem recolocadas, e '.' forï¿½a a ï¿½rea em que vocï¿½ estï¿½ a ser recolocada.
 
-Veja também: SHOW ZONES
+Veja tambï¿½m: SHOW ZONES
 #108
 $
