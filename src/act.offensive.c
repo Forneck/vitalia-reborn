@@ -454,7 +454,6 @@ ACMD(do_flee)
 		if (CAN_GO(ch, attempt) && !ROOM_FLAGGED(EXIT(ch, attempt)->to_room, ROOM_DEATH))
 		{
 			act("$n entra em pânico e tenta fugir!", TRUE, ch, 0, 0, TO_ROOM);
-			if (!escape)
 				was_fighting = FIGHTING(ch);
 
 			if (AFF_FLAGGED(ch, AFF_PARALIZE))
