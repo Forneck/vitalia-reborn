@@ -1178,7 +1178,7 @@ void beware_lightning()
 	{
 	      weather = zone_table[i].weather;
 
-		if (!(weather->sky == SKY_LIGHTNING))
+		if (!(weather.sky == SKY_LIGHTNING))
 			return;				/* go away if its not even stormy! */
 		if (!(rand_number(0, 9) == 0))
 			return;				/* Bolt only 10% of time */
