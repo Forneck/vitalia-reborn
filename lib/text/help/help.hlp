@@ -1,4 +1,3 @@
-#
 CIRCLEMUD
                    
 CircleMUD was developed from DikuMUD (Gamma 0.0) by Jeremy "Ras" Elson at
@@ -39,4 +38,5 @@ Thanks everyone!
                   (write "subscribe circle <first name> <last name>")
 
 --Jeremy Elson (jelson@@circlemud.org)
+#0
 $
