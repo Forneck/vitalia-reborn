@@ -331,7 +331,7 @@ ACMD(do_steal)
 		hit(vict, ch, TYPE_UNDEFINED);
 		
 		 if (!IS_NPC(ch) && !IS_NPC(vict))
-    SET_BIT(PLR_FLAGS(ch), PLR_HTHIEF);
+    SET_BIT_AR(PLR_FLAGS(ch), PLR_HTHIEF);
     
      if (ohoh && CONFIG_PT_ALLOWED)		/* -- jr - 03/07/99 */
     check_thief(ch, vict);
@@ -342,7 +342,7 @@ void check_thief(struct char_data *ch, struct char_data *vict)
   if (!IS_NPC(ch) && !IS_NPC(vict) && (ch != vict) &&
       !PLR_FLAGGED(vict, PLR_KILLER) && !PLR_FLAGGED(vict, PLR_THIEF)) {
     if (!PLR_FLAGGED(ch, PLR_THIEF)) {
-      SET_BIT(PLR_FLAGS(ch), PLR_THIEF);
+      SET_BIT_AR(PLR_FLAGS(ch), PLR_THIEF);
       log1(logBrf | logFile, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)),
 	  "PC Thief bit set on %s while trying to steal %s at %s.",
 	  GET_NAME(ch), GET_NAME(vict), IN_ROOM(vict)->name);
