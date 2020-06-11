@@ -1,11 +1,16 @@
 #10300
-O Começo da Selva~
-   Andando por entre as árvores, parece que você deixou a floresta e entrou
-em uma selva!  Aqui você encontra árvores e plantas exóticas que você nunca
+O Comeï¿½o da Selva~
+   Andando por entre as ï¿½rvores, parece que vocï¿½ deixou a floresta e entrou
+em uma selva!  Aqui vocï¿½ encontra ï¿½rvores e plantas exï¿½ticas que vocï¿½ nunca
 viu em lugar algum.
 ~
-103 cg 3
+103 68 0 0 0 3
 D0
+~
+~
+0 -1 3522
+D1
+Vocï¿½ vï¿½ a sombria floresta de Miden'nir
 ~
 ~
 0 -1 3522
@@ -13,20 +18,15 @@ D2
 ~
 ~
 0 -1 10301
-D1
-Você vê a sombria floresta de Miden'nir
-~
-~
-0 -1 3522
 S
 #10301
 Entrando na Selva~
-   A medida que vai se aprofundando na selva, você começa a ouvir estranhos
-sons de animais, vindo de todas direções e também consegue ouvir o som
-abafado de tambor, que está sendo tocado por alguém, em algum lugar não
-muito distante.  Tomara que os nativos sejam pacíficos!
+   A medida que vai se aprofundando na selva, vocï¿½ comeï¿½a a ouvir estranhos
+sons de animais, vindo de todas direï¿½ï¿½es e tambï¿½m consegue ouvir o som
+abafado de tambor, que estï¿½ sendo tocado por alguï¿½m, em algum lugar nï¿½o
+muito distante.  Tomara que os nativos sejam pacï¿½ficos!
 ~
-103 0 3
+103 0 0 0 0 3
 D0
 ~
 ~
@@ -38,12 +38,12 @@ D2
 S
 #10302
 Entrando na Selva~
-   Você se encontra na junção de quatro caminhos.  O norte leva de volta para
+   Vocï¿½ se encontra na junï¿½ï¿½o de quatro caminhos.  O norte leva de volta para
 fora da selva, o leste parece levar a uma pequena trilha da qual o som de
-tambores pode ser ouvido, ao oeste existem algumas árvores espessas, e ao
+tambores pode ser ouvido, ao oeste existem algumas ï¿½rvores espessas, e ao
 sul um pequeno caminho continua.
 ~
-103 0 3
+103 0 0 0 0 3
 D0
 ~
 ~
@@ -52,22 +52,26 @@ D1
 ~
 ~
 0 -1 10303
-D3
-~
-~
-0 -1 10309
 D2
 ~
 ~
 0 -1 10316
+D3
+~
+~
+0 -1 10309
 S
 #10303
 Em uma Pequena Trilha~
-   Você está em uma pequena trilha que leva para fora do caminho principal
-na selva.  Para o leste o som de tambores está ficando cada vez mais alto.
-Talvez você devesse voltar e procurar ajuda?
+   Vocï¿½ estï¿½ em uma pequena trilha que leva para fora do caminho principal
+na selva.  Para o leste o som de tambores estï¿½ ficando cada vez mais alto.
+Talvez vocï¿½ devesse voltar e procurar ajuda?
 ~
-103 0 3
+103 0 0 0 0 3
+D0
+~
+~
+0 -1 10341
 D1
 ~
 ~
@@ -76,22 +80,17 @@ D3
 ~
 ~
 0 -1 10302
-D0
-~
-~
-0 -1 10341
 S
 #10304
-O Portão de Entrada do Acampamento~
-   Isto é o que parece um portão para um pequeno acampamento.  Até que poderia
-ser um bom lugar para descansar um pouco, mas você muda de idéia rapidamente
-ao ver crânios humanos espetados em lanças!
+O Portï¿½o de Entrada do Acampamento~
+   Isto ï¿½ o que parece um portï¿½o para um pequeno acampamento.  Atï¿½ que poderia
+ser um bom lugar para descansar um pouco, mas vocï¿½ muda de idï¿½ia rapidamente
+ao ver crï¿½nios humanos espetados em lanï¿½as!
 ~
-103 0 3
+103 0 0 0 0 3
 D1
 ~
-portão~
-:n 1 o portão da entrada
+portï¿½o~
 1 -1 10305
 D3
 ~
@@ -100,12 +99,12 @@ D3
 S
 #10305
 No Acampamento~
-   Nossa!  Você entrou em um acampamento de canibais!  Existem ossos jogados
-por todo o lugar, alguns deles óbviamente humanos!  Parece que você acaba de
-perder um grande banquete.  Talvez você deva sair antes que eles façam de
-você o convidado de honra do próximo!
+   Nossa!  Vocï¿½ entrou em um acampamento de canibais!  Existem ossos jogados
+por todo o lugar, alguns deles ï¿½bviamente humanos!  Parece que vocï¿½ acaba de
+perder um grande banquete.  Talvez vocï¿½ deva sair antes que eles faï¿½am de
+vocï¿½ o convidado de honra do prï¿½ximo!
 ~
-103 0 3
+103 0 0 0 0 3
 D0
 ~
 ~
@@ -117,20 +116,18 @@ D1
 D2
 ~
 porta~
-:n 2 a porta
 2 10302 10308
 D3
 ~
-portão~
-:n 1 um portão
+portï¿½o~
 1 -1 10304
 S
 #10306
 A Loja de Alimentos~
    Existem ganchos pendurados no teto que parecem ser usados para armazenar
-carne, mas que tipo de carne?  Use sua imaginação!
+carne, mas que tipo de carne?  Use sua imaginaï¿½ï¿½o!
 ~
-103 0 0
+103 0 0 0 0 0
 D3
 ~
 ~
@@ -138,11 +135,11 @@ D3
 S
 #10307
 A Sala das Mulheres~
-   Você entrou na sala que deve ser onde os canibais mantém suas mulheres
-quando eles estão fora caçando.  Existem peles de animais prontas para serem
-confeccionadas roupas para os canibais, e alguns acessórios da moda canibal!
+   Vocï¿½ entrou na sala que deve ser onde os canibais mantï¿½m suas mulheres
+quando eles estï¿½o fora caï¿½ando.  Existem peles de animais prontas para serem
+confeccionadas roupas para os canibais, e alguns acessï¿½rios da moda canibal!
 ~
-103 0 0
+103 0 0 0 0 0
 D2
 ~
 ~
@@ -150,25 +147,24 @@ D2
 S
 #10308
 A Sala do Chefe~
-   Esta é óbviamente a sala do chefe dos canibais.  Existem peles de animais
-estendidas diretamente sobre as paredes, com cruéis pinturas nelas.
+   Esta ï¿½ ï¿½bviamente a sala do chefe dos canibais.  Existem peles de animais
+estendidas diretamente sobre as paredes, com cruï¿½is pinturas nelas.
    Essas peles devem valer muito dinheiro!
 ~
-103 0 0
+103 0 0 0 0 0
 D0
 Nada.
 ~
 porta~
-:n 2 a porta
 2 10302 10305
 S
 #10309
-Em Direção aos Macacos!~
-   As árvores parecem estar ficando mais espessas à medida que você avança
-para o oeste.  Existem vinhas penduradas nas árvores, e você acha que pode
+Em Direï¿½ï¿½o aos Macacos!~
+   As ï¿½rvores parecem estar ficando mais espessas ï¿½ medida que vocï¿½ avanï¿½a
+para o oeste.  Existem vinhas penduradas nas ï¿½rvores, e vocï¿½ acha que pode
 subir por elas.
 ~
-103 4 3
+103 4 0 0 0 3
 D1
 ~
 ~
@@ -183,11 +179,11 @@ D4
 0 0 10310
 S
 #10310
-Nas Árvores~
-   Uau, essas árvores são altas!  Você acha que quase pode ver Midgaard
-daqui de cima.  Será que tem animais vivendo aqui?
+Nas ï¿½rvores~
+   Uau, essas ï¿½rvores sï¿½o altas!  Vocï¿½ acha que quase pode ver Midgaard
+daqui de cima.  Serï¿½ que tem animais vivendo aqui?
 ~
-103 0 3
+103 0 0 0 0 3
 D0
 ~
 ~
@@ -198,13 +194,13 @@ D5
 0 -1 10309
 S
 #10311
-Nas Árvores~
-   Quando você pula para esta árvore você quase cai!  Aqui as árvores
-balançam, e você se sente cada vez menos seguro.  Talvez você devesse voltar
-lá para baixo.  Você também percebe um pedaço de pele de cobra pendurado em
-um galho.  Onde será que o seu dono está?
+Nas ï¿½rvores~
+   Quando vocï¿½ pula para esta ï¿½rvore vocï¿½ quase cai!  Aqui as ï¿½rvores
+balanï¿½am, e vocï¿½ se sente cada vez menos seguro.  Talvez vocï¿½ devesse voltar
+lï¿½ para baixo.  Vocï¿½ tambï¿½m percebe um pedaï¿½o de pele de cobra pendurado em
+um galho.  Onde serï¿½ que o seu dono estï¿½?
 ~
-103 0 3
+103 0 0 0 0 3
 D0
 ~
 ~
@@ -215,11 +211,11 @@ D2
 0 -1 10310
 S
 #10312
-Nas Árvores~
-   Parece que você acaba de entrar num ninho de grandes cobras escaladoras
-de árvores!  Cuidado, deve haver veneno nas presas delas!
+Nas ï¿½rvores~
+   Parece que vocï¿½ acaba de entrar num ninho de grandes cobras escaladoras
+de ï¿½rvores!  Cuidado, deve haver veneno nas presas delas!
 ~
-103 0 3
+103 0 0 0 0 3
 D2
 ~
 ~
@@ -227,11 +223,11 @@ D2
 S
 #10313
 Perto dos Macacos~
-   O som de vários animais está ficando mais alto à medida que você se
-desloca para o oeste.  Parece que todos os primatas dessa selva estão tendo
-uma espécie de reunião!  Isso deve ser interessante.
+   O som de vï¿½rios animais estï¿½ ficando mais alto ï¿½ medida que vocï¿½ se
+desloca para o oeste.  Parece que todos os primatas dessa selva estï¿½o tendo
+uma espï¿½cie de reuniï¿½o!  Isso deve ser interessante.
 ~
-103 0 3
+103 0 0 0 0 3
 D1
 ~
 ~
@@ -242,12 +238,12 @@ D3
 0 -1 10314
 S
 #10314
-A Sala de Reuniões~
+A Sala de Reuniï¿½es~
    Este parece ser o local em que todos os primatas se reunem.  Parece que
-eles tiveram uma grande festa, você pode notar pela grande bagunça que eles
+eles tiveram uma grande festa, vocï¿½ pode notar pela grande bagunï¿½a que eles
 fizeram aqui.
 ~
-103 0 3
+103 0 0 0 0 3
 D0
 ~
 ~
@@ -258,12 +254,12 @@ D1
 0 -1 10313
 S
 #10315
-Próximo à Sala de Reuniões~
-   Isto parece o lugar onde os primatas descansam após um grande encontro.
+Prï¿½ximo ï¿½ Sala de Reuniï¿½es~
+   Isto parece o lugar onde os primatas descansam apï¿½s um grande encontro.
 Existem grandes folhas macias para servir de cama, e uma bela fonte no canto
 da sala.
 ~
-103 0 0
+103 0 0 0 0 0
 D2
 ~
 ~
@@ -271,12 +267,12 @@ D2
 S
 #10316
 Um Pequeno Caminho~
-   O aspecto denso de árvores e muita vegetação desta selva parece diminuir
-na medida em que você avança por este caminho.  Há uma densa névoa vinda do
-sul.  Você pode voltar pelo norte, se aventurar pelo desconhecido seguindo
+   O aspecto denso de ï¿½rvores e muita vegetaï¿½ï¿½o desta selva parece diminuir
+na medida em que vocï¿½ avanï¿½a por este caminho.  Hï¿½ uma densa nï¿½voa vinda do
+sul.  Vocï¿½ pode voltar pelo norte, se aventurar pelo desconhecido seguindo
 para sul ou ainda seguir uma curva que o caminho faz a oeste.
 ~
-103 0 3
+103 0 0 0 0 3
 D0
 ~
 ~
@@ -291,14 +287,14 @@ D3
 0 -1 10350
 S
 #10317
-A Entrada do Pântano~
-   Espantoso!  Você está diante a um imenso pântano.  Este pântano está
-todo coberto por água, mas em algumas partes há só lama.  Uma grande e
-espessa névoa cobre toda esta região, fazendo com que você não consiga
-enxergar muito longe.  Um cheiro de carne apodrecida cobre toda esta região.
-   Você pode voltar pelo norte, ou seguir explorando o pântano pelo sul.
+A Entrada do Pï¿½ntano~
+   Espantoso!  Vocï¿½ estï¿½ diante a um imenso pï¿½ntano.  Este pï¿½ntano estï¿½
+todo coberto por ï¿½gua, mas em algumas partes hï¿½ sï¿½ lama.  Uma grande e
+espessa nï¿½voa cobre toda esta regiï¿½o, fazendo com que vocï¿½ nï¿½o consiga
+enxergar muito longe.  Um cheiro de carne apodrecida cobre toda esta regiï¿½o.
+   Vocï¿½ pode voltar pelo norte, ou seguir explorando o pï¿½ntano pelo sul.
 ~
-103 0 6
+103 0 0 0 0 6
 D0
 ~
 ~
@@ -309,32 +305,32 @@ D2
 0 -1 10318
 S
 #10318
-Pelo Pântano~
-   Este pântano é enorme e misterioso.  Você olha adiante e parece não
-encontrar o seu fim, talvez pela densa névoa que o cobre.  Cuidado, seres
-horríveis podem habitar este misterioso local.
+Pelo Pï¿½ntano~
+   Este pï¿½ntano ï¿½ enorme e misterioso.  Vocï¿½ olha adiante e parece nï¿½o
+encontrar o seu fim, talvez pela densa nï¿½voa que o cobre.  Cuidado, seres
+horrï¿½veis podem habitar este misterioso local.
 ~
-103.1 0 6
+103 0 0 0 0 6
 D0
 ~
 ~
 0 -1 10317
-D2
-~
-~
-0 -1 10319
 D1
 ~
 ~
 0 -1 10321
+D2
+~
+~
+0 -1 10319
 S
 #10319
-Pelo Pântano~
-   Este pântano é enorme e misterioso.  Você olha adiante e parece não
-encontrar o seu fim, talvez pela densa névoa que o cobre.  Cuidado, seres
-horríveis podem habitar este misterioso local.
+Pelo Pï¿½ntano~
+   Este pï¿½ntano ï¿½ enorme e misterioso.  Vocï¿½ olha adiante e parece nï¿½o
+encontrar o seu fim, talvez pela densa nï¿½voa que o cobre.  Cuidado, seres
+horrï¿½veis podem habitar este misterioso local.
 ~
-103.1 0 6
+103 0 0 0 0 6
 D0
 ~
 ~
@@ -349,12 +345,12 @@ D2
 0 -1 10320
 S
 #10320
-Pelo Pântano~
-   Este pântano é enorme e misterioso.  Você olha adiante e parece não
-encontrar o seu fim, talvez pela densa névoa que o cobre.  Cuidado, seres
-horríveis podem habitar este misterioso local.
+Pelo Pï¿½ntano~
+   Este pï¿½ntano ï¿½ enorme e misterioso.  Vocï¿½ olha adiante e parece nï¿½o
+encontrar o seu fim, talvez pela densa nï¿½voa que o cobre.  Cuidado, seres
+horrï¿½veis podem habitar este misterioso local.
 ~
-103.1 0 6
+103 0 0 0 0 6
 D0
 ~
 ~
@@ -365,32 +361,32 @@ D1
 0 -1 10323
 S
 #10321
-Pelo Pântano~
-   Este pântano é enorme e misterioso.  Você olha adiante e parece não
-encontrar o seu fim, talvez pela densa névoa que o cobre.  Cuidado, seres
-horríveis podem habitar este misterioso local.
+Pelo Pï¿½ntano~
+   Este pï¿½ntano ï¿½ enorme e misterioso.  Vocï¿½ olha adiante e parece nï¿½o
+encontrar o seu fim, talvez pela densa nï¿½voa que o cobre.  Cuidado, seres
+horrï¿½veis podem habitar este misterioso local.
 ~
-103.1 0 6
-D3
-~
-~
-0 -1 10318
-D2
-~
-~
-0 -1 10322
+103 0 0 0 0 6
 D1
 ~
 ~
 0 -1 10324
+D2
+~
+~
+0 -1 10322
+D3
+~
+~
+0 -1 10318
 S
 #10322
-Pelo Pântano~
-   Este pântano é enorme e misterioso.  Você olha adiante e parece não
-encontrar o seu fim, talvez pela densa névoa que o cobre.  Cuidado, seres
-horríveis podem habitar este misterioso local.
+Pelo Pï¿½ntano~
+   Este pï¿½ntano ï¿½ enorme e misterioso.  Vocï¿½ olha adiante e parece nï¿½o
+encontrar o seu fim, talvez pela densa nï¿½voa que o cobre.  Cuidado, seres
+horrï¿½veis podem habitar este misterioso local.
 ~
-103.1 0 6
+103 0 0 0 0 6
 D0
 ~
 ~
@@ -409,16 +405,12 @@ D3
 0 -1 10319
 S
 #10323
-Pelo Pântano~
-   Este pântano é enorme e misterioso.  Você olha adiante e parece não
-encontrar o seu fim, talvez pela densa névoa que o cobre.  Cuidado, seres
-horríveis podem habitar este misterioso local.
+Pelo Pï¿½ntano~
+   Este pï¿½ntano ï¿½ enorme e misterioso.  Vocï¿½ olha adiante e parece nï¿½o
+encontrar o seu fim, talvez pela densa nï¿½voa que o cobre.  Cuidado, seres
+horrï¿½veis podem habitar este misterioso local.
 ~
-103.1 0 6
-D3
-~
-~
-0 -1 10320
+103 0 0 0 0 6
 D0
 ~
 ~
@@ -427,72 +419,76 @@ D1
 ~
 ~
 0 -1 10326
+D3
+~
+~
+0 -1 10320
 S
 #10324
-Pelo Pântano~
-   Este pântano é enorme e misterioso.  Você olha adiante e parece não
-encontrar o seu fim, talvez pela densa névoa que o cobre.  Cuidado, seres
-horríveis podem habitar este misterioso local.
+Pelo Pï¿½ntano~
+   Este pï¿½ntano ï¿½ enorme e misterioso.  Vocï¿½ olha adiante e parece nï¿½o
+encontrar o seu fim, talvez pela densa nï¿½voa que o cobre.  Cuidado, seres
+horrï¿½veis podem habitar este misterioso local.
 ~
-103.1 0 6
+103 0 0 0 0 6
+D2
+~
+~
+0 -1 10325
 D3
 ~
 ~
 0 -1 10321
-D2
-~
-~
-0 -1 10325
 S
 #10325
-Pelo Pântano~
-   Este pântano é enorme e misterioso.  Você olha adiante e parece não
-encontrar o seu fim, talvez pela densa névoa que o cobre.  Cuidado, seres
-horríveis podem habitar este misterioso local.
+Pelo Pï¿½ntano~
+   Este pï¿½ntano ï¿½ enorme e misterioso.  Vocï¿½ olha adiante e parece nï¿½o
+encontrar o seu fim, talvez pela densa nï¿½voa que o cobre.  Cuidado, seres
+horrï¿½veis podem habitar este misterioso local.
 ~
-103.1 0 6
+103 0 0 0 0 6
 D0
 ~
 ~
 0 -1 10324
-D3
-~
-~
-0 -1 10322
 D2
 ~
 ~
 0 -1 10326
+D3
+~
+~
+0 -1 10322
 S
 #10326
-Pelo Pântano~
-   Este pântano é enorme e misterioso.  Você olha adiante e parece não
-encontrar o seu fim, talvez pela densa névoa que o cobre.  Cuidado, seres
-horríveis podem habitar este misterioso local.
+Pelo Pï¿½ntano~
+   Este pï¿½ntano ï¿½ enorme e misterioso.  Vocï¿½ olha adiante e parece nï¿½o
+encontrar o seu fim, talvez pela densa nï¿½voa que o cobre.  Cuidado, seres
+horrï¿½veis podem habitar este misterioso local.
 ~
-103.1 0 6
+103 0 0 0 0 6
 D0
 ~
 ~
 0 -1 10325
-D3
-~
-~
-0 -1 10323
 D2
 ~
 ~
 0 -1 10327
+D3
+~
+~
+0 -1 10323
 S
 #10327
 Pela Trilha~
-   Finalmente você conseguiu sair daquele horroroso pântano.  Aqui a névoa
-já vai ficando para trás e a exuberante vegetação volta cobrindo todo o
-caminho com densas árvores e plantas.
-   Você pode voltar ao pântano indo para o norte, ou seguir adiante indo
+   Finalmente vocï¿½ conseguiu sair daquele horroroso pï¿½ntano.  Aqui a nï¿½voa
+jï¿½ vai ficando para trï¿½s e a exuberante vegetaï¿½ï¿½o volta cobrindo todo o
+caminho com densas ï¿½rvores e plantas.
+   Vocï¿½ pode voltar ao pï¿½ntano indo para o norte, ou seguir adiante indo
 para sul.
 ~
-103 0 3
+103 0 0 0 0 3
 D0
 ~
 ~
@@ -504,12 +500,12 @@ D2
 S
 #10328
 Na Margem do Rio~
-   Você está na margem de um grande e escuro rio.  Sua água é muito gelada
-mas essencial para a sobrevivência dos seres que aqui vivem.
-   Na outra márgem do rio você parece ver um estranho tipo de moradia,
-parece que algum tipo de população primitiva mora ali.
+   Vocï¿½ estï¿½ na margem de um grande e escuro rio.  Sua ï¿½gua ï¿½ muito gelada
+mas essencial para a sobrevivï¿½ncia dos seres que aqui vivem.
+   Na outra mï¿½rgem do rio vocï¿½ parece ver um estranho tipo de moradia,
+parece que algum tipo de populaï¿½ï¿½o primitiva mora ali.
 ~
-103 0 3
+103 0 0 0 0 3
 D0
 ~
 ~
@@ -521,12 +517,12 @@ D2
 S
 #10329
 Na Nascente~
-   A nascente deste rio não passa de um pequeno lago, com uma vegetação
-absolutamente exuberante. Há muita umidade aqui e a água é muito límpida e
-transparente e através dela você pode ver muitos belos peixes de todas
+   A nascente deste rio nï¿½o passa de um pequeno lago, com uma vegetaï¿½ï¿½o
+absolutamente exuberante. Hï¿½ muita umidade aqui e a ï¿½gua ï¿½ muito lï¿½mpida e
+transparente e atravï¿½s dela vocï¿½ pode ver muitos belos peixes de todas
 as cores e tamanhos.
 ~
-103 0 7
+103 0 0 0 0 7
 D1
 ~
 ~
@@ -534,27 +530,27 @@ D1
 S
 #10330
 No Rio~
-   Este rio é muito belo, mas parece ser muito profundo.  Daqui você tem
-uma bela visão de toda a selva que circula o rio, simplesmente lindo.
+   Este rio ï¿½ muito belo, mas parece ser muito profundo.  Daqui vocï¿½ tem
+uma bela visï¿½o de toda a selva que circula o rio, simplesmente lindo.
    O rio continua para leste e oeste.
 ~
-103 0 7
-D3
-~
-~
-0 -1 10329
+103 0 0 0 0 7
 D1
 ~
 ~
 0 -1 10331
+D3
+~
+~
+0 -1 10329
 S
 #10331
 No Rio~
-   Apesar de possuir uma coloração escura, talvez pela lama que há no fundo
+   Apesar de possuir uma coloraï¿½ï¿½o escura, talvez pela lama que hï¿½ no fundo
 deste rio, ele aparenta ser tranquilo e muito bonito.
    O rio continua para leste e oeste.
 ~
-103 0 7
+103 0 0 0 0 7
 D0
 ~
 ~
@@ -570,10 +566,10 @@ D3
 S
 #10332
 No Rio~
-   O rio continua seu belo curso para leste e oeste.  Você talvez possa
+   O rio continua seu belo curso para leste e oeste.  Vocï¿½ talvez possa
 descer na margem logo ao sul.
 ~
-103 0 7
+103 0 0 0 0 7
 D1
 ~
 ~
@@ -589,11 +585,11 @@ D3
 S
 #10333
 Na Cachoeira~
-  CUIDADO!  Ufa, você quase caiu na cachoeira, mas rapidamente se segurou
-em uma das pedras do rio.  A única saída e voltar pelo rio, pois pela
-cachoeira somente a morte você irá encontrar.
+  CUIDADO!  Ufa, vocï¿½ quase caiu na cachoeira, mas rapidamente se segurou
+em uma das pedras do rio.  A ï¿½nica saï¿½da e voltar pelo rio, pois pela
+cachoeira somente a morte vocï¿½ irï¿½ encontrar.
 ~
-103 0 7
+103 0 0 0 0 7
 D3
 ~
 ~
@@ -601,12 +597,12 @@ D3
 S
 #10334
 Na Margem~
-   Você está na outra margem do rio.  Ao sul há o que parece ser ruínas, e
-misteriosos sons podem ser ouvidos de lá.  Será que há algum perigo?
-   Você pode tentar a sorte indo para sul ou pode voltar ao rio indo para
+   Vocï¿½ estï¿½ na outra margem do rio.  Ao sul hï¿½ o que parece ser ruï¿½nas, e
+misteriosos sons podem ser ouvidos de lï¿½.  Serï¿½ que hï¿½ algum perigo?
+   Vocï¿½ pode tentar a sorte indo para sul ou pode voltar ao rio indo para
 norte.
 ~
-103 c 2
+103 4 0 0 0 2
 D0
 ~
 ~
@@ -617,14 +613,14 @@ D2
 0 -1 10335
 S
 #10335
-Pelas Ruínas~
-   Aqui há algumas construções, não muitas, espalhadas por todo o local,
-todas já em ruínas.  Diz a lenda do local, que aqui vivia uma civilização
-antiga mas que há muitos anos foi invadida e exterminada.
-   Bom, pelo menos perigoso este local não aparenta ser.  Você pode voltar
-para o norte ou entrar nas ruínas indo para o sul.
+Pelas Ruï¿½nas~
+   Aqui hï¿½ algumas construï¿½ï¿½es, nï¿½o muitas, espalhadas por todo o local,
+todas jï¿½ em ruï¿½nas.  Diz a lenda do local, que aqui vivia uma civilizaï¿½ï¿½o
+antiga mas que hï¿½ muitos anos foi invadida e exterminada.
+   Bom, pelo menos perigoso este local nï¿½o aparenta ser.  Vocï¿½ pode voltar
+para o norte ou entrar nas ruï¿½nas indo para o sul.
 ~
-103 0 2
+103 0 0 0 0 2
 D0
 ~
 ~
@@ -635,17 +631,17 @@ D2
 0 -1 10336
 S
 #10336
-Pelas Ruínas~
-   Você está bem no centro do que já foi uma vila.  Aqui as ruínas fazem um
-círculo à sua volta e há um altar exatamente no local onde você está.
-   Agora você sabe de onde vêm os misteriosos sons.  Estas ruínas estão
-assombradas, e você pode ver vários zumbis ao seu redor.  Talvez os mortos
-nunca tenham saído deste local e até hoje estão aqui, para matar aqueles que
+Pelas Ruï¿½nas~
+   Vocï¿½ estï¿½ bem no centro do que jï¿½ foi uma vila.  Aqui as ruï¿½nas fazem um
+cï¿½rculo ï¿½ sua volta e hï¿½ um altar exatamente no local onde vocï¿½ estï¿½.
+   Agora vocï¿½ sabe de onde vï¿½m os misteriosos sons.  Estas ruï¿½nas estï¿½o
+assombradas, e vocï¿½ pode ver vï¿½rios zumbis ao seu redor.  Talvez os mortos
+nunca tenham saï¿½do deste local e atï¿½ hoje estï¿½o aqui, para matar aqueles que
 tentem adentrar a sua vila.
-   A oeste ou sul, encontram-se pequenas construções e a leste, há o que
+   A oeste ou sul, encontram-se pequenas construï¿½ï¿½es e a leste, hï¿½ o que
 parece ser um antigo templo.
 ~
-103 0 2
+103 0 0 0 0 2
 D0
 ~
 ~
@@ -664,16 +660,15 @@ D3
 0 -1 10340
 S
 #10337
-Pelas Ruínas~
-   Esta sala parece ser um pouco maior do que as demais.  Aqui há alguns
+Pelas Ruï¿½nas~
+   Esta sala parece ser um pouco maior do que as demais.  Aqui hï¿½ alguns
 desenhos entalhados nas paredes que restaram e uma porta ao sul, que parece
-estar intacta.  Você pode voltar pelo oeste ou tentar passar pela porta a sul.
+estar intacta.  Vocï¿½ pode voltar pelo oeste ou tentar passar pela porta a sul.
 ~
-103 d 0
+103 8 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
 0 10313 10338
 D3
 ~
@@ -682,54 +677,53 @@ D3
 S
 #10338
 Uma Pequena Sala~
-   Aqui parece ser onde o soberano desta antiga civilização ficava.  Há um
+   Aqui parece ser onde o soberano desta antiga civilizaï¿½ï¿½o ficava.  Hï¿½ um
 grande trono, entalhado na pedra bruta, encostado na parede, e muitos
 entalhes por todas as paredes - pelo menos nas que restaram.
-   A única saída e voltar ao norte.
+   A ï¿½nica saï¿½da e voltar ao norte.
 ~
-103 d 0
+103 8 0 0 0 0
 D0
 ~
 ~
 0 -1 10337
 S
 #10339
-Pelas Ruínas~
-   Impressionante.  Aqui o forro desta construção já ruiu e o que restou
-foi um grupo de quatro paredes e a pequena entrada.  Você se assuta ao
+Pelas Ruï¿½nas~
+   Impressionante.  Aqui o forro desta construï¿½ï¿½o jï¿½ ruiu e o que restou
+foi um grupo de quatro paredes e a pequena entrada.  Vocï¿½ se assuta ao
 pensar que as quatro paredes que sobraram podem, a qualquer momento, despencar
-sobre você.  A única saída é voltar pelo norte.
+sobre vocï¿½.  A ï¿½nica saï¿½da ï¿½ voltar pelo norte.
 ~
-103 d 0
+103 8 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
 0 10313 10336
 S
 #10340
-Pelas Ruínas~
-   Você está dentro de uma ruína e as únicas coisas que você pode ver são
-pedaços de pedras quebrados e espalhados por todo o local e uma pequena
-inscrição na parede oeste.
+Pelas Ruï¿½nas~
+   Vocï¿½ estï¿½ dentro de uma ruï¿½na e as ï¿½nicas coisas que vocï¿½ pode ver sï¿½o
+pedaï¿½os de pedras quebrados e espalhados por todo o local e uma pequena
+inscriï¿½ï¿½o na parede oeste.
 ~
-103 d 0
+103 8 0 0 0 0
 D1
 ~
 ~
 0 -1 10336
 E
-inscrição~
-&RCuidado com os zumbis!!!&n
+inscriï¿½ï¿½o~
+@RCuidado com os zumbis!!!@n
 ~
 S
 #10341
 Na Selva~
-   Nossa!!! Só para andar neste local já é uma aventura.  Aqui tudo é coberto
-por uma densa vegetação, dificultando muito seu movimento.  Em meio às folhagens
-há uma pequena abertura no solo, parecendo ser a entrada para um túnel.
+   Nossa!!! Sï¿½ para andar neste local jï¿½ ï¿½ uma aventura.  Aqui tudo ï¿½ coberto
+por uma densa vegetaï¿½ï¿½o, dificultando muito seu movimento.  Em meio ï¿½s folhagens
+hï¿½ uma pequena abertura no solo, parecendo ser a entrada para um tï¿½nel.
 ~
-103 0 3
+103 0 0 0 0 3
 D2
 ~
 ~
@@ -741,11 +735,11 @@ D5
 S
 #10342
 Pela Descida~
-   A descida pelo buraco é bem íngreme, fazendo com que você chegue a
-escorregar em alguns momentos.  Olhando para baixo, você não vê nada, além
-da total escuridão e só pode ouvir alguns estranhos sons de grunidos.
+   A descida pelo buraco ï¿½ bem ï¿½ngreme, fazendo com que vocï¿½ chegue a
+escorregar em alguns momentos.  Olhando para baixo, vocï¿½ nï¿½o vï¿½ nada, alï¿½m
+da total escuridï¿½o e sï¿½ pode ouvir alguns estranhos sons de grunidos.
 ~
-103.2 d 2
+103 8 0 0 0 2
 D4
 ~
 ~
@@ -757,11 +751,11 @@ D5
 S
 #10343
 Pela Descida~
-   A descida pelo buraco é bem íngreme, fazendo com que você até chegue a
-escorregar em alguns momentos.  Olhando para baixo, você não vê nada, além
-da total escuridão e só pode ouvir alguns estranhos sons de grunidos.
+   A descida pelo buraco ï¿½ bem ï¿½ngreme, fazendo com que vocï¿½ atï¿½ chegue a
+escorregar em alguns momentos.  Olhando para baixo, vocï¿½ nï¿½o vï¿½ nada, alï¿½m
+da total escuridï¿½o e sï¿½ pode ouvir alguns estranhos sons de grunidos.
 ~
-103.2 d 2
+103 8 0 0 0 2
 D4
 ~
 ~
@@ -773,15 +767,11 @@ D5
 S
 #10344
 Na Caverna~
-   Você está em uma pequena caverna.  Aqui você pode ouvir o som da água
+   Vocï¿½ estï¿½ em uma pequena caverna.  Aqui vocï¿½ pode ouvir o som da ï¿½gua
 pingando e o som de que parece ser asas batendo.  O formato desta caverna
-é muito interessante, uma vez que ela já foi toda preenchida por água.
+ï¿½ muito interessante, uma vez que ela jï¿½ foi toda preenchida por ï¿½gua.
 ~
-103.2 d 2
-D4
-~
-~
-0 -1 10343
+103 8 0 0 0 2
 D1
 ~
 ~
@@ -794,6 +784,10 @@ D3
 ~
 ~
 0 -1 10347
+D4
+~
+~
+0 -1 10343
 D5
 ~
 ~
@@ -801,11 +795,11 @@ D5
 S
 #10345
 A Sala dos Morcegos~
-   Esta sala é onde os morcegos deste local vivem, todos a espera de
-alimento.  O cheiro de podridão aqui é horrível e há pedaços de corpos em
-decomposição, que devem ser de aventureiros que alcançaram este lugar.
+   Esta sala ï¿½ onde os morcegos deste local vivem, todos a espera de
+alimento.  O cheiro de podridï¿½o aqui ï¿½ horrï¿½vel e hï¿½ pedaï¿½os de corpos em
+decomposiï¿½ï¿½o, que devem ser de aventureiros que alcanï¿½aram este lugar.
 ~
-103.2 d 2
+103 8 0 0 0 2
 D3
 ~
 ~
@@ -813,10 +807,10 @@ D3
 S
 #10346
 Pela Caverna~
-   Há unica coisa que há aqui é uma grande parede a sua frente, e várias
+   Hï¿½ unica coisa que hï¿½ aqui ï¿½ uma grande parede a sua frente, e vï¿½rias
 estalactites pela caverna.
 ~
-103.2 d 2
+103 8 0 0 0 2
 D0
 ~
 ~
@@ -824,11 +818,11 @@ D0
 S
 #10347
 Toca do Troll~
-   Aqui é onde vive o Troll desta caverna.  Há sangue por todas as paredes
-e pedaços de ossos espalhados pelo chão.  "O Troll deve ser uma criatura
-faminta" ...pensa você.
+   Aqui ï¿½ onde vive o Troll desta caverna.  Hï¿½ sangue por todas as paredes
+e pedaï¿½os de ossos espalhados pelo chï¿½o.  "O Troll deve ser uma criatura
+faminta" ...pensa vocï¿½.
 ~
-103.2 d 2
+103 8 0 0 0 2
 D1
 ~
 ~
@@ -836,9 +830,9 @@ D1
 S
 #10348
 Um Buraco~
-   Você está em um buraco.  E agora?
+   Vocï¿½ estï¿½ em um buraco.  E agora?
 ~
-103.2 d 2
+103 8 0 0 0 2
 D4
 ~
 ~
@@ -846,11 +840,11 @@ D4
 S
 #10350
 Um Pequeno Caminho~
-   O aspecto denso de árvores e muita vegetação desta selva parece diminuir
-na medida em que você avança por este caminho.  Há uma imensa construção
+   O aspecto denso de ï¿½rvores e muita vegetaï¿½ï¿½o desta selva parece diminuir
+na medida em que vocï¿½ avanï¿½a por este caminho.  Hï¿½ uma imensa construï¿½ï¿½o
 no fim do caminho.
 ~
-103 0 3
+103 0 0 0 0 3
 D1
 ~
 ~
@@ -862,11 +856,11 @@ D3
 S
 #10351
 Um Pequeno Caminho~
-   O aspecto denso de árvores e muita vegetação desta selva parece diminuir
-na medida em que você avança por este caminho.  Há uma imensa construção
+   O aspecto denso de ï¿½rvores e muita vegetaï¿½ï¿½o desta selva parece diminuir
+na medida em que vocï¿½ avanï¿½a por este caminho.  Hï¿½ uma imensa construï¿½ï¿½o
 no fim do caminho.
 ~
-103 0 3
+103 0 0 0 0 3
 D1
 ~
 ~
@@ -878,11 +872,11 @@ D3
 S
 #10352
 Um Pequeno Caminho~
-   O aspecto denso de árvores e muita vegetação desta selva parece diminuir
-na medida em que você avança por este caminho.  Há uma imensa construção
+   O aspecto denso de ï¿½rvores e muita vegetaï¿½ï¿½o desta selva parece diminuir
+na medida em que vocï¿½ avanï¿½a por este caminho.  Hï¿½ uma imensa construï¿½ï¿½o
 no fim do caminho.
 ~
-103 0 3
+103 0 0 0 0 3
 D1
 ~
 ~
@@ -894,11 +888,11 @@ D3
 S
 #10353
 Um Pequeno Caminho~
-   Você está bem em frente a um imenso muro de pedra.  Há uma entrada a
-norte que permite visitar o lugar, mas você não sabe o que encontraria
+   Vocï¿½ estï¿½ bem em frente a um imenso muro de pedra.  Hï¿½ uma entrada a
+norte que permite visitar o lugar, mas vocï¿½ nï¿½o sabe o que encontraria
 pela frente...
 ~
-103 0 3
+103 0 0 0 0 3
 D0
 ~
 ~
