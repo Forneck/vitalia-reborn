@@ -344,13 +344,13 @@ void check_thief(struct char_data *ch, struct char_data *vict)
     if (!PLR_FLAGGED(ch, PLR_THIEF)) {
       SET_BIT_AR(PLR_FLAGS(ch), PLR_THIEF);
       log1( MAX(LVL_IMMORT, GET_INVIS_LEV(ch)),
-	  "PC Thief bit set on %s while trying to steal %s at %s.",
-	  GET_NAME(ch), GET_NAME(vict), IN_ROOM(vict)->name);
+	  "PC Thief bit set on %s while trying to steal %s.",
+	  GET_NAME(ch), GET_NAME(vict));
       send_to_char(ch,"Agora você é um JOGADOR LADRÃO, que pena...\r\n");
     } else {
       log1( MAX(LVL_IMMORT, GET_INVIS_LEV(ch)),
-	  "PC Thief %s trying to steal %s at %s.",
-	  GET_NAME(ch), GET_NAME(vict), IN_ROOM(vict)->name);
+	  "PC Thief %s trying to steal %s.",
+	  GET_NAME(ch), GET_NAME(vict));
     }
   }
 }
