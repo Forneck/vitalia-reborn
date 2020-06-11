@@ -5,25 +5,25 @@ estiverem jogando no Mundo de Vit�lia.
 
    Para obter ajuda para um comando, digite HELP (comando).
 
-   @gSAY ASK WHISPER '    @nConversar com outras pessoas na sala.
-   @gEMOTE :              @nDescriver a��es para outras pessoas na sala.
-   @gGSAY QSAY            @nConversar com outras pessoas no seu grupo.
-   @gGOSSIP GRATS         @nConversar com outras pessoas no jogo todo.
-   @gSHOUT                @nConversar com outras pessoas na sua area.
-   @gAUCTION              @nLeiloar itens.
-   @gPRAY                 @nComunicar diretamente com os Deuses.
-   @gTELL REPLY           @nConversar em particular com outras pessoas.
-   @gCHANNEL              @nEscolher quais canais deseja ouvir.
-   @gMAIL CHECK RECEIVE   @nEnviar/receber cartas de outras pessoas.
-   @gWRITE                @nEscrever em pap�is ou quadros de mensagem.
-   @gREAD                 @nLer pap�is ou mensagens em quadros.
-   @gNOREPEAT             @nRepetir as suas frases para voc� mesmo.
+   &gSAY ASK WHISPER '    &nConversar com outras pessoas na sala.
+   &gEMOTE :              &nDescriver a��es para outras pessoas na sala.
+   &gGSAY QSAY            &nConversar com outras pessoas no seu grupo.
+   &gGOSSIP GRATS         &nConversar com outras pessoas no jogo todo.
+   &gSHOUT                &nConversar com outras pessoas na sua area.
+   &gAUCTION              &nLeiloar itens.
+   &gPRAY                 &nComunicar diretamente com os Deuses.
+   &gTELL REPLY           &nConversar em particular com outras pessoas.
+   &gCHANNEL              &nEscolher quais canais deseja ouvir.
+   &gMAIL CHECK RECEIVE   &nEnviar/receber cartas de outras pessoas.
+   &gWRITE                &nEscrever em pap�is ou quadros de mensagem.
+   &gREAD                 &nLer pap�is ou mensagens em quadros.
+   &gNOREPEAT             &nRepetir as suas frases para voc� mesmo.
 
    H� tambem a possibilidade de usar sociais para expressar seus sentimentos
 e a��es para as pessoas que est�o em sua sala.  Para obter uma breve
 descri��o do uso dos sociais, digite HELP SOCIALS, ou para ver a lista dos
 sociais dispon�veis, digite o comando SOCIALS.
-#0
+#
 SAY ASK WHISPER '
 
 Uso: say <mensagem>
@@ -39,7 +39,7 @@ Exemplos:
   > 'Ol� a todos.
 
 Veja tamb�m: COMUNICA��O
-#0
+#
 EMOTE :
 
 Uso: emote <mensagem>
@@ -55,7 +55,7 @@ Exemplo:
   Helt se sente muito triste hoje.
 
 Veja tamb�m: COMUNICA��O, SOCIALS
-#0
+#
 GSAY GTELL
 
 Uso: gsay <mensagem>
@@ -65,7 +65,7 @@ Uso: gsay <mensagem>
 n�o estejam na mesma sala.
 
 Veja tamb�m: COMUNICA��O, GROUP, TELL, SAY
-#0
+#
 QSAY
 
 Uso: qsay <mensagem>
@@ -73,7 +73,7 @@ Uso: qsay <mensagem>
    Diz algo para os outros integrantes do grupo de busca (quest) atual.
 
 Veja tamb�m: COMUNICA��O, QUEST
-#0
+#
 GOSSIP GRATS
 
 Uso: gossip <mensagem>
@@ -93,7 +93,7 @@ Exemplos:
   > grats PARAB�NS CATJE!!!!!!!!
 
 Veja tamb�m: COMUNICA��O, CHANNEL
-#0
+#
 SHOUT
 
 Uso: shout <mensagem>
@@ -102,7 +102,7 @@ Uso: shout <mensagem>
 �rea geogr�fica que voc� est�.
 
 Veja tamb�m: COMUNICA��O, CHANNEL
-#0
+#
 AUCTION
 
 Uso: auction <mensagem>
@@ -115,7 +115,7 @@ Exemplos:
   > auction espada curta -- lance m�nimo: 100k
 
 Veja tamb�m: COMUNICA��O, CHANNEL
-#0
+#
 PRAY
 
 Uso: pray <mensagem>
@@ -127,7 +127,7 @@ para mensagens direcionadas para os Deuses, mas n�o � garantido que um Deus
 ir� ler ou atender sua mensagem prontamente.
 
 Veja tamb�m: COMUNICA��O
-#0
+#
 TELL
 
 Uso: tell <jogador> <mensagem>
@@ -140,7 +140,7 @@ Exemplos:
   > tell catje Ol�, como vai voc�?
 
 Veja tamb�m: COMUNICA��O, CHANNEL
-#0
+#
 REPLY
 
 Uso: reply <mensagem>
@@ -155,7 +155,7 @@ Exemplo:
   Voc� fala por telepatica com Ras, 'ei'
 
 Veja tamb�m: TELL
-#0
+#
 CHANNEL
 
 Uso: channel [ +all | -all ] [ +canal | -canal ] ...
@@ -170,7 +170,7 @@ canal, use CHANNEL +CANAL.
 comandos CHANNEL +ALL ou CHANNEL -ALL.
 
 Veja tamb�m: COMUNICA��O, GOSSIP, SHOUT, AUCTION, TELL
-#0
+#
 MAIL CHECK RECEIVE
 
 Uso: check
@@ -185,7 +185,7 @@ n�vel 2 para usar o correio.
 RECEIVE para receber suas correspond�ncias, e MAIL para enviar uma
 correspond�ncia para algu�m.  Os selos geralmente custam 150 moedas de ouro,
 mas podem custar mais se voc� for enviar mensagem para algum ser divino.
-#0
+#
 NOREPEAT
 
 Uso: norepeat
@@ -195,7 +195,7 @@ Uso: norepeat
 possuem conex�o lenta ou se isso simplesmente o perturba.
 
 Veja tamb�m: TOGGLE
-#0
+#
 READ
 
 Uso: read <objeto>
@@ -209,7 +209,7 @@ Exemplo:
   > read papel
 
 Veja tamb�m: WRITE, QUADROS
-#0
+#
 WRITE
 
 Uso: write <objeto>
@@ -222,5 +222,6 @@ Tamb�m � usado para colocar mensagens em um quadro.  Digite HELP QUADROS par
 mais informa��es.
 
 Veja tamb�m: READ, MAIL, QUADROS
-#0
-$~
+#
+$
+~
