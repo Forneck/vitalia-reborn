@@ -196,7 +196,7 @@
 #define SKILL_SPY		    237 /* -- jr - May 15, 2000		 */
 #define SKILL_SEIZE		    238 /* -- jr - Sep 15, 2000		 */
 #define SKILL_BACKFLIP		    239	/* -- jr - Apr 07, 2001		 */
-#define SKILL_MOUNT		    240 /* -- jr - Apr 07, 2001		 */
+#define SKILL_BANDAGE		    240 /* -- jr - Apr 07, 2001		 */
 #define SKILL_ENVENOM		    241	/* -- jr - Jul 19, 2001		 */
 #define SKILL_NIGHTHAMMER	    242	/* -- jr - Oct 07, 2001		 */
 #define SKILL_MEDITATE		    243 /* -- jr - Dec 29, 2001		 */
@@ -206,9 +206,8 @@
 #define SKILL_ADAGIO		    247	/* -- AC - Apr, 2003		 */
 #define SKILL_ALLEGRO		    248	/* -- AC - Apr, 2003		 */
 #define SKILL_TRIP		    249	/* -- AC - JUNE, 2003		 */
-#define SKILL_BANDAGE 250 /* -- FC */
-#define SKILL_WHIRLWIND             251
-#define SKILL_SCAN 252
+#define SKILL_WHIRLWIND             250
+#define SKILL_SCAN 251
 
 /* New skills may be added here up to MAX_SKILLS (297) */
 
