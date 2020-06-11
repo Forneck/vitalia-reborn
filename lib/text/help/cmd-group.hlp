@@ -1,67 +1,67 @@
 GRUPOS
 
-   Os seguintes comandos são usados para a formação de grupos de jogadores e a
-interação entre seus membros.  Assim se torna mais fácil a exploração do MUD.
+   Os seguintes comandos sï¿½o usados para a formaï¿½ï¿½o de grupos de jogadores e a
+interaï¿½ï¿½o entre seus membros.  Assim se torna mais fï¿½cil a exploraï¿½ï¿½o do MUD.
 Para obter ajuda para um comando, digite HELP <comando>.
 
-   &gFOLLOW               &nSeguir alguém.
-   &gGASSIST              &nPrestar assistência a quem estiver lutando.
-   &gGROUP                &nAdicionar membros ao grupo ou exibí-los.
-   &gGSAY GTELL           &nDizer algo para todos do grupo.
-   &gORDER                &nOrdenar alguém encantado a fazer algo.
-   &gREPORT               &nReportar suas condições físicas para o grupo.
-   &gSPLIT                &nDivide uma determinada quantidade de moedas.
-   &gUNGROUP              &nChutar alguém para fora do seu grupo.
-   &gQUEST                &nEntrar ou sair do grupo de busca.
-   &gQSAY                 &nDizer algo para todos do grupo de busca (quest).
-#
+   @gFOLLOW               @nSeguir alguï¿½m.
+   @gGASSIST              @nPrestar assistï¿½ncia a quem estiver lutando.
+   @gGROUP                @nAdicionar membros ao grupo ou exibï¿½-los.
+   @gGSAY GTELL           @nDizer algo para todos do grupo.
+   @gORDER                @nOrdenar alguï¿½m encantado a fazer algo.
+   @gREPORT               @nReportar suas condiï¿½ï¿½es fï¿½sicas para o grupo.
+   @gSPLIT                @nDivide uma determinada quantidade de moedas.
+   @gUNGROUP              @nChutar alguï¿½m para fora do seu grupo.
+   @gQUEST                @nEntrar ou sair do grupo de busca.
+   @gQSAY                 @nDizer algo para todos do grupo de busca (quest).
+#0
 FOLLOW
 
 Uso: follow <jogador>
 
-   Use FOLLOW para começar a seguir automaticamente algum jogador.
+   Use FOLLOW para comeï¿½ar a seguir automaticamente algum jogador.
 
 Exemplos:
 
    > follow ras
    > follow self
 
-Veja também: GROUP, SNEAK
-#
+Veja tambï¿½m: GROUP, SNEAK
+#0
 GASSIST
 
 Uso: gassist
 
-   Parecido com o 'assist', mas ajuda qualquer jogador do grupo que está
+   Parecido com o 'assist', mas ajuda qualquer jogador do grupo que estï¿½
 lutando.
 
-Veja também: ASSIST
-#
+Veja tambï¿½m: ASSIST
+#0
 GROUP
 
 Uso: group [jogador]
      group todos
 
    O comando GROUP sem argumentos mostra o atual status do seu grupo.  Se
-você digitar GROUP <jogador>, irá adicionar ou remover um jogador do seu grupo.
-O comando GROUP TODOS adiciona todos aqueles que estão te seguindo para o seu
+vocï¿½ digitar GROUP <jogador>, irï¿½ adicionar ou remover um jogador do seu grupo.
+O comando GROUP TODOS adiciona todos aqueles que estï¿½o te seguindo para o seu
 grupo.
 
-   Se você é membro de um grupo, os pontos de experiência que você ganharia
-por matar monstros serão divididos de maneira uniforme por todos os membros
-do grupo.  Os pontos de experiência serão divididos somente entre os membros do
-grupo que estão no mesmo local, no momento do golpe fatal.  A divisão
-da experiência não leva em consideração se o jogador estava ou não
+   Se vocï¿½ ï¿½ membro de um grupo, os pontos de experiï¿½ncia que vocï¿½ ganharia
+por matar monstros serï¿½o divididos de maneira uniforme por todos os membros
+do grupo.  Os pontos de experiï¿½ncia serï¿½o divididos somente entre os membros do
+grupo que estï¿½o no mesmo local, no momento do golpe fatal.  A divisï¿½o
+da experiï¿½ncia nï¿½o leva em consideraï¿½ï¿½o se o jogador estava ou nï¿½o
 participando da luta.
 
-   GROUP sem nenhum argumento mostra a lista de jogadores que estão no
-mesmo grupo que você.  GROUP TODOS adiciona todos aqueles que estão te
+   GROUP sem nenhum argumento mostra a lista de jogadores que estï¿½o no
+mesmo grupo que vocï¿½.  GROUP TODOS adiciona todos aqueles que estï¿½o te
 seguindo para o grupo.
 
-   Para fazer um grupo, um "líder" deve ser selecionado.  Todos os membros
-do grupo devem seguir (FOLLOW) o líder usando o comando "follow" (seguir).
-O líder não deve seguir ninguém!  O líder agora pode incluir cada jogador
-que o está seguindo, digitando "group <nome do jogador>".
+   Para fazer um grupo, um "lï¿½der" deve ser selecionado.  Todos os membros
+do grupo devem seguir (FOLLOW) o lï¿½der usando o comando "follow" (seguir).
+O lï¿½der nï¿½o deve seguir ninguï¿½m!  O lï¿½der agora pode incluir cada jogador
+que o estï¿½ seguindo, digitando "group <nome do jogador>".
 
 Exemplo:
 
@@ -69,7 +69,7 @@ Exemplo:
 
   Quifael : "follow dragon"
   Redferne: "follow dragon"
-  (Dragon não deve estar seguindo ninguém, além dele mesmo)
+  (Dragon nï¿½o deve estar seguindo ninguï¿½m, alï¿½m dele mesmo)
   Dragon  : "group dragon"
   Dragon  : "group redferne"
   Dragon  : "group quifael"
@@ -78,69 +78,69 @@ Exemplo:
 dormindo o tempo todo) ele pode digitar: "GROUP QUIFAEL" para excluir
 Quifael do grupo.
 
-Veja também: EXPERIENCIA, UNGROUP, XP
-#
+Veja tambï¿½m: EXPERIENCIA, UNGROUP, XP
+#0
 ORDER
 
-Uso: order <vítima> <comando>
+Uso: order <vï¿½tima> <comando>
      order seguidores <comando>
 
    Usado para ordenar animais e aqueles sob o efeito da magia 'cham person'
-a fazer tudo o que você mandar.  Você pode ordenar todos que estão sob seu
+a fazer tudo o que vocï¿½ mandar.  Vocï¿½ pode ordenar todos que estï¿½o sob seu
 comando com o comando "order seguidores".
 
 Exemplos:
-   > order cachorrinho eat pão
+   > order cachorrinho eat pï¿½o
    > order guarda sleep
 
-Veja também: MAGIA CHARM
-#
+Veja tambï¿½m: MAGIA CHARM
+#0
 QUEST
 
 Uso: quest
 
    Quando uma "quest" (aventura) estiver sendo conduzida por um Deus, e se
-você tiver permissão para participar, esse comando irá colocá-lo como
-participante da aventura.  Isso lhe dará acesso ao canal QSAY e a
+vocï¿½ tiver permissï¿½o para participar, esse comando irï¿½ colocï¿½-lo como
+participante da aventura.  Isso lhe darï¿½ acesso ao canal QSAY e a
 oportunidade de participar da aventura.
 
-   Veja mais detalhes no tópico "QUESTS".
+   Veja mais detalhes no tï¿½pico "QUESTS".
 
-Veja também: QUESTS, QSAY
-#
+Veja tambï¿½m: QUESTS, QSAY
+#0
 REPORT
 
 Uso: report
 
-   Este comando manda um relato sobre o seu atual estado (saúde), para os
+   Este comando manda um relato sobre o seu atual estado (saï¿½de), para os
 outros membros do grupo.
-#
+#0
 SPLIT
 
 Uso: split <quantidade a ser dividida>
 
-   O comando 'split' é usado para dividir uma quantidade de dinheiro entre
-os jogadores que estão no seu grupo, na mesma sala que você.  Se você está
+   O comando 'split' ï¿½ usado para dividir uma quantidade de dinheiro entre
+os jogadores que estï¿½o no seu grupo, na mesma sala que vocï¿½.  Se vocï¿½ estï¿½
 em um grupo com quatro outras pessoas, todos que estiverem na mesma sala que
-você, e você digita SPLIT 100, 20 moedas serão dadas, por você, para cada
-membro do grupo.  (100 moedas são divididas em 5; você fica com sua parte e
+vocï¿½, e vocï¿½ digita SPLIT 100, 20 moedas serï¿½o dadas, por vocï¿½, para cada
+membro do grupo.  (100 moedas sï¿½o divididas em 5; vocï¿½ fica com sua parte e
 entrega a outra parte aos membros do grupo).
 
-Veja também: FOLLOW, GROUP
-#
+Veja tambï¿½m: FOLLOW, GROUP
+#0
 UNGROUP
 
 Uso: ungroup [jogador do grupo]
 
-   O comando UNGROUP pode ser usado pelos líderes dos grupos para desfazer
-todo o grupo, ou para excluir um específico membro do grupo (e fazer com que
-ele/ela pare de seguir o líder).
+   O comando UNGROUP pode ser usado pelos lï¿½deres dos grupos para desfazer
+todo o grupo, ou para excluir um especï¿½fico membro do grupo (e fazer com que
+ele/ela pare de seguir o lï¿½der).
 
 Exemplos:
 
    > ungroup
    > ungroup homer
 
-Veja também: GROUP
-#
+Veja tambï¿½m: GROUP
+#0
 $
