@@ -439,20 +439,7 @@ ACMD(do_order)
 ACMD(do_flee)
 {
 	int i, attempt, loss;
-	int perc, prob, escape = false;
 	struct char_data *was_fighting;
-
-	if (subcmd == SCMD_ESCAPE)
-	{
-		if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_ESCAPE))
-		{
-			send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
-			return;
-		}
-		perc = rand_number(1, 101);	/* 101% is a complete failure */
-		prob = GET_SKILL(ch, SKILL_ESCAPE);
-		escape = prob > perc;
-	}
 
 	if (GET_POS(ch) < POS_FIGHTING)
 	{
@@ -498,7 +485,7 @@ ACMD(do_flee)
 			return;
 		}
 	}
-	send_to_char(ch, "@WPANICO!  Você não tem escapatória!@n\r\n");
+	send_to_char(ch, "%sPANICO!  Você não tem escapatória!%s\r\n",CCWHT(ch,C_NRM) CCNRM(ch,C_NRM));
 }
 
 ACMD(do_bash)
@@ -592,6 +579,115 @@ ACMD(do_bash)
 if (GET_LEVEL(ch) < LVL_GOD)
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
+
+
+/*
+ * -- jr - Dec 29, 2001
+ * Slash the opponent 2 to 5 (avg 3) times on first round, with greater
+ * damage per slash.
+ *
+ * This is the first skill with improvement enabled.
+ */
+ACMD(do_combo)
+{
+   char arg[MAX_INPUT_LENGTH];
+  struct char_data *vict;
+  struct obj_data *weapon;
+  int perc, prob, hits, basedam, dam, i;
+  int can_improve = true;
+
+  one_argument(argument, arg);
+
+  if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_COMBO_ATTACK)) {
+    send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
+    return;
+  }
+  if (!(weapon = GET_EQ(ch, WEAR_WIELD))) {
+    send_to_char(ch, "Você precisa empunhar uma arma para ter sucesso.\r\n");
+    return;
+  }
+  if (FIGHTING(ch)) {
+    send_to_char(ch, "Você não sabe como fazer isso durante a luta...\r\n");
+    return;
+  }
+  if (GET_OBJ_TYPE(weapon) != ITEM_WEAPON ||
+      GET_OBJ_VAL(weapon, 3) + TYPE_HIT != TYPE_SLASH) {
+    act("$p não é uma arma apropriada para isso.", FALSE, ch, weapon, NULL, TO_CHAR);
+    return;
+  }
+  if ((vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)) == NULL) {
+    send_to_char(ch, "Atacar quem?\r\n");
+    return;
+  }
+  if (vict == ch) {
+    send_to_char(ch, "Sem gracinhas hoje...\r\n");
+    return;
+  }
+	if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_PEACEFUL))
+	{
+		send_to_char(ch, "Este lugar é muito calmo, sem violências...\r\n");
+		return;
+	}
+ 	if (!CONFIG_PK_ALLOWED && !IS_NPC(vict))
+	{
+		/* prevent accidental pkill */
+		act("Use 'murder' se voce realmente deseja atacar $N.", FALSE, ch, 0, vict, TO_CHAR);
+		return;
+	}
+
+  perc = rand_number(1, 101);	/* 101% is a complete failure */
+  prob = GET_SKILL(ch, SKILL_COMBO_ATTACK);
+
+  if (GET_CLASS(ch) != CLASS_WARRIOR)
+    perc += 5;
+  if (MOB_FLAGGED(vict, MOB_AWARE))
+    perc += 10;
+  if (GET_LEVEL(vict) > GET_LEVEL(ch))
+    perc += GET_LEVEL(vict) - GET_LEVEL(ch);
+
+  if (perc > prob) {
+    damage(ch, vict, 0, SKILL_COMBO_ATTACK);
+    if (GET_LEVEL(ch) <LVL_GOD) {
+	WAIT_STATE(vict, 2 * PULSE_VIOLENCE);
+    return;
+    }
+  }
+
+  /*
+   * Calculate how many hits.
+   * After throwing 1 million times, the following expression gave:
+   * 2:  249657 (24.97%)
+   * 3:  459093 (45.91%)
+   * 4:  249631 (24.96%)
+   * 5:   41619 ( 4.16%)
+   */
+  hits = 2 + !rand_number(0, 1) + !rand_number(0, 2) + !rand_number(0, 3);
+
+  /*
+   * Calculate base damage.
+   */
+  basedam = str_app[STRENGTH_APPLY_INDEX(ch)].todam;
+  basedam += GET_DAMROLL(ch);
+
+  for (i = 0; i < hits; i++) {
+    /*
+     * Calculate how much damage.
+     * Note the dice is thrown twice.
+     */
+    dam = basedam;
+    dam += dice(GET_OBJ_VAL(weapon, 1), GET_OBJ_VAL(weapon, 2));
+    dam += dice(GET_OBJ_VAL(weapon, 1), GET_OBJ_VAL(weapon, 2));
+
+    if ((dam = damage(ch, vict, dam, TYPE_SLASH)) < 0)	/* -1 = died */
+      break;
+ 
+    if (IN_ROOM(ch) != IN_ROOM(vict))
+      break;
+  }
+
+	WAIT_STATE(vict, 2 * PULSE_VIOLENCE);
+}
+
 
 ACMD(do_rescue)
 {
@@ -739,10 +835,9 @@ ACMD(do_whirlwind)
 		return;
 	}
 
-	if ROOM_FLAGGED
-		(IN_ROOM(ch), ROOM_PEACEFUL)
+	if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_PEACEFUL))
 	{
-		send_to_char(ch, "This room just has such a peaceful, easy feeling...\r\n");
+		send_to_char(ch, "Este lugar é muito calmo, sem violências...\r\n");
 		return;
 	}
 
