@@ -20,26 +20,27 @@ usando o comando especial "/save", ou simplesmente "/s".
    Os comandos de Edi��o s�o detalhados no t�pico "EDITOR CMD".
 
 Veja tamb�m: EDITOR CMD
-#0
+#
 "EDITOR CMD"
 
-@WComandos de edi��o de texto:@n
-@b~~~~~~~~~~~~~~~~~~~~~~~~~~~~@n
-   @g/abort            @n:: Abandona o texto e cancela a edi��o
-   @g/append <txt>     @n:: Anexa a linha ao final do texto
-   @g/clear            @n:: Apaga todo o texto escrito
-   @g/delete <n>       @n:: Apaga a linha selecionada
-   @g/edit <txt>       @n:: Altera o texto da linha selecionada
-   @g/format           @n:: Formata todo o texto escrito
-   @g/goto <n>         @n:: Seleciona linha
-   @g/insert <txt>     @n:: Insere texto antes da linha selecionada
-   @g/help             @n:: Mostra a ajuda do editor
-   @g/list             @n:: Mostra o texto escrito
-   @g/lnum             @n:: Mostra o texto escrito com os n�meros de linhas
-   @g/replace <a> <b>  @n:: Substitui determinada palavra no texto
-   @g/save             @n:: Salva o texto e encerra a edi��o
-   @g/space            @n:: Mostra o espa�o dispon�vel para escrita
+&WComandos de edi��o de texto:&n
+&b~~~~~~~~~~~~~~~~~~~~~~~~~~~~&n
+   &g/abort            &n:: Abandona o texto e cancela a edi��o
+   &g/append <txt>     &n:: Anexa a linha ao final do texto
+   &g/clear            &n:: Apaga todo o texto escrito
+   &g/delete <n>       &n:: Apaga a linha selecionada
+   &g/edit <txt>       &n:: Altera o texto da linha selecionada
+   &g/format           &n:: Formata todo o texto escrito
+   &g/goto <n>         &n:: Seleciona linha
+   &g/insert <txt>     &n:: Insere texto antes da linha selecionada
+   &g/help             &n:: Mostra a ajuda do editor
+   &g/list             &n:: Mostra o texto escrito
+   &g/lnum             &n:: Mostra o texto escrito com os n�meros de linhas
+   &g/replace <a> <b>  &n:: Substitui determinada palavra no texto
+   &g/save             &n:: Salva o texto e encerra a edi��o
+   &g/space            &n:: Mostra o espa�o dispon�vel para escrita
 
    Os comandos podem ser abreviados, por exemplo: "/a", "/s".
-#0
-$~
+#
+$
+~
