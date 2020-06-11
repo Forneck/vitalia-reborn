@@ -1,18 +1,6 @@
 ! ^ !
 
 Use ! to repeat the last command typed #0
-SKY STARS STARMAP CONSTELLATION
-The night sky in the ..(put here your Mud name) is host to many stars.
-The ancients recognized patterns in these stars and named many
-constellations after them.  Throughout the year you may be able
-to 'look sky' and see some of the most famous ones, including:
-
-&OCygnus      &cUrsa Minor  &GOrion   &WDragon  &PLeo    &gVenus  &RMars
-&CCassiopeia  &BMercurius   &bUranus  &pCrown   &rPluto  &YRaptor   
-
-StarMap was written by Nebseni of Clandestine MUD and ported to Smaug
-by Desden, el Chaman Tibetano.
-#0
 %ASOUND% OASOUND MASOUND WASOUND ASOUND
 
 %asound% <message>
