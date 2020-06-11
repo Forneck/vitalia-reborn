@@ -1,10 +1,10 @@
 #17301
-Em frente à Floresta Arden~
-   À sua frente extende-se a vasta Floresta Arden, formada por gigantescos
+Em frente ï¿½ Floresta Arden~
+   ï¿½ sua frente extende-se a vasta Floresta Arden, formada por gigantescos
 carvalhos e desconhecida vida selvagem.  Um caminho segue ao norte da
-floresta.  Há um pedaço de pergaminho pregado a um velho carvalho.
+floresta.  Hï¿½ um pedaï¿½o de pergaminho pregado a um velho carvalho.
 ~
-173 c 3
+173 4 0 0 0 3
 D0
 Um caminho empoeirado.
 ~
@@ -17,19 +17,18 @@ D1
 E
 pergaminho~
 O pergaminho diz:
-
-Que seja conhecido que Arthur, Rei dos Bretões, busca formar o regimento da
-Távola Redonda.  Todos os cavaleiros de virtude e valor estão convocados
+Que seja conhecido que Arthur, Rei dos Bretï¿½es, busca formar o regimento da
+Tï¿½vola Redonda.  Todos os cavaleiros de virtude e valor estï¿½o convocados
 para integrar esse augusto grupo em Camelot.
 ~
 S
 #17302
 A Encruzilhada de Arden~
-   Você se encontra no cruzamento entre dois caminhos empoeirados.  Feixes
-de luz solar iluminam a intersecção, e você percebe pegadas de cavalos na
-poeira.  As trilhas seguem nas direções norte, sul, leste e oeste.
+   Vocï¿½ se encontra no cruzamento entre dois caminhos empoeirados.  Feixes
+de luz solar iluminam a intersecï¿½ï¿½o, e vocï¿½ percebe pegadas de cavalos na
+poeira.  As trilhas seguem nas direï¿½ï¿½es norte, sul, leste e oeste.
 ~
-173 0 3
+173 0 0 0 0 3
 D0
 Um caminho empoeirado.
 ~
@@ -51,24 +50,24 @@ Um caminho empoeirado.
 ~
 0 -1 17303
 E
-pegadas~
-Você se ajoelha e examina as pegadas.  A direção principal segue os caminhos
-ao leste e ao sul.
+poeira~
+Vocï¿½ cuidadosamente examina a sujeira e, alï¿½m das pegadas de cavalo, percebe
+que hï¿½ um estranho rastro de marcas feitas por garras seguindo na direï¿½ï¿½o
+oeste.
 ~
 E
-poeira~
-Você cuidadosamente examina a sujeira e, além das pegadas de cavalo, percebe
-que há um estranho rastro de marcas feitas por garras seguindo na direção
-oeste.
+pegadas~
+Vocï¿½ se ajoelha e examina as pegadas.  A direï¿½ï¿½o principal segue os caminhos
+ao leste e ao sul.
 ~
 S
 #17303
 A Floresta Arden~
-   Você está em um caminho na grande floresta Arden.  Sinceramente você
-desejaria que não houvessem tantos pernilongos aborrecidos aqui!  A trilha
+   Vocï¿½ estï¿½ em um caminho na grande floresta Arden.  Sinceramente vocï¿½
+desejaria que nï¿½o houvessem tantos pernilongos aborrecidos aqui!  A trilha
 segue ao sul e ao leste.
 ~
-173 0 3
+173 0 0 0 0 3
 D1
 Um caminho empoeirado.
 ~
@@ -81,16 +80,16 @@ Um caminho empoeirado.
 0 -1 17304
 E
 pernilongos~
-Com certeza eles estão aborrecidos!
+Com certeza eles estï¿½o aborrecidos!
 ~
 S
 #17304
 Caminho de Ossos~
-   A trilha se estreita e escurece e você percebe o estranho som de algo
-sendo moído.  Você olha para baixo- OSSOS!  A oeste o caminho se torna ainda
-menos iluminado e ao norte você pode perceber luz.
+   A trilha se estreita e escurece e vocï¿½ percebe o estranho som de algo
+sendo moï¿½do.  Vocï¿½ olha para baixo- OSSOS!  A oeste o caminho se torna ainda
+menos iluminado e ao norte vocï¿½ pode perceber luz.
 ~
-173 0 3
+173 0 0 0 0 3
 D0
 Um caminho empoeirado.
 ~
@@ -103,18 +102,18 @@ E mais ossos...
 0 -1 17307
 E
 ossos~
-Você olha para os ossos.  A maioria deles é de origem humana.  O brasão da
-casa de Pellinore está marcado em alguns deles.  A quantidade de ossos é
+Vocï¿½ olha para os ossos.  A maioria deles ï¿½ de origem humana.  O brasï¿½o da
+casa de Pellinore estï¿½ marcado em alguns deles.  A quantidade de ossos ï¿½
 maior a oeste.
 ~
 S
 #17305
 Uma Cabana na Floresta Arden~
-   Você está em frente a uma resistente cabana de sapé.  Há capim por todos
-os lados - obviamente este lugar foi abandonado já há algum tempo.  A porta
+   Vocï¿½ estï¿½ em frente a uma resistente cabana de sapï¿½.  Hï¿½ capim por todos
+os lados - obviamente este lugar foi abandonado jï¿½ hï¿½ algum tempo.  A porta
 da cabana fica a oeste e o caminho empoeirado segue ao sul.
 ~
-173 0 3
+173 0 0 0 0 3
 D2
 Um caminho empoeirado.
 ~
@@ -124,20 +123,19 @@ D3
 Uma cabana.
 ~
 porta~
-:n 2 a porta
 1 17336 17308
 E
 capim~
-Você pousa as mãos em seus joelhos e examina as ervas daninhas.  Sua maioria
-é de ervas de uma variedade ou outra, e a diversidade é enorme.
+Vocï¿½ pousa as mï¿½os em seus joelhos e examina as ervas daninhas.  Sua maioria
+ï¿½ de ervas de uma variedade ou outra, e a diversidade ï¿½ enorme.
 ~
 S
 #17306
-Uma bifurcação no caminho empoeirado.~
-   Você está em uma bifurcação no caminho poeirento na Floresta Arden.  Há
+Uma bifurcaï¿½ï¿½o no caminho empoeirado.~
+   Vocï¿½ estï¿½ em uma bifurcaï¿½ï¿½o no caminho poeirento na Floresta Arden.  Hï¿½
 pegadas de cavalos na terra, e a trilha segue norte, leste e oeste daqui.
 ~
-173 0 3
+173 0 0 0 0 3
 D0
 Um caminho empoeirado.
 ~
@@ -155,16 +153,16 @@ Um caminho empoeirado.
 0 -1 17302
 E
 pegada~
-Você se ajoelha e examina as marcas de cascos na terra.  O tráfego pesado
+Vocï¿½ se ajoelha e examina as marcas de cascos na terra.  O trï¿½fego pesado
 segue ao norte e ao oeste.
 ~
 S
 #17307
 O Covil da Besta da Busca.~
-   Você achou o covil da procurada Besta!  Ossos cobrem o chão por todos os
-lados.  A única saída fica a leste.
+   Vocï¿½ achou o covil da procurada Besta!  Ossos cobrem o chï¿½o por todos os
+lados.  A ï¿½nica saï¿½da fica a leste.
 ~
-173 a 3
+173 1 0 0 0 3
 D1
 Um caminho de ossos.
 ~
@@ -173,53 +171,51 @@ Um caminho de ossos.
 S
 #17308
 Dentro de uma cabana~
-   Você está dentro de uma velha e abandonada cabana.  O teto é baixo, e as
-vigas estão cobertas por fuligem.  Há uma bancada de trabalho e uma antiga
+   Vocï¿½ estï¿½ dentro de uma velha e abandonada cabana.  O teto ï¿½ baixo, e as
+vigas estï¿½o cobertas por fuligem.  Hï¿½ uma bancada de trabalho e uma antiga
 lareira.
 ~
-173 d 0
+173 8 0 0 0 0
 D1
 Uma porta de madeira.
 ~
 porta~
-:n 2 a porta de madeira
 2 17336 17305
 E
-bancada~
-A bancada de trabalho está coberta por um tampo de vidro que protege os
-vários tubos e frascos de diversas cores.  Talvez seja melhor deixar isto em
-paz..
-~
-E
-lareira~
-O fogo há muito tempo se extinguiu.  Tudo o que você vê são restos de papéis
-amassados e lenha na lareira
-~
-E
-papeis amassados restos~
-Você tira um pedaço de papel rasgado da lareira.  Está escrito:
-Merlin, meu amor por Tristão é infinito, mas meu pai o proíbe de se
-encontrar comigo.  Há algo que você possa fazer?
-
-Isolda
+amarelas estranhas manchas~
+Vocï¿½ examina as manchas amarelas.  Elas cheiram a enxofre.
 ~
 E
 vigas~
-As vigas estão escurecidas pela fumaça e com estranhas manchas amarelas.
+As vigas estï¿½o escurecidas pela fumaï¿½a e com estranhas manchas amarelas.
 ~
 E
-amarelas estranhas manchas~
-Você examina as manchas amarelas.  Elas cheiram a enxofre.
+papeis amassados restos~
+Vocï¿½ tira um pedaï¿½o de papel rasgado da lareira.  Estï¿½ escrito:
+Merlin, meu amor por Tristï¿½o ï¿½ infinito, mas meu pai o proï¿½be de se
+encontrar comigo.  Hï¿½ algo que vocï¿½ possa fazer?
+Isolda
+~
+E
+lareira~
+O fogo hï¿½ muito tempo se extinguiu.  Tudo o que vocï¿½ vï¿½ sï¿½o restos de papï¿½is
+amassados e lenha na lareira
+~
+E
+bancada~
+A bancada de trabalho estï¿½ coberta por um tampo de vidro que protege os
+vï¿½rios tubos e frascos de diversas cores.  Talvez seja melhor deixar isto em
+paz..
 ~
 S
 #17309
 Brumas de Arden~
-   Você tem caminhado por uma trilha em declive até uma área arborizada
+   Vocï¿½ tem caminhado por uma trilha em declive atï¿½ uma ï¿½rea arborizada
 coberta por brumas.  As altas e negras silhuetas dos gigantes carvalhos
-obstruem a sua limitada visão.  Você observa a trilha poeirenta que segue
+obstruem a sua limitada visï¿½o.  Vocï¿½ observa a trilha poeirenta que segue
 norte e as pegadas de cavalos que seguem sul.
 ~
-173 a 3
+173 1 0 0 0 3
 D0
 Um caminho empoeirado.
 ~
@@ -232,17 +228,17 @@ Um caminho empoeirado.
 0 -1 17306
 E
 pegadas~
-Você olha as pegadas e conclui que um grande número de cavalos têm passado
+Vocï¿½ olha as pegadas e conclui que um grande nï¿½mero de cavalos tï¿½m passado
 por esse caminho.
 ~
 S
 #17310
 Nas profundezas do Bosque~
-   Você se encontra em uma parte da Floresta Arden totalmente coberta por
-árvores.  As sombras se movem, brincando na brisa.  A trilha continua a
+   Vocï¿½ se encontra em uma parte da Floresta Arden totalmente coberta por
+ï¿½rvores.  As sombras se movem, brincando na brisa.  A trilha continua a
 norte, leste e oeste.
 ~
-173 0 3
+173 0 0 0 0 3
 D0
 Um caminho empoeirado.
 ~
@@ -260,29 +256,29 @@ Um caminho empoeirado.
 0 -1 17306
 S
 #17311
-A Clareira Amaldiçoada~
-   Você entrou em uma clareira na floresta onde toda a vegetação está morta.
-Não há som que indique vida selvagem, nem nenhum raio de luz que consiga
-penetrar ali.  Há ossos espalhados nos chãos, todos dos que tiveram coragem
-de visitar o local.  Talvez você deva descansar por um tempo.
+A Clareira Amaldiï¿½oada~
+   Vocï¿½ entrou em uma clareira na floresta onde toda a vegetaï¿½ï¿½o estï¿½ morta.
+Nï¿½o hï¿½ som que indique vida selvagem, nem nenhum raio de luz que consiga
+penetrar ali.  Hï¿½ ossos espalhados nos chï¿½os, todos dos que tiveram coragem
+de visitar o local.  Talvez vocï¿½ deva descansar por um tempo.
 ~
-173 ax 3
+173 8388609 0 0 0 3
 D4
-As árvores.
+As ï¿½rvores.
 ~
 ~
 0 -1 17312
 E
 ossos~
-Talvez você deva descansar um pouco.
+Talvez vocï¿½ deva descansar um pouco.
 ~
 S
 #17312
-Uma depressão escura~
-   Você está em uma depressão escura.  O ar é pesado, úmido e opressivo,
-quebrado apenas pelo grasnar de um corvo.  A oeste está a trilha poeirenta.
+Uma depressï¿½o escura~
+   Vocï¿½ estï¿½ em uma depressï¿½o escura.  O ar ï¿½ pesado, ï¿½mido e opressivo,
+quebrado apenas pelo grasnar de um corvo.  A oeste estï¿½ a trilha poeirenta.
 ~
-173 a 3
+173 1 0 0 0 3
 D3
 Um caminho empoeirado.
 ~
@@ -290,18 +286,18 @@ Um caminho empoeirado.
 0 -1 17310
 E
 corvo~
-Ou era uma risada sardônica?
+Ou era uma risada sardï¿½nica?
 ~
 S
 #17313
 A Floresta Arden~
-   Você adentrou em uma parte clara e alegre da Floresta Arden.  Esquilos
+   Vocï¿½ adentrou em uma parte clara e alegre da Floresta Arden.  Esquilos
 brincam de pegar uns aos outros ao redor dos antigos carvalhos, e borboletas
-voam como se dançassem nos raios solares.  O ar está agradavelmente
-perfumado.  O sol esta às suas costas e a trilha deixada por cavalos segue
+voam como se danï¿½assem nos raios solares.  O ar estï¿½ agradavelmente
+perfumado.  O sol esta ï¿½s suas costas e a trilha deixada por cavalos segue
 norte, sul e leste.
 ~
-173 ce 3
+173 20 0 0 0 3
 D0
 Um caminho empoeirado.
 ~
@@ -318,22 +314,22 @@ Um caminho empoeirado.
 ~
 0 -1 17309
 E
-esquilos~
-Sim, eles estão acasalando.
+trilha pegadas cavalo~
+Vocï¿½ descobriu marcas deixadas por cascos de cavalos.  A maioria delas
+apontam trï¿½fego intenso em direï¿½ï¿½o a leste e sul.
 ~
 E
-trilha pegadas cavalo~
-Você descobriu marcas deixadas por cascos de cavalos.  A maioria delas
-apontam tráfego intenso em direção a leste e sul.
+esquilos~
+Sim, eles estï¿½o acasalando.
 ~
 S
 #17314
 Um riacho na Floresta Arden~
-   Você parou para beber água no pequeno riacho que corta a trilha.  A sul,
-a floresta se torna clara.  A oeste, ela mergulha na escuridão.  O céu está
-muito azul e os raios do sol se refletem nas águas prateadas.
+   Vocï¿½ parou para beber ï¿½gua no pequeno riacho que corta a trilha.  A sul,
+a floresta se torna clara.  A oeste, ela mergulha na escuridï¿½o.  O cï¿½u estï¿½
+muito azul e os raios do sol se refletem nas ï¿½guas prateadas.
 ~
-173 0 6
+173 0 0 0 0 6
 D2
 Um caminho empoeirado
 ~
@@ -346,21 +342,21 @@ Um caminho empoeirado
 0 -1 17315
 E
 aguas prateadas~
-Você se inclina para observar o límpido e brilhante riacho quando vê um
+Vocï¿½ se inclina para observar o lï¿½mpido e brilhante riacho quando vï¿½ um
 cavaleiro submergir.  O cavaleiro leva com sigo o sinal de Camelot e parece
-ter sido friamente atingido pelas costas com uma lança.
+ter sido friamente atingido pelas costas com uma lanï¿½a.
 ~
 S
 #17315
 Campo de Batalha de Arden~
-   À sua frente extende-se o cinzento Campo de Batalha de Arden.
-Incontáveis séculos de guerra cobriram o chão com ossos e armas quebradas
-daqueles que ali combateram.  Há sinais de uma recente carnificina
-envolvendo muitos cavaleiros e seus corcéis, formando diversas pilhas.
+   ï¿½ sua frente extende-se o cinzento Campo de Batalha de Arden.
+Incontï¿½veis sï¿½culos de guerra cobriram o chï¿½o com ossos e armas quebradas
+daqueles que ali combateram.  Hï¿½ sinais de uma recente carnificina
+envolvendo muitos cavaleiros e seus corcï¿½is, formando diversas pilhas.
    O caminho empoeirado continua a leste e oeste e uma sinuosa estrada se
 encontra ao norte.
 ~
-173 0 2
+173 0 0 0 0 2
 D0
 Uma estrada sinuosa.
 ~
@@ -383,19 +379,18 @@ Ver isso lhe deixa enjoado.
 S
 #17316
 Diante Blackmoor~
-   Você está em frente a Blackmoor, o refúgio do maléfico Mordred.  Os muros
-que o protegem têm cerca de 25 pés de altura e torres protegem o portão e as
+   Vocï¿½ estï¿½ em frente a Blackmoor, o refï¿½gio do malï¿½fico Mordred.  Os muros
+que o protegem tï¿½m cerca de 25 pï¿½s de altura e torres protegem o portï¿½o e as
 beiradas.  O vento parece carregar uma aguda e estrondosa gargalhada
 feminina, provocando arrepios e um intenso calafrio em sua espinha.
-   Os negros portões de ferro de Blackmoor ficam ao norte, e ao sul
+   Os negros portï¿½es de ferro de Blackmoor ficam ao norte, e ao sul
 extende-se uma sinuosa estrada.
 ~
-173 0 2
+173 0 0 0 0 2
 D0
-Os Portões de Ferro Negro.
+Os Portï¿½es de Ferro Negro.
 ~
 portao portoes ferro negro~
-:n 1 o portão de ferro negro
 1 -1 17327
 D2
 Uma estrada sinuosa.
@@ -403,23 +398,23 @@ Uma estrada sinuosa.
 ~
 0 -1 17315
 E
-portao portoes ferro negro~
-Os grandes portões de ferro foram forjados a partir de lingotes e
-estranhamente não há nenhum sinal de ferrugem.  As grades, feitas com imensa
-habilidade e cuidado, formam retorcidas faces humanas.
+humanas faces~
+Elas lhe parecem, de fato, almas amaldiï¿½oadas e em eterna agonia.
 ~
 E
-humanas faces~
-Elas lhe parecem, de fato, almas amaldiçoadas e em eterna agonia.
+portao portoes ferro negro~
+Os grandes portï¿½es de ferro foram forjados a partir de lingotes e
+estranhamente nï¿½o hï¿½ nenhum sinal de ferrugem.  As grades, feitas com imensa
+habilidade e cuidado, formam retorcidas faces humanas.
 ~
 S
 #17317
 Floresta Blackmoor~
-   Você acaba de adentrar em Blackmoor, a floresta dos malditos.  Espinhos e
-árvores retorcidas arranham e rasgam sua pele, como se estivessem vivos.  O
-bem traçado caminho que você seguia desapareceu e você perde o rumo.
+   Vocï¿½ acaba de adentrar em Blackmoor, a floresta dos malditos.  Espinhos e
+ï¿½rvores retorcidas arranham e rasgam sua pele, como se estivessem vivos.  O
+bem traï¿½ado caminho que vocï¿½ seguia desapareceu e vocï¿½ perde o rumo.
 ~
-173 ax 3
+173 8388609 0 0 0 3
 D4
 ~
 ~
@@ -431,60 +426,59 @@ D5
 S
 #17318
 Diante a uma aconchegante cabana~
-   Você se encontra em frente a uma cabana que parece ser aconchegante.  A
-fumaça que sai da chaminé chega até você carregando o cheiro de carne de
-cervo fresca.  A luz de uma lamparina ilumina a noite através das janelas.
+   Vocï¿½ se encontra em frente a uma cabana que parece ser aconchegante.  A
+fumaï¿½a que sai da chaminï¿½ chega atï¿½ vocï¿½ carregando o cheiro de carne de
+cervo fresca.  A luz de uma lamparina ilumina a noite atravï¿½s das janelas.
 Uma encantadora melodia pode ser ouvida de dentro.
    A oeste fica a porta (parcialmente aberta) para a cabana, e uma trilha
 empoeirada segue ao sul.
 ~
-173 0 3
+173 0 0 0 0 3
 D2
 Um caminho empoeirado.
 ~
 ~
 0 -1 17317
 D3
-Uma cabana de aparência aconchegante.
+Uma cabana de aparï¿½ncia aconchegante.
 ~
 porta~
-:n 2 a porta da cabana
 1 -1 17323
 S
 #17319
-Um precipício~
-   Você se encontra diante de uma fenda profunda.  É possível identificar os
-restos das correntes de uma antiga ponte pênsil que, rompida, chega ao fundo
-do abismo.  A oeste está o caminho empoeirado, e a ponte partida leva para
+Um precipï¿½cio~
+   Vocï¿½ se encontra diante de uma fenda profunda.  ï¿½ possï¿½vel identificar os
+restos das correntes de uma antiga ponte pï¿½nsil que, rompida, chega ao fundo
+do abismo.  A oeste estï¿½ o caminho empoeirado, e a ponte partida leva para
 baixo.
 ~
-173 0 5
+173 0 0 0 0 5
 D3
 Um caminho empoeirado.
 ~
 ~
 0 -1 17313
 D5
-Abaixo, o oscilante término da ponte rompida.
+Abaixo, o oscilante tï¿½rmino da ponte rompida.
 ~
 ~
 0 -1 17320
 S
 #17320
-Preso à ponte pênsil~
-   Você está pendurado ao esgarçado fim da ponte pênsil.  Sua tensão é muito
-grande.  Suas opções são tentar balançar pela brecha até o outro lado da
+Preso ï¿½ ponte pï¿½nsil~
+   Vocï¿½ estï¿½ pendurado ao esgarï¿½ado fim da ponte pï¿½nsil.  Sua tensï¿½o ï¿½ muito
+grande.  Suas opï¿½ï¿½es sï¿½o tentar balanï¿½ar pela brecha atï¿½ o outro lado da
 fenda, a leste, ou escalar de volta para fora, ou ainda se aventurar nas
 profundezas do abismo.
 ~
-173 a 5
+173 1 0 0 0 5
 D1
-Preso à ponte pênsil.
+Preso ï¿½ ponte pï¿½nsil.
 ~
 ~
 0 -1 17321
 D4
-O precipício.
+O precipï¿½cio.
 ~
 ~
 0 -1 17319
@@ -495,14 +489,14 @@ As profundezas do abismo
 0 -1 17324
 S
 #17321
-Preso à ponte pênsil~
-   Você continua se segurando ao esgarçado final da ponte pênsil.  Você pode
-tentar balançar-se até o outro lado, a oeste, subir a ponte ou continuar
+Preso ï¿½ ponte pï¿½nsil~
+   Vocï¿½ continua se segurando ao esgarï¿½ado final da ponte pï¿½nsil.  Vocï¿½ pode
+tentar balanï¿½ar-se atï¿½ o outro lado, a oeste, subir a ponte ou continuar
 para baixo, nas amedrontadoras profundezas do abismo.
 ~
-173 a 5
+173 1 0 0 0 5
 D3
-Preso à ponte pênsil.
+Preso ï¿½ ponte pï¿½nsil.
 ~
 ~
 0 -1 17320
@@ -518,103 +512,101 @@ As profundezas do abismo.
 0 -1 17324
 S
 #17322
-O Precipício~
-   Você está à beira de um profundo precipício.  A ponte pênsil que o
-cruzava foi cortada por algum malfeitor de vilarejos e agora permanece caída
-até o fundo da grande fenda.  Você pode descer pela ponte, dentro do abismo,
+O Precipï¿½cio~
+   Vocï¿½ estï¿½ ï¿½ beira de um profundo precipï¿½cio.  A ponte pï¿½nsil que o
+cruzava foi cortada por algum malfeitor de vilarejos e agora permanece caï¿½da
+atï¿½ o fundo da grande fenda.  Vocï¿½ pode descer pela ponte, dentro do abismo,
 ou seguir para o campo verdejante a leste.
 ~
-173 0 5
+173 0 0 0 0 5
 D1
 Um campo verdejante.
 ~
 ~
 0 -1 17325
 D5
-Preso à ponte pênsil.
+Preso ï¿½ ponte pï¿½nsil.
 ~
 ~
 0 -1 17321
 S
 #17323
 Dentro da Cabana Aconchegante~
-   Você está dentro de uma cabana aconchegante.  Ao seu redor, o interior é
-bem confortável, completado com cama de plumas e uma lareira.  Uma mesa com
-carne fresca e vegetais foi posta, além de um lindo cálice ornado cheio de
-vinho.  Uma vela acesa ilumina o ambiente e há apenas uma cadeira à mesa.
+   Vocï¿½ estï¿½ dentro de uma cabana aconchegante.  Ao seu redor, o interior ï¿½
+bem confortï¿½vel, completado com cama de plumas e uma lareira.  Uma mesa com
+carne fresca e vegetais foi posta, alï¿½m de um lindo cï¿½lice ornado cheio de
+vinho.  Uma vela acesa ilumina o ambiente e hï¿½ apenas uma cadeira ï¿½ mesa.
 ~
-173 dx 0
+173 8388616 0 0 0 0
 D1
-Em frente à cabana aconchegante.
+Em frente ï¿½ cabana aconchegante.
 ~
 porta~
-:n 2 a porta da cabana
 1 -1 17318
 E
-cálice~
-Examinando mais detalhadamente, percebe-se que este não é o Santo Graal.
-~
-E
-cama~
-A cama parece ser bem confortável.  Convidativa.
-~
-E
-carne vinho~
-A carne está suculenta, e o vinho tem um delicioso aroma seco e é de um
-vermelho profundo e escuro.
+cadeira~
+Por que vocï¿½ nï¿½o se senta um pouco e faz uma agradï¿½vel refeiï¿½ï¿½o?
 ~
 E
 vela~
-É uma vela negra.  O que você lembra a respeito de velas negras?  Ah sim!
-Elas são usadas pelas bruxas em missas negras.
+ï¿½ uma vela negra.  O que vocï¿½ lembra a respeito de velas negras?  Ah sim!
+Elas sï¿½o usadas pelas bruxas em missas negras.
 ~
 E
-cadeira~
-Por que você não se senta um pouco e faz uma agradável refeição?
+carne vinho~
+A carne estï¿½ suculenta, e o vinho tem um delicioso aroma seco e ï¿½ de um
+vermelho profundo e escuro.
+~
+E
+cama~
+A cama parece ser bem confortï¿½vel.  Convidativa.
+~
+E
+cï¿½lice~
+Examinando mais detalhadamente, percebe-se que este nï¿½o ï¿½ o Santo Graal.
 ~
 S
 #17324
 As profundezas do Abismo~
-   Azul... NÃO!!! VERDE!!!
+   Azul... Nï¿½O!!! VERDE!!!
        AHHHHHHHHHHHHHHHH
            AHHHHHHHHHHHHHHHH
                AHHHHHHHHHHHHHHHH
    SPLAAAAT.
 ~
-173 bc 5
+173 6 0 0 0 5
 S
 #17325
 O campo verdejante antes de Camelot~
-   Você está debaixo de um céu límpido no campo verde esmeralda, antes de
-Camelot, que se encontra no topo de uma colina, onde é possível ter uma
-visão privilegiada de toda a região.  Bandeiras e estandartes tremulam na
-brisa fresca, do alto das orgulhosas torres de Camelot.  Você pode seguir
-leste, em direção a Camelot, ou oeste, para o precipício.
+   Vocï¿½ estï¿½ debaixo de um cï¿½u lï¿½mpido no campo verde esmeralda, antes de
+Camelot, que se encontra no topo de uma colina, onde ï¿½ possï¿½vel ter uma
+visï¿½o privilegiada de toda a regiï¿½o.  Bandeiras e estandartes tremulam na
+brisa fresca, do alto das orgulhosas torres de Camelot.  Vocï¿½ pode seguir
+leste, em direï¿½ï¿½o a Camelot, ou oeste, para o precipï¿½cio.
 ~
-173 0 2
+173 0 0 0 0 2
 D1
-O portão oeste de Camelot.
+O portï¿½o oeste de Camelot.
 ~
 ~
 0 -1 17326
 D3
-O Precipício.
+O Precipï¿½cio.
 ~
 ~
 0 -1 17322
 S
 #17326
-O Portão Oeste de Camelot~
-   Você está nos portões de Camelot.  Você tem plena visão do verde
+O Portï¿½o Oeste de Camelot~
+   Vocï¿½ estï¿½ nos portï¿½es de Camelot.  Vocï¿½ tem plena visï¿½o do verde
 esmeralda do plano abaixo, o campo.  Paredes de granito branco
 imponentemente erguem-se no ar.
 ~
-173 c 1
+173 4 0 0 0 1
 D1
-O Portão Oeste.
+O Portï¿½o Oeste.
 ~
 portao~
-:n 1 o portão oeste
 1 -1 17341
 D3
 Um campo verdejante
@@ -624,45 +616,42 @@ Um campo verdejante
 S
 #17327
 A Muralha de Blackmoor~
-   À sua frente se encontra a Muralha de Blackmoor.  Uma grande fileira de
+   ï¿½ sua frente se encontra a Muralha de Blackmoor.  Uma grande fileira de
 buracos assassinos se extende nas paredes e torres que se erguem em frente.
-Ao norte e ao sul estão os portões de ferro negro.
+Ao norte e ao sul estï¿½o os portï¿½es de ferro negro.
 ~
-173 a 1
+173 1 0 0 0 1
 D0
-Os Portões de Ferro Negro.
+Os Portï¿½es de Ferro Negro.
 ~
 portao portoes ferro negro~
-:n 1 o portão de ferro negro
 1 -1 17328
 D2
-Os Portões de Ferro Negro.
+Os Portï¿½es de Ferro Negro.
 ~
 portao portoes ferro negro~
-:n 1 o portão de ferro negro
 1 -1 17316
 E
 buracos assassinos~
-Não parece haver ninguém lhe observando pelos buracos assassinos.
+Nï¿½o parece haver ninguï¿½m lhe observando pelos buracos assassinos.
 ~
 S
 #17328
 Dentro da Cortina~
-   Você está em uma rua na cortina, a muralha que cerca o castelo.  A
-fortaleza está ao seu norte.  O caminho segue a leste e oeste, e os Portões
+   Vocï¿½ estï¿½ em uma rua na cortina, a muralha que cerca o castelo.  A
+fortaleza estï¿½ ao seu norte.  O caminho segue a leste e oeste, e os Portï¿½es
 de Ferro Negro ficam ao sul.
 ~
-173 a 0
+173 1 0 0 0 0
 D1
 Dentro da Cortina.
 ~
 ~
 0 -1 17329
 D2
-Os Portões de Ferro Negro.
+Os Portï¿½es de Ferro Negro.
 ~
 portao portoes ferro negro~
-:n 1 o portão de ferro negro
 1 -1 17327
 D3
 Dentro da Cortina.
@@ -672,10 +661,10 @@ Dentro da Cortina.
 S
 #17329
 Dentro da Cortina~
-   Você está em uma rua nas muralhas de Blackmoor.  Escadas conduzem até a
+   Vocï¿½ estï¿½ em uma rua nas muralhas de Blackmoor.  Escadas conduzem atï¿½ a
 torre leste da muralha.  A estrada continua para norte e para o oeste.
 ~
-173 a 1
+173 1 0 0 0 1
 D0
 Dentro da Cortina.
 ~
@@ -694,10 +683,10 @@ A Torre Leste da Muralha.
 S
 #17330
 Dentro da Cortina~
-   Você se encontra em um caminho nas muralhas.  Escadas o conduzem à torre
+   Vocï¿½ se encontra em um caminho nas muralhas.  Escadas o conduzem ï¿½ torre
 leste da cortina.  A estrada continua a norte e leste.
 ~
-173 a 1
+173 1 0 0 0 1
 D0
 Dentro da Cortina.
 ~
@@ -716,10 +705,10 @@ A Torre Oeste da Muralha.
 S
 #17331
 Dentro da Cortina~
-   Você está em uma rua na cortina de muralhas de Blackmoor.  A fortaleza
-está a leste de você.  A estrada ensangüentada segue ao norte e sul.
+   Vocï¿½ estï¿½ em uma rua na cortina de muralhas de Blackmoor.  A fortaleza
+estï¿½ a leste de vocï¿½.  A estrada ensangï¿½entada segue ao norte e sul.
 ~
-173 a 1
+173 1 0 0 0 1
 D0
 Dentro da Cortina.
 ~
@@ -732,18 +721,18 @@ Dentro da Cortina.
 0 -1 17330
 E
 estrada sangue ensanguentada~
-Você se ajoelha e examina o sangue que cobre a estrada, achando um pedaço de
-seda.  Ao examiná-lo, nota que ele parece ser o lenço de uma dama em espera,
+Vocï¿½ se ajoelha e examina o sangue que cobre a estrada, achando um pedaï¿½o de
+seda.  Ao examinï¿½-lo, nota que ele parece ser o lenï¿½o de uma dama em espera,
 em Camelot.
 ~
 S
 #17332
 Dentro da Cortina~
-   Você está no caminho dentro da cortina de muralhas de Blackmoor.  Escadas
-levam até a Torre Noroeste de Blackmoor.  A estrada segue sul, e a leste
-está a entrada para a fortaleza.
+   Vocï¿½ estï¿½ no caminho dentro da cortina de muralhas de Blackmoor.  Escadas
+levam atï¿½ a Torre Noroeste de Blackmoor.  A estrada segue sul, e a leste
+estï¿½ a entrada para a fortaleza.
 ~
-173 a 1
+173 1 0 0 0 1
 D1
 A Entrada da Fortaleza.
 ~
@@ -762,21 +751,20 @@ A Torre Noroeste de Blackmoor.
 S
 #17333
 A Entrada para a Fortaleza~
-   Você está num caminho na cortina de muralhas de Blackmoor.  Ao sul se
-encontra uma porta de madeira maciça, de onde você ouve sair uma gargalhada
-diabólica.  A estrada continua a leste e oeste.
+   Vocï¿½ estï¿½ num caminho na cortina de muralhas de Blackmoor.  Ao sul se
+encontra uma porta de madeira maciï¿½a, de onde vocï¿½ ouve sair uma gargalhada
+diabï¿½lica.  A estrada continua a leste e oeste.
 ~
-173 a 1
+173 1 0 0 0 1
 D1
 Dentro da Cortina.
 ~
 ~
 0 -1 17334
 D2
-Uma porta de madeira maciça.
+Uma porta de madeira maciï¿½a.
 ~
 porta madeira macica~
-:n 2 a porta de madeira maciça
 1 -1 17340
 D3
 Dentro da Cortina.
@@ -785,16 +773,16 @@ Dentro da Cortina.
 0 -1 17332
 E
 porta~
-É enorme!!  Espero que você não fique com hérnia por abrir isso!
+ï¿½ enorme!!  Espero que vocï¿½ nï¿½o fique com hï¿½rnia por abrir isso!
 ~
 S
 #17334
 Dentro da Cortina~
-   Você está no caminho na cortina de muralhas de Blackmoor.  Escadas o
-levam à Torre Nordeste de Blackmoor.  A estrada segue ao sul e oeste, onde
+   Vocï¿½ estï¿½ no caminho na cortina de muralhas de Blackmoor.  Escadas o
+levam ï¿½ Torre Nordeste de Blackmoor.  A estrada segue ao sul e oeste, onde
 se localiza a entrada da fortaleza.
 ~
-173 a 1
+173 1 0 0 0 1
 D2
 Dentro da Cortina.
 ~
@@ -813,10 +801,10 @@ A Torre Nordeste.
 S
 #17335
 Dentro da Cortina~
-   Você se encontra da rua na cortina de muralhas de Blackmoor.  A oeste
+   Vocï¿½ se encontra da rua na cortina de muralhas de Blackmoor.  A oeste
 ergue-se a Fortaleza.  A estrada continua a norte e sul.
 ~
-173 a 1
+173 1 0 0 0 1
 D0
 Dentro da Cortina.
 ~
@@ -830,11 +818,11 @@ Dentro da Cortina.
 S
 #17336
 A Torre Noroeste de Blackmoor~
-   Você está dentro da torre noroeste.  Daqui é possível ter ampla e
-privilegiada visão da fortaleza e até do próprio pântano, ao olhar pela
+   Vocï¿½ estï¿½ dentro da torre noroeste.  Daqui ï¿½ possï¿½vel ter ampla e
+privilegiada visï¿½o da fortaleza e atï¿½ do prï¿½prio pï¿½ntano, ao olhar pela
 vigia.  Escadarias conduzem para baixo.
 ~
-173 a 0
+173 1 0 0 0 0
 D5
 Dentro da Cortina.
 ~
@@ -842,19 +830,19 @@ Dentro da Cortina.
 0 -1 17332
 E
 vigia pantano~
-Você olha através da vigia.  O pântano extende-se à frente, mas a névoa
-impossibilita que se veja muito adiante.  Você percebe estranhas formas
-negras correndo pelo pântano.  Por alguns instantes você se sente feliz por
-estar em uma torre sólida.
+Vocï¿½ olha atravï¿½s da vigia.  O pï¿½ntano extende-se ï¿½ frente, mas a nï¿½voa
+impossibilita que se veja muito adiante.  Vocï¿½ percebe estranhas formas
+negras correndo pelo pï¿½ntano.  Por alguns instantes vocï¿½ se sente feliz por
+estar em uma torre sï¿½lida.
 ~
 S
 #17337
 A Torre Nordeste de Blackmoor~
-   Você está no interior da torre nordeste.  Pelas vigias, tem-se uma
-privilegiada visão da fortaleza e do pântano ao redor.  As escadarias levam
+   Vocï¿½ estï¿½ no interior da torre nordeste.  Pelas vigias, tem-se uma
+privilegiada visï¿½o da fortaleza e do pï¿½ntano ao redor.  As escadarias levam
 para baixo.
 ~
-173 a 0
+173 1 0 0 0 0
 D5
 Dentro da Cortina.
 ~
@@ -863,11 +851,11 @@ Dentro da Cortina.
 S
 #17338
 A Torre Oeste da Muralha~
-   Você está no interior da torre oeste das muralhas.  Aqui, tem-se uma
-ampla visão da muralha, além de ser possível atirar com uma arma pelo buraco
+   Vocï¿½ estï¿½ no interior da torre oeste das muralhas.  Aqui, tem-se uma
+ampla visï¿½o da muralha, alï¿½m de ser possï¿½vel atirar com uma arma pelo buraco
 assassino.  Escadas levam para baixo.
 ~
-173 a 0
+173 1 0 0 0 0
 D5
 Dentro da Cortina.
 ~
@@ -875,17 +863,17 @@ Dentro da Cortina.
 0 -1 17330
 E
 visao buraco muralha~
-Você espia, pelo buraco assassino, as muralhas, assim como muitos já fizeram
-antes de você.
+Vocï¿½ espia, pelo buraco assassino, as muralhas, assim como muitos jï¿½ fizeram
+antes de vocï¿½.
 ~
 S
 #17339
 A Torre Leste da Muralha~
-   Você está na torre leste das muralhas.  Tem-se daqui uma ampla visão da
-Cortina, além de ser possível atirar com uma arma pelo buraco assassino.
+   Vocï¿½ estï¿½ na torre leste das muralhas.  Tem-se daqui uma ampla visï¿½o da
+Cortina, alï¿½m de ser possï¿½vel atirar com uma arma pelo buraco assassino.
 Escadas levam para baixo.
 ~
-173 a 0
+173 1 0 0 0 0
 D5
 Dentro da Cortina.
 ~
@@ -893,45 +881,45 @@ Dentro da Cortina.
 0 -1 17329
 S
 #17340
-O Salão Negro de Mordred~
-   Você se encontra no imundo Salão de Mordred.  A fumaça que saí de uma
-pira em chamas no centro se espiraliza e chega até as vigias.  Armaduras de
-cavaleiros derrotados estão penduradas em ganchos nas paredes.  Um jovem
-rapaz de aparência demoníaca, vestido em uma armadura dourada, gargalha
-enquanto passa dançando entre elas.
+O Salï¿½o Negro de Mordred~
+   Vocï¿½ se encontra no imundo Salï¿½o de Mordred.  A fumaï¿½a que saï¿½ de uma
+pira em chamas no centro se espiraliza e chega atï¿½ as vigias.  Armaduras de
+cavaleiros derrotados estï¿½o penduradas em ganchos nas paredes.  Um jovem
+rapaz de aparï¿½ncia demonï¿½aca, vestido em uma armadura dourada, gargalha
+enquanto passa danï¿½ando entre elas.
 ~
-173 a 0
+173 1 0 0 0 0
 D0
 Entrada da Fortaleza.
 ~
 ~
 1 -1 17333
 E
-pira chamas~
-Você examina a pira.  Um enorme corpo está queimando aqui.  Parece ser
-humano!
+demoniaco rapaz jovem~
+Vocï¿½ sacode sua cabeï¿½a e olha de novo.  O rapaz desaparece.  Um vil feitiï¿½o
+o atingiu!
 ~
 E
-demoniaco rapaz jovem~
-Você sacode sua cabeça e olha de novo.  O rapaz desaparece.  Um vil feitiço
-o atingiu!
+pira chamas~
+Vocï¿½ examina a pira.  Um enorme corpo estï¿½ queimando aqui.  Parece ser
+humano!
 ~
 S
 #17341
-Rua da Vitória e o Caminho dos Cavaleiros~
-   Você está em uma rua pavimentada com lajes de mármore, dentro das grandes
-muralhas de Camelot.  Pendões tremulam nas altas torres e os edifícios
-fulguram as pedras alvas.  A Rua da Vitória continua ao leste, para a
+Rua da Vitï¿½ria e o Caminho dos Cavaleiros~
+   Vocï¿½ estï¿½ em uma rua pavimentada com lajes de mï¿½rmore, dentro das grandes
+muralhas de Camelot.  Pendï¿½es tremulam nas altas torres e os edifï¿½cios
+fulguram as pedras alvas.  A Rua da Vitï¿½ria continua ao leste, para a
 fortaleza, e o Caminho dos Cavaleiros segue norte e sul.
 ~
-173 0 1
+173 0 0 0 0 1
 D0
 O Caminho dos Cavaleiros.
 ~
 ~
 0 -1 17342
 D1
-A Rua da Vitória.
+A Rua da Vitï¿½ria.
 ~
 ~
 0 -1 17343
@@ -941,27 +929,26 @@ O Caminho dos Cavaleiros.
 ~
 0 -1 17344
 D3
-O Portão Oeste de Camelot.
+O Portï¿½o Oeste de Camelot.
 ~
 portao~
-:n 1 o portão oeste
 1 -1 17326
 S
 #17342
-O Caminho dos Cavaleiros antes dos estábulos~
-   Você está na estrada pavimentada com lajes de mármore branco, O Caminho
-dos Cavaleiros.  É possível sentir o cheiro dos cavalos ao leste.  Ao oeste,
+O Caminho dos Cavaleiros antes dos estï¿½bulos~
+   Vocï¿½ estï¿½ na estrada pavimentada com lajes de mï¿½rmore branco, O Caminho
+dos Cavaleiros.  ï¿½ possï¿½vel sentir o cheiro dos cavalos ao leste.  Ao oeste,
 erguem-se as altas muralhas de Camelot.  O Caminho dos Cavaleiros continua
 para o norte e sul.
 ~
-173 0 1
+173 0 0 0 0 1
 D0
 O Caminho dos Cavaleiros.
 ~
 ~
 0 -1 17345
 D1
-Estábulos.
+Estï¿½bulos.
 ~
 ~
 0 -1 17398
@@ -971,49 +958,49 @@ O Caminho dos Cavaleiros.
 ~
 0 -1 17341
 E
-estabulos~
-Há muitos cavalos e escudeiros correndo apressados pelos estábulos.
+muralhas altas~
+As altas muralhas elevam-se sobre vocï¿½, feitas de fulgentes pedras alvas.
+Os blocos sï¿½o enormes- deve ter sido necessï¿½ria uma grande mï¿½quina para os
+erguer.  Pendï¿½es rasgam a brisa nas inï¿½meras torres de Camelot.
 ~
 E
-muralhas altas~
-As altas muralhas elevam-se sobre você, feitas de fulgentes pedras alvas.
-Os blocos são enormes- deve ter sido necessária uma grande máquina para os
-erguer.  Pendões rasgam a brisa nas inúmeras torres de Camelot.
+estabulos~
+Hï¿½ muitos cavalos e escudeiros correndo apressados pelos estï¿½bulos.
 ~
 S
 #17343
-A Rua da Vitória~
-   Você se encontra na Rua da Vitória.  Estandartes des cavaleiros estão
-cravados em ambos os lados da estrada, com seus brasão se agitando na
-aragem.  Há espaço disponíveis para novos brasões.  A Rua da Vitória
+A Rua da Vitï¿½ria~
+   Vocï¿½ se encontra na Rua da Vitï¿½ria.  Estandartes des cavaleiros estï¿½o
+cravados em ambos os lados da estrada, com seus brasï¿½o se agitando na
+aragem.  Hï¿½ espaï¿½o disponï¿½veis para novos brasï¿½es.  A Rua da Vitï¿½ria
 continua para leste e oeste.
 ~
-173 0 1
+173 0 0 0 0 1
 D1
-A Rua da Vitória.
+A Rua da Vitï¿½ria.
 ~
 ~
 0 -1 17347
 D3
-A Rua da Vitória e o Caminho dos Cavaleiros.
+A Rua da Vitï¿½ria e o Caminho dos Cavaleiros.
 ~
 ~
 0 -1 17341
 E
 brasao estandartes~
-Ao observar os brasões, você reconhece alguns deles como sendo os de
-Gawaine, Tristão, e é claro, Lancelot.
+Ao observar os brasï¿½es, vocï¿½ reconhece alguns deles como sendo os de
+Gawaine, Tristï¿½o, e ï¿½ claro, Lancelot.
 ~
 S
 #17344
-O Caminho dos Cavaleiros no Depósito de Armas~
-   Você está nas lajes de mármore branco que pavimentam o Caminho dos
-Cavaleiros.  A oeste de você, elevam-se as grandiosas muralhas de Camelot, e
+O Caminho dos Cavaleiros no Depï¿½sito de Armas~
+   Vocï¿½ estï¿½ nas lajes de mï¿½rmore branco que pavimentam o Caminho dos
+Cavaleiros.  A oeste de vocï¿½, elevam-se as grandiosas muralhas de Camelot, e
 a leste fica o arsenal.  O Caminho dos Cavaleiros continua norte e sul.
 ~
-173 0 1
+173 0 0 0 0 1
 D0
-Rua da Vitória e o Caminho dos Cavaleiros.
+Rua da Vitï¿½ria e o Caminho dos Cavaleiros.
 ~
 ~
 0 -1 17341
@@ -1029,19 +1016,19 @@ O Caminho dos Cavaleiros.
 0 -1 17349
 E
 grandiosas muralhas~
-As altivas muralhas elevam-se sobre você, feitas de coruscantes pedras
-brancas.  Os blocos são enormes- uma grande máquina deve ter sido necessária
-para os erguer.  Pendões tremulam no alto das muitas torres de Camelot.
+As altivas muralhas elevam-se sobre vocï¿½, feitas de coruscantes pedras
+brancas.  Os blocos sï¿½o enormes- uma grande mï¿½quina deve ter sido necessï¿½ria
+para os erguer.  Pendï¿½es tremulam no alto das muitas torres de Camelot.
 ~
 S
 #17345
 Cruzamento do Caminho dos Cavaleiros com a Senda do Escudeiro~
-   Você está no cruzamento entre o Caminho dos Cavaleiros e a Senda do
-Escudeiro.  Um grande arco é a entrada para uma sólida e robusta torre.
-Você pode ver algumas incrições acima, no arco.  O Caminho dos Cavaleiros
+   Vocï¿½ estï¿½ no cruzamento entre o Caminho dos Cavaleiros e a Senda do
+Escudeiro.  Um grande arco ï¿½ a entrada para uma sï¿½lida e robusta torre.
+Vocï¿½ pode ver algumas incriï¿½ï¿½es acima, no arco.  O Caminho dos Cavaleiros
 continua ao sul, e a Senda do Escudeiro segue leste.
 ~
-173 0 1
+173 0 0 0 0 1
 D1
 Senda do Escudeiro.
 ~
@@ -1059,82 +1046,80 @@ A Torre da Coragem.
 0 -1 17351
 E
 arco inscricao~
-Você vê as seguintes palavras gravadas:
-
-      AVANTE PARA A VITÓRIA
+Vocï¿½ vï¿½ as seguintes palavras gravadas:
+      AVANTE PARA A VITï¿½RIA
 ~
 S
 #17346
-Atrás das Linhas dos Picts~
-   Você teve de lutar para conseguir passar pelas barreiras dos Picts, e
-essa sua aventura o levou até o outro lado das linhas inimigas!  A leste a
-batalha continua, e você vê Picts fugindo para essa direção.  Um bárbaro
-está tocando um grande berrante feito de chifre, num sinal para que todos
+Atrï¿½s das Linhas dos Picts~
+   Vocï¿½ teve de lutar para conseguir passar pelas barreiras dos Picts, e
+essa sua aventura o levou atï¿½ o outro lado das linhas inimigas!  A leste a
+batalha continua, e vocï¿½ vï¿½ Picts fugindo para essa direï¿½ï¿½o.  Um bï¿½rbaro
+estï¿½ tocando um grande berrante feito de chifre, num sinal para que todos
 fujam.
 ~
-173 0 2
+173 0 0 0 0 2
 D1
-No coração da batalha.
+No coraï¿½ï¿½o da batalha.
 ~
 barreira~
-:n 2 a barreira
 1 -1 17397
 E
 berrante barbaro chifre~
-O bárbaro percebe você o olhando, e foge em pânico.
+O bï¿½rbaro percebe vocï¿½ o olhando, e foge em pï¿½nico.
 ~
 S
 #17347
-A Rua da Vitória~
-   Aqui a Rua da Vitória termina no grande Pátio de Torneios de Camelot.  Um
-pódio para os vencedores dos torneios está erguido- hoje ele ostenta o
-brasão de Lancelot.  Ladeando a estrada estão os estandartes dos outros
-cavaleiros da Távola Redonda.  Uma estranha paz paira no ar daqui.  A Rua da
-Vitória continua a oeste, e o Pátio de Torneios de Camelot está a leste.
+A Rua da Vitï¿½ria~
+   Aqui a Rua da Vitï¿½ria termina no grande Pï¿½tio de Torneios de Camelot.  Um
+pï¿½dio para os vencedores dos torneios estï¿½ erguido- hoje ele ostenta o
+brasï¿½o de Lancelot.  Ladeando a estrada estï¿½o os estandartes dos outros
+cavaleiros da Tï¿½vola Redonda.  Uma estranha paz paira no ar daqui.  A Rua da
+Vitï¿½ria continua a oeste, e o Pï¿½tio de Torneios de Camelot estï¿½ a leste.
 ~
-173 e 1
+173 16 0 0 0 1
 D1
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17352
 D3
-A Rua da Vitória.
+A Rua da Vitï¿½ria.
 ~
 ~
 0 -1 17343
 S
 #17348
 O Arsenal~
-   Você está no Arsenal de Camelot.  O mestre ferreiro e seus três
-aprendizes estão ocupados fabricando a armadura para um cavaleiro.  Várias
-peças de armaduras estão por aqui, em diferentes condições para conserto.
-Há uma enorme quantidade de armas em prateleiras na parede leste.  A oeste
+   Vocï¿½ estï¿½ no Arsenal de Camelot.  O mestre ferreiro e seus trï¿½s
+aprendizes estï¿½o ocupados fabricando a armadura para um cavaleiro.  Vï¿½rias
+peï¿½as de armaduras estï¿½o por aqui, em diferentes condiï¿½ï¿½es para conserto.
+Hï¿½ uma enorme quantidade de armas em prateleiras na parede leste.  A oeste
 fica o Caminho dos Cavaleiros.
 ~
-173 0 0
+173 0 0 0 0 0
 D3
 O Caminho dos Cavaleiros.
 ~
 ~
 0 -1 17344
 E
-armadura~
-As peças de armaduras são feitas de um magnífico aço trabalhado.
+armas penduradas prateleiras~
+As prateleiras de armas contï¿½m vï¿½rias adagas, algumas lanï¿½as e maï¿½as.
 ~
 E
-armas penduradas prateleiras~
-As prateleiras de armas contém várias adagas, algumas lanças e maças.
+armadura~
+As peï¿½as de armaduras sï¿½o feitas de um magnï¿½fico aï¿½o trabalhado.
 ~
 S
 #17349
 Cruzamento do Caminho dos Cavaleiros com a Estrada Nobre~
-   Você está no cruzamento entre o Caminho dos Cavaleiros e a Estrada Nobre.
-Uma torre eleva-se daqui indo por uma sinuosa escadaria.  Há uma inscrição
+   Vocï¿½ estï¿½ no cruzamento entre o Caminho dos Cavaleiros e a Estrada Nobre.
+Uma torre eleva-se daqui indo por uma sinuosa escadaria.  Hï¿½ uma inscriï¿½ï¿½o
 na arco da passagem para a torre.  O Caminho dos Cavaleiros continua a norte
 e a Estrada Nobre segue leste.
 ~
-173 0 0
+173 0 0 0 0 0
 D0
 O Caminho dos Cavaleiros.
 ~
@@ -1152,18 +1137,17 @@ A Torre da Honra.
 0 -1 17353
 E
 inscricao arco torre~
-Você olha a inscrição. Ela diz:
-
+Vocï¿½ olha a inscriï¿½ï¿½o. Ela diz:
        A HONRA SEPARA O CAVALEIRO DO CRIMINOSO
 ~
 S
 #17350
 A Senda do Escudeiro~
-   Você está na Senda do Escudeiro.  Escudeiros apressadamente vêm e vão
-pela rua a serviço de seus senhores.  Você nota um pergaminho no chão.  A
+   Vocï¿½ estï¿½ na Senda do Escudeiro.  Escudeiros apressadamente vï¿½m e vï¿½o
+pela rua a serviï¿½o de seus senhores.  Vocï¿½ nota um pergaminho no chï¿½o.  A
 Senda continua a leste e oeste.
 ~
-173 0 1
+173 0 0 0 0 1
 D1
 A Senda do Escudeiro.
 ~
@@ -1176,24 +1160,24 @@ Cruzamento do Caminho dos Cavaleiros com a Senda do Escudeiro.
 0 -1 17345
 E
 pergaminho~
-Você examina o pergaminho.  Ele está rasgado e extremamente sujo.  É
-possível apenas entender: ...Eu vaguei pela Floresta Blackmoor, perdido e
-sem esperança, até achar uma cabana.  Olhei pela janela e lá estava, em pé
+Vocï¿½ examina o pergaminho.  Ele estï¿½ rasgado e extremamente sujo.  ï¿½
+possï¿½vel apenas entender: ...Eu vaguei pela Floresta Blackmoor, perdido e
+sem esperanï¿½a, atï¿½ achar uma cabana.  Olhei pela janela e lï¿½ estava, em pï¿½
 em cima de uma mesa, o Graal.  Uma mulher muito bonita acenou em minha
-direção e, naquele momento minha montaria, apavorada, fugiu correndo
+direï¿½ï¿½o e, naquele momento minha montaria, apavorada, fugiu correndo
 floresta adentro...
 ~
 S
 #17351
 A Torre da Coragem~
-   Você se encontra na Torre da Coragem.  As paredes estão repletas de
+   Vocï¿½ se encontra na Torre da Coragem.  As paredes estï¿½o repletas de
 murais representando batalhas, cavaleiros enfrentando-se ou enfrentando
-várias criaturas sobrenaturais.  Há um buraco em uma das paredes onde o fogo
-elimina um pouco do frio da sala.  A fumaça o põe em um estranho estado de
-torpor, onde os MURAIS parecem adquirir vida.  Escadarias conduzem até a rua
+vï¿½rias criaturas sobrenaturais.  Hï¿½ um buraco em uma das paredes onde o fogo
+elimina um pouco do frio da sala.  A fumaï¿½a o pï¿½e em um estranho estado de
+torpor, onde os MURAIS parecem adquirir vida.  Escadarias conduzem atï¿½ a rua
 abaixo.
 ~
-173 0 0
+173 0 0 0 0 0
 D5
 Cruzamento do Caminho dos Cavaleiros com a Senda do Escudeiro.
 ~
@@ -1201,51 +1185,51 @@ Cruzamento do Caminho dos Cavaleiros com a Senda do Escudeiro.
 0 -1 17345
 E
 murais~
-Você olha um mural de São Jorge e o Dragão.  A armadura de Jorge fulge nos
-raios solares, e de sua lança jaz desfraldado seu estandarte.  Jorge indica
-o dragão e dispara pelo campo verde.  O dragão ergue sua serpentígena cabeça
+Vocï¿½ olha um mural de Sï¿½o Jorge e o Dragï¿½o.  A armadura de Jorge fulge nos
+raios solares, e de sua lanï¿½a jaz desfraldado seu estandarte.  Jorge indica
+o dragï¿½o e dispara pelo campo verde.  O dragï¿½o ergue sua serpentï¿½gena cabeï¿½a
 e inspira o ar fortemente.  O cavaleiro e sua montaria galopam
-agressivamente pelo gramado.  O dragão-
+agressivamente pelo gramado.  O dragï¿½o-
 
-               Você bruscamente perde parte de sua visão.
+               Vocï¿½ bruscamente perde parte de sua visï¿½o.
 ~
 S
 #17352
-O Pátio de Torneios de Camelot~
-   Você está no renomado Pátio de Torneios de Camelot.  Aqui, cavaleiros se
-desafiam para reivindicar o direito a lugar na Távola Redonda.  Você percebe
-vários concorrentes a caminho - quem sabe você não queira competir também?
+O Pï¿½tio de Torneios de Camelot~
+   Vocï¿½ estï¿½ no renomado Pï¿½tio de Torneios de Camelot.  Aqui, cavaleiros se
+desafiam para reivindicar o direito a lugar na Tï¿½vola Redonda.  Vocï¿½ percebe
+vï¿½rios concorrentes a caminho - quem sabe vocï¿½ nï¿½o queira competir tambï¿½m?
 ~
-173 0 2
+173 0 0 0 0 2
 D0
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17360
 D1
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17359
 D2
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17358
 D3
-A Rua da Vitória.
+A Rua da Vitï¿½ria.
 ~
 ~
 0 -1 17347
 S
 #17353
 A Torre da Honra~
-   Você se encontra na Torre da Honra.  MURAIS cobrem as paredes e o teto
-abobodado.  Rolos de fumaça saem, misteriosamente envolventes, de buracos
-nas paredes onde o fogo arde constantemente.  Uma estranha sensação de
-formigamento percorre seu corpo.  As escadarias levam à rua abaixo.
+   Vocï¿½ se encontra na Torre da Honra.  MURAIS cobrem as paredes e o teto
+abobodado.  Rolos de fumaï¿½a saem, misteriosamente envolventes, de buracos
+nas paredes onde o fogo arde constantemente.  Uma estranha sensaï¿½ï¿½o de
+formigamento percorre seu corpo.  As escadarias levam ï¿½ rua abaixo.
 ~
-173 0 0
+173 0 0 0 0 0
 D5
 Cruzamento do Caminho dos Cavaleiros com a Estrada Nobre.
 ~
@@ -1253,22 +1237,22 @@ Cruzamento do Caminho dos Cavaleiros com a Estrada Nobre.
 0 -1 17349
 E
 murais~
-Você olha para o mural de Lancelot, Guinevere e Arthur em um picnic.  Um
-pajem chega e entrega a Arthur um pergaminho.  O rei o lê e monta em seu
+Vocï¿½ olha para o mural de Lancelot, Guinevere e Arthur em um picnic.  Um
+pajem chega e entrega a Arthur um pergaminho.  O rei o lï¿½ e monta em seu
 corcel, correndo de volta ao longo da estrada.  Lancelot se vira para montar
-seu cavalo, mas uma mão feminina o contém, enquanto acena à sombra fresca
+seu cavalo, mas uma mï¿½o feminina o contï¿½m, enquanto acena ï¿½ sombra fresca
 dos carvalhos.  Lancelot volta-se para encarar Guinevere-
 
-       Você bruscamente parte de sua visão.
+       Vocï¿½ bruscamente parte de sua visï¿½o.
 ~
 S
 #17354
 A Estrada Nobre~
-   Você se encontra na Estrada Nobre.  A rua foi pavimentada com pedras
-amarelas, dando a impressão de ser ouro nas partes mais úmidas.  Uma estátua
+   Vocï¿½ se encontra na Estrada Nobre.  A rua foi pavimentada com pedras
+amarelas, dando a impressï¿½o de ser ouro nas partes mais ï¿½midas.  Uma estï¿½tua
 de Uther Pendragon fica aqui.  A estrada continua a leste e oeste.
 ~
-173 0 1
+173 0 0 0 0 1
 D1
 A Estrada Nobre.
 ~
@@ -1281,28 +1265,27 @@ Cruzamento do Caminho dos Cavaleiros com a Estrada Nobre.
 0 -1 17349
 E
 estatua uther pendragon~
-Você observa a estátua.  Uther Pendragon veste uma cota de malha e segura um
+Vocï¿½ observa a estï¿½tua.  Uther Pendragon veste uma cota de malha e segura um
 gigantesco machado.  Sua barba desce ao longo das linhas de seu rosto, e
-seus olhos se fixam em você com uma intensa preocupação.
+seus olhos se fixam em vocï¿½ com uma intensa preocupaï¿½ï¿½o.
 ~
 S
 #17355
-A Senda do Escudeiro no Portão Norte~
-   Você se encontra na Senda do Escudeiro.  Um constante tráfego vem e vai
-para o sul, onde os alojamentos dos escudeiros estão.  Ao norte fica o
-Grande Portão Norte de Camelot.  A Senda continua a oeste, e o Pátio de
-Torneios de Camelot fica a leste.  A seus pés está um mendigo segurando uma
+A Senda do Escudeiro no Portï¿½o Norte~
+   Vocï¿½ se encontra na Senda do Escudeiro.  Um constante trï¿½fego vem e vai
+para o sul, onde os alojamentos dos escudeiros estï¿½o.  Ao norte fica o
+Grande Portï¿½o Norte de Camelot.  A Senda continua a oeste, e o Pï¿½tio de
+Torneios de Camelot fica a leste.  A seus pï¿½s estï¿½ um mendigo segurando uma
 caneca.
 ~
-173 0 1
+173 0 0 0 0 1
 D0
-O Grande Portão Norte de Camelot.
+O Grande Portï¿½o Norte de Camelot.
 ~
 portao~
-:n 1 o portão
 1 -1 17356
 D1
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17362
@@ -1310,7 +1293,6 @@ D2
 Alojamento dos Escudeiros.
 ~
 porta~
-:n 2 a porta
 1 -1 17357
 D3
 A Senda do Escudeiro.
@@ -1319,19 +1301,19 @@ A Senda do Escudeiro.
 0 -1 17350
 E
 mendigo caneca~
-Você atira uma moeda para o mendigo.  Ele sorri para você e sussurra
-"Cuidado com Sir Garlon, o Cavaleiro Invisível, na área fora do portão
+Vocï¿½ atira uma moeda para o mendigo.  Ele sorri para vocï¿½ e sussurra
+"Cuidado com Sir Garlon, o Cavaleiro Invisï¿½vel, na ï¿½rea fora do portï¿½o
 oeste". Com um gemido e rastejando, o mendigo se arrasta para uma pilha de
 lixo..
 ~
 S
 #17356
-O Grande Portão Norte de Camelot~
-   Você está em frente ao grande portão norte de Camelot.  Uma estrada de
-terra segue abaixo até a colina onde Camelot repousa serenamente, rodeada
-por verdes campinas ao norte.  Ao sul está a Senda do Escudeiro.
+O Grande Portï¿½o Norte de Camelot~
+   Vocï¿½ estï¿½ em frente ao grande portï¿½o norte de Camelot.  Uma estrada de
+terra segue abaixo atï¿½ a colina onde Camelot repousa serenamente, rodeada
+por verdes campinas ao norte.  Ao sul estï¿½ a Senda do Escudeiro.
 ~
-173 c 1
+173 4 0 0 0 1
 D0
 Uma sinuosa estrada de terra.
 ~
@@ -1341,124 +1323,120 @@ D2
 Senda do Escudeiro.
 ~
 portao~
-:n 1 o portão
 1 -1 17355
 S
 #17357
 O Alojamento dos Escudeiros~
-   Você está no alojamento dos escudeiros.  Aqui estão residindo todos os
-servos dos cavaleiros da Távola Redonda enquanto seus senhores estão na
-corte.  O lugar está repleto de camas, armários e mesas, em uma grande
-confusão.  Tudo funciona, numa tremenda atividade ao redor dos longos bancos
-e mesas de madeira onde as pessoas estão comendo.  Há uma rudimentar cozinha
-de acampamento, com a lista do dia (seu nome não está nela).
+   Vocï¿½ estï¿½ no alojamento dos escudeiros.  Aqui estï¿½o residindo todos os
+servos dos cavaleiros da Tï¿½vola Redonda enquanto seus senhores estï¿½o na
+corte.  O lugar estï¿½ repleto de camas, armï¿½rios e mesas, em uma grande
+confusï¿½o.  Tudo funciona, numa tremenda atividade ao redor dos longos bancos
+e mesas de madeira onde as pessoas estï¿½o comendo.  Hï¿½ uma rudimentar cozinha
+de acampamento, com a lista do dia (seu nome nï¿½o estï¿½ nela).
 ~
-173 d 0
+173 8 0 0 0 0
 D0
-A Senda do Escudeiro no Portão Norte.
+A Senda do Escudeiro no Portï¿½o Norte.
 ~
 ~
 1 -1 17355
 S
 #17358
-O Pátio de Torneios de Camelot~
-   Você está no renomado Pátio de Torneios de Camelot.  Aqui, cavaleiros se
-desafiam para reivindicar o direito a lugar na Távola Redonda.  Você percebe
-vários concorrentes a caminho- quem sabe você não queira competir também?
+O Pï¿½tio de Torneios de Camelot~
+   Vocï¿½ estï¿½ no renomado Pï¿½tio de Torneios de Camelot.  Aqui, cavaleiros se
+desafiam para reivindicar o direito a lugar na Tï¿½vola Redonda.  Vocï¿½ percebe
+vï¿½rios concorrentes a caminho- quem sabe vocï¿½ nï¿½o queira competir tambï¿½m?
 ~
-173 0 0
+173 0 0 0 0 0
 D0
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17352
 D1
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17363
 D2
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17364
 S
 #17359
-O Pátio de Torneios de Camelot~
-   Você está no renomado Pátio de Torneios de Camelot.  Aqui, cavaleiros se
-desafiam para reivindicar o direito a lugar na Távola Redonda.  Você percebe
-vários concorrentes a caminho- quem sabe você não queira competir também?
+O Pï¿½tio de Torneios de Camelot~
+   Vocï¿½ estï¿½ no renomado Pï¿½tio de Torneios de Camelot.  Aqui, cavaleiros se
+desafiam para reivindicar o direito a lugar na Tï¿½vola Redonda.  Vocï¿½ percebe
+vï¿½rios concorrentes a caminho- quem sabe vocï¿½ nï¿½o queira competir tambï¿½m?
 ~
-173 0 0
+173 0 0 0 0 0
 D0
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17365
 D1
-Você vê a Corte de Camelot.
+Vocï¿½ vï¿½ a Corte de Camelot.
 ~
 porta~
-:n 2 a porta
 1 -1 17370
 D2
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17363
 D3
-A Rua da Vitória.
+A Rua da Vitï¿½ria.
 ~
 ~
 0 -1 17352
 S
 #17360
-O Pátio de Torneios de Camelot~
-   Você está no renomado Pátio de Torneios de Camelot.  Aqui, cavaleiros se
-desafiam para reivindicar o direito a lugar na Távola Redonda.  Você percebe
-vários concorrentes a caminho- quem sabe você não queira competir também?
+O Pï¿½tio de Torneios de Camelot~
+   Vocï¿½ estï¿½ no renomado Pï¿½tio de Torneios de Camelot.  Aqui, cavaleiros se
+desafiam para reivindicar o direito a lugar na Tï¿½vola Redonda.  Vocï¿½ percebe
+vï¿½rios concorrentes a caminho- quem sabe vocï¿½ nï¿½o queira competir tambï¿½m?
 ~
-173 0 0
+173 0 0 0 0 0
 D0
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17362
 D1
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17365
 D2
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17352
 S
 #17361
-A Estrada Nobre no Portão Sul~
-   Você se encontra na Estrada Nobre no Grande Portão Sul de Camelot.  Ao
-norte estão os Aposentos Nobres, onde a nobreza visitante está instalada.  O
-Pátio de Torneios é a leste e a Estrada Nobre continua a oeste.  Aqui há a
-estátua de um cavaleiro.
+A Estrada Nobre no Portï¿½o Sul~
+   Vocï¿½ se encontra na Estrada Nobre no Grande Portï¿½o Sul de Camelot.  Ao
+norte estï¿½o os Aposentos Nobres, onde a nobreza visitante estï¿½ instalada.  O
+Pï¿½tio de Torneios ï¿½ a leste e a Estrada Nobre continua a oeste.  Aqui hï¿½ a
+estï¿½tua de um cavaleiro.
 ~
-173 0 1
+173 0 0 0 0 1
 D0
 Aposentos Nobres.
 ~
 porta~
-:n 2 a porta
 1 -1 17366
 D1
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17364
 D2
-O Grande Portão Sul.
+O Grande Portï¿½o Sul.
 ~
 portao~
-:n 1 o portão
 1 -1 17367
 D3
 A Estrada Nobre.
@@ -1466,113 +1444,113 @@ A Estrada Nobre.
 ~
 0 -1 17354
 E
-estatua cavaleiro~
-A estátua representa um cavaleiro montado, cavalgando em direção ao Portão
-Sul.  Ele segura um estandarte com umas das mãos, uma lança em outra, e está
-usando uma armadura completa.  O cavalo está com duas patas levantadas,
-simbolizando morte em combate.  Você vê uma pequena inscrição também.
+inscricao~
+Aqui estï¿½ nossa lembranï¿½a e homenagem a Miles O'the Lands, honrado e
+graduado cavaleiro da Tï¿½vola Redonda.  Ele lutou valentemente defendendo a
+rainha no Campo de Batalha de Arden.
 ~
 E
-inscricao~
-Aqui está nossa lembrança e homenagem a Miles O'the Lands, honrado e
-graduado cavaleiro da Távola Redonda.  Ele lutou valentemente defendendo a
-rainha no Campo de Batalha de Arden.
+estatua cavaleiro~
+A estï¿½tua representa um cavaleiro montado, cavalgando em direï¿½ï¿½o ao Portï¿½o
+Sul.  Ele segura um estandarte com umas das mï¿½os, uma lanï¿½a em outra, e estï¿½
+usando uma armadura completa.  O cavalo estï¿½ com duas patas levantadas,
+simbolizando morte em combate.  Vocï¿½ vï¿½ uma pequena inscriï¿½ï¿½o tambï¿½m.
 ~
 S
 #17362
-O Pátio de Torneios de Camelot~
-   Você está no renomado Pátio de Torneios de Camelot.  Aqui, cavaleiros se
-desafiam para reivindicar o direito a lugar na Távola Redonda.  Você percebe
-vários concorrentes a caminho- quem sabe você não queira competir também?
+O Pï¿½tio de Torneios de Camelot~
+   Vocï¿½ estï¿½ no renomado Pï¿½tio de Torneios de Camelot.  Aqui, cavaleiros se
+desafiam para reivindicar o direito a lugar na Tï¿½vola Redonda.  Vocï¿½ percebe
+vï¿½rios concorrentes a caminho- quem sabe vocï¿½ nï¿½o queira competir tambï¿½m?
 ~
-173 0 0
+173 0 0 0 0 0
 D1
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17368
 D2
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17360
 D3
-A Senda do Escudeiro no Portão Norte.
+A Senda do Escudeiro no Portï¿½o Norte.
 ~
 ~
 0 -1 17355
 S
 #17363
-O Pátio de Torneios de Camelot~
-   Você está no renomado Pátio de Torneios de Camelot.  Aqui, cavaleiros se
-desafiam para reivindicar o direito a lugar na Távola Redonda.  Você percebe
-vários concorrentes a caminho- quem sabe você não queira competir também?
+O Pï¿½tio de Torneios de Camelot~
+   Vocï¿½ estï¿½ no renomado Pï¿½tio de Torneios de Camelot.  Aqui, cavaleiros se
+desafiam para reivindicar o direito a lugar na Tï¿½vola Redonda.  Vocï¿½ percebe
+vï¿½rios concorrentes a caminho- quem sabe vocï¿½ nï¿½o queira competir tambï¿½m?
 ~
-173 0 0
+173 0 0 0 0 0
 D0
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17359
-D3
-O Pátio de Torneios de Camelot.
-~
-~
-0 -1 17358
 D2
-O Pátio de Torneios de Camelot
+O Pï¿½tio de Torneios de Camelot
 ~
 ~
 0 -1 17369
+D3
+O Pï¿½tio de Torneios de Camelot.
+~
+~
+0 -1 17358
 S
 #17364
-O Pátio de Torneios de Camelot~
-   Você está no renomado Pátio de Torneios de Camelot.  Aqui, cavaleiros se
-desafiam para reivindicar o direito a lugar na Távola Redonda.  Você percebe
-vários concorrentes a caminho- quem sabe você não queira competir também?
+O Pï¿½tio de Torneios de Camelot~
+   Vocï¿½ estï¿½ no renomado Pï¿½tio de Torneios de Camelot.  Aqui, cavaleiros se
+desafiam para reivindicar o direito a lugar na Tï¿½vola Redonda.  Vocï¿½ percebe
+vï¿½rios concorrentes a caminho- quem sabe vocï¿½ nï¿½o queira competir tambï¿½m?
 ~
-173 0 0
+173 0 0 0 0 0
 D0
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17358
 D3
-A Estrada Nobre no Portão Sul.
+A Estrada Nobre no Portï¿½o Sul.
 ~
 ~
 0 -1 17361
 S
 #17365
-O Pátio de Torneios de Camelot~
-   Você está no renomado Pátio de Torneios de Camelot.  Aqui, cavaleiros se
-desafiam para reivindicar o direito a lugar na Távola Redonda.  Você percebe
-vários concorrentes a caminho- quem sabe você não queira competir também?
+O Pï¿½tio de Torneios de Camelot~
+   Vocï¿½ estï¿½ no renomado Pï¿½tio de Torneios de Camelot.  Aqui, cavaleiros se
+desafiam para reivindicar o direito a lugar na Tï¿½vola Redonda.  Vocï¿½ percebe
+vï¿½rios concorrentes a caminho- quem sabe vocï¿½ nï¿½o queira competir tambï¿½m?
 ~
-173 0 0
+173 0 0 0 0 0
 D0
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17368
 D2
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17359
 D3
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17360
 S
 #17366
 Aposentos Nobres~
-   Você está no interior dos quartos onde os visitantes nobres se instalam.
-Há um vestíbulo com uma fonte no lugar que você está, onde vários quartos
-dão.
+   Vocï¿½ estï¿½ no interior dos quartos onde os visitantes nobres se instalam.
+Hï¿½ um vestï¿½bulo com uma fonte no lugar que vocï¿½ estï¿½, onde vï¿½rios quartos
+dï¿½o.
 ~
-173 0 0
+173 0 0 0 0 0
 D0
 Quarto Nobre.
 ~
@@ -1584,7 +1562,7 @@ Quarto Nobre.
 porta~
 1 -1 17379
 D2
-A Estrada Nobre no Portão Sul.
+A Estrada Nobre no Portï¿½o Sul.
 ~
 ~
 1 -1 17361
@@ -1594,41 +1572,40 @@ Quarto Nobre.
 porta~
 1 17338 17380
 E
-fonte~
-A água da fonte escorre da estátua de uma garota segurando um cântaro, e cai
-em uma piscina de azulejo, onde um peixe nada.  Algumas moedas foram jogadas
-aqui.
-~
-E
-peixe~
-O peixe é de um tipo pequeno, geralmente daqueles que procuram seu alimento
-no fundo das águas.
+garota estatua~
+A estï¿½tua representa uma garota vestindo um traje semelhante a uma tï¿½nica.
+Ela ï¿½ gorducha, Com cabelos cortados atï¿½ a altura dos ombros.
 ~
 E
 moedas~
-Você realmente não deseja perder tempo recolhendo as moedas.  Seria de muito
+Vocï¿½ realmente nï¿½o deseja perder tempo recolhendo as moedas.  Seria de muito
 mau gosto.
 ~
 E
-garota estatua~
-A estátua representa uma garota vestindo um traje semelhante a uma túnica.
-Ela é gorducha, Com cabelos cortados até a altura dos ombros.
+peixe~
+O peixe ï¿½ de um tipo pequeno, geralmente daqueles que procuram seu alimento
+no fundo das ï¿½guas.
+~
+E
+fonte~
+A ï¿½gua da fonte escorre da estï¿½tua de uma garota segurando um cï¿½ntaro, e cai
+em uma piscina de azulejo, onde um peixe nada.  Algumas moedas foram jogadas
+aqui.
 ~
 S
 #17367
-O Grande Portão Sul~
-   Você está em frente ao Grande Portão Sul de Camelot.  Para sul está uma
-estrada pavimentada que segue pelas férteis planícies cultivadas.  Servos
-estão trabalhando a terra com cavalos puxando arados.  Milho, trigo e feijão
-estão brotando.  A vista daqui é fantástica, e a brisa limpa seu nariz do
+O Grande Portï¿½o Sul~
+   Vocï¿½ estï¿½ em frente ao Grande Portï¿½o Sul de Camelot.  Para sul estï¿½ uma
+estrada pavimentada que segue pelas fï¿½rteis planï¿½cies cultivadas.  Servos
+estï¿½o trabalhando a terra com cavalos puxando arados.  Milho, trigo e feijï¿½o
+estï¿½o brotando.  A vista daqui ï¿½ fantï¿½stica, e a brisa limpa seu nariz do
 cheiro da cidade.
 ~
-173 c 1
+173 4 0 0 0 1
 D0
-O Grande Portão Sul.
+O Grande Portï¿½o Sul.
 ~
 portao~
-:n 1 o portão
 1 -1 17361
 D2
 Uma rua pavimentada.
@@ -1637,116 +1614,113 @@ Uma rua pavimentada.
 0 -1 17391
 S
 #17368
-O Pátio de Torneios de Camelot~
-   Você está no renomado Pátio de Torneios de Camelot.  Aqui, cavaleiros se
-desafiam para reivindicar o direito ao lugar na Távola Redonda.  Você
-percebe vários concorrentes a caminho- quem sabe você não queira competir
-também?
+O Pï¿½tio de Torneios de Camelot~
+   Vocï¿½ estï¿½ no renomado Pï¿½tio de Torneios de Camelot.  Aqui, cavaleiros se
+desafiam para reivindicar o direito ao lugar na Tï¿½vola Redonda.  Vocï¿½
+percebe vï¿½rios concorrentes a caminho- quem sabe vocï¿½ nï¿½o queira competir
+tambï¿½m?
 ~
-173 0 0
+173 0 0 0 0 0
 D2
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17365
 D3
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17362
 S
 #17369
-O Pátio de Torneios de Camelot~
-   Você está no renomado Pátio de Torneios de Camelot.  Aqui, cavaleiros se
-desafiam para reivindicar o direito a lugar na Távola Redonda.  Você percebe
-vários concorrentes a caminho- quem sabe você não queira competir também?
+O Pï¿½tio de Torneios de Camelot~
+   Vocï¿½ estï¿½ no renomado Pï¿½tio de Torneios de Camelot.  Aqui, cavaleiros se
+desafiam para reivindicar o direito a lugar na Tï¿½vola Redonda.  Vocï¿½ percebe
+vï¿½rios concorrentes a caminho- quem sabe vocï¿½ nï¿½o queira competir tambï¿½m?
 ~
-173 0 2
+173 0 0 0 0 2
 D0
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17363
 D3
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 ~
 0 -1 17364
 S
 #17370
 A Corte de Camelot~
-   Você está na lendária corte de Camelot.  Aqui, nos pátios ensolarados,
-nobres e cavaleiros caminham descalços na relva discutindo sobre a cavalaria
-e as guerras que estão por vir.  Trovadores tocam baladas em seus alaúdes e
+   Vocï¿½ estï¿½ na lendï¿½ria corte de Camelot.  Aqui, nos pï¿½tios ensolarados,
+nobres e cavaleiros caminham descalï¿½os na relva discutindo sobre a cavalaria
+e as guerras que estï¿½o por vir.  Trovadores tocam baladas em seus alaï¿½des e
 os artistas saltam e fazem acrobacias no ar para agradar os reis.  Damas em
 espera fazem seus jogos amorosos com jovens cavaleiros e escudeiros.  Ao
 mundo todo parece um lugar melhor aqui, onde a amizade prospera e os dignos
-ideais do cavalheirismo estão em alta.
-   Daqui, você tem uma espetacular vista do Pátio de Torneios de Camelot.
-As saídas conduzem para o alojamento dos cavaleiros, a Távola Redonda, o
-Salão de Banquetes e para o Pátio de Torneios.
+ideais do cavalheirismo estï¿½o em alta.
+   Daqui, vocï¿½ tem uma espetacular vista do Pï¿½tio de Torneios de Camelot.
+As saï¿½das conduzem para o alojamento dos cavaleiros, a Tï¿½vola Redonda, o
+Salï¿½o de Banquetes e para o Pï¿½tio de Torneios.
 ~
-173 0 2
+173 0 0 0 0 2
 D0
 O Alojamento dos Cavaleiros.
 ~
 porta~
-:n 2 a porta
 1 -1 17374
 D1
-A Távola Redonda.
+A Tï¿½vola Redonda.
 ~
 porta~
-:n 2 a porta
 1 -1 17376
 D2
-O Salão de Banquete.
+O Salï¿½o de Banquete.
 ~
 ~
 0 -1 17371
 D3
-O Pátio de Torneios de Camelot.
+O Pï¿½tio de Torneios de Camelot.
 ~
 porta~
-:n 2 a porta
 1 -1 17359
 E
-patio torneios~
-Você assiste dois cavaleiros em lados opostos do Pátio de Torneios.  À
-esquerda está um cavaleiro com uma armadura de grandes placas, com plumas de
-um laranja resplandecente.  À direita, está um usando uma cota de malha e
-uma capa preta que se arrasta no chão.  Arthur sinaliza para os dois com um
-aceno.  Os dois cavaleiros esporeiam seus cavalos de guerra e disparam a
-galope.  À sua direita você ouve o deliciado grito de uma espectadora.  O
-cavaleiro de capa negra levanta sua arma, joga seu peso para frente e se
-levanta nos estribos.  Os dois homens colidem no centro do pátio, fazendo um
-retumbante estrondo.  O cavaleiro de pluma laranja se contorce em sua sela,
-para empurrar fortemente bem o centro do escudo do outro cavaleiro.  O
-cavaleiro de capa atinge com muita força o centro do escudo do adversário.
-Assim, você assiste o cavaleiro laranja ser jogado de cima da sela e cair
-estrondosamente no chão do pátio.  O cavaleiro negro ergue sua lança e a
-agita, em saudação a Arthur.
+espectadora~
+A dama em espera estï¿½ chorando, pois seu cavaleiro era o cavaleiro laranja.
+Ela se recompï¿½e rapidamente e atira seu lenï¿½o ao cavaleiro negro.
 ~
 E
-espectadora~
-A dama em espera está chorando, pois seu cavaleiro era o cavaleiro laranja.
-Ela se recompõe rapidamente e atira seu lenço ao cavaleiro negro.
+patio torneios~
+Vocï¿½ assiste dois cavaleiros em lados opostos do Pï¿½tio de Torneios.  ï¿½
+esquerda estï¿½ um cavaleiro com uma armadura de grandes placas, com plumas de
+um laranja resplandecente.  ï¿½ direita, estï¿½ um usando uma cota de malha e
+uma capa preta que se arrasta no chï¿½o.  Arthur sinaliza para os dois com um
+aceno.  Os dois cavaleiros esporeiam seus cavalos de guerra e disparam a
+galope.  ï¿½ sua direita vocï¿½ ouve o deliciado grito de uma espectadora.  O
+cavaleiro de capa negra levanta sua arma, joga seu peso para frente e se
+levanta nos estribos.  Os dois homens colidem no centro do pï¿½tio, fazendo um
+retumbante estrondo.  O cavaleiro de pluma laranja se contorce em sua sela,
+para empurrar fortemente bem o centro do escudo do outro cavaleiro.  O
+cavaleiro de capa atinge com muita forï¿½a o centro do escudo do adversï¿½rio.
+Assim, vocï¿½ assiste o cavaleiro laranja ser jogado de cima da sela e cair
+estrondosamente no chï¿½o do pï¿½tio.  O cavaleiro negro ergue sua lanï¿½a e a
+agita, em saudaï¿½ï¿½o a Arthur.
 ~
 S
 #17371
-O Salão de Banquetes~
-   Você entrou no salão de banquetes de Camelot.  Você está com sorte.  Um
-banquete está sendo servido.  Há muitas mesas com bancos, com servos
-correndo pra lá e pra cá enquanto trazem e levam pratos.  Em algumas mesas
-estão cavaleiros, enquanto que em outras estão damas.  A música dos bardos
-dão um ar festivo à celebração.  Um grande fogo crepita em um enorme forno,
-onde um javali inteiro está sendo cozinhado.
-   As saídas são para norte, na corte de Camelot, e para sul, nos quartos
+O Salï¿½o de Banquetes~
+   Vocï¿½ entrou no salï¿½o de banquetes de Camelot.  Vocï¿½ estï¿½ com sorte.  Um
+banquete estï¿½ sendo servido.  Hï¿½ muitas mesas com bancos, com servos
+correndo pra lï¿½ e pra cï¿½ enquanto trazem e levam pratos.  Em algumas mesas
+estï¿½o cavaleiros, enquanto que em outras estï¿½o damas.  A mï¿½sica dos bardos
+dï¿½o um ar festivo ï¿½ celebraï¿½ï¿½o.  Um grande fogo crepita em um enorme forno,
+onde um javali inteiro estï¿½ sendo cozinhado.
+   As saï¿½das sï¿½o para norte, na corte de Camelot, e para sul, nos quartos
 das senhoras.
 ~
-173 0 0
+173 0 0 0 0 0
 D0
-Você vê a corte de Camelot.
+Vocï¿½ vï¿½ a corte de Camelot.
 ~
 ~
 0 -1 17370
@@ -1754,24 +1728,22 @@ D2
 A porta dos aposentos das senhoras.
 ~
 porta~
-:n 2 a porta dos aposentos das senhoras
 1 -1 17372
 S
 #17372
 Os Aposentos das Senhoras~
-   Você está nos aposentos das senhoras.  Espero que você seja uma, ou
-estará em uma grande enrascada!  São muitos os quartos aqui, alguns
-ocupados, outros não, mas certamente a atividade é grande e incessante.  Uma
-jovem moça está muito triste, chorando, e nota um grupo de senhoras em um
-canto.  Há uma porta ao norte, conduzindo ao Salão de Banquetes, e uma
+   Vocï¿½ estï¿½ nos aposentos das senhoras.  Espero que vocï¿½ seja uma, ou
+estarï¿½ em uma grande enrascada!  Sï¿½o muitos os quartos aqui, alguns
+ocupados, outros nï¿½o, mas certamente a atividade ï¿½ grande e incessante.  Uma
+jovem moï¿½a estï¿½ muito triste, chorando, e nota um grupo de senhoras em um
+canto.  Hï¿½ uma porta ao norte, conduzindo ao Salï¿½o de Banquetes, e uma
 escadaria subindo para uma torre.
 ~
-173 0 0
+173 0 0 0 0 0
 D0
-A porta do Salão de Banquetes.
+A porta do Salï¿½o de Banquetes.
 ~
 porta~
-:n 2 a porta do salão
 1 -1 17371
 D4
 Uma escadaria levando para cima.
@@ -1779,27 +1751,27 @@ Uma escadaria levando para cima.
 ~
 0 -1 17373
 E
-jovem moça~
-Você conversa com a jovem.  Ela está triste pois Lancelot não presta atenção
-nela.
+grupo senhoras~
+Vocï¿½ aguï¿½a seus ouvidos e presta atenï¿½ï¿½o no que as senhoras as senhoras
+dizem.  Vocï¿½ ouve: "...ï¿½ terrï¿½vel.  A pobre garota foi capturada no caminho
+para seu casamento por aquele crï¿½pula que ï¿½ Mordred.  Seu pai ofereceu uma
+considerï¿½vel fortuna para que ela voltasse em seguranï¿½a.  Eu acho que meu
+Gawaine pode, certamente, resolver isso..."
 ~
 E
-grupo senhoras~
-Você aguça seus ouvidos e presta atenção no que as senhoras as senhoras
-dizem.  Você ouve: "...é terrível.  A pobre garota foi capturada no caminho
-para seu casamento por aquele crápula que é Mordred.  Seu pai ofereceu uma
-considerável fortuna para que ela voltasse em segurança.  Eu acho que meu
-Gawaine pode, certamente, resolver isso..."
+jovem moï¿½a~
+Vocï¿½ conversa com a jovem.  Ela estï¿½ triste pois Lancelot nï¿½o presta atenï¿½ï¿½o
+nela.
 ~
 S
 #17373
 A Torre das Donzelas~
-   Oh sim, é aqui onde as virginais donzelas da corte residem, longe de seus
-cavaleiros que estão em longas viajem a serviço de Arthur.  A principal
-atividade aqui é a confecção de tapeçarias.  No momento, três estão sendo
+   Oh sim, ï¿½ aqui onde as virginais donzelas da corte residem, longe de seus
+cavaleiros que estï¿½o em longas viajem a serviï¿½o de Arthur.  A principal
+atividade aqui ï¿½ a confecï¿½ï¿½o de tapeï¿½arias.  No momento, trï¿½s estï¿½o sendo
 feitas.
 ~
-173 0 0
+173 0 0 0 0 0
 D5
 Uma escadaria que leva para baixo.
 ~
@@ -1807,26 +1779,25 @@ Uma escadaria que leva para baixo.
 0 -1 17372
 E
 tapecaria tapecarias~
-Duas tapeçarias estão quase prontas, tanto que se pode reconhecer o que
-representam.  Uma descreve uma batalha entre cavaleiros e a outra é sobre
-uma caçada na Floresta Arden.
+Duas tapeï¿½arias estï¿½o quase prontas, tanto que se pode reconhecer o que
+representam.  Uma descreve uma batalha entre cavaleiros e a outra ï¿½ sobre
+uma caï¿½ada na Floresta Arden.
 ~
 S
 #17374
 O Alojamento dos Cavaleiros~
-   Você adentrou no alojamento dos cavaleiros.  Beliches e armaduras lotam o
-lugar.  Alguns cavaleiros estão dormindo e se recuperando de suas feridas de
-guerra.  Um rústico lavatório está no fim dos quartos, e as janelas são
-escurecidas para sombrear aqui.  As únicas conversas são em tom velado.  Há
-uma porta conduzindo sul, para a Corte de Camelot.  Uma escadaria é o
-caminho para subir até uma torre.
+   Vocï¿½ adentrou no alojamento dos cavaleiros.  Beliches e armaduras lotam o
+lugar.  Alguns cavaleiros estï¿½o dormindo e se recuperando de suas feridas de
+guerra.  Um rï¿½stico lavatï¿½rio estï¿½ no fim dos quartos, e as janelas sï¿½o
+escurecidas para sombrear aqui.  As ï¿½nicas conversas sï¿½o em tom velado.  Hï¿½
+uma porta conduzindo sul, para a Corte de Camelot.  Uma escadaria ï¿½ o
+caminho para subir atï¿½ uma torre.
 ~
-173 a 0
+173 1 0 0 0 0
 D2
-Você vê a Corte de Camelot.
+Vocï¿½ vï¿½ a Corte de Camelot.
 ~
 porta~
-:n 2 a porta
 1 -1 17370
 D4
 Uma escadaria leva para cima.
@@ -1836,23 +1807,22 @@ Uma escadaria leva para cima.
 S
 #17375
 A Torre de Merlin~
-   Você encontrou a Torre de Merlin.  É uma bagunça de livros, pergaminhos,
-varinhas, manuais, etc.  Há também mesas e cadeiras desgastadas, onde está
-uma grande variedade de curiosidades.  Merlin possui também muitos animais,
-e muitos recipientes dispostos em estantes de madeira.  De relance você olha
-através da janela da torre e vê as colinas de Camelot se extenderem até onde
-seu campo de visão permite.  Mas o que mais lhe chama a atenção é um
+   Vocï¿½ encontrou a Torre de Merlin.  ï¿½ uma bagunï¿½a de livros, pergaminhos,
+varinhas, manuais, etc.  Hï¿½ tambï¿½m mesas e cadeiras desgastadas, onde estï¿½
+uma grande variedade de curiosidades.  Merlin possui tambï¿½m muitos animais,
+e muitos recipientes dispostos em estantes de madeira.  De relance vocï¿½ olha
+atravï¿½s da janela da torre e vï¿½ as colinas de Camelot se extenderem atï¿½ onde
+seu campo de visï¿½o permite.  Mas o que mais lhe chama a atenï¿½ï¿½o ï¿½ um
 pulsante pentagrama no centro da sala, brilhando e palpitando no mesmo
-compasso que as batidas de seu coração.  Há também um SINAL que, com
-sobrenaturais inscrições de um vermelho incandescente, pisca a mensagem
+compasso que as batidas de seu coraï¿½ï¿½o.  Hï¿½ tambï¿½m um SINAL que, com
+sobrenaturais inscriï¿½ï¿½es de um vermelho incandescente, pisca a mensagem
 "OLHE PARA MIM".
 ~
-173 0 0
+173 0 0 0 0 0
 D4
 No interior do pentagrama pulsante.
 ~
 pentagrama~
-:n 1 o pentagrama
 1 2 17381
 D5
 Uma escadaria que conduz para baixo.
@@ -1860,52 +1830,51 @@ Uma escadaria que conduz para baixo.
 ~
 0 -1 17374
 E
-livros pergaminhos varinhas manuais~
-Você xereta nos livros, pergaminhos, varinhas e manuais de Merlin.  Todos
-estão escritos em um estranho idioma rúnico que, mesmo após perscrutar
-muito, lhe parece completamente estranho.
+pentagrama pulsante~
+Sua voz interior, que sempre lhe serviu tï¿½o bem, grita para vocï¿½: DEIXE ISSO
+SOSSEGADO!!
+~
+E
+recipientes estantes~
+Ao remexer nos recipientes de Merlin, tudo que vocï¿½ faz ou apalpa comeï¿½a a
+produzir uma resina negra, que causa coceira em todo seu corpo.
+~
+E
+sinal~
+Vocï¿½ olha o sinal.  No princï¿½pio nï¿½o lhe ï¿½ possï¿½vel entender nada, mas as
+letras se adaptam a um idioma que vocï¿½ entenda.  Diz: CUIDADO COM O DEMï¿½NIO!
+Eu aprisionei um VIL, IMUNDO, EXTREMAMENTE PODEROSO demï¿½nio nesse
+pentagrama.  Para quem aqui entrar, Nï¿½O Hï¿½ SAï¿½DAS ou MODOS DE RETORNAR POR
+MAGIA.  Atï¿½ mesmo Lancelot morreria no pentagrama.  Nï¿½O Hï¿½ NADA DE VALOR
+AQUI, ALï¿½M DA MORTE, e nada menos que a DIRETA INTERVENï¿½ï¿½O DIVINA pode sair
+daqui.  - Merlin
 ~
 E
 animais~
 Merlin possui um corvo, um gato e um sapo. Todos observam seus movimentos.
 ~
 E
-sinal~
-Você olha o sinal.  No princípio não lhe é possível entender nada, mas as
-letras se adaptam a um idioma que você entenda.  Diz: CUIDADO COM O DEMÔNIO!
-Eu aprisionei um VIL, IMUNDO, EXTREMAMENTE PODEROSO demônio nesse
-pentagrama.  Para quem aqui entrar, NÃO HÁ SAÍDAS ou MODOS DE RETORNAR POR
-MAGIA.  Até mesmo Lancelot morreria no pentagrama.  NÃO HÁ NADA DE VALOR
-AQUI, ALÉM DA MORTE, e nada menos que a DIRETA INTERVENÇÃO DIVINA pode sair
-daqui.  - Merlin
-~
-E
-recipientes estantes~
-Ao remexer nos recipientes de Merlin, tudo que você faz ou apalpa começa a
-produzir uma resina negra, que causa coceira em todo seu corpo.
-~
-E
-pentagrama pulsante~
-Sua voz interior, que sempre lhe serviu tão bem, grita para você: DEIXE ISSO
-SOSSEGADO!!
+livros pergaminhos varinhas manuais~
+Vocï¿½ xereta nos livros, pergaminhos, varinhas e manuais de Merlin.  Todos
+estï¿½o escritos em um estranho idioma rï¿½nico que, mesmo apï¿½s perscrutar
+muito, lhe parece completamente estranho.
 ~
 S
 #17376
-A Távola Redonda~
-   Você adentrou na Távola Redonda, onde está havendo um conselho de guerra
-entre Arthur e seus companheiros.  A Távola tem 30' de diâmetro, e é feita
-de cerejeira polida.  Ao seu redor, estão dispostas 50 cadeiras.  O salão
-que acomoda a mesa também é redondo e extenso, sendo que acima você vê o
-teto abobadado.  A luz é emitida por um belíssimo candelabro de cristal e
-ouro, onde é decomposta em um brilhante espectro prismático.  Uma porta
-conduz à Corte de Camelot, a oeste, e uma escadaria leva para cima.
+A Tï¿½vola Redonda~
+   Vocï¿½ adentrou na Tï¿½vola Redonda, onde estï¿½ havendo um conselho de guerra
+entre Arthur e seus companheiros.  A Tï¿½vola tem 30' de diï¿½metro, e ï¿½ feita
+de cerejeira polida.  Ao seu redor, estï¿½o dispostas 50 cadeiras.  O salï¿½o
+que acomoda a mesa tambï¿½m ï¿½ redondo e extenso, sendo que acima vocï¿½ vï¿½ o
+teto abobadado.  A luz ï¿½ emitida por um belï¿½ssimo candelabro de cristal e
+ouro, onde ï¿½ decomposta em um brilhante espectro prismï¿½tico.  Uma porta
+conduz ï¿½ Corte de Camelot, a oeste, e uma escadaria leva para cima.
 ~
-173 0 0
+173 0 0 0 0 0
 D3
-Você vê a Corte de Camelot.
+Vocï¿½ vï¿½ a Corte de Camelot.
 ~
 porta~
-:n 2 a porta
 1 -1 17370
 D4
 Uma escadaria coinduzindo para cima.
@@ -1914,21 +1883,21 @@ Uma escadaria coinduzindo para cima.
 0 -1 17377
 E
 candelabro cristal ouro~
-Você considera erguer o candelabro, mas decide não fazê-lo, pois
-provavelmente se cansaria muito rápido, além de atrair a atenção de todos os
+Vocï¿½ considera erguer o candelabro, mas decide nï¿½o fazï¿½-lo, pois
+provavelmente se cansaria muito rï¿½pido, alï¿½m de atrair a atenï¿½ï¿½o de todos os
 cavaleiros do reino.
 ~
 S
 #17377
 Os Aposentos de Arthur~
-   Você entrou nos aposentos privativos do Rei Arthur.  Uma bandeira de
-dragão que cobre o dossel de uma enorme cama.  O rei possui também em seu
-quarto uma pia de mármore e escrivaninha e cadeira de cerejeira.  Um imenso
-tapete de arminho cobre o chão.  Escadarias conduzem ao aposento de baixo.
-Tapeçarias representando-o retirando Excalibur de uma rocha, e suas
-campanhas de unificação adornam as paredes.
+   Vocï¿½ entrou nos aposentos privativos do Rei Arthur.  Uma bandeira de
+dragï¿½o que cobre o dossel de uma enorme cama.  O rei possui tambï¿½m em seu
+quarto uma pia de mï¿½rmore e escrivaninha e cadeira de cerejeira.  Um imenso
+tapete de arminho cobre o chï¿½o.  Escadarias conduzem ao aposento de baixo.
+Tapeï¿½arias representando-o retirando Excalibur de uma rocha, e suas
+campanhas de unificaï¿½ï¿½o adornam as paredes.
 ~
-173 0 0
+173 0 0 0 0 0
 D5
 Escadarias levam para baixo.
 ~
@@ -1937,12 +1906,12 @@ Escadarias levam para baixo.
 S
 #17378
 Aposentos Nobres~
-   Você está caminhando pelos aposentos nobres, chegando a um dos quartos.
-Alguém negligentemente esqueceu de fechar a porta, confiando na honra e
+   Vocï¿½ estï¿½ caminhando pelos aposentos nobres, chegando a um dos quartos.
+Alguï¿½m negligentemente esqueceu de fechar a porta, confiando na honra e
 dignidade de todos dentro de Camelot para proteger suas posses.  O aposento
-consiste em um quarto comum com muitas camas e uma área de serviço.
+consiste em um quarto comum com muitas camas e uma ï¿½rea de serviï¿½o.
 ~
-173 0 0
+173 0 0 0 0 0
 D2
 Aposentos Nobres.
 ~
@@ -1950,16 +1919,16 @@ Aposentos Nobres.
 1 17338 17366
 E
 posses~
-Você não precisa realmente de nada daqui.
+Vocï¿½ nï¿½o precisa realmente de nada daqui.
 ~
 S
 #17379
 Aposentos Nobres~
-   Você está em um dos quartos desocupados.  Quem sabe você não fique um
-pouco e visite a Corte?  O quarto possui câmaras com muitas camas, uma sala
+   Vocï¿½ estï¿½ em um dos quartos desocupados.  Quem sabe vocï¿½ nï¿½o fique um
+pouco e visite a Corte?  O quarto possui cï¿½maras com muitas camas, uma sala
 de estar e um pequeno jardim.
 ~
-173 0 0
+173 0 0 0 0 0
 D3
 O quarto de um Nobre.
 ~
@@ -1967,42 +1936,41 @@ porta~
 1 -1 17366
 E
 jardim~
-Alguns vegetais frescos e flores estão crescendo aqui.
+Alguns vegetais frescos e flores estï¿½o crescendo aqui.
 ~
 S
 #17380
 Aposentos Nobres~
-   Você está caminhando pelos aposentos nobres, chegando a um dos quartos.
-Este nobre trancou sua porta, antecipando a intrusão da ralé a qual você
-pertence.  O quarto possui uma câmara com muitas camas e uma área de
-serviço.
+   Vocï¿½ estï¿½ caminhando pelos aposentos nobres, chegando a um dos quartos.
+Este nobre trancou sua porta, antecipando a intrusï¿½o da ralï¿½ a qual vocï¿½
+pertence.  O quarto possui uma cï¿½mara com muitas camas e uma ï¿½rea de
+serviï¿½o.
 ~
-173 0 0
+173 0 0 0 0 0
 D1
 O quarto de um Nobre.
 ~
 porta~
-:n 2 a porta do quarto
 2 -1 17366
 S
 #17381
 O Pentagrama~
-   Bem...  Você fez isso.  Você entrou no pentagrama.  Você é arrebatado por
+   Bem...  Vocï¿½ fez isso.  Vocï¿½ entrou no pentagrama.  Vocï¿½ ï¿½ arrebatado por
 um calor infernal, e gargalhadas o rodeiam, vindas de todos os lados.  Seu
-corpo inteiro é tomado pela dor, e você ouve a si mesmo gritando e chorando
-infinitamente de horror.  Você está preso aqui para sempre!!!!
+corpo inteiro ï¿½ tomado pela dor, e vocï¿½ ouve a si mesmo gritando e chorando
+infinitamente de horror.  Vocï¿½ estï¿½ preso aqui para sempre!!!!
 ~
-173 acjdfh 0
+173 685 0 0 0 0
 S
 #17382
 As Colinas~
-   Você passou o dia viajando por uma estrada que passa pelas colinas a
+   Vocï¿½ passou o dia viajando por uma estrada que passa pelas colinas a
 norte de Camelot.  No caminho, encontrou muitas aldeias.  As pessoas que
-conheceu geralmente são muito felizes.  Agora, você se encontra em uma
+conheceu geralmente sï¿½o muito felizes.  Agora, vocï¿½ se encontra em uma
 encruzilhada.  Ao norte, a estrada continua pelas colinas.  A leste, a
-estrada segue por uma extensa campina.  Camelot está a sul.
+estrada segue por uma extensa campina.  Camelot estï¿½ a sul.
 ~
-173 0 4
+173 0 0 0 0 4
 D0
 As Colinas.
 ~
@@ -2021,12 +1989,12 @@ Uma estrada sinuosa.
 S
 #17383
 As Colinas~
-   Você passou o dia viajando por uma estrada que passa pelas colinas a
+   Vocï¿½ passou o dia viajando por uma estrada que passa pelas colinas a
 norte de Camelot.  No caminho, encontrou muitas aldeias.  As pessoas que
-conheceu geralmente são muito felizes.  Ao norte, a estrada sobe até as
+conheceu geralmente sï¿½o muito felizes.  Ao norte, a estrada sobe atï¿½ as
 terras altas e ao sul, atravessa as colinas.
 ~
-173 0 4
+173 0 0 0 0 4
 D0
 As terras altas.
 ~
@@ -2040,15 +2008,15 @@ Uma estrada sinuosa.
 S
 #17384
 As Campinas~
-   Você gastou uma semana viajando por uma enorme planície coberta de grama.
+   Vocï¿½ gastou uma semana viajando por uma enorme planï¿½cie coberta de grama.
 Durante suas viagens, cruzou por diversas baronias.  Contou muitos
 cavaleiros e peregrinos em sua jornada, dormiu em palheiros e montes de
-feno.  A gleba aqui é muito produtiva, e há muitas fazendas de cavalos onde
-são criados e cuidados os corcéis de Camelot.  No momento, você está em uma
-estranha formação rochosa na vasta planície.  A estrada segue a leste pelas
+feno.  A gleba aqui ï¿½ muito produtiva, e hï¿½ muitas fazendas de cavalos onde
+sï¿½o criados e cuidados os corcï¿½is de Camelot.  No momento, vocï¿½ estï¿½ em uma
+estranha formaï¿½ï¿½o rochosa na vasta planï¿½cie.  A estrada segue a leste pelas
 colinas e oeste pela costa rochosa.
 ~
-173 0 2
+173 0 0 0 0 2
 D1
 A costa rochosa.
 ~
@@ -2060,47 +2028,45 @@ As colinas.
 ~
 0 -1 17382
 E
-rochosa estranha formacao~
-Você examina a formação rochosa.  As rochas tem aproximadamente 15' de
-altura e estão dispostas em círculos, com duas pedras (na vertical) lado a
-lado e uma em cima, sobre as outras duas, horizontalmente.  Há outra pedra
-no centro, semelhante a uma mesa, onde as primeiras luzes do dia estão
-incidindo.
+inscricao~
+A inscriï¿½ï¿½o diz:
+
+ LACNOGIRANDUTOS ROYU AYLGPIN LILSK SI BLAMMENEDOC
 ~
 E
 mesa altar pedra~
-Você caminha até a mesa e a examina.  Nela, percebe-se manchas de um marrom
-enferrujado- SANGUE!  Você examina o chão ao redor da pedra e acha lã.
-Evidentemente isso é um altar.  Você consegue entender apenas um pouco da
-inscrição da pedra.
+Vocï¿½ caminha atï¿½ a mesa e a examina.  Nela, percebe-se manchas de um marrom
+enferrujado- SANGUE!  Vocï¿½ examina o chï¿½o ao redor da pedra e acha lï¿½.
+Evidentemente isso ï¿½ um altar.  Vocï¿½ consegue entender apenas um pouco da
+inscriï¿½ï¿½o da pedra.
 ~
 E
-inscricao~
-A inscrição diz:
-
- LACNOGIRANDUTOS ROYU AYLGPIN LILSK SI BLAMMENEDOC
+rochosa estranha formacao~
+Vocï¿½ examina a formaï¿½ï¿½o rochosa.  As rochas tem aproximadamente 15' de
+altura e estï¿½o dispostas em cï¿½rculos, com duas pedras (na vertical) lado a
+lado e uma em cima, sobre as outras duas, horizontalmente.  Hï¿½ outra pedra
+no centro, semelhante a uma mesa, onde as primeiras luzes do dia estï¿½o
+incidindo.
 ~
 S
 #17385
 As Terras Altas~
-   Você passou o dia viajando pelas terras altas (as Highlands) e está muito
+   Vocï¿½ passou o dia viajando pelas terras altas (as Highlands) e estï¿½ muito
 cansado.  A sua frente fica uma muralha velha, que vai de leste a oeste
-pelas colinas.  Não existem muitas árvores crescendo aqui, e tudo foi limpo
-ao norte da muralha.  A sul da contrução está uma estrada sinuosa.  A norte,
-estão as indomadas Highlands escocesas.  Há um posto avançado a leste.
+pelas colinas.  Nï¿½o existem muitas ï¿½rvores crescendo aqui, e tudo foi limpo
+ao norte da muralha.  A sul da contruï¿½ï¿½o estï¿½ uma estrada sinuosa.  A norte,
+estï¿½o as indomadas Highlands escocesas.  Hï¿½ um posto avanï¿½ado a leste.
 ~
-173 0 4
+173 0 0 0 0 4
 D0
 As Highlands Escocesas.
 ~
 portao~
-:n 1 o portão
 1 -1 17387
 D1
-Um posto avançado.
+Um posto avanï¿½ado.
 ~
 portao~
-:n 1 o portão
 1 -1 17388
 D3
 Uma estrada sinuosa.
@@ -2112,23 +2078,23 @@ D4
 ~
 0 -1 2160
 E
-muralha~
-Você examina a muralha e percebe algo escrito.
+escrito~
+Estï¿½ escrito: ADRIANO
 ~
 E
-escrito~
-Está escrito: ADRIANO
+muralha~
+Vocï¿½ examina a muralha e percebe algo escrito.
 ~
 S
 #17386
 A Costa Rochosa~
-   Você escolheu ir pelo caminho que passa pela costa rochosa.  O tempo está
-horrível, e isso influencia seu humor.  A estrada desapareceu a dois dias
-atrás, Agora, você está em um penhasco, Observando o vasto oceano.  A névoa
-atrapalha sua visão do horizonte, mas você sabe que ele está lá, em algum
-lugar.  Bem longe de você se encontra a praia.
+   Vocï¿½ escolheu ir pelo caminho que passa pela costa rochosa.  O tempo estï¿½
+horrï¿½vel, e isso influencia seu humor.  A estrada desapareceu a dois dias
+atrï¿½s, Agora, vocï¿½ estï¿½ em um penhasco, Observando o vasto oceano.  A nï¿½voa
+atrapalha sua visï¿½o do horizonte, mas vocï¿½ sabe que ele estï¿½ lï¿½, em algum
+lugar.  Bem longe de vocï¿½ se encontra a praia.
 ~
-173 0 0
+173 0 0 0 0 0
 D3
 Mais penhascos e mais chuva.
 ~
@@ -2141,19 +2107,19 @@ A praia rochosa.
 0 -1 17389
 E
 praia~
-Você olha para a praia, e alegra-se por isso.  Fumaça surge da margem e agora,
-olhando mais de perto, é possível identificar as habitações do povo bárbaro.
-A praia é, definitivamente, habitada.
+Vocï¿½ olha para a praia, e alegra-se por isso.  Fumaï¿½a surge da margem e agora,
+olhando mais de perto, ï¿½ possï¿½vel identificar as habitaï¿½ï¿½es do povo bï¿½rbaro.
+A praia ï¿½, definitivamente, habitada.
 ~
 S
 #17387
 As Highlands Escocesas~
-   Você passou vários dias vagando pelas highlands escocesas.  Também tem
-espiado as moças pastoreando ovelhas, e muitos bandos de saqueadores
-escoceses, aos quais você tem inteligentemente se esquivado.  Acima e à
-frente, na ribanceira, está um forte.  Você não está certo se deve entrar.
+   Vocï¿½ passou vï¿½rios dias vagando pelas highlands escocesas.  Tambï¿½m tem
+espiado as moï¿½as pastoreando ovelhas, e muitos bandos de saqueadores
+escoceses, aos quais vocï¿½ tem inteligentemente se esquivado.  Acima e ï¿½
+frente, na ribanceira, estï¿½ um forte.  Vocï¿½ nï¿½o estï¿½ certo se deve entrar.
 ~
-173 0 0
+173 0 0 0 0 0
 D2
 Mais pastoras e highlands.
 ~
@@ -2166,52 +2132,51 @@ O Forte na ribanceira.
 0 -1 17390
 S
 #17388
-O Posto Avançado~
-   Você está no posto avançado para a muralha.  É uma fortaleza de pedra,
-que oferece pouco conforto a quem lá reside.  Há barracas e um salão
-principal.  Guardas estão a posto ao longo da muralha.  Sua chegada causou
-grande interesse, já que esses homens da fronteira não vêem muitas pessoas
+O Posto Avanï¿½ado~
+   Vocï¿½ estï¿½ no posto avanï¿½ado para a muralha.  ï¿½ uma fortaleza de pedra,
+que oferece pouco conforto a quem lï¿½ reside.  Hï¿½ barracas e um salï¿½o
+principal.  Guardas estï¿½o a posto ao longo da muralha.  Sua chegada causou
+grande interesse, jï¿½ que esses homens da fronteira nï¿½o vï¿½em muitas pessoas
 por aqui.
 ~
-173 0 0
+173 0 0 0 0 0
 D3
-Em frente ao portão.
+Em frente ao portï¿½o.
 ~
 portao~
-:n 1 o portão
 1 -1 17385
 S
 #17389
 A praia rochosa~
-   Você se encontra na praia rochosa desejando possui um barco.  A subida
-por todas essas fendas foi muito dura.  Há muitas cavernas e grutas aqui.
+   Vocï¿½ se encontra na praia rochosa desejando possui um barco.  A subida
+por todas essas fendas foi muito dura.  Hï¿½ muitas cavernas e grutas aqui.
 ~
-173 0 4
+173 0 0 0 0 4
 D4
-Uma árdua subida que você preferia não fazer.
+Uma ï¿½rdua subida que vocï¿½ preferia nï¿½o fazer.
 ~
 ~
 0 -1 17386
 E
-grutas gruta~
-As ondas estão duramente se arrebentando nas grutas.  Você pode provar as
-gotículas de água salgada.
+caverna cavernas~
+Vocï¿½ olha nas cavernas- fumaï¿½a!  O lugar ï¿½ habitado!
 ~
 E
-caverna cavernas~
-Você olha nas cavernas- fumaça!  O lugar é habitado!
+grutas gruta~
+As ondas estï¿½o duramente se arrebentando nas grutas.  Vocï¿½ pode provar as
+gotï¿½culas de ï¿½gua salgada.
 ~
 S
 #17390
 O Forte dos Escoceses~
-   Você está na entrada do forte escocês.  As paredes são cobertas com peles
-de animais.  Mulheres e crianças estão esparramadas entre colchões de peles
+   Vocï¿½ estï¿½ na entrada do forte escocï¿½s.  As paredes sï¿½o cobertas com peles
+de animais.  Mulheres e crianï¿½as estï¿½o esparramadas entre colchï¿½es de peles
 e couro.  Uma fogueira crepita no centro de uma pedra, espantando o frio de
-seus ossos.  Os homens estavam dançando com suas espadas, mas pararam assim
-que notaram sua presença.  Há uma grande panela de ferro esquentando no
+seus ossos.  Os homens estavam danï¿½ando com suas espadas, mas pararam assim
+que notaram sua presenï¿½a.  Hï¿½ uma grande panela de ferro esquentando no
 fogo.
 ~
-173 0 0
+173 0 0 0 0 0
 D5
 As Highlands Escocesas.
 ~
@@ -2219,20 +2184,20 @@ As Highlands Escocesas.
 0 -1 17387
 E
 panela ferro~
-A panela de ferro contém uma mistura de batatas, raízes e algo que parece
+A panela de ferro contï¿½m uma mistura de batatas, raï¿½zes e algo que parece
 ser javali.
 ~
 S
 #17391
 As Fazendas~
-   Você passou o dia viajando pelos campos de Camelot, seguindo uma estrada
-de pedra pavimentada.  A lavoura está produzindo bem esse ano, e os
-camponeses estão ceifando uma abundante colheita.  Logo os festivais de fim
-de colheita irão começar e celebrar outro bom ano.  De fato, você tem três
-convites para vários festejos das pessoas que conheceu ao longo de seu
+   Vocï¿½ passou o dia viajando pelos campos de Camelot, seguindo uma estrada
+de pedra pavimentada.  A lavoura estï¿½ produzindo bem esse ano, e os
+camponeses estï¿½o ceifando uma abundante colheita.  Logo os festivais de fim
+de colheita irï¿½o comeï¿½ar e celebrar outro bom ano.  De fato, vocï¿½ tem trï¿½s
+convites para vï¿½rios festejos das pessoas que conheceu ao longo de seu
 caminho.
 ~
-173 0 2
+173 0 0 0 0 2
 D0
 Uma estrada pavimentada.
 ~
@@ -2251,20 +2216,20 @@ Uma estrada pavimentada.
 S
 #17392
 As Fazendas~
-   Você passou o dia viajando pelos campos de Camelot, seguindo uma estrada
-de pedra pavimentada.  A lavoura está produzindo bem esse ano, e os
-camponeses estão ceifando uma abundante colheita.  Logo os festivais de fim
-de colheita irão começar e celebrar outro bom ano.  O seu bom humor acaba ao
-avistar fumaça e gritos vindos do sul.
+   Vocï¿½ passou o dia viajando pelos campos de Camelot, seguindo uma estrada
+de pedra pavimentada.  A lavoura estï¿½ produzindo bem esse ano, e os
+camponeses estï¿½o ceifando uma abundante colheita.  Logo os festivais de fim
+de colheita irï¿½o comeï¿½ar e celebrar outro bom ano.  O seu bom humor acaba ao
+avistar fumaï¿½a e gritos vindos do sul.
 ~
-173 0 2
+173 0 0 0 0 2
 D0
 Uma estrada pavimentada.
 ~
 ~
 0 -1 17391
 D2
-Em direção à fumaça.
+Em direï¿½ï¿½o ï¿½ fumaï¿½a.
 ~
 ~
 0 -1 17395
@@ -2275,20 +2240,20 @@ Uma estrada pavimentada.
 0 -1 17394
 E
 fumaca gritos~
-   Você pode escutar os gritos de 'Armem-se!  Armem-se!  Os invasores Anglos
-estão aqui!'
+   Vocï¿½ pode escutar os gritos de 'Armem-se!  Armem-se!  Os invasores Anglos
+estï¿½o aqui!'
 ~
 S
 #17393
 As Fazendas~
-   Você passou o dia viajando pelos campos de Camelot, seguindo uma estrada
-de pedra pavimentada.  A lavoura está produzindo bem esse ano, e os
-camponeses estão ceifando uma abundante colheita.  Logo os festivais de fim
-de colheita irão começar e celebrar outro bom ano.  De fato, você ganhou das
-várias pessoas que conheceu pelo caminho, dois convites para os muitos
-festejos da região.
+   Vocï¿½ passou o dia viajando pelos campos de Camelot, seguindo uma estrada
+de pedra pavimentada.  A lavoura estï¿½ produzindo bem esse ano, e os
+camponeses estï¿½o ceifando uma abundante colheita.  Logo os festivais de fim
+de colheita irï¿½o comeï¿½ar e celebrar outro bom ano.  De fato, vocï¿½ ganhou das
+vï¿½rias pessoas que conheceu pelo caminho, dois convites para os muitos
+festejos da regiï¿½o.
 ~
-173 0 2
+173 0 0 0 0 2
 D1
 Uma estrada pavimentada.
 ~
@@ -2302,14 +2267,14 @@ Uma estrada pavimentada.
 S
 #17394
 As Fazendas~
-   Você passou o dia viajando pelos campos de Camelot, seguindo uma estrada
-de pedra pavimentada.  Essa parte das fazendas não parecem estar indo tão
-bem, com vários sinais de invasões e saques.  Os camponeses parecem estar
-trabalhando duro, e os campos estão novamente quase prontos para a colheita.
-A oeste está uma larga estrada enlameada, e as campinas continuam a leste e
+   Vocï¿½ passou o dia viajando pelos campos de Camelot, seguindo uma estrada
+de pedra pavimentada.  Essa parte das fazendas nï¿½o parecem estar indo tï¿½o
+bem, com vï¿½rios sinais de invasï¿½es e saques.  Os camponeses parecem estar
+trabalhando duro, e os campos estï¿½o novamente quase prontos para a colheita.
+A oeste estï¿½ uma larga estrada enlameada, e as campinas continuam a leste e
 norte.
 ~
-173 0 2
+173 0 0 0 0 2
 D0
 Uma estrada pavimentada.
 ~
@@ -2327,31 +2292,31 @@ Uma estrada enlameada.
 0 -1 17396
 S
 #17395
-A Invasão dos Anglos!~
-   Você está bem no meio do caos de uma invasão de anglos a uma das aldeias
-das fazendas.  Fazendeiros estão tentando se defender dos incursores com
-suas ferramentas.  As mulheres estão recolhendo as crianças e correndo para
-o norte.  Algumas delas, moças infortunadas, estão sendo violadas pelos
-brutais Anglos, que é também o nome das armas que usam.  A vila está em
-chamas, e você consegue avistar na costa, a oeste, o navio dos agressores.
+A Invasï¿½o dos Anglos!~
+   Vocï¿½ estï¿½ bem no meio do caos de uma invasï¿½o de anglos a uma das aldeias
+das fazendas.  Fazendeiros estï¿½o tentando se defender dos incursores com
+suas ferramentas.  As mulheres estï¿½o recolhendo as crianï¿½as e correndo para
+o norte.  Algumas delas, moï¿½as infortunadas, estï¿½o sendo violadas pelos
+brutais Anglos, que ï¿½ tambï¿½m o nome das armas que usam.  A vila estï¿½ em
+chamas, e vocï¿½ consegue avistar na costa, a oeste, o navio dos agressores.
 ~
-173 0 2
+173 0 0 0 0 2
 D0
-Para onde todos estão fugindo.
+Para onde todos estï¿½o fugindo.
 ~
 ~
 0 -1 17392
 S
 #17396
-Um posto avançado~
-   Você alcançou um fortificado porto avançado.  Suas botas afundam na lama
-por onde carroças de provisões passam.  Os guardas lhe advertem sobre os
-impiedosos Picts, com os quais Camelot está em guerra.  Os homens foram
-endurecidos pela guerra, e o encaram com olhos de quem já viu horríveis
-atrocidades.  A leste estão as fazendas, e a oeste você ouve o terrível
+Um posto avanï¿½ado~
+   Vocï¿½ alcanï¿½ou um fortificado porto avanï¿½ado.  Suas botas afundam na lama
+por onde carroï¿½as de provisï¿½es passam.  Os guardas lhe advertem sobre os
+impiedosos Picts, com os quais Camelot estï¿½ em guerra.  Os homens foram
+endurecidos pela guerra, e o encaram com olhos de quem jï¿½ viu horrï¿½veis
+atrocidades.  A leste estï¿½o as fazendas, e a oeste vocï¿½ ouve o terrï¿½vel
 estrondo da guerra.
 ~
-173 0 2
+173 0 0 0 0 2
 D1
 Uma estrada enlameada.
 ~
@@ -2365,36 +2330,35 @@ Os gritos de batalha.
 S
 #17397
 Batalha!~
-   Você está no coração de uma furiosa batalha entre os corajosos cavaleiros
-de Camelot e os bárbaros Picts.  Os cavaleiros levantaram uma trincheira por
+   Vocï¿½ estï¿½ no coraï¿½ï¿½o de uma furiosa batalha entre os corajosos cavaleiros
+de Camelot e os bï¿½rbaros Picts.  Os cavaleiros levantaram uma trincheira por
 todo o campo, acuando os inimigos, enquanto duas unidades de cavalaria
-varrem os arredores muito cuidadosamente.  No centro na linha, estão os mais
-renomados cavaleiros.  Os Picts estão se saindo muito mal, pois até seu
-líder covardemente abandonou o campo de batalha.
+varrem os arredores muito cuidadosamente.  No centro na linha, estï¿½o os mais
+renomados cavaleiros.  Os Picts estï¿½o se saindo muito mal, pois atï¿½ seu
+lï¿½der covardemente abandonou o campo de batalha.
 ~
-173 0 2
+173 0 0 0 0 2
 D1
-Um posto avançado.
+Um posto avanï¿½ado.
 ~
 ~
 0 -1 17396
 D3
-Atrás das Linhas dos Picts,
+Atrï¿½s das Linhas dos Picts,
 ~
 barreira~
-:n 2 a barreira
 1 -1 17346
 S
 #17398
-Os estábulos~
-   Você se encontra nos vastos estábulos de Camelot.  Fileiras e mais
-fileiras de baias preenchem sua visão.  O cheiro do suor de cavalos
-associado com feno fresco resulta em uma agradável mistura.  Os
-trabalhadores estão ocupados escovando os animais, trocando ferraduras e
-alimentando os magníficos corcéis.  A luz atravessa as vigas.  O Caminho dos
+Os estï¿½bulos~
+   Vocï¿½ se encontra nos vastos estï¿½bulos de Camelot.  Fileiras e mais
+fileiras de baias preenchem sua visï¿½o.  O cheiro do suor de cavalos
+associado com feno fresco resulta em uma agradï¿½vel mistura.  Os
+trabalhadores estï¿½o ocupados escovando os animais, trocando ferraduras e
+alimentando os magnï¿½ficos corcï¿½is.  A luz atravessa as vigas.  O Caminho dos
 Cavaleiros.
 ~
-173 0 0
+173 0 0 0 0 0
 D3
 O Caminho dos Cavaleiros.
 ~
@@ -2403,9 +2367,8 @@ O Caminho dos Cavaleiros.
 S
 #17399
 Cocheiras de armazenamento~
-   Estes sãos os estábulos onde os cavalos à venda são mantidos. 
+   Estes sï¿½os os estï¿½bulos onde os cavalos ï¿½ venda sï¿½o mantidos. 
 ~
-173 c 0
-OL 108
+173 4 0 0 0 0
 S
 $~
