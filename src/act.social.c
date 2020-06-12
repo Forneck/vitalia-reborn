@@ -34,7 +34,7 @@ ACMD(do_action)
   struct obj_data *targ;
 
   if ((act_nr = find_action(cmd)) < 0) {
-    send_to_char(ch, "Esta ação não é suportada.\r\n"");
+    send_to_char(ch, "Esta ação não é suportada.\r\n");
     return;
   }
 
