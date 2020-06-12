@@ -34,7 +34,7 @@ ACMD(do_action)
   struct obj_data *targ;
 
   if ((act_nr = find_action(cmd)) < 0) {
-    send_to_char(ch, "That action is not supported.\r\n");
+    send_to_char(ch, "Esta ação não é suportada.\r\n"");
     return;
   }
 
@@ -49,7 +49,7 @@ ACMD(do_action)
   two_arguments(argument, arg, part);
 
   if ((!action->char_body_found) && (*part)) {
-    send_to_char(ch, "Sorry, this social does not support body parts.\r\n");
+    send_to_char(ch, "Desculpe, este social não suporta partes do corpo.\r\n");
     return;
   }
 
@@ -75,7 +75,7 @@ ACMD(do_action)
     if (action->not_found)
       send_to_char(ch, "%s\r\n", action->not_found);
     else
-      send_to_char(ch, "I don't see anything by that name here.\r\n");
+      send_to_char(ch, "Eu não vejo nada com este nome aqui.\r\n");
     return;
   }
 
@@ -83,13 +83,13 @@ ACMD(do_action)
     if (action->char_auto)
       send_to_char(ch, "%s\r\n", action->char_auto);
     else
-      send_to_char(ch, "Erm, no.\r\n");
+      send_to_char(ch, "Err, não.\r\n");
     act(action->others_auto, action->hide, ch, 0, 0, TO_ROOM);
     return;
   }
 
   if (GET_POS(vict) < action->min_victim_position)
-    act("$N is not in a proper position for that.", FALSE, ch, 0, vict, TO_CHAR | TO_SLEEP);
+    act("$N não está na melhor posição para isso.", FALSE, ch, 0, vict, TO_CHAR | TO_SLEEP);
   else {
     if (*part) {
       act(action->char_body_found, 0, ch, (struct obj_data *)part, vict, TO_CHAR | TO_SLEEP);
@@ -238,7 +238,7 @@ ACMD(do_gmote)
   }
 
   if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_SOUNDPROOF)) {
-    send_to_char(ch, "The walls seem to absorb your actions.\r\n");
+    send_to_char(ch, "As paredes parecem absorver suas palavras.\r\n");
     return;
   }
 
@@ -249,7 +249,7 @@ action = &soc_mess_list[act_nr];
 
   if (!*arg) {
     if(!action->others_no_arg || !*action->others_no_arg) {
-      send_to_char(ch, "Who are you going to do that to?\r\n");
+      send_to_char(ch, "Com quem você quer fazer isto?\r\n");
       return;
     }
     snprintf(buf, sizeof(buf), "Gemote: %s", action->others_no_arg);
@@ -264,7 +264,7 @@ action = &soc_mess_list[act_nr];
     snprintf(buf, sizeof(buf), "Gemote: %s", action->others_auto);
   } else {
     if (GET_POS(vict) < action->min_victim_position) {
-      act("$N is not in a proper position for that.",
+      act("$N não está na melhor posição para isso.",
            FALSE, ch, 0, vict, TO_CHAR | TO_SLEEP);
       return;
     }
