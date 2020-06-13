@@ -365,7 +365,7 @@ ACMD(do_practice)
 	one_argument(argument, arg);
 
 	if (*arg)
-		send_to_char(ch, "You can only practice skills in your guild.\r\n");
+		send_to_char(ch, "Você só pode praticar na presença de seu mestre.\r\n");
 	else
 		list_skills(ch);
 }
@@ -374,6 +374,9 @@ ACMD(do_visible)
 {
 	if (GET_LEVEL(ch) >= LVL_IMMORT)
 	{
+	  if (PLR_FLAGGED(ch, PLR_TRNS))
+      send_to_char(ch, "Você não pode ficar totalmente visível.\r\n");
+    else
 		perform_immort_vis(ch);
 		return;
 	}
@@ -382,10 +385,10 @@ ACMD(do_visible)
 		(ch, AFF_INVISIBLE)
 	{
 		appear(ch);
-		send_to_char(ch, "You break the spell of invisibility.\r\n");
+		send_to_char(ch, "Você encerra a magia da invisibilidade.\r\n");
 	}
 	else
-		send_to_char(ch, "You are already visible.\r\n");
+		send_to_char(ch, "Você já está visível.\r\n");
 }
 
 ACMD(do_title)
@@ -395,18 +398,18 @@ ACMD(do_title)
 	parse_at(argument);
 
 	if (IS_NPC(ch))
-		send_to_char(ch, "Your title is fine... go away.\r\n");
-	else if (PLR_FLAGGED(ch, PLR_NOTITLE))
-		send_to_char(ch, "You can't title yourself -- you shouldn't have abused it!\r\n");
-	else if (strstr(argument, "(") || strstr(argument, ")"))
-		send_to_char(ch, "Titles can't contain the ( or ) characters.\r\n");
+		send_to_char(ch, "Seu título já está ótimo... deixe assim.\r\n");
+	else if (PLR_FLAGGED(ch, PLR_NOTITLE | PLR_JAILED))
+		send_to_char(ch, "Você não pode mudar seu título -- você deve ter abusado!\r\n");
+	else if (strstr(argument, "(") || strstr(argument, ")")  || strstr(argument, "[") || strstr(argument, "]") || strstr(argument, "<") || strstr(argument, ">") || strstr(argument, "{") || strstr(argument, "}"))
+		send_to_char(ch, "Títulos não podem conter os caracteres (, ), [, ], <, >, { ou }.\r\n");
 	else if (strlen(argument) > MAX_TITLE_LENGTH)
-		send_to_char(ch, "Sorry, titles can't be longer than %d characters.\r\n",
+		send_to_char(ch, "Sinto muito, os títulos não podem ser maiores que %d letras.\r\n",
 					 MAX_TITLE_LENGTH);
 	else
 	{
 		set_title(ch, argument);
-		send_to_char(ch, "Okay, you're now %s%s%s.\r\n", GET_NAME(ch), *GET_TITLE(ch) ? " " : "",
+		send_to_char(ch, "Pronto, você agora é %s%s%s.\r\n", GET_NAME(ch), *GET_TITLE(ch) ? " " : "",
 					 GET_TITLE(ch));
 	}
 }
@@ -415,7 +418,7 @@ static void print_group(struct char_data *ch)
 {
 	struct char_data *k;
 
-	send_to_char(ch, "Your group consists of:\r\n");
+	send_to_char(ch, "\tWSeu grupo consiste de:\tn\r\n");
 
 	while ((k = (struct char_data *)simple_list(ch->group->members)) != NULL)
 		send_to_char(ch, "%-*s: %s[%4d/%-4d]H [%4d/%-4d]M [%4d/%-4d]V%s\r\n",
@@ -475,92 +478,92 @@ ACMD(do_group)
 			print_group(ch);
 		else
 			send_to_char(ch,
-						 "You must specify a group option, or type HELP GROUP for more info.\r\n");
+						 "Fazer o quê com o grupo?\r\n");
 		return;
 	}
 
-	if (is_abbrev(buf, "new"))
+	if (is_abbrev(buf, "new") || is_abbrev(buf, "novo"))
 	{
 		if (GROUP(ch))
-			send_to_char(ch, "You are already in a group.\r\n");
+			send_to_char(ch, "Você já está em um grupo.\r\n");
 		else
 			create_group(ch);
 	}
 	else if (is_abbrev(buf, "list"))
 		display_group_list(ch);
-	else if (is_abbrev(buf, "join"))
+	else if (is_abbrev(buf, "join") ||is_abbrev(buf, "entrar"))
 	{
 		skip_spaces(&argument);
 		if (!(vict = get_char_vis(ch, argument, NULL, FIND_CHAR_ROOM)))
 		{
-			send_to_char(ch, "Join who?\r\n");
+			send_to_char(ch, "Entrar no grupo de quem?\r\n");
 			return;
 		}
 		else if (vict == ch)
 		{
-			send_to_char(ch, "That would be one lonely grouping.\r\n");
+			send_to_char(ch, "Este seria um grupo muito solitário.\r\n");
 			return;
 		}
 		else if (GROUP(ch))
 		{
-			send_to_char(ch, "But you are already part of a group.\r\n");
+			send_to_char(ch, "Mas vocé já faz parte de um grupo.\r\n");
 			return;
 		}
 		else if (!GROUP(vict))
 		{
-			act("$E$u is not part of a group!", FALSE, ch, 0, vict, TO_CHAR);
+			act("$N não faz parte de nenhum grupo!", FALSE, ch, 0, vict, TO_CHAR);
 			return;
 		}
 		else if (!IS_SET(GROUP_FLAGS(GROUP(vict)), GROUP_OPEN))
 		{
-			send_to_char(ch, "That group isn't accepting members.\r\n");
+			send_to_char(ch, "Este grupo não está aceitando novos membros.\r\n");
 			return;
 		}
 		join_group(ch, GROUP(vict));
 	}
-	else if (is_abbrev(buf, "kick"))
+	else if (is_abbrev(buf, "kick") || is_abbrev(buf, "expulsar") )
 	{
 		skip_spaces(&argument);
 		if (!(vict = get_char_vis(ch, argument, NULL, FIND_CHAR_ROOM)))
 		{
-			send_to_char(ch, "Kick out who?\r\n");
+			send_to_char(ch, "Expulsar quem do grupo?\r\n");
 			return;
 		}
 		else if (vict == ch)
 		{
-			send_to_char(ch, "There are easier ways to leave the group.\r\n");
+			send_to_char(ch, "Existem jeitos mais fáceis de sair do grupo.\r\n");
 			return;
 		}
 		else if (!GROUP(ch))
 		{
-			send_to_char(ch, "But you are not part of a group.\r\n");
+			send_to_char(ch, "Mas você não faz parte de nenhum grupo!\r\n");
 			return;
 		}
 		else if (GROUP_LEADER(GROUP(ch)) != ch)
 		{
-			send_to_char(ch, "Only the group's leader can kick members out.\r\n");
+			send_to_char(ch, "Você não pode expulsar membros do seu grupo sem ser o líder.\r\n");
 			return;
 		}
 		else if (GROUP(vict) != GROUP(ch))
 		{
-			act("$E$u is not a member of your group!", FALSE, ch, 0, vict, TO_CHAR);
+			act("$N não faz parte do seu grupo!", FALSE, ch, 0, vict, TO_CHAR);
 			return;
 		}
-		send_to_char(ch, "You have kicked %s out of the group.\r\n", GET_NAME(vict));
-		send_to_char(vict, "You have been kicked out of the group.\r\n");
+		send_to_char(ch, "%s não é mais membro de seu grupo.\r\n", GET_NAME(vict));
+		send_to_char(vict, "Você foi chutad%s para fora do grupo.\r\n",OA(vict));
 		leave_group(vict);
 	}
-	else if (is_abbrev(buf, "regroup"))
+	else if (is_abbrev(buf, "regroup") || is_abbrev(buf, "regrupar"))
 	{
 		if (!GROUP(ch))
 		{
-			send_to_char(ch, "But you aren't part of a group!\r\n");
+			send_to_char(ch, "Mas você não faz parte de nenhum grupo!\r\n");
 			return;
 		}
 		vict = GROUP_LEADER(GROUP(ch));
 		if (ch == vict)
 		{
-			send_to_char(ch, "You are the group leader and cannot re-group.\r\n");
+			send_to_char(ch, "Você é o lider e não pode reagrupar.\r\n");
 		}
 		else
 		{
@@ -568,12 +571,12 @@ ACMD(do_group)
 			join_group(ch, GROUP(vict));
 		}
 	}
-	else if (is_abbrev(buf, "leave"))
+	else if (is_abbrev(buf, "leave") || is_abbrev(buf, "sair"))
 	{
 
 		if (!GROUP(ch))
 		{
-			send_to_char(ch, "But you aren't part of a group!\r\n");
+			send_to_char(ch, "Mas você não faz parte de nenhum grupo!\r\n");
 			return;
 		}
 
@@ -584,32 +587,32 @@ ACMD(do_group)
 		skip_spaces(&argument);
 		if (!GROUP(ch))
 		{
-			send_to_char(ch, "But you aren't part of a group!\r\n");
+			send_to_char(ch, "Mas você não faz parte de nenhum grupo!\r\n");
 			return;
 		}
 		else if (GROUP_LEADER(GROUP(ch)) != ch)
 		{
-			send_to_char(ch, "Only the group leader can adjust the group flags.\r\n");
+			send_to_char(ch, "Somente o líder pode ajustar as opçoes do grupo.\r\n");
 			return;
 		}
-		if (is_abbrev(argument, "open"))
+		if (is_abbrev(argument, "open") || is_abbrev(argument, "aberto"))
 		{
 			TOGGLE_BIT(GROUP_FLAGS(GROUP(ch)), GROUP_OPEN);
-			send_to_char(ch, "The group is now %s to new members.\r\n",
-						 IS_SET(GROUP_FLAGS(GROUP(ch)), GROUP_OPEN) ? "open" : "closed");
+			send_to_char(ch, "O grupo agora está %s para novos membros.\r\n",
+						 IS_SET(GROUP_FLAGS(GROUP(ch)), GROUP_OPEN) ? "aberto" : "fechado");
 		}
-		else if (is_abbrev(argument, "anonymous"))
+		else if (is_abbrev(argument, "anonymous") || is_abbrev(argument, "escondido"))
 		{
 			TOGGLE_BIT(GROUP_FLAGS(GROUP(ch)), GROUP_ANON);
-			send_to_char(ch, "The group location is now %s to other players.\r\n",
-						 IS_SET(GROUP_FLAGS(GROUP(ch)), GROUP_ANON) ? "invisible" : "visible");
+			send_to_char(ch, "A localização do grupo agora está %s para os outros jogadores.\r\n",
+						 IS_SET(GROUP_FLAGS(GROUP(ch)), GROUP_ANON) ? "escondida" : "disponível");
 		}
 		else
-			send_to_char(ch, "The flag options are: Open, Anonymous\r\n");
+			send_to_char(ch, "As opções de grupo são: Open (Aberto), Anonymous (Escondido).\r\n");
 	}
 	else
 	{
-		send_to_char(ch, "You must specify a group option, or type HELP GROUP for more info.\r\n");
+		send_to_char(ch, "Você precisa especificar a opção do grupo.\r\n");
 	}
 
 }
@@ -620,14 +623,14 @@ ACMD(do_report)
 
 	if ((group = GROUP(ch)) == NULL)
 	{
-		send_to_char(ch, "But you are not a member of any group!\r\n");
+		send_to_char(ch, "Mas você não é membro de um grupo!\r\n");
 		return;
 	}
 
-	send_to_group(NULL, group, "%s reporta: %d/%dH, %d/%dM, %d/%dV\r\n",
+	send_to_group(NULL, group, "%s relata: %d/%dHp, %d/%dMn, %d/%dMv,%d/10Ac\r\n",
 				  GET_NAME(ch),
 				  GET_HIT(ch), GET_MAX_HIT(ch),
-				  GET_MANA(ch), GET_MAX_MANA(ch), GET_MOVE(ch), GET_MAX_MOVE(ch));
+				  GET_MANA(ch), GET_MAX_MANA(ch), GET_MOVE(ch), GET_MAX_MOVE(ch),compute_armor_class(ch));
 }
 
 ACMD(do_split)
