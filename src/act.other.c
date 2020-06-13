@@ -857,7 +857,7 @@ ACMD(do_gen_tog)
 		{"Modo 'Breve' desligado.\r\n",
       "Modo 'Breve' ligado.\r\n"},
 		{"Modo 'Compacto' desligado.\r\n",
-      "Modo 'Compacto' ligado.\r\n},
+      "Modo 'Compacto' ligado.\r\n"},
 		{"Canal TELL ativado.\r\n",
 		 "Canal TELL desativado.\r\n"},
 		{"Canal AUCTION ativado.\r\n",
