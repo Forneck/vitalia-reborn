@@ -885,7 +885,7 @@ ACMD(do_gen_tog)
 				"Agora será possível rastrear através de portas.\r\n"},
 		{"A tela não vai ser limpa no OLC.\r\n", "A tela vai ser limpa no OLC.\r\n"},
 		{"Modo 'Construtor' desligado.\r\n", "Modo 'Construtor' ligado.\r\n"},
-		{"AWAY desligado.\r\n", "AWAY ligado""},
+		{"AWAY desligado.\r\n", "AWAY ligado"},
 		{"Autoloot desligado.\r\n",
 		 "Autoloot ligado.\r\n"},
 		{"Autogold desligado.\r\n",
