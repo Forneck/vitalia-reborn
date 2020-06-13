@@ -800,7 +800,7 @@ ACMD(do_display)
 		return;
 	}
 
-	if (!str_cmp(argument, "tudo") || !str_cmp(argument, "liga") || (!str_cmp(argument, "on") || !str_cmp(argument, "all"))
+	if (!str_cmp(argument, "tudo") || !str_cmp(argument, "liga") || (!str_cmp(argument, "on") || !str_cmp(argument, "all")))
 	{
 		SET_BIT_AR(PRF_FLAGS(ch), PRF_DISPHP);
 		SET_BIT_AR(PRF_FLAGS(ch), PRF_DISPMANA);
