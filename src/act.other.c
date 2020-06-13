@@ -720,7 +720,7 @@ ACMD(do_use)
 	if (!*arg)
 	{
 		send_to_char(ch, "O quê você deseja %s?\r\n",  subcmd == SCMD_RECITE ? "recitar" :
-	      subcmd == SCMD_QUAFF ? "tomar" : "usar")
+	      subcmd == SCMD_QUAFF ? "tomar" : "usar");
 		return;
 	}
 	mag_item = GET_EQ(ch, WEAR_HOLD);
