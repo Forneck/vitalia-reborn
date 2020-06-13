@@ -719,7 +719,8 @@ ACMD(do_use)
 	half_chop(argument, arg, buf);
 	if (!*arg)
 	{
-		send_to_char(ch, "What do you want to %s?\r\n", CMD_NAME);
+		send_to_char(ch, "O quê você deseja %s?\r\n",  subcmd == SCMD_RECITE ? "recitar" :
+	      subcmd == SCMD_QUAFF ? "tomar" : "usar")
 		return;
 	}
 	mag_item = GET_EQ(ch, WEAR_HOLD);
@@ -732,12 +733,12 @@ ACMD(do_use)
 		case SCMD_QUAFF:
 			if (!(mag_item = get_obj_in_list_vis(ch, arg, NULL, ch->carrying)))
 			{
-				send_to_char(ch, "You don't seem to have %s %s.\r\n", AN(arg), arg);
+				send_to_char(ch, "Você não parece ter %s.\r\n", arg);
 				return;
 			}
 			break;
 		case SCMD_USE:
-			send_to_char(ch, "You don't seem to be holding %s %s.\r\n", AN(arg), arg);
+			send_to_char(ch, "Você não parece estar usando %s.\r\n", arg);
 			return;
 		default:
 			log1("SYSERR: Unknown subcmd %d passed to do_use.", subcmd);
@@ -752,21 +753,21 @@ ACMD(do_use)
 	case SCMD_QUAFF:
 		if (GET_OBJ_TYPE(mag_item) != ITEM_POTION)
 		{
-			send_to_char(ch, "You can only quaff potions.\r\n");
+			send_to_char(ch, "Você só pode tomar poções.\r\n");
 			return;
 		}
 		break;
 	case SCMD_RECITE:
 		if (GET_OBJ_TYPE(mag_item) != ITEM_SCROLL)
 		{
-			send_to_char(ch, "You can only recite scrolls.\r\n");
+			send_to_char(ch, "Você só pode recitar pergaminhos.\r\n");
 			return;
 		}
 		break;
 	case SCMD_USE:
 		if ((GET_OBJ_TYPE(mag_item) != ITEM_WAND) && (GET_OBJ_TYPE(mag_item) != ITEM_STAFF))
 		{
-			send_to_char(ch, "You can't seem to figure out how to use it.\r\n");
+			send_to_char(ch, "Você não imagina como usar isso.\r\n");
 			return;
 		}
 		break;
@@ -781,31 +782,31 @@ ACMD(do_display)
 
 	if (IS_NPC(ch))
 	{
-		send_to_char(ch, "Monsters don't need displays.  Go away.\r\n");
+		send_to_char(ch, "Monstros não precisam disso.  Vá embora.\r\n");
 		return;
 	}
 	skip_spaces(&argument);
 
 	if (!*argument)
 	{
-		send_to_char(ch, "Usage: prompt { { H | M | V } | all | auto | none }\r\n");
+		send_to_char(ch, "Uso: prompt { { H | M | V } | tudo | auto | nada }\r\n");
 		return;
 	}
 
 	if (!str_cmp(argument, "auto"))
 	{
 		TOGGLE_BIT_AR(PRF_FLAGS(ch), PRF_DISPAUTO);
-		send_to_char(ch, "Auto prompt %sabled.\r\n", PRF_FLAGGED(ch, PRF_DISPAUTO) ? "en" : "dis");
+		send_to_char(ch, "Auto prompt %sabilitado.\r\n", PRF_FLAGGED(ch, PRF_DISPAUTO) ? "h" : "des");
 		return;
 	}
 
-	if (!str_cmp(argument, "on") || !str_cmp(argument, "all"))
+	if (!str_cmp(argument, "tudo") || !str_cmp(argument, "liga") || (!str_cmp(argument, "on") || !str_cmp(argument, "all"))
 	{
 		SET_BIT_AR(PRF_FLAGS(ch), PRF_DISPHP);
 		SET_BIT_AR(PRF_FLAGS(ch), PRF_DISPMANA);
 		SET_BIT_AR(PRF_FLAGS(ch), PRF_DISPMOVE);
 	}
-	else if (!str_cmp(argument, "off") || !str_cmp(argument, "none"))
+	else if (!str_cmp(argument, "desliga") || !str_cmp(argument, "nada")|| !str_cmp(argument, "off") || !str_cmp(argument, "none"))
 	{
 		REMOVE_BIT_AR(PRF_FLAGS(ch), PRF_DISPHP);
 		REMOVE_BIT_AR(PRF_FLAGS(ch), PRF_DISPMANA);
@@ -831,7 +832,7 @@ ACMD(do_display)
 				SET_BIT_AR(PRF_FLAGS(ch), PRF_DISPMOVE);
 				break;
 			default:
-				send_to_char(ch, "Usage: prompt { { H | M | V } | all | auto | none }\r\n");
+				send_to_char(ch, "Uso: prompt { { H | M | V } | tudo | auto | nada }\r\n");
 				return;
 			}
 		}
@@ -849,64 +850,64 @@ ACMD(do_gen_tog)
 	char arg[MAX_INPUT_LENGTH];
 
 	const char *tog_messages[][2] = {
-		{"You are now safe from summoning by other players.\r\n",
-		 "You may now be summoned by other players.\r\n"},
-		{"Nohassle disabled.\r\n",
-		 "Nohassle enabled.\r\n"},
-		{"Brief mode off.\r\n",
-		 "Brief mode on.\r\n"},
-		{"Compact mode off.\r\n",
-		 "Compact mode on.\r\n"},
-		{"You can now hear tells.\r\n",
-		 "You are now deaf to tells.\r\n"},
-		{"You can now hear auctions.\r\n",
-		 "You are now deaf to auctions.\r\n"},
-		{"You can now hear shouts.\r\n",
-		 "You are now deaf to shouts.\r\n"},
-		{"You can now hear gossip.\r\n",
-		 "You are now deaf to gossip.\r\n"},
-		{"You can now hear the congratulation messages.\r\n",
-		 "You are now deaf to the congratulation messages.\r\n"},
-		{"You can now hear the Wiz-channel.\r\n",
-		 "You are now deaf to the Wiz-channel.\r\n"},
-		{"You are no longer part of the Quest.\r\n",
-		 "Okay, you are part of the Quest!\r\n"},
-		{"You will no longer see the room flags.\r\n",
-		 "You will now see the room flags.\r\n"},
-		{"You will now have your communication repeated.\r\n",
-		 "You will no longer have your communication repeated.\r\n"},
-		{"HolyLight mode off.\r\n",
-		 "HolyLight mode on.\r\n"},
-		{"Nameserver_is_slow changed to NO; IP addresses will now be resolved.\r\n",
-		 "Nameserver_is_slow changed to YES; sitenames will no longer be resolved.\r\n"},
-		{"Autoexits disabled.\r\n",
-		 "Autoexits enabled.\r\n"},
-		{"Will no longer track through doors.\r\n",
-		 "Will now track through doors.\r\n"},
-		{"Will no longer clear screen in OLC.\r\n",
-		 "Will now clear screen in OLC.\r\n"},
-		{"Buildwalk Off.\r\n",
-		 "Buildwalk On.\r\n"},
-		{"AFK flag is now off.\r\n",
-		 "AFK flag is now on.\r\n"},
-		{"Autoloot disabled.\r\n",
-		 "Autoloot enabled.\r\n"},
-		{"Autogold disabled.\r\n",
-		 "Autogold enabled.\r\n"},
-		{"Autosplit disabled.\r\n",
-		 "Autosplit enabled.\r\n"},
-		{"Autosacrifice disabled.\r\n",
-		 "Autosacrifice enabled.\r\n"},
-		{"Autoassist disabled.\r\n",
-		 "Autoassist enabled.\r\n"},
-		{"Automap disabled.\r\n",
-		 "Automap enabled.\r\n"},
-		{"Autokey disabled.\r\n",
-		 "Autokey enabled.\r\n"},
-		{"Autodoor disabled.\r\n",
-		 "Autodoor enabled.\r\n"},
-		{"ZoneResets disabled.\r\n",
-		 "ZoneResets enabled.\r\n"}
+		{"Você agora não poderá ser convocado por outros jogadores.\r\n",
+		 "Você agora pode ser convocado por outros jogadores.\r\n"},
+		{"Nohassle desabilitado.\r\n",
+		 "Nohassle habilitado.\r\n"},
+		{"Modo 'Breve' desligado.\r\n",
+      "Modo 'Breve' ligado.\r\n"},
+		{"Modo 'Compacto' desligado.\r\n",
+      "Modo 'Compacto' ligado.\r\n},
+		{"Canal TELL ativado.\r\n",
+		 "Canal TELL desativado.\r\n"},
+		{"Canal AUCTION ativado.\r\n",
+		 "Canal AUCTION desativado.\r\n"},
+		{"Canal SHOUT ativado.\r\n",
+		 "Canal SHOUT desativado.\r\n"},
+		{"Canal GOSS ativado.\r\n",
+		 "Canal GOSS desativado.\r\n"},
+		{"Canal GRATZ ativado.\r\n",
+		 "Canal GRATZ desativado.\r\n"},
+			{"Canal WIZ ativado.\r\n",
+		 "Canal WIZ desativado.\r\n"},
+		{"Você não faz mais parte do grupo de busca (quest)!\r\n",
+		 "Ok, agora você faz parte do grupo de busca (quest)!\r\n"},
+		{"Você não irá mais ver as flags das salas.\r\n",
+		 "Agora você irá ver as flags das salas.\r\n"},
+		{"Agora você verá suas frases repetidas.\r\n",
+		 "Você não irá mais ver suas frases repetidas.\r\n"},
+		{"Modo 'HolyLight' desligado.\r\n", "Modo 'HolyLight' ligado.\r\n"},
+		{"Modo 'SlowNS' desligado. Endereços IP serão resolvidos.\r\n",
+				"Modo 'SlowNS' ligado. Endereços IP não serão resolvidos.\r\n"},
+		{"Autoexits desligado.\r\n",
+		 "Autoexits ligado.\r\n"},
+		{"Não será mais possível rastrear através de portas.\r\n",
+				"Agora será possível rastrear através de portas.\r\n"},
+		{"A tela não vai ser limpa no OLC.\r\n", "A tela vai ser limpa no OLC.\r\n"},
+		{"Modo 'Construtor' desligado.\r\n", "Modo 'Construtor' ligado.\r\n"},
+		{"AWAY desligado.\r\n", "AWAY ligado""},
+		{"Autoloot desligado.\r\n",
+		 "Autoloot ligado.\r\n"},
+		{"Autogold desligado.\r\n",
+		 "Autogold ligado.\r\n"},
+		{"Autosplit desligado.\r\n",
+		 "Autosplit ligado.\r\n"},
+		{"Autosac desligado.\r\n",
+		 "Autosac ligado.\r\n"},
+		{"Autoassist desligado.\r\n",
+		 "Autoassist ligado.\r\n"},
+		{"Agora, você não irá mais ver o  mini-mapa.\r\n",
+		 "Agora, você irá ver o  mini-mapa.\r\n"},
+		{"Você agora precisa destrancar as portas manualmente.\r\n",
+		 "Você agora vai destrancar as portas automaticamente ao abrir (se tiver a chave).\r\n"},
+		{"Você agora precisa especificar uma direção ao abrir, fechar e destrancar.\r\n",
+		 "Você agora vai encontrar a próxima porta disponível ao abrir, fechar ou destrancar.\r\n"},
+		{"Você não irá mais ver os resets de áreas.\r\n",
+		 "Você irá mais ver os resets de áreas.\r\n"},
+		 {"Você não verá mais a saúde do oponente durante a luta.\r\n",
+				"Agora você verá a saúde do oponente durante a luta.\r\n"},
+		{"Seu título não será mais alterado automaticamente.\r\n",
+				"Seu título será alterado automaticamente sempre que evoluir um nível.\r\n"}
 	};
 
 	if (IS_NPC(ch))
@@ -965,7 +966,7 @@ ACMD(do_gen_tog)
 	case SCMD_BUILDWALK:
 		if (GET_LEVEL(ch) < LVL_BUILDER)
 		{
-			send_to_char(ch, "Builders only, sorry.\r\n");
+			send_to_char(ch, "Apenas construtores, desculpe.\r\n");
 			return;
 		}
 		result = PRF_TOG_CHK(ch, PRF_BUILDWALK);
@@ -978,7 +979,7 @@ ACMD(do_gen_tog)
 			if (*(sector_types[i]) == '\n')
 				i = 0;
 			GET_BUILDWALK_SECTOR(ch) = i;
-			send_to_char(ch, "Default sector type is %s\r\n", sector_types[i]);
+			send_to_char(ch, "Setor Padrão %s\r\n", sector_types[i]);
 
 			mudlog(CMP, GET_LEVEL(ch), TRUE,
 				   "OLC: %s turned buildwalk on. Allowed zone %d", GET_NAME(ch), GET_OLC_ZONE(ch));
@@ -991,12 +992,12 @@ ACMD(do_gen_tog)
 	case SCMD_AFK:
 		result = PRF_TOG_CHK(ch, PRF_AFK);
 		if (PRF_FLAGGED(ch, PRF_AFK))
-			act("$n has gone AFK.", TRUE, ch, 0, 0, TO_ROOM);
+			act("$n agora está longe do teclado.", TRUE, ch, 0, 0, TO_ROOM);
 		else
 		{
-			act("$n has come back from AFK.", TRUE, ch, 0, 0, TO_ROOM);
+			act("$n retornou ao teclado.", TRUE, ch, 0, 0, TO_ROOM);
 			if (has_mail(GET_IDNUM(ch)))
-				send_to_char(ch, "You have mail waiting.\r\n");
+				send_to_char(ch, "Você tem carta esperando.\r\n");
 		}
 		break;
 	case SCMD_AUTOLOOT:
@@ -1025,6 +1026,12 @@ ACMD(do_gen_tog)
 		break;
 	case SCMD_ZONERESETS:
 		result = PRF_TOG_CHK(ch, PRF_ZONERESETS);
+		break;
+			case SCMD_HITBAR:
+		result = PRF_TOG_CHK(ch, PRF_HITBAR);
+		break;
+	case SCMD_AUTOTITLE:
+		result = PRF_TOG_CHK(ch, PRF_AUTOTITLE);
 		break;
 	default:
 		log1("SYSERR: Unknown subcmd %d in do_gen_toggle.", subcmd);
