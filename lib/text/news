@@ -31,3 +31,11 @@
    Habilidade @YScan@n, mostra os mobs nas salas próximas, para @RLadrões@n e @RRanger@n.
    Comando @YBandage@n transformado em habilidade.
    Habilidade @YWhirlwind@n para @RGuerreiros@n causa dano em varios oponentes ao mesmo tempo.
+   Sistema de grupos modificados:
+      *new/novo
+      *list
+      *join/entrar
+     *kick/expulsar
+     *leave/sair
+     *regroup/regrupar
+     *option 
