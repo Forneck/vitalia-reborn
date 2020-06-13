@@ -1181,7 +1181,7 @@ ACMD(do_recall)
 	if (IS_NPC(ch))
 		return;
 
-	if (GET_LEVEL(ch) > 10 && GET_LEVEL(ch) < LVL_IMMORTAL)
+	if (GET_LEVEL(ch) > 10 && GET_LEVEL(ch) < LVL_IMMORT)
 	{
 		send_to_char(ch, "Você não pode mais usar este comando.\r\n");
 		return;
