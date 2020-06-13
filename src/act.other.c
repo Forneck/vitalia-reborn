@@ -650,12 +650,12 @@ ACMD(do_split)
 		amount = atoi(buf);
 		if (amount <= 0)
 		{
-			send_to_char(ch, "Sorry, you can't do that.\r\n");
+			send_to_char(ch, "Desculpe, mas você não pode fazer isso.\r\n");
 			return;
 		}
 		if (amount > GET_GOLD(ch))
 		{
-			send_to_char(ch, "You don't seem to have that much gold to split.\r\n");
+			send_to_char(ch, "Você não parece ter tanto ouro para dividir.\r\n");
 			return;
 		}
 
@@ -671,20 +671,20 @@ ACMD(do_split)
 		}
 		else
 		{
-			send_to_char(ch, "With whom do you wish to share your gold?\r\n");
+			send_to_char(ch, "Você precisa pertencer a um grupo para poder dividir seu ouro.\r\n");
 			return;
 		}
 
 		decrease_gold(ch, share * (num - 1));
 
 		/* Abusing signed/unsigned to make sizeof work. */
-		len = snprintf(buf, sizeof(buf), "%s splits %d coins; you receive %d.\r\n",
+		len = snprintf(buf, sizeof(buf), "%s divide %d coins; você recebe %d.\r\n",
 					   GET_NAME(ch), amount, share);
 		if (rest && len < sizeof(buf))
 		{
 			snprintf(buf + len, sizeof(buf) - len,
-					 "%d coin%s %s not splitable, so %s keeps the money.\r\n", rest,
-					 (rest == 1) ? "" : "s", (rest == 1) ? "was" : "were", GET_NAME(ch));
+					 "%d moeda%s não %s, então %s ficou com o resto.\r\n", rest,
+					 (rest == 1) ? "" : "s", (rest == 1) ? "pode ser dividida" : "puderam ser divididas", GET_NAME(ch));
 		}
 
 		while ((k = (struct char_data *)simple_list(GROUP(ch)->members)) != NULL)
@@ -694,19 +694,19 @@ ACMD(do_split)
 				send_to_char(k, "%s", buf);
 			}
 
-		send_to_char(ch, "You split %d coins among %d members -- %d coins each.\r\n",
+		send_to_char(ch, "Voce divide %d moedas entre %d membros -- %d moedas para cada um.\r\n",
 					 amount, num, share);
 
 		if (rest)
 		{
-			send_to_char(ch, "%d coin%s %s not splitable, so you keep the money.\r\n",
-						 rest, (rest == 1) ? "" : "s", (rest == 1) ? "was" : "were");
+			send_to_char(ch, "%d moeda%s não %s, então você ficou com o resto.\r\n",
+						 rest, (rest == 1) ? "" : "s", (rest == 1) ? "pode ser dividida" : "puderam ser divididas");
 			increase_gold(ch, rest);
 		}
 	}
 	else
 	{
-		send_to_char(ch, "How many coins do you wish to split with your group?\r\n");
+		send_to_char(ch, "Quantas moedas voce deseja dividir com o resto do grupo?\r\n");
 		return;
 	}
 }
