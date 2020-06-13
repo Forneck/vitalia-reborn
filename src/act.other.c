@@ -1051,16 +1051,16 @@ static void show_happyhour(struct char_data *ch)
 		else
 			secs_left = 0;
 
-		sprintf(happyqp, "%s+%d%%%s to Questpoints per quest\r\n", CCYEL(ch, C_NRM), HAPPY_QP,
+		sprintf(happyqp, "%s+%d%%%s para Questpoints por quest.\r\n", CCYEL(ch, C_NRM), HAPPY_QP,
 				CCNRM(ch, C_NRM));
-		sprintf(happygold, "%s+%d%%%s to Gold gained per kill\r\n", CCYEL(ch, C_NRM), HAPPY_GOLD,
+		sprintf(happygold, "%s+%d%%%s para Moedas ganhas por morte.\r\n", CCYEL(ch, C_NRM), HAPPY_GOLD,
 				CCNRM(ch, C_NRM));
-		sprintf(happyexp, "%s+%d%%%s to Experience per kill\r\n", CCYEL(ch, C_NRM), HAPPY_EXP,
+		sprintf(happyexp, "%s+%d%%%s para Experiencia por morte.\r\n", CCYEL(ch, C_NRM), HAPPY_EXP,
 				CCNRM(ch, C_NRM));
 
-		send_to_char(ch, "tbaMUD Happy Hour!\r\n"
+		send_to_char(ch, "Happy Hour de Vitália!\r\n"
 					 "------------------\r\n"
-					 "%s%s%sTime Remaining: %s%d%s hours %s%d%s mins %s%d%s secs\r\n",
+					 "%s%s%sRestam: %s%d%s horas %s%d%s minutos %s%d%s segundos\r\n",
 					 (IS_HAPPYEXP || (GET_LEVEL(ch) >= LVL_GOD)) ? happyexp : "",
 					 (IS_HAPPYGOLD || (GET_LEVEL(ch) >= LVL_GOD)) ? happygold : "",
 					 (IS_HAPPYQP || (GET_LEVEL(ch) >= LVL_GOD)) ? happyqp : "",
@@ -1070,7 +1070,7 @@ static void show_happyhour(struct char_data *ch)
 	}
 	else
 	{
-		send_to_char(ch, "Sorry, there is currently no happy hour!\r\n");
+		send_to_char(ch, "Desculpa, mas não tem nenhum happy hour acontecendo!\r\n");
 	}
 }
 
@@ -1088,28 +1088,28 @@ ACMD(do_happyhour)
 	/* Only Imms get here, so check args */
 	two_arguments(argument, arg, val);
 
-	if (is_abbrev(arg, "experience"))
+	if (is_abbrev(arg, "experiencia"))
 	{
 		num = MIN(MAX((atoi(val)), 0), 1000);
 		HAPPY_EXP = num;
-		send_to_char(ch, "Happy Hour Exp rate set to +%d%%\r\n", HAPPY_EXP);
+		send_to_char(ch, "Happy Hour Exp aumentado para +%d%%\r\n", HAPPY_EXP);
 	}
-	else if ((is_abbrev(arg, "gold")) || (is_abbrev(arg, "coins")))
+	else if ((is_abbrev(arg, "ouro")) || (is_abbrev(arg, "moedas")))
 	{
 		num = MIN(MAX((atoi(val)), 0), 1000);
 		HAPPY_GOLD = num;
-		send_to_char(ch, "Happy Hour Gold rate set to +%d%%\r\n", HAPPY_GOLD);
+		send_to_char(ch, "Happy Hour Ouro aumentado para +%d%%\r\n", HAPPY_GOLD);
 	}
-	else if ((is_abbrev(arg, "time")) || (is_abbrev(arg, "ticks")))
+	else if ((is_abbrev(arg, "tempo")) || (is_abbrev(arg, "ticks")))
 	{
 		num = MIN(MAX((atoi(val)), 0), 1000);
 		if (HAPPY_TIME && !num)
-			game_info("Happyhour has been stopped!");
+			game_info("Happyhour chegou ao fim!");
 		else if (!HAPPY_TIME && num)
-			game_info("A Happyhour has started!");
+			game_info("Um Happyhour começou!");
 
 		HAPPY_TIME = num;
-		send_to_char(ch, "Happy Hour Time set to %d ticks (%d hours %d mins and %d secs)\r\n",
+		send_to_char(ch, "Happy Hour configurado para %d ticks (%d:%d:%d)\r\n",
 					 HAPPY_TIME,
 					 (HAPPY_TIME * SECS_PER_MUD_HOUR) / 3600,
 					 ((HAPPY_TIME * SECS_PER_MUD_HOUR) % 3600) / 60,
@@ -1119,19 +1119,19 @@ ACMD(do_happyhour)
 	{
 		num = MIN(MAX((atoi(val)), 0), 1000);
 		HAPPY_QP = num;
-		send_to_char(ch, "Happy Hour Questpoints rate set to +%d%%\r\n", HAPPY_QP);
+		send_to_char(ch, "Happy Hour Questpoints aumentados para +%d%%\r\n", HAPPY_QP);
 	}
 	else if (is_abbrev(arg, "show"))
 	{
 		show_happyhour(ch);
 	}
-	else if (is_abbrev(arg, "default"))
+	else if (is_abbrev(arg, "default")|| is_abbrev(arg, "padrão"))
 	{
 		HAPPY_EXP = 100;
 		HAPPY_GOLD = 50;
 		HAPPY_QP = 50;
 		HAPPY_TIME = 48;
-		game_info("A Happyhour has started!");
+		game_info("Um Happyhour foi iniciado!");
 	}
 	else
 	{
@@ -1181,7 +1181,7 @@ ACMD(do_recall)
 	if (IS_NPC(ch))
 		return;
 
-	if (GET_LEVEL(ch) > 10)
+	if (GET_LEVEL(ch) > 10 && GET_LEVEL(ch) < LVL_IMMORTAL)
 	{
 		send_to_char(ch, "Você não pode mais usar este comando.\r\n");
 		return;
