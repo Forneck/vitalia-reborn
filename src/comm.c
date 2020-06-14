@@ -1233,6 +1233,14 @@ static char *make_prompt(struct descriptor_data *d)
 
 		*prompt = '\0';
 
+   if (PRF_FLAGGED(d->character, PRF_HITBAR) && FIGHTING(d->character) &&
+      GET_POS(FIGHTING(d->character)) > POS_STUNNED)
+    sprintf(prompt, "%s%s: %s\r\n",CCWHT(d->character,C_NRM),
+        GET_NAME(FIGHTING(d->character), d->character),
+        gauge(NULL, 0, MAX(GET_HIT(FIGHTING(d->character)), 0), GET_MAX_HIT(FIGHTING(d->character))));
+      else
+    strcat(prompt, "%s",CCNRM(d->character,C_NRM));
+
 		if (GET_INVIS_LEV(d->character) && len < sizeof(prompt))
 		{
 			count =
@@ -1246,19 +1254,19 @@ static char *make_prompt(struct descriptor_data *d)
 			struct char_data *ch = d->character;
 			if (GET_HIT(ch) << 2 < GET_MAX_HIT(ch))
 			{
-				count = snprintf(prompt + len, sizeof(prompt) - len, "%dH ", GET_HIT(ch));
+				count = snprintf(prompt + len, sizeof(prompt) - len, "%dHp ", GET_HIT(ch));
 				if (count >= 0)
 					len += count;
 			}
 			if (GET_MANA(ch) << 2 < GET_MAX_MANA(ch) && len < sizeof(prompt))
 			{
-				count = snprintf(prompt + len, sizeof(prompt) - len, "%dM ", GET_MANA(ch));
+				count = snprintf(prompt + len, sizeof(prompt) - len, "%dMn ", GET_MANA(ch));
 				if (count >= 0)
 					len += count;
 			}
 			if (GET_MOVE(ch) << 2 < GET_MAX_MOVE(ch) && len < sizeof(prompt))
 			{
-				count = snprintf(prompt + len, sizeof(prompt) - len, "%dV ", GET_MOVE(ch));
+				count = snprintf(prompt + len, sizeof(prompt) - len, "%Mv ", GET_MOVE(ch));
 				if (count >= 0)
 					len += count;
 			}
@@ -1268,7 +1276,7 @@ static char *make_prompt(struct descriptor_data *d)
 			if (PRF_FLAGGED(d->character, PRF_DISPHP) && len < sizeof(prompt))
 			{
 				count =
-					snprintf(prompt + len, sizeof(prompt) - len, "%dH ", GET_HIT(d->character));
+					snprintf(prompt + len, sizeof(prompt) - len, "%dHp ", GET_HIT(d->character));
 				if (count >= 0)
 					len += count;
 			}
@@ -1276,7 +1284,7 @@ static char *make_prompt(struct descriptor_data *d)
 			if (PRF_FLAGGED(d->character, PRF_DISPMANA) && len < sizeof(prompt))
 			{
 				count =
-					snprintf(prompt + len, sizeof(prompt) - len, "%dM ", GET_MANA(d->character));
+					snprintf(prompt + len, sizeof(prompt) - len, "%dMn ", GET_MANA(d->character));
 				if (count >= 0)
 					len += count;
 			}
@@ -1284,7 +1292,7 @@ static char *make_prompt(struct descriptor_data *d)
 			if (PRF_FLAGGED(d->character, PRF_DISPMOVE) && len < sizeof(prompt))
 			{
 				count =
-					snprintf(prompt + len, sizeof(prompt) - len, "%dV ", GET_MOVE(d->character));
+					snprintf(prompt + len, sizeof(prompt) - len, "%dMv ", GET_MOVE(d->character));
 				if (count >= 0)
 					len += count;
 			}
