@@ -299,6 +299,7 @@
 #define TAR_GROUP       (1 << 11)
 #define TAR_GROUP_VICT  (1 << 12)
 
+#define PORTAL_VNUM 32
 /* Possible Targets:
    bit 0 : IGNORE TARGET
    bit 1 : PC/NPC in room
