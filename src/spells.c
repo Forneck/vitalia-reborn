@@ -637,7 +637,7 @@ if (IN_ROOM(victim) == IN_ROOM(ch)) {
 	}
    
    if (MOB_FLAGGED(victim, MOB_NOSUMMON)
-	   || (IS_NPC(victim) && !PRF_FLAGGED(victim, PRF_SUMMONABLE))) {
+	   || (!IS_NPC(victim) && !PRF_FLAGGED(victim, PRF_SUMMONABLE))) {
     send_to_char(ch, "Seu destino está protegido contra a sua magia.\r\n");
     	extract_obj(portal_obj);
 		return;
