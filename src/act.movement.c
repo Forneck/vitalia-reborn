@@ -801,13 +801,27 @@ ACMD(do_enter)
 	char buf[MAX_INPUT_LENGTH];
 	int door;
 	struct obj_data *obj;
-
+   char *tmp = buf;
+room_rnum target_room_rnum;
 
 	one_argument(argument, buf);
 
-	if (*buf)
-	{							/* an argument was supplied, search for door * 
-								   keyword */
+
+  if (*buf) {
+ 	int number = get_number(&tmp);
+ 	  /* an argument was supplied, search for door keyword */
+	  if ((obj = get_obj_in_list_vis(ch, buf, &number, world[IN_ROOM(ch)].contents))
+			  && CAN_SEE_OBJ(ch, obj)
+			  && GET_OBJ_TYPE(obj) == ITEM_PORTAL) {
+				  target_room_rnum = real_room(GET_OBJ_VAL(obj, 1));
+				  if (target_room_rnum != NOWHERE) {
+					  char_from_room(ch);
+					  char_to_room(ch, target_room_rnum);
+					  look_at_room(ch, 1);
+					  return;
+				  }
+	  }
+	  
 		for (door = 0; door < DIR_COUNT; door++)
 			if (EXIT(ch, door))
 				if (EXIT(ch, door)->keyword)
@@ -817,12 +831,6 @@ ACMD(do_enter)
 						return;
 					}
 
-		/* no door found, search for portals -- jr */
-		/* if ((obj = get_obj_in_list_vis(ch, buf, NULL,
-		   &IN_ROOM(ch)->contents))) { if (GET_OBJ_TYPE(obj) != ITEM_PORTAL)
-		   send_to_char(ch, "Entrar ai?? Acho que você não cabe...\r\n");
-		   else if (GET_OBJ_VAL(obj, 1)) send_to_char(ch, "Use LEAVE para
-		   deixar o portal.\r\n"); else enter_portal(ch, obj); return; } */
 		send_to_char(ch, "Não há %s aqui.\r\n", buf);
 	}
 	else if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_INDOORS))
