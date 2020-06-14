@@ -596,3 +596,94 @@ ASPELL(spell_transport_via_plants) {
     // TODO: make this an event, so player enters into the plant, and sees a couple messages, then comes out the other side
   }
 }
+
+ASPELL(spell_portal) {
+	/* create a magic portal */
+	struct obj_data *portal_obj;
+	struct extra_descr_data *extra_desc;
+	char buf[512];
+	
+	/*
+	 check target room for legality.
+	 */
+	portal_obj = read_object(PORTAL_VNUM, VIRTUAL);
+	if (IN_ROOM(ch) == NOWHERE || !portal_obj) {
+		send_to_char(ch, "A magia falhou.\r\n");
+		extract_obj(portal_obj);
+		return;
+	}
+	if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_TUNNEL)) {
+		send_to_char(ch, "Não tem espaço aqui!\r\n");
+		extract_obj(portal_obj);
+		return;
+	}
+
+	if (IN_ROOM(victim) == NOWHERE) {
+		send_to_char(ch, "Seu destino está protegido contra a sua magia.\r\n");
+		extract_obj(portal_obj);
+		return;
+	}
+
+	if (ROOM_FLAGGED(IN_ROOM(victim), ROOM_NOMAGIC | ROOM_ATRIUM | ROOM_HOUSE )) {
+		send_to_char(ch, "Seu destino está protegido contra a sua magia.\r\n");
+		extract_obj(portal_obj);
+		return;
+	}
+   
+   if (MOB_FLAGGED(victim, MOB_NOSUMMON)
+	   || (IS_NPC(victim) && !PRF_FLAGGED(victim, PRF_SUMMONABLE))) {
+    send_to_char(ch, "Seu destino está protegido contra a sua magia.\r\n");
+    	extract_obj(portal_obj);
+		return;
+	   }
+  else if ((ZONE_FLAGGED(IN_ROOM(ch)->zone, ZONE_ISOLATED) ||
+	    ZONE_FLAGGED(IN_ROOM(victim)->zone, ZONE_ISOLATED)) &&
+	   (IN_ROOM(ch)->zone != IN_ROOM(victim)->zone)) {
+    send_to_char(ch, "Sua magia não tem forças para chegar ao destino.\r\n");
+    	extract_obj(portal_obj);
+		return;
+	   }
+  else if (ZONE_FLAGGED(IN_ROOM(ch)->zone, ZONE_CLOSED) ||
+	   ZONE_FLAGGED(IN_ROOM(victim)->zone, ZONE_CLOSED)) {
+    send_to_char(ch, "Uma estranha força lhe impede de abrir o portal.\r\n");
+   	extract_obj(portal_obj);
+		return;
+	   }
+	sprintf(buf, "Através das névoas do portal, você vê %s",
+			world[IN_ROOM(victim)].name);
+
+	CREATE(extra_desc, struct extra_descr_data, 1);
+	extra_desc->next = portal_obj->ex_description;
+	portal_obj->ex_description = extra_desc;
+	CREATE(extra_desc->keyword, char, strlen(portal_obj->name) + 1);
+	strcpy(extra_desc->keyword, portal_obj->name);
+	extra_desc->description = strdup(buf);
+
+	portal_obj->obj_flags.timer = level / 20;
+	portal_obj->obj_flags.value[0] = world[IN_ROOM(victim)].number;
+	portal_obj->obj_flags.level = level-5;
+	obj_to_room(portal_obj, IN_ROOM(ch));
+
+	act("$p  aparece do nada!", TRUE, ch, portal_obj, 0, TO_ROOM);
+	act("$p aparece diante de você!", TRUE, ch, portal_obj, 0, TO_CHAR);
+
+	/* Portal at other side */
+	portal_obj = read_object(PORTAL_VNUM, VIRTUAL);
+	sprintf(buf, "Through the mists of the portal, you can faintly see %s",
+			world[IN_ROOM(ch)].name);
+
+	CREATE(extra_desc, struct extra_descr_data, 1);
+	extra_desc->next = portal_obj->ex_description;
+	portal_obj->ex_description = extra_desc;
+	CREATE(extra_desc->keyword, char, strlen(portal_obj->name) + 1);
+ strcpy(extra_desc->keyword, portal_obj->name);
+	extra_desc->description = strdup(buf);
+
+	portal_obj->obj_flags.timer = level/20;
+	portal_obj->obj_flags.value[0] = world[IN_ROOM(ch)].number;
+		portal_obj->obj_flags.level = level-5;
+	obj_to_room(portal_obj, IN_ROOM(victim));
+
+	act("$p aparece do nada!", TRUE, victim, portal_obj, 0, TO_ROOM);
+	act("$p aparece diante de você!", TRUE, victim, portal_obj, 0, TO_CHAR);
+}
