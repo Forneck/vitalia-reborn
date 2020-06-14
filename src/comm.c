@@ -394,8 +394,8 @@ int main(int argc, char **argv)
 
 	/* probably should free the entire config here.. */
 	free(CONFIG_CONFFILE);
-  
- 
+
+
 	log1("Done.");
 
 #ifdef MEMORY_DEBUG
@@ -445,7 +445,7 @@ void copyover_recover()
 			{
 				if (ferror(fp))
 					log1("SYSERR: error reading copyover file %s: %s", COPYOVER_FILE,
-						strerror(errno));
+						 strerror(errno));
 				else if (!feof(fp))
 					log1("SYSERR: could not scan line in copyover file %s.", COPYOVER_FILE);
 				exit(1);
@@ -1016,7 +1016,7 @@ void game_loop(socket_t local_mother_desc)
 		if (missed_pulses <= 0)
 		{
 			log1("SYSERR: **BAD** MISSED_PULSES NONPOSITIVE (%d), TIME GOING BACKWARDS!!",
-				missed_pulses);
+				 missed_pulses);
 			missed_pulses = 1;
 		}
 
@@ -1176,7 +1176,7 @@ static void record_usage(void)
 	}
 
 	log1("nusage: %-3d sockets connected, %-3d sockets playing",
-		sockets_connected, sockets_playing);
+		 sockets_connected, sockets_playing);
 
 #ifdef RUSAGE					/* Not RUSAGE_SELF because it doesn't
 								   guarantee prototype. */
@@ -1185,7 +1185,7 @@ static void record_usage(void)
 
 		getrusage(RUSAGE_SELF, &ru);
 		log1("rusage: user time: %ld sec, system time: %ld sec, max res size: %ld",
-			ru.ru_utime.tv_sec, ru.ru_stime.tv_sec, ru.ru_maxrss);
+			 ru.ru_utime.tv_sec, ru.ru_stime.tv_sec, ru.ru_maxrss);
 	}
 #endif
 }
@@ -1223,7 +1223,8 @@ static char *make_prompt(struct descriptor_data *d)
 	/* Note, prompt is truncated at MAX_PROMPT_LENGTH chars (structs.h) */
 	if (d->showstr_count)
 		snprintf(prompt, sizeof(prompt),
-				 "[%d/%d] Pressione ENTER para %s, 'A' para ajuda. > ",			 d->showstr_page, d->showstr_count,d->showstr_page >= d->showstr_count ? "sair" : "continuar");
+				 "[%d/%d] Pressione ENTER para %s, 'A' para ajuda. > ", d->showstr_page,
+				 d->showstr_count, d->showstr_page >= d->showstr_count ? "sair" : "continuar");
 	else if (d->str)
 		strcpy(prompt, "] ");	/* strcpy: OK (for 'MAX_PROMPT_LENGTH >= 3') */
 	else if (STATE(d) == CON_PLAYING && !IS_NPC(d->character))
@@ -1233,11 +1234,17 @@ static char *make_prompt(struct descriptor_data *d)
 
 		*prompt = '\0';
 
-   if (PRF_FLAGGED(d->character, PRF_HITBAR) && FIGHTING(d->character))
-    snprintf(prompt, sizeof(prompt),"%s%s: %s\r\n",CCWHT(d->character,C_NRM),        PERS(FIGHTING(d->character),d->character), gauge(0, 0, MAX(GET_HIT(FIGHTING(d->character)), 0), GET_MAX_HIT(FIGHTING(d->character))));
-      else
-    snprintf(prompt,sizeof(prompt), "%s",CCNRM(d->character,C_NRM));
-
+		if (PRF_FLAGGED(d->character, PRF_HITBAR) && FIGHTING(d->character))
+		{
+			snprintf(prompt, sizeof(prompt), "%s: %s\r\n",
+					 PERS(FIGHTING(d->character), d->character), gauge(0, 0,
+																	   MAX(GET_HIT(FIGHTING(d->character)), 0),
+																	   GET_MAX_HIT(FIGHTING(d->character))));
+		}
+		else
+		{
+			snprintf(prompt, sizeof(prompt), "%s", CCNRM(d->character, C_NRM));
+		}
 		if (GET_INVIS_LEV(d->character) && len < sizeof(prompt))
 		{
 			count =
@@ -1297,26 +1304,27 @@ static char *make_prompt(struct descriptor_data *d)
 
 		if (PRF_FLAGGED(d->character, PRF_BUILDWALK) && len < sizeof(prompt))
 		{
-			count = snprintf(prompt + len, sizeof(prompt) - len, "%s-CONSTRUINDO %s",CBRED(d->character,C_NRM),CCNRM(d->character,C_NRM));
+			count =
+				snprintf(prompt + len, sizeof(prompt) - len, "%s-CONSTRUINDO %s",
+						 CBRED(d->character, C_NRM), CCNRM(d->character, C_NRM));
 			if (count >= 0)
 				len += count;
 		}
-		
-			if (AFF_FLAGGED(d->character, AFF_INVISIBLE) && len < sizeof(prompt))
+
+		if (AFF_FLAGGED(d->character, AFF_INVISIBLE) && len < sizeof(prompt))
 		{
 			count = snprintf(prompt + len, sizeof(prompt) - len, "%s (invis)%s",
-			CCWHT(d->character,C_NRM),CCNRM(d->character,C_NRM));
+							 CCWHT(d->character, C_NRM), CCNRM(d->character, C_NRM));
 			if (count >= 0)
 				len += count;
 		}
-		
-	if (PRF_FLAGGED(d->character, PRF_AFK) && len < sizeof(prompt))
+
+		if (PRF_FLAGGED(d->character, PRF_AFK) && len < sizeof(prompt))
 		{
 			count = snprintf(prompt + len, sizeof(prompt) - len, "(%s(%saway%s)%s",
-			CCGRN(d->character,C_NRM),
-			CCCYN(d->character,C_CMP),
-			CCGRN(d->character,C_NRM),
-			CCNRM(d->character,C_NRM));
+							 CCGRN(d->character, C_NRM),
+							 CCCYN(d->character, C_CMP),
+							 CCGRN(d->character, C_NRM), CCNRM(d->character, C_NRM));
 			if (count >= 0)
 				len += count;
 		}
@@ -1324,14 +1332,16 @@ static char *make_prompt(struct descriptor_data *d)
 		if (GET_LAST_NEWS(d->character) < newsmod)
 		{
 			count = snprintf(prompt + len, sizeof(prompt) - len, "%s(news)%s",
-			CBYEL(d->character,C_NRM),CCNRM(d->character,C_NRM));
+							 CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM));
 			if (count >= 0)
 				len += count;
 		}
 
 		if (GET_LAST_MOTD(d->character) < motdmod)
 		{
-			count = snprintf(prompt + len, sizeof(prompt) - len, "%s(motd)%s",CCGRN(d->character,C_NRM),CCNRM(d->character,C_NRM));
+			count =
+				snprintf(prompt + len, sizeof(prompt) - len, "%s(motd)%s",
+						 CCGRN(d->character, C_NRM), CCNRM(d->character, C_NRM));
 			if (count >= 0)
 				len += count;
 		}
@@ -1583,7 +1593,7 @@ int parse_ip(const char *addr, struct in_addr *inaddr)
 int parse_ip(const char *addr, struct in_addr *inaddr)
 {
 	log1("SYSERR: warning: you're trying to set DFLT_IP but your system has no "
-		"functions to parse IP addresses (how bizarre!)");
+		 "functions to parse IP addresses (how bizarre!)");
 	return (0);
 }
 #endif /* INET_ATON and INET_ADDR */
@@ -2759,11 +2769,11 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj,
 	struct char_data *dg_victim = (to == vict_obj) ? vict_obj : NULL;
 	struct obj_data *dg_target = NULL;
 	char *dg_arg = NULL;
-   
-   /*para o $X */
-   const char *origback = orig;
-   char *s;
-   
+
+	/* para o $X */
+	const char *origback = orig;
+	char *s;
+
 	buf = lbuf;
 
 	for (;;)
@@ -2775,11 +2785,13 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj,
 			case 'n':
 				i = PERS(ch, to);
 				break;
-	   case 'b': // act like 'p' if obj exists, otherwise act like 'N'. 
-       if (obj) {
-          CHECK_NULL(obj, OBJS(obj, to));
-          break;
-        }
+			case 'b':			// act like 'p' if obj exists, otherwise act
+								// like 'N'. 
+				if (obj)
+				{
+					CHECK_NULL(obj, OBJS(obj, to));
+					break;
+				}
 			case 'N':
 				CHECK_NULL(vict_obj, PERS((const struct char_data *)vict_obj, to));
 				dg_victim = (struct char_data *)vict_obj;
@@ -2836,18 +2848,18 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj,
 			case 'F':
 				CHECK_NULL(vict_obj, fname((const char *)vict_obj));
 				break;
-				   case 'l':		/* -- jr - 17/06/99 * portuguese language */
-	i = ELEA(ch);
-	break;
-	  case 'L':
-	CHECK_NULL(vict_obj, ELEA((const struct char_data *)vict_obj));
-	break;
-	case 'r':
-	i = ARTI(ch);
-	break;
-      case 'R':
-	CHECK_NULL(vict_obj, ARTI((const struct char_data *)vict_obj));
-	break;
+			case 'l':			/* -- jr - 17/06/99 * portuguese language */
+				i = ELEA(ch);
+				break;
+			case 'L':
+				CHECK_NULL(vict_obj, ELEA((const struct char_data *)vict_obj));
+				break;
+			case 'r':
+				i = ARTI(ch);
+				break;
+			case 'R':
+				CHECK_NULL(vict_obj, ARTI((const struct char_data *)vict_obj));
+				break;
 				/* uppercase previous word */
 			case 'u':
 				for (j = buf; j > lbuf && !isspace((int)*(j - 1)); j--);
@@ -2860,62 +2872,64 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj,
 				uppercasenext = TRUE;
 				i = "";
 				break;
-				case 'x':
-	i = "";
-	if (*(++orig) != '(') {
-	  log1("Illegal $x(...) code to act(): %s",
-	      origback);
-	  break;
-	}
-	if (GET_SEX(ch) == SEX_FEMALE) {
-	  for (orig++; *orig && *orig != ',' && *orig != ')'; orig++);
-	  if (!*orig || *orig == ')') {
-	    log1("Illegal $x(...) code to act(): %s",
-		origback);
-	    break;
-	  }
-	}
-	for (orig++; *orig && *orig != ',' && *orig != ')'; orig++)
-	  *s++ = *orig;
-	if (!*orig) {
-	  log1("Unclosed $x(...) code to act(): %s",
-	      origback);
-	  break;
-	} else if (*orig == ')')
-	  break;
-	for (orig++; *orig && *orig != ')'; orig++);
-	if (!*orig)
-	  log1("Unclosed $x(...) code to act(): %s",
-	      origback);
-	break;
-      case 'X':
-	i = "";
-	if (*(++orig) != '(') {
-	  log1("Illegal $X(...) code to act(): %s",
-	      origback);
-	  break;
-	}
-	if (GET_SEX((const struct char_data *)vict_obj) == SEX_FEMALE) {
-	  for (orig++; *orig && *orig != ',' && *orig != ')'; orig++);
-	  if (!*orig || *orig == ')') {
-	    log1("Illegal $X(...) code to act(): %s",
-		origback);
-	    break;
-	  }
-	}
-	for (orig++; *orig && *orig != ',' && *orig != ')'; orig++)
-	  *s++ = *orig;
-	if (!*orig) {
-	  log1("Unclosed $X(...) code to act(): %s",
-	      origback);
-	  break;
-	} else if (*orig == ')')
-	  break;
-	for (orig++; *orig && *orig != ')'; orig++);
-	if (!*orig)
-	  log1("Unclosed $X(...) code to act(): %s",
-	      origback);
-	break;
+			case 'x':
+				i = "";
+				if (*(++orig) != '(')
+				{
+					log1("Illegal $x(...) code to act(): %s", origback);
+					break;
+				}
+				if (GET_SEX(ch) == SEX_FEMALE)
+				{
+					for (orig++; *orig && *orig != ',' && *orig != ')'; orig++);
+					if (!*orig || *orig == ')')
+					{
+						log1("Illegal $x(...) code to act(): %s", origback);
+						break;
+					}
+				}
+				for (orig++; *orig && *orig != ',' && *orig != ')'; orig++)
+					*s++ = *orig;
+				if (!*orig)
+				{
+					log1("Unclosed $x(...) code to act(): %s", origback);
+					break;
+				}
+				else if (*orig == ')')
+					break;
+				for (orig++; *orig && *orig != ')'; orig++);
+				if (!*orig)
+					log1("Unclosed $x(...) code to act(): %s", origback);
+				break;
+			case 'X':
+				i = "";
+				if (*(++orig) != '(')
+				{
+					log1("Illegal $X(...) code to act(): %s", origback);
+					break;
+				}
+				if (GET_SEX((const struct char_data *)vict_obj) == SEX_FEMALE)
+				{
+					for (orig++; *orig && *orig != ',' && *orig != ')'; orig++);
+					if (!*orig || *orig == ')')
+					{
+						log1("Illegal $X(...) code to act(): %s", origback);
+						break;
+					}
+				}
+				for (orig++; *orig && *orig != ',' && *orig != ')'; orig++)
+					*s++ = *orig;
+				if (!*orig)
+				{
+					log1("Unclosed $X(...) code to act(): %s", origback);
+					break;
+				}
+				else if (*orig == ')')
+					break;
+				for (orig++; *orig && *orig != ')'; orig++);
+				if (!*orig)
+					log1("Unclosed $X(...) code to act(): %s", origback);
+				break;
 			case '$':
 				i = "$";
 				break;
@@ -3028,7 +3042,8 @@ char *act(const char *str, int hide_invisible, struct char_data *ch,
 		}
 		return last_act_message;
 	}
-	/* ASSUMPTION: at this point we know type must be TO_NOTVICT, TO_ROOM, TO_DEAD or TO_NOTDEAD. */
+	/* ASSUMPTION: at this point we know type must be TO_NOTVICT, TO_ROOM,
+	   TO_DEAD or TO_NOTDEAD. */
 
 	if (ch && IN_ROOM(ch) != NOWHERE)
 		to = world[IN_ROOM(ch)].people;
@@ -3048,12 +3063,12 @@ char *act(const char *str, int hide_invisible, struct char_data *ch,
 			continue;
 		if (type != TO_ROOM && to == vict_obj)
 			continue;
-			if (type == TO_DEAD && ALIVE(to) && !AFF_FLAGGED(to, AFF_TALKDEAD) &&
-	GET_LEVEL(to) < LVL_DEMIGOD)
-      continue;
-    if (type == TO_NOTDEAD && !ALIVE(to))
-      continue;
-      
+		if (type == TO_DEAD && ALIVE(to) && !AFF_FLAGGED(to, AFF_TALKDEAD) &&
+			GET_LEVEL(to) < LVL_DEMIGOD)
+			continue;
+		if (type == TO_NOTDEAD && !ALIVE(to))
+			continue;
+
 		perform_act(str, ch, obj, vict_obj, to);
 	}
 	return last_act_message;
