@@ -1264,7 +1264,7 @@ static char *make_prompt(struct descriptor_data *d)
 			}
 			if (GET_MOVE(ch) << 2 < GET_MAX_MOVE(ch) && len < sizeof(prompt))
 			{
-				count = snprintf(prompt + len, sizeof(prompt) - len, "%Mv ", GET_MOVE(ch));
+				count = snprintf(prompt + len, sizeof(prompt) - len, "%dMv ", GET_MOVE(ch));
 				if (count >= 0)
 					len += count;
 			}
