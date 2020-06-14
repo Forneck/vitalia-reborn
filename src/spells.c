@@ -642,19 +642,7 @@ if (IN_ROOM(victim) == IN_ROOM(ch)) {
     	extract_obj(portal_obj);
 		return;
 	   }
-  else if ((ZONE_FLAGGED(IN_ROOM(ch)->zone, ZONE_ISOLATED) ||
-	    ZONE_FLAGGED(IN_ROOM(victim)->zone, ZONE_ISOLATED)) &&
-	   (IN_ROOM(ch)->zone != IN_ROOM(victim)->zone)) {
-    send_to_char(ch, "Sua magia não tem forças para chegar ao destino.\r\n");
-    	extract_obj(portal_obj);
-		return;
-	   }
-  else if (ZONE_FLAGGED(IN_ROOM(ch)->zone, ZONE_CLOSED) ||
-	   ZONE_FLAGGED(IN_ROOM(victim)->zone, ZONE_CLOSED)) {
-    send_to_char(ch, "Uma estranha força lhe impede de abrir o portal.\r\n");
-   	extract_obj(portal_obj);
-		return;
-	   }
+
 	sprintf(buf, "Através das névoas do portal, você vê %s",
 			world[IN_ROOM(victim)].name);
 
