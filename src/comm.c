@@ -1236,7 +1236,7 @@ static char *make_prompt(struct descriptor_data *d)
 
 		if (PRF_FLAGGED(d->character, PRF_HITBAR))
 		{
-		   if (FIGHTING(d->character){
+		   if (FIGHTING(d->character)){
 		   	struct char_data *vict = FIGHTING(d->character);
 			snprintf(prompt, sizeof(prompt),"%s:%s",GET_NAME(vict),gauge(0,0, MAX(GET_HIT(vict),0),GET_MAX_HIT(vict)));
 		   }
