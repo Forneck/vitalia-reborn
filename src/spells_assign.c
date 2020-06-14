@@ -73,6 +73,9 @@ void set_spells_function()
  if ((spell = get_spell_by_vnum(SPELL_TRANSPORT_VIA_PLANTS)))
    spell->function = spell_transport_via_plants;
 
+ if ((spell = get_spell_by_vnum(SPELL_PORTAL)))
+   spell->function = spell_portal;
+
  if ((spell = get_spell_by_vnum(SKILL_BACKSTAB)))
    spell->function = do_backstab;
 
@@ -1533,6 +1536,25 @@ void create_spells_db()
  new_spell->messages.to_vict = strdup("Uma ardente aura vermelha envolve você.");
   new_spell->messages.to_room = strdup("Uma ardente aura vermelha envolve $n.");
  new_spell->messages.wear_off = strdup("A aura de fogo ao redor de seu corpo desaparece.");
+
+ spedit_save_internally(new_spell);
+
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_PORTAL;
+ new_spell->status = available;
+ new_spell->name = strdup("portal");
+ new_spell->function = spell_portal;
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_CHAR_WORLD | TAR_NOT_SELF;
+ new_spell->mag_flags = MAG_MANUAL;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5");
+ new_spell->assign[0].class_num = CLASS_MAGIC_USER;
+ new_spell->assign[0].level = 90;
+ new_spell->assign[0].num_mana = strdup(buf);
 
  spedit_save_internally(new_spell);
 
