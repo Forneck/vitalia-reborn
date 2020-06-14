@@ -813,7 +813,7 @@ room_rnum target_room_rnum;
 	  if ((obj = get_obj_in_list_vis(ch, buf, &number, world[IN_ROOM(ch)].contents))
 			  && CAN_SEE_OBJ(ch, obj)
 			  && GET_OBJ_TYPE(obj) == ITEM_PORTAL) {
-				  target_room_rnum = real_room(GET_OBJ_VAL(obj, 1));
+				  target_room_rnum = real_room(GET_OBJ_VAL(obj, 0));
 				  if (target_room_rnum != NOWHERE) {
 					  char_from_room(ch);
 					  char_to_room(ch, target_room_rnum);
