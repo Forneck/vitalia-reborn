@@ -624,6 +624,12 @@ ASPELL(spell_portal) {
 		return;
 	}
 
+if (IN_ROOM(victim) == IN_ROOM(ch)) {
+		send_to_char(ch, "A magia falhou! Você já está aqui...\r\n");
+		extract_obj(portal_obj);
+		return;
+	}
+	
 	if (ROOM_FLAGGED(IN_ROOM(victim), ROOM_NOMAGIC | ROOM_ATRIUM | ROOM_HOUSE )) {
 		send_to_char(ch, "Seu destino está protegido contra a sua magia.\r\n");
 		extract_obj(portal_obj);
