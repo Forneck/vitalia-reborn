@@ -1235,9 +1235,7 @@ static char *make_prompt(struct descriptor_data *d)
 
    if (PRF_FLAGGED(d->character, PRF_HITBAR) && FIGHTING(d->character) &&
       GET_POS(FIGHTING(d->character)) > POS_STUNNED)
-    sprintf(prompt, "%s%s: %s\r\n",CCWHT(d->character,C_NRM),
-        GET_NAME(FIGHTING(d->character), d->character),
-        gauge(NULL, 0, MAX(GET_HIT(FIGHTING(d->character)), 0), GET_MAX_HIT(FIGHTING(d->character))));
+    sprintf(prompt, "%s%s: %s\r\n",CCWHT(d->character,C_NRM),        GET_NAME(FIGHTING(d->character), d->character), gauge(NULL, 0, MAX(GET_HIT(FIGHTING(d->character)), 0), GET_MAX_HIT(FIGHTING(d->character))));
       else
     strcat(prompt, "%s",CCNRM(d->character,C_NRM));
 
