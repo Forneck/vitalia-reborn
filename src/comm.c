@@ -1234,7 +1234,7 @@ static char *make_prompt(struct descriptor_data *d)
 
 		*prompt = '\0';
 
-		if (PRF_FLAGGED(d->character, PRF_HITBAR))
+		if (!PRF_FLAGGED(d->character, PRF_HITBAR))
 		{
 		   if (FIGHTING(d->character)){
 		   	struct char_data *vict = FIGHTING(d->character);
