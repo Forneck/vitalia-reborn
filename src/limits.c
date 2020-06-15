@@ -240,7 +240,8 @@ int move_gain(struct char_data *ch)
 
 void set_title(struct char_data *ch, char *title)
 {
-	if (GET_TITLE(ch) != NULL)
+		
+	 if (GET_TITLE(ch) != NULL)
 		free(GET_TITLE(ch));
 
 	if (title == NULL)
