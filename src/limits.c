@@ -342,7 +342,7 @@ void gain_exp(struct char_data *ch, int gain)
 				send_to_char(ch, "\a\a@WVocê aumentou um nível!@n\r\n");
 			else
 				send_to_char(ch, "\a\a@WVocê aumentou %d níveis!@n\r\n", num_levels);
-			if (PRF_FLAGGED(ch, PRF_AUTOTITLE))
+			if (!PRF_FLAGGED(ch, PRF_AUTOTITLE))
 				set_title(ch, NULL);
 			if (GET_LEVEL(ch) >= LVL_IMMORT && !PLR_FLAGGED(ch, PLR_NOWIZLIST))
 				run_autowiz();
