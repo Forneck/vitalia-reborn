@@ -91,8 +91,8 @@ int compute_armor_class(struct char_data *ch)
 
 	if (!IS_NPC(ch))
 	{
-		// armorclass += wpn_prof[get_weapon_prof(ch, wielded)].to_ac * 10;
-		// armorclass += nighthammer_info[get_nighthammer(ch, true)].to_ac;
+		 armorclass += wpn_prof[get_weapon_prof(ch, wielded)].to_ac * 10;
+		 armorclass += nighthammer_info[get_nighthammer(ch, true)].to_ac;
 		return (MAX(-200, armorclass));	/* -200 is lowest */
 	}
 	else
@@ -857,9 +857,9 @@ static int compute_thaco(struct char_data *ch, struct char_data *victim)
 	if (!IS_NPC(ch))
 	{
 		calc_thaco = thaco(GET_CLASS(ch), GET_LEVEL(ch));
-		// if (wielded && GET_OBJ_TYPE(wielded) == ITEM_WEAPON)
-		// wpnprof = get_weapon_prof(ch, wielded);
-		// nham = get_nighthammer(ch, true);
+		if (wielded && GET_OBJ_TYPE(wielded) == ITEM_WEAPON)
+		wpnprof = get_weapon_prof(ch, wielded);
+		nham = get_nighthammer(ch, true);
 	}
 	else						/* THAC0 for monsters is set in the HitRoll */
 		calc_thaco = 20;
@@ -905,9 +905,9 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 
 	if (!IS_NPC(ch))
 	{
-		// if (wielded && GET_OBJ_TYPE(wielded) == ITEM_WEAPON)
-		// wpnprof = get_weapon_prof(ch, wielded);
-		// nham = get_nighthammer(ch, true);
+		if (wielded && GET_OBJ_TYPE(wielded) == ITEM_WEAPON)
+		 wpnprof = get_weapon_prof(ch, wielded);
+		nham = get_nighthammer(ch, true);
 	}
 
 	/* Calculate chance of hit. Lower THAC0 is better for attacker. */
@@ -1359,4 +1359,33 @@ int get_weapon_prof(struct char_data *ch, struct obj_data *wield)
 		}
 		return (bonus);
 	}
+}
+
+/* -- jr - Oct 07, 2001 */
+#define NIGHTHAMMER_LVL 50
+int get_nighthammer(struct char_data *ch, bool real) {
+  int mod, learned;
+
+  if (IS_NPC(ch))
+    return (0);
+
+  if (GET_LEVEL(ch) < NIGHTHAMMER_LVL)
+    return (0);
+
+  if (!(learned = GET_SKILL(ch, SKILL_NIGHTHAMMER)))
+    return (0);
+
+  if (time_info.hours > 4 && time_info.hours < 21)
+    return (0);
+
+  mod = 1;
+  mod += (time_info.hours < 4 || time_info.hours > 21);
+  mod += ((GET_LEVEL(ch) - NIGHTHAMMER_LVL) / 8);
+  mod = MIN(mod, 8);
+
+  if (real && rand_number(0, 101) > learned)
+    mod--;
+    
+    return MIN(MAX(mod,0),8);
+
 }
