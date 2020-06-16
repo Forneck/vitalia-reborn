@@ -2625,117 +2625,6 @@ byte saving_throws(int class_num, int type, int level)
 			case 2:
 				return 55;
 			case 3:
-				return 73;
-			case 4:
-				return 71;
-			case 5:
-				return 70;
-			case 6:
-				return 68;
-			case 7:
-				return 65;
-			case 8:
-				return 63;
-			case 9:
-				return 60;
-			case 10:
-				return 59;
-			case 11:
-				return 58;
-			case 12:
-				return 56;
-			case 13:
-				return 55;
-			case 14:
-				return 54;
-			case 15:
-				return 53;
-			case 16:
-				return 51;
-			case 17:
-				return 50;
-			case 18:
-				return 49;
-			case 19:
-				return 48;
-			case 20:
-				return 47;
-			case 21:
-				return 46;
-			case 22:
-				return 45;
-			case 23:
-				return 43;
-			case 24:
-				return 41;
-			case 25:
-				return 39;
-			case 26:
-				return 37;
-			case 27:
-				return 35;
-			case 28:
-				return 34;
-			case 29:
-				return 33;
-			case 30:
-				return 32;
-			case 31:
-				return 30;
-			case 32:
-				return 29;
-			case 33:
-				return 28;
-			case 34:
-				return 26;
-			case 35:
-				return 24;
-			case 36:
-				return 22;
-			case 37:
-				return 21;
-			case 38:
-				return 20;
-			case 39:
-				return 19;
-			case 40:
-				return 17;
-			case 41:
-				return 15;
-			case 42:
-				return 13;
-			case 43:
-				return 12;
-			case 44:
-				return 11;
-			case 45:
-				return 10;
-			case 46:
-				return 9;
-			case 47:
-				return 6;
-			case 48:
-				return 5;
-			case 49:
-				return 5;
-			case 50:
-				return 3;
-			case 51:
-				return 2;
-			default:
-				return 1;
-				break;
-			}
-		case SAVING_ROD:		/* Rods */
-			switch (level)
-			{
-			case 0:
-				return 90;
-			case 1:
-				return 70;
-			case 2:
-				return 69;
-			case 3:
 				return 48;
 			case 4:
 				return 46;
@@ -2798,6 +2687,115 @@ byte saving_throws(int class_num, int type, int level)
 			case 33:
 				return 3;
 			case 34:
+				return 2;
+			default:
+				return 1;
+				break;
+			}
+		case SAVING_ROD:		/* Rods */
+			switch (level)
+			{
+			case 0:
+				return 90;
+			case 1:
+				return 70;
+			case 2:
+				return 69;
+			case 3:
+				return 68;
+			case 4:
+				return 66;
+			case 5:
+				return 65;
+			case 6:
+				return 63;
+			case 7:
+				return 60;
+			case 8:
+				return 57;
+			case 9:
+				return 55;
+			case 10:
+				return 54;
+			case 11:
+				return 53;
+			case 12:
+				return 51;
+			case 13:
+				return 50;
+			case 14:
+				return 49;
+			case 15:
+				return 47;
+			case 16:
+				return 46;
+			case 17:
+				return 45;
+			case 18:
+				return 44;
+			case 19:
+				return 43;
+			case 20:
+				return 42;
+			case 21:
+				return 41;
+			case 22:
+				return 40;
+			case 23:
+				return 38;
+			case 24:
+				return 35;
+			case 25:
+				return 34;
+			case 26:
+				return 32;
+			case 27:
+				return 30;
+			case 28:
+				return 29;
+			case 29:
+				return 28;
+			case 30:
+				return 27;
+			case 31:
+				return 26;
+			case 32:
+				return 25;
+			case 33:
+				return 24;
+			case 34:
+				return 23;
+				case 35:
+				return 22;
+				case 36:
+				return 21;
+				case 37:
+				return 20;
+				case 38:
+				return 18;
+				case 39:
+				return 15;
+				case 40:
+				return 14;
+				case 41:
+				return 12;
+				case 42:
+				return 10;
+				case 43:
+				return 9;
+				case 44:
+				return 8;
+				case 45:
+				return 7;
+				case 46:
+				return 6;
+				case 47:
+				return 5;
+				case 48:
+				return 4;
+				case 49:
+				return 3;
+				case 50:
 				return 2;
 			default:
 				return 1;
@@ -3023,94 +3021,106 @@ byte saving_throws(int class_num, int type, int level)
 			case 0:
 				return 90;
 			case 1:
-				return 85;
+				return 75;
 			case 2:
-				return 83;
+				return 74;
 			case 3:
-				return 82;
-			case 4:
-				return 80;
-			case 5:
-				return 77;
-			case 6:
 				return 73;
-			case 7:
+			case 4:
+				return 71;
+			case 5:
 				return 70;
-			case 8:
+			case 6:
 				return 68;
-			case 9:
-				return 67;
-			case 10:
+			case 7:
 				return 65;
+			case 8:
+				return 63;
+			case 9:
+				return 60;
+			case 10:
+				return 59;
 			case 11:
-				return 62;
-			case 12:
 				return 58;
+			case 12:
+				return 56;
 			case 13:
 				return 55;
 			case 14:
-				return 53;
+				return 54;
 			case 15:
-				return 52;
+				return 53;
 			case 16:
-				return 50;
+				return 51;
 			case 17:
-				return 47;
+				return 50;
 			case 18:
-				return 43;
+				return 49;
 			case 19:
-				return 40;
+				return 48;
 			case 20:
-				return 39;
+				return 47;
 			case 21:
-				return 38;
+				return 46;
 			case 22:
-				return 36;
+				return 45;
 			case 23:
-				return 35;
+				return 43;
 			case 24:
-				return 34;
+				return 41;
 			case 25:
-				return 33;
+				return 39;
 			case 26:
-				return 31;
+				return 37;
 			case 27:
-				return 30;
+				return 35;
 			case 28:
-				return 29;
+				return 34;
 			case 29:
-				return 28;
+				return 33;
 			case 30:
-				return 27;
+				return 32;
 			case 31:
-				return 25;
+				return 30;
 			case 32:
-				return 23;
+				return 29;
 			case 33:
-				return 21;
+				return 28;
 			case 34:
-				return 19;
+				return 26;
 			case 35:
-				return 17;
+				return 24;
 			case 36:
-				return 15;
+				return 22;
 			case 37:
-				return 13;
+				return 21;
 			case 38:
-				return 11;
+				return 20;
 			case 39:
-				return 9;
+				return 19;
 			case 40:
-				return 7;
+				return 17;
 			case 41:
-				return 6;
+				return 15;
 			case 42:
-				return 5;
+				return 13;
 			case 43:
-				return 4;
+				return 12;
 			case 44:
-				return 3;
+				return 11;
 			case 45:
+				return 10;
+				case 46:
+						return 9;
+				case 47:
+						return 7;
+				case 48:
+						return 6;
+				case 49:
+						return 5;
+				case 50:
+						return 3;
+				case 51:
 				return 2;
 			default:
 				return 1;
