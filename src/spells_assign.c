@@ -607,8 +607,8 @@ void create_spells_db()
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->applies[0].appl_num = AFF_DETECT_ALIGN + NUM_APPLIES;
  new_spell->applies[0].duration = strdup("12 + param");
- new_spell->messages.to_vict = strdup("Your eyes tingle.");
- new_spell->messages.wear_off = strdup("You feel less aware.");
+ new_spell->messages.to_vict = strdup("Você sente suas pupilas se dilatando.");
+ new_spell->messages.wear_off = strdup("Você perde sua sensibilidade.");
 
  spedit_save_internally(new_spell);
 
@@ -631,10 +631,13 @@ void create_spells_db()
  new_spell->assign[1].class_num = CLASS_CLERIC;
  new_spell->assign[1].level = 8;
  new_spell->assign[1].num_mana = strdup(buf);
+  new_spell->assign[2].class_num = CLASS_RANGER;
+ new_spell->assign[2].level = 20;
+ new_spell->assign[2].num_mana = strdup(buf);
  new_spell->applies[0].appl_num = AFF_DETECT_INVIS + NUM_APPLIES;
  new_spell->applies[0].duration = strdup("12 + param");
- new_spell->messages.to_vict = strdup("Your eyes tingle.");
- new_spell->messages.wear_off = strdup("Your eyes stop tingling.");
+ new_spell->messages.to_vict = strdup("Você sente suas pupilas se dilatando.");
+ new_spell->messages.wear_off = strdup("Suas pupilas voltam ao normal.");
 
  spedit_save_internally(new_spell);
 
@@ -656,8 +659,8 @@ void create_spells_db()
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->applies[0].appl_num = AFF_DETECT_MAGIC + NUM_APPLIES;
  new_spell->applies[0].duration = strdup("12 + param");
- new_spell->messages.to_vict = strdup("Your eyes tingle.");
- new_spell->messages.wear_off = strdup("The detect magic wears off.");
+ new_spell->messages.to_vict = strdup("Você sente suas pupilas se dilatando.");
+ new_spell->messages.wear_off = strdup("Suas pupilas voltam ao normal.");
 
  spedit_save_internally(new_spell);
 
@@ -687,7 +690,7 @@ void create_spells_db()
    new_spell->assign[3].class_num = CLASS_RANGER;
  new_spell->assign[3].level = 12;
  new_spell->assign[3].num_mana = strdup(buf);
- new_spell->messages.wear_off = strdup("The detect poison wears off.");	
+ new_spell->messages.wear_off = strdup("A detecção de veneno se encerra.");	
 
  spedit_save_internally(new_spell);
 
@@ -733,8 +736,8 @@ void create_spells_db()
  new_spell->assign[1].num_mana = strdup(buf);
  new_spell->damages = strdup("dice(2, 8) + param");
  new_spell->max_dam = 100;
- new_spell->messages.to_self = strdup("You gesture and the earth begins to shake all around you!");
- new_spell->messages.to_room = strdup("$N gracefully gestures and the earth begins to shake violently!");
+ new_spell->messages.to_self = strdup("Você gesticula e a terra toda começa a tremer em a sua volta!");
+ new_spell->messages.to_room = strdup("$n faz alguns gestos graciosos e a terra começa a tremer violentamente!");
 
  spedit_save_internally(new_spell);
 
@@ -753,7 +756,7 @@ void create_spells_db()
  new_spell->effectiveness = strdup("100");
  sprintf(buf, "(150 - (10 * self.level)) > 100 ? (150 - (10 * self.level)) : 100");
  new_spell->assign[0].class_num = CLASS_MAGIC_USER;
- new_spell->assign[0].level = 34;
+ new_spell->assign[0].level = 65;
  new_spell->assign[0].num_mana = strdup(buf);
 
  spedit_save_internally(new_spell);
