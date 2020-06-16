@@ -3638,7 +3638,7 @@ byte saving_throws(int class_num, int type, int level)
 				return 4;
 				case 62:
 				return 3;
-				case 61:
+				case 63:
 				return 2;
 			default:
 				return 1;
