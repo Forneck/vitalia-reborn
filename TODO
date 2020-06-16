@@ -1,13 +1,10 @@
 TODO:
 character.c /rebegin etc...
 
-*messages, 128
-
 autoress/limits
 spells
 reroll
 clans
-class to lvl 100 (saves para druid/bard)
 
 remort:
 ideia: volta nivel 1 (hp, mov, mana continua). segue para plano 2, nao ganha xp em plano inferior (pode alternar entre planos), Skills voltam a poder usar quando atingir nivel novamente.
