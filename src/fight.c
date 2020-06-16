@@ -752,7 +752,7 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
 		if (GET_HIT(victim) < (GET_MAX_HIT(victim) / 4))
 		{
 			send_to_char(victim,
-						 "Você espera que seus ferimentos parem de SANGRAR tanto!\r\n",
+						 "Você espera que seus ferimentos parem de %sSANGRAR%s tanto!\r\n",
 						 CCRED(victim, C_SPR), CCNRM(victim, C_SPR));
 			if (ch != victim && MOB_FLAGGED(victim, MOB_WIMPY))
 				do_flee(victim, NULL, 0, 0);
