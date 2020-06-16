@@ -309,7 +309,7 @@ void create_spells_db()
  new_spell->assign[2].class_num = CLASS_DRUID;
  new_spell->assign[2].level = 24;
  new_spell->assign[2].num_mana = strdup(buf);
- new_spell->messages.wear_off = strdup("You feel more self-confident.");
+ new_spell->messages.wear_off = strdup("Você se sente mais auto-confiante.");
 
  spedit_save_internally(new_spell);
 
@@ -334,8 +334,8 @@ void create_spells_db()
  new_spell->applies[0].duration = strdup("4");
  new_spell->damages = strdup("dice(1, self.class == 0 ? 8 : 6) + 1");
  new_spell->max_dam = 100;
- new_spell->messages.to_vict = strdup("You feel your strength wither!");
- new_spell->messages.wear_off = strdup("You feel your strength return.");
+ new_spell->messages.to_vict = strdup("Você sente sua força indo embora!");
+ new_spell->messages.wear_off = strdup("Você se sente retomando suas forças.");
 
  spedit_save_internally(new_spell);
 
@@ -350,14 +350,14 @@ void create_spells_db()
  new_spell->min_pos = POS_STANDING;
  new_spell->targ_flags = TAR_IGNORE;
  new_spell->mag_flags = MAG_SUMMONS;
- new_spell->effectiveness = strdup("100");
+ new_spell->effectiveness = strdup("50");
  new_spell->summon_mob = strdup("10");
  new_spell->summon_req = strdup("161");
  sprintf(buf, "(80 - (5 * self.level)) > 65 ? (80 - (5 * self.level)) : 65");
  new_spell->assign[0].class_num = CLASS_MAGIC_USER;
  new_spell->assign[0].level = 100;
  new_spell->assign[0].num_mana = strdup(buf);
- new_spell->messages.to_room = strdup("$N magically divides!");
+ new_spell->messages.to_room = strdup("$N magicamente se divide!");
 
  spedit_save_internally(new_spell);
 
@@ -423,12 +423,6 @@ void create_spells_db()
  new_spell->assign[0].class_num = CLASS_CLERIC;
  new_spell->assign[0].level = 2;
  new_spell->assign[0].num_mana = strdup(buf);
-  new_spell->assign[1].class_num = CLASS_DRUID;
- new_spell->assign[1].level = 7;
- new_spell->assign[1].num_mana = strdup(buf);
-   new_spell->assign[2].class_num = CLASS_RANGER;
- new_spell->assign[2].level = 12;
- new_spell->assign[2].num_mana = strdup(buf);
  new_spell->objects[0] = strdup("10");  // object VNUM 10 = waybread
  
  spedit_save_internally(new_spell);
@@ -479,6 +473,26 @@ void create_spells_db()
 
  spedit_save_internally(new_spell);
 
+
+ // SPELL_CREATE_WATER #13
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_CREATE_NECTAR;
+ new_spell->status = available;
+ new_spell->name = strdup("create nectar");
+ new_spell->function = spell_create_nectar;
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_OBJ_INV | TAR_OBJ_EQUIP;
+ new_spell->mag_flags = MAG_MANUAL;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 7;
+ new_spell->assign[0].num_mana = strdup(buf);
+ spedit_save_internally(new_spell);
+
  // SPELL_CURE_BLIND # 14
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
@@ -495,8 +509,8 @@ void create_spells_db()
  new_spell->assign[0].class_num = CLASS_CLERIC;
  new_spell->assign[0].level = 5;
  new_spell->assign[0].num_mana = strdup(buf);
- new_spell->messages.to_vict = strdup("Your vision returns!");
- new_spell->messages.to_room = strdup("There's a momentary gleam in $N's eyes.");
+ new_spell->messages.to_vict = strdup("Sua visão retorna!");
+ new_spell->messages.to_room = strdup("Os olhos de $n brilham momentaneamente.");
  new_spell->dispel[0] = strdup("4");  // spell VNUM 4 = Blindness
 
  spedit_save_internally(new_spell);
@@ -517,7 +531,7 @@ void create_spells_db()
  new_spell->assign[0].class_num = CLASS_CLERIC;
  new_spell->assign[0].level = 14;
  new_spell->assign[0].num_mana = strdup(buf);
- new_spell->messages.to_vict = strdup("You feel a lot better!");
+ new_spell->messages.to_vict = strdup("Você se sente muito melhor!");
  new_spell->points.hp = strdup("dice(3, 8) + 3 + (param / 4)");
  spedit_save_internally(new_spell);
  
@@ -540,7 +554,7 @@ void create_spells_db()
    new_spell->assign[1].class_num = CLASS_RANGER;
  new_spell->assign[1].level = 3;
  new_spell->assign[1].num_mana = strdup(buf);
- new_spell->messages.to_vict = strdup("You feel better.");
+ new_spell->messages.to_vict = strdup("Você se sente melhor.");
  new_spell->points.hp = strdup("dice(1, 8) + 1 + (param / 4)");
  spedit_save_internally(new_spell);
 
@@ -561,17 +575,17 @@ void create_spells_db()
  new_spell->assign[0].level = 20;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->applies[0].appl_num = APPLY_HITROLL;
- new_spell->applies[0].modifier = strdup("-1");
- new_spell->applies[0].duration = strdup("1 + (self.level / 2)");
+ new_spell->applies[0].modifier = strdup("-1 * (1 + (self.level / 50))");
+ new_spell->applies[0].duration = strdup("1 + (self.level / 10)");
  new_spell->applies[1].appl_num = APPLY_DAMROLL;
- new_spell->applies[1].modifier = strdup("-1");
- new_spell->applies[1].duration = strdup("1 + (self.level / 2)");
+ new_spell->applies[1].modifier = strdup("-1 * (1 + (self.level / 50))");
+ new_spell->applies[1].duration = strdup("1 + (self.level / 10)");
  new_spell->applies[2].appl_num = AFF_CURSE + NUM_APPLIES;
- new_spell->applies[2].duration = strdup("1 + (self.level / 2)");
- new_spell->messages.to_self = strdup("$b briefly glows red.");
- new_spell->messages.to_vict = strdup("You feel very uncomfortable.");
- new_spell->messages.to_room = strdup("$N briefly glows red!");
- new_spell->messages.wear_off = strdup("You feel more optimistic.");
+ new_spell->applies[2].duration = strdup("1 + (self.level / 10)");
+ new_spell->messages.to_self = strdup("Você brilha avermelhado!");
+ new_spell->messages.to_vict = strdup("Você sente um leve desconforto.");
+ new_spell->messages.to_room = strdup("$N brilha avermelhado!");
+ new_spell->messages.wear_off = strdup("Você se sente mais otimista.");
 
  spedit_save_internally(new_spell);
  
