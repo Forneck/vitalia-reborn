@@ -1833,6 +1833,105 @@ void create_spells_db()
 
  spedit_save_internally(new_spell);
 
+/*SWORDS*/
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+ new_spell->vnum = SKILL_WEAPON_SWORDS;
+ new_spell->status = available;
+ new_spell->name = strdup("swords");
+ new_spell->type = SKILL;
+ new_spell->effectiveness = strdup("100");
+  new_spell->assign[0].class_num = CLASS_WARRIOR;
+ new_spell->assign[0].level = 3;
+
+ spedit_save_internally(new_spell);
+ 
+ /*Daggers*/
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+ new_spell->vnum = SKILL_WEAPON_DAGGERS;
+ new_spell->status = available;
+ new_spell->name = strdup("daggers");
+ new_spell->type = SKILL;
+ new_spell->effectiveness = strdup("100");
+  new_spell->assign[0].class_num = CLASS_WARRIOR;
+ new_spell->assign[0].level = 3;
+new_spell->assign[1].class_num = CLASS_THIEF;
+ new_spell->assign[1].level = 25;
+new_spell->assign[2].class_num = CLASS_BARD;
+ new_spell->assign[2].level = 4;
+ new_spell->assign[3].class_num = CLASS_RANGER;
+ new_spell->assign[3].level = 8;
+
+ spedit_save_internally(new_spell);
+ 
+ /*Whips*/
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+ new_spell->vnum = SKILL_WEAPON_WHIPS;
+ new_spell->status = available;
+ new_spell->name = strdup("whips");
+ new_spell->type = SKILL;
+ new_spell->effectiveness = strdup("100");
+  new_spell->assign[0].class_num = CLASS_WARRIOR;
+ new_spell->assign[0].level = 8;
+
+ spedit_save_internally(new_spell);
+ 
+ /*TALONOUS ARMS*/
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+ new_spell->vnum = SKILL_WEAPON_TALONOUS_ARMS;
+ new_spell->status = available;
+ new_spell->name = strdup("talonous arms");
+ new_spell->type = SKILL;
+ new_spell->effectiveness = strdup("100");
+  new_spell->assign[0].class_num = CLASS_WARRIOR;
+ new_spell->assign[0].level = 13;
+
+ spedit_save_internally(new_spell);
+ 
+ /*bludgeons*/
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+ new_spell->vnum = SKILL_WEAPON_BLUDGEONS;
+ new_spell->status = available;
+ new_spell->name = strdup("bludgeons");
+ new_spell->type = SKILL;
+ new_spell->effectiveness = strdup("100");
+  new_spell->assign[0].class_num = CLASS_WARRIOR;
+ new_spell->assign[0].level = 15;
+
+ spedit_save_internally(new_spell);
+ 
+ /*EXOTICS*/
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+ new_spell->vnum = SKILL_WEAPON_EXOTICS;
+ new_spell->status = available;
+ new_spell->name = strdup("exotics");
+ new_spell->type = SKILL;
+ new_spell->effectiveness = strdup("100");
+  new_spell->assign[0].class_num = CLASS_WARRIOR;
+ new_spell->assign[0].level = 20;
+  new_spell->assign[1].class_num = CLASS_RANGER;
+ new_spell->assign[1].level = 10;
+
+ spedit_save_internally(new_spell);
+ 
+ /*NIGHTHAMMER*/
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+ new_spell->vnum = SKILL_NIGHTHAMMER;
+ new_spell->status = available;
+ new_spell->name = strdup("nighthammer");
+ new_spell->type = SKILL;
+ new_spell->effectiveness = strdup("100");
+  new_spell->assign[0].class_num = CLASS_THIEF;
+ new_spell->assign[0].level = 50;
+
+ spedit_save_internally(new_spell);
+
  // SPELL_DG_AFFECT # 298 
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
