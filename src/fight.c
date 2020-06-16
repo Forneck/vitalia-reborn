@@ -61,6 +61,7 @@ static void solo_gain(struct char_data *ch, struct char_data *victim);
 static char *replace_string(const char *str, const char *weapon_singular,
 							const char *weapon_plural);
 static int compute_thaco(struct char_data *ch, struct char_data *vict);
+int get_weapon_prof(struct char_data *ch, struct obj_data *wield);
 
 
 #define IS_WEAPON(type) (((type) >= TYPE_HIT) && ((type) < TYPE_SUFFERING))
@@ -1172,131 +1173,190 @@ void beware_lightning()
 	char buf[256];
 	if (!(weather_info.sky == SKY_LIGHTNING))
 		return;					/* go away if its not even stormy! */
-		if (!(rand_number(0, 9) == 0))
-			return;				/* Bolt only 10% of time */
-		if (rand_number(0, 99) == 0)
-		{						/* nobody targeted 99% */
-			send_to_outdoor("Você ouve o ronco do trovão.\n\r");
-			return;
-		}
+	if (!(rand_number(0, 9) == 0))
+		return;					/* Bolt only 10% of time */
+	if (rand_number(0, 99) == 0)
+	{							/* nobody targeted 99% */
+		send_to_outdoor("Você ouve o ronco do trovão.\n\r");
+		return;
+	}
 
-		for (victim = character_list; victim; victim = temp)
-		{
-			temp = victim->next;
+	for (victim = character_list; victim; victim = temp)
+	{
+		temp = victim->next;
 
-			// if ((OUTSIDE(victim) == TRUE) && (!IS_NPC(victim)))
-			if (OUTSIDE(victim) == TRUE)
-			{					/* PCs only */
-				if ((rand_number(0, 9) == 0))
-				{				/* hit 1% */
-					/* damage routine here */
+		// if ((OUTSIDE(victim) == TRUE) && (!IS_NPC(victim)))
+		if (OUTSIDE(victim) == TRUE)
+		{						/* PCs only */
+			if ((rand_number(0, 9) == 0))
+			{					/* hit 1% */
+				/* damage routine here */
 
-					dam = dice(1, (GET_MAX_HIT(victim) * 2));
-					if (IS_AFFECTED(victim, AFF_SANCTUARY))
-						dam = MIN(dam, 18);	/* Max 18 damage when sanctuary */
-					if (IS_AFFECTED(victim, AFF_GLOOMSHIELD))
-						dam = MIN(dam, 33);	/* Max 33 damage when gloomshield */
-					dam = MIN(dam, 100);	/* no more than 100 hp per round */
-					dam = MAX(dam, 0);	/* no less than 0 hp per round */
-					if ((GET_LEVEL(victim) >= LVL_IMMORT))
-						/* You can't damage an immortal! */
-						dam = 0;
-					GET_HIT(victim) -= dam;
-					act("KAZAK! um raio atinge $n.  Você escuta um assobio.",
+				dam = dice(1, (GET_MAX_HIT(victim) * 2));
+				if (IS_AFFECTED(victim, AFF_SANCTUARY))
+					dam = MIN(dam, 18);	/* Max 18 damage when sanctuary */
+				if (IS_AFFECTED(victim, AFF_GLOOMSHIELD))
+					dam = MIN(dam, 33);	/* Max 33 damage when gloomshield */
+				dam = MIN(dam, 100);	/* no more than 100 hp per round */
+				dam = MAX(dam, 0);	/* no less than 0 hp per round */
+				if ((GET_LEVEL(victim) >= LVL_IMMORT))
+					/* You can't damage an immortal! */
+					dam = 0;
+				GET_HIT(victim) -= dam;
+				act("KAZAK! um raio atinge $n.  Você escuta um assobio.",
+					TRUE, victim, 0, 0, TO_ROOM);
+				act("KAZAK! um raio atinge você.  Você escuta um assobio.",
+					FALSE, victim, 0, 0, TO_CHAR);
+				if (dam > (GET_MAX_HIT(victim) >> 2))
+					act("Isto realmente DOEU!\r\n", FALSE, victim, 0, 0, TO_CHAR);
+				send_to_outdoor("*BOOM*  Você escuta o ronco do trovão.\n\r");
+				update_pos(victim);
+				switch (GET_POS(victim))
+				{
+				case POS_MORTALLYW:
+					act("$n está mortalmente ferid$r, e vai morrer logo, se não for medicad$r.",
 						TRUE, victim, 0, 0, TO_ROOM);
-					act("KAZAK! um raio atinge você.  Você escuta um assobio.",
+					act("Você está mortalmente ferid$r, e vai morrer logo, se não medicad$r.",
 						FALSE, victim, 0, 0, TO_CHAR);
-					if (dam > (GET_MAX_HIT(victim) >> 2))
-						act("Isto realmente DOEU!\r\n", FALSE, victim, 0, 0, TO_CHAR);
-					send_to_outdoor("*BOOM*  Você escuta o ronco do trovão.\n\r");
-					update_pos(victim);
-					switch (GET_POS(victim))
+					break;
+				case POS_INCAP:
+					act("$n está incapacitad$r e vai morrer lentamente, se não for medicad$r.",
+						TRUE, victim, 0, 0, TO_ROOM);
+					act("Você está incapacitad$r e vai morrer lentamente, se não for medicad$r.", FALSE, victim, 0, 0, TO_CHAR);
+					break;
+				case POS_STUNNED:
+					act("$n está atordoad$r, mas provavelmente irá recuperar a consciência novamente.", TRUE, victim, 0, 0, TO_ROOM);
+					act("Você está atordoad$r, mas provavelmente irá recuperar a consciência novamente.", FALSE, victim, 0, 0, TO_CHAR);
+					break;
+				case POS_DEAD:
+					act("$n está mort$r!  R.I.P.", TRUE, victim, 0, 0, TO_ROOM);
+					act("Você está mort$r!  Sinto muito...\r\n", FALSE, victim, 0, 0, TO_CHAR);
+					break;
+				default:		/* >= POS_SLEEPING */
+					if (GET_HIT(victim) < (GET_MAX_HIT(victim) >> 2))
 					{
-					case POS_MORTALLYW:
-						act("$n está mortalmente ferid$r, e vai morrer logo, se não for medicad$r.", TRUE, victim, 0, 0, TO_ROOM);
-						act("Você está mortalmente ferid$r, e vai morrer logo, se não medicad$r.", FALSE, victim, 0, 0, TO_CHAR);
-						break;
-					case POS_INCAP:
-						act("$n está incapacitad$r e vai morrer lentamente, se não for medicad$r.", TRUE, victim, 0, 0, TO_ROOM);
-						act("Você está incapacitad$r e vai morrer lentamente, se não for medicad$r.", FALSE, victim, 0, 0, TO_CHAR);
-						break;
-					case POS_STUNNED:
-						act("$n está atordoad$r, mas provavelmente irá recuperar a consciência novamente.", TRUE, victim, 0, 0, TO_ROOM);
-						act("Você está atordoad$r, mas provavelmente irá recuperar a consciência novamente.", FALSE, victim, 0, 0, TO_CHAR);
-						break;
-					case POS_DEAD:
-						act("$n está mort$r!  R.I.P.", TRUE, victim, 0, 0, TO_ROOM);
-						act("Você está mort$r!  Sinto muito...\r\n", FALSE, victim, 0, 0,
-							TO_CHAR);
-						break;
-					default:	/* >= POS_SLEEPING */
-						if (GET_HIT(victim) < (GET_MAX_HIT(victim) >> 2))
-						{
-							act("Você espera que seus ferimentos parem de SANGRAR tanto!",
-								FALSE, victim, 0, 0, TO_CHAR);
-						}		/* if BLEEDING */
-						break;
-					}			/* switch */
+						act("Você espera que seus ferimentos parem de SANGRAR tanto!",
+							FALSE, victim, 0, 0, TO_CHAR);
+					}			/* if BLEEDING */
+					break;
+				}				/* switch */
 
-					if (GET_POS(victim) == POS_DEAD)
+				if (GET_POS(victim) == POS_DEAD)
+				{
+					sprintf(buf, "Thunderstorm killed %s", GET_NAME(victim));
+					log1(buf);
+					gain_exp(victim, -(GET_EXP(victim) / 2));
+					if (!IS_NPC(victim))
 					{
-						sprintf(buf, "Thunderstorm killed %s", GET_NAME(victim));
-						log1(buf);
-						gain_exp(victim, -(GET_EXP(victim) / 2));
-						if (!IS_NPC(victim))
-						{
-							REMOVE_BIT_AR(PLR_FLAGS(victim), PLR_KILLER);
-							REMOVE_BIT_AR(PLR_FLAGS(victim), PLR_THIEF);
-						}
-						if (FIGHTING(victim))
-							stop_fighting(victim);
-						while (victim->affected)
-							affect_remove(victim, victim->affected);
-						/* To make ordinary commands work in scripts. welcor */
-						GET_POS(victim) = POS_STANDING;
-						death_cry(victim);
-						/* Alert Group if Applicable */
-						if (GROUP(victim))
-							send_to_group(victim, GROUP(victim), "%s morreu.\r\n",
-										  GET_NAME(victim));
-						update_pos(victim);
-						make_corpse(victim);
-						extract_char(victim);
-					}			/* of death */
-					return;
-				}
-				else
-				{				/* number(0,10) */
-					act("KAZAK! um raio atinge perto.", FALSE, victim, 0, 0, TO_ROOM);
-					act("KAZAK! um raio atinge perto.", FALSE, victim, 0, 0, TO_CHAR);
-					send_to_outdoor("*BOOM*  Você escuta o ronco do trovão.\n\r");
-					return;		/* only 1 bolt at a time */
-				}
-			}					/* if outside=true */
-		}						/* of for victim hunt */
-}				/* of procedure */
+						REMOVE_BIT_AR(PLR_FLAGS(victim), PLR_KILLER);
+						REMOVE_BIT_AR(PLR_FLAGS(victim), PLR_THIEF);
+					}
+					if (FIGHTING(victim))
+						stop_fighting(victim);
+					while (victim->affected)
+						affect_remove(victim, victim->affected);
+					/* To make ordinary commands work in scripts. welcor */
+					GET_POS(victim) = POS_STANDING;
+					death_cry(victim);
+					/* Alert Group if Applicable */
+					if (GROUP(victim))
+						send_to_group(victim, GROUP(victim), "%s morreu.\r\n", GET_NAME(victim));
+					update_pos(victim);
+					make_corpse(victim);
+					extract_char(victim);
+				}				/* of death */
+				return;
+			}
+			else
+			{					/* number(0,10) */
+				act("KAZAK! um raio atinge perto.", FALSE, victim, 0, 0, TO_ROOM);
+				act("KAZAK! um raio atinge perto.", FALSE, victim, 0, 0, TO_CHAR);
+				send_to_outdoor("*BOOM*  Você escuta o ronco do trovão.\n\r");
+				return;			/* only 1 bolt at a time */
+			}
+		}						/* if outside=true */
+	}							/* of for victim hunt */
+}								/* of procedure */
 
 	/* -- jr - 24/08/99 * Weapon Proficiencies -- (C) 1999 by Fabrizio Baldi */
-	/* 
-	   int get_weapon_prof(struct char_data *ch, struct obj_data *wield) { int
-	   value = 0, bonus = 0, learned = 0, type = -1; int i = 0; struct
-	   str_spells *skill; if (IS_NPC(ch)) return (bonus); value =
-	   GET_OBJ_VAL(wield, 3) + TYPE_HIT; switch (value) { case TYPE_SLASH: type 
-	   = SKILL_WEAPON_SWORDS; break; case TYPE_STING: case TYPE_PIERCE: case
-	   TYPE_STAB: type = SKILL_WEAPON_DAGGERS; break; case TYPE_THRASH: case
-	   TYPE_WHIP: type = SKILL_WEAPON_WHIPS; break; case TYPE_CLAW: type =
-	   SKILL_WEAPON_TALONOUS_ARMS; break; case TYPE_BLUDGEON: case TYPE_MAUL:
-	   case TYPE_POUND: case TYPE_CRUSH: type = SKILL_WEAPON_BLUDGEONS; break;
-	   case TYPE_HIT: case TYPE_PUNCH: case TYPE_BITE: case TYPE_BLAST: type =
-	   SKILL_WEAPON_EXOTICS; break; case TYPE_BORE: case TYPE_BROACH: case
-	   TYPE_MOW: type = SKILL_WEAPON_POLEARMS; default: type = -1; break; }
 
-	   if (type != -1) { if ((learned = GET_SKILL(ch, type)) != 0) { if
-	   (learned <= 20) bonus = 1; else if (learned <= 40) bonus = 2; else if
-	   (learned <= 60) bonus = 3; else if (learned <= 80) bonus = 4; else if
-	   (learned <= 85) bonus = 5; else if (learned <= 90) bonus = 6; else if
-	   (learned <= 95) bonus = 7; else if (learned <= 99) bonus = 8; else bonus 
-	   = 9; } else { skill = get_spell_by_vnum(type); for (i = 0; i <
-	   NUM_CLASSES; i++) if (skill->assign[i].class_num == GET_CLASS(ch)) if
-	   (GET_LEVEL(ch) >= skill->assign[i].level) bonus = 10; } return (bonus);
-	   } } */
+int get_weapon_prof(struct char_data *ch, struct obj_data *wield)
+{
+	int value = 0, bonus = 0, learned = 0, type = -1;
+	int i = 0;
+	 struct str_spells *skill = NULL;
+	if (IS_NPC(ch))
+		return (bonus);
+	value = GET_OBJ_VAL(wield, 3) + TYPE_HIT;
+	switch (value)
+	{
+	case TYPE_SLASH:
+		type = SKILL_WEAPON_SWORDS;
+		break;
+	case TYPE_STING:
+	case TYPE_PIERCE:
+	case TYPE_STAB:
+		type = SKILL_WEAPON_DAGGERS;
+		break;
+	case TYPE_THRASH:
+	case TYPE_WHIP:
+		type = SKILL_WEAPON_WHIPS;
+		break;
+	case TYPE_CLAW:
+		type = SKILL_WEAPON_TALONOUS_ARMS;
+		break;
+	case TYPE_BLUDGEON:
+	case TYPE_MAUL:
+	case TYPE_POUND:
+	case TYPE_CRUSH:
+		type = SKILL_WEAPON_BLUDGEONS;
+		break;
+	case TYPE_HIT:
+	case TYPE_PUNCH:
+	case TYPE_BITE:
+	case TYPE_BLAST:
+		type = SKILL_WEAPON_EXOTICS;
+		break;
+	case TYPE_BORE:
+	case TYPE_BROACH:
+	case TYPE_MOW:
+		type = SKILL_WEAPON_POLEARMS;
+	default:
+		type = -1;
+		break;
+	}
+
+	if (type != -1)
+	{
+		if ((learned = GET_SKILL(ch, type)) != 0)
+		{
+			if (learned <= 20)
+				bonus = 1;
+			else if (learned <= 40)
+				bonus = 2;
+			else if (learned <= 60)
+				bonus = 3;
+			else if (learned <= 80)
+				bonus = 4;
+			else if (learned <= 85)
+				bonus = 5;
+			else if (learned <= 90)
+				bonus = 6;
+			else if (learned <= 95)
+				bonus = 7;
+			else if (learned <= 99)
+				bonus = 8;
+			else
+				bonus = 9;
+		}
+		else
+		{
+			skill = get_spell_by_vnum(type);
+			for (i = 0; i < NUM_CLASSES; i++)
+				if (skill->assign[i].class_num == GET_CLASS(ch))
+					if (GET_LEVEL(ch) >= skill->assign[i].level)
+						bonus = 10;
+		}
+		return (bonus);
+	}
+}
