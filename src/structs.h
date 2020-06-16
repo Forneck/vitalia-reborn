@@ -1026,7 +1026,7 @@ struct char_point_data
   sh_int armor;
   int gold;        /**< Current gold carried on character */
   int bank_gold;   /**< Gold the char has in a bank account	*/
-  int exp;         /**< The experience points, or value, of the character. */
+  long exp;         /**< The experience points, or value, of the character. */
 
   sbyte hitroll;   /**< Any bonus or penalty to the hit roll */
   sbyte damroll;   /**< Any bonus or penalty to the damage roll */
