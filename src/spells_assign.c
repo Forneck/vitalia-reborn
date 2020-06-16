@@ -158,8 +158,8 @@ void create_spells_db()
  new_spell->applies[0].appl_num = APPLY_AC;
  new_spell->applies[0].modifier = strdup("-20");
  new_spell->applies[0].duration = strdup("24");
- new_spell->messages.to_vict = strdup("You feel someone protecting you.");
- new_spell->messages.wear_off = strdup("You feel less protected.");
+ new_spell->messages.to_vict = strdup("Você sente alguém $r protegendo.");
+ new_spell->messages.wear_off = strdup("Você se sente menos protegid$r.");
 
  spedit_save_internally(new_spell);
 
@@ -198,14 +198,16 @@ void create_spells_db()
  new_spell->assign[0].level = 6;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->applies[0].appl_num = APPLY_HITROLL;
- new_spell->applies[0].modifier = strdup("2");
+ sprintf(buf,"1 + (1 + (self.level / 30))");
+ new_spell->applies[0].modifier = strdup(buf);
  new_spell->applies[0].duration = strdup("6");
  new_spell->applies[1].appl_num = APPLY_SAVING_SPELL;
- new_spell->applies[1].modifier = strdup("-1");
+ sprintf(buf,"-(1 + (self.level / 30))");
+ new_spell->applies[1].modifier = strdup(buf);
  new_spell->applies[1].duration = strdup("6");
- new_spell->messages.to_self = strdup("$b glows briefly.");
- new_spell->messages.to_vict = strdup("You feel righteous.");
- new_spell->messages.wear_off = strdup("You feel less righteous.");
+ new_spell->messages.to_self = strdup("$p brilha por alguns instantes.");
+ new_spell->messages.to_vict = strdup("Você se sente $x(virtuoso,virtuosa).");
+ new_spell->messages.wear_off = strdup("Você se sente menos abençoad$r.");
 
  spedit_save_internally(new_spell);
 
@@ -236,9 +238,9 @@ void create_spells_db()
  new_spell->applies[1].duration = strdup("2");
  new_spell->applies[2].appl_num = AFF_BLIND + NUM_APPLIES;
  new_spell->applies[2].duration = strdup("2");
- new_spell->messages.to_vict = strdup("You have been blinded!");
- new_spell->messages.to_room = strdup("$N seems to be blinded!");
- new_spell->messages.wear_off = strdup("You feel a cloak of blindness dissolve.");
+ new_spell->messages.to_vict = strdup("Você está ceg$r!");
+ new_spell->messages.to_room = strdup("$N parece estar ceg$r!");
+ new_spell->messages.wear_off = strdup("Você volta a enxergar.");
 
  spedit_save_internally(new_spell);
 
