@@ -62,7 +62,8 @@ static char *replace_string(const char *str, const char *weapon_singular,
 							const char *weapon_plural);
 static int compute_thaco(struct char_data *ch, struct char_data *vict);
 int get_weapon_prof(struct char_data *ch, struct obj_data *wield);
-
+int get_nighthammer(struct char_data *ch, bool real);
+int attacks_per_round(struct char_data *ch);
 
 #define IS_WEAPON(type) (((type) >= TYPE_HIT) && ((type) < TYPE_SUFFERING))
 /* The Fight related routines */
@@ -1100,6 +1101,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 void perform_violence(void)
 {
 	struct char_data *ch, *tch;
+	  int num_of_attacks = 1, loop_attacks;
 	for (ch = combat_list; ch; ch = next_combat_list)
 	{
 		next_combat_list = ch->next_fighting;
@@ -1151,8 +1153,13 @@ void perform_violence(void)
 				do_assist(tch, GET_NAME(ch), 0, 0);
 			}
 		}
-
-		hit(ch, FIGHTING(ch), TYPE_UNDEFINED);
+	
+	num_of_attacks = attacks_per_round(ch);
+		
+  for (loop_attacks = 0;
+	 loop_attacks < num_of_attacks && FIGHTING(ch) && !MOB_FLAGGED(FIGHTING(ch), MOB_NOTDEADYET); loop_attacks++)
+      hit(ch, FIGHTING(ch), TYPE_UNDEFINED);
+      
 		if (MOB_FLAGGED(ch, MOB_SPEC) && GET_MOB_SPEC(ch) && !MOB_FLAGGED(ch, MOB_NOTDEADYET))
 		{
 			char actbuf[MAX_INPUT_LENGTH] = "";
@@ -1389,3 +1396,19 @@ int get_nighthammer(struct char_data *ch, bool real) {
     return MIN(MAX(mod,0),8);
 
 }
+
+/* -- jr - May 07, 2001 */
+int attacks_per_round(struct char_data *ch)
+{
+  int n = 1;
+
+  if (!IS_NPC(ch)) {
+    struct obj_data *wielded = GET_EQ(ch, WEAR_WIELD);
+    if (wielded && GET_OBJ_TYPE(wielded) == ITEM_WEAPON)
+      n += wpn_prof[get_weapon_prof(ch, wielded)].num_of_attacks;
+  } else
+    n += ((int) GET_LEVEL(ch) / 25);
+
+  return (n);
+}
+
