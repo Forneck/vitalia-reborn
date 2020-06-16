@@ -410,6 +410,7 @@ ASPELL(spell_identify)
 ASPELL(spell_enchant_weapon)
 {
   int i;
+  int hit_aff = 0, dam_aff = 0, lvl = 0;
 
   if (ch == NULL || obj == NULL)
     return;
@@ -424,21 +425,32 @@ ASPELL(spell_enchant_weapon)
       return;
 
   SET_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_MAGIC);
-
+  if (level < 36)       { hit_aff = 1;  dam_aff = 1;  lvl = 0;  }
+  else if (level < 38)  { hit_aff = 2;  dam_aff = 1;  lvl = 5;  }
+  else if (level < 41)  { hit_aff = 2;  dam_aff = 2;  lvl = 10; }
+  else if (level < 45)  { hit_aff = 3;  dam_aff = 2;  lvl = 10; }
+  else if (level < 50)  { hit_aff = 3;  dam_aff = 3;  lvl = 15; }
+  else if (level < 55)  { hit_aff = 4;  dam_aff = 3;  lvl = 20; }
+  else if (level < 60)  { hit_aff = 4;  dam_aff = 4;  lvl = 30; }
+  else if (level < 65)  { hit_aff = 5;  dam_aff = 4;  lvl = 40; }
+  else                  { hit_aff = 5;  dam_aff = 5;  lvl = 50; }
+  
   obj->affected[0].location = APPLY_HITROLL;
-  obj->affected[0].modifier = 1 + (level >= 18);
+  obj->affected[0].modifier = hit_aff;
 
   obj->affected[1].location = APPLY_DAMROLL;
-  obj->affected[1].modifier = 1 + (level >= 20);
+  obj->affected[1].modifier = dam_aff;
+
+  GET_OBJ_LEVEL(obj) = MAX(lvl, GET_OBJ_LEVEL(obj));
 
   if (IS_GOOD(ch)) {
     SET_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_ANTI_EVIL);
-    act("$p brilha em azul.", FALSE, ch, obj, 0, TO_CHAR);
+    act("$p brilha azul.", FALSE, ch, obj, 0, TO_CHAR);
   } else if (IS_EVIL(ch)) {
     SET_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_ANTI_GOOD);
-    act("$p brilha em vermelho.", FALSE, ch, obj, 0, TO_CHAR);
+    act("$p brilha vermelho.", FALSE, ch, obj, 0, TO_CHAR);
   } else
-    act("$p brilha em amarelo.", FALSE, ch, obj, 0, TO_CHAR);
+    act("$p brilha amarelo.", FALSE, ch, obj, 0, TO_CHAR);
 }
 
 ASPELL(spell_detect_poison)
