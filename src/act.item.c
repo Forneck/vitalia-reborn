@@ -131,7 +131,7 @@ ACMD(do_put)
 		generic_find(thecont, FIND_OBJ_INV | FIND_OBJ_ROOM, ch, &tmp_char, &cont);
 		if (!cont)
 			send_to_char(ch, "Você não vê um(a) %s aqui.\r\n", thecont);
-		else if (GET_OBJ_TYPE(cont) != ITEM_CONTAINER | ITEM_CORPSE)
+		else if ((GET_OBJ_TYPE(cont) != ITEM_CONTAINER) && (GET_OBJ_TYPE(cont) != ITEM_CORPSE))
 			act("$p não é um recipiente.", FALSE, ch, cont, 0, TO_CHAR);
 		else if (OBJVAL_FLAGGED(cont, CONT_CLOSED)
 				 && (GET_LEVEL(ch) < LVL_IMMORT || !PRF_FLAGGED(ch, PRF_NOHASSLE)))
@@ -424,7 +424,7 @@ ACMD(do_get)
 			mode = generic_find(arg2, FIND_OBJ_INV | FIND_OBJ_ROOM, ch, &tmp_char, &cont);
 			if (!cont)
 				send_to_char(ch, "Você não tem um %s.\r\n", arg2);
-			else if (GET_OBJ_TYPE(cont) != ITEM_CONTAINER |  ITEM_CORPSE)
+			else if ((GET_OBJ_TYPE(cont) != ITEM_CONTAINER) &&(GET_OBJ_TYPE(cont) !=  ITEM_CORPSE))
 				act("$p não é um recipiente", FALSE, ch, cont, 0, TO_CHAR);
 				 else if (IS_CORPSE(cont) && GET_OBJ_VAL(cont, 0) != 0 )
       act("Você não pode tocar em $p!", FALSE, ch, cont, 0, TO_CHAR);
