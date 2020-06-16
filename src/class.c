@@ -5312,7 +5312,6 @@ const char *title_male(int chclass, int level)
         case LVL_GRGOD  : return "o Regente da Vibra��o Universal";
       }
       break;
-  }
   
 	case CLASS_RANGER:
 		switch (level)
@@ -6082,7 +6081,6 @@ const char *title_female(int chclass, int level)
         case LVL_GRGOD  : return "a Regente da Vibra��o Universal";
       }
       break;
-  }
 
 	case CLASS_RANGER:
 		switch (level)
