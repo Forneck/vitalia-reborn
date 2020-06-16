@@ -210,7 +210,7 @@ $n mostra-se impiedoso eletrizando $N até a morte.
 $N esquiva-se de sua tentativa de eletriza-l$r.
 Você habilmente desvia-se das mãos de $n.
 $N horrorosamente esquiva-se de $n que tenta agarra-l$r.
-Você agarra $N e manda uma boa descarga el�trica n$l.
+Você agarra $N e manda uma boa descarga elétrica n$l.
 Você toma um choque quando $n quase encosta em você.
 $N parece ter tomado um choque quando $n $r agarra.
 Você percebe que não consegue afetar $N com seu toque...
@@ -255,14 +255,14 @@ M
 $N foi desintegrad$R!
 $n DESINTEGROU você! Bye, bye...
 $n DESINTEGROU $N!!
-$N não deu a m�nima para sua tentativa de desintegr�-l$R!
+$N não deu a mínima para sua tentativa de desintegrá-l$R!
 $n tenta desintegrar você... Que grosseiro!
 $N escapa de uma desintegração lançada por $n.
 Você tenta desintegrar $N, mas apenas deu a $L uma grande descarga.
 $n tenta desintegrar você, e quase que consegue... AAARGH!!!
 $n quase desintegrou $N, que escapou por pouco da morte.
 Você está tentando desintegrar $N? $L é imortal!
-Ah... $n tentou desintegrar você... que pat�tico.
+Ah... $n tentou desintegrar você... que patético.
 $n tentou desintegrar $R grande $N... e falhou. $L é imortal.
 
 * Vampiric Touch
@@ -277,8 +277,8 @@ $N rapidamente esquiva-se do toque mortal de $n.
 Seu toque suga $N... Ahh... Como é bom o sangue!
 O toque das mãos de $n suga seu sangue! Argh!
 O toque das mãos de $n suga parte do sangue de $N.
-O sangue sagrado de $N é muito dif�cil de se sugar, você mal consegue toc�-l$r!
-$n tenta suga-l$R com as m�os, mas mal consegue se aproximar.
+O sangue sagrado de $N é muito  difícil de se sugar, você mal consegue tocá-l$r!
+$n tenta suga-l$R com as mãos, mas mal consegue se aproximar.
 $n tenta sugar o sangue divino de $N, mas mal consegue se aproximar. Nenhuma surpresa.
 
 * Burst of Flame
@@ -293,7 +293,7 @@ $N se esquiva das labaredas da explosão causada por $n.
 Você se diverte ao observar a carne d$L sendo queimada pelas labaredas...
 $N conseguiu atingir você com uma grande explosão!
 $n queima a carne de $N com as labaredas de uma explosão.
-Você achou que a explosão atingiria $N? Oras bolas, cres�a e apare�a!
+Você achou que a explosão atingiria $N? Oras bolas, cresça e apareça!
 $n tenta queimar-lhe com sua explosão... Mas nunca conseguiria.
 $n tenta lançar sua explosão contra o divino poder de $N. Não conseguiu. Tolinh$r...
 
@@ -309,7 +309,7 @@ $N se esquiva do fogo da explosão causada por $n.
 Você se diverte ao observar a carne d$L sendo queimada pelo fogo...
 $N conseguiu atingir você com uma grande explosão!
 $n queima a carne de $N com o fogo de uma explosão.
-Você achou que a explosão atingiria $N? Oras bolas, cres�a e apare�a!
+Você achou que a explosão atingiria $N? Oras bolas, cresça e apareça!
 $n tenta queimar-lhe com sua explosão... Mas nunca conseguiria.
 $n tenta lançar sua explosão contra o divino poder de $N. Não conseguiu. Tolinh$r...
 
@@ -325,9 +325,9 @@ $N consegue escapar da tentativa de $n incendiar-lhe o corpo.
 Você tenta incendiar o corpo d$L, divertindo-se ao observar seu corpo em chamas...
 IOUUUUUUUCH!!! Seu corpo está em chamas devido é magia de $N!!
 $n incendeia o corpo de $N usando sua poderosa magia.
-V� sonhando! Você nunca conseguir� incendiar o corpo de $N!
-$n tenta, em vão, incendiar seu corpo. D� uma lição n$L!
-$n tenta incendiar o et�reo corpo de $N.... Não conseguiu. Algu�m está em apuros agora....
+Vá sonhando! Você nunca conseguirá incendiar o corpo de $N!
+$n tenta, em vão, incendiar seu corpo. Dá uma lição n$L!
+$n tenta incendiar o etéreo corpo de $N.... Não conseguiu. Alguêm está em apuros agora....
 
 * Lightning Blast
 M
@@ -343,7 +343,7 @@ A descarga de raios de $n conseguiu atingi-l$R. Você está sendo eletrocutad$R!
 $n atinge $N com uma descarga de raios!
 Você tenta eletrocutar $N, mas sua descarga de raios não passa nme perto d$L.
 $n tenta eletrocutá-l$R com uma descarga de raios. $l deve pagar por isso!
-$n tenta eletrocutar a divina pessoa de $N. Pobrezinh$r... Pagar� caro por isso...
+$n tenta eletrocutar a divina pessoa de $N. Pobrezinh$r... Pagará caro por isso...
 
 * Thistlecoat
 M
@@ -358,14 +358,14 @@ $N se arranha em sua barreira de espinhos.
 A barreira de espinhos de $n arranha você!!
 $N é arranhad$r pela barreira de espinhos de $n.
 Sua barreira de espinhoa parece não arranhar $N.
-Você passa sem nenhum arranh�o pela barreira de espinhos de $n.
-$N atravessa a barreira de espinhos de $n sem nenhum arranh�o.
+Você passa sem nenhum arranhão pela barreira de espinhos de $n.
+$N atravessa a barreira de espinhos de $n sem nenhum arranhão.
 
 * Cascade of Hail
 M
  78
 $N congela e se quebra em pedaços como resultado de sua magia.
-Você congela por causa da magia de $n e estilha�a.
+Você congela por causa da magia de $n e estilhaça.
 $n congela e quebra $N em vários pedaços.
 Suas rajadas de granizo não afetaram $N.
 $n lança rajadas de granizo em sua direção, errando.
@@ -381,25 +381,25 @@ Os granizos lançados por $n se desfazem ao chegar perto de $N.
 M
  81
 Um vento forte joga $N no chão quebrando todos seus ossos! -- $L está mort$R.
-A F�ria do Vento que $n lanãou sobre você é forte demais. Você não aguenta e morre.
-O violento impacto do vento causado por $n joga o corpo sem vida de $N no ch�o.
-O vento que você lança sobre $N volta em sua direção jogando VOCÊ no ch�o.
-O vento lançado por $n bate em você e volta jogando-$r no ch�o.
-A F�ria do Vento lançada por $n volta-se contra $l mesm$r jogando-$r no ch�o.
-Um vento forte joga $N no ch�o.
-$n la�a sobre você um vento forte. Você cai.
+A Fúria do Vento que $n lanãou sobre você é forte demais. Você não aguenta e morre.
+O violento impacto do vento causado por $n joga o corpo sem vida de $N no chão.
+O vento que você lança sobre $N volta em sua direção jogando VOCÊ no chão.
+O vento lançado por $n bate em você e volta jogando-$r no chão.
+A Fúria do Vento lançada por $n volta-se contra $l mesm$r jogando-$r no chão.
+Um vento forte joga $N no chão.
+$n lança sobre você um vento forte. Você cai.
 $n faz $N cair com com o vento forte lançado.
 Você tenta controlar a força do vento mas acaba sendo controlado por ela e cai.
 $n tenta sem sucesso controlar a força do vento e acaba caindo.
-$n tenta atingir $N com a f�ria do vento mas é mandad$r para o ch�o.
+$n tenta atingir $N com a fúria do vento mas é mandad$r para o chão.
 
 * Grito da Morte
 M
  167
-Um sepulcral grito precede a imagem do Ceifeiro Cruel arrancando o j� g�lido coração de $N!
+Um sepulcral grito precede a imagem do Ceifeiro Cruel arrancando o já gélido coração de $N!
 $n invocou o Grito da Morte, cuja medonha aparição congela seu coração e o arranca!
-Um sepulcral grito precede a imagem do Ceifeiro Cruel arrancando o j� g�lido coração de $N!
-O Grito da Morte parece não ter sido executado com força suficiente: sua v�tima não foi atingida!
+Um sepulcral grito precede a imagem do Ceifeiro Cruel arrancando o já gélido coração de $N!
+O Grito da Morte parece não ter sido executado com força suficiente: sua vítima não foi atingida!
 $n entoa o Grito da Morte, mas não teve poder suficiente para que a aparição do Ceifeiro agisse.
 $N conseguiu escapar do Grito da Morte entoado por $n!
 Você observa, satisfeit$r, que o Grito da Morte parece congelar o sangue de $N.
@@ -407,7 +407,7 @@ O Grito da Morte entoado por $n parece congelar seu sangue!
 $n parece congelar o sangue $N com o Grito da Morte.
 Você achou que o Ceifeiro faria algo contra $N? Seja mais inteligente!
 $n entoa o Grito da Morte... Mas é toa..
-$n tenta atingir &N com o Grito da Morte. Que imbecilidade!
+$n tenta atingir $N com o Grito da Morte. Que imbecilidade!
 
 * Tremor
 M
@@ -439,39 +439,39 @@ Repentinamente, $n $R esfaqueia pelas costas, R.I.P....
 $n crava $p nas costas de $N, resultando alguns sons estranhos, um monte de sangue, e um cadáver.
 $N facilmente desvia de sua esfaqueada e você acaba cortando o dedo!
 $n tenta lhe esfaquear pelas costas, mas você desvia!
-$n tenta esfaquear $N pelas costas, mas acaba cortando o pr�prio dedo!
+$n tenta esfaquear $N pelas costas, mas acaba cortando o próprio dedo!
 $N faz um estranho som enquanto você crava $p em suas costas!
 Repentinamente, $n $R esfaqueia pelas costas!
 $n crava $p nas costas de $N, resultando em alguns sons estranhos e sangue!
 $N lança um olhar sobre você que $r faz esquecer tudo o que você sabe sobre esfaqueamento pelas costas.
-$n tenta lhe esfaquear pelas costas, mas muda de id�ia.
-$n tenta esfaquear $N pelas costas, mas muda de id�ia.
+$n tenta lhe esfaquear pelas costas, mas muda de idéia.
+$n tenta esfaquear $N pelas costas, mas muda de idéia.
 
 * Bash
 M
  222
 $N não se recupera de seu impacto! -- $L está mort$R.
-A medida que $n se choca contra você, você perde a consci�ncia e morre...
-$N morre ap�s $n ter se chocado contra $L!
-A medida que $N escapa de seu impacto, você se desequilibra e cai ao ch�o!
+A medida que $n se choca contra você, você perde a consciência e morre...
+$N morre após $n ter se chocado contra $L!
+A medida que $N escapa de seu impacto, você se desequilibra e cai ao chão!
 Você esquiva-se de $n, que perde o equilíbrio e cai!
 $N esquiva-se de $n, que perde o equilíbrio e cai!
-Seu impacto em $N $R faz esparramar-se pelo ch�o!
+Seu impacto em $N $R faz esparramar-se pelo chão!
 $n faz você esparramar-se pelo chão com um poderoso impacto!
 $n faz $N esparramar-se pelo chão com um poderoso impacto!
-Seu esfor�o para se chocar contra $N manda VOCÊ para o ch�o.
-$n tenta é toa se chocar contra você, e é mandad$r para o ch�o.
-$n tenta se chocar contra $N e é mandad$r para o ch�o.
+Seu esforço para se chocar contra $N manda VOCÊ para o chão.
+$n tenta é toa se chocar contra você, e é mandad$r para o chão.
+$n tenta se chocar contra $N e é mandad$r para o chão.
 
 * Kick
 M
  224
 Você chuta $N nos rins, fazendo-$R morrer.
 $n mata você chutando seus rins!
-$N morre no �ltimo chute que $n $R aplicou nos rins!
-Seu lindo chute em c�rculo erra $N por quil�metros.
-$n faz um lindo passe de bal� e o p� d$l passa a um quil�metro de sua cabeça.
-$n faz um lindo passe de bal� e o p� d$l passa a um quil�metro da cabeça de $N.
+$N morre no último chute que $n $R aplicou nos rins!
+Seu lindo chute em círculo erra $N por quilómetros.
+$n faz um lindo passe de balé e o pé d$l passa a um quilómetro de sua cabeça.
+$n faz um lindo passe de balé e o pé d$l passa a um quilómetro da cabeça de $N.
 Suas botas precisam ser polidas novamente -- muito sangue sobre elas...
 $n esfrega as botas em sua cara!
 $n esfrega as botas na cara de $N!
@@ -483,15 +483,15 @@ M
 Seu chute na cara de $N faz sua cabeça abrir -- legal!
 $n mira um chute em sua cara, que divide sua cabeça em duas!
 $n chuta a cabeça de $N, que divide-se em duas -- LEGAL!
-Você erra seu chute na vir�lia de $N, para o al�vio d$L...
-$n erra um chute em sua vir�lia, você respira aliviad$R agora...
-$n erra um chute na vir�lia de $N, para o al�vio d$L...
+Você erra seu chute na virília de $N, para o alívio d$L...
+$n erra um chute em sua virília, você respira aliviad$R agora...
+$n erra um chute na virília de $N, para o alívio d$L...
 Seu chute atinge $N em seu plexo solar!
 Você é atingid$R no plexo solar, uau, isso $R tirou a respiração!!
 $n chuta $N seu plexo solar, $N fica sem ar!
-Você tenta chutar $N, mas perde seu equilíbrio e cai com a cara em uma po�a de lama que apareceu repentinamente.
-Enquando $n tenta chutar você, você $r faz cair em uma po�a de lama que você criou.
-$n cai de cara em uma po�a de lama criada por $N.
+Você tenta chutar $N, mas perde seu equilíbrio e cai com a cara em uma poça de lama que apareceu repentinamente.
+Enquando $n tenta chutar você, você $r faz cair em uma poça de lama que você criou.
+$n cai de cara em uma poça de lama criada por $N.
 
 * Combo attack
 M
@@ -501,7 +501,7 @@ M
 #
 $N se esquiva de você, fazendo seu ataque falhar.
 Você percebe que $n tenta um mirabolante ataque e se esquiva a tempo.
-$n faz uma estranha dan�a para atacar $N, que se esquiva rapidamente.
+$n faz uma estranha dança para atacar $N, que se esquiva rapidamente.
 #
 #
 #
@@ -517,12 +517,12 @@ A rasteira de $n foi tão repentina que faz você cair e quebrar o pescoço, mor
 $N tem o pescoço quebrado ai cair com a rasteira de $n!
 Você tenta passar uma rasteira em $N, que rapidamente desvia, fazendo-$r cair desequilibrad$r!
 Você consegue evitar a rasteira de $n, que cai ao perder o equilíbrio!
-$N evita a rasteira de $n, que acaba perdendo o equilíbrio e indo ao ch�o!
-Com h�bil movimento de pernas, você passa uma rasteira em $N, que cai no ch�o, desequilibrad$R!
-Com h�bil movimento de pernas, $n passa uma rasteira em você, fazendo-$R cair no ch�o!
-Com h�bil movimento de pernas, $n passa uma rasteira em $N, fazendo-$R cair no ch�o!
+$N evita a rasteira de $n, que acaba perdendo o equilíbrio e indo ao chão!
+Com hábil movimento de pernas, você passa uma rasteira em $N, que cai no chão, desequilibrad$R!
+Com hábil movimento de pernas, $n passa uma rasteira em você, fazendo-$R cair no chão!
+Com hábil movimento de pernas, $n passa uma rasteira em $N, fazendo-$R cair no chão!
 Você tanta passar uma rasteira em $N, mas quem cai no chão é você!
-$n tanta passar uma rasteira em você, mas é $l quem cai no ch�o!
+$n tanta passar uma rasteira em você, mas é $l quem cai no chão!
 $n tanta passar uma rasteira em $N, mas quem cai no chão é $l!
 
 
@@ -533,22 +533,22 @@ $n tanta passar uma rasteira em $N, mas quem cai no chão é $l!
 * Hit
 M
  400
-Você soca a cabeça de $N com um golpe que estra�alha seu cr�nio!
-$n soca tua cabeça com um golpe que estra�alha teu cranio!
-$n soca a cabeça de $N tão forte que abre o cr�nio d$L!
-Você joga sua m�o contra $N, mas erra!
-Você apenas desvia da m�o de $n quando $l tenta bater em você!
+Você soca a cabeça de $N com um golpe que estraçalha seu crânio!
+$n soca tua cabeça com um golpe que estraçalha teu cranio!
+$n soca a cabeça de $N tão forte que abre o crânio d$L!
+Você joga sua mão contra $N, mas erra!
+Você apenas desvia da mão de $n quando $l tenta bater em você!
 $N desvia de um golpe de $n!
 #
 #
 #
-Sua m�o bobeia e seu corpo se refusa a lutar contra $R grande $N.
+Sua mão bobeia e seu corpo se refusa a lutar contra $R grande $N.
 $n parece ter problemas para convencer seu corpo a lutar contra você!
 O corpo de $n rebela-se contra $l quando $l tenta bater em $N.
 M
  400
 Você golpeia $N em seus rins, resultando em sua morte imediata!
-Você recebe um golpe nos rins, terminando com o seu mundo miser�vel -- R.I.P.!
+Você recebe um golpe nos rins, terminando com o seu mundo miserável -- R.I.P.!
 $n golpeia $N nos rins, causando sua morte imediata!
 Você selvagemente bate no ar, errando $N.
 $n erra um selvagem soco contra você.
@@ -585,38 +585,38 @@ $N se abaixa sob o punho de $n quando $l tentou bater em $N.
 #
 #
 Não é educado tentar bater em um ser divino!
-$n tenta bater em você -- que pat�tico!
+$n tenta bater em você -- que patético!
 $n pateticamente tenta bater em $N - Ha!
 
 * Sting
 M
  401
 Você conduz uma ferroada diretamente no coração de $N, matando-$R!
-Com uma poderosa força, a ferroada de $n rasga atrav�s de seu peito, causando sua morte imediata!
-$n conduz uma ferroada atrav�s do peito de $N, matando-$R!
+Com uma poderosa força, a ferroada de $n rasga através de seu peito, causando sua morte imediata!
+$n conduz uma ferroada através do peito de $N, matando-$R!
 Você erra $N com sua ferroada!
 $n conduz uma ferroada a você, errando!
-Você assiste com medo $n ferroando $N, errando por poucos cent�metros!
+Você assiste com medo $n ferroando $N, errando por poucos centímetros!
 #
 #
 #
 Ferroar um ser divino... O que você está pensando?
-$n tenta ferroar você, um tanto c�mico para ser sincero.
+$n tenta ferroar você, um tanto cômico para ser sincero.
 $n tenta ferroar $N, então parece horrorizado quando $N faz um sorriso!
 M
  401
 Você ferroa violentamente $N, causando sua morte!
 Você morre horrendamente quando $n ferroa você por todo o corpo!
-A medida que $n ferroa todo o corpo de $N, $N cai mort$R ao ch�o.
+A medida que $n ferroa todo o corpo de $N, $N cai mort$R ao chão.
 Você ferroa na direção de $N, mas erra!
 $n erra você com sua ferroada!
 Você assiste $n ao ferroar $N, mas erra!
 #
 #
 #
-Você ferroa $N e $L d� um tapa em si mesm$R, como se um mosquito $R tivesse picado.
+Você ferroa $N e $L dá um tapa em si mesm$R, como se um mosquito $R tivesse picado.
 Você teria sentido uma abelha?  Oh.. espere, era apenas $n.
-$N d� um tapa em si mesm$R a medida que $n tenta ferro�-l$R.
+$N dá um tapa em si mesm$R a medida que $n tenta ferroá-l$R.
 
 * Whip
 M
@@ -625,22 +625,22 @@ Você chicoteia a cabeça de $N com força, arrancando-a!
 $n chicoteia sua cabeça, arrancando-a de seu corpo!
 $n chicoteia a cabeça de $N, arrancando-a do corpo d$L!
 Você chicoteia na direção de $N, mas o chicote acerta você na cara!
-$n chicoteia em sua direção e acerta a pr�pria cara!
+$n chicoteia em sua direção e acerta a própria cara!
 $n chicoteia na direção de $N, mas acerta a si mesm$r na cara!
 #
 #
 #
 Você acha melhor parar antes que $N chicoteie seu traseiro.
-� pat�tico ver $r pobre $n tentando chicotear você... que engra�adinh$r.
+É patético ver $r pobre $n tentando chicotear você... que engraçadinh$r.
 $n tenta chicotear $N - não é engraçado?
 M
  402
-Seu h�bil chicote arranca para fora o torso de $N!
+Seu hábil chicote arranca para fora o torso de $N!
 O chicote de $n parte você ao meio!
 Com uma risada maldosa, $n divide $N ao meio com sua chicoteada!
-Você tenta chicotear $N, mas acaba chicoteando o ch�o!
-$n tenta chicotear você, mas acaba chicoteando o ch�o!
-$n tenta chicotear $N, mas acaba chicoteando o ch�o!
+Você tenta chicotear $N, mas acaba chicoteando o chão!
+$n tenta chicotear você, mas acaba chicoteando o chão!
+$n tenta chicotear $N, mas acaba chicoteando o chão!
 #
 #
 #
@@ -660,15 +660,15 @@ $N agilmente desvia-se de uma retalhada de $n.
 #
 #
 #
-Sua engra�ada retalhada em $N é in�til.
+Sua engraçada retalhada em $N é inútil.
 Você agilmente interrompe uma retalhada de $n.
-$N interrompe uma engra�ada retalhada de $n, que parece desapontad$r.
+$N interrompe uma engraçada retalhada de $n, que parece desapontad$r.
 M
  403
 Sua retalhada em $N resulta em uma piscina de sangue e sua morte imediata!
 Sangue jorra por todos os lados a medida que $n retalha você.  Você morre...
 $n retalha $N e faz tudo em volta ficar vermelho com o sangue do ferimento letal d$L.
-Você erra $N por alguns cent�metros, maldição!
+Você erra $N por alguns centímetros, maldição!
 Você consegue esquivar-se da retalhada de $n e ri, HA!
 A retalhada de $n erra $N que ri com todo o prazer, HA!
 #
@@ -679,16 +679,16 @@ Você dificilmente sente essa fraca criatura a sua frente...
 O grande $N parece ignorar a retalhada de $n.
 M
  403
-$N chora em agonia ao ter o t�rax aberto por sua retalhada!
-Seu t�rax é aberto por uma retalhada de $n -- R.I.P.!
-$n gentilmente disseca o t�rax de $N com uma simples retalhada!
-Você tenta retalhar $N mas erra por quil�metros.
-A retalhada de $n erra você por quil�metros.
-A retalhada de $n em $N $R erra por quil�metros.
+$N chora em agonia ao ter o tórax aberto por sua retalhada!
+Seu tórax é aberto por uma retalhada de $n -- R.I.P.!
+$n gentilmente disseca o tórax de $N com uma simples retalhada!
+Você tenta retalhar $N mas erra por quilómetros.
+A retalhada de $n erra você por quilómetros.
+A retalhada de $n em $N $R erra por quilómetros.
 #
 #
 #
-� grosseiro tentar retalhar um ser divino, você sabe.
+É grosseiro tentar retalhar um ser divino, você sabe.
 $n tenta retalhar você -- que grosseir$r!
 $n tenta retalhar $N -- que grosseir$r!
 M
@@ -720,15 +720,15 @@ $n tenta violentamente morder $N, mas erra a marca.
 #
 Você tenta morder $N.  Ouch!  Que dor!
 $n tenta morder você, que engraçado.
-$n tenta morder $N - engraçado, n�?
+$n tenta morder $N - engraçado, né?
 M
  404
-Você morde $N atrav�s do t�rax, no coração -- $l cai ao chão e agoniza.
-$n morde você diretamente no seu t�rax e no seu coração -- você cai ao chão padecendo em agonia...
-A poderosa mand�bula de $n morde o coração de $N atrav�s do t�rax -- $L cai ao chão padecendo em agonia!
-Você tenta morder $N, mas morde sua l�ngua.
-$n tenta morder você, mas morde a pr�pria l�ngua!
-$n tenta morder $N, mas morde a pr�pria l�ngua!
+Você morde $N através do tórax, no coração -- $l cai ao chão e agoniza.
+$n morde você diretamente no seu tórax e no seu coração -- você cai ao chão padecendo em agonia...
+A poderosa mandíbula de $n morde o coração de $N através do tórax -- $L cai ao chão padecendo em agonia!
+Você tenta morder $N, mas morde sua língua.
+$n tenta morder você, mas morde a própria língua!
+$n tenta morder $N, mas morde a própria língua!
 #
 #
 #
@@ -750,7 +750,7 @@ $n tenta cacetear $N que se esquiva facilmente do golpe.
 #
 Você tenta inutilemnte cacetear $N. Para sua sorte $N tem senso de humor!
 Sua paciencia é testada quando $n tenta cacetear você.
-$R poderos$R $N se cont�m para não destruir $n que tenta cacetea-l$R.
+$R poderos$R $N se contêm para não destruir $n que tenta cacetea-l$R.
 M
  405
 Sua cruel caceteda finalmente quebra o pescoço de $N!
@@ -758,13 +758,13 @@ A cruel caceteada de $n quebra seu pescoço!
 A cruel caceteada de $n quebra o pescoço de $N!
 Você tenta cacetear $N que simplesmente ri de você.
 $n tenta cacetear você mas você se esquiva facilmente e ri.
-$N ri da frustrada tentativa de $n em cacete�-l$r.
+$N ri da frustrada tentativa de $n em caceteá-l$r.
 #
 #
 #
 Você tenta inutilemnte cacetear $N. Para sua sorte $N tem senso de humor!
 Sua paciencia é testada quando $n tenta cacetear você.
-$R poderos$r $N se cont�m para não destruir $n que tenta cacetea-l$r.
+$R poderos$r $N se contêm para não destruir $n que tenta cacetea-l$r.
 
 * Crush
 M
@@ -784,8 +784,8 @@ $n parece estar tentando esmagar $N...
 M
  406
 Você esmaga o corpo de $N fazendo uma terrivel sujeira!
-$n esmaga seu corpo todo fazendo uma terr�vel sujeirra!
-$n esmaga o corpo inteiro de $N fazendo uma terr�vel sujeira!
+$n esmaga seu corpo todo fazendo uma terrível sujeirra!
+$n esmaga o corpo inteiro de $N fazendo uma terrível sujeira!
 Você tenta sem sucesso esmagar $N.
 $n tenta sem sucesso esmagar você.
 $n tenta sem sucesso esmagar $N.
@@ -803,8 +803,8 @@ Você moe $N até a morte!
 $n moe você até a morte.
 $n moe $N esmagando todo seu corpo que cai desfalecido!
 Você tenta em vão moer $N que desvia habilmente!
-Você d� um salto para o lado desviando-se da poderosa mo�da de $n!
-$n parece atordoado ao errar a mo�da em $N!
+Você dá um salto para o lado desviando-se da poderosa moída de $n!
+$n parece atordoado ao errar a moída em $N!
 #
 #
 #
@@ -814,9 +814,9 @@ $n tenta inutilmente moer $N. é impossivel segurar o riso! Que imbecil!
 M
  407
 Você moe tão rapidamente $N que quando você vai ver $l está mort$r.
-Você não resiste a poderosa mo�da de $n e sucumbe a morte.
-$N morre diante do ataque fulminante das mo�das de $n!
-Você erra miseravelmente a mo�da contra $N.
+Você não resiste a poderosa moída de $n e sucumbe a morte.
+$N morre diante do ataque fulminante das moídas de $n!
+Você erra miseravelmente a moída contra $N.
 $n tenta inutilmente moer você!
 $n tenta sem sucesso moer $N!
 #
@@ -833,12 +833,12 @@ Você arranha $N arrancando-lhe a face.
 $n arranha você arrancando sua face!
 $n arranha $N arrancando-lhe a face!
 Você tenta sem sucesso arranhar $N!
-$n erra por mil�metros ao tentar arranhar você!
-$n tenta arranhar $N mas erra por mil�metros!
+$n erra por milímetros ao tentar arranhar você!
+$n tenta arranhar $N mas erra por milímetros!
 #
 #
 #
-Seu est�pido! Não se arranha alguem tão poderoso!
+Seu estúpido! Não se arranha alguem tão poderoso!
 $n deve star louco ao tentar arranhar você!
 $n deve estar louco ao tentar arranhar $N!
 M
@@ -852,48 +852,48 @@ $n tenta arranhar $N mas quase corta a si mesm$r.
 #
 #
 #
-Seu est�pido! Não se arranha alguem tão poderoso!
+Seu estúpido! Não se arranha alguem tão poderoso!
 $n deve star louco ao tentar arranhar você!
 $n deve estar louco ao tentar arranhar $N!
 
 * Maul
 M
  409
-Você espanca o t�rax de $N que URRA de dor caindo sem vida no ch�o!
-Diante da espancada de $n em seu t�rax você URRA de dor... então nada mais -- R.I.P.
+Você espanca o tórax de $N que URRA de dor caindo sem vida no chão!
+Diante da espancada de $n em seu tórax você URRA de dor... então nada mais -- R.I.P.
 $n espanca $N abatendo-$R humilhantemente.
 Você balança selvagemente tentando espancar $N mas quase acerta você mesmo$r!
-Ufa! $U$n errou sua selvagem tentativa de espanc�-l$R!
+Ufa! $U$n errou sua selvagem tentativa de espancá-l$R!
 $n tenta espancar $N mas erra feio!
 #
 #
 #
-Espancar um ser divino? O que sua m�e diria disso? Claro que provavelmente você tentaria espanca-la tambem!
+Espancar um ser divino? O que sua mãe diria disso? Claro que provavelmente você tentaria espanca-la tambem!
 $n tenta espancar você e falha miseravelmente.
 $N ri da desastrosa tentativa de $n em espanca-l$R. Que engraçado!
 
 * Thrash
 M
  410
-Você traz $N de volta a vida com uma a�oitada e então uma última a�oitado $R mata!
-$n $R a�oita violetamente e você morre.
-Com a terr�vel a�oitada de $n, $N cai sem vida no ch�o.
-Você erra ao tentar a�oitar $N!
-Por sorte $n erra uma violenta a�oitada contra você.
-$n tenta desesperadamente sem sucesso a�oitar $N!
+Você traz $N de volta a vida com uma açoitada e então uma última açoitada $R mata!
+$n $R açoita violetamente e você morre.
+Com a terrível açoitada de $n, $N cai sem vida no chão.
+Você erra ao tentar açoitar $N!
+Por sorte $n erra uma violenta açoitada contra você.
+$n tenta desesperadamente sem sucesso açoitar $N!
 #
 #
 #
-A�oitar um ser divino? é mais provavel que $L a�oite você não acha?
-Que idiota.. $n tenta a�oitar você. Tsc tsc..
-$n tenta a�oitar $N, que idiota!
+Açoitar um ser divino? é mais provavel que $L açoite você não acha?
+Que idiota.. $n tenta açoitar você. Tsc tsc..
+$n tenta açoitar $N, que idiota!
 
 * Pierce
 M
  411
-Você fura $N com sucesso e o corpo d$L cai no ch�o, num amontoado sem vida.
+Você fura $N com sucesso e o corpo d$L cai no chão, num amontoado sem vida.
 $n fura você.  Você não é mais um membro vivo desse mundo -- R.I.P.!
-$n fura $N, cujo corpo repentinamente sem vida cai no ch�o!
+$n fura $N, cujo corpo repentinamente sem vida cai no chão!
 Você tenta furar $N mas só consegue atingir o ar!
 $n parece estar furando somente o ar.
 $n tenta furar o ar ao invés de lutar com $N.
@@ -901,22 +901,22 @@ $n tenta furar o ar ao invés de lutar com $N.
 #
 #
 $R poderos$R $N começa a pensar que você é uma grande chateação!!!
-Sua paci�ncia quase se esgota quando você olha para $n.
-O ar fica carregado quando $R j� irritad$R $N impede a furada de $n.
+Sua paciência quase se esgota quando você olha para $n.
+O ar fica carregado quando $R já irritad$R $N impede a furada de $n.
 M
  411
 Você fura o coração de $N.  é uma cena desoladora...
 $n fura seu coração! Adeus, mundo cruel...
-$n fura o coração de $N, que cai no chão cobrindo a pr�pria ferida!
-Você ataca $N sem conseguir fur�-l$R.
-$n tenta fur�-l$R mas falha miseravelmente.
-$n ataca $N mas não consegue fur�-l$R.
+$n fura o coração de $N, que cai no chão cobrindo a própria ferida!
+Você ataca $N sem conseguir furá-l$R.
+$n tenta furá-l$R mas falha miseravelmente.
+$n ataca $N mas não consegue furá-l$R.
 #
 #
 #
-$R grande $N quase fura você com seu terr�vel olhar. OOPS!
-Você retribui a furada de $n com um terr�vel olhar. Hmmm...
-$N retribui a furada de $n com um terr�vel olhar. Hmmm...
+$R grande $N quase fura você com seu terrível olhar. OOPS!
+Você retribui a furada de $n com um terrível olhar. Hmmm...
+$N retribui a furada de $n com um terrível olhar. Hmmm...
 
 * Blast
 M
@@ -924,7 +924,7 @@ M
 Você explode $N com toda sua força, matando-$R!
 Com uma poderosa explosão, $n arranca a vida de seu corpo!
 $N cai no chão sem vida assim que a explosão de $n rasga seu corpo!
-Você tenta explodir $N, errando por alguns cent�metros!
+Você tenta explodir $N, errando por alguns centímetros!
 Você habilmente evita ser explodido por $n!
 $n erra a explosão que infligiria em $N!  $N é muito sortud$R!
 #
@@ -968,7 +968,7 @@ Você assiste com piedade $n esfaqueando $N, e errando da forma mais vã possív
 * Bore
 M
  415
-Você perfura o corpo de $N, atravessando-$R com sua arma! &L está mort$R!
+Você perfura o corpo de $N, atravessando-$R com sua arma! $L está mort$R!
 $n perfura dolorosamente seu corpo, que é atravessado por um enorme buraco!  RIP!
 A arma de $n impiedosamente perfura o corpo de $N, agora sem vida e atravessado por imenso buraco!
 Você tenta perfurar $N mas erra!
@@ -1021,29 +1021,29 @@ $n erra uma espeta em $N, que desvia rapidamente.
 #
 #
 #
-Será impossível espetar $N: Deuses são inating�veis!
-$n tenta espetar você, mas é impossível atingir Deuses! E você o �!
-$n tenta espetar $N... Para azar d$l, $N é inating�vel!
+Será impossível espetar $N: Deuses são inatingíveis!
+$n tenta espetar você, mas é impossível atingir Deuses! E você o é!
+$n tenta espetar $N... Para azar d$l, $N é inatingível!
 
 * Mow
 M
  417
 Você corta o corpo de $N ao meio! Que cena brutal!
-$n corta seu corpo ao meio! Sua morte é extremamente r�pida, mas dolorosa!
-$n, impiedos$r, corta o corpo de $N ao meio, matando-&R instantaneamente!
+$n corta seu corpo ao meio! Sua morte é extremamente rápida, mas dolorosa!
+$n, impiedos$r, corta o corpo de $N ao meio, matando-$R instantaneamente!
 Você tenta cortar $N, mas erra!
 $n erra o corte que tentava fazer em você!
 $n tenta cortar $N, mas erra!
 #
 #
 #
-Você tenta cortar $N, mas erra: &l é um ser celestial!
-$n tenta &r cortar!  S� que você não pode ser atingido! HAHAHA!
-Você assiste com pena a tentativa de $n ao tentar apunhalar $N, errando da maneira mais rid�cula possivel!
+Você tenta cortar $N, mas erra: $l é um ser celestial!
+$n tenta $r cortar!  Só que você não pode ser atingido! HAHAHA!
+Você assiste com pena a tentativa de $n ao tentar apunhalar $N, errando da maneira mais ridícula possivel!
 M
  417
-Você faz um profundo corte no corpo de $N, que está perdendo todo o sangue e org�os!
-$n corta seu tronco de tal maneira que todo seu sangue começa a se esvair e enquanto seus org�os são expostos!
+Você faz um profundo corte no corpo de $N, que está perdendo todo o sangue e orgãos!
+$n corta seu tronco de tal maneira que todo seu sangue começa a se esvair e enquanto seus orgãos são expostos!
 Com força e brutalidade, $n corta o tronco de $N, acabando com $L!
 Você parte sobre $N, tentando cortá-l$R, mas erra!
 $n parte sobre você, errando o corte que lhe faria!
@@ -1052,7 +1052,7 @@ $N escapa por pouco do corte de $n!
 #
 #
 Você é idiota?? Tentar cortar um Deus!...
-$n parece um pequeno inseto tentando golpear um gigantesco ser ao tentar cortar você... Pat�tico.
+$n parece um pequeno inseto tentando golpear um gigantesco ser ao tentar cortar você... Patético.
 $n tenta cortar $N! Que idiota!
 
 * Suffering
@@ -1065,8 +1065,8 @@ $N lamenta de dor, sofrendo no chão até que não sobra sangue em seu corpo.
 Sofrimento - erro - nunca deve ser visto.
 Sofrimento - erro - nunca deve ser visto.
 #
-Você se arrasta pelo ch�o, perdendo sangue de seus terr�veis machucados...
-$N se arrasta pelo ch�o, perdendo sangue...
+Você se arrasta pelo chão, perdendo sangue de seus terríveis machucados...
+$N se arrasta pelo chão, perdendo sangue...
 #
 Sofrimento - Deus - nunca deve ser visto.
 Sofrimento - Deus - nunca deve ser visto.
@@ -1074,13 +1074,13 @@ M
  499
 #
 Você só pode aguardar até a última batida de seu coração...
-$N sofre com a perda de sangue, e a parada card�aca...
+$N sofre com a perda de sangue, e a parada cardíaca...
 #
 Sofrimento - erro - nunca deve ser visto.
 Sofrimento - erro - nunca deve ser visto.
 #
-Você se estende ao ch�o, perdendo sangue pelos seus machucados...
-$N está im�vel ao ch�o, sofrendo...
+Você se estende ao chão, perdendo sangue pelos seus machucados...
+$N está imóvel ao chão, sofrendo...
 #
 Sofrimento - Deus - nunca deve ser visto.
 Sofrimento - Deus - nunca deve ser visto.
@@ -1115,7 +1115,7 @@ As abelhas ferroam sua pele.
 $N aparenta ter problemas com abelhas.
 #
 Você é ferroado por várias abelhas, como isso é possivel?!
-$N incompreens�velmente é ferroado por várias abelhas!
+$N incompreensívelmente é ferroado por várias abelhas!
 
 
 ***************************************************************************
@@ -1233,8 +1233,8 @@ $N não pode resistir é falta de alimento... e morreu!
 #
 #
 #
-Seu est�mago ronca, e você se sente mais frac$R pela falta de alimento...
-Você ouve o est�mago de $N roncando... Alimente-$R!
+Seu estômago ronca, e você se sente mais frac$R pela falta de alimento...
+Você ouve o estômago de $N roncando... Alimente-$R!
 #
 #
 #
@@ -1244,12 +1244,12 @@ M
  502
 #
 A sede é tanta, que seu corpo não pode resistir... Que trágico! :-(
-Implorando por um copo d'�gua, $N cai mort$R ao ch�o, com a l�ngua para fora.
+Implorando por um copo d'água, $N cai mort$R ao chão, com a língua para fora.
 #
 #
 #
 #
-Sua boca está seca, e você se sente mais frac$R pela falta de �gua...
+Sua boca está seca, e você se sente mais frac$R pela falta de água...
 #
 #
 #
@@ -1280,13 +1280,13 @@ M
  504
 #
 As queimaduras são tantas que você não sobrevive... Adeus mundo cruel!
-$N morre carbonizad$R é sua frente... que cena terr�vel!
+$N morre carbonizad$R é sua frente... que cena terrível!
 #
 #
 #
 #
-Você sofre s�rias queimaduras... OUCH!
-$N sofre s�rias queimaduras... isso deve doer!
+Você sofre sérias queimaduras... OUCH!
+$N sofre sérias queimaduras... isso deve doer!
 #
 #
 #
