@@ -1411,4 +1411,3 @@ int attacks_per_round(struct char_data *ch)
 
   return (n);
 }
-
