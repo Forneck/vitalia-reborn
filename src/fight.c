@@ -854,10 +854,12 @@ static int compute_thaco(struct char_data *ch, struct char_data *victim)
 	int calc_thaco;
 	int wpnprof = 0;
 	int nham = 0;
-	struct obj_data *wielded = GET_EQ(ch, WEAR_WIELD);
+	struct obj_data *wielded;
+	
 	if (!IS_NPC(ch))
 	{
 		calc_thaco = thaco(GET_CLASS(ch), GET_LEVEL(ch));
+		wielded = GET_EQ(ch, WEAR_WIELD);
 		if (wielded && GET_OBJ_TYPE(wielded) == ITEM_WEAPON)
 		wpnprof = get_weapon_prof(ch, wielded);
 		nham = get_nighthammer(ch, true);
