@@ -758,7 +758,7 @@ static void look_in_obj(struct char_data *ch, char *arg)
 		send_to_char(ch, "Não há nada dentro disso!\r\n");
 	else
 	{
-		if (GET_OBJ_TYPE(obj) == ITEM_CONTAINER)
+		if (GET_OBJ_TYPE(obj) == ITEM_CONTAINER || GET_OBJ_TYPE(obj) == ITEM_CORPSE)
 		{
 			if (OBJVAL_FLAGGED(obj, CONT_CLOSED)
 				&& (GET_LEVEL(ch) < LVL_IMMORT || !PRF_FLAGGED(ch, PRF_NOHASSLE)))
