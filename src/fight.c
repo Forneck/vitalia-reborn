@@ -1292,7 +1292,7 @@ int get_weapon_prof(struct char_data *ch, struct obj_data *wield)
 	int value = 0, bonus = 0, learned = 0, type = -1;
 	int i = 0;
 	 struct str_spells *skill = NULL;
-	if (IS_NPC(ch))
+	if (IS_NPC(ch) || IS_DEAD(ch))
 		return (bonus);
 	value = GET_OBJ_VAL(wield, 3) + TYPE_HIT;
 	switch (value)
@@ -1373,7 +1373,7 @@ int get_weapon_prof(struct char_data *ch, struct obj_data *wield)
 int get_nighthammer(struct char_data *ch, bool real) {
   int mod, learned;
 
-  if (IS_NPC(ch))
+  if (IS_NPC(ch)||IS_DEAD(ch))
     return (0);
 
   if (GET_LEVEL(ch) < NIGHTHAMMER_LVL)
