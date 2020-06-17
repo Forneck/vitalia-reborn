@@ -92,8 +92,8 @@ int compute_armor_class(struct char_data *ch)
 
 	if (!IS_NPC(ch))
 	{
-		 armorclass += wpn_prof[get_weapon_prof(ch, wielded)].to_ac * 10;
-		 armorclass += nighthammer_info[get_nighthammer(ch, true)].to_ac;
+		armorclass += wpn_prof[get_weapon_prof(ch, wielded)].to_ac * 10;
+		armorclass += nighthammer_info[get_nighthammer(ch, true)].to_ac;
 		return (MAX(-200, armorclass));	/* -200 is lowest */
 	}
 	else
@@ -855,13 +855,13 @@ static int compute_thaco(struct char_data *ch, struct char_data *victim)
 	int wpnprof = 0;
 	int nham = 0;
 	struct obj_data *wielded;
-	
+
 	if (!IS_NPC(ch))
 	{
 		calc_thaco = thaco(GET_CLASS(ch), GET_LEVEL(ch));
 		wielded = GET_EQ(ch, WEAR_WIELD);
 		if (wielded && GET_OBJ_TYPE(wielded) == ITEM_WEAPON)
-		wpnprof = get_weapon_prof(ch, wielded);
+			wpnprof = get_weapon_prof(ch, wielded);
 		nham = get_nighthammer(ch, true);
 	}
 	else						/* THAC0 for monsters is set in the HitRoll */
@@ -909,7 +909,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 	if (!IS_NPC(ch))
 	{
 		if (wielded && GET_OBJ_TYPE(wielded) == ITEM_WEAPON)
-		 wpnprof = get_weapon_prof(ch, wielded);
+			wpnprof = get_weapon_prof(ch, wielded);
 		nham = get_nighthammer(ch, true);
 	}
 
@@ -1103,7 +1103,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 void perform_violence(void)
 {
 	struct char_data *ch, *tch;
-	  int num_of_attacks = 1, loop_attacks;
+	int num_of_attacks = 1, loop_attacks;
 	for (ch = combat_list; ch; ch = next_combat_list)
 	{
 		next_combat_list = ch->next_fighting;
@@ -1155,13 +1155,14 @@ void perform_violence(void)
 				do_assist(tch, GET_NAME(ch), 0, 0);
 			}
 		}
-	
-	num_of_attacks = attacks_per_round(ch);
-		
-  for (loop_attacks = 0;
-	 loop_attacks < num_of_attacks && FIGHTING(ch) && !MOB_FLAGGED(FIGHTING(ch), MOB_NOTDEADYET); loop_attacks++)
-      hit(ch, FIGHTING(ch), TYPE_UNDEFINED);
-      
+
+		num_of_attacks = attacks_per_round(ch);
+
+		for (loop_attacks = 0;
+			 loop_attacks < num_of_attacks && FIGHTING(ch)
+			 && !MOB_FLAGGED(FIGHTING(ch), MOB_NOTDEADYET); loop_attacks++)
+			hit(ch, FIGHTING(ch), TYPE_UNDEFINED);
+
 		if (MOB_FLAGGED(ch, MOB_SPEC) && GET_MOB_SPEC(ch) && !MOB_FLAGGED(ch, MOB_NOTDEADYET))
 		{
 			char actbuf[MAX_INPUT_LENGTH] = "";
@@ -1293,49 +1294,51 @@ int get_weapon_prof(struct char_data *ch, struct obj_data *wield)
 {
 	int value = 0, bonus = 0, learned = 0, type = -1;
 	int i = 0;
-	 struct str_spells *skill = NULL;
+	struct str_spells *skill = NULL;
 	if (IS_NPC(ch) || IS_DEAD(ch))
 		return (bonus);
-	value = GET_OBJ_VAL(wield, 3) + TYPE_HIT;
-	switch (value)
+	if (wield != NULL)
 	{
-	case TYPE_SLASH:
-		type = SKILL_WEAPON_SWORDS;
-		break;
-	case TYPE_STING:
-	case TYPE_PIERCE:
-	case TYPE_STAB:
-		type = SKILL_WEAPON_DAGGERS;
-		break;
-	case TYPE_THRASH:
-	case TYPE_WHIP:
-		type = SKILL_WEAPON_WHIPS;
-		break;
-	case TYPE_CLAW:
-		type = SKILL_WEAPON_TALONOUS_ARMS;
-		break;
-	case TYPE_BLUDGEON:
-	case TYPE_MAUL:
-	case TYPE_POUND:
-	case TYPE_CRUSH:
-		type = SKILL_WEAPON_BLUDGEONS;
-		break;
-	case TYPE_HIT:
-	case TYPE_PUNCH:
-	case TYPE_BITE:
-	case TYPE_BLAST:
-		type = SKILL_WEAPON_EXOTICS;
-		break;
-	case TYPE_BORE:
-	case TYPE_BROACH:
-	case TYPE_MOW:
-		type = SKILL_WEAPON_POLEARMS;
-	default:
-		type = -1;
-		break;
+		value = GET_OBJ_VAL(wield, 3) + TYPE_HIT;
+		switch (value)
+		{
+		case TYPE_SLASH:
+			type = SKILL_WEAPON_SWORDS;
+			break;
+		case TYPE_STING:
+		case TYPE_PIERCE:
+		case TYPE_STAB:
+			type = SKILL_WEAPON_DAGGERS;
+			break;
+		case TYPE_THRASH:
+		case TYPE_WHIP:
+			type = SKILL_WEAPON_WHIPS;
+			break;
+		case TYPE_CLAW:
+			type = SKILL_WEAPON_TALONOUS_ARMS;
+			break;
+		case TYPE_BLUDGEON:
+		case TYPE_MAUL:
+		case TYPE_POUND:
+		case TYPE_CRUSH:
+			type = SKILL_WEAPON_BLUDGEONS;
+			break;
+		case TYPE_HIT:
+		case TYPE_PUNCH:
+		case TYPE_BITE:
+		case TYPE_BLAST:
+			type = SKILL_WEAPON_EXOTICS;
+			break;
+		case TYPE_BORE:
+		case TYPE_BROACH:
+		case TYPE_MOW:
+			type = SKILL_WEAPON_POLEARMS;
+		default:
+			type = -1;
+			break;
+		}
 	}
-
-	if (type != -1)
+	 if (type != -1)
 	{
 		if ((learned = GET_SKILL(ch, type)) != 0)
 		{
@@ -1368,48 +1371,55 @@ int get_weapon_prof(struct char_data *ch, struct obj_data *wield)
 		}
 		return (bonus);
 	}
+	else
+	{
+	   return 0;
+	}
 }
 
 /* -- jr - Oct 07, 2001 */
 #define NIGHTHAMMER_LVL 50
-int get_nighthammer(struct char_data *ch, bool real) {
-  int mod, learned;
+int get_nighthammer(struct char_data *ch, bool real)
+{
+	int mod, learned;
 
-  if (IS_NPC(ch)||IS_DEAD(ch))
-    return (0);
+	if (IS_NPC(ch) || IS_DEAD(ch))
+		return (0);
 
-  if (GET_LEVEL(ch) < NIGHTHAMMER_LVL)
-    return (0);
+	if (GET_LEVEL(ch) < NIGHTHAMMER_LVL)
+		return (0);
 
-  if (!(learned = GET_SKILL(ch, SKILL_NIGHTHAMMER)))
-    return (0);
+	if (!(learned = GET_SKILL(ch, SKILL_NIGHTHAMMER)))
+		return (0);
 
-  if (time_info.hours > 4 && time_info.hours < 21)
-    return (0);
+	if (time_info.hours > 4 && time_info.hours < 21)
+		return (0);
 
-  mod = 1;
-  mod += (time_info.hours < 4 || time_info.hours > 21);
-  mod += ((GET_LEVEL(ch) - NIGHTHAMMER_LVL) / 8);
-  mod = MIN(mod, 8);
+	mod = 1;
+	mod += (time_info.hours < 4 || time_info.hours > 21);
+	mod += ((GET_LEVEL(ch) - NIGHTHAMMER_LVL) / 8);
+	mod = MIN(mod, 8);
 
-  if (real && rand_number(0, 101) > learned)
-    mod--;
-    
-    return MIN(MAX(mod,0),8);
+	if (real && rand_number(0, 101) > learned)
+		mod--;
+
+	return MIN(MAX(mod, 0), 8);
 
 }
 
 /* -- jr - May 07, 2001 */
 int attacks_per_round(struct char_data *ch)
 {
-  int n = 1;
+	int n = 1;
 
-  if (!IS_NPC(ch)) {
-    struct obj_data *wielded = GET_EQ(ch, WEAR_WIELD);
-    if (wielded && GET_OBJ_TYPE(wielded) == ITEM_WEAPON)
-      n += wpn_prof[get_weapon_prof(ch, wielded)].num_of_attacks;
-  } else
-    n += ((int) GET_LEVEL(ch) / 25);
+	if (!IS_NPC(ch))
+	{
+		struct obj_data *wielded = GET_EQ(ch, WEAR_WIELD);
+		if (wielded && GET_OBJ_TYPE(wielded) == ITEM_WEAPON)
+			n += wpn_prof[get_weapon_prof(ch, wielded)].num_of_attacks;
+	}
+	else
+		n += ((int)GET_LEVEL(ch) / 25);
 
-  return (n);
+	return (n);
 }
