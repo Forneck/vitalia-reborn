@@ -1,9 +1,9 @@
 #19001
 Entrada para a Floresta dos Elfos~
-   Enormes ï¿½rvores verdes estï¿½o por toda parte.  Um gigantesco portï¿½o
+   Enormes árvores verdes estão por toda parte.  Um gigantesco portão
 de madeira pode ser visto ao norte.
 ~
-190 0 0 0 0 3
+190 0 3
 D0
 ~
 ~
@@ -14,85 +14,88 @@ D1
 0 -1 2070
 D3
 ~
-portï¿½o ferro~
+portão ferro~
+:n 1 O portão de ferro
 1 -1 19033
 E
-portï¿½o madeira~
-Vocï¿½ vï¿½ um lindo portï¿½o que traz uma beleza inconfundï¿½vel, tï¿½pica
+portão madeira~
+Você vê um lindo portão que traz uma beleza inconfundível, típica
 dos Elfos da floresta.
 ~
 S
 #19002
 O Caminho Vigiado pela Floresta~
-   O caminho segue diretamente por entre a floresta de norte a sul.  Vocï¿½
-se sente observado por alguï¿½m.  A leste vocï¿½ pode ver uma porta de madeira
-em uma grande ï¿½rvore e de cima, vocï¿½ vï¿½ uma corda pendendo da ï¿½rvore.
+   O caminho segue diretamente por entre a floresta de norte a sul.  Você
+se sente observado por alguém.  A leste você pode ver uma porta de madeira
+em uma grande árvore e de cima, você vê uma corda pendendo da árvore.
 ~
-190 0 0 0 0 3
-D0
-~
-~
-0 -1 19007
-D1
-~
-~
-0 -1 19003
+190 0 3
 D2
 ~
 ~
 0 -1 19001
+D1
+~
+~
+0 -1 19003
 D4
 ~
 ~
 0 -1 19006
+D0
+~
+~
+0 -1 19007
 S
 #19003
 A Sala da Guarda~
 No canto nordeste deste pequenino aposento iluminado encontra-se uma grande
-mesa redonda de pedra.  A leste e oeste vocï¿½ vï¿½ portas.
+mesa redonda de pedra.  A leste e oeste você vê portas.
 ~
-190 8 0 0 0 3
-D1
-~
-~
-0 -1 19004
+190 d 3
 D3
 ~
 ~
 0 -1 19002
-D5
-O tapete ï¿½ feito de lï¿½.
+D1
 ~
-tapete secreto lï¿½~
+~
+0 -1 19004
+D5
+O tapete é feito de lã.
+~
+tapete secreto lã~
+:n 1 o tapete de lã
 1 -1 19005
 S
 #19004
-O Dormitï¿½rio do chefe da Guarda~
-   Este quarto aparentemente pertence ao chefe da guarda ï¿½lfica.  Num canto
-estï¿½ uma cama grande e hï¿½ uma porta a oeste.
+O Dormitório do chefe da Guarda~
+   Este quarto aparentemente pertence ao chefe da guarda élfica.  Num canto
+está uma cama grande e há uma porta a oeste.
 ~
-190 8 0 0 0 3
+190 d 3
 D3
 ~
 ~
 0 -1 19003
 S
 #19005
-Porï¿½o~
-   Neste porï¿½o ï¿½mido hï¿½ alguma comida e outras coisas estocadas.
+Porão~
+   Neste porão úmido há alguma comida e outras coisas estocadas.
 ~
-190 9 0 0 0 3
+190 ad 3
 D4
 ~
-tapete secreto lï¿½~
+tapete secreto lã~
+:n 1 o tapete de lã
 1 -1 19003
 S
 #19006
 Na Plataforma~
-   Vocï¿½ estï¿½ parado em uma plataforma de madeira acima da entrada para a 
-floresta dos Elfos.  Daqui vocï¿½ pode avistar, ao longe, Midgaard.
+   Você está parado em uma plataforma de madeira acima da entrada para a 
+floresta dos Elfos.  Daqui você pode avistar, ao longe, Midgaard.
 ~
-190 4 0 0 0 5
+190 c 5
 D5
 ~
 ~
@@ -102,98 +105,90 @@ S
 O Caminho Vigiado pela Floresta~
    O caminho segue pela floresta de sul para norte.
 ~
-190 0 0 0 0 3
-D0
-~
-~
-0 -1 19008
+190 0 3
 D2
 ~
 ~
 0 -1 19002
-S
-#19008
-Cruzamento de Caminhos~
-   O caminho se divide em quatro caminhos, um para cada direï¿½ï¿½o.  No
-meio dessa encruzilhada estï¿½ um gigantesco obelisco de pedra com algumas
-runas nele.
-~
-190 0 0 0 0 3
 D0
 ~
 ~
-0 -1 19009
+0 -1 19008
+S
+#19008
+Cruzamento de Caminhos~
+   O caminho se divide em quatro caminhos, um para cada direção.  No
+meio dessa encruzilhada está um gigantesco obelisco de pedra com algumas
+runas nele.
+~
+190 0 3
 D2
 ~
 ~
 0 -1 19007
-E
-runas obelisco pedra~
-Se vocï¿½ fosse um velho sï¿½bio elfo vocï¿½ saberia o que estas runas dizem,
-mas vocï¿½ nï¿½o ï¿½, entï¿½o elas nï¿½o lhe dizem nada ....
-~
-S
-#19009
-Um Belo Caminho pela Floresta ï¿½lfica~
-   Para ambos os lados desse caminho hï¿½ portas.  Sobre a porta oeste hï¿½
-um sinal lhe avisando que esta deve ser uma loja de armas, e sobre a porta
-leste hï¿½ um sinal familiar indicando uma loja de armaduras.
-~
-190 0 0 0 0 3
 D0
 ~
 ~
-0 -1 19012
-D1
+0 -1 19009
+E
+runas obelisco pedra~
+Se você fosse um velho sábio elfo você saberia o que estas runas dizem,
+mas você não é, então elas não lhe dizem nada ....
 ~
+S
+#19009
+Um Belo Caminho pela Floresta Élfica~
+   Para ambos os lados desse caminho há portas.  Sobre a porta oeste há
+um sinal lhe avisando que esta deve ser uma loja de armas, e sobre a porta
+leste há um sinal familiar indicando uma loja de armaduras.
 ~
-0 -1 19010
+190 0 3
 D2
 ~
 ~
 0 -1 19008
+D1
+~
+~
+0 -1 19010
 D3
 ~
 ~
 0 -1 19011
+D0
+~
+~
+0 -1 19012
 S
 #19010
-A Loja de Armaduras ï¿½lficas~
-   Nas paredes desse grande aposento estï¿½o belas armaduras ï¿½lficas expostas.
+A Loja de Armaduras Élficas~
+   Nas paredes desse grande aposento estão belas armaduras élficas expostas.
 ~
-190 8 0 0 0 0
+190 d 0
 D3
 ~
 ~
 0 -1 19009
 S
 #19011
-A Loja de Armas ï¿½lficas~
-   Sobre o Balcï¿½o e penduradas nas paredes, estï¿½o lindas armas de qualidade
-ï¿½lfica.
+A Loja de Armas Élficas~
+   Sobre o Balcão e penduradas nas paredes, estão lindas armas de qualidade
+élfica.
 ~
-190 8 0 0 0 0
+190 d 0
 D1
 ~
 ~
 0 -1 19009
 S
 #19012
-Um Belo Caminho pela Floresta ï¿½lfica~
-   Para ambos os lados deste caminho hï¿½ portas.  Sobre a porta a leste hï¿½ uma
+Um Belo Caminho pela Floresta Élfica~
+   Para ambos os lados deste caminho há portas.  Sobre a porta a leste hé uma
 tabuleta informando que esta deve ser uma loja de Magias, e sobre a porta oeste
-uma tabuleta informando que se trata do armazï¿½m do Quintor.  O caminho segue 
+uma tabuleta informando que se trata do armazém do Quintor.  O caminho segue 
 para o norte.
 ~
-190 0 0 0 0 3
-D0
-~
-~
-0 -1 19015
-D1
-~
-~
-0 -1 19014
+190 0 3
 D2
 ~
 ~
@@ -202,13 +197,21 @@ D3
 ~
 ~
 0 -1 19013
+D1
+~
+~
+0 -1 19014
+D0
+~
+~
+0 -1 19015
 S
 #19013
-Armazï¿½m do Quintor~
-   Neste belo aposento vocï¿½ pode ver coisas de todos os tipos.  Tudo, 
-desde sacos atï¿½ tochas pode ser visto nas prateleiras.
+Armazém do Quintor~
+   Neste belo aposento você pode ver coisas de todos os tipos.  Tudo, 
+desde sacos até tochas pode ser visto nas prateleiras.
 ~
-190 8 0 0 0 0
+190 d 0
 D1
 ~
 ~
@@ -216,11 +219,11 @@ D1
 S
 #19014
 A loja de Magias~
-   Assim que vocï¿½ entra nesta loja vocï¿½ sente um frio no estï¿½mago. Hï¿½ alguma
-coisa de errado aqui, ou serï¿½ somente o poder de toda esta mï¿½gica encontrada
-aqui?  Vocï¿½ se encontra cercado por objetos de todos os tamanhos e formas.
+   Assim que você entra nesta loja você sente um frio no estômago. Há alguma
+coisa de errado aqui, ou será somente o poder de toda esta mágica encontrada
+aqui?  Você se encontra cercado por objetos de todos os tamanhos e formas.
 ~
-190 8 0 0 0 0
+190 d 0
 D3
 ~
 ~
@@ -228,37 +231,37 @@ D3
 S
 #19015
 O Final do Belo Caminho~
-   Para ambos os lados deste caminho estï¿½o portas.  Sobre a porta leste hï¿½
-uma placa indicando se tratar da estalagem da vila, e para o norte vocï¿½ vï¿½ uma
+   Para ambos os lados deste caminho estão portas.  Sobre a porta leste há
+uma placa indicando se tratar da estalagem da vila, e para o norte você vê uma
 grande casa de dois andares.
 ~
-190 0 0 0 0 3
-D0
-~
-~
-0 -1 19017
-D1
-~
-~
-0 -1 19016
+190 0 3
 D2
 ~
 ~
 0 -1 19012
+D1
+~
+~
+0 -1 19016
+D0
+~
+~
+0 -1 19017
 D3
 ~
 ~
 0 -1 19034
 S
 #19016
-A Estalagem da Esperanï¿½a~
-   Vocï¿½ se encontra em frente ao bar da estalagem.  O bar propriamente dito
-fica na parede norte, onde velhos escritos ï¿½lficos, entalhes e sï¿½mbolos a
-cobrem.  Uma lareira foi construï¿½da na parede leste e pela porta da parede
-oeste vocï¿½ vï¿½ o caminho por onde vocï¿½ veio.  Este lugar lhe faz sentir
+A Estalagem da Esperança~
+   Você se encontra em frente ao bar da estalagem.  O bar propriamente dito
+fica na parede norte, onde velhos escritos élficos, entalhes e símbolos a
+cobrem.  Uma lareira foi construída na parede leste e pela porta da parede
+oeste você vê o caminho por onde você veio.  Este lugar lhe faz sentir
 realmente em casa.
 ~
-190 8 0 0 0 0
+190 d 0
 D3
 ~
 ~
@@ -270,14 +273,10 @@ D4
 S
 #19017
 Dentro da Bela Casa~
-Vocï¿½ estï¿½ em uma grande ala com uma enorme escada para cima e portas para
+Você está em uma grande ala com uma enorme escada para cima e portas para
 leste e oeste.
 ~
-190 8 0 0 0 0
-D1
-~
-~
-0 -1 19019
+190 d 0
 D2
 ~
 ~
@@ -286,6 +285,10 @@ D3
 ~
 ~
 0 -1 19018
+D1
+~
+~
+0 -1 19019
 D4
 ~
 ~
@@ -293,21 +296,21 @@ D4
 S
 #19018
 Sala da Guarda~
-Este quarto parece mais ser a sala da guarda e deve ser mesmo pois vocï¿½ pode
+Este quarto parece mais ser a sala da guarda e deve ser mesmo pois você pode
 ver:
 ~
-190 8 0 0 0 0
+190 d 0
 D1
 ~
 ~
 0 -1 19017
 S
 #19019
-A Sala de Trofï¿½us do Rei Elfo~
-   Vocï¿½ estï¿½ na sala de trofï¿½us do Rei.  Nas paredes vocï¿½ pode ver trofï¿½us
-de caï¿½a e presentes de todos os tipos pendurados.
+A Sala de Troféus do Rei Elfo~
+   Você está na sala de troféus do Rei.  Nas paredes você pode ver troféus
+de caça e presentes de todos os tipos pendurados.
 ~
-190 8 0 0 0 0
+190 d 0
 D3
 ~
 ~
@@ -315,72 +318,72 @@ D3
 S
 #19020
 A Grande Escadaria~
-   Vocï¿½ estï¿½ subindo a escadaria principal da casa.  A escadaria continua
+   Você está subindo a escadaria principal da casa.  A escadaria continua
 para cima e para baixo.
 ~
-190 8 0 0 0 0
-D4
-~
-~
-0 -1 19021
+190 d 0
 D5
 ~
 ~
 0 -1 19017
-S
-#19021
-O Andar de Cima da Casa~
-Vocï¿½ estï¿½ em um corredor que leva para leste. Nas paredes norte e sul hï¿½ 
-portas.
-~
-190 8 0 0 0 0
-D0
-~
-~
-0 -1 19023
-D1
-~
-~
-0 -1 19022
-D2
-~
-~
-0 -1 19024
-D5
-~
-~
-0 -1 19020
-S
-#19022
-O Corredor~
-Vocï¿½ estï¿½ parado em um corredor com piso e teto de madeira.  Para o norte e
-sul hï¿½ portas e hï¿½ ainda uma janela para leste.
-~
-190 8 0 0 0 0
-D0
-~
-~
-0 -1 19026
-D1
-~
-~
-0 -1 19025
-D2
-~
-~
-0 -1 19027
-D3
+D4
 ~
 ~
 0 -1 19021
 S
+#19021
+O Andar de Cima da Casa~
+Você está em um corredor que leva para leste. Nas paredes norte e sul há 
+portas.
+~
+190 d 0
+D5
+~
+~
+0 -1 19020
+D1
+~
+~
+0 -1 19022
+D0
+~
+~
+0 -1 19023
+D2
+~
+~
+0 -1 19024
+S
+#19022
+O Corredor~
+Você está parado em um corredor com piso e teto de madeira.  Para o norte e
+sul há portas e há ainda uma janela para leste.
+~
+190 d 0
+D3
+~
+~
+0 -1 19021
+D1
+~
+~
+0 -1 19025
+D0
+~
+~
+0 -1 19026
+D2
+~
+~
+0 -1 19027
+S
 #19023
 A Biblioteca~
-Prateleiras de livros enfileiradas nas paredes dessa sala.  No centro vocï¿½
-vï¿½ uma pequena mesa com algumas  cadeiras.  As prateleiras estï¿½o cheias de
+Prateleiras de livros enfileiradas nas paredes dessa sala.  No centro você
+vê uma pequena mesa com algumas  cadeiras.  As prateleiras estão cheias de
 livros e pergaminhos.
 ~
-190 8 0 0 0 0
+190 d 0
 D2
 ~
 ~
@@ -388,43 +391,43 @@ D2
 S
 #19024
 A Sala de Estar~
-   Nesta sala vocï¿½ se sente confortavelmente aquecido pela lareira e
-confortï¿½veis cadeiras estï¿½o dispostas em frente a ela.  Vocï¿½ se sente bem
-relaxado.  Porque nï¿½o descansar por alguns instantes?
+   Nesta sala você se sente confortavelmente aquecido pela lareira e
+confortáveis cadeiras estão dispostas em frente a ela.  Você se sente bem
+relaxado.  Porque não descansar por alguns instantes?
 ~
-190 8 0 0 0 0
+190 d 0
 D0
 ~
 ~
 0 -1 19021
 S
 #19025
-Caindo no Chï¿½o~
-   NADA BOM!!! VOCï¿½ Nï¿½O ï¿½ UM Pï¿½SSARO, VOCï¿½ AGORA VAI MORRER ESBORRACHADO
-NO CHï¿½O. REZE AOS DEUSES POR UMA ESPï¿½TULA!
+Caindo no Chão~
+   NADA BOM!!! VOCÊ NÃO É UM PÁSSARO, VOCÊ AGORA VAI MORRER ESBORRACHADO
+NO CHÃO. REZE AOS DEUSES POR UMA ESPÁTULA!
 ~
-190 518 0 0 0 0
+190 bcj 0
 S
 #19026
-Dormitï¿½rio dos Guardas~
-   Parece um dormitï¿½rio de quartel com cerca de vinte camas.  Nï¿½o hï¿½ outra
-saï¿½da a nï¿½o ser para o sul.
+Dormitório dos Guardas~
+   Parece um dormitório de quartel com cerca de vinte camas.  Não há outra
+saída a não ser para o sul.
 ~
-190 8 0 0 0 0
-D0
-~
-~
-0 -1 19027
+190 d 0
 D2
 ~
 ~
 0 -1 19022
+D0
+~
+~
+0 -1 19027
 S
 #19027
 A Sala de Treinamento~
-   No meio dessa sala estï¿½o alguns equipamentos para treinamento e eles sï¿½o:
+   No meio dessa sala estão alguns equipamentos para treinamento e eles são:
 ~
-190 8 0 0 0 0
+190 d 0
 D0
 ~
 ~
@@ -436,109 +439,109 @@ D2
 S
 #19028
 Na Alameda Azul~
-   Vocï¿½ estï¿½ na pequena alameda ligada ï¿½ Rua Olmo: um caminho pavimentado
-com grandes pedras azul-chumbo e rodeado por fileiras de altas ï¿½rvores.
-   Mais adiante, vocï¿½ percebe que o caminho segue bifurcando-se em volta de
-um jardim central e novamente se une em frente a um imponente portï¿½o.
+   Você está na pequena alameda ligada à Rua Olmo: um caminho pavimentado
+com grandes pedras azul-chumbo e rodeado por fileiras de altas árvores.
+   Mais adiante, você percebe que o caminho segue bifurcando-se em volta de
+um jardim central e novamente se une em frente a um imponente portão.
 ~
-190 131092 0 0 0 1
+190 ecr 1
 D2
 ~
 ~
 0 -1 2130
-D3
-Vocï¿½ vï¿½ a Rua Olmo seguindo nessa direï¿½ï¿½o.
-~
-~
-0 -1 3124
 D7
-A Alameda continua nessa direï¿½ï¿½o.
+A Alameda continua nessa direção.
 ~
 ~
 0 -1 19029
 D8
-A Alameda continua nessa direï¿½ï¿½o.
+A Alameda continua nessa direção.
 ~
 ~
 0 -1 19030
+D3
+Você vê a Rua Olmo seguindo nessa direção.
+~
+~
+0 -1 3124
 E
 pedras azul-chumbo chumbo azul~
-As pedras se encaixam com tamanha perfeiï¿½ï¿½o que parecem formarem um ï¿½nico e
-maciï¿½o bloco.
+As pedras se encaixam com tamanha perfeição que parecem formarem um único e
+maciço bloco.
 ~
 S
 #19029
 Na Alameda Azul~
-   Vocï¿½ estï¿½ num dos dois caminhos da Alameda Azul que circundam o pequeno
-jardim central.  O chï¿½o ï¿½ inteiro pavimentado com pedras azul-chumbo
-encaixadas perfeitamente umas nas outras.  Hï¿½ um grande pilar de pedra entre
-as ï¿½rvores que ladeiam o caminho e um banco para repousar. 
-   Mais a frente vocï¿½ avista um portï¿½o.
+   Você está num dos dois caminhos da Alameda Azul que circundam o pequeno
+jardim central.  O chão é inteiro pavimentado com pedras azul-chumbo
+encaixadas perfeitamente umas nas outras.  Há um grande pilar de pedra entre
+as árvores que ladeiam o caminho e um banco para repousar. 
+   Mais a frente você avista um portão.
 ~
-190 131092 0 0 0 1
-D1
-~
-~
-0 -1 19031
+190 ecr 1
 D9
 ~
 ~
 0 -1 19028
+D1
+~
+~
+0 -1 19031
 E
-pedras azul-chumbo chumbo azul~
-As pedras encaixadas com perfeiï¿½ï¿½o parecem formar um ï¿½nico e maciï¿½o bloco.
-Talvez o nome da alameda venha de sua cor: azul-chumbo.
+pilar~
+Parece que este pilar serve como suporte para tochas.  Além de ninho para
+muitos pássaros, é claro...
 ~
 E
 banco~
-Nï¿½o parece ser muito confortï¿½vel...
+Não parece ser muito confortável...
 ~
 E
-pilar~
-Parece que este pilar serve como suporte para tochas.  Alï¿½m de ninho para
-muitos pï¿½ssaros, ï¿½ claro...
+pedras azul-chumbo chumbo azul~
+As pedras encaixadas com perfeição parecem formar um único e maciço bloco.
+Talvez o nome da alameda venha de sua cor: azul-chumbo.
 ~
 S
 #19030
 Na Alameda Azul~
-   Vocï¿½ estï¿½ num dos dois caminhos da Alameda Azul que circundam o pequeno
-jardim central.  O chï¿½o ï¿½ inteiro pavimentado com pedras azul-chumbo
-Encaixadas perfeitamente umas nas outras.  Hï¿½ um grande pilar de pedra
-entre.As ï¿½rvores que ladeiam o caminho e um banco para repousar.  
-   Mais a frente vocï¿½ avista um portï¿½o.
+   Você está num dos dois caminhos da Alameda Azul que circundam o pequeno
+jardim central.  O chão é inteiro pavimentado com pedras azul-chumbo
+Encaixadas perfeitamente umas nas outras.  Há um grande pilar de pedra
+entre.As árvores que ladeiam o caminho e um banco para repousar.  
+   Mais a frente você avista um portão.
 ~
-190 131092 0 0 0 1
-D1
-~
-~
-0 -1 19032
+190 ecr 1
 D6
 ~
 ~
 0 -1 19028
+D1
+~
+~
+0 -1 19032
 E
-pedras azul-chumbo chumbo azul~
-As pedras encaixadas com perfeiï¿½ï¿½o parecem formar um ï¿½nico e maciï¿½o bloco.
-Talvez o nome da alameda venha de sua cor: azul-chumbo.
+pilar~
+Parece que este pilar serve como suporte para tochas.  Além de ninho para
+muitos pássaros, é claro...
 ~
 E
 banco~
-Nï¿½o parece ser muito confortï¿½vel...
+Não parece ser muito confortável...
 ~
 E
-pilar~
-Parece que este pilar serve como suporte para tochas.  Alï¿½m de ninho para
-muitos pï¿½ssaros, ï¿½ claro...
+pedras azul-chumbo chumbo azul~
+As pedras encaixadas com perfeição parecem formar um único e maciço bloco.
+Talvez o nome da alameda venha de sua cor: azul-chumbo.
 ~
 S
 #19031
 Na Alameda Azul~
-   Vocï¿½ estï¿½ caminhando sobre as perfeitas pedras azul-chumbo que pavimentam
-a Alameda Azul.  Um grande nï¿½mero de altas ï¿½rvores rodeia o caminho
-dando-lhe a impressï¿½o de estar no meio de uma floresta.  Mais ï¿½ frente vocï¿½
-vï¿½ uma espï¿½cie de pï¿½tio que leva a um grande portï¿½o.
+   Você está caminhando sobre as perfeitas pedras azul-chumbo que pavimentam
+a Alameda Azul.  Um grande número de altas árvores rodeia o caminho
+dando-lhe a impressão de estar no meio de uma floresta.  Mais à frente você
+vê uma espécie de pátio que leva a um grande portão.
 ~
-190 131092 0 0 0 1
+190 ecr 1
 D3
 ~
 ~
@@ -550,12 +553,12 @@ D8
 S
 #19032
 Na Alameda Azul~
-   Vocï¿½ estï¿½ caminhando sobre as perfeitas pedras azul-chumbo que pavimentam
-a Alameda Azul.  Um grande nï¿½mero de altas ï¿½rvores rodeia o caminho
-dando-lhe a impressï¿½o de estar no meio de uma floresta.  Mais ï¿½ frente vocï¿½
-vï¿½ uma espï¿½cie de pï¿½tio que leva a um grande portï¿½o.
+   Você está caminhando sobre as perfeitas pedras azul-chumbo que pavimentam
+a Alameda Azul.  Um grande número de altas árvores rodeia o caminho
+dando-lhe a impressão de estar no meio de uma floresta.  Mais à frente você
+vê uma espécie de pátio que leva a um grande portão.
 ~
-190 131092 0 0 0 1
+190 ecr 1
 D3
 ~
 ~
@@ -566,20 +569,15 @@ D7
 0 -1 19033
 S
 #19033
-Um Pï¿½tio na Alameda~
-   Vocï¿½ estï¿½ no centro de um pï¿½tio circular e amplo, mas que ainda permanece
-protegido pelas altas ï¿½rvores que ladeiam a alameda por toda sua extensï¿½o.
-O chï¿½o continua pavimentado com as mesmas pedras de tom azul-chumbo que o
+Um Pátio na Alameda~
+   Você está no centro de um pátio circular e amplo, mas que ainda permanece
+protegido pelas altas árvores que ladeiam a alameda por toda sua extensão.
+O chão continua pavimentado com as mesmas pedras de tom azul-chumbo que o
 resto do caminho, mas subitamente interrompe exatamente abaixo de um grande
-portï¿½o de ferro.  Alï¿½m desse portï¿½o, ï¿½ leste, vocï¿½ avista ainda outro
-portï¿½o, sï¿½ que parece ser de madeira.
+portão de ferro.  Além desse portão, à leste, você avista ainda outro
+portão, só que parece ser de madeira.
 ~
-190 131092 0 0 0 1
-D1
-O lugar parece muito bem guardado....
-~
-portï¿½o~
-1 -1 19001
+190 ecr 1
 D6
 ~
 ~
@@ -588,43 +586,49 @@ D9
 ~
 ~
 0 -1 19032
+D1
+O lugar parece muito bem guardado....
+~
+portão~
+:n 1 O portão de ferro
+1 -1 19001
 E
-portï¿½o~
-O portï¿½o ï¿½ de ferro maciï¿½o, com grandes e pontiagudas setas nas
+portão~
+O portão é de ferro maciço, com grandes e pontiagudas setas nas
 extremidades.  O ferro foi muito bem trabalhado, formando folhas e flores em
-alto relevo.  Por entre as barras vocï¿½ vï¿½ do outro lado o portï¿½o de entrada
+alto relevo.  Por entre as barras você vê do outro lado o portão de entrada
 do que parece ser uma grande floresta.
 ~
 S
 #19034
 O Caminho Oculto~
-   Vocï¿½ estï¿½ em uma espï¿½cie de caminho escondido por entre altos arbustos.
-Talvez seja de propï¿½sito, talvez nï¿½o, mas dificilmente alguï¿½m desatento
-repararia nesse caminho.  A oeste vocï¿½ pode seguir por ele e descobrir o que
-hï¿½ alï¿½m dessa barreira verde, ou voltar ao Final do Belo Caminho pelo leste.
+   Você está em uma espécie de caminho escondido por entre altos arbustos.
+Talvez seja de propósito, talvez não, mas dificilmente alguém desatento
+repararia nesse caminho.  A oeste você pode seguir por ele e descobrir o que
+há além dessa barreira verde, ou voltar ao Final do Belo Caminho pelo leste.
 ~
-190 64 0 0 0 2
+190 g 2
+D3
+Você vê uma rua muito diferente do que já vira.
+~
+~
+0 -1 19047
 D1
 ~
 ~
 0 -1 19015
-D3
-Vocï¿½ vï¿½ uma rua muito diferente do que jï¿½ vira.
-~
-~
-0 -1 19047
 S
 #19035
 O Jardim de um Templo~
-   Vocï¿½ estï¿½ no grande jardim ï¿½ frente das escadarias do Templo.  Diversas
-flores forram o chï¿½o como um tapete e pequenos arbustos bem-cuidados
+   Você está no grande jardim à frente das escadarias do Templo.  Diversas
+flores forram o chão como um tapete e pequenos arbustos bem-cuidados
 espalham-se harmoniosamente entre seu ouro, escarlate, anil e as outras
-diversas cores.  Hï¿½beis mï¿½os ï¿½lficas devem tratar com muito cuidado e
-carinho desse pequeno paraï¿½so.
+diversas cores.  Hábeis mãos élficas devem tratar com muito cuidado e
+carinho desse pequeno paraíso.
 ~
-190 131136 0 0 0 2
+190 gr 2
 D0
-Vocï¿½ vï¿½ as imponentes escadarias do Templo da Lua de Prata.
+Você vê as imponentes escadarias do Templo da Lua de Prata.
 ~
 ~
 0 -1 19039
@@ -635,27 +639,27 @@ D2
 E
 flores arbustos ouro escarlate anil~
 O verde aqui parece mais verde que em qualquer outro lugar.  O ouro fulgura
-como metal, o escarlate arde como a chama, o anil ï¿½ profundo como o
-anoitecer.  Todas as cores lhe impressionam de tï¿½o vivas.  
+como metal, o escarlate arde como a chama, o anil é profundo como o
+anoitecer.  Todas as cores lhe impressionam de tão vivas.  
 ~
 S
 #19036
 Uma Calma Ruela~
-   Vocï¿½ continua andando por essa espï¿½cie de corredor entre ï¿½rvores
-altï¿½ssimas, com uma rua de pedras irregulares passando bem ao centro.  A sul
-vocï¿½ vï¿½ um caminho levando a duas altas ï¿½rvores muito juntas, que
-estranhamente parecem ser gï¿½meas.  A ruela continua a leste e oeste.
+   Você continua andando por essa espécie de corredor entre árvores
+altíssimas, com uma rua de pedras irregulares passando bem ao centro.  A sul
+você vê um caminho levando a duas altas árvores muito juntas, que
+estranhamente parecem ser gêmeas.  A ruela continua a leste e oeste.
 ~
-190 64 0 0 0 2
+190 g 2
+D2
+Você duas grandes árvores muito próximas.
+~
+~
+0 -1 19040
 D1
 ~
 ~
 0 -1 19047
-D2
-Vocï¿½ duas grandes ï¿½rvores muito prï¿½ximas.
-~
-~
-0 -1 19040
 D3
 ~
 ~
@@ -663,186 +667,187 @@ D3
 S
 #19037
 Na Escada~
-   Vocï¿½ estï¿½ subindo pela escada de madeira presa ao tronco de uma grande
-ï¿½rvore.  A menos que vocï¿½ esteja vendo coisas, a Prefeitura realmente estï¿½
-acima de sua cabeï¿½a.  Jï¿½ o chï¿½o seguro estï¿½ lï¿½ embaixo...
+   Você está subindo pela escada de madeira presa ao tronco de uma grande
+árvore.  A menos que você esteja vendo coisas, a Prefeitura realmente está
+acima de sua cabeça.  Já o chão seguro está lá embaixo...
 ~
-190 340 0 0 0 5
-D4
-Ah! Ali estï¿½ a Prefeitura...
-~
-porta~
-1 -1 19048
+190 igce 5
 D5
 ~
 ~
 0 -1 19086
+D4
+Ah! Ali está a Prefeitura...
+~
+porta~
+:n 2 a porta da Prefeitura
+1 -1 19048
 E
 prefeitura~
-Casas em ï¿½rvores... Nada mau!
+Casas em árvores... Nada mau!
 ~
 S
 #19038
 Uma Calma Ruela~
-   Vocï¿½ continua andando em um corredor entre altï¿½ssimas ï¿½rvores, com uma
-espï¿½cie de rua de pedras irregulares passando bem ao centro.  Vocï¿½ pode
+   Você continua andando em um corredor entre altíssimas árvores, com uma
+espécie de rua de pedras irregulares passando bem ao centro.  Você pode
 caminhar para leste ou norte pela ruela.
 ~
-190 64 0 0 0 2
-D1
-~
-~
-0 -1 19036
+190 g 2
 D3
 ~
 ~
 0 -1 19085
+D1
+~
+~
+0 -1 19036
 S
 #19039
 As Escadarias do Templo~
-   Vocï¿½ estï¿½ subindo pelas imponentes escadarias que levam ao Templo da Lua
-de Prata.  Os degraus sï¿½o de pedra dura, de um branco gelado com veios
-cinza-prateado.  Vocï¿½ pode continuar subindo as escadarias ou voltar para o
+   Você está subindo pelas imponentes escadarias que levam ao Templo da Lua
+de Prata.  Os degraus são de pedra dura, de um branco gelado com veios
+cinza-prateado.  Você pode continuar subindo as escadarias ou voltar para o
 jardim do Templo, a sul.
 ~
-190 131136 0 0 0 5
+190 gr 5
 D2
-Vocï¿½ vï¿½ o belo jardim do Templo.
+Você vê o belo jardim do Templo.
 ~
 ~
 0 -1 19035
 D4
-As escadarias continuam nessa direï¿½ï¿½o...
+As escadarias continuam nessa direção...
 ~
 ~
 0 -1 19053
 E
 pedras veios degraus~
-Que estranho!  Se vocï¿½ olha muito tempo para os degraus, vocï¿½ tem a
-impressï¿½o de estar vendo, na realidade, grandes blocos de gelo envoltos por
-fios de prata.  Talvez vocï¿½ deva descansar um pouco....
+Que estranho!  Se você olha muito tempo para os degraus, você tem a
+impressão de estar vendo, na realidade, grandes blocos de gelo envoltos por
+fios de prata.  Talvez você deva descansar um pouco....
 ~
 S
 #19040
-As Duas ï¿½rvores~
-   Vocï¿½ estï¿½ bem embaixo de uma das duas ï¿½rvores gï¿½meas.  Sua experiï¿½ncia
-com as altas ï¿½rvores da regiï¿½o leva-o a crer que no tronco dela vocï¿½
-encontrarï¿½ algum tipo de escada para subir.  O que vocï¿½ encontrarï¿½ lï¿½ em
+As Duas Árvores~
+   Você está bem embaixo de uma das duas árvores gêmeas.  Sua experiência
+com as altas árvores da região leva-o a crer que no tronco dela você
+encontrará algum tipo de escada para subir.  O que você encontrará lá em
 cima?
 ~
-190 64 0 0 0 3
+190 g 3
 D0
 ~
 ~
 0 -1 19036
 D3
-Ali estï¿½ a outra ï¿½rvore.
+Ali está a outra árvore.
 ~
 ~
 0 -1 19041
 D4
-A escada leva para o alto dessa ï¿½rvore.
+A escada leva para o alto dessa árvore.
 ~
 ~
 0 -1 19046
 S
 #19041
-As Duas ï¿½rvores~
-   Vocï¿½ estï¿½ bem embaixo de uma das duas ï¿½rvores gï¿½meas.  Sua experiï¿½ncia
-com as altas ï¿½rvores da regiï¿½o leva-o a crer que no tronco dela vocï¿½
-encontrarï¿½ algum tipo de escada para subir.  O que vocï¿½ encontrarï¿½ lï¿½ em
+As Duas Árvores~
+   Você está bem embaixo de uma das duas árvores gêmeas.  Sua experiência
+com as altas árvores da região leva-o a crer que no tronco dela você
+encontrará algum tipo de escada para subir.  O que você encontrará lá em
 cima?
 ~
-190 64 0 0 0 3
+190 g 3
 D1
-Ali estï¿½ a outra ï¿½rvore.
+Ali está a outra árvore.
 ~
 ~
 0 -1 19040
 D4
-A escada leva para o alto dessa ï¿½rvore.
+A escada leva para o alto dessa árvore.
 ~
 ~
 0 -1 19055
 S
 #19042
 Sobre a Ponte~
-   Vocï¿½ estï¿½ andando sobre a ponte de madeira que liga as duas margens do
+   Você está andando sobre a ponte de madeira que liga as duas margens do
 Riacho de Prata.  
 ~
-190 20 0 0 0 2
+190 ce 2
 D1
 ~
 ~
 0 -1 19045
 D3
-Vocï¿½ nï¿½o vï¿½ nada alï¿½m de escuridï¿½o...
+Você não vê nada além de escuridão...
 ~
 ~
 0 -1 19050
 S
 #19043
 Uma Calma Ruela~
-   Vocï¿½ estï¿½ andando pela calma ruela entre ï¿½rvores, tendo todo o contato
-com a natureza possï¿½vel.  Isso inclui, ï¿½ claro, borrachudos e pernilongos,
-mas mesmo isso nï¿½o interfere na beleza do lugar.  O caminho segue sul e
+   Você está andando pela calma ruela entre árvores, tendo todo o contato
+com a natureza possível.  Isso inclui, é claro, borrachudos e pernilongos,
+mas mesmo isso não interfere na beleza do lugar.  O caminho segue sul e
 leste.
 ~
-190 64 0 0 0 2
-D1
-~
-~
-0 -1 19044
+190 g 2
 D2
 ~
 ~
 0 -1 19085
+D1
+~
+~
+0 -1 19044
 E
 borrachudos pernilongos~
-Os elfos devem ser mestres na sï¿½ntese de repelentes...
+Os elfos devem ser mestres na síntese de repelentes...
 ~
 S
 #19044
 Uma Calma Ruela~
-   Vocï¿½ continua andando em um corredor entre altï¿½ssimas ï¿½rvores, com uma
-espï¿½cie de rua de pedras irregulares passando bem ao centro.  A norte vocï¿½
-estarï¿½ em frente ï¿½ ponte e a oeste vocï¿½ volta pela ruela.
+   Você continua andando em um corredor entre altíssimas árvores, com uma
+espécie de rua de pedras irregulares passando bem ao centro.  A norte você
+estará em frente à ponte e a oeste você volta pela ruela.
 ~
-190 64 0 0 0 2
-D0
-~
-~
-0 -1 19045
+190 g 2
 D3
 ~
 ~
 0 -1 19043
+D0
+~
+~
+0 -1 19045
 S
 #19045
-Em Frente ï¿½ Ponte~
-   Vocï¿½ estï¿½ no fim da ruela entre ï¿½rvores e em frente a uma ponte que
-atravessa um lï¿½mpido riacho.  Uma pequena placa em frente ï¿½ ponte parece
-indicar algo.  Vocï¿½ pode voltar, seguindo sul, subir na ponte, a oeste ou ir
-a norte, em direï¿½ï¿½o a uma grande ï¿½rvore.
+Em Frente à Ponte~
+   Você está no fim da ruela entre árvores e em frente a uma ponte que
+atravessa um límpido riacho.  Uma pequena placa em frente à ponte parece
+indicar algo.  Você pode voltar, seguindo sul, subir na ponte, a oeste ou ir
+a norte, em direção a uma grande árvore.
 ~
-190 64 0 0 0 2
-D0
-Ali estï¿½ uma ï¿½rvore bem grande...!
-~
-~
-0 -1 19051
+190 g 2
 D2
 ~
 ~
 0 -1 19044
 D3
-Vocï¿½ vï¿½ uma bela ponte arqueada feita de madeira pintada de branco.
+Você vê uma bela ponte arqueada feita de madeira pintada de branco.
 ~
 ~
 0 -1 19042
+D0
+Ali está uma árvore bem grande...!
+~
+~
+0 -1 19051
 E
 placa~
-Na placa branca vocï¿½ lï¿½ escrito com a bela caligrafia dos elfos:
+Na placa branca você lê escrito com a bela caligrafia dos elfos:
 
         ________________________
        /'                     '/
@@ -861,657 +866,663 @@ Bastante sugestivo...
 ~
 S
 #19046
-Na Escada Entrelaï¿½ada~
-   Como vocï¿½ imaginou, uma escada conduz atï¿½ o alto da ï¿½rvore, passando por
-entre seus vï¿½rios galhos.  Pode ser um pouco difï¿½cil subir por ela, arriscar
+Na Escada Entrelaçada~
+   Como você imaginou, uma escada conduz até o alto da árvore, passando por
+entre seus vários galhos.  Pode ser um pouco difícil subir por ela, arriscar
 ser arranhado ou atacado por algum animal, invadir a casa de algum elfo
-mal-humorado ou ainda cair de cabeï¿½a no chï¿½o, mas talvez
-valha a pena... Se nï¿½o, vocï¿½ pode descer e pisar no chï¿½o seguro.
+mal-humorado ou ainda cair de cabeça no chão, mas talvez
+valha a pena... Se não, você pode descer e pisar no chão seguro.
 ~
-190 131328 0 0 0 5
+190 ir 5
 D4
-A escada vai atï¿½ o alto da copa da ï¿½rvore...
+A escada vai até o alto da copa da árvore...
 ~
 ~
 0 -1 19056
 D5
-Vocï¿½ vï¿½ o chï¿½o seguro..
+Você vê o chão seguro..
 ~
 ~
 0 -1 19040
 E
 escada~
-A escada ï¿½ feita de cipï¿½s entrelaï¿½ados, dando uma aparï¿½ncia rï¿½stica, sem
+A escada é feita de cipós entrelaçados, dando uma aparência rústica, sem
 deixar de parecer resistente.
 ~
 S
 #19047
 Uma Calma Ruela~
-   Que lugar belo!  Vocï¿½ estï¿½ em um corredor entre altï¿½ssimas ï¿½rvores, com
-uma espï¿½cie de rua de pedras irregulares passando bem ao centro.  Vocï¿½
-repara que abaixo na maior ï¿½rvore, a sul, foi pregada uma grande placa.
-Vocï¿½ pode seguir a sul, em direï¿½ï¿½o ï¿½ ï¿½rvore, continuar na ruela indo a norte
-ou oeste ou ainda voltar para o comeï¿½o do caminho, a leste.
+   Que lugar belo!  Você está em um corredor entre altíssimas árvores, com
+uma espécie de rua de pedras irregulares passando bem ao centro.  Você
+repara que abaixo na maior árvore, a sul, foi pregada uma grande placa.
+Você pode seguir a sul, em direção à árvore, continuar na ruela indo a norte
+ou oeste ou ainda voltar para o começo do caminho, a leste.
 ~
-190 64 0 0 0 2
-D0
-Vocï¿½ vï¿½ o belo jardim do Templo da Lua de Prata.
-~
-~
-0 -1 19035
+190 g 2
 D1
 ~
 ~
 0 -1 19034
+D0
+Você vê o belo jardim do Templo da Lua de Prata.
+~
+~
+0 -1 19035
 D2
-Vocï¿½ vï¿½ uma enorme ï¿½rvore... Mas e a prefeitura?
+Você vê uma enorme árvore... Mas e a prefeitura?
 ~
 ~
 0 -1 19086
 D3
-A ruela parece seguir nessa direï¿½ï¿½o.
+A ruela parece seguir nessa direção.
 ~
 ~
 0 -1 19036
 S
 #19048
 A Prefeitura~
-   Vocï¿½ estï¿½ em uma espï¿½cie de casa construï¿½da ao redor do grosso tronco de
-uma ï¿½rvore.  Nï¿½o hï¿½ cantos, pois o recinto ï¿½ circular.  Por todas as paredes
-vocï¿½ vï¿½ prateleiras abarrotadas de livros, diplomas e mapas.  Em cima de uma
-grande escrivaninha de carvalho, pilhas e mais pilhas de papï¿½is foram
+   Você está em uma espécie de casa construída ao redor do grosso tronco de
+uma árvore.  Não há cantos, pois o recinto é circular.  Por todas as paredes
+você vê prateleiras abarrotadas de livros, diplomas e mapas.  Em cima de uma
+grande escrivaninha de carvalho, pilhas e mais pilhas de papéis foram
 deixadas quase caindo umas sobre as outras, ocultando qualquer coisa que
-esteja atrï¿½s delas.  A ï¿½nica saï¿½da segura daqui ï¿½ descendo pela escada.
+esteja atrás delas.  A única saída segura daqui é descendo pela escada.
 ~
-190 8 0 0 0 0
+190 d 0
 D5
 ~
 porta~
+:n 2 a porta da Prefeitura
 1 -1 19037
 S
 #19050
 Do Outro Lado da Ponte~
-   Vocï¿½ atravessou a ponte.  Daqui para frente, nada ï¿½ certo.  Aqui tudo ï¿½
-escuro, mas vocï¿½ tem a impressï¿½o de se encontrar em uma sombria e abafada
-floresta.  A ï¿½nica saï¿½da ï¿½ para oeste.
+   Você atravessou a ponte.  Daqui para frente, nada é certo.  Aqui tudo é
+escuro, mas você tem a impressão de se encontrar em uma sombria e abafada
+floresta.  A única saída é para oeste.
 ~
-190 262241 0 0 0 3
+190 afgs 3
 D1
 A ponte parece lhe chamar...
 ~
 ~
 0 -1 19042
 D3
-Vocï¿½ nï¿½o consegue ver nada...
+Você não consegue ver nada...
 ~
 ~
 0 -1 19062
 S
 #19051
-Sob a ï¿½rvore~
-   Vocï¿½ estï¿½ sob a sombra de uma imensa e velha ï¿½rvore quase ï¿½s margens do
-Riacho de Prata.  Olhando-a bem, vocï¿½ chega a conclusï¿½o de que muita
-sabedoria estï¿½ acumulada por baixo daquela grossa casca marrom-acinzentada e
-que poderia aprender muito nesse lugar.  Vocï¿½ pode subir por uma escada ou
-voltar em frente ï¿½ ponte pelo sul.
+Sob a Árvore~
+   Você está sob a sombra de uma imensa e velha árvore quase às margens do
+Riacho de Prata.  Olhando-a bem, você chega a conclusão de que muita
+sabedoria está acumulada por baixo daquela grossa casca marrom-acinzentada e
+que poderia aprender muito nesse lugar.  Você pode subir por uma escada ou
+voltar em frente à ponte pelo sul.
 ~
-190 131328 0 0 0 3
+190 ir 3
 D2
 ~
 ~
 0 -1 19045
 D4
-Vocï¿½ pode subir pela escada nessa direï¿½ï¿½o...
+Você pode subir pela escada nessa direção...
 ~
 ~
 0 -1 19078
 S
 #19052
-A Casa na ï¿½rvore~
-   Vocï¿½ subiu pela escada e agora se encontra bem no centro de uma casa
-muito velha, tipicamente construï¿½da como as casas em ï¿½rvores que os elfos da
-regiï¿½o gostam de morar.  Por todos os lados vocï¿½ vï¿½ potes, tubos e todo tipo
-de recipientes de vidro com as mais diversas substï¿½ncias.  Ao lado de uma
-pesada estante, vocï¿½ vï¿½ um grande mapa.
+A Casa na Árvore~
+   Você subiu pela escada e agora se encontra bem no centro de uma casa
+muito velha, tipicamente construída como as casas em árvores que os elfos da
+região gostam de morar.  Por todos os lados você vê potes, tubos e todo tipo
+de recipientes de vidro com as mais diversas substâncias.  Ao lado de uma
+pesada estante, você vê um grande mapa.
 ~
-190 8 0 0 0 0
+190 d 0
 D5
 ~
 porta~
+:n 2 a porta da casa
 1 -1 19078
 E
-mapa~
-O mapa parece indicar a localizaï¿½ï¿½o dos templos das Quatro Luas de Vitï¿½lia.
-Um deles, o da Lua de Prata, estï¿½ circulado na regiï¿½o que parece ser aqui,
-nos Bosques dos Elfos.
+estante~
+A estante de madeira é levemente curva para encaixar-se com perfeição nas
+paredes circulares da casa
 ~
 E
-estante~
-A estante de madeira ï¿½ levemente curva para encaixar-se com perfeiï¿½ï¿½o nas
-paredes circulares da casa
+mapa~
+O mapa parece indicar a localização dos templos das Quatro Luas de Vitália.
+Um deles, o da Lua de Prata, está circulado na região que parece ser aqui,
+nos Bosques dos Elfos.
 ~
 S
 #19053
 As Escadarias do Templo~
-   Vocï¿½ estï¿½ subindo pelas imponentes escadarias que levam ao Templo da Lua
-de Prata.  Os degraus sï¿½o de pedra dura, de um branco gelado com veios
-cinza-prateado.  Daqui vocï¿½ jï¿½ avista a majestosa fachada do templo, que se
-encontra mais acima.  Vocï¿½ pode voltar descendo os degraus.
+   Você está subindo pelas imponentes escadarias que levam ao Templo da Lua
+de Prata.  Os degraus são de pedra dura, de um branco gelado com veios
+cinza-prateado.  Daqui você já avista a majestosa fachada do templo, que se
+encontra mais acima.  Você pode voltar descendo os degraus.
 ~
-190 131136 0 0 0 5
-D4
-Vocï¿½ o majestoso Templo da Lua de Prata.
-~
-~
-0 -1 19054
+190 gr 5
 D5
 ~
 ~
 0 -1 19039
-E
-fachada templo~
-Tudo remete ï¿½ beleza da Lua de Prata e seu ar gï¿½lido.
+D4
+Você o majestoso Templo da Lua de Prata.
 ~
+~
+0 -1 19054
 E
 pedras veios degraus~
-Que estranho!  Se vocï¿½ olha muito tempo para os degraus, vocï¿½ tem a
-impressï¿½o de estar vendo, na realidade, grandes blocos de gelo envoltos por
-fios de prata.  Talvez vocï¿½ deva descansar um pouco....
+Que estranho!  Se você olha muito tempo para os degraus, você tem a
+impressão de estar vendo, na realidade, grandes blocos de gelo envoltos por
+fios de prata.  Talvez você deva descansar um pouco....
+~
+E
+fachada templo~
+Tudo remete à beleza da Lua de Prata e seu ar gélido.
 ~
 S
-#19054
+#19054~
 O Templo da Lua de Prata~
-   Finalmente vocï¿½ chegou ao Templo propriamente dito.  Grandes colunas
+   Finalmente você chegou ao Templo propriamente dito.  Grandes colunas
 brancas sustentam o teto abobadado, onde na parte central encontra-se uma
-das maiores pedras que vocï¿½ jï¿½ viu.  Hï¿½ um grande altar abaixo dessa pedra
-e, rodeando-o, grandes castiï¿½ais de prata.  O Templo parece ser enorme e
-muito interessante de se visitar, mas vocï¿½ sente que nï¿½o avanï¿½arï¿½ mais do
-que atï¿½ aqui.
+das maiores pedras que você já viu.  Há um grande altar abaixo dessa pedra
+e, rodeando-o, grandes castiçais de prata.  O Templo parece ser enorme e
+muito interessante de se visitar, mas você sente que não avançará mais do
+que até aqui.
 ~
-190 156 0 0 0 0
+190 hdec 0
 D5
-Vocï¿½ vï¿½ as escadarias do Templo.
+Você vê as escadarias do Templo.
 ~
 ~
 0 -1 19053
 E
-abï¿½bada teto pedra~
-O teto capta com perfeiï¿½ï¿½o a beleza da noite.  A pedra nada mais ï¿½ do que
+abóbada teto pedra~
+O teto capta com perfeição a beleza da noite.  A pedra nada mais é do que
 uma imensa esfera que brilha emitindo uma luz pulsante.  Ela deve estar
 relacionada a algum ritual executado aqui...
 ~
 S
 #19055
-Na Escada Entrelaï¿½ada~
-   Como vocï¿½ imaginou, uma escada conduz atï¿½ o alto da ï¿½rvore, passando por
-entre seus vï¿½rios galhos.  Pode ser um pouco difï¿½cil subir por ela, arriscar
+Na Escada Entrelaçada~
+   Como você imaginou, uma escada conduz até o alto da árvore, passando por
+entre seus vários galhos.  Pode ser um pouco difícil subir por ela, arriscar
 ser arranhado ou atacado por algum animal, invadir a casa de algum elfo
-mau-humorado ou ainda cair de cabeï¿½a no chï¿½o, mas talvez valha a pena...  Se
-nï¿½o, vocï¿½ pode descer e pisar no chï¿½o seguro.
+mau-humorado ou ainda cair de cabeça no chão, mas talvez valha a pena...  Se
+não, você pode descer e pisar no chão seguro.
 ~
-190 131328 0 0 0 5
+190 ir 5
 D4
-A escada vai atï¿½ o alto da copa da ï¿½rvore...
+A escada vai até o alto da copa da árvore...
 ~
 ~
 0 -1 19057
 D5
-Vocï¿½ vï¿½ o chï¿½o seguro..
+Você vê o chão seguro..
 ~
 ~
 0 -1 19041
 E
 escada~
-A escada ï¿½ feita de cipï¿½s entrelaï¿½ados, dando uma aparï¿½ncia rï¿½stica, sem
+A escada é feita de cipós entrelaçados, dando uma aparência rústica, sem
 deixar de parecer resistente.
 ~
 S
 #19056
-Na Escada Entrelaï¿½ada~
-   Vocï¿½ continua subindo pela escada de cipï¿½s que leva ao topo da ï¿½rvore.
-Os galhos batem em sua cabeï¿½a sem piedade e o tronco parece querer esfolar
-suas mï¿½os...  Talvez seja apenas a ï¿½rvore tentando expulsar um estranho.
-Acima de vocï¿½ jï¿½ ï¿½ possï¿½vel ver uma construï¿½ï¿½o, mas se vocï¿½ nï¿½o quiser
+Na Escada Entrelaçada~
+   Você continua subindo pela escada de cipós que leva ao topo da árvore.
+Os galhos batem em sua cabeça sem piedade e o tronco parece querer esfolar
+suas mãos...  Talvez seja apenas a árvore tentando expulsar um estranho.
+Acima de você já é possível ver uma construção, mas se você não quiser
 arriscar pode descer pela escada.
 ~
-190 131328 0 0 0 5
+190 ir 5
 D4
-Vocï¿½ vï¿½ uma casa de madeira bem no alto da copa.
+Você vê uma casa de madeira bem no alto da copa.
 ~
 ~
 0 -1 19058
 D5
-Como aqui ï¿½ alto!
+Como aqui é alto!
 ~
 ~
 0 -1 19056
 S
 #19057
-Na Escada Entrelaï¿½ada~
-   Vocï¿½ continua subindo pela escada de cipï¿½s que leva ao topo da ï¿½rvore.
-Os galhos batem em sua cabeï¿½a sem piedade e o tronco parece querer esfolar
-suas mï¿½os...  Talvez seja apenas a ï¿½rvore tentando expulsar um estranho.
-Acima de vocï¿½ jï¿½ ï¿½ possï¿½vel ver uma construï¿½ï¿½o, mas se vocï¿½ nï¿½o quiser
+Na Escada Entrelaçada~
+   Você continua subindo pela escada de cipós que leva ao topo da árvore.
+Os galhos batem em sua cabeça sem piedade e o tronco parece querer esfolar
+suas mãos...  Talvez seja apenas a árvore tentando expulsar um estranho.
+Acima de você já é possível ver uma construção, mas se você não quiser
 arriscar pode descer pela escada.
 ~
-190 131328 0 0 0 5
+190 ir 5
 D4
-Vocï¿½ vï¿½ uma casa de madeira bem no alto da copa.
+Você vê uma casa de madeira bem no alto da copa.
 ~
 ~
 0 -1 19059
 D5
-Como aqui ï¿½ alto!
+Como aqui é alto!
 ~
 ~
 0 -1 19055
 S
 #19058
 Uma Casa Geminada~
-   Vocï¿½ estï¿½ na varanda de uma simpï¿½tica casinha de madeira construï¿½da em
-volta do tronco de uma enorme ï¿½rvore.  Aqui tudo ï¿½ verde, o ar muito puro e
-o som dos pï¿½ssaros cantando parece estar mais perto e atï¿½ mais melodioso.
-Quase colada a casa vocï¿½ vï¿½ outra idï¿½ntica, mas na ï¿½rvore ao lado.  Vocï¿½
-pode ir a oeste, na outra ï¿½rvore, descer pela corda ou seguir sul, entrando
+   Você está na varanda de uma simpática casinha de madeira construída em
+volta do tronco de uma enorme árvore.  Aqui tudo é verde, o ar muito puro e
+o som dos pássaros cantando parece estar mais perto e até mais melodioso.
+Quase colada a casa você vê outra idêntica, mas na árvore ao lado.  Você
+pode ir a oeste, na outra árvore, descer pela corda ou seguir sul, entrando
 na casa.
 ~
-190 131072 0 0 0 2
-D2
-~
-porta~
-1 -1 19060
+190 r 2
 D3
-Vocï¿½ vï¿½ a varanda da casa ao lado, na outra ï¿½rvore.
+Você vê a varanda da casa ao lado, na outra árvore.
 ~
 ~
 0 -1 19059
+D2
+~
+porta~
+:n 2 A porta da casa
+1 -1 19060
 D5
-Como aqui ï¿½ alto!
+Como aqui é alto!
 ~
 ~
 0 -1 19056
 S
 #19059
 Uma Casa Geminada~
-   Vocï¿½ estï¿½ na varanda de uma simpï¿½tica casinha de madeira construï¿½da em
-volta do tronco de uma enorme ï¿½rvore.  Aqui tudo ï¿½ verde, o ar muito puro e
-o som dos pï¿½ssaros cantando parece estar mais perto e atï¿½ mais melodioso.
-Quase colada a casa vocï¿½ vï¿½ outra idï¿½ntica, mas na ï¿½rvore ao lado.  Vocï¿½
-pode ir a leste, na outra ï¿½rvore, descer pela corda ou seguir sul, entrando
+   Você está na varanda de uma simpática casinha de madeira construída em
+volta do tronco de uma enorme árvore.  Aqui tudo é verde, o ar muito puro e
+o som dos pássaros cantando parece estar mais perto e até mais melodioso.
+Quase colada a casa você vê outra idêntica, mas na árvore ao lado.  Você
+pode ir a leste, na outra árvore, descer pela corda ou seguir sul, entrando
 na casa.
 ~
-190 131072 0 0 0 2
+190 r 2
 D1
-Vocï¿½ vï¿½ a varanda da casa ao lado, na outra ï¿½rvore.
+Você vê a varanda da casa ao lado, na outra árvore.
 ~
 ~
 0 -1 19058
 D2
 ~
 porta~
+:n 2 A porta da casa
 1 -1 19061
 D5
-Como aqui ï¿½ alto!
+Como aqui é alto!
 ~
 ~
 0 -1 19057
 S
 #19060
 Dentro da Casa~
-   Vocï¿½ estï¿½ em um amplo cï¿½modo circular de paredes e teto de madeira.  O
-chï¿½o ï¿½ coberto por um tapete verde muito macio, lembrando musgo.  O tronco
-da ï¿½rvore passa intacto por dentro da casa seus galhos parecem dividi-la em
-aposentos.  Os mï¿½veis sï¿½o rï¿½sticos, mas muito bem talhados em madeira clara.
-O que mais lhe chama a atenï¿½ï¿½o ï¿½ o enorme nï¿½mero de prateleiras abarrotadas
-de livros que estï¿½o por todos os lados.  Indo a norte, vocï¿½ deixa a casa.
+   Você está em um amplo cômodo circular de paredes e teto de madeira.  O
+chão é coberto por um tapete verde muito macio, lembrando musgo.  O tronco
+da árvore passa intacto por dentro da casa seus galhos parecem dividi-la em
+aposentos.  Os móveis são rústicos, mas muito bem talhados em madeira clara.
+O que mais lhe chama a atenção é o enorme número de prateleiras abarrotadas
+de livros que estão por todos os lados.  Indo a norte, você deixa a casa.
 ~
-190 131080 0 0 0 0
+190 dr 0
 D0
 ~
 porta~
+:n 2 A porta da casa
 1 -1 19058
 S
 #19061
 Dentro da Casa~
-   Vocï¿½ estï¿½ em um amplo cï¿½modo circular de paredes e teto de madeira.  O
-chï¿½o ï¿½ coberto por um tapete verde muito macio, lembrando musgo.  O tronco
-da ï¿½rvore passa intacto por dentro da casa seus galhos parecem dividi-la em
-aposentos.  Os mï¿½veis sï¿½o rï¿½sticos, mas muito bem talhados em madeira
-escura.  O que mais lhe chama a atenï¿½ï¿½o ï¿½ o enorme nï¿½mero de pergaminhos
-espalhados por todos os lados.  Indo a norte, vocï¿½ deixa a casa.
+   Você está em um amplo cômodo circular de paredes e teto de madeira.  O
+chão é coberto por um tapete verde muito macio, lembrando musgo.  O tronco
+da árvore passa intacto por dentro da casa seus galhos parecem dividi-la em
+aposentos.  Os móveis são rústicos, mas muito bem talhados em madeira
+escura.  O que mais lhe chama a atenção é o enorme número de pergaminhos
+espalhados por todos os lados.  Indo a norte, você deixa a casa.
 ~
-190 131080 0 0 0 0
+190 dr 0
 D0
 ~
 porta~
+:n 2 A porta da casa
 1 -1 19059
 S
 #19062
 A Floresta dos Perdidos~
-   Vocï¿½ estï¿½ caminhando no solo pegajoso dessa estranha floresta.
-Dificilmente vocï¿½ enxerga algum feixe de luz, mas ainda ï¿½ possï¿½vel enxergar
+   Você está caminhando no solo pegajoso dessa estranha floresta.
+Dificilmente você enxerga algum feixe de luz, mas ainda é possível enxergar
 a trilha a sua frente.
 ~
-190 262241 0 0 0 3
-D0
-Vocï¿½ nï¿½o consegue ver nada...
-~
-~
-0 -1 19063
-D2
-Sï¿½ hï¿½ escuridï¿½o...
-~
-~
-0 -1 19065
-D3
-Vocï¿½ vï¿½ menos ainda...
-~
-~
-0 -1 19064
-D6
-Sï¿½ hï¿½ escuridï¿½o...
-~
-~
-0 -1 19082
+190 afgs 3
 D7
-Vocï¿½ nï¿½o consegue ver nada...
+Você não consegue ver nada...
 ~
 ~
 0 -1 19066
-D8
-Sï¿½ hï¿½ escuridï¿½o...
+D0
+Você não consegue ver nada...
 ~
 ~
-0 -1 19084
+0 -1 19063
+D3
+Você vê menos ainda...
+~
+~
+0 -1 19064
 D9
-Vocï¿½ vï¿½ menos ainda...
+Você vê menos ainda...
 ~
 ~
 0 -1 19067
+D2
+Só há escuridão...
+~
+~
+0 -1 19065
+D6
+Só há escuridão...
+~
+~
+0 -1 19082
+D8
+Só há escuridão...
+~
+~
+0 -1 19084
 S
 #19063
 A Floresta dos Perdidos~
-   Vocï¿½ estï¿½ caminhando sem rumo pela trilha quase imperceptï¿½vel da
-floresta.  O ar aqui ï¿½ pesado e ï¿½mido demais.  Vocï¿½ se sente constantemente
-vigiado.  Hï¿½ apenas duas saï¿½das aqui: norte e leste.
+   Você está caminhando sem rumo pela trilha quase imperceptível da
+floresta.  O ar aqui é pesado e úmido demais.  Você se sente constantemente
+vigiado.  Há apenas duas saídas aqui: norte e leste.
 ~
-190 262241 0 0 0 3
+190 afgs 3
 D0
-Sï¿½ hï¿½ escuridï¿½o...
+Só há escuridão...
 ~
 ~
 0 -1 19068
 D1
-Sï¿½ hï¿½ escuridï¿½o...
+Só há escuridão...
 ~
 ~
 0 -1 19062
 S
 #19064
 A Floresta dos Perdidos~
-   Vocï¿½ estï¿½ caminhando sem saber para onde vai e de onde vem na trilha da
-floresta.  O ar pesado e ï¿½mido demais parece transmitir, alï¿½m de tudo, uma
-hostilidade vinda de nï¿½o se sabe onde.
+   Você está caminhando sem saber para onde vai e de onde vem na trilha da
+floresta.  O ar pesado e úmido demais parece transmitir, além de tudo, uma
+hostilidade vinda de não se sabe onde.
 ~
-190 262241 0 0 0 3
-D0
-Sï¿½ hï¿½ escuridï¿½o e silï¿½ncio...
-~
-~
-0 -1 19070
+190 afgs 3
 D1
-Tudo o que vocï¿½ vï¿½ sï¿½o sombras...
+Tudo o que você vê são sombras...
 ~
 ~
 0 -1 19062
+D0
+Sá há escuridão e silêncio...
+~
+~
+0 -1 19070
 D2
-Sï¿½ hï¿½ escuridï¿½o e silï¿½ncio...
+Só há escuridão e silêncio...
 ~
 ~
 0 -1 19071
 S
 #19065
 A Floresta dos Perdidos~
-   Vocï¿½ estï¿½ caminhando sem saber para onde vai e de onde vem na trilha da
-floresta.  O ar pesado e ï¿½mido demais parece transmitir, alï¿½m de tudo, uma
-hostilidade vinda de nï¿½o se sabe onde.  Hï¿½ apenas duas saï¿½das aqui: norte e
+   Você está caminhando sem saber para onde vai e de onde vem na trilha da
+floresta.  O ar pesado e úmido demais parece transmitir, além de tudo, uma
+hostilidade vinda de não se sabe onde.  Há apenas duas saídas aqui: norte e
 sul.
 ~
-190 262241 0 0 0 3
+190 afgs 3
 D0
-Vocï¿½ nï¿½o consegue ver nada...
+Você não consegue ver nada...
 ~
 ~
 0 -1 19062
 D2
-Vocï¿½ nï¿½o consegue ver nada...
+Você não consegue ver nada...
 ~
 ~
 0 -1 19068
 S
 #19066
 A Floresta dos Perdidos~
-   Vocï¿½ continua a caminhar pela trilha na floresta.  A luz parece cada vez
-mais distante e vocï¿½ se arrepende por nï¿½o ter prestado atenï¿½ï¿½o ao aviso na
-ponte.  Nï¿½o hï¿½ ruï¿½dos aqui, sï¿½ o som de seus passos...
+   Você continua a caminhar pela trilha na floresta.  A luz parece cada vez
+mais distante e você se arrepende por não ter prestado atenção ao aviso na
+ponte.  Não há ruídos aqui, só o som de seus passos...
 ~
-190 262241 0 0 0 3
+190 afgs 3
+D9
+Você não vê nada... Tudo está muito escuro e silencioso...
+~
+~
+0 -1 19062
 D7
-Vocï¿½ nï¿½o vï¿½ nada... Tudo estï¿½ muito escuro e silencioso...
+Você não vê nada... Tudo está muito escuro e silencioso...
 ~
 ~
 0 -1 19069
-D9
-Vocï¿½ nï¿½o vï¿½ nada... Tudo estï¿½ muito escuro e silencioso...
-~
-~
-0 -1 19062
 S
 #19067
 A Floresta dos Perdidos~
-   Vocï¿½ estï¿½ caminhando sem saber para onde vai e de onde vem na trilha da
-floresta.  O ar pesado e ï¿½mido demais parece transmitir, alï¿½m de tudo, uma
-hostilidade vinda de nï¿½o se sabe onde.  A escuridï¿½o parece esconder alguma
+   Você está caminhando sem saber para onde vai e de onde vem na trilha da
+floresta.  O ar pesado e úmido demais parece transmitir, além de tudo, uma
+hostilidade vinda de não se sabe onde.  A escuridão parece esconder alguma
 coisa tenebrosa...
 ~
-190 262241 0 0 0 3
+190 afgs 3
 D7
-Vocï¿½ nï¿½o consegue ver nada...
+Você não consegue ver nada...
 ~
 ~
 0 -1 19062
 D9
-Vocï¿½ nï¿½o consegue ver nada...
+Você não consegue ver nada...
 ~
 ~
 0 -1 19069
 S
 #19068
 A Floresta dos Perdidos~
-   Vocï¿½ estï¿½ caminhando pela Floresta dos Perdidos.  O nome ï¿½ sugestivo
-demais para lhe deixar menos apreensivo do que antes...  Vocï¿½ nï¿½o vï¿½ quase
-nada, mas sente muita coisa, e definitivamente, nï¿½o ï¿½ bem-vindo aqui...
+   Você está caminhando pela Floresta dos Perdidos.  O nome é sugestivo
+demais para lhe deixar menos apreensivo do que antes...  Você não vê quase
+nada, mas sente muita coisa, e definitivamente, não é bem-vindo aqui...
 ~
-190 262241 0 0 0 3
+190 afgs 3
 D0
-Tudo o que vocï¿½ vï¿½ sï¿½o sombras...
+Tudo o que você vê são sombras...
 ~
 ~
 0 -1 19065
-D1
-Tudo o que vocï¿½ vï¿½ sï¿½o sombras...
-~
-~
-0 -1 19069
 D2
-Tudo o que vocï¿½ vï¿½ sï¿½o sombras...
+Tudo o que você vê são sombras...
 ~
 ~
 0 -1 19063
 D3
-Tudo o que vocï¿½ vï¿½ sï¿½o sombras...
+Tudo o que você vê são sombras...
 ~
 ~
 0 -1 19083
+D1
+Tudo o que você vê são sombras...
+~
+~
+0 -1 19069
 S
 #19069
 A Floresta dos Perdidos~
-   Vocï¿½ estï¿½ caminhando pela Floresta dos Perdidos.  O nome ï¿½ sugestivo
-demais para lhe deixar menos apreensivo do que antes...  Vocï¿½ nï¿½o vï¿½ quase
-nada, mas sente muita coisa, e definitivamente, nï¿½o ï¿½ bem-vindo aqui...
+   Você está caminhando pela Floresta dos Perdidos.  O nome é sugestivo
+demais para lhe deixar menos apreensivo do que antes...  Você não vê quase
+nada, mas sente muita coisa, e definitivamente, não é bem-vindo aqui...
 ~
-190 262241 0 0 0 3
-D1
-Sï¿½ hï¿½ escuridï¿½o...
-~
-~
-0 -1 19083
-D3
-Sï¿½ hï¿½ escuridï¿½o...
-~
-~
-0 -1 19068
+190 afgs 3
 D7
-Sï¿½ hï¿½ escuridï¿½o...
+Só há escuridão...
 ~
 ~
 0 -1 19067
 D9
-Sï¿½ hï¿½ escuridï¿½o...
+Só há escuridão...
 ~
 ~
 0 -1 19066
+D1
+Só há escuridão...
+~
+~
+0 -1 19083
+D3
+Só há escuridão...
+~
+~
+0 -1 19068
 S
 #19070
 A Floresta dos Perdidos~
-   Vocï¿½ caminha (caminha nï¿½o, tropeï¿½a) sem rumo na trilha dentro da
+   Você caminha (caminha não, tropeça) sem rumo na trilha dentro da
 floresta.  As coisas parecem melhorar, pois alguns feixes de luz conseguem
-ultrapassar a cobertura de ï¿½rvores e iluminar um pouco o caminho.  Vocï¿½ pode
+ultrapassar a cobertura de árvores e iluminar um pouco o caminho.  Você pode
 ir a oeste ou sul.
 ~
-190 262241 0 0 0 3
-D2
-Sï¿½ hï¿½ escuridï¿½o e silï¿½ncio...
-~
-~
-0 -1 19064
+190 afgs 3
 D3
-Os feixes de luz sï¿½o fracos demais para permitir que se veja algo...
+Os feixes de luz são fracos demais para permitir que se veja algo...
 ~
 ~
 0 -1 19072
-S
-#19071
-A Floresta dos Perdidos~
-   Vocï¿½ estï¿½ caminhando pela escura trilha na Floresta dos Perdidos.  O
-trecho estï¿½ um pouco menos difï¿½cil agora que alguns feixes de luz atravessam
-a espessa cobertura de ï¿½rvores e vocï¿½ consegue enxergar parte do caminho.
-As saï¿½das sï¿½o oeste e norte.
-~
-190 262241 0 0 0 3
-D0
-Sï¿½ hï¿½ escuridï¿½o e silï¿½ncio...
+D2
+Só há escuridão e silêncio...
 ~
 ~
 0 -1 19064
+S
+#19071
+A Floresta dos Perdidos~
+   Você está caminhando pela escura trilha na Floresta dos Perdidos.  O
+trecho está um pouco menos difícil agora que alguns feixes de luz atravessam
+a espessa cobertura de árvores e você consegue enxergar parte do caminho.
+As saídas são oeste e norte.
+~
+190 afgs 3
 D3
-Os feixes de luz sï¿½o fracos demais para permitir que se veja algo...
+Os feixes de luz são fracos demais para permitir que se veja algo...
 ~
 ~
 0 -1 19073
+D0
+Só há escuridão e silêncio...
+~
+~
+0 -1 19064
 S
 #19072
 A Floresta dos Perdidos~
-   Vocï¿½ caminha pelo que supï¿½e ser o mais feliz (!?) trecho da floresta.
-Aqui, a luz consegue chegar mais intensamente e as ï¿½rvores parecem menos
-hostis.  Vocï¿½ pode seguir sul ou leste.
+   Você caminha pelo que supõe ser o mais feliz (!?) trecho da floresta.
+Aqui, a luz consegue chegar mais intensamente e as árvores parecem menos
+hostis.  Você pode seguir sul ou leste.
 ~
-190 262241 0 0 0 3
+190 afgs 3
 D1
-Tudo o que vocï¿½ vï¿½ sï¿½o sombras e mais nada...
+Tudo o que você vê são sombras e mais nada...
 ~
 ~
 0 -1 19070
 D2
-A luz ï¿½ pouca ainda...
+A luz é pouca ainda...
 ~
 ~
 0 -1 19074
 S
 #19073
 A Floresta dos Perdidos~
-   Vocï¿½ caminha por um trecho da floresta mais amplamente iluminado.  Aqui o
-ar ï¿½ mais quente e menos opressivo, quase reconfortador.  As saï¿½das sï¿½o
+   Você caminha por um trecho da floresta mais amplamente iluminado.  Aqui o
+ar é mais quente e menos opressivo, quase reconfortador.  As saídas são
 norte e leste.
 ~
-190 262241 0 0 0 3
-D0
-A luz ï¿½ pouca ainda...
-~
-~
-0 -1 19074
+190 afgs 3
 D1
-Tudo o que vocï¿½ vï¿½ sï¿½o sombras...
+Tudo o que você vê são sombras...
 ~
 ~
 0 -1 19071
+D0
+A luz é pouca ainda...
+~
+~
+0 -1 19074
 S
 #19074
 A Floresta dos Perdidos~
-   Vocï¿½ estï¿½ em frente a uma clareira na floresta.  A emoï¿½ï¿½o ï¿½ tanta que
-seus olhos ficam marejados de lï¿½grimas!  Vocï¿½ percebe que as ï¿½rvores sï¿½o
+   Você está em frente a uma clareira na floresta.  A emoção é tanta que
+seus olhos ficam marejados de lágrimas!  Você percebe que as árvores são
 cinzentas, de galhos afiados e muito, muito velhas.  Talvez sejam elas que
 sejam contra sua visita aqui...
 ~
-190 262241 0 0 0 3
+190 afgs 3
 D0
 ~
 ~
 0 -1 19072
+D2
+~
+~
+0 -1 19073
 D1
 Uma clareira!!
 ~
 ~
 0 -1 19075
-D2
-~
-~
-0 -1 19073
 S
 #19075
 A Clareira na Floresta~
-   Vocï¿½ estï¿½ em uma clareira dentro da floresta.  Tudo aqui ï¿½ sombrio,
+   Você está em uma clareira dentro da floresta.  Tudo aqui é sombrio,
 cinzento, como se um permanente entardecer atingisse o lugar.  Uma densa
-neblina cobre tudo, permitindo que vocï¿½ veja apenas coisas muito prï¿½ximas
-como as ameaï¿½adoras ï¿½rvores do lugar.  Bem no centro, a leste, vocï¿½ vï¿½ um
+neblina cobre tudo, permitindo que você veja apenas coisas muito próximas
+como as ameaçadoras árvores do lugar.  Bem no centro, a leste, você vê um
 grande vulto de onde se desprende alguma luminosidade.
 ~
-190 262241 0 0 0 3
+190 afgs 3
+D3
+Você vê a parte densa da floresta...
+~
+~
+0 -1 19074
 D1
 A luz parece lhe chamar...
 ~
 ~
 0 -1 19076
-D3
-Vocï¿½ vï¿½ a parte densa da floresta...
-~
-~
-0 -1 19074
 E
-ï¿½rvores~
+árvores~
 Elas parecem estar furiosas...  Exalam um ar de maldade, de hostilidade.
-Sï¿½o velhas, muito velhas, de troncos ï¿½speros e rijos, marrom-acinzentado.
-Seus galhos afiados parecem se estender em sua direï¿½ï¿½o, tentando arranhï¿½-lo.
+São velhas, muito velhas, de troncos ásperos e rijos, marrom-acinzentado.
+Seus galhos afiados parecem se estender em sua direção, tentando arranhá-lo.
 ~
 S
 #19076
 Em Frente ao Altar~
-   Vocï¿½ estï¿½ em frente a uma imensa pedra retangular, bem no centro da
-clareira.  A neblina parece hesitar em cobri-la, por isso sua visï¿½o daqui
-parece muito mais clara.  Uma escada de pedra leva atï¿½ o alto disso que
-parece um altar, mas talvez vocï¿½ nï¿½o queira subir...
+   Você está em frente a uma imensa pedra retangular, bem no centro da
+clareira.  A neblina parece hesitar em cobri-la, por isso sua visão daqui
+parece muito mais clara.  Uma escada de pedra leva até o alto disso que
+parece um altar, mas talvez você não queira subir...
 ~
-190 262241 0 0 0 3
+190 afgs 3
 D3
 ~
 ~
@@ -1524,14 +1535,19 @@ A luz parece lhe chamar...
 S
 #19077
 Sobre Altar~
-   Vocï¿½ estï¿½ pisando sobre a fria pedra do imenso altar bem no centro da
-clareira.  Um estranho calafrio percorre seu corpo, e vocï¿½ parece ouvir
-sussurros mandando-o embora daqui.  Um estranho clarï¿½o parece chamï¿½-lo vindo
-de mais alï¿½m.  Cuidado, talvez algum ser sinistro esteja pensando que vocï¿½ ï¿½
-uma espï¿½cie de animal a ser sacrificado nesse lugar...
+   Você está pisando sobre a fria pedra do imenso altar bem no centro da
+clareira.  Um estranho calafrio percorre seu corpo, e você parece ouvir
+sussurros mandando-o embora daqui.  Um estranho clarão parece chamá-lo vindo
+de mais além.  Cuidado, talvez algum ser sinistro esteja pensando que você é
+uma espécie de animal a ser sacrificado nesse lugar...
 ~
-190 262241 0 0 0 3
+190 afgs 3
 D0
+A luz parece lhe chamar...
+~
+~
+0 -1 19076
+D5
 A luz parece lhe chamar...
 ~
 ~
@@ -1551,172 +1567,168 @@ A luz parece lhe chamar...
 ~
 ~
 0 -1 19079
-D5
-A luz parece lhe chamar...
-~
-~
-0 -1 19076
 S
 #19078
-Subindo na ï¿½rvore~
-   Vocï¿½ estï¿½ subindo pela escada presa ï¿½ ï¿½rvore.  Algumas folhas caem em sua
-cabeï¿½a, dificultando sua subida.  Nos galhos mais afastados vocï¿½ vï¿½ vï¿½rios
-ninhos e, no tronco, um buraco onde se pode enfiar um braï¿½o inteiro.  Se
-vocï¿½ continuar a subir, chegarï¿½ em uma casa.
+Subindo na Árvore~
+   Você está subindo pela escada presa à árvore.  Algumas folhas caem em sua
+cabeça, dificultando sua subida.  Nos galhos mais afastados você vê vários
+ninhos e, no tronco, um buraco onde se pode enfiar um braço inteiro.  Se
+você continuar a subir, chegará em uma casa.
 ~
-190 131588 0 0 0 5
+190 jrc 5
 D4
 ~
 porta~
+:n 2 a porta da casa
 1 -1 19052
 D5
 ~
 ~
 0 -1 19051
 E
-ninho~
-Ninhos de todos os tipos de pï¿½ssaros se abrigam aqui...  Isso deve parecer
-um coral nas manhï¿½s de primavera...
+buraco~
+Ah! Isso é uma toca de esquilos..!
 ~
 E
-buraco~
-Ah! Isso ï¿½ uma toca de esquilos..!
+ninho~
+Ninhos de todos os tipos de pássaros se abrigam aqui...  Isso deve parecer
+um coral nas manhãs de primavera...
 ~
 S
 #19079
 O Centro do Altar~
-Vocï¿½ nï¿½o deveria ter ignorado tantos avisos... 
+Você não deveria ter ignorado tantos avisos... 
 
-Uma estranha luz incide sobre vocï¿½, esquentando seu corpo, mais e mais...
-        ...vocï¿½ sente sua pele arder, atï¿½ estar completamente em chamas!
-                A cada segundo as chamas consomem com mais fï¿½ria de seu corpo,
-atï¿½ que tudo o que resta sejam pequenas fagulhas, que logo se extinguirï¿½o...
+Uma estranha luz incide sobre você, esquentando seu corpo, mais e mais...
+        ...você sente sua pele arder, até estar completamente em chamas!
+                A cada segundo as chamas consomem com mais fúria de seu corpo,
+até que tudo o que resta sejam pequenas fagulhas, que logo se extinguirão...
 
-                    ... @Rque pena, mas acho que vocï¿½ morreu@n....
+                    ... &Rque pena, mas acho que você morreu&n....
 ~
-190 518 0 0 0 0
+190 bcj 0
 S
 #19080
 A Floresta dos Perdidos~
-   Vocï¿½ estï¿½ caminhando no solo pegajoso dessa estranha floresta.
-Dificilmente vocï¿½ enxerga algum feixe de luz, mas ainda ï¿½ possï¿½vel enxergar
+   Você está caminhando no solo pegajoso dessa estranha floresta.
+Dificilmente você enxerga algum feixe de luz, mas ainda é possível enxergar
 a trilha a sua frente.
 ~
-190 262241 0 0 0 3
+190 afgs 3
 D0
-Vocï¿½ nï¿½o consegue ver nada...
+Você não consegue ver nada...
 ~
 ~
 0 -1 19073
-D1
-Vocï¿½ vï¿½ menos ainda...
-~
-~
-0 -1 19081
 D2
-Vocï¿½ nï¿½o consegue ver nada...
+Você não consegue ver nada...
 ~
 ~
 0 -1 19072
+D1
+Você vê menos ainda...
+~
+~
+0 -1 19081
 S
 #19081
 A Floresta dos Perdidos~
-   Vocï¿½ estï¿½ caminhando sem rumo pela trilha quase imperceptï¿½vel da
-floresta.  O ar aqui ï¿½ pesado e ï¿½mido demais.  Vocï¿½ se sente constantemente
-vigiado.  Hï¿½ apenas duas saï¿½das aqui: norte e sul.
+   Você está caminhando sem rumo pela trilha quase imperceptível da
+floresta.  O ar aqui é pesado e úmido demais.  Você se sente constantemente
+vigiado.  Há apenas duas saídas aqui: norte e sul.
 ~
-190 262241 0 0 0 3
+190 afgs 3
+D3
+Só há escuridão...
+~
+~
+0 -1 19080
 D0
-Sï¿½ hï¿½ escuridï¿½o...
+Só há escuridão...
 ~
 ~
 0 -1 19071
 D2
-Sï¿½ hï¿½ escuridï¿½o...
+Só há escuridão...
 ~
 ~
 0 -1 19070
-D3
-Sï¿½ hï¿½ escuridï¿½o...
-~
-~
-0 -1 19080
 S
 #19082
 A Floresta dos Perdidos~
-   Vocï¿½ estï¿½ caminhando sem rumo pela trilha quase imperceptï¿½vel da
-floresta.  O ar aqui ï¿½ pesado e ï¿½mido demais.  Vocï¿½ se sente constantemente
-vigiado.  Hï¿½ apenas duas saï¿½das aqui: noroeste e sudeste.
+   Você está caminhando sem rumo pela trilha quase imperceptível da
+floresta.  O ar aqui é pesado e úmido demais.  Você se sente constantemente
+vigiado.  Há apenas duas saídas aqui: noroeste e sudeste.
 ~
-190 262241 0 0 0 3
+190 afgs 3
 D6
-Sï¿½ hï¿½ escuridï¿½o...
+Só há escuridão...
 ~
 ~
 0 -1 19083
 D8
-Sï¿½ hï¿½ escuridï¿½o...
+Só há escuridão...
 ~
 ~
 0 -1 19062
 S
 #19083
 A Floresta dos Perdidos~
-   Vocï¿½ estï¿½ caminhando sem saber para onde vai e de onde vem na trilha da
-floresta.  O ar pesado e ï¿½mido demais parece transmitir, alï¿½m de tudo, uma
-hostilidade vinda de nï¿½o se sabe onde. 
+   Você está caminhando sem saber para onde vai e de onde vem na trilha da
+floresta.  O ar pesado e úmido demais parece transmitir, além de tudo, uma
+hostilidade vinda de não se sabe onde. 
 ~
-190 262241 0 0 0 3
-D0
-Vocï¿½ nï¿½o consegue ver nada... Mas hï¿½ mais luz ali.
-~
-~
-0 -1 10700
-D1
-Vocï¿½ nï¿½o consegue ver nada...
-~
-~
-0 -1 19068
-D3
-Vocï¿½ nï¿½o consegue ver nada...
-~
-~
-0 -1 19069
+190 afgs 3
 D6
-Vocï¿½ nï¿½o consegue ver nada...
+Você não consegue ver nada...
 ~
 ~
 0 -1 19084
 D8
-Vocï¿½ nï¿½o consegue ver nada...
+Você não consegue ver nada...
 ~
 ~
 0 -1 19082
+D3
+Você não consegue ver nada...
+~
+~
+0 -1 19069
+D1
+Você não consegue ver nada...
+~
+~
+0 -1 19068
+D0
+Você não consegue ver nada... Mas há mais luz ali.
+~
+~
+0 -1 10700
 S
 #19084
 A Floresta dos Perdidos~
-   Vocï¿½ continua a caminhar pela trilha na floresta.  A luz parece cada vez
-mais distante e vocï¿½ se arrepende por nï¿½o ter prestado atenï¿½ï¿½o ao aviso na
-ponte.  Nï¿½o hï¿½ ruï¿½dos aqui, sï¿½ o som de seus passos...
+   Você continua a caminhar pela trilha na floresta.  A luz parece cada vez
+mais distante e você se arrepende por não ter prestado atenção ao aviso na
+ponte.  Não há ruídos aqui, só o som de seus passos...
 ~
-190 262241 0 0 0 3
+190 afgs 3
 D6
-Vocï¿½ nï¿½o vï¿½ nada... Tudo estï¿½ muito escuro e silencioso...
+Você não vê nada... Tudo está muito escuro e silencioso...
 ~
 ~
 0 -1 19062
 D8
-Vocï¿½ nï¿½o vï¿½ nada... Tudo estï¿½ muito escuro e silencioso...
+Você não vê nada... Tudo está muito escuro e silencioso...
 ~
 ~
 0 -1 19083
 S
 #19085
 Uma Calma Ruela~
-   Vocï¿½ caminha sossegadamente pela ruela entre ï¿½rvores, sentindo-se no
-coraï¿½ï¿½o de uma floresta.  O caminho parece seguir norte e leste.
+   Você caminha sossegadamente pela ruela entre árvores, sentindo-se no
+coração de uma floresta.  O caminho parece seguir norte e leste.
 ~
-190 64 0 0 0 2
+190 g 2
 D0
 ~
 ~
@@ -1727,60 +1739,63 @@ D1
 0 -1 19038
 S
 #19086
-Embaixo da Grande ï¿½rvore~
-   Vocï¿½ estï¿½ bem embaixo de uma enorme ï¿½rvore, que parece se tornar mais e
-mais imponente a medida que vocï¿½ a examina.  Uma grande placa de aviso foi
-afixada no chï¿½o...  E parece ser bem importante.
+Embaixo da Grande Árvore~
+   Você está bem embaixo de uma enorme árvore, que parece se tornar mais e
+mais imponente a medida que você a examina.  Uma grande placa de aviso foi
+afixada no chão...  E parece ser bem importante.
 ~
-190 64 0 0 0 2
+190 g 2
 D0
-Vocï¿½ vï¿½ a ruela por onde veio.
+Você vê a ruela por onde veio.
 ~
 ~
 0 -1 19047
 D4
-Por ali vocï¿½ sobe atï¿½ o alto da ï¿½rvore...
+Por ali você sobe até o alto da árvore...
 ~
 ~
 0 -1 19037
 E
 placa aviso~
-Lï¿½-se claramente os dizeres:
+Lê-se claramente os dizeres:
  _______________________________________
 |                                       |
 |             A PREFEITURA              |
 |                                       |
-|    Se vocï¿½ nï¿½o possui hora marcada,   |
+|    Se você não possui hora marcada,   |
 |       favor usar a escada acima.      |
 |                                       |
 |  Agradecendo aos que colaboram,       |
-|   Nï¿½dor Bherlï¿½on, o Prefeito          |
+|   Nádor Bherlïon, o Prefeito          |
 |_______________________________________|
 ~
 S
 #19090
-A Recepï¿½ï¿½o da Estalagem da Esperanï¿½a~
-   Vocï¿½ estï¿½ na recepï¿½ï¿½o.  Uma rampa o conduz ï¿½ entrada.  Vocï¿½ vï¿½ uma placa
-no balcï¿½o.
+A Recepção da Estalagem da Esperança~
+   Você está na recepção.  Uma rampa o conduz à entrada.  Você vê uma placa
+no balcão.
 ~
-190 12 0 0 0 0
+190 dc 0
 D5
-Vocï¿½ ve a Estalagem da Esperanï¿½a.
+Você ve a Estalagem da Esperança.
 ~
 ~
 0 -1 19016
 E
 placa~
-Os Quartos sï¿½o caros mas bons!  Vocï¿½ pode:
+Os Quartos são caros mas bons!  Você pode:
+
    Offer - Fazer uma oferta por um quarto.  
          - Tempo contado em dias de vida real.
+
    Rent  - Alugar um quarto (salva seus equipamentos e encerra o jogo).
-           Perï¿½odo de mï¿½nimo um dia.
-                          ACEITE AS CONDIï¿½ï¿½ES
+           Período de mínimo um dia.
+
+                          ACEITE AS CONDIÇÕES
                                   OU
-                        ESTï¿½O ABERTOS OS PORTï¿½ES
-                           @RPAGUE SEU ALUGUEL!@n
-              Nï¿½O PENSAMOS DUAS VEZES ANTES DE CHUTï¿½-LO PARA FORA DAQUI.
+                        ESTÃO ABERTOS OS PORTÕES
+                           &RPAGUE SEU ALUGUEL!&n
+              NÃO PENSAMOS DUAS VEZES ANTES DE CHUTÁ-LO PARA FORA DAQUI.
               
 ~
 S

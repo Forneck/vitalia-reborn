@@ -1,12 +1,12 @@
 #3400
 A Entrada~
-   Sendo mais um posto de vigia do que uma tenda de pedï¿½gio, ï¿½ neste local onde
-os transgressores sï¿½o detidos, e proibidos de entrarem na pequena vila de
-Villspah.  O Barï¿½o ï¿½ um homem generoso e um mago competente mas sua
+   Sendo mais um posto de vigia do que uma tenda de pedágio, é neste local onde
+os transgressores são detidos, e proibidos de entrarem na pequena vila de
+Villspah.  O Barão é um homem generoso e um mago competente mas sua
 generosidade somente se extende para aqueles que ele convida para entrar
 em suas terras.
 ~
-34 0 0 0 0 1
+34 0 1
 D1
 ~
 ~
@@ -17,13 +17,13 @@ D3
 0 -1 4000
 S
 #3401
-Estrada de Tï¿½buas~
-   Brutas tï¿½buas de madeira foram cortadas e colocadas sobre o chï¿½o de
-lama, tornando o progresso extremamente fï¿½cil.  A estrada se curva para o
-leste por uma distï¿½ncia extremamente longa, terminando em um grande castelo
+Estrada de Tábuas~
+   Brutas tábuas de madeira foram cortadas e colocadas sobre o chão de
+lama, tornando o progresso extremamente fácil.  A estrada se curva para o
+leste por uma distância extremamente longa, terminando em um grande castelo
 que mal pode ser visto daqui.
 ~
-34 4 0 0 0 1
+34 c 1
 D1
 ~
 ~
@@ -34,13 +34,13 @@ D3
 0 -1 3400
 S
 #3402
-Estrada de Tï¿½buas~
-   Brutas tï¿½buas de madeira foram cortadas e colocadas sobre o chï¿½o de
-lama, tornando o progresso extremamente fï¿½cil.  A estrada se curva para o
-leste por uma distï¿½ncia extremamente longa, terminando em um grande castelo
+Estrada de Tábuas~
+   Brutas tábuas de madeira foram cortadas e colocadas sobre o chão de
+lama, tornando o progresso extremamente fácil.  A estrada se curva para o
+leste por uma distância extremamente longa, terminando em um grande castelo
 que mal pode ser visto daqui.
 ~
-34 0 0 0 0 1
+34 0 1
 D1
 ~
 ~
@@ -52,12 +52,12 @@ D3
 S
 #3403
 Na Fronteira de Villspah~
-   Vocï¿½ estï¿½ no inï¿½cio de uma cidade que foi constrï¿½da e que ï¿½ controlada
-pelo Barï¿½o.  Duas construï¿½ï¿½es de madeira encontram-se a leste daqui, uma em
+   Você está no início de uma cidade que foi constrída e que é controlada
+pelo Barão.  Duas construções de madeira encontram-se a leste daqui, uma em
 cada lado da estrada.  Por seu aspecto e o cheiro que exalam parecem ser
-estï¿½bulos.  Uma pequena cidade encontra-se logo apï¿½s elas.
+estábulos.  Uma pequena cidade encontra-se logo após elas.
 ~
-34 0 0 0 0 1
+34 0 1
 D1
 ~
 ~
@@ -69,16 +69,17 @@ D3
 S
 #3404
 Entrando em Villspah~
-   Hï¿½ construï¿½ï¿½es de madeira em ambos os lados da estrada. Uma delas ï¿½ um
-estï¿½bulo e a outra ï¿½ a loja do cavaleiro.  Hï¿½ agrupamentos de lojas
+   Há construções de madeira em ambos os lados da estrada. Uma delas é um
+estábulo e a outra é a loja do cavaleiro.  Há agrupamentos de lojas
 seguindo pelo lado das estradas.  Esta comunidade parece estar crescendo
 muito bem, em todas as formas.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 porta~
-1 -1 3427
+:n 2 a porta
+a -1 3427
 D1
 ~
 ~
@@ -94,12 +95,12 @@ D3
 S
 #3405
 Estrada Princial~
-   Esta estrada central principal ï¿½ onde a maioria das pessoas desta
+   Esta estrada central principal é onde a maioria das pessoas desta
 pequena vila passeia - alguns indo ou vindo do castelo.  O castelo se
-encontra em uma pequena distï¿½ncia a leste, dominando a visï¿½o naquela
-direï¿½ï¿½o.  Outra estrada cruza esta, indo na direï¿½ï¿½o norte e sul.
+encontra em uma pequena distância a leste, dominando a visão naquela
+direção.  Outra estrada cruza esta, indo na direção norte e sul.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -119,11 +120,11 @@ D3
 S
 #3406
 Estrada Principal~
-   Passagens seguem em direï¿½ï¿½o as lojas para norte e sul desta estrada.
-Hï¿½ sinais em cada uma das lojas indicando ao norte uma taverna, e ao sul
-um vendedor de alimentos nï¿½o perecï¿½veis.
+   Passagens seguem em direção as lojas para norte e sul desta estrada.
+Há sinais em cada uma das lojas indicando ao norte uma taverna, e ao sul
+um vendedor de alimentos não perecíveis.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -143,12 +144,12 @@ D3
 S
 #3407
 Estrada Principal~
-   O entabuamento de madeira estï¿½ um pouco mais gasto aqui, bem no meio da
-cidade, onde o trï¿½fego de pessoas ï¿½ mais intenso, mas ainda em bom estado.
-Hï¿½ uma hospedaria de dois andares ao lado norte, conectada a taverna, logo
-a noroeste daqui, e um armazï¿½m na direï¿½ï¿½o sul.
+   O entabuamento de madeira está um pouco mais gasto aqui, bem no meio da
+cidade, onde o tráfego de pessoas é mais intenso, mas ainda em bom estado.
+Há uma hospedaria de dois andares ao lado norte, conectada a taverna, logo
+a noroeste daqui, e um armazém na direção sul.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -168,11 +169,11 @@ D3
 S
 #3408
 Estrada Principal~
-   A estrada principal ï¿½ cruzada novamente por uma estrada, que segue
-exatamente nas direï¿½ï¿½es opostas ï¿½ estrada principal.  O castelo encontra-se
-diretamente a oeste, a ponte levadiï¿½a estï¿½ presentemente aberta.
+   A estrada principal é cruzada novamente por uma estrada, que segue
+exatamente nas direções opostas à estrada principal.  O castelo encontra-se
+diretamente a oeste, a ponte levadiça está presentemente aberta.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -191,12 +192,12 @@ D3
 0 -1 3407
 S
 #3409
-Estrada Principal, Prï¿½ximo ao Castelo~
-   O entabuamento de madeira termina aqui, e logo a leste comeï¿½a a passagem
-pavimentada em direï¿½ï¿½o a casa do Barï¿½o.  O castelo possui a clara visï¿½o  de
-ser um local com uma cordial recepï¿½ï¿½o.
+Estrada Principal, Próximo ao Castelo~
+   O entabuamento de madeira termina aqui, e logo a leste começa a passagem
+pavimentada em direção a casa do Barão.  O castelo possui a clara visão  de
+ser um local com uma cordial recepção.
 ~
-34 0 0 0 0 1
+34 0 1
 D1
 ~
 ~
@@ -207,13 +208,13 @@ D3
 0 -1 3408
 S
 #3410
-Estrada Principal, Oeste da Ponte Levadiï¿½a~
-   Guardas estï¿½o  posicionados logo a leste daqui, parados ao lado da
-estrada com uma rigorosa atenï¿½ï¿½o.  Eles estï¿½o vestindo o tradicional
-magenta da famï¿½lia do Barï¿½o, longas e vistosas vestimentas de feiticeiro, e
+Estrada Principal, Oeste da Ponte Levadiça~
+   Guardas estão  posicionados logo a leste daqui, parados ao lado da
+estrada com uma rigorosa atenção.  Eles estão vestindo o tradicional
+magenta da família do Barão, longas e vistosas vestimentas de feiticeiro, e
 por cima uma excelente armadura de couro.
 ~
-34 0 0 0 0 1
+34 0 1
 D1
 ~
 ~
@@ -224,14 +225,14 @@ D3
 0 -1 3409
 S
 #3411
-Laï¿½o Norte de Villspah, Lado Leste~
-   A estrada faz um tipo de laï¿½ada agora, curvando para norte e depois para
+Laço Norte de Villspah, Lado Leste~
+   A estrada faz um tipo de laçada agora, curvando para norte e depois para
 o sul, se encontrando de novo, como uma ferradura invertida.  Uma pequena
 envergadura de tasneiras encontra-se a leste da estrada, escoando para o
-fosso que circula o castelo.  Para o lado oeste, hï¿½ a parede leste da
+fosso que circula o castelo.  Para o lado oeste, há a parede leste da
 hospedaria.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -242,15 +243,15 @@ D2
 0 -1 3408
 S
 #3412
-Laï¿½o Sul de Villspah, Lado Leste~
+Laço Sul de Villspah, Lado Leste~
    A estrada toma forma de uma pequena ferradura, deixando a estrada
-principal e curvando ao redor pelo sul, girando atï¿½ se encontrar de novo a
-oeste.  Um pequeno, mas bontito templo encontra-se na direï¿½ï¿½o sul, com
+principal e curvando ao redor pelo sul, girando até se encontrar de novo a
+oeste.  Um pequeno, mas bontito templo encontra-se na direção sul, com
 suas paredes brancas e levemente descascadas pela intensa luz do sol que a
-atinge.  A parede leste de uma loja comum encontra-se na direï¿½ï¿½o oeste, e
-hï¿½ um painel com lamparinas, rolos de corda e sacos retradado na mesma.
+atinge.  A parede leste de uma loja comum encontra-se na direção oeste, e
+há um painel com lamparinas, rolos de corda e sacos retradado na mesma.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -261,14 +262,14 @@ D2
 0 -1 3426
 S
 #3413
-Laï¿½o Norte de Villspah, Lado Leste~
-   A estrada, construï¿½da com madeira sï¿½lida, acoplada junto ao chï¿½o,
-procede em uma laï¿½ada ao redor do norte da vila.  Ao sul hï¿½ a estrada
-principal, que pode levï¿½-lo diretamente para os domï¿½nios do Barï¿½o, ou para
+Laço Norte de Villspah, Lado Leste~
+   A estrada, construída com madeira sólida, acoplada junto ao chão,
+procede em uma laçada ao redor do norte da vila.  Ao sul há a estrada
+principal, que pode levá-lo diretamente para os domínios do Barão, ou para
 fora deles.  Uma pequena loja encontra-se a oeste da estrada, e sua entrada
-principal ï¿½ ao seu lado norte.
+principal é ao seu lado norte.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -279,14 +280,14 @@ D2
 0 -1 3411
 S
 #3414
-Laï¿½o Norte de Villspah, Lado Nordeste~
-   A estrada faz uma laï¿½ada para o sul e oeste daqui, dirigindo-se atravï¿½s
-de pequenas lojas e casas.  Um pequeno cï¿½rrego passa por um pequeno celeiro
-com uma roda de pï¿½s ao norte - presumivelmente o local de trabalho de
-alguï¿½m.  Logo apï¿½s um pequeno grupo de tasneiras a leste, encontra-se o
-castelo do Barï¿½o de Villspah, um mago poderoso e muito gentil.
+Laço Norte de Villspah, Lado Nordeste~
+   A estrada faz uma laçada para o sul e oeste daqui, dirigindo-se através
+de pequenas lojas e casas.  Um pequeno córrego passa por um pequeno celeiro
+com uma roda de pás ao norte - presumivelmente o local de trabalho de
+alguém.  Logo após um pequeno grupo de tasneiras a leste, encontra-se o
+castelo do Barão de Villspah, um mago poderoso e muito gentil.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -301,12 +302,12 @@ D3
 0 -1 3415
 S
 #3415
-Laï¿½o Norte de Villspah, Lado Norte~
+Laço Norte de Villspah, Lado Norte~
    Uma pequena loja encontra-se ao sul da estrada, emitindo um suave odor
-de enxofre atravï¿½s de sua porta.  A estrada segue para leste e oeste
-passando por vï¿½rias lojas e casas de Villspah.
+de enxofre através de sua porta.  A estrada segue para leste e oeste
+passando por várias lojas e casas de Villspah.
 ~
-34 0 0 0 0 1
+34 0 1
 D1
 ~
 ~
@@ -321,14 +322,14 @@ D3
 0 -1 3416
 S
 #3416
-Laï¿½o Norte de Villspah, Lado Norte~
-   Hï¿½ lojas ao norte e ao sul, e com grandes diferenï¿½as entre elas.  Ao
-norte, a porta da loja estï¿½ fechada, e cortinas cobrem as janelas em seu
-interior.  Ao sul hï¿½ uma estrutura parecida com um celeiro, de onde pode
+Laço Norte de Villspah, Lado Norte~
+   Há lojas ao norte e ao sul, e com grandes diferenças entre elas.  Ao
+norte, a porta da loja está fechada, e cortinas cobrem as janelas em seu
+interior.  Ao sul há uma estrutura parecida com um celeiro, de onde pode
 ser ouvido estalos de metal.  A estrada se curva para leste e oeste pela
 vila de Villspah.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -347,12 +348,12 @@ D3
 0 -1 3417
 S
 #3417
-Laï¿½o Norte de Villspah, Lado Noroeste~
+Laço Norte de Villspah, Lado Noroeste~
    Uma pequena loja encontra-se a norte da estrada, entre duas filas de
-plantaï¿½ï¿½o de milho.  A estrada segue para leste, passando por mais lojas e
+plantação de milho.  A estrada segue para leste, passando por mais lojas e
 para sul, rumo a estrada principal de Villspah.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -367,14 +368,14 @@ D2
 0 -1 3418
 S
 #3418
-Laï¿½o Norte de Villspah, Lado Oeste~
+Laço Norte de Villspah, Lado Oeste~
    A estreita estrada, revestida com madeira, segue passando por uma
 pequena loja, parecida com um celeiro, e com sua entrada voltada para o
-outro lado desta construï¿½ï¿½o.  A estrada faz uma curva fechada para leste
-logo a norte daqui, e a estrada principal segue em uma pequena distï¿½ncia
+outro lado desta construção.  A estrada faz uma curva fechada para leste
+logo a norte daqui, e a estrada principal segue em uma pequena distância
 logo a sul.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -385,15 +386,15 @@ D2
 0 -1 3419
 S
 #3419
-Laï¿½o Norte de Villspah, Lado Oeste~
-   Uma pequena ramificaï¿½ï¿½o da estrada principal faz uma pequena laï¿½ada para
+Laço Norte de Villspah, Lado Oeste~
+   Uma pequena ramificação da estrada principal faz uma pequena laçada para
 o nordeste, ao redor de um vasto agrupamento de casas e lojas.  Esta
-pequena estrada ï¿½ toda revestida por madeira, assim como na estrada
+pequena estrada é toda revestida por madeira, assim como na estrada
 principal, mas um pouco mais estreito.  A parede oeste da estalagem
-encontra-se a leste da estrada, e hï¿½ um campo de plantaï¿½ï¿½o de milho
+encontra-se a leste da estrada, e há um campo de plantação de milho
 a oeste.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -404,14 +405,14 @@ D2
 0 -1 3405
 S
 #3420
-Laï¿½o Sul de Villspah, Lado Oeste~
-   Uma pequena ramificaï¿½ï¿½o da estrada principal faz uma leve laï¿½ada ao sul,
+Laço Sul de Villspah, Lado Oeste~
+   Uma pequena ramificação da estrada principal faz uma leve laçada ao sul,
 em torno de um grupo de casas e lojas.  Para o lado leste da estrada
-encontra-se a parede ocidental de uma loja, e para o oeste hï¿½ fileiras e
-mais fileiras de plantaï¿½ï¿½o de milho.  A estrada principal segue diretamente
+encontra-se a parede ocidental de uma loja, e para o oeste há fileiras e
+mais fileiras de plantação de milho.  A estrada principal segue diretamente
 para o norte.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -422,12 +423,12 @@ D2
 0 -1 3421
 S
 #3421
-Laï¿½o Sul de Villspah, Lado Oeste~
-   A estrada passa por uma pequena loja cercada de tï¿½buas, com um movimento
-de comodidade atravï¿½s da vila.  Cercante aos subï¿½rbios desta pequena
-comunidade hï¿½ uma vasta plantaï¿½ï¿½o de milho atingindo seis pï¿½s altura.
+Laço Sul de Villspah, Lado Oeste~
+   A estrada passa por uma pequena loja cercada de tábuas, com um movimento
+de comodidade através da vila.  Cercante aos subúrbios desta pequena
+comunidade há uma vasta plantação de milho atingindo seis pés altura.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -438,13 +439,13 @@ D2
 0 -1 3422
 S
 #3422
-Laï¿½o Sul de Villspah, Lado Sudoeste~
+Laço Sul de Villspah, Lado Sudoeste~
    Uma curva na estrada permite ir a norte e leste, cortando os campos de
-milho que cercam a vila, com suas linhas nï¿½tidas e perfeitas.  Por uma
-pequena distï¿½ncia ao norte segue a estrada principal, e a laï¿½ada da estrada
+milho que cercam a vila, com suas linhas nítidas e perfeitas.  Por uma
+pequena distância ao norte segue a estrada principal, e a laçada da estrada
 segue ao leste.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -455,13 +456,13 @@ D1
 0 -1 3423
 S
 #3423
-Laï¿½o Sul de Villspah, Lado Sul~
+Laço Sul de Villspah, Lado Sul~
    Pequenas lojas se encontram com a estrada ao norte e sul, com suas
 portas abertas o convidando para entrar.  A loja ao norte ostenta a gravura
-de uma deslumbrante jï¿½ia logo acima da porta, certamente a indicaï¿½ï¿½o de um
+de uma deslumbrante jóia logo acima da porta, certamente a indicação de um
 dono de joalheria.  A estrada continua para leste e oeste.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -480,13 +481,13 @@ D3
 0 -1 3422
 S
 #3424
-Laï¿½o Sul de Villspah, Lado Sul~
-   A estrada segue na direï¿½ï¿½o leste e oeste.  Hï¿½ uma loja muito pequena -
+Laço Sul de Villspah, Lado Sul~
+   A estrada segue na direção leste e oeste.  Há uma loja muito pequena -
 parecendo mais uma barraca - instalada ao lado norte da estrada.  Logo a
-leste daqui, a estrada faz uma curva para o norte, continuando o laï¿½o sul
+leste daqui, a estrada faz uma curva para o norte, continuando o laço sul
 de Villspah.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -501,14 +502,14 @@ D3
 0 -1 3423
 S
 #3425
-Laï¿½o Sul de Villspah, Lado Sudeste~
+Laço Sul de Villspah, Lado Sudeste~
    Aqui a estrada faz uma curva, dirigindo-se no sentido norte e oeste.
-Para o lado leste da estrada hï¿½ um pequeno caminho entrando em um calmo e
+Para o lado leste da estrada há um pequeno caminho entrando em um calmo e
 colorido jardim, onde as flores silvestres crescem, cuidadas pelos
-habitantes locais da vila.  Ao sul, atravï¿½s de um pequeno portï¿½o de ferro,
-encontra-se o cemitï¿½rio, onde hï¿½ pouquï¿½ssimas lï¿½pides.
+habitantes locais da vila.  Ao sul, através de um pequeno portão de ferro,
+encontra-se o cemitério, onde há pouquíssimas lápides.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -519,21 +520,22 @@ D1
 0 -1 3443
 D2
 ~
-portï¿½o~
-1 -1 3441
+portão~
+:n 1 o portão
+a -1 3441
 D3
 ~
 ~
 0 -1 3424
 S
 #3426
-Laï¿½o Sul de Villspah, Lado Leste~
-   A estrada continua sinuosa para as direï¿½ï¿½es norte e sul, ao longo do
-laï¿½o sul.  Hï¿½ um pequeno templo, mas bem arrumado, no lado leste da
-estrada.  Nï¿½o muito distante daqui encontra-se a estrada prindipal, ao
+Laço Sul de Villspah, Lado Leste~
+   A estrada continua sinuosa para as direções norte e sul, ao longo do
+laço sul.  Há um pequeno templo, mas bem arrumado, no lado leste da
+estrada.  Não muito distante daqui encontra-se a estrada prindipal, ao
 norte.
 ~
-34 0 0 0 0 1
+34 0 1
 D0
 ~
 ~
@@ -549,38 +551,39 @@ D2
 S
 #3427
 A Ferraria~
-   Vï¿½rios equipamentos para equitaï¿½ï¿½o estï¿½o pendurados pelas paredes deste
-local pequeno e tï¿½rrero.  Hï¿½ um pequeno balcï¿½o fixado por quase toda a
+   Vários equipamentos para equitação estão pendurados pelas paredes deste
+local pequeno e térrero.  Há um pequeno balcão fixado por quase toda a
 parede norte, e uma cadeira com aspecto velho, mas muito aconchegante.  Um
-conjunto de portas corrediï¿½as foi construï¿½do na parede norte desta loja,
-sendo o ï¿½nico acesso aos cavalos que estï¿½o ï¿½ venda.
+conjunto de portas corrediças foi construído na parede norte desta loja,
+sendo o único acesso aos cavalos que estão à venda.
 ~
-34 8 0 0 0 0
+34 d 0
 D2
 ~
 porta~
-1 -1 3404
+:n 2 a porta
+a -1 3404
 S
 #3428
 Pastagem dos Cavalos~
-   Este pequeno espaï¿½o gramado ï¿½ onde o comerciante de cavalos da vila
-mantï¿½m sues animais atï¿½ que estes sejam  vendidos.
+   Este pequeno espaço gramado é onde o comerciante de cavalos da vila
+mantém sues animais até que estes sejam  vendidos.
 ~
-34 0 0 0 0 2
+34 0 2
 S
 #3429
 A Taverna da Cidade~
    Simples como qualquer outra taverna pode ser, esta taverna de tamanho
-mï¿½dio serve como ponto de encontro dos habitantes da vila, assim como todos
-os outros locais para se comer desta cidade tambï¿½m servem.  Um pequeno
+médio serve como ponto de encontro dos habitantes da vila, assim como todos
+os outros locais para se comer desta cidade também servem.  Um pequeno
 palco encontra-se perto da parede norte, a esquerda de uma enorme lareira
-de pedra.  Um grande bar segue pela parede oeste do local, e por detrï¿½s
+de pedra.  Um grande bar segue pela parede oeste do local, e por detrás
 pode-se ver os criados apressados enchendo espumantes canecas de cerveja
-ou preparando comida para os fregueses.  Uma porta giratï¿½ria encontra-se
+ou preparando comida para os fregueses.  Uma porta giratória encontra-se
 fixada na parede leste, dirigindo um caminho para a hospedaria onde os
 viajantes podem repousar.
 ~
-34 8 0 0 0 0
+34 d 0
 D1
 ~
 ~
@@ -592,13 +595,13 @@ D2
 S
 #3430
 A Hospedaria de Villspah~
-   Esta sala muito baixa oferece um pequeno nï¿½mero de velhas mesas e
+   Esta sala muito baixa oferece um pequeno número de velhas mesas e
 cadeiras onde se pode sentar e descansar.  Uma pequena escada no lado
-leste, ao fim da sala, segue para cima onde hï¿½ quartos para serem locados.
+leste, ao fim da sala, segue para cima onde há quartos para serem locados.
 O fogo queima calmamente na lareira da parede norte, exalando para toda a
 sala um ar quente e aconchegante.
 ~
-34 12 0 0 0 0
+34 cd 0
 D2
 ~
 ~
@@ -610,12 +613,12 @@ D3
 S
 #3431
 Loja de Alimentos~
-   Muitos alimentos guardados em contï¿½iners nï¿½o perecï¿½veis estï¿½o aqui
-empilhados em uma estante limpa e conservada.  Um pequeno balcï¿½o
-encontra-se encostado ï¿½ parede sul desta loja, no qual vocï¿½ pode comprar
+   Muitos alimentos guardados em contêiners não perecíveis estão aqui
+empilhados em uma estante limpa e conservada.  Um pequeno balcão
+encontra-se encostado à parede sul desta loja, no qual você pode comprar
 o que desejar.
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 ~
@@ -623,11 +626,11 @@ D0
 S
 #3432
 A Loja Comum de Villspah~
-   Inï¿½meras prateleiras encontram-se por toda a extensï¿½o das paredes,
-exceto a norte onde o balcï¿½o principal estï¿½ localizado.  Tudo, do ï¿½til ao
-fï¿½til, estï¿½ ï¿½ venda nesta loja, ï¿½ sï¿½ comprar no balcï¿½o.
+   Inúmeras prateleiras encontram-se por toda a extensão das paredes,
+exceto a norte onde o balcão principal está localizado.  Tudo, do útil ao
+fútil, está à venda nesta loja, é só comprar no balcão.
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 ~
@@ -638,23 +641,23 @@ A Loja de Armas~
    Esta loja serve tanto como uma loja de armas, tanto como ferraria para a
 cidade.  A maioria dos habitantes locais precisam mais do trabalho da
 ferraria do que de alguma arma, entretanto o verdadeiro encanto do
-proprietï¿½rio ï¿½ pelas armas.
+proprietário é pelas armas.
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 ~
 0 -1 3416
 S
 #3434
-A Farmï¿½cia~
-   A ï¿½rea para os clientes desta loja ï¿½ muito pequena.  Somente uma pequena
-ï¿½rea, sem lugar para se sentar, ï¿½ reservada para aqueles que desejam
-comprar algo aqui - o resto da loja ï¿½ bloqueado por uma estranha parede.
-Vocï¿½ pode sentir estranhos odores vindos da parte sul desta construï¿½ï¿½o,
+A Farmácia~
+   A área para os clientes desta loja é muito pequena.  Somente uma pequena
+área, sem lugar para se sentar, é reservada para aqueles que desejam
+comprar algo aqui - o resto da loja é bloqueado por uma estranha parede.
+Você pode sentir estranhos odores vindos da parte sul desta construção,
 alguns deles bons, outros nem tanto.
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 ~
@@ -662,26 +665,26 @@ D0
 S
 #3435
 O Moinho de Villspah~
-   Toda a ï¿½gua que vai para a populaï¿½ï¿½o de Villspah passa atravï¿½s de um
-sistema de funil criado pelo prï¿½prio Barï¿½o.  Villspah possui as ï¿½guas mais
-lï¿½mpidas de toda Vitï¿½lia, uma ostentaï¿½ï¿½o que nï¿½o ï¿½ para muitos.
+   Toda a água que vai para a população de Villspah passa através de um
+sistema de funil criado pelo próprio Barão.  Villspah possui as águas mais
+límpidas de toda Vitália, uma ostentação que não é para muitos.
 ~
-34 8 0 0 0 0
+34 d 0
 D2
 ~
 ~
 0 -1 3414
 S
 #3436
-O Cafï¿½ de Villspah~
-   Este lugar, pequeno mas muito confortï¿½vel, ï¿½ um total contraste com os
+O Café de Villspah~
+   Este lugar, pequeno mas muito confortável, é um total contraste com os
 barulhos do lado de fora, onde o trabalho do ferreiro pode ser ouvido alto
-e claro, ressonante por toda a cidade.  Pequenas mesas estï¿½o fixas pela sala
-com confortï¿½veis cadeiras em sua volta.  Hï¿½ dois pequenos sofï¿½s logo
+e claro, ressonante por toda a cidade.  Pequenas mesas estão fixas pela sala
+com confortáveis cadeiras em sua volta.  Há dois pequenos sofás logo
 adiante, arredondados e com mesas, onde as pessoas podem relaxar enquanto
-apreciam uma xï¿½cara de cafï¿½.
+apreciam uma xícara de café.
 ~
-34 8 0 0 0 0
+34 d 0
 D2
 ~
 ~
@@ -690,12 +693,12 @@ S
 #3437
 A Loja da Herborista~
    O forte aroma de plantas secas penetram por seu nariz no exato momento
-em que vocï¿½ entra nesta sala.  Atrï¿½s do balcï¿½o vocï¿½ pode observar vï¿½rios
-ramos de plantas, dos quais a maioria vocï¿½ desconhece, todos secos.  Talvez
+em que você entra nesta sala.  Atrás do balcão você pode observar vários
+ramos de plantas, dos quais a maioria você desconhece, todos secos.  Talvez
 por isso eles devem ser usados em pequenas quantidades, ou como
 medicamentos.
 ~
-34 8 0 0 0 0
+34 d 0
 D2
 ~
 ~
@@ -703,12 +706,12 @@ D2
 S
 #3438
 A Joalheria~
-   Normalmente em pequenas cidades como esta, joalherias nï¿½o tem o grande
-interesse da populaï¿½ï¿½o, entretanto por o Barï¿½o ser um mago - e um mago
+   Normalmente em pequenas cidades como esta, joalherias não tem o grande
+interesse da população, entretanto por o Barão ser um mago - e um mago
 muito poderoso - a joalheria traz uma vida elegante e vistosa para ele.  Os
-habitantes locais, ï¿½ claro, tambï¿½m fazem algumas pequenas compras aqui.
+habitantes locais, é claro, também fazem algumas pequenas compras aqui.
 ~
-34 8 0 0 0 0
+34 d 0
 D2
 ~
 ~
@@ -716,13 +719,13 @@ D2
 S
 #3439
 A Cartografia~
-   O cartï¿½grafo ï¿½ provavelmente quem mais guarda segredos das terras
+   O cartógrafo é provavelmente quem mais guarda segredos das terras
 exteriores.  O povo de Villspah possui uma enorme vontade de viajar, e
-assim vem encarregando o cartï¿½grafo a fazer vï¿½rios mapas das mais exï¿½ticas
-regiï¿½es de Vitï¿½lia.  Com sua renda fixa, o cartï¿½grafo vende qualquer tipo
-de mapa que o Barï¿½o venha a pedir.
+assim vem encarregando o cartógrafo a fazer vários mapas das mais exóticas
+regiões de Vitália.  Com sua renda fixa, o cartógrafo vende qualquer tipo
+de mapa que o Barão venha a pedir.
 ~
-34 8 0 0 0 0
+34 d 0
 D2
 ~
 ~
@@ -730,39 +733,40 @@ D2
 S
 #3440
 O Pequeno Templo de Villspah~
-   Pequena mas sinceras cerimï¿½nias sï¿½o realizadas neste pequeno templo
-todo domingo.  Um altar encontra-se a leste, no final do templo, e hï¿½ um
-tapete estendido saindo da porta em direï¿½ï¿½o ao altar.
+   Pequena mas sinceras cerimônias são realizadas neste pequeno templo
+todo domingo.  Um altar encontra-se a leste, no final do templo, e há um
+tapete estendido saindo da porta em direção ao altar.
 ~
-34 8 0 0 0 0
+34 d 0
 D3
 ~
 ~
 0 -1 3426
 S
 #3441
-O Cemitï¿½rio de Villspah~
-   Este lugar, onde os corpos desta pequena cidade sï¿½o enterrados, ï¿½ muito
-pequeno e sombreado, com ï¿½rvores que se projetam por quase toda a ï¿½rea,
-dando uma sensaï¿½ï¿½o de calma e tranquilidade no local.  O que lhe chama a
-atenï¿½ï¿½o ï¿½ o pequeno nï¿½mero de covas - nï¿½o que deveria ter muitos mortos,
-mas a cidade nï¿½o parece ser nova e muitos ja devem ter passado seus ï¿½ltimos
+O Cemitério de Villspah~
+   Este lugar, onde os corpos desta pequena cidade são enterrados, é muito
+pequeno e sombreado, com árvores que se projetam por quase toda a área,
+dando uma sensação de calma e tranquilidade no local.  O que lhe chama a
+atenção é o pequeno número de covas - não que deveria ter muitos mortos,
+mas a cidade não parece ser nova e muitos ja devem ter passado seus últimos
 anos aqui em Villspah.
 ~
-34 0 0 0 0 2
+34 0 2
 D0
 ~
-portï¿½o~
-1 -1 3425
+portão~
+:n 1 o portão
+a -1 3425
 S
 #3442
 O Viveiro de Aves~
-   Pequenas e grandes gaiolas estï¿½o penduradas no teto por todo o interior
-deste local.  O cheiro nï¿½o ï¿½ nada agradï¿½vel, entretanto os animais que
-estï¿½o nas jaulas sï¿½o mais do que aprazï¿½veis - sï¿½o formidï¿½veis companheiros
+   Pequenas e grandes gaiolas estão penduradas no teto por todo o interior
+deste local.  O cheiro não é nada agradável, entretanto os animais que
+estão nas jaulas são mais do que aprazíveis - são formidáveis companheiros
 para se ter por um pequeno custo.
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 ~
@@ -770,11 +774,11 @@ D0
 S
 #3443
 O Jardim de Villspah~
-   Tudo pelo caminho ï¿½ bonito e florido, possuindo as mais diversas cores
-imaginï¿½veis.  Uma pequena ï¿½rea aberta encontra-se ao sul com  alguns bancos
+   Tudo pelo caminho é bonito e florido, possuindo as mais diversas cores
+imagináveis.  Uma pequena área aberta encontra-se ao sul com  alguns bancos
 de madeira uma fonte ao meio.
 ~
-34 0 0 0 0 2
+34 0 2
 D2
 ~
 ~
@@ -786,41 +790,41 @@ D3
 S
 #3444
 Um Parque ao Ar Livre~
-   Uma pequena fonte, escoaando calmamente uma ï¿½gua muito lï¿½mpida, estï¿½
-aqui, rodeada por quatro bancos de madeira.  Muitas ï¿½rvores crescem ao
-redor do contorno do parque, dando a sensaï¿½ï¿½o de conforto e paz que sï¿½ pode
+   Uma pequena fonte, escoaando calmamente uma água muito límpida, está
+aqui, rodeada por quatro bancos de madeira.  Muitas árvores crescem ao
+redor do contorno do parque, dando a sensação de conforto e paz que só pode
 ser encontrado ao ar livre.  Um belo jardim encontra-se a norte, e um
-portï¿½o de ferro separa este parque de um cemitï¿½rio ao lado leste.
+portão de ferro separa este parque de um cemitério ao lado leste.
 ~
-34 0 0 0 0 2
+34 0 2
 D0
 ~
 ~
 0 -1 3443
 S
 #3445
-O Estï¿½bulo de Villspah~
-   A populaï¿½ï¿½o de Villspah gosta, de fato, da paz e da beleza de sua
-pequena vila, e estï¿½o sempre tentando mantï¿½-la da maneira mais limpa
-possï¿½vel.  Vocï¿½ estï¿½ encorajado a estabular seu animal por todo o tempo
-necessï¿½rio, readquirindo-o quando for embora, para manter a paz e a
+O Estábulo de Villspah~
+   A população de Villspah gosta, de fato, da paz e da beleza de sua
+pequena vila, e estão sempre tentando mantê-la da maneira mais limpa
+possível.  Você está encorajado a estabular seu animal por todo o tempo
+necessário, readquirindo-o quando for embora, para manter a paz e a
 limpeza desta vila.
 ~
-34 12 0 0 0 0
+34 cd 0
 D0
 ~
 ~
 0 -1 3404
 S
 #3446
-A Ponte Levadiï¿½a de Villspah~
-   Hï¿½ guardas localizados na entrada, onde permanecem por todas as horas do
-dia e da noite.  O Barï¿½o ï¿½, por fama, um homem muito generoso, entretanto
-isso nï¿½o ï¿½ a pura verdade.  ï¿½ dito que o Barï¿½o sempre foi fiel ao antigo
+A Ponte Levadiça de Villspah~
+   Há guardas localizados na entrada, onde permanecem por todas as horas do
+dia e da noite.  O Barão é, por fama, um homem muito generoso, entretanto
+isso não é a pura verdade.  É dito que o Barão sempre foi fiel ao antigo
 rei, e por esse motivo, ele talvez tenha alguns inimigos dentro de suas
-prï¿½prias terras.
+próprias terras.
 ~
-34 4 0 0 0 1
+34 c 1
 D1
 ~
 ~
@@ -833,16 +837,17 @@ S
 #3447
 O Hall de Entrada~
    Uma cobertura encontra-se com uma sala logo a leste.  A cada lado de
-vocï¿½, ao norte e ao sul, encontram-se as portas para as torres dos
-guardas, onde hï¿½ vigias durante todo o tempo.  Pequenas fendas nas portas
-de madeira das torres, permitem que flechas sejam lanï¿½adas caso um intruso
+você, ao norte e ao sul, encontram-se as portas para as torres dos
+guardas, onde há vigias durante todo o tempo.  Pequenas fendas nas portas
+de madeira das torres, permitem que flechas sejam lançadas caso um intruso
 passe pelos guardas da ponte.
 ~
-34 0 0 0 0 0
+34 0 0
 D0
 ~
 porta~
-1 -1 3448
+:n 2 a porta
+a -1 3448
 D1
 ~
 ~
@@ -850,7 +855,8 @@ D1
 D2
 ~
 porta~
-1 -1 3450
+:n 2 a porta
+a -1 3450
 D3
 ~
 ~
@@ -858,15 +864,16 @@ D3
 S
 #3448
 Torre de Guarda Norte~
-   Uma escadaria de pedra segue junto ï¿½ parede em direï¿½ï¿½o a sala dos
-guardas acima.  Hï¿½ ma pequena mesa e um banquinho encostados no canto da
+   Uma escadaria de pedra segue junto à parede em direção a sala dos
+guardas acima.  Há ma pequena mesa e um banquinho encostados no canto da
 sala.  A porta encontra-se a sul.
 ~
-34 8 0 0 0 0
+34 d 0
 D2
 ~
 porta~
-1 -1 3447
+:n 2 a porta
+a -1 3447
 D4
 ~
 ~
@@ -875,12 +882,12 @@ S
 #3449
 O Posto de Guarda~
    Uma escadaria dirige-se para baixo deste pequeno e simples posto, onde
-hï¿½ sempre um guarda, vigiando as fronteiras norte ï¿½ procura por sinais de
-invasï¿½es.  Com tamanha tranquilidade da cidade, e a afeiï¿½ï¿½o dos
-habitantes locais, parece atï¿½ estranho a necessidade do Barï¿½o de ter
+há sempre um guarda, vigiando as fronteiras norte à procura por sinais de
+invasões.  Com tamanha tranquilidade da cidade, e a afeição dos
+habitantes locais, parece até estranho a necessidade do Barão de ter
 postos de guarda funcionando a todo momento.
 ~
-34 8 0 0 0 0
+34 d 0
 D5
 ~
 ~
@@ -888,15 +895,16 @@ D5
 S
 #3450
 Torre de Guarda Sul~
-   Uma escadaria de pedra segue junto ï¿½ parede em direï¿½ï¿½o a sala dos
-guardas acima.  Hï¿½ ma pequena mesa e um banquinho encostados no canto da
+   Uma escadaria de pedra segue junto à parede em direção a sala dos
+guardas acima.  Há ma pequena mesa e um banquinho encostados no canto da
 sala.  A porta encontra-se a norte.
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 porta~
-1 -1 3447
+:n 2 a porta
+a -1 3447
 D4
 ~
 ~
@@ -905,37 +913,40 @@ S
 #3451
 O Posto de Guarda~
    Uma escadaria dirige-se para baixo deste pequeno e simples posto, onde
-hï¿½ sempre um guarda, vigiando as fronteiras norte ï¿½ procura por sinais de
-invasï¿½es.  Com tamanha tranquilidade da cidade, e a afeiï¿½ï¿½o dos
-habitantes locais, parece atï¿½ estranho a necessidade do Barï¿½o de ter
+há sempre um guarda, vigiando as fronteiras norte à procura por sinais de
+invasões.  Com tamanha tranquilidade da cidade, e a afeição dos
+habitantes locais, parece até estranho a necessidade do Barão de ter
 postos de guarda funcionando a todo momento.
 ~
-34 8 0 0 0 0
+34 d 0
 D5
 ~
 ~
 0 -1 3450
 S
 #3452
-A Recepï¿½ï¿½o~
-   Todos os visitantes que desejam ver o Barï¿½o, por qualquer razï¿½o que
+A Recepção~
+   Todos os visitantes que desejam ver o Barão, por qualquer razão que
 seja, precisam antes falar com seu consultor e informar o motivo de sua
-visita.  Se vocï¿½ deseja ver o Barï¿½o, vocï¿½ deve, antes, ter a permissï¿½o do
+visita.  Se você deseja ver o Barão, você deve, antes, ter a permissão do
 consultor.  Ou...  Talvez tentar alguma outra coisa?
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 porta~
-1 3402 3455
+:n 2 a porta
+ab 3402 3455
 D1
 ~
 porta~
-1 3400 3453
+:n 2 a porta
+ab 3400 3453
 D2
 ~
 porta~
-1 3403 3457
+:n 2 a porta
+ab 3403 3457
 D3
 ~
 ~
@@ -943,47 +954,51 @@ D3
 S
 #3453
 Sala de Espera~
-   O Barï¿½o ï¿½ um homem ocupado, e nï¿½o deve ser perturbado por assuntos
-fï¿½teis.  Todo o seu tempo ï¿½ destinado a relaï¿½ï¿½es com as necessidades dos
-habitantes e aos mensageiros estrangeiros.  Seja paciente e vocï¿½ serï¿½
-logo atendido e poderï¿½ entrar na Cï¿½mara de Estado.
+   O Barão é um homem ocupado, e não deve ser perturbado por assuntos
+fúteis.  Todo o seu tempo é destinado a relações com as necessidades dos
+habitantes e aos mensageiros estrangeiros.  Seja paciente e você será
+logo atendido e poderá entrar na Câmara de Estado.
 ~
-34 8 0 0 0 0
+34 d 0
 D1
 ~
 porta~
-1 3401 3454
+:n 2 a porta
+ab 3401 3454
 D3
 ~
 porta~
-1 3400 3452
+:n 2 a porta
+ab 3400 3452
 S
+T 3440
 #3454
-A Cï¿½mara de Estado~
-   Uma grande e ampla mesa ocupa a maior parte do espaï¿½o que esta sala
-tem a oferecer.  Uma grande e vistosa cadeira, presumivelmente do Barï¿½o,
-encontra-se na ponta leste da mesa.  Hï¿½ tambï¿½m, menores, mas confortï¿½veis
-cadeiras alinhadas pelos lados da mesa.  Uma tapeï¿½aria magente cobre o
-canto leste da sala, logo atrï¿½s da cadeira do Barï¿½o.
+A Câmara de Estado~
+   Uma grande e ampla mesa ocupa a maior parte do espaço que esta sala
+tem a oferecer.  Uma grande e vistosa cadeira, presumivelmente do Barão,
+encontra-se na ponta leste da mesa.  Há também, menores, mas confortáveis
+cadeiras alinhadas pelos lados da mesa.  Uma tapeçaria magente cobre o
+canto leste da sala, logo atrás da cadeira do Barão.
 ~
-34 8 0 0 0 0
+34 d 0
 D3
 ~
 porta~
-1 3401 3453
+:n 2 a porta
+ab 3401 3453
 D4
 ~
 ~
 0 -1 3469
 S
 #3455
-O Salï¿½o de Festas~
-   Para aqueles que nï¿½o puderam ver o Barï¿½o, sempre hï¿½ o abundante salï¿½o
-de festas, onde se pode visitar.  Nï¿½o hï¿½ cadeiras nesta sala, somente uma
+O Salão de Festas~
+   Para aqueles que não puderam ver o Barão, sempre há o abundante salão
+de festas, onde se pode visitar.  Não há cadeiras nesta sala, somente uma
 enorme mesa carregada com todos os tipos de alimentos - prontos para serem
 degustados.
 ~
-34 8 0 0 0 0
+34 d 0
 D1
 ~
 ~
@@ -991,16 +1006,17 @@ D1
 D2
 ~
 porta~
-1 3402 3452
+:n 2 a porta
+ab 3402 3452
 S
 #3456
 A Cozinha~
-   A alta temperatura o atinge na medida em que vocï¿½ adentra neste local.
+   A alta temperatura o atinge na medida em que você adentra neste local.
 O grande forno que o cozinheiro usa libera um instenso calor a todo
-momento, seja dia ou noite.  O salï¿½o de festas ï¿½ muito mais confortï¿½vel -
-que tal ir lï¿½ para preparar uma refeiï¿½ï¿½o?
+momento, seja dia ou noite.  O salão de festas é muito mais confortável -
+que tal ir lá para preparar uma refeição?
 ~
-34 8 0 0 0 0
+34 d 0
 D3
 ~
 ~
@@ -1009,16 +1025,17 @@ S
 #3457
 Um Corredor Vazio~
    Os seus passos ecoam por este corredor, totalmente vazio por toda sua
-extensï¿½o.  Duas portas encontram-se ao lado sul, aproximadamente seis pï¿½s
-de distï¿½ncia uma da outra - uma delas logo a sul de vocï¿½.  Na distï¿½nte
-parede leste hï¿½ outra porta, com aparï¿½ncia mais robusta do que as da
+extensão.  Duas portas encontram-se ao lado sul, aproximadamente seis pés
+de distância uma da outra - uma delas logo a sul de você.  Na distânte
+parede leste há outra porta, com aparência mais robusta do que as da
 parede sul.
 ~
-34 40 0 0 0 0
+34 df 0
 D0
 ~
 porta~
-1 3403 3452
+:n 2 a porta
+ab 3403 3452
 D1
 ~
 ~
@@ -1026,18 +1043,20 @@ D1
 D2
 ~
 porta~
-1 -1 3459
+:n 2 a porta
+a -1 3459
 S
 #3458
 Um Corredor Vazio~
-   Uma porta robusta encontra-se a leste daqui, parecendo ser muito sï¿½lida
-e difï¿½cil de ser aberta.  Outra porta encontra-se a sul.
+   Uma porta robusta encontra-se a leste daqui, parecendo ser muito sólida
+e difícil de ser aberta.  Outra porta encontra-se a sul.
 ~
-34 40 0 0 0 0
+34 df 0
 D2
 ~
 porta~
-1 -1 3460
+:n 2 a porta
+a -1 3460
 D3
 ~
 ~
@@ -1045,19 +1064,21 @@ D3
 D5
 ~
 porta~
-1 3403 3461
+:n 2 a porta
+ab 3403 3461
 S
 #3459
 A Sala de Guarda~
-   Uma milï¿½cia armada?  Em um local onde o prï¿½prio Barï¿½o ï¿½ conhecido por
-ser pacï¿½fico e tranquilo?  O que serï¿½ que todos estes homens armados estï¿½o
+   Uma milícia armada?  Em um local onde o próprio Barão é conhecido por
+ser pacífico e tranquilo?  O que será que todos estes homens armados estão
 fazendo aqui?
 ~
-34 40 0 0 0 0
+34 df 0
 D0
 ~
 porta~
-1 -1 3457
+:n 2 a porta
+a -1 3457
 D1
 ~
 ~
@@ -1065,29 +1086,30 @@ D1
 S
 #3460
 A Sala de Guarda~
-   Uma milï¿½cia armada?  Em um local onde o prï¿½prio Barï¿½o ï¿½ conhecido por
-ser pacï¿½fico e tranquilo?  O que serï¿½ que todos estes homens armados estï¿½o
+   Uma milícia armada?  Em um local onde o próprio Barão é conhecido por
+ser pacífico e tranquilo?  O que será que todos estes homens armados estão
 fazendo aqui?
 ~
-34 40 0 0 0 0
+34 df 0
 D0
 ~
 porta~
-1 -1 3458
+:n 2 a porta
+a -1 3458
 D3
 ~
 ~
 0 -1 3459
 S
 #3461
-Uma Despensa ï¿½mida~
-   Engradados e caixas das prï¿½prias coisas do Barï¿½o encontram-se aqui, nas
-prateleiras em um canto da sala.  As paredes construï¿½das em pedra estï¿½o
-marcadas por uma insignificante infiltraï¿½ï¿½o.  Uma pequena passagem na pedra
-segue para norte em direï¿½ï¿½o a uma outra pequena sala, e uma bela porta
+Uma Despensa Úmida~
+   Engradados e caixas das próprias coisas do Barão encontram-se aqui, nas
+prateleiras em um canto da sala.  As paredes construídas em pedra estão
+marcadas por uma insignificante infiltração.  Uma pequena passagem na pedra
+segue para norte em direção a uma outra pequena sala, e uma bela porta
 econtra-se no lado oeste.
 ~
-34 40 0 0 0 0
+34 df 0
 D0
 ~
 ~
@@ -1095,55 +1117,60 @@ D0
 D3
 ~
 porta~
-1 3419 3463
+:n 2 a porta
+ab 3419 3463
 D4
 ~
 porta~
-1 3403 3458
+:n 2 a porta
+ab 3403 3458
 S
 #3462
 Anexo da Despensa~
-   Todos tipos de alimentos nï¿½o perecï¿½veis sï¿½o guardados nesta sala.  De
-algum modo, esta sala foi vedada de qualquer infiltraï¿½ï¿½o, mantendo todos
-os alimentos que aqui estï¿½o protegidos.
+   Todos tipos de alimentos não perecíveis são guardados nesta sala.  De
+algum modo, esta sala foi vedada de qualquer infiltração, mantendo todos
+os alimentos que aqui estão protegidos.
 ~
-34 40 0 0 0 0
+34 df 0
 D2
 ~
 ~
 0 -1 3461
 S
 #3463
-Entrada do Calabouï¿½o~
+Entrada do Calabouço~
    Uma ampla sala, e com o piso todo recoberto em pedra segue pela parte
-sul de trï¿½s conjuntos de celas.  Parece que o Barï¿½o nï¿½o ï¿½ tï¿½o tranquilo e
-pacï¿½fico como todos pensam que ele ï¿½.
+sul de três conjuntos de celas.  Parece que o Barão não é tão tranquilo e
+pacífico como todos pensam que ele é.
 ~
-34 40 0 0 0 0
+34 df 0
 D0
 ~
 cela~
-1 3405 3468
+:n 2 a cela
+ab 3405 3468
 D1
 ~
 porta~
-1 3419 3461
+:n 2 a porta
+ab 3419 3461
 D3
 ~
 ~
 0 -1 3464
 S
 #3464
-O Calabouï¿½o~
+O Calabouço~
    Grandes celas encontram-se no fim desta sala, ao lado norte, com
-grossas barras de ferro as cercando.  Hï¿½ uma espessa porta de madeira no
-final da sala, a leste - sendo a ï¿½nica saï¿½da deste calabouï¿½o.
+grossas barras de ferro as cercando.  Há uma espessa porta de madeira no
+final da sala, a leste - sendo a única saída deste calabouço.
 ~
-34 40 0 0 0 0
+34 df 0
 D0
 ~
 cela~
-1 3405 3467
+:n 2 a cela
+ab 3405 3467
 D1
 ~
 ~
@@ -1154,16 +1181,17 @@ D3
 0 -1 3465
 S
 #3465
-O Calabouï¿½o~
+O Calabouço~
    Grandes celas encontram-se no fim desta sala, ao lado norte, com
-grossas barras de ferro as cercando.  Hï¿½ uma espessa porta de madeira no
-final da sala, a leste - sendo a ï¿½nica saï¿½da deste calabouï¿½o.
+grossas barras de ferro as cercando.  Há uma espessa porta de madeira no
+final da sala, a leste - sendo a única saída deste calabouço.
 ~
-34 40 0 0 0 0
+34 df 0
 D0
 ~
 cela~
-1 3405 3466
+:n 2 a cela
+ab 3405 3466
 D1
 ~
 ~
@@ -1171,68 +1199,73 @@ D1
 S
 #3466
 Uma Cela~
-   Nï¿½o hï¿½ muitas coisas nesta cela alï¿½m de um pote mau cheiroso e alguns
-ratos.  Aqueles que sï¿½o aprisionados aqui devem ser pessoas muito mï¿½s, para
-serem tratados de tal forma pelo Barï¿½o.
+   Não há muitas coisas nesta cela além de um pote mau cheiroso e alguns
+ratos.  Aqueles que são aprisionados aqui devem ser pessoas muito más, para
+serem tratados de tal forma pelo Barão.
 ~
-34 40 0 0 0 0
+34 df 0
 D2
 ~
 cela~
-1 3405 3465
+:n 2 a cela
+ab 3405 3465
 S
 #3467
 Uma Cela~
-   Nï¿½o hï¿½ muitas coisas nesta cela alï¿½m de um pote mau cheiroso e alguns
-ratos.  Aqueles que sï¿½o aprisionados aqui devem ser pessoas muito mï¿½s, para
-serem tratados de tal forma pelo Barï¿½o.
+   Não há muitas coisas nesta cela além de um pote mau cheiroso e alguns
+ratos.  Aqueles que são aprisionados aqui devem ser pessoas muito más, para
+serem tratados de tal forma pelo Barão.
 ~
-34 40 0 0 0 0
+34 df 0
 D2
 ~
 cela~
-1 3405 3464
+:n 2 a cela
+ab 3405 3464
 S
 #3468
 Uma Cela~
-   Nï¿½o hï¿½ muitas coisas nesta cela alï¿½m de um pote mau cheiroso e alguns
-ratos.  Aqueles que sï¿½o aprisionados aqui devem ser pessoas muito mï¿½s, para
-serem tratados de tal forma pelo Barï¿½o.
+   Não há muitas coisas nesta cela além de um pote mau cheiroso e alguns
+ratos.  Aqueles que são aprisionados aqui devem ser pessoas muito más, para
+serem tratados de tal forma pelo Barão.
 ~
-34 40 0 0 0 0
+34 df 0
 D2
 ~
 cela~
-1 3405 3463
+:n 2 a cela
+ab 3405 3463
 S
 #3469
 Parte Superior da Sala de Guarda~
-   Guardas estï¿½o aqui, a todo instante, protegendo a entrada para os
-aposentos do Barï¿½o.  Esta pequena cï¿½mara tem sï¿½ esta finalidade.
+   Guardas estão aqui, a todo instante, protegendo a entrada para os
+aposentos do Barão.  Esta pequena câmara tem só esta finalidade.
 ~
-34 8 0 0 0 0
+34 d 0
 D3
 ~
 porta~
-1 3406 3470
+:n 2 a porta
+ab 3406 3470
 D5
 ~
 ~
 0 -1 3454
 S
 #3470
-Os Aposentos do Barï¿½o~
-   Estas grandes salas sï¿½o os aposentos pessoais do Barï¿½o.  Sem nenhuma
-esposa, ele nï¿½o tem a necessidade de ter aposentos para uma famï¿½lia, e nem
-para muita mobï¿½lia, possuindo sï¿½ simples mï¿½veis.  Uma lareira encontra-se
-fixa ï¿½ parede noroeste, e um grande tapete cobre a maior parte do piso na
-parte sudeste da sala.  A cama do Barï¿½o encontra-se a sul.
+Os Aposentos do Barão~
+   Estas grandes salas são os aposentos pessoais do Barão.  Sem nenhuma
+esposa, ele não tem a necessidade de ter aposentos para uma família, e nem
+para muita mobília, possuindo só simples móveis.  Uma lareira encontra-se
+fixa à parede noroeste, e um grande tapete cobre a maior parte do piso na
+parte sudeste da sala.  A cama do Barão encontra-se a sul.
 ~
-34 8 0 0 0 0
+34 d 0
 D1
 ~
 porta~
-1 3406 3469
+:n 2 a porta
+ab 3406 3469
 D2
 ~
 ~
@@ -1243,16 +1276,16 @@ D3
 0 -1 3471
 S
 #3471
-Os Aposentos do Barï¿½o~
-   Estas grandes salas sï¿½o os aposentos pessoais do Barï¿½o.  Sem nenhuma
-esposa, ele nï¿½o tem a necessidade de ter aposentos para uma famï¿½lia, e nem
-para muita mobï¿½lia, possuindo sï¿½ simples mï¿½veis.  Uma lareira encontra-se
-fixa ï¿½ parede oeste, e um grande tapete cobre a maior parte do piso na
-parte sudeste da sala.  A cama do Barï¿½o encontra-se a sudeste.  Hï¿½ uma
+Os Aposentos do Barão~
+   Estas grandes salas são os aposentos pessoais do Barão.  Sem nenhuma
+esposa, ele não tem a necessidade de ter aposentos para uma família, e nem
+para muita mobília, possuindo só simples móveis.  Uma lareira encontra-se
+fixa à parede oeste, e um grande tapete cobre a maior parte do piso na
+parte sudeste da sala.  A cama do Barão encontra-se a sudeste.  Há uma
 janela parecida com um vitral na parede sul, possuindo um estranha
 mistura de cores e um misterioso movimento.
 ~
-34 8 0 0 0 0
+34 d 0
 D1
 ~
 ~
@@ -1263,15 +1296,15 @@ D2
 0 -1 3473
 S
 #3472
-Os Aposentos do Barï¿½o~
-   Estas grandes salas sï¿½o os aposentos pessoais do Barï¿½o.  Sem nenhuma
-esposa, ele nï¿½o tem a necessidade de ter aposentos para uma famï¿½lia, e nem
-para muita mobï¿½lia, possuindo sï¿½ simples mï¿½veis.  Uma lareira encontra-se
-fixa ï¿½ parede noroeste, e um grande tapete cobre a maior parte do piso na
-parte sudoeste da sala.  A cama do Barï¿½o estï¿½ aqui, encostada na parede a
+Os Aposentos do Barão~
+   Estas grandes salas são os aposentos pessoais do Barão.  Sem nenhuma
+esposa, ele não tem a necessidade de ter aposentos para uma família, e nem
+para muita mobília, possuindo só simples móveis.  Uma lareira encontra-se
+fixa à parede noroeste, e um grande tapete cobre a maior parte do piso na
+parte sudoeste da sala.  A cama do Barão está aqui, encostada na parede a
 sudeste.
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 ~
@@ -1282,14 +1315,14 @@ D3
 0 -1 3473
 S
 #3473
-Os Aposentos do Barï¿½o~
-   Estas grandes salas sï¿½o os aposentos pessoais do Barï¿½o.  Sem nenhuma
-esposa, ele nï¿½o tem a necessidade de ter aposentos para uma famï¿½lia, e nem
-para muita mobï¿½lia, possuindo sï¿½ simples mï¿½veis.  Uma lareira encontra-se
-fixa ï¿½ parede noroeste, e um grande tapete cobre a maior parte do piso
-deste local.  A cama do Barï¿½o encontra-se a leste.
+Os Aposentos do Barão~
+   Estas grandes salas são os aposentos pessoais do Barão.  Sem nenhuma
+esposa, ele não tem a necessidade de ter aposentos para uma família, e nem
+para muita mobília, possuindo só simples móveis.  Uma lareira encontra-se
+fixa à parede noroeste, e um grande tapete cobre a maior parte do piso
+deste local.  A cama do Barão encontra-se a leste.
 ~
-34 8 0 0 0 0
+34 d 0
 D0
 ~
 ~

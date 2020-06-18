@@ -1,200 +1,197 @@
 #1100
 Uma Trilha Esquecida~
-   Vocï¿½ estï¿½ numa trilha estreita, onde o solo ï¿½ de terra fofa e a paisagem
-ï¿½ inteiramente feita por vegetaï¿½ï¿½o rasteira.  A leste, a estrada continua e
-vocï¿½ consegue ver, ao longe, uma ponte que cruza um desfiladeiro.  Uma nï¿½voa
-branca o impede de ver o que hï¿½ depois da ponte.
-   Ao norte hï¿½ uma enorme ï¿½rvore solitï¿½ria, ï¿½nica na paisagem.
-   A estrada retorna ao Templo pela direï¿½ï¿½o oeste.
+   Você está numa trilha estreita, onde o solo é de terra fofa e a paisagem
+é inteiramente feita por vegetação rasteira.  A leste, a estrada continua e
+você consegue ver, ao longe, uma ponte que cruza um desfiladeiro.  Uma névoa
+branca o impede de ver o que há depois da ponte.
+   Ao norte há uma enorme árvore solitária, única na paisagem.
+   A estrada retorna ao Templo pela direção oeste.
 ~
-11 0 0 0 0 2
+11 0 2
+D2
+Você repara que ali está havendo uma estranha movimentação.
+~
+~
+0 -1 2200
 D0
-Uma trilha conduz a uma ï¿½rvore, ï¿½nica em toda a vegetaï¿½ï¿½o.
+Uma trilha conduz a uma árvore, única em toda a vegetação.
 ~
 ~
 0 -1 1101
 D1
-A estrada continua na direï¿½ï¿½o da ponte.
+A estrada continua na direção da ponte.
 ~
 ~
 0 -1 1105
-D2
-Vocï¿½ repara que ali estï¿½ havendo uma estranha movimentaï¿½ï¿½o.
-~
-~
-0 -1 2200
 D3
-Vocï¿½ vï¿½ o Templo de Midgaard.
+Você vê o Templo de Midgaard.
 ~
 porta~
-1 -1 3063
+:n 2
+a -1 3063
 S
 #1101
-A ï¿½rvore Solitï¿½ria~
-   De perto, a ï¿½rvore parece muito maior do que vista de longe.  Ela
-permanece aqui, como eterna protetora dessa regiï¿½o de vegetaï¿½ï¿½o ainda
+A Árvore Solitária~
+   De perto, a árvore parece muito maior do que vista de longe.  Ela
+permanece aqui, como eterna protetora dessa região de vegetação ainda
 virgem.
-   Ao redor de seu tronco, vocï¿½ nota uns frutos de coloraï¿½ï¿½o pï¿½rpura que jï¿½
-estï¿½o se deteriorando.  Ao olhar para cima, vocï¿½ vï¿½ que a ï¿½rvore ainda tem
+   Ao redor de seu tronco, você nota uns frutos de coloração púrpura que já
+estão se deteriorando.  Ao olhar para cima, você vê que a árvore ainda tem
 alguns frutos em seus galhos mais altos, e o tronco oferece apoio suficiente
-para vocï¿½ tentar escalï¿½-la.
-   Para sul, uma trilha leva de volta ï¿½ estrada de terra fofa.
+para você tentar escalá-la.
+   Para sul, uma trilha leva de volta à estrada de terra fofa.
 ~
-11 0 0 0 0 2
+11 0 2
 D2
 A trilha retorna a estrada de terra fofa.
 ~
 ~
 0 -1 1100
 D4
-A copa da ï¿½rvore parece ter alguns frutos em sua parte mais alta.
+A copa da árvore parece ter alguns frutos em sua parte mais alta.
 ~
 ~
 0 -1 1102
 S
 #1102
-A Copa da ï¿½rvore~
+A Copa da Árvore~
    Ufa!  Essa arvore bem que poderia ser mais baixa...
-   Vocï¿½ estï¿½ na copa da ï¿½rvore.  Olhando para baixo, vocï¿½ sente um pouco de
+   Você está na copa da árvore.  Olhando para baixo, você sente um pouco de
 vertigem por causa da altura, que deve estar entre uns 8 a 10 metros.  Ainda
-ï¿½ possivel voltar ï¿½ base da arvore, com um pouco de cautela.  Afinal, vocï¿½
+é possivel voltar à base da arvore, com um pouco de cautela.  Afinal, você
 pode se machucar se cair desta altura.
-   Os frutos estï¿½o mais acima, na parte superior da copa.  Se vocï¿½ quiser,
-vocï¿½ pode se arriscar a subir lï¿½ e pegar alguns dos frutos...
+   Os frutos estão mais acima, na parte superior da copa.  Se você quiser,
+você pode se arriscar a subir lá e pegar alguns dos frutos...
 ~
-11 0 0 0 0 2
+11 0 2
 D4
-Vocï¿½ consegue ver os frutos na parte superior da copa.
+Você consegue ver os frutos na parte superior da copa.
 ~
 ~
 0 -1 1103
 D5
-Uma leve vertigem faz vocï¿½ se segurar com mais forï¿½a nos galhos...
-Uma queda daqui poderia causar sï¿½rios estragos...
+Uma leve vertigem faz você se segurar com mais força nos galhos...
+Uma queda daqui poderia causar sérios estragos...
 ~
 ~
 0 -1 1101
 S
 #1103
-A Copa Superior da ï¿½rvore~
-   A visï¿½o daqui ï¿½ incrï¿½vel.  Vocï¿½ consegue ver a cidade de Midgaard quase
+A Copa Superior da Árvore~
+   A visão daqui é incrível.  Você consegue ver a cidade de Midgaard quase
 que inteira daqui, e toda a paisagem que a rodeia.  Ao leste, uma pequena
-estrada leva atï¿½ uma ponte que desaparece por dentro de uma espessa nï¿½voa
+estrada leva até uma ponte que desaparece por dentro de uma espessa névoa
 branca.
-   Olhando para baixo, vocï¿½ julga estar a uns 20 metros de altura, e cair de
+   Olhando para baixo, você julga estar a uns 20 metros de altura, e cair de
 uma altura dessas pode ser fatal...
-   Daqui ï¿½ possivel alcanï¿½ar os frutos desta arvore, que possuem um cor
-pï¿½rpura e sï¿½o mais ou menos do tamanho de uma maï¿½ï¿½.  Para o leste, em um
-galho isolado, vocï¿½ nota um fruto de cor dourada, diferente de todos os
-outros.  O galho em que ele esta mal resiste ao peso do proprio fruto.  Vocï¿½
-precisaria voar para chegar atï¿½ ele.
+   Daqui é possivel alcançar os frutos desta arvore, que possuem um cor
+púrpura e são mais ou menos do tamanho de uma maçã.  Para o leste, em um
+galho isolado, você nota um fruto de cor dourada, diferente de todos os
+outros.  O galho em que ele esta mal resiste ao peso do proprio fruto.  Você
+precisaria voar para chegar até ele.
 ~
-11 0 0 0 0 2
+11 0 2    
 D1
-Um pequeno fruto solitï¿½rio de cor dourada esta pendurado em um galho.
+Um pequeno fruto solitário de cor dourada esta pendurado em um galho.
 ~
 ~
 0 -1 1104
 D5
-Com muita cautela, ainda ï¿½ possï¿½vel descer atï¿½ a copa da ï¿½rvore.
+Com muita cautela, ainda é possível descer até a copa da árvore.
 ~
 ~
 0 -1 1102
 E
 frutos~
-Pequenos frutos de cor pï¿½rpura e do tamanho de uma maï¿½ï¿½ estï¿½o ao seu alcance.
+Pequenos frutos de cor púrpura e do tamanho de uma maçã estão ao seu alcance.
 ~
 S
 #1104
 O Fruto Sagrado~
-   Voando, vocï¿½ se arrisca atï¿½ o galho, onde o fruto estï¿½.  Daqui, vocï¿½ pode
-voltar pelo mesmo galho ou jï¿½ que voce esta voando, descer atï¿½ a base da
-ï¿½rvore.
+   Voando, você se arrisca até o galho, onde o fruto está.  Daqui, você pode
+voltar pelo mesmo galho ou já que voce esta voando, descer atá a base da
+árvore.
 ~
-11 0 0 0 0 9
+11 0 9
 D3
-Vocï¿½ pode voar atï¿½ a copa superior da arvore.
+Você pode voar até a copa superior da arvore.
 ~
 ~
 0 -1 1103
 D5
-Vocï¿½ pode voar atï¿½ a base da ï¿½rvore.
+Você pode voar até a base da árvore.
 ~
 ~
 0 -1 1101
 S
 #1105
 Uma Trilha Esquecida~
-   A trilha fica ainda mais estreita nesse trecho.  Aqui vegetaï¿½ï¿½o invadiu a
-trilha quase que inteiramente.  Parece que ninguï¿½m usa essa trilha a anos...
-   O chï¿½o vai ficando cada vez mais frio e mais ï¿½mido a cada passo em
-direï¿½ï¿½o ï¿½ ponte.  A cada passo na direï¿½ï¿½o leste, a ponte vai se aproximando,
+   A trilha fica ainda mais estreita nesse trecho.  Aqui vegetação invadiu a
+trilha quase que inteiramente.  Parece que ninguém usa essa trilha a anos...
+   O chão vai ficando cada vez mais frio e mais úmido a cada passo em
+direção à ponte.  A cada passo na direção leste, a ponte vai se aproximando,
 junto com a nevoa espessa.
-   A oeste, a trilha retorna em direï¿½ï¿½o ao templo de Midgaard.
+   A oeste, a trilha retorna em direção ao templo de Midgaard.
 ~
-11 0 0 0 0 2
-D0
-Vocï¿½ vï¿½ um caminho que leva atï¿½ um vasto campo...
-~
-~
-0 -1 5700
+11 0 2
 D1
-A trilha continua na direï¿½ï¿½o da ponte.
+A trilha continua na direção da ponte.
 ~
 ~
 0 -1 1106
 D3
-A trilha retorna na direï¿½ï¿½o do Templo de Midgaard.
+A trilha retorna na direção do Templo de Midgaard.
 ~
 ~
 0 -1 1100
+D0
+Você vê um caminho que leva até um vasto campo...
+~
+~
+0 -1 5700
 S
 #1106
 O Final da Trilha~
-   Aqui a vegetaï¿½ï¿½o jï¿½ cobriu por completo a antiga trilha.  A partir daqui
-o caminho fica mais difï¿½cil e cansativo.
-   Vocï¿½ pode continuar a leste em direï¿½ï¿½o ï¿½ ponte, que fica mais prï¿½xima a
+   Aqui a vegetação já cobriu por completo a antiga trilha.  A partir daqui
+o caminho fica mais difícil e cansativo.
+   Você pode continuar a leste em direção à ponte, que fica mais próxima a
 cada passo, ou retornar ao Templo, voltando pela trilha, para oeste.
 ~
-11 0 0 0 0 3
+11 0 3
 D0
 ~
 ~
 0 -1 2150
 D1
-A ponte fica mais prï¿½xima a cada passo.  Algo deixa vocï¿½ um pouco
+A ponte fica mais próxima a cada passo.  Algo deixa você um pouco
 apreensivo...
 ~
 ~
 0 -1 1107
 D3
-Ao longe, vocï¿½ avista o Templo de Midgaard.
+Ao longe, você avista o Templo de Midgaard.
 ~
 ~
 0 -1 1105
 S
 #1107
 Uma Passagem Entre Arbustos~
-   Nï¿½o hï¿½ mais trilha nenhuma aqui para seguir.  A vegetaï¿½ï¿½o aqui ï¿½ mais
-alta, chegando a cobrir seu corpo atï¿½ os ombros.  Folhagens e espinhais
-arranham seu corpo a cada passo, tornando a caminhada ainda mais difï¿½cil.
+   Não há mais trilha nenhuma aqui para seguir.  A vegetação aqui é mais
+alta, chegando a cobrir seu corpo até os ombros.  Folhagens e espinhais
+arranham seu corpo a cada passo, tornando a caminhada ainda mais difícil.
 Seria uma boa, voltar daqui para oeste, para a seguranca do Templo de
 Midgaard.
-   Dentre os arbustos, vocï¿½ ouve um barulho vindo do sul.  Ao oeste, a
+   Dentre os arbustos, você ouve um barulho vindo do sul.  Ao oeste, a
 folhagem parece abrir caminho para algum lugar.
 ~
-11 0 0 0 0 3
+11 0 3
 D0
-A folhagem parece menos densa nesta direï¿½ï¿½o.
+A folhagem parece menos densa nesta direção.
 ~
 ~
 0 -1 -1
-D1
-~
-~
-0 -1 2300
 D2
-Alï¿½m do barulho, vocï¿½ nï¿½o vï¿½ nada de especial.
+Além do barulho, você não vê nada de especial.
 ~
 ~
 0 -1 1108
@@ -203,58 +200,62 @@ Este caminho retorna de volta ao Templo de Midgaard.
 ~
 ~
 0 -1 1106
+D1
+~
+~
+0 -1 2300
 S
 #1108
 A Lagoa Escura~
-   Vocï¿½ escorregou em alguma coisa viscosa que estava no chï¿½o e acabou
-caindo dentro de uma lagoa, de ï¿½guas escuras e que exalam um odor podre no
-ar.  A ï¿½gua bate nos seus tornozelos enquanto vocï¿½ tenta descobrir aonde
-vocï¿½ veio parar.
-   Uma sensaï¿½ï¿½o estranha faz vocï¿½ querer sair dessa lagoa o quanto antes.
-   A ï¿½nica saï¿½da aparente ï¿½ voltar de onde...  Mas como?  Vocï¿½ nï¿½o consegue
-achar nenhuma saï¿½da ao redor do lago.  Parece que a vegetaï¿½ï¿½o se fechou
-totalmente, e ï¿½ muito densa para vocï¿½ atravessar.  No desespero, vocï¿½ nota
-algumas bolhas vindo a superficie do lago.  Talvez a saï¿½da seja para
+   Você escorregou em alguma coisa viscosa que estava no chão e acabou
+caindo dentro de uma lagoa, de águas escuras e que exalam um odor podre no
+ar.  A água bate nos seus tornozelos enquanto você tenta descobrir aonde
+você veio parar.
+   Uma sensação estranha faz você querer sair dessa lagoa o quanto antes.
+   A única saída aparente é voltar de onde...  Mas como?  Você não consegue
+achar nenhuma saída ao redor do lago.  Parece que a vegetação se fechou
+totalmente, e é muito densa para você atravessar.  No desespero, você nota
+algumas bolhas vindo a superficie do lago.  Talvez a saída seja para
 baixo...
 ~
-11 0 0 0 0 6
+11 0 6
 D5
-Tem umas bolhas de ar vindo dessa direï¿½ï¿½o.
+Tem umas bolhas de ar vindo dessa direção.
 ~
 ~
 0 -1 1109
 E
-vegetaï¿½ï¿½o~
-Parece ter se fechado propositalmente.  E ï¿½ muito densa para se atravessar.
+vegetação~
+Parece ter se fechado propositalmente.  E é muito densa para se atravessar.
 ~
 S
 #1109
 Dentro da Lagoa Escura~
-   ï¿½ realmente escuro aqui em baixo, e mesmo com magia nï¿½o ï¿½ possivel ver
-muito alï¿½m. Sem poder ver muito, suas ï¿½nicas opï¿½ï¿½es sï¿½o voltar ï¿½ superficie,
-ou nadar atï¿½ o fundo da lagoa.
+   É realmente escuro aqui em baixo, e mesmo com magia não é possivel ver
+muito além. Sem poder ver muito, suas únicas opções são voltar à superficie,
+ou nadar até o fundo da lagoa.
 ~
-11 393313 0 0 0 8
+11 afgrs 8
 D4
-Estï¿½ muito escuro para vocï¿½ ver alguma coisa.
+Está muito escuro para você ver alguma coisa.
 ~
 ~
 0 -1 1108
 D5
-Estï¿½ muito escuro para vocï¿½ ver alguma coisa.
+Está muito escuro para você ver alguma coisa.
 ~
 ~
 0 -1 1110
 S
 #1110
 Dentro da Lagoa Escura~
-   Vocï¿½ continua nadando, sem com isso chegar ao fundo da lagoa.  Vocï¿½ nota
-a uma grande tubulaï¿½ï¿½o desembocando aquï¿½, vindo do leste.
-   Vocï¿½ ainda pode voltar a superficie deste ponto.
+   Você continua nadando, sem com isso chegar ao fundo da lagoa.  Você nota
+a uma grande tubulação desembocando aquí, vindo do leste.
+   Você ainda pode voltar a superficie deste ponto.
 ~
-11 393313 0 0 0 8
+11 afgrs 8
 D1
-Parece que nï¿½o ï¿½ usada a anos.
+Parece que não é usada a anos.
 ~
 ~
 0 -1 1111
@@ -268,18 +269,19 @@ D5
 0 -1 9700
 S
 #1111
-A Entrada da Tubulaï¿½ï¿½o~
-   Vocï¿½ estï¿½ diante de um tubo de mais ou menos 2 metros de diï¿½metro, muito
-velho, que nï¿½o ï¿½ usado a anos.  Na sua entrada, tem uma grade com um cadeado
-enferrujado.  Parece que se voce quiser entrar no cano, vocï¿½ vai ter que dar
+A Entrada da Tubulação~
+   Você está diante de um tubo de mais ou menos 2 metros de diâmetro, muito
+velho, que não é usado a anos.  Na sua entrada, tem uma grade com um cadeado
+enferrujado.  Parece que se voce quiser entrar no cano, você vai ter que dar
 um jeito neste cadeado.
 ~
-11 393313 0 0 0 8
+11 afgrs 8
 D0
 O tubalacao parece continuar para norte.
 ~
 grade~
-1 -1 1112
+:n 2
+a -1 1112
 D3
 ~
 ~
@@ -287,22 +289,23 @@ D3
 S
 #1112
 Dentro da Tubulacao~
-   Vocï¿½ segue nadando dentro do tubo atï¿½ chegar a um lugar seco.  Parece que
-nessa parte o cano esta acima do nivel da lagoa.  Ugh!  O cheiro daqui ï¿½
+   Você segue nadando dentro do tubo até chegar a um lugar seco.  Parece que
+nessa parte o cano esta acima do nivel da lagoa.  Ugh!  O cheiro daqui é
 ainda pior que o do lago.
-   Essa tubulaï¿½ï¿½o termina repentinamente e a unica direï¿½ï¿½o a se tomar ï¿½ uma
-bifurcaï¿½ï¿½o que leva para baixo, ou retornar nadando atï¿½ a lagoa.
+   Essa tubulação termina repentinamente e a unica direção a se tomar é uma
+bifurcação que leva para baixo, ou retornar nadando até a lagoa.
 ~
-11 393281 0 0 0 0
+11 agrs 0
 D2
-A tubulaï¿½ï¿½o retorna ï¿½ lagoa.
+A tubulação retorna à lagoa.
 ~
 grade~
-1 -1 1111
+:n 2
+a -1 1111
 D5
-Esta muito escuro para vocï¿½ ver algo.
+Esta muito escuro para você ver algo.
 ~
 ~
 0 -1 7022
 S
-$~
+$

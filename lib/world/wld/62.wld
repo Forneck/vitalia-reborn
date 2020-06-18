@@ -1,12 +1,12 @@
 #6200
 Na Floresta~
    A trilha acaba aqui onde as montanhas surgem bruscamente.  Olhando para o
-alto, vocï¿½ percebe que a subida serï¿½ difï¿½cil, arriscada e provavelmente nï¿½o
-merecerï¿½ o esforï¿½o.  A barreira de energia continua para cima da montanha, ï¿½
-perder de vista.  Vocï¿½ pode voltar para leste ou seguir sul por uma estranha
+alto, você percebe que a subida será difícil, arriscada e provavelmente não
+merecerá o esforço.  A barreira de energia continua para cima da montanha, à
+perder de vista.  Você pode voltar para leste ou seguir sul por uma estranha
 caverna nas montanhas.
 ~
-62 0 0 0 0 3
+62 0 3
 D1
 ~
 ~
@@ -17,19 +17,19 @@ D2
 0 -1 2431
 E
 barreira energia~
-Vocï¿½ mal consegue ver as ï¿½rvores que estï¿½o alï¿½m dela mas nï¿½o parece haver
-caminho que o leve para lï¿½.  O campo parece subir pelo ar e dï¿½ a impressï¿½o
-de formar um teto sobre as ï¿½rvores impedindo assim, a entrada por cima.
+Você mal consegue ver as árvores que estão além dela mas não parece haver
+caminho que o leve para lá.  O campo parece subir pelo ar e dá a impressão
+de formar um teto sobre as árvores impedindo assim, a entrada por cima.
 ~
 S
 #6201
 Na Floresta~
    A oeste as montanhas crescem bem altas, rochosas e sem vida.  A trilha em
-que vocï¿½ caminha leva a oeste para o fim da floresta e volta para o leste.
-Cada caminho da barreira de energia acaba no norte, indescritï¿½vel, mï¿½gica e
-impenetrï¿½vel.
+que você caminha leva a oeste para o fim da floresta e volta para o leste.
+Cada caminho da barreira de energia acaba no norte, indescritível, mágica e
+impenetrável.
 ~
-62 0 0 0 0 3
+62 0 3
 D1
 ~
 ~
@@ -40,20 +40,20 @@ D3
 0 -1 6200
 E
 barreira energia~
-Vocï¿½ mal consegue ver as ï¿½rvores que estï¿½o alï¿½m dela mas nï¿½o parece haver
-caminho que o leve para lï¿½.  O campo parece subir pelo ar e dï¿½ a impressï¿½o
-de formar um teto sobre as ï¿½rvores impedindo assim, a entrada por cima.
+Você mal consegue ver as árvores que estão além dela mas não parece haver
+caminho que o leve para lá.  O campo parece subir pelo ar e dá a impressão
+de formar um teto sobre as árvores impedindo assim, a entrada por cima.
 ~
 S
 #6202
 Na Floresta~
-   Esta trilha corre paralela ï¿½ barreira de energia para o norte.
+   Esta trilha corre paralela à barreira de energia para o norte.
 Aparentemente todos os caminhos levam para cima das montanhas ao oeste, que
-formam os contornos deste vale.  Andando, um pouco mais, vocï¿½ assusta um
-pequeno esquilo, que salta atravï¿½s da barreira mï¿½gica, sem pensar nem um
-segundo!  Sua mï¿½o, contudo, ainda ï¿½ como que atraï¿½da pelo campo mï¿½gico.
+formam os contornos deste vale.  Andando, um pouco mais, você assusta um
+pequeno esquilo, que salta através da barreira mágica, sem pensar nem um
+segundo!  Sua mão, contudo, ainda é como que atraída pelo campo mágico.
 ~
-62 0 0 0 0 3
+62 0 3
 D1
 ~
 ~
@@ -64,19 +64,19 @@ D3
 0 -1 6201
 E
 barreira energia~
-Vocï¿½ mal consegue ver as ï¿½rvores que estï¿½o alï¿½m dela e nï¿½o parece haver
-caminho que o leve atï¿½ lï¿½.  O campo parece subir pelo ar e dï¿½ a impressï¿½o de
-formar um teto sobre as ï¿½rvores, impedindo assim a entrada por cima.
+Você mal consegue ver as árvores que estão além dela e não parece haver
+caminho que o leve até lá.  O campo parece subir pelo ar e dá a impressão de
+formar um teto sobre as árvores, impedindo assim a entrada por cima.
 ~
 S
 #6203
 Na Floresta~
    Os caminhos vindos do norte acabam abruptamente aqui, envolvidos por um
-tipo de barreira de energia incandescente que circula em meio ï¿½s ï¿½rvores.
-Uma trilha de caï¿½a, aparentemente muito usada, corre para o leste-oeste
-adiante da longa barreira mï¿½gica.
+tipo de barreira de energia incandescente que circula em meio às árvores.
+Uma trilha de caça, aparentemente muito usada, corre para o leste-oeste
+adiante da longa barreira mágica.
 ~
-62 0 0 0 0 3
+62 0 3
 D1
 ~
 ~
@@ -91,20 +91,20 @@ D3
 0 -1 6202
 E
 barreira energia~
-Vocï¿½ mal consegue ver as ï¿½rvores que estï¿½o alï¿½m dela mas nï¿½o parece haver
-caminho que o leve para lï¿½.  O campo parece subir pelo ar e dï¿½ a impressï¿½o
-de formar um teto sobre as ï¿½rvores impedindo assim, a entrada por cima.
+Você mal consegue ver as árvores que estão além dela mas não parece haver
+caminho que o leve para lá.  O campo parece subir pelo ar e dá a impressão
+de formar um teto sobre as árvores impedindo assim, a entrada por cima.
 ~
 S
 #6204
 Na Floresta~
-   A barreira de energia segue seu curso em meio ï¿½s ï¿½rvores que estï¿½o a
-leste-oeste, bem ao norte da trilha que vocï¿½ estï¿½.  Um enfraquecido zunido
+   A barreira de energia segue seu curso em meio às árvores que estão a
+leste-oeste, bem ao norte da trilha que você está.  Um enfraquecido zunido
 parece emanar do campo, fazendo com que os sons normais da floresta quase
-desapareï¿½am.  Por uns momentos vocï¿½ pergunta a si mesmo se o campo estï¿½
-protegendo algo lï¿½ dentro, ou mantendo vocï¿½ fora.  Isso o intriga...
+desapareçam.  Por uns momentos você pergunta a si mesmo se o campo está
+protegendo algo lá dentro, ou mantendo você fora.  Isso o intriga...
 ~
-62 0 0 0 0 3
+62 0 3
 D1
 ~
 ~
@@ -115,20 +115,20 @@ D3
 0 -1 6203
 E
 barreira energia~
-Vocï¿½ mal consegue ver as ï¿½rvores que estï¿½o alï¿½m dela mas nï¿½o parece haver
-caminho que o leve para lï¿½.  O campo parece subir pelo ar e dï¿½ a impressï¿½o
-de formar um teto sobre as ï¿½rvores impedindo assim, a entrada por cima.
+Você mal consegue ver as árvores que estão além dela mas não parece haver
+caminho que o leve para lá.  O campo parece subir pelo ar e dá a impressão
+de formar um teto sobre as árvores impedindo assim, a entrada por cima.
 ~
 S
 #6205
 Na Floresta~
    O campo de energia faz uma repentina curva de noventa graus aqui,
-seguindo para o norte e oeste e perdendo-se em meio ï¿½ pesada floresta.  A
-trilha em que vocï¿½ estï¿½ faz uma curva para evitar a margem da barreira
-mï¿½gica em ambas as direï¿½ï¿½es.  Curioso... quem ou o que estï¿½ guardando este
-campo e com que propï¿½sito?
+seguindo para o norte e oeste e perdendo-se em meio à pesada floresta.  A
+trilha em que você está faz uma curva para evitar a margem da barreira
+mágica em ambas as direções.  Curioso... quem ou o que está guardando este
+campo e com que propósito?
 ~
-62 0 0 0 0 3
+62 0 3
 D0
 ~
 ~
@@ -139,19 +139,19 @@ D3
 0 -1 6204
 E
 barreira energia~
-Vocï¿½ mal consegue ver as ï¿½rvores que estï¿½o alï¿½m dela mas nï¿½o parece haver
-caminho que o leve para lï¿½.  O campo parece subir pelo ar e dï¿½ a impressï¿½o
-de formar um teto sobre as ï¿½rvores impedindo assim, a entrada por cima.
+Você mal consegue ver as árvores que estão além dela mas não parece haver
+caminho que o leve para lá.  O campo parece subir pelo ar e dá a impressão
+de formar um teto sobre as árvores impedindo assim, a entrada por cima.
 ~
 S
 #6206
 Na Floresta~
-   As ï¿½rvores ficam mais grossas aqui e surpreendentemente vocï¿½ vï¿½ uma
-ï¿½rvore totalmente cortada ao meio pela barreira mï¿½gica que segue ao
-norte-sul daqui.  A ï¿½rvore parece saudï¿½vel e inalterada pelo campo de
-energia que passa atravï¿½s dela.  Estranho...
+   As árvores ficam mais grossas aqui e surpreendentemente você vê uma
+árvore totalmente cortada ao meio pela barreira mágica que segue ao
+norte-sul daqui.  A árvore parece saudável e inalterada pelo campo de
+energia que passa através dela.  Estranho...
 ~
-62 0 0 0 0 3
+62 0 3
 D0
 ~
 ~
@@ -162,20 +162,20 @@ D2
 0 -1 6205
 E
 barreira energia~
-Vocï¿½ mal consegue ver as ï¿½rvores que estï¿½o alï¿½m dela mas nï¿½o parece haver
-caminho que o leve para lï¿½.  O campo parece subir pelo ar e dï¿½ a impressï¿½o
-de formar um teto sobre as ï¿½rvores impedindo assim, a entrada por cima.
+Você mal consegue ver as árvores que estão além dela mas não parece haver
+caminho que o leve para lá.  O campo parece subir pelo ar e dá a impressão
+de formar um teto sobre as árvores impedindo assim, a entrada por cima.
 ~
 S
 #6207
 Na Floresta~
-   A barreira de energia mï¿½gica corre direto para o norte-sul, inalterada
-pela irregularidade do terreno, interpondo-se sobre rochas e ï¿½rvores.  Vindo
-do norte, vocï¿½ ouve um fraco barulho por cima do campo.  A trilha em que
-vocï¿½ estï¿½ continua para o norte e para o sul, apenas alguns passos o separam
+   A barreira de energia mágica corre direto para o norte-sul, inalterada
+pela irregularidade do terreno, interpondo-se sobre rochas e árvores.  Vindo
+do norte, você ouve um fraco barulho por cima do campo.  A trilha em que
+você está continua para o norte e para o sul, apenas alguns passos o separam
 da barreira.
 ~
-62 0 0 0 0 3
+62 0 3
 D0
 ~
 ~
@@ -186,20 +186,20 @@ D2
 0 -1 6206
 E
 barreira energia~
-Vocï¿½ mal consegue ver as ï¿½rvores que estï¿½o alï¿½m dela mas nï¿½o parece haver
-caminho que o leve para lï¿½.  O campo parece subir pelo ar e dï¿½ a impressï¿½o
-de formar um teto sobre as ï¿½rvores impedindo assim, a entrada por cima.
+Você mal consegue ver as árvores que estão além dela mas não parece haver
+caminho que o leve para lá.  O campo parece subir pelo ar e dá a impressão
+de formar um teto sobre as árvores impedindo assim, a entrada por cima.
 ~
 S
 #6208
 Na Floresta~
    Aqui, o campo muda de cor, tornando-se quase transparente.  Do outro lado
-parece que vocï¿½ consegue ver algumas figuras mas nada parece muito palpï¿½vel.
-Do norte vocï¿½ ouve um som forte de ï¿½gua e atravï¿½s das ï¿½rvores vocï¿½ pode ver
-um rio cortando a floresta.  A trilha em que vocï¿½ estï¿½ leva a norte-sul
-atravï¿½s das ï¿½rvores, seguindo a longa barreira de energia.
+parece que você consegue ver algumas figuras mas nada parece muito palpável.
+Do norte você ouve um som forte de água e através das árvores você pode ver
+um rio cortando a floresta.  A trilha em que você está leva a norte-sul
+através das árvores, seguindo a longa barreira de energia.
 ~
-62 0 0 0 0 3
+62 0 3
 D0
 ~
 ~
@@ -214,20 +214,20 @@ D3
 0 -1 6210
 E
 barreira energia~
-Vocï¿½ pode ver uma claridade adiante.  A barreira nï¿½o bloqueia totalmente a
-ï¿½rea atrï¿½s.  Vocï¿½ pensa que talvez fosse possï¿½vel jogar-se contra a
-barreira, se essa coisa nï¿½o o matasse primeiro.
+Você pode ver uma claridade adiante.  A barreira não bloqueia totalmente a
+área atrás.  Você pensa que talvez fosse possível jogar-se contra a
+barreira, se essa coisa não o matasse primeiro.
 ~
 S
 #6209
 A Margem do Rio~
-   Um rio corta a floresta aqui, com sua ï¿½gua limpa e clara.  A barreira de
-energia corre para o centro do rio e entï¿½o faz uma outra curva de noventa
-graus para o oeste.  A ï¿½gua parece penetrar no campo.  O rio parece ser
-muito largo e rï¿½pido para ser atravessado.  Parece que a ï¿½nica saï¿½da ï¿½
+   Um rio corta a floresta aqui, com sua água limpa e clara.  A barreira de
+energia corre para o centro do rio e então faz uma outra curva de noventa
+graus para o oeste.  A água parece penetrar no campo.  O rio parece ser
+muito largo e rápido para ser atravessado.  Parece que a única saída é
 voltar para o sul.
 ~
-62 0 0 0 0 3
+62 0 3
 D2
 ~
 ~
@@ -238,21 +238,21 @@ D3
 0 -1 17301
 E
 barreira energia~
-Vocï¿½ pode ver, fracamente, as ï¿½rvores que estï¿½o alï¿½m dela, mas nï¿½o parece
-haver caminho que o leve para lï¿½.  O campo sobe no ar, e parece formar um
-teto sobre as ï¿½rvores, impedindo, assim, uma entrada por cima.
+Você pode ver, fracamente, as árvores que estão além dela, mas não parece
+haver caminho que o leve para lá.  O campo sobe no ar, e parece formar um
+teto sobre as árvores, impedindo, assim, uma entrada por cima.
 ~
 S
 #6210
 Apenas Passando Por Acaso...~
-   A barreira de energia parece lhe empurrar, sem afetï¿½-lo enquanto vocï¿½
-forï¿½a o seu caminho atravï¿½s dela.  Todos os pï¿½los do seu corpo se arrepiam
-com a eletricidade estï¿½tica e os choques elï¿½tricos picam todo o seu corpo
-por causa da enorme quandidade de peï¿½as metï¿½licas do seu equipamento.  Vocï¿½
-pensa que talvez com um ï¿½ltimo esforï¿½o vocï¿½ talvez consiga transpï¿½r a
+   A barreira de energia parece lhe empurrar, sem afetá-lo enquanto você
+força o seu caminho através dela.  Todos os pêlos do seu corpo se arrepiam
+com a eletricidade estática e os choques elétricos picam todo o seu corpo
+por causa da enorme quandidade de peças metálicas do seu equipamento.  Você
+pensa que talvez com um último esforço você talvez consiga transpôr a
 barreira e atingir o outro lado...
 ~
-62 4 0 0 0 5
+62 c 5
 D1
 ~
 ~
@@ -264,13 +264,13 @@ D3
 S
 #6211
 Na Barreira~
-   Para o oeste a mï¿½gica barreira de energia estala e murmura, parecendo
-quase inofensiva.  Quase...pois todo o chï¿½o em volta estï¿½ coberto por
-corpos.  Vï¿½rios postes com caveiras no topo virados para o oeste, alertendo
-os viajantes para que nï¿½o passem daqui.  O ar tem cheiro de morte e
-decadï¿½ncia, e o ar ï¿½ muito rarefeito.  Vocï¿½ se sente desconfortï¿½vel.
+   Para o oeste a mágica barreira de energia estala e murmura, parecendo
+quase inofensiva.  Quase...pois todo o chão em volta está coberto por
+corpos.  Vários postes com caveiras no topo virados para o oeste, alertendo
+os viajantes para que não passem daqui.  O ar tem cheiro de morte e
+decadência, e o ar é muito rarefeito.  Você se sente desconfortável.
 ~
-62 4 0 0 0 3
+62 c 3
 D1
 ~
 ~
@@ -281,23 +281,23 @@ D3
 0 -1 6212
 E
 corpo corpos caveira caveiras~
-Demï¿½nio-humanos pelo tamanho.  As testas terminam em sobrancelhas grossas e
-a caixa craniana parece muito pequena.  Na protuberï¿½ncia vocï¿½ nota os pï¿½s de
+Demônio-humanos pelo tamanho.  As testas terminam em sobrancelhas grossas e
+a caixa craniana parece muito pequena.  Na protuberância você nota os pés de
 um corpo em chamas.  Partidos como porcos...Orcs.
 ~
 S
 #6212
 Uma Clareira na Floresta~
-   Vï¿½rias trilhas na floresta terminam aqui, nesta pequena clareira.  A
-sujeira parece cobrir o lugar e vocï¿½ vï¿½ muitas pegadas no chï¿½o.  Prï¿½ximo,
-vocï¿½ ouve o suave canto de um pï¿½ssaro que parece cortar o silï¿½ncio como se
-fosse um grito alto.  Sï¿½o caminhos que parecem ser bastante usados, pois os
-arbustos estï¿½o bem pisoteados e a folhagem parece ter sido despedaï¿½ada para
-deixar espaï¿½o suficiente para que se possa ir a qualquer ponto cardeal,
-exceto a oeste, onde o caminho parece estar bastante coberto...Vocï¿½ sente
-que estï¿½ sendo observado.
+   Várias trilhas na floresta terminam aqui, nesta pequena clareira.  A
+sujeira parece cobrir o lugar e você vê muitas pegadas no chão.  Próximo,
+você ouve o suave canto de um pássaro que parece cortar o silêncio como se
+fosse um grito alto.  São caminhos que parecem ser bastante usados, pois os
+arbustos estão bem pisoteados e a folhagem parece ter sido despedaçada para
+deixar espaço suficiente para que se possa ir a qualquer ponto cardeal,
+exceto a oeste, onde o caminho parece estar bastante coberto...Você sente
+que está sendo observado.
 ~
-62 0 0 0 0 3
+62 0 3
 D0
 ~
 ~
@@ -315,19 +315,19 @@ D3
 ~
 0 -1 6228
 E
-pï¿½ pegada pegadas marcas marca~
-Cascos rachados, dois pï¿½s...eles andam eretos, seja lï¿½ o que forem.
+pé pegada pegadas marcas marca~
+Cascos rachados, dois pés...eles andam eretos, seja lá o que forem.
 ~
 S
 #6213
 Uma Trilha na Floresta~
-   A trilha segue rumo norte, abrindo caminho atravï¿½s das ï¿½rvores da
+   A trilha segue rumo norte, abrindo caminho através das árvores da
 floresta e onde parece surgir a margem norte de um rio.  Esta trilha parece
-ser bastante movimentada e vocï¿½ deixa muitas pegadas na terra.  Novamente os
-cabelos da sua nuca se arrepiam e vocï¿½ tem a sensaï¿½ï¿½o de estar sendo
+ser bastante movimentada e você deixa muitas pegadas na terra.  Novamente os
+cabelos da sua nuca se arrepiam e você tem a sensação de estar sendo
 observado.
 ~
-62 0 0 0 0 3
+62 0 3
 D0
 ~
 ~
@@ -340,12 +340,12 @@ S
 #6214
 Na Margem do Rio~
    Um lindo rio vai fluindo maravilhosamente, apesar da correnteza parecer
-bem perigosa.  Da margem do rio vocï¿½ nota que a barreira de energia vai se
-fechando e nï¿½o hï¿½ saï¿½das.  Olhando para cima, vocï¿½ vï¿½ um passï¿½ro voar
-atravï¿½s da barreira e intriga-se com este estranho campo de forï¿½a natural.
-Esse caminho leva ao sul para a floresta e a oeste alï¿½m do centro do rio.
+bem perigosa.  Da margem do rio você nota que a barreira de energia vai se
+fechando e não há saídas.  Olhando para cima, você vê um passáro voar
+através da barreira e intriga-se com este estranho campo de força natural.
+Esse caminho leva ao sul para a floresta e a oeste além do centro do rio.
 ~
-62 0 0 0 0 2
+62 0 2
 D2
 ~
 ~
@@ -358,13 +358,13 @@ S
 #6215
 O Centro do Rio~
    O rio flui no seu curso normal, sem ser afetado pela barreira que passa
-pelo seu centro e segue em ambas as direï¿½ï¿½es atï¿½ tï¿½o longe quanto sua vista
-consegue ver.  O caminho em que vocï¿½ estï¿½, continua pela extensï¿½o do rio
-para o leste e oeste entre a ï¿½gua e o centro da floresta.  Mais uma vez vocï¿½
-se arrepia e sente uma inexplicï¿½vel sensaï¿½ï¿½o de que estï¿½ sendo observado.
+pelo seu centro e segue em ambas as direções até tão longe quanto sua vista
+consegue ver.  O caminho em que você está, continua pela extensão do rio
+para o leste e oeste entre a água e o centro da floresta.  Mais uma vez você
+se arrepia e sente uma inexplicável sensação de que está sendo observado.
 Pertubador.
 ~
-62 0 0 0 0 2
+62 0 2
 D1
 ~
 ~
@@ -376,13 +376,13 @@ D3
 S
 #6216
 No Centro do Rio~
-   Uma grande quantidade de rochas bloqueia este caminho alï¿½m do rio ao
-oeste e vocï¿½ nï¿½o vï¿½ nenhum caminho ao redor.  A mata estï¿½ muito densa ao sul
-e o rio estï¿½ mais rï¿½pido ao norte e a barreira mï¿½gica estï¿½ acima.  Pelas
-marcas na grama vocï¿½ supï¿½e que este seja um local de repouso bastante
+   Uma grande quantidade de rochas bloqueia este caminho além do rio ao
+oeste e você não vê nenhum caminho ao redor.  A mata está muito densa ao sul
+e o rio está mais rápido ao norte e a barreira mágica está acima.  Pelas
+marcas na grama você supõe que este seja um local de repouso bastante
 procurado.
 ~
-62 0 0 0 0 2
+62 0 2
 D1
 ~
 ~
@@ -390,13 +390,13 @@ D1
 S
 #6217
 Uma Trilha na Floresta~
-   Esta trilha da floresta ï¿½ bastante usada e segue para o sul.  Entre as
-pegadas na poeira vocï¿½ nota algumas pegadas de animal, levando vocï¿½ a crer
-que essas trilhas sï¿½o usadas por caï¿½adores.  Porque eles estariam dessa
+   Esta trilha da floresta é bastante usada e segue para o sul.  Entre as
+pegadas na poeira você nota algumas pegadas de animal, levando você a crer
+que essas trilhas são usadas por caçadores.  Porque eles estariam dessa
 maneira...?
-   Hï¿½ uma clareira ao norte, e o caminho segue em direï¿½ï¿½o ao sul.
+   Há uma clareira ao norte, e o caminho segue em direção ao sul.
 ~
-62 0 0 0 0 3
+62 0 3
 D0
 ~
 ~
@@ -409,14 +409,14 @@ S
 #6218
 Uma Trilha na Floresta~
    Uma trilha leva a norte-sul... obviamente uma trilha enganosa.  A mata,
-mais precisamente as ï¿½rvores acompanhadas pela folhagem do chï¿½o, enchem os
-dois lados.  O arbusto ï¿½ sua esquerda mostra ter sido recentemente
-cortado...  Parecendo ter sido causado por um objeto com uma lï¿½mina afiada
-como uma faca ou uma machadinha.  Um estalido nas folhas faz vocï¿½ olhar ao
-seu redor mas vocï¿½ nï¿½o vï¿½ nada.  Algo estï¿½ lhe observando, vocï¿½ sente isso.
+mais precisamente as árvores acompanhadas pela folhagem do chão, enchem os
+dois lados.  O arbusto à sua esquerda mostra ter sido recentemente
+cortado...  Parecendo ter sido causado por um objeto com uma lâmina afiada
+como uma faca ou uma machadinha.  Um estalido nas folhas faz você olhar ao
+seu redor mas você não vê nada.  Algo está lhe observando, você sente isso.
 Mas de onde?  E o que?
 ~
-62 0 0 0 0 3
+62 0 3
 D0
 ~
 ~
@@ -428,13 +428,13 @@ D2
 S
 #6219
 Uma Trilha na Floresta~
-   A trilha muda de direï¿½ï¿½o aqui, curvando-se para o norte e oeste.  Ao sul,
-encravada no tronco de uma grande ï¿½rvore, hï¿½ um interessante artefato: uma
+   A trilha muda de direção aqui, curvando-se para o norte e oeste.  Ao sul,
+encravada no tronco de uma grande árvore, há um interessante artefato: uma
 enferrujada ponta de flecha.  Parece que a flecha foi quebrada na ponta.
-Vocï¿½ segue pela mata e a ponta de flecha fica para trï¿½s.  Enfim, nï¿½o parece
+Você segue pela mata e a ponta de flecha fica para trás.  Enfim, não parece
 existir nada muito interessante nesta parte da mata.
 ~
-62 0 0 0 0 3
+62 0 3
 D0
 ~
 ~
@@ -446,14 +446,14 @@ D3
 S
 #6220
 Uma Trilha na Floresta~
-   Esta ï¿½ uma mï¿½o dupla que segue leste-oeste atravï¿½s da densa floresta.  A
-grama ao longo do caminho estï¿½ pouco crescida devido ao intenso movimento
+   Esta é uma mão dupla que segue leste-oeste através da densa floresta.  A
+grama ao longo do caminho está pouco crescida devido ao intenso movimento
 que deve haver aqui.  A trilha continua para o leste, e parece haver uma
-pequena clareira a oeste.  Um fraco ruï¿½do faz vocï¿½ ficar alerta.  Vocï¿½
-poderia jurar ter ouvido uma voz por perto.  Seja lï¿½ o que for, nï¿½o estava
+pequena clareira a oeste.  Um fraco ruído faz você ficar alerta.  Você
+poderia jurar ter ouvido uma voz por perto.  Seja lá o que for, não estava
 falando normalmente.
 ~
-62 0 0 0 0 3
+62 0 3
 D1
 ~
 ~
@@ -466,11 +466,11 @@ S
 #6221
 Uma Pequena Clareira~
    Bem no meio desta pequena clareira da floresta, se encontra uma enorme
-rocha que estï¿½ meio enterrada no chï¿½o.  Caminhos saem daqui e seguem para o
-leste, oeste e sul As ï¿½rvores acima encobrem o cï¿½u e encobrem tambï¿½m a
-barreira de energia que estï¿½ sobre sua cabeï¿½a.
+rocha que está meio enterrada no chão.  Caminhos saem daqui e seguem para o
+leste, oeste e sul As árvores acima encobrem o céu e encobrem também a
+barreira de energia que está sobre sua cabeça.
 ~
-62 0 0 0 0 3
+62 0 3
 D1
 ~
 ~
@@ -485,18 +485,18 @@ D3
 0 -1 6227
 E
 rocha pedregulho~
-Hï¿½ sangue seco nela.
+Há sangue seco nela.
 ~
 S
 #6222
 Uma Trilha na Floresta~
    Um pequeno caminho ao norte o leva para trilha principal, leste-oeste,
 que o leva, por sua vez, a uma clareira.  O caminho principal segue para o
-leste e oeste, serpenteando por entre as ï¿½rvores e a mata bloqueia qualquer
-caminho que possa existir a frente.  Novamente vocï¿½ pressente essa estranha
-sensaï¿½ï¿½o de estar sendo observado.
+leste e oeste, serpenteando por entre as árvores e a mata bloqueia qualquer
+caminho que possa existir a frente.  Novamente você pressente essa estranha
+sensação de estar sendo observado.
 ~
-62 0 0 0 0 3
+62 0 3
 D0
 ~
 ~
@@ -512,12 +512,12 @@ D3
 S
 #6223
 Uma Trilha na Floresta~
-   A trilha leva ao leste e oeste atravï¿½s da floresta.  Ao leste vocï¿½ nota
-uma ï¿½rea onde um pequeno caminho cruza a trilha principal.  Ao leste parece
-haver uma outra pequena clareira que tem a aparï¿½ncia de ser bastante usada.
-Hï¿½ muitas pegadas naquela direï¿½ï¿½o.
+   A trilha leva ao leste e oeste através da floresta.  Ao leste você nota
+uma área onde um pequeno caminho cruza a trilha principal.  Ao leste parece
+haver uma outra pequena clareira que tem a aparência de ser bastante usada.
+Há muitas pegadas naquela direção.
 ~
-62 0 0 0 0 3
+62 0 3
 D1
 ~
 ~
@@ -528,15 +528,15 @@ D3
 0 -1 6222
 S
 #6224
-O Beco Sem Saï¿½da~
-   O chï¿½o estï¿½ livre de vegetaï¿½ï¿½o nesta pequena clareira e diversos petiscos
-salgadinhos, feitos por mï¿½os humanas, foram espalhados pelo chï¿½o.  Hï¿½ vï¿½rias
+O Beco Sem Saída~
+   O chão está livre de vegetação nesta pequena clareira e diversos petiscos
+salgadinhos, feitos por mãos humanas, foram espalhados pelo chão.  Há várias
 pegadas de animais impressas na terra -- os petiscos parecem atrair a vida
-selvagem que vivem bem longe daqui.  Vocï¿½ imagina que este local deve ser um
-excelente lugar para se esconder e esperar pelo jantar, isso claro, se vocï¿½
-fosse um caï¿½ador...
+selvagem que vivem bem longe daqui.  Você imagina que este local deve ser um
+excelente lugar para se esconder e esperar pelo jantar, isso claro, se você
+fosse um caçador...
 ~
-62 0 0 0 0 3
+62 0 3
 D3
 ~
 ~
@@ -544,12 +544,12 @@ D3
 S
 #6225
 Uma Trilha na Floresta~
-   Esta trilha leva a leste-oeste alï¿½m da folhagem da floresta, ao redor as
-ï¿½rvores e cresce indiferentemente para cima e para baixo.  A ï¿½rea estï¿½
-quieta e serena, exceto pela barreira de energia que o mantï¿½m ao sul.  Por
-um momento, vocï¿½ se pergunta se ainda estï¿½ sendo observado...
+   Esta trilha leva a leste-oeste além da folhagem da floresta, ao redor as
+árvores e cresce indiferentemente para cima e para baixo.  A área está
+quieta e serena, exceto pela barreira de energia que o mantém ao sul.  Por
+um momento, você se pergunta se ainda está sendo observado...
 ~
-62 0 0 0 0 3
+62 0 3
 D1
 ~
 ~
@@ -562,13 +562,13 @@ S
 #6226
 Uma Trilha na Floresta~
    A trilha faz uma curva aqui, seguindo para o norte e o leste.  Ao longe
-vocï¿½ ouve o piar agudo de um grande pï¿½ssaro, que parece estar a procura de
-uma refeiï¿½ï¿½o no cï¿½u.  Os pequenos brotos de plantas ao seu redor balanï¿½am
-com a suave brisa.  De alguma forma, a aura ameaï¿½adora que envolvia toda a
-ï¿½rea atï¿½ entï¿½o, aqui parece estar ausente.  Vocï¿½ se sente um pouco mais
+você ouve o piar agudo de um grande pássaro, que parece estar a procura de
+uma refeição no céu.  Os pequenos brotos de plantas ao seu redor balançam
+com a suave brisa.  De alguma forma, a aura ameaçadora que envolvia toda a
+área até então, aqui parece estar ausente.  Você se sente um pouco mais
 relaxado...
 ~
-62 4 0 0 0 3
+62 c 3
 D0
 ~
 ~
@@ -576,14 +576,14 @@ D0
 S
 #6227
 Uma Trilha na Floresta~
-   Aqui, uma curva na trilha da floresta, permite que vocï¿½ siga para o leste
-e para o norte.  Ao leste vocï¿½ nota uma pequena clareira, enquanto que ao
-norte, essa trilha parece ficar maior, seguindo atravï¿½s da mata.  No chï¿½o
-estï¿½ o pedaï¿½o de uma faca quebrada, feita de osso e couro seco, ï¿½til agora.
-Vocï¿½ pergunta a si mesmo se o dono estaria observando-o agora -- alguma
-coisa certamente estï¿½.
+   Aqui, uma curva na trilha da floresta, permite que você siga para o leste
+e para o norte.  Ao leste você nota uma pequena clareira, enquanto que ao
+norte, essa trilha parece ficar maior, seguindo através da mata.  No chão
+está o pedaço de uma faca quebrada, feita de osso e couro seco, útil agora.
+Você pergunta a si mesmo se o dono estaria observando-o agora -- alguma
+coisa certamente está.
 ~
-62 0 0 0 0 3
+62 0 3
 D0
 ~
 ~
@@ -595,13 +595,13 @@ D1
 S
 #6228
 Uma Trilha na Floresta~
-   Esta trilha vem da clareira principal do oeste e segue atï¿½ cruzar com um
-o caminho norte-sul, ao leste.  Uma pequena arvorezinha, que estï¿½ no lado
-norte da trilha, tem uma corda amarrada ao redor dos galhos do topo; um laï¿½o
-incomum evidentemente.  Vocï¿½ ainda sente que estï¿½ sendo observado e a
-adrenalina sobe ao seu cï¿½rebro como um raio.
+   Esta trilha vem da clareira principal do oeste e segue até cruzar com um
+o caminho norte-sul, ao leste.  Uma pequena arvorezinha, que está no lado
+norte da trilha, tem uma corda amarrada ao redor dos galhos do topo; um laço
+incomum evidentemente.  Você ainda sente que está sendo observado e a
+adrenalina sobe ao seu cérebro como um raio.
 ~
-62 0 0 0 0 3
+62 0 3
 D1
 ~
 ~
@@ -613,13 +613,13 @@ D3
 S
 #6229
 Uma Trilha na Floresta~
-   Uma trilha norte-sul leva atravï¿½s da mata aqui, com uma pequena trilha
-seguindo para o leste.  As ï¿½rvores fornecem uma excelente proteï¿½ï¿½o contra os
-eventuais perigos que dos cï¿½us e atravï¿½s de buracos na folhagem percebe-se
-que a barreira mï¿½gica estï¿½ acima de vocï¿½, impedindo-o de escapar atravï¿½s de
-um vï¿½o.  Vocï¿½ sente que estï¿½ sendo pouco a pouco atraï¿½do para uma cilada.
+   Uma trilha norte-sul leva através da mata aqui, com uma pequena trilha
+seguindo para o leste.  As árvores fornecem uma excelente proteção contra os
+eventuais perigos que dos céus e através de buracos na folhagem percebe-se
+que a barreira mágica está acima de você, impedindo-o de escapar através de
+um vôo.  Você sente que está sendo pouco a pouco atraído para uma cilada.
 ~
-62 0 0 0 0 3
+62 0 3
 D1
 ~
 ~
@@ -632,12 +632,12 @@ S
 #6230
 Uma Trilha na Floresta~
    Duas trilhas unem-se aqui, um grande caminho vindo do norte segue em
-direï¿½ï¿½o ao leste e oeste.  O caminho oeste parece ser muito frequentado e o
-do leste exatamente o contrï¿½rio.  Existem menos ï¿½rvores aqui...  Parecem ter
-sido cortadas para serem transformadas em ferramentas rï¿½sticas.  A clareira
+direção ao leste e oeste.  O caminho oeste parece ser muito frequentado e o
+do leste exatamente o contrário.  Existem menos árvores aqui...  Parecem ter
+sido cortadas para serem transformadas em ferramentas rústicas.  A clareira
 parece ser especialmente segura para o leste.
 ~
-62 0 0 0 0 3
+62 0 3
 D0
 ~
 ~
@@ -653,13 +653,13 @@ D3
 S
 #6231
 Uma Clareira~
-   As ï¿½rvores daqui foram derrubadas e muitos dos troncos foram escavados
+   As árvores daqui foram derrubadas e muitos dos troncos foram escavados
 por pedras bem afiadas e revestidos por dentro, com couro tratado, sendo
-assim criados, tubos ï¿½ prova d'ï¿½gua.  Um sujo e fedorento lï¿½quido marrom,
-curtume evidentemente, preenche muitos deles, embebendo vï¿½rios pedaï¿½os e
-peï¿½as de couro animal.  Rï¿½stico mas ï¿½til.
+assim criados, tubos à prova d'água.  Um sujo e fedorento líquido marrom,
+curtume evidentemente, preenche muitos deles, embebendo vários pedaços e
+peças de couro animal.  Rústico mas útil.
 ~
-62 0 0 0 0 3
+62 0 3
 D3
 ~
 ~
@@ -668,12 +668,12 @@ S
 #6232
 Uma Trilha na Floresta~
    A trilha vai fazendo uma curva para o oeste, onde o caminho segue sempre
-para cima, em diraï¿½ï¿½o ï¿½s montanhas que circundam este vale.  Muitas das
-ï¿½rvores por aqui, estï¿½o sendo derrubadas e definitivamente parece que a
-floresta estï¿½ acabando.  Ao leste a trilha leva a parte mais densa da
+para cima, em diração às montanhas que circundam este vale.  Muitas das
+árvores por aqui, estão sendo derrubadas e definitivamente parece que a
+floresta está acabando.  Ao leste a trilha leva a parte mais densa da
 floresta.  Uma pequenina trilha segue para o sul.
 ~
-62 0 0 0 0 3
+62 0 3
 D1
 ~
 ~
@@ -689,13 +689,13 @@ D3
 S
 #6233
 Uma Trilha na Floresta~
-   O chï¿½o estï¿½ ficando mais rochoso aqui.  Aqui, as ï¿½rvores e outras
+   O chão está ficando mais rochoso aqui.  Aqui, as árvores e outras
 folhagens crescem esparsadas, encontrando muita dificuldade para criar
-raï¿½zes no solo.  A floresta acaba ao oeste e a trilha em que vocï¿½ se
+raízes no solo.  A floresta acaba ao oeste e a trilha em que você se
 encontra segue diretamente para cima, ao lado das montanhas.  Um atalho vai
-para o sul daqui e a trilha tambï¿½m segue de volta para a floresta do leste.
+para o sul daqui e a trilha também segue de volta para a floresta do leste.
 ~
-62 0 0 0 0 3
+62 0 3
 D1
 ~
 ~
@@ -711,16 +711,16 @@ D3
 S
 #6234
 Uma Trilha Rochosa~
-   O chï¿½o estï¿½ ficando muito rochoso aqui, fazendo com que as ï¿½rvores fiquem
+   O chão está ficando muito rochoso aqui, fazendo com que as árvores fiquem
 cada vez mais espalhadas.  Muitos arbustos conseguem se fixar firmemente no
-solo mas nï¿½o em quantidade suficiente para bloquear o movimento nesta ï¿½rea.
-A trilha segue para cima, na direï¿½ï¿½o do que parece ser uma caverna dentro da
-montanha do oeste e o caminho lateral segue parelelo ï¿½ floresta do norte.
+solo mas não em quantidade suficiente para bloquear o movimento nesta área.
+A trilha segue para cima, na direção do que parece ser uma caverna dentro da
+montanha do oeste e o caminho lateral segue parelelo à floresta do norte.
 Ao leste, a trilha corre para as entranhas da floresta, perdendo-se de
 vista. A sul, a trilha faz uma curva e volta-se para oeste, entrando em
 uma escura abertura na montanha.
 ~
-62 0 0 0 0 4
+62 0 4
 D0
 ~
 ~
@@ -729,23 +729,23 @@ D1
 ~
 ~
 0 -1 6233
-D2
-~
-~
-0 -1 6268
 D3
 ~
 ~
 0 -1 6242
+D2
+~
+~
+0 -1 6268
 S
 #6235
 Uma Trilha na Floresta~
-   A trilha em que vocï¿½ estï¿½ faz uma curva em volta de um imenso tronco de
-ï¿½rvore e segue para o norte e oeste.  A fechada vegetaï¿½ï¿½o ï¿½ frente faz com
-que este lugar fique meio escure e sinistro e aquela arrepiante sensaï¿½ï¿½o de
-estar sendo observado volta a atormentar vocï¿½.
+   A trilha em que você está faz uma curva em volta de um imenso tronco de
+árvore e segue para o norte e oeste.  A fechada vegetação à frente faz com
+que este lugar fique meio escure e sinistro e aquela arrepiante sensação de
+estar sendo observado volta a atormentar você.
 ~
-62 0 0 0 0 3
+62 0 3
 D2
 ~
 ~
@@ -758,12 +758,12 @@ S
 #6236
 Uma Trilha na Floresta~
    O caminho segue para o leste e oeste, com uma pequena trilha indo em
-direï¿½ï¿½o a uma grande clareira ao sul.  Duas estacas de madeira com caveiras
-fincadas em seu topo, parecem advertir vocï¿½ contra o caminho do sul e um mau
-pressentimento invade seu espï¿½rito, trazendo-lhe uma sensaï¿½ï¿½o muito
-desconfortï¿½vel.  Estranho...
+direção a uma grande clareira ao sul.  Duas estacas de madeira com caveiras
+fincadas em seu topo, parecem advertir você contra o caminho do sul e um mau
+pressentimento invade seu espírito, trazendo-lhe uma sensação muito
+desconfortável.  Estranho...
 ~
-62 0 0 0 0 3
+62 0 3
 D1
 ~
 ~
@@ -779,15 +779,15 @@ D3
 S
 #6237
 Uma Grande Clareira~
-   A terra aqui parece que foi revolvida muitas vezes e muitas vï¿½zes e
-muitas rochas brancas saem do chï¿½o em estranhas posiï¿½ï¿½es.
-   Cemitï¿½rio.
+   A terra aqui parece que foi revolvida muitas vezes e muitas vêzes e
+muitas rochas brancas saem do chão em estranhas posições.
+   Cemitério.
    Este deve ser o local onde eles sepultam os seus mortos -- apenas cavam
 um buraco e jogam os corpos dentro, ignorando qualquer ocupante anterior.
-Que primitivo...  Vocï¿½ espera que quando o seu dia chegar vocï¿½ nï¿½o venha
+Que primitivo...  Você espera que quando o seu dia chegar você não venha
 parar num lugar desses...
 ~
-62 0 0 0 0 2
+62 0 2
 D0
 ~
 ~
@@ -795,13 +795,13 @@ D0
 S
 #6238
 Uma Trilha na Floresta~
-   A trilha separa-se aqui, uma bifurcaï¿½ï¿½o vai para o norte em direï¿½ï¿½o aos
+   A trilha separa-se aqui, uma bifurcação vai para o norte em direção aos
 ruidosos sons do rio e para o oeste, onde a floresta parece ser mais
-estreita que o resto.  Vocï¿½ percebe um surtivo movimento com o canto de seu
-olho e rï¿½pidamente vocï¿½ vira a cabeï¿½a.  Mas...nada, nï¿½o hï¿½ nada aqui.  Vocï¿½
-fica intrigado por achar que estï¿½ sendo seguido...
+estreita que o resto.  Você percebe um surtivo movimento com o canto de seu
+olho e rápidamente você vira a cabeça.  Mas...nada, não há nada aqui.  Você
+fica intrigado por achar que está sendo seguido...
 ~
-62 0 0 0 0 3
+62 0 3
 D0
 ~
 ~
@@ -817,14 +817,14 @@ D3
 S
 #6239
 No Centro do Rio~
-   O rio flui calmamente no seu curso para o norte.  A trilha em que vocï¿½
-estï¿½ segue margeando o lado oeste do rio e volta para a floresta ao sul.
-Uma rocha estï¿½ a oeste, bloqueando qualquer caminho naquela direï¿½ï¿½o.  Fora
+   O rio flui calmamente no seu curso para o norte.  A trilha em que você
+está segue margeando o lado oeste do rio e volta para a floresta ao sul.
+Uma rocha está a oeste, bloqueando qualquer caminho naquela direção.  Fora
 do centro do rio, o "teto" do campo de energia encontra o "muro" norte.  A
-ï¿½gua passa atravï¿½s da barreira mï¿½gica, de qualquer forma...  A barreira ï¿½
+água passa através da barreira mágica, de qualquer forma...  A barreira é
 obviamente porosa para certos materiais.
 ~
-62 0 0 0 0 2
+62 0 2
 D2
 ~
 ~
@@ -837,12 +837,12 @@ S
 #6240
 No Centro do Rio~
    O rio desce, margeando as montanhas do oeste, nascendo de um grande
-buraco, que fica numa das faces de uma das escarpadas protuberï¿½ncias
+buraco, que fica numa das faces de uma das escarpadas protuberâncias
 rochosas.  A barreira de energia sobe a montanha e impede qualquer meio de
-se escapar por ali.  A trilha em que vocï¿½ estï¿½ corre margeando o rio que
+se escapar por ali.  A trilha em que você está corre margeando o rio que
 corre para o leste e um caminho segue para o lado da floresta ao sul.
 ~
-62 0 0 0 0 2
+62 0 2
 D1
 ~
 ~
@@ -855,12 +855,12 @@ S
 #6241
 Uma Trilha Rochosa~
    A floresta fica bem ao seu oeste, com um lado da trilha indo para as
-profundezas da floresta.  A trilha principal que vocï¿½ estï¿½, segue para o
-norte em direï¿½ï¿½o ao rio e ao sul para uma trilha que vai dar em uma caverna
-dentro da montanha.  Nï¿½o parece haver nada que mereï¿½a sua total atenï¿½ï¿½o
+profundezas da floresta.  A trilha principal que você está, segue para o
+norte em direção ao rio e ao sul para uma trilha que vai dar em uma caverna
+dentro da montanha.  Não parece haver nada que mereça sua total atenção
 aqui..
 ~
-62 0 0 0 0 4
+62 0 4
 D0
 ~
 ~
@@ -876,15 +876,15 @@ D2
 S
 #6242
 A Entrada da Caverna~
-   Vocï¿½ estï¿½ parcialmente cego pelas diferenï¿½a entra a iluminaï¿½ï¿½o do lado de
-fora, que ï¿½ muito clara, e da absoluta escuridï¿½o da caverna.  Um forte mau
-cheiro sai pela entrada da caverna: sï¿½o os odores da decadï¿½ncia, de corpos
-que nunca tomam banho e de pessoas doentes, combinando-se em um sï¿½ odor
-forte e repugnante.  Seu estï¿½mago comeï¿½a involuntariamente a embrulhar e
-vocï¿½ pensa em voltar para baixo do monte ao leste ao invï¿½s de ir adiante no
-tï¿½nel oeste.
+   Você está parcialmente cego pelas diferença entra a iluminação do lado de
+fora, que é muito clara, e da absoluta escuridão da caverna.  Um forte mau
+cheiro sai pela entrada da caverna: são os odores da decadência, de corpos
+que nunca tomam banho e de pessoas doentes, combinando-se em um só odor
+forte e repugnante.  Seu estômago começa involuntariamente a embrulhar e
+você pensa em voltar para baixo do monte ao leste ao invés de ir adiante no
+túnel oeste.
 ~
-62 8 0 0 0 5
+62 d 5
 D1
 ~
 ~
@@ -895,15 +895,15 @@ D3
 0 -1 6243
 S
 #6243
-Uma Bifurcaï¿½ï¿½o~
-   O tï¿½nel bifurca-se aqui, um lado segue para o norte e o outro para oeste.
-Mas vocï¿½ pode tambï¿½m pode ir para fora se for para o leste, algo que parece
-ser uma idï¿½ia muito boa para suas tï¿½o "torturadas cavidades nasais".  Seus
-olhos lacrimejam e vocï¿½ aperta sua mï¿½o esquerda com forï¿½a contra sua barriga
-para manter o controle da sua bï¿½lis.  Forï¿½ando seus olhos a abrirem, vocï¿½
-repara nos sinais de advertï¿½ncia pintados nos tï¿½neis ao norte.
+Uma Bifurcação~
+   O túnel bifurca-se aqui, um lado segue para o norte e o outro para oeste.
+Mas você pode também pode ir para fora se for para o leste, algo que parece
+ser uma idéia muito boa para suas tão "torturadas cavidades nasais".  Seus
+olhos lacrimejam e você aperta sua mão esquerda com força contra sua barriga
+para manter o controle da sua bílis.  Forçando seus olhos a abrirem, você
+repara nos sinais de advertência pintados nos túneis ao norte.
 ~
-62 9 0 0 0 4
+62 ad 4
 D0
 ~
 ~
@@ -918,18 +918,18 @@ D3
 0 -1 6244
 E
 pintura sinal sinais~
-Elas sï¿½o orcs e vocï¿½ poderia jurar que eles sï¿½o sinais de advertï¿½ncia
+Elas são orcs e você poderia jurar que eles são sinais de advertência
 ~
 S
 #6244
-Um Tï¿½nel~
-   O chï¿½o ï¿½ escorregadio por causa de toda a umidade que escorre por aqui, e
-esta umidade parece carregar consigo aquele terrï¿½vel odor com ela.
-Novamente vocï¿½ considera que talvez seja melhor salvar seu nariz e voltar
-para o leste, atï¿½ a entrada da caverna, ao invï¿½s de ir para o oeste e descer
-o tï¿½nel.
+Um Túnel~
+   O chão é escorregadio por causa de toda a umidade que escorre por aqui, e
+esta umidade parece carregar consigo aquele terrível odor com ela.
+Novamente você considera que talvez seja melhor salvar seu nariz e voltar
+para o leste, até a entrada da caverna, ao invés de ir para o oeste e descer
+o túnel.
 ~
-62 9 0 0 0 4
+62 ad 4
 D1
 ~
 ~
@@ -940,14 +940,14 @@ D3
 0 -1 6245
 S
 #6245
-Um Tï¿½nel~
-   O tï¿½nel leva a um profundo declive aqui e abre-se para uma caverna muito
-grande ao oeste.  Esta caverna parece ter uma iluminaï¿½ï¿½o bem fraca em seu
-interior e vocï¿½ ouve uma forte respiraï¿½ï¿½o e alguns roncos vindos naquela
-direï¿½ï¿½o A entrada da caverna ao leste parece muito longe para seu
+Um Túnel~
+   O túnel leva a um profundo declive aqui e abre-se para uma caverna muito
+grande ao oeste.  Esta caverna parece ter uma iluminação bem fraca em seu
+interior e você ouve uma forte respiração e alguns roncos vindos naquela
+direção A entrada da caverna ao leste parece muito longe para seu
 conforto...
 ~
-62 9 0 0 0 5
+62 ad 5
 D1
 ~
 ~
@@ -959,14 +959,14 @@ D3
 S
 #6246
 Uma Caverna~
-   Montanhas de carne estragada, cortadas em tiras e litros de ï¿½gua de
-origem duvidosa estï¿½o aqui: o depï¿½sito de comida dos orcs.  Vocï¿½ para e se
-pergunta como esses orcs podem achar estas coisas gostosas!!  Eles sï¿½o orcs!
-ï¿½ da natureza deles e de seus estï¿½magos, vocï¿½ pensa...  Estranho demais e
-vocï¿½ nï¿½o quer nem tentar catalogar o que eles tï¿½m disponï¿½vel aqui: afinal,
-nï¿½o hï¿½ a menor chance de vocï¿½ querer levar qualquer coisa daqui...
+   Montanhas de carne estragada, cortadas em tiras e litros de água de
+origem duvidosa estão aqui: o depósito de comida dos orcs.  Você para e se
+pergunta como esses orcs podem achar estas coisas gostosas!!  Eles são orcs!
+é da natureza deles e de seus estômagos, você pensa...  Estranho demais e
+você não quer nem tentar catalogar o que eles têm disponível aqui: afinal,
+não há a menor chance de você querer levar qualquer coisa daqui...
 ~
-62 8 0 0 0 4
+62 d 4
 D1
 ~
 ~
@@ -978,13 +978,13 @@ D2
 S
 #6247
 Uma Caverna~
-   Um ï¿½nico corpo estï¿½ aqui, bem separado de uma pilha de coisas similares
-do leste.  Hï¿½ vï¿½rias estacas e rochas afiadas postas convenientemente.  O
-jeito como estï¿½ o corpo, a pedra prï¿½xima a sua mï¿½o...  Este ï¿½ um lugar para
-suicidas!  Vocï¿½ olha para o orc e compreende que ele estava sofrendo com seu
+   Um único corpo está aqui, bem separado de uma pilha de coisas similares
+do leste.  Há várias estacas e rochas afiadas postas convenientemente.  O
+jeito como está o corpo, a pedra próxima a sua mão...  Este é um lugar para
+suicidas!  Você olha para o orc e compreende que ele estava sofrendo com seu
 corpo todo deformado.  Muito triste.
 ~
-62 8 0 0 0 4
+62 d 4
 D1
 ~
 ~
@@ -1000,15 +1000,15 @@ D3
 S
 #6248
 Uma Caverna~
-   Hï¿½ muitos defuntos aqui...corpos.  Orcs, um nï¿½mero enorme deles, cada um
-deles terrï¿½velmente desfigurados de alguma maneira: de um foram removidos os
-braï¿½os, de outro falta algo que poderia ser um rosto.  Alguns pedaï¿½os de
-torsos desmembrados sï¿½o os ï¿½ltimos vestï¿½gios de algo que jï¿½ teve vida algum
-dia, o resto estï¿½ em decomposiï¿½ï¿½o.  Um sentimento de horror vai crescendo
-dentro de vocï¿½ quando vocï¿½ percebe que a pilha que se encontra no canto, sï¿½o
-os corpos de crianï¿½as orc, que estï¿½o mortas e esperando pelo sepultamento.
+   Há muitos defuntos aqui...corpos.  Orcs, um número enorme deles, cada um
+deles terrívelmente desfigurados de alguma maneira: de um foram removidos os
+braços, de outro falta algo que poderia ser um rosto.  Alguns pedaços de
+torsos desmembrados são os últimos vestígios de algo que já teve vida algum
+dia, o resto está em decomposição.  Um sentimento de horror vai crescendo
+dentro de você quando você percebe que a pilha que se encontra no canto, são
+os corpos de crianças orc, que estão mortas e esperando pelo sepultamento.
 ~
-62 12 0 0 0 4
+62 cd 4
 D2
 ~
 ~
@@ -1020,15 +1020,15 @@ D3
 S
 #6249
 Uma Caverna~
-   Umas poucas camas, feitas de palha e de um couro fedorento, estï¿½o ao
-redor de uma lareira aqui.  Uma xï¿½cara de madeira, feita por ferramentas e
-mï¿½os bem rï¿½sticas e primitivas, estï¿½ prï¿½xima ï¿½s cinzas da fogueira, com ï¿½gua
-dentro, algo que vocï¿½ considera ser totalmente imprï¿½pria para seu consumo.
-Em algum lugar ao leste vocï¿½ ouve o choro de uma crianï¿½a orc e uma voz a faz
-calar imediatamente.  Cuidado orcs!  Aventureiros estï¿½o aqui!  Escondam suas
-crianï¿½as!
+   Umas poucas camas, feitas de palha e de um couro fedorento, estão ao
+redor de uma lareira aqui.  Uma xícara de madeira, feita por ferramentas e
+mãos bem rústicas e primitivas, está próxima às cinzas da fogueira, com água
+dentro, algo que você considera ser totalmente imprópria para seu consumo.
+Em algum lugar ao leste você ouve o choro de uma criança orc e uma voz a faz
+calar imediatamente.  Cuidado orcs!  Aventureiros estão aqui!  Escondam suas
+crianças!
 ~
-62 8 0 0 0 4
+62 d 4
 D0
 ~
 ~
@@ -1044,15 +1044,15 @@ D2
 S
 #6250
 Uma Caverna~
-   Muitas camas feitas com capim estï¿½o aqui, todas ao redor dos restos de um
-fogo jï¿½ quase extinto.  A inclinaï¿½ï¿½o do forro da caverna permite que haja
-uma boa ventilaï¿½ï¿½o, tirando a fumaï¿½a da caverna.  Sorte dos orcs!  Pedaï¿½os
-de restos de carne queimada ainda estï¿½o no fogo.  No chï¿½o, perto dos seus
-pï¿½s, vocï¿½ vï¿½ um pequeno pedaï¿½o de arame retorcido...Esta deve ser a idï¿½ia
-que um orc faz de um tesouro, sem dï¿½vida.  Chutando a sujeira, vocï¿½ parece
-tentar jogar fora do seu coraï¿½ï¿½o, a compaixï¿½o por esses miserï¿½veis.
+   Muitas camas feitas com capim estão aqui, todas ao redor dos restos de um
+fogo já quase extinto.  A inclinação do forro da caverna permite que haja
+uma boa ventilação, tirando a fumaça da caverna.  Sorte dos orcs!  Pedaços
+de restos de carne queimada ainda estão no fogo.  No chão, perto dos seus
+pés, você vê um pequeno pedaço de arame retorcido...Esta deve ser a idéia
+que um orc faz de um tesouro, sem dúvida.  Chutando a sujeira, você parece
+tentar jogar fora do seu coração, a compaixão por esses miseráveis.
 ~
-62 8 0 0 0 4
+62 d 4
 D0
 ~
 ~
@@ -1072,15 +1072,15 @@ D3
 S
 #6251
 Uma Caverna~
-   Vocï¿½ estï¿½ parado dentro de uma caverna enorme, com milhares de pï¿½s de
-diï¿½metro.  Algumas lanternas usando gordura animal como combustï¿½vel,
-iluminam o local apenas o suficiente para que vocï¿½ possa ver a comida
-estragada no chï¿½o e alguns corpos esparramados por todo o lugar.  O nojo que
-vocï¿½ sentia, rapidamente transforma-se em horror, assim que vocï¿½ vï¿½ uma
-terrï¿½vel criatura, metade...bem...metade orc e metade alguma coisa, entre
+   Você está parado dentro de uma caverna enorme, com milhares de pés de
+diâmetro.  Algumas lanternas usando gordura animal como combustível,
+iluminam o local apenas o suficiente para que você possa ver a comida
+estragada no chão e alguns corpos esparramados por todo o lugar.  O nojo que
+você sentia, rapidamente transforma-se em horror, assim que você vê uma
+terrível criatura, metade...bem...metade orc e metade alguma coisa, entre
 duas estalagmites.
 ~
-62 8 0 0 0 4
+62 d 4
 D0
 ~
 ~
@@ -1100,15 +1100,15 @@ D3
 S
 #6252
 Uma Caverna~
-   Esta dever ser a ï¿½rea do chefe orc.  Hï¿½ um objeto antigo e valioso aqui--
-uma velha e jï¿½ bem gasta poltrona, e que deve ter sido roubada dos humanos.
-A poltrona estï¿½ perto da parede sul, parecendo ser um trono.  Um colchï¿½o
-feito de pï¿½los de mamute estï¿½ prï¿½ximo.  Perto dele estï¿½ a pilha de tesouros
-orc; uma pilha de moedas de cobre bem polidas.  Vocï¿½ olha para a pilha de
+   Esta dever ser a área do chefe orc.  Há um objeto antigo e valioso aqui--
+uma velha e já bem gasta poltrona, e que deve ter sido roubada dos humanos.
+A poltrona está perto da parede sul, parecendo ser um trono.  Um colchão
+feito de pêlos de mamute está próximo.  Perto dele está a pilha de tesouros
+orc; uma pilha de moedas de cobre bem polidas.  Você olha para a pilha de
 moedas sem valor e intriga-se com a imagem de orcs agressores.  Esses orcs
-nï¿½o sï¿½o agressores, eles sï¿½o vï¿½timas.
+não são agressores, eles são vítimas.
 ~
-62 8 0 0 0 4
+62 d 4
 D0
 ~
 ~
@@ -1120,12 +1120,12 @@ D1
 S
 #6253
 Uma Caverna~
-   Muitos colchï¿½es estï¿½o espalhados prï¿½ximos ï¿½s paredes, preenchidos com
-montes de pï¿½lo, proporcionando assim, algum conforto e calor.  Muitos estï¿½o
-cobertos por sangue e substï¿½ncias desconhecidas.  Olhando ao redor, seu
-ï¿½nico pensamento coerente ï¿½, 'Nï¿½o quero saber...  Nï¿½o quero saber...'
+   Muitos colchões estão espalhados próximos às paredes, preenchidos com
+montes de pêlo, proporcionando assim, algum conforto e calor.  Muitos estão
+cobertos por sangue e substâncias desconhecidas.  Olhando ao redor, seu
+único pensamento coerente é, 'Não quero saber...  Não quero saber...'
 ~
-62 8 0 0 0 4
+62 d 4
 D0
 ~
 ~
@@ -1141,16 +1141,16 @@ D3
 S
 #6254
 Uma Caverna~
-   Esta parte da caverna ï¿½ uma vasta enfermaria orc.  Orcs mutantes e
-desfigurados estï¿½o no chï¿½o, parecendo quietos, sem vida.  Eles nï¿½o merecem
-que vocï¿½ perca seu precioso tempo, vocï¿½ pensa consigo mesmo, a menos que
-vocï¿½ faï¿½a a caridade de tirï¿½-los deste estado lamentï¿½vel em que eles se
+   Esta parte da caverna é uma vasta enfermaria orc.  Orcs mutantes e
+desfigurados estão no chão, parecendo quietos, sem vida.  Eles não merecem
+que você perca seu precioso tempo, você pensa consigo mesmo, a menos que
+você faça a caridade de tirá-los deste estado lamentável em que eles se
 encontram.
-   Vocï¿½ olha para aquilo que parece ser a mais completa falï¿½ncia do senso
-estï¿½tico da natureza e se pergunta: "Que forï¿½as agem aqui... a barreira, os
-orcs...  O que estï¿½ acontecendo aqui?"
+   Você olha para aquilo que parece ser a mais completa falência do senso
+estético da natureza e se pergunta: "Que forças agem aqui... a barreira, os
+orcs...  O que está acontecendo aqui?"
 ~
-62 8 0 0 0 4
+62 d 4
 D0
 ~
 ~
@@ -1161,55 +1161,55 @@ D3
 0 -1 6253
 S
 #6255
-Um Tï¿½nel~
-   Esta bifurcaï¿½ï¿½o que sai do tï¿½nel principal parece estranha: as paredes
-parecem lisas, como se tivessem sido feitas por forï¿½as desconhecidas.  O
-final ï¿½ abrupto e pequeno mas hï¿½ uma porta de aï¿½o colocada na parede do lado
-oeste do tï¿½nel.  O cheiro que vem do tï¿½nel abaixo nï¿½o parece ruim...  Pode
-ser um bom lugar para descansar e recuperar seu fï¿½lego.
+Um Túnel~
+   Esta bifurcação que sai do túnel principal parece estranha: as paredes
+parecem lisas, como se tivessem sido feitas por forças desconhecidas.  O
+final é abrupto e pequeno mas há uma porta de aço colocada na parede do lado
+oeste do túnel.  O cheiro que vem do túnel abaixo não parece ruim...  Pode
+ser um bom lugar para descansar e recuperar seu fôlego.
 ~
-62 13 0 0 0 4
+62 acd 4
 D2
 ~
 ~
 0 -1 6243
 D3
-Uma grande porta de aï¿½o.  Parece nï¿½o haver dobradiï¿½as ou maï¿½aneta mas existe
+Uma grande porta de aço.  Parece não haver dobradiças ou maçaneta mas existe
 uma pequena fechadura exatamente no centro.
 ~
-porta aï¿½o~
+porta aço~
 2 6200 6256
 S
 #6256
-Um Tï¿½nel~
-   Essa parte do tï¿½nel leva ao norte daqui, portas estï¿½o do outro lado.
-Algumas manchas no teto iluminam a ï¿½rea quase como a luz do dia.  Do norte
-vocï¿½ ouve um choro horrï¿½vel, um lamento de dor e angï¿½stia que faz vocï¿½
-encolher-se e pensar duas vezes antes de tomar essa direï¿½ï¿½o.
+Um Túnel~
+   Essa parte do túnel leva ao norte daqui, portas estão do outro lado.
+Algumas manchas no teto iluminam a área quase como a luz do dia.  Do norte
+você ouve um choro horrível, um lamento de dor e angústia que faz você
+encolher-se e pensar duas vezes antes de tomar essa direção.
 ~
-62 8 0 0 0 0
+62 d 0
 D0
 ~
 ~
 0 -1 6258
 D1
 ~
-porta aï¿½o~
+porta aço~
 2 6200 6255
 D3
-Esta ï¿½ uma porta normal, feita de madeira.
+Esta é uma porta normal, feita de madeira.
 ~
 porta madeira~
 1 -1 6257
 S
 #6257
 Um Quarto~
-   Isto ï¿½ um quarto, feito para alguï¿½m de bom gosto.  Hï¿½ um baï¿½ com gavetas,
-feito de casca de ï¿½rvore.  De fato, a maioria dos mï¿½veis aqui tem uma
-aparï¿½ncia natural.  A cama ï¿½ coberta por penugem e um bonito candelabro estï¿½
+   Isto é um quarto, feito para alguém de bom gosto.  Há um baú com gavetas,
+feito de casca de árvore.  De fato, a maioria dos móveis aqui tem uma
+aparência natural.  A cama é coberta por penugem e um bonito candelabro está
 sobre a mesa ao lado.  Bonito lugar.
 ~
-62 8 0 0 0 0
+62 d 0
 D1
 Uma porta de madeira, normal.
 ~
@@ -1217,15 +1217,15 @@ porta madeira~
 1 -1 6256
 S
 #6258
-Um Tï¿½nel~
-   Este tï¿½nel se abre para cima, levando a uma grande sala ao norte e para o
-sul segue na direï¿½ï¿½o de um conjunto de portas.  A luz ï¿½ forte e brilhante,
+Um Túnel~
+   Este túnel se abre para cima, levando a uma grande sala ao norte e para o
+sul segue na direção de um conjunto de portas.  A luz é forte e brilhante,
 mostrando claramente as marcas de ferramentas nas paredes entalhadas...seria
-mï¿½gica?  A sala ï¿½ frente ï¿½ bem grande e tambï¿½m muito bem iluminada, tornando
-a atmosfera quase mï¿½stica.  Em algum lugar nos recessos desta sala, alguma
-coisa se lamenta, com uma voz horrï¿½vel.  Nada bom.
+mágica?  A sala à frente é bem grande e também muito bem iluminada, tornando
+a atmosfera quase mística.  Em algum lugar nos recessos desta sala, alguma
+coisa se lamenta, com uma voz horrível.  Nada bom.
 ~
-62 8 0 0 0 0
+62 d 0
 D0
 ~
 ~
@@ -1236,14 +1236,14 @@ D2
 0 -1 6256
 S
 #6259
-O Laboratï¿½rio~
-   Uma mesa de cirurgia inteirinha estï¿½ aqui, equipada com um completo kit
-de material cirï¿½rgico.  Numa prateleira prï¿½xima estï¿½o guardados equipamentos
-mï¿½dicos esterelizados, cobertos por uma tampa transparente.  Hï¿½ um dreno
-jogado no chï¿½o, preparado para receber sangue.  Por alguma razï¿½o, vocï¿½ nï¿½o
-imagina isso como um centro de operaï¿½ï¿½es "voluntï¿½rias"...
+O Laboratório~
+   Uma mesa de cirurgia inteirinha está aqui, equipada com um completo kit
+de material cirúrgico.  Numa prateleira próxima estão guardados equipamentos
+médicos esterelizados, cobertos por uma tampa transparente.  Há um dreno
+jogado no chão, preparado para receber sangue.  Por alguma razão, você não
+imagina isso como um centro de operações "voluntárias"...
 ~
-62 8 0 0 0 0
+62 d 0
 D1
 ~
 ~
@@ -1254,16 +1254,16 @@ D2
 0 -1 6262
 S
 #6260
-O Laboratï¿½rio~
-   Uma outra mesa estï¿½ cheia com todo o tipo de aparato quï¿½mico, frascos e
-bï¿½queres, equipamento de destilaï¿½ï¿½o, etc.  A estufa parece cara, grande e
-frï¿½gil: nï¿½o ï¿½ um bom tesouro para carregar com vocï¿½.
+O Laboratório~
+   Uma outra mesa está cheia com todo o tipo de aparato químico, frascos e
+béqueres, equipamento de destilação, etc.  A estufa parece cara, grande e
+frágil: não é um bom tesouro para carregar com você.
 ~
-62 8 0 0 0 0
+62 d 0
 D1
-Uma porta de cela de aï¿½o.
+Uma porta de cela de aço.
 ~
-porta aï¿½o~
+porta aço~
 1 6200 6261
 D2
 ~
@@ -1276,27 +1276,27 @@ D3
 S
 #6261
 Uma Gaiola~
-   Esta ï¿½ uma pequena e suja gaiola, com apenas um balde para dejetos, um
-outro para comida e uma toalha suja servindo de cama.  Toda a sala estï¿½
-impregnada por um terrï¿½vel odor.
+   Esta é uma pequena e suja gaiola, com apenas um balde para dejetos, um
+outro para comida e uma toalha suja servindo de cama.  Toda a sala está
+impregnada por um terrível odor.
 ~
-62 8 0 0 0 0
+62 d 0
 D3
-Uma porta de cela de aï¿½o.
+Uma porta de cela de aço.
 ~
-porta aï¿½o~
+porta aço~
 1 6200 6260
 S
 #6262
-O Laboratï¿½rio~
-   Algumas gaiolas pequenas estï¿½o aqui, contendo diferentes tipos de
-roedores.  Abaixando-se para olhar melhor, vocï¿½ fica surpreso ao encontrar
-um rato comum de jardim grunhindo para vocï¿½ e tentando acertar seu rosto
-atravï¿½s das grades.  Hï¿½ algumas saliï¿½ncias na suas costas, e ele nï¿½o parece
-ter um temperamento muito bom.  Ele estremece um pouco, nï¿½o parecendo estar
-muito seguro de suas funcï¿½es motoras.  Pobre coisa.
+O Laboratório~
+   Algumas gaiolas pequenas estão aqui, contendo diferentes tipos de
+roedores.  Abaixando-se para olhar melhor, você fica surpreso ao encontrar
+um rato comum de jardim grunhindo para você e tentando acertar seu rosto
+através das grades.  Há algumas saliências na suas costas, e ele não parece
+ter um temperamento muito bom.  Ele estremece um pouco, não parecendo estar
+muito seguro de suas funcões motoras.  Pobre coisa.
 ~
-62 8 0 0 0 0
+62 d 0
 D0
 ~
 ~
@@ -1311,20 +1311,20 @@ D2
 0 -1 6265
 S
 #6263
-O Laboratï¿½rio~
-   Uma prateleira estï¿½ prï¿½xima ï¿½s gaiolas que estï¿½o na parede ao leste,
-cheia de algemas e grilhï¿½es, chicotes de couro e coisas ainda piores.  Elas
-todas parecem estar bem usadas.  Vocï¿½ fica arrepiado e segue seu caminho.
+O Laboratório~
+   Uma prateleira está próxima às gaiolas que estão na parede ao leste,
+cheia de algemas e grilhões, chicotes de couro e coisas ainda piores.  Elas
+todas parecem estar bem usadas.  Você fica arrepiado e segue seu caminho.
 ~
-62 8 0 0 0 0
+62 d 0
 D0
 ~
 ~
 0 -1 6260
 D1
-Uma porta de cela de aï¿½o.
+Uma porta de cela de aço.
 ~
-porta aï¿½o~
+porta aço~
 1 6200 6264
 D2
 ~
@@ -1337,24 +1337,24 @@ D3
 S
 #6264
 Uma Gaiola~
-   Esta ï¿½ uma pequena e suja gaiola, com apenas um balde para dejetos, um
-outro para comida, e uma toalha suja servindo de cama.  Toda a sala estï¿½
-impregnada por um terrï¿½vel odor.
+   Esta é uma pequena e suja gaiola, com apenas um balde para dejetos, um
+outro para comida, e uma toalha suja servindo de cama.  Toda a sala está
+impregnada por um terrível odor.
 ~
-62 8 0 0 0 0
+62 d 0
 D3
-Uma porta de cela de aï¿½o.
+Uma porta de cela de aço.
 ~
-porta aï¿½o~
+porta aço~
 1 6200 6263
 S
 #6265
-O Laboratï¿½rio~
-   Este ï¿½ o canto sudoeste do laboratï¿½rio.  Nï¿½o hï¿½ nenhum equipamento aqui,
-hï¿½ somente vï¿½rios pares de algemas de aï¿½o na parede ao sul.  Hï¿½ tambï¿½m
-algumas pequenas manchas de sangue no chï¿½o abaixo das algemas.
+O Laboratório~
+   Este é o canto sudoeste do laboratório.  Não há nenhum equipamento aqui,
+há somente vários pares de algemas de aço na parede ao sul.  Há também
+algumas pequenas manchas de sangue no chão abaixo das algemas.
 ~
-62 8 0 0 0 0
+62 d 0
 D0
 ~
 ~
@@ -1365,18 +1365,18 @@ D1
 0 -1 6266
 S
 #6266
-O Laboratï¿½rio~
-   Este ï¿½ um vasto laboratï¿½rio que se extende para o norte.  Gaiolas estï¿½o
-no lado leste da sala.  Uma mesa de metal estï¿½ vazia, embora vocï¿½ possa ver
-em meio ï¿½ sujeira que alguma vez existiram livros aqui.
+O Laboratório~
+   Este é um vasto laboratório que se extende para o norte.  Gaiolas estão
+no lado leste da sala.  Uma mesa de metal está vazia, embora você possa ver
+em meio à sujeira que alguma vez existiram livros aqui.
 ~
-62 8 0 0 0 0
+62 d 0
 D0
 ~
 ~
 0 -1 6263
 D1
-Uma porta de cela de aï¿½o.
+Uma porta de cela de aço.
 ~
 porta cela~
 1 6200 6267
@@ -1391,24 +1391,24 @@ D3
 S
 #6267
 Uma Gaiola~
-   Esta ï¿½ uma pequena e suja gaiola, com apenas um balde para dejetos, um
-outro para comida, e uma toalha suja serve como cama.  Toda a sala estï¿½
-impregnada por um terrï¿½vel odor.
+   Esta é uma pequena e suja gaiola, com apenas um balde para dejetos, um
+outro para comida, e uma toalha suja serve como cama.  Toda a sala está
+impregnada por um terrível odor.
 ~
-62 8 0 0 0 0
+62 d 0
 D3
-Uma porta de cela de aï¿½o.
+Uma porta de cela de aço.
 ~
 porta cela~
 1 6200 6266
 S
 #6268
 Uma Trilha Rochosa~
-   Vocï¿½ estï¿½ seguindo por uma trilha que ladeia a montanha e entra em uma
-abertura nela.  Tudo ali ï¿½ muito escuro, frio e silencioso, nï¿½o sendo muito
+   Você está seguindo por uma trilha que ladeia a montanha e entra em uma
+abertura nela.  Tudo ali é muito escuro, frio e silencioso, não sendo muito
 atraente ali entrar.  A trilha continua norte.
 ~
-62 0 0 0 0 4
+62 0 4
 D0
 ~
 ~
@@ -1420,27 +1420,27 @@ D3
 S
 #6269
 Uma Trilha Rochosa~
-   Vocï¿½ estï¿½ numa trilha rochosa que segue dentro da montanha.  Aqui ainda
-nï¿½o estï¿½ totalmente escuro, mas vocï¿½ percebe que daqui pra frente sua
-situaï¿½ï¿½o sï¿½ tende a piorar.  A trilha ainda segue leste e oeste.
+   Você está numa trilha rochosa que segue dentro da montanha.  Aqui ainda
+não está totalmente escuro, mas você percebe que daqui pra frente sua
+situação só tende a piorar.  A trilha ainda segue leste e oeste.
 ~
-62 0 0 0 0 4
-D1
-~
-~
-0 -1 6268
+62 0 4
 D3
 ~
 ~
 0 -1 6270
+D1
+~
+~
+0 -1 6268
 S
 #6270
 Uma Trilha Rochosa~
-   Vocï¿½ estï¿½ numa trilha rochosa que segue dentro da montanha.  O chï¿½o,
-coberto de limo, nï¿½o faz som algum conforme vocï¿½ anda, sendo perigoso aqui
+   Você está numa trilha rochosa que segue dentro da montanha.  O chão,
+coberto de limo, não faz som algum conforme você anda, sendo perigoso aqui
 escorregar.  A trilha ainda segue leste e sul.
 ~
-62 0 0 0 0 4
+62 0 4
 D1
 ~
 ~
@@ -1452,28 +1452,28 @@ D2
 S
 #6271
 Uma Trilha Rochosa~
-   Vocï¿½ estï¿½ numa trilha rochosa que segue dentro da montanha.  O chï¿½o,
-coberto de limo, nï¿½o faz som algum conforme vocï¿½ anda, sendo perigoso aqui
+   Você está numa trilha rochosa que segue dentro da montanha.  O chão,
+coberto de limo, não faz som algum conforme você anda, sendo perigoso aqui
 escorregar.  A trilha ainda segue norte e sul.
 
 ~
-62 0 0 0 0 4
-D0
-~
-~
-0 -1 6270
+62 0 4
 D2
 ~
 ~
 0 -1 6272
+D0
+~
+~
+0 -1 6270
 S
 #6272
 Uma Trilha Rochosa~
-   Vocï¿½ estï¿½ numa trilha rochosa que segue dentro da montanha.  O chï¿½o,
-coberto de limo, nï¿½o faz som algum conforme vocï¿½ anda, sendo perigoso aqui
+   Você está numa trilha rochosa que segue dentro da montanha.  O chão,
+coberto de limo, não faz som algum conforme você anda, sendo perigoso aqui
 escorregar.  A trilha fica abruptamente escura a leste.
 ~
-62 0 0 0 0 4
+62 0 4
 D0
 ~
 ~
@@ -1483,4 +1483,4 @@ D1
 ~
 0 -1 4800
 S
-$~
+$

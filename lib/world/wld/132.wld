@@ -1,10 +1,14 @@
 #13200
 Os Degraus que Descem Para o Mar~
-   Vocï¿½ estï¿½ em frente a um longo lance de escadas feitos na rocha.  Logo 
-acima de vocï¿½, os degraus comeï¿½am, enquanto para baixo, os degraus parecem 
+   Você está em frente a um longo lance de escadas feitos na rocha.  Logo 
+acima de você, os degraus começam, enquanto para baixo, os degraus parecem 
 continuar eternamente.
 ~
-132 4 0 0 0 5
+132 c 5
+D4
+~
+~
+0 -1 -1
 D5
 ~
 ~
@@ -12,11 +16,11 @@ D5
 S
 #13201
 Descendo os Degraus Rochosos~
-   Os degraus continuam descendo em direï¿½ï¿½o ao mar, ou voltando para o topo 
-do penhasco, dependendo para onde vocï¿½ vï¿½.  Parece que talvez exista alguma 
-espï¿½cie de caverna lï¿½ embaixo.
+   Os degraus continuam descendo em direção ao mar, ou voltando para o topo 
+do penhasco, dependendo para onde você vá.  Parece que talvez exista alguma 
+espécie de caverna lá embaixo.
 ~
-132 4 0 0 0 5
+132 c 5
 D4
 ~
 ~
@@ -28,11 +32,15 @@ D5
 S
 #13202
 A Face do Penhasco~
-   As escadas continuam, entretanto vocï¿½ estï¿½ mais perto da base agora.  
-Parece que hï¿½ uma abertura na rocha ï¿½ leste.  Talvez seja apenas uma fenda 
+   As escadas continuam, entretanto você está mais perto da base agora.  
+Parece que há uma abertura na rocha à leste.  Talvez seja apenas uma fenda 
 simples, mas e depois, quem sabe?
 ~
-132 4 0 0 0 5
+132 c 5
+D1
+~
+~
+0 -1 -1
 D4
 ~
 ~
@@ -44,11 +52,11 @@ D5
 S
 #13203
 Nos Degraus~
-   Perto da base vocï¿½ realmente jï¿½ pode sentir uma leve brisa trazendo o 
-cheiro do mar, e agitando suas roupas.  Vocï¿½ comeï¿½a a sentir que o seu dia 
+   Perto da base você realmente já pode sentir uma leve brisa trazendo o 
+cheiro do mar, e agitando suas roupas.  Você começa a sentir que o seu dia 
 vai melhorar - o mar pode fazer isso com as pessoas.
 ~
-132 4 0 0 0 5
+132 c 5
 D4
 ~
 ~
@@ -60,10 +68,10 @@ D5
 S
 #13204
 A Base dos Degraus~
-   Vocï¿½ estï¿½ na base de uma sï¿½rie de degraus que levam ao topo de um 
-penhasco.  A praia se extende para leste e oeste alï¿½m da sua visï¿½o.
+   Você está na base de uma série de degraus que levam ao topo de um 
+penhasco.  A praia se extende para leste e oeste além da sua visão.
 ~
-132 0 0 0 0 5
+132 0 5
 D1
 ~
 ~
@@ -79,35 +87,35 @@ D4
 S
 #13205
 Ao Longo da Praia~
-   Vocï¿½ estï¿½ caminhando numa praia muito extensa, tanto para leste como 
-oeste.  As ondas, nï¿½o muito grandes, chegam levemente atï¿½ os seus pï¿½s, 
-alisando a areia da praia.  Para oeste vocï¿½ nota algumas rochas 
-sobressaindo a areia e o mar.  Para o leste a praia segue plana atï¿½ o 
+   Você está caminhando numa praia muito extensa, tanto para leste como 
+oeste.  As ondas, não muito grandes, chegam levemente até os seus pés, 
+alisando a areia da praia.  Para oeste você nota algumas rochas 
+sobressaindo a areia e o mar.  Para o leste a praia segue plana até o 
 horizonte.
 ~
-132 0 0 0 0 2
+132 0 2
 D1
 ~
 ~
 0 -1 13204
-D2
-~
-~
-0 -1 4293
 D3
 ~
 ~
 0 -1 13206
+D2
+~
+~
+0 -1 4293
 S
 #13206
 Ao Longo da Praia~
-   Vocï¿½ estï¿½ andando numa praia que se extende para leste e oeste, alï¿½m de 
-onde sua visï¿½o pode chegar.  Uma mistura de pedras pequenas cobrem o 
-caminho por aqui, ï¿½ melhor olhar onde pisa.  Vocï¿½ nota que neste lugar hï¿½ 
-um pedaï¿½o de madeira parcialmente enterrado na areia.  Para oeste 
-encontra-se mais pedras pela praia, enquanto ao leste tudo ï¿½ mais plano.
+   Você está andando numa praia que se extende para leste e oeste, além de 
+onde sua visão pode chegar.  Uma mistura de pedras pequenas cobrem o 
+caminho por aqui, é melhor olhar onde pisa.  Você nota que neste lugar há 
+um pedaço de madeira parcialmente enterrado na areia.  Para oeste 
+encontra-se mais pedras pela praia, enquanto ao leste tudo é mais plano.
 ~
-132 0 0 0 0 2
+132 0 2
 D1
 ~
 ~
@@ -116,22 +124,27 @@ D3
 ~
 ~
 0 -1 13211
+D5
+~
+madeira~
+:n 1 um pedaço de madeira
+a -1 -1
 E
 madeira~
-Olhando mais de perto, vocï¿½ consegue notar algumas inscriï¿½ï¿½es gravadas na 
-madeira.  "A ba ros" ï¿½ tudo que vocï¿½ pode decifrar do que restou.  Parece 
-que foi alguma espï¿½cie de apelido quando a madeira ainda estava boa!
+Olhando mais de perto, você consegue notar algumas inscrições gravadas na 
+madeira.  "A ba ros" é tudo que você pode decifrar do que restou.  Parece 
+que foi alguma espécie de apelido quando a madeira ainda estava boa!
 ~
 S
 #13207
 Areia da Praia~
-   Vocï¿½ estï¿½ na areia da praia que se estende de leste a oeste.  Para o 
-leste vocï¿½ pode ver com alguma dificuldade o teto das casas de uma grande 
-cidade que fica em um vale prï¿½ximo ao oceano. Para oeste a praia vai 
-ficando cada vez mais cheia de pedras e difï¿½cil de andar.  Uma sï¿½rie de 
-degraus levam ao topo de um penhasco a oeste de vocï¿½.
+   Você está na areia da praia que se estende de leste a oeste.  Para o 
+leste você pode ver com alguma dificuldade o teto das casas de uma grande 
+cidade que fica em um vale próximo ao oceano. Para oeste a praia vai 
+ficando cada vez mais cheia de pedras e difícil de andar.  Uma série de 
+degraus levam ao topo de um penhasco a oeste de você.
 ~
-132 0 0 0 0 2
+132 0 2
 D1
 ~
 ~
@@ -143,12 +156,12 @@ D3
 S
 #13208
 Areia da Praia~
-   A praia continua a leste, seguindo para uma grande cidade litorï¿½nea.  Hï¿½ 
-tambï¿½m um largo cais, onde vocï¿½ pode ver pequenos pontos no horizonte do 
-mar, que parecem ser navios da cidade.  Para oeste vocï¿½ pode continuar ao 
+   A praia continua a leste, seguindo para uma grande cidade litorânea.  Há 
+também um largo cais, onde você pode ver pequenos pontos no horizonte do 
+mar, que parecem ser navios da cidade.  Para oeste você pode continuar ao 
 longo da praia.
 ~
-132 0 0 0 0 2
+132 0 2
 D1
 ~
 ~
@@ -160,13 +173,13 @@ D3
 S
 #13209
 Areia da Praia~
-   A praia continua subindo uma pequena ladeira, atï¿½ chegar ï¿½ cidade no 
-leste, totalmente plana.  Vocï¿½ pode ouvir agora o barulho das vozes de uma 
-multidï¿½o vinda de lï¿½, entretanto o trï¿½fego na praia estï¿½ calmo.  Deve haver 
+   A praia continua subindo uma pequena ladeira, até chegar à cidade no 
+leste, totalmente plana.  Você pode ouvir agora o barulho das vozes de uma 
+multidão vinda de lá, entretanto o tráfego na praia está calmo.  Deve haver 
 uma entrada para a cidade em algum lugar.  Para oeste a praia continua e 
-vocï¿½ pode ver o horizonte.
+você pode ver o horizonte.
 ~
-132 0 0 0 0 2
+132 0 2
 D1
 ~
 ~
@@ -178,12 +191,12 @@ D3
 S
 #13210
 A Base da Cidade~
-   Vocï¿½ estï¿½ ï¿½ margem do mar, onde comeï¿½a uma cadeia rochosa que pode ser 
+   Você está à margem do mar, onde começa uma cadeia rochosa que pode ser 
 descrita como um planalto acima do oceano cercado por muralhas.  Para o 
 norte encontra-se o penhasco, e existe um pequeno caminho a nordeste daqui. 
-Para oeste o caminho continua ao longo da praia por uma longa distï¿½ncia.
+Para oeste o caminho continua ao longo da praia por uma longa distância.
 ~
-132 0 0 0 0 2
+132 0 2
 D0
 ~
 ~
@@ -195,12 +208,12 @@ D3
 S
 #13211
 Ao Longo da Praia Rochosa~
-   O caminho aqui ï¿½ muito rochoso para vocï¿½ continuar, entretanto vocï¿½ pode 
-perceber que hï¿½ um caminho a sudoeste.
+   O caminho aqui é muito rochoso para você continuar, entretanto você pode 
+perceber que há um caminho a sudoeste.
 ~
-132 0 0 0 0 2
+132 0 2
 D1
-Vocï¿½ vï¿½ mais praia.
+Você vê mais praia.
 ~
 ~
 0 -1 13206
@@ -211,11 +224,11 @@ D3
 S
 #13212
 Caminho Rochoso~
-   Este caminho da praia ï¿½ totalmente rochoso.  Um farol pode ser visto um 
+   Este caminho da praia é totalmente rochoso.  Um farol pode ser visto um 
 pouco longe no final do quebra-mar, e sua luz gentil guia os navegadores 
 por este mar rochoso.
 ~
-132 0 0 0 0 3
+132 0 3
 D1
 ~
 ~
@@ -227,10 +240,10 @@ D2
 S
 #13213
 Caminho Rochoso~
-   O caminho continua a sudoeste atï¿½ o farol, e vocï¿½ pode voltar para a 
+   O caminho continua a sudoeste até o farol, e você pode voltar para a 
 praia menos rochosa.
 ~
-132 0 0 0 0 3
+132 0 3
 D0
 ~
 ~
@@ -243,10 +256,10 @@ S
 #13214
 Caminho Rochoso~
    O caminho segue para leste e oeste, uma verdadeira mistura de pedras e 
-areia.  O farol estï¿½ no final do quebra-mar, seguindo a oeste.  Para o 
+areia.  O farol está no final do quebra-mar, seguindo a oeste.  Para o 
 leste, o caminho faz curvas ao longo da praia.
 ~
-132 0 0 0 0 3
+132 0 3
 D1
 ~
 ~
@@ -261,7 +274,7 @@ Caminho Rochoso no Quebra-mar do Takker~
    O caminho continua para seguindo para o leste e oeste.  O quebra-mar 
 segue sempre o caminho ao sul, com um farol bastante resistente em seu fim.
 ~
-132 0 0 0 0 3
+132 0 3
 D1
 ~
 ~
@@ -277,11 +290,11 @@ D3
 S
 #13216
 Caminho Rochoso~
-   O caminho para leste e oeste continua rochoso, e difï¿½cil de se navegar. 
-Logo a leste, o quebra-mar hospeda um farol.  ï¿½ oeste hï¿½ apenas rochas, 
+   O caminho para leste e oeste continua rochoso, e difícil de se navegar. 
+Logo a leste, o quebra-mar hospeda um farol.  À oeste há apenas rochas, 
 onde pode haver alguma caverna.
 ~
-132 0 0 0 0 3
+132 0 3
 D1
 ~
 ~
@@ -293,10 +306,10 @@ D3
 S
 #13217
 Quebra-mar do Takker~
-   O quebra-mar leva ao sul, em direï¿½ï¿½o ao mar, terminando em um farol.  Ao 
-longo do seu caminho, vocï¿½ pode ver alguns pescadores tentando pescar algo.
+   O quebra-mar leva ao sul, em direção ao mar, terminando em um farol.  Ao 
+longo do seu caminho, você pode ver alguns pescadores tentando pescar algo.
 ~
-132 0 0 0 0 3
+132 0 3
 D0
 ~
 ~
@@ -308,11 +321,11 @@ D2
 S
 #13218
 Quebra-mar do Takker~
-   Ao longo do quebra-mar, homens relaxam no sol sentados em vï¿½os 
-confortï¿½veis, enquanto contam divertidas histï¿½rias sobre 'os peixes que jï¿½ 
+   Ao longo do quebra-mar, homens relaxam no sol sentados em vãos 
+confortáveis, enquanto contam divertidas histórias sobre 'os peixes que já 
 pegaram', e tentando pescar algo.
 ~
-132 0 0 0 0 2
+132 0 2
 D0
 ~
 ~
@@ -323,11 +336,11 @@ D2
 0 -1 13219
 S
 #13219
-Prï¿½ximo ao Farol~
-   Vocï¿½ estï¿½ na entrada do farol.  Na parede redonda ao sul, hï¿½ uma porta 
-de carvalho, e para o norte, o quebra-mar leva ï¿½ ilha.
+Próximo ao Farol~
+   Você está na entrada do farol.  Na parede redonda ao sul, há uma porta 
+de carvalho, e para o norte, o quebra-mar leva à ilha.
 ~
-132 0 0 0 0 2
+132 0 2
 D0
 ~
 ~
@@ -335,37 +348,39 @@ D0
 D2
 ~
 porta~
-1 -1 13220
+:n 2 uma porta de carvalho
+a -1 13220
 S
 #13220
 Dentro do Farol~
-   Vocï¿½ estï¿½ em uma pequena sala logo apï¿½s a porta do farol.  Logo ao sul, 
-depois destas paredes, encontra-se uma sala principal.  Vocï¿½ pode ouvir e 
+   Você está em uma pequena sala logo após a porta do farol.  Logo ao sul, 
+depois destas paredes, encontra-se uma sala principal.  Você pode ouvir e 
 sentir o cheiro do fogo crepitando na lareira.  Um cachorro adoraria estar 
-ali por perto.  Vocï¿½ consegue tambï¿½m ouvir as risadas de uma jovem, vindas 
+ali por perto.  Você consegue também ouvir as risadas de uma jovem, vindas 
 do quarto ao lado.
 ~
-132 12 0 0 0 0
+132 cd 0
 D0
 ~
 porta~
-1 -1 13219
+:n 2 uma porta
+a -1 13219
 D2
 ~
 ~
 0 -1 13221
 S
 #13221
-ï¿½rea Principal do Farol~
-   Essa ï¿½ uma larga sala que parece acomodar o Guardiï¿½o do Farol e sua 
-famï¿½lia, na maior parte do tempo.  A mesa de jantar parece que sempre tem 
-lugar para mais um, e o fogo mantï¿½m o lugar quente e confortï¿½vel - e claro 
-Max estï¿½ sempre perto para brincar e se coï¿½ar.  Para leste e oeste, vocï¿½ 
-pode ver quartos com algumas das camas da famï¿½lia.  Os dois quartos tem 
-portas, mas ambas estï¿½o escancaradas.  Uma escada em espiral leva ao topo 
-do Farol, onde o Guardiï¿½o deve passar uma grande parte de seu tempo.
+Área Principal do Farol~
+   Essa é uma larga sala que parece acomodar o Guardião do Farol e sua 
+família, na maior parte do tempo.  A mesa de jantar parece que sempre tem 
+lugar para mais um, e o fogo mantém o lugar quente e confortável - e claro 
+Max está sempre perto para brincar e se coçar.  Para leste e oeste, você 
+pode ver quartos com algumas das camas da família.  Os dois quartos tem 
+portas, mas ambas estão escancaradas.  Uma escada em espiral leva ao topo 
+do Farol, onde o Guardião deve passar uma grande parte de seu tempo.
 ~
-132 8 0 0 0 0
+132 d 0
 D0
 ~
 ~
@@ -373,23 +388,25 @@ D0
 D1
 ~
 porta~
-1 -1 13222
+:n 2 uma porta
+a -1 13222
 D3
 ~
 porta madeira~
-1 -1 13224
+:n 2 uma porta de madeira
+a -1 13224
 D4
 ~
 ~
 0 -1 13223
 S
 #13222
-O Quarto do Guardiï¿½o~
-   No centro da sala hï¿½ uma cama larga e macia, coberta com lenï¿½ol de 
+O Quarto do Guardião~
+   No centro da sala há uma cama larga e macia, coberta com lençol de 
 cetim.  Uma penteadeira de mogno com espelho, e uma escrivaninha podem ser 
-vistas na sala tambï¿½m.  Este Guardiï¿½o do Farol parece ser bem vaidoso.
+vistas na sala também.  Este Guardião do Farol parece ser bem vaidoso.
 ~
-132 8 0 0 0 0
+132 d 0
 D3
 ~
 ~
@@ -397,29 +414,30 @@ D3
 D5
 ~
 porta~
-0 13201 13225
+:n 2 a porta secreta
+abcd 13201 13225
 S
 #13223
 A Sala do Farol~
-   Esta sala ï¿½ menor e mais apertada que as outras.  Um estreito caminho
+   Esta sala é menor e mais apertada que as outras.  Um estreito caminho
 rodeia a luz do farol, logo, a luz pode ser manejada.  Algumas prateleiras
-guardam ferramentas e olï¿½os que servem para manter a maquinaria toda 
-funcionando, assim podendo-se usar o farol com precisï¿½o, e evitar que os 
+guardam ferramentas e oléos que servem para manter a maquinaria toda 
+funcionando, assim podendo-se usar o farol com precisão, e evitar que os 
 navios se choquem com as rochas.
 ~
-132 8 0 0 0 0
+132 d 0
 D5
 ~
 ~
 0 -1 13221
 S
 #13224
-O Quarto da Filha do Guardiï¿½o do Farol~
-   Que quartinho engraï¿½adinho e pequeno!  Aqui hï¿½ duas caminhas com 
-cobertores rosa, uma impressionate coleï¿½ï¿½o de bonecas e muitos outros 
+O Quarto da Filha do Guardião do Farol~
+   Que quartinho engraçadinho e pequeno!  Aqui há duas caminhas com 
+cobertores rosa, uma impressionate coleção de bonecas e muitos outros 
 brinquedinhos nas prateleiras, tudo organizado por ordem de cores.
 ~
-132 8 0 0 0 0
+132 d 0
 D1
 ~
 ~
@@ -427,111 +445,120 @@ D1
 S
 #13225
 Nas Escadas em Espiral~
-   Vocï¿½ comeï¿½a a descer para a base do farol.  Vocï¿½ fica espantado com o 
-que vï¿½ neste "porï¿½o", e ja de cara pensa 'o que ï¿½ isso na sua frente?'.  
+   Você começa a descer para a base do farol.  Você fica espantado com o 
+que vê neste "porão", e ja de cara pensa 'o que é isso na sua frente?'.  
 Parece uma sala de torturas medievais, com as paredes todas feitas de 
 pedras com um buraco no centro.  Em um dos lados existe uma mesa de 
-operaï¿½ï¿½es, com materiais de operaï¿½ï¿½o e alguns frascos borbulhantes.  Vocï¿½ 
-realmente pretende descer atï¿½ este quarto e conhecer o "bondoso" Guardiï¿½o 
+operações, com materiais de operação e alguns frascos borbulhantes.  Você 
+realmente pretende descer até este quarto e conhecer o "bondoso" Guardião 
 do Farol?
 ~
-132 8 0 0 0 0
+132 d 0
 D4
-Uma escada em espiral leva atï¿½ a porta do alï¿½apï¿½o.
+Uma escada em espiral leva até a porta do alçapão.
 ~
 porta~
-0 13201 13222
+:n 2 a porta secreta
+abcd 13201 13222
 D5
 ~
 ~
 0 -1 13226
 S
 #13226
-A Sala de Operaï¿½ï¿½es do Guardiï¿½o do Farol~
-   Vocï¿½ pode ver mais do que o que viu das escadas.  Quatro celas, cada uma 
-com algum preso chorando dentro.  Hï¿½ muitos diagramas anotados na parede, e 
+A Sala de Operações do Guardião do Farol~
+   Você pode ver mais do que o que viu das escadas.  Quatro celas, cada uma 
+com algum preso chorando dentro.  Há muitos diagramas anotados na parede, e 
 todos parecem ter uma coisa na mente - a tortura e o sofrimento dos 
-prisioneiros!  Parece que este Guardiï¿½o do Farol ï¿½ um pouco mais do que 
+prisioneiros!  Parece que este Guardião do Farol é um pouco mais do que 
 pensam sobre ele...
 ~
-132 8 0 0 0 0
+132 d 0
 D0
 ~
 cela~
-1 13202 13227
+:n 2 a cela
+abc 13202 13227
 D1
 ~
 cela~
-1 13202 13228
+:n 2 a cela
+abc 13202 13228
 D2
 ~
 cela~
-1 13202 13229
+:n 2 a cela
+abc 13202 13229
 D3
 ~
 cela~
-1 13202 13230
+:n 2 a cela
+abc 13202 13230
 D4
 ~
 ~
 0 -1 13225
 S
 #13227
-Quarto de Diversï¿½o do Guardiï¿½o~
-   Esta pequena sala ï¿½ igual ï¿½s outras salas de operaï¿½ï¿½o, entretanto a 
-natureza aqui ï¿½ outra; este lugar ï¿½ mais arrumado.  Uma larga cama de 
-madeira e ferro toma conta do quarto inteiro, e vï¿½rios aparelhos de 
-tortura estï¿½o espalhados pela cama.
+Quarto de Diversão do Guardião~
+   Esta pequena sala é igual às outras salas de operação, entretanto a 
+natureza aqui é outra; este lugar é mais arrumado.  Uma larga cama de 
+madeira e ferro toma conta do quarto inteiro, e vários aparelhos de 
+tortura estão espalhados pela cama.
 ~
-132 8 0 0 0 0
+132 d 0
 D2
 ~
 cela~
-1 13202 13226
+:n 2 a cela
+abc 13202 13226
 E
 cama~
-Parece muito confortï¿½vel.
+Parece muito confortável.
 ~
 S
 #13228
 A Cela~
-   Esta cela ï¿½ fria e grotesca, totalmente desconfortï¿½vel.  Hï¿½ um pequeno 
+   Esta cela é fria e grotesca, totalmente desconfortável.  Há um pequeno 
 buraco no canto da cela, onde devem ser feitas as necessidades dos presos.
 ~
-132 8 0 0 0 0
+132 d 0
 D3
 ~
 cela~
-1 13202 13226
+:n 2 a cela
+abc 13202 13226
 S
 #13229
 A Cela~
-   Esta cela ï¿½ fria e grotesca, totalmente desconfortï¿½vel.  Hï¿½ um pequeno 
+   Esta cela é fria e grotesca, totalmente desconfortável.  Há um pequeno 
 buraco no canto da cela, onde devem ser feitas as necessidades dos presos.
 ~
-132 8 0 0 0 0
+132 d 0
 D0
 ~
 cela~
-1 13202 13226
+:n 2 a cela
+abc 13202 13226
 S
 #13230
 A Cela~
-   Esta cela ï¿½ fria e grotesca, totalmente desconfortï¿½vel.  Hï¿½ um pequeno 
+   Esta cela é fria e grotesca, totalmente desconfortável.  Há um pequeno 
 buraco no canto da cela, onde devem ser feitas as necessidades dos presos.
 ~
-132 8 0 0 0 0
+132 d 0
 D1
 ~
 cela~
-1 13202 13226
+:n 2 a cela
+abc 13202 13226
 S
 #13231
 Caminho Rochoso~
-   O caminho continua ao longo da praia, cheio de rochas.  Vocï¿½ pode seguir 
+   O caminho continua ao longo da praia, cheio de rochas.  Você pode seguir 
 para leste ou oeste.
 ~
-132 0 0 0 0 2
+132 0 2
 D1
 ~
 ~
@@ -543,12 +570,12 @@ D3
 S
 #13232
 Caminho Rochoso~
-   Vocï¿½ estï¿½ em um caminho rochoso da praia, perto da entrada de uma 
-caverna.  A entrada ï¿½ larga, parecendo ter uns trinta pï¿½s de altura.  Nï¿½o 
-parece que alguï¿½m possa morar aqui, talvez a ï¿½gua do mar alcance a caverna, 
+   Você está em um caminho rochoso da praia, perto da entrada de uma 
+caverna.  A entrada é larga, parecendo ter uns trinta pés de altura.  Não 
+parece que alguém possa morar aqui, talvez a água do mar alcance a caverna, 
 mas nunca se sabe...
 ~
-132 0 0 0 0 2
+132 0 2
 D0
 ~
 ~
@@ -564,12 +591,12 @@ D3
 S
 #13233
 Entrada da Caverna~
-   No momento em que entra nesta caverna, vocï¿½ sente vontade de explora-la 
-atï¿½ os seus confins, mas para isso teria que se molhar.  Quando vocï¿½ 
-observa a ï¿½gua gelada e a escuridï¿½o da caverna percebe que explora-la nï¿½o ï¿½ 
+   No momento em que entra nesta caverna, você sente vontade de explora-la 
+até os seus confins, mas para isso teria que se molhar.  Quando você 
+observa a água gelada e a escuridão da caverna percebe que explora-la não é 
 uma ideia muito inteligente.
 ~
-132 4 0 0 0 2
+132 c 2
 D0
 ~
 ~
@@ -581,11 +608,11 @@ D2
 S
 #13234
 A Toca do Kracken~
-   Alguma coisa estï¿½ errada aqui, muito errada.  A ï¿½gua estï¿½ se movendo em 
-um determinado ponto.  TODA a ï¿½gua esta borbulhando em razï¿½o de alguma 
-forï¿½a monstruosa.
+   Alguma coisa está errada aqui, muito errada.  A água está se movendo em 
+um determinado ponto.  TODA a água esta borbulhando em razão de alguma 
+força monstruosa.
 ~
-132 8 0 0 0 6
+132 d 6
 D2
 ~
 ~
@@ -593,11 +620,11 @@ D2
 S
 #13235
 O Fim do Caminho Rochoso~
-   Vocï¿½ chegou ao fim do caminho rochoso que segue ao longo do mar.  Ao sul 
-encontra-se o mar, e a oeste vocï¿½ tem a visï¿½o de uma rocha coberta de 
-musgos.  Ao norte o caminho estï¿½ obstruido.
+   Você chegou ao fim do caminho rochoso que segue ao longo do mar.  Ao sul 
+encontra-se o mar, e a oeste você tem a visão de uma rocha coberta de 
+musgos.  Ao norte o caminho está obstruido.
 ~
-132 0 0 0 0 2
+132 0 2
 D1
 ~
 ~
@@ -605,19 +632,25 @@ D1
 S
 #13236
 O Fim do Caminho~
-   O caminho nï¿½o vai muito longe.  Vocï¿½ estï¿½ de frente para o penhasco, e 
-ainda hï¿½ o caminho da praia ï¿½ oeste e leste daqui.  ï¿½ estranho pensar que 
+   O caminho não vai muito longe.  Você está de frente para o penhasco, e 
+ainda há o caminho da praia à oeste e leste daqui.  É estranho pensar que 
 um caminho possa acabar assim, de repente, sem levar a lugar algum...
 ~
-132 8 0 0 0 0
+132 d 0
+D0
+~
+rocha~
+:n 2 a rocha
+abcd -1 -1
 D2
 ~
 ~
 0 -1 13210
 E
 penhasco rocha~
-Vocï¿½ consegue perceber uma abertura por detrï¿½s da rocha.  Talvez vocï¿½
-pudesse abrï¿½-la...  Mas como?
+Você consegue perceber uma abertura por detrás da rocha.  Talvez você
+pudesse abrí-la...  Mas como?
 ~
 S
 $~
+

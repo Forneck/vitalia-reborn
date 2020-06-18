@@ -1,12 +1,12 @@
 #2400
 Casa do Velho Marinheiro~
-   Vocï¿½ entra em uma pequena furna de dez por dez de diï¿½metro.  A pequena
-luz que vocï¿½ observou antes, vem de uma fogueira bem no centro do chï¿½o.
-Brutas mobï¿½lias feitas de madeira flutuante e pedras se espalham pela sala,
-e alguns farrapos estï¿½o pendurados por um pino de madeira encravado em uma
+   Você entra em uma pequena furna de dez por dez de diâmetro.  A pequena
+luz que você observou antes, vem de uma fogueira bem no centro do chão.
+Brutas mobílias feitas de madeira flutuante e pedras se espalham pela sala,
+e alguns farrapos estão pendurados por um pino de madeira encravado em uma
 rachadura na parede de pedra.
 ~
-24 260 0 0 0 0
+24 ci 0
 D3
 ~
 ~
@@ -14,40 +14,42 @@ D3
 D5
 ~
 madeira~
-1 -1 2407
+:n 2 uma madeira
+a -1 2407
 S
 #2401
 Sala de Esqueletos~
-   Esta sala parece ter sido usada como um tipo de prisï¿½o para membros da
-tripulaï¿½ï¿½o que cometeram crimes ou outro tipo de irregularidade.  Hï¿½ uma
-pilha de ossos humanos em um canto, sendo a ï¿½nica coisa da sala, exceto, ï¿½
+   Esta sala parece ter sido usada como um tipo de prisão para membros da
+tripulação que cometeram crimes ou outro tipo de irregularidade.  Há uma
+pilha de ossos humanos em um canto, sendo a única coisa da sala, exceto, é
 claro, pelo cheiro das envelhecidas caveiras.
 ~
-24 9 0 0 0 0
+24 ad 0
 D4
 ~
 ~
 0 -1 2414
 E
 pilha de ossos~
-Se parecem com qualquer outra pilha de ossos que vocï¿½ ja viu.
+Se parecem com qualquer outra pilha de ossos que você ja viu.
 ~
 S
 #2407
 Uma Escada de Corda~
-   Vocï¿½ comeï¿½a a descer a escada de cordas.  Abaixo de vocï¿½, hï¿½ uma nï¿½voa
-ocultando tudo exceto um ou dois pï¿½s abaixo.  Na verdade, vocï¿½ sï¿½ consegue
-ver abaixo o seu pï¿½ descendo pela escada.  O ar a sua volta parece ser bem
+   Você começa a descer a escada de cordas.  Abaixo de você, há uma névoa
+ocultando tudo exceto um ou dois pés abaixo.  Na verdade, você só consegue
+ver abaixo o seu pé descendo pela escada.  O ar a sua volta parece ser bem
 mais umido do que acima, perto do mar.
-   Vocï¿½ pode ouvir sons de rangido, um som composto de muitos outros sons,
-todos misturados em um sï¿½, como o de centenas de avï¿½s sentadas em velhas
-cadeiras de balanï¿½o ao mesmo tempo.
+   Você pode ouvir sons de rangido, um som composto de muitos outros sons,
+todos misturados em um só, como o de centenas de avós sentadas em velhas
+cadeiras de balanço ao mesmo tempo.
 ~
-24 261 0 0 0 0
+24 aci 0
 D4
 ~
 madeira~
-1 -1 2400
+:n 2 uma madeira
+a -1 2400
 D5
 ~
 ~
@@ -55,17 +57,17 @@ D5
 S
 #2408
 Fora da Neblina~
-   Na medida em que desce pela ladeira, a nï¿½voa comeï¿½a a se dissipar, e o
-que vocï¿½ vï¿½ abaixo, toma todo o seu fï¿½lego.
-   Vocï¿½ se encontra em uma enorme caverna, com todo o piso coberto por ï¿½gua
-do mar.  Flutuando nessas ï¿½guas, bem abaixo de vocï¿½, encalhado aqui para
-sempre, hï¿½ um enorme navio ï¿½ velas.
-   A corda em que vocï¿½ estï¿½, o deixa bem no cesto de vigia do mastro
-principal deste navio.  Vocï¿½ nï¿½o nota movimentos pelo convï¿½s, nï¿½o o quanto
-vocï¿½ esperava, e parece que este navio esta encalhado aqui por dï¿½cadas, e
-talvez, atï¿½ centenas de anos.
+   Na medida em que desce pela ladeira, a névoa começa a se dissipar, e o
+que você vê abaixo, toma todo o seu fôlego.
+   Você se encontra em uma enorme caverna, com todo o piso coberto por água
+do mar.  Flutuando nessas águas, bem abaixo de você, encalhado aqui para
+sempre, há um enorme navio à velas.
+   A corda em que você está, o deixa bem no cesto de vigia do mastro
+principal deste navio.  Você não nota movimentos pelo convés, não o quanto
+você esperava, e parece que este navio esta encalhado aqui por décadas, e
+talvez, até centenas de anos.
 ~
-24 261 0 0 0 0
+24 aci 0
 D4
 ~
 ~
@@ -77,13 +79,13 @@ D5
 S
 #2409
 Cesto de Vigia - Mastro Principal~
-   Vocï¿½ estï¿½ em uma pequena plataforma redonda, que circula todo o mastro
-principal.  Uma pequena escada de ferro desce pelo mastro para o convï¿½s, no
-meio do navio.  Hï¿½ cordas por todos os lados, mas nenhuma delas parece ser
-estï¿½vel o suficiente.
-   A corda segue para cima, atravï¿½s da nï¿½voa.
+   Você está em uma pequena plataforma redonda, que circula todo o mastro
+principal.  Uma pequena escada de ferro desce pelo mastro para o convés, no
+meio do navio.  Há cordas por todos os lados, mas nenhuma delas parece ser
+estável o suficiente.
+   A corda segue para cima, através da névoa.
 ~
-24 0 0 0 0 5
+24 0 5
 D4
 ~
 ~
@@ -94,15 +96,15 @@ D5
 0 -1 2410
 S
 #2410
-Passadiï¿½o - Meio do Navio~
-   Vocï¿½ estï¿½ no centro deste invï¿½lido navio ï¿½ velas, gentilmente balanï¿½ando
-nas ï¿½guas abaixo.  Vocï¿½ nï¿½o pode ouvir nada, a nï¿½o ser o som do chiar do
-balanï¿½o deste navio, a tripulaï¿½ï¿½o que habitava este poderoso navio deve
-te-lo abandonado hï¿½ muito tempo, ou morrido ao tentar sair desta caverna.
-   O passadiï¿½o segue para norte e sul pela extensï¿½o do navio.  As amuradas
-seguem para leste e oeste de vocï¿½.
+Passadiço - Meio do Navio~
+   Você está no centro deste inválido navio à velas, gentilmente balançando
+nas águas abaixo.  Você não pode ouvir nada, a não ser o som do chiar do
+balanço deste navio, a tripulação que habitava este poderoso navio deve
+te-lo abandonado há muito tempo, ou morrido ao tentar sair desta caverna.
+   O passadiço segue para norte e sul pela extensão do navio.  As amuradas
+seguem para leste e oeste de você.
 ~
-24 0 0 0 0 3
+24 0 3
 D0
 ~
 ~
@@ -120,18 +122,18 @@ D3
 ~
 0 -1 2418
 D4
-Vocï¿½ olha acima pelas escadas do mastro, somente uma impenetrï¿½vel nï¿½voa.
+Você olha acima pelas escadas do mastro, somente uma impenetrável névoa.
 ~
 ~
 0 -1 2409
 S
 #2411
-Passadiï¿½o~
-   Seus passos ecoam de maneira cï¿½ncava pelo entabuamento, lhe dando a
-sensaï¿½ï¿½o de um iminente perigo.  Uma escotilha aqui lhe da acesso ao convï¿½s
+Passadiço~
+   Seus passos ecoam de maneira côncava pelo entabuamento, lhe dando a
+sensação de um iminente perigo.  Uma escotilha aqui lhe da acesso ao convés
 inferior.
 ~
-24 0 0 0 0 3
+24 0 3
 D0
 ~
 ~
@@ -146,15 +148,15 @@ D5
 0 -1 2420
 E
 escotilha~
-A escotilha possui uma pequena maï¿½aneta.  Ela nï¿½o parece estar trancada.
+A escotilha possui uma pequena maçaneta.  Ela não parece estar trancada.
 ~
 S
 #2412
-Passadiï¿½o no Mastro de Proa~
-   O mastro de proa se ergue do convï¿½s aqui, e o cordame podre ainda selado
-ï¿½s esfarrapadas velas.  O passadiï¿½o segue para norte e sul de vocï¿½.
+Passadiço no Mastro de Proa~
+   O mastro de proa se ergue do convés aqui, e o cordame podre ainda selado
+às esfarrapadas velas.  O passadiço segue para norte e sul de você.
 ~
-24 0 0 0 0 0
+24 0 0
 D0
 ~
 ~
@@ -166,14 +168,14 @@ D2
 S
 #2413
 Castelo de Proa~
-   Vocï¿½ estï¿½ proximo a maior parte do navio, com a parede da caverna
-diretamente em seu rosto.  Agora vocï¿½ pode ver como este navio ficou
+   Você está proximo a maior parte do navio, com a parede da caverna
+diretamente em seu rosto.  Agora você pode ver como este navio ficou
 aprisionado nessa caverna.  Parece que em algum momento aqui era uma pequena
-angra com ï¿½guas profundas o suficiente para ancorar um navio.  A parede ao
+angra com águas profundas o suficiente para ancorar um navio.  A parede ao
 norte, agora uma grande pilha de entulho, deve ter desmoronado e aprisionado
 o navio.
 ~
-24 8 0 0 0 0
+24 d 0
 D0
 ~
 ~
@@ -185,11 +187,11 @@ D2
 S
 #2414
 A Proa~
-   Vocï¿½ esta bem na parte dianteira do navio.  Hï¿½ um pequeno buraco de forma
-quadrada aqui seguindo para baixo, ou vocï¿½ pode seguir para sul ao longo do
-passadiï¿½o.
+   Você esta bem na parte dianteira do navio.  Há um pequeno buraco de forma
+quadrada aqui seguindo para baixo, ou você pode seguir para sul ao longo do
+passadiço.
 ~
-24 0 0 0 0 0
+24 0 0
 D2
 ~
 ~
@@ -200,12 +202,12 @@ D5
 0 -1 2401
 S
 #2415
-Convï¿½s da Popa~
-   Vocï¿½ estï¿½ no convï¿½s da popa, a principal seï¿½ï¿½o desse convï¿½s superior,
-onde a maioria das velas devem ter sido feitas, quando este navio ainda nï¿½o
+Convés da Popa~
+   Você está no convés da popa, a principal seção desse convés superior,
+onde a maioria das velas devem ter sido feitas, quando este navio ainda não
 tinha sido aprisionado aqui.
 ~
-24 0 0 0 0 0
+24 0 0
 D0
 ~
 ~
@@ -218,12 +220,12 @@ S
 #2416
 No Comando do Leme~
    A grande roda de madeira que controla o leme do navio continua aqui, sem
-senhum corte ou arranhï¿½o.  Hï¿½ tambï¿½m uma bï¿½ssola aqui, parecendo estar em
-ï¿½timas condiï¿½ï¿½es.
-   Vocï¿½ pode seguir para norte em direï¿½ï¿½o ao passadiï¿½o, ou para sul indo
+senhum corte ou arranhão.  Há também uma bússola aqui, parecendo estar em
+ótimas condições.
+   Você pode seguir para norte em direção ao passadiço, ou para sul indo
 para a popa do navio.
 ~
-24 8 0 0 0 0
+24 d 0
 D0
 ~
 ~
@@ -235,12 +237,12 @@ D2
 S
 #2417
 Popa~
-   Vocï¿½ estï¿½ na parte traseira do navio, que se chocou com a parede da
+   Você está na parte traseira do navio, que se chocou com a parede da
 caverna.  Os pisos aqui ainda parecem estar livres de qualquer tipo de
-sujeira ou entulhos, o que ï¿½ estranho para um navio que parece estar
+sujeira ou entulhos, o que é estranho para um navio que parece estar
 empacado aqui por tanto tempo.
 ~
-24 8 0 0 0 0
+24 d 0
 D0
 ~
 ~
@@ -248,9 +250,9 @@ D0
 S
 #2418
 Amurada Bombordo~
-   Os lados do navio sï¿½o inacabados, com trï¿½s pï¿½s de altura.
+   Os lados do navio são inacabados, com três pés de altura.
 ~
-24 0 0 0 0 0
+24 0 0
 D1
 ~
 ~
@@ -258,22 +260,22 @@ D1
 S
 #2419
 Amurada Estibordo~
-   Os lados do navio sï¿½o inacabados, com trï¿½s pï¿½s de altura.
+   Os lados do navio são inacabados, com três pés de altura.
 ~
-24 0 0 0 0 0
+24 0 0
 D3
 ~
 ~
 0 -1 2410
 S
 #2420
-Em um Corredor - Convï¿½s Inferior~
-   Vocï¿½ estï¿½ em um pequeno, e apertado corredor que segue para norte e sul.
-Vocï¿½ percebe portas em alguns momentos, na sua frente e atrï¿½s de vocï¿½, mas
-nenhuma muito prï¿½xima.  As portas parecem estar fechadas no fim do corredor,
+Em um Corredor - Convés Inferior~
+   Você está em um pequeno, e apertado corredor que segue para norte e sul.
+Você percebe portas em alguns momentos, na sua frente e atrás de você, mas
+nenhuma muito próxima.  As portas parecem estar fechadas no fim do corredor,
 nos dois sentidos.
 ~
-24 9 0 0 0 0
+24 ad 0
 D0
 ~
 ~
@@ -288,11 +290,11 @@ D4
 0 -1 2411
 S
 #2421
-Em um Corredor - Convï¿½s Inferior~
-   O corredor acaba a norte de vocï¿½, em uma porta.  Portas o circulam em seu
+Em um Corredor - Convés Inferior~
+   O corredor acaba a norte de você, em uma porta.  Portas o circulam em seu
 lado oeste e leste.
 ~
-24 9 0 0 0 0
+24 ad 0
 D0
 ~
 ~
@@ -312,27 +314,28 @@ D3
 S
 #2422
 Fim do Corredor Norte~
-   Vocï¿½ estï¿½ em frente a uma porta fechada no fim do corredor norte.
-Nenhuma marcaï¿½ï¿½o ou sinal adorna a porta, portanto poderia guiar para
+   Você está em frente a uma porta fechada no fim do corredor norte.
+Nenhuma marcação ou sinal adorna a porta, portanto poderia guiar para
 qualquer lugar.
 ~
-24 9 0 0 0 0
+24 ad 0
 D0
 ~
 porta~
-1 -1 2426
+:n 2 a porta
+a -1 2426
 D2
 ~
 ~
 0 -1 2421
 S
 #2423
-Um Corredor - Convï¿½s Inferior~
+Um Corredor - Convés Inferior~
    O corredor segue para norte e sul daqui, somente terminando para sul de
-vocï¿½ em uma porta fechada.  Portas orlam por seus lados, leste e oeste, ou
-vocï¿½ pode voltar para norte.
+você em uma porta fechada.  Portas orlam por seus lados, leste e oeste, ou
+você pode voltar para norte.
 ~
-24 9 0 0 0 0
+24 ad 0
 D0
 ~
 ~
@@ -352,55 +355,58 @@ D3
 S
 #2424
 Fim do Corredor Sul~
-   Vocï¿½ estï¿½ no final do corredor sul, em frente a uma grande porta de
-carvalho.  Vocï¿½ pode voltar ao norte, ou tentar a porta.
+   Você está no final do corredor sul, em frente a uma grande porta de
+carvalho.  Você pode voltar ao norte, ou tentar a porta.
 ~
-24 9 0 0 0 0
+24 ad 0
 D0
 ~
 ~
 0 -1 2423
 D2
-A porta parece ser muito sï¿½lida e firme, apesar do tempo e decadï¿½ncia.
+A porta parece ser muito sólida e firme, apesar do tempo e decadência.
 ~
 porta~
-1 -1 2425
+:n 2 a porta
+a -1 2425
 S
 #2425
-Alojamento do Capitï¿½o~
-   Esta ï¿½, claramente, o maior quarto de todo o convï¿½s inferior deste navio,
-mas nï¿½o tï¿½o enorme.  Uma cama grande, e com aspecto confortï¿½vel, estï¿½ junto
-a uma das paredes, e uma mesa, cravada no chï¿½o, encostada em outra parede,
+Alojamento do Capitão~
+   Esta é, claramente, o maior quarto de todo o convés inferior deste navio,
+mas não tão enorme.  Uma cama grande, e com aspecto confortável, está junto
+a uma das paredes, e uma mesa, cravada no chão, encostada em outra parede,
 junto a um banquinho.
 ~
-24 9 0 0 0 0
+24 ad 0
 D0
 ~
 porta~
-1 -1 2424
+:n 2 a porta
+a -1 2424
 S
 #2426
-Dormitï¿½rio~
-   Esta sala ï¿½ onde a maioria da tripulaï¿½ï¿½o devia dormir.  Prateleiras
+Dormitório~
+   Esta sala é onde a maioria da tripulação devia dormir.  Prateleiras
 cravadas junto as paredes, criam pequenas camas para cada marinheiro.  As
-almofadas ja estï¿½o aos farrapos e atï¿½ mesmo as madeiras que abrigavam a
-tripulaï¿½ï¿½o parecem estar em deterioraï¿½ï¿½o, nï¿½o sendo capaz de suportar o peso
+almofadas ja estão aos farrapos e até mesmo as madeiras que abrigavam a
+tripulação parecem estar em deterioração, não sendo capaz de suportar o peso
 de nenhum homem.
 ~
-24 9 0 0 0 0
+24 ad 0
 D2
 ~
 porta~
-1 -1 2422
+:n 2 a porta
+a -1 2422
 S
 #2427
-A Cozinha e o Refeitï¿½rio~
-   Toda as refeiï¿½ï¿½es do navio eram preparadas e comidas nesta sala.  Uma
-pequena, mas eficiente cozinha, estï¿½ montada no fim da sala, enquanto uma
-grande mesa com banquetas firmadas de ambos os lados, estï¿½ no outro lado da
+A Cozinha e o Refeitório~
+   Toda as refeições do navio eram preparadas e comidas nesta sala.  Uma
+pequena, mas eficiente cozinha, está montada no fim da sala, enquanto uma
+grande mesa com banquetas firmadas de ambos os lados, está no outro lado da
 sala.
 ~
-24 9 0 0 0 0
+24 ad 0
 D1
 ~
 ~
@@ -409,11 +415,11 @@ S
 #2428
 O Banheiro~
    Esta sala, apesar de abandonada por muito tempo, ainda possui o mesmo
-cheiro de quando este navio estava em operaï¿½ï¿½o.  Uma pequena e imunda bacia
-estï¿½ no centro da sala, esperando por ser usada, parecendo sorrir para vocï¿½,
+cheiro de quando este navio estava em operação.  Uma pequena e imunda bacia
+está no centro da sala, esperando por ser usada, parecendo sorrir para você,
 desafiando-o a usa-la.
 ~
-24 9 0 0 0 0
+24 ad 0
 D3
 ~
 ~
@@ -421,11 +427,11 @@ D3
 S
 #2429
 Sala do Remo - Estibordo~
-   Esta longa sala abriga vï¿½rios apodrecidos bancos de madeira, todos eles
+   Esta longa sala abriga vários apodrecidos bancos de madeira, todos eles
 formando pares com velhos remos.  Que alegria devia ser ficar aqui remando
-quando nï¿½o havia vento para mover o navio!
+quando não havia vento para mover o navio!
 ~
-24 9 0 0 0 0
+24 ad 0
 D3
 ~
 ~
@@ -433,12 +439,12 @@ D3
 S
 #2430
 Sala do Remo - Bombordo~
-   Esta longa sala abriga vï¿½rios apodrecidos bancos de madeira, todos eles
-formando pares com velhos remos.  Vocï¿½ consegue sentir o sofrimento dos
-homens que trabalhavam aqui, dando o coraï¿½ï¿½o e a alma, para manter este
-navio movendo, em ï¿½guas calmas e sem ventos.
+   Esta longa sala abriga vários apodrecidos bancos de madeira, todos eles
+formando pares com velhos remos.  Você consegue sentir o sofrimento dos
+homens que trabalhavam aqui, dando o coração e a alma, para manter este
+navio movendo, em águas calmas e sem ventos.
 ~
-24 9 0 0 0 0
+24 ad 0
 D1
 ~
 ~
@@ -446,19 +452,19 @@ D1
 S
 #2431
 Entrada da Caverna~
-   Vocï¿½ estï¿½ na entrada de uma caverna que desce pelo rochedo.  Vocï¿½ vï¿½ uma
+   Você está na entrada de uma caverna que desce pelo rochedo.  Você vê uma
 bruxuleante luz dentro, que parece ser uma fogueira ou uma lanterna.  Essa
-luz tambï¿½m pode ser de uma fogueira para cozinhar - uma fogueira para
-cozinhar vocï¿½!
+luz também pode ser de uma fogueira para cozinhar - uma fogueira para
+cozinhar você!
 ~
-24 8 0 0 0 5
-D0
-~
-~
-0 -1 6200
+24 d 5
 D1
 ~
 ~
 0 -1 2400
+D0
+~
+~
+0 -1 6200
 S
-$~
+$

@@ -1,13 +1,13 @@
 #3300
 Uma Trilha Estreita~
    Este caminho consiste numa ladeira que se afasta da estrada principal
-para o oeste.  Em alguns pontos a trilha parece cair na escuridï¿½o das pedras
+para o oeste.  Em alguns pontos a trilha parece cair na escuridão das pedras
 cinzas e da grama cinzenta de montanha que predominam por aqui.  A trilha
-leva, geralmente, em direï¿½ï¿½o ao leste e para o alto em direï¿½ï¿½o a um solo
+leva, geralmente, em direção ao leste e para o alto em direção a um solo
 rochoso.  Existe um sinal aqui, aparentemente fora do lugar, neste
-turbulento territï¿½rio.
+turbulento território.
 ~
-33 68 0 0 0 5
+33 cg 5
 D1
 ~
 ~
@@ -35,14 +35,14 @@ S
 #3301
 Uma Trilha Estreita~
    O que mal poderia ser chamada de trilha, leva para oeste na parte
-traseira da montanha, leste para uma construï¿½ï¿½o muito estranha e para baixo
-em direï¿½ï¿½o a um pequeno vale onde se encontra uma pequena casa antecedida de
-um jardim bem cuidado.  A porta para a casa estï¿½ aberta e atraente,
-convidando vocï¿½ para uma visita.
+traseira da montanha, leste para uma construção muito estranha e para baixo
+em direção a um pequeno vale onde se encontra uma pequena casa antecedida de
+um jardim bem cuidado.  A porta para a casa está aberta e atraente,
+convidando você para uma visita.
 ~
-33 4 0 0 0 5
+33 c 5
 D1
-Hï¿½ uma estranha construï¿½ï¿½o ali.
+Há uma estranha construção ali.
 ~
 ~
 0 -1 6905
@@ -57,14 +57,14 @@ D5
 S
 #3302
 Um Caminho Bem Cuidado~
-   Vocï¿½ se encontra no final oeste de um vale muito, muito pequeno, com
-espaï¿½o suficiente para apenas uma casa, que se encontra para o leste.  Vocï¿½
-pode ver daqui que a porta para a aconchegante cabana estï¿½ aberta e
+   Você se encontra no final oeste de um vale muito, muito pequeno, com
+espaço suficiente para apenas uma casa, que se encontra para o leste.  Você
+pode ver daqui que a porta para a aconchegante cabana está aberta e
 atraente, mas seu interior parece muito escuro.  Um caminho rodeado por
-arbustos leva direto para o edifï¿½cio e termina onde vocï¿½ estï¿½ parado: bem no
-mais fï¿½cil caminho de volta para cima das montanhas.
+arbustos leva direto para o edifício e termina onde você está parado: bem no
+mais fácil caminho de volta para cima das montanhas.
 ~
-33 0 0 0 0 5
+33 0 5
 D1
 ~
 ~
@@ -76,17 +76,18 @@ D4
 S
 #3303
 A Parte Externa de Uma Casa~
-   O caminho que vocï¿½ estï¿½ vai da porta da frente da cabana a leste, atï¿½ a
+   O caminho que você está vai da porta da frente da cabana a leste, até a
 beira do pequeno vale a oeste.  A casa parece silenciosa...  Silenciosa
-demais.  Uma pequena voz dentro da sua cabeï¿½a, a mesma voz que salvou sua
-vida em incontï¿½veis ocasiï¿½es, parece estar lhe dizendo que alguma coisa estï¿½
+demais.  Uma pequena voz dentro da sua cabeça, a mesma voz que salvou sua
+vida em incontáveis ocasiões, parece estar lhe dizendo que alguma coisa está
 muito, muito errada por aqui.
 ~
-33 0 0 0 0 2
+33 0 2
 D1
-Esta ï¿½ uma porta da frente normal para uma casa.
+Esta é uma porta da frente normal para uma casa.
 ~
 porta frente~
+:n 2 a porta
 1 -1 3304
 D3
 ~
@@ -95,49 +96,50 @@ D3
 S
 #3304
 A Ferraria~
-   Devastaï¿½ï¿½o surge diante de seus olhos.
-   A fornalha foi destruï¿½da em vï¿½rios pedaï¿½os, a maior parte se encontra ao
-longo da porta preta.  Martelos, pinï¿½as e bigornas acham-se espalhados em
+   Devastação surge diante de seus olhos.
+   A fornalha foi destruída em vários pedaços, a maior parte se encontra ao
+longo da porta preta.  Martelos, pinças e bigornas acham-se espalhados em
 uma grande desordem, e a cama do ferreiro ainda arde, mas sem fogo.  Este
-lugar foi completamente destruï¿½do por mais de um homem, vocï¿½ presume pelos
-vï¿½rios rastros que existem na poeira...
+lugar foi completamente destruído por mais de um homem, você presume pelos
+vários rastros que existem na poeira...
 ~
-33 8 0 0 0 0
+33 d 0
 D1
-Este ï¿½ um buraco normal na parede levando para fora no jardim.
+Este é um buraco normal na parede levando para fora no jardim.
 ~
 ~
 0 -1 3305
 D3
-Esta ï¿½ a porta da frente.
+Esta é a porta da frente.
 ~
 porta frente~
+:n 2 a porta
 1 -1 3303
 E
-rastros poeira~
-As posiï¿½ï¿½es dos trï¿½s vestï¿½gios levam para fora onde a porta dos fundos
-costumava estar.
+cama~
+Ha!  Sortudo!  Você sempre tem sorte!  Embaixo do travesseiro existe uma
+carta inacabada, sem destinatário.  Os pedaços do texto que não estão
+borrados, queimados e manchados, relatam a história do principal trabalho do
+ferreiro/mago Gabadiel: uma espada com um poder jamais visto, e duas espadas
+que vieram antes, descartadas como 'Não exatamente o que eu estava
+trabalhando'.  Olhando ao redor, você repara uma visível falta de espadas.
+Você pensa que você teria um motivo agora...
 ~
 E
-cama~
-Ha!  Sortudo!  Vocï¿½ sempre tem sorte!  Embaixo do travesseiro existe uma
-carta inacabada, sem destinatï¿½rio.  Os pedaï¿½os do texto que nï¿½o estï¿½o
-borrados, queimados e manchados, relatam a histï¿½ria do principal trabalho do
-ferreiro/mago Gabadiel: uma espada com um poder jamais visto, e duas espadas
-que vieram antes, descartadas como 'Nï¿½o exatamente o que eu estava
-trabalhando'.  Olhando ao redor, vocï¿½ repara uma visï¿½vel falta de espadas.
-Vocï¿½ pensa que vocï¿½ teria um motivo agora...
+rastros poeira~
+As posições dos três vestígios levam para fora onde a porta dos fundos
+costumava estar.
 ~
 S
 #3305
 O Pequeno Jardim~
-   Este jardim foi mantido, provavelmente em alguma ocasiï¿½o, bem cuidado e
-sem ervas daninhas.  Infelizmente, parece que alguï¿½m foi descuidado no
-manuseio de uma bola de fogo.  Nï¿½o hï¿½ nada mais aqui alï¿½m das marcas de
-destruiï¿½ï¿½o e cinzas, e ainda permanece os restos de uma trilha levando para
+   Este jardim foi mantido, provavelmente em alguma ocasião, bem cuidado e
+sem ervas daninhas.  Infelizmente, parece que alguém foi descuidado no
+manuseio de uma bola de fogo.  Não há nada mais aqui além das marcas de
+destruição e cinzas, e ainda permanece os restos de uma trilha levando para
 a margem leste deste pequeno vale.
 ~
-33 0 0 0 0 2
+33 0 2
 D1
 ~
 ~
@@ -153,12 +155,12 @@ Elas levam para o leste.
 S
 #3306
 Uma Cadeia de Montanhas~
-   Vocï¿½ estï¿½ numa cadeia de montanhas, logo ao leste do pequeno vale.  Vocï¿½
+   Você está numa cadeia de montanhas, logo ao leste do pequeno vale.  Você
 avista uma pequena cabana assentada no centro do vale, e o cume continua
 para o sul.  Olhando para os desvios que levam para um penhasco ao norte e
-oeste, vocï¿½ prefere nï¿½o tomar aquelas direï¿½ï¿½es.
+oeste, você prefere não tomar aquelas direções.
 ~
-33 0 0 0 0 5
+33 0 5
 D2
 ~
 ~
@@ -175,13 +177,13 @@ S
 #3307
 Uma Cadeia de Montanhas~
    A cadeia de montanhas continua ao norte daqui, e amplia-se para um
-pequeno planalto logo paro sul.  Indo leste e oeste daqui seria uma pï¿½ssima
-idï¿½ia, considerando o declive do penhasco.  Desta altura, vocï¿½ tem uma
-privilegiada visï¿½o panorï¿½mica para o sul, incluindo o que parece ser uma
+pequeno planalto logo paro sul.  Indo leste e oeste daqui seria uma péssima
+idéia, considerando o declive do penhasco.  Desta altura, você tem uma
+privilegiada visão panorâmica para o sul, incluindo o que parece ser uma
 pequena vila de montanha para o sul e oeste, e um alto e imponente pico em
-direï¿½ï¿½o ao oeste daqui.
+direção ao oeste daqui.
 ~
-33 0 0 0 0 5
+33 0 5
 D0
 ~
 ~
@@ -197,14 +199,14 @@ Elas continuam para o sul.
 S
 #3308
 Os Caminhos Divergentes~
-   Vocï¿½ encontra-se num pequeno planalto nas montanhas, logo ao sul de uma
-cumeeira que leva em direï¿½ï¿½o ao norte por entre uma ï¿½rea rochosa.  Para o
+   Você encontra-se num pequeno planalto nas montanhas, logo ao sul de uma
+cumeeira que leva em direção ao norte por entre uma área rochosa.  Para o
 leste, sul e oeste existem diferentes ladeiras levando para baixo para
-diferentes ï¿½reas das montanhas.
-   Um gigante e escuro pico olha para vocï¿½ do oeste, parecendo, realmente,
-muito fantasmagï¿½rico!
+diferentes áreas das montanhas.
+   Um gigante e escuro pico olha para você do oeste, parecendo, realmente,
+muito fantasmagórico!
 ~
-33 0 0 0 0 5
+33 0 5
 D0
 ~
 ~
@@ -223,19 +225,19 @@ D3
 0 -1 3359
 E
 trilhas trilha~
-As trï¿½s trilhas dividem-se aqui: uma para o oeste, outra para o leste e
-a ï¿½ltima para o sul.
+As três trilhas dividem-se aqui: uma para o oeste, outra para o leste e
+a última para o sul.
 ~
 S
 #3309
 Uma Ladeira Inclinada~
-   Esta ladeira leva para baixo e para oeste daqui.  Acima, vocï¿½ vï¿½ um
+   Esta ladeira leva para baixo e para oeste daqui.  Acima, você vê um
 planalto na extremidade sul de uma longa cadeia de montanhas.  Parece
-existir sinais de trï¿½fego nesta ï¿½rea, levando para dentro de uma enorme
-depressï¿½o.  A aparï¿½ncia desta ladeira ï¿½ muito perigosa, e vocï¿½ decide
-exercitar um pouco sua precauï¿½ï¿½o.
+existir sinais de tráfego nesta área, levando para dentro de uma enorme
+depressão.  A aparência desta ladeira é muito perigosa, e você decide
+exercitar um pouco sua precaução.
 ~
-33 0 0 0 0 4
+33 0 4
 D0
 ~
 ~
@@ -251,18 +253,18 @@ D4
 E
 sinal sinais trilhas~
 Algumas poucas pegadas de botas foram deixadas na poeira aqui.
-Existe, definitivamente, trï¿½fego aqui, mas esta ï¿½rea nï¿½o ï¿½
-o que vocï¿½ chamaria de boa para se viajar.
+Existe, definitivamente, tráfego aqui, mas esta área não é
+o que você chamaria de boa para se viajar.
 ~
 S
 #3310
 Um Pequeno Planalto~
-   Vocï¿½ encontra-se sobre um outro mini-planalto, limitado por uma parede de
-rochas maciï¿½a ao norte.  Vocï¿½ pode escalar pela ladeira ao leste, ou
-continuar pela ï¿½rea plana para o oeste.  Outra ladeira leva mais embaixo
-pelo sul, parecendo perigosa mas escalï¿½vel.
+   Você encontra-se sobre um outro mini-planalto, limitado por uma parede de
+rochas maciça ao norte.  Você pode escalar pela ladeira ao leste, ou
+continuar pela área plana para o oeste.  Outra ladeira leva mais embaixo
+pelo sul, parecendo perigosa mas escalável.
 ~
-33 0 0 0 0 4
+33 0 4
 D1
 ~
 ~
@@ -279,13 +281,13 @@ S
 #3311
 Um Pequeno Planalto~
    Este planalto acaba aqui, com a ladeira diminuindo para o sul, e uma
-parede de rochas sï¿½lida para o norte.  Em direï¿½ï¿½o ao leste, o planalto
-continua, e vocï¿½ pensa que pode escalar a ladeira ï¿½ngreme e rochosa logo ao
-oeste daqui.  Vocï¿½ ï¿½ preenchido pela bela visï¿½o das regiï¿½es mais baixas
-desta depressï¿½o, e vocï¿½ avista o que deve ser uma caverna ao sul e para
+parede de rochas sólida para o norte.  Em direção ao leste, o planalto
+continua, e você pensa que pode escalar a ladeira íngreme e rochosa logo ao
+oeste daqui.  Você é preenchido pela bela visão das regiões mais baixas
+desta depressão, e você avista o que deve ser uma caverna ao sul e para
 baixo daqui...
 ~
-33 0 0 0 0 4
+33 0 4
 D1
 ~
 ~
@@ -297,13 +299,13 @@ D3
 S
 #3312
 Uma Ladeira Rochosa~
-   Esta ladeira ï¿½ extremamente traiï¿½oeira, mas parece ser mais segura para o
+   Esta ladeira é extremamente traiçoeira, mas parece ser mais segura para o
 norte.  Para o leste a ladeira leva para baixo para um pequeno planalto que
-tambï¿½m parece consideravelmente mais seguro que as outras opï¿½ï¿½es.  O xisto
-sob os seus pï¿½s escorrega muito e vocï¿½ quase perde o equilï¿½brio; este nï¿½o ï¿½
+também parece consideravelmente mais seguro que as outras opções.  O xisto
+sob os seus pés escorrega muito e você quase perde o equilíbrio; este não é
 um lugar para se ficar sem um equipamento de montanhismo.
 ~
-33 0 0 0 0 5
+33 0 5
 D0
 ~
 ~
@@ -315,14 +317,14 @@ D1
 S
 #3313
 O Mirante~
-   Vocï¿½ encontra-se num ponto abenï¿½oado com uma maravilhosa visï¿½o das
-montanhas para o norte.  Distante, lï¿½ embaixo, vocï¿½ percebe o que parece ser
+   Você encontra-se num ponto abençoado com uma maravilhosa visão das
+montanhas para o norte.  Distante, lá embaixo, você percebe o que parece ser
 um caminho de escalada para a montanha central, um pico que parece negro e
-sombrio.  Vocï¿½ tem uma pï¿½ssima impressï¿½o daquela montanha por alguma razï¿½o,
-e por isso, nï¿½o parece uma boa idï¿½ia tentar achar uma maneira de chegar atï¿½
+sombrio.  Você tem uma péssima impressão daquela montanha por alguma razão,
+e por isso, não parece uma boa idéia tentar achar uma maneira de chegar até
 ela.
 ~
-33 0 0 0 0 4
+33 0 4
 D0
 ~
 ~
@@ -334,12 +336,12 @@ D2
 S
 #3314
 Uma Ladeira Rochosa~
-   Vocï¿½ desliza e escorrega durante a travessia do chï¿½o ï¿½ngreme, tentando
-desesperadamente manter o equilï¿½brio.  Vocï¿½ pode escalar em direï¿½ï¿½o a um
+   Você desliza e escorrega durante a travessia do chão íngreme, tentando
+desesperadamente manter o equilíbrio.  Você pode escalar em direção a um
 pequeno planalto para o norte daqui, ou, cuidadosamente, ir para baixo, para
-a base da depressï¿½o ao oeste.  Vocï¿½ nï¿½o estï¿½ certo de qual ï¿½ mais seguro...
+a base da depressão ao oeste.  Você não está certo de qual é mais seguro...
 ~
-33 0 0 0 0 5
+33 0 5
 D0
 ~
 ~
@@ -350,14 +352,14 @@ D3
 0 -1 3315
 S
 #3315
-A Base da Depressï¿½o~
+A Base da Depressão~
    Um pequeno caminho leva para o sul, longe da ladeira rochosa que leva
 para cima, ao leste daqui.  Um mato rasteiro encontra-se, evidentemente, por
-causa do trï¿½fego intenso.  Olhando para cima, vocï¿½ nota paredes rochosas
-cercando uma grande parte da depressï¿½o, fazendo deste lugar uma efetiva
+causa do tráfego intenso.  Olhando para cima, você nota paredes rochosas
+cercando uma grande parte da depressão, fazendo deste lugar uma efetiva
 fortaleza.
 ~
-33 0 0 0 0 4
+33 0 4
 D1
 ~
 ~
@@ -368,13 +370,13 @@ D2
 0 -1 3316
 S
 #3316
-A Base da Depressï¿½o~
-   O pequeno caminho onde vocï¿½ estï¿½ conduz a norte e leste dentro do que
+A Base da Depressão~
+   O pequeno caminho onde você está conduz a norte e leste dentro do que
 parece ser uma grande caverna oca que surge de dentro da montanha.  O lugar
-todo parece silencioso, muito silencioso aliï¿½s.  Sua pequena intuiï¿½ï¿½o de
-aventureiro estï¿½ insistentemente avisando a vocï¿½ sobre armadilhas.
+todo parece silencioso, muito silencioso aliás.  Sua pequena intuição de
+aventureiro está insistentemente avisando a você sobre armadilhas.
 ~
-33 0 0 0 0 4
+33 0 4
 D0
 ~
 ~
@@ -386,13 +388,13 @@ D1
 S
 #3317
 A Entrada da Caverna~
-   A caverna leva para dentro do coraï¿½ï¿½o da montanha, bem iluminada pelas
+   A caverna leva para dentro do coração da montanha, bem iluminada pelas
 tochas nas paredes.  Uma grande pedra encontra-se ao lado aqui, perto de um
-pequeno poï¿½o de fogo.  Escombros esculhambam a ï¿½rea; esqueletos de coelhos,
-uma pedra de amolar parcialmente quebrada e um poï¿½o de ï¿½gua marcado por
-muitos pares de botas.  Estranho alguï¿½m viver tï¿½o fundo nas montanhas...
+pequeno poço de fogo.  Escombros esculhambam a área; esqueletos de coelhos,
+uma pedra de amolar parcialmente quebrada e um poço de água marcado por
+muitos pares de botas.  Estranho alguém viver tão fundo nas montanhas...
 ~
-33 4 0 0 0 0
+33 c 0
 D1
 ~
 ~
@@ -404,14 +406,14 @@ D3
 S
 #3318
 Uma Passagem na Caverna~
-   Vocï¿½ estï¿½ perto da entrada da caverna.  A luz de fora verte para dentro
+   Você está perto da entrada da caverna.  A luz de fora verte para dentro
 vinda do oeste, acompanhada por uma leve brisa, fazendo as chamas das tochas
 agitarem-se um pouco, projetando estranhas sombras nas paredes.  Esta
 passagem vai norte e sul daqui, cada rota parecendo mais escura e abafada do
-que lï¿½ fora.  Pelas pegadas no chï¿½o vocï¿½ presume que a rota norte ï¿½ a mais
+que lá fora.  Pelas pegadas no chão você presume que a rota norte é a mais
 usada.
 ~
-33 8 0 0 0 0
+33 d 0
 D0
 ~
 ~
@@ -427,13 +429,13 @@ D3
 S
 #3319
 Uma Passagem na Caverna~
-   A passagem vira aqui, uma extremidade levando para o sul, em direï¿½ï¿½o a
+   A passagem vira aqui, uma extremidade levando para o sul, em direção a
 entrada da caverna e outra a leste -- muito mais fundo dentro da montanha.
-A luz das tochas mantï¿½m a ï¿½rea clara o suficiente para vocï¿½ ver, mas nï¿½o
-clara o suficiente para vocï¿½ sentir-se confortï¿½vel neste lugar estranho.
-Distante ao longe, vocï¿½ ouve os ecos do que parecem ser vozes.
+A luz das tochas mantém a área clara o suficiente para você ver, mas não
+clara o suficiente para você sentir-se confortável neste lugar estranho.
+Distante ao longe, você ouve os ecos do que parecem ser vozes.
 ~
-33 8 0 0 0 0
+33 d 0
 D1
 ~
 ~
@@ -445,12 +447,12 @@ D2
 S
 #3320
 Uma Passagem na Caverna~
-   Esta passagem irregular leva ao leste e oeste daqui.  Na direï¿½ï¿½o leste
-vocï¿½ escuta inequï¿½vocos sons de vozes baixas.  Os ecos parecem estar fazendo
-divertidos efeitos em vocï¿½, contudo, e vocï¿½ nï¿½o estï¿½ certo da distï¿½ncia da
+   Esta passagem irregular leva ao leste e oeste daqui.  Na direção leste
+você escuta inequívocos sons de vozes baixas.  Os ecos parecem estar fazendo
+divertidos efeitos em você, contudo, e você não está certo da distância da
 origem dessas vozes.
 ~
-33 8 0 0 0 0
+33 d 0
 D1
 ~
 ~
@@ -462,12 +464,12 @@ D3
 S
 #3321
 Uma Passagem na Caverna~
-   A passagem vira para o oeste e sul deste ponto.  Uma das tochas aqui estï¿½
-apagada, fazendo esta ï¿½rea extremamente escura e difï¿½cil de ver.  Vocï¿½
+   A passagem vira para o oeste e sul deste ponto.  Uma das tochas aqui está
+apagada, fazendo esta área extremamente escura e difícil de ver.  Você
 avista luzes vindas do sul.  Contudo, estas luzes parecem ser mais claras
-que as luzes proferidas pelas tochas que vocï¿½ viu ao longo das paredes.
+que as luzes proferidas pelas tochas que você viu ao longo das paredes.
 ~
-33 8 0 0 0 0
+33 d 0
 D2
 ~
 ~
@@ -479,13 +481,13 @@ D3
 S
 #3322
 Uma Passagem na Caverna~
-   Esta ï¿½ uma intersecï¿½ï¿½o do tipo "T" que existe na passagem: o norte leva
-de volta atï¿½ a entrada da caverna (vocï¿½ acha!), o oeste conduz atï¿½ uma ï¿½rea
-bem iluminada.  Em direï¿½ï¿½o ao leste, a passagem continua dentro de uma
-sombria alcova da montanha.  Os ecos de vozes estï¿½o confundindo vocï¿½ um
-pouco, e vocï¿½ nï¿½o tem certeza se vocï¿½ deveria tentar ficar quieto ou nï¿½o.
+   Esta é uma intersecção do tipo "T" que existe na passagem: o norte leva
+de volta até a entrada da caverna (você acha!), o oeste conduz até uma área
+bem iluminada.  Em direção ao leste, a passagem continua dentro de uma
+sombria alcova da montanha.  Os ecos de vozes estão confundindo você um
+pouco, e você não tem certeza se você deveria tentar ficar quieto ou não.
 ~
-33 8 0 0 0 0
+33 d 0
 D0
 ~
 ~
@@ -501,12 +503,12 @@ D3
 S
 #3323
 Uma Caverna~
-   Muitas tochas estï¿½o alinhadas nas paredes aqui, iluminando algumas
-prateleiras de armas e baï¿½s de armaduras.  Tudo estï¿½ arrumado, ordenado e,
-de fato, livre de poeira.  Alguï¿½m cuida muito destes itens...  Com
-freqï¿½ï¿½ncia, pelo que parece.
+   Muitas tochas estão alinhadas nas paredes aqui, iluminando algumas
+prateleiras de armas e baús de armaduras.  Tudo está arrumado, ordenado e,
+de fato, livre de poeira.  Alguém cuida muito destes itens...  Com
+freqüência, pelo que parece.
 ~
-33 8 0 0 0 0
+33 d 0
 D1
 ~
 ~
@@ -514,12 +516,12 @@ D1
 S
 #3324
 Uma Passagem na Caverna~
-   A passagem conduz ao sul e oeste.  Muitas pedras e rochas grandes estï¿½o
-pelo chï¿½o da caverna, dificultando o caminhar na escassa luz oriunda das
-poucas tochas nas paredes.  Vocï¿½ ouve continuamente o eco de vozes,
-parecendo mais tï¿½nues agora.  Deve ser a estranha acï¿½stica deste lugar...
+   A passagem conduz ao sul e oeste.  Muitas pedras e rochas grandes estão
+pelo chão da caverna, dificultando o caminhar na escassa luz oriunda das
+poucas tochas nas paredes.  Você ouve continuamente o eco de vozes,
+parecendo mais tênues agora.  Deve ser a estranha acústica deste lugar...
 ~
-33 8 0 0 0 0
+33 d 0
 D2
 ~
 ~
@@ -532,10 +534,10 @@ S
 #3325
 Uma Passagem na Caverna~
    A caverna se enrola como uma cobra pronta para o bote, levando a leste e
-norte daqui.  Vocï¿½ comeï¿½a a se perguntar se suas orientaï¿½ï¿½es ainda estï¿½o
-corretas.  Isto o deixa preocupado por alguma razï¿½o.
+norte daqui.  Você começa a se perguntar se suas orientações ainda estão
+corretas.  Isto o deixa preocupado por alguma razão.
 ~
-33 8 0 0 0 0
+33 d 0
 D0
 ~
 ~
@@ -547,14 +549,14 @@ D1
 S
 #3326
 Uma Passagem na Caverna~
-   Vocï¿½ pode ir para o norte e oeste atravï¿½s das passagens da caverna.
-Ambas as rotas sï¿½o escassas em iluminaï¿½ï¿½o devido ï¿½s poucas tochas presentes
-nas paredes.  Os ecos que vocï¿½ ouvia antes estï¿½o ficando mais altos, e
-parecem vir da passagem ao norte.  Vocï¿½ sente frio com o ar congelado da
-caverna e arrepia-se um pouco com o fraco sussuro da brisa.  Este lugar ï¿½ um
-tanto assustador e escuro para se sentir confortï¿½vel.
+   Você pode ir para o norte e oeste através das passagens da caverna.
+Ambas as rotas são escassas em iluminação devido às poucas tochas presentes
+nas paredes.  Os ecos que você ouvia antes estão ficando mais altos, e
+parecem vir da passagem ao norte.  Você sente frio com o ar congelado da
+caverna e arrepia-se um pouco com o fraco sussuro da brisa.  Este lugar é um
+tanto assustador e escuro para se sentir confortável.
 ~
-33 8 0 0 0 0
+33 d 0
 D0
 ~
 ~
@@ -566,13 +568,13 @@ D3
 S
 #3327
 Uma Passagem na Caverna~
-   Os ecos estï¿½o ficando mais altos e parecem vir da extremidade norte deste
-corredor.  Na direï¿½ï¿½o sul vocï¿½ observa que o tï¿½nel continua atï¿½ uma curva na
-passagem.  Vocï¿½ depara-se com uma pequena peï¿½a de roupa vermelha rasgada
-sobre uma rocha pontuda projetada do lado da pasagem.  Esta peï¿½a parece ser
+   Os ecos estão ficando mais altos e parecem vir da extremidade norte deste
+corredor.  Na direção sul você observa que o túnel continua até uma curva na
+passagem.  Você depara-se com uma pequena peça de roupa vermelha rasgada
+sobre uma rocha pontuda projetada do lado da pasagem.  Esta peça parece ser
 de seda, muito fina de fato.
 ~
-33 8 0 0 0 0
+33 d 0
 D0
 ~
 ~
@@ -584,13 +586,13 @@ D2
 S
 #3328
 Uma Passagem na Caverna~
-   A passagem conduz ao sul daqui e um pequeno tï¿½nel encravado leva para
+   A passagem conduz ao sul daqui e um pequeno túnel encravado leva para
 longe, pelo oeste.  Duas pedras encontram-se contra a parede, livres de
-sujeira e musgos.  Um papel que serviu para envolver comida estï¿½ jogado
-entre vï¿½rios pares de pï¿½s aqui: na melhor das hipï¿½teses, vocï¿½ diria que aqui
+sujeira e musgos.  Um papel que serviu para envolver comida está jogado
+entre vários pares de pés aqui: na melhor das hipóteses, você diria que aqui
 seria, provavelmente, um posto de guarda.
 ~
-33 8 0 0 0 0
+33 d 0
 D2
 ~
 ~
@@ -603,17 +605,18 @@ S
 #3329
 O Final da Passagem~
    A passagem da caverna termina abruptamente aqui para o norte, numa grande
-porta de madeira encravada na parede de pedras.  O artesï¿½o responsï¿½vel por
-isso ï¿½ habil!!  Vocï¿½ tambï¿½m pode voltar para a passagem principal ao oeste,
+porta de madeira encravada na parede de pedras.  O artesão responsável por
+isso é habil!!  Você também pode voltar para a passagem principal ao oeste,
 onde parece ser mais iluminado do que aqui.  Um eco do fundo da passagem faz
-vocï¿½ refletir por um momento se nï¿½o estaria sendo perseguido, mas vocï¿½ nï¿½o
-vï¿½ nada para lï¿½.
+você refletir por um momento se não estaria sendo perseguido, mas você não
+vê nada para lá.
 ~
-33 8 0 0 0 0
+33 d 0
 D0
-Esta ï¿½ uma sï¿½lida porta de madeira.
+Esta é uma sólida porta de madeira.
 ~
 porta madeira~
+:n 2 a porta
 1 -1 3330
 D1
 ~
@@ -622,29 +625,30 @@ D1
 S
 #3330
 Uma Caverna~
-   Esta caverna natural foi transformada numa combinaï¿½ï¿½o de escritï¿½rio e
-depï¿½sito.  Um pequeno riacho corre da parede sul, e termina na parede oeste
-atravï¿½s de um pequeno buraco.  Caixas e engradados estï¿½o estocados contra as
+   Esta caverna natural foi transformada numa combinação de escritório e
+depósito.  Um pequeno riacho corre da parede sul, e termina na parede oeste
+através de um pequeno buraco.  Caixas e engradados estão estocados contra as
 paredes e uma escrivaninha de carvalho batido encontra-se perto da porta,
-cheia de papï¿½is escritos por uma mï¿½o trï¿½mula.  Algumas grandes lanternas
-mantï¿½m o lugar muito bem iluminado.
+cheia de papéis escritos por uma mão trêmula.  Algumas grandes lanternas
+mantém o lugar muito bem iluminado.
 ~
-33 8 0 0 0 0
+33 d 0
 D2
-Esta ï¿½ um sï¿½lida porta de madeira.
+Esta é um sólida porta de madeira.
 ~
 porta madeira~
+:n 2 a porta
 1 -1 3329
 S
 #3331
 Uma Passagem na Caverna~
-   Vocï¿½ encontra-se ao sul da entrada principal desta caverna.  A passagem
-em que vocï¿½ estï¿½ continua para o sul, muito mal iluminada pelas tochas
+   Você encontra-se ao sul da entrada principal desta caverna.  A passagem
+em que você está continua para o sul, muito mal iluminada pelas tochas
 alinhadas na parede a cada 4 metros ou mais.  De algum lugar do fundo da
-caverna, vocï¿½ escuta o som de uma fraca batida rï¿½tmica, distorcida pela
-estranha acï¿½stica da passagem.
+caverna, você escuta o som de uma fraca batida rítmica, distorcida pela
+estranha acústica da passagem.
 ~
-33 8 0 0 0 0
+33 d 0
 D0
 ~
 ~
@@ -656,13 +660,13 @@ D2
 S
 #3332
 Uma Passagem na Caverna~
-   Vocï¿½ estï¿½ na curva sul desta passagem, que lhe possibilita continuar para
+   Você está na curva sul desta passagem, que lhe possibilita continuar para
 o leste e norte daqui.  A rocha ao seu redor ecoa o som da distante batida
-atï¿½ vocï¿½, fazendo este lugar parecer, de alguma forma, vivo, com uma batida
-de coraï¿½ï¿½o.  Este lugar torna-se muito arrepiante, agora que vocï¿½ percebeu
+até você, fazendo este lugar parecer, de alguma forma, vivo, com uma batida
+de coração.  Este lugar torna-se muito arrepiante, agora que você percebeu
 isso tudo.
 ~
-33 8 0 0 0 0
+33 d 0
 D0
 ~
 ~
@@ -675,11 +679,11 @@ S
 #3333
 Uma Passagem na Caverna~
    A passagem faz uma curva em "U" aqui, dirigindo-se para o norte e oeste
-em direï¿½ï¿½o ao outro lado do "U".  O ar ï¿½ ï¿½mido e difï¿½cil de respirar.
-Alguns musgos crescem perto do chï¿½o nos lugares lisos, gerando um sutil e
-definido cheiro de podridï¿½o no ar.
+em direção ao outro lado do "U".  O ar é úmido e difícil de respirar.
+Alguns musgos crescem perto do chão nos lugares lisos, gerando um sutil e
+definido cheiro de podridão no ar.
 ~
-33 8 0 0 0 0
+33 d 0
 D0
 ~
 ~
@@ -691,11 +695,11 @@ D3
 S
 #3334
 Uma Passagem na Caverna~
-   O tï¿½nel se torce para o sul e leste daqui.  Sua extensï¿½o ï¿½ escura,
-parecendo melancï¿½lico e morto.  O som de uma fraca batida repercute das
-paredes, fazendo vocï¿½ apontar suas orelhas em direï¿½ï¿½o do barulho.
+   O túnel se torce para o sul e leste daqui.  Sua extensão é escura,
+parecendo melancólico e morto.  O som de uma fraca batida repercute das
+paredes, fazendo você apontar suas orelhas em direção do barulho.
 ~
-33 8 0 0 0 0
+33 d 0
 D1
 ~
 ~
@@ -707,13 +711,13 @@ D2
 S
 #3335
 Uma Passagem na Caverna~
-   Esta ï¿½rea ï¿½ mais escura que o resto da passagem devido ao fato de que as
-tochas ao longo da parede se apagaram bruscamente.  Para o sul estï¿½
-completamente escuro, em direto contraste com o tï¿½nel para o oeste.  Vocï¿½
-observa atentamente para o sul, mas nï¿½o pode avistar nada na impenetrï¿½vel
-escuridï¿½o.  E ainda aquela distante batida pesa em sua consciï¿½ncia...
+   Esta área é mais escura que o resto da passagem devido ao fato de que as
+tochas ao longo da parede se apagaram bruscamente.  Para o sul está
+completamente escuro, em direto contraste com o túnel para o oeste.  Você
+observa atentamente para o sul, mas não pode avistar nada na impenetrável
+escuridão.  E ainda aquela distante batida pesa em sua consciência...
 ~
-33 8 0 0 0 0
+33 d 0
 D2
 ~
 ~
@@ -725,13 +729,13 @@ D3
 S
 #3336
 Uma Passagem na Caverna~
-   Vocï¿½ estï¿½ num tï¿½nel norte-sul esculpido naturalmente atravï¿½s da montanha
-de pedra.  O norte do tï¿½nel ï¿½ iluminado por tochas postadas ao longo das
-paredes, banindo a profunda escuridï¿½o em que vocï¿½ se encontrava.  O som de
+   Você está num túnel norte-sul esculpido naturalmente através da montanha
+de pedra.  O norte do túnel é iluminado por tochas postadas ao longo das
+paredes, banindo a profunda escuridão em que você se encontrava.  O som de
 uma batida profunda parece estar ficando mais alto, vindo de algum lugar
 adiante.
 ~
-33 9 0 0 0 0
+33 ad 0
 D0
 ~
 ~
@@ -743,12 +747,12 @@ D2
 S
 #3337
 Uma Passagem na Caverna~
-   A passagem troca de direï¿½ï¿½o de novo, dentro da grande escuridï¿½o da
-montanha, conduzindo ao norte e leste daqui.  Quando vocï¿½ percorre o canto,
-um truque da acï¿½stica faz a profunda batida que vocï¿½ vinha ouvindo, parecer
-como se estivesse vindo de algo a um metro de distï¿½ncia!!  Muito instigante.
+   A passagem troca de direção de novo, dentro da grande escuridão da
+montanha, conduzindo ao norte e leste daqui.  Quando você percorre o canto,
+um truque da acústica faz a profunda batida que você vinha ouvindo, parecer
+como se estivesse vindo de algo a um metro de distância!!  Muito instigante.
 ~
-33 9 0 0 0 0
+33 ad 0
 D0
 ~
 ~
@@ -760,12 +764,12 @@ D1
 S
 #3338
 Uma Passagem na Caverna~
-   O tï¿½nel se entrelaï¿½a, enrolando-se para o norte e oeste daqui.  A
-escuridï¿½o ao seu redor ï¿½ total.  ï¿½ frente, vocï¿½ ouve os sons de algum metal
-sendo batido contra uma pedra.  Poderia alguï¿½m estar escavando o tï¿½nel,
+   O túnel se entrelaça, enrolando-se para o norte e oeste daqui.  A
+escuridão ao seu redor é total.  À frente, você ouve os sons de algum metal
+sendo batido contra uma pedra.  Poderia alguém estar escavando o túnel,
 talvez?
 ~
-33 9 0 0 0 0
+33 ad 0
 D0
 ~
 ~
@@ -777,13 +781,13 @@ D3
 S
 #3339
 Uma Passagem na Caverna~
-   O tremeluzir de uma luz para o leste alerta vocï¿½ para o fato de que
-alguma coisa estï¿½ ocorrendo no tï¿½nel por perto.  A saï¿½da ao sul do tï¿½nel
-leva para dentro de uma completa escuridï¿½o.  Por toda a parte no chï¿½o
-existem pilhas de terra e pedras, fazendo vocï¿½ dirigir-se pelo tï¿½nel
+   O tremeluzir de uma luz para o leste alerta você para o fato de que
+alguma coisa está ocorrendo no túnel por perto.  A saída ao sul do túnel
+leva para dentro de uma completa escuridão.  Por toda a parte no chão
+existem pilhas de terra e pedras, fazendo você dirigir-se pelo túnel
 cuidadosamente.  Hmm.
 ~
-33 9 0 0 0 0
+33 ad 0
 D1
 ~
 ~
@@ -795,12 +799,12 @@ D2
 S
 #3340
 O Final da Passagem~
-   O tï¿½nel acaba, bruscamente, aqui numa fissura na pedra.  Por toda a parte
-existem no chï¿½o rochas e cascalhos, vindos da fissura na tentativa de
-faze-la larga o suficiente para se passar.  Umas pequenas peï¿½as de papel de
-cobertura contam a vocï¿½ que o trabalho aqui ï¿½ relativamente recente.
+   O túnel acaba, bruscamente, aqui numa fissura na pedra.  Por toda a parte
+existem no chão rochas e cascalhos, vindos da fissura na tentativa de
+faze-la larga o suficiente para se passar.  Umas pequenas peças de papel de
+cobertura contam a você que o trabalho aqui é relativamente recente.
 ~
-33 8 0 0 0 0
+33 d 0
 D3
 ~
 ~
@@ -808,15 +812,15 @@ D3
 S
 #3341
 Uma Ladeira Rochosa~
-   Esta traiï¿½oeira ladeira leva sempre para baixo por uma longa distï¿½ncia.
-Lï¿½ embaixo, no vale, parece existir uma pequena vila!  O que uma vila estï¿½
-fazendo tï¿½o longe da civilizaï¿½ï¿½o e como eles sobrevivem, vocï¿½ nï¿½o tem idï¿½ia.
-Pela fumaï¿½a expelida por algumas chaminï¿½s, parece que este lugar parece
+   Esta traiçoeira ladeira leva sempre para baixo por uma longa distância.
+Lá embaixo, no vale, parece existir uma pequena vila!  O que uma vila está
+fazendo tão longe da civilização e como eles sobrevivem, você não tem idéia.
+Pela fumaça expelida por algumas chaminés, parece que este lugar parece
 ainda desabitado.
-   Agora, se vocï¿½ pode ir para baixo da ladeira somente quebrando um
+   Agora, se você pode ir para baixo da ladeira somente quebrando um
 tornozelo...
 ~
-33 0 0 0 0 5
+33 0 5
 D1
 ~
 ~
@@ -828,13 +832,13 @@ D3
 S
 #3342
 Uma Ladeira Rochosa~
-   Vocï¿½ estï¿½ escorregando pela ladeira, tentando chegar ao seu destino sem
-quebrar uma perna ou cair e espatifar sua cabeï¿½a.  Abaixo, vocï¿½ avista algum
-movimento na vila, dando provas de que o lugar nï¿½o ï¿½ uma cidade-fantasma.
-   A rua principal da vila comeï¿½a na base da ladeira, logo para o leste, e a
+   Você está escorregando pela ladeira, tentando chegar ao seu destino sem
+quebrar uma perna ou cair e espatifar sua cabeça.  Abaixo, você avista algum
+movimento na vila, dando provas de que o lugar não é uma cidade-fantasma.
+   A rua principal da vila começa na base da ladeira, logo para o leste, e a
 ladeira continua ao oeste e para cima para longe, longe acima na motanha.
 ~
-33 4 0 0 0 5
+33 c 5
 D1
 ~
 ~
@@ -846,15 +850,15 @@ D3
 S
 #3343
 Rua Principal~
-   Este lugar deixa vocï¿½ muito impressionado.  E aborrecido.  Vocï¿½ fica,
-definitivamente, aborrecido com este lugar.  As pessoas nï¿½o lhe dï¿½o ouvidos,
-preocupando-se apenas com seus afazeres diï¿½rios com uma lentidï¿½o que chega a
+   Este lugar deixa você muito impressionado.  E aborrecido.  Você fica,
+definitivamente, aborrecido com este lugar.  As pessoas não lhe dão ouvidos,
+preocupando-se apenas com seus afazeres diários com uma lentidão que chega a
 doer nos seus olhos.  A ladeira para o oeste escala a montanha e duas lojas
-abertas feitas de madeira e pedra estï¿½o para o norte e sul.  A rua continua
-em direï¿½ï¿½o ao leste.
+abertas feitas de madeira e pedra estão para o norte e sul.  A rua continua
+em direção ao leste.
    Existe um pequeno sinal aqui.
 ~
-33 0 0 0 0 1
+33 0 1
 D0
 ~
 ~
@@ -878,7 +882,7 @@ sinal~
         |                             |
 	|   Stanneg das Montanhas     |
 	|                             |
-	|       Populaï¿½ï¿½o: 27         |
+	|       População: 27         |
 	|			      |
         |        -- Sinais Buag e Cia.|
 	`-----------------------------'
@@ -891,13 +895,13 @@ sinal~
 S
 #3344
 A Taverna da Montanha~
-   Hmm.  Parece que nï¿½o hï¿½ ninguï¿½m aqui, nem mesmo um garï¿½om.  Evidentemente
-vocï¿½ chegou na hora de folga, pois nenhum bar pode ser assim Tï¿½O monï¿½tono.
-As paredes foram decoradas com cabeï¿½as de animais emolduradas e flechas e
-arcos longos e outros equipamentos/trofï¿½us de caï¿½a.  Tudo pareceria melhor
+   Hmm.  Parece que não há ninguém aqui, nem mesmo um garçom.  Evidentemente
+você chegou na hora de folga, pois nenhum bar pode ser assim TÃO monótono.
+As paredes foram decoradas com cabeças de animais emolduradas e flechas e
+arcos longos e outros equipamentos/troféus de caça.  Tudo pareceria melhor
 se o bar fosse mais modesto.
 ~
-33 8 0 0 0 0
+33 d 0
 D2
 ~
 ~
@@ -905,10 +909,10 @@ D2
 S
 #3345
 A Loja Comum~
-   Um aborrecido lojista acena com sua mï¿½o desocupada para seu estoque de
-coisas.  Folheie, escreva uma lista, compre, venda, nï¿½o importa...
+   Um aborrecido lojista acena com sua mão desocupada para seu estoque de
+coisas.  Folheie, escreva uma lista, compre, venda, não importa...
 ~
-33 8 0 0 0 0
+33 d 0
 D0
 ~
 ~
@@ -916,11 +920,11 @@ D0
 S
 #3346
 Rua Principal~
-   Nada estï¿½ havendo nesta seï¿½ï¿½o da vila tambï¿½m.  Para o leste existe uma
-atual interseï¿½ï¿½o e para o oeste vocï¿½ avista uma das extremidades desta rua.
-Uma larga ï¿½rea gramada para sul ï¿½ cercada, servindo de curral para cavalos.
+   Nada está havendo nesta seção da vila também.  Para o leste existe uma
+atual interseção e para o oeste você avista uma das extremidades desta rua.
+Uma larga área gramada para sul é cercada, servindo de curral para cavalos.
 ~
-33 0 0 0 0 1
+33 0 1
 D1
 ~
 ~
@@ -936,26 +940,26 @@ D3
 S
 #3347
 O Curral~
-   Muitos cavalos olham para vocï¿½ quando vocï¿½ entre neste curral.  Os
-cavalos estï¿½o sendo mantidos por uma grande cerca de madeira, o que os deixa
-parecer estarem muito felizes por serem mantidos aqui.  Vocï¿½ nï¿½o avista
-ninguï¿½m ao redor cuidando destes cavalos, mas alguï¿½m, provavelmente, estï¿½
+   Muitos cavalos olham para você quando você entre neste curral.  Os
+cavalos estão sendo mantidos por uma grande cerca de madeira, o que os deixa
+parecer estarem muito felizes por serem mantidos aqui.  Você não avista
+ninguém ao redor cuidando destes cavalos, mas alguém, provavelmente, está
 por perto.
 ~
-33 8 0 0 0 0
+33 d 0
 D0
 ~
 ~
 0 -1 3346
 S
 #3348
-A Interseï¿½ï¿½o~
-   Vocï¿½ estï¿½ numa interseï¿½ï¿½o bem no coraï¿½ï¿½o da cidade de Stanneg das
-Montanhas.  De fato, esta ï¿½ a ï¿½NICA interseï¿½ï¿½o da cidade, ao que parece.
-   Existem alguns prï¿½dios para o norte, sul, leste e oeste.  Nenhum,
+A Interseção~
+   Você está numa interseção bem no coração da cidade de Stanneg das
+Montanhas.  De fato, esta é a ÚNICA interseção da cidade, ao que parece.
+   Existem alguns prédios para o norte, sul, leste e oeste.  Nenhum,
 particularmente, destaca-se dos outros.
 ~
-33 0 0 0 0 1
+33 0 1
 D0
 ~
 ~
@@ -975,13 +979,13 @@ D3
 S
 #3349
 Uma Pequena Rua~
-   Esta rua vai a norte atravï¿½s da cidade de Stanneg das Montanhas, que
-seria melhor definida como "uma coleï¿½ï¿½o colorida de prï¿½dios".  Em direï¿½ï¿½o ao
-oeste existe um pequeno prï¿½dio a cï¿½u aberto que parece ser uma feira de
-agricultores.  A estrada em que vocï¿½ estï¿½ continua para o norte e chega a
-uma interseï¿½ï¿½o logo ao sul daqui.
+   Esta rua vai a norte através da cidade de Stanneg das Montanhas, que
+seria melhor definida como "uma coleção colorida de prédios".  Em direção ao
+oeste existe um pequeno prédio a céu aberto que parece ser uma feira de
+agricultores.  A estrada em que você está continua para o norte e chega a
+uma interseção logo ao sul daqui.
 ~
-33 0 0 0 0 1
+33 0 1
 D0
 ~
 ~
@@ -997,11 +1001,11 @@ D3
 S
 #3350
 A Feira de Agricultores~
-   A mulher de um fazendeiro estï¿½ aqui, esperando por alguï¿½m que compre a
-comida que a famï¿½lia dela plantou.  Ela parece aborrecida, mas nï¿½o
-infeliz...  Sem competiï¿½ï¿½o!
+   A mulher de um fazendeiro está aqui, esperando por alguém que compre a
+comida que a família dela plantou.  Ela parece aborrecida, mas não
+infeliz...  Sem competição!
 ~
-33 0 0 0 0 1
+33 0 1
 D1
 ~
 ~
@@ -1009,17 +1013,18 @@ D1
 S
 #3351
 Uma Pequena Rua~
-   A pequena rua que vai do norte ao sul atravï¿½s da cidade de Stanneg das
+   A pequena rua que vai do norte ao sul através da cidade de Stanneg das
 Montanhas acaba aqui, tornando-se um acesso de entrada para uma casa
-particular para o leste.  A rua vai para o sul desta casa em direï¿½ï¿½o ao
+particular para o leste.  A rua vai para o sul desta casa em direção ao
 centro da vila.
 ~
-33 0 0 0 0 1
+33 0 1
 D1
-Uma porta da frente de casa de madeira normal. Nï¿½o existe nada
+Uma porta da frente de casa de madeira normal. Não existe nada
 para se escrever casa sobre.
 ~
 porta frente~
+:n 2 a porta
 1 -1 3352
 D2
 ~
@@ -1028,27 +1033,28 @@ D2
 S
 #3352
 Uma Casa Particular~
-   O interior desta casa ï¿½ simples e rï¿½stico.  Uma escada leva para cima no
-sï¿½tï¿½o.  Um fogï¿½o ï¿½ lenha mantï¿½m o lugar bem aquecido e aconchegante.  Uma
+   O interior desta casa é simples e rústico.  Uma escada leva para cima no
+sótão.  Um fogão à lenha mantém o lugar bem aquecido e aconchegante.  Uma
 cadeira de rocha feita em casa encontra-se curvada no canto, decorada com
-uma velha aparï¿½ncia afeganesa.  Esta casa ï¿½ um lugar bonito e muito
+uma velha aparência afeganesa.  Esta casa é um lugar bonito e muito
 aconchegante.
 ~
-33 8 0 0 0 0
+33 d 0
 D3
 Existe uma porta aparentemente normal colocada na parede oeste.
 ~
 porta frente~
+:n 2 a porta
 1 -1 3351
 S
 #3353
 Uma Pequena Rua~
-   A rua termina aqui, levando para cima em direï¿½ï¿½o a uma casa de pedras
-para o sul.  A Fumaï¿½a levanta da chaminï¿½ em uma corrente negra e as janelas
-estï¿½o cobertas pela humidade.  Ao norte vocï¿½ avista a interseï¿½ï¿½o principal
+   A rua termina aqui, levando para cima em direção a uma casa de pedras
+para o sul.  A Fumaça levanta da chaminé em uma corrente negra e as janelas
+estão cobertas pela humidade.  Ao norte você avista a interseção principal
 da cidade de Stanneg.
 ~
-33 0 0 0 0 1
+33 0 1
 D0
 ~
 ~
@@ -1057,36 +1063,39 @@ D2
 Uma aparente porta normal da frente feita de madeira serve de entrada.
 ~
 porta frente~
+:n 2 a porta
 1 -1 3354
 S
 #3354
 Uma Casa Particular~
-   Esta casa lhe parece muito inconfortï¿½vel.  A lareira estï¿½ acesa,
+   Esta casa lhe parece muito inconfortável.  A lareira está acesa,
 parecendo uma fogueira e uma imensa pilha de madeira encontra-se ao lado
-dela contra a parede.  A decoraï¿½ï¿½o parece algo espartano e modesto: uma
+dela contra a parede.  A decoração parece algo espartano e modesto: uma
 pintura, um velho arco longo...  Nada de muito interessante.
 ~
-33 8 0 0 0 0
+33 d 0
 D0
-Vocï¿½ avista uma porta de madeira aparentemente normal.
+Você avista uma porta de madeira aparentemente normal.
 ~
 porta frente~
+:n 2 a porta
 1 -1 3353
 S
 #3355
 Rua Principal~
-   A rua principal que atravessa Stanneg termina aqui em um largo poï¿½o que
-vai fundo, fundo dentro da terra.  Para o norte do poï¿½o existe um grande
-prï¿½dio, com um enorme capacho de BEM VINDO em frente a porta de entrada.  Ao
-oeste vocï¿½ vï¿½ a interseï¿½ï¿½o da rua no centro da pequena vila.  Ao redor vocï¿½
-observa um terreno rochoso no meio desta cadeia de montanhas...  Nï¿½o existem
+   A rua principal que atravessa Stanneg termina aqui em um largo poço que
+vai fundo, fundo dentro da terra.  Para o norte do poço existe um grande
+prédio, com um enorme capacho de BEM VINDO em frente a porta de entrada.  Ao
+oeste você vê a interseção da rua no centro da pequena vila.  Ao redor você
+observa um terreno rochoso no meio desta cadeia de montanhas...  Não existem
 muitos lugares para se ir.
 ~
-33 0 0 0 0 1
+33 0 1
 D0
 Existe uma grande porta dupla feita de madeira bloqueando o caminho.
 ~
 porta portas dupla~
+:n 2 a porta
 1 -1 3356
 D3
 ~
@@ -1095,18 +1104,19 @@ D3
 S
 #3356
 A Hospedaria de Stanneg~
-   Esta ï¿½ uma peï¿½a modestamente decorada: o salï¿½o principal da Hospedaria de
+   Esta é uma peça modestamente decorada: o salão principal da Hospedaria de
 Stanneg.  Um grande arco para o oeste conduz para uma sala comum, onde
 comidas e bebidas podem ser encomendadas e uma fraca escada de madeira leva
-para os quartos lï¿½ de cima.  Um velho e surrado tapete felpudo encontra-se
-no meio do chï¿½o, evidentemente, adorado por um gato ou dois, pela quantidade
+para os quartos lá de cima.  Um velho e surrado tapete felpudo encontra-se
+no meio do chão, evidentemente, adorado por um gato ou dois, pela quantidade
 de pelos presentes nele.
 ~
-33 8 0 0 0 0
+33 d 0
 D2
 Existe uma grande porta dupla feita de madeira colocada na parede.
 ~
 porta portas dupla~
+:n 2 a porta
 1 -1 3355
 D3
 ~
@@ -1120,25 +1130,25 @@ S
 #3357
 A Sala Comum~
    Um grande lareira aquece esta sala com grandes ondas de calor, para
-combater o frio proveniente das janelas dos lados oeste e norte desta peï¿½a.
-Alguns poucos bancos e mesas estï¿½o agrupados no centro da sala, para uso
-local.  Muito simples para um lugar de reuniï¿½es muito frequentado.
+combater o frio proveniente das janelas dos lados oeste e norte desta peça.
+Alguns poucos bancos e mesas estão agrupados no centro da sala, para uso
+local.  Muito simples para um lugar de reuniões muito frequentado.
 ~
-33 8 0 0 0 0
+33 d 0
 D1
 ~
 ~
 0 -1 3356
 S
 #3358
-A Recepï¿½ï¿½o~
-   O salï¿½o leva para o oeste onde estï¿½o alinhadas pequenas portas marrons.
-Uma pequena mesa tem um livro sobre ela, parecendo nï¿½o ser muito usado.  O
-salï¿½o ï¿½ simples e sem qualquer decoraï¿½ï¿½o, exceto pelo bonito quadro de uma
+A Recepção~
+   O salão leva para o oeste onde estão alinhadas pequenas portas marrons.
+Uma pequena mesa tem um livro sobre ela, parecendo não ser muito usado.  O
+salão é simples e sem qualquer decoração, exceto pelo bonito quadro de uma
 montanha situada sobre as escadas que levam de volta para baixo,
-convenientemente em direï¿½ï¿½o da hospedaria.
+convenientemente em direção da hospedaria.
 ~
-33 8 0 0 0 0
+33 d 0
 D5
 ~
 ~
@@ -1146,14 +1156,14 @@ D5
 S
 #3359
 Uma Ladeira Rochosa~
-   Esta ladeira ï¿½ muito rasa e fï¿½cil de se andar sobre ela, apesar dos
-xistos e cascalhos soltos.  Para o leste existe uma grande saliï¿½ncia que
-vocï¿½ poderia ficar sobre ela e para o oeste existe uma ï¿½rea plana levando
-para cima e para baixo da montanha.  Alto acima de vocï¿½, para seu oeste,
-estï¿½ aquele grande, pico negro, que parece irradiar uma sensaï¿½ï¿½o de
-desesperanï¿½a...
+   Esta ladeira é muito rasa e fácil de se andar sobre ela, apesar dos
+xistos e cascalhos soltos.  Para o leste existe uma grande saliência que
+você poderia ficar sobre ela e para o oeste existe uma área plana levando
+para cima e para baixo da montanha.  Alto acima de você, para seu oeste,
+está aquele grande, pico negro, que parece irradiar uma sensação de
+desesperança...
 ~
-33 0 0 0 0 5
+33 0 5
 D1
 ~
 ~
@@ -1165,15 +1175,15 @@ D3
 S
 #3360
 Na Borda~
-   Esta borda permite a vocï¿½ olhar de cima um pequeno caminho que leva para
-cima e para baixo daqui.  Abaixo, vocï¿½ vï¿½ um caminho vai em direto para
-baixo atï¿½ uma ï¿½rea plana onde uma pequena cabana encontra-se
-confortavelmente situada nas montanhas, com fumaï¿½a subindo da cabana em
-espirais.  Acima, o caminho parece levar em direï¿½ï¿½o daquele pico negro
-furando o cï¿½u.  Vocï¿½ nota algumas marcas de botas na terra, parecendo levar
-para baixo em direï¿½ï¿½o da cabana.
+   Esta borda permite a você olhar de cima um pequeno caminho que leva para
+cima e para baixo daqui.  Abaixo, você vê um caminho vai em direto para
+baixo até uma área plana onde uma pequena cabana encontra-se
+confortavelmente situada nas montanhas, com fumaça subindo da cabana em
+espirais.  Acima, o caminho parece levar em direção daquele pico negro
+furando o céu.  Você nota algumas marcas de botas na terra, parecendo levar
+para baixo em direção da cabana.
 ~
-33 0 0 0 0 4
+33 0 4
 D1
 ~
 ~
@@ -1189,13 +1199,13 @@ D5
 S
 #3361
 Do Lado de Fora da Cabana~
-   Agora que vocï¿½ se aproxima da cabana, vocï¿½ nota que a fumaï¿½a nï¿½o estï¿½
-vindo da chaminï¿½, mas mais precisamente das ruï¿½nas destruï¿½das do prï¿½dio.
-Alguma coisa colocou fogo neste lugar, maldosamente.  Vocï¿½ nota sinais de
-vida entre os destroï¿½os.  Vocï¿½ pode entrar por entre um dos vï¿½rios buracos
+   Agora que você se aproxima da cabana, você nota que a fumaça não está
+vindo da chaminé, mas mais precisamente das ruínas destruídas do prédio.
+Alguma coisa colocou fogo neste lugar, maldosamente.  Você nota sinais de
+vida entre os destroços.  Você pode entrar por entre um dos vários buracos
 gigantes na parede para oeste, com cautela.
 ~
-33 0 0 0 0 4
+33 0 4
 D3
 ~
 ~
@@ -1208,12 +1218,12 @@ S
 #3362
 A Cabana Queimada~
    Este lugar todo esta ardendo ainda de alguma coisa que decidiu tentar
-queimï¿½-lo atï¿½ o solo.  No chï¿½o prï¿½ximo ao centro da estrutura em ruï¿½nas
-existe um corpo de um homem queimado, dissecado e cinzento.  Nï¿½o existe
+queimá-lo até o solo.  No chão próximo ao centro da estrutura em ruínas
+existe um corpo de um homem queimado, dissecado e cinzento.  Não existe
 muito para ver aqui; o que quer que seja que tenha decidido destruir este
 lugar, o fez muito bem.
 ~
-33 0 0 0 0 1
+33 0 1
 D1
 ~
 ~
@@ -1221,12 +1231,12 @@ D1
 S
 #3363
 Uma Trilha da Montanha~
-   A trilha segue para cima, por estas montanhas com aparï¿½ncia malï¿½gna.
-Bem acima de vocï¿½, o pico da montanha parece radiar perigo e medo, e a
-trilha parece levar atï¿½ lï¿½.  Vocï¿½ hesita se deve continuar por este caminho...
+   A trilha segue para cima, por estas montanhas com aparência malígna.
+Bem acima de você, o pico da montanha parece radiar perigo e medo, e a
+trilha parece levar até lá.  Você hesita se deve continuar por este caminho...
    A trilha segue para oeste, e para baixo.
 ~
-33 0 0 0 0 5
+33 0 5
 D3
 ~
 ~
@@ -1238,12 +1248,12 @@ D5
 S
 #3364
 Uma Trilha da Montanha~
-   A trilha vai mais para cima da montanha para o oeste daqui.  Vocï¿½ treme
-no momento que o frio ar da montanha recai sobre vocï¿½, e vocï¿½ sente picadas
-ao pensar que alguï¿½m poderia viver por aqui ou algo perigoso por esse
-motivo.  Talvez voltar para o leste seria uma boa idï¿½ia...
+   A trilha vai mais para cima da montanha para o oeste daqui.  Você treme
+no momento que o frio ar da montanha recai sobre você, e você sente picadas
+ao pensar que alguém poderia viver por aqui ou algo perigoso por esse
+motivo.  Talvez voltar para o leste seria uma boa idéia...
 ~
-33 0 0 0 0 5
+33 0 5
 D1
 ~
 ~
@@ -1256,10 +1266,10 @@ S
 #3365
 Uma Trilha da Montanha~
    A trilha leva para cima, mais alto na mais elevada montanha da cadeia --
-aquela que espeta o cï¿½u escuro como um monumento para morte e futilidade.  A
-trilha leva de volta para a seguranï¿½a ao leste e vai mais alto para o oeste.
+aquela que espeta o céu escuro como um monumento para morte e futilidade.  A
+trilha leva de volta para a segurança ao leste e vai mais alto para o oeste.
 ~
-33 0 0 0 0 5
+33 0 5
 D1
 ~
 ~
@@ -1270,14 +1280,14 @@ D3
 0 -1 3366
 S
 #3366
-Prï¿½ximo ao Pico~
-   Aqui vocï¿½ quase chega ao pico, sendo possï¿½vel subir atï¿½ ele, ainda que
-com um pouco de dificuldade.  Hï¿½ tambï¿½m um minï¿½sculo caminho levando para
-norte.  Alto, ao lado da montanha vocï¿½ vï¿½ uma grande caverna oca e o seu
+Próximo ao Pico~
+   Aqui você quase chega ao pico, sendo possível subir até ele, ainda que
+com um pouco de dificuldade.  Há também um minúsculo caminho levando para
+norte.  Alto, ao lado da montanha você vê uma grande caverna oca e o seu
 interior muito escuro.  O caminho que leva para baixo das montanhas fica
 para o leste, o qual lhe parece o melhor lugar para se ir.
 ~
-33 576 0 0 0 5
+33 gj 5
 D0
 ~
 ~
@@ -1294,10 +1304,10 @@ S
 #3367
 Um Pequeno e Perigoso Caminho~
    Este caminho leva para o alto, alto, alto da montanha, para uma caverna
-aparentemente maligna.  Ele tambï¿½m leva para baixo ao sul -- um lugar muito
-mais seguro para se estar.  De fato, vocï¿½ ouve passos sobre a sua cabeï¿½a...
+aparentemente maligna.  Ele também leva para baixo ao sul -- um lugar muito
+mais seguro para se estar.  De fato, você ouve passos sobre a sua cabeça...
 ~
-33 576 0 0 0 5
+33 gj 5
 D2
 ~
 ~
@@ -1309,12 +1319,12 @@ D4
 S
 #3368
 Um Pequeno e Perigoso Caminho~
-   Infelizmente, vocï¿½ se da conta muito tarde de que esta grande beirada que
+   Infelizmente, você se da conta muito tarde de que esta grande beirada que
 leva para o norte para uma caverna escura seria um bom lugar para uma
-emboscada.  Este desfiladeiro lhe dï¿½ uma bela visï¿½o panorï¿½mica da cadeia de
-montanhas inteira.  Entretanto, lhe faz perder o fï¿½lego!!
+emboscada.  Este desfiladeiro lhe dá uma bela visão panorâmica da cadeia de
+montanhas inteira.  Entretanto, lhe faz perder o fôlego!!
 ~
-33 576 0 0 0 5
+33 gj 5
 D0
 ~
 ~
@@ -1326,14 +1336,14 @@ D5
 S
 #3369
 A Entrada da Caverna~
-   Vocï¿½ estï¿½ na entrada de uma enorme caverna!  O tamanho dela ï¿½ chocante!
-Por toda a entrada estï¿½o espalhados ossos queimados e vï¿½rios tipos de
-escombros de madeiras e metais.  Marcas garras gigantes estï¿½o por todo o
-chï¿½o, levando para dentro da profunda caverna.
-   Dois tï¿½neis levam para fora daqui: um para cima e outro para baixo.
-Existem marcas de garras para ambas as direï¿½ï¿½es.
+   Você está na entrada de uma enorme caverna!  O tamanho dela é chocante!
+Por toda a entrada estão espalhados ossos queimados e vários tipos de
+escombros de madeiras e metais.  Marcas garras gigantes estão por todo o
+chão, levando para dentro da profunda caverna.
+   Dois túneis levam para fora daqui: um para cima e outro para baixo.
+Existem marcas de garras para ambas as direções.
 ~
-33 585 0 0 0 4
+33 adgj 4
 D2
 ~
 ~
@@ -1348,13 +1358,13 @@ D5
 0 -1 3373
 S
 #3370
-Um Tï¿½nel em Aclive~
-   O tï¿½nel vai, em aclive, para cima ao norte, para dentro da montanha.  Uma
-brisa um tanto forte atinge sua roupa vinda de algum lugar ï¿½ frente.  As
-marcas de garras no chï¿½o de pedras continuam ao longo da passagem, em
-direï¿½ï¿½o ï¿½ escuridï¿½o.
+Um Túnel em Aclive~
+   O túnel vai, em aclive, para cima ao norte, para dentro da montanha.  Uma
+brisa um tanto forte atinge sua roupa vinda de algum lugar à frente.  As
+marcas de garras no chão de pedras continuam ao longo da passagem, em
+direção à escuridão.
 ~
-33 585 0 0 0 0
+33 adgj 0
 D0
 ~
 ~
@@ -1365,13 +1375,13 @@ D5
 0 -1 3369
 S
 #3371
-Um Tï¿½nel em Aclive~
-   O tï¿½nel continua em aclive para cima e o vento bate em vocï¿½ ainda mais
+Um Túnel em Aclive~
+   O túnel continua em aclive para cima e o vento bate em você ainda mais
 forte.  As pistas de garras na pedra desaparecem bruscamente aqui, onde
 parecem existir muita terra desenterrada e pedras ao redor, empilhadas no
-chï¿½o.  Vocï¿½ se sente inquieto neste lugar.
+chão.  Você se sente inquieto neste lugar.
 ~
-33 585 0 0 0 4
+33 adgj 4
 D0
 ~
 ~
@@ -1381,27 +1391,27 @@ D2
 ~
 0 -1 3370
 E
-chï¿½o~
-O chï¿½o ï¿½ frente parece... estranho. Vocï¿½ pensa que ir em frente
-seria uma mï¿½ idï¿½ia.
+sujeira pedras~
+Elas foram desenterradas de algum lugar, mas onde?
 ~
 E
 garra garras pista pistas marca marcas~
-Elas terminam muito bruscamente aqui, bem onde as pilhas de terra comeï¿½am,
+Elas terminam muito bruscamente aqui, bem onde as pilhas de terra começam,
 ao que parece.
 ~
 E
-sujeira pedras~
-Elas foram desenterradas de algum lugar, mas onde?
+chão~
+O chão à frente parece... estranho. Você pensa que ir em frente
+seria uma má idéia.
 ~
 S
 #3372
 O Buraco~
-   Vocï¿½ cai atravï¿½s do chï¿½o ilusionï¿½rio.
+   Você cai através do chão ilusionário.
 
-   Vocï¿½ acerta pontas envenenadas mais abaixo.
+   Você acerta pontas envenenadas mais abaixo.
 
-   Vocï¿½ morre lentamente de perda de sangue e sua cabeï¿½a acaba em um ï¿½ngulo
+   Você morre lentamente de perda de sangue e sua cabeça acaba em um ângulo
 desajeitado.
 
   
@@ -1411,20 +1421,20 @@ desajeitado.
 
 
 ~
-33 586 0 0 0 0
+33 bdgj 0
 D2
 ~
 ~
 0 -1 3371
 S
 #3373
-Um Tï¿½nel em Declive~
-   Este tï¿½nel desce fundo para baixo, em direï¿½ï¿½o ao coraï¿½ï¿½o da montanha.  O
+Um Túnel em Declive~
+   Este túnel desce fundo para baixo, em direção ao coração da montanha.  O
 ar lhe parece carregado e inconfortavelmente aquecido, apesar da proximidade
-da entrada da caverna sobre vocï¿½.  Existe um profundo odor no ar e as
+da entrada da caverna sobre você.  Existe um profundo odor no ar e as
 gigantes marcas de garras continuam para baixo.
 ~
-33 585 0 0 0 4
+33 adgj 4
 D4
 ~
 ~
@@ -1435,15 +1445,15 @@ D5
 0 -1 3374
 S
 #3374
-Um Tï¿½nel em Declive~
+Um Túnel em Declive~
    Um luz brilhante vinda do norte enche seus olhos, em contraste direto com
-a escuridï¿½o do tï¿½nel suspenso.  Vocï¿½ irrompe em uma onda de suor devido a
-esmagadora sensaï¿½ï¿½o de calor no ar.  O odor aumentou e estï¿½ completamente
+a escuridão do túnel suspenso.  Você irrompe em uma onda de suor devido a
+esmagadora sensação de calor no ar.  O odor aumentou e está completamente
 intenso agora, sobrepondo-se sobre qualquer coisa no ar e fazendo o ar
-difï¿½cil de respirar.  Alguma coisa em seu intestino comeï¿½a a se retorcer
-desconfortavelmente ao pensar o que lhe espera ï¿½ frente...
+difícil de respirar.  Alguma coisa em seu intestino começa a se retorcer
+desconfortavelmente ao pensar o que lhe espera à frente...
 ~
-33 585 0 0 0 4
+33 adgj 4
 D0
 ~
 ~
@@ -1455,18 +1465,18 @@ D4
 S
 #3375
 O Covil~
-   Este lugar ï¿½ imenso!!!  Isto ï¿½, sem dï¿½vida, um grande lugar para um
-dragï¿½o.  De qualquer maneira, ao invï¿½s de vocï¿½ avistar a costumeira
-carnificina e montanhas de ouro a que vocï¿½ estï¿½ acostumado a ver num covil
-de dragï¿½o, este aqui ï¿½ decorado sutilmente com tapeï¿½arias e cortinas e
-outros confortos de uma vida humana.  Existe atï¿½ mesmo uma gigantesca cama
-do tamanho de um dragï¿½o -- sem dï¿½vida conjurado ï¿½ vida pelo anciï¿½o e
-possuidor do dragï¿½o.
+   Este lugar é imenso!!!  Isto é, sem dúvida, um grande lugar para um
+dragão.  De qualquer maneira, ao invés de você avistar a costumeira
+carnificina e montanhas de ouro a que você está acostumado a ver num covil
+de dragão, este aqui é decorado sutilmente com tapeçarias e cortinas e
+outros confortos de uma vida humana.  Existe até mesmo uma gigantesca cama
+do tamanho de um dragão -- sem dúvida conjurado à vida pelo ancião e
+possuidor do dragão.
 ~
-33 584 0 0 0 4
+33 dgj 4
 D2
 ~
 ~
 0 -1 3374
 S
-$~
+$

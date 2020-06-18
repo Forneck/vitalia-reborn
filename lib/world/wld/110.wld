@@ -1,660 +1,760 @@
 #11000
 O Portal Sombrio~
-   Uma grande porta se abre ï¿½ sua frente.  Um vento gelado parece soprar
-vindo dali.  Vocï¿½ sente os pï¿½los de seus braï¿½os se erguendo e um frio
-percorre a sua espinha.  A escuridï¿½o encobre totalmente qualquer paisagem
-que aquela porta possa esconder atrï¿½s de si.  Uma espï¿½cie de tremor
-misturado ï¿½ ansiedade toma conta do seu ser e vocï¿½ sente uma atraï¿½ï¿½o
-irresistï¿½vel de transpor aquele Portal.  Com uns 6 metros de altura e
-parecendo ser antiquï¿½ssimo, este pï¿½rtico possui um imenso brasï¿½o entalhado
-em sua superfï¿½cie.  Vocï¿½ parece pressentir que se der mais alguns passos nï¿½o
-mais poderï¿½ retroceder.
-   Decida-se!  A coragem e o destemor sï¿½o caracterï¿½sticas que apenas os
-herï¿½is possuem.
+   Uma grande porta se abre à sua frente.  Um vento gelado parece soprar
+vindo dali.  Você sente os pêlos de seus braços se erguendo e um frio
+percorre a sua espinha.  A escuridão encobre totalmente qualquer paisagem
+que aquela porta possa esconder atrás de si.  Uma espécie de tremor
+misturado à ansiedade toma conta do seu ser e você sente uma atração
+irresistível de transpor aquele Portal.  Com uns 6 metros de altura e
+parecendo ser antiquíssimo, este pórtico possui um imenso brasão entalhado
+em sua superfície.  Você parece pressentir que se der mais alguns passos não
+mais poderá retroceder.
+   Decida-se!  A coragem e o destemor são características que apenas os
+heróis possuem.
 ~
-110 124 0 0 0 1
-D0
+110 cdefg 1
+D N
 ~
 ~
 0 -1 11001
 E
-brasï¿½o~
-Os olhos mortais nï¿½o conseguem definir com precisï¿½o aquilo que foi estampado
-neste brasï¿½o.  Feito com um material desconhecido pelos homens, sabe-se
-apenas que as palavras que ali foram escritas sï¿½o incompreensï¿½veis ï¿½ mente
-humana.
+porta pórtico portal~
+O metal usado na confecção desta imensa porta parece ter sido forjado pelos
+Antigos Dragões.
 ~
 E
-porta pï¿½rtico portal~
-O metal usado na confecï¿½ï¿½o desta imensa porta parece ter sido forjado pelos
-Antigos Dragï¿½es.
+brasão~
+Os olhos mortais não conseguem definir com precisão aquilo que foi estampado
+neste brasão.  Feito com um material desconhecido pelos homens, sabe-se
+apenas que as palavras que ali foram escritas são incompreensíveis à mente
+humana.
 ~
 S
 #11001
 Os Corredores Sombrios~
-   Vocï¿½ fez a sua escolha e comeï¿½a a penetrar naquele longo corredor quase
-que absolutamente escuro.  Os muros sï¿½o altos, feitos com imensos blocos de
+   Você fez a sua escolha e começa a penetrar naquele longo corredor quase
+que absolutamente escuro.  Os muros são altos, feitos com imensos blocos de
 uma rocha escura e brilhante.  Estes corredores largos lembram as estradas
-que vocï¿½ jï¿½ percorreu em suas andanï¿½as pelo mundo.  Aquele que percorre
+que você já percorreu em suas andanças pelo mundo.  Aquele que percorre
 estes caminhos sabe que daqui para frente existe apenas um destino: vencer
 ou morrer!
-   Tenha cuidado Aventureiro, vocï¿½ estï¿½ prestes a penetrar nas Mesnadas de
-Vitï¿½lia.
+   Tenha cuidado Aventureiro, você está prestes a penetrar nas Mesnadas de
+Vitália.
 ~
-110 124 0 0 0 1
-D0
+110 cdefg 1
+D N
+~
+~
+0 -1 11002
+D S
 ~
 ~
 0 -1 11000
 E
-corredor corredores~
-Os corredores largos e sombrios, lembram as estradas que vocï¿½ jï¿½ percorreu
-em suas andanï¿½as pelo mundo.
+muro muros~
+Os muros são altos, feitos com imensos blocos de uma rocha escura e
+brilhante.
 ~
 E
 rocha rochas~
-As rochas que foram usadas na construï¿½ï¿½o destes muros nï¿½o parecem ser
+As rochas que foram usadas na construção destes muros não parecem ser
 conhecidas pelos homens.
 ~
 E
-muro muros~
-Os muros sï¿½o altos, feitos com imensos blocos de uma rocha escura e
-brilhante.
+corredor corredores~
+Os corredores largos e sombrios, lembram as estradas que você já percorreu
+em suas andanças pelo mundo.
 ~
 S
 #11002
 Os Corredores Sombrios~
-   Algumas tochas foram presas ï¿½s paredes de pedra.  O chï¿½o de terra batida
-estï¿½ manchada por uma substï¿½ncia escura que vocï¿½ presume ser sangue.  A luz,
+   Algumas tochas foram presas às paredes de pedra.  O chão de terra batida
+está manchada por uma substância escura que você presume ser sangue.  A luz,
 que chega um tanto difusa, mostra com clareza que talvez estes corredores
-tenham sido testemunhas da trajetï¿½ria de centenas de lutadores que passaram
-por aqui em busca de fama ou de liberdade.  Figuras de dragï¿½es foram
-esculpidas nas rochas com tamanha perfeiï¿½ï¿½o que vocï¿½ tem a impressï¿½o que as
-temï¿½veis criaturas o acompanham com o olhar.
+tenham sido testemunhas da trajetória de centenas de lutadores que passaram
+por aqui em busca de fama ou de liberdade.  Figuras de dragões foram
+esculpidas nas rochas com tamanha perfeição que você tem a impressão que as
+temíveis criaturas o acompanham com o olhar.
 ~
-110 124 0 0 0 1
-D0
+110 cdefg 1
+D N
+~
+~
+0 -1 11003
+D S
 ~
 ~
 0 -1 11001
 E
-figuras dragï¿½es dragï¿½o~
-Estas criaturas parecem ter vida prï¿½pria.  Seus olhos brilham no escuro e
-acompanham todos os seus movimentos.
-~
-E
 tocha tochas~
 Grandes tochas, cujas chamas ardentes iluminam o ambiente, dando ao lugar
-uma atmosfera quase mï¿½stica.
+uma atmosfera quase mística.
+~
+E
+figuras dragões dragão~
+Estas criaturas parecem ter vida própria.  Seus olhos brilham no escuro e
+acompanham todos os seus movimentos.
 ~
 S
 #11003
 Os Corredores Sombrios~
-   Vocï¿½ percebe que estï¿½ chegando prï¿½ximo a um local onde a vida e a morte
-sï¿½o companheiras inseparï¿½veis.  Um cheiro acre penetra em suas narinas,
-lembrando-o a todo instante que a partir de agora nï¿½o pode mais haver medo,
-dï¿½vidas ou arrependimentos.  Alguma coisa se move na parede, parecendo
-seguir seus movimentos e estudï¿½-los.  Parece ser um par de olhos
-avermelhados.  O cï¿½u comeï¿½a a aparecer sobre sua cabeï¿½a e vocï¿½, ao olhar
-para a amplidï¿½o do firmamento, procura guardar para sempre em sua mente as
-imagens daqueles que podem ser os seus ï¿½ltimos instantes.
-   O corredor parece ter chegado ao seu destino.  Seu coraï¿½ï¿½o dispara...
+   Você percebe que está chegando próximo a um local onde a vida e a morte
+são companheiras inseparáveis.  Um cheiro acre penetra em suas narinas,
+lembrando-o a todo instante que a partir de agora não pode mais haver medo,
+dúvidas ou arrependimentos.  Alguma coisa se move na parede, parecendo
+seguir seus movimentos e estudá-los.  Parece ser um par de olhos
+avermelhados.  O céu começa a aparecer sobre sua cabeça e você, ao olhar
+para a amplidão do firmamento, procura guardar para sempre em sua mente as
+imagens daqueles que podem ser os seus últimos instantes.
+   O corredor parece ter chegado ao seu destino.  Seu coração dispara...
 ~
-110 124 0 0 0 1
-D0
+110 cdefg 1
+D N
+~
+~
+0 -1 11004
+D S
 ~
 ~
 0 -1 11002
 E
-olho olhos vermelhos~
-Brilhantes e avermelhados, parecem chamas ardentes que encaram vocï¿½ de forma
-arrepiante, trazendo ï¿½ sua mente a figura de verdadeiros demï¿½nios.
+corredor corredores~
+Os corredores largos e sombrios, lembram as estradas que você já percorreu
+em suas andanças pelo mundo.
 ~
 E
-corredor corredores~
-Os corredores largos e sombrios, lembram as estradas que vocï¿½ jï¿½ percorreu
-em suas andanï¿½as pelo mundo.
+olho olhos vermelhos~
+Brilhantes e avermelhados, parecem chamas ardentes que encaram você de forma
+arrepiante, trazendo à sua mente a figura de verdadeiros demônios.
 ~
 S
 #11004
-A Grande Arena de Vitï¿½lia~
+A Grande Arena de Vitália~
    Uma gigantesca arena vai surgindo diante dos seus olhos, dando-lhe a
-certeza absoluta de que aquele lugar teria sido construï¿½do por seres
-superiores, que queriam colocar ï¿½ prova a coragem e a destreza dos maiores
-guerreiros.  Pesados portï¿½es de ferro circundam toda a arena, prontos para
+certeza absoluta de que aquele lugar teria sido construído por seres
+superiores, que queriam colocar à prova a coragem e a destreza dos maiores
+guerreiros.  Pesados portões de ferro circundam toda a arena, prontos para
 serem fechados durante as mesnadas.  O cheiro de morte mistura-se aos gritos
-da turba ensandecida que, das arquibancadas, grita por seus campeï¿½es.  Vocï¿½
-ouve o rugido das feras famintas, que parecem saber que em pouco tempo irï¿½o
+da turba ensandecida que, das arquibancadas, grita por seus campeões.  Você
+ouve o rugido das feras famintas, que parecem saber que em pouco tempo irão
 se refestelar sobre banquetes vivos e apavorados.  Grandes estandartes foram
-desfraldados sobre os grandes muros da Arena, com os sï¿½mbolos dos poderosos
-Clï¿½s de Vitï¿½lia.
-   ï¿½s vezes, tem-se a impressï¿½o de ver grandes vultos alados sobrevoando o
-local...  Seriam os antigos dragï¿½es de Vitï¿½lia?
+desfraldados sobre os grandes muros da Arena, com os símbolos dos poderosos
+Clãs de Vitália.
+   Às vezes, tem-se a impressão de ver grandes vultos alados sobrevoando o
+local...  Seriam os antigos dragões de Vitália?
 ~
-110 116 0 0 0 1
-D0
+110 cefg 1
+D E
+~
+~
+0 -1 11007
+D S
 ~
 ~
 0 -1 11003
 E
-estandarte estandartes clï¿½ clï¿½s~
-Imensas flï¿½mulas, feitas em seda, veludos e em sua grande maioria,
-rebordados com fios de ouro e pedras preciosas, trazem estampados os nomes
-dos poderosos Clï¿½s de Vitï¿½lia.
+arena~
+Imensa.  Seu tamanho causa um certo constrangimento aos desavisados.
+Figuras estranhas, feitas com luetn'amir, um metal esverdeado, estão
+espalhadas pelas paredes por toda a volta.  São dragões enormes, perfeitos,
+amendrontadores.  Seus olhos vermelhos faiscam, como se destilassem um ódio
+infinito pelos homens.
 ~
 E
-portï¿½es portï¿½o~
-Pesados e com aparï¿½ncia de serem muito antigos, sï¿½o feitos de ferro e
+portões portão~
+Pesados e com aparência de serem muito antigos, são feitos de ferro e
 circundam toda a arena, prontos para serem fechados durante as mesnadas.
 ~
 E
-arena~
-Imensa.  Seu tamanho causa um certo constrangimento aos desavisados.
-Figuras estranhas, feitas com luetn'amir, um metal esverdeado, estï¿½o
-espalhadas pelas paredes por toda a volta.  Sï¿½o dragï¿½es enormes, perfeitos,
-amendrontadores.  Seus olhos vermelhos faiscam, como se destilassem um ï¿½dio
-infinito pelos homens.
+estandarte estandartes clã clãs~
+Imensas flâmulas, feitas em seda, veludos e em sua grande maioria,
+rebordados com fios de ouro e pedras preciosas, trazem estampados os nomes
+dos poderosos Clãs de Vitália.
 ~
 S
 #11005
-O Santuï¿½rio dos Campeï¿½es~
-   Nï¿½o hï¿½ um ï¿½nico indï¿½cio de que aqueles que estï¿½o neste local sejam de
+O Santuário dos Campeões~
+   Não há um único indício de que aqueles que estão neste local sejam de
 fato homens que lidam com a vida e com a morte.  Suas paredes brancas chegam
-a brilhar.  O chï¿½o ï¿½ limpo, coberto por um espï¿½sso tapete feito com a mais
-pura lï¿½ de carneiro.  Estï¿½o sendo despertados os Novos Dragï¿½es de Vitï¿½lia,
-que lutarï¿½o pela honra e dignidade dos clï¿½s que pertencem.  Estes valentes
-foram adormecidos pelos Senhores das Mesnadas e por eles sï¿½o acordados
-quando o Brasï¿½o de Vitï¿½lia pode novamente ser contemplado pelos olhos dos
+a brilhar.  O chão é limpo, coberto por um espêsso tapete feito com a mais
+pura lã de carneiro.  Estão sendo despertados os Novos Dragões de Vitália,
+que lutarão pela honra e dignidade dos clãs que pertencem.  Estes valentes
+foram adormecidos pelos Senhores das Mesnadas e por eles são acordados
+quando o Brasão de Vitália pode novamente ser contemplado pelos olhos dos
 mortais.  A simplicidade do local contrasta brutalmente com os pesados
-equipamentos que, lentamente, vï¿½o sendo vestidos pelos Novos Dragï¿½es.  Cada
-pessoa presente naquele ambiente sabe que estï¿½ sobre solo consagrado pelos
-prï¿½prios Deuses de Vitï¿½lia e o respeitam profundamente.  Estes guerreiros
-lutarï¿½o bravamente.
+equipamentos que, lentamente, vão sendo vestidos pelos Novos Dragões.  Cada
+pessoa presente naquele ambiente sabe que está sobre solo consagrado pelos
+próprios Deuses de Vitália e o respeitam profundamente.  Estes guerreiros
+lutarão bravamente.
 ~
-110 124 0 0 0 1
-D0
+110 cdefg 1
+D E
 ~
-portï¿½o~
-1 -1 11016
+portão~
+:n 1 o grande portão da arena
+abc -1 11006
+D S
+~
+portão~
+:n 1
+abc -1 11016
 E
-novos dragï¿½es~
-Criaturas descomunais, musculosas e extremamente fortes.  Suas feiï¿½ï¿½es
-lembram antigas criaturas que passaram por Vitï¿½lia em tempos remotï¿½ssimos.
-~
-E
-chï¿½o tapete~
-Um imenso tapete da mais pura lï¿½ branca existente, muito limpo e bastante
+chão tapete~
+Um imenso tapete da mais pura lã branca existente, muito limpo e bastante
 espesso.
+~
+E
+novos dragões~
+Criaturas descomunais, musculosas e extremamente fortes.  Suas feições
+lembram antigas criaturas que passaram por Vitália em tempos remotíssimos.
 ~
 S
 #11006
 O Centro da Grande Arena~
-   Abrem-se os grandes portï¿½es internos da Arena.  Um silï¿½ncio sepulcral
-toma conta de todo o ambiente.  A expectativa ï¿½ grande.  Pouco a pouco os
-campeï¿½es vï¿½o sendo conduzidos em bigas, que cruzam o chï¿½o de madeira, com
-toda a pompa, atï¿½ chegarem ao centro da Arena.  Eles dï¿½o uma volta completa,
-acenando para seus irmï¿½os de famï¿½lia.  Vestidos com mantos tingidos de
-pï¿½rpura e bordados com ouro, trazem em suas mï¿½os, os estandartes de seus
-clï¿½s.  Atrï¿½s, chegam rï¿½pidamente os escudeiros, carregando suas armas.
-Quando chegam prï¿½ximos ï¿½ altura da tribuna de honra, dirigem-se aos Senhores
-das Mesnadas e, com a mï¿½o direita esticada, os saï¿½dam com entusiasmo.  Estï¿½o
-abertos os Torneios de Vitï¿½lia.
+   Abrem-se os grandes portões internos da Arena.  Um silêncio sepulcral
+toma conta de todo o ambiente.  A expectativa é grande.  Pouco a pouco os
+campeões vão sendo conduzidos em bigas, que cruzam o chão de madeira, com
+toda a pompa, até chegarem ao centro da Arena.  Eles dão uma volta completa,
+acenando para seus irmãos de família.  Vestidos com mantos tingidos de
+púrpura e bordados com ouro, trazem em suas mãos, os estandartes de seus
+clãs.  Atrás, chegam rápidamente os escudeiros, carregando suas armas.
+Quando chegam próximos à altura da tribuna de honra, dirigem-se aos Senhores
+das Mesnadas e, com a mão direita esticada, os saúdam com entusiasmo.  Estão
+abertos os Torneios de Vitália.
 ~
-110 2105412 0 0 0 1
-D0
+110.1 cgnv 1
+ON arena
+D W
 ~
-portï¿½o~
-1 -1 11030
+portão~
+:n 1 o grande portão da arena
+abc -1 11005
+D E
+~
+portão~
+:n 1 o grande portão da arena
+abc -1 11030
 E
-chï¿½o madeira~
-A arena onde as lutas ocorrem tem o chï¿½o de madeira coberto com areia
-- por isso, o nome arena - e em seu subsolo existem jaulas onde estï¿½o os
-animais presos, as celas para os prisioneiros, os locais onde os gladiadores
-se aquecem e onde armas recebem seu afiamento.  Esse subsolo tem 6 metros de
-altura.
-~
-E
-estandarte estandartes~
-Imensas flï¿½mulas, feitas em seda, veludos e em sua grande maioria,
-rebordados com fios de ouro e pedras preciosas, trazem estampados os nomes
-dos poderosos Clï¿½s de Vitï¿½lia.
+arena centro~
+Imensa.  Seu tamanho causa um certo constrangimento aos desavisados.
+Figuras estranhas, feitas com luetn'amir, um metal esverdeado, estão
+espalhadas pelas paredes por toda a volta.  São dragões enormes, perfeitos,
+amendrontadores.  Seus olhos vermelhos faiscam, como se destilassem um ódio
+infinito pelos homens.
 ~
 E
 biga bigas~
-Esta espï¿½cie de carruagem, era puxada por dois cavalos e em suas grandes
+Esta espécie de carruagem, era puxada por dois cavalos e em suas grandes
 rodas de metal, haviam dois objetos ponteagudos, presos em seu eixo, que
 lembravam punhais.
 ~
 E
-arena centro~
-Imensa.  Seu tamanho causa um certo constrangimento aos desavisados.
-Figuras estranhas, feitas com luetn'amir, um metal esverdeado, estï¿½o
-espalhadas pelas paredes por toda a volta.  Sï¿½o dragï¿½es enormes, perfeitos,
-amendrontadores.  Seus olhos vermelhos faiscam, como se destilassem um ï¿½dio
-infinito pelos homens.
+estandarte estandartes~
+Imensas flâmulas, feitas em seda, veludos e em sua grande maioria,
+rebordados com fios de ouro e pedras preciosas, trazem estampados os nomes
+dos poderosos Clãs de Vitália.
+~
+E
+chão madeira~
+A arena onde as lutas ocorrem tem o chão de madeira coberto com areia
+- por isso, o nome arena - e em seu subsolo existem jaulas onde estão os
+animais presos, as celas para os prisioneiros, os locais onde os gladiadores
+se aquecem e onde armas recebem seu afiamento.  Esse subsolo tem 6 metros de
+altura.
 ~
 S
 #11007
 As Arquibancadas da Grande Arena~
    Corredores circulares com enormes degraus feitos de pedra travertina,
-onde se sentam todos aqueles que vieram atï¿½ aqui para se divertir.  Sï¿½o
-seres humanos que estï¿½o ali mas agem como se fossem feras ï¿½ espreita das
+onde se sentam todos aqueles que vieram até aqui para se divertir.  São
+seres humanos que estão ali mas agem como se fossem feras à espreita das
 suas presas.  Milhares de criaturas reunidas para assistirem ao mais
-sangrento de todos os espetï¿½culos.  Ali se reunem os membros dos poderosos
-Clï¿½s de Vitï¿½lia.  Prontos para darem o sangue por seus campeï¿½es.  Grandes
-plataformas elevam-se bem prï¿½ximas da arena, acomodando ali os grandes
-chefes dos Clans que podem desta forma, ter uma visï¿½o total de tudo o que
-ali acontece.  Criados apressados, circulam em meio ï¿½ turba, servindo
-comidas e vinho aos seus senhores.  ï¿½s vezes, tem-se a impressï¿½o de ver
-grandes vultos alados sobrevoando o local...  Seriam os antigos Dragï¿½es de
-Vitï¿½lia?
+sangrento de todos os espetáculos.  Ali se reunem os membros dos poderosos
+Clãs de Vitália.  Prontos para darem o sangue por seus campeões.  Grandes
+plataformas elevam-se bem próximas da arena, acomodando ali os grandes
+chefes dos Clans que podem desta forma, ter uma visão total de tudo o que
+ali acontece.  Criados apressados, circulam em meio à turba, servindo
+comidas e vinho aos seus senhores.  Às vezes, tem-se a impressão de ver
+grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
+Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+D N
+~
+portão~
+abc -1 11026
+D SW
+~
+~
+0 -1 11014
+D E
 ~
 ~
 0 -1 11008
 E
 degraus arquibancadas~
 As arquibandas reproduzem a estrutura social deste lugar.  Na primeira
-fileira de baixo para cima, chama-se podium e estï¿½ reservada a elite dos
-clï¿½s.  Nela estï¿½ o pulvinar (tribuna imperial) reservado aos Senhores das
-Mesnadas ou aos seus representes nos jogos.  A segunda fileira ï¿½ a maeniana,
-onde as pessoas de condiï¿½ï¿½o social mediana sentam-se.  O portici ou pï¿½rtico
-sï¿½o as duas ï¿½ltimas fileiras, onde mais pobres ficam para ver o espetï¿½culo.
+fileira de baixo para cima, chama-se podium e está reservada a elite dos
+clãs.  Nela está o pulvinar (tribuna imperial) reservado aos Senhores das
+Mesnadas ou aos seus representes nos jogos.  A segunda fileira é a maeniana,
+onde as pessoas de condição social mediana sentam-se.  O portici ou pórtico
+são as duas últimas fileiras, onde mais pobres ficam para ver o espetáculo.
 ~
 S
 #11008
 As Arquibancadas da Grande Arena~
    Corredores circulares com enormes degraus feitos de pedra travertina,
-onde se sentam todos aqueles que vieram atï¿½ aqui para se divertir.  Sï¿½o
-seres humanos que estï¿½o ali mas agem como se fossem feras ï¿½ espreita das
+onde se sentam todos aqueles que vieram até aqui para se divertir.  São
+seres humanos que estão ali mas agem como se fossem feras à espreita das
 suas presas.  Milhares de criaturas reunidas para assistirem ao mais
-sangrento de todos os espetï¿½culos.  Ali se reunem os membros dos poderosos
-Clï¿½s de Vitï¿½lia.  Prontos para darem o sangue por seus campeï¿½es.  Grandes
-plataformas elevam-se bem prï¿½ximas da arena, acomodando ali os grandes
-chefes dos Clans que podem desta forma, ter uma visï¿½o total de tudo o que
-ali acontece.  Criados apressados, circulam em meio ï¿½ turba, servindo
-comidas e vinho aos seus senhores.  ï¿½s vezes, tem-se a impressï¿½o de ver
-grandes vultos alados sobrevoando o local...  Seriam os antigos Dragï¿½es de
-Vitï¿½lia?
+sangrento de todos os espetáculos.  Ali se reunem os membros dos poderosos
+Clãs de Vitália.  Prontos para darem o sangue por seus campeões.  Grandes
+plataformas elevam-se bem próximas da arena, acomodando ali os grandes
+chefes dos Clans que podem desta forma, ter uma visão total de tudo o que
+ali acontece.  Criados apressados, circulam em meio à turba, servindo
+comidas e vinho aos seus senhores.  Às vezes, tem-se a impressão de ver
+grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
+Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+D N
+~
+portão~
+abc -1 11026
+D W
+~
+~
+0 -1 11007
+D SE
 ~
 ~
 0 -1 11009
 E
 degraus arquibancadas~
 As arquibandas reproduzem a estrutura social deste lugar.  Na primeira
-fileira de baixo para cima, chama-se podium e estï¿½ reservada a elite dos
-clï¿½s.  Nela estï¿½ o pulvinar (tribuna imperial) reservado aos Senhores das
-Mesnadas ou aos seus representes nos jogos.  A segunda fileira ï¿½ a maeniana,
-onde as pessoas de condiï¿½ï¿½o social mediana sentam-se.  O portici ou pï¿½rtico
-sï¿½o as duas ï¿½ltimas fileiras, onde mais pobres ficam para ver o espetï¿½culo.
+fileira de baixo para cima, chama-se podium e está reservada a elite dos
+clãs.  Nela está o pulvinar (tribuna imperial) reservado aos Senhores das
+Mesnadas ou aos seus representes nos jogos.  A segunda fileira é a maeniana,
+onde as pessoas de condição social mediana sentam-se.  O portici ou pórtico
+são as duas últimas fileiras, onde mais pobres ficam para ver o espetáculo.
 ~
 S
 #11009
 As Arquibancadas da Grande Arena~
    Corredores circulares com enormes degraus feitos de pedra travertina,
-onde se sentam todos aqueles que vieram atï¿½ aqui para se divertir.  Sï¿½o
-seres humanos que estï¿½o ali mas agem como se fossem feras ï¿½ espreita das
+onde se sentam todos aqueles que vieram até aqui para se divertir.  São
+seres humanos que estão ali mas agem como se fossem feras à espreita das
 suas presas.  Milhares de criaturas reunidas para assistirem ao mais
-sangrento de todos os espetï¿½culos.  Ali se reunem os membros dos poderosos
-Clï¿½s de Vitï¿½lia.  Prontos para darem o sangue por seus campeï¿½es.  Grandes
-plataformas elevam-se bem prï¿½ximas da arena, acomodando ali os grandes
-chefes dos Clans que podem desta forma, ter uma visï¿½o total de tudo o que
-ali acontece.  Criados apressados, circulam em meio ï¿½ turba, servindo
-comidas e vinho aos seus senhores.  ï¿½s vezes, tem-se a impressï¿½o de ver
-grandes vultos alados sobrevoando o local...  Seriam os antigos Dragï¿½es de
-Vitï¿½lia?
+sangrento de todos os espetáculos.  Ali se reunem os membros dos poderosos
+Clãs de Vitália.  Prontos para darem o sangue por seus campeões.  Grandes
+plataformas elevam-se bem próximas da arena, acomodando ali os grandes
+chefes dos Clans que podem desta forma, ter uma visão total de tudo o que
+ali acontece.  Criados apressados, circulam em meio à turba, servindo
+comidas e vinho aos seus senhores.  Às vezes, tem-se a impressão de ver
+grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
+Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+D E
+~
+portão~
+abc -1 11027
+D NW
+~
+~
+0 -1 11008
+D S
 ~
 ~
 0 -1 11010
 E
 degraus arquibancadas~
 As arquibandas reproduzem a estrutura social deste lugar.  Na primeira
-fileira de baixo para cima, chama-se podium e estï¿½ reservada a elite dos
-clï¿½s.  Nela estï¿½ o pulvinar (tribuna imperial) reservado aos Senhores das
-Mesnadas ou aos seus representes nos jogos.  A segunda fileira ï¿½ a maeniana,
-onde as pessoas de condiï¿½ï¿½o social mediana sentam-se.  O portici ou pï¿½rtico
-sï¿½o as duas ï¿½ltimas fileiras, onde mais pobres ficam para ver o espetï¿½culo.
+fileira de baixo para cima, chama-se podium e está reservada a elite dos
+clãs.  Nela está o pulvinar (tribuna imperial) reservado aos Senhores das
+Mesnadas ou aos seus representes nos jogos.  A segunda fileira é a maeniana,
+onde as pessoas de condição social mediana sentam-se.  O portici ou pórtico
+são as duas últimas fileiras, onde mais pobres ficam para ver o espetáculo.
 ~
 S
 #11010
 As Arquibancadas da Grande Arena~
    Corredores circulares com enormes degraus feitos de pedra travertina,
-onde se sentam todos aqueles que vieram atï¿½ aqui para se divertir.  Sï¿½o
-seres humanos que estï¿½o ali mas agem como se fossem feras ï¿½ espreita das
+onde se sentam todos aqueles que vieram até aqui para se divertir.  São
+seres humanos que estão ali mas agem como se fossem feras à espreita das
 suas presas.  Milhares de criaturas reunidas para assistirem ao mais
-sangrento de todos os espetï¿½culos.  Ali se reunem os membros dos poderosos
-Clï¿½s de Vitï¿½lia.  Prontos para darem o sangue por seus campeï¿½es.  Grandes
-plataformas elevam-se bem prï¿½ximas da arena, acomodando ali os grandes
-chefes dos Clans que podem desta forma, ter uma visï¿½o total de tudo o que
-ali acontece.  Criados apressados, circulam em meio ï¿½ turba, servindo
-comidas e vinho aos seus senhores.  ï¿½s vezes, tem-se a impressï¿½o de ver
-grandes vultos alados sobrevoando o local...  Seriam os antigos Dragï¿½es de
-Vitï¿½lia?
+sangrento de todos os espetáculos.  Ali se reunem os membros dos poderosos
+Clãs de Vitália.  Prontos para darem o sangue por seus campeões.  Grandes
+plataformas elevam-se bem próximas da arena, acomodando ali os grandes
+chefes dos Clans que podem desta forma, ter uma visão total de tudo o que
+ali acontece.  Criados apressados, circulam em meio à turba, servindo
+comidas e vinho aos seus senhores.  Às vezes, tem-se a impressão de ver
+grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
+Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+D E
+~
+portão~
+abc -1 11027
+D N
+~
+~
+0 -1 11009
+D SW
 ~
 ~
 0 -1 11011
 E
 degraus arquibancadas~
 As arquibandas reproduzem a estrutura social deste lugar.  Na primeira
-fileira de baixo para cima, chama-se podium e estï¿½ reservada a elite dos
-clï¿½s.  Nela estï¿½ o pulvinar (tribuna imperial) reservado aos Senhores das
-Mesnadas ou aos seus representes nos jogos.  A segunda fileira ï¿½ a maeniana,
-onde as pessoas de condiï¿½ï¿½o social mediana sentam-se.  O portici ou pï¿½rtico
-sï¿½o as duas ï¿½ltimas fileiras, onde mais pobres ficam para ver o espetï¿½culo.
+fileira de baixo para cima, chama-se podium e está reservada a elite dos
+clãs.  Nela está o pulvinar (tribuna imperial) reservado aos Senhores das
+Mesnadas ou aos seus representes nos jogos.  A segunda fileira é a maeniana,
+onde as pessoas de condição social mediana sentam-se.  O portici ou pórtico
+são as duas últimas fileiras, onde mais pobres ficam para ver o espetáculo.
 ~
 S
 #11011
 As Arquibancadas da Grande Arena~
    Corredores circulares com enormes degraus feitos de pedra travertina,
-onde se sentam todos aqueles que vieram atï¿½ aqui para se divertir.  Sï¿½o
-seres humanos que estï¿½o ali mas agem como se fossem feras ï¿½ espreita das
+onde se sentam todos aqueles que vieram até aqui para se divertir.  São
+seres humanos que estão ali mas agem como se fossem feras à espreita das
 suas presas.  Milhares de criaturas reunidas para assistirem ao mais
-sangrento de todos os espetï¿½culos.  Ali se reunem os membros dos poderosos
-Clï¿½s de Vitï¿½lia.  Prontos para darem o sangue por seus campeï¿½es.  Grandes
-plataformas elevam-se bem prï¿½ximas da arena, acomodando ali os grandes
-chefes dos Clans que podem desta forma, ter uma visï¿½o total de tudo o que
-ali acontece.  Criados apressados, circulam em meio ï¿½ turba, servindo
-comidas e vinho aos seus senhores.  ï¿½s vezes, tem-se a impressï¿½o de ver
-grandes vultos alados sobrevoando o local...  Seriam os antigos Dragï¿½es de
-Vitï¿½lia?
+sangrento de todos os espetáculos.  Ali se reunem os membros dos poderosos
+Clãs de Vitália.  Prontos para darem o sangue por seus campeões.  Grandes
+plataformas elevam-se bem próximas da arena, acomodando ali os grandes
+chefes dos Clans que podem desta forma, ter uma visão total de tudo o que
+ali acontece.  Criados apressados, circulam em meio à turba, servindo
+comidas e vinho aos seus senhores.  Às vezes, tem-se a impressão de ver
+grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
+Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+D S
+~
+portão~
+abc -1 11028
+D NE
+~
+~
+0 -1 11010
+D W
 ~
 ~
 0 -1 11012
 E
 degraus arquibancadas~
 As arquibandas reproduzem a estrutura social deste lugar.  Na primeira
-fileira de baixo para cima, chama-se podium e estï¿½ reservada a elite dos
-clï¿½s.  Nela estï¿½ o pulvinar (tribuna imperial) reservado aos Senhores das
-Mesnadas ou aos seus representes nos jogos.  A segunda fileira ï¿½ a maeniana,
-onde as pessoas de condiï¿½ï¿½o social mediana sentam-se.  O portici ou pï¿½rtico
-sï¿½o as duas ï¿½ltimas fileiras, onde mais pobres ficam para ver o espetï¿½culo.
+fileira de baixo para cima, chama-se podium e está reservada a elite dos
+clãs.  Nela está o pulvinar (tribuna imperial) reservado aos Senhores das
+Mesnadas ou aos seus representes nos jogos.  A segunda fileira é a maeniana,
+onde as pessoas de condição social mediana sentam-se.  O portici ou pórtico
+são as duas últimas fileiras, onde mais pobres ficam para ver o espetáculo.
 ~
 S
 #11012
 As Arquibancadas da Grande Arena~
    Corredores circulares com enormes degraus feitos de pedra travertina,
-onde se sentam todos aqueles que vieram atï¿½ aqui para se divertir.  Sï¿½o
-seres humanos que estï¿½o ali mas agem como se fossem feras ï¿½ espreita das
+onde se sentam todos aqueles que vieram até aqui para se divertir.  São
+seres humanos que estão ali mas agem como se fossem feras à espreita das
 suas presas.  Milhares de criaturas reunidas para assistirem ao mais
-sangrento de todos os espetï¿½culos.  Ali se reunem os membros dos poderosos
-Clï¿½s de Vitï¿½lia.  Prontos para darem o sangue por seus campeï¿½es.  Grandes
-plataformas elevam-se bem prï¿½ximas da arena, acomodando ali os grandes
-chefes dos Clans que podem desta forma, ter uma visï¿½o total de tudo o que
-ali acontece.  Criados apressados, circulam em meio ï¿½ turba, servindo
-comidas e vinho aos seus senhores.  ï¿½s vezes, tem-se a impressï¿½o de ver
-grandes vultos alados sobrevoando o local...  Seriam os antigos Dragï¿½es de
-Vitï¿½lia?
+sangrento de todos os espetáculos.  Ali se reunem os membros dos poderosos
+Clãs de Vitália.  Prontos para darem o sangue por seus campeões.  Grandes
+plataformas elevam-se bem próximas da arena, acomodando ali os grandes
+chefes dos Clans que podem desta forma, ter uma visão total de tudo o que
+ali acontece.  Criados apressados, circulam em meio à turba, servindo
+comidas e vinho aos seus senhores.  Às vezes, tem-se a impressão de ver
+grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
+Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+D S
+~
+portão~
+abc -1 11028
+D E
+~
+~
+0 -1 11011
+D NW
 ~
 ~
 0 -1 11013
 E
 degraus arquibancadas~
 As arquibandas reproduzem a estrutura social deste lugar.  Na primeira
-fileira de baixo para cima, chama-se podium e estï¿½ reservada a elite dos
-clï¿½s.  Nela estï¿½ o pulvinar (tribuna imperial) reservado aos Senhores das
-Mesnadas ou aos seus representes nos jogos.  A segunda fileira ï¿½ a maeniana,
-onde as pessoas de condiï¿½ï¿½o social mediana sentam-se.  O portici ou pï¿½rtico
-sï¿½o as duas ï¿½ltimas fileiras, onde mais pobres ficam para ver o espetï¿½culo.
+fileira de baixo para cima, chama-se podium e está reservada a elite dos
+clãs.  Nela está o pulvinar (tribuna imperial) reservado aos Senhores das
+Mesnadas ou aos seus representes nos jogos.  A segunda fileira é a maeniana,
+onde as pessoas de condição social mediana sentam-se.  O portici ou pórtico
+são as duas últimas fileiras, onde mais pobres ficam para ver o espetáculo.
 ~
 S
 #11013
 As Arquibancadas da Grande Arena~
    Corredores circulares com enormes degraus feitos de pedra travertina,
-onde se sentam todos aqueles que vieram atï¿½ aqui para se divertir.  Sï¿½o
-seres humanos que estï¿½o ali mas agem como se fossem feras ï¿½ espreita das
+onde se sentam todos aqueles que vieram até aqui para se divertir.  São
+seres humanos que estão ali mas agem como se fossem feras à espreita das
 suas presas.  Milhares de criaturas reunidas para assistirem ao mais
-sangrento de todos os espetï¿½culos.  Ali se reunem os membros dos poderosos
-Clï¿½s de Vitï¿½lia.  Prontos para darem o sangue por seus campeï¿½es.  Grandes
-plataformas elevam-se bem prï¿½ximas da arena, acomodando ali os grandes
-chefes dos Clans que podem desta forma, ter uma visï¿½o total de tudo o que
-ali acontece.  Criados apressados, circulam em meio ï¿½ turba, servindo
-comidas e vinho aos seus senhores.  ï¿½s vezes, tem-se a impressï¿½o de ver
-grandes vultos alados sobrevoando o local...  Seriam os antigos Dragï¿½es de
-Vitï¿½lia?
+sangrento de todos os espetáculos.  Ali se reunem os membros dos poderosos
+Clãs de Vitália.  Prontos para darem o sangue por seus campeões.  Grandes
+plataformas elevam-se bem próximas da arena, acomodando ali os grandes
+chefes dos Clans que podem desta forma, ter uma visão total de tudo o que
+ali acontece.  Criados apressados, circulam em meio à turba, servindo
+comidas e vinho aos seus senhores.  Às vezes, tem-se a impressão de ver
+grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
+Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+D W
+~
+portão~
+abc -1 11029
+D SE
+~
+~
+0 -1 11012
+D N
 ~
 ~
 0 -1 11014
 E
 degraus arquibancadas~
 As arquibandas reproduzem a estrutura social deste lugar.  Na primeira
-fileira de baixo para cima, chama-se podium e estï¿½ reservada a elite dos
-clï¿½s.  Nela estï¿½ o pulvinar (tribuna imperial) reservado aos Senhores das
-Mesnadas ou aos seus representes nos jogos.  A segunda fileira ï¿½ a maeniana,
-onde as pessoas de condiï¿½ï¿½o social mediana sentam-se.  O portici ou pï¿½rtico
-sï¿½o as duas ï¿½ltimas fileiras, onde mais pobres ficam para ver o espetï¿½culo.
+fileira de baixo para cima, chama-se podium e está reservada a elite dos
+clãs.  Nela está o pulvinar (tribuna imperial) reservado aos Senhores das
+Mesnadas ou aos seus representes nos jogos.  A segunda fileira é a maeniana,
+onde as pessoas de condição social mediana sentam-se.  O portici ou pórtico
+são as duas últimas fileiras, onde mais pobres ficam para ver o espetáculo.
 ~
 S
 #11014
 As Arquibancadas da Grande Arena~
    Corredores circulares com enormes degraus feitos de pedra travertina,
-onde se sentam todos aqueles que vieram atï¿½ aqui para se divertir.  Sï¿½o
-seres humanos que estï¿½o ali mas agem como se fossem feras ï¿½ espreita das
+onde se sentam todos aqueles que vieram até aqui para se divertir.  São
+seres humanos que estão ali mas agem como se fossem feras à espreita das
 suas presas.  Milhares de criaturas reunidas para assistirem ao mais
-sangrento de todos os espetï¿½culos.  Ali se reunem os membros dos poderosos
-Clï¿½s de Vitï¿½lia.  Prontos para darem o sangue por seus campeï¿½es.  Grandes
-plataformas elevam-se bem prï¿½ximas da arena, acomodando ali os grandes
-chefes dos Clans que podem desta forma, ter uma visï¿½o total de tudo o que
-ali acontece.  Criados apressados, circulam em meio ï¿½ turba, servindo
-comidas e vinho aos seus senhores.  ï¿½s vezes, tem-se a impressï¿½o de ver
-grandes vultos alados sobrevoando o local...  Seriam os antigos Dragï¿½es de
-Vitï¿½lia?
+sangrento de todos os espetáculos.  Ali se reunem os membros dos poderosos
+Clãs de Vitália.  Prontos para darem o sangue por seus campeões.  Grandes
+plataformas elevam-se bem próximas da arena, acomodando ali os grandes
+chefes dos Clans que podem desta forma, ter uma visão total de tudo o que
+ali acontece.  Criados apressados, circulam em meio à turba, servindo
+comidas e vinho aos seus senhores.  Às vezes, tem-se a impressão de ver
+grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
+Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+D W
+~
+portão~
+abc -1 11029
+D S
+~
+~
+0 -1 11013
+D NE
 ~
 ~
 0 -1 11007
 E
 degraus arquibancadas~
 As arquibandas reproduzem a estrutura social deste lugar.  Na primeira
-fileira de baixo para cima, chama-se podium e estï¿½ reservada a elite dos
-clï¿½s.  Nela estï¿½ o pulvinar (tribuna imperial) reservado aos Senhores das
-Mesnadas ou aos seus representes nos jogos.  A segunda fileira ï¿½ a maeniana,
-onde as pessoas de condiï¿½ï¿½o social mediana sentam-se.  O portici ou pï¿½rtico
-sï¿½o as duas ï¿½ltimas fileiras, onde mais pobres ficam para ver o espetï¿½culo.
+fileira de baixo para cima, chama-se podium e está reservada a elite dos
+clãs.  Nela está o pulvinar (tribuna imperial) reservado aos Senhores das
+Mesnadas ou aos seus representes nos jogos.  A segunda fileira é a maeniana,
+onde as pessoas de condição social mediana sentam-se.  O portici ou pórtico
+são as duas últimas fileiras, onde mais pobres ficam para ver o espetáculo.
 ~
 S
 #11015
 As Arquibancadas da Grande Arena~
-   Corredores circulares com enormes degraus feitos de...  Nï¿½voa?  Essa
-parte das arquibancadas ï¿½ reservada, e aqui os Imortais e Deuses se sentam
-para assistir aos espetï¿½culos.  ï¿½s vezes, tem-se a impressï¿½o de ver grandes
-vultos alados sobrevoando o local...  Seriam os antigos Dragï¿½es de Vitï¿½lia?
+   Corredores circulares com enormes degraus feitos de...  Névoa?  Essa
+parte das arquibancadas é reservada, e aqui os Imortais e Deuses se sentam
+para assistir aos espetáculos.  Às vezes, tem-se a impressão de ver grandes
+vultos alados sobrevoando o local...  Seriam os antigos Dragões de Vitália?
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+OL 101
+D E
+~
+~
+0 -1 1204
+D W
 ~
 ~
 0 -1 1204
 S
 #11016
 As Arquibancadas da Grande Arena~
-   Corredores circulares com enormes degraus feitos de...  Nï¿½voa?  Essa
-parte especial das arquibancadas ï¿½ reservada, e aqui os Campeï¿½es podem se
-sentar para assistir aos espetï¿½culos.
+   Corredores circulares com enormes degraus feitos de...  Névoa?  Essa
+parte especial das arquibancadas é reservada, e aqui os Campeões podem se
+sentar para assistir aos espetáculos.
 ~
-110 80 0 0 0 1
-D0
+110.1 eg 1
+OL 101
+D N
 ~
 ~
-1 -1 11005
+abc -1 11005
 S
 #11026
-As Saï¿½das da Grande Arena~
-   Abrem-se os grandes portï¿½es e vocï¿½ se sente empurrado pela multidï¿½o, como
-se fosse simples folha ao vento.  Seu coraï¿½ï¿½o dispara ao se lembrar das
-intensas emoï¿½ï¿½es vividas neste lugar.  A impressï¿½o que ficou em sua mente ï¿½
+As Saídas da Grande Arena~
+   Abrem-se os grandes portões e você se sente empurrado pela multidão, como
+se fosse simples folha ao vento.  Seu coração dispara ao se lembrar das
+intensas emoções vividas neste lugar.  A impressão que ficou em sua mente é
 que seres sobrenaturais estiveram o tempo inteiro ali, rondando com suas
-presenï¿½as sombrias e malignas, estudando os oponentes para quem sabe num
-futuro prï¿½ximo, desafiï¿½-los.  Vocï¿½ olha mais uma vez para trï¿½s e se assusta
-com a figura grotesca e brilhante do maior dragï¿½o jamais visto pelo homem.
-E entï¿½o ele desaparece...como se jamais tivesse aparecido.  Cuidado!
+presenças sombrias e malignas, estudando os oponentes para quem sabe num
+futuro próximo, desafiá-los.  Você olha mais uma vez para trás e se assusta
+com a figura grotesca e brilhante do maior dragão jamais visto pelo homem.
+E então ele desaparece...como se jamais tivesse aparecido.  Cuidado!
 Apresse o seu passo e tente se esquecer do que viu.
 ~
-110 116 0 0 0 1
+110 cefg 1
 E
-dragï¿½o grotesco brilhante~
-Criaturas cruï¿½is, perversas e rudes.  Odeiam os que possuem a alma pura e
-digna e procuram matï¿½-las por serem tï¿½o inoportunas.  Entram em combate
-apenas pelo prazer de matar ou para proteger o local onde vivem.  Passam o
-tempo dominando escravos e matam todos aqueles que nï¿½o podem ser
-controlados.  Estes dragï¿½es estï¿½o sob o controle de criaturas ainda mais
-poderosas.
+multidão~
+Para alívio dos espectadores, o velarium (os toldos de pano) estava sendo
+estendido para proteger o público do sol que brilhava radiante no céu limpo
+de nuvens de Vitália.  Estavam todos vestidos com suas melhores roupas e
+orgulhavam-se ao ver que as flâmulas de suas famílias tremulavam ao vento.
+Mas dentro em pouco aquela multidão sabia que iria gritar extasiada,
+enquanto a areia se encharcava com o sangue do inimigo morto.
 ~
 E
-multidï¿½o~
-Para alï¿½vio dos espectadores, o velarium (os toldos de pano) estava sendo
-estendido para proteger o pï¿½blico do sol que brilhava radiante no cï¿½u limpo
-de nuvens de Vitï¿½lia.  Estavam todos vestidos com suas melhores roupas e
-orgulhavam-se ao ver que as flï¿½mulas de suas famï¿½lias tremulavam ao vento.
-Mas dentro em pouco aquela multidï¿½o sabia que iria gritar extasiada,
-enquanto a areia se encharcava com o sangue do inimigo morto.
+dragão grotesco brilhante~
+Criaturas cruéis, perversas e rudes.  Odeiam os que possuem a alma pura e
+digna e procuram matá-las por serem tão inoportunas.  Entram em combate
+apenas pelo prazer de matar ou para proteger o local onde vivem.  Passam o
+tempo dominando escravos e matam todos aqueles que não podem ser
+controlados.  Estes dragões estão sob o controle de criaturas ainda mais
+poderosas.
 ~
 S
 #11027
-As Saï¿½das da Grande Arena~
-   Abrem-se os grandes portï¿½es e vocï¿½ se sente empurrado pela multidï¿½o, como
-se fosse simples folha ao vento.  Seu coraï¿½ï¿½o dispara ao se lembrar das
-intensas emoï¿½ï¿½es vividas neste lugar.  A impressï¿½o que ficou em sua mente ï¿½
+As Saídas da Grande Arena~
+   Abrem-se os grandes portões e você se sente empurrado pela multidão, como
+se fosse simples folha ao vento.  Seu coração dispara ao se lembrar das
+intensas emoções vividas neste lugar.  A impressão que ficou em sua mente é
 que seres sobrenaturais estiveram o tempo inteiro ali, rondando com suas
-presenï¿½as sombrias e malignas, estudando os oponentes para quem sabe num
-futuro prï¿½ximo, desafiï¿½-los.  Vocï¿½ olha mais uma vez para trï¿½s e se assusta
-com a figura grotesca e brilhante do maior dragï¿½o jamais visto pelo homem.
-E entï¿½o ele desaparece...como se jamais tivesse aparecido.  Cuidado!
+presenças sombrias e malignas, estudando os oponentes para quem sabe num
+futuro próximo, desafiá-los.  Você olha mais uma vez para trás e se assusta
+com a figura grotesca e brilhante do maior dragão jamais visto pelo homem.
+E então ele desaparece...como se jamais tivesse aparecido.  Cuidado!
 Apresse o seu passo e tente se esquecer do que viu.
 ~
-110 116 0 0 0 1
+110 cefg 1
 E
-dragï¿½o grotesco brilhante~
-Criaturas cruï¿½is, perversas e rudes.  Odeiam os que possuem a alma pura e
-digna e procuram matï¿½-las por serem tï¿½o inoportunas.  Entram em combate
-apenas pelo prazer de matar ou para proteger o local onde vivem.  Passam o
-tempo dominando escravos e matam todos aqueles que nï¿½o podem ser
-controlados.  Estes dragï¿½es estï¿½o sob o controle de criaturas ainda mais
-poderosas.
+multidão~
+Para alívio dos espectadores, o velarium (os toldos de pano) estava sendo
+estendido para proteger o público do sol que brilhava radiante no céu limpo
+de nuvens de Vitália.  Estavam todos vestidos com suas melhores roupas e
+orgulhavam-se ao ver que as flâmulas de suas famílias tremulavam ao vento.
+Mas dentro em pouco aquela multidão sabia que iria gritar extasiada,
+enquanto a areia se encharcava com o sangue do inimigo morto.
 ~
 E
-multidï¿½o~
-Para alï¿½vio dos espectadores, o velarium (os toldos de pano) estava sendo
-estendido para proteger o pï¿½blico do sol que brilhava radiante no cï¿½u limpo
-de nuvens de Vitï¿½lia.  Estavam todos vestidos com suas melhores roupas e
-orgulhavam-se ao ver que as flï¿½mulas de suas famï¿½lias tremulavam ao vento.
-Mas dentro em pouco aquela multidï¿½o sabia que iria gritar extasiada,
-enquanto a areia se encharcava com o sangue do inimigo morto.
+dragão grotesco brilhante~
+Criaturas cruéis, perversas e rudes.  Odeiam os que possuem a alma pura e
+digna e procuram matá-las por serem tão inoportunas.  Entram em combate
+apenas pelo prazer de matar ou para proteger o local onde vivem.  Passam o
+tempo dominando escravos e matam todos aqueles que não podem ser
+controlados.  Estes dragões estão sob o controle de criaturas ainda mais
+poderosas.
 ~
 S
 #11028
-As Saï¿½das da Grande Arena~
-   Abrem-se os grandes portï¿½es e vocï¿½ se sente empurrado pela multidï¿½o, como
-se fosse simples folha ao vento.  Seu coraï¿½ï¿½o dispara ao se lembrar das
-intensas emoï¿½ï¿½es vividas neste lugar.  A impressï¿½o que ficou em sua mente ï¿½
+As Saídas da Grande Arena~
+   Abrem-se os grandes portões e você se sente empurrado pela multidão, como
+se fosse simples folha ao vento.  Seu coração dispara ao se lembrar das
+intensas emoções vividas neste lugar.  A impressão que ficou em sua mente é
 que seres sobrenaturais estiveram o tempo inteiro ali, rondando com suas
-presenï¿½as sombrias e malignas, estudando os oponentes para quem sabe num
-futuro prï¿½ximo, desafiï¿½-los.  Vocï¿½ olha mais uma vez para trï¿½s e se assusta
-com a figura grotesca e brilhante do maior dragï¿½o jamais visto pelo homem.
-E entï¿½o ele desaparece...como se jamais tivesse aparecido.  Cuidado!
+presenças sombrias e malignas, estudando os oponentes para quem sabe num
+futuro próximo, desafiá-los.  Você olha mais uma vez para trás e se assusta
+com a figura grotesca e brilhante do maior dragão jamais visto pelo homem.
+E então ele desaparece...como se jamais tivesse aparecido.  Cuidado!
 Apresse o seu passo e tente se esquecer do que viu.
 ~
-110 116 0 0 0 1
+110 cefg 1
 E
-dragï¿½o grotesco brilhante~
-Criaturas cruï¿½is, perversas e rudes.  Odeiam os que possuem a alma pura e
-digna e procuram matï¿½-las por serem tï¿½o inoportunas.  Entram em combate
-apenas pelo prazer de matar ou para proteger o local onde vivem.  Passam o
-tempo dominando escravos e matam todos aqueles que nï¿½o podem ser
-controlados.  Estes dragï¿½es estï¿½o sob o controle de criaturas ainda mais
-poderosas.
+multidão~
+Para alívio dos espectadores, o velarium (os toldos de pano) estava sendo
+estendido para proteger o público do sol que brilhava radiante no céu limpo
+de nuvens de Vitália.  Estavam todos vestidos com suas melhores roupas e
+orgulhavam-se ao ver que as flâmulas de suas famílias tremulavam ao vento.
+Mas dentro em pouco aquela multidão sabia que iria gritar extasiada,
+enquanto a areia se encharcava com o sangue do inimigo morto.
 ~
 E
-multidï¿½o~
-Para alï¿½vio dos espectadores, o velarium (os toldos de pano) estava sendo
-estendido para proteger o pï¿½blico do sol que brilhava radiante no cï¿½u limpo
-de nuvens de Vitï¿½lia.  Estavam todos vestidos com suas melhores roupas e
-orgulhavam-se ao ver que as flï¿½mulas de suas famï¿½lias tremulavam ao vento.
-Mas dentro em pouco aquela multidï¿½o sabia que iria gritar extasiada,
-enquanto a areia se encharcava com o sangue do inimigo morto.
+dragão grotesco brilhante~
+Criaturas cruéis, perversas e rudes.  Odeiam os que possuem a alma pura e
+digna e procuram matá-las por serem tão inoportunas.  Entram em combate
+apenas pelo prazer de matar ou para proteger o local onde vivem.  Passam o
+tempo dominando escravos e matam todos aqueles que não podem ser
+controlados.  Estes dragões estão sob o controle de criaturas ainda mais
+poderosas.
 ~
 S
 #11029
-As Saï¿½das da Grande Arena~
-   Abrem-se os grandes portï¿½es e vocï¿½ se sente empurrado pela multidï¿½o, como
-se fosse simples folha ao vento.  Seu coraï¿½ï¿½o dispara ao se lembrar das
-intensas emoï¿½ï¿½es vividas neste lugar.  A impressï¿½o que ficou em sua mente ï¿½
+As Saídas da Grande Arena~
+   Abrem-se os grandes portões e você se sente empurrado pela multidão, como
+se fosse simples folha ao vento.  Seu coração dispara ao se lembrar das
+intensas emoções vividas neste lugar.  A impressão que ficou em sua mente é
 que seres sobrenaturais estiveram o tempo inteiro ali, rondando com suas
-presenï¿½as sombrias e malignas, estudando os oponentes para quem sabe num
-futuro prï¿½ximo, desafiï¿½-los.  Vocï¿½ olha mais uma vez para trï¿½s e se assusta
-com a figura grotesca e brilhante do maior dragï¿½o jamais visto pelo homem.
-E entï¿½o ele desaparece...como se jamais tivesse aparecido.  Cuidado!
+presenças sombrias e malignas, estudando os oponentes para quem sabe num
+futuro próximo, desafiá-los.  Você olha mais uma vez para trás e se assusta
+com a figura grotesca e brilhante do maior dragão jamais visto pelo homem.
+E então ele desaparece...como se jamais tivesse aparecido.  Cuidado!
 Apresse o seu passo e tente se esquecer do que viu.
 ~
-110 116 0 0 0 1
+110 cefg 1
 E
-dragï¿½o grotesco brilhante~
-Criaturas cruï¿½is, perversas e rudes.  Odeiam os que possuem a alma pura e
-digna e procuram matï¿½-las por serem tï¿½o inoportunas.  Entram em combate
-apenas pelo prazer de matar ou para proteger o local onde vivem.  Passam o
-tempo dominando escravos e matam todos aqueles que nï¿½o podem ser
-controlados.  Estes dragï¿½es estï¿½o sob o controle de criaturas ainda mais
-poderosas.
+multidão~
+Para alívio dos espectadores, o velarium (os toldos de pano) estava sendo
+estendido para proteger o público do sol que brilhava radiante no céu limpo
+de nuvens de Vitália.  Estavam todos vestidos com suas melhores roupas e
+orgulhavam-se ao ver que as flâmulas de suas famílias tremulavam ao vento.
+Mas dentro em pouco aquela multidão sabia que iria gritar extasiada,
+enquanto a areia se encharcava com o sangue do inimigo morto.
 ~
 E
-multidï¿½o~
-Para alï¿½vio dos espectadores, o velarium (os toldos de pano) estava sendo
-estendido para proteger o pï¿½blico do sol que brilhava radiante no cï¿½u limpo
-de nuvens de Vitï¿½lia.  Estavam todos vestidos com suas melhores roupas e
-orgulhavam-se ao ver que as flï¿½mulas de suas famï¿½lias tremulavam ao vento.
-Mas dentro em pouco aquela multidï¿½o sabia que iria gritar extasiada,
-enquanto a areia se encharcava com o sangue do inimigo morto.
+dragão grotesco brilhante~
+Criaturas cruéis, perversas e rudes.  Odeiam os que possuem a alma pura e
+digna e procuram matá-las por serem tão inoportunas.  Entram em combate
+apenas pelo prazer de matar ou para proteger o local onde vivem.  Passam o
+tempo dominando escravos e matam todos aqueles que não podem ser
+controlados.  Estes dragões estão sob o controle de criaturas ainda mais
+poderosas.
 ~
 S
 #11030
-O Santuï¿½rio dos Campeï¿½es~
-   Nï¿½o hï¿½ um ï¿½nico indï¿½cio de que aqueles que estï¿½o neste local sejam de
+O Santuário dos Campeões~
+   Não há um único indício de que aqueles que estão neste local sejam de
 fato homens que lidam com a vida e com a morte.  Suas paredes brancas chegam
-a brilhar.  O chï¿½o ï¿½ limpo, coberto por um espï¿½sso tapete feito com a mais
-pura lï¿½ de carneiro.  A simplicidade do local contrasta brutalmente com os
-pesados equipamentos que, lentamente, vï¿½o sendo retirados de seus donos, os
-Novos Dragï¿½es.  Cada pessoa presente naquele ambiente sabe que estï¿½ sob solo
-consagrado pelos prï¿½prios Deuses de Vitï¿½lia e o respeitam profundamente.
+a brilhar.  O chão é limpo, coberto por um espêsso tapete feito com a mais
+pura lã de carneiro.  A simplicidade do local contrasta brutalmente com os
+pesados equipamentos que, lentamente, vão sendo retirados de seus donos, os
+Novos Dragões.  Cada pessoa presente naquele ambiente sabe que está sob solo
+consagrado pelos próprios Deuses de Vitália e o respeitam profundamente.
 Estes guerreiros lutaram bravamente e agora cansados se despedem de seus
-companheiros de clï¿½ e se preparam para um merecido descanso.  Dormirï¿½o
-profundamente e serï¿½o acordados novamente quando os Senhores das Mesnadas
-mais uma vez erguerem o Brasï¿½o de Vitï¿½lia.
+companheiros de clã e se preparam para um merecido descanso.  Dormirão
+profundamente e serão acordados novamente quando os Senhores das Mesnadas
+mais uma vez erguerem o Brasão de Vitália.
 ~
-110 116 0 0 0 1
-D0
+110 cefg 1
+D W
 ~
-portï¿½o~
-1 -1 11006
+portão~
+:n 1 o grande portão da arena
+abc -1 11006
 E
-novos dragï¿½es~
-Criaturas descomunais, musculosas e extremamente fortes.  Suas feiï¿½ï¿½es
-lembram antigas criaturas que passaram por Vitï¿½lia em tempos remotï¿½ssimos.
-~
-E
-chï¿½o tapete~
-Um imenso tapete da mais pura lï¿½ branca existente, muito limpo e bastante
+chão tapete~
+Um imenso tapete da mais pura lã branca existente, muito limpo e bastante
 espesso.
 ~
+E
+novos dragões~
+Criaturas descomunais, musculosas e extremamente fortes.  Suas feições
+lembram antigas criaturas que passaram por Vitália em tempos remotíssimos.
+~
 S
-$~
+$

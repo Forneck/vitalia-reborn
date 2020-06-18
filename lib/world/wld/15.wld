@@ -1,14 +1,14 @@
 #1500
 Uma estrada vinda do Banco~
-   Vocï¿½ se encontra em uma pequena estrada que lhe conduz ï¿½ margem do Rio
-das Almas Perdidas.  As ï¿½guas escuras do rio podem ser vistas e ouvidas ao
-sul daqui.  Olhando para leste e oeste, vocï¿½ vï¿½ apenas as paredes dos
-precipï¿½cios rochosos.  Ao norte, um estranho caminho parece guiï¿½-lo direto
-ï¿½s profundezas da montanha.
+   Você se encontra em uma pequena estrada que lhe conduz à margem do Rio
+das Almas Perdidas.  As águas escuras do rio podem ser vistas e ouvidas ao
+sul daqui.  Olhando para leste e oeste, você vê apenas as paredes dos
+precipícios rochosos.  Ao norte, um estranho caminho parece guiá-lo direto
+às profundezas da montanha.
 ~
-15 4 0 0 0 4
+15 c 4
 D0
-Um estranho caminho segue em direï¿½ï¿½o ao norte.
+Um estranho caminho segue em direção ao norte.
 ~
 ~
 0 -1 1501
@@ -20,12 +20,12 @@ O Rio das Almas Perdidas flui ao sul daqui.
 S
 #1501
 Um Longo Caminho~
-   Vocï¿½ se encontra em um vazio espiritual, comeï¿½ando um longo e perigoso
-caminho.  Sua honesta submissï¿½o aceita, mas a verdade de seu coraï¿½ï¿½o ainda
-estï¿½ para ser contada.  Saia daqui agora e nï¿½o volte atï¿½ que tenha
+   Você se encontra em um vazio espiritual, começando um longo e perigoso
+caminho.  Sua honesta submissão aceita, mas a verdade de seu coração ainda
+está para ser contada.  Saia daqui agora e não volte até que tenha
 amadurecido.
 ~
-15 8 0 0 0 0
+15 d 0
 D0
 ~
 ~
@@ -37,29 +37,29 @@ D2
 S
 #1502
 Um Longo Caminho~
-   Vocï¿½ pï¿½ra por algum tempo, gritando de frustraï¿½ï¿½o.  Certamente ï¿½ aquele
-pecado que poderia ter sido evitado que vocï¿½ se arrepende.  A dor da carne
-pecadora atinge vocï¿½.  Algum tempo depois a dor desaparece e o caminho da
+   Você pára por algum tempo, gritando de frustração.  Certamente é aquele
+pecado que poderia ter sido evitado que você se arrepende.  A dor da carne
+pecadora atinge você.  Algum tempo depois a dor desaparece e o caminho da
 virtude se revela a sua frente.
 ~
-15 8 0 0 0 0
-D0
-~
-~
-0 -1 1503
+15 d 0
 D2
 ~
 ~
 0 -1 1501
+D0
+~
+~
+0 -1 1503
 S
 #1503
 Um Longo Caminho~
-   O caminho vai se tornando mais claro, a nï¿½voa e a dor dos primeiros
-passos vï¿½o sendo deixados para trï¿½s.  Apesar da sï¿½bita claridade, sua mente
-ainda ï¿½ assombrada pelas imagens de uma velha mulher que se ajoelha em
-oraï¿½ï¿½o, fechando seus olhos, sorrindo e chorando.
+   O caminho vai se tornando mais claro, a névoa e a dor dos primeiros
+passos vão sendo deixados para trás.  Apesar da súbita claridade, sua mente
+ainda é assombrada pelas imagens de uma velha mulher que se ajoelha em
+oração, fechando seus olhos, sorrindo e chorando.
 ~
-15 8 0 0 0 0
+15 d 0
 D0
 ~
 ~
@@ -71,11 +71,11 @@ D2
 S
 #1504
 Um Longo Caminho~
-   Olhando para a frente, vocï¿½ percebe que o caminho que vocï¿½ tem seguido
-logo chegarï¿½ ao fim mas algo no frio e na suave brisa lhe diz que ï¿½ apenas o
-inï¿½cio de sua jornada.
+   Olhando para a frente, você percebe que o caminho que você tem seguido
+logo chegará ao fim mas algo no frio e na suave brisa lhe diz que é apenas o
+início de sua jornada.
 ~
-15 8 0 0 0 0
+15 d 0
 D0
 ~
 ~
@@ -87,12 +87,12 @@ D2
 S
 #1505
 Um Teste para o Fiel~
-   Finalmente ï¿½ aqui que as decisï¿½es devem ser tomadas.  A primeira que
-confronta vocï¿½ ï¿½ bastante simples, adentrar na escuridï¿½o ou andar pelo
+   Finalmente é aqui que as decisões devem ser tomadas.  A primeira que
+confronta você é bastante simples, adentrar na escuridão ou andar pelo
 caminho da luz.  Apenas as profundezas de sua alma podem decidir mas
 lembre-se: a mesma verdade jaz no fim dos dois caminhos.
 ~
-15 8 0 0 0 0
+15 d 0
 D4
 ~
 ~
@@ -104,11 +104,11 @@ D5
 S
 #1506
 O Corredor dos Esquecidos~
-   Atï¿½ mesmo os mais sombrios tem um lugar no caminho para a verdade.  ï¿½
-neste lugar, tï¿½o vazio e esquecido, que Deus tem escolhido os piores e os
-traz para perto si por uma ï¿½ltima vez.
+   Até mesmo os mais sombrios tem um lugar no caminho para a verdade.  É
+neste lugar, tão vazio e esquecido, que Deus tem escolhido os piores e os
+traz para perto si por uma última vez.
 ~
-15 8 0 0 0 0
+15 d 0
 D1
 ~
 ~
@@ -125,11 +125,11 @@ S
 #1507
 A Profecia~
    Foi escrito uma vez, em um antigo pergaminho feito num curioso e fluente
-idioma, que nï¿½o hï¿½ de fato um Deus mas sim "O Criador" e que Mohamed era o
-ï¿½ltimo dos seus profetas.  Com esse reconhecimento, tudo mais se torna vazio
+idioma, que não há de fato um Deus mas sim "O Criador" e que Mohamed era o
+último dos seus profetas.  Com esse reconhecimento, tudo mais se torna vazio
 e sem sentido.
 ~
-15 8 0 0 0 0
+15 d 0
 D1
 ~
 ~
@@ -146,11 +146,11 @@ S
 #1508
 O Mal Terrestre~
    Seja pelo motivo que for, a raiva se converte sempre em arma.  A ira se
-alimenta com todos seus braï¿½os.  Quando um homem nervoso tem sede de sangue,
-qualquer coisa servirï¿½ a ele como lanï¿½a.  A fï¿½ria transforma um graveto em
+alimenta com todos seus braços.  Quando um homem nervoso tem sede de sangue,
+qualquer coisa servirá a ele como lança.  A fúria transforma um graveto em
 uma espada.
 ~
-15 9 0 0 0 0
+15 ad 0
 D0
 ~
 ~
@@ -161,29 +161,29 @@ D1
 0 -1 1506
 S
 #1509
-Desorientaï¿½ï¿½o~
-   Alguns foram trazidos aqui nï¿½o pelo que fizeram, mas pelo que falharam em
-fazer.  Sï¿½o estas, as pobres almas que foram presenteadas com causas justas
+Desorientação~
+   Alguns foram trazidos aqui não pelo que fizeram, mas pelo que falharam em
+fazer.  São estas, as pobres almas que foram presenteadas com causas justas
 e rejeitaram-nas, que merecem a nossa pena mais do que qualquer um.
 ~
-15 9 0 0 0 0
-D0
-~
-~
-0 -1 1510
+15 ad 0
 D2
 ~
 ~
 0 -1 1508
+D0
+~
+~
+0 -1 1510
 S
 #1510
-Tentaï¿½ï¿½o~
-   Velhas lendas contam sobre uma conversa entre o demï¿½nio e o profeta
-Jesus: o demï¿½nio lhe oferece um reino, vastas riquezas, a tentaï¿½ï¿½o de uma
-gloriosa prï¿½-morte salva por seus anjos.  Atï¿½ o Mensageiro de Deus foi
-forï¿½ado a parar e pensar.  Imagine o quï¿½o difï¿½cil seria para o resto.
+Tentação~
+   Velhas lendas contam sobre uma conversa entre o demônio e o profeta
+Jesus: o demônio lhe oferece um reino, vastas riquezas, a tentação de uma
+gloriosa pré-morte salva por seus anjos.  Até o Mensageiro de Deus foi
+forçado a parar e pensar.  Imagine o quão difícil seria para o resto.
 ~
-15 9 0 0 0 0
+15 ad 0
 D0
 ~
 ~
@@ -195,14 +195,14 @@ D2
 S
 #1511
 Hipocrisia~
-   Ele chamou o povo para a rï¿½gida e puritana religiï¿½o, rigorosamente
+   Ele chamou o povo para a rígida e puritana religião, rigorosamente
 ditando as horas de reza e as formas mais corretas das palavras dos
-profetas.  Tudo isso foi fortalecido por seu impecï¿½vel exemplo, evitando
+profetas.  Tudo isso foi fortalecido por seu impecável exemplo, evitando
 todas as riquezas e seguindo em trapos esfarrapados por sua cidade no lombo
-de um burro.  Mas apesar de tudo, lembre-se: atrï¿½s de portas fechadas todos
-os homens sï¿½o hipï¿½critas.
+de um burro.  Mas apesar de tudo, lembre-se: atrás de portas fechadas todos
+os homens são hipócritas.
 ~
-15 9 0 0 0 0
+15 ad 0
 D0
 ~
 ~
@@ -213,32 +213,32 @@ D2
 0 -1 1510
 S
 #1512
-ï¿½dio~
-   Hï¿½ muito pouca coisa na vida que seja mais fï¿½cil e meio mais rï¿½pido para
-se ingressar na danaï¿½ï¿½o.  Vocï¿½ dirï¿½ um breve agradecimento assim que chegar
-ao final destas provas mas suas palavras estï¿½o submersas em algo muito mais
-alto, uma prece mecï¿½nica que submerge aos seus ouvidos em cï¿½lera.  Vocï¿½ ouve
-o constante repetir de uma mesma frase por inï¿½meras vezes:
-"Eu sigo o caminho que a histï¿½ria dita com a garantia cega de um sonï¿½mbulo".
+Ódio~
+   Há muito pouca coisa na vida que seja mais fácil e meio mais rápido para
+se ingressar na danação.  Você dirá um breve agradecimento assim que chegar
+ao final destas provas mas suas palavras estão submersas em algo muito mais
+alto, uma prece mecânica que submerge aos seus ouvidos em cólera.  Você ouve
+o constante repetir de uma mesma frase por inúmeras vezes:
+"Eu sigo o caminho que a história dita com a garantia cega de um sonâmbulo".
 ~
-15 9 0 0 0 0
-D0
-~
-~
-0 -1 1528
+15 ad 0
 D2
 ~
 ~
 0 -1 1511
+D0
+~
+~
+0 -1 1528
 S
 #1513
 Perigo Espiritual~
-   Alguns demï¿½nios sï¿½o tangï¿½veis, sï¿½lidos e tï¿½o evidentes que eles cospem
-direto em sua cara.  Outros sï¿½o mais inteligentes, mais sutis e sï¿½o eles que
+   Alguns demônios são tangíveis, sólidos e tão evidentes que eles cospem
+direto em sua cara.  Outros são mais inteligentes, mais sutis e são eles que
 representam o maior perigo.  Olhando abaixo, o corredor a sua frente, um
-grande medo preenche seu coraï¿½ï¿½o, e um grande e pesado desejo.
+grande medo preenche seu coração, e um grande e pesado desejo.
 ~
-15 9 0 0 0 0
+15 ad 0
 D0
 ~
 ~
@@ -250,28 +250,28 @@ D3
 S
 #1514
 A Queda~
-   No comeï¿½o, ele foi o melhor, o mais belo de todos os anjos e a criaï¿½ï¿½o
-mais amada de Deus.  Olhe para sua prï¿½pria beleza, humana, e faï¿½a o que ele
-nï¿½o pode.  Olhe para sua beleza, e aprenda a ajoelhar-se!
+   No começo, ele foi o melhor, o mais belo de todos os anjos e a criação
+mais amada de Deus.  Olhe para sua própria beleza, humana, e faça o que ele
+não pode.  Olhe para sua beleza, e aprenda a ajoelhar-se!
 ~
-15 9 0 0 0 0
-D0
-~
-~
-0 -1 1515
+15 ad 0
 D2
 ~
 ~
 0 -1 1513
+D0
+~
+~
+0 -1 1515
 S
 #1515
-Tentaï¿½ï¿½o~
-   A tentaï¿½ï¿½o ï¿½ o "SE...", a indagaï¿½ï¿½o, um segundo pensamento, o "eu serei
-um homem melhor...  Se..." E isso ï¿½ usualmente tomado, sentado sozinho,
-ouvindo aquela voz, chamando vocï¿½, oferecendo-lhe um caminho tï¿½o mais fï¿½cil
-mas tï¿½o desonesto.
+Tentação~
+   A tentação é o "SE...", a indagação, um segundo pensamento, o "eu serei
+um homem melhor...  Se..." E isso é usualmente tomado, sentado sozinho,
+ouvindo aquela voz, chamando você, oferecendo-lhe um caminho tão mais fácil
+mas tão desonesto.
 ~
-15 9 0 0 0 0
+15 ad 0
 D0
 ~
 ~
@@ -282,31 +282,31 @@ D2
 0 -1 1514
 S
 #1516
-O ï¿½ltimo Dia~
+O Último Dia~
    O estrondo de uma grande batalha faz tremer estes corredores, os gemidos
-da terra estourando ï¿½s margens do "Fim dos Tempos".  Esteja pronto para este
-dia, esteja bem preparado e se vocï¿½ nï¿½o estiver, Ele lhe chamarï¿½ atravï¿½s de
+da terra estourando às margens do "Fim dos Tempos".  Esteja pronto para este
+dia, esteja bem preparado e se você não estiver, Ele lhe chamará através de
 um dos seus.
 ~
-15 9 0 0 0 0
-D0
-~
-~
-0 -1 1517
+15 ad 0
 D2
 ~
 ~
 0 -1 1515
+D0
+~
+~
+0 -1 1517
 S
 #1517
 A Chama~
-   Indescritï¿½vel horror e dor, uma escuridï¿½o densa e pesada que parece 
-sufocar a tudo com a chama da angï¿½stia, o fogo inextinguï¿½vel, vindo nï¿½o de
-algum pedaï¿½o de madeira ardente ou lava fundida, mas sim do brilho e da dor 
-das horrï¿½veis almas torturadas que estï¿½o em todos os lugares por onde vocï¿½ 
+   Indescritível horror e dor, uma escuridão densa e pesada que parece 
+sufocar a tudo com a chama da angústia, o fogo inextinguível, vindo não de
+algum pedaço de madeira ardente ou lava fundida, mas sim do brilho e da dor 
+das horríveis almas torturadas que estão em todos os lugares por onde você 
 caminha.   
 ~
-15 9 0 0 0 0
+15 ad 0
 D0
 ~
 ~
@@ -318,13 +318,13 @@ D2
 S
 #1518
 Luz Terrestre~
-   Escorregar para a maldade ï¿½ fï¿½cil porï¿½m caminhar por este caminho ï¿½ o 
-dificï¿½limo. Mesmo os Quatro que vocï¿½ encontrarï¿½ aqui hoje, se desviaram
-de seus caminhos pelo menos uma vez em suas vidas e ainda hï¿½ alguma 
-criatura que amaldiï¿½oa o som de seus nomes. Nï¿½o obstante, confronte-os 
+   Escorregar para a maldade é fácil porém caminhar por este caminho é o 
+dificílimo. Mesmo os Quatro que você encontrará aqui hoje, se desviaram
+de seus caminhos pelo menos uma vez em suas vidas e ainda há alguma 
+criatura que amaldiçoa o som de seus nomes. Não obstante, confronte-os 
 agora e deixe que seus atos lhe sirvam de exemplo.
 ~
-15 8 0 0 0 0
+15 d 0
 D0
 ~
 ~
@@ -337,12 +337,12 @@ S
 #1519
 A Luz dos Escolhidos~
    Muitos acreditaram que o profeta nunca mentiria mas quando a total
-evidï¿½ncia de seu corpo os confrontou, se tornou necessï¿½rio prover para 
-futuro. Os Quatro que vieram depois sï¿½o chamados Os Escolhidos, os bem
+evidência de seu corpo os confrontou, se tornou necessário prover para 
+futuro. Os Quatro que vieram depois são chamados Os Escolhidos, os bem
 aventurados Califas que podiam propagar a palavra e a luz ao mundo e com
-isso forjar uma das histï¿½rias dos maiores impï¿½rios.   
+isso forjar uma das histórias dos maiores impérios.   
 ~
-15 8 0 0 0 0
+15 d 0
 D0
 ~
 ~
@@ -354,12 +354,12 @@ D2
 S
 #1520
 A Luz dos Escolhidos~
-   Os primeiros Califas foram escolhidos atravï¿½s de uma consulta do nobre 
-conselho dos anciï¿½es, cada um deles, desejando guiar o mundo do Islï¿½m 
-sï¿½zinho, votaram para eleger um, dentre aqueles que eles achavam o mais 
+   Os primeiros Califas foram escolhidos através de uma consulta do nobre 
+conselho dos anciões, cada um deles, desejando guiar o mundo do Islãm 
+sózinho, votaram para eleger um, dentre aqueles que eles achavam o mais 
 fraco. Cada um era mais nobre e ainda mais virtuoso que o anterior.  
 ~
-15 8 0 0 0 0
+15 d 0
 D0
 ~
 ~
@@ -373,27 +373,27 @@ S
 A Luz dos Escolhidos~
    Todo conto majestoso e feliz tem que acabar, normalmente muito cedo,
 e assim ocorreu com a idade dourada do Califado. Os Escolhidos foram
-homens puros, homens bons, fiï¿½is para o caminho mas seus seguidores cedo
-comeï¿½aram a brigar e uma guerra civil pairava no horizonte.   
+homens puros, homens bons, fiéis para o caminho mas seus seguidores cedo
+começaram a brigar e uma guerra civil pairava no horizonte.   
 ~
-15 8 0 0 0 0
-D0
-~
-~
-0 -1 1522
+15 d 0
 D2
 ~
 ~
 0 -1 1520
+D0
+~
+~
+0 -1 1522
 S
 #1522
 A Luz dos Escolhidos~
-   O fim da era dos Escolhidos foi o comeï¿½o do Cisma. As memï¿½rias 
+   O fim da era dos Escolhidos foi o começo do Cisma. As memórias 
 do profeta e o exemplo de vida dos Califas provaram serem insuficientes
 exemplos para os crentes. Ali morreu e alguns dizem que com ele o Califado
-morreu tambï¿½m...um mï¿½rtir, seu sangue ainda flui no rio sem nome.
+morreu também...um mártir, seu sangue ainda flui no rio sem nome.
 ~
-15 8 0 0 0 0
+15 d 0
 D0
 ~
 ~
@@ -405,12 +405,12 @@ D2
 S
 #1523
 Recompensa Espiritual~
-   Observem: Alï¿½ ï¿½ o Criador, o mais Generoso! Ele nï¿½o permitiria que seus
-fiï¿½is andassem no caminho da luz sem orientaï¿½ï¿½o. Ele proviu os Profetas,
-para que a paz estivesse sobre eles, e pelos exemplos de seus prï¿½prios
-crescimentos, deveremos nï¿½s encontrar a nossa prï¿½pria verdade.   
+   Observem: Alá é o Criador, o mais Generoso! Ele não permitiria que seus
+fiéis andassem no caminho da luz sem orientação. Ele proviu os Profetas,
+para que a paz estivesse sobre eles, e pelos exemplos de seus próprios
+crescimentos, deveremos nós encontrar a nossa própria verdade.   
 ~
-15 8 0 0 0 0
+15 d 0
 D0
 ~
 ~
@@ -421,12 +421,12 @@ D3
 0 -1 1507
 S
 #1524
-Criaï¿½ï¿½o~
-   Na criaï¿½ï¿½o do paraï¿½so e da terra e na alternaï¿½ï¿½o entre o dia e a noite,
-hï¿½ sinais para homens de bom senso. Aqueles que se lembram de Alï¿½ dizem: 
-"Senhor, nï¿½o criastes isso em vï¿½o!"  
+Criação~
+   Na criação do paraíso e da terra e na alternação entre o dia e a noite,
+há sinais para homens de bom senso. Aqueles que se lembram de Alá dizem: 
+"Senhor, não criastes isso em vão!"  
 ~
-15 8 0 0 0 0
+15 d 0
 D0
 ~
 ~
@@ -437,29 +437,29 @@ D2
 0 -1 1523
 S
 #1525
-Revelaï¿½ï¿½o~
-  O anjo Gabriel veio atï¿½ ele e disse: "Leia!" Ele respondeu: "Mas eu
-nï¿½o posso!" A ordem foi repetida trï¿½s vezes, atï¿½ que o anjo mesmo leu:
-"Leia em nome de seu Senhor, que criou o homem atravï¿½s de coï¿½gulos de 
-sangue. Enalteï¿½a seu Deus, Senhor do Universo."  
+Revelação~
+  O anjo Gabriel veio até ele e disse: "Leia!" Ele respondeu: "Mas eu
+não posso!" A ordem foi repetida três vezes, até que o anjo mesmo leu:
+"Leia em nome de seu Senhor, que criou o homem através de coágulos de 
+sangue. Enalteça seu Deus, Senhor do Universo."  
 ~
-15 8 0 0 0 0
-D0
-~
-~
-0 -1 1526
+15 d 0
 D2
 ~
 ~
 0 -1 1524
+D0
+~
+~
+0 -1 1526
 S
 #1526
-Conversï¿½o~
-   Descrentes! Eu nï¿½o adoro o que vocï¿½s adoram, nem vocï¿½s adoram o que
-eu adoro. Eu nunca deverei adorar o que vocï¿½s adoram nem vocï¿½s nunca 
-adorarï¿½o o que eu adoro. Vocï¿½s tï¿½m sua prï¿½pria religiï¿½o e eu a minha.
+Conversão~
+   Descrentes! Eu não adoro o que vocês adoram, nem vocês adoram o que
+eu adoro. Eu nunca deverei adorar o que vocês adoram nem vocês nunca 
+adorarão o que eu adoro. Vocês têm sua própria religião e eu a minha.
 ~
-15 8 0 0 0 0
+15 d 0
 D0
 ~
 ~
@@ -470,12 +470,12 @@ D2
 0 -1 1525
 S
 #1527
-A Libertaï¿½ï¿½o~
-   O equilï¿½brio jï¿½ foi feito, a alma colocada em prontidï¿½o e as medidas
-finais tomadas. Para aqueles que chegaram atï¿½ aqui, certamente este ï¿½
+A Libertação~
+   O equilíbrio já foi feito, a alma colocada em prontidão e as medidas
+finais tomadas. Para aqueles que chegaram até aqui, certamente este é
 o dia da imortalidade!
 ~
-15 8 0 0 0 0
+15 d 0
 D0
 ~
 ~
@@ -487,12 +487,16 @@ D2
 S
 #1528
 O Arrependimento~
-   Deus perdoa aqueles que cometeram o mal por ignorï¿½ncia, porque Ele ï¿½ 
-todo conhecimento e sabedoria. Mas Ele nï¿½o perdoarï¿½ aqueles que praticam o 
-mal pelo mal e quando a morte chegar para eles, dirï¿½o: "Agora nï¿½s nos
-arrependemos!"   Para estes Nï¿½s preparamos um aï¿½oite de afliï¿½ao.
+   Deus perdoa aqueles que cometeram o mal por ignorância, porque Ele é 
+todo conhecimento e sabedoria. Mas Ele não perdoará aqueles que praticam o 
+mal pelo mal e quando a morte chegar para eles, dirão: "Agora nós nos
+arrependemos!"   Para estes Nós preparamos um açoite de afliçao.
 ~
-15 9 0 0 0 0
+15 ad 0
+D4
+~
+~
+0 -1 1534
 D1
 ~
 ~
@@ -501,20 +505,20 @@ D2
 ~
 ~
 0 -1 1512
+S
+#1529
+A Peregrinação~
+   É da incumbência de todos os Muçulmanos a fazerem a peregrinação para 
+Meca pelo menos uma vez em suas vidas, se tiverem condições. E para aqueles
+que foram infelizes, pois seguiram suas vidas nos mais baixos níveis de
+maldades, tal peregrinação, se feita com um coração aberto e arrependido, 
+lhes trará o perdão total.
+~
+15 ad 0
 D4
 ~
 ~
-0 -1 1534
-S
-#1529
-A Peregrinaï¿½ï¿½o~
-   ï¿½ da incumbï¿½ncia de todos os Muï¿½ulmanos a fazerem a peregrinaï¿½ï¿½o para 
-Meca pelo menos uma vez em suas vidas, se tiverem condiï¿½ï¿½es. E para aqueles
-que foram infelizes, pois seguiram suas vidas nos mais baixos nï¿½veis de
-maldades, tal peregrinaï¿½ï¿½o, se feita com um coraï¿½ï¿½o aberto e arrependido, 
-lhes trarï¿½ o perdï¿½o total.
-~
-15 9 0 0 0 0
+0 -1 1535
 D1
 ~
 ~
@@ -523,18 +527,18 @@ D3
 ~
 ~
 0 -1 1528
+S
+#1530
+Intercessão~
+   Está escrito que ninguém pode interceder com Deus em nome de outro.
+Nenhuma oração de ninguém poderá salvar a alma de um homem condenado. Sua
+única esperança são suas próprias preces.   
+~
+15 ad 0
 D4
 ~
 ~
-0 -1 1535
-S
-#1530
-Intercessï¿½o~
-   Estï¿½ escrito que ninguï¿½m pode interceder com Deus em nome de outro.
-Nenhuma oraï¿½ï¿½o de ninguï¿½m poderï¿½ salvar a alma de um homem condenado. Sua
-ï¿½nica esperanï¿½a sï¿½o suas prï¿½prias preces.   
-~
-15 9 0 0 0 0
+0 -1 1536
 D2
 ~
 ~
@@ -543,38 +547,34 @@ D3
 ~
 ~
 0 -1 1529
-D4
-~
-~
-0 -1 1536
 S
 #1531
-Alcanï¿½ando o Superior~
-   Vocï¿½ esteve viajando pelo caminho da virtude e vocï¿½ tem visto os 
+Alcançando o Superior~
+   Você esteve viajando pelo caminho da virtude e você tem visto os 
 exemplos dos verdadeiros modelos do Profeta. Apenas a jornada final aguarda
-por vocï¿½. Viva assim e deverï¿½s viver para sempre.
+por você. Viva assim e deverás viver para sempre.
 ~
-15 8 0 0 0 0
-D1
-~
-~
-0 -1 1532
+15 d 0
 D2
 ~
 ~
 0 -1 1522
+D1
+~
+~
+0 -1 1532
 D5
 ~
 ~
 0 -1 1534
 S
 #1532
-Alcanï¿½ando o Superior~
-   Quando os registros dos feitos dos homens estiverem abertos e o cï¿½u for 
-desnudado; quando o Inferno queimar ferozmente e o Paraï¿½so for trazido 
-para bem perto, entï¿½o cada alma deverï¿½ saber aquilo que fez.
+Alcançando o Superior~
+   Quando os registros dos feitos dos homens estiverem abertos e o céu for 
+desnudado; quando o Inferno queimar ferozmente e o Paraíso for trazido 
+para bem perto, então cada alma deverá saber aquilo que fez.
 ~
-15 8 0 0 0 0
+15 d 0
 D1
 ~
 ~
@@ -589,13 +589,13 @@ D5
 0 -1 1535
 S
 #1533
-Alcanï¿½ando o Superior~
-   Vocï¿½ tem viajado pelo caminho da virtude e sua prï¿½pria jornada tem
-imitado a evoluï¿½ï¿½o da alma mais perfeita de todas. Apenas um caminho final
-aguarda por vocï¿½; morra como aquele na sala anterior e sua morte nï¿½o terï¿½
+Alcançando o Superior~
+   Você tem viajado pelo caminho da virtude e sua própria jornada tem
+imitado a evolução da alma mais perfeita de todas. Apenas um caminho final
+aguarda por você; morra como aquele na sala anterior e sua morte não terá
 significado nada.   
 ~
-15 8 0 0 0 0
+15 d 0
 D2
 ~
 ~
@@ -611,11 +611,11 @@ D5
 S
 #1534
 O Encontro Final~
-   A ï¿½ltima das escuridï¿½es se encontra atrï¿½s de vocï¿½; resta apenas o 
-caminho da virtude. Vï¿½ adiante de coraï¿½ï¿½o aberto. Apenas o penitente
-poderï¿½ encontrar aquilo que eles procuram.
+   A última das escuridões se encontra atrás de você; resta apenas o 
+caminho da virtude. Vá adiante de coração aberto. Apenas o penitente
+poderá encontrar aquilo que eles procuram.
 ~
-15 12 0 0 0 0
+15 cd 0
 D1
 ~
 ~
@@ -631,23 +631,23 @@ D5
 S
 #1535
 O Encontro Final~
-   A ï¿½ltima das escuridï¿½es se encontra atrï¿½s de vocï¿½; resta apenas o 
-caminho da virtude. Vï¿½ adiante de coraï¿½ï¿½o aberto. Apenas o penitente
-poderï¿½ encontrar aquilo que eles procuram.
+   A última das escuridões se encontra atrás de você; resta apenas o 
+caminho da virtude. Vá adiante de coração aberto. Apenas o penitente
+poderá encontrar aquilo que eles procuram.
 ~
-15 12 0 0 0 0
+15 cd 0
 D0
 ~
 ~
 0 -1 1537
-D1
-~
-~
-0 -1 1536
 D3
 ~
 ~
 0 -1 1534
+D1
+~
+~
+0 -1 1536
 D4
 ~
 ~
@@ -659,11 +659,11 @@ D5
 S
 #1536
 O Encontro Final~
-   A ï¿½ltima das escuridï¿½es se encontra atrï¿½s de vocï¿½; resta apenas o 
-caminho da virtude. Vï¿½ adiante de coraï¿½ï¿½o aberto. Apenas o penitente
-poderï¿½ encontrar aquilo que eles procuram.
+   A última das escuridões se encontra atrás de você; resta apenas o 
+caminho da virtude. Vá adiante de coração aberto. Apenas o penitente
+poderá encontrar aquilo que eles procuram.
 ~
-15 12 0 0 0 0
+15 cd 0
 D3
 ~
 ~
@@ -680,27 +680,27 @@ S
 #1537
 O Caminho da Virtude~
    Oh Compassivo, oh Misericordioso, Soberano do Dia do Julgamento!
-Sï¿½ a Vï¿½s nï¿½s adoramos, e sï¿½ a Vï¿½s nï¿½s pedimos ajuda. Guia-nos
-para o Caminho da Virtude, o caminho daqueles a quem Vï¿½s favorecestes,
-nï¿½o daqueles que se perderam no caminho.
+Só a Vós nós adoramos, e só a Vós nós pedimos ajuda. Guia-nos
+para o Caminho da Virtude, o caminho daqueles a quem Vós favorecestes,
+não daqueles que se perderam no caminho.
 ~
-15 8 0 0 0 0
-D0
-~
-~
-0 -1 1538
+15 d 0
 D2
 ~
 ~
 0 -1 1535
+D0
+~
+~
+0 -1 1538
 S
 #1538
-Progressï¿½o~
-   Fomos nï¿½s usados pela Primeira Criaï¿½ï¿½o?  Eles ainda estï¿½o em dï¿½vida
-a respeito da nova criaï¿½ï¿½o. Nï¿½S criamos o homem. Nï¿½s sabemos os caminhos
+Progressão~
+   Fomos nós usados pela Primeira Criação?  Eles ainda estão em dúvida
+a respeito da nova criação. NÓS criamos o homem. Nós sabemos os caminhos
 de sua alma e estamos mais perto dele do que sua veia jugular.
 ~
-15 8 0 0 0 0
+15 d 0
 D0
 ~
 ~
@@ -712,11 +712,11 @@ D2
 S
 #1539
 O Julgamento~
-   Indubitavelmente o caminho mais estreito ï¿½ o mais virtuoso. Apenas mais
-um passo aguardando antes que uma decisï¿½o final seja tomada e um lar
+   Indubitavelmente o caminho mais estreito é o mais virtuoso. Apenas mais
+um passo aguardando antes que uma decisão final seja tomada e um lar
 lhe seja dado para toda a eternidade.
 ~
-15 8 0 0 0 0
+15 d 0
 D0
 ~
 ~
@@ -728,13 +728,13 @@ D2
 S
 #1540
 O Trono Supremo~
-   Vocï¿½ finalmente chega ao local de repouso da maioria dos santificados. 
-Uma cristalina e assustadora imagem foi mostrada a vocï¿½; sete guardiï¿½es 
-circundam o trono e todos estï¿½o banhados por uma luz suave e clara. ï¿½ aqui
-que a escolha final estï¿½ para ser feita e nenhum desafio seu poderï¿½ mudar o 
+   Você finalmente chega ao local de repouso da maioria dos santificados. 
+Uma cristalina e assustadora imagem foi mostrada a você; sete guardiões 
+circundam o trono e todos estão banhados por uma luz suave e clara. É aqui
+que a escolha final está para ser feita e nenhum desafio seu poderá mudar o 
 resultado.
 ~
-15 8 0 0 0 0
+15 d 0
 D2
 ~
 ~

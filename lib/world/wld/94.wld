@@ -1,62 +1,63 @@
 #9401
 Trilha do Destino~
-   Vocï¿½ estï¿½ numa grande trilha, muros de pedras gigantescas demonstram
-que esse lugar existe hï¿½ milhï¿½es de anos.  Nos muros ï¿½ possï¿½vel notar que
-hï¿½ inscriï¿½ï¿½es e desenhos muito antigos e incompreensï¿½veis.  Ao norte, vocï¿½
-vï¿½ uma trilha e ao sul hï¿½ um caminho para uma cabana.
+   Você está numa grande trilha, muros de pedras gigantescas demonstram
+que esse lugar existe há milhões de anos.  Nos muros é possível notar que
+há inscrições e desenhos muito antigos e incompreensíveis.  Ao norte, você
+vê uma trilha e ao sul há um caminho para uma cabana.
 ~
-94 68 0 0 0 2
+94 cg 2
+ON z94
 D0
-Ao norte vocï¿½ vï¿½ uma trilha aparentemente muito antiga.
+Ao norte você vê uma trilha aparentemente muito antiga.
 ~
 ~
 0 -1 9402
 D2
-Ao sul vocï¿½ pode ver O Caminho Para a Cabana
+Ao sul você pode ver O Caminho Para a Cabana
 ~
 ~
 0 -1 1802
 E
-inscriï¿½ï¿½o inscriï¿½ï¿½es~
-As inscriï¿½ï¿½es foram feitas usando uma linguagem muito complexa e avanï¿½ada,
-usando sï¿½mbolos que vocï¿½ desconhece, provavelmente um dialeto muito antigo.
+inscrição inscrições~
+As inscrições foram feitas usando uma linguagem muito complexa e avançada,
+usando símbolos que você desconhece, provavelmente um dialeto muito antigo.
 ~
 S
 #9402
 Trilha do Destino~
-   Vocï¿½ estï¿½ numa grande trilha, quanto mais vocï¿½ se aproxima do final da
-trilha, mais seus olhos ficam perturbados.  Um sentimento que vocï¿½ nunca
-teve enche seu coraï¿½ï¿½o.  Ao sul vocï¿½ vai para o inï¿½cio da trilha e ao
-norte vocï¿½ adentra ainda mais.
+   Você está numa grande trilha, quanto mais você se aproxima do final da
+trilha, mais seus olhos ficam perturbados.  Um sentimento que você nunca
+teve enche seu coração.  Ao sul você vai para o início da trilha e ao
+norte você adentra ainda mais.
 ~
-94 68 0 0 0 2
+94 cg 2
 D0
-Ao norte vocï¿½ adentra pela trilha.
+Ao norte você adentra pela trilha.
 ~
 ~
 0 -1 9403
 D2
-Ao sul vocï¿½ pode ver o inï¿½cio da trilha.
+Ao sul você pode ver o início da trilha.
 ~
 ~
 0 -1 9401
 S
 #9403
 Trilha do Destino~
-   Vocï¿½ estï¿½ numa grande trilha.  Ao fundo, ï¿½ posssï¿½vel ouvir barulhos
-estranhos, como se almas vagassem por aqui.  Vocï¿½ estï¿½ perplexo, tendo
-sensaï¿½ï¿½es diferentes e seu coraï¿½ï¿½o pulsa cada vez mais forte.  Ao norte,
-vocï¿½ vï¿½ o fim da trilha e ao sul ela se torna um tanto extensa.  Hï¿½ uma
-outra trilha comeï¿½ando ao oeste.
+   Você está numa grande trilha.  Ao fundo, é posssível ouvir barulhos
+estranhos, como se almas vagassem por aqui.  Você está perplexo, tendo
+sensações diferentes e seu coração pulsa cada vez mais forte.  Ao norte,
+você vê o fim da trilha e ao sul ela se torna um tanto extensa.  Há uma
+outra trilha começando ao oeste.
 ~
-94 68 0 0 0 2
+94 cg 2
 D0
-Ao norte vocï¿½ vï¿½ que a trilha aparentemente estï¿½ terminando.
+Ao norte você vê que a trilha aparentemente está terminando.
 ~
 ~
 0 -1 9404
 D2
-Vocï¿½ pode ver que a trilha parece extensa.
+Você pode ver que a trilha parece extensa.
 ~
 ~
 0 -1 9402
@@ -67,13 +68,13 @@ D3
 S
 #9404
 Final da Trilha do Destino~
-   Vocï¿½ estï¿½ no Final da Trilha do Destino.   Daqui vocï¿½ pode ver a oeste
+   Você está no Final da Trilha do Destino.   Daqui você pode ver a oeste
 um grande portal que reluz como ouro, totalmente rodeado por flores
-campestres e ao leste outro grande portal, porï¿½m coberto por nuvens escuras
-o qual enche seu coraï¿½ï¿½o com um sentimento sombrio e gï¿½lido.  Ao sul estï¿½
+campestres e ao leste outro grande portal, porém coberto por nuvens escuras
+o qual enche seu coração com um sentimento sombrio e gélido.  Ao sul está
 a extensa trilha.
 ~
-94 68 0 0 0 2
+94 cg 2
 D0
 ~
 ~
@@ -84,131 +85,131 @@ Um portal extremamente sombrio.
 ~
 0 -1 9410
 D2
-Ao sul vocï¿½ pode ver uma extensa trilha.
+Ao sul você pode ver uma extensa trilha.
 ~
 ~
 0 -1 9403
 D3
-Um magnï¿½fico portal que ofusca seus olhos com tanta beleza. 
+Um magnífico portal que ofusca seus olhos com tanta beleza. 
 ~
 ~
 0 -1 9405
 S
 #9405
-O Portal do Santuï¿½rio~
-   Vocï¿½ estï¿½ diante do grande Santuï¿½rio dos Deuses Supremos e Criadores
-do mundo de Vitï¿½lia.  Uma grande luz emana de dentro do Santuï¿½rio e vocï¿½
-sente uma paz ao seu redor.  Ao lado desse portal hï¿½ uma grande pedra com
-inscriï¿½ï¿½es muito antigas e que parecem ser muito importantes.  A oeste
-vocï¿½ vï¿½ o grande santuï¿½rio e a leste o final de uma trilha.
+O Portal do Santuário~
+   Você está diante do grande Santuário dos Deuses Supremos e Criadores
+do mundo de Vitália.  Uma grande luz emana de dentro do Santuário e você
+sente uma paz ao seu redor.  Ao lado desse portal há uma grande pedra com
+inscrições muito antigas e que parecem ser muito importantes.  A oeste
+você vê o grande santuário e a leste o final de uma trilha.
 ~
-94 68 0 0 0 2
+94 cg 2
 D1
 A leste tem o final de uma trilha.
 ~
 ~
 0 -1 9404
 D3
-Ao oeste um grande santuï¿½rio dos Deuses de Vitalia.
+Ao oeste um grande santuário dos Deuses de Vitalia.
 ~
 ~
 0 -1 9406
 E
-pedra~
-Essas pedras sï¿½o enormes e as incriï¿½ï¿½es nelas parecem ser muito antigas.
-~
-E
-inscriï¿½ï¿½o inscriï¿½ï¿½es~
-   Aqui ï¿½ o Santuï¿½rio Sagrado, onde as almas do antigos anciï¿½es e
-protetores desse mundo descansam numa paz celestial. Os que aqui sï¿½o
+inscrição inscrições~
+   Aqui é o Santuário Sagrado, onde as almas do antigos anciões e
+protetores desse mundo descansam numa paz celestial. Os que aqui são
 lembrados, venceram derradeiras batalhas contra o mal.  E durante
 muitas dessas batalhas, tiveram apenas como arma o AMOR, a HONRA e
-acima de tudo a HONESTIDADE.  No centro da sala vocï¿½ vï¿½ uma maravilhosa
-fonte de ï¿½gua pura e cristalina.
+acima de tudo a HONESTIDADE.  No centro da sala você vê uma maravilhosa
+fonte de água pura e cristalina.
+~
+E
+pedra~
+Essas pedras são enormes e as incrições nelas parecem ser muito antigas.
 ~
 S
 #9406
-O Santuï¿½rio~
-   Vocï¿½ estï¿½ dentro do Santuï¿½rio.  Ao norte e ao sul vocï¿½ vï¿½ as grandes
-estï¿½tuas dos Deuses Criadores. No fundo do corredor vocï¿½ tem sua vista
-ofuscada pela grande beleza das estï¿½tuas dos Deuses Supremos.  E a leste
-vocï¿½ pode ver o grande portal.
+O Santuário~
+   Você está dentro do Santuário.  Ao norte e ao sul você vê as grandes
+estátuas dos Deuses Criadores. No fundo do corredor você tem sua vista
+ofuscada pela grande beleza das estátuas dos Deuses Supremos.  E a leste
+você pode ver o grande portal.
 ~
-94 655484 0 0 0 0
+94 cdefgrt 0
 D0
-Vocï¿½ vï¿½ as estï¿½tuas dos grandes Deuses Criadores.
+Você vê as estátuas dos grandes Deuses Criadores.
 ~
 ~
 0 -1 9409
 D1
-Um magnï¿½fico portal que ofusca seus olhos com tanta beleza.
+Um magnífico portal que ofusca seus olhos com tanta beleza.
 ~
 ~
 0 -1 9405
 D2
-Vocï¿½ vï¿½ as estï¿½tuas dos grandes Deuses Criadores.
+Você vê as estátuas dos grandes Deuses Criadores.
 ~
 ~
 0 -1 9408
 D3
-Vocï¿½ vï¿½ as estï¿½tuas dos grandes Deuses Supremos.
+Você vê as estátuas dos grandes Deuses Supremos.
 ~
 ~
 0 -1 9407
 S
 #9407
-O Santuï¿½rio~
-   Vocï¿½ esta diante da estï¿½tua dos grandes Deuses Supremos. Feitas
-totalmente em ouro e marfim. ï¿½ incompreensï¿½vel como tanta beleza pode
-ficar intacta milenios apï¿½s sua construï¿½ï¿½o.  A leste fica o centro da
+O Santuário~
+   Você esta diante da estátua dos grandes Deuses Supremos. Feitas
+totalmente em ouro e marfim. É incompreensível como tanta beleza pode
+ficar intacta milenios após sua construção.  A leste fica o centro da
 sala.
 ~
-94 655484 0 0 0 0
+94 cdefgrt 0
 D1
-Ao leste vocï¿½ vï¿½ o centro desse magnï¿½fico santuï¿½rio.
+Ao leste você vê o centro desse magnífico santuário.
 ~
 ~
 0 -1 9406
 S
 #9408
-O Santuï¿½rio~
-   Vocï¿½ esta diante da estï¿½tua dos grandes Deuses Criadores, feita
-totalmente em ouro e marfim. ï¿½ incompreensï¿½vel como tanta beleza pode
-ficar intacta milï¿½nios apï¿½s sua construï¿½ï¿½o.  Ao norte vocï¿½ pode ver
+O Santuário~
+   Você esta diante da estátua dos grandes Deuses Criadores, feita
+totalmente em ouro e marfim. É incompreensível como tanta beleza pode
+ficar intacta milênios após sua construção.  Ao norte você pode ver
 o centro da sala.
 ~
-94 655484 0 0 0 0
+94 cdefgrt 0
 D0
-Ao norte vocï¿½ vï¿½ o centro desse magnï¿½fico santuï¿½rio.
+Ao norte você vê o centro desse magnífico santuário.
 ~
 ~
 0 -1 9406
 S
 #9409
-O Santuï¿½rio~
-   Vocï¿½ esta diante da estï¿½tua dos grandes Deuses Criadores. Feitas
-totalmente em ouro e marfim. ï¿½ incompreensï¿½vel como tanta beleza pode
-ficar intacta milenios apï¿½s sua construï¿½ï¿½o.  Ao sul vocï¿½ pode ver o
+O Santuário~
+   Você esta diante da estátua dos grandes Deuses Criadores. Feitas
+totalmente em ouro e marfim. É incompreensível como tanta beleza pode
+ficar intacta milenios após sua construção.  Ao sul você pode ver o
 centro da sala.
 ~
-94 655484 0 0 0 0
+94 cdefgrt 0
 D2
-Ao sul vocï¿½ vï¿½ o centro desse magnï¿½fico santuï¿½rio.
+Ao sul você vê o centro desse magnífico santuário.
 ~
 ~
 0 -1 9406
 S
 #9410
-Portal da Desolaï¿½ï¿½o~
-   Vocï¿½ esta diante de um portal nebuloso, coberto por nuvens escuras.
+Portal da Desolação~
+   Você esta diante de um portal nebuloso, coberto por nuvens escuras.
 Gemidos vindos de dentro ecoam por todos os lados, um sentimento de
-tristeza e melancolia invade seu coraï¿½ï¿½o. Ao lado desse portal hï¿½ uma
-grande pedra com inscriï¿½ï¿½es muito antigas e que parecem ser muito 
-importantes.  A leste vocï¿½ uma grande sala e oeste o final de uma trilha.
+tristeza e melancolia invade seu coração. Ao lado desse portal há uma
+grande pedra com inscrições muito antigas e que parecem ser muito 
+importantes.  A leste você uma grande sala e oeste o final de uma trilha.
 ~
-94 68 0 0 0 2
+94 cg 2
 D1
-Uma grande sala que faz vocï¿½ sentir calafrios.
+Uma grande sala que faz você sentir calafrios.
 ~
 ~
 0 -1 9411
@@ -218,41 +219,41 @@ A oeste tem o final de uma trilha.
 ~
 0 -1 9404
 E
-pedra~
-Essas pedras sï¿½o enormes e as incriï¿½ï¿½es nelas parecem ser muito antigas.
+inscrição inscrições~
+   Durantes muitas vezes, houve batalhas entre os Deuses de Vitalia e fortes
+oponentes.  Os fortes, mesmo sendo inimigos sempre foram e sempre serão
+merecedores de respeito pela sua coragem, porém os que aqui estão
+confinados, nada mais merecem do que o desprezo e o repudio de quem sempre
+tentou mante-los no caminho da honra.  Movidos pelo sentimento de ganâcia,
+desrespeito e traição, hoje apenas servem de exemplos de DESONESTIDADE e
+VERGONHA.
 ~
 E
-inscriï¿½ï¿½o inscriï¿½ï¿½es~
-   Durantes muitas vezes, houve batalhas entre os Deuses de Vitalia e fortes
-oponentes.  Os fortes, mesmo sendo inimigos sempre foram e sempre serï¿½o
-merecedores de respeito pela sua coragem, porï¿½m os que aqui estï¿½o
-confinados, nada mais merecem do que o desprezo e o repudio de quem sempre
-tentou mante-los no caminho da honra.  Movidos pelo sentimento de ganï¿½cia,
-desrespeito e traiï¿½ï¿½o, hoje apenas servem de exemplos de DESONESTIDADE e
-VERGONHA.
+pedra~
+Essas pedras são enormes e as incrições nelas parecem ser muito antigas.
 ~
 S
 #9411
-Sala da Desolaï¿½ï¿½o~
-   Vocï¿½ estï¿½ dentro de uma grande sala, duas pequenas tochas iluminam esse
-lugar sombrio. Ao norte e ao sul vocï¿½ pode ver enormes blocos de gelo.
-Vocï¿½ percebe que dentro dos blocos de gelos hï¿½ algumas coisas estranhas.  A
-oeste vocï¿½ ve um grande portal e a leste um corredor.  No centro da sala 
-hï¿½ uma fonte jorrando um lï¿½quido estranho, de cor avermelhada.
+Sala da Desolação~
+   Você está dentro de uma grande sala, duas pequenas tochas iluminam esse
+lugar sombrio. Ao norte e ao sul você pode ver enormes blocos de gelo.
+Você percebe que dentro dos blocos de gelos há algumas coisas estranhas.  A
+oeste você ve um grande portal e a leste um corredor.  No centro da sala 
+há uma fonte jorrando um líquido estranho, de cor avermelhada.
 ~
-94 1179772 0 0 0 0
+94 cdefgru 0
 D0
-Uma visï¿½o horrï¿½vel, grandes blocos de gelo com aspecto assustador.
+Uma visão horrível, grandes blocos de gelo com aspecto assustador.
 ~
 ~
 0 -1 9413
 D1
-Vocï¿½ o inï¿½cio de um grande corredor.
+Você o início de um grande corredor.
 ~
 ~
 0 -1 9414
 D2
-Uma visï¿½o horrï¿½vel, grandes blocos de gelo com aspecto assustador.
+Uma visão horrível, grandes blocos de gelo com aspecto assustador.
 ~
 ~
 0 -1 9412
@@ -263,13 +264,13 @@ Um portal extremamente sombrio.
 0 -1 9410
 S
 #9412
-Sala da Desolaï¿½ï¿½o~
-  Vocï¿½ estï¿½ diante de grandes blocos de gelo, dentro deles vocï¿½ pode ver o
+Sala da Desolação~
+  Você está diante de grandes blocos de gelo, dentro deles você pode ver o
 corpos apodrecidos mas que ainda parecem estar vivos em algum lugar, onde
-o sofrimento ï¿½ ï¿½nica coisa que possuem como companhia.  Ao norte, vocï¿½ vï¿½
+o sofrimento é única coisa que possuem como companhia.  Ao norte, você vê
 o centro da sala.
 ~
-94 1179772 0 0 0 0
+94 cdefgru 0
 D0
 O centro dessa sala sombria.
 ~
@@ -277,13 +278,13 @@ O centro dessa sala sombria.
 0 -1 9411
 S
 #9413
-Sala da Desolaï¿½ï¿½o~
-  Vocï¿½ estï¿½ diante de grandes blocos de gelo, dentro deles vocï¿½ pode ver os
+Sala da Desolação~
+  Você está diante de grandes blocos de gelo, dentro deles você pode ver os
 corpos apodrecidos mas que ainda parecem estar vivos em algum lugar, onde
-o sofrimento ï¿½ ï¿½nica coisa que possuem como companhia.  Ao sul vocï¿½ vï¿½
+o sofrimento é única coisa que possuem como companhia.  Ao sul você vê
 o centro da sala.
 ~
-94 1179772 0 0 0 0
+94 cdefgru 0
 D2
 O centro dessa sala sombria.
 ~
@@ -292,49 +293,49 @@ O centro dessa sala sombria.
 S
 #9414
 Inicio do Corredor~
-   Vocï¿½ estï¿½ no inï¿½cio de um grande corredor.  Este lugar ï¿½ gï¿½lido e
-sombrio, sï¿½ de olhar vocï¿½ jï¿½ sente arrepios.  Morcegos dormem dependurados 
-no teto.   Sua curiosidade manda vocï¿½ seguir em frente, a oeste vocï¿½ vï¿½ uma
+   Você está no início de um grande corredor.  Este lugar é gélido e
+sombrio, só de olhar você já sente arrepios.  Morcegos dormem dependurados 
+no teto.   Sua curiosidade manda você seguir em frente, a oeste você vê uma
 grande sala.
 ~
-94 131180 0 0 0 0
+94 cdfgr 0
 D1
 Um grande corredor.
 ~
 ~
 0 -1 9415
 D3
-Uma grande sala que faz vocï¿½ sentir calafrios.
+Uma grande sala que faz você sentir calafrios.
 ~
 ~
 0 -1 9411
 S
 #9415
 Corredor Sombrio~
-   A cada passo que vocï¿½ dï¿½ parece que a iluminaï¿½ï¿½o fica cada vez mais
+   A cada passo que você dá parece que a iluminação fica cada vez mais
 fraca.  Um vento frio quase apaga as tochas penduradas nas paredes feitas de
-pedra, que parecem ter sï¿½culos.  A oeste vocï¿½ vï¿½ o inï¿½cio do corredor e ao
-sul vocï¿½ vï¿½ muito pouco por causa da falta de iluminaï¿½ï¿½o.
+pedra, que parecem ter séculos.  A oeste você vê o início do corredor e ao
+sul você vê muito pouco por causa da falta de iluminação.
 ~
-94 131180 0 0 0 0
+94 cdfgr 0
 D2
-Vocï¿½ imagina ser um corredor.
+Você imagina ser um corredor.
 ~
 ~
 0 -1 9416
 D3
-Vocï¿½ vï¿½ o inicio do corredor.
+Você vê o inicio do corredor.
 ~
 ~
 0 -1 9414
 S
 #9416
 Corredor Sombrio~
-   Nosssaaaaaa !!!! Um morcego enorme atirou-se por cima de vocï¿½!!!
-Cuidado!!   Com certeza ele estava mais com medo de vocï¿½ do que vocï¿½ dele.
+   Nosssaaaaaa !!!! Um morcego enorme atirou-se por cima de você!!!
+Cuidado!!   Com certeza ele estava mais com medo de você do que você dele.
 O longo corredor continua a norte e a leste.
 ~
-94 131180 0 0 0 0
+94 cdfgr 0
 D0
 Um grande corredor.
 ~
@@ -348,32 +349,32 @@ Um grande corredor.
 S
 #9417
 Corredor Sombrio~
-   Tudo estï¿½ muito escuro aqui.  Nem queira imaginar o que aconteceria se 
-vocï¿½ estivesse sem sua luz.   Esta parte do corredor estï¿½ totalmente escura, 
-parece que alguï¿½m apagou a tocha de propï¿½sito.  Vocï¿½ com muita dificuldade
-vï¿½ que o corredor continua a oeste e ao sul.
+   Tudo está muito escuro aqui.  Nem queira imaginar o que aconteceria se 
+você estivesse sem sua luz.   Esta parte do corredor está totalmente escura, 
+parece que alguém apagou a tocha de propósito.  Você com muita dificuldade
+vê que o corredor continua a oeste e ao sul.
 ~
-94 131181 0 0 0 0
+94 acdfgr 0
 D2
-Vocï¿½ imagina ser um grande corredor.
+Você imagina ser um grande corredor.
 ~
 ~
 0 -1 9418
 D3
-Vocï¿½ imagina ser um grande corredor.
+Você imagina ser um grande corredor.
 ~
 ~
 0 -1 9416
 S
 #9418
 Corredor Sombrio~
-   Vocï¿½ tropeï¿½a em algo... Ahhhhhhhhhhhhh !!! Uma caveira apodrecida pelo
-tempo.  Pobre coitado, pelo jeito esse nï¿½o teve tempo de conhecer o resto
-do caminho.  Queiram os Deuses que vocï¿½ tenha mais sorte que esse pobre
-aventureiro...  Vocï¿½ pode ver o fim do corredor a leste e ao norte parece
+   Você tropeça em algo... Ahhhhhhhhhhhhh !!! Uma caveira apodrecida pelo
+tempo.  Pobre coitado, pelo jeito esse não teve tempo de conhecer o resto
+do caminho.  Queiram os Deuses que você tenha mais sorte que esse pobre
+aventureiro...  Você pode ver o fim do corredor a leste e ao norte parece
 que ele se alonga cada vez mais.
 ~
-94 131181 0 0 0 0
+94 acdfgr 0
 D0
 Parece ser um longo corredor.
 ~
@@ -387,50 +388,50 @@ O final do corredor.
 S
 #9419
 Fim do Corredor~
-   Vocï¿½ vï¿½ um alï¿½apï¿½o no chï¿½o, muito antigo e muito pesado.  Uma escada
-velha e apodrecida leva atï¿½ o subterrï¿½neo.  Serï¿½ que seria uma boa idï¿½ia
-descer ?  Nï¿½o ï¿½ possivel ver muita coisa daqui de cima.  A oeste tem um
+   Você vê um alçapão no chão, muito antigo e muito pesado.  Uma escada
+velha e apodrecida leva até o subterrâneo.  Será que seria uma boa idéia
+descer ?  Não é possivel ver muita coisa daqui de cima.  A oeste tem um
 grande corredor.
 ~
-94 131181 0 0 0 0
+94 acdfgr 0
+D5
+Um alçapão muito estreito.
+~
+~
+0 -1 9420
 D3
 Um grande corredor.
 ~
 ~
 0 -1 9418
-D5
-Um alï¿½apï¿½o muito estreito.
-~
-~
-0 -1 9420
 S
 #9420
 A Escada~
-   Parece que vocï¿½ nï¿½o tem muita escolha, tanto para cima quanto para baixo
-ï¿½ quase impossivel de se ver.  Esse alï¿½apï¿½o ï¿½ estreito e muito sujo, parece
-que nï¿½o passa alguem aqui hï¿½ anos.
+   Parece que você não tem muita escolha, tanto para cima quanto para baixo
+é quase impossivel de se ver.  Esse alçapão é estreito e muito sujo, parece
+que não passa alguem aqui há anos.
 ~
-94 131437 0 0 0 0
+94 acdfgir 0
 D4
-Vocï¿½ nï¿½o consegue ver nada.
+Você não consegue ver nada.
 ~
 ~
 0 -1 9419
 D5
-Vocï¿½ nï¿½o consegue ver nada.
+Você não consegue ver nada.
 ~
 ~
 0 -1 9421
 S
 #9421
 A Escada~
-   A escada ï¿½ mais longa do que vocï¿½ imaginava.  E parece que nï¿½o muito
-resistente tambï¿½m.  Vocï¿½ escuta gritos vindos lï¿½ de baixo.  Para cima a luz
-ï¿½ tï¿½o fraca que vocï¿½ nï¿½o pode ver quase nada.
+   A escada é mais longa do que você imaginava.  E parece que não muito
+resistente também.  Você escuta gritos vindos lá de baixo.  Para cima a luz
+é tão fraca que você não pode ver quase nada.
 ~
-94 131437 0 0 0 0
+94 acdfgir 0
 D4
-Vocï¿½ nï¿½o consegue ver nada.
+Você não consegue ver nada.
 ~
 ~
 0 -1 9420
@@ -442,18 +443,19 @@ Parece ser o fim da escada.
 S
 #9422
 O Fim da Escada~
-   Vocï¿½ estï¿½ no final da escada e, graï¿½as a quatro tochas enormes, a
-iluminaï¿½ï¿½o nesta sala ï¿½ razoï¿½vel.  Vocï¿½ vï¿½ a oeste uma porta enorme
+   Você está no final da escada e, graças a quatro tochas enormes, a
+iluminação nesta sala é razoável.  Você vê a oeste uma porta enorme
 com uma pequena janela em seu centro e para cima uma longa escada.
-   Aparentemente hï¿½ algo muito curioso atrï¿½s dessa porta de ferro. 
-E mais curioso ainda ï¿½ a @RPLACA@n muito importante que estï¿½ fixada na
+   Aparentemente há algo muito curioso atrás dessa porta de ferro. 
+E mais curioso ainda é a &RPLACA&n muito importante que está fixada na
 parede.
 ~
-94 131436 0 0 0 0
+94 cdfgir 0
 D3
-A oeste vocï¿½ uma porta de ferro muito resistente.
+A oeste você uma porta de ferro muito resistente.
 ~
 porta~
+:n 2 a porta de ferro
 1 2 600
 D4
 Uma longa escada.
@@ -461,11 +463,11 @@ Uma longa escada.
 ~
 0 -1 9421
 E
-inscriï¿½ï¿½o inscriï¿½ï¿½es placa~
-   Vocï¿½ estï¿½ entrando em um recinto de respeito e alta seguranï¿½a.  Jamais
-tente burlar as leis aqui vigentes ou sua estadia aqui poderï¿½ ser mais
-longa do que vocï¿½ possa imaginar.  Quando adentrar esse recinto tenha em
-mente somente uma coisa... o @RPOLICY@n !!!
+inscrição inscrições placa~
+   Você está entrando em um recinto de respeito e alta segurança.  Jamais
+tente burlar as leis aqui vigentes ou sua estadia aqui poderá ser mais
+longa do que você possa imaginar.  Quando adentrar esse recinto tenha em
+mente somente uma coisa... o &RPOLICY&n !!!
 ~
 S
-$~
+$

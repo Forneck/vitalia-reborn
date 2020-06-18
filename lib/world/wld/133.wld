@@ -1,13 +1,13 @@
 #13301
 Um Campo Verdejante~
-   Vocï¿½ estï¿½ viajando atravï¿½s de um grande campo verdejante.  O vento sopra
-suavemente, balanï¿½ando a relva que se curva de maneira preguiï¿½osa num
-movimento pendular.  Ao norte vocï¿½ nota uma espï¿½cie de Templo, suas grandes
+   Você está viajando através de um grande campo verdejante.  O vento sopra
+suavemente, balançando a relva que se curva de maneira preguiçosa num
+movimento pendular.  Ao norte você nota uma espécie de Templo, suas grandes
 paredes brancas brilham com a luz do sol.
 ~
-133 4 0 0 0 2
+133 c 2
 D0
-Vocï¿½ vï¿½ a entrada para um Templo.
+Você vê a entrada para um Templo.
 ~
 ~
 0 -1 13302
@@ -17,84 +17,86 @@ D2
 0 -1 3584
 E
 grama relva~
-A grama ï¿½ intensamente verde e relaxante de se olhar. Vocï¿½ poderia colocï¿½-la 
+A grama é intensamente verde e relaxante de se olhar. Você poderia colocá-la 
 no canto da boca e mastigar a raiz como os fazendeiros fazem.
 ~
 S
 #13302
 Antes do Templo~
-   A brancura deslumbrante dos muros do Templo cegam vocï¿½ momentaneamente.
-Enormes colunas circundam homogeneamente o perï¿½metro do Templo e uma abï¿½boda
+   A brancura deslumbrante dos muros do Templo cegam você momentaneamente.
+Enormes colunas circundam homogeneamente o perímetro do Templo e uma abóboda
 em forma de arco o convida a entrar.
 ~
-133 4 0 0 0 2
-D0
-Hï¿½ um enorme arco para o norte.
-~
-~
-0 -1 13303
+133 c 2
 D2
-Parece um campo nessa direï¿½ï¿½o.
+Parece um campo nessa direção.
 ~
 ~
 0 -1 13301
+D0
+Há um enorme arco para o norte.
+~
+~
+0 -1 13303
 S
 #13303
 Sob o Grande Arco~
-   Seus olhos lentamente se ajustam ao nï¿½vel de escuridï¿½o projetada pela
-sombra do enorme arco.  Ao norte hï¿½ uma grande porta de mï¿½rmore, que parece
+   Seus olhos lentamente se ajustam ao nível de escuridão projetada pela
+sombra do enorme arco.  Ao norte há uma grande porta de mármore, que parece
 ser o melhor caminho para o interior do Templo.  "De onde vem este desejo
-arrebatador de entrar lï¿½ ?", vocï¿½ pensa.  Vocï¿½ encolhe seus ombros e
-repentinamente uma estranha sensaï¿½ï¿½o de estar sendo observado o invade.
+arrebatador de entrar lá ?", você pensa.  Você encolhe seus ombros e
+repentinamente uma estranha sensação de estar sendo observado o invade.
 ~
-133 8 0 0 0 0
-D0
-Vocï¿½ vï¿½ um enorme muro de Mï¿½rmore.  Ele foi MUITO bem polido.
-~
-porta mï¿½rmore~
-2 13305 13305
+133 d 0
 D2
-Vocï¿½ vï¿½ um facho de luz vindo da entrada do Templo.
+Você vê um facho de luz vindo da entrada do Templo.
 ~
 ~
 0 -1 13302
+D0
+Você vê um enorme muro de Mármore.  Ele foi MUITO bem polido.
+~
+porta mármore~
+:n 2 a porta
+2 13305 13305
 E
-mï¿½rmore~
-ï¿½ uma porta de mï¿½rmore muito bem polida.
+mármore~
+É uma porta de mármore muito bem polida.
 ~
 S
 #13304
 O Templo~
-   O eco de suas passadas reverberam por todo o Templo.  Tudo ï¿½ branco, o
-piso do chï¿½o, os muros, o teto...
+   O eco de suas passadas reverberam por todo o Templo.  Tudo é branco, o
+piso do chão, os muros, o teto...
 ~
-133 8 0 0 0 0
+133 d 0
 D0
-Vocï¿½ vï¿½ uma sala no Templo.
+Você vê uma sala no Templo.
 ~
 ~
 0 -1 13307
 D1
-Vocï¿½ vï¿½ uma sala no Templo.
+Você vê uma sala no Templo.
 ~
 ~
 0 -1 13305
 S
 #13305
 O Templo~
-   O eco de suas passadas reverberam por todo o Templo.  Tudo ï¿½ branco, o
-piso do chï¿½o, os muros, o teto...
+   O eco de suas passadas reverberam por todo o Templo.  Tudo é branco, o
+piso do chão, os muros, o teto...
 ~
-133 8 0 0 0 0
+133 d 0
 D1
-Vocï¿½ vï¿½ uma sala no Templo.
+Você vê uma sala no Templo.
 ~
 ~
 0 -1 13306
 D2
-Vocï¿½ vï¿½ a passagem arcada.
+Você vê a passagem arcada.
 ~
-porta mï¿½rmore~
+porta mármore~
+:n 2 a porta
 2 13305 13303
 D3
 ~
@@ -103,335 +105,338 @@ D3
 S
 #13306
 O Templo~
-   O eco de suas passadas reverberam por todo o Templo.  Tudo ï¿½ branco, o
-piso do chï¿½o, os muros, o teto...
+   O eco de suas passadas reverberam por todo o Templo.  Tudo é branco, o
+piso do chão, os muros, o teto...
 ~
-133 8 0 0 0 0
+133 d 0
 D0
-Vocï¿½ vï¿½ uma sala no Templo.
+Você vê uma sala no Templo.
 ~
 ~
 0 -1 13309
 D3
-Vocï¿½ vï¿½ uma sala no Templo.
+Você vê uma sala no Templo.
 ~
 ~
 0 -1 13305
 S
 #13307
 O Templo~
-   O eco de suas passadas reverberam por todo o Templo.  Tudo ï¿½ branco, o
-piso do chï¿½o, os muros, o teto...
+   O eco de suas passadas reverberam por todo o Templo.  Tudo é branco, o
+piso do chão, os muros, o teto...
 ~
-133 8 0 0 0 0
+133 d 0
 D0
-Hï¿½ uma escadaria para o norte.
+Há uma escadaria para o norte.
 ~
 ~
 0 -1 13310
 D1
-Vocï¿½ vï¿½ um pequeno jardim ao leste.
+Você vê um pequeno jardim ao leste.
 ~
 ~
 0 -1 13308
 D2
-Vocï¿½ vï¿½ uma sala no Templo.
+Você vê uma sala no Templo.
 ~
 ~
 0 -1 13304
 S
 #13308
-O ï¿½trio e o Jardim~
-   Uma brisa ï¿½ gerada pelas belas folhas verdes cercadas por varas de bambus
-deixadas viradas para captar melhor os raios solares do cï¿½u aberto.  O
+O Átrio e o Jardim~
+   Uma brisa é gerada pelas belas folhas verdes cercadas por varas de bambus
+deixadas viradas para captar melhor os raios solares do céu aberto.  O
 cheiro da terra negra sobrepuja seus sentidos e um pequeno riacho corre a
-seus pï¿½s.
+seus pés.
 ~
-133 0 0 0 0 2
+133 0 2
 D0
-Vocï¿½ vï¿½ uma sala no Templo.
+Você vê uma sala no Templo.
 ~
 ~
 0 -1 13311
 D1
-Vocï¿½ vï¿½ uma sala no Templo.
+Você vê uma sala no Templo.
 ~
 ~
 0 -1 13309
 D3
-Vocï¿½ vï¿½ uma sala no Templo.
+Você vê uma sala no Templo.
 ~
 ~
 0 -1 13307
 E
-plantas folhas~
-Elas parecem ir muito bem, alguï¿½m por aqui tem uma boa mï¿½o para jardinagem.
-~
-E
 riacho~
 Um belo riacho correndo sempre no mesmo sentido!
+~
+E
+plantas folhas~
+Elas parecem ir muito bem, alguém por aqui tem uma boa mão para jardinagem.
 ~
 S
 #13309
 O Templo~
-   O eco de suas passadas reverberam por todo o Templo.  Tudo ï¿½ branco, o
-piso do chï¿½o, os muros, o teto...
+   O eco de suas passadas reverberam por todo o Templo.  Tudo é branco, o
+piso do chão, os muros, o teto...
 ~
-133 8 0 0 0 0
+133 d 0
 D0
-Hï¿½ uma escadaria para o norte.
+Há uma escadaria para o norte.
 ~
 ~
 0 -1 13312
 D2
-Vocï¿½ vï¿½ uma sala no Templo.
+Você vê uma sala no Templo.
 ~
 ~
 0 -1 13306
 D3
-Vocï¿½ vï¿½ um pequeno jardim nesta direï¿½ï¿½o.
+Você vê um pequeno jardim nesta direção.
 ~
 ~
 0 -1 13308
 S
 #13310
 As Escadarias~
-   ï¿½ uma bela escada em espiral conduzindo vocï¿½ para um plano mais elevado.
+   É uma bela escada em espiral conduzindo você para um plano mais elevado.
 Parece ter sido esculpida diretamente da pedra.
-~
-133 8 0 0 0 0
+~  
+133 d 0
 D2
-Vocï¿½ vï¿½ uma sala no Templo.
+Você vê uma sala no Templo.
 ~
 ~
 0 -1 13307
 D4
-Vocï¿½ nï¿½o pode ver muito bem aqui de cima da escada.
+Você não pode ver muito bem aqui de cima da escada.
 ~
 ~
 0 -1 13313
 E
 escadaria escada~
-ï¿½ realmente o trabalho de um excelente escultor!
+É realmente o trabalho de um excelente escultor!
 ~
 S
 #13311
 O Templo~
-   O eco de suas passadas reverberam por todo o Templo.  Tudo ï¿½ branco, o
-piso do chï¿½o, os muros, o teto...  Hï¿½ uma bela placa emoldurada na parede
+   O eco de suas passadas reverberam por todo o Templo.  Tudo é branco, o
+piso do chão, os muros, o teto...  Há uma bela placa emoldurada na parede
 norte.
 ~
-133 8 0 0 0 0
+133 d 0
 D2
-Hï¿½ um pequeno jardim ao sul.
+Há um pequeno jardim ao sul.
 ~
 ~
 0 -1 13308
 E
 placa emoldurada moldura norte~
 
-          *-*-*-* Templo do Grande Bï¿½falo -*-*-*
+          *-*-*-* Templo do Grande Búfalo -*-*-*
           *                                    *
           *          Traduzida por             *
           *             Boromir                *
-          *       Para o Mundo de Vitï¿½lia      *
+          *       Para o Mundo de Vitália      *
           *                                    *
           *-*-*-*-*-*o==[=====-*-*-*-*-*-*-*-*-*
 ~
 S
 #13312
 As Escadarias~
-   ï¿½ uma bela escada em espiral conduzindo vocï¿½ para um plano mais elevado.
+   É uma bela escada em espiral conduzindo você para um plano mais elevado.
 Parece ter sido esculpida diretamente na pedra.
 ~
-133 8 0 0 0 0
+133 d 0
 D2
-Vocï¿½ vï¿½ uma sala no Templo.
+Você vê uma sala no Templo.
 ~
 ~
 0 -1 13309
 D4
-vocï¿½ nï¿½o consegue ver muito bem daqui de cima da escada.
+você não consegue ver muito bem daqui de cima da escada.
 ~
 ~
 0 -1 13315
 S
 #13313
 A Parte Superior do Templo ~
-   Vocï¿½ se encontra em uma pequena sala no topo da escada.  Esta parte do
-Templo tem decoraï¿½ï¿½es bastante estranhas.  As paredes sï¿½o cobertas com
-murais e peles.  Um corredor comeï¿½a ao sul e vocï¿½ pode voltar para baixo
+   Você se encontra em uma pequena sala no topo da escada.  Esta parte do
+Templo tem decorações bastante estranhas.  As paredes são cobertas com
+murais e peles.  Um corredor começa ao sul e você pode voltar para baixo
 pela escada.
 ~
-133 9 0 0 0 0
+133 ad 0
 D2
-Vocï¿½ vï¿½ um corredor.
+Você vê um corredor.
 ~
 ~
 0 -1 13316
 D5
-Vocï¿½ vï¿½ o inï¿½cio da escadaria.
+Você vê o início da escadaria.
 ~
 ~
 0 -1 13310
 E
-pele~
-A pele ï¿½ marron, curta e ï¿½spera.
-~
-E
 mural imagens~
 O mural mostra uma besta peluda com dois chifres pontudos.
+~
+E
+pele~
+A pele é marron, curta e áspera.
 ~
 S
 #13314
 O Quarto de Mateon~
-   Vocï¿½ se encontra em um pequeno e apertado quarto.  Hï¿½ uma janela na
-parede norte e um grande porta de carvalho estï¿½ a oeste.
+   Você se encontra em um pequeno e apertado quarto.  Há uma janela na
+parede norte e um grande porta de carvalho está a oeste.
 ~
-133 8 0 0 0 0
+133 d 0
 D1
-Hï¿½ uma grande porta de carvalho nesta direï¿½ï¿½o.
+Há uma grande porta de carvalho nesta direção.
 ~
 porta carvalho~
+:n 2 a porta
 2 13306 13315
 E
 janela~
-A janela dï¿½ vista para um campo gramado.
+A janela dá vista para um campo gramado.
 ~
 S
 #13315
 A Parte Superior do Templo~
-   Vocï¿½ se encontra no topo de um lance de escada.  Uma enorme porta de
-carvalho estï¿½ a oeste, um corredor comeï¿½a ao sul e a escada continua sendo
-uma opï¿½ï¿½o para levï¿½-lo para baixo.
+   Você se encontra no topo de um lance de escada.  Uma enorme porta de
+carvalho está a oeste, um corredor começa ao sul e a escada continua sendo
+uma opção para levá-lo para baixo.
 ~
-133 9 0 0 0 0
+133 ad 0
 D2
 Parece um corredor.
 ~
 ~
 0 -1 13318
 D3
-Hï¿½ uma porta de carvalho por aqui.
+Há uma porta de carvalho por aqui.
 ~
 porta carvalho~
+:n 2 a porta
 2 13306 13314
 D5
-Vocï¿½ vï¿½ o inï¿½cio da escadaria.
+Você vê o início da escadaria.
 ~
 ~
 0 -1 13312
 S
 #13316
 O Corredor~
-   Vocï¿½ estï¿½ parado em um frio corredor.  Hï¿½ uma janela posta na parede
+   Você está parado em um frio corredor.  Há uma janela posta na parede
 oeste e uma sacada a leste o protege de uma queda nos jardins.
 ~
-133 8 0 0 0 0
+133 d 0
 D0
-Vocï¿½ vï¿½ a escadaria.
+Você vê a escadaria.
 ~
 ~
 0 -1 13313
 D2
-Hmm.. parece um beco sem saï¿½da.  Vocï¿½ sente um calafrio.
+Hmm.. parece um beco sem saída.  Você sente um calafrio.
 ~
 ~
 0 -1 13319
 E
-janela~
-A janela oferece a vista panorï¿½mica de um campo gramado.
+sacada~
+Feita de madeira polida.  Você pode ver o jardim logo abaixo.
 ~
 E
-sacada~
-Feita de madeira polida.  Vocï¿½ pode ver o jardim logo abaixo.
+janela~
+A janela oferece a vista panorâmica de um campo gramado.
 ~
 S
 #13317
 O Quarto de Aten~
-   Vocï¿½ estï¿½ diante de um quarto confortavel.  A luz do sol entra
-diretamente pela janela aberta e uma agradï¿½vel e quente brisa primaveril
-sopra em seus cabelos.  Peles grossas cobrem o chï¿½o e as paredes de pedra.
+   Você está diante de um quarto confortavel.  A luz do sol entra
+diretamente pela janela aberta e uma agradável e quente brisa primaveril
+sopra em seus cabelos.  Peles grossas cobrem o chão e as paredes de pedra.
 Uma mesa rajada, feita de carvalho, foi posta no centro do quarto e uma cama
-junto ï¿½ parede.  Vocï¿½ olha pela janela e se surpreende ao notar que nï¿½o
-consegue ver o chï¿½o por ela.
+junto à parede.  Você olha pela janela e se surpreende ao notar que não
+consegue ver o chão por ela.
 ~
-133 8 0 0 0 0
+133 d 0
 S
 #13318
 O Corredor~
-   Vocï¿½ estï¿½ parado em um frio corredor.  Hï¿½ uma janela posta na parede
+   Você está parado em um frio corredor.  Há uma janela posta na parede
 leste e uma sacada a oeste o protege de uma queda nos jardins.
 ~
-133 8 0 0 0 0
+133 d 0
 D0
-Vocï¿½ vï¿½ a escadaria.
+Você vê a escadaria.
 ~
 ~
 0 -1 13315
 D2
-Vocï¿½ nï¿½o consegue ver muito bem.. estï¿½ realmente escuro nesta direï¿½ï¿½o.
+Você não consegue ver muito bem.. está realmente escuro nesta direção.
 ~
 ~
 0 -1 13321
 E
-sacada~
-Feito de madeira polida.  Vocï¿½ pode ver o jardim logo abaixo.
-~
-E
 janela~
 A janela mostra um campo gramado.
 ~
+E
+sacada~
+Feito de madeira polida.  Você pode ver o jardim logo abaixo.
+~
 S
 #13319
-O Beco sem Saï¿½da~
-   O Corredor termina abruptamente aqui e a ï¿½nica saï¿½da parece ser a volta
-pelo caminho por onde vocï¿½ veio.
+O Beco sem Saída~
+   O Corredor termina abruptamente aqui e a única saída parece ser a volta
+pelo caminho por onde você veio.
 ~
-133 8 0 0 0 0
+133 d 0
 D0
-Vocï¿½ vï¿½ o corredor.
+Você vê o corredor.
 ~
 ~
 0 -1 13316
 S
 #13320
 O Quarto de Wabat~
-   Este quarto estï¿½ em TOTAL desalinho.  Os mï¿½veis parecem ter sido atirados
-das inï¿½meras prateleiras diretamente para o chï¿½o.  O quarto tem um cheiro
-desagradï¿½vel e vocï¿½ torce o nariz com nï¿½usea.  Uma grande janela de correr
-estï¿½ aberta para o sul mostrando a sacada e hï¿½ uma pesada porta de ferro ao
+   Este quarto está em TOTAL desalinho.  Os móveis parecem ter sido atirados
+das inúmeras prateleiras diretamente para o chão.  O quarto tem um cheiro
+desagradável e você torce o nariz com náusea.  Uma grande janela de correr
+está aberta para o sul mostrando a sacada e há uma pesada porta de ferro ao
 leste.
 ~
-133 8 0 0 0 0
+133 d 0
 D1
 Uma pesada porta de ferro.
 ~
 porta pesada ferro~
+:n 2 a porta
 2 13307 13321
 D2
-Vocï¿½ vï¿½ a sacada nesta direï¿½ï¿½o.
+Você vê a sacada nesta direção.
 ~
 ~
 0 -1 13322
 E
-janela~
-ï¿½ uma grande janela. Vocï¿½ pode passar fï¿½cilmente por ela.
+prateleiras~
+As prateleiras estão vazias.
 ~
 E
-prateleiras~
-As prateleiras estï¿½o vazias.
+janela~
+É uma grande janela. Você pode passar fácilmente por ela.
 ~
 S
 #13321
 O Quarto Sombrio~
-   Vocï¿½ estï¿½ em um tenebroso quarto e os pelos de sua nuca chegam a se
-eriï¿½ar.  Hï¿½ tï¿½o pouca luz neste quarto que vocï¿½ comeï¿½a a imaginar coisas..
-Vocï¿½ tem certeza que havia uma porta quando vocï¿½ entrou.
+   Você está em um tenebroso quarto e os pelos de sua nuca chegam a se
+eriçar.  Há tão pouca luz neste quarto que você começa a imaginar coisas..
+Você tem certeza que havia uma porta quando você entrou.
 ~
-133 9 0 0 0 0
+133 ad 0
 D0
-Vocï¿½ vï¿½ o corredor.
+Você vê o corredor.
 ~
 ~
 0 0 13318
@@ -439,16 +444,17 @@ D3
 Uma pesada porta de ferro.
 ~
 porta pesada ferro~
+:n 2 a porta
 2 13307 13320
 S
 #13322
 A Sacada~
-   Vocï¿½ parece ter terminado sua jornada.  A sacada dï¿½ ua ampla visï¿½o do
-campo verdejante.  Os raios de sol cegam vocï¿½ e vocï¿½ ouve um estranho ruï¿½do.
+   Você parece ter terminado sua jornada.  A sacada dá ua ampla visão do
+campo verdejante.  Os raios de sol cegam você e você ouve um estranho ruído.
 ~
-133 0 0 0 0 1
+133 0 1
 D0
-Vocï¿½ vï¿½ o quarto de Wabat.
+Você vê o quarto de Wabat.
 ~
 ~
 0 -1 13320

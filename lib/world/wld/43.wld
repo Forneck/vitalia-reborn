@@ -1,14 +1,14 @@
 #4300
 A Entrada para a Cidade Luz~
-   Vocï¿½ estï¿½ no limiar entre a floresta e o que parece ser uma grande
-cidade.  Daqui vocï¿½ vï¿½ as largas ruas ladeadas de postes muito altos que
-usam velas para iluminar.  Vocï¿½ pode sentir a atmosfera romï¿½ntica da Cidade
-Luz, Paris.  Hï¿½ um aviso aqui que diz " Nï¿½o esqueï¿½a de visitar a Catedral de
-Paris".  Daqui, vocï¿½ pode continuar nesta rua indo para o leste.  Se for
-para o sul, chegarï¿½ atï¿½ a cidade de Lyon ou entrar nos Champs Elyseï¿½s ao
+   Você está no limiar entre a floresta e o que parece ser uma grande
+cidade.  Daqui você vê as largas ruas ladeadas de postes muito altos que
+usam velas para iluminar.  Você pode sentir a atmosfera romântica da Cidade
+Luz, Paris.  Há um aviso aqui que diz " Não esqueça de visitar a Catedral de
+Paris".  Daqui, você pode continuar nesta rua indo para o leste.  Se for
+para o sul, chegará até a cidade de Lyon ou entrar nos Champs Elyseés ao
 norte.
-~
-43 4 0 0 0 1
+~ 
+43 c 1
 D0
 ~
 ~
@@ -25,15 +25,19 @@ D6
 ~
 ~
 0 -1 2355
+D5
+~
+~
+0 -1 -1
 S
 #4301
-O Inï¿½cio da Rua Notre Dame~
-   Vocï¿½ estï¿½ em uma bonita rua, toda enfeitada com flores e ï¿½rvores em 
-toda a sua extensï¿½o.  Se vocï¿½ prestasse mais atenï¿½ï¿½o, notaria que todas as 
-ruas sï¿½o iguais.  Isto estï¿½ comeï¿½ando a ficar enfadonho.  Vocï¿½ pode 
+O Início da Rua Notre Dame~
+   Você está em uma bonita rua, toda enfeitada com flores e árvores em 
+toda a sua extensão.  Se você prestasse mais atenção, notaria que todas as 
+ruas são iguais.  Isto está começando a ficar enfadonho.  Você pode 
 continuar nesta rua por a leste ou retornar para o oeste.
 ~
-43 0 0 0 0 1
+43 0 1
 D1
 ~
 ~
@@ -45,14 +49,14 @@ D3
 S
 #4302
 Rua Notre Dame~
-   Vocï¿½ estï¿½ na mesma rua enfadonha e percebe que estï¿½ ao lado de um imenso 
-e sï¿½lido muro de pedra.  Ao olhar para cima, vocï¿½ vï¿½ que no topo hï¿½ um 
-grande campanï¿½rio.  Vocï¿½ percebe que isso nï¿½o se trata de um campanï¿½rio 
-comum, pois possui inï¿½meros detalhes, deduzindo entï¿½o que ele deve 
-pertencer a uma grande e importante catedral de Paris.  Daqui vocï¿½ sï¿½ pode
+   Você está na mesma rua enfadonha e percebe que está ao lado de um imenso 
+e sólido muro de pedra.  Ao olhar para cima, você vê que no topo há um 
+grande campanário.  Você percebe que isso não se trata de um campanário 
+comum, pois possui inúmeros detalhes, deduzindo então que ele deve 
+pertencer a uma grande e importante catedral de Paris.  Daqui você só pode
 ir para o leste ou oeste.
 ~
-43 0 0 0 0 1
+43 0 1
 D1
 ~
 ~
@@ -64,13 +68,13 @@ D3
 S
 #4303
 A Entrada para a Catedral~
-   Vocï¿½ estï¿½ parado em frente a entrada da Catedral de Notre Dame.  Ao 
-olhar para cima vocï¿½ fica estupefato com uma enorme janela rosa.  Se vocï¿½ 
-olhar mais perto, irï¿½ notar os lindos ornamentos da porta, na qual estï¿½o 
-representadas as figuras dos quatros evangelistas.  Vocï¿½ pode entrar na 
+   Você está parado em frente a entrada da Catedral de Notre Dame.  Ao 
+olhar para cima você fica estupefato com uma enorme janela rosa.  Se você 
+olhar mais perto, irá notar os lindos ornamentos da porta, na qual estão 
+representadas as figuras dos quatros evangelistas.  Você pode entrar na 
 catedral ao sul, ou pode continuar indo pelo leste ou oeste.
 ~
-43 0 0 0 0 1
+43 0 1
 D1
 ~
 ~
@@ -78,7 +82,8 @@ D1
 D2
 ~
 porta~
-1 -1 4305
+:n 2 a porta
+a -1 4305
 D3
 ~
 ~
@@ -86,31 +91,32 @@ D3
 S
 #4304
 O Fim da Rua Notre Dame~
-   Vocï¿½ estï¿½ em um beco sem saï¿½da.  Tudo estï¿½ quieto, e para o leste hï¿½ 
-uma enorme parede que bloqueia o seu caminho.  Olhando para cima vocï¿½ nota 
-que hï¿½ outro imenso campanï¿½rio, o que sï¿½ pode significar uma de coisa: vocï¿½ 
+   Você está em um beco sem saída.  Tudo está quieto, e para o leste há 
+uma enorme parede que bloqueia o seu caminho.  Olhando para cima você nota 
+que há outro imenso campanário, o que só pode significar uma de coisa: você 
 ultrapassou a entrada da catedral.
 ~
-43 0 0 0 0 1
+43 0 1
 D3
 ~
 ~
 0 -1 4303
 S
 #4305
-O ï¿½trio da Catedral~
-   Vocï¿½ estï¿½ entrando em uma das catedrais no estilo gï¿½tico mais bonitas 
-que existe.  Aqui hï¿½ belï¿½ssimos ornamentos dourados pelo teto; e nas 
-paredes de pedra encontram-se grandes estï¿½tuas esculpidas em granito.  O 
-chï¿½o ï¿½ todo coberto por pedras de mï¿½rmore.  No momento em que vocï¿½ se vira 
+O Átrio da Catedral~  
+   Você está entrando em uma das catedrais no estilo gótico mais bonitas 
+que existe.  Aqui há belíssimos ornamentos dourados pelo teto; e nas 
+paredes de pedra encontram-se grandes estátuas esculpidas em granito.  O 
+chão é todo coberto por pedras de mármore.  No momento em que você se vira 
 percebe que, em cada um dos lados da porta, existe uma linda coluna em 
-estilo dï¿½rico, com frisos e entalhes.
+estilo dórico, com frisos e entalhes.
 ~
-43 40 0 0 0 0
+43 df 0
 D0
 ~
 porta~
-1 -1 4303
+:n 2 a porta
+a -1 4303
 D1
 ~
 ~
@@ -125,28 +131,32 @@ D3
 0 -1 4306
 S
 #4306
-O ï¿½trio De Dame de Notre~
-   Vocï¿½ estï¿½ ao lado ocidental do ï¿½trio, a aqui as paredes e o teto ï¿½ todo 
-enfeitado.  Vocï¿½ nota que no teto existem alguns belos anjos feitos em ouro 
-puro.  O chï¿½o ï¿½ todo revestido por um raro e, com certeza, carï¿½ssimo 
-mï¿½rmore branco, lhe dando a vontade de ser um sacerdote para poder morar 
-em um lugar tï¿½o belo assim.
+O Átrio De Dame de Notre~  
+   Você está ao lado ocidental do átrio, a aqui as paredes e o teto é todo 
+enfeitado.  Você nota que no teto existem alguns belos anjos feitos em ouro 
+puro.  O chão é todo revestido por um raro e, com certeza, caríssimo 
+mármore branco, lhe dando a vontade de ser um sacerdote para poder morar 
+em um lugar tão belo assim.
 ~
-43 40 0 0 0 0
+43 df 0
 D1
 ~
 ~
 0 -1 4305
+D3
+~
+~
+0 -1 -1
 S
 #4307
-O ï¿½trio de Notre Dame~
-   Vocï¿½ estï¿½ ao lado oriental do ï¿½trio e pode ver, decorando as paredes, 
-algumas estï¿½tuas esculpidas em uma pedra vermelha.  Vocï¿½ reconhece aqui a 
-figura de Cristo e tambï¿½m alguns dos apï¿½stolos.  No teto encontram-se 
+O Átrio de Notre Dame~
+   Você está ao lado oriental do átrio e pode ver, decorando as paredes, 
+algumas estátuas esculpidas em uma pedra vermelha.  Você reconhece aqui a 
+figura de Cristo e também alguns dos apóstolos.  No teto encontram-se 
 muitos anjos feitos em ouro, entre os quais, os arcanjos Rafael, Miguel e 
 Gabriel.
 ~
-43 40 0 0 0 0
+43 df 0
 D3
 ~
 ~
@@ -154,13 +164,13 @@ D3
 S
 #4308
 O Corredor Central~
-   Vocï¿½ estï¿½ no corredor central da catedral, e pode ver o altar a seu 
-redor.  Por todo o local existem inï¿½meros bancos de madeira, nos quais as 
-pessoas podem se sentar e ouvir atentamente o sermï¿½o que o cardeal faz. Ao 
-leste, encontra-se a capela e para o oeste vocï¿½ consegue enxergar um 
+   Você está no corredor central da catedral, e pode ver o altar a seu 
+redor.  Por todo o local existem inúmeros bancos de madeira, nos quais as 
+pessoas podem se sentar e ouvir atentamente o sermão que o cardeal faz. Ao 
+leste, encontra-se a capela e para o oeste você consegue enxergar um 
 quarto, com uma passagem para o segundo andar.
 ~
-43 40 0 0 0 0
+43 df 0
 D0
 ~
 ~
@@ -180,12 +190,12 @@ D3
 S
 #4309
 O Corredor Oriental~
-   Vocï¿½ estï¿½ no corredor oriental da catedral.  Aqui hï¿½ vï¿½rios bancos de 
-madeira apor todo o seu redor, nos quais hï¿½ pessoas sentadas, sussurrando 
-umas para as outras.  A leste, vocï¿½ vï¿½ um pequeno quarto que o conduz para 
+   Você está no corredor oriental da catedral.  Aqui há vários bancos de 
+madeira apor todo o seu redor, nos quais há pessoas sentadas, sussurrando 
+umas para as outras.  A leste, você vê um pequeno quarto que o conduz para 
 a capela.
 ~
-43 40 0 0 0 0
+43 df 0
 D1
 ~
 ~
@@ -200,17 +210,18 @@ D3
 0 -1 4308
 S
 #4310
-A Sala de Espera da Catedral~
-   Vocï¿½ estï¿½ em um pequeno, frio e escuro, quarto onde pode-se ver um banco 
-no qual as pessoas se sentam, enquanto esperam pela vinda do padre.  Vocï¿½ 
+A Sala de Espera da Catedral~  
+   Você está em um pequeno, frio e escuro, quarto onde pode-se ver um banco 
+no qual as pessoas se sentam, enquanto esperam pela vinda do padre.  Você 
 pode abrir a porta e a leste, e entrar na capela, ou voltar para o 
 corredor.
 ~
-43 41 0 0 0 0
+43 adf 0
 D1
 ~
 porta~
-1 -1 4311
+:n 2 a porta
+a -1 4311
 D3
 ~
 ~
@@ -218,26 +229,27 @@ D3
 S
 #4311
 Uma Pequena Capela~
-   Vocï¿½ entrou em uma pequena capela onde normalmente o padre realiza a 
-confissï¿½o daqueles que precisam.  Este quarto ï¿½ muito escuro pois a ï¿½nica 
-luz existente vem de uma vela, e nï¿½o existe janela alguma por aqui.  A 
-ï¿½nica saï¿½da ï¿½ a oeste, passando pela porta.
+   Você entrou em uma pequena capela onde normalmente o padre realiza a 
+confissão daqueles que precisam.  Este quarto é muito escuro pois a única 
+luz existente vem de uma vela, e não existe janela alguma por aqui.  A 
+única saída é a oeste, passando pela porta.
 ~
-43 57 0 0 0 0
+43 adef 0
 D3
 ~
 porta~
-1 -1 4310
+:n 2 a porta
+a -1 4310
 S
 #4312
 O Corredor Ocidental~
-   Vocï¿½ estï¿½ no corredor ocidental, onde existem vï¿½rios bancos de madeira 
-por toda sua extensï¿½o, e nos quais alguns fiï¿½is franceses aguardam pela 
+   Você está no corredor ocidental, onde existem vários bancos de madeira 
+por toda sua extensão, e nos quais alguns fiéis franceses aguardam pela 
 chegada do cardeal.  Nas laterais encontram-se enormes janelas com lindos 
-vitrais, nas quais cenas bï¿½blicas sï¿½o representadas.  Hï¿½ uma velha porta a 
+vitrais, nas quais cenas bíblicas são representadas.  Há uma velha porta a 
 oeste.
 ~
-43 40 0 0 0 0
+43 df 0
 D1
 ~
 ~
@@ -249,16 +261,17 @@ D2
 D3
 ~
 porta~
-1 -1 4313
+:n 2 a porta
+a -1 4313
 S
 #4313
 Um Quarto Pequeno~
-   Vocï¿½ estï¿½ em um pequeno quarto, muito mal iluminado.  O local estï¿½ todo 
-muito sujo, como se ninguï¿½m entrasse aqui hï¿½ muito tempo.  Para o norte, hï¿½ 
+   Você está em um pequeno quarto, muito mal iluminado.  O local está todo 
+muito sujo, como se ninguém entrasse aqui há muito tempo.  Para o norte, há 
 outro quarto com uma pequena escada que o conduz ao segundo andar da 
 catedral.
 ~
-43 41 0 0 0 0
+43 adf 0
 D0
 ~
 ~
@@ -266,16 +279,17 @@ D0
 D1
 ~
 porta~
-1 -1 4312
+:n 2 a porta
+a -1 4312
 S
 #4314
-Os Degraus para o Campanï¿½rio~
-   Este quarto ï¿½ muito escuro.  A ï¿½nica luz vem de uma tocha que estï¿½ presa 
-na parede.  Logo a sua frente, hï¿½ uma uma velha escada feita de madeira.  
-Cuidado, ela parece ser muito velha e nï¿½o muito segura... suba por sua 
+Os Degraus para o Campanário~
+   Este quarto é muito escuro.  A única luz vem de uma tocha que está presa 
+na parede.  Logo a sua frente, há uma uma velha escada feita de madeira.  
+Cuidado, ela parece ser muito velha e não muito segura... suba por sua 
 conta e risco.
 ~
-43 41 0 0 0 0
+43 adf 0
 D2
 ~
 ~
@@ -287,12 +301,12 @@ D4
 S
 #4315
 Corredor Ocidental~
-   Vocï¿½ estï¿½ no lado ocidental da catedral.  A leste hï¿½ inï¿½meros bancos 
-de madeira, e ao oeste, em um dos vitrais das janelas, estï¿½ representada 
-uma passagem muito especial da Bï¿½blia: "O nascimento de Cristo", com 
+   Você está no lado ocidental da catedral.  A leste há inúmeros bancos 
+de madeira, e ao oeste, em um dos vitrais das janelas, está representada 
+uma passagem muito especial da Bíblia: "O nascimento de Cristo", com 
 alguns pastores, vacas e ovelhas.
 ~
-43 40 0 0 0 0
+43 df 0
 D0
 ~
 ~
@@ -308,14 +322,14 @@ D2
 S
 #4316
 A Nave Central~
-   Vocï¿½ estï¿½ na nave central, e vï¿½rios bancos encontram-se ao seu lado 
-direito e esquerdo, o que estï¿½ comeï¿½ando a deixa-lo um pouco doido.  
-Bancos, bancos e mais bancos de madeira!!  Vocï¿½ atï¿½ prefere olhar para o 
-teto , que ï¿½ feito de pedra cinzenta, assim como quase toda a catedral.  No 
-teto encontram-se algumas vigas expostas, que parecem tambï¿½m terem sido 
+   Você está na nave central, e vários bancos encontram-se ao seu lado 
+direito e esquerdo, o que está começando a deixa-lo um pouco doido.  
+Bancos, bancos e mais bancos de madeira!!  Você até prefere olhar para o 
+teto , que é feito de pedra cinzenta, assim como quase toda a catedral.  No 
+teto encontram-se algumas vigas expostas, que parecem também terem sido 
 feitas de pedra.
 ~
-43 184 0 0 0 0
+43 defh 0
 D0
 ~
 ~
@@ -335,12 +349,12 @@ D3
 S
 #4317
 O Corredor Oriental~
-   Vocï¿½ estï¿½ no lado oriental da catedral.  A oeste, vocï¿½ vï¿½ muitos bancos 
-de madeira e ao leste hï¿½ uma janela com vitrais que mostram as passagens 
-da Bï¿½blia.  Em uma delas hï¿½ representado a "ï¿½ltima Ceia", na qual estï¿½o 
-localizadas as figuras de Cristo e os doze apï¿½stolos.
+   Você está no lado oriental da catedral.  A oeste, você vê muitos bancos 
+de madeira e ao leste há uma janela com vitrais que mostram as passagens 
+da Bíblia.  Em uma delas há representado a "Última Ceia", na qual estão 
+localizadas as figuras de Cristo e os doze apóstolos.
 ~
-43 40 0 0 0 0
+43 df 0
 D0
 ~
 ~
@@ -355,13 +369,13 @@ D3
 0 -1 4316
 S
 #4318
-Corredor Oriental~
-   Vocï¿½ estï¿½ no corredor ao lado leste de Notre Dame.  Aqui ainda pode-se 
-ver muitos bancos de madeira, e no vidro sujo da janela, vocï¿½ vï¿½ 
-representado a crucificaï¿½ï¿½o de Cristo.  No corredor hï¿½ um aviso que 
-diz: "Nï¿½o se esqueï¿½a de dar o dï¿½zimo ".
+Corredor Oriental~  
+   Você está no corredor ao lado leste de Notre Dame.  Aqui ainda pode-se 
+ver muitos bancos de madeira, e no vidro sujo da janela, você vê 
+representado a crucificação de Cristo.  No corredor há um aviso que 
+diz: "Não se esqueça de dar o dízimo ".
 ~
-43 40 0 0 0 0
+43 df 0
 D0
 ~
 ~
@@ -377,14 +391,14 @@ D3
 S
 #4319
 A Nave Central~
-   Vocï¿½ estï¿½ na nave central, mas jï¿½ muito entediado por ver tantos bancos 
-de madeira.  Olhando para o chï¿½o, vocï¿½ percebe que sobre a superfï¿½cie 
-lisa do mï¿½rmore, hï¿½ um tapete vermelho, dividindo bem a sua frente os 
-lugares onde ficam a classe mï¿½dia, e a alta sociedade da Franï¿½a.  Fazendo 
-uma rï¿½pida comparaï¿½ï¿½o, vocï¿½ percebe que atï¿½ mesmo os bancos parecem ser 
-mais confortï¿½veis.
+   Você está na nave central, mas já muito entediado por ver tantos bancos 
+de madeira.  Olhando para o chão, você percebe que sobre a superfície 
+lisa do mármore, há um tapete vermelho, dividindo bem a sua frente os 
+lugares onde ficam a classe média, e a alta sociedade da França.  Fazendo 
+uma rápida comparação, você percebe que até mesmo os bancos parecem ser 
+mais confortáveis.
 ~
-43 184 0 0 0 0
+43 defh 0
 D0
 ~
 ~
@@ -404,12 +418,12 @@ D3
 S
 #4320
 O Corredor Ocidental~
-   Vocï¿½ estï¿½ no corredor ocidental de Notre Dame.  No sujo vitral da 
-janela, encontra-se a representaï¿½ï¿½o da cena em que Cristo foi para o templo 
-e falou com os sacerdotes.  Ao leste vocï¿½ pode ver muitos bancos de 
+   Você está no corredor ocidental de Notre Dame.  No sujo vitral da 
+janela, encontra-se a representação da cena em que Cristo foi para o templo 
+e falou com os sacerdotes.  Ao leste você pode ver muitos bancos de 
 madeira.
 ~
-43 40 0 0 0 0
+43 df 0
 D0
 ~
 ~
@@ -425,11 +439,11 @@ D2
 S
 #4321
 O Corredor Ocidental~
-   Vocï¿½ continua no corredor ocidental da catedral, onde hï¿½ muitos bancos 
+   Você continua no corredor ocidental da catedral, onde há muitos bancos 
 de madeira e alguns franceses de uma privilegiada classe social.  No vidro 
-manchado da janela, hï¿½ a representaï¿½ï¿½o da cena em que Joï¿½o batiza Cristo.
+manchado da janela, há a representação da cena em que João batiza Cristo.
 ~
-43 40 0 0 0 0
+43 df 0
 D0
 ~
 ~
@@ -438,16 +452,20 @@ D1
 ~
 ~
 0 -1 4322
+D3
+~
+~
+0 -1 -1
 S
 #4322
 A Nave~
-   Vocï¿½ estï¿½ na nave principal da catedral.  Aqui vocï¿½ pode ver os mesmos 
-velhos bancos de madeira, mas as pessoas sï¿½o diferentes; nota-se que elas 
-sï¿½o da alta sociedade da Franï¿½a, vestindo roupas elegantes e sofisticadas, 
+   Você está na nave principal da catedral.  Aqui você pode ver os mesmos 
+velhos bancos de madeira, mas as pessoas são diferentes; nota-se que elas 
+são da alta sociedade da França, vestindo roupas elegantes e sofisticadas, 
 e possuindo modos refinados.  A sua frente encontra-se o grande altar de 
 Notre Dame.
 ~
-43 184 0 0 0 0
+43 defh 0
 D0
 ~
 ~
@@ -467,16 +485,20 @@ D3
 S
 #4323
 Corredor Oriental~
-   Vocï¿½ chegou ao final do corredor oriental, e agradece a Deus por isso.  
-No empoeirado vidro da janela, hï¿½ retratado a cena da ressurreiï¿½ï¿½o de 
-Cristo, seguido por muitos anjos e arcanjos.  Se vocï¿½ ainda tem dï¿½vidas... 
+   Você chegou ao final do corredor oriental, e agradece a Deus por isso.  
+No empoeirado vidro da janela, há retratado a cena da ressurreição de 
+Cristo, seguido por muitos anjos e arcanjos.  Se você ainda tem dúvidas... 
 sim...  ainda existe MUITOS bancos.
 ~
-43 40 0 0 0 0
+43 df 0
 D0
 ~
 ~
 0 -1 4318
+D1
+~
+~
+0 -1 -1
 D3
 ~
 ~
@@ -484,13 +506,13 @@ D3
 S
 #4324
 O Altar Catedral~
-   Vocï¿½ estï¿½ no grande altar de Notre Dame.  Aqui hï¿½ uma grande mesa de 
-pedra verde, decorada com afrescos de mï¿½rmore azul.  Aqui ï¿½ onde o cardeal 
-de Paris faz a comunhï¿½o.  Na parede atrï¿½s do altar, hï¿½ uma imensa 
-representaï¿½ï¿½o de Cristo crucificado, e em cada um dos lados, encontram-se 
-as estï¿½tuas, em tamanho natural, de Maria e Josï¿½.
+   Você está no grande altar de Notre Dame.  Aqui há uma grande mesa de 
+pedra verde, decorada com afrescos de mármore azul.  Aqui é onde o cardeal 
+de Paris faz a comunhão.  Na parede atrás do altar, há uma imensa 
+representação de Cristo crucificado, e em cada um dos lados, encontram-se 
+as estátuas, em tamanho natural, de Maria e José.
 ~
-43 184 0 0 0 0
+43 defh 0
 D0
 ~
 ~
@@ -498,48 +520,50 @@ D0
 S
 #4325
 O Segundo Andar de Notre Dame~
-   Vocï¿½ fica deslumbrado com tamanha a beleza da luz do sol que chega atï¿½ 
-o local.  Vocï¿½ abre seus olhos, e fica extasiado com tamanha beleza.  Daqui 
+   Você fica deslumbrado com tamanha a beleza da luz do sol que chega até 
+o local.  Você abre seus olhos, e fica extasiado com tamanha beleza.  Daqui 
 pode-se ver toda a cidadede Paris, que se projeta diante de seus olhos, 
 com uma radiante formosura.  O seu desejo era poder ficar aqui para poder  
-ter esta vista durante a noite, mas vocï¿½ sabe que deve continuar seu 
-caminho.  Vocï¿½ pode abrir o alï¿½apï¿½o, e seguir atï¿½ o campanï¿½rio.
+ter esta vista durante a noite, mas você sabe que deve continuar seu 
+caminho.  Você pode abrir o alçapão, e seguir até o campanário.
 ~
-43 168 0 0 0 0
+43 dfh 0
 D1
 ~
 ~
 0 -1 4327
 D4
 ~
-alï¿½apï¿½o~
-1 -1 4326
+alçapão~
+:n 1
+a -1 4326
 D5
 ~
 ~
 0 -1 4314
 S
 #4326
-O Campanï¿½rio da Catedral~
-   Vocï¿½ estï¿½ no camparï¿½rio de Notre Dame, e aqui pode-se ver uma dï¿½zia de 
-grandes sinos de bronze, projetando um altï¿½ssimo som.  Vocï¿½ nï¿½o consegue 
-imaginar a condiï¿½ï¿½o dos pï¿½ssaros e morcegos que aqui vivem.  Pode-se sentir 
-o ar frio que estï¿½ vindo do leste, e seus olhos mal acreditam em toda a 
-beleza desta cidade tï¿½o explendorosa.
+O Campanário da Catedral~
+   Você está no camparário de Notre Dame, e aqui pode-se ver uma dúzia de 
+grandes sinos de bronze, projetando um altíssimo som.  Você não consegue 
+imaginar a condição dos pássaros e morcegos que aqui vivem.  Pode-se sentir 
+o ar frio que está vindo do leste, e seus olhos mal acreditam em toda a 
+beleza desta cidade tão explendorosa.
 ~
-43 40 0 0 0 0
+43 df 0
 D5
 ~
-alï¿½apï¿½o~
-1 -1 4325
+alçapão~
+:n 1
+a -1 4325
 S
 #4327
 Um Corredor~
-   Vocï¿½ encontra-se em um dos muitos corredores que estï¿½o no segundo andar, 
-e seguem para sul.  Aqui nï¿½o hï¿½ nenhuma parede, porï¿½m existem muitas 
-colunas dï¿½ricas, feitas de pedra, que sustentam o pesado teto.
+   Você encontra-se em um dos muitos corredores que estão no segundo andar, 
+e seguem para sul.  Aqui não há nenhuma parede, porém existem muitas 
+colunas dóricas, feitas de pedra, que sustentam o pesado teto.
 ~
-43 40 0 0 0 0
+43 df 0
 D1
 ~
 ~
@@ -555,12 +579,12 @@ D3
 S
 #4328
 O Corredor Central do Segundo Andar~
-   Vocï¿½ estï¿½ no corredor central do segundo andar de Dame de Notre, e pode 
-ver as inï¿½meras colunas dï¿½ricas, e seus entalhes de pedra.  Ao leste hï¿½ um 
-pequeno quarto, talvez vocï¿½ devesse dar uma olhada nisso... quem sabe vocï¿½ 
-nï¿½o encontra alguma coisa interessante por ali.
+   Você está no corredor central do segundo andar de Dame de Notre, e pode 
+ver as inúmeras colunas dóricas, e seus entalhes de pedra.  Ao leste há um 
+pequeno quarto, talvez você devesse dar uma olhada nisso... quem sabe você 
+não encontra alguma coisa interessante por ali.
 ~
-43 40 0 0 0 0
+43 df 0
 D1
 ~
 ~
@@ -576,14 +600,14 @@ D3
 S
 #4329
 O Quarto do Quasimodo~
-   Vocï¿½ estï¿½ em um pequeno quarto, com uma cama de palha.  Aqui 
-encontram-se algumas figuras de madeira com forma humana, e vocï¿½ deduz que 
-este seja ser o quarto daquele homem que estava gritando no campanï¿½rio.  
-Aqui pode-se sentir um vento frio vindo da janela de arco que estï¿½ a sua 
-esquerda.  Vocï¿½ reconhece algumas das figuras, sendo uma o cardeal, e a 
-outra a figura de uma mulher que vocï¿½ viu na floresta.
+   Você está em um pequeno quarto, com uma cama de palha.  Aqui 
+encontram-se algumas figuras de madeira com forma humana, e você deduz que 
+este seja ser o quarto daquele homem que estava gritando no campanário.  
+Aqui pode-se sentir um vento frio vindo da janela de arco que está a sua 
+esquerda.  Você reconhece algumas das figuras, sendo uma o cardeal, e a 
+outra a figura de uma mulher que você viu na floresta.
 ~
-43 232 0 0 0 0
+43 dfgh 0
 D3
 ~
 ~
@@ -591,12 +615,12 @@ D3
 S
 #4330
 O Corredor Central do Segundo Andar~
-   Vocï¿½ estï¿½ no corredor principal do segundo andar, onde hï¿½ algumas 
-colunas decoradas de estilo dï¿½rico.  Aqui nï¿½o existem paredes, permitindo 
-assim que o ar corra livremente, vindo do leste do corredor.  Vocï¿½ estï¿½ 
-comeï¿½ando a desejar ter trazido o seu suï¿½ter.
+   Você está no corredor principal do segundo andar, onde há algumas 
+colunas decoradas de estilo dórico.  Aqui não existem paredes, permitindo 
+assim que o ar corra livremente, vindo do leste do corredor.  Você está 
+começando a desejar ter trazido o seu suéter.
 ~
-43 40 0 0 0 0
+43 df 0
 D0
 ~
 ~
@@ -612,13 +636,13 @@ D3
 S
 #4331
 O Corredor Central do Segundo Andar~
-   Vocï¿½ estï¿½ em um corredor do segundo andar, com inï¿½meras colunas de 
-pedra em estilodï¿½rico. Aqui nï¿½o se pode ver qualquer parede, explicando o 
+   Você está em um corredor do segundo andar, com inúmeras colunas de 
+pedra em estilodórico. Aqui não se pode ver qualquer parede, explicando o 
 fato desse forte vento frio, que circula vindo do leste para oeste. O 
-chï¿½o aqui jï¿½ nï¿½o ï¿½ mais coberto pelo mï¿½rmore branco, mas sim pelo mesmo 
+chão aqui já não é mais coberto pelo mármore branco, mas sim pelo mesmo 
 material das colunas, feitas de pedra cinzenta.
 ~
-43 40 0 0 0 0
+43 df 0
 D0
 ~
 ~
@@ -634,13 +658,13 @@ D2
 S
 #4332
 O Fim de um Corredor~
-   Vocï¿½ chegou no final do corredor do segundo andar e se sente feliz por 
-nï¿½o ter visto sequer um ï¿½nico banco de madeira por aqui.  Bem ao longe, ao 
-norte, hï¿½ uma  rua onde muitas carruagens estï¿½o passando, supoestamente uma 
-estaï¿½ï¿½o para carruagens.  Vocï¿½ pode passar para o outro corredor, que fica 
+   Você chegou no final do corredor do segundo andar e se sente feliz por 
+não ter visto sequer um único banco de madeira por aqui.  Bem ao longe, ao 
+norte, há uma  rua onde muitas carruagens estão passando, supoestamente uma 
+estação para carruagens.  Você pode passar para o outro corredor, que fica 
 a leste, ou ir para oeste e entrar no que parece ser um quarto.
 ~
-43 40 0 0 0 0
+43 df 0
 D0
 ~
 ~
@@ -656,13 +680,13 @@ D3
 S
 #4333
 O Fim do Corredor Central~
-   Vocï¿½ chegou ao final do corredor do segundo andar e nota que ao norte, 
-bem distante, encontram-se estï¿½o algumas montanhas.  Ao olhar para baixo, 
-vocï¿½ vï¿½ que alguï¿½m esqueceu de colocar uma escada para descer...portanto 
-Nï¿½O Vï¿½ PARA BAIXO OU VOCï¿½ MORRERï¿½ CERTAMENTE.  Vocï¿½ pode voltar para o 
+   Você chegou ao final do corredor do segundo andar e nota que ao norte, 
+bem distante, encontram-se estão algumas montanhas.  Ao olhar para baixo, 
+você vê que alguém esqueceu de colocar uma escada para descer...portanto 
+NÃO VÁ PARA BAIXO OU VOCÊ MORRERÁ CERTAMENTE.  Você pode voltar para o 
 norte, leste ou oeste...mas nunca para baixo.
 ~
-43 40 0 0 0 0
+43 df 0
 D0
 ~
 ~
@@ -682,49 +706,49 @@ D5
 S
 #4334
 O Quarto Oriental do Segundo Andar~
-   Vocï¿½ estï¿½ no que parece ser outro quarto, mas ao invï¿½s de paredes, hï¿½ 
-colunas dï¿½ricas.  Aqui pode-se ver os demï¿½nios de pedra, e apenas a idï¿½ia 
-de que um desses gï¿½rgulas pudessem adquirir vida o apavora atï¿½ a morte.  
-Lï¿½ embaixo vocï¿½ consegue ver uma cidade, mas nï¿½o ï¿½ Paris, pois o modo das 
-pessoas se vestirem ï¿½ bem diferente.
+   Você está no que parece ser outro quarto, mas ao invés de paredes, há 
+colunas dóricas.  Aqui pode-se ver os demônios de pedra, e apenas a idéia 
+de que um desses gárgulas pudessem adquirir vida o apavora até a morte.  
+Lá embaixo você consegue ver uma cidade, mas não é Paris, pois o modo das 
+pessoas se vestirem é bem diferente.
 ~
-43 232 0 0 0 0
+43 dghf 0
 D3
 ~
 ~
 0 -1 4333
 S
 #4335
-Um Vï¿½o em Notre Dame~
-   Vocï¿½ entra neste local e imediatamente cai, mas ainda consegue ouvir o 
-ruï¿½do do seu pescoï¿½o estalando, antes de sua morte quase imediata.  Que 
-pena que vocï¿½ nï¿½o prestou atenï¿½ï¿½o aos avisos de que ali nï¿½o existia 
-nenhuma escada... Vocï¿½ estï¿½ morto o_O 
+Um Vão em Notre Dame~
+   Você entra neste local e imediatamente cai, mas ainda consegue ouvir o 
+ruído do seu pescoço estalando, antes de sua morte quase imediata.  Que 
+pena que você não prestou atenção aos avisos de que ali não existia 
+nenhuma escada... Você está morto o_O 
 ~
-43 34 0 0 0 0
+43 fb 0
 S
 #4336
 O Quarto Ocidental do Segundo Andar~
-   Vocï¿½ estï¿½ no que parece ser um quarto, porï¿½m aqui nï¿½o existe qualquer 
-porta ou parede, mas uma enorme estï¿½tua de pedra, com a forma de um 
-demï¿½nio alado.  ï¿½ um gï¿½rgula.  Olhando para baixo, vocï¿½ vï¿½ que hï¿½ uma 
-bonita cidade, mas vocï¿½ nï¿½o consegue ter uma visï¿½o perfeita pois hï¿½ uma 
+   Você está no que parece ser um quarto, porém aqui não existe qualquer 
+porta ou parede, mas uma enorme estátua de pedra, com a forma de um 
+demônio alado.  É um gárgula.  Olhando para baixo, você vê que há uma 
+bonita cidade, mas você não consegue ter uma visão perfeita pois há uma 
 grande floresta ao sul, que bloqueia uma parte da vista.
 ~
-43 232 0 0 0 0
-D1
+43 dfgh 0
+D1  
 ~
 ~
 0 -1 4332
 S
 #4337
-Uma Ponte na Franï¿½a~
-   Vocï¿½ estï¿½ no topo de uma ponte de pedra com arcos encurvados.  Logo 
-para baixo vocï¿½ vï¿½ a ï¿½gua cristalina.  O rio Sena estï¿½ tï¿½o tranqï¿½ilo e 
-limpo que vocï¿½ pode ver sua prï¿½pria imagem refletida na ï¿½gua.  Hï¿½ um aviso 
-aqui que vocï¿½ deveria ler.
+Uma Ponte na França~
+   Você está no topo de uma ponte de pedra com arcos encurvados.  Logo 
+para baixo você vê a água cristalina.  O rio Sena está tão tranqüilo e 
+limpo que você pode ver sua própria imagem refletida na água.  Há um aviso 
+aqui que você deveria ler.
 ~
-43 4 0 0 0 1
+43 c 1
 D0
 ~
 ~
@@ -735,19 +759,19 @@ D2
 0 -1 4338
 E
 aviso~
-Ao Norte ï¿½ a cidade de Paris.
-Para o Sul ï¿½ a cidade de Lyon.
+Ao Norte é a cidade de Paris.
+Para o Sul é a cidade de Lyon.
 ~
 S
 #4338
 A Entrada de Lyon~
-   Vocï¿½ estï¿½ na entrada de uma pequena cidade chamada Lyon, um dos lugares 
-mais bonitos de toda a Franï¿½a, bem como um dos menores.  Nesta cidade vocï¿½ 
-pode achar a mais importante loja de magia de toda a Franï¿½a. Aqui hï¿½ uma 
+   Você está na entrada de uma pequena cidade chamada Lyon, um dos lugares 
+mais bonitos de toda a França, bem como um dos menores.  Nesta cidade você 
+pode achar a mais importante loja de magia de toda a França. Aqui há uma 
 tabuleta que diz: " Bem-vindo a Lyon, onde os melhores vinhos de mesa 
-sï¿½o produzidos ".
+são produzidos ".
 ~
-43 0 0 0 0 1
+43 0 1
 D0
 ~
 ~
@@ -759,14 +783,14 @@ D2
 S
 #4339
 A Rua Principal de Lyon~
-   Vocï¿½ acabou de entrar na cidade de Lyon.  A sua esquerda hï¿½ algumas 
-pequenas, porï¿½m muito lindas, casas e um pequeno parque a oeste.  Vocï¿½ vï¿½ 
+   Você acabou de entrar na cidade de Lyon.  A sua esquerda há algumas 
+pequenas, porém muito lindas, casas e um pequeno parque a oeste.  Você vê 
 algumas pessoas caminhando de um lado para o outro, fazendo seus trabalhos 
-de rotina.  Seguindo para oeste, vocï¿½ pode entrar no parque, e para leste 
-hï¿½ uma casa.  Indo para o sul vocï¿½ se adentra pela cidade, mas pode voltar 
+de rotina.  Seguindo para oeste, você pode entrar no parque, e para leste 
+há uma casa.  Indo para o sul você se adentra pela cidade, mas pode voltar 
 para Paris ao norte.
 ~
-43 0 0 0 0 1
+43 0 1
 D0
 ~
 ~
@@ -786,13 +810,13 @@ D3
 S
 #4340
 Uma Casa de Lyon~
-   Vocï¿½ estï¿½ dentro de uma pequena casa de Lyon.  Muito simples, ela ï¿½ 
-feita de madeira, enfeitada com alguns quadros nas paredes, e seu o teto ï¿½ 
-feito de palha, possuindo uma mobï¿½lia de madeira muito rï¿½stica.  Vocï¿½ sï¿½ 
-consegue ver uma escrivaninha a direita, e uma cama a esquerda.  A ï¿½nica 
-saï¿½da ï¿½ voltar pelo oeste.
+   Você está dentro de uma pequena casa de Lyon.  Muito simples, ela é 
+feita de madeira, enfeitada com alguns quadros nas paredes, e seu o teto é 
+feito de palha, possuindo uma mobília de madeira muito rústica.  Você só 
+consegue ver uma escrivaninha a direita, e uma cama a esquerda.  A única 
+saída é voltar pelo oeste.
 ~
-43 604 0 0 0 0
+43 cdegj 0
 D3
 ~
 ~
@@ -800,12 +824,12 @@ D3
 S
 #4341
 O Parque de Lyon~
-   Vocï¿½ estï¿½ em um parque pequeno mas muito bonito, e vï¿½ algumas crianï¿½as 
-que brincando despreocupadamente.  Alguns balanï¿½os encontram-se pendurados 
-nas grandes ï¿½rvores, e pode-se ver que um cachorro correndo atravï¿½s do 
-parque.  A ï¿½nica saï¿½da ï¿½ voltar para as ruas da cidade, a leste.
+   Você está em um parque pequeno mas muito bonito, e vê algumas crianças 
+que brincando despreocupadamente.  Alguns balanços encontram-se pendurados 
+nas grandes árvores, e pode-se ver que um cachorro correndo através do 
+parque.  A única saída é voltar para as ruas da cidade, a leste.
 ~
-43 128 0 0 0 3
+43 h 3
 D1
 ~
 ~
@@ -813,13 +837,13 @@ D1
 S
 #4342
 A Cidade Baixa~
-   Vocï¿½ estï¿½ no centro da cidade onde hï¿½ uma pequena fonte.  Estranho, pois 
-vocï¿½ nota que nï¿½o hï¿½ ï¿½gua nesta fonte, mas sim vinho.  A leste encontra-se 
-uma pequena loja de mï¿½gica, e no alto rua foi estendida uma tosca faixa de 
-pano, com os seguintes dizeres: " Nï¿½s somos a melhor Loja de Magia de toda 
-a Franï¿½a " .  A oeste hï¿½ uma pequena loja de miudezas.
+   Você está no centro da cidade onde há uma pequena fonte.  Estranho, pois 
+você nota que não há água nesta fonte, mas sim vinho.  A leste encontra-se 
+uma pequena loja de mágica, e no alto rua foi estendida uma tosca faixa de 
+pano, com os seguintes dizeres: " Nós somos a melhor Loja de Magia de toda 
+a França " .  A oeste há uma pequena loja de miudezas.
 ~
-43 0 0 0 0 1
+43 0 1
 D0
 ~
 ~
@@ -839,10 +863,10 @@ D3
 S
 #4343
 A Loja de Magia de Lyon~
-   Vocï¿½ estï¿½ em uma pequena barraca, feita de pano azul.  Aqui pode-se 
-comprar coisas muito interessantes, como por exemplo poï¿½ï¿½es mï¿½gicas.
+   Você está em uma pequena barraca, feita de pano azul.  Aqui pode-se 
+comprar coisas muito interessantes, como por exemplo poções mágicas.
 ~
-43 16 0 0 0 0
+43 e 0
 D3
 ~
 ~
@@ -850,12 +874,12 @@ D3
 S
 #4344
 O Fim da Rua Principal~
-   Vocï¿½ chegou ao final da rua principal.  Ao sul, encontra-se a estaï¿½ï¿½o 
-de carruagem, onde se pode alugar carruagens para levï¿½-lo a qualquer cidade 
-da Franï¿½a. Ao leste e oeste vocï¿½ ainda pode avistar algumas casas de Lyon, 
-e talvez visitï¿½-las antes de deixar a cidade.
+   Você chegou ao final da rua principal.  Ao sul, encontra-se a estação 
+de carruagem, onde se pode alugar carruagens para levá-lo a qualquer cidade 
+da França. Ao leste e oeste você ainda pode avistar algumas casas de Lyon, 
+e talvez visitá-las antes de deixar a cidade.
 ~
-43 0 0 0 0 1
+43 0 1
 D0
 ~
 ~
@@ -875,13 +899,13 @@ D3
 S
 #4345
 Uma Cabana de Lyon~
-   Vocï¿½ estï¿½ em uma pequena cabana, e vï¿½ alguns quadros nas paredes.  Ao se 
-aproximar, olhando as assinaturas dos quadros, vocï¿½ vï¿½ em um deles o nome 
-"Van Gogh", mas vocï¿½ nï¿½o dï¿½ qualquer atenï¿½ï¿½o para isto.  Hï¿½ alguns 
-documentos na escrivaninha de madeira, e do outro lado hï¿½ uma janela 
+   Você está em uma pequena cabana, e vê alguns quadros nas paredes.  Ao se 
+aproximar, olhando as assinaturas dos quadros, você vê em um deles o nome 
+"Van Gogh", mas você não dá qualquer atenção para isto.  Há alguns 
+documentos na escrivaninha de madeira, e do outro lado há uma janela 
 quebrada, pela qual entram fortes correntes de vento.
 ~
-43 652 0 0 0 0
+43 cdhj 0
 D3
 ~
 ~
@@ -889,28 +913,28 @@ D3
 S
 #4346
 Outra Casa de Lyon~
-   Vocï¿½ entra em uma pequena cada de Lyon.  Aqui tudo ï¿½ muito simples, 
-feito de madeira, e enfeitado com alguns quadros nas paredes.  O teto ï¿½ 
-todo feito de palha, e a mobï¿½lia ï¿½ feita de madeira rï¿½stica.  Pode-se ver 
-uma escrivaninha ï¿½ sua direita e uma cama ï¿½ esquerda.  A ï¿½nica saï¿½da ï¿½ 
+   Você entra em uma pequena cada de Lyon.  Aqui tudo é muito simples, 
+feito de madeira, e enfeitado com alguns quadros nas paredes.  O teto é 
+todo feito de palha, e a mobília é feita de madeira rústica.  Pode-se ver 
+uma escrivaninha à sua direita e uma cama à esquerda.  A única saída é 
 voltar a leste.
 ~
-43 652 0 0 0 0
+43 cdhj 0
 D1
 ~
 ~
 0 -1 4344
 S
-#4347
-A Estaï¿½ï¿½o de Carruagens~
-   Vocï¿½ nota uma construï¿½ï¿½o diferente das que vocï¿½ viu atï¿½ agora na 
+#4347  
+A Estação de Carruagens~
+   Você nota uma construção diferente das que você viu até agora na 
 cidade.  Aqui existem muitos bancos, feitos de madeira e pintados de 
-branco, nos quais algumas pessoas estï¿½o descansando enquanto esperam por 
-suas carruagens.  Vocï¿½ nota um pequeno aviso que talvez fosse interessante 
-de ser lido.  Vocï¿½ pode voltar para o norte, ou entrar em um pequeno e 
-estreito tï¿½nel escuro ao leste.
+branco, nos quais algumas pessoas estão descansando enquanto esperam por 
+suas carruagens.  Você nota um pequeno aviso que talvez fosse interessante 
+de ser lido.  Você pode voltar para o norte, ou entrar em um pequeno e 
+estreito túnel escuro ao leste.
 ~
-43 0 0 0 0 0
+43 0 0
 D0
 ~
 ~
@@ -921,21 +945,21 @@ D1
 0 -1 4348
 E
 aviso~
-PREï¿½OS PARA OS SERVIï¿½OS:
+PREÇOS PARA OS SERVIÇOS:
 Para o Centro de Lyon:  $50 moedas de ouro
 Para o Centro de Paris: $85 moedas de ouro
 ~
 S
 #4348
-Um Tï¿½nel Escuro~
-   Vocï¿½ estï¿½ dentro de um estreito e escuro tï¿½nel, que estï¿½ deixando vocï¿½ 
-enjoado.  Talvez vocï¿½ deva voltar antes que vomite.  Alï¿½m disso, este 
-parece ser o local perfeito para uma emboscada, e vocï¿½ sente entï¿½o como se
-estivesse pisando sobre algo macio e peludo, e quando olha para baixo, vï¿½ 
-um feio e gordo rato. Oh cï¿½us!!  Em que lugar vocï¿½ foi parar.  Vocï¿½ pode 
-voltar para o oeste, ou pode continuar pelo tï¿½nel a leste.
+Um Túnel Escuro~
+   Você está dentro de um estreito e escuro túnel, que está deixando você 
+enjoado.  Talvez você deva voltar antes que vomite.  Além disso, este 
+parece ser o local perfeito para uma emboscada, e você sente então como se
+estivesse pisando sobre algo macio e peludo, e quando olha para baixo, vê 
+um feio e gordo rato. Oh céus!!  Em que lugar você foi parar.  Você pode 
+voltar para o oeste, ou pode continuar pelo túnel a leste.
 ~
-43 41 0 0 0 6
+43 adf 6
 D1
 ~
 ~
@@ -946,54 +970,55 @@ D3
 0 -1 4347
 S
 #4349
-Um Beco sem Saï¿½da~
-   Vocï¿½ chegou ao fim deste escuro e sujo tï¿½nel, e se sente incomodado...  
-Vocï¿½ deveria pensar seriamente em voltar.  Este lugar ï¿½ imundo... cheirando 
-como...hmmm... bem, nem vocï¿½ sabe que cheiro ï¿½ este, mas nem por isso vocï¿½ 
-gostaria de ficar aqui.  Cuidado, pois sï¿½o em lugares como estes que os 
-ladrï¿½es costumam se esconder.
+Um Beco sem Saída~
+   Você chegou ao fim deste escuro e sujo túnel, e se sente incomodado...  
+Você deveria pensar seriamente em voltar.  Este lugar é imundo... cheirando 
+como...hmmm... bem, nem você sabe que cheiro é este, mas nem por isso você 
+gostaria de ficar aqui.  Cuidado, pois são em lugares como estes que os 
+ladrões costumam se esconder.
 ~
-43 169 0 0 0 6
+43 adfh 6
 D3
 ~
 ~
 0 -1 4348
 S
 #4350
-A Entrada para os Champs Elyseï¿½s~
-   Vocï¿½ estï¿½ na entrada dos Champs Elyseï¿½s, uma verdadeira e grande 
+A Entrada para os Champs Elyseés~
+   Você está na entrada dos Champs Elyseés, uma verdadeira e grande 
 floresta dentro da cidade de Paris.  Aqui pode-se ouvir o canto dos 
-pï¿½ssaros e o som da brisa passando atravï¿½s das copas das ï¿½rvores.  As 
-ï¿½rvores sï¿½o tï¿½o altas que vocï¿½ nï¿½o consegue ver o topo delas.
-    Ao norte, hï¿½ um portï¿½o dourado onde um pequeno aviso foi afixado.  
+pássaros e o som da brisa passando através das copas das árvores.  As 
+árvores são tão altas que você não consegue ver o topo delas.
+    Ao norte, há um portão dourado onde um pequeno aviso foi afixado.  
 ~
-43 32 0 0 0 3
+43 f 3
 D0
 ~
-portï¿½o~
-1 -1 4351
+portão~
+:n 1
+a -1 4351
 D2
 ~
 ~
 0 -1 4300
 E
 aviso~
-Perigo! Nï¿½o entre pois vocï¿½ poderï¿½ se perder e nï¿½o nos responsabilizaremos 
-por quaisquer danos que possam acontecer a vocï¿½.  Se vocï¿½ ainda assim 
-quiser entrar, recomendamos que vï¿½ visitar o centro histï¿½rico de Paris.  
+Perigo! Não entre pois você poderá se perder e não nos responsabilizaremos 
+por quaisquer danos que possam acontecer a você.  Se você ainda assim 
+quiser entrar, recomendamos que vá visitar o centro histórico de Paris.  
                 N E N W S W N W
 ~
 S
 #4351
-Champs Elyseï¿½s~
-   Vocï¿½ estï¿½ nos Champs Elyseï¿½s.  Este lugar ï¿½ muito escuro,pois as copas 
-das ï¿½rvores nï¿½o permitem que a luz do sol penetre entre elas.  Aqui vocï¿½ 
+Champs Elyseés~
+   Você está nos Champs Elyseés.  Este lugar é muito escuro,pois as copas 
+das árvores não permitem que a luz do sol penetre entre elas.  Aqui você 
 pode ver alguns esquilos se atirando de um galho para outro e coletando 
-nozes para o inverno.  O tempo estï¿½ muito frio e ï¿½mido, e vocï¿½ cada vez 
-mais, deseja ter trazido seu suï¿½ter.  Vocï¿½ pode ir para o norte, leste, 
-sul, e oeste ...ou seja: vocï¿½ perdeu totalmente seu senso de direï¿½ï¿½o.
+nozes para o inverno.  O tempo está muito frio e úmido, e você cada vez 
+mais, deseja ter trazido seu suéter.  Você pode ir para o norte, leste, 
+sul, e oeste ...ou seja: você perdeu totalmente seu senso de direção.
 ~
-43 225 0 0 0 0
+43 afgh 0
 D0
 ~
 ~
@@ -1004,23 +1029,24 @@ D1
 0 -1 4352
 D2
 ~
-portï¿½o~
-1 -1 4350
+portão~
+:n 1
+a -1 4350
 D3
 ~
 ~
 0 -1 4354
 S
 #4352
-Champs Elyseï¿½s~
-   Vocï¿½ estï¿½ nos Champs Elyseï¿½s.  Este lugar ï¿½ muito escuro,pois as copas 
-das ï¿½rvores nï¿½o permitem que a luz do sol penetre entre elas.  Aqui vocï¿½ 
+Champs Elyseés~
+   Você está nos Champs Elyseés.  Este lugar é muito escuro,pois as copas 
+das árvores não permitem que a luz do sol penetre entre elas.  Aqui você 
 pode ver alguns esquilos se atirando de um galho para outro e coletando 
-nozes para o inverno.  O tempo estï¿½ muito frio e ï¿½mido, e vocï¿½ cada vez 
-mais, deseja ter trazido seu suï¿½ter.  Vocï¿½ pode ir para o norte, leste, 
-sul, e oeste ...ou seja: vocï¿½ perdeu totalmente seu senso de direï¿½ï¿½o.
+nozes para o inverno.  O tempo está muito frio e úmido, e você cada vez 
+mais, deseja ter trazido seu suéter.  Você pode ir para o norte, leste, 
+sul, e oeste ...ou seja: você perdeu totalmente seu senso de direção.
 ~
-43 225 0 0 0 0
+43 afgh 0
 D0
 ~
 ~
@@ -1039,15 +1065,15 @@ D3
 0 -1 4351
 S
 #4353
-Champs Elyseï¿½s~
-   Vocï¿½ estï¿½ nos Champs Elyseï¿½s.  Este lugar ï¿½ muito escuro,pois as copas 
-das ï¿½rvores nï¿½o permitem que a luz do sol penetre entre elas.  Aqui vocï¿½ 
+Champs Elyseés~
+   Você está nos Champs Elyseés.  Este lugar é muito escuro,pois as copas 
+das árvores não permitem que a luz do sol penetre entre elas.  Aqui você 
 pode ver alguns esquilos se atirando de um galho para outro e coletando 
-nozes para o inverno.  O tempo estï¿½ muito frio e ï¿½mido, e vocï¿½ cada vez 
-mais, deseja ter trazido seu suï¿½ter.  Vocï¿½ pode ir para o norte, leste, 
-sul, e oeste ...ou seja: vocï¿½ perdeu totalmente seu senso de direï¿½ï¿½o.
+nozes para o inverno.  O tempo está muito frio e úmido, e você cada vez 
+mais, deseja ter trazido seu suéter.  Você pode ir para o norte, leste, 
+sul, e oeste ...ou seja: você perdeu totalmente seu senso de direção.
 ~
-43 225 0 0 0 0
+43 afgh 0
 D0
 ~
 ~
@@ -1066,15 +1092,15 @@ D3
 0 -1 4352
 S
 #4354
-Champs Elyseï¿½s~
-   Vocï¿½ estï¿½ nos Champs Elyseï¿½s.  Este lugar ï¿½ muito escuro,pois as copas 
-das ï¿½rvores nï¿½o permitem que a luz do sol penetre entre elas.  Aqui vocï¿½ 
+Champs Elyseés~
+   Você está nos Champs Elyseés.  Este lugar é muito escuro,pois as copas 
+das árvores não permitem que a luz do sol penetre entre elas.  Aqui você 
 pode ver alguns esquilos se atirando de um galho para outro e coletando 
-nozes para o inverno.  O tempo estï¿½ muito frio e ï¿½mido, e vocï¿½ cada vez 
-mais, deseja ter trazido seu suï¿½ter.  Vocï¿½ pode ir para o norte, leste, 
-sul, e oeste ...ou seja: vocï¿½ perdeu totalmente seu senso de direï¿½ï¿½o.
+nozes para o inverno.  O tempo está muito frio e úmido, e você cada vez 
+mais, deseja ter trazido seu suéter.  Você pode ir para o norte, leste, 
+sul, e oeste ...ou seja: você perdeu totalmente seu senso de direção.
 ~
-43 225 0 0 0 0
+43 afgh 0
 D0
 ~
 ~
@@ -1093,15 +1119,15 @@ D3
 0 -1 4354
 S
 #4355
-Champs Elyseï¿½s~
-   Vocï¿½ estï¿½ nos Champs Elyseï¿½s.  Este lugar ï¿½ muito escuro,pois as copas 
-das ï¿½rvores nï¿½o permitem que a luz do sol penetre entre elas.  Aqui vocï¿½ 
+Champs Elyseés~
+   Você está nos Champs Elyseés.  Este lugar é muito escuro,pois as copas 
+das árvores não permitem que a luz do sol penetre entre elas.  Aqui você 
 pode ver alguns esquilos se atirando de um galho para outro e coletando 
-nozes para o inverno.  O tempo estï¿½ muito frio e ï¿½mido, e vocï¿½ cada vez 
-mais, deseja ter trazido seu suï¿½ter.  Vocï¿½ pode ir para o norte, leste, 
-sul, e oeste ...ou seja: vocï¿½ perdeu totalmente seu senso de direï¿½ï¿½o.
+nozes para o inverno.  O tempo está muito frio e úmido, e você cada vez 
+mais, deseja ter trazido seu suéter.  Você pode ir para o norte, leste, 
+sul, e oeste ...ou seja: você perdeu totalmente seu senso de direção.
 ~
-43 225 0 0 0 0
+43 afgh 0
 D0
 ~
 ~
@@ -1120,15 +1146,15 @@ D3
 0 -1 4356
 S
 #4356
-Champs Elyseï¿½s~
-   Vocï¿½ estï¿½ nos Champs Elyseï¿½s.  Este lugar ï¿½ muito escuro,pois as copas 
-das ï¿½rvores nï¿½o permitem que a luz do sol penetre entre elas.  Aqui vocï¿½ 
+Champs Elyseés~
+   Você está nos Champs Elyseés.  Este lugar é muito escuro,pois as copas 
+das árvores não permitem que a luz do sol penetre entre elas.  Aqui você 
 pode ver alguns esquilos se atirando de um galho para outro e coletando 
-nozes para o inverno.  O tempo estï¿½ muito frio e ï¿½mido, e vocï¿½ cada vez 
-mais, deseja ter trazido seu suï¿½ter.  Vocï¿½ pode ir para o norte, leste, 
-sul, e oeste ...ou seja: vocï¿½ perdeu totalmente seu senso de direï¿½ï¿½o.
+nozes para o inverno.  O tempo está muito frio e úmido, e você cada vez 
+mais, deseja ter trazido seu suéter.  Você pode ir para o norte, leste, 
+sul, e oeste ...ou seja: você perdeu totalmente seu senso de direção.
 ~
-43 225 0 0 0 0
+43 afgh 0
 D0
 ~
 ~
@@ -1148,31 +1174,32 @@ D3
 S
 #4357
 Um Acampamento de Ciganos~
-   Vocï¿½ estï¿½ em uma pequena clareira, onde se pode ver um pequeno grupo 
-de ciganos em uma carroï¿½a de madeira.  Esta parte dos Champs Elyseï¿½s estï¿½ 
+   Você está em uma pequena clareira, onde se pode ver um pequeno grupo 
+de ciganos em uma carroça de madeira.  Esta parte dos Champs Elyseés está 
 um pouco mais iluminada do que o resto, e a pequena fogueira que os 
-ciganos acenderam, lhe dï¿½ uma gostosa sensaï¿½ï¿½o de  calor e de proteï¿½ï¿½o.
+ciganos acenderam, lhe dá uma gostosa sensação de  calor e de proteção.
 ~
-43 224 0 0 0 2
+43 fgh 2
 D2
 ~
 ~
 0 -1 4356
 D5
 ~
-alï¿½apï¿½o~
-0 4355 4396
+alçapão~
+:n 1
+abg 4355 4396
 S
 #4358
-Champs Elyseï¿½s~
-   Vocï¿½ estï¿½ nos Champs Elyseï¿½s.  Este lugar ï¿½ muito escuro,pois as copas 
-das ï¿½rvores nï¿½o permitem que a luz do sol penetre entre elas.  Aqui vocï¿½ 
+Champs Elyseés~
+   Você está nos Champs Elyseés.  Este lugar é muito escuro,pois as copas 
+das árvores não permitem que a luz do sol penetre entre elas.  Aqui você 
 pode ver alguns esquilos se atirando de um galho para outro e coletando 
-nozes para o inverno.  O tempo estï¿½ muito frio e ï¿½mido, e vocï¿½ cada vez 
-mais, deseja ter trazido seu suï¿½ter.  Vocï¿½ pode ir para o norte, leste, 
-sul, e oeste ...ou seja: vocï¿½ perdeu totalmente seu senso de direï¿½ï¿½o.
+nozes para o inverno.  O tempo está muito frio e úmido, e você cada vez 
+mais, deseja ter trazido seu suéter.  Você pode ir para o norte, leste, 
+sul, e oeste ...ou seja: você perdeu totalmente seu senso de direção.
 ~
-43 225 0 0 0 0
+43 afgh 0
 D0
 ~
 ~
@@ -1191,15 +1218,15 @@ D3
 0 -1 4359
 S
 #4359
-Champs Elyseï¿½s~
-   Vocï¿½ estï¿½ nos Champs Elyseï¿½s.  Este lugar ï¿½ muito escuro,pois as copas 
-das ï¿½rvores nï¿½o permitem que a luz do sol penetre entre elas.  Aqui vocï¿½ 
+Champs Elyseés~
+   Você está nos Champs Elyseés.  Este lugar é muito escuro,pois as copas 
+das árvores não permitem que a luz do sol penetre entre elas.  Aqui você 
 pode ver alguns esquilos se atirando de um galho para outro e coletando 
-nozes para o inverno.  O tempo estï¿½ muito frio e ï¿½mido, e vocï¿½ cada vez 
-mais, deseja ter trazido seu suï¿½ter.  Vocï¿½ pode ir para o norte, leste, 
-sul, e oeste ...ou seja: vocï¿½ perdeu totalmente seu senso de direï¿½ï¿½o.
+nozes para o inverno.  O tempo está muito frio e úmido, e você cada vez 
+mais, deseja ter trazido seu suéter.  Você pode ir para o norte, leste, 
+sul, e oeste ...ou seja: você perdeu totalmente seu senso de direção.
 ~
-43 229 0 0 0 0
+43 afcgh 0
 D0
 ~
 ~
@@ -1218,12 +1245,12 @@ D3
 0 -1 4360
 S
 #4360
-O Centro Histï¿½rico de Paris~
-   Vocï¿½ estï¿½ na entrada do centro histï¿½rico da cidade de Paris, cujo 
-monumento mais importante ï¿½ a Praï¿½a Luï¿½s XIV, que ï¿½ a mais bela praï¿½a que 
-vocï¿½ jï¿½ viu.  Vocï¿½ pode avanï¿½ar, em direï¿½ï¿½o ao norte.
+O Centro Histórico de Paris~
+   Você está na entrada do centro histórico da cidade de Paris, cujo 
+monumento mais importante é a Praça Luís XIV, que é a mais bela praça que 
+você já viu.  Você pode avançar, em direção ao norte.
 ~
-43 64 0 0 0 2
+43 g 2
 D0
 ~
 ~
@@ -1234,14 +1261,14 @@ D1
 0 -1 4359
 S
 #4361
-A Entrada para a Praï¿½a Luï¿½s XIV~
-   Vocï¿½ estï¿½ na Praï¿½a de Luï¿½s XIV, mas parece que este nï¿½o vai ser o nome 
+A Entrada para a Praça Luís XIV~
+   Você está na Praça de Luís XIV, mas parece que este não vai ser o nome 
 deste lugar por muito tempo, com tantos problemas que a monarquia vem 
-enfrentando.  O lugar ï¿½ repleto de ï¿½rvores frondosas e entï¿½o vocï¿½ 
-pensa... "Em Paris, onde nï¿½o ï¿½ cheio de ï¿½rvores?"  Vocï¿½ pode ver um pequeno 
+enfrentando.  O lugar é repleto de árvores frondosas e então você 
+pensa... "Em Paris, onde não é cheio de árvores?"  Você pode ver um pequeno 
 aviso.
 ~
-43 0 0 0 0 1
+43 0 1
 D0
 ~
 ~
@@ -1256,21 +1283,21 @@ D2
 0 -1 4360
 D3
 ~
-~
+~  
 0 -1 4363
 E
 aviso~
-Logo este lugar serï¿½ conhecido como "A Praï¿½a da Revoluï¿½ï¿½o".  
+Logo este lugar será conhecido como "A Praça da Revolução".  
 Atenciosamente, Robespierre
 ~
 S
 #4362
-Praï¿½a Luï¿½s XIV~
-   Vocï¿½ estï¿½ no lado oriental da Praï¿½a, e pode ver alguns revolucionï¿½rios 
-correndo e se escondendo nas casas que estï¿½o perto deste local.  Vocï¿½ se 
-pergunta se foi uma boa idï¿½ia vir visitar a Franï¿½a.
+Praça Luís XIV~
+   Você está no lado oriental da Praça, e pode ver alguns revolucionários 
+correndo e se escondendo nas casas que estão perto deste local.  Você se 
+pergunta se foi uma boa idéia vir visitar a França.
 ~
-43 0 0 0 0 1
+43 0 1
 D0
 ~
 ~
@@ -1281,14 +1308,14 @@ D3
 0 -1 4361
 S
 #4363
-Praï¿½a Luï¿½s XIV~
-   Vocï¿½ estï¿½ ao lado ocidental da Praï¿½a Luï¿½s XIV, e aqui pode-se ver 
-alguns pombos se alimentando.  Vocï¿½ se sente mais incomodado aqui do que 
-no Champs Elyseï¿½s, e pensa que talvez este nï¿½o tenha sido o melhor momento 
-para visitar a Franï¿½a, pois este parece ser um momento em que todos 
+Praça Luís XIV~
+   Você está ao lado ocidental da Praça Luís XIV, e aqui pode-se ver 
+alguns pombos se alimentando.  Você se sente mais incomodado aqui do que 
+no Champs Elyseés, e pensa que talvez este não tenha sido o melhor momento 
+para visitar a França, pois este parece ser um momento em que todos 
 parecem estar nervosos com a monarquia.
 ~
-43 0 0 0 0 1
+43 0 1
 D0
 ~
 ~
@@ -1297,17 +1324,21 @@ D1
 ~
 ~
 0 -1 4361
+D3
+~
+~
+0 0 -1
 S
 #4364
-Praï¿½a da Concï¿½rdia~
-   Vocï¿½ continua na Praï¿½a de Paris, onde podem ser vistos alguns bancos de 
-madeira nas laterais do gramado, e onde tambï¿½m pode ser visto alguns 
-pombos comendo sementes espalhadas pelo chï¿½o.  Olhando para baixo, vocï¿½ 
-observa que o pavimento ï¿½ feito de granito, e que em algumas partes 
-somente existe grama.  Este lugar ï¿½ iluminado como toda Paris, com grandes 
+Praça da Concórdia~
+   Você continua na Praça de Paris, onde podem ser vistos alguns bancos de 
+madeira nas laterais do gramado, e onde também pode ser visto alguns 
+pombos comendo sementes espalhadas pelo chão.  Olhando para baixo, você 
+observa que o pavimento é feito de granito, e que em algumas partes 
+somente existe grama.  Este lugar é iluminado como toda Paris, com grandes 
 postes a vela.
 ~
-43 128 0 0 0 1
+43 h 1
 D0
 ~
 ~
@@ -1322,12 +1353,12 @@ D2
 0 -1 4363
 S
 #4365
-O Centro da Praï¿½a~
-   Vocï¿½ estï¿½ bem no centro da Praï¿½a, e pode observar uma enorme estï¿½tua do  
-Rei.  Neste local, as ï¿½nicas coisas vivas sï¿½o dois pombinhos que estï¿½o 
-empoleirados no topo da estï¿½tua.  Pelo menos eles acharam algum conforto.
+O Centro da Praça~
+   Você está bem no centro da Praça, e pode observar uma enorme estátua do  
+Rei.  Neste local, as únicas coisas vivas são dois pombinhos que estão 
+empoleirados no topo da estátua.  Pelo menos eles acharam algum conforto.
 ~
-43 148 0 0 0 1
+43 ceh 1
 D0
 ~
 ~
@@ -1346,15 +1377,15 @@ D3
 0 -1 4364
 S
 #4366
-Praï¿½a da Concï¿½rdia~
-   Vocï¿½ continua na Praï¿½a de Paris, onde podem ser vistos alguns bancos de 
-madeira nas laterais do gramado, e onde tambï¿½m pode ser visto alguns 
-pombos comendo sementes espalhadas pelo chï¿½o.  Olhando para baixo, vocï¿½ 
-observa que o pavimento ï¿½ feito de granito, e que em algumas partes 
-somente existe grama.  Este lugar ï¿½ iluminado como toda Paris, com grandes 
+Praça da Concórdia~
+   Você continua na Praça de Paris, onde podem ser vistos alguns bancos de 
+madeira nas laterais do gramado, e onde também pode ser visto alguns 
+pombos comendo sementes espalhadas pelo chão.  Olhando para baixo, você 
+observa que o pavimento é feito de granito, e que em algumas partes 
+somente existe grama.  Este lugar é iluminado como toda Paris, com grandes 
 postes a vela.
 ~
-43 128 0 0 0 1
+43 h 1
 D0
 ~
 ~
@@ -1369,14 +1400,14 @@ D3
 0 -1 4365
 S
 #4367
-Praï¿½a de Revoluï¿½ï¿½o~
-   Vocï¿½ chega ao final da praï¿½a, pelo lado oriental e ï¿½ sua frente hï¿½ uma 
+Praça de Revolução~
+   Você chega ao final da praça, pelo lado oriental e à sua frente há uma 
 hospedaria, na qual pode ser lido o seguinte aviso: " Fechado para 
-reformas.  Desculpe-nos pelo transtorno que isto possa causar a vocï¿½. "
+reformas.  Desculpe-nos pelo transtorno que isto possa causar a você. "
    A oeste encontra-se a entrada do Quartel General e Escola de 
 Mosqueteiros.
 ~
-43 0 0 0 0 1
+43 0 1
 D1
 ~
 ~
@@ -1392,16 +1423,17 @@ D3
 S
 #4368
 A Entrada para o Quartel General dos Mosqueteiros~
-   Vocï¿½ continua pela praï¿½a, e nï¿½o vï¿½ nada interessante ao redor, mas vocï¿½ 
-nota que este local nï¿½o parece ser muito seguro.  Ao norte vocï¿½ vï¿½ uma porta  
-para o quartel general dos Mosqueteiros.  Se vocï¿½ quiser entrar, basta 
+   Você continua pela praça, e não vê nada interessante ao redor, mas você 
+nota que este local não parece ser muito seguro.  Ao norte você vê uma porta  
+para o quartel general dos Mosqueteiros.  Se você quiser entrar, basta 
 abri-la.
 ~
-43 0 0 0 0 1
+43 0 1
 D0
 ~
 porta~
-0 4368 4370
+:n 2 a porta
+abg 4368 4370
 D1
 ~
 ~
@@ -1416,12 +1448,12 @@ D3
 0 -1 4369
 S
 #4369
-Praï¿½a de Revoluï¿½ï¿½o~
-   Vocï¿½ chega ao final da praï¿½a, pelo lado ocidental, e vï¿½ que bem ï¿½ sua 
-frente hï¿½ um velho edifï¿½cio com grandes janelas.  ï¿½ o quartel general dos 
+Praça de Revolução~
+   Você chega ao final da praça, pelo lado ocidental, e vê que bem à sua 
+frente há um velho edifício com grandes janelas.  É o quartel general dos 
 Mosqueteiros.  A sua entrada fica ao leste.
 ~
-43 0 0 0 0 1
+43 0 1
 D1
 ~
 ~
@@ -1433,14 +1465,14 @@ D2
 S
 #4370
 A Entrada para o Quartel General dos Mosqueteiros~
-   Vocï¿½ estï¿½ na sede central do Quartel General dos Mosqueteiros, e este ï¿½ 
-apenas o ï¿½trio do edifï¿½cio.  Vocï¿½ nota que este local nï¿½o ï¿½ muito elegante 
+   Você está na sede central do Quartel General dos Mosqueteiros, e este é 
+apenas o átrio do edifício.  Você nota que este local não é muito elegante 
 e percebe que as paredes foram pintadas com o mesmo tom de azul do teto,
-feito de pedra.  O chï¿½o ï¿½ a ï¿½nica coisa que o faz lembrar da importï¿½ncia 
-deste lugar, pois ï¿½ feito do mais branco e mais caro mï¿½rmore.  Ao leste 
-vocï¿½ pode ver um refeitï¿½rio.
+feito de pedra.  O chão é a única coisa que o faz lembrar da importância 
+deste lugar, pois é feito do mais branco e mais caro mármore.  Ao leste 
+você pode ver um refeitório.
 ~
-43 12 0 0 0 0
+43 dc 0
 D0
 ~
 ~
@@ -1452,16 +1484,21 @@ D1
 D2
 ~
 porta~
-0 4368 4368
+:n 2 a porta
+abg 4368 4368
 S
 #4371
-O Refeitï¿½rio Francï¿½s~
-   Vocï¿½ estï¿½ em um refeitï¿½rio francï¿½s, localizado dentro do Quartel General 
-dos Mosqueteiros.  Este local possui vï¿½rias mesas e cadeiras, nas quais os 
-soldados que protegem o Rei podem se sentar para beber um cafï¿½ ou comer 
+O Refeitório Francês~
+   Você está em um refeitório francês, localizado dentro do Quartel General 
+dos Mosqueteiros.  Este local possui várias mesas e cadeiras, nas quais os 
+soldados que protegem o Rei podem se sentar para beber um café ou comer 
 algo antes de irem trabalhar.
 ~
-43 8 0 0 0 0
+43 d 0
+D1
+~
+~
+0 -1 -1
 D3
 ~
 ~
@@ -1469,12 +1506,12 @@ D3
 S
 #4372
 Um Corredor no Quartel General dos Mosqueteiros~
-   Vocï¿½ estï¿½ em um grande corredor.  ï¿½ sua frente hï¿½ uma pequena fonte de 
-mï¿½rmore verde, porï¿½m hï¿½ uma corrente impedindo que vocï¿½ prossiga.  Vocï¿½ 
-pode ir ao leste ou oeste, em direï¿½ï¿½o a um corredor dentro do Q.G dos 
-Mosqueteiros, ou vocï¿½ pode voltar para a entrada, ao sul.
+   Você está em um grande corredor.  À sua frente há uma pequena fonte de 
+mármore verde, porém há uma corrente impedindo que você prossiga.  Você 
+pode ir ao leste ou oeste, em direção a um corredor dentro do Q.G dos 
+Mosqueteiros, ou você pode voltar para a entrada, ao sul.
 ~
-43 8 0 0 0 0
+43 d 0
 D1
 ~
 ~
@@ -1490,13 +1527,13 @@ D3
 S
 #4373
 A Passagem Oriental~
-   Vocï¿½ estï¿½ na passagem oriental, e percebe que hï¿½ inï¿½meros quadros que 
-foram cuidadosamente colocados nas paredes, o que ï¿½ algo bastante comum 
-na Franï¿½a.  A passagem segue para o norte, onde vocï¿½ pode encontrar os 
-quartos dos Mosqueteiros, ou o calabouï¿½o.  O pï¿½tio ao leste estï¿½ fechado, 
-e nï¿½o hï¿½ como entrar, mas vocï¿½ ainda pode ir para o oeste ou para o norte. 
+   Você está na passagem oriental, e percebe que há inúmeros quadros que 
+foram cuidadosamente colocados nas paredes, o que é algo bastante comum 
+na França.  A passagem segue para o norte, onde você pode encontrar os 
+quartos dos Mosqueteiros, ou o calabouço.  O pátio ao leste está fechado, 
+e não há como entrar, mas você ainda pode ir para o oeste ou para o norte. 
 ~
-43 8 0 0 0 0
+43 d 0
 D0
 ~
 ~
@@ -1508,13 +1545,13 @@ D3
 S
 #4374
 A Passagem Oriental~
-   Vocï¿½ continua na passagem oriental e nota que este lugar, embora 
-grande, nï¿½o ï¿½ nada interessante.  O edifï¿½cio tem um estilo romano, o que 
-significa que nï¿½o existem muitas janelas aqui, parecendo mais com uma 
-fortaleza.  Este local nï¿½o ï¿½ muito saudï¿½vel para se viver, pois ï¿½ 
-absolutamente frio e ï¿½mido por dentro.
+   Você continua na passagem oriental e nota que este lugar, embora 
+grande, não é nada interessante.  O edifício tem um estilo romano, o que 
+significa que não existem muitas janelas aqui, parecendo mais com uma 
+fortaleza.  Este local não é muito saudável para se viver, pois é 
+absolutamente frio e úmido por dentro.
 ~
-43 8 0 0 0 0
+43 d 0
 D0
 ~
 ~
@@ -1525,11 +1562,11 @@ D2
 0 -1 4373
 S
 #4375
-A Intersecï¿½ï¿½o Oriental~
-   Vocï¿½ estï¿½ na interseï¿½ï¿½o oriental, entre a passagem e um corredor.  Vocï¿½ 
+A Intersecção Oriental~
+   Você está na interseção oriental, entre a passagem e um corredor.  Você 
 pode ir para oeste, leste ou voltar para sul.
 ~
-43 9 0 0 0 0
+43 ad 0
 D1
 ~
 ~
@@ -1545,11 +1582,11 @@ D3
 S
 #4376
 O Corredor Oriental~
-   Vocï¿½ estï¿½ no corredor oriental, cujas paredes sï¿½o grandes e espessas.  
-Este local pode ter sido uma fortaleza durante a idade das trevas.  Vocï¿½ 
+   Você está no corredor oriental, cujas paredes são grandes e espessas.  
+Este local pode ter sido uma fortaleza durante a idade das trevas.  Você 
 voltar, ou continuar seguindo para o leste.
 ~
-43 9 0 0 0 0
+43 ad 0
 D1
 ~
 ~
@@ -1561,13 +1598,13 @@ D3
 S
 #4377
 O Fim Oriental do Corredor~
-   Vocï¿½ chega ao final deste corredor, e percebe que ao norte hï¿½ um grande 
+   Você chega ao final deste corredor, e percebe que ao norte há um grande 
 quarto onde os Mosqueteiros usam para descansar depois de um longo dia de 
-trabalho.  Do lado direito deste quarto, hï¿½ uma grande janela em arco de 
-onde pode-se ver toda a cidade.  As paredes sï¿½o cinzas como as pedras que 
+trabalho.  Do lado direito deste quarto, há uma grande janela em arco de 
+onde pode-se ver toda a cidade.  As paredes são cinzas como as pedras que 
 encobrem o teto.
 ~
-43 8 0 0 0 0
+43 d 0
 D0
 ~
 ~
@@ -1579,17 +1616,18 @@ D3
 S
 #4378
 O Quarto dos Mosqueteiros~
-   Este ï¿½ o quarto onde os Mosqueteiros podem descansar quando retornam 
-de suas longas viagens de trabalho.  Aqui encontram-se vï¿½rias muitas 
-cadeiras e uma grande mesa de madeira, com alguns papï¿½is sobre.  Todo o 
-chï¿½o do quarto estï¿½ coberto por um bonito tapete vermelho, e as paredes 
-estï¿½o enfeitadas com bonitos quadros pintados a ï¿½leo.  
+   Este é o quarto onde os Mosqueteiros podem descansar quando retornam 
+de suas longas viagens de trabalho.  Aqui encontram-se várias muitas 
+cadeiras e uma grande mesa de madeira, com alguns papéis sobre.  Todo o 
+chão do quarto está coberto por um bonito tapete vermelho, e as paredes 
+estão enfeitadas com bonitos quadros pintados a óleo.  
 ~
-43 8 0 0 0 0
+43 d 0
 D1
 ~
 parede~
-1 4392 4399
+:n 2 a parede
+ab 4392 4399
 D2
 ~
 ~
@@ -1597,17 +1635,18 @@ D2
 S
 #4379
 Outro Corredor~
-   Vocï¿½ estï¿½ em outro corredor do Q.G dos Mosqueteiros.  Aqui pode-se ver 
+   Você está em outro corredor do Q.G dos Mosqueteiros.  Aqui pode-se ver 
 uma porta de metal ao norte, que provavelmente deve se dirigir ao 
-calabouï¿½o, onde estï¿½o encarcerados muitos ladrï¿½es e revolutionï¿½rios.  A 
-leste e oeste, vocï¿½ pode ver algumas interseï¿½ï¿½es para alguns corredores ou 
+calabouço, onde estão encarcerados muitos ladrões e revolutionários.  A 
+leste e oeste, você pode ver algumas interseções para alguns corredores ou 
 passagens.
 ~
-43 8 0 0 0 0
+43 d 0
 D0
 ~
 porta~
-1 -1 4380
+:n 2
+a -1 4380
 D1
 ~
 ~
@@ -1618,28 +1657,29 @@ D3
 0 -1 4381
 S
 #4380
-Um Passagem para o Calabouï¿½o~
-   Vocï¿½ estï¿½ em um pequeno quarto, onde encontra-se uma pequena escada que 
-segue para baixo.  Provavelmente deve guiar para o calabouï¿½o, onde os 
+Um Passagem para o Calabouço~
+   Você está em um pequeno quarto, onde encontra-se uma pequena escada que 
+segue para baixo.  Provavelmente deve guiar para o calabouço, onde os 
 Mosqueteiros aprisionam os prisioneiros capturados na cidade, pois os dias 
-atuais estï¿½o cheios de revolucionï¿½rios.
+atuais estão cheios de revolucionários.
 ~
-43 41 0 0 0 0
+43 adf 0
 D2
 ~
 porta~
-0 -1 4379
+:n 2 a porta
+ag -1 4379
 D5
 ~
 ~
 0 -1 4389
 S
 #4381
-A Interseï¿½ï¿½o Ocidental~
-   Vocï¿½ estï¿½ na interseï¿½ï¿½o ocidental, entre um corredor e uma passagem.  As 
-saï¿½das sï¿½o para leste, oeste, ou voltar para sul.
+A Interseção Ocidental~
+   Você está na interseção ocidental, entre um corredor e uma passagem.  As 
+saídas são para leste, oeste, ou voltar para sul.
 ~
-43 40 0 0 0 0
+43 df 0
 D1
 ~
 ~
@@ -1655,12 +1695,12 @@ D3
 S
 #4382
 O Corredor Ocidental~
-   Vocï¿½ estï¿½ no corredor ocidental cujas paredes sï¿½o muito espessas.  Este  
-lugar, bem como todos os outros daqui, ï¿½ muito frio, pois foi totalmente 
-construï¿½do  de pedras.  Nem as paredes ou o teto foram pintados, e logo ao 
-chï¿½o hï¿½ uma enorme barata.
+   Você está no corredor ocidental cujas paredes são muito espessas.  Este  
+lugar, bem como todos os outros daqui, é muito frio, pois foi totalmente 
+construído  de pedras.  Nem as paredes ou o teto foram pintados, e logo ao 
+chão há uma enorme barata.
 ~
-43 40 0 0 0 0
+43 df 0
 D1
 ~
 ~
@@ -1672,13 +1712,13 @@ D3
 S
 #4383
 O Fim Ocidental do Corredor~
-   Vocï¿½ chega ao final deste corredor, e pode ver uma grande janela em 
-arco ao oeste. Ao norte hï¿½ uma pequena escada que leva ï¿½ torre.  Vocï¿½ 
+   Você chega ao final deste corredor, e pode ver uma grande janela em 
+arco ao oeste. Ao norte há uma pequena escada que leva à torre.  Você 
 percebe que apenas a entrada teve as paredes pintadas, pois aqui as 
-paredes tï¿½m a cor da pedra cinzenta. Vocï¿½ pode voltar ou pode seguir para 
+paredes têm a cor da pedra cinzenta. Você pode voltar ou pode seguir para 
 o norte.
 ~
-43 8 0 0 0 0
+43 d 0
 D0
 ~
 ~
@@ -1690,14 +1730,14 @@ D1
 S
 #4384
 Um Quarto Perto da Torre~
-   Vocï¿½ estï¿½ em um pequeno quarto, onde hï¿½ uma pequena escada que se 
-dirige a torre.  A torre ï¿½ o local onde os Mosqueteiros observam a cidade, 
-ï¿½ procura de qualquer sinal de problemas.  O quarto estï¿½ enfeitado com 
-somente um quadro.  A escada ï¿½ feita de pedra e muito resistente e segura,
-mas de qualquer modo, vocï¿½ precisa ter cuidado, pois os degraus sï¿½o muito 
+   Você está em um pequeno quarto, onde há uma pequena escada que se 
+dirige a torre.  A torre é o local onde os Mosqueteiros observam a cidade, 
+à procura de qualquer sinal de problemas.  O quarto está enfeitado com 
+somente um quadro.  A escada é feita de pedra e muito resistente e segura,
+mas de qualquer modo, você precisa ter cuidado, pois os degraus são muito 
 estreitos.
 ~
-43 8 0 0 0 0
+43 d 0
 D2
 ~
 ~
@@ -1709,12 +1749,12 @@ D4
 S
 #4385
 A Passagem Ocidental~
-   Vocï¿½ continua na passagem ocidental, e aqui nï¿½o hï¿½ nada de interessante 
-ou de importante.  A oeste, encontra-se a fonte de mï¿½rmore verde, dentro 
-do Q.G., mas hï¿½ uma corrente impedindo que vocï¿½ prossiga.  De qualquer 
-maneira, vocï¿½ nï¿½o sente a menor vontade de ir para o pï¿½tio deste edifï¿½cio.
+   Você continua na passagem ocidental, e aqui não há nada de interessante 
+ou de importante.  A oeste, encontra-se a fonte de mármore verde, dentro 
+do Q.G., mas há uma corrente impedindo que você prossiga.  De qualquer 
+maneira, você não sente a menor vontade de ir para o pátio deste edifício.
 ~
-43 8 0 0 0 0
+43 d 0
 D0
 ~
 ~
@@ -1726,13 +1766,13 @@ D2
 S
 #4386
 A Passagem Ocidental~
-   Vocï¿½ estï¿½ em uma passagem dentro do Q.G dos Mosqueteiros, que segue 
-para o norte, e oeste, onde hï¿½ uma grande porta, de onde vocï¿½ consegue 
-ouvir alguns ruï¿½dos.  Estes sons nï¿½o sï¿½o de humanos, parece mais ser um 
-cavalo.  Sendo assim, este local ï¿½ provavelmente onde os cavalos dos 
+   Você está em uma passagem dentro do Q.G dos Mosqueteiros, que segue 
+para o norte, e oeste, onde há uma grande porta, de onde você consegue 
+ouvir alguns ruídos.  Estes sons não são de humanos, parece mais ser um 
+cavalo.  Sendo assim, este local é provavelmente onde os cavalos dos 
 Mosqueteiros descansam durante a noite.
 ~
-43 8 0 0 0 0
+43 d 0
 D0
 ~
 ~
@@ -1741,34 +1781,48 @@ D1
 ~
 ~
 0 -1 4372
+D2
+~
+~
+0 -1 -1
 D3
 ~
 porta~
-0 -1 4387
+:n 2 a porta
+ag -1 4387
 S
-#4387
-Um Estï¿½bulo Francï¿½s~
-   Vocï¿½ estï¿½ no estï¿½bulo onde os cavalos dos Mosqueteiros permanecem 
-durante a noite.  Este local tem um terrï¿½vel cheiro, e por alguns 
-momentos, vocï¿½ imagina hï¿½ quanto tempo estes cavalos estï¿½o sem tomar um 
-banho.  A ï¿½nica que hï¿½ aqui, sï¿½o os cavalos e muito feno, para os 
+#4387 
+Um Estábulo Francês~
+   Você está no estábulo onde os cavalos dos Mosqueteiros permanecem 
+durante a noite.  Este local tem um terrível cheiro, e por alguns 
+momentos, você imagina há quanto tempo estes cavalos estão sem tomar um 
+banho.  A única que há aqui, são os cavalos e muito feno, para os 
 alimentar.
 ~
-43 136 0 0 0 0
+43 dh 0
+D0
+~
+~
+0 -1 -1
 D1
 ~
 porta~
-0 -1 4386
+:n 2 a porta
+ag -1 4386
+D5
+~
+~
+0 -1 -1
 S
 #4388
-Uma Hospedaria Francï¿½sa~
-   Vocï¿½ estï¿½ em uma hospedaria francï¿½sa. Este local ï¿½ muito sujo e se 
-encontra em decomposiï¿½ï¿½o.  Nï¿½o ï¿½ para menos que estï¿½ sendo reformado.  Hï¿½ 
-pelo menos uma coisa muito bonita neste local: no teto hï¿½ um belï¿½ssimo par 
-de candelabros, feitos de ouro puro.  Vocï¿½ pode ver que hï¿½ um recepcionista 
-aqui, e talvez possa perguntar quando a hospedaria estarï¿½ novamente aberta.
+Uma Hospedaria Francêsa~
+   Você está em uma hospedaria francêsa. Este local é muito sujo e se 
+encontra em decomposição.  Não é para menos que está sendo reformado.  Há 
+pelo menos uma coisa muito bonita neste local: no teto há um belíssimo par 
+de candelabros, feitos de ouro puro.  Você pode ver que há um recepcionista 
+aqui, e talvez possa perguntar quando a hospedaria estará novamente aberta.
 ~
-43 8 0 0 0 0
+43 d 0
 D3
 ~
 ~
@@ -1776,13 +1830,13 @@ D3
 S
 #4389
 Um Corredor para as Celas~
-   Vocï¿½ estï¿½ em um escuro corredor dentro do Q.G. dos Mosqueteiros que 
-segue em direï¿½ï¿½o ï¿½s celas, onde os revolocionï¿½rios mais perigosos ficam 
-presos.  Este local ï¿½ muito frio e ï¿½mido, e vocï¿½ deveria ter muito 
-cuidado ao tentar abrir uma das celas, pois os presos que aqui estï¿½o sï¿½o 
+   Você está em um escuro corredor dentro do Q.G. dos Mosqueteiros que 
+segue em direção às celas, onde os revolocionários mais perigosos ficam 
+presos.  Este local é muito frio e úmido, e você deveria ter muito 
+cuidado ao tentar abrir uma das celas, pois os presos que aqui estão são 
 muito perigosos.
 ~
-43 45 0 0 0 0
+43 acdf 0
 D2
 ~
 ~
@@ -1793,16 +1847,16 @@ D4
 0 -1 4380
 S
 #4390
-Um Corredor no Calabouï¿½o~
-   Vocï¿½ estï¿½ em um corredor de pedra maciï¿½a que com certeza impede uma 
-eventual fuga dos prisioneiros.  Atï¿½ aqui, a ï¿½nica coisa que vocï¿½ 
+Um Corredor no Calabouço~
+   Você está em um corredor de pedra maciça que com certeza impede uma 
+eventual fuga dos prisioneiros.  Até aqui, a única coisa que você 
 conseguiu ver, foram enormes ratos e algumas baratas nojentas. Este lugar 
-estï¿½ tï¿½o frio, que vocï¿½ acha difï¿½cll que alguï¿½m possa sobreviver mais do 
-que algumas horas.  Vocï¿½ nota, espantado, que este lugar parece absorver 
-todos os sons, pois nï¿½o ï¿½ possivel ouvir qualquer prisioneiro gritando, 
+está tão frio, que você acha difícll que alguém possa sobreviver mais do 
+que algumas horas.  Você nota, espantado, que este lugar parece absorver 
+todos os sons, pois não é possivel ouvir qualquer prisioneiro gritando, 
 ou qualquer outro barulho.
 ~
-43 41 0 0 0 0
+43 adf 0
 D0
 ~
 ~
@@ -1813,15 +1867,15 @@ D2
 0 -1 4391
 S
 #4391
-O Final do Corredor do Calabouï¿½o~
-   Vocï¿½ chega ao final este corredor e percebe que o local estï¿½ se tornando
-cada vez mais frio e escuro.  Um tremor percorre todo o seu corpo, pois vocï¿½
+O Final do Corredor do Calabouço~
+   Você chega ao final este corredor e percebe que o local está se tornando
+cada vez mais frio e escuro.  Um tremor percorre todo o seu corpo, pois você
 percebe que se tornou absolutamente incapaz de usar seus poderes de magia 
-neste local, e sabe que nem seus pergaminhos e varinhas irï¿½o funcionar 
-aqui.  Vocï¿½ estï¿½ rodeado por celas e se fosse realmente esperto, teria as 
+neste local, e sabe que nem seus pergaminhos e varinhas irão funcionar 
+aqui.  Você está rodeado por celas e se fosse realmente esperto, teria as 
 deixado fechadas.
 ~
-43 41 0 0 0 0
+43 adf 0
 D0
 ~
 ~
@@ -1829,57 +1883,66 @@ D0
 D1
 ~
 porta~
-0 -1 4392
+:n 2 a porta
+ag -1 4392
 D2
 ~
 porta~
-0 4390 4394
+:n 2 a porta
+abg 4390 4394
 D3
 ~
 porta~
-0 4390 4393
+:n 2 a porta
+abg 4390 4393
 S
 #4392
-Uma Cela do Calabouï¿½o~
-   Vocï¿½ estï¿½ em uma pequena cela dentro do calabouï¿½o do Q.G. dos 
-Mosqueteiros.  Este local ï¿½ muito escuro e ï¿½mido.  Bem, como vocï¿½ esperava 
+Uma Cela do Calabouço~
+   Você está em uma pequena cela dentro do calabouço do Q.G. dos 
+Mosqueteiros.  Este local é muito escuro e úmido.  Bem, como você esperava 
 que uma cela fosse?
 ~
-43 41 0 0 0 0
+43 adf 0
 D3
 ~
 porta~
-1 -1 4391
+:n 2 a porta
+a -1 4391
 S
 #4393
 Uma Cela Silenciosa~
-   Este ï¿½ um calabouï¿½o de seguranï¿½a mï¿½xima.  A porta se fechou rapidamente 
-e aqui vocï¿½ nï¿½o consegue ouvir um ï¿½nico ruï¿½do, a nï¿½o ser o som do seu 
-coraï¿½ï¿½o batendo cada vez mais rï¿½pido e rï¿½pido. 
+   Este é um calabouço de segurança máxima.  A porta se fechou rapidamente 
+e aqui você não consegue ouvir um único ruído, a não ser o som do seu 
+coração batendo cada vez mais rápido e rápido. 
 ~
-43 233 0 0 0 0
+43 adfgh 0
+D1
+~
+~
+0 -1 -1
 S
 #4394
-Uma Cela no Calabouï¿½o~
-   Vocï¿½ estï¿½ em uma pequena cela dentro dos calabouï¿½os do Q.G dos 
-Mosqueteiros.  Este lugar ï¿½ muito escuro e ï¿½mido.  Bem, como vocï¿½ esperava 
+Uma Cela no Calabouço~
+   Você está em uma pequena cela dentro dos calabouços do Q.G dos 
+Mosqueteiros.  Este lugar é muito escuro e úmido.  Bem, como você esperava 
 que uma cela fosse?
 ~
-43 41 0 0 0 0
+43 adf 0
 D0
 ~
 porta~
-1 -1 4391
+:n 2 a porta
+a -1 4391
 S
 #4395
 Uma Torre no Q.G dos Mosqueteiros~
-   Vocï¿½ estï¿½ no alto de uma torre.  O local ï¿½ muito pequeno e vocï¿½ pode 
-ver uma lï¿½mpada a ï¿½leo que deve ser usada pelo guarda ï¿½ noite.  Existem 
-quatro janelas aqui e atravï¿½s das quais pode-se ver o norte, sul, oeste, e 
-atï¿½ mesmo o leste da a cidade.  O lugar mais perto possï¿½vel de se ver ï¿½ a 
-praï¿½a que fica ao sul.
+   Você está no alto de uma torre.  O local é muito pequeno e você pode 
+ver uma lâmpada a óleo que deve ser usada pelo guarda à noite.  Existem 
+quatro janelas aqui e através das quais pode-se ver o norte, sul, oeste, e 
+até mesmo o leste da a cidade.  O lugar mais perto possível de se ver é a 
+praça que fica ao sul.
 ~
-43 8 0 0 0 0
+43 d 0
 D5
 ~
 ~
@@ -1887,12 +1950,12 @@ D5
 S
 #4396
 Uma Estranha Passagem~
-   Vocï¿½ estï¿½ em uma estranha passagem, que parece mais ser uma caverna, 
-porï¿½m muito bem iluminada, mas nï¿½o hï¿½ sinal de velas ou tochas.  Ao norte 
+   Você está em uma estranha passagem, que parece mais ser uma caverna, 
+porém muito bem iluminada, mas não há sinal de velas ou tochas.  Ao norte 
 e ao sul, pode-se ver alguns estranhos portais que o levam para diferentes
 e estranhos lugares.  Abra esta pequena porta e entre, se puder.
 ~
-43 104 0 0 0 0
+43 dfg 0
 D1
 ~
 ~
@@ -1904,12 +1967,12 @@ D3
 S
 #4397
 Uma Estranha Passagem~
-   Vocï¿½ estï¿½ em uma estranha passagem, que parece mais ser uma caverna, 
-porï¿½m muito bem iluminada, mas nï¿½o hï¿½ sinal de velas ou tochas.  Ao norte 
+   Você está em uma estranha passagem, que parece mais ser uma caverna, 
+porém muito bem iluminada, mas não há sinal de velas ou tochas.  Ao norte 
 e ao sul, pode-se ver alguns estranhos portais que o levam para diferentes
 e estranhos lugares.  Abra esta pequena porta e entre, se puder.
 ~
-43 104 0 0 0 0
+43 dfg 0
 D1
 ~
 ~
@@ -1921,30 +1984,46 @@ D3
 S
 #4398
 Uma Pequena Loja~
-   Esta ï¿½ outra loja de Lyon, e como se pode perceber, nï¿½o ï¿½ nada se for
-comparada com a loja mï¿½gica, que estï¿½ ao leste.  Aqui vocï¿½ pode comprar 
-muitas coisas diferentes, que poderï¿½o ser usadas no futuro, tais como 
+   Esta é outra loja de Lyon, e como se pode perceber, não é nada se for
+comparada com a loja mágica, que está ao leste.  Aqui você pode comprar 
+muitas coisas diferentes, que poderão ser usadas no futuro, tais como 
 tecidos, armas e armaduras.
 ~
-43 88 0 0 0 0
+43 deg 0
 D1
 ~
 ~
 0 -1 4342
+D3
+~
+~
+0 -1 -1
 S
 #4399
 Corredor Real~
-   Vocï¿½ se sente emocionado, pois afinal vocï¿½ estï¿½ dentro de um corredor 
-do Palï¿½cio Real.  Este local ï¿½ enorme, e vocï¿½ imagina se talvez o Rei da 
-Franï¿½a esteja por aqui.  Existem muitos ornamentos feitos de ouro maciï¿½o 
-enfeitando as paredes, e o chï¿½o ï¿½ feito com o melhor mï¿½rmore do mundo.  
-No teto, vocï¿½ pode ver alguns candelabros de ouro puro, e parece que no 
+   Você se sente emocionado, pois afinal você está dentro de um corredor 
+do Palácio Real.  Este local é enorme, e você imagina se talvez o Rei da 
+França esteja por aqui.  Existem muitos ornamentos feitos de ouro maciço 
+enfeitando as paredes, e o chão é feito com o melhor mármore do mundo.  
+No teto, você pode ver alguns candelabros de ouro puro, e parece que no 
 final do corredor encontra-se a Sala do Trono Real. 
 ~
-43 72 0 0 0 0
+43 dg 0
 D3
 ~
 parede~
-1 4392 4378
+:n 2 a parede
+ab 4392 4378
+D4
+~
+~
+0 -1 -1
+D5
+~
+~
+0 -1 -1
 S
 $~
+
+
+

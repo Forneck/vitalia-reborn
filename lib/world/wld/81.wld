@@ -1,435 +1,435 @@
 #8101
 O Saara~
-   O grande deserto do Saara se estende por centenas de quilï¿½metros e
-realmente ï¿½ difï¿½cil de se localizar.  Aqui o sol ï¿½ sempre escaldante e seu
-corpo estï¿½ sedento de ï¿½gua.  O calor sufocante cria a miragem de um oï¿½sis.
-Vocï¿½ tem forï¿½as apenas para rezar contra uma possï¿½vel tempestade de areia.
+   O grande deserto do Saara se estende por centenas de quilômetros e
+realmente é difícil de se localizar.  Aqui o sol é sempre escaldante e seu
+corpo está sedento de água.  O calor sufocante cria a miragem de um oásis.
+Você tem forças apenas para rezar contra uma possível tempestade de areia.
 ~
-81 353 0 0 0 2
+81 afgi 2
 D0
-Vocï¿½ pode avistar quilï¿½metros e quilï¿½metros de areia ï¿½ frente.
+Você pode avistar quilômetros e quilômetros de areia à frente.
 ~
 ~
 0 -1 8102
 D3
-Vocï¿½ pode avistar quilï¿½metros e quilï¿½metros de areia ï¿½ frente.
+Você pode avistar quilômetros e quilômetros de areia à frente.
 ~
 ~
 0 -1 5037
 S
 #8102
 O Saara~
-   O grande deserto do Saara se estende por centenas de quilï¿½metros e
-realmente ï¿½ difï¿½cil de se localizar.  Aqui o sol ï¿½ sempre escaldante e seu
-corpo estï¿½ sedento de ï¿½gua.  O calor sufocante cria a miragem de um oï¿½sis.
-Vocï¿½ tem forï¿½as apenas para rezar contra uma possï¿½vel tempestade de areia.
+   O grande deserto do Saara se estende por centenas de quilômetros e
+realmente é difícil de se localizar.  Aqui o sol é sempre escaldante e seu
+corpo está sedento de água.  O calor sufocante cria a miragem de um oásis.
+Você tem forças apenas para rezar contra uma possível tempestade de areia.
 ~
-81 865 0 0 0 2
-D1
-Vocï¿½ pode avistar quilï¿½metros e quilï¿½metros de areia ï¿½ frente.
-~
-~
-0 -1 8103
+81 afgji 2
 D2
-Vocï¿½ pode avistar quilï¿½metros e quilï¿½metros de areia ï¿½ frente.
+Você pode avistar quilômetros e quilômetros de areia à frente.
 ~
 ~
 0 -1 8101
-S
-#8103
-O Saara~
-   O grande deserto do Saara se estende por centenas de quilï¿½metros e
-realmente ï¿½ difï¿½cil de se localizar.  Aqui o sol ï¿½ sempre escaldante e seu
-corpo estï¿½ sedento de ï¿½gua.  O calor sufocante cria a miragem de um oï¿½sis.
-Vocï¿½ tem forï¿½as apenas para rezar contra uma possï¿½vel tempestade de areia.
-~
-81 865 0 0 0 2
 D1
-Vocï¿½ pode avistar um pequeno oï¿½sis ï¿½ frente.
-~
-~
-0 -1 8104
-D3
-Vocï¿½ pode avistar quilï¿½metros e quilï¿½metros de areia ï¿½ frente.
-~
-~
-0 -1 8102
-S
-#8104
-Um Oï¿½sis~
-   Finalmente vocï¿½ pode matar sua sede neste pequeno oï¿½sis de ï¿½gua lï¿½mpida.
-A sombra faz vocï¿½ recobrar parcialmente suas energias.  Sacie-se enquanto
-tem paz.  A leste vocï¿½ segue pelo Rio Nilo, a oeste seu destino ï¿½ incerto.
-~
-81 97 0 0 0 5
-D1
-Hï¿½ um imenso rio ï¿½ frente.
-~
-~
-0 -1 8119
-D3
-Vocï¿½ pode avistar quilï¿½metros e quilï¿½metros de areia ï¿½ frente.
+Você pode avistar quilômetros e quilômetros de areia à frente.
 ~
 ~
 0 -1 8103
 S
+#8103
+O Saara~
+   O grande deserto do Saara se estende por centenas de quilômetros e
+realmente é difícil de se localizar.  Aqui o sol é sempre escaldante e seu
+corpo está sedento de água.  O calor sufocante cria a miragem de um oásis.
+Você tem forças apenas para rezar contra uma possível tempestade de areia.
+~
+81 afgji 2
+D3
+Você pode avistar quilômetros e quilômetros de areia à frente.
+~
+~
+0 -1 8102
+D1
+Você pode avistar um pequeno oásis à frente.
+~
+~
+0 -1 8104
+S
+#8104
+Um Oásis~
+   Finalmente você pode matar sua sede neste pequeno oásis de água límpida.
+A sombra faz você recobrar parcialmente suas energias.  Sacie-se enquanto
+tem paz.  A leste você segue pelo Rio Nilo, a oeste seu destino é incerto.
+~
+81 afg 5
+D3
+Você pode avistar quilômetros e quilômetros de areia à frente.
+~
+~
+0 -1 8103
+D1
+Há um imenso rio à frente.
+~
+~
+0 -1 8119
+S
 #8105
 O Rio Nilo~
-   O rio de maior importï¿½ncia nesta regiï¿½o; por aqui passam muitas
-embarcaï¿½ï¿½es, mercadores e turistas.  O rio periodicamente transborda,
-alagando toda a regiï¿½o, e tornando assim possï¿½vel a existï¿½ncia de vida em
-solo tï¿½o cruel.
+   O rio de maior importância nesta região; por aqui passam muitas
+embarcações, mercadores e turistas.  O rio periodicamente transborda,
+alagando toda a região, e tornando assim possível a existência de vida em
+solo tão cruel.
 ~
-81 131076 0 0 0 7
+81 cr 7
 D1
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8110
 D3
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8118
 S
 #8106
 O Rio Nilo~
-   O rio de maior importï¿½ncia nesta regiï¿½o; por aqui passam muitas
-embarcaï¿½ï¿½es, mercadores e turistas.  O rio periodicamente transborda,
-alagando toda a regiï¿½o, e tornando assim possï¿½vel a existï¿½ncia de vida em
-solo tï¿½o cruel.
+   O rio de maior importância nesta região; por aqui passam muitas
+embarcações, mercadores e turistas.  O rio periodicamente transborda,
+alagando toda a região, e tornando assim possível a existência de vida em
+solo tão cruel.
 ~
-81 131076 0 0 0 7
+81 cr 7
 D0
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8112
 D1
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8108
 D3
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8119
 S
 #8107
 O Rio Nilo~
-   O rio de maior importï¿½ncia nesta regiï¿½o; por aqui passam muitas
-embarcaï¿½ï¿½es, mercadores e turistas.  O rio periodicamente transborda,
-alagando toda a regiï¿½o, e tornando assim possï¿½vel a existï¿½ncia de vida em
-solo tï¿½o cruel.
+   O rio de maior importância nesta região; por aqui passam muitas
+embarcações, mercadores e turistas.  O rio periodicamente transborda,
+alagando toda a região, e tornando assim possível a existência de vida em
+solo tão cruel.
 ~
-81 131076 0 0 0 7
+81 cr 7
 D0
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8113
 D1
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8118
 D3
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8108
 S
 #8108
 O Rio Nilo~
-   O rio de maior importï¿½ncia nesta regiï¿½o; por aqui passam muitas
-embarcaï¿½ï¿½es, mercadores e turistas.  O rio periodicamente transborda,
-alagando toda a regiï¿½o, e tornando assim possï¿½vel a existï¿½ncia de vida em
-solo tï¿½o cruel.
+   O rio de maior importância nesta região; por aqui passam muitas
+embarcações, mercadores e turistas.  O rio periodicamente transborda,
+alagando toda a região, e tornando assim possível a existência de vida em
+solo tão cruel.
 ~
-81 131076 0 0 0 7
+81 cr 7
 D0
-Vocï¿½ pode avistar uma enorme cidade.
+Você pode avistar uma enorme cidade.
 ~
 ~
 0 -1 8120
 D1
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8107
 D3
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8106
 S
 #8109
 O Rio Nilo~
-   O rio de maior importï¿½ncia nesta regiï¿½o; por aqui passam muitas
-embarcaï¿½ï¿½es, mercadores e turistas.  O rio periodicamente transborda,
-alagando toda a regiï¿½o, e tornando assim possï¿½vel a existï¿½ncia de vida em
-solo tï¿½o cruel.
+   O rio de maior importância nesta região; por aqui passam muitas
+embarcações, mercadores e turistas.  O rio periodicamente transborda,
+alagando toda a região, e tornando assim possível a existência de vida em
+solo tão cruel.
 ~
-81 131076 0 0 0 7
+81 cr 7
 D0
 ~
 ~
 0 -1 2080
 D2
-Vocï¿½ pode avistar uma enorme cidade.
+Você pode avistar uma enorme cidade.
 ~
 ~
 0 -1 8119
 S
 #8110
 O Rio Nilo~
-   O rio de maior importï¿½ncia nesta regiï¿½o; por aqui passam muitas
-embarcaï¿½ï¿½es, mercadores e turistas.  O rio periodicamente transborda,
-alagando toda a regiï¿½o, e tornando assim possï¿½vel a existï¿½ncia de vida em
-solo tï¿½o cruel.
+   O rio de maior importância nesta região; por aqui passam muitas
+embarcações, mercadores e turistas.  O rio periodicamente transborda,
+alagando toda a região, e tornando assim possível a existência de vida em
+solo tão cruel.
 ~
-81 131076 0 0 0 7
+81 cr 7
 D1
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8115
 D2
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8116
 D3
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8105
 S
 #8111
 O Rio Nilo~
-   O rio de maior importï¿½ncia nesta regiï¿½o; por aqui passam muitas
-embarcaï¿½ï¿½es, mercadores e turistas.  O rio periodicamente transborda,
-alagando toda a regiï¿½o, e tornando assim possï¿½vel a existï¿½ncia de vida em
-solo tï¿½o cruel.
+   O rio de maior importância nesta região; por aqui passam muitas
+embarcações, mercadores e turistas.  O rio periodicamente transborda,
+alagando toda a região, e tornando assim possível a existência de vida em
+solo tão cruel.
 ~
-81 131076 0 0 0 7
+81 cr 7
 D1
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8117
 D2
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8114
 S
 #8112
 O Rio Nilo~
-   O rio de maior importï¿½ncia nesta regiï¿½o; por aqui passam muitas
-embarcaï¿½ï¿½es, mercadores e turistas.  O rio periodicamente transborda,
-alagando toda a regiï¿½o, e tornando assim possï¿½vel a existï¿½ncia de vida em
-solo tï¿½o cruel.
+   O rio de maior importância nesta região; por aqui passam muitas
+embarcações, mercadores e turistas.  O rio periodicamente transborda,
+alagando toda a região, e tornando assim possível a existência de vida em
+solo tão cruel.
 ~
-81 131076 0 0 0 7
-D2
-Hï¿½ um imenso rio ï¿½ frente.
-~
-~
-0 -1 8106
+81 cr 7
 D4
-Vocï¿½ pode avistar uma cidade populosa.
+Você pode avistar uma cidade populosa.
 ~
 ~
 0 -1 8159
+D2
+Há um imenso rio à frente.
+~
+~
+0 -1 8106
 S
 #8113
 O Rio Nilo~
-   O rio de maior importï¿½ncia nesta regiï¿½o; por aqui passam muitas
-embarcaï¿½ï¿½es, mercadores e turistas.  O rio periodicamente transborda,
-alagando toda a regiï¿½o, e tornando assim possï¿½vel a existï¿½ncia de vida em
-solo tï¿½o cruel.
+   O rio de maior importância nesta região; por aqui passam muitas
+embarcações, mercadores e turistas.  O rio periodicamente transborda,
+alagando toda a região, e tornando assim possível a existência de vida em
+solo tão cruel.
 ~
-81 131076 0 0 0 7
+81 cr 7
 D1
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8114
 D2
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8107
 S
 #8114
 O Rio Nilo~
-   O rio de maior importï¿½ncia nesta regiï¿½o; por aqui passam muitas
-embarcaï¿½ï¿½es, mercadores e turistas.  O rio periodicamente transborda,
-alagando toda a regiï¿½o, e tornando assim possï¿½vel a existï¿½ncia de vida em
-solo tï¿½o cruel.
+   O rio de maior importância nesta região; por aqui passam muitas
+embarcações, mercadores e turistas.  O rio periodicamente transborda,
+alagando toda a região, e tornando assim possível a existência de vida em
+solo tão cruel.
 ~
-81 131076 0 0 0 7
-D3
-Hï¿½ um imenso rio ï¿½ frente.
-~
-~
-0 -1 8113
+81 cr 7
 D4
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8111
+D3
+Há um imenso rio à frente.
+~
+~
+0 -1 8113
 S
 #8115
 O Rio Nilo~
-   O rio de maior importï¿½ncia nesta regiï¿½o; por aqui passam muitas
-embarcaï¿½ï¿½es, mercadores e turistas.  O rio periodicamente transborda,
-alagando toda a regiï¿½o, e tornando assim possï¿½vel a existï¿½ncia de vida em
-solo tï¿½o cruel.
+   O rio de maior importância nesta região; por aqui passam muitas
+embarcações, mercadores e turistas.  O rio periodicamente transborda,
+alagando toda a região, e tornando assim possível a existência de vida em
+solo tão cruel.
 ~
-81 131076 0 0 0 7
+81 cr 7
 D3
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8110
 S
 #8116
 O Rio Nilo~
-   O rio de maior importï¿½ncia nesta regiï¿½o; por aqui passam muitas
-embarcaï¿½ï¿½es, mercadores e turistas.  O rio periodicamente transborda,
-alagando toda a regiï¿½o, e tornando assim possï¿½vel a existï¿½ncia de vida em
-solo tï¿½o cruel.
+   O rio de maior importância nesta região; por aqui passam muitas
+embarcações, mercadores e turistas.  O rio periodicamente transborda,
+alagando toda a região, e tornando assim possível a existência de vida em
+solo tão cruel.
 ~
-81 131076 0 0 0 7
+81 cr 7
 D0
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8110
 D2
-Hï¿½ uma pequena vila seguindo esta direï¿½ï¿½o.
+Há uma pequena vila seguindo esta direção.
 ~
 ~
-0 -1 8142
+81 -1 8142
 S
 #8117
 O Rio Nilo~
-   O rio de maior importï¿½ncia nesta regiï¿½o; por aqui passam muitas
-embarcaï¿½ï¿½es, mercadores e turistas.  O rio periodicamente transborda,
-alagando toda a regiï¿½o, e tornando assim possï¿½vel a existï¿½ncia de vida em
-solo tï¿½o cruel.
+   O rio de maior importância nesta região; por aqui passam muitas
+embarcações, mercadores e turistas.  O rio periodicamente transborda,
+alagando toda a região, e tornando assim possível a existência de vida em
+solo tão cruel.
 ~
-81 131076 0 0 0 7
+81 cr 7
 D3
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8111
 S
 #8118
 O Rio Nilo~
-   O rio de maior importï¿½ncia nesta regiï¿½o; por aqui passam muitas
-embarcaï¿½ï¿½es, mercadores e turistas.  O rio periodicamente transborda,
-alagando toda a regiï¿½o, e tornando assim possï¿½vel a existï¿½ncia de vida em
-solo tï¿½o cruel.
+   O rio de maior importância nesta região; por aqui passam muitas
+embarcações, mercadores e turistas.  O rio periodicamente transborda,
+alagando toda a região, e tornando assim possível a existência de vida em
+solo tão cruel.
 ~
-81 131076 0 0 0 7
+81 cr 7
 D1
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8105
 D2
-Ao longe vocï¿½ avista uma cidade.
+Ao longe você avista uma cidade.
 ~
 ~
 0 -1 8134
 D3
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8107
 S
 #8119
 O Rio Nilo~
-   O rio de maior importï¿½ncia nesta regiï¿½o; por aqui passam muitas
-embarcaï¿½ï¿½es, mercadores e turistas.  O rio periodicamente transborda,
-alagando toda a regiï¿½o, e tornando assim possï¿½vel a existï¿½ncia de vida em
-solo tï¿½o cruel.
+   O rio de maior importância nesta região; por aqui passam muitas
+embarcações, mercadores e turistas.  O rio periodicamente transborda,
+alagando toda a região, e tornando assim possível a existência de vida em
+solo tão cruel.
 ~
-81 131076 0 0 0 7
+81 cr 7
 D0
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8109
 D1
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8106
 D3
-Vocï¿½ pode avistar um pequeno oï¿½sis ï¿½ frente.
+Você pode avistar um pequeno oásis à frente.
 ~
 ~
 0 -1 8104
 S
 #8120
 O Alto Egito~
-   ï¿½ definitivamente uma rua agitada.  Vocï¿½ vï¿½ escravos sendo aï¿½oitados por
-seus donos e mulheres carregando seus filhos.  A leste vocï¿½ pode ver a
-cidade de Tebas com suas enormes construï¿½ï¿½es.
+   É definitivamente uma rua agitada.  Você vê escravos sendo açoitados por
+seus donos e mulheres carregando seus filhos.  A leste você pode ver a
+cidade de Tebas com suas enormes construções.
 ~
-81 1 0 0 0 1
+81 a 1
 D1
-Vocï¿½ pode ver a entrada da cidade de Tebas.
+Você pode ver a entrada da cidade de Tebas.
 ~
 ~
 0 -1 8121
 D2
-Hï¿½ um imenso rio ï¿½ frente.
+Há um imenso rio à frente.
 ~
 ~
 0 -1 8108
 S
 #8121
 Tebas~
-   Vocï¿½ nota que as as casas de barro tomam quase toda a rua; crianï¿½as,
-mulheres e homens passam apressados; vocï¿½ jï¿½ comeï¿½a a se sentir um intruso,
-mas, para seu alï¿½vio, eles parecem ocupados demais para notar sua presenï¿½a.
-A leste vocï¿½ avista o mar e uma leve brisa marinha vem acariciar seu rosto.
-Ao norte vocï¿½ avista uma enorme construï¿½ï¿½o.
+   Você nota que as as casas de barro tomam quase toda a rua; crianças,
+mulheres e homens passam apressados; você já começa a se sentir um intruso,
+mas, para seu alívio, eles parecem ocupados demais para notar sua presença.
+A leste você avista o mar e uma leve brisa marinha vem acariciar seu rosto.
+Ao norte você avista uma enorme construção.
 ~
-81 262144 0 0 0 1
+81 s 1
 D0
-ï¿½ frente vocï¿½ pode observar uma enorme construï¿½ï¿½o.
+À frente você pode observar uma enorme construção.
 ~
 ~
 0 -1 8125
 D1
-Hï¿½ um mar ï¿½ frente.
+Há um mar à frente.
 ~
 ~
 0 -1 8122
 D3
-Vocï¿½ vï¿½ uma rua muito movimentada nessa direï¿½ï¿½o.
+Você vê uma rua muito movimentada nessa direção.
 ~
 ~
 0 -1 8120
 S
 #8122
 O Mar Vermelho~
-   Na ï¿½gua vocï¿½ nota enorme quantidade de algas, o que pode dificultar sua
-navegaï¿½ï¿½o por aqui.  Ao redor vocï¿½ nï¿½o vï¿½ mais nada a nï¿½o ser ï¿½gua e mais
-ï¿½gua...  De cor avermelhada, uma vista estonteante!  Vocï¿½ poderia fitar o
+   Na água você nota enorme quantidade de algas, o que pode dificultar sua
+navegação por aqui.  Ao redor você não vê mais nada a não ser água e mais
+água...  De cor avermelhada, uma vista estonteante!  Você poderia fitar o
 horizonte por horas seguidas.
 ~
-81 5 0 0 0 7
+81 ac 7
 D3
-Vocï¿½ vï¿½ apenas um grande aglomerado de pessoas.
+Você vê apenas um grande aglomerado de pessoas.
 ~
 ~
 0 -1 8121
@@ -437,35 +437,36 @@ S
 #8123
 O Mercado de Iguarias~
    Nossa, que barulho!  Vendedores gritam oferecendo suas iguarias de
-origem duvidosa e de qualidade mais incerta ainda.  Vocï¿½ pode ver mercadores
-de escravos, mulheres cheias de jï¿½ias, crianï¿½as roubando frutas e ï¿½ tudo o
-que pode distingï¿½ir no meio da multidï¿½o.  Mas cuidado com seus pertences
-pois os vendedores nï¿½o parecem ser ï¿½nicos ladrï¿½es daqui.  A oeste vocï¿½ vï¿½
-uma enorme construï¿½ï¿½o.
+origem duvidosa e de qualidade mais incerta ainda.  Você pode ver mercadores
+de escravos, mulheres cheias de jóias, crianças roubando frutas e é tudo o
+que pode distingüir no meio da multidão.  Mas cuidado com seus pertences
+pois os vendedores não parecem ser únicos ladrões daqui.  A oeste você vê
+uma enorme construção.
 ~
-81 1 0 0 0 1
+81 a 1
 D0
-Vocï¿½ vï¿½ uma rua deserta ï¿½ frente.
+Você vê uma rua deserta à frente.
 ~
 ~
 0 -1 8213
 D1
-Existe uma pequena loja ï¿½ frente.
+Existe uma pequena loja à frente.
 ~
 ~
 0 -1 8126
 D2
-Hï¿½ uma pequena vila nessa direï¿½ï¿½o.
+Há uma pequena vila nessa direção.
 ~
 ~
 0 -1 8160
 D3
-Vocï¿½ vï¿½ uma enorme porta de madeira trabalhada.
+Você vê uma enorme porta de madeira trabalhada.
 ~
 porta madeira~
+:n 2 a porta de madeira
 2 8171 8127
 D5
-Hï¿½ um mercado ï¿½ frente.
+Há um mercado à frente.
 ~
 ~
 0 -1 8112
@@ -473,234 +474,240 @@ S
 #8124
 O Mercado de Iguarias~
    Nossa, que barulho!  Vendedores gritam oferecendo suas iguarias de
-origem duvidosa e de qualidade mais incerta ainda.  Vocï¿½ pode ver mercadores
-de escravos, mulheres cheias de jï¿½ias, crianï¿½as roubando frutas e ï¿½ tudo o
-que pode distingï¿½ir no meio da multidï¿½o.  Mas cuidado com seus pertences
-pois os vendedores nï¿½o parecem ser ï¿½nicos ladrï¿½es daqui.  A oeste vocï¿½ vï¿½
-uma enorme construï¿½ï¿½o.
+origem duvidosa e de qualidade mais incerta ainda.  Você pode ver mercadores
+de escravos, mulheres cheias de jóias, crianças roubando frutas e é tudo o
+que pode distingüir no meio da multidão.  Mas cuidado com seus pertences
+pois os vendedores não parecem ser únicos ladrões daqui.  A oeste você vê
+uma enorme construção.
 ~
-81 1 0 0 0 1
+81 a 1
 D1
-Hï¿½ uma pequena barraca nessa direï¿½ï¿½o.
+Há uma pequena barraca nessa direção.
 ~
 ~
 0 -1 8210
 D2
-Hï¿½ uma pequena barraca nessa direï¿½ï¿½o.
+Há uma pequena barraca nessa direção.
 ~
 ~
 0 -1 8212
 D3
-Hï¿½ uma pequena barraca nessa direï¿½ï¿½o.
+Há uma pequena barraca nessa direção.
 ~
 ~
 0 -1 8211
 S
 #8125
-A Entrada da Pirï¿½mide~
-   Eis uma construï¿½ï¿½o ENORME feita de gigantescos blocos de pedra.Vocï¿½ se
-pergunta o quanto pesaria aquela edificaï¿½ï¿½o fabulosa erguida com o suor e o
-sangue dos sï¿½ditos do faraï¿½.  E nem ousa imaginar quantos sofreram e
+A Entrada da Pirâmide~
+   Eis uma construção ENORME feita de gigantescos blocos de pedra.Você se
+pergunta o quanto pesaria aquela edificação fabulosa erguida com o suor e o
+sangue dos súditos do faraó.  E nem ousa imaginar quantos sofreram e
 morreram por ela.
 ~
-81 256 0 0 0 4
-D2
-Vocï¿½ vï¿½ a entrada de uma cidade.
-~
-~
-0 -1 8121
+81 i 4
 D4
-A escuridï¿½o daquele lugar lhe inspira medo.
+A escuridão daquele lugar lhe inspira medo.
 ~
 ~
 1 -1 8132
+D2
+Você vê a entrada de uma cidade.
+~
+~
+0 -1 8121
 S
 #8126
-A Pequena Loja de Mï¿½gica~
+A Pequena Loja de Mágica~
    O lugar tem um ar misterioso, a atmosfera te convida a ficar..  O lugar
-eh no mï¿½nimo inusitado e extremamente atraente.
+eh no mínimo inusitado e extremamente atraente.
 ~
-81 1310904 0 0 0 0
+81 dehfsu 0
 D3
-Vocï¿½ volta ao mercado por esta direï¿½ï¿½o.
+Você volta ao mercado por esta direção.
 ~
 ~
 0 -1 8123
 S
 #8127
-A Sala do Faraï¿½~
-   O imenso salï¿½o tem enormes colunas douradas e paredes decoradas em
-lï¿½pis-lazuli.  No centro vocï¿½ vï¿½ um trono de ouro maciï¿½o ornado com pedras
-preciosas.  Nele sentado, cercado por cortesï¿½os, criados e escravos estï¿½
-o representante dos deuses na terra, o faraï¿½!  A oeste vocï¿½ nota uma
-enorme porta de madeira maciï¿½a esculpida com motivos egï¿½pcios.
+A Sala do Faraó~
+   O imenso salão tem enormes colunas douradas e paredes decoradas em
+lápis-lazuli.  No centro você vê um trono de ouro maciço ornado com pedras
+preciosas.  Nele sentado, cercado por cortesãos, criados e escravos está
+o representante dos deuses na terra, o faraó!  A oeste você nota uma
+enorme porta de madeira maciça esculpida com motivos egípcios.
 ~
-81 393224 0 0 0 0
+81 drs 0
 D1
-Vocï¿½ pode ver uma enorme porta de madeira trabalhada.
+Você pode ver uma enorme porta de madeira trabalhada.
 ~
 porta madeira~
+:n 2 a porta de madeira
 2 8171 8123
 D3
-Vocï¿½ pode ver uma belï¿½ssima sala ï¿½ frente.
+Você pode ver uma belíssima sala à frente.
 ~
 ~
 1 -1 8136
 S
 #8128
 Um Corredor~
-   Este corredor parece infindï¿½vel com as suas incontï¿½veis e misteriosas
+   Este corredor parece infindável com as suas incontáveis e misteriosas
 portas fechadas.
-   Somente com muita sorte vocï¿½ encontrarï¿½ a saï¿½da.
+   Somente com muita sorte você encontrará a saída.
 ~
-81 9 0 0 0 0
+81 da 0
 D0
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 porta~
+:n 2 a porta
 1 -1 8139
 D1
-Hï¿½ uma porta nessa direï¿½ï¿½o.
+Há uma porta nessa direção.
 ~
 porta~
+:n 2 a porta
 1 -1 8136
 D2
-Hï¿½ uma porta nessa direï¿½ï¿½o.
+Há uma porta nessa direção.
 ~
 porta~
+:n 2 a porta
 1 -1 8137
 D3
-Hï¿½ uma porta nessa direï¿½ï¿½o.
+Há uma porta nessa direção.
 ~
 porta~
+:n 2 a porta
 1 -1 8129
 S
 #8129
 Um Corredor~
-   Este corredor parece infindï¿½vel com as suas incontï¿½veis e misteriosas
+   Este corredor parece infindável com as suas incontáveis e misteriosas
 portas fechadas.
-   Somente com muita sorte vocï¿½ encontrarï¿½ a saï¿½da.
+   Somente com muita sorte você encontrará a saída.
 ~
-81 9 0 0 0 0
+81 da 0
 D1
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 1 -1 8128
 D2
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 1 -1 8131
 D3
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 1 -1 8130
 S
 #8130
 Um Corredor~
-   Este corredor parece infindï¿½vel com as suas incontï¿½veis e misteriosas
+   Este corredor parece infindável com as suas incontáveis e misteriosas
 portas fechadas.
-   Somente com muita sorte vocï¿½ encontrarï¿½ a saï¿½da.
+   Somente com muita sorte você encontrará a saída.
 ~
-81 1 0 0 0 0
+81 a 0
 D1
-Hï¿½ uma porta nessa direï¿½ï¿½o.
+Há uma porta nessa direção.
 ~
 porta~
+:n 2 a porta
 1 -1 8129
 D3
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 1 -1 8146
 S
 #8131
-O calabouï¿½o~
-Vocï¿½ se sente caindo em um enorme calabouï¿½o de cheiro fï¿½tido e pareces imundas.
+O calabouço~
+Você se sente caindo em um enorme calabouço de cheiro fétido e pareces imundas.
 
-vocï¿½ cai
+você cai
        .
        .
        .
 BLAFT
-   E finalmente se estatela no chï¿½o sentindo seus ossos quebrarem-se, um
+   E finalmente se estatela no chão sentindo seus ossos quebrarem-se, um
 gosto acre de sangue na garganta, dor, muita dor...  Adeus mundo cruel!
 ~
-81 10 0 0 0 0
+81 bd 0
 S
 #8132
-Dentro da Pirï¿½mide~
-   O cheiro de mofo lhe sufoca; nao ï¿½ um lugar agradï¿½vel; a luz inexiste
-mas vocï¿½ se sente observado e assustado.  O lugar parece um labirinto e vocï¿½
+Dentro da Pirâmide~
+   O cheiro de mofo lhe sufoca; nao é um lugar agradável; a luz inexiste
+mas você se sente observado e assustado.  O lugar parece um labirinto e você
 reza para lembrar o caminho de volta.
 ~
-81 327689 0 0 0 0
-D0
-A escuridï¿½o ofusca totalmente a sala ï¿½ frente.
-~
-~
-0 -1 8140
+81 adqs 0
 D1
-A escuridï¿½o ofusca totalmente a sala ï¿½ frente.
+A escuridão ofusca totalmente a sala à frente.
 ~
 ~
 0 -1 8145
 D5
-A escuridï¿½o ofusca totalmente a sala ï¿½ frente.
+A escuridão ofusca totalmente a sala à frente.
 ~
 ~
 0 -1 8125
+D0
+A escuridão ofusca totalmente a sala à frente.
+~
+~
+0 -1 8140
 S
 #8133
 A Sala Principal~
-   Se ï¿½ que este buraco pode ser chamado de sala...  Vocï¿½ percebe uma
-estranha movimentaï¿½ï¿½o na escuridï¿½o ao redor.  Hï¿½ um sarcï¿½fago no qual por
-sorte vocï¿½ ainda nï¿½o entrou.  O cheiro nauseabundo ainda lhe incomoda e o ar
+   Se é que este buraco pode ser chamado de sala...  Você percebe uma
+estranha movimentação na escuridão ao redor.  Há um sarcófago no qual por
+sorte você ainda não entrou.  O cheiro nauseabundo ainda lhe incomoda e o ar
 parece ser mais escasso.
 ~
-81 265 0 0 0 0
+81 dai 0
 D3
-A escuridï¿½o ofusca totalmente a sala ï¿½ frente.
+A escuridão ofusca totalmente a sala à frente.
 ~
 ~
 0 -1 8145
 S
 #8134
 A Ponte~
-   ï¿½ uma ponte em ruï¿½nas que nï¿½o inspira seguranï¿½a alguma.  Sua origem
-perde-se no tempo.  Por certo jï¿½ passaram por ela senhores em liteiras
+   É uma ponte em ruínas que não inspira segurança alguma.  Sua origem
+perde-se no tempo.  Por certo já passaram por ela senhores em liteiras
 conduzidas por escravos, bestas carregadas de mercadorias, homens e
-animais na labuta diï¿½ria.  Mas hoje, suas cordas rotas e seu madeirame
-podre mal permitem tocï¿½-las em passos vacilantes.
+animais na labuta diária.  Mas hoje, suas cordas rotas e seu madeirame
+podre mal permitem tocá-las em passos vacilantes.
 ~
-81 256 0 0 0 9
+81 i 9
 D0
-Vocï¿½ avista um enorme rio ï¿½ frente.
+Você avista um enorme rio à frente.
 ~
 ~
 0 -1 8118
 D1
-A altura ï¿½ demasiada para que vocï¿½ possa ver algo.
+A altura é demasiada para que você possa ver algo.
 ~
 ~
 0 -1 8135
 D2
-Hï¿½ uma rua deserta nessa direï¿½ï¿½o.
+Há uma rua deserta nessa direção.
 ~
 ~
 0 -1 8213
 D5
-Vocï¿½ estï¿½ a uma distï¿½ncia muito grande para saber o que hï¿½ lï¿½ embaixo.
+Você está a uma distância muito grande para saber o que há lá embaixo.
 ~
 ~
 0 -1 8135
 S
 #8135
 O Abismo~
-Vocï¿½ pensa: ih, caminho errado!
-vocï¿½ despenca em queda livre.... cai
+Você pensa: ih, caminho errado!
+você despenca em queda livre.... cai
 
 cai
 
@@ -713,90 +720,92 @@ cai
 PLAFT!!
 Isso realmente doeu!
 ~
-81 2 0 0 0 2
+81 b 2
 S
 #8136
 Aposentos de Nefertiti~
    Tudo parece reluzir nessa sala dourada; a luz do sol entra por uma
 janela deixando a sala mais iluminada ainda.  Dois sentinelas guardam a
-entrada da sala, e no centro dela estï¿½ um divï¿½ onde uma linda mulher lhe
-observa.  Sua beleza ï¿½ hipnï¿½tica.
+entrada da sala, e no centro dela está um divã onde uma linda mulher lhe
+observa.  Sua beleza é hipnótica.
 ~
-81 73 0 0 0 0
+81 dag 0
 D1
-Vocï¿½ avista uma bela sala ï¿½ frente.
+Você avista uma bela sala à frente.
 ~
 ~
 0 -1 8127
 D3
-Hï¿½ um corredor nessa direï¿½ï¿½o.
+Há um corredor nessa direção.
 ~
 ~
 0 -1 8128
 S
 #8137
-A cï¿½mara do carrasco~
-   Vocï¿½ percebe inï¿½meros instrumentos de tortura pela sala; hï¿½ sangue no
-chï¿½o e nas paredes.  Vocï¿½ nï¿½o quer ficar nem mais um minuto naquele lugar
-pois o cheiro pï¿½trido que emana de um dos cantos da sala lhe sufoca.
+A câmara do carrasco~
+   Você percebe inúmeros instrumentos de tortura pela sala; há sangue no
+chão e nas paredes.  Você não quer ficar nem mais um minuto naquele lugar
+pois o cheiro pútrido que emana de um dos cantos da sala lhe sufoca.
 ~
-81 9 0 0 0 0
+81 da 0
 D0
-Hï¿½ uma porta nessa direï¿½ï¿½o.
+Há uma porta nessa direção.
 ~
 porta~
+:n 2 a porta
 1 -1 8128
 S
 #8138
-Mï¿½nfis~
-   ï¿½ a capital do reino, centro de todo o poder militar e religioso, e sem
-dï¿½vida sua cidade mais movimentada.  ï¿½ quase impossï¿½vel transitar por suas
-ruas, a multidï¿½o segue em todas as direï¿½ï¿½es e vocï¿½ facilmente pode se
+Mênfis~
+   É a capital do reino, centro de todo o poder militar e religioso, e sem
+dúvida sua cidade mais movimentada.  É quase impossível transitar por suas
+ruas, a multidão segue em todas as direções e você facilmente pode se
 perder sem nada notar.
 ~
-81 64 0 0 0 1
+81 g 1
 D0
-Existe uma pequena praï¿½a ï¿½ frente.
+Existe uma pequena praça à frente.
 ~
 ~
 0 -1 8149
-D2
-Hï¿½ um enorme prï¿½dio ï¿½ frente.
-~
-~
-0 -1 8148
 D3
-Nessa direï¿½ï¿½o existe uma enorme construï¿½ï¿½o.
+Nessa direção existe uma enorme construção.
 ~
 ~
 0 -1 8147
+D2
+Há um enorme prédio à frente.
+~
+~
+0 -1 8148
 S
 #8139
 A sala dos criados~
-   Hï¿½ dezenas de pessoas aqui, espremendo-se e acotovelando-se; nï¿½o hï¿½
-mobï¿½lias, e pode-se entender o porquï¿½.
+   Há dezenas de pessoas aqui, espremendo-se e acotovelando-se; não há
+mobílias, e pode-se entender o porquê.
 ~
-81 9 0 0 0 0
+81 da 0
 D2
-Hï¿½ uma porta nessa direï¿½ï¿½o.
+Há uma porta nessa direção.
 ~
 porta~
+:n 2 a porta
 1 -1 8128
 S
 #8140
 Um Corredor~
    Apenas um corredor ermo e escuro.  O negrume toma conta de suas vistas e
-parece penetrar atï¿½ em seu ser.  Vocï¿½ comeï¿½a a sentir-se angustiado e
+parece penetrar até em seu ser.  Você começa a sentir-se angustiado e
 anseia por abandonar esse lugar.
 ~
-81 9 0 0 0 0
+81 da 0
 D0
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8141
 D2
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8132
@@ -804,17 +813,17 @@ S
 #8141
 Um Corredor~
    Apenas um corredor ermo e escuro.  O negrume toma conta de suas vistas e
-parece penetrar atï¿½ em seu ser.  Vocï¿½ comeï¿½a a sentir-se angustiado e
+parece penetrar até em seu ser.  Você começa a sentir-se angustiado e
 anseia por abandonar esse lugar.
 ~
-81 9 0 0 0 0
+81 da 0
 D0
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8142
 D2
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8140
@@ -822,17 +831,17 @@ S
 #8142
 Um Corredor~
    Apenas um corredor ermo e escuro.  O negrume toma conta de suas vistas e
-parece penetrar atï¿½ em seu ser.  Vocï¿½ comeï¿½a a sentir-se angustiado e
+parece penetrar até em seu ser.  Você começa a sentir-se angustiado e
 anseia por abandonar esse lugar.
 ~
-81 9 0 0 0 0
+81 da 0
 D0
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8143
 D2
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8141
@@ -840,17 +849,17 @@ S
 #8143
 Um Corredor~
    Apenas um corredor ermo e escuro.  O negrume toma conta de suas vistas e
-parece penetrar atï¿½ em seu ser.  Vocï¿½ comeï¿½a a sentir-se angustiado e
+parece penetrar até em seu ser.  Você começa a sentir-se angustiado e
 anseia por abandonar esse lugar.
 ~
-81 9 0 0 0 0
+81 da 0
 D0
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8144
 D2
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8142
@@ -858,17 +867,17 @@ S
 #8144
 Um Corredor~
    Apenas um corredor ermo e escuro.  O negrume toma conta de suas vistas e
-parece penetrar atï¿½ em seu ser.  Vocï¿½ comeï¿½a a sentir-se angustiado e
+parece penetrar até em seu ser.  Você começa a sentir-se angustiado e
 anseia por abandonar esse lugar.
 ~
-81 9 0 0 0 0
+81 da 0
 D0
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8206
 D2
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8143
@@ -876,857 +885,867 @@ S
 #8145
 Um Corredor~
    Apenas um corredor ermo e escuro.  O negrume toma conta de suas vistas e
-parece penetrar atï¿½ em seu ser.  Vocï¿½ comeï¿½a a sentir-se angustiado e
+parece penetrar até em seu ser.  Você começa a sentir-se angustiado e
 anseia por abandonar esse lugar.
 ~
-81 9 0 0 0 0
+81 da 0
 D0
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8151
 D1
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8133
 D2
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8150
 D3
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8132
 S
 #8146
 Uma Sacada~
-   Daqui de cima vocï¿½ pode contemplar a movimentaï¿½ï¿½o da cidade de Mï¿½nfis com
-seus trabalhadores e cidadï¿½os espremendo-se nas ruas estreitas.  A poeira
-encobre um pouco seus olhos, mas o horizonte ï¿½ certamente uma vista
-agradï¿½vel que lhe transmite uma enorme sensaï¿½ï¿½o de paz.
+   Daqui de cima você pode contemplar a movimentação da cidade de Mênfis com
+seus trabalhadores e cidadãos espremendo-se nas ruas estreitas.  A poeira
+encobre um pouco seus olhos, mas o horizonte é certamente uma vista
+agradável que lhe transmite uma enorme sensação de paz.
 ~
-81 65544 0 0 0 0
+81 dq 0
 D1
-Hï¿½ um enorme corredor nessa direï¿½ï¿½o.
+Há um enorme corredor nessa direção.
 ~
 ~
 0 -1 8130
 D5
-Vocï¿½ ï¿½ abenï¿½oado com uma bela visï¿½o de Mï¿½nfis.
+Você é abençoado com uma bela visão de Mênfis.
 ~
 ~
 0 -1 8138
 S
 #8147
-O Prï¿½dio do Governo~
-   Os ministros governam a cidade deste prï¿½dio, sob a autoridade suprema do
-faraï¿½.  Daqui mantï¿½m a ordem e impï¿½e duros impostos ao povo.
+O Prédio do Governo~
+   Os ministros governam a cidade deste prédio, sob a autoridade suprema do
+faraó.  Daqui mantém a ordem e impõe duros impostos ao povo.
 ~
-81 393224 0 0 0 0
+81 drs 0
 D1
-Vocï¿½ ï¿½ abenï¿½oado com uma bela visï¿½o de Mï¿½nfis.
+Você é abençoado com uma bela visão de Mênfis.
 ~
 ~
 0 -1 8138
 D3
-Hï¿½ uma sala que reluz ï¿½ frente.
+Há uma sala que reluz à frente.
 ~
 ~
 0 -1 8152
 S
 #8148
 O Banco~
-   Sim, aqui ï¿½ um banco; ou algo assim.  Deixar seu dinheiro nem sempre ï¿½
-seguro, pois ï¿½ sempre sujeito a assaltos de ladrï¿½es ou confiscos do
-governo.  E isto lhe faz imaginar: afinal que diabos ï¿½ seguro neste lugar
+   Sim, aqui é um banco; ou algo assim.  Deixar seu dinheiro nem sempre é
+seguro, pois é sempre sujeito a assaltos de ladrões ou confiscos do
+governo.  E isto lhe faz imaginar: afinal que diabos é seguro neste lugar
 ?!?
 ~
-81 393224 0 0 0 0
+81 drs 0
 D0
-Vocï¿½ ï¿½ abenï¿½oado com uma bela visï¿½o de Mï¿½nfis.
+Você é abençoado com uma bela visão de Mênfis.
 ~
 ~
 0 -1 8138
 S
 #8149
-Uma Praï¿½a~
-   Hum...  Finalmente um lugar calmo e pacï¿½fico onde o ar nï¿½o chega a ser
-puro mas algumas ï¿½rvores lhe dï¿½o frescor.  Hï¿½ poucas pessoas ao redor e
-pï¿½ssaros voam livremente.
+Uma Praça~
+   Hum...  Finalmente um lugar calmo e pacífico onde o ar não chega a ser
+puro mas algumas árvores lhe dão frescor.  Há poucas pessoas ao redor e
+pássaros voam livremente.
 ~
-81 4 0 0 0 2
+81 c 2
 D0
-Vocï¿½ ï¿½ abenï¿½oado com uma bela visï¿½o de Mï¿½nfis.
+Você é abençoado com uma bela visão de Mênfis.
 ~
 ~
 0 -1 8138
 S
 #8150
 Um Buraco Entre as Pedras~
-   ï¿½ realmente um buraco onde vocï¿½ nï¿½o consegue nem ficar em pï¿½; o lugar
+   É realmente um buraco onde você não consegue nem ficar em pé; o lugar
 estreito e muito baixo o obriga praticamente a engatinhar em busca de ar ou
-da saï¿½da mais prï¿½xima.
+da saída mais próxima.
 ~
-81 269 0 0 0 0
+81 adci 0
 D0
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8145
 D1
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8154
 S
 #8151
 Uma Passagem~
-   Vocï¿½ atravessa esta passagem abafada em busca de ar.  Uma estranha
-luminosidade vem do fundo da enorme sala.  Talvez seja o que vocï¿½ procura.
+   Você atravessa esta passagem abafada em busca de ar.  Uma estranha
+luminosidade vem do fundo da enorme sala.  Talvez seja o que você procura.
 ~
-81 9 0 0 0 0
+81 ad 0
 D2
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8145
 D5
-A escuridï¿½o lhe tolhe a visï¿½o mas vocï¿½ sente que hï¿½ fumaï¿½a nessa direï¿½ï¿½o.
+A escuridão lhe tolhe a visão mas você sente que há fumaça nessa direção.
 ~
 ~
 0 -1 8153
 S
 #8152
 A Tesouraria~
-   Vocï¿½ estï¿½ dentro da sala que guarda o tesouro do faraï¿½ vivo.  Seus olhos
-sï¿½o ofuscados pelo brilho das moedas de ouro que tomam quase toda a sala.
+   Você está dentro da sala que guarda o tesouro do faraó vivo.  Seus olhos
+são ofuscados pelo brilho das moedas de ouro que tomam quase toda a sala.
 ~
-81 8 0 0 0 0
+81 d 0
 D1
-Hï¿½ uma grande sala clara nessa direï¿½ï¿½o.
+Há uma grande sala clara nessa direção.
 ~
 ~
 0 -1 8147
 S
 #8153
-O Poï¿½o de Lava~
-   Vocï¿½ sente as chamas consumirem seu corpo e sua consciï¿½ncia vai se
-esvaindo com o calor..  Nï¿½o hï¿½ mais nada a fazer...
+O Poço de Lava~
+   Você sente as chamas consumirem seu corpo e sua consciência vai se
+esvaindo com o calor..  Não há mais nada a fazer...
 ~
-81 2 0 0 0 0
+81 b 0
 S
 #8154
-Um ï¿½trio~
-   Este ï¿½ um estranho ï¿½trio do qual vocï¿½ pode observar algumas passagens
-entre as pedras; o silï¿½ncio ï¿½ extremamente perturbador mas se, muito a
-contragosto, apurar os ouvidos, perceberï¿½ um murmï¿½rio na sala.  Vocï¿½
-comeï¿½a a delirar?
+Um Átrio~
+   Este é um estranho átrio do qual você pode observar algumas passagens
+entre as pedras; o silêncio é extremamente perturbador mas se, muito a
+contragosto, apurar os ouvidos, perceberá um murmúrio na sala.  Você
+começa a delirar?
 ~
-81 9 0 0 0 0
+81 ad 0
 D1
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8156
 D2
-Vocï¿½ pode ver apenas o que parece ser uma tumba.
+Você pode ver apenas o que parece ser uma tumba.
 ~
 tumba~
+:n 2 a tumba
 1 -1 8155
 D3
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8150
 S
 #8155
 O Tesouro de Khons~
-   Uma sala fechada e abafada onde vocï¿½ pode observar inï¿½meros potes de
-oferendas a Khons, o deus da Lua.  A sala estï¿½ vazia, nï¿½o hï¿½ mï¿½veis.Vocï¿½
-percebe um ser gigantesco aproximar-se em sua direï¿½ï¿½o.
+   Uma sala fechada e abafada onde você pode observar inúmeros potes de
+oferendas a Khons, o deus da Lua.  A sala está vazia, não há móveis.Você
+percebe um ser gigantesco aproximar-se em sua direção.
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Vocï¿½ pode ver apenas o que parece ser uma tumba fechada.
+Você pode ver apenas o que parece ser uma tumba fechada.
 ~
 tumba~
+:n 2 a tumba
 1 -1 8154
 S
 #8156
-O Tesouro de Anï¿½bis~
+O Tesouro de Anúbis~
    Aqui se encontram algumas armas em oferenda ao deus dos mortos.  Mas se
-eu fosse vocï¿½ nï¿½o me arriscaria a tocar em nada pois aquele que os guarda
-nï¿½o parece gozar de um bom humor hoje.
+eu fosse você não me arriscaria a tocar em nada pois aquele que os guarda
+não parece gozar de um bom humor hoje.
 ~
-81 9 0 0 0 0
+81 ad 0
 D2
-Vocï¿½ pode ver apenas o que parece ser uma tumba.
+Você pode ver apenas o que parece ser uma tumba.
 ~
 tumba~
+:n 2 a tumba
 1 -1 8157
 D3
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8154
 S
 #8157
-O Tesouro de Rï¿½~
-   A sala irradia uma coloraï¿½ï¿½o dourada atï¿½ onde a escuridï¿½o lhe permite
-ver.  No chï¿½o, potes e potes de oferendas ao deus do sol; uma fonte estranha
-de luz amarelada parece surgir sobre sua cabeï¿½a.
+O Tesouro de Rá~
+   A sala irradia uma coloração dourada até onde a escuridão lhe permite
+ver.  No chão, potes e potes de oferendas ao deus do sol; uma fonte estranha
+de luz amarelada parece surgir sobre sua cabeça.
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Vocï¿½ pode ver apenas o que parece ser uma tumba.
+Você pode ver apenas o que parece ser uma tumba.
 ~
 tumba~
+:n 2 a tumba
 1 -1 8156
 D5
-A escuridï¿½o nï¿½o lhe permite ver nada.
+A escuridão não lhe permite ver nada.
 ~
 ~
 0 -1 8158
 S
 #8158
-Um Sarcï¿½fago~
-   ï¿½ uma tumba gigantesca em ruï¿½nas.  Parece que nunca mais vocï¿½ conseguirï¿½
-sair.  Hï¿½ um sarcï¿½fago ï¿½ frente e uma enorme mï¿½mia surge de volta a vida.
+Um Sarcófago~
+   É uma tumba gigantesca em ruínas.  Parece que nunca mais você conseguirá
+sair.  Há um sarcófago à frente e uma enorme múmia surge de volta a vida.
 ~
-81 9 0 0 0 0
+81 ad 0
 S
 #8159
 A Coroa Vermelha~
-   Terra no delta superior do rio Nilo.  Vocï¿½ sente que o povo nï¿½o ï¿½ muito
+   Terra no delta superior do rio Nilo.  Você sente que o povo não é muito
 amistoso.  Sacerdotes, imakhus e nomarcas transitam pelas dunas de areia que
-mudam a cada segundo.  Nï¿½o parece ser um lugar muito agradï¿½vel.
+mudam a cada segundo.  Não parece ser um lugar muito agradável.
 ~
-81 65 0 0 0 1
+81 ag 1
 D1
-Hï¿½ uma monumental construï¿½ï¿½o ï¿½ sua frente.
+Há uma monumental construção à sua frente.
 ~
 ~
 0 -1 8194
 D2
-Hï¿½ um enorme rio nessa direï¿½ï¿½o.
+Há um enorme rio nessa direção.
 ~
 ~
 0 -1 8112
 S
 #8160
 A Coroa Branca~
-   A movimentaï¿½ï¿½o ï¿½ quase inexistente nessa parte inferior do delta do rio
-Nilo.  Vocï¿½ vï¿½ apenas alguns escribas e seus papiros voando pelo ar...
-Parece que uma tempestade de areia se aproxima.  A leste vocï¿½ avista uma
+   A movimentação é quase inexistente nessa parte inferior do delta do rio
+Nilo.  Você vê apenas alguns escribas e seus papiros voando pelo ar...
+Parece que uma tempestade de areia se aproxima.  A leste você avista uma
 pequena cidade.
 ~
-81 65 0 0 0 1
+81 ag 1
 D0
-Hï¿½ um mercado nessa direï¿½ï¿½o.
+Há um mercado nessa direção.
 ~
 ~
 0 -1 8123
 D1
-Hï¿½ um pequeno oï¿½sis ï¿½ frente.
+Há um pequeno oásis à frente.
 ~
 ~
 0 -1 8178
 S
 #8161
 As Duas Coroas~
-   Este vilarejo beirando o litoral aparenta ter poucos habitantes.  Vocï¿½
-apenas vï¿½ escravos conduzindo uma liteira na qual estï¿½ um senhor de
-aparï¿½ncia imponente; seguem pelas areias quentes na direï¿½ï¿½o de Queï¿½ps.
+   Este vilarejo beirando o litoral aparenta ter poucos habitantes.  Você
+apenas vê escravos conduzindo uma liteira na qual está um senhor de
+aparência imponente; seguem pelas areias quentes na direção de Queóps.
 ~
-81 1 0 0 0 4
+81 a 4
 D3
-Hï¿½ uma monumental construï¿½ï¿½o ï¿½ sua frente.
+Há uma monumental construção à sua frente.
 ~
 ~
 0 -1 8162
 D5
-Hï¿½ um imenso campo nessa direï¿½ï¿½o.
+Há um imenso campo nessa direção.
 ~
 ~
 0 -1 8164
 S
 #8162
-Entrada de Queï¿½ps~
-   Vocï¿½ se vï¿½ diante de uma das maravilhas do mundo.  A grandiosidade desta
-construï¿½ï¿½o impressiona.  Construï¿½da com gigantescos blocos de pedra
-transportados atï¿½ aquela altura sï¿½ os Deuses sabem como...
+Entrada de Queóps~
+   Você se vê diante de uma das maravilhas do mundo.  A grandiosidade desta
+construção impressiona.  Construída com gigantescos blocos de pedra
+transportados até aquela altura só os Deuses sabem como...
 ~
-81 393217 0 0 0 4
+81 ars 4
 D0
-Nï¿½o parece haver abertura entre as pedras.
+Não parece haver abertura entre as pedras.
 ~
 pedras pedra~
+:n 2 a pedra
 1 -1 8166
 D2
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8171
 D3
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8161
 S
 #8163
-A Cï¿½mara~
-   Parece nï¿½o haver viv'alma nesta sala escura.  Na penumbra vocï¿½ consegue
-identificar espalhados pelo chï¿½o crï¿½nios e ossos humanos; com certeza
-restos de incautos ladrï¿½es de tumbas abatidos pela maldiï¿½ï¿½o do faraï¿½...
+A Câmara~
+   Parece não haver viv'alma nesta sala escura.  Na penumbra você consegue
+identificar espalhados pelo chão crânios e ossos humanos; com certeza
+restos de incautos ladrões de tumbas abatidos pela maldição do faraó...
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8167
 D1
-Uma escada surge da escuridï¿½o.
+Uma escada surge da escuridão.
 ~
 ~
 0 -1 8177
 D2
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8165
 D3
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8166
 S
 #8164
 Festivais de Heb-sed~
-   Vocï¿½ estï¿½ em um campo aberto.  Aqui, a cada trinta anos de governo, o
-faraï¿½ vem demonstrar seu vigor fï¿½sico e prestar lealdade aos deuses.  Vocï¿½
-vislumbra uma um pequeno oï¿½sis acima da linha do horizonte.
+   Você está em um campo aberto.  Aqui, a cada trinta anos de governo, o
+faraó vem demonstrar seu vigor físico e prestar lealdade aos deuses.  Você
+vislumbra uma um pequeno oásis acima da linha do horizonte.
 ~
-81 1 0 0 0 4
+81 a 4
 D4
-Hï¿½ um pequeno oï¿½sis nessa direï¿½ï¿½o.
+Há um pequeno oásis nessa direção.
 ~
 ~
 0 -1 8161
 S
 #8165
 Uma Escada Falsa~
-   Ahn...vocï¿½ estï¿½ em uma das escadas projetadas para enganar ladrï¿½es ou
-pessoas curiosas como vocï¿½.  Vocï¿½ sente a escada sumir sob seus pï¿½s e
+   Ahn...você está em uma das escadas projetadas para enganar ladrões ou
+pessoas curiosas como você.  Você sente a escada sumir sob seus pés e
 despenca sobre um solo de estalagmites; a vida se esvai de seu corpo e sua
-alma estï¿½ prestes a queimar no inferno!
+alma está prestes a queimar no inferno!
 ~
-81 6 0 0 0 0
+81 bc 0
 S
 #8166
-Dentro da Pirï¿½mide de Queï¿½ps~
-   ï¿½ um lugar realmente alto; vocï¿½ nï¿½o enxerga coisa alguma mas a sensaï¿½ï¿½o
-de vazio sobre sua cabeï¿½a faz vocï¿½ se perguntar por que este lugar seria tï¿½o
+Dentro da Pirâmide de Queóps~
+   É um lugar realmente alto; você não enxerga coisa alguma mas a sensação
+de vazio sobre sua cabeça faz você se perguntar por que este lugar seria tão
 alto?
 ~
-81 9 0 0 0 0
+81 ad 0
 D1
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8163
 D2
-Nï¿½o parece haver abertura entre as pedras.
+Não parece haver abertura entre as pedras.
 ~
 pedra pedras~
+:n 2 a pedra
 1 -1 8162
 S
 #8167
 Uma Passagem Escura~
-   A escuridï¿½o predomina nesta sala...  Vocï¿½ nï¿½o consegue nem enxergar seus
-prï¿½prios pï¿½s, muito menos o chï¿½o escorregadio embaixo deles.  Realmente nï¿½o
-ï¿½ uma situaï¿½ï¿½o agradï¿½vel.
+   A escuridão predomina nesta sala...  Você não consegue nem enxergar seus
+próprios pés, muito menos o chão escorregadio embaixo deles.  Realmente não
+é uma situação agradável.
 ~
-81 9 0 0 0 0
+81 ad 0
 D2
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8163
 S
 #8168
 Uma Passagem Escura~
-   A escuridï¿½o predomina nesta sala...  Vocï¿½ nï¿½o consegue nem enxergar seus
-prï¿½prios pï¿½s, muito menos o chï¿½o escorregadio embaixo deles.  Realmente nï¿½o
-ï¿½ uma situaï¿½ï¿½o agradï¿½vel.
+   A escuridão predomina nesta sala...  Você não consegue nem enxergar seus
+próprios pés, muito menos o chão escorregadio embaixo deles.  Realmente não
+é uma situação agradável.
 ~
-81 9 0 0 0 0
+81 ad 0
 D3
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8177
 S
 #8169
 Uma Passagem Escura~
-   A escuridï¿½o predomina nesta sala...  Vocï¿½ nï¿½o consegue nem enxergar seus
-prï¿½prios pï¿½s, muito menos o chï¿½o escorregadio embaixo deles.  Realmente nï¿½o
-ï¿½ uma situaï¿½ï¿½o agradï¿½vel.
+   A escuridão predomina nesta sala...  Você não consegue nem enxergar seus
+próprios pés, muito menos o chão escorregadio embaixo deles.  Realmente não
+é uma situação agradável.
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8213
 D2
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8173
 S
 #8170
 Uma Passagem Escura~
-   A escuridï¿½o predomina nesta sala...  Vocï¿½ nï¿½o consegue nem enxergar seus
-prï¿½prios pï¿½s, muito menos o chï¿½o escorregadio embaixo deles.  Realmente nï¿½o
-ï¿½ uma situaï¿½ï¿½o agradï¿½vel.
+   A escuridão predomina nesta sala...  Você não consegue nem enxergar seus
+próprios pés, muito menos o chão escorregadio embaixo deles.  Realmente não
+é uma situação agradável.
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8176
 D2
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8175
 S
 #8171
 Uma Passagem Escura~
-   A escuridï¿½o predomina nesta sala...  Vocï¿½ nï¿½o consegue nem enxergar seus
-prï¿½prios pï¿½s, muito menos o chï¿½o escorregadio embaixo deles.  Realmente nï¿½o
-ï¿½ uma situaï¿½ï¿½o agradï¿½vel.
+   A escuridão predomina nesta sala...  Você não consegue nem enxergar seus
+próprios pés, muito menos o chão escorregadio embaixo deles.  Realmente não
+é uma situação agradável.
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8162
 D1
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8172
 S
 #8172
 Uma Passagem Escura~
-   A escuridï¿½o predomina nesta sala...  Vocï¿½ nï¿½o consegue nem enxergar seus
-prï¿½prios pï¿½s, muito menos o chï¿½o escorregadio embaixo deles.  Realmente nï¿½o
-ï¿½ uma situaï¿½ï¿½o agradï¿½vel.
+   A escuridão predomina nesta sala...  Você não consegue nem enxergar seus
+próprios pés, muito menos o chão escorregadio embaixo deles.  Realmente não
+é uma situação agradável.
 ~
-81 9 0 0 0 0
+81 ad 0
 D3
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8171
 S
 #8173
 Uma Passagem Escura~
-   A escuridï¿½o predomina nesta sala...  Vocï¿½ nï¿½o consegue nem enxergar seus
-prï¿½prios pï¿½s, muito menos o chï¿½o escorregadio embaixo deles.  Realmente nï¿½o
-ï¿½ uma situaï¿½ï¿½o agradï¿½vel.
+   A escuridão predomina nesta sala...  Você não consegue nem enxergar seus
+próprios pés, muito menos o chão escorregadio embaixo deles.  Realmente não
+é uma situação agradável.
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8169
 D1
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8174
 S
 #8174
 Uma Passagem Escura~
-   A escuridï¿½o predomina nesta sala...  Vocï¿½ nï¿½o consegue nem enxergar seus
-prï¿½prios pï¿½s, muito menos o chï¿½o escorregadio embaixo deles.  Realmente nï¿½o
-ï¿½ uma situaï¿½ï¿½o agradï¿½vel.
+   A escuridão predomina nesta sala...  Você não consegue nem enxergar seus
+próprios pés, muito menos o chão escorregadio embaixo deles.  Realmente não
+é uma situação agradável.
 ~
-81 9 0 0 0 0
+81 ad 0
 D1
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8171
 S
 #8175
 Uma Passagem Escura~
-   A escuridï¿½o predomina nesta sala...  Vocï¿½ nï¿½o consegue nem enxergar seus
-prï¿½prios pï¿½s, muito menos o chï¿½o escorregadio embaixo deles.  Realmente nï¿½o
-ï¿½ uma situaï¿½ï¿½o agradï¿½vel.
+   A escuridão predomina nesta sala...  Você não consegue nem enxergar seus
+próprios pés, muito menos o chão escorregadio embaixo deles.  Realmente não
+é uma situação agradável.
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8170
 S
 #8176
-A Cï¿½mara Principal~
-   O cheiro aqui ï¿½ insuportï¿½vel, o ar escasso e vocï¿½ se sente sufocado.
-Parece que alguma coisa morreu aqui (novidade...).  Vocï¿½ tropeï¿½a em uma
-tumba, e nela, a ï¿½nica coisa que consegue distinguir ï¿½ o desenho de uma
+A Câmara Principal~
+   O cheiro aqui é insuportável, o ar escasso e você se sente sufocado.
+Parece que alguma coisa morreu aqui (novidade...).  Você tropeça em uma
+tumba, e nela, a única coisa que consegue distinguir é o desenho de uma
 mulher com chifres de vaca.
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8177
 D2
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8170
 S
 #8177
 Uma Passagem~
-   Vocï¿½ parece estar em um corredor aberto entre as enormes paredes de pedra
-da pirï¿½mide.  Seu ï¿½nico pensamento ï¿½ orar para que as paredes nï¿½o cedam.
+   Você parece estar em um corredor aberto entre as enormes paredes de pedra
+da pirâmide.  Seu único pensamento é orar para que as paredes não cedam.
 ~
-81 9 0 0 0 0
+81 ad 0
 D1
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8168
 D2
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8176
 D3
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8163
 S
 #8178
 Saqqara~
-   Um pequeno oï¿½sis no delta inferior do rio Nilo onde vocï¿½ observa apenas
-alguns escravos sendo obrigados a carregar pedras sobre troncos de ï¿½rvores
-sob o aï¿½oite de capatazes.  Ao sul vocï¿½ nota a entrada de uma grande
-construï¿½ï¿½o.
+   Um pequeno oásis no delta inferior do rio Nilo onde você observa apenas
+alguns escravos sendo obrigados a carregar pedras sobre troncos de árvores
+sob o açoite de capatazes.  Ao sul você nota a entrada de uma grande
+construção.
 ~
-81 393216 0 0 0 4
+81 rs 4
 D2
-Hï¿½ um enorme prï¿½dio ï¿½ frente.
+Há um enorme prédio à frente.
 ~
 ~
 0 -1 8179
 D3
-Vocï¿½ pode ver poucas pessoas nesta pequena clareira.
+Você pode ver poucas pessoas nesta pequena clareira.
 ~
 ~
 0 -1 8160
 S
 #8179
-A Pirï¿½mide de Step~
-   Mais uma grande obra da humanidade construï¿½da com o sangue e suor dos
-escravos e sï¿½ditos do Grande Imhotep para lhe servir de tï¿½mulo.
+A Pirâmide de Step~
+   Mais uma grande obra da humanidade construída com o sangue e suor dos
+escravos e súditos do Grande Imhotep para lhe servir de túmulo.
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-A escuridï¿½o ofusca esta direï¿½ï¿½o.
+A escuridão ofusca esta direção.
 ~
 ~
 0 -1 8178
 D1
-A escuridï¿½o ofusca esta direï¿½ï¿½o.
+A escuridão ofusca esta direção.
 ~
 ~
 0 -1 8182
 S
 #8180
 Sanethia~
-   Esta sala ï¿½ reservada ï¿½ preparaï¿½ï¿½o para o pï¿½s morte.  No centro hï¿½ um
-corpo inerte sofrendo os preparativos de mumificaï¿½ï¿½o.  Na parede vocï¿½
-percebe um fio rï¿½gido com um gancho na ponta; este instrumento ï¿½
-introduzido pela narina esquerda do cadï¿½ver, e atravï¿½s de sua agitaï¿½ï¿½o
-liqï¿½efazer seu cï¿½rebro a fim de permitir sua retirada.  Afinal o cï¿½rebro
-nï¿½o ï¿½ tï¿½o importante apï¿½s a morte...
+   Esta sala é reservada à preparação para o pós morte.  No centro há um
+corpo inerte sofrendo os preparativos de mumificação.  Na parede você
+percebe um fio rígido com um gancho na ponta; este instrumento é
+introduzido pela narina esquerda do cadáver, e através de sua agitação
+liqüefazer seu cérebro a fim de permitir sua retirada.  Afinal o cérebro
+não é tão importante após a morte...
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8188
 D2
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8182
 S
 #8181
 A Tumba de Imhotep~
-   A sala estï¿½ repleta de animais embalsamados, potes com comida, e
-utensï¿½lios de ouro puro; sï¿½o os pertences do sumo-sacertode do faraï¿½,
-Imhotep, punido com o terrï¿½vel castigo egï¿½pcio do Houndai.  Se eu fosse
-vocï¿½ nï¿½o tocaria em nada para nï¿½o despertar a fï¿½ria dessa nefasta criatura.
+   A sala está repleta de animais embalsamados, potes com comida, e
+utensílios de ouro puro; são os pertences do sumo-sacertode do faraó,
+Imhotep, punido com o terrível castigo egípcio do Houndai.  Se eu fosse
+você não tocaria em nada para não despertar a fúria dessa nefasta criatura.
 ~
-81 13 0 0 0 0
+81 acd 0
 D1
 Existe uma parede aqui.
 ~
 parede~
+:n 2 a parede
 1 -1 8185
 D3
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8182
 S
 #8182
-Dentro da Pirï¿½mide de Step~
-   Vocï¿½ se encontra na entrada de um enorme labirinto onde todos os caminhos
-parecem nï¿½o ter fim.  Sons estranhos ecoam pelas paredes e uma arrepio
+Dentro da Pirâmide de Step~
+   Você se encontra na entrada de um enorme labirinto onde todos os caminhos
+parecem não ter fim.  Sons estranhos ecoam pelas paredes e uma arrepio
 percorre sua espinha.
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8180
 D1
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8181
 D3
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8179
 S
 #8183
-A Cï¿½mara do Deus Thot~
-   No centro desta cï¿½mara vocï¿½ encontra o altar de Thot, deus da sabedoria.
-Hï¿½ inï¿½meros potes com oferendas no chï¿½o.
+A Câmara do Deus Thot~
+   No centro desta câmara você encontra o altar de Thot, deus da sabedoria.
+Há inúmeros potes com oferendas no chão.
 ~
-81 9 0 0 0 0
+81 ad 0
 D1
-Hï¿½ uma cï¿½mara nessa direï¿½ï¿½o.
+Há uma câmara nessa direção.
 ~
-cï¿½mara~
+câmara~
+:n 2 a câmara
 1 -1 8184
 D2
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8186
 S
 #8184
 Uma Sala Escura~
-   Engraï¿½ado!  Vocï¿½ jura jï¿½ ter passado por aqui antes...  Todos os
-caminhos parecem levar ao mesmo lugar tamanha a semelhanï¿½a entre as salas.
+   Engraçado!  Você jura já ter passado por aqui antes...  Todos os
+caminhos parecem levar ao mesmo lugar tamanha a semelhança entre as salas.
 ~
-81 9 0 0 0 0
+81 ad 0
 D3
-A cï¿½mara aparenta estar fechada.
+A câmara aparenta estar fechada.
 ~
-cï¿½mara~
+câmara~
+:n 2 a câmara
 1 -1 8183
 S
 #8185
 Uma Passagem na Areia~
-   Vocï¿½ se sente preso ï¿½ areia, que parece estar engolindo suas pernas.  ï¿½
-quase impossï¿½vel mover-se em qualquer direï¿½ï¿½o.  Vocï¿½ tem de ser muito
-cuidadoso para nï¿½o afundar na areia movediï¿½a.
+   Você se sente preso à areia, que parece estar engolindo suas pernas.  É
+quase impossível mover-se em qualquer direção.  Você tem de ser muito
+cuidadoso para não afundar na areia movediça.
 ~
-81 9 0 0 0 0
+81 ad 0
 D1
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8186
 D3
-Hï¿½ uma parede aqui.
+Há uma parede aqui.
 ~
 parede~
+:n 2 a parede
 1 -1 8181
 S
 #8186
 Uma Passagem na Areia~
-   Vocï¿½ se sente preso ï¿½ areia, que parece estar engolindo suas pernas.  ï¿½
-quase impossï¿½vel mover-se em qualquer direï¿½ï¿½o.  Vocï¿½ tem de ser muito
-cuidadoso para nï¿½o afundar na areia movediï¿½a.
+   Você se sente preso à areia, que parece estar engolindo suas pernas.  É
+quase impossível mover-se em qualquer direção.  Você tem de ser muito
+cuidadoso para não afundar na areia movediça.
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8183
 D3
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8185
 S
 #8187
 Uma Sala Escura~
-   Engraï¿½ado!  Vocï¿½ jura jï¿½ ter passado por aqui antes...  Todos os
-caminhos parecem levar ao mesmo lugar tamanha a semelhanï¿½a entre as salas.
+   Engraçado!  Você jura já ter passado por aqui antes...  Todos os
+caminhos parecem levar ao mesmo lugar tamanha a semelhança entre as salas.
 ~
-81 9 0 0 0 0
+81 ad 0
 D1
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8188
 S
 #8188
 Uma Sala Escura~
-   Engraï¿½ado!  Vocï¿½ jura jï¿½ ter passado por aqui antes...  Todos os
-caminhos parecem levar ao mesmo lugar tamanha a semelhanï¿½a entre as salas.
+   Engraçado!  Você jura já ter passado por aqui antes...  Todos os
+caminhos parecem levar ao mesmo lugar tamanha a semelhança entre as salas.
 ~
-81 9 0 0 0 0
+81 ad 0
 D2
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8180
 D3
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8187
 S
 #8189
 Uma Sala Escura~
-   Engraï¿½ado!  Vocï¿½ jura jï¿½ ter passado por aqui antes...  Todos os
-caminhos parecem levar ao mesmo lugar tamanha a semelhanï¿½a entre as salas.
+   Engraçado!  Você jura já ter passado por aqui antes...  Todos os
+caminhos parecem levar ao mesmo lugar tamanha a semelhança entre as salas.
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8179
 D1
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8190
 S
 #8190
 Uma Sala Escura~
-   Engraï¿½ado!  Vocï¿½ jura jï¿½ ter passado por aqui antes...  Todos os
-caminhos parecem levar ao mesmo lugar tamanha a semelhanï¿½a entre as salas.
+   Engraçado!  Você jura já ter passado por aqui antes...  Todos os
+caminhos parecem levar ao mesmo lugar tamanha a semelhança entre as salas.
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8182
 D3
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8189
 S
 #8191
 Uma Sala Escura~
-   Engraï¿½ado!  Vocï¿½ jura jï¿½ ter passado por aqui antes...  Todos os
-caminhos parecem levar ao mesmo lugar tamanha a semelhanï¿½a entre as salas.
+   Engraçado!  Você jura já ter passado por aqui antes...  Todos os
+caminhos parecem levar ao mesmo lugar tamanha a semelhança entre as salas.
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8181
 D2
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8192
 S
 #8192
 Uma Sala Escura~
-   Engraï¿½ado!  Vocï¿½ jura jï¿½ ter passado por aqui antes...  Todos os
-caminhos parecem levar ao mesmo lugar tamanha a semelhanï¿½a entre as salas.
+   Engraçado!  Você jura já ter passado por aqui antes...  Todos os
+caminhos parecem levar ao mesmo lugar tamanha a semelhança entre as salas.
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8191
 D1
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8193
 S
 #8193
 Uma Sala Escura~
-   Engraï¿½ado!  Vocï¿½ jura jï¿½ ter passado por aqui antes...  Todos os
-caminhos parecem levar ao mesmo lugar tamanha a semelhanï¿½a entre as salas.
+   Engraçado!  Você jura já ter passado por aqui antes...  Todos os
+caminhos parecem levar ao mesmo lugar tamanha a semelhança entre as salas.
 ~
-81 9 0 0 0 0
+81 ad 0
 D3
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8192
 S
 #8194
-A Pirï¿½mide de Hatshepsut~
-   Mais uma construï¿½ï¿½o monumental.  Esta erigida para servir de ï¿½ltima
-morada para os despojos do faraï¿½ Hatshepsut.  Nas paredes e nos objetos
-muitas figuras de Sobek, o deus com cabeï¿½a de crocodilo.
+A Pirâmide de Hatshepsut~
+   Mais uma construção monumental.  Esta erigida para servir de última
+morada para os despojos do faraó Hatshepsut.  Nas paredes e nos objetos
+muitas figuras de Sobek, o deus com cabeça de crocodilo.
 ~
-81 9 0 0 0 0
+81 ad 0
+D3
+Não há nada além de uma escuridão infinita.
+~
+~
+0 -1 8159
 D1
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8195
 D2
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8196
-D3
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
-~
-~
-0 -1 8159
 S
 #8195
 Uma Passagem na Areia~
-   Vocï¿½ se sente preso ï¿½ areia, que parece estar engolindo suas pernas.  ï¿½
-quase impossï¿½vel mover-se em qualquer direï¿½ï¿½o.  Vocï¿½ tem de ser muito
-cuidadoso para nï¿½o afundar na areia movediï¿½a.
+   Você se sente preso à areia, que parece estar engolindo suas pernas.  É
+quase impossível mover-se em qualquer direção.  Você tem de ser muito
+cuidadoso para não afundar na areia movediça.
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8196
@@ -1734,280 +1753,286 @@ D1
 Existe uma passagem aqui.
 ~
 passagem~
+:n 2 a passagem
 1 -1 8199
-D2
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
-~
-~
-0 -1 8197
 D3
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8195
+D2
+Não há nada além de uma escuridão infinita.
+~
+~
+0 -1 8197
 S
 #8196
-Dentro da Pirï¿½mide~
-   Ah!  Finalmente alguma umidade...  Se nï¿½o fosse o cheiro pï¿½trido que
-exala de todos os cantos vocï¿½ atï¿½ poderia gostar deste lugar.
+Dentro da Pirâmide~
+   Ah!  Finalmente alguma umidade...  Se não fosse o cheiro pútrido que
+exala de todos os cantos você até poderia gostar deste lugar.
 ~
-81 9 0 0 0 0
+81 ad 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8194
 D3
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8205
 S
 #8197
 Uma Sala Clara~
-   Nesta sala banhada por alguns raios de sol vocï¿½ pode contemplar alguns
-hierï¿½glifos incompreensï¿½veis a seu conhecimento.  Sï¿½o histï¿½rias inteiras
+   Nesta sala banhada por alguns raios de sol você pode contemplar alguns
+hieróglifos incompreensíveis a seu conhecimento.  São histórias inteiras
 sobre o reinado de Hatshepsut contadas por figuras de pessoas sempre de
-perfil, onde pernas e cabeï¿½as sï¿½o mostrados lateralmente; apenas o olho ï¿½
-mostrado por inteiro...  Estranho nï¿½o?
+perfil, onde pernas e cabeças são mostrados lateralmente; apenas o olho é
+mostrado por inteiro...  Estranho não?
 ~
-81 8 0 0 0 0
+81 d 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8195
 S
 #8198
 Uma Sala Clara~
-   Nesta sala banhada por alguns raios de sol vocï¿½ pode contemplar alguns
-hierï¿½glifos incompreensï¿½veis a seu conhecimento.  Sï¿½o histï¿½rias inteiras
+   Nesta sala banhada por alguns raios de sol você pode contemplar alguns
+hieróglifos incompreensíveis a seu conhecimento.  São histórias inteiras
 sobre o reinado de Hatshepsut contadas por figuras de pessoas sempre de
-perfil, onde pernas e cabeï¿½as sï¿½o mostrados lateralmente; apenas o olho ï¿½
-mostrado por inteiro...  Estranho nï¿½o?
+perfil, onde pernas e cabeças são mostrados lateralmente; apenas o olho é
+mostrado por inteiro...  Estranho não?
 ~
-81 8 0 0 0 0
+81 d 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8204
 S
 #8199
 A Tumba de Hatshepsut~
-   Neste sarcï¿½fago estï¿½ o corpo mumificado do ï¿½nico faraï¿½ (pasmem!) mulher
-em toda a historia do Egito.  Seus pertences, animais de estimaï¿½ï¿½o
-embalsamados e alguns sï¿½ditos fiï¿½is jazem pelo chï¿½o resguardados por
-sï¿½culos.
+   Neste sarcófago está o corpo mumificado do único faraó (pasmem!) mulher
+em toda a historia do Egito.  Seus pertences, animais de estimação
+embalsamados e alguns súditos fiéis jazem pelo chão resguardados por
+séculos.
 ~
-81 9 0 0 0 0
+81 ad 0
 D3
 Existe uma passagem aqui.
 ~
 passagem~
+:n 2 a passagem
 1 -1 8195
 S
 #8201
 O Covil dos Escaravelhos~
 AHHHHHH!!!!!!!!!!
-   Vocï¿½ mal pisa a sala e vï¿½ seu corpo coberto por estes animais carnï¿½voros
-a devorar-lhe avidamente...  Vocï¿½ morrerï¿½ logo..  A dor ï¿½ insuportï¿½vel e as
-paredes abafam seus gritos.  Hï¿½ milhares deles percorrendo sua carne..  A
-maldiï¿½ï¿½o de Hatshepsut fez mais uma vï¿½tima...
+   Você mal pisa a sala e vê seu corpo coberto por estes animais carnívoros
+a devorar-lhe avidamente...  Você morrerá logo..  A dor é insuportável e as
+paredes abafam seus gritos.  Há milhares deles percorrendo sua carne..  A
+maldição de Hatshepsut fez mais uma vítima...
 ~
-81 10 0 0 0 0
+81 bd 0
 S
 #8202
 Uma Passagem Secreta~
-   Por sorte vocï¿½ consegue descobrir esta passagem seguindo um fio d'ï¿½gua
-que desce pelas paredes...  Aparentemente hï¿½ ï¿½gua brotando do teto!?
+   Por sorte você consegue descobrir esta passagem seguindo um fio d'água
+que desce pelas paredes...  Aparentemente há água brotando do teto!?
 ~
-81 9 0 0 0 0
+81 ad 0
 D1
-Vocï¿½ pode ver o que parece ser uma passagem secreta aqui.
+Você pode ver o que parece ser uma passagem secreta aqui.
 ~
 passagem secreta~
+:n 2 a passagem secreta
 2 8173 8203
 D2
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8101
 S
 #8203
 A Sala dos Tesouros~
-   A sala ï¿½ repleta de jï¿½ias, moedas de ouro e prata pelo chï¿½o...porï¿½m eu
-tomaria cuidado se fosse vocï¿½...
+   A sala é repleta de jóias, moedas de ouro e prata pelo chão...porém eu
+tomaria cuidado se fosse você...
 ~
-81 9 0 0 0 0
+81 ad 0
+D3
+Você descobre uma passagem secreta por aqui.
+~
+passagem secreta~
+:n 2 a passagem secreta
+2 8173 8202
 D2
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8204
-D3
-Vocï¿½ descobre uma passagem secreta por aqui.
-~
-passagem secreta~
-2 8173 8202
 S
 #8204
 Uma Passagem Estreita~
-   Nossa..  como ï¿½ estreita...  ï¿½ extremamente difï¿½cil passar entre as
-paredes...  Ahhn..  Como vocï¿½ gostaria que seu corpo tivesse alguns
-centï¿½metros a menos..  isto certamente lhe pouparia tantos arranhï¿½es...
+   Nossa..  como é estreita...  é extremamente difícil passar entre as
+paredes...  Ahhn..  Como você gostaria que seu corpo tivesse alguns
+centímetros a menos..  isto certamente lhe pouparia tantos arranhões...
 ~
-81 265 0 0 0 0
+81 adi 0
 D0
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8203
 D2
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8198
 S
 #8205
 Uma Passagem Estreita~
-   Nossa..  como ï¿½ estreita...  ï¿½ extremamente difï¿½cil passar entre as
-paredes...  Ahhn..  Como vocï¿½ gostaria que seu corpo tivesse alguns
-centï¿½metros a menos..  Isto certamente lhe pouparia tantos arranhï¿½es...
+   Nossa..  como é estreita...  é extremamente difícil passar entre as
+paredes...  Ahhn..  Como você gostaria que seu corpo tivesse alguns
+centímetros a menos..  Isto certamente lhe pouparia tantos arranhões...
 ~
-81 265 0 0 0 0
+81 adi 0
 D1
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8196
 S
 #8206
 O Duat~
-   Hï¿½ um enorme pilar no centro da sala e ao fundo vocï¿½ nota enormes
-portï¿½es.  Conforme a tradiï¿½ï¿½o, o tï¿½mulo era lacrado apï¿½s receber o ataï¿½de
-com a mï¿½mia.  Reza a lenda que o morto teria entï¿½o que passar pelo Duat, um
-lugar muito perigoso, com monstros, lagos em ebuliï¿½ï¿½o e rios de fogo.  A
+   Há um enorme pilar no centro da sala e ao fundo você nota enormes
+portões.  Conforme a tradição, o túmulo era lacrado após receber o ataúde
+com a múmia.  Reza a lenda que o morto teria então que passar pelo Duat, um
+lugar muito perigoso, com monstros, lagos em ebulição e rios de fogo.  A
 serpente que cospe veneno era especialmente pavorosa.
 ~
-81 9 0 0 0 0
+81 ad 0
 D2
-Nï¿½o hï¿½ nada alï¿½m de uma escuridï¿½o infinita.
+Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8144
+D5
+Há um enorme portão aqui.
+~
+portão portões~
+:n 1 os portões de Yaru
+2 8172 8207
 D4
-Vocï¿½ nada vï¿½ mas ouve estranhos sons vindos da escuridï¿½o.
+Você nada vê mas ouve estranhos sons vindos da escuridão.
 ~
 ~
 0 -1 8208
-D5
-Hï¿½ um enorme portï¿½o aqui.
-~
-portï¿½o portï¿½es~
-2 8172 8207
 S
 #8207
-Os Portï¿½es de Yaru~
-   Vocï¿½ se encontra no Salï¿½o das Duas Verdades onde o coraï¿½ï¿½o dos mortos ï¿½
-colocado num dos pratos de uma balanï¿½a para ser pesado; no outro prato ï¿½
-colocada a Pena da Verdade, que contï¿½m todas as aï¿½ï¿½es da vida passada do
-falecido.  Os trï¿½s maiores deuses egï¿½pcios, Osï¿½ris, Anï¿½bis e Thot decidem
+Os Portões de Yaru~
+   Você se encontra no Salão das Duas Verdades onde o coração dos mortos é
+colocado num dos pratos de uma balança para ser pesado; no outro prato é
+colocada a Pena da Verdade, que contém todas as ações da vida passada do
+falecido.  Os três maiores deuses egípcios, Osíris, Anúbis e Thot decidem
 o resultado da pesagem.  Se eles a aprovam, a alma do finado pode
-atravesssar os portï¿½es de Yaru; caso contrï¿½rio seu coraï¿½ï¿½o ï¿½ devorado e
+atravesssar os portões de Yaru; caso contrário seu coração é devorado e
 sua alma perdida.
 ~
-81 9 0 0 0 0
+81 ad 0
 D4
-Hï¿½ um enorme portï¿½o aqui.
+Há um enorme portão aqui.
 ~
-portï¿½o portï¿½es~
+portão portões~
+:n 1 os portões de Yaru
 2 8172 8206
 S
 #8208
 O Covil do Devorador~
-   Vocï¿½ foi julgado e os grandes deuses condenam seu coraï¿½ï¿½o e aprisionam
-sua alma.  Vocï¿½ vï¿½ o grande devorador lentamente comer seu coraï¿½ï¿½o e sua
-alma se esvair na escuridï¿½o...  Uma imensa dor invade seu corpo....
+   Você foi julgado e os grandes deuses condenam seu coração e aprisionam
+sua alma.  Você vê o grande devorador lentamente comer seu coração e sua
+alma se esvair na escuridão...  Uma imensa dor invade seu corpo....
 ~
-81 2 0 0 0 0
+81 b 0
 S
 #8209
-A Barraca de Armamentos Egï¿½pcios~
-   A quantidade de lanï¿½as, adagas e machadinhas espalhadas pelos balcï¿½es e
-paredes da tenda ï¿½ impressionante.  E assustador ï¿½ imaginar que elas sï¿½o tï¿½o
+A Barraca de Armamentos Egípcios~
+   A quantidade de lanças, adagas e machadinhas espalhadas pelos balcões e
+paredes da tenda é impressionante.  E assustador é imaginar que elas são tão
 afiadas que poderiam cortar sua garganta sem ao menos sentir.  O dono da
 loja tem cara de poucos amigos.  Ouve-se uma gritaria ensurdecedora vinda do
 leste.
 ~
-81 132 0 0 0 0
+81 ch 0
 D1
-Hï¿½ um pequeno mercado ï¿½ frente.
+Há um pequeno mercado à frente.
 ~
 ~
 0 -1 8124
 S
 #8210
-A Loja de Escudos Egï¿½pcios~
-   Belï¿½ssimos escudos, elmos e roupas de fino trato chamam sua atenï¿½ï¿½o sob
+A Loja de Escudos Egípcios~
+   Belíssimos escudos, elmos e roupas de fino trato chamam sua atenção sob
 os panos rubros da barraca.  O sol reluz em um escudo de prata dando um tom
-argï¿½nteo ao ambiente.  A oeste vocï¿½ volta a sentir a agitaï¿½ï¿½o do mercado.
+argênteo ao ambiente.  A oeste você volta a sentir a agitação do mercado.
 ~
-81 132 0 0 0 0
+81 ch 0
 D3
-Hï¿½ um pequeno mercado ï¿½ frente.
+Há um pequeno mercado à frente.
 ~
 ~
 0 -1 8124
 S
 #8211
-A Barraca de Pï¿½es~
-   Hum!  O cheiro de massa fresca e de pï¿½es recobertos por frutas exï¿½ticas
-torna este lugar um dos mais agradï¿½veis atï¿½ agora..  Vocï¿½ sente que poderia
+A Barraca de Pães~
+   Hum!  O cheiro de massa fresca e de pães recobertos por frutas exóticas
+torna este lugar um dos mais agradáveis até agora..  Você sente que poderia
 se empanturrar de tanto comer...
 ~
-81 132 0 0 0 0
+81 ch 0
 D0
-Hï¿½ um pequeno mercado ï¿½ frente.
+Há um pequeno mercado à frente.
 ~
 ~
 0 -1 8124
 S
 #8212
 Uma Rua Estreita~
-   Vocï¿½ disputa espaï¿½o com crianï¿½as, vendedores, senhoras, soldados e
-animais...  Hï¿½ galinhas correndo pelo meio da rua, cï¿½es latindo, o alarido
-e a multidï¿½o transformam esta pequena rua em um caos total!
+   Você disputa espaço com crianças, vendedores, senhoras, soldados e
+animais...  Há galinhas correndo pelo meio da rua, cães latindo, o alarido
+e a multidão transformam esta pequena rua em um caos total!
 ~
-81 1 0 0 0 1
-D2
-Hï¿½ um pequeno mercado ï¿½ frente.
-~
-~
-0 -1 8124
+81 a 1
 D4
-Hï¿½ um pequeno mercado ï¿½ frente.
+Há um pequeno mercado à frente.
 ~
 ~
 0 -1 8123
+D2
+Há um pequeno mercado à frente.
+~
+~
+0 -1 8124
 S
 #8213
 O Baixo Egito~
-   Vocï¿½ estï¿½ numa rua aparentemente deserta mas ouvem-se vozes saindo das
-humildes casas de barro ao redor.  Ao norte vocï¿½ avista um rio de beleza
-incomparï¿½vel, e ao sul vocï¿½ pode ouvir o rumor de um mercado com seus
+   Você está numa rua aparentemente deserta mas ouvem-se vozes saindo das
+humildes casas de barro ao redor.  Ao norte você avista um rio de beleza
+incomparável, e ao sul você pode ouvir o rumor de um mercado com seus
 feirantes barulhentos.
 ~
-81 1 0 0 0 1
+81 a 1
 D4
-Existe uma ponte nessa direï¿½ï¿½o.
+Existe uma ponte nessa direção.
 ~
 ~
 0 -1 8123
 D5
-Hï¿½ um mercado nessa direï¿½ï¿½o.
+Há um mercado nessa direção.
 ~
 ~
 0 -1 8124
 S
-$~
+$

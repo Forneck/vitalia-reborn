@@ -1,15 +1,15 @@
 #9100
 Antes do Labirinto do Milharal~
-   Vocï¿½ estï¿½ na entrada do labirinto do milharal.   Vï¿½rios mugidos
+   Você está na entrada do labirinto do milharal.   Vários mugidos
 e relinchos podem ser ouvidos de fora do labirinto.  Um pequeno
-aviso foi posto no chï¿½o daqui.  Ele parece importante.  Vocï¿½ pode
+aviso foi posto no chão daqui.  Ele parece importante.  Você pode
 ir para ao norte, no milharal, ou fugir voltando ao oeste.
 ~
-91 68 0 0 0 2
+91 gc 2
 D0
 ~
 ~
-0 -1 9103
+0 -1 9103 
 D3
 ~
 ~
@@ -17,29 +17,29 @@ D3
 S
 #9101
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
-0 -1 9107
+0 -1 9107 
 D1
 ~
 ~
-0 -1 9102
+0 -1 9102 
 S
 #9102
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -51,12 +51,12 @@ D3
 S
 #9103
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -64,12 +64,12 @@ D0
 S
 #9104
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -81,12 +81,12 @@ D1
 S
 #9105
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -98,12 +98,12 @@ D3
 S
 #9106
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -111,12 +111,12 @@ D0
 S
 #9107
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -128,12 +128,12 @@ D2
 S
 #9108
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -149,12 +149,12 @@ D2
 S
 #9109
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -174,12 +174,12 @@ D3
 S
 #9110
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D2
 ~
 ~
@@ -191,12 +191,12 @@ D3
 S
 #9111
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D2
 ~
 ~
@@ -204,12 +204,12 @@ D2
 S
 #9112
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -225,12 +225,12 @@ D2
 S
 #9113
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D2
 ~
 ~
@@ -242,12 +242,12 @@ D3
 S
 #9114
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -259,12 +259,12 @@ D2
 S
 #9115
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D1
 ~
 ~
@@ -276,12 +276,12 @@ D2
 S
 #9116
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -293,12 +293,12 @@ D3
 S
 #9117
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -310,12 +310,12 @@ D1
 S
 #9118
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D1
 ~
 ~
@@ -331,12 +331,12 @@ D3
 S
 #9119
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -348,12 +348,12 @@ D3
 S
 #9120
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D1
 ~
 ~
@@ -365,12 +365,12 @@ D2
 S
 #9121
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D1
 ~
 ~
@@ -382,12 +382,12 @@ D3
 S
 #9122
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D2
 ~
 ~
@@ -399,12 +399,12 @@ D3
 S
 #9123
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -416,12 +416,12 @@ D1
 S
 #9124
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D1
 ~
 ~
@@ -437,12 +437,12 @@ D3
 S
 #9125
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -454,12 +454,12 @@ D3
 S
 #9126
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D1
 ~
 ~
@@ -471,12 +471,12 @@ D2
 S
 #9127
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -488,12 +488,12 @@ D3
 S
 #9128
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -501,12 +501,12 @@ D0
 S
 #9129
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D1
 ~
 ~
@@ -518,12 +518,12 @@ D2
 S
 #9130
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -535,12 +535,12 @@ D3
 S
 #9131
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D2
 ~
 ~
@@ -548,12 +548,12 @@ D2
 S
 #9132
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -561,12 +561,12 @@ D0
 S
 #9133
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D1
 ~
 ~
@@ -578,12 +578,12 @@ D2
 S
 #9134
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D2
 ~
 ~
@@ -595,12 +595,12 @@ D3
 S
 #9135
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D1
 ~
 ~
@@ -612,12 +612,12 @@ D2
 S
 #9136
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D1
 ~
 ~
@@ -629,12 +629,12 @@ D3
 S
 #9137
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -654,12 +654,12 @@ D3
 S
 #9138
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D1
 ~
 ~
@@ -671,12 +671,12 @@ D3
 S
 #9139
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -688,12 +688,12 @@ D3
 S
 #9140
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D2
 ~
 ~
@@ -701,12 +701,12 @@ D2
 S
 #9141
 O Labirinto do Milharal~
-   Vocï¿½ estï¿½ em pï¿½, em meio ao milharal.   Os pï¿½s de milho sï¿½o tï¿½o
-altos que vocï¿½ nï¿½o consegue nem ver seus caules.  De repente, vocï¿½
-percebe que este ï¿½ um milharal mï¿½gico e reza para que possa
-encontrar a saï¿½da deste lugar.
+   Você está em pé, em meio ao milharal.   Os pés de milho são tão
+altos que você não consegue nem ver seus caules.  De repente, você
+percebe que este é um milharal mágico e reza para que possa
+encontrar a saída deste lugar.
 ~
-91 64 0 0 0 2
+91 g 2
 D0
 ~
 ~
@@ -717,11 +717,11 @@ D2
 0 -1 9139
 S
 #9142
-A Saï¿½da~
-Vocï¿½ finalmente chegou ao fim do labirinto.   Apenas vï¿½ a norte e nï¿½o
-volte para trï¿½s.  A nï¿½o ser se vocï¿½ queira se perder mais um pouco. :P
+A Saída~
+Você finalmente chegou ao fim do labirinto.   Apenas vá a norte e não
+volte para trás.  A não ser se você queira se perder mais um pouco. :P
 ~
-91 68 0 0 0 2
+91 gc 2
 D0
 ~
 ~

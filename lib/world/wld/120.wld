@@ -1,59 +1,61 @@
 #12001
 A Saleta do Juiz~
-  Vocï¿½ surge bem no meio de um quarto pequeno com janelas nas paredes
-do leste e sul. Estas janelas providenciam uma visï¿½o completa dos campos de
-competiï¿½ï¿½o.  Sobre a mesa, hï¿½ vï¿½rios cartï¿½es de marcaï¿½ï¿½o, lï¿½pis e outros
-artigos que sï¿½o usados pelos juï¿½zes das competiï¿½ï¿½es.  A ï¿½nica saï¿½da ï¿½ um
-alï¿½apï¿½o que conduz para baixo.
+  Você surge bem no meio de um quarto pequeno com janelas nas paredes
+do leste e sul. Estas janelas providenciam uma visão completa dos campos de
+competição.  Sobre a mesa, há vários cartões de marcação, lápis e outros
+artigos que são usados pelos juízes das competições.  A única saída é um
+alçapão que conduz para baixo.
 ~
-120 8 0 0 0 0
+120 d 0
 D5
-Hï¿½ uma escada de mï¿½o, minï¿½scula, que conduz abaixo.
+Há uma escada de mão, minúscula, que conduz abaixo.
 ~
 alcapao~
+:n 1 o alçapão
 1 12033 12002
 E
-lï¿½pis~
-Um lï¿½pis preto comum, nï¿½2. A se julgar pelas marcas de dentes na madeira,
-o dono deste lï¿½pis deveria consultar um dentista urgentemente!
+cartoes marcacao~
+Todos os cartões dos combatentes de hoje foram preenchidos, pelos juízes,
+com as suas avaliações. Parece que aquele Spartacus está tendo um dia bom.
 ~
 E
-cartoes marcacao~
-Todos os cartï¿½es dos combatentes de hoje foram preenchidos, pelos juï¿½zes,
-com as suas avaliaï¿½ï¿½es. Parece que aquele Spartacus estï¿½ tendo um dia bom.
+lápis~
+Um lápis preto comum, nº2. A se julgar pelas marcas de dentes na madeira,
+o dono deste lápis deveria consultar um dentista urgentemente!
 ~
 S
 #12002
 Camarote Privativo de Cesar~
-   Este camarote possui a melhor visï¿½o de toda a arena!  Vocï¿½ pode ver os
-gladiadores que lutam ou o cochï¿½ correndo veloz, sem que nada obstrua a sua
-visï¿½o.  Os assentos sï¿½o estofados com um veludo vermelho e todos estï¿½o em
-perfeita condiï¿½ï¿½o.  Hï¿½ uma pequena escada de mï¿½o conduzindo para cima e uma
-escadaria toda de mï¿½rmore que conduz para baixo.
+   Este camarote possui a melhor visão de toda a arena!  Você pode ver os
+gladiadores que lutam ou o cochê correndo veloz, sem que nada obstrua a sua
+visão.  Os assentos são estofados com um veludo vermelho e todos estão em
+perfeita condição.  Há uma pequena escada de mão conduzindo para cima e uma
+escadaria toda de mármore que conduz para baixo.
 ~
-120 12 0 0 0 0
+120 cd 0
 D4
-Vocï¿½ vï¿½ uma pequena escada de mï¿½o que sobe, levando a um alï¿½apï¿½o.
+Você vê uma pequena escada de mão que sobe, levando a um alçapão.
 ~
 alcapao~
+:n 1 o alçapão
 1 12033 12001
 D5
-Ali estï¿½ uma escadaria toda de mï¿½rmore que conduz para baixo.
+Ali está uma escadaria toda de mármore que conduz para baixo.
 ~
 ~
 0 -1 12003
 S
 #12003
 O Lado Ocidental Das Arquibancadas dos Cidadaos Comuns~
-   Este ï¿½ lado ocidental onde os cidadï¿½os de Roma se sentam.  Hï¿½ fileiras
-apï¿½s fileiras de bancos de madeira ï¿½spera, presos no chï¿½o.  Hï¿½ lixo espalhado
-por todos os lugares do estï¿½dio e o cheiro forte o faz querer vomitar.
-Escadarias conduzem atï¿½ o Camarote Privativo de Cï¿½sar e uma rampa pequena
-conduz atï¿½ a arena de jogos e um corredor leva ao sul.
+   Este é lado ocidental onde os cidadãos de Roma se sentam.  Há fileiras
+após fileiras de bancos de madeira áspera, presos no chão.  Há lixo espalhado
+por todos os lugares do estádio e o cheiro forte o faz querer vomitar.
+Escadarias conduzem até o Camarote Privativo de César e uma rampa pequena
+conduz até a arena de jogos e um corredor leva ao sul.
 ~
-120 0 0 0 0 1
+120 0 1
 D2
-Vocï¿½ vï¿½ um pequeno corredor que leva a uma ï¿½rea maior.
+Você vê um pequeno corredor que leva a uma área maior.
 ~
 ~
 0 -1 12004
@@ -69,125 +71,128 @@ Cuidado por onde pisa!
 0 -1 12010
 E
 cadeiras bancos~
-Os bancos sï¿½o feitos com uma madeira ï¿½spera que secou e se dividiu ao meio,
-com o passar do tempo. Vocï¿½ provavelmente se encheu de farpas, se se sentou
+Os bancos são feitos com uma madeira áspera que secou e se dividiu ao meio,
+com o passar do tempo. Você provavelmente se encheu de farpas, se se sentou
 neles.  As palavras 'BURT ESTEVE AQUI' foram cuidadosamente esculpidas em um
 dos bancos, com extremo primor.
 ~
 S
 #12004
 O Lado Sul Das Arquibancadas dos Cidadaos Comuns~
-   Esta ï¿½ a parte sudeste da ï¿½rea de assento dos comuns.  Os bancos daqui
-sï¿½o feitos de pedra e provavelmente tem sï¿½culos de idade.  Alguns arranhï¿½es
-em um dos bancos chama a sua atenï¿½ï¿½o.  Um cheiro picante estï¿½ vindo do leste
-e um tï¿½nel comeï¿½a para o norte.
+   Esta é a parte sudeste da área de assento dos comuns.  Os bancos daqui
+são feitos de pedra e provavelmente tem séculos de idade.  Alguns arranhões
+em um dos bancos chama a sua atenção.  Um cheiro picante está vindo do leste
+e um túnel começa para o norte.
 ~
-120 0 0 0 0 1
+120 0 1
 D0
-Parece que o tunel conduz atï¿½ outra ï¿½rea da arquibancada.
+Parece que o tunel conduz até outra área da arquibancada.
 ~
 ~
 0 -1 12003
 D1
-Um cheiro picante estï¿½ vindo daquela direï¿½ï¿½o.
+Um cheiro picante está vindo daquela direção.
 ~
 ~
 0 -1 12011
 E
 marcas ranhuras~
-Parece que eles formam as palavras "Onivel Cinemod Semaj" Mas vocï¿½ pode ter
+Parece que eles formam as palavras "Onivel Cinemod Semaj" Mas você pode ter
 se equivocado.
 ~
 S
 #12005
-O Portï¿½o Abandonado~
-   Este era um portï¿½o que ia DE e PARA Roma ocidental.  Hï¿½ um portï¿½o de ferro
+O Portão Abandonado~
+   Este era um portão que ia DE e PARA Roma ocidental.  Há um portão de ferro
 bloqueando seu caminho e, a se julgar pela enorme quantidade de ferrugem e
-do mato que cresce entre as barras, parece que este nï¿½o ï¿½ aberto hï¿½ anos.
-Olhando atravï¿½s do portï¿½o, nota-se uma paisagem estï¿½ril e entï¿½o compreende-se
+do mato que cresce entre as barras, parece que este não é aberto há anos.
+Olhando através do portão, nota-se uma paisagem estéril e então compreende-se
 o porque deste abandono.  Uma estrada de terra conduz para o leste, e uma
 loja pode ser encontrada, indo-se diretamente ao sul.
 ~
-120 0 0 0 0 1
+120 0 1
 D1
-Atraves das nuvens de pï¿½, vocï¿½ pode ver uma estrada utilizï¿½vel.
+Atraves das nuvens de pó, você pode ver uma estrada utilizável.
 ~
 ~
 0 -1 12012
 D2
-Vocï¿½ mal consegue ver um palmo a sua frente, atraves da densa folhagem.
+Você mal consegue ver um palmo a sua frente, atraves da densa folhagem.
 ~
 ~
 0 -1 12006
 D3
-O portï¿½o enferrujado foi permanentemente fechado e estï¿½ trancado com fortes 
+O portão enferrujado foi permanentemente fechado e está trancado com fortes 
 correntes e cadeado. Nem PENSE em tentar abri-lo.
 ~
 portao~
+:n 1 o portão enferrujado
 2 -1 -1
 E
 portao~
-O portï¿½o enferrujado foi permanentemente fechado e estï¿½ trancado com fortes 
+O portão enferrujado foi permanentemente fechado e está trancado com fortes 
 correntes e cadeado. Nem PENSE em tentar abri-lo.
 ~
 S
 #12006
 O Rei das Espadas~
-   Bem-vindo ï¿½ loja de armas de Titus Andronicus!!  Temos alabardas raras,
-chicotes, espadas e outros instrumentos de morte que estï¿½o orgulhosamente
+   Bem-vindo à loja de armas de Titus Andronicus!!  Temos alabardas raras,
+chicotes, espadas e outros instrumentos de morte que estão orgulhosamente
 exibidos nas paredes em vitrines de vidro transparente.  As armas mais
-comuns estï¿½o empilhadas como madeira, no chï¿½o.  Ao norte vocï¿½ pode ver
-apenas um portï¿½o.  Olhando-se para o sul, percebe-se uma porta com a
-aparï¿½ncia de ser muito segura.
+comuns estão empilhadas como madeira, no chão.  Ao norte você pode ver
+apenas um portão.  Olhando-se para o sul, percebe-se uma porta com a
+aparência de ser muito segura.
 ~
-120 136 0 0 0 0
+120 dh 0
 D0
-Ao norte pode-se ver um dos portï¿½es da cidade.
+Ao norte pode-se ver um dos portões da cidade.
 ~
 ~
 0 -1 12005
 D2
-Ali estï¿½ uma porta com a aparï¿½ncia de ser muito segura, bloqueando sua
+Ali está uma porta com a aparência de ser muito segura, bloqueando sua
 passagem.
 ~
 porta~
+:n 2
 2 12034 12007
 E
 espadas armas armaduras chicotes~
-Titus tem equipamento suficiente aqui para equipar um exï¿½rcito grande.
+Titus tem equipamento suficiente aqui para equipar um exército grande.
 Talvez seja por isso que ele tem um contrato lucrativo para vender armas
-aos exï¿½rcitos do Imperador, ï¿½ preï¿½os ultrajantes.
+aos exércitos do Imperador, à preços ultrajantes.
 ~
 S
 #12007
 O Quarto dos Fundos~
-   Se vocï¿½ achou que haviam muitas armas na frente da loja, vocï¿½ ainda nï¿½o
-viu nada!!  O espaï¿½o existente ali dentro apenas ï¿½ suficiente para se
-caminhar entre as caixas e mais caixas de armadura e espadas.  Nï¿½o ï¿½ ï¿½ toa
-que Roma irï¿½ durar por mil anos.  A ï¿½nica saï¿½da ï¿½ atravï¿½s de uma porta ao
+   Se você achou que haviam muitas armas na frente da loja, você ainda não
+viu nada!!  O espaço existente ali dentro apenas é suficiente para se
+caminhar entre as caixas e mais caixas de armadura e espadas.  Não é à toa
+que Roma irá durar por mil anos.  A única saída é através de uma porta ao
 norte.
 ~
-120 9 0 0 0 0
+120 ad 0
 D0
-Atraves das pilhas de armas, vocï¿½ consegue ver uma porta que vem do norte
+Atraves das pilhas de armas, você consegue ver uma porta que vem do norte
 para o resto da loja.
 ~
 porta~
+:n 2
 2 12034 12006
 E
 armas espadas caixas armaduras~
-Literalmente, hï¿½ milhares de cada. Faï¿½a sua escolha.
+Literalmente, há milhares de cada. Faça sua escolha.
 ~
 S
 #12008
 Paraiso do Amendoim~
-   Agora vocï¿½ estï¿½ num lugar tï¿½o alto que vocï¿½ comeï¿½a a se sentir enjoado e
-vocï¿½ sente como se o seu nariz fosse comeï¿½ar a sangrar.  Nï¿½o hï¿½ nem mesmo
-bancos para se sentar aqui; apenas o chï¿½o sujo de pedra.  A vista do campo
-circunvizinho ï¿½ espetacular.  Infelizmente vocï¿½ mal consegue ver o estï¿½dio.
-Alguns degraus estï¿½o aqui, conduzindo abaixo.
+   Agora você está num lugar tão alto que você começa a se sentir enjoado e
+você sente como se o seu nariz fosse começar a sangrar.  Não há nem mesmo
+bancos para se sentar aqui; apenas o chão sujo de pedra.  A vista do campo
+circunvizinho é espetacular.  Infelizmente você mal consegue ver o estádio.
+Alguns degraus estão aqui, conduzindo abaixo.
 ~
-120 0 0 0 0 1
+120 0 1
 D5
 Cuidado por onde pisa!
 ~
@@ -195,91 +200,91 @@ Cuidado por onde pisa!
 0 -1 12015
 E
 paisagem cidade~
-Vocï¿½ pode ver a cidade de Roma inteira daqui.  Os edifï¿½cios do Governo
-romano ficam ao leste. Para o sudeste, longe do alcance da vista, estï¿½ o
-imenso aqueduto e mais alem daquela direï¿½ï¿½o, se encontra o Monte dos Deuses.
+Você pode ver a cidade de Roma inteira daqui.  Os edifícios do Governo
+romano ficam ao leste. Para o sudeste, longe do alcance da vista, está o
+imenso aqueduto e mais alem daquela direção, se encontra o Monte dos Deuses.
 ~
 S
 #12009
 Area para Treino e Aquecimento~
-   Hï¿½ muitos gladiadores, condutores de cochï¿½s e seus treinadores aqui,
-fazendo aquecimento em preparaï¿½ï¿½o para os jogos.  O pï¿½ que sobe da terra
-ressecada faz vocï¿½ querer espirrar.  Um tï¿½nel curto segue para o leste e o
-barulho ensurdecedor de tambores, lembrando o som de trovï¿½es e o som das
+   Há muitos gladiadores, condutores de cochês e seus treinadores aqui,
+fazendo aquecimento em preparação para os jogos.  O pó que sobe da terra
+ressecada faz você querer espirrar.  Um túnel curto segue para o leste e o
+barulho ensurdecedor de tambores, lembrando o som de trovões e o som das
 armas sendo testadas, podem ser ouvidos vindo do sul.
 ~
-120 0 0 0 0 2
+120 0 2
 D1
-Hï¿½ uma grande pista de corridas oval, muito suja, naquela direï¿½ï¿½o.
+Há uma grande pista de corridas oval, muito suja, naquela direção.
 ~
 ~
 0 -1 12016
 D2
-Vindo daquela direï¿½ï¿½o, vocï¿½ pode ouvir o som das armas e o barulho
-ensurdecedor de tambores, lembrando o som de trovï¿½es.
+Vindo daquela direção, você pode ouvir o som das armas e o barulho
+ensurdecedor de tambores, lembrando o som de trovões.
 ~
 ~
 0 -1 12010
 E
-treinador~
-O treinador diz a vocï¿½: "Pare de incomodar os meus atletas e desapareï¿½a!"
-~
-E
-coche~
-Vocï¿½ vï¿½ um carro aberto de duas rodas que obviamente foi feita para ser
-puxada por cavalos.  A flamejante pintura vermelha e o imenso nï¿½mero 1
-pintado em suas laterais identifica este cochï¿½ como pertencente a Drucilis
-"Chicote-Luminoso" Octavious, o condutor favorito das massas.
+gladiador~
+Ele é um homem musculoso muito grande, usando muita armadura.  Ele mede você e
+e conclui que não vale a pena perder o tempo dele com você.
 ~
 E
 condutor~
-O condutor estï¿½ muito ocupado trocando uma roda de seu cocï¿½ para notar a sua
-presenï¿½a.
+O condutor está muito ocupado trocando uma roda de seu cocê para notar a sua
+presença.
 ~
 E
-gladiador~
-Ele ï¿½ um homem musculoso muito grande, usando muita armadura.  Ele mede vocï¿½ e
-e conclui que nï¿½o vale a pena perder o tempo dele com vocï¿½.
+coche~
+Você vê um carro aberto de duas rodas que obviamente foi feita para ser
+puxada por cavalos.  A flamejante pintura vermelha e o imenso número 1
+pintado em suas laterais identifica este cochê como pertencente a Drucilis
+"Chicote-Luminoso" Octavious, o condutor favorito das massas.
+~
+E
+treinador~
+O treinador diz a você: "Pare de incomodar os meus atletas e desapareça!"
 ~
 S
 #12010
-A Arena de Competiï¿½ï¿½o~
-   Esta ï¿½ uma ï¿½rea bem grande, plana e coberta por grama...  CUIDADO!!!!
-Vocï¿½ quase ï¿½ atingido pela lanï¿½a de um gladiador enquanto ele faz seu
-arremesso.  Um ï¿½rea para treinamento se encontra ao norte.
+A Arena de Competição~
+   Esta é uma área bem grande, plana e coberta por grama...  CUIDADO!!!!
+Você quase é atingido pela lança de um gladiador enquanto ele faz seu
+arremesso.  Um área para treinamento se encontra ao norte.
 ~
-120 4 0 0 0 2
+120 c 2
 D0
-Atravï¿½s de um pequeno tï¿½nel vocï¿½ pode ver os atletas fazendo alongamento e
+Através de um pequeno túnel você pode ver os atletas fazendo alongamento e
 se aquecendo para os jogos.
 ~
 ~
 0 -1 12009
 D4
-Vocï¿½ vï¿½ alguns degraus que conduzem para cima, atï¿½ as arquibancadas
+Você vê alguns degraus que conduzem para cima, até as arquibancadas
 superiores.
 ~
 ~
 0 -1 12003
 E
 gladiador~
-Ele chegou atï¿½ a fase final de uma longa sï¿½rie de combates contra seu
+Ele chegou até a fase final de uma longa série de combates contra seu
 oponente... URROS!!!! GEMIDOS!!!! GRITOS!!!!... a julgar pelo sangue e a
-distï¿½ncia que agora separa a cabeï¿½a do gladiador do resto de seu corpo,
-vocï¿½ pode seguramente concluir que este foi o combate final da vida dele.
+distância que agora separa a cabeça do gladiador do resto de seu corpo,
+você pode seguramente concluir que este foi o combate final da vida dele.
 ~
 S
 #12011
 O Pronto-Socorro~
-   Este ï¿½ o lugar para onde se deve vir no caso da pessoa se sentir mal
-por causa do calor (ou no caso de um leï¿½o escapar).  Vocï¿½ vï¿½ um jarro cheio
-com sanguessugas vivas e outro artefato mï¿½dico medieval se encontra aqui.
-Do oeste vem o rugido da multidï¿½o, e a leste hï¿½ um corredor.  O curandeiro
-estarï¿½ com vocï¿½ muito breve.
+   Este é o lugar para onde se deve vir no caso da pessoa se sentir mal
+por causa do calor (ou no caso de um leão escapar).  Você vê um jarro cheio
+com sanguessugas vivas e outro artefato médico medieval se encontra aqui.
+Do oeste vem o rugido da multidão, e a leste há um corredor.  O curandeiro
+estará com você muito breve.
 ~
-120 12 0 0 0 0
+120 cd 0
 D1
-Vocï¿½ vï¿½ centenas, talvez milhares de pessoas.
+Você vê centenas, talvez milhares de pessoas.
 ~
 ~
 0 -1 12018
@@ -290,87 +295,87 @@ Filas de arquibancadas de pedra seguem ao oeste.
 0 -1 12004
 E
 parasitas sanguessugas~
-REPUGNANTE!  Cada uma ï¿½ do tamanho de uma caixa de fï¿½sforo e muito gosmentas.
-Vocï¿½ ï¿½ MESMO muito sortudo por poder ter acesso aos cuidados de um curandeiro!
+REPUGNANTE!  Cada uma é do tamanho de uma caixa de fósforo e muito gosmentas.
+Você é MESMO muito sortudo por poder ter acesso aos cuidados de um curandeiro!
 ~
 S
 #12012
 Uma estrada de terra~
-   Vocï¿½ estï¿½ em uma estrada de terra poeirenta que vai de leste a oeste. Ao
-sul hï¿½ uma estrutura.
+   Você está em uma estrada de terra poeirenta que vai de leste a oeste. Ao
+sul há uma estrutura.
 ~
-120 0 0 0 0 2
+120 0 2
 D1
-Atravï¿½s da poeira, vocï¿½ consegue ver uma estrada pavimentada.
+Através da poeira, você consegue ver uma estrada pavimentada.
 ~
 ~
 0 -1 12019
 D2
-ï¿½ difï¿½cil de se enxergar atravï¿½s da nuvem de poeira.
+É difícil de se enxergar através da nuvem de poeira.
 ~
 ~
 0 -1 12013
 D3
-ï¿½ difï¿½cil de se enxergar atravï¿½s da nuvem de poeira.
+É difícil de se enxergar através da nuvem de poeira.
 ~
 ~
 0 -1 12005
 S
 #12013
-A Casa do Cidadï¿½o~
-   Vocï¿½ se encontra na sala principal da casa de um cidadï¿½o romano comum.
-A mobï¿½lia ï¿½ escassa e estï¿½ abafado aqui.  Um odor pï¿½trido estï¿½ vindo do
+A Casa do Cidadão~
+   Você se encontra na sala principal da casa de um cidadão romano comum.
+A mobília é escassa e está abafado aqui.  Um odor pútrido está vindo do
 leste e passagens conduzem norte e sul.
 ~
-120 8 0 0 0 0
+120 d 0
 D0
 Uma estrada empoeirada segue rumo ao norte.
 ~
 ~
 0 -1 12012
 D1
-Que cheiro horrï¿½vel ï¿½ este??!!! ï¿½ forte o bastante para fazer um iaque
+Que cheiro horrível é este??!!! É forte o bastante para fazer um iaque
 desmaiar!!!
 ~
 ~
 0 -1 12020
 D2
-Vocï¿½ se aventura a advinhar que hï¿½ um quarto naquela direï¿½ï¿½o.
+Você se aventura a advinhar que há um quarto naquela direção.
 ~
 ~
 0 -1 12014
 E
 moveis mobilia~
-A mobï¿½lia que vocï¿½ vï¿½ ï¿½ muito simples e clara.  ï¿½ feita com madeira dura e
-rï¿½stica. Estes mï¿½veis parecem ser muito incï¿½modos.
+A mobília que você vê é muito simples e clara.  É feita com madeira dura e
+rústica. Estes móveis parecem ser muito incômodos.
 ~
 S
 #12014
 O Quarto de Dormir~
-   Este ï¿½ o quarto.  Hï¿½ uma cama com colchï¿½o duro e encaroï¿½ado num canto
-distante.  Parece que nos ï¿½ltimos dias a esposa deste cidadï¿½o tem falhado
-com os seus deveres, pois hï¿½ uma pilha enorme de roupa suja para lavar aqui.
-O ï¿½nico maneira de sair daqui ï¿½ usar o mesmo caminho que vocï¿½ veio.
+   Este é o quarto.  Há uma cama com colchão duro e encaroçado num canto
+distante.  Parece que nos últimos dias a esposa deste cidadão tem falhado
+com os seus deveres, pois há uma pilha enorme de roupa suja para lavar aqui.
+O único maneira de sair daqui é usar o mesmo caminho que você veio.
 ~
-120 12 0 0 0 0
+120 cd 0
 D0
-Vocï¿½ vï¿½ a ï¿½rea social da casa ao norte.
+Você vê a área social da casa ao norte.
 ~
 ~
 0 -1 12013
 E
 lavanderia roupa~
-O lugar cheira a suor e estï¿½ coberto com lama.
+O lugar cheira a suor e está coberto com lama.
 ~
 S
 #12015
-ï¿½rea dos Nobres~
-   Este ï¿½ o local onde estï¿½o os melhores assentos, usados principalmente
-pela classe alta de Roma.  Hï¿½ uma ï¿½rea bem grande de lugares ao leste e uma
-escadaria que leva para cima daqui.  A visï¿½o da pista de carruagens ï¿½ muito
-fï¿½cil.
+Área dos Nobres~
+   Este é o local onde estão os melhores assentos, usados principalmente
+pela classe alta de Roma.  Há uma área bem grande de lugares ao leste e uma
+escadaria que leva para cima daqui.  A visão da pista de carruagens é muito
+fácil.
 ~
-120 0 0 0 0 0
+120 0 0
 D1
 Filas e filas de assentos da arquibancada seguem para o leste.
 ~
@@ -384,16 +389,16 @@ As escadas parecem ser bem seguras.
 S
 #12016
 A Pista de Corrida~
-   Esta ï¿½ uma pista de corrida difï¿½cil e trabalhosa, com aproximadamente
-1600 metros de extensï¿½o.  Hï¿½ coices e manchas por todos os lados, e vocï¿½ vï¿½
-uma nuvem grande de pï¿½ se aproximando.  ï¿½ melhor vocï¿½ se mexer rï¿½pido antes
-que seja atropelado.  Um pequeno tï¿½nel segue rumo a oeste, e vocï¿½ pode ver
-a multidï¿½o a leste.  Vocï¿½ pode ouvir altos rosnares e rugidos que vï¿½m de
+   Esta é uma pista de corrida difícil e trabalhosa, com aproximadamente
+1600 metros de extensão.  Há coices e manchas por todos os lados, e você vê
+uma nuvem grande de pó se aproximando.  É melhor você se mexer rápido antes
+que seja atropelado.  Um pequeno túnel segue rumo a oeste, e você pode ver
+a multidão a leste.  Você pode ouvir altos rosnares e rugidos que vêm de
 abaixo.
 ~
-120 0 0 0 0 2
+120 0 2
 D3
-Vocï¿½ vï¿½ atletas fazendo aquecimento e se alongando.
+Você vê atletas fazendo aquecimento e se alongando.
 ~
 ~
 0 -1 12009
@@ -402,28 +407,28 @@ D4
 ~
 0 -1 12023
 D5
-O que vocï¿½ acha de muitos leï¿½es ao vivo que ainda nï¿½o foram alimentados
+O que você acha de muitos leões ao vivo que ainda não foram alimentados
 durante muitos dias?
 ~
 ~
 0 -1 12017
 S
 #12017
-A Cova do Leï¿½o~
-   Assim que chega ao fundo desta cova imunda, vocï¿½ percebe que uma toca
-cheia de leï¿½es nï¿½o ï¿½ um lugar muito agradï¿½vel de se estar perto.
-Vï¿½rios gladiadores se reï¿½nem ao redor da extremidade da cova para assistir
-sua morte.  Vocï¿½ dï¿½ uma olhada a sua volta, e tudo que vocï¿½ vï¿½ sï¿½o jubas
-e mandï¿½bulas boquiabertas... mas ï¿½ muito tarde para correr, muito tarde para
+A Cova do Leão~
+   Assim que chega ao fundo desta cova imunda, você percebe que uma toca
+cheia de leões não é um lugar muito agradável de se estar perto.
+Vários gladiadores se reúnem ao redor da extremidade da cova para assistir
+sua morte.  Você dá uma olhada a sua volta, e tudo que você vê são jubas
+e mandíbulas boquiabertas... mas é muito tarde para correr, muito tarde para
 se esconder.
-   Doze leï¿½es rasgam vocï¿½ e seus pertences transformando tudo em uma massa
-ensangï¿½entada de couro, bronze, e osso.
+   Doze leões rasgam você e seus pertences transformando tudo em uma massa
+ensangüentada de couro, bronze, e osso.
 
-   Como ï¿½ mesmo aquele velho ditado?
+   Como é mesmo aquele velho ditado?
    A curiosidade matou o gato?  Ou algo assim, eu estou seguro...
 
 ~
-120 10 0 0 0 0
+120 bd 0
 D4
 ~
 ~
@@ -435,45 +440,45 @@ D5
 S
 #12018
 A Entrada Sul do Coliseu~
-   Vocï¿½ se encontra junto ï¿½ entrada sul do Coliseu.  Hï¿½ cidadï¿½os de Roma
-por todos os lados, que aparentemente estï¿½o com uma pressa danada para
-entrar.  Uma estï¿½tua de Calï¿½gula, O Imperador Louco, toma conta da ï¿½rea.
-Longas filas seguem para o leste, e um cheiro acre estï¿½ vindo do oeste.
-Ao sul hï¿½ uma estrada movimentada.
+   Você se encontra junto à entrada sul do Coliseu.  Há cidadãos de Roma
+por todos os lados, que aparentemente estão com uma pressa danada para
+entrar.  Uma estátua de Calígula, O Imperador Louco, toma conta da área.
+Longas filas seguem para o leste, e um cheiro acre está vindo do oeste.
+Ao sul há uma estrada movimentada.
 ~
-120 4 0 0 0 1
+120 c 1
 D1
-As filas estï¿½o muito compridas e as pessoas parecem estar impacientes.
+As filas estão muito compridas e as pessoas parecem estar impacientes.
 ~
 ~
 0 -1 12025
 D2
-Uma estrada segue naquela direï¿½ï¿½o.
+Uma estrada segue naquela direção.
 ~
 ~
 0 -1 12019
 D3
-Um odor acre, quase medicinal estï¿½ vindo daquela direï¿½ï¿½o.
+Um odor acre, quase medicinal está vindo daquela direção.
 ~
 ~
 0 -1 12011
 E
 estatua caligula~
-Um estï¿½tua imensa, feita de pedra, de Calï¿½gula, O Imperador Louco, olha
-para vocï¿½.  Ela parece estar segurando um falo.  Ele tem um sorriso
-sarcï¿½stico em sua face, que parece dizer 'Meu cavalo gostaria de vocï¿½,
+Um estátua imensa, feita de pedra, de Calígula, O Imperador Louco, olha
+para você.  Ela parece estar segurando um falo.  Ele tem um sorriso
+sarcástico em sua face, que parece dizer 'Meu cavalo gostaria de você,
 aposto...'
 ~
 S
 #12019
 A Rodovia Principal~
-   Esta ï¿½ uma estrada muito bem construï¿½da e com grande movimento, que
-corre de leste a oeste e hï¿½ uma grande estrutura de pedra ao norte.
+   Esta é uma estrada muito bem construída e com grande movimento, que
+corre de leste a oeste e há uma grande estrutura de pedra ao norte.
 ~
-120 0 0 0 0 1
+120 0 1
 D0
-Vocï¿½ pode ouvir o rugido de uma grande multidï¿½o de pessoas, vindo daquela
-direï¿½ï¿½o.
+Você pode ouvir o rugido de uma grande multidão de pessoas, vindo daquela
+direção.
 ~
 ~
 0 -1 12018
@@ -491,155 +496,155 @@ S
 #12020
 A Casinha~
    ECAAAAAAAAAAAAAAAAAA-URGGGGGGGGGGGGGGGGG!!!!!  Rapaz, como fede aqui!!!
-Vocï¿½ sente um gosto amargo de bï¿½lis em sua boca e seus olhos comeï¿½am a
-lacrimejar.  Assim que vocï¿½ enxuga suas lï¿½grimas, vocï¿½ vï¿½ que este ï¿½ um
+Você sente um gosto amargo de bílis em sua boca e seus olhos começam a
+lacrimejar.  Assim que você enxuga suas lágrimas, você vê que este é um
 quarto pequeno, num canto bem distante, e que ali dentro um buraco foi
-cavado.  O odor se intensifica a medida que vocï¿½ chega mais perto e hï¿½
-um rolo de papel higiï¿½nico jogado no chï¿½o.  A ï¿½nica saï¿½da fica ao oeste
-e seu nariz e estï¿½mago estï¿½o implorando para que vocï¿½ use esta saï¿½da o
+cavado.  O odor se intensifica a medida que você chega mais perto e há
+um rolo de papel higiênico jogado no chão.  A única saída fica ao oeste
+e seu nariz e estômago estão implorando para que você use esta saída o
 quanto antes.
 ~
-120 8 0 0 0 0
+120 d 0
 D3
-As moradias estï¿½o naquela direï¿½ï¿½o.  Por que vocï¿½ nï¿½o para de andar
-furtivamente por aï¿½ e segue naquela direï¿½ï¿½o??!!  Por favor?
+As moradias estão naquela direção.  Por que você não para de andar
+furtivamente por aí e segue naquela direção??!!  Por favor?
 ~
 ~
 0 -1 12013
 E
-rolo papel~
-Ei!!  Este material ï¿½ de primeira classe!! - da marca Neve, e com loï¿½ï¿½o
-refrescante.  O rolo estï¿½ quase pela metade.
+banheiro buraco~
+Você se aproxima do buraco e vê que dentro há uma massa mole flutuando ali,
+naquela espécie de piscina de água preta, que se encontra a aproximadamente
+2 pés abaixo da superfície.  Assim que você chega mais perto, para poder
+olhar melhor, seu nariz recebe o impacto de uma dose concentrada do odor
+que aquela massa flutuante exala.  Seu estômago então decide que já teve o
+bastante deste tratamento nojento e você vomita até que esteja totalmente
+vazio.
 ~
 E
-banheiro buraco~
-Vocï¿½ se aproxima do buraco e vï¿½ que dentro hï¿½ uma massa mole flutuando ali,
-naquela espï¿½cie de piscina de ï¿½gua preta, que se encontra a aproximadamente
-2 pï¿½s abaixo da superfï¿½cie.  Assim que vocï¿½ chega mais perto, para poder
-olhar melhor, seu nariz recebe o impacto de uma dose concentrada do odor
-que aquela massa flutuante exala.  Seu estï¿½mago entï¿½o decide que jï¿½ teve o
-bastante deste tratamento nojento e vocï¿½ vomita atï¿½ que esteja totalmente
-vazio.
+rolo papel~
+Ei!!  Este material é de primeira classe!! - da marca Neve, e com loção
+refrescante.  O rolo está quase pela metade.
 ~
 S
 #12021
 Os Aposentos dos Escravos~
-   Este ï¿½ o lugar onde os escravos dormem.  Pedaï¿½os de tï¿½buas duras sï¿½o
-usadas como camas e nï¿½o hï¿½ muito alï¿½m disso aqui.  A ï¿½nica saï¿½da fica ao
+   Este é o lugar onde os escravos dormem.  Pedaços de tábuas duras são
+usadas como camas e não há muito além disso aqui.  A única saída fica ao
 leste.
 ~
-120 8 0 0 0 0
+120 d 0
 D1
-Para o leste, um caminho bem cuidado segue atravï¿½s da propriedade do nobre.
+Para o leste, um caminho bem cuidado segue através da propriedade do nobre.
 ~
 ~
 0 -1 12027
 S
 #12022
 A Arquibancada Geral~
-   Este ï¿½ o local onde os cidadï¿½os romanos comuns se sentam durante os
-jogos.  Estes sï¿½o os lugares mais baratos do Estï¿½dio, apesar dos raios de sol
+   Este é o local onde os cidadãos romanos comuns se sentam durante os
+jogos.  Estes são os lugares mais baratos do Estádio, apesar dos raios de sol
 serem um grande problema durante a tarde. Assim como em todos os locais com
 lugares comuns, este local poderia passar por uma reforma grande e uma
-limpeza completa.  Esta ï¿½rea se estende para o sul e uma ï¿½rea com lugares
+limpeza completa.  Esta área se estende para o sul e uma área com lugares
 muito mais elegantes pode ser vista ao oeste.
 ~
-120 0 0 0 0 1
+120 0 1
+D3
+Os assentos são muito mais caprichosos e elegantes naquela direção.
+~
+~
+0 -1 12015
 D2
 A area da arquibancada geral continua.
 ~
 ~
 0 -1 12023
-D3
-Os assentos sï¿½o muito mais caprichosos e elegantes naquela direï¿½ï¿½o.
-~
-~
-0 -1 12015
 S
 #12023
 A Arquibancada Geral~
-   Este ï¿½ o local onde os cidadï¿½os romanos comuns se sentam durante os
+   Este é o local onde os cidadãos romanos comuns se sentam durante os
 jogos.  Assim como em todos os locais com lugares comuns, este local
-poderia passar por uma reforma grande e uma limpeza completa.  Esta ï¿½rea
+poderia passar por uma reforma grande e uma limpeza completa.  Esta área
 se estende para o norte e muito barulho pode ser ouvido vindo do sul.
 ~
-120 0 0 0 0 1
+120 0 1
 D0
-A ï¿½rea da arquibancada geral continua.
+A área da arquibancada geral continua.
 ~
 ~
 0 -1 12022
 D2
-Vocï¿½ vï¿½ centenas, talvez milhares de pessoas.
+Você vê centenas, talvez milhares de pessoas.
 ~
 ~
 0 -1 12024
 S
 #12024
 A Entrada Oriental do Coliseu~
-   Vocï¿½ se encontra junto ï¿½ entrada oriental do Coliseu.  Existem pessoas
-por todos os lugares, que aparentemente estï¿½o com uma pressa danada para
-entrar.  Uma estï¿½tua de Tiberius, um antigo Imperador de Roma, surge aqui,
-olhando por cima da multidï¿½o.  Hï¿½ uma passagem ao norte, a bilheteria fica
-ao sul e ao leste hï¿½ um portï¿½o que se abre para a cidade.
+   Você se encontra junto à entrada oriental do Coliseu.  Existem pessoas
+por todos os lugares, que aparentemente estão com uma pressa danada para
+entrar.  Uma estátua de Tiberius, um antigo Imperador de Roma, surge aqui,
+olhando por cima da multidão.  Há uma passagem ao norte, a bilheteria fica
+ao sul e ao leste há um portão que se abre para a cidade.
 ~
-120 4 0 0 0 1
+120 c 1
 D0
-Vocï¿½ vï¿½ filas e filas de arquibancadas de madeira totalmente dilapidadas.
+Você vê filas e filas de arquibancadas de madeira totalmente dilapidadas.
 ~
 ~
 0 -1 12023
-D1
-Alameda Nero continua naquela direï¿½ao.
-~
-~
-0 -1 12031
 D2
-Hï¿½ filas IMENSAS para a bilheteria.
+Há filas IMENSAS para a bilheteria.
 ~
 ~
 0 -1 12025
+D1
+Alameda Nero continua naquela direçao.
+~
+~
+0 -1 12031
 E
 estatua tiberius~
-A estï¿½tua de Tiberius, feita de ferro, estï¿½ aqui.
+A estátua de Tiberius, feita de ferro, está aqui.
 ~
 S
 #12025
 A Bilheteria~
-   Longas filas de pessoas paradas estï¿½o aqui, enquanto esperam para comprar
-seus ingressos.  Hï¿½ trï¿½s vendedores que trabalham furiosamente.  Canhotos de
-ingressos cobrem o chï¿½o e vocï¿½ pode ver que as pessoas estï¿½o ficando muito
-impacientes.  Hï¿½ um grande Caixa aberto aqui.  As entradas principais para
-o Coliseu sï¿½o ao norte e oeste.
+   Longas filas de pessoas paradas estão aqui, enquanto esperam para comprar
+seus ingressos.  Há três vendedores que trabalham furiosamente.  Canhotos de
+ingressos cobrem o chão e você pode ver que as pessoas estão ficando muito
+impacientes.  Há um grande Caixa aberto aqui.  As entradas principais para
+o Coliseu são ao norte e oeste.
 ~
-120 8 0 0 0 0
+120 d 0
 D0
-Vocï¿½ vï¿½ centenas, talvez milhares de pessoas.
+Você vê centenas, talvez milhares de pessoas.
 ~
 ~
 0 -1 12024
 D3
-Vocï¿½ vï¿½ centenas, talvez milhares de pessoas.
+Você vê centenas, talvez milhares de pessoas.
 ~
 ~
 0 -1 12018
 E
 caixa~
-ï¿½ uma vergonha que a taxa para a troca de dinheiro romano seja tï¿½o baixa.
-Em Roma, grandes somas de dinheiro, nï¿½o valem nem uma moeda de ouro.
-Todo o troco do caixa some rapidamente... bem esqueï¿½a.  Nï¿½o vale a pena
+É uma vergonha que a taxa para a troca de dinheiro romano seja tão baixa.
+Em Roma, grandes somas de dinheiro, não valem nem uma moeda de ouro.
+Todo o troco do caixa some rapidamente... bem esqueça.  Não vale a pena
 perder seu tempo ou se aborrecer por causa disso.
 ~
 S
 #12026
 Uma Estrada Pavimentada~
-   Vocï¿½ se encontra em uma estrada pavimentada que segue para de leste para
-oeste. Vocï¿½ pode ver uma propriedade muito bem cuidada ao sul e ao noroeste,
-longe do seu alcance, vocï¿½ pode ver uma estrutura de pedra muito grande.
+   Você se encontra em uma estrada pavimentada que segue para de leste para
+oeste. Você pode ver uma propriedade muito bem cuidada ao sul e ao noroeste,
+longe do seu alcance, você pode ver uma estrutura de pedra muito grande.
 ~
-120 0 0 0 0 1
+120 0 1
 D1
-A estrada comeï¿½a ao leste.
+A estrada começa ao leste.
 
 ~
 ~
@@ -663,19 +668,19 @@ agendadas para hoje.
 S
 #12027
 Uma Propriedade Nobre~
-   Vocï¿½ estï¿½ pisando no chï¿½o da propriedade de um nobre, que ï¿½ centenas de
-vezes maior e muito mais luxuosa do que qualquer coisa que um cidadï¿½o comum
-de Roma jamais sonharia em ter.  Tudo ï¿½ muito luxuoso e hï¿½ muito verde em
-volta.  A grama estï¿½ perfeitamente aparada e existem ï¿½rvores com todos os
-tipos de fruta.  Plantas ornamentais delicadas e exï¿½ticas estï¿½o perfeitamente
-arrumadas para embelezar e homenagear as trï¿½s estï¿½tuas que representam os
-deuses Jï¿½piter, Vï¿½nus e Netuno.  Um caminho tranqï¿½ilo segue pra leste e
-oeste, e ao norte hï¿½ uma estrada asfaltada para os nortes e seguindo para o
+   Você está pisando no chão da propriedade de um nobre, que é centenas de
+vezes maior e muito mais luxuosa do que qualquer coisa que um cidadão comum
+de Roma jamais sonharia em ter.  Tudo é muito luxuoso e há muito verde em
+volta.  A grama está perfeitamente aparada e existem árvores com todos os
+tipos de fruta.  Plantas ornamentais delicadas e exóticas estão perfeitamente
+arrumadas para embelezar e homenagear as três estátuas que representam os
+deuses Júpiter, Vênus e Netuno.  Um caminho tranqüilo segue pra leste e
+oeste, e ao norte há uma estrada asfaltada para os nortes e seguindo para o
 sul pode-se ver uma casa extravagante.
 ~
-120 0 0 0 0 2
+120 0 2
 D0
-Vocï¿½ vï¿½ uma estrada pavimentada, ao longe.
+Você vê uma estrada pavimentada, ao longe.
 ~
 ~
 0 -1 12026
@@ -685,237 +690,238 @@ O caminho a leste leva para uma propriedade.
 ~
 0 -1 12034
 D2
-ï¿½ distï¿½ncia vocï¿½ vï¿½ uma casa incrï¿½vel.
+À distância você vê uma casa incrível.
 ~
 ~
 0 -1 12028
 D3
-Alï¿½m das ï¿½rvores, vocï¿½ vï¿½ uma pequena cabana bem simples.
+Além das árvores, você vê uma pequena cabana bem simples.
 ~
 ~
 0 -1 12021
 E
-arvores arbustos plantas~
-Todos as plantas, ï¿½rvores e arbustos, estï¿½o perfeitamente aparados, sem que
-uma ï¿½nica folha seca caï¿½da no chï¿½o, pudesse ser vista.  Vocï¿½ recebe de bom
-grado a gostosa sombra fornecida pelas ï¿½rvores, que protege vocï¿½ dos rigores
-do sol quente.
-~
-E
-Netuno~
-A estï¿½tua de Netuno foi feita com o mais puro jade e estï¿½ segurando um
-tridente de cristal.  Ele estï¿½ sentado no centro de um lago em cujo interior
-estï¿½o centenas de lindos peixes nadando.
+Venus~
+Venus, a Deusa Romana da beleza e sabedoria está representada com todos seu
+encanto e esplendor.
 ~
 E
 Jupiter~
-Uma estï¿½tua feita de ouro puro retrata Jupiter sentado em seu trono.  O trono
+Uma estátua feita de ouro puro retrata Jupiter sentado em seu trono.  O trono
 parece ser de prata.
 ~
 E
-Venus~
-Venus, a Deusa Romana da beleza e sabedoria estï¿½ representada com todos seu
-encanto e esplendor.
+Netuno~
+A estátua de Netuno foi feita com o mais puro jade e está segurando um
+tridente de cristal.  Ele está sentado no centro de um lago em cujo interior
+estão centenas de lindos peixes nadando.
+~
+E
+arvores arbustos plantas~
+Todos as plantas, árvores e arbustos, estão perfeitamente aparados, sem que
+uma única folha seca caída no chão, pudesse ser vista.  Você recebe de bom
+grado a gostosa sombra fornecida pelas árvores, que protege você dos rigores
+do sol quente.
 ~
 S
 #12028
 Uma Casa Opulenta~
-   Vocï¿½ se encontra numa casa, cujo tamanho e luxo prï¿½ticamente desafia sua
-imaginaï¿½ï¿½o.  O chï¿½o foi todo coberto por um belï¿½ssimo mosaico de mï¿½rmore,
-entalhado a mï¿½o e cravejado com pura prata de lei.  A luminosidade suave
+   Você se encontra numa casa, cujo tamanho e luxo práticamente desafia sua
+imaginação.  O chão foi todo coberto por um belíssimo mosaico de mármore,
+entalhado a mão e cravejado com pura prata de lei.  A luminosidade suave
 atravessa os vidros de cristal das janelas, banhando a sala com esplendor
-dourado e a mobï¿½lia tem a aparï¿½ncia de ter sido feita pelos melhores mestres
-artesï¿½os de todo o impï¿½rio.  Um caminho que corta a propriedade fica ao
+dourado e a mobília tem a aparência de ter sido feita pelos melhores mestres
+artesãos de todo o império.  Um caminho que corta a propriedade fica ao
 norte daqui.
 ~
-120 12 0 0 0 0
+120 cd 0
 D0
-Vocï¿½ vï¿½ um caminho bem cuidado que corta a propriedade.
+Você vê um caminho bem cuidado que corta a propriedade.
 ~
 ~
 0 -1 12027
 E
-moveis~
-Vocï¿½ espera que um dia possa ter condiï¿½ï¿½es de possuir uma peï¿½a de mobï¿½lia
-igual a estas. Estes sï¿½o apenas sonhos, ï¿½ claro.
+chao azulejo~
+Muito caro! Muitos mestres artesãos trabalharam duro por um longo tempo
+para produzir tal uma obra de arte.
 ~
 E
 janelas~
-Os vitrais sï¿½o complexos e delicados e as cenas que eles descrevem honram
-a figura de vï¿½rios os deuses.
+Os vitrais são complexos e delicados e as cenas que eles descrevem honram
+a figura de vários os deuses.
 ~
 E
-chao azulejo~
-Muito caro! Muitos mestres artesï¿½os trabalharam duro por um longo tempo
-para produzir tal uma obra de arte.
+moveis~
+Você espera que um dia possa ter condições de possuir uma peça de mobília
+igual a estas. Estes são apenas sonhos, é claro.
 ~
 S
 #12029
-O Grande Portï¿½o Norte~
-   Este ï¿½ o portal norte que leva ï¿½ cidade de Roma.  O portï¿½o enorme parece
+O Grande Portão Norte~
+   Este é o portal norte que leva à cidade de Roma.  O portão enorme parece
 estar fechado e trancado para intrusos.  Uma grande estrada lamacenta passa
-atraves do portï¿½o e segue em direï¿½ï¿½o ï¿½ zona rural.  Alameda Nero corre ao sul
+atraves do portão e segue em direção à zona rural.  Alameda Nero corre ao sul
 daqui.
 ~
-120 0 0 0 0 1
+120 0 1
 D0
-O portï¿½o foi feito com ferro sï¿½lido e tem sido bem cuidado.
+O portão foi feito com ferro sólido e tem sido bem cuidado.
 ~
-portï¿½o~
-1 -1 12069
+portão~
+:n 1 o Grande Portão Norte
+a -1 12069
 D2
 Nero
-A Alameda Nero segue naquela direï¿½ï¿½o.
+A Alameda Nero segue naquela direção.
 ~
 ~
 0 -1 12030
 E
-estrada~
-A estrada ï¿½ larga e muito lamacenta.
+portao~
+O portão foi feito com ferro sólido e tem sido bem cuidado.
 ~
 E
-portao~
-O portï¿½o foi feito com ferro sï¿½lido e tem sido bem cuidado.
+estrada~
+A estrada é larga e muito lamacenta.
 ~
 S
 #12030
 Alameda Nero~
-   Vocï¿½ estï¿½ caminhando por uma estrada asfaltada que segue para o sul atravï¿½s
-da cidade de Roma. Indo diretamente ao norte, hï¿½ um grande portï¿½o.
-Os cidadï¿½os romanos sï¿½o muito amigï¿½veis e tiram seus chapï¿½us ou dizem olï¿½
-quando vocï¿½ passa por eles.
+   Você está caminhando por uma estrada asfaltada que segue para o sul através
+da cidade de Roma. Indo diretamente ao norte, há um grande portão.
+Os cidadãos romanos são muito amigáveis e tiram seus chapéus ou dizem olá
+quando você passa por eles.
 ~
-120 0 0 0 0 1
+120 0 1
 D0
-Ao norte, vocï¿½ pode ver um portï¿½o, que conduz para fora dos limites da cidade.
+Ao norte, você pode ver um portão, que conduz para fora dos limites da cidade.
 ~
 ~
 0 -1 12029
 D2
-A Alameda Nero segue naquela direï¿½ï¿½o.
+A Alameda Nero segue naquela direção.
 ~
 ~
 0 -1 12031
 D3
-Vocï¿½ vï¿½ a padaria de Roma.
+Você vê a padaria de Roma.
 ~
 ~
 0 -1 12062
 S
 #12031
 Alameda Nero~
-   Vocï¿½ estï¿½ caminhando sobre uma grande estrada pavimentada que corta a
-cidade de norte a sul.  As pessoas apressadas vï¿½o de um lugar para outro,
-mas sempre param para dizer olï¿½.  A maioria das pessoas ou estï¿½o vindo ou
-indo para a Praï¿½a Central.  A Alameda Nero segue para o norte e voï¿½ pode ver
-uma grande ï¿½rea aberta, ao sul.
+   Você está caminhando sobre uma grande estrada pavimentada que corta a
+cidade de norte a sul.  As pessoas apressadas vão de um lugar para outro,
+mas sempre param para dizer olá.  A maioria das pessoas ou estão vindo ou
+indo para a Praça Central.  A Alameda Nero segue para o norte e voê pode ver
+uma grande área aberta, ao sul.
 ~
-120 0 0 0 0 1
+120 0 1
 D0
-A Alameda Nero continua naquela direï¿½ï¿½o.
+A Alameda Nero continua naquela direção.
 ~
 ~
 0 -1 12030
 D2
-Isso parece ser a Praï¿½a Central.
+Isso parece ser a Praça Central.
 ~
 ~
 0 -1 12032
 D3
-Vocï¿½ vï¿½ uma propriedade luxuosa.
+Você vê uma propriedade luxuosa.
 ~
 ~
 0 -1 12024
 S
 #12032
-A Praï¿½a Central~
-   Vocï¿½ se encontra bem no centro de uma grande ï¿½rea aberta que ï¿½ a ï¿½rea
-comunitï¿½ria de Roma.  Durante o dia, este lugar ï¿½ animado pelo movimento
-apressado e atarefado de todos os cidadï¿½os de Roma e todos da cidade sabem
+A Praça Central~
+   Você se encontra bem no centro de uma grande área aberta que é a área
+comunitária de Roma.  Durante o dia, este lugar é animado pelo movimento
+apressado e atarefado de todos os cidadãos de Roma e todos da cidade sabem
 que uma hora ou outra acabam dando uma passada por ali.  Existem muitos
 vendedores ambulantes por ali, mascateando suas mercadorias e a atmosfera
-geral ï¿½ de um grande carnaval.  Ao sudeste, quase escapando do alcance de
-sua vista, vocï¿½ percebe os aquedutos e ao noroeste se encontram os edifï¿½cios
+geral é de um grande carnaval.  Ao sudeste, quase escapando do alcance de
+sua vista, você percebe os aquedutos e ao noroeste se encontram os edifícios
 do governo romanos.  A partir deste ponto, a Alameda Nero segue para o norte
 e para o sul e a Avenida Clay segue para o leste.
 ~
-120 0 0 0 0 1
+120 0 1
 D0
-A Alameda Nero prossegue na direï¿½ï¿½o do portï¿½o do norte.
+A Alameda Nero prossegue na direção do portão do norte.
 ~
 ~
 0 -1 12031
-D1
-A Alameda Nero vai em direï¿½ï¿½o ao portï¿½o sul.
-~
-~
-0 -1 12039
 D2
-Uma rua pavimentada com sï¿½lidos tijolos de barro segue na direï¿½ï¿½o do
-aqueduto e dos edifï¿½cios do governo romano.
+Uma rua pavimentada com sólidos tijolos de barro segue na direção do
+aqueduto e dos edifícios do governo romano.
 ~
 ~
 0 -1 12033
+D1
+A Alameda Nero vai em direção ao portão sul.
+~
+~
+0 -1 12039
+E
+vendedor vendores~
+Aqui existem muitos vendedores na calçada, vendendo frutas e legumes frescos,
+assados caseiros, jóias finas e muitos outros artigos. A maioria dos itens
+são de excelente qualidade.
+~
 E
 aqueduto~
 Para o sudeste, bem distante, se encontra uma grande estrutura de pedra que 
-ï¿½ usado para canalizar ï¿½gua para a cidade.
-~
-E
-vendedor vendores~
-Aqui existem muitos vendedores na calï¿½ada, vendendo frutas e legumes frescos,
-assados caseiros, jï¿½ias finas e muitos outros artigos. A maioria dos itens
-sï¿½o de excelente qualidade.
+é usado para canalizar água para a cidade.
 ~
 S
 #12033
 A Alameda Nero~
-   Vocï¿½ estï¿½ caminhando por uma estrada pavimentada, que corta a cidade de
-Roma de norte a sul.  Hï¿½ muitas pessoas aqui, cortï¿½ses como sempre.
-A maioria deles ou estï¿½ vindo ou indo para a Praï¿½a Central da cidade, que
-fica ao norte.  A Alameda Nero continua para o sul.  Ao leste, hï¿½ uma ï¿½rea
-de observaï¿½ï¿½o voltada para o aqueduto e uma estrada asfaltada segue rumo
+   Você está caminhando por uma estrada pavimentada, que corta a cidade de
+Roma de norte a sul.  Há muitas pessoas aqui, cortêses como sempre.
+A maioria deles ou está vindo ou indo para a Praça Central da cidade, que
+fica ao norte.  A Alameda Nero continua para o sul.  Ao leste, há uma área
+de observação voltada para o aqueduto e uma estrada asfaltada segue rumo
 ao oeste.
 ~
-120 0 0 0 0 1
+120 0 1
 D0
-A Praï¿½a Central se encontra naquela direï¿½ï¿½o.
+A Praça Central se encontra naquela direção.
 ~
 ~
 0 -1 12032
 D1
-O aqueduto e o Monte dos Deuses estï¿½o naquela direï¿½ï¿½o.
+O aqueduto e o Monte dos Deuses estão naquela direção.
 ~
 ~
 0 -1 12040
 D2
-A Alameda Nero segue para o Portï¿½o Sul.
+A Alameda Nero segue para o Portão Sul.
 ~
 ~
 0 -1 12034
 D3
-Uma estrada pavimentada segue rumo oeste atravï¿½s da cidade.
+Uma estrada pavimentada segue rumo oeste através da cidade.
 ~
 ~
 0 -1 12026
 S
 #12034
 Alameda Nero~
-   Esta ï¿½ uma movimentada estrada pavimentada, que vem do norte e atravessa
-a cidade.  As pessoas de Roma sï¿½o muito amigï¿½veis e dizem olï¿½ quando vocï¿½
-passa por elas.  Ao sul, um portï¿½o conduz para fora da cidade e um pequenino
+   Esta é uma movimentada estrada pavimentada, que vem do norte e atravessa
+a cidade.  As pessoas de Roma são muito amigáveis e dizem olá quando você
+passa por elas.  Ao sul, um portão conduz para fora da cidade e um pequenino
 caminho segue rumo a uma propriedade nobre.  Para o leste, bem distante,
 fica uma grande montanha.  Existem rumores de que os Deuses observam e
-protegem o impï¿½rio, lï¿½ de cima.
+protegem o império, lá de cima.
 ~
-120 0 0 0 0 1
+120 0 1
 D0
-A Alameda Nero segue naquela direï¿½ï¿½o.
+A Alameda Nero segue naquela direção.
 ~
 ~
 0 -1 12033
 D2
-Vocï¿½ vï¿½ muitas pessoas entrando e saindo da cidade atravï¿½s de um grande portï¿½o
+Você vê muitas pessoas entrando e saindo da cidade através de um grande portão
 que fica dentro das muralhas protetoras da cidade.
 ~
 ~
@@ -928,13 +934,13 @@ propriedade realmente LUXUOSA.
 0 -1 12027
 S
 #12035
-O Portï¿½o Sul~
-   Este ï¿½ o portal sul da cidade de Roma.  O portï¿½o de bronze ï¿½ fechado e
-trancado.  Olhando atravï¿½s das grades, vocï¿½ vï¿½ uma estrada muito movimentada
-que segue para fora da cidade.  A Alameda Nero comeï¿½a aqui e segue rumo ao
-norte e para o leste, chega-se atï¿½ a loja de um feiticeiro.
+O Portão Sul~
+   Este é o portal sul da cidade de Roma.  O portão de bronze é fechado e
+trancado.  Olhando através das grades, você vê uma estrada muito movimentada
+que segue para fora da cidade.  A Alameda Nero começa aqui e segue rumo ao
+norte e para o leste, chega-se até a loja de um feiticeiro.
 ~
-120 0 0 0 0 1
+120 0 1
 D0
 A Alameda Nero leads towards the center of town.
 ~
@@ -942,203 +948,210 @@ A Alameda Nero leads towards the center of town.
 0 -1 12034
 D1
 Uma pequena loja, de cujo interior, ocasionalmente se pode ouvir grandes
-explosï¿½es, fica naquela direï¿½ï¿½o.  A loja parece estar envolvida em rolos
-de fumaï¿½a rosada.
+explosões, fica naquela direção.  A loja parece estar envolvida em rolos
+de fumaça rosada.
 ~
 ~
 0 -1 12042
 D2
-O portï¿½o parece estar fechado e trancado para intrusos.
+O portão parece estar fechado e trancado para intrusos.
 ~
 portao~
+:n 1 o portão
 2 -1 -1
 E
 portao~
-O portï¿½o parece estar fechado e trancado para intrusos.
+O portão parece estar fechado e trancado para intrusos.
 ~
 S
 #12036
 Aposentos Particulares do Imperador~
-   Vocï¿½ se encontra dentro dos aposentos particulares do Imperador.  O
+   Você se encontra dentro dos aposentos particulares do Imperador.  O
 lugar foi ricamente mobiliado com os mais finos e luxuosos objetos, fruto
-de pilhagens feitas durante as conquistas de terras distantes.  Hï¿½ uma
-escrivaninha pesada e ricamente esculpida, em cujo interior estï¿½o guardados
+de pilhagens feitas durante as conquistas de terras distantes.  Há uma
+escrivaninha pesada e ricamente esculpida, em cujo interior estão guardados
 importantes documentos, decretos e muita papelada ligadas ao funcionamento
-do impï¿½rio.  Numa parede distante, hï¿½ uma estante de mï¿½rmore, repletas com
-as obras de Homero, Platï¿½o, Sï¿½crates e outros homens sï¿½bios.  Mais adiante,
+do império.  Numa parede distante, há uma estante de mármore, repletas com
+as obras de Homero, Platão, Sócrates e outros homens sábios.  Mais adiante,
 percebe-se que o atual Imperador gosta de flores pois notam-se muitos
-espï¿½cimes plantados e outros em vasos, distribuidos pelo quarto.  Hï¿½ uma
-porta francesa que leva ï¿½ sala de espera e ao sul, uma porta de madeira.
+espécimes plantados e outros em vasos, distribuidos pelo quarto.  Há uma
+porta francesa que leva à sala de espera e ao sul, uma porta de madeira.
 ~
-120 8 0 0 0 0
+120 d 0
 D1
-Atravï¿½s da porta, vocï¿½ pode ver uma sala de espera.
+Através da porta, você pode ver uma sala de espera.
 ~
 porta francesa~
+:n 2 a porta francesa
 2 12035 12043
 D2
-A porta do sul leva diretamente para a cï¿½mara do senado.
+A porta do sul leva diretamente para a câmara do senado.
 ~
 porta madeira~
+:n 2 a porta de madeira
 2 12035 12037
+E
+escrivaninha~
+A escrivaninha foi feita com o mais sólido carvalho e com detalhes em ouro.
+Perfeitamente esculpida por hábil artesão, foi feita para pessoas com gosto
+apurado. Muito provavelmente foi trazida da Gália até Roma.
+~
+E
+documentos decretos papelada trabalho papeis~
+Todos os documentos foram escritos em pergaminhos egípcios e foram selados
+com o lacre real.
+~
+E
+estante livros~
+Os livros são muito antigos e contém toda o conhecimento dos homens sábios ao
+longo de todo o império Romano.  Os livros parecem estar colecionando poeira.
+~
 E
 flores plantas flor planta~
 As plantas contribuem para que a atmosfera seja extremamente relaxante.
 ~
-E
-estante livros~
-Os livros sï¿½o muito antigos e contï¿½m toda o conhecimento dos homens sï¿½bios ao
-longo de todo o impï¿½rio Romano.  Os livros parecem estar colecionando poeira.
-~
-E
-documentos decretos papelada trabalho papeis~
-Todos os documentos foram escritos em pergaminhos egï¿½pcios e foram selados
-com o lacre real.
-~
-E
-escrivaninha~
-A escrivaninha foi feita com o mais sï¿½lido carvalho e com detalhes em ouro.
-Perfeitamente esculpida por hï¿½bil artesï¿½o, foi feita para pessoas com gosto
-apurado. Muito provavelmente foi trazida da Gï¿½lia atï¿½ Roma.
-~
 S
 #12037
-A Cï¿½mara do Senado~
-   Esta ï¿½ a sala de trabalho, onde senadores eleitos de todo o impï¿½rio se
+A Câmara do Senado~
+   Esta é a sala de trabalho, onde senadores eleitos de todo o império se
 reunem para auxiliar e aconselhar o Imperador.  O selo oficial do Imperador
-estï¿½ pendurado numa parede mais distante.  Ao norte hï¿½ uma porta de madeira,
+está pendurado numa parede mais distante.  Ao norte há uma porta de madeira,
 ao leste e ao sul uma porta dupla.
 ~
-120 8 0 0 0 0
+120 d 0
 D0
-A porta foi feita com o mais sï¿½lido carvalho.
+A porta foi feita com o mais sólido carvalho.
 ~
 porta madeira~
+:n 2 a porta de madeira
 2 12035 12036
 D1
-A porta para a antecï¿½mara.
+A porta para a antecâmara.
 ~
 porta bronze~
+:n 2 a porta de bronze
 1 12036 12044
 D2
 ~
 porta dupla~
+:n 2 a porta dupla
 1 12037 12038
 S
 #12038
 A Casa dos Comuns~
-   Este ï¿½ o local onde se reunem aqueles que nï¿½o sï¿½o nobres mas fazem parte
-do corpo de assessoramento do Imperador.  Sï¿½o homens comuns, vindos de de
+   Este é o local onde se reunem aqueles que não são nobres mas fazem parte
+do corpo de assessoramento do Imperador.  São homens comuns, vindos de de
 todas as partes de Roma, trabalham aqui para darem uma ajuda adicional aos
-senadores, aconselhando-os em situaï¿½ï¿½es crï¿½ticas, do Estado.  O selo do
-Imperador estï¿½ pintado numa parede distante.  A ï¿½nica saï¿½da ï¿½ ao norte.
+senadores, aconselhando-os em situações críticas, do Estado.  O selo do
+Imperador está pintado numa parede distante.  A única saída é ao norte.
 ~
-120 8 0 0 0 0
+120 d 0
 D0
-Vocï¿½ vï¿½ que a porta-dupla ï¿½ da cï¿½mara do senado.
+Você vê que a porta-dupla é da câmara do senado.
 ~
 porta porta-dupla~
+:n 2 a porta-dupla
 1 12104 12037
 S
 #12039
 Avenida Clay~
-   Vocï¿½ se encontra numa larga e movimentada avenida que vai de leste a oeste
-atravï¿½s do coraï¿½ï¿½o de Roma.  A oeste uma grande multidï¿½o de pessoas andam
+   Você se encontra numa larga e movimentada avenida que vai de leste a oeste
+através do coração de Roma.  A oeste uma grande multidão de pessoas andam
 apressadas e a avenida segue para o leste.  O aqueduto fica exatamente ao
 sul daqui.
 ~
-120 0 0 0 0 1
+120 0 1
 D1
-Avenida Clay continua naquela direï¿½ï¿½o.
+Avenida Clay continua naquela direção.
 ~
 ~
 0 -1 12046
 D2
-Vocï¿½ vï¿½ uma entrada para o aqueduto.
+Você vê uma entrada para o aqueduto.
 ~
 ~
 0 -1 12041
 D3
-Existe uma grande multidï¿½o de pessoas naquela direï¿½ï¿½o.
+Existe uma grande multidão de pessoas naquela direção.
 ~
 ~
 0 -1 12032
 E
 multidao pessoas~
-Dï¿½ a impressï¿½o que a oeste estï¿½ acontecendo algum festival bizarro.
-Milhares de pessoas de todas as classes estï¿½o andando, fazendo compras ou
+Dá a impressão que a oeste está acontecendo algum festival bizarro.
+Milhares de pessoas de todas as classes estão andando, fazendo compras ou
 comendo.
 ~
 S
 #12040
-A Plataforma de Observaï¿½ï¿½o~
-   Vocï¿½ estï¿½ em uma plataforma de onde se pode ver um aqueduto volumoso.
-Hï¿½ um telescï¿½pio montado junto ï¿½ grade que cerca a ï¿½rea e vocï¿½ pode ouvir os
-sons borbulhantes da ï¿½gua encanada da cidade.  Ao longe, vocï¿½ pode ver a
-Montanha dos Deuses.  Hï¿½ uma placa junto ï¿½ grade e uma rampa conduz para o
+A Plataforma de Observação~
+   Você está em uma plataforma de onde se pode ver um aqueduto volumoso.
+Há um telescópio montado junto à grade que cerca a área e você pode ouvir os
+sons borbulhantes da água encanada da cidade.  Ao longe, você pode ver a
+Montanha dos Deuses.  Há uma placa junto à grade e uma rampa conduz para o
 oeste.
 ~
-120 0 0 0 0 1
+120 0 1
 D3
-Vocï¿½ pode ver uma rua movimentada naquela direï¿½ï¿½o.
+Você pode ver uma rua movimentada naquela direção.
 ~
 ~
 0 -1 12033
+E
+telescopio~
+Se estivesse funcionando, o telescópio iria oferecer uma vista espetacular
+do Monte dos Deuses.  Desafortunadamente, parece que vândalos estiveram
+agindo por aqui.
+~
+E
+aqueduto~
+O aqueduto é uma estrutura de pedra maciça que é usado como canal
+distribuidor de água do Monte dos Deuses para Roma.  Durante a estação das
+chuvas, ele fica completamente cheio de água.  Todavida, devido a uma seca
+recente, o nível da água parece estar bem baixo.
+~
 E
 sinal~
 
          *********************************************
          *                                           *
-         *        Plataforma de Observaï¿½ï¿½o do        *
+         *        Plataforma de Observação do        *
          *   Aqueduto Romano e do Monte dos Deuses   *
          *                                           *
-         *   Projetado e construï¿½do pela Companhia   *
+         *   Projetado e construído pela Companhia   *
          *         Mago Froboz de Plataformas        *
          *                                           *
          *********************************************
 
 ~
-E
-aqueduto~
-O aqueduto ï¿½ uma estrutura de pedra maciï¿½a que ï¿½ usado como canal
-distribuidor de ï¿½gua do Monte dos Deuses para Roma.  Durante a estaï¿½ï¿½o das
-chuvas, ele fica completamente cheio de ï¿½gua.  Todavida, devido a uma seca
-recente, o nï¿½vel da ï¿½gua parece estar bem baixo.
-~
-E
-telescopio~
-Se estivesse funcionando, o telescï¿½pio iria oferecer uma vista espetacular
-do Monte dos Deuses.  Desafortunadamente, parece que vï¿½ndalos estiveram
-agindo por aqui.
-~
 S
 #12041
 O Aqueduto~
-   Vocï¿½ estï¿½ numa estrutura de pedra maciï¿½a que foi projetada para servir
-como canal distribuidor da ï¿½gua que abastece a cidade de Roma.  Por causa de
-um recente perï¿½odo de seca, o nï¿½vel da ï¿½gua estï¿½ baixo, permitindo assim que
-se possa atravessï¿½-lo sem usar um barco.  As paredes e o chï¿½o estï¿½o cobertos
+   Você está numa estrutura de pedra maciça que foi projetada para servir
+como canal distribuidor da água que abastece a cidade de Roma.  Por causa de
+um recente período de seca, o nível da água está baixo, permitindo assim que
+se possa atravessá-lo sem usar um barco.  As paredes e o chão estão cobertos
 por algas e limbo, fazendo assim, que sua caminhada se torne perigosa e
-arriscada.  Existem saï¿½das ao norte, sul e leste.
+arriscada.  Existem saídas ao norte, sul e leste.
 ~
-120 12 0 0 0 6
+120 cd 6
 D0
-Vocï¿½ pode ver uma larga rua ao norte.
+Você pode ver uma larga rua ao norte.
 ~
 ~
 0 -1 12039
 D1
-Vocï¿½ vï¿½ mais aqueduto.
+Você vê mais aqueduto.
 ~
 ~
 0 -1 12048
 D2
-Vocï¿½ vï¿½ mais aqueduto.
+Você vê mais aqueduto.
 ~
 ~
 0 -1 12041
 D3
-Vocï¿½ vï¿½ mais aqueduto.
+Você vê mais aqueduto.
 ~
 ~
 0 -1 12054
@@ -1146,57 +1159,58 @@ E
 lodo algas~
 Por causa da grande quantidade de umidade e muitos nutrientes, um lodo verde
 e viscoso cresceu e cobriu tudo com uma espessa camada escorregadia.
-Essa coisa atï¿½ parece que saiu de lugar apenas para gotejar sobre vocï¿½.
+Essa coisa até parece que saiu de lugar apenas para gotejar sobre você.
 ~
 S
 #12042
 A Loja do Mago~
-   Vocï¿½ se encontra na loja do Mago. Ungï¿½entos mï¿½gicos, talismï¿½s e poï¿½ï¿½es
-estï¿½o amontoadas em estantes e atras de um balcï¿½o de vidro.  Hï¿½ uma densa
-nï¿½voa azul-neon que encobre todo o chï¿½o daqui, tornando impossï¿½vel a tarefa
-de se ver abaixo do joelho.  De repente, vocï¿½ comeï¿½a a ouvir alguns
-murmï¿½rios vindos da parte de trï¿½s, muito provavelmente de...
+   Você se encontra na loja do Mago. Ungüentos mágicos, talismãs e poções
+estão amontoadas em estantes e atras de um balcão de vidro.  Há uma densa
+névoa azul-neon que encobre todo o chão daqui, tornando impossível a tarefa
+de se ver abaixo do joelho.  De repente, você começa a ouvir alguns
+murmúrios vindos da parte de trás, muito provavelmente de...
 KKKKKAAAAAABBBBOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOMMMMMMMMMMMMMMMM!!!!!!
-Vocï¿½ fica surdo com o barulho de uma tremenda explosï¿½o e estï¿½ completamente
-tonto com tamanho choque!!  O lojista nï¿½o parece se incomodar nem um pouco
-com normas de seguranï¿½a!  A porta que dï¿½ para o quarto de trï¿½s se abre, e
-um homem mais idoso, usando um chapï¿½u pontudo e com o rosto coberto com
-fuligem, coloca a cabeï¿½a para fora. 'Todo mundo estï¿½ bem??  Desculpem por
-tudo isso.  Eu estava testando um novo feitiï¿½o.  Eu tentarei avisar sobre
-o perigo, da prï¿½xima vez.', diz ele.  E entï¿½o a porta torna a se fechar.
+Você fica surdo com o barulho de uma tremenda explosão e está completamente
+tonto com tamanho choque!!  O lojista não parece se incomodar nem um pouco
+com normas de segurança!  A porta que dá para o quarto de trás se abre, e
+um homem mais idoso, usando um chapéu pontudo e com o rosto coberto com
+fuligem, coloca a cabeça para fora. 'Todo mundo está bem??  Desculpem por
+tudo isso.  Eu estava testando um novo feitiço.  Eu tentarei avisar sobre
+o perigo, da próxima vez.', diz ele.  E então a porta torna a se fechar.
 ~
-120 8 0 0 0 0
+120 d 0
 D1
-A porta foi reforï¿½ada com ferro e parece ser MUITO forte.  Considerando
-o teste que vocï¿½ acabou de presenciar, considere-se feliz por te-la entre
-vocï¿½ e qualquer coisa que esteja acontecendo dentro do recinto atras desta
+A porta foi reforçada com ferro e parece ser MUITO forte.  Considerando
+o teste que você acabou de presenciar, considere-se feliz por te-la entre
+você e qualquer coisa que esteja acontecendo dentro do recinto atras desta
 porta.
 ~
 porta~
+:n 2
 2 12038 12049
 D3
-Vocï¿½ vï¿½ o portï¿½o sul atravï¿½s da porta.
+Você vê o portão sul através da porta.
 ~
 ~
 0 -1 12035
 E
 nevoa neblina~
-Realmente isto ï¿½ algo muito estranho!  Vocï¿½ nunca viu nada com esta cor
-antes.  Suas pernas estï¿½o totalmente encobertas do joelho para baixo.
+Realmente isto é algo muito estranho!  Você nunca viu nada com esta cor
+antes.  Suas pernas estão totalmente encobertas do joelho para baixo.
 ~
 S
 #12043
 A Sala de Espera~
-   Vocï¿½ se encontra dentro de uma sala muito grande com teto muito alto
-e algumas pessoas estï¿½o aguardando para ver o Imperador para tratarem de
-assuntos urgentes.  O mestre programador pede a vocï¿½ para que se sente e
+   Você se encontra dentro de uma sala muito grande com teto muito alto
+e algumas pessoas estão aguardando para ver o Imperador para tratarem de
+assuntos urgentes.  O mestre programador pede a você para que se sente e
 envia um pajem para informar sua Alteza Imperial sobre a sua chegada.
-Ao leste e oeste existem grandes portas e uma saï¿½da para o hall de entrada.
+Ao leste e oeste existem grandes portas e uma saída para o hall de entrada.
 ~
-120 8 0 0 0 0
+120 d 0
 D1
-Hï¿½ uma placa na porta que diz: CORTE MUNICIPAL DE ROMA.  Parece que a porta
-estï¿½ aberta.
+Há uma placa na porta que diz: CORTE MUNICIPAL DE ROMA.  Parece que a porta
+está aberta.
 ~
 ~
 0 -1 12050
@@ -1206,48 +1220,50 @@ O hall de entrada fica exatamente indo para o sul.
 ~
 0 -1 12044
 D3
-A oeste hï¿½ uma grande porta.
+A oeste há uma grande porta.
 ~
 porta~
+:n 2
 2 12035 12036
 S
 #12044
 O Hall de Entrada~
-   Vocï¿½ acaba de entrar no principal prï¿½dio do governo do Impï¿½rio Romano
+   Você acaba de entrar no principal prédio do governo do Império Romano
 e se encontra parado dentro de uma sala compacta, cujo teto foi
-elaboradamente decorado.  Muitas pessoas estï¿½o aqui; sendo que os
-mensageiros e senadores estï¿½o em maior nï¿½mero.  A oeste hï¿½ uma grande e bem
-ornamentada porta, um corredor segue na direï¿½ï¿½o norte e ao sul pode-se ver
-uma escadaria de mï¿½rmore que conduz as pessoas para fora do edifï¿½cio.
+elaboradamente decorado.  Muitas pessoas estão aqui; sendo que os
+mensageiros e senadores estão em maior número.  A oeste há uma grande e bem
+ornamentada porta, um corredor segue na direção norte e ao sul pode-se ver
+uma escadaria de mármore que conduz as pessoas para fora do edifício.
 ~
-120 8 0 0 0 0
+120 d 0
 D0
-Vocï¿½ vï¿½ um corredor que segue na direï¿½ï¿½o norte para algo parecido com uma
+Você vê um corredor que segue na direção norte para algo parecido com uma
 sala de espera.
 ~
 ~
 0 -1 12043
 D3
-A oeste hï¿½ uma grande porta que bloqueia sua passagem.
+A oeste há uma grande porta que bloqueia sua passagem.
 ~
 porta~
+:n 2
 1 12036 12037
 D5
-Vocï¿½ vï¿½ uma escadaria que conduz as pessoas para fora do edifï¿½cio.
+Você vê uma escadaria que conduz as pessoas para fora do edifício.
 ~
 ~
 0 -1 12045
 S
 #12045
-Fora do Edifï¿½cio do Capitï¿½lio~
-   Vocï¿½ se encontra sobre degraus de mï¿½rmore brancos que seguem para cima
-e para dentro do Edifï¿½cio do Capitï¿½lio.  Logo ï¿½ entrada do edifï¿½cio, existem
-vï¿½rias estï¿½tuas, nenhuma com real importï¿½ncia.  A entrada principal do
-edifï¿½cio fica bem no topo da escada.
+Fora do Edifício do Capitólio~
+   Você se encontra sobre degraus de mármore brancos que seguem para cima
+e para dentro do Edifício do Capitólio.  Logo à entrada do edifício, existem
+várias estátuas, nenhuma com real importância.  A entrada principal do
+edifício fica bem no topo da escada.
 ~
-120 0 0 0 0 1
+120 0 1
 D4
-Os degraus levam atï¿½ o Edifï¿½cio do Capitï¿½lio.
+Os degraus levam até o Edifício do Capitólio.
 ~
 ~
 0 -1 12044
@@ -1257,30 +1273,30 @@ Os degraus terminam na Avenida Clay.
 ~
 0 -1 12046
 E
-estatua estatuas~
-Nï¿½o existe nada realmente notï¿½vel sobre elas.
+escadas degraus~
+As escadas são cuidadosamente polidas e feitas do mais puro mármore branco.
 ~
 E
-escadas degraus~
-As escadas sï¿½o cuidadosamente polidas e feitas do mais puro mï¿½rmore branco.
+estatua estatuas~
+Não existe nada realmente notável sobre elas.
 ~
 S
 #12046
 Avenida Clay~
-   Vocï¿½ se encontra numa larga e movimentada avenida que vai de leste a oeste
-atraves do coraï¿½ï¿½o de Roma.  Existem degraus feitos de mï¿½rmore que seguem
-para cima.  Ao sul, bem distante, vocï¿½ pode ver uma grande estrutura feita de
-pedra e uma montanha que estï¿½ parcialmente coberta por nuvens.  Hï¿½ um armazï¿½m
+   Você se encontra numa larga e movimentada avenida que vai de leste a oeste
+atraves do coração de Roma.  Existem degraus feitos de mármore que seguem
+para cima.  Ao sul, bem distante, você pode ver uma grande estrutura feita de
+pedra e uma montanha que está parcialmente coberta por nuvens.  Há um armazém
 geral ao norte.
 ~
-120 0 0 0 0 1
+120 0 1
 D0
-O armazï¿½m geral fica naquela direï¿½ï¿½o.
+O armazém geral fica naquela direção.
 ~
 ~
 0 -1 12063
 D1
-Ali estï¿½ o que parece ser um grande portï¿½o.
+Ali está o que parece ser um grande portão.
 ~
 ~
 0 -1 12051
@@ -1290,46 +1306,46 @@ Avenida Clay continua.
 ~
 0 -1 12039
 D4
-Ali estï¿½o alguns degraus de mï¿½rmore branco que seguem para cima.
+Ali estão alguns degraus de mármore branco que seguem para cima.
 ~
 ~
 0 -1 12045
 E
-montanha~
-Longe, ao sudoeste, vocï¿½ pode ver uma imensa montanha que estï¿½ parcialmente
-encoberta por algumas nuvens.  Existem rumores de que deuses residem ali
-e protegem a cidade.
+pedra estrutura aqueduto~
+Você vê uma maciça estrutura de pedra, construída há alguns séculos atrás,
+que é usada para conduzir água para a cidade.
 ~
 E
-pedra estrutura aqueduto~
-Vocï¿½ vï¿½ uma maciï¿½a estrutura de pedra, construï¿½da hï¿½ alguns sï¿½culos atrï¿½s,
-que ï¿½ usada para conduzir ï¿½gua para a cidade.
+montanha~
+Longe, ao sudoeste, você pode ver uma imensa montanha que está parcialmente
+encoberta por algumas nuvens.  Existem rumores de que deuses residem ali
+e protegem a cidade.
 ~
 S
 #12047
 O Cume do Monte Dos Deuses~
-   Vocï¿½ estï¿½ no topo de uma montanha muito alta e estï¿½ acima das nuvens.
-Os raios de sol estï¿½o brilhando aqui e as nuvens abaixo parecem bolas 
-de algodï¿½o. A trilha pela qual vocï¿½ esteve caminhando ï¿½ ï¿½mida e um suave
+   Você está no topo de uma montanha muito alta e está acima das nuvens.
+Os raios de sol estão brilhando aqui e as nuvens abaixo parecem bolas 
+de algodão. A trilha pela qual você esteve caminhando é úmida e um suave
 aroma de lilases se dispersa pelo ar.
 ~
-120 0 0 0 0 5
+120 0 5
 D5
-Vocï¿½ vï¿½ um caminho que segue montanha abaixo
+Você vê um caminho que segue montanha abaixo
 ~
 ~
 0 -1 12052
 S
 #12048
 O Aqueduto~
-   Vocï¿½ estï¿½ numa estrutura de pedra maciï¿½a que foi projetada para servir
-como canal distribuidor da ï¿½gua que abastece a cidade de Roma.  Por causa de
-um recente perï¿½odo de seca, o nï¿½vel da ï¿½gua estï¿½ baixo, permitindo assim que
-se possa atravessï¿½-lo sem usar um barco.  As paredes e o chï¿½o estï¿½o cobertos
+   Você está numa estrutura de pedra maciça que foi projetada para servir
+como canal distribuidor da água que abastece a cidade de Roma.  Por causa de
+um recente período de seca, o nível da água está baixo, permitindo assim que
+se possa atravessá-lo sem usar um barco.  As paredes e o chão estão cobertos
 por algas e limbo, fazendo assim, que sua caminhada se torne perigosa e
-arriscada.  Existem saï¿½das em todos os quatro pontos cardeais.
+arriscada.  Existem saídas em todos os quatro pontos cardeais.
 ~
-120 8 0 0 0 6
+120 d 6
 D0
 O aqueduto continua....
 ~
@@ -1354,127 +1370,130 @@ E
 lodo algas~
 Por causa da grande quantidade de umidade e muitos nutrientes, um lodo verde
 e viscoso cresceu e cobriu tudo com uma espessa camada escorregadia.  Essa
-coisa atï¿½ parece que saiu de lugar apenas para gotejar sobre vocï¿½.
+coisa até parece que saiu de lugar apenas para gotejar sobre você.
 ~
 S
 #12049
-O Laboratï¿½rio de Froboz~
-   Vocï¿½ se encontra dentro do laboratï¿½rio do Grande Froboz, o mais poderoso
+O Laboratório de Froboz~
+   Você se encontra dentro do laboratório do Grande Froboz, o mais poderoso
 e famoso mago que Roma jamais conheceu.  Bancadas de trabalho se encontram
-alinhadas junto ï¿½s paredes e estï¿½o entulhadas com inï¿½meros tubos de ensaio,
-pipetas, fracos de vidro e de louï¿½a e hï¿½ um odor aqui que poderia melhor ser
-descrito como uma mistura de pneus queimados com meias usadas.  A ï¿½nica
-saï¿½da fica exatamente pela porta que vocï¿½ usou para entrar.  No meio do
-aposento, vocï¿½ vï¿½ uma pilha de cinzas que parecem terem pertencido a um
-corpo, um dia, e Froboz estï¿½ ocupado fazendo ajustes em um novo tipo de
-vareta mï¿½gica...  Provavelmente aquela responsï¿½vel pela explosï¿½o de alguns
-minutos atrï¿½s.  Ele remove a lupa de seus olhos e quando ele se volta,
-exclama: 'Como, em nome de Merlin, vocï¿½ veio parar aqui??!!' pergunta ele.
-'Ah!, nï¿½o se preocupe!  Dï¿½sde que vocï¿½ estï¿½ aqui, vocï¿½ poderï¿½ servir de
+alinhadas junto às paredes e estão entulhadas com inúmeros tubos de ensaio,
+pipetas, fracos de vidro e de louça e há um odor aqui que poderia melhor ser
+descrito como uma mistura de pneus queimados com meias usadas.  A única
+saída fica exatamente pela porta que você usou para entrar.  No meio do
+aposento, você vê uma pilha de cinzas que parecem terem pertencido a um
+corpo, um dia, e Froboz está ocupado fazendo ajustes em um novo tipo de
+vareta mágica...  Provavelmente aquela responsável pela explosão de alguns
+minutos atrás.  Ele remove a lupa de seus olhos e quando ele se volta,
+exclama: 'Como, em nome de Merlin, você veio parar aqui??!!' pergunta ele.
+'Ah!, não se preocupe!  Dêsde que você está aqui, você poderá servir de
 testemunha para o teste final dessa nova magia.  "ectowatt"'.  Com isso, ele
 faz um gesto e um paladino aparece de repente.  Cruzando seus dedos, Froboz
-agita sua vareta na direï¿½ï¿½o, e o que acontece a seguir ï¿½ simplesmente
-incrï¿½vel!!!  O Paladino ï¿½ envolvido com o que parece ser uma pequena e suave
-explosï¿½o termonuclear.  Quando a fumaï¿½a se dispersa, vocï¿½ pode ver que o
+agita sua vareta na direção, e o que acontece a seguir é simplesmente
+incrível!!!  O Paladino é envolvido com o que parece ser uma pequena e suave
+explosão termonuclear.  Quando a fumaça se dispersa, você pode ver que o
 paladino e todos os equipamentos foram reduzidos a um grande monte de cinzas
-flamejantes de carvï¿½o.  Froboz joga sua cabeï¿½a para traz e dï¿½ sua risada
-insana.  'Agora, meu jovem amiguinho, o que eu posso fazer por vocï¿½?', ele
+flamejantes de carvão.  Froboz joga sua cabeça para traz e dá sua risada
+insana.  'Agora, meu jovem amiguinho, o que eu posso fazer por você?', ele
 pergunta.
 ~
-120 8 0 0 0 0
+120 d 0
 D3
-Naquela direï¿½ï¿½o, hï¿½ uma porta reforï¿½ada com aï¿½o.
+Naquela direção, há uma porta reforçada com aço.
 ~
 porta~
+:n 2
 2 12038 12042
 E
-cinzas carvao pilha~
-As cinzas sï¿½o um pï¿½, de um branco acinzentado muito fino, que parece ser as
-ï¿½nicas coisas que sobraram das cobaias de teste de Froboz.
+bancada trabalho tubos pratos provetas~
+Estas são todas ferramentas de grande poder.  Você nem mesmo pode começar a
+entender o que nada disso faz.
 ~
 E
-bancada trabalho tubos pratos provetas~
-Estas sï¿½o todas ferramentas de grande poder.  Vocï¿½ nem mesmo pode comeï¿½ar a
-entender o que nada disso faz.
+cinzas carvao pilha~
+As cinzas são um pó, de um branco acinzentado muito fino, que parece ser as
+únicas coisas que sobraram das cobaias de teste de Froboz.
 ~
 S
 #12050
 O Tribunal~
-   Vocï¿½ se encontra dentro de uma grande sala de tribunal no qual disputas
-civis comuns e assuntos criminais sï¿½o decididos.  Hï¿½ o banco do juiz e uma
-testemunha estï¿½ do lado oposto da sala, e o posto dos jurados fica ao lado.
-As insignias do Imperador sï¿½o permanentemente expostas na parede atrï¿½s do
-posto do juiz, como que lembrando a todos que entram ali, de que estï¿½o
-dentro dos domï¿½nios de seu poder.  Ao leste hï¿½ uma porta, possivelmente
+   Você se encontra dentro de uma grande sala de tribunal no qual disputas
+civis comuns e assuntos criminais são decididos.  Há o banco do juiz e uma
+testemunha está do lado oposto da sala, e o posto dos jurados fica ao lado.
+As insignias do Imperador são permanentemente expostas na parede atrás do
+posto do juiz, como que lembrando a todos que entram ali, de que estão
+dentro dos domínios de seu poder.  Ao leste há uma porta, possivelmente
 conduzindo para os aposentos do juiz, e a sala de espera fica a oeste.
 ~
-120 8 0 0 0 0
+120 d 0
 D1
-A porta pode levar para dentro dos aposentos privativos do juï¿½z.
+A porta pode levar para dentro dos aposentos privativos do juíz.
 ~
 porta~
+:n 2
 1 12039 12055
 D2
-As celas ficam naquela direï¿½ï¿½o.
+As celas ficam naquela direção.
 ~
 ~
 0 -1 12060
 D3
-A sala de espera fica naquela direï¿½ï¿½o.
+A sala de espera fica naquela direção.
 ~
 ~
 0 -1 12043
 E
-insignias~
-As insï¿½gnias do Imperador estï¿½o expostas acima do posto do juï¿½z.
+banco posto caixa juri~
+Você vê grandes estruturas de madeira que foram projetadas para separar o
+juiz, júri, e testemunhas do resto da sala de tribunal.  Eles são feitos de
+carvalho polido e são estritamente funcionais.
 ~
 E
-banco posto caixa juri~
-Vocï¿½ vï¿½ grandes estruturas de madeira que foram projetadas para separar o
-juiz, jï¿½ri, e testemunhas do resto da sala de tribunal.  Eles sï¿½o feitos de
-carvalho polido e sï¿½o estritamente funcionais.
+insignias~
+As insígnias do Imperador estão expostas acima do posto do juíz.
 ~
 S
 #12051
-O Portï¿½o Leste de Roma~
-   Vocï¿½ se encontra do lado de dentro do portï¿½o leste de Roma.  Existem
-duas torres altas construï¿½das junto aos muros da cidade, de cujo interior
-os guardas podem ver todo o lado leste da cidade.  O portï¿½o estï¿½ aberto
+O Portão Leste de Roma~
+   Você se encontra do lado de dentro do portão leste de Roma.  Existem
+duas torres altas construídas junto aos muros da cidade, de cujo interior
+os guardas podem ver todo o lado leste da cidade.  O portão está aberto
 neste instante e ao leste existe uma estrada bem movimentada, feita com
 tijolos de barro, que segue para fora de Roma.  Uma outra estrada, ao oeste,
 se dirige para a cidade.
 ~
-120 0 0 0 0 1
+120 0 1
 D1
 A rua de terra segue para leste.
 ~
 portao~
+:n 1 o portão
 1 -1 12064
 D3
 
-A rua de terra segue na direï¿½ï¿½o da cidade.
+A rua de terra segue na direção da cidade.
 ~
 ~
 0 -1 12046
 E
-portao~
-O portï¿½o foi feito com o mais forte ferro e foi projetado para manter os
-instrusos fora da cidade.
+pinaculos torres~
+Existem duas torres bem altas nas laterais do portão que são permanentemente
+usadas como torres de vigia, pelos guardas da cidade.  Elas são feitas de
+pedra e tem aproximadamente 40 pés de altura.
 ~
 E
-pinaculos torres~
-Existem duas torres bem altas nas laterais do portï¿½o que sï¿½o permanentemente
-usadas como torres de vigia, pelos guardas da cidade.  Elas sï¿½o feitas de
-pedra e tem aproximadamente 40 pï¿½s de altura.
+portao~
+O portão foi feito com o mais forte ferro e foi projetado para manter os
+instrusos fora da cidade.
 ~
 S
 #12052
 Um Caminho para a Montanha~
-   Vocï¿½ se encontra sobre uma trilha que segue para cima e para baixo.
-Choveu recentemente e existem pequenas poï¿½as por todos os lados.  Vocï¿½ estï¿½
-logo abaixo das nuvens e a vista ao seu redor ï¿½ de tirar o fï¿½lego.
+   Você se encontra sobre uma trilha que segue para cima e para baixo.
+Choveu recentemente e existem pequenas poças por todos os lados.  Você está
+logo abaixo das nuvens e a vista ao seu redor é de tirar o fôlego.
 ~
-120 0 0 0 0 5
+120 0 5
 D4
 A trilha segue para cima e indo para dentro das nuvens.
 ~
@@ -1487,19 +1506,19 @@ A trilha segue para baixo.
 0 -1 12056
 E
 trilha~
-A trilha da montanha ï¿½ um pouquinho lamacenta, por causa das chuvas recentes.
+A trilha da montanha é um pouquinho lamacenta, por causa das chuvas recentes.
 ~
 S
 #12054
 O Aqueduto~
-   Vocï¿½ estï¿½ numa estrutura de pedra maciï¿½a que foi projetada para servir
-como canal distribuidor da ï¿½gua que abastece a cidade de Roma.  Por causa de
-um recente perï¿½odo de seca, o nï¿½vel da ï¿½gua estï¿½ baixo, permitindo assim que
-se possa atravessï¿½-lo sem usar um barco.  As paredes e o chï¿½o estï¿½o cobertos
+   Você está numa estrutura de pedra maciça que foi projetada para servir
+como canal distribuidor da água que abastece a cidade de Roma.  Por causa de
+um recente período de seca, o nível da água está baixo, permitindo assim que
+se possa atravessá-lo sem usar um barco.  As paredes e o chão estão cobertos
 por algas e limbo, fazendo assim, que sua caminhada se torne perigosa e
-arriscada.  Existem saï¿½das em todos os quatro pontos cardeais.
+arriscada.  Existem saídas em todos os quatro pontos cardeais.
 ~
-120 8 0 0 0 6
+120 d 6
 D0
 O aqueduto continua....
 ~
@@ -1524,73 +1543,74 @@ E
 lodo algas~
 Por causa da grande quantidade de umidade e muitos nutrientes, um lodo verde
 viscoso cresceu e cobriu tudo com uma espessa camada escorregadia.  Essa
-coisa atï¿½ parece que saiu de lugar apenas para gotejar sobre vocï¿½.
+coisa até parece que saiu de lugar apenas para gotejar sobre você.
 ~
 S
 #12055
-Os Aposentos do Juï¿½z~
-   Vocï¿½ estï¿½ dentro de um pequeno aposento totalmente cheio com processos
-legais.  Hï¿½ uma pequena escrivaninha aqui, literalmente coberta por toneladas
-de documentos.  Tambï¿½m pode-se ver uma pequena janela cuja vista estï¿½ voltada
+Os Aposentos do Juíz~
+   Você está dentro de um pequeno aposento totalmente cheio com processos
+legais.  Há uma pequena escrivaninha aqui, literalmente coberta por toneladas
+de documentos.  Também pode-se ver uma pequena janela cuja vista está voltada
 para a parte norte da cidade.
 ~
-120 8 0 0 0 0
+120 d 0
 D3
-A corte se encontra naquela direï¿½ï¿½o.
+A corte se encontra naquela direção.
 ~
 porta~
+:n 2
 1 12039 12050
 E
-papeis documentos~
-Sobre a escrivaninha se encontram centenas de pï¿½ginas de petiï¿½ï¿½es,
-projetos de lei e ordens judiciais.  Um caso particularmente interessante
-envolve um homem da nobreza, um escravo e um rolo de papel higiï¿½nico.
+processos livros~
+Os livros são muito grandes e versam sobre direito Romano.
 ~
 E
-processos livros~
-Os livros sï¿½o muito grandes e versam sobre direito Romano.
+papeis documentos~
+Sobre a escrivaninha se encontram centenas de páginas de petições,
+projetos de lei e ordens judiciais.  Um caso particularmente interessante
+envolve um homem da nobreza, um escravo e um rolo de papel higiênico.
 ~
 S
 #12056
 Um Caminho na Montanha~
-   Vocï¿½ se encontra em uma pequenina trilha que prossegue atraves de extenso
-arvoredo.  Aqui tudo ï¿½ muito exuberante e verde e parece que choveu
+   Você se encontra em uma pequenina trilha que prossegue atraves de extenso
+arvoredo.  Aqui tudo é muito exuberante e verde e parece que choveu
 recentemente. 'Este poderia ser um lugar ideal para se fazer pic-nics',
-vocï¿½ pensa com os seus botï¿½es.
+você pensa com os seus botões.
 ~
-120 0 0 0 0 5
+120 0 5
 D4
-Vocï¿½ vï¿½ uma pequenina trilha que segue montanha acima.
+Você vê uma pequenina trilha que segue montanha acima.
 ~
 ~
 0 -1 12052
 D5
-Vocï¿½ vï¿½ uma pequenina trilha, que segue para baixo.
+Você vê uma pequenina trilha, que segue para baixo.
 ~
 ~
 0 -1 12059
 E
-trilha caminho~
-O caminho ï¿½ ligeiramente barrento, provavelmente por causa de uma recente
-tempestade.
+arvores vegetacao~
+Toda a vegetação é abundante, verde e totalmente florida.  Você desejaria
+ter mais tempo para parar por aqui e aproveitar o local mais adequadamente.
 ~
 E
-arvores vegetacao~
-Toda a vegetaï¿½ï¿½o ï¿½ abundante, verde e totalmente florida.  Vocï¿½ desejaria
-ter mais tempo para parar por aqui e aproveitar o local mais adequadamente.
+trilha caminho~
+O caminho é ligeiramente barrento, provavelmente por causa de uma recente
+tempestade.
 ~
 S
 #12057
 O Aqueduto~
-   Vocï¿½ estï¿½ numa estrutura de pedra maciï¿½a que foi projetada para servir
-como canal distribuidor da ï¿½gua que abastece a cidade de Roma.  Por causa
-de um recente perï¿½odo de seca, o nï¿½vel da ï¿½gua estï¿½ baixo, permitindo assim
-que se possa atravessï¿½-lo sem usar um barco.  As paredes e o chï¿½o estï¿½o
+   Você está numa estrutura de pedra maciça que foi projetada para servir
+como canal distribuidor da água que abastece a cidade de Roma.  Por causa
+de um recente período de seca, o nível da água está baixo, permitindo assim
+que se possa atravessá-lo sem usar um barco.  As paredes e o chão estão
 cobertos por algas e limbo, fazendo assim, que sua caminhada se torne
 perigosa e arriscada.  Ao sul existe um vale e os outros pontos cardeais
-conduzem vocï¿½ ainda mais profundamente para dentro do aqueduto.
+conduzem você ainda mais profundamente para dentro do aqueduto.
 ~
-120 8 0 0 0 6
+120 d 6
 D0
 O aqueduto continua....
 ~
@@ -1602,7 +1622,7 @@ O aqueduto continua....
 ~
 0 -1 12054
 D2
-Vocï¿½ vï¿½ um vale maravilhoso.
+Você vê um vale maravilhoso.
 ~
 ~
 0 -1 12058
@@ -1615,56 +1635,56 @@ E
 lodo algas~
 Por causa da grande quantidade de umidade e muitos nutrientes, um lodo verde
 viscoso cresceu e cobriu tudo com uma espessa camada escorregadia.  Essa
-coisa atï¿½ parece que saiu de lugar apenas para gotejar sobre vocï¿½.
+coisa até parece que saiu de lugar apenas para gotejar sobre você.
 ~
 S
 #12058
 O Vale dos Deuses~
-   Vocï¿½ se encontra num vale tranquilo, exatamente na base de uma grande
-montanha.  Um silencioso riacho, com muitas ï¿½rvores frutï¿½feras crescendo ï¿½s
-suas margens, vai abrindo caminho, pacificamente, atravï¿½s do vale, e ao
-oeste, se infiltra por dentro de uma imensa estrutura de pedra.  Hï¿½ muito
-pï¿½ssaros ali, e estes cantam suas melodias harmoniosas, e de vez em quando,
-uma suave ondulaï¿½ï¿½o quebra a surperfï¿½cie do riacho.  Vocï¿½ observa um caminho
-que segue atraves das ï¿½rvores seguindo para cima.
+   Você se encontra num vale tranquilo, exatamente na base de uma grande
+montanha.  Um silencioso riacho, com muitas árvores frutíferas crescendo às
+suas margens, vai abrindo caminho, pacificamente, através do vale, e ao
+oeste, se infiltra por dentro de uma imensa estrutura de pedra.  Há muito
+pássaros ali, e estes cantam suas melodias harmoniosas, e de vez em quando,
+uma suave ondulação quebra a surperfície do riacho.  Você observa um caminho
+que segue atraves das árvores seguindo para cima.
 ~
-120 0 0 0 0 4
+120 0 4
 D0
-Uma pequena trilha abre caminho atravï¿½s das ï¿½rvores.
+Uma pequena trilha abre caminho através das árvores.
 ~
 ~
 0 -1 12057
 D4
-Vocï¿½ vï¿½ um caminho que segue montanha acima.
+Você vê um caminho que segue montanha acima.
 ~
 ~
 0 -1 12059
 E
-arvores frutas~
-As ï¿½rvores frutï¿½feras, nutridas pelo solo fï¿½rtil do vale e regadas pela suave
-correnteza do pequeno cï¿½rrego, sï¿½o acariadas pelos raios de sol brilhante,
-e estï¿½o carregadas de fruta.
+fluxo riacho~
+Um fluxo da mais clara e limpa água que você já viu em sua vida, vai abrindo
+caminho através do vale.
 ~
 E
 peixe~
-Uma grande variedade de espï¿½cimes nada calmamente na ï¿½gua pura e cristalina.
+Uma grande variedade de espécimes nada calmamente na água pura e cristalina.
 ~
 E
-fluxo riacho~
-Um fluxo da mais clara e limpa ï¿½gua que vocï¿½ jï¿½ viu em sua vida, vai abrindo
-caminho atravï¿½s do vale.
+arvores frutas~
+As árvores frutíferas, nutridas pelo solo fértil do vale e regadas pela suave
+correnteza do pequeno córrego, são acariadas pelos raios de sol brilhante,
+e estão carregadas de fruta.
 ~
 S
 #12059
 Um Caminho Montanhoso~
-   Vocï¿½ se encontra num caminho que vai subindo na direï¿½ï¿½o de grandes
-ï¿½rvores.  Tudo ï¿½ muito verde e bonito, como se ali houvesse a eterna
-primavera - ï¿½ a Mï¿½e Natureza em seu melhor.  Daqui ï¿½ possï¿½vel descer atï¿½ um
+   Você se encontra num caminho que vai subindo na direção de grandes
+árvores.  Tudo é muito verde e bonito, como se ali houvesse a eterna
+primavera - é a Mãe Natureza em seu melhor.  Daqui é possível descer até um
 tranquilo vale.
 ~
-120 0 0 0 0 5
+120 0 5
 D4
-O caminho segue adiante na direï¿½ï¿½o das montanhas.
+O caminho segue adiante na direção das montanhas.
 ~
 ~
 0 -1 12056
@@ -1675,21 +1695,21 @@ O caminho se abre para um vale tranquilo.
 0 -1 12058
 E
 arvores~
-As ï¿½rvores sï¿½o velhas e altas como torres gigantes subindo na direï¿½ï¿½o do
-cï¿½u.  Se vocï¿½ ficar parado aqui e prestar bem atenï¿½ï¿½o, poderï¿½ ouvir o canto
-dos pï¿½ssaros.
+As árvores são velhas e altas como torres gigantes subindo na direção do
+céu.  Se você ficar parado aqui e prestar bem atenção, poderá ouvir o canto
+dos pássaros.
 ~
 S
 #12060
-As Celas de Detenï¿½ï¿½o~
-   Vocï¿½ se encontra dentro da ï¿½rea de detenï¿½ï¿½o, bem perto do tribunal.
-Aqueles que foram recentemente condenados por crimes graves, sï¿½o trazidos
-atï¿½ aqui, aguardando por suas torturas e execuï¿½ï¿½es.  O tribunal fica ao
-norte e ao leste existe outra saï¿½da.
+As Celas de Detenção~
+   Você se encontra dentro da área de detenção, bem perto do tribunal.
+Aqueles que foram recentemente condenados por crimes graves, são trazidos
+até aqui, aguardando por suas torturas e execuções.  O tribunal fica ao
+norte e ao leste existe outra saída.
 ~
-120 8 0 0 0 0
+120 d 0
 D0
-O tribunal estï¿½ ao norte.
+O tribunal está ao norte.
 ~
 ~
 0 -1 12050
@@ -1699,61 +1719,61 @@ D1
 0 -1 12061
 E
 celas cela~
-Vocï¿½ pode ver imundos compartimentos pequenos e bem fechados por grades.
-Vocï¿½ se arrepia por inteiro e deseja que nunca faï¿½a nada que possa lhe causar
+Você pode ver imundos compartimentos pequenos e bem fechados por grades.
+Você se arrepia por inteiro e deseja que nunca faça nada que possa lhe causar
 a ida para um lugar como este.
 ~
 S
 #12061
-A Cï¿½mara de Tortura~
-   Vocï¿½ se encontra em um aposento muito pequeno, em cujo interior se
+A Câmara de Tortura~
+   Você se encontra em um aposento muito pequeno, em cujo interior se
 encontram muitos objetos especialmente projetados para provocar dor e
-sofrimento.  Alguns desses utensï¿½lios sï¿½o familiares, como por exemplo,
-as algemas e focinheiras de ferro.  Outros, vocï¿½ nunca viu antes, e lhe
-fazem pensar no tipo de mente sï¿½dica e doentia que teria concebido artefatos
-como estes.  A ï¿½nica saï¿½da fica ao Oeste.
+sofrimento.  Alguns desses utensílios são familiares, como por exemplo,
+as algemas e focinheiras de ferro.  Outros, você nunca viu antes, e lhe
+fazem pensar no tipo de mente sádica e doentia que teria concebido artefatos
+como estes.  A única saída fica ao Oeste.
 ~
-120 8 0 0 0 0
+120 d 0
 D3
-As celas estï¿½o naquela direï¿½ï¿½o.
+As celas estão naquela direção.
 ~
 ~
 0 -1 12060
 S
 #12062
 A Padaria de Roma~
-   Vocï¿½ se encontra na padaria de Roma e ao sentir os cheiros deliciosos
-que chegam da cozinha, vocï¿½ sente que sua boca se enche de ï¿½gua.  A ï¿½nica
-saï¿½da fica ao leste.
+   Você se encontra na padaria de Roma e ao sentir os cheiros deliciosos
+que chegam da cozinha, você sente que sua boca se enche de água.  A única
+saída fica ao leste.
 ~
-120 8 0 0 0 0
+120 d 0
 D1
 ~
 ~
 0 -1 12030
 S
 #12063
-O Armazï¿½m~
-   Vocï¿½ se encontra dentro do ï¿½nico armazï¿½m de Roma.  As paredes e
-prateleiras estï¿½o cobertas com os mais variados tipos de mercadorias
-utilizadas pelos cidadï¿½os romanos e visitantes aventureiros.  A Rua de Terra
+O Armazém~
+   Você se encontra dentro do único armazém de Roma.  As paredes e
+prateleiras estão cobertas com os mais variados tipos de mercadorias
+utilizadas pelos cidadãos romanos e visitantes aventureiros.  A Rua de Terra
 segue para o sul.
 ~
-120 8 0 0 0 0
+120 d 0
 D2
-A Rua de Terra segue naquela direï¿½ï¿½o.
+A Rua de Terra segue naquela direção.
 ~
 ~
 0 -1 12046
 S
 #12064
 Antes de Roma~
-   Vocï¿½ viaja numa estrada Leste-Oeste, larga o suficiente para que 30
-homens marchem lado a lado.  O chï¿½o estï¿½ duro, compactado, por causa do uso
-constante.  A Oeste estï¿½o os Portï¿½es de Roma, que lhe convidam a entrar e
-participar de toda a glï¿½ria e esplendor de Roma.
+   Você viaja numa estrada Leste-Oeste, larga o suficiente para que 30
+homens marchem lado a lado.  O chão está duro, compactado, por causa do uso
+constante.  A Oeste estão os Portões de Roma, que lhe convidam a entrar e
+participar de toda a glória e esplendor de Roma.
 ~
-120 8 0 0 0 1
+120 d 1
 D1
 ~
 ~
@@ -1761,16 +1781,17 @@ D1
 D3
 ~
 portao~
+:n 1 o portão
 1 -1 12051
 S
 #12065
 Rua de Terra~
-   Vocï¿½ viaja numa estrada Leste-Oeste, larga o suficiente para que 30
-homens marchem lado a lado. O chï¿½o estï¿½ duro, compactado, por causa do uso
+   Você viaja numa estrada Leste-Oeste, larga o suficiente para que 30
+homens marchem lado a lado. O chão está duro, compactado, por causa do uso
 constante.  Para o Oeste, seus olhos capturam o esplendor de uma poderosa
 cidade.
 ~
-120 8 0 0 0 1
+120 d 1
 D1
 ~
 ~
@@ -1782,10 +1803,10 @@ D3
 S
 #12066
 Rua de Terra~
-   Vocï¿½ viaja numa estrada Leste-Oeste, larga o suficiente para que 30
+   Você viaja numa estrada Leste-Oeste, larga o suficiente para que 30
 homens marchem lado a lado.
 ~
-120 8 0 0 0 1
+120 d 1
 D1
 ~
 ~
@@ -1798,19 +1819,19 @@ S
 #12067
 O Final da Rua de Terra~
    A imponente rua de terra vai diminuindo, mas ainda continua sendo muito
-utilizada pelos viajantes daqui.  Vocï¿½ sente que uma onda de energia
+utilizada pelos viajantes daqui.  Você sente que uma onda de energia
 percorre todo o seu corpo, quando seus olhos se voltam para o oeste, e
 percorrem todas as terras que transformaram Roma neste poderoso e
-inigualï¿½vel impï¿½rio.
+inigualável império.
 ~
-120 8 0 0 0 1
+120 d 1
 D1
 Ao leste, uma trilha coberta por sujeira segue rumo ao deserto.
 ~
 ~
 0 -1 12068
 D3
-Uma imponente estrada de terra segue nesta direï¿½ï¿½o.
+Uma imponente estrada de terra segue nesta direção.
 ~
 ~
 0 -1 12066
@@ -1819,61 +1840,62 @@ S
 Uma Pequena Trilha Suja~
    Esta pequena trilha cheia de sujeira parece ser uma esquina entre uma
 grande e imponente estrada de terra que fica perto, a oeste e uma grande
-extensï¿½o de areia que se abre ao leste.  A estrada de terra parece que segue
-em direï¿½ï¿½o ao pï¿½ da cadeia de montanhas geladas do oeste.  Talvez exista uma
-cidade ou um assentamento naquela direï¿½ï¿½o.  Ao olhar para o leste, vocï¿½ nï¿½o
-vï¿½ absolutamente nada neste infinito horizonte de areia, que preenche seu
-campo de visï¿½o, e que parece aumentar infinitamente.
+extensão de areia que se abre ao leste.  A estrada de terra parece que segue
+em direção ao pé da cadeia de montanhas geladas do oeste.  Talvez exista uma
+cidade ou um assentamento naquela direção.  Ao olhar para o leste, você não
+vê absolutamente nada neste infinito horizonte de areia, que preenche seu
+campo de visão, e que parece aumentar infinitamente.
 ~
-120 4 0 0 0 1
+120 c 1
 D1
-A vasta extensï¿½o do Grande Deserto Oriental se descortina diante de seus
+A vasta extensão do Grande Deserto Oriental se descortina diante de seus
 olhos.
 ~
 ~
 0 -1 5028
 D3
-A uma curta distï¿½ncia, comeï¿½a uma grande estrada de terra.
+A uma curta distância, começa uma grande estrada de terra.
 ~
 ~
 0 -1 12067
 S
 #12069
-Fora do Grande Portï¿½o Norte~
-   Vocï¿½ estï¿½ diante do grande portï¿½o norte da cidade de Roma.  Um barulho
-distante faz lembrar as batalhas travadas no Coliseu e o a agitaï¿½ï¿½o da
+Fora do Grande Portão Norte~
+   Você está diante do grande portão norte da cidade de Roma.  Um barulho
+distante faz lembrar as batalhas travadas no Coliseu e o a agitação da
 Alameda Nero ainda pode ser ouvida com clareza.  Para o norte segue uma
-pequena trilha e ao sul o portï¿½o o convida para entrar.
+pequena trilha e ao sul o portão o convida para entrar.
 ~
-120 4 0 0 0 1
+120 c 1
 D0
-Vocï¿½ vï¿½ uma pequena trilha.
+Você vê uma pequena trilha.
 ~
 ~
 0 -1 12070
 D2
-Vocï¿½ vï¿½ um enorme portï¿½o
+Você vê um enorme portão
 ~
-portï¿½o~
+portão~
+:n 1 o Grande Portão Norte
 1 -1 12029
 S
 #12070
 Uma Pequena Trilha~
-   Vocï¿½ segue com facilidade por esta trilha mantendo sempre em sua mente o
+   Você segue com facilidade por esta trilha mantendo sempre em sua mente o
 caminho de volta para a cidade de Roma que fica imediatamente para o sul.
-Para o leste vocï¿½ vï¿½ uma espï¿½cie de entrada que vocï¿½ nï¿½o pode dizer com
+Para o leste você vê uma espécie de entrada que você não pode dizer com
 certeza de que se trata.
 ~
-120 4 0 0 0 2
+120 c 2
 D1
-Uma espï¿½cie de entrada pode ser vista com dificuldade.
+Uma espécie de entrada pode ser vista com dificuldade.
 ~
 ~
 0 -1 19800
 D2
-Vocï¿½ pode ver o portï¿½o norte de Roma.
+Você pode ver o portão norte de Roma.
 ~
 ~
 0 -1 12069
 S
-$~
+$

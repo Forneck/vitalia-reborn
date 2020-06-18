@@ -1,12 +1,12 @@
 #700
 A Colina Perto da Floresta Sombria~
-   Vocï¿½ estï¿½ em uma colina que tem uma vista para uma densa floresta de 
+   Você está em uma colina que tem uma vista para uma densa floresta de 
 carvalhos.   O desprezo sopra em seu rosto, na forma de uma brisa fria.   No 
-meio da floresta, despontando em meio as ï¿½rvores estï¿½ o pinï¿½culo da Fortaleza.
-O sï¿½mbolo da roda triangular estï¿½ em um dos lados da torre, para ser visto por 
+meio da floresta, despontando em meio as árvores está o pináculo da Fortaleza.
+O símbolo da roda triangular está em um dos lados da torre, para ser visto por 
 todos.  Um caminho segue a leste para dentro da floresta.
 ~
-7 4 0 0 0 4
+7 c 4
 D1
 ~
 ~
@@ -18,12 +18,12 @@ D2
 S
 #701
 Do Lado de Fora da Floresta Sombria~
-   Um vento congelante vem de dentro da floresta.   Vocï¿½ estï¿½ perto das ï¿½rvores
-externas que revestem duas trilhas que levam ao coraï¿½ï¿½o da floresta.   Sua   
-imaginaï¿½ï¿½o pode apenas esboï¿½ar os terrores malditos que o aguardam.
-Lembre-se: Vocï¿½ foi avisado!
+   Um vento congelante vem de dentro da floresta.   Você está perto das árvores
+externas que revestem duas trilhas que levam ao coração da floresta.   Sua   
+imaginação pode apenas esboçar os terrores malditos que o aguardam.
+Lembre-se: Você foi avisado!
 ~
-7 0 0 0 0 4
+7 0 4
 D1
 ~
 ~
@@ -36,13 +36,13 @@ S
 #702
 Os Arredores da Floresta Sombria~
    Um pouco de luz penetra na folhagem da floresta.   Quase nenhuma planta 
-ocupa o chï¿½o duro e rochoso.   Continuando adiante nesta floresta condenada, 
-vocï¿½ logo estarï¿½ em total escuridï¿½o.   De vez em quando uma assombrosa risada 
-diabï¿½lica chega a seus ouvidos.   Isto faz calafrios percorrerem sua espinha. 
-Vocï¿½ pode ver uma trilha ao sul e ao leste.   Ao norte hï¿½ uma cabana.
-Ou vocï¿½ pode fugir daqui...
+ocupa o chão duro e rochoso.   Continuando adiante nesta floresta condenada, 
+você logo estará em total escuridão.   De vez em quando uma assombrosa risada 
+diabólica chega a seus ouvidos.   Isto faz calafrios percorrerem sua espinha. 
+Você pode ver uma trilha ao sul e ao leste.   Ao norte há uma cabana.
+Ou você pode fugir daqui...
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -62,13 +62,13 @@ D3
 S
 #703
 Uma Cabana Deserta~
-   Vocï¿½ estï¿½ em uma cabana na floresta.   O tempo nï¿½o foi gentil com esta 
-estrutura.   Os troncos que compï¿½em as paredes estï¿½o comeï¿½ando a apodrecer e 
-pequenas aberturas nas paredes podem ser vistas.   O chï¿½o ï¿½ de terra ï¿½spera. 
-Quem quer que seja que tenha morado aqui, parece ter abandonado hï¿½ muito tempo.
-Mas se vocï¿½ se aproximar, pode achar algo ï¿½til. 
+   Você está em uma cabana na floresta.   O tempo não foi gentil com esta 
+estrutura.   Os troncos que compõem as paredes estão começando a apodrecer e 
+pequenas aberturas nas paredes podem ser vistas.   O chão é de terra áspera. 
+Quem quer que seja que tenha morado aqui, parece ter abandonado há muito tempo.
+Mas se você se aproximar, pode achar algo útil. 
 ~
-7 0 0 0 0 0
+7 0 0
 D2
 ~
 ~
@@ -76,13 +76,13 @@ D2
 S
 #704
 A Floresta Sombria~
-   A trilha seguida por vocï¿½ o levou a lugar algum.   Freqï¿½entemente vocï¿½ pensa
- ver algum movimento atrï¿½s das ï¿½rvores com o canto de seu olho.   Enquanto vocï¿½
-olha ao redor, uma risada malï¿½fica chega a seus ouvidos, ecoando pelas ï¿½rvores,
-simplesmente se recusando a morrer. Vocï¿½ sente uma gota de suor escorrer pela 
+   A trilha seguida por você o levou a lugar algum.   Freqüentemente você pensa
+ ver algum movimento atrás das árvores com o canto de seu olho.   Enquanto você
+olha ao redor, uma risada maléfica chega a seus ouvidos, ecoando pelas árvores,
+simplesmente se recusando a morrer. Você sente uma gota de suor escorrer pela 
 sua nuca.
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -94,9 +94,9 @@ D2
 S
 #705
 A Floresta Sombria~
-   Vocï¿½ estï¿½ na Floresta Sombria.   Tenha um Bom Dia.
+   Você está na Floresta Sombria.   Tenha um Bom Dia.
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -112,11 +112,11 @@ D2
 S
 #706
 Desesperadamente Perdido~
-   Vocï¿½ saiu da trilha que seguia e agora esta DESESPERADAMENTE PERDIDO!
+   Você saiu da trilha que seguia e agora esta DESESPERADAMENTE PERDIDO!
 
-Nï¿½o fique com medo.  EXISTE uma saï¿½da mas, serï¿½ que vocï¿½ consegue encontrar?
+Não fique com medo.  EXISTE uma saída mas, será que você consegue encontrar?
 ~
-7 4 0 0 0 0
+7 4 0
 D2
 ~
 ~
@@ -124,13 +124,13 @@ D2
 S
 #707
 O Grande Carvalho~
-   Esta ï¿½ a maior ï¿½rvore da floresta.   Ela ï¿½ bem alta.   O limbo ï¿½spero se 
-pendura dos galhos como ï¿½vidas mï¿½os prontas para lhe estrangular atï¿½ que o 
-sangue comece a sair de sua boca.   Nas raï¿½zes jaz um herï¿½i.   Seu corpo estï¿½
-em decomposiï¿½ï¿½o mas a causa de sua morte ï¿½ bastante ï¿½bvia.   O tolo herï¿½i fora
+   Esta é a maior árvore da floresta.   Ela é bem alta.   O limbo áspero se 
+pendura dos galhos como ávidas mãos prontas para lhe estrangular até que o 
+sangue comece a sair de sua boca.   Nas raízes jaz um herói.   Seu corpo está
+em decomposição mas a causa de sua morte é bastante óbvia.   O tolo herói fora
 decapitado.
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -146,11 +146,11 @@ D3
 S
 #708
 O Denso Bosque~
-   As ï¿½rvores se tornam mais largas pela frente.   Vocï¿½ tem que se espremer 
-para seguir adiante.   Freqï¿½entemente as ï¿½rvores carregam antigas manchas de 
+   As árvores se tornam mais largas pela frente.   Você tem que se espremer 
+para seguir adiante.   Freqüentemente as árvores carregam antigas manchas de 
 sangue em seus troncos. 
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -165,13 +165,13 @@ D3
 0 -1 706
 S
 #709
-Caminho Sem Saï¿½da~
-   Vocï¿½ descobriu uma porï¿½ï¿½o da parede exterior da Fortaleza de Ivian.  ï¿½rvores
-ao seu redor o impedem de explorar a parede, que ï¿½ uma imponente massa de 
-granito frio, negro e liso.   Assim que vocï¿½ se aproxima desta vil Fortaleza, 
-sua alma sabe que este nï¿½o ï¿½ um bom lugar para ser pego.
+Caminho Sem Saída~
+   Você descobriu uma porção da parede exterior da Fortaleza de Ivian.  Árvores
+ao seu redor o impedem de explorar a parede, que é uma imponente massa de 
+granito frio, negro e liso.   Assim que você se aproxima desta vil Fortaleza, 
+sua alma sabe que este não é um bom lugar para ser pego.
 ~
-7 0 0 0 0 3
+7 0 3
 D2
 ~
 ~
@@ -179,13 +179,13 @@ D2
 S
 #710
 A Ponte~
-   Esta raquï¿½tica ponte coberta, cobre um bom pedaï¿½o do chï¿½o da floresta.  
+   Esta raquítica ponte coberta, cobre um bom pedaço do chão da floresta.  
 Iluminada apenas por duas lanternas enferrujadas que saem de cavidades na 
-parede.   Este lugar parece fornecer proteï¿½ï¿½o dos frios ventos comuns da
-Floresta Sombria.   Vocï¿½ nï¿½o sabe por que mas pelo menos aqui vocï¿½ pode 
-encontrar alguma proteï¿½ï¿½o dos males da floresta.
+parede.   Este lugar parece fornecer proteção dos frios ventos comuns da
+Floresta Sombria.   Você não sabe por que mas pelo menos aqui você pode 
+encontrar alguma proteção dos males da floresta.
 ~
-7 68 0 0 0 0
+7 68 0
 D1
 ~
 ~
@@ -201,13 +201,13 @@ D5
 S
 #711
 Debaixo da Ponte~
-   Vocï¿½ estï¿½ em um desfiladeiro rochoso debaixo da ponte.   Vegetaï¿½ï¿½es esparsas
+   Você está em um desfiladeiro rochoso debaixo da ponte.   Vegetações esparsas
 crescem pelo solo intemperado.   A natureza criou declives que fazem da 
-passagem, difï¿½cil.   Vocï¿½ pode imaginar que este lugar rapidamente se alaga 
-com uma chuva mais forte.   Vocï¿½ espera que isto nï¿½o aconteï¿½a enquanto vocï¿½ 
+passagem, difícil.   Você pode imaginar que este lugar rapidamente se alaga 
+com uma chuva mais forte.   Você espera que isto não aconteça enquanto você 
 estiver aqui.
 ~
-7 0 0 0 0 5
+7 0 5
 D2
 ~
 ~
@@ -219,10 +219,10 @@ D4
 S
 #712
 Mais Fundo na Floresta Sombria~
-   Quanto mais fundo vocï¿½ alcanï¿½a, mais vocï¿½ duvida da sanidade de sua escolha.
-Mas vocï¿½ sabe que hï¿½ grandes riscos em voltar. 
+   Quanto mais fundo você alcança, mais você duvida da sanidade de sua escolha.
+Mas você sabe que há grandes riscos em voltar. 
 ~
-7 1 0 0 0 3
+7 1 3
 D1
 ~
 ~
@@ -237,12 +237,12 @@ D3
 0 -1 707
 S
 #713
-O Palï¿½cio das Ilusï¿½es~
-   O que este lugar estï¿½ fazendo aqui? Iluminadas por algumas tochas, pessoas 
-danï¿½am pela noite ao som de uma mï¿½sica (??), ensurdecedora e diabï¿½lica que 
-parece vir de lugar algum.   Vocï¿½ comeï¿½a a duvidar de sua sanidade...
+O Palácio das Ilusões~
+   O que este lugar está fazendo aqui? Iluminadas por algumas tochas, pessoas 
+dançam pela noite ao som de uma música (??), ensurdecedora e diabólica que 
+parece vir de lugar algum.   Você começa a duvidar de sua sanidade...
 ~
-7 44 0 0 0 0
+7 44 0
 D0
 ~
 ~
@@ -253,13 +253,13 @@ D2
 0 -1 714
 S
 #714
-A Pista de Danï¿½a~
-   Vocï¿½ agora estï¿½ na pista de danï¿½a deste palï¿½cio infernal.   A luminosidade
-mal chega aqui, vocï¿½ estï¿½ cercado de corpos, aparentemente sem vida, que se 
-movimentam freneticamente ao som de assustadores ruï¿½dos que comeï¿½am a ferir 
+A Pista de Dança~
+   Você agora está na pista de dança deste palácio infernal.   A luminosidade
+mal chega aqui, você está cercado de corpos, aparentemente sem vida, que se 
+movimentam freneticamente ao som de assustadores ruídos que começam a ferir 
 seus ouvidos. 
 ~
-7 40 0 0 0 0
+7 40 0
 D0
 ~
 ~
@@ -274,14 +274,14 @@ D3
 0 -1 744
 S
 #715
-O Sombrio Coraï¿½ï¿½o da Floresta~
-   No coraï¿½ï¿½o da floresta, as coisas estï¿½o estranhamente calmas.   Mas a 
-calmaria sempre precede a tormenta.   Na terra fofa, vocï¿½ vï¿½ claramente pegadas
-de um quadrï¿½pede: um cavalo.   Ao redor das pegadas, o solo estï¿½ chamuscado.
-Olhando em volta hï¿½ alguns sinais de luta.   Alguï¿½m apostou tudo contra o que 
+O Sombrio Coração da Floresta~
+   No coração da floresta, as coisas estão estranhamente calmas.   Mas a 
+calmaria sempre precede a tormenta.   Na terra fofa, você vê claramente pegadas
+de um quadrúpede: um cavalo.   Ao redor das pegadas, o solo está chamuscado.
+Olhando em volta há alguns sinais de luta.   Alguém apostou tudo contra o que 
 quer que seja que deixou as pegadas.   E perdeu. 
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -297,12 +297,12 @@ D3
 S
 #716
 Se Aproximando da Clareira~
-   As ï¿½rvores abrem uma clareira aqui.   Hï¿½ um enervante silï¿½ncio ao redor. 
-Vocï¿½ olha para a clareira a medida que se aproxima e a reconhece pelo que ela ï¿½.
+   As árvores abrem uma clareira aqui.   Há um enervante silêncio ao redor. 
+Você olha para a clareira a medida que se aproxima e a reconhece pelo que ela é.
 Um matadouro.   Suas botas esmagam esqueletos decapitados de algumas criaturas
 infelizes. 
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -317,14 +317,14 @@ D3
 0 -1 715
 S
 #717
-A Clareira Gramï¿½nea~
-   Vocï¿½ estï¿½ em uma clareira. A grama alcanï¿½a seu joelho, embora ela tenha sido
+A Clareira Gramínea~
+   Você está em uma clareira. A grama alcança seu joelho, embora ela tenha sido
 pisoteada em alguns lugares onde alguma criatura infeliz foi perseguida por 
-algo realmente mal.   O vento chicoteia o mato, formando ondas atravï¿½s da grama.
-Lï¿½ fora o vento ruge e pode-se ouvir um gemido insano, maldito, que faz os pï¿½los de
+algo realmente mal.   O vento chicoteia o mato, formando ondas através da grama.
+Lá fora o vento ruge e pode-se ouvir um gemido insano, maldito, que faz os pêlos de
 seu corpo se arrepiarem.
 ~
-7 0 0 0 0 0
+7 0 0
 D0
 ~
 ~
@@ -344,26 +344,26 @@ D3
 S
 #718
 Hora da Festa!~
-   Neste pequeno alongamento da pista de danï¿½a, algumas pessoas (se ï¿½ que se
-pode chamar estes corpos de pessoas) se aglomeram.   Ao se aproximar, vocï¿½ 
+   Neste pequeno alongamento da pista de dança, algumas pessoas (se é que se
+pode chamar estes corpos de pessoas) se aglomeram.   Ao se aproximar, você 
 pode notar um corpo ainda quente, de um homem em sua armadura de prata, sendo 
-brutalmente esquartejado. ï¿½ hora da Festa!
+brutalmente esquartejado. É hora da Festa!
 ~
-7 32 0 0 0 0
+7 32 0
 D0
 ~
 ~
 0 -1 714
 S
 #719
-Um Pequeno Fluxo de ï¿½gua~
-   Vocï¿½ caminha atravï¿½s de um pequeno fluxo de ï¿½gua, que silenciosamente varre
-as folhas mortas e outros pequenos escombros.   ï¿½ uma pena que ela nï¿½o possa 
-varrer seu medo e tremor.   Vocï¿½ pode seguir ao leste daqui ou fugir para o 
-oeste, para a seguranï¿½a da ponte.   Outra opï¿½ï¿½o ï¿½ seguir este pequeno rio atï¿½
+Um Pequeno Fluxo de Água~
+   Você caminha através de um pequeno fluxo de água, que silenciosamente varre
+as folhas mortas e outros pequenos escombros.   É uma pena que ela não possa 
+varrer seu medo e tremor.   Você pode seguir ao leste daqui ou fugir para o 
+oeste, para a segurança da ponte.   Outra opção é seguir este pequeno rio até
 o fim.
 ~
-7 0 0 0 0 3
+7 0 3
 D1
 ~
 ~
@@ -379,9 +379,9 @@ D3
 S
 #720
 Desesperadamente Perdido~
-   Vocï¿½ estï¿½ DESESPERADAMENTE PERDIDO!
+   Você está DESESPERADAMENTE PERDIDO!
 ~
-7 1 0 0 0 3
+7 1 3
 D1
 ~
 ~
@@ -393,9 +393,9 @@ D2
 S
 #721
 Desesperadamente Perdido~
-   Vocï¿½ estï¿½ DESESPERADAMENTE PERDIDO!
+   Você está DESESPERADAMENTE PERDIDO!
 ~
-7 1 0 0 0 3
+7 1 3
 D2
 ~
 ~
@@ -407,9 +407,9 @@ D3
 S
 #722
 Desesperadamente Perdido~
-   Vocï¿½ estï¿½ DESESPERADAMENTE PERDIDO!
+   Você está DESESPERADAMENTE PERDIDO!
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -421,9 +421,9 @@ D3
 S
 #723
 Desesperadamente Perdido~
-   Vocï¿½ estï¿½ DESESPERADAMENTE PERDIDO!
+   Você está DESESPERADAMENTE PERDIDO!
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -435,9 +435,9 @@ D1
 S
 #724
 Desesperadamente Perdido~
-   Vocï¿½ estï¿½ DESESPERADAMENTE PERDIDO!
+   Você está DESESPERADAMENTE PERDIDO!
 ~
-7 1 0 0 0 3
+7 1 3
 D1
 ~
 ~
@@ -449,9 +449,9 @@ D2
 S
 #725
 Desesperadamente Perdido~
-   Vocï¿½ estï¿½ DESESPERADAMENTE PERDIDO!
+   Você está DESESPERADAMENTE PERDIDO!
 ~
-7 1 0 0 0 3
+7 1 3
 D2
 ~
 ~
@@ -459,15 +459,15 @@ D2
 S
 #726
 Na Sombra da Fortaleza~
-   Vocï¿½ protege seu pescoï¿½o do vento frio que sopra aqui.   ï¿½ quando vocï¿½ nota,
-nï¿½o mais de 200 jardas a frente, a infernal estrutura que ï¿½ a Fortaleza.  Vocï¿½
-sussurra uma oraï¿½ï¿½o de agradecimento por existirem ainda algumas ï¿½rvores para 
-servirem de esconderijo.   ï¿½ melhor que os residentes do lugar nï¿½o saibam da 
-sua presenï¿½a.   Uma forï¿½a incontrolï¿½vel o obriga a fitar a Fortaleza e vocï¿½ 
-tenta resistir...ï¿½ inï¿½til.   A oeste estï¿½ um pequeno cï¿½rrego.   Ao norte fica a 
-clareira, ao sul hï¿½ uma pequena trilha que leva a um pequeno abrigo em ruï¿½nas.
+   Você protege seu pescoço do vento frio que sopra aqui.   É quando você nota,
+não mais de 200 jardas a frente, a infernal estrutura que é a Fortaleza.  Você
+sussurra uma oração de agradecimento por existirem ainda algumas árvores para 
+servirem de esconderijo.   É melhor que os residentes do lugar não saibam da 
+sua presença.   Uma força incontrolável o obriga a fitar a Fortaleza e você 
+tenta resistir...é inútil.   A oeste está um pequeno córrego.   Ao norte fica a 
+clareira, ao sul há uma pequena trilha que leva a um pequeno abrigo em ruínas.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -487,12 +487,12 @@ D3
 S
 #727
 Contra a Parede~
-   Vocï¿½ encontrou uma parte da parede exterior. As ï¿½rvores foram podadas, 
-fazendo um caminho ao redor do lugar que pertence ï¿½ Senhora do Vazio interior,
-ao sul vocï¿½ vï¿½ o que parecem ser os portï¿½es principais.   Ao norte a parede 
-desaparece na escuridï¿½o da Floresta Sombria.
+   Você encontrou uma parte da parede exterior. As árvores foram podadas, 
+fazendo um caminho ao redor do lugar que pertence à Senhora do Vazio interior,
+ao sul você vê o que parecem ser os portões principais.   Ao norte a parede 
+desaparece na escuridão da Floresta Sombria.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -508,12 +508,12 @@ D3
 S
 #728
 Contra a Parede~
-   Vocï¿½ encontrou uma parte da parede exterior.  As ï¿½rvores foram podadas,
-fazendo um caminho ao redor do lugar que pertence ï¿½ Senhora do Vazio
-interior, ao sul vocï¿½ vï¿½ o que parecem ser os portï¿½es principais.  Ao norte
-a parede desaparece na escuridï¿½o da Floresta Sombria.
+   Você encontrou uma parte da parede exterior.  As árvores foram podadas,
+fazendo um caminho ao redor do lugar que pertence à Senhora do Vazio
+interior, ao sul você vê o que parecem ser os portões principais.  Ao norte
+a parede desaparece na escuridão da Floresta Sombria.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -528,13 +528,13 @@ D3
 0 -1 706
 S
 #729
-O Portï¿½o Frontal~
-   Vocï¿½ alcanï¿½ou o Portï¿½o da Fortaleza de Ivian.  As altas e negras paredes de
-granito sï¿½o bastante lisas.  O Portï¿½o ï¿½ enorme, feito de ferro, brazonado com
-o sï¿½mbolo da roda triangular.  Apenas as mais bravas almas considerariam
-entrar neste lugar terrï¿½vel.  Hï¿½ um portï¿½o ao leste.
+O Portão Frontal~
+   Você alcançou o Portão da Fortaleza de Ivian.  As altas e negras paredes de
+granito são bastante lisas.  O Portão é enorme, feito de ferro, brazonado com
+o símbolo da roda triangular.  Apenas as mais bravas almas considerariam
+entrar neste lugar terrível.  Há um portão ao leste.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -542,7 +542,7 @@ D0
 D1
 A volumosa porta impede sua passagem.
 ~
-portï¿½o porta~
+portão porta~
 1 0 750
 D3
 ~
@@ -551,12 +551,12 @@ D3
 S
 #730
 Contra a Parede~
-   Vocï¿½ encontrou uma parte da parede exterior.  As ï¿½rvores foram podadas,
-fazendo um caminho ao redor do lugar que pertence ï¿½ Senhora do Vazio interior,
-ao sul vocï¿½ vï¿½ o que parecem ser os portï¿½es principais.  Ao norte a parede
-desaparece na escuridï¿½o da Floresta Sombria.
+   Você encontrou uma parte da parede exterior.  As árvores foram podadas,
+fazendo um caminho ao redor do lugar que pertence à Senhora do Vazio interior,
+ao sul você vê o que parecem ser os portões principais.  Ao norte a parede
+desaparece na escuridão da Floresta Sombria.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -571,13 +571,13 @@ D3
 0 -1 742
 S
 #731
-Vocï¿½ Tem Certeza de que Seja uma Boa Idï¿½ia?~
-   Vocï¿½ encontrou uma parte da parede exterior.  As ï¿½rvores foram podadas,
-fazendo um caminho ao redor do lugar que pertence ï¿½ Senhora do Vazio interior,
-ao sul vocï¿½ vï¿½ o que parecem ser os portï¿½es principais.  Ao norte a parede
-desaparece na escuridï¿½o da Floresta Sombria.
+Você Tem Certeza de que Seja uma Boa Idéia?~
+   Você encontrou uma parte da parede exterior.  As árvores foram podadas,
+fazendo um caminho ao redor do lugar que pertence à Senhora do Vazio interior,
+ao sul você vê o que parecem ser os portões principais.  Ao norte a parede
+desaparece na escuridão da Floresta Sombria.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -589,38 +589,38 @@ D2
 S
 #732
 Emboscado Como um Rato!~
-   Vocï¿½ caminhou atravï¿½s da parede e agora estï¿½ em uma pequena alcova.  A
-risada do demï¿½nio faz vocï¿½ saltar assustado.  Ela vem bem detrï¿½s de vocï¿½!
-Vocï¿½ olha em volta e vï¿½ um cavaleiro sem cabeï¿½a montado em um feroz corcel que
-solta fogo pelas narinas.  Em uma mï¿½o ele segura as rï¿½deas de seu pesadelo e
-na outra uma cimitarra negra.  Em pï¿½nico, vocï¿½ olha em volta, mas para seu
-horror, vocï¿½ estï¿½ cercado.  O cavaleiro se aproxima e com um golpe certeiro,
-leva sua cabeï¿½a.  Vocï¿½ se tornou outra vï¿½tima do Cavaleiro sem Cabeï¿½a.
+   Você caminhou através da parede e agora está em uma pequena alcova.  A
+risada do demônio faz você saltar assustado.  Ela vem bem detrás de você!
+Você olha em volta e vê um cavaleiro sem cabeça montado em um feroz corcel que
+solta fogo pelas narinas.  Em uma mão ele segura as rédeas de seu pesadelo e
+na outra uma cimitarra negra.  Em pânico, você olha em volta, mas para seu
+horror, você está cercado.  O cavaleiro se aproxima e com um golpe certeiro,
+leva sua cabeça.  Você se tornou outra vítima do Cavaleiro sem Cabeça.
 
-Tragicamente, sua histï¿½ria e sua vida terminam aqui.
+Tragicamente, sua história e sua vida terminam aqui.
 ~
-7 38 0 0 0 0
+7 38 0
 S
 #733
 O Desfiladeiro Rochoso~
-   Este ï¿½ um ï¿½spero desfiladeiro.  Ele poderia ser o paraï¿½so daqueles homens
-que estudam as pedras, estranhos nï¿½o ï¿½ mesmo?  Amostras de quartzo, feldspato,
-pedra calcï¿½ria e outros minerais podem ser vistos.
+   Este é um áspero desfiladeiro.  Ele poderia ser o paraíso daqueles homens
+que estudam as pedras, estranhos não é mesmo?  Amostras de quartzo, feldspato,
+pedra calcária e outros minerais podem ser vistos.
 ~
-7 0 0 0 0 0
+7 0 0
 D0
 ~
 ~
 0 -1 711
 S
 #734
-Em um Caminho Para as Ruï¿½nas~
-   Vocï¿½ tropeï¿½ou em um rastro que a floresta ainda hï¿½ de terminar.  Se vocï¿½
-olhar ao redor, vocï¿½ mal pode notar o que sobrou de um pequeno abrigo em
-ruinas.  Algumas poucas paredes restaram, o que jï¿½ foi branco, agora ï¿½ cinza.
-Evidentemente este abrigo foi desperdiï¿½ado pelas forï¿½as da Fortaleza.  Pena.
+Em um Caminho Para as Ruínas~
+   Você tropeçou em um rastro que a floresta ainda há de terminar.  Se você
+olhar ao redor, você mal pode notar o que sobrou de um pequeno abrigo em
+ruinas.  Algumas poucas paredes restaram, o que já foi branco, agora é cinza.
+Evidentemente este abrigo foi desperdiçado pelas forças da Fortaleza.  Pena.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -635,13 +635,13 @@ D2
 0 -1 735
 S
 #735
-O Castelo em Ruï¿½nas~
-   Apenas uma concha quebrada restou do que jï¿½ foi um bastiï¿½o do bem.  Poucas
-paredes despedaï¿½adas restaram como testemunhas do que fora em um tempo antigo;
-agora espera apenas pelas mï¿½os impiedosas do tempo.  Pelo menos as ruï¿½nas
+O Castelo em Ruínas~
+   Apenas uma concha quebrada restou do que já foi um bastião do bem.  Poucas
+paredes despedaçadas restaram como testemunhas do que fora em um tempo antigo;
+agora espera apenas pelas mãos impiedosas do tempo.  Pelo menos as ruínas
 oferecem algum abrigo do incessante vento.
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -661,14 +661,14 @@ D3
 S
 #736
 A Capela Arruinada~
-   Hï¿½ muito tempo atrï¿½s, aqui era o lugar de adoraï¿½ï¿½o, mas aparentemente os
-seres para o qual este lugar foi consagrado, escolheram nï¿½o poupar mais do que
-o resto do castelo.  Ou escolheram ou nï¿½o conseguiram.  Talvez quando a
-Fortaleza Negra de Ilan foi construï¿½da, aqueles que protegiam o lugar
-resolveram fugir em seguranï¿½a, ou talvez eles se juntaram aos ocupantes do
+   Há muito tempo atrás, aqui era o lugar de adoração, mas aparentemente os
+seres para o qual este lugar foi consagrado, escolheram não poupar mais do que
+o resto do castelo.  Ou escolheram ou não conseguiram.  Talvez quando a
+Fortaleza Negra de Ilan foi construída, aqueles que protegiam o lugar
+resolveram fugir em segurança, ou talvez eles se juntaram aos ocupantes do
 castelo, e dividiram seus destinos.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -679,16 +679,16 @@ D3
 0 -1 738
 S
 #737
-Os Estï¿½bulos Arruinados~
-   Embora os estï¿½bulos estejam em ruï¿½nas, eles ainda possuem a estrutura, ou
-parte dela.  A parte ocidental nada mais ï¿½ que uma pilha de escombros podres.
-O lado oriental ï¿½ ainda precariamente sustentado por vigas de madeira podre.
-Isto nï¿½o parece estï¿½vel (entendeu, entendeu?  Ahh hï¿½!), mas ainda hï¿½ feno
-fresco no chï¿½o.  Embora vocï¿½ perceba que alguns lugares foram chamuscados,
-ainda hï¿½ ï¿½gua na cocheira.  Tudo indica entï¿½o, que alguï¿½m ou alguma coisa
+Os Estábulos Arruinados~
+   Embora os estábulos estejam em ruínas, eles ainda possuem a estrutura, ou
+parte dela.  A parte ocidental nada mais é que uma pilha de escombros podres.
+O lado oriental é ainda precariamente sustentado por vigas de madeira podre.
+Isto não parece estável (entendeu, entendeu?  Ahh há!), mas ainda há feno
+fresco no chão.  Embora você perceba que alguns lugares foram chamuscados,
+ainda há água na cocheira.  Tudo indica então, que alguém ou alguma coisa
 ainda usa este lugar.
 ~
-7 0 0 0 0 3
+7 0 3
 D3
 ~
 ~
@@ -696,16 +696,16 @@ D3
 S
 #738
 O Grande Corredor Arruinado~
-   Este costumava ser o grande corredor do castelo, agora nï¿½o estï¿½ em melhores
-condiï¿½ï¿½es do que o resto do lugar.  O antes duramente polido chï¿½o de mï¿½rmore,
-agora estï¿½ rachado e coberto com escombros, que uma vez fora o teto.  A parede
-oeste nï¿½o passa de uma memï¿½ria e de um monte de pedras amontoadas.  O grande e
+   Este costumava ser o grande corredor do castelo, agora não está em melhores
+condições do que o resto do lugar.  O antes duramente polido chão de mármore,
+agora está rachado e coberto com escombros, que uma vez fora o teto.  A parede
+oeste não passa de uma memória e de um monte de pedras amontoadas.  O grande e
 manchado vidro da janela da parede norte, uma vez o orgulho do castelo, foi
-dividido em milhares de fragmentos pelo chï¿½o.  A parede oriental ainda parece
-inteira, mas vocï¿½ nota trepidaï¿½ï¿½es pela parede sul, parece que ela poderia vir
+dividido em milhares de fragmentos pelo chão.  A parede oriental ainda parece
+inteira, mas você nota trepidações pela parede sul, parece que ela poderia vir
 abaixo a qualquer momento.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -721,38 +721,38 @@ D3
 S
 #739
 A Arruinada Torre do Sino~
-   Esta uma vez foi uma alta torre que abrigava um sino de advertï¿½ncia.  Ele
-era tocado para alertar os moradores de qualquer ameaï¿½a, mas hoje em dia ele
-tem uma histï¿½ria diferente.  As paredes vieram abaixo como o resto do lugar.
-O Sino Gigante que uma vez fez seu chamado de alerta ï¿½ agora um monte de
+   Esta uma vez foi uma alta torre que abrigava um sino de advertência.  Ele
+era tocado para alertar os moradores de qualquer ameaça, mas hoje em dia ele
+tem uma história diferente.  As paredes vieram abaixo como o resto do lugar.
+O Sino Gigante que uma vez fez seu chamado de alerta é agora um monte de
 bronze retorcido misturado aos escombros.
 ~
-7 0 0 0 0 0
+7 0 0
 D1
 ~
 ~
 0 -1 738
 S
 #740
-A Cï¿½mara de Tortura~
-   Adjacente ao calabouï¿½o fica a cï¿½mara de tortura da Fortaleza.  Enquanto o
-calabouï¿½o tem rudimentares artigos de tortura, este quarto tem os objetos
+A Câmara de Tortura~
+   Adjacente ao calabouço fica a câmara de tortura da Fortaleza.  Enquanto o
+calabouço tem rudimentares artigos de tortura, este quarto tem os objetos
 profissionais para as torturas mais horripilantes que sua alma pode imaginar.
-O ferro, a prateleira, a roda, parafusos, assim como a clï¿½ssica ï¿½gua de
-tortura chinesa.  Cada um designado para causar mais dor possï¿½vel.
+O ferro, a prateleira, a roda, parafusos, assim como a clássica água de
+tortura chinesa.  Cada um designado para causar mais dor possível.
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
 0 -1 781
 S
 #741
-A Antecï¿½mara~
-   A antecï¿½mara serve de passagem para a torre da capela.  Do lado de fora hï¿½
-uma fila de cavilhas onde alguns robes estï¿½o pendurados.
+A Antecâmara~
+   A antecâmara serve de passagem para a torre da capela.  Do lado de fora há
+uma fila de cavilhas onde alguns robes estão pendurados.
 ~
-7 0 0 0 0 0
+7 0 0
 D4
 ~
 ~
@@ -764,9 +764,9 @@ D7
 S
 #742
 A Floresta Sombria~
-   Vocï¿½ estï¿½ na Floresta Sombria.   Ahm, sï¿½rio?!
+   Você está na Floresta Sombria.   Ahm, sério?!
 ~
-7 1 0 0 0 0
+7 1 0
 D0
 ~
 ~
@@ -786,10 +786,10 @@ D3
 S
 #743
 Mais da Floresta Sombria~
-   A Floresta Sombria se extende atï¿½ onde seus olhos alcanï¿½am.  O que nï¿½o ï¿½
-tï¿½o longe assim, dado que ï¿½ uma floresta muito densa.
+   A Floresta Sombria se extende até onde seus olhos alcançam.  O que não é
+tão longe assim, dado que é uma floresta muito densa.
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -804,25 +804,25 @@ D2
 0 -1 715
 S
 #744
-Pista de Danï¿½a Inferno~
-   Estï¿½ ï¿½ a pista mais quente do Palï¿½cio das Ilusï¿½es.  Vocï¿½ pode danï¿½ar a
-noite toda atï¿½ seus pï¿½s sangrarem ou vocï¿½ pode apenas apreciar o sofrimento
+Pista de Dança Inferno~
+   Está é a pista mais quente do Palácio das Ilusões.  Você pode dançar a
+noite toda até seus pés sangrarem ou você pode apenas apreciar o sofrimento
 alheio, matando (sem trocadilhos), sua curiosidade.
 ~
-7 0 0 0 0 0
+7 0 0
 D1
 ~
 ~
 0 -1 714
 S
 #745
-O Abrigo Arruï¿½nado do Castelo~
-   Hï¿½ muito tempo atrï¿½s era a mais segura ï¿½rea do castelo do bom Rei
-Desfigurado.  Agora as forï¿½as da Fortaleza profanaram e saquearam o lugar.  As
-paredes antes famosas por sua seguranï¿½a, mal podem proteger elas mesmas da
-devastaï¿½ï¿½o dos elementos naturais.
+O Abrigo Arruínado do Castelo~
+   Há muito tempo atrás era a mais segura área do castelo do bom Rei
+Desfigurado.  Agora as forças da Fortaleza profanaram e saquearam o lugar.  As
+paredes antes famosas por sua segurança, mal podem proteger elas mesmas da
+devastação dos elementos naturais.
 ~
-7 0 0 0 0 0
+7 0 0
 D1
 ~
 ~
@@ -834,12 +834,12 @@ D2
 S
 #746
 O Lodo~
-   Este cï¿½rrego segue para uma lagoa natural.  Nï¿½o ï¿½ uma lagoa pura ou clara,
-o lodo forma uma espuma sobre a ï¿½gua.  Este lugar se aproxima mais de um
-pï¿½ntano do que de uma lagoa, onde ï¿½ favorï¿½vel ï¿½ procriaï¿½ï¿½o de mosquitos e
+   Este córrego segue para uma lagoa natural.  Não é uma lagoa pura ou clara,
+o lodo forma uma espuma sobre a água.  Este lugar se aproxima mais de um
+pântano do que de uma lagoa, onde é favorável à procriação de mosquitos e
 outros insetos que zunem em seus ouvidos.
 ~
-7 0 0 0 0 3
+7 0 3
 D0
 ~
 ~
@@ -851,11 +851,11 @@ D2
 S
 #747
 Ilha de Hera~
-   Este ï¿½ um pequeno pedaï¿½o de chï¿½o que sobressai ao lodo.  Nï¿½o ï¿½ mais que uma
-pequena ilhota rochosa coberta com sumagre-venenoso.  Hï¿½ pouca terra, mas de
+   Este é um pequeno pedaço de chão que sobressai ao lodo.  Não é mais que uma
+pequena ilhota rochosa coberta com sumagre-venenoso.  Há pouca terra, mas de
 alguma forma as videiras ainda sobrevivem.
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -863,10 +863,10 @@ D0
 S
 #748
 Ainda Mais da Floresta Sombria~
-   A esta altura vocï¿½ jï¿½ conhece bem o lugar, e quando vocï¿½ pensa que nï¿½o
-encontrarï¿½ nada de novo, algo surpreende vocï¿½!  Vocï¿½ estï¿½ certo!
+   A esta altura você já conhece bem o lugar, e quando você pensa que não
+encontrará nada de novo, algo surpreende você!  Você está certo!
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -878,12 +878,12 @@ D2
 S
 #749
 Ainda Mais da Floresta Sombria~
-   Esta floresta amaldiï¿½oada nunca termina?  Vocï¿½ penetra cada vez mais fundo
+   Esta floresta amaldiçoada nunca termina?  Você penetra cada vez mais fundo
 no aparentemente sem fim emaranhado de carvalhos que guardam este lugar
-maldito.  Continue andando e vocï¿½ nï¿½o sabe se serï¿½ capaz de achar seu caminho
+maldito.  Continue andando e você não sabe se será capaz de achar seu caminho
 de volta.
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~
@@ -898,31 +898,31 @@ D2
 0 -1 748
 S
 #750
-A Antecï¿½mara da Fortaleza~
-   Essa sala serve como uma antecï¿½mara de entrada para a fortaleza.  As
-paredes de granito negro parecem absorver a luz, mas estranhamente vocï¿½ ainda
-consegue ver facilmente.  Preenchendo as paredes estï¿½o diversas estï¿½tuas de
-fino mï¿½rmore, totalmente idï¿½nticas.  Todas trazem a imagem da Senhora da
-Fortaleza, com sua expressï¿½o imponente.
+A Antecâmara da Fortaleza~
+   Essa sala serve como uma antecâmara de entrada para a fortaleza.  As
+paredes de granito negro parecem absorver a luz, mas estranhamente você ainda
+consegue ver facilmente.  Preenchendo as paredes estão diversas estátuas de
+fino mármore, totalmente idênticas.  Todas trazem a imagem da Senhora da
+Fortaleza, com sua expressão imponente.
 ~
-7 12 0 0 0 0
+7 12 0
 D1
 ~
 ~
 0 -1 751
 D3
-O portï¿½o serve como uma barreira ao seu progresso.
+O portão serve como uma barreira ao seu progresso.
 ~
-portï¿½o~
+portão~
 1 0 729
 S
 #751
 Dentro da Fortaleza~
-   Seus passos ecoam nas paredes conforme vocï¿½ atravessa as salas.  A concha
-externa da fortaleza serve como proteï¿½ï¿½o e seguranï¿½a dessa construï¿½ï¿½o
-diabï¿½lica.
+   Seus passos ecoam nas paredes conforme você atravessa as salas.  A concha
+externa da fortaleza serve como proteção e segurança dessa construção
+diabólica.
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 ~
 ~
@@ -941,12 +941,12 @@ D3
 0 -1 750
 S
 #752
-O Final Sul do Salï¿½o dos Espelhos~
-   Esse ï¿½ um longo salï¿½o.  As paredes foram cobertas com espelhos.  Isso dï¿½ ï¿½
-sala aparï¿½ncia de ser inï¿½meras vezes maior do que ï¿½.  Hï¿½ umas poucas tochas
+O Final Sul do Salão dos Espelhos~
+   Esse é um longo salão.  As paredes foram cobertas com espelhos.  Isso dá à
+sala aparência de ser inúmeras vezes maior do que é.  Há umas poucas tochas
 fixadas pelas paredes.  A sala se extende para norte.
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 ~
 ~
@@ -957,12 +957,12 @@ D2
 0 -1 751
 S
 #753
-O Final Norte do Salï¿½o dos Espelhos~
-   Este ï¿½ um longo salï¿½o.  As paredes foram cobertas com espelhos.  Isso dï¿½ ï¿½
-sala aparï¿½ncia de ser inï¿½meras vezes maior do que ï¿½.  Hï¿½ umas poucas tochas
+O Final Norte do Salão dos Espelhos~
+   Este é um longo salão.  As paredes foram cobertas com espelhos.  Isso dá à
+sala aparência de ser inúmeras vezes maior do que é.  Há umas poucas tochas
 fixadas pelas paredes.  A sala se extende para sul.
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 ~
 ~
@@ -974,12 +974,12 @@ D2
 S
 #754
 A Biblioteca~
-   Essa cï¿½mara na fortaleza ï¿½ completamente preenchida por filas e filas de
+   Essa câmara na fortaleza é completamente preenchida por filas e filas de
 estantes.  A maioria com grossos tomos encadernados em couro.  E parecem que
-nï¿½o foram usados por meses, ou anos.  Hï¿½ uma boa camada de pï¿½ sobre eles.  O
+não foram usados por meses, ou anos.  Há uma boa camada de pó sobre eles.  O
 solo ladrilhado parece imaculado.
 ~
-7 8 0 0 0 0
+7 8 0
 D1
 ~
 ~
@@ -991,12 +991,12 @@ D2
 S
 #755
 A Oficina do Mestre Armeiro~
-   Este ï¿½ o lugar onde Durlak, o armeiro da fortaleza, trabalha.  O lugar ï¿½
-desconfortavelmente quente devido ï¿½ forja.  As paredes sï¿½o revestidas com os
-guardiï¿½es da fortaleza, o Guardiï¿½o do Destino.  Hï¿½ muitos em vï¿½rios estï¿½gios
+   Este é o lugar onde Durlak, o armeiro da fortaleza, trabalha.  O lugar é
+desconfortavelmente quente devido à forja.  As paredes são revestidas com os
+guardiões da fortaleza, o Guardião do Destino.  Há muitos em vários estágios
 de conserto, para serem reparados por Durlak.
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 ~
 ~
@@ -1007,16 +1007,16 @@ D1
 0 -1 771
 S
 #756
-Os Salï¿½es da Fortaleza~
-   O longo salï¿½o se extende ï¿½ direï¿½ï¿½o leste-oeste.  Ela serve para conectar o
+Os Salões da Fortaleza~
+   O longo salão se extende à direção leste-oeste.  Ela serve para conectar o
 complexo Oriental e Ocidental.  Seus passos ecoam nas paredes, reverberando,
 repercutindo, ressoando, recusando-se a morrer, como se soubessem que perecer
-aqui ï¿½ sinï¿½nimo de uma diabï¿½lica condenaï¿½ï¿½o.  Sobre vocï¿½, chamas sobrenaturais
-danï¿½am freneticamente em orbes de cristal, penduradas no teto por anï¿½is
-forjados em aï¿½o.  A estranha luz que provï¿½m delas lanï¿½am longas sombras que
-alcanï¿½am todo o corredor.
+aqui é sinônimo de uma diabólica condenação.  Sobre você, chamas sobrenaturais
+dançam freneticamente em orbes de cristal, penduradas no teto por anéis
+forjados em aço.  A estranha luz que provém delas lançam longas sombras que
+alcançam todo o corredor.
 ~
-7 8 0 0 0 0
+7 8 0
 D1
 ~
 ~
@@ -1027,16 +1027,16 @@ D3
 0 -1 754
 S
 #757
-Os Salï¿½es da Fortaleza~
-   O longo salï¿½o se estende ï¿½ direï¿½ï¿½o leste-oeste.  Ela serve para conectar o
+Os Salões da Fortaleza~
+   O longo salão se estende à direção leste-oeste.  Ela serve para conectar o
 complexo Oriental e Ocidental.  Seus passos ecoam nas paredes, reverberando,
 repercutindo, ressoando, recusando-se a morrer, como se soubessem que perecer
-aqui ï¿½ sinï¿½nimo de uma diabï¿½lica condenaï¿½ï¿½o.  Sobre vocï¿½, chamas sobrenaturais
-danï¿½am freneticamente em orbes de cristal, penduradas no teto por anï¿½is
-forjados em aï¿½o.  A estranha luz que provï¿½m delas lanï¿½am longas sombras que
-alcanï¿½am todo o corredor.
+aqui é sinônimo de uma diabólica condenação.  Sobre você, chamas sobrenaturais
+dançam freneticamente em orbes de cristal, penduradas no teto por anéis
+forjados em aço.  A estranha luz que provém delas lançam longas sombras que
+alcançam todo o corredor.
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 ~
 porta passagem secreta~
@@ -1052,14 +1052,14 @@ D3
 S
 #758
 A Galeria~
-   Esta ï¿½ uma galeria marmï¿½rea.  Uma grande sala quadrangular com estï¿½tuas de
-todos os tipos.  Abstratas, em baixo relevo, estas esculturas quase vivas estï¿½o
-representadas por toda a galeria.  As paredes marmï¿½reas quase brilham,
-provendo mais luz do que o suficiente para vï¿½-las.  As estï¿½tuas parecem estar
+   Esta é uma galeria marmórea.  Uma grande sala quadrangular com estátuas de
+todos os tipos.  Abstratas, em baixo relevo, estas esculturas quase vivas estão
+representadas por toda a galeria.  As paredes marmóreas quase brilham,
+provendo mais luz do que o suficiente para vê-las.  As estátuas parecem estar
 se retorcendo em dor.  Cada uma capturada em determinados momentos, mostrando
 sua agonia para que todos vejam.
 ~
-7 8 0 0 0 0
+7 8 0
 D2
 ~
 ~
@@ -1070,13 +1070,13 @@ D3
 0 -1 757
 S
 #759
-A Torre de Observaï¿½ï¿½o~
-   Essa ï¿½ uma grande sala cilï¿½ndrica, feita de uma pedra, de alguma forma,
-bronzeada.  Hï¿½ um grande osso queimando no meio da sala, o osso queima com uma
-chama preta sobrenatural.  Uma escadaria em espiral, na parede, sobe atï¿½ a
-cï¿½mara de observaï¿½ï¿½o.
+A Torre de Observação~
+   Essa é uma grande sala cilíndrica, feita de uma pedra, de alguma forma,
+bronzeada.  Há um grande osso queimando no meio da sala, o osso queima com uma
+chama preta sobrenatural.  Uma escadaria em espiral, na parede, sobe até a
+câmara de observação.
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 ~
 ~
@@ -1092,12 +1092,12 @@ D4
 S
 #760
 A Sala de 10.000 Pilares~
-   Ao seu redor estï¿½o filas e filas de colunas de mï¿½rmores, uniformemente
+   Ao seu redor estão filas e filas de colunas de mármores, uniformemente
 alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
-estendem-se acima, subindo atï¿½ desaparecerem, envolvidas pela escuridï¿½o, aonde
-sua luz nï¿½o alcanï¿½a.
+estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
+sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D1
 ~
 ~
@@ -1109,12 +1109,12 @@ D3
 S
 #761
 A Sala de 10.000 Pilares~
-   Ao seu redor estï¿½o filas e filas de colunas de mï¿½rmores, uniformemente
+   Ao seu redor estão filas e filas de colunas de mármores, uniformemente
 alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
-estendem-se acima, subindo atï¿½ desaparecerem, envolvidas pela escuridï¿½o, aonde
-sua luz nï¿½o alcanï¿½a.
+estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
+sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
@@ -1126,12 +1126,12 @@ D1
 S
 #762
 A Sala de 10.000 Pilares~
-   Ao seu redor estï¿½o filas e filas de colunas de mï¿½rmores, uniformemente
+   Ao seu redor estão filas e filas de colunas de mármores, uniformemente
 alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
-estendem-se acima, subindo atï¿½ desaparecerem, envolvidas pela escuridï¿½o, aonde
-sua luz nï¿½o alcanï¿½a.
+estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
+sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
@@ -1147,12 +1147,12 @@ D3
 S
 #763
 A Sala de 10.000 Pilares~
-   Ao seu redor estï¿½o filas e filas de colunas de mï¿½rmores, uniformemente
+   Ao seu redor estão filas e filas de colunas de mármores, uniformemente
 alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
-estendem-se acima, subindo atï¿½ desaparecerem, envolvidas pela escuridï¿½o, aonde
-sua luz nï¿½o alcanï¿½a.
+estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
+sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
@@ -1164,12 +1164,12 @@ D3
 S
 #764
 A Sala de 10.000 Pilares~
-   Ao seu redor estï¿½o filas e filas de colunas de mï¿½rmores, uniformemente
+   Ao seu redor estão filas e filas de colunas de mármores, uniformemente
 alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
-estendem-se acima, subindo atï¿½ desaparecerem, envolvidas pela escuridï¿½o, aonde
-sua luz nï¿½o alcanï¿½a.
+estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
+sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
@@ -1189,12 +1189,12 @@ D3
 S
 #765
 A Sala de 10.000 Pilares~
-   Ao seu redor estï¿½o filas e filas de colunas de mï¿½rmores, uniformemente
+   Ao seu redor estão filas e filas de colunas de mármores, uniformemente
 alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
-estendem-se acima, subindo atï¿½ desaparecerem, envolvidas pela escuridï¿½o, aonde
-sua luz nï¿½o alcanï¿½a.
+estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
+sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
@@ -1215,12 +1215,12 @@ D3
 S
 #766
 A Sala de 10.000 Pilares~
-   Ao seu redor estï¿½o filas e filas de colunas de mï¿½rmores, uniformemente
+   Ao seu redor estão filas e filas de colunas de mármores, uniformemente
 alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
-estendem-se acima, subindo atï¿½ desaparecerem, envolvidas pela escuridï¿½o, aonde
-sua luz nï¿½o alcanï¿½a.
+estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
+sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
@@ -1241,12 +1241,12 @@ D3
 S
 #767
 A Sala de 10.000 Pilares~
-   Ao seu redor estï¿½o filas e filas de colunas de mï¿½rmores, uniformemente
+   Ao seu redor estão filas e filas de colunas de mármores, uniformemente
 alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
-estendem-se acima, subindo atï¿½ desaparecerem, envolvidas pela escuridï¿½o, aonde
-sua luz nï¿½o alcanï¿½a.
+estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
+sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D1
 ~
 ~
@@ -1258,12 +1258,12 @@ D2
 S
 #768
 A Sala de 10.000 Pilares~
-   Ao seu redor estï¿½o filas e filas de colunas de mï¿½rmores, uniformemente
+   Ao seu redor estão filas e filas de colunas de mármores, uniformemente
 alinhadas.  Organizadas em um perfeito manancial, os grossos pilares
-estendem-se acima, subindo atï¿½ desaparecerem, envolvidas pela escuridï¿½o, aonde
-sua luz nï¿½o alcanï¿½a.
+estendem-se acima, subindo até desaparecerem, envolvidas pela escuridão, aonde
+sua luz não alcança.
 ~
-7 9 0 0 0 0
+7 9 0
 D1
 ~
 ~
@@ -1279,9 +1279,9 @@ D3
 S
 #769
 A Sala de 10.000 Pilares~
-   Vocï¿½ estï¿½ em uma sala com 10.000 pilares de mï¿½rmore. Tenha um bom dia.
+   Você está em uma sala com 10.000 pilares de mármore. Tenha um bom dia.
 ~
-7 9 0 0 0 0
+7 9 0
 D1
 ~
 ~
@@ -1292,29 +1292,29 @@ D2
 0 -1 766
 S
 #770
-A Cï¿½mara de Observaï¿½ï¿½o~
-   Esta ï¿½ a cï¿½mara de observaï¿½ï¿½o no topo da torre de observaï¿½ï¿½o.  Hï¿½ um grande
-telescï¿½pio montado prï¿½ximo ï¿½ parede, proporcionando uma bela visï¿½o.  O centro
-da cï¿½mara possui uma robusta mesa de carvalho com uma modesta coleï¿½ï¿½o de mapas
+A Câmara de Observação~
+   Esta é a câmara de observação no topo da torre de observação.  Há um grande
+telescópio montado próximo à parede, proporcionando uma bela visão.  O centro
+da câmara possui uma robusta mesa de carvalho com uma modesta coleção de mapas
 e desenhos.  Uma escadaria em espiral conduz para baixo.
 ~
-7 8 0 0 0 0
+7 8 0
 D5
 ~
 ~
 0 -1 759
 S
 #771
-Os Salï¿½es da Fortaleza~
-   O longo salï¿½o se estende ï¿½ direï¿½ï¿½o leste-oeste.  Ela serve para conectar o
+Os Salões da Fortaleza~
+   O longo salão se estende à direção leste-oeste.  Ela serve para conectar o
 complexo Oriental e Ocidental.  Seus passos ecoam nas paredes, reverberando,
 repercutindo, ressoando, recusando-se a morrer, como se soubessem que perecer
-aqui ï¿½ sinï¿½nimo de uma diabï¿½lica condenaï¿½ï¿½o.  Sobre vocï¿½, chamas sobrenaturais
-danï¿½am freneticamente em orbes de cristal, penduradas no teto por anï¿½is
-forjados em aï¿½o.  A estranha luz que provï¿½m delas lanï¿½am longas sombras que
-alcanï¿½am todo o corredor.
+aqui é sinônimo de uma diabólica condenação.  Sobre você, chamas sobrenaturais
+dançam freneticamente em orbes de cristal, penduradas no teto por anéis
+forjados em aço.  A estranha luz que provém delas lançam longas sombras que
+alcançam todo o corredor.
 ~
-7 8 0 0 0 0
+7 8 0
 D1
 ~
 ~
@@ -1325,16 +1325,16 @@ D3
 0 -1 755
 S
 #772
-Os Salï¿½es da Fortaleza~
-   O longo salï¿½o se estende ï¿½ direï¿½ï¿½o leste-oeste.  Ela serve para conectar o
+Os Salões da Fortaleza~
+   O longo salão se estende à direção leste-oeste.  Ela serve para conectar o
 complexo Oriental e Ocidental.  Seus passos ecoam nas paredes, reverberando,
 repercutindo, ressoando, recusando-se a morrer, como se soubessem que perecer
-aqui ï¿½ sinï¿½nimo de uma diabï¿½lica condenaï¿½ï¿½o.  Sobre vocï¿½, chamas sobrenaturais
-danï¿½am freneticamente em orbes de cristal, penduradas no teto por anï¿½is
-forjados em aï¿½o.  A estranha luz que provï¿½m delas lanï¿½am longas sombras que
-alcanï¿½am todo o corredor.
+aqui é sinônimo de uma diabólica condenação.  Sobre você, chamas sobrenaturais
+dançam freneticamente em orbes de cristal, penduradas no teto por anéis
+forjados em aço.  A estranha luz que provém delas lançam longas sombras que
+alcançam todo o corredor.
 ~
-7 8 0 0 0 0
+7 8 0
 D1
 ~
 ~
@@ -1345,13 +1345,13 @@ D3
 0 -1 771
 S
 #773
-A Torre do Relï¿½gio~
-   Vocï¿½ entrou na torre do relï¿½gio.  Assim que vocï¿½ olha para cima, vocï¿½ vï¿½
-inï¿½meras engrenagens, peï¿½as, e outras partes internas de um relï¿½gio, girando,
-rangindo.  O efeito ï¿½ quase hipnï¿½tico.  Uma escadaria construï¿½da na parece
-permite acesso aos intrigantes mecanismos acima, se vocï¿½ quiser subir lï¿½.
+A Torre do Relógio~
+   Você entrou na torre do relógio.  Assim que você olha para cima, você vê
+inúmeras engrenagens, peças, e outras partes internas de um relógio, girando,
+rangindo.  O efeito é quase hipnótico.  Uma escadaria construída na parece
+permite acesso aos intrigantes mecanismos acima, se você quiser subir lá.
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 ~
 ~
@@ -1367,9 +1367,9 @@ D4
 S
 #774
 Um Corredor~
-   Vocï¿½ estï¿½ na Fortaleza. Tenha um bom dia.
+   Você está na Fortaleza. Tenha um bom dia.
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
@@ -1380,14 +1380,14 @@ D2
 0 -1 773
 S
 #775
-Na Torre do Relï¿½gio~
-   Vocï¿½ estï¿½ na parte baixa dos mecanismos internos do relï¿½gio da fortaleza.
-Engrenagens enredam-se, giram e se movem por todos os lados que vocï¿½ olha.
-Vocï¿½ percebe que com todos esses movimentos, vocï¿½ seria um alvo fï¿½cil para uma
-emboscada.  Hï¿½ uma escadaria que conduz abaixo, para seguir acima, vocï¿½ terï¿½
+Na Torre do Relógio~
+   Você está na parte baixa dos mecanismos internos do relógio da fortaleza.
+Engrenagens enredam-se, giram e se movem por todos os lados que você olha.
+Você percebe que com todos esses movimentos, você seria um alvo fácil para uma
+emboscada.  Há uma escadaria que conduz abaixo, para seguir acima, você terá
 que escalar pelas engrenagens.
 ~
-7 8 0 0 0 0
+7 8 0
 D4
 ~
 ~
@@ -1399,11 +1399,11 @@ D5
 S
 #776
 Entre os Dentes das Engrenagens~
-   Vocï¿½ estï¿½ brincando de equilï¿½brio em corda sobre estacas.  Saltando pelas
-engrenagens, apoiando-se em estruturas mï¿½veis em um momento, escalando em
+   Você está brincando de equilíbrio em corda sobre estacas.  Saltando pelas
+engrenagens, apoiando-se em estruturas móveis em um momento, escalando em
 engrenagens no outro.  
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 ~
 ~
@@ -1419,22 +1419,22 @@ D5
 S
 #777
 Entre as Engrenagens~
-   Vocï¿½ pula para uma engrenagem parada para recuperar o fï¿½lego.  O movimento
-constante das engrenagens ao seu redor ï¿½ atordoante.  Por um momento vocï¿½
-perde o senso de equilï¿½brio.  Um deslize seria fatal.  Subitamente a
-engrenagem treme e comeï¿½a a se mover, e vocï¿½ cai.  Vocï¿½ aterriza entre os
-dentes de duas engrenagens.  Seu corpo ï¿½ mastigado e moï¿½do, e vocï¿½ morre
+   Você pula para uma engrenagem parada para recuperar o fôlego.  O movimento
+constante das engrenagens ao seu redor é atordoante.  Por um momento você
+perde o senso de equilíbrio.  Um deslize seria fatal.  Subitamente a
+engrenagem treme e começa a se mover, e você cai.  Você aterriza entre os
+dentes de duas engrenagens.  Seu corpo é mastigado e moído, e você morre
 instantaneamente.  Tragicamente sua vida e sua busca acabam aqui.
 ~
-7 10 0 0 0 0
+7 10 0
 S
 #778
-O Topo da Torre do Relï¿½gio~
-   Vocï¿½ estï¿½ acima de centenas de mecanismos.  Em uma pequena sacada, de onde
-vocï¿½ obtï¿½m uma boa visï¿½o.  Vocï¿½ pode bravamente tentar descer pelas
-engrenagens, ou pode ir atï¿½ a face do relï¿½gio.
+O Topo da Torre do Relógio~
+   Você está acima de centenas de mecanismos.  Em uma pequena sacada, de onde
+você obtém uma boa visão.  Você pode bravamente tentar descer pelas
+engrenagens, ou pode ir até a face do relógio.
 ~
-7 8 0 0 0 0
+7 8 0
 D3
 ~
 ~
@@ -1445,30 +1445,31 @@ D5
 0 -1 776
 S
 #779
-Na Face do Relï¿½gio~
-   Vocï¿½ estï¿½ no eixo central do relï¿½gio.  Um vento congelante sopra de
-repente..  Quase alcanï¿½ando sua alma.  Olhando ao redor vocï¿½ vï¿½ os topos dos
-carvalhos extendendo-se ao horizonte.  Do outro lado da fortaleza vocï¿½ vï¿½ a
-torre de observaï¿½ï¿½o extendendo-se ligeiramente mais alta de onde vocï¿½ estï¿½.
-Daqui vocï¿½ pode ver o pinï¿½culo da fortaleza extendendo-se atï¿½ o cï¿½u, lanï¿½ando
-sua longa sombra atravï¿½s da Floresta Sombria.
+Na Face do Relógio~
+   Você está no eixo central do relógio.  Um vento congelante sopra de
+repente..  Quase alcançando sua alma.  Olhando ao redor você vê os topos dos
+carvalhos extendendo-se ao horizonte.  Do outro lado da fortaleza você vê a
+torre de observação extendendo-se ligeiramente mais alta de onde você está.
+Daqui você pode ver o pináculo da fortaleza extendendo-se até o céu, lançando
+sua longa sombra através da Floresta Sombria.
 ~
-7 0 0 0 0 0
+7 0 0
 D1
 ~
 ~
 0 -1 778
 S
 #780
-O Tï¿½rreo do Pinï¿½culo~
-   Vocï¿½ chegou ao pinï¿½culo da fortaleza.  Uma grande sala.  Que nï¿½o ï¿½ nada
-mais do que um poï¿½o escuro.  A ï¿½nica coisa que quebra a monotonia ï¿½ uma
+O Térreo do Pináculo~
+   Você chegou ao pináculo da fortaleza.  Uma grande sala.  Que não é nada
+mais do que um poço escuro.  A única coisa que quebra a monotonia é uma
 escadaria que se estende para cima e para baixo.
 ~
-7 9 0 0 0 0
+7 9 0
 D3
 ~
 porta dupla~
+:n 2 a porta dupla
 2 717 766
 D4
 ~
@@ -1480,16 +1481,16 @@ D5
 0 -1 781
 S
 #781
-O Calabouï¿½o~
-   Vocï¿½ chegou a um ï¿½mido calabouï¿½o abaixo do Pinï¿½culo.  Um estranho musgo
-cresce nas rachaduras das ï¿½speras paredes, e iluminam o lugar com sua estranha
-luz.  Hï¿½ algumas celas que preenchem as longas paredes.  Vï¿½rias algemas estï¿½o
-fixadas ï¿½s paredes, para prender os prisioneiros que aguardam sua tortura.  O
-centro do lugar ï¿½ tomado por diversos instrumentos de dor.  Hï¿½ um barril de
-ï¿½leo fervente.  Diversas prateleiras e incontï¿½veis instrumentos laminados
-horrï¿½veis, velhos, infectados e enferrujados pelo tempo.
+O Calabouço~
+   Você chegou a um úmido calabouço abaixo do Pináculo.  Um estranho musgo
+cresce nas rachaduras das ásperas paredes, e iluminam o lugar com sua estranha
+luz.  Há algumas celas que preenchem as longas paredes.  Várias algemas estão
+fixadas às paredes, para prender os prisioneiros que aguardam sua tortura.  O
+centro do lugar é tomado por diversos instrumentos de dor.  Há um barril de
+óleo fervente.  Diversas prateleiras e incontáveis instrumentos laminados
+horríveis, velhos, infectados e enferrujados pelo tempo.
 ~
-7 8 0 0 0 0
+7 8 0
 D2
 ~
 ~
@@ -1500,14 +1501,14 @@ D4
 0 -1 780
 S
 #782
-O Altar Diabï¿½lico~
-   Este ï¿½ um caminho que conduz ï¿½ torre e ï¿½ capela dedicada ï¿½ Senhora da Torre
-e do Vazio Interior.  O lugar ï¿½ circular com um altar feito de um estranho
+O Altar Diabólico~
+   Este é um caminho que conduz à torre e à capela dedicada à Senhora da Torre
+e do Vazio Interior.  O lugar é circular com um altar feito de um estranho
 material escuro no centro.  Luzes profanas queimam com o poder do mal,
-lanï¿½ando seu brilho sobrenatural sobre o lugar.  A escadaria em espiral que
+lançando seu brilho sobrenatural sobre o lugar.  A escadaria em espiral que
 circula a capela, continua para cima e para baixo.
 ~
-7 8 0 0 0 0
+7 8 0
 D4
 ~
 ~
@@ -1519,14 +1520,14 @@ D5
 S
 #783
 A Grande Escadaria em Espiral~
-   Acima do altar, a torre aprofunda-se e vocï¿½ estï¿½ em uma cï¿½mara gigante.  No
-centro da coluna oca hï¿½ um par de escadarias em espiral, tranï¿½ando-se e
-produzindo uma hï¿½lice dupla.  Nï¿½o hï¿½ nenhum pilar central no qual as
-escadarias estejam apoiadas.  Vocï¿½ se maravilha pela engenhosidade disso.  Mas
-apenas as mais bravas almas subirï¿½o esses degraus, porque a cada passo que
-vocï¿½ dï¿½, mais prï¿½ximo estarï¿½...Dela.
+   Acima do altar, a torre aprofunda-se e você está em uma câmara gigante.  No
+centro da coluna oca há um par de escadarias em espiral, trançando-se e
+produzindo uma hélice dupla.  Não há nenhum pilar central no qual as
+escadarias estejam apoiadas.  Você se maravilha pela engenhosidade disso.  Mas
+apenas as mais bravas almas subirão esses degraus, porque a cada passo que
+você dê, mais próximo estará...Dela.
 ~
-7 8 0 0 0 0
+7 8 0
 D4
 ~
 ~
@@ -1538,13 +1539,13 @@ D5
 S
 #784
 A Grande Escadaria em Espiral~
-   Vocï¿½ estï¿½ no meio da grande escadaria.  Os degraus de mï¿½rmore negro
-continuam em espiral ï¿½ frente, entrelaï¿½ando-se.  A sua luz se enfraquece
-misteriosamente, como se a escuridï¿½o da torre consumisse a luz, assim que a mesma
-fosse criada.  Suas pernas parecem querer descer os degraus ao invï¿½s de subi-los.
-Descer ï¿½ afastar-se do terror no topo.
+   Você está no meio da grande escadaria.  Os degraus de mármore negro
+continuam em espiral à frente, entrelaçando-se.  A sua luz se enfraquece
+misteriosamente, como se a escuridão da torre consumisse a luz, assim que a mesma
+fosse criada.  Suas pernas parecem querer descer os degraus ao invés de subi-los.
+Descer é afastar-se do terror no topo.
 ~
-7 8 0 0 0 0
+7 8 0
 D4
 ~
 ~
@@ -1556,11 +1557,11 @@ D5
 S
 #785
 A Escolha~
-   Acima da grande escadaria.  Vocï¿½ entrou em uma sala completamente nebulosa.
-Hï¿½ duas saï¿½das, e para seguir adiante vocï¿½ tem que fazer uma escolha.  Pense
+   Acima da grande escadaria.  Você entrou em uma sala completamente nebulosa.
+Há duas saídas, e para seguir adiante você tem que fazer uma escolha.  Pense
 bem antes de fazer a sua escolha.
 ~
-7 13 0 0 0 0
+7 13 0
 D0
 ~
 ~
@@ -1575,27 +1576,27 @@ D5
 0 -1 789
 S
 #786
-A Condenaï¿½ï¿½o~
-   Vocï¿½ fez sua escolha, agora morra com ela.
+A Condenação~
+   Você fez sua escolha, agora morra com ela.
 ~
-7 10 0 0 0 0
+7 10 0
 S
 #787
-A Maldiï¿½ï¿½o~
-   Vocï¿½ fez sua escolha, agora morra com ela.
+A Maldição~
+   Você fez sua escolha, agora morra com ela.
 ~
-7 10 0 0 0 0
+7 10 0
 S
 #788
 A Infernal Sala Musical~
-   Esta espaï¿½osa sala ï¿½ preenchida por diversos instrumentos musicais.  A
-principal caracterï¿½stica da sala ï¿½ o ï¿½rgï¿½o.  Ele ocupa mais da metade da sala.
-O ï¿½rgï¿½o possui cinco jogos de chaves de ï¿½rgï¿½o muito bem polidas, produzindo um
-brilho reflexivo.  Os canos de bronze do ï¿½rgï¿½o igualmente polidos, esperando
-para serem usados.  No chï¿½o vocï¿½ ouve o ecoar de uma fantasmagï¿½rica orquestra
-tocando em alguma dimensï¿½o perdida, sua musica de alguma forma chega atï¿½ vocï¿½.
+   Esta espaçosa sala é preenchida por diversos instrumentos musicais.  A
+principal característica da sala é o órgão.  Ele ocupa mais da metade da sala.
+O órgão possui cinco jogos de chaves de órgão muito bem polidas, produzindo um
+brilho reflexivo.  Os canos de bronze do órgão igualmente polidos, esperando
+para serem usados.  No chão você ouve o ecoar de uma fantasmagórica orquestra
+tocando em alguma dimensão perdida, sua musica de alguma forma chega até você.
 ~
-7 41 0 0 0 0
+7 41 0
 D0
 ~
 ~
@@ -1607,10 +1608,10 @@ D2
 S
 #789
 A Grande Escadaria em Espiral~
-   Parabï¿½ns.  Vocï¿½ fez a escolha certa.  Talvez vocï¿½ tenha uma chance afinal,
-mas se vocï¿½ tiver um pouco de bom senso, evitarï¿½ ir lï¿½ novamente.
+   Parabéns.  Você fez a escolha certa.  Talvez você tenha uma chance afinal,
+mas se você tiver um pouco de bom senso, evitará ir lá novamente.
 ~
-7 8 0 0 0 0
+7 8 0
 D4
 ~
 ~
@@ -1622,17 +1623,18 @@ D5
 S
 #790
 Na Porta da Morte~
-   Vocï¿½ foi sï¿½bio (ou sortudo) o suficiente para sobreviver ï¿½ Escolha,
-chegando ï¿½ Porta da Morte.  A grande porta de ferro dupla se pï¿½e como um
-obstï¿½culo ï¿½ sua passagem.  Forï¿½ar a porta serï¿½ inï¿½til.  Para prosseguir, vocï¿½
-precisarï¿½ de uma chave.
-     Hï¿½ uma porta ao norte.
+   Você foi sábio (ou sortudo) o suficiente para sobreviver à Escolha,
+chegando à Porta da Morte.  A grande porta de ferro dupla se põe como um
+obstáculo à sua passagem.  Forçar a porta será inútil.  Para prosseguir, você
+precisará de uma chave.
+     Há uma porta ao norte.
 ~
-7 8 0 0 0 0
+7 8 0
 D0
 A Porta da Morte bloqueia seu caminho.
 ~
 porta morte~
+:n 2 a porta
 2 715 791
 D5
 ~
@@ -1640,18 +1642,19 @@ D5
 0 -1 789
 S
 #791
-A Ascensï¿½o Final~
-   Alï¿½m da Porta da Morte hï¿½ uma estreita escadaria.  O ar estï¿½ estranhamente
-ï¿½mido e as paredes cobertas por musgos.  Conforme vocï¿½ segue acima, seu
-caminho ï¿½ iluminado por velas enfileiradas em ambos lados da escadaria.  O ar
-estï¿½ pesado com a umidade e hï¿½ um fedor demonï¿½aco ao redor.  Ainda nï¿½o ï¿½ tarde
+A Ascensão Final~
+   Além da Porta da Morte há uma estreita escadaria.  O ar está estranhamente
+úmido e as paredes cobertas por musgos.  Conforme você segue acima, seu
+caminho é iluminado por velas enfileiradas em ambos lados da escadaria.  O ar
+está pesado com a umidade e há um fedor demoníaco ao redor.  Ainda não é tarde
 demais para voltar.
 ~
-7 8 0 0 0 0
+7 8 0
 D2
-   A Morte estï¿½ bloqueando seu caminho.
+   A Morte está bloqueando seu caminho.
 ~
 porta morte~
+:n 2 a porta
 2 715 790
 D4
 ~
@@ -1659,27 +1662,27 @@ D4
 0 -1 792
 S
 #792
-Alï¿½m do Caminho Sem Volta~
-   Como o nome insinua, vocï¿½ passou o caminho sem volta.  A ï¿½nica saï¿½da ï¿½
-atravï¿½s da Senhora do Vazio Interior, Ivian.  A menos que vocï¿½ resolva
+Além do Caminho Sem Volta~
+   Como o nome insinua, você passou o caminho sem volta.  A única saída é
+através da Senhora do Vazio Interior, Ivian.  A menos que você resolva
 facilitar as coisas e morrer agora mesmo.
 ~
-7 13 0 0 0 0
+7 13 0
 D4
 ~
 ~
 0 -1 793
 S
 #793
-Prï¿½ximo ï¿½ Sacada~
-   Apï¿½s deixar o caminho sem volta para trï¿½s, vocï¿½ chega a um grande cï¿½mara
-com diversos pilares portando as suas histï¿½rias finais.  Sem nada para
-cessa-lo, a ventania ï¿½ constante atravï¿½s dessa cï¿½mara.  Fitando nos cï¿½us
-enegrecidos a assombrosa ominosidade de uma enorme tempestade.  Vocï¿½ pode
-caminhar atï¿½ a sacada se quiser, ou pode seguir acima pela escadaria no
+Próximo À Sacada~
+   Após deixar o caminho sem volta para trás, você chega a um grande câmara
+com diversos pilares portando as suas histórias finais.  Sem nada para
+cessa-lo, a ventania é constante através dessa câmara.  Fitando nos céus
+enegrecidos a assombrosa ominosidade de uma enorme tempestade.  Você pode
+caminhar até a sacada se quiser, ou pode seguir acima pela escadaria no
 centro, e desafiar a Senhora da Fortaleza.
 ~
-7 8 0 0 0 0
+7 8 0
 D1
 ~
 ~
@@ -1695,15 +1698,15 @@ D5
 S
 #794
 A Alta Sacada~
-   Vocï¿½ estï¿½ na alta sacada do pinï¿½culo, que repousa acima do enorme sï¿½mbolo
-que vocï¿½ viu quando atravessava os bosques.  Olhando ao redor, vocï¿½ vï¿½ a torre
-do relï¿½gio e o posto de observaï¿½ï¿½o ao longe, abaixo de vocï¿½.  Daqui vocï¿½ pode
-vislumbrar os extensos bosques negros.  E vï¿½ tambï¿½m as colinas ocidentais onde
-vocï¿½ iniciou esse pesadelo pelo mar que situa-se no horizonte, ao sul.  A sacada 
+   Você está na alta sacada do pináculo, que repousa acima do enorme símbolo
+que você viu quando atravessava os bosques.  Olhando ao redor, você vê a torre
+do relógio e o posto de observação ao longe, abaixo de você.  Daqui você pode
+vislumbrar os extensos bosques negros.  E vê também as colinas ocidentais onde
+você iniciou esse pesadelo pelo mar que situa-se no horizonte, ao sul.  A sacada 
 se estende um pouco a sul, seja cuidadoso.
-     Nï¿½o hï¿½ grade e o primeiro degrau ï¿½ traiï¿½oeiro.
+     Não há grade e o primeiro degrau é traiçoeiro.
 ~
-7 0 0 0 0 1
+7 0 1
 D2
 ~
 ~
@@ -1715,26 +1718,26 @@ D3
 S
 #795
 Olhe Antes de Pular~
-   Vocï¿½ estï¿½ no limite da sacada, com um enorme abismo sob seus pï¿½s.  Uma
-rajada de vento inesperada faz vocï¿½ perder o equilï¿½brio, mas vocï¿½ consegue se
-pendurar por uma mï¿½o.  Quanto mais nervoso vocï¿½ fica, mais esse lugar se torna
+   Você está no limite da sacada, com um enorme abismo sob seus pés.  Uma
+rajada de vento inesperada faz você perder o equilíbrio, mas você consegue se
+pendurar por uma mão.  Quanto mais nervoso você fica, mais esse lugar se torna
 estranhamente calmo.
 ~
-7 0 0 0 0 1
+7 0 1
 D0
 ~
 ~
 0 -1 794
 S
 #796
-O Guardiï¿½o da Cï¿½mara~
-   Esta sala prï¿½xima ao topo da torre ï¿½ decorada com inï¿½meras correntes que
-escondem as paredes.  Vocï¿½ sente a forï¿½a total do demï¿½nio se irradiando atravï¿½s 
-da porta ao norte.  Essa cï¿½mara ï¿½ o posto de guarda para o guarda-costas pessoal
-e servo de Ivian.  O maior e mais Poderoso de todos os Guardiï¿½es: o Tempestuoso
+O Guardião da Câmara~
+   Esta sala próxima ao topo da torre é decorada com inúmeras correntes que
+escondem as paredes.  Você sente a força total do demônio se irradiando através 
+da porta ao norte.  Essa câmara é o posto de guarda para o guarda-costas pessoal
+e servo de Ivian.  O maior e mais Poderoso de todos os Guardiões: o Tempestuoso
 Cavaleiro Negro!
 ~
-7 9 0 0 0 0
+7 9 0
 D0
 ~
 ~
@@ -1746,15 +1749,15 @@ D5
 S
 #797
 A Sala do Trono de Ivian~
-   Enfim vocï¿½ chegou.  Eu nï¿½o estou certo se isso ï¿½ uma coisa boa ou ruim.
-Mas depois de tantas provaï¿½ï¿½es e lutas vocï¿½ chegou ao topo da fortaleza de
-Ivian.  A Sala parece impressionantemente grande e o centro dela ï¿½ dominado
-por uma presenï¿½a que irradia uma malï¿½gna...diabï¿½lica...profana forï¿½a.  A
-Senhora da Fortaleza, Ivian, sentada em seu trono, que estï¿½ rodeado pela sua
-horda de filhos.  Ela olha para vocï¿½ e perscruta sua mente, procurando saber
-se vocï¿½ ï¿½ significante o suficiente para preocupaï¿½ï¿½es.
+   Enfim você chegou.  Eu não estou certo se isso é uma coisa boa ou ruim.
+Mas depois de tantas provações e lutas você chegou ao topo da fortaleza de
+Ivian.  A Sala parece impressionantemente grande e o centro dela é dominado
+por uma presença que irradia uma malígna...diabólica...profana força.  A
+Senhora da Fortaleza, Ivian, sentada em seu trono, que está rodeado pela sua
+horda de filhos.  Ela olha para você e perscruta sua mente, procurando saber
+se você é significante o suficiente para preocupações.
 ~
-7 9 0 0 0 0
+7 9 0
 D2
 ~
 ~
@@ -1765,11 +1768,11 @@ D5
 0 -1 798
 S
 #798
-A Saï¿½da~
-   Fugindo rapidamente, vocï¿½ deixa o trono para trï¿½s e segue abaixo por uma
+A Saída~
+   Fugindo rapidamente, você deixa o trono para trás e segue abaixo por uma
 escadaria secreta.
 ~
-7 5 0 0 0 0
+7 5 0
 D5
 ~
 ~
@@ -1777,12 +1780,12 @@ D5
 S
 #799
 Mais da Floresta Sombria~
-   Essa detestï¿½vel floresta nunca acaba?  Vocï¿½ avanï¿½a mais e mais na
-aparentemente interminï¿½vel estrutura de carvalhos que se pï¿½em como guardiï¿½es
-desse lugar maldito.  Se seguir em frente vocï¿½ nï¿½o sabe se saberï¿½ o caminho de
+   Essa detestável floresta nunca acaba?  Você avança mais e mais na
+aparentemente interminável estrutura de carvalhos que se põem como guardiões
+desse lugar maldito.  Se seguir em frente você não sabe se saberá o caminho de
 volta.
 ~
-7 1 0 0 0 3
+7 1 3
 D0
 ~
 ~

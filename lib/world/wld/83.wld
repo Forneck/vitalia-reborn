@@ -1,351 +1,410 @@
 #8300
 A Entrada Para a Caverna~
-   Vocï¿½ encontra uma grande passagem na rachadura do paredï¿½o rochoso.
-Um ar muito gelado vem de seu interior, e vocï¿½ pode ouvir ligeiros ruï¿½dos,
+   Você encontra uma grande passagem na rachadura do paredão rochoso.
+Um ar muito gelado vem de seu interior, e você pode ouvir ligeiros ruídos,
 que mais parecem ser gritos vindos desse pequeno, mais muito profundo buraco.
-   A sensaï¿½ï¿½o nï¿½o parece ser muito boa, um calafrio percorre todo o seu
-corpo e vocï¿½ se sente tomado por uma intensa vontade de voltar para a
+   A sensação não parece ser muito boa, um calafrio percorre todo o seu
+corpo e você se sente tomado por uma intensa vontade de voltar para a
 aldeia.
-   Diferente do que vocï¿½ pensava ser antes, essa rachadura se trata da
+   Diferente do que você pensava ser antes, essa rachadura se trata da
 entrada de uma caverna muito misteriosa...
 ~
-83 262221 0 0 0 4
-D0
+83 cdags 4
+D D
 ~
 ~
 0 -1 8301
 S
 #8301
 Uma Descida Muito Profunda~
-   Ao entrar nessa passagem a sensaï¿½ï¿½o de terror toma seu corpo.  Hï¿½
-muitas pinturas por todos os lados dessa caverna, pinturas que vocï¿½ nï¿½o
+   Ao entrar nessa passagem a sensação de terror toma seu corpo.  Há
+muitas pinturas por todos os lados dessa caverna, pinturas que você não
 consegue descrever, somente percebe que todas elas foram feitas com sangue.
-Este lugar ï¿½ muito ï¿½mido, e muito escuro.  Um lugar horripilante ao seu
-modo de vista, e vocï¿½ ainda sente que coisas muito piores estï¿½o por vir.
-   A unica saida ï¿½ continuar descendo rumo ao centro dessa horrï¿½vel, e mal
+Este lugar é muito úmido, e muito escuro.  Um lugar horripilante ao seu
+modo de vista, e você ainda sente que coisas muito piores estão por vir.
+   A unica saida é continuar descendo rumo ao centro dessa horrével, e mal
 cheirosa caverna; ou voltar para cima rumo a vila.
 ~
-83 262477 0 0 0 4
-D0
+83 dacgis 4
+D D
+~
+~
+0 -1 8302
+D U
 ~
 ~
 0 -1 8300
 S
 #8302
 Descendo Pela Caverna~
-   Hhhhhoooooooo!!!!  Vocï¿½ escorregou por uma grande ladeira e acabou por
-cair sem nenhuma chance de voltar, agora seu ï¿½nico rumo ï¿½ seguir e explorar
-essa caverna.  Vocï¿½ sente um intenso cheiro de sangue, como se uma batalha
-tivesse acabado de terminar e vï¿½rios corpos estivessem multilados pelo chï¿½o,
-o cheiro ï¿½ muito forte.  Sua ï¿½nica saï¿½da ï¿½ continuar descendo rumo a
-intensa escuridï¿½o.
+   Hhhhhoooooooo!!!!  Você escorregou por uma grande ladeira e acabou por
+cair sem nenhuma chance de voltar, agora seu único rumo é seguir e explorar
+essa caverna.  Você sente um intenso cheiro de sangue, como se uma batalha
+tivesse acabado de terminar e vários corpos estivessem multilados pelo chão,
+o cheiro é muito forte.  Sua única saída é continuar descendo rumo a
+intensa escuridão.
 ~
-83 262477 0 0 0 4
-D0
+83 dagcis 4
+D D
 ~
 ~
 0 -1 8303
 S
 #8303
-Uma Descida Muito ï¿½ngreme~
-   A ladeira parece nï¿½o ter fim, desaparecendo na escuridï¿½o.  Com alguma
-dificuldade vocï¿½ consegue desce-la se segurando nas pequenas pedras e se
-sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridï¿½o.
+Uma Descida Muito Íngreme~
+   A ladeira parece não ter fim, desaparecendo na escuridão.  Com alguma
+dificuldade você consegue desce-la se segurando nas pequenas pedras e se
+sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridão.
 ~
-83 262477 0 0 0 4
-D0
+83 dagcis 4
+D D
 ~
 ~
 0 -1 8304
 S
 #8304
-Uma Descida Muito ï¿½ngreme~
-   A ladeira parece nï¿½o ter fim, desaparecendo na escuridï¿½o.  Com alguma
-dificuldade vocï¿½ consegue desce-la se segurando nas pequenas pedras e se
-sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridï¿½o.
+Uma Descida Muito Íngreme~
+   A ladeira parece não ter fim, desaparecendo na escuridão.  Com alguma
+dificuldade você consegue desce-la se segurando nas pequenas pedras e se
+sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridão.
 ~
-83 262477 0 0 0 4
-D0
+83 dagcis 4
+D D
 ~
 ~
 0 -1 8305
 S
 #8305
-Uma Descida Muito ï¿½ngreme~
-   A ladeira parece nï¿½o ter fim, desaparecendo na escuridï¿½o.  Com alguma
-dificuldade vocï¿½ consegue desce-la se segurando nas pequenas pedras e se
-sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridï¿½o.
+Uma Descida Muito Íngreme~
+   A ladeira parece não ter fim, desaparecendo na escuridão.  Com alguma
+dificuldade você consegue desce-la se segurando nas pequenas pedras e se
+sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridão.
 ~
-83 262477 0 0 0 4
-D0
+83 dcagis 4
+D D
 ~
 ~
 0 -1 8306
 S
 #8306
-Uma Descida Muito ï¿½ngreme~
-   A ladeira parece nï¿½o ter fim, desaparecendo na escuridï¿½o.  Com alguma
-dificuldade vocï¿½ consegue desce-la se segurando nas pequenas pedras e se
-sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridï¿½o.
+Uma Descida Muito Íngreme~
+   A ladeira parece não ter fim, desaparecendo na escuridão.  Com alguma
+dificuldade você consegue desce-la se segurando nas pequenas pedras e se
+sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridão.
 ~
-83 262477 0 0 0 4
-D0
+83 dagcis 4
+D D
 ~
 ~
 0 -1 8307
 S
 #8307
-Uma Descida Muito ï¿½ngreme~
-   A ladeira parece nï¿½o ter fim, desaparecendo na escuridï¿½o.  Com alguma
-dificuldade vocï¿½ consegue desce-la se segurando nas pequenas pedras e se
-sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridï¿½o.
+Uma Descida Muito Íngreme~
+   A ladeira parece não ter fim, desaparecendo na escuridão.  Com alguma
+dificuldade você consegue desce-la se segurando nas pequenas pedras e se
+sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridão.
 ~
-83 262477 0 0 0 4
-D0
+83 dacgis 4
+D D
 ~
 ~
 0 -1 8308
 S
 #8308
-Uma Descida Muito ï¿½ngreme~
-   A ladeira parece nï¿½o ter fim, desaparecendo na escuridï¿½o.  Com alguma
-dificuldade vocï¿½ consegue desce-la se segurando nas pequenas pedras e se
-sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridï¿½o.
+Uma Descida Muito Íngreme~
+   A ladeira parece não ter fim, desaparecendo na escuridão.  Com alguma
+dificuldade você consegue desce-la se segurando nas pequenas pedras e se
+sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridão.
 ~
-83 262477 0 0 0 4
-D0
+83 dacgis 4
+D D
 ~
 ~
 0 -1 8309
 S
 #8309
-Uma Descida Muito ï¿½ngreme~
-   A ladeira parece nï¿½o ter fim, desaparecendo na escuridï¿½o.  Com alguma
-dificuldade vocï¿½ consegue desce-la se segurando nas pequenas pedras e se
-sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridï¿½o.
+Uma Descida Muito Íngreme~
+   A ladeira parece não ter fim, desaparecendo na escuridão.  Com alguma
+dificuldade você consegue desce-la se segurando nas pequenas pedras e se
+sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridão.
 ~
-83 262477 0 0 0 4
-D0
+83 dagcis 4
+D D
 ~
 ~
 0 -1 8310
 S
 #8310
 Muitos Caminhos~
-   Finalmente a descida acabou.  Agora vocï¿½ sabe de onde vem o cheiro de
-sangue.  Hï¿½ inï¿½meros cadï¿½veres espalhados por todos os lados, e nenhum
-deles tem o corpo por inteiro.  Hï¿½ braï¿½os, cabeï¿½as e outras partes de
+   Finalmente a descida acabou.  Agora você sabe de onde vem o cheiro de
+sangue.  Há inúmeros cadáveres espalhados por todos os lados, e nenhum
+deles tem o corpo por inteiro.  Há braços, cabeças e outras partes de
 corpos espalhados, uma cena aterrorizante.
-   Vocï¿½ pode observas trï¿½s tï¿½neis, cada um seguindo para uma direï¿½ï¿½o e se
-perdendo na escuridï¿½o.  Dos trï¿½s tï¿½neis vocï¿½ ainda sente um cheiro de
-podridï¿½o, e o terror em seu corpo aumenta cada vez mais no momento em que
-vocï¿½ pensa em qual das direï¿½ï¿½es tomar.
-   Hï¿½ uma enorme e bastante estranha pedra ao sul.
+   Você pode observas três túneis, cada um seguindo para uma direção e se
+perdendo na escuridão.  Dos três túneis você ainda sente um cheiro de
+podridão, e o terror em seu corpo aumenta cada vez mais no momento em que
+você pensa em qual das direções tomar.
+   Há uma enorme e bastante estranha pedra ao sul.
 ~
-83 262217 0 0 0 4
-D0
+83 dags 4
+D N
+~
+~
+0 -1 8311
+D W
+~
+~
+0 -1 8318
+D E
+~
+~
+0 -1 8314
+D S
 ~
 pedra~
-0 8304 8321
+:n 2 a pedra
+abcd 8304 8321
 S
 #8311
-O Tï¿½nel Norte~
-   O tï¿½nel segue tortuoso em direï¿½ï¿½o ao norte.  A medida que vocï¿½ caminha o
-cheiro de podridï¿½o vai aumentando.  Hï¿½ corpos de guerreiros esquartejados
-por todos os lados e em todas as paredeas, hï¿½ estranhas gravuras feitas em
-sangue.  A medida que caminha, vocï¿½ pode ouvir, cade vez mais claramente,
+O Túnel Norte~
+   O túnel segue tortuoso em direção ao norte.  A medida que você caminha o
+cheiro de podridão vai aumentando.  Há corpos de guerreiros esquartejados
+por todos os lados e em todas as paredeas, há estranhas gravuras feitas em
+sangue.  A medida que caminha, você pode ouvir, cade vez mais claramente,
 um estranho barulho, parecendo mais com um grunido.
 ~
-83 262217 0 0 0 4
-D0
+83 dags 4
+D S
+~
+~
+0 -1 8310
+D N
 ~
 ~
 0 -1 8312
 S
 #8312
-O Tï¿½nel Norte~
+O Túnel Norte~
    O cheiro fica cada vez mais forte e os barulhos mais altos.  As paredes
 parecem ficar cada vez mais sujas de sangue, e o numero de corpos multilados
-sï¿½ vem aumentando.
-   Vocï¿½ observa uma estranha movimentaï¿½ï¿½o ao norte.
+só vem aumentando.
+   Você observa uma estranha movimentação ao norte.
 ~
-83 262217 0 0 0 4
-D0
+83 dags 4
+D N
+~
+~
+0 -1 8313
+D S
 ~
 ~
 0 -1 8311
 S
 #8313
-No Final do Tï¿½nel~
-   Vocï¿½ chegou ao final deste tï¿½nel.  Uma enorme parede de pedra ergue-se
-em sua frente.  Hï¿½ sangue espirrado por todos os lados, restos de armaduras
-e corpos tambï¿½m.
-   Hï¿½ vï¿½rios pilares pela sala, todos em chamas, produzindo uma terrï¿½vel
-sensaï¿½ï¿½o que percorre por todo o seu corpo, tornando-se quase impossï¿½vel
+No Final do Túnel~
+   Você chegou ao final deste túnel.  Uma enorme parede de pedra ergue-se
+em sua frente.  Há sangue espirrado por todos os lados, restos de armaduras
+e corpos também.
+   Há vários pilares pela sala, todos em chamas, produzindo uma terrível
+sensação que percorre por todo o seu corpo, tornando-se quase impossível
 permanecer por muito tempo nesta sala.
-   Olhando os copos dilacerados por todos os lados vocï¿½ pensa: " Que tipo
+   Olhando os copos dilacerados por todos os lados você pensa: " Que tipo
 de criatura habitaria este local? ".
 ~
-83 262217 0 0 0 4
-D0
+83 dags 4
+D S
 ~
 ~
 0 -1 8312
 S
 #8314
-O Tï¿½nel Leste~
-   A escuridï¿½o ï¿½ completa nesse tï¿½nel, vocï¿½ nï¿½o consegue ver quase nada.  O
-frio aqui ï¿½ muito intenso, fazendo com que vocï¿½ perca um pouco os sentidos
-e sinta falta de ar.  Vocï¿½ observa que as paredes aqui nï¿½o possuem imagens
-em sangue, somente gelo se formando por toda sua extensï¿½o.
+O Túnel Leste~
+   A escuridão é completa nesse túnel, você não consegue ver quase nada.  O
+frio aqui é muito intenso, fazendo com que você perca um pouco os sentidos
+e sinta falta de ar.  Você observa que as paredes aqui não possuem imagens
+em sangue, somente gelo se formando por toda sua extensão.
 ~
-83 327753 0 0 0 4
-D0
+83 dqags 4
+D W
+~
+~
+0 -1 8310
+D E
 ~
 ~
 0 -1 8315
 S
 #8315
-O Tï¿½nel Leste~
-   O frio, que parece vir de todas direï¿½ï¿½es, vai tomando conta de seu corpo,
-debilitando sua movimentaï¿½ï¿½o.  O tï¿½nel ï¿½ tï¿½o escuro que vocï¿½ sï¿½ consegue
-ver a um palmo de ditï¿½ncia de seu rosto.
-   Repentinamente vocï¿½ ouve um grunido muito agudo vindo do leste, o terror
+O Túnel Leste~
+   O frio, que parece vir de todas direções, vai tomando conta de seu corpo,
+debilitando sua movimentação.  O túnel é tão escuro que você só consegue
+ver a um palmo de ditância de seu rosto.
+   Repentinamente você ouve um grunido muito agudo vindo do leste, o terror
 toma conta de seu corpo.
-   Para sul hï¿½ uma porta, vocï¿½ pode ir para leste seguindo o tunel, ou
+   Para sul há uma porta, você pode ir para leste seguindo o tunel, ou
 voltar para oeste.
 ~
-83 327753 0 0 0 4
-D0
+83 dqags 4
+D E
+~
+~
+0 -1 8316
+D W
+~
+~
+0 -1 8314
+D S
 ~
 porta~
-1 8302 8317
+:n 2 a porta
+abc 8302 8317
 S
 #8316
 Um Passo em Falso~
-   Vocï¿½ tenta passar pelas pedras que desabam, e vocï¿½
+   Você tenta passar pelas pedras que desabam, e você
        CAI...
          CAI...
            CAI...
-   E atinge o chï¿½o. Morto!
+   E atinge o chão. Morto!
 ~
-83 262219 0 0 0 4
+83 abdgs 4
 S
 #8317
-O Final do Tï¿½nel~
-   Vocï¿½ se encontra frente a uma enorme parede coberta por gelo.  Aqui
-tudo esta coberto por gelo, os pilares desta alta sala, todo o teto o chï¿½o,
-e atï¿½ mesmo, os restos de corpos e animais, estï¿½o aqui todos congelados.
-A luminosidade aqui ï¿½ muito fraca, tornando difï¿½cil a visï¿½o da sala por um
+O Final do Túnel~
+   Você se encontra frente a uma enorme parede coberta por gelo.  Aqui
+tudo esta coberto por gelo, os pilares desta alta sala, todo o teto o chão,
+e até mesmo, os restos de corpos e animais, estão aqui todos congelados.
+A luminosidade aqui é muito fraca, tornando difícil a visão da sala por um
 todo.
-   Subitamente, vocï¿½ ouve um tremendo ruï¿½do que parece vir da parede que
-estï¿½ coberta por gelo ï¿½ sua frente.
+   Subitamente, você ouve um tremendo ruído que parece vir da parede que
+está coberta por gelo à sua frente.
 ~
-83 327753 0 0 0 4
-D0
+83 dqags 4
+D N
 ~
 porta~
-1 8302 8315
+:n 2 a porta
+abc 8302 8315
 S
 #8318
-O Tï¿½nel Oeste~
-   Este tunel parece ser o mais agradavel dos trï¿½s, apesar da temperatura
-levemente quente.  O chï¿½o ï¿½ todo coberto por areia fina, e as paredes com
-estranhas inscriï¿½ï¿½es que vocï¿½ nï¿½o consegue decifrar.  Uma estranha
-movimentaï¿½ï¿½o pode ser observada a oeste, seguida de um estranho som...
+O Túnel Oeste~
+   Este tunel parece ser o mais agradavel dos três, apesar da temperatura
+levemente quente.  O chão é todo coberto por areia fina, e as paredes com
+estranhas inscrições que você não consegue decifrar.  Uma estranha
+movimentação pode ser observada a oeste, seguida de um estranho som...
 ~
-83 262217 0 0 0 4
-D0
+83 dags  4
+D E
+~
+~
+0 -1 8310
+D W
 ~
 ~
 0 -1 8319
 S
 #8319
-O Tï¿½nel Oeste~
-   A areia pareï¿½e o fazer cansar.  Os barulhos sï¿½ aumentam enquanto vocï¿½
-avanï¿½a para oeste.  A escuridï¿½o parece aumentar a partir daqui, e uma
-sensaï¿½ï¿½o de medo lhe toma o corpo. O que serï¿½ que faz esses estranhos
+O Túnel Oeste~
+   A areia pareçe o fazer cansar.  Os barulhos só aumentam enquanto você
+avança para oeste.  A escuridão parece aumentar a partir daqui, e uma
+sensação de medo lhe toma o corpo. O que será que faz esses estranhos
 sons...
-   Vocï¿½ pode seguir para leste voltando, ou avanï¿½ar pela porta a oeste.
+   Você pode seguir para leste voltando, ou avançar pela porta a oeste.
 ~
-83 262217 0 0 0 4
-D0
+83 dags 4
+D E
+~
+~
+0 -1 8318
+D W
 ~
 porta~
-1 8303 8320
+:n 2 a porta
+abc 8303 8320
 S
 #8320
-O Final do Tï¿½nel~
-   O chï¿½o aqui, como por todo o tunel, ï¿½ coberto por areia fina.  Hï¿½ vï¿½rias
-colunas de pedra, por onde estï¿½o pendurados vï¿½rios corpos multilados e
-podres, contendo muitos desenhos em sua carne, dos quais vocï¿½ nem tem idï¿½ia
+O Final do Túnel~
+   O chão aqui, como por todo o tunel, é coberto por areia fina.  Há várias
+colunas de pedra, por onde estão pendurados vários corpos multilados e
+podres, contendo muitos desenhos em sua carne, dos quais você nem tem idéia
 do significado.
-   O teto deste local parece ter sido, hï¿½ muito tempo atrï¿½s, coberto todo por
-pedras, mas agora, ele parece estar quase desmoronando sobre vocï¿½, com a
-maioria das pedras que o cobriam, agora no chï¿½o.
-   Em um instante, a areia abaixo de vocï¿½ parece tremeluzir, parecendo
-esconder algo.  Ou alguï¿½m!?
+   O teto deste local parece ter sido, há muito tempo atrás, coberto todo por
+pedras, mas agora, ele parece estar quase desmoronando sobre você, com a
+maioria das pedras que o cobriam, agora no chão.
+   Em um instante, a areia abaixo de você parece tremeluzir, parecendo
+esconder algo.  Ou alguém!?
 ~
-83 262217 0 0 0 4
-D0
+83 dags 4
+D E
 ~
 porta~
-1 8303 8319
+:n 2 a porta
+abc 8303 8319
 S
 #8321
-Atravï¿½s da Passagem~
-   Vocï¿½ passa pela passagem de pedra que fecha repentinamente.  Aqui o
-lugar ï¿½ muito escuro com muitas teias de aranha pelo caminho.  O
-pequeno corredor ï¿½ muito ï¿½mido e sombrio, fazendo com que um calafrio
+Através da Passagem~
+   Você passa pela passagem de pedra que fecha repentinamente.  Aqui o
+lugar é muito escuro com muitas teias de aranha pelo caminho.  O
+pequeno corredor é muito úmido e sombrio, fazendo com que um calafrio
 percorra todo o seu corpo.
-   A ï¿½nica saida ï¿½ seguir em direï¿½ï¿½o ao sul, explorando o inesperado.
+   A única saida é seguir em direção ao sul, explorando o inesperado.
 ~
-83 262217 0 0 0 4
-D0
+83 dags 4
+D S
 ~
 ~
 0 -1 8322
 S
 #8322
 Corredor Sombrio~
-   Este corredor ï¿½ repugnante.  Vocï¿½ anda com muita dificuldade tentando
+   Este corredor é repugnante.  Você anda com muita dificuldade tentando
 se desviar das aranhas e suas teias, que ocupam quase todo o corredor.
-Vocï¿½ tem a sensaï¿½ï¿½o de ser um dos primeiros aventureiros a estar nesse
-local, que parece ter passado muitos anos intocï¿½vel por qualquer outra
+Você tem a sensação de ser um dos primeiros aventureiros a estar nesse
+local, que parece ter passado muitos anos intocável por qualquer outra
 criatura.
 ~
-83 262217 0 0 0 4
-D0
+83 dags 4
+D S
+~
+~
+0 -1 8323
+D N
 ~
 ~
 0 -1 8321
 S
 #8323
-A Entrada da Cï¿½mara~
+A Entrada da Câmara~
    O corredor termina em frente a uma enorme porta, feita de pedra,
-impenetrï¿½vel a qualquer tipo de ser ou magia.  Nessa porta hï¿½ muitas
-inscriï¿½ï¿½es que, incrivelmente, parecem estar em sua lï¿½ngua.
+impenetrável a qualquer tipo de ser ou magia.  Nessa porta há muitas
+inscrições que, incrivelmente, parecem estar em sua língua.
    Este lugar parece ser muito sinistro, parece esconder mais do que seus
 olhos podem ver.
 ~
-83 262217 0 0 0 4
-D0
-Estï¿½ muito escuro para poder ver algo.
+83 dags 4
+D E
+Um estranho som vem dessa direção.
+~
+~
+0 -1 8324
+D S
+Está muito escuro para poder ver algo.
 ~
 porta~
-1 8301 8325
+:n 2 a porta
+abc 8301 8325
 S
 #8324
 A Sala do Guarda~
-   Esta sala ï¿½ enorme.  Repleta de desenhos, e iluminada por uma estranha
-fonte de luz que vocï¿½ desconhece.
-   Hï¿½ estranhos espinhos cobrindo todo o topo desta sala.  Seu piso ï¿½ todo
-coberto por grandes pedras presas ao chï¿½o, e todas bem polidas e lisas.
-   Em um dos espinhos do topo, hï¿½ uma enorme jaula presa, onde sï¿½ sobraram
-ossos dentro.  O cheiro de sangue aqui ï¿½ intenso.
+   Esta sala é enorme.  Repleta de desenhos, e iluminada por uma estranha
+fonte de luz que você desconhece.
+   Há estranhos espinhos cobrindo todo o topo desta sala.  Seu piso é todo
+coberto por grandes pedras presas ao chão, e todas bem polidas e lisas.
+   Em um dos espinhos do topo, há uma enorme jaula presa, onde só sobraram
+ossos dentro.  O cheiro de sangue aqui é intenso.
 ~
-83 262249 0 0 0 4
-D0
+83 dagfs 4
+D W
 ~
 ~
 0 -1 8323
@@ -353,69 +412,82 @@ S
 #8325
 O Cativeiro~
    Ao entrar nessa sala o terror toma seu corpo.  Uma sala imensa, com
-manchas de sangue por todos os lados, e vï¿½rios desenhos cobrindo todas as
+manchas de sangue por todos os lados, e vários desenhos cobrindo todas as
 paredes.
-   Por toda a sala, vocï¿½ percebe espï¿½ritos voando e pronunciando uma lï¿½ngua
-que vocï¿½ desconhece.  Espï¿½ritos horripilantes, que parecem ser daqueles que
+   Por toda a sala, você percebe espíritos voando e pronunciando uma língua
+que você desconhece.  Espíritos horripilantes, que parecem ser daqueles que
 morreram ao tentrar enfrentar a besta deste local, a besta que dominou esta
 aldeia.
-   A ï¿½nica vontade que vocï¿½ sente, ï¿½ a de sair o quanto antes deste maldito
+   A única vontade que você sente, é a de sair o quanto antes deste maldito
 e horripilante local.
 ~
-83 262249 0 0 0 4
-D0
+83 dagfs 4
+D W
+Uma luz branca vem dessa direção
 ~
 porta~
-1 8301 8323
+:n 2 a porta
+abc 8305 8326
+D N
+~
+porta~
+:n a porta
+abc 8301 8323
 S
 #8326
-A Prisï¿½o~
-   No momento em que vocï¿½ entra nesta sala a alegria toma seu corpo.
-Vocï¿½ finalmente encontrou os prisioneiros que um dia tentaram vencer a
+A Prisão~
+   No momento em que você entra nesta sala a alegria toma seu corpo.
+Você finalmente encontrou os prisioneiros que um dia tentaram vencer a
 terrivel criatura e aqui foram aprisionados.
-   Aqui hï¿½ um clerigo, um mago, um ladrï¿½o, um guerreiro, e um druida do
-vilarejo.  Lembre-se, todos do vilarejo sempre lhe serï¿½o gratos por
-livrï¿½-los da besta e resgatar esses prisioneiros tanto antes procurados.
+   Aqui há um clerigo, um mago, um ladrão, um guerreiro, e um druida do
+vilarejo.  Lembre-se, todos do vilarejo sempre lhe serão gratos por
+livrá-los da besta e resgatar esses prisioneiros tanto antes procurados.
 ~
-83 262649 0 0 0 4
-D0
+83 dagehisf 4
+D W
 ~
 ~
 0 -1 8327
 S
 #8327
-A Saï¿½da~
-   A ï¿½nica saï¿½da desta caverna ï¿½ seguir para oeste, de onde vem uma
-ofuscante luz branca e uma enorme sensaï¿½ï¿½o de paz.
-   Seguindo para oeste vocï¿½ serï¿½ sempre abenï¿½oado e agradecido
+A Saída~
+   A única saída desta caverna é seguir para oeste, de onde vem uma
+ofuscante luz branca e uma enorme sensação de paz.
+   Seguindo para oeste você será sempre abençoado e agradecido
 pelos moradores desta aldeia.
 ~
-83 262505 0 0 0 4
-D0
+83 dagisf 4
+D W
 ~
 ~
 0 -1 50
 S
 #8328
 No Mato~
-   Ao andar, vocï¿½ nota uma certa mudanï¿½a no solo no qual vocï¿½ estï¿½ em
-pï¿½ agora.  Um solo seco, bem diferente daquele em que vocï¿½ estava a
-pouco tempo.  Vocï¿½ vï¿½ mais a frente um caminho fechado por plantas e
+   Ao andar, você nota uma certa mudança no solo no qual você está em
+pé agora.  Um solo seco, bem diferente daquele em que você estava a
+pouco tempo.  Você vê mais a frente um caminho fechado por plantas e
 matos.
 ~
-83 4 0 0 0 3
-D0
+83 c 3
+ON z83
+D N
+Mato, mato e mais mato!
+~
+~
+0 -1 8329
+D S
 ~
 ~
 0 -1 7100
 S
 #8329
 No Mato~
-   Plantas e matos bloqueiam cada vez mais o seu caminho.  Vocï¿½ nï¿½o
-chegarï¿½ muito longe se isso continuar assim.
+   Plantas e matos bloqueiam cada vez mais o seu caminho.  Você não
+chegará muito longe se isso continuar assim.
 ~
-83 4 0 0 0 3
-D0
+83 c 3
+D N
 Mato, mato e mais mato!
 ~
 ~
@@ -423,11 +495,11 @@ Mato, mato e mais mato!
 S
 #8330
 No Mato~
-   Plantas e matos bloqueiam cada vez mais o seu caminho.  Vocï¿½ nï¿½o
-chegarï¿½ muito longe se isso continuar assim.
+   Plantas e matos bloqueiam cada vez mais o seu caminho.  Você não
+chegará muito longe se isso continuar assim.
 ~
-83 4 0 0 0 3
-D0
+83 c 3
+D N
 Mato, mato e mais mato!
 ~
 ~
@@ -435,11 +507,11 @@ Mato, mato e mais mato!
 S
 #8331
 No Mato~
-   Plantas e matos bloqueiam cada vez mais o seu caminho.  Vocï¿½ nï¿½o
-chegarï¿½ muito longe se isso continuar assim.
+   Plantas e matos bloqueiam cada vez mais o seu caminho.  Você não
+chegará muito longe se isso continuar assim.
 ~
-83 4 0 0 0 3
-D0
+83 c 3
+D N
 Mato, mato e mais mato!
 ~
 ~
@@ -447,30 +519,31 @@ Mato, mato e mais mato!
 S
 #8332
 No final do Caminho~
-   Vocï¿½ jï¿½ sabia que isto iria acontecer.  As plantas e matos que crescem
-nesse lugar, bloqueiam totalmente o seu caminho para norte.  A ï¿½nica coisa
-que vocï¿½ vï¿½ ï¿½ o brilho do sol, que emite um calor infernal.  Hï¿½ algo errado
-com a terra deste lugar...  Parece estar mais fofa e ï¿½mida, talvez seja um
-buraco feito por animais, estï¿½ bem em baixo de vocï¿½.
+   Você já sabia que isto iria acontecer.  As plantas e matos que crescem
+nesse lugar, bloqueiam totalmente o seu caminho para norte.  A única coisa
+que você vê é o brilho do sol, que emite um calor infernal.  Há algo errado
+com a terra deste lugar...  Parece estar mais fofa e úmida, talvez seja um
+buraco feito por animais, está bem em baixo de você.
 ~
-83 4 0 0 0 3
-D0
-Ao olhar para baixo, vocï¿½ nota que a cor da terra tambï¿½m estï¿½
+83 c 3
+D D
+Ao olhar para baixo, você nota que a cor da terra também está
 estranha. Parece ser um buraco...
 ~
 buraco~
-1 -1 8333
+:n 1 o buraco
+d -1 8333
 S
 #8333
 No Buraco~
-   Vocï¿½ forï¿½ou muito suas botas sobre a terra e acabou abrindo um
-gigante buraco na terra.  Vocï¿½ literalmente despencou e por sorte nï¿½o
-estï¿½ desmaiado agora.  Vocï¿½ nota que o buraco por onde caiu foi tampado
-por pequenos pedregulhos que nï¿½o vï¿½o demorar muito para rolar sobre vocï¿½.
-   Vocï¿½ nota tambï¿½m, uma luz um pouco acima de vocï¿½.
+   Você forçou muito suas botas sobre a terra e acabou abrindo um
+gigante buraco na terra.  Você literalmente despencou e por sorte não
+está desmaiado agora.  Você nota que o buraco por onde caiu foi tampado
+por pequenos pedregulhos que não vão demorar muito para rolar sobre você.
+   Você nota também, uma luz um pouco acima de você.
 ~
-83 262636 0 0 0 5
-D0
+83 dcfghis 5
+D U
 URGH! Isso pode te cegar, sabia?
 ~
 ~
@@ -478,11 +551,11 @@ URGH! Isso pode te cegar, sabia?
 S
 #8334
 Seguindo a Luz~
-   Talvez nï¿½o seja uma boa idï¿½ia, mas ï¿½ a ï¿½nica coisa que vocï¿½ pode fazer!
-   Vocï¿½ apenas vai seguindo aquele clarï¿½o acima de vocï¿½...
+   Talvez não seja uma boa idéia, mas é a única coisa que você pode fazer!
+   Você apenas vai seguindo aquele clarão acima de você...
 ~
-83 262636 0 0 0 5
-D0
+83 dcfghis 5
+D U
 URGH! Isso pode te cegar, sabia?
 ~
 ~
@@ -490,98 +563,353 @@ URGH! Isso pode te cegar, sabia?
 S
 #8335
 Uma Estranha Floresta~
-   Vocï¿½ finalmente saiu daquele buraco e agora estï¿½ em uma linda floresta.
-   Vï¿½rias ï¿½rvores foram plantadas aqui, dando vï¿½rias frutas aos esquilos que
-brincam incansavelmente sobre as ï¿½rvores.
+   Você finalmente saiu daquele buraco e agora está em uma linda floresta.
+   Várias árvores foram plantadas aqui, dando várias frutas aos esquilos que
+brincam incansavelmente sobre as árvores.
 ~
-83 4 0 0 0 3
-D0
+83 c 3
+D N
 ~
 ~
 0 -1 8336
 S
 #8336
 A Entrada para a Aldeia~
-   Vocï¿½ estï¿½ diante de dois troncos de madeira que foram cravados
-verticalmente aqui.  Neles, hï¿½ um grande pele de animal de cor branca, onde
-foi escrito algo que vocï¿½ nï¿½o entede, talvez seja uma lï¿½ngua indï¿½gena.  Dois
-grandes ï¿½ndios parecem encarar vocï¿½.  Talvez estejam impedindo sua entranda.
+   Você está diante de dois troncos de madeira que foram cravados
+verticalmente aqui.  Neles, há um grande pele de animal de cor branca, onde
+foi escrito algo que você não entede, talvez seja uma língua indígena.  Dois
+grandes índios parecem encarar você.  Talvez estejam impedindo sua entranda.
 ~
-83 64 0 0 0 2
+83 g 2
+D N
+~
+~
+0 -1 8337
+D W
+~
+~
+0 -1 8341
+D S
+~
+~
+0 -1 8335
+D E
+~
+~
+0 -1 8352
 S
 #8337
 No Centro da Aldeia~
-   Um grande cï¿½rculo foi riscado no chï¿½o daqui.  Isso parece ser o
-"centro" desta Aldeia.  Uma grande fogueira foi feita dentro deste cï¿½rculo
-e vï¿½rios indios correm pulando em volta dela.  Lanï¿½as com carnes de algum
-animal que virou caï¿½a estï¿½ queimando na fogueira.
-   "Que lindo lugar!" Vocï¿½ pensa.
+   Um grande círculo foi riscado no chão daqui.  Isso parece ser o
+"centro" desta Aldeia.  Uma grande fogueira foi feita dentro deste círculo
+e vários indios correm pulando em volta dela.  Lanças com carnes de algum
+animal que virou caça está queimando na fogueira.
+   "Que lindo lugar!" Você pensa.
 ~
-83 64 0 0 0 2
-D0
+83 g 2
+D N
+~
+~
+0 -1 8338
+D S
 ~
 ~
 0 -1 8336
 S
 #8338
 Andando pela Aldeia~
-   Um pouco a frente da fogueira, vocï¿½ nota que pequenos ï¿½ndios brincam
-felizes em um pequeno pedaï¿½o de chï¿½o.  Bebï¿½s e crianï¿½as dï¿½o gargalhadas
+   Um pouco a frente da fogueira, você nota que pequenos índios brincam
+felizes em um pequeno pedaço de chão.  Bebês e crianças dão gargalhadas
 sem parar.  Eles parecem estar achando suas roupas realmente muito
-engraï¿½adas.
+engraçadas.
 ~
-83 64 0 0 0 2
-D0
+83 g 2
+D N
+~
+~
+0 -1 8339
+D S
 ~
 ~
 0 -1 8337
 S
 #8339
 Ainda andando pela Aldeia~
-   Vocï¿½ andou um pouco mais, e agora esta diante da maior toca da Aldeia.
-Ela deve medir um pouco mais que 4 metros, e estï¿½ rodeada por ï¿½ndios que nï¿½o
-gostam nada do seu jeito de olhar para a toca.  O que serï¿½ que tem dentro
+   Você andou um pouco mais, e agora esta diante da maior toca da Aldeia.
+Ela deve medir um pouco mais que 4 metros, e está rodeada por índios que não
+gostam nada do seu jeito de olhar para a toca.  O que será que tem dentro
 dela?
 ~
-83 64 0 0 0 2
-D0
+83 g 2
+D N
+~
+~
+0 -1 8340
+D S
 ~
 ~
 0 -1 8338
 S
 #8340
 Diante da Toca~
-   Vocï¿½ tenta, mas os ï¿½ndios percebem que vocï¿½ esta querendo entrar e se
-jogam em cima de vocï¿½!  Vocï¿½ nï¿½o entende a lï¿½ngua deles, mas vocï¿½ sabe
-que nï¿½o deve ser algo muito gentï¿½l.  Antes que aqueles 10 ï¿½ndios te
-esmaguem, vocï¿½ nota uma misteriosa ï¿½ndia atrï¿½s de uma ï¿½rvore tentando te
+   Você tenta, mas os índios percebem que você esta querendo entrar e se
+jogam em cima de você!  Você não entende a língua deles, mas você sabe
+que não deve ser algo muito gentíl.  Antes que aqueles 10 índios te
+esmaguem, você nota uma misteriosa índia atrás de uma árvore tentando te
 mostrar algo... Que estranho... ela parece apontar para pena de um dos
-ï¿½ndios.
+índios.
 ~
-83 64 0 0 0 2
-D0
+83 g 2
+D N
 ~
 ~
 0 -1 8355
 S
 #8355
 A Toca do Chefe~
-   Ao entrar vocï¿½ olha rï¿½pidamente para todo este ouro que esta
-espalhado pelo chï¿½o.  ï¿½ uma fortuna!  Certamente ï¿½ todo o dinheiro
-da aldeia.  Vocï¿½ nï¿½o estï¿½ pensando em pega-lo, estï¿½?
+   Ao entrar você olha rápidamente para todo este ouro que esta
+espalhado pelo chão.  É uma fortuna!  Certamente é todo o dinheiro
+da aldeia.  Você não está pensando em pega-lo, está?
 ~
-83 64 0 0 0 2
-D0
+83 g 2
+D S
 ~
 ~
 0 -1 8340
 S
+#8341
+O Caminho Oeste~
+   Você resolve seguir caminho oeste.  Você nota que está em um caminho
+que leva a várias tocas.  Há índios por todas as partes aqui!  Por que
+será que eles te olham tão estranho?
+~
+83 g 2
+
+D E
+~
+~
+0 -1 8336
+D W
+~
+~
+0 -1 8342
+S
+#8342
+Seguindo o Caminho Oeste~
+   Tocas, tocas e mais tocas... o que mais você espera ver por aqui?
+~
+83 g 2
+D E
+~
+~
+0 -1 8341
+D W
+~
+~
+0 -1 8343
+S
+#8343
+Seguindo o Caminho Oeste~
+   Tocas, tocas e mais tocas... O que mais você espera ver por aqui?
+~
+83 g 2
+D E
+~
+~
+0 -1 8342
+D W
+~
+~
+0 -1 8344
+S
+#8344
+Seguindo o Caminho Oeste~
+   Tocas, tocas e mais tocas... O que mais você espera ver por aqui?
+~
+83 g 2
+D E
+~
+~
+0 -1 8341
+D W
+~
+~
+0 -1 8345
+S
+#8345
+Seguindo o Caminho Oeste~
+   Tocas, tocas e mais tocas... O que mais você espera ver por aqui?
+~
+83 g 2
+D E
+~
+~
+0 -1 8344
+D W
+~
+~
+0 -1 8346
+S
+#8346
+Uma Grande Árvore na Aldeia~
+   Essa é a maior árvore que você viu na Aldeia.  Seus frutos parecem
+deliciosos, talvez você consiga subir nela, como esquilos e crianças com
+uma pena na cabeça estão fazendo agora.  Uma pequena cerca foi construida
+atrás da árvore, e vai da ponta oeste até a ponte leste.
+~
+83 g 2
+D N
+~
+cerca~
+:n 2 a cerca de madeira
+ad -1 8348
+D E
+~
+~
+0 -1 8345
+D U
+~
+~
+0 -1 8347
+S
+#8347
+No Topo da Árvore~
+   Assim que você sobe, as crianças que estavam aqui em cima, começam a rir
+de você e pulam da árvore rápidamente.  Os esquilos parecem estar incomodados
+com sua presença.
+~
+83 g 2
+D D
+~
+~
+0 -1 8346
+S
+#8348
+Além da Aldeia~
+   Você passou por aquela cerca e veio parar aqui.  Você só vê rochas,
+inclusive, está sobre uma!  Você ouve um barulho de uma cachoeira.
+~
+83 g 2
+D N
+~
+~
+0 -1 8349
+D2
+~
+~
+0 -1 8346
+S
+#8349
+A Cachoeira~
+   É realmente lindo!  Sua água cai de uma altura descomunal, fazendo assim
+um barulho estrondoso.  Talvez essa seja a água mais cristalina que você
+já tenha visto.  Ela forma um lindo lago em constante movimento, você
+consegue ver perfeitamente os peixes nadando.  Grandes rochas bloqueam
+sua passagem para norte, é o fim da linha para você.
+~
+83 g 2
+D N
+~
+rochas~
+:n 2 uma passagem entre as rochas
+ad -1 8350
+D S
+~
+~
+0 -1 8348
+S
+#8350
+Dentro da Cachoeira~
+   Ahá!  Você sabia que devia ter algo aqui!  Após ter dado um grande salto
+da cachoeira para este lugar, você nota que isso é uma caverna, e não há
+muita coisa interessante por aqui...
+~
+83 fgidf 6
+D S
+~
+~
+0 -1 8349
+D N
+~
+~
+0 -1 8351
+S
+#8351
+Dentro da Cachoeira~
+   Você continua andando e ouve alguém chorando.  Quem será e porque
+estaria chorando?  O mistério toma conta deste pequeno buraco de rocha.
+   Vários cristais de formas diferentes podem ser vistos daqui.
+~
+83 fgidf 6
+D S
+~
+~
+0 -1 8350
+D U
+~
+passagem~
+:n 2 uma passagem entre as rochas
+ad -1 8356
+S
+#8352
+O Caminho Leste~
+   Assim que você dá alguns passos, você nota que este é o menor caminho
+que você poderia ter pego entre aqueles da entrada da Aldeia.  Você dá
+mais alguns passos e nota que o caminho acaba por aqui. Uma grande toca
+com uma misteriosa névoa pode ser vista para norte.
+~
+83 g 2
+D W
+~
+~
+0 -1 8336
+D E
+~
+~
+0 -1 8353
+D NE
+~
+cerca~
+:n 2 a cerca
+ad -1 8354
+S
+#8353
+A Toca da Bruxa~
+   Nossa!  Este lugar é horrivel!  Corpos de ratos estão espalhados por
+todas as partes e cantos desta toca.  Um velha e feia bruxa parece estar
+fora de sí fazendo um estranho ritual.  Poções e mais poções estão por cima
+de uma mesa que esta coberta por uma pele de um animal que você nunca viu.
+   Talvez fosse uma boa idéia você sair correndo daqui.
+~
+83 i 2
+D W
+~
+~
+0 -1 8352
+S
+#8354
+Diante de uma Caverna~
+   Incrível!  Essa carverna é muito alta, se você não estiver vendo a entrada
+dela, talvez você pensaria que isso fosse uma montanha.  Gritos que vem de
+dentro da caverna podem ser ouvidos daqui.  Você quer realmente entrar aí?
+~
+83 gc 2
+D N
+~
+entrada~
+:n 2 a entrada da caverna
+ab 8310 8300
+S
 #8356
 Um Pequeno Buraco~
-   Vocï¿½ entrou em um pequeno buraco, e nota que vï¿½rios cristais estï¿½o
-espalhados pelo chï¿½o, e por mais brilhantes que eles sejam, nï¿½o se
-compara a forte luz que vem de um bastï¿½o que foi deixado aqui no chï¿½o.
+   Você entrou em um pequeno buraco, e nota que vários cristais estão
+espalhados pelo chão, e por mais brilhantes que eles sejam, não se
+compara a forte luz que vem de um bastão que foi deixado aqui no chão.
 ~
-83 360 0 0 0 0
+83 fgidf 0
+D S
+~
+~
+0 -1 8351
 S
-$~
+$

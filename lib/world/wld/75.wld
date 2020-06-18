@@ -1,13 +1,13 @@
 #7500
 Um Grande Passeio Pelos Pedregulhos~
-   Vocï¿½ estï¿½ em uma longa via calï¿½ada por pedregulhos.  As grandes pedras de
-granito foram firmemente ajustadas no chï¿½o e ï¿½ medida em que vocï¿½ caminha,
-uma leve camada de pï¿½ se ergue, tomando conta de todo o caminho adiante.  A
-via estï¿½ ladeada por arbustos e pequenas moitas, dando ï¿½ estrada um aspecto
-bastante solitï¿½rio.  A sensaï¿½ï¿½o de estar sendo vigiado estï¿½ muito forte.  O
+   Você está em uma longa via calçada por pedregulhos.  As grandes pedras de
+granito foram firmemente ajustadas no chão e à medida em que você caminha,
+uma leve camada de pó se ergue, tomando conta de todo o caminho adiante.  A
+via está ladeada por arbustos e pequenas moitas, dando à estrada um aspecto
+bastante solitário.  A sensação de estar sendo vigiado está muito forte.  O
 passeio continua para o sul, se encontrando com uma estreita rua a norte.
 ~
-75 68 0 0 0 2
+75 cg 2
 D0
 ~
 ~
@@ -19,14 +19,14 @@ D2
 S
 #7501
 Um Grande Passeio Pelos Pedregulhos~
-   Vocï¿½ estï¿½ em uma longa via calï¿½ada por pedregulhos.  As grandes pedras de
-granito foram firmemente ajustadas no chï¿½o e ï¿½ medida em que vocï¿½ caminha,
-uma leve camada de pï¿½ se ergue, tomando conta de todo o caminho adiante.  A
-via estï¿½ ladeada por arbustos e pequenas moitas, dando ï¿½ estrada um aspecto
-bastante solitï¿½rio.  A sensaï¿½ï¿½o de estar sendo vigiado estï¿½ muito forte.  O
+   Você está em uma longa via calçada por pedregulhos.  As grandes pedras de
+granito foram firmemente ajustadas no chão e à medida em que você caminha,
+uma leve camada de pó se ergue, tomando conta de todo o caminho adiante.  A
+via está ladeada por arbustos e pequenas moitas, dando à estrada um aspecto
+bastante solitário.  A sensação de estar sendo vigiado está muito forte.  O
 passeio continua do norte para o sul.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 ~
@@ -38,14 +38,14 @@ D2
 S
 #7502
 Um Grande Passeio Pelos Pedregulhos~
-   Vocï¿½ estï¿½ em uma longa via calï¿½ada por pedregulhos.  As grandes pedras de
-granito foram firmemente ajustadas no chï¿½o e ï¿½ medida em que vocï¿½ caminha,
-uma leve camada de pï¿½ se ergue, tomando conta de todo o caminho adiante.  A
-via estï¿½ ladeada por arbustos e pequenas moitas, dando ï¿½ estrada um aspecto
-bastante solitï¿½rio.  A sensaï¿½ï¿½o de estar sendo vigiado estï¿½ muito forte.  O
+   Você está em uma longa via calçada por pedregulhos.  As grandes pedras de
+granito foram firmemente ajustadas no chão e à medida em que você caminha,
+uma leve camada de pó se ergue, tomando conta de todo o caminho adiante.  A
+via está ladeada por arbustos e pequenas moitas, dando à estrada um aspecto
+bastante solitário.  A sensação de estar sendo vigiado está muito forte.  O
 passeio continua do norte para o oeste.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 ~
@@ -57,14 +57,14 @@ D3
 S
 #7503
 Um Grande Passeio Pelos Pedregulhos~
-   Vocï¿½ estï¿½ em uma longa via calï¿½ada por pedregulhos.  As grandes pedras de
-granito foram firmemente ajustadas no chï¿½o e ï¿½ medida em que vocï¿½ caminha,
-uma leve camada de pï¿½ se ergue, tomando conta de todo o caminho adiante.  A
-via estï¿½ ladeada por arbustos e pequenas moitas, dando ï¿½ estrada um aspecto
-bastante solitï¿½rio.  A sensaï¿½ï¿½o de estar sendo vigiado estï¿½ muito forte.  O
+   Você está em uma longa via calçada por pedregulhos.  As grandes pedras de
+granito foram firmemente ajustadas no chão e à medida em que você caminha,
+uma leve camada de pó se ergue, tomando conta de todo o caminho adiante.  A
+via está ladeada por arbustos e pequenas moitas, dando à estrada um aspecto
+bastante solitário.  A sensação de estar sendo vigiado está muito forte.  O
 passeio continua do sul para o leste.
 ~
-75 64 0 0 0 2
+75 g 2
 D1
 ~
 ~
@@ -76,15 +76,15 @@ D2
 S
 #7504
 Um Grande Passeio Pelos Pedregulhos~
-   Vocï¿½ estï¿½ em uma longa via calï¿½ada por pedregulhos.  As grandes pedras de
-granito foram firmemente ajustadas no chï¿½o e ï¿½ medida em que vocï¿½ caminha,
-uma leve camada de pï¿½ se ergue, tomando conta de todo o caminho adiante.  A
-via estï¿½ ladeada por arbustos e pequenas moitas, dando ï¿½ estrada um aspecto
-bastante solitï¿½rio.  A sensaï¿½ï¿½o de estar sendo vigiado estï¿½ muito forte.  O
+   Você está em uma longa via calçada por pedregulhos.  As grandes pedras de
+granito foram firmemente ajustadas no chão e à medida em que você caminha,
+uma leve camada de pó se ergue, tomando conta de todo o caminho adiante.  A
+via está ladeada por arbustos e pequenas moitas, dando à estrada um aspecto
+bastante solitário.  A sensação de estar sendo vigiado está muito forte.  O
 passeio continua do norte para o sul.
 
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 ~
@@ -96,15 +96,15 @@ D2
 S
 #7505
 Um Grande Passeio Pelos Pedregulhos~
-   Vocï¿½ estï¿½ em uma longa via calï¿½ada por pedregulhos.  As grandes pedras de
-granito foram firmemente ajustadas no chï¿½o e ï¿½ medida em que vocï¿½ caminha,
-uma leve camada de pï¿½ se ergue, tomando conta de todo o caminho adiante.  A
-via estï¿½ ladeada por arbustos e pequenas moitas, dando ï¿½ estrada um aspecto
-bastante solitï¿½rio.  A sensaï¿½ï¿½o de estar sendo vigiado estï¿½ muito forte.  O
+   Você está em uma longa via calçada por pedregulhos.  As grandes pedras de
+granito foram firmemente ajustadas no chão e à medida em que você caminha,
+uma leve camada de pó se ergue, tomando conta de todo o caminho adiante.  A
+via está ladeada por arbustos e pequenas moitas, dando à estrada um aspecto
+bastante solitário.  A sensação de estar sendo vigiado está muito forte.  O
 passeio continua do norte para o sul.  Longe ao sul, consegue-se ver uma
-clareira bem como o topo de um edifï¿½cio sobre os arbustos.
+clareira bem como o topo de um edifício sobre os arbustos.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 ~
@@ -115,17 +115,17 @@ D2
 0 -1 7506
 S
 #7506
-Um Pï¿½tio De Paralelepï¿½pedo~
-   O paralelepï¿½pedo parece estar bastante gasto.  As pedras estï¿½o bastante
-juntas, mas o constante trï¿½fico por todos os lados acabou criando vï¿½rios
-buracos.  Uma grande fonte domina o centro do pï¿½tio exalando um sentimento
-de muita tranqï¿½ilidade.  Para o oeste, um trilho segue adiante ate um
-portï¿½o.  Para o leste, um caminho repleto de portas feitas em ferro
-ornamental e para o sul existe um portï¿½o em uma parede feita de pedras.
-Existe uma calï¿½ada que comeï¿½a ao norte.  Um galhardete com a crista do Barï¿½o
+Um Pátio De Paralelepípedo~
+   O paralelepípedo parece estar bastante gasto.  As pedras estão bastante
+juntas, mas o constante tráfico por todos os lados acabou criando vários
+buracos.  Uma grande fonte domina o centro do pátio exalando um sentimento
+de muita tranqüilidade.  Para o oeste, um trilho segue adiante ate um
+portão.  Para o leste, um caminho repleto de portas feitas em ferro
+ornamental e para o sul existe um portão em uma parede feita de pedras.
+Existe uma calçada que começa ao norte.  Um galhardete com a crista do Barão
 Darwin voa sobre a porta de ferro.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 ~
@@ -136,8 +136,9 @@ D1
 0 -1 7508
 D2
 ~
-portï¿½o~
-1 7501 7537
+portão~
+:n 1 o portão
+ab 7501 7537
 D3
 ~
 ~
@@ -145,37 +146,39 @@ D3
 S
 #7507
 Um Caminho Com Cascalho~
-   O caminho com cascalho conduz vocï¿½ do pï¿½tio com paralelepï¿½pedo para o
-leste onde existe um grande portï¿½o na parede.  Por causa de tantos buracos
-no caminho, esta deve ser a entrada de serviï¿½o principal.  O portï¿½o na
-parede foi feito de uma robusta madeira de carvalho e estï¿½ reforï¿½ado com
-grandes pedaï¿½os de metal.  A parede de pedras alcanï¿½a 20 pï¿½s e foi
-construï¿½do com pedras lisas que foram retiradas de uma pedreira.  Enquanto a
-parede ï¿½ baixa para batalhas, parece ser bastante robusta e capaz de
-suportar a maioria dos ataques dos nï¿½o-militares com bastante facilidade.
+   O caminho com cascalho conduz você do pátio com paralelepípedo para o
+leste onde existe um grande portão na parede.  Por causa de tantos buracos
+no caminho, esta deve ser a entrada de serviço principal.  O portão na
+parede foi feito de uma robusta madeira de carvalho e está reforçado com
+grandes pedaços de metal.  A parede de pedras alcança 20 pés e foi
+construído com pedras lisas que foram retiradas de uma pedreira.  Enquanto a
+parede é baixa para batalhas, parece ser bastante robusta e capaz de
+suportar a maioria dos ataques dos não-militares com bastante facilidade.
 ~
-75 64 0 0 0 2
+75 g 2
 D1
 ~
 ~
 0 -1 7506
 D2
 ~
-portï¿½o~
-1 7503 7510
+portão~
+:n 1 o portão
+ab 7503 7510
 S
 #7508
 Um Caminho Coberto~
-   Vocï¿½ estï¿½ caminhando por um corredor coberto.  As colunas de pedra
-sustentam um telhado feito de palha.  O caminho estï¿½ coberto com pedras
-finamente esmagadas.  Para o oeste pode ser visto um grande pï¿½tio de
-paralelepï¿½pedo e tambï¿½m um portï¿½o na parede de pedras ao sul.
+   Você está caminhando por um corredor coberto.  As colunas de pedra
+sustentam um telhado feito de palha.  O caminho está coberto com pedras
+finamente esmagadas.  Para o oeste pode ser visto um grande pátio de
+paralelepípedo e também um portão na parede de pedras ao sul.
 ~
-75 64 0 0 0 0
+75 g 0
 D2
 ~
-portï¿½o~
-1 7500 7523
+portão~
+:n 1 o portão
+ab 7500 7523
 D3
 ~
 ~
@@ -183,30 +186,32 @@ D3
 S
 #7509
 Caminhando Pelo Gramado~
-   Vocï¿½ estï¿½ caminhando com muito cuidado por este chï¿½o.  Os arbustos foram
-podados muito recentemente e a grama estï¿½ bastante curta.  Ao pisar na grama
-vocï¿½ sente que seus pï¿½s ficam mais leves a cada passo.  Algumas elevaï¿½ï¿½es
+   Você está caminhando com muito cuidado por este chão.  Os arbustos foram
+podados muito recentemente e a grama está bastante curta.  Ao pisar na grama
+você sente que seus pés ficam mais leves a cada passo.  Algumas elevações
 para o leste e sul.  Um caminho de pedregulhos limita o gramado no lado
 oeste.
 ~
-75 64 0 0 0 2
+75 g 2
 D3
 ~
 ~
 0 -1 7510
 S
+
 #7510
 Um Caminho Com Cascalho~
-   Um caminho de cascalho se estende para o oeste.  Para o norte um portï¿½o
+   Um caminho de cascalho se estende para o oeste.  Para o norte um portão
 foi fixado em uma parede de pedra.  Para o sul, um gramado que parece ter
 sido cortado muito recentemente e para o sudoeste, o caminho continua ate
-algumas construï¿½ï¿½es.
+algumas construções.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
-portï¿½o~
-0 0 7507
+portão~
+:n 1 o portão
+ag 0 7507
 D1
 ~
 ~
@@ -223,11 +228,11 @@ S
 #7511
 Um Caminho Com Cascalho~
    Um caminho de cascalho se estende para o oeste.  Para o noroeste, um
-portï¿½o foi fixado em uma parede de pedras muito alto.  Para o sul, um
+portão foi fixado em uma parede de pedras muito alto.  Para o sul, um
 gramado que parece ter sido cortado muito recentemente e para o sudoeste, o
-caminho continua ate algumas construï¿½ï¿½es.
+caminho continua ate algumas construções.
 ~
-75 64 0 0 0 2
+75 g 2
 D1
 ~
 ~
@@ -245,11 +250,11 @@ S
 #7512
 Um Caminho Com Cascalho~
    Um caminho de cascalho se estende para o oeste.  Para o noroeste, um
-portï¿½o foi fixado em uma parede de pedras muito alto.  Para o sul, um
+portão foi fixado em uma parede de pedras muito alto.  Para o sul, um
 gramado que parece ter sido cortado muito recentemente e para o sudoeste, o
-caminho continua ate algumas construï¿½ï¿½es.
+caminho continua ate algumas construções.
 ~
-75 64 0 0 0 2
+75 g 2
 D1
 ~
 ~
@@ -261,31 +266,33 @@ D2
 S
 #7513
 O Gramado Oeste~
-   Vocï¿½ estï¿½ caminhando com muito cuidado por este chï¿½o.  Os arbustos foram
-podados muito recentemente e a grama estï¿½ bastante curta.  Ao pisar na grama
-vocï¿½ sente que seus pï¿½s ficam mais leves a cada passo.  Algumas elevaï¿½ï¿½es
+   Você está caminhando com muito cuidado por este chão.  Os arbustos foram
+podados muito recentemente e a grama está bastante curta.  Ao pisar na grama
+você sente que seus pés ficam mais leves a cada passo.  Algumas elevações
 para o leste e sul.  Um caminho de pedregulhos limita o gramado para o lado
 norte e oeste.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 ~
+
 0 -1 7510
 D3
 ~
 ~
 0 -1 7514
 S
+
 #7514
 O Gramado Oeste~
-   Vocï¿½ estï¿½ caminhando com muito cuidado por este chï¿½o.  Os arbustos foram
-podados muito recentemente e a grama estï¿½ bastante curta.  Ao pisar na grama
-vocï¿½ sente que seus pï¿½s ficam mais leves a cada passo.  Algumas elevaï¿½ï¿½es
+   Você está caminhando com muito cuidado por este chão.  Os arbustos foram
+podados muito recentemente e a grama está bastante curta.  Ao pisar na grama
+você sente que seus pés ficam mais leves a cada passo.  Algumas elevações
 para o leste e um caminho de pedregulhos limita o gramado para o lado norte
 e oeste.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 ~
@@ -302,11 +309,11 @@ S
 #7515
 Um Caminho Com Cascalho~
    Um caminho de cascalho se estende para o oeste.  Para o nordeste, um
-portï¿½o foi fixado em uma parede de pedras muito alto.  Para o sul e leste,
+portão foi fixado em uma parede de pedras muito alto.  Para o sul e leste,
 um gramado que parece ter sido cortado muito recentemente.  Para o oeste, o
-caminho segue junto a varias construï¿½ï¿½es ate um ponto onde elas terminam.
+caminho segue junto a varias construções ate um ponto onde elas terminam.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 ~
@@ -327,12 +334,12 @@ S
 #7516
 Antes da Estalagem para Carruagens~
    Um caminho de cascalho se estende para o oeste.  Para o nordeste, um
-portï¿½o foi fixado em uma parede de pedras muito alto.  Para o leste, um
+portão foi fixado em uma parede de pedras muito alto.  Para o leste, um
 gramado que parece ter sido cortado muito recentemente.  Para o oeste existe
-uma estalagem para carruagens e o caminho continua atï¿½ uma outra construï¿½ï¿½o,
+uma estalagem para carruagens e o caminho continua até uma outra construção,
 terminando perto de um curral e uma ferraria.
 ~
-75 64 0 0 0 2
+75 g 2
 D1
 ~
 ~
@@ -344,41 +351,44 @@ D2
 D3
 ~
 porta~
-0 0 7517
+:n 2 a porta
+ag 0 7517
 S
 #7517
 A Estalagem para Carruagens~
    Este local foi feito especialmente para as carruagens dos nobres que aqui
-vï¿½m visitar.  Agora existe somente uma carruagem que pertence ao Barï¿½o.  A
-grande porta da construï¿½ï¿½o estï¿½ localizada ao leste.
+vêm visitar.  Agora existe somente uma carruagem que pertence ao Barão.  A
+grande porta da construção está localizada ao leste.
 ~
-75 65 0 0 0 0
+75 ag 0
 D1
 ~
 porta~
-0 0 7516
+:n 2 a porta
+ag 0 7516
 S
 #7518
-Os Estï¿½bulos~
-   Os estï¿½bulos estï¿½o sendo mantidos bem limpos.  Ferraduras para os cavalos
-foram empilhados e pendurados ao longo da parede leste.  Existem vï¿½rias
-baias, sendo que todas estï¿½o vazias neste momento.  Existem duas grandes
+Os Estábulos~
+   Os estábulos estão sendo mantidos bem limpos.  Ferraduras para os cavalos
+foram empilhados e pendurados ao longo da parede leste.  Existem várias
+baias, sendo que todas estão vazias neste momento.  Existem duas grandes
 portas ao leste.
 ~
-75 65 0 0 0 0
+75 ag 0
 D1
 ~
 celeiro porta~
-0 0 7519
+:n 2 a porta
+ag 0 7519
 S
 #7519
 O Fim Do Caminho Com Pedregulho~
-   Vocï¿½ estï¿½ no fim do grande caminho com cascalho.  Os estï¿½bulos estï¿½o para
-o oeste, sendo que estï¿½o juntos ao curral que estï¿½ ao sul.  Consegue-se ver
-uma ferraria acima, no lado leste do curral.  Existe um grande portï¿½o na
-direï¿½ï¿½o do curral, ou seja, ao sul.
+   Você está no fim do grande caminho com cascalho.  Os estábulos estão para
+o oeste, sendo que estão juntos ao curral que está ao sul.  Consegue-se ver
+uma ferraria acima, no lado leste do curral.  Existe um grande portão na
+direção do curral, ou seja, ao sul.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 ~
@@ -389,21 +399,23 @@ D1
 0 -1 7520
 D2
 ~
-portï¿½o~
-0 0 7522
+portão~
+:n 1 o portão
+ag 0 7522
 D3
 ~
 celeiro porta~
-0 0 7518
+:n 2 a porta
+ag 0 7518
 S
 #7520
 O Gramado Oeste~
-   Vocï¿½ estï¿½ caminhando com muito cuidado por este chï¿½o.  Os arbustos foram
-podados muito recentemente e a grama estï¿½ bastante curta.  Ao pisar na grama
-vocï¿½ sente que seus pï¿½s ficam mais leves a cada passo.  Algumas elevaï¿½ï¿½es
+   Você está caminhando com muito cuidado por este chão.  Os arbustos foram
+podados muito recentemente e a grama está bastante curta.  Ao pisar na grama
+você sente que seus pés ficam mais leves a cada passo.  Algumas elevações
 para o leste e um caminho de pedregulhos limita o gramado para o lado oeste.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 ~
@@ -411,7 +423,8 @@ D0
 D2
 ~
 porta~
-0 0 7521
+:n 2 a porta
+ag 0 7521
 D3
 ~
 ~
@@ -420,51 +433,56 @@ S
 #7521
 A Ferraria~
    A ferraria possui uma grande forja localizada bem no centro da sala.  A
-forja estï¿½ aparentemente gasta e nï¿½o parece ter qualquer sinal de ter sido
+forja está aparentemente gasta e não parece ter qualquer sinal de ter sido
 utilizada recentemente.  Algumas estacas de metal foram colocadas dentro de
-grandes barris e outras foram apoiadas contra as paredes da construï¿½ï¿½o.
-Vï¿½rios barris vazios estï¿½o prï¿½ximos ï¿½ forja.  Hï¿½ um porta dupla para o oeste
+grandes barris e outras foram apoiadas contra as paredes da construção.
+Vários barris vazios estão próximos à forja.  Há um porta dupla para o oeste
 e uma porta menor para o norte.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 porta~
-0 0 7520
+:n 2 a porta
+ag 0 7520
 D3
 ~
 porta~
-0 0 7522
+:n 2 a porta
+ag 0 7522
 S
 #7522
 O Curral~
-   O curral estï¿½ bastante sujo e parece nï¿½o ter sido limpo faz muito tempo.
-Existe um portï¿½o ao norte que nï¿½o estï¿½ muito distante.  Para o leste hï¿½ uma
-porta que dï¿½ para a ferraria onde ï¿½ ferrado os cavalos.  Fora do portï¿½o ao
+   O curral está bastante sujo e parece não ter sido limpo faz muito tempo.
+Existe um portão ao norte que não está muito distante.  Para o leste há uma
+porta que dá para a ferraria onde é ferrado os cavalos.  Fora do portão ao
 norte existe um caminho com cascalho que segue para o lado ocidental.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
-portï¿½o~
-0 0 7519
+portão~
+:n 1 o portão
+ag 0 7519
 D1
 ~
 porta~
-0 0 7521
+:n 2 a porta
+ag 0 7521
 S
 #7523
 Um Caminho Coberto~
-   Vocï¿½ estï¿½ se movendo por um caminho coberto.  As colunas de pedra
-sustentam um telhado feito de palha.  O caminho estï¿½ coberto com pedras que
-foram finamente esmagadas.  Existe um portï¿½o na parede de pedras ao norte e
+   Você está se movendo por um caminho coberto.  As colunas de pedra
+sustentam um telhado feito de palha.  O caminho está coberto com pedras que
+foram finamente esmagadas.  Existe um portão na parede de pedras ao norte e
 o caminho continua ao leste.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
-portï¿½o~
-1 7500 7508
+portão~
+:n 1 o portão
+ab 7500 7508
 D1
 ~
 ~
@@ -472,12 +490,12 @@ D1
 S
 #7524
 Um Caminho Coberto~
-   Vocï¿½ estï¿½ se movendo por um caminho coberto.  As colunas de pedra
-sustentam um telhado feito de palha.  O caminho estï¿½ coberto com pedras que
+   Você está se movendo por um caminho coberto.  As colunas de pedra
+sustentam um telhado feito de palha.  O caminho está coberto com pedras que
 foram finamente esmagadas.  O caminho continua para o leste e oeste.  Para o
-sul pode ser visto uma grande ï¿½rea gramï¿½nea.
+sul pode ser visto uma grande área gramínea.
 ~
-75 64 0 0 0 0
+75 g 0
 D1
 ~
 ~
@@ -493,13 +511,13 @@ D3
 S
 #7525
 Caminhando Pelo Gramado~
-   Vocï¿½ estï¿½ caminhando com muito cuidado por este chï¿½o.  Os arbustos foram
-podados muito recentemente e a grama estï¿½ bastante curta.  Ao pisar na grama
-vocï¿½ sente que seus pï¿½s ficam mais leves a cada passo.  Algumas elevaï¿½ï¿½es
+   Você está caminhando com muito cuidado por este chão.  Os arbustos foram
+podados muito recentemente e a grama está bastante curta.  Ao pisar na grama
+você sente que seus pés ficam mais leves a cada passo.  Algumas elevações
 para o oeste e sul.  Um caminho de pedregulhos limita o gramado no lado
 norte e um caminho bastante usado pode ser visto ao leste.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 ~
@@ -511,11 +529,11 @@ D1
 S
 #7526
 Um Largo Caminho~
-   O caminho mostra sinais de ser bastante utilizado.  Hï¿½ um caminho coberto
-para o norte e uma construï¿½ï¿½o para o leste.  Para o oeste, uma grande ï¿½rea
+   O caminho mostra sinais de ser bastante utilizado.  Há um caminho coberto
+para o norte e uma construção para o leste.  Para o oeste, uma grande área
 gramada.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 ~
@@ -523,7 +541,8 @@ D0
 D1
 ~
 porta~
-0 7560 7529
+:n 2 a porta
+abg 7560 7529
 D3
 ~
 ~
@@ -531,18 +550,19 @@ D3
 S
 #7527
 O Fim Do Caminho Coberto~
-   Vocï¿½ estï¿½ no fim do caminho coberto.  As colunas de pedra sustentam um
-telhado feito de palha.  O caminho estï¿½ coberto com pedras que foram
+   Você está no fim do caminho coberto.  As colunas de pedra sustentam um
+telhado feito de palha.  O caminho está coberto com pedras que foram
 finamente esmagadas.  O caminho continua para o oeste.  Para o sul um grande
-caminho que conduz ate as paredes e para o sudoeste ate uma construï¿½ï¿½o.
-Para o leste, pode ser visto uma construï¿½ï¿½o de onde estï¿½ vindo um barulho
+caminho que conduz ate as paredes e para o sudoeste ate uma construção.
+Para o leste, pode ser visto uma construção de onde está vindo um barulho
 intenso.
 ~
-75 64 0 0 0 0
+75 g 0
 D1
 ~
 porta~
-0 0 7528
+:n 2 a porta
+ag 0 7528
 D2
 ~
 ~
@@ -554,22 +574,23 @@ D3
 S
 #7528
 A Loja Do Joalheiro~
-   A loja estï¿½ muito limpa.  Uma grande mesa de trabalho ocupa grande parte
+   A loja está muito limpa.  Uma grande mesa de trabalho ocupa grande parte
 desta sala.  Existe uma porta ao oeste.
 ~
-75 64 0 0 0 0
+75 g 0
 D3
 ~
 porta~
-0 0 7527
+:n 2 a porta
+ag 0 7527
 S
 #7529
 A Loja da Ourives~
-   Este ambiente possui um cheiro intenso de fuligem e metal aquecido.  Hï¿½
+   Este ambiente possui um cheiro intenso de fuligem e metal aquecido.  Há
 marcas de queimado em toda a parede norte que parece ter sido feito por
-fogo.  Vocï¿½ vï¿½ uma porta ao oeste.
+fogo.  Você vê uma porta ao oeste.
 ~
-75 64 0 0 0 0
+75 g 0
 D2
 ~
 ~
@@ -577,15 +598,16 @@ D2
 D3
 ~
 porta~
-0 7503 7526
+:n 2 a porta
+abg 7503 7526
 S
 #7530
 Uma Passagem Estreita~
-   A passagem ï¿½ bastante estreita e escura.  Existe um caminho bastante
-gasto que se estende da parede ao norte atï¿½ uma parede feita de pedras ao
+   A passagem é bastante estreita e escura.  Existe um caminho bastante
+gasto que se estende da parede ao norte até uma parede feita de pedras ao
 sul.
 ~
-75 65 0 0 0 2
+75 ag 2
 D0
 ~
 ~
@@ -593,32 +615,34 @@ D0
 D2
 ~
 parede~
-0 7504 7531
+:n 2 a parede
+abg 7504 7531
 S
 #7531
-Prï¿½ximo A Uma Parede De Pedras~
-   As altas paredes ao seu redor sustentam toda a elevaï¿½ï¿½o acima.  Para o
-sul, consegue-se ouvir travï¿½s de uma grande abertura gritos de alguï¿½m
+Próximo A Uma Parede De Pedras~
+   As altas paredes ao seu redor sustentam toda a elevação acima.  Para o
+sul, consegue-se ouvir través de uma grande abertura gritos de alguém
 excitado tocando no ar.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 parede~
-0 7594 7530
+:n 2 a parede
+abg 7594 7530
 D2
 ~
 ~
 0 -1 7532
 S
 #7532
-A ï¿½rea De Treinamento~
-   Vocï¿½ estï¿½ em uma grande ï¿½rea aberta.  Consegue-se ver os equipamentos
-necessï¿½rios para o treinamento dos soldados.  Alguns bonecos feitos de pano
-foram pendurados em ï¿½rvores ao longo da extremidade do campo e em alguns
-troncos de madeira fincados no chï¿½o.
+A Área De Treinamento~
+   Você está em uma grande área aberta.  Consegue-se ver os equipamentos
+necessários para o treinamento dos soldados.  Alguns bonecos feitos de pano
+foram pendurados em árvores ao longo da extremidade do campo e em alguns
+troncos de madeira fincados no chão.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 ~
@@ -630,28 +654,29 @@ D2
 S
 #7533
 O Abrigo Das Armaduras~
-   Este ï¿½ o abrigo das armaduras.  Um aprendiz veio aqui para trocar a
-armadura antes de ir para o campo de treinamento.  O desagradï¿½vel cheiro de
+   Este é o abrigo das armaduras.  Um aprendiz veio aqui para trocar a
+armadura antes de ir para o campo de treinamento.  O desagradável cheiro de
 suor infesta todo o ar do abrigo.  Existe uma porta ao sul.
 ~
-75 73 0 0 0 0
+75 dga 0
 D2
 ~
 porta~
-0 0 7535
+:n 2 a porta
+ag 0 7535
 D5
 ~
 ~
 0 -1 7586
 S
 #7534
-A ï¿½rea De Treinamento~
-   Vocï¿½ estï¿½ em uma grande ï¿½rea aberta.  Consegue-se ver os equipamentos
-necessï¿½rios para o treinamento dos soldados.  Alguns bonecos feitos de pano
-foram pendurados em ï¿½rvores ao longo da extremidade do campo e em alguns
-troncos de madeira fincados no chï¿½o.
+A Área De Treinamento~
+   Você está em uma grande área aberta.  Consegue-se ver os equipamentos
+necessários para o treinamento dos soldados.  Alguns bonecos feitos de pano
+foram pendurados em árvores ao longo da extremidade do campo e em alguns
+troncos de madeira fincados no chão.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 ~
@@ -662,18 +687,19 @@ D3
 0 -1 7535
 S
 #7535
-A ï¿½rea De Treinamento~
-   Vocï¿½ estï¿½ em uma grande ï¿½rea aberta.  Consegue-se ver os equipamentos
-necessï¿½rios para o treinamento dos soldados.  Alguns bonecos feitos de pano
-foram pendurados em ï¿½rvores ao longo da extremidade do campo e em alguns
-troncos de madeira fincados no chï¿½o.  Existe uma pequena construï¿½ï¿½o ao
+A Área De Treinamento~
+   Você está em uma grande área aberta.  Consegue-se ver os equipamentos
+necessários para o treinamento dos soldados.  Alguns bonecos feitos de pano
+foram pendurados em árvores ao longo da extremidade do campo e em alguns
+troncos de madeira fincados no chão.  Existe uma pequena construção ao
 norte.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 porta~
-0 0 7533
+:n 2 a porta
+ag 0 7533
 D1
 ~
 ~
@@ -684,14 +710,14 @@ D3
 0 -1 7536
 S
 #7536
-A ï¿½rea De Treinamento~
-   As altas paredes ao seu redor sustentam toda a elevaï¿½ï¿½o acima.
-Consegue-se ver os equipamentos necessï¿½rios para o treinamento dos soldados.
-Alguns bonecos feitos de pano foram pendurados em ï¿½rvores ao longo da
-extremidade do campo e em alguns troncos de madeira fincados no chï¿½o.  O
+A Área De Treinamento~
+   As altas paredes ao seu redor sustentam toda a elevação acima.
+Consegue-se ver os equipamentos necessários para o treinamento dos soldados.
+Alguns bonecos feitos de pano foram pendurados em árvores ao longo da
+extremidade do campo e em alguns troncos de madeira fincados no chão.  O
 campo se alarga ao leste.
 ~
-75 64 0 0 0 2
+75 g 2
 D1
 ~
 ~
@@ -699,60 +725,65 @@ D1
 S
 #7537
 Um Modo De Entrar~
-   Esta entrada estï¿½ bastante desgastada.  Os buracos no teto e algumas
+   Esta entrada está bastante desgastada.  Os buracos no teto e algumas
 rachaduras ao longo das paredes faz parecer este lugar muito antigo.
-Obviamente que o responsï¿½vel planejou estes buracos e rachaduras mais que
-uma simples decoraï¿½ï¿½o.  Ao norte estï¿½ um grande pï¿½tio de paralelepï¿½pedo com
-um enorme portï¿½o de ferro.  Para o sul uma sï¿½lida porta bloqueia sua
+Obviamente que o responsável planejou estes buracos e rachaduras mais que
+uma simples decoração.  Ao norte está um grande pátio de paralelepípedo com
+um enorme portão de ferro.  Para o sul uma sólida porta bloqueia sua
 passagem.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
-portï¿½o~
-1 7501 7506
+portão~
+:n 1 o portão
+ab 7501 7506
 D2
 ~
 porta dupla~
-0 7502 7538
+:n 2 a porta dupla
+abg 7502 7538
 S
 #7538
-A Recepï¿½ï¿½o~
-   O corredor da recepï¿½ï¿½o do Barï¿½o Darwin ï¿½ todo em estilo espartano.
-Carï¿½ssimos carpetes foram postos tanto no chï¿½o quanto nas paredes.  O
-principal propï¿½sito para isto ï¿½ somente para a defensiva.  As portas duplas
-ao norte levam para fora deste lugar e para o sul hï¿½ uma porta de vidro que
+A Recepção~
+   O corredor da recepção do Barão Darwin é todo em estilo espartano.
+Caríssimos carpetes foram postos tanto no chão quanto nas paredes.  O
+principal propósito para isto é somente para a defensiva.  As portas duplas
+ao norte levam para fora deste lugar e para o sul há uma porta de vidro que
 consegue-se enxergar seu interior.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 porta dupla~
-0 0 7537
+:n 2 a porta dupla
+ag 0 7537
 D2
 ~
 porta vidro~
-0 0 7539
+:n 2 a porta de vidro
+ag 0 7539
 S
 #7539
 O Corredor Decorado~
-   O Corredor foi generosamente decorado.  Carï¿½ssimos carpetes foram postos
-tanto no chï¿½o quanto nas paredes.  Pinturas de pessoas dignas foram desenhas
-nas tapeï¿½arias.  Hï¿½ um busto do mesmo homem da fonte fixada no lado oeste do
-corredor.  Ele seria um homem digno se nï¿½o fosse seu olhar triste.  Para o
+   O Corredor foi generosamente decorado.  Caríssimos carpetes foram postos
+tanto no chão quanto nas paredes.  Pinturas de pessoas dignas foram desenhas
+nas tapeçarias.  Há um busto do mesmo homem da fonte fixada no lado oeste do
+corredor.  Ele seria um homem digno se não fosse seu olhar triste.  Para o
 norte consegue-se ver portas de vidro e o corredor continua ao sul.  Portas
-feitas em madeira estï¿½o ao leste e para o oeste o caminho continua pelo
+feitas em madeira estão ao leste e para o oeste o caminho continua pelo
 corredor.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 porta vidro~
-0 0 7538
+ag 0 7538
 D1
 ~
 leste porta~
-0 0 7541
+:n 2 a porta leste
+ag 0 7541
 D2
 ~
 ~
@@ -760,41 +791,44 @@ D2
 D3
 ~
 oeste porta~
-0 0 7540
+:n 2 a porta oeste
+ag 0 7540
 S
 #7540
 O Quarto Dos Mantos~
    Este pequeno quarto possui alguns cabides fixado em suas paredes.  Nestes
-cabides estï¿½o pendurados alguns mantos e capas.  Existe uma porta ao leste.
+cabides estão pendurados alguns mantos e capas.  Existe uma porta ao leste.
 ~
-75 64 0 0 0 0
+75 g 0
 D1
 ~
 porta~
-0 0 7539
+:n 2 a porta
+ag 0 7539
 S
 #7541
 Sala De Espera~
-   A decoraï¿½ï¿½o desta sala ï¿½ da mais alta qualidade. As grandes cadeiras 
-de couro tï¿½m ouro nas pernas e nos descansos. A mesinha de carvalho 
-prï¿½xima ï¿½ parede do leste foi esculpida com o chapï¿½u do Barï¿½o sobre o 
+   A decoração desta sala é da mais alta qualidade. As grandes cadeiras 
+de couro têm ouro nas pernas e nos descansos. A mesinha de carvalho 
+próxima à parede do leste foi esculpida com o chapéu do Barão sobre o 
 topo da mesinha. Obviamente a sala foi feita para acomodar aqueles que 
-esperam pelo Barï¿½o. A ï¿½nica saï¿½da ï¿½ ao oeste por uma porta.
+esperam pelo Barão. A única saída é ao oeste por uma porta.
 ~
-75 64 0 0 0 0
+75 g 0
 D3
 ~
 porta~
-0 0 7539
+:n 2 a porta
+ag 0 7539
 S
 #7542
 O Corredor Decorado~
-   O corredor foi generosamente decorado.  Carï¿½ssimos carpetes e tapeï¿½arias
-estï¿½o pendurados ao longo das paredes em ambos os lados.  As paredes de
-pedra foram cobertas com painï¿½is de madeira que foram polidos com cera.  Ao
-norte e para sul o corredor continua e ao oeste hï¿½ porta de carvalho.
+   O corredor foi generosamente decorado.  Caríssimos carpetes e tapeçarias
+estão pendurados ao longo das paredes em ambos os lados.  As paredes de
+pedra foram cobertas com painéis de madeira que foram polidos com cera.  Ao
+norte e para sul o corredor continua e ao oeste há porta de carvalho.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 ~
@@ -806,44 +840,47 @@ D2
 D3
 ~
 porta~
-0 0 7543
+:n 2 a porta
+ag 0 7543
 S
 #7543
 Sala De Espera~
-   A decoraï¿½ï¿½o desta sala ï¿½ da mais alta qualidade.  As largas cadeiras de
-couro tï¿½m ouro nas pernas e nos descansos.  A pequena mesa de carvalho
-prï¿½xima da parede leste foi entalhada com o timbre do Barï¿½o.  Obviamente a
+   A decoração desta sala é da mais alta qualidade.  As largas cadeiras de
+couro têm ouro nas pernas e nos descansos.  A pequena mesa de carvalho
+próxima da parede leste foi entalhada com o timbre do Barão.  Obviamente a
 sala foi feita com o objetivo de impressionar aqueles que vem para falar com
-o Barï¿½o.  A ï¿½nica saï¿½da fica para o leste.
+o Barão.  A única saída fica para o leste.
 ~
-75 64 0 0 0 0
+75 g 0
 D1
 ~
 porta~
-0 0 7542
+:n 2 a porta
+ag 0 7542
 S
 #7544
-Sala De Reuniï¿½es~
-   A sala de reuniï¿½es ï¿½ muito espaï¿½osa. Uma larga mesa de madeira com 
-vï¿½rias cadeiras alinhadas em volta dela estï¿½o aqui. Uma cadeira feita 
-de couro estï¿½ em um dos cantos da mesa. O chï¿½o embaixo e em volta da 
-mesa foi coberto com um carpete vermelho. Uma lareira foi construï¿½da 
+Sala De Reuniões~
+   A sala de reuniões é muito espaçosa. Uma larga mesa de madeira com 
+várias cadeiras alinhadas em volta dela estão aqui. Uma cadeira feita 
+de couro está em um dos cantos da mesa. O chão embaixo e em volta da 
+mesa foi coberto com um carpete vermelho. Uma lareira foi construída 
 aqui na parede ao leste, embora esteja apagada.
 ~
-75 64 0 0 0 0
+75 g 0
 D3
 ~
 porta~
-0 0 7545
+:n 2 a porta
+ag 0 7545
 S
 #7545
 O Corredor Decorado~
-   O corredor foi generosamente decorado.  Carï¿½ssimos carpetes foram postos
-tanto no chï¿½o quanto nas paredes.  As paredes de pedra foram cobertas com
-painï¿½is de madeira que foram polidos com cera de abelha.  Para o norte e ao
-sul o corredor continua e para o leste hï¿½ uma porta de carvalho.
+   O corredor foi generosamente decorado.  Caríssimos carpetes foram postos
+tanto no chão quanto nas paredes.  As paredes de pedra foram cobertas com
+painéis de madeira que foram polidos com cera de abelha.  Para o norte e ao
+sul o corredor continua e para o leste há uma porta de carvalho.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 ~
@@ -851,7 +888,8 @@ D0
 D1
 ~
 porta~
-0 0 7544
+:n 2 a porta
+ag 0 7544
 D2
 ~
 ~
@@ -859,13 +897,13 @@ D2
 S
 #7546
 Cruzamento De Corredores~
-   A intercessï¿½o tem corredores que dï¿½o para todos os quatro pontos
-cardeais.  Os corredores do leste e oeste sï¿½o muito simples, jï¿½ os
-corredores para norte e sul sï¿½o mais decorados que os demais.  Para o norte
-o ruï¿½do de metal pode ser ouvido e para o oeste alguns sons de serraï¿½ï¿½o de
+   A intercessão tem corredores que dão para todos os quatro pontos
+cardeais.  Os corredores do leste e oeste são muito simples, já os
+corredores para norte e sul são mais decorados que os demais.  Para o norte
+o ruído de metal pode ser ouvido e para o oeste alguns sons de serração de
 madeira podem ser ouvidos.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 ~
@@ -885,12 +923,12 @@ D3
 S
 #7547
 O Corredor Dos Criados~
-   A fraca luz do corredor de pedra parece nï¿½o iluminar nada.  Aqui hï¿½ um
-velho tapete que foi posto na parede, sua qualidade nï¿½o ï¿½ nada comparado as
-tapeï¿½arias das outras partes deste lugar.  O simples corredor continua para
-o leste e uma intercessï¿½o fica para o oeste.
+   A fraca luz do corredor de pedra parece não iluminar nada.  Aqui há um
+velho tapete que foi posto na parede, sua qualidade não é nada comparado as
+tapeçarias das outras partes deste lugar.  O simples corredor continua para
+o leste e uma intercessão fica para o oeste.
 ~
-75 64 0 0 0 0
+75 g 0
 D1
 ~
 ~
@@ -902,20 +940,22 @@ D3
 S
 #7548
 O Corredor Dos Criados~
-   A fraca luz do corredor de pedra parece nï¿½o iluminar nada.  Aqui hï¿½ um
-velho tapete que foi posto na parede, sua qualidade nï¿½o ï¿½ nada comparado ï¿½s
-tapeï¿½arias das outras partes deste lugar.  Para no norte hï¿½ uma porta de
+   A fraca luz do corredor de pedra parece não iluminar nada.  Aqui há um
+velho tapete que foi posto na parede, sua qualidade não é nada comparado às
+tapeçarias das outras partes deste lugar.  Para no norte há uma porta de
 vidro.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 sul porta~
-0 0 7549
+:n 2 a porta sul
+ag 0 7549
 D1
 ~
 leste porta~
-0 0 7550
+:n 2 a porta leste
+ag 0 7550
 D2
 ~
 ~
@@ -927,39 +967,41 @@ D3
 S
 #7549
 O Quarto do Criado Mestre~
-   Este quarto ï¿½ razoavelmente grande (para um criado).  Uma coisa que ï¿½
-incomum ï¿½ que a sala tem sua prï¿½pria lareira posta na parede norte.  Uma
-cortina divide o quarto do leste ao oeste.  Na cortina leste ï¿½ possï¿½vel ver
-uma cama e um criado-mudo.  Hï¿½ uma porta na parede sul.
+   Este quarto é razoavelmente grande (para um criado).  Uma coisa que é
+incomum é que a sala tem sua própria lareira posta na parede norte.  Uma
+cortina divide o quarto do leste ao oeste.  Na cortina leste é possível ver
+uma cama e um criado-mudo.  Há uma porta na parede sul.
 ~
-75 64 0 0 0 0
+75 g 0
 D2
 ~
 porta~
-0 0 7548
+:n 2 a porta
+ag 0 7548
 S
 #7550
 O Quarto Dos Empregados~
-   Este quarto ï¿½ muito pequeno.  Uma grande cama com dossel foi posta na
-sala com uma cortina de renda em volta dela com um sofisticado laï¿½o.  Hï¿½ uma
-pequena cï¿½moda com um espelho posta na parede norte.  A ï¿½nica saï¿½da ï¿½ ao
+   Este quarto é muito pequeno.  Uma grande cama com dossel foi posta na
+sala com uma cortina de renda em volta dela com um sofisticado laço.  Há uma
+pequena cômoda com um espelho posta na parede norte.  A única saída é ao
 oeste.
 ~
-75 64 0 0 0 0
+75 g 0
 D3
 ~
 porta~
-0 0 7548
+:n 2 a porta
+ag 0 7548
 S
 #7551
 O Fim Do Corredor Dos Criados~
-   Vocï¿½ chegou ao fim de um corredor iluminado e plano feito de pedras.  Em
-todos os cantos existem velhas tapeï¿½arias penduradas na parede, entretanto,
-a qualidade delas estï¿½ muito abaixo de qualquer outra coisa que vocï¿½ viu
+   Você chegou ao fim de um corredor iluminado e plano feito de pedras.  Em
+todos os cantos existem velhas tapeçarias penduradas na parede, entretanto,
+a qualidade delas está muito abaixo de qualquer outra coisa que você viu
 aqui.  O corredor iluminado continua ao norte.  Para o sul e leste existem
 portas planas.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 ~
@@ -967,50 +1009,55 @@ D0
 D1
 ~
 leste porta~
-0 0 7552
+:n 2 a porta leste
+ag 0 7552
 D2
 ~
 sul porta~
-0 0 7553
+:n 2 a porta sul
+ag 0 7553
 S
 #7552
 O Quarto Do Mordomo~
-   Este quarto ï¿½ muito estreito mas ao mesmo tempo ï¿½ bastante comprido.  Uma
-pequena cama com uma grande cabeceira estï¿½ encostada na parede sul e leste
-do quarto.  A porta na parede oeste parece ser a ï¿½nica saï¿½da deste quarto.
+   Este quarto é muito estreito mas ao mesmo tempo é bastante comprido.  Uma
+pequena cama com uma grande cabeceira está encostada na parede sul e leste
+do quarto.  A porta na parede oeste parece ser a única saída deste quarto.
 ~
-75 64 0 0 0 0
+75 g 0
 D3
 ~
 porta~
-0 0 7551
+:n 2 a porta
+ag 0 7551
 S
 #7553
 O Quarto De Um Criado~
-   O pequeno quarto ï¿½ simples.  Apenas uma cama estreita foi colocada
-prï¿½xima ï¿½ parede sul.  Uma cï¿½moda de madeira foi empurrada junto a parede
-leste.  Existe uma porta ao norte que com certeza ï¿½ a ï¿½nica saï¿½da do quarto.
+   O pequeno quarto é simples.  Apenas uma cama estreita foi colocada
+próxima à parede sul.  Uma cômoda de madeira foi empurrada junto a parede
+leste.  Existe uma porta ao norte que com certeza é a única saída do quarto.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 porta~
-0 0 7551
+:n 2 a porta
+ag 0 7551
 S
 #7554
 Um Corredor Iluminado~
-   Podem ser ouvidos os sons de alguï¿½m meio longe no corredor ao oeste
-serrando madeira.  Tapeï¿½arias que descrevem soldados nas batalhas em todos
+   Podem ser ouvidos os sons de alguém meio longe no corredor ao oeste
+serrando madeira.  Tapeçarias que descrevem soldados nas batalhas em todos
 os tipos de terreno foram pendurados nas paredes e algumas espadas e
-machados de guerra tambï¿½m estï¿½o pendurados aqui.  Hï¿½ uma pequena porta de
-madeira ao norte.  O corredor continua ao oeste e uma interseï¿½ï¿½o de
+machados de guerra também estão pendurados aqui.  Há uma pequena porta de
+madeira ao norte.  O corredor continua ao oeste e uma interseção de
 corredores pode sido visto ao leste.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 porta~
-0 7510 7576
+:n 2 a porta
+agb 7510 7576
 D1
 ~
 ~
@@ -1022,17 +1069,18 @@ D3
 S
 #7555
 Um Corredor Iluminado~
-   Podem ser ouvidos os sons de alguï¿½m serrando madeira por detrï¿½s da porta
-de madeira na parede norte.  Tapeï¿½arias que descrevem soldados nas batalha
+   Podem ser ouvidos os sons de alguém serrando madeira por detrás da porta
+de madeira na parede norte.  Tapeçarias que descrevem soldados nas batalha
 em todos os tipos de terreno foram pendurados nas paredes e algumas espadas
-e machados de guerra tambï¿½m estï¿½o pendurados aqui.  Hï¿½ uma pequena porta de
+e machados de guerra também estão pendurados aqui.  Há uma pequena porta de
 madeira ao norte e oeste.  O corredor continua ao leste e sul.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 norte porta~
-0 0 7556
+:n 2 a porta norte
+ag 0 7556
 D1
 ~
 ~
@@ -1044,58 +1092,61 @@ D2
 D3
 ~
 oeste porta~
-0 0 7557
+ag 0 7557
 S
 #7556
 A Alojamento Dos Guardas~
-   Vï¿½rias beliches estï¿½o encostadas nas paredes deste quarto.  Alguns
-pedaï¿½os de armaduras que estï¿½o precisando de conserto foram colocados contra
-a parede oeste entre as beliches.  Ao tï¿½rmino de cada cama existe um baï¿½
+   Várias beliches estão encostadas nas paredes deste quarto.  Alguns
+pedaços de armaduras que estão precisando de conserto foram colocados contra
+a parede oeste entre as beliches.  Ao término de cada cama existe um baú
 bastante simples e que fora trancado com fechaduras.  Uma porta de madeira
 conduz do quarto para o sul.
 ~
-75 64 0 0 0 0
+75 g 0
 D2
 ~
 porta~
-0 0 7555
+:n 2 a porta
+ag 0 7555
 S
 #7557
 O Quarto Do Sargento Dos Guardas~
-   Duas camas e dois baï¿½s ocupam a maior parte deste quarto.  Hï¿½ uma cama e
-um baï¿½ nas paredes norte e sul, com um pequena mesa e duas cadeiras nos
-cantos dela.  No lado da parede leste uma pequena bacia cheia com ï¿½gua foi
+   Duas camas e dois baús ocupam a maior parte deste quarto.  Há uma cama e
+um baú nas paredes norte e sul, com um pequena mesa e duas cadeiras nos
+cantos dela.  No lado da parede leste uma pequena bacia cheia com água foi
 colocada sobre uma mesa de madeira.  Existe uma porta na parede leste.
 ~
-75 64 0 0 0 0
+75 g 0
 D1
 ~
 porta~
-0 0 7555
+:n 2 a porta
+ag 0 7555
 S
 #7558
 O Quarto De Mullins~
-   Este espaï¿½oso quarto possui uma grande cama de pena no canto sudoeste.
-Um baï¿½ completamente vazio estï¿½ perto ao pï¿½ da cama.  Uma pequena e redonda
-mesa com duas confortï¿½veis cadeiras foi colocado no centro do quarto.  Uma
-bacia com ï¿½gua foi deixada em uma prateleira de metal.  Existe uma porta na
+   Este espaçoso quarto possui uma grande cama de pena no canto sudoeste.
+Um baú completamente vazio está perto ao pé da cama.  Uma pequena e redonda
+mesa com duas confortáveis cadeiras foi colocado no centro do quarto.  Uma
+bacia com água foi deixada em uma prateleira de metal.  Existe uma porta na
 parede leste.
 ~
-75 64 0 0 0 0
+75 g 0
 D1
 ~
 porta~
-0 0 7559
+:n 2 a porta
+ag 0 7559
 S
 #7559
 Fim Do Corredor Iluminado~
-   Vocï¿½ chegou ao fim de um longo corredor iluminado.  Tapeï¿½arias que
+   Você chegou ao fim de um longo corredor iluminado.  Tapeçarias que
 descrevem soldados nas batalhas em todos os tipos de terreno foram
-pendurados nas paredes e algumas espadas e machados de guerra tambï¿½m estï¿½o
+pendurados nas paredes e algumas espadas e machados de guerra também estão
 pendurados aqui.  Existe uma porta de madeira para o sul e oeste.  O
 corredor continua ao norte.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 ~
@@ -1103,50 +1154,55 @@ D0
 D2
 ~
 sul porta~
-0 7511 7560
+:n 2 a porta sul
+abg 7511 7560
 D3
 ~
 oeste porta~
-0 0 7558
+:n 2 a porta oeste
+ag 0 7558
 S
 #7560
-O Quarto do Capitï¿½o Thewin~
-   Este ï¿½ o quarto do Capitï¿½o dos Guardas.  Uma grande cama com um
-confortï¿½vel colchï¿½o de penas foi colocada no canto sudoeste do quarto.  Uma
-escrivaninha simples fica na parede prï¿½xima da porta.  A ï¿½nica saï¿½da deste
-quarto fica ao norte atravï¿½s de uma porta de madeira.
+O Quarto do Capitão Thewin~
+   Este é o quarto do Capitão dos Guardas.  Uma grande cama com um
+confortável colchão de penas foi colocada no canto sudoeste do quarto.  Uma
+escrivaninha simples fica na parede próxima da porta.  A única saída deste
+quarto fica ao norte através de uma porta de madeira.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 porta~
-0 0 7559
+:n 2 a porta
+ag 0 7559
 S
 #7561
 A Cabana De Jardineiro~
-   Este pequeno abrigo estï¿½ repleto de instrumentos para jardinagem.  Nï¿½o
-existe janela aqui e vocï¿½ sente um cheiro forte, como se fosse algo que
+   Este pequeno abrigo está repleto de instrumentos para jardinagem.  Não
+existe janela aqui e você sente um cheiro forte, como se fosse algo que
 estivesse apodrecendo.  Existe uma porta ao oeste.
 ~
-75 1 0 0 0 0
+75 1 0
 D3
 ~
 porta~
-0 0 7562
+:n 2 a porta
+ag 0 7562
 S
 #7562
 Caminhando Pelos Jardins~
-   Os jardins tï¿½m uma brisa muito refrescante que sopra por cima dos
-arbustos aparados.  O som de alguï¿½m podando algo pode ser ouvido daqui,
+   Os jardins têm uma brisa muito refrescante que sopra por cima dos
+arbustos aparados.  O som de alguém podando algo pode ser ouvido daqui,
 cortando sempre no mesmo ritmo.  Uma grande pedra bloqueia o caminho norte.
-Hï¿½ uma larga porta na parede leste e o caminho de pedregulho segue para o
+Há uma larga porta na parede leste e o caminho de pedregulho segue para o
 sul e oeste.
 ~
-75 64 0 0 0 2
+75 g 2
 D1
 ~
 porta~
-0 0 7561
+:n 2 a porta
+ag 0 7561
 D2
 ~
 ~
@@ -1158,12 +1214,12 @@ D3
 S
 #7563
 Um Canto Do Jardim~
-   Os jardins tï¿½m uma brisa muito refrescante que sopra por cima dos
-arbustos aparados.  O som de alguï¿½m podando algo pode ser ouvido daqui,
+   Os jardins têm uma brisa muito refrescante que sopra por cima dos
+arbustos aparados.  O som de alguém podando algo pode ser ouvido daqui,
 cortando sempre no mesmo ritmo.  Uma grande pedra bloqueia o caminho norte e
 oeste.  O caminho de pedregulho segue para o sul e leste.
 ~
-75 64 0 0 0 2
+75 g 2
 D1
 ~
 ~
@@ -1175,12 +1231,12 @@ D2
 S
 #7564
 Caminhando Pelos Jardins~
-   Os jardins tï¿½m uma brisa muito refrescante que sopra por cima dos
-arbustos aparados.  O som de alguï¿½m podando algo pode ser ouvido daqui,
+   Os jardins têm uma brisa muito refrescante que sopra por cima dos
+arbustos aparados.  O som de alguém podando algo pode ser ouvido daqui,
 cortando sempre no mesmo ritmo.  Uma grande pedra bloqueia o caminho sul e
 oeste.  O caminho de pedregulho segue para o norte e leste.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 ~
@@ -1192,12 +1248,12 @@ D1
 S
 #7565
 Caminhando Pelos Jardins~
-   Os jardins tï¿½m uma brisa muito refrescante que sopra por cima dos
-arbustos aparados.  O som de alguï¿½m podando algo pode ser ouvido daqui,
+   Os jardins têm uma brisa muito refrescante que sopra por cima dos
+arbustos aparados.  O som de alguém podando algo pode ser ouvido daqui,
 cortando sempre no mesmo ritmo.  Uma grande pedra bloqueia o caminho sul.  O
 caminho de pedregulho segue para o norte, oeste e leste.
 ~
-75 64 0 0 0 2
+75 g 2
 D0
 ~
 ~
@@ -1213,12 +1269,12 @@ D3
 S
 #7566
 Caminhando Pelos Jardins~
-   Os jardins tï¿½m uma brisa muito refrescante que sopra por cima dos
-arbustos aparados.  O som de alguï¿½m podando algo pode ser ouvido daqui,
+   Os jardins têm uma brisa muito refrescante que sopra por cima dos
+arbustos aparados.  O som de alguém podando algo pode ser ouvido daqui,
 cortando sempre no mesmo ritmo.  O caminho de pedregulho segue para o leste
-e oeste entre a parede exterior e a parede reforï¿½ada.
+e oeste entre a parede exterior e a parede reforçada.
 ~
-75 64 0 0 0 2
+75 g 2
 D1
 ~
 ~
@@ -1230,17 +1286,18 @@ D3
 S
 #7567
 Caminhando Pelos Jardins~
-   Os jardins tï¿½m uma brisa muito refrescante que sopra por cima dos
-arbustos aparados.  O som de alguï¿½m podando algo pode ser ouvido daqui,
+   Os jardins têm uma brisa muito refrescante que sopra por cima dos
+arbustos aparados.  O som de alguém podando algo pode ser ouvido daqui,
 cortando sempre no mesmo ritmo.  O caminho de pedregulho segue para o leste
-e oeste entre a parede exterior e a parede reforï¿½ada.  Duas portas de vidro
-podem ser vistas ao tï¿½rmino do caminho ao leste.
+e oeste entre a parede exterior e a parede reforçada.  Duas portas de vidro
+podem ser vistas ao término do caminho ao leste.
 ~
-75 4 0 0 0 2
+75 4 2
 D1
 ~
 porta~
-0 0 7574
+:n 2 a porta
+ag 0 7574
 D3
 ~
 ~
@@ -1248,13 +1305,13 @@ D3
 S
 #7568
 O Corredor Decorado~
-   O Corredor foi generosamente decorado.  Carï¿½ssimos carpetes foram postos
-tanto no chï¿½o quanto nas paredes.  As paredes de pedra foram cobertas com
-painï¿½is de madeira que foram polidos com cera de abelha.  Para o norte e ao
-sul o corredor continua e para o leste hï¿½ uma porta de carvalho.  Ao norte
-vï¿½rios corredores se encontram em uma grande interseï¿½ï¿½o.
+   O Corredor foi generosamente decorado.  Caríssimos carpetes foram postos
+tanto no chão quanto nas paredes.  As paredes de pedra foram cobertas com
+painéis de madeira que foram polidos com cera de abelha.  Para o norte e ao
+sul o corredor continua e para o leste há uma porta de carvalho.  Ao norte
+vários corredores se encontram em uma grande interseção.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 ~
@@ -1262,7 +1319,8 @@ D0
 D1
 ~
 porta~
-0 0 7572
+:n 2 a porta
+ag 0 7572
 D2
 ~
 ~
@@ -1270,47 +1328,51 @@ D2
 S
 #7569
 A Despensa~
-   A despensa estï¿½ bem cheia.  Barris de farinha, aï¿½ï¿½car, sal e outros
+   A despensa está bem cheia.  Barris de farinha, açúcar, sal e outros
 produtos essenciais para se cozinhar, foram estocados em grande quantidade.
 Existe uma porta ao sul.
 ~
-75 64 0 0 0 0
+75 g 0
 D2
 ~
 porta~
-0 0 7570
+:n 2 a porta
+ag 0 7570
 S
 #7570
 A Cozinha~
-   A cozinha ï¿½ imensa.  Grandes fornos ao longo da parede ocidental exalam
-um ar quente em toda a cozinha.  Longas mesas de madeira estï¿½o repletas com
-a refeiï¿½ï¿½o que estï¿½o preparando e em uma prateleira ao norte vï¿½rios pï¿½es
-assados e frescos acabam dando ï¿½ este recinto um odor delicioso.  Existem
+   A cozinha é imensa.  Grandes fornos ao longo da parede ocidental exalam
+um ar quente em toda a cozinha.  Longas mesas de madeira estão repletas com
+a refeição que estão preparando e em uma prateleira ao norte vários pães
+assados e frescos acabam dando à este recinto um odor delicioso.  Existem
 portas para o leste, sul e norte.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 norte porta~
-0 0 7569
+:n 2 a porta norte
+ag 0 7569
 D1
 ~
 leste porta~
-0 0 7571
+:n 2 a porta leste
+ag 0 7571
 D2
 ~
 sul porta~
-0 0 7574
+:n 2 a porta sul
+ag 0 7574
 S
 #7571
 O Corredor Decorado~
-   O corredor foi generosamente decorado.  Carï¿½ssimos carpetes e tapeï¿½arias
-estï¿½o pendurados ao longo das paredes em ambos os lados.  As paredes de
-pedra foram cobertas com painï¿½is de madeira que foram polidos com cera.
+   O corredor foi generosamente decorado.  Caríssimos carpetes e tapeçarias
+estão pendurados ao longo das paredes em ambos os lados.  As paredes de
+pedra foram cobertas com painéis de madeira que foram polidos com cera.
 Para o norte e sul o corredor continuar e para o oeste existe uma grande
 porta de carvalho.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 ~
@@ -1322,29 +1384,31 @@ D2
 D3
 ~
 porta~
-0 0 7570
+:n 2 a porta
+ag 0 7570
 S
 #7572
 Um Corredor Desarrumado~
-   Este lugar foi classificado como um corredor de grandes bagunï¿½as.  Uma
-fila dupla de mesas de madeira e outros objetos como bancos estï¿½o virados de
+   Este lugar foi classificado como um corredor de grandes bagunças.  Uma
+fila dupla de mesas de madeira e outros objetos como bancos estão virados de
 perna para cima.  Uma porta segue de um quarto ao oeste.
 ~
-75 64 0 0 0 0
+75 g 0
 D3
 ~
 porta~
-0 0 7568
+:n 2 a porta
+ag 0 7568
 S
 #7573
 Fim Do Corredor~
-   Vocï¿½ estï¿½ ao tï¿½rmino de um corredor que foi generosamente decorado.
-Carï¿½ssimos carpetes e tapeï¿½arias estï¿½o pendurados ao longo das paredes em
-ambos os lados.  As paredes de pedra foram cobertas com painï¿½is de madeira
-que foram polidos com cera.  Ao norte o corredor continua e para sul estï¿½
+   Você está ao término de um corredor que foi generosamente decorado.
+Caríssimos carpetes e tapeçarias estão pendurados ao longo das paredes em
+ambos os lados.  As paredes de pedra foram cobertas com painéis de madeira
+que foram polidos com cera.  Ao norte o corredor continua e para sul está
 uma porta de madeira dupla.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 ~
@@ -1352,55 +1416,61 @@ D0
 D2
 ~
 porta~
-0 0 7574
+:n 2 a porta
+ag 0 7574
 S
 #7574
 A Sala De Jantar~
-   A longa mesa de madeira no centro deste quarto estï¿½ manchada com uma cor
-escura.  Castiï¿½ais prateados com velas de cera foram arrumados com um espaï¿½o
-uniforme ao longo de toda a mesa.  Hï¿½ lugar para mais de 60 pessoas ï¿½ mesa.
-Lï¿½ estï¿½o as portas de vidro ao leste e oeste.  Hï¿½ duas saï¿½das junto ï¿½ parede
+   A longa mesa de madeira no centro deste quarto está manchada com uma cor
+escura.  Castiçais prateados com velas de cera foram arrumados com um espaço
+uniforme ao longo de toda a mesa.  Há lugar para mais de 60 pessoas à mesa.
+Lá estão as portas de vidro ao leste e oeste.  Há duas saídas junto à parede
 sul, uma porta dupla de madeira e uma porta pequena.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 norte porta~
-0 0 7570
+:n 2 a porta norte
+ag 0 7570
 D1
 ~
 vidro porta~
-0 0 7575
+:n 2 a porta de vidro
+ag 0 7575
 D3
 ~
 deslizante porta~
-0 0 7567
+:n 2 a porta deslizante
+ag 0 7567
 S
 #7575
-O Salï¿½o De Festas~
-   Trï¿½s grandes lustres com velas estï¿½o prontos e acesos.  No chï¿½o existem
-azulejos pretos revezado com brancos.  No canto sudeste do salï¿½o existe um
-palco exclusivo para os mï¿½sicos.  Uma grande lareira com mesas confortï¿½veis
-e cadeiras estï¿½o no lado oriental do salï¿½o.  Hï¿½ portas de vidro fixadas na
+O Salão De Festas~
+   Três grandes lustres com velas estão prontos e acesos.  No chão existem
+azulejos pretos revezado com brancos.  No canto sudeste do salão existe um
+palco exclusivo para os músicos.  Uma grande lareira com mesas confortáveis
+e cadeiras estão no lado oriental do salão.  Há portas de vidro fixadas na
 parede oeste.
 ~
-75 64 0 0 0 0
+75 g 0
 D3
 ~
 porta~
-0 0 7574
+:n 2 a porta
+ag 0 7574
 S
 #7576
 Uma Escada Em Espiral~
-   Este ï¿½ o fim de uma escadaria espiral.  Os poucos abajures que estï¿½o
-sendo usados ï¿½ capaz de fazer sombra ao longo da escadaria.  As escadarias
-conduzem acima e tambï¿½m existe uma pequena porta ao sul.
+   Este é o fim de uma escadaria espiral.  Os poucos abajures que estão
+sendo usados é capaz de fazer sombra ao longo da escadaria.  As escadarias
+conduzem acima e também existe uma pequena porta ao sul.
 ~
-75 64 0 0 0 0
+75 g 0
 D2
 ~
 porta~
-0 7510 7554
+:n 2 a porta
+abg 7510 7554
 D4
 ~
 ~
@@ -1408,20 +1478,21 @@ D4
 S
 #7577
 O Topo Da Escada Em Espiral~
-   Este ï¿½ o topo de uma escadaria espiral. Os poucos abajures que estï¿½o 
-sendo usados ï¿½ capaz de fazer sombra ao longo da escadaria. As 
-escadarias conduzem para baixo e tambï¿½m existe uma pequena porta ao 
+   Este é o topo de uma escadaria espiral. Os poucos abajures que estão 
+sendo usados é capaz de fazer sombra ao longo da escadaria. As 
+escadarias conduzem para baixo e também existe uma pequena porta ao 
 oeste.
 ~
-75 64 0 0 0 0
+75 g 0
 D3
 ~
 porta~
-0 0 7578
+:n 2 a porta
+ag 0 7578
 D4
 ~
 ~
-0 -1 7585
+0 -1 7585 16
 D5
 ~
 ~
@@ -1429,12 +1500,12 @@ D5
 S
 #7578
 Um Corredor Iluminado~
-   Este corredor ï¿½ estreito, com um enorme tapete persa no chï¿½o.  Abajures
+   Este corredor é estreito, com um enorme tapete persa no chão.  Abajures
 dourados iluminam o corredor com um brilho intenso.  O corredor que conduz
 para fora fica ao leste e uma porta foi fixada na parede
 oeste.
 ~
-75 65 0 0 0 0
+75 ag 0
 D0
 ~
 ~
@@ -1442,16 +1513,17 @@ D0
 D1
 ~
 porta~
-0 0 7577
+:n 2 a porta
+ag 0 7577
 S
 #7579
 Um Corredor Iluminado~
-   Este corredor ï¿½ estreito, com um enorme tapete persa no chï¿½o.  Abajures
+   Este corredor é estreito, com um enorme tapete persa no chão.  Abajures
 dourados iluminam o corredor com um brilho intenso.  A pintura de uma bela
-mulher e um jovem homem foi pendurado na parede norte.  O corredor comeï¿½a
+mulher e um jovem homem foi pendurado na parede norte.  O corredor começa
 para o oeste e norte.
 ~
-75 64 0 0 0 0
+75 g 0
 D0
 ~
 ~
@@ -1463,16 +1535,17 @@ D2
 S
 #7580
 O Fim Do Corredor Escuro~
-   Vocï¿½ estï¿½ ao fim de um estreito corredor.  Existe um enorme tapete persa
-no chï¿½o.  Abajures dourados iluminam o corredor com um brilho intenso.
-Existem portas de madeira no leste e tambï¿½m na parede oeste.  O corredor
+   Você está ao fim de um estreito corredor.  Existe um enorme tapete persa
+no chão.  Abajures dourados iluminam o corredor com um brilho intenso.
+Existem portas de madeira no leste e também na parede oeste.  O corredor
 acaba ao sul.
 ~
-75 64 0 0 0 0
+75 g 0
 D1
 ~
 leste porta~
-0 0 7582
+:n 2 a porta leste
+ag 0 7582
 D2
 ~
 ~
@@ -1480,28 +1553,29 @@ D2
 D3
 ~
 oeste porta~
-0 0 7583
+:n 2 a porta oeste
+ag 0 7583
 S
 #7581
 O Quarto De Planejamento~
-   As mesas deste quarto escondido estï¿½o empilhadas com mapas de edifï¿½cios.
+   As mesas deste quarto escondido estão empilhadas com mapas de edifícios.
 Estranhamente, estes mapas mostram janelas, portas e outros pontos de acesso
-com anotaï¿½ï¿½es prï¿½ximo a eles.  A parede segue ao norte.
+com anotações próximo a eles.  A parede segue ao norte.
 ~
-75 1 0 0 0 0
+75 1 0
 D0
 ~
 ~
 0 -1 7582
 S
 #7582
-O Estï¿½dio do Barï¿½o~
-   As paredes do quarto estï¿½o forradas com livros e estantes.  Uma mesa
-baixa com um castiï¿½al foi colocado perto da parede norte.  Vï¿½rias cadeiras
+O Estúdio do Barão~
+   As paredes do quarto estão forradas com livros e estantes.  Uma mesa
+baixa com um castiçal foi colocado perto da parede norte.  Várias cadeiras
 de couro se espalharam sobre a mesa e ao longo do quarto.  Existe uma porta
 ao oeste.
 ~
-75 65 0 0 0 0
+75 ag 0
 D2
 ~
 ~
@@ -1509,65 +1583,70 @@ D2
 D3
 ~
 porta~
-0 0 7580
+:n 2 a porta
+ag 0 7580
 S
 #7583
-O Quarto Privativo Do Barï¿½o Darwin~
-   Este ï¿½ o quarto privativo do Barï¿½o Darwin.  Uma grande lareira foi
-construï¿½da na parede norte.  O chï¿½o estï¿½ coberto com um tapete persa que
-aparenta ter custado bastante caro.  Tapeï¿½arias foram penduradas nas
-paredes, e tambï¿½m uma pintura de uma jovem mulher.  A porta de saï¿½da do
+O Quarto Privativo Do Barão Darwin~
+   Este é o quarto privativo do Barão Darwin.  Uma grande lareira foi
+construída na parede norte.  O chão está coberto com um tapete persa que
+aparenta ter custado bastante caro.  Tapeçarias foram penduradas nas
+paredes, e também uma pintura de uma jovem mulher.  A porta de saída do
 quarto fica ao sul e ao leste.
 ~
-75 64 0 0 0 0
+75 g 0
 D1
 ~
 leste porta~
-0 0 7580
+:n 2 a porta leste
+ag 0 7580
 D2
 ~
 sul porta~
-0 0 7584
+:n 2 a porta sul
+ag 0 7584
 S
 #7584
-O Quarto de Descanï¿½o~
-   O quarto possui vï¿½rios sofï¿½s que estï¿½o espalhados pela sala.  Tapeï¿½arias
-enfileiradas nas paredes e o chï¿½o estï¿½ coberto com tapetes.  No canto
-sudoeste do quarto estï¿½ uma mesa de costura.  Uma escrivaninha foi colocada
-no centro da parede leste.  Em um mesa pela porta ao norte existe um serviï¿½o
-de chï¿½ que nï¿½o estï¿½ sendo usado mas que estï¿½ funcionando.  O quarto parece
-nï¿½o ter sido usado por um longo tempo.
+O Quarto de Descanço~
+   O quarto possui vários sofás que estão espalhados pela sala.  Tapeçarias
+enfileiradas nas paredes e o chão está coberto com tapetes.  No canto
+sudoeste do quarto está uma mesa de costura.  Uma escrivaninha foi colocada
+no centro da parede leste.  Em um mesa pela porta ao norte existe um serviço
+de chá que não está sendo usado mas que está funcionando.  O quarto parece
+não ter sido usado por um longo tempo.
 ~
-75 65 0 0 0 0
+75 ag 0
 D0
 ~
 porta~
-0 0 7583
+:n 2 a porta
+ag 0 7583
 S
 #7585
 O Posto dos Vigias~
-   O topo desta pequena torre foi coberto com um telhado.  Dela vocï¿½
-consegue ter uma visï¿½o ampla ao seu redor, sendo que, ao longe consegues
-enxergar uma zona rural.  Desta altura vocï¿½ consegue ver atï¿½ por entre as
+   O topo desta pequena torre foi coberto com um telhado.  Dela você
+consegue ter uma visão ampla ao seu redor, sendo que, ao longe consegues
+enxergar uma zona rural.  Desta altura você consegue ver até por entre as
 densas arvores.
 ~
-75 64 0 0 0 0
+75 g 0
 D5
 ~
 ~
 0 -1 7577
 S
 #7586
-Um Minï¿½sculo Porï¿½o Mofado~
-   O porï¿½o ï¿½ bastante pequeno, mofado e escuro.  O intenso cheiro de mofo
-paira no ar como um poeira.  Uma escada com um corrimï¿½o conduz atï¿½ um
+Um Minúsculo Porão Mofado~
+   O porão é bastante pequeno, mofado e escuro.  O intenso cheiro de mofo
+paira no ar como um poeira.  Uma escada com um corrimão conduz até um
 abrigo.
 ~
-75 77 0 0 0 0
+75 dacg 0
 D3
 ~
 parede~
-0 7505 7587
+:n 2 a parede
+abg 7505 7587
 D4
 ~
 ~
@@ -1575,29 +1654,32 @@ D4
 S
 #7587
 O Posto Dos Guardas~
-   Um posto de guarda foi colocado para uma maior proteï¿½ï¿½o em frente ï¿½s
+   Um posto de guarda foi colocado para uma maior proteção em frente às
 portas ao leste.  Existem portas para o leste, norte e sul.
 ~
-75 72 0 0 0 0
+75 gd 0
 D0
 ~
 norte porta~
-0 0 7598
+:n 2 a porta norte
+ag 0 7598
 D1
 ~
 parede~
-0 7505 7586
+:n 2 a parede
+abg 7505 7586
 D2
 ~
 sul porta~
-0 0 7589
+:n 2 a porta sul
+ag 0 7589
 S
 #7588
-A Abï¿½bada~
-   A abï¿½bada ï¿½ muito pequena e sufocante.  Surpreendentemente parece estar
-vazia.  Aparentemente o dinheiro do Barï¿½o ï¿½ mantido em outro lugar.
+A Abóbada~
+   A abóbada é muito pequena e sufocante.  Surpreendentemente parece estar
+vazia.  Aparentemente o dinheiro do Barão é mantido em outro lugar.
 ~
-75 77 0 0 0 0
+75 dagc 0
 D3
 ~
 ~
@@ -1605,33 +1687,36 @@ D3
 S
 #7589
 Um Quarto Cavernoso~
-   Vocï¿½ estï¿½ em um lugar que foi escavado a muito tempo.  Nï¿½o se consegue
-ver o teto em meio a tanta escuridï¿½o.  Vocï¿½ somente consegue enxergar
+   Você está em um lugar que foi escavado a muito tempo.  Não se consegue
+ver o teto em meio a tanta escuridão.  Você somente consegue enxergar
 pequenas sombras de abajures se mexendo nas paredes de pedra.  Existem
 portas para o norte, leste e sul.
 ~
-75 73 0 0 0 0
+75 dag 0
 D0
 
 ~
 norte porta~
-0 0 7587
+:n 2 a porta norte
+ag 0 7587
 D1
 ~
 leste porta~
-0 0 7590
+:n 2 a porta leste
+ag 0 7590
 D2
 ~
 sul porta~
-0 0 7592
+:n 2 a porta sul
+ag 0 7592
 S
 #7590
 Uma Sala De Aula~
    Uma pequena sala de aula foi organizada aqui.  Os estudantes que assistem
-as aulas dadas aqui nï¿½o possuem muita sabedoria.  Vï¿½rios mapas de edifï¿½cios
-estï¿½o espalhados sobre as escrivaninhas.  Existe uma porta ao oeste.
+as aulas dadas aqui não possuem muita sabedoria.  Vários mapas de edifícios
+estão espalhados sobre as escrivaninhas.  Existe uma porta ao oeste.
 ~
-75 77 0 0 0 0
+75 dagc 0
 D2
 ~
 ~
@@ -1639,16 +1724,17 @@ D2
 D3
 ~
 porta~
-0 0 7589
+:n 2 a porta
+ag 0 7589
 S
 #7591
 O Arsenal~
-   O arsenal possui muitas armas.  Elas sï¿½o muito variadas...  Muito prï¿½ximo
-de vocï¿½ existe um espada, em uma estante ao sul estï¿½o os punhais.  As
-muniï¿½ï¿½es estï¿½o penduradas em ganchos no canto noroeste.  Todas as armas
+   O arsenal possui muitas armas.  Elas são muito variadas...  Muito próximo
+de você existe um espada, em uma estante ao sul estão os punhais.  As
+munições estão penduradas em ganchos no canto noroeste.  Todas as armas
 perecem muito bem cuidadas.
 ~
-75 73 0 0 0 0
+75 dag 0
 D0
 ~
 ~
@@ -1656,45 +1742,49 @@ D0
 S
 #7592
 Um Quarto Cavernoso~
-   Vocï¿½ estï¿½ em um quarto que foi escavado a muito tempo.  Nï¿½o se consegue
-ver o teto em meio a tanta escuridï¿½o.  Vocï¿½ somente consegue enxergar
+   Você está em um quarto que foi escavado a muito tempo.  Não se consegue
+ver o teto em meio a tanta escuridão.  Você somente consegue enxergar
 pequenas sombras de abajures se mexendo nas paredes de pedra.  Existem
 portas ao norte e oeste.
 ~
-75 73 0 0 0 0
+75 dag 0
 D0
 ~
 norte porta~
-0 0 7589
+:n 2 a porta norte
+ag 0 7589
 D3
 ~
 oeste porta~
-0 0 7593
+:n 2 a porta oeste
+ag 0 7593
 S
 #7593
 O Quarto De Fantasias~
-   O quarto possui muitos guarda-roupas que sï¿½o somente prateleiras fixadas
+   O quarto possui muitos guarda-roupas que são somente prateleiras fixadas
 contra as paredes.  Uma grande mesa foi colocada no centro da sala e sobre
 esta possui restos de tecido espalhados.  Uma grande cortina cobre a parede
 norte e ao leste existe uma porta.
 ~
-75 77 0 0 0 0
+75 dagc 0
 D0
 ~
 cortina~
-0 0 7594
+:n 2 a cortina
+agd 0 7594
 D1
 ~
 leste porta~
-0 0 7592
+:n 2 a porta leste
+ag 0 7592
 S
 #7594
-O Vestiï¿½rio~
-   O quarto ï¿½ longo e estreito.  Foram construï¿½das alguns vestiï¿½rios de pano
-feito de linho que provï¿½ uma divisï¿½ria para os ocupantes.  Uma cortina fecha
+O Vestiário~
+   O quarto é longo e estreito.  Foram construídas alguns vestiários de pano
+feito de linho que provê uma divisória para os ocupantes.  Uma cortina fecha
 uma passagem na parede sul.
 ~
-75 77 0 0 0 0
+75 dagc 0
 D0
 ~
 ~
@@ -1702,15 +1792,16 @@ D0
 D2
 ~
 cortina~
-0 0 7593
+:n 2 a cortina
+agd 0 7593
 S
 #7595
 Uma Passagem Secreta~
-   Este tï¿½nel ï¿½ muito escuro e estreito.  Um sussurro ï¿½ ouvido trazido pelo
-vento, e em algum lugar existe algum lï¿½quido gotejando.  O tï¿½nel continua
+   Este túnel é muito escuro e estreito.  Um sussurro é ouvido trazido pelo
+vento, e em algum lugar existe algum líquido gotejando.  O túnel continua
 para o norte.
 ~
-75 73 0 0 0 0
+75 dag 0
 D0
 ~
 ~
@@ -1722,11 +1813,11 @@ D2
 S
 #7596
 Uma Passagem Secreta~
-   Este tï¿½nel ï¿½ muito escuro e estreito.  Um sussurro ï¿½ ouvido trazido pelo
-vento, e em algum lugar existe algum lï¿½quido gotejando.  O tï¿½nel continua
+   Este túnel é muito escuro e estreito.  Um sussurro é ouvido trazido pelo
+vento, e em algum lugar existe algum líquido gotejando.  O túnel continua
 para o sul e oeste.
 ~
-75 73 0 0 0 0
+75 dag 0
 D2
 ~
 ~
@@ -1737,14 +1828,14 @@ D3
 0 -1 7597
 S
 #7597
-A Sala Para Interrogatï¿½rios~
-   Sobre uma longa mesa estï¿½o instrumentos manchados de sangue.  Olhando
-diretamente para esta mesa vocï¿½ observa um tipo de espada que jamais havia
+A Sala Para Interrogatórios~
+   Sobre uma longa mesa estão instrumentos manchados de sangue.  Olhando
+diretamente para esta mesa você observa um tipo de espada que jamais havia
 visto antes, uma espada com extremidades dentadas e um gancho em sua lamina.
-Quase todo o chï¿½o em que vocï¿½ estï¿½ pisando estï¿½ manchado com um liquido
-vermelho.  Serï¿½ Sangue?  Existem saï¿½das para o leste e sul.
+Quase todo o chão em que você está pisando está manchado com um liquido
+vermelho.  Será Sangue?  Existem saídas para o leste e sul.
 ~
-75 73 0 0 0 0
+75 dag 0
 D1
 ~
 ~
@@ -1757,10 +1848,10 @@ S
 #7598
 A Sala do Contador~
    O quarto possui uma longa mesa e uma escrivaninha de escritura ao longo
-da parede norte.  Na mesa estï¿½o espalhados pilhas de papï¿½is e na
+da parede norte.  Na mesa estão espalhados pilhas de papéis e na
 escrivaninha consegue-se ver tinta e penas.  Existe uma porta ao sul.
 ~
-75 73 0 0 0 0
+75 dag 0
 D1
 ~
 ~
@@ -1768,16 +1859,17 @@ D1
 D2
 ~
 porta~
-0 0 7587
+:n 2 a porta
+ag 0 7587
 S
 #7599
 Uma Passagem Secreta~
-   Esta passagem ï¿½ muito escura e estreita.  Um sussurro ï¿½ ouvido trazido
-pelo vento, e em algum lugar existe algum lï¿½quido gotejando.  O tï¿½nel
-continua para o norte ou vocï¿½ pode escalar uma ladeira que fica na parede
+   Esta passagem é muito escura e estreita.  Um sussurro é ouvido trazido
+pelo vento, e em algum lugar existe algum líquido gotejando.  O túnel
+continua para o norte ou você pode escalar uma ladeira que fica na parede
 sul.
 ~
-75 73 0 0 0 0
+75 dag 0
 D0
 ~
 ~

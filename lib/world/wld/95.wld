@@ -1,16 +1,16 @@
 #9501
 Dentro de uma Taverna~
-   Vocï¿½ estï¿½ dentro de um quarto vagamente iluminado.  A atmosfera faz vocï¿½
-se sentir desconfortï¿½vel.  ï¿½ sua frente hï¿½ uma misteriosa cigana.  Ela
-sussurra 'Seu destino pertence a este mundo.' Vocï¿½ ainda esta se perguntando
-o que ela quis dizer, quando vocï¿½ nota sua bola de cristal...  Ela brilha
-intensamente e mostra a Galï¿½xia!
+   Você está dentro de um quarto vagamente iluminado.  A atmosfera faz você
+se sentir desconfortável.  À sua frente há uma misteriosa cigana.  Ela
+sussurra 'Seu destino pertence a este mundo.' Você ainda esta se perguntando
+o que ela quis dizer, quando você nota sua bola de cristal...  Ela brilha
+intensamente e mostra a Galáxia!
 ~
-95 8 0 0 0 0
+95 8 0
 D1
 ~
 ~
-0 -1 7917
+0 -1 7917 
 D5
 ~
 ~
@@ -18,24 +18,24 @@ D5
 S
 #9502
 Dentro da Bola de Cristal~
-   Vocï¿½ tocou a bola de cristal e descobriu que foi parar dentro dela: um
-mundo de estrelas e sonhos!  Assim que vocï¿½ olha para trï¿½s vocï¿½ vï¿½ que nï¿½o
-hï¿½ escolha a nï¿½o ser seguir adiante.
+   Você tocou a bola de cristal e descobriu que foi parar dentro dela: um
+mundo de estrelas e sonhos!  Assim que você olha para trás você vê que não
+há escolha a não ser seguir adiante.
 ~
-95 0 0 0 0 2
+95 0 2
 D0
 ~
 ~
 0 -1 9503
 S
 #9503
-Dentro da Galï¿½xia~
-   Vocï¿½ estï¿½ agora dentro da galï¿½xia, a sua volta, vocï¿½ vï¿½ estrelas e poeira
-estelar sorrindo com sua presenï¿½a, cometas e meteoros vagando a seu redor.
-Vocï¿½ percebe que este mundo pode nï¿½o ser a verdadeira galï¿½xia, apenas mais
-uma ï¿½rea de fantasia.  A saï¿½da parece estar em qualquer direï¿½ï¿½o.
+Dentro da Galáxia~
+   Você está agora dentro da galáxia, a sua volta, você vê estrelas e poeira
+estelar sorrindo com sua presença, cometas e meteoros vagando a seu redor.
+Você percebe que este mundo pode não ser a verdadeira galáxia, apenas mais
+uma área de fantasia.  A saída parece estar em qualquer direção.
 ~
-95 0 0 0 0 1
+95 0 1
 D0
 ~
 ~
@@ -54,12 +54,12 @@ D3
 0 -1 9521
 S
 #9504
-Em um Caminho Intergalï¿½ctico~
-   Vocï¿½ estï¿½ em um caminho bem feito que parece feito deliberadamente para
-visitantes como vocï¿½.  O caminho continua a norte e uma pequena saï¿½da fica
+Em um Caminho Intergaláctico~
+   Você está em um caminho bem feito que parece feito deliberadamente para
+visitantes como você.  O caminho continua a norte e uma pequena saída fica
 ao oeste.
 ~
-95 0 0 0 0 1
+95 0 1
 D0
 ~
 ~
@@ -74,12 +74,12 @@ D3
 0 -1 9522
 S
 #9505
-O Fim do Caminho Intergalï¿½ctico~
-   Vocï¿½ percebe que o caminho termina abruptamente e vocï¿½ se pergunta por
-quï¿½.  Vocï¿½ vï¿½ que hï¿½ ainda uma pequena trilha levando ao norte e outra ao
+O Fim do Caminho Intergaláctico~
+   Você percebe que o caminho termina abruptamente e você se pergunta por
+quê.  Você vê que há ainda uma pequena trilha levando ao norte e outra ao
 oeste.  Ao leste fica uma ponte.
 ~
-95 0 0 0 0 1
+95 0 1
 D0
 ~
 ~
@@ -98,11 +98,11 @@ D3
 0 -1 9523
 S
 #9506
-Em Uma Parte Deserta da Galï¿½xia~
-   Este lugar parece abandonado, coberto por escombros.  Nï¿½o hï¿½
+Em Uma Parte Deserta da Galáxia~
+   Este lugar parece abandonado, coberto por escombros.  Não há
 sinal de vida ao redor.
 ~
-95 0 0 0 0 1
+95 0 1
 D2
 ~
 ~
@@ -116,10 +116,10 @@ S
 Na Ponte de Estrelas~
    Esta ponte foi feita pelas estrelas em honra a seus ancestrais.  Ela
 brilha intensamente e o faz sentir como se estivesse andando em um caminho
-de luz.  Uma entrada para uma antiga construï¿½ï¿½o fica ao norte e ao leste
-fica a Via Lï¿½ctea.
+de luz.  Uma entrada para uma antiga construção fica ao norte e ao leste
+fica a Via Láctea.
 ~
-95 0 0 0 0 1
+95 0 1
 D0
 ~
 ~
@@ -135,11 +135,11 @@ D3
 S
 #9509
 Na Ponte Nebulosa~
-   Esta ponte, assim como a outra, foi feita como um memorial.  As nï¿½voas
-fizeram uma, apenas para mostrar que sï¿½o tï¿½o capazes quanto as estrelas.  Ao
+   Esta ponte, assim como a outra, foi feita como um memorial.  As névoas
+fizeram uma, apenas para mostrar que são tão capazes quanto as estrelas.  Ao
 norte fica a sala do trono.
 ~
-95 1 0 0 0 1
+95 1 1
 D0
 ~
 ~
@@ -155,23 +155,23 @@ D3
 S
 #9510
 A Sala do Trono da Nebulosa Rainha~
-   Vocï¿½ mal pode ver que ï¿½ a sala do trono pois estï¿½ muito escuro aqui.  Ao
-olhar o trono vazio, vocï¿½ se pergunta para onde a Rainha foi, serï¿½ que ela estï¿½
-se escondendo de vocï¿½?
+   Você mal pode ver que é a sala do trono pois está muito escuro aqui.  Ao
+olhar o trono vazio, você se pergunta para onde a Rainha foi, será que ela está
+se escondendo de você?
 ~
-95 9 0 0 0 0
+95 9 0
 D2
 ~
 ~
 0 -1 9509
 S
 #9512
-No Comeï¿½o da Via Lï¿½ctea~
-   ï¿½ aqui que a famosa Via Lï¿½ctea comeï¿½a a fluir.  Vocï¿½ ï¿½ cercado por
-fluxos de nï¿½voa no momento em que vocï¿½ pisa nela.  Vocï¿½ nï¿½o pode ver direito
-aqui ...  Por sorte, vocï¿½ ainda nï¿½o caiu!
+No Começo da Via Láctea~
+   É aqui que a famosa Via Láctea começa a fluir.  Você é cercado por
+fluxos de névoa no momento em que você pisa nela.  Você não pode ver direito
+aqui ...  Por sorte, você ainda não caiu!
 ~
-95 0 0 0 0 4
+95 0 4
 D0
 ~
 ~
@@ -182,11 +182,11 @@ D3
 0 -1 9508
 S
 #9513
-Pela Via Lï¿½ctea~
-   Vocï¿½ estï¿½ ainda viajando neste caminho enevoado.  Vocï¿½ percebe uma
+Pela Via Láctea~
+   Você está ainda viajando neste caminho enevoado.  Você percebe uma
 pequena abertura ao leste.
 ~
-95 0 0 0 0 4
+95 0 4
 D0
 ~
 ~
@@ -201,12 +201,12 @@ D2
 0 -1 9512
 S
 #9514
-O Fim da Via Lï¿½ctea~
-   Justo quando vocï¿½ estava comeï¿½ando a gostar desta viajem pela nï¿½voa, vocï¿½
+O Fim da Via Láctea~
+   Justo quando você estava começando a gostar desta viajem pela névoa, você
 chega a seu fim.  O oeste leva a uma ponte e o leste leva a algum outro
 lugar.
 ~
-95 0 0 0 0 4
+95 0 4
 D1
 ~
 ~
@@ -222,10 +222,10 @@ D3
 S
 #9517
 Uma Pequena Clareira~
-   Vocï¿½ estï¿½ dentro de uma pequena clareira.  Vocï¿½ pode ver que aqui hï¿½
+   Você está dentro de uma pequena clareira.  Você pode ver que aqui há
 sinais de seres viventes por perto.
 ~
-95 0 0 0 0 2
+95 0 2
 D0
 ~
 ~
@@ -236,11 +236,11 @@ D3
 0 -1 9513
 S
 #9518
-Um Limite da Galï¿½xia~
-   Vocï¿½ estï¿½ em um dos limites da galï¿½xia.  Nï¿½o hï¿½ nada aqui, exceto um
+Um Limite da Galáxia~
+   Você está em um dos limites da galáxia.  Não há nada aqui, exceto um
 caminho que leva para baixo.
 ~
-95 0 0 0 0 1
+95 0 1
 D2
 ~
 ~
@@ -256,11 +256,11 @@ D5
 S
 #9519
 Bem Perto da Estrela Gigante~
-   Vocï¿½ estï¿½ bem perto de uma gigantesca estrela vermelha.  Enquanto vocï¿½
-ainda estï¿½ fascinado por sua beleza, a estrela continua crescendo ...
-Subitamente vocï¿½ percebe que ï¿½ melhor sair daqui.
+   Você está bem perto de uma gigantesca estrela vermelha.  Enquanto você
+ainda está fascinado por sua beleza, a estrela continua crescendo ...
+Subitamente você percebe que é melhor sair daqui.
 ~
-95 4 0 0 0 1
+95 4 1
 D0
 ~
 ~
@@ -280,21 +280,21 @@ D3
 S
 #9520
 Brilhante Demais Para Descrever~
-   De fato, ï¿½ brilhante demais para descrever.  Por que o que vocï¿½ estï¿½
-presenciando ï¿½ um evento de uma Supernova, como uma estrela explode em
-poeira galï¿½ctica.  Vocï¿½ pode se achar sortudo por presenciar este evento, e
-ainda mais sortudo por ter conseguido sair desta galï¿½xia a medida que seu
-corpo torna-se poeira.  Isso realmente Dï¿½I!
+   De fato, é brilhante demais para descrever.  Por que o que você está
+presenciando é um evento de uma Supernova, como uma estrela explode em
+poeira galáctica.  Você pode se achar sortudo por presenciar este evento, e
+ainda mais sortudo por ter conseguido sair desta galáxia a medida que seu
+corpo torna-se poeira.  Isso realmente DÓI!
 ~
-95 6 0 0 0 0
+95 6 0
 S
 #9521
 O Agrupamento de Estrelas~
-   Vocï¿½ estï¿½ dentro da morada das estrelas.  Tudo o que vocï¿½ pode ver sï¿½o
-estrelas e nada mais.  Seus olhos se machucam e doem quando vocï¿½ olha para
+   Você está dentro da morada das estrelas.  Tudo o que você pode ver são
+estrelas e nada mais.  Seus olhos se machucam e doem quando você olha para
 elas.
 ~
-95 8 0 0 0 1
+95 8 1
 D0
 ~
 ~
@@ -305,10 +305,10 @@ D1
 0 -1 9503
 S
 #9522
-Outro Limite da Galï¿½xia~
-   Este ï¿½ um outro lugar inabitado.  Saï¿½das ficam ao norte, leste e sul.
+Outro Limite da Galáxia~
+   Este é um outro lugar inabitado.  Saídas ficam ao norte, leste e sul.
 ~
-95 0 0 0 0 2
+95 0 2
 D0
 ~
 ~
@@ -323,12 +323,12 @@ D2
 0 -1 9521
 S
 #9523
-Um Canto da Galï¿½xia~
-   Vocï¿½ se pergunta por que a galï¿½xia ï¿½ limitada.  Tudo o que vocï¿½ aprendeu
+Um Canto da Galáxia~
+   Você se pergunta por que a galáxia é limitada.  Tudo o que você aprendeu
 sobre Astronomia agora, parece sem valor.  Bem, quem lhe disse para estudar
 Astronomia?
 ~
-95 0 0 0 0 1
+95 0 1
 D0
 ~
 ~
@@ -343,11 +343,11 @@ D2
 0 -1 9522
 S
 #9524
-Perdido no Espaï¿½o~
-   Vocï¿½ estï¿½ agora perdido no espaï¿½o.  O que mais lhe incomoda ï¿½ a
-escuridï¿½o que parece querer devorar-te.  Melhor vocï¿½ sair daqui rï¿½pido.
+Perdido no Espaço~
+   Você está agora perdido no espaço.  O que mais lhe incomoda é a
+escuridão que parece querer devorar-te.  Melhor você sair daqui rápido.
 ~
-95 1 0 0 0 2
+95 1 2
 D0
 ~
 ~
@@ -363,16 +363,16 @@ D2
 S
 #9525
 O Buraco Negro~
-   Bem, vocï¿½ escolheu o caminho errado, sinto muito.  Nada pode escapar
-deste monstro, nem mesmo a luz.  Pï¿½nico!  Vocï¿½ nï¿½o tem escapatï¿½ria.
+   Bem, você escolheu o caminho errado, sinto muito.  Nada pode escapar
+deste monstro, nem mesmo a luz.  Pânico!  Você não tem escapatória.
 ~
-95 7 0 0 0 0
+95 7 0
 S
 #9526
-A Morada das Plï¿½iades~
-   Aqui ï¿½ onde as famosas sete irmï¿½s moram.  Melhor vocï¿½ nï¿½o perturbï¿½-las.
+A Morada das Plêiades~
+   Aqui é onde as famosas sete irmãs moram.  Melhor você não perturbá-las.
 ~
-95 0 0 0 0 1
+95 0 1
 D1
 ~
 ~
@@ -384,10 +384,10 @@ D2
 S
 #9527
 O Lado Oeste do Templo~
-   Vocï¿½ estï¿½ ainda vagando ao redor deste templo.  Vocï¿½ nota saï¿½das em todas
-as direï¿½ï¿½es menos ao oeste.
+   Você está ainda vagando ao redor deste templo.  Você nota saídas em todas
+as direções menos ao oeste.
 ~
-95 0 0 0 0 1
+95 0 1
 D0
 ~
 ~
@@ -402,11 +402,11 @@ D2
 0 -1 9528
 S
 #9528
-O Templo da Caï¿½a de ï¿½rion~
-   Este ï¿½ dedicado ao Maior Caï¿½ador de todos os tempos - ï¿½rion.  Espalhados
-pelo chï¿½o, estï¿½o os famosos equipamentos usados por ele.
+O Templo da Caça de Órion~
+   Este é dedicado ao Maior Caçador de todos os tempos - Órion.  Espalhados
+pelo chão, estão os famosos equipamentos usados por ele.
 ~
-95 0 0 0 0 1
+95 0 1
 D0
 ~
 ~
@@ -418,10 +418,10 @@ D1
 S
 #9529
 O Lado Sul do Templo~
-   Vocï¿½ estï¿½ ainda vagando ao redor deste templo.  Vocï¿½ nota saï¿½das em todas
-as direï¿½ï¿½es menos ao norte.
+   Você está ainda vagando ao redor deste templo.  Você nota saídas em todas
+as direções menos ao norte.
 ~
-95 0 0 0 0 1
+95 0 1
 D1
 ~
 ~
@@ -436,13 +436,13 @@ D3
 0 -1 9526
 S
 #9530
-A Cï¿½mara das Oferendas~
-   Estï¿½ ï¿½ a sagrada cï¿½mara de oferendas, onde os sacrifï¿½cios sï¿½o feitos.
-Vocï¿½ vï¿½ uma jovem garota aqui, acorrentada ï¿½ parede, como se ela estivesse
-esperando pela execuï¿½ï¿½o.  Vocï¿½ olha para cima e percebe que as correntes nï¿½o
-vï¿½m de cima.  Abaixo, vocï¿½ reconhece o templo de Thalos.
+A Câmara das Oferendas~
+   Está é a sagrada câmara de oferendas, onde os sacrifícios são feitos.
+Você vê uma jovem garota aqui, acorrentada à parede, como se ela estivesse
+esperando pela execução.  Você olha para cima e percebe que as correntes não
+vêm de cima.  Abaixo, você reconhece o templo de Thalos.
 ~
-95 0 0 0 0 1
+95 0 1
 D0
 ~
 ~
@@ -470,11 +470,11 @@ D5
 S
 #9531
 A Entrada do Antigo Templo~
-   Vocï¿½ entrou neste velho templo, o qual foi construï¿½do originalmente pelos
-deuses do Monte Olimpo, mas agora ï¿½ deserto como se alguï¿½m tivesse tomado
-conta deste pedaï¿½o do universo.
+   Você entrou neste velho templo, o qual foi construído originalmente pelos
+deuses do Monte Olimpo, mas agora é deserto como se alguém tivesse tomado
+conta deste pedaço do universo.
 ~
-95 0 0 0 0 1
+95 0 1
 D0
 ~
 ~
@@ -493,12 +493,12 @@ D3
 0 -1 9528
 S
 #9532
-O Poderoso Trono de Hï¿½rcules~
-   Vocï¿½ estï¿½ diante do trono de um herï¿½i hï¿½ muito tempo esquecido.  Ele estï¿½
-rodeado por riquezas que o herï¿½i acumulou durante os Dez (que no fim seriam
+O Poderoso Trono de Hércules~
+   Você está diante do trono de um herói há muito tempo esquecido.  Ele está
+rodeado por riquezas que o herói acumulou durante os Dez (que no fim seriam
 Doze) Trabalhos.
 ~
-95 0 0 0 0 1
+95 0 1
 D2
 ~
 ~
@@ -510,10 +510,10 @@ D3
 S
 #9533
 O Lado Leste do Templo~
-   Vocï¿½ estï¿½ ainda vagando ao redor deste templo.  Vocï¿½ nota saï¿½das em todas
-as direï¿½ï¿½es menos ao leste.
+   Você está ainda vagando ao redor deste templo.  Você nota saídas em todas
+as direções menos ao leste.
 ~
-95 0 0 0 0 1
+95 0 1
 D0
 ~
 ~
@@ -528,12 +528,12 @@ D3
 0 -1 9530
 S
 #9534
-A Cï¿½mara de Perseu~
-   Esta ï¿½ a cï¿½mara do prï¿½ncipe Perseu.  No entanto, ele nï¿½o parece estar
-aqui.  Talvez ele tenha ido buscar Pï¿½gasus para poder, com a ajuda do cavalo
-alado, salvar a pobre Andrï¿½meda...
+A Câmara de Perseu~
+   Esta é a câmara do príncipe Perseu.  No entanto, ele não parece estar
+aqui.  Talvez ele tenha ido buscar Pégasus para poder, com a ajuda do cavalo
+alado, salvar a pobre Andrômeda...
 ~
-95 0 0 0 0 1
+95 0 1
 D0
 ~
 ~
@@ -544,12 +544,12 @@ D3
 0 -1 9531
 S
 #9539
-Nas Correntes Mï¿½sticas~
-   Vocï¿½ estï¿½ caminhando nas correntes, vacilante.  Vocï¿½ percebe saï¿½das em
-todas as direï¿½ï¿½es.  Acima de vocï¿½, as correntes continuam para cima.  Mas um
-campo de forï¿½a o impede de ir adiante.
+Nas Correntes Místicas~
+   Você está caminhando nas correntes, vacilante.  Você percebe saídas em
+todas as direções.  Acima de você, as correntes continuam para cima.  Mas um
+campo de força o impede de ir adiante.
 ~
-95 0 0 0 0 5
+95 0 5
 D0
 ~
 ~
@@ -567,10 +567,11 @@ D3
 ~
 0 -1 9545
 D4
-Vocï¿½ sente o campo de forï¿½a da Primavera.
+Você sente o campo de força da Primavera.
 ~
-campo forï¿½a~
-1 9524 9554
+campo força~
+:n 1 o campo de força da Primavera
+abc 9524 9554
 D5
 ~
 ~
@@ -578,10 +579,10 @@ D5
 S
 #9542
 Em Uma Encosta~
-   Subitamente vocï¿½ se encontra em uma encosta.  Ao olhar em volta, vocï¿½
+   Subitamente você se encontra em uma encosta.  Ao olhar em volta, você
 percebe que a Primavera subitamente tomou conta do lugar.
 ~
-95 0 0 0 0 4
+95 0 4
 D0
 ~
 ~
@@ -597,11 +598,11 @@ D3
 S
 #9543
 Dentro de uma Arena~
-   Vocï¿½ estï¿½ dentro do que costumava ser uma grande arena onde toureiros
-enfrentavam ferozes touros.  Apreensivo, vocï¿½ percebe que nï¿½o hï¿½ ninguï¿½m por
+   Você está dentro do que costumava ser uma grande arena onde toureiros
+enfrentavam ferozes touros.  Apreensivo, você percebe que não há ninguém por
 aqui.  Talvez estejam todos mortos?
 ~
-95 0 0 0 0 2
+95 0 2
 D1
 ~
 ~
@@ -613,23 +614,23 @@ D3
 S
 #9544
 Dentro de um Gabinete~
-   Este ï¿½ um estranho gabinete.  Alï¿½m das mesas e cadeiras, vocï¿½ tambï¿½m vï¿½ um
-enorme espelho na parede.  Entï¿½o vocï¿½ se pergunta: ï¿½ assim que se torna um
-Gï¿½meo em dois Gï¿½meos?
+   Este é um estranho gabinete.  Além das mesas e cadeiras, você também vê um
+enorme espelho na parede.  Então você se pergunta: é assim que se torna um
+Gêmeo em dois Gêmeos?
 ~
-95 0 0 0 0 0
+95 0 0
 D1
 ~
 ~
 0 -1 9543
 S
 #9545
-ï¿½ Beira-Mar~
-   Vocï¿½ comeï¿½a a sentir o calor do Verï¿½o.  Na parte rochosa da praia vocï¿½
+À Beira-Mar~
+   Você começa a sentir o calor do Verão.  Na parte rochosa da praia você
 percebe estranhas formas que, tentando se esconder, podem ser caranguejos
 camuflados.
 ~
-95 0 0 0 0 2
+95 0 2
 D1
 ~
 ~
@@ -641,11 +642,11 @@ D3
 S
 #9546
 Dentro de uma Selva Profunda~
-   Perto daqui, vocï¿½ pode ouvir o estranho som emitido por um animal.
-Perscrutando atravï¿½s da densa vegetaï¿½ï¿½o vocï¿½ pensa ter visto um ameaï¿½ador
+   Perto daqui, você pode ouvir o estranho som emitido por um animal.
+Perscrutando através da densa vegetação você pensa ter visto um ameaçador
 par de olhos.
 ~
-95 0 0 0 0 3
+95 0 3
 D1
 ~
 ~
@@ -653,10 +654,10 @@ D1
 S
 #9547
 Dentro de um Luxuoso Quarto~
-   Um sentimento de paz invade seu espï¿½rito.  Vocï¿½ vï¿½ uma magnï¿½fica cama.  A
-cama ï¿½ de casal, mas no quarto sï¿½ hï¿½ espaï¿½o para uma pessoa!  E agora...?
+   Um sentimento de paz invade seu espírito.  Você vê uma magnífica cama.  A
+cama é de casal, mas no quarto só há espaço para uma pessoa!  E agora...?
 ~
-95 8 0 0 0 1
+95 8 1
 D3
 ~
 ~
@@ -664,12 +665,12 @@ D3
 S
 #9548
 A Corte Suprema~
-   Vocï¿½ estï¿½ dentro de um tribunal.  Vocï¿½ sente um incrï¿½vel sentimento de
-culpa e quer provar sua inocï¿½ncia!  Um estranho medo se apodera de vocï¿½
-pois vocï¿½ se sente totalmente exposto, assim como as ï¿½rvores ficam no outono
-quando todas suas folhas caem... Vocï¿½ teme ser punido...
+   Você está dentro de um tribunal.  Você sente um incrível sentimento de
+culpa e quer provar sua inocência!  Um estranho medo se apodera de você
+pois você se sente totalmente exposto, assim como as árvores ficam no outono
+quando todas suas folhas caem... Você teme ser punido...
 ~
-95 8 0 0 0 1
+95 8 1
 D1
 ~
 ~
@@ -685,11 +686,11 @@ D3
 S
 #9549
 No Seco Deserto~
-   Vocï¿½ estï¿½ confuso pelas dunas que constantemente mudam ao sabor do vento.
-Atravï¿½s do calor estonteante, vocï¿½ vï¿½ um enorme escorpiï¿½o ...  Serï¿½ uma
+   Você está confuso pelas dunas que constantemente mudam ao sabor do vento.
+Através do calor estonteante, você vê um enorme escorpião ...  Será uma
 miragem?
 ~
-95 0 0 0 0 2
+95 0 2
 D1
 ~
 ~
@@ -701,10 +702,10 @@ D3
 S
 #9550
 Nos Bosques~
-   Vocï¿½ estï¿½ no centro da ï¿½rea de caï¿½a de um Centauro.  Seria melhor vocï¿½ se
-esconder antes de se tornar o 'centro das atenï¿½ï¿½es'!
+   Você está no centro da área de caça de um Centauro.  Seria melhor você se
+esconder antes de se tornar o 'centro das atenções'!
 ~
-95 0 0 0 0 3
+95 0 3
 D1
 ~
 ~
@@ -712,10 +713,10 @@ D1
 S
 #9551
 No Cume da Montanha~
-   Vocï¿½ estï¿½ no mais alto cume da Galï¿½xia.  Vocï¿½ olha em volta e percebe
-nuvens abaixo de vocï¿½.  Uma das nuvens lembra a forma de um bode.
+   Você está no mais alto cume da Galáxia.  Você olha em volta e percebe
+nuvens abaixo de você.  Uma das nuvens lembra a forma de um bode.
 ~
-95 0 0 0 0 5
+95 0 5
 D1
 ~
 ~
@@ -727,10 +728,10 @@ D3
 S
 #9552
 Dentro de uma Cachoeira~
-   O barulho ï¿½ ensurdecedor.  Vocï¿½ estava quase parando para beber ï¿½gua quando
-percebe que ela estï¿½ sendo despejada de um vaso de impressionantes proporï¿½ï¿½es.
+   O barulho é ensurdecedor.  Você estava quase parando para beber água quando
+percebe que ela está sendo despejada de um vaso de impressionantes proporções.
 ~
-95 0 0 0 0 5
+95 0 5
 D3
 ~
 ~
@@ -738,11 +739,11 @@ D3
 S
 #9553
 Dentro de um Molusco Gigante~
-   Vocï¿½ nï¿½o se sente tranqï¿½ilo aqui, como se alguma magia maligna estivesse
-sendo lanï¿½ada sobre vocï¿½.  Vocï¿½ desconfia que algo suspeito esteja acontecendo
+   Você não se sente tranqüilo aqui, como se alguma magia maligna estivesse
+sendo lançada sobre você.  Você desconfia que algo suspeito esteja acontecendo
 aqui.
 ~
-95 0 0 0 0 5
+95 0 5
 D3
 ~
 ~
@@ -750,46 +751,49 @@ D3
 S
 #9554
 O Fim das Correntes Misteriosas~
-   Vocï¿½ chegou ao fim das correntes misteriosas.  Olhando para cima, vocï¿½ vï¿½
-uma pequena fissura, onde vocï¿½ pode escalar.  De qualquer forma, parece que hï¿½
-outro campo de forï¿½a bloqueando seu caminho.
+   Você chegou ao fim das correntes misteriosas.  Olhando para cima, você vê
+uma pequena fissura, onde você pode escalar.  De qualquer forma, parece que há
+outro campo de força bloqueando seu caminho.
 ~
-95 0 0 0 0 5
+95 0 5
 D4
-Vocï¿½ vï¿½ o campo de forï¿½a do Verï¿½o.
+Você vê o campo de força do Verão.
 ~
-campo forï¿½a verï¿½o~
-1 9525 9555
+campo força verão~
+:n 1 o campo de força do Verão
+abc 9525 9555
 D5
-Vocï¿½ vï¿½ o campo de forï¿½a da Primavera.
+Você vê o campo de força da Primavera.
 ~
-campo forï¿½a primavera~
-1 9524 9539
+campo força primavera~
+:n 1 o campo de força da Primavera
+abc 9524 9539
 S
 #9555
 Em Draco~
-   Vocï¿½ percebe que estï¿½ em um chï¿½o escamoso.  Enquanto vocï¿½ se pergunta de
-que ï¿½ feito o chï¿½o, vocï¿½ sente o mesmo se mover embaixo de seus pï¿½s.
+   Você percebe que está em um chão escamoso.  Enquanto você se pergunta de
+que é feito o chão, você sente o mesmo se mover embaixo de seus pés.
 ~
-95 1 0 0 0 4
+95 1 4
 D0
 ~
 ~
 0 -1 9556
 D5
-Vocï¿½ vï¿½ o campo de forï¿½a do Verï¿½o.
+Você vê o campo de força do Verão.
 ~
-campo forï¿½a verï¿½o~
-1 9525 9554
+campo força verão~
+:n 1 o campo de força do Verão
+abc 9525 9554
 S
 #9556
 A Trilha de Draco~
-   Finalmente vocï¿½ percebe que estï¿½ em um gigantesco dragï¿½o (cujo corpo se
-assemelha em muito com o de uma cobra) chamado Draco, o guardiï¿½o da Galï¿½xia
+   Finalmente você percebe que está em um gigantesco dragão (cujo corpo se
+assemelha em muito com o de uma cobra) chamado Draco, o guardião da Galáxia
 interna.
-   Vocï¿½ percebe que Draco na verdade estï¿½ voando agora!
+   Você percebe que Draco na verdade está voando agora!
 ~
-95 1 0 0 0 4
+95 1 4
 D0
 ~
 ~
@@ -801,11 +805,11 @@ D2
 S
 #9557
 A Cauda de Draco~
-   Enquanto vocï¿½ caminha ao longo desta criatura escamosa, vocï¿½ percebe que
-o ï¿½nico modo de vocï¿½ conseguir chegar atï¿½ a Galï¿½xia interior ï¿½ seguindo por todo
-o dorso do dragï¿½o atï¿½ chegar na cabeï¿½a da criatura.
+   Enquanto você caminha ao longo desta criatura escamosa, você percebe que
+o único modo de você conseguir chegar até a Galáxia interior é seguindo por todo
+o dorso do dragão até chegar na cabeça da criatura.
 ~
-95 1 0 0 0 4
+95 1 4
 D0
 ~
 ~
@@ -817,11 +821,11 @@ D2
 S
 #9558
 Perto das Pernas de Draco~
-   Vocï¿½ estï¿½ se aproximando das pernas desta criatura.  Vocï¿½ olha em volta e
-nota que tudo que o cerca ï¿½ escuridï¿½o, exceto algumas fracas luzes das
+   Você está se aproximando das pernas desta criatura.  Você olha em volta e
+nota que tudo que o cerca é escuridão, exceto algumas fracas luzes das
 estrelas distantes.
 ~
-95 1 0 0 0 4
+95 1 4
 D0
 ~
 ~
@@ -833,16 +837,17 @@ D2
 S
 #9559
 Nas Costas de Draco~
-   Finalmente vocï¿½ estï¿½ na metade deste cansativo caminho.  Vocï¿½ pode ver
-que as asas ficam ao leste, mas parece que hï¿½ outro campo de forï¿½a no
+   Finalmente você está na metade deste cansativo caminho.  Você pode ver
+que as asas ficam ao leste, mas parece que há outro campo de força no
 caminho.
 ~
-95 1 0 0 0 4
+95 1 4
 D1
-Vocï¿½ vï¿½ o campo de forï¿½a do Outono.
+Você vê o campo de força do Outono.
 ~
-campo forï¿½a~
-1 9526 9560
+campo força~
+:n 1 o campo de força do Outono
+abc 9526 9560
 D2
 ~
 ~
@@ -850,10 +855,10 @@ D2
 S
 #9560
 Entre as Asas de Draco~
-   Vocï¿½ ouve o bater de gigantescas asas por perto.  Vocï¿½ desesperadamente
-tenta se segurar em alguma coisa para que as fortes rajadas nï¿½o o levem.
+   Você ouve o bater de gigantescas asas por perto.  Você desesperadamente
+tenta se segurar em alguma coisa para que as fortes rajadas não o levem.
 ~
-95 1 0 0 0 4
+95 1 4
 D1
 ~
 ~
@@ -864,10 +869,10 @@ D3
 2 9526 9559
 S
 #9561
-Perto dos Braï¿½os de Draco~
-   De cima vocï¿½ mal pode ver os gigantescos braï¿½os que se estendem pela escuridï¿½o.
+Perto dos Braços de Draco~
+   De cima você mal pode ver os gigantescos braços que se estendem pela escuridão.
 ~
-95 1 0 0 0 4
+95 1 4
 D2
 ~
 ~
@@ -878,11 +883,11 @@ D3
 0 -1 9560
 S
 #9562
-No Pescoï¿½o de Draco~
-   Sua jornada estï¿½ agora se aproximando do fim.  De qualquer forma, este
-pescoï¿½o parece nï¿½o ter fim.
+No Pescoço de Draco~
+   Sua jornada está agora se aproximando do fim.  De qualquer forma, este
+pescoço parece não ter fim.
 ~
-95 1 0 0 0 4
+95 1 4
 D0
 ~
 ~
@@ -893,34 +898,36 @@ D3
 0 -1 9563
 S
 #9563
-Se Aproximando da Cabeï¿½a de Draco~
-   Vocï¿½ chegou ao fim de Draco, mas vocï¿½ nï¿½o consegue achar a cabeï¿½a!  Vocï¿½
-vï¿½ um campo de forï¿½a ao sul, a alguma distï¿½ncia.  Se ao menos a cabeï¿½a
+Se Aproximando da Cabeça de Draco~
+   Você chegou ao fim de Draco, mas você não consegue achar a cabeça!  Você
+vê um campo de força ao sul, a alguma distância.  Se ao menos a cabeça
 estivesse aqui...
 ~
-95 1 0 0 0 4
+95 1 4
 D1
 ~
 ~
 0 -1 9562
 D2
-Vocï¿½ vï¿½ o campo de forï¿½a do Inverno.
+Você vê o campo de força do Inverno.
 ~
-campo forï¿½a~
-1 9527 9564
+campo força~
+:n 1 o campo de força do Inverno
+abc 9527 9564
 S
 #9564
 No Caminho da Ursa Menor~
-   Agora vocï¿½ estï¿½ parte mais interna da galï¿½xia.  O caminho pelo qual vocï¿½
-estï¿½ caminhando agora ï¿½ o caminho da Ursa Menor, ou o Navio.  Vocï¿½ nota que
-hï¿½ sete quartos aqui, representando as sete estrelas da Ursa.
+   Agora você está parte mais interna da galáxia.  O caminho pelo qual você
+está caminhando agora é o caminho da Ursa Menor, ou o Navio.  Você nota que
+há sete quartos aqui, representando as sete estrelas da Ursa.
 ~
-95 0 0 0 0 1
+95 0 1
 D0
-Vocï¿½ vï¿½ o campo de forï¿½a do Inverno.
+Você vê o campo de força do Inverno.
 ~
-campo forï¿½a~
-1 9527 9563
+campo força~
+:n 1 o campo de força do Inverno
+abc 9527 9563
 D2
 ~
 ~
@@ -931,11 +938,11 @@ D3
 0 -1 9566
 S
 #9565
-O Trono de Cassiopï¿½ia~
-   Este ï¿½ a sala do trono da Rainha da Galï¿½xia.  Daqui vocï¿½ pode ver cada
-estrela e constelaï¿½ï¿½o do Universo.
+O Trono de Cassiopéia~
+   Este é a sala do trono da Rainha da Galáxia.  Daqui você pode ver cada
+estrela e constelação do Universo.
 ~
-95 0 0 0 0 1
+95 0 1
 D0
 ~
 ~
@@ -947,9 +954,9 @@ D3
 S
 #9566
 Ao Longo do Caminho da Ursa Menor~
-   Vocï¿½ vï¿½ estrelas a sua volta mas nada em especial o interessa.
+   Você vê estrelas a sua volta mas nada em especial o interessa.
 ~
-95 0 0 0 0 1
+95 0 1
 D1
 ~
 ~
@@ -961,10 +968,10 @@ D2
 S
 #9567
 O Trono de Cefeu~
-   Este ï¿½ a sala do Trono do Rei da Galï¿½xia.  Daqui vocï¿½ pode ver cada
-estrela e constelaï¿½ï¿½o do Universo.
+   Este é a sala do Trono do Rei da Galáxia.  Daqui você pode ver cada
+estrela e constelação do Universo.
 ~
-95 0 0 0 0 1
+95 0 1
 D0
 ~
 ~
@@ -980,9 +987,9 @@ D2
 S
 #9568
 Ao Longo do Caminho da Ursa Menor~
-   Vocï¿½ vï¿½ estrelas a sua volta mas nada em especial o interessa.
+   Você vê estrelas a sua volta mas nada em especial o interessa.
 ~
-95 0 0 0 0 1
+95 0 1
 D0
 ~
 ~
@@ -994,9 +1001,9 @@ D3
 S
 #9569
 Ao Longo do Caminho da Ursa Menor~
-   Vocï¿½ vï¿½ estrelas a sua volta mas nada em especial o interessa.
+   Você vê estrelas a sua volta mas nada em especial o interessa.
 ~
-95 0 0 0 0 1
+95 0 1
 D1
 ~
 ~
@@ -1008,11 +1015,11 @@ D2
 S
 #9570
 O Final da Ursa Menor~
-   Vocï¿½ terminou o caminho da Ursa Menor.  Aqui, a caracterï¿½stica mais
-proeminente sï¿½o algumas marcas de garra.  Vocï¿½ tambï¿½m nota um lugar ao sul;
-provavelmente ï¿½ onde a Estrela Polar costuma ficar.
+   Você terminou o caminho da Ursa Menor.  Aqui, a característica mais
+proeminente são algumas marcas de garra.  Você também nota um lugar ao sul;
+provavelmente é onde a Estrela Polar costuma ficar.
 ~
-95 0 0 0 0 1
+95 0 1
 D0
 ~
 ~
@@ -1024,12 +1031,12 @@ D2
 S
 #9571
 A Estrela Polar~
-   Vocï¿½ entrou na cï¿½mara privada de Polaris.  Este ï¿½ um quarto de grande
-importï¿½ncia.  Vocï¿½ pode ver um poderoso telescï¿½pio apontando para o universo
-(BISBILHOTANDO!).  ï¿½ daqui que Polaris comanda a Galï¿½xia.  Vocï¿½ sente que
+   Você entrou na câmara privada de Polaris.  Este é um quarto de grande
+importância.  Você pode ver um poderoso telescópio apontando para o universo
+(BISBILHOTANDO!).  É daqui que Polaris comanda a Galáxia.  Você sente que
 chegou ao fim de sua procura nestes confins do Universo.
 ~
-95 0 0 0 0 1
+95 0 1
 D0
 ~
 ~

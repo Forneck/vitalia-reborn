@@ -1,11 +1,11 @@
 #3600
 O Grande Tabuleiro de Xadrez de Midgaard~
-   Vocï¿½ se encontra na entrada que dï¿½ acesso ao Tabuleiro de Xadrez de
-Midgaard. O gigantesco portï¿½o de madeira range ao ser aberto.
-   Um caminho sujo e estreito segue rumo leste atravï¿½s da grama espessa,
+   Você se encontra na entrada que dá acesso ao Tabuleiro de Xadrez de
+Midgaard. O gigantesco portão de madeira range ao ser aberto.
+   Um caminho sujo e estreito segue rumo leste através da grama espessa,
 e o tabuleiro de xadrez surge a oeste.
 ~
-36 4 0 0 0 1
+36 c 1
 D1
 Um caminho sujo segue estrada afora pelos grandes campos do norte de Midgaard.
 ~
@@ -19,10 +19,10 @@ O imenso tabuleiro surge a oeste.
 S
 #3601
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.  Esta normalmente ï¿½ a casa
+   Você se encontra numa casa de mármore branco.  Esta normalmente é a casa
 da Torre da Rainha Negra.
 ~
-36 0 0 0 0 1
+36 0 1
 D1
 Uma casa negra fica ao leste.
 ~
@@ -36,10 +36,10 @@ Uma casa negra fica ao sul.
 S
 #3602
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Esta normalmente ï¿½ a casa
+   Você se encontra numa casa de mármore negro. Esta normalmente é a casa
 do Cavaleiro da Rainha Negra.
 ~
-36 0 0 0 0 1
+36 0 1
 D1
 Uma casa branca fica ao leste.
 ~
@@ -58,10 +58,10 @@ Uma casa branca fica ao oeste.
 S
 #3603
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.  Esta normalmente ï¿½ a casa
+   Você se encontra numa casa de mármore branco.  Esta normalmente é a casa
 do Bispo da Rainha Negra.
 ~
-36 0 0 0 0 1
+36 0 1
 D1
 Uma casa negra fica ao leste.
 ~
@@ -80,10 +80,10 @@ Uma casa negra fica ao oeste.
 S
 #3604
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Esta normalmente ï¿½ a casa
+   Você se encontra numa casa de mármore negro. Esta normalmente é a casa
 da Rainha Negra.
 ~
-36 0 0 0 0 1
+36 0 1
 D1
 Uma casa branca fica ao leste.
 ~
@@ -106,10 +106,10 @@ marmore~
 S
 #3605
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.  Esta normalmente ï¿½ a casa
+   Você se encontra numa casa de mármore branco.  Esta normalmente é a casa
 do Rei Negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D1
 Uma casa negra fica ao leste.
 ~
@@ -128,10 +128,10 @@ Uma casa negra fica ao oeste.
 S
 #3606
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Esta normalmente ï¿½ a casa
+   Você se encontra numa casa de mármore negro. Esta normalmente é a casa
 do Bispo do Rei Negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D1
 Uma casa branca fica ao leste.
 ~
@@ -150,10 +150,10 @@ Uma casa branca fica ao oeste.
 S
 #3607
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco. Esta normalmente ï¿½ a casa
+   Você se encontra numa casa de mármore branco. Esta normalmente é a casa
 do Cavaleiro do Rei Negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D1
 Uma casa negra fica ao leste.
 ~
@@ -172,10 +172,10 @@ Uma casa negra fica ao oeste.
 S
 #3608
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Esta normalmente ï¿½ a casa
+   Você se encontra numa casa de mármore negro. Esta normalmente é a casa
 da Torre do Rei Negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D2
 Uma casa branca fica ao sul.
 ~
@@ -189,10 +189,10 @@ Uma casa branca fica ao oeste.
 S
 #3609
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Esta normalmente ï¿½ a casa
-da de um dos Peï¿½es da Rainha Negra.
+   Você se encontra numa casa de mármore negro. Esta normalmente é a casa
+da de um dos Peões da Rainha Negra.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -211,10 +211,10 @@ Uma casa branca fica ao sul.
 S
 #3610
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco. Esta normalmente ï¿½ a casa
-de um dos Peï¿½es da Rainha Negra.
+   Você se encontra numa casa de mármore branco. Esta normalmente é a casa
+de um dos Peões da Rainha Negra.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -238,10 +238,10 @@ Uma casa negra fica ao oeste.
 S
 #3611
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Esta normalmente ï¿½ a casa
-da de um dos Peï¿½es da Rainha Negra.
+   Você se encontra numa casa de mármore negro. Esta normalmente é a casa
+da de um dos Peões da Rainha Negra.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -265,10 +265,10 @@ Uma casa branca fica ao oeste.
 S
 #3612
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco. Esta normalmente ï¿½ a casa
-de um dos Peï¿½es da Rainha Negra.
+   Você se encontra numa casa de mármore branco. Esta normalmente é a casa
+de um dos Peões da Rainha Negra.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -292,10 +292,10 @@ Uma casa negra fica ao oeste.
 S
 #3613
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Esta normalmente ï¿½ a casa
-de um dos Peï¿½es do Rei Negro.
+   Você se encontra numa casa de mármore negro. Esta normalmente é a casa
+de um dos Peões do Rei Negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -319,10 +319,10 @@ Uma casa branca fica ao oeste.
 S
 #3614
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco. Esta normalmente ï¿½ a casa
-de um dos Peï¿½es do Rei Negro.
+   Você se encontra numa casa de mármore branco. Esta normalmente é a casa
+de um dos Peões do Rei Negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -346,10 +346,10 @@ Uma casa negra fica ao oeste.
 S
 #3615
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Esta normalmente ï¿½ a casa
-de um dos Peï¿½es do Rei Negro.
+   Você se encontra numa casa de mármore negro. Esta normalmente é a casa
+de um dos Peões do Rei Negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -373,10 +373,10 @@ Uma casa branca fica ao oeste.
 S
 #3616
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco. Esta normalmente ï¿½ a casa
-de um dos Peï¿½es do Rei Negro.
+   Você se encontra numa casa de mármore branco. Esta normalmente é a casa
+de um dos Peões do Rei Negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -395,9 +395,9 @@ Uma casa negra fica ao oeste.
 S
 #3617
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.
+   Você se encontra numa casa de mármore branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -416,9 +416,9 @@ Uma casa negra fica ao sul.
 S
 #3618
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro.
+   Você se encontra numa casa de mármore negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -442,9 +442,9 @@ Uma casa branca fica ao oeste.
 S
 #3619
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.
+   Você se encontra numa casa de mármore branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -468,9 +468,9 @@ Uma casa negra fica ao oeste.
 S
 #3620
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro.
+   Você se encontra numa casa de mármore negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -494,9 +494,9 @@ Uma casa branca fica ao oeste.
 S
 #3621
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.
+   Você se encontra numa casa de mármore branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -520,9 +520,9 @@ Uma casa negra fica ao oeste.
 S
 #3622
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro.
+   Você se encontra numa casa de mármore negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -546,9 +546,9 @@ Uma casa branca fica ao oeste.
 S
 #3623
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.
+   Você se encontra numa casa de mármore branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -572,10 +572,10 @@ Uma casa negra fica ao oeste.
 S
 #3624
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Vocï¿½ pode ver um portï¿½o
+   Você se encontra numa casa de mármore negro. Você pode ver um portão
 enferrujado ao sul.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -594,9 +594,9 @@ Uma casa branca fica ao oeste.
 S
 #3625
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro.
+   Você se encontra numa casa de mármore negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -612,16 +612,12 @@ Uma casa branca fica ao sul.
 ~
 ~
 0 -1 3633
-D3
-~
-~
-0 0 200
 S
 #3626
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.
+   Você se encontra numa casa de mármore branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -645,9 +641,9 @@ Uma casa negra fica ao oeste.
 S
 #3627
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro.
+   Você se encontra numa casa de mármore negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -671,9 +667,9 @@ Uma casa branca fica ao oeste.
 S
 #3628
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.
+   Você se encontra numa casa de mármore branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -697,9 +693,9 @@ Uma casa negra fica ao oeste.
 S
 #3629
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro.
+   Você se encontra numa casa de mármore negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -723,9 +719,9 @@ Uma casa branca fica ao oeste.
 S
 #3630
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.
+   Você se encontra numa casa de mármore branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -749,10 +745,10 @@ Uma casa negra fica ao oeste.
 S
 #3631
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Ao leste, a uma curta distï¿½ncia
-vocï¿½ pode ver um grande portï¿½o enferrujado.
+   Você se encontra numa casa de mármore negro. Ao leste, a uma curta distância
+você pode ver um grande portão enferrujado.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -776,17 +772,17 @@ Uma casa branca fica ao oeste.
 S
 #3632
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco. Vocï¿½ pode ver um portï¿½o
+   Você se encontra numa casa de mármore branco. Você pode ver um portão
 enferrujado ao leste.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
 ~
 0 -1 3624
 D1
-O portï¿½o para o tabuleiro de xadrez fica logo ali ao leste.
+O portão para o tabuleiro de xadrez fica logo ali ao leste.
 ~
 ~
 0 -1 3600
@@ -803,9 +799,9 @@ Uma casa negra fica ao oeste.
 S
 #3633
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.
+   Você se encontra numa casa de mármore branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -824,9 +820,9 @@ Uma casa negra fica ao sul.
 S
 #3634
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro.
+   Você se encontra numa casa de mármore negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -850,9 +846,9 @@ Uma casa branca fica ao oeste.
 S
 #3635
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.
+   Você se encontra numa casa de mármore branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -876,9 +872,9 @@ Uma casa negra fica ao oeste.
 S
 #3636
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro.
+   Você se encontra numa casa de mármore negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -902,9 +898,9 @@ Uma casa branca fica ao oeste.
 S
 #3637
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.
+   Você se encontra numa casa de mármore branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -928,9 +924,9 @@ Uma casa negra fica ao oeste.
 S
 #3638
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro.
+   Você se encontra numa casa de mármore negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -954,9 +950,9 @@ Uma casa branca fica ao oeste.
 S
 #3639
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.
+   Você se encontra numa casa de mármore branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -980,10 +976,10 @@ Uma casa negra fica ao oeste.
 S
 #3640
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Vocï¿½ pode ver um portï¿½o
+   Você se encontra numa casa de mármore negro. Você pode ver um portão
 enferrujado ao norte.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -1002,9 +998,9 @@ Uma casa branca fica ao oeste.
 S
 #3641
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro.
+   Você se encontra numa casa de mármore negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -1023,9 +1019,9 @@ Uma casa branca fica ao sul.
 S
 #3642
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.
+   Você se encontra numa casa de mármore branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -1049,9 +1045,9 @@ Uma casa negra fica ao oeste.
 S
 #3643
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro.
+   Você se encontra numa casa de mármore negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -1075,9 +1071,9 @@ Uma casa branca fica ao oeste.
 S
 #3644
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.
+   Você se encontra numa casa de mármore branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -1101,9 +1097,9 @@ Uma casa negra fica ao oeste.
 S
 #3645
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro.
+   Você se encontra numa casa de mármore negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -1127,9 +1123,9 @@ Uma casa branca fica ao oeste.
 S
 #3646
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.
+   Você se encontra numa casa de mármore branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -1153,9 +1149,9 @@ Uma casa negra fica ao oeste.
 S
 #3647
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro.
+   Você se encontra numa casa de mármore negro.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -1179,9 +1175,9 @@ Uma casa branca fica ao oeste.
 S
 #3648
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco.
+   Você se encontra numa casa de mármore branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -1200,10 +1196,10 @@ Uma casa negra fica ao oeste.
 S
 #3649
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco. Esta normalmente ï¿½ a casa
-de um dos Peï¿½es da Rainha Branca.
+   Você se encontra numa casa de mármore branco. Esta normalmente é a casa
+de um dos Peões da Rainha Branca.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -1222,10 +1218,10 @@ Uma casa negra fica ao sul.
 S
 #3650
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Esta normalmente ï¿½ a casa
-de um dos Peï¿½es da Rainha Branca.
+   Você se encontra numa casa de mármore negro. Esta normalmente é a casa
+de um dos Peões da Rainha Branca.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -1249,10 +1245,10 @@ Uma casa branca fica ao oeste.
 S
 #3651
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco. Esta normalmente ï¿½ a casa
-de um dos Peï¿½es da Rainha Branca.
+   Você se encontra numa casa de mármore branco. Esta normalmente é a casa
+de um dos Peões da Rainha Branca.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -1276,10 +1272,10 @@ Uma casa negra fica ao oeste.
 S
 #3652
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Esta normalmente ï¿½ a casa
-de um dos Peï¿½es da Rainha Branca.
+   Você se encontra numa casa de mármore negro. Esta normalmente é a casa
+de um dos Peões da Rainha Branca.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -1303,10 +1299,10 @@ Uma casa branca fica ao oeste.
 S
 #3653
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco. Esta normalmente ï¿½ a casa
-de um dos Peï¿½es do Rei Branco.
+   Você se encontra numa casa de mármore branco. Esta normalmente é a casa
+de um dos Peões do Rei Branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -1330,10 +1326,10 @@ Uma casa negra fica ao oeste.
 S
 #3654
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Esta normalmente ï¿½ a casa
-de um dos Peï¿½es do Rei Branco.
+   Você se encontra numa casa de mármore negro. Esta normalmente é a casa
+de um dos Peões do Rei Branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -1357,10 +1353,10 @@ Uma casa branca fica ao oeste.
 S
 #3655
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco. Esta normalmente ï¿½ a casa
-de um dos Peï¿½es do Rei Branco.
+   Você se encontra numa casa de mármore branco. Esta normalmente é a casa
+de um dos Peões do Rei Branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -1384,10 +1380,10 @@ Uma casa negra fica ao oeste.
 S
 #3656
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Esta normalmente ï¿½ a casa
-de um dos Peï¿½es do Rei Branco.
+   Você se encontra numa casa de mármore negro. Esta normalmente é a casa
+de um dos Peões do Rei Branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -1406,10 +1402,10 @@ Uma casa branca fica ao oeste.
 S
 #3657
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro.  Esta normalmente ï¿½ a casa
+   Você se encontra numa casa de mármore negro.  Esta normalmente é a casa
 da Torre da Rainha Branca.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -1423,10 +1419,10 @@ Uma casa branca fica ao leste.
 S
 #3658
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco. Esta normalmente ï¿½ a casa
+   Você se encontra numa casa de mármore branco. Esta normalmente é a casa
 do Cavaleiro da Rainha Branca.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -1445,10 +1441,10 @@ Uma casa negra fica ao oeste
 S
 #3659
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Esta normalmente ï¿½ a casa
+   Você se encontra numa casa de mármore negro. Esta normalmente é a casa
 do Bispo da Rainha Branca.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -1467,10 +1463,10 @@ Uma casa branca fica ao oeste.
 S
 #3660
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco. Esta normalmente ï¿½ a casa
+   Você se encontra numa casa de mármore branco. Esta normalmente é a casa
 da Rainha Branca.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -1493,10 +1489,10 @@ marmore~
 S
 #3661
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Esta normalmente ï¿½ a casa
+   Você se encontra numa casa de mármore negro. Esta normalmente é a casa
 do Rei Branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -1515,10 +1511,10 @@ Uma casa branca fica ao oeste.
 S
 #3662
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco. Esta normalmente ï¿½ a casa
+   Você se encontra numa casa de mármore branco. Esta normalmente é a casa
 do Bispo do Rei Branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -1537,10 +1533,10 @@ Uma casa negra fica ao oeste.
 S
 #3663
 Uma Casa Negra~
-   Vocï¿½ se encontra numa casa de mï¿½rmore negro. Esta normalmente ï¿½ a casa
+   Você se encontra numa casa de mármore negro. Esta normalmente é a casa
 do Cavaleiro do Rei Branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa branca fica ao norte.
 ~
@@ -1559,10 +1555,10 @@ Uma casa branca fica ao oeste.
 S
 #3664
 Uma Casa Branca~
-   Vocï¿½ se encontra numa casa de mï¿½rmore branco. Esta normalmente ï¿½ a casa
+   Você se encontra numa casa de mármore branco. Esta normalmente é a casa
 da Torre do Rei Branco.
 ~
-36 0 0 0 0 1
+36 0 1
 D0
 Uma casa negra fica ao norte.
 ~
@@ -1576,26 +1572,26 @@ Uma casa negra fica ao oeste.
 S
 #3665
 A Tesouraria Negra~
-    Vocï¿½ se encontra dentro da tesouraria da Corte Negra. Afortunadamente,
+    Você se encontra dentro da tesouraria da Corte Negra. Afortunadamente,
 parece que ninguem saqueou o tesouro da Coroa.
 ~
-36 521 0 0 0 0
+36 adj 0
 D4
-Uma pequena escadaria sobe sobre vocï¿½.
+Uma pequena escadaria sobe sobre você.
 ~
 marmore~
 2 3614 3604
 S
 #3666
 A Tesouraria Branca~
-    Vocï¿½ se encontra dentro da tesouraria da Corte Branca. Afortunadamente,
+    Você se encontra dentro da tesouraria da Corte Branca. Afortunadamente,
 parece que ninguem saqueou o tesouro da Coroa.
 ~
-36 521 0 0 0 0
+36 adj 0
 D4
-Uma pequena escadaria sobe sobre vocï¿½.
+Uma pequena escadaria sobe sobre você.
 ~
 marmore~
 2 3615 3660
 S
-$~
+$

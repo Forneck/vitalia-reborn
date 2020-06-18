@@ -1,16 +1,21 @@
 #14500
 A Estrada do Leste~
-   Uma imensa sensaï¿½ï¿½o de tranqï¿½ilidade e paz invade seu corpo e sua mente.
-Ao seu redor vocï¿½ observa belas planï¿½cies verdes e alguns pï¿½ssaros curiosos
-com a sua presenï¿½a.  ï¿½ sua frente vocï¿½ observa a estreita estrada do leste,
-que segue no sentido leste-oeste.  Vocï¿½ observa ao leste as luzes da isolada
-aldeia de Bri.  Vindo do oeste vocï¿½ escuta sons dos movimentos lentos das
-ï¿½guas do rio Brandevim.  A estrada continua para o oeste, cada vez mais
-estreita e para leste em direï¿½ï¿½o da aldeia de Bri.
+   Uma imensa sensação de tranqüilidade e paz invade seu corpo e sua mente.
+Ao seu redor você observa belas planícies verdes e alguns pássaros curiosos
+com a sua presença.  À sua frente você observa a estreita estrada do leste,
+que segue no sentido leste-oeste.  Você observa ao leste as luzes da isolada
+aldeia de Bri.  Vindo do oeste você escuta sons dos movimentos lentos das
+águas do rio Brandevim.  A estrada continua para o oeste, cada vez mais
+estreita e para leste em direção da aldeia de Bri.
 ~
-145 0 0 0 0 2
+145 0 2
+D3
+Você observa a estreita estrada do leste seguindo na direção oeste.
+~
+~
+0 -1 14501
 D1
-Vocï¿½ observa a estreita estrada do leste seguindo na direï¿½ï¿½o leste.
+Você observa a estreita estrada do leste seguindo na direção leste.
 ~
 ~
 0 -1 14400
@@ -18,3844 +23,3912 @@ D2
 ~
 ~
 0 -1 11116
-D3
-Vocï¿½ observa a estreita estrada do leste seguindo na direï¿½ï¿½o oeste.
-~
-~
-0 -1 14501
 S
 #14501
 A Estrada do Leste~
-   Vocï¿½ estï¿½ caminhando pela estreita estrada do leste.  Ao seu redor vocï¿½
-observa belas paisagens e uma sensaï¿½ï¿½o confortï¿½vel de paz e tranqï¿½ilidade.
-  Ao norte vocï¿½ observa belos campos verdes e ao sudeste e sudoeste vocï¿½
+   Você está caminhando pela estreita estrada do leste.  Ao seu redor você
+observa belas paisagens e uma sensação confortável de paz e tranqüilidade.
+  Ao norte você observa belos campos verdes e ao sudeste e sudoeste você
 observa a maravilhosa Terra dos Buques.  Ao oeste e ao leste a estrada do
 leste continua.
 ~
-145 0 0 0 0 2
+145 0 2
 D1
-Vocï¿½ observa a continuaï¿½ï¿½o da estrada do leste na direï¿½ï¿½o leste.
+Você observa a continuação da estrada do leste na direção leste.
 ~
 ~
 0 -1 14500
 D3
-Vocï¿½ observa a continuaï¿½ï¿½o da estrada do leste na direï¿½ï¿½o oeste.
+Você observa a continuação da estrada do leste na direção oeste.
 ~
 ~
 0 -1 14502
 D8
-Vocï¿½ observa a Terra dos Buques.
+Você observa a Terra dos Buques.
 ~
 ~
 0 -1 14525
 D9
-Vocï¿½ observa a Terra dos Buques.
+Você observa a Terra dos Buques.
 ~
 ~
 0 -1 14527
 S
 #14502
 A Estrada do Leste~
-   Vocï¿½ estï¿½ caminhando bela estreita estrada do leste, que segue passando
-pelo Condado na direï¿½ï¿½o oeste atï¿½ chegar nos Portos Cinzentos e para leste
+   Você está caminhando bela estreita estrada do leste, que segue passando
+pelo Condado na direção oeste até chegar nos Portos Cinzentos e para leste
 a estreita estrada do leste fica mais larga, passando pela isolada Aldeia de
-Bri, pela mata dos trolls atï¿½ chegar em Valfenda.  Ao leste vocï¿½ observa a
-continuaï¿½ï¿½o da estrada do leste e ao oeste vocï¿½ observa a bela Ponte do
+Bri, pela mata dos trolls até chegar em Valfenda.  Ao leste você observa a
+continuação da estrada do leste e ao oeste você observa a bela Ponte do
 Brandevim.
 ~
-145 0 0 0 0 2
+145 0 2
 D1
-Vocï¿½ observa a estrada do leste, seguindo na direï¿½ï¿½o leste.
+Você observa a estrada do leste, seguindo na direção leste.
 ~
 ~
 0 -1 14501
 D3
-Vocï¿½ observa a bela Ponte do Brandevim.
+Você observa a bela Ponte do Brandevim.
 ~
 ~
 0 -1 14503
 S
 #14503
 A Ponte de Pedra do Brandevim~
-   Vocï¿½ estï¿½ sobre a bela ponte de pedra do Brandevim.  Ao norte e ao sul
-vocï¿½ observa as tranqï¿½ilas ï¿½guas do rio Brandevim seguindo seu leito.  Ao
-leste e ao oeste vocï¿½ observa a estrada do leste.  Ao noroeste vocï¿½ observa
+   Você está sobre a bela ponte de pedra do Brandevim.  Ao norte e ao sul
+você observa as tranqüilas águas do rio Brandevim seguindo seu leito.  Ao
+leste e ao oeste você observa a estrada do leste.  Ao noroeste você observa
 um belo campo verde e amarelo.
 ~
-145 256 0 0 0 1
+145 i 1
 D0
-Vocï¿½ observa as tranqï¿½ilas ï¿½guas do rio Brandevim.
+Você observa as tranqüilas águas do rio Brandevim.
 ~
 ~
 0 -1 14536
 D1
-Vocï¿½ observa a continuaï¿½ï¿½o da estrada do leste.
+Você observa a continuação da estrada do leste.
 ~
 ~
 0 -1 14504
 D2
-Vocï¿½ observa as tranqï¿½ilas ï¿½guas do rio Brandevim.
+Você observa as tranqüilas águas do rio Brandevim.
 ~
 ~
 0 -1 14537
 D3
-Vocï¿½ observa a continuaï¿½ï¿½o da estrada do leste.
+Você observa a continuação da estrada do leste.
 ~
 ~
 0 -1 14502
 D6
-Vocï¿½ observa um belo campo verde com belas flores amarelas.
+Você observa um belo campo verde com belas flores amarelas.
 ~
 ~
 0 -1 14590
 S
 #14504
 A Estrada do Leste~
-   Vocï¿½ estï¿½ caminhando tranqï¿½ilamente pela estreita estrada do leste que
-corta o Condado.  Ao seu redor vocï¿½ observa belos campos verdes com lindas
-flores amarelas.  Ao leste vocï¿½ observa a bela ponte de pedra do Brandevim e
-ao sudoeste vocï¿½ observa a continuaï¿½ï¿½o da estrada do leste no sentido oeste.
+   Você está caminhando tranqüilamente pela estreita estrada do leste que
+corta o Condado.  Ao seu redor você observa belos campos verdes com lindas
+flores amarelas.  Ao leste você observa a bela ponte de pedra do Brandevim e
+ao sudoeste você observa a continuação da estrada do leste no sentido oeste.
 ~
-145 0 0 0 0 2
+145 0 2
 D1
-Vocï¿½ observa a linda ponte do Brandevim.
+Você observa a linda ponte do Brandevim.
 ~
 ~
 0 -1 14503
 D9
-Vocï¿½ observa a continuaï¿½ï¿½o da estrada do leste.
+Você observa a continuação da estrada do leste.
 ~
 ~
 0 -1 14505
 S
 #14505
 A Estrada do Leste~
-   Vocï¿½ estï¿½ caminhando pela estreita estrada do leste e admirando os belos
-campos floridos ao seu redor.  Ao olhar para o chï¿½o vocï¿½ percebe pequeninas
-pegadas seguindo para a direï¿½ï¿½o oeste.  Ao oeste e ao nordeste vocï¿½ observa
-a continuaï¿½ï¿½o da estrada do leste.
+   Você está caminhando pela estreita estrada do leste e admirando os belos
+campos floridos ao seu redor.  Ao olhar para o chão você percebe pequeninas
+pegadas seguindo para a direção oeste.  Ao oeste e ao nordeste você observa
+a continuação da estrada do leste.
 ~
-145 0 0 0 0 2
+145 0 2
 D3
-Vocï¿½ observa a continuaï¿½ï¿½o da estrada do leste.
+Você observa a continuação da estrada do leste.
 ~
 ~
 0 -1 14506
 D7
-Vocï¿½ observa a continuaï¿½ï¿½o da estrada do leste.
+Você observa a continuação da estrada do leste.
 ~
 ~
 0 -1 14504
 S
 #14506
 A Estrada do Leste~
-   Vocï¿½ estï¿½ caminhando pela estreita estrada do leste, porï¿½m ao seu redor
-a paisagem lhe surpreende.  Vocï¿½ observa belos campos verdes cobertos por
-flores amarelas, imensas ï¿½rvores que a pesar de isoladas fazem gigantescas
-sombras e curiosos pï¿½ssaros, que seguem cantando sobrevoando a estrada.  Ao
-leste e ao oeste vocï¿½ observa a continuaï¿½ï¿½o da estrada do leste.
+   Você está caminhando pela estreita estrada do leste, porém ao seu redor
+a paisagem lhe surpreende.  Você observa belos campos verdes cobertos por
+flores amarelas, imensas árvores que a pesar de isoladas fazem gigantescas
+sombras e curiosos pássaros, que seguem cantando sobrevoando a estrada.  Ao
+leste e ao oeste você observa a continuação da estrada do leste.
 ~
-145 0 0 0 0 2
+145 0 2
 D1
-Vocï¿½ observa a estrada do leste.
+Você observa a estrada do leste.
 ~
 ~
 0 -1 14505
 D3
-Vocï¿½ observa a estrada do leste.
+Você observa a estrada do leste.
 ~
 ~
 0 -1 14507
 S
 #14507
 A Estrada do Leste~
-   Vocï¿½ estï¿½ caminhando pela estrada do leste.  Ao seu redor vocï¿½ observa
-belos campos floridos e perfumados.  No chï¿½o vocï¿½ nota vï¿½rias pequeninas
-pegadas.  Ao norte vocï¿½ observa alï¿½m de uma linda planï¿½cie, as lï¿½mpidas
-ï¿½guas do Beirï¿½gua.  Ao sul vocï¿½ observa uma bela planï¿½cie coberta de flores
-amarelas e ao leste e o oeste vocï¿½ observa a continuaï¿½ï¿½o da estrada do
+   Você está caminhando pela estrada do leste.  Ao seu redor você observa
+belos campos floridos e perfumados.  No chão você nota várias pequeninas
+pegadas.  Ao norte você observa além de uma linda planície, as límpidas
+águas do Beirágua.  Ao sul você observa uma bela planície coberta de flores
+amarelas e ao leste e o oeste você observa a continuação da estrada do
 leste.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa uma bela planï¿½cie florida.
+Você observa uma bela planície florida.
 ~
 ~
 0 -1 14571
 D1
-Vocï¿½ observa a estrada do leste.
+Você observa a estrada do leste.
 ~
 ~
 0 -1 14506
 D2
-Vocï¿½ observa uma bela planï¿½cie florida.
+Você observa uma bela planície florida.
 ~
 ~
 0 -1 14555
 D3
-Vocï¿½ observa a estrada do leste.
+Você observa a estrada do leste.
 ~
 ~
 0 -1 14508
 S
 #14508
 A Estrada do Leste~
-   Vocï¿½ estï¿½ caminhando pela estrada do  leste, que corta o Condado no
+   Você está caminhando pela estrada do  leste, que corta o Condado no
 sentido leste-oeste.  Vindo desde as terras mais ao oeste, os Portos
 Cinzentos, passando pela aldeia isolada de Bri e pela mata dos trolls,
-chegando atï¿½ as sagradas terras ï¿½lficas de Valfenda.  Ao seu redor vocï¿½
-observa lindos campos verdes e amarelos.  Ao leste e ao oeste vocï¿½ observa a
-continuaï¿½ï¿½o da estrada do leste.
+chegando até as sagradas terras élficas de Valfenda.  Ao seu redor você
+observa lindos campos verdes e amarelos.  Ao leste e ao oeste você observa a
+continuação da estrada do leste.
 ~
-145 0 0 0 0 2
+145 0 2
 D1
-Vocï¿½ observa a estrada do leste.
+Você observa a estrada do leste.
 ~
 ~
 0 -1 14507
 D3
-Vocï¿½ observa a estrada do leste.
+Você observa a estrada do leste.
 ~
 ~
 0 -1 14509
 S
 #14509
 A Estrada do Leste~
-   Uma imensa sensaï¿½ï¿½o de tranqï¿½ilidade e paz invade seu corpo e sua mente.
-Ao seu redor vocï¿½ observa belas planï¿½cies verdes e alguns pï¿½ssaros curiosos
-com a sua presenï¿½a.  ï¿½ sua frente vocï¿½ observa a estreita estrada do leste,
+   Uma imensa sensação de tranqüilidade e paz invade seu corpo e sua mente.
+Ao seu redor você observa belas planícies verdes e alguns pássaros curiosos
+com a sua presença.  À sua frente você observa a estreita estrada do leste,
 que segue no sentido leste-oeste.  A estrada continua para o oeste na
-direï¿½ï¿½o dos Portos Cinzentos e para leste cortando o Condado e na direï¿½ï¿½o da
+direção dos Portos Cinzentos e para leste cortando o Condado e na direção da
 isolada aldeia de Bri.
 ~
-145 0 0 0 0 2
+145 0 2
 D1
-Vocï¿½ observa a estrada do leste.
+Você observa a estrada do leste.
 ~
 ~
 0 -1 14508
 S
 #14510
 A Floresta Velha~
-   Vocï¿½ estï¿½ caminhando entre ï¿½rvores de inï¿½meras formas e tamanhos, seus
+   Você está caminhando entre árvores de inúmeras formas e tamanhos, seus
 troncos retos, inclinados, curvados ou torcidos formando um emaranhado que
-dificulta sua visï¿½o.  A floresta velha ï¿½ conhecida pelas suas histï¿½rias de
-ï¿½rvores que se mexem, ï¿½rvores que possuem vida.  Ao caminhar pelas trilhas
-da floresta a dificuldade aumenta ï¿½ medida que surgem raï¿½zes torcidas e
-emaranhadas.  Ao sudeste vocï¿½ observa uma pequena trilha entre as ï¿½rvores
-de vï¿½rias formas e tamanhos da floresta velha e ao sudoeste vocï¿½ observa o
+dificulta sua visão.  A floresta velha é conhecida pelas suas histórias de
+árvores que se mexem, árvores que possuem vida.  Ao caminhar pelas trilhas
+da floresta a dificuldade aumenta à medida que surgem raízes torcidas e
+emaranhadas.  Ao sudeste você observa uma pequena trilha entre as árvores
+de várias formas e tamanhos da floresta velha e ao sudoeste você observa o
 centro da Vilanova.
 ~
-145 393504 0 0 0 3
+145 firs 3
 D8
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14511
 D9
-Vocï¿½ observa o centro da Vilanova.
+Você observa o centro da Vilanova.
 ~
 ~
 0 -1 14517
 S
 #14511
 A Floresta Velha~
-   Vocï¿½ estï¿½ caminhando entre ï¿½rvores de inï¿½meras formas e tamanhos, seus
+   Você está caminhando entre árvores de inúmeras formas e tamanhos, seus
 troncos retos, inclinados, curvados ou torcidos formando um emaranhado que
-dificulta sua visï¿½o.  A floresta velha ï¿½ conhecida pelas suas histï¿½rias de
-ï¿½rvores que se mexem, ï¿½rvores que possuem vida.  Ao caminhar pelas trilhas
-da floresta a dificuldade aumenta ï¿½ medida que surgem raï¿½zes torcidas e
-emaranhadas.  Ao sul, ao noroeste e ao sudeste vocï¿½ observa algumas
-pequeninas trilhas entre as ï¿½rvores de vï¿½rias formas e tamanhos da floresta
+dificulta sua visão.  A floresta velha é conhecida pelas suas histórias de
+árvores que se mexem, árvores que possuem vida.  Ao caminhar pelas trilhas
+da floresta a dificuldade aumenta à medida que surgem raízes torcidas e
+emaranhadas.  Ao sul, ao noroeste e ao sudeste você observa algumas
+pequeninas trilhas entre as árvores de várias formas e tamanhos da floresta
 velha.
 ~
-145 393504 0 0 0 3
+145 firs 3
 D2
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14519
 D6
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14510
 D8
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14514
 S
 #14512
 Uma Toca de madeira~
-   Vocï¿½ estï¿½ dentro de uma apertada casa de madeira, feita pelos hobbits que
-vivem na Vilanova.  Ao seu redor vocï¿½ observa alguns mï¿½veis de madeira e
-algumas ferramentas de madeira no chï¿½o.  Nas paredes vocï¿½ observa alguns
-quadros, que ilustram a tranqï¿½ilidade e a paz dos campos verdes do Condado.
-Na parte oeste da casa de madeira, vocï¿½ observa a misteriosa floresta velha
-atravï¿½s de uma curiosa janela circular.  Logo embaixo da janela vocï¿½ percebe
-um belo jardim cheio de flores coloridas e perfumadas.  Para cima vocï¿½
+   Você está dentro de uma apertada casa de madeira, feita pelos hobbits que
+vivem na Vilanova.  Ao seu redor você observa alguns móveis de madeira e
+algumas ferramentas de madeira no chão.  Nas paredes você observa alguns
+quadros, que ilustram a tranqüilidade e a paz dos campos verdes do Condado.
+Na parte oeste da casa de madeira, você observa a misteriosa floresta velha
+através de uma curiosa janela circular.  Logo embaixo da janela você percebe
+um belo jardim cheio de flores coloridas e perfumadas.  Para cima você
 observa uma porta circular de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D4
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14516
+:n 2 a porta de madeira
+ag -1 14516
 E
 janela circular~
-Vocï¿½ observa a misteriosa floresta velha.
+Você observa a misteriosa floresta velha.
 ~
 S
 #14513
 Uma Toca de Madeira Colorida~
-   Vocï¿½ estï¿½ dentro de uma pequenina casa de madeira, construï¿½da pelos
-hobbits que vivem na Vilanova.  Ao seu redor vocï¿½ observa alguns mï¿½veis de
+   Você está dentro de uma pequenina casa de madeira, construída pelos
+hobbits que vivem na Vilanova.  Ao seu redor você observa alguns móveis de
 madeira, alguns quadros fixados nas paredes de madeira e uma curiosa janela
-circular.  A toca de madeira ï¿½ totalmente coberta por grama e bastante
-ornamentada por flores de todas as cores.  Ao sul vocï¿½ observa uma porta
+circular.  A toca de madeira é totalmente coberta por grama e bastante
+ornamentada por flores de todas as cores.  Ao sul você observa uma porta
 circular de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D2
-Vocï¿½ observa uma curiosa porta de madeira.
+Você observa uma curiosa porta de madeira.
 ~
 porta madeira~
-0 -1 14517
+:n 2 a porta de madeira
+ag -1 14517
 E
 janela circular~
-Vocï¿½ observa a misteriosa floresta velha.
+Você observa a misteriosa floresta velha.
 ~
 S
 #14514
 A Floresta Velha~
-   Vocï¿½ estï¿½ caminhando entre ï¿½rvores de inï¿½meras formas e tamanhos, seus
+   Você está caminhando entre árvores de inúmeras formas e tamanhos, seus
 troncos retos, inclinados, curvados ou torcidos formando um emaranhado que
-dificulta sua visï¿½o.  A floresta velha ï¿½ conhecida pelas suas histï¿½rias de
-ï¿½rvores que se mexem, ï¿½rvores que possuem vida.  Ao caminhar pelas trilhas
-da floresta a dificuldade aumenta ï¿½ medida que surgem raï¿½zes torcidas e
-emaranhadas.  Ao  noroeste e ao sudoeste vocï¿½ observa algumas pequenas
-trilhas entre as ï¿½rvores de vï¿½rias formas e tamanhos da floresta velha.
+dificulta sua visão.  A floresta velha é conhecida pelas suas histórias de
+árvores que se mexem, árvores que possuem vida.  Ao caminhar pelas trilhas
+da floresta a dificuldade aumenta à medida que surgem raízes torcidas e
+emaranhadas.  Ao  noroeste e ao sudoeste você observa algumas pequenas
+trilhas entre as árvores de várias formas e tamanhos da floresta velha.
 ~
-145 393504 0 0 0 3
+145 firs 3
 D6
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14511
 D9
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14522
 S
 #14515
 Uma Pequena Toca de Madeira~
-   Vocï¿½ estï¿½ dentro de uma bela casa de madeira, feita pelos hobbits que
-vivem na Vilanova.  Ao seu redor vocï¿½ observa alguns pequeninos mï¿½veis e
-alguns restos de comidas da ï¿½ltima refeiï¿½ï¿½o dos donos da casa.  Nas paredes
-vocï¿½ observa algumas curiosas pinturas em pequenos quadros de madeira.  Na
-extremidade leste da casa de madeira, vocï¿½ observa uma curiosa janela em
-forma de cï¿½rculo, atravï¿½s dela vocï¿½ observa as grandes ï¿½rvores da floresta
-velha.  Ao oeste vocï¿½ observa uma engraï¿½ada porta de madeira circular.
+   Você está dentro de uma bela casa de madeira, feita pelos hobbits que
+vivem na Vilanova.  Ao seu redor você observa alguns pequeninos móveis e
+alguns restos de comidas da última refeição dos donos da casa.  Nas paredes
+você observa algumas curiosas pinturas em pequenos quadros de madeira.  Na
+extremidade leste da casa de madeira, você observa uma curiosa janela em
+forma de círculo, através dela você observa as grandes árvores da floresta
+velha.  Ao oeste você observa uma engraçada porta de madeira circular.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D3
-Vocï¿½ observa uma curiosa porta de madeira.
+Você observa uma curiosa porta de madeira.
 ~
 porta madeira~
-0 -1 14516
+:n 2 a porta de madeira
+ag -1 14516
 E
 janela circular~
-Vocï¿½ observa a misteriosa floresta velha.
+Você observa a misteriosa floresta velha.
 ~
 S
 #14516
 O Cativante Centro da Vilanova~
-   Vocï¿½ estï¿½ no centro da Vilanova.  Ao seu redor vï¿½rios hobbits conversam e
-apontam curiosamente para vocï¿½.  O centro da Vilanova estï¿½ cercada de
+   Você está no centro da Vilanova.  Ao seu redor vários hobbits conversam e
+apontam curiosamente para você.  O centro da Vilanova está cercada de
 pequenas barraquinhas, onde alguns hobbits vendem pequenas ferramentas de
-madeira, alï¿½m das tradicionais comidas dos pequeninos.  Ao redor do centro
-da Vilanova, vocï¿½ percebe vï¿½rias casas, para vocï¿½ parecem mais tocas.  Todas
+madeira, além das tradicionais comidas dos pequeninos.  Ao redor do centro
+da Vilanova, você percebe várias casas, para você parecem mais tocas.  Todas
 feitas de madeira e coloridas na maioria das vezes de amarelo e verde.  Ao
-leste, ao sul e para cima vocï¿½ observa pequeninas casas.  Ao oeste vocï¿½
+leste, ao sul e para cima você observa pequeninas casas.  Ao oeste você
 alguns hobbits caminhando e conversando no centro da Vilanova.
 ~
-145 393224 0 0 0 0
+145 drs 0
 D1
-Vocï¿½ observa uma pequena casa de madeira.
+Você observa uma pequena casa de madeira.
 ~
 porta madeira~
-0 -1 14515
+:n 2 a porta de madeira
+ag -1 14515
 D2
-Vocï¿½ observa uma pequena casa hobbits de madeira.
+Você observa uma pequena casa hobbits de madeira.
 ~
 porta madeira~
-0 -1 14520
+:n 2 a porta de madeira
+ag -1 14520
 D3
-Vocï¿½ observa o movimentado centro da Vilanova.
+Você observa o movimentado centro da Vilanova.
 ~
 ~
 0 -1 14517
 D5
-Vocï¿½ observa uma pequenina casa de madeira.
+Você observa uma pequenina casa de madeira.
 ~
 porta madeira~
-0 -1 14512
+:n 2 a porta de madeira
+ag -1 14512
 S
 #14517
 O Cativante Centro da Vilanova~
-   Vocï¿½ acaba de chegar no centro da Vilanova, um lugar extremamente
-cativante.  Ao seu redor vocï¿½ observa vï¿½rias barraquinhas, onde alguns
+   Você acaba de chegar no centro da Vilanova, um lugar extremamente
+cativante.  Ao seu redor você observa várias barraquinhas, onde alguns
 hobbits fazem trocas ou vendem pequenas ferramentas de madeira.  Ao redor do
-centro da Vilanova, vocï¿½ observa vï¿½rias pequenas casas de madeira cobertas
+centro da Vilanova, você observa várias pequenas casas de madeira cobertas
 por grama e com belos jardins.  Alguns pequeninos apontam e sorriem para
-vocï¿½.  Ao leste vocï¿½ observa alguns hobbits conversando no centro da
-Vilanova, ao norte e para baixo vocï¿½ observa pequeninas casas de madeira.
-Ao oeste vocï¿½ observa um grande portï¿½o de madeira e ao sul vocï¿½ observa uma
-pequena trilha na direï¿½ï¿½o da floresta negra.
+você.  Ao leste você observa alguns hobbits conversando no centro da
+Vilanova, ao norte e para baixo você observa pequeninas casas de madeira.
+Ao oeste você observa um grande portão de madeira e ao sul você observa uma
+pequena trilha na direção da floresta negra.
 ~
-145 393224 0 0 0 0
+145 drs 0
 D0
-Vocï¿½ observa uma pequena casa de madeira.
+Você observa uma pequena casa de madeira.
 ~
 porta madeira~
-0 -1 14513
+:n 2 a porta de madeira
+ag -1 14513
 D1
-Vocï¿½ observa o cativante centro da Vilanova.
+Você observa o cativante centro da Vilanova.
 ~
 ~
 0 -1 14516
 D2
-Vocï¿½ observa uma trilha na direï¿½ï¿½o da floresta velha.
+Você observa uma trilha na direção da floresta velha.
 ~
 ~
 0 -1 14524
 D3
-Vocï¿½ observa um grande portï¿½o de madeira.
+Você observa um grande portão de madeira.
 ~
-grande portï¿½o madeira~
-0 -1 14518
+grande portão madeira~
+:n 2 o grande portão de madeira
+ag -1 14518
 D5
-Vocï¿½ observa uma pequenina casa de madeira.
+Você observa uma pequenina casa de madeira.
 ~
 porta madeira~
-0 -1 14521
+:n 2 a porta de madeira
+ag -1 14521
 S
 #14518
-O Grande Portï¿½o da Vilanova~
-   Vocï¿½ estï¿½ na frente do grande portï¿½o de madeira da Vilanova.  O grande
-portï¿½o foi feito para afastar visitas inesperadas e desagradï¿½veis.  Ao seu
-redor vocï¿½ observa a Terra dos Buques do lado oeste do grande portï¿½o de
-madeira e do lado leste vocï¿½ observa a Vilanova.  Apï¿½s o grande portï¿½o
-construï¿½do pelos hobbits, vocï¿½ observa uma grande cerca, a Sebe Alta, que
+O Grande Portão da Vilanova~
+   Você está na frente do grande portão de madeira da Vilanova.  O grande
+portão foi feito para afastar visitas inesperadas e desagradáveis.  Ao seu
+redor você observa a Terra dos Buques do lado oeste do grande portão de
+madeira e do lado leste você observa a Vilanova.  Após o grande portão
+construído pelos hobbits, você observa uma grande cerca, a Sebe Alta, que
 segue no sentido norte-sul.
 ~
-145 68 0 0 0 2
+145 cg 2
 D1
-Vocï¿½ observa um grande portï¿½o de madeira.
+Você observa um grande portão de madeira.
 ~
-grande portï¿½o madeira~
-0 -1 14517
+grande portão madeira~
+:n 2 um grande portão de madeira
+ag -1 14517
 D3
-Vocï¿½ observa a Terra dos Buques.
+Você observa a Terra dos Buques.
 ~
 ~
 0 -1 14529
 S
 #14519
 A Floresta Velha~
-   Vocï¿½ estï¿½ caminhando entre ï¿½rvores de inï¿½meras formas e tamanhos, seus
+   Você está caminhando entre árvores de inúmeras formas e tamanhos, seus
 troncos retos, inclinados, curvados ou torcidos formando um emaranhado que
-dificulta sua visï¿½o.  A floresta velha ï¿½ conhecida pelas suas histï¿½rias de
-ï¿½rvores que se mexem, ï¿½rvores que possuem vida.  Ao caminhar pelas trilhas
-da floresta a dificuldade aumenta ï¿½ medida que surgem raï¿½zes torcidas e
-emaranhadas.  Ao  norte, sul e sudoeste vocï¿½ observa algumas trilhas entre
-as ï¿½rvores de vï¿½rias formas e tamanhos da floresta velha.
+dificulta sua visão.  A floresta velha é conhecida pelas suas histórias de
+árvores que se mexem, árvores que possuem vida.  Ao caminhar pelas trilhas
+da floresta a dificuldade aumenta à medida que surgem raízes torcidas e
+emaranhadas.  Ao  norte, sul e sudoeste você observa algumas trilhas entre
+as árvores de várias formas e tamanhos da floresta velha.
 ~
-145 393504 0 0 0 3
+145 firs 3
 D0
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14511
 D2
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14522
 D9
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14523
 S
 #14520
 Uma Pequenina Casa de Madeira~
-   Vocï¿½ estï¿½ dentro de uma apertada casa de madeira.  Ao seu redor vocï¿½
-observa pequenos mï¿½veis e utensï¿½lios de madeira.  Na parede sul da pequena
-casa de madeira, vocï¿½ observa a floresta velha atravï¿½s de uma curiosa janela
-circular.  Ao norte vocï¿½ observa uma engraï¿½ada porta de madeira pintada de
+   Você está dentro de uma apertada casa de madeira.  Ao seu redor você
+observa pequenos móveis e utensílios de madeira.  Na parede sul da pequena
+casa de madeira, você observa a floresta velha através de uma curiosa janela
+circular.  Ao norte você observa uma engraçada porta de madeira pintada de
 verde de forma circular.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D0
-Vocï¿½ observa uma curiosa porta de madeira.
+Você observa uma curiosa porta de madeira.
 ~
 porta madeira~
-0 -1 14516
+:n 2 a porta de madeira
+ag -1 14516
 E
 janela circular~
-Vocï¿½ observa a misteriosa floresta velha.
+Você observa a misteriosa floresta velha.
 ~
 S
 #14521
 Uma Curiosa Casa de Madeira~
-   Vocï¿½ estï¿½ dentro de uma pequenina casa de madeira.  Construï¿½da pelos
-pequeninos hobbits que vivem na Vilanova.  A casa ï¿½ totalmente coberta por
-uma faixa de grama, com exceï¿½ï¿½o das engraï¿½adas e circulares janelas e porta.
-Ao seu redor vocï¿½ observa pequeninos mï¿½veis e uma bela lareira.  Para cima
-vocï¿½ observa uma curiosa porta de madeira.
+   Você está dentro de uma pequenina casa de madeira.  Construída pelos
+pequeninos hobbits que vivem na Vilanova.  A casa é totalmente coberta por
+uma faixa de grama, com exceção das engraçadas e circulares janelas e porta.
+Ao seu redor você observa pequeninos móveis e uma bela lareira.  Para cima
+você observa uma curiosa porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D4
-Vocï¿½ observa uma curiosa porta de madeira.
+Você observa uma curiosa porta de madeira.
 ~
 porta madeira~
-0 -1 14517
+:n 2 a porta de madeira
+ag -1 14517
 E
 janela circular~
-Vocï¿½ observa a misteriosa floresta velha.
+Você observa a misteriosa floresta velha.
 ~
 S
 #14522
 A Floresta Velha~
-   Vocï¿½ estï¿½ caminhando entre ï¿½rvores de inï¿½meras formas e tamanhos, seus
+   Você está caminhando entre árvores de inúmeras formas e tamanhos, seus
 troncos retos, inclinados, curvados ou torcidos formando um emaranhado que
-dificulta sua visï¿½o.  A floresta velha ï¿½ conhecida pelas suas histï¿½rias de
-ï¿½rvores que se mexem, ï¿½rvores que possuem vida.  Ao caminhar pelas trilhas
-da floresta a dificuldade aumenta ï¿½ medida que surgem raï¿½zes torcidas e
-emaranhadas.  Ao  norte, oeste, nordeste e sudeste vocï¿½ observa algumas
-trilhas entre as ï¿½rvores de vï¿½rias formas e tamanhos da floresta velha.
+dificulta sua visão.  A floresta velha é conhecida pelas suas histórias de
+árvores que se mexem, árvores que possuem vida.  Ao caminhar pelas trilhas
+da floresta a dificuldade aumenta à medida que surgem raízes torcidas e
+emaranhadas.  Ao  norte, oeste, nordeste e sudeste você observa algumas
+trilhas entre as árvores de várias formas e tamanhos da floresta velha.
 ~
-145 393504 0 0 0 3
+145 firs 3
 D0
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14519
 D3
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14523
 D7
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14514
 D8
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14643
 S
 #14523
 A Floresta Velha~
-   Vocï¿½ estï¿½ caminhando entre ï¿½rvores de inï¿½meras formas e tamanhos, seus
+   Você está caminhando entre árvores de inúmeras formas e tamanhos, seus
 troncos retos, inclinados, curvados ou torcidos formando um emaranhado que
-dificulta sua visï¿½o.  A floresta velha ï¿½ conhecida pelas suas histï¿½rias de
-ï¿½rvores que se mexem, ï¿½rvores que possuem vida.  Ao caminhar pelas trilhas
-da floresta a dificuldade aumenta ï¿½ medida que surgem raï¿½zes torcidas e
-emaranhadas.  Ao  leste, oeste e nordeste vocï¿½ observa algumas trilhas entre
-as ï¿½rvores de vï¿½rias formas e tamanhos da floresta velha.
+dificulta sua visão.  A floresta velha é conhecida pelas suas histórias de
+árvores que se mexem, árvores que possuem vida.  Ao caminhar pelas trilhas
+da floresta a dificuldade aumenta à medida que surgem raízes torcidas e
+emaranhadas.  Ao  leste, oeste e nordeste você observa algumas trilhas entre
+as árvores de várias formas e tamanhos da floresta velha.
 ~
-145 393504 0 0 0 3
+145 firs 3
 D1
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14522
 D3
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14524
 D7
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14519
 S
 #14524
 A Floresta Velha~
-   Vocï¿½ estï¿½ caminhando entre ï¿½rvores de inï¿½meras formas e tamanhos, seus
+   Você está caminhando entre árvores de inúmeras formas e tamanhos, seus
 troncos retos, inclinados, curvados ou torcidos formando um emaranhado que
-dificulta sua visï¿½o.  A floresta velha ï¿½ conhecida pelas suas histï¿½rias de
-ï¿½rvores que se mexem, ï¿½rvores que possuem vida.  Ao caminhar pelas trilhas
-da floresta a dificuldade aumenta ï¿½ medida que surgem raï¿½zes torcidas e
-emaranhadas.  Ao  leste vocï¿½ observa uma trilha entre as ï¿½rvores de vï¿½rias
-formas e tamanhos da floresta velha, e ao norte vocï¿½ observa o centro da
+dificulta sua visão.  A floresta velha é conhecida pelas suas histórias de
+árvores que se mexem, árvores que possuem vida.  Ao caminhar pelas trilhas
+da floresta a dificuldade aumenta à medida que surgem raízes torcidas e
+emaranhadas.  Ao  leste você observa uma trilha entre as árvores de várias
+formas e tamanhos da floresta velha, e ao norte você observa o centro da
 Vilanova
 ~
-145 393504 0 0 0 3
+145 firs 3
 D0
-Vocï¿½ observa alguns pequeninos conversando no centro da Vilanova.
+Você observa alguns pequeninos conversando no centro da Vilanova.
 ~
 ~
 0 -1 14517
 D1
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14523
 S
 #14525
 A Terra dos Buques~
-   Vocï¿½ estï¿½ caminhando pelas belas terras dos Buques.  Ao seu redor vocï¿½
-observa belos campos verdes e maravilhosas ï¿½rvores frondosas.  Por entre as
-folhas secas no chï¿½o vocï¿½ percebe algumas pequeninas pegadas.  Ao sul vocï¿½
-observa os belï¿½ssimos campos verdes e ï¿½rvores frondosas da Terra dos Buques.
-Ao noroeste vocï¿½ observa a estrada do leste.
+   Você está caminhando pelas belas terras dos Buques.  Ao seu redor você
+observa belos campos verdes e maravilhosas árvores frondosas.  Por entre as
+folhas secas no chão você percebe algumas pequeninas pegadas.  Ao sul você
+observa os belíssimos campos verdes e árvores frondosas da Terra dos Buques.
+Ao noroeste você observa a estrada do leste.
 ~
-145 0 0 0 0 2
+145 0 2
 D2
-Vocï¿½ observa belos campos verdes e algumas ï¿½rvores frondosas.
+Você observa belos campos verdes e algumas árvores frondosas.
 ~
 ~
 0 -1 14529
 D6
-Vocï¿½ observa a estrada do leste.
+Você observa a estrada do leste.
 ~
 ~
 0 -1 14501
 S
 #14526
 Uma Toca de Pedra na Aldeia de Buqueburgo~
-   Vocï¿½ estï¿½ numa apertada casa, construï¿½da de pedras pelos pequeninos
-hobbits que vivem na aldeia de Buqueburgo.  Ao seu redor vocï¿½ observa alguns
-pequenos mï¿½veis e alguns quadros engraï¿½ados nas paredes.  Nas paredes ao
-leste e ao oeste, vocï¿½ observa duas janelas curiosas de forma circular.  Ao
-sul vocï¿½ observa uma porta de madeira.
+   Você está numa apertada casa, construída de pedras pelos pequeninos
+hobbits que vivem na aldeia de Buqueburgo.  Ao seu redor você observa alguns
+pequenos móveis e alguns quadros engraçados nas paredes.  Nas paredes ao
+leste e ao oeste, você observa duas janelas curiosas de forma circular.  Ao
+sul você observa uma porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D2
-Vocï¿½ observa uma engraï¿½ada porta circular.
+Você observa uma engraçada porta circular.
 ~
 porta madeira~
-0 -1 14528
+:n 2 a porta de madeira
+ag -1 14528
 S
 #14527
 A Terra dos Buques~
-   Vocï¿½ estï¿½ caminhando pelas belas terras dos Buques.  Ao seu redor vocï¿½
-observa belos campos verdes e maravilhosas ï¿½rvores frondosas.  Por entre as
-folhas secas no chï¿½o vocï¿½ percebe algumas pequeninas pegadas.  Ao sul vocï¿½
-observa os belï¿½ssimos campos verdes e ï¿½rvores frondosas da Terra dos Buques.
-Ao nordeste vocï¿½ observa a estrada do leste.
+   Você está caminhando pelas belas terras dos Buques.  Ao seu redor você
+observa belos campos verdes e maravilhosas árvores frondosas.  Por entre as
+folhas secas no chão você percebe algumas pequeninas pegadas.  Ao sul você
+observa os belíssimos campos verdes e árvores frondosas da Terra dos Buques.
+Ao nordeste você observa a estrada do leste.
 ~
-145 0 0 0 0 2
+145 0 2
 D2
-Vocï¿½ observa belos campos verdes e algumas ï¿½rvores frondosas.
+Você observa belos campos verdes e algumas árvores frondosas.
 ~
 ~
 0 -1 14531
 D7
-Vocï¿½ observa a estrada do leste.
+Você observa a estrada do leste.
 ~
 ~
 0 -1 14501
 S
 #14528
 A Aldeia de Buqueburgo~
-   Vocï¿½ estï¿½ caminhando pela bela aldeia de Buqueburgo, cuja origem as
-velhas histï¿½rias contam que:  Hï¿½ muito tempo atrï¿½s, o chefe da famï¿½lia
+   Você está caminhando pela bela aldeia de Buqueburgo, cuja origem as
+velhas histórias contam que:  Há muito tempo atrás, o chefe da família
 Velhobuque, o Sr. Gorhendad Velhobuque, atravessou o rio Brandevim, que era
 o limite original do Condado do lado leste, e escavou a Sede do Brandevim
 mais tarde mudando seu nome para a Sede de Brandebuque.  Com o passar dos
-anos a famï¿½lia cresceu, o velho Gorhendad Velhobuque ainda viu sua famï¿½lia
+anos a família cresceu, o velho Gorhendad Velhobuque ainda viu sua família
 ocupar toda a parte baixa do Condado para que mais tarde a numerosa prole
-dos Brandebuques comeï¿½assem a escavar vï¿½rias tocas por todo o lugar.  Ao
-seu redor vocï¿½ observa vï¿½rias tocas de pedra e de madeira, cobertas
-completamente de grama, com exceï¿½ï¿½o das portas e das janelas.  Ao norte e ao
-sul vocï¿½ observa algumas tocas da aldeia e ao sudeste e sudoeste vocï¿½
+dos Brandebuques começassem a escavar várias tocas por todo o lugar.  Ao
+seu redor você observa várias tocas de pedra e de madeira, cobertas
+completamente de grama, com exceção das portas e das janelas.  Ao norte e ao
+sul você observa algumas tocas da aldeia e ao sudeste e sudoeste você
 observa a Terra dos Buques.
 ~
-145 0 0 0 0 1
+145 0 1
 D0
-Vocï¿½ observa uma curiosa toca de pedra.
+Você observa uma curiosa toca de pedra.
 ~
 porta madeira~
-0 -1 14526
+:n 2 a porta de madeira
+ag -1 14526
 D2
-Vocï¿½ observa uma toca de pedra.
+Você observa uma toca de pedra.
 ~
 porta madeira~
-0 -1 14530
+:n 2 a porta de madeira
+ag -1 14530
 D8
-Vocï¿½ observa algumas belas ï¿½rvores frondosas.
+Você observa algumas belas árvores frondosas.
 ~
 ~
 0 -1 14529
 D9
-Vocï¿½ observa um belo campo verde.
+Você observa um belo campo verde.
 ~
 ~
 0 -1 14531
 S
 #14529
 A Terra dos Buques~
-   Vocï¿½ estï¿½ caminhando pelas belas terras dos Buques.  Ao seu redor vocï¿½
-observa belos campos verdes e maravilhosas ï¿½rvores frondosas.  Por entre as
-folhas secas no chï¿½o vocï¿½ percebe algumas pequeninas pegadas.  Ao norte e ao
-sul vocï¿½ observa os belï¿½ssimos campos verdes e ï¿½rvores frondosas da Terra
-dos Buques.  Ao leste vocï¿½ observa uma grande portï¿½o de madeira.  Ao
-sudoeste vocï¿½ observa a Sede de Brandebuque e ao noroeste vocï¿½ observa a
+   Você está caminhando pelas belas terras dos Buques.  Ao seu redor você
+observa belos campos verdes e maravilhosas árvores frondosas.  Por entre as
+folhas secas no chão você percebe algumas pequeninas pegadas.  Ao norte e ao
+sul você observa os belíssimos campos verdes e árvores frondosas da Terra
+dos Buques.  Ao leste você observa uma grande portão de madeira.  Ao
+sudoeste você observa a Sede de Brandebuque e ao noroeste você observa a
 aldeia de Buqueburgo.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa a Terra dos Buques.
+Você observa a Terra dos Buques.
 ~
 ~
 0 -1 14525
 D1
-Vocï¿½ observa um grande portï¿½o de madeira.
+Você observa um grande portão de madeira.
 ~
 ~
 0 -1 14518
 D2
-Vocï¿½ observa a Terra dos Buques.
+Você observa a Terra dos Buques.
 ~
 ~
 0 -1 14532
 D6
-Vocï¿½ observa a aldeia de Buqueburgo.
+Você observa a aldeia de Buqueburgo.
 ~
 ~
 0 -1 14528
 D9
-Vocï¿½ observa a Sede de Brandebuque.
+Você observa a Sede de Brandebuque.
 ~
 ~
 0 -1 14655
 S
 #14530
 Uma Toca de Pedra na Aldeia de Buqueburgo~
-   Vocï¿½ estï¿½ dentro de uma pequenina casa hobbits, feita de pedra e coberta
-por grama, com exceï¿½ï¿½o de sua porta e janelas circulares.  Ao seu redor vocï¿½
-observa pequenos mï¿½veis e alguns restos de comida.  Ao norte vocï¿½ observa
+   Você está dentro de uma pequenina casa hobbits, feita de pedra e coberta
+por grama, com exceção de sua porta e janelas circulares.  Ao seu redor você
+observa pequenos móveis e alguns restos de comida.  Ao norte você observa
 uma curiosa porta circular.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D0
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14528
+:n 2 a porta de madeira
+ag -1 14528
 S
 #14531
 A Terra dos Buques~
-   Vocï¿½ estï¿½ caminhando pelas belas terras dos Buques.  Ao seu redor vocï¿½
-observa belos campos verdes e maravilhosas ï¿½rvores frondosas.  Por entre as
-folhas secas no chï¿½o vocï¿½ percebe algumas pequeninas pegadas.  Ao norte vocï¿½
-observa os belï¿½ssimos campos verdes e ï¿½rvores frondosas da Terra dos Buques.
-Ao sudeste vocï¿½ observa a Sede de Brandebuque e ao nordeste vocï¿½ observa a
+   Você está caminhando pelas belas terras dos Buques.  Ao seu redor você
+observa belos campos verdes e maravilhosas árvores frondosas.  Por entre as
+folhas secas no chão você percebe algumas pequeninas pegadas.  Ao norte você
+observa os belíssimos campos verdes e árvores frondosas da Terra dos Buques.
+Ao sudeste você observa a Sede de Brandebuque e ao nordeste você observa a
 aldeia de Buqueburgo.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa a Terra dos Buques.
+Você observa a Terra dos Buques.
 ~
 ~
 0 -1 14527
 D7
-Vocï¿½ observa a aldeia de Buqueburgo.
+Você observa a aldeia de Buqueburgo.
 ~
 ~
 0 -1 14528
 D8
-Vocï¿½ observa a Sede de Brandebuque.
+Você observa a Sede de Brandebuque.
 ~
 ~
 0 -1 14655
 S
 #14532
 A Terra dos Buques~
-   Vocï¿½ estï¿½ caminhando pelas belas terras dos Buques.  Ao seu redor vocï¿½
-observa belos campos verdes e maravilhosas ï¿½rvores frondosas.  Por entre as
-folhas secas no chï¿½o vocï¿½ percebe algumas pequeninas pegadas.  Ao norte e ao
-oeste vocï¿½ observa os belï¿½ssimos campos verdes e ï¿½rvores frondosas da Terra
+   Você está caminhando pelas belas terras dos Buques.  Ao seu redor você
+observa belos campos verdes e maravilhosas árvores frondosas.  Por entre as
+folhas secas no chão você percebe algumas pequeninas pegadas.  Ao norte e ao
+oeste você observa os belíssimos campos verdes e árvores frondosas da Terra
 dos Buques.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa a Terra dos Buques.
+Você observa a Terra dos Buques.
 ~
 ~
 0 -1 14529
 D3
-Vocï¿½ observa a Terra dos Buques.
+Você observa a Terra dos Buques.
 ~
 ~
 0 -1 14533
 S
 #14533
 A Terra dos Buques~
-   Vocï¿½ estï¿½ caminhando pelas belas terras dos Buques.  Ao seu redor vocï¿½
-observa belos campos verdes e maravilhosas ï¿½rvores frondosas.  Por entre as
-folhas secas no chï¿½o vocï¿½ percebe algumas pequeninas pegadas.  Ao leste vocï¿½
-observa os belï¿½ssimos campos verdes e ï¿½rvores frondosas da Terra dos Buques.
-Ao norte vocï¿½ observa a Sede de Brandebuque e ao oeste vocï¿½ observa as ï¿½guas
+   Você está caminhando pelas belas terras dos Buques.  Ao seu redor você
+observa belos campos verdes e maravilhosas árvores frondosas.  Por entre as
+folhas secas no chão você percebe algumas pequeninas pegadas.  Ao leste você
+observa os belíssimos campos verdes e árvores frondosas da Terra dos Buques.
+Ao norte você observa a Sede de Brandebuque e ao oeste você observa as águas
 do rio Brandevim.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa a Sede de Brandebuque.
+Você observa a Sede de Brandebuque.
 ~
 ~
 0 -1 14655
 D1
-Vocï¿½ observa a Terra dos Buques.
+Você observa a Terra dos Buques.
 ~
 ~
 0 -1 14532
 D3
-Vocï¿½ observa as ï¿½guas calmas do rio Brandevim.
+Você observa as águas calmas do rio Brandevim.
 ~
 ~
 0 -1 14534
 S
 #14534
-As ï¿½guas do Rio Brandevim~
-   Vocï¿½ estï¿½ dentro do tranqï¿½ilo rio Brandevim, o antigo limite leste do
-Condado.  As ï¿½guas do rio Brandevim sï¿½o bastante utilizadas pelos hobbits
+As Águas do Rio Brandevim~
+   Você está dentro do tranqüilo rio Brandevim, o antigo limite leste do
+Condado.  As águas do rio Brandevim são bastante utilizadas pelos hobbits
 que vivem na Terra dos Buques e por este motivo os moradores antigos do
-Condado acham os hobbits da Terra dos Buques estranhos.  Ao seu redor vocï¿½
-observa do lado leste apï¿½s as margens do Brandevim, belas ï¿½rvores frondosas,
-e prï¿½ximo da margem oeste do Brandevim, vocï¿½ observa a balsa de Buqueburgo.
-Ao noroeste e ao sudoeste vocï¿½ observa as lï¿½mpidas ï¿½guas do rio Brandevim.
+Condado acham os hobbits da Terra dos Buques estranhos.  Ao seu redor você
+observa do lado leste após as margens do Brandevim, belas árvores frondosas,
+e próximo da margem oeste do Brandevim, você observa a balsa de Buqueburgo.
+Ao noroeste e ao sudoeste você observa as límpidas águas do rio Brandevim.
 ~
-145 393284 0 0 0 7
+145 cgrs 7
 D1
-Vocï¿½ observa a Terra dos Buques.
+Você observa a Terra dos Buques.
 ~
 ~
 0 -1 14533
 D3
-Vocï¿½ observa a balsa de Buqueburgo.
+Você observa a balsa de Buqueburgo.
 ~
 ~
 0 -1 14539
 D6
-Vocï¿½ observa as tranqï¿½ilas ï¿½guas do rio Brandevim.
+Você observa as tranqüilas águas do rio Brandevim.
 ~
 ~
 0 -1 14538
 D9
-Vocï¿½ observa as tranqï¿½ilas ï¿½guas do rio Brandevim.
+Você observa as tranqüilas águas do rio Brandevim.
 ~
 ~
 0 -1 14540
 S
 #14535
-As ï¿½guas do Rio Brandevim~
-   Vocï¿½ estï¿½ dentro do tranqï¿½ilo rio Brandevim, o antigo limite leste do
-Condado.  As ï¿½guas do rio Brandevim sï¿½o bastante utilizadas pelos hobbits
+As Águas do Rio Brandevim~
+   Você está dentro do tranqüilo rio Brandevim, o antigo limite leste do
+Condado.  As águas do rio Brandevim são bastante utilizadas pelos hobbits
 que vivem na Terra dos Buques e por este motivo os moradores antigos do
-Condado acham os hobbits da Terra dos Buques estranhos.  Ao seu redor vocï¿½
-observa nas margens leste e oeste uma farta plantaï¿½ï¿½o de milho.  Ao sul vocï¿½
-observa as calmas ï¿½guas do rio Brandevim.
+Condado acham os hobbits da Terra dos Buques estranhos.  Ao seu redor você
+observa nas margens leste e oeste uma farta plantação de milho.  Ao sul você
+observa as calmas águas do rio Brandevim.
 ~
-145 393284 0 0 0 7
+145 cgrs 7
 D2
-Vocï¿½ observa as tranqï¿½ilas ï¿½guas do rio Brandevim.
+Você observa as tranqüilas águas do rio Brandevim.
 ~
 ~
 0 -1 14536
 S
 #14536
-As ï¿½guas do Rio Brandevim~
-   Vocï¿½ estï¿½ dentro do tranqï¿½ilo rio Brandevim, o antigo limite leste do
-Condado.  As ï¿½guas do rio Brandevim sï¿½o bastante utilizadas pelos hobbits
+As Águas do Rio Brandevim~
+   Você está dentro do tranqüilo rio Brandevim, o antigo limite leste do
+Condado.  As águas do rio Brandevim são bastante utilizadas pelos hobbits
 que vivem na Terra dos Buques e por este motivo os moradores antigos do
-Condado acham os hobbits da Terra dos Buques estranhos.  Ao seu redor vocï¿½
-observa nas margens leste e oeste, belos campos verdes.  Ao norte vocï¿½
-observa as calmas ï¿½guas do rio Brandevim e ao sul vocï¿½ observa a Ponte do
-Brandevim, bastante baixa e quase tocando nas ï¿½guas do rio Brandevim, apenas
-os pequeninos conseguem ultrapassï¿½-la de canoas ou barcos.
+Condado acham os hobbits da Terra dos Buques estranhos.  Ao seu redor você
+observa nas margens leste e oeste, belos campos verdes.  Ao norte você
+observa as calmas águas do rio Brandevim e ao sul você observa a Ponte do
+Brandevim, bastante baixa e quase tocando nas águas do rio Brandevim, apenas
+os pequeninos conseguem ultrapassá-la de canoas ou barcos.
 ~
-145 393284 0 0 0 7
+145 cgrs 7
 D0
-Vocï¿½ observa as tranqï¿½ilas ï¿½guas do rio Brandevim.
+Você observa as tranqüilas águas do rio Brandevim.
 ~
 ~
 0 -1 14535
 D2
-Vocï¿½ observa a ponte do Brandevim.
+Você observa a ponte do Brandevim.
 ~
 ~
 0 -1 14503
 S
 #14537
-As ï¿½guas do Rio Brandevim~
-   Vocï¿½ estï¿½ dentro do tranqï¿½ilo rio Brandevim, o antigo limite leste do
-Condado.  As ï¿½guas do rio Brandevim sï¿½o bastante utilizadas pelos hobbits
+As Águas do Rio Brandevim~
+   Você está dentro do tranqüilo rio Brandevim, o antigo limite leste do
+Condado.  As águas do rio Brandevim são bastante utilizadas pelos hobbits
 que vivem na Terra dos Buques e por este motivo os moradores antigos do
-Condado acham os hobbits da Terra dos Buques estranhos.  Ao seu redor vocï¿½
-observa apï¿½s a margem leste a terra dos Buques e apï¿½s a margem oeste um belo
-bosque.  Ao sul vocï¿½ observa as calmas ï¿½guas do rio Brandevim e ao norte
-vocï¿½ observa a Ponte do Brandevim, bastante baixa e quase tocando nas ï¿½guas
-do rio Brandevim, apenas os pequeninos conseguem ultrapassï¿½-la de canoas ou
+Condado acham os hobbits da Terra dos Buques estranhos.  Ao seu redor você
+observa após a margem leste a terra dos Buques e após a margem oeste um belo
+bosque.  Ao sul você observa as calmas águas do rio Brandevim e ao norte
+você observa a Ponte do Brandevim, bastante baixa e quase tocando nas águas
+do rio Brandevim, apenas os pequeninos conseguem ultrapassá-la de canoas ou
 barcos.
 ~
-145 393284 0 0 0 7
+145 cgrs 7
 D0
-Vocï¿½ observa a Ponte do Brandevim.
+Você observa a Ponte do Brandevim.
 ~
 ~
 0 -1 14503
 D2
-Vocï¿½ observa as tranqï¿½ilas ï¿½guas do rio Brandevim.
+Você observa as tranqüilas águas do rio Brandevim.
 ~
 ~
 0 -1 14538
 S
 #14538
-As ï¿½guas do Rio Brandevim~
-   Vocï¿½ estï¿½ dentro do tranqï¿½ilo rio Brandevim, o antigo limite leste do
-Condado.  As ï¿½guas do rio Brandevim sï¿½o bastante utilizadas pelos hobbits
+As Águas do Rio Brandevim~
+   Você está dentro do tranqüilo rio Brandevim, o antigo limite leste do
+Condado.  As águas do rio Brandevim são bastante utilizadas pelos hobbits
 que vivem na Terra dos Buques e por este motivo os moradores antigos do
-Condado acham os hobbits da Terra dos Buques estranhos.  Ao seu redor vocï¿½
-observa apï¿½s a margem leste a terra dos Buques e apï¿½s a margem oeste um belo
-bosque.  Ao norte e ao sudeste vocï¿½ observa as calmas ï¿½guas do rio
+Condado acham os hobbits da Terra dos Buques estranhos.  Ao seu redor você
+observa após a margem leste a terra dos Buques e após a margem oeste um belo
+bosque.  Ao norte e ao sudeste você observa as calmas águas do rio
 Brandevim.
 ~
-145 393284 0 0 0 7
+145 cgrs 7
 D0
-Vocï¿½ observa as tranqï¿½ilas ï¿½guas do rio Brandevim.
+Você observa as tranqüilas águas do rio Brandevim.
 ~
 ~
 0 -1 14537
 D8
-Vocï¿½ observa as tranqï¿½ilas ï¿½guas do rio Brandevim.
+Você observa as tranqüilas águas do rio Brandevim.
 ~
 ~
 0 -1 14534
 S
 #14539
 A Balsa de Buqueburgo~
-   Vocï¿½ estï¿½ sobre a balsa de Buqueburgo, utilizada pelos pequeninos para
-facilitar a passagem pelo rio Brandevim.  A balsa de Buqueburgo estï¿½
+   Você está sobre a balsa de Buqueburgo, utilizada pelos pequeninos para
+facilitar a passagem pelo rio Brandevim.  A balsa de Buqueburgo está
 localizada entre a Terra dos Buques e o belo bosque, povoado de pequeninos.
-Ao seu redor vocï¿½ observa as tranqï¿½ilas ï¿½guas do rio Brandevim seguindo seu
-percurso.  Ao leste vocï¿½ observa alï¿½m do rio Brandevim a Terra dos Buques e
+Ao seu redor você observa as tranqüilas águas do rio Brandevim seguindo seu
+percurso.  Ao leste você observa além do rio Brandevim a Terra dos Buques e
 ao oeste um belo bosque.
 ~
-145 393216 0 0 0 1
+145 rs 1
 D1
-Vocï¿½ observa as tranqï¿½ilas ï¿½guas do rio Brandevim.
+Você observa as tranqüilas águas do rio Brandevim.
 ~
 ~
 0 -1 14534
 D3
-Vocï¿½ observa um belo bosque.
+Você observa um belo bosque.
 ~
 ~
 0 -1 14545
 S
 #14540
-As ï¿½guas do Rio Brandevim~
-   Vocï¿½ estï¿½ dentro do tranqï¿½ilo rio Brandevim, o antigo limite leste do
-Condado.  As ï¿½guas do rio Brandevim sï¿½o bastante utilizadas pelos hobbits
+As Águas do Rio Brandevim~
+   Você está dentro do tranqüilo rio Brandevim, o antigo limite leste do
+Condado.  As águas do rio Brandevim são bastante utilizadas pelos hobbits
 que vivem na Terra dos Buques e por este motivo os moradores antigos do
-Condado acham os hobbits da Terra dos Buques estranhos.  Ao seu redor vocï¿½
-observa apï¿½s a margem leste a terra dos Buques e apï¿½s a margem oeste um belo
-bosque.  Ao nordeste vocï¿½ observa as calmas ï¿½guas do rio Brandevim.
+Condado acham os hobbits da Terra dos Buques estranhos.  Ao seu redor você
+observa após a margem leste a terra dos Buques e após a margem oeste um belo
+bosque.  Ao nordeste você observa as calmas águas do rio Brandevim.
 ~
-145 393284 0 0 0 7
+145 cgrs 7
 D7
-Vocï¿½ observa as tranqï¿½ilas ï¿½guas do rio Brandevim.
+Você observa as tranqüilas águas do rio Brandevim.
 ~
 ~
 0 -1 14534
 S
 #14541
 O Bosque do Condado~
-   Vocï¿½ estï¿½ caminhando entre as belas ï¿½rvores do bosque do Condado.  Ao seu
-redor vocï¿½ observa algumas ï¿½rvores cheias de frutas e alguns pï¿½ssaros
-brincando em seus galhos.  No chï¿½o vocï¿½ percebe a presenï¿½a de pequeninas
-pegadas entre as folhas secas e a grama.  Ao sul e ao noroeste vocï¿½ observa
-as magnï¿½ficas ï¿½rvores do bosque do Condado.
+   Você está caminhando entre as belas árvores do bosque do Condado.  Ao seu
+redor você observa algumas árvores cheias de frutas e alguns pássaros
+brincando em seus galhos.  No chão você percebe a presença de pequeninas
+pegadas entre as folhas secas e a grama.  Ao sul e ao noroeste você observa
+as magníficas árvores do bosque do Condado.
 ~
-145 262144 0 0 0 3
+145 s 3
 D2
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14545
 D6
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14542
 S
 #14542
 O Bosque do Condado~
-   Vocï¿½ estï¿½ andando sobre uma pilha de folhas secas no bosque do Condado.
-Ao seu redor vocï¿½ observa belas ï¿½rvores frondosas e no chï¿½o a grama estï¿½ bem
-verdinha.  Alguns pï¿½ssaros cantam para os visitantes e outros preferem
-brincar nos bondosos galhos das ï¿½rvores do bosque.  Ao sudeste e ao sudoeste
-vocï¿½ observa o verde bosque do Condado.
+   Você está andando sobre uma pilha de folhas secas no bosque do Condado.
+Ao seu redor você observa belas árvores frondosas e no chão a grama está bem
+verdinha.  Alguns pássaros cantam para os visitantes e outros preferem
+brincar nos bondosos galhos das árvores do bosque.  Ao sudeste e ao sudoeste
+você observa o verde bosque do Condado.
 ~
-145 262144 0 0 0 3
+145 s 3
 D8
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14541
 D9
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14543
 S
 #14543
 O Bosque do Condado~
-   Vocï¿½ estï¿½ caminhando entre as belas ï¿½rvores do bosque do Condado.  Ao seu
-redor vocï¿½ observa algumas ï¿½rvores cheias de frutas e alguns pï¿½ssaros
-brincando em seus galhos.  No chï¿½o vocï¿½ percebe a presenï¿½a de pequeninas
-pegadas entre as folhas secas e a grama.  Ao nordeste e ao sudoeste vocï¿½
-observa as magnï¿½ficas ï¿½rvores do bosque do Condado.
+   Você está caminhando entre as belas árvores do bosque do Condado.  Ao seu
+redor você observa algumas árvores cheias de frutas e alguns pássaros
+brincando em seus galhos.  No chão você percebe a presença de pequeninas
+pegadas entre as folhas secas e a grama.  Ao nordeste e ao sudoeste você
+observa as magníficas árvores do bosque do Condado.
 ~
-145 262144 0 0 0 3
+145 s 3
 D7
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14542
 D9
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14552
 S
 #14544
 Uma Pequenina Casa Verde~
-   Vocï¿½ estï¿½ dentro de uma minï¿½scula casa, feita pelos hobbits que habitam a
-Vila do Bosque.  A casa foi construï¿½da toda em madeira, possui curiosas
-janelas em forma de cï¿½rculos e sua porta ï¿½ circular.  Ao seu redor vocï¿½
-observa vï¿½rios pequeninos mï¿½veis espalhados pela casa.  Para cima vocï¿½
+   Você está dentro de uma minúscula casa, feita pelos hobbits que habitam a
+Vila do Bosque.  A casa foi construída toda em madeira, possui curiosas
+janelas em forma de círculos e sua porta é circular.  Ao seu redor você
+observa vários pequeninos móveis espalhados pela casa.  Para cima você
 observa uma porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D4
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14546
+:n 2 a porta de madeira
+ag -1 14546
 S
 #14545
 O Bosque do Condado~
-   Vocï¿½ estï¿½ caminhando sobre um belo tapete de grama extremamente verdinha.
-Ao seu redor vocï¿½ observa as ï¿½rvores frondosas e cheias de frutas do
-Condado.  No chï¿½o alï¿½m de algumas folhas secas, vocï¿½ observa pequeninas
-pegadas caminhando em todos os sentidos.  Ao leste vocï¿½ observa a balsa de
-Buqueburgo, ao oeste vocï¿½ observa a pequena Vila do Bosque, e ao norte e ao
-sul vocï¿½ observa as belas ï¿½rvores do bosque do Condado.
+   Você está caminhando sobre um belo tapete de grama extremamente verdinha.
+Ao seu redor você observa as árvores frondosas e cheias de frutas do
+Condado.  No chão além de algumas folhas secas, você observa pequeninas
+pegadas caminhando em todos os sentidos.  Ao leste você observa a balsa de
+Buqueburgo, ao oeste você observa a pequena Vila do Bosque, e ao norte e ao
+sul você observa as belas árvores do bosque do Condado.
 ~
-145 262144 0 0 0 3
+145 s 3
 D0
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14541
 D1
-Vocï¿½ observa a balsa de Buqueburgo.
+Você observa a balsa de Buqueburgo.
 ~
 ~
 0 -1 14539
 D2
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14548
 D3
-Vocï¿½ observa a bela Vila do Bosque.
+Você observa a bela Vila do Bosque.
 ~
 ~
 0 -1 14546
 S
 #14546
 A Vila do Bosque~
-   Vocï¿½ estï¿½ caminhando no centro da Vila do Bosque.  Ao seu redor vocï¿½
-observa alguns curiosas pequeninos apontando para vocï¿½, loucos para
-descobrir o que vocï¿½ estï¿½ fazendo nas terras do Condado.  Vocï¿½ percebe
-tambï¿½m vï¿½rias pequeninas tocas coloridas, principalmente pintadas de verde e
-amarelo, que circulam todo o centro da vila.  Ao leste vocï¿½ observa as belas
-ï¿½rvores do bosque e ao sul, ao oeste e para baixo vocï¿½ observa tocas de
-madeira cobertas por uma faixa de grama, com exceï¿½ï¿½o das janelas e portas
+   Você está caminhando no centro da Vila do Bosque.  Ao seu redor você
+observa alguns curiosas pequeninos apontando para você, loucos para
+descobrir o que você está fazendo nas terras do Condado.  Você percebe
+também várias pequeninas tocas coloridas, principalmente pintadas de verde e
+amarelo, que circulam todo o centro da vila.  Ao leste você observa as belas
+árvores do bosque e ao sul, ao oeste e para baixo você observa tocas de
+madeira cobertas por uma faixa de grama, com exceção das janelas e portas
 circulares.
 ~
-145 0 0 0 0 1
+145 0 1
 D1
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14545
 D2
-Vocï¿½ observa uma pequenina toca hobbits.
+Você observa uma pequenina toca hobbits.
 ~
 porta madeira~
-0 -1 14549
+:n 2 a porta de madeira
+ag -1 14549
 D3
-Vocï¿½ observa uma pequenina toca hobbits.
+Você observa uma pequenina toca hobbits.
 ~
 porta madeira~
-0 -1 14547
+:n 2 a porta de madeira
+ag -1 14547
 D5
-Vocï¿½ observa uma pequenina toca hobbits.
+Você observa uma pequenina toca hobbits.
 ~
 porta madeira~
-0 -1 14544
+:n 2 a porta de madeira
+ag -1 14544
 S
 #14547
 Uma Curiosa Toca Verde e Amarela~
-   Vocï¿½ estï¿½ dentro de uma apertada toca de madeira, construï¿½da pelos
+   Você está dentro de uma apertada toca de madeira, construída pelos
 pequeninos que habitam a Vila do Bosque e pintada com suas cores favoritas.
-Ao seu redor vocï¿½ observa belos, porï¿½m pequeninos mï¿½veis e algumas
-ferramentas estranhas de madeira.  Nas paredes vocï¿½ observa alguns quadros e
-uma engraï¿½ada janela circular.  Ao leste vocï¿½ observa o centro da Vila do
+Ao seu redor você observa belos, porém pequeninos móveis e algumas
+ferramentas estranhas de madeira.  Nas paredes você observa alguns quadros e
+uma engraçada janela circular.  Ao leste você observa o centro da Vila do
 Bosque.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D1
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14546
+:n 2 a porta de madeira
+ag -1 14546
 S
 #14548
 O Bosque do Condado~
-   Vocï¿½ estï¿½ caminhando entre as belas ï¿½rvores do bosque do Condado.  Ao seu
-redor vocï¿½ observa algumas ï¿½rvores cheias de frutas e alguns pï¿½ssaros
-brincando em seus galhos.  No chï¿½o vocï¿½ percebe a presenï¿½a de pequeninas
-pegadas entre as folhas secas e a grama.  Ao norte e ao sudoeste vocï¿½
-observa as magnï¿½ficas ï¿½rvores do bosque do Condado.
+   Você está caminhando entre as belas árvores do bosque do Condado.  Ao seu
+redor você observa algumas árvores cheias de frutas e alguns pássaros
+brincando em seus galhos.  No chão você percebe a presença de pequeninas
+pegadas entre as folhas secas e a grama.  Ao norte e ao sudoeste você
+observa as magníficas árvores do bosque do Condado.
 ~
-145 262144 0 0 0 3
+145 s 3
 D0
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14545
 D9
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14551
 S
 #14549
 Uma Pequena Toca Hobbits~
-   Vocï¿½ estï¿½ dentro de uma pequenina casa de madeira, feita pelas mï¿½os
-habilidosas dos pequeninos.  Ao seu redor vocï¿½ observa alguns mï¿½veis
-pequenos e alguns brinquedos de crianï¿½a.  As paredes foram pintadas de
-amarelo e vocï¿½ percebe na extremidade sul da casa uma janela circular, que
-lhe permite observa as belas ï¿½rvores do bosque do Condado.  Ao norte vocï¿½
-observa uma engraï¿½ada porta de madeira.
+   Você está dentro de uma pequenina casa de madeira, feita pelas mãos
+habilidosas dos pequeninos.  Ao seu redor você observa alguns móveis
+pequenos e alguns brinquedos de criança.  As paredes foram pintadas de
+amarelo e você percebe na extremidade sul da casa uma janela circular, que
+lhe permite observa as belas árvores do bosque do Condado.  Ao norte você
+observa uma engraçada porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D0
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14546
+:n 2 a porta de madeira
+ag -1 14546
 S
 #14550
 O Bosque do Condado~
-   Vocï¿½ estï¿½ caminhando entre as belas ï¿½rvores do bosque do Condado.  Ao seu
-redor vocï¿½ observa algumas ï¿½rvores cheias de frutas e alguns pï¿½ssaros
-brincando em seus galhos.  No chï¿½o vocï¿½ percebe a presenï¿½a de pequeninas
-pegadas entre as folhas secas e a grama.  Ao sudeste e ao noroeste vocï¿½
-observa as magnï¿½ficas ï¿½rvores do bosque do Condado.
+   Você está caminhando entre as belas árvores do bosque do Condado.  Ao seu
+redor você observa algumas árvores cheias de frutas e alguns pássaros
+brincando em seus galhos.  No chão você percebe a presença de pequeninas
+pegadas entre as folhas secas e a grama.  Ao sudeste e ao noroeste você
+observa as magníficas árvores do bosque do Condado.
 ~
-145 262144 0 0 0 3
+145 s 3
 D6
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14552
 D8
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14551
 S
 #14551
 O Bosque do Condado~
-   Vocï¿½ estï¿½ andando sobre uma pilha de folhas secas no bosque do Condado.
-Ao seu redor vocï¿½ observa belas ï¿½rvores frondosas e no chï¿½o a grama estï¿½ bem
-verdinha.  Alguns pï¿½ssaros cantam para os visitantes e outros preferem
-brincar nos bondosos galhos das ï¿½rvores do bosque.  Ao noroeste e nordeste
-vocï¿½ observa o verde bosque do Condado.
+   Você está andando sobre uma pilha de folhas secas no bosque do Condado.
+Ao seu redor você observa belas árvores frondosas e no chão a grama está bem
+verdinha.  Alguns pássaros cantam para os visitantes e outros preferem
+brincar nos bondosos galhos das árvores do bosque.  Ao noroeste e nordeste
+você observa o verde bosque do Condado.
 ~
-145 262144 0 0 0 3
+145 s 3
 D6
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14550
 D7
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14548
 S
 #14552
 O Bosque do Condado~
-   Vocï¿½ estï¿½ caminhando sobre uma belo tapete de grama perfumada e bastante
-verdinha.  Ao seu redor vocï¿½ observa as belas ï¿½rvores do bosque do Condado:
-Grandes, frondosas e cheias de frutinhas maduras.  No chï¿½o alï¿½m do macio
-tapete verde, vocï¿½ observa tambï¿½m algumas pegadas pequeninas entre as folhas
-secas das ï¿½rvores.  Ao nordeste e ao sudeste vocï¿½ observa as belas ï¿½rvores
-do bosque do Condado, e ao oeste vocï¿½ observa uma colina verde.
+   Você está caminhando sobre uma belo tapete de grama perfumada e bastante
+verdinha.  Ao seu redor você observa as belas árvores do bosque do Condado:
+Grandes, frondosas e cheias de frutinhas maduras.  No chão além do macio
+tapete verde, você observa também algumas pegadas pequeninas entre as folhas
+secas das árvores.  Ao nordeste e ao sudeste você observa as belas árvores
+do bosque do Condado, e ao oeste você observa uma colina verde.
 ~
-145 262144 0 0 0 3
+145 s 3
 D3
-Vocï¿½ observa a Terra das Colinas Verdes.
+Você observa a Terra das Colinas Verdes.
 ~
 ~
 0 -1 14553
 D7
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14543
 D8
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14550
 S
 #14553
 A Terra das Colinas Verdes~
-   Vocï¿½ estï¿½ caminhando entre as belas colinas verdes do Condado.  Ao seu
-redor vocï¿½ observa vï¿½rias e lindas colinas verdes, alï¿½m de observa ao norte
-a estrada do leste e o rio ï¿½gua, e ao sul extensas planï¿½cies verdes.  Ao
-leste vocï¿½ observa o bosque do Condado e ao oeste vocï¿½ observa a Terra das
+   Você está caminhando entre as belas colinas verdes do Condado.  Ao seu
+redor você observa várias e lindas colinas verdes, além de observa ao norte
+a estrada do leste e o rio Água, e ao sul extensas planícies verdes.  Ao
+leste você observa o bosque do Condado e ao oeste você observa a Terra das
 Colinas Verdes.
 ~
-145 64 0 0 0 2
+145 g 2
 D1
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14552
 D3
-Vocï¿½ observa uma bela colina verde.
+Você observa uma bela colina verde.
 ~
 ~
 0 -1 14554
 S
 #14554
 A Terra das Colinas Verdes~
-   Vocï¿½ estï¿½ caminhando entre as belas colinas verdes do Condado.  Ao seu
-redor vocï¿½ observa vï¿½rias e lindas colinas verdes, alï¿½m de observa ao norte
-a estrada do leste e o rio ï¿½gua, e ao sul extensas planï¿½cies verdes.  Ao
-oeste, noroeste e sudoeste vocï¿½ observa a Terra das Colinas Verdes.
+   Você está caminhando entre as belas colinas verdes do Condado.  Ao seu
+redor você observa várias e lindas colinas verdes, além de observa ao norte
+a estrada do leste e o rio Água, e ao sul extensas planícies verdes.  Ao
+oeste, noroeste e sudoeste você observa a Terra das Colinas Verdes.
 ~
-145 64 0 0 0 2
+145 g 2
 D3
-Vocï¿½ observa o belo bosque do Condado.
+Você observa o belo bosque do Condado.
 ~
 ~
 0 -1 14553
 D6
-Vocï¿½ observa uma bela colina verde.
+Você observa uma bela colina verde.
 ~
 ~
 0 -1 14556
 D9
-Vocï¿½ observa uma bela colina verde.
+Você observa uma bela colina verde.
 ~
 ~
 0 -1 14557
 S
 #14555
-Uma Planï¿½cie Verde~
-   Vocï¿½ estï¿½ caminhando sobre uma tranqï¿½ila planï¿½cie verde do Condado.  Ao
-seu redor apenas algumas flores e pequenos pï¿½ssaros que sobrevoam a planï¿½cie
-caï¿½ando pequenos insetos.  Ao norte vocï¿½ observa a estrada do leste e ao sul
+Uma Planície Verde~
+   Você está caminhando sobre uma tranqüila planície verde do Condado.  Ao
+seu redor apenas algumas flores e pequenos pássaros que sobrevoam a planície
+caçando pequenos insetos.  Ao norte você observa a estrada do leste e ao sul
 uma colina verde.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa a estrada do leste.
+Você observa a estrada do leste.
 ~
 ~
 0 -1 14507
 D2
-Vocï¿½ observa uma colina verde.
+Você observa uma colina verde.
 ~
 ~
 0 -1 14556
 S
 #14556
 A Terra das Colinas Verdes~
-   Vocï¿½ estï¿½ caminhando sobre uma bela colina verde das terras do Condado.
-Ao seu redor vocï¿½ observa vï¿½rias colinas cobertas de vegetaï¿½ï¿½o rasteira.  Ao
-norte, alï¿½m das colinas vocï¿½ observa alguns viajantes caminhando no sentido
-leste da estrada do leste.  Ao sul, sudeste e sudoeste vocï¿½ observa vï¿½rias
-colinas verdes, e ao norte vocï¿½ observa uma planï¿½cie verde.
+   Você está caminhando sobre uma bela colina verde das terras do Condado.
+Ao seu redor você observa várias colinas cobertas de vegetação rasteira.  Ao
+norte, além das colinas você observa alguns viajantes caminhando no sentido
+leste da estrada do leste.  Ao sul, sudeste e sudoeste você observa várias
+colinas verdes, e ao norte você observa uma planície verde.
 ~
-145 64 0 0 0 2
+145 g 2
 D0
-Vocï¿½ observa uma planï¿½cie tranqï¿½ila.
+Você observa uma planície tranqüila.
 ~
 ~
 0 -1 14555
 D2
-Vocï¿½ observa uma colina verde.
+Você observa uma colina verde.
 ~
 ~
 0 -1 14557
 D8
-Vocï¿½ observa uma colina verde.
+Você observa uma colina verde.
 ~
 ~
 0 -1 14554
 D9
-Vocï¿½ observa uma colina verde.
+Você observa uma colina verde.
 ~
 ~
 0 -1 14561
 S
 #14557
 A Terra das Colinas Verdes~
-   Vocï¿½ estï¿½ caminhando sobre uma bela colina verde das terras do Condado.
-Ao seu redor vocï¿½ observa vï¿½rias colinas cobertas de vegetaï¿½ï¿½o rasteira.  Ao
-norte, alï¿½m das colinas vocï¿½ observa alguns viajantes caminhando no sentido
-leste da estrada do leste.  Ao norte, nordeste e noroeste vocï¿½ observa
-vï¿½rias colinas verdes, e ao sul vocï¿½ observa uma planï¿½cie verde.
+   Você está caminhando sobre uma bela colina verde das terras do Condado.
+Ao seu redor você observa várias colinas cobertas de vegetação rasteira.  Ao
+norte, além das colinas você observa alguns viajantes caminhando no sentido
+leste da estrada do leste.  Ao norte, nordeste e noroeste você observa
+várias colinas verdes, e ao sul você observa uma planície verde.
 ~
-145 64 0 0 0 2
+145 g 2
 D0
-Vocï¿½ observa uma colina verde.
+Você observa uma colina verde.
 ~
 ~
 0 -1 14556
 D2
-Vocï¿½ observa uma planï¿½cie tranqï¿½ila.
+Você observa uma planície tranqüila.
 ~
 ~
 0 -1 14558
 D6
-Vocï¿½ observa uma planï¿½cie tranqï¿½ila.
+Você observa uma planície tranqüila.
 ~
 ~
 0 -1 14561
 D7
-Vocï¿½ observa uma planï¿½cie tranqï¿½ila.
+Você observa uma planície tranqüila.
 ~
 ~
 0 -1 14554
 S
 #14558
-Uma Planï¿½cie Verde~
-   Vocï¿½ estï¿½ caminhando sobre uma tranqï¿½ila planï¿½cie verde do Condado.  Ao
-seu redor apenas algumas flores e pequenos pï¿½ssaros que sobrevoam a planï¿½cie
-caï¿½ando pequenos insetos.  Ao norte vocï¿½ observa a Terra das Colinas Verdes
-e ao sul vocï¿½ observa uma extensa planï¿½cie verde.
+Uma Planície Verde~
+   Você está caminhando sobre uma tranqüila planície verde do Condado.  Ao
+seu redor apenas algumas flores e pequenos pássaros que sobrevoam a planície
+caçando pequenos insetos.  Ao norte você observa a Terra das Colinas Verdes
+e ao sul você observa uma extensa planície verde.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa uma colina verde.
+Você observa uma colina verde.
 ~
 ~
 0 -1 14557
 D2
-Vocï¿½ observa uma extensa planï¿½cie verde.
+Você observa uma extensa planície verde.
 ~
 ~
 0 -1 14559
 S
 #14559
-Uma Extensa Planï¿½cie Verde~
-   Vocï¿½ estï¿½ caminhando hï¿½ mais de duas horas na bela planï¿½cie verde do
-Condado e ela parece nï¿½o ter fim.  Ao seu redor vocï¿½ observa apenas alguns
-pï¿½ssaros sobrevoando a vegetaï¿½ï¿½o rasteira da planï¿½cie ï¿½ procura de pequenos
-insetos.  Ao norte e ao sul vocï¿½ observa a extensa planï¿½cie verde do
+Uma Extensa Planície Verde~
+   Você está caminhando há mais de duas horas na bela planície verde do
+Condado e ela parece não ter fim.  Ao seu redor você observa apenas alguns
+pássaros sobrevoando a vegetação rasteira da planície à procura de pequenos
+insetos.  Ao norte e ao sul você observa a extensa planície verde do
 Condado.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa uma extensa planï¿½cie verde.
+Você observa uma extensa planície verde.
 ~
 ~
 0 -1 14558
 D2
-Vocï¿½ observa uma extensa planï¿½cie verde.
+Você observa uma extensa planície verde.
 ~
 ~
 0 -1 14560
 S
 #14560
-Uma Extensa Planï¿½cie Verde~
-   Vocï¿½ estï¿½ caminhando sobre a extensa planï¿½cie verde do Condado.  A
-planï¿½cie se estende atï¿½ as ï¿½guas do rio Brandevim, que formam o limite sul
-do Condado.  Ao seu redor vocï¿½ observa uma imensa planï¿½cie coberta por uma
-resistente vegetaï¿½ï¿½o rasteira e alguns pï¿½ssaros vermelhos e amarelos
-sobrevoando a vegetaï¿½ï¿½o ï¿½ procura de insetos.  Ao norte e ao sul vocï¿½
-observa a extensa planï¿½cie verde.
+Uma Extensa Planície Verde~
+   Você está caminhando sobre a extensa planície verde do Condado.  A
+planície se estende até as águas do rio Brandevim, que formam o limite sul
+do Condado.  Ao seu redor você observa uma imensa planície coberta por uma
+resistente vegetação rasteira e alguns pássaros vermelhos e amarelos
+sobrevoando a vegetação à procura de insetos.  Ao norte e ao sul você
+observa a extensa planície verde.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa uma extensa planï¿½cie verde.
+Você observa uma extensa planície verde.
 ~
 ~
 0 -1 14559
 S
 #14561
 A Terra das Colinas Verdes~
-   Vocï¿½ estï¿½ caminhando entre as belas colinas verdes do Condado.  Ao seu
-redor vocï¿½ observa as extensas terras do Condado, ao norte vocï¿½ observa a
-estrada do leste e ao sul vocï¿½ observa a extensa planï¿½cie verde, que parece
-nï¿½o ter fim se estendendo para sul.  Ao oeste, nordeste e sudeste vocï¿½
+   Você está caminhando entre as belas colinas verdes do Condado.  Ao seu
+redor você observa as extensas terras do Condado, ao norte você observa a
+estrada do leste e ao sul você observa a extensa planície verde, que parece
+não ter fim se estendendo para sul.  Ao oeste, nordeste e sudeste você
 observa algumas colinas verdes.
 ~
-145 64 0 0 0 2
+145 g 2
 D3
-Vocï¿½ observa a Terra das Colinas Verdes.
+Você observa a Terra das Colinas Verdes.
 ~
 ~
 0 -1 14562
 D7
-Vocï¿½ observa a Terra das Colinas Verdes.
+Você observa a Terra das Colinas Verdes.
 ~
 ~
 0 -1 14556
 D8
-Vocï¿½ observa a Terra das Colinas Verdes.
+Você observa a Terra das Colinas Verdes.
 ~
 ~
 0 -1 14557
 S
 #14562
 A Terra das Colinas Verdes~
-   Vocï¿½ estï¿½ caminhando entre as belas colinas verdes do Condado.  Ao seu
-redor vocï¿½ observa as extensas terras do Condado, ao norte vocï¿½ observa a
-estrada do leste e ao sul vocï¿½ observa a extensa planï¿½cie verde, que parece
-nï¿½o ter fim se estendendo para sul.  Ao leste vocï¿½ observa uma bela colina
-verde e ao noroeste vocï¿½ observa o inï¿½cio das terras dos Tï¿½ks.
+   Você está caminhando entre as belas colinas verdes do Condado.  Ao seu
+redor você observa as extensas terras do Condado, ao norte você observa a
+estrada do leste e ao sul você observa a extensa planície verde, que parece
+não ter fim se estendendo para sul.  Ao leste você observa uma bela colina
+verde e ao noroeste você observa o início das terras dos Tûks.
 ~
-145 68 0 0 0 2
+145 cg 2
 D1
-Vocï¿½ observa a Terra das Colinas Verdes.
+Você observa a Terra das Colinas Verdes.
 ~
 ~
 0 -1 14561
 D6
-Vocï¿½ observa o inï¿½cio das terras dos Tï¿½ks.
+Você observa o início das terras dos Tûks.
 ~
 ~
 0 -1 14564
 S
 #14563
-Uma Pequenina Toca de Madeira Tï¿½k~
-   Vocï¿½ estï¿½ dentro de uma pequena casa de madeira coberta por uma faixa de
-grama, com exceï¿½ï¿½o de sua porta e janelas circulares.  Ao seu redor vocï¿½
-observa pequeninos mï¿½veis e algumas ferramentas de madeira.  Vocï¿½ observa
-atravï¿½s da janela da parede oeste uma pequena rua inclinada no sentido
-nordeste-sudoeste.  Ao sul vocï¿½ observa uma bela porta circular de madeira.
+Uma Pequenina Toca de Madeira Tûk~
+   Você está dentro de uma pequena casa de madeira coberta por uma faixa de
+grama, com exceção de sua porta e janelas circulares.  Ao seu redor você
+observa pequeninos móveis e algumas ferramentas de madeira.  Você observa
+através da janela da parede oeste uma pequena rua inclinada no sentido
+nordeste-sudoeste.  Ao sul você observa uma bela porta circular de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D2
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14564
+:n 2 a porta de madeira
+ag -1 14564
 S
 #14564
-A Terra dos Tï¿½ks~
-   Vocï¿½ estï¿½ caminhando sobre uma pequena planï¿½cie coberta por uma vegetaï¿½ï¿½o
-bastante fina.  Ao seu redor vocï¿½ observa pequeninas tocas com jardins muito
-bem cuidados.  A sua frente vocï¿½ observa uma bela @yplaca de madeira@n e no
-chï¿½o vocï¿½ percebe algumas pequeninas pegadas.  Ao norte e para baixo vocï¿½
-observa pequenas tocas de madeira.  Ao sudeste vocï¿½ observa a Terra das
-Colinas Verdes e ao oeste vocï¿½ observa uma pequena rua inclinada.
+A Terra dos Tûks~
+   Você está caminhando sobre uma pequena planície coberta por uma vegetação
+bastante fina.  Ao seu redor você observa pequeninas tocas com jardins muito
+bem cuidados.  A sua frente você observa uma bela &yplaca de madeira&n e no
+chão você percebe algumas pequeninas pegadas.  Ao norte e para baixo você
+observa pequenas tocas de madeira.  Ao sudeste você observa a Terra das
+Colinas Verdes e ao oeste você observa uma pequena rua inclinada.
 ~
-145 64 0 0 0 1
+145 g 1
 D0
-Vocï¿½ observa uma pequenina toca de madeira.
+Você observa uma pequenina toca de madeira.
 ~
 porta madeira~
-0 -1 14563
+:n 2 a porta de madeira
+ag -1 14563
 D3
-Vocï¿½ observa uma pequena rua bastante inclinada.
+Você observa uma pequena rua bastante inclinada.
 ~
 ~
 0 -1 14566
-D5
-Vocï¿½ observa uma pequena toca de madeira.
-~
-porta madeira~
-0 -1 14565
 D8
-Vocï¿½ observa a Terra das Colinas Verdes.
+Você observa a Terra das Colinas Verdes.
 ~
 ~
 0 -1 14562
+D5
+Você observa uma pequena toca de madeira.
+~
+porta madeira~
+:n 2 a porta de madeira
+ag -1 14565
 E
 placa madeira~
-@gSenhores visitantes indesejados, por favor, retornem daqui mesmo.  Essas
-terras pertencem aos Tï¿½ks, uma famï¿½lia bastante ocupada.
+&gSenhores visitantes indesejados, por favor, retornem daqui mesmo.  Essas
+terras pertencem aos Tûks, uma família bastante ocupada.
                                        
-				           @yOs Tï¿½ks
+				           &yOs Tûks
 ~
 S
 #14565
-Uma Pequenina Toca de Madeira Tï¿½k~
-   Vocï¿½ esta dentro de uma apertada, porï¿½m confortï¿½vel casa de madeira.  A
-toca construï¿½da pelos Tï¿½ks ï¿½ coberta quase que totalmente por uma faixa de
-grama, com exceï¿½ï¿½o de sua porta e janelas circulares.  Ao seu redor vocï¿½
-observa pequeninos brinquedos e mï¿½veis de madeira.  Para cima vocï¿½ observa
+Uma Pequenina Toca de Madeira Tûk~
+   Você esta dentro de uma apertada, porém confortável casa de madeira.  A
+toca construída pelos Tûks é coberta quase que totalmente por uma faixa de
+grama, com exceção de sua porta e janelas circulares.  Ao seu redor você
+observa pequeninos brinquedos e móveis de madeira.  Para cima você observa
 uma porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D4
-Vocï¿½ observa uma curiosa porta de madeira.
+Você observa uma curiosa porta de madeira.
 ~
 porta madeira~
-0 -1 14564
+:n 2 a porta de madeira
+ag -1 14564
 S
 #14566
-A Ladeira Tï¿½k~
-   Vocï¿½ estï¿½ caminhando numa estreita e inclinada rua, conhecida como a
-ladeira Tï¿½k.  Ao seu redor vocï¿½ observa vï¿½rias tocas de madeira e de pedras,
-construï¿½das pelos pequeninos Tï¿½ks.  Ao leste vocï¿½ observa o inï¿½cio das
-terras dos Tï¿½ks e para baixo vocï¿½ observa a continuaï¿½ï¿½o da ladeira Tï¿½k.
+A Ladeira Tûk~
+   Você está caminhando numa estreita e inclinada rua, conhecida como a
+ladeira Tûk.  Ao seu redor você observa várias tocas de madeira e de pedras,
+construídas pelos pequeninos Tûks.  Ao leste você observa o início das
+terras dos Tûks e para baixo você observa a continuação da ladeira Tûk.
 ~
-145 131328 0 0 0 1
+145 ir 1
 D1
-Vocï¿½ observa o inï¿½cio das terras dos Tï¿½ks.
+Você observa o início das terras dos Tûks.
 ~
 ~
 0 -1 14564
 D5
-Vocï¿½ observa a ladeira Tï¿½k seguindo para baixo.
+Você observa a ladeira Tûk seguindo para baixo.
 ~
 ~
 0 -1 14567
 S
 #14567
-A Ladeira Tï¿½k~
-   Vocï¿½ estï¿½ caminhando com bastante dificuldade pela estreita ladeira Tï¿½k.
-Ao seu redor vocï¿½ observa vï¿½rias tocas coloridas, principalmente verdes e
-amarelas, cobertas quase que totalmente por uma faixa de grama, com exceï¿½ï¿½o
-das janelas e portas circulares.  Para cima vocï¿½ observa a ladeira Tï¿½k
-seguindo na direï¿½ï¿½o do inï¿½cio das terras dos Tï¿½ks e para baixo vocï¿½ observa
-a ladeira Tï¿½k seguindo na direï¿½ï¿½o de vï¿½rias tocas de madeira e de pedras.
+A Ladeira Tûk~
+   Você está caminhando com bastante dificuldade pela estreita ladeira Tûk.
+Ao seu redor você observa várias tocas coloridas, principalmente verdes e
+amarelas, cobertas quase que totalmente por uma faixa de grama, com exceção
+das janelas e portas circulares.  Para cima você observa a ladeira Tûk
+seguindo na direção do início das terras dos Tûks e para baixo você observa
+a ladeira Tûk seguindo na direção de várias tocas de madeira e de pedras.
 ~
-145 131328 0 0 0 1
+145 ir 1
 D4
-Vocï¿½ observa a ladeira Tï¿½k seguindo para cima.
+Você observa a ladeira Tûk seguindo para cima.
 ~
 ~
 0 -1 14566
 D5
-Vocï¿½ observa a ladeira Tï¿½k seguindo para baixo.
+Você observa a ladeira Tûk seguindo para baixo.
 ~
 ~
 0 -1 14568
 S
 #14568
-O Fim da Ladeira Tï¿½k~
-   Finalmente vocï¿½ chegou no final da ladeira Tï¿½k.  Ao seu redor vocï¿½
-observa vï¿½rias tocas coloridas e alguns pequeninos olhando curiosamente para
-vocï¿½.  Uma confortï¿½vel sensaï¿½ï¿½o de tranqï¿½ilidade atinge todo o seu corpo.  A
-vida dentro do Condado ï¿½ realmente cativante e saudï¿½vel.  Seguindo para cima
-vocï¿½ observa a ladeira Tï¿½k, para baixo vocï¿½ observa uma pequenina toca de
-madeira e ao sul vocï¿½ observa uma bela toca de madeira, pintada de verde e
+O Fim da Ladeira Tûk~
+   Finalmente você chegou no final da ladeira Tûk.  Ao seu redor você
+observa várias tocas coloridas e alguns pequeninos olhando curiosamente para
+você.  Uma confortável sensação de tranqüilidade atinge todo o seu corpo.  A
+vida dentro do Condado é realmente cativante e saudável.  Seguindo para cima
+você observa a ladeira Tûk, para baixo você observa uma pequenina toca de
+madeira e ao sul você observa uma bela toca de madeira, pintada de verde e
 amarelo.
 ~
-145 131328 0 0 0 1
+145 ir 1
 D2
-Vocï¿½ observa uma pequena casa Tï¿½k.
+Você observa uma pequena casa Tûk.
 ~
 porta madeira~
-0 -1 14569
+:n 2 a porta de madeira
+ag -1 14569
 D4
-Vocï¿½ observa a ladeira Tï¿½k seguindo para cima.
+Você observa a ladeira Tûk seguindo para cima.
 ~
 ~
 0 -1 14567
 D5
-Vocï¿½ observa uma pequenina casa Tï¿½k.
+Você observa uma pequenina casa Tûk.
 ~
 porta madeira~
-0 -1 14570
+:n 2 a porta de madeira
+ag -1 14570
 S
 #14569
-Uma Bela Casa Tï¿½k~
-   Vocï¿½ estï¿½ dentro de uma pequenina casa de madeira, construï¿½da pelos
-pequeninos que habitam as terras dos Tï¿½ks.  A casa ï¿½ quase que completamente
-coberta por uma faixa de grama, com exceï¿½ï¿½o de sua porta e de suas janelas
-circulares.  Ao seu redor vocï¿½ observa vï¿½rios mï¿½veis de madeira e atravï¿½s da
-janela circular vocï¿½ observa o belo e perfumado jardim da casa.  Ao  norte
-vocï¿½ observa uma curiosa porta circular.
+Uma Bela Casa Tûk~
+   Você está dentro de uma pequenina casa de madeira, construída pelos
+pequeninos que habitam as terras dos Tûks.  A casa é quase que completamente
+coberta por uma faixa de grama, com exceção de sua porta e de suas janelas
+circulares.  Ao seu redor você observa vários móveis de madeira e através da
+janela circular você observa o belo e perfumado jardim da casa.  Ao  norte
+você observa uma curiosa porta circular.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D0
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14568
+:n 2 a porta de madeira
+ag -1 14568
 S
 #14570
-Uma Pequenina Toca Verde e Amarela Tï¿½k~
-   Vocï¿½ estï¿½ dentro de uma apertada casa de madeira, construï¿½da pelos
-pequeninos que habitam as terras dos Tï¿½ks.  Ao seu redor vocï¿½ observa alguns
-mï¿½veis pequenos e algumas ferramentas de madeira.  Nas paredes vocï¿½ observa
-algumas pinturas engraï¿½adas que ilustram algumas festas de aniversï¿½rio de
-pequeninos ilustres do Condado.  Para cima vocï¿½ observa uma curiosa porta
+Uma Pequenina Toca Verde e Amarela Tûk~
+   Você está dentro de uma apertada casa de madeira, construída pelos
+pequeninos que habitam as terras dos Tûks.  Ao seu redor você observa alguns
+móveis pequenos e algumas ferramentas de madeira.  Nas paredes você observa
+algumas pinturas engraçadas que ilustram algumas festas de aniversário de
+pequeninos ilustres do Condado.  Para cima você observa uma curiosa porta
 de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D4
-Vocï¿½ observa uma curiosa porta de madeira.
+Você observa uma curiosa porta de madeira.
 ~
 porta madeira~
-0 -1 14568
+:n 2 a porta de madeira
+ag -1 14568
 S
 #14571
 Um Belo Campo Florido~
-   Vocï¿½ estï¿½ caminhando entre as flores azuis e amarelas de um belo campo
-perfumado do Condado.  Ao seu redor vocï¿½ observa belas flores como lindas
-bocas-de-leï¿½es, imensos girassï¿½is e magnï¿½ficos nastï¿½rcios.  A tranqï¿½ilidade
-e a paz reinam nestas terras.  Os cantos dos pï¿½ssaros juntos formam uma bela
-canï¿½ï¿½o que pode ser ouvida hï¿½ muitos metros de distï¿½ncia.  Ao sul vocï¿½
+   Você está caminhando entre as flores azuis e amarelas de um belo campo
+perfumado do Condado.  Ao seu redor você observa belas flores como lindas
+bocas-de-leões, imensos girassóis e magníficos nastúrcios.  A tranqüilidade
+e a paz reinam nestas terras.  Os cantos dos pássaros juntos formam uma bela
+canção que pode ser ouvida há muitos metros de distância.  Ao sul você
 observa a estrada do leste, que corta o Condado de leste ao oeste, e ao
-norte vocï¿½ observa um magnï¿½fico campo florido.
+norte você observa um magnífico campo florido.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa um belo campo florido.
+Você observa um belo campo florido.
 ~
 ~
 0 -1 14576
 D2
-Vocï¿½ observa a extensa estrada do leste.
+Você observa a extensa estrada do leste.
 ~
 ~
 0 -1 14507
 S
 #14572
-O ï¿½gua~
-   Vocï¿½ estï¿½ navegando nas lï¿½mpidas e tranqï¿½ilas ï¿½guas do rio ï¿½gua.  Ao seu
-redor vocï¿½ observa alguns pequeninos peixes curiosos com a presenï¿½a da sua
-embarcaï¿½ï¿½o.  Apï¿½s as margens do rio ï¿½gua vocï¿½ observa belos campos floridos,
-que com a divina ajuda do vento, trazem atï¿½ vocï¿½ o mais puro perfume das
-flores do Condado.  Ao oeste vocï¿½ observa as ï¿½guas cristalinas do ï¿½gua.
+O Água~
+   Você está navegando nas límpidas e tranqüilas águas do rio Água.  Ao seu
+redor você observa alguns pequeninos peixes curiosos com a presença da sua
+embarcação.  Após as margens do rio Água você observa belos campos floridos,
+que com a divina ajuda do vento, trazem até você o mais puro perfume das
+flores do Condado.  Ao oeste você observa as águas cristalinas do Água.
 ~
-145 393284 0 0 0 7
+145 cgrs 7
 D3
-Vocï¿½ observa as cristalinas ï¿½guas do rio ï¿½gua.
+Você observa as cristalinas águas do rio Água.
 ~
 ~
 0 -1 14573
 S
 #14573
-O ï¿½gua~
-   Vocï¿½ estï¿½ navegando nas belas e puras ï¿½guas do rio ï¿½gua.  Ao seu redor
-vocï¿½ observa pequeninos peixes curiosos com a presenï¿½a de sua embarcaï¿½ï¿½o nas
-ï¿½guas pertencentes a eles.  Apï¿½s as margens do ï¿½gua, vocï¿½ observa belos
-campos floridos, onde belos pï¿½ssaros sobrevoam atrï¿½s de pequenos insetos e
-onde coloridas borboletas apresentam suas danï¿½as.  Ao leste e ao noroeste
-vocï¿½ observa as lï¿½mpidas ï¿½guas do rio ï¿½gua.
+O Água~
+   Você está navegando nas belas e puras águas do rio Água.  Ao seu redor
+você observa pequeninos peixes curiosos com a presença de sua embarcação nas
+águas pertencentes a eles.  Após as margens do Água, você observa belos
+campos floridos, onde belos pássaros sobrevoam atrás de pequenos insetos e
+onde coloridas borboletas apresentam suas danças.  Ao leste e ao noroeste
+você observa as límpidas águas do rio Água.
 ~
-145 393284 0 0 0 7
+145 cgrs 7
 D1
-Vocï¿½ observa as cristalinas ï¿½guas do rio ï¿½gua.
+Você observa as cristalinas águas do rio Água.
 ~
 ~
 0 -1 14572
 D6
-Vocï¿½ observa as cristalinas ï¿½guas do rio ï¿½gua.
+Você observa as cristalinas águas do rio Água.
 ~
 ~
 0 -1 14582
 S
 #14574
-A Taverna Dragï¿½o Verde~
-   Vocï¿½ estï¿½ dentro da mais cativante taverna de todo o Condado: A Taverna
-Dragï¿½o Verde.  A taverna ï¿½ um belo ponto de encontros dos pequeninos, que
-adoram escutar histï¿½rias e conversar, comendo um suculento petisco e bebendo
-uma belo copo de cerveja.  Ao seu redor vocï¿½ observa algumas pequeninas
-mesas e cadeiras de madeira.  Ao sul do salï¿½o da taverna vocï¿½ observa uma
-pequena bancada onde sï¿½o feitos os pedidos.  Nas paredes vocï¿½ observa
-algumas pinturas engraï¿½adas e algumas janelas circulares.  Ao oeste vocï¿½
+A Taverna Dragão Verde~
+   Você está dentro da mais cativante taverna de todo o Condado: A Taverna
+Dragão Verde.  A taverna é um belo ponto de encontros dos pequeninos, que
+adoram escutar histórias e conversar, comendo um suculento petisco e bebendo
+uma belo copo de cerveja.  Ao seu redor você observa algumas pequeninas
+mesas e cadeiras de madeira.  Ao sul do salão da taverna você observa uma
+pequena bancada onde são feitos os pedidos.  Nas paredes você observa
+algumas pinturas engraçadas e algumas janelas circulares.  Ao oeste você
 observa uma pequenina porta de madeira.
 ~
-145 393228 0 0 0 0
+145 cdrs 0
 D3
-Vocï¿½ observa uma pequenina porta de madeira.
+Você observa uma pequenina porta de madeira.
 ~
 porta madeira~
-0 -1 14575
+:n 2 a porta de madeira
+ag -1 14575
 S
 #14575
 Um Belo Campo Florido~
-   Vocï¿½ estï¿½ caminhando entre as flores azuis e amarelas de um belo campo
-perfumado do Condado.  Ao seu redor vocï¿½ observa belas flores como lindas
-bocas-de-leï¿½es, imensos girassï¿½is e magnï¿½ficos nastï¿½rcios.  A tranqï¿½ilidade
-e a paz reinam nestas terras.  Os cantos dos pï¿½ssaros juntos formam uma bela
-canï¿½ï¿½o que pode ser ouvida hï¿½ muitos metros de distï¿½ncia.  Ao norte vocï¿½
-observa as cristalinas ï¿½guas do rio ï¿½gua, ao oeste vocï¿½ observa pequenas
-borboletas coloridas danï¿½ando no ar e ao leste vocï¿½ observa a famosa Taverna
-Dragï¿½o Verde.
+   Você está caminhando entre as flores azuis e amarelas de um belo campo
+perfumado do Condado.  Ao seu redor você observa belas flores como lindas
+bocas-de-leões, imensos girassóis e magníficos nastúrcios.  A tranqüilidade
+e a paz reinam nestas terras.  Os cantos dos pássaros juntos formam uma bela
+canção que pode ser ouvida há muitos metros de distância.  Ao norte você
+observa as cristalinas águas do rio Água, ao oeste você observa pequenas
+borboletas coloridas dançando no ar e ao leste você observa a famosa Taverna
+Dragão Verde.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa as lï¿½mpidas ï¿½guas do rio ï¿½gua.
+Você observa as límpidas águas do rio Água.
 ~
 ~
 0 -1 14583
 D1
-Vocï¿½ observa a famosa Taverna Dragï¿½o Verde.
+Você observa a famosa Taverna Dragão Verde.
 ~
 porta madeira~
-0 -1 14574
+:n 2 a porta de madeira
+ag -1 14574
 D3
-Vocï¿½ observa algumas borboletas sobrevoando um belo campo florido.
+Você observa algumas borboletas sobrevoando um belo campo florido.
 ~
 ~
 0 -1 14576
 S
 #14576
 Um Belo Campo Florido~
-   Vocï¿½ estï¿½ caminhando tranqï¿½ilamente nas belas terras do Condado, sobre um
-belo campo florido e bastante perfumado.  Ao seu redor vocï¿½ observa as mais
-maravilhosas flores do Condado.  No cï¿½u vocï¿½ observa lindos pï¿½ssaros
-sobrevoando o belo campo perfumado.  Ao redor do seu corpo, vï¿½rias
-borboletas tentam lhe encantar atravï¿½s das suas danï¿½as.  Ao norte, noroeste
-e nordeste vocï¿½ observa as cristalinas e tranqï¿½ilas ï¿½guas do rio ï¿½gua.  Ao
-leste, sul e oeste vocï¿½ observa o extenso campo florido.
+   Você está caminhando tranqüilamente nas belas terras do Condado, sobre um
+belo campo florido e bastante perfumado.  Ao seu redor você observa as mais
+maravilhosas flores do Condado.  No céu você observa lindos pássaros
+sobrevoando o belo campo perfumado.  Ao redor do seu corpo, várias
+borboletas tentam lhe encantar através das suas danças.  Ao norte, noroeste
+e nordeste você observa as cristalinas e tranqüilas águas do rio Água.  Ao
+leste, sul e oeste você observa o extenso campo florido.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa as belas e puras ï¿½guas do rio ï¿½gua.
+Você observa as belas e puras águas do rio Água.
 ~
 ~
 0 -1 14584
 D1
-Vocï¿½ observa um belo campo florido.
+Você observa um belo campo florido.
 ~
 ~
 0 -1 14575
 D2
-Vocï¿½ observa um belo campo florido.
+Você observa um belo campo florido.
 ~
 ~
 0 -1 14571
 D3
-Vocï¿½ observa um belo campo florido.
+Você observa um belo campo florido.
 ~
 ~
 0 -1 14577
 D6
-Vocï¿½ observa as belas e puras ï¿½guas do rio ï¿½gua.
+Você observa as belas e puras águas do rio Água.
 ~
 ~
 0 -1 14585
 D7
-Vocï¿½ observa as belas e puras ï¿½guas do rio ï¿½gua.
+Você observa as belas e puras águas do rio Água.
 ~
 ~
 0 -1 14583
 S
 #14577
 Um Belo Campo Florido~
-   Vocï¿½ estï¿½ caminhando entre as flores azuis e amarelas de um belo campo
-perfumado do Condado.  Ao seu redor vocï¿½ observa belas flores como lindas
-bocas-de-leï¿½es, imensos girassï¿½is e magnï¿½ficos nastï¿½rcios.  A tranqï¿½ilidade
-e a paz reinam nestas terras.  Os cantos dos pï¿½ssaros juntos formam uma bela
-canï¿½ï¿½o que pode ser ouvida hï¿½ muitos metros de distï¿½ncia.  Ao leste vocï¿½
-observa o extenso campo florido e ao oeste vocï¿½ observa a bela Hospedaria
+   Você está caminhando entre as flores azuis e amarelas de um belo campo
+perfumado do Condado.  Ao seu redor você observa belas flores como lindas
+bocas-de-leões, imensos girassóis e magníficos nastúrcios.  A tranqüilidade
+e a paz reinam nestas terras.  Os cantos dos pássaros juntos formam uma bela
+canção que pode ser ouvida há muitos metros de distância.  Ao leste você
+observa o extenso campo florido e ao oeste você observa a bela Hospedaria
 Ramo de Hera.
 ~
-145 0 0 0 0 2
+145 0 2
 D1
-Vocï¿½ observa as lï¿½mpidas ï¿½guas do rio ï¿½gua.
+Você observa as límpidas águas do rio Água.
 ~
 ~
 0 -1 14576
 D3
-Vocï¿½ observa a bela Hospedaria Ramo de Hera.
+Você observa a bela Hospedaria Ramo de Hera.
 ~
 porta madeira~
-0 -1 14578
+:n 2 a porta de madeira
+ag -1 14578
 S
 #14578
 A Hospedaria Ramo de Hera~
-   Vocï¿½ estï¿½ na confortï¿½vel e famosa Hospedaria Ramo de Hera.  Ao seu redor
-vocï¿½ observa um salï¿½o bem ornamentado, cheio de jarros de flores e pequenos
-tapetes.  Na sua frente vocï¿½ observa uma bela bancada de recepï¿½ï¿½o e alguns
-papï¿½is rabiscados.  Nas paredes vocï¿½ observa alguns quadros e pequenas
-janelas circulares.  Para cima vocï¿½ observa uma pequenina escadaria de
-madeira e ao leste vocï¿½ observa uma porta de madeira.
+   Você está na confortável e famosa Hospedaria Ramo de Hera.  Ao seu redor
+você observa um salão bem ornamentado, cheio de jarros de flores e pequenos
+tapetes.  Na sua frente você observa uma bela bancada de recepção e alguns
+papéis rabiscados.  Nas paredes você observa alguns quadros e pequenas
+janelas circulares.  Para cima você observa uma pequenina escadaria de
+madeira e ao leste você observa uma porta de madeira.
 ~
-145 393292 0 0 0 0
+145 cdgrs 0
 D1
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14577
+:n 2 a porta de madeira
+ag -1 14577
 D4
-Vocï¿½ observa uma pequena escadaria.
+Você observa uma pequena escadaria.
 ~
 ~
 0 -1 14579
 S
 #14579
 O Corredor da Famosa Hospedaria Ramo de Hera~
-   Vocï¿½ estï¿½ no estreito corredor da hospedaria.  Ao seu redor vocï¿½ observa
-ao longo do corredor vï¿½rias portas de madeira e no teto vocï¿½ percebe a
-presenï¿½a de pequeninas janelas circulares, que trazem luz para dentro do
-corredor.  Ao noroeste, ao oeste e ao sudoeste vocï¿½ observa algumas portas
+   Você está no estreito corredor da hospedaria.  Ao seu redor você observa
+ao longo do corredor várias portas de madeira e no teto você percebe a
+presença de pequeninas janelas circulares, que trazem luz para dentro do
+corredor.  Ao noroeste, ao oeste e ao sudoeste você observa algumas portas
 de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D3
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14581
+:n 2 a porta de madeira
+ag -1 14581
 D6
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14588
+:n 2 a porta de madeira
+ag -1 14588
 D9
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14580
+:n 2 a porta de madeira
+ag -1 14580
 S
 #14580
-Um Confortï¿½vel Quarto na Hospedaria Ramo de Hera~
-   Vocï¿½ estï¿½ dentro de um confortï¿½vel quarto da Hospedaria Ramo de Hera.  Ao
-seu redor vocï¿½ observa duas pequenas camas de madeira, algumas cadeiras e
-uma mesa de madeira, e um pequeno baï¿½.  As paredes do quarto estï¿½o todas
-pintadas de verde.  Vocï¿½ observa atravï¿½s da pequena janela circular na
+Um Confortável Quarto na Hospedaria Ramo de Hera~
+   Você está dentro de um confortável quarto da Hospedaria Ramo de Hera.  Ao
+seu redor você observa duas pequenas camas de madeira, algumas cadeiras e
+uma mesa de madeira, e um pequeno baú.  As paredes do quarto estão todas
+pintadas de verde.  Você observa através da pequena janela circular na
 parede sul alguns viajantes caminhando pela estrada do leste.  Ao chegar
-perto da parede norte do quarto vocï¿½ escuta alguns sons estranhos do quarto
-ao lado.  Ao nordeste vocï¿½ observa uma porta de madeira.
+perto da parede norte do quarto você escuta alguns sons estranhos do quarto
+ao lado.  Ao nordeste você observa uma porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D7
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14579
+:n 2 a porta de madeira
+ag -1 14579
 S
 #14581
-Um Quarto Bem Bagunï¿½ado~
-   Vocï¿½ estï¿½ dentro de um confortï¿½vel quarto, porï¿½m muito bagunï¿½ado.  Ao seu
-redor parece que uma ventania passou por aqui.  As camas estï¿½o desarrumadas,
-os quadros estï¿½o jogados no chï¿½o, as cadeiras estï¿½o quebradas e a mesa de
-madeira estï¿½ partida no meio.  Ao leste vocï¿½ observa uma porta de madeira.
+Um Quarto Bem Bagunçado~
+   Você está dentro de um confortável quarto, porém muito bagunçado.  Ao seu
+redor parece que uma ventania passou por aqui.  As camas estão desarrumadas,
+os quadros estão jogados no chão, as cadeiras estão quebradas e a mesa de
+madeira está partida no meio.  Ao leste você observa uma porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D1
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14579
+:n 2 a porta de madeira
+ag -1 14579
 S
 #14582
-O ï¿½gua~
-   Vocï¿½ estï¿½ navegando nas lï¿½mpidas e tranqï¿½ilas ï¿½guas do rio ï¿½gua.  Ao seu
-redor vocï¿½ observa alguns pequeninos peixes curiosos com a presenï¿½a da sua
-embarcaï¿½ï¿½o.  Apï¿½s as margens do ï¿½gua vocï¿½ observa belos campos floridos, que
-com a divina ajuda do vento, trazem atï¿½ vocï¿½ o mais puro perfume das flores
-do Condado e observando mais ao norte vocï¿½ percebe algumas luzes em
-Beirï¿½gua.  Ao oeste e ao sudeste vocï¿½ observa as ï¿½guas cristalinas do ï¿½gua.
+O Água~
+   Você está navegando nas límpidas e tranqüilas águas do rio Água.  Ao seu
+redor você observa alguns pequeninos peixes curiosos com a presença da sua
+embarcação.  Após as margens do Água você observa belos campos floridos, que
+com a divina ajuda do vento, trazem até você o mais puro perfume das flores
+do Condado e observando mais ao norte você percebe algumas luzes em
+Beirágua.  Ao oeste e ao sudeste você observa as águas cristalinas do Água.
 ~
-145 393284 0 0 0 7
+145 cgrs 7
 D3
-Vocï¿½ observa as cristalinas ï¿½guas do rio ï¿½gua.
+Você observa as cristalinas águas do rio Água.
 ~
 ~
 0 -1 14583
 D8
-Vocï¿½ observa as cristalinas ï¿½guas do rio ï¿½gua.
+Você observa as cristalinas águas do rio Água.
 ~
 ~
 0 -1 14573
 S
 #14583
-O ï¿½gua~
-   Vocï¿½ estï¿½ navegando nas lï¿½mpidas e tranqï¿½ilas ï¿½guas do rio ï¿½gua.  Ao seu
-redor vocï¿½ observa alguns pequeninos peixes curiosos com a presenï¿½a da sua
-embarcaï¿½ï¿½o.  Apï¿½s as margens do ï¿½gua vocï¿½ observa belos campos floridos, que
-com a divina ajuda do vento, trazem atï¿½ vocï¿½ o mais puro perfume das flores
-do Condado e observando mais ao norte vocï¿½ percebe algumas luzes em
-Beirï¿½gua.  Ao oeste e ao leste vocï¿½ observa as ï¿½guas cristalinas do ï¿½gua.
-Ao nordeste vocï¿½ observa as terras de Beirï¿½gua e ao sul e sudoeste vocï¿½
+O Água~
+   Você está navegando nas límpidas e tranqüilas águas do rio Água.  Ao seu
+redor você observa alguns pequeninos peixes curiosos com a presença da sua
+embarcação.  Após as margens do Água você observa belos campos floridos, que
+com a divina ajuda do vento, trazem até você o mais puro perfume das flores
+do Condado e observando mais ao norte você percebe algumas luzes em
+Beirágua.  Ao oeste e ao leste você observa as águas cristalinas do Água.
+Ao nordeste você observa as terras de Beirágua e ao sul e sudoeste você
 observa um campo florido.
 ~
-145 393284 0 0 0 7
+145 cgrs 7
 D1
-Vocï¿½ observa as cristalinas ï¿½guas do rio ï¿½gua.
+Você observa as cristalinas águas do rio Água.
 ~
 ~
 0 -1 14582
 D2
-Vocï¿½ observa um belo campo florido.
+Você observa um belo campo florido.
 ~
 ~
 0 -1 14575
 D3
-Vocï¿½ observa as cristalinas ï¿½guas do rio ï¿½gua.
+Você observa as cristalinas águas do rio Água.
 ~
 ~
 0 -1 14584
 D7
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14601
 D9
-Vocï¿½ observa um belo campo florido.
+Você observa um belo campo florido.
 ~
 ~
 0 -1 14576
 S
 #14584
-O ï¿½gua~
-   Vocï¿½ estï¿½ navegando nas belas e puras ï¿½guas do rio ï¿½gua.  Ao seu redor
-vocï¿½ observa pequeninos peixes curiosos com a presenï¿½a de sua embarcaï¿½ï¿½o nas
-ï¿½guas pertencentes a eles.  Apï¿½s as margens do ï¿½gua, vocï¿½ observa belos
-campos floridos, onde belos pï¿½ssaros sobrevoam atrï¿½s de pequenos insetos e
-onde coloridas borboletas apresentam suas danï¿½as.  Ao leste e ao oeste vocï¿½
-observa as lï¿½mpidas ï¿½guas do rio ï¿½gua.  Ao sul vocï¿½ observa um belo campo
+O Água~
+   Você está navegando nas belas e puras águas do rio Água.  Ao seu redor
+você observa pequeninos peixes curiosos com a presença de sua embarcação nas
+águas pertencentes a eles.  Após as margens do Água, você observa belos
+campos floridos, onde belos pássaros sobrevoam atrás de pequenos insetos e
+onde coloridas borboletas apresentam suas danças.  Ao leste e ao oeste você
+observa as límpidas águas do rio Água.  Ao sul você observa um belo campo
 florido.
 ~
-145 393284 0 0 0 7
+145 cgrs 7
 D1
-Vocï¿½ observa as cristalinas ï¿½guas do rio ï¿½gua.
+Você observa as cristalinas águas do rio Água.
 ~
 ~
 0 -1 14583
 D2
-Vocï¿½ observa um belo campo florido.
+Você observa um belo campo florido.
 ~
 ~
 0 -1 14576
 D3
-Vocï¿½ observa as cristalinas ï¿½guas do rio ï¿½gua.
+Você observa as cristalinas águas do rio Água.
 ~
 ~
 0 -1 14585
 S
 #14585
-O ï¿½gua~
-   Vocï¿½ estï¿½ navegando nas lï¿½mpidas e tranqï¿½ilas ï¿½guas do rio ï¿½gua.  Ao seu
-redor vocï¿½ observa alguns pequeninos peixes curiosos com a presenï¿½a da sua
-embarcaï¿½ï¿½o.  Ao norte vocï¿½ observa a bela Vila dos Hobbits e ao sudeste vocï¿½
-observa um belo campo florido.  Ao oeste e ao leste vocï¿½ observa as ï¿½guas
-cristalinas do ï¿½gua seguindo seu percurso natural.
+O Água~
+   Você está navegando nas límpidas e tranqüilas águas do rio Água.  Ao seu
+redor você observa alguns pequeninos peixes curiosos com a presença da sua
+embarcação.  Ao norte você observa a bela Vila dos Hobbits e ao sudeste você
+observa um belo campo florido.  Ao oeste e ao leste você observa as águas
+cristalinas do Água seguindo seu percurso natural.
 ~
-145 393284 0 0 0 7
+145 cgrs 7
 D0
-Vocï¿½ observa a bela Vila dos Hobbits.
+Você observa a bela Vila dos Hobbits.
 ~
 ~
 0 -1 14596
 D1
-Vocï¿½ observa as cristalinas ï¿½guas do rio ï¿½gua.
+Você observa as cristalinas águas do rio Água.
 ~
 ~
 0 -1 14584
 D3
-Vocï¿½ observa as cristalinas ï¿½guas do rio ï¿½gua.
+Você observa as cristalinas águas do rio Água.
 ~
 ~
 0 -1 14586
 D8
-Vocï¿½ observa um belo campo florido.
+Você observa um belo campo florido.
 ~
 ~
 0 -1 14576
 S
 #14586
-O ï¿½gua~
-   Vocï¿½ estï¿½ navegando nas lï¿½mpidas e tranqï¿½ilas ï¿½guas do rio ï¿½gua.  Ao seu
-redor vocï¿½ observa alguns pequeninos peixes curiosos com a presenï¿½a da sua
-embarcaï¿½ï¿½o.  Apï¿½s as margens do rio ï¿½gua vocï¿½ observa belos campos floridos,
-que com a divina ajuda do vento, trazem atï¿½ vocï¿½ o mais puro perfume das
-flores do Condado.  Ao leste e noroeste vocï¿½ observa as ï¿½guas cristalinas do
-ï¿½gua.
+O Água~
+   Você está navegando nas límpidas e tranqüilas águas do rio Água.  Ao seu
+redor você observa alguns pequeninos peixes curiosos com a presença da sua
+embarcação.  Após as margens do rio Água você observa belos campos floridos,
+que com a divina ajuda do vento, trazem até você o mais puro perfume das
+flores do Condado.  Ao leste e noroeste você observa as águas cristalinas do
+Água.
 ~
-145 393284 0 0 0 7
+145 cgrs 7
 D1
-Vocï¿½ observa as cristalinas ï¿½guas do rio ï¿½gua.
+Você observa as cristalinas águas do rio Água.
 ~
 ~
 0 -1 14585
 D6
-Vocï¿½ observa as cristalinas ï¿½guas do rio ï¿½gua.
+Você observa as cristalinas águas do rio Água.
 ~
 ~
 0 -1 14587
 S
 #14587
-O ï¿½gua~
-   Vocï¿½ estï¿½ navegando pelas cristalinas e calmas ï¿½guas do rio ï¿½gua.  Ao seu
-redor vocï¿½ observa apï¿½s as margens ao norte uma bela e alegre vila, apï¿½s as
-margens ao sul vocï¿½ observa um belo campo florido, onde vï¿½rias borboletas
-coloridas danï¿½am em harmonia.  Ao oeste e ao sudeste vocï¿½ observa as ï¿½guas
-do rio ï¿½gua seguirem seu percurso natural.
+O Água~
+   Você está navegando pelas cristalinas e calmas águas do rio Água.  Ao seu
+redor você observa após as margens ao norte uma bela e alegre vila, após as
+margens ao sul você observa um belo campo florido, onde várias borboletas
+coloridas dançam em harmonia.  Ao oeste e ao sudeste você observa as águas
+do rio Água seguirem seu percurso natural.
 ~
-145 393284 0 0 0 7
+145 cgrs 7
 D3
-Vocï¿½ observa as cristalinas ï¿½guas do rio ï¿½gua.
+Você observa as cristalinas águas do rio Água.
 ~
 ~
 0 -1 14589
 D8
-Vocï¿½ observa as cristalinas ï¿½guas do rio ï¿½gua.
+Você observa as cristalinas águas do rio Água.
 ~
 ~
 0 -1 14586
 S
 #14588
-Um Confortï¿½vel Quarto na Hospedaria Ramo de Hera~
-   Vocï¿½ estï¿½ dentro de um confortï¿½vel quarto da Hospedaria Ramo de Hera.  Ao
-seu redor vocï¿½ observa duas pequenas camas de madeira, algumas cadeiras e
-uma mesa de madeira, e um pequeno baï¿½.  As paredes do quarto estï¿½o todas
-pintadas de amarelo.  Vocï¿½ observa atravï¿½s da pequena janela circular na
-parede norte as ï¿½guas do rio ï¿½gua seguindo seu percurso natural.  Ao chegar
-perto da parede sul do quarto vocï¿½ escuta alguns sons estranhos do quarto ao
-lado.  Ao sudeste vocï¿½ observa uma porta de madeira.
+Um Confortável Quarto na Hospedaria Ramo de Hera~
+   Você está dentro de um confortável quarto da Hospedaria Ramo de Hera.  Ao
+seu redor você observa duas pequenas camas de madeira, algumas cadeiras e
+uma mesa de madeira, e um pequeno baú.  As paredes do quarto estão todas
+pintadas de amarelo.  Você observa através da pequena janela circular na
+parede norte as águas do rio Água seguindo seu percurso natural.  Ao chegar
+perto da parede sul do quarto você escuta alguns sons estranhos do quarto ao
+lado.  Ao sudeste você observa uma porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D8
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14579
+:n 2 a porta de madeira
+ag -1 14579
 S
 #14589
-O ï¿½gua~
-   Vocï¿½ estï¿½ navegando pelas ï¿½guas calmas e lï¿½mpidas do rio ï¿½gua.  Ao seu
-redor vocï¿½ observa os campos floridos e as frondosas ï¿½rvores do Condado.
-Seguindo o percurso inverso das ï¿½guas do rio, indo contra as ï¿½guas, vocï¿½
-chegarï¿½ no brejo juncoso localizado nas proximidades da floresta Atacaule.
-Ao leste vocï¿½ observa as ï¿½guas cristalinas do rio ï¿½gua.
+O Água~
+   Você está navegando pelas águas calmas e límpidas do rio Água.  Ao seu
+redor você observa os campos floridos e as frondosas árvores do Condado.
+Seguindo o percurso inverso das águas do rio, indo contra as águas, você
+chegará no brejo juncoso localizado nas proximidades da floresta Atacaule.
+Ao leste você observa as águas cristalinas do rio Água.
 ~
-145 393284 0 0 0 7
+145 cgrs 7
 D1
-Vocï¿½ observa as cristalinas ï¿½guas do rio ï¿½gua.
+Você observa as cristalinas águas do rio Água.
 ~
 ~
 0 -1 14587
 S
 #14590
-Uma Planï¿½cie Verde~
-   Vocï¿½ estï¿½ caminhando sobre um belo tapete verde e perfumado.  A grama
-parece ter sido aparada hoje.  Ao seu redor vocï¿½ observa as belas terras do
-Condado, com suas belas ï¿½rvores frondosas e seus maravilhosos campos
-floridos.  Ao sudeste vocï¿½ observa a sublime Ponte do Brandevim e um velho
-moinho de ï¿½gua nas margens do rio Brandevim.  Ao oeste vocï¿½ observa a bela e
-extensa planï¿½cie verde e ao norte vocï¿½ observa uma farta plantaï¿½ï¿½o de milho.
+Uma Planície Verde~
+   Você está caminhando sobre um belo tapete verde e perfumado.  A grama
+parece ter sido aparada hoje.  Ao seu redor você observa as belas terras do
+Condado, com suas belas árvores frondosas e seus maravilhosos campos
+floridos.  Ao sudeste você observa a sublime Ponte do Brandevim e um velho
+moinho de água nas margens do rio Brandevim.  Ao oeste você observa a bela e
+extensa planície verde e ao norte você observa uma farta plantação de milho.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa uma farta plantaï¿½ï¿½o de Milho.
+Você observa uma farta plantação de Milho.
 ~
 ~
 0 -1 14647
 D3
-Vocï¿½ observa algumas luzes apï¿½s a bela planï¿½cie verde.
+Você observa algumas luzes após a bela planície verde.
 ~
 ~
 0 -1 14591
 D8
-Vocï¿½ observa a Ponte do Brandevim.
+Você observa a Ponte do Brandevim.
 ~
 ~
 0 -1 14503
 S
 #14591
-Uma Planï¿½cie Verde~
-   Vocï¿½ estï¿½ caminhando numa tranqï¿½ila planï¿½cie verde do Condado.  Ao seu
-redor vocï¿½ observa algumas ï¿½rvores frondosas e belas flores perfumadas.  Uma
-maravilhosa sensaï¿½ï¿½o de tranqï¿½ilidade e paz enche seu coraï¿½ï¿½o de alegria.
-Ao norte vocï¿½ observa a linda e movimentada Vila dos Hobbits, ao noroeste
-vocï¿½ observa as ï¿½guas do Lago de Beirï¿½gua e ao leste vocï¿½ observa uma
-extensa planï¿½cie verde.
+Uma Planície Verde~
+   Você está caminhando numa tranqüila planície verde do Condado.  Ao seu
+redor você observa algumas árvores frondosas e belas flores perfumadas.  Uma
+maravilhosa sensação de tranqüilidade e paz enche seu coração de alegria.
+Ao norte você observa a linda e movimentada Vila dos Hobbits, ao noroeste
+você observa as águas do Lago de Beirágua e ao leste você observa uma
+extensa planície verde.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa a bela Vila dos Hobbits.
+Você observa a bela Vila dos Hobbits.
 ~
 ~
 0 -1 14595
 D1
-Vocï¿½ observa uma bela planï¿½cie verde.
+Você observa uma bela planície verde.
 ~
 ~
 0 -1 14590
 D6
-Vocï¿½ observa o Lago de Beirï¿½gua.
+Você observa o Lago de Beirágua.
 ~
 ~
 0 -1 14592
 S
 #14592
-O Lago de Beirï¿½gua~
-   Vocï¿½ estï¿½ nadando nas refrescantes ï¿½guas do Lago de Beirï¿½gua.  Ao seu
-redor vocï¿½ observa apï¿½s as margens do lago, belos campos floridos e algumas
-ï¿½rvores frondosas.  Ao norte vocï¿½ observa as terras de Beirï¿½gua e ao sudeste
-vocï¿½ observa uma maravilhosa planï¿½cie verde.  Ao oeste e ao nordeste vocï¿½
-observa as ï¿½guas do Lago de Beirï¿½gua.
+O Lago de Beirágua~
+   Você está nadando nas refrescantes águas do Lago de Beirágua.  Ao seu
+redor você observa após as margens do lago, belos campos floridos e algumas
+árvores frondosas.  Ao norte você observa as terras de Beirágua e ao sudeste
+você observa uma maravilhosa planície verde.  Ao oeste e ao nordeste você
+observa as águas do Lago de Beirágua.
 ~
-145 393284 0 0 0 6
+145 cgrs 6
 D0
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14600
 D3
-Vocï¿½ observa as ï¿½guas do Lago de Beirï¿½gua.
+Você observa as águas do Lago de Beirágua.
 ~
 ~
 0 -1 14593
 D8
-Vocï¿½ observa uma bela planï¿½cie verde.
+Você observa uma bela planície verde.
 ~
 ~
 0 -1 14591
 S
 #14593
-O Lago de Beirï¿½gua~
-   Vocï¿½ estï¿½ nadando nas refrescantes ï¿½guas do Lago de Beirï¿½gua.  Ao seu
-redor vocï¿½ observa apï¿½s as margens do lago, belos campos floridos e algumas
-ï¿½rvores frondosas.  Ao norte vocï¿½ observa as terras de Beirï¿½gua e ao leste
-vocï¿½ observa as ï¿½guas do Lago de Beirï¿½gua.
+O Lago de Beirágua~
+   Você está nadando nas refrescantes águas do Lago de Beirágua.  Ao seu
+redor você observa após as margens do lago, belos campos floridos e algumas
+árvores frondosas.  Ao norte você observa as terras de Beirágua e ao leste
+você observa as águas do Lago de Beirágua.
 ~
-145 393284 0 0 0 6
+145 cgrs 6
 D0
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14601
 D1
-Vocï¿½ observa as ï¿½guas do Lago de Beirï¿½gua.
+Você observa as águas do Lago de Beirágua.
 ~
 ~
 0 -1 14592
 S
 #14594
 Uma Toca de Tijolos da Vila Hobbits~
-   Vocï¿½ estï¿½ dentro de uma confortï¿½vel casa de tijolos e coberta quase que
-completamente por uma faixa de grama, com exceï¿½ï¿½o de sua porta e das janelas
-circulares.  A toca foi construï¿½da pelos pequeninos Hobbits, que escavaram e
-reforï¿½aram a estrutura da toca com tijolos.  Ao seu redor vocï¿½ observa
-pequeninos e belos mï¿½veis de madeira, ï¿½ sua frente vocï¿½ observa uma bela
-lareira e nas paredes vocï¿½ observa algumas engraï¿½adas janelas circulares.
-Ao oeste vocï¿½ observa uma porta de madeira.
+   Você está dentro de uma confortável casa de tijolos e coberta quase que
+completamente por uma faixa de grama, com exceção de sua porta e das janelas
+circulares.  A toca foi construída pelos pequeninos Hobbits, que escavaram e
+reforçaram a estrutura da toca com tijolos.  Ao seu redor você observa
+pequeninos e belos móveis de madeira, à sua frente você observa uma bela
+lareira e nas paredes você observa algumas engraçadas janelas circulares.
+Ao oeste você observa uma porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D3
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14595
+:n 2 a porta de madeira
+ag -1 14595
 S
 #14595
 A Alegre Vila dos Hobbits~
-   Um imenso sentimento de alegria invade todo o seu coraï¿½ï¿½o, apï¿½s seus pï¿½s
-pisarem sobre esta bela terra e apï¿½s seus olhos se cativarem pela bela visï¿½o
-ï¿½ sua frente.  Vocï¿½ estï¿½ caminhando no centro agitado e feï¿½rico da Vila dos
-Hobbits.  Ao seu redor vocï¿½ observa vï¿½rias pequeninas barraquinhas de
-madeira cheias de verduras e pequenas frutas, alguns baï¿½s, alguns pequenos
-animais correndo de um lado para o outro e vï¿½rios pequeninos Hobbits
-conversando e curiosos com a sua presenï¿½a.  Vocï¿½ percebe tambï¿½m vï¿½rias tocas
-circundando todo o centro da vila.  Ao norte e ao oeste vocï¿½ observa o
-alegre centro da Vila dos Hobbits.  Ao sul vocï¿½ observa uma bela planï¿½cie
-verde e ao leste vocï¿½ observa uma pequenina toca coberta de grama.
+   Um imenso sentimento de alegria invade todo o seu coração, após seus pés
+pisarem sobre esta bela terra e após seus olhos se cativarem pela bela visão
+à sua frente.  Você está caminhando no centro agitado e feérico da Vila dos
+Hobbits.  Ao seu redor você observa várias pequeninas barraquinhas de
+madeira cheias de verduras e pequenas frutas, alguns baús, alguns pequenos
+animais correndo de um lado para o outro e vários pequeninos Hobbits
+conversando e curiosos com a sua presença.  Você percebe também várias tocas
+circundando todo o centro da vila.  Ao norte e ao oeste você observa o
+alegre centro da Vila dos Hobbits.  Ao sul você observa uma bela planície
+verde e ao leste você observa uma pequenina toca coberta de grama.
 ~
-145 0 0 0 0 1
+145 0 1
 D0
-Vocï¿½ observa alguns pequeninos apontando para vocï¿½.
+Você observa alguns pequeninos apontando para você.
 ~
 ~
 0 -1 14603
 D1
-Vocï¿½ observa uma pequena toca da Vila dos Hobbits.
+Você observa uma pequena toca da Vila dos Hobbits.
 ~
 porta madeira~
-0 -1 14594
+:n 2 a porta de madeira
+ag -1 14594
 D2
-Vocï¿½ observa uma bela planï¿½cie verde.
+Você observa uma bela planície verde.
 ~
 ~
 0 -1 14591
 D3
-Vocï¿½ observa o centro da Vila dos Hobbits.
+Você observa o centro da Vila dos Hobbits.
 ~
 ~
 0 -1 14596
 S
 #14596
 A Vila dos Hobbits~
-   Vocï¿½ estï¿½ caminhando entre vï¿½rias barracas de verduras e frutas da
-cativante Vila dos Hobbits.  Alguns pequeninos aponta para vocï¿½ e cochicham
-com os outros hobbits.  Ao seu redor, alï¿½m de vï¿½rias barracas, vocï¿½ observa
+   Você está caminhando entre várias barracas de verduras e frutas da
+cativante Vila dos Hobbits.  Alguns pequeninos aponta para você e cochicham
+com os outros hobbits.  Ao seu redor, além de várias barracas, você observa
 algumas tocas, que cercam todo o centro da Vila.  Ao norte, leste e oeste
-vocï¿½ observa o alegre centro da Vila dos Hobbits, e ao sul vocï¿½ observa as
-ï¿½guas do tranqï¿½ilo rio ï¿½gua.
+você observa o alegre centro da Vila dos Hobbits, e ao sul você observa as
+águas do tranqüilo rio Água.
 ~
-145 0 0 0 0 1
+145 0 1
 D0
-Vocï¿½ observa o centro da Vila dos Hobbits.
+Você observa o centro da Vila dos Hobbits.
 ~
 ~
 0 -1 14604
 D1
-Vocï¿½ observa o centro da Vila dos Hobbits.
+Você observa o centro da Vila dos Hobbits.
 ~
 ~
 0 -1 14595
 D2
-Vocï¿½ observa as lï¿½mpidas ï¿½guas do rio ï¿½gua.
+Você observa as límpidas águas do rio Água.
 ~
 ~
 0 -1 14585
 D3
-Vocï¿½ observa o centro da Vila dos Hobbits.
+Você observa o centro da Vila dos Hobbits.
 ~
 ~
 0 -1 14597
 S
 #14597
 O Centro da Vila dos Hobbits~
-   Vocï¿½ estï¿½ caminhando pela agitada e alegre Vila dos Hobbits.  Ao seu
-redor vocï¿½ observa vï¿½rios pequeninos conversando e observando as verduras e
-as frutas ï¿½ venda nas barracas de madeira.  Ao redor do centro da vila vocï¿½
-percebe vï¿½rias tocas pequeninas circulando todo o centro da vila.  Ao sul
-vocï¿½ observa as cristalinas ï¿½guas do rio ï¿½gua cortando as terras do Condado.
-Ao oeste vocï¿½ observa uma bela toca coberta de grama e pintada de amarelo.
-Ao norte e ao leste vocï¿½ observa o movimentado centro da Vila dos Hobbits.
+   Você está caminhando pela agitada e alegre Vila dos Hobbits.  Ao seu
+redor você observa vários pequeninos conversando e observando as verduras e
+as frutas à venda nas barracas de madeira.  Ao redor do centro da vila você
+percebe várias tocas pequeninas circulando todo o centro da vila.  Ao sul
+você observa as cristalinas águas do rio Água cortando as terras do Condado.
+Ao oeste você observa uma bela toca coberta de grama e pintada de amarelo.
+Ao norte e ao leste você observa o movimentado centro da Vila dos Hobbits.
 ~
-145 0 0 0 0 1
+145 0 1
 D0
-Vocï¿½ observa o centro da Vila dos Hobbits.
+Você observa o centro da Vila dos Hobbits.
 ~
 ~
 0 -1 14605
 D1
-Vocï¿½ observa o centro da Vila dos Hobbits.
+Você observa o centro da Vila dos Hobbits.
 ~
 ~
 0 -1 14596
 D3
-Vocï¿½ observa um bela casa hobbit.
+Você observa um bela casa hobbit.
 ~
 porta madeira~
-0 -1 14598
+:n 2 a porta de madeira
+ag -1 14598
 S
 #14598
 Uma Toca Amarela da Vila dos Hobbits~
-   Vocï¿½ estï¿½ dentro de uma apertada casa hobbit de madeira.  Ao seu redor
-vocï¿½ observa alguns pequenos mï¿½veis de madeira e alguns pequeninos
-brinquedos jogados no chï¿½o.  Nas paredes vocï¿½ observa engraï¿½adas janelas de
-forma circulares.  Ao leste vocï¿½ observa uma curiosa porta de madeira.
+   Você está dentro de uma apertada casa hobbit de madeira.  Ao seu redor
+você observa alguns pequenos móveis de madeira e alguns pequeninos
+brinquedos jogados no chão.  Nas paredes você observa engraçadas janelas de
+forma circulares.  Ao leste você observa uma curiosa porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D1
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14597
+:n 2 a porta de madeira
+ag -1 14597
 S
 #14599
-O Lago de Beirï¿½gua~
-   Vocï¿½ estï¿½ nadando nas refrescantes ï¿½guas do Lago de Beirï¿½gua.  Ao seu
-redor vocï¿½ observa apï¿½s as margens do lago, belos campos floridos e algumas
-ï¿½rvores frondosas.  Ao oeste vocï¿½ observa as terras de Beirï¿½gua e ao
-sudoeste vocï¿½ observa as ï¿½guas do Lago de Beirï¿½gua.
+O Lago de Beirágua~
+   Você está nadando nas refrescantes águas do Lago de Beirágua.  Ao seu
+redor você observa após as margens do lago, belos campos floridos e algumas
+árvores frondosas.  Ao oeste você observa as terras de Beirágua e ao
+sudoeste você observa as águas do Lago de Beirágua.
 ~
-145 393284 0 0 0 6
+145 cgrs 6
 D3
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14600
 D9
-Vocï¿½ observa as ï¿½guas do Lago de Beirï¿½gua.
+Você observa as águas do Lago de Beirágua.
 ~
 ~
 0 -1 14592
 S
 #14600
-As Festivas Terras de Beirï¿½gua~
-   Vocï¿½ estï¿½ caminhando sobre um imenso tapete verde de grama macia.  Ao seu
-redor vocï¿½ observa as belas terras de Beirï¿½gua.  Nessas maravilhosas terras
-acontecem sempre as festas e eleiï¿½ï¿½es para prefeito do Condado, que
-acontecem a cada sete anos, sempre no solstï¿½cio de verï¿½o.  Ao norte e ao
-oeste vocï¿½ observa as terras de Beirï¿½gua.  Ao sul e ao leste vocï¿½ observa as
-calmas ï¿½guas do Lago de Beirï¿½gua.
+As Festivas Terras de Beirágua~
+   Você está caminhando sobre um imenso tapete verde de grama macia.  Ao seu
+redor você observa as belas terras de Beirágua.  Nessas maravilhosas terras
+acontecem sempre as festas e eleições para prefeito do Condado, que
+acontecem a cada sete anos, sempre no solstício de verão.  Ao norte e ao
+oeste você observa as terras de Beirágua.  Ao sul e ao leste você observa as
+calmas águas do Lago de Beirágua.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14606
 D1
-Vocï¿½ observa as ï¿½guas do Lago de Beirï¿½gua.
+Você observa as águas do Lago de Beirágua.
 ~
 ~
 0 -1 14599
 D2
-Vocï¿½ observa as ï¿½guas do Lago de Beirï¿½gua.
+Você observa as águas do Lago de Beirágua.
 ~
 ~
 0 -1 14592
 D3
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14601
 S
 #14601
-As Festivas Terras de Beirï¿½gua~
-   Vocï¿½ estï¿½ caminhando sobre um imenso tapete verde de grama macia.  Ao seu
-redor vocï¿½ observa as belas terras de Beirï¿½gua.  Nessas maravilhosas terras
-acontecem sempre as festas e eleiï¿½ï¿½es para prefeito do Condado, que
-acontecem a cada sete anos, sempre no solstï¿½cio de verï¿½o.  Ao norte e ao
-leste vocï¿½ observa as terras de Beirï¿½gua.  Ao sul vocï¿½ observa as calmas
-ï¿½guas do Lago de Beirï¿½gua e ao sudoeste vocï¿½ observa as ï¿½guas do rio ï¿½gua.
+As Festivas Terras de Beirágua~
+   Você está caminhando sobre um imenso tapete verde de grama macia.  Ao seu
+redor você observa as belas terras de Beirágua.  Nessas maravilhosas terras
+acontecem sempre as festas e eleições para prefeito do Condado, que
+acontecem a cada sete anos, sempre no solstício de verão.  Ao norte e ao
+leste você observa as terras de Beirágua.  Ao sul você observa as calmas
+águas do Lago de Beirágua e ao sudoeste você observa as águas do rio Água.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14607
 D1
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14600
 D2
-Vocï¿½ observa o Lago de Beirï¿½gua.
+Você observa o Lago de Beirágua.
 ~
 ~
 0 -1 14599
 D9
-Vocï¿½ observa as ï¿½guas do rio ï¿½gua.
+Você observa as águas do rio Água.
 ~
 ~
 0 -1 14583
 S
 #14602
 Uma Pequenina Toca Da Vila dos Hobbits~
-   Vocï¿½ estï¿½ dentro de uma apertada casa de madeira, construï¿½da pelos
-pequeninos que habitam a Vila dos Hobbits.  Ao seu redor vocï¿½ observa alguns
-tapetes e pequenos mï¿½veis de madeira.  Nas paredes vocï¿½ observa curiosos
-quadros com pinturas de crianï¿½as e em algumas paredes vocï¿½ observa
-engraï¿½adas janelas circulares.  Ao oeste vocï¿½ observa uma porta de madeira.
+   Você está dentro de uma apertada casa de madeira, construída pelos
+pequeninos que habitam a Vila dos Hobbits.  Ao seu redor você observa alguns
+tapetes e pequenos móveis de madeira.  Nas paredes você observa curiosos
+quadros com pinturas de crianças e em algumas paredes você observa
+engraçadas janelas circulares.  Ao oeste você observa uma porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D3
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14603
+:n 2 a porta de madeira
+ag -1 14603
 S
 #14603
 O Centro da Vila dos Hobbits~
-   Vocï¿½ estï¿½ caminhando entre vï¿½rios pequeninos e pequenas barracas de
-frutas e verduras no centro da Vila dos Hobbits.  Ao seu redor vocï¿½ observa
-o agitado e alegre modo de vida dos hobbits.  Vocï¿½ observa vï¿½rias tocas em
-volta do centro da vila.  Ao sul e ao oeste vocï¿½ observa pequenas crianï¿½as
-danï¿½ando a ciranda do pulo.  Ao norte e ao leste vocï¿½ observa pequeninas
-tocas ao redor do centro da vila, e ao nordeste vocï¿½ observa as terras de
-Beirï¿½gua.
+   Você está caminhando entre vários pequeninos e pequenas barracas de
+frutas e verduras no centro da Vila dos Hobbits.  Ao seu redor você observa
+o agitado e alegre modo de vida dos hobbits.  Você observa várias tocas em
+volta do centro da vila.  Ao sul e ao oeste você observa pequenas crianças
+dançando a ciranda do pulo.  Ao norte e ao leste você observa pequeninas
+tocas ao redor do centro da vila, e ao nordeste você observa as terras de
+Beirágua.
 ~
-145 0 0 0 0 1
+145 0 1
 D0
-Vocï¿½ observa uma pequena toca.
+Você observa uma pequena toca.
 ~
 porta madeira~
-0 -1 14609
+:n 2 a porta de madeira
+ag -1 14609
 D1
-Vocï¿½ observa uma pequena toca.
+Você observa uma pequena toca.
 ~
 porta madeira~
-0 -1 14602
+:n 2 a porta de madeira
+ag -1 14602
 D2
-Vocï¿½ observa o centro da Vila dos Hobbits.
+Você observa o centro da Vila dos Hobbits.
 ~
 ~
 0 -1 14595
 D3
-Vocï¿½ observa o centro da Vila dos Hobbits.
+Você observa o centro da Vila dos Hobbits.
 ~
 ~
 0 -1 14604
 D7
-Vocï¿½ observa as terras festivas de Beirï¿½gua.
+Você observa as terras festivas de Beirágua.
 ~
 ~
 0 -1 14608
 S
 #14604
 O Centro da Vila dos Hobbits~
-   Vocï¿½ estï¿½ caminhando pela agitada e alegre Vila dos Hobbits.  Ao seu
-redor vocï¿½ observa vï¿½rios pequeninos conversando e observando as verduras e
-as frutas ï¿½ venda nas barracas de madeira.  Ao redor do centro da vila vocï¿½
-percebe vï¿½rias tocas pequeninas circulando todo o centro da vila.  Ao norte
-vocï¿½ observa uma toca coberta de grama.  Ao oeste, ao sul e ao leste vocï¿½
+   Você está caminhando pela agitada e alegre Vila dos Hobbits.  Ao seu
+redor você observa vários pequeninos conversando e observando as verduras e
+as frutas à venda nas barracas de madeira.  Ao redor do centro da vila você
+percebe várias tocas pequeninas circulando todo o centro da vila.  Ao norte
+você observa uma toca coberta de grama.  Ao oeste, ao sul e ao leste você
 observa o movimentado centro da Vila dos Hobbits.
 ~
-145 0 0 0 0 1
+145 0 1
 D0
-Vocï¿½ observa uma pequenina toca.
+Você observa uma pequenina toca.
 ~
 porta madeira~
-0 -1 14610
+:n 2 a porta de madeira
+ag -1 14610
 D1
-Vocï¿½ observa o centro da Vila dos Hobbits.
+Você observa o centro da Vila dos Hobbits.
 ~
 ~
 0 -1 14603
 D2
-Vocï¿½ observa o centro da Vila dos Hobbits.
+Você observa o centro da Vila dos Hobbits.
 ~
 ~
 0 -1 14596
 D3
-Vocï¿½ observa o centro da Vila dos Hobbits.
+Você observa o centro da Vila dos Hobbits.
 ~
 ~
 0 -1 14605
 S
 #14605
 O Centro da Vila dos Hobbits~
-   Vocï¿½ estï¿½ caminhando entre vï¿½rios pequeninos e pequenas barracas de
-frutas e verduras no centro da Vila dos Hobbits.  Ao seu redor vocï¿½ observa
-o agitado e alegre modo de vida dos hobbits.  Vocï¿½ observa vï¿½rias tocas em
-volta do centro da vila.  Ao sul e ao leste vocï¿½ observa pequenas crianï¿½as
-danï¿½ando a ciranda do pulo.  Para cima vocï¿½ observa uma bela colina verde.
+   Você está caminhando entre vários pequeninos e pequenas barracas de
+frutas e verduras no centro da Vila dos Hobbits.  Ao seu redor você observa
+o agitado e alegre modo de vida dos hobbits.  Você observa várias tocas em
+volta do centro da vila.  Ao sul e ao leste você observa pequenas crianças
+dançando a ciranda do pulo.  Para cima você observa uma bela colina verde.
 ~
-145 0 0 0 0 1
+145 0 1
 D1
-Vocï¿½ observa o centro da Vila Dos Hobbits
+Você observa o centro da Vila Dos Hobbits
 ~
 ~
 0 -1 14604
 D2
-Vocï¿½ observa o centro da Vila Dos Hobbits
+Você observa o centro da Vila Dos Hobbits
 ~
 ~
 0 -1 14597
 D4
-Vocï¿½ observa uma bela colina verde.
+Você observa uma bela colina verde.
 ~
 ~
 0 -1 14611
 S
 #14606
-As Festivas Terras de Beirï¿½gua~
-   Vocï¿½ estï¿½ caminhando sobre um imenso tapete verde de grama macia.  Ao seu
-redor vocï¿½ observa as belas terras de Beirï¿½gua.  Nessas maravilhosas terras
-acontecem sempre as festas e eleiï¿½ï¿½es para prefeito do Condado, que
-acontecem a cada sete anos, sempre no solstï¿½cio de verï¿½o.  Ao sul, ao oeste
-e ao noroeste vocï¿½ observa as terras de Beirï¿½gua. 
+As Festivas Terras de Beirágua~
+   Você está caminhando sobre um imenso tapete verde de grama macia.  Ao seu
+redor você observa as belas terras de Beirágua.  Nessas maravilhosas terras
+acontecem sempre as festas e eleições para prefeito do Condado, que
+acontecem a cada sete anos, sempre no solstício de verão.  Ao sul, ao oeste
+e ao noroeste você observa as terras de Beirágua. 
 ~
-145 0 0 0 0 2
+145 0 2
 D2
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14600
 D3
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14607
 D6
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14656
 S
 #14607
-As Terras de Beirï¿½gua~
-   Vocï¿½ estï¿½ caminhando sobre uma tranqï¿½ila planï¿½cie do Condado.  Ao seu
-redor vocï¿½ observa frondosas ï¿½rvores e pequenos pï¿½ssaros cantando e
-sobrevoando a planï¿½cie ï¿½ procura de pequeninos insetos.  Ao olhar para o
-chï¿½o vocï¿½ observa vï¿½rias pegadas pequeninas em todas as direï¿½ï¿½es.  Com
-certeza os pequeninos comemoraram mais uma festa hï¿½ poucos dias atrï¿½s.  Ao
-norte, ao sul, ao leste e ao oeste vocï¿½ observa a extensa planï¿½cie de
-Beirï¿½gua.
+As Terras de Beirágua~
+   Você está caminhando sobre uma tranqüila planície do Condado.  Ao seu
+redor você observa frondosas árvores e pequenos pássaros cantando e
+sobrevoando a planície à procura de pequeninos insetos.  Ao olhar para o
+chão você observa várias pegadas pequeninas em todas as direções.  Com
+certeza os pequeninos comemoraram mais uma festa há poucos dias atrás.  Ao
+norte, ao sul, ao leste e ao oeste você observa a extensa planície de
+Beirágua.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14656
 D1
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14606
 D2
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14601
 D3
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14608
 S
 #14608
-As Festivas Terras de Beirï¿½gua~
-   Vocï¿½ estï¿½ caminhando sobre um imenso tapete verde de grama macia.  Ao seu
-redor vocï¿½ observa as belas terras de Beirï¿½gua.  Nessas maravilhosas terras
-acontecem sempre as festas e eleiï¿½ï¿½es para prefeito do Condado, que
-acontecem a cada sete anos, sempre no solstï¿½cio de verï¿½o.  Ao nordeste e ao
-leste vocï¿½ observa as terras de Beirï¿½gua.  Ao sudoeste vocï¿½ observa o centro
+As Festivas Terras de Beirágua~
+   Você está caminhando sobre um imenso tapete verde de grama macia.  Ao seu
+redor você observa as belas terras de Beirágua.  Nessas maravilhosas terras
+acontecem sempre as festas e eleições para prefeito do Condado, que
+acontecem a cada sete anos, sempre no solstício de verão.  Ao nordeste e ao
+leste você observa as terras de Beirágua.  Ao sudoeste você observa o centro
 da Vila dos Hobbits.
 ~
-145 0 0 0 0 2
+145 0 2
 D1
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14607
 D7
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14656
 D9
-Vocï¿½ observa o centro da Vila dos Hobbits.
+Você observa o centro da Vila dos Hobbits.
 ~
 ~
 0 -1 14603
 S
 #14609
 Uma Florida Toca da Vila dos Hobbits~
-   Vocï¿½ estï¿½ dentro de uma bela e perfumada toca hobbit.  Construï¿½da pelos
-pequeninos que habitam a Vila dos Hobbits, a casa ï¿½ coberta por uma faixa de
-grama e apenas as aberturas das janelas e da porta sï¿½o descobertas.  Ao seu
-redor vocï¿½ observa pequeninas ferramentas de madeira e alguns pequenos
-mï¿½veis de madeira.  Ao sul vocï¿½ observa uma engraï¿½ada porta de madeira.
+   Você está dentro de uma bela e perfumada toca hobbit.  Construída pelos
+pequeninos que habitam a Vila dos Hobbits, a casa é coberta por uma faixa de
+grama e apenas as aberturas das janelas e da porta são descobertas.  Ao seu
+redor você observa pequeninas ferramentas de madeira e alguns pequenos
+móveis de madeira.  Ao sul você observa uma engraçada porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D2
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14603
+:n 2 a porta de madeira
+ag -1 14603
 S
 #14610
 Uma Pequenina Toca da Vila dos Hobbits~
-   Vocï¿½ estï¿½ dentro de uma apertada toca hobbit, escavada numa pequena
+   Você está dentro de uma apertada toca hobbit, escavada numa pequena
 colina e coberta quase que completamente por uma faixa de grama, com
-exceï¿½ï¿½o das curiosas e pequeninas aberturas das janelas e da sua porta.  A
-estrutura da toca foi reforï¿½ada com madeira.  Ao seu redor vocï¿½ observa
-pequenos mï¿½veis de madeira e uma lareira.  Ao sul vocï¿½ observa uma curiosa
+exceção das curiosas e pequeninas aberturas das janelas e da sua porta.  A
+estrutura da toca foi reforçada com madeira.  Ao seu redor você observa
+pequenos móveis de madeira e uma lareira.  Ao sul você observa uma curiosa
 porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D2
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14604
+:n 2 a porta de madeira
+ag -1 14604
 S
 #14611
 Uma Suave Colina Verde~
-   Vocï¿½ estï¿½ sobre uma bela colina verde.  Ao seu redor ï¿½ possï¿½vel observar
-todo o centro da Vila dos Hobbits e as festivas terras de Beirï¿½gua.  Vocï¿½
-observa tambï¿½m belas ï¿½rvores frondosas, que produzem gigantescas sombras e
-belos frutos.  Para baixo vocï¿½ observa uma trilha na direï¿½ï¿½o do centro da
-Vila dos Hobbits e ao norte vocï¿½ uma estreita rua da vila dos pequeninos.
+   Você está sobre uma bela colina verde.  Ao seu redor é possível observar
+todo o centro da Vila dos Hobbits e as festivas terras de Beirágua.  Você
+observa também belas árvores frondosas, que produzem gigantescas sombras e
+belos frutos.  Para baixo você observa uma trilha na direção do centro da
+Vila dos Hobbits e ao norte você uma estreita rua da vila dos pequeninos.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa uma estreita rua da vila.
+Você observa uma estreita rua da vila.
 ~
 ~
 0 -1 14612
 D5
-Vocï¿½ observa o centro da Vila dos Hobbits.
+Você observa o centro da Vila dos Hobbits.
 ~
 ~
 0 -1 14605
 S
 #14612
 A Rua do Bolsinho~
-   Vocï¿½ estï¿½ caminhando na estreita rua do Bolsinho.  Ao seu redor vocï¿½
+   Você está caminhando na estreita rua do Bolsinho.  Ao seu redor você
 observa os belos campos verdes e floridos do Condado, algumas belas e
-enormes ï¿½rvores cheias de frutos e algumas tocas hobbits cobertas por uma
-faixa de grama.  Ao sul vocï¿½ observa uma tranqï¿½ila colina verde e para baixo
-vocï¿½ observa a continuaï¿½ï¿½o da rua do Bolsinho.
+enormes árvores cheias de frutos e algumas tocas hobbits cobertas por uma
+faixa de grama.  Ao sul você observa uma tranqüila colina verde e para baixo
+você observa a continuação da rua do Bolsinho.
 ~
-145 0 0 0 0 1
+145 0 1
 D2
-Vocï¿½ observa uma colina verde.
+Você observa uma colina verde.
 ~
 ~
 0 -1 14611
 D5
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
-0 -1 14613
+0 -1 14613 
 S
 #14613
 A Rua do Bolsinho~
-   Vocï¿½ estï¿½ caminhando na estreita rua do Bolsinho.  Ao seu redor vocï¿½
+   Você está caminhando na estreita rua do Bolsinho.  Ao seu redor você
 observa os belos campos verdes e floridos do Condado, algumas belas e
-enormes ï¿½rvores cheias de frutos e algumas tocas hobbits cobertas por uma
-faixa de grama.  Para cima vocï¿½ observa o inï¿½cio da rua do Bolsinho e para o
-nordeste e noroeste vocï¿½ observa uma birfucaï¿½ï¿½o da rua do Bolsinho.
+enormes árvores cheias de frutos e algumas tocas hobbits cobertas por uma
+faixa de grama.  Para cima você observa o início da rua do Bolsinho e para o
+nordeste e noroeste você observa uma birfucação da rua do Bolsinho.
 ~
-145 0 0 0 0 1
+145 0 1
 D4
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14612
 D6
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14615
 D7
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14614
 S
 #14614
 A Rua do Bolsinho~
-   Vocï¿½ estï¿½ caminhando na estreita rua do Bolsinho.  Ao seu redor vocï¿½
+   Você está caminhando na estreita rua do Bolsinho.  Ao seu redor você
 observa os belos campos verdes e floridos do Condado, algumas belas e
-enormes ï¿½rvores cheias de frutos e algumas tocas hobbits cobertas por uma
-faixa de grama.  Ao nordeste e ao sudoeste vocï¿½ observa a continuaï¿½ï¿½o da rua
+enormes árvores cheias de frutos e algumas tocas hobbits cobertas por uma
+faixa de grama.  Ao nordeste e ao sudoeste você observa a continuação da rua
 do Bolsinho.
 ~
-145 0 0 0 0 1
+145 0 1
 D7
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14616
 D9
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14613
 S
 #14615
 A Rua do Bolsinho~
-   Vocï¿½ estï¿½ caminhando na estreita rua do Bolsinho.  Ao seu redor vocï¿½
+   Você está caminhando na estreita rua do Bolsinho.  Ao seu redor você
 observa os belos campos verdes e floridos do Condado, algumas belas e
-enormes ï¿½rvores cheias de frutos e algumas tocas hobbits cobertas por uma
-faixa de grama.  Ao noroeste e ao sudeste vocï¿½ observa a continuaï¿½ï¿½o da rua
-do Bolsinho e para baixo vocï¿½ observa uma pequenina toca hobbit verde.
+enormes árvores cheias de frutos e algumas tocas hobbits cobertas por uma
+faixa de grama.  Ao noroeste e ao sudeste você observa a continuação da rua
+do Bolsinho e para baixo você observa uma pequenina toca hobbit verde.
 ~
-145 0 0 0 0 1
+145 0 1
 D5
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 porta madeira~
-0 -1 14618
+:n 2 a porta de madeira
+ag -1 14618
 D6
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14619
 D8
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14613
 S
 #14616
 A Rua do Bolsinho~
-   Vocï¿½ estï¿½ caminhando na estreita rua do Bolsinho.  Ao seu redor vocï¿½
+   Você está caminhando na estreita rua do Bolsinho.  Ao seu redor você
 observa os belos campos verdes e floridos do Condado, algumas belas e
-enormes ï¿½rvores cheias de frutos e algumas tocas hobbits cobertas por uma
-faixa de grama.  Ao norte e ao sudoeste vocï¿½ observa a continuaï¿½ï¿½o da rua do
-Bolsinho e para baixo vocï¿½ observa uma pequenina toca hobbit.
+enormes árvores cheias de frutos e algumas tocas hobbits cobertas por uma
+faixa de grama.  Ao norte e ao sudoeste você observa a continuação da rua do
+Bolsinho e para baixo você observa uma pequenina toca hobbit.
 ~
-145 0 0 0 0 1
+145 0 1
 D0
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14621
 D5
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 porta madeira~
-0 -1 14617
+:n 2 a porta de madeira
+ag -1 14617
 D9
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14614
 S
 #14617
 Uma Florida Toca da Vila dos Hobbits~
-   Vocï¿½ estï¿½ dentro de uma bela, porï¿½m apertada casa hobbit.  Escavada numa
+   Você está dentro de uma bela, porém apertada casa hobbit.  Escavada numa
 pequena colina a casa possui uma faixa de grama que cobre quase que toda a
-toca, com exceï¿½ï¿½o das aberturas das janelas e da porta.  Ao seu redor vocï¿½
-observa alguns pequeninos mï¿½veis de madeira e alguns restos de comida em
-cima de uma pequena mesa de madeira.  Para cima vocï¿½ observa uma curiosa
+toca, com exceção das aberturas das janelas e da porta.  Ao seu redor você
+observa alguns pequeninos móveis de madeira e alguns restos de comida em
+cima de uma pequena mesa de madeira.  Para cima você observa uma curiosa
 porta circular.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D4
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14616
+:n 2 a porta de madeira
+ag -1 14616
 S
 #14618
 Uma Toca Verde da Vila dos Hobbits~
-   Vocï¿½ estï¿½ dentro de uma confortï¿½vel, porï¿½m pequenina casa hobbit.
-Construï¿½da pelos pequeninos que habitam a Vila dos Hobbits, a casa foi
-escavada numa pequena colina e teve sua estrutura reforï¿½ada com madeira.  Ao
-seu redor vocï¿½ observa as suas paredes de madeira pontadas de verde e
-algumas curiosas janelas circulares.  Vocï¿½ observa tambï¿½m alguns pequenos
-mï¿½veis de madeira e alguns tapetes.  Para cima vocï¿½ observa uma porta de
-madeira engraï¿½ada.
+   Você está dentro de uma confortável, porém pequenina casa hobbit.
+Construída pelos pequeninos que habitam a Vila dos Hobbits, a casa foi
+escavada numa pequena colina e teve sua estrutura reforçada com madeira.  Ao
+seu redor você observa as suas paredes de madeira pontadas de verde e
+algumas curiosas janelas circulares.  Você observa também alguns pequenos
+móveis de madeira e alguns tapetes.  Para cima você observa uma porta de
+madeira engraçada.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D4
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14615
+:n 2 a porta de madeira
+ag -1 14615
 S
 #14619
 A Rua do Bolsinho~
-   Vocï¿½ estï¿½ caminhando na estreita rua do Bolsinho.  Ao seu redor vocï¿½
+   Você está caminhando na estreita rua do Bolsinho.  Ao seu redor você
 observa os belos campos verdes e floridos do Condado, algumas belas e
-enormes ï¿½rvores cheias de frutos e algumas tocas hobbits cobertas por uma
-faixa de grama.  Ao norte e ao sudeste vocï¿½ observa a continuaï¿½ï¿½o da rua
-do Bolsinho e ao nordeste vocï¿½ observa um grande jardim florido com vï¿½rias
-pequeninas crianï¿½as brincando.
+enormes árvores cheias de frutos e algumas tocas hobbits cobertas por uma
+faixa de grama.  Ao norte e ao sudeste você observa a continuação da rua
+do Bolsinho e ao nordeste você observa um grande jardim florido com várias
+pequeninas crianças brincando.
 ~
-145 0 0 0 0 1
+145 0 1
 D0
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14624
 D7
-Vocï¿½ observa um belo jardim perfumado com vï¿½rias crianï¿½as brincando.
+Você observa um belo jardim perfumado com várias crianças brincando.
 ~
 ~
 0 -1 14620
 D8
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14615
 S
 #14620
 O Monumental Jardim da Vila dos Hobbits~
-   Vocï¿½ estï¿½ caminhando entre belas flores do magnï¿½fico jardim da Vila dos
-Hobbits.  Ao seu redor vocï¿½ observa pequeninas crianï¿½as hobbits brincando e
+   Você está caminhando entre belas flores do magnífico jardim da Vila dos
+Hobbits.  Ao seu redor você observa pequeninas crianças hobbits brincando e
 cantando.  As brisas que passam entre as belas flores do jardim espalham o
 mais divino e sublime perfume para todos os lados.  Ao redor do grande
-jardim vocï¿½ observa algumas tocas cobertas de uma faixa de grama.  Ao norte,
-sul, nordeste, noroeste, sudeste e sudoeste vocï¿½ observa a estreita rua do
+jardim você observa algumas tocas cobertas de uma faixa de grama.  Ao norte,
+sul, nordeste, noroeste, sudeste e sudoeste você observa a estreita rua do
 Bolsinho.
 ~
-145 0 0 0 0 2
+145 0 2
 D0
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14625
 D2
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14613
 D6
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14624
 D7
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14621
 D8
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14616
 D9
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14619
 S
 #14621
 A Rua do Bolsinho~
-   Vocï¿½ estï¿½ caminhando na estreita rua do Bolsinho.  Ao seu redor vocï¿½
+   Você está caminhando na estreita rua do Bolsinho.  Ao seu redor você
 observa os belos campos verdes e floridos do Condado, algumas belas e
-enormes ï¿½rvores cheias de frutos e algumas tocas hobbits cobertas por uma
-faixa de grama.  Ao noroeste e ao sul vocï¿½ observa a continuaï¿½ï¿½o da rua do
-Bolsinho e para baixo vocï¿½ observa uma pequenina toca hobbit colorida.
+enormes árvores cheias de frutos e algumas tocas hobbits cobertas por uma
+faixa de grama.  Ao noroeste e ao sul você observa a continuação da rua do
+Bolsinho e para baixo você observa uma pequenina toca hobbit colorida.
 ~
-145 0 0 0 0 1
+145 0 1
 D2
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14616
 D5
-Vocï¿½ observa uma pequenina toca colorida da Vila dos Hobbits.
+Você observa uma pequenina toca colorida da Vila dos Hobbits.
 ~
 porta madeira~
-0 -1 14622
+:n 2 a porta de madeira
+ag -1 14622
 D6
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14625
 S
 #14622
 Uma Colorida Toca da Vila dos Hobbits~
-   Vocï¿½ estï¿½ dentro de uma confortï¿½vel toca de madeira.  Ao seu redor vocï¿½
-observa pequenos mï¿½veis espalhados e algumas ferramentas de madeira pelo
-chï¿½o.  Nas paredes vocï¿½ observa alguns quadros coloridos e pequeninas
-janelas circulares.  Para cima vocï¿½ observa uma curiosa porta de madeira.
+   Você está dentro de uma confortável toca de madeira.  Ao seu redor você
+observa pequenos móveis espalhados e algumas ferramentas de madeira pelo
+chão.  Nas paredes você observa alguns quadros coloridos e pequeninas
+janelas circulares.  Para cima você observa uma curiosa porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D4
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14621
+:n 2 a porta de madeira
+ag -1 14621
 S
 #14623
 Uma Pequenina Toca da Vila dos Hobbits~
-   Vocï¿½ estï¿½ dentro de uma apertada toca da Vila dos Hobbits.  Ao seu redor
-vocï¿½ observa algumas pequeninas cadeiras de madeira e uma pequena lareira.
-No chï¿½o vocï¿½ observa alguns tapetes e alguns pequenos brinquedos.  Nas
-paredes vocï¿½ observa pequeninas janelas circulares e para cima vocï¿½ observa
+   Você está dentro de uma apertada toca da Vila dos Hobbits.  Ao seu redor
+você observa algumas pequeninas cadeiras de madeira e uma pequena lareira.
+No chão você observa alguns tapetes e alguns pequenos brinquedos.  Nas
+paredes você observa pequeninas janelas circulares e para cima você observa
 uma curiosa porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D4
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14624
+:n 2 a porta de madeira
+ag -1 14624
 S
 #14624
 A Rua do Bolsinho~
-   Vocï¿½ estï¿½ caminhando na estreita rua do Bolsinho.  Ao seu redor vocï¿½
+   Você está caminhando na estreita rua do Bolsinho.  Ao seu redor você
 observa os belos campos verdes e floridos do Condado, algumas belas e
-enormes ï¿½rvores cheias de frutos e algumas tocas hobbits cobertas por uma
-faixa de grama.  Ao nordeste e ao sul vocï¿½ observa a continuaï¿½ï¿½o da rua do
-Bolsinho e para baixo vocï¿½ observa uma pequenina toca hobbit colorida.
+enormes árvores cheias de frutos e algumas tocas hobbits cobertas por uma
+faixa de grama.  Ao nordeste e ao sul você observa a continuação da rua do
+Bolsinho e para baixo você observa uma pequenina toca hobbit colorida.
 ~
-145 0 0 0 0 1
+145 0 1
 D2
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14619
 D5
-Vocï¿½ observa uma pequenina toca colorida da Vila dos Hobbits.
+Você observa uma pequenina toca colorida da Vila dos Hobbits.
 ~
 porta madeira~
-0 -1 14623
+:n 2 a porta de madeira
+ag -1 14623
 D7
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14625
 S
 #14625
 A Rua do Bolsinho~
-   Vocï¿½ estï¿½ caminhando na estreita rua do Bolsinho.  Ao seu redor vocï¿½
+   Você está caminhando na estreita rua do Bolsinho.  Ao seu redor você
 observa os belos campos verdes e floridos do Condado, algumas belas e
-enormes ï¿½rvores cheias de frutos e algumas tocas hobbits cobertas por uma
-faixa de grama.  Ao norte, sudeste e sudoeste vocï¿½ observa a continuaï¿½ï¿½o da
-rua do Bolsinho e ao sul vocï¿½ observa vï¿½rias crianï¿½as brincando no belo
+enormes árvores cheias de frutos e algumas tocas hobbits cobertas por uma
+faixa de grama.  Ao norte, sudeste e sudoeste você observa a continuação da
+rua do Bolsinho e ao sul você observa várias crianças brincando no belo
 jardim da Vila dos Hobbits.
 ~
-145 0 0 0 0 1
+145 0 1
 D0
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14626
 D2
-Vocï¿½ observa o magnï¿½fico jardim da Vila dos Hobbits.
+Você observa o magnífico jardim da Vila dos Hobbits.
 ~
 ~
 0 -1 14620
 D8
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14621
 D9
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14624
 S
 #14626
 A Rua do Bolsinho~
-   Vocï¿½ estï¿½ caminhando na estreita rua do Bolsinho.  Ao seu redor vocï¿½
+   Você está caminhando na estreita rua do Bolsinho.  Ao seu redor você
 observa os belos campos verdes e floridos do Condado, algumas belas e
-enormes ï¿½rvores cheias de frutos e algumas tocas hobbits cobertas por uma
-faixa de grama.  Ao norte e ao sul vocï¿½ observa a continuaï¿½ï¿½o da rua do
-Bolsinho e para baixo vocï¿½ observa uma pequenina toca de madeira.
+enormes árvores cheias de frutos e algumas tocas hobbits cobertas por uma
+faixa de grama.  Ao norte e ao sul você observa a continuação da rua do
+Bolsinho e para baixo você observa uma pequenina toca de madeira.
 ~
-145 0 0 0 0 1
+145 0 1
 D0
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14628
 D2
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14625
 D5
-Vocï¿½ observa uma toca de madeira.
+Você observa uma toca de madeira.
 ~
 porta madeira~
-0 -1 14627
+:n 2 a porta de madeira
+ag -1 14627
 S
 #14627
 Uma Florida Toca da Vila dos Hobbits~
-   Vocï¿½ estï¿½ dentro de uma bela, porï¿½m apertada casa hobbit.  Escavada numa
+   Você está dentro de uma bela, porém apertada casa hobbit.  Escavada numa
 pequena colina a casa possui uma faixa de grama que cobre quase que toda a
-toca, com exceï¿½ï¿½o das aberturas das janelas e da porta.  Ao seu redor vocï¿½
-observa alguns pequeninos mï¿½veis de madeira e alguns restos de comida em
-cima de uma pequena mesa de madeira.  Para cima vocï¿½ observa uma curiosa
+toca, com exceção das aberturas das janelas e da porta.  Ao seu redor você
+observa alguns pequeninos móveis de madeira e alguns restos de comida em
+cima de uma pequena mesa de madeira.  Para cima você observa uma curiosa
 porta circular.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D4
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14626
+:n 2 a porta de madeira
+ag -1 14626
 S
 #14628
 O Final da Rua do Bolsinho~
-   Vocï¿½ estï¿½ caminhando na estreita rua do Bolsinho.  Ao seu redor vocï¿½
+   Você está caminhando na estreita rua do Bolsinho.  Ao seu redor você
 observa os belos campos verdes e floridos do Condado, algumas belas e
-enormes ï¿½rvores cheias de frutos e algumas tocas hobbits cobertas por uma
-faixa de grama.  Ao sul vocï¿½ observa a continuaï¿½ï¿½o da rua do Bolsinho.  Para
-baixo vocï¿½ observa uma pequenina toca de madeira e ao nordeste vocï¿½ observa
+enormes árvores cheias de frutos e algumas tocas hobbits cobertas por uma
+faixa de grama.  Ao sul você observa a continuação da rua do Bolsinho.  Para
+baixo você observa uma pequenina toca de madeira e ao nordeste você observa
 uma grandiosa toca florida.
 ~
-145 0 0 0 0 1
+145 0 1
 D2
-Vocï¿½ observa a estreita rua do Bolsinho.
+Você observa a estreita rua do Bolsinho.
 ~
 ~
 0 -1 14626
 D5
-Vocï¿½ observa uma pequena toca hobbit.
+Você observa uma pequena toca hobbit.
 ~
 porta madeira~
-0 -1 14629
+:n 2 a porta de madeira
+ag -1 14629
 D7
-Vocï¿½ observa uma grandiosa toca hobbit.
+Você observa uma grandiosa toca hobbit.
 ~
 porta madeira~
-0 -1 14632
+:n 2 a porta de madeira
+ag -1 14632
 S
 #14629
 Uma Toca da Vila dos Hobbits~
-   Vocï¿½ estï¿½ dentro de uma confortï¿½vel, porï¿½m pequenina casa hobbit.
-Construï¿½da pelos pequeninos que habitam a Vila dos Hobbits, a casa foi
-escavada numa pequena colina e teve sua estrutura reforï¿½ada com madeira.  Ao
-seu redor vocï¿½ observa as suas paredes de madeira pontadas de verde e
-algumas curiosas janelas circulares.  Vocï¿½ observa tambï¿½m alguns pequenos
-mï¿½veis de madeira e alguns tapetes.  Para cima vocï¿½ observa uma porta de
-madeira engraï¿½ada.
+   Você está dentro de uma confortável, porém pequenina casa hobbit.
+Construída pelos pequeninos que habitam a Vila dos Hobbits, a casa foi
+escavada numa pequena colina e teve sua estrutura reforçada com madeira.  Ao
+seu redor você observa as suas paredes de madeira pontadas de verde e
+algumas curiosas janelas circulares.  Você observa também alguns pequenos
+móveis de madeira e alguns tapetes.  Para cima você observa uma porta de
+madeira engraçada.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D4
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14628
+:n 2 a porta de madeira
+ag -1 14628
 S
 #14630
-Um Confortï¿½vel Quarto em Bolsï¿½o~
-   Vocï¿½ estï¿½ dentro de um belo e confortï¿½vel quarto da toca mais luxuosa da
-Vila dos Hobbits.  Ao seu redor vocï¿½ observa uma majestosa cama de madeira
-coberta com os mais suaves tecidos que vocï¿½ jï¿½ viu.  No chï¿½o vocï¿½ observa
-alguns pequeninos e macios tapetes.  Na parede sul vocï¿½ observa uma pequena
-janela circular e atravï¿½s dela vocï¿½ observa toda a rua do Bolsinho.  Ao
-norte vocï¿½ observa um estreito corredor.
+Um Confortável Quarto em Bolsão~
+   Você está dentro de um belo e confortável quarto da toca mais luxuosa da
+Vila dos Hobbits.  Ao seu redor você observa uma majestosa cama de madeira
+coberta com os mais suaves tecidos que você já viu.  No chão você observa
+alguns pequeninos e macios tapetes.  Na parede sul você observa uma pequena
+janela circular e através dela você observa toda a rua do Bolsinho.  Ao
+norte você observa um estreito corredor.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D0
-Vocï¿½ observa um estreito corredor de Bolsï¿½o.
+Você observa um estreito corredor de Bolsão.
 ~
 ~
 0 -1 14633
 S
 #14631
-Um Confortï¿½vel Quarto em Bolsï¿½o~
-   Vocï¿½ estï¿½ dentro de um belo e confortï¿½vel quarto da toca mais luxuosa da
-Vila dos Hobbits.  Ao seu redor vocï¿½ observa uma majestosa cama de madeira
-coberta com os mais suaves tecidos que vocï¿½ jï¿½ viu.  No chï¿½o vocï¿½ observa
-alguns pequeninos e macios tapetes.  Na parede sul vocï¿½ observa uma pequena
-janela circular e atravï¿½s dela vocï¿½ observa toda a rua do Bolsinho.  Ao
-noroeste vocï¿½ observa um estreito corredor.
+Um Confortável Quarto em Bolsão~
+   Você está dentro de um belo e confortável quarto da toca mais luxuosa da
+Vila dos Hobbits.  Ao seu redor você observa uma majestosa cama de madeira
+coberta com os mais suaves tecidos que você já viu.  No chão você observa
+alguns pequeninos e macios tapetes.  Na parede sul você observa uma pequena
+janela circular e através dela você observa toda a rua do Bolsinho.  Ao
+noroeste você observa um estreito corredor.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D6
-Vocï¿½ observa um estreito corredor de Bolsï¿½o.
+Você observa um estreito corredor de Bolsão.
 ~
 ~
 0 -1 14633
 S
 #14632
-Bolsï¿½o, a Luxuosa Toca da Vila dos Hobbits~
-   Vocï¿½ estï¿½ dentro da mais bela e luxuosa toca da Vila dos Hobbits.  Ao seu
-redor vocï¿½ observa alguns pequeninos mï¿½veis de madeira e alguns tapetes no
-chï¿½o.  Nas paredes vocï¿½ observa alguns quadros e pinturas, que ilustram
-belas montanhas.  Vocï¿½ observa tambï¿½m as engraï¿½adas janelas circulares de
-Bolsï¿½o.  Os antigos moradores da Vila dos Hobbits adoram especular e
-conversar sobre as riquezas guardadas nos tï¿½neis de Bolsï¿½o.  Ao norte vocï¿½
-observa uma pequenina sala de paredes arqueadas, ao leste vocï¿½ observa um
-estreito corredor e ao sudoeste vocï¿½ observa uma porta de madeira bastante
+Bolsão, a Luxuosa Toca da Vila dos Hobbits~
+   Você está dentro da mais bela e luxuosa toca da Vila dos Hobbits.  Ao seu
+redor você observa alguns pequeninos móveis de madeira e alguns tapetes no
+chão.  Nas paredes você observa alguns quadros e pinturas, que ilustram
+belas montanhas.  Você observa também as engraçadas janelas circulares de
+Bolsão.  Os antigos moradores da Vila dos Hobbits adoram especular e
+conversar sobre as riquezas guardadas nos túneis de Bolsão.  Ao norte você
+observa uma pequenina sala de paredes arqueadas, ao leste você observa um
+estreito corredor e ao sudoeste você observa uma porta de madeira bastante
 curiosa.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D0
-Vocï¿½ observa uma pequena sala dentro de Bolsï¿½o.
+Você observa uma pequena sala dentro de Bolsão.
 ~
 ~
 0 -1 14636
 D1
-Vocï¿½ observa um estreito corredor.
+Você observa um estreito corredor.
 ~
 ~
 0 -1 14633
 D9
-Vocï¿½ observa uma engraï¿½ada porta de madeira.
+Você observa uma engraçada porta de madeira.
 ~
 porta madeira~
-0 -1 14628
+:n 2 a porta de madeira
+ag -1 14628
 S
 #14633
-Um Corredor Apertado em Bolsï¿½o~
-   Vocï¿½ estï¿½ caminhando com muita dificuldade num corredor estreito de
-Bolsï¿½o.  Ao seu redor vocï¿½ observa as intactas paredes de madeira arqueadas
-e alguns tapetes verdes e amarelos.  Ao sul e ao sudeste vocï¿½ observa alguns
-quartos, ao nordeste vocï¿½ observa uma perfumada cozinha e ao oeste vocï¿½
-observa a sala da toca de Bolsï¿½o.
+Um Corredor Apertado em Bolsão~
+   Você está caminhando com muita dificuldade num corredor estreito de
+Bolsão.  Ao seu redor você observa as intactas paredes de madeira arqueadas
+e alguns tapetes verdes e amarelos.  Ao sul e ao sudeste você observa alguns
+quartos, ao nordeste você observa uma perfumada cozinha e ao oeste você
+observa a sala da toca de Bolsão.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D2
-Vocï¿½ observa um belo quarto.
+Você observa um belo quarto.
 ~
 ~
 0 -1 14630
 D3
-Vocï¿½ observa uma sala bem arrumada.
+Você observa uma sala bem arrumada.
 ~
 ~
 0 -1 14632
 D7
-Vocï¿½ observa a cozinha de Bolsï¿½o.
+Você observa a cozinha de Bolsão.
 ~
 ~
 0 -1 14634
 D8
-Vocï¿½ observa uma belo quarto.
+Você observa uma belo quarto.
 ~
 ~
 0 -1 14631
 S
 #14634
-A Cozinha Perfumada de Bolsï¿½o~
-   Vocï¿½ estï¿½ dentro da perfumada cozinha de Bolsï¿½o.  Ao seu redor vocï¿½
-observa vï¿½rias panelas e colheres de madeira, uma grande mesa de madeira e
-algumas cadeiras.  Na parede leste vocï¿½ observa uma pequena janela circular
-e logo abaixo dela vocï¿½ observa uma belo jardim com algumas flores e
-pequenas ervas.  Ao norte vocï¿½ observa uma pequena porta de madeira e ao
-sudoeste vocï¿½ observa um estreito corredor.
+A Cozinha Perfumada de Bolsão~
+   Você está dentro da perfumada cozinha de Bolsão.  Ao seu redor você
+observa várias panelas e colheres de madeira, uma grande mesa de madeira e
+algumas cadeiras.  Na parede leste você observa uma pequena janela circular
+e logo abaixo dela você observa uma belo jardim com algumas flores e
+pequenas ervas.  Ao norte você observa uma pequena porta de madeira e ao
+sudoeste você observa um estreito corredor.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D0
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14635
+:n 2 a porta de madeira
+ag -1 14635
 D9
-Vocï¿½ observa um estreito corredor.
+Você observa um estreito corredor.
 ~
 ~
 0 -1 14633
 S
 #14635
-A Despensa de Bolsï¿½o~
-   Vocï¿½ estï¿½ dentro da grande despensa de Bolsï¿½o.  Ao seu redor vocï¿½ observa
-alguns barris de vinho, algumas frutas e vï¿½rios baï¿½s cheios de provisï¿½es.
-Ao sul vocï¿½ observa uma pequena porta de madeira.
+A Despensa de Bolsão~
+   Você está dentro da grande despensa de Bolsão.  Ao seu redor você observa
+alguns barris de vinho, algumas frutas e vários baús cheios de provisões.
+Ao sul você observa uma pequena porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D2
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14634
+:n 2 a porta de madeira
+ag -1 14634
 S
 #14636
-Um Pequeno Escritï¿½rio em Bolsï¿½o~
-   Vocï¿½ estï¿½ dentro de uma pequena sala da grande toca de Bolsï¿½o.  Ao seu
-redor vocï¿½ observa uma bela mesa de madeira e algumas cadeiras, alguns
-livros e alguns pequenos mapas.  No chï¿½o vocï¿½ observa alguns tapetes e nas
-paredes vocï¿½ observa algumas pinturas que ilustram belas montanhas e na
-parede oeste vocï¿½ observa uma pequena janela circular.  Ao sul vocï¿½ observa
-a sala principal da luxuosa toca de Bolsï¿½o.
+Um Pequeno Escritório em Bolsão~
+   Você está dentro de uma pequena sala da grande toca de Bolsão.  Ao seu
+redor você observa uma bela mesa de madeira e algumas cadeiras, alguns
+livros e alguns pequenos mapas.  No chão você observa alguns tapetes e nas
+paredes você observa algumas pinturas que ilustram belas montanhas e na
+parede oeste você observa uma pequena janela circular.  Ao sul você observa
+a sala principal da luxuosa toca de Bolsão.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D2
-Vocï¿½ observa a sala de entrada da toca de Bolsï¿½o.
+Você observa a sala de entrada da toca de Bolsão.
 ~
 ~
 0 -1 14632
 D5
-Vocï¿½ observa em baixo de um tapete um pequeno alï¿½apï¿½o de madeira.
+Você observa em baixo de um tapete um pequeno alçapão de madeira.
 ~
-alï¿½apï¿½o madeira~
-0 -1 14637
+alçapão madeira~
+:n 2 um pequeno alçapão de madeira
+adg -1 14637
 S
 #14637
-Os Secretos Tï¿½neis de Bolsï¿½o~
-   Vocï¿½ estï¿½ caminhando com muita dificuldade num estreito tï¿½nel de Bolsï¿½o.
-Ao seu redor vocï¿½ observa belas paredes de madeira arqueadas, que reforï¿½am a
-estrutura do tï¿½nel.  No teto vocï¿½ observa algumas pequeninas teias de
-aranha.  Ao nordeste vocï¿½ observa a continuaï¿½ï¿½o do estreito tï¿½nel de Bolsï¿½o.
-Para cima vocï¿½ observa um pequenino alï¿½apï¿½o de madeira.
+Os Secretos Túneis de Bolsão~
+   Você está caminhando com muita dificuldade num estreito túnel de Bolsão.
+Ao seu redor você observa belas paredes de madeira arqueadas, que reforçam a
+estrutura do túnel.  No teto você observa algumas pequeninas teias de
+aranha.  Ao nordeste você observa a continuação do estreito túnel de Bolsão.
+Para cima você observa um pequenino alçapão de madeira.
 ~
-145 393517 0 0 0 0
+145 acdfirs 0
 D4
-Vocï¿½ observa um pequeno alï¿½apï¿½o de madeira.
+Você observa um pequeno alçapão de madeira.
 ~
-alï¿½apï¿½o madeira~
-0 -1 14636
+alçapão madeira~
+:n 2 um pequeno alçapão de madeira
+adg -1 14636
 D7
-Vocï¿½ observa um estreito tï¿½nel.
+Você observa um estreito túnel.
 ~
 ~
 0 -1 14638
 S
 #14638
-Os Secretos Tï¿½neis de Bolsï¿½o~
-   Vocï¿½ estï¿½ caminhando com muita dificuldade num estreito tï¿½nel de Bolsï¿½o.
-Ao seu redor vocï¿½ observa belas paredes de madeira arqueadas, que reforï¿½am a
-estrutura do tï¿½nel.  No teto vocï¿½ observa algumas pequeninas teias de
-aranha.  Ao nordeste, ao noroeste e ao sudoeste vocï¿½ observa a continuaï¿½ï¿½o
-do estreito tï¿½nel de Bolsï¿½o.
+Os Secretos Túneis de Bolsão~
+   Você está caminhando com muita dificuldade num estreito túnel de Bolsão.
+Ao seu redor você observa belas paredes de madeira arqueadas, que reforçam a
+estrutura do túnel.  No teto você observa algumas pequeninas teias de
+aranha.  Ao nordeste, ao noroeste e ao sudoeste você observa a continuação
+do estreito túnel de Bolsão.
 ~
-145 393517 0 0 0 0
+145 acdfirs 0
 D6
-Vocï¿½ observa um estreito tï¿½nel.
+Você observa um estreito túnel.
 ~
 ~
 0 -1 14641
 D7
-Vocï¿½ observa um estreito tï¿½nel.
+Você observa um estreito túnel.
 ~
 ~
 0 -1 14639
 D9
-Vocï¿½ observa um estreito tï¿½nel.
+Você observa um estreito túnel.
 ~
 ~
 0 -1 14637
 S
 #14639
-Os Secretos Tï¿½neis de Bolsï¿½o~
-   Vocï¿½ estï¿½ caminhando com muita dificuldade num estreito tï¿½nel de Bolsï¿½o.
-Ao seu redor vocï¿½ observa belas paredes de madeira arqueadas, que reforï¿½am a
-estrutura do tï¿½nel.  No teto vocï¿½ observa algumas pequeninas teias de
-aranha.  Para baixo e ao sudoeste vocï¿½ observa a continuaï¿½ï¿½o do estreito
-tï¿½nel de Bolsï¿½o.
+Os Secretos Túneis de Bolsão~
+   Você está caminhando com muita dificuldade num estreito túnel de Bolsão.
+Ao seu redor você observa belas paredes de madeira arqueadas, que reforçam a
+estrutura do túnel.  No teto você observa algumas pequeninas teias de
+aranha.  Para baixo e ao sudoeste você observa a continuação do estreito
+túnel de Bolsão.
 ~
-145 393517 0 0 0 0
+145 acdfirs 0
 D5
-Vocï¿½ observa um estreito tï¿½nel.
+Você observa um estreito túnel.
 ~
 ~
 0 -1 14640
 D9
-Vocï¿½ observa um estreito tï¿½nel.
+Você observa um estreito túnel.
 ~
 ~
 0 -1 14638
 S
 #14640
-O Final do Tï¿½nel de Bolsï¿½o~
-   Vocï¿½ estï¿½ caminhando com muita dificuldade num estreito tï¿½nel de Bolsï¿½o.
-Ao seu redor vocï¿½ observa belas paredes de madeira arqueadas, que reforï¿½am a
-estrutura do tï¿½nel.  No teto vocï¿½ observa algumas pequeninas teias de
-aranha.  Para cima vocï¿½ observa o estreito tï¿½nel de Bolsï¿½o.
+O Final do Túnel de Bolsão~
+   Você está caminhando com muita dificuldade num estreito túnel de Bolsão.
+Ao seu redor você observa belas paredes de madeira arqueadas, que reforçam a
+estrutura do túnel.  No teto você observa algumas pequeninas teias de
+aranha.  Para cima você observa o estreito túnel de Bolsão.
 ~
-145 393517 0 0 0 0
+145 acdfirs 0
 D4
-Vocï¿½ observa um estreito tï¿½nel.
+Você observa um estreito túnel.
 ~
 ~
 0 -1 14639
 S
 #14641
-Os Secretos Tï¿½neis de Bolsï¿½o~
-   Vocï¿½ estï¿½ caminhando com muita dificuldade num estreito tï¿½nel de Bolsï¿½o.
-Ao seu redor vocï¿½ observa belas paredes de madeira arqueadas, que reforï¿½am a
-estrutura do tï¿½nel.  No teto vocï¿½ observa algumas pequeninas teias de
-aranha.  Ao norte e ao sudeste vocï¿½ observa a continuaï¿½ï¿½o do estreito tï¿½nel
-de Bolsï¿½o.
+Os Secretos Túneis de Bolsão~
+   Você está caminhando com muita dificuldade num estreito túnel de Bolsão.
+Ao seu redor você observa belas paredes de madeira arqueadas, que reforçam a
+estrutura do túnel.  No teto você observa algumas pequeninas teias de
+aranha.  Ao norte e ao sudeste você observa a continuação do estreito túnel
+de Bolsão.
 ~
-145 393517 0 0 0 0
+145 acdfirs 0
 D0
-Vocï¿½ observa um estreito tï¿½nel.
+Você observa um estreito túnel.
 ~
 ~
 0 -1 14642
 D8
-Vocï¿½ observa um estreito tï¿½nel.
+Você observa um estreito túnel.
 ~
 ~
 0 -1 14638
 S
 #14642
-O Final do Tï¿½nel de Bolsï¿½o~
-   Vocï¿½ estï¿½ caminhando com muita dificuldade num estreito tï¿½nel de Bolsï¿½o.
-Ao seu redor vocï¿½ observa belas paredes de madeira arqueadas, que reforï¿½am a
-estrutura do tï¿½nel.  No teto vocï¿½ observa algumas pequeninas teias de
-aranha.  Ao sul vocï¿½ observa o estreito tï¿½nel de Bolsï¿½o.
+O Final do Túnel de Bolsão~
+   Você está caminhando com muita dificuldade num estreito túnel de Bolsão.
+Ao seu redor você observa belas paredes de madeira arqueadas, que reforçam a
+estrutura do túnel.  No teto você observa algumas pequeninas teias de
+aranha.  Ao sul você observa o estreito túnel de Bolsão.
 ~
-145 393517 0 0 0 0
+145 acdfirs 0
 D2
-Vocï¿½ observa um estreito tï¿½nel.
+Você observa um estreito túnel.
 ~
 ~
 0 -1 14641
 S
 #14643
 A Floresta Velha~
-   Vocï¿½ estï¿½ caminhando entre ï¿½rvores de inï¿½meras formas e tamanhos, seus
+   Você está caminhando entre árvores de inúmeras formas e tamanhos, seus
 troncos retos, inclinados, curvados ou torcidos formando um emaranhado que
-dificulta sua visï¿½o.  A floresta velha ï¿½ conhecida pelas suas histï¿½rias de
-ï¿½rvores que se mexem, ï¿½rvores que possuem vida.  Ao caminhar pelas trilhas
-da floresta a dificuldade aumenta ï¿½ medida que surgem raï¿½zes torcidas e
-emaranhadas.  Ao noroeste vocï¿½ observa uma pequena trilha entre as ï¿½rvores
-de vï¿½rias formas e tamanhos da floresta velha e ao sul vocï¿½ observa uma casa
+dificulta sua visão.  A floresta velha é conhecida pelas suas histórias de
+árvores que se mexem, árvores que possuem vida.  Ao caminhar pelas trilhas
+da floresta a dificuldade aumenta à medida que surgem raízes torcidas e
+emaranhadas.  Ao noroeste você observa uma pequena trilha entre as árvores
+de várias formas e tamanhos da floresta velha e ao sul você observa uma casa
 de madeira.
 ~
-145 393504 0 0 0 3
+145 firs 3
 D2
-Vocï¿½ observa uma casa de madeira no meio da floresta velha.
+Você observa uma casa de madeira no meio da floresta velha.
 ~
 porta madeira~
-0 -1 14644
+:n 2 a porta de madeira
+ag -1 14644
 D8
-Vocï¿½ observa a continuaï¿½ï¿½o da trilha entre as ï¿½rvores da floresta velha.
+Você observa a continuação da trilha entre as árvores da floresta velha.
 ~
 ~
 0 -1 14522
 S
 #14644
 A Casa de Tom Bombadil~
-   Vocï¿½ estï¿½ dentro da confortï¿½vel casa de Tom Bombadil.  Ao seu redor vocï¿½
-observa alguns mï¿½veis de madeira, uma bela mesa com trï¿½s cadeiras e um belo
-tapete no chï¿½o.  Ao sul vocï¿½ observa uma bela janela cheia de jarros com
-perfumadas flores.  Ao norte vocï¿½ observa uma porta de madeira.
+   Você está dentro da confortável casa de Tom Bombadil.  Ao seu redor você
+observa alguns móveis de madeira, uma bela mesa com três cadeiras e um belo
+tapete no chão.  Ao sul você observa uma bela janela cheia de jarros com
+perfumadas flores.  Ao norte você observa uma porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D0
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14643
+:n 2 a porta de madeira
+ag -1 14643
 S
 #14645
 As Terras do Senhor Magote~
-   Vocï¿½ estï¿½ caminhando por entre os altos galhos das plantaï¿½ï¿½es de milho do
-velho senhor Magote.  Ao seu redor vocï¿½ observa o milharal carregado de
-milho.  Com certeza mais uma vez este ano o velho Magote terï¿½ mais uma
-colheita farta.  Ao norte e ao oeste vocï¿½ observa a farta plantaï¿½ï¿½o do velho
-Magote e ao noroeste vocï¿½ observa um antigo espantalho.
+   Você está caminhando por entre os altos galhos das plantações de milho do
+velho senhor Magote.  Ao seu redor você observa o milharal carregado de
+milho.  Com certeza mais uma vez este ano o velho Magote terá mais uma
+colheita farta.  Ao norte e ao oeste você observa a farta plantação do velho
+Magote e ao noroeste você observa um antigo espantalho.
 ~
-145 0 0 0 0 3
+145 0 3
 D0
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14648
 D3
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14646
 D6
-Vocï¿½ observa um velho espantalho.
+Você observa um velho espantalho.
 ~
 ~
 0 -1 14649
 S
 #14646
 As Terras do Senhor Magote~
-   Vocï¿½ estï¿½ caminhando por entre os altos galhos das plantaï¿½ï¿½es de milho do
-velho senhor Magote.  Ao seu redor vocï¿½ observa o milharal carregado de
-milho.  Com certeza mais uma vez este ano o velho Magote terï¿½ mais uma
-colheita farta.  Ao leste, ao oeste, ao noroeste e ao nordeste vocï¿½ observa
-a farta plantaï¿½ï¿½o do velho Magote e ao norte vocï¿½ observa um antigo
+   Você está caminhando por entre os altos galhos das plantações de milho do
+velho senhor Magote.  Ao seu redor você observa o milharal carregado de
+milho.  Com certeza mais uma vez este ano o velho Magote terá mais uma
+colheita farta.  Ao leste, ao oeste, ao noroeste e ao nordeste você observa
+a farta plantação do velho Magote e ao norte você observa um antigo
 espantalho.
 ~
-145 0 0 0 0 3
+145 0 3
 D0
-Vocï¿½ observa um velho espantalho.
+Você observa um velho espantalho.
 ~
 ~
 0 -1 14649
 D1
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14645
 D3
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14647
 D6
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14650
 D7
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14648
 S
 #14647
 As Terras do Senhor Magote~
-   Vocï¿½ estï¿½ caminhando por entre os altos galhos das plantaï¿½ï¿½es de milho do
-velho senhor Magote.  Ao seu redor vocï¿½ observa o milharal carregado de
-milho.  Com certeza mais uma vez este ano o velho Magote terï¿½ mais uma
-colheita farta.  Ao norte e ao leste vocï¿½ observa a farta plantaï¿½ï¿½o do velho
-Magote, ao nordeste vocï¿½ observa um antigo espantalho e ao sul vocï¿½ observa
-uma bela planï¿½cie verde.
+   Você está caminhando por entre os altos galhos das plantações de milho do
+velho senhor Magote.  Ao seu redor você observa o milharal carregado de
+milho.  Com certeza mais uma vez este ano o velho Magote terá mais uma
+colheita farta.  Ao norte e ao leste você observa a farta plantação do velho
+Magote, ao nordeste você observa um antigo espantalho e ao sul você observa
+uma bela planície verde.
 ~
-145 0 0 0 0 3
+145 0 3
 D0
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14650
 D1
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14646
 D2
-Vocï¿½ observa uma bela planï¿½cie verde.
+Você observa uma bela planície verde.
 ~
 ~
 0 -1 14590
 D7
-Vocï¿½ observa um antigo espantalho.
+Você observa um antigo espantalho.
 ~
 ~
 0 -1 14649
 S
 #14648
 As Terras do Senhor Magote~
-   Vocï¿½ estï¿½ caminhando por entre os altos galhos das plantaï¿½ï¿½es de milho do
-velho senhor Magote.  Ao seu redor vocï¿½ observa o milharal carregado de
-milho.  Com certeza mais uma vez este ano o velho Magote terï¿½ mais uma
-colheita farta.  Ao norte, ao sul, ao noroeste e ao sudoeste vocï¿½ observa a
-farta plantaï¿½ï¿½o do velho Magote e ao oeste vocï¿½ observa um velho espantalho.
+   Você está caminhando por entre os altos galhos das plantações de milho do
+velho senhor Magote.  Ao seu redor você observa o milharal carregado de
+milho.  Com certeza mais uma vez este ano o velho Magote terá mais uma
+colheita farta.  Ao norte, ao sul, ao noroeste e ao sudoeste você observa a
+farta plantação do velho Magote e ao oeste você observa um velho espantalho.
 ~
-145 0 0 0 0 3
+145 0 3
 D0
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14651
 D2
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14645
 D3
-Vocï¿½ observa um antigo espantalho.
+Você observa um antigo espantalho.
 ~
 ~
 0 -1 14549
 D6
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14652
 D9
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14646
 S
 #14649
-O Antigo Espantalho das Plantaï¿½ï¿½es do velho Magote~
-   Vocï¿½ estï¿½ caminhando entre os altos galhos das plantaï¿½ï¿½es de milho do
-senhor Magote.  Ao seu redor vocï¿½ observa o milharal carregado de belos
-sabugos de milho.  Na sua frente vocï¿½ observa um engraï¿½ado espantalho de
-palha, que sï¿½ espanta mesmo os corvos.  Ao norte, leste, oeste, sul,
-noroeste, nordeste, sudeste e sudoeste vocï¿½ observa as terras do senhor
+O Antigo Espantalho das Plantações do velho Magote~
+   Você está caminhando entre os altos galhos das plantações de milho do
+senhor Magote.  Ao seu redor você observa o milharal carregado de belos
+sabugos de milho.  Na sua frente você observa um engraçado espantalho de
+palha, que só espanta mesmo os corvos.  Ao norte, leste, oeste, sul,
+noroeste, nordeste, sudeste e sudoeste você observa as terras do senhor
 Magote.
 ~
-145 0 0 0 0 3
+145 0 3
 D0
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14652
 D1
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14648
 D2
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14646
 D3
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14650
 D6
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14653
 D7
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14651
 D8
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14645
 D9
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14647
 S
 #14650
 As Terras do Senhor Magote~
-   Vocï¿½ estï¿½ caminhando por entre os altos galhos das plantaï¿½ï¿½es de milho do
-velho senhor Magote.  Ao seu redor vocï¿½ observa o milharal carregado de
-milho.  Com certeza mais uma vez este ano o velho Magote terï¿½ mais uma
-colheita farta.  Ao norte, ao sul, ao nordeste e ao sudeste vocï¿½ observa a
-farta plantaï¿½ï¿½o do velho Magote e ao leste vocï¿½ observa um velho espantalho.
+   Você está caminhando por entre os altos galhos das plantações de milho do
+velho senhor Magote.  Ao seu redor você observa o milharal carregado de
+milho.  Com certeza mais uma vez este ano o velho Magote terá mais uma
+colheita farta.  Ao norte, ao sul, ao nordeste e ao sudeste você observa a
+farta plantação do velho Magote e ao leste você observa um velho espantalho.
 ~
-145 0 0 0 0 3
+145 0 3
 D0
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14653
 D1
-Vocï¿½ observa um antigo espantalho.
+Você observa um antigo espantalho.
 ~
 ~
 0 -1 14649
 D2
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14547
 D7
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14552
 D8
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14546
 S
 #14651
 As Terras do Senhor Magote~
-   Vocï¿½ estï¿½ caminhando por entre os altos galhos das plantaï¿½ï¿½es de milho do
-velho senhor Magote.  Ao seu redor vocï¿½ observa o milharal carregado de
-milho.  Com certeza mais uma vez este ano o velho Magote terï¿½ mais uma
-colheita farta.  Ao sul e ao oeste vocï¿½ observa a farta plantaï¿½ï¿½o do velho
-Magote, ao sudoeste vocï¿½ observa um velho espantalho e ao nordeste vocï¿½
+   Você está caminhando por entre os altos galhos das plantações de milho do
+velho senhor Magote.  Ao seu redor você observa o milharal carregado de
+milho.  Com certeza mais uma vez este ano o velho Magote terá mais uma
+colheita farta.  Ao sul e ao oeste você observa a farta plantação do velho
+Magote, ao sudoeste você observa um velho espantalho e ao nordeste você
 observa uma velha casa de madeira.
 ~
-145 0 0 0 0 3
+145 0 3
 D2
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14648
 D3
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14652
 D7
-Vocï¿½ observa uma velha casa de madeira.
+Você observa uma velha casa de madeira.
 ~
 porta madeira~
-0 -1 14654
+:n 2 a porta de madeira
+ag -1 14654
 D9
-Vocï¿½ observa um antigo espantalho.
+Você observa um antigo espantalho.
 ~
 ~
 0 -1 14549
 S
 #14652
 As Terras do Senhor Magote~
-   Vocï¿½ estï¿½ caminhando por entre os altos galhos das plantaï¿½ï¿½es de milho do
-velho senhor Magote.  Ao seu redor vocï¿½ observa o milharal carregado de
-milho.  Com certeza mais uma vez este ano o velho Magote terï¿½ mais uma
-colheita farta.  Ao leste, ao oeste, ao sudoeste e ao sudeste vocï¿½ observa a
-farta plantaï¿½ï¿½o do velho Magote e ao sul vocï¿½ observa um velho espantalho.
+   Você está caminhando por entre os altos galhos das plantações de milho do
+velho senhor Magote.  Ao seu redor você observa o milharal carregado de
+milho.  Com certeza mais uma vez este ano o velho Magote terá mais uma
+colheita farta.  Ao leste, ao oeste, ao sudoeste e ao sudeste você observa a
+farta plantação do velho Magote e ao sul você observa um velho espantalho.
 ~
-145 0 0 0 0 3
+145 0 3
 D1
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14651
 D2
-Vocï¿½ observa um antigo espantalho.
+Você observa um antigo espantalho.
 ~
 ~
 0 -1 14649
 D3
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14653
 D8
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14648
 D9
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14650
 S
 #14653
 As Terras do Senhor Magote~
-   Vocï¿½ estï¿½ caminhando por entre os altos galhos das plantaï¿½ï¿½es de milho do
-velho senhor Magote.  Ao seu redor vocï¿½ observa o milharal carregado de
-milho.  Com certeza mais uma vez este ano o velho Magote terï¿½ mais uma
-colheita farta.  Ao leste e ao sul vocï¿½ observa a farta plantaï¿½ï¿½o do velho
-Magote e ao sudeste vocï¿½ observa um velho espantalho.
+   Você está caminhando por entre os altos galhos das plantações de milho do
+velho senhor Magote.  Ao seu redor você observa o milharal carregado de
+milho.  Com certeza mais uma vez este ano o velho Magote terá mais uma
+colheita farta.  Ao leste e ao sul você observa a farta plantação do velho
+Magote e ao sudeste você observa um velho espantalho.
 ~
-145 0 0 0 0 3
+145 0 3
 D1
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14652
 D2
-Vocï¿½ observa a farta plantaï¿½ï¿½o do senhor Magote.
+Você observa a farta plantação do senhor Magote.
 ~
 ~
 0 -1 14650
 D8
-Vocï¿½ observa um antigo espantalho.
+Você observa um antigo espantalho.
 ~
 ~
 0 -1 14649
 S
 #14654
 A Casa do Velho Magote~
-   Vocï¿½ estï¿½ dentro de uma velha casa de madeira construï¿½da pelo velho
-Magote.  Ao seu redor vocï¿½ observa antigos mï¿½veis de madeira e uma lareira.
-No chï¿½o vocï¿½ observa uma bela pele de lobo e sobre ela vocï¿½ observa uma
-pequena mesa de madeira e algumas cadeiras.  Nas paredes vocï¿½ observa alguns
-quadros velhos de madeira e algumas janelas.  Ao sudoeste vocï¿½ observa uma
+   Você está dentro de uma velha casa de madeira construída pelo velho
+Magote.  Ao seu redor você observa antigos móveis de madeira e uma lareira.
+No chão você observa uma bela pele de lobo e sobre ela você observa uma
+pequena mesa de madeira e algumas cadeiras.  Nas paredes você observa alguns
+quadros velhos de madeira e algumas janelas.  Ao sudoeste você observa uma
 porta de madeira.
 ~
-145 393288 0 0 0 0
+145 dgrs 0
 D9
-Vocï¿½ observa uma porta de madeira.
+Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 14651
+:n 2 a porta de madeira
+ag -1 14651
 S
 #14655
 A Sede de Brandebuque~
-   Vocï¿½ estï¿½ dentro da magnï¿½fica Sede de Brandebuque, escada e construï¿½da
-pelo chefe da famï¿½lia Velhobuque, o senhor Gorhendad Velhobuque.  Ao seu
-redor vocï¿½ observa um imenso salï¿½o com belas janelas circulares e trï¿½s
-grandes portas de entrada.  Vocï¿½ observa algumas cadeiras de madeira e
-alguns jarros de flores.  No centro do salï¿½o alguns pequeninos olham para
-vocï¿½ com muita curiosidade.  Para baixo vocï¿½ observa um largo corredor
-dentro da Sede de Brandebuque.  Ao sul noroeste e nordeste vocï¿½ observa a
+   Você está dentro da magnífica Sede de Brandebuque, escada e construída
+pelo chefe da família Velhobuque, o senhor Gorhendad Velhobuque.  Ao seu
+redor você observa um imenso salão com belas janelas circulares e três
+grandes portas de entrada.  Você observa algumas cadeiras de madeira e
+alguns jarros de flores.  No centro do salão alguns pequeninos olham para
+você com muita curiosidade.  Para baixo você observa um largo corredor
+dentro da Sede de Brandebuque.  Ao sul noroeste e nordeste você observa a
 Terra dos Buques.
 ~
-145 393324 0 0 0 0
+145 cdfgrs 0
 D2
-Vocï¿½ observa a Terra dos Buques.
+Você observa a Terra dos Buques.
 ~
 ~
 0 -1 14533
 D5
-Vocï¿½ observa um imenso corredor dentro da Sede de Brandebuque.
+Você observa um imenso corredor dentro da Sede de Brandebuque.
 ~
 ~
 0 -1 14657
 D6
-Vocï¿½ observa a Terra dos Buques.
+Você observa a Terra dos Buques.
 ~
 ~
 0 -1 14531
 D7
-Vocï¿½ observa a Terra dos Buques.
+Você observa a Terra dos Buques.
 ~
 ~
 0 -1 14529
 S
 #14656
-As Festivas Terras de Beirï¿½gua~
-   Vocï¿½ estï¿½ caminhando sobre um imenso tapete verde de grama macia.  Ao seu
-redor vocï¿½ observa as belas terras de Beirï¿½gua.  Nessas maravilhosas terras
-acontecem sempre as festas e eleiï¿½ï¿½es para prefeito do Condado, que
-acontecem a cada sete anos, sempre no solstï¿½cio de verï¿½o.  Ao sul, sudeste e
-sudoeste vocï¿½ observa as belas terras de Beirï¿½gua.
+As Festivas Terras de Beirágua~
+   Você está caminhando sobre um imenso tapete verde de grama macia.  Ao seu
+redor você observa as belas terras de Beirágua.  Nessas maravilhosas terras
+acontecem sempre as festas e eleições para prefeito do Condado, que
+acontecem a cada sete anos, sempre no solstício de verão.  Ao sul, sudeste e
+sudoeste você observa as belas terras de Beirágua.
 ~
-145 0 0 0 0 2
+145 0 2
 D2
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14607
 D8
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14606
 D9
-Vocï¿½ observa as terras de Beirï¿½gua.
+Você observa as terras de Beirágua.
 ~
 ~
 0 -1 14608
 S
 #14657
-O Grande Salï¿½o da Sede de Brandebuque~
-   Vocï¿½ estï¿½ caminhando nï¿½o num largo corredor, mas num imenso salï¿½o.  Ao
-seu redor vocï¿½ observa vï¿½rios pequeninos cantando e conversando, belas
-tochas de fogo iluminando todo o lugar e vï¿½rias tocas hobbits em volta do
-grande salï¿½o.  Ao olhar para cima vocï¿½ observa no teto magnï¿½ficas
-clarabï¿½ias, que permitem que os raios solares entrem neste belï¿½ssimo salï¿½o
-da Sede de Brandebuque.  Para cima vocï¿½ observa a entrada da Sede de
-Brandebuque, ao leste e ao oeste vocï¿½ observa pequeninas tocas hobbits, e ao
-sul vocï¿½ observa o imenso salï¿½o da Sede de Brandebuque.
+O Grande Salão da Sede de Brandebuque~
+   Você está caminhando não num largo corredor, mas num imenso salão.  Ao
+seu redor você observa vários pequeninos cantando e conversando, belas
+tochas de fogo iluminando todo o lugar e várias tocas hobbits em volta do
+grande salão.  Ao olhar para cima você observa no teto magníficas
+clarabóias, que permitem que os raios solares entrem neste belíssimo salão
+da Sede de Brandebuque.  Para cima você observa a entrada da Sede de
+Brandebuque, ao leste e ao oeste você observa pequeninas tocas hobbits, e ao
+sul você observa o imenso salão da Sede de Brandebuque.
 ~
-145 393324 0 0 0 0
+145 cdfgrs 0
+D4
+Você observa a bela entrada da Sede de Brandebuque.
+~
+~
+0 -1 14655
 D1
-Vocï¿½ observa uma pequena toca hobbit.
+Você observa uma pequena toca hobbit.
 ~
 ~
 0 -1 14659
 D2
-Vocï¿½ observa o grande salï¿½o da Sede de Brandebuque.
+Você observa o grande salão da Sede de Brandebuque.
 ~
 ~
 0 -1 14660
 D3
-Vocï¿½ observa uma pequena toca hobbit.
+Você observa uma pequena toca hobbit.
 ~
 ~
 0 -1 14658
-D4
-Vocï¿½ observa a bela entrada da Sede de Brandebuque.
-~
-~
-0 -1 14655
 S
 #14658
 Uma Pequena Toca Hobbit na Sede de Brandebuque~
-   Vocï¿½ estï¿½ dentro de uma apertada, porï¿½m confortï¿½vel toca hobbit.  Ao seu
-redor vocï¿½ observa alguns pequenos mï¿½veis de madeira e alguns pequeninos
-brinquedos.  A toca foi escavada logo apï¿½s o termino da escavaï¿½ï¿½o da grande
-e bela Sede de Brandebuque.  Ao leste vocï¿½ observa o grande salï¿½o da Sede de
+   Você está dentro de uma apertada, porém confortável toca hobbit.  Ao seu
+redor você observa alguns pequenos móveis de madeira e alguns pequeninos
+brinquedos.  A toca foi escavada logo após o termino da escavação da grande
+e bela Sede de Brandebuque.  Ao leste você observa o grande salão da Sede de
 Brandebuque.
 ~
-145 393324 0 0 0 0
+145 cdfgrs 0
 D1
-Vocï¿½ observa o grande salï¿½o da Sede de Brandebuque.
+Você observa o grande salão da Sede de Brandebuque.
 ~
 ~
 0 -1 14657
 S
 #14659
 Uma Pequena Toca Hobbit na Sede de Brandebuque~
-   Vocï¿½ estï¿½ dentro de uma apertada, porï¿½m confortï¿½vel toca hobbit.  Ao seu
-redor vocï¿½ observa alguns pequenos mï¿½veis de madeira e alguns pequeninos
-brinquedos.  A toca foi escavada logo apï¿½s o termino da escavaï¿½ï¿½o da grande
-e bela Sede de Brandebuque.  Ao oeste vocï¿½ observa o grande salï¿½o da Sede de
+   Você está dentro de uma apertada, porém confortável toca hobbit.  Ao seu
+redor você observa alguns pequenos móveis de madeira e alguns pequeninos
+brinquedos.  A toca foi escavada logo após o termino da escavação da grande
+e bela Sede de Brandebuque.  Ao oeste você observa o grande salão da Sede de
 Brandebuque.
 ~
-145 393324 0 0 0 0
+145 cdfgrs 0
 D3
-Vocï¿½ observa o grande salï¿½o da Sede de Brandebuque.
+Você observa o grande salão da Sede de Brandebuque.
 ~
 ~
 0 -1 14657
 S
 #14660
-O Grande Salï¿½o da Sede de Brandebuque~
-   Vocï¿½ estï¿½ caminhando nï¿½o num largo corredor, mas num imenso salï¿½o.  Ao
-seu redor vocï¿½ observa vï¿½rios pequeninos cantando e conversando, belas
-tochas de fogo iluminando todo o lugar e vï¿½rias tocas hobbits em volta do
-grande salï¿½o.  Ao olhar para cima vocï¿½ observa no teto magnï¿½ficas
-clarabï¿½ias, que permitem que os raios solares entrem neste belï¿½ssimo salï¿½o
-da Sede de Brandebuque.  Ao leste e ao oeste vocï¿½ observa o belo jardim
-interno da Sede de Brandebuque.  Ao norte vocï¿½ observa o imenso salï¿½o da
-Sede de Brandebuque e ao sul vocï¿½ observa uma grande toca hobbit.  Para cima
-vocï¿½ observa o grande observatï¿½rio da Sede de Brandebuque.
+O Grande Salão da Sede de Brandebuque~
+   Você está caminhando não num largo corredor, mas num imenso salão.  Ao
+seu redor você observa vários pequeninos cantando e conversando, belas
+tochas de fogo iluminando todo o lugar e várias tocas hobbits em volta do
+grande salão.  Ao olhar para cima você observa no teto magníficas
+clarabóias, que permitem que os raios solares entrem neste belíssimo salão
+da Sede de Brandebuque.  Ao leste e ao oeste você observa o belo jardim
+interno da Sede de Brandebuque.  Ao norte você observa o imenso salão da
+Sede de Brandebuque e ao sul você observa uma grande toca hobbit.  Para cima
+você observa o grande observatório da Sede de Brandebuque.
 ~
-145 393324 0 0 0 0
+145 cdfgrs 0
 D0
-Vocï¿½ observa o imenso salï¿½o da Sede de Brandebuque.
+Você observa o imenso salão da Sede de Brandebuque.
 ~
 ~
 0 -1 14657
 D1
-Vocï¿½ observa o belo jardim interno da Sede de Brandebuque.
+Você observa o belo jardim interno da Sede de Brandebuque.
 ~
 ~
 0 -1 14661
 D2
-Vocï¿½ observa uma grande toca hobbit.
+Você observa uma grande toca hobbit.
 ~
 ~
 0 -1 14663
 D3
-Vocï¿½ observa o belo jardim interno da Sede de Brandebuque.
+Você observa o belo jardim interno da Sede de Brandebuque.
 ~
 ~
 0 -1 14662
 D4
-Vocï¿½ observa o grande observatï¿½rio da Sede de Brandebuque.
+Você observa o grande observatório da Sede de Brandebuque.
 ~
 ~
 0 -1 14664
 S
 #14661
 O Maravilhoso Jardim Interno da Sede de Brandebuque~
-   Vocï¿½ estï¿½ caminhando entre belas e perfumadas flores do magnï¿½fico jardim
-interno da Sede de Brandebuque.  Ao seu redor vocï¿½ observa vï¿½rias flores e
-pequeninas plantas cultivadas pelos pequeninos neste mundo subterrï¿½neo.
-Vocï¿½ observa tambï¿½m uma bela fonte de pedra que faz jorrar ï¿½gua cristalina
-nas majestosas flores.  Ao oeste vocï¿½ observa o grande salï¿½o da Sede de
+   Você está caminhando entre belas e perfumadas flores do magnífico jardim
+interno da Sede de Brandebuque.  Ao seu redor você observa várias flores e
+pequeninas plantas cultivadas pelos pequeninos neste mundo subterrâneo.
+Você observa também uma bela fonte de pedra que faz jorrar água cristalina
+nas majestosas flores.  Ao oeste você observa o grande salão da Sede de
 Brandebuque.
 ~
-145 393324 0 0 0 0
+145 cdfgrs 0
 D3
-Vocï¿½ observa o grande salï¿½o da Sede de Brandebuque.
+Você observa o grande salão da Sede de Brandebuque.
 ~
 ~
 0 -1 14660
 S
 #14662
 O Maravilhoso Jardim Interno da Sede de Brandebuque~
-   Vocï¿½ estï¿½ caminhando entre belas e perfumadas flores do magnï¿½fico jardim
-interno da Sede de Brandebuque.  Ao seu redor vocï¿½ observa vï¿½rias flores e
-pequeninas plantas cultivadas pelos pequeninos neste mundo subterrï¿½neo.
-Vocï¿½ observa tambï¿½m uma bela fonte de pedra que faz jorrar ï¿½gua cristalina
-nas majestosas flores.  Ao leste vocï¿½ observa o grande salï¿½o da Sede de
+   Você está caminhando entre belas e perfumadas flores do magnífico jardim
+interno da Sede de Brandebuque.  Ao seu redor você observa várias flores e
+pequeninas plantas cultivadas pelos pequeninos neste mundo subterrâneo.
+Você observa também uma bela fonte de pedra que faz jorrar água cristalina
+nas majestosas flores.  Ao leste você observa o grande salão da Sede de
 Brandebuque.
 ~
-145 393324 0 0 0 0
+145 cdfgrs 0
 D1
-Vocï¿½ observa o grande salï¿½o da Sede de Brandebuque.
+Você observa o grande salão da Sede de Brandebuque.
 ~
 ~
 0 -1 14660
 S
 #14663
 A Grande Toca do Senhor da Sede~
-   Vocï¿½ estï¿½ dentro de uma bela e confortï¿½vel toca.  Ao seu redor vocï¿½
-observa vï¿½rias cadeiras e algumas mesas de madeira.  No chï¿½o vocï¿½ observa
-belos tapetes e nas paredes vocï¿½ observa belos quadros.  No canto sul da
-toca vocï¿½ observa uma bela mesa de pedra com uma pequenina @BPlaca@n sobre
-a mesma.  Ao norte vocï¿½ observa o grande salï¿½o da Sede de Brandebuque.
+   Você está dentro de uma bela e confortável toca.  Ao seu redor você
+observa várias cadeiras e algumas mesas de madeira.  No chão você observa
+belos tapetes e nas paredes você observa belos quadros.  No canto sul da
+toca você observa uma bela mesa de pedra com uma pequenina &BPlaca&n sobre
+a mesma.  Ao norte você observa o grande salão da Sede de Brandebuque.
 ~
-145 393324 0 0 0 0
+145 cdfgrs 0
 D0
-Vocï¿½ observa o grande salï¿½o da Sede de Brandebuque.
+Você observa o grande salão da Sede de Brandebuque.
 ~
 ~
 0 -1 14660
 E
 placa pequenina~
                            Aguarde alguns minutos !
-		O Senhor da Sede estï¿½ resolvendo pequenos problemas.
+		O Senhor da Sede está resolvendo pequenos problemas.
 ~
 S
 #14664
-O Observatï¿½rio da Sede de Brandebuque~
-   Vocï¿½ estï¿½ caminhando na sala do observatï¿½rio da Sede de Brandebuque.  Ao
-seu redor vocï¿½ observa vï¿½rias pequeninas janelas cobertas com uma fina
-camada de grama, que servem como pontos de observaï¿½ï¿½o para os pequeninos
-hobbits da Sede de Brandebuque.  Vocï¿½ observa tambï¿½m algumas mesas de
-madeira e algumas pequeninas anotaï¿½ï¿½es sobre elas.  Para baixo vocï¿½ observa
-o grande salï¿½o da Sede de Brandebuque.
+O Observatório da Sede de Brandebuque~
+   Você está caminhando na sala do observatório da Sede de Brandebuque.  Ao
+seu redor você observa várias pequeninas janelas cobertas com uma fina
+camada de grama, que servem como pontos de observação para os pequeninos
+hobbits da Sede de Brandebuque.  Você observa também algumas mesas de
+madeira e algumas pequeninas anotações sobre elas.  Para baixo você observa
+o grande salão da Sede de Brandebuque.
 ~
-145 393324 0 0 0 0
+145 cdfgrs 0
 D5
-Vocï¿½ observa o imenso salï¿½o da Sede de Brandebuque.
+Você observa o imenso salão da Sede de Brandebuque.
 ~
 ~
 0 -1 14660
 S
-$~
+$
+

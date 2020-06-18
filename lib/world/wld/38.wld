@@ -1,360 +1,361 @@
 #3800
 A Entrada do Museu do Colecionador~
-   Vocï¿½ estï¿½ em frente ao grande Museu do Colecionador.  Um longo caminho
+   Você está em frente ao grande Museu do Colecionador.  Um longo caminho
 entre palmeiras segue para a portaria principal, passando por um grande
-chafariz de mï¿½rmore que desperta sua atenï¿½ï¿½o.  O gramado ï¿½ muito bem cuidado,
-com lindos jardins de flores e arbustos muito bem podados.  Para norte vocï¿½
+chafariz de mármore que desperta sua atenção.  O gramado é muito bem cuidado,
+com lindos jardins de flores e arbustos muito bem podados.  Para norte você
 chega ao Museu.
 ~
-38 0 0 0 0 1
-D0
-Vocï¿½ vï¿½ a portaria do museu.
-~
-~
-0 -1 3801
-D3
+38 0 1
+D 3
 ~
 ~
 0 -1 3126
+D 0
+Você vê a portaria do museu.
+~
+~
+0 -1 3801
 S
 #3801
 A Portaria do Museu~
-   Na portaria do Museu do Colecionador vocï¿½ jï¿½ tem a impressï¿½o que grandes
-surpresas o aguardarï¿½o do lado de dentro.  Ao lado do que parece ser um
-quadro de avisos, cheio de papï¿½is colados, encontra-se um pequeno gabinete
-onde estï¿½ sentada uma sorridente recepcionista.
+   Na portaria do Museu do Colecionador você já tem a impressão que grandes
+surpresas o aguardarão do lado de dentro.  Ao lado do que parece ser um
+quadro de avisos, cheio de papéis colados, encontra-se um pequeno gabinete
+onde está sentada uma sorridente recepcionista.
 ~
-38 20 0 0 0 0
-D0
-O golem impede sua visï¿½o.
+38 ce 0
+D 0
+O golem impede sua visão.
 ~
 ~
 0 -1 3802
-D2
-Vocï¿½ vï¿½ os jardins do Museu.
+D 2
+Você vê os jardins do Museu.
 ~
 ~
 0 -1 3800
 E
-papeis~
-   Um panfleto chama sua atenï¿½ï¿½o.  Estï¿½ escrito: "Gosta de colecionar
-CARD's? Tem algum pra vender? Que tal trocar com os amigos? Visite nosso
-posto de trocas no segundo andar do Museu e deixe essa mania contagiar
-vocï¿½ tambï¿½m!".
-   Logo abaixo dele foi colocado um bilhete escrito ï¿½s pressas: "ONDE
-CONSIGO O CARD DA PUFF?? Faï¿½o qualquer coisa por ele, atï¿½ troco pelos
-meus 2 itens dourados!!!"
+quadro~
+   Bem vindo ao Museu do Colecionador, onde não estão expostos apenas
+coleções de itens, mas a coleção das memórias de um grande Explorador.
+Por favor, mantenha silêncio e não toque em nada.  A prefeitura de Midgaard
+agradece sua colaboração.
 ~
 E
-quadro~
-   Bem vindo ao Museu do Colecionador, onde nï¿½o estï¿½o expostos apenas
-coleï¿½ï¿½es de itens, mas a coleï¿½ï¿½o das memï¿½rias de um grande Explorador.
-Por favor, mantenha silï¿½ncio e nï¿½o toque em nada.  A prefeitura de Midgaard
-agradece sua colaboraï¿½ï¿½o.
+papeis~
+   Um panfleto chama sua atenção.  Está escrito: "Gosta de colecionar
+CARD's? Tem algum pra vender? Que tal trocar com os amigos? Visite nosso
+posto de trocas no segundo andar do Museu e deixe essa mania contagiar
+você também!".
+   Logo abaixo dele foi colocado um bilhete escrito às pressas: "ONDE
+CONSIGO O CARD DA PUFF?? Faço qualquer coisa por ele, até troco pelos
+meus 2 itens dourados!!!"
 ~
 S
 #3802
-O Salï¿½o Principal do Museu~
-   Vocï¿½ estï¿½ dentro do salï¿½o principal do Museu do Colecionador, criado pelo
-lendï¿½rio e anï¿½nimo Explorador, para funcionar tanto como uma espï¿½cie de clube
-para os colecionadores, como tambï¿½m um local para se exibir todas as maravilhas
-de Vitï¿½lia, que ele teve oportunidade de conhecer em suas viagens.  Existem
-vï¿½rios quadros pelas paredes e estï¿½tuas espalhadas por aqui.  Hï¿½ duas grandes
-escadarias que se encontram num belo balcï¿½o que leva para o segundo andar.
-Vocï¿½ tambï¿½m pode ver portas para leste, oeste, norte e sul.
+O Salão Principal do Museu~
+   Você está dentro do salão principal do Museu do Colecionador, criado pelo
+lendário e anônimo Explorador, para funcionar tanto como uma espécie de clube
+para os colecionadores, como também um local para se exibir todas as maravilhas
+de Vitália, que ele teve oportunidade de conhecer em suas viagens.  Existem
+vários quadros pelas paredes e estátuas espalhadas por aqui.  Há duas grandes
+escadarias que se encontram num belo balcão que leva para o segundo andar.
+Você também pode ver portas para leste, oeste, norte e sul.
 ~
-38 32 0 0 0 0
-D0
-Uma pequena placa no alto da porta diz: "Sala dos MOBï¿½s".
-~
-~
-0 -1 3803
-D1
-Uma pequena placa no alto da porta diz: "Sala dos Itens".
-~
-~
-0 -1 3805
-D2
-Uma pequena placa no alto da porta diz: "Saï¿½da".
-~
-~
-0 -1 3801
-D3
-Uma pequena placa no alto da porta diz: "Sala da Fama".
-~
-~
-0 -1 3806
-D4
+38 f 0
+D 4
 O segundo andar do Museu, onde parece haver uma loja.
 ~
 ~
 0 -1 3811
-E
-estï¿½tuas~
-   Vï¿½rias estï¿½tuas que representam as divindades gregas estï¿½o espalhadas
-pelo salï¿½o.
+D 0
+Uma pequena placa no alto da porta diz: "Sala dos MOB´s".
 ~
+~
+0 -1 3803
+D 2
+Uma pequena placa no alto da porta diz: "Saída".
+~
+~
+0 -1 3801
+D 1
+Uma pequena placa no alto da porta diz: "Sala dos Itens".
+~
+~
+0 -1 3805
+D 3
+Uma pequena placa no alto da porta diz: "Sala da Fama".
+~
+~
+0 -1 3806
 E
 quadros~
-   Cada quadro neste salï¿½o parece retratar uma paisagem vista atravï¿½s de uma
-janela.  Sendo assim, vocï¿½ pode identificar vï¿½rias cidades, como Nova Thalos,
-Roma e Midgaard.  Algumas dessas "janelas" retratam cenï¿½rios mais inusitados,
-como a vila dos Gnomos ou o reino subterrï¿½neo dos Drows, e outras se abrem
-para belas paisagens, como cadeias de montanhas, lagos e mares.  Se todos sï¿½o
-obras do Explorador, ele deve ter visitado inï¿½meros lares.
+   Cada quadro neste salão parece retratar uma paisagem vista através de uma
+janela.  Sendo assim, você pode identificar várias cidades, como Nova Thalos,
+Roma e Midgaard.  Algumas dessas "janelas" retratam cenários mais inusitados,
+como a vila dos Gnomos ou o reino subterrâneo dos Drows, e outras se abrem
+para belas paisagens, como cadeias de montanhas, lagos e mares.  Se todos são
+obras do Explorador, ele deve ter visitado inúmeros lares.
+~
+E
+estátuas~
+   Várias estátuas que representam as divindades gregas estão espalhadas
+pelo salão.
 ~
 S
 #3803
-A Sala dos MOBï¿½s~
-   Dentro desta sala finamente decorada, vocï¿½ pode ver vï¿½rios MOBï¿½s em
-quadros ou empalhados.  Alguns quadros sï¿½o mï¿½gicos e suas pinturas possuem
-movimento, parecendo estar vivas.  Um ENORME dragï¿½o verde empalhado, de
-asas abertas e garras afiadas, estï¿½ preso no alto do teto, olhando
-diretamente para vocï¿½.  Ao lado da porta vocï¿½ pode ver as listas de CARDï¿½s
-das Sï¿½ries MOBï¿½s.
+A Sala dos MOB´s~
+   Dentro desta sala finamente decorada, você pode ver vários MOB´s em
+quadros ou empalhados.  Alguns quadros são mágicos e suas pinturas possuem
+movimento, parecendo estar vivas.  Um ENORME dragão verde empalhado, de
+asas abertas e garras afiadas, está preso no alto do teto, olhando
+diretamente para você.  Ao lado da porta você pode ver as listas de CARD´s
+das Séries MOB´s.
 ~
-38 32 0 0 0 0
-D0
-Uma pequena placa no alto da porta diz: "Sala das ï¿½reas".
-~
-~
-0 -1 3804
-D2
-Uma pequena placa no alto da porta diz: "Salï¿½o Principal".
+38 f 0
+D 2
+Uma pequena placa no alto da porta diz: "Salão Principal".
 ~
 ~
 0 -1 3802
+D 0
+Uma pequena placa no alto da porta diz: "Sala das Áreas".
+~
+~
+0 -1 3804
 E
-dragï¿½o~
-   Vocï¿½ vï¿½ um enorme dragï¿½o verde empalhado, mas que ainda parece vivo o
-suficiente para assustï¿½-lo.  Ele estï¿½ preso ao teto em uma posiï¿½ï¿½o que
-lembra um vï¿½o razante ou um mergulho para o ataque.  Em seu peito pode-se
-notar claramente o ferimento que causou sua morte.  Foi imaginaï¿½ï¿½o sua ou
+dragão~
+   Você vê um enorme dragão verde empalhado, mas que ainda parece vivo o
+suficiente para assustá-lo.  Ele está preso ao teto em uma posição que
+lembra um vôo razante ou um mergulho para o ataque.  Em seu peito pode-se
+notar claramente o ferimento que causou sua morte.  Foi imaginação sua ou
 ele acabou de se mover?
 ~
 S
 #3804
-A Sala das ï¿½reas~
-   Ao entrar nesta sala vocï¿½ logo se assusta.  De alguma forma vocï¿½ foi parar
-exatamente no meio do pï¿½tio de torneios de Camelot.  Quando olha ao redor, em
-busca de um portal, a sala se modifica e vocï¿½ se encontra entre as ï¿½rvores da
-Floresta Han-dor.  Vocï¿½ pisca, surpreso, e enquanto dï¿½ os primeiros passos, o
-ambiente ao seu redor se transforma no Abismo Profundo.  Vocï¿½ caminha
+A Sala das Áreas~
+   Ao entrar nesta sala você logo se assusta.  De alguma forma você foi parar
+exatamente no meio do pátio de torneios de Camelot.  Quando olha ao redor, em
+busca de um portal, a sala se modifica e você se encontra entre as árvores da
+Floresta Han-dor.  Você pisca, surpreso, e enquanto dá os primeiros passos, o
+ambiente ao seu redor se transforma no Abismo Profundo.  Você caminha
 maravilhado pela sala, que agora se transforma numa florida rua de Lindrel, e
-fica claro que aqui ï¿½ possï¿½vel desfrutar de TODAS as ï¿½reas de Vitï¿½lia.  Vocï¿½
-pode ver as listas de CARDï¿½S das Sï¿½ries ï¿½reas aparecerem cada hora num lugar
-diferente.  Por falar nisso, onde foi parar a porta por onde vocï¿½ entrou?
+fica claro que aqui é possível desfrutar de TODAS as áreas de Vitália.  Você
+pode ver as listas de CARD´S das Séries Áreas aparecerem cada hora num lugar
+diferente.  Por falar nisso, onde foi parar a porta por onde você entrou?
 ~
-38 524448 0 0 0 0
-D0
-Vocï¿½ pode observar a tumultuada praï¿½a do mercado de Nova Thalos.  Uma pequena
-placa na entrada de uma loja diz: "Sala dos MOBï¿½s".
+38 fht 0
+D 0
+Você pode observar a tumultuada praça do mercado de Nova Thalos.  Uma pequena
+placa na entrada de uma loja diz: "Sala dos MOB´s".
 ~
 ~
-1 -1 3803
-D1
-O gï¿½lido mar do ï¿½rtico se estende ao leste.  Hï¿½ um grande navio de guerra
+d -1 3803
+D 1
+O gélido mar do Ártico se estende ao leste.  Há um grande navio de guerra
 viking com uma pequena placa que diz: "Sala dos MOB's" pregada em sua lateral.
 ~
 ~
-1 -1 3803
-D2
-Vocï¿½ estï¿½ diante de um solo infinito, que se estende atï¿½ sumir de vista.
-Que lugar serï¿½ esse?  Flutuando ao longe vocï¿½ vï¿½ uma pequena placa que
+d -1 3803
+D 2
+Você está diante de um solo infinito, que se estende até sumir de vista.
+Que lugar será esse?  Flutuando ao longe você vê uma pequena placa que
 diz: "Sala dos MOB's".
 ~
 ~
-1 -1 3803
-D3
+d -1 3803
+D 3
 A entrada de uma grande caverna de onde parece sair um forte ressonar
-encontra-se a oeste.  Ao lado de um corpo carbonizado vocï¿½ vï¿½ que uma
+encontra-se a oeste.  Ao lado de um corpo carbonizado você vê que uma
 pequena placa que diz: "Sala dos MOB's".
 ~
 ~
-1 -1 3803
-D4
-Vocï¿½ estï¿½ diante do famoso Templo de Midgaard.  Na sua entrada parece ter
+d -1 3803
+D 4
+Você está diante do famoso Templo de Midgaard.  Na sua entrada parece ter
 sido colocada uma importante placa que diz: "Sala dos MOB's".
 ~
 ~
-1 -1 3803
-D5
-Vocï¿½ pode ver Morte, o Ceifeiro Cruel em pï¿½ aqui.  Espere? Quando foi que
-vocï¿½ morreu? E o que ï¿½ aquilo na mï¿½o dele? Uma pequena placa que diz:
+d -1 3803
+D 5
+Você pode ver Morte, o Ceifeiro Cruel em pé aqui.  Espere? Quando foi que
+você morreu? E o que é aquilo na mão dele? Uma pequena placa que diz:
 "Sala dos MOB's"?!
 ~
 ~
-1 -1 3803
-D6
-Uma pequena toca hobbit encontra-se nessa direï¿½ï¿½o.  Na sua entrada hï¿½ uma
+d -1 3803
+D 6
+Uma pequena toca hobbit encontra-se nessa direção.  Na sua entrada há uma
 bela placa ricamente entalhada que diz: "Sala dos MOB's".
 ~
 ~
-1 -1 3803
-D7
-Hï¿½ um enorme tabuleiro de xadrez nessa direï¿½ï¿½o.  Vocï¿½ vï¿½ uma grande torre
+d -1 3803
+D 7
+Há um enorme tabuleiro de xadrez nessa direção.  Você vê uma grande torre
 branca com uma pequena placa que diz: "Sala dos MOB's".
 ~
 ~
-1 -1 3803
-D8
-A floresta ï¿½ sua frente o deixa tï¿½o desnorteado que vocï¿½ se sente perdido.
-Felizmente hï¿½ uma pequena placa numa ï¿½rvore que diz: "Sala dos MOB's".
+d -1 3803
+D 8
+A floresta à sua frente o deixa tão desnorteado que você se sente perdido.
+Felizmente há uma pequena placa numa árvore que diz: "Sala dos MOB's".
 ~
 ~
-1 -1 3803
-D9
-A mï¿½sica vinda daqui chega-lhe aos ouvidos antes mesmo de vocï¿½ avistar o
-Festival.  Sobre um carroï¿½ï¿½o cigano hï¿½ uma pequena placa que diz:
+d -1 3803
+D 9
+A música vinda daqui chega-lhe aos ouvidos antes mesmo de você avistar o
+Festival.  Sobre um carroção cigano há uma pequena placa que diz:
 "Sala dos MOB's".
 ~
 ~
-1 -1 3803
+d -1 3803
 S
 #3805
 A Sala dos Itens~
-   Nesta sala vocï¿½ pode ver vï¿½rios itens espalhados por diversas prateleiras
-e mostruï¿½rios.  Itens que vï¿½o de simples Botijas e Lembas magicamente
-conservadas, atï¿½ as lendï¿½rias armas dos Deuses.  Alguns dizem que estes
-itens sï¿½o apenas cï¿½pias, enquanto outros afirmam que seriam itens verdadeiros,
-doados pelos prï¿½prios Deuses de Vitï¿½lia.  No centro, uma grande cï¿½pula de
-cristal chama sua atenï¿½ï¿½o.  Ao lado da porta pode-se ver as listas de CARDï¿½S
-das Sï¿½ries Itens.
+   Nesta sala você pode ver vários itens espalhados por diversas prateleiras
+e mostruários.  Itens que vão de simples Botijas e Lembas magicamente
+conservadas, até as lendárias armas dos Deuses.  Alguns dizem que estes
+itens são apenas cópias, enquanto outros afirmam que seriam itens verdadeiros,
+doados pelos próprios Deuses de Vitália.  No centro, uma grande cúpula de
+cristal chama sua atenção.  Ao lado da porta pode-se ver as listas de CARD´S
+das Séries Itens.
 ~
-38 160 0 0 0 0
-D3
-Uma pequena placa no alto da porta diz: "Salï¿½o Principal".
+38 fh 0
+D 3
+Uma pequena placa no alto da porta diz: "Salão Principal".
 ~
 ~
 0 -1 3802
 E
+cúpula cristal~
+   Sobre um pedestal de ouro cravejado com jóias se encontra uma enorme
+Cúpula de Cristal, tão fina e transparente que parece não existir.  Dentro
+dela estão todos os itens DOURADOS de Vitália.  Você pode sentir uma
+radiação mágica emanando da Cúpula.
+~
+E
 dourados~
-@Ya Lï¿½mina ï¿½lfica de Alaric
+&Ya Lâmina Élfica de Alaric
 um escudo de fogo
 as Manoplas de Zoghtu
 o Olho de Horus
 Carnax, a Armadura Viva
 o Manto de Trevas de Huthven
-o Bastï¿½o de Bruenor
-a Tiara de Calï¿½ope, a Sereia
-o Machado Dourado de Jï¿½piter
+o Bastão de Bruenor
+a Tiara de Calíope, a Sereia
+o Machado Dourado de Júpiter
 o anel de Cranaloc
 a Chave de Nabaqila
 a rosa vermelha
-um cï¿½lice sagrado
+um cálice sagrado
 O Manto do Inverno
-O Bracelete do Verï¿½o
-O Cinturï¿½o do Outono
+O Bracelete do Verão
+O Cinturão do Outono
 O Anel da Primavera
 o Aro de Phanzyenon
-A Pena Dourada do Escritor@n
-~
-E
-cï¿½pula cristal~
-   Sobre um pedestal de ouro cravejado com jï¿½ias se encontra uma enorme
-Cï¿½pula de Cristal, tï¿½o fina e transparente que parece nï¿½o existir.  Dentro
-dela estï¿½o todos os itens DOURADOS de Vitï¿½lia.  Vocï¿½ pode sentir uma
-radiaï¿½ï¿½o mï¿½gica emanando da Cï¿½pula.
+A Pena Dourada do Escritor&n
 ~
 S
 #3806
 A Sala da Fama~
-   Nesta sala decorada com ricas tapeï¿½arias e finas poltronas, podem ser
-vistos quadros com pinturas dos Deuses e dos hï¿½rois de Vitï¿½lia.  Brasï¿½es e
-bandeiras dos clï¿½s estï¿½o espalhados pelas paredes.  No centro da sala
-encontram-se belas estï¿½tuas dos principais deuses de Vitï¿½lia.  Em meio a
-tantas personalidades famosas, parece haver uma estranha estï¿½tua sem rosto
+   Nesta sala decorada com ricas tapeçarias e finas poltronas, podem ser
+vistos quadros com pinturas dos Deuses e dos hérois de Vitália.  Brasões e
+bandeiras dos clãs estão espalhados pelas paredes.  No centro da sala
+encontram-se belas estátuas dos principais deuses de Vitália.  Em meio a
+tantas personalidades famosas, parece haver uma estranha estátua sem rosto
 de um Ilustre Desconhecido.  Ao lado da porta pode-se ver as listas de
-CARDï¿½S das Sï¿½ries Personalidades.
+CARD´S das Séries Personalidades.
 ~
-38 0 0 0 0 0
-D1
-Uma pequena placa no alto da porta diz: "Salï¿½o principal".
+38 0 0
+D 1
+Uma pequena placa no alto da porta diz: "Salão principal".
 ~
 ~
 0 -1 3802
-D5
+D 5
 ~
-estï¿½tua chï¿½o~
-1 -1 3807
+estátua chão~
+:n 2 a estátua de um Ilustre Desconhecido
+ad -1 3807
 S
 #3807
 A Passagem Secreta para Dentro de Si Mesmo~
-   Enquanto caminha por essa estreita passagem, sua mente ï¿½ inundada por
-antigas recordaï¿½ï¿½es.  Uma pequena voz, (a SUA voz?!) parece conversar com
-vocï¿½ e inï¿½meras boas memï¿½rias enchem seu coraï¿½ï¿½o de alegria.  Vocï¿½ passa a
-reviver os melhores momentos pelos quais passou em Vitï¿½lia.  Vocï¿½ se lembra
+   Enquanto caminha por essa estreita passagem, sua mente é inundada por
+antigas recordações.  Uma pequena voz, (a SUA voz?!) parece conversar com
+você e inúmeras boas memórias enchem seu coração de alegria.  Você passa a
+reviver os melhores momentos pelos quais passou em Vitália.  Você se lembra
 daquela besteira que fez em seus primeiros momentos de iniciante e tantas
 rizadas trouxeram.  Lembra aquele combate que o encheu de ansiedade, que fez
-seu coraï¿½ï¿½o disparar? Como foi emocionante a vitï¿½ria naquele dia! E como foi
+seu coração disparar? Como foi emocionante a vitória naquele dia! E como foi
 duro conseguir aquele item pela segunda vez, depois da DT! Mas valeu a pena,
-vocï¿½ se esforï¿½ou tanto por ele... E quando vocï¿½ achou aquela ï¿½rea nova? Vocï¿½
+você se esforçou tanto por ele... E quando você achou aquela área nova? Você
 se emocionou bastante aquele dia.
 ~
-38 36 0 0 0 0
-D3
-Uma passagem que traz boas recordaï¿½ï¿½es.
+38 cf 0
+D 3
+Uma passagem que traz boas recordações.
 ~
 ~
 0 -1 3808
 S
 #3808
-Dias de Glï¿½ria~
-   Enquanto caminha por essa estreita passagem, mais boas lembranï¿½as
-preenchem sua mente.  Vocï¿½ passa a reviver os melhores momentos pelos quais
-passou em Vitï¿½lia e percebe que eles estï¿½o guardados em seu coraï¿½ï¿½o, como
-se ele fosse um museu desses momentos tï¿½o preciosos.  Vocï¿½ se recorda de suas
-maiores glï¿½rias e tambï¿½m das glï¿½rias de seus amigos.  Lembra-se dos maiores
+Dias de Glória~
+   Enquanto caminha por essa estreita passagem, mais boas lembranças
+preenchem sua mente.  Você passa a reviver os melhores momentos pelos quais
+passou em Vitália e percebe que eles estão guardados em seu coração, como
+se ele fosse um museu desses momentos tão preciosos.  Você se recorda de suas
+maiores glórias e também das glórias de seus amigos.  Lembra-se dos maiores
 combates travados, sozinho ou em grupo.  Das mesnadas e cruzadas, e das quests
 mais emocionantes.  Mas os melhores momentos de todos talvez sejam aqueles nos
-quais vocï¿½ ajudou um amigo, sem esperar nada em troca e nem pensar duas vezes.
-Ou entï¿½o quando foram seus amigos que ajudaram vocï¿½.  Esses momentos vocï¿½
-guardarï¿½ para sempre com muito carinho.
+quais você ajudou um amigo, sem esperar nada em troca e nem pensar duas vezes.
+Ou então quando foram seus amigos que ajudaram você.  Esses momentos você
+guardará para sempre com muito carinho.
 ~
-38 36 0 0 0 0
-D3
-Uma passagem que traz boas recordaï¿½ï¿½es.
+38 cf 0
+D 3
+Uma passagem que traz boas recordações.
 ~
 ~
 0 -1 3809
 S
 #3809
 O Maior dos Tesouros~
-   Neste ponto da passagem vocï¿½ ï¿½ abenï¿½oado com a maior recompensa que suas
-memï¿½rias poderiam oferecer.  A lembranï¿½a das suas amizades.  Vocï¿½ se recorda
-das palavras gravadas na estï¿½tua que lhe trouxe atï¿½ aqui e compreende
-completamente o significado delas.  Vitï¿½lia nï¿½o seria tï¿½o emocionante, nï¿½o
-teria tanto brilho, se nï¿½o fossem pelas amizades que vocï¿½ conquistou aqui.
-   Vï¿½rios nomes de pessoas queridas vï¿½em ï¿½ mente e vocï¿½ realmente se emociona
+   Neste ponto da passagem você é abençoado com a maior recompensa que suas
+memórias poderiam oferecer.  A lembrança das suas amizades.  Você se recorda
+das palavras gravadas na estátua que lhe trouxe até aqui e compreende
+completamente o significado delas.  Vitália não seria tão emocionante, não
+teria tanto brilho, se não fossem pelas amizades que você conquistou aqui.
+   Vários nomes de pessoas queridas vêem à mente e você realmente se emociona
 ao lembrar de seus amigos, e dos momentos que compartilhou com eles.  Momentos
 em que riu, e outros nos quais chorou, mas todos igualmente preciosos.
-Momentos que marcaram sua vida e tambï¿½m marcaram as vidas de outras pessoas,
-tï¿½o legais, tï¿½o preciosas.  E ï¿½ justamente pensando em momentos como estes,
-que vocï¿½ decide apertar seu passos e sair logo daqui, para poder reencontrar
-seus amigos e dizer pra eles o quanto sï¿½o importantes para vocï¿½.
+Momentos que marcaram sua vida e também marcaram as vidas de outras pessoas,
+tão legais, tão preciosas.  E é justamente pensando em momentos como estes,
+que você decide apertar seu passos e sair logo daqui, para poder reencontrar
+seus amigos e dizer pra eles o quanto são importantes para você.
 ~
-38 36 0 0 0 0
-D3
-O fim das recordaï¿½ï¿½es.
+38 cf 0
+D 3
+O fim das recordações.
 ~
 ~
 0 -1 3810
 S
 #3810
-O Fim das Recordaï¿½ï¿½es~
-   Depois desse passeio por suas memï¿½rias, vocï¿½ alcanï¿½a o final do estreito
-corredor.  Vocï¿½ se sente revigorado apï¿½s tantas lembranï¿½as boas e talvez
-queira agora compartilhï¿½-las.  Nesse momento, vocï¿½ pensa nos Deuses de
-Vitï¿½lia, que tanto fizeram para que vocï¿½ pudesse desfrutar de suas maravilhas
-e naqueles que ajudaram a fazer dela o mundo maravilhoso que ele ï¿½ hoje.
-Vocï¿½ pensa em agradecï¿½-los, e entï¿½o lhe vem ï¿½ cabeï¿½a que a melhor forma de
-fazer isso seria aproveitar tudo o que Vitï¿½lia tem a oferecer de forma justa
-e nobre, dando o melhor de si para tambï¿½m ajudar a fazer dela um lugar melhor.
-Para vocï¿½ e para todos.  Com isso em mente, vocï¿½ se depara com uma bela
-escadaria, e no topo dela vocï¿½ parece avistar algumas estï¿½tuas.
+O Fim das Recordações~
+   Depois desse passeio por suas memórias, você alcança o final do estreito
+corredor.  Você se sente revigorado após tantas lembranças boas e talvez
+queira agora compartilhá-las.  Nesse momento, você pensa nos Deuses de
+Vitália, que tanto fizeram para que você pudesse desfrutar de suas maravilhas
+e naqueles que ajudaram a fazer dela o mundo maravilhoso que ele é hoje.
+Você pensa em agradecê-los, e então lhe vem à cabeça que a melhor forma de
+fazer isso seria aproveitar tudo o que Vitália tem a oferecer de forma justa
+e nobre, dando o melhor de si para também ajudar a fazer dela um lugar melhor.
+Para você e para todos.  Com isso em mente, você se depara com uma bela
+escadaria, e no topo dela você parece avistar algumas estátuas.
 ~
-38 36 0 0 0 0
-D4
+38 cf 0
+D 4
 Voce ve as estatuas dos grandes Deuses Criadores e Supremos.
 ~
 ~
@@ -363,14 +364,14 @@ S
 #3811
 A Sala das Trocas~
    Neste andar funciona o posto de venda, troca e compra de CARD's.  Nas
-paredes pode-se ver vï¿½rias cartas de todas as sï¿½ries.  No fundo da sala,
-atrï¿½s de um balcï¿½o, pode-se ver o jovem Pilgoras separando algumas cartas.
+paredes pode-se ver várias cartas de todas as séries.  No fundo da sala,
+atrás de um balcão, pode-se ver o jovem Pilgoras separando algumas cartas.
 ~
-38 16 0 0 0 0
-D5
-O Salï¿½o principal do Museu.
+38 e 0
+D 5
+O Salão principal do Museu.
 ~
 ~
 0 -1 3802
 S
-$~
+$

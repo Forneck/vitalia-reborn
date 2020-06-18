@@ -1,10 +1,10 @@
 #19700
 Uma Estrada Escondida~
-   Vocï¿½ estï¿½ andando calmamente e de repente encontra uma pequena abertura
-que vocï¿½, embora tenha passado por aqui vï¿½rias vezes, nunca havia percebido.
+   Você está andando calmamente e de repente encontra uma pequena abertura
+que você, embora tenha passado por aqui várias vezes, nunca havia percebido.
 Ela parece seguir para o leste.
 ~
-197 68 0 0 0 3
+197 cg 3
 D1
 ~
 ~
@@ -12,16 +12,17 @@ D1
 D3
 ~
 mato~
-1 -1 6150
+:n 1 o mato
+ad -1 6150
 S
 #19701
 Uma Pequena Subida~
-   A pequena passagem revela uma subida nï¿½o muito ï¿½ngreme que vocï¿½, com
-facilidade, vence caminhando para o leste.  Vocï¿½ pode retornar para a
+   A pequena passagem revela uma subida não muito íngreme que você, com
+facilidade, vence caminhando para o leste.  Você pode retornar para a
 floresta de Haon-Dor voltando-se para o oeste ou seguir sua jornada para
 leste nesta pequena subida.
 ~
-197 0 0 0 0 3
+197 0 3
 D1
 
 ~
@@ -35,12 +36,12 @@ D3
 S
 #19702
 A Subida ~
-   Vocï¿½ continua sua subida sem muita preocupaï¿½ï¿½o de onde este caminho o
-levarï¿½.  Seu espï¿½rito aventureiro o guia e vocï¿½ mal percebe o quanto jï¿½
-andou.  Logo adiante, a leste, vocï¿½ percebe a fim da subida e vocï¿½ ainda
+   Você continua sua subida sem muita preocupação de onde este caminho o
+levará.  Seu espírito aventureiro o guia e você mal percebe o quanto já
+andou.  Logo adiante, a leste, você percebe a fim da subida e você ainda
 pode voltar pare oeste descendo rumo a Haon-Dor.
 ~
-197 0 0 0 0 3
+197 0 3
 D1
 
 ~
@@ -55,10 +56,10 @@ S
 #19703
 O Final da Subida~
    Subitamente o terreno fica plano facilitando sua caminhada.  Um caminho
-muito plano e de fï¿½cil acesso segue para o leste.  Para oeste hï¿½ uma descida
-ï¿½ngreme e difï¿½cil.
+muito plano e de fácil acesso segue para o leste.  Para oeste há uma descida
+íngreme e difícil.
 ~
-197 0 0 0 0 2
+197 0 2
 D1
 
 ~
@@ -72,10 +73,10 @@ D3
 S
 #19704
 Uma Bela Estrada~
-   Vocï¿½ caminha com facilidade nesta bela estrada sem saber o que o aguarda
-a seguir.  A estrada segue para Leste e Oeste sem nenhum obstï¿½culo aparente.
+   Você caminha com facilidade nesta bela estrada sem saber o que o aguarda
+a seguir.  A estrada segue para Leste e Oeste sem nenhum obstáculo aparente.
 ~
-197 4 0 0 0 2
+197 c 2
 D1
 
 ~
@@ -89,10 +90,10 @@ D3
 S
 #19705
 A Estrada~
-   Vocï¿½ caminha com facilidade nesta bela estrada sem saber o que o aguarda
-a seguir.  A estrada segue para Leste e Oeste sem nenhum obstï¿½culo aparente.
+   Você caminha com facilidade nesta bela estrada sem saber o que o aguarda
+a seguir.  A estrada segue para Leste e Oeste sem nenhum obstáculo aparente.
 ~
-197 0 0 0 0 2
+197 0 2
 D1
 
 ~
@@ -106,13 +107,13 @@ D3
 S
 #19706
 Uma Caverna no Caminho.~
-   Continuando sua caminhada vocï¿½ de repente depara-se com uma entrada para
-uma caverna de dimensï¿½es incomensurï¿½veis.  Por esta entrada (para o leste)
-poderiam passar 20 homens facilmente.  Talvez mais.  Vocï¿½ pensa duas vezes
+   Continuando sua caminhada você de repente depara-se com uma entrada para
+uma caverna de dimensões incomensuráveis.  Por esta entrada (para o leste)
+poderiam passar 20 homens facilmente.  Talvez mais.  Você pensa duas vezes
 antes de decidir se continua rumo a esta caverna para o leste ou se volta
 pela bela estrada que segue para o oeste.
 ~
-197 0 0 0 0 2
+197 0 2
 D1
 
 ~
@@ -126,11 +127,11 @@ D3
 S
 #19707
 A Entrada da Caverna~
-   Vocï¿½ estï¿½ na entrada da caverna.  A luz de fora da caverna jï¿½ nï¿½o ï¿½ tï¿½o
-intensa e vocï¿½ sente dificuldade em ver os detalhes do caminho para o leste.
-A caverna continua ampla nesta direï¿½ï¿½o.
+   Você está na entrada da caverna.  A luz de fora da caverna já não é tão
+intensa e você sente dificuldade em ver os detalhes do caminho para o leste.
+A caverna continua ampla nesta direção.
 ~
-197 0 0 0 0 0
+197 0 0
 D1
 
 ~
@@ -144,11 +145,11 @@ D3
 S
 #19708
 Dentro da Caverna~
-   Sua luz ilumina bem o amplo ambiente e vocï¿½ pode ver a imensidï¿½o desta
-caverna.  Um longo corredor segue para o leste e a entrada estï¿½
+   Sua luz ilumina bem o amplo ambiente e você pode ver a imensidão desta
+caverna.  Um longo corredor segue para o leste e a entrada está
 imediatamente a oeste daqui.
 ~
-197 1 0 0 0 0
+197 a 0
 D1
 
 ~
@@ -163,9 +164,9 @@ S
 #19709
 Um Longo Corredor~
    O corredor segue no sentido oeste.  Uma entrada para o norte chama sua
-atenï¿½ï¿½o e uma pequena "porta" revela uma "sala" ao sul.
+atenção e uma pequena "porta" revela uma "sala" ao sul.
 ~
-197 1 0 0 0 0
+197 a 0
 D0
 
 ~
@@ -175,7 +176,8 @@ D2
 
 ~
 porta~
-1 19700 19710
+:n 2 a pequena porta
+ad 19700 19710
 D3
 
 ~
@@ -184,12 +186,12 @@ D3
 S
 #19710
 Um Quarto de Pedra~
-   Vocï¿½ entra em um pequeno quarto de pedras sem muito luxo ou aparatos.
-Provavelmente este lugar ï¿½ (ou ao menos foi) usado para descanso da guarda
+   Você entra em um pequeno quarto de pedras sem muito luxo ou aparatos.
+Provavelmente este lugar é (ou ao menos foi) usado para descanso da guarda
 noturna visto que uma cama de pedra sem conforto algum encontra-se no canto.
-A ï¿½nica saï¿½da ï¿½ para o norte.
+A única saída é para o norte.
 ~
-197 0 0 0 0 0
+197 0 0
 D0
 
 ~
@@ -198,13 +200,13 @@ D0
 S
 #19711
 O Caminho pela Caverna~
-   Um pequeno corredor segue no sentido norte sul.  O Corredor ï¿½ bastante
+   Um pequeno corredor segue no sentido norte sul.  O Corredor é bastante
 amplo e duas ou mais pessoas poderiam caminhar lado a lado por aqui sem
-problemas.  As paredes da caverna sï¿½o limpas, embora vocï¿½ nï¿½o tenha muitas
-condiï¿½ï¿½es de analisar devido a parca luminosidade de sua lanterna.  Vocï¿½
-sente que estï¿½ perto da entrada da caverna e isso o tranquiliza um pouco.
+problemas.  As paredes da caverna são limpas, embora você não tenha muitas
+condições de analisar devido a parca luminosidade de sua lanterna.  Você
+sente que está perto da entrada da caverna e isso o tranquiliza um pouco.
 ~
-197 4 0 0 0 0
+197 c 0
 D0
 
 ~
@@ -218,11 +220,11 @@ D2
 S
 #19712
 O Caminho pelo Caverna~
-   Vocï¿½ continua seu caminho sem maiores imprevistos.  Seguindo para o sul
-vocï¿½ sabe que estarï¿½ perto da entrada desta caverna maldita.  Ao norte vocï¿½
+   Você continua seu caminho sem maiores imprevistos.  Seguindo para o sul
+você sabe que estará perto da entrada desta caverna maldita.  Ao norte você
 pode ver uma luz opaca provavelmente vinda de uma outra entrada.
 ~
-197 0 0 0 0 0
+197 0 0
 D0
 
 ~
@@ -236,15 +238,15 @@ D2
 S
 #19713
 A Vista para o Vale dos Orcs~
-   Ao chegar neste lugar vocï¿½ percebe enfim que esta caverna foi preparada
-para esconder dos curiosos este vale enorme a sua frente.  A paisagem nï¿½o ï¿½
-nada belo de se ver..  ï¿½ provï¿½vel que a muito tempo atrï¿½s este vale tenha
+   Ao chegar neste lugar você percebe enfim que esta caverna foi preparada
+para esconder dos curiosos este vale enorme a sua frente.  A paisagem não é
+nada belo de se ver..  É provável que a muito tempo atrás este vale tenha
 sido habitado por elfos e que esta "floresta", agora devastada e sem vida,
-tenha sido verde e bela.  Uma pequena placa caï¿½da no chï¿½o chama sua atenï¿½ï¿½o.
-   Vocï¿½ pode seguir para o sul rumo a floresta de Haon-Dor ou descer um
+tenha sido verde e bela.  Uma pequena placa caída no chão chama sua atenção.
+   Você pode seguir para o sul rumo a floresta de Haon-Dor ou descer um
 pequeno caminho a oeste que conduz ao vale.
 ~
-197 0 0 0 0 0
+197 0 0
 D2
 
 ~
@@ -256,21 +258,21 @@ D3
 ~
 0 -1 19714
 E
-placa caï¿½da~
+placa caída~
 O Vale dos ORCS NEGROS.
 Mantenha-se afastado.
-Visitantes Nï¿½O Sï¿½O BEM VINDOS!!!!
+Visitantes NÃO SÃO BEM VINDOS!!!!
 ~
 S
 #19714
 O Caminho Estreito~
-   Vocï¿½ se encontra no inï¿½cio da descida rumo ao vale.  Esta pequena trilha,
-onde nï¿½o ï¿½ possï¿½vel caminhar lado a lado duas pessoas, segue para leste em
-uma descida menos confortï¿½vel do que vocï¿½ gostaria e para o leste vocï¿½ pode
-facilmente alcanï¿½ar a entrada da caverna que o conduzirï¿½ de volta ï¿½ floresta
+   Você se encontra no início da descida rumo ao vale.  Esta pequena trilha,
+onde não é possível caminhar lado a lado duas pessoas, segue para leste em
+uma descida menos confortável do que você gostaria e para o leste você pode
+facilmente alcançar a entrada da caverna que o conduzirá de volta à floresta
 de Haon-Dor.
 ~
-197 0 0 0 0 4
+197 0 4
 D1
 
 ~
@@ -285,13 +287,13 @@ S
 #19715
 O Caminho Estreito~
    O Caminho segue no sentido Leste-Oeste.  Andando por este caminho
-   Estreito vocï¿½ percebe que a vegetaï¿½ï¿½o num tom marrom esverdeado hï¿½ muito
-perdeu o viï¿½o e isto torna este caminho bastante assustador.  Vocï¿½ percebe
-ainda que o caminho fica cada vez mais estreito e vocï¿½ deve tomar MUITO
-cuidado para nï¿½o escorregar e quebrar o pescoï¿½o no precipï¿½cio ao redor da
+   Estreito você percebe que a vegetação num tom marrom esverdeado há muito
+perdeu o viço e isto torna este caminho bastante assustador.  Você percebe
+ainda que o caminho fica cada vez mais estreito e você deve tomar MUITO
+cuidado para não escorregar e quebrar o pescoço no precipício ao redor da
 trilha.
 ~
-197 256 0 0 0 4
+197 i 4
 D1
 
 ~
@@ -304,14 +306,14 @@ D3
 0 -1 19716
 S
 #19716
-Na Beira do Precipï¿½cio~
-   Caminhando distraidamente vocï¿½ percebe (quase tarde demais) que o caminho
-vira neste ponto para o norte.  Vocï¿½ realmente escapou por pouco...  Um
-passo a mais para o oeste e vocï¿½ iria acabar se esborrachando no fundo do
-precipï¿½cio.  Vocï¿½ suspira aliviado e retoma fï¿½lego para continuar seu
+Na Beira do Precipício~
+   Caminhando distraidamente você percebe (quase tarde demais) que o caminho
+vira neste ponto para o norte.  Você realmente escapou por pouco...  Um
+passo a mais para o oeste e você iria acabar se esborrachando no fundo do
+precipício.  Você suspira aliviado e retoma fôlego para continuar seu
 caminho.  Norte ou Leste..  Ou oeste...  Quem sabe?
 ~
-197 256 0 0 0 4
+197 i 4
 D0
 
 ~
@@ -329,13 +331,14 @@ D3
 0 -1 19717
 S
 #19717
-O Precipï¿½cio~
-   Durante a queda vocï¿½ tem visï¿½es de quando vocï¿½ era apenas uma crianï¿½a..
-Sua vida passa rapidamente por sua cabeï¿½a atï¿½ que esta encontre a derradeira
+O Precipício~
+   Durante a queda você tem visões de quando você era apenas uma criança..
+Sua vida passa rapidamente por sua cabeça até que esta encontre a derradeira
 e mortal rocha.
-                        Vocï¿½ estï¿½ morto! R. I. P.
+
+                        Você está morto! R. I. P.
 ~
-197 774 0 0 0 0
+197 bcij 0
 D1
 
 ~
@@ -345,10 +348,10 @@ S
 #19718
 O Caminho Estreito~
    O caminho nesta parte torna-se bastante perigoso e segue no sentido
-Norte-Sul.  Qualquer deslize na direï¿½ï¿½o errada e vocï¿½ sabe que a morte ï¿½
+Norte-Sul.  Qualquer deslize na direção errada e você sabe que a morte é
 certa.  Pouco se pode apreciar da paisagem aqui.
 ~
-197 256 0 0 0 4
+197 i 4
 D0
 
 ~
@@ -373,10 +376,10 @@ S
 #19719
 O Caminho Estreito~
    O caminho nesta parte torna-se bastante perigoso e segue no sentido
-Norte-Sul.  Qualquer deslize na direï¿½ï¿½o errada e vocï¿½ sabe que a morte ï¿½
+Norte-Sul.  Qualquer deslize na direção errada e você sabe que a morte é
 certa.  Pouco se pode apreciar da paisagem aqui.
 ~
-197 256 0 0 0 4
+197 i 4
 D0
 
 ~
@@ -401,10 +404,10 @@ S
 #19720
 Uma Curva no Caminho~
    Uma repentina virada no caminho estreito quase o derruba.  Uma queda
-desta altura nï¿½o deixaria pedaï¿½o sobre pedaï¿½o em seu corpo...  Vocï¿½ pode
-seguir para o leste ou para o sul.  Qualquer outra opï¿½ï¿½o ï¿½ morte certa.
+desta altura não deixaria pedaço sobre pedaço em seu corpo...  Você pode
+seguir para o leste ou para o sul.  Qualquer outra opção é morte certa.
 ~
-197 256 0 0 0 4
+197 i 4
 D0
 
 ~
@@ -427,13 +430,13 @@ D3
 0 -1 19717
 S
 #19721
-O Caminho nï¿½o Tï¿½o Estreito~
-   Vocï¿½ caminha com facilidade por este trecho nï¿½o tï¿½o estreito quanto o que
-vocï¿½ pode observar a oeste.  Alguma vegetaï¿½ï¿½o pode ser vista ainda verde,
+O Caminho não Tão Estreito~
+   Você caminha com facilidade por este trecho não tão estreito quanto o que
+você pode observar a oeste.  Alguma vegetação pode ser vista ainda verde,
 embora em sua maioria a cor seja marrom e sem vida.  O Caminho segue no
 sentido Leste-Oeste.
 ~
-197 0 0 0 0 3
+197 0 3
 D1
 
 ~
@@ -446,14 +449,14 @@ D3
 0 -1 19720
 S
 #19722
-O Caminho nï¿½o Tï¿½o Estreito~
-   A vegetaï¿½ï¿½o rasteira de pï¿½ssima aparï¿½ncia cobre seus pï¿½s dificultando a
-passagem por esta trilha.  Vocï¿½ se sente um pouco cansado mas nada que o
-faï¿½a parar para descansar.  Para o Leste vocï¿½ pode ver uma clareira que
-parece terminar em um precipï¿½cio, embora vocï¿½ perceba que o vale nï¿½o esteja
-tï¿½o distante para baixo.
+O Caminho não Tão Estreito~
+   A vegetação rasteira de péssima aparência cobre seus pés dificultando a
+passagem por esta trilha.  Você se sente um pouco cansado mas nada que o
+faça parar para descansar.  Para o Leste você pode ver uma clareira que
+parece terminar em um precipício, embora você perceba que o vale não esteja
+tão distante para baixo.
 ~
-197 0 0 0 0 3
+197 0 3
 D1
 
 ~
@@ -467,13 +470,13 @@ D3
 S
 #19723
 Uma Clareira~
-   A pequena estrada parece terminar aqui e uma quase imperceptï¿½vel descida
-pode ser vista a custo de muito esforï¿½o no canto da sala.  Algo de muito
-errado hï¿½ nesta clareira..  Vocï¿½ nï¿½o pode bem dizer o que ï¿½ mas sente que o
-perigo estï¿½ perto.  Alï¿½m da descida vocï¿½ pode ir para oeste subindo o
+   A pequena estrada parece terminar aqui e uma quase imperceptível descida
+pode ser vista a custo de muito esforço no canto da sala.  Algo de muito
+errado há nesta clareira..  Você não pode bem dizer o que é mas sente que o
+perigo está perto.  Além da descida você pode ir para oeste subindo o
 caminho de volta para a caverna.
 ~
-197 260 0 0 0 2
+197 ci 2
 D3
 
 ~
@@ -486,49 +489,49 @@ D5
 0 -1 19724
 S
 #19724
-O Portï¿½o de Entrada~
-   Vocï¿½ cai de uma altura aceitï¿½vel.  O Tombo tira, por alguns instantes
-seus sentidos mas vocï¿½ os recobra facilmente depois de alguns segundos.
-Desta altura nï¿½o ï¿½ mais possï¿½vel voltar para a clareira.  A sua frente, para
-o norte, vocï¿½ vï¿½ um enorme portï¿½o esculpido pela prï¿½pria natureza em pedra
+O Portão de Entrada~
+   Você cai de uma altura aceitável.  O Tombo tira, por alguns instantes
+seus sentidos mas você os recobra facilmente depois de alguns segundos.
+Desta altura não é mais possível voltar para a clareira.  A sua frente, para
+o norte, você vê um enorme portão esculpido pela própria natureza em pedra
 nada polida.  Parece a entrada para o Vale.  Uma pequena placa pode ser
-vista caï¿½da no chï¿½o.  Sua ï¿½nica saï¿½da ï¿½ para o norte rumo ao desconhecido.
+vista caída no chão.  Sua única saída é para o norte rumo ao desconhecido.
 ~
-197 0 0 0 0 2
+197 0 2
 D0
 
 ~
 ~
 0 -1 19725
 E
+portão pedra esculpido~
+Você contempla um portão nada belo.  As pedras que o compõem são sujas e mal
+lascadas formando um arco imperfeito.  O Portão parece estar sempre aberto e
+a passagem é livre.  Nenhum sinal de guardas ou algo parecido.
+~
+E
 placa sinal~
 **************************
 *  Vale dos Orcs Negros  *
 *                        *
-*  Lembre-se: Vocï¿½ nï¿½o ï¿½ *
+*  Lembre-se: Você não é *
 *             Bem vindo  *
 **************************
-~
-E
-portï¿½o pedra esculpido~
-Vocï¿½ contempla um portï¿½o nada belo.  As pedras que o compï¿½em sï¿½o sujas e mal
-lascadas formando um arco imperfeito.  O Portï¿½o parece estar sempre aberto e
-a passagem ï¿½ livre.  Nenhum sinal de guardas ou algo parecido.
 ~
 S
 #19725
 No vale dos Orcs~
-   Vocï¿½ atravessa o portï¿½o entrando no vale propriamente.  ï¿½ uma verdadeira
-cidade toda contruï¿½da em madeira apodrecida arrancada da floresta que agora
-jaz sem vida nesta parte de Vitï¿½lia.  Vocï¿½ teme, devido a proximidade, pela
-floresta de Haon-Dor.  Seu futuro nï¿½o pode ser o mesmo!  Em sua raiva vocï¿½
-anceia por encontrar os responsï¿½veis pela devastaï¿½ï¿½o deste lugar que deve
-ter sido um dia morada de Robins, Esquilos e lobos selvagens.  ï¿½ uma pena
+   Você atravessa o portão entrando no vale propriamente.  É uma verdadeira
+cidade toda contruída em madeira apodrecida arrancada da floresta que agora
+jaz sem vida nesta parte de Vitália.  Você teme, devido a proximidade, pela
+floresta de Haon-Dor.  Seu futuro não pode ser o mesmo!  Em sua raiva você
+anceia por encontrar os responsáveis pela devastação deste lugar que deve
+ter sido um dia morada de Robins, Esquilos e lobos selvagens.  É uma pena
 mesmo.  Eles devem pagar por isso!!
-   Vocï¿½ pode seguir para o norte onde uma pequena praï¿½a mostra algum
-movimento ou voltar para o portï¿½o ao sul.
+   Você pode seguir para o norte onde uma pequena praça mostra algum
+movimento ou voltar para o portão ao sul.
 ~
-197 0 0 0 0 2
+197 0 2
 D0
 
 ~
@@ -541,14 +544,14 @@ D2
 0 -1 19724
 S
 #19726
-A Praï¿½a Central~
-   Vocï¿½ entra em uma praï¿½a de tamanho razoï¿½vel e de iluminaï¿½ï¿½o nï¿½o muito
-intensa.  Alguns orcs negros passeiam pelas ruas e alguns outros estï¿½o
-simplesmente parados nesta praï¿½a sem dar muita importï¿½ncia a sua chegada.
-No sentido Leste-Oeste vocï¿½ pode ver a Rua Morgoth.  Para o norte segue uma
-rua escura e vocï¿½ ainda pode ver o portï¿½o ao sul.
+A Praça Central~
+   Você entra em uma praça de tamanho razoável e de iluminação não muito
+intensa.  Alguns orcs negros passeiam pelas ruas e alguns outros estão
+simplesmente parados nesta praça sem dar muita importância a sua chegada.
+No sentido Leste-Oeste você pode ver a Rua Morgoth.  Para o norte segue uma
+rua escura e você ainda pode ver o portão ao sul.
 ~
-197 4 0 0 0 1
+197 c 1
 D0
 
 ~
@@ -574,7 +577,7 @@ S
 Rua Morgoth~
    A rua segue no sentido Leste Oeste.
 ~
-197 0 0 0 0 2
+197 0 2
 D1
 
 ~
@@ -588,10 +591,10 @@ D3
 S
 #19728
 Rua Morgoth~
-   A rua segue no sentido Leste Oeste.  Ao sul vocï¿½ percebe a entrada para
+   A rua segue no sentido Leste Oeste.  Ao sul você percebe a entrada para
 um lugar que parece sagrado para os habitantes deste vale.
 ~
-197 0 0 0 0 2
+197 0 2
 D1
 
 ~
@@ -610,10 +613,10 @@ D3
 S
 #19729
 Rua Morgoth~
-   A rua segue no sentido Leste Oeste.  Ao norte vocï¿½ percebe uma agitaï¿½ï¿½o
+   A rua segue no sentido Leste Oeste.  Ao norte você percebe uma agitação
 com barulhos de espadas e outras armas.
 ~
-197 0 0 0 0 2
+197 0 2
 D0
 
 ~
@@ -632,12 +635,12 @@ D3
 S
 #19730
 O Fim da Rua Morgoth~
-   A rua acaba subitamente.  Para o oeste um amontoado de vegetaï¿½ï¿½o densa
-suficiente para impedir sua passagem cresce sem parar.  Vocï¿½ fica um tanto
-curioso para saber o que hï¿½ por trï¿½s da vegetaï¿½ï¿½o mas isso parece impossï¿½vel
-Sua ï¿½nica saï¿½da ï¿½ para leste.
+   A rua acaba subitamente.  Para o oeste um amontoado de vegetação densa
+suficiente para impedir sua passagem cresce sem parar.  Você fica um tanto
+curioso para saber o que há por trás da vegetação mas isso parece impossível
+Sua única saída é para leste.
 ~
-197 0 0 0 0 2
+197 0 2
 D1
 
 ~
@@ -646,11 +649,11 @@ D1
 S
 #19731
 Quartel General da Ala Oeste~
-   Vocï¿½ estï¿½ no quartel general da ala oeste do vale.  Vï¿½rios orcs negros
-estï¿½o treinando dia e noite tï¿½o concentrados que mal notam sua presenï¿½a.  A
-ï¿½nica saï¿½da ï¿½ para o sul de volta a rua Morgoth.
+   Você está no quartel general da ala oeste do vale.  Vários orcs negros
+estão treinando dia e noite tão concentrados que mal notam sua presença.  A
+única saída é para o sul de volta a rua Morgoth.
 ~
-197 0 0 0 0 1
+197 0 1
 D2
 
 ~
@@ -659,15 +662,15 @@ D2
 S
 #19732
 Templo Negro~
-   Vocï¿½ entra num ambiente fechado muito escuro.  Nï¿½o fosse sua iluminaï¿½ï¿½o
-nada poderia ser visto aqui.  Vï¿½rias estï¿½tuas podem ser vistas todas fazendo
-referencia a orcs poderosos embora vocï¿½ nï¿½o note nada de mï¿½gico neles
-Provavelmente estes seres nï¿½o veneram os sï¿½bios mas sim os fortes.  As
-estï¿½tuas sï¿½o esculpidas com pouca polidez e em uma pedra limosa embora seca
-e de uma cor muito escura.  Vocï¿½ nunca viu nenhuma pedra desse tipo em
-Vitï¿½lia.  Sua ï¿½nica saï¿½da ï¿½ para o norte de volta ï¿½ rua Morgoth.
+   Você entra num ambiente fechado muito escuro.  Não fosse sua iluminação
+nada poderia ser visto aqui.  Várias estátuas podem ser vistas todas fazendo
+referencia a orcs poderosos embora você não note nada de mágico neles
+Provavelmente estes seres não veneram os sábios mas sim os fortes.  As
+estátuas são esculpidas com pouca polidez e em uma pedra limosa embora seca
+e de uma cor muito escura.  Você nunca viu nenhuma pedra desse tipo em
+Vitália.  Sua única saída é para o norte de volta à rua Morgoth.
 ~
-197 9 0 0 0 0
+197 ad 0
 D0
 
 ~
@@ -678,7 +681,7 @@ S
 Rua Morgoth~
    A rua segue no sentido Leste Oeste.
 ~
-197 0 0 0 0 2
+197 0 2
 D1
 
 ~
@@ -693,9 +696,9 @@ S
 #19734
 Rua Morgoth~
    A rua segue no sentido Leste Oeste.  Ao norte o tilintar de espadas chama
-sua atenï¿½ï¿½o.
+sua atenção.
 ~
-197 0 0 0 0 2
+197 0 2
 D0
 
 ~
@@ -714,10 +717,10 @@ D3
 S
 #19735
 Rua Morgoth~
-   A rua segue no sentido Leste Oeste.  Para o sul hï¿½ uma casa simples que
-parece completamente fora do padrï¿½o deste lugar.
+   A rua segue no sentido Leste Oeste.  Para o sul há uma casa simples que
+parece completamente fora do padrão deste lugar.
 ~
-197 0 0 0 0 2
+197 0 2
 D1
 
 ~
@@ -736,12 +739,12 @@ D3
 S
 #19736
 Fim da Rua Morgoth~
-   A rua acaba subitamente.  Para o leste um amontoado de vegetaï¿½ï¿½o densa
-suficiente para impedir sua passagem cresce sem parar.  Vocï¿½ fica um tanto
-curioso para saber o que hï¿½ por trï¿½s da vegetaï¿½ï¿½o mas isso parece
-impossï¿½vel.  Sua ï¿½nica saï¿½da ï¿½ para oeste.
+   A rua acaba subitamente.  Para o leste um amontoado de vegetação densa
+suficiente para impedir sua passagem cresce sem parar.  Você fica um tanto
+curioso para saber o que há por trás da vegetação mas isso parece
+impossível.  Sua única saída é para oeste.
 ~
-197 0 0 0 0 2
+197 0 2
 D3
 
 ~
@@ -750,11 +753,11 @@ D3
 S
 #19737
 Quartel General da Ala Leste~
-   Vocï¿½ estï¿½ no quartel general da ala leste do vale.  Vï¿½rios orcs negros
-estï¿½o treinando dia e noite tï¿½o concentrados que mal notam sua presenï¿½a.  A
-ï¿½nica saï¿½da ï¿½ para o sul de volta a rua Morgoth.
+   Você está no quartel general da ala leste do vale.  Vários orcs negros
+estão treinando dia e noite tão concentrados que mal notam sua presença.  A
+única saída é para o sul de volta a rua Morgoth.
 ~
-197 0 0 0 0 1
+197 0 1
 D2
 
 ~
@@ -762,14 +765,14 @@ D2
 0 -1 19734
 S
 #19738
-A Casa Do Anciï¿½o~
-   Vocï¿½ entra em uma casa simples porem limpa e arrumada.  Os cï¿½modos sï¿½o
-todos interligados formando um sï¿½ ambiente amplo e arejado, embora o ar
-dessas bandas nï¿½o seja dos melhores...
-   Pelo tamanho da mesa e da cama que vocï¿½ pode ver num canto do quarto vocï¿½
-nota que aqui nï¿½o mora um Orc...
+A Casa Do Ancião~
+   Você entra em uma casa simples porem limpa e arrumada.  Os cômodos são
+todos interligados formando um só ambiente amplo e arejado, embora o ar
+dessas bandas não seja dos melhores...
+   Pelo tamanho da mesa e da cama que vocÊ pode ver num canto do quarto você
+nota que aqui não mora um Orc...
 ~
-197 0 0 0 0 0
+197 0 0
 D0
 
 ~
@@ -778,12 +781,12 @@ D0
 S
 #19739
 A Rua Escura~
-   A falta de luminosidade nesta rua impede uma visualizaï¿½ï¿½o mais detalhada
-desta parte do vale.  Alguns ruidos podem ser ouvidos mas vocï¿½ nï¿½o se
+   A falta de luminosidade nesta rua impede uma visualização mais detalhada
+desta parte do vale.  Alguns ruidos podem ser ouvidos mas você não se
 amedronta com a possibilidade do confronto.  A rua segue no sentido Norte e
-para o sul vocï¿½ ainda pode ver, embora com muita dificuldade a praï¿½a.
+para o sul você ainda pode ver, embora com muita dificuldade a praça.
 ~
-197 9 0 0 0 2
+197 ad 2
 D0
 
 ~
@@ -797,12 +800,12 @@ D2
 S
 #19740
 A Rua Escura~
-   A falta de luminosidade nesta rua impede uma visualizaï¿½ï¿½o mais detalhada
-desta parte do vale.  Alguns ruidos podem ser ouvidos mas vocï¿½ nï¿½o se
+   A falta de luminosidade nesta rua impede uma visualização mais detalhada
+desta parte do vale.  Alguns ruidos podem ser ouvidos mas você não se
 amedronta com a possibilidade do confronto.  A rua segue no sentido Norte
 Sul.
 ~
-197 0 0 0 0 2
+197 0 2
 D0
 
 ~
@@ -816,11 +819,11 @@ D2
 S
 #19741
 A Encruzilhada~
-   Vocï¿½ chega a uma encruzilhada.  Para o oeste nada pode ser visto e para o
-leste vocï¿½ vï¿½ um caminho iluminado.  A rua escura segue para o norte e para
+   Você chega a uma encruzilhada.  Para o oeste nada pode ser visto e para o
+leste você vê um caminho iluminado.  A rua escura segue para o norte e para
 o sul.
 ~
-197 12 0 0 0 1
+197 cd 1
 D0
 
 ~
@@ -844,9 +847,9 @@ D3
 S
 #19742
 Um Caminho Escuro~
-   Estï¿½ tudo escuro.
+   Está tudo escuro.
 ~
-197 9 0 0 0 1
+197 ad 1
 D1
 
 ~
@@ -860,11 +863,11 @@ D3
 S
 #19743
 Um Caminho Iluminado~
-   Este caminho iluminado parece nï¿½o pertencer a este lugar.  Hï¿½ algo mï¿½gico
-nele embora vocï¿½ nï¿½o consiga distinguir muito bem o que ï¿½..  O caminho segue
-para o leste e a encruzilhada estï¿½ logo a oeste daqui.
+   Este caminho iluminado parece não pertencer a este lugar.  Há algo mágico
+nele embora você não consiga distinguir muito bem o que é..  O caminho segue
+para o leste e a encruzilhada está logo a oeste daqui.
 ~
-197 0 0 0 0 1
+197 0 1
 D1
 
 ~
@@ -878,11 +881,11 @@ D3
 S
 #19744
 Um Caminho Iluminado~
-   Quanto mais vocï¿½ segue esta trilha mais vocï¿½ tem certeza de que aquelas
-criaturas asquerosas nï¿½o vem muito por aqui.  O Caminho ï¿½ lindo e limpo
-seguindo nas direï¿½ï¿½es leste e oeste.
+   Quanto mais você segue esta trilha mais você tem certeza de que aquelas
+criaturas asquerosas não vem muito por aqui.  O Caminho é lindo e limpo
+seguindo nas direções leste e oeste.
 ~
-197 0 0 0 0 1
+197 0 1
 D1
 
 ~
@@ -896,13 +899,13 @@ D3
 S
 #19745
 O Beco Leste~
-   Vocï¿½ chega ao fim da trilha iluminada e para sua surpresa vocï¿½ encontra
-um belo jardim com vï¿½rias plantas de vï¿½rias espï¿½cies, algumas realmente
-desconhecidas e outras tï¿½o raras que vocï¿½ nunca viu por toda floresta de
-Haon-Dor.  Uma pequena mesa com vï¿½rios frascos de cores diversas estï¿½
-colocada num canto.  A ï¿½nica saï¿½da ï¿½ para oeste.
+   Você chega ao fim da trilha iluminada e para sua surpresa você encontra
+um belo jardim com várias plantas de várias espécies, algumas realmente
+desconhecidas e outras tão raras que você nunca viu por toda floresta de
+Haon-Dor.  Uma pequena mesa com vários frascos de cores diversas está
+colocada num canto.  A única saída é para oeste.
 ~
-197 0 0 0 0 2
+197 0 2
 D3
 
 ~
@@ -910,15 +913,15 @@ D3
 0 -1 19744
 E
 mesa canto frascos~
-   Vocï¿½ examina a mesa forï¿½ando um pouco a visï¿½o e percebe que nela hï¿½
-vï¿½rios frascos em vï¿½rias cores.  Algumas muito bonitas e incomuns.
+   Você examina a mesa forçando um pouco a visão e percebe que nela há
+vários frascos em várias cores.  Algumas muito bonitas e incomuns.
 ~
 S
 #19746
 Um Caminho Escuro~
-Estï¿½ tudo escuro.
+Está tudo escuro.
 ~
-197 9 0 0 0 1
+197 ad 1
 D1
 
 ~
@@ -932,10 +935,10 @@ D3
 S
 #19747
 O Beco Oeste~
-   Estï¿½ tudo escuro.
-   Vocï¿½ percebe que o caminho para o oeste estï¿½  fechado.
+   Está tudo escuro.
+   Você percebe que o caminho para o oeste está  fechado.
 ~
-197 9 0 0 0 1
+197 ad 1
 D1
 
 ~
@@ -944,12 +947,12 @@ D1
 S
 #19748
 A Rua Escura~
-   A falta de luminosidade nesta rua impede uma visualizaï¿½ï¿½o mais detalhada
-desta parte do vale.  Alguns ruidos podem ser ouvidos mas vocï¿½ nï¿½o se
+   A falta de luminosidade nesta rua impede uma visualização mais detalhada
+desta parte do vale.  Alguns ruidos podem ser ouvidos mas você não se
 amedronta com a possibilidade do confronto.  A rua segue no sentido Norte
 Sul.
 ~
-197 0 0 0 0 2
+197 0 2
 D0
 
 ~
@@ -963,13 +966,13 @@ D2
 S
 #19749
 A Rua Escura~
-   A falta de luminosidade nesta rua impede uma visualizaï¿½ï¿½o mais detalhada
-desta parte do vale.  Alguns ruidos podem ser ouvidos mas vocï¿½ nï¿½o se
+   A falta de luminosidade nesta rua impede uma visualização mais detalhada
+desta parte do vale.  Alguns ruidos podem ser ouvidos mas você não se
 amedronta com a possibilidade do confronto.  A rua segue para o sul e ao
-norte vocï¿½ ouve um grande agito e falas na lï¿½ngua dos orcs que nï¿½o ï¿½ nada
-agradï¿½vel de se ouvir.
+norte você ouve um grande agito e falas na língua dos orcs que não é nada
+agradável de se ouvir.
 ~
-197 0 0 0 0 2
+197 0 2
 D0
 
 ~
@@ -983,58 +986,59 @@ D2
 S
 #19750
 O Quartel General Central~
-   Vocï¿½ entra no quartel general central onde um sem nï¿½mero de orcs treina
-dia e noite sem parar.  Muitos nem percebem sua presenï¿½a mas vocï¿½ se sente
+   Você entra no quartel general central onde um sem número de orcs treina
+dia e noite sem parar.  Muitos nem percebem sua presença mas você se sente
 observado a todo tempo.  Uma pequena porta fechada parece levar para algum
-tipo de calabouï¿½o logo abaixo de seus pï¿½s.
+tipo de calabouço logo abaixo de seus pés.
 ~
-197 0 0 0 0 1
+197 0 1
 D2
 
 ~
 ~
 0 -1 19749
 D5
-Vocï¿½ vï¿½ um alï¿½apï¿½o.
+Você vê um alçapão.
 ~
-alï¿½apï¿½o~
-1 13000 19751
+alçapão~
+ad 13000 19751
 S
 #19751
-O Calabouï¿½o~
-   A cena ï¿½ horrï¿½vel de se ver.  Grilhï¿½es presos ï¿½s paredes por todos os
-cantos e vï¿½rias partes de corpos presos a eles sem o menor cuidado.  Alguns
-parecem mesmo estar vivos, embora nï¿½o seja possï¿½vel explicar racionalmente
-isso..  Vocï¿½ tropeï¿½a em uma cabeï¿½a de uma criatura que parece ter sido um
-dia um belo elfo.  Um buraco na parede leste chama sua atenï¿½ï¿½o embora vocï¿½
-nï¿½o saiba se serï¿½ possï¿½vel passar por ele.
+O Calabouço~
+   A cena é horrível de se ver.  Grilhões presos às paredes por todos os
+cantos e várias partes de corpos presos a eles sem o menor cuidado.  Alguns
+parecem mesmo estar vivos, embora não seja possível explicar racionalmente
+isso..  Você tropeça em uma cabeça de uma criatura que parece ter sido um
+dia um belo elfo.  Um buraco na parede leste chama sua atenção embora você
+não saiba se será possível passar por ele.
 ~
-197 13 0 0 0 0
+197 acd 0
 D1
 
 ~
 ~
 0 -1 19752
 D4
-Vocï¿½ vï¿½ um alï¿½apï¿½o.
+Você vê um alçapão.
 ~
-alï¿½apï¿½o~
-1 13000 19750
+alçapão~
+:n 1 o alçapão
+ad 13000 19750
 E
-cabeï¿½a~
-Aproximando sua luz vocï¿½ vï¿½ uma cabeï¿½a com um semblante de dor estampado
+cabeça~
+Aproximando sua luz você vê uma cabeça com um semblante de dor estampado
 nela.  Este elfo provavelmente morreu torturado mas sem gritar por socorro
-ou suplicar clemï¿½ncia.  Vocï¿½ para um instante para rezar pela alma de tï¿½o
+ou suplicar clemência.  Você para um instante para rezar pela alma de tão
 honrado guerreiro.
 ~
 S
 #19752
 O Caminho de Fuga~
-   Vocï¿½ passa com muita dificuldade pelo buraco na parede e percebe que ele
+   Você passa com muita dificuldade pelo buraco na parede e percebe que ele
 foi usado em uma fuga desesperada.  Um longo corredor segue para o leste o
-vocï¿½ pode voltar para o calabouï¿½o esgueirando-se pelo buraco novamente.
+você pode voltar para o calabouço esgueirando-se pelo buraco novamente.
 ~
-197 0 0 0 0 0
+197 0 0
 D1
 
 ~
@@ -1050,7 +1054,7 @@ S
 A Rota de Fuga~
    O corredor estreito segue para leste ou oeste.
 ~
-197 0 0 0 0 0
+197 0 0
 D1
 
 ~
@@ -1064,10 +1068,10 @@ D3
 S
 #19754
 A Rota de Fuga~
-   Nesta parte o corredor vira para o sul.  Olhando para oeste vocï¿½ lembra
-da dor dos que pereceram no calabouï¿½o.
+   Nesta parte o corredor vira para o sul.  Olhando para oeste você lembra
+da dor dos que pereceram no calabouço.
 ~
-197 0 0 0 0 0
+197 0 0
 D2
 
 ~
@@ -1081,12 +1085,12 @@ D3
 S
 #19755
 Uma Corda~
-   O corredor acaba de repente e vocï¿½ fica um pouco sem entender..  Olhando
-para cima vocï¿½ vï¿½ sobre sua cabeï¿½a uma bela corda tï¿½pica dos elfos.  Esta
-corda poderia sustentar um elefante.  Vocï¿½ poderia subir por ela ou voltar
-para o sul rumo ao calabouï¿½o.
+   O corredor acaba de repente e você fica um pouco sem entender..  Olhando
+para cima você vê sobre sua cabeça uma bela corda típica dos elfos.  Esta
+corda poderia sustentar um elefante.  Você poderia subir por ela ou voltar
+para o sul rumo ao calabouço.
 ~
-197 0 0 0 0 0
+197 0 0
 D0
 
 ~
@@ -1100,12 +1104,12 @@ D4
 S
 #19756
 Uma Corda~
-   Depois de muita subida vocï¿½ finalmente vï¿½ onde ela o leva.  O caminho
-engenhoso traï¿½ado nesta fuga espetacular faz vocï¿½ sorrir de felicidade.  A
-astï¿½cia deste hï¿½bil em fugas ï¿½ invejï¿½vel!  Para cima vocï¿½ percebe que
-alcanï¿½arï¿½ o fim da corda.
+   Depois de muita subida você finalmente vê onde ela o leva.  O caminho
+engenhoso traçado nesta fuga espetacular faz você sorrir de felicidade.  A
+astúcia deste hábil em fugas é invejável!  Para cima você percebe que
+alcançará o fim da corda.
 ~
-197 0 0 0 0 0
+197 0 0
 D4
 
 ~
@@ -1117,4 +1121,4 @@ D5
 ~
 0 -1 19755
 S
-$~
+$

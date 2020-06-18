@@ -1,576 +1,579 @@
 #11400
-Alï¿½m da Luz~
-   Vocï¿½ seguiu por aquilo que parecia um tï¿½nel de luz e chegou em um lugar
-completamente escuro e frio.  A sensaï¿½ï¿½o de vazio total ï¿½ angustiante, e
-fica maior quando vocï¿½ percebe que qualquer som que faï¿½a se perde, sem ao
-menos dar indï¿½cio de que encontrou alguma barreira para poder voltar.  A
-passagem que o trouxe atï¿½ aqui parece ter sumido como que por mï¿½gica e,
-surgindo aparentemente do nada, um estranho vï¿½rtice de energia aparenta ser
-a ï¿½nica coisa que de fato existe por aqui.
+Além da Luz~
+   Você seguiu por aquilo que parecia um túnel de luz e chegou em um lugar
+completamente escuro e frio.  A sensação de vazio total é angustiante, e
+fica maior quando você percebe que qualquer som que faça se perde, sem ao
+menos dar indício de que encontrou alguma barreira para poder voltar.  A
+passagem que o trouxe até aqui parece ter sumido como que por mágica e,
+surgindo aparentemente do nada, um estranho vórtice de energia aparenta ser
+a única coisa que de fato existe por aqui.
 ~
-114 1048829 0 0 0 0
+114.1 aecfdghu 0
 S
 #11401
 A Fenda Entre Mundos~
-   Vocï¿½ estï¿½ no lugar que os antigos chamavam de fenda entre mundos.  Uma
-densa nï¿½voa cobre tudo a seu redor, mas o ponto onde vocï¿½ se encontra parece
-estar sendo particularmente iluminado.  O solo ï¿½ gramado, muito verde, e
-estï¿½ molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
-fato de nï¿½o haver nuvem alguma no cï¿½u o confunde.  ï¿½ fï¿½cil andar por aqui,
-pois, apesar da dificuldade de se enxergar alguma coisa, nï¿½o hï¿½
-irregularidades no chï¿½o, nem sinal de que o sol vai se pï¿½r.
+   Você está no lugar que os antigos chamavam de fenda entre mundos.  Uma
+densa névoa cobre tudo a seu redor, mas o ponto onde você se encontra parece
+estar sendo particularmente iluminado.  O solo é gramado, muito verde, e
+está molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
+fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
+pois, apesar da dificuldade de se enxergar alguma coisa, não há
+irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
+~
+~
+0 -1 11402
+D2
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11402
 D1
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11403
-D2
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
-~
-~
-0 -1 11402
 D3
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11403
 S
 #11402
 A Fenda Entre Mundos~
-   Vocï¿½ estï¿½ naquilo que os antigos chamavam de fenda entre mundos.  Uma
-densa nï¿½voa cobre tudo a seu redor, mas o ponto onde vocï¿½ se encontra parece
-estar sendo particularmente iluminado.  O solo ï¿½ gramado, muito verde, e
-estï¿½ molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
-fato de nï¿½o haver nuvem alguma no cï¿½u o confunde.  ï¿½ fï¿½cil andar por aqui,
-pois, apesar da dificuldade de se enxergar alguma coisa, nï¿½o hï¿½
-irregularidades no chï¿½o, nem sinal de que o sol vai se pï¿½r.
+   Você está naquilo que os antigos chamavam de fenda entre mundos.  Uma
+densa névoa cobre tudo a seu redor, mas o ponto onde você se encontra parece
+estar sendo particularmente iluminado.  O solo é gramado, muito verde, e
+está molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
+fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
+pois, apesar da dificuldade de se enxergar alguma coisa, não há
+irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11401
 D1
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
+~
+~
+0 -1 11406
+D3
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11406
 D2
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11401
-D3
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
-~
-~
-0 -1 11406
 S
 #11403
 A Fenda Entre Mundos~
-   Vocï¿½ estï¿½ naquilo que os antigos chamavam de fenda entre mundos.  Uma
-densa nï¿½voa cobre tudo a seu redor, mas o ponto onde vocï¿½ se encontra parece
-estar sendo particularmente iluminado.  O solo ï¿½ gramado, muito verde, e
-estï¿½ molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
-fato de nï¿½o haver nuvem alguma no cï¿½u o confunde.  ï¿½ fï¿½cil andar por aqui,
-pois, apesar da dificuldade de se enxergar alguma coisa, nï¿½o hï¿½
-irregularidades no chï¿½o, nem sinal de que o sol vai se pï¿½r.
+   Você está naquilo que os antigos chamavam de fenda entre mundos.  Uma
+densa névoa cobre tudo a seu redor, mas o ponto onde você se encontra parece
+estar sendo particularmente iluminado.  O solo é gramado, muito verde, e
+está molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
+fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
+pois, apesar da dificuldade de se enxergar alguma coisa, não há
+irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
+~
+~
+0 -1 11404
+D2
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11404
 D1
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11401
-D2
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
-~
-~
-0 -1 11404
 D3
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11401
 S
 #11404
 A Fenda Entre Mundos~
-   Vocï¿½ estï¿½ naquilo que os antigos chamavam de fenda entre mundos.  Uma
-densa nï¿½voa cobre tudo a seu redor, mas o ponto onde vocï¿½ se encontra parece
-estar sendo particularmente iluminado.  O solo ï¿½ gramado, muito verde, e
-estï¿½ molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
-fato de nï¿½o haver nuvem alguma no cï¿½u o confunde.  ï¿½ fï¿½cil andar por aqui,
-pois, apesar da dificuldade de se enxergar alguma coisa, nï¿½o hï¿½
-irregularidades no chï¿½o, nem sinal de que o sol vai se pï¿½r.
+   Você está naquilo que os antigos chamavam de fenda entre mundos.  Uma
+densa névoa cobre tudo a seu redor, mas o ponto onde você se encontra parece
+estar sendo particularmente iluminado.  O solo é gramado, muito verde, e
+está molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
+fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
+pois, apesar da dificuldade de se enxergar alguma coisa, não há
+irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11403
+D3
+Só se vê névoa nessa direção.
+~
+~
+0 -1 11404
 D1
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11405
 D2
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11403
-D3
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
-~
-~
-0 -1 11404
 S
 #11405
 A Fenda Entre Mundos~
-   Vocï¿½ estï¿½ naquilo que os antigos chamavam de fenda entre mundos.  Uma
-densa nï¿½voa cobre tudo a seu redor, mas o ponto onde vocï¿½ se encontra parece
-estar sendo particularmente iluminado.  O solo ï¿½ gramado, muito verde, e
-estï¿½ molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
-fato de nï¿½o haver nuvem alguma no cï¿½u o confunde.  ï¿½ fï¿½cil andar por aqui,
-pois, apesar da dificuldade de se enxergar alguma coisa, nï¿½o hï¿½
-irregularidades no chï¿½o, nem sinal de que o sol vai se pï¿½r.
+   Você está naquilo que os antigos chamavam de fenda entre mundos.  Uma
+densa névoa cobre tudo a seu redor, mas o ponto onde você se encontra parece
+estar sendo particularmente iluminado.  O solo é gramado, muito verde, e
+está molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
+fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
+pois, apesar da dificuldade de se enxergar alguma coisa, não há
+irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
-D0
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
-~
-~
-0 -1 11403
+114.2 g 2
 D1
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11404
 D2
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11403
 D3
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11404
+D0
+Só se vê névoa nessa direção.
+~
+~
+0 -1 11403
 S
 #11406
 A Fenda Entre Mundos~
-   Vocï¿½ estï¿½ naquilo que os antigos chamavam de fenda entre mundos.  Uma
-densa nï¿½voa cobre tudo a seu redor, mas o ponto onde vocï¿½ se encontra parece
-estar sendo particularmente iluminado.  O solo ï¿½ gramado, muito verde, e
-estï¿½ molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
-fato de nï¿½o haver nuvem alguma no cï¿½u o confunde.  ï¿½ fï¿½cil andar por aqui,
-pois, apesar da dificuldade de se enxergar alguma coisa, nï¿½o hï¿½
-irregularidades no chï¿½o, nem sinal de que o sol vai se pï¿½r.
+   Você está naquilo que os antigos chamavam de fenda entre mundos.  Uma
+densa névoa cobre tudo a seu redor, mas o ponto onde você se encontra parece
+estar sendo particularmente iluminado.  O solo é gramado, muito verde, e
+está molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
+fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
+pois, apesar da dificuldade de se enxergar alguma coisa, não há
+irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11407
 D1
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11402
 D2
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11407
 D3
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11402
 S
 #11407
 A Fenda Entre Mundos~
-   Vocï¿½ estï¿½ naquilo que os antigos chamavam de fenda entre mundos.  Uma
-densa nï¿½voa cobre tudo a seu redor, mas o ponto onde vocï¿½ se encontra parece
-estar sendo particularmente iluminado.  O solo ï¿½ gramado, muito verde, e
-estï¿½ molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
-fato de nï¿½o haver nuvem alguma no cï¿½u o confunde.  ï¿½ fï¿½cil andar por aqui,
-pois, apesar da dificuldade de se enxergar alguma coisa, nï¿½o hï¿½
-irregularidades no chï¿½o, nem sinal de que o sol vai se pï¿½r.
+   Você está naquilo que os antigos chamavam de fenda entre mundos.  Uma
+densa névoa cobre tudo a seu redor, mas o ponto onde você se encontra parece
+estar sendo particularmente iluminado.  O solo é gramado, muito verde, e
+está molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
+fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
+pois, apesar da dificuldade de se enxergar alguma coisa, não há
+irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11406
 D1
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11408
 D2
 
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11406
 D3
 
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11408
 S
 #11408
 A Fenda Entre Mundos~
-   Vocï¿½ estï¿½ naquilo que os antigos chamavam de fenda entre mundos.  Uma
-densa nï¿½voa cobre tudo a seu redor, mas o ponto onde vocï¿½ se encontra parece
-estar sendo particularmente iluminado.  O solo ï¿½ gramado, muito verde, e
-estï¿½ molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
-fato de nï¿½o haver nuvem alguma no cï¿½u o confunde.  ï¿½ fï¿½cil andar por aqui,
-pois, apesar da dificuldade de se enxergar alguma coisa, nï¿½o hï¿½
-irregularidades no chï¿½o, nem sinal de que o sol vai se pï¿½r.
+   Você está naquilo que os antigos chamavam de fenda entre mundos.  Uma
+densa névoa cobre tudo a seu redor, mas o ponto onde você se encontra parece
+estar sendo particularmente iluminado.  O solo é gramado, muito verde, e
+está molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
+fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
+pois, apesar da dificuldade de se enxergar alguma coisa, não há
+irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
 
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11409
 D1
 
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11407
 D2
 
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11409
 D3
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11407
 S
 #11409
 A Fenda Entre Mundos~
-   Vocï¿½ estï¿½ naquilo que os antigos chamavam de fenda entre mundos.  Uma
-densa nï¿½voa cobre tudo a seu redor, mas o ponto onde vocï¿½ se encontra parece
-estar sendo particularmente iluminado.  O solo ï¿½ gramado, muito verde, e
-estï¿½ molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
-fato de nï¿½o haver nuvem alguma no cï¿½u o confunde.  ï¿½ fï¿½cil andar por aqui,
-pois, apesar da dificuldade de se enxergar alguma coisa, nï¿½o hï¿½
-irregularidades no chï¿½o, nem sinal de que o sol vai se pï¿½r.
+   Você está naquilo que os antigos chamavam de fenda entre mundos.  Uma
+densa névoa cobre tudo a seu redor, mas o ponto onde você se encontra parece
+estar sendo particularmente iluminado.  O solo é gramado, muito verde, e
+está molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
+fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
+pois, apesar da dificuldade de se enxergar alguma coisa, não há
+irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11408
 D1
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11410
 D2
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11408
 D3
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11410
 S
 #11410
 A Fenda Entre Mundos~
-   Vocï¿½ estï¿½ naquilo que os antigos chamavam de fenda entre mundos.  Uma
-densa nï¿½voa cobre tudo a seu redor, mas o ponto onde vocï¿½ se encontra parece
-estar sendo particularmente iluminado.  O solo ï¿½ gramado, muito verde, e
-estï¿½ molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
-fato de nï¿½o haver nuvem alguma no cï¿½u o confunde.  ï¿½ fï¿½cil andar por aqui,
-pois, apesar da dificuldade de se enxergar alguma coisa, nï¿½o hï¿½
-irregularidades no chï¿½o, nem sinal de que o sol vai se pï¿½r.
+   Você está naquilo que os antigos chamavam de fenda entre mundos.  Uma
+densa névoa cobre tudo a seu redor, mas o ponto onde você se encontra parece
+estar sendo particularmente iluminado.  O solo é gramado, muito verde, e
+está molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
+fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
+pois, apesar da dificuldade de se enxergar alguma coisa, não há
+irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11411
 D1
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11409
 D2
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11411
 D3
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11409
 S
 #11411
 A Fenda Entre Mundos~
-   Vocï¿½ estï¿½ naquilo que os antigos chamavam de fenda entre mundos.  Uma
-densa nï¿½voa cobre tudo a seu redor, mas o ponto onde vocï¿½ se encontra parece
-estar sendo particularmente iluminado.  O solo ï¿½ gramado, muito verde, e
-estï¿½ molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
-fato de nï¿½o haver nuvem alguma no cï¿½u o confunde.  ï¿½ fï¿½cil andar por aqui,
-pois, apesar da dificuldade de se enxergar alguma coisa, nï¿½o hï¿½
-irregularidades no chï¿½o, nem sinal de que o sol vai se pï¿½r.
+   Você está naquilo que os antigos chamavam de fenda entre mundos.  Uma
+densa névoa cobre tudo a seu redor, mas o ponto onde você se encontra parece
+estar sendo particularmente iluminado.  O solo é gramado, muito verde, e
+está molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
+fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
+pois, apesar da dificuldade de se enxergar alguma coisa, não há
+irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11410
 D1
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11412
 D2
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11410
 D3
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11402
 S
 #11412
 A Fenda Entre Mundos~
-   Vocï¿½ estï¿½ naquilo que os antigos chamavam de fenda entre mundos.  Uma
-densa nï¿½voa cobre tudo a seu redor, mas o ponto onde vocï¿½ se encontra parece
-estar sendo particularmente iluminado.  O solo ï¿½ gramado, muito verde, e
-estï¿½ molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
-fato de nï¿½o haver nuvem alguma no cï¿½u o confunde.  ï¿½ fï¿½cil andar por aqui,
-pois, apesar da dificuldade de se enxergar alguma coisa, nï¿½o hï¿½
-irregularidades no chï¿½o, nem sinal de que o sol vai se pï¿½r.
+   Você está naquilo que os antigos chamavam de fenda entre mundos.  Uma
+densa névoa cobre tudo a seu redor, mas o ponto onde você se encontra parece
+estar sendo particularmente iluminado.  O solo é gramado, muito verde, e
+está molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
+fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
+pois, apesar da dificuldade de se enxergar alguma coisa, não há
+irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11404
 D1
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11413
 D2
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11405
 D3
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11411
 S
 #11413
 A Fenda Entre Mundos~
-   Vocï¿½ estï¿½ naquilo que os antigos chamavam de fenda entre mundos.  Uma
-densa nï¿½voa cobre tudo a seu redor, mas o ponto onde vocï¿½ se encontra parece
-estar sendo particularmente iluminado.  O solo ï¿½ gramado, muito verde, e
-estï¿½ molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
-fato de nï¿½o haver nuvem alguma no cï¿½u o confunde.  ï¿½ fï¿½cil andar por aqui,
-pois, apesar da dificuldade de se enxergar alguma coisa, nï¿½o hï¿½
-irregularidades no chï¿½o, nem sinal de que o sol vai se pï¿½r.
+   Você está naquilo que os antigos chamavam de fenda entre mundos.  Uma
+densa névoa cobre tudo a seu redor, mas o ponto onde você se encontra parece
+estar sendo particularmente iluminado.  O solo é gramado, muito verde, e
+está molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
+fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
+pois, apesar da dificuldade de se enxergar alguma coisa, não há
+irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11414
 D1
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11402
 D2
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11401
 D3
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11412
 S
 #11414
 A Fenda Entre Mundos~
-   Vocï¿½ estï¿½ naquilo que os antigos chamavam de fenda entre mundos.  Uma
-densa nï¿½voa cobre tudo a seu redor, mas o ponto onde vocï¿½ se encontra parece
-estar sendo particularmente iluminado.  O solo ï¿½ gramado, muito verde, e
-estï¿½ molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
-fato de nï¿½o haver nuvem alguma no cï¿½u o confunde.  ï¿½ fï¿½cil andar por aqui,
-pois, apesar da dificuldade de se enxergar alguma coisa, nï¿½o hï¿½
-irregularidades no chï¿½o, nem sinal de que o sol vai se pï¿½r.
+   Você está naquilo que os antigos chamavam de fenda entre mundos.  Uma
+densa névoa cobre tudo a seu redor, mas o ponto onde você se encontra parece
+estar sendo particularmente iluminado.  O solo é gramado, muito verde, e
+está molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
+fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
+pois, apesar da dificuldade de se enxergar alguma coisa, não há
+irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11415
 D1
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11406
 D2
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11413
 D3
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11404
 S
 #11415
 A Fenda Entre Mundos~
-   Vocï¿½ estï¿½ naquilo que os antigos chamavam de fenda entre mundos.  Uma
-densa nï¿½voa cobre tudo a seu redor, mas o ponto onde vocï¿½ se encontra parece
-estar sendo particularmente iluminado.  O solo ï¿½ gramado, muito verde, e
-estï¿½ molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
-fato de nï¿½o haver nuvem alguma no cï¿½u o confunde.  ï¿½ fï¿½cil andar por aqui,
-pois, apesar da dificuldade de se enxergar alguma coisa, nï¿½o hï¿½
-irregularidades no chï¿½o, nem sinal de que o sol vai se pï¿½r.
+   Você está naquilo que os antigos chamavam de fenda entre mundos.  Uma
+densa névoa cobre tudo a seu redor, mas o ponto onde você se encontra parece
+estar sendo particularmente iluminado.  O solo é gramado, muito verde, e
+está molhado, parecendo que antes de sua chegada aqui tenha chovido, mas o
+fato de não haver nuvem alguma no céu o confunde.  É fácil andar por aqui,
+pois, apesar da dificuldade de se enxergar alguma coisa, não há
+irregularidades no chão, nem sinal de que o sol vai se pôr.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11403
 D1
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11416
 D2
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11414
 D3
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11403
 S
 #11416
 A Fenda Entre Mundos~
-   Vocï¿½ estï¿½ caminhando a muito tempo pela fenda entre mundos e, preocupado,
-desconfia que nï¿½o serï¿½ fï¿½cil sair daqui.  Nï¿½o hï¿½ nuvens no cï¿½u e o sol
-parece nï¿½o ter se movido nesse tempo todo, dando a sensaï¿½ï¿½o que vocï¿½ estï¿½
-vivendo um eterno fim de tarde.  A nï¿½voa continua densa, mas vocï¿½ caminha
-com mais seguranï¿½a agora que se acostumou ï¿½ sua presenï¿½a.
+   Você está caminhando a muito tempo pela fenda entre mundos e, preocupado,
+desconfia que não será fácil sair daqui.  Não há nuvens no céu e o sol
+parece não ter se movido nesse tempo todo, dando a sensação que você está
+vivendo um eterno fim de tarde.  A névoa continua densa, mas você caminha
+com mais segurança agora que se acostumou à sua presença.
 ~
-114 64 0 0 0 2
+114.2 g 2
 D0
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11405
 D1
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11417
 D2
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11402
 D3
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11415
 S
 #11417
 A Fenda Entre Mundos~
-   Vocï¿½ esteve caminhando por muito tempo pela fenda entre mundos quando
-percebe que a nï¿½voa a seu redor nï¿½o avanï¿½a mais, parecendo contida por uma
-barreira.  Sem saber se isso ï¿½ bom ou ruim, dï¿½ o passo que o levarï¿½ para
+   Você esteve caminhando por muito tempo pela fenda entre mundos quando
+percebe que a névoa a seu redor não avança mais, parecendo contida por uma
+barreira.  Sem saber se isso é bom ou ruim, dá o passo que o levará para
 fora da neblina e quase cai em um enorme desfiladeiro. 
-   Superado o susto, vocï¿½ tenta enxergar o outro lado do desfiladeiro, mas ï¿½
-em vï¿½o: nï¿½o hï¿½ nada alï¿½m de uma estranha escuridï¿½o que se encontra com os
-cï¿½us na linha do horizonte.  Tambï¿½m nï¿½o parece haver um nada abaixo do
-desfiladeiro, alï¿½m de escuridï¿½o.
+   Superado o susto, você tenta enxergar o outro lado do desfiladeiro, mas é
+em vão: não há nada além de uma estranha escuridão que se encontra com os
+céus na linha do horizonte.  Também não parece haver um nada abaixo do
+desfiladeiro, além de escuridão.
 ~
-114 262208 0 0 0 2
+114.3 sg 2
+OX magik "*avarohana*" unlock east
+OX magik "*avarohana*" open east
 D0
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11404
-D1
-Vocï¿½ vï¿½ apenas a escuridï¿½o do desfiladeiro.
-~
-a escuridï¿½o~
-0 -1 11418
 D2
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11401
+D1
+Você vê apenas a escuridão do desfiladeiro.
+~
+a escuridão~
+:n 2 a escuridão
+abcdh -1 11418
 D3
-Sï¿½ se vï¿½ nï¿½voa nessa direï¿½ï¿½o.
+Só se vê névoa nessa direção.
 ~
 ~
 0 -1 11416
 S
 #11418
 O Caminho dos Submundos~
-   Vocï¿½ conseguiu reverter a magia que ocultava a escada para os submundos,
-revelando-a e descendo lentamente por cada um de seus degraus.  ï¿½ tudo
-muito estranho, porque vocï¿½ definitivamente nï¿½o consegue ver do que ï¿½ feita
-a escada: vocï¿½ apenas sente que estï¿½ pisando em algo sï¿½lido, mas tï¿½o escuro
-quanto o desfiladeiro abaixo.  A parca iluminaï¿½ï¿½o que vocï¿½ possui nï¿½o ï¿½
-suficiente para ajudï¿½-lo em seu descenso, sendo a ï¿½ltima certeza aqui ï¿½ a de
-que vocï¿½ ainda pode voltar.
+   Você conseguiu reverter a magia que ocultava a escada para os submundos,
+revelando-a e descendo lentamente por cada um de seus degraus.  É tudo
+muito estranho, porque você definitivamente não consegue ver do que é feita
+a escada: você apenas sente que está pisando em algo sólido, mas tão escuro
+quanto o desfiladeiro abaixo.  A parca iluminação que você possui não é
+suficiente para ajudá-lo em seu descenso, sendo a última certeza aqui é a de
+que você ainda pode voltar.
 ~
-114 262252 0 0 0 1
+114.4 dfgsc 1
 D3
-Ali estï¿½ o caminho de volta.
+Ali está o caminho de volta.
 ~
 ~
 0 -1 11417
@@ -582,366 +585,376 @@ As escadas continuam a descer.
 S
 #11419
 O Caminho dos Submundos~
-   Vocï¿½ estï¿½ descendo, por uma escada que nï¿½o se vï¿½, em direï¿½ï¿½o a um lugar
-que vocï¿½ nunca havia ouvido falar antes.  A escuridï¿½o aqui ï¿½ tï¿½o intensa
-quanto o lugar completamente vazio que vocï¿½ a pouco "visitara", mas nï¿½o hï¿½
-silï¿½ncio, jï¿½ que a cada degrau que vocï¿½ desce, uma estrondosa lufada de
-vento frio tenta o derrubar. Ainda hï¿½ tempo para voltar.
+   Você está descendo, por uma escada que não se vê, em direção a um lugar
+que você nunca havia ouvido falar antes.  A escuridão aqui é tão intensa
+quanto o lugar completamente vazio que você a pouco "visitara", mas não há
+silêncio, já que a cada degrau que você desce, uma estrondosa lufada de
+vento frio tenta o derrubar. Ainda há tempo para voltar.
 ~
-114 393324 0 0 0 1
+114.4 dfgrsc 1
+D4
+As escadas o levam até o início do caminho.
+~
+~
+0 -1 11418
 D1
 O lance de escadas parece terminar ali.
 ~
 ~
 0 -1 11420
-D4
-As escadas o levam atï¿½ o inï¿½cio do caminho.
-~
-~
-0 -1 11418
 S
 #11420
 O Tribunal de Yama~
-   Vocï¿½ mal pisa no ï¿½ltimo degrau do primeiro lance da escada quando tudo
-parece se modificar.  ï¿½ sua frente, um enorme salï¿½o de paredes de pedra
-negra, tï¿½o altas que nï¿½o se vï¿½ o teto, surgiu como se atï¿½ agora vocï¿½ fosse
-cego e milagrosamente tivesse recuperado a visï¿½o.  Hï¿½ estï¿½tuas de pedra, num
-verdadeiro exï¿½rcito de guerreiros, nas centenas de nichos das paredes,
+   Você mal pisa no último degrau do primeiro lance da escada quando tudo
+parece se modificar.  À sua frente, um enorme salão de paredes de pedra
+negra, tão altas que não se vê o teto, surgiu como se até agora você fosse
+cego e milagrosamente tivesse recuperado a visão.  Há estátuas de pedra, num
+verdadeiro exército de guerreiros, nas centenas de nichos das paredes,
 parecendo que a qualquer momento elas podem deixar seus lugares e entrar em
-aï¿½ï¿½o, protegendo a paz do lugar.  Altos postes de aï¿½o negro mantï¿½m fixas
-grandes tochas que iluminam o salï¿½o.  Uma estante, parecendo tï¿½o infinita
-quanto as paredes do lugar, ocupa todo um lado do salï¿½o, estando ela
+ação, protegendo a paz do lugar.  Altos postes de aço negro mantêm fixas
+grandes tochas que iluminam o salão.  Uma estante, parecendo tão infinita
+quanto as paredes do lugar, ocupa todo um lado do salão, estando ela
 completamente lotada de livros e pergaminhos de todos os tipos e tamanhos.
 Milhares de seres, formando uma fila, aguardam que um velho carrancudo, em
-pï¿½, e um assustador ser, sentado atrï¿½s de uma gigantesca escrivaninha, faï¿½am
-alguma coisa (e que vocï¿½ nï¿½o sabe o que ï¿½...).
+pé, e um assustador ser, sentado atrás de uma gigantesca escrivaninha, façam
+alguma coisa (e que você não sabe o que é...).
 ~
-114 393320 0 0 0 0
+114.4 drfgs 0
 D3
-Vocï¿½ vï¿½ as escadas.
+Você vê as escadas.
 ~
 ~
 0 -1 11419
 D5
-Vocï¿½ vï¿½ um novo lance de escadas.
+Você vê um novo lance de escadas.
 ~
 ~
 0 -1 11421
 S
 #11421
 A Entrada de Sutala~
-   Vocï¿½ desce mais um lance de escadas e fica frente ï¿½ frente a uma enorme
+   Você desce mais um lance de escadas e fica frente à frente a uma enorme
 porta de pedra bloqueando o caminho a leste.  Ao lado dessa porta, uma
-gigantesca lista escreve, em quase todas as lï¿½nguas possï¿½veis (pelo menos ï¿½
-o que vocï¿½ deduz) o nome do lugar: Sutala.  Vocï¿½ percebe que hï¿½ ainda muitos
+gigantesca lista escreve, em quase todas as línguas possíveis (pelo menos é
+o que você deduz) o nome do lugar: Sutala.  Você percebe que há ainda muitos
 degraus a serem descidos.
 ~
-114 393324 0 0 0 1
-D1
-Vocï¿½ vï¿½ a porta de pedra.
-~
-porta pedra~
-0 -1 11422
+114.4 dfgrsc 1
 D4
 O tribunal de Yama fica ali.
 ~
 ~
 0 -1 11420
 D5
-As escadas parecem nï¿½o acabar...
+As escadas parecem não acabar...
 ~
 ~
 0 -1 11423
+D1
+Você vê a porta de pedra.
+~
+porta pedra~
+:n 2 a porta de pedra
+ach -1 11422
 E
 porta pedra~
-A gigantesca porta de pedra cinzenta parece nï¿½o ter fechadura.  Vocï¿½ se
+A gigantesca porta de pedra cinzenta parece não ter fechadura.  Você se
 afasta um pouco dela e, vendo-a por inteiro, percebe que ela foi esculpida
-para parecer-se com a cabeï¿½a de um gigante de pedra.  Talvez a chave do
-enigma esteja aï¿½.
+para parecer-se com a cabeça de um gigante de pedra.  Talvez a chave do
+enigma esteja aí.
 ~
 S
 #11422
 Sutala?~
-   Vocï¿½ nï¿½o estï¿½ em Sutala...  Vocï¿½ simplesmente foi enganado por "alguï¿½m"
-muito brincalhï¿½o e foi trazido a um lugar realmente esquisito: parece ser o
-estï¿½mago de um gigante de pedra.  Boa sorte na prï¿½xima vez...
+   Você não está em Sutala...  Você simplesmente foi enganado por "alguém"
+muito brincalhão e foi trazido a um lugar realmente esquisito: parece ser o
+estômago de um gigante de pedra.  Boa sorte na próxima vez...
 ~
-114 262252 0 0 0 0
+114.5 dfgsc 0
 S
 #11423
 A Entrada de Vitalaloka~
-   Vocï¿½ desce ainda mais pela escada e para em frente a uma minï¿½scula porta
-de madeira.  Ao lado da pequena porta, uma imensa lousa de pedra ï¿½ mantida
-em pï¿½ por alguma forï¿½a invisï¿½vel, sendo possï¿½vel ler sobre sua superfï¿½cie um
-infindï¿½vel nï¿½mero de palavras que devem significar a mesma coisa em diversas
-lï¿½nguas: Vitalaloka.  Ainda ï¿½ possï¿½vel descer e subir degraus.
+   Você desce ainda mais pela escada e para em frente a uma minúscula porta
+de madeira.  Ao lado da pequena porta, uma imensa lousa de pedra é mantida
+em pé por alguma força invisível, sendo possível ler sobre sua superfície um
+infindável número de palavras que devem significar a mesma coisa em diversas
+línguas: Vitalaloka.  Ainda é possível descer e subir degraus.
 ~
-114 393324 0 0 0 1
-D3
-Vocï¿½ vï¿½ a porta de madeira.
-~
-madeira porta~
-0 -1 11424
+114.4 dfgsrc 1
 D4
 As escadas seguem por ali.
 ~
 ~
 0 -1 11421
 D5
-As escadas parecem nï¿½o acabar...
+As escadas parecem não acabar...
 ~
 ~
 0 -1 11425
+D3
+Você vê a porta de madeira.
+~
+madeira porta~
+:n 2 a porta de madeira
+ach -1 11424
 E
 porta madeira~
-A madeira da porta parece ser mais resistente que o comum.  Nï¿½o hï¿½ fechadura
-alguma nela, fazendo com que vocï¿½ nï¿½o tenha a mï¿½nima idï¿½ia de como abrir.
-Vocï¿½ percebe que hï¿½ uma estranha mancha negra nela que, mudando de forma
+A madeira da porta parece ser mais resistente que o comum.  Não há fechadura
+alguma nela, fazendo com que você não tenha a mínima idéia de como abrir.
+Você percebe que há uma estranha mancha negra nela que, mudando de forma
 constantemente, parece indicar as letras de alguma palavra ou frase.
-Infelizmente ï¿½ rï¿½pido demais para seus olhos entenderem...
+Infelizmente é rápido demais para seus olhos entenderem...
 ~
 S
 #11424
 Vitalaloka?~
-   Vocï¿½ nï¿½o estï¿½ em Vitalaloka...  Na verdade, foi novamente enganado e veio
-parar no punho cerrado de um demï¿½nio de sombra.  Talvez nï¿½o lhe aconteï¿½a
+   Você não está em Vitalaloka...  Na verdade, foi novamente enganado e veio
+parar no punho cerrado de um demônio de sombra.  Talvez não lhe aconteça
 nada dessa vez...
 ~
-114 262252 0 0 0 0
+114.5 dfgsc 0
 S
 #11425
 A Entrada de Talatala~
-   Ao descer mais um lance da escada, vocï¿½ para bem em frente a um escuro e
+   Ao descer mais um lance da escada, você para bem em frente a um escuro e
 enorme buraco em uma parede.  Um forte vento sai do buraco, impedindo que
-vocï¿½ se aproxime muito.  No chï¿½o de pedra, ainda que um pouco escondidas
-pela poeira, vocï¿½ repara em uma profusï¿½o de nomes em vï¿½rias lï¿½nguas, estando
-escrito Talatala nas que vocï¿½ conhece.  A escada continua a descer.
+você se aproxime muito.  No chão de pedra, ainda que um pouco escondidas
+pela poeira, você repara em uma profusão de nomes em várias línguas, estando
+escrito Talatala nas que você conhece.  A escada continua a descer.
 ~
-114 262252 0 0 0 1
-D1
-Vocï¿½ vï¿½ um enorme buraco.
-~
-buraco enorme~
-0 -1 11426
+114.4 dfgsc 1
 D4
 As escadas seguem por ali.
 ~
 ~
 0 -1 11423
 D5
-As escadas parecem nï¿½o acabar...
+As escadas parecem não acabar...
 ~
 ~
 0 -1 11427
+D1
+Você vê um enorme buraco.
+~
+buraco enorme~
+:n 1 o enorme buraco
+ach -1 11426
 E
 porta buraco~
-   Esse buraco ï¿½, provavelmente, a entrada para Talatala mas, devido ï¿½ forï¿½a
-do vento, serï¿½ impossï¿½vel se aventurar por esse mundo.  A menos que vocï¿½
+   Esse buraco é, provavelmente, a entrada para Talatala mas, devido à força
+do vento, será impossível se aventurar por esse mundo.  A menos que você
 consiga parar o vento...
 ~
 S
 #11426
 Talatala?~
-   Nï¿½o, nï¿½o ï¿½ Talatala...  Vocï¿½ foi, na verdade, trazido para o olho de um
-demï¿½nio de furacï¿½o, que parece estar muito incomodado com sua presenï¿½a.  A
-culpa ï¿½ sï¿½ sua...
+   Não, não é Talatala...  Você foi, na verdade, trazido para o olho de um
+demônio de furacão, que parece estar muito incomodado com sua presença.  A
+culpa é só sua...
 ~
-114 262252 0 0 0 0
+114.5 dfgsc 0
 S
 #11427
 A Entrada de Mahatala~
-   Assim que desce mais alguns degraus, vocï¿½ se depara uma estreita e alta
-porta prateada.  Um longo pergaminho repleto de palavras em diversas lï¿½nguas
-foi afixado nela, sendo a escrita na sua o nome Mahatala.  Fora isso, hï¿½
+   Assim que desce mais alguns degraus, você se depara uma estreita e alta
+porta prateada.  Um longo pergaminho repleto de palavras em diversas línguas
+foi afixado nela, sendo a escrita na sua o nome Mahatala.  Fora isso, há
 apenas a escada que continua descendo.
 ~
-114 262252 0 0 0 1
-D3
-Vocï¿½ vï¿½ a porta prateada.
-~
-prateada porta~
-0 -1 11428
+114.4 dfgsc 1
 D4
 As escadas seguem por ali.
 ~
 ~
 0 -1 11425
 D5
-As escadas parecem nï¿½o acabar...
+As escadas parecem não acabar...
 ~
 ~
 0 -1 11429
+D3
+Você vê a porta prateada.
+~
+prateada porta~
+:n 2 a porta prateada
+ach -1 11428
 E
 porta preateada~
-Ela parece ser feita de prata, mas, ao contrï¿½rio do que aconteceria com uma
-de prata comum, nï¿½o hï¿½ nenhum escurecimento nela.  Sua superfï¿½cie lisa e
+Ela parece ser feita de prata, mas, ao contrário do que aconteceria com uma
+de prata comum, não há nenhum escurecimento nela.  Sua superfície lisa e
 fria parece mais um perfeito espelho.  E sem fechadura alguma.
 ~
 S
 #11428
 Mahatala?~
-   Vocï¿½, ao contrï¿½rio do que pensava, nï¿½o estï¿½ em Mahatala.  Simplesmente
+   Você, ao contrário do que pensava, não está em Mahatala.  Simplesmente
 foi preso a um espelho, tendo de viver agora vendo tudo que acontece do lado
 de fora desse mundo.  Que pena...
 ~
-114 262252 0 0 0 0
+114.5 dfgsc 0
 S
 #11429
 A Entrada de Raratala~
-   Vocï¿½ desce ainda mais os degraus da escada e pï¿½ra quando encontra uma
-larga e baixa porta dourada.  Hï¿½, ao lado da porta, uma enorme placa repleta
-de, que surpresa..., palavras em lï¿½nguas diversas.  A que estï¿½ na sua diz:
-Raratala.  Os degraus da escada permitem que vocï¿½ continue a descer ou
+   Você desce ainda mais os degraus da escada e pára quando encontra uma
+larga e baixa porta dourada.  Há, ao lado da porta, uma enorme placa repleta
+de, que surpresa..., palavras em línguas diversas.  A que está na sua diz:
+Raratala.  Os degraus da escada permitem que você continue a descer ou
 subir.
 ~
-114 262252 0 0 0 1
-D1
-Vocï¿½ vï¿½ a porta dourada.
-~
-dourada porta~
-0 -1 11430
+114.4 dfgsc 1
 D4
 As escadas seguem por ali.
 ~
 ~
 0 -1 11427
 D5
-As escadas parecem nï¿½o acabar...
+As escadas parecem não acabar...
 ~
 ~
 0 -1 11431
+D1
+Você vê a porta dourada.
+~
+dourada porta~
+:n 2 a porta dourada
+ach -1 11430
 E
 porta dourada~
-O dourado da porta mais se assemelha ï¿½ cor do bronze antigo do que do ouro,
-nï¿½o sendo tï¿½o brilhante devido ao desgaste que sua superfï¿½cie parace ter
-sofrido.  Olhando bem, vocï¿½ repara que alguma coisa deve ter tentado
-derrubar essa porta (sem fechadura) pois ela estï¿½ com partes amassadas,
-arranhadas e com marcas de sangue.  Quem tentou arrombï¿½-la provavelmente nï¿½o
+O dourado da porta mais se assemelha à cor do bronze antigo do que do ouro,
+não sendo tão brilhante devido ao desgaste que sua superfície parace ter
+sofrido.  Olhando bem, você repara que alguma coisa deve ter tentado
+derrubar essa porta (sem fechadura) pois ela está com partes amassadas,
+arranhadas e com marcas de sangue.  Quem tentou arrombá-la provavelmente não
 teve sucesso.
 ~
 S
 #11430
 Raratala?~
-   Vocï¿½ pensa que conseguiu chegar a Raratala, mas foi mandando direto para
-o ninho de um demï¿½nio de bronze.  Vocï¿½ estarï¿½ seguro apenas enquanto ele nï¿½o
+   Você pensa que conseguiu chegar a Raratala, mas foi mandando direto para
+o ninho de um demônio de bronze.  Você estará seguro apenas enquanto ele não
 volta.
 ~
-114 262252 0 0 0 0
+114.5 dfgsc 0
 S
 #11431
 A Entrada de Atalaloka~
-   Vocï¿½ desce um lance da escada e se encontra em frente a uma parede em que
-uma grande retï¿½ngulo foi pintado com tinta branca.  Dentro do retï¿½ngulo,
-vocï¿½ vï¿½, em tinta vermelha, a representaï¿½ï¿½o de palavras das mais diversas
-lï¿½nguas, sendo que a que estï¿½ na sua diz: Atalaloka.  Fora isso, vocï¿½ vï¿½
+   Você desce um lance da escada e se encontra em frente a uma parede em que
+uma grande retângulo foi pintado com tinta branca.  Dentro do retângulo,
+você vê, em tinta vermelha, a representação de palavras das mais diversas
+línguas, sendo que a que está na sua diz: Atalaloka.  Fora isso, você vê
 apenas a escada que segue para cima e para baixo.
 ~
-114 262252 0 0 0 1
-D3
-Vocï¿½ vï¿½ o estranho retï¿½ngulo.
-~
-retï¿½ngulo branco~
-0 -1 11432
+114.4 dfgsc 1
 D4
 As escadas seguem por ali.
 ~
 ~
 0 -1 11429
 D5
-As escadas parecem nï¿½o acabar...
+As escadas parecem não acabar...
 ~
 ~
 0 -1 11433
+D3
+Você vê o estranho retângulo.
+~
+retângulo branco~
+:n 1 o retângulo branco
+ach -1 11432
 E
-retï¿½ngulo porta branco~
-Vocï¿½ conclui que essa deve ser a porta para Atalaloka.  Infelizmente, nem no
-desenho hï¿½ uma fechadura, o que dificulta qualquer tentativa sua de entrar
+retângulo porta branco~
+Você conclui que essa deve ser a porta para Atalaloka.  Infelizmente, nem no
+desenho há uma fechadura, o que dificulta qualquer tentativa sua de entrar
 em Atalaloka.
 ~
 S
 #11432
 Atalaloka?~
-   Vocï¿½ pensou entrar em Atalaloka mas, por brincadeira de "alguï¿½m", foi
-parar na pintura de uma das paredes de um demï¿½nio de neve.  Nada bom...
+   Você pensou entrar em Atalaloka mas, por brincadeira de "alguém", foi
+parar na pintura de uma das paredes de um demônio de neve.  Nada bom...
 ~
-114 262252 0 0 0 0
+114.5 dfgsc 0
 S
 #11433
 A Entrada de Patala~
-   Vocï¿½ desceu o que parece ser o ï¿½ltimo lance de degraus do caminho que
-leva para os desconhecidos mundos abaixo do cï¿½u e da terra.  Hï¿½, ï¿½ sua
+   Você desceu o que parece ser o último lance de degraus do caminho que
+leva para os desconhecidos mundos abaixo do céu e da terra.  Há, à sua
 frente, uma imensa porta de pedra esverdeada, muito bem polida, bloqueando
 sua passagem.  Milhares de pedras arredondadas, parecendo pequenos seixos de
-vidro verde-musgo, cobrem o chï¿½o, tilintando ï¿½ medida que vocï¿½ pisa sobre
-elas.  Vocï¿½ pode subir pela escada ou, caso consiga abrir a porta, seguir a
-leste, para o Sï¿½timo Submundo.
+vidro verde-musgo, cobrem o chão, tilintando à medida que você pisa sobre
+elas.  Você pode subir pela escada ou, caso consiga abrir a porta, seguir a
+leste, para o Sétimo Submundo.
 ~
-114 393324 0 0 0 1
-D1
-Vocï¿½ vï¿½ a porta de jade.
-~
-jade porta~
-0 -1 11434
+114.4 dfrgsc 1
+OX magik "Gl[oó]ria a Sesha" unlock east
+OX magik "Gl[oó]ria a Sesha" open east
 D4
 As escadas seguem por ali.
 ~
 ~
 0 -1 11431
-E
-seixos~
-Em cada um dos seixos vocï¿½ percebe haver uma pequena inscriï¿½ï¿½o.  Algumas
-vocï¿½ entende, outras nï¿½o. Talvez vocï¿½ consiga pegar alguns deles.
+D1
+Você vê a porta de jade.
 ~
+jade porta~
+:n 2 a porta de jade
+abch -1 11434
 E
 porta jade verde~
-Vocï¿½ fica encantado com essa porta que parece ser feita por algum artista.
-A pedra de que foi feita provavelmente ï¿½ jade, o que faria com que vocï¿½
-esteja olhando para um dos maiores blocos da pedra que deva jï¿½ ter existido.
-Os entalhes sobre sua superfï¿½cie formam uma enorme cobra de milhares de
-cabeï¿½as que parece envolver uma grande esfera com seu corpo.  Uma sensaï¿½ï¿½o
+Você fica encantado com essa porta que parece ser feita por algum artista.
+A pedra de que foi feita provavelmente é jade, o que faria com que você
+esteja olhando para um dos maiores blocos da pedra que deva já ter existido.
+Os entalhes sobre sua superfície formam uma enorme cobra de milhares de
+cabeças que parece envolver uma grande esfera com seu corpo.  Uma sensação
 de muito respeito por esta figura invade seu ser.
+~
+E
+seixos~
+Em cada um dos seixos você percebe haver uma pequena inscrição.  Algumas
+você entende, outras não. Talvez você consiga pegar alguns deles.
 ~
 S
 #11434
-O Sï¿½timo Submundo~
-   Vocï¿½ estï¿½ do outro lado da sï¿½tima porta para os submundos.  Desse lado
-vocï¿½ vï¿½ que a grande peï¿½a de jade parece uma incrustaï¿½ï¿½o numa montanha
-extremamente alta cujo forma lembra a de uma coroa.  Os cï¿½us aqui parecem
-diferentes do que vocï¿½ conhece: as nuvens aparentam mais solidez, as cores
-sï¿½o mais ricas, o azul ï¿½ mais violï¿½ceo que o normal.  Rodeado por um mar de
-rochas, vocï¿½ procura um caminho a ser seguido.  Vï¿½ cadeias de montanhas por
-todos os lados, parecendo encontrar os cï¿½us na linha do horizonte,
-majestosas com seus picos salpicados de neve, mas nenhuma tï¿½o alta como a
-"coroa".  Hï¿½ o que parece ser uma trilha entre as rochas, seguindo leste
-atï¿½ encontrar-se com uma muralha tï¿½o extensa quanto as cordilheiras.
+O Sétimo Submundo~
+   Você está do outro lado da sétima porta para os submundos.  Desse lado
+você vê que a grande peça de jade parece uma incrustação numa montanha
+extremamente alta cujo forma lembra a de uma coroa.  Os céus aqui parecem
+diferentes do que você conhece: as nuvens aparentam mais solidez, as cores
+são mais ricas, o azul é mais violáceo que o normal.  Rodeado por um mar de
+rochas, você procura um caminho a ser seguido.  Vê cadeias de montanhas por
+todos os lados, parecendo encontrar os céus na linha do horizonte,
+majestosas com seus picos salpicados de neve, mas nenhuma tão alta como a
+"coroa".  Há o que parece ser uma trilha entre as rochas, seguindo leste
+até encontrar-se com uma muralha tão extensa quanto as cordilheiras.
 ~
-114 64 0 0 0 2
+114.6 g 2
+D3
+Você vê a porta de jade.
+~
+porta jade~
+:n 2 a porta de jade
+ac -1 11433
 D1
 A trilha segue entre as rochas.
 ~
 ~
 0 -1 11435
-D3
-Vocï¿½ vï¿½ a porta de jade.
-~
-porta jade~
-0 -1 11433
 E
 porta jade~
-Desse lado ela possui maï¿½aneta...
+Desse lado ela possui maçaneta...
 ~
 S
 #11435
 A Trilha Entre as Rochas~
-   Vocï¿½ segue por uma trilha plana que corta as duras rochas que cobrem a
-regiï¿½o da entrada do Sï¿½timo Submundo.  Admirando a paisagem, vocï¿½ se
-pergunta se hï¿½ algo embaixo das enorme pedras, que parecem ter sido
-espalhadas sobre o solo por mï¿½os de gigantes.  A trilha parece ter sido
-feita pelas mesmas pessoas que cobriram o chï¿½o com as pedras, pois, tambï¿½m
-de pedra, ï¿½ impecavelmente encaixada entre elas, nï¿½o havendo nenhuma
-irregularidade em sua superfï¿½cie.  Vocï¿½ pode seguir leste e oeste.
+   Você segue por uma trilha plana que corta as duras rochas que cobrem a
+região da entrada do Sétimo Submundo.  Admirando a paisagem, você se
+pergunta se há algo embaixo das enorme pedras, que parecem ter sido
+espalhadas sobre o solo por mãos de gigantes.  A trilha parece ter sido
+feita pelas mesmas pessoas que cobriram o chão com as pedras, pois, também
+de pedra, é impecavelmente encaixada entre elas, não havendo nenhuma
+irregularidade em sua superfície.  Você pode seguir leste e oeste.
 ~
-114 64 0 0 0 2
+114.6 g 2
 D1
 A trilha segue entre as rochas.
 ~
@@ -955,14 +968,14 @@ A trilha segue entre as rochas.
 S
 #11436
 A Trilha Entre as Rochas~
-   Vocï¿½ caminha por uma trilha plana que segue entre as enormes rochas que
-cobrem a regiï¿½o da entrada do Sï¿½timo Submundo.  Daqui vocï¿½ vï¿½ com mais
-clareza a porta que separa esse mundo dos outros, parecendo que ela ï¿½ uma
+   Você caminha por uma trilha plana que segue entre as enormes rochas que
+cobrem a região da entrada do Sétimo Submundo.  Daqui você vê com mais
+clareza a porta que separa esse mundo dos outros, parecendo que ela é uma
 grande gema incrustrada em uma coroa negra...  Esse pensamento parece o
-perseguir, dando-lhe a impressï¿½o de que vocï¿½ nï¿½o estï¿½ totalmente errado.  A
+perseguir, dando-lhe a impressão de que você não está totalmente errado.  A
 trilha continua a leste e oreste.
 ~
-114 64 0 0 0 2
+114.6 g 2
 D1
 A trilha segue entre as rochas.
 ~
@@ -976,12 +989,12 @@ A trilha segue entre as rochas.
 S
 #11437
 A Trilha Entre as Rochas~
-   Vocï¿½ caminha por uma trilha plana entre as enormes rochas que cobrem a
-regiï¿½o da entrada do Sï¿½timo Submundo.  A porta de entrada (ou saï¿½da) desse
-mundo fica a alguma distï¿½ncia, a oeste, enquanto a trilha parece seguir atï¿½
+   Você caminha por uma trilha plana entre as enormes rochas que cobrem a
+região da entrada do Sétimo Submundo.  A porta de entrada (ou saída) desse
+mundo fica a alguma distância, a oeste, enquanto a trilha parece seguir até
 a muralha, um pouco mais a frente, a nordeste.
 ~
-114 64 0 0 0 2
+114.6 g 2
 D1
 A trilha segue entre as rochas.
 ~
@@ -995,44 +1008,44 @@ A trilha segue entre as rochas.
 S
 #11438
 A Trilha Entre as Rochas~
-   Vocï¿½ caminha por uma trilha plana entre as enormes rochas que cobrem a
-regiï¿½o da entrada do Sï¿½timo Submundo.  A porta de entrada (ou saï¿½da) desse
-mundo fica a alguma distï¿½ncia, a oeste, enquanto a trilha parece seguir atï¿½
+   Você caminha por uma trilha plana entre as enormes rochas que cobrem a
+região da entrada do Sétimo Submundo.  A porta de entrada (ou saída) desse
+mundo fica a alguma distância, a oeste, enquanto a trilha parece seguir até
 a muralha, um pouco mais a frente, a norte.
 ~
-114 64 0 0 0 2
-D0
-A trilha segue entre as rochas.
-~
-~
-0 -1 11439
+114.6 g 2
 D3
 A trilha segue entre as rochas.
 ~
 ~
 0 -1 11437
+D0
+A trilha segue entre as rochas.
+~
+~
+0 -1 11439
 S
 #11439
 A Trilha Entre as Rochas~
-   Vocï¿½ estï¿½ parado em frente a um pequeno pï¿½tio que leva a um portï¿½o na
-muralha.  As rochas que cobriam toda regiï¿½o param exatamente no caminho que
+   Você está parado em frente a um pequeno pátio que leva a um portão na
+muralha.  As rochas que cobriam toda região param exatamente no caminho que
 segue ao lado dos altos muros negros, permitindo que se caminhe
-tranqï¿½ilamente (?) por ali.  Tentando descobrir atï¿½ onde a construï¿½ï¿½o vai,
-vocï¿½ forï¿½a seus olhos para atï¿½ onde a vista alcanï¿½a e descobre que ela
-parece nï¿½o terminar.  ï¿½ possï¿½vel ainda ver, ao longo da muralha postos onde
-estranhos seres montam guarda.  Mas a visï¿½o do que estï¿½ a norte ï¿½ que o
+tranqüilamente (?) por ali.  Tentando descobrir até onde a construção vai,
+você força seus olhos para até onde a vista alcança e descobre que ela
+parece não terminar.  É possível ainda ver, ao longo da muralha postos onde
+estranhos seres montam guarda.  Mas a visão do que está a norte é que o
 fascina mais...
 ~
-114 64 0 0 0 2
-D0
-Vocï¿½ vï¿½ um portï¿½o na muralha.
-~
-~
-0 -1 11500
+114.6 g 2
 D3
 A trilha segue entre as rochas.
 ~
 ~
 0 -1 11438
+D0
+Você vê um portão na muralha.
+~
+~
+0 -1 11500
 S
 $~
