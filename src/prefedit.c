@@ -232,7 +232,7 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
   send_to_char(d->character, "%s7%s) Mapa Auto    %s[%s%3s%s]\r\n"
                              "%s8%s) Chave Auto   %s[%s%3s%s]\r\n"
                              "%s9%s) Porta Auto   %s[%s%3s%s]\r\n"
-                              "%sZ%s) Hitbar   %s[%s%3s%s]\r\n"
+                              "%sZ%s) Hitbar   %s[%s%3s%s]\r\n",
 /* Line 7 - automap */
              CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), PREFEDIT_FLAGGED(PRF_AUTOMAP) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
              ONOFF(PREFEDIT_FLAGGED(PRF_AUTOMAP)), CCCYN(d->character, C_NRM),
