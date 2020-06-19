@@ -8,23 +8,23 @@ oeste, onde pode-se ver muitas casas.
 ~
 124 0 1
 ON z124
-D N
+D 0
 ~
 ~
 0 -1 12401
-D S
+D 2
 ~
 ~
 0 -1 12402
-D E
+D 1
 ~
 ~
 0 -1 12411
-D W
+D 3
 ~
 ~
 0 -1 12410
-D U
+D 4
 Um estranho portal flutua sobre você.  Você pode ver uma estrada através do
 portal.
 ~
@@ -38,19 +38,19 @@ Um calafrio toma conta de seu corpo.  A Rua de Yama segue para leste e para
 oeste, onde pode-se ver muitas casas.
 ~
 124 0 1
-D N
+D 0
 ~
 ~
 0 -1 12403
-D S
+D 2
 ~
 ~
 0 -1 12400
-D E
+D 1
 ~
 ~
 0 -1 12421
-D W
+D 3
 ~
 ~
 0 -1 12420
@@ -62,19 +62,19 @@ O brilho do Sol parece mais intenso nessa praça.  A Rua de Surya segue para
 leste e para oeste, onde pode-se ver muitas casas.
 ~
 124 0 1
-D N
+D 0
 ~
 ~
 0 -1 12400
-D S
+D 2
 ~
 ~
 0 -1 12404
-D E
+D 1
 ~
 ~
 0 -1 12431
-D W
+D 3
 ~
 ~
 0 -1 12430
@@ -85,15 +85,15 @@ A Praça de Puchan~
 de Puchan segue para leste e para oeste, onde pode-se ver muitas casas.
 ~
 124 0 1
-D S
+D 2
 ~
 ~
 0 -1 12401
-D E
+D 1
 ~
 ~
 0 -1 12441
-D W
+D 3
 ~
 ~
 0 -1 12440
@@ -104,15 +104,15 @@ A Praça de Siva~
 de Siva segue para leste e para oeste, onde pode-se ver muitas casas.
 ~
 124 0 1
-D N
+D 0
 ~
 ~
 0 -1 12402
-D E
+D 1
 ~
 ~
 0 -1 12451
-D W
+D 3
 ~
 ~
 0 -1 12450
@@ -124,19 +124,19 @@ Para leste e para oeste está a rua de Vayu, para norte está a rua de Yama e
 para sul está a rua de Surya.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12419
-D E
+D 1
 ~
 ~
 0 -1 12418
-D N
+D 0
 ~
 ~
 0 -1 12406
-D S
+D 2
 ~
 ~
 0 -1 12407
@@ -148,19 +148,19 @@ Para leste e para oeste está a rua de Yama, para sul está a rua de Vayu e
 para norte está a rua de Puchan.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12429
-D E
+D 1
 ~
 ~
 0 -1 12428
-D N
+D 0
 ~
 ~
 0 -1 12408
-D S
+D 2
 ~
 ~
 0 -1 12405
@@ -172,19 +172,19 @@ Para leste e para oeste está a rua de Surya, para norte está a rua de Vayu e
 para sul está a rua de Siva.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12439
-D E
+D 1
 ~
 ~
 0 -1 12438
-D N
+D 0
 ~
 ~
 0 -1 12405
-D S
+D 2
 ~
 ~
 0 -1 12409
@@ -195,15 +195,15 @@ Um Cruzamento de Ruas~
 Para leste e para oeste está a rua de Puchan e para sul está a rua de Yama.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12449
-D E
+D 1
 ~
 ~
 0 -1 12448
-D S
+D 2
 ~
 ~
 0 -1 12406
@@ -214,15 +214,15 @@ Um Cruzamento de Ruas~
 Para leste e para oeste está a rua de Siva e para norte está a rua de Surya.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12459
-D E
+D 1
 ~
 ~
 0 -1 12458
-D N
+D 0
 ~
 ~
 0 -1 12407
@@ -236,20 +236,20 @@ incomodar.
 para oeste, e a praça de Vayu pode ser vista a leste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12412
-D E
+D 1
 ~
 ~
 0 -1 12400
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12500
-D S
+D 2
 ~
 porta~
 :n 2
@@ -264,20 +264,20 @@ incomodar.
 para leste, e a praça de Vayu pode ser vista a oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12400
-D E
+D 1
 ~
 ~
 0 -1 12413
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12502
-D S
+D 2
 ~
 porta~
 :n 2
@@ -292,20 +292,20 @@ incomodar.
 para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12414
-D E
+D 1
 ~
 ~
 0 -1 12410
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12504
-D S
+D 2
 ~
 porta~
 :n 2
@@ -320,20 +320,20 @@ incomodar.
 para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12411
-D E
+D 1
 ~
 ~
 0 -1 12415
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12506
-D S
+D 2
 ~
 porta~
 :n 2
@@ -348,20 +348,20 @@ incomodar.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12416
-D E
+D 1
 ~
 ~
 0 -1 12412
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12508
-D S
+D 2
 ~
 porta~
 :n 2
@@ -376,20 +376,20 @@ incomodar.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12413
-D E
+D 1
 ~
 ~
 0 -1 12417
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12510
-D S
+D 2
 ~
 porta~
 :n 2
@@ -404,20 +404,20 @@ incomodar.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12418
-D E
+D 1
 ~
 ~
 0 -1 12414
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12512
-D S
+D 2
 ~
 porta~
 :n 2
@@ -432,20 +432,20 @@ incomodar.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12415
-D E
+D 1
 ~
 ~
 0 -1 12419
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12514
-D S
+D 2
 ~
 porta~
 :n 2
@@ -460,20 +460,20 @@ incomodar.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12405
-D E
+D 1
 ~
 ~
 0 -1 12416
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12516
-D S
+D 2
 ~
 porta~
 :n 2
@@ -488,20 +488,20 @@ incomodar.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12417
-D E
+D 1
 ~
 ~
 0 -1 12405
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12518
-D S
+D 2
 ~
 porta~
 :n 2
@@ -515,20 +515,20 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
 para oeste, e a praça de Yama pode ser vista a leste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12422
-D E
+D 1
 ~
 ~
 0 -1 12401
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12520
-D S
+D 2
 ~
 porta~
 :n 2
@@ -542,20 +542,20 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
 para leste, e a praça de Yama pode ser vista a oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12401
-D E
+D 1
 ~
 ~
 0 -1 12423
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12522
-D S
+D 2
 ~
 porta~
 :n 2
@@ -569,20 +569,20 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
 para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12424
-D E
+D 1
 ~
 ~
 0 -1 12420
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12524
-D S
+D 2
 ~
 porta~
 :n 2
@@ -596,20 +596,20 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
 para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12421
-D E
+D 1
 ~
 ~
 0 -1 12425
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12526
-D S
+D 2
 ~
 porta~
 :n 2
@@ -623,20 +623,20 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12426
-D E
+D 1
 ~
 ~
 0 -1 12422
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12528
-D S
+D 2
 ~
 porta~
 :n 2
@@ -650,20 +650,20 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12423
-D E
+D 1
 ~
 ~
 0 -1 12427
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12530
-D S
+D 2
 ~
 porta~
 :n 2
@@ -677,20 +677,20 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12428
-D E
+D 1
 ~
 ~
 0 -1 12424
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12532
-D S
+D 2
 ~
 porta~
 :n 2
@@ -704,20 +704,20 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12425
-D E
+D 1
 ~
 ~
 0 -1 12429
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12534
-D S
+D 2
 ~
 porta~
 :n 2
@@ -731,20 +731,20 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12406
-D E
+D 1
 ~
 ~
 0 -1 12426
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12536
-D S
+D 2
 ~
 porta~
 :n 2
@@ -758,20 +758,20 @@ frio percorrendo a espinha cada vez que ouve o nome desta rua.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12427
-D E
+D 1
 ~
 ~
 0 -1 12406
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12538
-D S
+D 2
 ~
 porta~
 :n 2
@@ -785,20 +785,20 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
 para oeste, e a praça de Surya pode ser vista a leste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12432
-D E
+D 1
 ~
 ~
 0 -1 12402
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12540
-D S
+D 2
 ~
 porta~
 :n 2
@@ -812,20 +812,20 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
 para leste, e a praça de Surya pode ser vista a oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12402
-D E
+D 1
 ~
 ~
 0 -1 12433
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12542
-D S
+D 2
 ~
 porta~
 :n 2
@@ -839,20 +839,20 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
 para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12434
-D E
+D 1
 ~
 ~
 0 -1 12430
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12544
-D S
+D 2
 ~
 porta~
 :n 2
@@ -866,20 +866,20 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
 para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12431
-D E
+D 1
 ~
 ~
 0 -1 12435
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12546
-D S
+D 2
 ~
 porta~
 :n 2
@@ -893,20 +893,20 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12436
-D E
+D 1
 ~
 ~
 0 -1 12432
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12548
-D S
+D 2
 ~
 porta~
 :n 2
@@ -920,20 +920,20 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12433
-D E
+D 1
 ~
 ~
 0 -1 12437
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12550
-D S
+D 2
 ~
 porta~
 :n 2
@@ -947,20 +947,20 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12438
-D E
+D 1
 ~
 ~
 0 -1 12434
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12552
-D S
+D 2
 ~
 porta~
 :n 2
@@ -974,20 +974,20 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12435
-D E
+D 1
 ~
 ~
 0 -1 12439
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12554
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1001,20 +1001,20 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12407
-D E
+D 1
 ~
 ~
 0 -1 12436
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12556
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1028,20 +1028,20 @@ bem arborizada, e o Sol brilha muito intensamente aqui.
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12437
-D E
+D 1
 ~
 ~
 0 -1 12407
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12558
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1054,20 +1054,20 @@ A Rua de Puchan~
 para oeste, e a praça de Puchan pode ser vista a leste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12442
-D E
+D 1
 ~
 ~
 0 -1 12403
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12560
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1080,20 +1080,20 @@ A Rua de Puchan~
 para leste, e a praça de Puchan pode ser vista a oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12403
-D E
+D 1
 ~
 ~
 0 -1 12443
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12562
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1106,20 +1106,20 @@ A Rua de Puchan~
 para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12444
-D E
+D 1
 ~
 ~
 0 -1 12440
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12564
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1132,20 +1132,20 @@ A Rua de Puchan~
 para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12441
-D E
+D 1
 ~
 ~
 0 -1 12445
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12566
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1158,20 +1158,20 @@ A Rua de Puchan~
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12446
-D E
+D 1
 ~
 ~
 0 -1 12442
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12568
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1184,20 +1184,20 @@ A Rua de Puchan~
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12443
-D E
+D 1
 ~
 ~
 0 -1 12447
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12570
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1210,20 +1210,20 @@ A Rua de Puchan~
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12448
-D E
+D 1
 ~
 ~
 0 -1 12444
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12572
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1236,20 +1236,20 @@ A Rua de Puchan~
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12445
-D E
+D 1
 ~
 ~
 0 -1 12449
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12574
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1262,20 +1262,20 @@ A Rua de Puchan~
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12408
-D E
+D 1
 ~
 ~
 0 -1 12446
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12576
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1288,20 +1288,20 @@ A Rua de Puchan~
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12447
-D E
+D 1
 ~
 ~
 0 -1 12408
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12578
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1314,20 +1314,20 @@ A Rua de Siva~
 para oeste, e a praça de Siva pode ser vista a leste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12452
-D E
+D 1
 ~
 ~
 0 -1 12404
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12580
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1340,20 +1340,20 @@ A Rua de Siva~
 para leste, e a praça de Siva pode ser vista a oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12404
-D E
+D 1
 ~
 ~
 0 -1 12453
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12582
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1366,20 +1366,20 @@ A Rua de Siva~
 para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12454
-D E
+D 1
 ~
 ~
 0 -1 12450
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12584
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1392,20 +1392,20 @@ A Rua de Siva~
 para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12451
-D E
+D 1
 ~
 ~
 0 -1 12455
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12586
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1418,20 +1418,20 @@ A Rua de Siva~
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12456
-D E
+D 1
 ~
 ~
 0 -1 12452
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12588
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1444,20 +1444,20 @@ A Rua de Siva~
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12453
-D E
+D 1
 ~
 ~
 0 -1 12457
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12590
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1470,20 +1470,20 @@ A Rua de Siva~
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12458
-D E
+D 1
 ~
 ~
 0 -1 12454
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12592
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1496,20 +1496,20 @@ A Rua de Siva~
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12455
-D E
+D 1
 ~
 ~
 0 -1 12459
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12594
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1522,20 +1522,20 @@ A Rua de Siva~
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12409
-D E
+D 1
 ~
 ~
 0 -1 12456
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12596
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1548,20 +1548,20 @@ A Rua de Siva~
 continua para leste e para oeste.
 ~
 124 0 1
-D W
+D 3
 ~
 ~
 0 -1 12457
-D E
+D 1
 ~
 ~
 0 -1 12409
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 12598
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1574,7 +1574,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 1.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1587,7 +1587,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 2.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1600,7 +1600,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 3.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1613,7 +1613,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 4.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1626,7 +1626,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 5.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1639,7 +1639,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 6.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1652,7 +1652,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 7.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1665,7 +1665,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 8.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1678,7 +1678,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 9.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1691,7 +1691,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 10.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1704,7 +1704,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 11.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1717,7 +1717,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 12.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1730,7 +1730,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 13.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1743,7 +1743,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 14.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1756,7 +1756,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 15.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1769,7 +1769,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 16.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1782,7 +1782,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 17.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1795,7 +1795,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 18.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1808,7 +1808,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 19.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1821,7 +1821,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Vayu, número 20.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1834,7 +1834,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 1.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1847,7 +1847,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 2.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1860,7 +1860,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 3.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1873,7 +1873,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 4.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1886,7 +1886,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 5.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1899,7 +1899,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 6.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1912,7 +1912,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 7.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1925,7 +1925,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 8.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1938,7 +1938,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 9.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1951,7 +1951,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 10.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1964,7 +1964,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 11.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1977,7 +1977,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 12.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1990,7 +1990,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 13.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2003,7 +2003,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 14.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2016,7 +2016,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 15.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2029,7 +2029,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 16.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2042,7 +2042,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 17.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2055,7 +2055,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 18.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2068,7 +2068,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 19.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2081,7 +2081,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Yama, número 20.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2094,7 +2094,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 1.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2107,7 +2107,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 2.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2120,7 +2120,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 3.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2133,7 +2133,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 4.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2146,7 +2146,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 5.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2159,7 +2159,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 6.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2172,7 +2172,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 7.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2185,7 +2185,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 8.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2198,7 +2198,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 9.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2211,7 +2211,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 10.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2224,7 +2224,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 11.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2237,7 +2237,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 12.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2250,7 +2250,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 13.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2263,7 +2263,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 14.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2276,7 +2276,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 15.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2289,7 +2289,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 16.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2302,7 +2302,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 17.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2315,7 +2315,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 18.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2328,7 +2328,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 19.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2341,7 +2341,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Surya, número 20.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2354,7 +2354,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 1.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2367,7 +2367,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 2.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2380,7 +2380,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 3.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2393,7 +2393,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 4.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2406,7 +2406,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 5.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2419,7 +2419,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 6.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2432,7 +2432,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 7.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2445,7 +2445,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 8.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2458,7 +2458,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 9.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2471,7 +2471,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 10.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2484,7 +2484,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 11.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2497,7 +2497,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 12.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2510,7 +2510,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 13.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2523,7 +2523,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 14.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2536,7 +2536,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 15.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2549,7 +2549,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 16.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2562,7 +2562,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 17.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2575,7 +2575,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 18.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2588,7 +2588,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 19.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2601,7 +2601,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Puchan, número 20.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2614,7 +2614,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 1.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2627,7 +2627,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 2.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2640,7 +2640,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 3.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2653,7 +2653,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 4.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2666,7 +2666,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 5.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2679,7 +2679,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 6.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2692,7 +2692,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 7.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2705,7 +2705,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 8.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2718,7 +2718,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 9.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2731,7 +2731,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 10.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2744,7 +2744,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 11.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2757,7 +2757,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 12.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2770,7 +2770,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 13.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2783,7 +2783,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 14.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2796,7 +2796,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 15.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2809,7 +2809,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 16.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2822,7 +2822,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 17.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2835,7 +2835,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 18.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2848,7 +2848,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 19.
 ~
 124 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2861,7 +2861,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Siva, número 20.
 ~
 124 cd 1
-D N
+D 0
 ~
 porta~
 :n 2

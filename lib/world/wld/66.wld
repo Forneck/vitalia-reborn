@@ -11,23 +11,23 @@ muitas casas.
 ~
 66 0 1
 ON z13
-D N
+D 0
 ~
 ~
 0 -1 6601
-D S
+D 2
 ~
 ~
 0 -1 6602
-D E
+D 1
 ~
 ~
 0 -1 6611
-D W
+D 3
 ~
 ~
 0 -1 6610
-D U
+D 4
 Um estranho portal flutua sobre você.  Você pode ver uma estrada através do
 portal.
 ~
@@ -41,19 +41,19 @@ Uma agradável sensação de harmonia e paz toma conta da sua mente.  A Rua de
 Krishna segue para leste e para oeste, onde pode-se ver muitas casas.
 ~
 66 0 1
-D N
+D 0
 ~
 ~
 0 -1 6603
-D S
+D 2
 ~
 ~
 0 -1 6600
-D E
+D 1
 ~
 ~
 0 -1 6621
-D W
+D 3
 ~
 ~
 0 -1 6620
@@ -67,19 +67,19 @@ estatua do destruidor de obstáculos.  A Rua de Ganesh segue para leste e
 para oeste, onde pode-se ver muitas casas.
 ~
 66 0 1
-D N
+D 0
 ~
 ~
 0 -1 6600
-D S
+D 2
 ~
 ~
 0 -1 6604
-D E
+D 1
 ~
 ~
 0 -1 6631
-D W
+D 3
 ~
 ~
 0 -1 6630
@@ -92,15 +92,15 @@ e piscinas, que ardem em fogo.  A Rua de Indra segue para leste e para
 oeste, onde pode-se ver muitas casas.
 ~
 66 0 1
-D S
+D 2
 ~
 ~
 0 -1 6601
-D E
+D 1
 ~
 ~
 0 -1 6641
-D W
+D 3
 ~
 ~
 0 -1 6640
@@ -114,15 +114,15 @@ estatua de Vishnu no dilúvio universal.  A Rua de Matsia segue para leste e
 para oeste, onde pode-se ver muitas casas.
 ~
 66 0 1
-D N
+D 0
 ~
 ~
 0 -1 6602
-D E
+D 1
 ~
 ~
 0 -1 6651
-D W
+D 3
 ~
 ~
 0 -1 6650
@@ -134,19 +134,19 @@ Para leste e para oeste está a rua de Laksmi, para norte está a rua de Krishna e
 para sul está a rua de Ganesh.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6619
-D E
+D 1
 ~
 ~
 0 -1 6618
-D N
+D 0
 ~
 ~
 0 -1 6606
-D S
+D 2
 ~
 ~
 0 -1 6607
@@ -158,19 +158,19 @@ Para leste e para oeste está a rua de Krishna, para sul está a rua de Laksmi e
 para norte está a rua de Indra.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6629
-D E
+D 1
 ~
 ~
 0 -1 6628
-D N
+D 0
 ~
 ~
 0 -1 6608
-D S
+D 2
 ~
 ~
 0 -1 6605
@@ -182,19 +182,19 @@ Para leste e para oeste está a rua de Ganesh, para norte está a rua de Laksmi e
 para sul está a rua de Matsia.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6639
-D E
+D 1
 ~
 ~
 0 -1 6638
-D N
+D 0
 ~
 ~
 0 -1 6605
-D S
+D 2
 ~
 ~
 0 -1 6609
@@ -205,15 +205,15 @@ Um Cruzamento de Ruas~
 Para leste e para oeste está a rua de Indra e para sul está a rua de Krishna.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6649
-D E
+D 1
 ~
 ~
 0 -1 6648
-D S
+D 2
 ~
 ~
 0 -1 6606
@@ -224,15 +224,15 @@ Um Cruzamento de Ruas~
 Para leste e para oeste está a rua de Matsia e para norte está a rua de Ganesh.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6659
-D E
+D 1
 ~
 ~
 0 -1 6658
-D N
+D 0
 ~
 ~
 0 -1 6607
@@ -248,20 +248,20 @@ sorte que os acompanham por toda sua vida.
 para oeste, e a praça de Laksmi pode ser vista a leste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6612
-D E
+D 1
 ~
 ~
 0 -1 6600
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6700
-D S
+D 2
 ~
 porta~
 :n 2
@@ -278,20 +278,20 @@ sorte que os acompanham por toda sua vida.
 para leste, e a praça de Laksmi pode ser vista a oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6600
-D E
+D 1
 ~
 ~
 0 -1 6613
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6702
-D S
+D 2
 ~
 porta~
 :n 2
@@ -308,20 +308,20 @@ sorte que os acompanham por toda sua vida.
 para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6614
-D E
+D 1
 ~
 ~
 0 -1 6610
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6704
-D S
+D 2
 ~
 porta~
 :n 2
@@ -338,20 +338,20 @@ sorte que os acompanham por toda sua vida.
 para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6611
-D E
+D 1
 ~
 ~
 0 -1 6615
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6706
-D S
+D 2
 ~
 porta~
 :n 2
@@ -368,20 +368,20 @@ sorte que os acompanham por toda sua vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6616
-D E
+D 1
 ~
 ~
 0 -1 6612
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6708
-D S
+D 2
 ~
 porta~
 :n 2
@@ -398,20 +398,20 @@ sorte que os acompanham por toda sua vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6613
-D E
+D 1
 ~
 ~
 0 -1 6617
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6710
-D S
+D 2
 ~
 porta~
 :n 2
@@ -428,20 +428,20 @@ sorte que os acompanham por toda sua vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6618
-D E
+D 1
 ~
 ~
 0 -1 6614
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6712
-D S
+D 2
 ~
 porta~
 :n 2
@@ -458,20 +458,20 @@ sorte que os acompanham por toda sua vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6615
-D E
+D 1
 ~
 ~
 0 -1 6619
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6714
-D S
+D 2
 ~
 porta~
 :n 2
@@ -488,20 +488,20 @@ sorte que os acompanham por toda sua vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6605
-D E
+D 1
 ~
 ~
 0 -1 6616
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6716
-D S
+D 2
 ~
 porta~
 :n 2
@@ -518,20 +518,20 @@ sorte que os acompanham por toda sua vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6617
-D E
+D 1
 ~
 ~
 0 -1 6605
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6718
-D S
+D 2
 ~
 porta~
 :n 2
@@ -547,20 +547,20 @@ sabedoria que lidam com as provas da vida.
 para oeste, e a praça de Krishna pode ser vista a leste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6622
-D E
+D 1
 ~
 ~
 0 -1 6601
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6720
-D S
+D 2
 ~
 porta~
 :n 2
@@ -576,20 +576,20 @@ sabedoria que lidam com as provas da vida.
 para leste, e a praça de Krishna pode ser vista a oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6601
-D E
+D 1
 ~
 ~
 0 -1 6623
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6722
-D S
+D 2
 ~
 porta~
 :n 2
@@ -605,20 +605,20 @@ sabedoria que lidam com as provas da vida.
 para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6624
-D E
+D 1
 ~
 ~
 0 -1 6620
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6724
-D S
+D 2
 ~
 porta~
 :n 2
@@ -634,20 +634,20 @@ sabedoria que lidam com as provas da vida.
 para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6621
-D E
+D 1
 ~
 ~
 0 -1 6625
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6726
-D S
+D 2
 ~
 porta~
 :n 2
@@ -663,20 +663,20 @@ sabedoria que lidam com as provas da vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6626
-D E
+D 1
 ~
 ~
 0 -1 6622
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6728
-D S
+D 2
 ~
 porta~
 :n 2
@@ -692,20 +692,20 @@ sabedoria que lidam com as provas da vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6623
-D E
+D 1
 ~
 ~
 0 -1 6627
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6730
-D S
+D 2
 ~
 porta~
 :n 2
@@ -721,20 +721,20 @@ sabedoria que lidam com as provas da vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6628
-D E
+D 1
 ~
 ~
 0 -1 6624
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6732
-D S
+D 2
 ~
 porta~
 :n 2
@@ -750,20 +750,20 @@ sabedoria que lidam com as provas da vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6625
-D E
+D 1
 ~
 ~
 0 -1 6629
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6734
-D S
+D 2
 ~
 porta~
 :n 2
@@ -779,20 +779,20 @@ sabedoria que lidam com as provas da vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6606
-D E
+D 1
 ~
 ~
 0 -1 6626
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6736
-D S
+D 2
 ~
 porta~
 :n 2
@@ -808,20 +808,20 @@ sabedoria que lidam com as provas da vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6627
-D E
+D 1
 ~
 ~
 0 -1 6606
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6738
-D S
+D 2
 ~
 porta~
 :n 2
@@ -838,20 +838,20 @@ os obstáculos impostos durante a vida.
 para oeste, e a praça de Ganesh pode ser vista a leste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6632
-D E
+D 1
 ~
 ~
 0 -1 6602
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6740
-D S
+D 2
 ~
 porta~
 :n 2
@@ -868,20 +868,20 @@ os obstáculos impostos durante a vida.
 para leste, e a praça de Ganesh pode ser vista a oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6602
-D E
+D 1
 ~
 ~
 0 -1 6633
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6742
-D S
+D 2
 ~
 porta~
 :n 2
@@ -898,20 +898,20 @@ os obstáculos impostos durante a vida.
 para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6634
-D E
+D 1
 ~
 ~
 0 -1 6630
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6744
-D S
+D 2
 ~
 porta~
 :n 2
@@ -928,20 +928,20 @@ os obstáculos impostos durante a vida.
 para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6631
-D E
+D 1
 ~
 ~
 0 -1 6635
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6746
-D S
+D 2
 ~
 porta~
 :n 2
@@ -958,20 +958,20 @@ os obstáculos impostos durante a vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6636
-D E
+D 1
 ~
 ~
 0 -1 6632
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6748
-D S
+D 2
 ~
 porta~
 :n 2
@@ -988,20 +988,20 @@ os obstáculos impostos durante a vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6633
-D E
+D 1
 ~
 ~
 0 -1 6637
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6750
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1018,20 +1018,20 @@ os obstáculos impostos durante a vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6638
-D E
+D 1
 ~
 ~
 0 -1 6634
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6752
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1048,20 +1048,20 @@ os obstáculos impostos durante a vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6635
-D E
+D 1
 ~
 ~
 0 -1 6639
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6754
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1078,20 +1078,20 @@ os obstáculos impostos durante a vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6607
-D E
+D 1
 ~
 ~
 0 -1 6636
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6756
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1108,20 +1108,20 @@ os obstáculos impostos durante a vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6637
-D E
+D 1
 ~
 ~
 0 -1 6607
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6758
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1138,20 +1138,20 @@ as adversidades impostas durante a vida.
 para oeste, e a praça de Indra pode ser vista a leste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6642
-D E
+D 1
 ~
 ~
 0 -1 6603
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6760
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1168,20 +1168,20 @@ as adversidades impostas durante a vida.
 para leste, e a praça de Indra pode ser vista a oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6603
-D E
+D 1
 ~
 ~
 0 -1 6643
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6762
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1198,20 +1198,20 @@ as adversidades impostas durante a vida.
 para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6644
-D E
+D 1
 ~
 ~
 0 -1 6640
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6764
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1228,20 +1228,20 @@ as adversidades impostas durante a vida.
 para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6641
-D E
+D 1
 ~
 ~
 0 -1 6645
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6766
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1258,20 +1258,20 @@ as adversidades impostas durante a vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6646
-D E
+D 1
 ~
 ~
 0 -1 6642
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6768
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1288,20 +1288,20 @@ as adversidades impostas durante a vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6643
-D E
+D 1
 ~
 ~
 0 -1 6647
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6770
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1318,20 +1318,20 @@ as adversidades impostas durante a vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6648
-D E
+D 1
 ~
 ~
 0 -1 6644
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6772
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1348,20 +1348,20 @@ as adversidades impostas durante a vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6645
-D E
+D 1
 ~
 ~
 0 -1 6649
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6774
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1378,20 +1378,20 @@ as adversidades impostas durante a vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6608
-D E
+D 1
 ~
 ~
 0 -1 6646
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6776
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1408,20 +1408,20 @@ as adversidades impostas durante a vida.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6647
-D E
+D 1
 ~
 ~
 0 -1 6608
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6778
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1440,20 +1440,20 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
 para oeste, e a praça de Matsia pode ser vista a leste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6652
-D E
+D 1
 ~
 ~
 0 -1 6604
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6780
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1472,20 +1472,20 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
 para leste, e a praça de Matsia pode ser vista a oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6604
-D E
+D 1
 ~
 ~
 0 -1 6653
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6782
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1504,20 +1504,20 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
 para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6654
-D E
+D 1
 ~
 ~
 0 -1 6650
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6784
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1536,20 +1536,20 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
 para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6651
-D E
+D 1
 ~
 ~
 0 -1 6655
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6786
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1568,20 +1568,20 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6656
-D E
+D 1
 ~
 ~
 0 -1 6652
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6788
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1600,20 +1600,20 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6653
-D E
+D 1
 ~
 ~
 0 -1 6657
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6790
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1632,20 +1632,20 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6658
-D E
+D 1
 ~
 ~
 0 -1 6654
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6792
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1664,20 +1664,20 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6655
-D E
+D 1
 ~
 ~
 0 -1 6659
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6794
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1696,20 +1696,20 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6609
-D E
+D 1
 ~
 ~
 0 -1 6656
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6796
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1728,20 +1728,20 @@ conhecidos em toda Nova Thalos pela alegria e simpátia que possuem.
 continua para leste e para oeste.
 ~
 66 0 1
-D W
+D 3
 ~
 ~
 0 -1 6657
-D E
+D 1
 ~
 ~
 0 -1 6609
-D N
+D 0
 ~
 porta~
 :n 2
 abcg -1 6798
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1754,7 +1754,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 1.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1767,7 +1767,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 2.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1780,7 +1780,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 3.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1793,7 +1793,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 4.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1806,7 +1806,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 5.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1819,7 +1819,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 6.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1832,7 +1832,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 7.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1845,7 +1845,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 8.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1858,7 +1858,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 9.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1871,7 +1871,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 10.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1884,7 +1884,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 11.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1897,7 +1897,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 12.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1910,7 +1910,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 13.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1923,7 +1923,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 14.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1936,7 +1936,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 15.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1949,7 +1949,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 16.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1962,7 +1962,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 17.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -1975,7 +1975,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 18.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -1988,7 +1988,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 19.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2001,7 +2001,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Laksmi, número 20.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2014,7 +2014,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 1.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2027,7 +2027,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 2.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2040,7 +2040,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 3.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2053,7 +2053,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 4.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2066,7 +2066,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 5.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2079,7 +2079,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 6.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2092,7 +2092,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 7.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2105,7 +2105,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 8.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2118,7 +2118,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 9.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2131,7 +2131,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 10.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2144,7 +2144,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 11.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2157,7 +2157,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 12.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2170,7 +2170,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 13.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2183,7 +2183,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 14.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2196,7 +2196,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 15.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2209,7 +2209,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 16.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2222,7 +2222,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 17.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2235,7 +2235,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 18.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2248,7 +2248,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 19.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2261,7 +2261,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Krishna, número 20.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2274,7 +2274,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 1.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2287,7 +2287,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 2.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2300,7 +2300,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 3.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2313,7 +2313,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 4.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2326,7 +2326,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 5.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2339,7 +2339,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 6.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2352,7 +2352,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 7.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2365,7 +2365,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 8.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2378,7 +2378,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 9.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2391,7 +2391,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 10.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2404,7 +2404,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 11.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2417,7 +2417,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 12.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2430,7 +2430,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 13.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2443,7 +2443,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 14.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2456,7 +2456,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 15.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2469,7 +2469,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 16.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2482,7 +2482,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 17.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2495,7 +2495,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 18.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2508,7 +2508,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 19.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2521,7 +2521,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Ganesh, número 20.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2534,7 +2534,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 1.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2547,7 +2547,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 2.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2560,7 +2560,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 3.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2573,7 +2573,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 4.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2586,7 +2586,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 5.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2599,7 +2599,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 6.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2612,7 +2612,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 7.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2625,7 +2625,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 8.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2638,7 +2638,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 9.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2651,7 +2651,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 10.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2664,7 +2664,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 11.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2677,7 +2677,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 12.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2690,7 +2690,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 13.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2703,7 +2703,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 14.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2716,7 +2716,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 15.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2729,7 +2729,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 16.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2742,7 +2742,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 17.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2755,7 +2755,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 18.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2768,7 +2768,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 19.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2781,7 +2781,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Indra, número 20.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2794,7 +2794,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 1.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2807,7 +2807,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 2.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2820,7 +2820,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 3.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2833,7 +2833,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 4.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2846,7 +2846,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 5.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2859,7 +2859,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 6.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2872,7 +2872,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 7.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2885,7 +2885,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 8.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2898,7 +2898,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 9.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2911,7 +2911,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 10.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2924,7 +2924,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 11.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2937,7 +2937,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 12.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2950,7 +2950,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 13.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2963,7 +2963,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 14.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -2976,7 +2976,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 15.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -2989,7 +2989,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 16.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -3002,7 +3002,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 17.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -3015,7 +3015,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 18.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2
@@ -3028,7 +3028,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 19.
 ~
 66 cd 1
-D S
+D 2
 ~
 porta~
 :n 2
@@ -3041,7 +3041,7 @@ saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua de Matsia, número 20.
 ~
 66 cd 1
-D N
+D 0
 ~
 porta~
 :n 2

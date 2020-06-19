@@ -13,7 +13,7 @@ act.movement.o: act.movement.c conf.h sysdep.h structs.h protocol.h \
   constants.h dg_scripts.h act.h fight.h oasis.h
 act.offensive.o: act.offensive.c conf.h sysdep.h structs.h protocol.h \
   lists.h utils.h comm.h interpreter.h handler.h db.h spells.h act.h \
-  fight.h mud_event.h dg_event.h
+  fight.h mud_event.h dg_event.h screen.h constants.h
 act.other.o: act.other.c conf.h sysdep.h structs.h protocol.h lists.h \
   utils.h comm.h interpreter.h handler.h db.h spells.h screen.h house.h \
   constants.h dg_scripts.h act.h spec_procs.h class.h fight.h mail.h \
@@ -239,7 +239,7 @@ tedit.o: tedit.c conf.h sysdep.h structs.h protocol.h lists.h utils.h \
 utils.o: utils.c conf.h sysdep.h structs.h protocol.h lists.h utils.h \
   db.h comm.h modify.h screen.h spells.h handler.h interpreter.h class.h
 weather.o: weather.c conf.h sysdep.h structs.h protocol.h lists.h utils.h \
-  comm.h db.h fight.h constants.h
+  comm.h db.h fight.h
 zedit.o: zedit.c conf.h sysdep.h structs.h protocol.h lists.h utils.h \
   comm.h interpreter.h db.h constants.h genolc.h genzon.h oasis.h \
   dg_scripts.h

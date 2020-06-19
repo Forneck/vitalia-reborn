@@ -11,11 +11,11 @@ você vai avançando.
 ~
 222 e 1
 ON santuario
-D E
+D 1
 ~
 ~
 0 -1 9403
-D S
+D 2
 ~
 ~
 0 -1 22201
@@ -30,7 +30,7 @@ consegue entender o significado daquela estranha língua e fica profundamente
 emocionado ao perceber que conseguiu chegar até aqui.
 ~
 222 e 1
-D S
+D 2
 ~
 ~
 0 -1 22202
@@ -48,7 +48,7 @@ sorriem, eles sabem que você poderá fazer parte desse lugar.  Existe uma
 bela placa em uma das torres.
 ~
 222 e 1
-D S
+D 2
 ~
 ~
 0 -1 22203
@@ -57,7 +57,7 @@ placa~
 Abaixo, eu vejo meu pai.  Abaixo, eu vejo a minha mãe, minhas irmãs e meus
 irmãos.  Abaixo, eu vejo a linhagem dos meus antepassados desde o princípio.
 Abaixo, eles me chamam.  Me convidam a tomar o meu lugar junto a eles.  Em
-Valhala, onde os valentes podem viver para &RSEMPRE&n!
+Valhala, onde os valentes podem viver para @RSEMPRE@n!
 ~
 S
 #22203
@@ -68,7 +68,7 @@ bardos divagam, perdidos em seus pensamentos enquanto criam canções e poemas
 sobre grandes feitos.  Um enorme templo reflete a luz do Sol, ao oeste.
 ~
 222 e 1
-D W
+D 3
 ~
 ~
 0 -1 22204
@@ -83,11 +83,11 @@ ao seu coração.  Uma brisa suave parece embalar os seus passos e você olha
 para cima, emocionado e agradecido por poder estar vivenciando este momento.
 ~
 222 e 1
-D W
+D 3
 ~
 ~
 0 -1 22205
-D E
+D 1
 ~
 ~
 0 -1 22203
@@ -103,11 +103,11 @@ para cima, emocionado e agradecido por poder estar vivenciando este momento.
 Ao longe você vê uma construção imensa.
 ~
 222 e 1
-D W
+D 3
 ~
 ~
 0 -1 22206
-D E
+D 1
 ~
 ~
 0 -1 22204
@@ -123,11 +123,11 @@ para cima, emocionado e agradecido por poder estar vivenciando este momento.
 Você está chegando próximo a uma construção maravilhosa.
 ~
 222 e 1
-D W
+D 3
 ~
 ~
 0 -1 22207
-D E
+D 1
 ~
 ~
 0 -1 22205
@@ -146,11 +146,11 @@ Estranhamente, você consegue ver através das paredes brancas e percebe que
 lá fora, em um grande vale, há um número infinito de belíssimas estátuas.
 ~
 222 e 1
-D S
+D 2
 ~
 ~
 0 -1 22208
-D E
+D 1
 ~
 ~
 0 -1 22206
@@ -163,23 +163,23 @@ para o imenso círculo de estátuas, que esculpidas com perfeição, revelam as
 figuras daqueles que foram bravos e corajosos, dignos e honrados.  Tantas
 cenas tomam conta dos seus pensamentos.  Tantas lembranças, tantos momentos
 de glória.  E você se orgulha, pois sabe que chegou até aqui por acreditar
-nestes príncipios.  E percebe que PODE fazer mais e que QUER fazer mais.
+nestes príncipios.  E percebe que POD 1 fazer mais e que QUER fazer mais.
 Não pela conquista ou pela fama, mas, por este mundo e pelas pessoas que
 você ama e respeita.  E que se fizer parte desta imensa galeria, terá
 deixado o maior de todos os legados: o seu exemplo.  Você sabe que terá que
 lutar muito.  Não com pressa.  Nem por ambição.  Mas porque quer deixar
-registrado para todo o sempre que você também lutou pela &CHONRA, DIGNIDADE e
-FRATERNIDADE&n.  Chegou a hora, você sente isso!  É hora de fazer uma prece
+registrado para todo o sempre que você também lutou pela @CHONRA, DIGNIDAD 1 e
+FRATERNIDAD 1@n.  Chegou a hora, você sente isso!  É hora de fazer uma prece
 aos Deuses pedindo suas bençãos e partir para a luta!
    Há uma floresta a sudeste e além dela, parece haver uma interessante
 construção.
 ~
 222 e 1
-D SE
+D 2E
 ~
 ~
 0 -1 22209
-D N
+D 0
 ~
 ~
 0 -1 22207
@@ -195,7 +195,7 @@ própria jornada.
    Há uma floresta a sudeste e uma interessante construção ao longe.
 ~
 222 cg 1
-D SE
+D 2E
 ~
 ~
 0 -1 22210
@@ -214,7 +214,7 @@ serviram de inspiração para a sua própria jornada.
    A floresta fica a sudeste e uma interessante construção surge ao longe.
 ~
 222 cg 1
-D SE
+D 2E
 ~
 ~
 0 -1 22211
@@ -234,7 +234,7 @@ serviram de inspiração para a sua própria jornada.
 forma.
 ~
 222 cg 1
-D SE
+D 2E
 ~
 ~
 0 -1 22212
@@ -254,7 +254,7 @@ pão para os famintos e esperança aos que haviam desistido de sonhar.  Alguém
 como você?
 ~
 222 e 1
-D E
+D 1
 ~
 ~
 0 -1 22213
@@ -271,7 +271,7 @@ que você jamais foi assim, não é?  Então você percebe que está perto do
 porto e pensa: "Será que vale a pena caminhar até lá?".
 ~
 222 e 1
-D E
+D 1
 ~
 ~
 0 -1 22214
@@ -287,7 +287,7 @@ serviram de inspiração para a sua própria jornada.  O cheiro do oceano chega
 que ao leste existe uma grande festa acontecendo.
 ~
 222 cg 1
-D E
+D 1
 ~
 ~
 0 -1 22215
@@ -303,7 +303,7 @@ ainda não terminou e você segue novamente para o sul, pois parece que
 naquela direção, bem perto dali, outra festa está acontecendo.
 ~
 222 e 1
-D S
+D 2
 ~
 ~
 0 -1 22216
@@ -322,11 +322,11 @@ que são os melhores marinheiros de todos os mares e sem dúvida, grandes
 guerreiros também.
 ~
 222 e 1
-D S
+D 2
 ~
 ~
 0 -1 22217
-D N
+D 0
 ~
 ~
 0 -1 22215
@@ -340,11 +340,11 @@ incentivador do seu aprendizado.  Seus passos seguem firmes, confiantes, em
 direção à floresta.
 ~
 222 e 1
-D S
+D 2
 ~
 ~
 0 -1 22218
-D N
+D 0
 ~
 ~
 0 -1 22216
@@ -357,7 +357,7 @@ precioso e importante.  Uma construção rústica vai surgindo e parece que sua
 alma de aventureiro o impulsiona em direção sul.
 ~
 222 e 1
-D S
+D 2
 ~
 ~
 0 -1 22219
@@ -370,7 +370,7 @@ importante.  Distante, ao sul, uma construção rústica vai surgindo e parece
 que sua alma de aventureiro está mais viva do que nunca.
 ~
 222 e 1
-D S
+D 2
 ~
 ~
 0 -1 22220
@@ -383,12 +383,12 @@ próxima e há uma grande excitação em sua alma de aventureiro, como se
 estivesse prevendo alguma coisa importante que está para acontecer.
 ~
 222 e 1
-D S
+D 2
 ~
 porta~
 :n 2 a porta
 ag -1 22221
-D N
+D 0
 ~
 ~
 0 -1 22219
@@ -409,7 +409,7 @@ no maior e mais poderoso Rei de todos os tempos.  Você precisa partir...o
 vento parece estar lhe chamando.
 ~
 222 de 0
-D N
+D 0
 ~
 porta~
 :n 2 a porta
@@ -427,7 +427,7 @@ certeza de que é naquela direção que você precisa ir.  Seus passos seguem
 firmes, confiantes, na direção daquela luz.
 ~
 222 e 1
-D N
+D 0
 ~
 ~
 0 -1 50

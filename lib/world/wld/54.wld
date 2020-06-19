@@ -636,7 +636,7 @@ cartaz~
 O cartaz é de um homem rico, em roupão vermelho, que sorri para você.
 Na legenda lê-se:
 
-O SULTÃO O LEMBRA DE PAGAR SEUS IMPOSTOS!
+O SULTÃO O LEMBRA D 1 PAGAR SEUS IMPOSTOS!
 
 ~
 S
@@ -977,7 +977,7 @@ E
 aviso~
 .====================================================.
 |                                                    |
-|              O DEPÓSITO DE LIXO DE                 |
+|              O D 1PÓSITO D 1 LIXO D 1                 |
 |                   NOVA THALOS                      |
 |                                                    |
 |                                                    |
@@ -2015,11 +2015,11 @@ Ali fica o Clube dos Bardos.
 0 -1 5650
 E
 placa~
-&Y                  .-------------------.&n 
-&Y                  |  &RCLUBE DE BARDOS&Y  |&n
-&Y                  |                   |&n
-&Y                  | &gisso já diz tudo!&Y |&n
-&Y                  '-------------------'&n
+@Y                  .-------------------.@n 
+@Y                  |  @RCLUBE D 1 BARDOS@Y  |@n
+@Y                  |                   |@n
+@Y                  | @gisso já diz tudo!@Y |@n
+@Y                  '-------------------'@n
 ~
 S
 #5500
@@ -2145,7 +2145,7 @@ S
 Dentro do Templo~
    O templo continua aqui, mas não na mesma escala.  O lugar ainda
 parece imaculado.  Para o norte você vê a câmara do Alto Sacerdote
-e uma placa na porta com GRANDES letras que lêem 'NÃO PERTURBE'
+e uma placa na porta com GRAND 1S letras que lêem 'NÃO PERTURBE'
 Para o sul está a entrada para a Guilda dos Clérigos.
 ~
 54 dg 0
@@ -2582,7 +2582,7 @@ S
 #5533
 O Afia Pedra~
    Grandes homens com enormes espadas bebem cerveja de canecas muito
-grandes.  Tudo nesta sala é GRANDE.  As largas mesas redondas estão
+grandes.  Tudo nesta sala é GRAND 1.  As largas mesas redondas estão
 desgastadas e possuem marcas das numerosas rixas de bar que ocorreram.  Pode
 ser uma boa idéia manter a boca fechada enquanto está por aqui.   Há uma saída
 a leste onde o mestre espadachim aguarda para treinar os alunos.
@@ -3394,7 +3394,7 @@ E
 porta placa~
 A placa na porta lê:
 
-                 A EXPOSIÇÃO DE ARTE
+                 A EXPOSIÇÃO D 1 ARTE
                          de
                      NOVA THALOS
 

@@ -9,13 +9,13 @@ outra porta.
 ~
 12 d 0
 OL 106
-D N
+D 0
 Esta porta ao norte o leva devolta ao Pátio do Reino dos Imortais.
 ~
 porta~
 :n 2 a porta da sala de reuniões
 2 -1 1204
-D W
+D 3
 Sobre esta porta há uma placa com os dizeres: "Armário".
 ~
 porta armário~
@@ -31,22 +31,22 @@ salas a leste e oeste.
 ~
 12 d 0
 OL 101
-D E
+D 1
 A Sala do Quadro dos Mortais fica a leste.
 ~
 ~
 0 -1 1203
-D S
+D 2
 O Pátio do Reino dos Imortais pode ser visto por esta passagem ao sul.
 ~
 ~
 0 -1 1204
-D W
+D 3
 Ao oeste você pode ver a Sala de Encontros sociais.
 ~
 ~
 0 -1 1206
-D U
+D 4
 Esta escada leva para o nível superior.  Há um tipo de barreira no topo da
 escada.
 ~
@@ -74,13 +74,13 @@ a Sala de Mensagens dos Imortais.
 ~
 12 d 0
 OL 101
-D N
+D 0
 Árvores e plantas formam os jardins ao norte. Tudo é muito bonito, e você
 sente uma forte vontade de ir até lá, respirar um ar fresco.
 ~
 ~
 0 -1 1210
-D W
+D 3
 A Sala de Mensagens dos Imortais pode ser vista ao oeste.
 ~
 ~
@@ -101,37 +101,37 @@ grande construção.
 OL 101
 ON imm
 ON z12
-D N
+D 0
 Uma grande construção, feita de pedras brancas, com algumas janelas.
 Sua entrada é apenas uma passagem aberta, e aos lados desta passagem, há
 2 estátuas de criaturas que você nem faz idéia do que possam ser.
 ~
 ~
 0 -1 1201
-D E
+D 1
 Você pode ver parte do Reino de Vitália ao leste.
 ~
 ~
 0 -1 1281
-D S
+D 2
 Sobre a porta desta sala há uma placa com os dizeres: "Reuniões Divinas".
 Seria uma boa idéia entrar lá?
 ~
 porta~
 :n 2 a porta da sala de reuniões
 2 -1 1200
-D W
+D 3
 Você pode ver parte do Reino de Vitália ao oeste.
 ~
 ~
 0 -1 1280
-D NW
+D 0W
 Ao noroeste, há uma pequena porta, e através dela você pode ver pilhas de
 correspondências.
 ~
 ~
 0 -1 1205
-D SE
+D 2E
 Ao sudeste fica a área de sacrifícios... Tenebroso.
 ~
 ~
@@ -147,13 +147,13 @@ sudeste. Há também uma porta ao leste.
 ~
 12 d 0
 OL 101
-D E
+D 1
 Você não consegue ver nada de especial nesta porta.
 ~
 porta~
 :n 2
 1 -1 1206
-D SE
+D 2E
 Por esta porta você pode voltar para o Pátio do Reino dos Imortais.
 ~
 ~
@@ -171,12 +171,12 @@ Ao oeste há uma porta.
 ~
 12 d 0
 OL 101
-D E
+D 1
 A Sala de Mensagens dos Imortais fica ao leste.
 ~
 ~
 0 -1 1201
-D W
+D 3
 Você não consegue ver nada de especial nesta porta.
 ~
 porta~
@@ -192,7 +192,7 @@ escada leva à sala logo abaixo desta.
 ~
 12 cd 0
 OL 107
-D D
+D 5
 Na base da escada, você pode ver a sala dos Deuses de Vitália.
 ~
 ~
@@ -211,7 +211,7 @@ tomados dos maus-jogadores.  A única saída desta sala, a leste, leva devolta
 ~
 12 cdgj 0
 OL 109
-D E
+D 1
 Por esta porta, você volta para a Sala de Reunião dos Deuses.
 ~
 porta armário~
@@ -226,7 +226,7 @@ perdidos.  Estranhamente, não há absolutamente nada pelo chão.
 ~
 12 c 2
 OL 101
-D NW
+D 0W
 Por este caminho, você volta para o Pátio do Reino dos Imortais.
 ~
 ~
@@ -243,12 +243,12 @@ estreito caminho leva novamente ao Reino dos Imortais.
 ~
 12 ce 2
 OL 101
-D N
+D 0
 O pequeno córrego termina em um pequeno lago.
 ~
 ~
 0 -1 1211
-D S
+D 2
 Um estreito caminho leva devolta para o reino.
 ~
 ~
@@ -271,7 +271,7 @@ vem daquelas plantas às margens do lago.
 12 cer 6
 OL 101
 ON lago
-D S
+D 2
 Um pequeno córrego chega por esta direção.  Mais adiante você vê os Jardins.
 ~
 ~
@@ -291,23 +291,23 @@ oeste.  Uma escada leva devolta ao nível inferior.
 ~
 12 d 0
 OL 101
-D N
+D 0
 Há uma sala ao norte, mas está protegida por um tipo de barreira luminosa
 em sua passagem.
 ~
 ~
 0 -1 1213
-D E
+D 1
 Você pode ver um corredor ao leste.
 ~
 ~
 0 -1 1215
-D W
+D 3
 Você pode ver um corredor ao oeste.
 ~
 ~
 0 -1 1214
-D D
+D 5
 A escada desce até o nível inferior do Reino dos Imortais.
 ~
 ~
@@ -322,17 +322,17 @@ Há uma escada que leva a uma sala logo acima.
 ~
 12 d 0
 OL 106
-D S
+D 2
 Você pode ver a entrada do nível superior ao sul.
 ~
 ~
 0 -1 1212
-D W
+D 3
 Você vê a Sala de Controle.
 ~
 ~
 0 -1 1216
-D U
+D 4
 Ao topo da escada, você pode ver uma nova sala, provavelmente de acesso
 ainda mais restrito do que esta.
 ~
@@ -346,7 +346,7 @@ um aviso pregado à parede.
 ~
 12 d 0
 OL 101
-D E
+D 1
 Você pode ver a entrada do nível superior ao leste.
 ~
 ~
@@ -355,7 +355,7 @@ E
 aviso~
 O aviso diz:
 
-   "OBRAS INACABADAS DEVIDO A FALTA DE ENGENHEIROS"
+   "OBRAS INACABADAS D 1VIDO A FALTA D 1 ENGENHEIROS"
 ~
 S
 #1215
@@ -365,7 +365,7 @@ um aviso pregado à parede.
 ~
 12 d 0
 OL 101
-D W
+D 3
 Você pode ver a entrada do nível superior ao oeste.
 ~
 ~
@@ -374,7 +374,7 @@ E
 aviso~
 O aviso diz:
 
-   "OBRAS INACABADAS DEVIDO A FALTA DE ENGENHEIROS"
+   "OBRAS INACABADAS D 1VIDO A FALTA D 1 ENGENHEIROS"
 ~
 S
 #1216
@@ -386,19 +386,19 @@ negro, um cálice dourado esculpido com imagens sagradas, um pesado anel de
 ouro, uma frágil tiara de corais, um diamante azul com a forma de um olho,
 um escudo envolto por ardentes chamas, um par de manoplas de escamas negras
 e algumas poderosíssimas armas de aparência indestrutível.  Há placa onde
-esta escrito: &WEsses itens são muito especiais!  Cuide deles com sua vida!&n
+esta escrito: @WEsses itens são muito especiais!  Cuide deles com sua vida!@n
    Ao seu lado esquerdo, que é todo verde, figura um enorme dragão, de uma
 espécie nao conhecida por voce, representando as Mesnadas de Vitália, com
 vários equipamentos a sua volta.
 ~
 12 d 0
 OL 106
-D N
+D 0
 Você vê a continuação da Sala de Controle.
 ~
 ~
 0 -1 1217
-D E
+D 1
 Você vê a sala dos Deuses de Vitália.
 ~
 ~
@@ -413,14 +413,14 @@ negro, um cálice dourado esculpido com imagens sagradas, um pesado anel de
 ouro, uma frágil tiara de corais, um diamante azul com a forma de um olho,
 um escudo envolto por ardentes chamas, um par de manoplas de escamas negras
 e algumas poderosíssimas armas de aparência indestrutível.  Há placa onde
-esta escrito: &WEsses itens são muito especiais!  Cuide deles com sua vida!&n
+esta escrito: @WEsses itens são muito especiais!  Cuide deles com sua vida!@n
    Ao seu lado esquerdo, que é todo verde, figura um enorme dragão, de uma
 espécie nao conhecida por voce, representando as Mesnadas de Vitália, com
 vários equipamentos a sua volta.
 ~
 12 d 0
 OL 106
-D S
+D 2
 Você vê a continuação da Sala de Controle.
 ~
 ~
@@ -443,13 +443,13 @@ direção norte.
 12 ceq 0
 OL 101
 ON gaivi
-D N
+D 0
 Um caminho de material extremamente sutil leva à Sala dos Heróis, que fica
 a norte.
 ~
 ~
 0 -1 1221
-D S
+D 2
 Você pode ver parte do Reino de Vitália ao sul.
 ~
 ~
@@ -517,13 +517,13 @@ corações e mentes mais puros.
 ~
 12 ceq 0
 OL 101
-D N
+D 0
 Um caminho de material extremamente sutil leva à Sala da Honra, que fica ao
 norte.
 ~
 ~
 0 -1 1222
-D S
+D 2
 Um caminho de material extremamente sutil leva à Sala de Conferências, que
 fica ao sul.
 ~
@@ -578,7 +578,7 @@ mensagens.
 ~
 12 ceq 0
 OL 101
-DS
+D 2
 Um caminho de material extremamente sutil leva à Sala dos Heróis, que fica
 a sul.
 ~
@@ -594,18 +594,18 @@ logo a leste!
 ~
 12 cgq 9
 OL 101
-D N
+D 0
 Um lindo e imenso salão sem paredes, banhado na mais bonita luz celestial
 pode ser visto ao norte.
 ~
 ~
 0 -1 1220
-D E
+D 1
 Um formidável Reino sobre as nuvens pode ser visto ao leste.
 ~
 ~
 0 -1 1204
-D D
+D 5
 Exatamente abaixo de você está a Praça do Templo de Midgaard.
 ~
 ~
@@ -618,12 +618,12 @@ e comerciantes desta cidade.  O Reino dos Imortais fica logo a oeste!
 ~
 12 cgq 9
 OL 101
-D W
+D 3
 Um formidável Reino sobre as nuvens pode ser visto ao oeste.
 ~
 ~
 0 -1 1204
-D D
+D 5
 Exatamente abaixo de você está a estátua do Poderoso Observador, no meio
 da Praça Central do Mercado de New Thalos.
 ~
@@ -642,7 +642,7 @@ OX magik "*abra!*" open north
 OX magik "*fecha!*" close north
 OX magik "*tranca!*" lock north
 OX magik "*destranca!*" unlock north
-D N
+D 0
 ~
 ~
 :n 2 a porta
@@ -656,7 +656,7 @@ aqui provavelmente não é alguém muito organizado.
 ~
 12 0 0
 OL 101
-D S
+D 2
 ~
 ~
 :n 2 a porta

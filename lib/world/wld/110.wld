@@ -13,7 +13,7 @@ mais poderá retroceder.
 heróis possuem.
 ~
 110 cdefg 1
-D N
+D 0
 ~
 ~
 0 -1 11001
@@ -42,11 +42,11 @@ ou morrer!
 Vitália.
 ~
 110 cdefg 1
-D N
+D 0
 ~
 ~
 0 -1 11002
-D S
+D 2
 ~
 ~
 0 -1 11000
@@ -77,11 +77,11 @@ esculpidas nas rochas com tamanha perfeição que você tem a impressão que as
 temíveis criaturas o acompanham com o olhar.
 ~
 110 cdefg 1
-D N
+D 0
 ~
 ~
 0 -1 11003
-D S
+D 2
 ~
 ~
 0 -1 11001
@@ -109,11 +109,11 @@ imagens daqueles que podem ser os seus últimos instantes.
    O corredor parece ter chegado ao seu destino.  Seu coração dispara...
 ~
 110 cdefg 1
-D N
+D 0
 ~
 ~
 0 -1 11004
-D S
+D 2
 ~
 ~
 0 -1 11002
@@ -144,11 +144,11 @@ Clãs de Vitália.
 local...  Seriam os antigos dragões de Vitália?
 ~
 110 cefg 1
-D E
+D 1
 ~
 ~
 0 -1 11007
-D S
+D 2
 ~
 ~
 0 -1 11003
@@ -188,12 +188,12 @@ próprios Deuses de Vitália e o respeitam profundamente.  Estes guerreiros
 lutarão bravamente.
 ~
 110 cdefg 1
-D E
+D 1
 ~
 portão~
 :n 1 o grande portão da arena
 abc -1 11006
-D S
+D 2
 ~
 portão~
 :n 1
@@ -224,12 +224,12 @@ abertos os Torneios de Vitália.
 ~
 110.1 cgnv 1
 ON arena
-D W
+D 3
 ~
 portão~
 :n 1 o grande portão da arena
 abc -1 11005
-D E
+D 1
 ~
 portão~
 :n 1 o grande portão da arena
@@ -279,15 +279,15 @@ grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
 Vitália?
 ~
 110.1 eg 1
-D N
+D 0
 ~
 portão~
 abc -1 11026
-D SW
+D 2W
 ~
 ~
 0 -1 11014
-D E
+D 1
 ~
 ~
 0 -1 11008
@@ -317,15 +317,15 @@ grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
 Vitália?
 ~
 110.1 eg 1
-D N
+D 0
 ~
 portão~
 abc -1 11026
-D W
+D 3
 ~
 ~
 0 -1 11007
-D SE
+D 2E
 ~
 ~
 0 -1 11009
@@ -355,15 +355,15 @@ grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
 Vitália?
 ~
 110.1 eg 1
-D E
+D 1
 ~
 portão~
 abc -1 11027
-D NW
+D 0W
 ~
 ~
 0 -1 11008
-D S
+D 2
 ~
 ~
 0 -1 11010
@@ -393,15 +393,15 @@ grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
 Vitália?
 ~
 110.1 eg 1
-D E
+D 1
 ~
 portão~
 abc -1 11027
-D N
+D 0
 ~
 ~
 0 -1 11009
-D SW
+D 2W
 ~
 ~
 0 -1 11011
@@ -431,15 +431,15 @@ grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
 Vitália?
 ~
 110.1 eg 1
-D S
+D 2
 ~
 portão~
 abc -1 11028
-D NE
+D 0E
 ~
 ~
 0 -1 11010
-D W
+D 3
 ~
 ~
 0 -1 11012
@@ -469,15 +469,15 @@ grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
 Vitália?
 ~
 110.1 eg 1
-D S
+D 2
 ~
 portão~
 abc -1 11028
-D E
+D 1
 ~
 ~
 0 -1 11011
-D NW
+D 0W
 ~
 ~
 0 -1 11013
@@ -507,15 +507,15 @@ grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
 Vitália?
 ~
 110.1 eg 1
-D W
+D 3
 ~
 portão~
 abc -1 11029
-D SE
+D 2E
 ~
 ~
 0 -1 11012
-D N
+D 0
 ~
 ~
 0 -1 11014
@@ -545,15 +545,15 @@ grandes vultos alados sobrevoando o local...  Seriam os antigos Dragões de
 Vitália?
 ~
 110.1 eg 1
-D W
+D 3
 ~
 portão~
 abc -1 11029
-D S
+D 2
 ~
 ~
 0 -1 11013
-D NE
+D 0E
 ~
 ~
 0 -1 11007
@@ -576,11 +576,11 @@ vultos alados sobrevoando o local...  Seriam os antigos Dragões de Vitália?
 ~
 110.1 eg 1
 OL 101
-D E
+D 1
 ~
 ~
 0 -1 1204
-D W
+D 3
 ~
 ~
 0 -1 1204
@@ -593,7 +593,7 @@ sentar para assistir aos espetáculos.
 ~
 110.1 eg 1
 OL 101
-D N
+D 0
 ~
 ~
 abc -1 11005
@@ -741,7 +741,7 @@ profundamente e serão acordados novamente quando os Senhores das Mesnadas
 mais uma vez erguerem o Brasão de Vitália.
 ~
 110 cefg 1
-D W
+D 3
 ~
 portão~
 :n 1 o grande portão da arena

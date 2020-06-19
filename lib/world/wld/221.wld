@@ -21,17 +21,17 @@ confortáveis, e até mesmo alguns divãs, onde você pode se acomodar para ler
 seu livro.
 ~
 221 cdehu 0
-D N
+D 0
 Um bardo parece estar tentando vender livros ali.
 ~
 ~
 0 -1 22102
-D S
+D 2
 Você pode ver a Sala de Leitura.
 ~
 ~
 0 -1 3000
-D W
+D 3
 Uma sala abarrotada de livros e pergaminhos.
 ~
 ~
@@ -44,17 +44,17 @@ tamanha a perfeição da obra.
 ~
 E
 aviso placa~
-&y"Nao se deixe intimidar pela violência,
+@y"Nao se deixe intimidar pela violência,
 O poder de sua mente é toda a sua fortaleza.
 Pouco importa se é barato, bélico, universal...
 Toda força bruta representa, nada mais, que um sintoma de fraqueza.
 O importante é voce crer nessa força incrível que existe dentro de você.
 Meu amigo, meu companheiro, meu irmão,
-Escreva sua história pelas suas próprias mãos.&n
+Escreva sua história pelas suas próprias mãos.@n
 ~
 E
 inscrição inscrições~
-   A &yHistória de Vitália&n ainda é muito obscura para os mortais de ontem e
+   A @yHistória de Vitália@n ainda é muito obscura para os mortais de ontem e
 hoje.  Muitos a escutaram, a estudaram, a veneraram.  Mas ninguém sabe ainda
 exatamente o que ocorreu.
 
@@ -136,7 +136,7 @@ por Chama de Luz, que, carregando a primeira arma, luta pela criação contra
 os resquícios de Escuridão. "
 
    E até hoje todos os homens que ouvem essa história dizem que eles olham
-por nós: &WBlug, a Ordem; Maegali, a Magia; &ne &WNemesis, a Chama de Luz.&n
+por nós: @WBlug, a Ordem; Maegali, a Magia; @ne @WNemesis, a Chama de Luz.@n
 ~
 S
 #22101
@@ -157,19 +157,19 @@ há uma espécie de inscrição feita nele, que parece atrair sua atenção.
 norte.
 ~
 221 cdehu 0
-D E
+D 1
 Você pode ver a Grande Biblioteca de Vitália.
 ~
 ~
 0 -1 22100
 E
 inscrição altar~
-&RSe quiser conhecer a essência das divindades, basta dizer o nome de seu
-Livro nesta sala.&n
+@RSe quiser conhecer a essência das divindades, basta dizer o nome de seu
+Livro nesta sala.@n
 ~
 E
 Blug~
-&CA Lenda de Blug&n
+@CA Lenda de Blug@n
 
    Ninguém sabe, até hoje, quando ou como o universo começou, mas
 acredita-se que nunca houve um início, e provavelmente nunca terá um fim.
@@ -222,7 +222,7 @@ contada e a mais aceita de todas.
 ~
 E
 Maegali~
-&CA Lenda de Maegali&n
+@CA Lenda de Maegali@n
 
    Nos primórdios do mundo, no início dos tempos, tudo era diferente.  O
 Caos havia a pouco ocupado seu trono no lugar do grande Vazio, mas tudo
@@ -263,7 +263,7 @@ almas sejam puras.
 ~
 E
 Nemesis~
-&CA Lenda de Nemesis&n
+@CA Lenda de Nemesis@n
 
    Nos primórdios do mundo, no início dos tempos, tudo era diferente.  O
 Caos havia a pouco ocupado seu trono no lugar do grande Vazio, mas tudo
@@ -307,7 +307,7 @@ guerra.  Assim, proporcionaria aos homens o que poderia os levar à glória ou
 ~
 E
 Boromir~
-&CA Lenda de Boromir&n
+@CA Lenda de Boromir@n
 
    ... e quando todos sucumbiram ao ataque fulminante das forças do mal, e
 quando tudo parecia perdido em Minas Tirith, o retumbar de uma corneta
@@ -372,7 +372,7 @@ noite e levar a luz àqueles que estão na escuridão.
 E
 Silverbolt~
 
-&CA Lenda de Silverbolt&n
+@CA Lenda de Silverbolt@n
 
    Uma antiga lenda de Vitália, conta uma misteriosa história em que uma
 jovem pura, para salvar seu povo, teria sido entregue a um poderoso dragão
@@ -425,7 +425,7 @@ olhos a prova da sua humildade.
 ~
 E
 Jewel~
-&CA Lenda de Jewel&n
+@CA Lenda de Jewel@n
 
    Filho de camponeses, morava numa cidadela pacata aos redores do monte
 Olímpio com seus pais, ajudando -os na colheita anual.  Com apenas oito anos
@@ -474,7 +474,7 @@ Vitália, tornando-se: Jewel Gryffindor o Deus da Benevolência.
 ~
 E
 Infernal~
-&CA Lenda de Infernal&n
+@CA Lenda de Infernal@n
 
    Num tempo e numa terra distante onde o bem e o mal travavam uma intensa
 batalha...  Em um pequeno povoado localizado nas terras altas do norte,
@@ -557,7 +557,7 @@ honra e honestidade.  E até hoje dizem que ele ainda continua sua busca...
 ~
 E
 Tork~
-&CA Lenda de Tork&n
+@CA Lenda de Tork@n
 
    Tork é um Troglodita de Arton.  Um mundo ameaçado por uma tempestade
 rubra chamada Tormenta.  A Tormenta estava dizimando grande parte da
@@ -650,7 +650,7 @@ melhor para esse maravilhoso mundo.
 ~
 E
 Falcone~
-&CA Lenda de Falcone&n
+@CA Lenda de Falcone@n
 
    Falcone é um filho bastardo de Júpiter.  Recebeu esse nome porque tem
 olhos como os de um Falcão.  Olhos que o fazem enxergar o verdadeiro caráter
@@ -677,7 +677,7 @@ continuar existindo.
 ~
 E
 Galaaz~
-&CA Lenda de Galaaz&n
+@CA Lenda de Galaaz@n
 
    Alguns deuses existem desde o início do Mundo; são responsáveis pela
 criação e habitam na essência das coisas.  Outros, existem para a manutenção
@@ -741,7 +741,7 @@ esta é a história.
 ~
 E
 Eomer~
-&CA Lenda de Eomer&n
+@CA Lenda de Eomer@n
 
    Homem do Norte, príncipe de Rohan.  Éomer era sobrinho do Rei Théoden de
 Rohan e como todos de sua raça é alto, forte e de cabelos dourados.  Antes
@@ -783,7 +783,7 @@ Cavaleiros.
 ~
 E
 Harry~
-&CA Lenda de Harry&n
+@CA Lenda de Harry@n
 
    Essa é a história de uma pessoa pequena em palavras, porém grande em
 aventuras.
@@ -971,7 +971,7 @@ volumes, algumas devem ter durado muitos e muitos anos.
 estranha e complexa.
 ~
 221 cdehu 0
-D S
+D 2
 Você pode ver a Grande Biblioteca de Vitália.
 ~
 ~

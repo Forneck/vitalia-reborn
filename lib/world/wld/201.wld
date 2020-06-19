@@ -108,7 +108,7 @@ D3
 0 -1 20106 0
 E
 parede~
-Há algo escrito na parede: &R"QUE CHEIRO É ESSE?!?"&n
+Há algo escrito na parede: @R"QUE CHEIRO É ESSE?!?"@n
 ~
 S
 #20106
@@ -180,7 +180,7 @@ D3
 0 -1 20114 0
 E
 sinal~
-&R***CUIDADO!***
+@R***CUIDADO!***
 
 Não faça as seguintes coisas com os pacientes:
 Falar.
@@ -189,7 +189,7 @@ Fazer contato com os olhos.
 Alimentar.
 Divertir.
 
-Ou sofra as consequências.&n
+Ou sofra as consequências.@n
 ~
 S
 #20110
@@ -1061,7 +1061,7 @@ O Deserto~
 direções. Quando você olha mais além, percebe alguns tufos de grama marrom
 crescendo esporádicamente. Porém, a coisa que você nota mais explicitamente 
 é o tremor e um urro muito forte, vindo de longe.
-Uma grande placa &RGRITA &n pela sua atenção.
+Uma grande placa @RGRITA @n pela sua atenção.
 ~
 201 0 0 0 0 0
 D1

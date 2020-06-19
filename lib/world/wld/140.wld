@@ -96,12 +96,12 @@ Você vê a trilha dentro da floresta.
 0 -1 14054
 E
 placa~
-&nA estranha placa, uma enorme tábua de madeira que flutua no ar à sua frente,
+@nA estranha placa, uma enorme tábua de madeira que flutua no ar à sua frente,
 parece ser algum tipo de aviso.
 
 Você lê:
 
-"&G  Espantado viajante:
+"@G  Espantado viajante:
    Estranhas tudo a teu redor
    Parece tudo estar mui grande
    Ou que ficastes mui menor...
@@ -114,7 +114,7 @@ Você lê:
    Lindrel é o lugar
    Que saúda o aventureiro.
    Do povo pequeno é o lar
-   E teu, é recanto hospitaleiro.  &n "
+   E teu, é recanto hospitaleiro.  @n "
 
 Não há como saber se isso é algo bom ou ruim.  Mas pelo menos você descobriu
 o nome do lugar em que está, e que em breve alguém o procurará...
@@ -439,9 +439,9 @@ Você vê uma flor gigantesca.
 0 -1 14037
 E
 tabuleta flor gigantesca~
-&nA tabuleta diz:
+@nA tabuleta diz:
 
-       &B"A Gota D'Água"&n
+       @B"A Gota D'Água"@n
 
      Escola para pequenos.
      Faça já sua matrícula!
@@ -548,9 +548,9 @@ Ali parece haver o plantio de flores.
 0 -1 14022
 E
 tabuleta flor gigantesca~
-&nA tabuleta diz:
+@nA tabuleta diz:
 
-       &B"A Gota D'Água"&n
+       @B"A Gota D'Água"@n
 
      Escola para pequenos.
      Faça já sua matrícula!
@@ -920,15 +920,15 @@ D5
 0 -1 14037
 E
 lousa~
-&nEstá escrito, em amarelo, com letra muito bonita:
-&Y
-                          AULA DE HOJE
+@nEstá escrito, em amarelo, com letra muito bonita:
+@Y
+                          AULA D 1 HOJE
                   Alterando Tamanhos de Plantas
 
  * Ética na magia fádica
  * O livre-arbítrio dos vegetais: a importância de se pedir permissão
  * Introdução às magias de crescimento e encolhimento
- * Correção de tarefas&n
+ * Correção de tarefas@n
 ~
 S
 #14039

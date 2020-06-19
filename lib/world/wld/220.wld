@@ -26,13 +26,13 @@ sul você vê um portão.  Há um pequeno aviso aqui.
 ~
 220.1 cdrs 0
 ON banco
-D N
+D 0
 Para norte há uma pesada porta de pedra que leva ao cofre do banco.
 ~
 porta pedra cofre~
 :n 2 a porta do cofre
 ab -1 22011
-D S
+D 2
 ~
 ~
 0 -1 3076
@@ -58,7 +58,7 @@ estantes com gavetas numeradas.
    Para sul há o Banco de Vitália.
 ~
 220.1 cdfrs 0
-D S
+D 2
 Para sul está o Banco de Vitália.
 ~
 porta pedra cofre~
@@ -87,11 +87,11 @@ aproximando-se dela você pode ouvir barulhos de poucas pessoas conversando.
 ~
 220.2 dr 0
 ON confraria
-D N
+D 0
 ~
 ~
 0 -1 22016
-D S
+D 2
 ~
 ~
 0 -1 3079
@@ -108,7 +108,7 @@ parece que um arco-íris passa pela sala, deixando um rastro de paz e
 harmonia em sua extensão.
 ~
 220.2 dfr 0
-D S
+D 2
 ~
 ~
 0 -1 22015
@@ -127,11 +127,11 @@ Na sala acima, subindo uma grande escadaria, você ouve um barulho infernal.
 ~
 220.3 dehr 0
 ON jornal
-D U
+D 4
 ~
 ~
 0 -1 22021
-D N
+D 0
 ~
 ~
 0 -1 3080
@@ -150,11 +150,11 @@ simpático homem.  Subindo as escadas pode-se ouvir várias vozes, e
 descendo-as se retorna ao salão da Torre.
 ~
 220.3 defr 0
-D U
+D 4
 ~
 ~
 0 -1 22022
-D D
+D 5
 ~
 ~
 0 -1 22020
@@ -167,13 +167,13 @@ pela sala.  Ao leste, há uma porta de carvalho, com algo escrito arranhado.
 Descendo o lance de escadas, você volta para a Sala da Imprensa.
 ~
 220.3 der 0
-D E
+D 1
 A porta de carvalho está riscada com os dizeres "O editor-chefe fede".
 ~
 porta carvalho~
 :n 2 a porta de carvalho
 ab -1 22023
-D D
+D 5
 ~
 ~
 0 -1 22021
@@ -187,7 +187,7 @@ espalhadas pelas paredes, junto com uma tabela de dardos.  A organização da
 sala é incrível.  Ao oeste, se retorna à sala da Redação.
 ~
 220.3 der 0
-D W
+D 3
 ~
 porta carvalho~
 :n 2 a porta de carvalho
@@ -227,7 +227,7 @@ criaturas mágicas e adoráveis, pois, embora você não as veja, consegue
 sentir suas presenças suaves e, aparentemente, curiosas.  Um pequenino
 riacho mata a sede de todos os pássaros que aqui vêm, em busca de abrigo.
 No fundo do jardim, há uma pequena cerquinha branca e parece que alguém
-muito caprichoso, colocou uma delicada &Wplaquinha&n, feita de madeira e toda
+muito caprichoso, colocou uma delicada @Wplaquinha@n, feita de madeira e toda
 enfeitada por flores entalhadas na própria madeira.
 ~
 220.4 ec 2
@@ -251,14 +251,14 @@ Uma linda cerquinha branca, feita de madeira.
 E
 placa plaquinha~
   
-    &C"Este é o meu jardim. É aqui que eu trago os meus amigos queridos, os 
+    @C"Este é o meu jardim. É aqui que eu trago os meus amigos queridos, os 
 amigos que acima de tudo, amam a Natureza com a mesma força que eu.  Se você
 chegou até aqui e não consegue passar, não se sinta magoado e aguarde pelo meu
 convite. Se conseguiu entrar, seja Bem-Vindo, eu o recebo com o coração aberto
 e um imenso sorriso nos lábios. Lembre-se porém de seguir as minhas regras, que
 por sinal são bem simples:
  
- &W1- Não apanhe nenhuma das flores do meu jardim.
+ @W1- Não apanhe nenhuma das flores do meu jardim.
 
  2- Não dê nenhuma comida aos pássaros que não seja adequada.
 
@@ -272,7 +272,7 @@ por sinal são bem simples:
     poderes mágicos.  Elfos, fadas e duendes; sílfides e ondinas; dríades e
     náiades são os moradores desse lugar mágico. 
  
-    &MVidel Pendragon Daguereo  * &CA Sereia Amiga da Princesa das Aguas *&n
+    @MVidel Pendragon Daguereo  * @CA Sereia Amiga da Princesa das Aguas *@n
 ~
 S
 #22027
@@ -339,7 +339,7 @@ que somos.  Por aqui passaram todos aqueles que procuraram ajuda e
 encontraram.  Lembranças boas e amargas foram aqui compartilhadas e por
 isso, ela se tornou um verdadeiro santuário.  Há apenas um imenso mural
 neste lugar, onde se pode ler a palavra dos que possuem algo dentro de si
-para compartilhar.  Este é um &Rlugar sagrado&n...não se esqueça disso.  Suave
+para compartilhar.  Este é um @Rlugar sagrado@n...não se esqueça disso.  Suave
 claridade vinda tanto do norte, quanto do sul, desperta a sua atenção e uma
 onda de energia positiva o envolve, despertando em você fraternidade e amor.
 ~
