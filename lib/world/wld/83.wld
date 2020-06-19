@@ -10,7 +10,7 @@ aldeia.
 entrada de uma caverna muito misteriosa...
 ~
 83 cdags 4
-D D
+D 5
 ~
 ~
 0 -1 8301
@@ -26,11 +26,11 @@ modo de vista, e você ainda sente que coisas muito piores estão por vir.
 cheirosa caverna; ou voltar para cima rumo a vila.
 ~
 83 dacgis 4
-D D
+D 5
 ~
 ~
 0 -1 8302
-D U
+D 4
 ~
 ~
 0 -1 8300
@@ -45,7 +45,7 @@ o cheiro é muito forte.  Sua única saída é continuar descendo rumo a
 intensa escuridão.
 ~
 83 dagcis 4
-D D
+D 5
 ~
 ~
 0 -1 8303
@@ -57,7 +57,7 @@ dificuldade você consegue desce-la se segurando nas pequenas pedras e se
 sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridão.
 ~
 83 dagcis 4
-D D
+D 5
 ~
 ~
 0 -1 8304
@@ -69,7 +69,7 @@ dificuldade você consegue desce-la se segurando nas pequenas pedras e se
 sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridão.
 ~
 83 dagcis 4
-D D
+D 5
 ~
 ~
 0 -1 8305
@@ -81,7 +81,7 @@ dificuldade você consegue desce-la se segurando nas pequenas pedras e se
 sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridão.
 ~
 83 dcagis 4
-D D
+D 5
 ~
 ~
 0 -1 8306
@@ -93,7 +93,7 @@ dificuldade você consegue desce-la se segurando nas pequenas pedras e se
 sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridão.
 ~
 83 dagcis 4
-D D
+D 5
 ~
 ~
 0 -1 8307
@@ -105,7 +105,7 @@ dificuldade você consegue desce-la se segurando nas pequenas pedras e se
 sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridão.
 ~
 83 dacgis 4
-D D
+D 5
 ~
 ~
 0 -1 8308
@@ -117,7 +117,7 @@ dificuldade você consegue desce-la se segurando nas pequenas pedras e se
 sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridão.
 ~
 83 dacgis 4
-D D
+D 5
 ~
 ~
 0 -1 8309
@@ -129,7 +129,7 @@ dificuldade você consegue desce-la se segurando nas pequenas pedras e se
 sentindo cada vez mais zonzo pelo intenso cheiro de sangue e podridão.
 ~
 83 dagcis 4
-D D
+D 5
 ~
 ~
 0 -1 8310
@@ -147,19 +147,19 @@ você pensa em qual das direções tomar.
    Há uma enorme e bastante estranha pedra ao sul.
 ~
 83 dags 4
-D N
+D 0
 ~
 ~
 0 -1 8311
-D W
+D 3
 ~
 ~
 0 -1 8318
-D E
+D 1
 ~
 ~
 0 -1 8314
-D S
+D 2
 ~
 pedra~
 :n 2 a pedra
@@ -174,11 +174,11 @@ sangue.  A medida que caminha, você pode ouvir, cade vez mais claramente,
 um estranho barulho, parecendo mais com um grunido.
 ~
 83 dags 4
-D S
+D 2
 ~
 ~
 0 -1 8310
-D N
+D 0
 ~
 ~
 0 -1 8312
@@ -191,11 +191,11 @@ só vem aumentando.
    Você observa uma estranha movimentação ao norte.
 ~
 83 dags 4
-D N
+D 0
 ~
 ~
 0 -1 8313
-D S
+D 2
 ~
 ~
 0 -1 8311
@@ -212,7 +212,7 @@ permanecer por muito tempo nesta sala.
 de criatura habitaria este local? ".
 ~
 83 dags 4
-D S
+D 2
 ~
 ~
 0 -1 8312
@@ -225,11 +225,11 @@ e sinta falta de ar.  Você observa que as paredes aqui não possuem imagens
 em sangue, somente gelo se formando por toda sua extensão.
 ~
 83 dqags 4
-D W
+D 3
 ~
 ~
 0 -1 8310
-D E
+D 1
 ~
 ~
 0 -1 8315
@@ -245,15 +245,15 @@ toma conta de seu corpo.
 voltar para oeste.
 ~
 83 dqags 4
-D E
+D 1
 ~
 ~
 0 -1 8316
-D W
+D 3
 ~
 ~
 0 -1 8314
-D S
+D 2
 ~
 porta~
 :n 2 a porta
@@ -280,7 +280,7 @@ todo.
 está coberta por gelo à sua frente.
 ~
 83 dqags 4
-D N
+D 0
 ~
 porta~
 :n 2 a porta
@@ -294,11 +294,11 @@ estranhas inscrições que você não consegue decifrar.  Uma estranha
 movimentação pode ser observada a oeste, seguida de um estranho som...
 ~
 83 dags  4
-D E
+D 1
 ~
 ~
 0 -1 8310
-D W
+D 3
 ~
 ~
 0 -1 8319
@@ -312,11 +312,11 @@ sons...
    Você pode seguir para leste voltando, ou avançar pela porta a oeste.
 ~
 83 dags 4
-D E
+D 1
 ~
 ~
 0 -1 8318
-D W
+D 3
 ~
 porta~
 :n 2 a porta
@@ -335,7 +335,7 @@ maioria das pedras que o cobriam, agora no chão.
 esconder algo.  Ou alguém!?
 ~
 83 dags 4
-D E
+D 1
 ~
 porta~
 :n 2 a porta
@@ -350,7 +350,7 @@ percorra todo o seu corpo.
    A única saida é seguir em direção ao sul, explorando o inesperado.
 ~
 83 dags 4
-D S
+D 2
 ~
 ~
 0 -1 8322
@@ -364,11 +364,11 @@ local, que parece ter passado muitos anos intocável por qualquer outra
 criatura.
 ~
 83 dags 4
-D S
+D 2
 ~
 ~
 0 -1 8323
-D N
+D 0
 ~
 ~
 0 -1 8321
@@ -382,12 +382,12 @@ inscrições que, incrivelmente, parecem estar em sua língua.
 olhos podem ver.
 ~
 83 dags 4
-D E
+D 1
 Um estranho som vem dessa direção.
 ~
 ~
 0 -1 8324
-D S
+D 2
 Está muito escuro para poder ver algo.
 ~
 porta~
@@ -404,7 +404,7 @@ coberto por grandes pedras presas ao chão, e todas bem polidas e lisas.
 ossos dentro.  O cheiro de sangue aqui é intenso.
 ~
 83 dagfs 4
-D W
+D 3
 ~
 ~
 0 -1 8323
@@ -422,13 +422,13 @@ aldeia.
 e horripilante local.
 ~
 83 dagfs 4
-D W
+D 3
 Uma luz branca vem dessa direção
 ~
 porta~
 :n 2 a porta
 abc 8305 8326
-D N
+D 0
 ~
 porta~
 :n a porta
@@ -444,7 +444,7 @@ vilarejo.  Lembre-se, todos do vilarejo sempre lhe serão gratos por
 livrá-los da besta e resgatar esses prisioneiros tanto antes procurados.
 ~
 83 dagehisf 4
-D W
+D 3
 ~
 ~
 0 -1 8327
@@ -457,7 +457,7 @@ ofuscante luz branca e uma enorme sensação de paz.
 pelos moradores desta aldeia.
 ~
 83 dagisf 4
-D W
+D 3
 ~
 ~
 0 -1 50
@@ -471,12 +471,12 @@ matos.
 ~
 83 c 3
 ON z83
-D N
+D 0
 Mato, mato e mais mato!
 ~
 ~
 0 -1 8329
-D S
+D 2
 ~
 ~
 0 -1 7100
@@ -487,7 +487,7 @@ No Mato~
 chegará muito longe se isso continuar assim.
 ~
 83 c 3
-D N
+D 0
 Mato, mato e mais mato!
 ~
 ~
@@ -499,7 +499,7 @@ No Mato~
 chegará muito longe se isso continuar assim.
 ~
 83 c 3
-D N
+D 0
 Mato, mato e mais mato!
 ~
 ~
@@ -511,7 +511,7 @@ No Mato~
 chegará muito longe se isso continuar assim.
 ~
 83 c 3
-D N
+D 0
 Mato, mato e mais mato!
 ~
 ~
@@ -526,7 +526,7 @@ com a terra deste lugar...  Parece estar mais fofa e úmida, talvez seja um
 buraco feito por animais, está bem em baixo de você.
 ~
 83 c 3
-D D
+D 5
 Ao olhar para baixo, você nota que a cor da terra também está
 estranha. Parece ser um buraco...
 ~
@@ -543,7 +543,7 @@ por pequenos pedregulhos que não vão demorar muito para rolar sobre você.
    Você nota também, uma luz um pouco acima de você.
 ~
 83 dcfghis 5
-D U
+D 4
 URGH! Isso pode te cegar, sabia?
 ~
 ~
@@ -555,7 +555,7 @@ Seguindo a Luz~
    Você apenas vai seguindo aquele clarão acima de você...
 ~
 83 dcfghis 5
-D U
+D 4
 URGH! Isso pode te cegar, sabia?
 ~
 ~
@@ -568,7 +568,7 @@ Uma Estranha Floresta~
 brincam incansavelmente sobre as árvores.
 ~
 83 c 3
-D N
+D 0
 ~
 ~
 0 -1 8336
@@ -581,19 +581,19 @@ foi escrito algo que você não entede, talvez seja uma língua indígena.  Dois
 grandes índios parecem encarar você.  Talvez estejam impedindo sua entranda.
 ~
 83 g 2
-D N
+D 0
 ~
 ~
 0 -1 8337
-D W
+D 3
 ~
 ~
 0 -1 8341
-D S
+D 2
 ~
 ~
 0 -1 8335
-D E
+D 1
 ~
 ~
 0 -1 8352
@@ -607,11 +607,11 @@ animal que virou caça está queimando na fogueira.
    "Que lindo lugar!" Você pensa.
 ~
 83 g 2
-D N
+D 0
 ~
 ~
 0 -1 8338
-D S
+D 2
 ~
 ~
 0 -1 8336
@@ -624,11 +624,11 @@ sem parar.  Eles parecem estar achando suas roupas realmente muito
 engraçadas.
 ~
 83 g 2
-D N
+D 0
 ~
 ~
 0 -1 8339
-D S
+D 2
 ~
 ~
 0 -1 8337
@@ -641,11 +641,11 @@ gostam nada do seu jeito de olhar para a toca.  O que será que tem dentro
 dela?
 ~
 83 g 2
-D N
+D 0
 ~
 ~
 0 -1 8340
-D S
+D 2
 ~
 ~
 0 -1 8338
@@ -660,7 +660,7 @@ mostrar algo... Que estranho... ela parece apontar para pena de um dos
 índios.
 ~
 83 g 2
-D N
+D 0
 ~
 ~
 0 -1 8355
@@ -672,7 +672,7 @@ espalhado pelo chão.  É uma fortuna!  Certamente é todo o dinheiro
 da aldeia.  Você não está pensando em pega-lo, está?
 ~
 83 g 2
-D S
+D 2
 ~
 ~
 0 -1 8340
@@ -685,11 +685,11 @@ será que eles te olham tão estranho?
 ~
 83 g 2
 
-D E
+D 1
 ~
 ~
 0 -1 8336
-D W
+D 3
 ~
 ~
 0 -1 8342
@@ -699,11 +699,11 @@ Seguindo o Caminho Oeste~
    Tocas, tocas e mais tocas... o que mais você espera ver por aqui?
 ~
 83 g 2
-D E
+D 1
 ~
 ~
 0 -1 8341
-D W
+D 3
 ~
 ~
 0 -1 8343
@@ -713,11 +713,11 @@ Seguindo o Caminho Oeste~
    Tocas, tocas e mais tocas... O que mais você espera ver por aqui?
 ~
 83 g 2
-D E
+D 1
 ~
 ~
 0 -1 8342
-D W
+D 3
 ~
 ~
 0 -1 8344
@@ -727,11 +727,11 @@ Seguindo o Caminho Oeste~
    Tocas, tocas e mais tocas... O que mais você espera ver por aqui?
 ~
 83 g 2
-D E
+D 1
 ~
 ~
 0 -1 8341
-D W
+D 3
 ~
 ~
 0 -1 8345
@@ -741,11 +741,11 @@ Seguindo o Caminho Oeste~
    Tocas, tocas e mais tocas... O que mais você espera ver por aqui?
 ~
 83 g 2
-D E
+D 1
 ~
 ~
 0 -1 8344
-D W
+D 3
 ~
 ~
 0 -1 8346
@@ -758,16 +758,16 @@ uma pena na cabeça estão fazendo agora.  Uma pequena cerca foi construida
 atrás da árvore, e vai da ponta oeste até a ponte leste.
 ~
 83 g 2
-D N
+D 0
 ~
 cerca~
 :n 2 a cerca de madeira
 ad -1 8348
-D E
+D 1
 ~
 ~
 0 -1 8345
-D U
+D 4
 ~
 ~
 0 -1 8347
@@ -779,7 +779,7 @@ de você e pulam da árvore rápidamente.  Os esquilos parecem estar incomodados
 com sua presença.
 ~
 83 g 2
-D D
+D 5
 ~
 ~
 0 -1 8346
@@ -790,7 +790,7 @@ Além da Aldeia~
 inclusive, está sobre uma!  Você ouve um barulho de uma cachoeira.
 ~
 83 g 2
-D N
+D 0
 ~
 ~
 0 -1 8349
@@ -808,12 +808,12 @@ consegue ver perfeitamente os peixes nadando.  Grandes rochas bloqueam
 sua passagem para norte, é o fim da linha para você.
 ~
 83 g 2
-D N
+D 0
 ~
 rochas~
 :n 2 uma passagem entre as rochas
 ad -1 8350
-D S
+D 2
 ~
 ~
 0 -1 8348
@@ -825,11 +825,11 @@ da cachoeira para este lugar, você nota que isso é uma caverna, e não há
 muita coisa interessante por aqui...
 ~
 83 fgidf 6
-D S
+D 2
 ~
 ~
 0 -1 8349
-D N
+D 0
 ~
 ~
 0 -1 8351
@@ -841,11 +841,11 @@ estaria chorando?  O mistério toma conta deste pequeno buraco de rocha.
    Vários cristais de formas diferentes podem ser vistos daqui.
 ~
 83 fgidf 6
-D S
+D 2
 ~
 ~
 0 -1 8350
-D U
+D 4
 ~
 passagem~
 :n 2 uma passagem entre as rochas
@@ -859,15 +859,15 @@ mais alguns passos e nota que o caminho acaba por aqui. Uma grande toca
 com uma misteriosa névoa pode ser vista para norte.
 ~
 83 g 2
-D W
+D 3
 ~
 ~
 0 -1 8336
-D E
+D 1
 ~
 ~
 0 -1 8353
-D NE
+D 0E
 ~
 cerca~
 :n 2 a cerca
@@ -882,7 +882,7 @@ de uma mesa que esta coberta por uma pele de um animal que você nunca viu.
    Talvez fosse uma boa idéia você sair correndo daqui.
 ~
 83 i 2
-D W
+D 3
 ~
 ~
 0 -1 8352
@@ -894,7 +894,7 @@ dela, talvez você pensaria que isso fosse uma montanha.  Gritos que vem de
 dentro da caverna podem ser ouvidos daqui.  Você quer realmente entrar aí?
 ~
 83 gc 2
-D N
+D 0
 ~
 entrada~
 :n 2 a entrada da caverna
@@ -907,7 +907,7 @@ espalhados pelo chão, e por mais brilhantes que eles sejam, não se
 compara a forte luz que vem de um bastão que foi deixado aqui no chão.
 ~
 83 fgidf 0
-D S
+D 2
 ~
 ~
 0 -1 8351

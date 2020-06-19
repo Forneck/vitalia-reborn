@@ -895,7 +895,7 @@ Você pode ver escadas levando para cima, para a escuridão.
 2 -1 7102
 E
 inscrição parede~
-A inscrição diz &R'CUIDADO AVENTUREIRO'&n
+A inscrição diz @R'CUIDADO AVENTUREIRO'@n
 ~
 S
 #7301
@@ -1053,8 +1053,8 @@ D2
 S
 #7308
 O Túnel Longo~
-   Aqui quase não há mais lama.  Ao seu lado está um aviso que diz &R'PERIGO!
-Os vermes são perigosos!'&n
+   Aqui quase não há mais lama.  Ao seu lado está um aviso que diz @R'PERIGO!
+Os vermes são perigosos!'@n
 ~
 73 ad 1
 D0
@@ -1578,7 +1578,7 @@ D3
 0 -1 7333
 E
 brilho paredes prata~
-A prata brilhante parece estar DENTRO das paredes.
+A prata brilhante parece estar D 1NTRO das paredes.
 ~
 S
 #7332

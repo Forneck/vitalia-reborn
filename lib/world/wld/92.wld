@@ -9,12 +9,12 @@ ver 5 torres: duas vermelhas, duas pretas e uma dourada.  Você ainda pode
 voltar para o sul de onde você veio.
 ~
 92 c 2
-D N
+D 0
 A estrada segue para o norte.
 ~
 ~
 0 -1 9201
-D S
+D 2
 Você não vê muita coisa além do caminho que segue para Midgaard...
 ~
 ~
@@ -35,12 +35,12 @@ dourada parece mudar de forma assemelhando-se a cada uma das outras torres.
 Há realmente algo de mágico nesta torre.  Você pode ainda seguir para o sul.
 ~
 92 0 2
-D N
+D 0
 A estrada segue para o norte.
 ~
 ~
 0 -1 9202
-D S
+D 2
 A estrada segue para o sul.
 ~
 ~
@@ -55,22 +55,22 @@ na sua forma com a estrada que segue para norodeste.  Você ainda pode voltar
 para o sul.
 ~
 92 0 2
-D N
+D 0
 Ao longe você vê um portão.
 ~
 ~
 0 -1 9205
-D NW
+D 0W
 Ao longe você vê dois portões.
 ~
 ~
 0 -1 9203
-D NE
+D 0E
 Ao longe você vê dois portões.
 ~
 ~
 0 -1 9204
-D S
+D 2
 Você ainda pode voltar para o sul.
 ~
 ~
@@ -84,17 +84,17 @@ dois portões um ao norte e outro para noroeste.  O caminho para sudeste
 continua livre.
 ~
 92 0 2
-D SE
+D 2E
 Você olha nessa direção lembrando de sua escolha.  Seria melhor alterá-la?
 ~
 ~
 0 -1 9202
-D NW
+D 0W
 Você vê um portão vermelho.
 ~
 ~
 0 -1 9206
-D N
+D 0
 Você vê um portão vermelho.
 ~
 ~
@@ -108,17 +108,17 @@ dois portões um ao norte e outro para nordeste.  O caminho para sudoeste
 continua livre.
 ~
 92 0 2
-D SW
+D 2W
 Você olha nessa direção lembrando de sua escolha.  Seria melhor alterá-la?
 ~
 ~
 0 -1 9202
-D NE
+D 0E
 Você vê um portão negro.
 ~
 ~
 0 -1 9208
-D N
+D 0
 Você vê um portão negro.
 ~
 ~
@@ -135,13 +135,13 @@ placa...  Você pode atravessar o portão para norte ou simplesmente seguir
 para o sul.
 ~
 92 0 2
-D N
+D 0
 Você vê uma estrada.
 ~
 portão indefinida forma~
 :n 1 O portão de forma indefinida
 1 9200 9214
-D S
+D 2
 Você olha nessa direção lembrando da sua escolha.  Seria melhor alterá-la?
 ~
 ~
@@ -170,13 +170,13 @@ De qualquer maneira você não tem dúvidas de que está entrando na corte do
 Reino de Copas.  Você pode seguir em frente, para o norte ou para o sudeste.
 ~
 92 0 2
-D N
+D 0
 Você vê uma estrada.
 ~
 portão copas forma~
 :n 1 O portão na forma do naipe de copas
 1 9201 9210
-D SE
+D 2E
 Você vê o caminho por onde você veio.
 ~
 ~
@@ -206,13 +206,13 @@ De qualquer maneira você não tem dúvidas de que está entrando na corte do
 Reino de Ouros.  Você pode seguir em frente, para o norte, ou para o sul.
 ~
 92 0 2
-D N
+D 0
 Você vê uma estrada.
 ~
 portão ouros forma~
 :n 1 O portão na forma do naipe de ouros
 1 9202 9211
-D S
+D 2
 Você vê o caminho por onde você veio.
 ~
 ~
@@ -243,13 +243,13 @@ Reino de Espadas.  Você pode seguir em frente, para o norte, ou para o
 sudoeste.
 ~
 92 0 2
-D N
+D 0
 Você vê uma estrada.
 ~
 portão espadas forma~
 :n 1 O portão na forma do naipe de espadas
 1 9203 9212
-D SW
+D 2W
 Você vê o caminho por onde você veio.
 ~
 ~
@@ -280,13 +280,13 @@ Reino de Paus.  Você pode seguir em frente, para o norte, ou para o
 sudoeste.
 ~
 92 0 2
-D N
+D 0
 Você vê uma estrada.
 ~
 portão copas forma~
 :n 1 O portão na forma do naipe de paus
 1 9204 9213
-D S
+D 2
 Você vê o caminho por onde você veio.
 ~
 ~
@@ -315,12 +315,12 @@ algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o sul você vê o
 portão.
 ~
 92 0 1
-D N
+D 0
 Você vê um praça.
 ~
 ~
 0 -1 9215
-D S
+D 2
 Você vê o portão por onde você entrou.
 ~
 portão copas forma~
@@ -336,12 +336,12 @@ algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o sul você vê o
 portão.
 ~
 92 0 1
-D N
+D 0
 Você vê um praça.
 ~
 ~
 0 -1 9216
-D S
+D 2
 Você vê o portão por onde você entrou.
 ~
 portão ouros forma~
@@ -357,12 +357,12 @@ algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o sul você vê o
 portão.
 ~
 92 0 1
-D N
+D 0
 Você vê um praça.
 ~
 ~
 0 -1 9217
-D S
+D 2
 Você vê o portão por onde você entrou.
 ~
 portão espadas forma~
@@ -378,12 +378,12 @@ algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o sul você vê o
 portão.
 ~
 92 0 1
-D N
+D 0
 Você vê um praça.
 ~
 ~
 0 -1 9218
-D S
+D 2
 Você vê o portão por onde você entrou.
 ~
 portão copas forma~
@@ -399,12 +399,12 @@ praça onde algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o
 sul você vê o portão.
 ~
 92 0 1
-D N
+D 0
 Você vê um praça.
 ~
 ~
 0 -1 9219
-D S
+D 2
 Você vê o portão por onde você entrou.
 ~
 portão indefinida forma~
@@ -417,12 +417,12 @@ O Lixo~
 de Copas se reúnem para celebrar sabe-se lá o quê...
 ~
 92 0 1
-D N
+D 0
 A Estrada continua rumo ao castelo.
 ~
 ~
 0 -1 9220
-D S
+D 2
 A estrada segue para o sul.
 ~
 ~
@@ -434,12 +434,12 @@ O Lixo~
 de Ouros se reúnem para celebrar sabe-se lá o quê...
 ~
 92 0 1
-D N
+D 0
 A Estrada continua rumo ao castelo.
 ~
 ~
 0 -1 9221
-D S
+D 2
 A estrada segue para o sul.
 ~
 ~
@@ -451,12 +451,12 @@ O Lixo~
 de Espadas se reúnem para celebrar sabe-se lá o quê...
 ~
 92 0 1
-D N
+D 0
 A Estrada continua rumo ao castelo.
 ~
 ~
 0 -1 9222
-D S
+D 2
 A estrada segue para o sul.
 ~
 ~
@@ -468,12 +468,12 @@ O Lixo~
 de Paus se reúnem para celebrar sabe-se lá o quê...
 ~
 92 0 1
-D N
+D 0
 A Estrada continua rumo ao castelo.
 ~
 ~
 0 -1 9223
-D S
+D 2
 A estrada segue para o sul.
 ~
 ~
@@ -485,12 +485,12 @@ O Lixo~
 nobres se reúnem para celebrar sabe-se lá o quê...
 ~
 92 0 1
-D N
+D 0
 A Estrada continua rumo ao castelo.
 ~
 ~
 0 -1 9224
-D S
+D 2
 A estrada segue para o sul.
 ~
 ~
@@ -506,12 +506,12 @@ norte está a entrada do Castelo e ao sul uma praça bastante movimentada
 chama sua atenção.
 ~
 92 0 1
-D N
+D 0
 O Castelo está a sua frente, com sempre de portas abertas.
 ~
 ~
 0 -1 9225
-D S
+D 2
 Você vê uma praça.
 ~
 ~
@@ -527,12 +527,12 @@ norte está a entrada do Castelo e ao sul uma praça bastante movimentada
 chama sua atenção.
 ~
 92 0 1
-D N
+D 0
 O Castelo está a sua frente, com sempre de portas abertas.
 ~
 ~
 0 -1 9226
-D S
+D 2
 Você vê uma praça.
 ~
 ~
@@ -548,12 +548,12 @@ para norte está a entrada do Castelo e ao sul uma praça bastante movimentada
 chama sua atenção.
 ~
 92 0 1
-D N
+D 0
 O Castelo está a sua frente, com sempre de portas abertas.
 ~
 ~
 0 -1 9227
-D S
+D 2
 Você vê uma praça.
 ~
 ~
@@ -569,12 +569,12 @@ norte está a entrada do Castelo e ao sul uma praça bastante movimentada
 chama sua atenção.
 ~
 92 0 1
-D N
+D 0
 O Castelo está a sua frente, com sempre de portas abertas.
 ~
 ~
 0 -1 9228
-D S
+D 2
 Você vê uma praça.
 ~
 ~
@@ -590,12 +590,12 @@ para norte está a entrada do Castelo e ao sul uma praça bastante movimentada
 chama sua atenção.
 ~
 92 0 1
-D N
+D 0
 O Castelo está a sua frente, com sempre de portas abertas.
 ~
 ~
 0 -1 9229
-D S
+D 2
 Você vê uma praça.
 ~
 ~
@@ -615,19 +615,19 @@ repentinamente.  No canto noroeste da sala você vê uma porta que
 provavelmente o levará para a torre que você via do lado de fora.
 ~
 92 d 0
-D E
+D 1
 A fresta deixada pela porta não permite uma visão mais detalhada.
 ~
 porta~
 :n 2 A porta bem trabalhada.
 1 -1 9230
-D NW
+D 0W
 Você vê uma porta.
 ~
 porta~
 :n 2 A porta simples
 1 -1 9235
-D S
+D 2
 Você vê a entrada do castelo.
 ~
 ~
@@ -647,19 +647,19 @@ repentinamente.  No canto noroeste da sala você vê uma porta que
 provavelmente o levará para a torre que você via do lado de fora.
 ~
 92 d 0
-D E
+D 1
 A fresta deixada pela porta não permite uma visão mais detalhada.
 ~
 porta~
 :n 2 A porta bem trabalhada
 1 -1 9231
-D NW
+D 0W
 Você vê uma porta.
 ~
 porta~
 :n 2 A porta simples
 1 -1 9236
-D S
+D 2
 Você vê a entrada do castelo.
 ~
 ~
@@ -679,19 +679,19 @@ canto noroeste da sala você vê uma porta que provavelmente o levará para a
 torre que você via do lado de fora.
 ~
 92 d 0
-D E
+D 1
 A fresta deixada pela porta não permite uma visão mais detalhada.
 ~
 porta~
 :n 2 A porta bem trabalhada
 1 -1 9232
-D NW
+D 0W
 Você vê uma porta.
 ~
 porta~
 :n 2 A porta simples
 1 -1 9237
-D S
+D 2
 Você vê a entrada do castelo.
 ~
 ~
@@ -711,19 +711,19 @@ noroeste da sala você vê uma porta que provavelmente o levará para a torre
 que você via do lado de fora.
 ~
 92 d 0
-D E
+D 1
 A fresta deixada pela porta não permite uma visão mais detalhada.
 ~
 porta~
 :n 2 A porta bem trabalhada
 1 -1 9233
-D NW
+D 0W
 Você vê uma porta.
 ~
 porta~
 :n 2 A porta simples
 1 -1 9238
-D S
+D 2
 Você vê a entrada do castelo.
 ~
 ~
@@ -744,19 +744,19 @@ que provavelmente o levará para a torre que você via do lado de fora.  Você
 ainda pode sair do castelo pela direção sul.
 ~
 92 d 0
-D E
+D 1
 A fresta deixada pela porta não permite uma visão mais detalhada.
 ~
 porta~
 :n 2 A porta bem trabalhada
 1 -1 9234
-D NW
+D 0W
 Você vê uma porta.
 ~
 porta~
 :n 2 A porta simples
 1 -1 9239
-D S
+D 2
 Você vê a entrada do castelo.
 ~
 ~
@@ -773,7 +773,7 @@ andará o Pacificador do Reino de Copas?  Antes que o Ás chegue você ainda
 pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
 ~
 92 d 0
-D W
+D 3
 Sua única saida é para oeste.
 ~
 porta~
@@ -791,7 +791,7 @@ andará o Pacificador do Reino de Ouros?  Antes que o Ás chegue você ainda
 pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
 ~
 92 d 0
-D W
+D 3
 Sua única saida é para oeste.
 ~
 porta~
@@ -809,7 +809,7 @@ andará o Pacificador do Reino de Espadas?  Antes que o Ás chegue você ainda
 pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
 ~
 92 d 0
-D W
+D 3
 Sua única saida é para oeste.
 ~
 porta~
@@ -827,7 +827,7 @@ andará o Pacificador do Reino de Paus?  Antes que o Ás chegue você ainda
 pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
 ~
 92 d 0
-D W
+D 3
 Sua única saida é para oeste.
 ~
 porta~
@@ -845,7 +845,7 @@ andará o Pacificador do Reino Coringa?  Antes que o Ás chegue você ainda
 pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
 ~
 92 d 0
-D W
+D 3
 Sua única saida é para oeste.
 ~
 porta~
@@ -861,13 +861,13 @@ ainda pode voltar ao salão do trono pela mesma escada na direção
 sul.
 ~
 92 d 0
-D N
+D 0
 Você vê a porta fechada.
 ~
 porta~
 :n 2 A porta da torre
 1 -1 9240
-D SE
+D 2E
 A descida da escada parece ser mais fácil.
 ~
 porta~
@@ -882,13 +882,13 @@ escada...  Você chega ao final da escada onde há uma porta fechada.  Você
 ainda pode voltar ao salão do trono pela mesma escada na direção sul.
 ~
 92 d 0
-D N
+D 0
 Você vê a porta fechada.
 ~
 porta~
 :n 2 A porta da torre
 1 -1 9241
-D SE
+D 2E
 A descida da escada parece ser mais fácil.
 ~
 porta~
@@ -903,13 +903,13 @@ escada...  Você chega ao final da escada onde há uma porta fechada.  Você
 ainda pode voltar ao salão do trono pela mesma escada na direção sul.
 ~
 92 d 0
-D N
+D 0
 Você vê a porta fechada.
 ~
 porta~
 :n 2 A porta da torre
 1 -1 9242
-D SE
+D 2E
 A descida da escada parece ser mais fácil.
 ~
 porta~
@@ -924,13 +924,13 @@ escada...  Você chega ao final da escada onde há uma porta fechada.  Você
 ainda pode voltar ao salão do trono pela mesma escada na direção sul.
 ~
 92 d 0
-D N
+D 0
 Você vê a porta fechada.
 ~
 porta~
 :n 2 A porta da torre
 1 -1 9243
-D SE
+D 2E
 A descida da escada parece ser mais fácil.
 ~
 porta~
@@ -945,13 +945,13 @@ escada...  Você chega ao final da escada onde há uma porta fechada.  Você
 ainda pode voltar ao salão do trono pela mesma escada na direção sudeste. 
 ~
 92 d 0
-D N
+D 0
 Você vê a porta fechada.
 ~
 porta~
 :n 2 A porta da torre
 1 -1 9244
-D SE
+D 2E
 A descida da escada parece ser mais fácil.
 ~
 porta~

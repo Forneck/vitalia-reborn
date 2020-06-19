@@ -7300,7 +7300,7 @@ a -1 16389
 S
 #16391
 A Sala de Convocação~
-   &RATENÇÃO!!!&n  Você está entrando em uma área de alto risco, somente os mais
+   @RATENÇÃO!!!@n  Você está entrando em uma área de alto risco, somente os mais
 corajosos e espertos sairão vencedores, se for uma pessoa que não gosta de
 desafios volte agora, se deseja aventura siga para cima e leia atentamente
 as instruções.
@@ -7316,13 +7316,13 @@ A Sala das Instruções.
 S
 #16392
 A Sala das Instruções~
-   &y1)&n Você será do &BExercito Azul&n, &RExercito Vermelho&n, &GExercito Verde&n ou
-&YExercito Amarelo&n.  A escolha será de acordo com as instruções que os deuses
+   @y1)@n Você será do @BExercito Azul@n, @RExercito Vermelho@n, @GExercito Verde@n ou
+@YExercito Amarelo@n.  A escolha será de acordo com as instruções que os deuses
 darão, ajuste seu titulo colocando apenas Exercito <cor>.
-   &y2)&n Na sala a norte há quatro portas, cada um levará o exercito para o
+   @y2)@n Na sala a norte há quatro portas, cada um levará o exercito para o
 castelo de sua cor, preste atenção para qual direção deve seguir pois é
 proibido seguir em outra direção.
-   &y3)&n Não saia da sala inicial, lá recebera as instruções necessária para
+   @y3)@n Não saia da sala inicial, lá recebera as instruções necessária para
 cumprir a missão, o marechal de seu exército dirá quando poderão partir.
 ~
 160 cdefghr 0
@@ -7335,10 +7335,10 @@ S
 Os Quatro Destinos~
    Estas portas mágicas o levarão até o seu destino.  Preste atenção no qual
 deve seguir.
-   &Rnorte&n: Exercito Vermelho.
-   &Yleste&n: Exercito Amarelo.
-   &Boeste&n: Exercito Azul.
-   &Gsul&n  : Exercito Verde.
+   @Rnorte@n: Exercito Vermelho.
+   @Yleste@n: Exercito Amarelo.
+   @Boeste@n: Exercito Azul.
+   @Gsul@n  : Exercito Verde.
 ~
 160 cdefghr 0
 D0

@@ -105,12 +105,12 @@ conforme você caminha para oeste.  Para leste você volta para o campo
 aberto.
 ~
 18 0 2
-D E
+D 1
 O caminho retorna ao campo aberto neste sentido.
 ~
 ~
 0 -1 1801
-D W
+D 3
 O caminho continua a oeste.  Você pode ver uma casa a uma certa distância.
 ~
 ~
@@ -126,12 +126,12 @@ raios solares, e tornando o caminho mais úmido.  A oeste você pode ver uma
 área mais aberta, e uma pequena casa.
 ~
 18 0 2
-D E
+D 1
 O caminho continua a leste.
 ~
 ~
 0 -1 1804
-D W
+D 3
 Para oeste você você ver uma área mais aberta, e uma pequena casa.
 ~
 ~
@@ -145,23 +145,23 @@ que atrás da casa está o pé de uma grande montanha, que parece tocar as
 núvens.  A leste, a mata se abre para o caminho que leva devolta à Midgaard.
 ~
 18 0 2
-D E
+D 1
 O caminho que leva devolta à Midgaard segue a leste daquí.
 ~
 ~
 0 -1 1805
-D W
+D 3
 A porta da pequena casa.
 ~
 porta~
 :n 2
 ab 1800 1810
-D NW
+D 0W
 Por este caminho, você irá até o lado direito da casa.
 ~
 ~
 0 -1 1807
-D SW
+D 2W
 Por este caminho, você irá até o lado esquerdo da casa.
 ~
 ~
@@ -184,12 +184,12 @@ Ao Lado da Pequena Casa~
 Não há mais nada de especial aqui.
 ~
 18 0 2
-D SW
+D 2W
 Por este caminho, você irá até a parte de trás da casa.
 ~
 ~
 0 -1 1809
-D SE
+D 2E
 Por este caminho, você irá até a parte da frente da casa.
 ~
 ~
@@ -206,12 +206,12 @@ Ao Lado da Pequena Casa~
 casa.  Não há mais nada de especial aqui.
 ~
 18 0 2
-D NW
+D 0W
 Por este caminho, você irá até a parte de trás da casa.
 ~
 ~
 0 -1 1809
-D NE
+D 0E
 Por este caminho, você irá até a parte da frente da casa.
 ~
 ~
@@ -232,18 +232,18 @@ encontrar uma forma de chegar até ela, pois a mata é densa demais para se
 atravessar.
 ~
 18 0 2
-D E
+D 1
 A porta dos fundos da pequena casa.
 ~
 porta~
 :n 2
 ab 1801 1811
-D NE
+D 0E
 Por este caminho, você irá até o lado direito da casa.
 ~
 ~
 0 -1 1807
-D SE
+D 2E
 Por este caminho, você irá até o lado esquerdo da casa.
 ~
 ~
@@ -259,25 +259,25 @@ um escudo pendurados.
 e portas para norte e sul.
 ~
 18 dfr 0
-D N
+D 0
 Uma porta, simples.
 ~
 porta~
 :n 2
 a -1 1812
-D E
+D 1
 Esta é a porta de entrada da casa.
 ~
 porta~
 :n 2
 ab 1800 1806
-D S
+D 2
 Uma porta, simples.
 ~
 porta~
 :n 2
 ab -1 1813
-D W
+D 3
 Parece levar até a cozinha.
 ~
 ~
@@ -320,12 +320,12 @@ tão limpos que brilham.  Há alguns frutos sobre uma mesa.  Você pode voltar
 para a sala para leste.  Há uma porta para oeste.
 ~
 18 dfr 0
-D E
+D 1
 Parece levar até a sala.
 ~
 ~
 0 -1 1810
-D W
+D 3
 Esta é a porta dos fundos da casa.
 ~
 porta~
@@ -344,7 +344,7 @@ existe.  É muito luxuoso, possui latrina, pia e um chuveiro.
 ~
 18 dfr 0
 OP 2
-D S
+D 2
 Uma porta, simples.
 ~
 porta~
@@ -358,7 +358,7 @@ de livros que tem aqui.  Tem centenas de livros.  O quarto também possui uma
 cama, uma pequena mesa e uma cadeira.
 ~
 18 dfjr 0
-D N
+D 0
 Uma porta, simples.
 ~
 porta~
@@ -375,12 +375,12 @@ ilumina a sala de maneira uniforme, não deixando nenhuma sombra.
 sul.
 ~
 18.2 dfghq 0
-D N
+D 0
 O corredor continua para o norte.
 ~
 ~
 0 -1 1891
-D S
+D 2
 Um grande portão de energia impede a passagem tanto dos vivos, quanto dos
 mortos.
 ~
@@ -394,12 +394,12 @@ A Entrada do Reino da Morte~
 para o norte e para o sul.  Você nota uma pequena placa fixada na parede.
 ~
 18.2 dfghq 0
-D N
+D 0
 O corredor continua para o norte.
 ~
 ~
 0 -1 1892
-D S
+D 2
 O corredor continua para o sul.
 ~
 ~
@@ -418,14 +418,14 @@ provavelmente para algum tipo de palestra.  Há algumas faixas presas na
 plataforma.  Há um grande portão ao norte.  O corredor continua para o sul.
 ~
 18.2 dfghq 0
-D N
+D 0
 Sobre o grande portão, está escrito: "Reino da Morte".  Você sente um leve
 arrepio.
 ~
 portão~
 :n 1 o grande portão
 abc -1 1899
-D S
+D 2
 O corredor continua para o sul.
 ~
 ~
@@ -444,22 +444,22 @@ do céu escuro e sem estrelas, batem selvagemente em seu fragil espírito.
 ~
 18.2 dghq 0
 ON morte
-D N
+D 0
 O grande solo parece ir ao infinito.
 ~
 ~
 0 -1 1899
-D E
+D 1
 O grande solo parece ir ao infinito.
 ~
 ~
 0 -1 1899
-D S
+D 2
 O grande solo parece ir ao infinito.
 ~
 ~
 0 -1 1899
-D W
+D 3
 O grande solo parece ir ao infinito.
 ~
 ~

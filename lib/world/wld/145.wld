@@ -1502,7 +1502,7 @@ S
 A Terra dos Tûks~
    Você está caminhando sobre uma pequena planície coberta por uma vegetação
 bastante fina.  Ao seu redor você observa pequeninas tocas com jardins muito
-bem cuidados.  A sua frente você observa uma bela &yplaca de madeira&n e no
+bem cuidados.  A sua frente você observa uma bela @yplaca de madeira@n e no
 chão você percebe algumas pequeninas pegadas.  Ao norte e para baixo você
 observa pequenas tocas de madeira.  Ao sudeste você observa a Terra das
 Colinas Verdes e ao oeste você observa uma pequena rua inclinada.
@@ -1532,10 +1532,10 @@ porta madeira~
 ag -1 14565
 E
 placa madeira~
-&gSenhores visitantes indesejados, por favor, retornem daqui mesmo.  Essas
+@gSenhores visitantes indesejados, por favor, retornem daqui mesmo.  Essas
 terras pertencem aos Tûks, uma família bastante ocupada.
                                        
-				           &yOs Tûks
+				           @yOs Tûks
 ~
 S
 #14565
@@ -3899,7 +3899,7 @@ A Grande Toca do Senhor da Sede~
    Você está dentro de uma bela e confortável toca.  Ao seu redor você
 observa várias cadeiras e algumas mesas de madeira.  No chão você observa
 belos tapetes e nas paredes você observa belos quadros.  No canto sul da
-toca você observa uma bela mesa de pedra com uma pequenina &BPlaca&n sobre
+toca você observa uma bela mesa de pedra com uma pequenina @BPlaca@n sobre
 a mesma.  Ao norte você observa o grande salão da Sede de Brandebuque.
 ~
 145 cdfgrs 0

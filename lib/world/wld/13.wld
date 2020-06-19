@@ -459,18 +459,18 @@ D 3
 0 -1 1314
 E
 símbolo~
-              &n&y/\&n
-           &n&y__/  \__&n
-         &n&y.'   &n&R..&n   &n&y'.&n
-       &n&y.´&n&r.    &n&R||    &n&r.&n&y`.&n
-       &n&y\ &n&r\\   &n&R||   &n&r// &n&y/&n
-        &n&y\ &n&r\\  &n&R||  &n&r// &n&y/&n
-         &n&y\ &n&r\\ &n&R|| &n&r// &n&y/&n
-          &n&y\ &n&r\\&n&R||&n&r// &n&y/&n
-           &n&y\ &n&r\&n&R||&n&r/ &n&y/&n
-            &n&y\ &n&R&n&R|| &n&y/&n
-             &n&y\&n&R''&n&y/&n
-              &n&y\/&n
+              @n@y/\@n
+           @n@y__/  \__@n
+         @n@y.'   @n@R..@n   @n@y'.@n
+       @n@y.´@n@r.    @n@R||    @n@r.@n@y`.@n
+       @n@y\ @n@r\\   @n@R||   @n@r// @n@y/@n
+        @n@y\ @n@r\\  @n@R||  @n@r// @n@y/@n
+         @n@y\ @n@r\\ @n@R|| @n@r// @n@y/@n
+          @n@y\ @n@r\\@n@R||@n@r// @n@y/@n
+           @n@y\ @n@r\@n@R||@n@r/ @n@y/@n
+            @n@y\ @n@R@n@R|| @n@y/@n
+             @n@y\@n@R''@n@y/@n
+              @n@y\/@n
 ~
 S
 #1316
@@ -843,7 +843,7 @@ D 4
 0 -1 1331
 E
 pergaminho dourado~
-&YHistória da Família Galad&n
+@YHistória da Família Galad@n
 
    Desde a época em que os magos reinavam, existe uma família de aventureiros
 que luta pela Paz e pela Sabedoria, seu nome é "Família Galad", cujo regente
