@@ -37,8 +37,6 @@
 #include "screen.h"
 #include "spedit.h"
 
-
-
 void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_data *corpse, room_rnum targ_room, int restore)
 {
 	struct obj_data *obj = NULL;
@@ -54,7 +52,7 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 		act("O espírito de $n começa a brilhar.", TRUE, ch, 0, 0, TO_ROOM);
 	}
 
-	act("&gUma estranha sensação percorre seu espírito, que é puxado por uma força\r\n"
+	act("@gUma estranha sensação percorre seu espírito, que é puxado por uma força\r\n"
 		"divina, carregando-$r por uma longa distância.", FALSE, ch, 0, 0, TO_CHAR);
 
 	REMOVE_BIT_AR(PLR_FLAGS(ch), PLR_DEAD);
@@ -71,7 +69,7 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 			obj_from_obj(corpse);
 
 		act("Você perde a noção de espaço e antes que você possa gritar por socorro,\r\n"
-			"você percebe que está sendo puxad$r para dentro de seu corpo!&n",
+			"você percebe que está sendo puxad$r para dentro de seu corpo!@n",
 			FALSE, ch, 0, 0, TO_CHAR);
 	}
 	else
@@ -79,7 +77,7 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 		send_to_char(ch,
 					 "Estranhamente, seu espírito começa a voltar ao formato de um corpo humano.\r\n"
 					 "Você começa a sentir novamente seus braços, suas pernas, o chão, o ar\r\n"
-					 "entrando pelos seus pulmões!&n\r\n");
+					 "entrando pelos seus pulmões!%s\r\n",CCNRM(ch,C_NRM);
 	}
 	send_to_char(ch, "\r\n");
 
@@ -96,22 +94,22 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 	if (!raiser)
 	{
 		act("$n foi trazid$r devolta à vida pelos Deuses!", TRUE, ch, 0, 0, TO_ROOM);
-		act("&WVocê foi trazid$r devolta à vida pelos Deuses!&n", FALSE, ch, 0, 0, TO_CHAR);
+		act("@WVocê foi trazid$r devolta à vida pelos Deuses!@n", FALSE, ch, 0, 0, TO_CHAR);
 	}
 	else if (GET_LEVEL(raiser) >= LVL_IMMORT)
 	{
 		act("Sua força divina trouxe $N devolta à vida.", FALSE, raiser, 0, ch, TO_CHAR);
 		act("$n foi trazid$r devolta à vida pela força divina de $N!", FALSE, ch, 0, raiser,
 			TO_NOTVICT);
-		act("&WVocê foi trazid$r devolta à vida pela força divina de $N!&n", FALSE, ch, 0,
+		act("@WVocê foi trazid$r devolta à vida pela força divina de $N!@n", FALSE, ch, 0,
 			raiser, TO_CHAR);
 	}
 	else
 	{
-		act("Você sente a força de seu Deus trazendo $N devolta à vida!&n", FALSE, raiser, 0,
+		act("Você sente a força de seu Deus trazendo $N devolta à vida!@n", FALSE, raiser, 0,
 			ch, TO_CHAR);
 		act("$n foi trazid$r devolta à vida pelo Deus de $N!", FALSE, ch, 0, raiser, TO_NOTVICT);
-		act("&WVocê foi trazid$r devolta à vida pela força divina dos Deuses de $N!&n", FALSE,
+		act("@WVocê foi trazid$r devolta à vida pela força divina dos Deuses de $N!@n", FALSE,
 			ch, 0, raiser, TO_CHAR);
 	}
 
