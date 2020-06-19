@@ -1,4 +1,4 @@
-echo "Removendo ~com espaço x"
+echo "Removendo ~ com espaço x"
 find ./* -type f -exec sed -i 's/~/~/g' {} \;
 find ./* -type f -exec sed -i 's/~/~/g' {} \;
 find ./* -type f -exec sed -i 's/~/~/g' {} \;
