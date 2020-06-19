@@ -7,7 +7,7 @@ Luz, Paris.  Há um aviso aqui que diz " Não esqueça de visitar a Catedral de
 Paris".  Daqui, você pode continuar nesta rua indo para o leste.  Se for
 para o sul, chegará até a cidade de Lyon ou entrar nos Champs Elyseés ao
 norte.
-~ 
+~
 43 c 1
 D0
 ~
@@ -103,7 +103,7 @@ D3
 0 -1 4303
 S
 #4305
-O Átrio da Catedral~  
+O Átrio da Catedral~
    Você está entrando em uma das catedrais no estilo gótico mais bonitas 
 que existe.  Aqui há belíssimos ornamentos dourados pelo teto; e nas 
 paredes de pedra encontram-se grandes estátuas esculpidas em granito.  O 
@@ -131,7 +131,7 @@ D3
 0 -1 4306
 S
 #4306
-O Átrio De Dame de Notre~  
+O Átrio De Dame de Notre~
    Você está ao lado ocidental do átrio, a aqui as paredes e o teto é todo 
 enfeitado.  Você nota que no teto existem alguns belos anjos feitos em ouro 
 puro.  O chão é todo revestido por um raro e, com certeza, caríssimo 
@@ -210,7 +210,7 @@ D3
 0 -1 4308
 S
 #4310
-A Sala de Espera da Catedral~  
+A Sala de Espera da Catedral~
    Você está em um pequeno, frio e escuro, quarto onde pode-se ver um banco 
 no qual as pessoas se sentam, enquanto esperam pela vinda do padre.  Você 
 pode abrir a porta e a leste, e entrar na capela, ou voltar para o 
@@ -369,7 +369,7 @@ D3
 0 -1 4316
 S
 #4318
-Corredor Oriental~  
+Corredor Oriental~
    Você está no corredor ao lado leste de Notre Dame.  Aqui ainda pode-se 
 ver muitos bancos de madeira, e no vidro sujo da janela, você vê 
 representado a crucificação de Cristo.  No corredor há um aviso que 
@@ -1283,7 +1283,7 @@ D2
 0 -1 4360
 D3
 ~
-~  
+~
 0 -1 4363
 E
 aviso~

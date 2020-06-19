@@ -88,7 +88,7 @@ para chegar até ele, você terá que subir uma escadaria.
 D0
 Você consegue ver uma praça a norte.
 ~
-~ 
+~
 0 -1 15704
 D1
 Você vê uma longa escadaria. 
@@ -128,7 +128,7 @@ A Escadaria~
 para descansar, você percebe que em certos locais dessa escadaria também 
 existe um desenho da mesma ave de fogo do chafariz...  Que ave será 
 essa? - você se pergunta...
-~ 
+~
 157 gr 1
 D3
 Um chafariz jorra água para todos os lados. 
@@ -385,7 +385,7 @@ Apenas a escuridão.
 D2
 Você tenta, mas não consegue ver.
 ~
-~ 
+~
 0 -1 15721
 D3
 Você não consegue enxergar nada.
@@ -476,7 +476,7 @@ nome, desenhando sua suposta imagem daquele momento.  Parece que o olhar de
 Flyre lhe hipnotizou, e ela está se aproximando de você, e está cada vez 
 mais perto...  Mas a coragem para a luta não existe, e você só tem à suas 
 mãos o medo que tomou seu corpo.  Ainda há tempo de fugir...
-~ 
+~
 157 acdgf 9
 D4
 ~
@@ -524,7 +524,7 @@ Um Grande Corredor~
    É um longo corredor, e possui em suas paredes quadros de vários jovens.  
 Ao olhar mais detalhadamente para eles, você percebe uma expressão de 
 tristeza e desânimo.
-~ 
+~
 157 adg 0
 D0
 ~
@@ -790,7 +790,7 @@ A Torre de Apoio~
    Nossa!  Que medo!  Você pensou que existiria alguma criatura de 7 cabeças 
 aqui, mas tudo o que encontrou foi um velho esqueleto.  Agora, você sabe que 
 veio para o caminho errado...  Voltar é a única saída.
-~ 
+~
 157 adgr 0
 D1
 ~

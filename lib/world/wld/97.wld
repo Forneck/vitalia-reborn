@@ -252,7 +252,7 @@ Nada é possivel ver além da escuridão.
 0 -1 9712
 S
 #9714 
-O Subterrâneo~ 
+O Subterrâneo~
    Você está caminhando pelo subterrâneo, aqui tudo é magnífico.  A natureza
 com certeza levou milênios pra esculpir tudo isso.  No lado leste e oeste
 você a grande extensão desse subterrâneo.
@@ -275,7 +275,7 @@ O Subterrâneo~
 natureza, mas ao mesmo tempo fica assombrado com o ar assustador e a
 escuridão.  A oeste o suberrâneo tem continuidade e ao sul você pode
 ver uma pequena passagem e a leste uma sala um tanto quente.
-~  
+~
 97 adfgrs 0
 D W
 Nada é possivel ver além da escuridão.
@@ -298,7 +298,7 @@ O Fogo Eterno~
    Você caiu numa enorme labareda de fogo.  AAAHHhhhhh...... o calor é 
 extremo seus equipamentos se derretem e sua pele arde em chamas.....
 Você está completamente queimado pelo fogo eterno.....!!!
-~  
+~
 97 b 0
 S
 #9717
@@ -403,7 +403,7 @@ O Rio das Almas~
    Um rio de águas calmas, porém tudo aqui é assustador, das águas sobem
 borbulhas e algo parece se mexer debaixo d'agua.  Ao norte você vê a margem
 e a leste o rio continua.
-~ 
+~
 97 adfgrs 7
 D N
 Parece ser uma margem.
@@ -417,7 +417,7 @@ Um extenso rio de águas escuras.
 0 -1 9724
 S
 #9724
-O Rio das Almas~ 
+O Rio das Almas~
    O rio continua calmo, mas você tem a impressão de estar sendo
 observado.  Não existe correnteza, mas você percebe que é impossível voltar,
 como se algo arrastasse você cada vez mais para frente.  Sua única saída é
@@ -435,7 +435,7 @@ O Rio das Almas~
    Algo estranho está acontecendo... as águas claras se movimentam
 extremamente, no meio do rio um rodamoinho se forma, é impossível de
 voltar... você está sendo puxado.  Sua única saída é a curva ao leste.
-~  
+~
 97 adfgrs 7
 D E
 Um extenso rio de águas escuras.
@@ -444,7 +444,7 @@ Um extenso rio de águas escuras.
 0 -1 9726
 S
 #9726
-O Centro do Rodamoinho~ 
+O Centro do Rodamoinho~
    Uuaahhhhuuuu!!!  Muita água cai dentro do seu barco, faz ele ficar muito
 pesado.  Esse é um caminho sem volta.  Ao norte você vê a única saída
 possível.
@@ -457,7 +457,7 @@ Um extenso rio de águas escuras.
 0 -1 9727
 S
 #9727
-O Rio das Almas~  
+O Rio das Almas~
    Finalmente fora daquele rodamoinho e livre de qualquer perigo, mas
 infelizmente não há como voltar.  Por todos os lados somente escuridão.
 Você vê outra curva ao leste.
@@ -470,7 +470,7 @@ Nada é possivel ver além da escuridão.
 0 -1 9728
 S
 #9728
-O Rio das Almas~ 
+O Rio das Almas~
    Essa parte da caverna começa a ficar muito estreita, se você estivesse 
 com um barco muito grande, com certeza não conseguiria seguir viagem.  Há
 muitos morcegos por aqui e o cheiro de suas fezes é insuportável.  A única
@@ -617,7 +617,7 @@ Uma Margem do lado sudeste do Rio~
    Essa margem do rio é bem calma, porém parece que ao leste o rio acaba bem
 no meio das rochas, será que há uma passagem no meio das rochas?  A oeste o
 rio aparentemente é bem longo e ao norte há uma trilha.
-~ 
+~
 97 adfgrs 0
 D0
 Uma trilha.
@@ -853,7 +853,7 @@ Um Caminho~
    Seus pés sentem o calor que emana do centro da terra.  Ao norte você vê
 toda a extensão do caminho e ao oeste você pode ver uma enorme formação
 rochosa, distribuida de forma que parece um oráculo feito em pedras.
-~ 
+~
 97 adfgrs 0
 D N
 Um pequeno caminho.

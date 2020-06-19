@@ -1,41 +1,41 @@
-@B                 __   __   _    ________   ___    __       _     ___
-@W       O MUNDO  @B|  |.' .'.'_| .'_    _.' .' _ `.  |  |    .'_|  .' _ `.
-@W            DE  @B|  ' .'  |  |    |  |   |  ' |  | |  |    |  | |  ' |  |
-@B                |  .'    |  |    |  |   |  .-.  | |  |___ |  | |  .-.  |
-@B                |.'      |_.'    |_.'   |_.' |_.' |____.' |_.' |_.' |_.'@n
-@B ______________________________________________________________[@W Ajuda @B]_______@n
+&B                 __   __   _    ________   ___ o°  __       _     ___
+&W       O MUNDO  &B|  |.' .'.'_| .'_    _.' .' _ `.  |  |    .'_|  .' _ `.
+&W            DE  &B|  ' .'  |  |    |  |   |  ' |  | |  |    |  | |  ' |  |
+&B                |  .'    |  |    |  |   |  .-.  | |  |___ |  | |  .-.  |
+&B                |.'      |_.'    |_.'   |_.' |_.' |____.' |_.' |_.' |_.'&n
+&B ______________________________________________________________[&W Ajuda &B]_______&n
 
-   Para ler ajuda para um tÃ³pico, digite HELP (tÃ³pico).
+   Para ler ajuda para um tópico, digite HELP (tópico).
 
-   @gMOVIMENTAÃ‡ÃƒO@n:
+   &gMOVIMENTAÇÃO&n:
    Comandos para movimentar o seu personagem, olhar em volta, se localizar,
 sentar, dormir, abrir portas, etc...
 
-   @gCOMUNICAÃ‡ÃƒO@n:
-   Comandos para conversar com outros jogadores do Mundo de VitÃ¡lia.
+   &gCOMUNICAÇÃO&n:
+   Comandos para conversar com outros jogadores do Mundo de Vitália.
 
-   @gOBJETOS@n:
-   Comandos para recolher e descartar objetos, para usÃ¡-los, vestÃ­-los ou
-empunhÃ¡-los.  TambÃ©m explica comandos para beber e comer.
+   &gOBJETOS&n:
+   Comandos para recolher e descartar objetos, para usá-los, vestí-los ou
+empunhá-los.  Também explica comandos para beber e comer.
 
-   @gINFORMAÃ‡Ã•ES@n:
+   &gINFORMAÇÕES&n:
    Comandos para exibir informacoes sobre o seu personagem, sobre o MUD e
-tambÃ©m outras informaÃ§Ãµes Ãºteis para o jogo.
+também outras informações úteis para o jogo.
 
-   @gCOMBATE@n:
+   &gCOMBATE&n:
    Comandos para atacar oponentes ou para serem usados durante as lutas.
 
-   @gGRUPOS@n:
-   Comandos para formaÃ§Ã£o e interaÃ§Ã£o de grupos de jogadores.
+   &gGRUPOS&n:
+   Comandos para formação e interação de grupos de jogadores.
 
-   @gUTILITÃ¡RIOS@n:
+   &gUTILITÁRIOS&n:
    Outros comandos de utilidade geral.
 
-   @gMAGIAS@n:
+   &gMAGIAS&n:
    Ajuda para as magias do MUD.
 
-   @gHABILIDADES@n:
+   &gHABILIDADES&n:
    Ajuda para as habilidades do MUD.
 
-   @gCANÃ‡Ã•ES@n:
-   Ajuda para as canÃ§Ãµes do MUD.
+   &gCANÇÕES&n:
+   Ajuda para as canções do MUD.
