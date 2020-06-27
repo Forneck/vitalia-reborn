@@ -845,7 +845,7 @@ void create_spells_db()
  new_spell->assign[1].level = 16;
  new_spell->assign[1].num_mana = strdup(buf);
  new_spell->dispel[0] = strdup("4");
- new_spell->messages.to_vict = strdup("A warm feeling floods your body.");
+ new_spell->messages.to_vict = strdup("Uma calorosa sensação percorre o seu corpo.\r\n");
 
  spedit_save_internally(new_spell);
 
@@ -870,10 +870,10 @@ void create_spells_db()
  new_spell->applies[0].duration = strdup("12 + (self.level / 4)");
  new_spell->applies[1].appl_num = AFF_INVISIBLE + NUM_APPLIES;
  new_spell->applies[1].duration = strdup("12 + (self.level / 4)");
- new_spell->messages.to_self = strdup("$b vanishes.");
- new_spell->messages.to_vict = strdup("You vanish.");
- new_spell->messages.to_room = strdup("$N slowly fades out of existence.");
- new_spell->messages.wear_off = strdup("You feel yourself exposed.");
+ new_spell->messages.to_self = strdup("$n desaparece.");
+ new_spell->messages.to_vict = strdup("Você desaparece.");
+ new_spell->messages.to_room = strdup("$n começa a ficar mais clar$r e acaba por desaparecer.");
+ new_spell->messages.wear_off = strdup("Você se sente expost$r.");
 
  spedit_save_internally(new_spell);
 
@@ -893,7 +893,7 @@ void create_spells_db()
  new_spell->assign[0].class_num = CLASS_MAGIC_USER;
  new_spell->assign[0].level = 12;
  new_spell->assign[0].num_mana = strdup(buf);
-  new_spell->assign[1].class_num = CLASS_MAGIC_USER;
+  new_spell->assign[1].class_num = CLASS_RANGER;
  new_spell->assign[1].level = 80;
  new_spell->assign[1].num_mana = strdup(buf);
  new_spell->damages = strdup("dice(7, self.class == 0 ? 8 : 6) + 7");
