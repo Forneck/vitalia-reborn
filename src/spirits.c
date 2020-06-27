@@ -77,7 +77,7 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 		send_to_char(ch,
 					 "Estranhamente, seu espírito começa a voltar ao formato de um corpo humano.\r\n"
 					 "Você começa a sentir novamente seus braços, suas pernas, o chão, o ar\r\n"
-					 "entrando pelos seus pulmões!%s\r\n",CCNRM(ch,C_NRM);
+					 "entrando pelos seus pulmões!%s\r\n",CCNRM(ch,C_NRM));
 	}
 	send_to_char(ch, "\r\n");
 
