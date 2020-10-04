@@ -35,7 +35,7 @@
 #define CIRCLE_UNIX 1
 
 /* Define if the system is capable of using crypt() to encrypt.  */
-/* #define CIRCLE_CRYPT 1 */
+#define CIRCLE_CRYPT 1
 
 /* Define if we don't have proper support for the system's crypt().  */
 /* #undef HAVE_UNSAFE_CRYPT */
@@ -77,7 +77,7 @@
 /* #undef HAVE_STRICMP */
 
 /* Define if you have the strlcpy function.  */
-#define HAVE_STRLCPY 1
+/* #undef HAVE_STRLCPY */
 
 /* Define if you have the strncasecmp function.  */
 #define HAVE_STRNCASECMP 1
@@ -113,7 +113,7 @@
 #define HAVE_LIMITS_H 1
 
 /* Define if you have the <mcheck.h> header file.  */
-/* #undef HAVE_MCHECK_H */
+#define HAVE_MCHECK_H 1
 
 /* Define if you have the <memory.h> header file.  */
 #define HAVE_MEMORY_H 1
@@ -311,7 +311,7 @@
 #define NEED_STRICMP_PROTO 
 
 /* Check for a prototype to strlcpy. */
-/* #undef NEED_STRLCPY_PROTO */
+#define NEED_STRLCPY_PROTO 
 
 /* Check for a prototype to strncasecmp. */
 /* #undef NEED_STRNCASECMP_PROTO */
