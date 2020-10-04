@@ -503,7 +503,6 @@ ACMD(do_gen_comm)
 
 	/* Array of flags which must _not_ be set in order for comm to be heard. */
 	int channels[] = {
-		0,
 		PRF_NOSHOUT,
 		PRF_NOGOSS,
 		PRF_NOAUCT,
@@ -518,6 +517,7 @@ ACMD(do_gen_comm)
 		HIST_AUCTION,
 		HIST_GRATS,
 		HIST_PRAY,
+		0
 	};
 
 	/* com_msgs: [0] Message if you can't perform the action because of
