@@ -131,9 +131,9 @@ void assign_mobiles(void)
 /* assign special procedures to objects */
 void assign_objects(void)
 {
-  ASSIGNOBJ(1226, gen_board);   /* builder's board */
-  ASSIGNOBJ(1227, gen_board);   /* staff board */
-  ASSIGNOBJ(1228, gen_board);   /* advertising board */
+ // ASSIGNOBJ(1226, gen_board);   /* builder's board */
+//  ASSIGNOBJ(1227, gen_board);   /* staff board */
+//  ASSIGNOBJ(1228, gen_board);   /* advertising board */
   ASSIGNOBJ(3096, gen_board);	/* social board */
   ASSIGNOBJ(3097, gen_board);	/* freeze board */
   ASSIGNOBJ(3098, gen_board);	/* immortal board */
