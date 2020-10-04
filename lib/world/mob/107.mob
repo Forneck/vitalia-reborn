@@ -274,12 +274,12 @@ Con: 15
 Cha: 18
 E
 #10714
-cavaleiro lend�rio diomiriano~
-um lend�rio cavaleiro diomiriano~
-Um lend�rio cavaleiro diomiriano está aqui, em chamas de fogo.
+cavaleiro lendário diomiriano~
+um lendário cavaleiro diomiriano~
+Um lendário cavaleiro diomiriano está aqui, em chamas de fogo.
 ~
-Voc� observa uma lenda viva, um lend�rio cavaleiro diomiriano.  Os 
-cavaleiros não são visto desde a �ltima batalha entre Diomirianos e
+Você observa uma lenda viva, um lendário cavaleiro diomiriano.  Os 
+cavaleiros não são visto desde a última batalha entre Diomirianos e
 Armilianos.  Os cavaleiros são verdadeiras fortalezas, capazes de espalhar
 temor e medo em qualquer advers�rio.
 ~
@@ -296,14 +296,14 @@ Con: 14
 Cha: 20
 E
 #10715
-cavaleiro lend�rio armiliano~
-um lend�rio cavaleiro armiliano~
-Um lend�rio cavaleiro armiliano está aqui, com o seu olhar imponente.
+cavaleiro lendário armiliano~
+um lendário cavaleiro armiliano~
+Um lendário cavaleiro armiliano está aqui, com o seu olhar imponente.
 ~
-Voc� observa uma lenda viva, um lend�rio cavaleiro armiliano.  Os 
-cavaleiros não são visto desde a �ltima batalha entre Diomirianos e
+Você observa uma lenda viva, um lendário cavaleiro armiliano.  Os 
+cavaleiros não são visto desde a última batalha entre Diomirianos e
 Armilianos.  Os cavaleiros são verdadeiras fortalezas, capazes de espalhar
-temor e medo em qualquer advers�rio.
+temor e medo em qualquer adversário.
 ~
 2291714 0 0 0 18350464 0 0 0 350 E
 40 2 -10 4d5+1500 3d6+20
@@ -318,13 +318,13 @@ Con: 15
 Cha: 20
 E
 #10716
-anci�o otaviano~
-um anci�o otaviano~
-Um anci�o otaviano está aqui, espalhando sua sabedoria com todos.
+ancião otaviano~
+um ancião otaviano~
+Um ancião otaviano está aqui, espalhando sua sabedoria com todos.
 ~
-O anci�o otaviano é o ser mais s�bio de toda Ot�via, eles adoram se reunirem
-em pra�as e ensinar os mais jovens os caminhos certos da vida.  Sua pele 
-azul j� não � t�o suave, mas os seus olhos possuem um brilho cintilantes de
+O ancião otaviano é o ser mais sábio de toda Otávia, eles adoram se reunirem
+em praças e ensinar os mais jovens os caminhos certos da vida.  Sua pele 
+azul já não é tão suave, mas os seus olhos possuem um brilho cintilantes de
 um jovem.
 ~
 2781250 0 0 0 67176472 0 0 0 700 E
@@ -339,14 +339,14 @@ Wis: 18
 Cha: 18
 E
 #10717
-yasmim l�der otaviana~
-Yasmim, a l�der dos otavianos~
-Yasmim, a l�der dos otavianos, está aqui, trazendo em seus olhos uni�o e paz.
+yasmim líder otaviana~
+Yasmim, a líder dos otavianos~
+Yasmim, a líder dos otavianos, está aqui, trazendo em seus olhos união e paz.
 ~
-Yasmim � a l�der dos otavianos e representante de seu povo na tr�ade da 
-justi�a.  Sua pele � suave e de cor azul, seus cabelos são negros e seus 
-olhos são cintilantes.  Yasmim � generosa e pac�fica, lidera seu povo com
-justi�a e uni�o, diferente de alguns l�deres que governam com terror e 
+Yasmim é a líder dos otavianos e representante de seu povo na tríade da 
+justiça.  Sua pele é suave e de cor azul, seus cabelos são negros e seus 
+olhos são cintilantes.  Yasmim é generosa e pacífica, lidera seu povo com
+justiça e união, diferente de alguns líderes que governam com terror e 
 trevas.
 ~
 2781250 0 0 0 67176472 0 0 0 700 E
@@ -364,15 +364,15 @@ E
 #10718
 grifo dourado~
 um grifo dourado~
-Um grifo dourado está aqui, com sua beleza e impon�ncia.
+Um grifo dourado está aqui, com sua beleza e imponência.
 ~
-O Grifo dourado � uma das criaturas mais belas de toda Vit�lia.  Suas penas
-e p�los dourados refletem os raios do sol que atingem seu corpo.  Suas asas
-são enormes e suas garras poderiam retalhar em peda�os um gigante.  Uma 
+O Grifo dourado é uma das criaturas mais belas de toda Vitália.  Suas penas
+e pêlos dourados refletem os raios do sol que atingem seu corpo.  Suas asas
+são enormes e suas garras poderiam retalhar em pedaços um gigante.  Uma 
 antiga lenda vitaliana diz que: Dois jovens que juravam amor eterno fugiram
-por causa dos seus pais que pertenciam a fam�lias rivais: os armilianos e
-diomirianos, e nunca mais foram visto.  Ser� que os grifos são a chave para 
-este mist�rio.
+por causa dos seus pais que pertenciam a famílias rivais: os armilianos e
+diomirianos, e nunca mais foram visto.  Será que os grifos são a chave para 
+este mistério.
 ~
 2873362 0 0 0 67109120 0 0 0 600 E
 80 -5 -17 4d5+2700 5d7+20
@@ -389,9 +389,9 @@ E
 #10719
 cedro gigante~
 o cedro gigante~
-O Cedro gigante está aqui, fingindo ser uma �rvore normal.
+O Cedro gigante está aqui, fingindo ser uma árvore normal.
 ~
-O cedro gigante � uma criatura centen�ria, sua pele � extremamente 
+O cedro gigante é uma criatura centenária, sua pele � extremamente 
 resistente e seu mal humor � incr�vel.  Se o dia estiver chuvoso saia de 
 perto dele.
 ~
