@@ -28,12 +28,11 @@ extern void look_at_sky(struct char_data *ch);
 /* functions with subcommands */
 /* do_gen_comm */
 ACMD(do_gen_comm);
-#define SCMD_HOLLER   0
-#define SCMD_SHOUT    1
-#define SCMD_GOSSIP   2
-#define SCMD_AUCTION  3
-#define SCMD_GRATZ    4
-#define SCMD_GEMOTE   5
+#define SCMD_SHOUT    0
+#define SCMD_GOSSIP   1
+#define SCMD_AUCTION  2
+#define SCMD_GRATZ    3
+#define SCMD_GEMOTE   4
 /* do_qcomm */
 ACMD(do_qcomm);
 #define SCMD_QSAY     0
