@@ -1,4 +1,4 @@
-@B                 __   __   _    ________   ___ o�  __       _     ___
+@B                 __   __   _    ________   ___ o^  __       _     ___
 @W       O MUNDO  @B|  |.' .'.'_| .'_    _.' .' _ `.  |  |    .'_|  .' _ `.
 @W            DE  @B|  ' .'  |  |    |  |   |  ' |  | |  |    |  | |  ' |  |
 @B                |  .'    |  |    |  |   |  .-.  | |  |___ |  | |  .-.  |
@@ -6,225 +6,225 @@
 @B ________________________________________[@W Livro de Leis para Imortais @B]_______@n
 
 {#101 index}
-   Neste livro s�o descritas as pol�ticas que devem ser seguidas e respeitadas
-pelos imortais do Mundo de Vit�lia.  Todas as regras contidas no @gPOLICY@n
-tamb�m s�o v�lidas para os imortais, contudo, as regras contidas neste livro
+   Neste livro são descritas as políticas que devem ser seguidas e respeitadas
+pelos imortais do Mundo de Vitália.  Todas as regras contidas no @gPOLICY@n
+também são válidas para os imortais, contudo, as regras contidas neste livro
 prevalecem sobre o POLICY.
 
-@+B[@+WPol�ticas B�sicas@+B]@+n
-@+G1. Interfer�ncia.@+n
-   Voc� agora est� em um plano de evolu��o mais elevado do que o dos mortais,
-e por este motivo, n�o � permitido interferir no mundo dos mortais.  �
-considerado como interfer�ncia: lutar, matar ou roubar de mortais; ajudar
-mortais matando monstros ou lhes conseguindo itens ou dinheiro; lan�ar
+@+B[@+WPolíticas Básicas@+B]@+n
+@+G1. Interferência.@+n
+   Você agora está em um plano de evolução mais elevado do que o dos mortais,
+e por este motivo, não é permitido interferir no mundo dos mortais.  É
+considerado como interferência: lutar, matar ou roubar de mortais; ajudar
+mortais matando monstros ou lhes conseguindo itens ou dinheiro; lançar
 magias sobre os mortais; vender ou simplesmente doar itens a mortais.
 
-   N�o se deve atacar monstros de n�vel inferior a 101 (que n�o lhe dar�o
-experi�ncia), pois estes devem ser mortos pelos mortais, que receber�o
-experi�ncia ao mat�-los.  Ao matar monstros, n�o deixe seu cad�ver na sala,
+   Não se deve atacar monstros de nível inferior a 101 (que não lhe darão
+experiência), pois estes devem ser mortos pelos mortais, que receberão
+experiência ao matá-los.  Ao matar monstros, não deixe seu cadáver na sala,
 ou pelo menos retire e descarte (@gJUNK@n) tudo que sobrar dentro.
 
 @+G2. Visibilidade.@+n
-   Nenhum imortal ou semi-deus pode aparecer para os mortais sem a permiss�o
-de um Deus Guardi�o ou superior.  Para alternar sua invisibilidade, use o
+   Nenhum imortal ou semi-deus pode aparecer para os mortais sem a permissão
+de um Deus Guardião ou superior.  Para alternar sua invisibilidade, use o
 comando @gINVIS@n.
 
 {#106 index}
-   Os Deuses (n�vel 106) e superiores podem ficar vis�veis nos momentos
-apropriados, por�m, deve-se evitar interfer�ncias desnecess�rias.
+   Os Deuses (nível 106) e superiores podem ficar visíveis nos momentos
+apropriados, porém, deve-se evitar interferências desnecessárias.
 
 {#107 index}
-   Os Deuses Guardi�es (n�vel 107) e superiores podem utilizar o comando
-@gAPPEAR@n como recurso para ficar vis�vel apenas para um grupo de jogadores.
+   Os Deuses Guardiões (nível 107) e superiores podem utilizar o comando
+@gAPPEAR@n como recurso para ficar visível apenas para um grupo de jogadores.
 
 {#101 index}
 @+G3. Senhas.@+n
-   � de fundamental import�ncia que a senha do seu personagem seja apenas de
-seu conhecimento, e que ningu�m mais a saiba.  Evite senhas f�ceis.  Para
-ter uma boa senha, use letras e n�meros misturados.  Tamb�m evite manter
+   É de fundamental importância que a senha do seu personagem seja apenas de
+seu conhecimento, e que ninguêm mais a saiba.  Evite senhas fáceis.  Para
+ter uma boa senha, use letras e números misturados.  Tambêm evite manter
 senhas iguais para seu personagem imortal e seus avatares (quando for o
 caso).
 
-@+G4. Informa��es Pessoais@+n
-   Ao se tornar imortal, voc� deve deixar uma mensagem no quadro dos
-imortais, dizendo seu nome real e seu e-mail.  Essas informa��es s�o apenas
-para controle e seguran�a do MUD.  O quadro de mensagens dos imortais fica
-ao norte do P�tio do Reino dos Imortais.  Para chegar at� ele, use o comando
+@+G4. Informações Pessoais@+n
+   Ao se tornar imortal, você deve deixar uma mensagem no quadro dos
+imortais, dizendo seu nome real e seu e-mail.  Essas informações são apenas
+para controle e segurança do MUD.  O quadro de mensagens dos imortais fica
+ao norte do Pátio do Reino dos Imortais.  Para chegar até ele, use o comando
 @gGOTO IMM@n, seguido de @gN@n (norte).
 
-@+B[@+WInfring�ncias@+B]@+n
-   Qualquer desacordo com essas pol�ticas ser� tratado pelos Deuses
-Legisladores e superiores.  Qualquer problema que n�o foi abordado aqui,
-ser� tratado por um Deus Criador ou Supremo.
+@+B[@+WInfringências@+B]@+n
+   Qualquer desacordo com essas políticas será tratado pelos Deuses
+Legisladores e superiores.  Qualquer problema que não foi abordado aqui,
+será tratado por um Deus Criador ou Supremo.
 
-@+B[@+WOutras Cap�tulos@+B]@+n
-   H� v�rios outros cap�tulos neste livro.  Voc� pode ler cada um dos outros
-cap�tulos atrav�s dos comandos indicados abaixo:
+@+B[@+WOutros Capítulos@+B]@+n
+   Há vários outros capítulos neste livro.  Você pode ler cada um dos outros
+capítulos através dos comandos indicados abaixo:
 
-   @gHANDBOOK INTRO      @n Informa��es �teis para novos imortais.
+   @gHANDBOOK INTRO      @n Informações úteis para novos imortais.
    @gHANDBOOK DIREITOS   @n Direitos dos imortais.
-   @gHANDBOOK AVATARES   @n Pol�ticas e restri��es sobre o uso de avatares.
-   @gHANDBOOK DESAFIOS   @n Pol�ticas e restri��es para a cria��o de desafios.
+   @gHANDBOOK AVATARES   @n Políticas e restrições sobre o uso de avatares.
+   @gHANDBOOK DESAFIOS   @n Políticas e restrições para a criação de desafios.
 {#106 index}
-   @gHANDBOOK DEUSES     @n Regras aplic�veis apenas para Deuses.
+   @gHANDBOOK DEUSES     @n Regras aplicáveis apenas para Deuses.
 {#107 index}
-   @gHANDBOOK GUARD      @n Regras aplic�veis apenas para Deuses Guardi�es.
+   @gHANDBOOK GUARD      @n Regras aplicáveis apenas para Deuses Guardiões.
 {#101 intro}
-@+B[@+WInforma��es Para Novos Imortais@+B]@+n
+@+B[@+WInformações Para Novos Imortais@+B]@+n
 
-   Ao se tornar um imortal, voc� passa a pertencer a um plano de evolu��o
+   Ao se tornar um imortal, você passa a pertencer a um plano de evolução
 mais elevado, ganhando assim, novos poderes.  Seu personagem se torna imune
-aos ataques dos monstros mais fracos (mortais), e tamb�m n�o recebe
-experi�ncia ao mat�-los.  Como imortal, voc� deve procurar monstros mais
-fortes, que tenham n�vel igual ou superior a 101 (imortais).  � poss�vel
-morrer para estes monstros, por�m, seu esp�rito n�o � mais separado do
+aos ataques dos monstros mais fracos (mortais), e tambêm não recebe
+experiência ao matá-los.  Como imortal, você deve procurar monstros mais
+fortes, que tenham nível igual ou superior a 101 (imortais).  É possível
+morrer para estes monstros, porêm, seu espírito não é mais separado do
 corpo.
 
-   Agora, voc� tem o poder de se locomover rapidamente de uma sala para
-outra, pode (ali�s, deve) ficar invis�vel sem a necessidade de magia, pode
+   Agora, você tem o poder de se locomover rapidamente de uma sala para
+outra, pode (aliás, deve) ficar invisível sem a necessidade de magia, pode
 enxergar sem a necessidade de luz, e tem acesso a um novo canal de
-comunica��o.  Para ver uma lista com os novos comandos, digite o comando
+comunicação.  Para ver uma lista com os novos comandos, digite o comando
 @gWIZHELP@n.  Leia a ajuda para cada um dos comandos usando @gHELP <comando>@n.
 
-   Voc� tamb�m tem acesso ao Reino dos Imortais, uma �rea onde os imortais
-se re�nem para conversar.  A �rea tamb�m � um bom lugar para descanso, e lhe
-d� acesso f�cil � maioria dos quadros de mensagens do mundo.  Para chegar
-at� o Reino dos Imortais, digite o comando @gGOTO IMM@n.  Para voltar para
-Midgaard, digite @gGOTO MIDGAARD@n.
+   Você tambêm tem acesso ao Reino dos Imortais, uma área onde os imortais
+se reúnem para conversar.  A área tambêm é um bom lugar para descanso, e lhe
+dá acesso fácil à maioria dos quadros de mensagens do mundo.  Para chegar
+até o Reino dos Imortais, digite o comando @gGOTO 1201@n.  Para voltar para
+Midgaard, digite @gGOTO 3001@n.
 
-   Voc� poder� chegar at� o n�vel 105 (Semi-Deus) matando monstros.  A
-partir deste n�vel, n�o se recebe mais nenhuma experi�ncia.  Deste ponto em
-diante, suas promo��es a n�veis superiores s�o decididas pelos Deuses
-Legisladores e superiores, levando em considera��o sua dedica��o pelo MUD, e
-seu interesse nas implementa��es do Mundo de Vit�lia.
+   Você poderá chegar até o nível 105 (Semi-Deus) matando monstros.  A
+partir deste nível, não se recebe mais nenhuma experiência.  Deste ponto em
+diante, suas promoções a níveis superiores são decididas pelos Deuses
+Legisladores e superiores, levando em consideração sua dedicação pelo MUD, e
+seu interesse nas implementações do Mundo de Vitália.
 {#101 direitos}
 @+B[@+WDireitos@+B]@+n
 
-   Enquanto voc� for um imortal menor (do n�vel 101 at� 104), voc� n�o ter�
+   Enquanto você for um imortal menor (do nível 101 até 104), vocã não terá
 nenhum direito especial, pois deve continuar matando monstros e recebendo
-experi�ncia, at� se tornar um Semi-Deus (n�vel 105).
+experiência, até se tornar um Semi-Deus (nível 105).
 
-   Ao se tornar Semi-Deus, voc� poder� ter um segundo personagem, que �
-chamado de "Avatar".  Com um avatar, voc� poder� continuar jogando no MUD
+   Ao se tornar Semi-Deus, você poderá ter um segundo personagem, que é
+chamado de "Avatar".  Com um avatar, você poderá continuar jogando no MUD
 como um mortal, sem ter que excluir seu personagem imortal.  Digite @gHANDBOOK
-AVATAR@n para conhecer as pol�ticas e restri��es para o uso de avatares.
+AVATAR@n para conhecer as políticas e restrições para o uso de avatares.
 {#101 avatares}
 @+B[@+WAvatares@+B]@+n
 
-   Apenas os Semi-Deuses (n�vel 105) e superiores podem ter um avatar.
+   Apenas os Semi-Deuses (nível 105) e superiores podem ter um avatar.
 
-   O avatar � um segundo personagem que � permitido aos Semi-Deuses
-possu�rem, para que possam continuar jogando como mortais.  Esse avatar pode
+   O avatar é um segundo personagem que é permitido aos Semi-Deuses
+possuírem, para que possam continuar jogando como mortais.  Esse avatar pode
 estar, inclusive, conectado ao mesmo tempo que seu dono.  Para criar seu
-avatar, fa�a da mesma forma como se cria um novo personagem.  A cria��o do
-avatar estar� sujeita � aprova��o dos Deuses.  Semi-Deuses poder�o ter
+avatar, faça da mesma forma como se cria um novo personagem.  A criação do
+avatar estará sujeita à aprovação dos Deuses.  Semi-Deuses poderão ter
 apenas um avatar de cada vez.
 
-   Os avatares est�o sujeitos �s mesmas pol�ticas dos demais mortais, com
-algumas restri��es.  N�o podem receber ajuda de nenhum imortal.  N�o podem
-participar de cl�s ou de quests.  Os avatares podem reencarnar quantas vezes
-forem desejadas, mas n�o podem se tornar imortais.
+   Os avatares estão sujeitos às mesmas políticas dos demais mortais, com
+algumas restrições.  Não podem receber ajuda de nenhum imortal.  Não podem
+participar de clãs ou de quests.  Os avatares podem reencarnar quantas vezes
+forem desejadas, mas não podem se tornar imortais.
 
-   Fora isso, o avatar deve jogar como um jogador qualquer, e n�o � permitida
-a divulga��o de sua verdadeira identidade aos outros mortais.
+   Fora isso, o avatar deve jogar como um jogador qualquer, e não é permitida
+a divulgação de sua verdadeira identidade aos outros mortais.
 
 {#106 avatares}
-   Deuses (n�vel 106) e superiores poder�o ter mais de um avatar, mas nunca
-se deve manter mais avatares que o necess�rio.  � uma boa id�ia usar avatares
+   Deuses (nível 106) e superiores poderão ter mais de um avatar, mas nunca
+se deve manter mais avatares que o necessário.  É uma boa idéia usar avatares
 para ajudar ensinar os primeiros passos para os jogadores novos.
 
 {#107 avatares}
-   Os avatares dos Deuses Guardi�es e superiores podem ser modificados e
-receber ajuda de seus pr�prios donos.
+   Os avatares dos Deuses Guardiões e superiores podem ser modificados e
+receber ajuda de seus próprios donos.
 
 {#101 avatares}
-   Se voc� n�o tiver uma boa conduta, seja com seu pr�prio personagem, ou
-com o seu avatar, voc� perder� o direito de uso do avatar, e n�o ser� aceita
-a cria��o de novos avatares.
+   Se você não tiver uma boa conduta, seja com seu próprio personagem, ou
+com o seu avatar, você perderá o direito de uso do avatar, e não será aceita
+a criação de novos avatares.
 {#101 desafios}
 @+B[@+WAventuras e Desafios@+B]@+n
 
-   Aventuras ou desafios (quests) s� podem ser realizadas pelos membros
-cadastrados e aceitos pelo cl� GAIVI do Mundo de Vit�lia.  Todos os desafios
-devem ser realizadas de acordo com as regras definidas pelo cl�.
+   Aventuras ou desafios (quests) só podem ser realizadas pelos membros
+cadastrados e aceitos pelo clã GAIVI do Mundo de Vitália.  Todos os desafios
+devem ser realizadas de acordo com as regras definidas pelo clã.
 
-   Para fazer parte do cl� GAIVI, voc� precisa ser um Semi-Deus (n�vel 105)
+   Para fazer parte do clã GAIVI, você precisa ser um Semi-Deus (nível 105)
 e ser convidado.
 {#106 deuses}
 @+B[@+WRegras para Deuses@+B]@+n
 
-@+G1. Freq��ncia@+n
-   Atingindo o n�vel de Deus, voc� come�a a ter responsabilidades no MUD, e
+@+G1. Freqüência@+n
+   Atingindo o nível de Deus, você começa a ter responsabilidades no MUD, e
 deve estar sempre presente, cumprindo as tarefas que lhe forem designadas.
-N�o h� a necessidade de permanecer presente o tempo todo, mas voc� deve
+Não há a necessidade de permanecer presente o tempo todo, mas você deve
 participar e se envolver com os assuntos relacionados ao jogo.  Evite ficar
-dias ou semanas sem aparecer.  Se voc� tiver algum problema pessoal e n�o
+dias ou semanas sem aparecer.  Se você tiver algum problema pessoal e não
 puder comparecer ao jogo por um tempo, avise os superiores.
 
-   Se voc� se afastar do MUD por muito tempo sem dar nenhuma explica��o,
-esteja preparado para se encontrar em um n�vel inferior quando retornar.
+   Se você se afastar do MUD por muito tempo sem dar nenhuma explicação,
+esteja preparado para se encontrar em um nível inferior quando retornar.
 
-@+B[@+WClassifica��o dos Deuses@+B]@+n
+@+B[@+WClassificação dos Deuses@+B]@+n
 
-   Os Deuses (n�vel 106) s�o divididos em tr�s classes, de acordo com a tarefa
-atribu�da a cada um.  As tr�s classes existentes s�o explicadas logo a seguir:
+   Os Deuses (nível 106) são divididos em três classes, de acordo com a tarefa
+atribuída a cada um.  As três classes existentes são explicadas logo a seguir:
 
 @+G1. Deus dos Iniciantes@+n
    Tem a tarefa principal de ajudar os novos jogadores a darem seus
 primeiros passos no jogo, ensinar-lhes os principais comandos, como se
-vestem, se alimentam e como lutam.  Essa ajuda pode ser usando seu pr�prio
+vestem, se alimentam e como lutam.  Essa ajuda pode ser usando seu próprio
 personagem Deus, ou de maneira mais discreta: usando um avatar.
 
 @+G2. Deus dos Desafios@+n
    Tem a tarefa de planejar, criar, organizar e executar desafios (quests) para
-os jogadores mortais.  Os Deuses dos Desafios s�o os bra�os do cl� GAIVI.
+os jogadores mortais.  Os Deuses dos Desafios são os braços do clã GAIVI.
 
 @+G3. Deus dos Renascidos@+n
-   Tem a tarefa de guiar os jogadores durante a transcend�ncia e a
-reencarna��o.  S�o os respons�veis por guardar e devolver os equipamentos do
-jogador que forem autorizados a serem mantidos para a pr�xima encarna��o.
+   Tem a tarefa de guiar os jogadores durante a transcendência e a
+reencarnação.  São os responsáveis por guardar e devolver os equipamentos do
+jogador que forem autorizados a serem mantidos para a próxima encarnação.
 
-   Um Deus de uma classe s� poder� realizar a tarefa de outra classe se
+   Um Deus de uma classe só poderá realizar a tarefa de outra classe se
 estiver livre no momento.  Por exemplo, um Deus dos Iniciantes pode ajudar a
-executar uma quest apenas se n�o houverem jogadores novatos necessitando de
+executar uma quest apenas se não houverem jogadores novatos necessitando de
 ajuda.
 {#107 guard}
-@+B[@+WDeuses Guardi�es@+B]@+n
+@+B[@+WDeuses Guardiões@+B]@+n
 
-   Sendo um Deus Guardi�o ou superior, voc� possui grandes poderes no MUD, e
-deve estar sempre atento �s seguintes pol�ticas:
+   Sendo um Deus Guardião ou superior, você possui grandes poderes no MUD, e
+deve estar sempre atento às seguintes políticas:
 
    Quando um jogador agir de forma incorreta, infringindo as leis do POLICY,
-voc� deve sempre cham�-lo para conversar antes de punir, ou assim que for
+você deve sempre chamá-lo para conversar antes de punir, ou assim que for
 punido.  Deve-se explicar ao jogador o erro que ele cometeu, e o motivo de
 estar sendo punido.  Se durante a conversa, for caracterizado que o jogador
-agiu com m� inten��o, ou n�o se arrepende do que fez, deve-se prend�-lo, sem
+agiu com má intençâo, ou não se arrepende do que fez, deve-se prendê-o, sem
 necessidade de extender a conversa.
 
-   As puni��es n�o devem ser eternas (exceto a dele��o, que s� pode ser
-aplicada por Deuses Criadores e Supremos), e cabe a voc�, que aplicou a
-puni��o, retir�-la depois que o tempo da puni��o for cumprido.
+   As punições não devem ser eternas (exceto a deleção, que só pode ser
+aplicada por Deuses Criadores e Supremos), e cabe a você, que aplicou a
+punição, retirá-la depois que o tempo da punição for cumprido.
 
-   Para toda a puni��o que for aplicada, voc� deve deixar uma mensagem no
+   Para toda a punição que for aplicada, você deve deixar uma mensagem no
 quadro de mensagens do Cubo de Gelo (sala 1202), dizendo quem foi punido, o
-motivo, e por quanto tempo a puni��o deve durar.  Coloque informa��es
-suficientes na mensagem, como o que o jogador disse (para MUTE) ou o t�tulo
-que ele escreveu (para NOTITLE).  Tamb�m lembre de colar o texto das
-mensagens que s�o censuradas e apagadas dos quadros de mensagens.  Essa
-pol�tica n�o � para servir de satisfa��o, mas como um registro e fonte de
-consulta para outros Deuses.  Periodicamente, o conte�do desse quadro �
+motivo, e por quanto tempo a punição deve durar.  Coloque informações
+suficientes na mensagem, como o que o jogador disse (para MUTE) ou o título
+que ele escreveu (para NOTITLE).  Tambêm lembre de colar o texto das
+mensagens que são censuradas e apagadas dos quadros de mensagens.  Essa
+política não é para servir de satisfação, mas como um registro e fonte de
+consulta para outros Deuses.  Periodicamente, o conteúdo desse quadro é
 gravado em um registro, e enviado por e-mail para todos os Deuses.
 
-   Procure padronizar os t�tulos das mensagens que s�o escritas no quadro,
-para facilitar a consulta. O padr�o atualmente adotado � este:
+   Procure padronizar os titulos das mensagens que são escritas no quadro,
+para facilitar a consulta. O padrão atualmente adotado é este:
 
-   Puni��es...............:   Jogador (@RMUTE@n)
-   T�rmino das puni��es...:   Jogador (@GTHAW@n)
-   Perd�es................:   Jogador (@BPARDON@n)
-   Modifica��es...........:   Jogador (@YSITEOK@n)
+   Punições...............:   Jogador (@RMUTE@n)
+   Término das punições...:   Jogador (@GTHAW@n)
+   Perdões................:   Jogador (@BPARDON@n)
+   Modificações...........:   Jogador (@YSITEOK@n)
 
    Para facilitar, pode-se criar aliases como as que se seguem (funcionam
-bem apenas quando � apenas um jogador, e apenas uma puni��o):
+bem apenas quando é apenas um jogador, e apenas uma punição):
 
    alias gelo-vermelho at 1202 write quadro $1 (@@R$2@@n)
    alias gelo-verde at 1202 write quadro $1 (@@G$2@@n)
