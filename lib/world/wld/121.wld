@@ -6,7 +6,7 @@ Uma enorme alça de ferro cravada nesse alçapão parece ser uma das maneiras
 de abri-lo.  Você percebe que seria mais prudente ler o aviso daqui, antes
 de tentar abri-lo e entrar.
 ~
-121 cg 1
+121 68 0 0 0 1
 D2
 ~
 ~
@@ -15,8 +15,7 @@ D5
 Há uma frágil escada seguindo para baixo.
 ~
 alçapão~
-:n 1 o alçapão
-a 12133 12102
+1 12133 12102
 S
 #12102
 Dentro do Labirinto~
@@ -27,7 +26,7 @@ conforto.  Você pode ouvir sons, barulhos; sons de luta, e sons de que você
 não tem ideia do que ser.  Tudo ecoa por sua volta, rebatendo de parede em 
 parede, tornando impossível saber o quão longe esses sons estão.
 ~
-121 265 0
+121 265 0 0 0 0
 D3
 ~
 ~
@@ -40,7 +39,7 @@ que  aquela comida nojenta deve ser.  Há uma pequena goteira de água da
 entrada, a oeste, fazendo com que alguns fungos cresçam aqui, proporcionando 
 comida a estes indecentes animais.
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -55,7 +54,7 @@ Uma Sala Imunda~
    O odor se torna cada vez mais desagradável, o terrível piso imundo, você 
 sente a vontade de sair correndo desse local.
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -78,7 +77,7 @@ S
 Uma Sala Imunda~
    Maldição!!!  Mais sujeira!!!
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -95,7 +94,7 @@ sujeira diminuiu, deixando o ar ainda um pouco desagradável, mas não
 doentio e podre como era anteriormente.  A gruta se vira aqui, seguindo 
 para norte.
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -110,7 +109,7 @@ Recâmara~
    Este recanto se parece ser onde, as mais poderosas criaturas vem fazer 
 seus banquetes de pobres, estúpidos e desprezíveis seres.
 ~
-121 265 0
+121 265 0 0 0 0
 D2
 ~
 ~
@@ -122,7 +121,7 @@ Um Recanto~
 famintos monstros que passam por aqui atrás de comida.
    Acha que funciona?
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -133,7 +132,7 @@ Sala do Lotus~
    A caverna continua para norte, escura e sombria como antes.  Pelo 
 menos ela não fede.
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -149,7 +148,7 @@ Um Túnel~
 pré-histórico.  Parece que homens não vem aqui à muito tempo.  Se por 
 acaso vieram, não permaneceram por muito tempo.
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -165,7 +164,7 @@ Um Túnel~
 oferece nenhum conforto.  Você não tem nenhuma ajuda, a não ser 
 manter a vigia.
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -182,7 +181,7 @@ começa a ver evidências de uma forma de vida mais adiantada.  As
 paredes possuem várias marcas estranhas, que poderiam ser arranhões, todavia,
 elas parecem ser mais do que isso.  Elas estão muito tênues aqui.    
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -198,7 +197,7 @@ Uma Parte Diferente no Túnel~
 que elas de fato são entalhes e não somente arranhões de lutas 
 remotas.    
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -216,7 +215,7 @@ e todo o material usado no dia a dia parecem ter sido esculpidos na pedra
 mas eles foram tão bem feitos que você não tem o menor problema para saber
 a função básica de cada coisa.
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -232,7 +231,7 @@ A Caverna~
 chamada de túnel.  Cada vez mais, você percebe que algumas das criaturas
 presas aqui podem ser mais do que somente imundos animais.    
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -249,7 +248,7 @@ homens lado a lado e dez pés de altura.  Com certeza, este é um  lugar fora do
 comum e nessas paredes você pode ver antigas marcas de arranhões de batalhas
 passadas.
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -266,7 +265,7 @@ mais uma sala de guerra do que um lugar para morar.  Várias armas estão
 penduradas pelas paredes, elmos de diferentes tipos e várias outras peças 
 de metal estão espalhadas pela sala.
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -281,7 +280,7 @@ A Caverna~
    A caverna segue de leste a oeste aqui, levando a lugares e a monstros 
 totalmente desconhecidos.
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -298,7 +297,7 @@ Túnel Muito Limpo~
 parecem ter sido escovadas e muito limpas, surpreendentemente 
 limpas, que não há sinal de um simples foco de poeira neste local.
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -313,7 +312,7 @@ Uma Caverna Muito Limpa~
    Agora você entende porque essas salas estão tão limpas.  Nenhuma criatura 
 desejaria permanecer tão próximo a estas salas.
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -328,7 +327,7 @@ Uma Caverna Muito Limpa~
    A caverna aqui continua muito limpa e polida, porém desagradáveis ondulações
 no chão dificultam seu caminho.
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -344,7 +343,7 @@ Sala de Esqueletos~
 esqueleto original, outros espalhados pela sala.  Que tipo de criatura 
 colecionaria ossos?
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -359,7 +358,7 @@ Sala de Ossos~
    Ainda coberta de ossos, esta sala cheira a morte e a podridão.  Melhor 
 continuar a seguir seu caminho.
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -375,7 +374,7 @@ Algumas Plantas~
 tipo de fungo mas, pelo menos, é algo diferente daquilo que você estava vendo 
 pelas paredes até agora.
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -393,7 +392,7 @@ local onde algum vegetal poderia viver além do musgo simples.  Por toda a
 sua volta, nas fendas das paredes e do chão, crescem grandes e fortes plantas.
 Hei!!! O que foi isso??  O que você acabou de ouvir foi um rosnado?
 ~
-121 264 0
+121 264 0 0 0 0
 D1
 ~
 ~
@@ -408,7 +407,7 @@ De Volta à Escuridão~
    Escuro como a mais escura das noites, você pode ouvir claramente os pesados 
 passos de algo que parece ser imenso mas, infelizmente, não pode ver ninguém.
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -423,7 +422,7 @@ Os Jors~
    Rápidas como a luz, horríveis como o pecado, estas criaturas esperam 
 por um delicioso e suculento jantar: VOCÊ!    
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -439,7 +438,7 @@ Os Jors~
 corpos destroçados e apodrecendo parece não incomodar estas criaturas 
 repugnantes e hostis, que devem ser as coisas mais nojentas de toda Vitália.
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -454,7 +453,7 @@ Os Jors~
    Algo lhe diz que esses Jors lhe darão trabalho.  Você se encontra rodeado 
 por eles. Não há opção: é lutar ou morrer!
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -469,7 +468,7 @@ Uma Curva no Caminho~
    O caminho agora segue para o sul, em direção a um lugar ainda mais escuro,
 nas profundezas do covil do demônio.
 ~
-121 265 0
+121 265 0 0 0 0
 D2
 ~
 ~
@@ -484,7 +483,7 @@ Seguindo Para Sul~
    As paredes aqui não possuem nenhum traço característico, nada a não ser
 arranhões de batalhas e manchas de sangue.
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -500,7 +499,7 @@ Seguindo Para Sul~
 estivesse nessa caverna há muito tempo.  Você adoraria saber que dia é hoje e 
 que horas são agora.
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -516,7 +515,7 @@ Seguindo Para Sul~
 junto com os sons de passadas pesadas e de vozes guturais, você ouve um som 
 muito agudo, que lhe causa um enorme arrepio.
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -532,7 +531,7 @@ Em Estado de Alerta~
 instante que uma enorme figura negra se atirava rapidamente em sua direção,
 logo acima da entrada.
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -549,7 +548,7 @@ existem verdadeiras montanhas de lixo. Ao olhar para as paredes, você tem a
 nítida impressão de que alguém atirou com uma catapulta nelas, tamanho 
 os estragos.
 ~
-121 0 1
+121 0 0 0 0 1
 D0
 ~
 ~
@@ -564,7 +563,7 @@ Uma Sala em Ruínas~
    A espessa camada de entulho no chão desta sala parece dizer que o Crixna
 na outra sala não era o único Crixna desse Labirinto.
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -579,7 +578,7 @@ Um Piso Sujo~
    O chão de pedra começa a dar espaço a uma fina e arenosa camada de 
 poeira.  Você quase tem a sensação de estar andando em uma praia.    
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -594,7 +593,7 @@ Um Piso Lamacento~
   O chão está completamente imundo, e muito lamacento.  Isso parece ser 
 areia movediça mas felizmente não é.    
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -610,7 +609,7 @@ De Volta às Pedras~
 capaz de manter tanta firmeza no poço do inferno.  Muito limpa e muito 
 arrumada.
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -626,7 +625,7 @@ Morada do Basilisco~
 Você somente havia ouvido falar desta assustadora criatura nas histórias de 
 criança e se espanta ao perceber que elas de fato existem.    
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -643,7 +642,7 @@ de horrores e mais horrores.  Sua mente começa a divagar e você se pega
 pensando que pode estar chovendo na superfície.  Talvez uma ducha fria fosse
 lhe cair bem agora.    
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -659,7 +658,7 @@ Uma Caverna~
 demôniaco e fabuloso Minotauro.  Para o oeste, apenas a escuridão.  
 Para o leste, mais escuridão.  Só há escuridão.
 ~
-121 265 0
+121 265 0 0 0 0
 D1
 ~
 ~
@@ -676,7 +675,7 @@ labirinto.  Parece que todos os objetos preciosos trazidos por aqueles que
 eram aprisionados aqui foram levados por uma criatura bem mais poderosa
 do que seu próprio dono.
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -692,7 +691,7 @@ Outra Caverna~
 deste local.  Parece que estas foram feitas bem mais recentemente.  Seria 
 possível essas criaturas estarem cavando novos túneis em direção à liberdade?
 ~
-121 265 0
+121 265 0 0 0 0
 D2
 ~
 ~
@@ -709,7 +708,7 @@ As paredes chegam a ser cortantes, com tantas pontas agudas e mal acabadas em
 alguns locais e elas não parecem, de modo algum, serem naturais, 
 como as paredes anteriores.
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -727,7 +726,7 @@ vindos de inúmeras criaturas.  E aos poucos, você percebe alguns ruídos de luta,
 e muitos gritos estridentes.  Esse é o tipo de som que você tem plena certeza
 de que o acompanhará até o fim de seus dias.    
 ~
-121 265 0
+121 265 0 0 0 0
 D0
 ~
 ~
@@ -745,7 +744,7 @@ local.  Há correntes presas nas paredes e antigas e rústicas armas por toda
 a sala.  Criaturas de vários tamanhos e formas se movem pela sala, torturando e
 causando muita dor às pobres criaturas que foram aprisionadas aqui.
 ~
-121 264 0
+121 264 0 0 0 0
 D2
 ~
 ~
@@ -763,7 +762,7 @@ inclinando sobre um Caiveh, salivando, um Cavaleiro Khordovian testando uma
 nova técnica de interrogatório em um Diurge, obtendo, como único resultado
 visível, um ensurdecedor grito de medo e dor.
 ~
-121 264 0
+121 264 0 0 0 0
 D1
 ~
 ~
@@ -780,7 +779,7 @@ qualquer uma dessas salas, portanto permanecer em guarda é provavelmente uma
 ótima ideia.  Você parece que pode ouvir um som baixo...um som divertido.  
 Um som que diz: "Este idiota está aqui para tentar pegar a MINHA cabeça?!?"
 ~
-121 264 0
+121 264 0 0 0 0
 D0
 ~
 ~
@@ -797,7 +796,7 @@ de sala em sala, parede em parede mas dentro do seu corpo, torturando-o.  Esta
 criatura, que vive há centenas de anos, sabe que você está aqui e acha isso 
 divertido.  Talvez você deva repensar sua estratégia...
 ~
-121 264 0
+121 264 0 0 0 0
 D0
 ~
 ~
@@ -814,7 +813,7 @@ detectada, de um lugar para outro.  Até mesmo em uma câmara como esta parece ser
 possível para o Minotauro se enconder de tal forma nas sombras, que ninguém 
 consiga percebe-lo...até que seja tarde demais.
 ~
-121 264 0
+121 264 0 0 0 0
 D0
 ~
 ~
@@ -830,7 +829,7 @@ A Câmara do Minotauro~
 em todas as salas que você entra, encontra criaturas assustadoras, parece estar
 levando-o à insanidade.  Onde ele está?  Por que ele não aparece?
 ~
-121 264 0
+121 264 0 0 0 0
 D1
 ~
 ~
@@ -845,7 +844,7 @@ A Sala do Tesouro do Minotauro~
    Uma sala simples, somente com esses poucos baús, guardados por criaturas
 extremamente poderosas.
 ~
-121 264 0
+121 264 0 0 0 0
 D3
 ~
 ~

@@ -8,21 +8,21 @@ bem vindo ao lar das nobres famílias de Vitália.
    Ao sul está a movimentada Avenida Midgaard e ao norte você segue por esta
 tranqüila rua; ao leste e oeste há belas construções.
 ~
-13 ce 1
-D 2
-~
-~
-0 -1 3077
-D 0
+13 20 0 0 0 1
+D0
 ~
 ~
 0 -1 1301
-D 1
+D1
 Família Lindyhurst.
 ~
 ~
 0 -1 1310
-D 3
+D2
+~
+~
+0 -1 3077
+D3
 Família Ravenloft.
 ~
 ~
@@ -38,21 +38,21 @@ bem vindo ao lar das nobres famílias de Vitália.
    Ao sul você segue por esta tranqüila rua; ao leste e oeste há belas
 construções, enquanto que ao norte há uma praça.
 ~
-13 ce 1
-D 2
-~
-~
-0 -1 1300
-D 0
+13 20 0 0 0 1
+D0
 ~
 ~
 0 -1 1302
-D 1
+D1
 Família Iergonov.
 ~
 ~
 0 -1 1314
-D 3
+D2
+~
+~
+0 -1 1300
+D3
 Família Valeth.
 ~
 ~
@@ -68,20 +68,20 @@ espalhados.  Exatamente no centro da confluência das ruas que dão acesso
 a este local foi construído um poço de pedra para que os habitantes possam
 saciar a sede.
 ~
-13 cent 1
-D 0
+13 532500 0 0 0 1
+D0
 ~
 ~
 0 -1 1303
-D 1
+D1
 ~
 ~
 0 -1 1306
-D 2
+D2
 ~
 ~
 0 -1 1301
-D 3
+D3
 ~
 ~
 0 -1 1308
@@ -96,21 +96,21 @@ bem vindo ao lar das nobres famílias de Vitália.
    Ao norte você segue por esta tranqüila rua; ao leste e oeste há belas
 construções, enquanto que ao sul há uma praça.
 ~
-13 ce 1
-D 2
-~
-~
-0 -1 1302
-D 0
+13 20 0 0 0 1
+D0
 ~
 ~
 0 -1 1304
-D 1
+D1
 Família Amarillis.
 ~
 ~
 0 -1 1318
-D 3
+D2
+~
+~
+0 -1 1302
+D3
 Família Paice.
 ~
 ~
@@ -126,21 +126,21 @@ bem vindo ao lar das nobres famílias de Vitália.
    Ao norte e ao sul você segue por esta tranqüila rua; ao leste e oeste há
 belas construções.
 ~
-13 ce 1
-D 2
-~
-~
-0 -1 1303
-D 0
+13 20 0 0 0 1
+D0
 ~
 ~
 0 -1 1305
-D 1
+D1
 Família Depok.
 ~
 ~
 0 -1 1322
-D 3
+D2
+~
+~
+0 -1 1303
+D3
 Família Pathfinder.
 ~
 ~
@@ -156,17 +156,17 @@ bem vindo ao lar das nobres famílias de Vitália.
    Ao sul você segue por esta tranqüila rua; ao leste e oeste há belas
 construções.
 ~
-13 ce 1
-D 2
-~
-~
-0 -1 1304
-D 1
+13 20 0 0 0 1
+D1
 Família Guireli.
 ~
 ~
 0 -1 1326
-D 3
+D2
+~
+~
+0 -1 1304
+D3
 Família Celebithil.
 ~
 ~
@@ -180,20 +180,20 @@ com o contraste entre todas estas edificações, você sente um clima de paz e
 amizade no ar.  Uma suave voz o convida a entrar em cada residência, pois és
 bem vindo ao lar das nobres famílias de Vitália.
 ~
-13 ce 1
-D 1
-~
-~
-0 -1 1307
-D 3
-~
-~
-0 -1 1302
-D 0
+13 20 0 0 0 1
+D0
 Família Galad.
 ~
 ~
 0 -1 1330
+D1
+~
+~
+0 -1 1307
+D3
+~
+~
+0 -1 1302
 S
 #1307
 Rua Residencial Midgaard~
@@ -203,8 +203,8 @@ com o contraste entre todas estas edificações, você sente um clima de paz e
 amizade no ar.  Uma suave voz o convida a entrar em cada residência, pois és
 bem vindo ao lar das nobres famílias de Vitália.
 ~
-13 ce 1
-D 3
+13 20 0 0 0 1
+D3
 ~
 ~
 0 -1 1306
@@ -217,12 +217,12 @@ com o contraste entre todas estas edificações, você sente um clima de paz e
 amizade no ar.  Uma suave voz o convida a entrar em cada residência, pois és
 bem vindo ao lar das nobres famílias de Vitália.
 ~
-13 ce 1
-D 1
+13 20 0 0 0 1
+D1
 ~
 ~
 0 -1 1302
-D 3
+D3
 ~
 ~
 0 -1 1309
@@ -235,8 +235,8 @@ com o contraste entre todas estas edificações, você sente um clima de paz e
 amizade no ar.  Uma suave voz o convida a entrar em cada residência, pois és
 bem vindo ao lar das nobres famílias de Vitália.
 ~
-13 ce 1
-D 1
+13 20 0 0 0 1
+D1
 ~
 ~
 0 -1 1308
@@ -254,28 +254,24 @@ lados e uma pequena capela pelo outro.  O caminho de pedras passa pelo
 jardim, levando a uma bela casa ao norte e à vida cotidiana da Cidade de
 Midgaard.
 ~
-13 ce 1
-D 0
+13 20 0 0 0 1
+D0
 ~
 porta~
-:n 2
-a -1 1311
-D 3
+1 -1 1311
+D3
 ~
 ~
 0 -1 1300
 E
-riacho~
-A água parece estar limpa e refrescante.
+pintura panteão~
+Você vê uma exuberante pintura, onde estão representados todos os deuses
+deste mundo.  Você se sente mais completo e protegido diante de tanta beleza.
 ~
 E
-jardim~
-Você sente-se bem rodeado de tanta beleza.
-~
-E
-casa~
-Você vê a casa da Família Lindyhurst.  Prestando atenção, você percebe que
-de lá vem uma suave melodia élfica.
+estátua~
+Você vê a Deusa Diana, com suas vestes amazonas.  Sua suave expressão
+élfica faz com que você se sinta em paz e sintonia com os seres da floresta.
 ~
 E
 capela~
@@ -288,14 +284,17 @@ Panteão.  Em uma das laterais você pode ver escrito em élfico a história da
 Deusa Diana em uma bela tabuleta dourada.
 ~
 E
-estátua~
-Você vê a Deusa Diana, com suas vestes amazonas.  Sua suave expressão
-élfica faz com que você se sinta em paz e sintonia com os seres da floresta.
+casa~
+Você vê a casa da Família Lindyhurst.  Prestando atenção, você percebe que
+de lá vem uma suave melodia élfica.
 ~
 E
-pintura panteão~
-Você vê uma exuberante pintura, onde estão representados todos os deuses
-deste mundo.  Você se sente mais completo e protegido diante de tanta beleza.
+jardim~
+Você sente-se bem rodeado de tanta beleza.
+~
+E
+riacho~
+A água parece estar limpa e refrescante.
 ~
 S
 #1311
@@ -314,30 +313,11 @@ para conversar, buscar conselhos, alegrar-se, descansar, trabalhar.  Um
 refúgio calmo nestes dias turbulentos.  Ao lado da porta está um aviso
 escrito em élfico e adornado com pedras preciosas.
 ~
-13 cde 0
-D 2
+13 28 0 0 0 0
+D2
 ~
 porta~
-:n 2
 1 -1 1310
-E
-brasão~
-Um Símbolo do arco e flecha de prata, abençoando esta família de elfos e
-protegendo-os em sua morada.
-~
-E
-lareira~
-Uma temperatura agradável vem das brandas chamas da lareira.
-~
-E
-mesa~
-Há uma travessa cheia de lembas por sobre a mesa, acompanhada por uma
-jarra de hidromel e alguns copos de um fino cristal.
-~
-E
-janela~
-Você observa calmamente a serenidade dos jardins da Família Lindyhurst.
-~
 E
 aviso~
 Há em um belo aviso escrito em élfico e adornado com pedras preciosas os
@@ -358,6 +338,24 @@ dentre outros ... como uma feliz família.
 Um abraço paternal,
 Endelion Lindyhurst, o patriarca da família Lindyhurst.
 ~
+E
+janela~
+Você observa calmamente a serenidade dos jardins da Família Lindyhurst.
+~
+E
+mesa~
+Há uma travessa cheia de lembas por sobre a mesa, acompanhada por uma
+jarra de hidromel e alguns copos de um fino cristal.
+~
+E
+lareira~
+Uma temperatura agradável vem das brandas chamas da lareira.
+~
+E
+brasão~
+Um Símbolo do arco e flecha de prata, abençoando esta família de elfos e
+protegendo-os em sua morada.
+~
 S
 #1312
 Mansão Ravenloft~
@@ -371,12 +369,12 @@ quase toda a sala.  A casa é decorada com mobílias muito bonitas da era
 hiboriana.  Na parede pode-se ver quadros por toda parede e o brasão da
 família.  Definitivamente, um ótimo lugar para se morar.
 ~
-13 ce 1
-D 1
+13 20 0 0 0 1
+D1
 ~
 ~
 0 -1 1300
-D 4
+D4
 ~
 ~
 0 -1 1313
@@ -391,8 +389,8 @@ muito bonito que ilumina toda a sala.
    Um pergaminho muito antigo e amarelado está aqui pregado na parede e protegido
 por um fino vidro... ele parece importante.
 ~
-13 cde 0
-D 5
+13 28 0 0 0 0
+D5
 ~
 ~
 0 -1 1312
@@ -427,12 +425,12 @@ campo aberto.  Você percebe que muitas dessas estátuas são de falecidos
 membros da família Iergonov, conforme você anda você percebe que o corredor
 acaba, pois há Duas Estátuas barrando sua passagem.
 ~
-13 ce 1
-D 1
+13 20 0 0 0 1
+D1
 ~
 ~
 0 -1 1315
-D 3
+D3
 ~
 ~
 0 -1 1301
@@ -452,25 +450,25 @@ você vê um símbolo que parece ser o Brasão da família Iergonov.  Você percebe
 todos os espíritos das estátuas do corredor estão aqui andando livremente e
 conversando um com o outro.
 ~
-13 cde 0
-D 3
+13 28 0 0 0 0
+D3
 ~
 ~
 0 -1 1314
 E
 símbolo~
-              @n@y/\@n
-           @n@y__/  \__@n
-         @n@y.'   @n@R..@n   @n@y'.@n
-       @n@y.´@n@r.    @n@R||    @n@r.@n@y`.@n
-       @n@y\ @n@r\\   @n@R||   @n@r// @n@y/@n
-        @n@y\ @n@r\\  @n@R||  @n@r// @n@y/@n
-         @n@y\ @n@r\\ @n@R|| @n@r// @n@y/@n
-          @n@y\ @n@r\\@n@R||@n@r// @n@y/@n
-           @n@y\ @n@r\@n@R||@n@r/ @n@y/@n
-            @n@y\ @n@R@n@R|| @n@y/@n
-             @n@y\@n@R''@n@y/@n
-              @n@y\/@n
+              	n	y/\	n
+           	n	y__/  \__	n
+         	n	y.'   	n	R..	n   	n	y'.	n
+       	n	y.´	n	r.    	n	R||    	n	r.	n	y`.	n
+       	n	y\ 	n	r\\   	n	R||   	n	r// 	n	y/	n
+        	n	y\ 	n	r\\  	n	R||  	n	r// 	n	y/	n
+         	n	y\ 	n	r\\ 	n	R|| 	n	r// 	n	y/	n
+          	n	y\ 	n	r\\	n	R||	n	r// 	n	y/	n
+           	n	y\ 	n	r\	n	R||	n	r/ 	n	y/	n
+            	n	y\ 	n	R	n	R|| 	n	y/	n
+             	n	y\	n	R''	n	y/	n
+              	n	y\/	n
 ~
 S
 #1316
@@ -481,15 +479,15 @@ sofás bem macios e confortáveis para descansar um pouco e conversar.  Nas
 paredes existem alguns quadros com os retratos de um dos membros da família
 Valeth.
 ~
-13 cde 0
-D 3
-~
-~
-0 -1 1317
-D 1
+13 28 0 0 0 0
+D1
 ~
 ~
 0 -1 1301
+D3
+~
+~
+0 -1 1317
 S
 #1317
 A Sala de Estar da Família Valeth~
@@ -498,8 +496,8 @@ e se descontrair um pouco.  Há uma bela estante com vários livros para ler,
 uma lareira com poltronas próximas para relaxar, uma adega com excelentes
 vinhos e uma grande mesa para os banquetes.
 ~
-13 cde 0
-D 1
+13 28 0 0 0 0
+D1
 ~
 ~
 0 -1 1316
@@ -512,12 +510,12 @@ nas redondezas.  Você tenta olhar através da cachoeira e vê... Uma passagem
 Secreta!  Há uma placa cuidadosamente esculpida em madeira onde se lê:
 Família Amarillis.
 ~
-13 ce 1
-D 1
+13 20 0 0 0 1
+D1
 ~
 ~
 0 -1 1319
-D 3
+D3
 ~
 ~
 0 -1 1303
@@ -530,8 +528,8 @@ pequena falha na rocha.  Há muitos tapetes pelo chão, assim como quadros de
 pessoas antigas na parede circular.  Quatro belas estantes de madeira escura,
 com antigos livros e pergaminhos foram simetricamente colocadas na sala.
 ~
-13 cde 0
-D 3
+13 28 0 0 0 0
+D3
 ~
 ~
 0 -1 1318
@@ -544,15 +542,14 @@ escritas em um grande portão.
    Você logo percebe que esta é a entrada da confraria da família Paice, uma
 dentre as mais honradas famílias de Vitália.
 ~
-13 ce 1
-D 1
+13 20 0 0 0 1
+D1
 ~
 ~
 0 -1 1303
-D 3
+D3
 ~
 portão~
-:n 1
 1 -1 1321
 S
 #1321
@@ -566,11 +563,10 @@ recua sozinha e você fica espantado ao ver seu nome sendo escrito em fogo
 nas costas dessa cadeira.
 Certamente uma alma poderosa reservou este lugar para você.  Sente-se.
 ~
-13 cde 0
-D 1
+13 28 0 0 0 0
+D1
 ~
 portão~
-:n 1
 1 -1 1320
 S
 #1322
@@ -581,16 +577,15 @@ famosos.  A porta é de mogno com trinco de marfim e batente de prata.  Do
 outro lado há uma porta dourada com batente de prata e trinco de marfim e
 acima dela há o brasão da família.
 ~
-13 cde 0
-D 3
+13 28 0 0 0 0
+D1
+~
+porta~
+1 -1 1323
+D3
 ~
 ~
 0 -1 1304
-D 1
-~
-porta~
-:n 2
-1 -1 1323
 S
 #1323
 A Sala de Estar~
@@ -598,11 +593,10 @@ A Sala de Estar~
 Na parede há uma árvore genealógica da família, várias armas e armaduras com
 o brasão da família.  Essa sala é usada para reuniões.
 ~
-13 cde 0
-D 3
+13 28 0 0 0 0
+D3
 ~
 porta~
-:n 2
 1 -1 1322
 S
 #1324
@@ -616,15 +610,15 @@ fazendo tremer o local inteiro e tornando o claro vazio em um vermelho
 sangue, ´Pisas em local privado, vitaliano, se não pertences a este local,
 volte!!!´.
 ~
-13 ce 0
-D 4
-~
-~
-0 -1 1325
-D 1
+13 20 0 0 0 0
+D1
 ~
 ~
 0 -1 1304
+D4
+~
+~
+0 -1 1325
 S
 #1325
 No Altar~
@@ -640,8 +634,8 @@ lute a favor de sua família.  Honrado sejam os Pathfinder que nasceram da
 bondade dos anjos e da sabedoria dos maléficos.
    Uma nova vida brilha sobre Vitália, e, cabe a você protege-la.
 ~
-13 cde 0
-D 5
+13 28 0 0 0 0
+D5
 ~
 ~
 0 -1 1324
@@ -659,27 +653,21 @@ prego ou qualquer coisa que os fixe a parede.
 visitas, e um mordomo sobe e desce as escadas trazendo champanhe e vinho em
 sua bandeja.
 ~
-13 d 0
-D 3
+13 8 0 0 0 0
+D3
 ~
 ~
 0 -1 1305
-D 4
+D4
 ~
 ~
 0 -1 1327
 E
-busto~
-Você lê em escritas de brilhantes como diamantes.  Rhapsody Guireli líder e
-fundador desta família.
-Imortalizado pelos seus grandes feitos.  Ao tocar neste busto você percebe
-que ele é frio como o gelo e talvez você não perceba que em sua base está
-escrito: The Warrior of Ice.
-~
-E
-quadros~
-Quadros dos membros da família Guireli:
-Rhapsody, Rheinda, Frake e Artemisia.
+mordomo~
+Ele parece apressado em servir seus amos, mas percebe seu olhar e lhe
+oferece vinho, ou champanhe.  Mas antes que você pudesse falar ele responde,
+perdoe-me senhor preciso buscar o Foundi de Chocolate para servir com
+licença.
 ~
 E
 sofá~
@@ -690,11 +678,17 @@ Você ainda percebe que existe cinzas de charuto no belo cinzeiro de Rubi,
 parece que um dos Guireli recebeu uma visita.
 ~
 E
-mordomo~
-Ele parece apressado em servir seus amos, mas percebe seu olhar e lhe
-oferece vinho, ou champanhe.  Mas antes que você pudesse falar ele responde,
-perdoe-me senhor preciso buscar o Foundi de Chocolate para servir com
-licença.
+quadros~
+Quadros dos membros da família Guireli:
+Rhapsody, Rheinda, Frake e Artemisia.
+~
+E
+busto~
+Você lê em escritas de brilhantes como diamantes.  Rhapsody Guireli líder e
+fundador desta família.
+Imortalizado pelos seus grandes feitos.  Ao tocar neste busto você percebe
+que ele é frio como o gelo e talvez você não perceba que em sua base está
+escrito: The Warrior of Ice.
 ~
 S
 #1327
@@ -706,8 +700,8 @@ ornadas com belos quadros dos deuses de Vitália.
    Cada um tem seu criado mudo com livros e objetos pessoais, parece que aqui
 é um lugar de sossego e paz, depois de uma dura jornada.
 ~
-13 d 0
-D 5
+13 8 0 0 0 0
+D5
 ~
 ~
 0 -1 1326
@@ -724,15 +718,21 @@ ramifica-se numa coroa de muitos ramos; em meio a estes você vê que existe
 uma construção, que parece ser um salão, no meio dos galhos.  Os Elfos o
 chamam de Talan.  Existe um desenho e uma inscrição na árvore.
 ~
-13 0 1
-D 1
+13 0 0 0 0 1
+D1
 ~
 ~
 0 -1 1305
-D 4
+D4
 ~
 ~
 0 -1 1329
+E
+inscrição~
+Você vê uma frase escrita na língua Élfica, cuja tradução em língua geral é:
+Bem-vindos a casa dos Celebithil (Lua de Prata).  Somente os que se dedicam
+a busca alcançam o conhecimento e a sabedoria.
+~
 E
 desenho~
 Celebithil
@@ -743,12 +743,6 @@ Celebithil
     :  ::::::::
     `. '::::::'
       `-.::''
-~
-E
-inscrição~
-Você vê uma frase escrita na língua Élfica, cuja tradução em língua geral é:
-Bem-vindos a casa dos Celebithil (Lua de Prata).  Somente os que se dedicam
-a busca alcançam o conhecimento e a sabedoria.
 ~
 S
 #1329
@@ -765,35 +759,11 @@ encontro dos Celebithil.  Uma estante com livros está aqui.  Existem diversos
 retratos dos integrantes da família.  Um livro, com a história da Família
 Celebithil está aqui.
 ~
-13 d 0
-D 5
+13 8 0 0 0 0
+D5
 ~
 ~
 0 -1 1328
-E
-brasão~
-Quando você olha para ele, seus sentidos se confundem.  Você não consegue
-distinguir se essa é realmente a Lua verdadeira ou se é apenas um brasão,
-feito da mais pura prata.
-O símbolo da família é, com certeza, impressionante.
-~
-E
-mesa~
-É uma pesada mesa de madeira, belamente entalhada, com uma grande Lua de
-Prata incrustada no seu centro.
-~
-E
-estante~
-Esta estante está repleta de preciosos livros e pergaminhos sagrados,
-trazidos durante as viagens dos integrantes desta família. Parece que
-a cultura e o conhecimento são muito importantes para  eles!
-~
-E
-retratos~
-Existem diversos retratos, onde você pode reconhecer algumas pessoas da
-família: A Matriarca Farfalla e seus irmãos Thorgrim e Sirlouis.
-Num outro retrato, Torvante, Hera, Sethik e Ghede.
-~
 E
 livro~
    Você abre esse bonito livro, onde você lê a história dos Celebithil:
@@ -820,6 +790,30 @@ filhos.  Hoje, o único herdeiro deles que ainda transita por estas terras
 branco, indicando que muitos herdeiros estão por vir assim como muitas
 histórias desta família ainda estão para serem escritas....."
 ~
+E
+retratos~
+Existem diversos retratos, onde você pode reconhecer algumas pessoas da
+família: A Matriarca Farfalla e seus irmãos Thorgrim e Sirlouis.
+Num outro retrato, Torvante, Hera, Sethik e Ghede.
+~
+E
+estante~
+Esta estante está repleta de preciosos livros e pergaminhos sagrados,
+trazidos durante as viagens dos integrantes desta família. Parece que
+a cultura e o conhecimento são muito importantes para  eles!
+~
+E
+mesa~
+É uma pesada mesa de madeira, belamente entalhada, com uma grande Lua de
+Prata incrustada no seu centro.
+~
+E
+brasão~
+Quando você olha para ele, seus sentidos se confundem.  Você não consegue
+distinguir se essa é realmente a Lua verdadeira ou se é apenas um brasão,
+feito da mais pura prata.
+O símbolo da família é, com certeza, impressionante.
+~
 S
 #1330
 A Grande Fortaleza Galad~
@@ -832,18 +826,28 @@ parece ser magia, e dá um tom de realidade nas expressões das ilustrações.
    No centro da Sala há um pilar com um Pergaminho Dourado.
    Aqui você pode ver uma linda estátua.
 ~
-13 d 0
-D 2
+13 8 0 0 0 0
+D2
 ~
 ~
 0 -1 1306
-D 4
+D4
 ~
 ~
 0 -1 1331
 E
+estátua~
+   Quando você focaliza seu olhar na estátua, você vê que é um grande muro de uma
+fortaleza, nesse muro há vários arqueiros e homens entusiasmados.  Ao meio você vê
+Hajime com seus Familiares: Karion, Soveliss e Cedric. Sobre eles, os abençoando,
+está a imagem do Deus Porter.
+   Embaixo, no canto você lê uma escrita em alto relevo:
+
+   A fortaleza da Vitória, Galad.
+~
+E
 pergaminho dourado~
-@YHistória da Família Galad@n
+	YHistória da Família Galad	n
 
    Desde a época em que os magos reinavam, existe uma família de aventureiros
 que luta pela Paz e pela Sabedoria, seu nome é "Família Galad", cujo regente
@@ -901,16 +905,6 @@ pegou sua espada e destruiu o colar do mago.  Porter para garantir a Vitória, de
 o mago.  Nesta grande batalha muitos morreram, mas os que sobraram prometeram sempre
 combater o mal, em nome dos mortos da Família Galad.
 ~
-E
-estátua~
-   Quando você focaliza seu olhar na estátua, você vê que é um grande muro de uma
-fortaleza, nesse muro há vários arqueiros e homens entusiasmados.  Ao meio você vê
-Hajime com seus Familiares: Karion, Soveliss e Cedric. Sobre eles, os abençoando,
-está a imagem do Deus Porter.
-   Embaixo, no canto você lê uma escrita em alto relevo:
-
-   A fortaleza da Vitória, Galad.
-~
 S
 #1331
 A Sala Superior~
@@ -924,10 +918,10 @@ ouro branco e rubi:  Galad.
 para um exército inteiro.  Logo que você entra na sala os seus ferimentos
 começam a cicatrizar.
 ~
-13 dt 0
-D 5
+13 524296 0 0 0 0
+D5
 ~
 ~
 0 -1 1330
 S
-$
+$~

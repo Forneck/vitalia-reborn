@@ -6,7 +6,7 @@ movimentação do Templo de Midgaard, um grande contraste relacionado com essa
 pequena sala onde você se encontra.
    A oeste, uma escadaria leva a zona residencial de Midgaard.
 ~
-30 cdeh 0
+30 156 0 0 0 0
 D0
 Você pode ver a Grande Biblioteca de Vitália.
 ~
@@ -33,9 +33,7 @@ monte sobre o qual o templo está construído e termina na Praca do Templo
 logo abaixo. Para oeste você pode ver a Sala de Leitura. A Sala de
 Doações é uma pequena sala para o leste.
 ~
-30 cdeh 0
-ON midgaard
-ON z30
+30 156 0 0 0 0
 D0
 Ao norte do hall do Templo existe uma estátua e um grande altar.
 ~
@@ -69,7 +67,7 @@ O Santuário Interno dos Clérigos~
 na parede, sobre o altar, localizado na parede oeste. Um fosso no meio da
 sala desce para a escuridão...  Um odor abjeto emana das profundezas.
 ~
-30 cd 0
+30 12 0 0 0 0
 D1
 Você vê seu lugar favorito: o Bar das Divindades.
 ~
@@ -88,7 +86,7 @@ O Bar das Divindades~
 Finas peças de metais e pedras preciosas enfeitam toda a sala. Um pequeno
 aviso está pendurado na parede.
 ~
-30 cdh 0
+30 140 0 0 0 0
 D2
 Você vê a entrada.
 ~
@@ -115,7 +113,7 @@ A Entrada para a Associação dos Clérigos~
 sobre a natureza dos Clérigos. Existe uma saída para o leste que leva
 para a Praça do Templo. O bar está ao norte daqui.
 ~
-30 d 0
+30 8 0 0 0 0
 D0
 Você vê o bar, ricamente decorado com mobília realmente de bom gosto.
 ~
@@ -135,7 +133,7 @@ e para leste a velha Hospedaria Grunting Boar. Para o sul você pode ver a
 praça do mercado, o centro de Midgaard e do nordeste parece que suave melodia
 alcança seus aguçados ouvidos.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Você pode ver o Templo.
 ~
@@ -168,7 +166,7 @@ O Salão de Entrada da Hospedaria Grunting Boar~
 sabiamente decorado com mobília simples e funcional. O cheiro de poeira e
 papel velho vem do Serviço de Correios, ao norte. O bar (oba!) é ao leste.
 ~
-30 d 0
+30 8 0 0 0 0
 D0
 Você vê o Serviço de Correios de Midgaard.
 ~
@@ -194,17 +192,22 @@ do Templo. Este lugar lhe faz sentir-se em casa. Um pequeno aviso com
 letras grandes está pregado ao bar.
    A sul fica um estreito corredor, muito mal iluminado.
 ~
-30 dh 0
-D3
-Você vê a saída para o hall de entrada.
-~
-~
-0 -1 3006
+30 136 0 0 0 0
 D2
 Você vê um corredor.
 ~
 ~
 0 -1 3086
+D3
+Você vê a saída para o hall de entrada.
+~
+~
+0 -1 3006
+E
+escritas gravacao gravacoes simbolos~
+Mesmo parecendo difícil de entender, você acha que parece muito com cerveja,
+poemas sobre cerveja, e pequenas canequinhas de cerveja.
+~
 E
 aviso~
 O aviso diz:
@@ -214,11 +217,6 @@ Instruções grátis fornecidas pela Hospedaria Grunting Boar.
    LIST - O taverneiro vai lhe mostrar todas as diferentes bebidas e
 	  especialidades, e dirá o preço de cada uma.
 ~
-E
-escritas gravacao gravacoes simbolos~
-Mesmo parecendo difícil de entender, você acha que parece muito com cerveja,
-poemas sobre cerveja, e pequenas canequinhas de cerveja.
-~
 S
 #3009
 A Padaria~
@@ -227,12 +225,20 @@ Dinamarca enchem a sala.  Os pães da Dinamarca são arrumados em perfeita
 ordem nas prateleiras, e parecem ser da melhor qualidade.
 Há um pequeno aviso no balcao.
 ~
-30 dh 0
+30 136 0 0 0 0
 D2
 Você pode ver a Rua Principal.
 ~
 ~
 0 -1 3013
+E
+aviso~
+Instruções grátis fornecidas pela loja:
+
+   BUY  - Compra algum pão ou pastel.
+   LIST - O padeiro gentilmente lhe dirá o preço e tipo de cada pão
+	  em sua padaria.
+~
 E
 paes prateleiras bolos~
    Você que vê que há pasteis realmente deliciosos. Devem ser feitos por um
@@ -242,14 +248,6 @@ Rússia, Groelândia, Islandia, Estônia etc, etc.
    A visão desses enormes, impressionantes bolos de chocolates fazem sua boca
 encher d'água e sua alma cantar.
 ~
-E
-aviso~
-Instruções grátis fornecidas pela loja:
-
-   BUY  - Compra algum pão ou pastel.
-   LIST - O padeiro gentilmente lhe dirá o preço e tipo de cada pão
-	  em sua padaria.
-~
 S
 #3010
 O Armazém~
@@ -257,7 +255,7 @@ O Armazém~
 por trás do balcão, seguros, fora do seu alcance.
 Uma pequena nota está pendurada na parede.
 ~
-30 dh 0
+30 136 0 0 0 0
 D2
 Você pode ver a Rua Principal.
 ~
@@ -278,7 +276,7 @@ S
 A Loja de Armas~
    Você esta dentro da loja de armas. Existe uma pequena nota no balcão.
 ~
-30 dh 0
+30 136 0 0 0 0
 D2
 Você pode ver a Rua Principal.
 ~
@@ -302,7 +300,7 @@ da Associação dos Magos. A rua continua ao leste levando à
 praça do mercado. A loja de mágica fica ao norte e para o oeste está o
 portão da cidade.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Você pode ver a Loja de Mágica.
 ~
@@ -330,7 +328,7 @@ Rua Principal~
 daqui fica a entrada para a Loja de Armaduras, e a padaria é ao norte.
 A leste daqui fica a praça do mercado.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Você pode ver a padaria.
 ~
@@ -361,7 +359,7 @@ Midgaard de ataques malignos.
    Ruas saem em todas as direções, para norte a praca do templo, para
 sul a Praca Comum, leste e oeste saem na Rua Principal.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Você pode ver a Praca do Templo.
 ~
@@ -393,7 +391,7 @@ Rua Principal~
 o armazem, e a rua principal prolonga-se para leste. A oeste você vê e ouve
 a praça do mercado, ao sul uma pequena porta leva à Loja de Animais.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Você pode ver o Armazem.
 ~
@@ -421,7 +419,7 @@ Rua Principal~
 Associação dos Guerreiros. A leste você deixa a cidade e para oeste
 a rua leva à praca do mercado.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Você pode ver a Loja de Armas.
 ~
@@ -448,7 +446,7 @@ A Entrada para o Associação dos Magos~
    O corredor de entrada para esse guia é pequeno, iluminado por uma
 luz que altera sua cor entre azul e roxo.
 ~
-30 d 0
+30 8 0 0 0 0
 D0
 Você pode ver a Rua Principal.
 ~
@@ -465,7 +463,7 @@ O Bar dos Magos~
    Esse bar é um dos mais estranhos da terra. Imagens misticas flutuam
 pelo ar. Ilusões de fina mobília aparecem por toda a sala.
 ~
-30 cdh 0
+30 140 0 0 0 0
 D0
 Você vê o vestíbulo.
 ~
@@ -486,7 +484,7 @@ e símbolos ainda mais estranhos, e num quadro negro parcialmente limpo
 num canto escuro, algumas dolorosas letras são levemente visíveis. Um fosso
 no meio da sala leva à escuridão. Um odor pútrido exala das profundezas.
 ~
-30 cd 0
+30 12 0 0 0 0
 D3
 Você vê o bar.
 ~
@@ -505,7 +503,7 @@ A Loja de Armaduras~
 Você vê elmos, escudos e malhas de aco. Ao norte fica a rua principal.
 Na parede se vê uma nota.
 ~
-30 dh 0
+30 136 0 0 0 0
 D0
 Você pode ver a Rua Principal.
 ~
@@ -529,7 +527,7 @@ O Salao de Entrada da Associação dos Guerreiros~
    Um lugar onde tem que se tomar cuidado em não falar nada
 errado (ou certo). A leste fica o bar e ao norte a rua principal.
 ~
-30 d 0
+30 8 0 0 0 0
 D0
 Você pode ver a Rua Principal.
 ~
@@ -547,7 +545,7 @@ O Bar dos Guerreiros~
 agora a mobilia está toda por aí, em pequenos pedaços. Ao sul fica o pátio,
 e a oeste o salão de entrada.
 ~
-30 cdh 0
+30 140 0 0 0 0
 D2
 Você vê o pátio de treinamento.
 ~
@@ -564,7 +562,7 @@ O Pátio de Torneios e Treinamento~
    Este é o pátio de treinamento dos guerreiros. Ao norte fica o bar.
 Um fosso desce para a escuridão.
 ~
-30 cd 0
+30 12 0 0 0 0
 D0
 Você vê o bar.
 ~
@@ -583,7 +581,7 @@ O Final Leste do Beco Miserável~
 a Hospedaria Grubby e a leste você vê a praça comum.  O beco continua a
 oeste.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Você vê uma loja estranha.
 ~
@@ -611,7 +609,7 @@ A Praça Comum~
 o beco miserável e a leste um beco escuro. Ao norte, esta praça está ligada
 à praça do mercado. Ao sul você nota um cheiro desagradável.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Você vê a Praça do Mediana.
 ~
@@ -638,7 +636,7 @@ O Beco Escuro~
    O beco escuro, a oeste fica a praça comum e ao sul a Associação dos
 Ladrões. O beco continua a leste.
 ~
-30 0 1
+30 0 0 0 0 1
 D1
 O beco continua a leste.
 ~
@@ -665,7 +663,7 @@ O Salão de Entrada da Associação dos Ladrões~
 você pode perder sua vida e dinheiro, se não ficar esperto. Ao norte
 há o beco escuro e a leste o bar dos ladrões.
 ~
-30 d 0
+30 8 0 0 0 0
 D0
 Você vê o beco.
 ~
@@ -684,7 +682,7 @@ mas agora parece quase vazio. Ao sul há o pátio, e a oeste o salão
 de entrada.
    (Será que a mobília foi roubada?!?)
 ~
-30 cdh 0
+30 140 0 0 0 0
 D2
 Você vê o patio secreto.
 ~
@@ -706,7 +704,7 @@ O Pátio Secreto~
    O pátio secreto de treinamento de ladroes e assassinos. Ao norte
 fica o bar. Um fosso desce para a escuridão.
 ~
-30 cd 0
+30 12 0 0 0 0
 D0
 Você vê o bar.
 ~
@@ -725,7 +723,7 @@ O Depósito de Lixo~
 lixo, você vê uma grande conexão de canos. Parece a entrada para
 o sistema de esgoto. Ao norte você pode ver a praça comum.
 ~
-30 c 2
+30 4 0 0 0 2
 D0
 Você pode ver a praça comum.
 ~
@@ -735,7 +733,6 @@ D5
 Você vê os esgotos.
 ~
 grade~
-:n 2
 2 3005 7030
 S
 #3031
@@ -743,7 +740,7 @@ A Loja de Animais~
    A loja de animais é uma pequena loja atulhada, cheia de gaiolas e animais
 de todos os tamanhos (ei! acho que ví minha sogra!). Há um aviso na parede.
 ~
-30 cdh 0
+30 140 0 0 0 0
 D0
 Você vê a rua principal.
 ~
@@ -776,15 +773,14 @@ A Loja de Animais~
 É vital que o número destes quartos seja exatamente um a mais
 que o número da Loja de Animais.
 ~
-30 d 0
-OL 108
+30 8 0 0 0 0
 S
 #3033
 A Loja de Mágica~
    Atrás do balcão você vê vários itens, primorosamente dispostos em
 prateleiras, provavelmente a maioria deles são mágicos.
 ~
-30 dh 0
+30 136 0 0 0 0
 D2
 Você vê a rua principal.
 ~
@@ -798,7 +794,7 @@ Estão colados um ao lado do outro, de forma que seja fácil a consulta de
 qualquer um dos mapas. No canto, há uma mesa onde um velho senhor desenha
 seus mapas.
 ~
-30 dh 0
+30 136 0 0 0 0
 D2
 Você vê o final leste do beco.
 ~
@@ -813,7 +809,7 @@ Principal leva para leste e a Estrada do Muro vai para o sul. A norte você
 vê a Confraria dos Druidas, construção até pouco tempo atrás oculta aos olhos
 dos comuns...
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Lá está a Confraria de Druidas.
 ~
@@ -834,12 +830,16 @@ D3
 O portão da cidade é a oeste.
 ~
 portao~
-:n 1 o portão da cidade de Midgaard
 1 3112 3052
 E
-ponte~
-É muito alta para alcancar mas parece que alguem poderia facilmente passar
-de uma torre para outra.
+muro~
+É construído de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. É muito alto pra subir.
+~
+E
+torre torres~
+Ambas as torres são construídas com grandes rochas unidas entre si com
+algum tipo de cimento, assim como o muro da cidade.
 ~
 E
 portao~
@@ -848,14 +848,9 @@ grandes tiras de ferro para deixá-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
 E
-torre torres~
-Ambas as torres são construídas com grandes rochas unidas entre si com
-algum tipo de cimento, assim como o muro da cidade.
-~
-E
-muro~
-É construído de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. É muito alto pra subir.
+ponte~
+É muito alta para alcancar mas parece que alguem poderia facilmente passar
+de uma torre para outra.
 ~
 S
 #3041
@@ -864,12 +859,11 @@ Dentro do Portao Leste de Midgaard~
 ligadas a uma pequena ponte atraves do pesado portão de madeira. A Rua
 Principal leva para oeste e ao sul Você vê a Loja de Água.
 ~
-30 0 1
+30 0 0 0 0 1
 D1
 Você vê o portao da cidade.
 ~
 portao~
-:n 1 o portão da cidade de Midgaard
 1 3112 3053
 D2
 Você vê a loja de água.
@@ -882,9 +876,14 @@ Você vê a Rua Principal.
 ~
 0 -1 3016
 E
-ponte~
-É muito alta para alcançar mas parece que alguem poderia facilmente passar
-de uma torre para outra.
+muro~
+É construído de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. É muito alto pra subir.
+~
+E
+torre torres~
+Ambas as torres são construídas com grandes rochas unidas entre si com
+algum tipo de cimento, assim como o muro da cidade.
 ~
 E
 portao~
@@ -893,14 +892,9 @@ grandes tiras de ferro para deixa-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
 E
-torre torres~
-Ambas as torres são construídas com grandes rochas unidas entre si com
-algum tipo de cimento, assim como o muro da cidade.
-~
-E
-muro~
-É construído de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. É muito alto pra subir.
+ponte~
+É muito alta para alcançar mas parece que alguem poderia facilmente passar
+de uma torre para outra.
 ~
 S
 #3042
@@ -909,7 +903,7 @@ Estrada do Muro~
 para o sul e o portão da cidade está a norte daqui.  A leste está a Avenida
 Midgaard.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Você vê o portão da cidade.
 ~
@@ -937,7 +931,7 @@ Estrada do Muro~
 continua ao norte e sul. Um pequeno e miserável beco leva para leste.
 Algo foi escrito no muro.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 A estrada continua para o norte.
 ~
@@ -954,14 +948,14 @@ A estrada continua para o sul.
 ~
 0 -1 3047
 E
-escrito escrita~
-Diz: 'Quem vigia os vigias?'
-E tambem: 'Morfetus esta próximo'
-~
-E
 muro~
 É construído de grandes rochas cinzas unidas entre si com algum tipo de
 cimento. É muito alto pra subir.
+~
+E
+escrito escrita~
+Diz: 'Quem vigia os vigias?'
+E tambem: 'Morfetus esta próximo'
 ~
 S
 #3044
@@ -969,7 +963,7 @@ Beco Miserável~
    Você está no Beco Miserável, que continua a leste. Você vê
 o muro da cidade a oeste.
 ~
-30 0 1
+30 0 0 0 0 1
 D1
 O beco leva a leste.
 ~
@@ -986,7 +980,7 @@ O Beco Escuro no Dique~
    Você está em um beco que segue para leste e oeste. Ao sul
 daqui você vê o dique.
 ~
-30 0 1
+30 0 0 0 0 1
 D1
 O beco leva a leste.
 ~
@@ -1009,7 +1003,7 @@ O Final Leste do Beco~
 bloqueando qualquer movimento. Um pequeno depósito está a sul daqui.
 Ao norte, uma pequena e velha loja... o que será que vende alí?
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Você vê a loja de mapas.
 ~
@@ -1031,7 +1025,7 @@ Estrada do Muro~
    Você está na estrada próximo ao muro oeste da cidade, que continua ao
 Norte. Ao sul ha uma ponte através do rio.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Você vê a estrada.
 ~
@@ -1053,7 +1047,7 @@ Hospedaria Grubby~
    Você está dentro da velha Hospedaria Grubby. Este lugar não foi limpo por
 várias décadas; o cheiro de podre deixa você zonzo.
 ~
-30 dh 0
+30 136 0 0 0 0
 D0
 Você vê o beco.
 ~
@@ -1065,7 +1059,7 @@ O Dique~
    Você está no dique. Ao sul daqui você vê o rio fluindo calmamente para
 oeste. O rio é muito raso, o que permite entrar nele.
 ~
-30 h 1
+30 128 0 0 0 1
 D0
 Você vê o beco.
 ~
@@ -1082,7 +1076,7 @@ O Deposito Deserto~
    Você está dentro do depósito. O lugar está decorado com várias peças
 antigas de navios.
 ~
-30 d 0
+30 8 0 0 0 0
 D0
 Você vê o beco.
 ~
@@ -1095,7 +1089,7 @@ Na Ponte~
 fora do muro oeste da cidade e o rio flui para oeste através de uma abertura
 no muro, três metros sob a ponte.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Você vê a estrada.
 ~
@@ -1107,18 +1101,18 @@ Você vê a confluência.
 ~
 0 -1 3100
 E
-ponte~
-É construída com grande rochas, unidas entre si com algum tipo de cimento,
-Assim como o muro. Odyssey costuma tomar cerveja lá embaixo.
+muro~
+É construído de grandes rochas cinzas unidas entre sí com algum tipo de
+cimento. É muito alto pra subir.
 ~
 E
 abertura~
 Você não consegue ver daqui como se estivesse bem abaixo de seus pés.
 ~
 E
-muro~
-É construído de grandes rochas cinzas unidas entre sí com algum tipo de
-cimento. É muito alto pra subir.
+ponte~
+É construída com grande rochas, unidas entre si com algum tipo de cimento,
+Assim como o muro. Odyssey costuma tomar cerveja lá embaixo.
 ~
 S
 #3052
@@ -1127,12 +1121,11 @@ Fora do Portão Oeste de Midgaard~
 ligadas a uma pequena ponte através do pesado portão de madeira. A oeste
 você pode ver a margem de uma grande floresta.
 ~
-30 0 1
+30 0 0 0 0 1
 D1
 O portão da cidade é a leste.
 ~
 portao~
-:n 1 o portão da cidade de Midgaard
 1 3112 3040
 D3
 A margem da floresta é a oeste.
@@ -1140,9 +1133,14 @@ A margem da floresta é a oeste.
 ~
 0 -1 6092
 E
-ponte~
-É muito alta para alcançar mas parece que alguém poderia facilmente passar
-de uma torre para outra.
+muro~
+É construído de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. É muito alto pra subir.
+~
+E
+torre torres~
+Ambas as torres são construídas com grandes rochas unidas entre si com
+algum tipo de cimento, assim como o muro da cidade.
 ~
 E
 portao~
@@ -1151,14 +1149,9 @@ grandes tiras de ferro para deixá-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
 E
-torre torres~
-Ambas as torres são construídas com grandes rochas unidas entre si com
-algum tipo de cimento, assim como o muro da cidade.
-~
-E
-muro~
-É construído de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. É muito alto pra subir.
+ponte~
+É muito alta para alcançar mas parece que alguém poderia facilmente passar
+de uma torre para outra.
 ~
 S
 #3053
@@ -1167,7 +1160,7 @@ Fora do Portão Leste de Midgaard~
 ligadas a uma pequena ponte através do pesado portão de madeira. Ao leste
 a planície desaparece ao longe.
 ~
-30 0 1
+30 0 0 0 0 1
 D1
 Você vê a planicie.
 ~
@@ -1177,12 +1170,16 @@ D3
 Você vê o portão da cidade.
 ~
 portao~
-:n 1 o portão da cidade de Midgaard
 1 3112 3041
 E
-ponte~
-É muito alta para alcançar mas parece que alguém poderia facilmente passar
-de uma torre para outra.
+muro~
+É construído de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. É muito alto pra subir.
+~
+E
+torre torres~
+Ambas as torres são construídas com grandes rochas unidas entre si com
+algum tipo de cimento, assim como o muro da cidade.
 ~
 E
 portao~
@@ -1191,14 +1188,9 @@ grandes tiras de ferro para deixá-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
 E
-torre torres~
-Ambas as torres são construídas com grandes rochas unidas entre si com
-algum tipo de cimento, assim como o muro da cidade.
-~
-E
-muro~
-É construído de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. É muito alto pra subir.
+ponte~
+É muito alta para alcançar mas parece que alguém poderia facilmente passar
+de uma torre para outra.
 ~
 S
 #3054
@@ -1208,7 +1200,7 @@ Um grande altar feito de mármore branco polido esta à sua frente e atrás
 dele com três metros de altura uma estatua de Odin, o Rei dos Deuses.
    Ao norte, degraus levam aos fundos do templo, à zona rural.
 ~
-30 d 0
+30 8 0 0 0 0
 D0
 Você vê a vasta zona rural de Midgaard.
 ~
@@ -1225,16 +1217,16 @@ Você vê o extremo sul do templo.
 ~
 0 -1 3001
 E
-altar~
-Mesmo tendo mais de três metros de comprimento, o altar aparentemente é
-feito de um único bloco de marmore virgem.
-~
-E
 estatua odin rei deus~
 A estátua representa Odin sentado em seu trono. Ele tem longos cabelos
 grisalhos e barba, e um olhar severo em seu rosto. Acima de seu trono,
 bem sobre seus ombros, seus dois abutres Hugin e Munin estão pousados
 e a seus pés seus lobos Gere e Freke.
+~
+E
+altar~
+Mesmo tendo mais de três metros de comprimento, o altar aparentemente é
+feito de um único bloco de marmore virgem.
 ~
 S
 #3055
@@ -1243,8 +1235,7 @@ Loja de Odin~
 que ele toma conta. É vital que o número destes quartos seja exatamente
 um a mais que o número do altar do templo.
 ~
-30 dj 0
-OL 107
+30 520 0 0 0 0
 S
 #3058
 A Velha Loja de Água~
@@ -1252,7 +1243,7 @@ A Velha Loja de Água~
 com prateleiras e prateleiras de cantaros d'água. Muitos grandes barris
 com torneiras estão empilhados num canto.
 ~
-30 dh 0
+30 136 0 0 0 0
 D0
 Você vê o Portão Leste.
 ~
@@ -1265,7 +1256,7 @@ Atrás do Altar do Templo~
 Ao norte, o caminho continua através da verdejante zona rural de Midgaard
 na direção das Montanhas Dragonhelm, longe ao norte.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Você vê a viscosa, verde zona rual de Midgaard.
 ~
@@ -1291,7 +1282,7 @@ para sempre, dominado pela poderosa beleza em todas as direções.
 retornado a Midgaard. Há um caminho construído com grandes pedras redondas
 a oeste.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Você não vê mais que o caminho atraves do Grande Campo.
 ~
@@ -1321,7 +1312,7 @@ para sempre, dominado pela poderosa beleza em todas as direções.
    Há uma estrutura estranha no lado leste do caminho. Um pequeno caminho
 de terra afasta-se do caminho principal e leva para oeste.
 ~
-30 c 1
+30 4 0 0 0 1
 D0
 O caminho continua para norte, trazendo você cada vez mais perto das
 Montanhas Dragonhelm.
@@ -1352,12 +1343,36 @@ foram violados por curiosos agentes da alfândega, e estão agora empilhados
 ao longo da parede oeste, escondendo vários cartazes de 'PROCURADO'.
 Há um pequeno aviso na parede.
 ~
-30 deh 1
+30 152 0 0 0 1
 D2
 Você vê a entrada da Hospedaria Grunting Boar.
 ~
 ~
 0 -1 3006
+E
+procurados parede~
+Rostos de vários Assassinos e Ladrões conhecidos mal podem ser vistos atrás
+dos engradados na parede oeste. Alguns deles parecem familiares como aquele
+cara que você viu na Recepção ha um minuto... Mas eles são difíceis de ver
+atrás dos engradados.
+~
+E
+engradados~
+Como você sabe, é ilegal enviar itens de contrabando pelo correio de
+Midgaard. Os agentes da alfândega usam isso com desculpa para afanar
+bebidas, especiarias raras, ou qualquer coisa que eles possa achar
+útil ou desejável.
+~
+E
+teias~
+Parecem cobrir tudo, inclusive o carteiro.
+~
+E
+envelopes correspondecia~
+Envelopes de todos os tamanhos estão empilhados em grande montes pelo chão.
+Olhando de perto, você vê uma carta que você enviou bem a uma semana atrás,
+esquecida e meio roida por ratos em uma das pilhas.
+~
 E
 aviso~
 ,----------------------------------------------------------.
@@ -1376,30 +1391,6 @@ aviso~
 |         Digite 'HELP MAIL' para mais informações         |
 `----------------------------------------------------------'
 ~
-E
-envelopes correspondecia~
-Envelopes de todos os tamanhos estão empilhados em grande montes pelo chão.
-Olhando de perto, você vê uma carta que você enviou bem a uma semana atrás,
-esquecida e meio roida por ratos em uma das pilhas.
-~
-E
-teias~
-Parecem cobrir tudo, inclusive o carteiro.
-~
-E
-engradados~
-Como você sabe, é ilegal enviar itens de contrabando pelo correio de
-Midgaard. Os agentes da alfândega usam isso com desculpa para afanar
-bebidas, especiarias raras, ou qualquer coisa que eles possa achar
-útil ou desejável.
-~
-E
-procurados parede~
-Rostos de vários Assassinos e Ladrões conhecidos mal podem ser vistos atrás
-dos engradados na parede oeste. Alguns deles parecem familiares como aquele
-cara que você viu na Recepção ha um minuto... Mas eles são difíceis de ver
-atrás dos engradados.
-~
 S
 #3063
 A Sala de Doações de Midgaard~
@@ -1408,12 +1399,11 @@ Há um par de pequenos bancos de madeira onde as pessoas ocasionalmente
 sentam enquanto esperam. O templo fica a oeste. Uma pequena e velha porta
 de madeira parece ter sido esquecida nos fundos da sala.
 ~
-30 cde 1
+30 28 0 0 0 1
 D1
 Tem uma velha porta de madeira que foi esquecida nos fundos.
 ~
 porta~
-:n 2
 1 -1 1100
 D3
 O templo fica a oeste.
@@ -1438,7 +1428,7 @@ para sempre, dominado pela poderosa beleza em todas as direções.
    O caminho ao norte parece finalmente ter sido aberto, podendo ainda se
 ver as marcas do aparato que o bloqueava.  Há também um caminho para oeste.
 ~
-30 0 2
+30 0 0 0 0 2
 D0
 O caminho está livre!  Fora as marcas do aparato, você consegue ver...
 Algo.
@@ -1476,7 +1466,7 @@ recem cortada. Você sente como se pudesse deitar-se na grama e ficar aqui
 para sempre, dominado pela poderosa beleza em todas as direções.
    Há um grande portão enferrujado em um arco de pedra a oeste.
 ~
-30 0 2
+30 0 0 0 0 2
 D1
 O caminho se une a um caminho maior a leste.
 ~
@@ -1486,8 +1476,7 @@ D3
 Há um portão enferrujado a oeste.
 ~
 portao~
-:n 1 o portão enferrujado
-15 -1 3067
+0 -1 3067
 E
 portao~
 Está muito enferrujado por sinal.
@@ -1499,12 +1488,11 @@ Atravessando o portão~
 estrutura, como um tabuleiro de xadrez. Você ouve sons vindos de lá,
 sons de uma... batalha de xadrez?!?
 ~
-30 0 2
+30 0 0 0 0 2
 D1
 Você vê o portão enferrujado.
 ~
 portao~
-:n 1 o portão enferrujado
 1 6300 3066
 D3
 Você vê uma estranha estrutura, um tabuleiro de xadrez, talvez.
@@ -1525,7 +1513,7 @@ você caminha por ela.  Ao seu redor, a mudança também não foi muito grande,
 sendo a única coisa chamativa a parte mais adiante da trilha e, mais ao
 longe, o que parece ser a parte mais alta de cinco torres.
 ~
-30 0 2
+30 0 0 0 0 2
 D0
 Para lá segue o solitário caminho de terra...
 ~
@@ -1549,7 +1537,7 @@ sente perdido e tão solitário quanto a estrada pela qual caminha.  Ainda
 longe, ao norte, você vê a silhueta de cinco torres cortando o céu no
 horizonte.
 ~
-30 0 2
+30 0 0 0 0 2
 D0
 Para lá segue o solitário caminho de terra...
 ~
@@ -1570,7 +1558,7 @@ cinco torres também está mais próxima, mas ainda é difícil de ver com mais
 detalhes.  Seguindo norte você continua pelo caminho, e por sul, você tem a
 possibilidade de voltar para Midgaard.
 ~
-30 0 2
+30 0 0 0 0 2
 D0
 Para lá segue o solitário caminho de terra... E mais alguma coisa
 ~
@@ -1590,7 +1578,7 @@ está protegido por forte magia.  Grandes tochas iluminam as câmaras mais
 profundas.  A oeste você vê uma espécie de bar, enquanto a sul está uma das
 ruas de Midgaard.
 ~
-30 d 0
+30 8 0 0 0 0
 D2
 Você vê o fim da Rua Principal.
 ~
@@ -1611,17 +1599,17 @@ sendo muito bonito o efeito que a luz das tochas produz quando incide sobre
 alguma das peças.  A sul você percebe um aposento mergulhado no mais profundo
 breu.
 ~
-30 cdh 0
-D2
-Você não consegue enxergar nada...
-~
-~
-0 -1 3073
+30 140 0 0 0 0
 D1
 Você vê a entrada da Confraria dos Druidas.
 ~
 ~
 0 -1 3071
+D2
+Você não consegue enxergar nada...
+~
+~
+0 -1 3073
 S
 #3073
 O Círculo Druídico~
@@ -1631,7 +1619,7 @@ grande círculo, tendo como centro um altar feito de rocha azulada.  Sobre um
 pedestal de ouro, junto ao altar, duas grandes esferas de fogo violeta
 iluminam o Círculo com seu estranho brilho.
 ~
-30 cdh 0
+30 140 0 0 0 0
 D0
 Você vê o Bar dos Druidas.
 ~
@@ -1652,7 +1640,7 @@ Pessoas de todos os tipos passam por você, conversando.
    Ruas saem em todas as direções, para norte a Praça do Mercado, para sul a
 Praça Comum, para leste e oeste a Avenida Midgaard.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Você vê a Praça do Mercado.
 ~
@@ -1680,7 +1668,7 @@ Avenida Midgaard~
 de Vitália.  Ao leste você vê o final da Avenida Midgaard, e ao oeste você
 vê a Praça Mediana.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Você vê a agência de Midgaard do Banco de Vitália.
 ~
@@ -1703,7 +1691,7 @@ Avenida Midgaard~
 construções recentes.
    A avenida continua para o oeste.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Há algumas construções para o norte.
 ~
@@ -1721,7 +1709,7 @@ Avenida Midgaard~
 avistar uma imensa torre daqui, que parece ser bastante interessante.
    A avenida continua para o oeste, e para o leste você vê a Praça Mediana.
 ~
-30 0 1
+30 0 0 0 0 1
 D0
 Você vê a Confraria da Família Daguerreo.
 ~
@@ -1745,7 +1733,7 @@ nota várias construções em andamento.  Ao sul, fica uma grande torre, onde
 funcionam as instalações de um grande jornal.
    A avenida continua para o leste, para o oeste você vê a estrada do muro.
 ~
-30 0 1
+30 0 0 0 0 1
 D1
 Você vê a Avenida Midgaard.
 ~
@@ -1773,7 +1761,7 @@ aqui.  Procurando por roupas, armas ou simplesmente objetos inúteis e não
 tem muito dinheiro?  Ou então precisa de dinheiro e quer vender alguma
 coisa?  Deixe seu recado escrito no enorme quadro.
 ~
-30 dh 0
+30 136 0 0 0 0
 D2
 Você vê o beco.
 ~
@@ -1790,29 +1778,28 @@ dupla, lugar de onde vem delicioso cheiro de comida, bebida e onde alegres
 vozes conversam e cantam ao som de boa música.  Uma placa sobre a porta
 chama sua atenção.
 ~
-30.2 egh 2
+30 208 0 0 0 2
 D0
 Você vê a entrada da taverna.
 ~
 porta~
-:n 2 a porta
-ag -1 3083
+0 -1 3083
 E
 placa~
 Você lê a placa amarela escrita em caprichadas letras coloridas:
 
-@Y              ._______________________________.@n
-@Y              |                               @Y|@n
-@Y              |    @CTaverna@n                    @Y|@n
-@Y              |          @RA BAD 1RNA@n            @Y|@n
-@Y              |    @Co refúgio do bom bardo.@n    @Y|@n
-@Y              |                               @Y|@n
-@Y              |   @BSe a ti pesado é o fardo,@n   @Y|@n
-@Y              |   @Baqui te podes descansar,@n    @Y|@n
-@Y              |   @Brecebemos qualquer bardo:@n   @Y|@n
-@Y              |   @B- é @WA Baderna@n@B um bom lar!@n   @Y|@n
-@Y              |                               @Y|@n
-@Y              '-------------------------------'@n
+	Y              ._______________________________.	n
+	Y              |                               	Y|	n
+	Y              |    	CTaverna	n                    	Y|	n
+	Y              |          	RA BAD 1RNA	n            	Y|	n
+	Y              |    	Co refúgio do bom bardo.	n    	Y|	n
+	Y              |                               	Y|	n
+	Y              |   	BSe a ti pesado é o fardo,	n   	Y|	n
+	Y              |   	Baqui te podes descansar,	n    	Y|	n
+	Y              |   	Brecebemos qualquer bardo:	n   	Y|	n
+	Y              |   	B- é 	WA Baderna	n	B um bom lar!	n   	Y|	n
+	Y              |                               	Y|	n
+	Y              '-------------------------------'	n
 
 ~
 S
@@ -1833,20 +1820,20 @@ melodias a serem tocadas e qualquer coisa que um bardo acharia bonito e
 gostaria de ver a todo momento.
    A porta de entrada fica a sul, havendo ainda mais uma a leste e a oeste.
 ~
-30.2 dg 0
+30 72 0 0 0 0
+D1
+~
+~
+0 -1 3085
 D2
 Você vê o templo de sua cidade!
 ~
 ~
-a -1 50
+1 -1 50
 D3
 ~
 ~
-agb -1 3084
-D1
-~
-~
-agb -1 3085
+0 -1 3084
 E
 retratos~
 Você vê retratos, pintados com maestria, de grandes menestréis, trovadores e
@@ -1868,11 +1855,11 @@ de estranhos objetos de madeira, metal e pedra.  O largo tablado, em frente
 às mesas, possui um pequeno sofá de tecido rubro, talvez sendo o lugar de
 algum professor que gosta de conforto.
 ~
-30.2 dg 0
+30 72 0 0 0 0
 D1
 ~
 ~
-agb -1 3083
+0 -1 3083
 S
 #3085
 Bardices e Bernardices na Baderna~
@@ -1886,28 +1873,28 @@ foram dispostos enormes sofás acolchoados para o descanso dos clientes, que
 podem admirar os enfeites vindos de todas as partes desse mundo.  A entrada
 da Baderna fica a oeste.
 ~
-30.2 dg 0
+30 72 0 0 0 0
 D3
 ~
 ~
-agb -1 3083
+0 -1 3083
 S
 #3086
 Um Corredor~
    Você está no estreito corredor que liga o Grunting Boar ao Clube de
 Bardos.  O lugar, a leste, parece ser bem animado.
 ~
-30 adg 0
-D1
-Ali fica o Clube de Bardos.
-~
-~
-0 -1 3087
+30 73 0 0 0 0
 D0
 Você vê o Grunting Boar.
 ~
 ~
 0 -1 3007
+D1
+Ali fica o Clube de Bardos.
+~
+~
+0 -1 3087
 S
 #3087
 O Clube de Bardos~
@@ -1919,7 +1906,7 @@ não falta, muito menos dança e bebida!
    A entrada do Clube fica a oeste; acima, indo por um lance de escadas,
 fica a sala dos mestres.
 ~
-30 dg 0
+30 72 0 0 0 0
 D3
 ~
 ~
@@ -1939,10 +1926,10 @@ mesas, no cheiro doce de flores misturado com a comida e bebida lá debaixo.
 E você, só de entrar no recinto, começou a deixar sua própria música no ar,
 numa suave melodia que conta a sua vida.
 ~
-30 dg 0
+30 72 0 0 0 0
 D5
 ~
 ~
 0 -1 3087
 S
-$
+$~

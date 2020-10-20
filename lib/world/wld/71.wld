@@ -6,7 +6,7 @@ O ar é úmido e a rocha em que você está é escorregadia.  A lagoa parece
 muito escura.  A lagoa parece extender-se ao leste.  A rocha pode ser escalada
 a partir daqui.
 ~
-71 acd 5
+71 13 0 0 0 5
 D0
 ~
 ~
@@ -29,7 +29,7 @@ terrível fedor do viscoso sedimento enquanto você tenta não ser coberto
 pela lama que cai.  A leste há uma entrada levando para fora daqui e parece
 absolutamente impossível forçar a descida por este caminho lamaçento.
 ~
-71 acd 5
+71 13 0 0 0 5
 D1
 Leste.  Você não vê nada de interessante.
 ~
@@ -47,7 +47,7 @@ Abaixo do Poço Escuro~
 duas saídas, para cima e para leste.  Uma escada alta foi deixada aqui para
 que você possa subir para fora do poço sem precisar usar uma corda.
 ~
-71 ad 1
+71 9 0 0 0 1
 D1
 ~
 ~
@@ -57,10 +57,6 @@ Cima.  Você não vê nada aqui, está muito escuro.
 ~
 ~
 0 -1 7004
-D5
-~
-alçapão~
-1 -1 7300
 E
 escada~
 Esta é uma escada de madeira muito engraçada e, depois de uma inspeção mais
@@ -74,7 +70,7 @@ Uma Curva Lamaçenta no Sistema de Esgoto~
 "chão" está completamente coberto pela lama!  Isso inclui suas pernas e
 joelhos também.  O cano leva a oeste e sul.
 ~
-71 ad 4
+71 9 0 0 0 4
 D2
 Ao sul há menos lama que aqui!  Ela parece, realmente acabar lá!  Você acha
 que será bom sentir seus pés livres da lama novamente.
@@ -98,7 +94,7 @@ Uma Junção nos Canos de Esgoto~
    Você está no centro do que parece ser uma junção de canos tripla indo
 para leste, oeste e norte.
 ~
-71 ad 1
+71 9 0 0 0 1
 D0
 Você pode ver um lugar cheio de lama começando nesta direção.
 ~
@@ -123,7 +119,7 @@ cimentadas nas bordas, você agarra-se a uma tão freneticamente que não cai.
 Quem sabe quão profunda é essa fonte?  As barras levam para baixo e para
 cima.
 ~
-71 ad 5
+71 9 0 0 0 5
 D4
 Há uma fraca e turva luz vindo de cima, ou talvez seja só a sua imaginação.
 De qualquer maneira está mais escuro aqui do que lá em cima, se isso for
@@ -152,7 +148,7 @@ segurança.  O peitoril continua para leste mas não volta para o sul.  O
 peitoril é tão estreito que você não pode virar-se então você deve
 continuar a seguir em frente.
 ~
-71 acd 5
+71 13 0 0 0 5
 D1
 O peitoril continua para o leste.
 ~
@@ -190,7 +186,7 @@ O Estreito Peitoril~
 outra saída daqui mas leva diretamente para o meio-ar e com grandes
 chances de uma sessão de quedas livres.
 ~
-71 acd 5
+71 13 0 0 0 5
 D0
 Norte.  O peitoril leva para um canto e encurva-se para o leste.
 ~
@@ -214,7 +210,7 @@ O Estreito Peitoril~
 outra saída daqui mas leva diretamente para o meio-ar e com grandes
 chances de uma sessão de quedas livres.
 ~
-71 acd 5
+71 13 0 0 0 5
 D0
 Norte.  O peitoril leva ao norte.
 ~
@@ -238,7 +234,7 @@ O Estreito Peitoril~
 outra saída daqui mas leva diretamente para o meio-ar e com grandes
 chances de uma sessão de quedas livres.
 ~
-71 acd 5
+71 13 0 0 0 5
 D0
 Norte.  O peitoril leva ao norte.
 ~
@@ -262,7 +258,7 @@ O Estreito Peitoril~
 OUTRA saída daqui mas leva diretamente para o Passo-Em-Falso e com grandes
 chances de uma sucessão de quedas livres.
 ~
-71 acd 5
+71 13 0 0 0 5
 D0
 Norte.  O peitoril leva ao norte.
 ~
@@ -286,7 +282,7 @@ O Canto Sudoeste do Peitoril~
 parece levar a um tipo de abismo na total escuridão.  O peitoril parece ter
 uma margem aparentemente estranha.
 ~
-71 acd 5
+71 13 0 0 0 5
 D0
 Norte.  O peitoril leva ao norte.
 ~
@@ -329,7 +325,7 @@ Uma Estranha Intersecção~
 não parecem ser canos de esgoto.  Eles parecem ser um túnel de pedra ou uma
 passagem talhada na rocha.  Os caminhos daqui levam ao norte, leste e oeste.
 ~
-71 ad 1
+71 9 0 0 0 1
 D0
 Norte.  Você vê um peitoril para algo que parece ser um abismo.
 ~
@@ -350,7 +346,7 @@ O Estreiro Peitoril Indo do Leste para o Oeste~
 outra saída daqui mas leva diretamente para o meio-ar e com grandes chances de
 uma sucessão de quedas livres.
 ~
-71 acd 5
+71 13 0 0 0 5
 D1
 O peitoril leva a leste.
 ~
@@ -371,7 +367,7 @@ disso, não sabe?   Com uma aceleração de aproximadamente 9.82 metros²
 por segundo, você está agora caindo no Abismo.  O que lhe espera lá
 embaixo continua sendo um mistério.  Adeus mundo cruel...
 ~
-71 bd 0
+71 10 0 0 0 0
 D0
 ~
 ~
@@ -400,7 +396,7 @@ para o oeste e leste e ainda tem uma saída para o sul.  Talvez você pudesse
 pular no meio-ar, porém essa não parece ser uma boa idéia.  O caminho ao
 sul está na mais completa escuridão.
 ~
-71 acd 4
+71 13 0 0 0 4
 D0
 ~
 ~
@@ -424,7 +420,7 @@ O Canto Nordeste do Peitoril~
 há um peitoril sólido abaixo dos seus pés.  O peitoril continua para o oeste e
 leva ao sul daqui para a escuridão.
 ~
-71 acd 5
+71 13 0 0 0 5
 D2
 ~
 ~
@@ -461,7 +457,7 @@ outra saída daqui mas leva diretamente para o meio-ar e com grandes chances
 de uma sessão de quedas livres.  E isso é a oeste daqui, por isso tome
 cuidado por onde pisa.
 ~
-71 acd 5
+71 13 0 0 0 5
 D2
 O Peitoril leva ao sul.
 ~
@@ -481,7 +477,7 @@ outra saída daqui mas leva diretamente para o meio-ar e com grandes chances
 de uma sessão de quedas livres.  E isso é a oeste daqui, por isso tome
 cuidado por onde pisa.
 ~
-71 acd 5
+71 13 0 0 0 5
 D2
 O peitoril leva ao sul.
 ~
@@ -501,7 +497,7 @@ outra saída daqui mas leva diretamente para o meio-ar e com grandes chances
 de uma sessão de quedas livres.  E isso é a oeste daqui, por isso tome
 cuidado por onde pisa.
 ~
-71 acd 5
+71 13 0 0 0 5
 D2
 O peitoril leva ao sul.
 ~
@@ -521,7 +517,7 @@ outra saída daqui mas leva diretamente para o meio-ar e com grandes chances
 de uma sessão de quedas livres.  E isso é a oeste daqui, por isso tome
 cuidado por onde pisa.  Você vê uma pequena abertura ao leste.
 ~
-71 acd 5
+71 13 0 0 0 5
 D1
 Leste. Você para em meio a escuridão.
 ~
@@ -544,7 +540,7 @@ O Canto Sudeste do Peitoril~
    Este peitoril parece ser um pouco mais largo que o que fica ao norte
 daqui.  O Peitoril parece levar a um tipo de abismo totalmente escuro.
 ~
-71 acd 5
+71 13 0 0 0 5
 D0
 Ao norte daqui você pode ver um peitoril.
 ~
@@ -581,7 +577,7 @@ Abaixo do Poço~
    Você está numa caverna na completa escuridão que leva a oeste.  A parede
 parece ser sobrenatural.
 ~
-71 ad 0
+71 9 0 0 0 0
 D3
 ~
 ~
@@ -596,7 +592,7 @@ Abaixo do Poço~
    Uma escada leva para cima pelo poço.  Uma pequena abertura leva a oeste
 daqui.
 ~
-71 ad 5
+71 9 0 0 0 5
 D3
 Você pode ver um estreito peitoril indo ao norte e ao sul.
 ~
@@ -613,7 +609,7 @@ A Linha do Esgoto~
    Você está numa parte estreita do esgoto.  Abaixo o esgoto continua e ao
 norte está o peitoril.
 ~
-71 9 3
+71 9 0 0 0 3
 D0
 Você pode ver o lado sul do peitoril.
 ~
@@ -633,7 +629,7 @@ O resultado de um ato tão tolo deverá ser punido com a morte, você sabe.
 você está agora caindo no Abismo.  O que lhe espera lá embaixo continua sendo
 um mistério.  Adeus mundo cruel.
 ~
-71 bd 0
+71 10 0 0 0 0
 D0
 ~
 ~
@@ -655,4 +651,4 @@ D4
 ~
 0 -1 7113
 S
-$
+$~

@@ -3,7 +3,7 @@ Flutuando no Ar~
    Você está flutuando. Olhando para baixo, é possível avistar o chão a
 uns 50 metros, e você gostaria que seus pés estivessem plantados sobre ele. 
 ~
-151 c 9
+151 4 0 0 0 9
 D4
 Acima, você não faz idéia do que seja uma grande estrutura que se estende
 em direção aos céus.
@@ -21,7 +21,7 @@ Voando no Ar~
    Você voa bem acima do chão.  Parece ser possível avistar sua casa na 
 extrema esquerda!  Algo muito grande está bem acima e ao sul de sua posição.
 ~
-151 c 9
+151 4 0 0 0 9
 D4
 Acima de você está uma grande e macia nuvem.
 ~
@@ -39,7 +39,7 @@ Uma Nuvem Macia~
 Pode-se notar que tal estrutura está coberta por ouro e que inscrições 
 misteriosas ornam o exterior das grandes portas. 
 ~
-151 c 9
+151 4 0 0 0 9
 D2
 Ao sul fica um Templo Brilhante.
 ~
@@ -59,7 +59,7 @@ resplandece em tons dourados e é um tributo a todos os grandes guerreiros
 do passado.  Você sente que está entrando em um local onde mortais nunca
 deveriam colocar os pés.
 ~
-151 d 0
+151 8 0 0 0 0
 D0
 Ao seu norte fica a saída do Templo. 
 ~
@@ -77,7 +77,7 @@ Jardins Cerimoniais~
 ervas selvagens.  Uma mensagem rabiscada na parede o informa de que aqui os
 guerreiros preparavam medicamentos para seus companheiros feridos.
 ~
-151 d 0
+151 8 0 0 0 0
 D0
 Ao norte você vê o hall de entrada do Templo.
 ~
@@ -95,7 +95,7 @@ Hospital~
 paredes.  Livros recobrem as estantes.  A sala possui um cheiro anti-séptico
 e faz com que você realmente se sinta num hospital.
 ~
-151 d 0
+151 8 0 0 0 0
 D0
 Ao norte fica a morada dos Shoguns. 
 ~
@@ -114,7 +114,7 @@ Muito embora você não saiba exatamente o que Jin signifique, você
 sente que este homem pode te ensinar muito sobre as pessoas.  Escadas
 podem levá-lo acima, ao próximo nível.
 ~
-151 d 0
+151 8 0 0 0 0
 D2
 Ao sul fica o hospital.
 ~
@@ -124,8 +124,7 @@ D4
 Uma escadaria dourada o leva ainda mais para cima.
 ~
 campo de força~
-:n 1 campo de força
-abd 15101 15107
+0 15101 15107
 S
 #15107
 O Corredor~
@@ -133,7 +132,7 @@ O Corredor~
 o lembra de sua infância, e traz de volta imagens de seus pais, te ensinando
 o certo e o errado. 
 ~
-151 d 0
+151 8 0 0 0 0
 D2
 Ao sul há outra sala.
 ~
@@ -155,7 +154,7 @@ Outra Sala~
    Você está em uma outra sala, similar à anterior.  Aliás, você não
 consegue ver nenhuma diferença.
 ~
-151 d 0
+151 8 0 0 0 0
 D1
 Ao leste, você volta de onde veio.
 ~
@@ -167,7 +166,7 @@ Mais Uma Sala~
    Você está em uma outra sala.  Sua mente vacila ao descobrir que
 esta sala é idêntica às anteriores!
 ~
-151 d 0
+151 8 0 0 0 0
 D0
 Ao norte, você volta de onde veio.
 ~
@@ -185,7 +184,7 @@ Shogum Gi~
 apontando o dedo e te dando uma lição de moral, por você ter matado seus
 amigos Shoguns.  Agora você aprenderá sua lição! 
 ~
-151 d 0
+151 8 0 0 0 0
 D1
 A leste você volta por onde veio. 
 ~
@@ -195,15 +194,14 @@ D4
 Uma escadaria o leva para cima. 
 ~
 campo de força~
-:n 1 campo de força
-abd 15102 15111
+0 15102 15111
 S
 #15111
 Pouso no Terceiro Andar~
    Você se vê pousando no terceiro andar do templo.  Suas pernas doem por
 Causa da escalada e você fica imaginando quantos andares este lugar deve ter.
 ~
-151 d 0
+151 8 0 0 0 0
 D1
 Ao leste, você vê um quarto de escravos. 
 ~
@@ -217,7 +215,7 @@ acorrentados, algemados ou presos por qualquer forma.  Estas pessoas são
 escravas voluntariamente(!).  Seu mestre é o Shogum Chu.  Eles não se sentem
 dignos de serem qualquer outra coisa.  E você? 
 ~
-151 d 0
+151 8 0 0 0 0
 D0
 Ao norte, você ouve os sons de metal.
 ~
@@ -236,7 +234,7 @@ golpeiam suas espadas e outras armas contra instrumentos de defesa muito
 afiados.  Você os observa curioso, e pensa consigo mesmo, 'Hmm... será que
 eles poderiam temperar minha espada?'. 
 ~
-151 d 0
+151 8 0 0 0 0
 D2
 Ao sul, a câmara dos escravos.
 ~
@@ -253,7 +251,7 @@ Shogum Chu~
    Você está na morada do Shogum Chu.  Em torno dele, estão guerreiros 
 completamente leais ao seu mestre.  É melhor não mexer com ele...
 ~
-151 d 0
+151 8 0 0 0 0
 D1
 Sons de metal vêm do leste. 
 ~
@@ -263,8 +261,7 @@ D4
 Escadas o levam para cima mais uma vez. 
 ~
 campo de força~
-:n 1 campo de força
-abd 15103 15115
+0 15103 15115
 S
 #15115
 Pouso no Quarto Andar~
@@ -272,7 +269,7 @@ Pouso no Quarto Andar~
 muito longe, você sente que é necessário seguir adiante.  Algo neste andar 
 demanda respeito.
 ~
-151 d 0
+151 8 0 0 0 0
 D2
 Você ouve água ao sul. 
 ~
@@ -290,7 +287,7 @@ O Banho~
 parecem furiosos com sua intromissão.  Você tem a leve impressão de que
 ninguém deve interromper um samurai enquanto ele está se banhando...
 ~
-151 d 0
+151 8 0 0 0 0
 D0
 O local onde você aterrissou fica ao seu norte. 
 ~
@@ -308,7 +305,7 @@ A Antecâmara de Ko~
 as paredes estão cheias de inscrições honrando pais e mães de samurais que
 vivem aqui.
 ~
-151 d 0
+151 8 0 0 0 0
 D0
 Ao norte fica a câmara do Shogum. 
 ~
@@ -327,7 +324,7 @@ o seu pai.  Na verdade, ele se parece com o pai de qualquer um.  Você espera
 que ele retire o cinto e te dê umas cintadas a qualquer momento...  mas aí 
 você repara na arma que ele usa. 
 ~
-151 d 0
+151 8 0 0 0 0
 D2
 A antecâmara fica ao sul. 
 ~
@@ -337,8 +334,7 @@ D4
 Uma escada o leva para cima. 
 ~
 campo de força~
-:n 1 campo de força
-abd 15104 15119
+0 15104 15119
 S
 #15119
 Pouso no Quinto Andar~
@@ -346,7 +342,7 @@ Pouso no Quinto Andar~
 que ainda há muito caminho pela frente.  Você nota desenhos nas paredes,
 contando um pouco mais dos respeitosos guerreiros de outrora. 
 ~
-151 d 0
+151 8 0 0 0 0
 D2
 Você ouve sons de coisas sendo afiadas ao sul.
 ~
@@ -364,7 +360,7 @@ Sala das Armas~
 espadas.  Muito embora eles usem equipamentos primitivos, conseguem
 ótimos resultados, e suas armas parecem mortais.
 ~
-151 d 0
+151 8 0 0 0 0
 D0
 O pouso está ao norte.
 ~
@@ -377,7 +373,7 @@ A Antecâmara~
 guerreiros, declarações escritas de respeito pelos Samurais, e o que parece
 ser uma lista de compras. 
 ~
-151 d 0
+151 8 0 0 0 0
 D1
 O pouso está a leste. 
 ~
@@ -402,7 +398,7 @@ Shogum Rei~
 outras pessoas.  De fato, ele respeita até mesmo sua insignificante presença.
 Hmm... que estranho... ninguém mais faz isso. 
 ~
-151 d 0
+151 8 0 0 0 0
 D0
 A antecâmara fica ao norte. 
 ~
@@ -412,8 +408,7 @@ D4
 Uma escadaria o leva acima. 
 ~
 campo de força~
-:n 1 campo de força
-abd 15105 15123
+0 15105 15123
 S
 #15123
 Pouso no Sexto Andar~
@@ -421,7 +416,7 @@ Pouso no Sexto Andar~
 sedento, não come há algum tempo e agora seria uma boa hora para descansar
 um pouco.
 ~
-151 d 0
+151 8 0 0 0 0
 D0
 Um estranho zunido pode ser ouvido ao norte. 
 ~
@@ -444,7 +439,7 @@ Sala das Escritas~
 samurais devem aprender as suas tão aclamadas habilidades com processamento
 de textos.  Legal, né?
 ~
-151 d 0
+151 8 0 0 0 0
 D2
 O pouso está ao sul. 
 ~
@@ -457,7 +452,7 @@ A Antecâmara~
 ter ouvido em algum lugar que existem oito princípios básicos dos samurais. 
 Agora, faltam só mais três.
 ~
-151 d 0
+151 8 0 0 0 0
 D0
 A câmara do Shogum fica ao norte. 
 ~
@@ -476,7 +471,7 @@ te diz que não só ele é extremamente bodoso, mas também MUITO inteligente.
 Você pensa que este sábio indivíduo poderia te ensinar muitas coisas sobre
 a vida.
 ~
-151 d 0
+151 8 0 0 0 0
 D2
 A antecâmara é ao sul. 
 ~
@@ -486,8 +481,7 @@ D4
 Uma escada o leva para cima. 
 ~
 campo de força~
-:n 1 campo de força
-abd 15106 15127
+0 15106 15127
 S
 #15127
 Pouso no Sétimo Andar~
@@ -495,7 +489,7 @@ Pouso no Sétimo Andar~
 nelas são contadas histórias de cruzadas pela Verdade.  Você se impacienta
 com o grande número de salas deste Templo.
 ~
-151 d 0
+151 8 0 0 0 0
 D2
 Ao sul você ouve o som de escribas. 
 ~
@@ -509,7 +503,7 @@ Mas, olhando com mais atenção, você vê que de fato não há nenhum escriba
 nesta sala!  Você nota que a verdade nem sempre pode ser contemplada pelos
 olhos.  Bela lição, não?
 ~
-151 d 0
+151 8 0 0 0 0
 D0
 O pouso está ao norte. 
 ~
@@ -527,7 +521,7 @@ Pátio~
 competição.  Guerreiros brigam entre si, enquanto jovens aprendizes os
 observam com medo.
 ~
-151 d 0
+151 8 0 0 0 0
 D0
 Ao norte, uma câmara de um Shogum. 
 ~
@@ -546,7 +540,7 @@ brilhantes e poderosas.  Seu olhar é penetrante.  Ele olha furiosamente para
 você, franze as sobrancelhas, e desembainha a espada.  Ele sabe por que você
 está aqui.
 ~
-151 d 0
+151 8 0 0 0 0
 D2
 O pátio fica ao sul. 
 ~
@@ -556,8 +550,7 @@ D4
 Escadas o levam para cima.
 ~
 campo de força~
-:n 1 campo de força
-abd 15107 15131
+0 15107 15131
 S
 #15131
 Pouso no Oitavo Andar~
@@ -566,7 +559,7 @@ deformado e bizarro, que espelha-se no Japão antigo.  Mas... espere um
 minuto... você espia por uma janela e descobre que ainda não está no topo!
 Você suspira, e continua adiante. 
 ~
-151 d 0
+151 8 0 0 0 0
 D2
 Há algo ao sul. 
 ~
@@ -584,7 +577,7 @@ Shogum Tei~
 ajudando idosos e humildes em figuras antigas.  Você percebe que ele te olha
 carinhosamente, e quase demonstra dó antes de desembainhar a espada.
 ~
-151 d 0
+151 8 0 0 0 0
 D0
 O pouso está ao seu norte. 
 ~
@@ -594,15 +587,14 @@ D4
 Escadas o levam acima. 
 ~
 campo de força~
-:n 1 campo de força
-abd 15108 15135
+0 15108 15135
 S
 #15133
 Uma Sala Vazia~
    Você está em uma sala vazia.  Não há nada na sala.  Não há mobília, não
 há luz (todavia, as paredes BRILHAM).  Muito estranho. 
 ~
-151 d 0
+151 8 0 0 0 0
 D1
 O pouso está a leste. 
 ~
@@ -621,7 +613,7 @@ experientes estão aqui, formando um semi-círculo ao redor de uma marca
 no chão.  Eles olham de relance para você e bradam ferozmente.  Você
 invadiu a 'festa particular' deles...
 ~
-151 d 0
+151 8 0 0 0 0
 D0
 Ao norte há uma sala vazia. 
 ~
@@ -635,6 +627,6 @@ Samurai.  Só a presença dele já é impressionante!  Muitas pessoas fizeram
 suposições sobre a morte e o morrer, e parece que suas questões logo serão
 respondidas.
 ~
-151 d 0
+151 8 0 0 0 0
 S
 $~

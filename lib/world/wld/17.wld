@@ -6,7 +6,7 @@ hï¿½ dï¿½cadas.  A sul, a terra eleva-se atï¿½ um paredï¿½o coberto de vegetaï¿½
 onde apenas um buraco se destaca.  A leste a vegetaï¿½ï¿½o abre-se para um
 caminho que leva a uma estranha encosta de pedra.
 ~
-17 gc 4
+17 68 0 0 0 4
 D1
 A encosta parece com uma imensa besta que foi deixada aqui para apodrecer.
 ~
@@ -27,13 +27,13 @@ Diante do Dragï¿½o~
 pode perceber seu ï¿½dio da terra, que um dia foi sua.  Uma vaga sensaï¿½ï¿½o de 
 maldade emana do ser petrificado, que um dia aterrorizou naï¿½ï¿½es.
 ~
-17 g 4
+17 64 0 0 0 4
 D1
 A imensa goela estï¿½ gelada.  Vocï¿½ poderia alcanï¿½ar a lï¿½ngua e escalar para 
 entrar, vocï¿½ adoraria fazï¿½-lo.
 ~
 ~
-0 -1 1702 
+0 -1 1702
 D3
 ~
 ~
@@ -45,7 +45,7 @@ Na Boca do Dragï¿½o~
 lï¿½ngua marcada com pedras estï¿½ a leste,  atrï¿½s molares de pedra tï¿½o
 grandes quanto escudos de ferro.
 ~
-17 gd 0
+17 72 0 0 0 0
 D1
 ~
 ~
@@ -54,13 +54,13 @@ D3
 ~
 ~
 0 -1 1701
-S   
+S
 #1703
 Pelas Amï¿½gdalas de Pedra~
    Vocï¿½ estï¿½ atrï¿½s da boca do dragï¿½o.  A garganta continua para baixo e
 algo transpira do peito petrificado.
 ~
-17 gda 0
+17 73 0 0 0 0
 D3
 ~
 ~
@@ -76,7 +76,7 @@ Uma Garganta de Pedra~
 crescem como muros.  A passagem como um todo ï¿½ ligeiramente inclinada,
 levando para o leste e para baixo.
 ~
-17 gda 0
+17 73 0 0 0 0
 D4
 ~
 ~
@@ -91,7 +91,7 @@ Ainda Mais nas Profundezas da Garganta~
    O tï¿½nel comeï¿½a a perder sua inclinaï¿½ï¿½o, seguinto simplesmente na direï¿½ï¿½o
 leste.  As formas do que pode ser mï¿½sculos petrificados cobrem as paredes.
 ~
-17 gda 0
+17 73 0 0 0 0
 D1
 ~
 ~
@@ -107,7 +107,7 @@ Uma Junï¿½ï¿½o~
 a leste e oeste, mas na espremedura abaixo hï¿½  um lï¿½bio petrificado, vocï¿½ 
 pode perceber tï¿½neis ao norte e ao sul.
 ~
-17 gda 0
+17 73 0 0 0 0
 D0
 Vocï¿½ espreita embaixo do lï¿½bio petrificado e vï¿½ uma fraca luz em meio a
 escuridï¿½o.
@@ -138,7 +138,7 @@ Um Tï¿½nel de Pedra~
    Essa passagem circular de pedra encurva-se gradualmente para cima, ï¿½ um 
 lugar muito iluminado e quente.
 ~
-17 gda 0
+17 73 0 0 0 0
 D2
 ~
 ~
@@ -154,7 +154,7 @@ S
 Um Pulmï¿½o do Dragï¿½o~
    Chamas antigas queimam aqui, esperando o renascimento de seu mestre.
 ~
-17 gd 0
+17 72 0 0 0 0
 D5
 ~
 ~
@@ -167,7 +167,7 @@ de pedra da cï¿½mara do coraï¿½ï¿½o de Ancalador.  A pureza da mï¿½gica contï¿½m
 o mal e forma uma sagrada balanï¿½a de Neutralidade.  Parece que uma mï¿½sica
 amorosa estï¿½ tocando aqui.
 ~
-17 gdj 0
+17 584 0 0 0 0
 D0
 Vocï¿½ vï¿½ a parede da cï¿½mara abrir-se para vocï¿½, guiando para um tï¿½nel.
 ~
@@ -179,7 +179,7 @@ Um Tï¿½nel de Pedra~
    Essa passagem de pedra ï¿½ iluminada por uma grande luz e um calor violento
 parece vir do final da passagem.
 ~
-17 gda 0
+17 73 0 0 0 0
 D0
 ~
 ~
@@ -196,7 +196,7 @@ Um Pulmï¿½o do Dragï¿½o~
 estï¿½o aqui, e eles estï¿½o latentes a muito tempo, eles queimam vocï¿½ 
 lentamente e fazem vocï¿½ arrepender-se de estar usando uma armadura de metal.
 ~
-17 gd 0
+17 72 0 0 0 0
 D5
 ~
 ~
@@ -209,7 +209,7 @@ assustadoras e difusas luzes verdes e amarelas.  Nada mais maravilhoso!  Uma
 ponte de madeira transpï¿½e a caverna coberta por estalactites.  Um degrau 
 abaixo leva, com seguranï¿½a, ao chï¿½o da caverna, e a ponte segue a leste.
 ~
-17 gdc 0
+17 76 0 0 0 0
 D1
 ~
 ~
@@ -230,7 +230,7 @@ Uma Ponte de Madeira~
 caverna.  Grandes estalagmites crescem enquanto as assustadoras luzes 
 parecem mover-se na nï¿½voa ao longe.  A ponte continua para o leste.
 ~
-17 gd 0
+17 72 0 0 0 0
 D1
 ~
 ~
@@ -252,7 +252,7 @@ Uma Ponte de Madeira~
 seu redor e as luzes assustadoras continuam a danï¿½ar na nï¿½voa ao longe.
 A ponte continua para o leste e para o oeste.
 ~
-17 gd 0
+17 72 0 0 0 0
 D1
 ~
 ~
@@ -273,7 +273,7 @@ Uma Ponte de Madeira~
 estalagmites continuam ao longe e mais luzes verdes e amarelas podem ser
 vistas na nï¿½voa ao longe.  A ponte acaba num pequeno planalto a leste.
 ~
-17 gd 0
+17 72 0 0 0 0
 D1
 Vocï¿½ vï¿½ a ponte coincidir com o fim da caverna.
 ~
@@ -295,7 +295,7 @@ Uma Floresta de Estalagmite~
 estalagmites.  Mover-se machuca muito, e vocï¿½ nï¿½o consegue lembrar-se de 
 nenhuma mï¿½gica para escapar dessa situaï¿½ï¿½o.
 ~
-17 gcd 0
+17 76 0 0 0 0
 S
 #1717
 A Floresta ï¿½cida~
@@ -303,7 +303,7 @@ A Floresta ï¿½cida~
 que caem das estalactites acima.  Poï¿½as de ï¿½cido preenchem cada fenda do
 duro chï¿½o da caverna.  A caverna continua para o sul e leste.
 ~
-17 gd 4
+17 72 0 0 0 4
 D1
 ~
 ~
@@ -319,7 +319,7 @@ A Floresta ï¿½cida~
 gï¿½strico estï¿½o espalhadas pelo chï¿½o.  A caverna expande-se em todas as 
 direï¿½ï¿½es exceto ao norte.
 ~
-17 gd 4
+17 72 0 0 0 4
 D1
 ~
 ~
@@ -339,7 +339,7 @@ A Floresta ï¿½cida~
 estalactites acima.  Poï¿½as de ï¿½cido preenchem cada fenda do duro chï¿½o da 
 caverna.
 ~
-17 gd 4
+17 72 0 0 0 4
 D2
 ~
 ~
@@ -356,7 +356,7 @@ chï¿½o da caverna estï¿½ uma floresta, de forma diferente, estalagmites afiadas
 rodeadas por poï¿½as de algo que deve ser os restos de ï¿½cido gï¿½strico do 
 dragï¿½o.
 ~
-17 gd 4
+17 72 0 0 0 4
 D0
 ~
 ~
@@ -381,7 +381,7 @@ A Floresta ï¿½cida~
 madeira aparece ao longe.  Afiadas estalagmites equilibram-se aqui
 encontrando cada pingo que ï¿½ lanï¿½ado sobre elas.
 ~
-17 gd 4
+17 72 0 0 0 4
 D0
 ~
 ~
@@ -405,7 +405,7 @@ A Floresta ï¿½cida~
 ï¿½cido gï¿½strico estï¿½o espalhadas pelo chï¿½o.  Um degrau leva a um grande
 planalto no fim da caverna.
 ~
-17 gd 4
+17 72 0 0 0 4
 D0
 ~
 ~
@@ -434,7 +434,7 @@ A Floresta ï¿½cida~
 >>>>>>> 1fca3386633ad58963f7a96de46142f29e013a34
 continua para o norte e para o leste.
 ~
-17 gd 4
+17 72 0 0 0 4
 D0
 ~
 ~
@@ -450,7 +450,7 @@ A Floresta ï¿½cida~
 estalactites acima.  Poï¿½as de ï¿½cido preenchem cada fenda do duro chï¿½o da 
 caverna.
 ~
-17 gd 4
+17 72 0 0 0 4
 D0
 ~
 ~
@@ -470,7 +470,7 @@ A Floresta ï¿½cida~
 ï¿½cido gï¿½strico estï¿½o espalhadas pelo chï¿½o.  A caverna continua para norte e 
 oeste.
 ~
-17 gd 4
+17 72 0 0 0 4
 D0
 ~
 ~
@@ -488,12 +488,12 @@ caverna.  O planalto tem uma vista panorï¿½mica, por completo, da floresta de
 por uma parede de gesso e ossos.  Duas grandes portas com maï¿½anetas de 
 caveira foram colocadas aqui.
 ~
-17 gda 0
+17 73 0 0 0 0
 D1
 Vocï¿½ vï¿½ uma enorme quantidade de portas feitas de ossos.
 ~
 porta portas caveira~
-adbc 1718 1756
+0 1718 1756
 D3
 Vocï¿½ vï¿½ uma ponte de madeira.
 ~
@@ -512,12 +512,12 @@ O Pï¿½ncreas do Dragï¿½o~
 aqui, pode-se ler um aviso que diz, 'Memento Mori', ou na nossa lï¿½ngua, 
 'Lembre-se de Morrer'.  A cï¿½mara ainda continua para o leste e para baixo.
 ~
-17 gd 0
+17 72 0 0 0 0
 D0
 Vocï¿½ vï¿½ uma fissura na parede do orgï¿½o.
 ~
 fissura~
-adbc -1 1756
+0 -1 1756
 D1
 ~
 ~
@@ -534,7 +534,7 @@ do dragï¿½o.  Pequenas pilhas de caveiras humanas e restos de armaduras foram
 deixados aqui.  O tï¿½nel continua para norte e para o oeste um tï¿½nel pode ser
 visto.
 ~
-17 gda 0
+17 73 0 0 0 0
 D0
 ~
 ~
@@ -548,7 +548,7 @@ S
 O Intestino Delgado~
    O tï¿½nel segue para o sul e para o leste.
 ~
-17 gda 0
+17 73 0 0 0 0
 D1
 ~
 ~
@@ -562,7 +562,7 @@ S
 O Intestino Delgado~
    O tranquilo tï¿½nel encurva-se para o oeste e para o norte.
 ~
-17 gda 0
+17 73 0 0 0 0
 D2
 ~
 ~
@@ -576,7 +576,7 @@ S
 O Intestino Delgado~
    As paredes claras do tï¿½nel correm para o norte e para o sul.
 ~
-17 gda 0
+17 73 0 0 0 0
 D0
 ~
 ~
@@ -590,7 +590,7 @@ S
 O Intestino Delgado~
    O Tï¿½nel vem do norte e mergulha penetrantemente para baixo.
 ~
-17 gda 0
+17 73 0 0 0 0
 D0
 ~
 ~
@@ -605,7 +605,7 @@ O Intestino Delgado~
    O descaracterizado tï¿½nel leva para o norte e para cima.  Sons ecoam das
 claras paredes, vocï¿½ nï¿½o pode dizer se estï¿½o longe ou perto.
 ~
-17 gda 0
+17 73 0 0 0 0
 D0
 ~
 ~
@@ -620,7 +620,7 @@ O Intestino Delgado~
    Pilhas de equipamento quebrado, de aventureiros hï¿½ muito tempo mortos,
 foram armazenadas aqui.  O tï¿½nel corre para o norte e para o sul.
 ~
-17 gda 0
+17 73 0 0 0 0
 D0
 ~
 ~
@@ -636,7 +636,7 @@ O Intestino Delgado~
 de bravos guerreiros que desafiaram o dragï¿½o, podem estar aqui dilacerados
 e estragados.
 ~
-17 gda 0
+17 73 0 0 0 0
 D1
 ~
 ~
@@ -650,7 +650,7 @@ S
 O Intestino Delgado~
    As paredes claras do tï¿½nel seguem para o leste e para o sul.
 ~
-17 gda 0
+17 73 0 0 0 0
 D2
 ~
 ~
@@ -664,7 +664,7 @@ S
 O Intestino Delgado~
    O tranquilo tï¿½nel estreita-se, ao sul daqui, num novo tï¿½nel.
 ~
-17 gda 0
+17 73 0 0 0 0
 D0
 ~
 ~
@@ -680,7 +680,7 @@ O Intestino Grosso~
    Diferente do intestino delgado, as paredes aqui tï¿½m fendas.  Elas sï¿½o 
 ï¿½speras e sujas.
 ~
-17 gda 0
+17 73 0 0 0 0
 D0
 ~
 ~
@@ -695,7 +695,7 @@ O Intestino Grosso~
   O cheiro de lixo ï¿½ forte nesta parte do tï¿½nel que corre para o oeste e 
 para o norte.
 ~
-17 gda 0
+17 73 0 0 0 0
 D0
 ~
 ~
@@ -710,7 +710,7 @@ O Intestino Grosso~
    As ï¿½speras paredes do tï¿½nel arranham sua armadura e corta sua pele 
 desprotegida quando vocï¿½ segue para o norte ou para o sul.
 ~
-17 gda 0
+17 73 0 0 0 0
 D0
 ~
 ~
@@ -725,7 +725,7 @@ O Intestino Grosso~
    O tï¿½nel segue para o leste mas vocï¿½ acha muitos apoios entre a 
 sujeira.
 ~
-17 gda 0
+17 73 0 0 0 0
 D1
 ~
 ~
@@ -739,7 +739,7 @@ S
 O Intestino Grosso~
    O ï¿½spero e rachado tï¿½nel estreita-se para o sul.
 ~
-17 gda 0
+17 73 0 0 0 0
 D2
 ~
 ~
@@ -755,7 +755,7 @@ Uma Sfï¿½ncter de Pedra~
 Uma brisa do sul levanta a poeira e vocï¿½ comeï¿½a a acreditar que estï¿½ longe 
 de estar seguro.
 ~
-17 gda 0
+17 73 0 0 0 0
 D0
 ~
 ~
@@ -774,7 +774,7 @@ para o sul, deixando o monte do dragï¿½o.  Uma poste indicador em forma de
 caveira aponta para um caminho pouco usado ao norte.  Hï¿½ uma grande porï¿½ï¿½o 
 de terra, estrategicamente colocada,para bloquear o caminho para o norte.
 ~
-17 gc 3
+17 68 0 0 0 3
 D2
 Vocï¿½ vï¿½ um pï¿½tio rodeando o dragï¿½o, voltando para sua goela.
 ~
@@ -785,7 +785,14 @@ Hï¿½ um estranho buraco na parede de pedra, com um lado circular.
 ~
 ~
 0 -1 1743
-E 
+E
+porï¿½ï¿½o terra estratï¿½gica~
+Esta grande e estranha criaï¿½ï¿½o ï¿½, meramente, uma estratï¿½gia muito usado por 
+escritores para desviar pessoas para longe de algo que ele ou ela nï¿½o queria
+que eles vissem atï¿½ o presente momento.  Falando nisso, vocï¿½ viu o pï¿½tio
+que leva ao sul, nï¿½o viu?
+~
+E
 sinal poste indicador~
 No poste indicador lï¿½-se uma antiga escrita rï¿½nica:
 
@@ -796,13 +803,6 @@ nenhum voltou para contar a verdade...
                                  ---Mercutio, o Poeta do Reino
 
 ~
-E
-porï¿½ï¿½o terra estratï¿½gica~
-Esta grande e estranha criaï¿½ï¿½o ï¿½, meramente, uma estratï¿½gia muito usado por 
-escritores para desviar pessoas para longe de algo que ele ou ela nï¿½o queria
-que eles vissem atï¿½ o presente momento.  Falando nisso, vocï¿½ viu o pï¿½tio
-que leva ao sul, nï¿½o viu?
-~
 S
 #1745
 Um Jardim Morto-Vivo~
@@ -812,7 +812,7 @@ deformadas paredes da cï¿½mara, parece que todas morreram e voltaram da morte
 de algum modo.  Uma parede abre-se no orgï¿½o petrificado levando para o 
 oeste e para baixo.
 ~
-17 gd 0
+17 72 0 0 0 0
 D3
 ~
 ~
@@ -830,12 +830,12 @@ cama e um pequeno bancada de alquimista, mas se o dragï¿½o algum dia
 libertar-se de sua prisï¿½o de pedra, ele ficarï¿½ bastante infeliz com essa
 situaï¿½ï¿½o.  A ï¿½nica saï¿½da ï¿½ para o oeste.
 ~
-17 gd 0
+17 72 0 0 0 0
 D3
 Do lado de fora ï¿½ a cï¿½mara do anfiteatro.
 ~
 porta caixï¿½o~
-adcb -1 1747
+0 -1 1747
 S
 #1747
 O Anfiteatro Macabro~
@@ -845,12 +845,12 @@ paredes sï¿½o decoradas com vï¿½rios ossos serrados e um pouco de sangue,
 'Preso sem direito a fianï¿½a.' Uma porta de tampa de caixï¿½o foi posta na parede 
 a leste, enquanto degraus cortam a rocha ao oeste e abaixo.
 ~
-17 gd 0
+17 72 0 0 0 0
 D1
 Vocï¿½ vï¿½ uma porta feita de tampa de caixï¿½o.
 ~
 porta caixï¿½o~
-abcd -1 1746
+0 -1 1746
 D3
 ~
 ~
@@ -867,7 +867,7 @@ Pessoas Mudas'.  Aqui, o tirano Grim do inferno ï¿½ desejado como um princï¿½pio
 de inspiraï¿½ï¿½o e sabedoria aos membros da guilda.  A paredes da cï¿½mara abrem
 para as saï¿½das ao leste e para baixo.
 ~
-17 gd 0
+17 72 0 0 0 0
 D1
 ~
 ~
@@ -885,7 +885,7 @@ montes, nas paredes de pedra.  Barris de poeira e garrafas de sangue enchem
 a sala. Na parede, marcado com tinta preta, estï¿½ rabiscado 'Os sonos sem
 sonhos.'  A cï¿½mara acaba para cima ou para o sul.
 ~
-17 gd 0
+17 72 0 0 0 0
 D2
 ~
 ~
@@ -902,7 +902,7 @@ um anel de ferro posto no centro.  Uma grande e pesada corrente com um
 colar em cada ponta estï¿½ preso a corrente. Numa pequena inscriï¿½ï¿½o no colar
 lï¿½-se 'Quietus.'
 ~
-17 gd 0
+17 72 0 0 0 0
 D2
 ~
 ~
@@ -919,7 +919,7 @@ que parece conter incontï¿½veis manchas de horrï¿½veis experiï¿½ncias. O trabalh
 cruel que ï¿½ executado aqui ï¿½ geralmente observado do anfiteatro por 
 aprendizes da guilda e patronos.
 ~
-17 gd 0
+17 72 0 0 0 0
 D0
 ~
 ~
@@ -937,7 +937,7 @@ sala.  Na parede, estï¿½ escrito, com algo que parece ser sangue de demï¿½nio,
 'Um dï¿½bito que todos nï¿½s devemos pagar.'  Um par de portas de tampa de 
 caixï¿½o estï¿½ a oeste, e outras saï¿½das estï¿½o ao norte e para cima.
 ~
-17 gd 0
+17 72 0 0 0 0
 D0
 ~
 ~
@@ -945,8 +945,7 @@ D0
 D3
 ~
 porta portas caixï¿½o~
-:n 2 a porta de tampa de caixï¿½o
-abcd -1 1753
+0 -1 1753
 D4
 ~
 ~
@@ -962,18 +961,16 @@ costelas e no centro estï¿½ a caveira de um demï¿½nio.  Em frente ao altar estï¿
 uma grade de ferro preta que cobre um poï¿½o escuro onde a ruï¿½na da vida ï¿½ 
 glorificada em sacrifï¿½cio.
 ~
-17 gd 0
+17 72 0 0 0 0
 D1
 ~
 porta portas caixï¿½o~
-:n 2 a porta de tampa de caixï¿½o
-abcd -1 1752
+0 -1 1752
 D5
 Vocï¿½ nï¿½o pode ver muita coisa, mas vocï¿½ nï¿½o gosta do pouco que vï¿½.
 ~
 grade~
-:n 2 a grade
-abcd 1705 1754
+0 1705 1754
 S
 #1754
 O Poï¿½o Escuro~
@@ -981,13 +978,12 @@ O Poï¿½o Escuro~
 alma malï¿½fica.  Vocï¿½ conhece o verdadeiro medo quando algo move-se na 
 escuridï¿½o... em sua direï¿½ï¿½o.
 ~
-17 gda 0
+17 73 0 0 0 0
 D4
 Vocï¿½ vï¿½ uma grade de ferro preta sobre vocï¿½.
 ~
 grade ferro~
-:n 2 a grade de ferro
-abcd 1705 1753
+0 1705 1753
 S
 #1755
 Um Tï¿½nel de Pedra~
@@ -995,7 +991,7 @@ Um Tï¿½nel de Pedra~
 sobe nem desce.  A parede sul, leva ao lado esquerdo do dragï¿½o, um calor
 pode ser sentido, seguido por um sentimento de pura maldade.
 ~
-17 gda 0
+17 73 0 0 0 0
 D1
 Vocï¿½ vï¿½ o tï¿½nel abrir-se para uma grande caverna.
 ~
@@ -1011,7 +1007,7 @@ Um Corredor de Pedra~
    Vocï¿½ estï¿½ num tï¿½nel de pedra circular.  As paredes sï¿½o irregulares e 
 rachadas.  O tï¿½nel continua para leste e oeste.
 ~
-17 gacd 0
+17 77 0 0 0 0
 D1
 Vocï¿½ vï¿½ o comeï¿½o de um novo e tranquilo tï¿½nel.
 ~
@@ -1021,15 +1017,13 @@ D2
 Vocï¿½ parece ser capaz de espiar na fissura aberta.
 ~
 fissura~
-:n 2 a fissura
-adcb -1 1727
+0 -1 1727
 D3
 Vocï¿½ vï¿½ uma porta feita de osso conduzir atï¿½ a caverna do estï¿½mago.
 ~
 porta portas osso~
-:n 2 a porta de osso
-adcb 1718 1726
-E 
+0 1718 1726
+E
 muro~
 Uma pequena fissura surge de um muro ao sul.
 ~
@@ -1042,7 +1036,7 @@ abafado.  O tï¿½nel termina, repentinamente, em uma estreita passagem circular
 com alguma iluminaï¿½ï¿½o, a norte.  Uma escada feita de corda, ao lado dessa
 passagem, permite que vocï¿½ escale de volta ï¿½ passagem que o trouxe atï¿½ aqui.
 ~
-17 gadisr 5
+17 393545 0 0 0 5
 D0
 ~
 ~
@@ -1050,8 +1044,7 @@ D0
 D4
 ~
 passagem secreta~
-:n 2 a passagem secreta
-abdc -1 5999
+0 -1 5999
 S
 #1758
 A Passagem~
@@ -1060,14 +1053,14 @@ mas ainda encharcado por ï¿½gua enlameada.  A passagem parece dar,
 inesperadamente, em um vale que se extende por todo norte.  O tï¿½nel fica a
 sul.
 ~
-17 gadsir 5
-D2
-~
-~
-0 -1 1757
+17 393545 0 0 0 5
 D0
 ~
 ~
 0 -1 1700
+D2
+~
+~
+0 -1 1757
 S
 $~

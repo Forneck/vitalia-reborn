@@ -7,7 +7,7 @@ estranho ímpeto de virar-se e voltar por onde veio
    Um pequeno caminho leva a norte rumo às sombras e a sul, de volta às
 planícies.
 ~
-25 cg 3
+25 68 0 0 0 3
 D0
 As sombras obscurecem sua visão.
 ~
@@ -27,7 +27,7 @@ obscurece a maior parte de sua visão.  Estranhos sons de gemidos e
 rosnados vêm de todas as direções
    Todas as saídas levam para dentro das sombras, você está muito confuso.
 ~
-25 acfg 3
+25 101 0 0 0 3
 D0
 As sombras obscurecem sua visão.
 ~
@@ -62,7 +62,7 @@ obscurece a maior parte de sua visão.  Estranhos sons de gemidos e
 rosnados vêm de todas as direções
    Todas as saídas levam para dentro das sombras, você está muito confuso.
 ~
-25 acfg 3
+25 101 0 0 0 3
 D0
 Você vê uma pequena clareira em meio às sombras.
 ~
@@ -92,7 +92,7 @@ obscurece a maior parte de sua visão.  Estranhos sons de gemidos e
 rosnados vêm de todas as direções
    Todas as saídas levam para dentro das sombras, você está muito confuso.
 ~
-25 acfg 3
+25 101 0 0 0 3
 D0
 As sombras obscurecem sua visão.
 ~
@@ -122,7 +122,7 @@ obscurece a maior parte de sua visão.  Estranhos sons de gemidos e
 rosnados vêm de todas as direções
    Todas as saídas levam para dentro das sombras, você está muito confuso.
 ~
-25 acfg 3
+25 101 0 0 0 3
 D0
 As sombras obscurecem sua visão.
 ~
@@ -152,7 +152,7 @@ obscurece a maior parte de sua visão.  Estranhos sons de gemidos e
 rosnados vêm de todas as direções
    Todas as saídas levam para dentro das sombras, você está muito confuso.
 ~
-25 acfg 3
+25 101 0 0 0 3
 D0
 As sombras obscurecem sua visão.
 ~
@@ -182,7 +182,7 @@ obscurece a maior parte de sua visão.  Estranhos sons de gemidos e
 rosnados vêm de todas as direções
    Todas as saídas levam para dentro das sombras, você está muito confuso.
 ~
-25 acfg 3
+25 101 0 0 0 3
 D0
 As sombras obscurecem sua visão.
 ~
@@ -212,7 +212,7 @@ obscurece a maior parte de sua visão.  Estranhos sons de gemidos e
 rosnados vêm de todas as direções
    Todas as saídas levam para dentro das sombras, você está muito confuso.
 ~
-25 acfg 3
+25 101 0 0 0 3
 D0
 As sombras obscurecem sua visão.
 ~
@@ -242,7 +242,7 @@ obscurece a maior parte de sua visão.  Estranhos sons de gemidos e
 rosnados vêm de todas as direções
    Todas as saídas levam para dentro das sombras, você está muito confuso.
 ~
-25 acfg 3
+25 101 0 0 0 3
 D0
 As sombras obscurecem sua visão.
 ~
@@ -272,7 +272,7 @@ obscurece a maior parte de sua visão.  Estranhos sons de gemidos e
 rosnados vêm de todas as direções
    Todas as saídas levam para dentro das sombras, você está muito confuso.
 ~
-25 acfg 3
+25 101 0 0 0 3
 D0
 As sombras obscurecem sua visão.
 ~
@@ -302,7 +302,7 @@ obscurece a maior parte de sua visão.  Estranhos sons de gemidos e
 rosnados vêm de todas as direções
    Todas as saídas levam para dentro das sombras, você está muito confuso.
 ~
-25 acfg 3
+25 101 0 0 0 3
 D0
 As sombras obscurecem sua visão.
 ~
@@ -333,7 +333,7 @@ obscurecendo sua visão do resto do bosque.
    Um pequeno caminho leva a norte para uma estrutura difusa.  Todas as
 outras saídas estão envoltas na neblina.
 ~
-25 ag 3
+25 65 0 0 0 3
 D0
 Você mal consegue perceber algum tipo de edificação ao norte.
 ~
@@ -363,7 +363,7 @@ tempestuosas nuvens que ocupam o céu.
    Um portão de diamante está ao norte, enquanto que a trilha para o sul
 desapareceu às suas costas.
 ~
-25 g 0
+25 64 0 0 0 0
 D0
 O portão de diamante parece incrivelmente resistente.
 ~
@@ -379,7 +379,7 @@ alheios a sua presença.
    Saídas levam a norte para a sala comum, oeste para a sala de jantar,
 leste para um modesto corredor e a sul, de volta ao portão.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 A sala comum parece bastante ocupada e barulhenta.
 ~
@@ -406,7 +406,7 @@ estão descansando de seus rigorosos estudos.  Há bancos, mesas e uma
 pequena fonte aqui, afora isto, a sala não tem nada de notável.
    Há saídas levando para todas as direções.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -430,7 +430,7 @@ Um Corredor~
    Você está num longo corredor, ele lhe parece bastante normal.  O corredor
 continua a leste e de volta, a oeste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -448,7 +448,7 @@ Acomodar várias centenas de pessoas.  A sala está estranhamente deserta,
 obviamente não é hora de nenhuma refeição.
    As saídas levam a oeste, para a cozinha e de volta a leste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -465,7 +465,7 @@ usada pelos ocupantes habituais da torre.  Há poeira cobrindo o chão por
 aqui.
    O tênue contorno de um alçapão pode ser visto em meio à poeira.
 ~
-25 adg 0
+25 73 0 0 0 0
 D2
 ~
 ~
@@ -483,7 +483,7 @@ atenção em você, eles obviamente têm coisas mais interessantes para
 contemplar.
    A única saída leva de volta a oeste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D3
 ~
 ~
@@ -495,7 +495,7 @@ A Loja de Magia~
 tipos de ervas, pergaminhos e outros reagentes usados em estudos mágicos.
    A única saída leva de volta a leste, para a sala comum.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -512,7 +512,7 @@ grande. Com certeza, grande o suficiente para estocar confortavelmente
 vários aventureiros infelizes.  No meio da cozinha, suspensa no ar, está
 uma prateleira de especiarias.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 porta madeira~
@@ -525,7 +525,7 @@ pouca luz penetra o teto, vinda de cima.  Um tênue som de gotejo de água
 pode ser ouvido ao longe, abaixo.
    Uma escada de corda leva para baixo.
 ~
-25 adg 0
+25 73 0 0 0 0
 D4
 ~
 alçapão~
@@ -542,7 +542,7 @@ som de água corrente pode ser ouvido vindo do sul, além disso, um silêncio
 quase tangível preenche o ambiente.
    Galerias levam para todas as direções e uma escada leva para cima.
 ~
-25 adg 0
+25 73 0 0 0 0
 D0
 ~
 ~
@@ -571,7 +571,7 @@ Uma Galeria Escura~
 madeira.  Além da porta, a única saída aparente é voltar pelo caminho por
 onde você veio.
 ~
-25 adg 0
+25 73 0 0 0 0
 D0
 ~
 porta carvalho~
@@ -588,7 +588,7 @@ leste, deixando vazar uma luz suave pelas bordas.  Tênues sons de roncos
 podem ser ouvidos através da porta.
    Saídas levam a leste pela porta, ou de volta a oeste.
 ~
-25 adg 0
+25 73 0 0 0 0
 D1
 ~
 porta~
@@ -607,7 +607,7 @@ superfície do lago.
    Saídas levam de volta ao norte, ou, para os mais incautos, para baixo,
 dentro do lago.
 ~
-25 adg 0
+25 73 0 0 0 0
 D0
 ~
 ~
@@ -625,7 +625,7 @@ ser um desmoronamento a oeste.  É certamente intransponível e talvez
 bastante perigoso ficar tão perto.
    A única saída leva de volta a leste.
 ~
-25 adg 0
+25 73 0 0 0 0
 D1
 ~
 ~
@@ -638,7 +638,7 @@ bastante escuro.  Alguém, ou alguma coisa, parece estar acorrentado à parede
 oposta à entrada.
    A única saída é voltar ao sul.
 ~
-25 adg 0
+25 73 0 0 0 0
 D2
 ~
 porta carvalho~
@@ -652,7 +652,7 @@ serviço, você pode suspeitar de que muito poucos, senão nenhum prisioneiro
 sobrevive o suficiente para passar algum tempo nesta masmorra fria e úmida.
    A única saída leva de volta ao oeste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D3
 ~
 porta~
@@ -666,14 +666,14 @@ Você sente seus pulmões queimarem com a falta de oxigênio.  Bem quando você
 sente que sua vida está se esvaindo, você nota uma mudança de direção... e
 é sugado por uma corrente mais forte.
 ~
-25 adg 0
+25 73 0 0 0 0
 S
 #2530
 Um Corredor~
    Você está num longo corredor que vai de leste a oeste.  As paredes emitem
 um tênue brilho mágico fornece luz suficiente para se ver o caminho.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta madeira~
@@ -696,7 +696,7 @@ Uma Curva No Corredor~
    Você está numa curva do corredor. As paredes emitem um tênue brilho
 mágico que fornece luz suficiente para se ver o caminho.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta madeira~
@@ -720,7 +720,7 @@ Um Depósito~
 aparente estão empilhadas em prateleiras e encostadas nas paredes.
    A única saída aparente é voltar para o sul.
 ~
-25 adg 0
+25 73 0 0 0 0
 D2
 ~
 porta madeira~
@@ -733,11 +733,10 @@ outros instrumentos de limpeza foram deixados aqui, aparentemente intocados
 (talvez a faxineira tenha se demitido?).
    A saída leva de volta ao norte, para o corredor.
 ~
-25 adg 0
+25 73 0 0 0 0
 D0
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 2530
 S
 #2534
@@ -745,7 +744,7 @@ Um Corredor~
    Você está num longo corredor que vai de norte a sul.  As paredes emitem
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -753,12 +752,10 @@ D0
 D1
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 2537
 D2
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 2531
 E
 paredes~
@@ -771,11 +768,10 @@ A Câmara do Guardião~
 mas parece que os estranhos ocupantes não precisam de mobília. Aqui e ali
 um par de mãos sem corpo esvoaçam.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 2531
 S
 #2536
@@ -785,11 +781,10 @@ cantos e um espelho empoeirado, uma parede.  Além disso, o quarto parece ser
 bastante simples, e pouco usado.
    A única saída aparente leva a oeste, de volta ao corredor.
 ~
-25 dg 0
+25 72 0 0 0 0
 D3
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 2531
 E
 espelho~
@@ -804,11 +799,10 @@ está num canto parecendo tão confortável como nunca, tão confortável de
 fato... que alguém está dormindo nele.
    A única saída aparente leva a oeste, de volta ao corredor.
 ~
-25 dg 0
+25 72 0 0 0 0
 D3
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 2534
 S
 #2538
@@ -817,11 +811,10 @@ Um Corredor~
 brilho mágico que fornece luz suficiente para se ver o caminho.
    Escadas levam para cima e o corredor, de volta para o sul.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 2539
 D2
 ~
@@ -839,11 +832,10 @@ enegrecidas e queimadas pelo que você imagina ter sido fogo mágico. Não há
 sinal algum do ocupante anterior.  Sem dúvida, ele saiu apressado.
    A única saída leva a oeste, de volta ao corredor.
 ~
-25 adg 0
+25 73 0 0 0 0
 D3
 ~
 porta queimada~
-:n 2 a porta queimada
 1 -1 2538
 S
 #2540
@@ -853,11 +845,10 @@ tênue brilho mágico que fornece luz suficiente para se ver o caminho.  Algo
 que parece ser luz da lua pode ser visto no beco sem saída a leste.
    O corredor continua a oeste e escadas levam para baixo.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta carvalho~
-:n 2 a porta de carvalho
 1 -1 2542
 D1
 Suave luz do luar pode ser vista a leste.
@@ -880,7 +871,7 @@ entrada do luar e uma agradável brisa.  Pela janela, os campos à volta da
 torre podem ser vistos.
    A única saída aparente leva de volta a oeste para o corredor.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 Nos limites de visão que seus olhos podem alcançar, está um escuro dossel de
 copas de árvores que só podem ser a Floresta Escura Haon-Dor.  Fracos pontos
@@ -907,11 +898,10 @@ O Alojamento dos Aprendizes~
 aprendiz se encontra sentado, absorto em estudos mágicos, ou praticando uma
 fraca rotina mágica.  Catres se alinham às paredes e a sala segue a oeste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D2
 ~
 porta carvalho~
-:n 2 a porta de carvalho
 1 -1 2540
 D3
 ~
@@ -925,11 +915,10 @@ um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Há uma porta ao norte, e o corredor continua a oeste, ou de volta a
 leste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta carvalho~
-:n 2 a porta de carvalho
 1 -1 2544
 D1
 ~
@@ -946,7 +935,7 @@ O Alojamento dos Aprendizes~
 aprendiz se encontra sentado, absorto em estudos mágicos, ou praticando uma
 fraca rotina mágica.  Catres se alinham às paredes e a sala segue a leste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -954,7 +943,6 @@ D1
 D2
 ~
 porta carvalho~
-:n 2 a porta de carvalho
 1 -1 2543
 S
 #2545
@@ -963,12 +951,11 @@ Um Corredor~
 Um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Flashes de luz podem ser vistos por sob a porta ao norte.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 Um flash de luz azul momentaneamente destaca o contorno da porta.
 ~
 porta carvalho~
-:n 2 a porta de carvalho
 1 -1 2546
 D1
 ~
@@ -987,11 +974,10 @@ vários jovens magos encurralaram um pequeno gatinho e parecem estar testando
 feitiços nele.
    A única saída aparente leva de volta ao sul, para o corredor.
 ~
-25 dg 0
+25 72 0 0 0 0
 D2
 ~
 porta carvalho~
-:n 2 a porta de carvalho
 1 -1 2545
 S
 #2547
@@ -1000,7 +986,7 @@ Uma Curva No Corredor~
 mágico que fornece luz suficiente para se ver o caminho.
    O corredor continua a sul e de volta ao leste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -1016,7 +1002,7 @@ O Corredor~
 tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Há uma porta de metal a oeste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -1028,7 +1014,6 @@ D2
 D3
 ~
 porta metal~
-:n 2 a porta de metal
 1 -1 2549
 S
 #2549
@@ -1038,11 +1023,10 @@ arte da magia.  Com sua entrada, o instrutor interrompe sua aula sobre os
 belos usos dos mísseis mágicos e investe contra você, para atacá-lo.
    A única saída aparente é para o leste, de volta para o corredor.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 porta metal~
-:n 2 a porta de metal
 1 -1 2548
 S
 #2550
@@ -1050,7 +1034,7 @@ Um Corredor~
    Você está num longo corredor que vai de norte a sul.  As paredes emitem
 Um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -1062,7 +1046,6 @@ D2
 D3
 ~
 porta metal~
-:n 2 a porta de metal
 1 -1 2552
 S
 #2551
@@ -1070,7 +1053,7 @@ Um Corredor~
    Você está num longo corredor que vai de norte a sul.  As paredes emitem
 Um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -1082,7 +1065,6 @@ D2
 D3
 ~
 porta metal~
-:n 2 a porta de metal
 1 -1 2554
 S
 #2552
@@ -1092,11 +1074,10 @@ escritas num quadro-negro que está flutuando no ar.  Além de algumas mesas,
 a sala não tem mobílias.
    A única saída aparente leva ao leste, de volta ao corredor.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 porta metal~
-:n 2 a porta de metal
 1 -1 2550
 S
 #2553
@@ -1105,7 +1086,7 @@ Uma Curva No Corredor~
 mágico que fornece luz suficiente para se ver o caminho.
    O corredor continua a leste e ao norte.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -1122,11 +1103,10 @@ sensação de estar sendo observado, e pode escutar um fraco som de robes
 roçando pelo chão.
    A única saída aparente é para o leste, de volta ao corredor.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 porta metal~
-:n 2 a porta de metal
 1 -1 2551
 S
 #2555
@@ -1135,7 +1115,7 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Uma porta de ferro compacto pode ser vista para o sul.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -1143,7 +1123,6 @@ D1
 D2
 ~
 porta compacto ferro~
-:n 2 a porta de ferro compacto
 1 -1 2557
 D3
 ~
@@ -1156,7 +1135,7 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Há uma grande porta de carvalho ao sul.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -1164,7 +1143,6 @@ D1
 D2
 ~
 porta grande carvalho~
-:n 2 a grande porta de carvalho
 1 -1 2559
 D3
 ~
@@ -1178,11 +1156,10 @@ confortáveis circundam um grande pódio.  Os ecos de seus passos soam com
 bastante força neste chão.
    A única saída aparente leva a norte, para o corredor.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta compacto ferro~
-:n 2 a porta de ferro compacto
 1 -1 2555
 S
 #2558
@@ -1191,7 +1168,7 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Uma pequena porta pode ser vista a sul.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -1199,7 +1176,6 @@ D1
 D2
 ~
 porta pequena~
-:n 2 a pequena porta
 1 -1 2561
 D3
 ~
@@ -1212,11 +1188,10 @@ A Sala de Treinamento~
 de marcas de batalha, além de muitos outros aparatos usados para treinar
 técnicas de combate.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
 1 -1 2556
 S
 #2560
@@ -1225,7 +1200,7 @@ Uma Curva no Corredor~
 mágico que fornece luz suficiente para se ver o caminho.
    O corredor continua a norte e a oeste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -1242,11 +1217,10 @@ teto, apesar de marcados por muitos feitiços flamejantes, ainda parecer ser
 bastante fortes e capazes de suportar mais.
    A única saída aparente leva a norte, para o corredor.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta pequena~
-:n 2 a pequena porta
 1 -1 2558
 S
 #2562
@@ -1255,7 +1229,7 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Uma entrada pode ser vista ao leste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -1263,7 +1237,6 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
 1 -1 2564
 D2
 ~
@@ -1276,7 +1249,7 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Uma porta de madeira pode ser vista a leste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -1284,7 +1257,6 @@ D0
 D1
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 2565
 D2
 ~
@@ -1298,11 +1270,10 @@ em período livre estão aqui relaxando até a próxima aula.  Uma grande
 máquina de café se encontra na parede oposta à entrada.
    A única saída aparente leva a oeste, de volta ao corredor.
 ~
-25 dg 0
+25 72 0 0 0 0
 D3
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 2562
 S
 #2565
@@ -1313,11 +1284,10 @@ numa parede e um globo repousa num pedestal no meio do aposento.  Uma cama
 enorme pode ser vista flutuando a cerca de um metro do solo.
    A única saída leva a oeste, de volta ao corredor.
 ~
-25 dg 0
+25 72 0 0 0 0
 D3
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 2563
 S
 #2566
@@ -1326,7 +1296,7 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Uma porta de vidro pode ser vista a leste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -1334,7 +1304,6 @@ D0
 D1
 ~
 porta vidro~
-:n 2 a porta de vidro
 1 -1 2567
 D2
 ~
@@ -1349,11 +1318,10 @@ mapas abertos sobre ela.  A única fonte de luz aqui é um interessante
 lampião não-mágico.
    A única saída aparente leva de volta a oeste, para o corredor.
 ~
-25 dg 0
+25 72 0 0 0 0
 D3
 ~
 porta vidro~
-:n 2 a porta de vidro
 1 -1 2566
 S
 #2568
@@ -1363,7 +1331,7 @@ mágico que fornece luz suficiente para se ver o caminho.  Um guardião menor
 aqui se encontra, guardando silenciosamente a entrada para os andares acima.
    Degraus levam para cima e o corredor segue de volta para o sul.
 ~
-25 dg 0
+25 72 0 0 0 0
 D2
 ~
 ~
@@ -1381,7 +1349,7 @@ emanam magia é limitado ao alto escalão dos magos.  As paredes por aqui
 emitem uma tênue aura mágica azulada, que fornece alguma iluminação.
    O corredor leva a oeste daqui e degraus seguem para baixo.
 ~
-25 dg 0
+25 72 0 0 0 0
 D3
 ~
 ~
@@ -1398,11 +1366,10 @@ emitem uma tênue energia mágica, que fornece luz suficiente para se ver o
 caminho.
    A uma porta de madeira aparentemente espessa ao norte.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta madeira~
-:n 2 a espessa porta de madeira
 1 -1 2571
 D1
 ~
@@ -1421,16 +1388,14 @@ escrivaninhas.
    Uma repartição a oeste parece estar separada por uma cortina, mas a luz
 bruxeleante de uma vela pode ser vista por detrás da cortina.
 ~
-25 dg 0
+25 72 0 0 0 0
 D2
 ~
 porta madeira~
-:n 2 a espessa porta de madeira
 1 -1 2570
 D3
 ~
 cortina~
-:n 2 a cortina
 1 -1 2573
 S
 #2572
@@ -1438,7 +1403,7 @@ Um Corredor~
    Você está num longo corredor que vai de leste a oeste.  As paredes emitem
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -1455,11 +1420,10 @@ meio terminados repousam sobre a escrivaninha no meio da sala. Uma vela
 enorme bruxelea suaves chamas azuis, sendo a única fonte de luz por aqui.
    A única saída aparente é voltar por onde você veio.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 cortina~
-:n 2 a cortina
 1 -1 2571
 S
 #2574
@@ -1468,12 +1432,11 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Uma porta entreaberta pode ser vista ao norte.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 Um aposento escuro pode ser visto atrás da porta entreaberta.
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 2575
 D1
 ~
@@ -1489,11 +1452,10 @@ Um Depósito~
    Você está num pequeno depósito escuro.  Alguns itens comuns estão
 empilhados nas prateleiras, mas muito poucos parecem interessantes.
 ~
-25 adg 0
+25 73 0 0 0 0
 D2
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 2574
 S
 #2576
@@ -1502,7 +1464,7 @@ Uma Curva No Corredor~
 brilho mágico que fornece luz suficiente para se ver o caminho.
    O corredor continua ao sul e a leste daqui.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -1518,7 +1480,7 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Uma porta restrita de ferro pode ser vista a oeste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -1530,7 +1492,6 @@ D2
 D3
 ~
 porta ferro~
-:n 2 a porta de ferro
 2 2515 2579
 S
 #2578
@@ -1539,7 +1500,7 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    O som agudo de metal contra metal pode ser ouvido a oeste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -1551,7 +1512,6 @@ D2
 D3
 ~
 porta ferro~
-:n 2 a porta de ferro
 1 -1 2581
 S
 #2579
@@ -1561,16 +1521,14 @@ materiais raros estão aqui, junto com várias pilhas bem arrumadas de metais
 preciosos.  O soar de metal com metal pode ser ouvido, vindo do sul.  Um
 grande armário com runas de proteção está aparafusado numa parede.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 porta ferro~
-:n 2 a porta de ferro
 2 2515 2577
 D2
 ~
 porta~
-:n 2 a porta
 2 2515 2581
 S
 #2580
@@ -1578,7 +1536,7 @@ Um Corredor~
    Você está num longo corredor que vai de norte a sul.  As paredes emitem
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -1597,26 +1555,22 @@ da sala, parecendo ser bastante usada.  Outras ferramentas de metalurgia
 estão penduradas numa estante que flutua a cerca de três metros do solo,
 suspensa por alguma força própria.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
 2 2515 2579
 D1
 ~
 porta ferro~
-:n 2 a porta de ferro
 1 -1 2578
 D2
 ~
 porta~
-:n 2 a porta
 1 -1 2582
 D4
 ~
 abertura~
-:n 2 a abertura no teto
 1 -1 2612
 S
 #2582
@@ -1626,11 +1580,10 @@ estão estantes de armas finamente forjadas.  Um baú enorme com um cadeado
 brilhante está ao lado.  Muitas lâminas por terminar repousam sobre uma
 pequena mesa de trabalho.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
 1 -1 2581
 S
 #2583
@@ -1639,7 +1592,7 @@ Uma Curva No Corredor~
 brilho mágico que fornece luz suficiente para se ver o caminho.
    O corredor continua para o norte e para o leste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -1655,7 +1608,7 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Uma porta de aço pode ser vista ao sul.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -1663,7 +1616,6 @@ D1
 D2
 ~
 porta aço~
-:n 2 a porta de aço
 1 -1 2586
 D3
 ~
@@ -1675,7 +1627,7 @@ Um Corredor~
    Você está num longo corredor que vai de leste a oeste.  As paredes emitem
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -1693,11 +1645,10 @@ um banco de trabalho.  Esta sala está muito descuidada, parecendo até mesmo
 abandonada, ou usada por um louco.
    As únicas saídas aparentes levam a leste e a norte.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta aço~
-:n 2 a porta de aço
 1 -1 2584
 D1
 ~
@@ -1710,7 +1661,7 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Você pode ver uma porta de aço ao sul.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -1718,7 +1669,6 @@ D1
 D2
 ~
 porta aço~
-:n 2 a porta de aço
 1 -1 2590
 D3
 ~
@@ -1734,7 +1684,7 @@ incrivelmente bagunçado, o chão está coberto por cacos de vidro e outros
 lixos espalhados.
    A única saída aparente é aquela por onde você entrou.
 ~
-25 dg 0
+25 72 0 0 0 0
 D3
 ~
 ~
@@ -1746,7 +1696,7 @@ Uma Curva No Corredor~
 brilho mágico que fornece luz suficiente para se ver o caminho.
    O corredor continua para o norte e para oeste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -1762,11 +1712,10 @@ A Câmara do Pentagrama~
 chão.  Um campo de energia crepitante pode ser visto ao sul, parece ser
 bastante perigoso.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta aço~
-:n 2 a porta de aço
 1 -1 2587
 D2
 O campo de energia crepita e brilha, parece não haver nada além.
@@ -1780,7 +1729,7 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Uma porta de bronze pode ser vista a leste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -1788,7 +1737,6 @@ D0
 D1
 ~
 porta bronze~
-:n 2 a porta de bronze
 1 -1 2594
 D2
 ~
@@ -1801,7 +1749,7 @@ Dentro do Campo de Energia~
 Boa viagem!  Agora é só esperar até que o mago que construiu esta armadilha
 Volte para aprisionar sua alma, como fez com seu corpo.
 ~
-25 cdefgj 0
+25 636 0 0 0 0
 S
 #2593
 Um Corredor~
@@ -1809,7 +1757,7 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Uma porta de bronze pode ser vista a leste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -1817,7 +1765,6 @@ D0
 D1
 ~
 porta bronze~
-:n 2 a porta de bronze
 1 -1 2595
 D2
 ~
@@ -1829,11 +1776,10 @@ Uma Sala Vazia~
    Você está numa sala vazia.  Ela é bastante calma e confortável.  Parece
 um lugar seguro para descansar.
 ~
-25 cdg 0
+25 76 0 0 0 0
 D3
 ~
 porta bronze~
-:n 2 a porta de bronze
 1 -1 2591
 S
 #2595
@@ -1842,16 +1788,14 @@ A Câmara do Mestre Feiticeiro~
 cobrem o chão, fazendo a sala parecer que foi usada por animais selvagens.
    Sons estranhos podem ser ouvidos vindo detrás das barras ao norte
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 jaula barras~
-:n 2 as barras da jaula
 1 -1 2597
 D3
 ~
 porta bronze~
-:n 2 a porta de bronze
 1 -1 2593
 S
 #2596
@@ -1859,7 +1803,7 @@ Um Corredor~
    Você está num longo corredor que vai de norte a sul.  As paredes emitem
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -1875,11 +1819,10 @@ As Jaulas dos Animais~
 infelizes.  Eles certamente estão destinados a serem escravizados, ou
 usados em alguma cruel experiência mágica.
 ~
-25 dg 0
+25 72 0 0 0 0
 D2
 ~
 jaula barras~
-:n 2 as barras da jaula
 1 -1 2595
 S
 #2598
@@ -1888,7 +1831,7 @@ O Fim do Corredor~
 tênue brilho mágico que fornece luz suficiente para se ver o caminho
    Degraus levam para o próximo andar, acima, e o corredor continua a sul
 ~
-25 dg 0
+25 72 0 0 0 0
 D2
 ~
 ~
@@ -1905,7 +1848,7 @@ torre.  As paredes emitem um tênue brilho que fornece luz suficiente para
 se ver o caminho.
    Um corredor leva a oeste daqui, e a escadaria leva para baixo.
 ~
-25 dg 0
+25 72 0 0 0 0
 D3
 ~
 ~
@@ -1921,11 +1864,10 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Uma porta de prata pode ser vista a norte.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta prata~
-:n 2 a porta de prata
 1 -1 2601
 D1
 ~
@@ -1943,16 +1885,14 @@ empilhadas aqui e ali.  Muitos cajados mágicos recentemente cortados e
 varinhas de diferentes tamanhos estão por aqui.
    Você pode ver uma porta de prata a oeste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D2
 ~
 porta prata~
-:n 2 a porta de prata
 1 -1 2600
 D3
 ~
 porta prata~
-:n 2 a porta de prata
 1 -1 2602
 S
 #2602
@@ -1962,16 +1902,14 @@ de natureza similar, esta é desprovida de mobília ou ferramentas.  O Mestre
 Orador obviamente não precisa de nenhuma para trabalhar sua arte.
    Uma porta de prata pode ser vista a oeste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 porta prata~
-:n 2 a porta de prata
 1 -1 2601
 D3
 ~
 porta prata~
-:n 2 a porta de prata
 2 2524 2603
 S
 #2603
@@ -1980,16 +1918,14 @@ A Reserva do Mestre Orador~
 com gravuras prateadas.  Além disso, a sala está vazia.
    Uma porta de prata pode ser vista a sul
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 porta prata~
-:n 2 a porta de prata
 2 2524 2602
 D2
 ~
 porta prata~
-:n 2 a porta de prata
 2 2524 2605
 S
 #2604
@@ -1997,7 +1933,7 @@ Um Corredor~
    Você está num longo corredor que vai de leste a oeste.  As paredes emitem
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -2013,11 +1949,10 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Uma porta de prata pode ser vista a norte.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta prata~
-:n 2 a porta de prata
 2 2524 2603
 D1
 ~
@@ -2034,7 +1969,7 @@ Uma Curva No Corredor~
 brilho mágico que fornece luz suficiente para se ver o caminho.
    O corredor continua para o leste e ao sul.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -2049,7 +1984,7 @@ Um Corredor~
    Você está num longo corredor que vai de norte a sul.  As paredes emitem
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2065,7 +2000,7 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Uma velha porta enferrujada pode ser vista a oeste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2077,7 +2012,6 @@ D2
 D3
 ~
 porta enferrujada~
-:n 2 a porta enferrujada
 1 -1 2609
 S
 #2609
@@ -2086,7 +2020,7 @@ A Oficina do Mestre dos Golems~
 ainda por terminar, feitas de modos diferentes, estão aqui.  Algumas se
 movendo, algumas não.  As formas animadas disparam para lhe atacar.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2094,7 +2028,6 @@ D0
 D1
 ~
 porta enferrujada~
-:n 2 a porta enferrujada
 1 -1 2608
 D2
 ~
@@ -2103,7 +2036,6 @@ D2
 D5
 ~
 alçapão~
-:n 1 o alçapão
 1 -1 2612
 S
 #2610
@@ -2111,7 +2043,7 @@ Um Depósito~
    Você está num pequeno depósito.  Pedaços grandes de barro, pedra, madeira
 e muitas outras matérias-primas estão aqui.
 ~
-25 dg 0
+25 72 0 0 0 0
 D2
 ~
 ~
@@ -2123,7 +2055,7 @@ A Câmara dos Golems~
 imagináveis estão aqui, variando em tamanho desde um palmo de altura, até
 quase alcançar o teto.  Todos eles parecem estar dormindo.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2133,16 +2065,14 @@ S
 Está Muito Escuro Aqui...~
    Está muito escuro aqui...
 ~
-25 adg 0
+25 73 0 0 0 0
 D4
 ~
 alçapão~
-:n 1 o alçapão
 1 -1 2609
 D5
 ~
 abertura~
-:n 2 a abertura
 1 -1 2581
 S
 #2613
@@ -2150,7 +2080,7 @@ Um Corredor~
    Você está num longo corredor que vai de norte a sul.  As paredes emitem
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2166,7 +2096,7 @@ Uma Curva No Corredor~
 brilho mágico que fornece luz suficiente para se ver o caminho.
    O corredor continua a norte e leste daqui.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2181,7 +2111,7 @@ Um Corredor~
    Você está num longo corredor que vai de leste a oeste.  As paredes emitem
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -2197,7 +2127,7 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Uma porta de esmeralda pode ser vista a sul.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -2205,7 +2135,6 @@ D1
 D2
 ~
 porta esmeralda~
-:n 2 a porta de esmeralda
 1 -1 2617
 D3
 ~
@@ -2219,11 +2148,10 @@ mudando de cor e textura, como se estivessem se reformando diante de seus
 olhos.  Muitos tesouros esplendorosos estão por todos os lados em montes e
 pilhas, ou ao menos parecem ser tesouros...
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta esmeralda~
-:n 2 a porta de esmeralda
 1 -1 2616
 D3
 ~
@@ -2237,7 +2165,7 @@ flutuam aqui e ali, pelo ar.  Ondas de magia poderosa podem ser sentidas por
 toda a parte.
    A sala parece ser muito maior do que aparenta...
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 A sala continua além da parede, para o norte.
 ~
@@ -2264,7 +2192,7 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Uma porta de vidro pode ser vista a sul.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -2272,7 +2200,6 @@ D1
 D2
 ~
 porta vidro~
-:n 2 a porta de vidro
 1 -1 2620
 D3
 ~
@@ -2285,11 +2212,10 @@ A Câmara de Meditação~
 nem consegue ouvir seus próprios passos no chão.
    Você se sente muito pacífico.
 ~
-25 cdeg 0
+25 92 0 0 0 0
 D0
 ~
 porta vidro~
-:n 2 a porta de vidro
 1 -1 2619
 S
 #2621
@@ -2298,7 +2224,7 @@ Uma Curva No Corredor~
 brilho mágico que fornece luz suficiente para se ver o caminho.
    O corredor continua a norte e a oeste daqui.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2314,7 +2240,7 @@ Um Corredor~
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
    Uma porta escura pode ser vista a leste
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2322,7 +2248,6 @@ D0
 D1
 ~
 porta escura~
-:n 2 a porta escura
 1 -1 2623
 D2
 ~
@@ -2335,7 +2260,7 @@ Uma Sala Sombria~
 sensação de pavor extremo toma conta de você.  O fedor de carne apodrecida
 parece estar emanando da passagem aberta ao norte.
 ~
-25 adg 0
+25 73 0 0 0 0
 D0
 ~
 ~
@@ -2343,7 +2268,6 @@ D0
 D3
 ~
 porta escura~
-:n 2 a porta escura
 1 -1 2622
 S
 #2624
@@ -2354,7 +2278,7 @@ prender a respiração, nauseado.  Há partes de corpos e cadáveres meio
 seres que não lhe lembram nada vivo que você conheça, estão por aqui
    Gritos de alguém sob tortura parecem vir do aposento ao norte.
 ~
-25 adg 0
+25 73 0 0 0 0
 D0
 Espiando a sala ao norte, seu coração se enche de puro terror.
 ~
@@ -2372,7 +2296,7 @@ tipos, humanos ou não, estão aqui esperando para seguir as ordens de seu
 mestre. Símbolos arcanos brilham, gravados nas paredes e no chão, sem
 dúvida para proteger o mestre maligno de suas próprias criações profanas.
 ~
-25 adg 0
+25 73 0 0 0 0
 D2
 ~
 ~
@@ -2383,7 +2307,7 @@ Um Corredor~
    Você está num longo corredor que vai de norte a sul.  As paredes emitem
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2398,7 +2322,7 @@ Um Corredor~
    Você está num longo corredor que vai de norte a sul.  As paredes emitem
 um tênue brilho mágico que fornece luz suficiente para se ver o caminho.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2415,7 +2339,7 @@ energia mágica que fornece luz em abundância.
    Escadas levam para cima, rumo ao próximo andar, enquanto o corredor
 segue para o sul.
 ~
-25 dg 0
+25 72 0 0 0 0
 D2
 ~
 ~
@@ -2432,7 +2356,7 @@ gravadas com antigas runas de poder se estendem diante de você.  Energias
 mágicas parecem estalar com poder ao seu redor, sussurrando em línguas há
 muito esquecidas, quase como se o próprio corredor estivesse vivo.
 ~
-25 dg 0
+25 72 0 0 0 0
 D3
 ~
 ~
@@ -2449,7 +2373,7 @@ runas de poder se estendem diante de você.  Energias mágicas parecem estalar
 com poder ao seu redor, sussurrando em línguas há muito esquecidas, quase
 como se o próprio corredor estivesse vivo.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -2466,7 +2390,7 @@ gravadas com antigas runas de poder se estendem diante de você.  Energias
 mágicas parecem estalar com poder ao seu redor, sussurrando em línguas há
 muito esquecidas, quase como se o próprio corredor estivesse vivo.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -2483,7 +2407,7 @@ obsidiana gravadas com antigas runas de poder se estendem diante de você.
 Energias mágicas parecem estalar com poder ao seu redor, sussurrando em
 línguas há muito esquecidas, como se o próprio corredor estivesse vivo.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2498,7 +2422,7 @@ Uma Interseção~
    Você está numa interseção no corredor.  Os corredores de obsidiana saem
 daqui para todas as direções, pulsando com o poder de suas runas antigas.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2523,11 +2447,10 @@ com antigas runas de poder se estendem diante de você.  Uma porta escura
 está ao leste.  Espirais de névoa cobrem o chão, elas parecem sair debaixo
 da porta.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 porta negra~
-:n 2 a porta escura
 1 -1 2635
 D3
 ~
@@ -2544,11 +2467,10 @@ gorgolejando, ele libera uma torrente constante de neblina fumacenta no ar,
 sobre você.  Aqui e ali, em prateleiras de diferentes tamanhos, há bolas de
 cristal e espelhos de formatos bizarros.
 ~
-25 adg 0
+25 73 0 0 0 0
 D3
 ~
 porta negra~
-:n 2 a porta escura
 1 -1 2634
 S
 #2636
@@ -2557,7 +2479,7 @@ Um Corredor~
 com antigas runas de poder se estendem diante de você.  Um som de ronco
 mal pode ser ouvido detrás da porta a oeste
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -2565,7 +2487,6 @@ D1
 D3
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 2637
 S
 #2637
@@ -2575,7 +2496,7 @@ gigante está aqui, coberta com livros e pergaminhos.  Longas estantes
 lotadas, linha após linha, de livros, estendem-se em todas as direções, até
 onde a vista alcança
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 Tudo o que você pode ver são livros.
 ~
@@ -2584,7 +2505,6 @@ Tudo o que você pode ver são livros.
 D1
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 2636
 D2
 Tudo o que você pode ver são livros.
@@ -2606,7 +2526,7 @@ tamanhos possíveis.  Os livros, indistintos, parecem piscar, surgindo e
 desaparecendo da existência diante de seus olhos destreinados.  Este lugar
 é deveras silencioso.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 Tudo o que você pode ver são livros.
 ~
@@ -2637,7 +2557,7 @@ tamanhos possíveis.  Os livros, indistintos, parecem piscar, surgindo e
 desaparecendo da existência diante de seus olhos destreinados.  Este lugar
 é deveras silencioso.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 Tudo o que você pode ver são livros.
 ~
@@ -2668,7 +2588,7 @@ tamanhos possíveis.  Os livros, indistintos, parecem piscar, surgindo e
 desaparecendo da existência diante de seus olhos destreinados.  Este lugar
 é deveras silencioso.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 Tudo o que você pode ver são livros.
 ~
@@ -2699,7 +2619,7 @@ tamanhos possíveis.  Os livros, indistintos, parecem piscar, surgindo e
 desaparecendo da existência diante de seus olhos destreinados.  Este lugar
 é deveras silencioso.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 Tudo o que você pode ver são livros.
 ~
@@ -2730,7 +2650,7 @@ tamanhos possíveis.  Os livros, indistintos, parecem piscar, surgindo e
 desaparecendo da existência diante de seus olhos destreinados.  Este lugar
 é deveras silencioso.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 Tudo o que você pode ver são livros.
 ~
@@ -2761,7 +2681,7 @@ tamanhos possíveis.  Os livros, indistintos, parecem piscar, surgindo e
 desaparecendo da existência diante de seus olhos destreinados.  Este lugar
 é deveras silencioso.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 Tudo o que você pode ver são livros.
 ~
@@ -2781,7 +2701,7 @@ de mofo ainda é forte e os indistintos livros continuam a flutuar logo
 além do seu alcance.
    Um tênue bruxelear de luz parece emanar do norte.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2800,7 +2720,7 @@ jóias estão gastas como a casca de uma árvore.  Letras aracnídeas parecem
 rastejar pelas páginas, totalmente incompreensíveis aos seus olhos mortais.
 Algo parece estar cunhado entre as páginas.
 ~
-25 dg 0
+25 72 0 0 0 0
 D2
 ~
 ~
@@ -2813,7 +2733,7 @@ obsidiana gravadas com antigas runas de poder se estendem diante de você.
 Energias mágicas parecem estalar com poder ao seu redor, sussurrando em
 línguas há muito esquecidas, como se o próprio corredor estivesse vivo.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2830,7 +2750,7 @@ súbito fim à borda de um arco dourado.  O zumbido do poder é tão forte que
 quase paralisa seu corpo.
    O arco repousa à sua frente, brilhando e pulsando com energia.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2847,7 +2767,7 @@ mágicas entrassem infundindo seu corpo, achassem-no deficiente e fossem
 embora.  O brilho intenso do arco sobre você é quase cegante.  Além da luz
 você consegue distinguir uma escadaria levando para cima.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2864,7 +2784,7 @@ cima.  Seus sentidos parecem estar nublados, nenhum som ou cheiro podem ser
 sentidos por aqui, assim como tudo o que você vê, não importa para onde
 olhe, é uma escadaria interminável.
 ~
-25 dg 0
+25 72 0 0 0 0
 D4
 ~
 ~
@@ -2884,7 +2804,7 @@ ar deste lugar.
 para o leste, ladrilhos brancos ao oeste, e um corredor multicolorido de
 padrões rodopiantes quase irreconhecíveis leva para o norte.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2912,7 +2832,7 @@ Um Corredor de Ladrilhos Cinza~
 Fracas bolas de energia flutuam aqui e ali, emitindo uma luz morna e
 mostrando o caminho.  Uma sensação de paz e equilíbrio lhe toma conta.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2929,7 +2849,7 @@ Fracas bolas de energia flutuam aqui e ali, emitindo uma luz morna e
 mostrando o caminho.  Uma sensação de paz e equilíbrio lhe toma conta.
    Uma Porta dupla grande, de metal cinzento pode ser vista à sul.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2937,7 +2857,6 @@ D0
 D2
 ~
 porta cinza~
-:n 2 a porta cinza
 1 -1 2653
 S
 #2653
@@ -2948,11 +2867,10 @@ do poder contido por estas paredes.
    Logo que os seus olhos se acostumam à pouca luz, você consegue perceber
 uma sala maior ao sul.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta cinza~
-:n 2 a porta cinza
 1 -1 2652
 D2
 ~
@@ -2967,7 +2885,7 @@ nas paredes da sala, ou arrumados em suportes.  A sala, em geral, parece tão
 confortável quanto oficial.  Provavelmente é aqui que o Mestre da
 Neutralidade presta audiências.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -2994,7 +2912,7 @@ A coisa mais notável na sala é um pequeno conjunto de balanças, que
 flutuam à altura dos olhos.  Em equilíbrio perfeito, as balanças são,
 sem dúvida alguma, um sinal da neutralidade do Mestre.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -3005,7 +2923,7 @@ Um Armário Embutido~
    Você está num pequeno armário embutido.  Está cheio de mantos, além de
 algumas outras vestimentas.
 ~
-25 adg 0
+25 73 0 0 0 0
 D3
 ~
 ~
@@ -3017,7 +2935,7 @@ Um Quarto de Dormir~
 cortinadas podem ser vistas à parede sul.  Uma grande cama de aparência
 confortável ocupa a maior parte do aposento.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -3029,15 +2947,15 @@ Um Corredor Escuro~
 que se possa ver nesta escuridão sobrenatural, mas você tem uma profunda
 sensação de pavor à medida que avança.
 ~
-25 adg 0
-D3
-~
-~
-0 -1 2650
+25 73 0 0 0 0
 D1
 ~
 ~
 0 -1 2659
+D3
+~
+~
+0 -1 2650
 S
 #2659
 Um Corredor Escuro~
@@ -3045,7 +2963,7 @@ Um Corredor Escuro~
 que se possa ver nesta escuridão sobrenatural, mas você tem uma profunda
 sensação de pavor à medida que avança.
 ~
-25 adg 0
+25 73 0 0 0 0
 D1
 ~
 ~
@@ -3061,11 +2979,10 @@ O Fim do Corredor~
 em sua densidade.  Medo e repugnância profundos mesclam-se em seu peito.
    Um par de portas de obsidiana estão ao leste.
 ~
-25 adg 0
+25 73 0 0 0 0
 D1
 ~
 porta obsidiana~
-:n 2 a porta de obsidiana
 1 -1 2661
 D3
 ~
@@ -3079,7 +2996,7 @@ você apenas uma idéia muito vaga do tamanho real do aposento.  Girando aqui
 e ali, no escuro, estão pedaços de puro escuro, que parecem sugar sua luz e
 deixar a sala ainda mais escura.
 ~
-25 adg 0
+25 73 0 0 0 0
 D0
 ~
 ~
@@ -3095,14 +3012,13 @@ D2
 D3
 ~
 porta obsidiana~
-:n 2 a porta de obsidiana
 1 -1 2660
 S
 #2662
 Está Muito Escuro Aqui...~
    Está muito escuro aqui...
 ~
-25 adg 0
+25 73 0 0 0 0
 D2
 ~
 ~
@@ -3116,7 +3032,7 @@ uma vítima, como se tivessem vontade própria.  Uma mesa de operação está
 aqui, embora vazia.
    Uma sensação de mal extremo permeia toda a área.
 ~
-25 adg 0
+25 73 0 0 0 0
 D0
 ~
 ~
@@ -3130,7 +3046,7 @@ muito desconhecida deste plano de existência.  Há um altar de obsidiana que
 parece brilhar, embora não emane luz alguma, parecendo mais absorver a luz
 ambiente.
 ~
-25 adg 0
+25 73 0 0 0 0
 D3
 ~
 ~
@@ -3143,7 +3059,7 @@ Suas paredes são de um branco leitoso e brilham com uma luminescência morna,
 assim como o chão.  Um sentimento de bondade permeia a área, fazendo você se
 sentir indigno de pisar sobre este solo sagrado.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -3161,7 +3077,7 @@ assim como o chão.  Um sentimento de bondade permeia a área, fazendo você se
 sentir indigno de pisar sobre este solo sagrado.
    Uma enorme porta dupla de marfim finamente trabalhado está a oeste.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -3169,7 +3085,6 @@ D1
 D3
 ~
 porta marfim~
-:n 2 a porta de marfim
 1 -1 2667
 S
 #2667
@@ -3179,11 +3094,10 @@ da luz não possa ser vista.  É quase como se o próprio aposento exalasse
 um brilho quente de bondade.  Uma câmara maior pode ser vista mais para o
 oeste, mas você não se sente digno de ir até lá.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 porta marfim~
-:n 2 a porta de marfim
 1 -1 2666
 D3
 ~
@@ -3198,7 +3112,7 @@ completamente cegante.  Uma chama bruxeleante está no centro da sala,
 parecendo se alimentar de trevas e limpar a sala de qualquer mal.  Você
 sente um leve puxar sobre seu ser quando a chama tremula em sua direção.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -3222,7 +3136,7 @@ A Câmara de Meditação~
 estão por toda a parte, parecendo muito confortáveis.  Você facilmente se
 sente pacífico e relaxado, quase fazendo com que você se deite e adormeça.
 ~
-25 dg 0
+25 72 0 0 0 0
 D2
 ~
 ~
@@ -3234,7 +3148,7 @@ Um Estúdio~
 de uma maneira quase que anti-séptica.  Qualquer um imaginaria como alguém
 pode estudar sem uma banguça ao redor, o mestre desta câmara obviamente pode.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -3246,7 +3160,7 @@ Um Armário Embutido~
 ganchos na parede e umas botas velhas são tudo o que se pode ver aqui.
 Tudo bastante descaracterizado.
 ~
-25 adg 0
+25 73 0 0 0 0
 D1
 ~
 ~
@@ -3260,11 +3174,10 @@ movimento constante.
    Uma enorme porta de metal cinza bloqueia o caminho para o norte, parece
 ser bastante resistente.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta metal cinza~
-:n 2 a porta de metal cinza
 2 2593 2674
 D2
 ~
@@ -3279,16 +3192,14 @@ movimento constante.
    Uma enorme porta de obsidiana negra bloqueia o caminho para o norte,
 parece ser bastante resistente.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta obsidiana negra~
-:n 2 a porta de obsidiana negra
 2 2594 2675
 D2
 ~
 porta metal cinza~
-:n 2 a porta de metal cinza
 2 2593 2673
 S
 #2675
@@ -3299,16 +3210,14 @@ movimento constante.
    Uma enorme porta de marfim branco bloqueia o caminho para o norte,
 parece ser bastante resistente.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 porta marfim branco~
-:n 2 a porta de marfim branco
 2 2595 2676
 D2
 ~
 porta obsidiana negra~
-:n 2 a porta de obsidiana negra
 2 2594 2674
 S
 #2676
@@ -3318,7 +3227,7 @@ Belas tapeçarias penduradas nas paredes ilustram os antigos mestres do
 conhecimento, o chão está coberto por um tapete multicolorido de pelúcia,
 que parece farfalhar e se mover ao toque de suas botas.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -3326,7 +3235,6 @@ D0
 D2
 ~
 porta marfim branco~
-:n 2 a porta de marfim branco
 2 2595 2675
 S
 #2677
@@ -3338,7 +3246,7 @@ voltar a desaparecer aleatoriamente.  Todo este esplendor parece divertir e
 chamar a atenção para um grande trono no centro do aposento, ele parece ser
 esculpido a partir de uma única e enorme esmeralda.
 ~
-25 dg 0
+25 72 0 0 0 0
 D0
 ~
 ~
@@ -3367,7 +3275,7 @@ e de algumas cores exóticas pendem de um suporte suspenso em pleno ar à
 altura dos olhos.  A única outra característica de interesse na sala é um
 grande espelho de prata sobre um pedestal de ouro finamente trabalhado.
 ~
-25 dg 0
+25 72 0 0 0 0
 D3
 ~
 ~
@@ -3381,7 +3289,7 @@ mesa de escrever de carvalho está no centro da sala, ocupada por velhos
 papéis e pergaminhos.  A fonte da luz desta sala é, para a sua surpresa,
 um lampião a óleo bastante mundano.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 ~
@@ -3394,11 +3302,10 @@ maravilhosamente esculpido.  Muitos ícones de divindades menores alinham-se
 pela sala, mas é obvio, a partir de um olhar apenas para os símbolos no
 altar, que esta sala foi feita para a adoração de Mystra, deusa da magia.
 ~
-25 dg 0
+25 72 0 0 0 0
 D1
 ~
 porta secreta~
-:n 2 a porta secreta
 1 -1 2681
 D2
 ~
@@ -3407,7 +3314,6 @@ D2
 D3
 ~
 porta secreta~
-:n 2 a porta secreta
 1 -1 2682
 S
 #2681
@@ -3415,11 +3321,10 @@ O Cofre do Tesouro~
    Você está numa pequena câmara.  O ar viciado prova o fato de que o
 tesouro esteve intocado por muitos anos.
 ~
-25 dg 0
+25 72 0 0 0 0
 D3
 ~
 porta secreta~
-:n 2 a porta secreta
 1 -1 2680
 S
 #2682
@@ -3430,11 +3335,10 @@ pendem muitas capas de viagem valiosas, e uma pequena mochila de couro.
 Até parece que alguém preparou esta sala para ser usada como rota rápida
 para uma evacuação.
 ~
-25 adg 0
+25 73 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
 1 -1 2680
 D3
 ~
@@ -3449,7 +3353,7 @@ todos os lados, negando por completo os efeitos da gravidade.
    Uma imperfeição no azul uniforme pode ser vista acima de você, podendo
 ser uma saída.
 ~
-25 dg 0
+25 72 0 0 0 0
 D4
 ~
 ~
@@ -3463,12 +3367,12 @@ obscurece a maior parte de sua visão.  Estranhos sons de gemidos e
 rosnados vêm de todas as direções
    Todas as saídas levam para dentro das sombras, você está muito confuso.
 ~
-25 acfg 3
-D8
+25 101 0 0 0 3
+D0
 As sombras obscurecem sua visão.
 ~
 ~
-0 -1 2604
+0 -1 2685
 D1
 As sombras se abrem, revelando uma pequena clareira.
 ~
@@ -3484,11 +3388,11 @@ As sombras obscurecem sua visão.
 ~
 ~
 0 -1 2688
-D0
+D8
 As sombras obscurecem sua visão.
 ~
 ~
-0 -1 2685
+0 -1 2604
 S
 #2685
 O Bosque Sombrio~
@@ -3498,17 +3402,7 @@ obscurece a maior parte de sua visão.  Estranhos sons de gemidos e
 rosnados vêm de todas as direções
    Todas as saídas levam para dentro das sombras, você está muito confuso.
 ~
-25 acfg 3
-D3
-As sombras obscurecem sua visão.
-~
-~
-0 -1 2687
-D2
-As sombras obscurecem sua visão.
-~
-~
-0 -1 2684
+25 101 0 0 0 3
 D0
 As sombras obscurecem sua visão.
 ~
@@ -3519,6 +3413,16 @@ As sombras obscurecem sua visão.
 ~
 ~
 0 -1 2688
+D2
+As sombras obscurecem sua visão.
+~
+~
+0 -1 2684
+D3
+As sombras obscurecem sua visão.
+~
+~
+0 -1 2687
 S
 #2686
 O Bosque Sombrio~
@@ -3528,7 +3432,7 @@ obscurece a maior parte de sua visão.  Estranhos sons de gemidos e
 rosnados vêm de todas as direções
    Todas as saídas levam para dentro das sombras, você está muito confuso
 ~
-25 acfg 3
+25 101 0 0 0 3
 D0
 As sombras obscurecem sua visão.
 ~
@@ -3558,7 +3462,7 @@ obscurece a maior parte de sua visão.  Estranhos sons de gemidos e
 rosnados vêm de todas as direções
    Todas as saídas levam para dentro das sombras, você está muito confuso
 ~
-25 acfg 3
+25 101 0 0 0 3
 D0
 As sombras obscurecem sua visão.
 ~
@@ -3588,7 +3492,7 @@ obscurece a maior parte de sua visão.  Estranhos sons de gemidos e
 rosnados vêm de todas as direções
    Todas as saídas levam para dentro das sombras, você está muito confuso
 ~
-25 acfg 3
+25 101 0 0 0 3
 D0
 As sombras obscurecem sua visão.
 ~
@@ -3619,7 +3523,7 @@ rosnados vêm de todas as direções. Parece haver alguma coisa bloqueando
 sua visão em direção a sudoeste. 
    Todas as saídas levam para dentro das sombras, você está muito confuso
 ~
-25 acfg 3
+25 101 0 0 0 3
 D0
 As sombras obscurecem sua visão.
 ~
@@ -3644,7 +3548,6 @@ D9
 As sombras obscurecem sua visão.
 ~
 portão~
-:n 1 o portão de madeira
-abcd -1 13000
+0 -1 -1
 S
-$
+$~

@@ -6,16 +6,15 @@ com três pernas em um outro ângulo do local.  Uma escada segue para cima,
 se dirigindo para a roda do moinho; a qual parece ter sido preservada 
 enquanto este moinho estava em funcionamento.
 ~
-155 d 0
+155 8 0 0 0 0
 D1
 ~
 porta madeira~
-ag -1 15556
+0 -1 15556
 D3
 ~
 porta~
-:n 2 a porta
-ac -1 15502
+0 -1 15502
 D4
 ~
 ~
@@ -28,7 +27,7 @@ tamanho (ou a falta disso) não possui absolutamente nada de interessante.
 A menos que você seja um colecionador de poeira, ou uma criança para trazer 
 a namorada.
 ~
-155 d 0
+155 8 0 0 0 0
 D5
 ~
 ~
@@ -41,12 +40,11 @@ dois homens bem equipados, que estão esperando por aventureiros inocentes,
 como você, que entram aqui por engano.  Uma escada feita de metal segue 
 para baixo, entrando no desconhecido.
 ~
-155 0 0
+155 0 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
-ac -1 15500
+0 -1 15500
 D5
 ~
 ~
@@ -60,7 +58,7 @@ imagem parece ser de uma porta.  As paredes ao seu redor, assim como o
 piso, são todos feitos de metal.  Que tipo de ser decoraria suas paredes 
 todas em metal?
 ~
-155 di 0
+155 264 0 0 0 0
 D4
 ~
 ~
@@ -76,7 +74,7 @@ Uma Escadaria de Metal~
 seu fim.  Todas as paredes a sua volta continuam como antes, todas feitas 
 de metal.  A porta logo abaixo também parece ter sido feita de metal.
 ~
-155 d 0
+155 8 0 0 0 0
 D4
 ~
 ~
@@ -93,12 +91,11 @@ estar aquele que construiu estas estranhas passagens, você pensa.  Você
 pode deixar este estranho local, subindo pelas escadas, ou abrir a estranha 
 porta a norte.
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-a -1 15506
+1 -1 15506
 D4
 ~
 ~
@@ -114,17 +111,15 @@ no lado esquerdo do peito da armadura de cada soldado, mas você não tem
 idéia de seu significado, e também não tem muito tempo para pensar, pois os 
 guardas podem lhe atacar a qualquer momento.
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-a -1 15507
+1 -1 15507
 D2
 ~
 porta~
-:n 2 a porta
-a -1 15505
+1 -1 15505
 S
 #15507
 Uma Passagem Coberta~
@@ -133,7 +128,7 @@ Controle, mas continuam por toda a extensão desta passagem.  De onde você
 está não é possível ver o fim da passagem, sendo assim, você supoem que se 
 trate de uma grande passagem.
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 ~
@@ -141,8 +136,7 @@ D0
 D2
 ~
 porta~
-:n 2 a porta
-a -1 15506
+1 -1 15506
 S
 #15508
 Uma Passagem Coberta~
@@ -150,7 +144,7 @@ Uma Passagem Coberta~
 contendo o símbolo de duas espadas cruzadas, aprontando para baixo.  As 
 letras "OmE" estão gravadas logo abaixo o símbolo das espadas.
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 ~
@@ -158,8 +152,7 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
-a -1 15522
+1 -1 15522
 D2
 ~
 ~
@@ -171,7 +164,7 @@ Uma Passagem Coberta~
 leste, na qual encontra-se o símbolo de duas espadas cruzadas, apontando 
 para baixo, e a inscrição "OmE" gravada logo abaixo.
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 ~
@@ -179,8 +172,7 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
-a -1 15523
+1 -1 15523
 D2
 ~
 ~
@@ -191,7 +183,7 @@ Uma Passagem Coberta~
   A passagem segue para o norte e sul.  Uma porta encontra-se a leste com o 
 símbolo das espadas, e a inscrição "OmE".
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 ~
@@ -199,8 +191,7 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
-a -1 15524
+1 -1 15524
 D2
 ~
 ~
@@ -212,7 +203,7 @@ Uma Passagem Coberta~
 continuam brilhando intensamente até onde seus olhos podem alcançar.  A 
 leste encontra-se uma porta.
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 ~
@@ -220,8 +211,7 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
-a -1 15525
+1 -1 15525
 D2
 ~
 ~
@@ -236,7 +226,7 @@ Uma Passagem Coberta~
    A passagem segue para o norte e sul.  Há também um pequeno caminho 
 seguindo para o leste, coberto e muito brilhante.
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 ~
@@ -255,7 +245,7 @@ Uma Passagem Coberta~
    A passagem ainda continua para o norte e sul, sem curvas por uma boa 
 distância.  Há uma porta na parede leste.
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 ~
@@ -274,7 +264,7 @@ Uma Passagem Coberta~
    A passagem segue para norte e sul.  Você pensa ter visto o fim desta 
 passagem logo a norte.
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 ~
@@ -290,7 +280,7 @@ Uma Passagem Coberta~
 lados de você.  O fim do corredor, na forma de uma porta de metal, 
 encontra-se a uma pequena distância a norte.
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 ~
@@ -313,7 +303,7 @@ Uma Passagem Coberta~
    O fim deste longo corredor encontra-se logo a norte.  Para o sul, o 
 corredor segue por uma longa distância.
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 ~
@@ -328,12 +318,11 @@ O Final Norte da Passagem~
    Uma porta encontra-se a norte de você, enquanto uma passagem toda em 
 metal segue para sul até se perder de seus olhos.
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-a -1 15535
+1 -1 15535
 D2
 ~
 ~
@@ -346,7 +335,7 @@ todas cobertas por metal.  A passagem acaba a leste, por uma distância não
 muito longa, em uma porta.  Você pode seguir para leste ou oeste; a 
 passagem principal segue para norte e sul.
 ~
-155 d 0
+155 8 0 0 0 0
 D1
 ~
 ~
@@ -361,7 +350,7 @@ Uma Passagem Coberta~
    A passagem continua para leste, através de algumas portas.  Você pode 
 voltar a oeste para a passagem principal.
 ~
-155 d 0
+155 8 0 0 0 0
 D1
 ~
 ~
@@ -376,22 +365,19 @@ Uma Passagem Coberta~
    A passagem termina logo a leste, em uma porta.  A norte e sul 
 encontram-se outras portas, e a passagem segue voltando para o oeste.
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-a -1 15530
+1 -1 15530
 D1
 ~
 porta~
-:n 2 a porta
-a -1 15521
+1 -1 15521
 D2
 ~
 porta~
-:n 2 a porta
-a -1 15532
+1 -1 15532
 D3
 ~
 ~
@@ -404,22 +390,19 @@ passagem volta através da área principal.  Para o norte, sul e leste,
 encontram-se algumas portas, todas com a insígnia de duas espadas e com as 
 letras "OmE".
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-a -1 15531
+1 -1 15531
 D1
 ~
 porta~
-:n 2 a porta
-a -1 15534
+1 -1 15534
 D2
 ~
 porta~
-:n 2 a porta
-a -1 15533
+1 -1 15533
 D3
 ~
 ~
@@ -434,12 +417,11 @@ escrito: " Ordem Militar da Espada ".  Agora você tem mais do que certeza,
 tudo isso se trata de uma construção militar, erguida pela Ordem Militar 
 da Espada.  Mas quem seriam eles, e quais seriam os seus objetivos?
 ~
-155 d 0
+155 8 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-a -1 15508
+1 -1 15508
 S
 #15523
 O Armazém de Alimentos~
@@ -447,7 +429,7 @@ O Armazém de Alimentos~
 deste local.  Você pode seguir pelo norte, ou pela passagem através da 
 porta a oeste.
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 ~
@@ -455,8 +437,7 @@ D0
 D3
 ~
 porta~
-:n 2 a porta
-a -1 15509
+1 -1 15509
 S
 #15524
 A Cozinha~
@@ -465,7 +446,7 @@ cheio de água e uma mesa.  Alguns poucos utensilios encontram-se em cima
 da mesa, todos alinhados perfeitamente.  A unica coisa positiva que você 
 pode ver aqui, é a sua limpeza imaculada.
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 ~
@@ -477,8 +458,7 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
-a -1 15510
+1 -1 15510
 S
 #15525
 A Sala de Refeições~
@@ -488,7 +468,7 @@ um grande número de soldados deve viver neste local, julgando pelo imenso
 tamanho desta mesa.  Uma passagem segue para o sul, em direção à cozinha, e 
 há uma porta, por onde você pode sair da sala a oeste.
 ~
-155 d 0
+155 8 0 0 0 0
 D2
 ~
 ~
@@ -496,8 +476,7 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
-a -1 15511
+1 -1 15511
 S
 #15526
 A Sala Pincipal~
@@ -505,7 +484,7 @@ A Sala Pincipal~
 muito limpa e impecável.  Até mesmo os assentos estão limpos e polidos, 
 lhe dando a sensação de serem muito confortaveis.
 ~
-155 d 0
+155 8 0 0 0 0
 D1
 ~
 ~
@@ -519,7 +498,7 @@ alinhados juntos à uma barreira, obviamente para os arqueiros.  Alguns
 cavaletes de armas encontram-se ao norte, entretanto não há nenhum tipo de 
 arma neles.
 ~
-155 0 0
+155 0 0 0 0 0
 D1
 ~
 ~
@@ -531,7 +510,7 @@ Casamata~
 pelas paredes norte e sul.  Cada cama foi perfeitamente construída, 
 possuindo lençóis e cobertores muito limpos.
 ~
-155 d 0
+155 8 0 0 0 0
 D1
 ~
 ~
@@ -543,7 +522,7 @@ Casamata~
 pelas paredes norte e sul.  Cada cama foi perfeitamente construída, 
 possuindo lençóis e cobertores muito limpos.    
 ~
-155 d 0
+155 8 0 0 0 0
 D3
 ~
 ~
@@ -555,12 +534,11 @@ A Sala do Capitão~
 solteiro, a qual parece ser muito desconfortável.  Parece que a única 
 vantagem de possuir uma sala própria neste local é a de ter privacidade.
 ~
-155 d 0
+155 8 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-a -1 15520
+1 -1 15520
 S
 #15531
 A Sala do Tenente~
@@ -568,12 +546,11 @@ A Sala do Tenente~
 quadro enfeitando as paredes, e claro, não há janelas também.  Como será 
 que alguém consegue viver desta maneira?
 ~
-155 d 0
+155 8 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-a -1 15521
+1 -1 15521
 S
 #15532
 A Sala do Sargento~
@@ -583,12 +560,11 @@ enforcamento, com toda a população desta cidade cercando-a.  Na plataforma
 estão pendurados dezesseis corpos, todos apodrecendo.  Na legenda da 
 imagem está escrito: "O dia do acerto de contas chegará".
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-a -1 15520
+1 -1 15520
 S
 #15533
 A Sala do General~
@@ -598,12 +574,11 @@ abaixo.  Prestando mais atenção você pode ver que há algo em especial.  A
 legenda abaixo da figura diz:  "Quando o Armagedon chegar, a raça humana 
 irá vencer, e controlar todas as outras raças".  Muito estranho...
 ~
-155 d 0
+155 8 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-a -1 15521
+1 -1 15521
 S
 #15534
 A Sala do Grande Cavaleiro~
@@ -611,24 +586,22 @@ A Sala do Grande Cavaleiro~
 irmãos.  Pela sala encontram-se velhas mobílias, e uma imensa cama.  Este 
 homem deve ser já muito velho e cansado...
 ~
-155 d 0
+155 8 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-a -1 15521
+1 -1 15521
 S
 #15535
 Um Quarto Vazio~
    Você está em um quarto.  Não há nada aqui além de sujeira e uma velha e 
 desgastada mobília.
 ~
-155 acd 0
+155 13 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-a -1 15517
+1 -1 15517
 S
 #15550
 Um Caminho Lateral~
@@ -637,7 +610,7 @@ altas e grandiosas árvores.  Ele é bastante curto, sendo possível ver que,
 em seu fim, há um campo descoberto.
    O caminho segue leste e oeste.
 ~
-155 0 1
+155 0 0 0 0 1
 D1
 ~
 ~
@@ -654,7 +627,7 @@ altas e grandiosas árvores.  Ele é bastante curto, sendo possível ver que,
 em seu fim, há um campo descoberto, o que faz chegar mais luz até você.
    O caminho segue leste e oeste.
 ~
-155 0 1
+155 0 0 0 0 1
 D1
 ~
 ~
@@ -671,7 +644,7 @@ No campo cercado com madeira, você vê um alto moinho cujas pás viram de
 acordo com o vento.  Para chegar nele, você deve seguir oeste, ou leste se
 quiser continuar pelo caminho.
 ~
-155 0 1
+155 0 0 0 0 1
 D1
 ~
 ~
@@ -688,7 +661,7 @@ ou outra planta de folhas escuras e pequenas flores coloridas.  No centro do
 campo, a oeste, há um grande moinho, e a leste um caminho escondido por
 árvores.
 ~
-155 0 1
+155 0 0 0 0 1
 D1
 ~
 ~
@@ -704,7 +677,7 @@ O Campo do Moinho~
 planta de folhas escuras e pequenas flores coloridas.  No centro do campo, a
 oeste, há um grande moinho.
 ~
-155 0 1
+155 0 0 0 0 1
 D1
 ~
 ~
@@ -720,7 +693,7 @@ O Campo do Moinho~
 planta de folhas escuras e pequenas flores coloridas.  No centro do campo, a
 oeste, há um grande moinho.
 ~
-155 0 1
+155 0 0 0 0 1
 D1
 ~
 ~
@@ -737,7 +710,7 @@ parece ter sido abandonado, sendo que sua pintura branca e azul está agora
 toda suja e descascada. As pás, rasgadas, pouco se movem com o vento.
 Uma porta de madeira permite que você entre nele.
 ~
-155 0 1
+155 0 0 0 0 1
 D1
 ~
 ~
@@ -745,7 +718,6 @@ D1
 D3
 ~
 porta madeira~
-:n a porta de madeira
-ag -1 15500
+0 -1 15500
 S
 $~

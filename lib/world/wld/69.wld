@@ -5,8 +5,8 @@ grande maioria da flora local são vários tipos de vitória-régia.  Este
 jardim do Templo parece ser bem cuidado e todas as plantas estão
 florescendo.
 ~
-69 g 2
-D2 
+69 64 0 0 0 2
+D2
 Você vê dentro do Templo.
 ~
 ~
@@ -18,20 +18,20 @@ Fora dos Muros do Templo~
 feito de pedra marrom e é muito alto para manter alguma coisa dentro ou
 fora.
 ~
-69 g 2
-D2 
+69 64 0 0 0 2
+D2
 Você vê as dependências do Templo.
 ~
 ~
 0 -1 6906
 S
-#6902 
+#6902
 Dentro do Templo~
    Você se encontra dentro de um pequeno Templo construido de pedras.  A
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D1
 Você vê o Templo.
 ~
@@ -48,7 +48,7 @@ Dentro do Templo~
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê um pequeno jardim
 ~
@@ -64,7 +64,6 @@ Você vê o Templo.
 ~
 ~
 0 -1 6908
-
 D3
 Você vê o Templo.
 ~
@@ -77,7 +76,7 @@ Dentro do Templo~
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D2
 Você vê uma piscina de água.
 ~
@@ -97,7 +96,7 @@ Templo contém importantes informações de onde se encontra os outros Templos
 de Anura, uma peça de quebra-cabeça que quando resolvido levará você para o
 grande Templo de Anura, onde a riqueza está fora da sua imaginação.
 ~
-69 g 2
+69 64 0 0 0 2
 D1
 Você vê as dependências do Templo.
 ~
@@ -116,7 +115,7 @@ são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
 Você vê algumas plantas florescendo nas fendas das dependências e indo em
 direção ao sol.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê o muro.
 ~
@@ -143,7 +142,7 @@ Corredor Sombrio~
    Você se encontra em um longo corredor sombrio.  Você pode ver algumas
 fracas sombras, mas você acaba não vendo um palmo na sua frente.
 ~
-69 ga 0
+69 65 0 0 0 0
 D0
 Você vê o Templo.
 ~
@@ -170,7 +169,7 @@ Corredor Sombrio~
    Você se encontra em um longo corredor sombrio.  Você pode ver algumas
 fracas sombras, mas você acaba não vendo um palmo na sua frente.
 ~
-69 ga 0
+69 65 0 0 0 0
 D0
 Você vê o Templo.
 ~
@@ -197,7 +196,7 @@ Piscina de Água~
    Você está em uma piscina de água antes do altar onde vê várias criaturas
 nadando, parecendo pertubadas com sua presença.
 ~
-69 g 8 
+69 64 0 0 0 8
 D0
 Você vê o Templo.
 ~
@@ -219,14 +218,12 @@ Você vê o Templo.
 ~
 0 -1 6908
 S
-#6910 
+#6910
 Um Altar para Anura~
    Você vê um grande altar dourado com uma estátua de um sapo gigante.  Você
 vê outra sala para leste.
 ~
-69 g 0
-OX magik "*BUFONIDAE*" unlock down
-OX magik "*BUFONIDAE*" open down
+69 64 0 0 0 0
 D1
 Você vê uma pequena sala atrás do altar.
 ~
@@ -241,8 +238,7 @@ D5
 Ali há uma pequena sala.
 ~
 barreira mágica~
-:n 2 a barreira mágica
-abch -1 6917
+0 -1 6917
 S
 #6911
 Atrás do Altar~
@@ -252,7 +248,7 @@ escrituras dizem a você que você pode usar as quatro tabuletas juntas para
 achar as chaves para o grande Templo de Anura.  Elas ainda falam sobre outro
 Templo ao sudeste de Nova Thalos.
 ~
-69 g 0
+69 64 0 0 0 0
 D3
 Você vê um altar.
 ~
@@ -265,7 +261,7 @@ Fora dos Muros do Templo~
 feito de pedra marrom e é muito alto para manter alguma coisa dentro ou
 fora.
 ~
-69 g 1
+69 64 0 0 0 1
 D0
 Você vê as dependências do Templo.
 ~
@@ -278,7 +274,7 @@ Dentro do Templo~
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê um corredor sombrio.
 ~
@@ -296,7 +292,7 @@ Dentro do Templo~
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê um corredor sombrio.
 ~
@@ -324,7 +320,7 @@ Dentro do Templo~
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê uma piscina de água.
 ~
@@ -343,7 +339,7 @@ grande maioria da flora local são vários tipos de vitória-régia.  Este
 jardim do Templo parece ser bem cuidado e todas as plantas estão
 florescendo.
 ~
-69 g 2
+69 64 0 0 0 2
 D0
 Você vê dentro do Templo.
 ~
@@ -355,7 +351,7 @@ Sob o Altar~
    Você se encontra em uma pequena sala sob o altar.  O chão é coberto de
 areia, mas se você procurar bem saberá que pode encontrar alguma coisa ali.
 ~
-69 g 0
+69 64 0 0 0 0
 D4
 ~
 ~
@@ -367,17 +363,17 @@ Fora do Segundo Templo~
 Para o sul está as dependências do Templo, e para norte se encontra a cidade
 de Nova Thalos.
 ~
-69 cg 1
-D6
-Você vê a cidade de Nova Thalos.
-~
-~
-0 -1 5411
+69 68 0 0 0 1
 D2
 Você vê as dependências do Templo.
 ~
 ~
 0 -1 6920
+D6
+Você vê a cidade de Nova Thalos.
+~
+~
+0 -1 5411
 S
 #6919
 O Jardim~
@@ -386,7 +382,7 @@ grande maioria da flora local são vários tipos de vitória-régia.  Este
 jardim do Templo parece ser bem cuidado e todas as plantas estão
 florescendo.
 ~
-69 g 2
+69 64 0 0 0 2
 D1
 Você vê as dependências do Templo.
 ~
@@ -400,7 +396,7 @@ são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
 Você vê algumas plantas florescendo nas fendas das dependências e indo em
 direção ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D0
 Você vê o fundo das dependências.
 ~
@@ -429,9 +425,7 @@ grande maioria da flora local são vários tipos de vitória-régia.  Este
 jardim do Templo parece ser bem cuidado e todas as plantas estão
 florescendo.
 ~
-69 g 2
-OX magik "*OPISTHOCOELA*" unlock down
-OX magik "*OPISTHOCOELA*" open down
+69 64 0 0 0 2
 D3
 Você vê as dependências do Templo.
 ~
@@ -441,8 +435,7 @@ D5
 Você vê um buraco.
 ~
 barreira mágica~
-:n 2 a barreira mágica
-abch -1 6934
+0 -1 6934
 S
 #6922
 Dentro do Templo~
@@ -450,7 +443,7 @@ Dentro do Templo~
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D1
 Você vê o Templo.
 ~
@@ -468,7 +461,7 @@ Dentro do Templo~
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê as dependências do Templo.
 ~
@@ -496,7 +489,7 @@ Dentro do Templo~
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D2
 Você vê o Templo.
 ~
@@ -514,7 +507,7 @@ Dentro do Templo~
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê o Templo.
 ~
@@ -535,7 +528,7 @@ S
 O Altar Norte~
    Você se encontra no altar norte de um dos Templos construídos para Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê o Templo.
 ~
@@ -563,7 +556,7 @@ Dentro do Templo~
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê o Templo.
 ~
@@ -584,7 +577,7 @@ S
 O Altar Oeste~
    Você se encontra no altar oeste de um dos Templos construídos para Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê o Templo.
 ~
@@ -607,7 +600,7 @@ O Altar Central~
 Anura.  Algumas inscrições dizem a você que existe outro Templo aos
 arredores.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê o altar norte.
 ~
@@ -633,7 +626,7 @@ S
 O Altar Leste~
    Você se encontra no altar leste de um dos Templos construídos para Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê o Templo.
 ~
@@ -656,7 +649,7 @@ Dentro do Templo~
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê o altar oeste
 ~
@@ -672,7 +665,7 @@ S
 O Altar Sul~
    Você se encontra no altar sul de um dos Templos construídos para Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê o altar central.
 ~
@@ -695,7 +688,7 @@ Dentro do Templo~
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê o altar leste.
 ~
@@ -712,19 +705,19 @@ Sob o Jardim~
    Você se encontra em um buraco no chão.  Areia solta cobre o fundo do
 buraco.
 ~
-69 g 0
+69 64 0 0 0 0
 D4
 Você vê um jardim.
 ~
 ~
 0 -1 6921
 S
-#6935 
+#6935
 O Lago~
    Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
 ~
-69 g 0
+69 64 0 0 0 0
 D1
 Você vê o lago.
 ~
@@ -741,7 +734,7 @@ O Lago~
    Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
 ~
-69 g 6
+69 64 0 0 0 6
 D1
 Você vê o lago.
 ~
@@ -758,7 +751,7 @@ O Lago~
    Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
 ~
-69 g 6
+69 64 0 0 0 6
 D1
 Você vê o lago.
 ~
@@ -775,7 +768,7 @@ O Lago~
    Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
 ~
-69 g 6
+69 64 0 0 0 6
 D1
 Você vê o lago.
 ~
@@ -792,7 +785,7 @@ O Lago~
    Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
 ~
-69 g 6
+69 64 0 0 0 6
 D2
 Você vê o lago.
 ~
@@ -809,7 +802,7 @@ O Lago~
    Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
 ~
-69 g 6
+69 64 0 0 0 6
 D0
 Você vê o lago.
 ~
@@ -828,7 +821,7 @@ são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
 Você vê algumas plantas florescendo nas fendas das dependências e indo em
 direção ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D1
 Você vê as dependências do Templo.
 ~
@@ -847,7 +840,7 @@ são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
 Você vê algumas plantas florescendo nas fendas das dependências e indo em
 direção ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D1
 Você vê o Templo.
 ~
@@ -871,7 +864,7 @@ são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
 Você vê algumas plantas florescendo nas fendas das dependências e indo em
 direção ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D2
 Você vê o Templo.
 ~
@@ -888,7 +881,7 @@ O Lago~
    Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
 ~
-69 g 4
+69 64 0 0 0 4
 D0
 Você vê o lago.
 ~
@@ -904,7 +897,7 @@ S
 Sob o Lago~
    Você se encontra em um buraco de ar cheio de lodo sob o lago.
 ~
-69 g 0
+69 64 0 0 0 0
 D4
 Você vê o lago.
 ~
@@ -916,7 +909,7 @@ O Lago~
    Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
 ~
-69 g 6
+69 64 0 0 0 6
 D0
 Você vê o lago.
 ~
@@ -935,7 +928,7 @@ são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
 Você vê algumas plantas florescendo nas fendas das dependências e indo em
 direção ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D0
 Você vê o Templo.
 ~
@@ -958,7 +951,7 @@ O Grande Altar~
 inscrições no altar dizem a você que há outro Templo nos túneis a norte de
 Nova Thalos.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê as dependências do Templo.
 ~
@@ -987,7 +980,7 @@ são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
 Você vê algumas plantas florescendo nas fendas das dependências e indo em
 direção ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D0
 Você vê o Templo.
 ~
@@ -1014,7 +1007,7 @@ Na Ponte~
    Você se encontra em uma ponte sobre um pequeno lago fora do terceiro
 Templo de Anura.  O Templo está a oeste e o lago corre para norte e sul.
 ~
-69 g 2
+69 64 0 0 0 2
 D0
 Você vê o lago.
 ~
@@ -1042,7 +1035,7 @@ Fora do Terceiro Templo~
 para Anura.  A oeste está uma ponte atravessando o lago que circunda o
 Templo.
 ~
-69 g 1
+69 64 0 0 0 1
 D1
 Você vê um estreito caminho.
 ~
@@ -1059,7 +1052,7 @@ O Lago~
    Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
 ~
-69 g 6
+69 64 0 0 0 6
 D0
 Você vê o lago.
 ~
@@ -1078,7 +1071,7 @@ são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
 Você vê algumas plantas florescendo nas fendas das dependências e indo em
 direção ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D0
 Você vê o Templo.
 ~
@@ -1097,7 +1090,7 @@ são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
 Você vê algumas plantas florescendo nas fendas das dependências e indo em
 direção ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D0
 Você vê o altar.
 ~
@@ -1121,7 +1114,7 @@ são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
 Você vê algumas plantas florescendo nas fendas das dependências e indo em
 direção ao sol.
 ~
-69 g 4
+69 64 0 0 0 4
 D1
 Você vê o Templo.
 ~
@@ -1138,7 +1131,7 @@ O Lago~
    Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
 ~
-69 g 6
+69 64 0 0 0 6
 D0
 Você vê uma ponte.
 ~
@@ -1155,9 +1148,7 @@ O Lago~
    Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
 ~
-69 g 6
-OX magik "*PIPIDAE*" unlock down
-OX magik "*PIPIDAE*" open down
+69 64 0 0 0 6
 D0
 Você vê o lago.
 ~
@@ -1172,8 +1163,7 @@ D5
 Você vê ume espécie de bolha de ar ali.
 ~
 barreira mágica~
-:n 2 a barreira mágica
-abch -1 6945
+0 -1 6945
 S
 #6958
 O Lago~
@@ -1181,7 +1171,7 @@ O Lago~
 está tranqüilo e sem ondas e existe uma fina camada de limo sobre
 a água.
 ~
-69 g 6
+69 64 0 0 0 6
 D1
 Você vê o lago.
 ~
@@ -1198,7 +1188,7 @@ O Lago~
    Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
 ~
-69 g 6
+69 64 0 0 0 6
 D1
 Você vê o lago.
 ~
@@ -1216,7 +1206,7 @@ Você está em um pequeno lago que rodeia o terceiro Templo de Anura.
 Ele está tranqüilo e sem ondas e existe uma fina camada de limo sobre
 a água.
 ~
-69 g 6
+69 64 0 0 0 6
 D1
 Você vê o lago.
 ~
@@ -1233,7 +1223,7 @@ O Lago~
    Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
 está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
 ~
-69 g 6
+69 64 0 0 0 6
 D0
 Você vê o lago.
 ~
@@ -1251,7 +1241,7 @@ O Altar~
 inscrições no altar dizem a você que você deve reunir as quatro tabuletas
 para encontrar as chaves para o quinto Templo.
 ~
-69 g 0
+69 64 0 0 0 0
 D2
 Você vê um poço de fogo.
 ~
@@ -1264,7 +1254,7 @@ Dentro do Templo~
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D1
 Você vê um poço de fogo.
 ~
@@ -1282,9 +1272,7 @@ Poço de Fogo~
 fogo.  Ele é muito quente e será melhor andar nas bordas do poço se
 possível.
 ~
-69 g 0
-OX magik "*BREVICIPITIDAE*" unlock down
-OX magik "*BREVICIPITIDAE*" open down
+69 64 0 0 0 0
 D0
 Você vê o altar.
 ~
@@ -1309,8 +1297,7 @@ D5
 Você vê fogo.
 ~
 barreira mágica~
-:n 2 a barreira mágica
-abch -1 6970
+0 -1 6970
 S
 #6965
 Dentro do Templo~
@@ -1318,7 +1305,7 @@ Dentro do Templo~
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D2
 Você vê o Templo.
 ~
@@ -1336,7 +1323,7 @@ Dentro do Templo~
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê o Templo.
 ~
@@ -1354,7 +1341,7 @@ Dentro do Templo~
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê um poço de fogo.
 ~
@@ -1382,7 +1369,7 @@ Dentro do Templo~
 sala é iluminada por tochas que estão presas nas paredes, mas elas não
 produzem muita luz, e as chamas estão começando a desaparecer.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê o Templo.
 ~
@@ -1399,7 +1386,7 @@ Fora do Quarto Templo~
    Você se encontra antes de um pequeno Templo construído para Anura.  A
 entrada do Templo está a norte, enquanto um labirinto de túneis está a sul.
 ~
-69 cg 0
+69 68 0 0 0 0
 D0
 Você vê o Templo.
 ~
@@ -1415,7 +1402,7 @@ S
 No Fogo~
    Você está sobre uma pilha de cinzas, rodeado de ardentes labaredas.
 ~
-69 gce 0
+69 84 0 0 0 0
 D4
 Você vê a beirada do poço.
 ~
@@ -1427,7 +1414,7 @@ Uma Caverna Escura~
    Você está em uma escura caverna que contém uma porta de madeira no seu
 chão.
 ~
-69 acg 0
+69 69 0 0 0 0
 D3
 Você vê uma estranha toca.
 ~
@@ -1437,69 +1424,62 @@ D5
 Você vê um poço sombrio.
 ~
 porta~
-:n 2 a porta de madeira
-abg 6911 6972~
+0 6911 6972
 S
 #6972
 Um Poço Sombrio~
    Você está caindo em um poço sombrio, mas uma porta de madeira parou a sua
 queda temporariamente.
 ~
-69 ag 0
+69 65 0 0 0 0
 D5
 Você vê um poço sombrio.
 ~
 porta~
-:n 2 a porta de madeira
-abg 6912 6973~
+0 6912 6973
 S
 #6973
 Um Poço Sombrio~
    Você está caindo em um poço sombrio, mas uma porta de madeira parou a sua
 queda temporariamente.
 ~
-69 ga 0
+69 65 0 0 0 0
 D5
 Você vê um poço sombrio.
 ~
 porta~
-:n 2 a porta de madeira
-abg 6913 6974
+0 6913 6974
 S
 #6974
 Um Poço Sombrio~
    Você está caindo em um poço sombrio, mas uma porta de madeira parou a sua
 queda temporariamente.
 ~
-69 ga 0
+69 65 0 0 0 0
 D5
 Você vê um poço sombrio.
 ~
 porta~
-:n 2 a porta de madeira
-abg 6914 6975
+0 6914 6975
 S
 #6975
 Um Poço Sombrio~
    Você está caindo em um poço sombrio, mas uma porta de madeira parou a sua
 queda temporariamente.
 ~
-69 ga 0
+69 65 0 0 0 0
 D5
 Você vê um poço sombrio.
 ~
 porta~
-:n 2 a porta de madeira
-abg 6919 6982
+0 6919 6982
 S
 #6976
 Altar Principal~
    Você se encontra no altar principal do grande Templo de Anura que você
 encontrou com sucesso.
 ~
-69 g 0
-OX magik "*SALIENTIA*" unlock down
-OX magik "*SALIENTIA*" open down
+69 64 0 0 0 0
 D2
 Você vê um corredor com porta.
 ~
@@ -1509,21 +1489,19 @@ D5
 Você vê uma pequena sala.
 ~
 barreira mágica~
-:n 2 a barreira mágica
-abch -1 6987
+0 -1 6987
 S
 #6977
 Antes do Altar Principal~
    Você se encontra antes do altar principal.  O altar se encontra a norte
 atrás de uma porta de madeira.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê o altar principal.
 ~
 porta~
-:n 2 a porta de madeira
-abg 6915 6976
+0 6915 6976
 D2
 Você vê somente ar.
 ~
@@ -1537,7 +1515,7 @@ intensa coluna de ar que o impele para o alto.  Você provavelmente não está
 seguro ficando aqui, sendo melhor você pisar em um solo firme antes que o
 vento que o mantém resolva desaparecer.
 ~
-69 gs 11 
+69 262208 0 0 0 11
 D0
 Você vê o altar principal.
 ~
@@ -1563,7 +1541,7 @@ S
 O Altar Norte~
    Você se encontra no altar norte de Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D1
 Você vê somente ar.
 ~
@@ -1587,7 +1565,7 @@ intensa coluna de ar que o impele para o alto.  Você provavelmente não está
 seguro ficando aqui, sendo melhor você pisar em um solo firme antes que o
 vento que o mantém resolva desaparecer.
 ~
-69 gs 11
+69 262208 0 0 0 11
 D2
 Você vê o altar leste.
 ~
@@ -1608,7 +1586,7 @@ S
 O Altar Oeste~
    Você se encontra no altar oeste de Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê somente ar.
 ~
@@ -1630,7 +1608,7 @@ O Fundo do Poço Sombrio~
    Você chegou no fundo do poço.  Há altares para todas as direções, e
 existe muita areia no chão aqui.
 ~
-69 ag 0
+69 65 0 0 0 0
 D0
 Você vê um altar.
 ~
@@ -1656,7 +1634,7 @@ S
 O Altar Leste~
    Você se encontra no altar leste de Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê somente ar.
 ~
@@ -1680,7 +1658,7 @@ intensa coluna de ar que o impele para o alto.  Você provavelmente não está
 seguro ficando aqui, sendo melhor você pisar em um solo firme antes que o
 vento que o mantém resolva desaparecer.
 ~
-69 gs 11
+69 262208 0 0 0 11
 D0
 Você vê o altar oeste.
 ~
@@ -1701,7 +1679,7 @@ S
 O Altar Sul~
    Você se encontra no altar sul de Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D0
 Você vê o fundo de um poço.
 ~
@@ -1725,7 +1703,7 @@ intensa coluna de ar que o impele para o alto.  Você provavelmente não está
 seguro ficando aqui, sendo melhor você pisar em um solo firme antes que o
 vento que o mantém resolva desaparecer.
 ~
-69 gs 11
+69 262208 0 0 0 11
 D0
 Você vê o altar leste.
 D3
@@ -1742,7 +1720,7 @@ S
 Sob o Altar Principal~
    Você está sob o altar principal de Anura.
 ~
-69 g 0
+69 64 0 0 0 0
 D4
 Você vê o altar principal.
 ~
@@ -1759,7 +1737,7 @@ Um Poço Quase Sem Fim~
    Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que você está em um poço sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poço não parece ter fim...
 ~
@@ -1771,7 +1749,7 @@ Um Poço Quase Sem Fim~
    Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que você está em um poço sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poço não parece ter fim...
 ~
@@ -1783,7 +1761,7 @@ Um Poço Quase Sem Fim~
    Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que você está em um poço sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poço não parece ter fim...
 ~
@@ -1795,7 +1773,7 @@ Um Poço Quase Sem Fim~
    Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que você está em um poço sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poço não parece ter fim...
 ~
@@ -1807,7 +1785,7 @@ Um Poço Quase Sem Fim~
    Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que você está em um poço sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poço não parece ter fim...
 ~
@@ -1819,7 +1797,7 @@ Um Poço Quase Sem Fim~
    Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que você está em um poço sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poço não parece ter fim...
 ~
@@ -1831,7 +1809,7 @@ Um Poço Quase Sem Fim~
    Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que você está em um poço sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poço não parece ter fim...
 ~
@@ -1843,7 +1821,7 @@ Um Poço Quase Sem Fim~
    Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que você está em um poço sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poço não parece ter fim...
 ~
@@ -1855,7 +1833,7 @@ Um Poço Quase Sem Fim~
    Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que você está em um poço sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poço não parece ter fim...
 ~
@@ -1867,7 +1845,7 @@ Um Poço Quase Sem Fim~
    Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
 sustentar no ar.  Parece que você está em um poço sem fim.
 ~
-69 acfgh 9
+69 229 0 0 0 9
 D5
 O poço não parece ter fim...
 ~
@@ -1880,6 +1858,6 @@ O Fim do Poço~
 sendo que estranhas coisas peludas passam a todo instante por sobre
 você. Não há saída aparente.
 ~
-69 acfg 0
+69 101 0 0 0 0
 S
 $~

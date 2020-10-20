@@ -3,8 +3,7 @@ O Vazio~
    Você não faz idéia se você está flutuando ou não.  Sobre você, está
 localizado um estranho portal.
 ~
-0 du 1
-ON void
+0 1048584 0 0 0 1
 D4
 Você vê muitas pessoas transitando.
 ~
@@ -20,8 +19,7 @@ não vê nenhum canto ou sombra.
    Você vê escrito "SEM GORJETAS" com letras brilhantes, no meio da
 escuridão.
 ~
-0 dju 1
-ON limbo
+0 1049096 0 0 0 1
 S
 #2
 O Depósito Interno~
@@ -29,8 +27,7 @@ O Depósito Interno~
 objetos...  Nada especial, exceto por uma placa no canto dizendo: "Você não
 deveria estar aqui."
 ~
-0 cdju 1
-OL 108
+0 1049100 0 0 0 1
 S
 #3
 Uma Sala Totalmente Vazia~
@@ -38,7 +35,7 @@ Uma Sala Totalmente Vazia~
 absolutamente bizarro e completamente esquisito!  Há um estranho portal
 sobre você, e é como se você visse algum tipo de sala sobre você.
 ~
-0 dju 0
+0 1049096 0 0 0 0
 D4
 Você percebe que o portal sobre vocé parece ser de vidro, aliás, um
 vidro muito sujo.
@@ -51,23 +48,20 @@ R_START~
    Essa é uma sala usada internamente pelo sistema.  Você não deveria estar
 aqui.  Por favor, reporte pelo comando BUG como você chegou até aqui.
 ~
-0 0 0
-ON r_start
+0 0 0 0 0 0
 S
 #51
 R_DONATION~
    Essa é uma sala usada internamente pelo sistema.  Você não deveria estar
 aqui.  Por favor, reporte pelo comando BUG como você chegou até aqui.
 ~
-0 0 0
-ON r_donation
+0 0 0 0 0 0
 S
 #52
 R_RESSURECT~
    Essa é uma sala usada internamente pelo sistema.  Você não deveria estar
 aqui.  Por favor, reporte pelo comando BUG como você chegou até aqui.
 ~
-0 0 0
-ON r_ressurect
+0 0 0 0 0 0
 S
-$
+$~

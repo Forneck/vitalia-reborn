@@ -3,7 +3,7 @@ Um Túnel Longo~
    Ao entrar neste tunel, você encontra a correnteza deste rio que
 corta as montanhas.  Há uma ramificação para o norte.
 ~
-50 ad 7
+50 9 0 0 0 7
 D0
 ~
 ~
@@ -22,7 +22,7 @@ S
 Um Túnel Longo~
    O túnel se ramifica para o norte.
 ~
-50 ad 7
+50 9 0 0 0 7
 D0
 ~
 ~
@@ -40,7 +40,7 @@ S
 Um Túnel Longo~
    O túnel se ramifica para o sul.
 ~
-50 ad 7
+50 9 0 0 0 7
 D1
 ~
 ~
@@ -58,7 +58,7 @@ S
 Um Túnel Longo~
    O túnel se ramifica para o sul.
 ~
-50 ad 7
+50 9 0 0 0 7
 D0
 ~
 ~
@@ -83,7 +83,7 @@ gotejar da água e do limbo que vem de cima. O túnel continua ao leste
 e a correnteza do rio a oeste. Conduzindo acima ao noroeste há um
 corredor.
 ~
-50 ad 7
+50 9 0 0 0 7
 D0
 ~
 ~
@@ -109,7 +109,7 @@ S
 Um Longo Túnel Estreito~
    O túnel sobe diretamente para o leste.
 ~
-50 adi 5
+50 265 0 0 0 5
 D1
 ~
 ~
@@ -124,7 +124,7 @@ Um Túnel Largo~
    O túnel segue para leste e oeste. Para o leste, o túnel mergulha
 na direção de uma clara luz. Uma passagem pequena se abre ao norte.
 ~
-50 ad 5
+50 9 0 0 0 5
 D1
 ~
 ~
@@ -139,7 +139,7 @@ A Entrada da Caverna~
    Você se encontra bem no limite de um grande monte de pedregulhos,
 fruto do último deslizamento.
 ~
-50 ad 5
+50 9 0 0 0 5
 D2
 ~
 ~
@@ -155,7 +155,7 @@ Ao Pé dos Pedregulhos~
    Você está bem ao fundo de uma grande pilha de pedregulho. Um túnel
 se ramifica  para o norte e leste.
 ~
-50 ad 5
+50 9 0 0 0 5
 D0
 ~
 ~
@@ -174,7 +174,7 @@ Uma Entrada de Caverna~
    Você se encontra no meio de uma caverna grande e bonita. Um caminho
 conduz para a mais profunda escuridão.
 ~
-50 ad 5
+50 9 0 0 0 5
 D2
 ~
 ~
@@ -192,7 +192,7 @@ Uma Caverna Gigantesca~
 milhas de distância de você. Ossos de desafortunados aventureiros estão
 espalhados pelo chão de toda a caverna.
 ~
-50 ad 5
+50 9 0 0 0 5
 D4
 ~
 ~
@@ -206,7 +206,7 @@ S
 Uma Curva Estreita~
    O túnel segue para o sul e oeste.
 ~
-50 ad 5
+50 9 0 0 0 5
 D2
 ~
 ~
@@ -221,7 +221,7 @@ Uma Caverna Grande~
    Você se encontra dentro de uma caverna muito grande.  Muitas peles
 estão jogadas pelo chão.
 ~
-50 ad 5
+50 9 0 0 0 5
 D0
 ~
 ~
@@ -235,7 +235,7 @@ S
 Um Corredor Úmido~
    As paredes aqui estão extremamente úmidas, assim como o chão também.
 ~
-50 ad 5
+50 9 0 0 0 5
 D1
 Você ouve gotas de água pingando.
 ~
@@ -250,7 +250,7 @@ S
 Uma Piscina Subterrânea~
    Você avança penosamente por uma funda piscina de água limbosa.
 ~
-50 ad 6
+50 9 0 0 0 6
 D2
 ~
 ~
@@ -265,7 +265,7 @@ Um Corredor Úmido~
    As paredes do túnel são extremamente úmidas aqui. Você ouve a doce
 melodia provocada pelo constante movimento da água corrente ao sul
 ~
-50 ad 5
+50 9 0 0 0 5
 D0
 Você ouve gotas de água pingando.
 ~
@@ -281,7 +281,7 @@ Um Canal Estreito~
    Este canal é grande o bastante para que um homem adulto rasteje ou
 para que outro tipo de forma de vida caminhe livremente.
 ~
-50 ad 5
+50 9 0 0 0 5
 D0
 ~
 ~
@@ -301,7 +301,7 @@ Uma Caverna Grande~
    Você entrou dentro de uma caverna muito grande. As formações
 rochosas causariam espanto em práticamente todos os anões.
 ~
-50 ad 5
+50 9 0 0 0 5
 D0
 ~
 ~
@@ -316,7 +316,7 @@ Um Caminho de Fungo~
    Enquanto você anda através do caminho de fungos, você se vê
 envolvido por milhões e milhões de esporos. Você mal consegue respirar.
 ~
-50 ad 5
+50 9 0 0 0 5
 D0
 ~
 ~
@@ -332,7 +332,7 @@ O Caminho de Fungo~
    A medida em que você anda através do caminho, milhões de esporos
 são arremessados em sua direção. Isso lhe dificulta a respiração.
 ~
-50 ad 5
+50 9 0 0 0 5
 D2
 Um gigantesco Templo de Fungos fica ao sul.
 ~
@@ -349,7 +349,7 @@ O Templo de Fungos~
    Você se encontra dentro de um gigantesco cogumelo. Seu interior
 está todo enfeitado como um templo.
 ~
-50 ad 5
+50 9 0 0 0 5
 D0
 ~
 ~
@@ -364,7 +364,7 @@ Uma Passagem Inclinada~
    Você segue por um caminho que se inclina por baixo do templo de
 fungos.
 ~
-50 ad 5
+50 9 0 0 0 5
 D2
 ~
 ~
@@ -378,21 +378,21 @@ S
 Uma Passagem Inclinada~
    Você está em um caminho que suavemente emerge da piscina subterrânea.
 ~
-50 acd 5
+50 13 0 0 0 5
 D0
 Você ouve sons de água gotejando.
 ~
 ~
 0 -1 5005
-D4
-~
-~
-0 -1 5022
 D3
 Você vê uma estranha contrução.
 ~
 ~
 0 -1 6951
+D4
+~
+~
+0 -1 5022
 S
 #5024
 O Grande Deserto Oriental~
@@ -401,7 +401,7 @@ passa por constantes mudanças. Ao leste há uma pirâmide e ao oeste se
 encontra uma gigantesca montanha com seu cume embranquecido por neves
 eternas.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -425,7 +425,7 @@ passa por constantes mudanças. Ao leste há uma pirâmide e ao oeste se
 encontra uma gigantesca montanha com seu cume embranquecido por neves
 eternas.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -450,7 +450,7 @@ encontra uma gigantesca montanha com seu cume embranquecido por neves
 eternas. O buraco por onde você saiu é muito alto para que possa ser
 alcançado.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -474,7 +474,7 @@ passa por constantes mudanças. Ao leste há uma pirâmide e ao oeste se
 encontra uma gigantesca montanha com seu cume embranquecido por neves
 eternas.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -499,7 +499,7 @@ encontra uma gigantesca montanha com seu cume embranquecido por neves
 eternas. Você espia através de uma estreita trilha de terra que conduz
 para o oeste, por entre o pé das montanhas.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -529,7 +529,7 @@ passa por constantes mudanças. A nordeste há uma pirâmide e ao oeste se
 encontra uma gigantesca montanha com seu cume embranquecido por neves
 eternas.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -552,7 +552,7 @@ Um Pequeno Oásis~
 envolvivas pelas sombras de algumas raras palmeiras. Ao norte, você
 vê um pequeno acampamento, descansando.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Você vê três tendas e alguns camelos, amarrados a uma estaca. Sombras
 se movimentando dentro da tenda, sugerem atividades.
@@ -585,7 +585,7 @@ O Grande Deserto Oriental~
   Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
 passa por constantes mudanças. Ao leste há uma pirâmide.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -612,7 +612,7 @@ O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
 passa por constantes mudanças. Ao leste há uma pirâmide.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -639,7 +639,7 @@ O Grande Deserto Oriental~
      Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
 passa por constantes mudanças. A nordeste há uma pirâmide.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -666,7 +666,7 @@ O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
 passa por constantes mudanças. A sudeste há uma pirâmide.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -694,7 +694,7 @@ O Grande Deserto Oriental~
 passa por constantes mudanças. A leste há uma pirâmide que parece ser
 enorme, mesmo a esta distância.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -722,7 +722,7 @@ O Grande Deserto Oriental~
   Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
 passa por constantes mudanças. A nordeste há uma pirâmide.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -749,7 +749,7 @@ O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
 passa por constantes mudanças. A nordeste há uma pirâmide.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -776,7 +776,7 @@ O Grande Deserto Oriental~
     Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
 passa por constantes mudanças. Ao sul há uma pirâmide.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -803,7 +803,7 @@ O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
 passa por constantes mudanças. Ao sul há uma pirâmide.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -832,7 +832,7 @@ passa por constantes mudanças. Você está próximo a uma pirâmide
 gigantesca localizada a uns cem metros a oeste de você.  Daqui você
 consegue sentiro grande mal que se encontra dentro da estrutura volumosa.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -859,7 +859,7 @@ O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas.  A areia ao seu redor
 passa por constantes mudanças.  Ao norte há uma pirâmide.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Mesmo daqui, você pode sentir que há um grande mal que se encontra
 dentro da pirâmide projetando-se atraves das areias ao norte.
@@ -887,7 +887,7 @@ O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
 passa por constantes mudanças. Ao norte há uma pirâmide.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -914,7 +914,7 @@ O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
 passa por constantes mudanças. Ao norte há uma pirâmide.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -942,7 +942,7 @@ O Grande Deserto Oriental~
 passa por constantes mudanças.  Ao norte há uma pirâmide e há uma cidade
 arruinada a oeste.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -969,7 +969,7 @@ O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
 passa por constantes mudanças. Ao sul há uma pirâmide.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -996,7 +996,7 @@ O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
 passa por constantes mudanças. Ao sudoeste há uma pirâmide.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -1023,7 +1023,7 @@ O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
 passa por constantes mudanças. A oeste há uma pirâmide.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -1051,7 +1051,7 @@ O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
 passa por constantes mudanças. A oeste há uma pirâmide.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -1078,7 +1078,7 @@ O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
 passa por constantes mudanças. A noroeste há uma pirâmide.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -1105,7 +1105,7 @@ O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
 passa por constantes mudanças. A norte há uma pirâmide.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver... e uma pirâmide ao longe.
 ~
@@ -1133,7 +1133,7 @@ O Grande Deserto Oriental~
 passa por constantes mudanças. Ao sudoeste há uma pirâmide e ao leste se
 encontra um canion muito profundo.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -1157,7 +1157,7 @@ passa por constantes mudanças. A sudoeste há uma pirâmide e um canion
 muito profundo se encontra ao leste. Um pouco abaixo, você pode perceber
 uma pequena borda.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -1184,7 +1184,7 @@ O Grande Deserto Oriental~
 passa por constantes mudanças.  A oeste há uma pirâmide e um canion muito
 profundo se encontra ao leste.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -1213,7 +1213,7 @@ O Grande Deserto Oriental~
 passa por constantes mudanças. A oeste há uma pirâmide e um canion
 muito profundo se encontra ao leste.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -1236,7 +1236,7 @@ O Grande Deserto Oriental~
 passa por constantes mudanças. A noroeste há uma pirâmide e um canion
 muito profundo se encontra ao leste.
 ~
-50 0 2
+50 0 0 0 0 2
 D0
 Há areia até onde seus olhos conseguem ver.
 ~
@@ -1260,7 +1260,7 @@ descansar e se refrescar neste oásis maravilhoso.  Três tendas e
 alguns camelos fazem parte do cenário.  De dentro de duas das tendas,
 você ouve vozes abafadas, obviamente surpresas com a sua visita.
 ~
-50 g 2
+50 64 0 0 0 2
 D0
 Alguns camelos estão amarrados em um feixe de estacas cravadas no chão.
 ~
@@ -1289,7 +1289,7 @@ Dentro de Uma Pequena Tenda~
 foram guardadas. Homens e mulheres jazem deitados por todos os lados,
 possivelmente são os escravos do líder deste bando.
 ~
-50 dg 2
+50 72 0 0 0 2
 D3
 Você vê o centro do acampamento dos nômades.
 ~
@@ -1302,7 +1302,7 @@ Ao lado dos Camelos~
 estacas cravadas no chão. Ao leste você vê uma pequena tenda e ao norte
 você vê uma tenda bem maior e muito mais luxuosa.
 ~
-50 g 2
+50 64 0 0 0 2
 D0
 Esta tenda parece ser a residência temporária do líder dos nômades. Você
 mentalmente se faz um lembrete para visitar este lugar antes de partir.
@@ -1331,7 +1331,7 @@ A Tenda dos Guerreiros~
 são os protetores do bando. Quando você entra, sente que todos lhe fixam
 friamente.
 ~
-50 dg 2
+50 72 0 0 0 2
 D3
 Você vê alguns camelos bem tranquilos.
 ~
@@ -1344,7 +1344,7 @@ A Tenda Principal~
 Um tapete foi cuidadosamente estendido sobre a areia e numerosas cestas
 enfileiram-se nas paredes.
 ~
-50 dg 2
+50 72 0 0 0 2
 D1
 ~
 ~
@@ -1362,7 +1362,7 @@ examina cuidadosamente as belas tapeçarias, cestas e alguns pinturas
 que ali estão enfeitando o ambiente e conclui que, definitvamente,
 o dono desta tenda é muito rico.
 ~
-50 dg 2
+50 72 0 0 0 2
 D3
 Você vê a entrada desta tenda.
 ~
@@ -1378,7 +1378,7 @@ de repente, a corda se rompe e você cai.......
                 ...e cai
                         ...e você encontra a morte nas pedras abaixo.
 ~
-50 bd 5
+50 10 0 0 0 5
 S
 #5063
 A Borda de Vento~
@@ -1387,7 +1387,7 @@ e acha que este canion deve ter mais ou menos 1/2 quilômetro de
 profundidade. Para o oeste há uma caverna escura que segue por debaixo
 das areias do deserto e sobre a sua cabeça há uma ponte de corda.
 ~
-50 0 5
+50 0 0 0 0 5
 D3
 ~
 ~
@@ -1404,7 +1404,7 @@ A Entrada da Caverna~
 ouve sons estranhos, mas não consegue ver nada.  A caverna se aprofunda
 na escuridão.
 ~
-50 ad 5
+50 9 0 0 0 5
 D1
 Fora daqui está bem mais claro e venta muito.
 ~
@@ -1422,7 +1422,7 @@ displicentemente e as inúmeras carcaças apodrecendo, você diria que esta
 é a toca de um dragão. Dizer que tipo de dragão é este, você não poderia
 dizer com certeza. A caverna estreita fora em um túnel para o oeste.
 ~
-50 adgh 5
+50 201 0 0 0 5
 D1
 ~
 ~
@@ -1437,7 +1437,7 @@ Um Túnel Largo~
    Este túnel parece entrar infinitamente atraves da escuridão. Você
 cuidadosamente vai apalpando as paredes para sentir por onde anda.
 ~
-50 ad 5
+50 9 0 0 0 5
 D1
 ~
 ~
@@ -1452,7 +1452,7 @@ Um Túnel Mais Estreito~
    O túnel vai ficando muito estreito e você tem que se espremer para
 conseguir passar. O chão parece que se nivelou um pouco.
 ~
-50 ad 5
+50 9 0 0 0 5
 D1
 ~
 ~
@@ -1467,7 +1467,7 @@ Uma Trinca Estreita~
    Esta é a parte do túnel onde fica mais difícil de se mover, porque as
 paredes parecem que estão vindo ao seu encontro.
 ~
-50 adi 5
+50 265 0 0 0 5
 D0
 ~
 ~
@@ -1483,7 +1483,7 @@ Uma Pequena Caverna~
 muito estreita aparece na parede a leste.  O chão se inclina para cima
 agora.
 ~
-50 ad 5
+50 9 0 0 0 5
 D1
 ~
 ~
@@ -1498,7 +1498,7 @@ Um Pequeno Feixe de Luz~
    Atraves deste pequeno feixe de luz você pode ver um buraco estreito no
 teto grande o bastante para uma pessoa passar. Ao leste está a caverna.
 ~
-50 ad 5
+50 9 0 0 0 5
 D1
 ~
 ~
@@ -1508,4 +1508,4 @@ D4
 ~
 0 -1 5009
 S
-$
+$~

@@ -10,15 +10,15 @@ limitadas.  Você pode escolher seguir a trilha em frente para o castelo, ou
 voltar para a floresta diminuindo suas chances de viver caso venha a se
 perder.
 ~
-8 1 3
-D7
-~
-~
-0 -1 5717
+8 1 0 0 0 3
 D1
 ~
 ~
 0 -1 801
+D7
+~
+~
+0 -1 5717
 S
 #801
 A Sinuosa Trilha do Penhasco~
@@ -26,7 +26,7 @@ A Sinuosa Trilha do Penhasco~
 castelo.  Você não vê nenhuma luz ou sinal de vida.  Possivelmente é só um
 antigo castelo abandonado.  Possivelmente.
 ~
-8 1 3
+8 1 0 0 0 3
 D3
 ~
 ~
@@ -45,7 +45,7 @@ percebe que os portões estão fechados, provavelmente trancados.  Ao olhar
 para o ameaçador castelo acima, um tremor corre através de sua alma.  Este
 lugar lhe traz um mal pressentimento.
 ~
-8 1 3
+8 1 0 0 0 3
 D3
 ~
 ~
@@ -61,7 +61,7 @@ A Sinuosa Trilha do Penhasco~
 pode ver o topo da torre, onde morcegos circulam constantemente como se a
 tivessem observando, protegendo para algum desconhecido mestre.
 ~
-8 1 3
+8 1 0 0 0 3
 D1
 ~
 ~
@@ -79,7 +79,7 @@ trilha.  Daqui você vê que toda a floresta está anexada junto as enormes
 montanhas, formando uma espécie de prisão na forma de floresta, cheia de
 horrores.  Que lugar mais terrível onde você foi parar!
 ~
-8 1 3
+8 1 0 0 0 3
 D1
 ~
 ~
@@ -94,7 +94,7 @@ A Sinuosa Trilha do Penhasco~
    A trilha segue oeste - leste em direção ao infernal castelo, e oeste na
 direção da terrível floresta.  Você realmente não está com muitas escolhas.
 ~
-8 1 3
+8 1 0 0 0 3
 D1
 ~
 ~
@@ -110,7 +110,7 @@ A Sinuosa Trilha do Penhasco~
 castelo.  Você está extremamente acima da floresta, olhando para o topo das
 árvores.  Não que você esteja tão distante - está terrivelmente escuro lá.
 ~
-8 1 3
+8 1 0 0 0 3
 D3
 ~
 ~
@@ -127,7 +127,7 @@ próximo de você.  A oeste se encontra a base de vários degraus de pedras que
 se direcionam para os portões principais do castelo.  A trilha também segue
 para baixo em direção a floresta.
 ~
-8 1 3
+8 1 0 0 0 3
 D3
 ~
 ~
@@ -143,7 +143,7 @@ A Sinuosa Trilha do Penhasco~
 no penhasco, segue para a entrada principal deste diabólico lugar.  A trilha
 volta para leste, se curvando em direção a floresta.
 ~
-8 1 3
+8 1 0 0 0 3
 D1
 ~
 ~
@@ -159,7 +159,7 @@ Os Portões do Castelo~
 portas de carvalho que parecem ser fortes o bastante para conter um exército
 inteiro.  Uma escada de pedras segue de volta para a floresta.
 ~
-8 0 0
+8 0 0 0 0 0
 D0
 ~
 portão~
@@ -178,7 +178,7 @@ seguindo, alguém que para quando você para, e anda quando você anda, mais
 olhando ao redor você percebe que está se passando por tolo.  A saída deste
 terrível, e morto castelo aparenta ser ao sul.
 ~
-8 9 0
+8 9 0 0 0 0
 D0
 ~
 ~
@@ -199,7 +199,7 @@ um lugar abandonado, mesmo assim você tem a sensação oposta.  Grandes
 arcadas seguem para leste e oeste em direção a grande salas, o corredor
 continua para norte e sul.
 ~
-8 0 0
+8 0 0 0 0 0
 D0
 ~
 ~
@@ -224,7 +224,7 @@ terrível local.  Um teto, com uma cúpula e diversos entalhos, se eleva bem
 acima de você.  Uma pequena porta de carvalho se dirige para leste, e uma
 grande arcada segue para oeste.
 ~
-8 0 0
+8 0 0 0 0 0
 D0
 ~
 ~
@@ -232,7 +232,6 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
 1 -1 824
 D2
 ~
@@ -252,7 +251,7 @@ na escuridão.  Olhando nesta direção você sente um leve arrepio, contudo sem
 saber a razão.  O corredor segue ao norte para as escadas ou para sul em
 direção a entrada (ou saída) do castelo.
 ~
-8 8 0
+8 8 0 0 0 0
 D0
 ~
 ~
@@ -273,7 +272,7 @@ escuridão.  Você não escuta nenhum som vindo de cima, mas no momento tudo
 parece estar muito quieto.  Você deve seguir subindo as escadas, ou voltar
 para sul em direção aos portões do castelo.
 ~
-8 8 0
+8 8 0 0 0 0
 D2
 ~
 ~
@@ -290,7 +289,7 @@ beco sem saída.  Há somente espaço para uma pessoa se espremer através da
 passagem, e o sentimento que você teve anteriormente se intensifica ao
 adentrar cada vez mais nesta passagem.  Não seria melhor voltar para oeste?
 ~
-8 264 0
+8 264 0 0 0 0
 D1
 ~
 ~
@@ -306,11 +305,10 @@ Uma Passagem Estreita~
 das direções exceto para oeste, voltando de onde você veio.  Há somente
 espaço para você se virar.
 ~
-8 264 0
+8 264 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
 1 -1 821
 D3
 ~
@@ -326,7 +324,7 @@ exatamente onde estava pintado.  Parece que esta sala pode ter sido usada
 para entretenimento de hóspedes anteriormente, mais agora é como todas as
 outras áreas deste lugar - mortas.
 ~
-8 8 0
+8 8 0 0 0 0
 D3
 ~
 ~
@@ -343,7 +341,7 @@ suficiente para doze pessoas sentadas, está no centro da sala, castiçais de
 prata ainda com cera repousam sobra ela.  Uma varanda se abre para o sul com
 uma larga porta.  A única outra saída daqui é para leste.
 ~
-8 8 0
+8 8 0 0 0 0
 D1
 ~
 ~
@@ -363,7 +361,7 @@ parece ondular e sair de foco, com a neblina que se agarra no topo das
 extensa e aberta superfície de pedra.  Você pode voltar a Sala de Banquetes,
 ao norte daqui.
 ~
-8 8 0
+8 8 0 0 0 0
 D0
 ~
 ~
@@ -377,7 +375,7 @@ paredes tem as mesmas pinturas, que parecem ser sempre as mesmas por todo o
 castelo, mas diferente desses antigos rabiscos não há nada aqui.  A saída
 segue para leste.
 ~
-8 9 0
+8 9 0 0 0 0
 D1
 ~
 ~
@@ -393,11 +391,10 @@ três histórias, desconhecidas, pequenos nichos construídos na parede.  Esses
 nichos se parecem com um grande número de galerias de sepultamentos.  Talvez
 seria uma boa idéia sair desta sala.
 ~
-8 9 0
+8 9 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
 1 -1 816
 D5
 ~
@@ -410,7 +407,7 @@ Uma Grande Escada de Pedras~
 caixões.  Não parece ter ninguém no quarto, pelo menos, ninguém que você
 pode ver.  Entretanto, isso não significa que não há qualquer um aqui.
 ~
-8 9 0
+8 9 0 0 0 0
 D4
 ~
 ~
@@ -427,7 +424,7 @@ se parece com uma câmara de sepultamento ou algo do gênero.  Você tem uma
 sensação muito ruim ao se aproximar destes caixões.  É algo bastante
 ominoso, certamente.
 ~
-8 9 0
+8 9 0 0 0 0
 D4
 ~
 ~
@@ -446,11 +443,10 @@ alcançar você.  Iluminando para baixo das escadas, você somente tem a
 confirmação de que elas ainda seguem mais do que você pode ver e adentram na
 escuridão.
 ~
-8 9 0
+8 9 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
 1 -1 812
 D5
 ~
@@ -464,7 +460,7 @@ por uma pilha de criptas que atingem o teto.  Este não é, definitivamente, o
 tipo de sala que você gostaria de permanecer muito tempo, pela qual que seja
 a razão.
 ~
-8 9 0
+8 9 0 0 0 0
 D1
 ~
 ~
@@ -482,7 +478,7 @@ sendo observado, não importando o lugar que você esteja da sala.
 Estranhamente, essa sensação não parece vir dos caixões que o circundam,
 mais sim de outra parte, não tão obvia assim.
 ~
-8 9 0
+8 9 0 0 0 0
 D2
 ~
 ~
@@ -501,7 +497,7 @@ observando cada movimento seu, esperando o momento certo.  Uma pequena
 passagem segue para sul, saindo do canto sudoeste da sala.  Uma ampla escada
 se dirige para uma grande porta de carvalho acima.
 ~
-8 9 0
+8 9 0 0 0 0
 D0
 ~
 ~
@@ -525,7 +521,7 @@ Câmara Abobadada~
 A pequena, e escura passagem parece o chamar, ela esta a sul de você.  Você
 pensa ter visto um sinal de luz vindo do interior desta passagem...
 ~
-8 9 0
+8 9 0 0 0 0
 D0
 ~
 ~
@@ -546,7 +542,7 @@ esperava ter desde quando entrou nas florestas abaixo desse castelo.  Os
 vários caixões espalhados, e a intensa escuridão lhe da o sentimento de ter
 que sair deste lugar o mais rápido possível, o MAIS breve possível.
 ~
-8 9 0
+8 9 0 0 0 0
 D0
 ~
 ~
@@ -566,7 +562,7 @@ três histórias, possivelmente mais, e o número de caixões que cobrem o
 assoalho passa de vinte.  Isso realmente faz você pensar por que razão
 entrou neste lugar.
 ~
-8 9 0
+8 9 0 0 0 0
 D0
 ~
 ~
@@ -586,7 +582,7 @@ Uma Câmara Iluminada por Velas~
 pequenos suportes presos nas paredes.  Esta sala é como uma ligação para uma
 sala muito maior ao sul daqui.  A câmara abobadada é para o norte.
 ~
-8 8 0
+8 8 0 0 0 0
 D0
 ~
 ~
@@ -606,7 +602,7 @@ sido usada para colocar bebidas ou outras coisas.  Fora isso, não parece
 existir nenhum outro tipo de objeto nesta sala.  A saída segue para norte
 através da pequena passagem e volta para a câmara abobadada.
 ~
-8 9 0
+8 9 0 0 0 0
 D0
 ~
 ~
@@ -622,7 +618,7 @@ O Caixão do Soberano~
 travesseiro como descanso de cabeça.  Isso mostra que o Soberano dormia
 muito bem por aqui.
 ~
-8 9 0
+8 9 0 0 0 0
 D3
 ~
 ~
@@ -635,7 +631,7 @@ pequena distância até um corredor.  Você pode ouvir o som de goteiras de
 água, e as paredes parecem ser úmidas ao toque.  Esta não se parece
 definitivamente uma das mais luxuosas seções do castelo.
 ~
-8 9 0
+8 9 0 0 0 0
 D4
 ~
 ~
@@ -651,7 +647,7 @@ Um Escuro Corredor Gotejante~
 ter uma saída a sul daqui.  Há uma grande e pesada porta no final do
 corredor.
 ~
-8 9 0
+8 9 0 0 0 0
 D2
 ~
 ~
@@ -669,7 +665,7 @@ significa que não há nada lá.  O corredor úmido e desagradável segue para
 norte em direção às escadarias, e para cima saindo dessa terrível parte do
 castelo.
 ~
-8 9 0
+8 9 0 0 0 0
 D0
 ~
 ~
@@ -677,7 +673,6 @@ D0
 D2
 ~
 porta~
-:n 2 a porta
 1 -1 837
 S
 #837
@@ -690,11 +685,10 @@ superfície polida da donzela de ferro, se matutando de como ela ainda está
 limpa e em bom estado.  Bom, limpa e polida?  Esta donzela de ferro ainda
 está sendo usada!!!
 ~
-8 9 0
+8 9 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
 1 -1 836
 S
 #838
@@ -702,7 +696,7 @@ Escadas Sinuosas~
    A escada serpenteia em direção ao topo da torre.  As paredes de pedras de
 ambos os lados servem como corrimões.
 ~
-8 9 0
+8 9 0 0 0 0
 D4
 ~
 ~
@@ -717,7 +711,7 @@ Escadas Sinuosas~
    A escada serpenteia em direção ao topo da torre.  As paredes de pedra de
 ambos os lados servem como corrimões.
 ~
-8 9 0
+8 9 0 0 0 0
 D4
 ~
 ~
@@ -732,7 +726,7 @@ Escadas Sinuosas~
    A escada serpenteia em direção ao topo da torre.  As paredes de pedra de
 ambos os lados servem como corrimões.
 ~
-8 9 0
+8 9 0 0 0 0
 D4
 ~
 ~
@@ -754,7 +748,7 @@ seu comando.  Você balança sua cabeça, podendo ter agora um controle maior
 sobre si mesmo.  Você volta para a sua atual situação e realidade.  A
 fantasia estava muito melhor...
 ~
-8 9 0
+8 9 0 0 0 0
 D5
 ~
 ~

@@ -7,7 +7,7 @@ atravessando as nuvens.  Num primeiro momento, o caminho parece não ter
 fim, mas a única forma de descobrir é continuar em frente, subindo em 
 direção aos céus de @yVitália@n.
 ~
-28 cfghr 1
+28 131300 0 0 0 1
 D4
 ~
 ~
@@ -23,7 +23,7 @@ paz e tranquilidade envolve seu corpo e você percebe um som que chega ao
 longe, como suave melodia sendo entoada por um coral de vozes infantis.  E 
 você prossegue subindo.
 ~
-28 fg 1
+28 96 0 0 0 1
 D4
 ~
 ~
@@ -39,7 +39,7 @@ paz e tranquilidade envolve seu corpo e você percebe um som que chega ao
 longe, como suave melodia sendo entoada por um coral de vozes infantis.  E 
 você prossegue subindo.
 ~
-28 fg 1
+28 96 0 0 0 1
 D4
 ~
 ~
@@ -56,7 +56,7 @@ tranquilidade envolve seu corpo e você percebe um som que chega ao longe,
 como suave melodia sendo entoada por um coral de vozes infantis.  E você 
 continua seguindo para cima, atravessando outra grande camada de nuvens.
 ~
-28 fg 1
+28 96 0 0 0 1
 D4
 ~
 ~
@@ -74,7 +74,7 @@ tranquilidade envolve seu corpo e você percebe um som que chega ao longe,
 como suave melodia sendo entoada por um coral de vozes infantis.  O que 
 haverá alem dessas imensas e compactas nuvens?
 ~
-28 fg 1
+28 96 0 0 0 1
 D4
 ~
 ~
@@ -96,7 +96,7 @@ admirando essa obra majestosa e imponente, obra dos seres divinos de Vitália:
 a @WGrande Catedral de Cristal, @ncom infinitas torres altíssimas e tão pontiagudas
 que não se consegue perceber onde terminam.
 ~
-28 fg 1
+28 96 0 0 0 1
 D0
 ~
 ~
@@ -115,7 +115,7 @@ paredes de cristal, se misturam e se fundem com o som retumbante dos sinos e
 se transformam em ondulações multi-coloridas, que parecem dançar em pleno ar, 
 como se estivessem celebrando algo deveras importante.
 ~
-28 g 1
+28 64 0 0 0 1
 D0
 ~
 ~
@@ -135,7 +135,7 @@ cerimônia está prestes a se iniciar ali.  Para o leste e oeste encontram-se
 quase escondidas, pequeninas passagens, em forma de arco, escavadas 
 diretamente no cristal.
 ~
-28 dg 0
+28 72 0 0 0 0
 D0
 ~
 ~
@@ -143,23 +143,21 @@ D0
 D1
 ~
 arco~
-:n 1 o arco entalhado
-abg -1 2818
+0 -1 2818
 D3
 ~
 arco~
-:n 1 o arco entalhado
-abg -1 2823
-E
-arco entalhe entalhado~
-Feito do cristal mais puro que existe, ele parece ter vida própria, já que
-as inscrições que foram entalhadas nele parecem ondular e crescer à medida que
-se tenta entender seu significado: @y"V'tah alyia enam luvieri enam lu'lyia"@n.
-~
+0 -1 2823
 E
 vitral vitrais~
 É um enorme vitral, multi-colorido e de beleza perfeita, e está retratando o 
 início de tudo, com a representação da Ordem, da Magia e da Chama de Luz.
+~
+E
+arco entalhe entalhado~
+Feito do cristal mais puro que existe, ele parece ter vida própria, já que
+as inscrições que foram entalhadas nele parecem ondular e crescer à medida que
+se tenta entender seu significado: 	y"V'tah alyia enam luvieri enam lu'lyia"	n.
 ~
 S
 #2808
@@ -173,7 +171,7 @@ belíssimas pinturas, os Deuses de Vitália, e nas grossas paredes de cristal,
 mãos divinas transformaram a pedra fria e transparente em riquíssimos vitrais,
 que mostram cenas do cotidiano dos habitantes deste belo mundo.
 ~
-28 dg 0
+28 72 0 0 0 0
 D0
 ~
 ~
@@ -183,9 +181,10 @@ D2
 ~
 0 -1 2807
 E
-cúpula~
-Essa imensa cúpula de cristal azul bem claro, cataliza a luz e ilumina todo o 
-ambiente, dando-lhe a sensação de estar em um lugar sagrado.
+teto~
+Olhando para cima, você observa a grandiosidade deste teto, magníficamente
+pintado com a representação das Divindades.  As figuras parecem estar vivas,
+tamanha a perfeição da obra.
 ~
 E
 vitral vitrais~
@@ -193,10 +192,9 @@ São imensos vitrais, multi-coloridos e de beleza perfeita, e estão retratando
 cenas do cotidiano dos habitantes deste belíssimo mundo.
 ~
 E
-teto~
-Olhando para cima, você observa a grandiosidade deste teto, magníficamente
-pintado com a representação das Divindades.  As figuras parecem estar vivas,
-tamanha a perfeição da obra.
+cúpula~
+Essa imensa cúpula de cristal azul bem claro, cataliza a luz e ilumina todo o 
+ambiente, dando-lhe a sensação de estar em um lugar sagrado.
 ~
 S
 #2809
@@ -210,7 +208,7 @@ perfeitamente o que esteja ocorrendo lá na frente.  O chão está totalmente
 coberto por névoa espessa e macia, que cobre totalmente o longo corredor, como
 se fosse um imenso tapete branco-azulado.
 ~
-28 dg 0
+28 72 0 0 0 0
 D0
 ~
 ~
@@ -218,20 +216,20 @@ D0
 D2
 ~
 ~
-0 -1 2808~
-E
-banco fileira bancos fileiras~
-Embora não tenham a aparência nobre dos grandes tronos, são muito elegantes e
-parecem ser bastante confortáveis, pois apesar de serem feitos de cristal puro,
-possuem cada um, delicada almofada de macio veludo vermelho, adornada com 
-belíssimos galões dourados e em cada uma, o @GBrasão de Vitália @nfoi perfeitamente
-bordado.
-~
+0 -1 2808
 E
 chão tapete~
 É interessante observar como o chão está totalmente coberto por névoa espessa
 e macia, cobrindo totalmente o longo corredor, como se fosse um imenso tapete
 branco-azulado.
+~
+E
+banco fileira bancos fileiras~
+Embora não tenham a aparência nobre dos grandes tronos, são muito elegantes e
+parecem ser bastante confortáveis, pois apesar de serem feitos de cristal puro,
+possuem cada um, delicada almofada de macio veludo vermelho, adornada com 
+belíssimos galões dourados e em cada uma, o 	GBrasão de Vitália 	nfoi perfeitamente
+bordado.
 ~
 S
 #2810
@@ -249,22 +247,21 @@ uma pérola descomunalmente grande foi colocada sobre um lindo pedestal feito
 de ouro maciço e totalmente cravejado por imensas e variadas gemas preciosas,
 para que os que estejam com sede possam se saciar.
 ~
-28 dg 0
-D2
-~
-~
-0 -1 2809
+28 72 0 0 0 0
 D0
 ~
 ~
 0 -1 2840
+D2
+~
+~
+0 -1 2809
 E
-banco fileira bancos fileiras~
-Embora não tenham a aparência nobre dos grandes tronos, são muito elegantes e
-parecem ser bastante confortáveis, pois apesar de serem feitos de cristal puro,
-possuem cada um, delicada almofada de macio veludo vermelho, adornada com 
-belíssimos galões dourados e em cada uma, o @GBrasão de Vitália @nfoi 
-perfeitamente bordado.
+bacia bebedouro~
+É uma espécie de bacia muito bonita, em formato de concha aberta, escavada em 
+uma pérola descomunalmente grande e foi colocada sobre um lindo pedestal feito
+de ouro maciço e totalmente cravejado por imensas e variadas gemas preciosas,
+para que os que estejam com sede possam se saciar.
 ~
 E
 chão tapete~
@@ -273,11 +270,12 @@ e macia, cobrindo totalmente o longo corredor, como se fosse um imenso tapete
 branco-azulado.
 ~
 E
-bacia bebedouro~
-É uma espécie de bacia muito bonita, em formato de concha aberta, escavada em 
-uma pérola descomunalmente grande e foi colocada sobre um lindo pedestal feito
-de ouro maciço e totalmente cravejado por imensas e variadas gemas preciosas,
-para que os que estejam com sede possam se saciar.
+banco fileira bancos fileiras~
+Embora não tenham a aparência nobre dos grandes tronos, são muito elegantes e
+parecem ser bastante confortáveis, pois apesar de serem feitos de cristal puro,
+possuem cada um, delicada almofada de macio veludo vermelho, adornada com 
+belíssimos galões dourados e em cada uma, o 	GBrasão de Vitália 	nfoi 
+perfeitamente bordado.
 ~
 S
 #2811
@@ -295,55 +293,27 @@ de todos os Deuses de Vitália, tão bem esculpidas que parecem até ter vida
 própria.  Olhando para cima, através da cúpula de cristal, você pode ver o céu
 totalmente límpido e absolutamente azul.   Silêncio profundo envolve o ambiente.
 ~
-28.1 cgvue 0
-ON catedral
-D4
-~
-porta passagem~
-:n 2 uma passagem
-abd -1 2817
+28 3145812 0 0 0 0
 D0
 ~
 entranhas~
-:n 2 as entranhas
-abcd -1 2836
+0 -1 2836
 D2
 ~
 porta passagem~
-:n 2 uma passagem
-abcd -1 2816
-D8
-~
-porta passagem~
-:n 2 uma porta de cristal
-abcd -1 2845
+0 -1 2816
 D3
 ~
 porta passagem~
-:n 2 uma porta de cristal
-abcd -1 2843
-E
-altar-mor~
-É uma peça majestosa, feita de ouro maciço, totalmente coberto por delicadíssimos
-mosaicos e belíssimos filigranas, tão ricamente enfeitado que você tem certeza
-de que não foram mãos mortais que trabalharam ali.   O altar foi colocado no 
-ponto mais alto da sala, para que todos possam admirar sua beleza, mesmo 
-estando no ponto mais distante da Catedral. 
+0 -1 2843
+D4
 ~
-E
-cúpula cristal~
-A imensa cúpula de cristal azul bem claro, cataliza a luz e ilumina o ambiente,
-está diretamente posicionada sobre o altar-mor e um grande raio de luz a 
-atravessa, iluminando-lhe o centro, onde se poder ver estampado o 
-@GBrasão de Vitália@n, gravado em luetn'amir, no chão.
+porta passagem~
+0 -1 2817
+D8
 ~
-E
-brasão~
-Os olhos mortais não conseguem definir com precisão aquilo que foi estampado
-neste @GBrasão@n.  Feito com um material desconhecido pelos homens, sabe-se
-apenas que as palavras que ali foram escritas são incompreensíveis à mente
-humana.
-~
+porta passagem~
+0 -1 2845
 E
 estátua estátuas deuses~
 Como narrar o inenarrável? Como descrever o indiscritível?  É apenas uma 
@@ -352,6 +322,28 @@ atentamente, ela parece sorrir, como se entendesse sua curiosidade quase
 infantil.   Por alguns instantes você se sente tomado pela emoção de estar
 diante de um dos deuses de Vitália....e então você se lembra: é apenas a 
 estátua de um deles.
+~
+E
+brasão~
+Os olhos mortais não conseguem definir com precisão aquilo que foi estampado
+neste 	GBrasão	n.  Feito com um material desconhecido pelos homens, sabe-se
+apenas que as palavras que ali foram escritas são incompreensíveis à mente
+humana.
+~
+E
+cúpula cristal~
+A imensa cúpula de cristal azul bem claro, cataliza a luz e ilumina o ambiente,
+está diretamente posicionada sobre o altar-mor e um grande raio de luz a 
+atravessa, iluminando-lhe o centro, onde se poder ver estampado o 
+	GBrasão de Vitália	n, gravado em luetn'amir, no chão.
+~
+E
+altar-mor~
+É uma peça majestosa, feita de ouro maciço, totalmente coberto por delicadíssimos
+mosaicos e belíssimos filigranas, tão ricamente enfeitado que você tem certeza
+de que não foram mãos mortais que trabalharam ali.   O altar foi colocado no 
+ponto mais alto da sala, para que todos possam admirar sua beleza, mesmo 
+estando no ponto mais distante da Catedral. 
 ~
 S
 #2812
@@ -365,7 +357,7 @@ você observa as estátuas de todos os Deuses de Vitália, belamente
 esculpidas.  A luz que atinge o altar parece ser divina, tamanha sua 
 intensidade e força.   Parece até ser uma benção divina.
 ~
-28.1 dg 0
+28 72 0 0 0 0
 D0
 ~
 ~
@@ -374,16 +366,14 @@ D1
 ~
 ~
 0 -1 2814
-D8
-~
-porta passagem~
-:n 2 uma porta de cristal
-abcd -1 2845
 D7
 ~
 porta~
-:n 2 uma pequena porta de cristal
-abcd -1 2837
+0 -1 2837
+D8
+~
+porta passagem~
+0 -1 2845
 S
 #2813
 As Cerimônias Sagradas~
@@ -396,7 +386,7 @@ altar, você observa as estátuas de todos os Deuses de Vitália, belamente
 esculpidas.  A luz que atinge o altar parece ser divina, tamanha sua 
 intensidade e força.  Parece até ser uma benção divina.
 ~
-28.1 dg 0
+28 72 0 0 0 0
 D2
 ~
 ~
@@ -405,16 +395,14 @@ D3
 ~
 ~
 0 -1 2815
-D8
-~
-porta passagem~
-:n 2 uma porta de cristal
-abcd -1 2845
 D7
 ~
 porta~
-:n 2 uma pequena porta de cristal
-abcd -1 2837
+0 -1 2837
+D8
+~
+porta passagem~
+0 -1 2845
 S
 #2814
 As Cerimônias Sagradas~
@@ -427,7 +415,7 @@ você observa as estátuas de todos os Deuses de Vitália, belamente
 esculpidas.  A luz que atinge o altar parece ser divina, tamanha sua 
 intensidade e força.   Parece até ser uma benção divina.
 ~
-28.1 dg 0
+28 72 0 0 0 0
 D0
 ~
 ~
@@ -436,16 +424,14 @@ D3
 ~
 ~
 0 -1 2812
-D8
-~
-porta passagem~
-:n 2 uma porta de cristal
-abcd -1 2846
 D7
 ~
 porta~
-:n 2 uma pequena porta de cristal
-abcd -1 2837
+0 -1 2837
+D8
+~
+porta passagem~
+0 -1 2846
 S
 #2815
 As Cerimônias Sagradas~
@@ -458,25 +444,23 @@ você observa as estátuas de todos os Deuses de Vitália, belamente
 esculpidas.  A luz que atinge o altar parece ser divina, tamanha sua 
 intensidade e força.  Parece até ser uma benção divina.
 ~
-28.1 dg 0
-D2
-~
-~
-0 -1 2814
+28 72 0 0 0 0
 D1
 ~
 ~
 0 -1 2813
-D8
+D2
 ~
-porta passagem~
-:n 2 uma porta de cristal
-abcd -1 2847
+~
+0 -1 2814
 D7
 ~
 porta~
-:n 2 uma pequena porta de cristal
-abcd -1 2837
+0 -1 2837
+D8
+~
+porta passagem~
+0 -1 2847
 S
 #2816
 A Sala das Divindades~
@@ -490,39 +474,35 @@ acompanhando a doce melodia que está sendo entoada por um coral de vozes
 infantis.   No meio da sala, um imenso painel de cristal límpido e transparente,
 paira sobre o ar, como se estivesse sendo suspenso por grandes mãos invisíveis.
 ~
-28 dg 0
-OL 106
+28 72 0 0 0 0
+D0
+~
+porta passagem~
+0 -1 2836
+D2
+~
+porta passagem~
+0 -1 2811
 D5
 ~
 ~
 0 -1 2817
-D0
-~
-porta passagem~
-:n2 uma porta de cristal
-abcd -1 2836
-D2
-~
-porta passagem~
-:n 2 uma porta de cristal
-abcd -1 2811
 D8
 ~
 porta passagem~
-:n 2 uma porta de cristal
-abcd -1 2845
-E
-brasão~
-Os olhos mortais não conseguem definir com precisão aquilo que foi estampado
-neste @GBrasão@n.  Feito com um material desconhecido pelos homens, sabe-se
-apenas que as palavras que ali foram escritas são incompreensíveis à mente
-humana.
-~
+0 -1 2845
 E
 místico cristal painel~
 Olhar para algo tão extraordináriamente belo é de fato um privilégio.   Feito
 do mais puro cristal, ele parece conter em seu interior, inúmeras frases 
 místicas que com certeza apenas os mais experientes poderão compreender.
+~
+E
+brasão~
+Os olhos mortais não conseguem definir com precisão aquilo que foi estampado
+neste 	GBrasão	n.  Feito com um material desconhecido pelos homens, sabe-se
+apenas que as palavras que ali foram escritas são incompreensíveis à mente
+humana.
 ~
 S
 #2817
@@ -537,26 +517,31 @@ as usam: os Deuses de Vitália.  Olhando para baixo, você pode ver o grande
 Altar-Mor e o @GBrasão de Vitália@n no centro.  Há várias pessoas em volta do 
 Altar, esperando pela cerimônia, que parece estar prestes a começar.  
 ~
-28 dfgue 0
-D5
-~
-passagem cristal~
-:n 2 a passagem de cristal
-abd -1 2811
-D3
-~
-passagem cristal~
-:n 2 a passagem de cristal
-abc -1 2835
-D4
-~
-~
-abcd -1 2816
+28 1048696 0 0 0 0
 D1
 ~
 porta passagem~
-:n 2 uma porta de cristal
-abcd -1 2845
+0 -1 2845
+D3
+~
+passagem cristal~
+1 -1 2835
+D4
+~
+~
+0 -1 2816
+D5
+~
+passagem cristal~
+0 -1 2811
+E
+altar-mor~
+É uma peça majestosa, feita de ouro maciço, totalmente coberto por delicadíssimos
+mosaicos e belíssimos filigranas, tão ricamente enfeitado que você tem certeza
+de que não foram mãos mortais que trabalharam ali.   O altar foi colocado no 
+ponto mais alto da sala, para que todos possam admirar sua beleza, mesmo 
+estando no ponto mais distante da Catedral.
+~
 E
 cadeiras cadeira~
 Devem ser feitas com algum tipo de material mágico, pois flutuam em pleno ar.
@@ -565,14 +550,6 @@ totalmente rebordada.  Sobre a cadeira, logo acimda do seu encosto, pode-se
 saber exatamente o nome do seu proprietário, pois há uma espécie de placa, 
 feita em cristal e gravada em letras douradas, onde se pode ler o nome de um 
 dos deuses de Vitália.
-~
-E
-altar-mor~
-É uma peça majestosa, feita de ouro maciço, totalmente coberto por delicadíssimos
-mosaicos e belíssimos filigranas, tão ricamente enfeitado que você tem certeza
-de que não foram mãos mortais que trabalharam ali.   O altar foi colocado no 
-ponto mais alto da sala, para que todos possam admirar sua beleza, mesmo 
-estando no ponto mais distante da Catedral.
 ~
 S
 #2818
@@ -586,12 +563,11 @@ parece acompanhar seus movimentos.  A iluminação flui livre através do
 topo da Torre, que é totalmente de cristal e você precisa subir a imensa 
 escada em espiral para admirar a vista.
 ~
-28 dgj 0
+28 584 0 0 0 0
 D3
 ~
 arco~
-:n 1 o grande arco entalhado
-abg -1 2807
+0 -1 2807
 D4
 ~
 ~
@@ -606,7 +582,7 @@ fossem janelas dando para fora, tornando possível de se admirar a
 imensidão e a beleza fulminante deste lugar, que é ao mesmo tempo mágico e 
 místico.
 ~
-28 dgj 0
+28 584 0 0 0 0
 D4
 ~
 ~
@@ -625,7 +601,7 @@ fossem janelas dando para fora, tornando possível de se admirar a
 imensidão e a beleza fulminante deste lugar, que é ao mesmo tempo mágico e 
 místico.
 ~
-28 dgj 0
+28 584 0 0 0 0
 D4
 ~
 ~
@@ -644,7 +620,7 @@ fossem janelas dando para fora, tornando possível de se admirar a
 imensidão e a beleza fulminante deste lugar, que é ao mesmo tempo mágico e 
 místico.
 ~
-28 dgj 0
+28 584 0 0 0 0
 D4
 ~
 ~
@@ -669,12 +645,11 @@ altar-mor.  Ao olhar tudo isso, você sente uma forte emoção tomando conta
 do seu ser e, quase imediatamente, suave e morna brisa de vento toca seu 
 rosto, como delicada carícia, vinda do sul.
 ~
-28 dg 0
+28 72 0 0 0 0
 D5
 ~
 porta~
-:n 2 uma pequena porta de cristal
-ab -1 2829
+1 -1 2829
 S
 #2823
 A Escadaria da Grande Torre Oeste~
@@ -687,12 +662,11 @@ parece acompanhar seus movimentos.  A iluminação flui livre através do
 topo da Torre, que é totalmente de cristal e você precisa subir a imensa 
 escada em espiral para admirar a vista.
 ~
-28 dgj 0
+28 584 0 0 0 0
 D1
 ~
 arco~
-:n 1 o grande arco entalhado
-abg -1 2807
+0 -1 2807
 D4
 ~
 ~
@@ -706,7 +680,7 @@ de ter subido tantos lances de escada.   Existem pequenos vãos, como se
 fossem janelas dando para fora, tornando possível de se admirar a imensidão 
 e a beleza fulminante deste lugar, que é ao mesmo tempo mágico e místico.
 ~
-28 dgj 0
+28 584 0 0 0 0
 D4
 ~
 ~
@@ -725,7 +699,7 @@ fossem janelas dando para fora, tornando possível de se admirar a
 imensidão e a beleza fulminante deste lugar, que é ao mesmo tempo mágico e 
 místico.
 ~
-28 dgj 0
+28 584 0 0 0 0
 D4
 ~
 ~
@@ -744,15 +718,15 @@ fossem janelas dando para fora, tornando possível de se admirar a
 imensidão e a beleza fulminante deste lugar, que é ao mesmo tempo mágico e 
 místico.   Uma porta de cristal bloqueia seu caminho para cima.
 ~
-28 dgj 0
-D5
-~
-~
-0 -1 2825
+28 584 0 0 0 0
 D4
 ~
 ~
 0 -1 2838
+D5
+~
+~
+0 -1 2825
 S
 #2827
 A Escadaria da Grande Torre Oeste~
@@ -762,7 +736,7 @@ de ter descido tantos lances de escada.   Existem pequenos vãos, como se
 fossem janelas dando para fora, tornando possível de se admirar a imensidão 
 e a beleza fulminante deste lugar, que é ao mesmo tempo mágico e místico.
 ~
-28 dgj 0
+28 584 0 0 0 0
 D4
 ~
 ~
@@ -781,7 +755,7 @@ fossem janelas dando para fora, tornando possível de se admirar a
 imensidão e a beleza fulminante deste lugar, que é ao mesmo tempo mágico e 
 místico.
 ~
-28 dgj 0
+28 584 0 0 0 0
 D4
 ~
 ~
@@ -799,12 +773,11 @@ mais soturno e sombrio que os demais.  Sons vindos do sudeste assustam você.
 A única saída é voltar pelo mesmo caminho que você fêz para chegar até aqui ou
 tentar ultrapassar seus limites.
 ~
-28 dgj 0
+28 584 0 0 0 0
 D4
 ~
 porta~
-:n 2 uma porta de cristal
-ab -1 2822
+1 -1 2822
 D5
 ~
 ~
@@ -812,7 +785,7 @@ D5
 D8
 ~
 ~
-abcd -1 2830
+0 -1 2830
 S
 #2830
 O Longo Corredor de Murais~
@@ -826,21 +799,19 @@ desconhecida.  Gemas do tamanho de um punho fechado estão encravadas nas
 duras paredes de cristal, e elas parecem iluminar os murais, como se 
 fossem tochas acesas.  Você pode seguir para leste ou...
 ~
-28 dgj 0
-D3
-~
-porta~
-:n 2 uma porta de cristal
-ad -1 2838
+28 584 0 0 0 0
 D1
 ~
 ~
 0 -1 2831
+D3
+~
+porta~
+1 -1 2838
 D6
 ~
 porta~
-:n 2 uma porta de cristal
-ad -1 2829
+1 -1 2829
 D9
 ~
 ~
@@ -858,7 +829,7 @@ desconhecida.  Gemas do tamanho de um punho fechado estão encravadas nas
 duras paredes de cristal, e elas parecem iluminar os murais, como se 
 fossem tochas acesas.  Você pode seguir para leste, ou voltar para oeste.
 ~
-28 dgj 0
+28 584 0 0 0 0
 D1
 ~
 ~
@@ -880,7 +851,7 @@ desconhecida.  Gemas do tamanho de um punho fechado estão encravadas nas
 duras paredes de cristal, e elas parecem iluminar os murais, como se 
 fossem tochas acesas.  Você pode seguir para leste, ou voltar para oeste.
 ~
-28 dgj 0
+28 584 0 0 0 0
 D1
 ~
 ~
@@ -902,7 +873,7 @@ desconhecida.  Gemas do tamanho de um punho fechado estão encravadas nas
 duras paredes de cristal, e elas parecem iluminar os murais, como se 
 fossem tochas acesas.  Você pode seguir para leste, ou voltar para oeste.
 ~
-28 dgj 0
+28 584 0 0 0 0
 D1
 ~
 ~
@@ -924,7 +895,7 @@ desconhecida.  Gemas do tamanho de um punho fechado estão encravadas nas
 duras paredes de cristal, e elas parecem iluminar os murais, como se 
 fossem tochas acesas.  Você pode seguir para leste, ou voltar para oeste.
 ~
-28 dgj 0
+28 584 0 0 0 0
 D1
 ~
 ~
@@ -945,7 +916,7 @@ Você se pega imaginando que conhecer esta língua deve ser tarefa para bem
 poucos...ou quem sabe, apenas os puros de coração a saibam, instintivamente. 
 Seria prudente tentar prosseguir?
 ~
-28 dgj 0
+28 584 0 0 0 0
 D3
 ~
 ~
@@ -953,7 +924,6 @@ D3
 D4
 ~
 porta~
-:n 2 uma porta de cristal
 1 -1 2836
 S
 #2836
@@ -969,33 +939,31 @@ de perto.  Ao olhar para cima, admira-se com a perfeição da pintura, que
 parece ter vida própria, emanando suave tranquilidade e bem estar.  
 Sua mente não hesita em indagar quem seria o Senhor desse maravilhoso quarto?
 ~
-28 dgh 0
+28 200 0 0 0 0
 D2
 ~
 porta~
-:n 2 uma porta de cristal
-abcd -1 2811
+0 -1 2811
 D5
 ~
 porta~
-:n 2 uma porta de cristal
 1 -1 2835
-E
-brasão~
-Os olhos mortais não conseguem definir com precisão aquilo que foi estampado
-neste @GBrasão@n.  Feito com um material desconhecido pelos homens, sabe-se
-apenas que as palavras que ali foram escritas são incompreensíveis à mente
-humana.
-~
 E
 pergaminho~
 Amarelado pelo tempo, parece ter sido manuseado tantas e tantas vezes, que suas
 bordas estão gastas.   É estranho observar como as letras que ali foram 
 manuscritas parecem cintilar, oscilando entre inúmeras tonalidades de cor.
 Há uma frase escrita ali que já se tornou sua velha conhecida: 
-@y"V'tah alyia enam luvieri enam lu'lyia" @n e estranhamente tudo faz sentido:
+	y"V'tah alyia enam luvieri enam lu'lyia" 	n e estranhamente tudo faz sentido:
 
-@y"Possa o Amor de Vitália alcançar seu coração e lhe trazer Paz."@n.
+	y"Possa o Amor de Vitália alcançar seu coração e lhe trazer Paz."	n.
+~
+E
+brasão~
+Os olhos mortais não conseguem definir com precisão aquilo que foi estampado
+neste 	GBrasão	n.  Feito com um material desconhecido pelos homens, sabe-se
+apenas que as palavras que ali foram escritas são incompreensíveis à mente
+humana.
 ~
 S
 #2837
@@ -1010,12 +978,11 @@ algo parecido.   Antes de descer, você olha mais uma vez para aquele pedaço
 mágico de lugar e eleva seus pensamentos aos Deuses de Vitália, rogando-lhes 
 as bençãos. 
 ~
-28 cehgu 0
-D 5
+28 1048788 0 0 0 0
+D5
 ~
 porta~
-:n 2 uma saída de cristal
-abg -1 50
+0 -1 50
 S
 #2838
 A Base Oeste da Escadaria~
@@ -1025,21 +992,19 @@ e sombrio que os demais.  Sons vindos do leste assustam você.   A única saída
 é voltar pelo mesmo caminho que você fêz para chegar até aqui ou tentar 
 ultrapassar seus limites.
 ~
-28 dgj 0
+28 584 0 0 0 0
+D1
+~
+porta~
+0 -1 2830
 D4
 ~
 porta~
-:n 2 uma porta de cristal
-ab -1 2839
+1 -1 2839
 D5
 ~
 ~
 0 -1 2826
-D1
-~
-porta~
-:n 2 uma porta de cristal
-abcd -1 2830
 S
 #2839
 A Grande Torre Oeste da Catedral~
@@ -1056,12 +1021,11 @@ altar-mor.  Ao olhar tudo isso, você sente uma forte emoção tomando conta
 do seu ser e, quase imediatamente, suave e morna brisa de vento toca seu 
 rosto, como delicada carícia, vinda do norte.
 ~
-28 dg 0
+28 72 0 0 0 0
 D5
 ~
 porta~
-:n 2 uma pequena porta de cristal
-ab -1 2838
+1 -1 2838
 S
 #2840
 O Longo Corredor~
@@ -1074,28 +1038,28 @@ perfeitamente o que esteja ocorrendo lá na frente.  O chão está totalmente
 coberto por névoa espessa e macia, que cobre totalmente o longo corredor, como
 se fosse um imenso tapete branco-azulado.
 ~
-28 dg 0
-D2
-~
-~
-0 -1 2810
+28 72 0 0 0 0
 D0
 ~
 ~
 0 -1 2841
-E
-banco fileira bancos fileiras~
-Embora não tenham a aparência nobre dos grandes tronos, são muito elegantes e
-parecem ser bastante confortáveis, pois apesar de serem feitos de cristal puro,
-possuem cada um, delicada almofada de macio veludo vermelho, adornada com 
-belíssimos galões dourados e em cada uma, o @GBrasão de Vitália @nfoi perfeitamente
-bordado.
+D2
 ~
+~
+0 -1 2810
 E
 chão tapete~
 É interessante observar como o chão está totalmente coberto por névoa espessa
 e macia, cobrindo totalmente o longo corredor, como se fosse um imenso tapete
 branco-azulado.
+~
+E
+banco fileira bancos fileiras~
+Embora não tenham a aparência nobre dos grandes tronos, são muito elegantes e
+parecem ser bastante confortáveis, pois apesar de serem feitos de cristal puro,
+possuem cada um, delicada almofada de macio veludo vermelho, adornada com 
+belíssimos galões dourados e em cada uma, o 	GBrasão de Vitália 	nfoi perfeitamente
+bordado.
 ~
 S
 #2841
@@ -1109,7 +1073,7 @@ perfeitamente o que esteja ocorrendo lá na frente.  O chão está totalmente
 coberto por névoa espessa e macia, que cobre totalmente o longo corredor, como
 se fosse um imenso tapete branco-azulado.
 ~
-28 dg 0
+28 72 0 0 0 0
 D0
 ~
 ~
@@ -1119,18 +1083,18 @@ D2
 ~
 0 -1 2840
 E
-banco fileira bancos fileiras~
-Embora não tenham a aparência nobre dos grandes tronos, são muito elegantes e
-parecem ser bastante confortáveis, pois apesar de serem feitos de cristal puro,
-possuem cada um, delicada almofada de macio veludo vermelho, adornada com 
-belíssimos galões dourados e em cada uma, o @GBrasão de Vitália @nfoi perfeitamente
-bordado.
-~
-E
 chão tapete~
 É interessante observar como o chão está totalmente coberto por névoa espessa
 e macia, cobrindo totalmente o longo corredor, como se fosse um imenso tapete
 branco-azulado.
+~
+E
+banco fileira bancos fileiras~
+Embora não tenham a aparência nobre dos grandes tronos, são muito elegantes e
+parecem ser bastante confortáveis, pois apesar de serem feitos de cristal puro,
+possuem cada um, delicada almofada de macio veludo vermelho, adornada com 
+belíssimos galões dourados e em cada uma, o 	GBrasão de Vitália 	nfoi perfeitamente
+bordado.
 ~
 S
 #2842
@@ -1146,7 +1110,7 @@ se fosse um imenso tapete branco-azulado.   Há um imenso altar logo à sua frente
 Daqui já se pode ver que é uma peça riquíssima, feita em ouro e totalmente
 coberto por mosaicos e belíssimos filigranas. 
 ~
-28 dg 0
+28 72 0 0 0 0
 D0
 ~
 ~
@@ -1158,30 +1122,28 @@ D2
 D4
 ~
 porta~
-:n 2 uma pequena porta de cristal
-abcd -1 2817
+0 -1 2817
+D5
+~
+porta~
+0 -1 2843
 D7
 ~
 ~
 1 -1 2830
-D5
-~
-porta~
-:n 2 uma pequena porta de cristal
-abcd -1 2843
-E
-banco fileira bancos fileiras~
-Embora não tenham a aparência nobre dos grandes tronos, são muito elegantes e
-parecem ser bastante confortáveis, pois apesar de serem feitos de cristal puro,
-possuem cada um, delicada almofada de macio veludo vermelho, adornada com 
-belíssimos galões dourados e em cada uma, o @GBrasão de Vitália @nfoi perfeitamente
-bordado.
-~
 E
 chão tapete~
 É interessante observar como o chão está totalmente coberto por névoa espessa
 e macia, cobrindo totalmente o longo corredor, como se fosse um imenso tapete
 branco-azulado.
+~
+E
+banco fileira bancos fileiras~
+Embora não tenham a aparência nobre dos grandes tronos, são muito elegantes e
+parecem ser bastante confortáveis, pois apesar de serem feitos de cristal puro,
+possuem cada um, delicada almofada de macio veludo vermelho, adornada com 
+belíssimos galões dourados e em cada uma, o 	GBrasão de Vitália 	nfoi perfeitamente
+bordado.
 ~
 S
 #2843
@@ -1196,26 +1158,31 @@ as usam: os Deuses de Vitália.  Olhando para baixo, você pode ver o grande
 Altar-Mor e o @GBrasão de Vitália@n no centro.  Há várias pessoas em volta do 
 Altar, esperando pela cerimônia, que parece estar prestes a começar.  
 ~
-28 dfueg 0
+28 1048696 0 0 0 0
 D1
 ~
 passagem cristal~
-:n 2 a passagem de cristal
-abd -1 2811
+0 -1 2811
 D2
 ~
 passagem cristal~
-:n 2 a passagem de cristal
-abdc -1 2835
+0 -1 2835
 D4
 ~
 ~
-abc -1 2816
+1 -1 2816
 D5
 ~
 porta passagem~
-:n 2 uma porta de cristal
-abcd -1 2845
+0 -1 2845
+E
+altar-mor~
+É uma peça majestosa, feita de ouro maciço, totalmente coberto por delicadíssimos
+mosaicos e belíssimos filigranas, tão ricamente enfeitado que você tem certeza
+de que não foram mãos mortais que trabalharam ali.   O altar foi colocado no 
+ponto mais alto da sala, para que todos possam admirar sua beleza, mesmo 
+estando no ponto mais distante da Catedral.
+~
 E
 cadeiras cadeira~
 Devem ser feitas com algum tipo de material mágico, pois flutuam em pleno ar.
@@ -1224,14 +1191,6 @@ totalmente rebordada.  Sobre a cadeira, logo acimda do seu encosto, pode-se
 saber exatamente o nome do seu proprietário, pois há uma espécie de placa, 
 feita em cristal e gravada em letras douradas, onde se pode ler o nome de um 
 dos deuses de Vitália.
-~
-E
-altar-mor~
-É uma peça majestosa, feita de ouro maciço, totalmente coberto por delicadíssimos
-mosaicos e belíssimos filigranas, tão ricamente enfeitado que você tem certeza
-de que não foram mãos mortais que trabalharam ali.   O altar foi colocado no 
-ponto mais alto da sala, para que todos possam admirar sua beleza, mesmo 
-estando no ponto mais distante da Catedral.
 ~
 S
 #2844
@@ -1248,8 +1207,7 @@ e à medida que isso acontece, suave melodia toma conta do ambiente,
 possibilitando assim que todos possam conversar normalmente, sem terem que 
 gritar umas com as outras.
 ~
-28.2 gs 0
-ON jardins
+28 262208 0 0 0 0
 D0
 ~
 ~
@@ -1269,8 +1227,7 @@ D3
 D7
 ~
 porta passagem~
-:n 2 uma porta de cristal
-abcd -1 2837
+0 -1 2837
 E
 estátua estátuas deuses~
 Como narrar o inenarrável? Como descrever o indiscritível?  São apenas estátuas
@@ -1293,7 +1250,11 @@ realçando ainda mais a beleza e o explendor desse imenso local.  A música toma
 conta do ambiente, suave, tranquila, bem ao gosto daqueles que gostam de dançar
 e conversar.   Há um jardim no lado sul do salão que parece ser muito bonito.
 ~
-28.2 deg 0
+28 88 0 0 0 0
+D0
+~
+~
+0 -1 2847
 D2
 ~
 ~
@@ -1301,13 +1262,11 @@ D2
 D3
 ~
 porta passagem~
-:n 2 uma porta de cristal
-abcd -1 2817
+0 -1 2817
 D4
 ~
 porta passagem~
-:n 2 uma porta de cristal
-abcd -1 2843
+0 -1 2843
 D6
 ~
 ~
@@ -1316,10 +1275,6 @@ D7
 ~
 ~
 0 -1 2846
-D0
-~
-~
-0 -1 2847
 E
 teto~
 Olhando para cima, você observa a grandiosidade deste lugar, que de forma quase
@@ -1340,23 +1295,23 @@ realçando ainda mais a beleza e o explendor desse imenso local.  A música toma
 conta do ambiente, suave, tranquila, bem ao gosto daqueles que gostam de dançar
 e conversar.   Há um jardim no lado norte do salão que parece ser muito bonito.
 ~
-28.2 dge 0
+28 88 0 0 0 0
 D0
 ~
 ~
 0 -1 2844
-D9
-~
-~
-0 -1 2845
-D7
-~
-~
-0 -1 2847
 D1
 ~
 ~
 0 -1 2848
+D7
+~
+~
+0 -1 2847
+D9
+~
+~
+0 -1 2845
 E
 teto~
 Olhando para cima, você observa a grandiosidade deste lugar, que de forma quase
@@ -1377,23 +1332,23 @@ realçando ainda mais a beleza e o explendor desse imenso local.  A música toma
 conta do ambiente, suave, tranquila, bem ao gosto daqueles que gostam de dançar
 e conversar.   Há um jardim no lado oeste do salão que parece ser muito bonito.
 ~
-28.2 dge 0
-D3
-~
-~
-0 -1 2844
-D2
-~
-~
-0 -1 2845
-D9
-~
-~
-0 -1 2846
+28 88 0 0 0 0
 D0
 ~
 ~
 0 -1 2848
+D2
+~
+~
+0 -1 2845
+D3
+~
+~
+0 -1 2844
+D9
+~
+~
+0 -1 2846
 E
 teto~
 Olhando para cima, você observa a grandiosidade deste lugar, que de forma quase
@@ -1414,23 +1369,23 @@ realçando ainda mais a beleza e o explendor desse imenso local.  A música toma
 conta do ambiente, suave, tranquila, bem ao gosto daqueles que gostam de dançar
 e conversar.   Há um jardim no lado leste do salão que parece ser muito bonito.
 ~
-28.2 dge 0
+28 88 0 0 0 0
 D1
 ~
 ~
 0 -1 2844
-D8
-~
-~
-0 -1 2845
-D3
-~
-~
-0 -1 2846
 D2
 ~
 ~
 0 -1 2847
+D3
+~
+~
+0 -1 2846
+D8
+~
+~
+0 -1 2845
 E
 teto~
 Olhando para cima, você observa a grandiosidade deste lugar, que de forma quase

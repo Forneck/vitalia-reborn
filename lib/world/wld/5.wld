@@ -10,9 +10,8 @@ Você sente que o mundo deixa de existir PARA você e que agora VOCÊ existe
 para fazer deste mundo um lugar melhor a cada dia.  É hora de decidir...
 Você entregaria TUDO pelo bem do Mundo de Vitália?
 ~
-5 defghj 0
-OL 106
-D 1
+5 760 0 0 0 0
+D1
 ~
 ~
 0 -1 501
@@ -25,13 +24,12 @@ você sabe que tomou a decisão certa.  Neste Templo, a Sabedoria dos Anciãos
 será passada para a sua alma.  Esta sabedoria deverá sempre ser usada para
 defender o bem e para disseminar a paz e a prosperidade no Mundo de Vitália
 ~
-5 defghj 0
-OL 106
-D 1
+5 760 0 0 0 0
+D1
 ~
 ~
 0 -1 502
-D 3
+D3
 ~
 ~
 0 -1 500
@@ -45,13 +43,12 @@ belíssimo Templo, sua sensação de poder cai por terra!  Você se sente
 envergonhado por ter sido tão facilmente enganado por um sentimento tão
 pequeno e sente-se MUITO feliz por contemplar a beleza da HUMILDAD 1.
 ~
-5 defghj 0
-OL 106
-D 1
+5 760 0 0 0 0
+D1
 ~
 ~
 0 -1 503
-D 3
+D3
 ~
 ~
 0 -1 501
@@ -65,13 +62,12 @@ seus braços para acolhe-lo incondicionalmente.  Este é o Templo da Lealdade.
 Lealdade àqueles que trabalham com o objetivo de fazer Vitália crescer mais
 e mais cada um fazendo sua parte!  Você está pronto?
 ~
-5 defghj 0
-OL 106
-D 1
+5 760 0 0 0 0
+D1
 ~
 ~
 0 -1 504
-D 3
+D3
 ~
 ~
 0 -1 502
@@ -84,13 +80,12 @@ família.  Você nada teme pois sabe que pode compartilhar de seus medos e
 anseios com todos daqui.  A SINCERIDAD 1 invade seu coração e você percebe
 que a mentira nunca o levará a lugar algum em Vitália.
 ~
-5 defghj 0
-OL 106
-D 2
+5 760 0 0 0 0
+D2
 ~
 ~
 0 -1 505
-D 3
+D3
 ~
 ~
 0 -1 503
@@ -103,13 +98,12 @@ que você olha a seu redor, você sente seu coração tomado por uma bondade
 típica dos Semi-Deuses do Mundo de Vitália.  Olhe, aprenda e siga seu
 caminho em Paz.
 ~
-5 defghj 0
-OL 106
-D 0
+5 760 0 0 0 0
+D0
 ~
 ~
 0 -1 504
-D 3
+D3
 ~
 ~
 0 -1 506
@@ -121,13 +115,12 @@ luz lhe cega completamente mas, ao contrário do que você imagina, na sua
 falta de visão do mundo material você pode contemplar a verdade.  Não há
 belo ou feio.  Não há rico ou pobre.  Todos são iguais no Templo da Justiça.
 ~
-5 defghj 0
-OL 106
-D 1
+5 760 0 0 0 0
+D1
 ~
 ~
 0 -1 505
-D 3
+D3
 ~
 ~
 0 -1 507
@@ -144,11 +137,10 @@ que sua escolha sela seu destino.  Por isso seja livre ...  Mas seja
 prudente.  Você é agora um Semi-Deus com todos os poderes inerentes ao
 cargo..  E todas as responsabilidades também.  Boa Sorte!!!
 ~
-5 defghj 0
-OL 106
-D 1
+5 760 0 0 0 0
+D1
 ~
 ~
 0 -1 506
 S
-$
+$~

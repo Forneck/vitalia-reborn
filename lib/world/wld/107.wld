@@ -8,7 +8,7 @@ tais árvores só serão vistas aqui na mística floresta, cheia de mistérios e
 surpresas.  Ao norte você observa a floresta e seu colorido exclusivo e
 magnífico, a sul você vê apenas uma floresta muito escura.
 ~
-107 gts 3
+107 786496 0 0 0 3
 D0
 Você observa o colorido mágico da floresta mística.
 ~
@@ -36,7 +36,7 @@ por entre as folhas das árvores.  O solo está completamente coberto por
 folhas coloridas, formando um lindo tapete natural.  Ao norte e ao sul a 
 floresta continua cheia de mistérios e fantasias.
 ~
-107 gts 3
+107 786496 0 0 0 3
 D0
 Você observa as árvores coloridas.
 ~
@@ -48,16 +48,16 @@ Você vê algumas a sombra de pequenos seres atrás das árvores.
 ~
 0 -1 10700
 E
+sombra~
+Você olha procurando alguma coisa, mas não consegue identificar nada.
+~
+E
 arvores arvore azul vermelha amarela~
 Você olha espantado e muito curioso para as árvores, que transformam a 
 floresta numa linda paisagem colorida e maravilhosa. As árvores são 
 incríveis das raízes a última folha no pico mais alto só possui uma cor, 
 algumas amarelas, umas azuis e outras vermelhas. O mais incrível de tudo é
 quem parece que elas possuem vida e olham para você.
-~
-E
-sombra~
-Você olha procurando alguma coisa, mas não consegue identificar nada.
 ~
 S
 #10702
@@ -72,7 +72,7 @@ semelhantes e entre elas existe alguma coisa presa, algo parecido com uma
 teia de aranha.  Ao sul, ao oeste e ao leste você observa a floresta mística
 e toda a sua beleza.
 ~
-107 gts 3
+107 786496 0 0 0 3
 D1
 Você observa a floresta e suas belas árvores.
 ~
@@ -89,16 +89,16 @@ Você observa a floresta mística e sua beleza.
 ~
 0 -1 10703
 E
+sombra~
+Você olha procurando alguma coisa, mas não consegue identificar nada.
+~
+E
 arvores arvore azul vermelha amarela~
 Você olha espantado e muito curioso para as árvores, que transformam a 
 floresta numa linda paisagem colorida e maravilhosa. As árvores são 
 incríveis das raízes a última folha no pico mais alto só possui uma cor, 
 algumas amarelas, umas azuis e outras vermelhas. O mais incrível de tudo é
 quem parece que elas possuem vida e olham para você.
-~
-E
-sombra~
-Você olha procurando alguma coisa, mas não consegue identificar nada.
 ~
 S
 #10703
@@ -109,7 +109,7 @@ que nem o rei mais rico deste mundo poderia pagar por ele.  Ao leste você
 observa a floresta colorida e ao oeste você vê uma planície de terra seca e
 dura.
 ~
-107 gts 3
+107 786496 0 0 0 3
 D1
 Você observa a linda floresta colorida.
 ~
@@ -121,16 +121,16 @@ Você vê uma planície.
 ~
 0 -1 10704
 E
+sombra~
+Você olha procurando alguma coisa, mas não consegue identificar nada.
+~
+E
 arvores arvore azul vermelha amarela~
 Você olha espantado e muito curioso para as árvores, que transformam a 
 floresta numa linda paisagem colorida e maravilhosa. As árvores são 
 incríveis das raízes a última folha no pico mais alto só possui uma cor, 
 algumas amarelas, umas azuis e outras vermelhas. O mais incrível de tudo é
 quem parece que elas possuem vida e olham para você.
-~
-E
-sombra~
-Você olha procurando alguma coisa, mas não consegue identificar nada.
 ~
 S
 #10704
@@ -142,7 +142,7 @@ esquecida.  Ao leste você observa a floresta mística, um verdadeiro oásis
 em relação a este solo seco.  Ao noroeste você observa com bastante 
 expectativa, porém sem muita esperança a planície seca e castigada.
 ~
-107 r 2
+107 131072 0 0 0 2
 D1
 Você observa o colorido especial da floresta boreal.
 ~
@@ -165,34 +165,33 @@ As Terras Esquecidas de Diomira~
    Você continua andando tediosamente pela planície seca de Diomira.  Ao
 oeste e a sudeste você observa as terras sofridas e desertas de Diomira.
 ~
-107 r 2
+107 131072 0 0 0 2
 D3
 Você olha ansioso por algum sinal de vida as terras esquecidas de Diomira.
 ~
 ~
 0 -1 10712
+D5
+O alçapão de madeira está coberto pela areia seca desta terra esquecida.
+~
+alçapão secreto madeira~
+1 2 10706
 D8
 Você observa a sofrida terra esquecida.
 ~
 ~
 0 -1 10704
-D5
-O alçapão de madeira está coberto pela areia seca desta terra esquecida.
-~
-alçapão secreto madeira~
-:n 1 o alçapão de madeira
-1 2 10706
-E
-terras esquecidas diomira~
-Você olha para todos os lados esperançoso de vê algum sinal de vida, algum 
-vestígio humano.  Contudo não acha nada, só uma terra castigada pelo sol e
-sem sinal algum de vida.
-~
 E
 alçapão secreto madeira~
 Você observa esperançoso um estranho alçapão de madeira escondido pela areia
 das terras esquecidas.  Você ansioso começa a se perguntar o que será que
 existe lá em baixo?
+~
+E
+terras esquecidas diomira~
+Você olha para todos os lados esperançoso de vê algum sinal de vida, algum 
+vestígio humano.  Contudo não acha nada, só uma terra castigada pelo sol e
+sem sinal algum de vida.
 ~
 S
 #10706
@@ -209,7 +208,7 @@ de lava fria.  Ao nordeste você observa um pequeno edifico diomiriano.  Você
 percebe que para as outras direções o aceso é impossível por causa de uma 
 enorme barreira de rochas.
 ~
-107 adfgrsu 1
+107 1441897 0 0 0 1
 D0
 Você observa um edifício semelhante aos templos vitalianos.
 ~
@@ -219,13 +218,11 @@ D4
 Você observa o sol através do alçapão.
 ~
 alçapão secreto madeira~
-:n 1 o alçapão de madeira
 1 2 10705
 D6
 Você observa um grande portão de ferro.
 ~
 portão ferro~
-:n 1 um grande portão de ferro
 1 -1 10709
 D7
 Você observa um pequeno edifíco diomiriano.
@@ -251,7 +248,7 @@ utilizados durante o culto.  Nas paredes rochosas você percebe inscrições
 muito antigas.  Ao norte você observa o altar do templo e ao sul a praça da
 cidade.
 ~
-107 adfgrsu 0
+107 1441897 0 0 0 0
 D0
 Você observa o altar do templo.
 ~
@@ -276,7 +273,7 @@ percebe a presença de estatuas, que deveriam ser de lendários diomiriano,
 ostentando suas armas mágicas e seus escudos de fogo.  Ao sul você observa
 o templo de Diomira.
 ~
-107 adfgrsu 0
+107 1441897 0 0 0 0
 D2
 Você vê o escuro e assustador templo de Diomira.
 ~
@@ -294,12 +291,11 @@ lugar, ao seu redor ao invés de tumbas ou jazidas, você observa várias
 piscinas de lava endurecida, que nos áureos tempos de Diomira estariam 
 cheias de lava fervente.  Ao sudeste você observa a praça diomiriana.
 ~
-107 adfgrsu 1
+107 1441897 0 0 0 1
 D8
 Você observa um grande portão de ferro.
 ~
 portão ferro~
-:n 1 um grande portão de ferro
 1 -1 10706
 E
 piscina piscinas~
@@ -315,24 +311,17 @@ sombrio ao ambiente, no canto nordeste do recinto você observa uma mesa
 redonda e várias cadeiras.  Ao norte você observa um pequena porta de ferro
 e ao sudoeste você observa a praça diomiriana.
 ~
-107 adfgrsu 0
+107 1441897 0 0 0 0
 D0
 Você percebe a existência de uma pequena porta.
 ~
 pequena porta ferro~
-:n 2 uma pequena porta de ferro
 1 -1 10711
 D9
 Você vê os bancos da praça diomiriana.
 ~
 ~
 0 -1 10706
-E
-mesa madeira~
-Você observa a mesa de madeira e percebe que há muito tempo não é utilizada,
-você nota também a presença de um papel antigo e maltratado pelo tempo em
-cima da mesa.
-~
 E
 papel~
 ****************************************************************************
@@ -344,9 +333,15 @@ papel~
 #   da evoluída cidade de Otávia, pois com certeza eles ajudarão. Irei já  #
 #   antes que seja tarde demais.                                           #
 #                                                                          #
-#                                         @CFireheart @w                   #
+#                                         	CFireheart 	w                   #
 #                                                                          #
 ****************************************************************************
+~
+E
+mesa madeira~
+Você observa a mesa de madeira e percebe que há muito tempo não é utilizada,
+você nota também a presença de um papel antigo e maltratado pelo tempo em
+cima da mesa.
 ~
 S
 #10711
@@ -355,22 +350,21 @@ Um Pequeno Quarto~
 feita de pedra, ao oeste você percebe a presença de algumas pinturas feitas
 na parede.  Ao sul você observa uma pequena porta.    
 ~
-107 adfgrsu 0
+107 1441897 0 0 0 0
 D2
 Você percebe a existência de uma pequena porta.
 ~
 pequena porta ferro~
-:n 2 uma pequena porta de ferro
-1 -1 10710   
-E
-cama pedra~
-Com certeza não era muito confortável.
-~
+1 -1 10710
 E
 pintura pinturas parede~
 Você observa as pinturas e nota que elas expressam um ritual diomiriano.
 Você vê pessoas como se estivessem dançando ao redor de uma enorme piscina 
 de lava fervente e um corpo queimando na lava.
+~
+E
+cama pedra~
+Com certeza não era muito confortável.
 ~
 S
 #10712
@@ -380,7 +374,7 @@ prospera.  Ao seu redor nada mais do que terra seca.  O sol parece querer
 castigar ainda mais estas pobres terras.  Ao leste você observa uma planície 
 seca e ao noroeste você vê a base de uma montanha.
 ~
-107 r 2
+107 131072 0 0 0 2
 D1
 Você observa as terras secas da cidade esquecida.
 ~
@@ -407,7 +401,7 @@ você percebe uma entrada para o interior da montanha e ao sudeste você
 observa a seca terra de Diomira.  Ao olhar para os dois lados você se 
 pergunta para onde devo seguir ?
 ~
-107 s 4
+107 262144 0 0 0 4
 D6
 Você observa uma entrada para o interior da montanha. Será o único meio de 
 chegar ao topo ?
@@ -440,7 +434,7 @@ principalmente para os que passaram pelas terras secas de Diomira.  Para
 cima você observa um caminho aberto no corpo da montanha e ao sudeste você
 observa a saída da montanha e as secas terras de Diomira.
 ~
-107 acdgirs 4
+107 393549 0 0 0 4
 D4
 Você observa um caminho dentro do corpo da montanha.
 ~
@@ -459,17 +453,17 @@ parece que foi feito para que apenas uma pessoa passe de cada vez.  Ao
 nordeste você observa a continuação do caminho rumo ao coração da montanha e
 para baixo você vê o caminho em direção a base da montanha.
 ~
-107 acdgirs 4
-D7
-Você observa um caminho rumo ao topo da montanha.
-~
-~
-0 -1 10716
+107 393549 0 0 0 4
 D5
 Você observa o caminho estreito rumo a base da montanha.
 ~
 ~
 0 -1 10714
+D7
+Você observa um caminho rumo ao topo da montanha.
+~
+~
+0 -1 10716
 S
 #10716
 Um Caminho no Corpo da Montanha~
@@ -477,7 +471,7 @@ Um Caminho no Corpo da Montanha~
 montanha.  Para cima a trilha rumo ao coração da montanha continua e ao 
 sudoeste você observa o caminho rumo a base da montanha gêmea.
 ~
-107 acdgirs 4
+107 393549 0 0 0 4
 D4
 Você observa um caminho estreito rumo ao topo da montanha.
 ~
@@ -495,7 +489,7 @@ Um Caminho no Corpo da Montanha~
 Ao noroeste você observa a continuação da trilha rumo ao coração da montanha
 e para baixo você vê a trilha em direção a base da montanha.
 ~
-107 acdgirs 4
+107 393549 0 0 0 4
 D5
 Você observa cansado a trilha estreita.
 ~
@@ -520,7 +514,7 @@ encontro de um paraíso.  Para cima você observa uma trilha, porém não mas
 tão estreita (ufa!) e para sudeste você observa uma trilha estreita em 
 direção a base da montanha.
 ~
-107 acdgrs 4
+107 393293 0 0 0 4
 D4
 Você observa para sua alegria um caminho mais largo para o topo da montanha.
 ~
@@ -539,7 +533,7 @@ montanha.  Para baixo você observa o coração da montanha e escuta sons
 harmoniosos num ritmo contagiante.  Ao nordeste você observa um caminho rumo
 ao topo da montanha gêmea.
 ~
-107 acdgrs 4
+107 393293 0 0 0 4
 D5
 Você escuta sons num ritmo constante.
 ~
@@ -561,7 +555,7 @@ está de presa entre as duas montanhas gêmeas.  A vista da cidade daqui é
 magnífica, você começa a pensa ( O que ainda falta eu vê neste maravilhoso
 mundo ?).
 ~
-107 cgrs 4
+107 393284 0 0 0 4
 D4
 Você observa o topo da montanha gêmea.
 ~
@@ -593,17 +587,17 @@ misteriosa Otávia e a Montanha Gêmea do leste.  Ao seu redor você observa
 pegadas de alguma criatura desconhecida por você.  Para baixo você observa
 uma abertura no corpo da montanha.
 ~
-107 gqr 5
-D5
-Você vê uma abertura na montanha.
-~
-~
-0 -1 10720
+107 196672 0 0 0 5
 D4
 Você observa um arco-íris.
 ~
 ~
 0 -1 10722
+D5
+Você vê uma abertura na montanha.
+~
+~
+0 -1 10720
 S
 #10722
 O Arco-Íris dos Guardiões~
@@ -617,17 +611,17 @@ sua mente foram tomados pela tranqüilidade e paz.  Para baixo você observa o
 topo da Montanha Gêmea e para cima você observa o caminho mágico feito pelo
 arco-íris.
 ~
-107 cgqr 2
-D5
-Você observa o topo da Montanha Gêmea do oeste.
-~
-~
-0 -1 10721
+107 196676 0 0 0 2
 D4
 Você observa o caminho mágico do arco-íris.
 ~
 ~
 0 -1 10723
+D5
+Você observa o topo da Montanha Gêmea do oeste.
+~
+~
+0 -1 10721
 E
 arco-íris arco iris~
 Você está perplexo com o que observa: Você está caminhando sobre um 
@@ -640,17 +634,17 @@ O Arco-Íris dos Guardiões~
 redor apenas nuvens e pássaros sobrevoam Vitália.  Para cima e para baixo 
 você observa o lindo e colorido caminho do arco-íris.
 ~
-107 cgqr 2
-D5
-Você observa o caminho mágico do arco-íris.
-~
-~
-0 -1 10722
+107 196676 0 0 0 2
 D1
 Você observa o caminho colorido do arco-íris.
 ~
 ~
 0 -1 10724
+D5
+Você observa o caminho mágico do arco-íris.
+~
+~
+0 -1 10722
 E
 arco-íris arco iris~
 Você está perplexo com o que observa: Você está caminhando sobre um 
@@ -664,17 +658,17 @@ Vitaliana vista daqui é surpreendente.  O arco-íris parece abençoar Otávia e
 seu povo, como se olha-se por eles.  Para cima e para baixo você observa o
 colorido caminho do arco-íris.
 ~
-107 cgqr 2
-D5
-Você observa o caminho mágico do arco-íris.
-~
-~
-0 -1 10725
+107 196676 0 0 0 2
 D3
 Você observa o caminho colorido do arco-íris.
 ~
 ~
 0 -1 10723
+D5
+Você observa o caminho mágico do arco-íris.
+~
+~
+0 -1 10725
 E
 arco-íris arco iris~
 Você está perplexo com o que observa: Você está caminhando sobre um 
@@ -689,17 +683,17 @@ sagradas vitalianas daqui de cima é fascinante; montanhas, florestas, rios,
 cidades, a paisagem é realmente deslumbrante.  Para cima e para baixo você
 observa o caminho mágico do arco-íris.
 ~
-107 cgqr 2
-D5
-Você observa o arco-íris.
-~
-~
-0 -1 10726
+107 196676 0 0 0 2
 D4
 Você observa o caminho mágico do arco-íris.
 ~
 ~
 0 -1 10724
+D5
+Você observa o arco-íris.
+~
+~
+0 -1 10726
 E
 arco-íris arco iris~
 Você está perplexo com o que observa: Você está caminhando sobre um 
@@ -718,7 +712,7 @@ sua mente foram tomados pela tranqüilidade e paz.  Para baixo você observa o
 topo da Montanha Gêmea e para cima você observa o caminho mágico feito pelo
 arco-íris.
 ~
-107 cgqr 2
+107 196676 0 0 0 2
 D4
 Você observa o arco-íris.
 ~
@@ -751,33 +745,33 @@ oxigênio ainda está em abundância.  Ao leste você observa uma passarela de
 madeira, ao noroeste você observa uma abertura na Montanha Gêmea do Oeste.
 Para baixo você percebe uma corda descendo em direção de uma passarela.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D1
 Você observa uma passarela de madeira.
 ~
 ~
 0 -1 10728
-D6
-Você observa uma abertura na Montanha Gêmea do Oeste.
-~
-~
-0 -1 10720
 D5
 Você observa uma pequena passarela de madeira.
 ~
 ~
 0 -1 10739
+D6
+Você observa uma abertura na Montanha Gêmea do Oeste.
+~
+~
+0 -1 10720
+E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
 E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10728
@@ -789,13 +783,13 @@ Ao leste você observa a continuação da passarela de madeira, ao oeste você
 observa a entrada oeste da cidade de Otávia e para baixo você observa uma
 corda que desce na direção de uma casa otaviana.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D1
 Você observa uma passarela de madeira.
 ~
 ~
 0 -1 10729
-D 3
+D3
 Você observa a entrada oeste da cidade.
 ~
 ~
@@ -820,7 +814,7 @@ Ao leste você observa uma casa otaviana, ao oeste você observa a continuação
 da passarela de madeira e para baixo você observa uma corda que desce na 
 direção de uma passarela de madeira.
 ~
-107 rs 1   
+107 393216 0 0 0 1
 D1
 Você observa uma casa otaviana.
 ~
@@ -837,16 +831,16 @@ Você observa uma corda que desce na direção de uma passarela.
 ~
 0 -1 10741
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10730
@@ -858,7 +852,7 @@ canto sul do recinto você observa um quadro com uma bela pintura da cidade
 de Diomira.  Ao oeste e ao leste você observa passarelas de madeira e para
 baixo você percebe uma corda descendo em direção de uma florida praça.
 ~
-107 cdrs 0
+107 393228 0 0 0 0
 D1
 Você observa uma passarela presa por fios e teias.
 ~
@@ -875,16 +869,16 @@ Você observa uma corda descendo em direção a uma praça otaviana.
 ~
 0 -1 10742
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10731
@@ -895,7 +889,7 @@ você observa o edifício das artes de Otávia, ao oeste você observa uma casa
 otaviana e para baixo você percebe uma corda descendo em direção de uma
 passarela de madeira.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D1
 Você observa o edifício das artes de Otávia.
 ~
@@ -912,16 +906,16 @@ Você observa uma corda descendo em direção a uma passarela.
 ~
 0 -1 10743
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10732
@@ -933,7 +927,7 @@ norte da sala você observa várias esculturas otavianas.  Ao norte você
 observa um atelier de pintura, ao leste e ao oeste você observa passarelas
 de madeira e para baixo você percebe uma corda em direção a uma passarela.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D0
 Você observa um atelier de pintura.
 ~
@@ -955,11 +949,8 @@ Você observa uma corda em direção de uma passarela.
 ~
 0 -1 10744
 E
-cidade teia fios correntes otávia~
-Você surpreso observa as teias-de-aranha, os fios e as correntes que 
-sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
-possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
-cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
+quadros quadro pinturas pintura esculturas escultura~
+Você observa a expressão viva dos costumes otavianos e de seu cotidiano.
 ~
 E
 passarela madeira~
@@ -967,8 +958,11 @@ Você observa uma passarela feita de uma madeira muito resistente e de forma
 artística pelos otavianos.
 ~
 E
-quadros quadro pinturas pintura esculturas escultura~
-Você observa a expressão viva dos costumes otavianos e de seu cotidiano.
+cidade teia fios correntes otávia~
+Você surpreso observa as teias-de-aranha, os fios e as correntes que 
+sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
+possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
+cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
 ~
 S
 #10733
@@ -979,7 +973,7 @@ costumes.  No canto leste da sala você observa várias esculturas e quadros
 que retratam a paisagem otaviana.  Ao sul você observa o salão do edifício
 das artes.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D2
 Você observa o salão do edifício das artes.
 ~
@@ -997,7 +991,7 @@ observa uma casa otaviana e ao oeste você observa o edifício das artes
 otavianas.  Para baixo você percebe uma corda descendo em direção a uma
 passarela de madeira.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D2
 Você observa uma residência otaviana.
 ~
@@ -1014,16 +1008,16 @@ Você observa uma corda que desce em direção de uma passarela de madeira.
 ~
 0 -1 10745
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes  otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10735
@@ -1035,7 +1029,7 @@ do recinto você observa um quadro com uma bela pintura da cidade de Armila.
 Ao oeste e ao leste você observa passarelas de madeira e para baixo você 
 percebe uma corda descendo em direção de uma florida praça.
 ~
-107 cdrs 0
+107 393228 0 0 0 0
 D1
 Você observa uma passarela de madeira.
 ~
@@ -1052,16 +1046,16 @@ Você observa uma linda praça otaviana.
 ~
 0 -1 10746
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10736
@@ -1073,7 +1067,7 @@ Ao oeste você observa uma casa otaviana, ao leste você observa a continuação
 da passarela de madeira e para baixo você observa uma corda que desce na 
 direção de uma passarela de madeira.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D1
 Você observa uma passarela de madeira.
 ~
@@ -1090,16 +1084,16 @@ Você percebe uma corda em direção de uma passarela.
 ~
 0 -1 10747
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10737
@@ -1109,7 +1103,7 @@ Ao leste você observa a entrada leste da cidade, ao oeste você observa a
 continuação da passarela de madeira.  Para baixo você percebe uma corda 
 descendo em direção de uma casa otaviana.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D1
 Você observa a entrada leste da cidade.
 ~
@@ -1126,16 +1120,16 @@ Você observa uma corda descendo em direção de uma casa otaviana.
 ~
 0 -1 10748
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10738
@@ -1154,7 +1148,7 @@ oxigênio ainda está em abundância.  Ao oeste você observa uma passarela de
 madeira, ao nordeste você observa uma abertura na Montanha Gêmea do Oeste.
 Para baixo você percebe uma corda descendo em direção de uma passarela.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D3
 Você observa uma passarela de madeira.
 ~
@@ -1171,16 +1165,16 @@ Você observa uma entrada na Montanha Gêmea do Leste.
 ~
 0 -1 10783
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10739
@@ -1190,7 +1184,7 @@ observa uma casa otaviana.  Para cima você percebe uma corda que sobe em
 direção da entrada oeste da cidade e para baixo você observa uma corda que 
 desce em direção de uma casa otaviana.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D1
 Você observa uma casa residencial otaviana.
 ~
@@ -1207,16 +1201,16 @@ Você percebe uma corda em direção de uma casa otaviana.
 ~
 0 -1 10750
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10740
@@ -1228,7 +1222,7 @@ as residências otavianas são extremamente confortáveis e surpreendentes.  Ao
 oeste você observa uma passarela de madeira e para cima você observa uma 
 corda que sobe em direção de uma passarela.
 ~
-107 cdrs 0
+107 393228 0 0 0 0
 D3
 Você observa uma passarela de madeira.
 ~
@@ -1240,16 +1234,16 @@ Você observa uma corda que sobre em direção de uma passarela.
 ~
 0 -1 10728
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10741
@@ -1261,7 +1255,7 @@ uma corda subindo em direção de uma passarela de madeira e para baixo você
 percebe uma corda que desce até o edifício dos lendários cavaleiros de 
 Otávia.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D1
 Você observa uma praça bastante florida.
 ~
@@ -1279,16 +1273,16 @@ Otávia.
 ~
 0 -1 10751
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10742
@@ -1303,7 +1297,7 @@ você observa uma passarela de madeira, para cima você observa uma corda que
 sobe em direção de uma residência otaviana e para baixo você percebe uma 
 corda que desce em direção de uma passarela de madeira.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D3
 Você observa uma passarela de madeira.
 ~
@@ -1320,16 +1314,16 @@ Você observa uma passarela de madeira.
 ~
 0 -1 10752
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntesa otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10743
@@ -1340,7 +1334,7 @@ passarela de madeira, para cima você percebe uma corda que sobe em direção
 de uma passarela de madeira e para baixo você observa uma corda que desce em 
 direção de um magnífico edifício otaviano.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D1
 Você observa a continuação da passarela.
 ~
@@ -1357,16 +1351,16 @@ Você percebe uma corda que desce em direção a Tríade otaviana.
 ~
 0 -1 10753
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10744
@@ -1379,7 +1373,7 @@ você observa uma corda que sobe em direção do edifício das Artes otavianas e
 para baixo você percebe uma corda que desce em direção de uma passarela de
 madeira.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D1
 Você observa uma passarela de madeira.
 ~
@@ -1401,16 +1395,16 @@ Você observa uma passarela de madeira.
 ~
 0 -1 10754
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10745
@@ -1420,7 +1414,7 @@ você observa uma passarela de madeira, para cima você percebe uma corda que
 sobe em direção de uma passarela de madeira e para baixo você percebe uma
 corda que desce em direção do edifício do Museu otaviano.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D3
 Você observa uma passarela de madeira.
 ~
@@ -1437,16 +1431,16 @@ Você olha para baixo e vê o edifício do museu otaviano.
 ~
 0 -1 10755
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10746
@@ -1460,7 +1454,7 @@ madeira, para cima você observa uma corda que sobe em direção de uma
 residência otaviana e para baixo você percebe uma corda que desce em direção
 de uma passarela de madeira.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D1
 Você observa uma passarela de madeira.
 ~
@@ -1471,22 +1465,22 @@ Você observa uma casa otaviana.
 ~
 ~
 0 -1 10735
-D5  
+D5
 Você observa uma passarela de madeira.
 ~
 ~
 0 -1 10756
+E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
 E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10747
@@ -1496,12 +1490,12 @@ observa várias crianças brincando na praça da alegria, para cima você
 observa uma corda que sobe em direção de uma passarela de madeira e para
 baixo você percebe uma corda que desce em direção do observatório otaviano.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D3
 Você observa uma praça otaviana.
 ~
 ~
-0 -1 10746 
+0 -1 10746
 D4
 Você observa uma passarela de madeira.
 ~
@@ -1513,16 +1507,16 @@ Você observa o observatório otaviano.
 ~
 0 -1 10757
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10748
@@ -1533,7 +1527,7 @@ armários pendurados compõem um ambiente bastante curioso.  Ao leste você
 observa uma passarela de madeira e para cima você percebe uma corda que sobe 
 em direção de uma passarela de madeira.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D1
 Você observa uma passarela de madeira.
 ~
@@ -1552,7 +1546,7 @@ oeste você observa uma residência otaviana, para cima você observa uma corda
 que sobe em direção da entrada leste da cidade e para baixo você percebe uma
 corda que desce em direção de uma residência otaviana.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D3
 Você observa uma casa otaviana.
 ~
@@ -1569,16 +1563,16 @@ Você observa uma casa otaviana.
 ~
 0 -1 10758
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que 
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10750
@@ -1588,7 +1582,7 @@ objetos pendurados por correntes.  Panelas, mesas, cadeiras, pratos e
 armários pendurados compõem um ambiente bastante curioso.  Para cima você
 percebe uma corda que sobe em direção de uma passarela de madeira.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D4
 Você observa uma passarela de madeira.
 ~
@@ -1605,7 +1599,7 @@ A cima de sua cabeça você percebe uma corda que sobe em direção de uma
 passarela e para baixo você observa uma corda que desce em direção de uma
 passarela feita de madeira, fios e teias.
 ~
-107 cderst 0
+107 917532 0 0 0 0
 D4
 Você observa uma passarela de madeira.
 ~
@@ -1624,7 +1618,7 @@ beleza exclusiva de Otávia e de seus edifícios pendurados por correntes.
 Para cima você observa uma corda que sobe em direção de uma praça florida e
 para baixo você percebe uma corda que desce em direção de uma casa otaviana.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D4
 Você sente o perfume das flores da praça otaviana.
 ~
@@ -1636,16 +1630,16 @@ Você observa uma residência otaviana.
 ~
 0 -1 10760
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10753
@@ -1660,7 +1654,7 @@ armiliano, que possuem a responsabilidade de julgar e de manter está cidade
 pacífica.  Ao leste, oeste, para cima e para baixo você observa passarelas
 de madeira.
 ~
-107 cdefrs 0
+107 393276 0 0 0 0
 D1
 Você observa uma passarela de madeira.
 ~
@@ -1682,16 +1676,16 @@ Você observa uma corda que desce em direção de uma passarela de madeira.
 ~
 0 -1 10761
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10754
@@ -1705,7 +1699,7 @@ você vê a Tríade da Justiça.  Para cima você observa uma corda que sobe em
 direção de um passarela de madeira e para baixo você observa o templo de
 Otávia.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D1
 Você observa um edifício imponente pendurado por correntes.
 ~
@@ -1727,18 +1721,6 @@ Você observa o templo da cidade.
 ~
 0 -1 10762
 E
-cidade teia fios correntes otávia~
-Você surpreso observa as teias-de-aranha, os fios e as correntes que
-sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
-possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
-cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
-~
-E
 linda placa bronze~
 ****************************************************************************
 ****************************************************************************
@@ -1753,6 +1735,18 @@ linda placa bronze~
 ****************************************************************************
 ****************************************************************************
 ~
+E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
+cidade teia fios correntes otávia~
+Você surpreso observa as teias-de-aranha, os fios e as correntes que
+sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
+possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
+cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
+~
 S
 #10755
 O Museu Otaviano~
@@ -1764,7 +1758,7 @@ Para cima você observa uma corda que sobe em direção de uma passarela e para
 baixo você percebe uma corda que desce em direção do edifício da biblioteca
 otaviana.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D1
 Você observa uma passarela de madeira.
 ~
@@ -1798,7 +1792,7 @@ observa o museu da cidade, para cima você observa uma corda que sobe em
 direção de uma praça e para baixo você percebe uma corda que desce em
 direção de uma casa otaviana.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D3
 Você observa o museu da cidade.
 ~
@@ -1815,16 +1809,16 @@ Você observa uma residência otaviana.
 ~
 0 -1 10764
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10757
@@ -1836,7 +1830,7 @@ bastante utilizados pelo povo da cidade em dias de eclipses.  Para cima você
 observa uma corda que sobe em direção de uma passarela e para baixo você
 percebe uma corda que desce em direção de uma passarela de madeira.
 ~
-107 rs 0
+107 393216 0 0 0 0
 D4
 Você observa uma passarela de madeira.
 ~
@@ -1855,7 +1849,7 @@ objetos pendurados por correntes.  Panelas, mesas, cadeiras, pratos e
 armários pendurados compõem um ambiente bastante curioso.  Para cima você
 percebe uma corda que sobe em direção de uma passarela de madeira.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D4
 Você observa uma passarela de madeira.
 ~
@@ -1870,7 +1864,7 @@ sobe em direção do salão dos cavaleiros lendários de Otávia e para baixo
 você percebe uma corda que desce em direção de uma residência bastante
 perfumada.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D1
 Você observa uma casa otaviana
 ~
@@ -1901,7 +1895,7 @@ as residências otavianas são extremamente confortáveis e surpreendentes.  Ao
 oeste você observa uma passarela de madeira e para cima você observa uma
 corda que sobe em direção de uma passarela.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D3
 Você observa uma passarela de madeira.
 ~
@@ -1921,7 +1915,7 @@ entre as placas de madeira e um passo errado significa um passo no vazio.
 Para cima você observa uma corda que sobe em direção da Tríade Otaviana e
 para baixo você observa uma corda que desce na direção da praça dos anciões.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D4
 Você o edifício da Tríade Otaviana.
 ~
@@ -1933,16 +1927,16 @@ Você observa uma praça da cidade.
 ~
 0 -1 10767
 E
+passarela madeira~
+Você observa uma passarela feita de uma madeira muito resistente e de forma
+artística pelos otavianos.
+~
+E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que
 sustentam a cidade delgada de Otávia.  É magnífica, deslumbrante...você não
 possui palavras para descrever tanta beleza e surpresa.  Você percebe que a
 cidade é bastante desenvolvida e que a civilização de Otávia é pacífica.
-~
-E
-passarela madeira~
-Você observa uma passarela feita de uma madeira muito resistente e de forma
-artística pelos otavianos.
 ~
 S
 #10762
@@ -1957,7 +1951,7 @@ otavianos visitam este local sagrado por dia.  Para cima você observa uma
 corda que sobe em direção de uma passarela e para baixo você observa uma
 corda que desce em direção de uma passarela de madeira.
 ~
-107 dehrst 0
+107 917656 0 0 0 0
 D4
 Você observa uma passarela de madeira.
 ~
@@ -1978,7 +1972,7 @@ aqui é absoluto.  Para baixo você observa uma corda que desce em direção da
 praça da sabedoria, local bastante agradável para ler um livro.  Para cima
 você observa uma corda que sobe em direção do museu da cidade.
 ~
-107 ders 0
+107 393240 0 0 0 0
 D4
 Você observa o edifício do museu da cidade.
 ~
@@ -1998,7 +1992,7 @@ armários pendurados compõem um ambiente bastante curioso.  Para cima você
 percebe uma corda que sobe em direção de uma passarela de madeira e ao leste
 você observa uma passarela de madeira.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D1
 Você observa uma passarela de madeira.
 ~
@@ -2018,7 +2012,7 @@ você observa uma casa otaviana, para baixo você percebe uma corda descendo
 em direção de uma residência e para cima você observa uma corda que sobe em
 direção do observatório dos astros.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D3
 Você observa uma casa otaviana.
 ~
@@ -2048,7 +2042,7 @@ espalhados em cima de uma mesa.  Se queres saber o que pode acontecer no
 futuro você está no lugar certo.  Para cima você observa uma corda que sobe
 em direção de uma passarela de madeira.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D4
 Você observa uma passarela de madeira.
 ~
@@ -2068,7 +2062,7 @@ flores e a tranquilidade do local atraem os sábios anciões da cidade que
 costumam contemplar este local.  Para cima você observa uma corda que sobe
 em direção de uma passarela de madeira.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D4
 Você observa uma passarela de madeira.
 ~
@@ -2081,7 +2075,7 @@ Uma Passarela de Madeira~
 você percebe uma corda que sobe em direção do templo de Otávia e para baixo
 você percebe uma corda que desce em direção dos jardins do palácio real.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D4
 Você observa o templo de Otávia.
 ~
@@ -2106,7 +2100,7 @@ bonitas de Otávia.  A Praça da Amizade é o lugar ideal para fazer novos
 amigos ou fortalecer os laços de união e fraternidade.  Para cima você
 observa uma corda que sobe em direção da biblioteca da cidade.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D4
 Você observa a biblioteca da cidade.
 ~
@@ -2120,7 +2114,7 @@ objetos pendurados por correntes.  Panelas, mesas, cadeiras, pratos e
 armários pendurados compõem um ambiente bastante curioso.  Para cima você
 percebe uma corda que sobe em direção de uma passarela de madeira.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D4
 Você observa uma passarela de madeira.
 ~
@@ -2135,7 +2129,7 @@ otavianos caminham pelos jardins cantando e brincando com as flores.  Para
 cima você observa uma corda que sobe em direção de uma passarela e para baixo
 você observa uma corda que desce em direção da entrada do palácio real.
 ~
-107 rs 1
+107 393216 0 0 0 1
 D4
 Você observa uma passarela de madeira.
 ~
@@ -2156,7 +2150,7 @@ cima você observa toda a cidade de Otávia, suas casas, suas passarelas e
 suas praças penduradas por correntes e teias, e para baixo você observa as
 terras esquecidas de Diomira e Armila.  Ao sul você observa um grande salão.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D2
 Você observa um grande salão real.
 ~
@@ -2175,7 +2169,7 @@ quadros com pinturas otavianas compõem o ambiente.  O Salão é usado pelo
 povo da cidade em dias de festa e comemorações.  Ao sudeste você observa uma
 bela escadaria.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D0
 Você observa a entrada do Pálacio.
 ~
@@ -2194,7 +2188,7 @@ paredes você observa várias pinturas otavianas com temas relacionados ao seu
 elemento sagrado: O ar.  Para baixo você observa um corredor e ao noroeste
 você observa o salão real.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D5
 Você observa um corredor.
 ~
@@ -2215,12 +2209,11 @@ de algo delicioso, ao sul você observa o quarto de hospedes, ao leste você
 observa uma escadaria que dar acesso aos aposentos reais e ao nordeste você
 observa a sala da guarda real.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D0
 Você observa a cozinha do palácio.
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 10776
 D1
 Você observa uma linda escadaria de marfim.
@@ -2231,7 +2224,6 @@ D2
 Você observa o quarto de hospedes.
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 10779
 D4
 Você observa uma escadaria de marfim.
@@ -2242,7 +2234,6 @@ D7
 Você observa a sala da guarda.
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 10777
 S
 #10776
@@ -2252,12 +2243,11 @@ observa ao seu redor vários pratos e talheres.  No canto norte da cozinha
 você observa o próximo banquete da Líder otaviana.  Ao sul você observa um
 corredor.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D2
 Você observa um corredor.
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 10775
 S
 #10777
@@ -2265,12 +2255,11 @@ A Sala da Guarda Real~
    Você está na sala da guarda real.  Ao seu redor você observa várias camas
 e estantes de madeira.  Ao sudoeste você observa um corredor.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D9
 Você observa um corredor.
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 10775
 S
 #10778
@@ -2280,7 +2269,7 @@ paredes você observa várias pinturas otavianas com temas relacionados ao seu
 elemento sagrado: O ar.  Para baixo você observa os aposentos reais e ao
 oeste você observa um corredor.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D3
 Você observa um corredor.
 ~
@@ -2290,7 +2279,6 @@ D5
 Você observa os aposentos reais.
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 10780
 S
 #10779
@@ -2299,12 +2287,11 @@ O Quarto de Hospedes~
 várias camas para os visitantes da cidade.  Pela janela você observa as
 terras esquecidas de Diomira e Armila.  Ao norte você observa um corredor.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D0
 Você observa um corredor.
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 10775
 S
 #10780
@@ -2315,7 +2302,7 @@ aposentos você observa uma mesa e algumas cadeiras de madeira ornamentada
 com pedras preciosas.  Ao leste você observa uma varanda e para cima você
 observa uma escadaria de marfim.
 ~
-107 drs 0
+107 393224 0 0 0 0
 D1
 Você observa uma varanda.
 ~
@@ -2325,7 +2312,6 @@ D4
 Você observa uma escadaria de marfim.
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 10778
 S
 #10781
@@ -2334,7 +2320,7 @@ A Varanda dos Aposentos Reais~
 que é possível ver daqui.  Ao seu redor algumas flores ornamentam o local.
 Ao oeste você observa os aposentos reais.
 ~
-107 rs 0
+107 393216 0 0 0 0
 D3
 Você observa os aposentos reais.
 ~
@@ -2354,7 +2340,7 @@ misteriosa Otávia e a Montanha Gêmea do Oeste.  Ao seu redor você observa
 pegadas de alguma criatura desconhecida por você.  Para baixo você observa
 uma abertura no corpo da montanha.
 ~
-107 gqr 5
+107 196672 0 0 0 5
 D4
 Você observa um Arco-íris.
 ~
@@ -2376,22 +2362,22 @@ está de presa entre as duas montanhas gêmeas.  A vista da cidade daqui é
 magnífica, você começa a pensa ( O que ainda falta eu vê neste maravilhoso
 mundo ?).
 ~
-107 cgrs 4
+107 393284 0 0 0 4
 D4
 Você observa o topo da montanha gêmea.
 ~
 ~
 0 -1 10782
-D9
-Você observa Otávia, a cidade delgada.
-~
-~
-0 -1 10738
 D8
 Você observa um caminho rumo a base da montanha.
 ~
 ~
 0 -1 10784
+D9
+Você observa Otávia, a cidade delgada.
+~
+~
+0 -1 10738
 E
 cidade teia fios correntes otávia~
 Você surpreso observa as teias-de-aranha, os fios e as correntes que
@@ -2407,7 +2393,7 @@ montanha.  Para baixo você observa o coração da montanha e escuta sons
 harmoniosos num ritmo contagiante.  Ao noroeste você observa um caminho rumo
 ao topo da montanha gêmea.
 ~
-107 acdgrs 4
+107 393293 0 0 0 4
 D5
 Você escuta sons num ritmo constante.
 ~
@@ -2432,7 +2418,7 @@ encontro de um paraíso.  Para cima você observa uma trilha, porém não mas
 tão estreita (ufa!) e para sudoeste você observa uma trilha estreita em
 direção a base da montanha.
 ~
-107 acdgrs 4
+107 393293 0 0 0 4
 D4
 Você observa para sua alegria um caminho mais largo para o topo da montanha.
 ~
@@ -2450,7 +2436,7 @@ Um Caminho no Corpo da Montanha~
 Ao nordeste você observa a continuação da trilha rumo ao coração da montanha
 e para baixo você vê a trilha em direção a base da montanha.
 ~
-107 acdgirs 4
+107 393549 0 0 0 4
 D5
 Você observa cansado a trilha estreita.
 ~
@@ -2468,7 +2454,7 @@ Um Caminho no Corpo da Montanha~
 montanha.  Para cima a trilha rumo ao coração da montanha continua e ao
 sudeste você observa o caminho rumo a base da montanha gêmea.
 ~
-107 acdgirs 4
+107 393549 0 0 0 4
 D4
 Você observa um caminho estreito rumo ao topo da montanha.
 ~
@@ -2487,17 +2473,17 @@ parece que foi feito para que apenas uma pessoa passe de cada vez.  Ao
 noroeste você observa a continuação do caminho rumo ao coração da montanha e
 para baixo você vê o caminho em direção a base da montanha.
 ~
-107 acdgirs 4
-D6
-Você observa um caminho rumo ao topo da montanha.
-~
-~
-0 -1 10787
+107 393549 0 0 0 4
 D5
 Você observa o caminho estreito rumo a base da montanha.
 ~
 ~
 0 -1 10789
+D6
+Você observa um caminho rumo ao topo da montanha.
+~
+~
+0 -1 10787
 S
 #10789
 No Interior da Montanha Gêmea~
@@ -2506,7 +2492,7 @@ principalmente para os que passaram pelas terras secas de Armila.  Para
 cima você observa um caminho aberto no corpo da montanha e ao sudoeste você
 observa a saída da montanha e as secas terras de Armila.
 ~
-107 acdgirs 4
+107 393549 0 0 0 4
 D4
 Você observa um caminho dentro do corpo da montanha.
 ~
@@ -2527,7 +2513,7 @@ você percebe uma entrada para o interior da montanha e ao sudeste você
 observa a seca terra de Armila.  Ao olhar para os dois lados você se
 pergunta para onde devo seguir ?
 ~
-107 s 4
+107 262144 0 0 0 4
 D7
 Você observa uma entrada para o interior da montanha. Será o único meio de
 chegar ao topo ?
@@ -2560,7 +2546,7 @@ prospera.  Ao seu redor nada mais do que terra seca.  O sol parece querer
 castigar ainda mais estas pobres terras.  Ao oeste você observa uma planície
 seca e ao nordeste você vê a base de uma montanha.
 ~
-107 r 2
+107 131072 0 0 0 2
 D3
 Você observa as terras secas da cidade esquecida.
 ~
@@ -2583,34 +2569,33 @@ As Terras Esquecidas de Armila~
    Você continua andando tediosamente pela planície seca de Armila.  Ao
 leste e a sudoeste você observa as terras sofridas e desertas de Armila.
 ~
-107 r 2
+107 131072 0 0 0 2
 D1
 Você olha ansioso por algum sinal de vida as terras esquecidas de Armila.
 ~
 ~
 0 -1 10791
+D5
+O alçapão de madeira está coberto pela areia seca desta terra esquecida.
+~
+alçapão secreto madeira~
+1 2 10793
 D9
 Você observa a sofrida terra esquecida.
 ~
 ~
 0 -1 10798
-D5
-O alçapão de madeira está coberto pela areia seca desta terra esquecida.
-~
-alçapão secreto madeira~
-:n 1 o alçapão de madeira
-1 2 10793
-E
-terra terras esquecida esquecidas armila~
-Você olha para todos os lados esperançoso de vê algum sinal de vida, algum
-vestígio humano.  Contudo não acha nada, só uma terra castigada pelo sol e
-sem sinal algum de vida.
-~
 E
 alçapão secreto madeira~
 Você observa esperançoso um estranho alçapão de madeira escondido pela areia
 das terras esquecidas.  Você ansioso começa a se perguntar o que será que
 existe lá em baixo ?
+~
+E
+terra terras esquecida esquecidas armila~
+Você olha para todos os lados esperançoso de vê algum sinal de vida, algum
+vestígio humano.  Contudo não acha nada, só uma terra castigada pelo sol e
+sem sinal algum de vida.
 ~
 S
 #10793
@@ -2623,7 +2608,7 @@ terem parado de correr por aqui.  Ao leste, ao oeste e ao sul você observa
 as terras de Armila que já foram cobertas por água e agora estão secas como
 as terras de um deserto.  Para cima você observa o sol de Vitália.
 ~
-107 adfgrsu 1
+107 1441897 0 0 0 1
 D1
 Você observa as terras que já foram cobertas por um rio.
 ~
@@ -2643,7 +2628,6 @@ D4
 Você observa o sol através da abertura do alçapão.
 ~
 alçapão secreto madeira~
-:n 1 o alçapão de madeira
 1 2 10792
 S
 #10794
@@ -2655,7 +2639,7 @@ não construíam casas e nem praças.  Pois o fundo das águas formava um local
 bastante agradável para todos armilianos que conviviam aqui.  Ao oeste você
 observa as terras que já foram cobertas por um rio.
 ~
-107  adfgrsu 1
+107 1441897 0 0 0 1
 D3
 Você observa as terras que já foram cobertas por um rio.
 ~
@@ -2671,7 +2655,7 @@ não construíam casas e nem praças.  Pois o fundo das águas formava um local
 bastante agradável para todos armilianos que conviviam aqui.  Ao leste você
 observa as terras que já foram cobertas por um rio.
 ~
-107  adfgrsu 1
+107 1441897 0 0 0 1
 D1
 Você observa as terras que já foram cobertas por um rio.
 ~
@@ -2688,7 +2672,7 @@ bastante agradável para todos armilianos que conviviam aqui.  Ao norte você
 observa as terras retorcidas de Armila e ao leste você observa uma esfera de
 terra.
 ~
-107  adfgrsu 1
+107 1441897 0 0 0 1
 D0
 Você observa as terras que já foram cobertas por um rio.
 ~
@@ -2709,7 +2693,7 @@ templo.  Interessante seria quando o rio cobria toda está cidade, pois a
 água era um elemento vital para os armilianos.  Ao oeste você observa a
 pobre terra armiliana seca.
 ~
-107 adfgrsu 1
+107 1441897 0 0 0 1
 D3
 Você observa as terras que já foram cobertas por um rio.
 ~
@@ -2730,7 +2714,7 @@ esquecida.  Ao oeste você observa a floresta mística, um verdadeiro oásis
 em relação a este solo seco.  Ao nordeste você observa com bastante
 expectativa, porém sem muita esperança a planície seca e castigada.
 ~
-107 r 2
+107 131072 0 0 0 2
 D3
 Você observa o colorido especial da floresta boreal.
 ~
@@ -2756,17 +2740,21 @@ que nem o rei mais rico deste mundo poderia pagar por ele.  Ao oeste você
 observa a floresta colorida e ao leste você vê uma planície de terra seca e
 dura.
 ~
-107 gts 3
-D3
-Você observa a linda floresta colorida.
-~
-~
-0 -1 10702
+107 786496 0 0 0 3
 D1
 Você vê uma planície.
 ~
 ~
 0 -1 10798
+D3
+Você observa a linda floresta colorida.
+~
+~
+0 -1 10702
+E
+sombra~
+Você olha procurando alguma coisa, mas não consegue identificar nada.
+~
 E
 árvores arvore azul vermelha amarela~
 Você olha espantado e muito curioso para as árvores, que transformam a
@@ -2775,9 +2763,5 @@ incríveis das raízes a última folha no pico mais alto só possui uma cor,
 algumas amarelas, umas azuis e outras vermelhas. O mais incrível de tudo é
 quem parece que elas possuem vida e olham para você.
 ~
-E
-sombra~
-Você olha procurando alguma coisa, mas não consegue identificar nada.
-~
 S
-$
+$~

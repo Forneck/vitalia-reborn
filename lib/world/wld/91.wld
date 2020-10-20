@@ -5,11 +5,11 @@ e relinchos podem ser ouvidos de fora do labirinto.  Um pequeno
 aviso foi posto no chão daqui.  Ele parece importante.  Você pode
 ir para ao norte, no milharal, ou fugir voltando ao oeste.
 ~
-91 gc 2
+91 68 0 0 0 2
 D0
 ~
 ~
-0 -1 9103 
+0 -1 9103
 D3
 ~
 ~
@@ -22,15 +22,15 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
-0 -1 9107 
+0 -1 9107
 D1
 ~
 ~
-0 -1 9102 
+0 -1 9102
 S
 #9102
 O Labirinto do Milharal~
@@ -39,7 +39,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -56,7 +56,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -69,7 +69,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -86,7 +86,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -103,7 +103,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -116,7 +116,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -133,7 +133,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -154,7 +154,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -179,7 +179,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D2
 ~
 ~
@@ -196,7 +196,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D2
 ~
 ~
@@ -209,7 +209,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -230,7 +230,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D2
 ~
 ~
@@ -247,7 +247,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -264,7 +264,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D1
 ~
 ~
@@ -281,7 +281,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -298,7 +298,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -315,7 +315,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D1
 ~
 ~
@@ -336,7 +336,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -353,7 +353,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D1
 ~
 ~
@@ -370,7 +370,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D1
 ~
 ~
@@ -387,7 +387,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D2
 ~
 ~
@@ -404,7 +404,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -421,7 +421,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D1
 ~
 ~
@@ -442,7 +442,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -459,7 +459,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D1
 ~
 ~
@@ -476,7 +476,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -493,7 +493,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -506,7 +506,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D1
 ~
 ~
@@ -523,7 +523,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -540,7 +540,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D2
 ~
 ~
@@ -553,7 +553,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -566,7 +566,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D1
 ~
 ~
@@ -583,7 +583,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D2
 ~
 ~
@@ -600,7 +600,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D1
 ~
 ~
@@ -617,7 +617,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D1
 ~
 ~
@@ -634,7 +634,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -659,7 +659,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D1
 ~
 ~
@@ -676,7 +676,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -693,7 +693,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D2
 ~
 ~
@@ -706,7 +706,7 @@ altos que você não consegue nem ver seus caules.  De repente, você
 percebe que este é um milharal mágico e reza para que possa
 encontrar a saída deste lugar.
 ~
-91 g 2
+91 64 0 0 0 2
 D0
 ~
 ~
@@ -721,7 +721,7 @@ A Saída~
 Você finalmente chegou ao fim do labirinto.   Apenas vá a norte e não
 volte para trás.  A não ser se você queira se perder mais um pouco. :P
 ~
-91 gc 2
+91 68 0 0 0 2
 D0
 ~
 ~

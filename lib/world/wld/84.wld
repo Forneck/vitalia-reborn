@@ -5,7 +5,7 @@ seu redor você observa a paisagem desértica da estrada e alguns arbustos que
 nascem ao longo dos limites da estrada.  Ao oeste e ao sudeste você observa
 a continuação da grande estrada do leste.
 ~
-84 0 2
+84 0 0 0 0 2
 D3
 Você observa a grande Estrada do Leste.
 ~
@@ -25,7 +25,7 @@ antigas pegadas fixadas sobre uma pequena camada de lama ressecada.  Ao
 noroeste e ao sudeste você observa a continuação da grande Estrada do Leste
 e ao leste você observa um estranho e sombrio pântano.
 ~
-84 0 2
+84 0 0 0 0 2
 D1
 Você observa um horrível e sombrio pântano.
 ~
@@ -53,7 +53,7 @@ ouvidos vindo do norte, trazendo consigo um horrível odor.  Ao sul e ao
 noroeste você observa a continuação da grande Estrada do Leste.  Ao nordeste
 você observa um misterioso e sombrio pântano.
 ~
-84 0 2
+84 0 0 0 0 2
 D2
 Você observa a grande Estrada do Leste.
 ~
@@ -78,7 +78,7 @@ leste-oeste.  Pequenos arbustos crescem as margens da estrada, formando um
 simples e bonito contorno no caminho que segue a estrada.  Ao leste e ao
 norte você observa a continuação da grande Estrada do Leste.
 ~
-84 0 2
+84 0 0 0 0 2
 D0
 Você observa a grande Estrada do Leste.
 ~
@@ -99,7 +99,7 @@ secos que contornam a estrada.  Você observa ao norte, ainda muito distante,
 um estranho amontoado de árvores secas e negras.  Ao leste e ao oeste você
 observa a continuação da grande Estrada do Leste.
 ~
-84 0 2
+84 0 0 0 0 2
 D1
 Você observa a grande Estrada do Leste.
 ~
@@ -123,7 +123,7 @@ ficar cada vez mais estranha.  Você observa o céu e não encontra nem um
 sinal de pássaros.  Ao nordeste você observa suaves colinas verdes.  Ao
 leste e ao oeste você observa a continuação da grande estrada do leste.
 ~
-84 0 2
+84 0 0 0 0 2
 D1
 Você observa a estranha Estrada do Leste.
 ~
@@ -145,7 +145,7 @@ torre de pedras você percebe a existência de suaves colinas verdes.  Ao
 nordeste e ao oeste você observa a continuação da monumental Estrada do
 Leste.
 ~
-84 0 2
+84 0 0 0 0 2
 D0
 Você observa a monumental base do Topo dos Ventos.
 ~
@@ -176,7 +176,7 @@ pedras que cercam a estrada do leste.  Ao norte você suaves colinas verdes e
 ao noroeste você observa uma esplendorosa torre de pedra.  Ao nordeste e
 sudoeste você observa a continuação da grande Estrada do Leste.
 ~
-84 0 2
+84 0 0 0 0 2
 D0
 Você observa as Colinas do Vento.
 ~
@@ -208,7 +208,7 @@ quebrado pelas fortes rajadas de vento, vindos do oeste e algumas vezes do
 sul.  Ao leste e ao sudoeste você observa a continuação da grande Estrada do
 Leste.
 ~
-84 0 2
+84 0 0 0 0 2
 D1
 Você observa a estranha Estrada do Leste.
 ~
@@ -229,7 +229,7 @@ secos que contornam a estrada.  Ao oeste você observa a continuação da
 grande Estrada do Leste e ao leste você observa uma ponte feita de pedras
 cruzando o sublime rio Fontegris.
 ~
-84 0 2
+84 0 0 0 0 2
 D1
 Você observa a Ponte de Mitheithel cruzando o rio Fontegris.
 ~
@@ -252,7 +252,7 @@ ambiente.  Ao oeste e ao sudoeste você observa a grande Estrada do Leste e
 ao norte, leste, noroeste e nordeste você observa o agonizante Pântano dos
 Mosquitos.
 ~
-84 cgrs 3
+84 393284 0 0 0 3
 D0
 Você observa o traiçoeiro Pântano dos Mosquitos.
 ~
@@ -298,7 +298,7 @@ ruídos numa sinfonia sem fim de crique-craques.  Ao norte, noroeste e
 nordeste você observa as horripilantes árvores negras do Pântano dos
 Mosquitos.
 ~
-84 cgrs 3
+84 393284 0 0 0 3
 D0
 Você observa o traiçoeiro Pântano dos Mosquitos.
 ~
@@ -329,7 +329,7 @@ ruídos numa sinfonia sem fim de crique-craques.  Ao leste, nordeste e
 sudeste você observa as horripilantes árvores negras do Pântano dos
 Mosquitos.
 ~
-84 cgrs 3
+84 393284 0 0 0 3
 D1
 Você observa o traiçoeiro Pântano dos Mosquitos.
 ~
@@ -360,7 +360,7 @@ ruídos numa sinfonia sem fim de crique-craques.  Ao leste, oeste, noroeste,
 nordeste, sudeste e sudoeste você observa as horripilantes árvores negras do
 Pântano dos Mosquitos.
 ~
-84 cgrs 3
+84 393284 0 0 0 3
 D1
 Você observa o traiçoeiro Pântano dos Mosquitos.
 ~
@@ -403,7 +403,7 @@ ambiente.  Ao noroeste e ao sudoeste você observa o agonizante Pântano dos
 Mosquitos e ao sudeste você observa através de algumas árvores do pântano as
 suaves Colinas do Vento.
 ~
-84 cgrs 3
+84 393284 0 0 0 3
 D6
 Você observa o traiçoeiro Pântano dos Mosquitos.
 ~
@@ -434,7 +434,7 @@ ruídos numa sinfonia sem fim de crique-craques.  Ao leste, sul, sudeste e
 sudoeste você observa as horripilantes árvores negras do Pântano dos
 Mosquitos.
 ~
-84 cgrs 3
+84 393284 0 0 0 3
 D1
 Você observa o traiçoeiro Pântano dos Mosquitos.
 ~
@@ -470,7 +470,7 @@ ruídos numa sinfonia sem fim de crique-craques.  Ao sul, oeste, sudeste e
 sudoeste você observa as horripilantes árvores negras do Pântano dos
 Mosquitos.
 ~
-84 cgrs 3
+84 393284 0 0 0 3
 D2
 Você observa o traiçoeiro Pântano dos Mosquitos.
 ~
@@ -502,7 +502,7 @@ torre de pedra.  Ao leste você observa as Colinas do Vento e ao noroeste
 você observa uma paisagem triste e sombria, composta por árvores negras
 apodrecidas.  Ao sudeste você observa a grande Estrada do leste.
 ~
-84 0 2
+84 0 0 0 0 2
 D1
 Você observa as Colinas do vento.
 ~
@@ -528,7 +528,7 @@ observa a sublime torre de base robusta e coroada com enormes pedras.  Ao
 sul e ao sudeste você observa a grande Estrada do leste.  Para cima seguindo
 uma íngreme trilha você observa o topo da imponente torre de pedra.
 ~
-84 0 4
+84 0 0 0 0 4
 D2
 Você observa a grande Estrada do Leste.
 ~
@@ -554,7 +554,7 @@ uma compacta camada de grama.  Você percebe um pouco mais ao sul, uma enorme
 torre de pedra.  Ao oeste você observa as Colinas do Vento e ao sudeste você
 observa a grande Estrada do leste.
 ~
-84 0 2
+84 0 0 0 0 2
 D2
 Você observa a grande Estrada do leste.
 ~
@@ -579,7 +579,7 @@ leste cruzando inúmeros pontos de luz numa aldeia muito distante e ao leste
 você observa as Montanhas Sombrias.  A trilha segue na direção do topo e da
 base da monumental torre de observação.
 ~
-84 r 5
+84 131072 0 0 0 5
 D4
 Você observa o topo da torre de observação.
 ~
@@ -603,7 +603,7 @@ grande Estrada do leste cruzando inúmeros pontos de luz numa aldeia muito
 distante e ao leste você observa as Montanhas Sombrias.  Na direção da base
 da grande torre de observação você observa um trilha íngreme.
 ~
-84 cgr 5
+84 131140 0 0 0 5
 D5
 Você observa a base da torre de observação.
 ~
@@ -620,7 +620,7 @@ norte-sul até o grande encontro com o rio Ruidoságua.  Ao leste e ao oeste
 você observa a continuação da grande Estrada do Leste.  Ao norte e ao sul
 você observa o veloz rio Fontegris.
 ~
-84 c 2
+84 4 0 0 0 2
 D0
 Você observa o veloz rio Fontegris.
 ~
@@ -650,7 +650,7 @@ velocidade que segue desde a Charneca Etten até o encontro com o rio
 Ruidoságua.  Ao nordeste você observa a continuação do poderoso rio
 Fontegris e ao sul você observa uma bela ponte branca de pedra.
 ~
-84 cgrs 7
+84 393284 0 0 0 7
 D2
 Você observa a bela Ponte de Mitheithel.
 ~
@@ -670,7 +670,7 @@ velocidade que segue desde a Charneca Etten até o encontro com o rio
 Ruidoságua.  Ao sudoeste você observa a continuação do poderoso rio
 Fontegris e ao nordeste você observa a perigosa Mata dos Trolls.
 ~
-84 cgrs 7
+84 393284 0 0 0 7
 D7
 Você observa a perigosa Mata dos Trolls.
 ~
@@ -690,7 +690,7 @@ velocidade que segue desde a Charneca Etten até o encontro com o rio
 Ruidoságua.  Ao sul você observa a continuação do poderoso rio Fontegris e
 ao norte você observa uma bela ponte branca de pedra.
 ~
-84 cgrs 7
+84 393284 0 0 0 7
 D0
 Você observa a bela Ponte de Mitheithel.
 ~
@@ -710,7 +710,7 @@ velocidade que segue desde a Charneca Etten até o encontro com o rio
 Ruidoságua.  Ao norte você observa a continuação do poderoso rio Fontegris e
 ao sul você observa o encontro do rio Fontegris e o rio Ruidoságua.
 ~
-84 cgrs 7
+84 393284 0 0 0 7
 D0
 Você observa o veloz rio Fontegris.
 ~
@@ -733,7 +733,7 @@ Montanhas Sombrias.  Ao norte você observa as velozes águas do rio
 Fontegris, ao nordeste você observa as águas do rio Ruidoságua e ao sudoeste
 você observa as águas volumosas do rio Cinzento.
 ~
-84 cgrs 7
+84 393284 0 0 0 7
 D0
 Você observa o veloz rio Fontegris.
 ~
@@ -758,7 +758,7 @@ belas águas do rio Cinzento e o poderoso som emitido pelas suas águas que
 correm rapidamente na direção do grande Mar.  Ao nordeste você observa o
 encontro dos rios Fontegris e Ruidoságua.
 ~
-84 cgrs 7
+84 393284 0 0 0 7
 D7
 Você observa o encontro dos rios Fontegris e Ruidoságua.
 ~
@@ -774,7 +774,7 @@ até o encontro com o veloz rio Fontegris.  Ao nordeste você observa as águas
 do rio Ruidoságua e ao sudoeste você observa o encontro dos rios Fontegris e
 Ruidoságua.
 ~
-84 cgrs 7
+84 393284 0 0 0 7
 D7
 Você observa as águas do rio Ruidoságua.
 ~
@@ -794,7 +794,7 @@ chamado pelos celestiais elfos de Bruinen.  Ao seu redor você observa as
 o encontro com o veloz rio Fontegris.  Ao nordeste e sudoeste você observa
 as águas do rio Ruidoságua.
 ~
-84 cgrs 7
+84 393284 0 0 0 7
 D7
 Você observa as águas do rio Ruidoságua.
 ~
@@ -815,7 +815,7 @@ Bruinen e seguem até o encontro com o veloz rio Fontegris.  Ao sudoeste você
 observa as águas do rio Ruidoságua e ao nordeste você observa o magnífico
 Vau de Bruinen.
 ~
-84 cgrs 7
+84 393284 0 0 0 7
 D7
 Você observa o rio Ruidoságua cortando o Vau de Bruinen.
 ~
@@ -836,7 +836,7 @@ distante antigas torres.  Ao oeste você observa uma ponte feita de pedras
 cruzando o sublime rio Fontegris e ao sudeste você observa a continuação da
 grande Estrada do leste.
 ~
-84 0 2
+84 0 0 0 0 2
 D3
 Você observa a Ponte de Mitheithel cruzando o rio Fontegris.
 ~
@@ -857,7 +857,7 @@ inexistência total de pegadas.  Ao norte você observa enormes árvores
 silvestres, ao leste e ao noroeste você observa a continuação da grande
 Estrada do Leste.
 ~
-84 0 2
+84 0 0 0 0 2
 D0
 Você observa inúmeras árvores silvestres.
 ~
@@ -883,7 +883,7 @@ inexistência total de pegadas.  Ao norte você observa enormes árvores
 silvestres, ao leste e ao oeste você observa a continuação da grande Estrada
 do Leste.
 ~
-84 0 2
+84 0 0 0 0 2
 D0
 Você observa inúmeras árvores silvestres.
 ~
@@ -910,7 +910,7 @@ distância, o belo rio Ruidoságua seguindo rumo ao encontro com o veloz rio
 Fontegris.  Ao oeste e ao nordeste você observa a continuação da grande
 Estrada do Leste.
 ~
-84 0 2
+84 0 0 0 0 2
 D3
 Você observa a grande Estrada do Leste.
 ~
@@ -932,7 +932,7 @@ pequeninas flores perfumadas que crescem em arbustos verdes e bem
 conservados.  Ao sudoeste você observa a Estrada do Leste seguindo para o
 oeste e ao leste você observa um imenso campo verde.
 ~
-84 0 2
+84 0 0 0 0 2
 D1
 Você observa um imenso campo verde.
 ~
@@ -956,7 +956,7 @@ Montanhas Sombrias, também chamadas de Hithaiglin.  Ao oeste você observa
 o inicio da grande Estrada do Leste e ao leste você observa o monumental
 campo aberto.
 ~
-84 0 2
+84 0 0 0 0 2
 D1
 Você observa um grande campo aberto.
 ~
@@ -976,7 +976,7 @@ de vegetação rasteira e algumas manchas cinzentas formada por pequenas
 rochas e poções de areia.  Ao leste você observa as monumentais Montanhas
 Sombrias.  Ao oeste e ao nordeste você observa o gigantesco campo aberto.
 ~
-84 0 2
+84 0 0 0 0 2
 D3
 Você observa um grande campo aberto.
 ~
@@ -999,7 +999,7 @@ e poções de areia.  Ao leste você observa as imponentes Montanhas Sombrias.
 Ao sudeste você observa o belo Vau de Bruinen e ao sudoeste você observa a
 continuação do monumental campo aberto.
 ~
-84 0 2
+84 0 0 0 0 2
 D1
 Você observa o Vau de Bruinen.
 ~
@@ -1024,7 +1024,7 @@ uma perfumada camada de grama e flores.  Ao seu redor você observa algumas
 observa as Montanhas Sombrias e seus picos.  Ao noroeste você observa um
 imenso campo aberto e ao sudeste você observa um tranqüilo campo verde.
 ~
-84 0 2
+84 0 0 0 0 2
 D6
 Você observa um imenso campo aberto.
 ~
@@ -1044,7 +1044,7 @@ você observa cobrindo todo o campo uma bela camada de grama e algumas
 ainda mais agradável.  Ao leste você observa as Montanhas Sombrias e seus
 imponentes picos.  Ao noroeste você observa um lindo campo verde.
 ~
-84 0 2
+84 0 0 0 0 2
 D6
 Você observa um tranqüilo campo verde.
 ~
@@ -1063,7 +1063,7 @@ galhos das árvores pequeninos pássaros cantam suaves e belas melodias.  Ao
 noroeste e ao nordeste você observa as árvores silvestres da Mata dos
 Trolls.  Ao sul você observa a grande Estrada do Leste.
 ~
-84 gs 3
+84 262208 0 0 0 3
 D2
 Você observa a grande Estrada do Leste.
 ~
@@ -1092,7 +1092,7 @@ galhos das árvores pequeninos pássaros cantam suaves e belas melodias.  Ao
 noroeste e ao nordeste você observa as árvores silvestres da Mata dos
 Trolls.  Ao sul você observa a grande Estrada do Leste.
 ~
-84 gs 3
+84 262208 0 0 0 3
 D2
 Você observa a grande Estrada do Leste.
 ~
@@ -1120,7 +1120,7 @@ melhor palco e da maior platéia para a sua melodia.  Ao nordeste e ao
 sudeste você observa você observa as maravilhosas e frondosas árvores
 silvestres da Mata dos Trolls.
 ~
-84 gs 3
+84 262208 0 0 0 3
 D7
 Você observa a Mata dos Trolls.
 ~
@@ -1144,7 +1144,7 @@ platéia para a sua melodia.  Ao sudoeste e ao sudeste você observa você
 observa as maravilhosas e frondosas árvores silvestres da Mata dos Trolls.
 Ao norte você observa uma estranha toca pedras.
 ~
-84 gs 3
+84 262208 0 0 0 3
 D0
 Você observa uma estranha toca de pedras.
 ~
@@ -1172,7 +1172,7 @@ melhor palco e da maior platéia para a sua melodia.  Ao noroeste e ao
 sudoeste você observa você observa as maravilhosas e frondosas árvores
 silvestres da Mata dos Trolls.
 ~
-84 gs 3
+84 262208 0 0 0 3
 D6
 Você observa a Mata dos Trolls.
 ~
@@ -1192,7 +1192,7 @@ paredes você observa algumas inscrições estranhas e sobre o chão da toca,
 você observa imensas pegadas.  Ao sul você observa um pequeno feixe de luz
 vindo da Mata dos Trolls.
 ~
-84 acdfgrs 0
+84 393325 0 0 0 0
 D2
 Você observa a Mata dos Trolls.
 ~
@@ -1215,7 +1215,7 @@ galhos das árvores pequeninos pássaros cantam suaves e belas melodias.  Ao
 leste, nordeste e ao sudoeste você observa as belas árvores da Mata dos
 Trolls.
 ~
-84 gs 3
+84 262208 0 0 0 3
 D1
 Você observa a Mata dos Trolls.
 ~
@@ -1243,7 +1243,7 @@ melhor palco e da maior platéia para a sua melodia.  Ao oeste, noroeste e ao
 sudeste você observa você observa as maravilhosas e frondosas árvores
 silvestres da Mata dos Trolls.
 ~
-84 gs 3
+84 262208 0 0 0 3
 D3
 Você observa a Mata dos Trolls.
 ~
@@ -1272,7 +1272,7 @@ cantarem as suas suaves melodias.  À sua frente você observa três terríveis
 trolls prestes a lhe atacar.  Ao sudeste e ao sudoeste você observa as
 lindas árvores silvestres da Mata dos trolls.
 ~
-84 gs 3
+84 262208 0 0 0 3
 D8
 Você observa a Mata dos Trolls.
 ~
@@ -1295,7 +1295,7 @@ observa as encostas das montanhas que dão forma ao vale.  Ao oeste você
 observa um monumental campo aberto e ao sudoeste você observa as belas águas
 do rio ruidoságua, seguindo rumo ao encontro com o rio Fontegris.
 ~
-84 et 2
+84 524304 0 0 0 2
 D0
 Você observa a encosta de uma grande montanha.
 ~
@@ -1326,7 +1326,7 @@ trilha você observa muitos galhos de árvores e grandes rochas, fechando
 completamente o caminho ao topo da montanha.  Ao sul você observa o Vau de
 Bruinen.
 ~
-84 0 4
+84 0 0 0 0 4
 D2
 Você observa o rio Ruidoságua cortando o Vau de Bruinen.
 ~
@@ -1342,7 +1342,7 @@ a sua movimentação.  Ao norte você observa uma maravilhosa paisagem:  O rio
 Ruidoságua cortando o esplendoroso Vau de Bruinen.  Para cima você observa
 uma íngreme e perigosa trilha rumo ao topo da grandiosa montanha.
 ~
-84 crs 4
+84 393220 0 0 0 4
 D0
 Você observa o rio Ruidoságua cortando o Vau de Bruinen.
 ~
@@ -1369,7 +1369,7 @@ suor.  Para baixo você observa uma trilha entre os troncos de árvores que
 segue rumo a base da montanha e para cima você observa uma trilha íngreme
 seguindo rumo ao topo da montanha.
 ~
-84 irs 5
+84 393472 0 0 0 5
 D4
 Você observa uma perigosa trilha rumo ao topo da montanha.
 ~
@@ -1397,7 +1397,7 @@ completamente a trilha e impedindo de qualquer visitante prosseguir.  Ao
 nordeste você observa uma outra trilha, um pouco mais estreita, aberta na
 encosta da montanha.
 ~
-84 irs 5
+84 393472 0 0 0 5
 D4
 Você observa uma perigosa trilha rumo a base da montanha.
 ~
@@ -1420,7 +1420,7 @@ maravilhosa melodia.  Ao nordeste você observa a continuação da estreita
 trilha e ao sudoeste você observa uma perigosa trilha íngreme na encosta da
 montanha.
 ~
-84 irs 4
+84 393472 0 0 0 4
 D7
 Você observa uma trilha estreita na encosta da montanha.
 ~
@@ -1446,7 +1446,7 @@ uma perigosa trilha íngreme na encosta da montanha e ao norte você observa
 uma magnífica ponte de pedra ligando a trilha estreita à esplendorosa
 Valfenda.
 ~
-84 irs 4
+84 393472 0 0 0 4
 D0
 Você observa uma maravilhosa ponte de pedra.
 ~
@@ -1472,7 +1472,7 @@ portão de madeira sustentado por um sublime muro de pedra com lindos
 desenhos em alto relevo de folhas e caules, que cerca este esplendoroso
 paraíso.
 ~
-84 ci 1
+84 260 0 0 0 1
 D2
 Você observa uma trilha estreita na encosta da montanha.
 ~
@@ -1482,8 +1482,7 @@ D7
 Você observa um magnífico portão de madeira.
 ~
 portão madeira~
-:n 1 o portão de madeira
-ac -1 8459
+0 -1 8459
 S
 #8459
 Valfenda, a Casa dos Senhores de Eldar~
@@ -1501,7 +1500,7 @@ observa um belo pátio, ao noroeste você observa um perfumado e colorido
 jardim, ao nordeste você observa uma linda passarela de pedras e ao sudoeste
 você observa o grande portão de madeira de Valfenda.
 ~
-84 g 1
+84 64 0 0 0 1
 D1
 Você observa um belo pátio e formosas estatuas.
 ~
@@ -1521,8 +1520,7 @@ D9
 Você observa um magnífico portão de madeira.
 ~
 portão madeira~
-:n 1 o portão de madeira
-ac -1 8458
+0 -1 8458
 S
 #8460
 O Majestoso Pátio de Entrada~
@@ -1537,7 +1535,7 @@ neste pátio.  Ao oeste você observa o amplo pátio de entrada.  Ao nordeste e
 ao sudeste você observa maravilhosos e bem cuidados jardins.  Ao noroeste
 você observa uma passarela de pedras.
 ~
-84 0 1
+84 0 0 0 0 1
 D3
 Você observa o amplo pátio de entrada da cidade.
 ~
@@ -1571,7 +1569,7 @@ cada vez mais forte.  Alguns pássaros sobrevoam o encantador jardim e outros
 pousam em suas flores.  Ao noroeste você observa o amplo pátio de entrada da
 bela Valfenda e ao nordeste você observa lindas cachoeiras.
 ~
-84 0 1
+84 0 0 0 0 1
 D6
 Você observa o amplo pátio de entrada da bela Valfenda.
 ~
@@ -1595,7 +1593,7 @@ cada vez mais forte.  Alguns pássaros sobrevoam o encantador jardim e outros
 pousam em suas flores.  Ao sudeste você observa o amplo pátio de entrada de
 Valfenda.
 ~
-84 0 1
+84 0 0 0 0 1
 D8
 Você observa o amplo pátio de entrada da bela Valfenda.
 ~
@@ -1614,7 +1612,7 @@ aos pés das montanhas, pelo sublime rio Ruidoságua cortando o Vau de
 Bruinen.  Ao noroeste e ao sudoeste você observa os majestosos jardins de
 Valfenda.
 ~
-84 gs 6
+84 262208 0 0 0 6
 D6
 Você observa um maravilhoso jardim.
 ~
@@ -1638,7 +1636,7 @@ cada vez mais forte.  Alguns pássaros sobrevoam o encantador jardim e outros
 pousam em suas flores.  Ao sudeste você observa lindas cachoeiras e ao
 sudoeste você observa o amplo pátio de entrada de Valfenda.
 ~
-84 0 1
+84 0 0 0 0 1
 D8
 Você observa maravilhosas cachoeiras.
 ~
@@ -1663,7 +1661,7 @@ veloz rio Fontegris.  Ao norte você observa a continuação da bela passarela
 de pedras.  Ao sudeste e sudoeste você observa o amplo pátio de entrada da
 celestial cidade de Valfenda.
 ~
-84 is 1
+84 262400 0 0 0 1
 D0
 Você observa uma passarela de pedras.
 ~
@@ -1692,7 +1690,7 @@ passarela o belo rio Ruidoságua seguindo pelo Vau Bruinen ao encontro do
 veloz rio Fontegris.  Ao norte você observa uma perfumada praça florida e ao
 sul você observa a continuação da passarela de pedras.
 ~
-84 is 1
+84 262400 0 0 0 1
 D0
 Você observa uma praça florida.
 ~
@@ -1714,7 +1712,7 @@ observa uma linda alameda formada por imponentes árvores.  Ao sul você
 observa uma passarela de pedras.  Ao leste, nordeste e sudeste você observa
 belas casas com monumentais detalhes em forma de caules e folhas.
 ~
-84 0 1
+84 0 0 0 0 1
 D0
 Você observa uma imponente alameda.
 ~
@@ -1724,8 +1722,7 @@ D1
 Você observa uma magnífica casa.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8469
+0 -1 8469
 D2
 Você observa uma bela passarela de pedras.
 ~
@@ -1735,14 +1732,12 @@ D7
 Você observa uma magnífica casa.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8471
+0 -1 8471
 D8
 Você observa uma magnífica casa.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8468
+0 -1 8468
 S
 #8468
 Uma Belíssima Casa Élfica~
@@ -1755,13 +1750,12 @@ seus olhos através de uma ampla janela, você observa suaves cachoeiras e a
 exuberante vegetação nas encostas das montanhas.  Ao noroeste você observa
 uma linda porta de madeira.
 ~
-84 dgr 0
+84 131144 0 0 0 0
 D6
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8467
+0 -1 8467
 S
 #8469
 Uma Esplendorosa Casa Élfica~
@@ -1774,13 +1768,12 @@ suavemente a tranqüilizante melodia emitida pelas brilhantes cachoeiras que
 cercam toda a gloriosa Valfenda.  Ao oeste você observa uma bela porta de
 madeira.
 ~
-84 dgr 0
+84 131144 0 0 0 0
 D3
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8467
+0 -1 8467
 S
 #8470
 A Alameda das Flores~
@@ -1793,7 +1786,7 @@ você observa na encosta da montanha uma linda cachoeira, emitindo uma suave
 melodia produzida pelas suas águas.  Ao norte você observa a extensa alameda
 das flores e ao sul você observa uma bela praça florida.
 ~
-84 0 1
+84 0 0 0 0 1
 D0
 Você observa a magnífica alameda das flores.
 ~
@@ -1816,13 +1809,12 @@ seus olhos através de uma ampla janela, você observa suaves cachoeiras e a
 exuberante vegetação nas encostas das montanhas.  Ao noroeste você observa
 uma linda porta de madeira.
 ~
-84 dgr 0
+84 131144 0 0 0 0
 D9
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8467
+0 -1 8467
 S
 #8472
 A Alameda das Flores~
@@ -1835,7 +1827,7 @@ você observa na encosta da montanha uma linda cachoeira, emitindo uma suave
 melodia produzida pelas suas águas.  Ao nordeste você observa a continuação
 da passarela branca e ao sul você observa a extensa alameda das flores.
 ~
-84 0 1
+84 0 0 0 0 1
 D2
 Você observa a magnífica alameda das flores.
 ~
@@ -1858,13 +1850,12 @@ seus olhos através de uma ampla janela, você observa suaves cachoeiras e a
 exuberante vegetação nas encostas das montanhas.  Ao noroeste você observa
 uma linda porta de madeira.
 ~
-84 dgr 0
+84 131144 0 0 0 0
 D6
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8474
+0 -1 8474
 S
 #8474
 Uma Magnífica Passarela de Pedras Brancas~
@@ -1879,7 +1870,7 @@ veloz rio Fontegris.  Ao nordeste você observa a continuação da passarela
 de pedras, ao sudoeste você observa uma linda alameda de flores e ao sudeste
 você observa uma majestosa casa élfica.
 ~
-84 is 1
+84 262400 0 0 0 1
 D7
 Você observa uma passarela de pedras.
 ~
@@ -1889,8 +1880,7 @@ D8
 Você observa uma bela casa élfica.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8473
+0 -1 8473
 D9
 Você observa uma perfumada alameda de flores.
 ~
@@ -1909,7 +1899,7 @@ passarela o belo rio Ruidoságua seguindo pelo Vau Bruinen ao encontro do
 veloz rio Fontegris.  Ao sudoeste você observa a continuação da passarela de
 pedras e ao nordeste você observa um amplo pátio aberto.
 ~
-84 is 1
+84 262400 0 0 0 1
 D7
 Você observa um belo pátio da cidade.
 ~
@@ -1932,13 +1922,12 @@ suavemente a tranqüilizante melodia emitida pelas brilhantes cachoeiras que
 cercam toda a gloriosa Valfenda.  Ao norte você observa uma bela porta de
 madeira.
 ~
-84 dgr 0
+84 131144 0 0 0 0
 D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8478
+0 -1 8478
 S
 #8477
 Uma Belíssima Casa Élfica~
@@ -1951,13 +1940,12 @@ seus olhos através de uma ampla janela, você observa suaves cachoeiras e a
 exuberante vegetação nas encostas das montanhas.  Ao noroeste você observa
 uma linda porta de madeira.
 ~
-84 dgr 0
+84 131144 0 0 0 0
 D6
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8478
+0 -1 8478
 S
 #8478
 Um Amplo Pátio no Centro de Imladris~
@@ -1970,37 +1958,32 @@ e imponente casa, cercada com lindas e celestiais estatuas de pedra.  Ao
 nordeste, ao leste, ao sudeste e ao sul você observa maravilhosas casas
 élficas.  Ao sudoeste você observa uma bela passarela de pedras.
 ~
-84 g 1
+84 64 0 0 0 1
 D0
 Você observa uma monumental casa élfica.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8481
+0 -1 8481
 D1
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8479
+0 -1 8479
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8476
+0 -1 8476
 D7
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8480
+0 -1 8480
 D8
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8477
+0 -1 8477
 D9
 Você observa uma passarela de pedras.
 ~
@@ -2018,13 +2001,12 @@ seus olhos através de uma ampla janela, você observa suaves cachoeiras e a
 exuberante vegetação nas encostas das montanhas.  Ao oeste você observa uma
 linda porta de madeira.
 ~
-84 dgr 0
+84 131144 0 0 0 0
 D3
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8478
+0 -1 8478
 S
 #8480
 Uma Esplendorosa Casa Élfica~
@@ -2037,13 +2019,12 @@ suavemente a tranqüilizante melodia emitida pelas brilhantes cachoeiras que
 cercam toda a gloriosa Valfenda.  Ao sudoeste você observa uma bela porta de
 madeira.
 ~
-84 dgr 0
+84 131144 0 0 0 0
 D9
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8478
+0 -1 8478
 S
 #8481
 A Monumental Casa do Senhor de Valfenda~
@@ -2059,7 +2040,7 @@ majestosos quadros nas janelas do imenso salão.  Ao norte você observa o
 grande salão da casa do senhor de Valfenda.  Ao noroeste e ao nordeste você
 observa os jardins de Elrond.  Ao sul você observa um agradável pátio.
 ~
-84 cdgrs 0
+84 393292 0 0 0 0
 D0
 Você observa um monumental salão da casa de Elrond.
 ~
@@ -2069,8 +2050,7 @@ D2
 Você observa um belo pátio.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8478
+0 -1 8478
 D6
 Você observa os jardins de Elrond.
 ~
@@ -2091,7 +2071,7 @@ encosta íngreme da montanha trazendo o verde intenso e o perfume da natureza
 para o magnífico jardim alto do senhor de Valfenda.  Ao nordeste e ao
 sudeste você observa o grande salão da casa de Elrond.
 ~
-84 g 1
+84 64 0 0 0 1
 D7
 Você observa o interior do grande salão da casa do senhor de Valfenda.
 ~
@@ -2112,7 +2092,7 @@ encosta íngreme da montanha trazendo o verde intenso e o perfume da natureza
 para o magnífico jardim alto do senhor de Valfenda.  Ao noroeste e ao
 sudoeste você observa o grande salão da casa de Elrond.
 ~
-84 g 1
+84 64 0 0 0 1
 D6
 Você observa o interior do grande salão da casa do senhor de Valfenda.
 ~
@@ -2137,7 +2117,7 @@ Ao sudeste e ao sudoeste você observa os magníficos jardins de Elrond.  Ao
 noroeste você observa uma escadaria esculpida em madeira e ao nordeste você
 observa um corredor.  Ao sul você observa o grande salão da casa de Elrond.
 ~
-84 cdgrs 0
+84 393292 0 0 0 0
 D0
 Você observa uma bela passarela de pedra sobre um espelho d'água.
 ~
@@ -2177,7 +2157,7 @@ Logo abaixo da passarela você observa um lindo espelho d'água.  Ao sul você
 observa o magnífico salão da casa de Elrond e para cima você observa uma
 tranqüila varanda.
 ~
-84 cdgirs 0
+84 393548 0 0 0 0
 D2
 Você observa o grande salão da casa de Elrond.
 ~
@@ -2197,19 +2177,17 @@ inúmeras portas de madeira.  Nas paredes você observa majestosos desenhos
 esculpidos em alto relevo, que formam belos caules e folhas.  Ao norte, ao
 noroeste e ao oeste você observa portas de madeira.
 ~
-84 dgrs 0
+84 393288 0 0 0 0
 D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8489
+0 -1 8489
 D3
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8487
+0 -1 8487
 D4
 ~
 ~
@@ -2223,8 +2201,7 @@ D6
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag 8426 8488
+0 8426 8488
 S
 #8487
 Um Belo Quarto~
@@ -2237,13 +2214,12 @@ noite traz o brilho das estrelas até o quarto.  No canto oeste do quarto,
 você observa uma ampla janela e através dela você observa a sublime Valfenda
 e suas belas cachoeiras.  Ao leste você observa uma bela porta de madeira.
 ~
-84 cgrs 0
+84 393284 0 0 0 0
 D1
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8486
+0 -1 8486
 S
 #8488
 A Gloriosa Sala das Heranças~
@@ -2256,13 +2232,12 @@ Imladris invadem a sala, trazendo paz e tranqüilidade.  No extremo sul da
 sala você observa três lindas cúpulas de cristal.  Ao sudeste você observa
 uma bela porta de madeira.
 ~
-84 cdgrs 0
+84 393292 0 0 0 0
 D8
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag 8426 8486
+0 8426 8486
 S
 #8489
 Um Maravilhoso Quarto~
@@ -2275,13 +2250,12 @@ noite traz o brilho das estrelas até o quarto.  No canto norte do quarto,
 você observa uma ampla janela e através dela você observa a sublime Valfenda
 e suas belas cachoeiras.  Ao sul você observa uma bela porta de madeira.
 ~
-84 cgrs 0
+84 393284 0 0 0 0
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8486
+0 -1 8486
 S
 #8490
 Um Longo Corredor no Interior da Casa do Senhor de Valfenda~
@@ -2292,7 +2266,7 @@ chega até seus ouvidos, vinda do leste.  Ao sudoeste você observa o grande
 salão da casa de Elrond.  Ao sudeste você observa um amplo pátio e ao leste
 você observa a continuação do longo corredor.
 ~
-84 dgr 0
+84 131144 0 0 0 0
 D1
 Você observa um longo corredor.
 ~
@@ -2322,7 +2296,7 @@ uma esplendorosa espada nos braços de uma sublime estatua de mármore branco.
 Ao sudeste você observa um intenso brilho dourado iluminando um belo salão e
 ao oeste você observa a continuação do longo corredor.
 ~
-84 dgrs 0
+84 393288 0 0 0 0
 D3
 Você observa um longo corredor.
 ~
@@ -2341,7 +2315,7 @@ grande e tranqüilo salão.  Ao seu redor você observa a total ausência de
 móveis, apenas uma fogueira acesa numa grande lareira, em meio a dois
 pilares entalhados.  Ao noroeste você observa um longo e largo corredor.
 ~
-84 cdfgrs 0
+84 393324 0 0 0 0
 D6
 Você observa um longo e largo corredor.
 ~
@@ -2363,7 +2337,7 @@ várias cadeiras de madeira.  Ao noroeste você observa uma bela escadaria que
 segue rumo ao interior da casa de Elrond.  Ao leste você observa uma linda
 passarela que segue na direção de uma majestosa cachoeira.
 ~
-84 cfg 1
+84 100 0 0 0 1
 D1
 Você observa uma bela passarela, que segue na direção de uma cachoeira.
 ~
@@ -2387,7 +2361,7 @@ montanhas, pelo sublime rio Ruidoságua cortando o Vau de Bruinen.  Ao oeste
 você observa uma bela passarela que segue rumo ao glorioso conselho de
 Elrond.
 ~
-84 cgs 6
+84 262212 0 0 0 6
 D3
 Você observa uma bela passarela que segue rumo ao conselho de Elrond.
 ~
@@ -2402,7 +2376,7 @@ seu redor você observa uma majestosa e agradável varanda.  Ao nordeste você
 observa a ampla varanda e para baixo você observa uma linda passarela de
 pedra.
 ~
-84 grs 0
+84 393280 0 0 0 0
 D5
 Você observa uma bela passarela de pedra.
 ~
@@ -2422,25 +2396,22 @@ seu redor você observa uma majestosa e agradável varanda.  Ao sudoeste você
 observa a ampla varanda.  Ao leste, sul e nordeste você observa belas portas
 de madeira.
 ~
-84 grs 0
+84 393280 0 0 0 0
 D1
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8498
+0 -1 8498
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8499
+0 -1 8499
 D7
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8497
+0 -1 8497
 D9
 Você observa uma ampla varanda.
 ~
@@ -2457,13 +2428,12 @@ do quarto, você observa alguns cálices de prata sobre uma bela mesa de
 madeira, cercada por três cadeiras.  Ao sudoeste você observa uma linda
 porta de madeira.
 ~
-84 cgrs 0
+84 393284 0 0 0 0
 D9
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8496
+0 -1 8496
 S
 #8498
 Os Aposentos de Elrond~
@@ -2476,13 +2446,12 @@ durante o dia e trazendo o brilho das estrelas para o quarto durante a
 noite.  Na extremidade norte do quarto você observa uma imensa estante de
 livros feita de madeira.  Ao oeste você observa uma linda porta de madeira.
 ~
-84 cgrs 0
+84 393284 0 0 0 0
 D3
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8496
+0 -1 8496
 S
 #8499
 O Quarto da Bela Arwen Undómiel~
@@ -2493,12 +2462,11 @@ cercada por algumas cadeiras de madeira.  No extremidade sul do quarto, você
 observa uma maravilhosa cama de madeira caprichosamente esculpida.  Ao norte
 você observa uma bela porta de madeira.
 ~
-84 cgrs 0
+84 393284 0 0 0 0
 D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
-ag -1 8496
+0 -1 8496
 S
-$
+$~

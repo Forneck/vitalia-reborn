@@ -7,7 +7,7 @@ via está ladeada por arbustos e pequenas moitas, dando à estrada um aspecto
 bastante solitário.  A sensação de estar sendo vigiado está muito forte.  O
 passeio continua para o sul, se encontrando com uma estreita rua a norte.
 ~
-75 cg 2
+75 68 0 0 0 2
 D0
 ~
 ~
@@ -26,7 +26,7 @@ via está ladeada por arbustos e pequenas moitas, dando à estrada um aspecto
 bastante solitário.  A sensação de estar sendo vigiado está muito forte.  O
 passeio continua do norte para o sul.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 ~
@@ -45,7 +45,7 @@ via está ladeada por arbustos e pequenas moitas, dando à estrada um aspecto
 bastante solitário.  A sensação de estar sendo vigiado está muito forte.  O
 passeio continua do norte para o oeste.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 ~
@@ -64,7 +64,7 @@ via está ladeada por arbustos e pequenas moitas, dando à estrada um aspecto
 bastante solitário.  A sensação de estar sendo vigiado está muito forte.  O
 passeio continua do sul para o leste.
 ~
-75 g 2
+75 64 0 0 0 2
 D1
 ~
 ~
@@ -84,7 +84,7 @@ bastante solitário.  A sensação de estar sendo vigiado está muito forte.  O
 passeio continua do norte para o sul.
 
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 ~
@@ -104,7 +104,7 @@ bastante solitário.  A sensação de estar sendo vigiado está muito forte.  O
 passeio continua do norte para o sul.  Longe ao sul, consegue-se ver uma
 clareira bem como o topo de um edifício sobre os arbustos.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 ~
@@ -125,7 +125,7 @@ ornamental e para o sul existe um portão em uma parede feita de pedras.
 Existe uma calçada que começa ao norte.  Um galhardete com a crista do Barão
 Darwin voa sobre a porta de ferro.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 ~
@@ -137,8 +137,7 @@ D1
 D2
 ~
 portão~
-:n 1 o portão
-ab 7501 7537
+1 7501 7537
 D3
 ~
 ~
@@ -155,7 +154,7 @@ construído com pedras lisas que foram retiradas de uma pedreira.  Enquanto a
 parede é baixa para batalhas, parece ser bastante robusta e capaz de
 suportar a maioria dos ataques dos não-militares com bastante facilidade.
 ~
-75 g 2
+75 64 0 0 0 2
 D1
 ~
 ~
@@ -163,8 +162,7 @@ D1
 D2
 ~
 portão~
-:n 1 o portão
-ab 7503 7510
+1 7503 7510
 S
 #7508
 Um Caminho Coberto~
@@ -173,12 +171,11 @@ sustentam um telhado feito de palha.  O caminho está coberto com pedras
 finamente esmagadas.  Para o oeste pode ser visto um grande pátio de
 paralelepípedo e também um portão na parede de pedras ao sul.
 ~
-75 g 0
+75 64 0 0 0 0
 D2
 ~
 portão~
-:n 1 o portão
-ab 7500 7523
+1 7500 7523
 D3
 ~
 ~
@@ -192,13 +189,12 @@ você sente que seus pés ficam mais leves a cada passo.  Algumas elevações
 para o leste e sul.  Um caminho de pedregulhos limita o gramado no lado
 oeste.
 ~
-75 g 2
+75 64 0 0 0 2
 D3
 ~
 ~
 0 -1 7510
 S
-
 #7510
 Um Caminho Com Cascalho~
    Um caminho de cascalho se estende para o oeste.  Para o norte um portão
@@ -206,12 +202,11 @@ foi fixado em uma parede de pedra.  Para o sul, um gramado que parece ter
 sido cortado muito recentemente e para o sudoeste, o caminho continua ate
 algumas construções.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 portão~
-:n 1 o portão
-ag 0 7507
+0 0 7507
 D1
 ~
 ~
@@ -232,7 +227,7 @@ portão foi fixado em uma parede de pedras muito alto.  Para o sul, um
 gramado que parece ter sido cortado muito recentemente e para o sudoeste, o
 caminho continua ate algumas construções.
 ~
-75 g 2
+75 64 0 0 0 2
 D1
 ~
 ~
@@ -254,7 +249,7 @@ portão foi fixado em uma parede de pedras muito alto.  Para o sul, um
 gramado que parece ter sido cortado muito recentemente e para o sudoeste, o
 caminho continua ate algumas construções.
 ~
-75 g 2
+75 64 0 0 0 2
 D1
 ~
 ~
@@ -272,18 +267,16 @@ você sente que seus pés ficam mais leves a cada passo.  Algumas elevações
 para o leste e sul.  Um caminho de pedregulhos limita o gramado para o lado
 norte e oeste.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 ~
-
 0 -1 7510
 D3
 ~
 ~
 0 -1 7514
 S
-
 #7514
 O Gramado Oeste~
    Você está caminhando com muito cuidado por este chão.  Os arbustos foram
@@ -292,7 +285,7 @@ você sente que seus pés ficam mais leves a cada passo.  Algumas elevações
 para o leste e um caminho de pedregulhos limita o gramado para o lado norte
 e oeste.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 ~
@@ -313,7 +306,7 @@ portão foi fixado em uma parede de pedras muito alto.  Para o sul e leste,
 um gramado que parece ter sido cortado muito recentemente.  Para o oeste, o
 caminho segue junto a varias construções ate um ponto onde elas terminam.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 ~
@@ -339,7 +332,7 @@ gramado que parece ter sido cortado muito recentemente.  Para o oeste existe
 uma estalagem para carruagens e o caminho continua até uma outra construção,
 terminando perto de um curral e uma ferraria.
 ~
-75 g 2
+75 64 0 0 0 2
 D1
 ~
 ~
@@ -351,8 +344,7 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
-ag 0 7517
+0 0 7517
 S
 #7517
 A Estalagem para Carruagens~
@@ -360,12 +352,11 @@ A Estalagem para Carruagens~
 vêm visitar.  Agora existe somente uma carruagem que pertence ao Barão.  A
 grande porta da construção está localizada ao leste.
 ~
-75 ag 0
+75 65 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
-ag 0 7516
+0 0 7516
 S
 #7518
 Os Estábulos~
@@ -374,12 +365,11 @@ foram empilhados e pendurados ao longo da parede leste.  Existem várias
 baias, sendo que todas estão vazias neste momento.  Existem duas grandes
 portas ao leste.
 ~
-75 ag 0
+75 65 0 0 0 0
 D1
 ~
 celeiro porta~
-:n 2 a porta
-ag 0 7519
+0 0 7519
 S
 #7519
 O Fim Do Caminho Com Pedregulho~
@@ -388,7 +378,7 @@ o oeste, sendo que estão juntos ao curral que está ao sul.  Consegue-se ver
 uma ferraria acima, no lado leste do curral.  Existe um grande portão na
 direção do curral, ou seja, ao sul.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 ~
@@ -400,13 +390,11 @@ D1
 D2
 ~
 portão~
-:n 1 o portão
-ag 0 7522
+0 0 7522
 D3
 ~
 celeiro porta~
-:n 2 a porta
-ag 0 7518
+0 0 7518
 S
 #7520
 O Gramado Oeste~
@@ -415,7 +403,7 @@ podados muito recentemente e a grama está bastante curta.  Ao pisar na grama
 você sente que seus pés ficam mais leves a cada passo.  Algumas elevações
 para o leste e um caminho de pedregulhos limita o gramado para o lado oeste.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 ~
@@ -423,8 +411,7 @@ D0
 D2
 ~
 porta~
-:n 2 a porta
-ag 0 7521
+0 0 7521
 D3
 ~
 ~
@@ -439,17 +426,15 @@ grandes barris e outras foram apoiadas contra as paredes da construção.
 Vários barris vazios estão próximos à forja.  Há um porta dupla para o oeste
 e uma porta menor para o norte.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-ag 0 7520
+0 0 7520
 D3
 ~
 porta~
-:n 2 a porta
-ag 0 7522
+0 0 7522
 S
 #7522
 O Curral~
@@ -458,17 +443,15 @@ Existe um portão ao norte que não está muito distante.  Para o leste há uma
 porta que dá para a ferraria onde é ferrado os cavalos.  Fora do portão ao
 norte existe um caminho com cascalho que segue para o lado ocidental.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 portão~
-:n 1 o portão
-ag 0 7519
+0 0 7519
 D1
 ~
 porta~
-:n 2 a porta
-ag 0 7521
+0 0 7521
 S
 #7523
 Um Caminho Coberto~
@@ -477,12 +460,11 @@ sustentam um telhado feito de palha.  O caminho está coberto com pedras que
 foram finamente esmagadas.  Existe um portão na parede de pedras ao norte e
 o caminho continua ao leste.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 portão~
-:n 1 o portão
-ab 7500 7508
+1 7500 7508
 D1
 ~
 ~
@@ -495,7 +477,7 @@ sustentam um telhado feito de palha.  O caminho está coberto com pedras que
 foram finamente esmagadas.  O caminho continua para o leste e oeste.  Para o
 sul pode ser visto uma grande área gramínea.
 ~
-75 g 0
+75 64 0 0 0 0
 D1
 ~
 ~
@@ -517,7 +499,7 @@ você sente que seus pés ficam mais leves a cada passo.  Algumas elevações
 para o oeste e sul.  Um caminho de pedregulhos limita o gramado no lado
 norte e um caminho bastante usado pode ser visto ao leste.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 ~
@@ -533,7 +515,7 @@ Um Largo Caminho~
 para o norte e uma construção para o leste.  Para o oeste, uma grande área
 gramada.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 ~
@@ -541,8 +523,7 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
-abg 7560 7529
+0 7560 7529
 D3
 ~
 ~
@@ -557,12 +538,11 @@ caminho que conduz ate as paredes e para o sudoeste ate uma construção.
 Para o leste, pode ser visto uma construção de onde está vindo um barulho
 intenso.
 ~
-75 g 0
+75 64 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
-ag 0 7528
+0 0 7528
 D2
 ~
 ~
@@ -577,12 +557,11 @@ A Loja Do Joalheiro~
    A loja está muito limpa.  Uma grande mesa de trabalho ocupa grande parte
 desta sala.  Existe uma porta ao oeste.
 ~
-75 g 0
+75 64 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-ag 0 7527
+0 0 7527
 S
 #7529
 A Loja da Ourives~
@@ -590,7 +569,7 @@ A Loja da Ourives~
 marcas de queimado em toda a parede norte que parece ter sido feito por
 fogo.  Você vê uma porta ao oeste.
 ~
-75 g 0
+75 64 0 0 0 0
 D2
 ~
 ~
@@ -598,8 +577,7 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
-abg 7503 7526
+0 7503 7526
 S
 #7530
 Uma Passagem Estreita~
@@ -607,7 +585,7 @@ Uma Passagem Estreita~
 gasto que se estende da parede ao norte até uma parede feita de pedras ao
 sul.
 ~
-75 ag 2
+75 65 0 0 0 2
 D0
 ~
 ~
@@ -615,8 +593,7 @@ D0
 D2
 ~
 parede~
-:n 2 a parede
-abg 7504 7531
+0 7504 7531
 S
 #7531
 Próximo A Uma Parede De Pedras~
@@ -624,12 +601,11 @@ Próximo A Uma Parede De Pedras~
 sul, consegue-se ouvir través de uma grande abertura gritos de alguém
 excitado tocando no ar.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 parede~
-:n 2 a parede
-abg 7594 7530
+0 7594 7530
 D2
 ~
 ~
@@ -642,7 +618,7 @@ necessários para o treinamento dos soldados.  Alguns bonecos feitos de pano
 foram pendurados em árvores ao longo da extremidade do campo e em alguns
 troncos de madeira fincados no chão.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 ~
@@ -658,12 +634,11 @@ O Abrigo Das Armaduras~
 armadura antes de ir para o campo de treinamento.  O desagradável cheiro de
 suor infesta todo o ar do abrigo.  Existe uma porta ao sul.
 ~
-75 dga 0
+75 73 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-ag 0 7535
+0 0 7535
 D5
 ~
 ~
@@ -676,7 +651,7 @@ necessários para o treinamento dos soldados.  Alguns bonecos feitos de pano
 foram pendurados em árvores ao longo da extremidade do campo e em alguns
 troncos de madeira fincados no chão.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 ~
@@ -694,12 +669,11 @@ foram pendurados em árvores ao longo da extremidade do campo e em alguns
 troncos de madeira fincados no chão.  Existe uma pequena construção ao
 norte.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 porta~
-:n 2 a porta
-ag 0 7533
+0 0 7533
 D1
 ~
 ~
@@ -717,7 +691,7 @@ Alguns bonecos feitos de pano foram pendurados em árvores ao longo da
 extremidade do campo e em alguns troncos de madeira fincados no chão.  O
 campo se alarga ao leste.
 ~
-75 g 2
+75 64 0 0 0 2
 D1
 ~
 ~
@@ -732,17 +706,15 @@ uma simples decoração.  Ao norte está um grande pátio de paralelepípedo com
 um enorme portão de ferro.  Para o sul uma sólida porta bloqueia sua
 passagem.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 portão~
-:n 1 o portão
-ab 7501 7506
+1 7501 7506
 D2
 ~
 porta dupla~
-:n 2 a porta dupla
-abg 7502 7538
+0 7502 7538
 S
 #7538
 A Recepção~
@@ -752,17 +724,15 @@ principal propósito para isto é somente para a defensiva.  As portas duplas
 ao norte levam para fora deste lugar e para o sul há uma porta de vidro que
 consegue-se enxergar seu interior.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 porta dupla~
-:n 2 a porta dupla
-ag 0 7537
+0 0 7537
 D2
 ~
 porta vidro~
-:n 2 a porta de vidro
-ag 0 7539
+0 0 7539
 S
 #7539
 O Corredor Decorado~
@@ -774,16 +744,15 @@ norte consegue-se ver portas de vidro e o corredor continua ao sul.  Portas
 feitas em madeira estão ao leste e para o oeste o caminho continua pelo
 corredor.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 porta vidro~
-ag 0 7538
+0 0 7538
 D1
 ~
 leste porta~
-:n 2 a porta leste
-ag 0 7541
+0 0 7541
 D2
 ~
 ~
@@ -791,20 +760,18 @@ D2
 D3
 ~
 oeste porta~
-:n 2 a porta oeste
-ag 0 7540
+0 0 7540
 S
 #7540
 O Quarto Dos Mantos~
    Este pequeno quarto possui alguns cabides fixado em suas paredes.  Nestes
 cabides estão pendurados alguns mantos e capas.  Existe uma porta ao leste.
 ~
-75 g 0
+75 64 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
-ag 0 7539
+0 0 7539
 S
 #7541
 Sala De Espera~
@@ -814,12 +781,11 @@ próxima à parede do leste foi esculpida com o chapéu do Barão sobre o
 topo da mesinha. Obviamente a sala foi feita para acomodar aqueles que 
 esperam pelo Barão. A única saída é ao oeste por uma porta.
 ~
-75 g 0
+75 64 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-ag 0 7539
+0 0 7539
 S
 #7542
 O Corredor Decorado~
@@ -828,7 +794,7 @@ estão pendurados ao longo das paredes em ambos os lados.  As paredes de
 pedra foram cobertas com painéis de madeira que foram polidos com cera.  Ao
 norte e para sul o corredor continua e ao oeste há porta de carvalho.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 ~
@@ -840,8 +806,7 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
-ag 0 7543
+0 0 7543
 S
 #7543
 Sala De Espera~
@@ -851,12 +816,11 @@ próxima da parede leste foi entalhada com o timbre do Barão.  Obviamente a
 sala foi feita com o objetivo de impressionar aqueles que vem para falar com
 o Barão.  A única saída fica para o leste.
 ~
-75 g 0
+75 64 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
-ag 0 7542
+0 0 7542
 S
 #7544
 Sala De Reuniões~
@@ -866,12 +830,11 @@ de couro está em um dos cantos da mesa. O chão embaixo e em volta da
 mesa foi coberto com um carpete vermelho. Uma lareira foi construída 
 aqui na parede ao leste, embora esteja apagada.
 ~
-75 g 0
+75 64 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-ag 0 7545
+0 0 7545
 S
 #7545
 O Corredor Decorado~
@@ -880,7 +843,7 @@ tanto no chão quanto nas paredes.  As paredes de pedra foram cobertas com
 painéis de madeira que foram polidos com cera de abelha.  Para o norte e ao
 sul o corredor continua e para o leste há uma porta de carvalho.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 ~
@@ -888,8 +851,7 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
-ag 0 7544
+0 0 7544
 D2
 ~
 ~
@@ -903,7 +865,7 @@ corredores para norte e sul são mais decorados que os demais.  Para o norte
 o ruído de metal pode ser ouvido e para o oeste alguns sons de serração de
 madeira podem ser ouvidos.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 ~
@@ -928,7 +890,7 @@ velho tapete que foi posto na parede, sua qualidade não é nada comparado as
 tapeçarias das outras partes deste lugar.  O simples corredor continua para
 o leste e uma intercessão fica para o oeste.
 ~
-75 g 0
+75 64 0 0 0 0
 D1
 ~
 ~
@@ -945,17 +907,15 @@ velho tapete que foi posto na parede, sua qualidade não é nada comparado às
 tapeçarias das outras partes deste lugar.  Para no norte há uma porta de
 vidro.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 sul porta~
-:n 2 a porta sul
-ag 0 7549
+0 0 7549
 D1
 ~
 leste porta~
-:n 2 a porta leste
-ag 0 7550
+0 0 7550
 D2
 ~
 ~
@@ -972,12 +932,11 @@ incomum é que a sala tem sua própria lareira posta na parede norte.  Uma
 cortina divide o quarto do leste ao oeste.  Na cortina leste é possível ver
 uma cama e um criado-mudo.  Há uma porta na parede sul.
 ~
-75 g 0
+75 64 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-ag 0 7548
+0 0 7548
 S
 #7550
 O Quarto Dos Empregados~
@@ -986,12 +945,11 @@ sala com uma cortina de renda em volta dela com um sofisticado laço.  Há uma
 pequena cômoda com um espelho posta na parede norte.  A única saída é ao
 oeste.
 ~
-75 g 0
+75 64 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-ag 0 7548
+0 0 7548
 S
 #7551
 O Fim Do Corredor Dos Criados~
@@ -1001,7 +959,7 @@ a qualidade delas está muito abaixo de qualquer outra coisa que você viu
 aqui.  O corredor iluminado continua ao norte.  Para o sul e leste existem
 portas planas.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 ~
@@ -1009,13 +967,11 @@ D0
 D1
 ~
 leste porta~
-:n 2 a porta leste
-ag 0 7552
+0 0 7552
 D2
 ~
 sul porta~
-:n 2 a porta sul
-ag 0 7553
+0 0 7553
 S
 #7552
 O Quarto Do Mordomo~
@@ -1023,12 +979,11 @@ O Quarto Do Mordomo~
 pequena cama com uma grande cabeceira está encostada na parede sul e leste
 do quarto.  A porta na parede oeste parece ser a única saída deste quarto.
 ~
-75 g 0
+75 64 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-ag 0 7551
+0 0 7551
 S
 #7553
 O Quarto De Um Criado~
@@ -1036,12 +991,11 @@ O Quarto De Um Criado~
 próxima à parede sul.  Uma cômoda de madeira foi empurrada junto a parede
 leste.  Existe uma porta ao norte que com certeza é a única saída do quarto.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-ag 0 7551
+0 0 7551
 S
 #7554
 Um Corredor Iluminado~
@@ -1052,12 +1006,11 @@ machados de guerra também estão pendurados aqui.  Há uma pequena porta de
 madeira ao norte.  O corredor continua ao oeste e uma interseção de
 corredores pode sido visto ao leste.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-agb 7510 7576
+0 7510 7576
 D1
 ~
 ~
@@ -1075,12 +1028,11 @@ em todos os tipos de terreno foram pendurados nas paredes e algumas espadas
 e machados de guerra também estão pendurados aqui.  Há uma pequena porta de
 madeira ao norte e oeste.  O corredor continua ao leste e sul.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 norte porta~
-:n 2 a porta norte
-ag 0 7556
+0 0 7556
 D1
 ~
 ~
@@ -1092,7 +1044,7 @@ D2
 D3
 ~
 oeste porta~
-ag 0 7557
+0 0 7557
 S
 #7556
 A Alojamento Dos Guardas~
@@ -1102,12 +1054,11 @@ a parede oeste entre as beliches.  Ao término de cada cama existe um baú
 bastante simples e que fora trancado com fechaduras.  Uma porta de madeira
 conduz do quarto para o sul.
 ~
-75 g 0
+75 64 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-ag 0 7555
+0 0 7555
 S
 #7557
 O Quarto Do Sargento Dos Guardas~
@@ -1116,12 +1067,11 @@ um baú nas paredes norte e sul, com um pequena mesa e duas cadeiras nos
 cantos dela.  No lado da parede leste uma pequena bacia cheia com água foi
 colocada sobre uma mesa de madeira.  Existe uma porta na parede leste.
 ~
-75 g 0
+75 64 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
-ag 0 7555
+0 0 7555
 S
 #7558
 O Quarto De Mullins~
@@ -1131,12 +1081,11 @@ mesa com duas confortáveis cadeiras foi colocado no centro do quarto.  Uma
 bacia com água foi deixada em uma prateleira de metal.  Existe uma porta na
 parede leste.
 ~
-75 g 0
+75 64 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
-ag 0 7559
+0 0 7559
 S
 #7559
 Fim Do Corredor Iluminado~
@@ -1146,7 +1095,7 @@ pendurados nas paredes e algumas espadas e machados de guerra também estão
 pendurados aqui.  Existe uma porta de madeira para o sul e oeste.  O
 corredor continua ao norte.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 ~
@@ -1154,13 +1103,11 @@ D0
 D2
 ~
 sul porta~
-:n 2 a porta sul
-abg 7511 7560
+0 7511 7560
 D3
 ~
 oeste porta~
-:n 2 a porta oeste
-ag 0 7558
+0 0 7558
 S
 #7560
 O Quarto do Capitão Thewin~
@@ -1169,12 +1116,11 @@ confortável colchão de penas foi colocada no canto sudoeste do quarto.  Uma
 escrivaninha simples fica na parede próxima da porta.  A única saída deste
 quarto fica ao norte através de uma porta de madeira.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-ag 0 7559
+0 0 7559
 S
 #7561
 A Cabana De Jardineiro~
@@ -1182,12 +1128,11 @@ A Cabana De Jardineiro~
 existe janela aqui e você sente um cheiro forte, como se fosse algo que
 estivesse apodrecendo.  Existe uma porta ao oeste.
 ~
-75 1 0
+75 1 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-ag 0 7562
+0 0 7562
 S
 #7562
 Caminhando Pelos Jardins~
@@ -1197,12 +1142,11 @@ cortando sempre no mesmo ritmo.  Uma grande pedra bloqueia o caminho norte.
 Há uma larga porta na parede leste e o caminho de pedregulho segue para o
 sul e oeste.
 ~
-75 g 2
+75 64 0 0 0 2
 D1
 ~
 porta~
-:n 2 a porta
-ag 0 7561
+0 0 7561
 D2
 ~
 ~
@@ -1219,7 +1163,7 @@ arbustos aparados.  O som de alguém podando algo pode ser ouvido daqui,
 cortando sempre no mesmo ritmo.  Uma grande pedra bloqueia o caminho norte e
 oeste.  O caminho de pedregulho segue para o sul e leste.
 ~
-75 g 2
+75 64 0 0 0 2
 D1
 ~
 ~
@@ -1236,7 +1180,7 @@ arbustos aparados.  O som de alguém podando algo pode ser ouvido daqui,
 cortando sempre no mesmo ritmo.  Uma grande pedra bloqueia o caminho sul e
 oeste.  O caminho de pedregulho segue para o norte e leste.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 ~
@@ -1253,7 +1197,7 @@ arbustos aparados.  O som de alguém podando algo pode ser ouvido daqui,
 cortando sempre no mesmo ritmo.  Uma grande pedra bloqueia o caminho sul.  O
 caminho de pedregulho segue para o norte, oeste e leste.
 ~
-75 g 2
+75 64 0 0 0 2
 D0
 ~
 ~
@@ -1274,7 +1218,7 @@ arbustos aparados.  O som de alguém podando algo pode ser ouvido daqui,
 cortando sempre no mesmo ritmo.  O caminho de pedregulho segue para o leste
 e oeste entre a parede exterior e a parede reforçada.
 ~
-75 g 2
+75 64 0 0 0 2
 D1
 ~
 ~
@@ -1292,12 +1236,11 @@ cortando sempre no mesmo ritmo.  O caminho de pedregulho segue para o leste
 e oeste entre a parede exterior e a parede reforçada.  Duas portas de vidro
 podem ser vistas ao término do caminho ao leste.
 ~
-75 4 2
+75 4 0 0 0 2
 D1
 ~
 porta~
-:n 2 a porta
-ag 0 7574
+0 0 7574
 D3
 ~
 ~
@@ -1311,7 +1254,7 @@ painéis de madeira que foram polidos com cera de abelha.  Para o norte e ao
 sul o corredor continua e para o leste há uma porta de carvalho.  Ao norte
 vários corredores se encontram em uma grande interseção.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 ~
@@ -1319,8 +1262,7 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
-ag 0 7572
+0 0 7572
 D2
 ~
 ~
@@ -1332,12 +1274,11 @@ A Despensa~
 produtos essenciais para se cozinhar, foram estocados em grande quantidade.
 Existe uma porta ao sul.
 ~
-75 g 0
+75 64 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-ag 0 7570
+0 0 7570
 S
 #7570
 A Cozinha~
@@ -1347,22 +1288,19 @@ a refeição que estão preparando e em uma prateleira ao norte vários pães
 assados e frescos acabam dando à este recinto um odor delicioso.  Existem
 portas para o leste, sul e norte.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 norte porta~
-:n 2 a porta norte
-ag 0 7569
+0 0 7569
 D1
 ~
 leste porta~
-:n 2 a porta leste
-ag 0 7571
+0 0 7571
 D2
 ~
 sul porta~
-:n 2 a porta sul
-ag 0 7574
+0 0 7574
 S
 #7571
 O Corredor Decorado~
@@ -1372,7 +1310,7 @@ pedra foram cobertas com painéis de madeira que foram polidos com cera.
 Para o norte e sul o corredor continuar e para o oeste existe uma grande
 porta de carvalho.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 ~
@@ -1384,8 +1322,7 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
-ag 0 7570
+0 0 7570
 S
 #7572
 Um Corredor Desarrumado~
@@ -1393,12 +1330,11 @@ Um Corredor Desarrumado~
 fila dupla de mesas de madeira e outros objetos como bancos estão virados de
 perna para cima.  Uma porta segue de um quarto ao oeste.
 ~
-75 g 0
+75 64 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-ag 0 7568
+0 0 7568
 S
 #7573
 Fim Do Corredor~
@@ -1408,7 +1344,7 @@ ambos os lados.  As paredes de pedra foram cobertas com painéis de madeira
 que foram polidos com cera.  Ao norte o corredor continua e para sul está
 uma porta de madeira dupla.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 ~
@@ -1416,8 +1352,7 @@ D0
 D2
 ~
 porta~
-:n 2 a porta
-ag 0 7574
+0 0 7574
 S
 #7574
 A Sala De Jantar~
@@ -1427,22 +1362,19 @@ uniforme ao longo de toda a mesa.  Há lugar para mais de 60 pessoas à mesa.
 Lá estão as portas de vidro ao leste e oeste.  Há duas saídas junto à parede
 sul, uma porta dupla de madeira e uma porta pequena.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 norte porta~
-:n 2 a porta norte
-ag 0 7570
+0 0 7570
 D1
 ~
 vidro porta~
-:n 2 a porta de vidro
-ag 0 7575
+0 0 7575
 D3
 ~
 deslizante porta~
-:n 2 a porta deslizante
-ag 0 7567
+0 0 7567
 S
 #7575
 O Salão De Festas~
@@ -1452,12 +1384,11 @@ palco exclusivo para os músicos.  Uma grande lareira com mesas confortáveis
 e cadeiras estão no lado oriental do salão.  Há portas de vidro fixadas na
 parede oeste.
 ~
-75 g 0
+75 64 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-ag 0 7574
+0 0 7574
 S
 #7576
 Uma Escada Em Espiral~
@@ -1465,12 +1396,11 @@ Uma Escada Em Espiral~
 sendo usados é capaz de fazer sombra ao longo da escadaria.  As escadarias
 conduzem acima e também existe uma pequena porta ao sul.
 ~
-75 g 0
+75 64 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-abg 7510 7554
+0 7510 7554
 D4
 ~
 ~
@@ -1483,16 +1413,15 @@ sendo usados é capaz de fazer sombra ao longo da escadaria. As
 escadarias conduzem para baixo e também existe uma pequena porta ao 
 oeste.
 ~
-75 g 0
+75 64 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-ag 0 7578
+0 0 7578
 D4
 ~
 ~
-0 -1 7585 16
+0 -1 7585
 D5
 ~
 ~
@@ -1505,7 +1434,7 @@ dourados iluminam o corredor com um brilho intenso.  O corredor que conduz
 para fora fica ao leste e uma porta foi fixada na parede
 oeste.
 ~
-75 ag 0
+75 65 0 0 0 0
 D0
 ~
 ~
@@ -1513,8 +1442,7 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
-ag 0 7577
+0 0 7577
 S
 #7579
 Um Corredor Iluminado~
@@ -1523,7 +1451,7 @@ dourados iluminam o corredor com um brilho intenso.  A pintura de uma bela
 mulher e um jovem homem foi pendurado na parede norte.  O corredor começa
 para o oeste e norte.
 ~
-75 g 0
+75 64 0 0 0 0
 D0
 ~
 ~
@@ -1540,12 +1468,11 @@ no chão.  Abajures dourados iluminam o corredor com um brilho intenso.
 Existem portas de madeira no leste e também na parede oeste.  O corredor
 acaba ao sul.
 ~
-75 g 0
+75 64 0 0 0 0
 D1
 ~
 leste porta~
-:n 2 a porta leste
-ag 0 7582
+0 0 7582
 D2
 ~
 ~
@@ -1553,8 +1480,7 @@ D2
 D3
 ~
 oeste porta~
-:n 2 a porta oeste
-ag 0 7583
+0 0 7583
 S
 #7581
 O Quarto De Planejamento~
@@ -1562,7 +1488,7 @@ O Quarto De Planejamento~
 Estranhamente, estes mapas mostram janelas, portas e outros pontos de acesso
 com anotações próximo a eles.  A parede segue ao norte.
 ~
-75 1 0
+75 1 0 0 0 0
 D0
 ~
 ~
@@ -1575,7 +1501,7 @@ baixa com um castiçal foi colocado perto da parede norte.  Várias cadeiras
 de couro se espalharam sobre a mesa e ao longo do quarto.  Existe uma porta
 ao oeste.
 ~
-75 ag 0
+75 65 0 0 0 0
 D2
 ~
 ~
@@ -1583,8 +1509,7 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
-ag 0 7580
+0 0 7580
 S
 #7583
 O Quarto Privativo Do Barão Darwin~
@@ -1594,17 +1519,15 @@ aparenta ter custado bastante caro.  Tapeçarias foram penduradas nas
 paredes, e também uma pintura de uma jovem mulher.  A porta de saída do
 quarto fica ao sul e ao leste.
 ~
-75 g 0
+75 64 0 0 0 0
 D1
 ~
 leste porta~
-:n 2 a porta leste
-ag 0 7580
+0 0 7580
 D2
 ~
 sul porta~
-:n 2 a porta sul
-ag 0 7584
+0 0 7584
 S
 #7584
 O Quarto de Descanço~
@@ -1615,12 +1538,11 @@ no centro da parede leste.  Em um mesa pela porta ao norte existe um serviço
 de chá que não está sendo usado mas que está funcionando.  O quarto parece
 não ter sido usado por um longo tempo.
 ~
-75 ag 0
+75 65 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-ag 0 7583
+0 0 7583
 S
 #7585
 O Posto dos Vigias~
@@ -1629,7 +1551,7 @@ consegue ter uma visão ampla ao seu redor, sendo que, ao longe consegues
 enxergar uma zona rural.  Desta altura você consegue ver até por entre as
 densas arvores.
 ~
-75 g 0
+75 64 0 0 0 0
 D5
 ~
 ~
@@ -1641,12 +1563,11 @@ Um Minúsculo Porão Mofado~
 paira no ar como um poeira.  Uma escada com um corrimão conduz até um
 abrigo.
 ~
-75 dacg 0
+75 77 0 0 0 0
 D3
 ~
 parede~
-:n 2 a parede
-abg 7505 7587
+0 7505 7587
 D4
 ~
 ~
@@ -1657,29 +1578,26 @@ O Posto Dos Guardas~
    Um posto de guarda foi colocado para uma maior proteção em frente às
 portas ao leste.  Existem portas para o leste, norte e sul.
 ~
-75 gd 0
+75 72 0 0 0 0
 D0
 ~
 norte porta~
-:n 2 a porta norte
-ag 0 7598
+0 0 7598
 D1
 ~
 parede~
-:n 2 a parede
-abg 7505 7586
+0 7505 7586
 D2
 ~
 sul porta~
-:n 2 a porta sul
-ag 0 7589
+0 0 7589
 S
 #7588
 A Abóbada~
    A abóbada é muito pequena e sufocante.  Surpreendentemente parece estar
 vazia.  Aparentemente o dinheiro do Barão é mantido em outro lugar.
 ~
-75 dagc 0
+75 77 0 0 0 0
 D3
 ~
 ~
@@ -1692,23 +1610,20 @@ ver o teto em meio a tanta escuridão.  Você somente consegue enxergar
 pequenas sombras de abajures se mexendo nas paredes de pedra.  Existem
 portas para o norte, leste e sul.
 ~
-75 dag 0
+75 73 0 0 0 0
 D0
 
 ~
 norte porta~
-:n 2 a porta norte
-ag 0 7587
+0 0 7587
 D1
 ~
 leste porta~
-:n 2 a porta leste
-ag 0 7590
+0 0 7590
 D2
 ~
 sul porta~
-:n 2 a porta sul
-ag 0 7592
+0 0 7592
 S
 #7590
 Uma Sala De Aula~
@@ -1716,7 +1631,7 @@ Uma Sala De Aula~
 as aulas dadas aqui não possuem muita sabedoria.  Vários mapas de edifícios
 estão espalhados sobre as escrivaninhas.  Existe uma porta ao oeste.
 ~
-75 dagc 0
+75 77 0 0 0 0
 D2
 ~
 ~
@@ -1724,8 +1639,7 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
-ag 0 7589
+0 0 7589
 S
 #7591
 O Arsenal~
@@ -1734,7 +1648,7 @@ de você existe um espada, em uma estante ao sul estão os punhais.  As
 munições estão penduradas em ganchos no canto noroeste.  Todas as armas
 perecem muito bem cuidadas.
 ~
-75 dag 0
+75 73 0 0 0 0
 D0
 ~
 ~
@@ -1747,17 +1661,15 @@ ver o teto em meio a tanta escuridão.  Você somente consegue enxergar
 pequenas sombras de abajures se mexendo nas paredes de pedra.  Existem
 portas ao norte e oeste.
 ~
-75 dag 0
+75 73 0 0 0 0
 D0
 ~
 norte porta~
-:n 2 a porta norte
-ag 0 7589
+0 0 7589
 D3
 ~
 oeste porta~
-:n 2 a porta oeste
-ag 0 7593
+0 0 7593
 S
 #7593
 O Quarto De Fantasias~
@@ -1766,17 +1678,15 @@ contra as paredes.  Uma grande mesa foi colocada no centro da sala e sobre
 esta possui restos de tecido espalhados.  Uma grande cortina cobre a parede
 norte e ao leste existe uma porta.
 ~
-75 dagc 0
+75 77 0 0 0 0
 D0
 ~
 cortina~
-:n 2 a cortina
-agd 0 7594
+0 0 7594
 D1
 ~
 leste porta~
-:n 2 a porta leste
-ag 0 7592
+0 0 7592
 S
 #7594
 O Vestiário~
@@ -1784,7 +1694,7 @@ O Vestiário~
 feito de linho que provê uma divisória para os ocupantes.  Uma cortina fecha
 uma passagem na parede sul.
 ~
-75 dagc 0
+75 77 0 0 0 0
 D0
 ~
 ~
@@ -1792,8 +1702,7 @@ D0
 D2
 ~
 cortina~
-:n 2 a cortina
-agd 0 7593
+0 0 7593
 S
 #7595
 Uma Passagem Secreta~
@@ -1801,7 +1710,7 @@ Uma Passagem Secreta~
 vento, e em algum lugar existe algum líquido gotejando.  O túnel continua
 para o norte.
 ~
-75 dag 0
+75 73 0 0 0 0
 D0
 ~
 ~
@@ -1817,7 +1726,7 @@ Uma Passagem Secreta~
 vento, e em algum lugar existe algum líquido gotejando.  O túnel continua
 para o sul e oeste.
 ~
-75 dag 0
+75 73 0 0 0 0
 D2
 ~
 ~
@@ -1835,7 +1744,7 @@ visto antes, uma espada com extremidades dentadas e um gancho em sua lamina.
 Quase todo o chão em que você está pisando está manchado com um liquido
 vermelho.  Será Sangue?  Existem saídas para o leste e sul.
 ~
-75 dag 0
+75 73 0 0 0 0
 D1
 ~
 ~
@@ -1851,7 +1760,7 @@ A Sala do Contador~
 da parede norte.  Na mesa estão espalhados pilhas de papéis e na
 escrivaninha consegue-se ver tinta e penas.  Existe uma porta ao sul.
 ~
-75 dag 0
+75 73 0 0 0 0
 D1
 ~
 ~
@@ -1859,8 +1768,7 @@ D1
 D2
 ~
 porta~
-:n 2 a porta
-ag 0 7587
+0 0 7587
 S
 #7599
 Uma Passagem Secreta~
@@ -1869,7 +1777,7 @@ pelo vento, e em algum lugar existe algum líquido gotejando.  O túnel
 continua para o norte ou você pode escalar uma ladeira que fica na parede
 sul.
 ~
-75 dag 0
+75 73 0 0 0 0
 D0
 ~
 ~

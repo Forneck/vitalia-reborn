@@ -3,7 +3,7 @@ O Grande Deserto Oriental~
    O vasto deserto se estende por milhas, as areias mudando constantemente a
 sua volta.  Ao norte, se erguendo da areia, você vê uma poderosa pirâmide.
 ~
-53 0 2
+53 0 0 0 0 2
 D0
 As areias do deserto continuam a frente, pela pirâmide.
 ~
@@ -36,7 +36,7 @@ feita de enormes blocos de pedra cobertos com uma grossa camada de gêsso
 arenoso, ou algo assim.  A face da pirâmide é íngreme mas você acha que
 consegue escalar isso.
 ~
-53 0 2
+53 0 0 0 0 2
 D2
 Areia até onde seus olhos podem ver.
 ~
@@ -58,7 +58,7 @@ Escalando a Grande Pirâmide~
 de uma tempestade de areia e poeira.  A esta altura você já cumpriu metade
 do caminho.  As paredes da pirâmide são bastante íngremes.
 ~
-53 0 5
+53 0 0 0 0 5
 D0
 Se você é ousado, você poderia tentar rodear em volta do lado norte.
 ~
@@ -91,7 +91,7 @@ de uma tempestade de areia e poeira.  A esta altura você já cumpriu metade
 do caminho.  As paredes da pirâmide são bastante íngremes e você está tendo
 dificuldades para não escorregar para as areias abaixo.
 ~
-53 0 5
+53 0 0 0 0 5
 D1
 Se você é ousado, você poderia tentar rodear em volta do lado leste.
 ~
@@ -124,7 +124,7 @@ de uma tempestade de areia e poeira.  A esta altura você já cumpriu metade
 do caminho.  As paredes da pirâmide são bastante íngremes e você está tendo
 dificuldade em não escorregar para as areias abaixo.
 ~
-53 0 5
+53 0 0 0 0 5
 D1
 Se você é ousado, você poderia tentar rodear em volta do lado leste.
 ~
@@ -156,7 +156,7 @@ Escalando a Grande Pirâmide~
 lado de pedra não é tão escorregadio e liso.  E você acha que poderia
 alcançar o topo.
 ~
-53 0 5
+53 0 0 0 0 5
 D0
 Se você é ousado, você poderia tentar rodear em volta do lado norte.
 ~
@@ -188,7 +188,7 @@ O Ápice da Grande Pirâmide~
 quatro lados da pirâmide se inclinam nítidamente para as quentes areias, em
 todas as direções cardinais.
 ~
-53 0 1
+53 0 0 0 0 1
 D0
 O lado norte da pirâmide se inclina para as areias abaixo.
 Parece muito perigoso.   Eu não iria neste caminho.
@@ -218,12 +218,6 @@ Você vê algumas pedras de areia apertadas, formando uma dura superfície.
 pedras~
 1 -1 5308
 E
-pedras~
-Assim que você olha mais de perto, você pode ver uma rachadura no centro das
-pedras embaixo de seus pés.  Com algum esforço você seria capaz de levantar
-isso e conseguir entrar!
-~
-E
 placa~
 A placa lê:
 
@@ -231,6 +225,12 @@ A placa lê:
                                   do
                             *Mundo de Vitália*
 
+~
+E
+pedras~
+Assim que você olha mais de perto, você pode ver uma rachadura no centro das
+pedras embaixo de seus pés.  Com algum esforço você seria capaz de levantar
+isso e conseguir entrar!
 ~
 S
 #5307
@@ -246,7 +246,7 @@ SPLAT.
 
 Aiiiiiiiiiiiiiiiiiiiiiiiiiiii...
 ~
-53 b 0
+53 2 0 0 0 0
 S
 #5308
 A Escada~
@@ -255,7 +255,7 @@ pirâmide.  O ar ao seu redor é grosso, com camadas de pó e um estranho
 cheiro de mofo.  Acima de sua cabeça, você vê finos raios de luz que
 atravessam as pedras do teto.
 ~
-53 cd 0
+53 12 0 0 0 0
 D4
 Você vê as pedras arenosas do teto.
 ~
@@ -280,7 +280,7 @@ e outras estranhas marcas estão fixas no chão empoeirado.  Parece que alguns
 dos moradores deste monumento ainda estão vivos.  Saídas levam a todas as
 direções.  A porta ao oeste está coberta com inscrições.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
 Você vê um pequeno caminho que se elevou a três pés do chão.
 ~
@@ -308,15 +308,15 @@ Uma pequena e raquítica escada de mão segue por aqui.
 ~
 0 -1 5308
 E
-porta pedra~
-A porta de pedra é coberta por estranhas inscrições e hieróglifos que o
-avisam para não seguir adiante.
-~
-E
 hieróglifos inscrições escritas~
 Você não pode entender a escrita que cobre a porta mas a maioria deles
 parece descrever cenas de fogo e grandes criaturas aparentemente muito
 fortes.  Você tem um pressentimento que as inscrições servem de aviso.
+~
+E
+porta pedra~
+A porta de pedra é coberta por estranhas inscrições e hieróglifos que o
+avisam para não seguir adiante.
 ~
 S
 #5310
@@ -325,7 +325,7 @@ A Piscina de Fogo~
 água, mas com chamas de intenso calor.  As chamas multicoloridas lambem
 você, procurando queima-lo.  A piscina segue ao leste em uma pequena câmara.
 ~
-53 cd 0
+53 12 0 0 0 0
 D1
 Você vê uma larga porta de pedra.
 ~
@@ -343,7 +343,7 @@ A Câmara de Efreeti~
 as chamas estão tão altas quanto você, chamuscando sua face e evaporando seu
 suor instantaneamente.
 ~
-53 d 7
+53 8 0 0 0 7
 D1
 A piscina de fogo acaba ao leste.
 ~
@@ -356,7 +356,7 @@ Um Caminho Apertado~
 apertado.  O caminho é cheio de areia e poeira e de marcas da passagem de
 outras criaturas.
 ~
-53 ad 0
+53 9 0 0 0 0
 D0
 O caminho continua ao norte.
 ~
@@ -379,7 +379,7 @@ Um Caminho Apertado~
 apertado.  O caminho é cheio de areia e poeira e de marcas da passagem de
 outras criaturas.
 ~
-53 ad 0
+53 9 0 0 0 0
 D2
 O caminho apertado segue ao sul.
 ~
@@ -397,7 +397,7 @@ Um Caminho Apertado~
 apertado.  O caminho é cheio de areia e poeira e de marcas da passagem de
 outras criaturas.
 ~
-53 ad 0
+53 9 0 0 0 0
 D1
 O caminho continua ao leste.
 ~
@@ -415,7 +415,7 @@ Um Estreitamento no Caminho~
 estreitamento no caminho, quando as pedras da pirâmide se fecham sobre você.
 Abaixo de você, há um escorregadio buraco que mergulha na escuridão.
 ~
-53 ad 0
+53 9 0 0 0 0
 D1
 O caminho se torna mais largo ao leste.
 ~
@@ -438,7 +438,7 @@ O Fim do Caminho~
 pirâmide somente poderia caber uma cobra.  Mal há espaço suficiente para
 você se virar e voltar pelo caminho ao norte.
 ~
-53 ad 0
+53 9 0 0 0 0
 D0
 O caminho se alarga um pouco ao norte.
 ~
@@ -457,7 +457,7 @@ Debaixo do Buraco
 da pirâmide agora.  O chão está repleto de ossos.  Ao sul há uma pequena
 fenda rochosa.
 ~
-53 acd 0
+53 13 0 0 0 0
 D2
 Você vê uma pequena fenda rochosa ao sul.
 ~
@@ -480,7 +480,7 @@ Debaixo do Buraco~
 da pirâmide agora.  O chão está repleto de ossos.  Ao sul há uma pequena
 fenda rochosa.
 ~
-53 ad 0
+53 9 0 0 0 0
 D2
 Você vê uma pequena fenda rochosa que segue abaixo da pirâmide.
 ~
@@ -503,7 +503,7 @@ Uma Fenda Áspera~
 mergulha para a pedra sobre a qual a pirâmide foi construída.  Ao sul você
 vê a luz bruxuleante de um fogo e a fenda segue abaixo.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
 Você vê uma pequena câmara de madeira cheia de ossos.
 ~
@@ -531,7 +531,7 @@ Uma Pequena Fogueira~
 aquecimento e conforto ao frio, escuro e seco ar.  Um estranho homem bem
 velho está aqui e ele o encara, perdido em seus pensamentos.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
 Você vê uma volumosa fenda que mergulha na escuridão.
 ~
@@ -554,7 +554,7 @@ Abaixo na Fenda~
 sua volta agora é frio e bastante seco e sua fonte luminosa dança em uma
 fria brisa que vêm de baixo.
 ~
-53 ad 0
+53 9 0 0 0 0
 D4
 Está muito escuro para você ver ao longo da fenda.
 ~
@@ -572,7 +572,7 @@ No Final da Fenda~
 uma estranha forma ao sul mas sua luz é escassa demais para saber exatamente
 do que se trata.
 ~
-53 ad 0
+53 9 0 0 0 0
 D2
 Você vê uma estranha forma negra.
 ~
@@ -583,11 +583,6 @@ Está muito escuro para você ver ao longo da fenda.
 ~
 ~
 0 -1 5321
-E
-forma negra~
-Os rugidos do vento sopram em suas orelhas como rugidos de uma fera.  Quando
-seus olhos se ajustam à luz, a forma parece ser a da cabeça de um tigre.
-~
 E
 tigre cabeça animal~
 
@@ -600,6 +595,11 @@ Uma voz fria ecoa: 'BUSQUE O DIAMANTE...NO ÁSPERO...'
 
 ... E então tudo é silêncio.
 ~
+E
+forma negra~
+Os rugidos do vento sopram em suas orelhas como rugidos de uma fera.  Quando
+seus olhos se ajustam à luz, a forma parece ser a da cabeça de um tigre.
+~
 S
 #5323
 A Abóbada de uma Lâmpada~
@@ -609,7 +609,7 @@ estrondoso barulho gutural e um vento frio soprando.  Gigantescos montes de
 antigos tesouros, moedas de ouro e outros valores, cercam você em todas as
 direções.
 ~
-53 ad 0
+53 9 0 0 0 0
 D0
 Através das mandíbulas do tigre você vê a escuridão da fenda.
 ~
@@ -631,7 +631,7 @@ Uma Rachadura na Parede~
 olhos, perturbando-os e pedaços de pedras misturadas com areia caem sobre
 você, assim que você consegue, com muita dificuldade, seguir o seu caminho.
 ~
-53 ad 0
+53 9 0 0 0 0
 D0
 Você vê uma câmara mofada.
 ~
@@ -649,7 +649,7 @@ Uma Tumba Cheia~
 profanados, alguns tesouros foram esquecidos por ladrões e corpos arrancados
 de seu local de repouso.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
 Você vê uma pequena rachadura na parede, a qual você poderia atravessar.
 ~
@@ -672,7 +672,7 @@ Uma Tumba Demolida~
 do faraós.  Não há nada que interesse neste quarto, a não ser um grande
 caixão de pedra apoiado contra a parede ocidental.
 ~
-53 d 0
+53 8 0 0 0 0
 D1
 Ao leste é outra tumba.
 ~
@@ -684,6 +684,15 @@ Você vê um largo caixão de pedra.
 tampa caixão~
 2 5312 5327
 E
+homem elegância faraós~
+Assim que você olha mais perto para a figura esculpida no caixão de pedra,
+você percebe uma pequena marca esculpida em seu peito.  Parece que um
+escaravelho ou um pequeno besouro caberia neste espaço, se corretamente
+classificado segundo o tamanho.
+
+Hmmm.
+~
+E
 tampa caixão~
 O caixão é esculpido na forma de um homem, que fica a vários pés acima de
 você e vestido com a elegância dos faraós.  Isso aparentemente tem
@@ -693,15 +702,6 @@ abrir o caixão.
 
 Você não pode imaginar um jeito de abrir isso.
 ~
-E
-homem elegância faraós~
-Assim que você olha mais perto para a figura esculpida no caixão de pedra,
-você percebe uma pequena marca esculpida em seu peito.  Parece que um
-escaravelho ou um pequeno besouro caberia neste espaço, se corretamente
-classificado segundo o tamanho.
-
-Hmmm.
-~
 S
 #5327
 Uma Escada~
@@ -709,7 +709,7 @@ Uma Escada~
 e paredes são escorregadios blocos de pedra arenosa, coberto com uma grossa
 camada de poeira.  Algumas inscrições foram esculpidas nas paredes daqui.
 ~
-53 ad 0
+53 9 0 0 0 0
 D1
 Você vê as costas da tampa de um caixão de pedra lisa.
 ~
@@ -721,14 +721,14 @@ Está muito escuro para ver abaixo na escada.
 ~
 0 -1 5328
 E
+tampa caixão~
+Deste lado do caixão está uma opaca pedra lisa.
+~
+E
 inscrições~
 Você assopra a poeira das inscrições e lê:
 
 Cuidado com a maldição da múmia!
-~
-E
-tampa caixão~
-Deste lado do caixão está uma opaca pedra lisa.
 ~
 S
 #5328
@@ -737,7 +737,7 @@ Uma Escada~
 Os escorregadios degraus desiguais da escada parecem que não foram pisados
 por séculos.
 ~
-53 ad 0
+53 9 0 0 0 0
 D4
 Está muito escuro para ver acima na escada.
 ~
@@ -754,7 +754,7 @@ Uma Escada~
    Você está agora na base de uma escada de degraus desiguais.  As paredes,
 o chão e teto desta pequena escada estão cobertos com estranhos hieróglifos.
 ~
-53 ad 0
+53 9 0 0 0 0
 D2
 Você vê uma costura na parede de pedra.
 ~
@@ -779,7 +779,7 @@ deuses de uma sociedade antiga.  Hieróglifos estranhos cobrem as paredes,
 nesta forma pictórica e peculiar de idioma escrito, que você não entende.
 Alguns passos conduzem a um elevado altar para o sul.
 ~
-53 ad 0
+53 9 0 0 0 0
 D0
 Você vê uma costura na parede de pedra.
 ~
@@ -801,7 +801,7 @@ O Altar Elevado~
 absorvem toda sua luz, de modo que você não vê nada além do altar.  Um baixo
 pedestal repousa aqui.  Você vê algo escrito em sua face.
 ~
-53 ad 0
+53 9 0 0 0 0
 D0
 Você não pode ver nada além a sua frente.
 ~
@@ -825,7 +825,7 @@ A Tumba de Ramsés~
   Você está em uma tumba vazia, um cubículo de não mais que dez pés de
 comprimento.
 ~
-53 ad 0
+53 9 0 0 0 0
 D4
 Leva ao caminho de onde você veio.
 ~
@@ -837,7 +837,7 @@ Uma Tumba Saqueada~
    Esta tumba foi completamente saqueada e destruída pelos atos dos ladrões
 de pirâmides.  O chão está coberto de lixo.
 ~
-53 d 0
+53 8 0 0 0 0
 D1
 Ao leste há um túnel de teto mais baixo.
 ~
@@ -853,7 +853,7 @@ S
 Um Túnel~
    O túnel de teto mais baixo segue leste-oeste.
 ~
-53 ad 0
+53 9 0 0 0 0
 D1
 Você não pode ver nada através da escuridão.
 ~
@@ -870,7 +870,7 @@ Um Cruzamento no Túnel~
    Aqui o túnel cruza um buraco na parede sul, continuando ao leste e ao
 oeste.
 ~
-53 ad 0
+53 9 0 0 0 0
 D1
 Você não pode ver nada através da escuridão.
 ~
@@ -901,7 +901,7 @@ Uma Bifurcação~
    O túnel baixo, faz uma curva ao oeste e termina ao norte, em uma
 empoeirada câmara.
 ~
-53 ad 0
+53 9 0 0 0 0
 D0
 A boca do túnel é uma pedra que foi estourada pelos ladrões.
 ~
@@ -919,7 +919,7 @@ Uma Câmara Úmida~
 passagem recente de algum tipo de criatura.  Há um buraco no chão ao oeste e
 a escada fica ao leste.
 ~
-53 d 0
+53 8 0 0 0 0
 D1
 Você vê uma escada de pedra espiral.
 ~
@@ -936,7 +936,7 @@ A Escada Espiral~
    Alguns empoeirados e quebrados degraus espiralam lentamente para baixo
 levando até um corredor empoeirado.
 ~
-53 d 0
+53 8 0 0 0 0
 D4
 Os degraus em espiral para a câmara úmida.
 ~
@@ -954,7 +954,7 @@ Uma Câmara Coberta de Poeira~
 pirâmide atravessou.  Pequenas marcas e pegadas na poeira indicam a recente
 passagem de outros -- seriam ladrões?
 ~
-53 d 0
+53 8 0 0 0 0
 D1
 O corredor segue ao leste de onde vem um estranho cheiro.
 ~
@@ -971,7 +971,7 @@ Uma Câmara Mal Cheirosa~
    Esta câmara tem um cheiro pútrido, o cheiro de natrão e de outros
 ingredientes usados para preservar os corpos daqueles que morreram há anos.
 ~
-53 d 0
+53 8 0 0 0 0
 D1
 Você vê uma câmara empoeirada.
 ~
@@ -989,7 +989,7 @@ Um Corredor Coberto de Poeira~
 acaba por obscurecer sua luz.  Pequenas marcas e pegadas indicam a recente
 passagem de alguém ou alguma coisa...
 ~
-53 d 0
+53 8 0 0 0 0
 D1
 O corredor vira ao norte.
 ~
@@ -1012,7 +1012,7 @@ Uma Curva no Corredor~
 ao norte e segue para oeste.  Ao sul as pedras da pirâmide foram rachadas
 por ladrões.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
 O corredor acaba ao norte.
 ~
@@ -1034,7 +1034,7 @@ Uma Sala sem Saída~
    O corredor coberto de poeira termina abruptamente em uma parede de pedra
 lisa.  Aqui e acolá percebem-se as marcas da passagem de alguma coisa.
 ~
-53 d 0
+53 8 0 0 0 0
 D2
 O corredor empoeirado continua ao sul.
 ~
@@ -1058,7 +1058,7 @@ anos.  Ao norte, você nota uma volumosa tumba de pedra, que está coberta por
 hieróglifos e esculpida em ouro, o que representa o lugar de descanso final
 dos poderosos faraós desta terra.
 ~
-53 acd 0
+53 13 0 0 0 0
 D0
 Você vê a tumba dos faraós.
 ~
@@ -1070,14 +1070,14 @@ O teto de pedra tem algumas rachaduras, através das quais uma fina luz brilha.
 teto~
 1 -1 5343
 E
-tumba~
-A tumba parede muito antiga, bem mais que a pirâmide que a guarda.   Está
-coberta por pequenos hieróglifos.
-~
-E
 hieróglifos~
 As marcas indicam que a tumba é realmente a tumba dos grandes faraós da antiga
 civilização que construiu a gigantesca pirâmide.
+~
+E
+tumba~
+A tumba parede muito antiga, bem mais que a pirâmide que a guarda.   Está
+coberta por pequenos hieróglifos.
 ~
 S
 #5345
@@ -1086,7 +1086,7 @@ A Tumba dos Faraós~
 conseguiram passar intactos pelas mãos do tempo e intocados pelos ladroes.
 Os tesouros levados pelos faraós em suas tumbas ainda repousam pelo chão.
 ~
-53 ad 0
+53 9 0 0 0 0
 D2
 O caminho leva para fora da tumba.
 ~
@@ -1106,7 +1106,7 @@ um enorme monte de entulho, com muitos pedregulhos e pedras.  Agora esta
 montanha de entulho chega quase a tomar uma parte do corredor norte.  Ao
 sul, em meio às pedras e pedregulhos, você vê uma cripta de arenito.
 ~
-53 acd 0
+53 13 0 0 0 0
 D2
 Você vê uma cripta de arenito.
 ~
@@ -1124,7 +1124,7 @@ Um Cripta de Arenito~
 qual a areia do deserto entra.  Um quente vento sopra do deserto, secando
 sua pele constantemente.  Ao leste e ao norte o corredor continua.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
 O corredor continua ao norte.
 ~
@@ -1148,7 +1148,7 @@ pirâmide.  A poeira, que cobre a maior parte do interior da pirâmide, não se
 faz presente aqui, espanada pelo sopro das areias do deserto que uiva em
 seus ouvidos.
 ~
-53 d 0
+53 8 0 0 0 0
 D1
 O corredor segue ao leste.
 ~
@@ -1166,7 +1166,7 @@ Um Corredor Curvado~
 pirâmide.  Ao leste, há uma pequena cripta dourada e a sala segue ao sul e
 ao norte.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
 O corredor segue ao norte.
 ~
@@ -1190,20 +1190,20 @@ tijolos dourados, que ofuscam as largas pedras arenosas da pirâmide.
 Pequenos tapetes estão espalhados pelo chão e eles parecem ter sido
 recentemente usados.
 ~
-53 d 0
+53 8 0 0 0 0
 D3
 Você vê um corredor arcado.
 ~
 ~
 0 -1 5349
 E
+tijolos~
+Os pequenos tijolos dourados são muito lisos e bastante macios.
+~
+E
 tapetes~
 Os finos tapetes parecem ser muito antigos, suas cores estão desbotadas.
 Eles mostram cenas do cotidiano da antiga civilização do deserto.
-~
-E
-tijolos~
-Os pequenos tijolos dourados são muito lisos e bastante macios.
 ~
 S
 #5351
@@ -1213,7 +1213,7 @@ pirâmide.  A poeira, que cobre a maior parte do interior da pirâmide, não se
 faz presente aqui, espanada pelo sopro das areias do deserto que uiva em
 seus ouvidos.  O corredor segue ao norte e termina ao sul, em uma abóbada.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
 O corredor continua aqui.
 ~
@@ -1232,7 +1232,7 @@ parecendo ter luz própria.  Assim que você se aproxima, você vê pequenas
 partículas de vidro dentro das pedras, que refletem tão perfeitamente a sua
 fonte de luz, que elas parecem brilhar por si só.
 ~
-53 d 0
+53 8 0 0 0 0
 D0
 Você vê uma sala com um belo teto arcado.
 ~
@@ -1251,7 +1251,7 @@ da duna de areia, você vê um pequeno buraco, onde as pedras da pirâmide se
 romperam.  Não muito longe, ao sul, se aproxima uma tempestade de areia: o
 vento da tempestade uiva em seu rosto.
 ~
-53 c 2
+53 4 0 0 0 2
 D0
 Você vê um buraco pequeno atrás principal na pirâmide.
 ~
@@ -1273,7 +1273,7 @@ Uma Conturbada Tempestade de Areia~
 açoitam por todos os lados e a areia rasga sua pele, cegando você.  Você
 perde seu senso de direção.
 ~
-53 0 2
+53 0 0 0 0 2
 D0
 Você vê apenas areia seca, que sopra em sua face.
 ~
@@ -1306,7 +1306,7 @@ Uma Conturbada Tempestade de Areia~
 açoitam por todos os lados e a areia rasga sua pele, cegando você.  Você
 perde seu senso de direção.
 ~
-53 0 2
+53 0 0 0 0 2
 D0
 Você vê apenas areia seca, que sopra em sua face.
 ~
@@ -1339,7 +1339,7 @@ Uma Conturbada Tempestade de Areia~
 açoitam por todos os lados e a areia rasga sua pele, cegando você.  Você
 perde seu senso de direção.
 ~
-53 0 2
+53 0 0 0 0 2
 D0
 Você vê apenas areia seca, que sopra em sua face.
 ~
@@ -1372,7 +1372,7 @@ Uma Conturbada Tempestade de Areia~
 açoitam por todos os lados e a areia rasga sua pele, cegando você.  Você
 perde seu senso de direção.
 ~
-53 0 2
+53 0 0 0 0 2
 D0
 Você vê apenas areia seca, que sopra em sua face.
 ~
@@ -1406,7 +1406,7 @@ tempestade de areia e subir pela duna de areia.  Você pode ver a tempestade
 ao norte e, supostamente, a pirâmide está em algum lugar além dela.  Nada
 além de dunas planas em todas as direções.
 ~
-53 0 2
+53 0 0 0 0 2
 D0
 Você vê apenas areia seca que sopra em sua face.
 ~
@@ -1419,19 +1419,19 @@ você parece ser incapaz de atravessá-lo.
 enigma~
 2 5317 5359
 E
-duna areia~
-Areia é tudo o que você pode ver agora.  Infelizmente, areia não é algo
-interessante, apenas areia branca, soprando por todo o lugar.
+hieroglifos~
+Como a maioria dos hieróglifos antigos desta terra, os símbolos são
+completamente incompreensíveis para você.  Talvez a Esfinge possua a
+resposta deste antigo enigma.
 ~
 E
 enigma~
 Uma visão se forma diante de seus olhos, de brilhantes hieróglifos.
 ~
 E
-hieroglifos~
-Como a maioria dos hieróglifos antigos desta terra, os símbolos são
-completamente incompreensíveis para você.  Talvez a Esfinge possua a
-resposta deste antigo enigma.
+duna areia~
+Areia é tudo o que você pode ver agora.  Infelizmente, areia não é algo
+interessante, apenas areia branca, soprando por todo o lugar.
 ~
 S
 #5359
@@ -1440,11 +1440,11 @@ Através do Buraco de Areia~
 branca.  Sobre você, há um pequeno buraco, alcançável apenas pela rampa de
 areia pela qual você desceu.
 ~
-53 acd 0
+53 13 0 0 0 0
 D4
 Você vê uma duna de areia.
 ~
 ~
 0 -1 5358
 S
-$
+$~

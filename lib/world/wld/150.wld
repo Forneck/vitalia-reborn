@@ -8,7 +8,7 @@ estrada parece perfeitamente plana e reta.
 rasteira que cerca a estrada neste ponto.
    Um viajante passa ao seu lado e acena alegremente para você.
 ~
-150 c 1
+150 4 0 0 0 1
 D1
 A Estrada do Rei continua em uma linha reta para o leste, em direção
 a um grande castelo.
@@ -39,7 +39,7 @@ A Estrada do Rei~
    Você está no meio da grande Estrada do Rei. A estrada foi muito bem
 construída e vai em linha reta nas direções leste-oeste.
 ~
-150 0 1
+150 0 0 0 0 1
 D1
 A Estrada do Rei continua em linha reta para o leste.
 ~
@@ -58,7 +58,7 @@ A Estrada do Rei~
 seus construtores é latente, pois é impossível avistar qualquer curva ou
 irregularidade em meio ao traçado da estrada.
 ~
-150 0 1
+150 0 0 0 0 1
 D1
 Você vê um castelo ao longe para o leste.
 ~
@@ -78,7 +78,7 @@ beleza.   Ele não é totalmente indefeso, mesmo porque ele foi totalmente
 cercado por um fosso profundo e suas janelas são estreitas o suficiente
 para que arqueiros possam atirar por elas.
 ~
-150 0 1
+150 0 0 0 0 1
 D0
 Você avista uma ponte levadiça.
 ~
@@ -96,13 +96,12 @@ Na Ponte Levadiça~
 encontra-se um imenso portão com duas portas.  Ele parece muito forte.  Você
 vê alguns redemoinhos no fosso.
 ~
-150 c 1
+150 4 0 0 0 1
 D0
 O portão tem imensas e enigmáticas dobradiças entalhadas. Como o Castelo em
 si, ele parece ter sido construído não tanto pela força, mas sim pela beleza.
 ~
 portao porta~
-:n 1 o portão
 1 -1 15007
 D2
 Você avista a Estrada do Rei.
@@ -123,7 +122,7 @@ sentir com muita fome.  Por toda a volta da sala, existem prateleiras com
 diferentes tipos de tempêros expostos.  Existe uma saída para o norte, e
 outra para o leste; ambas levam a passagens estreitas.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Você avista uma pequena e pálida passagem.
 ~
@@ -141,12 +140,11 @@ Uma Pequena Passagem~
 servos do Castelo.  Ela tem luz opaca e é extremamente estreita.  A passagem
 conduz à oeste e para o leste existe uma pequena porta.
 ~
-150 d 0
+150 8 0 0 0 0
 D1
 A porta é pequena e totalmente desinteressante.
 ~
 porta pequena~
-:n 2
 1 -1 15007
 D3
 Você ouve ruídos de panelas e sente cheiro de carne assada.
@@ -160,7 +158,7 @@ O Salão de Entrada~
 Para o norte você avista uma saída para o Grande Salão.  Existe também outra
 saída para o leste e uma pequena porta para o oeste.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Você vê o Grande Salão do Rei.
 ~
@@ -175,13 +173,11 @@ D2
 Para o sul, existe um portão, que leva para a ponte levadiça.
 ~
 portao~
-:n 1 o portão
 1 -1 15004
 D3
 A porta é pequena e desinteressante.
 ~
 porta pequena~
-:n 2
 1 -1 15006
 S
 #15008
@@ -190,7 +186,7 @@ A Sala da Guarda~
 estão temporariamente fora de serviço.  Existe apenas uma saída, que leva de
 volta para o salão de entrada.
 ~
-150 d 0
+150 8 0 0 0 0
 D3
 Você vê a Entrada do Castelo.
 ~
@@ -204,7 +200,7 @@ há guardas por aqui e você nota que esta parte do Castelo não vem sendo
 usada há muito tempo.  Você enxerga escadas indo para cima da torre e existe
 também uma saída para o norte.
 ~
-150 cd 0
+150 12 0 0 0 0
 D0
 Você vê uma pequena passagem na penumbra.
 ~
@@ -227,7 +223,7 @@ Uma Pequena Passagem~
    Você está numa pequena passagem, que foi feita preferencialmente para os
 servos do Castelo.  A passagem conduz à norte e sul.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Você vê uma pequena passagem na penumbra.
 ~
@@ -247,7 +243,7 @@ das nuvens lá fora.  O teto foi maravilhosamente pintado por alguém que deve
 ter sido um gênio.  O salão é muito largo e fácilmente centenas de
 pessoas poderiam se sentar, para um banquete.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Você vê o Grande Salão do Rei.
 ~
@@ -276,7 +272,7 @@ deve ter sido um gênio.  O salão é muito largo e facilmente centenas de
 pessoas poderiam se sentar, para um banquete.   Para o norte, você avista
 o grande trono do Rei Welmar e para o sul está a Entrada do Castelo.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Você vê parte do Grande Salão onde o trono está.
 ~
@@ -314,7 +310,7 @@ nuvens lá fora.  O teto foi maravilhosamente pintado por alguém que
 deve ter sido um gênio.  O salão é muito largo e fácilmente centenas de
 pessoas poderiam se sentar, para um banquete.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Você vê o Grande Salão do Rei.
 ~
@@ -339,7 +335,7 @@ Uma Passagem~
    Você se acha em uma passagem, que leva norte e sul.  Para o sul você irá
 encontrar uma das torres.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Você avista a continuação da pequena passagem.
 ~
@@ -355,7 +351,7 @@ A Passagem~
    Você está numa passagem, que leva norte e sul.  Para o leste existe uma
 saída para o Grande Salão.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Você avista a continuação da pequena passagem.
 ~
@@ -381,7 +377,7 @@ ter sido um gênio.  O salão é muito largo e fácilmente centenas de pessoas
 poderiam se sentar, para um banquete.  À leste, você vê o grande trono do
 Rei Welmar, e para o oeste existe uma saída para a passagem.
 ~
-150 d 0
+150 8 0 0 0 0
 D1
 Você avista parte do Grande Salão onde o trono está.
 ~
@@ -415,7 +411,7 @@ Você treme só de imaginar conhecer o tamanho do animal que morreu para
 fornecer uma peça de marfim desse tamanho.  O Salão continua para o
 leste, oeste e sul.
 ~
-150 d 0
+150 8 0 0 0 0
 D1
 Você vê o Grande Salão do Rei.
 ~
@@ -432,17 +428,17 @@ Você vê o Grande Salão do Rei.
 ~
 0 -1 15016
 E
+trono marfim~
+Ele é largo e muito bonito.  As esculturas são, em sua maioria, de animais e
+bestas mágicas.
+~
+E
 teto pinturas pintura~
 As pinturas no teto retratam os grandes heróis e deuses.  Um dos deuses
 retratados ficou com uma aparência feroz por causa de sua grande
 quantidade de cabelos e por sua imensa barba.  Também entre eles estão
 os grandes inimigos e mal-feitores, tais como a deusa maligna Yochlol e
 o poderoso e maligno Mago Tharoecon.
-~
-E
-trono marfim~
-Ele é largo e muito bonito.  As esculturas são, em sua maioria, de animais e
-bestas mágicas.
 ~
 S
 #15018
@@ -455,7 +451,7 @@ centenas de pessoas poderiam se sentar, para um banquete.  À oeste,
 você vê o grande trono do Rei Welmar e para o leste existe uma saída
 para a pequena passagem.
 ~
-150 d 0
+150 8 0 0 0 0
 D1
 Você enxerga uma passagem.
 ~
@@ -485,7 +481,7 @@ A Pequena Passagem~
    Você está numa pequena passagem, que leva norte e sul.  Para o oeste
 existe uma saída para o Grande Salão.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 A passagem continua para o norte.
 ~
@@ -507,7 +503,7 @@ A Passagem~
    Você está numa passagem, que leva norte e sul.  Existe uma porta
 para o leste.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 A passagem leva para uma escada.
 ~
@@ -517,7 +513,6 @@ D1
 A porta é pequena e oportuna.
 ~
 porta~
-:n 2
 1 -1 15021
 D2
 A passagem continua para o sul.
@@ -531,12 +526,11 @@ O Corredor dos Empregados~
 para o norte e oeste.  O corredor é geralmente usado por empregados
 e carece de alguma beleza, se for comparado ao resto do castelo.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Existe uma porta lá!
 ~
 porta~
-:n 2
 1 -1 15026
 D1
 O corredor parece chegar ao seu fim, mais adiante ao leste.
@@ -547,7 +541,6 @@ D3
 A porta para o oeste é feita de madeira.
 ~
 porta madeira~
-:n 2
 1 -1 15020
 S
 #15022
@@ -555,12 +548,11 @@ O Fim do Corredor dos Empregados~
    O corredor leva somente ao oeste daqui, mas existe uma porta para o
 norte.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 A porta leva para uma sala preparada para o mordomo.
 ~
 porta~
-:n 2
 1 15009 15027
 D3
 Você enxerga a continuação do corredor.
@@ -576,12 +568,11 @@ maioria das armas parecem terem sido preparadas somente para o
 treinamento, com as pontas grossas e cegas, mas parece que existem
 algumas que poderiam ser úteis em combate.  Existe uma porta para o norte.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 A porta é larga e pesada.
 ~
 porta larga pesada~
-:n 2
 1 -1 15028
 D1
 Você enxerga uma pequena passagem.
@@ -595,7 +586,7 @@ A Pequena Passagem~
 saída para o oeste, de onde grunhidos, aplausos e fortes golpes podem ser
 ouvidos.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 A passagem leva à norte para uma escada.
 ~
@@ -619,7 +610,7 @@ do Castelo.  As escadas são feitas de mármore e existem pilares esculpidos
 à semelhança de árvores, com pequenos animais correndo para cima e para
 baixo do tronco.
 ~
-150 d 0
+150 8 0 0 0 0
 D2
 Você vê enxerga uma passagem.
 ~
@@ -631,13 +622,13 @@ A escada leva para o segundo piso.
 ~
 0 -1 15049
 E
+pilar pilares árvore árvores~
+Muito encantador.  Esquilos e pequenos pássaros por tudo.
+~
+E
 escadas escada~
 Feita de mármore e como o resto do Castelo, construída primeiramente pela
 beleza e com grande habilidade.
-~
-E
-pilar pilares árvore árvores~
-Muito encantador.  Esquilos e pequenos pássaros por tudo.
 ~
 S
 #15026
@@ -646,12 +637,11 @@ O Alojamento dos Empregados~
 empregados.  A sala é cheia de camas confortáveis.  Existe, também, um
 grande baú, provavelmente contendo alguns dos pertences dos empregados.
 ~
-150 d 0
+150 8 0 0 0 0
 D2
 A porta é feita de madeira.
 ~
 porta madeira~
-:n 2
 1 -1 15021
 E
 cama~
@@ -666,12 +656,11 @@ encontra-se na ala dos empregados. O aposento também é largo e confortável;
 quase luxuoso, de fato.  Existe uma grande cama e uma escrivaninha no
 quarto.  A única saída é via a porta que se encontra a sul.
 ~
-150 d 0
+150 8 0 0 0 0
 D2
 Você enxerga o corredor.
 ~
 porta~
-:n 2
 1 15009 15022
 E
 cama~
@@ -684,12 +673,11 @@ O Quartel dos Guardas~
 é aqui que os guardas que estão fora de serviço gastam a maior parte de
 seu tempo, bebendo e jogando ou, provavelmente, dormindo.
 ~
-150 d 0
+150 8 0 0 0 0
 D2
 A porta é larga e pesada.
 ~
 porta larga pesada~
-:n 2
 1 -1 15023
 E
 beliche beliches~
@@ -704,7 +692,7 @@ desde que você entrou no castelo, as coisas não foram feitas apenas
 pela beleza.   Em vez disso, parece mais funcional e parecido com uma
 prisão.
 ~
-150 d 0
+150 8 0 0 0 0
 D2
 Você enxerga uma pequena passagem.
 ~
@@ -725,7 +713,7 @@ S
 Numa Curva do Corredor~
    Você está num lugar onde o corredor faz uma curva do leste para o norte.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Você vê a continuação do corredor.
 ~
@@ -742,7 +730,7 @@ O Corredor~
    Você se encontra num longo corredor, decorado com tapeçarias
 representando velhos tempos e velhos heróis.  Ele conduz à leste e oeste.
 ~
-150 d 0
+150 8 0 0 0 0
 D1
 Você vê a continuação do corredor.
 ~
@@ -759,7 +747,7 @@ O Corredor~
    Você encontra-se num longo corredor, decorado com tapeçarias
 representando velhos tempos e velhos heróis.  Ele conduz à leste e oeste.
 ~
-150 d 0
+150 8 0 0 0 0
 D1
 Você vê a continuação do corredor.
 ~
@@ -777,7 +765,7 @@ O Corredor~
 representando velhos tempos e velhos heróis.  O corredor continua à oeste, e
 para o norte você enxerga uma luxuosa ala destinada aos hóspedes.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Você avista a ala dos hóspedes.
 ~
@@ -794,7 +782,7 @@ Na Torre Sudeste~
    Esta parte da torre não é muito interessante, mas conduz para o piso
 superior...
 ~
-150 d 0
+150 8 0 0 0 0
 D4
 A sala no topo da torre parece escura por alguma razão.
 ~
@@ -812,7 +800,7 @@ O Corredor~
 representando velhos tempos e velhos heróis.  Ele conduz norte e sul.
 Existe também uma saída para o leste aqui.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Você vê a continuação do corredor.
 ~
@@ -834,12 +822,11 @@ Na Sala do Tesouro~
    Você está diante uma grande porta de ferro.  A porta é muito larga e
 parece muito sólida.  Existe um aviso afixado nele.
 ~
-150 d 0
+150 8 0 0 0 0
 D1
 Você avista uma larga porta de ferro
 ~
 porta ferro larga~
-:n 2
 2 15007 15037
 D3
 Você enxerga o corredor.
@@ -865,12 +852,11 @@ dá conta entretanto, que a maioria dessas coisas são por demais famosas
 para serem vendidas em qualquer lugar que seja, sem que você seja preso
 como ladrão e condenado à morte instantênea, pelas mãos da Guarda Real.
 ~
-150 d 0
+150 8 0 0 0 0
 D3
 Você avista uma larga porta de ferro.
 ~
 porta larga ferro~
-:n 2
 2 15007 15036
 E
 pintura pinturas escultura esculturas tapeçarias~
@@ -884,18 +870,16 @@ A Ala dos Hóspedes~
 recebidos.   Para o leste existe uma larga, ornamentada porta e outra um
 pouco menor leva para o norte.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 A porta parece levar a sala de hóspedes.
 ~
 porta pequena~
-:n 2
 1 -1 15043
 D1
 Você avista a suite dos hóspedes atrás da porta ornamentada.
 ~
 porta ornamentada~
-:n 2
 1 -1 15039
 D2
 Você enxerga o corredor.
@@ -912,7 +896,7 @@ elegantemente decorada.  Toda a mobília não é apenas bonita mas também
 feita de maneira a levar conforto a quem dela desfrute.  Para o norte
 existe uma saída para o quarto e existe uma porta para o oeste.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Você avista o quarto.
 ~
@@ -922,7 +906,6 @@ D3
 Atrás da porta você vê a entrada para a Ala de Hóspedes.
 ~
 porta~
-:n 2
 1 -1 15038
 S
 #15040
@@ -930,7 +913,7 @@ O Corredor~
    Você encontra-se num longo corredor, decorado com tapeçarias
 representando velhos tempos e velhos heróis.  Ele conduz norte e sul.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Você vê a continuação do corredor.
 ~
@@ -947,7 +930,7 @@ O Salão de Bailes~
    Você está no grande Salão de Bailes.  Ele é realmente muito grande e
 em seu canto sudeste há um palco para uma orquestra ficar tocando.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Você enxerga o Salão de Bailes.
 ~
@@ -965,7 +948,7 @@ No Palco~
 músicos possam tocar ao mesmo tempo.  O Salão de Bailes continua para
 o oeste e norte.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Você vê o Salão de Bailes.
 ~
@@ -984,12 +967,11 @@ confortável, você observa que não foi feito para nenhum dos hóspedes mais
 ilustres, porque nele falta o grande luxo que pode ser encontrado no
 restante do castelo.
 ~
-150 d 0
+150 8 0 0 0 0
 D2
 Atrás da porta, você enxerga a entrada da Ala dos Hóspedes.
 ~
 porta~
-:n 2
 1 -1 15038
 S
 #15044
@@ -998,7 +980,7 @@ O Quarto~
 outro lado da parede do norte.  O quarto é amplo e aconchegante, e a cama
 praticamente se oferece para que você deite nela e durma.
 ~
-150 d 0
+150 8 0 0 0 0
 D2
 Você avista a sala de estar da suite.
 ~
@@ -1015,7 +997,7 @@ O Corredor~
 representando velhos tempos e velhos heróis.  Ele conduz norte e sul.
 Existe uma saída para o leste, que leva para uma sala grande.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Você vê a continuação do corredor.
 ~
@@ -1037,7 +1019,7 @@ O Salão de Bailes~
    Você está no grande Salão de Bailes.  Ele é realmente muito grande e
 em seu canto sudeste há um palco para uma orquestra ficar tocando.
 ~
-150 d 0
+150 8 0 0 0 0
 D1
 Você vê o Salão de Bailes.
 ~
@@ -1059,7 +1041,7 @@ O Salão de Bailes~
    Você está no grande Salão de Bailes.  Ele é realmente muito grande e
 em seu canto sudeste há um palco para uma orquestra ficar tocando.
 ~
-150 d 0
+150 8 0 0 0 0
 D1
 Para o leste, você pode entrar numa torre.
 ~
@@ -1082,7 +1064,7 @@ Na Torre~
 Para o oeste você pode entrar no Salão de Bailes e existe uma escada levando
 ao piso superior, dentro da torre.
 ~
-150 d 0
+150 8 0 0 0 0
 D3
 Você enxerga o Salão de Bailes.
 ~
@@ -1104,12 +1086,11 @@ A Grande Escada~
 Para o leste, existe uma porta feita de carvalho muito larga, e um corredor
 conduz ao sul.
 ~
-150 d 0
+150 8 0 0 0 0
 D1
 A Porta é larga e feita de carvalho.
 ~
 porta carvalho larga~
-:n 2
 1 15014 15050
 D2
 Você vê o corredor.
@@ -1138,7 +1119,7 @@ A Aconchegante Sala~
 com fogo aceso e algumas cadeiras confortáveis ao redor de uma pequena
 mesa.  Existe uma porta para o oeste, e também uma saída para o leste.
 ~
-150 d 0
+150 8 0 0 0 0
 D1
 Você enxerga um amplo quarto.
 ~
@@ -1148,20 +1129,19 @@ D3
 A porta é larga e feita de carvalho.
 ~
 porta larga carvalho~
-:n 2
 1 15014 15049
 E
-fogo lareira~
-O fogo é alimentado por lenha e parece poder continuar queimando por um
-bom tempo.
+cadeiras~
+As cadeiras estão arrumadas ao redor da lareira.
 ~
 E
 mesa~
 A mesa é feita de mogno e elegante parecendo muito aconchegante(!)
 ~
 E
-cadeiras~
-As cadeiras estão arrumadas ao redor da lareira.
+fogo lareira~
+O fogo é alimentado por lenha e parece poder continuar queimando por um
+bom tempo.
 ~
 S
 #15051
@@ -1173,17 +1153,20 @@ títulos incluem trabalhos como: "Um Tratado da História de Midgaard e
 aréas limítrofes", "Magia - Introdução para Iniciantes" e muitos outros.
 Existe uma saída para o oeste.
 ~
-150 d 0
+150 8 0 0 0 0
 D3
 Existe uma ampla e aconchegante sala para o oeste.
 ~
 ~
 0 -1 15050
 E
-livro livros estante estantes~
-A maioria dos livros parecem resistentes, mesmo depois de terem sido
-intensamente estudados.  O Rei evidentemente é bastante interessado em
-manter-se bem instruído.
+magia~
+Iniciante?  Este livro vai muito além do que VOCÊ sabe sobre magia, de
+qualquer maneira.  Mas existem níveis de conhecimento mágico, ao que parece.
+~
+E
+história midgaard~
+Um tomo completamente desinteressante, repleto de conhecimento chato.
 ~
 E
 cama~
@@ -1191,13 +1174,10 @@ Parece boa o suficiente para se dormir, mas você nunca se atreveria a dormir
 nela, por se tratar de uma cama Real.
 ~
 E
-história midgaard~
-Um tomo completamente desinteressante, repleto de conhecimento chato.
-~
-E
-magia~
-Iniciante?  Este livro vai muito além do que VOCÊ sabe sobre magia, de
-qualquer maneira.  Mas existem níveis de conhecimento mágico, ao que parece.
+livro livros estante estantes~
+A maioria dos livros parecem resistentes, mesmo depois de terem sido
+intensamente estudados.  O Rei evidentemente é bastante interessado em
+manter-se bem instruído.
 ~
 S
 #15052
@@ -1207,19 +1187,19 @@ Esta sala é pequena, e a única fonte de luz é um vela, numa mesa
 desarrumada, no meio da sala.  A única saída óbvia é de volta para baixo,
 pela escada.
 ~
-150 d 0
+150 8 0 0 0 0
 D5
 A escada leva para baixo da torre.
 ~
 ~
 0 -1 15034
 E
-mesa~
-Na mesa estão vários objetos, todos são bastante estranhos.
-~
-E
 vela~
 Pequena, desinteressante... A vela é tão normal quanto deveria ser.
+~
+E
+mesa~
+Na mesa estão vários objetos, todos são bastante estranhos.
 ~
 S
 #15053
@@ -1230,7 +1210,7 @@ e vigilância.  As janelas são fendas para arqueiros, muito estreitas do
 lado de fora e largas para dentro para permitir um grande ângulo de tiro.
 A única saída evidente é para baixo, descendo as escadas de novo.
 ~
-150 d 0
+150 8 0 0 0 0
 D5
 As escadas levam para baixo para o segundo piso.
 ~
@@ -1251,7 +1231,7 @@ oeste, um lindo lago.  Um pouco mais perto, a cidade de Midgaard aparece no
 final da Estrada do Rei.  A única saída que você pode ver é para baixo,
 outra vez.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Para o norte, as altas Montanhas Brancas com seus picos gigantescos.  Os
 topos das montanhas desaparecem no meio das nuvens brancas, muito acima
@@ -1293,7 +1273,7 @@ ouvir pingos de água, caindo próximos a você.  A área é iluminada por uma
 única tocha na sala que está no meio da escada.   A escada leva para cima
 e se abre para uma pequena sala ao leste.
 ~
-150 d 0
+150 8 0 0 0 0
 D1
 Uma pequena sala se abre ao leste.
 ~
@@ -1314,14 +1294,13 @@ em uma das celas que estão atrás da porta ao sul.   A decoração da sala
 é escassa, somente uma mesa, cadeira e um baralho de cartas.  Uma escada
 foi construída junto a parede oeste e leva para cima.
 ~
-150 d 0
+150 8 0 0 0 0
 D2
 Dando uma espiadela através do buraco no topo da pequena porta de madeira
 você pode ver que existe um pequeno corredor levando por entre diversas
 celas.
 ~
 porta madeira~
-:n 2
 1 15017 15057
 D3
 Uma pequena escada construída junto a parede oeste da sala leva para cima.
@@ -1329,14 +1308,14 @@ Uma pequena escada construída junto a parede oeste da sala leva para cima.
 ~
 0 -1 15055
 E
-mesa cartas baralho~
-Existe um baralho de cartas sobre a mesa, numa pequena pilha.  Porém uma
-carta está caída no chão.
-~
-E
 carta chao~
 A carta no chão parece ser um ás de espadas...Uma carta ruim para achar,
 realmente.  Que má sorte poderia ser trazida por causa desta descoberta?
+~
+E
+mesa cartas baralho~
+Existe um baralho de cartas sobre a mesa, numa pequena pilha.  Porém uma
+carta está caída no chão.
 ~
 S
 #15057
@@ -1353,31 +1332,27 @@ do corredor próximo ao canto norte. E uma cela isolada no canto sul
 do corredor, com uma pequenina placa de metal que está localizada acima
 da porta, colocada no batente em forma de arco da estrutura.
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 Uma pequena porta de madeira bloqueia o caminho para fora da prisão.
 ~
 porta madeira~
-:n 2
 1 15017 15056
 D1
 A porta da cela está posicionada na parede leste.
 ~
 porta cela~
-:n 2
 2 15017 15060
 D2
 A Porta da cela do sul foi duplamente trancada e existe uma pequena placa
 de metal, colocada no batente de pedra acima da porta.
 ~
 porta cela~
-:n 2
 2 15017 15059
 D3
 A porta da sela está posicionada na parede oeste.
 ~
 porta cela~
-:n 2
 2 15017 15058
 E
 placa pedra batente~
@@ -1393,12 +1368,11 @@ A Cela~
 onde alguma coisa quebrou as pedras dentro da cela.  Existe uma porta na
 cela posicionada na parece leste.
 ~
-150 d 0
+150 8 0 0 0 0
 D1
 A porta da cela para o leste leva de volta para o corredor da prisão.
 ~
 porta cela~
-:n 2
 2 15017 15057
 E
 buraco~
@@ -1413,12 +1387,11 @@ Existe até um tapete felpudo no centro do chão para manter um pouco de calor
 no ambiente.   Parece que o prisioneiro que está sendo mantido aqui é bem
 tratado...bem até demais para o assassino de uma cidade inteira...
 ~
-150 d 0
+150 8 0 0 0 0
 D0
 A porta da cela para o norte leva de volta para o corredor da prisão.
 ~
 porta cela~
-:n 2
 2 15017 15057
 S
 #15060
@@ -1427,12 +1400,11 @@ A Cela~
 aqui há algum tempo.  A pequena porta da cela esta localizada na parede
 oeste.
 ~
-150 d 0
+150 8 0 0 0 0
 D3
 A porta da cela para o oeste leva de volta para o corredor da prisão.
 ~
 porta cela~
-:n 2
 2 15017 15057
 S
 #15061
@@ -1444,7 +1416,7 @@ todos os lados e você sente que uma paz recai sobre você ao se dar conta
 de que a humanidade não passa por aqui faz algum tempo.
    A trilha esquecida parece levar para o norte e sul.
 ~
-150 0 4
+150 0 0 0 0 4
 D0
 O movimento sobre a Estrada do Rei pode ser ouvido ao norte.
 ~
@@ -1466,7 +1438,7 @@ não passa por aqui faz algum tempo.
 está quase que completamente tomada com vegetação do bosque daqui.
    A trilha esquecida parece levar para o norte e leste.
 ~
-150 0 4
+150 0 0 0 0 4
 D0
 A trilha continua para o norte.
 ~
@@ -1490,7 +1462,7 @@ está quase que completamente tomada com vegetação do bosque daqui.
 estranho e assustador silêncio paira no ar, quase que bloqueando todo os
 sons que você podia ouvir ao norte e leste.
 ~
-150 0 4
+150 0 0 0 0 4
 D2
 A vegetação rasteira começa a se abrir para o sul e você pode enxergar o que
 parece ser uma pequena vila para o sul.  Está muito quieto, quieto demais.
@@ -1514,7 +1486,7 @@ vila está em silêncio.  Você não consegue ver nenhum movimento ao redor da
 vila também.  Está tudo tão imóvel e silencioso quanto o bosque do norte.
    Existe um pequeno sinal aqui ao lado da estrada.
 ~
-150 0 2
+150 0 0 0 0 2
 D0
 Uma trilha leva para dentro da pesada vegetação rasteira para o norte.
 ~
@@ -1555,7 +1527,7 @@ direção, como se na vila housesse um segredo que não queriam que fosse
 fosse revelado.
    Existe uma outra casa para o lado leste da estrada.
 ~
-150 0 2
+150 0 0 0 0 2
 D0
 A estrada de areia continua para o norte.
 ~
@@ -1589,7 +1561,7 @@ frente, um pequeno aviso, pendurado num pedaço de corrente preta e
 carbonizada.
    A estrada de areia continua para norte e sul.
 ~
-150 0 2
+150 0 0 0 0 2
 D0
 A pequena estrada de areia continua em direção ao norte.
 ~
@@ -1633,7 +1605,7 @@ recentes para serem os dos assassinados de Townsbridge de uma década
 atrás, mas a aparência da vila é de estar vazia por todo esse tempo.
    A estrada de areia leva para longe da carnificina para o norte.
 ~
-150 0 2
+150 0 0 0 0 2
 D0
 Bem perto da margem norte do poço, uma pequena e estreita trilha leva para
 longe.
@@ -1644,8 +1616,7 @@ D1
 Você vê um portão de ferro negro bastante corroído.
 ~
 portão ferro~
-:n 1 o portão de ferro
-a -1 5900
+1 -1 5900
 S
 #15068
 Uma Casa~
@@ -1656,7 +1627,7 @@ tudo é como tudo parece ter sido recente, pois não existem nenhuma teia
 de aranha e nenhuma sujeira ou coisa parecida em canto nenhum.
    A estrada de areia pode ser vista para o leste através da porta.
 ~
-150 d 0
+150 8 0 0 0 0
 D1
 Você pode ver a estrada de areia através da porta para o leste.
 ~
@@ -1674,7 +1645,7 @@ algum tempo.  Se estivesse em melhor estado, você poderia vendê-la para
 um antiquário.
    A meia luz da estrada reluz através da porta de entrada para o oeste.
 ~
-150 ad 0
+150 9 0 0 0 0
 D3
 Você pode ver a estrada de areia através da porta de entrada para o oeste.
 ~
@@ -1691,7 +1662,7 @@ estranha.  Talvez seja do seu melhor interesse deixa-la tão logo fosse
 humanamente possível.
    A volta para a estrada é através da porta de entrada para o leste.
 ~
-150 d 0
+150 8 0 0 0 0
 D1
 Você pode ver a estrada de areia através da porta para o leste.
 ~
@@ -1708,7 +1679,7 @@ Existem alguns utensílios queimados pelo chão e os restos de um balcão
 no lado esquerdo da parede norte indicam que algum dia, isto foi uma loja.
    A estrada encontra-se para o oeste através da parede escurecida.
 ~
-150 0 2
+150 0 0 0 0 2
 D3
 Você pode ver a estrada de areia para o oeste.
 ~
@@ -1726,7 +1697,7 @@ escuridão a sua volta parece ter sido planejada, pois não aparenta ser
 natural para este tipo de vegetação.
    O caminho continua para o oeste e você pode ver uma luz para o leste.
 ~
-150 ad 1
+150 9 0 0 0 1
 D1
 O caminho continua em direção a uma pequena intersecção com a estrada de areia.
 ~
@@ -1746,7 +1717,7 @@ como se não quisessem sentir a sua presença.  O bosque é quase que
 totalmente silencioso e você se pergunta secretamente porque isto é assim.
    O caminho aparenta continuar para o leste e oeste.
 ~
-150 ad 1
+150 9 0 0 0 1
 D1
 O caminho continua para a escuridão.
 ~
@@ -1773,7 +1744,7 @@ bloqueiam o céu.
 verde.  Este brilho lhe fornece luz suficiente para você ver mesmo que o
 céu acima esteja completamente escondido.
 ~
-150 d 1
+150 8 0 0 0 1
 D1
 Um caminho estreito leva para dentro da escuridão.
 ~
@@ -1792,5 +1763,4 @@ escuro brilha com uma aura verde que lhe fornece luz mais do que o
 suficiente para você ver.
 ~
 S
-$
-
+$~

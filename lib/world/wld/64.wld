@@ -4,7 +4,7 @@ A Trilha da Montanha~
 não cair, pois isso irá machucar muito, muito, mas muito mesmo!  A trilha
 continua a leste e, você pode descer para o pequeno vale secreto a oeste.
 ~
-64 0 5
+64 0 0 0 0 5
 D1
 ~
 ~
@@ -19,7 +19,7 @@ A Trilha da Montanha~
    Você está realmente alto agora.  Você pode continuar avançando ainda mais
 alto nas montanhas, a leste, ou desistir e descer a oeste.
 ~
-64 0 5
+64 0 0 0 0 5
 D1
 ~
 ~
@@ -36,7 +36,7 @@ altitude.  A leste, você vê o cume da montanha e, à medida que se aproxima,
 as montanhas vão se organizando através dela.  Você acredita que está no
 caminho certo para o grande vale.  Você também pode descer a oeste.
 ~
-64 0 5
+64 0 0 0 0 5
 D1
 ~
 ~
@@ -55,7 +55,7 @@ anos atrás.  Isso dá ao vale uma peculiaridade, parece um chão liso e
 escurecido.  O caminho adentra ao vale pelo leste e, a oeste, volta à
 civilização.
 ~
-64 0 5
+64 0 0 0 0 5
 D1
 ~
 ~
@@ -72,7 +72,7 @@ congelou dezenas de décadas passadas.  Abaixo, você vê o caminho entrando na
 pequena floresta do vale e desaparecendo longe dos olhos.  A leste entra-se
 no vale e ao oeste volta-se à civilização.
 ~
-64 0 5
+64 0 0 0 0 5
 D1
 ~
 ~
@@ -92,7 +92,7 @@ considerando-se que estas não são vulcões.
    O caminho a leste entra na floresta, enquanto a oeste retorna-se à
 montanha.
 ~
-64 0 3
+64 0 0 0 0 3
 D1
 ~
 ~
@@ -112,7 +112,7 @@ engrenagem?  Poderia algum tipo de construção ter sido enterrada aqui pela
 lava?  Um anel enferrujado surge do centro da terra...  Seria um alçapão?
 Isso seria muito bom para ser verdade!
 ~
-64 0 3
+64 0 0 0 0 3
 D3
 ~
 ~
@@ -121,7 +121,6 @@ D5
 Um antigo alçapão, encardido pela terra e pela idade.
 ~
 alcapao~
-:n 1 o alçapão
 1 -1 6407
 S
 #6407
@@ -132,11 +131,10 @@ entre por suas bordas.  Para o sul existe uma porta de madeira, preservada
 através dos anos por métodos desconhecidos.  Para o oeste há um pequeno
 saguão.
 ~
-64 ad 0
+64 9 0 0 0 0
 D2
 ~
 porta~
-:n 2
 1 -1 6408
 D3
 ~
@@ -146,7 +144,6 @@ D4
 Um antigo alçapão, encardido pela terra e pela idade.
 ~
 alcapao~
-:n 1 o alçapão
 1 -1 6406
 D5
 ~
@@ -161,11 +158,10 @@ os penosos anos que se passaram, pois eles parecem ter sido lavados
 recentemente e dobrados.  Você gostaria de saber que tipo de mago poderia
 lançar tanto poder para desperdiçar com pequenas coisas como essa.
 ~
-64 ad 0
+64 9 0 0 0 0
 D0
 ~
 porta~
-:n 2
 1 -1 6407
 E
 tecido prateleira~
@@ -178,11 +174,10 @@ Um Corredor~
    Este é apenas um corredor vazio, que leva de volta à escadaria a leste, e
 tem portas nas direções norte e sul, que levam a outras salas.
 ~
-64 ad 0
+64 9 0 0 0 0
 D0
 ~
 porta~
-:n 2
 1 -1 6411
 D1
 ~
@@ -191,7 +186,6 @@ D1
 D2
 ~
 porta~
-:n 2
 1 -1 6410
 S
 #6410
@@ -200,11 +194,10 @@ Um Banheiro~
 jatos quentes e frios de água em todas as direções e, sendo drenados para...
 Onde???  Que estranho!!!
 ~
-64 ad 0
+64 9 0 0 0 0
 D0
 ~
 porta~
-:n 2
 1 -1 6409
 S
 #6411
@@ -214,20 +207,19 @@ escrivaninha de ébano contra a parede, na superfície da qual há lava
 endurecida.  Um belo e espaçoso vestiário está repleto de roupas recém
 lavadas e passadas.
 ~
-64 ad 0
+64 9 0 0 0 0
 D2
 ~
 porta~
-:n 2
 1 -1 6409
+E
+vestiário~
+Roupas lindas, mas infelizmente não são o seu tamanho...
+~
 E
 escrivaninha~
 A escrivaninha não desperta muito interesse, assim como
 os papéis que estão em cima dela...
-~
-E
-vestiário~
-Roupas lindas, mas infelizmente não são o seu tamanho...
 ~
 S
 #6412
@@ -236,17 +228,15 @@ A Biblioteca~
 poderia aprender qualquer coisa que desejasse se você olhar e ler pelo tempo
 necessário.  Uma porta se abre de volta às escadarias a leste.
 ~
-64 ad 0
+64 9 0 0 0 0
 D1
 ~
 porta~
-:n 2
 1 -1 6413
 D3
 Uma grande estante, que parece muito estranha.
 ~
 estante~
-:n 2
 1 -1 6414
 E
 livro livros~
@@ -258,11 +248,10 @@ A Escadaria~
    Esta escadaria continua para cima e para baixo.  Há também uma porta para
 o oeste.
 ~
-64 ad 0
+64 9 0 0 0 0
 D3
 ~
 porta~
-:n 2
 1 -1 6412
 D4
 ~
@@ -278,17 +267,15 @@ Um Saguão Escondido~
    Neste pequeno saguão escondido há uma entrada secreta para a biblioteca
 no final norte da parede oeste e, um alçapão, no final sul.
 ~
-64 ad 0
+64 9 0 0 0 0
 D1
 O lado de trás da estante móvel.
 ~
 estante~
-:n 2
 1 -1 6412
 D5
 ~
 alcapao~
-:n 1 o alçapão
 1 -1 6416
 S
 #6415
@@ -296,11 +283,10 @@ A Escadaria~
    Esta escadaria continua para cima e para baixo.  Há também uma porta se
 abrindo a oeste neste andar.
 ~
-64 ad 0
+64 9 0 0 0 0
 D3
 ~
 porta~
-:n 2
 1 -1 6417
 D4
 ~
@@ -316,11 +302,10 @@ A Sala Escondida do Tesouro~
    BINGO!!!  Uma pequena sala "recheada" com tesouros!  Vai logo!
 Sirva-se!!!
 ~
-64 ad 0
+64 9 0 0 0 0
 D4
 ~
 alcapao~
-:n 1 o alçapão
 1 -1 6414
 S
 #6417
@@ -328,21 +313,18 @@ Um Saguão~
    Este saguão leva direto à torre.  Há mais saguão para o oeste e, portas
 ao seu sul e norte.  Uma porta à leste leva de volta às escadarias.
 ~
-64 ad 0
+64 9 0 0 0 0
 D0
 ~
 porta~
-:n 2
 1 -1 6419
 D1
 ~
 porta~
-:n 2
 1 -1 6415
 D2
 ~
 porta~
-:n 2
 1 -1 6418
 D3
 ~
@@ -355,11 +337,10 @@ A Sala dos Criados~
 equipado com uma cama, escrivaninha, cadeira e mesa, etc.  Nada realmente
 importante aqui.
 ~
-64 ad 0
+64 9 0 0 0 0
 D0
 ~
 porta~
-:n 2
 1 -1 6417
 S
 #6419
@@ -368,11 +349,10 @@ A Sala dos Criados~
 equipado com uma cama, escrivaninha, cadeira e mesa, etc.  Nada realmente
 importante aqui.
 ~
-64 ad 0
+64 9 0 0 0 0
 D2
 ~
 porta~
-:n 2
 1 -1 6417
 S
 #6420
@@ -380,11 +360,10 @@ Um Saguão~
    Este saguão continua a leste e, tem uma porta ao norte.  Você pode jurar
 este andar leva ao...  Não, não pode ser...
 ~
-64 ad 0
+64 9 0 0 0 0
 D0
 ~
 porta~
-:n 2
 1 -1 6421
 D1
 ~
@@ -396,11 +375,10 @@ A Sala dos Criados~
    Este parece ser um pequeno quarto dos criados, espartanamente decorado e
 equipado com uma cama, cadeira e mesa, etc.  Nada realmente importante aqui.
 ~
-64 ad 0
+64 9 0 0 0 0
 D2
 ~
 porta~
-:n 2
 1 -1 6420
 S
 #6422
@@ -408,7 +386,7 @@ A Escadaria~
    Esta escadaria leva para cima e para baixo e, há, uma grande sala aberta
 ao seu lado oeste.
 ~
-64 ad 0
+64 9 0 0 0 0
 D3
 ~
 ~
@@ -431,11 +409,10 @@ paredes, colorindo o local.  A lava endurecida derramada nas janelas faz o
 lugar parecer assustador de alguma maneira.  Há uma porta para o norte e, a
 escadaria é a leste.
 ~
-64 ad 0
+64 9 0 0 0 0
 D0
 ~
 porta~
-:n 2
 1 -1 6424
 D1
 ~
@@ -453,11 +430,10 @@ A Cozinha~
 como se fosse por mágica.  Talvez este seja um bom lugar para dar uma
 parada.
 ~
-64 ad 0
+64 9 0 0 0 0
 D2
 ~
 porta~
-:n 2
 1 -1 6423
 S
 #6425
@@ -465,7 +441,7 @@ A Escadaria~
    A escadaria sobe ou desce deste ponto ou, há um saguão no qual você pode
 entrar a oeste.
 ~
-64 ad 0
+64 9 0 0 0 0
 D3
 ~
 ~
@@ -485,7 +461,7 @@ Um Saguão~
 aqui.  O saguão tem direção norte- sul, e há uma cela vazia ao seu oeste.  A
 escadaria é ao seu leste.
 ~
-64 ad 0
+64 9 0 0 0 0
 D0
 ~
 ~
@@ -509,7 +485,7 @@ Um Saguão~
 esquerda, vazias e aguardando ocupantes...  Quem sabe não pode estar
 esperando por você???
 ~
-64 ad 0
+64 9 0 0 0 0
 D2
 ~
 ~
@@ -525,7 +501,7 @@ Um Saguão~
 esquerda, vazias e aguardando ocupantes...  Quem sabe não está esperando por
 você???
 ~
-64 ad 0
+64 9 0 0 0 0
 D0
 ~
 ~
@@ -540,7 +516,7 @@ Uma Escadaria~
    A escadaria continua para cima e para baixo deste ponto.  Uma grande sala
 se abre a oeste.
 ~
-64 ad 0
+64 9 0 0 0 0
 D3
 ~
 ~
@@ -560,11 +536,16 @@ O Escritório do Mago~
 magicamente preservados.  Nada que parece ter valor, exceto talvez para um
 historiador.  Este lugar não parece lhe despertar um real interesse...
 ~
-64 ad 0
+64 9 0 0 0 0
 D1
 ~
 ~
 0 -1 6429
+E
+escrivaninha~
+Está repleta de todos os tipos de papéis. Alguns parecem meio
+interessantes, realmente.
+~
 E
 papel papeis documentos documento~
 Bem, um destes papéis relata a história sobre como o mago desta torre, Rand,
@@ -572,17 +553,12 @@ enfureceu muitos reis, e relata como estes reis jogaram seus exércitos
 contra Rand.  Você se surpreende que a lava não tenha acabado com os
 exércitos...
 ~
-E
-escrivaninha~
-Está repleta de todos os tipos de papéis. Alguns parecem meio
-interessantes, realmente.
-~
 S
 #6431
 A Escadaria~
    As escadas sobem e descem deste ponto; há também uma sala a oeste...
 ~
-64 ad 0
+64 9 0 0 0 0
 D3
 ~
 ~
@@ -604,7 +580,7 @@ direcionada pela mágica...
    Este vai ser um ótimo local para descansar um pouco, quentinho e
 aconchegante...
 ~
-64 cd 0
+64 12 0 0 0 0
 D1
 ~
 ~
@@ -615,7 +591,7 @@ A Escadaria~
    Este é o local onde a escadaria realmente termina.  Há um saguão para o
 seu oeste.
 ~
-64 ad 0
+64 9 0 0 0 0
 D3
 ~
 ~
@@ -632,7 +608,7 @@ A leste está a escadaria que sobe ao irreal recôndito da torre.  A Oeste
 está o caminho de entrada para a torre.  Para o norte está completamente
 bloqueado pela lava e, o caminho ao sul continua limpo.
 ~
-64 ad 0
+64 9 0 0 0 0
 D1
 ~
 ~
@@ -654,7 +630,7 @@ atrativa e impressionante, com esculturas e tapeçarias por toda a parte.  As
 portas parecem impenetráveis...  Você acha que não conseguiria passar por
 elas se realmente precisasse...
 ~
-64 ad 0
+64 9 0 0 0 0
 D1
 ~
 ~
@@ -663,7 +639,6 @@ D3
 Estas portas parecem incríveis.  Mas infelizmente, elas estão trancadas.
 ~
 porta dupla~
-:n 2 a porta dupla
 1 -1 6436
 E
 escultura tapecaria esculturas tapecarias~
@@ -677,12 +652,11 @@ Entretanto, parece que quando a lava desabou havia um homem do lado de fora.
 Ele foi estraçalhado contra a porta e morreu instanta- neamente, mas seu
 esqueleto continua segurando um cajado em perfeitas condições...
 ~
-64 ad 0
+64 9 0 0 0 0
 D1
 Estas duplas portas têm o contorno de um homem...
 ~
 dupla porta~
-:n 2 a porta dupla
 1 2 6435
 S
 #6437
@@ -690,7 +664,7 @@ O Saguão~
    Esta é a parte sul do saguão.  Há uma porta a oeste, marcada por
 brilhantes faixas de raios de luz.  Ao norte continua o saguão.
 ~
-64 ad 0
+64 9 0 0 0 0
 D0
 ~
 ~
@@ -698,7 +672,6 @@ D0
 D3
 ~
 porta~
-:n 2
 1 -1 6438
 S
 #6438
@@ -706,11 +679,10 @@ As Escadas~
    As escadas levam para baixo, à base da torre, ou você pode ir a leste
 para o andar principal da torre.
 ~
-64 ad 0
+64 9 0 0 0 0
 D1
 ~
 porta~
-:n 2
 1 -1 6437
 D5
 ~
@@ -722,7 +694,7 @@ As Escadas~
    As escadas levam para cima, ao andar principal, ou você pode ir a leste
 para a base da torre.
 ~
-64 ad 0
+64 9 0 0 0 0
 D1
 ~
 ~
@@ -737,7 +709,7 @@ Uma Alcova~
    Esta alcova leva a uma extraordinária sala ao seu norte, e as escadas
 seguem para baixo a leste ou para cima a oeste.
 ~
-64 ad 0
+64 9 0 0 0 0
 D0
 ~
 ~
@@ -758,17 +730,17 @@ fogareiros, pinças, pilões, jarras cheias de coisas normais, jarras cheias
 de coisas anormais, jarras cheias de coisas que você nem faz idéia...
    Uma busca pode revelar muita coisa neste local!!!
 ~
-64 ad 0
+64 9 0 0 0 0
 D2
 ~
 ~
 0 -1 6440
 E
-bequer bequers frasco frascos fogareiro fogareiros pinca pincas~
+pilao piloes jarra jarras~
 Parece normal, para você frágeis equipamentos de laboratório.
 ~
 E
-pilao piloes jarra jarras~
+bequer bequers frasco frascos fogareiro fogareiros pinca pincas~
 Parece normal, para você frágeis equipamentos de laboratório.
 ~
 S
@@ -777,7 +749,7 @@ As Escadas~
    As escadas levam para baixo, ao segundo andar, ou de volta à alcova a
 oeste.
 ~
-64 ad 0
+64 9 0 0 0 0
 D3
 ~
 ~
@@ -792,7 +764,7 @@ As Escadas~
    As escadas levam para cima, ao primeiro andar, ou você pode ir a outra
 grande sala à leste.
 ~
-64 ad 0
+64 9 0 0 0 0
 D1
 ~
 ~
@@ -809,7 +781,7 @@ pentagrama no centro da sala.  Campos de força circulam algo que ficou preso
 lá dentro.  Você pensa que NÃO seria uma boa idéia entrar lá, mas essa luz
 exerce uma espécie de fascínio e atração em você...
 ~
-64 d 0
+64 8 0 0 0 0
 D0
 ~
 ~
@@ -819,15 +791,15 @@ D3
 ~
 0 -1 6443
 E
-pentagrama~
-É extremamente velho.  Você acha que chegar mais perto não seria uma boa
-idéia...
-~
-E
 algo~
 Você não consegue ver claramente através do campo de força do pentagrama,
 mas você sente que seja o que for deve estar muito, muito, mas muito mesmo,
 você não consegue nem fazer idéia de como esta coisa deve estar IRADA!
+~
+E
+pentagrama~
+É extremamente velho.  Você acha que chegar mais perto não seria uma boa
+idéia...
 ~
 S
 #6445
@@ -849,10 +821,10 @@ corpo...
    Você está morto, não há mais o que fazer...
    Descanse em Paz.
 ~
-64 bd 0
+64 10 0 0 0 0
 D2
 ~
 ~
 0 -1 6444
 S
-$
+$~
