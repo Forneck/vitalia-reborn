@@ -1,11 +1,11 @@
 #700
-cavaleiro cabeça~
-o Cavaleiro sem Cabeça~
-O Cavaleiro sem Cabeça, cavalgando em seu pesadelo, vem em sua direção!
+cavaleiro cabeÃ§a~
+o Cavaleiro sem CabeÃ§a~
+O Cavaleiro sem CabeÃ§a, cavalgando em seu pesadelo, vem em sua direÃ§Ã£o!
 ~
-O cavaleiro procura eternamente por sua cabeça perdida.   Em um antigo uniforme
-militar ele se senta no topo de um poderoso pesadelo.   Ele se vira para você e
-levanta sua espada na direção de seu pescoço.
+O cavaleiro procura eternamente por sua cabeÃ§a perdida.   Em um antigo uniforme
+militar ele se senta no topo de um poderoso pesadelo.   Ele se vira para vocÃª e
+levanta sua espada na direÃ§Ã£o de seu pescoÃ§o.
 ~
 2097184 0 0 0 40 0 0 0 -250 E
 60 -10 -10 30d50+1500 20d10+20
@@ -21,10 +21,10 @@ E
 #701
 corpo zumbi morto vivo criatura~
 a Criatura~
-Um corpo está aqui, movendo-se freneticamente ao ritmo desta sinfonia infernal.
+Um corpo estÃ¡ aqui, movendo-se freneticamente ao ritmo desta sinfonia infernal.
 ~
-Seu corpo parece estar-se decompondo, este cadáver parece ter se esquecido
-de cair, tamanha a podridão de seu corpo.  Talvez você possa ajuda-lo...
+Seu corpo parece estar-se decompondo, este cadÃ¡ver parece ter se esquecido
+de cair, tamanha a podridÃ£o de seu corpo.  Talvez vocÃª possa ajuda-lo...
 ~
 2131968 0 0 0 0 0 0 0 0 E
 12 17 -1 15d30+110 3d25+5
@@ -41,9 +41,9 @@ E
 #702
 planta figueira~
 uma figueira em um vaso~
-Uma figueira está aqui, dançando loucamente em seu vaso, radical não?
+Uma figueira estÃ¡ aqui, danÃ§ando loucamente em seu vaso, radical nÃ£o?
 ~
-É uma figueira em um vaso, oras.
+Ã‰ uma figueira em um vaso, oras.
 ~
 2097152 0 0 0 0 0 0 0 -100 E
 10 17 3 2d50+25 30d3+1
@@ -60,11 +60,11 @@ E
 #705
 monstrinho menor criatura~
 a Criatura Menor~
-Uma pequena criatura está procurando comida por aqui.
+Uma pequena criatura estÃ¡ procurando comida por aqui.
 ~
-É uma coisa pequena, no máximo com 30 centímetros.   Seu corpo curvado e
+Ã‰ uma coisa pequena, no mÃ¡ximo com 30 centÃ­metros.   Seu corpo curvado e
 verde se torce quase incontrolavelmente enquanto ele o esquadrinha,
-tentando avaliar o risco de fazer de você sua próxima refeição.
+tentando avaliar o risco de fazer de vocÃª sua prÃ³xima refeiÃ§Ã£o.
 ~
 2097280 0 0 0 0 0 0 0 -5 E
 15 15 6 8d12+10 5d6+5
@@ -81,10 +81,10 @@ E
 #706
 duende~
 um duende~
-Um duende de pele acinzentada está rondando ao redor.
+Um duende de pele acinzentada estÃ¡ rondando ao redor.
 ~
-A criatura de pele acinzentada está rondando aqui. Ele carrega uma
-maça consigo e tem uma expressão sórdida.
+A criatura de pele acinzentada estÃ¡ rondando aqui. Ele carrega uma
+maÃ§a consigo e tem uma expressÃ£o sÃ³rdida.
 ~
 2099328 0 0 0 0 0 0 0 0 E
 22 18 5 30d4+25 5d10+5
@@ -103,8 +103,8 @@ cristal monsto~
 o Monstro de Cristal~
 Um monstro feito de cristal espreita aqui.
 ~
-Quase invisível contra o fundo rochoso, o monstro de pedra
-passa quase despercebido.   Feito de cristais e minerais ele é lento mas poderoso.
+Quase invisÃ­vel contra o fundo rochoso, o monstro de pedra
+passa quase despercebido.   Feito de cristais e minerais ele Ã© lento mas poderoso.
 ~
 2097186 0 0 0 2 0 0 0 -290 E
 35 20 -1 30d4+5 3d8+3
@@ -119,12 +119,12 @@ Con: 15
 Cha: 15
 E
 #708
-escorpião vermelho~
-o escorpião vermelho~
-Um escorpião vermelho foge pelas pedras no chão.
+escorpiÃ£o vermelho~
+o escorpiÃ£o vermelho~
+Um escorpiÃ£o vermelho foge pelas pedras no chÃ£o.
 ~
-Um aracnídeo do tamanho de duas mãos juntas, sua carapaça vermelha proporciona
-proteção a esta criatura enquanto seu ferrão goteja veneno.
+Um aracnÃ­deo do tamanho de duas mÃ£os juntas, sua carapaÃ§a vermelha proporciona
+proteÃ§Ã£o a esta criatura enquanto seu ferrÃ£o goteja veneno.
 ~
 2097280 0 0 0 0 0 0 0 0 E
 26 17 3 15d12+20 2d8+3
@@ -141,11 +141,11 @@ E
 #710
 maldito guarda~
 o Guarda maldito~
-Um dos Guardas malditos da Fortaleza está patrulhando a área aqui.
+Um dos Guardas malditos da Fortaleza estÃ¡ patrulhando a Ã¡rea aqui.
 ~
-Uma armadura de placas é tudo o que veste o guarda.   Como um homem invisível
-em armadura visível ele anda eternamente pelos corredores da Fortaleza,
-protegendo-a de ameaças externas.
+Uma armadura de placas Ã© tudo o que veste o guarda.   Como um homem invisÃ­vel
+em armadura visÃ­vel ele anda eternamente pelos corredores da Fortaleza,
+protegendo-a de ameaÃ§as externas.
 ~
 2101248 0 0 0 0 0 0 0 0 E
 22 13 -8 10d4+250 5d25+7
@@ -159,13 +159,13 @@ Con: 15
 Cha: 15
 E
 #711
-guardião guarda~
-um Guardião~
-Um Guardião espreita aqui esperando para chegar a você.
+guardiÃ£o guarda~
+um GuardiÃ£o~
+Um GuardiÃ£o espreita aqui esperando para chegar a vocÃª.
 ~
-Você não o vê até que ele quase esbarra em você.   O Guardião é um pesadelo
+VocÃª nÃ£o o vÃª atÃ© que ele quase esbarra em vocÃ©.   O GuardiÃ£o Ã© um pesadelo
 que vaga na forma humana.   Ele se torce com movimenta copiosamente e
-articuladamente como se não tivesse controle de seus próprios movimentos.
+articuladamente como se nÃ£o tivesse controle de seus prÃ³prios movimentos.
 ~
 2097186 0 0 0 1026 0 0 0 -50 E
 30 16 2 30d20+250 10d10+5
@@ -182,10 +182,10 @@ E
 #712
 impiedoso ceifeiro~
 o Ceifeiro Impiedoso~
-O Ceifeiro em pessoa espera por alguém que possa desafiá-lo.
+O Ceifeiro em pessoa espera por alguÃ©m que possa desafiÃ¡-lo.
 ~
-Ele é a morte em pessoa.   O ceifeiro tem uma aparência muito severa.
-Suas mãos esqueléticas seguram sua foice.   Seu crânio é parcialmente
+Ele Ã© a morte em pessoa.   O ceifeiro tem uma aparÃªncia muito severa.
+Suas mÃ£os esquelÃ©ticas seguram sua foice.   Seu crÃ¢nio Ã© parcialmente
 escondido pelo seu robe negro.   Ele olha profundamente em seus
 olhos antes de lhe atacar.
 ~
@@ -202,12 +202,12 @@ Con: 15
 Cha: 15
 E
 #713
-zumbi legionário~
-o zumbi legionário~
-Um cabaleante zumbi patrulha a área aqui.
+zumbi legionÃ¡rio~
+o zumbi legionÃ¡rio~
+Um cabaleante zumbi patrulha a Ã¡rea aqui.
 ~
-É um corpo apodrecido que se move.   É um dos inúmeros soldados, o que
-lhes faltam em força corpórea é compensado por seu grande número.
+Ã‰ um corpo apodrecido que se move.   Ã‰ um dos inÃºmeros soldados, o que
+lhes faltam em forÃ§a corpÃ³rea Ã© compensado por seu grande nÃºmero.
 ~
 2134016 0 0 0 0 0 0 0 -50 E
 10 20 4 8d10+250 3d50+0
@@ -224,13 +224,13 @@ E
 #714
 cavaleiro negro tempestuoso armadura~
 o Tempestuoso Cavaleiro Negro~
-Uma gigantesca armadura negra está aqui, impedindo sua passagem adiante.
+Uma gigantesca armadura negra estÃ¡ aqui, impedindo sua passagem adiante.
 ~
-Esta monstruosa armadura tem mais de dez pés de altura e cinco pés de largura.
-Quatro polegadas de grossura em seu ponto mais fino, a armadura é coberta em
+Esta monstruosa armadura tem mais de dez pÃ©s de altura e cinco pÃ©s de largura.
+Quatro polegadas de grossura em seu ponto mais fino, a armadura Ã© coberta em
 forma de runas arcanas que brilham com seu poder, polindo o metal escuro com
 um profano brilho verde que vem de dentro do Guarda Condenado.   Quem pode
-advinhar quantas almas foram aprisionadas aqui, para dar à armadura este poder.
+advinhar quantas almas foram aprisionadas aqui, para dar Ã  armadura este poder.
 ~
 2139650 0 0 0 8 0 0 0 -500 E
 70 15 -8 20d50+2500 15d40+10
@@ -247,11 +247,11 @@ E
 #715
 monstro criatura maior~
 a Criatura Maior~
-A Criatura Maior está na varanda roendo um osso de sua última vítima.
+A Criatura Maior estÃ¡ na varanda roendo um osso de sua Ãºltima vÃ­tima.
 ~
-Uma massa humana de volumosos músculos verde-acinzentados e dentes amarelados.
-Sempre e para sempre faminto.   Ele parece trazer suas vítimas aqui para comer em paz.
-Será você sua próxima vítima?
+Uma massa humana de volumosos mÃºsculos verde-acinzentados e dentes amarelados.
+Sempre e para sempre faminto.   Ele parece trazer suas vÃ­timas aqui para comer em paz.
+SerÃ¡ vocÃª sua prÃ³xima vÃ­tima?
 ~
 2105380 0 0 0 8 0 0 0 -60 E
 55 10 1 15d8+150 10d10+5
@@ -266,11 +266,11 @@ Con: 15
 Cha: 15
 E
 #716
-pequena encurvada criança~
-a criança de Ivian~
-Uma pequena criança encurvada, arroxeada, descansa aos pés do trono de Ivian.
+pequena encurvada crianÃ§a~
+a crianÃ§a de Ivian~
+Uma pequena crianÃ§a encurvada, arroxeada, descansa aos pÃ©s do trono de Ivian.
 ~
-Um pequeno delinqüente.   Distraído com os brinquedos infantis.   Brinca
+Um pequeno delinqÃ¼ente.   DistraÃ­do com os brinquedos infantis.   Brinca
 com chocalhos e estilingues.   Parece feliz com seu tipo de vida.
 ~
 2101250 0 0 0 0 0 0 0 -200 E
@@ -287,10 +287,10 @@ E
 #717
 prisioneiro desesperado~
 o Prisioneiro desesperado~
-Um prisioneiro desesperado está aqui, acorrentado à parede.
+Um prisioneiro desesperado estÃ¡ aqui, acorrentado Ã£ parede.
 ~
-Este patético indivíduo não tem sido alimentado há semanas.   Ele está muito
-magro de fome.   Ele olha para você, implorando por clemência.
+Este patÃ©tico indivÃ­duo nÃ£o tem sido alimentado hÃ¡ semanas.   Ele estÃ¡ muito
+magro de fome.   Ele olha para vocÃª, implorando por clemÃªncia.
 ~
 2097154 0 0 0 0 0 0 0 1000 E
 1 20 10 3d4+10 1d1+0
@@ -306,13 +306,13 @@ E
 #719
 ivian senhora~
 Ivian, a Senhora do Vazio Espiritual~
-Ivian, a Senhora do Vazio Espiritual está sentada em seu trono, fitando você.
+Ivian, a Senhora do Vazio Espiritual estÃ¡ sentada em seu trono, fitando vocÃª.
 ~
-A Senhora do Vazio é bastante alta.  Ela personifica a beleza do céu em uma
-noite sem estrelas.   É uma beleza fria e distante, ainda que imensa e poderosa.
+A Senhora do Vazio Ã© bastante alta.  Ela personifica a beleza do cÃ©u em uma
+noite sem estrelas.   Ã‰ uma beleza fria e distante, ainda que imensa e poderosa.
 Seu rosto liso parece uma porcelana sem defeitos, esculpida em sua maldade.   Os leves
-robes violeta que ela veste são movidos pela vastidão do espaço.   Ela senta em seu trono,
-fitando você, enquanto sua criança brinca a seu redor.
+robes violeta que ela veste sÃ£o movidos pela vastidÃ£o do espaÃ§o.   Ela senta em seu trono,
+fitando vocÃª, enquanto sua crianÃ§a brinca a seu redor.
 ~
 2351618 0 0 0 32 0 0 0 -1000 E
 90 14 -5 25d50+2250 20d35+15
@@ -329,9 +329,9 @@ E
 #730
 guarda condenado armadura~
 o guarda-condenado~
-Um guarda amaldiçoado está patrulhando as paredes exteriores da Fortaleza.
+Um guarda amaldiÃ§oado estÃ¡ patrulhando as paredes exteriores da Fortaleza.
 ~
-Como um homem invisível, em armadura visível, a armadura de placas animada foi rebaixada
+Como um homem invisÃ­vel, em armadura visÃ­vel, a armadura de placas animada foi rebaixada
 para a patrulha devido a sua inferior qualidade.
 ~
 2097152 0 0 0 0 0 0 0 0 E
@@ -343,10 +343,10 @@ E
 #740
 maldito guarda~
 o Guarda Maldito~
-Um dos Guardas malditos da Fortaleza está patrulhando a área aqui.
+Um dos Guardas malditos da Fortaleza estÃ¡ patrulhando a Ã¡rea aqui.
 ~
-Uma armadura de placas é tudo o que veste o guarda.   Um homem invisível, vestido com armadura
-visível, ele anda eternamente pelos corredores da Fortaleza protegendo-a de ameaças externas.
+Uma armadura de placas Ã© tudo o que veste o guarda.   Um homem invisÃ­vel, vestido com armadura
+visÃ­vel, ele anda eternamente pelos corredores da Fortaleza protegendo-a de ameaÃ§as externas.
 ~
 2097152 0 0 0 32 0 0 0 0 E
 30 13 -8 10d25+250 5d15+7
@@ -362,9 +362,9 @@ E
 #750
 febre escarlate~
 Febre Escarlate~
-Febre Escarlate está aqui, com sua mão em seu saber.
+Febre Escarlate estÃ¡ aqui, com sua mÃ£o em seu saber.
 ~
-Isto não parece terminado.
+Ele Ã© um guerreiro temido por sua sede de sangue. Sua espada e armadura estÃ£o cobertas pelo sangue de seus inimigos.
 ~
 2097152 0 0 0 0 0 0 0 0 E
 70 20 -2 30d60+1000 1d10+10
@@ -378,12 +378,12 @@ Con: 15
 Cha: 15
 E
 #775
-negro drow caçador~
-o caçador Drow~
-Um drow negro está espreitando pela floresta.
+negro drow caÃ§ador~
+o caÃ§ador Drow~
+Um drow negro estÃ¡ espreitando pela floresta.
 ~
-É uma criatura de pele escura, com todas as finas características de sua raça.
-Seu cabelo é de um branco pálido.   Ele espreita você, segurando sua faca curva.
+Ã‰ uma criatura de pele escura, com todas as finas caracterÃ­sticas de sua raÃ§a.
+Seu cabelo Ã© de um branco pÃ¡lido.   Ele espreita vocÃª, segurando sua faca curva.
 ~
 2097152 0 0 0 1024 0 0 0 -200 E
 10 15 6 5d12+100 3d6+2
@@ -400,9 +400,9 @@ E
 #780
 Mosquito inseto~
 um Mosquito~
-Um dos muitos insetos que há por aqui, voa ao seu redor, o importunando.
+Um dos muitos insetos que hÃ¡ por aqui, voa ao seu redor, o importunando.
 ~
-É um mosquito, o que mais você queria?
+Ã‰ um mosquito, o que mais vocÃª queria?
 ~
 2101250 0 0 0 0 0 0 0 0 E
 1 20 10 1d1+1 1d1+1
@@ -417,11 +417,11 @@ Con: 15
 Cha: 15
 E
 #781
-planta carnívora vênus~
-a Vênus carnívora~
-Uma grande planta carnívora desponta entre as videiras daqui.
+planta carnÃ­vora vÃªnus~
+a VÃªnus carnÃ­vora~
+Uma grande planta carnÃ­vora desponta entre as videiras daqui.
 ~
-É uma Vênus carnívora. O que mais você quer?
+Ã‰ uma VÃªnus carnÃ­vora. O que mais vocÃª quer?
 ~
 2097152 0 0 0 32 0 0 0 0 E
 22 17 6 4d30+25 4d8+5
@@ -437,9 +437,9 @@ E
 #799
 banda~
 a Banda Infernal~
-A Banda Infernal está aqui.
+A Banda Infernal estÃ¡ aqui.
 ~
-É simplesmente indescritível.
+Ã‰ simplesmente indescritÃ­vel.
 ~
 2097152 0 0 0 0 0 0 0 0 E
 10 20 2 10d10+250 3d6+25
