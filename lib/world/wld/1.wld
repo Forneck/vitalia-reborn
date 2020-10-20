@@ -3,8 +3,7 @@ Entre as Névoas do Portal~
    Ao tentar atravessar o portal, você percebe que alguma coisa estranha
 aconteceu...  Ao dar seu primeiro passo dentro do portal, a saída começou a
 ficar distante, e você não pôde mais alcan��-la.  Ao olhar para tr�s, voc�
-percebe que a entrada do portal desapareceu. Você agora est� flutuando nas névoas do portal, e você pode as ver por
-todos os lados.  Agora a �nica coisa que você pode fazer � procurar a sa�da. Corra, e encontre-a antes que ela se feche!
+percebe que a entrada do portal desapareceu. Você agora est� flutuando nas névoas do portal, e você pode as ver por todos os lados.  Agora a �nica coisa que você pode fazer � procurar a sa�da. Corra, e encontre-a antes que ela se feche!
 ~
 1 0 0
 D 0
@@ -22,40 +21,8 @@ A única coisa que você pode ver são névoas.
 ~
 ~
 0 -1 118
-Você est� flutuando pelas névoas do portal.
+Você está flutuando pelas névoas do portal.
 ~
-1.1 cdfgu 0
-D 0
-A única coisa que você pode ver são névoas.
-~
-~
-0 -1 117
-D 1
-A única coisa que você pode ver são névoas.
-~
-~
-0 -1 112
-D 2
-A única coisa que você pode ver são névoas.
-~
-~
-0 -1 114
-D 3
-A única coisa que você pode ver são névoas.
-~
-~
-0 -1 113
-D 4
-A única coisa que você pode ver são névoas.
-~
-~
-0 -1 118
-D 5
-A única coisa que você pode ver são névoas.
-~
-~
-0 -1 116
-S
 #112
 Entre as N�voas do Portal~
    Você est� flutuando pelas névoas do portal.
