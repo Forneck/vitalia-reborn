@@ -237,15 +237,15 @@ int board_show_board(int board_type, struct char_data *ch, char *arg, struct obj
   act("$n examina o quadro de mensagens.", TRUE, ch, 0, 0, TO_ROOM);
 
   if (!num_of_msgs[board_type]){
-    send_to_char(ch, "&+nEste � o quadro de mensagens.  Para leré uma mensagem, use &cREAD <número>&n.\r\n");
-    send_to_char(ch,"Para obter mais informações sobre como usar o quadro, digite &cHELP QUADROS&n.\r\n");
+    send_to_char(ch, "@nEste é o quadro de mensagens.  Para ler é uma mensagem, use @cREAD <número>@n.\r\n");
+    send_to_char(ch,"Para obter mais informações sobre como usar o quadro, digite @cHELP QUADROS@n.\r\n");
   }
   else {
     size_t len = 0;
     int nlen;
 
     len = snprintf(buf, sizeof(buf),
-		"This is a bulletin board.  Usage: READ/REMOVE <messg #>, WRITE <header>.\r\n"
+		"Este é o quadro de mensagens.   Usage: READ/REMOVE <messg #>, WRITE <header>.\r\n"
 		"You will need to look at the board to save your message.\r\n"
 		"There are %d messages on the board.\r\n",
 		num_of_msgs[board_type]);
