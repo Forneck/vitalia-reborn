@@ -1,6 +1,84 @@
+#110
+Entre as Névoas do Portal~
+   Ao tentar atravessar o portal, você percebe que alguma coisa estranha
+aconteceu...  Ao dar seu primeiro passo dentro do portal, a saída começou a
+ficar distante, e você não pôde mais alcançá-la.  Ao olhar para trás, você
+percebe que a entrada do portal desapareceu.
+   Você agora está flutuando nas névoas do portal, e você pode as ver por
+todos os lados.  Agora a única coisa que você pode fazer é procurar a saída.
+Corra, e encontre-a antes que ela se feche!
+~
+1 1048684 0 0 0 0
+D0
+A única coisa que você pode ver são névoas.
+~
+~
+0 -1 112
+D1
+A única coisa que você pode ver são névoas.
+~
+~
+0 -1 116
+D2
+A única coisa que você pode ver são névoas.
+~
+~
+0 -1 118
+D3
+A única coisa que você pode ver são névoas.
+~
+~
+0 -1 114
+D4
+A única coisa que você pode ver são névoas.
+~
+~
+0 -1 113
+D5
+A única coisa que você pode ver são névoas.
+~
+~
+0 -1 117
+S
+#111
+Entre as Névoas do Portal~
+   Você está flutuando pelas névoas do portal.
+~
+1 1048684 0 0 0 0
+D0
+A única coisa que você pode ver são névoas.
+~
+~
+0 -1 117
+D1
+A única coisa que você pode ver são névoas.
+~
+~
+0 -1 112
+D2
+A única coisa que você pode ver são névoas.
+~
+~
+0 -1 114
+D3
+A única coisa que você pode ver são névoas.
+~
+~
+0 -1 113
+D4
+A única coisa que você pode ver são  névoas.
+~
+~
+0 -1 118
+D5
+A única coisa que você pode ver são névoas.
+~
+~
+0 -1 116
+S
 #112
-Entre as N�voas do Portal~
-   Você est� flutuando pelas névoas do portal.
+Entre as Névoas do Portal~
+   Você está flutuando pelas névoas do portal.
 ~
 1 1048684 0 0 0 0
 D0
@@ -35,8 +113,8 @@ A única coisa que você pode ver são névoas.
 0 -1 114
 S
 #113
-Entre as N�voas do Portal~
-   Você est� flutuando pelas névoas do portal.
+Entre as Névoas do Portal~
+   Você está flutuando pelas névoas do portal.
 ~
 1 1048684 0 0 0 0
 D0
@@ -71,8 +149,8 @@ A única coisa que você pode ver são névoas.
 0 -1 115
 S
 #114
-Entre as N�voas do Portal~
-   Você est� flutuando pelas névoas do portal.
+Entre as Névoas do Portal~
+   Você está flutuando pelas névoas do portal.
 ~
 1 1048684 0 0 0 0
 D0
@@ -107,8 +185,8 @@ A única coisa que você pode ver são névoas.
 0 -1 119
 S
 #115
-Entre as N�voas do Portal~
-   Você est� flutuando pelas névoas do portal.
+Entre as Névoas do Portal~
+   Você está flutuando pelas névoas do portal.
 ~
 1 1048684 0 0 0 0
 D0
@@ -143,8 +221,8 @@ A única coisa que você pode ver são névoas.
 0 -1 117
 S
 #116
-Entre as N�voas do Portal~
-   Você est� flutuando pelas névoas do portal.
+Entre as Névoas do Portal~
+   Você está flutuando pelas névoas do portal.
 ~
 1 1048684 0 0 0 0
 D0
@@ -179,8 +257,8 @@ A única coisa que você pode ver são névoas.
 0 -1 118
 S
 #117
-Entre as N�voas do Portal~
-   Você est� flutuando pelas névoas do portal.
+Entre as Névoas do Portal~
+   Você está flutuando pelas névoas do portal.
 ~
 1 1048684 0 0 0 0
 D0
@@ -215,8 +293,8 @@ A única coisa que você pode ver são névoas.
 0 -1 113
 S
 #118
-Entre as N�voas do Portal~
-   Você est� flutuando pelas névoas do portal.
+Entre as Névoas do Portal~
+   Você está flutuando pelas névoas do portal.
 ~
 1 1048684 0 0 0 0
 D0
@@ -251,8 +329,8 @@ A única coisa que você pode ver são névoas.
 0 -1 -1
 S
 #119
-Entre as N�voas do Portal~
-   Você est� flutuando pelas névoas do portal.
+Entre as Névoas do Portal~
+   Você está flutuando pelas névoas do portal.
 ~
 1 1048684 0 0 0 0
 D0
@@ -288,45 +366,45 @@ A única coisa que você pode ver são névoas.
 S
 #186
 A Sala da Sabedoria~
-   Você se encontra numa enorme redoma de cristal.  Uma leve n�voa azulada
-paira no ar e h� um suave aroma de flores campestres.  Ao olhar para os
-lados você encontra apenas seu reflexo no mais puro cristal j� encontrado.
+   Você se encontra numa enorme redoma de cristal.  Uma leve névoa azulada
+paira no ar e há um suave aroma de flores campestres.  Ao olhar para os
+lados você encontra apenas seu reflexo no mais puro cristal já encontrado.
 Esta sala o faz sentir calmo e relaxado, pronto para expandir seus
-conhecimentos sobre nosso bel�ssimo Mundo de Vit�lia.  O �nico objeto que
-voc� observa � um pedestal com um livro apoiado sobre ele.  Este � o Livro
-Sagrado de Vit�lia.  Em sua capa est� contida a palavra @YPOLICY@n grafada em
-ouro.  � sua frente você percebe uma parte da n�voa com um tom de azul mais
-forte - uma for�a m�gica e acolhedora pronta para lhe ensinar o caminho da
+conhecimentos sobre nosso belíssimo Mundo de Vitália.  O único objeto que
+você observa é um pedestal com um livro apoiado sobre ele.  Este é o Livro
+Sagrado de Vitália.  Em sua capa está contida a palavra @YPOLICY@n grafada em
+ouro.  À sua frente você percebe uma parte da névoa com um tom de azul mais
+forte - uma força mágica e acolhedora pronta para lhe ensinar o caminho da
 sabedoria.
 ~
 1 1049336 0 0 0 0
 S
 #187
 A Sala da Sabedoria~
-   Você se encontra numa enorme redoma de cristal.  Uma leve n�voa azulada
-paira no ar e h� um suave aroma de flores campestres.  Ao olhar para os
-lados você encontra apenas seu reflexo no mais puro cristal j� encontrado.
+   Você se encontra numa enorme redoma de cristal.  Uma leve névoa azulada
+paira no ar e há um suave aroma de flores campestres.  Ao olhar para os
+lados você encontra apenas seu reflexo no mais puro cristal já encontrado.
 Esta sala o faz sentir calmo e relaxado, pronto para expandir seus
-conhecimentos sobre nosso bel�ssimo Mundo de Vit�lia.  O �nico objeto que
-voc� observa � um pedestal com um livro apoiado sobre ele.  Este � o Livro
-Sagrado de Vit�lia.  Em sua capa est� contida a palavra @YPOLICY@n grafada em
-ouro.  � sua frente você percebe uma parte da n�voa com um tom de azul mais
-forte - uma for�a m�gica e acolhedora pronta para lhe ensinar o caminho da
+conhecimentos sobre nosso belíssimo Mundo de Vitália.  O único objeto que
+você observa é um pedestal com um livro apoiado sobre ele.  Este é o Livro
+Sagrado de Vitália.  Em sua capa está contida a palavra @YPOLICY@n grafada em
+ouro.  À sua frente você percebe uma parte da névoa com um tom de azul mais
+forte - uma força mágica e acolhedora pronta para lhe ensinar o caminho da
 sabedoria.
 ~
 1 1049336 0 0 0 0
 S
 #188
 A Sala da Sabedoria~
-   Você se encontra numa enorme redoma de cristal.  Uma leve n�voa azulada
-paira no ar e h� um suave aroma de flores campestres.  Ao olhar para os
-lados você encontra apenas seu reflexo no mais puro cristal j� encontrado.
+   Você se encontra numa enorme redoma de cristal.  Uma leve névoa azulada
+paira no ar e hà um suave aroma de flores campestres.  Ao olhar para os
+lados você encontra apenas seu reflexo no mais puro cristal já  encontrado.
 Esta sala o faz sentir calmo e relaxado, pronto para expandir seus
-conhecimentos sobre nosso bel�ssimo Mundo de Vit�lia.  O �nico objeto que
-voc� observa � um pedestal com um livro apoiado sobre ele.  Este � o Livro
-Sagrado de Vit�lia.  Em sua capa est� contida a palavra @YPOLICY@n grafada em
-ouro.  � sua frente você percebe uma parte da n�voa com um tom de azul mais
-forte - uma for�a m�gica e acolhedora pronta para lhe ensinar o caminho da
+conhecimentos sobre nosso belíssimo Mundo de Vitália.  O único objeto que
+você observa é um pedestal com um livro apoiado sobre ele.  Este é o Livro
+Sagrado de Vitália.  Em sua capa está contida a palavra @YPOLICY@n grafada em
+ouro.  À sua frente você percebe uma parte da névoa com um tom de azul mais
+forte - uma força mágica e acolhedora pronta para lhe ensinar o caminho da
 sabedoria.
 ~
 1 1049336 0 0 0 0
@@ -339,7 +417,7 @@ lados você encontra apenas seu reflexo no mais puro cristal j� encontrado.
 Esta sala o faz sentir calmo e relaxado, pronto para expandir seus
 conhecimentos sobre nosso bel�ssimo Mundo de Vit�lia.  O �nico objeto que
 voc� observa � um pedestal com um livro apoiado sobre ele.  Este � o Livro
-Sagrado de Vit�lia.  Em sua capa est� contida a palavra @YPOLICY@n grafada em
+Sagrado de Vit�lia.  Em sua capa está contida a palavra @YPOLICY@n grafada em
 ouro.  � sua frente você percebe uma parte da n�voa com um tom de azul mais
 forte - uma for�a m�gica e acolhedora pronta para lhe ensinar o caminho da
 sabedoria.
@@ -349,7 +427,7 @@ S
 #190
 O Vazio~
    Você n�o faz id�ia de onde esteja.  N�o h� paredes, teto, ch�o, nada.
-Você est� flutuando no ar.  H� uma fonte de luz ao alto, e você percebe que
+Você está flutuando no ar.  H� uma fonte de luz ao alto, e você percebe que
 em nenhum lugar você v� a sombra do seu corpo.  Você percebe um esp�cie de
 portal sobre voc�.
 ~
@@ -363,7 +441,7 @@ S
 #191
 O Vazio~
    Você n�o faz id�ia de onde esteja.  N�o h� paredes, teto, ch�o, nada.
-Você est� flutuando no ar.  H� uma fonte de luz ao alto, e você percebe que
+Você está flutuando no ar.  H� uma fonte de luz ao alto, e você percebe que
 em nenhum lugar você v� a sombra do seu corpo.  Você percebe um esp�cie de
 portal sobre voc�.
 ~
@@ -377,7 +455,7 @@ S
 #192
 O Vazio~
    Você n�o faz id�ia de onde esteja.  N�o h� paredes, teto, ch�o, nada.
-Você est� flutuando no ar.  H� uma fonte de luz ao alto, e você percebe que
+Você está flutuando no ar.  H� uma fonte de luz ao alto, e você percebe que
 em nenhum lugar você v� a sombra do seu corpo.  Você n�o consegue imaginar
 forma alguma de sair daqui.
 ~
@@ -386,7 +464,7 @@ S
 #193
 O Vazio~
    Você n�o faz id�ia de onde esteja.  N�o h� paredes, teto, ch�o, nada.
-Você est� flutuando no ar.  H� uma fonte de luz ao alto, e você percebe que
+Você está flutuando no ar.  H� uma fonte de luz ao alto, e você percebe que
 em nenhum lugar você v� a sombra do seu corpo.  Você n�o consegue imaginar
 forma alguma de sair daqui.
 ~
@@ -395,7 +473,7 @@ S
 #194
 O Vazio~
    Você n�o faz id�ia de onde esteja.  N�o h� paredes, teto, ch�o, nada.
-Você est� flutuando no ar.  H� uma fonte de luz ao alto, e você percebe que
+Você está flutuando no ar.  H� uma fonte de luz ao alto, e você percebe que
 em nenhum lugar você v� a sombra do seu corpo.  Você n�o consegue imaginar
 forma alguma de sair daqui.
 ~
@@ -403,7 +481,7 @@ forma alguma de sair daqui.
 S
 #195
 O Solo Infinito~
-   Você est� sobre um solo de cor escura.  Olhando ao redor, você percebe
+   Você está sobre um solo de cor escura.  Olhando ao redor, você percebe
 que o solo some no infinito, por todos os lados, e você n�o consegue ver seu
 fim.  O c�u brilha com uma cor azul, totalmente sem nuvens.
 ~
