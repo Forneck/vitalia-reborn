@@ -1,11 +1,11 @@
 #1600
 crianca gnomo~
-uma criança gnomo~
-Uma criança gnomo está brincando por aqui.
+uma crianÃ§a gnomo~
+Uma crianÃ§a gnomo estÃ¡ brincando por aqui.
 ~
-O pequenino jovem rústico possui uma aparência tão inocente brincando com o
-seu bumerangue que a única coisa que você sente vontade de fazer é carrega-lo
-no colo e abraça-lo.
+O pequenino jovem rÃºstico possui uma aparÃªncia tÃ£o inocente brincando com o
+seu bumerangue que a Ãºnica coisa que vocÃª sente vontade de fazer Ã© carrega-lo
+no colo e abraÃ§a-lo.
 ~
 2097348 0 0 0 8 0 0 0 600 E
 12 15 7 3d6+145 3d4+0
@@ -15,10 +15,10 @@ E
 #1601
 mulher gnomo~
 uma mulher gnomo~
-Uma mulher gnomo está parada aqui, tentando parecer maravilhosa.
+Uma mulher gnomo estÃ¡ parada aqui, tentando parecer maravilhosa.
 ~
-A mulher é baixinha, pele áspera, mas ela age como se fosse uma mulher mil
-vezes mais bonita. Ela começa a parecer atraente para você...
+A mulher Ã© baixinha, pele Ã¡spera, mas ela age como se fosse uma mulher mil
+vezes mais bonita. Ela comeÃ§a a parecer atraente para vocÃª...
 ~
 2097348 0 0 0 8 0 0 0 600 E
 26 9 4 7d10+670 3d8+2
@@ -28,11 +28,11 @@ E
 #1602
 homem gnomo~
 Um homem gnomo~
-Um homem gnomo está andando por aqui, a caminho do seu trabalho.
+Um homem gnomo estÃ¡ andando por aqui, a caminho do seu trabalho.
 ~
-Este é o clássico exemplo de um gnomo. Ele aparenta ser pequeno e frágil e
+Este Ã© o clÃ¡ssico exemplo de um gnomo. Ele aparenta ser pequeno e frÃ¡gil e
 ao mesmo tempo, uma criatura extremamente inteligente que poderia surpreender
-você.
+vocÃª.
 ~
 2097220 0 0 0 24 0 0 0 500 E
 36 2 -3 6d12+1200 5d10+3
@@ -42,10 +42,10 @@ E
 #1603
 gnomo cientista~
 um gnomo cientista~
-Um cientista vaga por aí, perdido em profundos pensamentos.
+Um cientista vaga por aÃ­, perdido em profundos pensamentos.
 ~
-Você vê um gnomo que está completamente distraído com alguma invenção que ele
-está prestes a criar. Seu cabelo é branco, mas ele aparenta ser razoavelmente
+VocÃª vÃª um gnomo que estÃ¡ completamente distraÃ­do com alguma invenÃ§Ã£o que ele
+estÃ¡ prestes a criar. Seu cabelo Ã© branco, mas ele aparenta ser razoavelmente
 forte.
 ~
 2097222 0 0 0 0 0 0 0 500 E
@@ -56,10 +56,10 @@ E
 #1604
 guarda gnomo~
 um guarda gnomo~
-Um guarda gnomo está parado aqui tomando conta de alguma coisa.
+Um guarda gnomo estÃ¡ parado aqui tomando conta de alguma coisa.
 ~
-Este é um gnomo muito bem treinado. Ele pode não ter muita força física mas
-ele compensa esta falha através de suas habilidades com armas.
+Este Ã© um gnomo muito bem treinado. Ele pode nÃ£o ter muita forÃ§a fÃ­sica mas
+ele compensa esta falha atravÃ©s de suas habilidades com armas.
 ~
 2097218 0 0 0 0 0 0 0 400 E
 36 2 -3 6d12+1200 5d10+3
@@ -69,10 +69,10 @@ E
 #1605
 chefe gnomo~
 o chefe gnomo~
-Um gnomo com aparência poderosa está parado aqui, vestindo roupas ornamentadas.
+Um gnomo com aparÃªncia poderosa estÃ¡ parado aqui, vestindo roupas ornamentadas.
 ~
-O Chefe parece poder atingir você muito forte. Ele não só parece ser poderoso
-como também aparenta ser sábio e diligente. É melhor você não se meter com
+O Chefe parece poder atingir vocÃª muito forte. Ele nÃ£o sÃ³ parece ser poderoso
+como tambÃ©m aparenta ser sÃ¡bio e diligente. Ã‰ melhor vocÃª nÃ£o se meter com
 ele.
 ~
 2097218 0 0 0 0 0 0 0 550 E
@@ -85,7 +85,7 @@ pequeno troll~
 um pequeno troll~
 Um pequeno troll solta grunhidos enquanto circula ao seu redor. 
 ~
-O pequeno troll é baixo e atarracado e seu rosto parece ser humano mas
+O pequeno troll ï¿½ baixo e atarracado e seu rosto parece ser humano mas
 seus olhos e seus dentes caninos parecem os de uma besta selvagem.
 ~
 2097254 0 0 0 0 0 0 0 -900 E
@@ -96,9 +96,9 @@ E
 #1608
 rato campo~
 um rato de campo~
-Um pequeno rato corre sobre o seu pé. 
+Um pequeno rato corre sobre o seu pï¿½. 
 ~
-O Rato é uma criatura bonitinha.
+O Rato ï¿½ uma criatura bonitinha.
 ~
 2097222 0 0 0 0 0 0 0 100 E
 1 18 9 2d4+10 1d4+0
@@ -110,7 +110,7 @@ rato~
 um rato~
 Um pequeno rato guincha e sai correndo. 
 ~
-O rato é uma criaturinha diabólica que merece a morte.
+O rato ï¿½ uma criaturinha diabï¿½lica que merece a morte.
 ~
 2097216 0 0 0 0 0 0 0 -200 E
 2 17 9 2d4+24 1d5+1
@@ -120,9 +120,9 @@ E
 #1610
 rato grande~
 um rato grande~
-Um rato grande corre até você e mordisca as suas botas.
+Um rato grande corre atï¿½ vocï¿½ e mordisca as suas botas.
 ~
-Você tem o desejo de matar esta vil criatura.
+Vocï¿½ tem o desejo de matar esta vil criatura.
 ~
 2097216 0 0 0 0 0 0 0 -200 E
 4 15 8 3d4+48 1d8+0
@@ -132,9 +132,9 @@ E
 #1611
 rato gigante~
 um rato gigante~
-Um rato gigante rosna para você e se prepara para atacar.
+Um rato gigante rosna para vocï¿½ e se prepara para atacar.
 ~
-Este rato tem o tamanho de um cachorro de tamanho médio.
+Este rato tem o tamanho de um cachorro de tamanho mï¿½dio.
 ~
 2097376 0 0 0 0 0 0 0 -200 E
 6 13 6 1d12+72 1d8+3
@@ -144,10 +144,10 @@ E
 #1612
 troll~
 o troll~
-Um troll gigante move-se desajeitadamente por aí.
+Um troll gigante move-se desajeitadamente por aï¿½.
 ~
-Você percebe que atrás de você existe uma massa enorme de carne viva.
-Você treme de medo quando ele ergue seu poderoso braço para lhe bater. 
+Vocï¿½ percebe que atrï¿½s de vocï¿½ existe uma massa enorme de carne viva.
+Vocï¿½ treme de medo quando ele ergue seu poderoso braï¿½o para lhe bater. 
 ~
 2097186 0 0 0 0 0 0 0 -800 E
 38 0 -5 6d12+1550 6d9+2
@@ -157,9 +157,9 @@ E
 #1613
 morcego negro~
 morcego negro~
-Um morcego negro está pendurado no teto.
+Um morcego negro estï¿½ pendurado no teto.
 ~
-O morcego é uma pequena e grotesca criatura com asas enormes e imensos
+O morcego ï¿½ uma pequena e grotesca criatura com asas enormes e imensos
 dentes caninos.
 ~
 2097216 0 0 0 0 0 0 0 -500 E
@@ -170,10 +170,10 @@ E
 #1614
 gnomo zumbi~
 o gnomo zumbi~
-Um gnomo zumbi se arrasta em sua direção.
+Um gnomo zumbi se arrasta em sua direï¿½ï¿½o.
 ~
-Esta criatura morreu há muito tempo atrás. Seu corpo foi arrancado de sua
-sepultura por alguma força demoníaca.
+Esta criatura morreu hï¿½ muito tempo atrï¿½s. Seu corpo foi arrancado de sua
+sepultura por alguma forï¿½a demonï¿½aca.
 ~
 2097216 0 0 0 0 0 0 0 -700 E
 8 9 5 3d4+90 3d4+0
@@ -185,8 +185,8 @@ morcego fogo~
 o morcego de fogo~
 O morcego de fogo arde luminosamente e se prepara para atacar.
 ~
-Você vê uma chama imensa que se assemelha ao formato de um morcego.
-A criatura está pendurada no teto e morde você.
+Vocï¿½ vï¿½ uma chama imensa que se assemelha ao formato de um morcego.
+A criatura estï¿½ pendurada no teto e morde vocï¿½.
 ~
 2097252 0 0 0 16 0 0 0 -900 E
 12 5 0 3d4+250 3d5+2
@@ -198,8 +198,8 @@ guarda hobgoblin~
 o guarda hobgoblin~
 O guarda hobgoblin ataca primeiro e pensa depois.
 ~
-Este duende é uma criatura extraordinariamente grande, extraordinariamente
-feia. Ele sorri sinistramente, enquanto tenta estourar a sua cabeça.
+Este duende ï¿½ uma criatura extraordinariamente grande, extraordinariamente
+feia. Ele sorri sinistramente, enquanto tenta estourar a sua cabeï¿½a.
 ~
 2097250 0 0 0 0 0 0 0 -700 E
 35 2 -5 5d12+1050 5d8+2
@@ -209,9 +209,9 @@ E
 #1617
 soldado hobgoblin~
 o soldado hobgoblin~
-Um soldado hobgoblin está parado aqui.
+Um soldado hobgoblin estï¿½ parado aqui.
 ~
-Este é apenas um pobre soldado raso hobgoblin, que não conseguiu atingir a
+Este ï¿½ apenas um pobre soldado raso hobgoblin, que nï¿½o conseguiu atingir a
 guarda de elite. Ele parece bravo.
 ~
 2097250 0 0 0 0 0 0 0 -600 E
@@ -224,7 +224,7 @@ guarda-costas hobgoblin~
 o guarda-costas hobgoblin~
 Um guarda-costas hobgoblin defende seu rei com a sua vida.
 ~
-Este é um dos guardas hobgoblin da guarda de elite. Ele aguenta muita briga
+Este ï¿½ um dos guardas hobgoblin da guarda de elite. Ele aguenta muita briga
 apesar de sua pequena estatura. Ele sorri maldosamente com seus dentes
 pontudos enquanto se prepara para atacar.
 ~
@@ -238,7 +238,7 @@ rei hobgoblin~
 o rei dos hobgoblins~
 Existe um grande rei aqui, sentado em seu trono.
 ~
-O rei dos hobgoblin tem uma aparência engraçada e seus músculos se
+O rei dos hobgoblin tem uma aparï¿½ncia engraï¿½ada e seus mï¿½sculos se
 esparramam para fora de seu robe, destruindo o efeito sofisticado que ele
 estava tentando criar.
 ~
@@ -250,9 +250,9 @@ E
 #1620
 mineiro hobgoblin~
 um hobgoblin mineiro~
-Um hobgoblin mineiro está parado aqui, procurando por ouro.
+Um hobgoblin mineiro estï¿½ parado aqui, procurando por ouro.
 ~
-O mineiro está totalmente coberto por poeira.
+O mineiro estï¿½ totalmente coberto por poeira.
 ~
 2097222 0 0 0 0 0 0 0 -400 E
 20 9 3 3d10+450 3d7+1
@@ -262,9 +262,9 @@ E
 #1621
 tesoureiro hobgoblin~
 o tesoureiro~
-Um tesoureiro está aqui contando dinheiro.
+Um tesoureiro estï¿½ aqui contando dinheiro.
 ~
-O tesoureiro hobgoblin é um velho duende de óculos. Parece que ele não
+O tesoureiro hobgoblin ï¿½ um velho duende de ï¿½culos. Parece que ele nï¿½o
 consegue enxergar um palmo em frente de seu nariz. 
 ~
 2097222 0 0 0 0 0 0 0 -200 E
@@ -275,9 +275,9 @@ E
 #1622
 prisioneiro gnomo~
 um prisioneiro gnomo~
-Um prisioneiro gnomo está aqui descansando sobre sua cama de palha.
+Um prisioneiro gnomo estï¿½ aqui descansando sobre sua cama de palha.
 ~
-O prisioneiro está quase morto.
+O prisioneiro estï¿½ quase morto.
 ~
 2097222 0 0 0 0 0 0 0 100 E
 3 12 10 3d5+10 2d3+1
@@ -287,9 +287,9 @@ E
 #1623
 prisoneiro humano~
 um prisioneiro humano~
-Um prisioneiro humano está aqui descansando sobre sua cama de palha.
+Um prisioneiro humano estï¿½ aqui descansando sobre sua cama de palha.
 ~
-O prisioneiro está quase morto.
+O prisioneiro estï¿½ quase morto.
 ~
 2097222 0 0 0 0 0 0 0 100 E
 3 12 10 3d5+10 2d3+1
@@ -299,10 +299,10 @@ E
 #1624
 caranguejo eremita~
 um eremita~
-Um caranguejo eremita rasteja na sua direção.
+Um caranguejo eremita rasteja na sua direï¿½ï¿½o.
 ~
-O caranguejo eremita mede por volta de 5 pés de altura e parece bravo com
-você por sua ousadia em acorda-lo.
+O caranguejo eremita mede por volta de 5 pï¿½s de altura e parece bravo com
+vocï¿½ por sua ousadia em acorda-lo.
 ~
 2097254 0 0 0 0 0 0 0 -10 E
 5 12 6 1d11+61 1d8+0
@@ -314,7 +314,7 @@ cozinheiro hobgoblin~
 o cozinheiro~
 Um cozinheiro hobgoblin se encontra aqui cozinhando alguma coisa.
 ~
-O cozinheiro é um gordo e sujo hobgoblin. Ele arrota enquanto mexe alguma
+O cozinheiro ï¿½ um gordo e sujo hobgoblin. Ele arrota enquanto mexe alguma
 coisa na panela.
 ~
 2097222 0 0 0 0 0 0 0 -300 E
