@@ -14,7 +14,7 @@ E
 #5001
 dervixe grande~
 o dervixe~
-Um grande dervixe est· atento por eventuais sinais de problema.
+Um grande dervixe est√° atento por eventuais sinais de problema.
 ~
 Usando trapos como se fossem roupas, este pobre homem parece estar
 precisando de MUITO descanso.
@@ -38,11 +38,11 @@ vermelho, amarelo e preto.
 8 8 0
 E
 #5003
-escorpi„o pequeno~
-o escorpi„o pequeno~
-Um pequeno escorpi„o vermelho foge ‡ sua aproximaÁ„o.
+escorpiao pequeno~
+o escorpi√£o pequeno~
+Um pequeno escorpi√£o vermelho foge √† sua aproxima√ß√£o.
 ~
-Seu pequeno rabo È extremamente perigoso para uma criatura t„o
+Seu pequeno rabo √© extremamente perigoso para uma criatura t√£o
 pequenina.
 ~
 2097216 0 0 0 0 0 0 0 -50 E
@@ -55,7 +55,7 @@ verme arroxeado gigantesco~
 o verme da areia~
 Um gigantesco verme arroxeado surge da areia e ataca!
 ~
-Ele È grande, mal-encarado e roxo. Caia fora!
+Ele √© grande, mal-encarado e roxo. Caia fora!
 ~
 2263090 0 0 0 2128 0 0 0 -300 E
 21 0 3 2d10+320 3d7+14
@@ -63,9 +63,9 @@ Ele È grande, mal-encarado e roxo. Caia fora!
 8 8 0
 E
 #5005
-drag„o bronze~
-o drag„o de bronze~
-Um drag„o de bronze imenso emerge da escurid„o e diz 'Oi'.
+dragao bronze~
+o drag√£o de bronze~
+Um drag√£o de bronze imenso emerge da escurid√£o e diz 'Oi'.
 ~
 E acrescenta: 'Prepare-se para morrer! Tenha um bom dia!'
 ~
@@ -75,13 +75,13 @@ E acrescenta: 'Prepare-se para morrer! Tenha um bom dia!'
 8 8 0
 E
 #5006
-lÌder nÙmade~
-o lÌder nÙmade~
-O lÌder nÙmade est· sentado concentrado em sua muda oraÁ„o.
+lider nomade~
+o l√≠der n√¥made~
+O l√≠der n√¥made est√° sentado concentrado em sua muda ora√ß√£o.
 ~
-Ele est· vestido com um manto de seda, todo pespontado com linha de
-ouro. Ao seu lado h· um enorme cutelo todo entalhado. Um ar
-extremamente arrogante molda a sua express„o.
+Ele est√° vestido com um manto de seda, todo pespontado com linha de
+ouro. Ao seu lado h√° um enorme cutelo todo entalhado. Um ar
+extremamente arrogante molda a sua express√£o.
 ~
 2099330 0 0 0 16 0 0 0 950 E
 14 7 0 2d6+170 2d8+5
@@ -89,13 +89,13 @@ extremamente arrogante molda a sua express„o.
 6 6 1
 E
 #5007
-chefe nÙmade~
-o chefe nÙmade~
-O chefe nÙmade est· em pÈ, encarando-lhe com um ar de suspeita.
+chefe nomade~
+o chefe n√¥made~
+O chefe n√¥made est√° em p√©, encarando-lhe com um ar de suspeita.
 ~
-Este È o segundo homem na linha do comando dos nÙmades.  As roupas dele
+Este √© o segundo homem na linha do comando dos n√¥mades.  As roupas dele
 foram feitas com a mais pura seda e bordadas com linha de ouro.  Um
-cutelo assustador est· ao seu lado.
+cutelo assustador est√° ao seu lado.
 ~
 2099330 0 0 0 0 0 0 0 900 E
 12 8 1 2d6+135 2d5+3
@@ -103,12 +103,12 @@ cutelo assustador est· ao seu lado.
 8 8 1
 E
 #5008
-guerreiro nÙmade~
-o guerreiro  nÙmade~
-Um guerreiro nÙmade, cheio de si, est· aqui.
+guerreiro nomade~
+o guerreiro  n√¥made~
+Um guerreiro n√¥made, cheio de si, est√° aqui.
 ~
-Este guerreiro, de aparÍncia sanguin·ria, est· vestido com as roupas
-tÌpica dos nÙmades.
+Este guerreiro, de apar√™ncia sanguin√°ria, est√° vestido com as roupas
+t√≠pica dos n√¥mades.
 ~
 2097154 0 0 0 0 0 0 0 700 E
 10 11 2 1d6+105 2d6+1
@@ -120,7 +120,7 @@ escrava jovem~
 a escrava~
 Uma jovem escrava senta-se aqui, fitando-lhe com olhos suplicantes.
 ~
-Ela est· muito fraca e magra.
+Ela est√° muito fraca e magra.
 ~
 2097282 0 0 0 0 0 0 0 1000 E
 3 18 9 1d4+25 1d5+0
@@ -133,9 +133,9 @@ o dracolich~
 Uma pilha de ossos vai se erguendo, dando assim, forma ao esqueleto de
 um dracolich.
 ~
-O dracolich È agora apenas um monte de ossos com alguns pedaÁos de
+O dracolich √© agora apenas um monte de ossos com alguns peda√ßos de
 carne pendurada.
-Obviamente que isto n„o teme mais a morte.
+Obviamente que isto n√£o teme mais a morte.
 ~
 2222130 0 0 0 67924 0 0 0 -1000 E
 24 0 -6 1d12+520 3d5+35
@@ -145,10 +145,10 @@ E
 #5011
 drider~
 o drider~
-O drider olha apetitosamente para vocÍ enquanto lentamente desembainha
+O drider olha apetitosamente para voc√™ enquanto lentamente desembainha
 sua espada.
 ~
-Esta meio-aranha, meio-drow criatura È uma oponente formid·vel.
+Esta meio-aranha, meio-drow criatura √© uma oponente formid√°vel.
 ~
 2097248 0 0 0 67600 0 0 0 -1000 E
 8 12 2 1d6+95 2d6+2
@@ -156,12 +156,12 @@ Esta meio-aranha, meio-drow criatura È uma oponente formid·vel.
 8 8 0
 E
 #5012
-an„o duergar sombrio~
-o sombrio an„o~
-Um sombrio an„o est· aqui, cavando com sua picareta ‡ procura de pedras
+anao duergar sombrio~
+o sombrio an√£o~
+Um sombrio an√£o est√° aqui, cavando com sua picareta √† procura de pedras
 preciosas.
 ~
-O sombrio an„o provavelmente poderia esmagar sua cabeÁa t„o facilmente
+O sombrio an√£o provavelmente poderia esmagar sua cabe√ßa t√£o facilmente
 quanto ele faz com essas pedras.
 ~
 2097248 0 0 0 67600 0 0 0 -850 E
@@ -170,11 +170,11 @@ quanto ele faz com essas pedras.
 8 8 1
 E
 #5013
-miconÛide~
-o miconÛide~
-Um pacÌfico miconÛide move-se com dificuldade aqui.
+miconoide~
+o micon√≥ide~
+Um pac√≠fico micon√≥ide move-se com dificuldade aqui.
 ~
-O miconÛide se parece com um gigantesco cogumelo (e provavelmente tem o
+O micon√≥ide se parece com um gigantesco cogumelo (e provavelmente tem o
 mesmo gosto).
 ~
 2097344 0 0 0 2064 0 0 0 850 E
@@ -183,12 +183,12 @@ mesmo gosto).
 8 8 1
 E
 #5014
-xam„ miconÛide~
-o miconÛide xam„~
-Um miconÛide enorme se encontra aqui, cantando em uma lÌngua muito
+xama miconoide~
+o micon√≥ide xam√£~
+Um micon√≥ide enorme se encontra aqui, cantando em uma l√≠ngua muito
 estranha.
 ~
-O xam„ est· espalhando esporos pelo ar.
+O xam√£ est√° espalhando esporos pelo ar.
 ~
 2099492 0 0 0 2320 0 0 0 950 E
 14 7 1 1d12+173 2d7+2
@@ -196,11 +196,11 @@ O xam„ est· espalhando esporos pelo ar.
 8 8 1
 E
 #5015
-o·sis escavadeira empoeirada~
+oasis escavadeira empoeirada~
 uma escavadeira empoeirada~
-Um pequeno o·sis convida-lhe a um mergulho.
+Um pequeno o√°sis convida-lhe a um mergulho.
 ~
-An undefined string.
+√Åguas limpas e refrescantes que parecem convidativas a um belo mergulho.
 ~
 2293798 0 0 0 0 0 0 0 -200 E
 7 10 1 1d6+85 3d4+0
@@ -210,9 +210,9 @@ E
 #5017
 camelo selvagem~
 o camelo selvagem~
-Um camelo selvagem, muito perigoso, bufa enquanto olha para vocÍ.
+Um camelo selvagem, muito perigoso, bufa enquanto olha para voc√™.
 ~
-N„o brinque com este animal.
+N√£o brinque com este animal.
 ~
 2162722 0 0 0 0 0 0 0 -351 E
 5 12 6 1d6+60 2d4+3
