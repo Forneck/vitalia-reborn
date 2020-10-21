@@ -897,7 +897,8 @@ EVENTFUNC(event_whirlwind)
 
 	/* We spit out some ugly colour, making use of the new colour options, to
 	   let the player know they are performing their whirlwind strike */
-	send_to_char(ch, "\t[f313]Você inicia um poderoso \t[f014]\t[b451]ATAQUE GIRATÓRIO!!\tn\r\n");
+//	send_to_char(ch, "\t[f313]Você inicia um poderoso \t[f014]\t[b451]ATAQUE GIRATÓRIO!!\tn\r\n");
+      send_to_char(ch, "Você está girando incontrolavelmente!!\r\n");
 
 	/* Lets grab some a random NPC from the list, and hit() them up */
 	for (count = dice(1, 4); count > 0; count--)
