@@ -14,7 +14,7 @@ E
 #2201
 homem lagarto sentinela~
 o sentinela~
-Um homem lagarto sentinela está cuidando daqui.
+Um homem lagarto sentinela estÃ¡ cuidando daqui.
 ~
 Ele parece estar fazendo um bom trabalho cuidando daqui.
 ~
@@ -26,9 +26,9 @@ E
 #2202
 homem lagarto feiticeiro~
 o feiticeiro~
-Um homem lagarto feiticeiro está realizando magias aqui.
+Um homem lagarto feiticeiro estÃ¡ realizando magias aqui.
 ~
-Este feiticeiro está profundamente envolvido em suas magias e não o notou...
+Este feiticeiro estÃ¡ profundamente envolvido em suas magias e nÃ£o o notou...
 ainda.
 ~
 2097154 0 0 0 0 0 0 0 -200 E
@@ -37,11 +37,11 @@ ainda.
 8 6 1
 E
 #2203
-água elemental~
-o elemental da água~
-Um grande elemental da água está nadando ao seu redor.
+Ã¡gua agua elemental~
+o elemental da Ã¡gua~
+Um grande elemental da Ã¡gua estÃ¡ nadando ao seu redor.
 ~
-Parece fazer parte da magia que o feiticeiro está lançando.
+Parece fazer parte da magia que o feiticeiro estÃ¡ lanÃ§ando.
 ~
 2097186 0 0 0 272 0 0 0 0 E
 10 8 5 2d6+135 2d7+4
@@ -51,11 +51,11 @@ E
 #2204
 homem lagarto guarda~
 o guarda~
-Um homem lagarto guarda está guardando esta área de pessoas iguais a você.
+Um homem lagarto guarda estÃ¡ guardando esta Ã¡rea de pessoas iguais a vocÃª.
 ~
-Este Guarda está tomando conta daqui.
-Obviamente ele não está fazendo um bom trabalho.
-Isto é provado pelo simples fato de que você ainda estar aqui.
+Este Guarda estÃ¡ tomando conta daqui.
+Obviamente ele nÃ£o estÃ¡ fazendo um bom trabalho.
+Isto Ã© provado pelo simples fato de que vocÃª ainda estar aqui.
 ~
 2097158 0 0 0 16 0 0 0 -100 E
 9 12 3 5d3+110 2d5+6
@@ -63,11 +63,11 @@ Isto é provado pelo simples fato de que você ainda estar aqui.
 8 8 1
 E
 #2205
-homem lagarto príncipe~
-o príncipe~
-O homem lagarto príncipe olha fixamente para você.
+homem lagarto principe prÃ­ncipe~
+o principe~
+O homem lagarto prÃ­ncipe olha fixamente para vocÃª.
 ~
-O olhar dele é muito desanimador. Talvez você devesse atacá-lo...
+O olhar dele Ã© muito desanimador. Talvez vocÃª devesse atacÃ¡-lo...
 ~
 2097158 0 0 0 272 0 0 0 -350 E
 20 1 0 7d7+745 5d6+13
@@ -77,11 +77,11 @@ E
 #2206
 hooper velho homem senhor~
 Senhor Hooper~
-Por detrás do balcão, Sr. Hooper sorri para você.
+Por detrÃ¡s do balcÃ£o, Sr. Hooper sorri para vocÃª.
 ~
-Senhor Hooper é um homem velho e muito amável que dirige esta pequena 
-loja.   Ele inclina a cabeça diante de você e olha por cima de seus 
-óculos. 'Há algo que você gostaria de comprar?', ele pergunta educadamente.
+Senhor Hooper Ã© um homem velho e muito amÃ¡vel que dirige esta pequena 
+loja.   Ele inclina a cabeÃ§a diante de vocÃª e olha por cima de seus 
+Ã³culos. 'HÃ¡ algo que vocÃª gostaria de comprar?', ele pergunta educadamente.
 ~
 2285574 0 0 0 16 0 0 0 250 E
 108 16 6 1d100+900 1d16+55
