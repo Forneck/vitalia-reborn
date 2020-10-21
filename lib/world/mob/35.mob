@@ -1,10 +1,10 @@
 #3500
 wyvern~
 o wyvern~
-Um wyvern monstruoso vagarosamente circula sobre sua cabeça.
+Um wyvern monstruoso vagarosamente circula sobre sua cabeÃ§a.
 ~
-Esta imensa criatura alada parece realmente ameaçadora, a medida que circula
-a poucas polegadas de sua cabeça, batendo suas asas e chiando muito alto.
+Esta imensa criatura alada parece realmente ameaÃ§adora, a medida que circula
+a poucas polegadas de sua cabeÃ§a, batendo suas asas e chiando muito alto.
 ~
 2163298 0 0 0 0 0 0 0 -700 E
 8 13 3 2d10+90 2d6+1
@@ -14,10 +14,10 @@ E
 #3501
 montanha goblin~
 o goblin~
-Um goblin da montanha está vagando sem rumo, resmungando para si mesmo...
+Um goblin da montanha estÃ¡ vagando sem rumo, resmungando para si mesmo...
 ~
-Você se vê diante de uma pequena e esfarrapada criatura com músculos nodosos
-e uma pele verde e nojenta.  Não parece o tipo de pessoa que você convidaria
+VocÃª se vÃª diante de uma pequena e esfarrapada criatura com mÃºsculos nodosos
+e uma pele verde e nojenta.  NÃ£o parece o tipo de pessoa que vocÃª convidaria
 para o jantar.
 ~
 2103392 0 0 0 2048 0 0 0 -250 E
@@ -28,10 +28,10 @@ E
 #3502
 goblin tenente~
 o tenente goblin~
-Um tenente goblin está aqui, tentando colocar seus homens em ordem.
+Um tenente goblin estÃ¡ aqui, tentando colocar seus homens em ordem.
 ~
-O tentente goblin está particularmente furioso e está escolhendo um de seus
-homens para bater, mas talvez quem bata seja você...
+O tentente goblin estÃ¡ particularmente furioso e estÃ¡ escolhendo um de seus
+homens para bater, mas talvez quem bata seja vocÃª...
 ~
 2103904 0 0 0 2064 0 0 0 -600 E
 7 15 3 1d12+100 2d5+1
@@ -40,11 +40,11 @@ homens para bater, mas talvez quem bata seja você...
 E
 #3503
 goblin lider~
-o líder goblin~
-O líder goblin inspeciona a sala.
+o lÃ­der goblin~
+O lÃ­der goblin inspeciona a sala.
 ~
-O líder não parece muito feliz por você ter achado ele aqui.  Ele agarra sua
-espada curta e dispara em direção ao seu pescoço.
+O lÃ­der nÃ£o parece muito feliz por vocÃª ter achado ele aqui.  Ele agarra sua
+espada curta e dispara em direÃ§Ã£o ao seu pescoÃ§o.
 ~
 2103846 0 0 0 2064 0 0 0 -900 E
 9 10 1 1d12+120 2d5+3
@@ -54,10 +54,10 @@ E
 #3504
 garoto pequeno~
 o garoto pequeno~
-Um garoto pequeno está sentado aqui, lambendo suas feridas.
+Um garoto pequeno estÃ¡ sentado aqui, lambendo suas feridas.
 ~
-O pobre garoto tem inúmeros cortes e arranhões, mas parece estar bem.
-Aparentemente, ele foi o único sobrevivente da emboscada.
+O pobre garoto tem inÃºmeros cortes e arranhÃµes, mas parece estar bem.
+Aparentemente, ele foi o Ãºnico sobrevivente da emboscada.
 ~
 2097282 0 0 0 0 0 0 0 500 E
 4 17 6 1d12+47 1d8+0
@@ -67,11 +67,11 @@ E
 #3505
 estalajadeiro~
 o Estalajadeiro~
-O estalajadeiro está de pé aqui, limpando os copos.
+O estalajadeiro estÃ¡ de pÃ© aqui, limpando os copos.
 ~
 Agora, o estalajadeiro gasta a maior parte de seu tempo esperando por
-clientes, enquanto as noites são gastas vigiando os goblins.  Sua 
-hospedaria não é mais o lugar feliz que foi no passado.
+clientes, enquanto as noites sÃ£o gastas vigiando os goblins.  Sua 
+hospedaria nÃ£o Ã© mais o lugar feliz que foi no passado.
 ~
 2103362 0 0 0 0 0 0 0 400 E
 10 8 1 1d12+200 2d8+1
@@ -81,10 +81,10 @@ E
 #3506
 bardo~
 o bardo~
-Um bardo mal-humorado está aqui, bebendo para esquecer seus problemas.
+Um bardo mal-humorado estÃ¡ aqui, bebendo para esquecer seus problemas.
 ~
-Você pode sentir o bafo de álcool do bardo do outro lado da sala.  Este
-pobre bardo está sentado aqui há bastante tempo, bebendo para se levar ao
+VocÃª pode sentir o bafo de Ã¡lcool do bardo do outro lado da sala.  Este
+pobre bardo estÃ¡ sentado aqui hÃ¡ bastante tempo, bebendo para se levar ao
 esquecimento.
 ~
 2103362 0 0 0 16 0 0 0 600 E
@@ -95,10 +95,10 @@ E
 #3507
 cavaleiro negro~
 o cavaleiro negro~
-Um cavaleiro negro está aqui, montado em seu cavalo preto.
+Um cavaleiro negro estÃ¡ aqui, montado em seu cavalo preto.
 ~
-O homem é evidentemente um fora-da-lei e não tem escrúpulos em reduzir você a
-pequenos pedaços.
+O homem Ã© evidentemente um fora-da-lei e nÃ£o tem escrÃºpulos em reduzir vocÃª a
+pequenos pedaÃ§os.
 ~
 2101440 0 0 0 589824 0 0 0 -900 E
 8 12 4 1d12+97 1d5+7
