@@ -1,5 +1,5 @@
 #300
-guardião labirinto~
+guardiao guardião labirinto~
 o Guardião do Labirinto~
 O Guardião do Labirinto está parado diante de você.
 ~
@@ -34,7 +34,7 @@ Int: 13
 Wis: 13
 E
 #302
-guardião portões~
+guardiao portoes guardião portões~
 o Guardião dos Portões~
 o Guardião dos Portões está aqui, fitando o horizonte.
 ~
@@ -106,7 +106,7 @@ Int: 13
 Wis: 13
 E
 #307
-mamãe~
+mamae mamãe~
 Mamãe~
 Mamãe está aqui.
 ~
@@ -122,7 +122,7 @@ Int: 13
 Wis: 13
 E
 #308
-irmão ~
+irmao irmão~
 Irmão~
 Um irmão está aqui.
 ~
@@ -138,7 +138,7 @@ Int: 13
 Wis: 13
 E
 #309
-irmã~
+irma irmã~
 Irmã~
 Uma irmã está aqui.
 ~
@@ -169,7 +169,7 @@ Int: 13
 Wis: 13
 E
 #311
-oráculo~
+oraculo oráculo~
 o Oráculo~
 O Oráculo está aqui, flutuando na água.
 ~
