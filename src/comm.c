@@ -1320,7 +1320,7 @@ static char *make_prompt(struct descriptor_data *d)
 
 		if (PRF_FLAGGED(d->character, PRF_AFK) && len < sizeof(prompt))
 		{
-			count = snprintf(prompt + len, sizeof(prompt) - len, "(%s(%saway%s)%s",
+			count = snprintf(prompt + len, sizeof(prompt) - len, "%s(%saway%s)%s",
 							 CCGRN(d->character, C_NRM),
 							 CCCYN(d->character, C_CMP),
 							 CCGRN(d->character, C_NRM), CCNRM(d->character, C_NRM));
