@@ -89,7 +89,6 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"advance", "adv", POS_DEAD, do_advance, LVL_GRGOD, 0},
 	{"aedit", "aed", POS_DEAD, do_oasis_aedit, LVL_GOD, 0},
 	{"alias", "ali", POS_DEAD, do_alias, 0, 0},
-	{"afk", "afk", POS_DEAD, do_gen_tog, 0, SCMD_AFK},
 	{"areas", "are", POS_DEAD, do_areas, 0, 0},
 	{"assist", "as", POS_FIGHTING, do_assist, 1, 0},
 	{"ask", "ask", POS_RESTING, do_spec_comm, 0, SCMD_ASK},
@@ -105,6 +104,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"automap", "automap", POS_DEAD, do_gen_tog, 0, SCMD_AUTOMAP},
 	{"autosac", "autosac", POS_DEAD, do_gen_tog, 0, SCMD_AUTOSAC},
 	{"autosplit", "autospl", POS_DEAD, do_gen_tog, 0, SCMD_AUTOSPLIT},
+		{"away", "aw", POS_DEAD, do_gen_tog, 0, SCMD_AFK},
 
 	{"backstab", "ba", POS_STANDING, do_cast, 1, SKILL_BACKSTAB},
    {"backflip", "bac", POS_FIGHTING, do_cast, 1, SKILL_BACKFLIP},
