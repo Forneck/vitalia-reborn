@@ -115,9 +115,9 @@ void mobile_activity(void)
             if (IS_NPC(vict))
             continue;
       if (rand_number(0, 20) <= GET_CHA(vict)) {
-        act("$n looks at $N with an indifference.",
+        act("$n olha para $N com indiferença.",
             FALSE, ch, 0, vict, TO_NOTVICT);
-        act("$N looks at you with an indifference.",
+        act("$N olha para você com indiferença.",
             FALSE, vict, 0, ch, TO_CHAR);
       } else {
 	  hit(ch, vict, TYPE_UNDEFINED);
@@ -143,7 +143,7 @@ void mobile_activity(void)
             continue;
 
           found = TRUE;
-          act("'Hey!  You're the fiend that attacked me!!!', exclaims $n.", FALSE, ch, 0, 0, TO_ROOM);
+          act("''Ei!  Você é o demônio que me atacou!!!', exclama $n.", FALSE, ch, 0, 0, TO_ROOM);
           hit(ch, vict, TYPE_UNDEFINED);
         }
       }
@@ -165,7 +165,7 @@ void mobile_activity(void)
     if (AFF_FLAGGED(ch, AFF_CHARM) && ch->master) {
      vict = FIGHTING(ch->master);
       if (vict && vict != ch) {
-        act("$n jumps to the aid of $N!", FALSE, ch, 0, ch->master, TO_ROOM);
+        act("$n se arremessa para salvar $N!", FALSE, ch, 0, ch->master, TO_ROOM);
         hit(ch, vict, TYPE_UNDEFINED);
       }
     }
@@ -185,7 +185,7 @@ void mobile_activity(void)
 	      if (IS_NPC(FIGHTING(vict)) || ch == FIGHTING(vict))
           continue;
 
-	      act("$n jumps to the aid of $N!", FALSE, ch, 0, vict, TO_ROOM);
+	      act("$n se arremessa para salvar $N!", FALSE, ch, 0, vict, TO_ROOM);
 	      hit(ch, FIGHTING(vict), TYPE_UNDEFINED);
 	      found = TRUE;
       }
