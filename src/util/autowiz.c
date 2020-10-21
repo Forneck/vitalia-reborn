@@ -157,7 +157,8 @@ void write_wizlist(FILE * out, int minlev, int maxlev)
   struct name_rec *curr_name;
   int i, j;
 
-  fprintf(out,"@+3@+W %-76.76s @+n\r\n\n", "OS IMORTAIS DO MUNDO DE VITÁLIA"
+  fprintf(out,"@+W %-76.76s @+n\r\n\n",
+              "OS IMORTAIS DO MUNDO DE VITÁLIA"
   "   Estes jogadores se tornaram imortais do Mundo de Vitália.  Eles devem ser\r\n"
   "tratados com bastante respeito, pois possuem muita experiência no jogo.\r\n");
 
