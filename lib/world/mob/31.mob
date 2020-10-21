@@ -1,11 +1,11 @@
 #3100
 criada~
 a criada~
-A Criada est· esperando por suas ordens.
+A Criada est√° esperando por suas ordens.
 ~
-Ela È muito bonita, possui cabelos dourados e seus olhos s„o de um azul
-profundo. VocÍ pensa consigo mesmo que esta È uma boa raz„o para vir aqui
-mais freq¸entemente.
+Ela √© .uito bonita, possui cabelos dourados e seus olhos s√£o de um azul
+profundo. Voc√™ pensa consigo mesmo que esta √© uma boa raz√£o para vir aqui
+mais freq√ºentemente.
 ~
 2156546 0 0 0 16 0 0 0 1000 E
 108 0 -10 1d1+30000 1d8+22
@@ -14,10 +14,10 @@ mais freq¸entemente.
 E
 #3101
 sacristao~
-o Sacrist„o~
-Um Sacrist„o est· sentado aqui, bebendo seu ch· bem quente.
+o Sacrist√£o~
+Um Sacrist√£o est√° sentado aqui, bebendo seu ch√° bem quente.
 ~
-O Sacrist„o parece que est· aqui para relaxar um pouco, apÛs terminar de
+O Sacrist√£o parece que est√° aqui para relaxar um pouco, ap√≥s terminar de
 cavar mais uma sepultura.
 ~
 2097154 0 0 0 0 0 0 0 800 E
@@ -28,7 +28,7 @@ E
 #3102
 chefe sentinela~
 o Chefe dos Sentinelas~
-O Chefe dos Sentinelas est· parecendo muito transtornado.
+O Chefe dos Sentinelas est√° parecendo muito transtornado.
 ~
 Um chefe muito bravo.
 ~
@@ -40,7 +40,7 @@ E
 #3103
 sentinela guarda~
 o sentinela transtornado~
-Um sentinela est· parado aqui, parecendo estar muito transtornado.
+Um sentinela est√° parado aqui, parecendo estar muito transtornado.
 ~
 Um grande, forte e bravo sentinela.
 ~
@@ -51,13 +51,13 @@ Um grande, forte e bravo sentinela.
 E
 #3104
 secretaria~
-a Secret·ria~
-Uma secret·ria est· sentada em sua mesa, datilografando algo.
+a Secret√°ria~
+Uma secret√°ria est√° sentada em sua mesa, datilografando algo.
 ~
-Ela parece est· muito ocupada.
+Ela parece estar muito ocupada.
 
-A Secret·ria diz 'Desculpe, mas o Prefeito est· extremamente ocupado, hoje.'
-A Secret·ria diz 'Por favor, sente-se enquanto espera.'
+A Secret√°ria diz 'Desculpe, mas o Prefeito est√° extremamente ocupado, hoje.'
+A Secret√°ria diz 'Por favor, sente-se enquanto espera.'
 ~
 2097154 0 0 0 0 0 0 0 900 E
 12 9 2 1d12+148 2d7+1
@@ -67,9 +67,9 @@ E
 #3105
 prefeito~
 o prefeito~
-O Prefeito est· sentado em sua imensa poltrona, roncando muito alto.
+O Prefeito est√° sentado em sua imensa poltrona, roncando muito alto.
 ~
-Ele È um homem atarracado, de meia-idade, com cabelos ralos e acinzentados.
+Ele √© um homem atarracado, de meia-idade, com cabelos ralos e acinzentados.
 ~
 2123778 0 0 0 16 0 0 0 1000 E
 54 0 -10 6d10+1360 5d8+18
@@ -82,9 +82,9 @@ E
 #3106
 chorao~
 o chorao da cidade~
-O Chor„o da Cidade est· aqui, fungando baixinho.
+O Chor√£o da Cidade est√° aqui, fungando baixinho.
 ~
-Ele È muito bom em seu trabalho - completamente derretido em l·grimas.
+Ele √© muito bom em seu trabalho - completamente derretido em l√°grimas.
 ~
 2097280 0 0 0 0 0 0 0 900 E
 1 20 9 2d6+10 1d5+0
@@ -94,9 +94,9 @@ E
 #3120
 cisne~
 o cisne~
-Um cisne est· nadando em volta da lagoa.
+Um cisne est√° nadando em volta da lagoa.
 ~
-O cisne branco È muito elegante.
+O cisne branco √© muito elegante.
 ~
 2097154 0 0 0 0 0 0 0 1000 E
 1 20 9 2d6+10 1d5+0
@@ -106,9 +106,9 @@ E
 #3121
 patinho~
 o patinho~
-Um patinho est· nadando em volta da lagoa.
+Um patinho est√° nadando em volta da lagoa.
 ~
-O patinho È ador·vel, ele se parece mais com um floquinho de plumas pequenino.
+O patinho √© ador√°vel, ele se parece mais com um floquinho de plumas pequenino.
 ~
 2097154 0 0 0 0 0 0 0 1000 E
 0 20 10 1d1+0 1d1+0
@@ -118,9 +118,9 @@ E
 #3122
 pardal~
 o pardal~
-Um pardal est· se esbaldando pelo ch„o.
+Um pardal est√° se esbaldando pelo ch√£o.
 ~
-Parece que o pardal est· aproveitando a vida.
+Parece que o pardal est√° aproveitando a vida.
 ~
 2097344 0 0 0 0 0 0 0 1000 E
 0 20 10 2d6+0 1d3+0
@@ -130,9 +130,9 @@ E
 #3123
 pato~
 o pato~
-Um pato est· aqui, grasnando alegremente.
+Um pato est√° aqui, grasnando alegremente.
 ~
-O pato È bem gordo. Parece que ele est· aproveitando a vida.
+O pato √° bem gordo. Parece que ele est√° aproveitando a vida.
 ~
 2097216 0 0 0 0 0 0 0 1000 E
 1 20 10 2d6+5 1d4+0
@@ -142,9 +142,9 @@ E
 #3124
 guarda-costas~
 o guarda-costas~
-O guarda-costas do Prefeito est· aqui, sem tirar os olhos de vocÍ.
+O guarda-costas do Prefeito est√° aqui, sem tirar os olhos de voc√™.
 ~
-Alto e forte. J· foi um pacificador desta cidade, e agora foi recrutado a
+Alto e forte. J√° foi um pacificador desta cidade, e agora foi recrutado a
 proteger seu Prefeito.
 ~
 2097232 0 0 0 16 0 0 0 1000 E
