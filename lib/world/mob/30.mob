@@ -209,9 +209,9 @@ mestre-guia mendiga ladra~
 a mestre-guia dos ladrões~
 Uma mendiga está sentada aqui, ela poderia ser a sua mestre-guia?
 ~
-Voc� nota que quando a sua mestre-guia se move, voc� n�o consegue perceber.
-Este � o jeito do verdadeiro ladr�o. Ela est� vestida com roupas pobres, e
-possui a apar�ncia de uma mendiga.
+Você nota que quando a sua mestre-guia se move, você não consegue perceber.
+Este é o jeito do verdadeiro ladrão. Ela está vestida com roupas pobres, e
+possui a aparência de uma mendiga.
 ~
 2156562 0 0 0 272 0 0 0 1000 E
 108 0 -10 10d100+2000 5d10+100
@@ -221,11 +221,11 @@ E
 #3023
 mestre-guia~
 o mestre-guia dos guerreiros~
-Seu mestre-guia est� parado aqui, amolando um machado.
+Seu mestre-guia está parado aqui, amolando um machado.
 ~
-Este � seu mestre. Grande e forte, com m�sculos imensos. V�rias cicatrizes
-espalhadas pelo seu corpo, provam que ele j� estava usando seus bra�os muito
-antes de voc� nascer. Ele tem um olhar tranq�ilo em sua face.
+Este é seu mestre. Grande e forte, com músculos imensos. Várias cicatrizes
+espalhadas pelo seu corpo, provam que ele já estava usando seus braços muito
+antes de você nascer. Ele tem um olhar tranqüilo em sua face.
 ~
 2156562 0 0 0 0 0 0 0 1000 E
 108 0 -10 10d100+2000 5d10+100
@@ -235,10 +235,10 @@ E
 #3024
 feiticeiro~
 o feiticeiro~
-Um feiticeiro est� guardando a entrada.
+Um feiticeiro está guardando a entrada.
 ~
-Ele � um mago experiente que se especializou na �rea da Magia de Combate.
-Ele est� aqui para tomar conta da Guilda dos Magos. Seu conhecimento profundo
+Ele é um mago experiente que se especializou na área da Magia de Combate.
+Ele está aqui para tomar conta da Guilda dos Magos. Seu conhecimento profundo
 de magias ofensivas e defensivas, fazem dele um oponente mortal.
 ~
 2156546 0 0 0 272 0 0 0 900 E
@@ -249,11 +249,11 @@ E
 #3025
 cavaleiro templar~
 o cavaleiro templar~
-Um cavaleiro templar est� guardando a entrada.
+Um cavaleiro templar está guardando a entrada.
 ~
-Ele � um guerreiro especialmente treinado que pertence � ordem militar da
-F�.  O dever dele � proteger os crentes de persegui��es e ataques trai�oeiros.
-Sua devo��o religiosa combinada � sua habilidade superior fazem dele
+Ele é um guerreiro especialmente treinado que pertence à ordem militar da
+Fé.  O dever dele é proteger os crentes de perseguições e ataques traiçoeiros.
+Sua devoção religiosa combinada é sua habilidade superior fazem dele
 um oponente mortal.
 ~
 2156546 0 0 0 272 0 0 0 1000 E
@@ -264,10 +264,10 @@ E
 #3026
 assassino~
 o assassino~
-Um assassino est� guardando a entrada.
+Um assassino está guardando a entrada.
 ~
-Ele � um ladr�o que se especializou em matar os outros de maneira t�o
-eficiente quanto poss�vel, utilizando-se para isso, de todos os tipos de
+Ele é um ladrão que se especializou em matar os outros de maneira tão
+eficiente quanto possível, utilizando-se para isso, de todos os tipos de
 armas. O conhecimento superior que ele possui, o faz saber como, quando e
 onde usar de forma combinada e cautelosa estas armas. Isso faz dele um
 oponente mortal.
@@ -280,11 +280,11 @@ E
 #3027
 cavaleiro~
 o cavaleiro~
-Um cavaleiro est� guardando a entrada.
+Um cavaleiro está guardando a entrada.
 ~
-Ele � um guerreiro especialista que foi condecorado por incont�veis atos
-her�icos. O dever dele � proteger a Guilda dos Espadachins. Sua habilidade
-extrema combinada com sua experi�ncia em guerras, faz dele um mortal oponente.
+Ele é um guerreiro especialista que foi condecorado por incontáveis atos
+heróicos. O dever dele é proteger a Guilda dos Espadachins. Sua habilidade
+extrema combinada com sua experiência em guerras, faz dele um mortal oponente.
 ~
 2156546 0 0 0 272 0 0 0 800 E
 108 -20 -8 6d10+1500 8d8+80
@@ -294,12 +294,12 @@ E
 #3028
 mestre guia druidas~
 o mestre-guia dos druidas~
-Seu mestre-guia est� aqui, alegremente dissertando sobre filosofia.
+Seu mestre-guia está aqui, alegremente dissertando sobre filosofia.
 ~
-Voc� se sente calmo na presen�a desse s�bio: seus bondosos olhos transmitem
-muita seguran�a, acalmando o cora��o mais agitado e despertando a mente mais
-pregui�osa.  Ele poder� passar-lhe todos os ensinamentos dru�dicos, mas
-exigir� de voc� a conduta daquele que acredita em um ideal.
+Você se sente calmo na presença desse sábio: seus bondosos olhos transmitem
+muita segurança, acalmando o coração mais agitado e despertando a mente mais
+preguiçosa.  Ele poderá passar-lhe todos os ensinamentos druídicos, mas
+exigirá de você a conduta daquele que acredita em um ideal.
 ~
 2156562 0 0 0 272 0 0 0 1000 E
 108 0 -10 10d100+2000 5d10+100
@@ -307,12 +307,12 @@ exigir� de voc� a conduta daquele que acredita em um ideal.
 8 8 1
 E
 #3029
-guardi� confraria druidisa~
-a guardi� da Confraria~
+guardiq confraria druidisa~
+a guardiã da Confraria~
 Uma sorridente druidisa guarda a entrada da Confraria.
 ~
-A guardi� da Confraria irradia juventude, mesmo sendo um dos membros mais
-antigos da Confraria.  Respons�vel pela seguran�a do ref�gio dos sacerdotes
+A guardiã da Confraria irradia juventude, mesmo sendo um dos membros mais
+antigos da Confraria.  Responsável pela segurança do refúgio dos sacerdotes
 em Midgaard, ela pacientemente guarda sua entrada, bloquando-a com sua
 poderosa magia.
 ~
@@ -324,7 +324,7 @@ E
 #3040
 barman~
 o barman~
-Um barman calmamente observa voc�, enquanto mistura gradativamente uma bebida.
+Um barman calmamente observa você, enquanto mistura gradativamente uma bebida.
 ~
 Um barman com aspecto cansado que odeia desordens em seu bar.
 ~
@@ -334,11 +334,11 @@ Um barman com aspecto cansado que odeia desordens em seu bar.
 8 8 1
 E
 #3041
-gar�om~
-o gar�om~
-Um gar�om est� andando de um lado pro outro.
+garcom garçom~
+o garçom~
+Um garçom está andando de um lado pro outro.
 ~
-Um gar�om com aspecto cansado.
+Um garçom com aspecto cansado.
 ~
 2154498 0 0 0 0 0 0 0 900 E
 108 2 2 6d10+390 1d8+12
@@ -346,12 +346,12 @@ Um gar�om com aspecto cansado.
 8 8 1
 E
 #3042
-gar�om~
-o gar�om~
-Um homem que agora leva uma vida quieta e pac�fica como gar�om, est� aqui.
+garcom garçom~
+o garçom~
+Um homem que agora leva uma vida quieta e pacífica como garçom, está aqui.
 ~
 Este homem obviamente foi um famoso feiticeiro em seus dias de juventude.
-Voc� instantaneamente reconhece aquele rosto, assim que olha para ele.
+Você instantaneamente reconhece aquele rosto, assim que olha para ele.
 ~
 2154498 0 0 0 0 0 0 0 600 E
 108 1 2 6d10+390 1d8+12
@@ -359,12 +359,12 @@ Voc� instantaneamente reconhece aquele rosto, assim que olha para ele.
 8 8 1
 E
 #3043
-gar�om~
-o gar�om~
-Um gar�om que parece ter perdido contato com Deus, est� parado aqui.
+garcom garçom~
+o garçom~
+Um garçom que parece ter perdido contato com Deus, está parado aqui.
 ~
-Este gar�om faz voc� se sentir como se tivesse que ficar de joelhos e
-e come�ar a adorar Deus. Naaah.
+Este garçom faz você se sentir como se tivesse que ficar de joelhos e
+e começar a adorar Deus. Naaah.
 ~
 2154498 0 0 0 0 0 0 0 600 E
 108 1 2 6d10+390 1d8+12
@@ -372,9 +372,9 @@ e come�ar a adorar Deus. Naaah.
 8 8 1
 E
 #3044
-gar�om~
-o gar�om~
-Um gar�om que sabe onde seus fregueses guardam seu dinheiro, est� parado aqui.
+garcom garçom~
+o garçom~
+Um garçom que sabe onde seus fregueses guardam seu dinheiro, está parado aqui.
 ~
 Hmmm... gostaria de saber onde ele arrumou aquela moeda que ele est� brincando.
 ~
@@ -384,11 +384,11 @@ Hmmm... gostaria de saber onde ele arrumou aquela moeda que ele est� brincando
 8 8 1
 E
 #3045
-gar�om~
-o gar�om~
-Um gar�om est� aqui.
+garcom garçom~
+o garçom~
+Um garçom está aqui.
 ~
-Parece que este sujeito poderia facilmente matar voc� sem derrubar nenhuma
+Parece que este sujeito poderia facilmente matar você sem derrubar nenhuma
 das garrafas de bebida que ele carrega
 ~
 2154498 0 0 0 0 0 0 0 600 E
@@ -399,10 +399,10 @@ E
 #3046
 encardido~
 Encardido~
-Encardido est� parado aqui, ansioso para servir uma bebida especial para voc�.
+Encardido está parado aqui, ansioso para servir uma bebida especial para você.
 ~
 Encardido parece realmente... hmm... imundo. Ele gosta de manter os seus
-fregueses felizes, mas n�o mexa com ele ou ele poder� ficar realmente MUITO
+fregueses felizes, mas não mexa com ele ou ele poderá ficar realmente MUITO
 bravo.
 ~
 2156562 0 0 0 16 0 0 0 600 E
@@ -411,8 +411,8 @@ bravo.
 8 8 1
 E
 #3047
-gar�om~
-o gar�om~
+garcom garçom~
+o garçom~
 Um simp�tico gar�om de tra�os celtas enxuga alguns copos com uma toalha.
 ~
 Ele j� � um senhor de idade, mas sua l�mpida e constante risada o faz
