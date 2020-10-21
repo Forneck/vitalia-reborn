@@ -85,7 +85,7 @@ pequeno troll~
 um pequeno troll~
 Um pequeno troll solta grunhidos enquanto circula ao seu redor. 
 ~
-O pequeno troll � baixo e atarracado e seu rosto parece ser humano mas
+O pequeno troll é baixo e atarracado e seu rosto parece ser humano mas
 seus olhos e seus dentes caninos parecem os de uma besta selvagem.
 ~
 2097254 0 0 0 0 0 0 0 -900 E
@@ -96,9 +96,9 @@ E
 #1608
 rato campo~
 um rato de campo~
-Um pequeno rato corre sobre o seu p�. 
+Um pequeno rato corre sobre o seu pé. 
 ~
-O Rato � uma criatura bonitinha.
+O Rato é uma criatura bonitinha.
 ~
 2097222 0 0 0 0 0 0 0 100 E
 1 18 9 2d4+10 1d4+0
@@ -110,7 +110,7 @@ rato~
 um rato~
 Um pequeno rato guincha e sai correndo. 
 ~
-O rato � uma criaturinha diab�lica que merece a morte.
+O rato é uma criaturinha diabólica que merece a morte.
 ~
 2097216 0 0 0 0 0 0 0 -200 E
 2 17 9 2d4+24 1d5+1
@@ -120,9 +120,9 @@ E
 #1610
 rato grande~
 um rato grande~
-Um rato grande corre at� voc� e mordisca as suas botas.
+Um rato grande corre até você e mordisca as suas botas.
 ~
-Voc� tem o desejo de matar esta vil criatura.
+Você tem o desejo de matar esta vil criatura.
 ~
 2097216 0 0 0 0 0 0 0 -200 E
 4 15 8 3d4+48 1d8+0
@@ -132,9 +132,9 @@ E
 #1611
 rato gigante~
 um rato gigante~
-Um rato gigante rosna para voc� e se prepara para atacar.
+Um rato gigante rosna para você e se prepara para atacar.
 ~
-Este rato tem o tamanho de um cachorro de tamanho m�dio.
+Este rato tem o tamanho de um cachorro de tamanho médio.
 ~
 2097376 0 0 0 0 0 0 0 -200 E
 6 13 6 1d12+72 1d8+3
@@ -144,10 +144,10 @@ E
 #1612
 troll~
 o troll~
-Um troll gigante move-se desajeitadamente por a�.
+Um troll gigante move-se desajeitadamente por aí.
 ~
-Voc� percebe que atr�s de voc� existe uma massa enorme de carne viva.
-Voc� treme de medo quando ele ergue seu poderoso bra�o para lhe bater. 
+Você percebe que atrás de você existe uma massa enorme de carne viva.
+Você treme de medo quando ele ergue seu poderoso braço para lhe bater. 
 ~
 2097186 0 0 0 0 0 0 0 -800 E
 38 0 -5 6d12+1550 6d9+2
@@ -157,9 +157,9 @@ E
 #1613
 morcego negro~
 morcego negro~
-Um morcego negro est� pendurado no teto.
+Um morcego negro está pendurado no teto.
 ~
-O morcego � uma pequena e grotesca criatura com asas enormes e imensos
+O morcego é uma pequena e grotesca criatura com asas enormes e imensos
 dentes caninos.
 ~
 2097216 0 0 0 0 0 0 0 -500 E
@@ -170,10 +170,10 @@ E
 #1614
 gnomo zumbi~
 o gnomo zumbi~
-Um gnomo zumbi se arrasta em sua dire��o.
+Um gnomo zumbi se arrasta em sua direção.
 ~
-Esta criatura morreu h� muito tempo atr�s. Seu corpo foi arrancado de sua
-sepultura por alguma for�a demon�aca.
+Esta criatura morreu há muito tempo atrás. Seu corpo foi arrancado de sua
+sepultura por alguma força demoníalca.
 ~
 2097216 0 0 0 0 0 0 0 -700 E
 8 9 5 3d4+90 3d4+0
@@ -185,8 +185,8 @@ morcego fogo~
 o morcego de fogo~
 O morcego de fogo arde luminosamente e se prepara para atacar.
 ~
-Voc� v� uma chama imensa que se assemelha ao formato de um morcego.
-A criatura est� pendurada no teto e morde voc�.
+Você vê uma chama imensa que se assemelha ao formato de um morcego.
+A criatura está pendurada no teto e morde você.
 ~
 2097252 0 0 0 16 0 0 0 -900 E
 12 5 0 3d4+250 3d5+2
@@ -198,8 +198,8 @@ guarda hobgoblin~
 o guarda hobgoblin~
 O guarda hobgoblin ataca primeiro e pensa depois.
 ~
-Este duende � uma criatura extraordinariamente grande, extraordinariamente
-feia. Ele sorri sinistramente, enquanto tenta estourar a sua cabe�a.
+Este duende é uma criatura extraordinariamente grande, extraordinariamente
+feia. Ele sorri sinistramente, enquanto tenta estourar a sua cabeça.
 ~
 2097250 0 0 0 0 0 0 0 -700 E
 35 2 -5 5d12+1050 5d8+2
@@ -209,9 +209,9 @@ E
 #1617
 soldado hobgoblin~
 o soldado hobgoblin~
-Um soldado hobgoblin est� parado aqui.
+Um soldado hobgoblin está parado aqui.
 ~
-Este � apenas um pobre soldado raso hobgoblin, que n�o conseguiu atingir a
+Este é apenas um pobre soldado raso hobgoblin, que não conseguiu atingir a
 guarda de elite. Ele parece bravo.
 ~
 2097250 0 0 0 0 0 0 0 -600 E
@@ -224,7 +224,7 @@ guarda-costas hobgoblin~
 o guarda-costas hobgoblin~
 Um guarda-costas hobgoblin defende seu rei com a sua vida.
 ~
-Este � um dos guardas hobgoblin da guarda de elite. Ele aguenta muita briga
+Este é um dos guardas hobgoblin da guarda de elite. Ele aguenta muita briga
 apesar de sua pequena estatura. Ele sorri maldosamente com seus dentes
 pontudos enquanto se prepara para atacar.
 ~
@@ -238,7 +238,7 @@ rei hobgoblin~
 o rei dos hobgoblins~
 Existe um grande rei aqui, sentado em seu trono.
 ~
-O rei dos hobgoblin tem uma apar�ncia engra�ada e seus m�sculos se
+O rei dos hobgoblin tem uma aparência engraçada e seus músculos se
 esparramam para fora de seu robe, destruindo o efeito sofisticado que ele
 estava tentando criar.
 ~
@@ -250,9 +250,9 @@ E
 #1620
 mineiro hobgoblin~
 um hobgoblin mineiro~
-Um hobgoblin mineiro est� parado aqui, procurando por ouro.
+Um hobgoblin mineiro está parado aqui, procurando por ouro.
 ~
-O mineiro est� totalmente coberto por poeira.
+O mineiro está totalmente coberto por poeira.
 ~
 2097222 0 0 0 0 0 0 0 -400 E
 20 9 3 3d10+450 3d7+1
@@ -262,9 +262,9 @@ E
 #1621
 tesoureiro hobgoblin~
 o tesoureiro~
-Um tesoureiro est� aqui contando dinheiro.
+Um tesoureiro está aqui contando dinheiro.
 ~
-O tesoureiro hobgoblin � um velho duende de �culos. Parece que ele n�o
+O tesoureiro hobgoblin é um velho duende de óculos. Parece que ele não
 consegue enxergar um palmo em frente de seu nariz. 
 ~
 2097222 0 0 0 0 0 0 0 -200 E
@@ -275,9 +275,9 @@ E
 #1622
 prisioneiro gnomo~
 um prisioneiro gnomo~
-Um prisioneiro gnomo est� aqui descansando sobre sua cama de palha.
+Um prisioneiro gnomo está aqui descansando sobre sua cama de palha.
 ~
-O prisioneiro est� quase morto.
+O prisioneiro está quase morto.
 ~
 2097222 0 0 0 0 0 0 0 100 E
 3 12 10 3d5+10 2d3+1
@@ -287,9 +287,9 @@ E
 #1623
 prisoneiro humano~
 um prisioneiro humano~
-Um prisioneiro humano est� aqui descansando sobre sua cama de palha.
+Um prisioneiro humano está aqui descansando sobre sua cama de palha.
 ~
-O prisioneiro est� quase morto.
+O prisioneiro está quase morto.
 ~
 2097222 0 0 0 0 0 0 0 100 E
 3 12 10 3d5+10 2d3+1
@@ -299,10 +299,10 @@ E
 #1624
 caranguejo eremita~
 um eremita~
-Um caranguejo eremita rasteja na sua dire��o.
+Um caranguejo eremita rasteja na sua direção.
 ~
-O caranguejo eremita mede por volta de 5 p�s de altura e parece bravo com
-voc� por sua ousadia em acorda-lo.
+O caranguejo eremita mede por volta de 5 pés de altura e parece bravo com
+você por sua ousadia em acorda-lo.
 ~
 2097254 0 0 0 0 0 0 0 -10 E
 5 12 6 1d11+61 1d8+0
@@ -314,7 +314,7 @@ cozinheiro hobgoblin~
 o cozinheiro~
 Um cozinheiro hobgoblin se encontra aqui cozinhando alguma coisa.
 ~
-O cozinheiro � um gordo e sujo hobgoblin. Ele arrota enquanto mexe alguma
+O cozinheiro é um gordo e sujo hobgoblin. Ele arrota enquanto mexe alguma
 coisa na panela.
 ~
 2097222 0 0 0 0 0 0 0 -300 E
