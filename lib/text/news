@@ -10,8 +10,7 @@
 
    Atualização do sistema interno do mundo para a versão mais recente.
    O Mundo de Vitália agora conta com uma nova classe de personagem, @RRanger@n.
-
-   Novos tipos de item (@GPlanta@n e @GMobilia@n).
+  Novos tipos de item (@GPlanta@n e @GMobilia@n).
    Os jogadores podem sentar, descansar e deitar nas mobilias.
    É possivel beber direto em algumas salas.
    Mais opções no toggle/prefedit.
@@ -25,6 +24,7 @@
   Where mostra o nome da área.
   Comando sacrifice para sacrificar corpos e objetos. 
   Dex agora influencia na hora do primeiro hit.
+  Carisma agora influencia a possibilidade de ser atacado por mobs agressivos.
   Intervalo depois do @YBackstab@n, @YBash@n diminuido.
   Habilidade @YBackflip@n modificada, agora ela para até dois oponentes.
   Habilidades @YMount@n, @YEscape@n temporariamente desabilitadas.
@@ -39,3 +39,4 @@
      *leave/sair
      *regroup/regrupar
      *option
+     
