@@ -1,10 +1,10 @@
 #3600
 peao negro~
-o Peão da Corte Negra~
-Você vê um peão parado aqui, esperando por ordens.
+o PeÃ£o da Corte Negra~
+VocÃª vÃª um peÃ£o parado aqui, esperando por ordens.
 ~
-O Peão Negro parece com um pequeno cavaleiro mas sem o seu poderoso corcel.
-Sua armadura é brilhante e negra. Ele está pronto para dar a sua vida pela
+O PeÃ£o Negro parece com um pequeno cavaleiro mas sem o seu poderoso corcel.
+Sua armadura Ã© brilhante e negra. Ele estÃ¡ pronto para dar a sua vida pela
 Coroa.
 ~
 2097350 0 0 0 16 0 0 0 -400 E
@@ -14,11 +14,11 @@ Coroa.
 E
 #3601
 peao branco~
-o Peão da Corte Branca~
-Você vê um peão parado aqui, esperando por ordens.
+o PeÃ£o da Corte Branca~
+VocÃª vÃª um peÃ£o parado aqui, esperando por ordens.
 ~
-O Peão Branco parece com um pequeno cavaleiro, mas sem o seu poderoso corcel. 
-Sua armadura é inteira branca e não tem uma única mancha. Ele está pronto para
+O PeÃ£o Branco parece com um pequeno cavaleiro, mas sem o seu poderoso corcel. 
+Sua armadura Ã© inteira branca e nÃ£o tem uma Ãºnica mancha. Ele estÃ¡ pronto para
 dar sua vida pela Coroa.
 ~
 2097350 0 0 0 16 0 0 0 400 E
@@ -29,10 +29,10 @@ E
 #3602
 torre negra castelo~
 a Torre Negra~
-No canto você percebe uma imensa e negra torre de pedra, sobre rodas.
+No canto vocÃª percebe uma imensa e negra torre de pedra, sobre rodas.
 ~
-A Torre Negra é uma imensa tumba sobre rodas, erguida por mãos humanas.
-Apenas por sua aparência, ela será provavelmente a SUA tumba.
+A Torre Negra Ã© uma imensa tumba sobre rodas, erguida por mÃ£os humanas.
+Apenas por sua aparÃªncia, ela serÃ¡ provavelmente a SUA tumba.
 ~
 2326530 0 0 0 16 0 0 0 -600 E
 14 11 5 2d4+250 3d6+3
@@ -42,10 +42,10 @@ E
 #3603
 torre branca castelo~
 a Torre Branca~
-No canto você percebe uma imensa e branca torre de pedra, sobre rodas.
+No canto vocÃª percebe uma imensa e branca torre de pedra, sobre rodas.
 ~
-A Torre Branca é uma imensa tumba sobre rodas, erguida por mãos humanas.
-Apenas por sua aparência, ela será provavelmente a SUA tumba.
+A Torre Branca Ã© uma imensa tumba sobre rodas, erguida por mÃ£os humanas.
+Apenas por sua aparÃªncia, ela serÃ¡ provavelmente a SUA tumba.
 ~
 2326530 0 0 0 16 0 0 0 600 E
 14 11 5 2d4+250 3d6+3
@@ -55,10 +55,10 @@ E
 #3604
 cavaleiro negro~
 o cavaleiro negro~
-Aqui se encontra um magnífico cavaleiro do reino da escuridão.
+Aqui se encontra um magnÃ­fico cavaleiro do reino da escuridÃ£o.
 ~
-O Cavaleiro Negro está aqui, montado sobre o seu cavalo de guerra negro
-como o ébano. Seus olhos flamejam por vingança, por trás de sua viseira.
+O Cavaleiro Negro estÃ¡ aqui, montado sobre o seu cavalo de guerra negro
+como o Ã©bano. Seus olhos flamejam por vinganÃ§a, por trÃ¡s de sua viseira.
 ~
 2097186 0 0 0 16 0 0 0 -400 E
 9 11 3 3d5+175 2d4+1
@@ -68,10 +68,10 @@ E
 #3605
 cavaleiro branco~
 o cavaleiro branco~
-Aqui se encontra um magnífico cavaleiro do reino da luz.
+Aqui se encontra um magnÃ­fico cavaleiro do reino da luz.
 ~
-O Cavaleiro Branco está aqui, montado sobre o seu cavalo de guerra branco
-como o marfim. Seus olhos brilham de alegria, por trás de sua viseira.
+O Cavaleiro Branco estÃ¡ aqui, montado sobre o seu cavalo de guerra branco
+como o marfim. Seus olhos brilham de alegria, por trÃ¡s de sua viseira.
 ~
 2097186 0 0 0 16 0 0 0 400 E
 9 11 3 3d5+175 2d4+1
@@ -81,10 +81,10 @@ E
 #3606
 bispo negro~
 o bispo negro~
-Um bispo está parado aqui, escuro como densas sombras.
+Um bispo estÃ¡ parado aqui, escuro como densas sombras.
 ~
-O Bispo Negro parece estar pronto para ajudá-lo a alcançar SUA sepultura,
-assim ele poderá abençoá-lo apropriadamente.
+O Bispo Negro parece estar pronto para ajudÃ¡-lo a alcanÃ§ar SUA sepultura,
+assim ele poderÃ¡ abenÃ§oÃ¡-lo apropriadamente.
 ~
 2097154 0 0 0 16 0 0 0 -500 E
 12 11 5 2d3+175 3d4+6
@@ -94,9 +94,9 @@ E
 #3607
 bispo branco~
 o bispo branco~
-Um bispo está parado aqui, envolvido por suave luminosidade.
+Um bispo estÃ¡ parado aqui, envolvido por suave luminosidade.
 ~
-O Bispo Branco parece estar pronto a ajudá-lo de qualquer forma possível
+O Bispo Branco parece estar pronto a ajudÃ¡-lo de qualquer forma possÃ­vel
 para que assim ele possa atingir a um grau de espiritualidade mais alto.
 ~
 2097154 0 0 0 16 0 0 0 500 E
@@ -109,9 +109,9 @@ rainha negra~
 a Rainha Negra~
 A Rainha Negra se encontra aqui.
 ~
-A Rainha Negra é uma mulher notavelmente bonita, com pele pálida e uma massa
-farta de cabelos escuros, que coroam sua cabeça como se fossem uma nuvem
-negra. Se olhares pudessem matar, você já estaria morto.
+A Rainha Negra Ã© uma mulher notavelmente bonita, com pele pÃ¡lida e uma massa
+farta de cabelos escuros, que coroam sua cabeÃ§a como se fossem uma nuvem
+negra. Se olhares pudessem matar, vocÃª jÃ¡ estaria morto.
 ~
 2099238 0 0 0 272 0 0 0 -750 E
 16 8 1 4d6+450 4d4+6
@@ -123,9 +123,9 @@ rainha branca~
 a Rainha Branca~
 A Rainha Branca se encontra aqui.
 ~
-A Rainha Branca é uma mulher extraordinariamente bonita, com pele escura e
-uma massa farta de cabelos claros que moldam sua cabeça como se fossem um
-raio de sol dourado. Para você, isto é seguramente amor a primeira vista.
+A Rainha Branca Ã© uma mulher extraordinariamente bonita, com pele escura e
+uma massa farta de cabelos claros que moldam sua cabeÃ§a como se fossem um
+raio de sol dourado. Para vocÃª, isto Ã© seguramente amor a primeira vista.
 ~
 2099238 0 0 0 272 0 0 0 750 E
 16 8 1 4d6+450 4d4+6
@@ -137,8 +137,8 @@ rei negro~
 o Rei Negro~
 O Rei Negro se encontra aqui.
 ~
-O Rei Negro é uma figura ameaçadora. Olhando-o assim de perto, você
-facilmente consegue entender o porque dele ser o rei e não você.
+O Rei Negro Ã© uma figura ameaÃ§adora. Olhando-o assim de perto, vocÃª
+facilmente consegue entender o porque dele ser o rei e nÃ£o vocÃª.
 ~
 2099254 0 0 0 272 0 0 0 -999 E
 18 8 -1 8d5+700 5d5+8
@@ -150,8 +150,8 @@ rei branco~
 o Rei Branco~
 O Rei Branco se encontra aqui.
 ~
-O Rei Branco é uma figura majestosa e imponente. Olhando-o assim de perto,
-você facilmente consegue entender o porque dele ser o rei e não você.
+O Rei Branco Ã© uma figura majestosa e imponente. Olhando-o assim de perto,
+vocÃª facilmente consegue entender o porque dele ser o rei e nÃ£o vocÃª.
 ~
 2099254 0 0 0 272 0 0 0 999 E
 18 8 -1 8d5+700 5d5+8
