@@ -1,9 +1,9 @@
 #6000
 No Limite da Floresta~
-   Você se encontra no final de uma estrada poeirenta, perto da margem
-ocidental da grande Floresta de Haon-Dor.  Ao leste, você vê a estrada que
+   Vocï¿½ se encontra no final de uma estrada poeirenta, perto da margem
+ocidental da grande Floresta de Haon-Dor.  Ao leste, vocï¿½ vï¿½ a estrada que
 segue de volta para Midgaard e ao oeste uma trilha que segue pelo
-desfiladeiro que através da floresta.
+desfiladeiro que atravï¿½s da floresta.
 ~
 60 0 0 0 0 2
 D0
@@ -12,148 +12,148 @@ D0
 0 -1 2030
 D1
 Para o leste, uma estrada empoeirada segue direto para os muros de Midgaard e
-seu imenso portão oeste.
+seu imenso portï¿½o oeste.
 ~
 ~
 0 -1 6090
 D3
-Você vê uma trilha que segue pelo desfiladeiro, seguindo através da floresta.
+Vocï¿½ vï¿½ uma trilha que segue pelo desfiladeiro, seguindo atravï¿½s da floresta.
 ~
 ~
 0 -1 6001
 E
-árvore árvores~
-As árvores são bastanta altas, considerando que a maioria delas aparentam
-ser bastante jovens.  Em uma das árvores, letras rústicas formando a palavra
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o bastanta altas, considerando que a maioria delas aparentam
+ser bastante jovens.  Em uma das ï¿½rvores, letras rï¿½sticas formando a palavra
 'Haon-Dor' foram esculpidas diretamente no tronco.
 ~
 E
 trilha~
-A trilha da floresta continua seguindo através da floresta.
+A trilha da floresta continua seguindo atravï¿½s da floresta.
 ~
 S
 #6001
-Uma Trilha Através da Floresta Clara~
-   Você está sobre uma trilha que segue através da floresta.  Ao norte
-parece haver um pequeno caminho que penetra dentro da escuridão.  Para o
-leste está o limite da floresta e para o oeste, a trilha parece penetrar
+Uma Trilha Atravï¿½s da Floresta Clara~
+   Vocï¿½ estï¿½ sobre uma trilha que segue atravï¿½s da floresta.  Ao norte
+parece haver um pequeno caminho que penetra dentro da escuridï¿½o.  Para o
+leste estï¿½ o limite da floresta e para o oeste, a trilha parece penetrar
 mais fundo na floresta.
 ~
 60 0 0 0 0 3
 D0
-Você vê evidencias de que um pequeno caminho passa através das árvores,
+Vocï¿½ vï¿½ evidencias de que um pequeno caminho passa atravï¿½s das ï¿½rvores,
 seguindo para o norte.
 ~
 ~
 0 -1 6060
 D1
-A trilha segue na direção leste da floresta.
+A trilha segue na direï¿½ï¿½o leste da floresta.
 ~
 ~
 0 -1 6000
 D3
-Você vê uma trilha no desfiladeiro da floresta que segue na direção oeste, em
-meio às arvores.
+Vocï¿½ vï¿½ uma trilha no desfiladeiro da floresta que segue na direï¿½ï¿½o oeste, em
+meio ï¿½s arvores.
 ~
 ~
 0 -1 6002
 E
-pássaros insetos animais animaizinhos~
+pï¿½ssaros insetos animais animaizinhos~
 Criaturinhas muito bonitinhas, eles parecem estar se divertindo.
 ~
 E
-árvore árvores~
-As árvores aqui são bastante jovens e saudáveis.  Elas parecem estar
-acomodando diversas qualidades de pássaros, insetos e outros animaizinhos.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores aqui sï¿½o bastante jovens e saudï¿½veis.  Elas parecem estar
+acomodando diversas qualidades de pï¿½ssaros, insetos e outros animaizinhos.
 ~
 E
 trilha~
-A trilha da floresta segue rumo leste-oeste, em meio às árvores.
+A trilha da floresta segue rumo leste-oeste, em meio ï¿½s ï¿½rvores.
 ~
 S
 #6002
-Uma Trilha Através da Floresta Clara~
-   Você está numa trilha que ao leste vai para o desfiladeiro e para o
+Uma Trilha Atravï¿½s da Floresta Clara~
+   Vocï¿½ estï¿½ numa trilha que ao leste vai para o desfiladeiro e para o
 oeste, atravessa a floresta.  Para o oeste, a floresta vai gradualmente se
-tornando mais densa.  Um pequeno caminho segue na direção sul.
+tornando mais densa.  Um pequeno caminho segue na direï¿½ï¿½o sul.
 ~
 60 0 0 0 0 3
 D1
-A trilha continua seguindo na direção leste, através das jovens árvores.
+A trilha continua seguindo na direï¿½ï¿½o leste, atravï¿½s das jovens ï¿½rvores.
 ~
 ~
 0 -1 6001
 D2
-O pequeno caminho segue para o sul, através das jovens árvores.
+O pequeno caminho segue para o sul, atravï¿½s das jovens ï¿½rvores.
 ~
 ~
 0 -1 6011
 D3
-Você vê a trilha do desfiladeiro da floresta seguindo na direção oeste,
-através da densa floresta.
+Vocï¿½ vï¿½ a trilha do desfiladeiro da floresta seguindo na direï¿½ï¿½o oeste,
+atravï¿½s da densa floresta.
 ~
 ~
 0 -1 6003
 E
-árvore árvores~
-As lindas árvores possuem troncos delgados e são bem jovens.  Suas folhas,
+ï¿½rvore ï¿½rvores~
+As lindas ï¿½rvores possuem troncos delgados e sï¿½o bem jovens.  Suas folhas,
 de um tom de verde intenso, movem-se suavemente, embaladas pela suave brisa.
 ~
 E
 trilha~
-A trilha da floresta segue leste-oeste através das árvores.
+A trilha da floresta segue leste-oeste atravï¿½s das ï¿½rvores.
 ~
 E
 caminho caminhos~
-O caminho do desfiladeiro provavelmente é usado por animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado por animais que vivem na
 floresta.
 ~
 S
 #6003
-Uma Trilha Através da Floresta Densa~
-   Você está numa trilha que vai serpenteando para leste e oeste através da
+Uma Trilha Atravï¿½s da Floresta Densa~
+   Vocï¿½ estï¿½ numa trilha que vai serpenteando para leste e oeste atravï¿½s da
 floresta densa.  Para o leste, a floresta gradualmente vai parecendo ser
 mais clara.
 ~
 60 0 0 0 0 3
 D1
-A trilha continua seguindo na direção da parte mais nova da floresta.
+A trilha continua seguindo na direï¿½ï¿½o da parte mais nova da floresta.
 ~
 ~
 0 -1 6002
 D3
-Você vê que a trilha do desfiladeiro vai fazendo uma curva na direção oeste,
-através da floresta densa.
+Vocï¿½ vï¿½ que a trilha do desfiladeiro vai fazendo uma curva na direï¿½ï¿½o oeste,
+atravï¿½s da floresta densa.
 ~
 ~
 0 -1 6004
 E
-árvores árvore~
-A densa copa das árvores permite que apenas uma pequena fração do céu possa
-ser vista através da folhagem.
+ï¿½rvores ï¿½rvore~
+A densa copa das ï¿½rvores permite que apenas uma pequena fraï¿½ï¿½o do cï¿½u possa
+ser vista atravï¿½s da folhagem.
 ~
 E
 trilha~
-A trilha da floresta parece ser quase frágil, se comparada aos troncos
-massiços.
+A trilha da floresta parece ser quase frï¿½gil, se comparada aos troncos
+massiï¿½os.
 ~
 S
 #6004
-Uma Trilha Através da Floresta Clara~
-   Você está numa trilha que ao leste vai para o desfiladeiro e para o
-oeste, atravessa a floresta.  Ao oeste, as árvores são imensas e suas copas
-são tão espessas e fechadas, que naquele trecho, floresta permanece quase na
-escuridão total.  Um pequeno caminho segue na direção sul, através das
-árvores.
+Uma Trilha Atravï¿½s da Floresta Clara~
+   Vocï¿½ estï¿½ numa trilha que ao leste vai para o desfiladeiro e para o
+oeste, atravessa a floresta.  Ao oeste, as ï¿½rvores sï¿½o imensas e suas copas
+sï¿½o tï¿½o espessas e fechadas, que naquele trecho, floresta permanece quase na
+escuridï¿½o total.  Um pequeno caminho segue na direï¿½ï¿½o sul, atravï¿½s das
+ï¿½rvores.
 ~
 60 0 0 0 0 3
 D1
-A trilha segue na direção leste através da densa floresta.
+A trilha segue na direï¿½ï¿½o leste atravï¿½s da densa floresta.
 ~
 ~
 0 -1 6003
 D2
-O pequeno caminho segue para o sul, através das árvores.
+O pequeno caminho segue para o sul, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6005
@@ -163,137 +163,137 @@ A trilha do desfiladeiro quase desaparece entre os imensos troncos.
 ~
 0 -1 6100
 E
-árvores árvore~
-As copas das árvores centenárias praticamente bloqueiam toda luz.
+ï¿½rvores ï¿½rvore~
+As copas das ï¿½rvores centenï¿½rias praticamente bloqueiam toda luz.
 ~
 E
 trilha~
-A trilha da floresta parece ser quase frágil, se comparada aos troncos
-massiços.
+A trilha da floresta parece ser quase frï¿½gil, se comparada aos troncos
+massiï¿½os.
 ~
 E
 caminho caminhos~
-O caminho do desfiladeiro, provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro, provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 S
 #6005
 Um Pequeno Caminho na Densa Floresta~
-   Você está num pequeno caminho que segue através da densa floresta.  As
-copas das velhas árvores deixam a floresta com uma iluminação surreal.  O
+   Vocï¿½ estï¿½ num pequeno caminho que segue atravï¿½s da densa floresta.  As
+copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o surreal.  O
 caminho segue rumo ao norte e ao sul.
 ~
 60 0 0 0 0 3
 D0
-O pequeno caminho segue para o norte, através das árvores.
+O pequeno caminho segue para o norte, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6004
 D2
-O pequeno caminho segue para o sul, através das árvores.
+O pequeno caminho segue para o sul, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6006
 E
-árvores árvore~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvores ï¿½rvore~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 S
 #6006
 Um Pequeno Caminho na Densa Floresta~
-   Você está num pequeno caminho que segue através da densa floresta.  As
-copas das velhas árvores deixam a floresta com uma iluminação surreal.  O
+   Vocï¿½ estï¿½ num pequeno caminho que segue atravï¿½s da densa floresta.  As
+copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o surreal.  O
 caminho segue rumo ao norte e leste.
 ~
 60 0 0 0 0 3
 D0
-O pequeno caminho segue para o norte, através das árvores.
+O pequeno caminho segue para o norte, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6005
 D1
-O pequeno caminho segue para o leste, através das árvores.
+O pequeno caminho segue para o leste, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6007
 E
-árvores árvore~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvores ï¿½rvore~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos~
-O caminho do desfiladeiro, provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro, provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 S
 #6007
 Uma Encruzilhada na Densa Floresta~
-   Você está em um pequeno caminho que segue através da densa floresta.  As
-copas das velhas árvores deixam a floresta com uma iluminação surreal.  A
+   Vocï¿½ estï¿½ em um pequeno caminho que segue atravï¿½s da densa floresta.  As
+copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o surreal.  A
 floresta gradualmente vai ficando mais clara, ao leste.  Os caminhos seguem
 para o leste, oeste e sul.
 ~
 60 0 0 0 0 3
 D1
-Você mal consegue alcançar a clareira ao leste.
+Vocï¿½ mal consegue alcanï¿½ar a clareira ao leste.
 ~
 ~
 0 -1 6008
 D2
-O pequeno caminho segue para o sul, através das árvores.
+O pequeno caminho segue para o sul, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6012
 D3
-O pequeno caminho segue para o oeste, através das árvores.
+O pequeno caminho segue para o oeste, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6006
 E
-árvores árvore~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvores ï¿½rvore~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 S
 #6008
 A Floresta Mais Clara~
-   Você está em uma clareira na floresta.  Muitos pedaços de madeira fresca,
-dos mais variados tamanhos, estão no chão e pesados troncos estão guardados
+   Vocï¿½ estï¿½ em uma clareira na floresta.  Muitos pedaï¿½os de madeira fresca,
+dos mais variados tamanhos, estï¿½o no chï¿½o e pesados troncos estï¿½o guardados
 em perfeita ordem, formando uma grande pilha, presos por estacas que foram
-batidas no chão.  Caminhos seguem para norte, leste e oeste.
+batidas no chï¿½o.  Caminhos seguem para norte, leste e oeste.
 ~
 60 0 0 0 0 3
 D0
-O pequeno caminho segue para o norte, através das árvores.
+O pequeno caminho segue para o norte, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6011
 D1
-O pequeno caminho segue para o leste, através das árvores.
+O pequeno caminho segue para o leste, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6009
 D3
-O pequeno caminho segue para o oeste, através das árvores.
+O pequeno caminho segue para o oeste, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6007
 E
-árvores árvore~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvores ï¿½rvore~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 toco tocos~
-Ali estão mais tocos do que toras e alguns dos tocos estão parcialmente
+Ali estï¿½o mais tocos do que toras e alguns dos tocos estï¿½o parcialmente
 cobertos por musgo.
 ~
 E
@@ -302,58 +302,58 @@ As estacas evitam que as toras saiam rolando para baixo.
 ~
 E
 caminho caminhos~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 E
 tora toras~
-Mesmo depois de terem sido cortados em pedaços bem menores, as toras são
-bastante pesadas e estão frescas, cheias de seiva.
+Mesmo depois de terem sido cortados em pedaï¿½os bem menores, as toras sï¿½o
+bastante pesadas e estï¿½o frescas, cheias de seiva.
 ~
 S
 #6009
 Do Lado de Fora de Uma Pequena Cabana na Floresta~
-   Você está do lado de fora de uma pequena cabana, totalmente construída
-com pesadas toras de madeira.  Há uma porta de madeira para o norte e
-pequenos caminhos seguem para o oeste e sul, através das árvores.
+   Vocï¿½ estï¿½ do lado de fora de uma pequena cabana, totalmente construï¿½da
+com pesadas toras de madeira.  Hï¿½ uma porta de madeira para o norte e
+pequenos caminhos seguem para o oeste e sul, atravï¿½s das ï¿½rvores.
 ~
 60 0 0 0 0 3
 D0
-A porta de madeira é muito forte mas não parece estar equipada com uma
+A porta de madeira ï¿½ muito forte mas nï¿½o parece estar equipada com uma
 fechadura.
 ~
 porta madeira~
 1 -1 6010
 D2
-O pequeno caminho segue para o sul, através da floresta densa.
+O pequeno caminho segue para o sul, atravï¿½s da floresta densa.
 ~
 ~
 0 -1 6014
 D3
-O pequeno caminho segue para o oeste, através da floresta clara.
+O pequeno caminho segue para o oeste, atravï¿½s da floresta clara.
 ~
 ~
 0 -1 6008
 E
-árvores árvore~
-As árvores são bastante jovens, não tendo muito mais que uns cem anos de
+ï¿½rvores ï¿½rvore~
+As ï¿½rvores sï¿½o bastante jovens, nï¿½o tendo muito mais que uns cem anos de
 idade.
 ~
 E
 caminho caminhos~
-O caminho provavelmente é usado pelos moradores da cabana.
+O caminho provavelmente ï¿½ usado pelos moradores da cabana.
 ~
 E
 cabana tora toras~
-Simples mas confortável e as árovores delgadas dão ao lugar, uma aparência
-quase idílica.  Esta é uma cabana contruída com toras de madeira.
+Simples mas confortï¿½vel e as ï¿½rovores delgadas dï¿½o ao lugar, uma aparï¿½ncia
+quase idï¿½lica.  Esta ï¿½ uma cabana contruï¿½da com toras de madeira.
 ~
 S
 #6010
 Dentro da Cabana~
-   Você está dentro de uma pequena cabana de um dormitório apenas, feita
-totalmente com pesadas toras de madeira.  Está parcamente mobiliada,
-contendo apenas o mais básico para para uma vida doméstica, como por
+   Vocï¿½ estï¿½ dentro de uma pequena cabana de um dormitï¿½rio apenas, feita
+totalmente com pesadas toras de madeira.  Estï¿½ parcamente mobiliada,
+contendo apenas o mais bï¿½sico para para uma vida domï¿½stica, como por
 exemplo, cama, uma cadeira e uma mesa.
 ~
 60 8 0 0 0 0
@@ -367,13 +367,13 @@ entalhe entalhes entalhado~
 Sobre a mesa, foi entalhada a seguinte frase:
                                                /) /)
                Romeu e Julieta,               ( o o )
-        21º dia do Mês do Grande Esforço,      = x =
+        21ï¿½ dia do Mï¿½s do Grande Esforï¿½o,      = x =
                   ano de 142                  m     m
                                               ***(========-
 ~
 E
 mesa~
-Uma pesada mesa que não deve balançar nem um pouco.  Ela parece ter alguma
+Uma pesada mesa que nï¿½o deve balanï¿½ar nem um pouco.  Ela parece ter alguma
 coisa entalhada nela.
 ~
 E
@@ -382,228 +382,228 @@ Feita do mais puro carvalho, parece ser muito forte e resistente.
 ~
 E
 cama~
-Definitivamente, não é a cama mais confortável que você já viu em sua vida.
+Definitivamente, nï¿½o ï¿½ a cama mais confortï¿½vel que vocï¿½ jï¿½ viu em sua vida.
 ~
 S
 #6011
-Um Pequeno Caminho Através da Floresta Clara~
-   Você está em um pequeno caminho que segue através da floresta.  As
-árvores são bem altas e finas.  Caminhos seguem para o norte e sul.
+Um Pequeno Caminho Atravï¿½s da Floresta Clara~
+   Vocï¿½ estï¿½ em um pequeno caminho que segue atravï¿½s da floresta.  As
+ï¿½rvores sï¿½o bem altas e finas.  Caminhos seguem para o norte e sul.
 ~
 60 0 0 0 0 3
 D0
-O caminho segue para o norte através das árvores jovens.
+O caminho segue para o norte atravï¿½s das ï¿½rvores jovens.
 ~
 ~
 0 -1 6002
 D1
-O caminho segue para o leste através das árvores jovens.
+O caminho segue para o leste atravï¿½s das ï¿½rvores jovens.
 ~
 ~
 0 -1 28000
 D2
-O caminho segue para o sul através das árvores jovens.
+O caminho segue para o sul atravï¿½s das ï¿½rvores jovens.
 ~
 ~
 0 -1 6008
 E
-árvores árvore~
-As árvores são bastante jovens, não tendo mais que uns cem anos de idade.
+ï¿½rvores ï¿½rvore~
+As ï¿½rvores sï¿½o bastante jovens, nï¿½o tendo mais que uns cem anos de idade.
 ~
 E
 caminho caminhos~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 S
 #6012
 Uma Encruzilhada na Floresta Densa~
-   Você está em um pequeno caminho que segue através da floresta densa.  As
-copas das velhas árvores deixam a floresta com uma iluminação surreal.
+   Vocï¿½ estï¿½ em um pequeno caminho que segue atravï¿½s da floresta densa.  As
+copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o surreal.
 Caminhos seguem para o norte, sul e leste.
 ~
 60 0 0 0 0 3
 D0
-O pequeno caminho segue para o norte, através das árvores.
+O pequeno caminho segue para o norte, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6007
 D1
-O pequeno caminho segue para o leste, através das árvores.
+O pequeno caminho segue para o leste, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6013
 D2
-O pequeno caminho segue para o sul, através das árvores.
+O pequeno caminho segue para o sul, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6021
 E
-árvores árvore~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvores ï¿½rvore~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 S
 #6013
 Um Pequeno Caminho na Densa Floresta~
-   Você está num pequeno caminho que segue através da densa floresta.  As
-copas das velhas árvores deixam a floresta com uma iluminação surreal.  O
+   Vocï¿½ estï¿½ num pequeno caminho que segue atravï¿½s da densa floresta.  As
+copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o surreal.  O
 caminho segue rumo ao oestee leste.
 ~
 60 0 0 0 0 3
 D1
-O pequeno caminho segue para o leste, através das árvores.
+O pequeno caminho segue para o leste, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6014
 D3
-O pequeno caminho segue para o oeste, através das árvores.
+O pequeno caminho segue para o oeste, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6012
 E
-árvores árvore~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvores ï¿½rvore~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 S
 #6014
 Uma Encruzilhada na Floresta Densa~
-   Você está em um pequeno caminho que segue através da floresta densa.  A
+   Vocï¿½ estï¿½ em um pequeno caminho que segue atravï¿½s da floresta densa.  A
 floresta gradualmente vai ficando mais clara, ao norte.
 ~
 60 0 0 0 0 3
 D0
-O caminho segue para o norte, na direção da parte mais clara da floresta.
+O caminho segue para o norte, na direï¿½ï¿½o da parte mais clara da floresta.
 ~
 ~
 0 -1 6009
 D1
-O pequeno caminho segue para o leste, através das árvores.
+O pequeno caminho segue para o leste, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6015
 D3
-O pequeno caminho segue para o oeste, através das árvores.
+O pequeno caminho segue para o oeste, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6013
 E
-árvores árvore~
-As imensas copas das velhas árvores deixam a floresta com uma iluminação
+ï¿½rvores ï¿½rvore~
+As imensas copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o
 surreal.
 ~
 E
 caminho caminhos~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 S
 #6015
 Um Pequeno Caminho na Densa Floresta~
-   Você está num pequeno caminho que segue através da densa floresta.  As
-copas das velhas árvores deixam a floresta com uma iluminação surreal.  O
+   Vocï¿½ estï¿½ num pequeno caminho que segue atravï¿½s da densa floresta.  As
+copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o surreal.  O
 caminho segue rumo ao sul e oeste.
 ~
 60 0 0 0 0 3
 D2
-O pequeno caminho segue para o sul, através das árvores.
+O pequeno caminho segue para o sul, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6016
 D3
-O pequeno caminho segue para o oeste, através das árvores.
+O pequeno caminho segue para o oeste, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6014
 E
-árvores árvore~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvores ï¿½rvore~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 S
 #6016
 Um Pequeno Caminho na Densa Floresta~
-   Você está num pequeno caminho que segue através da densa floresta.  As
-copas das velhas árvores deixam a floresta com uma iluminação surreal.  O
+   Vocï¿½ estï¿½ num pequeno caminho que segue atravï¿½s da densa floresta.  As
+copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o surreal.  O
 caminho segue rumo ao sul e leste.
 ~
 60 0 0 0 0 3
 D0
-O pequeno caminho segue para o norte, através das árvores.
+O pequeno caminho segue para o norte, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6015
 D1
-O pequeno caminho segue para o leste, através das árvores.
+O pequeno caminho segue para o leste, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6028
 D2
-O pequeno caminho segue para o sul, através das árvores.
+O pequeno caminho segue para o sul, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6017
 E
-árvores árvore~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvores ï¿½rvore~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 S
 #6017
 Um Pequeno Caminho na Densa Floresta~
-   Você está num pequeno caminho que segue através da densa floresta.  A
+   Vocï¿½ estï¿½ num pequeno caminho que segue atravï¿½s da densa floresta.  A
 floresta parece estar se tornando mais clara, ao oeste.  O caminho continua
 rumo ao norte oeste.
 ~
 60 0 0 0 0 3
 D0
-O pequeno caminho segue para o norte, através das árvores.
+O pequeno caminho segue para o norte, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6016
 D3
-O pequeno caminho vai para o oeste, através das árvores, para a parte mais
+O pequeno caminho vai para o oeste, atravï¿½s das ï¿½rvores, para a parte mais
 clara da floresta.
 ~
 ~
 0 -1 6018
 E
 galho galhos enorme~
-O galho de um grande carvalho está bem acima de você, apontando para o lado
+O galho de um grande carvalho estï¿½ bem acima de vocï¿½, apontando para o lado
 leste.
 ~
 E
-árvores árvore~
-As imensas copas das velhas árvores deixam a floresta com uma iluminação
-surreal.  Um enorme galho está bem acima de sua cabeça, apontando a direção
+ï¿½rvores ï¿½rvore~
+As imensas copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o
+surreal.  Um enorme galho estï¿½ bem acima de sua cabeï¿½a, apontando a direï¿½ï¿½o
 de um caminho.
 ~
 E
 caminho caminhos~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 S
 #6018
 Uma Encruzilhada na Floresta Densa~
-   Você está em um pequeno caminho que segue através da floresta.  O caminho
+   Vocï¿½ estï¿½ em um pequeno caminho que segue atravï¿½s da floresta.  O caminho
 segue norte, para um pequeno campo e outros caminhos seguem para leste e
 oeste, para dentro da floresta densa.
 ~
@@ -624,125 +624,125 @@ O caminho segue para o oeste, para uma parte mais densa da floresta.
 ~
 0 -1 6019
 E
-árvores árvore~
-As árvores são altas e delgadas e jovens, não tendo mais que cem anos de
+ï¿½rvores ï¿½rvore~
+As ï¿½rvores sï¿½o altas e delgadas e jovens, nï¿½o tendo mais que cem anos de
 idade.
 ~
 E
 caminho caminhos~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 S
 #6019
 Um Pequeno Caminho na Densa Floresta~
-   Você está num pequeno caminho que segue através da densa floresta.  A
+   Vocï¿½ estï¿½ num pequeno caminho que segue atravï¿½s da densa floresta.  A
 floresta parece estar se tornando mais clara, ao leste.  O caminho continua
 rumo ao norte leste.
 ~
 60 0 0 0 0 3
 D0
-O pequeno caminho segue para o norte, através das árvores.
+O pequeno caminho segue para o norte, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6020
 D1
-O pequeno caminho vai para o leste, através das árvores, para a parte mais
+O pequeno caminho vai para o leste, atravï¿½s das ï¿½rvores, para a parte mais
 clara da floresta.
 ~
 ~
 0 -1 6018
 E
-árvores árvore~
-As imensas copas das velhas árvores deixam a floresta com uma iluminação
+ï¿½rvores ï¿½rvore~
+As imensas copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o
 surreal.
 ~
 E
 caminho caminhos~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 S
 #6020
 Um Pequeno Caminho na Densa Floresta~
-   Você está num pequeno caminho que segue através da densa floresta.  As
-copas das velhas árvores deixam a floresta com uma iluminação surreal.  O
+   Vocï¿½ estï¿½ num pequeno caminho que segue atravï¿½s da densa floresta.  As
+copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o surreal.  O
 caminho segue rumo ao sul e oeste.
 ~
 60 0 0 0 0 3
 D2
-O pequeno caminho segue para o sul, através das árvores.
+O pequeno caminho segue para o sul, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6019
 D3
-O pequeno caminho segue para o oeste, através das árvores.
+O pequeno caminho segue para o oeste, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6021
 E
-árvores árvore~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvores ï¿½rvore~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 S
 #6021
 Um Pequeno Caminho na Densa Floresta~
-   Você está num pequeno caminho que segue através da densa floresta.  Para
-o oeste, você vê a entrada de uma caverna escura, que leva para um pequeno
+   Vocï¿½ estï¿½ num pequeno caminho que segue atravï¿½s da densa floresta.  Para
+o oeste, vocï¿½ vï¿½ a entrada de uma caverna escura, que leva para um pequeno
 declive.  O caminho segue rumo ao norte e leste.
 ~
 60 0 0 0 0 3
 D0
-O pequeno caminho segue para o norte, através das árvores.
+O pequeno caminho segue para o norte, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6012
 D1
-O pequeno caminho segue para o leste, através das árvores.
+O pequeno caminho segue para o leste, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6020
 D3
-A caverna é muito escura.
+A caverna ï¿½ muito escura.
 ~
 ~
 0 -1 6022
 E
 caverna entrada~
-A abertura irregular tem aproximadamente oito pés de largura por seis de
+A abertura irregular tem aproximadamente oito pï¿½s de largura por seis de
 altura.  Um cheio acre vai tomando conta do ambiente.
 ~
 E
-árvores árvore~
-As imensas copas das velhas árvores deixam a floresta com uma iluminação
+ï¿½rvores ï¿½rvore~
+As imensas copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o
 surreal.
 ~
 E
 caminho caminhos~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 S
 #6022
 Dentro da Caverna~
-   Você está dentro de uma caverna natural.  Vários tipos de entulho, cobrem
-o chão de pedra, emanando um cheiro insuportável, que deixa o ar pesado e
-difícil de respirar.  A única saída óbvia é ao leste.
+   Vocï¿½ estï¿½ dentro de uma caverna natural.  Vï¿½rios tipos de entulho, cobrem
+o chï¿½o de pedra, emanando um cheiro insuportï¿½vel, que deixa o ar pesado e
+difï¿½cil de respirar.  A ï¿½nica saï¿½da ï¿½bvia ï¿½ ao leste.
 ~
 60 9 0 0 0 0
 D1
-A entrada da caverna está ao leste.
+A entrada da caverna estï¿½ ao leste.
 ~
 ~
 0 -1 6021
 E
 ar cheiro~
-O tipo de cheiro que ninguém nunca mais irá conseguir esquecer.
+O tipo de cheiro que ninguï¿½m nunca mais irï¿½ conseguir esquecer.
 ~
 E
 caverna paredes chao pedra~
@@ -750,62 +750,62 @@ Bastante interessante.
 ~
 E
 entulho~
-É composto básicamente de ossos roídos e pequenos pedaços de pele
-estraçalhada.
+ï¿½ composto bï¿½sicamente de ossos roï¿½dos e pequenos pedaï¿½os de pele
+estraï¿½alhada.
 ~
 S
 #6023
 O Campo Gramado~
-   Você está em um campo coberto por grama em algum lugar da floresta.  A
-grama alta quase alcança a sua cintura e os ínúmeros carvalhos e faias ao
+   Vocï¿½ estï¿½ em um campo coberto por grama em algum lugar da floresta.  A
+grama alta quase alcanï¿½a a sua cintura e os ï¿½nï¿½meros carvalhos e faias ao
 redor, quase formam uma compacta parede, encobrindo o lado leste do campo.
-Ao nordeste, você quase pode ver um pequeno lago.  Um pequeno caminho vai
-rumo ao sul, através das árvores, e o campo se abre para o norte e oeste.
+Ao nordeste, vocï¿½ quase pode ver um pequeno lago.  Um pequeno caminho vai
+rumo ao sul, atravï¿½s das ï¿½rvores, e o campo se abre para o norte e oeste.
 ~
 60 0 0 0 0 2
 D0
-Ventos soprando do norte, trazendo consigo o cheiro de um animal recém
-morto, bem como também chegam os sons dos inúmeros pássaros, que você
+Ventos soprando do norte, trazendo consigo o cheiro de um animal recï¿½m
+morto, bem como tambï¿½m chegam os sons dos inï¿½meros pï¿½ssaros, que vocï¿½
 consegue ver ao seu redor.
 ~
 ~
 0 -1 6026
 D1
-O chão suavemente se inclina para o leste, ao longo da linha das árvores.
+O chï¿½o suavemente se inclina para o leste, ao longo da linha das ï¿½rvores.
 ~
 ~
 0 -1 6024
 D2
-O pequeno caminho segue para o sul pelo meio das árvores.
+O pequeno caminho segue para o sul pelo meio das ï¿½rvores.
 ~
 ~
 0 -1 6018
 E
-pássaro pássaros~
-Muitos pássaros carniceiros estão circulando ao norte e você presume que
-estejam esperando um cádaver para se banquetearem.
+pï¿½ssaro pï¿½ssaros~
+Muitos pï¿½ssaros carniceiros estï¿½o circulando ao norte e vocï¿½ presume que
+estejam esperando um cï¿½daver para se banquetearem.
 ~
 E
-árvores árvore moita~
-As árvores altas formam como uma imensa moita, bloqueando qualquer saída
+ï¿½rvores ï¿½rvore moita~
+As ï¿½rvores altas formam como uma imensa moita, bloqueando qualquer saï¿½da
 para o oeste.
 ~
 E
 caminho~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 E
 grama~
-A grama alta é um excelente esconderijo para animais.
+A grama alta ï¿½ um excelente esconderijo para animais.
 ~
 S
 #6024
 A Parte Mais Baixa do Campo Gramado~
-   Você se encontra na parte mais baixa do campo gramado, ao sul do pequeno
-lago.  A grama aqui foi totalmente pisoteada pelos inúmeros aniamais que
-aqui chegam para matar a sede, deixando no chão, os mais diversos tipos de
-pegadas.  Ao oeste, você vê um pequeno vão na maciça parede de árvores que
+   Vocï¿½ se encontra na parte mais baixa do campo gramado, ao sul do pequeno
+lago.  A grama aqui foi totalmente pisoteada pelos inï¿½meros aniamais que
+aqui chegam para matar a sede, deixando no chï¿½o, os mais diversos tipos de
+pegadas.  Ao oeste, vocï¿½ vï¿½ um pequeno vï¿½o na maciï¿½a parede de ï¿½rvores que
 rodeiam o campo e ao norte, um pequeno lago.
 ~
 60 0 0 0 0 2
@@ -815,156 +815,156 @@ As pegadas dos animais seguem para o norte e aqui, em volta do lago.
 ~
 0 -1 6025
 D3
-Para o sudoeste, você percebe um vão na linha das árvores, levando de volta
+Para o sudoeste, vocï¿½ percebe um vï¿½o na linha das ï¿½rvores, levando de volta
 para o caminho da floresta.
 ~
 ~
 0 -1 6023
 E
-árvores árvore moita~
-As árvores formam uma moita compacta, bloqueando qualquer saída para o sul e
+ï¿½rvores ï¿½rvore moita~
+As ï¿½rvores formam uma moita compacta, bloqueando qualquer saï¿½da para o sul e
 para o leste.
 ~
 E
 caminho pisoteado~
-O caminho de grama pisoteada segue para o lago que está ao norte daqui.
+O caminho de grama pisoteada segue para o lago que estï¿½ ao norte daqui.
 ~
 E
 grama~
-A grama alta é um excelente esconderijo para animais.
+A grama alta ï¿½ um excelente esconderijo para animais.
 ~
 S
 #6025
 Ao Lado do Lago em um Campo Gramado~
-   A grama não cresce perto do lago, sendo substituida por lama coberta
-pelas pegadas dos animais locais.  Quando você chega mais perto, muitos
+   A grama nï¿½o cresce perto do lago, sendo substituida por lama coberta
+pelas pegadas dos animais locais.  Quando vocï¿½ chega mais perto, muitos
 animais se espalham por entre a grama e alguns se embrenham pela floresta.
-Para o oeste, você vê pássaros circulando bem alto no céu e ao norte você vê
-um pequeno lago cercado por plantas bem altas.  O campo segue em direção ao
+Para o oeste, vocï¿½ vï¿½ pï¿½ssaros circulando bem alto no cï¿½u e ao norte vocï¿½ vï¿½
+um pequeno lago cercado por plantas bem altas.  O campo segue em direï¿½ï¿½o ao
 sul e a floresta se fecha ao leste.
 ~
 60 0 0 0 0 2
 D0
-O lago parece convidá-lo e você pode ver a água que corre em meio ao mato
+O lago parece convidï¿½-lo e vocï¿½ pode ver a ï¿½gua que corre em meio ao mato
 alto.
 ~
 ~
 0 -1 6027
 D2
-Para o sul há uma trilha de animais que segue em direção ao outro lado do
+Para o sul hï¿½ uma trilha de animais que segue em direï¿½ï¿½o ao outro lado do
 campo.
 ~
 ~
 0 -1 6024
 D3
-O cheiro de cadáveres apodrecidos chega até você, vindo da parte mais alta
+O cheiro de cadï¿½veres apodrecidos chega atï¿½ vocï¿½, vindo da parte mais alta
 do campo do oeste.
 ~
 ~
 0 -1 6026
 E
 pegadas pegada lama~
-Você vê pegadas no chão de várias espécies de animais.  Evidências de todos
-os tipos de animais estão aqui na lama, mostrando o quanto a floresta é
+Vocï¿½ vï¿½ pegadas no chï¿½o de vï¿½rias espï¿½cies de animais.  Evidï¿½ncias de todos
+os tipos de animais estï¿½o aqui na lama, mostrando o quanto a floresta ï¿½
 cheia de vida.
 ~
 E
-pássaro pássaros~
-Muitos pássaros carniceiros estão circulando ao norte e você presume que
-estejam esperando um cádaver para se banquetearem.
+pï¿½ssaro pï¿½ssaros~
+Muitos pï¿½ssaros carniceiros estï¿½o circulando ao norte e vocï¿½ presume que
+estejam esperando um cï¿½daver para se banquetearem.
 ~
 E
-árvore árvores moita~
-As árvores formam uma moita compacta, bloqueando qualquer saída para o norte
+ï¿½rvore ï¿½rvores moita~
+As ï¿½rvores formam uma moita compacta, bloqueando qualquer saï¿½da para o norte
 e para o leste.
 ~
 E
 lago~
-Animais de todos os lugares vêm até aqui para beber.  O lago por is só não é
-muito grande mas ele avança em direção ao norte.
+Animais de todos os lugares vï¿½m atï¿½ aqui para beber.  O lago por is sï¿½ nï¿½o ï¿½
+muito grande mas ele avanï¿½a em direï¿½ï¿½o ao norte.
 ~
 E
 grama~
-A grama alta é um excelente esconderijo para animais.
+A grama alta ï¿½ um excelente esconderijo para animais.
 ~
 S
 #6026
 O Lado Norte do Campo Gramado~
-   À medida que você se aproxima, animais carniceiros e pássaros de todos os
-tipos se espalham, ficando para trás apenas os mais corajosos e destemidos,
-que ficam rodeando a carcaça de um porco do mato.  Os abutres circulam sobre
-a sua cabeça e pequenos animais, escondidos por entre a ravina, olham
-fixamente para você.  A grama aqui foi muito pisoteada e uma grande área em
-volta da carcaça está repleta de sangue.  Uma trilha segue para baixo, em
-direção ao lago e você pode ver que ao sul há um pequeno caminho que segue
-em direção da floresta.
+   ï¿½ medida que vocï¿½ se aproxima, animais carniceiros e pï¿½ssaros de todos os
+tipos se espalham, ficando para trï¿½s apenas os mais corajosos e destemidos,
+que ficam rodeando a carcaï¿½a de um porco do mato.  Os abutres circulam sobre
+a sua cabeï¿½a e pequenos animais, escondidos por entre a ravina, olham
+fixamente para vocï¿½.  A grama aqui foi muito pisoteada e uma grande ï¿½rea em
+volta da carcaï¿½a estï¿½ repleta de sangue.  Uma trilha segue para baixo, em
+direï¿½ï¿½o ao lago e vocï¿½ pode ver que ao sul hï¿½ um pequeno caminho que segue
+em direï¿½ï¿½o da floresta.
 ~
 60 0 0 0 0 2
 D1
-Há um pequeno lago descendo para o leste.  Alguns dos animais que fugiram
-daqui foram para lá e estão observando, esperando que você saia para que
-eles possam voltar a se refestelar com o banquete deixado para trás.
+Hï¿½ um pequeno lago descendo para o leste.  Alguns dos animais que fugiram
+daqui foram para lï¿½ e estï¿½o observando, esperando que vocï¿½ saia para que
+eles possam voltar a se refestelar com o banquete deixado para trï¿½s.
 ~
 ~
 0 -1 6025
 D2
-O campo segue para o sul e daqui você consegue ver o caminho que retorna
+O campo segue para o sul e daqui vocï¿½ consegue ver o caminho que retorna
 para a floresta.
 ~
 ~
 0 -1 6023
 E
-pássaro pássaros~
-Muitos pássaros carniceiros estão circulando ao norte e você presume que
-estejam esperando um cádaver para se banquetearem.  Você espera que eles não
-pensem que você poderia ser um desses corpos que eles tanto acham
+pï¿½ssaro pï¿½ssaros~
+Muitos pï¿½ssaros carniceiros estï¿½o circulando ao norte e vocï¿½ presume que
+estejam esperando um cï¿½daver para se banquetearem.  Vocï¿½ espera que eles nï¿½o
+pensem que vocï¿½ poderia ser um desses corpos que eles tanto acham
 apetitosos.
 ~
 E
-árvores árvore moita~
-As árvores formam uma moita compacta, bloqueando qualquer saída para o norte
+ï¿½rvores ï¿½rvore moita~
+As ï¿½rvores formam uma moita compacta, bloqueando qualquer saï¿½da para o norte
 e para o oeste.
 ~
 E
 caminho~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 E
 grama~
-A grama alta é um excelente esconderijo para animais.  Você vê que alguns
-dos animais que você ameadrontou estão agora furtivamente olhando para você
+A grama alta ï¿½ um excelente esconderijo para animais.  Vocï¿½ vï¿½ que alguns
+dos animais que vocï¿½ ameadrontou estï¿½o agora furtivamente olhando para vocï¿½
 ~
 S
 #6027
 No Lago~
-   Você está bem no meio de um pequeno lago, alimentado por uma pequena
-nascente de água que atravessa a floresta noroeste.  A água não é muito
-límpida mas você pode ver peixinhos nadando em sua volta.  A margem está
+   Vocï¿½ estï¿½ bem no meio de um pequeno lago, alimentado por uma pequena
+nascente de ï¿½gua que atravessa a floresta noroeste.  A ï¿½gua nï¿½o ï¿½ muito
+lï¿½mpida mas vocï¿½ pode ver peixinhos nadando em sua volta.  A margem estï¿½
 limpa ao sul, oferecendo um lugar seguro para se retornar ao campo.
 ~
 60 0 0 0 0 6
 D2
-Alguns animais foram se reunir na margem do lago para observá-lo, curiosos
-que estão para saber o que você faz aqui.
+Alguns animais foram se reunir na margem do lago para observï¿½-lo, curiosos
+que estï¿½o para saber o que vocï¿½ faz aqui.
 ~
 ~
 0 -1 6025
 E
-árvores árvore moita~
-As árvores emcobrem o banco práticamente em todos os seus lados, impedindo
-assim que você possa aportar ali.
+ï¿½rvores ï¿½rvore moita~
+As ï¿½rvores emcobrem o banco prï¿½ticamente em todos os seus lados, impedindo
+assim que vocï¿½ possa aportar ali.
 ~
 E
 peixe~
-Trutas e talvez um ou dois salmões estão nadando bem a sua volta, ignorando
-totalmente a sua presença.
+Trutas e talvez um ou dois salmï¿½es estï¿½o nadando bem a sua volta, ignorando
+totalmente a sua presenï¿½a.
 ~
 S
 #6028
 Um Pequeno Caminho Na Floresta Densa~
-   Você está em um pequeno caminho que segue em direção à floresta densa.
-As copas das velhas árvores deixam a floresta com uma iluminação surreal.  O
+   Vocï¿½ estï¿½ em um pequeno caminho que segue em direï¿½ï¿½o ï¿½ floresta densa.
+As copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o surreal.  O
 caminho segue para o oeste e sul.
 ~
 60 0 0 0 0 3
@@ -973,26 +973,26 @@ D2
 ~
 0 -1 6029
 D3
-O pequeno caminho segue para o oeste, através das árvores.
+O pequeno caminho segue para o oeste, atravï¿½s das ï¿½rvores.
 ~
 ~
 0 -1 6016
 E
-árvores árvore~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvores ï¿½rvore~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 S
 #6029
-Perto de Uma Grande Árvore na Floresta Densa~
-   Você está no final de um pequeno caminho que segue através da densa
-floresta.  As copas das velhas árvores deixam a floresta com uma iluminação
-surreal.  Esta difícil clareira está dominada por um imenso carvalho,
-provávelmente a maior árvore de toda a floresta.  O caminho do norte retorna
+Perto de Uma Grande ï¿½rvore na Floresta Densa~
+   Vocï¿½ estï¿½ no final de um pequeno caminho que segue atravï¿½s da densa
+floresta.  As copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o
+surreal.  Esta difï¿½cil clareira estï¿½ dominada por um imenso carvalho,
+provï¿½velmente a maior ï¿½rvore de toda a floresta.  O caminho do norte retorna
 para a floresta.
 ~
 60 4 0 0 0 3
@@ -1001,157 +1001,157 @@ D0
 ~
 0 -1 6028
 D4
-Você vê alguns arbustos erguendo-se em volta do carvalho.
+Vocï¿½ vï¿½ alguns arbustos erguendo-se em volta do carvalho.
 ~
 ~
 0 -1 6030
 E
 animal sombra~
-Visto daqui, parece ser algum tipo de felino, embora você saiba que se
-subisse na árvore talvez pudesse ver melhor.  Você não tem muita certeza se
-a coisa já o viu também.
+Visto daqui, parece ser algum tipo de felino, embora vocï¿½ saiba que se
+subisse na ï¿½rvore talvez pudesse ver melhor.  Vocï¿½ nï¿½o tem muita certeza se
+a coisa jï¿½ o viu tambï¿½m.
 ~
 E
-carvalho árvore imensa enorme~
+carvalho ï¿½rvore imensa enorme~
 Ele possui em sua volta alguns arbustos em volta do carvalho e pensa que
-talvez fosse possível subir neles para tentar alcançar um galho mais baixo
-da imensa árvore.  Talvez até seja possível ir escalando este imenso tronco
-até seu topo, embora olhando daqui pareça que alguma coisa antes de você
-teve a mesma idéia.  Você tem a impressão de ter visto a sombra de algum
+talvez fosse possï¿½vel subir neles para tentar alcanï¿½ar um galho mais baixo
+da imensa ï¿½rvore.  Talvez atï¿½ seja possï¿½vel ir escalando este imenso tronco
+atï¿½ seu topo, embora olhando daqui pareï¿½a que alguma coisa antes de vocï¿½
+teve a mesma idï¿½ia.  Vocï¿½ tem a impressï¿½o de ter visto a sombra de algum
 animal que parece ter se escondido em um dos galhos mais altos do imenso
 carvalho.
 ~
 E
-árvores árvore~
-As árvores são em sua maioria velhos carvalhos e faias, com um enorme
-carvalho se destacando, bem à sua direita.
+ï¿½rvores ï¿½rvore~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias, com um enorme
+carvalho se destacando, bem ï¿½ sua direita.
 ~
 E
 caminho~
-O caminho do desfiladeiro provavelmente é usado pelos animais que vivem na
+O caminho do desfiladeiro provavelmente ï¿½ usado pelos animais que vivem na
 floresta.
 ~
 S
 #6030
 Nos Galhos Mais Baixos do Grande Carvalho~
-   Você está em um imenso carvalho, mais ou menos um terço abaixo do topo.
-Embora os galhos de cima bloqueiem práticamente toda a luz, ainda assim você
-consegue enxergar.  Pequenos animais e alguns pássaros fogem depressa, à
-medida que você se aproxima, escondendo-se nas folhas dos galhos de cima.
-Você poderia fácilmente escorregar de volta para o chão ou continuar indo
-para cima.  Um grande galho bem à sua esquerda parece ser uma boa rota de
-saída.
+   Vocï¿½ estï¿½ em um imenso carvalho, mais ou menos um terï¿½o abaixo do topo.
+Embora os galhos de cima bloqueiem prï¿½ticamente toda a luz, ainda assim vocï¿½
+consegue enxergar.  Pequenos animais e alguns pï¿½ssaros fogem depressa, ï¿½
+medida que vocï¿½ se aproxima, escondendo-se nas folhas dos galhos de cima.
+Vocï¿½ poderia fï¿½cilmente escorregar de volta para o chï¿½o ou continuar indo
+para cima.  Um grande galho bem ï¿½ sua esquerda parece ser uma boa rota de
+saï¿½da.
 ~
 60 0 0 0 0 5
 D3
-Este galho parece ser grande e forte o bastante para que você consiga
-caminhar sobre ele em direção ao oeste.
+Este galho parece ser grande e forte o bastante para que vocï¿½ consiga
+caminhar sobre ele em direï¿½ï¿½o ao oeste.
 ~
 ~
 0 -1 6031
 D4
-Mais alguns galhos grandes da árvore saem da imensa árvore.
+Mais alguns galhos grandes da ï¿½rvore saem da imensa ï¿½rvore.
 ~
 ~
 0 -1 6032
 D5
-A difícil clareira está a apenas poucos passos abaixo de você.
+A difï¿½cil clareira estï¿½ a apenas poucos passos abaixo de vocï¿½.
 ~
 ~
 0 -1 6029
 E
 galho galhos~
-Este galho parece ser grande e forte o bastante para que você consiga
-caminhar sobre ele em direção ao oeste.
+Este galho parece ser grande e forte o bastante para que vocï¿½ consiga
+caminhar sobre ele em direï¿½ï¿½o ao oeste.
 ~
 E
 felino~
-A sombra que está acima de você se move com graça e confiança.  Você pensa
-que talvez seja um gato do mato, caçando pequenos animais da floresta.
+A sombra que estï¿½ acima de vocï¿½ se move com graï¿½a e confianï¿½a.  Vocï¿½ pensa
+que talvez seja um gato do mato, caï¿½ando pequenos animais da floresta.
 ~
 E
-animais pássaro pássaros~
-Uma grande variedade de esquilos e pássaros construíram seus lares nesta e
-em outras árvores próximas.  Se você olhar mais atentamente, poderá ver
+animais pï¿½ssaro pï¿½ssaros~
+Uma grande variedade de esquilos e pï¿½ssaros construï¿½ram seus lares nesta e
+em outras ï¿½rvores prï¿½ximas.  Se vocï¿½ olhar mais atentamente, poderï¿½ ver
 alguns dos seus ninhos.
 ~
 E
 ninho ninhos~
-Após um pequeno período de observação, você percebe que em um galho acima de
-você está um pequeno ninho de pássaro e em outro galho, um pouco mais para a
+Apï¿½s um pequeno perï¿½odo de observaï¿½ï¿½o, vocï¿½ percebe que em um galho acima de
+vocï¿½ estï¿½ um pequeno ninho de pï¿½ssaro e em outro galho, um pouco mais para a
 esquerda, um esquilo construiu a sua toca.
 ~
 S
 #6031
 Em um Galho do Grande Carvalho~
-   Este galho forte se projeta em direção ao caminho que segue para o oeste
-e talvez você seja capaz de pular daqui.  Alguns esquilos do campo se
-escondem, com medo de sua presença cada vez mais próxima, deixando-o sózinho
-na companhia de uma suave brisa.  Para o norte você pode ver uma pequena
-cabana meio escondida entre as árvores e para o sudeste há o que parece ser
+   Este galho forte se projeta em direï¿½ï¿½o ao caminho que segue para o oeste
+e talvez vocï¿½ seja capaz de pular daqui.  Alguns esquilos do campo se
+escondem, com medo de sua presenï¿½a cada vez mais prï¿½xima, deixando-o sï¿½zinho
+na companhia de uma suave brisa.  Para o norte vocï¿½ pode ver uma pequena
+cabana meio escondida entre as ï¿½rvores e para o sudeste hï¿½ o que parece ser
 algum tipo de clareira, com muitos abutres voando por ali.
 ~
 60 4 0 0 0 3
 D1
-De volta para o leste você vê um tronco de árvore.  Ele é muito menos
-precário que este aqui...talvez você devesse voltar.
+De volta para o leste vocï¿½ vï¿½ um tronco de ï¿½rvore.  Ele ï¿½ muito menos
+precï¿½rio que este aqui...talvez vocï¿½ devesse voltar.
 ~
 ~
 0 -1 6030
 D5
-Há um pequeno caminho embaixo, provávelmente usado pelos animais da
-floresta.  Você pensa que talvez dê para pular daqui.
+Hï¿½ um pequeno caminho embaixo, provï¿½velmente usado pelos animais da
+floresta.  Vocï¿½ pensa que talvez dï¿½ para pular daqui.
 ~
 ~
 0 -1 6016
 E
 galho galhos~
-Este galho parece ser grande e forte o bastante para que você consiga
-caminhar sobre ele em volta da árvore.
+Este galho parece ser grande e forte o bastante para que vocï¿½ consiga
+caminhar sobre ele em volta da ï¿½rvore.
 ~
 E
 andar animal sombra~
-Daqui parece um felino.  Você continua achando que aquela coisa ainda não
-percebeu sua presença, mesmo com todo o barulho que você fez enquanto
-escavala esta árvore.
+Daqui parece um felino.  Vocï¿½ continua achando que aquela coisa ainda nï¿½o
+percebeu sua presenï¿½a, mesmo com todo o barulho que vocï¿½ fez enquanto
+escavala esta ï¿½rvore.
 ~
 E
 felino~
-A sombra que está acima de você se move com graça e confiança.  Você pensa
-que talvez seja um gato do mato, caçando pequenos animais da floresta.
+A sombra que estï¿½ acima de vocï¿½ se move com graï¿½a e confianï¿½a.  Vocï¿½ pensa
+que talvez seja um gato do mato, caï¿½ando pequenos animais da floresta.
 ~
 E
-animais pássaro pássaros~
-Uma grande variedade de esquilos e pássaros construíram seus lares nesta e
-em outras árvores próximas.  Se você olhar mais atentamente, poderá ver
+animais pï¿½ssaro pï¿½ssaros~
+Uma grande variedade de esquilos e pï¿½ssaros construï¿½ram seus lares nesta e
+em outras ï¿½rvores prï¿½ximas.  Se vocï¿½ olhar mais atentamente, poderï¿½ ver
 alguns dos seus ninhos.
 ~
 E
 ninho ninhos~
-Você percebe que alguns esquilos decidiram se refugiar em uma grande toca
-que está bem ao seu alcance.  Olhando dentro do buraco você percebe um par
-de olhos que o estão vigiando atentamente.
+Vocï¿½ percebe que alguns esquilos decidiram se refugiar em uma grande toca
+que estï¿½ bem ao seu alcance.  Olhando dentro do buraco vocï¿½ percebe um par
+de olhos que o estï¿½o vigiando atentamente.
 ~
 S
 #6032
 Na Metade do Caminho para o Topo do Grande Carvalho~
-   Você está em um imenso carvalho, prestes a alcançar o seu topo.  Os
-galhos que estão acima, bloqueiam a luz mas há iluminação suficiente para
-que você possa enxergar.  Alguns pássaros permaneceram aqui, observando-o
-através da folhagem e fora do seu alcance.  Marcas de garras estão gravadas
-no tronco e você pensa que o animal que fêz isso deve ser muito forte.  Com
+   Vocï¿½ estï¿½ em um imenso carvalho, prestes a alcanï¿½ar o seu topo.  Os
+galhos que estï¿½o acima, bloqueiam a luz mas hï¿½ iluminaï¿½ï¿½o suficiente para
+que vocï¿½ possa enxergar.  Alguns pï¿½ssaros permaneceram aqui, observando-o
+atravï¿½s da folhagem e fora do seu alcance.  Marcas de garras estï¿½o gravadas
+no tronco e vocï¿½ pensa que o animal que fï¿½z isso deve ser muito forte.  Com
 certeza deve ser algum tipo de felino grande, que deve viver nos arredores,
-portanto, todo cuidado é pouco.  Você pode continuar subindo ainda mais ou
-então escorregar até o solo.
+portanto, todo cuidado ï¿½ pouco.  Vocï¿½ pode continuar subindo ainda mais ou
+entï¿½o escorregar atï¿½ o solo.
 ~
 60 0 0 0 0 5
 D4
-Para cima as árvores estão mais próximas, quase fechadas, mas ainda dá pra
+Para cima as ï¿½rvores estï¿½o mais prï¿½ximas, quase fechadas, mas ainda dï¿½ pra
 para subir mais um pouco.  Acima, a silhueta de um felino andando pelos
-galhos, tentando alcançar um local melhor para pegar um dos pássaros.
-Talvez fosse melhor você se certificar que tipo de gato é este, antes de
-interromper sua caçada....vai que ele prefira caçar você no lugar do
-pássaro.
+galhos, tentando alcanï¿½ar um local melhor para pegar um dos pï¿½ssaros.
+Talvez fosse melhor vocï¿½ se certificar que tipo de gato ï¿½ este, antes de
+interromper sua caï¿½ada....vai que ele prefira caï¿½ar vocï¿½ no lugar do
+pï¿½ssaro.
 ~
 ~
 0 -1 6033
@@ -1161,33 +1161,33 @@ D5
 0 -1 6030
 E
 galho galhos~
-Este galho parece ser grande e forte o bastante para que você consiga
-caminhar sobre ele em volta da árvore.
+Este galho parece ser grande e forte o bastante para que vocï¿½ consiga
+caminhar sobre ele em volta da ï¿½rvore.
 ~
 E
 felino~
-A sombra que está acima de você se move com graça e confiança.  Você pensa
-que talvez seja um gato do mato, caçando pequenos animais da floresta.
+A sombra que estï¿½ acima de vocï¿½ se move com graï¿½a e confianï¿½a.  Vocï¿½ pensa
+que talvez seja um gato do mato, caï¿½ando pequenos animais da floresta.
 ~
 E
-animais pássaro pássaros~
-Uma grande variedade de esquilos e pássaros construíram seus lares nesta e
-em outras árvores próximas.  Se você olhar mais atentamente, poderá ver
+animais pï¿½ssaro pï¿½ssaros~
+Uma grande variedade de esquilos e pï¿½ssaros construï¿½ram seus lares nesta e
+em outras ï¿½rvores prï¿½ximas.  Se vocï¿½ olhar mais atentamente, poderï¿½ ver
 alguns dos seus ninhos.
 ~
 E
 ninho ninhos~
-Um ninho de tamanho médio está bem perto de você e parece que ele está cheio
+Um ninho de tamanho mï¿½dio estï¿½ bem perto de vocï¿½ e parece que ele estï¿½ cheio
 de deliciosos ovos!
 ~
 S
 #6033
 No Topo do Grande Carvalho~
-   A copa da imensa árvore parece dançar ao vento e você sabe que chegou ao
-ponto mais alto que poderia atingir com segurança.  O tronco da árvore
-mostra evidências de que pequenas batalhas aconteceram aqui pois existem
-ninhos destruídos e penas espalhadas por todo lado.  Olhando em volta, você
-vê toda a floresta que se espalha em todas as direções.  Para o leste você
+   A copa da imensa ï¿½rvore parece danï¿½ar ao vento e vocï¿½ sabe que chegou ao
+ponto mais alto que poderia atingir com seguranï¿½a.  O tronco da ï¿½rvore
+mostra evidï¿½ncias de que pequenas batalhas aconteceram aqui pois existem
+ninhos destruï¿½dos e penas espalhadas por todo lado.  Olhando em volta, vocï¿½
+vï¿½ toda a floresta que se espalha em todas as direï¿½ï¿½es.  Para o leste vocï¿½
 enxerga a cidade de Midgaard e para o sul um rio que corta um abismo.  Para
 o norte e oeste daqui pode-se ver um pequeno vilarejo e uma imensa montanha
 que preenche o horizonte.
@@ -1200,420 +1200,420 @@ para seus ninhos e tocas.
 ~
 0 -1 6032
 E
-rio abismo precipício~
-Ao sul você vê um rio fluindo do nordeste para o oeste.  Ele surge de uma
-abertura em um dos lados da montanha e flui através de Midgaard e pela
-floresta.  A erosão causada pelas águas nas rochas macias do solo da
-floresta, deu origem a um profundo abismo que não pode ser visto sem ter-se
+rio abismo precipï¿½cio~
+Ao sul vocï¿½ vï¿½ um rio fluindo do nordeste para o oeste.  Ele surge de uma
+abertura em um dos lados da montanha e flui atravï¿½s de Midgaard e pela
+floresta.  A erosï¿½o causada pelas ï¿½guas nas rochas macias do solo da
+floresta, deu origem a um profundo abismo que nï¿½o pode ser visto sem ter-se
 penetrado fundo na floresta.
 ~
 E
 montanha nordeste~
 Uma grande cadeia de montanhas tocam a linha do horizonte ao norte e
-nordeste.  Você ouviu rumores de que existem dezenas de criaturas das mais
-variadas espécies que vivem ali, variando desde ogres, elfos, gnomos e
-humanos, sem falar nas dezenas de criaturas humanóides.  Alguns insistem em
-afirmar que os Elfos Negros vivem em cidades subterrâneas escondidas bem
-profundamente no subsolo daquelas terras.  As grutas de Moria também estão
-naquela região, habitada por todos os tipos de criaturas malignas.
+nordeste.  Vocï¿½ ouviu rumores de que existem dezenas de criaturas das mais
+variadas espï¿½cies que vivem ali, variando desde ogres, elfos, gnomos e
+humanos, sem falar nas dezenas de criaturas humanï¿½ides.  Alguns insistem em
+afirmar que os Elfos Negros vivem em cidades subterrï¿½neas escondidas bem
+profundamente no subsolo daquelas terras.  As grutas de Moria tambï¿½m estï¿½o
+naquela regiï¿½o, habitada por todos os tipos de criaturas malignas.
 ~
 E
-árvores árvore floresta mata~
-Bem longe, a sudoeste, você vê um campo coberto por grama e um pequeno lago.
-A noroeste está uma pequena cabana e uma grande pilha de madeira.  Bem
-longe, ao oeste, as copas de árvores formam uma verdadeira couraça verde,
-bloqueando quase totalmente a luz solar e sua visão.  Dizem que enormes
-lobos vivem naquele local.  Seria melhor que você nem se aproximasse daquela
-área...quem sabe quando estiver a procura de outras aventuras....
+ï¿½rvores ï¿½rvore floresta mata~
+Bem longe, a sudoeste, vocï¿½ vï¿½ um campo coberto por grama e um pequeno lago.
+A noroeste estï¿½ uma pequena cabana e uma grande pilha de madeira.  Bem
+longe, ao oeste, as copas de ï¿½rvores formam uma verdadeira couraï¿½a verde,
+bloqueando quase totalmente a luz solar e sua visï¿½o.  Dizem que enormes
+lobos vivem naquele local.  Seria melhor que vocï¿½ nem se aproximasse daquela
+ï¿½rea...quem sabe quando estiver a procura de outras aventuras....
 ~
 S
 #6060
-Um Caminho Escuro Através da Floresta~
-   Você está em um pequeno caminho sombreado, que segue através das árvores.
+Um Caminho Escuro Atravï¿½s da Floresta~
+   Vocï¿½ estï¿½ em um pequeno caminho sombreado, que segue atravï¿½s das ï¿½rvores.
 A floresta gradualmente vai ficando mais clara ao leste.  O caminho continua
-para o norte e para o sul você vê a trilha principal.
+para o norte e para o sul vocï¿½ vï¿½ a trilha principal.
 ~
 60 0 0 0 0 3
 D0
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6065
 D2
-Através de um vão entre as árvores, você vê a trilha principal que segue
+Atravï¿½s de um vï¿½o entre as ï¿½rvores, vocï¿½ vï¿½ a trilha principal que segue
 direto para Midgaard.
 ~
 ~
 0 -1 6001
 E
-árvore árvores~
-As árvores são em sua maioria jovens carvalhos e imensas faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria jovens carvalhos e imensas faias.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-Este caminho ensombreado provávelmente é usado por pequenos animais que
+Este caminho ensombreado provï¿½velmente ï¿½ usado por pequenos animais que
 vivem na floresta.
 ~
 S
 #6061
-Um Caminho Escuro Através da Floresta~
-   Você está em um pequeno caminho sombreado, que segue através das árvores.
+Um Caminho Escuro Atravï¿½s da Floresta~
+   Vocï¿½ estï¿½ em um pequeno caminho sombreado, que segue atravï¿½s das ï¿½rvores.
 A floresta gradualmente vai ficando mais clara ao oeste.  O caminho continua
 para o norte e oeste.
 ~
 60 0 0 0 0 3
 D0
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6066
 D3
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6062
 E
-árvore árvores~
-As copas das velhas árvores deixam a floresta com uma iluminação surreal.
-Um grande tronco está bem à sua frente, por cima do caminho.
+ï¿½rvore ï¿½rvores~
+As copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o surreal.
+Um grande tronco estï¿½ bem ï¿½ sua frente, por cima do caminho.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-Este caminho ensombreado provávelmente é usado por pequenos animais que
+Este caminho ensombreado provï¿½velmente ï¿½ usado por pequenos animais que
 vivem na floresta.
 ~
 S
 #6062
-Um Caminho Escuro Através da Densa Floresta~
-   Você está em um pequeno caminho sombreado que segue através da densa
-floresta.  As copas das velhas árvores deixam a floresta com uma iluminação
-surreal.  Ao norte você vê uma pequena clareira.  Outras trilhas seguem para
+Um Caminho Escuro Atravï¿½s da Densa Floresta~
+   Vocï¿½ estï¿½ em um pequeno caminho sombreado que segue atravï¿½s da densa
+floresta.  As copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o
+surreal.  Ao norte vocï¿½ vï¿½ uma pequena clareira.  Outras trilhas seguem para
 o leste e oeste.
 ~
 60 0 0 0 0 3
 D0
-Mesmo com os arbustos rasteiros você consegue ver uma pequena clareira.
+Mesmo com os arbustos rasteiros vocï¿½ consegue ver uma pequena clareira.
 ~
 ~
 0 -1 6067
 D1
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6061
 D3
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6063
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-Este caminho ensombreado provávelmente é usado por pequenos animais que
+Este caminho ensombreado provï¿½velmente ï¿½ usado por pequenos animais que
 vivem na floresta.
 ~
 S
 #6063
-Um Caminho Escuro Através da Densa Floresta~
-   Você está em um pequeno caminho sombreado que segue através da densa
-floresta.  As copas das velhas árvores deixam a floresta com uma iluminação
+Um Caminho Escuro Atravï¿½s da Densa Floresta~
+   Vocï¿½ estï¿½ em um pequeno caminho sombreado que segue atravï¿½s da densa
+floresta.  As copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o
 surreal.  O caminho segue para o norte e para o leste.
 ~
 60 0 0 0 0 3
 D0
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6068
 D1
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6062
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-Este caminho ensombreado provávelmente é usado por pequenos animais que
+Este caminho ensombreado provï¿½velmente ï¿½ usado por pequenos animais que
 vivem na floresta.
 ~
 S
 #6064
-Um Caminho Escuro Através da Densa Floresta~
-   Você está em um pequeno caminho sombreado que segue através da densa
-floresta.  As copas das velhas árvores deixam a floresta com uma iluminação
+Um Caminho Escuro Atravï¿½s da Densa Floresta~
+   Vocï¿½ estï¿½ em um pequeno caminho sombreado que segue atravï¿½s da densa
+floresta.  As copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o
 surreal.  O caminho segue para o norte e para o sul.
 ~
 60 0 0 0 0 3
 D0
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6069
 D2
-O caminho vai prosseguindo por entre a escuridão.
+O caminho vai prosseguindo por entre a escuridï¿½o.
 ~
 ~
 0 -1 6100
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-Este caminho ensombreado provávelmente é usado por pequenos animais que
+Este caminho ensombreado provï¿½velmente ï¿½ usado por pequenos animais que
 vivem na floresta.
 ~
 S
 #6065
-Um Caminho Escuro Através da Densa Floresta~
-   Você está em um pequeno caminho sombreado, que segue através das árvores.
+Um Caminho Escuro Atravï¿½s da Densa Floresta~
+   Vocï¿½ estï¿½ em um pequeno caminho sombreado, que segue atravï¿½s das ï¿½rvores.
 A floresta gradualmente vai ficando mais densa a oeste.  O caminho segue
 daqui para o sul e oeste.
 ~
 60 0 0 0 0 3
 D2
-Através das árvores do sul você quase consegue enxergar a trilha principal
+Atravï¿½s das ï¿½rvores do sul vocï¿½ quase consegue enxergar a trilha principal
 que segue de volta para Midgaard.
 ~
 ~
 0 -1 6060
 D3
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6066
 E
-árvore árvores~
-As árvores são em sua maioria jovens carvalhos e faias enormes.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria jovens carvalhos e faias enormes.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-Este caminho ensombreado provávelmente é usado por pequenos animais que
+Este caminho ensombreado provï¿½velmente ï¿½ usado por pequenos animais que
 vivem na floresta.
 ~
 S
 #6066
-Uma Encruzilhada no Caminho Escuro Através da Densa Floresta~
-   Você se encontra em uma bifurcação no pequeno caminho ensombreado que
-segue através das árvores.  A floresta gradualmente se torna mais densa para
-o oeste.  O caminho segue para o norte e para o sul aqui e também prossegue
+Uma Encruzilhada no Caminho Escuro Atravï¿½s da Densa Floresta~
+   Vocï¿½ se encontra em uma bifurcaï¿½ï¿½o no pequeno caminho ensombreado que
+segue atravï¿½s das ï¿½rvores.  A floresta gradualmente se torna mais densa para
+o oeste.  O caminho segue para o norte e para o sul aqui e tambï¿½m prossegue
 para o leste.
 ~
 60 0 0 0 0 3
 D0
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6071
 D1
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6065
 D2
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6061
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-Este caminho ensombreado provávelmente é usado por pequenos animais que
+Este caminho ensombreado provï¿½velmente ï¿½ usado por pequenos animais que
 vivem na floresta.
 ~
 S
 #6067
-Na Grande Árvore Caída~
-   Você está em uma pequena clareira, ao lado de uma grande árvore caída.
-Um grande números de árvores já estão em decomposição mas alguns pedaços
-ainda estão inteiros, espalhados pela clareira.  Os caminhos seguem para o
+Na Grande ï¿½rvore Caï¿½da~
+   Vocï¿½ estï¿½ em uma pequena clareira, ao lado de uma grande ï¿½rvore caï¿½da.
+Um grande nï¿½meros de ï¿½rvores jï¿½ estï¿½o em decomposiï¿½ï¿½o mas alguns pedaï¿½os
+ainda estï¿½o inteiros, espalhados pela clareira.  Os caminhos seguem para o
 norte e para o sul.
 ~
 60 0 0 0 0 3
 D0
-O caminho ensombreado vai prosseguindo por entre as árvores.
+O caminho ensombreado vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6072
 D2
-O caminho ensombreado vai prosseguindo por entre as árvores.
+O caminho ensombreado vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6062
 E
 animal caverna toca buraco~
-Você tem a impressão de ter visto debaixo da lenha, um tipo de buraco ou uma
-toca de animal.  Olhando melhor, você acha que viu algo parecido com a
+Vocï¿½ tem a impressï¿½o de ter visto debaixo da lenha, um tipo de buraco ou uma
+toca de animal.  Olhando melhor, vocï¿½ acha que viu algo parecido com a
 figura de um texugo descansando dentro da toca.
 ~
 E
 clareira~
-Pelo jeito desta pequena clareira, quando a imensa árvore caiu, ela deve ter
-derrubado outras árvores menores com ela.
+Pelo jeito desta pequena clareira, quando a imensa ï¿½rvore caiu, ela deve ter
+derrubado outras ï¿½rvores menores com ela.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-Este caminho ensombreado provávelmente é usado por pequenos animais que
+Este caminho ensombreado provï¿½velmente ï¿½ usado por pequenos animais que
 vivem na floresta.
 ~
 S
 #6068
 Um Cruzamento no Caminho Escuro~
-   Você está em um pequeno caminho sombreado que segue através da densa
-floresta.  As copas das velhas árvores deixam a floresta com uma iluminação
+   Vocï¿½ estï¿½ em um pequeno caminho sombreado que segue atravï¿½s da densa
+floresta.  As copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o
 surreal.  O caminho segue para o norte, sul e para o oeste.
 ~
 60 0 0 0 0 3
 D0
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6073
 D2
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6063
 D3
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6069
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-Este caminho ensombreado provávelmente é usado por pequenos animais que
+Este caminho ensombreado provï¿½velmente ï¿½ usado por pequenos animais que
 vivem na floresta.
 ~
 S
 #6069
-Um Caminho Escuro Através da Densa Floresta~
-   Você está em um pequeno caminho sombreado que segue através da densa
-floresta.  As copas das velhas árvores deixam a floresta com uma iluminação
+Um Caminho Escuro Atravï¿½s da Densa Floresta~
+   Vocï¿½ estï¿½ em um pequeno caminho sombreado que segue atravï¿½s da densa
+floresta.  As copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o
 surreal.  O caminho segue para o sul e para o leste.
 ~
 60 0 0 0 0 3
 D1
-O caminho vai prosseguindo por entre as velhas árvores.
+O caminho vai prosseguindo por entre as velhas ï¿½rvores.
 ~
 ~
 0 -1 6068
 D2
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6064
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-Este caminho ensombreado provávelmente é usado por pequenos animais que
+Este caminho ensombreado provï¿½velmente ï¿½ usado por pequenos animais que
 vivem na floresta.
 ~
 S
 #6070
 Fora dos Limites da Floresta Escura~
-   Você está vagando em meio às árvores da floresta clara, sem a ajuda de um
-caminho ou trilha.  Muita luz do sol passa através das árvores aqui, fazendo
-com que sua viagem seja um pouco mais fácil.  Pequenos animais fogem
-assustados quando você se aproxima.  Você não está mais em nenhum caminho
-portanto pode escolher qualquer direção.
+   Vocï¿½ estï¿½ vagando em meio ï¿½s ï¿½rvores da floresta clara, sem a ajuda de um
+caminho ou trilha.  Muita luz do sol passa atravï¿½s das ï¿½rvores aqui, fazendo
+com que sua viagem seja um pouco mais fï¿½cil.  Pequenos animais fogem
+assustados quando vocï¿½ se aproxima.  Vocï¿½ nï¿½o estï¿½ mais em nenhum caminho
+portanto pode escolher qualquer direï¿½ï¿½o.
 ~
 60 0 0 0 0 3
 D0
-As árvores parecem se dividir, expondo assim uma trilha que está nas sombras.
+As ï¿½rvores parecem se dividir, expondo assim uma trilha que estï¿½ nas sombras.
 ~
 ~
 0 -1 6078
 D1
-As árvores parecem se dividir, expondo assim uma trilha que está nas sombras.
+As ï¿½rvores parecem se dividir, expondo assim uma trilha que estï¿½ nas sombras.
 ~
 ~
 0 -1 6070
 D2
-As árvores parecem se dividir, expondo assim uma trilha que está nas sombras.
+As ï¿½rvores parecem se dividir, expondo assim uma trilha que estï¿½ nas sombras.
 ~
 ~
 0 -1 6061
 D3
-As árvores parecem se dividir, expondo assim uma trilha que está nas sombras.
+As ï¿½rvores parecem se dividir, expondo assim uma trilha que estï¿½ nas sombras.
 ~
 ~
 0 -1 6072
 E
-árvore árvores~
-As árvores aqui são bem mais novas do que aquelas que estão a oeste daqui.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores aqui sï¿½o bem mais novas do que aquelas que estï¿½o a oeste daqui.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-O caminho atras de você está bem longo agora...e você não tem mais certeza
-em que direção ele segue.
+O caminho atras de vocï¿½ estï¿½ bem longo agora...e vocï¿½ nï¿½o tem mais certeza
+em que direï¿½ï¿½o ele segue.
 ~
 S
 #6071
-Um Caminho Escuro Através da Floresta~
-   Você está em um pequeno caminho sombreado, que segue através das árvores.
+Um Caminho Escuro Atravï¿½s da Floresta~
+   Vocï¿½ estï¿½ em um pequeno caminho sombreado, que segue atravï¿½s das ï¿½rvores.
 A floresta gradualmente vai ficando mais clara ao leste.  Os caminhos seguem
-para o oeste e sul e você pensa ter visto um pequeno caminho voltado para o
+para o oeste e sul e vocï¿½ pensa ter visto um pequeno caminho voltado para o
 lado leste.
 ~
 60 0 0 0 0 3
 D1
-Parece que um pequeno caminho começa entre duas árvores ao leste mas você
-não tem muita certeza ainda.
+Parece que um pequeno caminho comeï¿½a entre duas ï¿½rvores ao leste mas vocï¿½
+nï¿½o tem muita certeza ainda.
 ~
 ~
 0 -1 6070
 D2
-O caminho vai prosseguindo por entre as árvores até uma pequena
+O caminho vai prosseguindo por entre as ï¿½rvores atï¿½ uma pequena
 encruzilhada.
 ~
 ~
 0 -1 6066
 D3
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6072
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-Este caminho ensombreado provávelmente é usado por pequenos animais que
+Este caminho ensombreado provï¿½velmente ï¿½ usado por pequenos animais que
 vivem na floresta.
 ~
 S
 #6072
-Um Caminho Escuro Através da Floresta~
-   Você se encontra em uma bifurcação no pequeno caminho ensombreado que
-segue através das árvores.  A floresta gradualmente se torna mais densa para
-o oeste.  O caminho segue para o norte e para o leste e você vê uma pequena
+Um Caminho Escuro Atravï¿½s da Floresta~
+   Vocï¿½ se encontra em uma bifurcaï¿½ï¿½o no pequeno caminho ensombreado que
+segue atravï¿½s das ï¿½rvores.  A floresta gradualmente se torna mais densa para
+o oeste.  O caminho segue para o norte e para o leste e vocï¿½ vï¿½ uma pequena
 clareira ao sul.
 ~
 60 0 0 0 0 3
 D0
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6075
 D1
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6071
@@ -1624,20 +1624,20 @@ clareira.
 ~
 0 -1 6067
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-Este caminho ensombreado provávelmente é usado por pequenos animais que
+Este caminho ensombreado provï¿½velmente ï¿½ usado por pequenos animais que
 vivem na floresta.
 ~
 S
 #6073
-Um Caminho Escuro Através da Densa Floresta~
-   Você está em um pequeno caminho escuro que segue através da densa
-floresta.  Para o norte o terreno vai ficando bastante montanhoso e difícil.
-As copas das velhas árvores deixam a floresta com uma iluminação surreal.  O
+Um Caminho Escuro Atravï¿½s da Densa Floresta~
+   Vocï¿½ estï¿½ em um pequeno caminho escuro que segue atravï¿½s da densa
+floresta.  Para o norte o terreno vai ficando bastante montanhoso e difï¿½cil.
+As copas das velhas ï¿½rvores deixam a floresta com uma iluminaï¿½ï¿½o surreal.  O
 caminho segue para o norte e para o sul.
 ~
 60 0 0 0 0 4
@@ -1647,499 +1647,504 @@ O caminho vai prosseguindo por entre a colina e a densa mata.
 ~
 0 -1 6076
 D2
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6068
 E
 terreno terrenos montanhoso montanhosos~
-A noroeste você vê montanhas cobertas por densa floresta.
+A noroeste vocï¿½ vï¿½ montanhas cobertas por densa floresta.
 ~
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-Este caminho ensombreado provávelmente é usado por pequenos animais que
+Este caminho ensombreado provï¿½velmente ï¿½ usado por pequenos animais que
 vivem na floresta.
 ~
 S
 #6074
-Uma Pequena Trilha Através da Floresta~
-   Você acabou de deixar o caminho escuro e se encontra bem no começo de uma
-trilha bastante curta.  Parece que alguém começou a abrir uma clareira aqui,
-em meio aos arbustos, sem contudo ter terminado.  Você pode seguir em
-qualquer direção mas o caminho parece ser para o oeste.
+Uma Pequena Trilha Atravï¿½s da Floresta~
+   Vocï¿½ acabou de deixar o caminho escuro e se encontra bem no comeï¿½o de uma
+trilha bastante curta.  Parece que alguï¿½m comeï¿½ou a abrir uma clareira aqui,
+em meio aos arbustos, sem contudo ter terminado.  Vocï¿½ pode seguir em
+qualquer direï¿½ï¿½o mas o caminho parece ser para o oeste.
 ~
 60 0 0 0 0 3
 D0
-As árvores parecem se dividir, expondo assim uma trilha que está nas sombras.
+As ï¿½rvores parecem se dividir, expondo assim uma trilha que estï¿½ nas sombras.
 ~
 ~
 0 -1 6074
 D1
-As árvores parecem se dividir, expondo assim uma trilha que está nas sombras.
+As ï¿½rvores parecem se dividir, expondo assim uma trilha que estï¿½ nas sombras.
 ~
 ~
 0 -1 6070
 D2
-As árvores parecem se dividir, expondo assim uma trilha que está nas sombras.
+As ï¿½rvores parecem se dividir, expondo assim uma trilha que estï¿½ nas sombras.
 ~
 ~
 0 -1 6070
 D3
-Apesar dos arbustos você consegue ver um pequeno caminho que vai para o lado
+Apesar dos arbustos vocï¿½ consegue ver um pequeno caminho que vai para o lado
 norte.
 ~
 ~
 0 -1 6075
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos~
-Este caminho provávelmente é usado por pequenos animais que vivem na
+Este caminho provï¿½velmente ï¿½ usado por pequenos animais que vivem na
 floresta.
 ~
 S
 #6075
-Um Caminho Escuro Através da Densa Floresta~
-   Você se encontra em um pequeno caminho ensombreado que segue através das
-árvores.  A floresta gradualmente se torna mais densa para o oeste e para o
-noroeste o terreno é bastante montanhoso.  O caminho segue para o norte e
-para o sul.  Para o leste você vê uma trilha que corta o lado mais novo da
+Um Caminho Escuro Atravï¿½s da Densa Floresta~
+   Vocï¿½ se encontra em um pequeno caminho ensombreado que segue atravï¿½s das
+ï¿½rvores.  A floresta gradualmente se torna mais densa para o oeste e para o
+noroeste o terreno ï¿½ bastante montanhoso.  O caminho segue para o norte e
+para o sul.  Para o leste vocï¿½ vï¿½ uma trilha que corta o lado mais novo da
 floresta.
 ~
 60 0 0 0 0 3
 D0
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6078
 D1
-Você acha que está vendo o início de uma pequena trilha que segue para a
+Vocï¿½ acha que estï¿½ vendo o inï¿½cio de uma pequena trilha que segue para a
 parte mais nova da floresta.
 ~
 ~
 0 -1 6074
 D2
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6072
 E
 trilha~
-Você acha que viu o começo de uma pequena trilha ao leste, seguindo rumo a
+Vocï¿½ acha que viu o comeï¿½o de uma pequena trilha ao leste, seguindo rumo a
 parte mais nova da floresta.
 ~
 E
 colina colinas monte terreno~
-Para o noroeste, o terreno começa a ficar mais montanhoso.  Você ouviu falar
+Para o noroeste, o terreno comeï¿½a a ficar mais montanhoso.  Vocï¿½ ouviu falar
 que uma existe uma aldeia de elfos em algum lugar nas montanhas.
 ~
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-Este caminho ensombreado provávelmente é usado por pequenos animais que
+Este caminho ensombreado provï¿½velmente ï¿½ usado por pequenos animais que
 vivem na floresta.
 ~
 S
 #6076
 Na Floresta Densa Entre as Colinas~
-   Você se encontra em meio a muitas árvores espremidas entre algumas
-colinas.  Você perdeu sua trilha há algum tempo atrás e agora precisa
-confiar em seus instintos para guiá-lo.  O chão é bastante pedregoso e
-difícil de caminhar e apenas as plantas mais fortes conseguem sobreviver
-aqui.  As copas das velhas árvores dão às colinas uma iluminação surreal.
+   Vocï¿½ se encontra em meio a muitas ï¿½rvores espremidas entre algumas
+colinas.  Vocï¿½ perdeu sua trilha hï¿½ algum tempo atrï¿½s e agora precisa
+confiar em seus instintos para guiï¿½-lo.  O chï¿½o ï¿½ bastante pedregoso e
+difï¿½cil de caminhar e apenas as plantas mais fortes conseguem sobreviver
+aqui.  As copas das velhas ï¿½rvores dï¿½o ï¿½s colinas uma iluminaï¿½ï¿½o surreal.
 ~
 60 4 0 0 0 4
 D0
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6081
 D1
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6077
 D2
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6076
 D3
-Tudo o que você vê são árvores e um caminho escuro.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e um caminho escuro.
 ~
 ~
 0 -1 6073
 E
 colina colinas monte montes montanha montanhas~
-As colinas elevam-se por toda a sua volta, bloqueando a sua visão do
+As colinas elevam-se por toda a sua volta, bloqueando a sua visï¿½o do
 terreno.
 ~
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-O caminho provávelmente está em algum lugar por aqui...se ao menos você
-tivesse prestado mais atenção.
+O caminho provï¿½velmente estï¿½ em algum lugar por aqui...se ao menos vocï¿½
+tivesse prestado mais atenï¿½ï¿½o.
 ~
 S
 #6077
 Na Floresta Densa Entre as Colinas~
-   Você se encontra em meio a muitas árvores espremidas entre algumas
-colinas.  Você perdeu sua trilha há algum tempo atrás e agora precisa
-confiar em seus instintos para guiá-lo.  O chão é bastante pedregoso e
-difícil de caminhar e apenas as plantas mais fortes conseguem sobreviver
-aqui.  As copas das velhas árvores dão às colinas uma iluminação surreal.
+   Vocï¿½ se encontra em meio a muitas ï¿½rvores espremidas entre algumas
+colinas.  Vocï¿½ perdeu sua trilha hï¿½ algum tempo atrï¿½s e agora precisa
+confiar em seus instintos para guiï¿½-lo.  O chï¿½o ï¿½ bastante pedregoso e
+difï¿½cil de caminhar e apenas as plantas mais fortes conseguem sobreviver
+aqui.  As copas das velhas ï¿½rvores dï¿½o ï¿½s colinas uma iluminaï¿½ï¿½o surreal.
 ~
 60 4 0 0 0 4
 D0
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6081
 D1
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6076
 D2
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6079
 D3
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6077
 E
 colina colinas monte montes montanha montanhas~
-As colinas elevam-se por toda a sua volta, bloqueando a sua visão do
+As colinas elevam-se por toda a sua volta, bloqueando a sua visï¿½o do
 terreno.
 ~
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-O caminho provávelmente está em algum lugar por aqui...se ao menos você
-tivesse prestado mais atenção.
+O caminho provï¿½velmente estï¿½ em algum lugar por aqui...se ao menos vocï¿½
+tivesse prestado mais atenï¿½ï¿½o.
 ~
 S
 #6078
 Na Floresta Densa Entre as Colinas~
-   Você chegou ao final de um caminho escuro que segue por entre as árvores.
-A floresta é bastante espessa aqui e o chão é bastante pedregoso e difícil
+   Vocï¿½ chegou ao final de um caminho escuro que segue por entre as ï¿½rvores.
+A floresta ï¿½ bastante espessa aqui e o chï¿½o ï¿½ bastante pedregoso e difï¿½cil
 de se caminhar, retardando seu progresso.  O caminho segue para o sul e para
 o norte.
 ~
 60 0 0 0 0 4
 D0
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 9301
 D2
-O caminho vai prosseguindo por entre as árvores.
+O caminho vai prosseguindo por entre as ï¿½rvores.
 ~
 ~
 0 -1 6075
 E
 colina colinas monte montes montanha montanhas~
-O terreno ao norte e ao oeste é bastante pedregoso e difícil de caminhar.
-Você ouviu dizer que existe uma aldeia de elfos em algum lugar entre as
+O terreno ao norte e ao oeste ï¿½ bastante pedregoso e difï¿½cil de caminhar.
+Vocï¿½ ouviu dizer que existe uma aldeia de elfos em algum lugar entre as
 montanhas.
 ~
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-Este caminho ensombreado provávelmente é usado por pequenos animais que
+Este caminho ensombreado provï¿½velmente ï¿½ usado por pequenos animais que
 vivem na floresta.
 ~
 S
 #6079
 Na Floresta Densa Entre as Colinas~
-   Você se encontra em meio a muitas árvores espremidas entre algumas
-colinas.  Você perdeu sua trilha há algum tempo atrás e agora precisa
-confiar em seus instintos para guiá-lo.  O chão é bastante pedregoso e
-difícil de caminhar e apenas as plantas mais fortes conseguem sobreviver
-aqui.  As copas das velhas árvores dão às colinas uma iluminação surreal.
+   Vocï¿½ se encontra em meio a muitas ï¿½rvores espremidas entre algumas
+colinas.  Vocï¿½ perdeu sua trilha hï¿½ algum tempo atrï¿½s e agora precisa
+confiar em seus instintos para guiï¿½-lo.  O chï¿½o ï¿½ bastante pedregoso e
+difï¿½cil de caminhar e apenas as plantas mais fortes conseguem sobreviver
+aqui.  As copas das velhas ï¿½rvores dï¿½o ï¿½s colinas uma iluminaï¿½ï¿½o surreal.
 ~
 60 4 0 0 0 4
 D0
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6081
 D1
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6078
 D2
-Tudo o que você vê são árvores e um caminho escuro.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e um caminho escuro.
 ~
 ~
 0 -1 6073
 D3
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6080
 E
 colina colinas monte montes montanha montanhas~
-As colinas elevam-se por toda a sua volta, bloqueando a sua visão do terreno.
+As colinas elevam-se por toda a sua volta, bloqueando a sua visï¿½o do terreno.
 ~
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-O caminho provávelmente está em algum lugar por aqui...se ao menos você
-tivesse prestado mais atenção.
+O caminho provï¿½velmente estï¿½ em algum lugar por aqui...se ao menos vocï¿½
+tivesse prestado mais atenï¿½ï¿½o.
 ~
 S
 #6080
 Na Floresta Densa Entre as Colinas~
-   Você se encontra em meio a muitas árvores espremidas entre algumas
-colinas.  Você perdeu sua trilha há algum tempo atrás e agora precisa
-confiar em seus instintos para guiá-lo.  O chão é bastante pedregoso e
-difícil de caminhar e apenas as plantas mais fortes conseguem sobreviver
-aqui.  As copas das velhas árvores dão às colinas uma iluminação surreal.
+   Vocï¿½ se encontra em meio a muitas ï¿½rvores espremidas entre algumas
+colinas.  Vocï¿½ perdeu sua trilha hï¿½ algum tempo atrï¿½s e agora precisa
+confiar em seus instintos para guiï¿½-lo.  O chï¿½o ï¿½ bastante pedregoso e
+difï¿½cil de caminhar e apenas as plantas mais fortes conseguem sobreviver
+aqui.  As copas das velhas ï¿½rvores dï¿½o ï¿½s colinas uma iluminaï¿½ï¿½o surreal.
 ~
 60 4 0 0 0 4
 D0
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6081
 D1
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6082
 D2
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6076
 D3
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6081
 E
 colina colinas monte montes montanha montanhas~
-As colinas elevam-se por toda a sua volta, bloqueando a sua visão do
+As colinas elevam-se por toda a sua volta, bloqueando a sua visï¿½o do
 terreno.
 ~
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-O caminho provávelmente está em algum lugar por aqui...se ao menos você
-tivesse prestado mais atenção.
+O caminho provï¿½velmente estï¿½ em algum lugar por aqui...se ao menos vocï¿½
+tivesse prestado mais atenï¿½ï¿½o.
 ~
 S
 #6081
 Na Floresta Densa Entre as Colinas~
-   Você se encontra em meio a muitas árvores espremidas entre algumas
-colinas.  Você perdeu sua trilha há algum tempo atrás e agora precisa
-confiar em seus instintos para guiá-lo.  O chão é bastante pedregoso e
-difícil de caminhar e apenas as plantas mais fortes conseguem sobreviver
-aqui.  As copas das velhas árvores dão às colinas uma iluminação surreal.
+   Vocï¿½ se encontra em meio a muitas ï¿½rvores espremidas entre algumas
+colinas.  Vocï¿½ perdeu sua trilha hï¿½ algum tempo atrï¿½s e agora precisa
+confiar em seus instintos para guiï¿½-lo.  O chï¿½o ï¿½ bastante pedregoso e
+difï¿½cil de caminhar e apenas as plantas mais fortes conseguem sobreviver
+aqui.  As copas das velhas ï¿½rvores dï¿½o ï¿½s colinas uma iluminaï¿½ï¿½o surreal.
 ~
 60 4 0 0 0 4
 D0
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6078
 D1
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6077
 D2
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6076
 D3
-Tudo o que você vê são árvores e um caminho escuro.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e um caminho escuro.
 ~
 ~
 0 -1 6073
 E
 colina colinas monte montes montanha montanhas~
-As colinas elevam-se por toda a sua volta, bloqueando a sua visão do terreno.
+As colinas elevam-se por toda a sua volta, bloqueando a sua visï¿½o do terreno.
 ~
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 E
 caminho caminhos sombra ensombreado escuro~
-O caminho provávelmente está em algum lugar por aqui...se ao menos você
-tivesse prestado mais atenção.
+O caminho provï¿½velmente estï¿½ em algum lugar por aqui...se ao menos vocï¿½
+tivesse prestado mais atenï¿½ï¿½o.
 ~
 S
 #6082
 Na Floresta Densa Entre as Colinas~
-   Você se encontra em meio a muitas árvores espremidas em uma colina.  A
-densa floresta se espalha por todos os lados e as copas das velhas árvores
-dão às colinas uma iluminação surreal.
+   Vocï¿½ se encontra em meio a muitas ï¿½rvores espremidas em uma colina.  A
+densa floresta se espalha por todos os lados e as copas das velhas ï¿½rvores
+dï¿½o ï¿½s colinas uma iluminaï¿½ï¿½o surreal.
 ~
 60 4 0 0 0 4
 D0
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6081
 D1
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6079
 D2
-Tudo o que você vê são árvores e ladeiras.
+Tudo o que vocï¿½ vï¿½ sï¿½o ï¿½rvores e ladeiras.
 ~
 ~
 0 -1 6076
 E
 colina colinas monte montes montanha montanhas~
-As colinas elevam-se por toda a sua volta, bloqueando a sua visão do
+As colinas elevam-se por toda a sua volta, bloqueando a sua visï¿½o do
 terreno.
 ~
 E
-árvore árvores~
-As árvores são em sua maioria velhos carvalhos e faias.
+ï¿½rvore ï¿½rvores~
+As ï¿½rvores sï¿½o em sua maioria velhos carvalhos e faias.
 ~
 S
 #6090
-Uma Estrada Através das Planícies~
-   Você está em uma estrada empoeirada que vai para o leste-oeste através
-das planícies ocidentais.  Ocasionalmente pode-se ver caçadores e
-aventureiros por aqui, vindos ou indo para a floresta.  Ao leste está a
+Uma Estrada Atravï¿½s das Planï¿½cies~
+   Vocï¿½ estï¿½ em uma estrada empoeirada que vai para o leste-oeste atravï¿½s
+das planï¿½cies ocidentais.  Ocasionalmente pode-se ver caï¿½adores e
+aventureiros por aqui, vindos ou indo para a floresta.  Ao leste estï¿½ a
 grande cidade de Midgaard e para o oeste a estrada termina em uma estreita
 trilha que segue para uma grande floresta.  Uma outra trilha, a sul, leva a
 uma floresta de ar intocado.
 ~
 60 4 0 0 0 2
 D1
-Longe, ao leste, você pode ver as grandes muralhas de Midgaard.
+Longe, ao leste, vocï¿½ pode ver as grandes muralhas de Midgaard.
 ~
 ~
 0 -1 6091
 D2
-Há uma floresta de vegetação abundante nessa direção.
+Hï¿½ uma floresta de vegetaï¿½ï¿½o abundante nessa direï¿½ï¿½o.
 ~
 ~
 0 -1 2792
 D3
-Para o oeste termina a empoeirada estrada e começa uma estreita trilha que
-segue em direção às sombras frescas e agradáveis da floresta.
+Para o oeste termina a empoeirada estrada e comeï¿½a uma estreita trilha que
+segue em direï¿½ï¿½o ï¿½s sombras frescas e agradï¿½veis da floresta.
 ~
 ~
 0 -1 6000
 E
 estrada poeira empoeirada~
-A estrada é bastante usada mas bastante empoeirada.
+A estrada ï¿½ bastante usada mas bastante empoeirada.
 ~
 E
-árvore árvores floresta~
-As árvores são bem altas levando-se em conta que elas parecem ser bastante
+ï¿½rvore ï¿½rvores floresta~
+As ï¿½rvores sï¿½o bem altas levando-se em conta que elas parecem ser bastante
 jovens.
 ~
 E
 trilha~
-A trilha da floresta vai abrindo caminho para o oeste, através das árvores.
+A trilha da floresta vai abrindo caminho para o oeste, atravï¿½s das ï¿½rvores.
 ~
 S
 #6091
-Uma Estrada Através das Planícies~
-   Você está em uma estrada empoeirada que vai para o leste-oeste através
-das planícies ocidentais.  Ocasionalmente pode-se ver caçadores e
-aventureiros por aqui, vindos ou indo para a floresta.  Ao leste está a
+Uma Estrada Atravï¿½s das Planï¿½cies~
+   Vocï¿½ estï¿½ em uma estrada empoeirada que vai para o leste-oeste atravï¿½s
+das planï¿½cies ocidentais.  Ocasionalmente pode-se ver caï¿½adores e
+aventureiros por aqui, vindos ou indo para a floresta.  Ao leste estï¿½ a
 grande cidade de Midgaard e para o oeste a estrada termina em uma estreita
 trilha que segue para uma grande floresta.
 ~
 60 4 0 0 0 2
 D1
-Longe, ao leste, você pode ver as grandes muralhas e o portão ocidental de
+Longe, ao leste, vocï¿½ pode ver as grandes muralhas e o portï¿½o ocidental de
 Midgaard.
 ~
 ~
 0 -1 6092
 D3
-Você vê uma grande floresta, Haon-Dor, expandindo-se para o oeste e a
-noroeste você vê que a floresta cede espaço para colinas.
+Vocï¿½ vï¿½ uma grande floresta, Haon-Dor, expandindo-se para o oeste e a
+noroeste vocï¿½ vï¿½ que a floresta cede espaï¿½o para colinas.
 ~
 ~
 0 -1 6090
 E
 estrada poeira empoeirada~
-A estrada é bastante usada mas bastante empoeirada.
+A estrada ï¿½ bastante usada mas bastante empoeirada.
 ~
 E
-árvore árvores~
-Algumas árvores pequenas crescem entre os arbustos das planícies.  Este
-lento crescimento vai sendo notado a medida que você se afasta mais do lado
+ï¿½rvore ï¿½rvores~
+Algumas ï¿½rvores pequenas crescem entre os arbustos das planï¿½cies.  Este
+lento crescimento vai sendo notado a medida que vocï¿½ se afasta mais do lado
 ocidental de Haon-Dor.
 ~
 E
 floresta haondor haon-dor~
 A grande floresta de Haon-Don se expande para o oeste.  Pequenos ou grandes
-jogos podem ser fácilmente disputados aqui....com muita aventura, e claro,
-muitos perigos também.
+jogos podem ser fï¿½cilmente disputados aqui....com muita aventura, e claro,
+muitos perigos tambï¿½m.
 ~
 S
 #6092
-Uma Estrada Através das Planícies~
-   Você está em uma estrada empoeirada que vai para o leste-oeste através
-das planícies ocidentais.  Ocasionalmente pode-se ver caçadores e
-aventureiros por aqui, vindos ou indo para a floresta.  Ao leste está a
+Uma Estrada Atravï¿½s das Planï¿½cies~
+   Vocï¿½ estï¿½ em uma estrada empoeirada que vai para o leste-oeste atravï¿½s
+das planï¿½cies ocidentais.  Ocasionalmente pode-se ver caï¿½adores e
+aventureiros por aqui, vindos ou indo para a floresta.  Ao leste estï¿½ a
 grande cidade de Midgaard e para o oeste a estrada termina em uma estreita
 trilha que segue para uma grande floresta.
 ~
 60 4 0 0 0 1
+D0
+Ao norte vocÃª pode ver uma cabana de troncos com uma fogueira.
+~
+~
+0 -1 3089
 D1
-Longe, ao leste, você pode ver as grandes muralhas e o portão oeste de
+Longe, ao leste, vocï¿½ pode ver as grandes muralhas e o portï¿½o oeste de
 Midgaard.
 ~
 ~
 0 -1 3052
 D3
-A estrada segue para o oeste, em direção à floresta.
+A estrada segue para o oeste, em direï¿½ï¿½o ï¿½ floresta.
 ~
 ~
 0 -1 6091
 E
 estrada poeira empoeirada~
-A estrada é bastante usada mas bastante empoeirada.
+A estrada ï¿½ bastante usada mas bastante empoeirada.
 ~
 E
 floresta haondor haon-dor~
    A grande floresta de Haon-Don se expande para o oeste.  Pequenos ou
-grandes jogos podem ser fácilmente disputados aqui....com muita aventura, e
-claro, muitos perigos também.
+grandes jogos podem ser fï¿½cilmente disputados aqui....com muita aventura, e
+claro, muitos perigos tambï¿½m.
 ~
 S
 $~
