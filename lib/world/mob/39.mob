@@ -301,11 +301,11 @@ E
 #3919
 valik zumbi dragao~
 Valik, o dragão zumbi~
-Um gigantesco drag�o com a pele em decomposi��o se move diante de voc�.
+Um gigantesco dragão com a pele em decomposição se move diante de você.
 ~
-Aliado do mal, ele � considerado o segundo ser mais poderoso pr�ximo a
-Damorask.  Valik esteve aqui desde o come�o dos tempos.  Um dos mais
-poderosos seres est� diante de voc�, voc� nota que em sua boca caberiam
+Aliado do mal, ele é considerado o segundo ser mais poderoso próximo a
+Damorask.  Valik esteve aqui desde o começo dos tempos.  Um dos mais
+poderosos seres está diante de você, você nota que em sua boca caberiam
 facilmente 5 homens.
 ~
 2099314 0 0 0 0 0 0 0 -1000 E
@@ -320,13 +320,13 @@ E
 #3920
 damorask figura gelo~
 Damorask~
-Uma figura, uma vez humana, feita de gelo levanta seus bra�os para a �rvore assim que voc� se aproxima.
+Uma figura, uma vez humana, feita de gelo levanta seus braços para a árvore assim que você se aproxima.
 ~
-Apesar de ser feito de gelo em seu local perpetuamente congelado, voc� nota
-que o tempo ainda afeita esse poderoso feiticeiro.  Olhos s�bios e
-movimentos afetados pela idade desmentem seu mort�fero poder.  Com um s�bito
-movimento de sua m�o, afiados fragmentos de gelo saltam do ch�o e come�am a
-rode�-lo.
+Apesar de ser feito de gelo em seu local perpetuamente congelado, você nota
+que o tempo ainda afeita esse poderoso feiticeiro.  Olhos sábios e
+movimentos afetados pela idade desmentem seu mortífero poder.  Com um súbito
+movimento de sua mão, afiados fragmentos de gelo saltam do chão e começam a
+rodeá-lo.
 ~
 2119794 0 0 0 0 0 0 0 -1000 E
 48 27 -28 1d48+4500 4d5+24
@@ -338,9 +338,9 @@ Int: 13
 Wis: 13
 E
 #3921
-m�mico estatueta~
-o m�mico~
-A estatueta move-se graciosamente em sua dire��o.
+mimico estatueta~
+o mímico~
+A estatueta move-se graciosamente em sua direção.
 ~
 An undefined string.
 ~
@@ -355,11 +355,11 @@ E
 #3922
 monolito gelo~
 um monolito gigante~
-Um gigantesco monolito de gelo v�m descontroladamente em sua dire��o.
+Um gigantesco monolito de gelo vêm descontroladamente em sua direção.
 ~
-Em tamanho, isso � um rival de Valik.  Valik, at� mesmo em um ataque de
-f�ria, pensaria duas vezes antes de enfrentar isso.  Seu corpo massivo
-parece ter sido cinzelado com uma camada impenetr�vel de gelo.
+Em tamanho, isso é um rival de Valik.  Valik, até mesmo em um ataque de
+fúria, pensaria duas vezes antes de enfrentar isso.  Seu corpo massivo
+parece ter sido cinzelado com uma camada impenetrável de gelo.
 ~
 2115634 0 0 0 0 0 0 0 -1000 E
 50 29 -28 1d50+6000 4d5+25
@@ -373,10 +373,10 @@ E
 #3923
 besta neve~
 uma besta da neve~
-Uma besta da neve se p�e diante de voc�, guardando a ilha.
+Uma besta da neve se põe diante de você, guardando a ilha.
 ~
-A besta da neve parece brilhar misteriosamente.  Ela rosna para voc� assim
-que voc� tenta passar por ela para a ilha.  Ela foi posta aqui de sentinela
+A besta da neve parece brilhar misteriosamente.  Ela rosna para você assim
+que você tenta passar por ela para a ilha.  Ela foi posta aqui de sentinela
 pelo seu mestre Damorask.
 ~
 2115634 0 0 0 2136 0 0 0 -1000 E
@@ -394,7 +394,7 @@ um pilar de gelo~
 Um grande pilar de gelo foi posto aqui.
 ~
 Apenas um pilar feito de gelo, resistente e frio.  Seu contemplamento pode
-transforma-lo em uma est�tua massiva de gelo se isso for desejado.
+transforma-lo em uma estátua massiva de gelo se isso for desejado.
 ~
 2187264 0 0 0 1048832 0 0 0 -1000 E
 40 21 -20 1d40+2525 4d5+20
@@ -406,9 +406,9 @@ Int: 13
 Wis: 13
 E
 #3925
-yeti �gua~
-um yeti de �gua~
-Um yeti de �gua est� aqui, guardando seu precioso rio.
+yeti agua~
+um yeti de água~
+Um yeti de água está aqui, guardando seu precioso rio.
 ~
 An undefined string.
 ~
@@ -422,17 +422,17 @@ Int: 13
 Wis: 13
 E
 #3926
-pseudo-hidra pseudo hidra drag�o~
+pseudo-hidra pseudo hidra dragao~
 uma Pseudo-Hidra vermelha~
-Do centro do redemoinho surgem sete cabe�as de drag�o que rosnam ao mesmo tempo para voc�.
+Do centro do redemoinho surgem sete cabeças de dragão que rosnam ao mesmo tempo para você.
 ~
-Surgindo da �gua, um massivo corpo rept�lico parece alcan�ar os c�us.  Suas
-sete cabe�as emitem um ensurdecedor ru�do para voc�.  A Pseudo-Hidra
-vermelha � a ultima de uma grande ra�a anci� mort�fera.  Uma explos�o de
-chamas...  Um grande esguicho de �cido...  Uma mortal carga el�trica...  Uma
-rajada de gelo...  Um atordoante golpe de �gua...  Uma grossa n�voa de gases
-venenosos...  Um bruxuleio de luz profana...  Algo lhe diz que a hidra � um
-advers�rio formid�vel.
+Surgindo da água, um massivo corpo reptílico parece alcançar os céus.  Suas
+sete cabeças emitem um ensurdecedor ruído para você.  A Pseudo-Hidra
+vermelha é a ultima de uma grande raça anciã mortífera.  Uma explosão de
+chamas...  Um grande esguicho de ácido...  Uma mortal carga elétrica...  Uma
+rajada de gelo...  Um atordoante golpe de água...  Uma grossa névoa de gases
+venenosos...  Um bruxuleio de luz profana...  Algo lhe diz que a hidra é um
+adversário formidável.
 ~
 2287634 0 0 0 0 0 0 0 0 E
 43 23 -24 1d43+2800 4d5+21
@@ -446,11 +446,11 @@ E
 #3927
 hidra gigante~
 uma hidra gigante~
-Uma gigantesca hidra de seis cabe�as est� aqui, adormecida.
+Uma gigantesca hidra de seis cabeças está aqui, adormecida.
 ~
-Ela parece estar em um profundo sono m�gico, mas talvez n�o por muito tempo.
-Uma das seis cabe�as se move como se estivesse prestes a acordar.  Ela � bem
-maior do que um drag�o comum e parece ser t�o m� quanto.
+Ela parece estar em um profundo sono mágico, mas talvez não por muito tempo.
+Uma das seis cabeças se move como se estivesse prestes a acordar.  Ela é bem
+maior do que um dragão comum e parece ser tão má quanto.
 ~
 2353186 0 0 0 2136 0 0 0 -520 E
 37 19 -20 1d37+2450 3d7+18
@@ -464,11 +464,11 @@ E
 #3928
 feiticeiro marfim homem~
 um feiticeiro de marfim~
-Um velho homem com apar�ncia s�bia est� aqui, afundado em sua insanidade.
+Um velho homem com aparência sábia está aqui, afundado em sua insanidade.
 ~
-Uma pura aura branca o rodea.  Apesar de seu corpo fr�gil, seus olhos s�o
+Uma pura aura branca o rodea.  Apesar de seu corpo frágil, seus olhos são
 cheios de vida.  Ele continua eternamente confinado a essa sala por uma
-poderosa for�a maligna que n�o pode ser quebrada.  Calmamente, ele caminha
+poderosa força maligna que não pode ser quebrada.  Calmamente, ele caminha
 para o vaso e se protege com ele.
 ~
 2291730 0 0 0 344 0 0 0 1000 E
