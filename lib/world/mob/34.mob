@@ -1,10 +1,10 @@
 #3400
 cavaleiro homem monquis~
 Monquis~
-Um homem magro e baixo se apoia na cadeira atrás do balcão.
+Um homem magro e baixo se apoia na cadeira atrÃ¡s do balcÃ£o.
 ~
-Ele lhe dá um sorriso e um aceno, oferecendo ajuda em qualquer coisa que 
-você venha a precisar.
+Ele lhe dÃ¡ um sorriso e um aceno, oferecendo ajuda em qualquer coisa que 
+vocÃª venha a precisar.
 ~
 2353154 0 0 0 0 0 0 0 500 E
 50 10 -8 3d4+1000 5d5+13
@@ -12,12 +12,12 @@ você venha a precisar.
 8 8 1
 E
 #3401
-pégaso radiante~
-um radiante pégaso~
+pegaso radiante~
+um radiante pÃ©gaso~
 Um branco e radiante cavalo alado espera pela ordem de seu mestre.
 ~
-Ele relincha e bufa.  Há um pouco de nervosismo em seus olhos mas não o 
-suficiente para o espantar de alguém ou de algo.  Ele é o cavalo 
+Ele relincha e bufa.  HÃ¡ um pouco de nervosismo em seus olhos mas nÃ£o o 
+suficiente para o espantar de alguÃ©m ou de algo.  Ele Ã© o cavalo 
 perfeito.
 ~
 2353152 0 0 0 0 0 0 0 900 E
@@ -26,11 +26,11 @@ perfeito.
 8 8 1
 E
 #3402
-mestre estábulo homem~
-o mestre de estábulo~
-O mestre de estábulo está aqui, cuidando dos animais.
+mestre estabulo homem~
+o mestre de estÃ¡bulo~
+O mestre de estÃ¡bulo estÃ¡ aqui, cuidando dos animais.
 ~
-Ele acena para você, sem dizer nada enquanto penteia uma égua.
+Ele acena para vocÃª, sem dizer nada enquanto penteia uma Ã©gua.
 ~
 2287638 0 0 0 0 0 0 0 400 E
 50 6 -8 10d10+1000 5d5+13
@@ -40,10 +40,10 @@ E
 #3403
 guarda entrada villspah~
 o guarda da entrada~
-Um guarda está aqui no portão, checando o registro de cada um.
+Um guarda estÃ¡ aqui no portÃ£o, checando o registro de cada um.
 ~
-Apesar de não ser um homem humilde, ele parece ser muito ríspido - caso 
-alguém ou algo o impeça de fazer o seu trabalho.
+Apesar de nÃ£o ser um homem humilde, ele parece ser muito rÃ­spido - caso 
+alguÃ©m ou algo o impeÃ§a de fazer o seu trabalho.
 ~
 2357250 0 0 0 0 0 0 0 400 E
 95 -10 -40 6d6+10000 6d8+63
@@ -58,8 +58,8 @@ hospedeiro villspah~
 o hospedeiro~
 Um hospedeiro se apoia em uma grande cadeira, lendo um pequeno livro.
 ~
-Ele é um homem magro, e alguém que adora ler.  Sua atenção está tão fixada 
-no livro que ele parece nem perceber sua presença.
+Ele Ã© um homem magro, e alguÃ©m que adora ler.  Sua atenÃ§Ã£o estÃ¡ tÃ£o fixada 
+no livro que ele parece nem perceber sua presenÃ§a.
 ~
 2287618 0 0 0 0 0 0 0 400 E
 50 7 -2 5d7+1000 5d5+13
@@ -69,10 +69,10 @@ E
 #3405
 criada mulher villspah~
 uma criada~
-Uma criada se apressa atrás do balcão.
+Uma criada se apressa atrÃ¡s do balcÃ£o.
 ~
-Ela lhe dá um rápido sorriso.
-'O que você deseja?', ela pergunta.
+Ela lhe dÃ¡ um rÃ¡pido sorriso.
+'O que vocÃª deseja?', ela pergunta.
 ~
 2287618 0 0 0 0 0 0 0 400 E
 50 4 -5 6d6+500 5d5+13
@@ -80,12 +80,12 @@ Ela lhe dá um rápido sorriso.
 8 8 2
 E
 #3406
-homem bondoso freguês villspah~
-um freguês~
-Um freguês da taverna se apoia no balcão, tagarelando.
+homem bondoso fregues villspah~
+um freguÃªs~
+Um freguÃªs da taverna se apoia no balcÃ£o, tagarelando.
 ~
-Ele parece estar um pouco embriagado, soluçando enquanto fala.  Com 
-certeza ele está apoiado no balcão para poder se manter em pé.
+Ele parece estar um pouco embriagado, soluÃ§ando enquanto fala.  Com 
+certeza ele estÃ¡ apoiado no balcÃ£o para poder se manter em pÃ©.
 ~
 2123778 0 0 0 0 0 0 0 200 E
 55 8 0 1d1+1500 5d6+16
@@ -95,10 +95,10 @@ E
 #3407
 local habitante Hank~
 um habitante local~
-Um habitante local está sentado com sua esposa em uma mesa.
+Um habitante local estÃ¡ sentado com sua esposa em uma mesa.
 ~
-Ele escuta sem atenção sua esposa tagarelando em seu ouvido sobre o dia 
-que ela teve.  Ele obviamente não está nem um pouco interessado.
+Ele escuta sem atenÃ§Ã£o sua esposa tagarelando em seu ouvido sobre o dia 
+que ela teve.  Ele obviamente nÃ£o estÃ¡ nem um pouco interessado.
 ~
 2287618 0 0 0 0 0 0 0 300 E
 46 5 -8 4d4+1300 5d5+10
@@ -108,11 +108,11 @@ E
 #3408
 mulher local esposa villspah~
 uma mulher local~
-Uma mulher fala sem parar com seu marido, parando só para respirar.
+Uma mulher fala sem parar com seu marido, parando sÃ³ para respirar.
 ~
-Ela está alegremente descrevendo o seu dia ao marido, que está, obviamente, 
-mais interessado em comer do que ouvir as histórias de angústia do grupo 
-de tricô.
+Ela estÃ¡ alegremente descrevendo o seu dia ao marido, que estÃ¡, obviamente, 
+mais interessado em comer do que ouvir as histÃ³rias de angÃºstia do grupo 
+de tricÃ´.
 ~
 2287618 0 0 0 0 0 0 0 200 E
 27 12 -8 2d10+950 5d4+18
@@ -124,8 +124,8 @@ homem velho cansado villspah~
 um velho~
 Um homem velho e cansado se curva por sobre uma mesa, acordado mas exausto.
 ~
-Ele se inclina sobre a mesa, com os dois braços dobrados abaixo de sua 
-cabeça, e uma pequena linha de saliva escorre do lado esquerdo de sua boca.
+Ele se inclina sobre a mesa, com os dois braÃ§os dobrados abaixo de sua 
+cabeÃ§a, e uma pequena linha de saliva escorre do lado esquerdo de sua boca.
 ~
 2271234 0 0 0 0 0 0 0 600 E
 61 0 -6 5d5+1300 5d6+10
@@ -135,10 +135,10 @@ E
 #3410
 velho villspah madeireiro~
 um velho madeireiro~
-Um velho madeireiro descansa em uma cadeira, observando um pequeno inseto rastejando pelo chão.
+Um velho madeireiro descansa em uma cadeira, observando um pequeno inseto rastejando pelo chÃ£o.
 ~
-Ele se senta com sua cerveja em mãos, mas nunca dá um gole.  Curioso como 
-um homem ache tanta fascinação em um inseto como aquele.
+Ele se senta com sua cerveja em mÃ£os, mas nunca dÃ¡ um gole.  Curioso como 
+um homem ache tanta fascinaÃ§Ã£o em um inseto como aquele.
 ~
 2287634 0 0 0 0 0 0 0 400 E
 36 10 -4 1d5+1005 5d5+14
@@ -148,10 +148,10 @@ E
 #3411
 professora escola~
 a professora~
-A professora de escola está sentada em um banco, com uma taça de vinho.
+A professora de escola estÃ¡ sentada em um banco, com uma taÃ§a de vinho.
 ~
-Ela está usando uma longa saia até o tornozelo, e um lenço na cabeça.  Ela 
-sorri com timidez para você.
+Ela estÃ¡ usando uma longa saia atÃ© o tornozelo, e um lenÃ§o na cabeÃ§a.  Ela 
+sorri com timidez para vocÃª.
 ~
 2115586 0 0 0 0 0 0 0 700 E
 31 0 -5 1d1+1000 6d4+12
@@ -159,12 +159,12 @@ sorri com timidez para você.
 8 8 2
 E
 #3412
-mulher tranqüila lendo villspah~
+mulher tranquila lendo villspah~
 uma mulher~
-Uma jovem mulher está aqui, tranqüila lendo seu livro próximo a lareira.
+Uma jovem mulher estÃ¡ aqui, tranqÃ¼ila lendo seu livro prÃ³ximo a lareira.
 ~
-Ela está atenta lendo seu livro, e não tira os olho dele - nem mesmo por 
-um alerta de alguém que esteja na sala.
+Ela estÃ¡ atenta lendo seu livro, e nÃ£o tira os olho dele - nem mesmo por 
+um alerta de alguÃ©m que esteja na sala.
 ~
 2287618 0 0 0 0 0 0 0 900 E
 30 14 -5 1d1+1000 3d5+20
@@ -172,12 +172,12 @@ um alerta de alguém que esteja na sala.
 8 8 2
 E
 #3413
-negociante alimentos perecíveis~
+negociante alimentos pereciveis~
 o negociante de alimentos~
-Um magro e pálido homem se levanta atrás do balcão.
+Um magro e pÃ¡lido homem se levanta atrÃ¡s do balcÃ£o.
 ~
-Ele lhe da um pequeno aceno com a cabeça, indicando que qualquer coisa que 
-você precise é pode pedir a ele.
+Ele lhe da um pequeno aceno com a cabeÃ§a, indicando que qualquer coisa que 
+vocÃª precise, pode pedir a ele.
 ~
 2287634 0 0 0 0 0 0 0 600 E
 50 10 -8 5d7+1200 5d6+23
@@ -187,9 +187,9 @@ E
 #3414
 grande sorridente homem~
 um grande e sorridente homem~
-Um enorme e alegre homem lhe dá um grito de bem-vindo.
+Um enorme e alegre homem lhe dÃ¡ um grito de bem-vindo.
 ~
-Ele tem a aparência de alguém que nunca perdeu uma refeição e nunca parou 
+Ele tem a aparÃªncia de alguÃ©m que nunca perdeu uma refeiÃ§Ã£o e nunca parou 
 de sorrir.
 ~
 2287618 0 0 0 0 0 0 0 900 E
@@ -200,9 +200,9 @@ E
 #3415
 ferreiro homem magro~
 o ferreiro~
-Um homem muito magro martela um pedaço de metal.
+Um homem muito magro martela um pedaÃ§o de metal.
 ~
-Ele possui os cabelos muito curtos e arrepiados, e está todo suado pelo 
+Ele possui os cabelos muito curtos e arrepiados, e estÃ¡ todo suado pelo 
 excessivo e cansativo trabalho.
 ~
 2287634 0 0 0 0 0 0 0 400 E
@@ -211,14 +211,14 @@ excessivo e cansativo trabalho.
 8 8 1
 E
 #3416
-estudante barão villspah homem jovem~
-um dos estudantes do Barão~
-Um jovem aprendiz do Barão está aqui.
+estudante barao villspah homem jovem~
+um dos estudantes do BarÃ£o~
+Um jovem aprendiz do BarÃ£o estÃ¡ aqui.
 ~
-Ele tem o esteriótipo de estudioso, possuindo o cabelo muito negro, com 
+Ele tem o esteriÃ³tipo de estudioso, possuindo o cabelo muito negro, com 
 fios grossos e longos.  Ele parece realizar seus deveres como um lojista 
-muito a sério, não dando nem um sorriso de boas vindas a você, mas 
-imediatamente oferecendo sua humilde assistência.
+muito a sÃ©rio, nÃ£o dando nem um sorriso de boas vindas a vocÃª, mas 
+imediatamente oferecendo sua humilde assistÃªncia.
 ~
 2287634 0 0 0 0 0 0 0 500 E
 50 1 -2 2d7+1147 7d5+13
@@ -228,9 +228,9 @@ E
 #3417
 alegre mulher rechonchuda~
 uma alegre mulher~
-Uma rechonchuda e alegre mulher está ao lado de um grande pote de doces.
+Uma rechonchuda e alegre mulher estÃ¡ ao lado de um grande pote de doces.
 ~
-Ela sorri para você, lhe dando um sinal de bem-vindo.
+Ela sorri para vocÃª, lhe dando um sinal de bem-vindo.
 ~
 2287618 0 0 0 0 0 0 0 800 E
 50 1 -2 3d4+1201 7d5+13
@@ -240,9 +240,9 @@ E
 #3418
 moleiro homem forte villspah~
 o moleiro~
-O moleiro, um homem muito forte, trabalha árduamente para manter a água abundante.
+O moleiro, um homem muito forte, trabalha Ã¡rduamente para manter a Ã¡gua abundante.
 ~
-Ele lhe dá um rápido sorriso na medida em que você entra, mas nunca 
+Ele lhe dÃ¡ um rÃ¡pido sorriso na medida em que vocÃª entra, mas nunca 
 interrompe seu trabalho.
 ~
 2287618 0 0 0 0 0 0 0 800 E
@@ -253,10 +253,10 @@ E
 #3419
 herborista jaane~
 Jaane, a herborista~
-Jaane a herborista caminhsa através das plantas, mantendo-as molhadas e vivas.
+Jaane a herborista caminhsa atravÃ©s das plantas, mantendo-as molhadas e vivas.
 ~
 Ela parece ser uma mulher muito calma e atraente, cheia de segredos e 
-habilidades.  Ela lhe dá um pequeno sorriso na medida em que você entra no 
+habilidades.  Ela lhe dÃ¡ um pequeno sorriso na medida em que vocÃª entra no 
 local.
 ~
 2287618 0 0 0 0 0 0 0 800 E
@@ -267,10 +267,10 @@ E
 #3420
 homem joalheiro~
 o joalheiro~
-Um homem observa atentamente por uma lupa, examinando uma jóia.
+Um homem observa atentamente por uma lupa, examinando uma jÃ³ia.
 ~
-Ele faz um sinal com a cabeça indicando que está muito ocupado agora,
-mas certamente irá atendê-lo assim que puder.
+Ele faz um sinal com a cabeÃ§a indicando que estÃ¡ muito ocupado agora,
+mas certamente irÃ¡ atendÃª-lo assim que puder.
 ~
 2287618 0 0 0 0 0 0 0 800 E
 50 1 -2 3d4+1201 7d5+13
@@ -278,9 +278,9 @@ mas certamente irá atendê-lo assim que puder.
 8 8 1
 E
 #3421
-homem cartógrafo~
-o cartógrafo~
-O cartógrafo se apoia em uma cadeira, observando um mapa recém copiado.
+homem cartografo~
+o cartÃ³grafo~
+O cartÃ³grafo se apoia em uma cadeira, observando um mapa recÃ©m copiado.
 ~
 Mais um aventureiro do que um dono de loja, este homem gasta grande parte 
 de seu tempo viajando pelo mundo, procurando por novas cidades e locais 
@@ -292,11 +292,11 @@ para colocar em um mapa.
 8 8 1
 E
 #3422
-pássaros mulher~
-a mulher dos pássaros~
-Uma mulher, conhecida como 'a mulher dos pássaros' está aqui para atendê-lo.
+passaros mulher~
+a mulher dos pÃ¡ssaros~
+Uma mulher, conhecida como 'a mulher dos pÃ¡ssaros' estÃ¡aqui para atendÃª-lo.
 ~
-Ela até se parece com um pássaro, possuindo um longo e a cabeça inclinada 
+Ela atÃ© se parece com um pÃ¡ssaro, possuindo um longo e a cabeÃ§a inclinada 
 para frente.
 ~
 2287618 0 0 0 0 0 0 0 800 E
@@ -307,10 +307,10 @@ E
 #3423
 cavaleiro villspah~
 um cavaleiro de Villspah~
-Um cavaleiro de Villspah está aqui, observando-o com interesse.
+Um cavaleiro de Villspah estÃ¡ aqui, observando-o com interesse.
 ~
-Este é certamente uma cidade onde todos se conhecem.  Seria melhor evitar 
-chamar a atenção, se possível.
+Este Ã© certamente uma cidade onde todos se conhecem.  Seria melhor evitar 
+chamar a atenÃ§Ã£o, se possÃ­vel.
 ~
 2357264 0 0 0 0 0 0 0 500 E
 71 -10 -17 5d5+5100 7d7+30
@@ -325,7 +325,7 @@ pastor vila villspah~
 o pastor da vila~
 O pastor da vila passa cambalenado, com um curioso gingado.
 ~
-Ele é certamente um homem corpulento, e bem alimentado por seu rebanho.  
+Ele Ã© certamente um homem corpulento, e bem alimentado por seu rebanho.  
 Sua careca parece ter sido polida atualmente.  Bom, de fato bem alimentado.
 ~
 2353168 0 0 0 0 0 0 0 800 E
@@ -337,11 +337,11 @@ E
 #3425
 habitante villspah~
 um habitante de Villspah~
-Um habitante local da vila passa com uma alegre expressão.
+Um habitante local da vila passa com uma alegre expressÃ£o.
 ~
 Bem - certamente este homem faz este local parecer melhor do que um homem 
-honesto que passe por aqui acharia.  Entretanto - você não é alguém honesto 
-o bastante - não é?
+honesto que passe por aqui acharia.  Entretanto - vocÃª nÃ£o Ã© alguÃ©m honesto 
+o bastante - nÃ£o Ã©?
 ~
 2287616 0 0 0 0 0 0 0 800 E
 46 0 -4 4d3+1870 6d7+7
@@ -351,9 +351,9 @@ E
 #3426
 mercador viajante~
 um mercador viajante~
-Um homem passa vestindo trajes de viajem já parecendo muito cansado.
+Um homem passa vestindo trajes de viajem jÃ¡ parecendo muito cansado.
 ~
-Ele carrega um grande estojo de cintura, que já está transbordando.  Seria 
+Ele carrega um grande estojo de cintura, que jÃ¡ estÃ¡ transbordando.  Seria 
 este homem um mercador?
 ~
 2287616 0 0 0 0 0 0 0 200 E
@@ -364,9 +364,9 @@ E
 #3427
 jovem rapaz~
 um jovem rapaz~
-Um jovem rapaz brinca pela rua, desenhando na sujeira com um bastão.
+Um jovem rapaz brinca pela rua, desenhando na sujeira com um bastÃ£o.
 ~
-Ele parece estar muito contente com seu bastão e a sujeira à sua frente.  
+Ele parece estar muito contente com seu bastÃ£o e a sujeira Ã  sua frente.  
 Melhor deixa-lo com seu desenho.
 ~
 2353152 0 0 0 0 0 0 0 500 E
@@ -377,10 +377,10 @@ E
 #3428
 guarda ponte villspah~
 um guarda da ponte~
-Um membro da Guarda da Ponte está em guarda ao lado oeste.
+Um membro da Guarda da Ponte estÃ¡ em guarda ao lado oeste.
 ~
-Ele não olha diretamente para você, mas dá um passo em direção ao centro 
-da estrada, fazendo você entender que a entrada do castelo é restrita.
+Ele nÃ£o olha diretamente para vocÃª, mas dÃ¡ um passo em direÃ§Ã£o ao centro 
+da estrada, fazendo vocÃª entender que a entrada do castelo Ã© restrita.
 ~
 2353170 0 0 0 0 0 0 0 500 E
 50 -3 0 7d7+1900 10d4+7
@@ -396,9 +396,9 @@ E
 #3429
 guarda torre norte~
 o guarda da torre norte~
-O guarda da torre norte está alerta, firme e atento.
+O guarda da torre norte estÃ¡ alerta, firme e atento.
 ~
-Ele esté vestindo o tradicional verde que todos homens de Villspah usam, 
+Ele estÃ¡ vestindo o tradicional verde que todos homens de Villspah usam, 
 com uma severa e rigorosa postura.
 ~
 2353170 0 0 0 0 0 0 0 500 E
@@ -410,9 +410,9 @@ E
 #3430
 guarda torre sul~
 o guarda da torre sul~
-O guarda da torre sul está alerta, sempre fiel ao Barão.
+O guarda da torre sul estÃ¡ alerta, sempre fiel ao BarÃ£o.
 ~
-Ele é um soldado jovem, com não mais do que dezenove anos de idade, mas 
+Ele Ã© um soldado jovem, com nÃ£o mais do que dezenove anos de idade, mas 
 um lutador muito bem treinado.
 ~
 2353170 0 0 0 0 0 0 0 500 E
@@ -422,12 +422,12 @@ um lutador muito bem treinado.
 BareHandAttack: 9
 E
 #3431
-consultor barão homem magro~
-o consultor do Barão~
-Um homem magro e elegante está aqui se apoiando em uma bengala de marfim.
+consultor barao homem magro~
+o consultor do BarÃ£o~
+Um homem magro e elegante estÃ¡ aqui se apoiando em uma bengala de marfim.
 ~
-Ele lha pra você de perto por um minuto antes de fazer qualquer movimento 
-ou discurso.  É decisivamente desconfortável.
+Ele lha pra vocÃª de perto por um minuto antes de fazer qualquer movimento 
+ou discurso.  Ã‰ decisivamente desconfortÃ¡vel.
 ~
 2357266 0 0 0 0 0 0 0 200 E
 52 0 -6 8d8+1900 4d10+5
@@ -443,10 +443,10 @@ E
 #3432
 apressada cozinheira~
 a apressada cozinheira~
-A cozinheira se apressa pela cozinha, interruptamente preparando as refeições.
+A cozinheira se apressa pela cozinha, interruptamente preparando as refeiÃ§Ãµes.
 ~
-Seu avental branco está todo manchado por molhos e sucos de um longo 
-período de trabalho.
+Seu avental branco estÃ¡ todo manchado por molhos e sucos de um longo 
+perÃ­odo de trabalho.
 ~
 2353154 0 0 0 0 0 0 0 500 E
 34 7 -2 6d6+1240 4d6+12
@@ -456,10 +456,10 @@ E
 #3433
 ajudante cozinha~
 a ajudante de cozinha~
-Uma jovem garota está aqui, limpando as panelas e frigideiras.
+Uma jovem garota estÃ¡ aqui, limpando as panelas e frigideiras.
 ~
 Seus cabelos gordurosos caem sobre seu rosto na medida em que ela limpas 
-as panelas, fazendo com que ela constantemente os sopre, tentando mantê-los 
+as panelas, fazendo com que ela constantemente os sopre, tentando mantÃª-los 
 longe de seu rosto.
 ~
 2254850 0 0 0 0 0 0 0 500 E
@@ -472,8 +472,8 @@ garota servente~
 uma servente~
 Uma jovem servente trabalha para manter a mesa farta.
 ~
-Ela não olha para ninguém - não olha para você, nem para os outros que 
-trabalham na cozinha - mas mantém seus olhos somente trabalho a todo 
+Ela nÃ£o olha para ninguÃ©m - nÃ£o olha para vocÃª, nem para os outros que 
+trabalham na cozinha - mas mantÃªm seus olhos somente trabalho a todo 
 momento.
 ~
 2254850 0 0 0 0 0 0 0 900 E
@@ -482,11 +482,11 @@ momento.
 8 8 2
 E
 #3435
-homem realeza barão~
+homem realeza barao~
 um homem da realeza~
-Um homem da realeza, presumivelmente o Barão, está sentado na cabeçeira da mesa.
+Um homem da realeza, presumivelmente o BarÃ£o, estÃ¡ sentado na cabeceira da mesa.
 ~
-Ele sorri e graciosamente se levanta, dando um aceno com a cabeça.
+Ele sorri e graciosamente se levanta, dando um aceno com a cabeÃ§a.
 ~
 2353170 0 0 0 0 0 0 0 400 E
 51 -3 -4 5d7+1200 4d9+5
@@ -496,7 +496,7 @@ E
 #3436
 miliciano homem~
 um miliciano~
-Um miliciano sorri na medida em que o vê entrar.
+Um miliciano sorri na medida em que o vÃª entrar.
 ~
 Hm.  Porta errada, provavelmente..
 ~
@@ -506,11 +506,11 @@ Hm.  Porta errada, provavelmente..
 8 8 1
 E
 #3437
-guarda porão~
-o guarda do porão~
-Um guarda pálido está observando os prisioneiros em suas celas.
+guarda porao~
+o guarda do porÃ£o~
+Um guarda pÃ¡lido estÃ¡ observando os prisioneiros em suas celas.
 ~
-Seus olhos se estreitam ao observa-lo - parece que você não deveria estar 
+Seus olhos se estreitam ao observa-lo - parece que vocÃª nÃ£o deveria estar 
 aqui.
 ~
 2357266 0 0 0 0 0 0 0 300 E
@@ -520,12 +520,12 @@ aqui.
 BareHandAttack: 9
 E
 #3438
-cavalaria tenente barão~
-o tenente da cavalaria do Barão~
-Um homem encontra-se aqui, já muito cansado e aos trapos.
+cavalaria tenente barao~
+o tenente da cavalaria do BarÃ£o~
+Um homem encontra-se aqui, jÃ¡ muito cansado e aos trapos.
 ~
-Seu único olho restante o fita, sem medo e sem preocupação sobre o seu 
-destino - entretanto, você deve estar.
+Seu Ãºnico olho restante o fita, sem medo e sem preocupaÃ§Ã£o sobre o seu 
+destino - entretanto, vocÃª deve estar.
 ~
 2353170 0 0 0 0 0 0 0 400 E
 67 -3 -4 5d5+1355 6d6+7
@@ -538,8 +538,8 @@ chefe homem estrategista~
 o chefe estrategista~
 Um homem se apoia contra a parede, defendendo seus olhos da sua luz.
 ~
-Ele usa o que parecem já ter sido roupas elegantes, mas que agora estão 
-reduzidas a trapos de tanto tempo que ele está jogado nesta simples cela.
+Ele usa o que parecem jÃ¡ ter sido roupas elegantes, mas que agora estÃ£o 
+reduzidas a trapos de tanto tempo que ele estÃ¡ jogado nesta simples cela.
 ~
 2353170 0 0 0 0 0 0 0 -500 E
 61 -3 -4 6d6+1000 7d7+7
@@ -549,9 +549,9 @@ E
 #3440
 membro conselho alto~
 um alto membro do conselho~
-Um homem gordo em elegantes roupas está deitado, inconsciente no chão.
+Um homem gordo em elegantes roupas estÃ¡ deitado, inconsciente no chÃ£o.
 ~
-Ele parece estar acordado, entretanto ele não se movimenta - ele nem chega 
+Ele parece estar acordado, entretanto ele nÃ£o se movimenta - ele nem chega 
 a piscar.
 ~
 2353170 0 0 0 0 0 0 0 -400 E
@@ -560,12 +560,12 @@ a piscar.
 2 2 1
 E
 #3441
-guarda pessoal homem barão~
-um guarda pessoal do Barão~
-Um dos guardas pessoais do Barão bloqueia sua passagem.
+guarda pessoal homem barao~
+um guarda pessoal do BarÃ£o~
+Um dos guardas pessoais do BarÃ¢o bloqueia sua passagem.
 ~
-Ele olha você de cima para baixo e ríspidamente lhe pede para sair às 
-pressas, ou você sofrerá as consequências.
+Ele olha vocÃª de cima para baixo e rÃ­spidamente lhe pede para sair Ã s 
+pressas, ou vocÃª sofrerÃ¡ as consequÃªncias.
 ~
 2357266 0 0 0 0 0 0 0 800 E
 60 -6 -6 3d6+1200 8d8+5
@@ -576,12 +576,12 @@ Str: 25
 Dex: 20
 E
 #3442
-barão villspah~
-o Barão de Villspath~
-O Barão se levanta, encostado na parede oeste, encarando-o com a adaga em mãos.
+barao villspah~
+o BarÃ£o de Villspath~
+O BarÃ£o se levanta, encostado na parede oeste, encarando-o com a adaga em mÃ£os.
 ~
-Ele olha para você com clareza, e sem traços de medo na medida em que 
-levanta imóvel, na proteção de sua morada e em sua confiança.
+Ele olha para vocÃª com clareza, e sem traÃ§os de medo na medida em que 
+levanta imÃ³vel, na proteÃ§Ã£o de sua morada e em sua confianÃ§a.
 ~
 2353170 0 0 0 0 0 0 0 1000 E
 75 -10 -7 8d8+3000 10d7+28
@@ -600,7 +600,7 @@ servente castelo~
 um servente do castelo~
 Um servente do castelo vagueia, limpando o local.
 ~
-Ele lhe dá um rapido sorriso e continua com seu trabalho.
+Ele lhe dÃ¡ um rapido sorriso e continua com seu trabalho.
 ~
 2287616 0 0 0 0 0 0 0 400 E
 46 -3 -1 2d6+1300 6d5+2
@@ -608,11 +608,11 @@ Ele lhe dá um rapido sorriso e continua com seu trabalho.
 8 8 2
 E
 #3444
-amante barão~
-uma amante do Barão~
-Uma mulher descabelada, usando uma camisola branca olha com surpresa para você.
+amante barao~
+uma amante do BarÃ£o~
+Uma mulher descabelada, usando uma camisola branca olha com surpresa para vocÃª.
 ~
-Ela cobre a própria boca com umas das mãos, e tenta achar um lugar para se
+Ela cobre a prÃ³pria boca com umas das mÃ£os, e tenta achar um lugar para se
 esconder.
 ~
 2287618 0 0 0 0 0 0 0 500 E
@@ -623,7 +623,7 @@ E
 #3445
 elegante servente~
 um elegante servente~
-Um elegante servente está aqui, logo à sua frente.
+Um elegante servente estÃ¡ aqui, logo Ã  sua frente.
 ~
 Ele parece estar na meia-idade, com uma firme e severa conduta.
 ~
