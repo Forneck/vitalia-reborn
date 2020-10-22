@@ -1,4 +1,4 @@
-Text       porta~
+Text      porta~
 Body      open porta erro trancada
 ~
 Name      Forneck~
@@ -8,7 +8,7 @@ Level     1
 Room      18602
 Flags     0 0 0 0
 End
-Text       corpo~
+Text      corpo~
 Body      corpo no  recipiente no fim da luta
 ~
 Name      Forneck~
@@ -16,5 +16,45 @@ IdNum     2
 Dated     1591249071
 Level     1
 Room      18602
+Flags     0 0 0 0
+End
+Text      Set Help~
+Body      Set help derruba o mud
+~
+Name      Cansian~
+IdNum     1
+Dated     1603240361
+Level     110
+Room      1204
+Flags     0 0 0 0
+End
+Text      Help~
+Body      Arquivos de Help causam crash.
+~
+Name      Cansian~
+IdNum     1
+Dated     1603257557
+Level     110
+Room      1204
+Flags     0 0 0 0
+End
+Text      loja~
+Body      loja ta crashando
+~
+Name      Cansian~
+IdNum     1
+Dated     1603259862
+Level     110
+Room      1204
+Flags     0 0 0 0
+End
+Text       guilda ranger~
+Body      fazer guilda de ranger em mid e nt
+~
+Name      Cansian~
+IdNum     1
+Dated     1603325631
+Level     110
+Room      3001
 Flags     0 0 0 0
 End

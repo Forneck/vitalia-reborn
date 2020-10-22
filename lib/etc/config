@@ -65,7 +65,7 @@ disp_closed_doors = 1
 diagonal_dirs = 1
 
 * Who can use the map functions? 0=off, 1=on, 2=imm_only
-map_option = 2
+map_option = 1
 
 * Default size of map shown by 'map' command
 default_map_size = 6
@@ -106,7 +106,7 @@ max_obj_save = 45
 auto_save = 1
 
 * If auto_save = 1, how often (in minutes) should the game save people's objects?
-autosave_time = 5
+autosave_time = 1
 
 * Lifetime of crashfiles and force-rent (idlesave) files in days.
 crash_file_timeout = 10
@@ -249,5 +249,5 @@ protocol_negotiation = 1
 special_in_comm = 1
 
 * If 0 then off, otherwise 1: Brief, 2: Normal, 3: Complete.
-debug_mode = 1
+debug_mode = 0
 

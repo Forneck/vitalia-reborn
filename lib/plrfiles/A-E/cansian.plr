@@ -1,24 +1,25 @@
 Name: Cansian
-Pass: teste
-Titl: the Implementor
-Sex : 1
+Pass: CaIkC99//ZoX.
+Titl: Arrumando Mobs
+Sex : 2
+Clas: 4
 Levl: 110
 Id  : 1
-Brth: 1591127846
-Plyd: 1176
-Last: 1591483608
-Lmot: 1591129540
-Lnew: 1591483438
+Brth: 1601790482
+Plyd: 12664
+Last: 1603341687
+Lmot: 1603226112
+Lnew: 1603257121
 Htwn: 1372
-Host: 127.0.0.1
-Hite: 177
-Wate: 134
+Host: 138.204.26.108
+Hite: 151
+Wate: 113
+Alin: -135
 Act : 0 0 0 0
 Aff : 0 0 0 0
-Pref: efghinoqrv d 0 0
-Invs: 101
-Room: 65535
-Hit : 500/500
+Pref: efghimnoqrvxAB d 0 0
+Room: 3001
+Hit : 2000/2000
 Mana : 100/100
 Move: 82/82
 Str : 25/100
@@ -28,12 +29,6 @@ Dex : 25
 Con : 25
 Cha : 25
 Ac  : 100
+Gold: 100
 Exp : 7000000
 Olc : 0
-Affs:
-63 22 0 42 131072 0 0 0
-0 0 0 0 0 0 0 0
-Alis: 1
- priv
- redit $1;3;10;0;q;y
-1
