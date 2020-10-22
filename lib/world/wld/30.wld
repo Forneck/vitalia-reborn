@@ -204,14 +204,11 @@ Vocï¿½ vï¿½ a saï¿½da para o hall de entrada.
 ~
 0 -1 3006
 E
-<<<<<<< HEAD
-=======
 escritas gravacao gravacoes simbolos~
 Mesmo parecendo difï¿½cil de entender, vocï¿½ acha que parece muito com cerveja,
 poemas sobre cerveja, e pequenas canequinhas de cerveja.
 ~
 E
->>>>>>> ddad00559dade5678aadebdf1f9b854920483568
 aviso~
 O aviso diz:
 Instruï¿½ï¿½es grï¿½tis fornecidas pela Hospedaria Grunting Boar.
@@ -219,11 +216,6 @@ Instruï¿½ï¿½es grï¿½tis fornecidas pela Hospedaria Grunting Boar.
    BUY  - Comprar alguma coisa (bebida) do taverneiro.
    LIST - O taverneiro vai lhe mostrar todas as diferentes bebidas e
 	  especialidades, e dirï¿½ o preï¿½o de cada uma.
-~
-E
-escritas gravacao gravacoes simbolos~
-Mesmo parecendo difícil de entender, você acha que parece muito com cerveja,
-poemas sobre cerveja, e pequenas canequinhas de cerveja.
 ~
 S
 #3009
@@ -240,8 +232,6 @@ Vocï¿½ pode ver a Rua Principal.
 ~
 0 -1 3013
 E
-<<<<<<< HEAD
-=======
 aviso~
 Instruï¿½ï¿½es grï¿½tis fornecidas pela loja:
 
@@ -250,7 +240,6 @@ Instruï¿½ï¿½es grï¿½tis fornecidas pela loja:
 	  em sua padaria.
 ~
 E
->>>>>>> ddad00559dade5678aadebdf1f9b854920483568
 paes prateleiras bolos~
    Vocï¿½ que vï¿½ que hï¿½ pasteis realmente deliciosos. Devem ser feitos por um
 dinamarquï¿½s da Dinamarca (que na verdade nï¿½o ï¿½ a capital da Suï¿½cia!). Antigas
@@ -258,14 +247,6 @@ receitas da Escandinï¿½via, Inglaterra, Alemanha Meridional, Franï¿½a Meridional
 Rï¿½ssia, Groelï¿½ndia, Islandia, Estï¿½nia etc, etc.
    A visï¿½o desses enormes, impressionantes bolos de chocolates fazem sua boca
 encher d'ï¿½gua e sua alma cantar.
-~
-E
-aviso~
-Instruções grátis fornecidas pela loja:
-
-   BUY  - Compra algum pão ou pastel.
-   LIST - O padeiro gentilmente lhe dirá o preço e tipo de cada pão
-	  em sua padaria.
 ~
 S
 #3010
@@ -851,11 +832,6 @@ O portï¿½o da cidade ï¿½ a oeste.
 portao~
 1 3112 3052
 E
-<<<<<<< HEAD
-ponte~
-É muito alta para alcancar mas parece que alguem poderia facilmente passar
-de uma torre para outra.
-=======
 muro~
 ï¿½ construï¿½do de grandes rochas cinzas unidas entre si com algum tipo de
 cimento. ï¿½ muito alto pra subir.
@@ -864,7 +840,6 @@ E
 torre torres~
 Ambas as torres sï¿½o construï¿½das com grandes rochas unidas entre si com
 algum tipo de cimento, assim como o muro da cidade.
->>>>>>> ddad00559dade5678aadebdf1f9b854920483568
 ~
 E
 portao~
@@ -873,20 +848,9 @@ grandes tiras de ferro para deixï¿½-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
 E
-<<<<<<< HEAD
-torre torres~
-Ambas as torres são construídas com grandes rochas unidas entre si com
-algum tipo de cimento, assim como o muro da cidade.
-~
-E
-muro~
-É construído de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. É muito alto pra subir.
-=======
 ponte~
 ï¿½ muito alta para alcancar mas parece que alguem poderia facilmente passar
 de uma torre para outra.
->>>>>>> ddad00559dade5678aadebdf1f9b854920483568
 ~
 S
 #3041
@@ -912,11 +876,6 @@ Vocï¿½ vï¿½ a Rua Principal.
 ~
 0 -1 3016
 E
-<<<<<<< HEAD
-ponte~
-É muito alta para alcançar mas parece que alguem poderia facilmente passar
-de uma torre para outra.
-=======
 muro~
 ï¿½ construï¿½do de grandes rochas cinzas unidas entre si com algum tipo de
 cimento. ï¿½ muito alto pra subir.
@@ -925,7 +884,6 @@ E
 torre torres~
 Ambas as torres sï¿½o construï¿½das com grandes rochas unidas entre si com
 algum tipo de cimento, assim como o muro da cidade.
->>>>>>> ddad00559dade5678aadebdf1f9b854920483568
 ~
 E
 portao~
@@ -934,20 +892,9 @@ grandes tiras de ferro para deixa-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
 E
-<<<<<<< HEAD
-torre torres~
-Ambas as torres são construídas com grandes rochas unidas entre si com
-algum tipo de cimento, assim como o muro da cidade.
-~
-E
-muro~
-É construído de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. É muito alto pra subir.
-=======
 ponte~
 ï¿½ muito alta para alcanï¿½ar mas parece que alguem poderia facilmente passar
 de uma torre para outra.
->>>>>>> ddad00559dade5678aadebdf1f9b854920483568
 ~
 S
 #3042
@@ -1001,22 +948,14 @@ A estrada continua para o sul.
 ~
 0 -1 3047
 E
-<<<<<<< HEAD
-=======
 muro~
 ï¿½ construï¿½do de grandes rochas cinzas unidas entre si com algum tipo de
 cimento. ï¿½ muito alto pra subir.
 ~
 E
->>>>>>> ddad00559dade5678aadebdf1f9b854920483568
 escrito escrita~
 Diz: 'Quem vigia os vigias?'
 E tambem: 'Morfetus esta prï¿½ximo'
-~
-E
-muro~
-É construído de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. É muito alto pra subir.
 ~
 S
 #3044
@@ -1162,30 +1101,18 @@ Vocï¿½ vï¿½ a confluï¿½ncia.
 ~
 0 -1 3100
 E
-<<<<<<< HEAD
-ponte~
-É construída com grande rochas, unidas entre si com algum tipo de cimento,
-Assim como o muro. Odyssey costuma tomar cerveja lá embaixo.
-=======
 muro~
 ï¿½ construï¿½do de grandes rochas cinzas unidas entre sï¿½ com algum tipo de
 cimento. ï¿½ muito alto pra subir.
->>>>>>> ddad00559dade5678aadebdf1f9b854920483568
 ~
 E
 abertura~
 Vocï¿½ nï¿½o consegue ver daqui como se estivesse bem abaixo de seus pï¿½s.
 ~
 E
-<<<<<<< HEAD
-muro~
-É construído de grandes rochas cinzas unidas entre sí com algum tipo de
-cimento. É muito alto pra subir.
-=======
 ponte~
 ï¿½ construï¿½da com grande rochas, unidas entre si com algum tipo de cimento,
 Assim como o muro. Odyssey costuma tomar cerveja lï¿½ embaixo.
->>>>>>> ddad00559dade5678aadebdf1f9b854920483568
 ~
 S
 #3052
@@ -1206,11 +1133,6 @@ A margem da floresta ï¿½ a oeste.
 ~
 0 -1 6092
 E
-<<<<<<< HEAD
-ponte~
-É muito alta para alcançar mas parece que alguém poderia facilmente passar
-de uma torre para outra.
-=======
 muro~
 ï¿½ construï¿½do de grandes rochas cinzas unidas entre si com algum tipo de
 cimento. ï¿½ muito alto pra subir.
@@ -1219,7 +1141,6 @@ E
 torre torres~
 Ambas as torres sï¿½o construï¿½das com grandes rochas unidas entre si com
 algum tipo de cimento, assim como o muro da cidade.
->>>>>>> ddad00559dade5678aadebdf1f9b854920483568
 ~
 E
 portao~
@@ -1228,20 +1149,9 @@ grandes tiras de ferro para deixï¿½-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
 E
-<<<<<<< HEAD
-torre torres~
-Ambas as torres são construídas com grandes rochas unidas entre si com
-algum tipo de cimento, assim como o muro da cidade.
-~
-E
-muro~
-É construído de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. É muito alto pra subir.
-=======
 ponte~
 ï¿½ muito alta para alcanï¿½ar mas parece que alguï¿½m poderia facilmente passar
 de uma torre para outra.
->>>>>>> ddad00559dade5678aadebdf1f9b854920483568
 ~
 S
 #3053
@@ -1262,11 +1172,6 @@ Vocï¿½ vï¿½ o portï¿½o da cidade.
 portao~
 1 3112 3041
 E
-<<<<<<< HEAD
-ponte~
-É muito alta para alcançar mas parece que alguém poderia facilmente passar
-de uma torre para outra.
-=======
 muro~
 ï¿½ construï¿½do de grandes rochas cinzas unidas entre si com algum tipo de
 cimento. ï¿½ muito alto pra subir.
@@ -1275,7 +1180,6 @@ E
 torre torres~
 Ambas as torres sï¿½o construï¿½das com grandes rochas unidas entre si com
 algum tipo de cimento, assim como o muro da cidade.
->>>>>>> ddad00559dade5678aadebdf1f9b854920483568
 ~
 E
 portao~
@@ -1284,20 +1188,9 @@ grandes tiras de ferro para deixï¿½-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
 E
-<<<<<<< HEAD
-torre torres~
-Ambas as torres são construídas com grandes rochas unidas entre si com
-algum tipo de cimento, assim como o muro da cidade.
-~
-E
-muro~
-É construído de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. É muito alto pra subir.
-=======
 ponte~
 ï¿½ muito alta para alcanï¿½ar mas parece que alguï¿½m poderia facilmente passar
 de uma torre para outra.
->>>>>>> ddad00559dade5678aadebdf1f9b854920483568
 ~
 S
 #3054
@@ -1324,25 +1217,17 @@ Vocï¿½ vï¿½ o extremo sul do templo.
 ~
 0 -1 3001
 E
-altar~
-Mesmo tendo mais de três metros de comprimento, o altar aparentemente é
-feito de um único bloco de marmore virgem.
-~
-E
 estatua odin rei deus~
 A estï¿½tua representa Odin sentado em seu trono. Ele tem longos cabelos
 grisalhos e barba, e um olhar severo em seu rosto. Acima de seu trono,
 bem sobre seus ombros, seus dois abutres Hugin e Munin estï¿½o pousados
 e a seus pï¿½s seus lobos Gere e Freke.
 ~
-<<<<<<< HEAD
-=======
 E
 altar~
 Mesmo tendo mais de trï¿½s metros de comprimento, o altar aparentemente ï¿½
 feito de um ï¿½nico bloco de marmore virgem.
 ~
->>>>>>> ddad00559dade5678aadebdf1f9b854920483568
 S
 #3055
 Loja de Odin~
@@ -1465,8 +1350,6 @@ Vocï¿½ vï¿½ a entrada da Hospedaria Grunting Boar.
 ~
 0 -1 3006
 E
-<<<<<<< HEAD
-=======
 procurados parede~
 Rostos de vï¿½rios Assassinos e Ladrï¿½es conhecidos mal podem ser vistos atrï¿½s
 dos engradados na parede oeste. Alguns deles parecem familiares como aquele
@@ -1491,7 +1374,6 @@ Olhando de perto, vocï¿½ vï¿½ uma carta que vocï¿½ enviou bem a uma semana atrï¿
 esquecida e meio roida por ratos em uma das pilhas.
 ~
 E
->>>>>>> ddad00559dade5678aadebdf1f9b854920483568
 aviso~
 ,----------------------------------------------------------.
 | Instruï¿½ï¿½es do Correio:                                   |
@@ -1508,30 +1390,6 @@ aviso~
 |         Selos custam 150 moedas por carta                |
 |         Digite 'HELP MAIL' para mais informaï¿½ï¿½es         |
 `----------------------------------------------------------'
-~
-E
-envelopes correspondecia~
-Envelopes de todos os tamanhos estão empilhados em grande montes pelo chão.
-Olhando de perto, você vê uma carta que você enviou bem a uma semana atrás,
-esquecida e meio roida por ratos em uma das pilhas.
-~
-E
-teias~
-Parecem cobrir tudo, inclusive o carteiro.
-~
-E
-engradados~
-Como você sabe, é ilegal enviar itens de contrabando pelo correio de
-Midgaard. Os agentes da alfândega usam isso com desculpa para afanar
-bebidas, especiarias raras, ou qualquer coisa que eles possa achar
-útil ou desejável.
-~
-E
-procurados parede~
-Rostos de vários Assassinos e Ladrões conhecidos mal podem ser vistos atrás
-dos engradados na parede oeste. Alguns deles parecem familiares como aquele
-cara que você viu na Recepção ha um minuto... Mas eles são difíceis de ver
-atrás dos engradados.
 ~
 S
 #3063
@@ -1618,7 +1476,7 @@ D3
 Hï¿½ um portï¿½o enferrujado a oeste.
 ~
 portao~
-1 -1 3067
+0 -1 3067
 E
 portao~
 Estï¿½ muito enferrujado por sinal.
@@ -1639,8 +1497,8 @@ portao~
 D3
 Vocï¿½ vï¿½ uma estranha estrutura, um tabuleiro de xadrez, talvez.
 ~
-portao~
-1 -1 3600
+~
+0 -1 3600
 E
 portao~
 Estï¿½ muito enferrujado por sinal.
