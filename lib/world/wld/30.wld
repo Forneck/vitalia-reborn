@@ -204,6 +204,11 @@ Voc� v� a sa�da para o hall de entrada.
 ~
 0 -1 3006
 E
+escritas gravacao gravacoes simbolos~
+Mesmo parecendo dif�cil de entender, voc� acha que parece muito com cerveja,
+poemas sobre cerveja, e pequenas canequinhas de cerveja.
+~
+E
 aviso~
 O aviso diz:
 Instru��es gr�tis fornecidas pela Hospedaria Grunting Boar.
@@ -211,11 +216,6 @@ Instru��es gr�tis fornecidas pela Hospedaria Grunting Boar.
    BUY  - Comprar alguma coisa (bebida) do taverneiro.
    LIST - O taverneiro vai lhe mostrar todas as diferentes bebidas e
 	  especialidades, e dir� o pre�o de cada uma.
-~
-E
-escritas gravacao gravacoes simbolos~
-Mesmo parecendo dif�cil de entender, voc� acha que parece muito com cerveja,
-poemas sobre cerveja, e pequenas canequinhas de cerveja.
 ~
 S
 #3009
@@ -232,6 +232,14 @@ Voc� pode ver a Rua Principal.
 ~
 0 -1 3013
 E
+aviso~
+Instru��es gr�tis fornecidas pela loja:
+
+   BUY  - Compra algum p�o ou pastel.
+   LIST - O padeiro gentilmente lhe dir� o pre�o e tipo de cada p�o
+	  em sua padaria.
+~
+E
 paes prateleiras bolos~
    Voc� que v� que h� pasteis realmente deliciosos. Devem ser feitos por um
 dinamarqu�s da Dinamarca (que na verdade n�o � a capital da Su�cia!). Antigas
@@ -239,14 +247,6 @@ receitas da Escandin�via, Inglaterra, Alemanha Meridional, Fran�a Meridional
 R�ssia, Groel�ndia, Islandia, Est�nia etc, etc.
    A vis�o desses enormes, impressionantes bolos de chocolates fazem sua boca
 encher d'�gua e sua alma cantar.
-~
-E
-aviso~
-Instru��es gr�tis fornecidas pela loja:
-
-   BUY  - Compra algum p�o ou pastel.
-   LIST - O padeiro gentilmente lhe dir� o pre�o e tipo de cada p�o
-	  em sua padaria.
 ~
 S
 #3010
@@ -832,9 +832,14 @@ O port�o da cidade � a oeste.
 portao~
 1 3112 3052
 E
-ponte~
-� muito alta para alcancar mas parece que alguem poderia facilmente passar
-de uma torre para outra.
+muro~
+� constru�do de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. � muito alto pra subir.
+~
+E
+torre torres~
+Ambas as torres s�o constru�das com grandes rochas unidas entre si com
+algum tipo de cimento, assim como o muro da cidade.
 ~
 E
 portao~
@@ -843,14 +848,9 @@ grandes tiras de ferro para deix�-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
 E
-torre torres~
-Ambas as torres s�o constru�das com grandes rochas unidas entre si com
-algum tipo de cimento, assim como o muro da cidade.
-~
-E
-muro~
-� constru�do de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. � muito alto pra subir.
+ponte~
+� muito alta para alcancar mas parece que alguem poderia facilmente passar
+de uma torre para outra.
 ~
 S
 #3041
@@ -876,9 +876,14 @@ Voc� v� a Rua Principal.
 ~
 0 -1 3016
 E
-ponte~
-� muito alta para alcan�ar mas parece que alguem poderia facilmente passar
-de uma torre para outra.
+muro~
+� constru�do de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. � muito alto pra subir.
+~
+E
+torre torres~
+Ambas as torres s�o constru�das com grandes rochas unidas entre si com
+algum tipo de cimento, assim como o muro da cidade.
 ~
 E
 portao~
@@ -887,14 +892,9 @@ grandes tiras de ferro para deixa-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
 E
-torre torres~
-Ambas as torres s�o constru�das com grandes rochas unidas entre si com
-algum tipo de cimento, assim como o muro da cidade.
-~
-E
-muro~
-� constru�do de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. � muito alto pra subir.
+ponte~
+� muito alta para alcan�ar mas parece que alguem poderia facilmente passar
+de uma torre para outra.
 ~
 S
 #3042
@@ -948,14 +948,14 @@ A estrada continua para o sul.
 ~
 0 -1 3047
 E
-escrito escrita~
-Diz: 'Quem vigia os vigias?'
-E tambem: 'Morfetus esta pr�ximo'
-~
-E
 muro~
 � constru�do de grandes rochas cinzas unidas entre si com algum tipo de
 cimento. � muito alto pra subir.
+~
+E
+escrito escrita~
+Diz: 'Quem vigia os vigias?'
+E tambem: 'Morfetus esta pr�ximo'
 ~
 S
 #3044
@@ -1101,18 +1101,18 @@ Voc� v� a conflu�ncia.
 ~
 0 -1 3100
 E
-ponte~
-� constru�da com grande rochas, unidas entre si com algum tipo de cimento,
-Assim como o muro. Odyssey costuma tomar cerveja l� embaixo.
+muro~
+� constru�do de grandes rochas cinzas unidas entre s� com algum tipo de
+cimento. � muito alto pra subir.
 ~
 E
 abertura~
 Voc� n�o consegue ver daqui como se estivesse bem abaixo de seus p�s.
 ~
 E
-muro~
-� constru�do de grandes rochas cinzas unidas entre s� com algum tipo de
-cimento. � muito alto pra subir.
+ponte~
+� constru�da com grande rochas, unidas entre si com algum tipo de cimento,
+Assim como o muro. Odyssey costuma tomar cerveja l� embaixo.
 ~
 S
 #3052
@@ -1133,9 +1133,14 @@ A margem da floresta � a oeste.
 ~
 0 -1 6092
 E
-ponte~
-� muito alta para alcan�ar mas parece que algu�m poderia facilmente passar
-de uma torre para outra.
+muro~
+� constru�do de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. � muito alto pra subir.
+~
+E
+torre torres~
+Ambas as torres s�o constru�das com grandes rochas unidas entre si com
+algum tipo de cimento, assim como o muro da cidade.
 ~
 E
 portao~
@@ -1144,14 +1149,9 @@ grandes tiras de ferro para deix�-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
 E
-torre torres~
-Ambas as torres s�o constru�das com grandes rochas unidas entre si com
-algum tipo de cimento, assim como o muro da cidade.
-~
-E
-muro~
-� constru�do de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. � muito alto pra subir.
+ponte~
+� muito alta para alcan�ar mas parece que algu�m poderia facilmente passar
+de uma torre para outra.
 ~
 S
 #3053
@@ -1172,9 +1172,14 @@ Voc� v� o port�o da cidade.
 portao~
 1 3112 3041
 E
-ponte~
-� muito alta para alcan�ar mas parece que algu�m poderia facilmente passar
-de uma torre para outra.
+muro~
+� constru�do de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. � muito alto pra subir.
+~
+E
+torre torres~
+Ambas as torres s�o constru�das com grandes rochas unidas entre si com
+algum tipo de cimento, assim como o muro da cidade.
 ~
 E
 portao~
@@ -1183,14 +1188,9 @@ grandes tiras de ferro para deix�-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
 E
-torre torres~
-Ambas as torres s�o constru�das com grandes rochas unidas entre si com
-algum tipo de cimento, assim como o muro da cidade.
-~
-E
-muro~
-� constru�do de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. � muito alto pra subir.
+ponte~
+� muito alta para alcan�ar mas parece que algu�m poderia facilmente passar
+de uma torre para outra.
 ~
 S
 #3054
@@ -1217,16 +1217,16 @@ Voc� v� o extremo sul do templo.
 ~
 0 -1 3001
 E
-altar~
-Mesmo tendo mais de tr�s metros de comprimento, o altar aparentemente �
-feito de um �nico bloco de marmore virgem.
-~
-E
 estatua odin rei deus~
 A est�tua representa Odin sentado em seu trono. Ele tem longos cabelos
 grisalhos e barba, e um olhar severo em seu rosto. Acima de seu trono,
 bem sobre seus ombros, seus dois abutres Hugin e Munin est�o pousados
 e a seus p�s seus lobos Gere e Freke.
+~
+E
+altar~
+Mesmo tendo mais de tr�s metros de comprimento, o altar aparentemente �
+feito de um �nico bloco de marmore virgem.
 ~
 S
 #3055
@@ -1350,6 +1350,30 @@ Voc� v� a entrada da Hospedaria Grunting Boar.
 ~
 0 -1 3006
 E
+procurados parede~
+Rostos de v�rios Assassinos e Ladr�es conhecidos mal podem ser vistos atr�s
+dos engradados na parede oeste. Alguns deles parecem familiares como aquele
+cara que voc� viu na Recep��o ha um minuto... Mas eles s�o dif�ceis de ver
+atr�s dos engradados.
+~
+E
+engradados~
+Como voc� sabe, � ilegal enviar itens de contrabando pelo correio de
+Midgaard. Os agentes da alf�ndega usam isso com desculpa para afanar
+bebidas, especiarias raras, ou qualquer coisa que eles possa achar
+�til ou desej�vel.
+~
+E
+teias~
+Parecem cobrir tudo, inclusive o carteiro.
+~
+E
+envelopes correspondecia~
+Envelopes de todos os tamanhos est�o empilhados em grande montes pelo ch�o.
+Olhando de perto, voc� v� uma carta que voc� enviou bem a uma semana atr�s,
+esquecida e meio roida por ratos em uma das pilhas.
+~
+E
 aviso~
 ,----------------------------------------------------------.
 | Instru��es do Correio:                                   |
@@ -1366,30 +1390,6 @@ aviso~
 |         Selos custam 150 moedas por carta                |
 |         Digite 'HELP MAIL' para mais informa��es         |
 `----------------------------------------------------------'
-~
-E
-envelopes correspondecia~
-Envelopes de todos os tamanhos est�o empilhados em grande montes pelo ch�o.
-Olhando de perto, voc� v� uma carta que voc� enviou bem a uma semana atr�s,
-esquecida e meio roida por ratos em uma das pilhas.
-~
-E
-teias~
-Parecem cobrir tudo, inclusive o carteiro.
-~
-E
-engradados~
-Como voc� sabe, � ilegal enviar itens de contrabando pelo correio de
-Midgaard. Os agentes da alf�ndega usam isso com desculpa para afanar
-bebidas, especiarias raras, ou qualquer coisa que eles possa achar
-�til ou desej�vel.
-~
-E
-procurados parede~
-Rostos de v�rios Assassinos e Ladr�es conhecidos mal podem ser vistos atr�s
-dos engradados na parede oeste. Alguns deles parecem familiares como aquele
-cara que voc� viu na Recep��o ha um minuto... Mas eles s�o dif�ceis de ver
-atr�s dos engradados.
 ~
 S
 #3063
@@ -1476,7 +1476,7 @@ D3
 H� um port�o enferrujado a oeste.
 ~
 portao~
-0 -1 3067
+1 -1 3067
 E
 portao~
 Est� muito enferrujado por sinal.
@@ -1952,12 +1952,12 @@ O bar parece ser apenas um pouco mais confortavel que a sala onde você está ag
 ~
 0 -1 3090
 E
-lamparina lamparinas~
-Você não vê nada de especial sobre as lamparinas.
-~
-E
 lareira coracao fogo~
 Você não vê nada de especial sobre o coração.
+~
+E
+lamparina lamparinas~
+Você não vê nada de especial sobre as lamparinas.
 ~
 S
 #3090
@@ -1982,12 +1982,21 @@ Você vê de relance a entra da sua associação.
 ~
 0 -1 3089
 E
-placa~
-A placa diz:
-Aqui está o lance:
-Buy - Compre algo de beber da garçonete.
-List - A garçonete vai ler a lista de preços.
-A proposito, a garçonete não está a venda.
+lareira coracao fogo~
+Você não vê nada de especial sobre o coração.
+~
+E
+lamparina lamparinas~
+Você não vê nada de especial sobre as lamparinas.
+~
+E
+cabeca trofeu cabecas trofeis~
+Você vê uma zebra, um elefante, e MEU DEUS aquele deve ter sido um
+rinoceronte ENORME.
+~
+E
+banco bancos~
+Os bancos parecem ser bem confortáveis.
 ~
 E
 madeira indio~
@@ -1996,21 +2005,12 @@ parece quase vivo, mas uma batida rápida confirma que ele é feito de
  madeira maciça.
 ~
 E
-banco bancos~
-Os bancos parecem ser bem confortáveis.
-~
-E
-cabeca trofeu cabecas trofeis~
-Você vê uma zebra, um elefante, e MEU DEUS aquele deve ter sido um
-rinoceronte ENORME.
-~
-E
-lamparina lamparinas~
-Você não vê nada de especial sobre as lamparinas.
-~
-E
-lareira coracao fogo~
-Você não vê nada de especial sobre o coração.
+placa~
+A placa diz:
+Aqui está o lance:
+Buy - Compre algo de beber da garçonete.
+List - A garçonete vai ler a lista de preços.
+A proposito, a garçonete não está a venda.
 ~
 S
 #3091
