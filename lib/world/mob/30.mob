@@ -322,15 +322,13 @@ poderosa magia.
 8 8 2
 E
 #3030
-guildmaster master frog kermit~
-the rangers' guildmaster~
-Your guildmaster is a tall, lanky frog, perched on a lily pad in the corner.
+mestre guia sapo caco ranger~
+o mestre-guia dos rangers~
+O seu mestre-guia é um alto e magro sapo, empuleirado em uma vitoria-régia.
 ~
-In a strange way it almost makes sense, since a frog is a creature of
-nature, that he'd be your guildmaster. Except that he's singing and
-playing a banjo. Still, he's got a nice voice, and the heartfelt strains
-of "The Rainbow Connection" give you a warm, fuzzy feeling. He's dressed
-all in green, a slightly darker shade than his skin.
+De uma forma estranha quase faz sentido, já que um sapo é uma criatura da natureza, que ele fosse seu
+mestre-guia. Exceto que ele está cantando e tocando um banjo
+Ele está vestido de verde, de um tom um pouco mais escuro que a pele dele.
 ~
 59419 0 0 0 16 0 0 0 1000 E
 34 0 -10 6d10+640 1d8+24
@@ -338,15 +336,15 @@ all in green, a slightly darker shade than his skin.
 8 8 1
 E
 #3031
-guard huntress~
-the huntress~
-A huntress plays with her sword as she guards the entrance.
+guarda cacadora~
+a caçadora~
+A caçadora se diverte com a espada dela enquanto guarda a entrada.
 ~
-The huntress is tall, attractive and deadly. Don't mess with her. She
-doesn't like troublemakers. Rumor has it she got this job after she
-single-handedly cleaned all of the high-level monsters out of what is now
-a newbie zone. The only reason she's not a guildmaster is that she can't
-sing.
+A caçadora é alta, atraente e mortal. Não brinque com ela, ela não gosta 
+de encrenqueiros. Dizem que ela consaguiu este emprego depois
+de sozinha matar todos os monstros de nível alto doque hoje é uma área
+para iniciantes. O único motivo para ela não ser a mestra é porquê ela
+não sabe cantar.
 ~
 256010 0 0 0 80 0 0 0 900 E
 33 0 -5 6d10+990 1d8+22
@@ -354,14 +352,14 @@ sing.
 8 8 2
 E
 #3032
-waitress girl~
-the waitress~
-A rather young waitress in green is standing here.
+garconete garota~
+a garçonete~
+Uma bem jovem garçonete está aqui.
 ~
-This 14-year-old girl might fool a member of another guild, but you know
-that she's one tough cookie. She very friendly, a little flirtatious
-even, but woe to anyone who angers her. She specializes in bruised egos
-and severed limbs.
+Esta jovem garota poderia enganar um membro de outra associação, mas
+você sabe que ela é durona. Ela é muito amigável, um pouco paqueradora
+até, mas terrível para qualquer um que a tire do sério.
+Ela é especialista em egos feridos e membros arrancados.
 ~
 256010 0 0 0 80 0 0 0 900 E
 23 1 2 6d1+390 1d8+12
