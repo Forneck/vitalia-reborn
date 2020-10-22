@@ -1,144 +1,143 @@
 #37
 Vitalia~
 O Reino dos Mortos-Vivos~
-3700 3799 306 1 ae 0 0 0 -1 -1
--1
-M 0 3732 2 3700
-E 1 3711 2 16
-M 0 3732 2 3700
-E 1 3711 2 16
-M 0 3713 1 3795
-G 1 3736 2 -1
-G 1 3722 2 -1
-E 1 3721 1 16
-D 0 3795 1 2
-M 0 3716 1 3725
-E 1 3702 1 16
-O 0 3732 1 3725
-P 1 3799 1 3732
-M 0 3715 1 3722
-E 1 3701 1 14
-M 0 3717 1 3721
-E 1 3734 1 2
-E 1 3735 1 12
-M 0 3730 2 3794
-E 1 3712 2 16
-E 1 3713 2 5
-M 0 3730 2 3793
-E 1 3712 2 16
-E 1 3713 2 5
-M 0 3725 10 3729
-E 1 3717 10 16
-M 0 3725 10 3729
-E 1 3717 10 16
-M 0 3726 1 3736
-E 1 3716 1 5
-M 0 3725 10 3736
-E 1 3717 10 16
-M 0 3725 10 3736
-E 1 3717 10 16
-M 0 3725 10 3735
-E 1 3717 10 16
-M 0 3725 10 3733
-E 1 3717 10 16
-M 0 3725 10 3733
-E 1 3717 10 16
-M 0 3725 10 3730
-E 1 3717 10 16
-M 0 3725 10 3732
-E 1 3717 10 16
-M 0 3725 10 3732
-E 1 3717 10 16
-M 0 3727 1 3734
-E 1 3714 1 16
-E 1 3715 2 14
-E 1 3715 2 15
-M 0 3733 3 3727
-E 1 3731 3 11
-M 0 3733 3 3727
-E 1 3731 3 11
-M 0 3733 3 3727
-E 1 3731 3 11
-M 0 3718 1 3713
-E 1 3710 1 5
-E 1 3709 1 16
-G 1 3708 1 -1
-M 0 3723 4 3750
-E 1 3720 4 16
-M 0 3723 4 3758
-E 1 3720 4 16
-M 0 3723 4 3759
-E 1 3720 4 16
-M 0 3723 4 3751
-E 1 3720 4 16
-M 0 3722 3 3757
-E 1 3718 3 16
-M 0 3722 3 3753
-E 1 3718 3 16
-M 0 3722 3 3752
-E 1 3718 3 16
-M 0 3724 1 3756
-E 1 3851 1 17        Card dragao esquel(3851) com drag esque(3724)
-E 1 3719 1 21
-M 0 3712 1 3797
-E 1 3730 1 16
-E 1 3729 2 14
-E 1 3729 2 15
-E 1 3728 1 3
-E 1 3733 1 19
-M 0 3714 1 3719
-E 1 3700 1 16
-M 0 3703 1 3747
-G 1 3703 1 -1
-M 0 3704 1 3771
-E 1 3704 1 16
-M 0 3705 1 3777
-E 1 3705 1 16
-M 0 3706 1 3783
-E 1 3706 1 16
-M 0 3707 1 3765
-E 1 3707 1 16
-M 0 3711 1 3790
-E 1 3727 1 16
-M 0 3710 1 3788
-E 1 3724 1 16
-G 1 3725 1 -1
-M 0 3709 1 3786
-E 1 3726 1 16
-M 0 3708 1 3792
-E 1 3723 1 16
-M 0 3728 4 3711
-M 0 3729 4 3710
-M 0 3729 4 3708
-M 0 3728 4 3707
-M 0 3729 4 3706
-M 0 3728 4 3705
-M 0 3729 4 3704
-M 0 3728 4 3703
-M 0 3731 2 3712
-M 0 3731 2 3701
-M 0 3721 8 3754
-M 0 3721 8 3754
-M 0 3721 8 3760
-M 0 3721 8 3760
-M 0 3721 8 3755
-M 0 3721 8 3755
-M 0 3721 8 3749
-M 0 3721 8 3749
-M 0 3720 1 3718
-M 0 3719 1 3714
-M 0 3701 6 3742
-M 0 3700 4 3742
-M 0 3701 6 3742
-M 0 3701 6 3748
-M 0 3700 4 3748
-M 0 3702 2 3741
-M 0 3700 4 3740
-M 0 3700 4 3743
-M 0 3701 6 3745
-M 0 3701 6 3746
-M 0 3701 6 3746
-M 0 3702 2 3744
-D 0 3700 0 1
+3700 3799 306 1 e 0 0 0 -1 -1
+M 0 3732 2 3700 	(um guarda zumbi)
+E 1 3711 2 16 	(a garra da decadência)
+M 0 3732 2 3700 	(um guarda zumbi)
+E 1 3711 2 16 	(a garra da decadência)
+D 0 3700 0 1 	(A Ladeira em Espiral)
+M 0 3713 1 3795 	(Apocalipse)
+G 1 3736 2 -1 	(a chave do Apocalipse)
+G 1 3722 2 -1 	(a adaga da Destruição)
+E 1 3721 1 16 	(a espada da Demolição)
+D 0 3795 1 2 	(O Trono de Apocalipse)
+M 0 3716 1 3725 	(Lachesis)
+E 1 3702 1 16 	(a tesoura do Destino)
+O 0 3732 1 3725 	(uma cesta)
+P 1 3799 1 3732 	(uma chave de ferro trabalhado)
+M 0 3715 1 3722 	(Atropos)
+E 1 3701 1 14 	(a Grilheta do Destino)
+M 0 3717 1 3721 	(a Múmia do Caos)
+E 1 3734 1 2 	(um anel da armadura divina)
+E 1 3735 1 12 	(o manto da servidão)
+M 0 3730 2 3794 	(o Anjo da Morte)
+E 1 3712 2 16 	(o bastão do silêncio)
+E 1 3713 2 5 	(as asas da morte)
+M 0 3730 2 3793 	(o Anjo da Morte)
+E 1 3712 2 16 	(o bastão do silêncio)
+E 1 3713 2 5 	(as asas da morte)
+M 0 3725 10 3729 	(um guerreiro)
+E 1 3717 10 16 	(a garra sangrenta)
+M 0 3725 10 3729 	(um guerreiro)
+E 1 3717 10 16 	(a garra sangrenta)
+M 0 3726 1 3736 	(o guerreiro zumbi)
+E 1 3716 1 5 	(um traje infernal)
+M 0 3725 10 3736 	(um guerreiro)
+E 1 3717 10 16 	(a garra sangrenta)
+M 0 3725 10 3736 	(um guerreiro)
+E 1 3717 10 16 	(a garra sangrenta)
+M 0 3725 10 3735 	(um guerreiro)
+E 1 3717 10 16 	(a garra sangrenta)
+M 0 3725 10 3733 	(um guerreiro)
+E 1 3717 10 16 	(a garra sangrenta)
+M 0 3725 10 3733 	(um guerreiro)
+E 1 3717 10 16 	(a garra sangrenta)
+M 0 3725 10 3730 	(um guerreiro)
+E 1 3717 10 16 	(a garra sangrenta)
+M 0 3725 10 3732 	(um guerreiro)
+E 1 3717 10 16 	(a garra sangrenta)
+M 0 3725 10 3732 	(um guerreiro)
+E 1 3717 10 16 	(a garra sangrenta)
+M 0 3727 1 3734 	(o General do Exército)
+E 1 3714 1 16 	(uma espada flamejante)
+E 1 3715 2 14 	(um bracelete flamejante)
+E 1 3715 2 15 	(um bracelete flamejante)
+M 0 3733 3 3727 	(um Gárgula de Pedra)
+E 1 3731 3 11 	(o escudo de Gwnar)
+M 0 3733 3 3727 	(um Gárgula de Pedra)
+E 1 3731 3 11 	(o escudo de Gwnar)
+M 0 3733 3 3727 	(um Gárgula de Pedra)
+E 1 3731 3 11 	(o escudo de Gwnar)
+M 0 3718 1 3713 	(o Fantasma do Horror)
+E 1 3710 1 5 	(uma grande vestimenta negra)
+E 1 3709 1 16 	(a adaga do Clamor)
+G 1 3708 1 -1 	(a espada do Terror)
+M 0 3723 4 3750 	(um guerreiro esqueleto)
+E 1 3720 4 16 	(um pedaço de osso)
+M 0 3723 4 3758 	(um guerreiro esqueleto)
+E 1 3720 4 16 	(um pedaço de osso)
+M 0 3723 4 3759 	(um guerreiro esqueleto)
+E 1 3720 4 16 	(um pedaço de osso)
+M 0 3723 4 3751 	(um guerreiro esqueleto)
+E 1 3720 4 16 	(um pedaço de osso)
+M 0 3722 3 3757 	(um demônio de ossos)
+E 1 3718 3 16 	(um pedaço de osso)
+M 0 3722 3 3753 	(um demônio de ossos)
+E 1 3718 3 16 	(um pedaço de osso)
+M 0 3722 3 3752 	(um demônio de ossos)
+E 1 3718 3 16 	(um pedaço de osso)
+M 0 3724 1 3756 	(um dragão esqueleto)
+E 1 3851 1 17 	(o Card Dragão Esqueleto)
+E 1 3719 1 21 	(a mandíbula da cessação)
+M 0 3712 1 3797 	(o Grande Mestre do Tempo)
+E 1 3730 1 16 	(uma espada dos astros)
+E 1 3729 2 14 	(a braçadeira do tempo)
+E 1 3729 2 15 	(a braçadeira do tempo)
+E 1 3728 1 3 	(o amuleto ancião)
+E 1 3733 1 19 	(o brinco eterno)
+M 0 3714 1 3719 	(Clotho)
+E 1 3700 1 16 	(o bastão do Destino)
+M 0 3703 1 3747 	(Ixitxachityl)
+G 1 3703 1 -1 	(uma lança pontuda)
+M 0 3704 1 3771 	(o Espírito das Lágrimas)
+E 1 3704 1 16 	(a adaga das lágrimas)
+M 0 3705 1 3777 	(o Espírito do Sofrimento)
+E 1 3705 1 16 	(a espada do sofrimento)
+M 0 3706 1 3783 	(o Espírito da Tristeza)
+E 1 3706 1 16 	(o machado do Sofrimento)
+M 0 3707 1 3765 	(o Espirito do Desespero)
+E 1 3707 1 16 	(o bastão do desespero)
+M 0 3711 1 3790 	(a Guerra)
+E 1 3727 1 16 	(o arco da guerra)
+M 0 3710 1 3788 	(a Pestilência)
+E 1 3724 1 16 	(a adaga do Frio)
+G 1 3725 1 -1 	(a espada do Calor)
+M 0 3709 1 3786 	(a Fome)
+E 1 3726 1 16 	(o bastão da Fome)
+M 0 3708 1 3792 	(a Morte)
+E 1 3723 1 16 	(a poderosa foice da morte)
+M 0 3728 4 3711 	(o Guardião das Almas)
+M 0 3729 4 3710 	(a Sombra da Morte)
+M 0 3729 4 3708 	(a Sombra da Morte)
+M 0 3728 4 3707 	(o Guardião das Almas)
+M 0 3729 4 3706 	(a Sombra da Morte)
+M 0 3728 4 3705 	(o Guardião das Almas)
+M 0 3729 4 3704 	(a Sombra da Morte)
+M 0 3728 4 3703 	(o Guardião das Almas)
+M 0 3731 2 3712 	(um ladrão de túmulos)
+M 0 3731 2 3701 	(um ladrão de túmulos)
+M 0 3721 8 3754 	(um cachorro esqueleto)
+M 0 3721 8 3754 	(um cachorro esqueleto)
+M 0 3721 8 3760 	(um cachorro esqueleto)
+M 0 3721 8 3760 	(um cachorro esqueleto)
+M 0 3721 8 3755 	(um cachorro esqueleto)
+M 0 3721 8 3755 	(um cachorro esqueleto)
+M 0 3721 8 3749 	(um cachorro esqueleto)
+M 0 3721 8 3749 	(um cachorro esqueleto)
+M 0 3720 1 3718 	(Cerbero)
+M 0 3719 1 3714 	(Chyron)
+M 0 3701 6 3742 	(a enguia satânica)
+M 0 3700 4 3742 	(um verme)
+M 0 3701 6 3742 	(a enguia satânica)
+M 0 3701 6 3748 	(a enguia satânica)
+M 0 3700 4 3748 	(um verme)
+M 0 3702 2 3741 	(um demoníaco tubarão)
+M 0 3700 4 3740 	(um verme)
+M 0 3700 4 3743 	(um verme)
+M 0 3701 6 3745 	(a enguia satânica)
+M 0 3701 6 3746 	(a enguia satânica)
+M 0 3701 6 3746 	(a enguia satânica)
+M 0 3702 2 3744 	(um demoníaco tubarão)
 S
 $
