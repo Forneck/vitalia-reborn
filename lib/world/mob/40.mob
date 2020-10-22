@@ -1,7 +1,7 @@
 #4000
 serpente enorme cobra~
 a serpente~
-Uma enorme e terrível serpente está aos seus pés, sibilando para você.
+Uma enorme e terrÃ­vel serpente estÃ¡ aos seus pÃ©s, sibilando para vocÃª.
 ~
 Ela parece estar com fome.
 ~
@@ -13,7 +13,7 @@ E
 #4001
 serpente cobra verde~
 uma serpente verde~
-Uma pequena serpente verde está aqui, e não parece muito amistosa ...
+Uma pequena serpente verde estÃ¡ aqui, e nÃ£o parece muito amistosa ...
 ~
 Ela parece gelada.
 ~
@@ -23,9 +23,9 @@ Ela parece gelada.
 8 8 0
 E
 #4002
-centopéia~
-a centopéia~
-Uma pequena centopéia está aqui, deixando seu rastro pelo chão.
+centopeia~
+a centopÃ©ia~
+Uma pequena centopÃ©ia estÃ¡ aqui, deixando seu rastro pelo chÃ£o.
 ~
 Ela parece completamente sem calor.
 ~
@@ -37,9 +37,9 @@ E
 #4003
 kobold~
 o kobold~
-Um horrível kobold está aqui procurando comida.
+Um horrÃ­vel kobold estÃ¡ aqui procurando comida.
 ~
-Ele é horrível.
+Ele Ã© horrÃ­vel.
 ~
 2097220 0 0 0 2048 0 0 0 -100 E
 4 16 5 2d10+40 1d8+1
@@ -51,7 +51,7 @@ orc~
 o orc~
 O Orc ronda por aqui procurando alguem para matar.
 ~
-Você percebe toda a maldade no seu olhar...
+VocÃª percebe toda a maldade no seu olhar...
 ~
 2097252 0 0 0 2048 0 0 0 -400 E
 5 15 5 2d10+60 2d4+0
@@ -61,7 +61,7 @@ E
 #4005
 orc enorme~
 um orc~
-Um enorme orc está aqui parecendo mal intencionado.
+Um enorme orc estÃ¡ aqui parecendo mal intencionado.
 ~
 Ele parece pavoroso.
 ~
@@ -73,10 +73,10 @@ E
 #4050
 guerreiro~
 o guerreiro~
-Um guerreiro muito alto está aqui.  Ele tem muito mais cicatrizes do 
-que qualquer pessoa que você já tenha visto.
+Um guerreiro muito alto estÃ¡ aqui.  Ele tem muito mais cicatrizes do 
+que qualquer pessoa que vocÃª jÃ¡ tenha visto.
 ~
-Ele parece ser um lutador forte e sem cérebro.
+Ele parece ser um lutador forte e sem cÃ©rebro.
 ~
 2097254 0 0 0 2048 0 0 0 -300 E
 12 8 4 10d10+50 2d8+1
@@ -86,7 +86,7 @@ E
 #4051
 guerreiro~
 o guerreiro~
-Um guerreiro alto está aqui.
+Um guerreiro alto estÃ¡ aqui.
 ~
 Ele parece ter jeito com armas.
 ~
@@ -98,7 +98,7 @@ E
 #4052
 hobgoblin~
 o hobgoblin~
-Um pequeno hobgoblin está aqui parado.
+Um pequeno hobgoblin estÃ¡ aqui parado.
 ~
 O hobgoblin parece um tanto perdido.
 ~
@@ -112,7 +112,7 @@ serpente cobra marrom~
 a serpente~
 Uma serpente marrom te observa.
 ~
-A serpente parece ter segundas intenções.
+A serpente parece ter segundas intenÃ§Ãµes.
 ~
 2097186 0 0 0 2048 0 0 0 -600 E
 10 10 4 4d10+60 3d5+1
@@ -120,11 +120,11 @@ A serpente parece ter segundas intenções.
 8 8 0
 E
 #4054
-centopéia~
-a centopéia~
-Uma centopéia branca está aqui.
+centopeia~
+a centopÃ©ia~
+Uma centopÃ©ia branca estÃ¡ aqui.
 ~
-A centopéia não parece realmente perceber você.
+A centopÃ©ia nÃ£o parece realmente perceber vocÃª.
 ~
 2097154 0 0 0 0 0 0 0 -100 E
 5 17 5 1d10+50 1d7+0
@@ -134,7 +134,7 @@ E
 #4055
 hobgoblin~
 o hobgoblin~
-Um enorme hobgoblin está aqui.
+Um enorme hobgoblin estÃ¡ aqui.
 ~
 O hobgoblin parece bastante perigoso.
 ~
@@ -146,9 +146,9 @@ E
 #4056
 orc~
 o orc~
-Um orc está aqui, procurando alguma coisa (ou talvez alguem?) para comer.
+Um orc estÃ¡ aqui, procurando alguma coisa (ou talvez alguem?) para comer.
 ~
-Bem, ele não parece ser muito amigável.
+Bem, ele nÃ£o parece ser muito amigÃ¡vel.
 ~
 2097252 0 0 0 2048 0 0 0 -800 E
 8 13 2 3d10+100 2d5+2
@@ -156,11 +156,11 @@ Bem, ele não parece ser muito amigável.
 8 8 1
 E
 #4057
-leão montanha~
-o leão da montanha~
-Um leão da montanha está aqui, grunhindo perversamente para você.
+leao montanha~
+o leÃ£o da montanha~
+Um leÃ£o da montanha estÃ¡ aqui, grunhindo perversamente para vocÃª.
 ~
-O leão parece bastante hostil com enormes garras e grandes dentes.
+O leÃ£o parece bastante hostil com enormes garras e grandes dentes.
 ~
 2097248 0 0 0 2048 0 0 0 -100 E
 5 16 5 1d10+60 2d4+0
@@ -170,10 +170,10 @@ E
 #4058
 gigante colina~
 o gigante da colina~
-Um gigante da colina está aqui arremessando algumas pedras por aí.
+Um gigante da colina estÃ¡ aqui arremessando algumas pedras por aÃ­.
 ~
-O gigante parece ter cerca de 9 pés de altura.  Por suas ações você
-logo chega a conclusão que ele não é muito inteligente.
+O gigante parece ter cerca de 9 pÃ©s de altura.  Por suas aÃ§Ãµes vocÃª
+logo chega a conclusÃ£o que ele nÃ£o Ã© muito inteligente.
 ~
 2162752 0 0 0 2048 0 0 0 0 E
 13 8 2 1d10+160 2d10+0
@@ -183,9 +183,9 @@ E
 #4100
 mago~
 o mago~
-Um pequeno mago de aparência inteligente está aqui.
+Um pequeno mago de aparÃªncia inteligente estÃ¡ aqui.
 ~
-Sua inteligência faz qualquer pessoa normal parecer estúpido...
+Sua inteligÃªncia faz qualquer pessoa normal parecer estÃºpido...
 Parece que ele lida bem com magia.
 ~
 2097190 0 0 0 2064 0 0 0 -100 E
@@ -196,7 +196,7 @@ E
 #4101
 troll enorme~
 o troll~
-Um enorme troll está aqui.
+Um enorme troll estÃ¡ aqui.
 ~
 Bem, ele parece perigoso!
 ~
@@ -208,9 +208,9 @@ E
 #4102
 serpente cobra verde enorme~
 a serpente~
-Uma enorme serpente verde está aqui. Parece ser a guardiã de forças malígnas.
+Uma enorme serpente verde estÃ¡ aqui. Parece ser a guardiÃ£ de forÃ§as malÃ­gnas.
 ~
-Você vê uma criatura demoníaca.
+VocÃª vÃª uma criatura demonÃ­aca.
 ~
 2097190 0 0 0 2048 0 0 0 -700 E
 10 8 5 6d10+50 3d5+2
@@ -218,12 +218,12 @@ Você vê uma criatura demoníaca.
 8 8 1
 E
 #4103
-ladrão~
-o ladrão~
-Um ladrão está aqui todo vestido de preto.
+ladrao~
+o ladrÃ£o~
+Um ladrÃ£o estÃ¡ aqui todo vestido de preto.
 ~
-Ele parece estar contando um punhado de moedas. Talvez você devesse contar
-o SEU ouro também...
+Ele parece estar contando um punhado de moedas. Talvez vocÃª devesse contar
+o SEU ouro tambÃ©m...
 ~
 2097220 0 0 0 1574928 0 0 0 -400 E
 8 13 3 1d10+100 2d5+2
@@ -233,9 +233,9 @@ E
 #4104
 orc feioso~
 o orc~
-um orc feioso está aqui.
+um orc feioso estÃ¡ aqui.
 ~
-É bastante desagradável olhar para ele.
+Ã‰ bastante desagradÃ¡vel olhar para ele.
 ~
 2097380 0 0 0 67600 0 0 0 -200 E
 7 14 4 1d5+90 2d4+1
@@ -243,11 +243,11 @@ um orc feioso está aqui.
 8 8 1
 E
 #4105
-centopéia~
-a centopéia~
-Uma pequena e fria centopéia está aqui.
+centopeia~
+a centopÃ©ia~
+Uma pequena e fria centopÃ©ia estÃ¡ aqui.
 ~
-Bem, ela não parece prestar muita atenção em você.
+Bem, ela nÃ£o parece prestar muita atenÃ§Ã£o em vocÃª.
 ~
 2097154 0 0 0 0 0 0 0 300 E
 6 15 4 3d10+50 1d8+1
@@ -255,11 +255,11 @@ Bem, ela não parece prestar muita atenção em você.
 8 8 0
 E
 #4106
-guereiro~
+guerreiro~
 o guerreiro~
-Um guerreiro humano está aqui. Ele traz um sorriso macabro no rosto.
+Um guerreiro humano estÃ¡ aqui. Ele traz um sorriso macabro no rosto.
 ~
-Ele não parece muito amigável...
+Ele nÃ£o parece muito amigÃ¡vel...
 ~
 2097252 0 0 0 2048 0 0 0 -300 E
 9 10 3 3d10+100 2d6+2
@@ -269,7 +269,7 @@ E
 #4107
 kobold~
 o kobold~
-um kobold verde está aqui.
+um kobold verde estÃ¡ aqui.
 ~
 Ele parece lodoso..
 ~
