@@ -307,7 +307,7 @@ exigirá de você a conduta daquele que acredita em um ideal.
 8 8 1
 E
 #3029
-guardiq confraria druidisa~
+guardia confraria druidisa~
 a guardiã da Confraria~
 Uma sorridente druidisa guarda a entrada da Confraria.
 ~
@@ -319,6 +319,53 @@ poderosa magia.
 2156546 0 0 0 272 0 0 0 1000 E
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
+8 8 2
+E
+#3030
+guildmaster master frog kermit~
+the rangers' guildmaster~
+Your guildmaster is a tall, lanky frog, perched on a lily pad in the corner.
+~
+In a strange way it almost makes sense, since a frog is a creature of
+nature, that he'd be your guildmaster. Except that he's singing and
+playing a banjo. Still, he's got a nice voice, and the heartfelt strains
+of "The Rainbow Connection" give you a warm, fuzzy feeling. He's dressed
+all in green, a slightly darker shade than his skin.
+~
+59419 0 0 0 16 0 0 0 1000 E
+34 0 -10 6d10+640 1d8+24
+18794 100000
+8 8 1
+E
+#3031
+guard huntress~
+the huntress~
+A huntress plays with her sword as she guards the entrance.
+~
+The huntress is tall, attractive and deadly. Don't mess with her. She
+doesn't like troublemakers. Rumor has it she got this job after she
+single-handedly cleaned all of the high-level monsters out of what is now
+a newbie zone. The only reason she's not a guildmaster is that she can't
+sing.
+~
+256010 0 0 0 80 0 0 0 900 E
+33 0 -5 6d10+990 1d8+22
+2000 16000
+8 8 2
+E
+#3032
+waitress girl~
+the waitress~
+A rather young waitress in green is standing here.
+~
+This 14-year-old girl might fool a member of another guild, but you know
+that she's one tough cookie. She very friendly, a little flirtatious
+even, but woe to anyone who angers her. She specializes in bruised egos
+and severed limbs.
+~
+256010 0 0 0 80 0 0 0 900 E
+23 1 2 6d1+390 1d8+12
+2000 80000
 8 8 2
 E
 #3040
