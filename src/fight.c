@@ -28,23 +28,28 @@
 	/* locally defined global variables, used externally */
 	/* head of l-list of fighting chars */
 struct char_data *combat_list = NULL;
+
 /* Weapon attack texts */
-struct attack_hit_type attack_hit_text[] = {
-	{"hit", "hits"},			/* 0 */
-	{"sting", "stings"},
-	{"whip", "whips"},
-	{"slash", "slashes"},
-	{"bite", "bites"},
-	{"bludgeon", "bludgeons"},	/* 5 */
-	{"crush", "crushes"},
-	{"pound", "pounds"},
-	{"claw", "claws"},
-	{"maul", "mauls"},
-	{"thrash", "thrashes"},		/* 10 */
-	{"pierce", "pierces"},
-	{"blast", "blasts"},
-	{"punch", "punches"},
-	{"stab", "stabs"}
+struct attack_hit_type attack_hit_text[] =
+{
+  {"golpeia",	"golpear",	"seu",	"o",	"golpe"},	//  0: hit
+  {"ferroa",	"ferroar",	"sua",	"a",	"ferroada"},	//  1: sting
+  {"chicoteia",	"chicotear",	"sua",	"a",	"chicotada"},	//  2: whip
+  {"retalha",	"retalhar",	"sua",	"a",	"retalhada"},	//  3: slash
+  {"morde",	"morder",	"sua",	"a",	"mordida"},	//  4: bite
+  {"caceteia",	"cacetear",	"sua",	"a",	"cacetada"},	//  5: bludgeon
+  {"esmaga",	"esmagar",	"sua",	"a",	"esmagada"},	//  6: crush
+  {"moe",	"moer",		"sua",	"a",	"moída"},	//  7: pound
+  {"arranha",	"arranhar",	"sua",	"a",	"arranhada"},	//  8: claw
+  {"espanca",	"espancar",	"sua",	"a",	"espancada"},	//  9: maul
+  {"açoita",	"açoitar",	"sua",	"a",	"açoitada"},	// 10: thrash
+  {"fura",	"furar",	"sua",	"a",	"furada"},	// 11: pierce
+  {"explode",	"explodir",	"sua",	"a",	"explosão"},	// 12: blast
+  {"esmurra",	"esmurrar",	"sua",	"a",	"esmurrada"},	// 13: punch
+  {"esfaqueia",	"esfaquear",	"sua",	"a",	"esfaqueada"},	// 14: stab
+  {"perfura",	"perfurar",	"sua",	"a",	"perfurada"},	// 15: bore
+  {"espeta",	"espetar",	"sua",	"a",	"espetada"},	// 16: broach
+  {"corta",	"cortar",	"sua",	"a",	"cortada"}	// 17: mow
 };
 
 /* local (file scope only) variables */
@@ -464,11 +469,11 @@ static void dam_message(int dam, struct char_data *ch, struct char_data *victim,
 		   "slashes") */
 
 		{
-			"$n tries to #w $N, but misses.",	/* 0: 0 */
-		"You try to #w $N, but miss.", "$n tries to #w you, but misses."},
+			"$n tenta #w $N, mas erra.",	/* 0: 0 */
+		"Você tenta #w $N, mas erra.", "$n tenta #w você, mas erra."},
 		{
-			"$n tickles $N as $e #W $M.",	/* 1: 1..2 */
-		"You tickle $N as you #w $M.", "$n tickles you as $e #W you."},
+			"$n faz cócegas em $N quando $e #W $M.",	/* 1: 1..2 */
+		"Você faz cócegas em $N quando você #w $M.", "$n faz cócegas em você quando $e #W você."},
 		{
 			"$n barely #W $N.",	/* 2: 3..4 */
 		"You barely #w $N.", "$n barely #W you."},
