@@ -3,8 +3,8 @@ brownie floresta~
 o brownie da floresta~
 Um brownie da floresta refugia-se por aqui.
 ~
-O brownie da floresta pisca para você e se esconde ligeiro.  Bastante
-amigável esta criaturinha.
+O brownie da floresta pisca para vocÃª e se esconde ligeiro.  Bastante
+amigÃ¡vel esta criaturinha.
 ~
 2097348 0 0 0 1048580 0 0 0 800 E
 12 9 1 150d1+20 2d7+5
@@ -16,8 +16,8 @@ lobo~
 o lobo~
 um lobo ronda por aqui procurando um coelho.
 ~
-O lobo parece estar bastante faminto.  Você percebe que ele está pensando se
-VOCÊ não teria o mesmo gosto de um coelho.
+O lobo parece estar bastante faminto.  VocÃª percebe que ele estÃ¡ pensando se
+VOCÃŠ nÃ£o teria o mesmo gosto de um coelho.
 ~
 2097220 0 0 0 1048576 0 0 0 -300 E
 5 16 5 50d1+10 3d3+2
@@ -29,8 +29,8 @@ coelho pardo~
 o coelho pardo~
 Um coelho pardo saltita alegremente.
 ~
-O coelho olha em sua direção com seus grandes olhos castanhos e então bate
-em retirada..  OPA..  Lá vai seu almoço!
+O coelho olha em sua direÃ§Ã£o com seus grandes olhos castanhos e entÃ£o bate
+em retirada..  OPA..  LÃ¡ vai seu almoÃ§o!
 ~
 2097344 0 0 0 0 0 0 0 400 E
 3 18 7 30d1+5 1d3+1
@@ -40,10 +40,10 @@ E
 #5704
 tomal mateiro~
 Tomal~
-Um mateiro olha para você com um talo de mato pendendo de sua boca.
+Um mateiro olha para vocÃª com um talo de mato pendendo de sua boca.
 ~
-O mateiro sorri disfarçando e com um sotaque desconhecido diz, 'Oi
-forasteiro - o nome é Tomal..  Como vai?'
+O mateiro sorri disfarÃ§ando e com um sotaque desconhecido diz, 'Oi
+forasteiro - o nome Ã© Tomal..  Como vai?'
 ~
 2097348 0 0 0 256 0 0 0 800 E
 23 2 -2 400d1+250 3d8+8
@@ -51,11 +51,11 @@ forasteiro - o nome é Tomal..  Como vai?'
 8 8 1
 E
 #5705
-demônio guardião forma sombria~
-O guardião demônio~
+demonio guardiao forma sombria~
+O guardiÃ£o demÃ´nio~
 Uma forma sombria aparece da neblina.
 ~
-Você vê uma tenebrosa combinação de dentes e garras, o guardião demônio está
+VocÃª vÃª uma tenebrosa combinaÃ§Ã£o de dentes e garras, o guardiÃ£o demÃ´nio estÃ¡
 decidido a arrancar suas tripas.
 ~
 2097250 0 0 0 788736 0 0 0 -1000 E
@@ -68,8 +68,8 @@ guarda sentinela graye~
 O guarda de Graye~
 O guarda de Graye vigia em seu posto.
 ~
-O guarda sorri gentilmente dizendo, 'Melhor ficar perto de mim, amigo, é um
-mundo perigoso lá fora.'
+O guarda sorri gentilmente dizendo, 'Melhor ficar perto de mim, amigo, Ã© um
+mundo perigoso lÃ¡ fora.'
 ~
 2097218 0 0 0 256 0 0 0 900 E
 30 0 -2 200d2+200 3d6+11
@@ -79,10 +79,10 @@ E
 #5707
 diabinho diabo~
 o diabinho~
-um diabinho rosnando para você.
+um diabinho rosnando para vocÃª.
 ~
 Ele parece um diabinho inofensivo, mas seus dentes afiados poderiam machucar
-se ele mordesse seu braço.
+se ele mordesse seu braÃ§o.
 ~
 2097252 0 0 0 1048576 0 0 0 -800 E
 8 12 3 50d1+10 3d3+6
@@ -90,12 +90,12 @@ se ele mordesse seu braço.
 8 8 1
 E
 #5708
-menor demônio~
-o demônio menor~
-Um demônio menor salta em sua direção saindo das sombras!
+menor demonio~
+o demÃ´nio menor~
+Um demÃ´nio menor salta em sua direÃ§Ã£o saindo das sombras!
 ~
-O demônio aparenta ser um pequenino amontoado de carne viva, cartilagem e
-dentes.  Ele o fita com muita fúria em seus olhos.
+O demÃ´nio aparenta ser um pequenino amontoado de carne viva, cartilagem e
+dentes.  Ele o fita com muita fÃºria em seus olhos.
 ~
 2097248 0 0 0 2097156 0 0 0 -900 E
 13 8 1 150d2+80 2d7+8
@@ -103,12 +103,12 @@ dentes.  Ele o fita com muita fúria em seus olhos.
 8 8 1
 E
 #5709
-cidadão graye homem~
-O cidadão Graye~
-Um cidadão de Graye passa correndo olhando por sobre os ombros.
+cidadao graye homem~
+O cidadÃ£o Graye~
+Um cidadÃ£o de Graye passa correndo olhando por sobre os ombros.
 ~
-O homem parece preocupado - Você também estaria se sua cidade estivesse
-sitiada por demônios.
+O homem parece preocupado - VocÃª tambÃ©m estaria se sua cidade estivesse
+sitiada por demÃ´nios.
 ~
 2097344 0 0 0 256 0 0 0 700 E
 17 6 1 150d2+30 2d8+8
@@ -116,12 +116,12 @@ sitiada por demônios.
 8 8 1
 E
 #5710
-cidadã mulher~
-a cidadã de Graye~
-Uma cidadã de Graye passa correndo olhando por sobre os ombros.
+cidada mulher~
+a cidadÃ£ de Graye~
+Uma cidadÃ£ de Graye passa correndo olhando por sobre os ombros.
 ~
-A mulher parece preocupada - Você também estaria se sua cidade estivesse
-sitiada por demônios.
+A mulher parece preocupada - VocÃª tambÃ©m estaria se sua cidade estivesse
+sitiada por demÃ´nios.
 ~
 2097280 0 0 0 256 0 0 0 700 E
 19 6 2 150d2+20 2d7+9
@@ -129,12 +129,12 @@ sitiada por demônios.
 8 8 2
 E
 #5711
-demônio maior~
-um demônio maior~
-Um demônio maior está aqui a espreita.
+demonio maior~
+um demÃ´nio maior~
+Um demÃ´nio maior estÃ¡ aqui a espreita.
 ~
-Você olha bem dentro dos olhos dessa besta.  Você não nota nenhuma razão ou
-conhecimento a não ser uma imensa sêde de poder e destruição.
+VocÃª olha bem dentro dos olhos dessa besta.  VocÃª nÃ£o nota nenhuma razÃ£o ou
+conhecimento a nÃ£o ser uma imensa sÃªde de poder e destruiÃ§Ã£o.
 ~
 2097252 0 0 0 260 0 0 0 -900 E
 36 -2 -1 350d2+220 3d8+14
@@ -142,11 +142,11 @@ conhecimento a não ser uma imensa sêde de poder e destruição.
 8 8 1
 E
 #5712
-guardião gruta espectro~
-O guardião da gruta~
+guardiao gruta espectro~
+O guardiÃ£o da gruta~
 Um espectro de sombra aparece violentamente em seu caminho.
 ~
-Tudo que você vê é um nevoeiro com dois grandes olhos vermelhos brilhando...
+Tudo que vocÃª vÃª Ã© um nevoeiro com dois grandes olhos vermelhos brilhando...
 ~
 2097250 0 0 0 260 0 0 0 -900 E
 35 -1 -3 800d1+250 3d7+13
@@ -158,8 +158,8 @@ guarda cela carcereiro~
 o carcereiro~
 Um carcereiro ronda por aqui, chicoteando os prisioneiros.
 ~
-O guarda parece ser..  Bem...  Quase humano.  Ele está coberto por feridas e
-tufos de pelos.  Ele te avista com seu único olho bom e diz, 'Abaixe as
+O guarda parece ser..  Bem...  Quase humano.  Ele estÃ¡ coberto por feridas e
+tufos de pelos.  Ele te avista com seu Ãºnico olho bom e diz, 'Abaixe as
 armas..  Prisioneiro!'
 ~
 2097254 0 0 0 256 0 0 0 -800 E
@@ -170,11 +170,11 @@ E
 #5714
 rymat conselheiro~
 Rymat~
-O conselheiro do rei está aqui, soluçando.
+O conselheiro do rei estÃ¡ aqui, soluÃ§ando.
 ~
-Ele olha para você e implora, 'Por favor!  Eles o levaram!  Eu vejo que é um
-destemido aventureiro..  Por favor traga-o de volta para nós!' O conselheiro
-lhe dá as costas e continua a lamentar-se, tremendo incontrolavelmente.
+Ele olha para vocÃª e implora, 'Por favor!  Eles o levaram!  Eu vejo que Ã© um
+destemido aventureiro..  Por favor traga-o de volta para nÃ³s!' O conselheiro
+lhe dÃ¡ as costas e continua a lamentar-se, tremendo incontrolavelmente.
 ~
 2097218 0 0 0 256 0 0 0 900 E
 23 0 0 350d1+50 3d8+13
@@ -182,12 +182,12 @@ lhe dá as costas e continua a lamentar-se, tremendo incontrolavelmente.
 8 8 1
 E
 #5715
-irgon arque demônio~
-O Arque-Deomônio Irgon~
-O Arque-Demônio emerge das sombras.
+irgon arque demonio~
+O Arque-DeomÃ´nio Irgon~
+O Arque-DemÃ´nio emerge das sombras.
 ~
-Irgon olha para você com desprezo.  Suas costas oleosas refletem a luz das
-tochas.  Uma grande garra branca aponta em sua direção e ele profetiza,
+Irgon olha para vocÃª com desprezo.  Suas costas oleosas refletem a luz das
+tochas.  Uma grande garra branca aponta em sua direÃ§Ã£o e ele profetiza,
 'Prepare-se para morrer.'
 ~
 2097250 0 0 0 262404 0 0 0 -900 E
@@ -196,14 +196,14 @@ tochas.  Uma grande garra branca aponta em sua direção e ele profetiza,
 8 8 1
 E
 #5716
-scrytin demônio discípulo~
+scrytin demonio discipulo~
 Scrytin~
-Scrytin, o discípulo do senhor dos demônios, sorri para você.
+Scrytin, o discÃ­pulo do senhor dos demÃ´nios, sorri para vocÃª.
 ~
-Scrytin olha para você com ternura e de repente você se sente em paz e
-relaxado.  Você o encara diretamente nos olhos e se sente adormecer
-profundamente mais e mais...NÃO!!!!  Scrytin, percebendo que você saiu de
-seu transe grunhe, 'Não quer ser meu escravo hein?..  Então você deve
+Scrytin olha para vocÃª com ternura e de repente vocÃª se sente em paz e
+relaxado.  VocÃª o encara diretamente nos olhos e se sente adormecer
+profundamente mais e mais...NÃƒO!!!!  Scrytin, percebendo que vocÃª saiu de
+seu transe grunhe, 'NÃ£o quer ser meu escravo hein?..  EntÃ£o vocÃª deve
 morrer'
 ~
 2097248 0 0 0 65856 0 0 0 -999 E
@@ -214,10 +214,10 @@ E
 #5717
 relnar rei~
 rei Relnar~
-O bom Rei Relnar está aqui.
+O bom Rei Relnar estÃ¡ aqui.
 ~
-Você olha dentro de seus olhos e nota sua descendência direta de Graye e
-agora é capaz de compreender porque sua cidade é tão próspera e feliz.
+VocÃª olha dentro de seus olhos e nota sua descendÃªncia direta de Graye e
+agora Ã© capaz de compreender porque sua cidade Ã© tÃ£o prÃ³spera e feliz.
 ~
 2097218 0 0 0 65856 0 0 0 999 E
 45 -6 -10 1000d2+250 4d8+19
