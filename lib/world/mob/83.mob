@@ -1,7 +1,7 @@
 #8301
 loctus besta monstro~
 o Loctus~
-Loctus se ergue aqui, pronto para atacá-lo.
+Loctus se ergue aqui, pronto para atacÃ¡-lo.
 ~
 Um monstro enorme, com toda a pele coberta por escamas, boca repleta de 
 dentes muito afiados e com enormes garras.  Prepare-se para morrer!
@@ -16,12 +16,12 @@ Int: 25
 Wis: 25
 E
 #8302
-guardião loctus~
-o Guardião de Loctus~
-Um enorme guardião está aqui, imóvel.
+guardiao loctus~
+o GuardiÃ£o de Loctus~
+Um enorme guardiÃ£o estÃ¡ aqui, imÃ³vel.
 ~
-Um ser enorme, parecendo mais um paredão.  Um animal que parece ser uma 
-mistura de demônio com dragão, algo terrível.
+Um ser enorme, parecendo mais um paredÃ£o.  Um animal que parece ser uma 
+mistura de demÃ´nio com dragÃ£o, algo terrÃ­vel.
 ~
 2357778 0 0 0 0 0 0 0 -500 E
 105 -32 -42 90d5+15000 12d7+53
@@ -37,11 +37,11 @@ E
 #8303
 serpente fogo~
 a Serpente de Fogo~
-Uma enorme serpente cuspindo fogo, avança em sua direção.
+Uma enorme serpente cuspindo fogo, avanÃ§a em sua direÃ§Ã£o.
 ~
 Esta imensa serpente com certeza jamais foi vista antes. Envolvida por imensas
-labaredas de fogo e produzindo um som absolutamente apavorante, causa em você
-um tremendo pavor e sua vontade é sumir de perto dela o quanto antes.
+labaredas de fogo e produzindo um som absolutamente apavorante, causa em vocÃª
+um tremendo pavor e sua vontade Ã© sumir de perto dela o quanto antes.
 ~
 2357298 0 0 0 0 0 0 0 -400 E
 102 -27 -35 100d3+10000 15d10+48
@@ -54,9 +54,9 @@ E
 #8304
 serpente gelo~
 a Serpente de Gelo~
-Uma enorme serpente, bafejando gelo puro, avança sobre você.
+Uma enorme serpente, bafejando gelo puro, avanÃ§a sobre vocÃª.
 ~
-Ao invés de ficar observando-a, cuidado com a retaguarda!
+Ao invÃ©s de ficar observando-a, cuidado com a retaguarda!
 ~
 2357298 0 0 0 0 0 0 0 -400 E
 102 -27 -35 100d3+10000 15d10+48
@@ -72,7 +72,7 @@ a Serpente da Areia~
 Um enorme serpente sai da areia, pronta para lhe atacar.
 ~
 Uma serpente muito grande, com escamas verdes e olhos avermelhados, parece 
-pronta para destruí-lo.
+pronta para destruÃ­-lo.
 ~
 2357298 0 0 0 0 0 0 0 -400 E
 102 -27 -35 100d3+10000 15d10+48
@@ -85,9 +85,9 @@ E
 #8306
 morcego~
 um morcego~
-Um pequeno morcego voa em sua direção.
+Um pequeno morcego voa em sua direÃ§Ã£o.
 ~
-Não muito maior que um palmo, este morcego de olhos vermelhos parece ser mais 
+NÃ£o muito maior que um palmo, este morcego de olhos vermelhos parece ser mais 
 perigoso do que aparenta ser.
 ~
 2660580 0 0 0 0 0 0 0 -400 E
@@ -98,9 +98,9 @@ E
 #8307
 mago~
 o Mago~
-Um mago está aqui, descansando.
+Um mago estÃ¡ aqui, descansando.
 ~
-Um ser não muito grande mas já muito desgastado pelo tempo, que ficou 
+Um ser nÃ£o muito grande mas jÃ¡ muito desgastado pelo tempo, que ficou 
 preso aqui.
 ~
 2351106 0 0 0 0 0 0 0 500 E
@@ -109,11 +109,11 @@ preso aqui.
 5 5 1
 E
 #8308
-clérigo~
-o Clérigo~
-Um clérigo está aqui, descansando.
+clerigo~
+o ClÃ©rigo~
+Um clÃ©rigo estÃ¡ aqui, descansando.
 ~
-Com longas vestes brancas, este clérigo parece ser bem velho e estar muito 
+Com longas vestes brancas, este clÃ©rigo parece ser bem velho e estar muito 
 cansado.
 ~
 2351106 0 0 0 0 0 0 0 500 E
@@ -122,11 +122,11 @@ cansado.
 5 5 1
 E
 #8309
-ladrão~
-o Ladrão~
-Um ladrão está aqui, descansando.
+ladrao~
+o LadrÃ£o~
+Um ladrÃ£o estÃ¡ aqui, descansando.
 ~
-Vestindo somente uma calça e um manto simples, este ladrão parece estar mais 
+Vestindo somente uma calÃ§a e um manto simples, este ladrÃ£o parece estar mais 
 fraco que um fido!
 ~
 2351106 0 0 0 0 0 0 0 500 E
@@ -137,10 +137,10 @@ E
 #8310
 guerreiro~
 o Guerreiro~
-Um guerreiro está aqui, descansando.
+Um guerreiro estÃ¡ aqui, descansando.
 ~
 Usanso uma velha e desgastada armadura, este guerreiro parece muito fraco e 
-faminto.   Ele deve ter passado por momentos horríveis, nesta prisão.
+faminto.   Ele deve ter passado por momentos horrÃ­veis, nesta prisÃ£o.
 ~
 2351106 0 0 0 0 0 0 0 500 E
 80 -19 -27 8d12+3000 6d6+35
@@ -149,10 +149,10 @@ faminto.   Ele deve ter passado por momentos horríveis, nesta prisão.
 E
 #8311
 nativo nobre~
-um nativo com nobre feições~
-Um nativo com nobre feições está aqui, falando algo que você não entende.
+um nativo com nobre feiÃ§Ãµes~
+Um nativo com nobre feiÃ§Ãµes estÃ¡ aqui, falando algo que vocÃª nÃ£o entende.
 ~
-A única coisa que ele diz é: "Kriu maSekwov??"
+A Ãºnica coisa que ele diz Ã©: "Kriu maSekwov??"
 ~
 2158676 0 0 0 134285568 0 0 0 400 E
 20 5 -3 3d6+400 6d4+13
@@ -168,10 +168,10 @@ Cha: 15
 E
 #8312
 nativa~
-uma nativa com nobre feições~
-Uma nativa com nobre feições está aqui, falando algo que você não entende.
+uma nativa com nobre feiÃ§Ãµes~
+Uma nativa com nobre feiÃ§Ãµes estÃ¡ aqui, falando algo que vocÃª nÃ£o entende.
 ~
-A única coisa que ela diz é: "Kriu maSekwov??"
+A Ãºnica coisa que ela diz Ã©: "Kriu maSekwov??"
 ~
 2158676 0 0 0 134285568 0 0 0 400 E
 20 5 -3 3d6+400 4d4+13
@@ -186,11 +186,11 @@ Con: 14
 Cha: 25
 E
 #8313
-nativa criança~
-um pequeno nativo com nobre feições~
-Uma criança com um pequeno adorno na cabeça está brincado por aqui.
+nativa crianca~
+um pequeno nativo com nobre feiÃ§Ãµes~
+Uma crianÃ§a com um pequeno adorno na cabeÃ§a estÃ¡ brincado por aqui.
 ~
-A única coisa que ela diz é: "Kriu maSekwov??"
+A Ãºnica coisa que ela diz Ã©: "Kriu maSekwov??"
 ~
 2158676 0 0 0 134285568 0 0 0 400 E
 15 8 -2 3d6+400 4d3+11
@@ -205,11 +205,11 @@ Con: 14
 Cha: 25
 E
 #8314
-guardiã sentinela nativa~
+guardia sentinela nativa~
 a nativa sentinela~
-Uma nativa sentinela está aqui, observando você.
+Uma nativa sentinela estÃ¡ aqui, observando vocÃª.
 ~
-A única coisa que ela diz é: "Kriu maSekwov??"
+A Ãºnica coisa que ela diz Ã©: "Kriu maSekwov??"
 ~
 2357266 0 0 0 134285568 0 0 0 400 E
 81 -17 -28 3d6+3400 7d5+39
@@ -226,11 +226,11 @@ E
 #8315
 guerreira~
 a Guerreira~
-Uma estranha Guerreira, ao perceber sua chegada, olha com esperança para você.
+Uma estranha Guerreira, ao perceber sua chegada, olha com esperanÃ§a para vocÃª.
 ~
-Que figura explendida!  Com belíssimos olhos negros como a noite e radiantes 
-como estrelas, você pensa que poderia se perder neste olhar que parecem ter
-visto cenas inesquecíveis.
+Que figura explendida!  Com belÃ­ssimos olhos negros como a noite e radiantes 
+como estrelas, vocÃª pensa que poderia se perder neste olhar que parecem ter
+visto cenas inesquecÃ­veis.
 ~
 2351106 0 0 0 0 0 0 0 500 E
 50 -7 -19 5d5+3500 6d6+25
@@ -240,10 +240,10 @@ E
 #8316
 maga~
 a Maga~
-Uma estranha Maga está aqui, chorando muito.
+Uma estranha Maga estÃ¡ aqui, chorando muito.
 ~
-Ao olhar, você vê que que esta pobre mulher está chorando muito.  Ela 
-parece estar realmente desesperada, pois por mais que tente, não 
+Ao olhar, vocÃª vÃª que que esta pobre mulher estÃ¡ chorando muito.  Ela 
+parece estar realmente desesperada, pois por mais que tente, nÃ£o 
 consegue dizer nada.
 ~
 2351106 0 0 0 0 0 0 0 500 E
@@ -252,13 +252,13 @@ consegue dizer nada.
 8 8 2
 E
 #8317
-clériga~
-a Clériga~
-Uma estranha Cleriga está aqui, desesperada.
+cleriga~
+a ClÃ©riga~
+Uma estranha Cleriga estÃ¡ aqui, desesperada.
 ~
-Ao olhar, você vê que que esta pobre mulher está chorando muito.  
+Ao olhar, vocÃª vÃª que que esta pobre mulher estÃ¡ chorando muito.  
 Ela parece estar realmente desesperada, pois por mais que tente, 
-não consegue dizer nada.
+nÃ£o consegue dizer nada.
 ~
 2351106 0 0 0 0 0 0 0 500 E
 50 -7 -19 5d5+3500 6d6+25
@@ -268,9 +268,9 @@ E
 #8318
 ladra~
 a Ladra~
-Uma estranha Ladra está aqui, chorando.
+Uma estranha Ladra estÃ¡ aqui, chorando.
 ~
-Ao olhar, você vê que que esta pobre mulher está completamente 
+Ao olhar, vocÃª vÃª que que esta pobre mulher estÃ¡ completamente 
 desesperada.
 ~
 2351106 0 0 0 0 0 0 0 500 E
@@ -281,11 +281,11 @@ E
 #8319
 druidesa~
 a Druidesa~
-Uma estranha Druidesa está aqui, cabisbaixa.
+Uma estranha Druidesa estÃ¡ aqui, cabisbaixa.
 ~
-Ao olhar, você vê que que esta pobre mulher está muito fraca  
+Ao olhar, vocÃª vÃª que que esta pobre mulher estÃ¡ muito fraca  
 e chorando muito. Ela parece estar realmente desesperada,
-pois por mais que tente, não consegue dizer nada.
+pois por mais que tente, nÃ£o consegue dizer nada.
 ~
 2351106 0 0 0 0 0 0 0 500 E
 50 -7 -19 5d5+3500 6d6+25
@@ -295,9 +295,9 @@ E
 #8320
 bruxa feiticeira~
 a bruxa da aldeia~
-A bruxa da aldeia esta aqui, com um pé de galinha pendurado boca.
+A bruxa da aldeia esta aqui, com um pÃ© de galinha pendurado boca.
 ~
-Você só tem vontade de gritar e dizer: "ARGHT!! QUE CRIATURA MEDONHA!!" mas,
+VocÃª sÃ³ tem vontade de gritar e dizer: "ARGHT!! QUE CRIATURA MEDONHA!!" mas,
 e se ela te pegar fazendo isso??
 ~
 2289718 0 0 0 671156224 0 0 0 -900 E
@@ -315,10 +315,10 @@ E
 #8321
 druida~
 o Druida~
-Um druida está aqui, descansando.
+Um druida estÃ¡ aqui, descansando.
 ~
-Trajando alguns trapos, este druida possui a estatura de alguém como você, mas 
-não consegue mais se portar em pé.
+Trajando alguns trapos, este druida possui a estatura de alguÃ©m como vocÃª, mas 
+nÃ£o consegue mais se portar em pÃ©.
 ~
 2351106 0 0 0 0 0 0 0 500 E
 80 -19 -27 8d12+3000 6d6+35
