@@ -11,11 +11,11 @@ An undefined string.
 8 8 2
 E
 #13601
-dragão negro pequeno~
-um pequeno dragão negro~
-Um pequeno dragão negro está aqui, procurando comida.
+dragao negro pequeno~
+um pequeno dragÃ£o negro~
+Um pequeno dragÃ£o negro estÃ¡ aqui, procurando comida.
 ~
-Algo lhe diz que sua vida não será muito longa..
+Algo lhe diz que sua vida nÃ£o serÃ¡ muito longa..
 ~
 2164832 0 0 0 80 0 0 0 0 E
 25 -5 0 1d1+2000 11d1+25
@@ -25,7 +25,7 @@ E
 #13602
 pequeno corcunda~
 um pequeno corcunda~
-Um incômodo corcunda anda de um lado a outro, preocupado.
+Um incÃ´modo corcunda anda de um lado a outro, preocupado.
 ~
 An undefined string.
 ~
@@ -35,11 +35,11 @@ An undefined string.
 8 8 1
 E
 #13603
-cervo corça~
-uma corça~
-Uma corça está aqui, comendo algumas plantas.
+cervo corca~
+uma corÃ§a~
+Uma corÃ§a estÃ¡ aqui, comendo algumas plantas.
 ~
-Uma corça, um cervo, um cervo fêmea...  Vamos! Você conhece a música.
+Uma corÃ§a, um cervo, um cervo fÃªmea...  Vamos! VocÃª conhece a mÃºsica.
 ~
 2097216 0 0 0 0 0 0 0 0 E
 14 6 4 1d1+400 6d1+14
@@ -51,7 +51,7 @@ veado~
 um veado~
 Um grande veado anda calmamente por aqui.
 ~
-Um veado, um cervo fêmea...    Ah Chega!!
+Um veado, um cervo fÃªmea...    Ah Chega!!
 ~
 2097216 0 0 0 0 0 0 0 0 E
 14 6 4 1d1+400 6d1+14
@@ -61,9 +61,9 @@ E
 #13605
 duende floresta~
 um duende da floresta~
-Um pequeno duende da floresta se esconde de você.
+Um pequeno duende da floresta se esconde de vocÃª.
 ~
-Ele olha para você e ri frenéticamente.
+Ele olha para vocÃª e ri frenÃ©ticamente.
 ~
 2097216 0 0 0 0 0 0 0 0 E
 14 6 4 1d1+400 6d1+14
@@ -71,9 +71,9 @@ Ele olha para você e ri frenéticamente.
 8 8 1
 E
 #13606
-ágil raposa~
-uma ágil raposa~
-Uma ágil raposa corre por entre as árvores.
+agil raposa~
+uma Ã¡gil raposa~
+Uma Ã¡gil raposa corre por entre as Ã¡rvores.
 ~
 An undefined string.
 ~
@@ -85,7 +85,7 @@ E
 #13607
 multicolorida borboleta~
 uma borboleta~
-Uma magnífica borboleta multicolorida voa por aqui.
+Uma magnÃ­fica borboleta multicolorida voa por aqui.
 ~
 An undefined string.
 ~
@@ -107,9 +107,9 @@ Ele se moveu?
 8 8 1
 E
 #13609
-árvore nirin odiosa~
-uma árvore Nirin~
-Uma odiosa árvore Nirin negra se levanta diante de você.
+arvore nirin odiosa~
+uma Ã¡rvore Nirin~
+Uma odiosa Ã¡rvore Nirin negra se levanta diante de vocÃª.
 ~
 An undefined string.
 ~
