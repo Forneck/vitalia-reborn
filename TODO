@@ -1,13 +1,17 @@
 TODO:
 character.c /rebegin etc...
 
-
-
+greetings
+@W       << @wSe voce nao possui um personagem neste jogo, digite "@RNOVO@w".@W >>@n
 
 autoress/limits
-spells a partir de detect alig #18
+spells a partir de poison
 reroll
 clans
+
+guildas em 113,134
+
+classes monge e paladinos
 
 remort:
 ideia: volta nivel 1 (hp, mov, mana continua). segue para plano 2, nao ganha xp em plano inferior (pode alternar entre planos), Skills voltam a poder usar quando atingir nivel novamente.
@@ -21,6 +25,8 @@ talk_dead no move
 diminuir carga de stoneskin no dano
 modificar o consider
 
+lojas
+
 para o menu de hometown:
 j = world[(IN_ROOM(ch))].zone;
 		send_to_char(ch, "Jogadores em %s\tn.\r\n--------------------\r\n", zone_table[j].name);
@@ -32,8 +38,17 @@ for (j = object_list; j; j = next_thing)
 	
 	 LIST_FOR_SECURE(object_list, j, next_thing, l_global) {
 
-mobs acentuados: 0, 1,3, 4
-100,102,103
+mobs acentuados: 0, 1,3, 4,5,7,8,9,12,15,16,17,18,22,23,24,25,27,28,30,31,33,34,35,36,38,39,40,42,43,44,49,50,51,53,54,57,60,61,62,63,64,65,69,70,72,79,83,84,91,92,93,95,97,98,
+100,102,103,107,110,111,113,114,115,116,120,121,126,133,134,135,136,181,186
+
+
+falta area 20 - clans,45,48,52,59,75,81,99,108,131,132,137
+
 areas acentuadas: 
+0, 1, 
 
 objs acentuados:
+30
+
+mob sem load:
+750,2399
