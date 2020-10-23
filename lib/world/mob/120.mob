@@ -1,10 +1,10 @@
 #12000
 juiz~
 o juiz~
-Um juiz está assistindo aos jogos atentamente.
+Um juiz estÃ¡ assistindo aos jogos atentamente.
 ~
-O juiz é um gladiador aposentado e todas as partes expostas de seu corpo
-estão cobertas por feias cicatrizes. Apesar dos anos que já pesam sobre ele,
+O juiz Ã© um gladiador aposentado e todas as partes expostas de seu corpo
+estÃ£o cobertas por feias cicatrizes. Apesar dos anos que jÃ¡ pesam sobre ele,
 permanece sadio e em boa forma.
 ~
 2099202 0 0 0 256 0 0 0 100 E
@@ -15,10 +15,10 @@ E
 #12001
 marcador~
 o marcador~
-Um marcador tem um olho em seu cronômetro e o outro em seu bloco de anotações.
+Um marcador tem um olho em seu cronÃ´metro e o outro em seu bloco de anotaÃ§Ãµes.
 ~
-O marcador é um homem jovem com os seus 25 anos e ele estuda atentamente o
-seu bloco de anotações.
+O marcador Ã© um homem jovem com os seus 25 anos e ele estuda atentamente o
+seu bloco de anotaÃ§Ãµes.
 ~
 2156546 0 0 0 0 0 0 0 100 E
 7 14 4 3d5+80 1d4+3
@@ -28,9 +28,9 @@ E
 #12003
 espectador~
 o espectador~
-Um espectador está aqui, assistindo aos jogos.
+Um espectador estÃ¡ aqui, assistindo aos jogos.
 ~
-O espectador está imundo, meio bêbado e gritando feito um louco.
+O espectador estÃ¡ imundo, meio bÃªbado e gritando feito um louco.
 ~
 2097154 0 0 0 0 0 0 0 -100 E
 5 16 5 2d6+65 2d4+0
@@ -40,12 +40,12 @@ E
 #12004
 nobre homem~
 o homem nobre~
-Um nobre se encontra aqui, parecendo indiferente à tudo.
+Um nobre se encontra aqui, parecendo indiferente Ã  tudo.
 ~
-O nobre está vestido com roupas caras e luxuosas, e é tido por muitos, como
+O nobre estÃ¡ vestido com roupas caras e luxuosas, e Ã© tido por muitos, como
 sendo muito esnobe, por causa de suas atitudes. Apesar de estar envelhecendo
 e seu cabelo e barba estarem ficando grisalhos, ele continua sendo uma pessoa
-não muito fácil de se domar.
+nÃ£o muito fÃ¡cil de se domar.
 ~
 2099330 0 0 0 16 0 0 0 500 E
 12 9 2 4d6+140 1d7+5
@@ -55,10 +55,10 @@ E
 #12005
 escrava~
 a escrava~
-Uma escrava está parada aqui, desejando ser livre.
+Uma escrava estÃ¡ parada aqui, desejando ser livre.
 ~
-Uma jovem muito bonita, que foi capturada ao invés de ser morta, quando as
-legiões Romanas invadiram e dominaram a sua terra.
+Uma jovem muito bonita, que foi capturada ao invÃ©s de ser morta, quando as
+legiÃµes Romanas invadiram e dominaram a sua terra.
 ~
 2097154 0 0 0 0 0 0 0 0 E
 3 18 7 3d6+30 1d7+0
@@ -68,10 +68,10 @@ E
 #12006
 gladiador~
 o gladiador~
-Há um gladiador parado aqui.
+HÃ¡ um gladiador parado aqui.
 ~
-Um homem com músculos bem definidos e que está fortemente blindado e armado
-até os dentes. Ele vive para combater.
+Um homem com mÃºsculos bem definidos e que estÃ¡ fortemente blindado e armado
+atÃ© os dentes. Ele vive para combater.
 ~
 2097154 0 0 0 0 0 0 0 -250 E
 14 5 0 4d7+150 1d8+6
@@ -81,9 +81,9 @@ E
 #12007
 condutor~
 o condutor de carruagem~
-Há um condutor de carruagem aqui.
+HÃ¡ um condutor de carruagem aqui.
 ~
-Você vê um indivíduo pequeno e muito leve cuja vida inteira foi dedicada ao
+VocÃª vÃª um indivÃ­duo pequeno e muito leve cuja vida inteira foi dedicada ao
 seu trabalho com a velocidade e os cavalos.
 ~
 2097154 0 0 0 0 0 0 0 100 E
@@ -94,10 +94,10 @@ E
 #12008
 treinador~
 o treinador~
-Há um treinador aqui, repassando as estratégias de último minuto.
+HÃ¡ um treinador aqui, repassando as estratÃ©gias de Ãºltimo minuto.
 ~
-Quando você tenta espiar sobre os seus ombros e ouvir seus resmungos,
-ele mede você de cima embaixo e lhe dá um olhar que faz você sentir
+Quando vocÃª tenta espiar sobre os seus ombros e ouvir seus resmungos,
+ele mede vocÃª de cima embaixo e lhe dÃ¡ um olhar que faz vocÃª sentir
 todos os seus ossos congelarem.
 ~
 2099202 0 0 0 0 0 0 0 0 E
@@ -108,10 +108,10 @@ E
 #12009
 curandeiro~
 o curandeiro~
-Um curandeiro está parando aqui.
+Um curandeiro estÃ¡ parando aqui.
 ~
-Você vê um homem jovem, ainda aprendendo sobre curas mágicas, vestindo um
-casaco branco e usando um estetoscópio.
+VocÃª vÃª um homem jovem, ainda aprendendo sobre curas mÃ¡gicas, vestindo um
+casaco branco e usando um estetoscÃ³pio.
 ~
 2099218 0 0 0 16 0 0 0 900 E
 14 7 1 2d7+170 1d7+6
@@ -121,12 +121,12 @@ E
 #12010
 herborista jovem~
 a herborista~
-Há uma linda jovem aqui, carregando ervas para ajudar a curar os doentes.
+HÃ¡ uma linda jovem aqui, carregando ervas para ajudar a curar os doentes.
 ~
-A herborista é uma jovem dama muito bonita, que tem 22 anos aproximadamente.
+A herborista Ã© uma jovem dama muito bonita, que tem 22 anos aproximadamente.
 Ela tem olhos marrons profundos e seus cabelos castanhos batem em seus ombros.
-O corpo dela é perfeitamente proporcional e ela tem aproximadamente 1 metro e
-65 centímetros de altura.
+O corpo dela Ã© perfeitamente proporcional e ela tem aproximadamente 1 metro e
+65 centÃ­metros de altura.
 ~
 2099330 0 0 0 16 0 0 0 1000 E
 10 11 2 3d4+110 1d7+4
@@ -136,12 +136,12 @@ E
 #12011
 lojista~
 Titus lojista~
-O lojista de Titus está aqui, prestando atenção em sua loja.
+O lojista de Titus estÃ¡ aqui, prestando atenÃ§Ã£o em sua loja.
 ~
-O lojista é um homem de meia idade, lá pelos seus cinquenta e poucos anos,
-que parece gostar de sua vida pacata. Há uma longa cicatriz que percorre
-seu rosto desde o canto de sua boca até a orelha direita, dando a ele a
-falsa impressão de que ele está sempre sorrindo.
+O lojista Ã© um homem de meia idade, lÃ¡ pelos seus cinquenta e poucos anos,
+que parece gostar de sua vida pacata. HÃ¡ uma longa cicatriz que percorre
+seu rosto desde o canto de sua boca atÃ© a orelha direita, dando a ele a
+falsa impressÃ£o de que ele estÃ¡ sempre sorrindo.
 ~
 2156546 0 0 0 272 0 0 0 750 E
 108 0 -2 4d10+400 3d8+12
@@ -151,9 +151,9 @@ E
 #12012
 pedinte~
 o pedinte~
-O pobre pedinte se encontra aqui, tentando melhorar sua penosa existência.
+O pobre pedinte se encontra aqui, tentando melhorar sua penosa existÃªncia.
 ~
-Você vê um homem pequeno e sujo, que não parece muito saudável.  
+VocÃª vÃª um homem pequeno e sujo, que nÃ£o parece muito saudÃ¡vel.  
 ~
 2154688 0 0 0 0 0 0 0 250 E
 4 17 6 3d4+40 1d8+0
@@ -165,8 +165,8 @@ pajem~
 o pajem~
 Um pajem se encontra aqui, esperando para entregar sua mensagem.
 ~
-Você vê um jovem garoto, que parece muito forte e muito rápido.  Ele tem a
-aparência de um estudante.
+VocÃª vÃª um jovem garoto, que parece muito forte e muito rÃ¡pido.  Ele tem a
+aparÃªncia de um estudante.
 ~
 2097154 0 0 0 0 0 0 0 0 E
 6 15 4 3d6+75 2d4+1
@@ -178,7 +178,7 @@ queixoso~
 o queixoso~
 O queixoso se encontra aqui, pleiteando por seus direitos.
 ~
-Seu estado é lamentável. Absolutamente lamentável.
+Seu estado Ã© lamentÃ¡vel. Absolutamente lamentÃ¡vel.
 ~
 2097154 0 0 0 0 0 0 0 0 E
 11 10 2 3d6+140 2d6+3
@@ -188,9 +188,9 @@ E
 #12015
 cambista~
 o vendedor de ingressos~
-Um cambista se encontra aqui, olhando esperançosamente para você.
+Um cambista se encontra aqui, olhando esperanÃ§osamente para vocÃª.
 ~
-Ele parece estar esperando que você ou compre um ingresso ou saia do
+Ele parece estar esperando que vocÃª ou compre um ingresso ou saia do
 caminho para que assim ele possa vender ingressos para as pessoas
 que realmente querem compra-los.
 ~
@@ -201,12 +201,12 @@ que realmente querem compra-los.
 E
 #12016
 vendedor~
-o vendedor do estádio~
-Um vendedor está andando aqui, vendendo caríssimos cachorros-quente e cerveja.
+o vendedor do estÃ¡dio~
+Um vendedor estÃ¡ andando aqui, vendendo carÃ­ssimos cachorros-quente e cerveja.
 ~
-O vendedor é um homem com aparência desprezível, que não tem medo de uma
-briga e parece que ele já teve mais que suficiente experiencia com
-espectadores bons de discussão.
+O vendedor Ã© um homem com aparÃªncia desprezÃ­vel, que nÃ£o tem medo de uma
+briga e parece que ele jÃ¡ teve mais que suficiente experiencia com
+espectadores bons de discussÃ£o.
 ~
 2154560 0 0 0 0 0 0 0 -150 E
 8 13 3 2d4+13000 2d5+15
@@ -214,11 +214,11 @@ espectadores bons de discussão.
 8 8 1
 E
 #12017
-cidadão~
-o cidadão~
-Um cidadão de Roma está parado aqui.
+cidadao~
+o cidadÃ£o~
+Um cidadÃ£o de Roma estÃ¡ parado aqui.
 ~
-Parece ser mais um cidadão comum, se dirigindo para o seu trabalho.
+Parece ser mais um cidadÃ£o comum, se dirigindo para o seu trabalho.
 ~
 2099264 0 0 0 0 0 0 0 900 E
 5 16 5 1d4+85 1d8+1
@@ -228,9 +228,9 @@ E
 #12018
 sentinela guarda~
 o sentinela~
-Um sentinela se encontra aqui, protegendo o portão.
+Um sentinela se encontra aqui, protegendo o portÃ£o.
 ~
-Você vê um defensor público forte e leal.
+VocÃª vÃª um defensor pÃºblico forte e leal.
 ~
 2099222 0 0 0 0 0 0 0 1000 E
 11 10 2 3d6+130 1d6+5
@@ -240,11 +240,11 @@ E
 #12019
 soldado~
 o soldado~
-Um soldado de folga está andando por aí, a procura de diversão.
+Um soldado de folga estÃ¡ andando por aÃ­, a procura de diversÃ£o.
 ~
-Você vê um membro de uma das legiões de elite do Imperador.  Ele parece ser
-MUITO forte.  Você tem este vago pressentimento de que a diversão dele não
-vai ser uma atividade saudável.
+VocÃª vÃª um membro de uma das legiÃµes de elite do Imperador.  Ele parece ser
+MUITO forte.  VocÃª tem este vago pressentimento de que a diversÃ£o dele nÃ£o
+vai ser uma atividade saudÃ¡vel.
 ~
 2099264 0 0 0 0 0 0 0 300 E
 17 4 -1 3d5+220 1d6+9
@@ -254,10 +254,10 @@ E
 #12020
 imperador julius caesar~
 Julius Caesar~
-Julius Caesar, o Imperador de Roma, está sentado aqui.
+Julius Caesar, o Imperador de Roma, estÃ¡ sentado aqui.
 ~
-Você vê um homem que está vestido com as melhores roupas, que comeu a melhor
-das comidas e morou no palácio mais opulento que Roma jamais conheceu.
+VocÃª vÃª um homem que estÃ¡ vestido com as melhores roupas, que comeu a melhor
+das comidas e morou no palÃ¡cio mais opulento que Roma jamais conheceu.
 ~
 2123778 0 0 0 65808 0 0 0 990 E
 27 0 -7 10d5+650 3d7+15
@@ -267,13 +267,13 @@ E
 #12021
 guarda-costas~
 o guarda-costas real~
-Há um guarda-costas real aqui, pronto para morrer por seu Imperador.
+HÃ¡ um guarda-costas real aqui, pronto para morrer por seu Imperador.
 ~
-O guarda-costas está vestido com o que existe de melhor em armaduras e como
-arma, usa apenas o que de mais mortal existir.  Ele é muito forte e uma
+O guarda-costas estÃ¡ vestido com o que existe de melhor em armaduras e como
+arma, usa apenas o que de mais mortal existir.  Ele Ã© muito forte e uma
 briga com ele seria um inferno.  Ele foi treinado para suspeitar de tudo e
-de todos, menos das visitas inocentes, e está pronto para atacar aqueles que
-tiverem as menores das intenções.
+de todos, menos das visitas inocentes, e estÃ¡ pronto para atacar aqueles que
+tiverem as menores das intenÃ§Ãµes.
 ~
 2100514 0 0 0 16 0 0 0 990 E
 18 2 0 3d6+220 1d6+6
@@ -288,8 +288,8 @@ juiz justica~
 o juiz~
 Um juiz se encontra aqui, estudando um caso.
 ~
-Ele parece estar totalmente interessado pelo caso, talvez você não devesse
-perturbá-lo agora. Quem sabe mais tarde não seria melhor.
+Ele parece estar totalmente interessado pelo caso, talvez vocÃª nÃ£o devesse
+perturbÃ¡-lo agora. Quem sabe mais tarde nÃ£o seria melhor.
 ~
 2115586 0 0 0 0 0 0 0 990 E
 21 0 -1 20d5+260 1d7+11
@@ -301,9 +301,9 @@ mestre programador~
 o mestre programador~
 O mestre programador se encontra aqui, escrevendo em sua agenda.
 ~
-Quando você olha para ele, ele fita você por alguns segundos e pergunta, 
-'você tem um horário marcado?'  Ele espera por alguns segundos e então
-pergunta, 'Você gostaria de marcar um?'
+Quando vocÃª olha para ele, ele fita vocÃª por alguns segundos e pergunta, 
+'vocÃª tem um horÃ¡rio marcado?'  Ele espera por alguns segundos e entÃ£o
+pergunta, 'VocÃª gostaria de marcar um?'
 ~
 2099202 0 0 0 0 0 0 0 900 E
 17 3 0 4d4+210 1d6+9
@@ -313,7 +313,7 @@ E
 #12024
 bola visguenta verde~
 a bola-de-limbo~
-Uma bola de limbo verde está pendurada sobre você, escorrendo para baixo.
+Uma bola de limbo verde estÃ¡ pendurada sobre vocÃª, escorrendo para baixo.
 ~
 Uma bola verde de lodo escorrendo atraves das paredes.
 ~
@@ -329,8 +329,8 @@ mago froboz~
 Froboz~
 Froboz o mago se encontra aqui, praticando em uma nova magia.
 ~
-Você vê um homem de meia idade, cujo conhecimento de magia, tanto ofensiva
-quanto defensiva, é lendário. Ele literalmente brilha com uma aura rosada.
+VocÃª vÃª um homem de meia idade, cujo conhecimento de magia, tanto ofensiva
+quanto defensiva, Ã© lendÃ¡rio. Ele literalmente brilha com uma aura rosada.
 ~
 2123794 0 0 0 272 0 0 0 300 E
 23 0 -3 5d10+425 1d8+14
@@ -342,8 +342,8 @@ titus andronicus~
 Titus Andronicus~
 Titus Andronicus se encontra aqui, polindo suas novas espadas.
 ~
-Quando você olha para ele, ele de repente desembainha uma de suas espadas,
-recentemente afiadas e fita você com um olhar furioso!! Caia fora!
+Quando vocÃª olha para ele, ele de repente desembainha uma de suas espadas,
+recentemente afiadas e fita vocÃª com um olhar furioso!! Caia fora!
 ~
 2123826 0 0 0 272 0 0 0 500 E
 24 0 -5 1d5+450 1d8+14
@@ -356,7 +356,7 @@ senador~
 o senador~
 Um senador se encontra aqui, esperando pela abertura dos debates.
 ~
-Ele parece estar muito entendiado e está brincando com uma das pontas de sua
+Ele parece estar muito entendiado e estÃ¡ brincando com uma das pontas de sua
 toga.
 ~
 2099202 0 0 0 0 0 0 0 350 E
@@ -369,9 +369,9 @@ beleguim~
 o beleguim~
 O beleguim se encontra aqui, mantendo ordem no tribunal.
 ~
-Ele é um homem muito severo e insiste que o mais absoluto silêncio seja feito
+Ele Ã© um homem muito severo e insiste que o mais absoluto silÃªncio seja feito
 na sala do tribunal em que ele trabalha. Podem falar apenas os que o juiz
-der permissão.
+der permissÃ£o.
 ~
 2099202 0 0 0 16 0 0 0 900 E
 16 5 1 1d5+200 2d7+4
@@ -383,7 +383,7 @@ defensora~
 a defensora~
 A defensora se encontra aqui, pleiteando o caso dela.
 ~
-Ela parece ser bem organizada e cheia de confiança em si mesma.
+Ela parece ser bem organizada e cheia de confianÃ§a em si mesma.
 ~
 2099202 0 0 0 0 0 0 0 200 E
 11 9 1 3d6+130 2d7+1
@@ -391,12 +391,12 @@ Ela parece ser bem organizada e cheia de confiança em si mesma.
 8 8 2
 E
 #12030
-júpiter rei deus~
-Júpiter~
-Júpiter, Rei dos Deuses, cuida de seu reino daqui de cima.
+jupiter rei deus~
+JÃºpiter~
+JÃºpiter, Rei dos Deuses, cuida de seu reino daqui de cima.
 ~
-Ele é o mais forte dos Deuses, e certamente nem um pouco fácil!  Os poderes
-dele transcendem o plano físico, e ele poderia facilmente matar um mortal
+Ele Ã© o mais forte dos Deuses, e certamente nem um pouco fÃ¡cil!  Os poderes
+dele transcendem o plano fÃ­sico, e ele poderia facilmente matar um mortal
 despreparado.
 ~
 2353458 0 0 0 330000 0 0 0 1000 E
@@ -416,9 +416,9 @@ venus deusa~
 Venus~
 Venus, a Deusa da Beleza e da Sabedoria, descansa aqui.
 ~
-Venus é provalemente uma das mulheres mais lindas que você já viu, senão
-A MAIS maravilhosa. Apesar de toda esta aparência de pura beleza e perfeição,
-seus poderes são inimagináveis.
+Venus Ã© provalemente uma das mulheres mais lindas que vocÃª jÃ¡ viu, senÃ£o
+A MAIS maravilhosa. Apesar de toda esta aparÃªncia de pura beleza e perfeiÃ§Ã£o,
+seus poderes sÃ£o inimaginÃ¡veis.
 ~
 2353170 0 0 0 330000 0 0 0 1000 E
 105 -40 -45 7d100+16500 12d12+60
@@ -435,10 +435,10 @@ E
 #12032
 marte deus~
 Marte~
-Marte, o Deus da Guerra e do Estado, está sentado aqui.
+Marte, o Deus da Guerra e do Estado, estÃ¡ sentado aqui.
 ~
-Marte é um Deus alto, com olhos ardentes e perigosos. O cenho franzido
-dá a ele um ar aterrorizante.
+Marte Ã© um Deus alto, com olhos ardentes e perigosos. O cenho franzido
+dÃ¡ a ele um ar aterrorizante.
 ~
 2353170 0 0 0 67856 0 0 0 1000 E
 103 -40 -40 10d100+14800 15d10+52
@@ -453,11 +453,11 @@ Con: 20
 Cha: 20
 E
 #12033
-mercúrio mensageiro deus~
-Mercúrio~
-Mercúrio, o mensageiro dos Deuses, se encontra aqui.
+mercurio mensageiro deus~
+MercÃºrio~
+MercÃºrio, o mensageiro dos Deuses, se encontra aqui.
 ~
-Mercúrio é um Deus bonito e jovem e possui um ar malicioso em seu rosto.
+MercÃºrio Ã© um Deus bonito e jovem e possui um ar malicioso em seu rosto.
 ~
 2353170 0 0 0 67600 0 0 0 1000 E
 101 -25 -30 8d20+12300 11d11+45
@@ -474,12 +474,12 @@ E
 #12034
 lojista~
 Froboz lojista~
-O lojista de Froboz está aqui, cuidando de sua loja.
+O lojista de Froboz estÃ¡ aqui, cuidando de sua loja.
 ~
-O lojista é um homem de meia idade, lá pelos seus cinquenta e poucos anos,
-que parece gostar de sua vida pacata. Há uma longa cicatriz que percorre seu
-rosto desde o canto de sua boca até a orelha direita, dando a ele a falsa
-impressão de que ele está sempre sorrindo.
+O lojista Ã© um homem de meia idade, lÃ¡ pelos seus cinquenta e poucos anos,
+que parece gostar de sua vida pacata. HÃ¡ uma longa cicatriz que percorre seu
+rosto desde o canto de sua boca atÃ© a orelha direita, dando a ele a falsa
+impressÃ£o de que ele estÃ¡ sempre sorrindo.
 ~
 2123778 0 0 0 272 0 0 0 650 E
 60 0 -2 4d10+400 1d8+14
@@ -491,8 +491,8 @@ carrasco~
 o carrasco~
 O carrasco se encontra aqui, esperando para torturar alguma pobre alma.
 ~
-Você vê um homem forte que está usando um capuz preto que encobre sua face.
-Suas atitudes são muito sádicas e ele claramente adora aquilo que faz.
+VocÃª vÃª um homem forte que estÃ¡ usando um capuz preto que encobre sua face.
+Suas atitudes sÃ£o muito sÃ¡dicas e ele claramente adora aquilo que faz.
 ~
 2121766 0 0 0 16 0 0 0 -1000 E
 20 1 0 2d6+260 2d2+14
@@ -502,9 +502,9 @@ E
 #12036
 padeiro~
 o padeiro~
-O padeiro olha você calmamente, limpando a farinha em seu rosto, com a mão.
+O padeiro olha vocÃª calmamente, limpando a farinha em seu rosto, com a mÃ£o.
 ~
-Um gordo e bem apessoado padeiro. Mas você pode ver que ele possui muitas
+Um gordo e bem apessoado padeiro. Mas vocÃª pode ver que ele possui muitas
 cicatrizes em seu corpo.
 ~
 2156546 0 0 0 16400 0 0 0 900 E
@@ -515,7 +515,7 @@ E
 #12037
 merceeiro~
 o merceeiro~
-Um merceeiro está atrás do balcão, com um olhar ligeiramente impaciente.
+Um merceeiro estÃ¡ atrÃ¡s do balcÃ£o, com um olhar ligeiramente impaciente.
 ~
 Um merceeiro alto, que consegue carregar dois sacos de trigo, pesando 200
 libras cada um, em seus ombros.
