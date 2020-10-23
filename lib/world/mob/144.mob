@@ -1,11 +1,11 @@
 #14400
 criatura tumular~
 uma criatura tumular~
-Uma terrível criatura tumular está aqui, olhando friamente para você.
+Uma terrÃ­vel criatura tumular estÃ¡ aqui, olhando friamente para vocÃª.
 ~
-Você observa uma horripilante criatura tumular, que lança um olhar frio e
-assustador sobre você.  Sua pele pálida e em decomposição torna ainda mais
-terrível a sua aparência.
+VocÃª observa uma horripilante criatura tumular, que lanÃ§a um olhar frio e
+assustador sobre vocÃª.  Sua pele pÃ¡lida e em decomposiÃ§Ã£o torna ainda mais
+terrÃ­vel a sua aparÃªncia.
 ~
 2353682 0 0 0 0 0 0 0 -700 E
 45 -10 -7 5d10+1800 3d5+25
@@ -19,12 +19,12 @@ Con: 8
 Cha: 3
 E
 #14401
-braço rastejante~
-um braço rastejante~
-Um braço em decomposição foi deixado aqui, exalando um odor terrível.
+braco rastejante~
+um braÃ§o rastejante~
+Um braÃ§o em decomposiÃ§Ã£o foi deixado aqui, exalando um odor terrÃ­vel.
 ~
-Você observa sobre o chão um braço humano em decomposição.  Algumas
-cicatrizes feitas por alguma lâmina ou por garras, marcam a sua pele
+VocÃª observa sobre o chÃ£o um braÃ§o humano em decomposiÃ§Ã£o.  Algumas
+cicatrizes feitas por alguma lÃ¢mina ou por garras, marcam a sua pele
 totalmente retalhada.
 ~
 2343426 0 0 0 0 0 0 0 -500 E
@@ -36,12 +36,12 @@ Con: 8
 Cha: 3
 E
 #14402
-pônei bolo fofo~
+ponei bolo fofo~
 Bolo-fofo~
-Um pônei gorducho pasta tranqüilamente aqui.
+Um pÃ´nei gorducho pasta tranqÃ¼ilamente aqui.
 ~
-Você observa um velho e gordo pônei de pêlo brilhante e bastante macio.  O
-simpático Bolo-fofo pertence ao senhor Tom Bombadillo.
+VocÃª observa um velho e gordo pÃ´nei de pÃªlo brilhante e bastante macio.  O
+simpÃ¡tico Bolo-fofo pertence ao senhor Tom Bombadillo.
 ~
 2375872 0 0 0 0 0 0 0 400 E
 25 -5 0 5d3+450 5d6+15
@@ -51,12 +51,12 @@ E
 #14403
 porteiro larry~
 Larry, o porteiro de Bri~
-Um velho porteiro está aqui, vigiando o portão oeste de Bri.
+Um velho porteiro estÃ¡ aqui, vigiando o portÃ£o oeste de Bri.
 ~
-Você observa um velho homem narigudo e de sombracelhas grossas, seu rosto
+VocÃª observa um velho homem narigudo e de sombracelhas grossas, seu rosto
 bastante marcado pelo tempo mostra os sinais da sua longa vida.  De repente,
-o velho Larry caminha na sua direção e lhe pergunta de forma grosseira:
-            &B"O que você quer, e de onde veio?"&n
+o velho Larry caminha na sua direÃ§Ã£o e lhe pergunta de forma grosseira:
+            @B"O que vocÃª quer, e de onde veio?"@n
 ~
 2156546 0 0 0 0 0 0 0 600 E
 45 -10 -6 5d10+1200 6d4+25
@@ -73,11 +73,11 @@ E
 #14404
 cevado carrapicho~
 Cevado Carrapicho~
-Cevado Carrapicho, o dono da Pônei Saltitante está aqui, correndo sem parar.
+Cevado Carrapicho, o dono da PÃ´nei Saltitante estÃ¡ aqui, correndo sem parar.
 ~
-Você observa um homem gordo e baixo, careca e de rosto vermelho, porém muito
-simpático.  O agitado Cevado Carrapicho é o dono da movimentada estalagem:
-O Pônei Saltitante.  Vestido com um avental branco, o velho Cevado corre de
+VocÃª observa um homem gordo e baixo, careca e de rosto vermelho, porÃ©m muito
+simpÃ¡tico.  O agitado Cevado Carrapicho Ã© o dono da movimentada estalagem:
+O PÃ´nei Saltitante.  Vestido com um avental branco, o velho Cevado corre de
 um lado para o outro tentando atender todos os seus clientes.
 ~
 2156546 0 0 0 0 0 0 0 800 E
@@ -94,10 +94,10 @@ E
 #14405
 nob hobbit empregado~
 Nob, o empregado hobbit~
-Nob, o empregado hobbit da estalagem está aqui, sorrindo para você.
+Nob, o empregado hobbit da estalagem estÃ¡ aqui, sorrindo para vocÃª.
 ~
-Você observa um pequenino hobbit de aparência alegre e pés bem peludos.  Nob
-é um dos empregados da estalagem:  O Pônei Saltitante.
+VocÃª observa um pequenino hobbit de aparÃªncia alegre e pÃ©s bem peludos.  Nob
+Ã© um dos empregados da estalagem:  O PÃ´nei Saltitante.
 ~
 2154502 0 0 0 0 0 0 0 700 E
 40 -5 -3 5d10+950 6d4+20
@@ -114,10 +114,10 @@ E
 #14406
 gato negro~
 um gato negro~
-Um engraçado gato negro está aqui, olhando para os pratos sobre as mesas.
+Um engraÃ§ado gato negro estÃ¡ aqui, olhando para os pratos sobre as mesas.
 ~
-Você observa um engraçado gato de pêlo suave e negro.  Este belo gato
-pertence ao hobbit Bob, que trabalha cuidando dos animais do estábulo da
+VocÃª observa um engraÃ§ado gato de pÃªlo suave e negro.  Este belo gato
+pertence ao hobbit Bob, que trabalha cuidando dos animais do estÃ¡bulo da
 estalagem do senhor Cevado Carrapicho.
 ~
 2113666 0 0 0 0 0 0 0 400 E
@@ -133,12 +133,12 @@ E
 #14407
 bob hobbit empregado~
 Bob, o empregado hobbit~
-Bob, o empregado hobbit da estalagem está aqui, cuidando dos animais.
+Bob, o empregado hobbit da estalagem estÃ¡ aqui, cuidando dos animais.
 ~
-Você observa um pequenino hobbit gorducho e de pés bastante peludos.  Bob
-trabalha no estábulo da estalagem do senhor Cevado Carrapicho e possui um
-engraçado gato negro, que vez por outra faz malabarismos para alegrar os
-fregueses da Pônei Saltitante.
+VocÃª observa um pequenino hobbit gorducho e de pÃ©s bastante peludos.  Bob
+trabalha no estÃ¡bulo da estalagem do senhor Cevado Carrapicho e possui um
+engraÃ§ado gato negro, que vez por outra faz malabarismos para alegrar os
+fregueses da PÃ´nei Saltitante.
 ~
 2154502 0 0 0 0 0 0 0 700 E
 40 -5 -4 5d10+980 6d4+22
@@ -155,13 +155,13 @@ E
 #14408
 homem bri~
 um homem de Bri~
-Um homem de Bri está aqui, olhando para você curiosamente.
+Um homem de Bri estÃ¡ aqui, olhando para vocÃª curiosamente.
 ~
-Você observa um homem bastante forte, troncudo, baixo e de cabelos
-castanhos.  Ele lhe observa com um olhar amigável e faz um sinal de boas
-vindas para você.  Os homens de Bri não pertencem a ninguém além de si
-próprios, segundo suas próprias histórias, foram os habitantes originais e
-eram descendentes dos primeiros homens que ocuparam o Oeste do mundo-médio.
+VocÃª observa um homem bastante forte, troncudo, baixo e de cabelos
+castanhos.  Ele lhe observa com um olhar amigÃ¡vel e faz um sinal de boas
+vindas para vocÃª.  Os homens de Bri nÃ£o pertencem a ninguÃ©m alÃ©m de si
+prÃ³prios, segundo suas prÃ³prias histÃ³rias, foram os habitantes originais e
+eram descendentes dos primeiros homens que ocuparam o Oeste do mundo-mÃ©dio.
 ~
 2160646 0 0 0 0 0 0 0 750 E
 45 -12 -5 5d10+1350 9d3+25
@@ -178,9 +178,9 @@ E
 #14409
 mulher bri~
 uma mulher de Bri~
-Uma bela mulher de Bri está aqui, cuidando da sua casa.
+Uma bela mulher de Bri estÃ¡ aqui, cuidando da sua casa.
 ~
-Você observa uma linda mulher de Bri de cabelos castanhos claros e de olhar
+VocÃª observa uma linda mulher de Bri de cabelos castanhos claros e de olhar
 bastante expressivo.
 ~
 2160646 0 0 0 0 0 0 0 750 E
@@ -196,12 +196,12 @@ Con: 18
 Cha: 18
 E
 #14410
-anão viajante~
-um anão viajante~
-Um anão viajante está aqui, procurando um local para se abrigar.
+anao viajante~
+um anÃ£o viajante~
+Um anÃ£o viajante estÃ¡ aqui, procurando um local para se abrigar.
 ~
-Você observa um troncudo anão de barba e cabelos longos.  Sua aparência não
-é das melhores e seu rosto expressa um sentimento de cansaço.
+VocÃª observa um troncudo anÃ£o de barba e cabelos longos.  Sua aparÃªncia nÃ£o
+Ã© das melhores e seu rosto expressa um sentimento de cansaÃ§o.
 ~
 2287618 0 0 0 0 0 0 0 500 E
 45 -15 -6 5d10+1250 9d3+25
@@ -216,14 +216,14 @@ Con: 18
 Cha: 18
 E
 #14411
-guardião~
-um guardião~
-Um misterioso guardião está aqui, sentado num dos cantos da estalagem.
+guardiao~
+um guardiÃ£o~
+Um misterioso guardiÃ£o estÃ¡ aqui, sentado num dos cantos da estalagem.
 ~
-Você observa um homem bastante alto e de pele mais escura que os homens de
-Bri.  Nos dias de hoje, poucos homens como este são visto.  Eles são
-chamados de guardiões e vagam à vontade para o lado do sul e para o leste,
-chegando até as Montanhas Sombrias.  O povo de Bri não costumava fazer
+VocÃª observa um homem bastante alto e de pele mais escura que os homens de
+Bri.  Nos dias de hoje, poucos homens como este sÃ£o visto.  Eles sÃ£o
+chamados de guardiÃµes e vagam Ã  vontade para o lado do sul e para o leste,
+chegando atÃ© as Montanhas Sombrias.  O povo de Bri nÃ£o costumava fazer
 amizade com eles.
 ~
 2287618 0 0 0 0 0 0 0 700 E
@@ -241,9 +241,9 @@ E
 #14412
 bill samambaia~
 Bill Samambaia~
-Bill Samambaia está aqui, olhando para você com um sorriso sarcástico.
+Bill Samambaia estÃ¡ aqui, olhando para vocÃª com um sorriso sarcÃ¡stico.
 ~
-Você observa o aproveitador Bill Samambaia.  De pele morena, magro e com um
+VocÃª observa o aproveitador Bill Samambaia.  De pele morena, magro e com um
 olhar repugnante, Bill Samambaia possui o nome sujo em toda a aldeia de Bri.
 Ele adora fazer maldades para se divertir e costuma receber visitas de
 estranhas pessoas do sul.
@@ -261,13 +261,13 @@ E
 #14413
 hobbit bri~
 um hobbit de Bri~
-Um pequenino hobbit de Bri está aqui, cuidando dos seus afazeres.
+Um pequenino hobbit de Bri estÃ¡ aqui, cuidando dos seus afazeres.
 ~
-Você observa um pequenino e simpático hobbit nativo de Bri.  Os pequeninos
-de Bri juram que o assentamento hobbit da aldeia de Bri é o mais antigo do
+VocÃª observa um pequenino e simpÃ¡tico hobbit nativo de Bri.  Os pequeninos
+de Bri juram que o assentamento hobbit da aldeia de Bri Ã© o mais antigo do
 mundo, fundado antes mesmo que o rio Brandevin fosse atravessado e o Condado
-colonizado.  Gentis e amigáveis, os alegres hobbits de Bri, certamente não
-são como os seus parentes do Condado imaginam.
+colonizado.  Gentis e amigÃ¡veis, os alegres hobbits de Bri, certamente nÃ£o
+sÃ£o como os seus parentes do Condado imaginam.
 ~
 2126036 0 0 0 0 0 0 0 700 E
 35 -5 -5 5d5+1300 3d8+15
@@ -279,13 +279,13 @@ E
 #14414
 hobbit bri~
 uma hobbit de Bri~
-Uma simpática hobbit de Bri está aqui, cuidando das suas tarefas.
+Uma simpÃ¡tica hobbit de Bri estÃ¡ aqui, cuidando das suas tarefas.
 ~
-Você observa uma bela e simpática hobbit nativa de Bri.  Os pequeninos
-de Bri juram que o assentamento hobbit da aldeia de Bri é o mais antigo do
+VocÃª observa uma bela e simpÃ¡tica hobbit nativa de Bri.  Os pequeninos
+de Bri juram que o assentamento hobbit da aldeia de Bri Ã© o mais antigo do
 mundo, fundado antes mesmo que o rio Brandevin fosse atravessado e o Condado
-colonizado.  Gentis e amigáveis, os alegres hobbits de Bri, certamente não
-são como os seus parentes do Condado imaginam.
+colonizado.  Gentis e amigÃ¡veis, os alegres hobbits de Bri, certamente nÃ£o
+sÃ£o como os seus parentes do Condado imaginam.
 ~
 2126036 0 0 0 0 0 0 0 700 E
 35 -2 -4 5d5+1100 3d8+15
@@ -297,10 +297,10 @@ E
 #14415
 homem forasteiro~
 um estranho forasteiro~
-Um estranho forasteiro está aqui, observando o agitado bar da estalagem.
+Um estranho forasteiro estÃ¡ aqui, observando o agitado bar da estalagem.
 ~
-Você observa um estranho homem coberto por um manto negro, que lhe impede de
-espreitar o misterioso rosto deste forasteiro.  Você percebe que ele observa
+VocÃª observa um estranho homem coberto por um manto negro, que lhe impede de
+espreitar o misterioso rosto deste forasteiro.  VocÃª percebe que ele observa
 cuidadosamente todas as pessoas do bar e seus pertences.
 ~
 2121862 0 0 0 0 0 0 0 -400 E
@@ -318,10 +318,10 @@ E
 #14416
 viajantes~
 alguns viajantes~
-Alguns viajantes seguem tranqüilamente pela estrada.
+Alguns viajantes seguem tranqÃ¼ilamente pela estrada.
 ~
-Você observa um grupo de viajantes formado por dez homens fortes e altos,
-que seguem para alguma cidade distante, carregando consigo várias
+VocÃª observa um grupo de viajantes formado por dez homens fortes e altos,
+que seguem para alguma cidade distante, carregando consigo vÃ¡rias
 mercadorias.
 ~
 2226182 0 0 0 0 0 0 0 400 E
@@ -337,14 +337,14 @@ Con: 18
 Cha: 18
 E
 #14417
-grupo anões~
-um grupo de anões~
-Um alegre grupo de anões está aqui, sentado ao redor de uma animada mesa.
+grupo anoes~
+um grupo de anÃµes~
+Um alegre grupo de anÃµes estÃ¡ aqui, sentado ao redor de uma animada mesa.
 ~
-Você observa um alegre grupo formado por seis anões viajantes de terras
-distantes, que estão hospedados na movimentada estalagem do senhor Cevado
+VocÃª observa um alegre grupo formado por seis anÃµes viajantes de terras
+distantes, que estÃ£o hospedados na movimentada estalagem do senhor Cevado
 Carrapicho.  Como todos os grupos que passam pela aldeia de Bri, uma parada
-na estalagem para recuperar as forças e cantar um pouco é sempre bem vinda.
+na estalagem para recuperar as forÃ§as e cantar um pouco Ã© sempre bem vinda.
 ~
 2226178 0 0 0 0 0 0 0 450 E
 50 -14 -8 5d10+2100 7d5+25
@@ -361,11 +361,11 @@ E
 #14418
 grupo homens bri~
 um grupo de homens de Bri~
-Um barulhento grupo de homens de Bri está aqui, conversando no bar.
+Um barulhento grupo de homens de Bri estÃ¡ aqui, conversando no bar.
 ~
-Você observa vários homens de Bri cantando, conversando e bebendo muita
-cerveja numa grande mesa num dos cantos do bar da estalagem o Pônei
-Saltitante.  O barulho perto deles é ensurdecedor e desagradável.
+VocÃª observa vÃ¡rios homens de Bri cantando, conversando e bebendo muita
+cerveja numa grande mesa num dos cantos do bar da estalagem o PÃ´nei
+Saltitante.  O barulho perto deles Ã© ensurdecedor e desagradÃ¡vel.
 ~
 2220034 0 0 0 0 0 0 0 450 E
 50 -12 -8 5d10+2300 6d5+25
@@ -382,11 +382,11 @@ E
 #14419
 grupo hobbits bri~
 um grupo de hobbits de Bri~
-Um feliz grupo de hobbits de Bri está aqui, sentado ao redor de uma mesa.
+Um feliz grupo de hobbits de Bri estÃ¡ aqui, sentado ao redor de uma mesa.
 ~
-Você observa um pequeno grupo formado por alguns pequeninos hobbits da
+VocÃª observa um pequeno grupo formado por alguns pequeninos hobbits da
 aldeia de Bri.  Sentados ao redor de uma grande mesa de madeira, eles
-conversam e cantam canções antigas.
+conversam e cantam canÃ§Ãµes antigas.
 ~
 2125954 0 0 0 0 0 0 0 500 E
 50 -8 -9 5d10+2100 7d5+25
@@ -402,11 +402,11 @@ Cha: 18
 E
 #14420
 velho porteiro~
-o porteiro do portão sul~
-Um velho porteiro está aqui, vigiando o portão sul da aldeia de Bri.
+o porteiro do portÃ£o sul~
+Um velho porteiro estÃ¡ aqui, vigiando o portÃ£o sul da aldeia de Bri.
 ~
-Você observa um velho homem de Bri com várias marcas deixadas pelo tempo em
-seu rosto.  O velho porteiro guardará incansavelmente o portão sul da aldeia
+VocÃª observa um velho homem de Bri com vÃ¡rias marcas deixadas pelo tempo em
+seu rosto.  O velho porteiro guardarÃ¡ incansavelmente o portÃ£o sul da aldeia
 de Bri, cumprindo assim sua tarefa e protegendo todos os moradores da
 aldeia.
 ~
@@ -423,11 +423,11 @@ Con: 15
 Cha: 18
 E
 #14421
-pônei~
-um belo pônei~
-Um belo pônei está aqui, aguardando os cuidados do seu dono.
+ponei~
+um belo pÃ´nei~
+Um belo pÃ´nei estÃ¡ aqui, aguardando os cuidados do seu dono.
 ~
-Você observa um lindo e simpático pônei de pelo suave e brilhante.
+VocÃª observa um lindo e simpÃ¡tico pÃ´nei de pelo suave e brilhante.
 ~
 2441218 0 0 0 0 0 0 0 400 E
 18 10 0 5d3+350 3d4+8
@@ -443,9 +443,9 @@ E
 #14422
 cavalo~
 um imponente cavalo~
-Um magnífico cavalo está aqui, descansando no estábulo.
+Um magnÃ­fico cavalo estÃ¡ aqui, descansando no estÃ¡bulo.
 ~
-Você observa um belíssimo cavalo de postura impetuosa e pelo suave e branco.
+VocÃª observa um belÃ­ssimo cavalo de postura impetuosa e pelo suave e branco.
 Seus cascos brilham refletindo os raios luminosos que surgem da sua luz.
 ~
 2441218 0 0 0 0 0 0 0 400 E
@@ -460,12 +460,12 @@ Con: 18
 Cha: 18
 E
 #14423
-pássaro colorido~
-um lindo pássaro colorido~
-Um lindo pássaro colorido está aqui, cantando sem parar belas melodias.
+passaro colorido~
+um lindo pÃ¡ssaro colorido~
+Um lindo pÃ¡ssaro colorido estÃ¡ aqui, cantando sem parar belas melodias.
 ~
-Você observa um maravilhoso pássaro de penas coloridas que emitem um brilho
-intenso e magnífico.
+VocÃª observa um maravilhoso pÃ¡ssaro de penas coloridas que emitem um brilho
+intenso e magnÃ­fico.
 ~
 2162768 0 0 0 0 0 0 0 500 E
 2 20 0 2d2+30 2d2+4
