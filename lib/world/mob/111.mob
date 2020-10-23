@@ -1,11 +1,11 @@
 #11101
-guardião pedra~
-o Guardião de Pedra~
-O Guardião de Pedra está diante de você.
+guardiao pedra~
+o GuardiÃ£o de Pedra~
+O GuardiÃ£o de Pedra estÃ¡ diante de vocÃª.
 ~
-Este ser parece ter não ter pele, sua couraça é totalmente feita em pedra.
-Estramente ele olha para você com um semblante horrível.  Aparentemente ele
-está aqui imóvel a muito tempo.
+Este ser parece ter nÃ£o ter pele, sua couraÃ§a Ã© totalmente feita em pedra.
+Estramente ele olha para vocÃª com um semblante horrÃ­vel.  Aparentemente ele
+estÃ¡ aqui imÃ³vel a muito tempo.
 ~
 2291862 0 0 0 327936 0 0 0 -1000 E
 105 -42 -80 10d6+10300 10d10+50
@@ -23,10 +23,10 @@ E
 #11102
 monstro pedra~
 o Monstro de Pedra~
-O Monstro de Pedra está aqui.
+O Monstro de Pedra estÃ¡ aqui.
 ~
-Feito todo em pedra esse terrível monstro é praticamente imortal.  Sua pele
-feita em rocha é impenetrável.
+Feito todo em pedra esse terrÃ­vel monstro Ã© praticamente imortal.  Sua pele
+feita em rocha Ã© impenetrÃ¡vel.
 ~
 2128032 0 0 0 1116496 0 0 0 -700 E
 102 -20 -80 10d6+10000 10d10+40
@@ -44,11 +44,11 @@ E
 #11103
 urso enorme grande forte~
 o grande urso da montanha~
-Um enorme urso está aqui.
+Um enorme urso estÃ¡ aqui.
 ~
 Muito grande e forte, esse feroz animal tem cara de faminto.  Apesar de
-gordo seus olhos retratam um animal capaz de comer um ser humano minúsculo
-como você em questão de minutos.
+gordo seus olhos retratam um animal capaz de comer um ser humano minÃºsculo
+como vocÃª em questÃ£o de minutos.
 ~
 2189442 0 0 0 65536 0 0 0 -100 E
 100 -16 -15 10d6+10000 10d10+33
@@ -61,13 +61,13 @@ Dex: 25
 Con: 25
 E
 #11104
-horrível gárgula~
-o Gárgula~
-Um horrível gárgula está voando aqui.
+horrivel gargula~
+o GÃ¡rgula~
+Um horrÃ­vel gÃ¡rgula estÃ¡ voando aqui.
 ~
-Com uma aparência horrível e tenebrosa, este pequeno monstro demonstra uma
-maldade imensa em seus olhos.  Misturado em meio as névoas este ser
-sobrenatural sobrevoa em volta de seu único mestre.
+Com uma aparÃªncia horrÃ­vel e tenebrosa, este pequeno monstro demonstra uma
+maldade imensa em seus olhos.  Misturado em meio as nÃ©voas este ser
+sobrenatural sobrevoa em volta de seu Ãºnico mestre.
 ~
 2678790 0 0 0 67963256 0 0 0 -1000 E
 104 -32 -80 10d6+10000 10d10+50
