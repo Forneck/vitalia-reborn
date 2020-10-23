@@ -1,11 +1,11 @@
 #9200
 cartomante mulher~
 a cartomante~
-Uma mulher está sentada na beira da estrada.
+Uma mulher estÃ¡ sentada na beira da estrada.
 ~
-Você ve uma bela mulher com cabelos negros e olhar penetrante.  Ela sorri e
+VocÃª ve uma bela mulher com cabelos negros e olhar penetrante.  Ela sorri e
 pergunta gentilmente: 
-'Quer saber o que seu futuro preparou para você?'
+'Quer saber o que seu futuro preparou para vocÃª?'
 ~
 2132102 0 0 0 68 0 0 0 0 E
 11 12 1 2d5+100 3d5+2
@@ -15,12 +15,12 @@ E
 #9201
 valete guarda copas~
 o valete de copas~
-Um valete de copas monta guarda no portão.
+Um valete de copas monta guarda no portÃ£o.
 ~
-Um altivo valete guarda os portões desse reino.  Ele parece do tipo que
-não aceita provocações.  Notando sua presença ele reafirma sua posição e
-exclama com imponência:
-"Alto lá! Identifique-se em nome do Rei!'
+Um altivo valete guarda os portÃµes desse reino.  Ele parece do tipo que
+nÃ£o aceita provocaÃ§Ãµes.  Notando sua presenÃ§a ele reafirma sua posiÃ§Ã£o e
+exclama com imponÃªncia:
+"Alto lÃ¡! Identifique-se em nome do Rei!'
 ~
 2103298 0 0 0 256 0 0 0 -500 E
 15 8 0 3d6+150 2d6+3
@@ -30,12 +30,12 @@ E
 #9202
 valete guarda ouros~
 o valete de ouros~
-Um valete de ouros monta guarda no portão.
+Um valete de ouros monta guarda no portÃ£o.
 ~
-Um altivo valete guarda os portões desse reino.  Ele parece do tipo que
-não aceita provocações.  Notando sua presença ele reafirma sua posição e
-exclama com imponência:
-"Alto lá! Identifique-se em nome do Rei!'
+Um altivo valete guarda os portÃµes desse reino.  Ele parece do tipo que
+nÃ£o aceita provocaÃ§Ãµes.  Notando sua presenÃ§a ele reafirma sua posiÃ§Ã£o e
+exclama com imponÃªncia:
+"Alto lÃ¡! Identifique-se em nome do Rei!'
 ~
 2103298 0 0 0 256 0 0 0 -500 E
 15 8 0 3d6+150 2d6+3
@@ -45,12 +45,12 @@ E
 #9203
 valete guarda espadas~
 o valete de espadas~
-Um valete de espadas monta guarda no portão.
+Um valete de espadas monta guarda no portÃ£o.
 ~
-Um altivo valete guarda os portões desse reino.  Ele parece do tipo que
-não aceita provocações.  Notando sua presença ele reafirma sua posição e
-exclama com imponência:
-"Alto lá! Identifique-se em nome do Rei!'
+Um altivo valete guarda os portÃµes desse reino.  Ele parece do tipo que
+nÃ£o aceita provocaÃ§Ãµes.  Notando sua presenÃ§a ele reafirma sua posiÃ§Ã£o e
+exclama com imponÃªncia:
+"Alto lÃ¡! Identifique-se em nome do Rei!'
 ~
 2103298 0 0 0 256 0 0 0 500 E
 15 8 0 3d6+150 2d6+3
@@ -60,12 +60,12 @@ E
 #9204
 valete guarda paus~
 o valete de paus~
-Um valete de paus monta guarda no portão.
+Um valete de paus monta guarda no portÃ£o.
 ~
-Um altivo valete guarda os portões desse reino.  Ele parece do tipo que
-não aceita provocações.  Notando sua presença ele reafirma sua posição e
-exclama com imponência:
-"Alto lá! Identifique-se em nome do Rei!'
+Um altivo valete guarda os portÃµes desse reino.  Ele parece do tipo que
+nÃ£o aceita provocaÃ§Ãµes.  Notando sua presenÃ§a ele reafirma sua posiÃ§Ã£o e
+exclama com imponÃªncia:
+"Alto lÃ¡! Identifique-se em nome do Rei!'
 ~
 2103298 0 0 0 256 0 0 0 500 E
 15 8 0 3d6+150 2d6+3
@@ -74,13 +74,13 @@ exclama com imponência:
 E
 #9205
 valete guarda coringa~
-o coringa disfarçado em valete~
-Um valete (?) monta guarda no portão.
+o coringa disfarÃ§ado em valete~
+Um valete (?) monta guarda no portÃ£o.
 ~
-Um altivo valete guarda os portões desse reino.  Ele parece do tipo que
-não aceita provocações.  Notando sua presença ele reafirma sua posição e
-exclama com imponência:
-"Alto lá! Identifique-se em nome do Rei!'
+Um altivo valete guarda os portÃµes desse reino.  Ele parece do tipo que
+nÃ£o aceita provocaÃ§Ãµes.  Notando sua presenÃ§a ele reafirma sua posiÃ§Ã£o e
+exclama com imponÃªncia:
+"Alto lÃ¡! Identifique-se em nome do Rei!'
 ~
 2103298 0 0 0 256 0 0 0 0 E
 15 8 0 3d6+150 2d6+3
@@ -90,7 +90,7 @@ E
 #9206
 sete copas~
 o sete de copas~
-Um sete de copas caminha distraído.
+Um sete de copas caminha distraÃ­do.
 ~
 Apenas sete comum ...
 ~
@@ -102,7 +102,7 @@ E
 #9207
 sete ouros~
 o sete de ouros~
-Um sete de ouros caminha distraído.
+Um sete de ouros caminha distraÃ­do.
 ~
 Apenas um sete comum ...
 ~
@@ -114,7 +114,7 @@ E
 #9208
 sete espadas~
 o sete de espadas~
-Um sete de espadas caminha distraído.
+Um sete de espadas caminha distraÃ­do.
 ~
 Apenas um sete comum ...
 ~
@@ -126,7 +126,7 @@ E
 #9209
 sete paus~
 o sete de paus~
-Um sete de paus caminha distraído.
+Um sete de paus caminha distraÃ­do.
 ~
 Apenas um sete comum ...
 ~
@@ -138,7 +138,7 @@ E
 #9210
 sete coringa~
 o coringa fingindo ser um sete~
-Um coringa fingindo ser um sete caminha distraído.
+Um coringa fingindo ser um sete caminha distraÃ­do.
 ~
 Apenas um sete (?) comum ...
 ~
@@ -148,11 +148,11 @@ Apenas um sete (?) comum ...
 8 8 1
 E
 #9211
-três copas~
-um três de copas~
-um três de copas festejando sabe-se lá o que ...
+tres copas~
+um trÃªs de copas~
+um trÃªs de copas festejando sabe-se lÃ¡ o que ...
 ~
-Apenas um três comum...
+Apenas um trÃªs comum...
 ~
 2099268 0 0 0 0 0 0 0 -400 E
 4 16 7 2d4+50 2d3+1
@@ -160,11 +160,11 @@ Apenas um três comum...
 8 8 1
 E
 #9212
-três ouros~
-um três de ouros~
-um três de ouros festejando sabe-se lá o que ...
+tres ouros~
+um trÃªs de ouros~
+um trÃªs de ouros festejando sabe-se lÃ¡ o que ...
 ~
-Apenas um três comum...
+Apenas um trÃªs comum...
 ~
 2099268 0 0 0 0 0 0 0 -400 E
 4 16 7 2d4+50 2d3+1
@@ -172,11 +172,11 @@ Apenas um três comum...
 8 8 1
 E
 #9213
-três espadas~
-um três de espadas~
-um três de espadas festejando sabe-se lá o que ...
+tres espadas~
+um trÃªs de espadas~
+um trÃªs de espadas festejando sabe-se lÃ¡ o que ...
 ~
-Apenas um três comum...
+Apenas um trÃªs comum...
 ~
 2099268 0 0 0 0 0 0 0 -400 E
 4 16 7 2d4+50 2d3+1
@@ -184,11 +184,11 @@ Apenas um três comum...
 8 8 1
 E
 #9214
-três paus~
-um três de paus~
-um três de paus festejando sabe-se lá o que ...
+tres paus~
+um trÃªs de paus~
+um trÃªs de paus festejando sabe-se lÃ¡ o que ...
 ~
-Apenas um três comum...
+Apenas um trÃªs comum...
 ~
 2099268 0 0 0 0 0 0 0 400 E
 4 16 7 2d4+50 2d3+1
@@ -196,11 +196,11 @@ Apenas um três comum...
 8 8 1
 E
 #9215
-três coringa~
-um coringa disfarçado de três~
-um coringa disfarçado de três festejando sabe-se lá o que ...
+tres coringa~
+um coringa disfarÃ§ado de trÃªs~
+um coringa disfarÃ§ado de trÃªs festejando sabe-se lÃ¡ o que ...
 ~
-Apenas um três (?) comum...
+Apenas um trÃªs (?) comum...
 ~
 2099268 0 0 0 0 0 0 0 0 E
 4 16 7 2d4+50 2d3+1
@@ -210,10 +210,10 @@ E
 #9216
 canastra cartas copas~
 a canastra de copas~
-Várias cartas formam uma canastra e guardam a entrada do Castelo
+VÃ¡rias cartas formam uma canastra e guardam a entrada do Castelo
 ~
-Você vê várias cartas, uma seguida da outra!  Todas do mesmo naipe.  Você
-pensa se seria uma boa idéia enfrentar esta CANASTRA ...
+VocÃª vÃª vÃ¡rias cartas, uma seguida da outra!  Todas do mesmo naipe.  VocÃª
+pensa se seria uma boa idÃ©ia enfrentar esta CANASTRA ...
 ~
 2267138 0 0 0 324 0 0 0 -700 E
 10 10 2 3d6+100 2d5+2
@@ -223,10 +223,10 @@ E
 #9217
 canastra cartas ouros~
 a canastra de ouros~
-Várias cartas formam uma canastra e guardam a entrada do Castelo
+VÃ¡rias cartas formam uma canastra e guardam a entrada do Castelo
 ~
-Você vê várias cartas, uma seguida da outra!  Todas do mesmo naipe.  Você
-pensa se seria uma boa idéia enfrentar esta CANASTRA ...
+VocÃª vÃª vÃ¡rias cartas, uma seguida da outra!  Todas do mesmo naipe.  VocÃª
+pensa se seria uma boa idÃ©ia enfrentar esta CANASTRA ...
 ~
 2267138 0 0 0 324 0 0 0 -700 E
 10 10 2 3d6+100 2d5+2
@@ -236,10 +236,10 @@ E
 #9218
 canastra cartas espadas~
 a canastra de espadas~
-Várias cartas formam uma canastra e guardam a entrada do Castelo
+VÃ¡rias cartas formam uma canastra e guardam a entrada do Castelo
 ~
-Você vê várias cartas, uma seguida da outra!  Todas do mesmo naipe.  Você
-pensa se seria uma boa idéia enfrentar esta CANASTRA ...
+VocÃª vÃª vÃ¡rias cartas, uma seguida da outra!  Todas do mesmo naipe.  VocÃª
+pensa se seria uma boa idÃ©ia enfrentar esta CANASTRA ...
 ~
 2267138 0 0 0 324 0 0 0 700 E
 10 10 2 3d6+100 2d5+2
@@ -249,10 +249,10 @@ E
 #9219
 canastra cartas paus~
 a canastra de paus~
-Várias cartas formam uma canastra e guardam a entrada do Castelo
+VÃ¡rias cartas formam uma canastra e guardam a entrada do Castelo
 ~
-Você vê várias cartas, uma seguida da outra!  Todas do mesmo naipe.  Você
-pensa se seria uma boa idéia enfrentar esta CANASTRA ...
+VocÃª vÃª vÃ¡rias cartas, uma seguida da outra!  Todas do mesmo naipe.  VocÃª
+pensa se seria uma boa idÃ©ia enfrentar esta CANASTRA ...
 ~
 2267138 0 0 0 324 0 0 0 700 E
 10 10 2 3d6+100 2d5+2
@@ -262,10 +262,10 @@ E
 #9220
 canastra cartas suja~
 a canastra suja~
-Várias cartas formam uma canastra e guardam a entrada do Castelo
+VÃ¡rias cartas formam uma canastra e guardam a entrada do Castelo
 ~
-Você vê várias cartas, uma seguida da outra!  Nem todas são do mesmo naipe.
-Você pensa se seria uma boa idéia enfrentar esta CANASTRA ...  Ainda que
+VocÃª vÃª vÃ¡rias cartas, uma seguida da outra!  Nem todas sÃ£o do mesmo naipe.
+VocÃª pensa se seria uma boa idÃ©ia enfrentar esta CANASTRA ...  Ainda que
 suja...
 ~
 2267138 0 0 0 324 0 0 0 0 E
@@ -278,8 +278,8 @@ rei copas figura~
 o Rei de Copas~
 Uma figura realmente bela personifica a figura do REI!
 ~
-Ao olhar para essa figura envolta em um manto vermelho você sente que sua
-sabedoria e força o levaram a ocupar um cargo tão nobre!
+Ao olhar para essa figura envolta em um manto vermelho vocÃª sente que sua
+sabedoria e forÃ§a o levaram a ocupar um cargo tÃ£o nobre!
 ~
 2267138 0 0 0 324 0 0 0 -700 E
 20 7 -1 8d1+500 4d6+3
@@ -291,8 +291,8 @@ rei ouros figura~
 o Rei de Ouros~
 Uma figura realmente bela personifica a figura do REI!
 ~
-Ao olhar para essa figura envolta em um manto vermelho você sente que sua
-sabedoria e força o levaram a ocupar um cargo tão nobre!
+Ao olhar para essa figura envolta em um manto vermelho vocÃª sente que sua
+sabedoria e forÃ§a o levaram a ocupar um cargo tÃ£o nobre!
 ~
 2267138 0 0 0 324 0 0 0 -700 E
 20 7 -1 8d1+500 4d6+3
@@ -304,8 +304,8 @@ rei espadas figura~
 o Rei de Espadas~
 Uma figura realmente bela personifica a figura do REI!
 ~
-Ao olhar para essa figura envolta em um manto negro você sente que sua
-sabedoria e força o levaram a ocupar um cargo tão nobre!
+Ao olhar para essa figura envolta em um manto negro vocÃª sente que sua
+sabedoria e forÃ§a o levaram a ocupar um cargo tÃ£o nobre!
 ~
 2267138 0 0 0 324 0 0 0 700 E
 20 7 -1 8d1+500 4d6+3
@@ -317,8 +317,8 @@ rei paus figura~
 o Rei de Paus~
 Uma figura realmente bela personifica a figura do REI!
 ~
-Ao olhar para essa figura envolta em um manto negro você sente que sua
-sabedoria e força o levaram a ocupar um cargo tão nobre!
+Ao olhar para essa figura envolta em um manto negro vocÃª sente que sua
+sabedoria e forÃ§a o levaram a ocupar um cargo tÃ£o nobre!
 ~
 2267138 0 0 0 324 0 0 0 700 E
 20 7 -1 8d1+500 4d6+3
@@ -330,8 +330,8 @@ rei figura coringa~
 o Rei Coringa~
 Uma figura realmente bela (?) personifica a figura do REI!
 ~
-Ao olhar para essa figura envolta em um manto multicolorido você sente que
-sua sabedoria e força o levaram a ocupar um cargo tão nobre!
+Ao olhar para essa figura envolta em um manto multicolorido vocÃª sente que
+sua sabedoria e forÃ§a o levaram a ocupar um cargo tÃ£o nobre!
 ~
 2267138 0 0 0 324 0 0 0 0 E
 20 7 -1 8d1+500 4d6+3
@@ -339,12 +339,12 @@ sua sabedoria e força o levaram a ocupar um cargo tão nobre!
 8 6 1
 E
 #9226
-ás pacificador copas figura~
-o Ás de copas~
+as pacificador copas figura~
+o Ãs de copas~
 Uma figura muito habilidosa entra de repente.
 ~
-Não há o que dizer ...  Ele é mesmo o ÁS - também conhecido como O
-Pacificador do Rei!  Você não mexeria com ele impunemente...
+NÃ£o hÃ¡ o que dizer ...  Ele Ã© mesmo o ÃS - tambÃ©m conhecido como O
+Pacificador do Rei!  VocÃª nÃ£o mexeria com ele impunemente...
 ~
 2353202 0 0 0 67904 0 0 0 -800 E
 20 5 -2 8d1+600 6d4+5
@@ -352,12 +352,12 @@ Pacificador do Rei!  Você não mexeria com ele impunemente...
 8 8 1
 E
 #9227
-ás pacificador ouros figura~
-o Ás de Ouros~
+as pacificador ouros figura~
+o Ãs de Ouros~
 Uma figura muito habilidosa entra de repente.
 ~
-Não há o que dizer ...  Ele é mesmo o ÁS - também conhecido como O
-Pacificador do Rei!  Você não mexeria com ele impunemente...
+NÃ£o hÃ¡ o que dizer ...  Ele Ã© mesmo o ÃS - tambÃ©m conhecido como O
+Pacificador do Rei!  VocÃª nÃ£o mexeria com ele impunemente...
 ~
 2353202 0 0 0 67904 0 0 0 -800 E
 20 5 -2 8d1+600 6d4+5
@@ -365,12 +365,12 @@ Pacificador do Rei!  Você não mexeria com ele impunemente...
 8 8 1
 E
 #9228
-ás pacificador espadas figura~
-o Ás de Espadas~
+as pacificador espadas figura~
+o Ãs de Espadas~
 Uma figura muito habilidosa entra de repente.
 ~
-Não há o que dizer ...  Ele é mesmo o ÁS - também conhecido como O
-Pacificador do Rei!  Você não mexeria com ele impunemente...
+NÃ£o hÃ¡ o que dizer ...  Ele Ã© mesmo o ÃS - tambÃ©m conhecido como O
+Pacificador do Rei!  VocÃª nÃ£o mexeria com ele impunemente...
 ~
 2353202 0 0 0 67904 0 0 0 800 E
 20 5 -2 8d1+600 6d4+5
@@ -378,12 +378,12 @@ Pacificador do Rei!  Você não mexeria com ele impunemente...
 8 8 1
 E
 #9229
-ás pacificador paus figura~
-o Ás de Paus~
+as pacificador paus figura~
+o Ãs de Paus~
 Uma figura muito habilidosa entra de repente.
 ~
-Não há o que dizer ...  Ele é mesmo o ÁS - também conhecido como O
-Pacificador do Rei!  Você não mexeria com ele impunemente...
+NÃ£o hÃ¡ o que dizer ...  Ele Ã© mesmo o ÃS - tambÃ©m conhecido como O
+Pacificador do Rei!  VocÃª nÃ£o mexeria com ele impunemente...
 ~
 2353202 0 0 0 67904 0 0 0 800 E
 20 5 -2 8d1+600 6d4+5
@@ -391,12 +391,12 @@ Pacificador do Rei!  Você não mexeria com ele impunemente...
 8 8 1
 E
 #9230
-ás pacificador figura falso~
-o Falso Ás~
+as pacificador figura falso~
+o Falso Ãs~
 Uma figura muito habilidosa entra de repente.
 ~
-Não há o que dizer ...  Ele é mesmo o Falso ÁS - também conhecido como O
-Pacificador do Rei!  Você não mexeria com ele impunemente...
+NÃ£o hÃ¡ o que dizer ...  Ele Ã© mesmo o Falso ÃS - tambÃ©m conhecido como O
+Pacificador do Rei!  VocÃª nÃ£o mexeria com ele impunemente...
 ~
 2353202 0 0 0 67904 0 0 0 0 E
 20 5 -2 8d1+600 6d4+5
@@ -406,10 +406,10 @@ E
 #9231
 dama princesa donzela copas~
 a Dama de Copas~
-Uma dama suspira olhando para o retrato do Ás.
+Uma dama suspira olhando para o retrato do Ãs.
 ~
-Olhando mais de perto você percebe que a beleza dessa donzela esconde uma
-força descomunal!  Você não deveria mexer com ela.
+Olhando mais de perto vocÃª percebe que a beleza dessa donzela esconde uma
+forÃ§a descomunal!  VocÃª nÃ£o deveria mexer com ela.
 ~
 2099350 0 0 0 256 0 0 0 -500 E
 19 4 -3 3d5+400 3d6+4
@@ -419,10 +419,10 @@ E
 #9232
 dama princesa donzela ouros~
 a Dama de Ouros~
-Uma dama suspira olhando para o retrato do Ás.
+Uma dama suspira olhando para o retrato do Ãs.
 ~
-Olhando mais de perto você percebe que a beleza dessa donzela esconde uma
-força descomunal!  Você não deveria mexer com ela.
+Olhando mais de perto vocÃª percebe que a beleza dessa donzela esconde uma
+forÃ§a descomunal!  VocÃª nÃ£o deveria mexer com ela.
 ~
 2099350 0 0 0 256 0 0 0 -500 E
 19 4 -3 3d5+400 3d6+4
@@ -432,10 +432,10 @@ E
 #9233
 dama princesa donzela espadas~
 a Dama de Espadas~
-Uma dama suspira olhando para o retrato do Ás.
+Uma dama suspira olhando para o retrato do Ãs.
 ~
-Olhando mais de perto você percebe que a beleza dessa donzela esconde uma
-força descomunal!  Você não deveria mexer com ela.
+Olhando mais de perto vocÃª percebe que a beleza dessa donzela esconde uma
+forÃ§a descomunal!  VocÃª nÃ£o deveria mexer com ela.
 ~
 2099350 0 0 0 256 0 0 0 500 E
 19 4 -3 3d5+400 3d6+4
@@ -445,10 +445,10 @@ E
 #9234
 dama princesa donzela paus~
 a Dama de Paus~
-Uma dama suspira olhando para o retrato do Ás.
+Uma dama suspira olhando para o retrato do Ãs.
 ~
-Olhando mais de perto você percebe que a beleza dessa donzela esconde uma
-força descomunal!  Você não deveria mexer com ela.
+Olhando mais de perto vocÃª percebe que a beleza dessa donzela esconde uma
+forÃ§a descomunal!  VocÃª nÃ£o deveria mexer com ela.
 ~
 2099350 0 0 0 256 0 0 0 500 E
 19 4 -3 3d5+400 3d6+4
@@ -458,10 +458,10 @@ E
 #9235
 dama princesa donzela coringa~
 a Dama Coringa~
-Uma dama suspira olhando para o retrato do Ás.
+Uma dama suspira olhando para o retrato do Ãs.
 ~
-Olhando mais de perto você percebe que a beleza dessa donzela esconde uma
-força descomunal!  Você não deveria mexer com ela.
+Olhando mais de perto vocÃª percebe que a beleza dessa donzela esconde uma
+forÃ§a descomunal!  VocÃª nÃ£o deveria mexer com ela.
 ~
 2099350 0 0 0 256 0 0 0 0 E
 19 4 -3 3d5+400 3d6+4
@@ -471,10 +471,10 @@ E
 #9236
 pequeno falsificador chaveiro~
 o pequeno chaveiro~
-Um pequeno falsificador ronda o portão, ou melhor .. os guardas do portão.
+Um pequeno falsificador ronda o portÃ£o, ou melhor .. os guardas do portÃ£o.
 ~
-Você percebe que esse maroto chaveiro falsifica as chaves para fins nada
-louváveis ...
+VocÃª percebe que esse maroto chaveiro falsifica as chaves para fins nada
+louvÃ¡veis ...
 ~
 2099268 0 0 0 0 0 0 0 0 E
 4 16 7 2d4+50 2d3+1
