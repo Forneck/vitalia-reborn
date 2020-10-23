@@ -1,9 +1,9 @@
 #11000
 camelo selvagem~
 o camelo selvagem~
-Um camelo selvagem, muito perigoso, bufa enquanto observa seus advers·rios.
+Um camelo selvagem, muito perigoso, bufa enquanto observa seus advers√°rios.
 ~
-N„o brinque com este animal.
+N√£o brinque com este animal.
 ~
 2162722 0 0 0 0 0 0 0 -350 E
 5 12 6 1d6+80 2d4+3
@@ -11,11 +11,11 @@ N„o brinque com este animal.
 8 8 1
 E
 #11001
-alaz„o selvagem~
-o alaz„o selvagem~
-Um alaz„o extremamente irriquieto tenta dar coices em todos ‡ sua volta.
+alazao selvagem~
+o alaz√£o selvagem~
+Um alaz√£o extremamente irriquieto tenta dar coices em todos √† sua volta.
 ~
-N„o brinque com este animal.
+N√£o brinque com este animal.
 ~
 2162722 0 0 0 0 0 0 0 -350 E
 5 11 7 2d6+60 2d4+4
@@ -25,9 +25,9 @@ E
 #11002
 lobo assassino~
 o lobo assassino~
-Um enorme lobo negro, com dentes sujos de sangue, rosna para seus advers·rios.
+Um enorme lobo negro, com dentes sujos de sangue, rosna para seus advers√°rios.
 ~
-N„o brinque com este animal.
+N√£o brinque com este animal.
 ~
 2162722 0 0 0 0 0 0 0 -350 E
 5 12 5 1d7+54 2d4+3
@@ -39,7 +39,7 @@ tigre furioso~
 o tigre furioso~
 Um tigre furioso tenta ferir a todos que dele se aproximam.
 ~
-N„o brinque com esse animal.
+N√£o brinque com esse animal.
 ~
 2162722 0 0 0 0 0 0 0 -350 E
 5 10 8 1d6+60 2d4+3
@@ -47,11 +47,11 @@ N„o brinque com esse animal.
 8 8 1
 E
 #11004
-leoa sanguin·ria~
-a leoa sanguin·ria~
-Uma leoa sedenta de sangue ameaÁa a todos aqui.
+leoa sanguin√°ria~
+a leoa sanguin√°ria~
+Uma leoa sedenta de sangue amea√ßa a todos aqui.
 ~
-N„o brinque com esse animal.
+N√£o brinque com esse animal.
 ~
 2162722 0 0 0 0 0 0 0 -350 E
 5 11 5 1d6+74 2d4+3
@@ -63,7 +63,7 @@ urso feroz~
 o urso feroz~
 Um enorme e feroz urso tenta atacar um infeliz domador.
 ~
-N„o brinque com esse animal.
+N√£o brinque com esse animal.
 ~
 2162722 0 0 0 0 0 0 0 -350 E
 5 13 4 1d8+60 2d4+4
@@ -71,11 +71,11 @@ N„o brinque com esse animal.
 8 8 1
 E
 #11006
-le„o indÛcil~
-o le„o indÛcil~
-Um bravio le„o de juba negra ameaÁa os outros animais com seu rugido.
+leao indocil~
+o le√£o ind√≥cil~
+Um bravio le√£o de juba negra amea√ßa os outros animais com seu rugido.
 ~
-N„o brinque com esse animal.
+N√£o brinque com esse animal.
 ~
 2162722 0 0 0 0 0 0 0 -350 E
 5 14 3 1d7+60 2d4+4
@@ -85,9 +85,9 @@ E
 #11007
 raposa astuta vermelha~
 a astuta raposa vermelha~
-Uma raposa de aspecto indefeso, porÈm inteligente, ronda os outros animais.
+Uma raposa de aspecto indefeso, por√©m inteligente, ronda os outros animais.
 ~
-N„o brinque com esse animal.
+N√£o brinque com esse animal.
 ~
 2162722 0 0 0 0 0 0 0 -350 E
 5 10 4 1d7+70 2d4+4
@@ -95,13 +95,13 @@ N„o brinque com esse animal.
 8 8 2
 E
 #11008
-arauto anfitri„o~
-o arauto anfitri„o~
-O imponente arauto que carrega o Bras„o de Vit·lia acena para a platÈia.
+arauto anfitriao~
+o arauto anfitri√£o~
+O imponente arauto que carrega o Bras√£o de Vit√°lia acena para a plat√©ia.
 ~
-Ele, por mÈrito prÛprio, foi escolhido pelos prÛprios Senhores das Mesnadas e pelos
-Antigos Dragıes para, com a benÁ„o dos deuses, carregar o Bras„o de Vit·lia e proteger
-os mistÈrios das Mesnadas. Ele È muito mais velho do que se imagina...
+Ele, por m√©rito pr√≥prio, foi escolhido pelos pr√≥prios Senhores das Mesnadas e pelos
+Antigos Drag√µes para, com a ben√ß√£o dos deuses, carregar o Bras√£o de Vit√°lia e proteger
+os mist√©rios das Mesnadas. Ele √© muito mais velho do que se imagina...
 ~
 2351106 0 0 0 0 0 0 0 0 E
 101 0 -20 5d5+3000 6d6+20
@@ -111,9 +111,9 @@ E
 #11009
 domador~
 o domador de animais~
-Um forte domador tenta, em v„o, conter os animais.
+Um forte domador tenta, em v√£o, conter os animais.
 ~
-Ele est· preocupado com o que vai acontecer nessa arena...
+Ele est√° preocupado com o que vai acontecer nessa arena...
 ~
 2162722 0 0 0 0 0 0 0 -350 E
 5 14 6 1d5+60 2d4+3
@@ -122,8 +122,8 @@ Ele est· preocupado com o que vai acontecer nessa arena...
 E
 #11010
 representantes~
-os representantes dos cl„s~
-Os representantes de cada cl„ est„o no centro da arena segurando seus respectivos estandartes.
+os representantes dos cl√£s~
+Os representantes de cada cl√£ est√£o no centro da arena segurando seus respectivos estandartes.
 ~
 An undefined string.
 ~
@@ -135,10 +135,10 @@ E
 #11011
 pipoqueiro~
 o pipoqueiro~
-Um sorridente pipoqueiro anda para l· e pra c· tentando vender alguma coisa.
+Um sorridente pipoqueiro anda para l√° e pra c√° tentando vender alguma coisa.
 ~
-Ele sorri para vocÍ e mostra tudo que tem para vender:
-'Aceita uma pipoquinha? … gostosa e baratinha!'
+Ele sorri para voc√™ e mostra tudo que tem para vender:
+'Aceita uma pipoquinha? √â gostosa e baratinha!'
 ~
 2351168 0 0 0 0 0 0 0 0 E
 90 10 -10 4d4+1500 5d5+10
@@ -148,7 +148,7 @@ E
 #11012
 vendedor souvenires~
 o vendedor de souvenires~
-Um vendedor de souvenires passa por vocÍ oferecendo seus artigos.
+Um vendedor de souvenires passa por voc√™ oferecendo seus artigos.
 ~
 Ele parece muito atrapalhado segurando tantos souvenires!
 ~
