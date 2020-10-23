@@ -1,10 +1,10 @@
 #5300
 venenosa cobra~
-a horrível cobra~
+a horrÃ­vel cobra~
 Uma pequena cobra venenosa serpenteia a seu redor.
 ~
-É uma pequena cobra, com escamas lisas como se fosse cerâmica.  A mordida
-venenosa desta cobra derrubou muitos faraós poderosos.
+Ã‰ uma pequena cobra, com escamas lisas como se fosse cerÃ¢mica.  A mordida
+venenosa desta cobra derrubou muitos faraÃ³s poderosos.
 ~
 2097248 0 0 0 0 0 0 0 0 E
 5 14 8 5d5+50 1d6+1
@@ -14,13 +14,13 @@ E
 #5301
 cobra naja~
 a cobra naja~
-Uma enorme cobra naja ergue-se à sua frente e lentamente vai mostrando sua
-explendorosa cabeça, que se abre como se fôra um enorme leque de escamas.
+Uma enorme cobra naja ergue-se Ã  sua frente e lentamente vai mostrando sua
+explendorosa cabeÃ§a, que se abre como se fÃ´ra um enorme leque de escamas.
 ~
 A cobra naja movimenta-se de forma sinuosa, rastejando de um lado para o
-outro, bem diante de você, exibindo sua incrível cabeça totalmente aberta,
-como se fosse um leque, e cujas cores fortes são usadas para distrair suas
-vítimas antes do bote.
+outro, bem diante de vocÃª, exibindo sua incrÃ­vel cabeÃ§a totalmente aberta,
+como se fosse um leque, e cujas cores fortes sÃ£o usadas para distrair suas
+vÃ­timas antes do bote.
 ~
 2097248 0 0 0 0 0 0 0 0 E
 7 13 7 7d7+70 2d4+2
@@ -30,11 +30,11 @@ E
 #5302
 mangusto~
 o pequeno mangusto~
-Um pequeno mangusto se esquiva pelo chão, caçando cobras.
+Um pequeno mangusto se esquiva pelo chÃ£o, caÃ§ando cobras.
 ~
-O mangusto é um roedor manhoso, um rápido caçador de perigosas cobras
-venenosas.  Ela cheira você, parecendo estar a procura de comida em suas
-mãos.
+O mangusto Ã© um roedor manhoso, um rÃ¡pido caÃ§ador de perigosas cobras
+venenosas.  Ela cheira vocÃª, parecendo estar a procura de comida em suas
+mÃ£os.
 ~
 2097248 0 0 0 2048 0 0 0 10 E
 11 10 6 11d11+110 3d5+3
@@ -42,12 +42,12 @@ mãos.
 8 8 2
 E
 #5303
-guardião pirâmide~
-o guardião da pirâmide~
-O guardião da pirâmide protege as tumbas dos intrusos.
+guardiao piramide~
+o guardiÃ£o da pirÃ¢mide~
+O guardiÃ£o da pirÃ¢mide protege as tumbas dos intrusos.
 ~
-O guardião da pirâmide fez um juramento para destruir todos os ladrões de
-tumbas dos faraós.  Ele está totalmente vestido, dos pés a cabeça, com
+O guardiÃ£o da pirÃ¢mide fez um juramento para destruir todos os ladrÃµes de
+tumbas dos faraÃ³s.  Ele estÃ¡ totalmente vestido, dos pÃ©s a cabeÃ§a, com
 roupas cor de areia.
 ~
 2101266 0 0 0 65536 0 0 0 250 E
@@ -56,11 +56,11 @@ roupas cor de areia.
 8 8 1
 E
 #5304
-ladrão tumba~
-um ladrão de tumba~
-Um furtivo ladrão de tumba está a procura do tesouro.
+ladrao tumba~
+um ladrÃ£o de tumba~
+Um furtivo ladrÃ£o de tumba estÃ¡ a procura do tesouro.
 ~
-O ladrão esbarra em você, e em seguida volta a se esconder na escuridão.
+O ladrÃ£o esbarra em vocÃª, e em seguida volta a se esconder na escuridÃ£o.
 ~
 2097344 0 0 0 1638400 0 0 0 -250 E
 10 10 5 10d10+100 2d6+3
@@ -68,14 +68,14 @@ O ladrão esbarra em você, e em seguida volta a se esconder na escuridão.
 8 8 1
 E
 #5305
-ali babá ladrão~
-Ali Babá~
-Ali Babá está aqui, procurando pelo tesouro do faraó.
+ali baba ladrao~
+Ali BabÃ¡~
+Ali BabÃ¡ estÃ¡ aqui, procurando pelo tesouro do faraÃ³.
 ~
-Você vê um homem alto, barbado, com olhos ambiciosos.  Ali Babá passou a sua
+VocÃª vÃª um homem alto, barbado, com olhos ambiciosos.  Ali BabÃ¡ passou a sua
 vida roubando os outros.  Roubou inclusive recentemente, muitos itens bem
-debaixo do nariz dos guardiões da pirâmide.  Algum dia ele pode ser pego mas
-não hoje...
+debaixo do nariz dos guardiÃµes da pirÃ¢mide.  Algum dia ele pode ser pego mas
+nÃ£o hoje...
 ~
 2099284 0 0 0 589824 0 0 0 -300 E
 18 2 0 18d18+180 3d8+2
@@ -83,13 +83,13 @@ não hoje...
 8 8 1
 E
 #5306
-mágico tapete~
+magico tapete~
 o tapete magico~
-Um pequeno tapete de tecido se encontra debaixo de seus pés.
+Um pequeno tapete de tecido se encontra debaixo de seus pÃ©s.
 ~
-O tapete é simplesmente lindo, feito de um material sedoso.  Ele parece se
-levantar e tocar seu pé.  Espere, ele esta em pé, a poucos centímetros do
-chão!  Na verdade ele parece estar VIVO!
+O tapete Ã© simplesmente lindo, feito de um material sedoso.  Ele parece se
+levantar e tocar seu pÃ©.  Espere, ele esta em pÃ©, a poucos centÃ­metros do
+chÃ£o!  Na verdade ele parece estar VIVO!
 ~
 2353170 0 0 0 67600 0 0 0 500 E
 9 11 7 9d9+90 2d5+2
@@ -97,12 +97,12 @@ chão!  Na verdade ele parece estar VIVO!
 8 8 0
 E
 #5307
-múmia cadáver~
-a múmia~
-Uma múmia vem em sua direção, incomodada com a sua presença.
+mumia cadaver~
+a mÃºmia~
+Uma mÃºmia vem em sua direÃ§Ã£o, incomodada com a sua presenÃ§a.
 ~
-Você vê apenas a desfigurada carne humana em decomposição, animada pelo
-etéreo espírito de um morto.
+VocÃª vÃª apenas a desfigurada carne humana em decomposiÃ§Ã£o, animada pelo
+etÃ©reo espÃ­rito de um morto.
 ~
 2285664 0 0 0 67664 0 0 0 -600 E
 12 8 4 12d12+120 1d6+6
@@ -112,9 +112,9 @@ E
 #5308
 homem areia~
 o homem de areia~
-Um homem de areia brota do chão do deserto.
+Um homem de areia brota do chÃ£o do deserto.
 ~
-O homem de areia é exatamente isso: alguma coisa estranha, formada da areia
+O homem de areia Ã© exatamente isso: alguma coisa estranha, formada da areia
 do deserto.  Ele parece ser bastante grande e forte em sua casa de ventos
 quentes e arenosos.
 ~
@@ -126,10 +126,10 @@ E
 #5309
 efreeti~
 O Efreeti~
-O Efreeti está aqui, envolto por uma coluna de fogo.
+O Efreeti estÃ¡ aqui, envolto por uma coluna de fogo.
 ~
-O Efreeti é um poderoso ser, feito de fogo.  Ele contempla você com desdém e
-desprezo, com os braços cruzados sobre seu poderoso peito.
+O Efreeti Ã© um poderoso ser, feito de fogo.  Ele contempla vocÃª com desdÃ©m e
+desprezo, com os braÃ§os cruzados sobre seu poderoso peito.
 ~
 2353202 0 0 0 67600 0 0 0 -600 E
 20 0 -10 20d20+700 4d6+20
@@ -137,13 +137,13 @@ desprezo, com os braços cruzados sobre seu poderoso peito.
 8 8 1
 E
 #5310
-coluna cariátide~
-a cariátide~
+coluna cariatide~
+a cariÃ¡tide~
 Uma coluna de arenito esta aqui, esculpida em uma figura feminina.
 ~
 Na coluna foram esculpidas quatro figuras femininas bem formadas.  O arenito
-da cariátide é bem antigo mas você ainda pode ver uma espada letal, de
-pedra, nas mãos de cada figura.
+da cariÃ¡tide Ã© bem antigo mas vocÃª ainda pode ver uma espada letal, de
+pedra, nas mÃ£os de cada figura.
 ~
 2357266 0 0 0 67584 0 0 0 0 E
 24 -4 -13 24d24+940 4d6+20
@@ -151,13 +151,13 @@ pedra, nas mãos de cada figura.
 8 8 2
 E
 #5311
-gênio~
-o gênio~
-O gênio surge dos confins de uma pequena lâmpada.
+genio~
+o gÃªnio~
+O gÃªnio surge dos confins de uma pequena lÃ¢mpada.
 ~
-O gênio é um poderoso ser feito do próprio ar e freqüentemente aprisionado
-em uma pequena lâmpada, usada para satisfazer os desejos de quem a encontra.
-Ele sorri para você, com os braços cruzados sobre sua pele azul, acariciando
+O gÃªnio Ã© um poderoso ser feito do prÃ³prio ar e freqÃ¼entemente aprisionado
+em uma pequena lÃ¢mpada, usada para satisfazer os desejos de quem a encontra.
+Ele sorri para vocÃª, com os braÃ§os cruzados sobre sua pele azul, acariciando
 seu cavanhaque.
 ~
 2353170 0 0 0 67600 0 0 0 600 E
@@ -170,9 +170,9 @@ hieracoesfinge esfinge~
 a hieracoesfinge~
 A hieracoesfinge lhe parece muito esperta.
 ~
-As hieracoesfinges são criaturas espertas, pequenas, mas sórdidas.  Possuem
-a cabeça de pássaro, com poderosas asas, e quatro patas prontas para rasgar
-suas vítimas em pedaços.  Eles costumam ter bastante inveja da superioridade
+As hieracoesfinges sÃ£o criaturas espertas, pequenas, mas sÃ³rdidas.  Possuem
+a cabeÃ§a de pÃ¡ssaro, com poderosas asas, e quatro patas prontas para rasgar
+suas vÃ­timas em pedaÃ§os.  Eles costumam ter bastante inveja da superioridade
 dos seus primos mais velhos.
 ~
 2189424 0 0 0 67584 0 0 0 -200 E
@@ -183,11 +183,11 @@ E
 #5313
 ginoesfinge esfinge~
 a ginoesfinge~
-Uma ginoesfinge está sentada aqui, entretida por um enigma.
+Uma ginoesfinge estÃ¡ sentada aqui, entretida por um enigma.
 ~
-A ginoesfinge é uma criatura tranqüila e amigável, tem o corpo de uma linda
-mulher de pele escura da cintura para cima, asas emplumadas e as hábeis
-pernas de um poderoso felino.  Agora ela está confusa, tentando resolver um
+A ginoesfinge Ã© uma criatura tranqÃ¼ila e amigÃ¡vel, tem o corpo de uma linda
+mulher de pele escura da cintura para cima, asas emplumadas e as hÃ¡beis
+pernas de um poderoso felino.  Agora ela estÃ¡ confusa, tentando resolver um
 enigma de sua prima crioesfinge.
 
 ~
@@ -199,10 +199,10 @@ E
 #5314
 crioesfinge esfinge~
 a esfinge~
-Uma crioesfinge observa você calmamente.
+Uma crioesfinge observa vocÃª calmamente.
 ~
-A crioesfinge é uma criatura calma e amigável, tendo a cabeça de um carneiro
-sobre o corpo de um felino bem peludo e asas como as de uma águia.  Ela se
+A crioesfinge Ã© uma criatura calma e amigÃ¡vel, tendo a cabeÃ§a de um carneiro
+sobre o corpo de um felino bem peludo e asas como as de uma Ã¡guia.  Ela se
 encanta com enigmas, proporcionando divertimento aos seus primos facilmente
 confundidos.
 ~
@@ -214,11 +214,11 @@ E
 #5315
 androesfinge esfinge~
 a androesfinge~
-Uma poderosa androesfinge balança sua juba de leão.
+Uma poderosa androesfinge balanÃ§a sua juba de leÃ£o.
 ~
-A poderosa androesfinge é uma criatura gigantesca, com o corpo de um leão,
-cuja face é como a de um homem relativamente simpático e um par volumoso de
-asas.  São contados contos de faraós que ficaram surdos permanentemente ao
+A poderosa androesfinge Ã© uma criatura gigantesca, com o corpo de um leÃ£o,
+cuja face Ã© como a de um homem relativamente simpÃ¡tico e um par volumoso de
+asas.  SÃ£o contados contos de faraÃ³s que ficaram surdos permanentemente ao
 ouvir o poderoso rugido desta esfinge.
 ~
 2189330 0 0 0 67600 0 0 0 400 E
@@ -229,11 +229,11 @@ E
 #5316
 grande esfinge~
 a grande esfinge~
-Uma poderosa esfinge repousa na areia, dormente por séculos.
+Uma poderosa esfinge repousa na areia, dormente por sÃ©culos.
 ~
-A grande esfinge se sobressai dez pés acima de você, repousando em estado de
-dormência.  Ela se tornou quase indistinguível da areia que a cerca, apesar
-de você ainda poder identificar os traços de uma bonita face que já ditou
+A grande esfinge se sobressai dez pÃ©s acima de vocÃª, repousando em estado de
+dormÃªncia.  Ela se tornou quase indistinguÃ­vel da areia que a cerca, apesar
+de vocÃª ainda poder identificar os traÃ§os de uma bonita face que jÃ¡ ditou
 muitas regras.
 ~
 2353170 0 0 0 67856 0 0 0 500 E
@@ -242,14 +242,14 @@ muitas regras.
 8 8 2
 E
 #5317
-ramsés múmia~
-Ramsés, o Maldito~
-Você despertou o poderoso servo dos faraós, Ramsés.
+ramses mumia~
+RamsÃ©s, o Maldito~
+VocÃª despertou o poderoso servo dos faraÃ³s, RamsÃ©s.
 ~
-Assim que a luz que você carrega ilumina o rosto e o corpo da criatura, você
-pode ver que seus traços vão se definindo, preenchendo, endurecendo, ate que
-um homem aparentemente saudável se ergue diante de você, marcado apenas pelo
-seu último sono.  Seu cabelo é preto e macio, sua pele escura como
+Assim que a luz que vocÃª carrega ilumina o rosto e o corpo da criatura, vocÃª
+pode ver que seus traÃ§os vÃ£o se definindo, preenchendo, endurecendo, ate que
+um homem aparentemente saudÃ¡vel se ergue diante de vocÃª, marcado apenas pelo
+seu Ãºltimo sono.  Seu cabelo Ã© preto e macio, sua pele escura como
 chocolate, e seu peito quase nem se mexe quando respira.
 ~
 2287634 0 0 0 67856 0 0 0 150 E
