@@ -1,10 +1,10 @@
 #4300
 morcego cinzento~
 um morcego cinzento~
-um morcego cinzento est� dormindo aqui.
+um morcego cinzento está dormindo aqui.
 ~
-� um morcego normal, n�o um vampiro. Ele � bonitinho enquanto est� dormindo.
-E voc� deveria deixa-lo exatamente daquele jeito ou ent�o mat�-lo.
+É um morcego normal, não um vampiro. Ele é bonitinho enquanto está dormindo.
+E você deveria deixa-lo exatamente daquele jeito ou então matá-lo.
 ~
 2234440 0 0 0 1065 0 0 0 -15 E
 3 15 4 4d5+20 3d3+5
@@ -13,12 +13,12 @@ E voc� deveria deixa-lo exatamente daquele jeito ou ent�o mat�-lo.
 BareHandAttack: 4
 E
 #4304
-pobre cidad�o~
-um pobre cidad�o~
-um pobre cidad�o da Fran�a est� sentado aqui.
+pobre cidadao~
+um pobre cidadão~
+um pobre cidadão da França está sentado aqui.
 ~
-Definitivamente, ele vem das classes inferiores de toda a Fran�a, ele � um
-pedinte, que est� implorando por algumas moedas ou por um peda�o de carne. 
+Definitivamente, ele vem das classes inferiores de toda a França, ele é um
+pedinte, que está implorando por algumas moedas ou por um pedaço de carne. 
 ~
 2099272 0 0 0 1056 0 0 0 -20 E
 12 13 3 3d5+288 2d4+12
@@ -27,14 +27,14 @@ pedinte, que est� implorando por algumas moedas ou por um peda�o de carne.
 BareHandAttack: 13
 E
 #4311
-Padre~
+padre tintoreto~
 Tintoreto o padre~
-Um padre est� sentado em uma cadeira enquanto medita.
+Um padre está sentado em uma cadeira enquanto medita.
 ~
-Ele est� sentado numa cadeira de madeira. E ele parece ser bem idoso,
-por�m forte o suficiente para que, numa briga por sua pr�pria vida,
-ele d� bastante trabalho. Voc� deve se lembrar que ele tem Deus do 
-lado dele, portanto, nada de importun�-lo. 
+Ele está sentado numa cadeira de madeira. E ele parece ser bem idoso,
+porêm forte o suficiente para que, numa briga por sua própria vida,
+ele dá bastante trabalho. Você deve se lembrar que ele tem Deus do 
+lado dele, portanto, nada de importuná-lo. 
 ~
 2115594 0 0 0 1152 0 0 0 50 E
 12 12 3 3d1+112 5d6+5
@@ -47,8 +47,8 @@ crente~
 o crente~
 O homem crente se encontra aqui.
 ~
-Voc� est� olhando para um homem franc�s, de meia idade e da classe m�dia.
-Ele est� vestido com botas pretas, cal�as marrom e camisa branca.
+Você está olhando para um homem francês, de meia idade e da classe média.
+Ele está vestido com botas pretas, calças marrom e camisa branca.
 ~
 2103432 0 0 0 1056 0 0 0 10 E
 8 12 1 5d3+115 3d4+10
@@ -58,11 +58,11 @@ E
 #4321
 menino cantor coral~
 um jovem cantor de coral~
-um jovem cantor de coral est� cantando aqui.
+um jovem cantor de coral está cantando aqui.
 ~
-Ele � um garoto que canta na catedral, por algumas moedas. Ele 
-n�o parece ser muito forte ou poderoso e ele poderia cantar 
-qualquer m�sica por algum dinheiro.
+Ele é um garoto que canta na catedral, por algumas moedas. Ele 
+não parece ser muito forte ou poderoso e ele poderia cantar 
+qualquer música por algum dinheiro.
 ~
 2101384 0 0 0 32 0 0 0 20 E
 10 14 3 5d2+155 3d3+5
@@ -74,8 +74,8 @@ crente~
 uma crente~
 Uma crente rezando.
 ~
-Ela possui muita f� em Cristo, e tamb�m acredita que o grande mal da
-humanidade � o excessivo apego ao ouro.  Ela est� elegantemente vestida com
+Ela possui muita fé em Cristo, e tambêm acredita que o grande mal da
+humanidade é o excessivo apego ao ouro.  Ela está elegantemente vestida com
 roupas brancas.
 
 ~
@@ -87,10 +87,10 @@ E
 #4324
 Richelieu Cardeal~
 O Cardeal Richelieu~
-O Cardeal Richelieu est� aqui, gritando com as pessoas.
+O Cardeal Richelieu está aqui, gritando com as pessoas.
 ~
-O Cardeal da Fran�a e ministro de Luis XIV, todo vestido de vermelho, 
-est� aqui e voc� pode f�cilmente identific�-lo atrav�s de seu 
+O Cardeal da França e ministro de Luis XIV, todo vestido de vermelho, 
+está aqui e você pode fácilmente identificá-lo através de seu 
 peculiar bigode.
 ~
 2099210 0 0 0 1160 0 0 0 50 E
@@ -101,7 +101,7 @@ E
 #4325
 pombo~
 um pombo~
-um pombo branco est� aqui
+um pombo branco está aqui
 ~
 � um p�ssaro branco, voc� nunca tinha visto um antes?
 ~
