@@ -1,9 +1,9 @@
 #9801
-cérbero~
-Cérbero~
-O temível Cérbero está aqui.
+cerbero~
+CÃ©rbero~
+O temÃ­vel CÃ©rbero estÃ¡ aqui.
 ~
-Este terrivel cão de três cabeças está faminto.  Guardião desse lugar, ele
+Este terrivel cÃ£o de trÃªs cabeÃ§as estÃ¡ faminto.  GuardiÃ£o desse lugar, ele
 jamais perdeu uma batalha contra os que invadem seus dominios.
 ~
 2615298 0 0 0 330064 0 0 0 -700 E
@@ -22,10 +22,10 @@ E
 #9802
 ciclope gigante~
 o Ciclope gigante~
-O Ciclope gigante está de guarda aqui.
+O Ciclope gigante estÃ¡ de guarda aqui.
 ~
-Esse gigantesco Ciclope, possuidor de uma força extrema é capaz de ver um e
-sentir o cheiro de um intruso a distância, mesmo possuindo somente um olho.
+Esse gigantesco Ciclope, possuidor de uma forÃ§a extrema Ã© capaz de ver um e
+sentir o cheiro de um intruso a distÃ¢ncia, mesmo possuindo somente um olho.
 ~
 2353154 0 0 0 67920 0 0 0 -700 E
 102 -15 -75 10d20+8150 8d11+35
@@ -43,10 +43,10 @@ E
 #9803
 monstro pedra~
 o Monstro de Pedra~
-O Monstro de Pedra está dormindo aqui.
+O Monstro de Pedra estÃ¡ dormindo aqui.
 ~
-Feito todo em pedra esse terrivel monstro é praticamente imortal.  Sua pele
-feita em rocha é impenetrável.
+Feito todo em pedra esse terrivel monstro Ã© praticamente imortal.  Sua pele
+feita em rocha Ã© impenetrÃ¡vel.
 ~
 2353154 0 0 0 67920 0 0 0 -700 E
 102 -20 -35 10d20+8150 8d11+32
@@ -64,10 +64,10 @@ E
 #9804
 mal supremo~
 o Mal Supremo~
-O Mal Supremo está diante de você.
+O Mal Supremo estÃ¡ diante de vocÃª.
 ~
-Está criatura abominável parece ser um fonte de energia maléfica.  Você
-sente toda a maldade que invade essa sala, é praticamente impossivel definir
+EstÃ¡ criatura abominÃ¡vel parece ser um fonte de energia malÃ©fica.  VocÃª
+sente toda a maldade que invade essa sala, Ã© praticamente impossivel definir
 sua forma, uma grande nevoa negra te impede de ver a face dessa terrivel
 criatura.
 ~
@@ -85,14 +85,14 @@ Con: 25
 Cha: 25
 E
 #9805
-dragão invisível~
-o dragão invisível~
-O Dragão invisível está aqui.
+dragao invisivel~
+o dragÃ£o invisÃ­vel~
+O DragÃ£o invisÃ­vel estÃ¡ aqui.
 ~
-Você vê um enorme dragão de pele negra e com uma imensa cauda.  Possuidor de
-uma inacreditável força e com a habilidade de ficar invisível aos seus olhos
-é capaz de soltar imensas laberadas de fogo.  Ele demonstra ser muito forte
-e hábil.
+VocÃª vÃª um enorme dragÃ£o de pele negra e com uma imensa cauda.  Possuidor de
+uma inacreditÃ¡vel forÃ§a e com a habilidade de ficar invisÃ­vel aos seus olhos
+Ã© capaz de soltar imensas laberadas de fogo.  Ele demonstra ser muito forte
+e hÃ¡bil.
 ~
 2881538 0 0 0 1378564 0 0 0 -500 E
 40 -10 -28 10d20+850 6d7+27
@@ -105,11 +105,11 @@ E
 #9806
 anjo luz~
 o Anjo da Luz~
-O Anjo da Luz está aqui, para lhe guiar.
+O Anjo da Luz estÃ¡ aqui, para lhe guiar.
 ~
-Ele é muito grande, uma imensidão de luzes ao seu redor. Você tenta olhar
-mas é praticamente impossivel ver seu rosto. As luzes ofuscam seu olhos e
-parecem preencher o vazio de seu coração.
+Ele Ã© muito grande, uma imensidÃ£o de luzes ao seu redor. VocÃª tenta olhar
+mas Ã© praticamente impossivel ver seu rosto. As luzes ofuscam seu olhos e
+parecem preencher o vazio de seu coraÃ§Ã£o.
 ~
 2351122 0 0 0 65872 0 0 0 1000 E
 106 -30 -25 10d6+16000 9d6+49
@@ -124,11 +124,11 @@ E
 #9807
 anjo amor~
 o Anjo do Amor~
-O Anjo do Amor está aqui, para lhe guiar.
+O Anjo do Amor estÃ¡ aqui, para lhe guiar.
 ~
-Ele é enorme, seu poder é repleto de amor e compreensão. Você tenta olhar
-mas é praticamente impossivel entender a sensação de paz e conforto que esse
-gigantesco clarão de luzes emitem.
+Ele Ã© enorme, seu poder Ã© repleto de amor e compreensÃ£o. VocÃª tenta olhar
+mas Ã© praticamente impossivel entender a sensaÃ§Ã£o de paz e conforto que esse
+gigantesco clarÃ£o de luzes emitem.
 ~
 2351122 0 0 0 65872 0 0 0 1000 E
 106 -21 -35 10d6+16000 9d6+45
@@ -143,10 +143,10 @@ E
 #9808
 anjo honestidade~
 o Anjo da Honestidade~
-O Anjo da Honestidade está aqui, para lhe guiar.
+O Anjo da Honestidade estÃ¡ aqui, para lhe guiar.
 ~
-Uma luz muito grande é somente o que você vê.  Seus olhos são cegados por
-toda clareza e luminosidade e seu coração parece sentir o poder da honra e
+Uma luz muito grande Ã© somente o que vocÃª vÃª.  Seus olhos sÃ£o cegados por
+toda clareza e luminosidade e seu coraÃ§Ã£o parece sentir o poder da honra e
 honestidade que emana desse poderoso anjo.
 ~
 2351122 0 0 0 65872 0 0 0 1000 E
@@ -160,13 +160,13 @@ Con: 25
 Cha: 25
 E
 #9809
-anjo vitória~
-o Anjo da Vitória~
-O Anjo da Vitória está aqui, para lhe guiar.
+anjo vitoria~
+o Anjo da VitÃ³ria~
+O Anjo da VitÃ³ria estÃ¡ aqui, para lhe guiar.
 ~
-É imcompreensível o poder desse anjo.  É protetor dos vitoriosos, guiados
-pela luz e possuidores de grande honestidade. Abençoado seja você por ser
-digno de estar na presença dessa divindade angelical.
+Ã‰ imcompreensÃ­vel o poder desse anjo.  Ã‰ protetor dos vitoriosos, guiados
+pela luz e possuidores de grande honestidade. AbenÃ§oado seja vocÃª por ser
+digno de estar na presenÃ§a dessa divindade angelical.
 ~
 2351122 0 0 0 65872 0 0 0 1000 E
 106 -24 -45 10d6+16000 5d9+42
