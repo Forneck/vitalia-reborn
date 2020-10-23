@@ -1,10 +1,10 @@
 #6500
 guarda anao~
-o guarda anão~
-Um guarda anão está aqui.
+o guarda anÃ£o~
+Um guarda anÃ£o estÃ¡ aqui.
 ~
 O guarda parece muito forte e malvado.  Ele tem uma barba longa e cheira
-como se não tivesse tomado banho por um mês.
+como se nÃ£o tivesse tomado banho por um mÃªs.
 ~
 2103298 0 0 0 2320 0 0 0 1000 E
 21 0 -1 4d20+336 2d8+9
@@ -13,10 +13,10 @@ como se não tivesse tomado banho por um mês.
 E
 #6501
 trabalhador anao~
-o anão trabalhador~
-Um anão trabalhador das minas está aqui.
+o anÃ£o trabalhador~
+Um anÃ£o trabalhador das minas estÃ¡ aqui.
 ~
-Ele é muito sujo e parece extremamente exausto pelo excesso de trabalho.
+Ele Ã© muito sujo e parece extremamente exausto pelo excesso de trabalho.
 ~
 2103360 0 0 0 0 0 0 0 900 E
 13 7 2 25d5+170 2d4+6
@@ -26,7 +26,7 @@ E
 #6502
 fantasma~
 o fantasma~
-Um fantasma está aguardando seu primeiro movimento aqui.
+Um fantasma estÃ¡ aguardando seu primeiro movimento aqui.
 ~
 Um fantasma negro e quase transparente.
 ~
@@ -38,9 +38,9 @@ E
 #6503
 lojista~
 o lojista da Loja Couro e Dente~
-O lojista da Loja Couro e Dente está aqui, aguardando pacientemente.
+O lojista da Loja Couro e Dente estÃ¡ aqui, aguardando pacientemente.
 ~
-O lojista é muito arredondado, mas parece em excelente condição.
+O lojista Ã© muito arredondado, mas parece em excelente condiÃ§Ã£o.
 ~
 2160642 0 0 0 16 0 0 0 1000 E
 108 0 -10 1d1+30000 2d8+32
@@ -49,10 +49,10 @@ O lojista é muito arredondado, mas parece em excelente condição.
 E
 #6504
 padeiro granito cabeca~
-o padeiro Cabeça de Granito~
-Cabeça de Granito, o padeiro, está aguardando por um cliente aqui.
+o padeiro CabeÃ§a de Granito~
+CabeÃ§a de Granito, o padeiro, estÃ¡ aguardando por um cliente aqui.
 ~
-Cabeça de Granito está coberto de farinha e cereais.
+CabeÃ§a de Granito estÃ¡ coberto de farinha e cereais.
 ~
 2160642 0 0 0 16400 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+22
@@ -62,9 +62,9 @@ E
 #6505
 lagarto gigante~
 o lagarto gigante~
-Um lagarto gigante está aqui procurando por comida pelo chão da caverna.
+Um lagarto gigante estÃ¡ aqui procurando por comida pelo chÃ£o da caverna.
 ~
-Esta criatura escamosa parece estar bem adaptada a este habitat subterrâneo.
+Esta criatura escamosa parece estar bem adaptada a este habitat subterrÃ¢neo.
 Ele aparenta ser muito poderoso.
 ~
 2097216 0 0 0 2064 0 0 0 100 E
@@ -75,10 +75,10 @@ E
 #6506
 gigante~
 o gigante~
-Um gigante está caminhando do lado da montanha até aqui.
+Um gigante estÃ¡ caminhando do lado da montanha atÃ© aqui.
 ~
-O gigante tem quase 5 metros e meio de altura, braços de aço e parece
-estar em excelentes condições físicas.
+O gigante tem quase 5 metros e meio de altura, braÃ§os de aÃ§o e parece
+estar em excelentes condiÃ§Ãµes fÃ­sicas.
 ~
 2099264 0 0 0 2048 0 0 0 600 E
 19 2 0 4d20+300 3d3+8
@@ -87,10 +87,10 @@ estar em excelentes condições físicas.
 E
 #6507
 mineiro anao~
-o anão mineiro~
-Um mineiro anão está aqui.
+o anÃ£o mineiro~
+Um mineiro anÃ£o estÃ¡ aqui.
 ~
-O mineiro está muito cansado e muito sujo, e ele tem os músculos inchados.
+O mineiro estÃ¡ muito cansado e muito sujo, e ele tem os mÃºsculos inchados.
 ~
 2099202 0 0 0 2048 0 0 0 500 E
 4 16 7 3d13+40 1d3+2
@@ -100,10 +100,10 @@ E
 #6508
 chefe mina anao~
 o chefe da mina~
-Um anão chefe da mina encontra-se aqui, supervisionando o trabalho.
+Um anÃ£o chefe da mina encontra-se aqui, supervisionando o trabalho.
 ~
-O chefe da mina é muito grande e muito forte, não obstante, ele deve ser
-razoavelmente inteligente também para ter conseguido este posto.
+O chefe da mina Ã© muito grande e muito forte, nÃ£o obstante, ele deve ser
+razoavelmente inteligente tambÃ©m para ter conseguido este posto.
 ~
 2099202 0 0 0 2048 0 0 0 700 E
 19 1 0 50d2+270 3d4+6
@@ -112,10 +112,10 @@ razoavelmente inteligente também para ter conseguido este posto.
 E
 #6509
 medico anao curandeiro~
-o médico anão~
-O médico anão encontra-se aqui, ajudando os doentes de seu povo.
+o mÃ©dico anÃ£o~
+O mÃ©dico anÃ£o encontra-se aqui, ajudando os doentes de seu povo.
 ~
-Ele é um curandeiro muito habilidoso e extremamente leal ao seu deus.
+Ele Ã© um curandeiro muito habilidoso e extremamente leal ao seu deus.
 ~
 2099202 0 0 0 2320 0 0 0 999 E
 22 0 -1 9d4+375 3d8+4
@@ -124,8 +124,8 @@ Ele é um curandeiro muito habilidoso e extremamente leal ao seu deus.
 E
 #6510
 peao anao~
-o peão anão~
-Um peão anão está aguardando ajuda aqui.
+o peÃ£o anÃ£o~
+Um peÃ£o anÃ£o estÃ¡ aguardando ajuda aqui.
 ~
 An undefined string.
 ~
@@ -136,8 +136,8 @@ An undefined string.
 E
 #6511
 anao~
-o Anão~
-Um anão está aqui.
+o AnÃ£o~
+Um anÃ£o estÃ¡ aqui.
 ~
 An undefined string.
 ~
@@ -149,8 +149,8 @@ E
 #6514
 guarda quartel~
 o guarda do quartel~
-Um guarda do quartel encontra-se aqui, descansando enquanto está de folga
-do serviço.
+Um guarda do quartel encontra-se aqui, descansando enquanto estÃ¡ de folga
+do serviÃ§o.
 ~
 An undefined string.
 ~
@@ -161,8 +161,8 @@ An undefined string.
 E
 #6516
 labirinto guardiao~
-o guardião do labirinto~
-O guardião do labirinto está aqui.
+o guardiÃ£o do labirinto~
+O guardiÃ£o do labirinto estÃ¡ aqui.
 ~
 Ele parece MUITO forte.
 ~
