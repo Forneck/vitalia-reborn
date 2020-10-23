@@ -1,9 +1,9 @@
 #5400
 mago mestre guilda~
 o mestre da guilda dos magos~
-Seu mestre está aqui.
+Seu mestre estÃ¡ aqui.
 ~
-Um velho homem está aqui a perscrutar antigos livros.
+Um velho homem estÃ¡ aqui a perscrutar antigos livros.
 ~
 2123778 0 0 0 2320 0 0 0 1000 E
 16 -10 -10 1d1+10000 5d5+5
@@ -11,11 +11,11 @@ Um velho homem está aqui a perscrutar antigos livros.
 8 8 1
 E
 #5401
-clérigo mestre guilda~
-o mestre da guilda dos clérigos~
-Seu mestre está aqui.
+clerigo mestre guilda~
+o mestre da guilda dos clÃ©rigos~
+Seu mestre estÃ¡ aqui.
 ~
-Um velho homem vestido em um longo robe violeta está aqui, tentando se
+Um velho homem vestido em um longo robe violeta estÃ¡ aqui, tentando se
 concentrar.
 ~
 2123778 0 0 0 2320 0 0 0 1000 E
@@ -26,10 +26,10 @@ E
 #5402
 guerreiro mestre guilda~
 o mestre da guilda dos guerreiros~
-Seu mestre está aqui.
+Seu mestre estÃ¡ aqui.
 ~
-Um pequeno homem vestido em um robe negro está aqui, esperando para
-treiná-lo.
+Um pequeno homem vestido em um robe negro estÃ¡ aqui, esperando para
+treinÃ¡-lo.
 ~
 2123778 0 0 0 2320 0 0 0 1000 E
 16 -10 -10 1d1+10000 5d5+5
@@ -37,13 +37,13 @@ treiná-lo.
 8 8 1
 E
 #5403
-ladrão mestre guilda~
-o mestre da guilda dos ladrões~
-Seu mestre está aqui.
+ladrao mestre guilda~
+o mestre da guilda dos ladrÃµes~
+Seu mestre estÃ¡ aqui.
 ~
-Um homem vestido com restos de pano negro.  Assim que você entra, ele segura
-sua faca e a atira contra você.  A faca finca na parede, próxima a sua
-orelha esquerda.  'Nós começaremos agora', é tudo o que ele diz.
+Um homem vestido com restos de pano negro.  Assim que vocÃª entra, ele segura
+sua faca e a atira contra vocÃª.  A faca finca na parede, prÃ³xima a sua
+orelha esquerda.  'NÃ³s comeÃ§aremos agora', Ã© tudo o que ele diz.
 ~
 2123778 0 0 0 2320 0 0 0 1000 E
 16 -10 -10 1d1+10000 5d5+5
@@ -53,10 +53,10 @@ E
 #5404
 mulher recepcionista~
 a recepcionista~
-Uma mulher de véu, de pele morena lhe dá as boas vindas por trás de uma mesa.
+Uma mulher de vÃ©u, de pele morena lhe dÃ¡ as boas vindas por trÃ¡s de uma mesa.
 ~
-Esta beleza árabe é certamente a filha de algum alto oficial.  Quando você
-discretamente levanta seu véu, você pode notar uma pequena marca de nascença
+Esta beleza Ã¡rabe Ã© certamente a filha de algum alto oficial.  Quando vocÃª
+discretamente levanta seu vÃ©u, vocÃª pode notar uma pequena marca de nascenÃ§a
 em sua bochecha esquerda em forma de meia-lua.
 ~
 2123778 0 0 0 16 0 0 0 800 E
@@ -65,11 +65,11 @@ em sua bochecha esquerda em forma de meia-lua.
 6 6 2
 E
 #5405
-mago garçom velho homem~
-O velho caquético~
-O velho caquético se apoia contra a barra.
+mago garcom velho homem~
+O velho caquÃ©tico~
+O velho caquÃ©tico se apoia contra a barra.
 ~
-Ele parece distraído enquanto coloca cinco bebidas de uma vez sem errar.
+Ele parece distraÃ­do enquanto coloca cinco bebidas de uma vez sem errar.
 ~
 2156546 0 0 0 16 0 0 0 0 E
 108 9 -1 1d1+12000 1d5+3
@@ -77,11 +77,11 @@ Ele parece distraído enquanto coloca cinco bebidas de uma vez sem errar.
 8 8 1
 E
 #5406
-john irmão cantor vocalista~
-Irmão John~
-Irmão John, vocalista dos Lokettes está no palco.
+john irmao cantor vocalista~
+IrmÃ£o John~
+IrmÃ£o John, vocalista dos Lokettes estÃ¡ no palco.
 ~
-Você vê o vocalista dos Lokettes cantando muito alto uma melodia.
+VocÃª vÃª o vocalista dos Lokettes cantando muito alto uma melodia.
 ~
 2097218 0 0 0 0 0 0 0 0 E
 15 4 0 3d5+150 2d5+3
@@ -93,7 +93,7 @@ crente~
 o crente~
 Um crente descansa aqui.
 ~
-Um homem franzino descansa aqui, esperando encontrar um bom coração.
+Um homem franzino descansa aqui, esperando encontrar um bom coraÃ§Ã£o.
 ~
 2097348 0 0 0 0 0 0 0 -20 E
 2 19 10 10d1+1 1d4+2
@@ -115,10 +115,10 @@ E
 #5409
 mendigo~
 o mendigo~
-Um mendigo sujo está aqui, sentado na sarjeta.
+Um mendigo sujo estÃ¡ aqui, sentado na sarjeta.
 ~
-Esta pobre alma parece não ter muita sorte, talvez você possa lhe dar um
-tostão?
+Esta pobre alma parece nÃ£o ter muita sorte, talvez vocÃª possa lhe dar um
+tostÃ£o?
 ~
 2097348 0 0 0 0 0 0 0 -20 E
 1 19 10 10d1+1 1d2+2
@@ -128,9 +128,9 @@ E
 #5410
 padeiro~
 o padeiro~
-O padeiro está aqui jogando paciência.
+O padeiro estÃ¡ aqui jogando paciÃªncia.
 ~
-Você vê um grande homem de avental branco coberto de farinha.
+VocÃª vÃª um grande homem de avental branco coberto de farinha.
 ~
 2156546 0 0 0 16 0 0 0 100 E
 108 0 0 1d1+30000 2d10+2
@@ -140,9 +140,9 @@ E
 #5411
 lojista~
 o lojista~
-O lojista está aqui.
+O lojista estÃ¡ aqui.
 ~
-Você vê um meio-elfo sentado em um tamborete, atrás de sua caixa
+VocÃª vÃª um meio-elfo sentado em um tamborete, atrÃ¡s de sua caixa
 registradora.
 ~
 2156546 0 0 0 16 0 0 0 100 E
@@ -153,7 +153,7 @@ E
 #5412
 banqueiro~
 o banqueiro~
-Um banqueiro está aqui esperando para lhe ajudar.
+Um banqueiro estÃ¡ aqui esperando para lhe ajudar.
 ~
 Este pequeno homem parece estar apto para contar dinheiro.
 ~
@@ -165,9 +165,9 @@ E
 #5413
 ahkeem alfaiate~
 Ahkeem o alfaiate~
-Ahkeem o alfaiate lhe dá boas-vindas
+Ahkeem o alfaiate lhe dÃ¡ boas-vindas
 ~
-Este homem de meia idade olha para você com desdenho e rapidamente lhe
+Este homem de meia idade olha para vocÃª com desdenho e rapidamente lhe
 sugere um novo guarda-roupa.
 ~
 2156546 0 0 0 16 0 0 0 0 E
@@ -178,9 +178,9 @@ E
 #5414
 vera verdureira~
 Vera, a verdureira~
-Vera, a verdureira olha para você enquanto você aprecia seu estoque.
+Vera, a verdureira olha para vocÃª enquanto vocÃª aprecia seu estoque.
 ~
-Uma esbelta e alta mulher que sorri francamente para você.
+Uma esbelta e alta mulher que sorri francamente para vocÃª.
 ~
 2156546 0 0 0 16 0 0 0 0 E
 108 10 5 1d1+30000 1d5+5
@@ -189,10 +189,10 @@ Uma esbelta e alta mulher que sorri francamente para você.
 E
 #5415
 butch~
-Butch o açougueiro~
-Butch o açougueiro está aqui com um avental ensangüentado.
+Butch o aÃ§ougueiro~
+Butch o aÃ§ougueiro estÃ¡ aqui com um avental ensangÃ¼entado.
 ~
-Este anão atarracado tem um brilho maldoso em seu olhar.
+Este anÃ£o atarracado tem um brilho maldoso em seu olhar.
 ~
 2156546 0 0 0 16 0 0 0 0 E
 108 10 5 1d1+30000 1d5+5
@@ -202,9 +202,9 @@ E
 #5416
 abdul vendedor~
 Abdul o vendedor de armaduras~
-Abdul está aqui, esperando para ajuda-lo.
+Abdul estÃ¡ aqui, esperando para ajuda-lo.
 ~
-Abdul retribui seu olhar com um olhar fixo.  Você rapidamente se desvia de
+Abdul retribui seu olhar com um olhar fixo.  VocÃª rapidamente se desvia de
 seu frio olhar e faz seu pedido.
 ~
 2156546 0 0 0 16 0 0 0 0 E
@@ -215,9 +215,9 @@ E
 #5417
 igor armeiro~
 Igor o armeiro~
-Igor está aqui fazendo... algo.
+Igor estÃ¡ aqui fazendo... algo.
 ~
-Você vê um pequeno anão com um grande corcunda em seu ombro esquerdo.
+VocÃª vÃª um pequeno anÃ£o com um grande corcunda em seu ombro esquerdo.
 ~
 2156546 0 0 0 16 0 0 0 0 E
 108 10 5 1d1+30000 1d5+5
@@ -227,11 +227,11 @@ E
 #5418
 cassandra~
 Cassandra~
-Cassandra está aqui, orgulhosa de sua coleção.
+Cassandra estÃ¡ aqui, orgulhosa de sua coleÃ§Ã£o.
 ~
-Você vê uma face alegre, cujas linhas sugerem muitos anos de mar aberto.  É
+VocÃª vÃª uma face alegre, cujas linhas sugerem muitos anos de mar aberto.  Ã‰
 apenas por causa de tantos anos de pesca que ela consegue suportar este
-cheiro que está no ar.
+cheiro que estÃ¡ no ar.
 ~
 2156546 0 0 0 16 0 0 0 0 E
 108 0 0 1d1+30000 1d5+5
@@ -241,9 +241,9 @@ E
 #5419
 capataz homem~
 o capataz~
-O capataz está aqui gritando com os trabalhadores.
+O capataz estÃ¡ aqui gritando com os trabalhadores.
 ~
-Um anão preocupado está aqui constantemente fazendo anotações em seu livro e
+Um anÃ£o preocupado estÃ¡ aqui constantemente fazendo anotaÃ§Ãµes em seu livro e
 tomando conta dos trabalhadores.
 ~
 2097218 0 0 0 0 0 0 0 0 E
@@ -253,8 +253,8 @@ tomando conta dos trabalhadores.
 E
 #5420
 trabalhador~
-o trabalhador da construção~
-Um trabalhador da construção está trabalhando aqui.
+o trabalhador da construÃ§Ã£o~
+Um trabalhador da construÃ§Ã£o estÃ¡ trabalhando aqui.
 ~
 Um grande homem muito suado nem ao menos retorna seu olhar.
 ~
@@ -264,12 +264,12 @@ Um grande homem muito suado nem ao menos retorna seu olhar.
 8 8 1
 E
 #5421
-estátua brahman~
-a estátua de Brahman~
-A estátua de Brahman está aqui.
+estatua brahman~
+a estÃ¡tua de Brahman~
+A estÃ¡tua de Brahman estÃ¡ aqui.
 ~
-A estátua feita de sólido mármore descreve o poderoso Deus que derrota Siva
-em um combate mágico.
+A estÃ¡tua feita de sÃ³lido mÃ¡rmore descreve o poderoso Deus que derrota Siva
+em um combate mÃ¡gico.
 ~
 2353170 0 0 0 2320 0 0 0 1000 E
 15 -10 -10 1d1+1200 6d10+10
@@ -277,12 +277,12 @@ em um combate mágico.
 8 8 0
 E
 #5422
-estátua siva~
-a estátua de Siva~
-A estátua de Siva está aqui.
+estatua siva~
+a estÃ¡tua de Siva~
+A estÃ¡tua de Siva estÃ¡ aqui.
 ~
-A estátua do Grande Lorde da Destruição está aqui, sendo atacada por Brahman
-em um combate mágico.
+A estÃ¡tua do Grande Lorde da DestruiÃ§Ã£o estÃ¡ aqui, sendo atacada por Brahman
+em um combate mÃ¡gico.
 ~
 2353170 0 0 0 2320 0 0 0 -1000 E
 15 -10 -10 1d1+1200 6d10+10
@@ -290,11 +290,11 @@ em um combate mágico.
 8 8 0
 E
 #5423
-estátua indra~
-a estátua de Indra~
-A estátua de Indra está aqui.
+estatua indra~
+a estÃ¡tua de Indra~
+A estÃ¡tua de Indra estÃ¡ aqui.
 ~
-Está estátua se parece com um enorme elefante.
+EstÃ¡ estÃ¡tua se parece com um enorme elefante.
 ~
 2353170 0 0 0 2320 0 0 0 1000 E
 15 -10 -10 1d1+1200 6d10+10
@@ -302,11 +302,11 @@ Está estátua se parece com um enorme elefante.
 8 8 0
 E
 #5424
-estátua yama~
-a estátua de Yama~
-A estátua de Yama está aqui.
+estatua yama~
+a estÃ¡tua de Yama~
+A estÃ¡tua de Yama estÃ¡ aqui.
 ~
-Esta é a estátua do Deus da Morte.  Ela está coberta com estranhas runas.
+Esta Ã© a estÃ¡tua do Deus da Morte.  Ela estÃ¡ coberta com estranhas runas.
 ~
 2353170 0 0 0 2320 0 0 0 0 E
 15 -10 -10 1d1+1200 6d10+10
@@ -314,11 +314,11 @@ Esta é a estátua do Deus da Morte.  Ela está coberta com estranhas runas.
 8 8 0
 E
 #5425
-estátua surya~
-a estátua de Surya~
-A estátua de Surya está aqui.
+estatua surya~
+a estÃ¡tua de Surya~
+A estÃ¡tua de Surya estÃ¡ aqui.
 ~
-A estátua de Surya, o Deus que comanda o sol, quase brilha com uma aura de
+A estÃ¡tua de Surya, o Deus que comanda o sol, quase brilha com uma aura de
 fogo.
 ~
 2353170 0 0 0 2320 0 0 0 1000 E
@@ -327,11 +327,11 @@ fogo.
 8 8 0
 E
 #5426
-estátua kali~
-a estátua de Kali~
-A estátua de Kali está aqui.
+estatua kali~
+a estÃ¡tua de Kali~
+A estÃ¡tua de Kali estÃ¡ aqui.
 ~
-A estátua da Mãe Negra, Kali, é feita em mármore negro e coberta com runas
+A estÃ¡tua da MÃ£e Negra, Kali, Ã© feita em mÃ¡rmore negro e coberta com runas
 prateadas.
 ~
 2353170 0 0 0 2320 0 0 0 -1000 E
@@ -340,12 +340,12 @@ prateadas.
 8 8 0
 E
 #5427
-estátua brihaspati~
-a estátua de Brihaspati~
-A estátua de Brihaspati está aqui.
+estatua brihaspati~
+a estÃ¡tua de Brihaspati~
+A estÃ¡tua de Brihaspati estÃ¡ aqui.
 ~
-A estátua de Brihaspati, o Deus das Estudantes e do Conhecimento é feita com
-mármore resistente.
+A estÃ¡tua de Brihaspati, o Deus das Estudantes e do Conhecimento Ã© feita com
+mÃ¡rmore resistente.
 ~
 2353170 0 0 0 2320 0 0 0 0 E
 15 -10 -10 1d1+1200 6d10+10
@@ -353,11 +353,11 @@ mármore resistente.
 8 8 0
 E
 #5428
-estátua puchan~
-a estátua de Puchan~
-A estátua de Puchan está aqui.
+estatua puchan~
+a estÃ¡tua de Puchan~
+A estÃ¡tua de Puchan estÃ¡ aqui.
 ~
-A estátua de Puchan, Deus dos Viajantes, é coberta de poeira e esculpida
+A estÃ¡tua de Puchan, Deus dos Viajantes, Ã© coberta de poeira e esculpida
 como se ela tivesse atravessado um longo caminho pelas estradas.
 ~
 2353170 0 0 0 2320 0 0 0 1000 E
@@ -366,9 +366,9 @@ como se ela tivesse atravessado um longo caminho pelas estradas.
 8 8 0
 E
 #5429
-aziz humano cânon~
+aziz humano canon~
 Aziz~
-Aziz, o Cânon Humano está aqui.
+Aziz, o CÃ¢non Humano estÃ¡ aqui.
 ~
 An undefined string.
 ~
@@ -378,9 +378,9 @@ An undefined string.
 8 8 1
 E
 #5430
-mustafah humano ladrão~
+mustafah humano ladrao~
 Mustafah~
-Mustafah, o Ladrão Humano está aqui.
+Mustafah, o LadrÃ£o Humano estÃ¡ aqui.
 ~
 An undefined string.
 ~
@@ -390,9 +390,9 @@ An undefined string.
 8 8 1
 E
 #5431
-fátima elfa élfica invocadora~
-Fátima~
-Fátima, a Invocadora Élfica está aqui.
+fatima elfa elfica invocadora~
+FÃ¡tima~
+FÃ¡tima, a Invocadora Ã‰lfica estÃ¡ aqui.
 ~
 An undefined string.
 ~
@@ -402,9 +402,9 @@ An undefined string.
 8 8 1
 E
 #5432
-kareem anão mercenário~
+kareem anao mercenario~
 Kareem~
-Kareem, o anão Mercenário está aqui.
+Kareem, o anÃ£o MercenÃ¡rio estÃ¡ aqui.
 ~
 An undefined string.
 ~
@@ -414,12 +414,12 @@ An undefined string.
 8 8 1
 E
 #5433
-nômade mercador~
-o mercador nômade~
-Um mercador nômade olha para você.
+nomade mercador~
+o mercador nÃ´made~
+Um mercador nÃ´made olha para vocÃª.
 ~
 Este robusto companheiro retorna seu olhar com um sorriso, mas algo lhe diz
-para não confiar muito nele.
+para nÃ£o confiar muito nele.
 ~
 2160836 0 0 0 0 0 0 0 -100 E
 108 11 -10 1d1+1500 1d8+2
@@ -428,10 +428,10 @@ para não confiar muito nele.
 E
 #5434
 guarda costa guarda-costa~
-O guarda-costa do Sultão~
-Um guarda-costa está a medir-lhe com o olhar.
+O guarda-costa do SultÃ£o~
+Um guarda-costa estÃ¡ a medir-lhe com o olhar.
 ~
-O grande meio-orc rapidamente mede você e volta para seu dever.
+O grande meio-orc rapidamente mede vocÃª e volta para seu dever.
 ~
 2103346 0 0 0 2064 0 0 0 0 E
 12 10 3 3d10+100 1d6+3
@@ -439,11 +439,11 @@ O grande meio-orc rapidamente mede você e volta para seu dever.
 8 8 1
 E
 #5435
-criança ladrão~
-Uma criança magra~
-Uma criança magra vaga ao redor.
+crianca ladrao~
+Uma crianÃ§a magra~
+Uma crianÃ§a magra vaga ao redor.
 ~
-Esta pequena criança nota você olhando para ela e rapidamente desvia seu
+Esta pequena crianÃ§a nota vocÃª olhando para ela e rapidamente desvia seu
 olhar.
 ~
 2097284 0 0 0 0 0 0 0 100 E
@@ -454,10 +454,10 @@ E
 #5436
 trabalhador doca~
 o trabalhador das docas~
-Um forte trabalhador passa por você carregando caixas.
+Um forte trabalhador passa por vocÃª carregando caixas.
 ~
-Embora pareça extremamente grosseiro, esta grande massa carrega uma enorme
-caixa para os barcos como se esta fosse uma caixa de lírios.
+Embora pareÃ§a extremamente grosseiro, esta grande massa carrega uma enorme
+caixa para os barcos como se esta fosse uma caixa de lÃ­rios.
 ~
 2097216 0 0 0 0 0 0 0 0 E
 12 9 2 3d5+65 1d8+5
@@ -470,7 +470,7 @@ o cobrador de impostos~
 Um pequeno homem caminha escrevendo em seu caderno.
 ~
 O cobrador de impostos da cidade caminha de loja em loja coletando a taxa do
-Sultão, por viverem nesta grande cidade.
+SultÃ£o, por viverem nesta grande cidade.
 ~
 2097344 0 0 0 0 0 0 0 0 E
 5 16 5 10d2+45 2d3+1
@@ -480,7 +480,7 @@ E
 #5438
 gord~
 Gord~
-Gord O Velhaco está aqui.
+Gord O Velhaco estÃ¡ aqui.
 ~
 An undefined string.
 ~
@@ -492,9 +492,9 @@ E
 #5439
 chulainn cavaleiro~
 Chulainn~
-Chulainn O Cavaleiro está aqui.
+Chulainn O Cavaleiro estÃ¡ aqui.
 ~
-Este grande homem não parece surpreso com seu aproximar e olha para você
+Este grande homem nÃ£o parece surpreso com seu aproximar e olha para vocÃª
 ironicamente.
 ~
 2103428 0 0 0 2064 0 0 0 800 E
@@ -505,9 +505,9 @@ E
 #5440
 daghdha~
 Daghdha~
-Daghdha, O Arque-Mágico está aqui.
+Daghdha, O Arque-MÃ¡gico estÃ¡ aqui.
 ~
-Este homem está vestido em longos robes marrons e tem um olhar penetrante.
+Este homem estÃ¡ vestido em longos robes marrons e tem um olhar penetrante.
 ~
 2097216 0 0 0 2320 0 0 0 200 E
 15 5 3 5d2+180 1d6+2
@@ -517,7 +517,7 @@ E
 #5441
 curley folhaverde folha verde~
 Curley Folhaverde~
-Curley Folhaverde está aqui.
+Curley Folhaverde estÃ¡ aqui.
 ~
 An undefined string.
 ~
@@ -531,8 +531,8 @@ homem profeta vagante~
 o profeta vagante~
 Um pequeno homem de cabelos grisalhos prega o evangelho.
 ~
-Este triste caso pode ter sido um evangelista em uma outra vida. Ele é
-conhecido por ficar pelas esquinas e informar aos passantes o dia do juízo
+Este triste caso pode ter sido um evangelista em uma outra vida. Ele Ã©
+conhecido por ficar pelas esquinas e informar aos passantes o dia do juÃ­zo
 final.
 ~
 2097280 0 0 0 0 0 0 0 0 E
@@ -545,7 +545,7 @@ gato rua~
 o gato de rua~
 Um pequeno felino procura por comida.
 ~
-Você vê um pequeno gatinho faminto.
+VocÃª vÃª um pequeno gatinho faminto.
 ~
 2097280 0 0 0 0 0 0 0 -10 E
 2 18 7 1d2+5 2d2+1
@@ -555,10 +555,10 @@ E
 #5444
 urubu~
 o urubu~
-Um urubu sobrevoa você.
+Um urubu sobrevoa vocÃª.
 ~
-Assim que você olha para esta ave, você nota que a única coisa que ele
-deseja é um corpo.
+Assim que vocÃª olha para esta ave, vocÃª nota que a Ãºnica coisa que ele
+deseja Ã© um corpo.
 ~
 2097344 0 0 0 0 0 0 0 -200 E
 2 18 7 1d3+1 1d6+1
@@ -568,9 +568,9 @@ E
 #5445
 velho homem~
 o homem velho~
-Um homem velho está aqui sentado, jogando xadrez.
+Um homem velho estÃ¡ aqui sentado, jogando xadrez.
 ~
-Ele parece concentrado em sua vitória.
+Ele parece concentrado em sua vitÃ³ria.
 ~
 2097280 0 0 0 0 0 0 0 200 E
 4 17 8 2d3+1 1d3+1
@@ -578,11 +578,11 @@ Ele parece concentrado em sua vitória.
 6 6 1
 E
 #5446
-lugh bibliotecário~
-Lugh, o Bibliotecário~
-Lugh o Bibliotecário está sentado atrás de uma mesa.
+lugh bibliotecÃ¡rio~
+Lugh, o BibliotecÃ¡rio~
+Lugh o BibliotecÃ¡rio estÃ¡ sentado atrÃ¡s de uma mesa.
 ~
-A grande massa forte se levanta assim que alguém lhe faz uma pergunta.
+A grande massa forte se levanta assim que alguÃ©m lhe faz uma pergunta.
 ~
 2123794 0 0 0 0 0 0 0 300 E
 10 1 0 10d10+430 3d6+5
@@ -590,11 +590,11 @@ A grande massa forte se levanta assim que alguém lhe faz uma pergunta.
 6 6 1
 E
 #5447
-sujo vento diabo pó~
-o demônio da sujeira~
-O vento levanta algum pó.
+sujo vento diabo po~
+o demÃ´nio da sujeira~
+O vento levanta algum pÃ³.
 ~
-O que você vê diante de si é realmente um bebê de um elemental do ar.
+O que vocÃª vÃª diante de si Ã© realmente um bebÃª de um elemental do ar.
 ~
 2097188 0 0 0 0 0 0 0 -1000 E
 1 19 9 2d2+1 2d3+1
@@ -602,12 +602,12 @@ O que você vê diante de si é realmente um bebê de um elemental do ar.
 8 8 1
 E
 #5448
-lâmia~
-a lâmia~
-Uma estranha lâmia está aqui aguardando por sua próxima refeição.
+lamia~
+a lÃ¢mia~
+Uma estranha lÃ¢mia estÃ¡ aqui aguardando por sua prÃ³xima refeiÃ§Ã£o.
 ~
-Está é uma criatura com o dorso de uma linda mulher, mas abaixo da cintura,
-parece uma besta quadrúpede. Ela lambe seus lábios enquanto olha para você
+EstÃ¡ Ã© uma criatura com o dorso de uma linda mulher, mas abaixo da cintura,
+parece uma besta quadrÃºpede. Ela lambe seus lÃ¡bios enquanto olha para vocÃª
 ambiciosamente.
 ~
 2097700 0 0 0 0 0 0 0 -500 E
@@ -618,7 +618,7 @@ E
 #5449
 dervixe~
 o dervixe esfarrapado~
-Um dervixe vestido em farrapos está aqui.
+Um dervixe vestido em farrapos estÃ¡ aqui.
 ~
 Este homem parece poder usar montes e montes de restos.
 ~
@@ -628,11 +628,11 @@ Este homem parece poder usar montes e montes de restos.
 8 8 1
 E
 #5450
-sultão~
-O Sultão~
-O Sultão descansa em seu trono.
+sultao~
+O SultÃ£o~
+O SultÃ£o descansa em seu trono.
 ~
-Você vê um grande e saudável homem em robes vermelhos sorrindo para você.
+VocÃª vÃª um grande e saudÃ¡vel homem em robes vermelhos sorrindo para vocÃª.
 ~
 2124082 0 0 0 2320 0 0 0 200 E
 10 5 -4 6d6+830 1d6+0
@@ -640,12 +640,12 @@ Você vê um grande e saudável homem em robes vermelhos sorrindo para você.
 5 5 1
 E
 #5451
-garota harém~
-uma garota de harém~
-Uma amável garota vestida com véu está aqui.
+garota harem~
+uma garota de harÃ©m~
+Uma amÃ¡vel garota vestida com vÃ©u estÃ¡ aqui.
 ~
-Você vê uma linda morena, vestindo tecidos quase transparentes e um leve véu
-azul.   Sua lealdade para com o Sultão é eterna.
+VocÃª vÃª uma linda morena, vestindo tecidos quase transparentes e um leve vÃ©u
+azul.   Sua lealdade para com o SultÃ£o Ã© eterna.
 ~
 2097154 0 0 0 0 0 0 0 0 E
 3 17 7 1d1+15 1d6+1
@@ -655,10 +655,10 @@ E
 #5452
 carcereiro~
 o carcereiro~
-O carcereiro está dormindo aqui, roncando alto.
+O carcereiro estÃ¡ dormindo aqui, roncando alto.
 ~
-Você vê uma patética alma deitada aqui.  Provavelmente algum ex-nobre que
-caiu em desgraça com o Sultão.
+VocÃª vÃª uma patÃ©tica alma deitada aqui.  Provavelmente algum ex-nobre que
+caiu em desgraÃ§a com o SultÃ£o.
 ~
 2097286 0 0 0 0 0 0 0 -100 E
 18 4 0 3d4+100 1d6+6
@@ -668,10 +668,10 @@ E
 #5453
 eunuco~
 um eunuco~
-Um eunuco está aqui tomando conta das garotas.
+Um eunuco estÃ¡ aqui tomando conta das garotas.
 ~
-Você vê um grande homem cuja única função é proteger o harém.  Ele foi
-castrado para a segurança das garotas.
+VocÃª vÃª um grande homem cuja Ãºnica funÃ§Ã£o Ã© proteger o harÃ©m.  Ele foi
+castrado para a seguranÃ§a das garotas.
 ~
 2097186 0 0 0 2064 0 0 0 0 E
 12 8 0 5d1+130 2d4+4
@@ -680,10 +680,10 @@ castrado para a segurança das garotas.
 E
 #5454
 garota preferida nichole~
-Nichole, a preferida do Sultão~
-Nichole, a preferida do Sultão descansa sobre algumas almofadas.
+Nichole, a preferida do SultÃ£o~
+Nichole, a preferida do SultÃ£o descansa sobre algumas almofadas.
 ~
-Você vê a mais bela garota árabe que você jamais viu.  Pena que ela está
+VocÃª vÃª a mais bela garota Ã¡rabe que vocÃª jamais viu.  Pena que ela estÃ¡
 quase a ponto de te matar.
 ~
 2097186 0 0 0 2064 0 0 0 100 E
@@ -692,11 +692,11 @@ quase a ponto de te matar.
 5 5 2
 E
 #5455
-alá~
-Alá~
-Alá está aqui.
+ala alÃ¡~
+AlÃ¡~
+AlÃ¡ estÃ¡ aqui.
 ~
-Você vê o todo poderoso Alá.
+VocÃª vÃª o todo poderoso AlÃ¡.
 ~
 2354482 0 0 0 526608 0 0 0 1000 E
 11 0 0 2d3+2300 2d20+20
@@ -704,11 +704,11 @@ Você vê o todo poderoso Alá.
 5 5 0
 E
 #5456
-mago guardião~
-o guardião da Guilda~
-O Guardião da Guilda dos Magos está aqui.
+mago guardiao~
+o guardiÃ£o da Guilda~
+O GuardiÃ£o da Guilda dos Magos estÃ¡ aqui.
 ~
-Este homem parece um Mago-Guerreiro e eu não me atreveria a mexer com ele.
+Este homem parece um Mago-Guerreiro e eu nÃ£o me atreveria a mexer com ele.
 ~
 2123778 0 0 0 2320 0 0 0 0 E
 8 -1 -10 2d5+500 3d8+10
@@ -716,11 +716,11 @@ Este homem parece um Mago-Guerreiro e eu não me atreveria a mexer com ele.
 8 8 1
 E
 #5457
-clérigo guardião~
-o guardião da Guilda~
-O Guardião da Guilda dos Clérigos está aqui.
+clerigo guardiao~
+o guardiÃ£o da Guilda~
+O GuardiÃ£o da Guilda dos ClÃ©rigos estÃ¡ aqui.
 ~
-Este homem parece um Clérigo-Guerreiro e eu não me atreveria a mexer com
+Este homem parece um ClÃ©rigo-Guerreiro e eu nÃ£o me atreveria a mexer com
 ele.
 ~
 2123778 0 0 0 2320 0 0 0 0 E
@@ -729,11 +729,11 @@ ele.
 8 8 1
 E
 #5458
-guerreiro guardião~
-o guardião da Guilda~
-O Guardião da Guilda dos Guerreiros está aqui.
+guerreiro guardiao~
+o guardiÃ£o da Guilda~
+O GuardiÃ£o da Guilda dos Guerreiros estÃ¡ aqui.
 ~
-Este homem parece o primo do Conan e eu não me atreveria a desafiá-lo.
+Este homem parece o primo do Conan e eu nÃ£o me atreveria a desafiÃ¡-lo.
 ~
 2123778 0 0 0 2320 0 0 0 0 E
 8 -1 -10 2d5+500 3d8+10
@@ -741,12 +741,12 @@ Este homem parece o primo do Conan e eu não me atreveria a desafiá-lo.
 8 8 1
 E
 #5459
-ladrão guardião~
-o guardião da Guilda~
-O Guardião da Guilda dos ladrões está aqui.
+ladrao guardiao~
+o guardiÃ£o da Guilda~
+O GuardiÃ£o da Guilda dos ladrÃµes estÃ¡ aqui.
 ~
-Você vê um homem vestido de negro.  Ele rapidamente se levanta assim que
-você caminha em direção a onde ele está.
+VocÃª vÃª um homem vestido de negro.  Ele rapidamente se levanta assim que
+vocÃª caminha em direÃ§Ã£o a onde ele estÃ¡.
 ~
 2123778 0 0 0 2320 0 0 0 -100 E
 8 -1 -10 2d5+500 3d8+10
@@ -756,9 +756,9 @@ E
 #5460
 criado garoto~
 o criado~
-Um criado está aqui distraído em suas tarefas.
+Um criado estÃ¡ aqui distraÃ­do em suas tarefas.
 ~
-Você vê um pequeno garoto correndo em volta das paredes do palácio.
+VocÃª vÃª um pequeno garoto correndo em volta das paredes do palÃ¡cio.
 ~
 2097216 0 0 0 0 0 0 0 0 E
 2 19 9 10d1+1 1d4+1
@@ -766,11 +766,11 @@ Você vê um pequeno garoto correndo em volta das paredes do palácio.
 8 8 1
 E
 #5461
-guarda sultão~
-o guarda do Sultão~
-Um guarda está aqui, protegendo os inocentes.
+guarda sultao~
+o guarda do SultÃ£o~
+Um guarda estÃ¡ aqui, protegendo os inocentes.
 ~
-Você vê um lutador treinado, pronto para ajudar aqueles que estão em
+VocÃª vÃª um lutador treinado, pronto para ajudar aqueles que estÃ£o em
 necessidade.
 ~
 2097344 0 0 0 0 0 0 0 1000 E
@@ -779,11 +779,11 @@ necessidade.
 8 8 1
 E
 #5462
-guarda sultão~
-o guarda do Sultão~
-Um guarda está aqui, protegendo o portão.
+guarda sultao~
+o guarda do SultÃ£o~
+Um guarda estÃ¡ aqui, protegendo o portÃ£o.
 ~
-Você vê um lutador treinado, pronto para defender a cidade.
+VocÃª vÃª um lutador treinado, pronto para defender a cidade.
 ~
 2097218 0 0 0 0 0 0 0 1000 E
 10 10 8 2d4+120 1d8+1
@@ -791,11 +791,11 @@ Você vê um lutador treinado, pronto para defender a cidade.
 8 8 1
 E
 #5463
-chefe guarda sultão~
+chefe guarda sultao~
 o Chefe da Guarda~
-O Chefe da Guarda do Sultão está aqui.
+O Chefe da Guarda do SultÃ£o estÃ¡ aqui.
 ~
-Você vê um grande homem treinado para caçar e matar.
+VocÃª vÃª um grande homem treinado para caÃ§ar e matar.
 ~
 2097216 0 0 0 16 0 0 0 1000 E
 15 0 0 4d5+251 2d8+1
@@ -803,11 +803,11 @@ Você vê um grande homem treinado para caçar e matar.
 8 8 1
 E
 #5464
-mercenário~
-o mercenário~
-Um mercenário está aqui em busca de trabalho.
+mercenario~
+o mercenÃ¡rio~
+Um mercenÃ¡rio estÃ¡ aqui em busca de trabalho.
 ~
-Você vê um assassino procurando por um trabalho qualquer.
+VocÃª vÃª um assassino procurando por um trabalho qualquer.
 ~
 2097216 0 0 0 0 0 0 0 0 E
 5 15 9 1d8+14 1d4+2
@@ -815,13 +815,13 @@ Você vê um assassino procurando por um trabalho qualquer.
 8 8 1
 E
 #5465
-capitão porto~
-o capitão~
-Um velho capitão descansa aqui, esculpindo em uma vara.
+capitao porto~
+o capitÃ£o~
+Um velho capitÃ£o descansa aqui, esculpindo em uma vara.
 ~
-Você vê o capitão do porto de Nova Thalos, esperando para colocar alguém em
-um navio.  Você vê seu sorriso através de sua barba enquanto caminha em sua
-direção.
+VocÃª vÃª o capitÃ£o do porto de Nova Thalos, esperando para colocar alguÃ©m em
+um navio.  VocÃª vÃª seu sorriso atravÃ©s de sua barba enquanto caminha em sua
+direÃ§Ã£o.
 ~
 2156546 0 0 0 0 0 0 0 0 E
 108 0 0 1d1+30000 5d5+5
@@ -831,9 +831,9 @@ E
 #5466
 ferreiro~
 o ferreiro~
-O ferreiro está aqui, abanando sua forja.
+O ferreiro estÃ¡ aqui, abanando sua forja.
 ~
-É um grande homem, bastante suado, em sua frente.  Ele toma fôlego para lhe
+Ã‰ um grande homem, bastante suado, em sua frente.  Ele toma fÃ´lego para lhe
 dar as boas-vindas.
 ~
 2156546 0 0 0 0 0 0 0 0 E
@@ -844,9 +844,9 @@ E
 #5467
 cavalo~
 o cavalo~
-Um cavalo está aqui.
+Um cavalo estÃ¡ aqui.
 ~
-Você vê um dos belos animais árabes conhecidos por sua força e beleza.
+VocÃª vÃª um dos belos animais Ã¡rabes conhecidos por sua forÃ§a e beleza.
 ~
 2359490 0 0 0 0 0 0 0 0 E
 4 20 5 10d1+1 2d4+2
@@ -856,10 +856,10 @@ E
 #5468
 turista~
 o turista~
-Um turista está aqui, ele parece perdido.
+Um turista estÃ¡ aqui, ele parece perdido.
 ~
-Você vê um pequeno homem, com um estranho objeto em volta de seu pescoço.
-Ele está olhando para um pequeno mapa que por sinal, está de cabeça para
+VocÃª vÃª um pequeno homem, com um estranho objeto em volta de seu pescoÃ§o.
+Ele estÃ¡ olhando para um pequeno mapa que por sinal, estÃ¡ de cabeÃ§a para
 baixo.
 ~
 2097348 0 0 0 0 0 0 0 0 E
@@ -870,9 +870,9 @@ E
 #5469
 ixitxachitl arraia~
 o ixitxachitl~
-Você vê uma grande arraia com um perigoso rabo nadando aqui.
+VocÃª vÃª uma grande arraia com um perigoso rabo nadando aqui.
 ~
-Você vê uma grande arraia com dentes afiados e um rabo cheio espinhento.
+VocÃª vÃª uma grande arraia com dentes afiados e um rabo cheio espinhento.
 ~
 2328610 0 0 0 2192 0 0 0 -500 E
 10 0 -5 3d3+120 3d4+1
@@ -882,9 +882,9 @@ E
 #5470
 cryohydra~
 a cryohydra~
-A cryohydra está aqui.
+A cryohydra estÃ¡ aqui.
 ~
-Um réptil acinzentado com olhos cor de âmbar está bem à sua frente.
+Um rÃ©ptil acinzentado com olhos cor de Ã¢mbar estÃ¡ bem Ã  sua frente.
 ~
 2197600 0 0 0 2048 0 0 0 0 E
 8 9 5 10d1+1 1d10+0
@@ -894,7 +894,7 @@ E
 #5471
 lagarto minotauro~
 o lagarto minotauro~
-o lagarto minotauro está aqui.
+o lagarto minotauro estÃ¡ aqui.
 ~
 Um grande lagarto com chifres de minotauro.
 ~
@@ -904,11 +904,11 @@ Um grande lagarto com chifres de minotauro.
 8 8 1
 E
 #5472
-cão morte~
-o cão da morte~
-O cão da morte está aqui.
+cao morte~
+o cÃ£o da morte~
+O cÃ£o da morte estÃ¡ aqui.
 ~
-Um grande cão com duas cabeças está aqui latindo para você.
+Um grande cÃ£o com duas cabeÃ§as estÃ¡ aqui latindo para vocÃª.
 ~
 2099296 0 0 0 2048 0 0 0 0 E
 4 19 7 1d15+76 1d10+1
@@ -916,11 +916,11 @@ Um grande cão com duas cabeças está aqui latindo para você.
 8 8 0
 E
 #5473
-leão manchado~
-o leão manchado~
-O leão manchado está aqui.
+leao manchado~
+o leÃ£o manchado~
+O leÃ£o manchado estÃ¡ aqui.
 ~
-Um grande e feroz leão com pelagem manchada o encara.
+Um grande e feroz leÃ£o com pelagem manchada o encara.
 ~
 2097248 0 0 0 2048 0 0 0 0 E
 5 17 6 5d5+45 1d8+1
@@ -930,9 +930,9 @@ E
 #5474
 behir~
 a behir~
-Uma behir desliza pelo chão.
+Uma behir desliza pelo chÃ£o.
 ~
-Você vê algo parecido com uma grande cobra e com mais de doze pernas.
+VocÃª vÃª algo parecido com uma grande cobra e com mais de doze pernas.
 ~
 2197600 0 0 0 67584 0 0 0 -300 E
 12 9 4 4d3+146 2d8+4
@@ -940,11 +940,11 @@ Você vê algo parecido com uma grande cobra e com mais de doze pernas.
 8 8 0
 E
 #5475
-quimera criatura leão bode dragão~
+quimera criatura leao bode dragao~
 a quimera~
-Uma criatura com três cabeças: leão, bode e dragão está aqui.
+Uma criatura com trÃªs cabeÃ§as: leÃ£o, bode e dragÃ£o estÃ¡ aqui.
 ~
-A quimera é ainda um mistério.
+A quimera Ã© ainda um mistÃ©rio.
 ~
 2164770 0 0 0 67728 0 0 0 -500 E
 9 5 0 5d5+261 3d4+4
@@ -956,7 +956,7 @@ couatl~
 o couatl~
 Um couatl paira aqui.
 ~
-Uma linda criatura com o corpo de serpente e lindas asas da cor do arco-íris.
+Uma linda criatura com o corpo de serpente e lindas asas da cor do arco-Ã­ris.
 ~
 2189330 0 0 0 67984 0 0 0 300 E
 15 10 1 10d5+130 2d4+2
@@ -966,9 +966,9 @@ E
 #5477
 gigante chifrudo~
 o gigante chifrudo~
-O gigante chifrudo está aqui.
+O gigante chifrudo estÃ¡ aqui.
 ~
-Ele é chifrudo, o que mais podemos dizer??
+Ele Ã© chifrudo, o que mais podemos dizer??
 ~
 2293776 0 0 0 2192 0 0 0 300 E
 5 15 4 1d1+5 1d4+0
@@ -976,12 +976,12 @@ Ele é chifrudo, o que mais podemos dizer??
 8 8 0
 E
 #5478
-pégasus~
-o pégasus~
-O pégasus está aqui, abrindo suas asas.
+pegasus~
+o pÃ©gasus~
+O pÃ©gasus estÃ¡ aqui, abrindo suas asas.
 ~
-Um magnífico cavalo alado, ele se parece muito com os puro sangues que você
-viu no estábulo.
+Um magnÃ­fico cavalo alado, ele se parece muito com os puro sangues que vocÃª
+viu no estÃ¡bulo.
 ~
 3004482 0 0 0 2192 0 0 0 1000 E
 10 4 0 1d5+700 2d10+5
@@ -991,9 +991,9 @@ E
 #5479
 elriva~
 Elriva~
-Elriva está aqui preparando uma poção do amor.
+Elriva estÃ¡ aqui preparando uma poÃ§Ã£o do amor.
 ~
-Você vê uma mulher vestida em negro, com longos cabelos negros para combinar.
+VocÃª vÃª uma mulher vestida em negro, com longos cabelos negros para combinar.
 ~
 2156546 0 0 0 0 0 0 0 0 E
 108 10 0 1d1+30000 1d10+10
@@ -1004,9 +1004,9 @@ E
 #5480
 braheem~
 Braheem~
-Braheem está aqui falando com as paredes.
+Braheem estÃ¡ aqui falando com as paredes.
 ~
-Você vê um mago poderoso porém insano.
+VocÃª vÃª um mago poderoso porÃ©m insano.
 ~
 2156546 0 0 0 0 0 0 0 0 E
 108 -10 -10 1d1+30000 10d10+40
@@ -1016,9 +1016,9 @@ E
 #5481
 alto sacerdote~
 o alto sacerdote~
-O alto sacerdote descansa em meditação, bem pelo menos ele ESTAVA meditando.
+O alto sacerdote descansa em meditaÃ§Ã£o, bem pelo menos ele ESTAVA meditando.
 ~
-Ele não parece feliz por você o ter perturbado.
+Ele nÃ£o parece feliz por vocÃª o ter perturbado.
 ~
 2097346 0 0 0 2320 0 0 0 1000 E
 8 2 0 10d5+1200 2d8+5
@@ -1028,9 +1028,9 @@ E
 #5482
 guarda real elite~
 o Guarda Real~
-Um Guarda da Elite Real está aqui sorrindo alegremente.
+Um Guarda da Elite Real estÃ¡ aqui sorrindo alegremente.
 ~
-Você vê um Guarda Real de Nova Thalos que parece ter sofrido muito em seu
+VocÃª vÃª um Guarda Real de Nova Thalos que parece ter sofrido muito em seu
 treinamento.
 ~
 2127890 0 0 0 2320 0 0 0 1000 E
@@ -1039,11 +1039,11 @@ treinamento.
 8 8 1
 E
 #5483
-garçom~
-o garçom~
-Um grande meio-orc com uma venda sobre um olho serve cerveja atrás do balcão.
+garcom~
+o garÃ§om~
+Um grande meio-orc com uma venda sobre um olho serve cerveja atrÃ¡s do balcÃ£o.
 ~
-Você vê um homem realmente grande que parece ter perdido um olho.
+VocÃª vÃª um homem realmente grande que parece ter perdido um olho.
 ~
 2156546 0 0 0 16 0 0 0 -500 E
 108 0 -10 1d1+30000 3d8+10
@@ -1055,8 +1055,8 @@ stitch~
 Stitch, o camarada do couro~
 Stitch, o camarada do couro reclina sua cadeira.
 ~
-Você vê uma pequena criatura com seus pés em cima de sua mesa esperando por
-algum otário, uhm.., cliente.
+VocÃª vÃª uma pequena criatura com seus pÃ©s em cima de sua mesa esperando por
+algum otÃ¡rio, uhm.., cliente.
 ~
 2156546 0 0 0 16 0 0 0 -500 E
 108 -10 -5 1d1+30000 3d6+6
@@ -1066,9 +1066,9 @@ E
 #5485
 elfo jardineiro~
 o jardineiro~
-Um pequeno elfo está aqui cuidando do jardim.
+Um pequeno elfo estÃ¡ aqui cuidando do jardim.
 ~
-Um jovem elfo está aqui coberto de folhas.  Ele parece se dar bem com seu
+Um jovem elfo estÃ¡ aqui coberto de folhas.  Ele parece se dar bem com seu
 jardim.
 ~
 2097154 0 0 0 0 0 0 0 0 E
@@ -1077,12 +1077,12 @@ jardim.
 8 8 1
 E
 #5486
-pesadelo demônio cavalo~
+pesadelo demonio cavalo~
 o pesadelo~
-Um grande cavalo, negro como a noite, está aqui.
+Um grande cavalo, negro como a noite, estÃ¡ aqui.
 ~
-Você vê o maior cavalo que você jamais viu.  Mais alto que você, de suas
-narinas emanam chamas e ele está pronto para atacar você.
+VocÃª vÃª o maior cavalo que vocÃª jamais viu.  Mais alto que vocÃª, de suas
+narinas emanam chamas e ele estÃ¡ pronto para atacar vocÃª.
 ~
 2910210 0 0 0 592336 0 0 0 1000 E
 10 0 -5 3d9+300 3d5+7
@@ -1092,10 +1092,10 @@ E
 #5487
 wolverine lobo~
 o wolverine~
-Um grande lobo salta da escuridão.
+Um grande lobo salta da escuridÃ£o.
 ~
-Você vê um meio lobo, meio humano vestindo uma luva com uma longa e afiada
-lâmina.
+VocÃª vÃª um meio lobo, meio humano vestindo uma luva com uma longa e afiada
+lÃ¢mina.
 ~
 2097186 0 0 0 591872 0 0 0 -351 E
 15 0 0 10d2+230 2d10+10
@@ -1103,11 +1103,11 @@ lâmina.
 8 8 0
 E
 #5488
-mímico pintura~
-o mímico~
-Você vê uma inacreditável pintura viva da mãe do Sultão.
+mimico pintura~
+o mÃ­mico~
+VocÃª vÃª uma inacreditÃ¡vel pintura viva da mÃ£e do SultÃ£o.
 ~
-Como ela é feia!
+Como ela Ã© feia!
 ~
 2097154 0 0 0 0 0 0 0 0 E
 10 10 0 5d8+321 2d8+4
@@ -1117,9 +1117,9 @@ E
 #5489
 prefeito~
 o prefeito~
-O prefeito de Nova Thalos está aqui.
+O prefeito de Nova Thalos estÃ¡ aqui.
 ~
-Você vê um roliço coelho vestido em seu melhor terno.
+VocÃª vÃª um roliÃ§o coelho vestido em seu melhor terno.
 ~
 2097216 0 0 0 0 0 0 0 1000 E
 10 0 0 2d8+600 3d6+6
@@ -1129,9 +1129,9 @@ E
 #5490
 chefe~
 o chefe~
-O chefe está aqui preparando o jantar.
+O chefe estÃ¡ aqui preparando o jantar.
 ~
-Você vê um homem realmente grande, que parece provar tudo o que faz.
+VocÃª vÃª um homem realmente grande, que parece provar tudo o que faz.
 ~
 2097154 0 0 0 0 0 0 0 400 E
 14 6 6 10d2+5 2d10+5
@@ -1141,12 +1141,12 @@ E
 #5491
 druida mestre guilda~
 o mestre da guilda dos druidas~
-Seu mestre está aqui.
+Seu mestre estÃ¡ aqui.
 ~
-Você se sente calmo na presença desse sábio: seus bondosos olhos transmitem
-muita segurança, acalmando o coração mais agitado e despertando a mente mais
-preguiçosa.  Ele poderá passar-lhe todos os ensinamentos druídicos, mas
-exigirá de você a conduta daquele que acredita em um ideal.
+VocÃª se sente calmo na presenÃ§a desse sÃ¡bio: seus bondosos olhos transmitem
+muita seguranÃ§a, acalmando o coraÃ§Ã£o mais agitado e despertando a mente mais
+preguiÃ§osa.  Ele poderÃ¡ passar-lhe todos os ensinamentos druÃ­dicos, mas
+exigirÃ¡ de vocÃª a conduta daquele que acredita em um ideal.
 ~
 2123778 0 0 0 2320 0 0 0 1000 E
 16 -10 -10 1d1+10000 5d5+5
@@ -1154,11 +1154,11 @@ exigirá de você a conduta daquele que acredita em um ideal.
 8 8 1
 E
 #5492
-druida guardiã~
-a guardiã da Guilda~
-A Guardiã da Guilda dos Druidas está aqui.
+druida guardia~
+a guardiÃ£ da Guilda~
+A GuardiÃ£ da Guilda dos Druidas estÃ¡ aqui.
 ~
-A guardiã da Guilda irradia juventude, mesmo sendo um dos membros mais
+A guardiÃ£ da Guilda irradia juventude, mesmo sendo um dos membros mais
 antigos da Confraria.
 ~
 2123778 0 0 0 2320 0 0 0 0 E
@@ -1169,12 +1169,12 @@ E
 #5493
 vendedor jornaleiro garoto~
 o vendedor de jornais~
-O vendedor de jornais está aqui, carregando um fardo de jornais.
+O vendedor de jornais estÃ¡ aqui, carregando um fardo de jornais.
 ~
-O vendedor de jornais é um garoto gordinho e baixo, que sua muito.  Em seu
-pescoço, está pendurada uma placa, que diz "Jornal de Vitália,
-Imparcialidade e Preço Baixo".  Quando ele o vê, corre em sua direção,
-oferecendo o jornal.  Ele carrega um fardo de jornais embaixo do braço.
+O vendedor de jornais Ã© um garoto gordinho e baixo, que sua muito.  Em seu
+pescoÃ§o, estÃ¡ pendurada uma placa, que diz "Jornal de VitÃ¡lia,
+Imparcialidade e PreÃ§o Baixo".  Quando ele o vÃª, corre em sua direÃ§Ã£o,
+oferecendo o jornal.  Ele carrega um fardo de jornais embaixo do braÃ§o.
 ~
 2285632 0 0 0 16 0 0 0 150 E
 108 0 -10 1d1+30000 2d8+18
@@ -1184,12 +1184,12 @@ E
 #5494
 agente postal velho senhor~
 o agente postal~
-Um velho senhor está atrás do balcão, esperando suas ordens.
+Um velho senhor estÃ¡ atrÃ¡s do balcÃ£o, esperando suas ordens.
 ~
-O agente postal parece ser um homem velho feliz, porém já um pouco lento.
-Ele se preocupa com a reputação do SCV (Serviço de Correio de Vitália),
-porquê muitas pessoas parecem achar que este serviço está lento.  Talvez se
-ele escovasse as teias de aranha do seu uniforme, passaria uma impressão
+O agente postal parece ser um homem velho feliz, porÃ©m jÃ¡ um pouco lento.
+Ele se preocupa com a reputaÃ§Ã£o do SCV (ServiÃ§o de Correio de VitÃ¡lia),
+porquÃª muitas pessoas parecem achar que este serviÃ§o estÃ¡ lento.  Talvez se
+ele escovasse as teias de aranha do seu uniforme, passaria uma impressÃ£o
 melhor.
 ~
 2287618 0 0 0 65552 0 0 0 1000 E
@@ -1198,16 +1198,16 @@ melhor.
 8 8 1
 E
 #5495
-trovadora guardiã mulher~
-a trovadora guardiã~
+trovadora guardia mulher~
+a trovadora guardiÃ£~
 Uma mulher toca doce melodia em uma flauta enquanto guarda a entrada do Clube.
 ~
-Ela é bonita, é verdade, mas você não consegue passar muito tempo reparando nisso:
-o som da flauta é límpido demais, de uma doçura que, de intensa, impregna seus sentidos,
-fazendo com que você comece a ver o que ela diz na música. Ela descreve
-o carinho que os bardos têm por seu recanto e como eles se esforçam para mantê-lo
-belo e feliz. Você se sente tentado a ver como é esse lugar, mas já foi alertado
-que a guardiã não permitirá arruaças por aqui.
+Ela Ã© bonita, Ã© verdade, mas vocÃª nÃ£o consegue passar muito tempo reparando nisso:
+o som da flauta Ã© lÃ­mpido demais, de uma doÃ§ura que, de intensa, impregna seus sentidos,
+fazendo com que vocÃª comece a ver o que ela diz na mÃºsica. Ela descreve
+o carinho que os bardos tÃªm por seu recanto e como eles se esforÃ§am para mantÃª-lo
+belo e feliz. VocÃª se sente tentado a ver como Ã© esse lugar, mas jÃ¡ foi alertado
+que a guardiÃ£ nÃ£o permitirÃ¡ arruaÃ§as por aqui.
 ~
 2156546 0 0 0 272 0 0 0 1000 E
 108 -20 -8 6d10+1500 8d8+80
@@ -1215,15 +1215,15 @@ que a guardiã não permitirá arruaças por aqui.
 8 8 2
 E
 #5496
-jovem garçom~
-o garçom~
+jovem garcom~
+o garÃ§om~
 Um jovem de sorriso aberto percorre o Clube oferecendo bebidas.
 ~
-O jovem garçom anda de um lado para o outro atendendo o grande número
+O jovem garÃ§om anda de um lado para o outro atendendo o grande nÃºmero
 de pessoas que param no Clube para descansar e se reunir com amigos
 e colegas. Ele se move como um malabarista-contorcionista, fazendo as
-mais impossíveis manobras para não esbarrar em ninguém e ainda não derrubar
-nada que esteja segurando. Está aí um garçom de talento!
+mais impossÃ­veis manobras para nÃ£o esbarrar em ninguÃ©m e ainda nÃ£o derrubar
+nada que esteja segurando. EstÃ¡ aÃ­ um garÃ§om de talento!
 ~
 2154498 0 0 0 0 0 0 0 600 E
 108 1 2 6d10+390 1d8+12
@@ -1233,13 +1233,13 @@ E
 #5497
 mestra trova senhora~
 a mestra de trovas~
-Uma senhora de olhos faiscantes sorri para você.
+Uma senhora de olhos faiscantes sorri para vocÃª.
 ~
-Ela já deve ser uma anciã desde muito antes do seu nascimento, mas o brilho
+Ela jÃ¡ deve ser uma anciÃ£ desde muito antes do seu nascimento, mas o brilho
 curioso e alegre nos olhos dessa senhora a fazem parecer, para quem a
-observa, a mesma jovem artista que há tanto tempo fora.  A mestra vê a nova
-geração com carinho e seriedade, pois nela percebe a garantia de que certas
-coisas nunca serão esquecidas.  E você se encaixa nisso.
+observa, a mesma jovem artista que hÃ¡ tanto tempo fora.  A mestra vÃª a nova
+geraÃ§Ã£o com carinho e seriedade, pois nela percebe a garantia de que certas
+coisas nunca serÃ£o esquecidas.  E vocÃª se encaixa nisso.
 ~
 2156562 0 0 0 272 0 0 0 1000 E
 108 0 -10 10d100+2000 5d10+100
