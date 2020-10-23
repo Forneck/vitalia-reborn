@@ -1,10 +1,10 @@
 #6400
 bode montes~
-o bode montês~
-Um Bode Montês pasta um pouco por aqui.
+o bode montÃªs~
+Um Bode MontÃªs pasta um pouco por aqui.
 ~
-Este bode está aclimatado a este rude terreno montanhoso.  Ele olha para
-você e se joga um pouco para trás.
+Este bode estÃ¡ aclimatado a este rude terreno montanhoso.  Ele olha para
+vocÃª e se joga um pouco para trÃ¡s.
 ~
 2097344 0 0 0 2048 0 0 0 0 E
 8 13 3 3d5+95 2d5+1
@@ -14,14 +14,14 @@ BareHandAttack: 4
 E
 #6401
 demonio podridao~
-o Demônio da Podridão~
-Um Demônio da Podridão com garras afiadas e com um manto vem até você
+o DemÃ´nio da PodridÃ£o~
+Um DemÃ´nio da PodridÃ£o com garras afiadas e com um manto vem atÃ© vocÃª
 endiabrado!
 ~
-Este demônio tem ódio por todas as criaturas vivas.
-Ahmmmm, pensando bem, você está vivo, pelo menos por
-enquanto... então... isto quer dizer... é isso mesmo...
-acho que isso quer dizer que é você....
+Este demÃ´nio tem Ã³dio por todas as criaturas vivas.
+Ahmmmm, pensando bem, vocÃª estÃ¡ vivo, pelo menos por
+enquanto... entÃ£o... isto quer dizer... Ã© isso mesmo...
+acho que isso quer dizer que Ã© vocÃª....
 ~
 2291762 0 0 0 2064 0 0 0 -1000 E
 12 9 2 3d5+145 2d7+1
@@ -31,11 +31,11 @@ BareHandAttack: 8
 E
 #6402
 livro monstro guardiao~
-o Guardião de Livro~
+o GuardiÃ£o de Livro~
 Um amontoado de livros se unem e tomam uma forma humana, que tenta
-acertar você!!
+acertar vocÃª!!
 ~
-Ironicamente, a cabeça do Livro-Monstro é de guerra e de paz...
+Ironicamente, a cabeÃ§a do Livro-Monstro Ã© de guerra e de paz...
 Hhuuummmm.....
 ~
 2357298 0 0 0 2064 0 0 0 0 E
@@ -45,11 +45,11 @@ Hhuuummmm.....
 E
 #6403
 mau pressagio~
-um Mau Presságio~
-Um mau presságio estrangula você.
+um Mau PressÃ¡gio~
+Um mau pressÃ¡gio estrangula vocÃª.
 ~
-Ele se assemelha a vários outros maus presságios que você teve, mas desta
-vez muito mais real...  Seria mágica???
+Ele se assemelha a vÃ¡rios outros maus pressÃ¡gios que vocÃª teve, mas desta
+vez muito mais real...  Seria mÃ¡gica???
 ~
 2357298 0 0 0 2064 0 0 0 0 E
 18 3 0 1d1+249 3d8+0
@@ -61,8 +61,8 @@ pesadelo~
 seu Pior Pesadelo~
 Seu pior pesadelo se materializa na sua frente e lhe ataca!
 ~
-Ele se parece com você, porém uma personificação mais profunda e
-tenebrosa...  Espere um minuto!!  É VOCÊ em seu lado mais obscuro e cruel!!!
+Ele se parece com vocÃª, porÃ©m uma personificaÃ§Ã£o mais profunda e
+tenebrosa...  Espere um minuto!!  Ã‰ VOCÃŠ em seu lado mais obscuro e cruel!!!
 ~
 2357298 0 0 0 2064 0 0 0 0 E
 27 -1 -2 10d20+320 4d8+10
@@ -71,10 +71,10 @@ tenebrosa...  Espere um minuto!!  É VOCÊ em seu lado mais obscuro e cruel!!!
 E
 #6405
 guardiao~
-o Guardião~
-Um guardião protege a porta. Ele olha para você e simplesmente ataca!
+o GuardiÃ£o~
+Um guardiÃ£o protege a porta. Ele olha para vocÃª e simplesmente ataca!
 ~
-O guardião protege a porta.  Isso é o máximo que seu QI avantajado consegue
+O guardiÃ£o protege a porta.  Isso Ã© o mÃ¡ximo que seu QI avantajado consegue
 fazer...
 ~
 2291762 0 0 0 2064 0 0 0 0 E
