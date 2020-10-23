@@ -1,9 +1,9 @@
 #6200
 veado~
 o veado~
-Um veado olha para você com medo nos olhos.
+Um veado olha para vocÃª com medo nos olhos.
 ~
-Este veado é muito bonito.
+Este veado Ã© muito bonito.
 ~
 2097280 0 0 0 0 0 0 0 0 E
 3 18 1 3d5+33 1d7+0
@@ -15,7 +15,7 @@ coelho~
 o coelho~
 Um pequeno coelho roe uma folha aqui.
 ~
-Ele é um pequeno e peludo roedor com grandes orelhas.
+Ele Ã© um pequeno e peludo roedor com grandes orelhas.
 ~
 2097280 0 0 0 0 0 0 0 0 E
 0 20 3 1d5+3 1d3+0
@@ -25,9 +25,9 @@ E
 #6202
 esquilo~
 o esquilo~
-Um esquilo percebe a sua presença e corre para trás de uma árvore!
+Um esquilo percebe a sua presenÃ§a e corre para trÃ¡s de uma Ã¡rvore!
 ~
-Ele é um esquilo pequeno e marrom.  Um excelente espécime saltador.
+Ele Ã© um esquilo pequeno e marrom.  Um excelente espÃ©cime saltador.
 ~
 2097280 0 0 0 0 0 0 0 0 E
 0 20 -1 1d3+0 1d1+1
@@ -35,12 +35,12 @@ Ele é um esquilo pequeno e marrom.  Um excelente espécime saltador.
 8 8 0
 E
 #6203
-caçador orc~
-O caçador orc~
-Um caçador orc olha para você com seus odiosos olhos.
+cacador orc~
+O caÃ§ador orc~
+Um caÃ§ador orc olha para vocÃª com seus odiosos olhos.
 ~
 Ele parece nervoso, violento e talvez um pouco doente.
-Sua pele verde está definitivamente pintada e ele parece coxear um pouco...
+Sua pele verde estÃ¡ definitivamente pintada e ele parece coxear um pouco...
 ~
 2101280 0 0 0 2048 0 0 0 -350 E
 7 14 5 3d5+83 2d3+2
@@ -50,11 +50,11 @@ E
 #6204
 chefe orc~
 o chefe orc~
-Um chefe orc grunhe para você!
+Um chefe orc grunhe para vocÃª!
 ~
-Ele veste uma coroa de folhas de carvalho, para mostrar que é o líder.  E
-carrega uma clava para mostrar que é guerreiro.  Você se espanta ao ver
-como ele é bom em ambas as coisas.
+Ele veste uma coroa de folhas de carvalho, para mostrar que Ã© o lÃ­der.  E
+carrega uma clava para mostrar que Ã© guerreiro.  VocÃª se espanta ao ver
+como ele Ã© bom em ambas as coisas.
 ~
 2103330 0 0 0 2048 0 0 0 -600 E
 10 11 2 3d5+120 2d7+2
@@ -64,10 +64,10 @@ E
 #6205
 mulher orc~
 a mulher orc~
-Uma mulher orc está aqui, assustando você.
+Uma mulher orc estÃ¡ aqui, assustando vocÃª.
 ~
-Quando você a olha fixamente, ela levanta suas mãos vagarosamente, como se
-dissesse "Não me mate!!".
+Quando vocÃª a olha fixamente, ela levanta suas mÃ£os vagarosamente, como se
+dissesse "NÃ£o me mate!!".
 ~
 2097280 0 0 0 2048 0 0 0 -50 E
 5 16 7 3d5+58 2d4+0
@@ -75,11 +75,11 @@ dissesse "Não me mate!!".
 8 8 2
 E
 #6206
-criança orc~
-a criança orc~
-Uma criança orc procura freneticamente por sua mãe.
+crianca orc~
+a crianÃ§a orc~
+Uma crianÃ§a orc procura freneticamente por sua mÃ£e.
 ~
-Ela é escabrosa e parece estar coberta por chagas.
+Ela Ã© escabrosa e parece estar coberta por chagas.
 ~
 2097280 0 0 0 2048 0 0 0 50 E
 3 18 9 3d5+30 1d7+0
@@ -89,9 +89,9 @@ E
 #6207
 mulher orc~
 uma mulher orc~
-Uma mulher orc grávida tenta escapar de você.
+Uma mulher orc grÃ¡vida tenta escapar de vocÃª.
 ~
-Ela está muito longe de mover-se rápido.  Você pode matá-la facilmente.
+Ela estÃ¡ muito longe de mover-se rÃ¡pido.  VocÃª pode matÃ¡-la facilmente.
 ~
 2097282 0 0 0 2048 0 0 0 -50 E
 5 16 10 3d5+58 1d4+0
@@ -101,10 +101,10 @@ E
 #6208
 orc mutante mutado~
 o orc mutante~
-Um orc mutante está aqui, práticamente morto.
+Um orc mutante estÃ¡ aqui, prÃ¡ticamente morto.
 ~
-Em seu corpo práticamente não existe qualquer sinal esperança.  Ele está
-morrendo e nada irá mudar isso.
+Em seu corpo prÃ¡ticamente nÃ£o existe qualquer sinal esperanÃ§a.  Ele estÃ¡
+morrendo e nada irÃ¡ mudar isso.
 ~
 2097152 0 0 0 2048 0 0 0 0 E
 6 20 10 1d1+0 1d1+0
@@ -114,10 +114,10 @@ E
 #6209
 orc mutante~
 o orc mutante~
-Um horrível orc mutante está aqui, falando incoerentemente.
+Um horrÃ­vel orc mutante estÃ¡ aqui, falando incoerentemente.
 ~
-Ele parece ainda não ter notado a sua presença... ele está falando consigo
-mesmo.  Seu corpo é uma mistura de orc, homem, besta, e sabe-se lá o que
+Ele parece ainda nÃ£o ter notado a sua presenÃ§a... ele estÃ¡ falando consigo
+mesmo.  Seu corpo Ã© uma mistura de orc, homem, besta, e sabe-se lÃ¡ o que
 mais.
 ~
 2097152 0 0 0 2048 0 0 0 0 E
@@ -126,13 +126,13 @@ mais.
 8 8 0
 E
 #6210
-feiticeiro elfo élfico elstar~
+feiticeiro elfo elfico elstar~
 Elstar~
-Um feiticeiro élfico está aqui.  Ele parece nervoso.
+Um feiticeiro Ã©lfico estÃ¡ aqui.  Ele parece nervoso.
 ~
-Ele olha para você matreiramente, como se perguntasse porque você invadiu
-os seus domínios.  Sem problemas... não deve ser tão difícil para ele
-destruir você, não é mesmo?
+Ele olha para vocÃª matreiramente, como se perguntasse porque vocÃª invadiu
+os seus domÃ­nios.  Sem problemas... nÃ£o deve ser tÃ£o difÃ­cil para ele
+destruir vocÃª, nÃ£o Ã© mesmo?
 ~
 2099234 0 0 0 2064 0 0 0 -1000 E
 15 6 -8 3d5+183 2d8+2
@@ -140,11 +140,11 @@ destruir você, não é mesmo?
 8 8 1
 E
 #6211
-criança elfo duende aprendiz~
-a criança duende~
-Uma criança duende joga sua vara de pescar no rio.
+crianca elfo duende aprendiz~
+a crianÃ§a duende~
+Uma crianÃ§a duende joga sua vara de pescar no rio.
 ~
-Ele parece jovem e inocente.  Você se pergunta o que ele estaria fazendo
+Ele parece jovem e inocente.  VocÃª se pergunta o que ele estaria fazendo
 aqui.
 ~
 2097154 0 0 0 2048 0 0 0 600 E
@@ -155,10 +155,10 @@ E
 #6212
 coisa mutante~
 a coisa mutante~
-Uma coisa mutante empurra você!
+Uma coisa mutante empurra vocÃª!
 ~
 Ela deve ter sido um orc um dia.  Agora ela vive no terror, empurrando tudo
-para longe do seu caminho para chegar até você.
+para longe do seu caminho para chegar atÃ© vocÃª.
 ~
 2099232 0 0 0 2048 0 0 0 -800 E
 12 9 -2 3d5+170 2d7+4
@@ -168,10 +168,10 @@ E
 #6213
 coisa mutante~
 a coisa mutante~
-Uma coisa mutante tenta pegar você, mas não pode alcançá-lo!
+Uma coisa mutante tenta pegar vocÃª, mas nÃ£o pode alcanÃ§Ã¡-lo!
 ~
 Ela deve ter sido um orc, um dia.  Agora vive no terror, empurrando tudo
-para longe de seu caminho, para chegar até você.
+para longe de seu caminho, para chegar atÃ© vocÃª.
 ~
 2099202 0 0 0 2048 0 0 0 -800 E
 12 9 -2 3d5+170 2d7+4
