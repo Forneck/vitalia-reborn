@@ -1,12 +1,12 @@
 #7000
-monstro lamaçento lama~
-o horripilante Monstro lamaçento~
-Um horripilante Monstro lamaçento está, vagarosamente, surgindo da lama...
+monstro lamacento lama~
+o horripilante Monstro lamaÃ§ento~
+Um horripilante Monstro lamaÃ§ento estÃ¡, vagarosamente, surgindo da lama...
 ~
 Ele parece ter vindo de um filme de terror.  Ele realmente parece ser uma
-extaordinária figura feita de lama e ele parece ter comido uma alma humana
-no café da manhã e está com a intenção de comer o mesmo no jantar.
-- Que tal você?
+extaordinÃ¡ria figura feita de lama e ele parece ter comido uma alma humana
+no cafÃ© da manhÃ£ e estÃ¡ com a intenÃ§Ã£o de comer o mesmo no jantar.
+- Que tal vocÃª?
 ~
 2293824 0 0 0 526336 0 0 0 -250 E
 12 9 2 4d6+140 2d5+3
@@ -14,14 +14,14 @@ no café da manhã e está com a intenção de comer o mesmo no jantar.
 8 8 0
 E
 #7001
-morcego pequeno ameaçador~
+morcego pequeno ameacador~
 o pequeno morcego~
-Um pequeno, porém ameaçador, morcego está pendurado no teto, obviamente
+Um pequeno, porÃ©m ameaÃ§ador, morcego estÃ¡ pendurado no teto, obviamente
 dormindo.
 ~
-Você nunca tinha visto, durante toda sua vida um morcego tão pequeno.   Você
-prefere que ele continue assim, pacífico, pendurado lá, dormindo.  Seus
-ossos gelam só de você pensar em acordar essa cruel criatura.
+VocÃª nunca tinha visto, durante toda sua vida um morcego tÃ£o pequeno.   VocÃª
+prefere que ele continue assim, pacÃ­fico, pendurado lÃ¡, dormindo.  Seus
+ossos gelam sÃ³ de vocÃª pensar em acordar essa cruel criatura.
 ~
 2228320 0 0 0 526336 0 0 0 -500 E
 1 20 5 5d2+6 1d5+0
@@ -31,7 +31,7 @@ E
 #7002
 rato esgoto~
 o rato de esgoto~
-Um enorme rato de esgoto, raivoso, está aqui.
+Um enorme rato de esgoto, raivoso, estÃ¡ aqui.
 ~
 An undefined string.
 ~
@@ -43,7 +43,7 @@ E
 #7003
 aranha pequena peluda~
 a pequena Aranha~
-A pequena Aranha peluda, está aqui, ocupada com sua teia.
+A pequena Aranha peluda, estÃ¡ aqui, ocupada com sua teia.
 ~
 An undefined string.
 ~
@@ -55,7 +55,7 @@ E
 #7004
 besouro gigante terra~
 o gigante besouro terra~
-O gigante, besouro da terra está aqui.
+O gigante, besouro da terra estÃ¡ aqui.
 ~
 An undefined string.
 ~
@@ -67,7 +67,7 @@ E
 #7005
 larva gigante~
 a larva~
-A larva gigante está aqui, em sua simples existência.
+A larva gigante estÃ¡ aqui, em sua simples existÃªncia.
 ~
 An undefined string.
 ~
@@ -79,7 +79,7 @@ E
 #7006
 cobra~
 a cobra~
-A cobra rasteja perto de você. Ela parece bastante medíocre.
+A cobra rasteja perto de vocÃª. Ela parece bastante medÃ­ocre.
 ~
 An undefined string.
 ~
@@ -89,12 +89,12 @@ An undefined string.
 8 8 2
 E
 #7007
-andarilho demônio~
-o demônio andarilho~
-O demônio andarilho olha fixamente para você com uma admiração comovente.
+andarilho demonio~
+o demÃ´nio andarilho~
+O demÃ´nio andarilho olha fixamente para vocÃª com uma admiraÃ§Ã£o comovente.
 ~
-O demônio andarilho é muito magro.  Ele está vestido com um manto cinza.
-Ele não parece querer companhia em sua viagem.
+O demÃ´nio andarilho Ã© muito magro.  Ele estÃ¡ vestido com um manto cinza.
+Ele nÃ£o parece querer companhia em sua viagem.
 ~
 2097284 0 0 0 64 0 0 0 -1000 E
 10 11 2 4d10+100 2d6+1
@@ -102,12 +102,12 @@ Ele não parece querer companhia em sua viagem.
 8 8 1
 E
 #7008
-homúncula criatura~
-a criatura homúncula~
-A criatura homúncula está aqui, olhando para você maliciosamente.
+homuncula criatura~
+a criatura homÃºncula~
+A criatura homÃºncula estÃ¡ aqui, olhando para vocÃª maliciosamente.
 ~
-O homúnculo aparenta ter uma forma humana, uns 5 metros de altura, tem uma
-pele de réptil esverdeada, asas rígidas e uma boca de morcego, com dentes
+O homÃºnculo aparenta ter uma forma humana, uns 5 metros de altura, tem uma
+pele de rÃ©ptil esverdeada, asas rÃ­gidas e uma boca de morcego, com dentes
 que parecem ser venenosos.
 ~
 2154496 0 0 0 80 0 0 0 -780 E
@@ -118,10 +118,10 @@ E
 #7009
 morkot sombrio~
 o morkot sombrio~
-O morkot está aqui, esperando por alguém para MATAR!
+O morkot estÃ¡ aqui, esperando por alguÃ©m para MATAR!
 ~
-Ele é um monstro de cinco pés de altura, meio homem meio rato.  Ele respira
-fortemente enquanto aproxima-se de você.
+Ele Ã© um monstro de cinco pÃ©s de altura, meio homem meio rato.  Ele respira
+fortemente enquanto aproxima-se de vocÃª.
 ~
 2097312 0 0 0 64 0 0 0 -900 E
 10 12 3 1d20+120 2d6+0
@@ -130,10 +130,10 @@ fortemente enquanto aproxima-se de você.
 E
 #7010
 chr-eff'n chreffn~
-o demônio chr-eff'n~
-O chr-eff'n está rastejando aqui, procurando algo com seus olhos amarelos.
+o demÃ´nio chr-eff'n~
+O chr-eff'n estÃ¡ rastejando aqui, procurando algo com seus olhos amarelos.
 ~
-A cabeça e o dorso do chr-eff'n é coberto de cobre, e tem olhos amarelos
+A cabeÃ§a e o dorso do chr-eff'n Ã© coberto de cobre, e tem olhos amarelos
 brilhantes.  A parte de baixo tem uma cor alaranjada.
 ~
 2097284 0 0 0 526352 0 0 0 -830 E
@@ -142,13 +142,13 @@ brilhantes.  A parte de baixo tem uma cor alaranjada.
 8 8 0
 E
 #7040
-dragão vermelho~
-o dragão vermelho~
-O feroz dragão vermelho encara você, raivosamente.
+dragao vermelho~
+o dragÃ£o vermelho~
+O feroz dragÃ£o vermelho encara vocÃª, raivosamente.
 ~
-O dragão vermelho encara você, raivosamente, como se estivesse aguardando a
-sua chegada.  Ele diz 'Oh humano, VOCÊ me acordou...Hssss', enquanto move-
-se para perto de você, 'Eu NUNCA posso dormir em paz...Hssss...'
+O dragÃ£o vermelho encara vocÃª, raivosamente, como se estivesse aguardando a
+sua chegada.  Ele diz 'Oh humano, VOCÃŠ me acordou...Hssss', enquanto move-
+se para perto de vocÃª, 'Eu NUNCA posso dormir em paz...Hssss...'
 ~
 2187314 0 0 0 67856 0 0 0 -1000 E
 19 2 0 5d4+230 3d6+3
@@ -158,11 +158,11 @@ E
 #7041
 bruxa mar~
 a bruxa do mar~
-Uma bruxa do mar está nadando aqui.
+Uma bruxa do mar estÃ¡ nadando aqui.
 ~
-A bruxa do mar é tão horripilante que você sente um medo profundo: Grandes
-olhos amarelos e dentes afiados.  Suas orelhas são muito grandes, e ela tem
-pequenos chifres afiados.  Esse tipo de monstro é um dos grandes inimigos
+A bruxa do mar Ã© tÃ£o horripilante que vocÃª sente um medo profundo: Grandes
+olhos amarelos e dentes afiados.  Suas orelhas sÃ£o muito grandes, e ela tem
+pequenos chifres afiados.  Esse tipo de monstro Ã© um dos grandes inimigos
 da beleza.
 ~
 2097184 0 0 0 2048 0 0 0 -800 E
@@ -171,13 +171,13 @@ da beleza.
 8 8 2
 E
 #7042
-naga guardião~
-a guardiã naga~
-A guardiã naga parece gostar de você.
+naga guardiao~
+a guardiÃ£ naga~
+A guardiÃ£ naga parece gostar de vocÃª.
 ~
-O naga é uma criatura com aparência de cobra.  Ela é coberta por escamas
-verde-ouro e com triângulos prateados em suas costas.  Seus olhos são
-dourados.  Ela nota que você está olhando fixamente para ela, então ela diz
+O naga Ã© uma criatura com aparÃªncia de cobra.  Ela Ã© coberta por escamas
+verde-ouro e com triÃ¢ngulos prateados em suas costas.  Seus olhos sÃ£o
+dourados.  Ela nota que vocÃª estÃ¡ olhando fixamente para ela, entÃ£o ela diz
 'Saia daqui.  Este caminho leva a criaturas malignas.'
 ~
 2097154 0 0 0 2048 0 0 0 700 E
@@ -188,11 +188,11 @@ E
 #7043
 basilisco escamoso~
 o basilisco escamoso~
-O basilisco escamoso rasteja em sua direção, vagarosamente.
+O basilisco escamoso rasteja em sua direÃ§Ã£o, vagarosamente.
 ~
-O basilisco é um monstro reptiliano.  Ele tem oito patas, e fortes
-mandíbulas.  Ele é amarronzado com umas pintas amarelas.  Seus olhos são
-verde pálido.
+O basilisco Ã© um monstro reptiliano.  Ele tem oito patas, e fortes
+mandÃ­bulas.  Ele Ã© amarronzado com umas pintas amarelas.  Seus olhos sÃ£o
+verde pÃ¡lido.
 ~
 2097156 0 0 0 2128 0 0 0 -250 E
 13 11 0 1d12+160 2d7+2
@@ -200,12 +200,12 @@ verde pálido.
 8 8 0
 E
 #7044
-bolha lêmure~
-a lêmure~
-A bolha lêmure desliza para perto de você preparando um ataque!
+bolha lemure~
+a lÃªmure~
+A bolha lÃªmure desliza para perto de vocÃª preparando um ataque!
 ~
 Ela parece, vagamente, uma bolha humana.  Grandes olhos negros, e uma boca
-com um pedaço que escapa do rosto.  A lêmure não parece interessada em você
+com um pedaÃ§o que escapa do rosto.  A lÃªmure nÃ£o parece interessada em vocÃª
 mas ela ataca de qualquer jeito.  Parece que a mente dela foi queimada.
 ~
 2170912 0 0 0 2048 0 0 0 -500 E
@@ -216,11 +216,11 @@ E
 #7045
 jones esmagador ettin~
 Jones 'esmagador' ettin~
-Jones está em pé aqui espantado com você.
+Jones estÃ¡ em pÃ© aqui espantado com vocÃª.
 ~
-Numa primeira olhada você pensa que Jones é um Orc, mas quando ele chega
-mais perto você vê sua segunda cabeça.  Ele veste uma pele de animal como
-roupa, imunda e comida pelas traças.  Jones realmente fede...
+Numa primeira olhada vocÃª pensa que Jones Ã© um Orc, mas quando ele chega
+mais perto vocÃª vÃª sua segunda cabeÃ§a.  Ele veste uma pele de animal como
+roupa, imunda e comida pelas traÃ§as.  Jones realmente fede...
 ~
 2097156 0 0 0 2048 0 0 0 -480 E
 10 11 2 1d5+130 2d6+2
@@ -230,11 +230,11 @@ E
 #7046
 herald rato assassino ettin~
 Herald 'o assassino de ratos' ettin~
-Herald está aqui parecendo meio confuso com a sua presença.
+Herald estÃ¡ aqui parecendo meio confuso com a sua presenÃ§a.
 ~
-Quando você olha para Herald, você sente pena.  Suas roupas são realmente
-pobres, e uma de suas cabeças está pendurada.  Na corda que circunda sua
-cintura estão vários ratos e camundongos mortos.  Ele não cheira bem.
+Quando vocÃª olha para Herald, vocÃª sente pena.  Suas roupas sÃ£o realmente
+pobres, e uma de suas cabeÃ§as estÃ¡ pendurada.  Na corda que circunda sua
+cintura estÃ£o vÃ¡rios ratos e camundongos mortos.  Ele nÃ£o cheira bem.
 ~
 2097156 0 0 0 2048 0 0 0 200 E
 6 14 4 3d5+70 1d8+0
