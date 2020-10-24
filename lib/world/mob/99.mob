@@ -11,7 +11,6 @@ bino :6:7:10:12 800 S
 30 -2 -8 1d15+1200 9d3+3
 9436 108000
 8 8 1
-S
 #9901
 tumular criatura ossos~
 a criatura tumular~
@@ -24,7 +23,6 @@ blno :6 0 S
 40 -3 -12 3d5+2200 7d5+5
 1000 112000
 8 8 2
-S
 #9902
 banshee mulher morta~
 a Banshee~
@@ -38,7 +36,6 @@ efgnoq :1:6:15 -900 S
 35 -2 -10 3d8+1590 4d9+6
 5000 100000
 8 8 2
-S
 #9903
 argus monstro~
 o Argus~
@@ -52,7 +49,6 @@ glnopqr :6 -666 S
 30 10 1 1d1+690 5d10+4
 7500 50000
 8 8 1
-S
 #9904
 bicho-papão bicho papao papão~
 O Bicho-Papão~
