@@ -1,11 +1,11 @@
 #5900
 raantra~
 Raantra~
-Raantra est� ajoelhado aqui, louvando os c�us.
+Raantra está ajoelhado aqui, louvando os céus.
 ~
-Seus olhos est�o fortemente fechados, e seus joelhos sangram abundantemente.
-Em sua m�o direita, ele segura uma faca, apontando-a para os c�us.  Ele
-sussurra algumas palavras e preces que parecem n�o ter sentido.
+Seus olhos estão fortemente fechados, e seus joelhos sangram abundantemente.
+Em sua mão direita, ele segura uma faca, apontando-a para os céus.  Ele
+sussurra algumas palavras e preces que parecem não ter sentido.
 ~
 2121730 0 0 0 67600 0 0 0 -1000 E
 80 -7 -7 4d10+1840 4d9+16
@@ -15,10 +15,10 @@ E
 #5901
 seguidor crente~
 um seguidor~
-Um crente seguidor est� ajoelhado pr�ximo ao seu l�der.
+Um crente seguidor está ajoelhado próximo ao seu líder.
 ~
-Ele parece imitar seu l�der.  Seus sujos ferimentos sangram muito.  Ele
-parece n�o tirar os olhos da l�mina que seu l�der aponta aos c�us.
+Ele parece imitar seu líder.  Seus sujos ferimentos sangram muito.  Ele
+parece não tirar os olhos da lâmina que seu líder aponta aos céus.
 ~
 2127874 0 0 0 67600 0 0 0 -1000 E
 24 9 -3 1d50+450 15d2+14
@@ -28,10 +28,10 @@ E
 #5902
 corcunda~
 um corcunda~
-Um horrendo corcunda se aproxima do balc�o � sua frente, sangrando abundantemente.
+Um horrendo corcunda se aproxima do balcão é sua frente, sangrando abundantemente.
 ~
-Ele quase n�o nota sua presen�a devido a toda dor que est� sentido, mas ele
-parece estar tentando falar com voc�.
+Ele quase não nota sua presença devido a toda dor que está sentido, mas ele
+parece estar tentando falar com você.
 ~
 2121730 0 0 0 65536 0 0 0 0 E
 15 6 -6 5d20+900 1d10+6
@@ -41,9 +41,9 @@ E
 #5903
 elfo enjoado~
 um elfo enjoado~
-Um elfo est� sentado pr�ximo � fonte, vomitando descontroladamente.
+Um elfo está sentado próximo à fonte, vomitando descontroladamente.
 ~
-Ele olha para voc� com um olhar horrorizado e parece pedir sua ajuda, alguma
+Ele olha para você com um olhar horrorizado e parece pedir sua ajuda, alguma
 ajuda.
 ~
 2326530 0 0 0 16 0 0 0 600 E
@@ -56,8 +56,8 @@ mulher~
 uma mulher~
 Uma mulher anda incessantemente por aqui.
 ~
-Ela abra�a os pr�prios bra�os fortemente, como se estivesse com muito frio
-ou amedrontada.  Ela est� extremamente desconfort�vel, parece temer algo.
+Ela abraça os próprios braços fortemente, como se estivesse com muito frio
+ou amedrontada.  Ela está extremamente desconfortável, parece temer algo.
 ~
 2097282 0 0 0 16 0 0 0 -200 E
 12 11 5 3d3+275 3d4+6
@@ -67,9 +67,9 @@ E
 #5905
 mendigo homem~
 um mendigo~
-Um homem vestido com trapos sujos est� deitado aqui.
+Um homem vestido com trapos sujos está deitado aqui.
 ~
-Ele est� extremamente sujo. E seu cheiro... 
+Ele está extremamente sujo. E seu cheiro... 
 ~
 2097286 0 0 0 16 0 0 0 -750 E
 16 8 1 4d6+450 4d3+6
@@ -77,11 +77,11 @@ Ele est� extremamente sujo. E seu cheiro...
 8 8 1
 E
 #5906
-crian�a apavorada~
-uma crian�a apavorada~
-Uma crian�a apavorada se expreme em um canto, fugindo de sua luz.
+crianca apavorada~
+uma criança apavorada~
+Uma criança apavorada se expreme em um canto, fugindo de sua luz.
 ~
-Ela veste trajes sujos e est� coberta com arranh�es e ferimentos.  Ela n�o
+Ela veste trajes sujos e está coberta com arranhões e ferimentos.  Ela não
 parece ter mais do que onze anos.
 ~
 2097218 0 0 0 0 0 0 0 400 E
@@ -92,10 +92,10 @@ E
 #5907
 homem pranto~
 um homem em prantos~
-Um homem sentado pr�ximo a voc� chora incontrolavelmente.
+Um homem sentado próximo a você chora incontrolavelmente.
 ~
-Ele alterna entre �dio e tristeza - tocando o que sobrou do corpo de seu
-filho, acariciando seus cabelos ensang�entados.
+Ele alterna entre ódio e tristeza - tocando o que sobrou do corpo de seu
+filho, acariciando seus cabelos ensangüentados.
 ~
 2097154 0 0 0 65536 0 0 0 100 E
 18 6 -2 6d7+800 5d1+9
@@ -105,9 +105,9 @@ E
 #5908
 rato~
 um rato~
-Um rato passa rapidamente por tr�s de voc�.
+Um rato passa rapidamente por trás de você.
 ~
-Um rato comum e desagrad�vel.
+Um rato comum e desagradável.
 ~
 2097220 0 0 0 0 0 0 0 0 E
 8 16 6 2d9+150 1d3+7
@@ -117,10 +117,10 @@ E
 #5909
 gunter~
 Gunter~
-Gunter est� aqui, pregando a palavra do escolhido.
+Gunter está aqui, pregando a palavra do escolhido.
 ~
-Gunter � um pequeno e p�lido homem que parece estar muito doente.  Ele � o
-escolhido, e possui a tarefa de selecionar o pr�ximo escolhido. 
+Gunter é um pequeno e pálido homem que parece estar muito doente.  Ele é o
+escolhido, e possui a tarefa de selecionar o próximo escolhido. 
 ~
 2158720 0 0 0 606216 0 0 0 -700 E
 41 -4 -10 5d100+2000 6d7+24
@@ -130,10 +130,10 @@ E
 #5910
 carrasco homem~
 um carrasco~
-Um homem guarda o corredor � frente. Ele possui um leve ar de esc�rnio.
+Um homem guarda o corredor à frente. Ele possui um leve ar de escárnio.
 ~
-Uma horr�vel cicatriz percorre toda a sua face esquerda.  Ele olha para voc�
-e move seu bra�o para cima e para baixo, preparando seu chicote.
+Uma horrível cicatriz percorre toda a sua face esquerda.  Ele olha para você
+e move seu braço para cima e para baixo, preparando seu chicote.
 ~
 2103298 0 0 0 67600 0 0 0 -1000 E
 25 8 -1 10d8+520 3d5+12
@@ -143,11 +143,11 @@ E
 #5911
 homem esfarrapado~
 um homem esfarrapado~
-Um homem esfarrapado est� pr�ximo a um barril com fogo, aquecendo suas m�os.
+Um homem esfarrapado está próximo a um barril com fogo, aquecendo suas mãos.
 ~
-Ele foi t�o assolado pela mis�ria que � primeira vista voc� se assusta.
-Voc� repara que o pobre homem, inteiramente coberto de sujeira, possui
-profundas marcas tanto em seu rosto quanto em suas m�os.
+Ele foi tão assolado pela miséria que à primeira vista você se assusta.
+Você repara que o pobre homem, inteiramente coberto de sujeira, possui
+profundas marcas tanto em seu rosto quanto em suas mãos.
 ~
 2097154 0 0 0 2064 0 0 0 -300 E
 16 5 1 5d4+210 2d6+4
@@ -159,9 +159,9 @@ investigador homem~
 um investigador~
 Um homem em um longo manto negro anda lentamente ao redor, resmungando consigo mesmo.
 ~
-Seus resmungos n�o s�o coerentes, ele fala em frases confusas e complexas,
-frases que n�o possuem significado.  S�o palavras de algu�m confuso e com
-restri��es em suas faculdades mentais.
+Seus resmungos não são coerentes, ele fala em frases confusas e complexas,
+frases que não possuem significado.  São palavras de alguém confuso e com
+restrições em suas faculdades mentais.
 ~
 2097216 0 0 0 0 0 0 0 -300 E
 22 11 1 7d10+1400 1d6+10
@@ -171,9 +171,9 @@ E
 #5913
 seguidora~
 uma seguidora escondida~
-Uma das seguidoras de Raantra est� tentando se esconder nas sombras.
+Uma das seguidoras de Raantra está tentando se esconder nas sombras.
 ~
-Ela percebe que voc� a viu, e faz uma leve rever�ncia com a cabe�a.  
+Ela percebe que você a viu, e faz uma leve reverência com a cabeça.  
 ~
 2154498 0 0 0 1656832 0 0 0 -550 E
 40 0 -5 6d12+1650 6d8+3
@@ -183,10 +183,10 @@ E
 #5914
 morcego marrom~
 um morcego marrom~
-Um morcego mergulha em sua dire��o.
+Um morcego mergulha em sua direção.
 ~
-� dif�cil ter uma boa vis�o dele, mas isso nem importa j� ele est� vindo
-diretamente para sua cabe�a...
+É difícil ter uma boa visão dele, mas isso nem importa já que ele está vindo
+diretamente para sua cabeça...
 ~
 2097314 0 0 0 65552 0 0 0 -400 E
 9 11 3 3d5+175 2d4+4
@@ -194,12 +194,12 @@ diretamente para sua cabe�a...
 8 8 1
 E
 #5915
-aranha tar�ntula~
-uma tar�ntula~
-Uma pequena e pe�onhenta aranha se move pr�xima a voc�.
+aranha tarantula~
+uma tarântula~
+Uma pequena e peçonhenta aranha se move próxima a você.
 ~
-Ela n�o parece ser agressiva, nem t�o grande para qualquer ataque.  Por�m �
-uma aranha, desagrad�vel e trai�oeira aranha.
+Ela não parece ser agressiva, nem tão grande para qualquer ataque.  Porém é
+uma aranha, desagradável e traiçoeira aranha.
 ~
 2097282 0 0 0 65552 0 0 0 -400 E
 9 14 5 3d5+105 2d3+6
@@ -209,9 +209,9 @@ E
 #5916
 morte cavaleiro entorpecido~
 um entorpecido Cavaleiro da Morte~
-Um Cavaleiro da Morte vaga por a�, parecendo estar estorpecido.
+Um Cavaleiro da Morte vaga por aí, parecendo estar estorpecido.
 ~
-Parece ser a primeira vez que ele usa sua arma. H� uma fina linha de baba saindo do canto esquerdo de sua boca.  Seus olhos parecem fixos no nada, como se ele estivesse em transe.
+Parece ser a primeira vez que ele usa sua arma. Há uma fina linha de baba saindo do canto esquerdo de sua boca.  Seus olhos parecem fixos no nada, como se ele estivesse em transe.
 ~
 2099254 0 0 0 272 0 0 0 -999 E
 23 8 -1 8d5+700 5d5+12
@@ -221,7 +221,7 @@ E
 #5917
 homem aventureiro~
 um aventureiro~
-Um homem com trajes de aventura est� aqui, um tanto quanto surpreso com sua presen�a.
+Um homem com trajes de aventura está aqui, um tanto quanto surpreso com sua presença.
 ~
 Parece que ele estava tirando um cochilo aonde ele pensava ser seguro.
 ~
@@ -231,11 +231,11 @@ Parece que ele estava tirando um cochilo aonde ele pensava ser seguro.
 8 8 1
 E
 #5918
-corcunda human�ide~
-um human�ide ensanguentado~
-Um human�ide corcunda coberto com sangue est� aqui.
+corcunda humanoide~
+um humanóide ensanguentado~
+Um humanóide corcunda coberto com sangue está aqui.
 ~
-Esta desagrad�vel criatura parece querer jogar sangue em voc�.  
+Esta desagradável criatura parece querer jogar sangue em você.  
 ~
 2097314 0 0 0 67648 0 0 0 -800 E
 27 9 0 9d11+2100 2d4+12
@@ -245,9 +245,9 @@ E
 #5919
 seguidor~
 um seguidor~
-O seguidor est� espancando um garoto, sorrindo maldosamente.
+O seguidor está espancando um garoto, sorrindo maldosamente.
 ~
-O seguidor parece ter isso como seu esporte preferido, sua �nica raz�o de
+O seguidor parece ter isso como seu esporte preferido, sua única razão de
 viver.
 ~
 2097282 0 0 0 81920 0 0 0 -900 E
@@ -256,11 +256,11 @@ viver.
 8 8 1
 E
 #5920
-garoto p�nico~
-um garoto em p�nico~
-Um garoto em p�nico bate sua cabe�a na escrivaninha. H� sangue por todos os lados.
+garoto panico~
+um garoto em pânico~
+Um garoto em pânico bate sua cabeça na escrivaninha. Há sangue por todos os lados.
 ~
-Parece que o homem bateu por muito tempo nas costas do garoto.  Ele est�
+Parece que o homem bateu por muito tempo nas costas do garoto.  Ele está
 perdendo muito sangue...
 ~
 2097282 0 0 0 65536 0 0 0 100 E
