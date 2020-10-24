@@ -1,447 +1,445 @@
 #9900
 shamus errante~
 Shamus~
-Shamus, o errante, est� advertindo voc� sobre a maldade que h� no local.
+Shamus, o errante, está advertindo você sobre a maldade que há no local.
 ~
-Voc� v� um homem, calvo e de estrutura grosseira, vestindo um manto branco.
-Ele escutou as hist�rias desta cidade de trevas, e veio para c� como 
-mission�rio. 
+Você vê um homem, calvo e de estrutura grosseira, vestindo um manto branco.
+Ele escutou as histórias desta cidade de trevas, e veio para cá como 
+missionário. 
 ~
-2121986 0 0 0 0 0 0 0 800 E
+bino :6:7:10:12 800 S
 30 -2 -8 1d15+1200 9d3+3
 9436 108000
 8 8 1
-E
+S
 #9901
 tumular criatura ossos~
 a criatura tumular~
-Uma escangalhada pilha de farrapos e ossos est� aqui.
+Uma escangalhada pilha de farrapos e ossos está aqui.
 ~
-Voc� v� um morto-vivo, a �nica raz�o de sua exist�ncia � a de proteger seu
-t�mulo na colina.
+Você vê um morto-vivo, a única razão de sua existência é a de proteger seu
+túmulo na colina.
 ~
-2123778 0 0 0 0 0 0 0 0 E
+blno :6 0 S
 40 -3 -12 3d5+2200 7d5+5
 1000 112000
 8 8 2
-E
+S
 #9902
 banshee mulher morta~
 a Banshee~
-O esp�rito de uma mulher h� muito tempo morta flutua aqui.
+O espírito de uma mulher há muito tempo morta flutua aqui.
 ~
-Este dem�nio � o esp�rito de uma perversa elfa, algo realmente raro.  
-Seu cabelo � desordenado e revolto, al�m dela estar vestida em trapos 
+Este demônio é o espírito de uma perversa elfa, algo realmente raro.  
+Seu cabelo é desordenado e revolto, além dela estar vestida em trapos 
 esfarrapados.
 ~
-2187376 0 0 0 0 0 0 0 -900 E
+efgnoq :1:6:15 -900 S
 35 -2 -10 3d8+1590 4d9+6
 5000 100000
 8 8 2
-E
+S
 #9903
 argus monstro~
 o Argus~
-Um enorme monstro com muitas bocas est� aqui.
+Um enorme monstro com muitas bocas está aqui.
 ~
-Este � um enorme monstro, parecido com uma ameba, mas com um olho
+Este é um enorme monstro, parecido com uma ameba, mas com um olho
 central com a pupila tripartida, e outra centena de olhos adaptados
 sobre as muitas e afiadas bocas dentadas...
 ~
-2353216 0 0 0 0 0 0 0 -666 E
+glnopqr :6 -666 S
 30 10 1 1d1+690 5d10+4
 7500 50000
 8 8 1
-E
+S
 #9904
-bicho-pap�o bicho pap�o~
-O Bicho-Pap�o~
-Um grande Bicho-Pap�o est� aqui, preparado para atacar.
+bicho-papão bicho papao papão~
+O Bicho-Papão~
+Um grande Bicho-Papão está aqui, preparado para atacar.
 ~
-Grande e muito forte, esta criatura � recoberta por p�los avermelhados.
-Apesar de possuir uma apar�ncia human�ide, ele parece possuir o sangue
-dos mais terr�veis predadores.
+Grande e muito forte, esta criatura é recoberta por pêlos avermelhados.
+Apesar de possuir uma aparência humanóide, ele parece possuir o sangue
+dos mais terríveis predadores.
 ~
-2113604 0 0 0 0 0 0 0 -700 E
+cgo :6 -700 S
 15 0 10 1d3+210 3d7+2
 666 22300
 8 8 1
-E
+S
 #9905
 quebrado~
-algu�m todo quebrado~
-Algu�m todo quebrado est� aqui, parecendo amea�ador.
+alguém todo quebrado~
+Alguém todo quebrado está aqui, parecendo ameaçador.
 ~
-Este cara � realmente feio!  Ele tem a cabe�a de um ogro, um p� de aranha,
-um p� humano, e v�rias outras partes de corpos incompat�veis.
+Este cara é realmente feio!  Ele tem a cabeça de um ogro, um pé de aranha,
+um pé humano, e várias outras partes de corpos incompatíveis.
 ~
-2123328 0 0 0 0 0 0 0 -400 E
+gjkno :6 -400 S
 20 -1 2 1d1+666 2d9+4
 2500 39000
 8 8 1
-E
+S
 #9906
 capanga~
 o capanga~
-Um capanga est� parado aqui, preparado para defender o covil de seu mestre.
+Um capanga está parado aqui, preparado para defender o covil de seu mestre.
 ~
 Isto se parece com uma tartaruga ninja, exceto por ele ser um sapo.
 ~
-2118150 0 0 0 0 0 0 0 -699 E
+bcjmo :6 -699 S
 18 0 3 1d1+320 6d3+3
 1000 24450
 8 8 1
-E
+S
 #9907
 planta~
 um homem-planta~
-Uma grande planta exalando odores putrefatos est� aqui, enojando o ambiente.
+Uma grande planta exalando odores putrefatos está aqui, enojando o ambiente.
 ~
-Voc� v� uma gigantesca v�nus armadilha de mosca, com dentes de 6 polegadas.
+Você vê uma gigantesca vênus armadilha de mosca, com dentes de 6 polegadas.
 ~
-2121762 0 0 0 0 0 0 0 -800 E
+bfno :6:28 -800 S
 40 -1 -9 2d9+2850 10d4+3
 12000 120000
 8 8 1
-E
+S
 #9908
 gorgimera~
 a Gorgimera~
-Uma Gorgimera ruge ao voc� entrar, e o ATACA!!!
+Uma Gorgimera ruge ao você entrar, e o ATACA!!!
 ~
-Este monstro possui tr�s cabe�as, de um g�rgona, de um le�o, e de um cruel 
-drag�o. Isto tem a parte traseira de um grande e negra g�rgona, e a parte 
-dianteira de um gigantesco le�o, com asas castanhas de um drag�o. 
+Este monstro possui três cabeças, de um górgona, de um leão, e de um cruel 
+dragão. Isto tem a parte traseira de um grande e negra górgona, e a parte 
+dianteira de um gigantesco leão, com asas castanhas de um dragão. 
 ~
-2222114 0 0 0 0 0 0 0 100 E
+bflnopq :6:17:19 100 S
 80 0 -10 4d8+12001 10d9+25
 25000 500000
 8 8 2
-E
+S
 #9909
 morte cavaleiro~
 O Cavaleiro da Morte~
-Um cavaleiro da morte est� aqui, desdenhando de voc�.
+Um cavaleiro da morte está aqui, desdenhando de você.
 ~
-Um grosseiro esqueleto, sua face de caveira � negra e recoberta por restos 
+Um grosseiro esqueleto, sua face de caveira é negra e recoberta por restos 
 de carne podre.
 ~
-2189376 0 0 0 0 0 0 0 -900 E
+glnoq :6:13:17 -900 S
 38 -10 -20 9d6+5050 11d4+20
 33000 250000
 8 8 1
-E
+S
 #9910
-abismo drag�o cobra~
-o drag�o do abismo~
+abismo dragão cobra~
+o dragão do abismo~
 Uma enorme cobra deita-se aqui, mastigando um corpo humano.
 ~
-O drag�o do abismo possui tonalidades marrons e tem cerca de 2,5 metros de 
-comprimento. Conhecido por assumir v�rias formas, este animal � extremamente 
-perigoso e seria melhor voc� sair de seu lar imediatamente.
+O dragão do abismo possui tonalidades marrons e tem cerca de 2,5 metros de 
+comprimento. Conhecido por assumir várias formas, este animal é extremamente 
+perigoso e seria melhor você sair de seu lar imediatamente.
 ~
-2190858 0 0 0 0 0 0 0 -700 E
+bdjklnoq :6:7:28 -700 S
 43 -10 -30 1d1+12000 4d12+38
 66000 1100000
 8 8 1
-E
+S
 #9911
-traidor an�o~
-o An�o traidor~
-O traidor est� parado aqui, gritando.
+traidor anão~
+o Anão traidor~
+O traidor está parado aqui, gritando.
 ~
-Voc� v� um an�o com olhos brancos e brilhantes, sem pupilas.  A pele � 
+Você vê um anão com olhos brancos e brilhantes, sem pupilas.  A pele é 
 branca, mas ele parece ainda bastante vigoroso.
 ~
-2097248 0 0 0 0 0 0 0 -250 E
+gf :0:6 -250 S
 10 0 0 25d8+100 4d3+3
 6662 6950
 8 8 1
-E
+S
 #9912
 elfo~
 o elfo errante~
-Um elfo errante est� aqui, procurando os seres malignos da regi�o.
+Um elfo errante está aqui, procurando os seres malignos da região.
 ~
-Voc� v� um atraente rapaz, tem cerca de 1,5 metros de altura, com olhos 
-cintilantes e fraca complex�o.  Apesar de pequeno, ele mostra ser bastante 
-flex�vel e �gil.
+Você vê um atraente rapaz, tem cerca de 1,5 metros de altura, com olhos 
+cintilantes e fraca complexão.  Apesar de pequeno, ele mostra ser bastante 
+flexível e ágil.
 ~
-2128192 0 0 0 0 0 0 0 700 E
+gilmno :6:7:12 700 S
 30 -5 -10 250d1+1000 10d3+8
 1500 100000
 8 8 1
-E
+S
 #9913
-efreeti esp�rito~
+efreeti espírito~
 o Efreeti~
-Um esp�rito est� levitando aqui, com um cruel sorriso em sua face.
+Um espírito está levitando aqui, com um cruel sorriso em sua face.
 ~
-Voc� v� um poderoso bruxo despido da cintura para cima, vestido apenas com
-um par de chinelos, cal�as de cor p�rpura, e um bracelete cintilante de
+Você vê um poderoso bruxo despido da cintura para cima, vestido apenas com
+um par de chinelos, calças de cor púrpura, e um bracelete cintilante de
 muitas cores.
 ~
-2746386 0 0 0 0 0 0 0 0 E
+belnopqt :1:7:17:25 0 S
 100 -40 -40 5d10+23900 11d11+70
 79000 4750000
 8 8 1
-E
+S
 #9914
 medusa mulher~
 a Medusa~
-Uma mulher est� sentada na cama, de costas para voc�.
+Uma mulher está sentada na cama, de costas para você.
 ~
-Bem, voc� provavelmente n�o deveria olhar para esta mulher, pois, ela � 
-realmente feia.  Mas suponho que voc� queira saber o qu�o feia.
+Bem, você provavelmente não deveria olhar para esta mulher, pois, ela é 
+realmente feia.  Mas suponho que você queira saber o quão feia.
 ~
-2124290 0 0 0 0 0 0 0 -800 E
+bjlno :6:28 -800 S
 50 0 -10 6d66+3666 4d10+22
 30250 389000
 8 8 2
-E
+S
 #9915
-est�pido orc~
+estúpido orc~
 o Orc~
-Um grande, est�pido Orc est� movimentando-se pesadamente aqui.
+Um grande, estúpido Orc está movimentando-se pesadamente aqui.
 ~
-Ele � simplesmente horr�vel...
+Ele é simplesmente horrível...
 ~
-2097220 0 0 0 0 0 0 0 -1000 E
+cg :6 -1000 S
 10 5 10 25d3+5 2d6+1
 250 1300
 8 8 1
-E
+S
 #9916
-gar�om~
-o gar�om~
-H� um gar�om parado aqui, aguardando por suas ordens.
+garçom~
+o garçom~
+Há um garçom parado aqui, aguardando por suas ordens.
 ~
-� uma pessoa pequena, com pinos perfurando a carne em seu rosto...
+É uma pessoa pequena, com pinos perfurando a carne em seu rosto...
 ~
-2125826 0 0 0 0 0 0 0 -100 E
+bmno :6 -100 S
 30 0 -10 1d1+5650 5d5+5
 15000 125000
 8 8 1
-E
+S
 #9917
-cidad�o~
-um cidad�o de Ghenna~
-Um cidad�o de Ghenna est� aqui.
+cidadão~
+um cidadão de Ghenna~
+Um cidadão de Ghenna está aqui.
 ~
-Voc� v� uma pessoa imunda, a muito insana devido a destrui��o de sua
+Você vê uma pessoa imunda, a muito insana devido a destruição de sua
 maravilhosa cidade.
 ~
-2097220 0 0 0 0 0 0 0 666 E
+cg :6 666 S
 10 3 9 1d1+150 6d2+3
 2200 6000
 8 8 1
-E
+S
 #9918
 senhora velha vendedora~
 uma vendedora~
-Uma velha senhora (obviamente perdida) est� tentando vender maquiagem.
+Uma velha senhora (obviamente perdida) está tentando vender maquiagem.
 ~
-Voc� v� uma velha senhora, de vestido cor de rosa.  Em seus bra�os ela
-carrega uma caixa de papel crepe em forma de cora��o.
+Você vê uma velha senhora, de vestido cor de rosa.  Em seus braços ela
+carrega uma caixa de papel crepe em forma de coração.
 ~
-2121796 0 0 0 0 0 0 0 400 E
+cgno :6 400 S
 10 -5 10 1d1+450 2d10+2
 5000 7000
 8 8 2
-E
+S
 #9923
 mestre espadachim homem~
 o mestre espadachim de Ghenna~
-Um forte homem est� prostrado aqui, aparentemente rezando.
+Um forte homem está prostrado aqui, aparentemente rezando.
 ~
-Um homem com uma grande barba negra, o mestre espadachim de Ghenna est�
-tatuado com runas da cabe�a aos p�s.  Envolto em mortalhas vermelhas, ele 
+Um homem com uma grande barba negra, o mestre espadachim de Ghenna está
+tatuado com runas da cabeça aos pés.  Envolto em mortalhas vermelhas, ele 
 empunha uma espada de impressionante beleza, a qual emite zunidos cortando
 o ar assim que ele o ataca.
 ~
-2222098 0 0 0 0 0 0 0 -700 E
+belnopq :6:7:17 -700 S
 100 -30 -40 1d8+20000 14d3+65
 100000 3250000
 8 8 1
-E
+S
 #9931
-parede p�~
-um p� saindo da parede~
-Parece que um p� est� saindo da parede! 
+parede pé~
+um pé saindo da parede~
+Parece que um pé está saindo da parede! 
 ~
-An undefined string.
 ~
-2097330 0 0 0 0 0 0 0 0 E
+befh 0 0 S
 20 2 10 1d10+750 2d5+8
 15 36000
 8 8 1
-E
+S
 #9932
-parede bra�o~
-um bra�o saindo da parede~
-Parece que um bra�o est� saindo da parede! 
+parede braço~
+um braço saindo da parede~
+Parece que um braço está saindo da parede! 
 ~
-An undefined string.
 ~
-2097330 0 0 0 0 0 0 0 0 E
+befh 0 0 S
 20 2 10 1d10+720 2d6+7
 15 32000
 8 8 1
-E
+S
 #9933
-est�tua rocha golem~
+estátua rocha golem~
 o golem de rocha~
-Uma grande est�tua de um human�ide esculpida em granito, est� aqui.
+Uma grande estátua de um humanóide esculpida em granito, está aqui.
 ~
-Isto se parece com uma escultura em rocha de um ser human�ide de corpo
-extremamente anguloso, como um esbo�o de assustador homem.  Ele tem mais de
-3, 5 metros de altura, lan�ando uma sombra sobre voc�.
+Isto se parece com uma escultura em rocha de um ser humanóide de corpo
+extremamente anguloso, como um esboço de assustador homem.  Ele tem mais de
+3, 5 metros de altura, lançando uma sombra sobre você.
 ~
-2119682 0 0 0 0 0 0 0 0 E
+blmo :6 0 S
 61 0 -10 1d1+10000 10d3+25
 43567 700000
 8 8 1
-E
+S
 #9964
 boneca~
 a boneca~
-Uma boneca est� apoiada contra a parede, esquecida pela crian�a que
+Uma boneca está apoiada contra a parede, esquecida pela criança que
 um dia a teve.
 ~
-Parece com um t�pico brinquedo de crian�a.  Tem cerca de 30 cent�metros
+Parece com um típico brinquedo de criança.  Tem cerca de 30 centímetros
 de altura, e parece ser de argila.
 ~
-2097174 0 0 0 0 0 0 0 0 E
+bce 0 0 S
 5 7 1 1d1+175 2d5+5
 200 5900
 8 8 2
-E
+S
 #9971
 mulher~
 uma mulher~
-Uma jovem, de apar�ncia inocente est� sentada aqui, lendo um revista.
+Uma jovem, de aparência inocente está sentada aqui, lendo um revista.
 ~
-Ela encara voc�, e pisca o olho.
+Ela encara você, e pisca o olho.
 ~
-2113538 0 0 0 0 0 0 0 300 E
+bo 0 300 S
 20 0 0 1d1+375 5d3+5
 5300 9000
 6 6 2
-E
+S
 #9972
 lester~
 Lester~
-Lester est� aqui, apenas observando o movimento.
+Lester está aqui, apenas observando o movimento.
 ~
-Voc� observa um homem de m� apar�ncia, e percebe que est� babando.
+Você observa um homem de má aparência, e percebe que está babando.
 ~
-2121730 0 0 0 0 0 0 0 -600 E
+bno 0 -600 S
 20 0 0 1d1+880 5d3+5
 3000 10250
 8 8 1
-E
+S
 #9975
 mulher~
 a mulher~
-Uma mulher desdentada est� sentada na cama.
+Uma mulher desdentada está sentada na cama.
 ~
 Um olho, sem dentes e com uma pele branca, esta mulher parece o seu
 pior pesadelo.
 ~
-2106018 0 0 0 0 0 0 0 -700 E
+bfhjn 0 -700 S
 15 2 3 1d1+300 5d3+7
 10000 20000
 8 6 2
-E
+S
 #9981
-morto an�o~
-o An�o~
-Um An�o est� deitado aqui.
+morto anão~
+o Anão~
+Um Anão está deitado aqui.
 ~
-Voc� n�o v� nada de especial.
+Você não vê nada de especial.
 ~
-2121762 0 0 0 0 0 0 0 300 E
+bfno 0 300 S
 1 1 0 1d1+10 1d1+80
 250 250
 6 5 1
-E
+S
 #9985
 maedar~
 o Maedar~
-Um Maedar est� aqui na penumbra.
+Um Maedar está aqui na penumbra.
 ~
-Voc� v� um musculoso e careca human�ide, vestido em uma t�nica.
+Você vê um musculoso e careca humanóide, vestido em uma túnica.
 ~
-2097728 0 0 0 0 0 0 0 -600 E
+gj 0 -600 S
 20 0 0 30d5+20 4d4+7
 943 10900
 8 8 1
-E
+S
 #9986
 maedar mestre~
 o mestre Maedar~
-Um Maedar est� aqui na penumbra.
+Um Maedar está aqui na penumbra.
 ~
-Voc� v� um musculoso e careca human�ide, vestido em uma t�nica.
+Você vê um musculoso e careca humanóide, vestido em uma túnica.
 ~
-2122242 0 0 0 0 0 0 0 -700 E
+bjno :28 -700 S
 25 0 0 8d6+375 3d6+10
 2500 30950
 8 8 1
-E
+S
 #9987
 elfo roger~
 Roger~
-Roger, o elfo guerreiro est� aqui procurando por criaturas malignas para matar.
+Roger, o elfo guerreiro está aqui procurando por criaturas malignas para matar.
 ~
-Voc� v� um jovem elfo, tem apenas cerca de 130 anos, ele age como se estivesse 
+Você vê um jovem elfo, tem apenas cerca de 130 anos, ele age como se estivesse 
 em uma cruzada.  Vestido numa armadura reluzente, persegue os agentes do mal 
 tentando erradica-los da face do planeta.
 ~
-2122048 0 0 0 0 0 0 0 800 E
+gino :7:12 800 S
 30 -3 0 5d5+625 4d4+10
 25000 138000
 8 8 1
-E
+S
 #9989
-drag�o dragonet~
+dragão dragonet~
 o Dragonet~
-Um fraco e pequeno drag�o esta parado aqui, olhando para voc� com profundos olhos azuis. 
+Um fraco e pequeno dragão esta parado aqui, olhando para você com profundos olhos azuis. 
 ~
-Voc� v� o que parece ser a miniatura de um drag�o, com aproximadamente o tamanho 
+Você vê o que parece ser a miniatura de um dragão, com aproximadamente o tamanho 
 de um chihuahua.
 ~
-2097220 0 0 0 0 0 0 0 500 E
+cg 0 500 S
 30 0 0 2d4+100 3d4+3
 350 5200
 8 8 1
-E
+S
 #9994
 barata~
 a barata~
-A maior barata que voc� j� viu est� aqui, olhando para voc�.
+A maior barata que você já viu está aqui, olhando para você.
 ~
-Voc� v� uma barata de aproximadamente 70 cent�metros de comprimento.
+Você vê uma barata de aproximadamente 70 centímetros de comprimento.
 ~
-2187266 0 0 0 0 0 0 0 -351 E
+bnoq 0 -351 S
 50 -5 -10 1d1+750 5d7+33
 7500 99500
 8 8 2
-E
+S
 #9997
 deepspawn~
 o Deepspawn~
-O Deepspawn est� em p� aqui, preparado para lhe matar.
+O Deepspawn está em pé aqui, preparado para lhe matar.
 ~
-Isto parece com uma grande esfera el�stica, cinza e marrom.  Seis bra�os
-projetam-se de seu corpo; tr�s s�o bra�os-tent�culo, e tr�s s�o
-bra�os-mand�bula, terminando em bocas de muitos dentes.  Tem tamb�m cerca de
-40 olhos flex�veis, longos e retr�teis, que observam voc� de forma
-amea�adora.
+Isto parece com uma grande esfera elástica, cinza e marrom.  Seis braços
+projetam-se de seu corpo; três são braços-tentáculo, e três são
+braços-mandíbula, terminando em bocas de muitos dentes.  Tem também cerca de
+40 olhos flexíveis, longos e retráteis, que observam você de forma
+ameaçadora.
 ~
-2187794 0 0 0 0 0 0 0 -600 E
+bejnoq :12:13:17 -600 S
 60 -7 -10 1d1+1901 3d7+40
 40000 285000
 8 8 1
-E
+S
 $
