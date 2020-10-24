@@ -435,7 +435,7 @@ o tesoureiro~
 O tesoureiro está aqui contando dinheiro.
 ~
 Ele não parece ser confiável o bastante para guardar seu dinheiro mas,
-afinal, voc� n�o tem escolha.
+afinal, você não tem escolha.
 ~
 2099218 0 0 0 112 0 0 0 360 E
 30 3 -20 2d5+2000 5d5+20
@@ -443,11 +443,11 @@ afinal, voc� n�o tem escolha.
 8 8 1
 E
 #8134
-�bis~
-o �bis~
-Um �bis est� aqui a sobrevoar sua cabe�a.
+ibis~
+o íbis~
+Um íbis está aqui a sobrevoar sua cabeça.
 ~
-Ele � uma bela ave de pernas e bico longos.  A maioria de suas penas, muito
+Ele é uma bela ave de pernas e bico longos.  A maioria de suas penas, muito
 brancas, parecem especialmente destacar as preciosas plumas de cor azul oceano.
 ~
 2621504 0 0 0 0 0 0 0 360 E
@@ -470,9 +470,9 @@ E
 #8136
 escaravelho~
 o escaravelho~
-Um escaravelho est� aqui procurando por comida.
+Um escaravelho está aqui procurando por comida.
 ~
-Voc� fica assustado com a agressividade desse pequeno escaravelho negro...
+Você fica assustado com a agressividade desse pequeno escaravelho negro...
 ~
 2097248 0 0 0 0 0 0 0 -360 E
 5 15 0 3d4+400 1d2+3
@@ -482,9 +482,9 @@ E
 #8137
 rato~
 o rato~
-Um rato est� aqui tentando subir na sua perna.
+Um rato está aqui tentando subir na sua perna.
 ~
-Esse rato nojento est� todo coberto com um espessa e f�tida camada de lama.
+Esse rato nojento está todo coberto com um espessa e fétida camada de lama.
 ~
 2097222 0 0 0 0 0 0 0 360 E
 7 19 0 3d3+200 1d2+2
@@ -494,12 +494,12 @@ E
 #8138
 khons~
 Khons~
-Khons est� aqui mirando o firmamento.
+Khons está aqui mirando o firmamento.
 ~
-Khons � o deus eg�pcio da Lua.  Ele lhe conta porque n�o pode aparecer o m�s
-inteiro em toda sua gl�ria: uma vez, jogando senet contra Thot, Khons
+Khons é o deus egípcio da Lua.  Ele lhe conta porque não pode aparecer o mês
+inteiro em toda sua glória: uma vez, jogando senet contra Thot, Khons
 impensadamente apostou parte de sua luz.  Thot acabou ganhando o jogo e
-Khons teve de se contentar em, todo m�s, mostrar aos poucos sua luz at� que,
+Khons teve de se contentar em, todo mês, mostrar aos poucos sua luz até que,
 atingindo seu auge, comece a minguar.
 ~
 2357266 0 0 0 262512 0 0 0 360 E
@@ -510,11 +510,11 @@ E
 #8139
 imothep~
 Imothep~
-Imothep se aproxima de voc� lentamente.
+Imothep se aproxima de você lentamente.
 ~
-Voc� est� perante Imothep (ou pelo menos o que restou dele), o
-sumo-sacertode do fara�.  Totalmente envolto em bandagens, exatamente como
-uma m�mia, ele parece ter ressurgido do mundo dos mortos para vingar sua
+Você está perante Imothep (ou pelo menos o que restou dele), o
+sumo-sacertode do faraó.  Totalmente envolto em bandagens, exatamente como
+uma múmia, ele parece ter ressurgido do mundo dos mortos para vingar sua
 morte trazendo as 7 pragas do Egito.
 ~
 2357302 0 0 0 262512 0 0 0 -360 E
@@ -525,11 +525,11 @@ E
 #8140
 akhenaton~
 Akhenaton~
-Akhenaton est� em p� aqui.
+Akhenaton está em pé aqui.
 ~
-Akhenaton, um homem muito alto e magro, � conhecido principalmente por ser o
-fara� que cultuava apenas um deus: Aton, o Sol.  Ao lado de sua mulher, a
-bela Nefertiti, Akhenaton mant�m a paz no Egito.
+Akhenaton, um homem muito alto e magro, é conhecido principalmente por ser o
+faraó que cultuava apenas um deus: Aton, o Sol.  Ao lado de sua mulher, a
+bela Nefertiti, Akhenaton mantêm a paz no Egito.
 ~
 2353170 0 0 0 262512 0 0 0 360 E
 90 -20 -18 6d6+3490 7d7+37
@@ -537,9 +537,9 @@ bela Nefertiti, Akhenaton mant�m a paz no Egito.
 8 8 1
 E
 #8141
-ladr�o homem~
-o ladr�o~
-Um homem vestido todo de preto est� rondando esse lugar.
+ladrao homem~
+o ladrão~
+Um homem vestido todo de preto está rondando esse lugar.
 ~
 Ele aparenta muito sangue-frio e agilidade.  
 ~
@@ -549,11 +549,11 @@ Ele aparenta muito sangue-frio e agilidade.
 8 8 1
 E
 #8142
-tumbas ladr�o~
-o ladr�o de tumbas~
-Um ladr�o de tumbas est� aqui buscando um tesouro.
+tumbas ladrao ladrão~
+o ladrão de tumbas~
+Um ladrão de tumbas está aqui buscando um tesouro.
 ~
-Voc� mal o v� diante da escurid�o.
+Você mal o vê diante da escuridão.
 ~
 2097220 0 0 0 65536 0 0 0 360 E
 30 5 0 3d3+600 1d2+2
@@ -563,10 +563,10 @@ E
 #8143
 cordoniz~
 um raro cordoniz~
-Um cordoniz est� aqui ciscando o ch�o.
+Um cordoniz está aqui ciscando o chão.
 ~
-Esse parece ser uma esp�cie muito rara de cordoniz pois, diferente da
-colora��o cinzenta e marrom comum, essa ave possui penas multicoloridas que
+Esse parece ser uma espécie muito rara de cordoniz pois, diferente da
+coloração cinzenta e marrom comum, essa ave possui penas multicoloridas que
 parecem emitir um discreto brilho.  O cordoniz parece muito compenetrado em
 sua busca por comida.
 ~
@@ -581,7 +581,7 @@ o explorador~
 Um homem parece estar perdido por aqui.
 ~
 Vestindo roupas que algum dia foram claras, esse homem parece procurar
-urgentemente, com sua lamparina, por uma sa�da.
+urgentemente, com sua lamparina, por uma saída.
 ~
 2097216 0 0 0 0 0 0 0 360 E
 29 4 -4 2d5+1400 1d1+22
@@ -589,13 +589,13 @@ urgentemente, com sua lamparina, por uma sa�da.
 8 8 1
 E
 #8145
-v�bora cobra~
-a v�bora~
-Uma enorme cobra est� rastejando pelo ch�o.
+vibora víbora cobra~
+a víbora~
+Uma enorme cobra está rastejando pelo chão.
 ~
 Essa enorme cobra passa quase despercebida nas quentes areias do deserto:
 seu couro tem a tonalidade certa para a camuflar.  Tenha muito cuidado para
-n�o pisar nessa mort�fera v�bora do Saara.
+não pisar nessa mortífera víbora do Saara.
 ~
 2097248 0 0 0 112 0 0 0 -360 E
 17 8 -1 3d3+300 5d2+12
@@ -603,12 +603,12 @@ n�o pisar nessa mort�fera v�bora do Saara.
 8 8 2
 E
 #8146
-crian�a eg�pcia~
-a crian�a eg�pcia~
-Uma crian�a est� aqui procurando por sua m�e.
+crianca egipcia~
+a criança egípcia~
+Uma criança está aqui procurando por sua mãe.
 ~
-A pobre crian�a parece ter se perdido de sua m�e: chama-a incessantemente
-enquanto l�grimas desesperadas rolam por sua face corada.
+A pobre criança parece ter se perdido de sua mãe: chama-a incessantemente
+enquanto lágrimas desesperadas rolam por sua face corada.
 ~
 2097216 0 0 0 0 0 0 0 360 E
 16 12 0 2d3+300 1d2+5
@@ -618,12 +618,12 @@ E
 #8147
 serpente~
 a Serpente~
-Uma enorme serpente est� aqui, encarando voc�.
+Uma enorme serpente está aqui, encarando você.
 ~
-Voc� se sente hipnotizado pelos olhos dessa serpente: parecem de fogo, com
+Você se sente hipnotizado pelos olhos dessa serpente: parecem de fogo, com
 seu brilho se tornando mais fraco ou mais intenso.  De sua boca parece sair
-algum tipo de �cido f�tido, o que lhe inspira n�o s� medo como tamb�m
-repugn�ncia.
+algum tipo de ácido fétido, o que lhe inspira não só medo como também
+repugnância.
 ~
 2162726 0 0 0 262512 0 0 0 -360 E
 101 -21 -40 8d8+6000 8d8+43
@@ -633,9 +633,9 @@ E
 #8148
 harirf~
 Harirf~
-Harirf est� aqui polindo suas botas.
+Harirf está aqui polindo suas botas.
 ~
-Ele aparenta ser um lojista honesto e confi�vel mesmo tendo uma enorme arma
+Ele aparenta ser um lojista honesto e confiável mesmo tendo uma enorme arma
 presa em sua cintura.
 ~
 2285586 0 0 0 262144 0 0 0 360 E
@@ -646,10 +646,10 @@ E
 #8149
 rafertine~
 Rafertine~
-Uma bela mulher est� aqui a vender p�es.
+Uma bela mulher está aqui a vender pães.
 ~
-Ela � uma linda mulher que j� chegou na meia-idade.  De porte elegante e
-sorriso sincero, Rafertine oferece a voc� alguns de seus p�es.
+Ela é uma linda mulher que já chegou na meia-idade.  De porte elegante e
+sorriso sincero, Rafertine oferece a você alguns de seus pães.
 ~
 2285586 0 0 0 256 0 0 0 360 E
 108 0 -50 25d25+30000 2d4+30
@@ -659,10 +659,10 @@ E
 #8150
 musedic~
 Musedic~
-Musedic est� aqui tramando alguma coisa.
+Musedic está aqui tramando alguma coisa.
 ~
-Musedic, com sua apar�ncia asquerosa, � dono de um olhar matreiro que
-desperta admira��o.
+Musedic, com sua aparência asquerosa, é dono de um olhar matreiro que
+desperta admiração.
 ~
 2285586 0 0 0 262144 0 0 0 -360 E
 108 0 -50 25d25+30000 2d4+30
@@ -670,12 +670,12 @@ desperta admira��o.
 8 8 1
 E
 #8151
-m�mia~
-a m�mia~
-Uma m�mia arrasta-se em sua dire��o.
+mumia~
+a múmia~
+Uma múmia arrasta-se em sua direção.
 ~
-Exalando um insuport�vel cheiro de mofo e carne p�trida, essa m�mia parece
-disposta a fazer-lhe algum mal.  Voc� n�o sabe se fica mais assustado com
+Exalando um insuportável cheiro de mofo e carne pútrida, essa múmia parece
+disposta a fazer-lhe algum mal.  Você não sabe se fica mais assustado com
 sua enorme figura envolta em bandagens ou com os ferozes urros que saem do
 que deve ser sua boca.
 ~
@@ -685,12 +685,12 @@ que deve ser sua boca.
 8 8 2
 E
 #8152
-soldado eg�pcio~
-um soldado eg�pcio~
-Um soldado eg�pcio est� de guarda aqui.
+soldado egipcio~
+um soldado egípcio~
+Um soldado egípcio está de guarda aqui.
 ~
-Esse soldado de fei��es s�rias parece muito concentrado na defesa do
-patrim�nio de seu fara�.
+Esse soldado de feições sérias parece muito concentrado na defesa do
+patrimônio de seu faraó.
 ~
 2291714 0 0 0 112 0 0 0 -360 E
 40 -3 -17 5d10+1700 8d2+19
