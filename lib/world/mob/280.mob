@@ -1,307 +1,284 @@
 #28001
-dr�ade ninfa~
-a dr�ade~
-Uma dr�ade est� aqui, voando por entre a folhagem.
+driade ninfa~
+a dríade~
+Uma dríade está aqui, voando por entre a folhagem.
 ~
-A dr�ade � uma pequenina e graciosa entidade.  Ela possui asas iguais as
-asas das borboletas, que permitem a ela voar com gra�a e delicadesa e seu
+A dríade é uma pequenina e graciosa entidade.  Ela possui asas iguais as
+asas das borboletas, que permitem a ela voar com graça e delicadesa e seu
 corpo possui um brilho luminoso.
 ~
-2340946 0 0 0 130 0 0 0 1000 E
+243794 130 1000 S
 15 3 -4 3d8+300 4d4+6
 1000 25000
 8 8 2
-E
 #28002
 trabalhador~
 o trabalhador~
-Um trabalhador est� aqui, colhendo gr�os e plantando novas sementes.
+Um trabalhador está aqui, colhendo grãos e plantando novas sementes.
 ~
-Voc� v� um homem n�o muito jovem.  Os trabalhadores s�o imigrantes, que
+Você vê um homem não muito jovem.  Os trabalhadores são imigrantes, que
 vieram de outras para Callyus em busca de oportunidades e de fortuna.
-Contudo, eles n�o se adaptaram ao estilo de vida de callyuni e trabalham
-agora em atividades bra�ais.
+Contudo, eles não se adaptaram ao estilo de vida de callyuni e trabalham
+agora em atividades braçais.
 ~
-2097218 0 0 0 0 0 0 0 100 E
+66 0 100 S
 12 8 1 3d5+250 3d3+7
 800 3000
 8 8 1
-E
 #28003
 trabalhadora~
 a trabalhadora~
-Uma trabalhadora est� aqui, colhendo gr�os e plantando novas sementes.
+Uma trabalhadora está aqui, colhendo grãos e plantando novas sementes.
 ~
-Voc� v� uma mulher vestida de forma modesta.  Os trabalhadores s�o
+Você vê uma mulher vestida de forma modesta.  Os trabalhadores são
 imigrantes, que vieram de outras terras para Callyus em busca de
-oportunidades e de fortuna.  Contudo, eles n�o se adaptaram ao estilo de
-vida callyuni e trabalham agora em atividades bra�ais.
+oportunidades e de fortuna.  Contudo, eles não se adaptaram ao estilo de
+vida callyuni e trabalham agora em atividades braçais.
 ~
-2097218 0 0 0 0 0 0 0 100 E
+66 0 100 S
 12 8 1 3d5+250 3d3+7
 800 3000
 8 8 2
-E
 #28004
 sanguessuga parasita~
 a grotesca sanguessuga gigante~
-Uma grotesca sanguessuga gigante est� aqui, tentando sugar seu sangue.
+Uma grotesca sanguessuga gigante está aqui, tentando sugar seu sangue.
 ~
-Esta criatura grotesta � t�o asquerosa que fica dif�cil descrev�-la de forma
-detalhada sem sentir o est�mago embrulhar.
+Esta criatura grotesta é tão asquerosa que fica difícil descrevê-la de forma
+detalhada sem sentir o estômago embrulhar.
 ~
-2099058 0 0 0 8 0 0 0 -1000 E
+1906 8 -1000 S
 15 5 0 5d6+420 3d5+10
 0 30000
 8 8 0
-E
 #28005
 espantalho boneco palha~
 o espantalho~
 Um espantalho foi colocado aqui para proteger os campos.
 ~
-O espantalho � uma criatura que foi pobremente vestida, com o objetivo de
-proteger os campos contra os ataques dos p�ssaros.
+O espantalho é uma criatura que foi pobremente vestida, com o objetivo de
+proteger os campos contra os ataques dos pássaros.
 ~
-2097218 0 0 0 0 0 0 0 0 E
+66 0 0 S
 15 4 0 4d5+380 2d9+6
 0 25000
 8 8 0
-E
 #28006
 goblin~
-o goblin aqu�tico~
-Ali est� um estranho goblin nadando.
+o goblin aquático~
+Ali está um estranho goblin nadando.
 ~
-Voc� v� um goblin com nadadeiras e barbatanas.
+Você vê um goblin com nadadeiras e barbatanas.
 ~
-2100822 0 0 0 64 0 0 0 -250 E
+3670 64 -250 S
 15 5 0 3d10+280 4d3+8
 500 7000
 8 8 0
-E
 #28007
 gafanhoto inseto~
 o gafanhoto~
-Ali est� um gafanhoto, a procura de plantas para comer.
+Ali está um gafanhoto, a procura de plantas para comer.
 ~
 Um pequeno inseto marrom e verde que parece ser extremamente voraz.
 ~
-2097218 0 0 0 0 0 0 0 -100 E
+66 0 -100 S
 10 10 10 2d5+130 2d4+8
 1 1000
 8 8 0
-E
 #28008
 vaca louca~
 a vaca louca~
-Ali est� uma vaca louca, usando um chap�u de Viking!
+Ali está uma vaca louca, usando um chapéu de Viking!
 ~
-� apenas uma vaca....mas t�o diferente!!!
+É apenas uma vaca....mas tão diferente!!!
 ~
-2099058 0 0 0 0 0 0 0 -250 E
+1906 0 -250 S
 12 7 0 3d5+200 3d5+7
 1000 13000
 8 8 0
-E
 #28009
-est�tua �dolo metal guerreiro~
-a est�tua de metal~
-A est�tua de um guerreiro foi colocada aqui na fonte central.
+estatua idolo metal guerreiro~
+a estátua de metal~
+A estátua de um guerreiro foi colocada aqui na fonte central.
 ~
-Voc� v� uma placa em sua base.  H� uma inscri��o ali:
-   "Esta est�tua foi feita para celebrar e mostrar a todos os visitantes
+Você vê uma placa em sua base.  Há uma inscrição ali:
+   "Esta estátua foi feita para celebrar e mostrar a todos os visitantes
        de outras terras, toda a honra e coragem do povo de Callyus"
 ~
-2351186 0 0 0 128 0 0 0 250 E
+254034 4224 250 S
 40 -3 -15 10d25+2000 6d8+21
 0 200000
 8 8 0
-E
 #28010
 vaca~
 a vaca~
-H� uma vaca aqui, pastando calmamente.
+Há uma vaca aqui, pastando calmamente.
 ~
 Apenas uma vaquinha...
 ~
-2097218 0 0 0 0 0 0 0 250 E
+66 0 250 S
 12 7 0 3d5+200 3d5+3
 0 13000
 8 8 0
-E
 #28011
 cavalo~
 o cavalo~
-Um cavalo est� aqui.
+Um cavalo está aqui.
 ~
-Voc� v� um magn�fico cavalo �rabe.
+Você vê um magnífico cavalo Árabe.
 ~
-2097218 0 0 0 0 0 0 0 250 E
+66 0 250 S
 12 7 1 2d3+210 3d5+5
 0 15000
 8 8 0
-E
 #28012
 mulher vendedora~
 a jovem vendedora~
-Uma jovem mulher est� aqui, vendendo p�es de viagem.
+Uma jovem mulher está aqui, vendendo pães de viagem.
 ~
-Ela � bonita, com tra�os suaves e olhos sonhadores.
+Ela é bonita, com traços suaves e olhos sonhadores.
 ~
-2351312 0 0 0 0 0 0 0 500 E
+254160 0 500 S
 20 -5 -10 0d0+500 4d6+14
 50000 26000
 8 8 2
-E
 #28013
-guardi�o~
-O Guardi�o das �guas~
-O Guardi�o das �guas est� aqui para proteger os seres aqu�ticos.
+guardiao~
+O Guardião das Águas~
+O Guardião das Águas está aqui para proteger os seres aquáticos.
 ~
-O Guardi�o das �guas � um ser flu�dico.  � primeira vista, parece tratar-se
+O Guardião das Águas é um ser fluídico.  À primeira vista, parece tratar-se
 de uma entidade feminina mas de repente isto vai mudando, transformando-se
-em in�meras outras formas.
+em inúmeras outras formas.
 ~
-2127954 0 0 0 1258 0 0 0 250 E
+30802 38122 250 S
 30 -10 -20 8d20+1200 4d8+25
 0 120000
 8 8 0
-E
 #28014
-guardi�o florestas floresta~
-O Guardi�o das Florestas~
-O Guardi�o das Florestas est� aqui para proteger os seres da floresta.
+guardiao florestas floresta~
+O Guardião das Florestas~
+O Guardião das Florestas está aqui para proteger os seres da floresta.
 ~
-� muito dif�cil descrever a apar�ncia desta entidade.  Voc� pode ver apenas
-uma sombra esfuma�ada, movendo-se por entre a folhagem.
+É muito difícil descrever a aparência desta entidade.  Você pode ver apenas
+uma sombra esfumaçada, movendo-se por entre a folhagem.
 ~
-2127952 0 0 0 8362 0 0 0 250 E
+30800 45226 250 S
 30 -10 -20 5d30+1200 4d8+25
 0 80000
 8 8 0
-E
 #28015
-guardi�o sombras escurid�o~
-O Guardi�o da Escurid�o~
-O Guardi�o da Escurid�o est� aqui para proteger as almas perdidas.
+guardiao sombras escuridao~
+O Guardião da Escuridão~
+O Guardião da Escuridão está aqui para proteger as almas perdidas.
 ~
-Aos poucos voc� nota a presen�a desta entidade que vai emergindo da
-escurid�o e movendo-se, sem tocar o solo, por entre as sombras.  Ainda que
-este local seja bastante escuro, voc� consegue ver as unhas longas e afiadas
+Aos poucos você nota a presença desta entidade que vai emergindo da
+escuridão e movendo-se, sem tocar o solo, por entre as sombras.  Ainda que
+este local seja bastante escuro, você consegue ver as unhas longas e afiadas
 e os grandes olhos vermelhos.
 ~
-2123858 0 0 0 9450 0 0 0 -500 E
+26706 46314 -500 S
 30 -8 -18 8d25+1150 4d9+21
 0 120000
 8 8 0
-E
 #28016
 ninfa~
-a ninfa~
-Uma ninfa est� aqui, olhando curiosamente para voc�.
+A ninfa~
+Uma ninfa está aqui, olhando curiosamente para você.
 ~
-A ninfa � uma criatura das �guas.  Ela � uma mulher com corpo e rosto mas
-existe alguma coisa diferente nela e voc� n�o consegue saber o que.
+A ninfa é uma criatura das águas.  Ela é uma mulher com corpo e rosto mas
+existe alguma coisa diferente nela e você não consegue saber o que.
 ~
-2101314 0 0 0 64 0 0 0 500 E
+4162 64 500 S
 18 3 -5 5d6+490 4d4+5
 2000 20000
 8 8 2
-E
 #28017
 guarda cally~
 o guarda cally~
-Um guarda cally est� aqui, procurando por encrenca.
+Um guarda cally está aqui, procurando por encrenca.
 ~
-Voc� v� um guerreiro fortemente armado que parece ter sido muito bem
-treinado para proteger os cidad�os callyunis dos problemas e dos rufi�es.
+Você vê um guerreiro fortemente armado que parece ter sido muito bem
+treinado para proteger os cidadãos callyunis dos problemas e dos rufiões.
 ~
-2103376 0 0 0 0 0 0 0 250 E
+6224 0 250 S
 20 -5 -5 5d6+800 4d4+12
 1500 90000
 8 8 1
-E
 #28018
 almirante dasher~
 O Almirante Dasher~
-O Almirante Dasher est� sentado aqui, desenvolvendo estrat�gias de guerra.
+O Almirante Dasher está sentado aqui, desenvolvendo estratégias de guerra.
 ~
-O Almirante Dasher � um homem forte, com barba e cabelos brancos.  Suas
-roupas est�o cobertas por medalhas e seu chap�u tem o s�mbolo do Ex�rcito de
+O Almirante Dasher é um homem forte, com barba e cabelos brancos.  Suas
+roupas estão cobertas por medalhas e seu chapéu tem o símbolo do Exército de
 Callyus.
 ~
-2353234 0 0 0 9384 0 0 0 500 E
+256082 46248 500 S
 50 -15 -60 10d15+1700 5d7+25
 100000 400000
 8 8 1
-E
 #28019
-secret�ria ginger~
+secretaria ginger~
 senhorita Ginger~
-Senhorita Ginger, a secret�ria do Almirante Dasher est� sentada aqui, 
+Senhorita Ginger, a secretária do Almirante Dasher está sentada aqui, 
 organizando documentos.
 ~
-Esta garota � realmente muito esquisita!!!  Cabelos azuis, rosto com pesada
-maquiagem, �culos listrados e uma roupa totalmente cor-de-rosa.  Ela n�o se
-parece em nada com aquilo que se espera da secret�ria de um importante
+Esta garota é realmente muito esquisita!!!  Cabelos azuis, rosto com pesada
+maquiagem, óculos listrados e uma roupa totalmente cor-de-rosa.  Ela não se
+parece em nada com aquilo que se espera da secretária de um importante
 almirante...
 ~
-2156758 0 0 0 0 0 0 0 500 E
+59606 0 500 S
 27 -2 -25 12d5+800 3d8+12
 20000 40000
 8 8 2
-E
 #28020
-salom�o mestre estaleiro~
-Salom�o~
-Salom�o, o mestre do estaleiro est� aqui.
+salomao mestre estaleiro~
+Salomão~
+Salomão, o mestre do estaleiro está aqui.
 ~
-Salom�o parece ser um homem velho.  Ele est� vestido com um casado azul
-comprido e bon� preto.  Enquanto observa Salom�o andando, voc� nota que ele
-� coxo.  Sua perna esquerda ficou menor que a direita por causa do ataque de
-um tubar�o, h� muitos anos atr�s.
+Salomão parece ser um homem velho.  Ele está vestido com um casado azul
+comprido e boné preto.  Enquanto observa Salomão andando, você nota que ele
+é coxo.  Sua perna esquerda ficou menor que a direita por causa do ataque de
+um tubarão, há muitos anos atrás.
 ~
-2123862 0 0 0 0 0 0 0 250 E
+26710 0 250 S
 30 -8 -40 12d5+1200 3d8+18
 50000 100000
 8 8 1
-E
 #28021
 mestre docas estivador~
 o mestre das docas~
-O mestre das docas est� aqui.
+O mestre das docas está aqui.
 ~
-Voc� v� um empregado das docas.  Sua fun��o � auxiliar os comandantes dos
-navios, coordenar os trabalhadores e manter as instala��es das docas.
+Você vê um empregado das docas.  Sua função é auxiliar os comandantes dos
+navios, coordenar os trabalhadores e manter as instalações das docas.
 ~
-2099268 0 0 0 0 0 0 0 100 E
+2116 0 100 S
 20 10 -8 4d5+990 3d6+12
 500 7000
 8 8 1
-E
 #28022
 trabalhador estivador~
 estivador~
-Um estivador est� aqui, carregando mercadorias para embarcar num navio.
+Um estivador está aqui, carregando mercadorias para embarcar num navio.
 ~
-O estivador � um homem forte.
+O estivador é um homem forte.
 ~
-2097216 0 0 0 0 0 0 0 0 E
+64 0 0 S
 15 5 -5 6d10+650 3d5+8
 500 5000
 8 8 1
-E
 #28023
 marinheiro~
 o marinheiro~
-Um marinheiro est� aqui.
+Um marinheiro está aqui.
 ~
-Voc� v� um homem vestindo uma farda branca.
+Você vê um homem vestindo uma farda branca.
 ~
-2099264 0 0 0 0 0 0 0 50 E
+2112 0 50 S
 15 7 -2 1d10+490 2d5+12
 7500 2000
 8 8 1
-E
 $
