@@ -1,16 +1,16 @@
 #1500
-balança justiça~
-a Balança da Justiça~
-Dois belos pratos moldados como balanças foram deixados aqui.~
+balanca justica~
+a BalanÃ§a da JustiÃ§a~
+Dois belos pratos moldados como balanÃ§as foram deixados aqui.~
 ~
 12 ak 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 10 15000 2200 0 0
 E
-balança justiça~
-Quando você olha para as balanças, você nota que elas parecem se mover de um
-lado para o outro por vontade própria, como se estivessem pesando algo que
-você não consegue ver.
+balanca justica~
+Quando vocÃª olha para as balanÃ§as, vocÃª nota que elas parecem se mover de um
+lado para o outro por vontade prÃ³pria, como se estivessem pesando algo que
+vocÃª nÃ£o consegue ver.
 ~
 A
 3 1
@@ -19,16 +19,16 @@ A
 #1501
 pergaminho~
 O Pergaminho do Mensageiro~
-Você vê um sólido pergaminho forrado de prata deixado no chão~
+VocÃª vÃª um sÃ³lido pergaminho forrado de prata deixado no chÃ£o~
 ~
 12 g 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 500 500 0 0
 E
 pergaminho~
-Parece ser algum tipo de feitiço feito especialmente para transportar seu
-usuário através de vastas distâncias mas agora como fazer uso disso, é
-impossível de se dizer.
+Parece ser algum tipo de feitiÃ§o feito especialmente para transportar seu
+usuÃ¡rio atravÃ©s de vastas distÃ¢ncias mas agora como fazer uso disso, Ã©
+impossÃ­vel de se dizer.
 ~
 A
 14 15
@@ -37,90 +37,90 @@ A
 #1502
 espada flamejante~
 a Espada Flamejante~
-Você fica fascinado diante da visão de uma maravilhosa espada que brilha 
-assim que você se aproxima~
+VocÃª fica fascinado diante da visÃ£o de uma maravilhosa espada que brilha 
+assim que vocÃª se aproxima~
 ~
 5 abgkn 0 0 0 an 0 0 0 0 0 0 0
 0 3 4 11
 10 5000 900 0 0
 E
 espada flamejante~
-A extremidade da lâmina está coberta por uma escrita aparentemente religiosa,
+A extremidade da lÃ¢mina estÃ¡ coberta por uma escrita aparentemente religiosa,
 formando um delicado manuscrito prateado.
 ~
 A
 13 -5
 #1503
-protetor fiéis escudo~
-O Protetor dos Fiéis~
-Um pesado escudo de proteção foi abandonado por aquele que não mereceu 
-segurá-lo.~
+protetor fieis escudo~
+O Protetor dos FiÃ©is~
+Um pesado escudo de proteÃ§Ã£o foi abandonado por aquele que nÃ£o mereceu 
+segurÃ¡-lo.~
 ~
 9 kn 0 0 0 aj 0 0 0 0 0 0 0
 15 0 0 0
 20 5000 1500 60 0
 E
-protetor fiéis escudo~
-O escudo distorce a sua vista em todas as sua vãs tentativas para fixá-lo 
-assim como distorcerá tudo aquilo que tentar atingir você para matá-lo.
+protetor fieis escudo~
+O escudo distorce a sua vista em todas as sua vÃ£s tentativas para fixÃ¡-lo 
+assim como distorcerÃ¡ tudo aquilo que tentar atingir vocÃª para matÃ¡-lo.
 ~
 #1504
 faixa pano roto~
 uma Faixa Rota~
-Um gasto e roto pedaço de pano foi deixado aqui, esquecido.~
+Um gasto e roto pedaÃ§o de pano foi deixado aqui, esquecido.~
 ~
 12 j 0 0 0 ai 0 0 0 0 0 0 0
 0 0 0 0
 1 15 50 0 0
 E
 faixa pano roto~
-Há alguma insignia militar nele, talvez o indício de um premio ou
-condecoração de alguma ordem militar ainda desconhecida por você.
+HÃ¡ alguma insignia militar nele, talvez o indÃ­cio de um premio ou
+condecoraÃ§Ã£o de alguma ordem militar ainda desconhecida por vocÃª.
 ~
 A
 6 2
 A
 5 -1
 #1505
-cimitarra encrustrada lâmina~
+cimitarra encrustrada lamina~
 uma Cimitarra Encrustrada~
-Uma lâmina encurvada brilhando fortemente foi deixada no chão.~
+Uma lÃ¢mina encurvada brilhando fortemente foi deixada no chÃ£o.~
 ~
 5 akn 0 0 0 an 0 0 0 0 0 0 0
 0 7 1 3
 5 5000 500 0 0
 E
-cimitarra encrustrada lâmina~
-Todas a borda e a extremidade do cabo da cimitarra são ornados com
+cimitarra encrustrada lamina~
+Todas a borda e a extremidade do cabo da cimitarra sÃ£o ornados com
 deslumbrantes pedras e metais preciosos.
 ~
 #1506
 brasa chamuscante~
 uma brasa chamuscante~
-Você percebe uma chama ainda queimando deixada no chão, bem aos seus pés.~
+VocÃª percebe uma chama ainda queimando deixada no chÃ£o, bem aos seus pÃ©s.~
 ~
 1 ajnopt 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
 1 5 2500 0 0
 E
 brasa chamuscante~
-Isso faísca bem às suas costas, quase furiosamente.
+Isso faÃ­sca bem Ã s suas costas, quase furiosamente.
 ~
 A
 18 2
 A
 12 10
 #1507
-chama etérea~
-uma chama etérea~
-A sala inteira se ilumina com a chama aos seus pés.~
+chama eterea~
+uma chama etÃ©rea~
+A sala inteira se ilumina com a chama aos seus pÃ©s.~
 ~
 1 ajkop 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
 1 5 2500 0 0
 E
-chama etérea~
-Mesmo estando tão perto, isso preenche você com um reconfortante sentimento 
+chama eterea~
+Mesmo estando tÃ£o perto, isso preenche vocÃª com um reconfortante sentimento 
 de paz.
 ~
 A
@@ -128,38 +128,38 @@ A
 A
 13 10
 #1508
-chave portões~
-a Chave para os Portões~
-Você encontrou a última Chave para os Portões da eternidade.~
+chave portoes~
+a Chave para os PortÃµes~
+VocÃª encontrou a Ãºltima Chave para os PortÃµes da eternidade.~
 ~
 18 aikl 0 0 0 ao 0 0 0 0 0 0 0
 1508 0 0 0
 1 1000 500 0 0
 E
-chave portões~
-Não há portões, eles estão dentro de você.
+chave portoes~
+NÃ£o hÃ¡ portÃµes, eles estÃ£o dentro de vocÃª.
 ~
 A
 3 2
 #1509
-história livro queimado~
-a História Queimada~
-Você achou um livro queimado, alguém esqueceu história jogada no chão.~
+historia livro queimado~
+a HistÃ³ria Queimada~
+VocÃª achou um livro queimado, alguÃ©m esqueceu histÃ³ria jogada no chÃ£o.~
 ~
 13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 2 10 500 0 0
 E
-história livro queimado~
-Então esta é a piada do zombeteiro. Todo nosso trabalho virou pó,
-e acabará em nada. É por isso que ele ri.
+historia livro queimado~
+EntÃ£o esta Ã© a piada do zombeteiro. Todo nosso trabalho virou pÃ³,
+e acabarÃ¡ em nada. Ã‰ por isso que ele ri.
 ~
 A
 4 2
 #1510
 surata livro pergaminho~
 a Surata do Livro~
-Você percebe um fino pergaminho, com uma escrita rica e ornamento decorativo.~
+VocÃª percebe um fino pergaminho, com uma escrita rica e ornamento decorativo.~
 ~
 1 dklmnt 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
@@ -167,18 +167,18 @@ Você percebe um fino pergaminho, com uma escrita rica e ornamento decorativo.~
 E
 surata livro pergaminho~
 Al-Kafirun
-Disse: "Ah sim, aquele que rejeita a fé, eu nao adoro o que você adora,
-nem você adora o que eu adoro. Para você é seu caminho, e para mim o meu."
+Disse: "Ah sim, aquele que rejeita a fÃ©, eu nao adoro o que vocÃª adora,
+nem vocÃª adora o que eu adoro. Para vocÃª Ã© seu caminho, e para mim o meu."
 ~
 A
 18 3
 A
 19 3
 #1511
-luvas união~
-as Luvas da União~
+luvas uniao~
+as Luvas da UniÃ£o~
 Foi certamente o melhor homem de todos os homens que deixou estas luvas 
-para ajudá-lo.~
+para ajudÃ¡-lo.~
 ~
 9 iklmnt 0 0 0 ah 0 0 0 0 0 0 0
 5 0 0 0
@@ -190,24 +190,24 @@ A
 #1512
 ankh colar~
 uma Ankh~
-Você vê um maravilhoso colar de um nobre ancião habilidoso.~
+VocÃª vÃª um maravilhoso colar de um nobre anciÃ£o habilidoso.~
 ~
 11 al 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
 3 5000 2000 0 0
 E
 ankh colar~
-É uma versão ainda mais antiga da velha cruz Cristã, com uma volta
-completa toda feita em ouro branco emoldura os braços da cruz.
+Ã‰ uma versÃ£o ainda mais antiga da velha cruz CristÃ£, com uma volta
+completa toda feita em ouro branco emoldura os braÃ§os da cruz.
 ~
 A
 12 10
 A
 12 5
 #1513
-amuleto rá~
-o Amuleto de Rá~
-Você encontrou um maravilhoso e brilhante disco com a imagem dourada do deus Sol.~
+amuleto ra~
+o Amuleto de RÃ¡~
+VocÃª encontrou um maravilhoso e brilhante disco com a imagem dourada do deus Sol.~
 ~
 11 ag 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
@@ -218,9 +218,9 @@ A
 4 2
 #1514
 imagem azathoth graven~
-a Desprezível Imagem de Azathoth~
-Você olha com absoluto desprezo para o repugnante ícone do falso deus que 
-você encontrou.~
+a DesprezÃ­vel Imagem de Azathoth~
+VocÃª olha com absoluto desprezo para o repugnante Ã­cone do falso deus que 
+vocÃª encontrou.~
 ~
 1 jlq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
