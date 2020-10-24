@@ -62,7 +62,6 @@ cgo :6 -700 S
 15 0 10 1d3+210 3d7+2
 666 22300
 8 8 1
-S
 #9905
 quebrado~
 alguém todo quebrado~
@@ -75,7 +74,6 @@ gjkno :6 -400 S
 20 -1 2 1d1+666 2d9+4
 2500 39000
 8 8 1
-S
 #9906
 capanga~
 o capanga~
@@ -87,7 +85,6 @@ bcjmo :6 -699 S
 18 0 3 1d1+320 6d3+3
 1000 24450
 8 8 1
-S
 #9907
 planta~
 um homem-planta~
@@ -99,7 +96,6 @@ bfno :6:28 -800 S
 40 -1 -9 2d9+2850 10d4+3
 12000 120000
 8 8 1
-S
 #9908
 gorgimera~
 a Gorgimera~
@@ -113,7 +109,6 @@ bflnopq :6:17:19 100 S
 80 0 -10 4d8+12001 10d9+25
 25000 500000
 8 8 2
-S
 #9909
 morte cavaleiro~
 O Cavaleiro da Morte~
@@ -126,9 +121,8 @@ glnoq :6:13:17 -900 S
 38 -10 -20 9d6+5050 11d4+20
 33000 250000
 8 8 1
-S
 #9910
-abismo dragão cobra~
+abismo dragao cobra~
 o dragão do abismo~
 Uma enorme cobra deita-se aqui, mastigando um corpo humano.
 ~
@@ -140,9 +134,8 @@ bdjklnoq :6:7:28 -700 S
 43 -10 -30 1d1+12000 4d12+38
 66000 1100000
 8 8 1
-S
 #9911
-traidor anão~
+traidor anao~
 o Anão traidor~
 O traidor está parado aqui, gritando.
 ~
@@ -153,7 +146,6 @@ gf :0:6 -250 S
 10 0 0 25d8+100 4d3+3
 6662 6950
 8 8 1
-S
 #9912
 elfo~
 o elfo errante~
@@ -167,9 +159,8 @@ gilmno :6:7:12 700 S
 30 -5 -10 250d1+1000 10d3+8
 1500 100000
 8 8 1
-S
 #9913
-efreeti espírito~
+efreeti espirito~
 o Efreeti~
 Um espírito está levitando aqui, com um cruel sorriso em sua face.
 ~
@@ -181,7 +172,6 @@ belnopqt :1:7:17:25 0 S
 100 -40 -40 5d10+23900 11d11+70
 79000 4750000
 8 8 1
-S
 #9914
 medusa mulher~
 a Medusa~
@@ -194,7 +184,6 @@ bjlno :6:28 -800 S
 50 0 -10 6d66+3666 4d10+22
 30250 389000
 8 8 2
-S
 #9915
 estúpido orc~
 o Orc~
@@ -206,9 +195,8 @@ cg :6 -1000 S
 10 5 10 25d3+5 2d6+1
 250 1300
 8 8 1
-S
 #9916
-garçom~
+garcom~
 o garçom~
 Há um garçom parado aqui, aguardando por suas ordens.
 ~
@@ -218,7 +206,6 @@ bmno :6 -100 S
 30 0 -10 1d1+5650 5d5+5
 15000 125000
 8 8 1
-S
 #9917
 cidadão~
 um cidadão de Ghenna~
@@ -231,7 +218,6 @@ cg :6 666 S
 10 3 9 1d1+150 6d2+3
 2200 6000
 8 8 1
-S
 #9918
 senhora velha vendedora~
 uma vendedora~
@@ -244,7 +230,6 @@ cgno :6 400 S
 10 -5 10 1d1+450 2d10+2
 5000 7000
 8 8 2
-S
 #9923
 mestre espadachim homem~
 o mestre espadachim de Ghenna~
@@ -259,7 +244,6 @@ belnopq :6:7:17 -700 S
 100 -30 -40 1d8+20000 14d3+65
 100000 3250000
 8 8 1
-S
 #9931
 parede pé~
 um pé saindo da parede~
@@ -270,7 +254,6 @@ befh 0 0 S
 20 2 10 1d10+750 2d5+8
 15 36000
 8 8 1
-S
 #9932
 parede braço~
 um braço saindo da parede~
@@ -281,9 +264,8 @@ befh 0 0 S
 20 2 10 1d10+720 2d6+7
 15 32000
 8 8 1
-S
 #9933
-estátua rocha golem~
+estatua rocha golem~
 o golem de rocha~
 Uma grande estátua de um humanóide esculpida em granito, está aqui.
 ~
@@ -295,7 +277,6 @@ blmo :6 0 S
 61 0 -10 1d1+10000 10d3+25
 43567 700000
 8 8 1
-S
 #9964
 boneca~
 a boneca~
@@ -309,7 +290,6 @@ bce 0 0 S
 5 7 1 1d1+175 2d5+5
 200 5900
 8 8 2
-S
 #9971
 mulher~
 uma mulher~
@@ -321,7 +301,6 @@ bo 0 300 S
 20 0 0 1d1+375 5d3+5
 5300 9000
 6 6 2
-S
 #9972
 lester~
 Lester~
@@ -333,7 +312,6 @@ bno 0 -600 S
 20 0 0 1d1+880 5d3+5
 3000 10250
 8 8 1
-S
 #9975
 mulher~
 a mulher~
@@ -346,9 +324,8 @@ bfhjn 0 -700 S
 15 2 3 1d1+300 5d3+7
 10000 20000
 8 6 2
-S
 #9981
-morto anão~
+morto anao~
 o Anão~
 Um Anão está deitado aqui.
 ~
@@ -370,7 +347,6 @@ gj 0 -600 S
 20 0 0 30d5+20 4d4+7
 943 10900
 8 8 1
-S
 #9986
 maedar mestre~
 o mestre Maedar~
@@ -396,9 +372,8 @@ gino :7:12 800 S
 30 -3 0 5d5+625 4d4+10
 25000 138000
 8 8 1
-S
 #9989
-dragão dragonet~
+dragao dragonet~
 o Dragonet~
 Um fraco e pequeno dragão esta parado aqui, olhando para você com profundos olhos azuis. 
 ~
@@ -409,7 +384,6 @@ cg 0 500 S
 30 0 0 2d4+100 3d4+3
 350 5200
 8 8 1
-S
 #9994
 barata~
 a barata~
@@ -421,7 +395,6 @@ bnoq 0 -351 S
 50 -5 -10 1d1+750 5d7+33
 7500 99500
 8 8 2
-S
 #9997
 deepspawn~
 o Deepspawn~
@@ -437,5 +410,4 @@ bejnoq :12:13:17 -600 S
 60 -7 -10 1d1+1901 3d7+40
 40000 285000
 8 8 1
-S
 $
