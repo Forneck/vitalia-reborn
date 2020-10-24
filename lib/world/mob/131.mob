@@ -1,11 +1,128 @@
+<<<<<<< HEAD
+=======
+#13101
+guarda preguicoso soldado~
+um guarda preguiçoso~
+Uma solitária sentinela está aqui vigiando a entrada.
+~
+Esta sentinela parece ter muito tempo livre, pois não possui serviço algum. 
+Ele é grisalho e parece ser bastante idoso...
+~
+43098 0 100 S
+20 8 2 20d30+950 2d3+10
+550 13385
+8 8 0
+#13102
+sombra monstro~
+uma sombra~
+Sombras se movem ao seu redor, parcialmente substanciais porém vivas.
+~
+Esta criatura da sombra está temporariamente aqui nesta dimensão e está 
+olhando você com bastante medo. Você gostaria de bater intensamente nela, 
+pois ela está lhe tocando...  
+~
+237640 524288 -100 S
+20 8 2 5d20+943 2d3+10
+0 13385
+8 8 0
+#13103
+homem serpente cobra lagarto~
+um homem-serpente~
+Um homem-serpente está aqui bastante confuso observando ao redor. 
+~
+Um homem-serpente está aqui dizendo: "eu devo servir ao mestre". Você 
+gostaria de saber o motivo...?
+~
+202 0 0 S
+23 9 1 30d30+1546 2d4+11
+700 19117
+8 8 0
+#13104
+lorgeth homem sombra rei~
+Lorgeth~
+Um homem está aqui mexendo os braços e dando ordens às sombras.
+~
+Um gigante de mais ou menos 3 metros de altura está aqui. Ele possui um 
+olhar como se quisesse impor algo. Todas as sombras estão fazendo o que 
+ele pede, igual um fanatismo religioso. As sombras ao seu redor pedem que 
+você se curve perante Lorgeth. Quem é Lorgeth?  Oh, este homem aqui deve 
+ser Lorgeth.
+~
+10314 0 -50 S
+50 29 -3 1d1+5000 4d5+25
+2333 138481
+8 8 0
+#13105
+fonte animada movendo~
+uma fonte animada~
+Uma fonte cheia de um líquido verde está aqui.
+~
+Esta fonte está cheia de um líquido verde. Quando você observa mais de 
+perto consegue ver seu movimento! De fato, ela está movendo-se na sua 
+direção... 
+~
+6154 0 -30 S
+20 8 2 8d20+952 2d3+10
+0 13385
+8 8 0
+#13106
+sharel sombra~
+Sharel~
+O chefe do exército das sombras, Sharel, se levanta aqui no meio de suas tropas.
+~
+Esta sombra parece ser muito importante. Você imagina ser o comandante. 
+Seu nome é Sharel, pois foi sussurrado pelas sombras ao seu redor.
+~
+2138 0 -30 S
+23 9 1 10d23+1537 2d4+11
+700 19117
+8 8 0
+#13107
+monstro escuridao olhos~
+o monstro da escuridão~
+Olhos vermelhos e brilhantes estão fixados em você do meio da escuridão.
+~
+Esta criatura deve possuir um tamanho incrível, pois você consegue ver 
+somente algumas pequenas partes dele enquanto se aproxima.
+~
+198666 0 -300 S
+22 9 1 22d12+1400 2d3+11
+0 17068
+8 8 0
+#13108
+garin homem camuflado~
+Garin~
+Um homem está aqui encostado contra a parede tentando se camuflar.
+~
+Olhando melhor você nota que Garin é um veterano de guerra. Aprendeu a se 
+esconder com grande facilidade e você não tem certeza de estar vendo ele, 
+pois poderia ser somente uma sombra deste grande guerreiro. 
+~
+174170 524288 0 S
+25 11 0 25d12+1934 2d4+12
+800 23646
+8 8 0
+#13109
+criado humilde templo~
+o criado~
+Um humilde criado está aqui limpando o templo.
+~
+Este empregado viveu uma vida privada e solitária. Viveu toda sua vida nos 
+templos.
+~
+204 0 50 S
+18 7 3 18d12+715 1d6+9
+450 10232
+8 8 0
+>>>>>>> 0c26d7dddba176cb211be0532ee046d3d98cdf69
 #13110
 mendo cavaleiro templar~
 o cavaleiro Mendo~
 O grande Templar Mendo com seu templo no fundo esta aqui.
 ~
-Um homem antigo, contudo grande est� aqui. Deve ser o Templar Mendo, porque 
-foram espalhados boatos de que nada poderia prejudic�-lo pois possui a 
-prote��o de um deus.
+Um homem antigo, contudo grande está aqui. Deve ser o Templar Mendo, porque 
+foram espalhados boatos de que nada poderia prejudicá-lo pois possui a 
+proteção de um deus.
 ~
 2099546 0 0 0 0 0 0 0 300 E
 50 29 -3 1d1+5000 4d5+25
@@ -13,12 +130,12 @@ prote��o de um deus.
 8 8 0
 E
 #13111
-cidad�o torin~
-um cidad�o~
-Um cidad�o de Torin admira a ordem que � mantida aqui.
+cidadao torin~
+um cidadão~
+Um cidadão de Torin admira a ordem que é mantida aqui.
 ~
-Esta � uma pessoa normal. Ela parece estar vagando h� pouco tempo por 
-estas ruas que ainda n�o foram infestadas pelas sombras.
+Esta é uma pessoa normal. Ela parece estar vagando há pouco tempo por 
+estas ruas que ainda não foram infestadas pelas sombras.
 ~
 2097224 0 0 0 0 0 0 0 20 E
 15 5 4 15d12+430 1d5+7
@@ -28,9 +145,9 @@ E
 #13112
 guarda cidade sentinela torin~
 um sentinela de Torin~
-Um homem est� aqui guardando as ruas da cidade.
+Um homem está aqui guardando as ruas da cidade.
 ~
-Um veterano das guerras de Torin est� trabalhando agora como um sentinela. 
+Um veterano das guerras de Torin está trabalhando agora como um sentinela. 
 Infelizmente :(
 ~
 2103388 0 0 0 0 0 0 0 150 E
@@ -41,10 +158,10 @@ E
 #13113
 sagrado guarda~
 o guarda sagrado~
-Um dos guardas Sagrados contra a invas�o das Sombras.
+Um dos guardas Sagrados contra a invasão das Sombras.
 ~
-Um enorme guarda est� aqui protegendo sua amada cidade, o lugar sagrado, 
-onde as sombras n�o s�o permitidas irem.
+Um enorme guarda está aqui protegendo sua amada cidade, o lugar sagrado, 
+onde as sombras não são permitidas irem.
 ~
 2136154 0 0 0 0 0 0 0 100 E
 34 17 -20 12d14+400 3d6+17
@@ -52,14 +169,14 @@ onde as sombras n�o s�o permitidas irem.
 8 8 0
 E
 #13114
-melki homem cidad�o caverna~
+melki homem cidadao caverna~
 Melki~
-O que parece ser um cidad�o de Torin antes procurava comida nas cavernas.
+O que parece ser um cidadão de Torin antes procurava comida nas cavernas.
 ~
-Este homem foi uma vez um cidad�o de Torin, ou pelo menos as roupas indicam. 
-Suas roupas est�o completamente rasgadas e sujas. Isto parece ter acontecido 
-em das invas�es das sombras. Voc� nota que ele est� usando uma etiqueta com 
-o nome... Dizendo o seguinte "Melki, inquisidor principal do Imp�rio".
+Este homem foi uma vez um cidadão de Torin, ou pelo menos as roupas indicam. 
+Suas roupas estão completamente rasgadas e sujas. Isto parece ter acontecido 
+em das invasões das sombras. Você nota que ele está usando uma etiqueta com 
+o nome... Dizendo o seguinte "Melki, inquisidor principal do Império".
 ~
 2105420 0 0 0 0 0 0 0 10 E
 26 11 -4 12d20+1965 2d5+13
@@ -67,12 +184,12 @@ o nome... Dizendo o seguinte "Melki, inquisidor principal do Imp�rio".
 8 8 0
 E
 #13115
-adorin homem caverna cidad�o~
+adorin homem caverna cidadao~
 Adorin~
-No passado este cidad�o de Torin se orgulhava de ver o mundo se desmoronando.
+No passado este cidadão de Torin se orgulhava de ver o mundo se desmoronando.
 ~
-Adorin, o conselheiro do Rei de Torin est� aqui olhando desanimado. Ele 
-esteve desempregado durante um bom tempo s� pelo aspecto de suas roupas.
+Adorin, o conselheiro do Rei de Torin está aqui olhando desanimado. Ele 
+esteve desempregado durante um bom tempo só pelo aspecto de suas roupas.
 ~
 2111564 0 0 0 0 0 0 0 10 E
 26 11 -4 20d20+1765 2d5+13
@@ -85,7 +202,7 @@ uma lesma~
 Uma gigantesca e enlodada lesma escala as paredes.
 ~
 Uma antiga e gigantesca lesma escala as paredes da caverna. Aparentemente 
-ela � mais antiga que a pr�pria caverna. N�o fa�a muita amizade com esta 
+ela é mais antiga que a própria caverna. Não faça muita amizade com esta 
 coisa, pois ela possui dentes...
 ~
 2129992 0 0 0 0 0 0 0 -50 E
@@ -96,10 +213,10 @@ E
 #13117
 morcego rato voando~
 um morcego~
-Um ENORME morcego est� voando por aqui.
+Um ENORME morcego está voando por aqui.
 ~
-Quando voc� olha melhor percebe que n�o � um rato, e sim um gigantesco 
-morcego! N�o parece ser muito amig�vel.
+Quando você olha melhor percebe que não é um rato, e sim um gigantesco 
+morcego! Não parece ser muito amigável.
 ~
 2097368 0 0 0 0 0 0 0 -50 E
 15 5 4 20d20+791 1d5+7
@@ -108,8 +225,8 @@ morcego! N�o parece ser muito amig�vel.
 E
 #13118
 gigante pedra secreto~
-um gigantesco g�rgula de pedra~
-Um gigante de pedra est� parado aqui parecendo que est� dormindo.
+um gigantesco gárgula de pedra~
+Um gigante de pedra está parado aqui parecendo que está dormindo.
 ~
 Este antigo gigante se transformou em pedra. Seu imenso punho poderia lhe 
 esmagar e retirar sua vida muito rapidamente.
@@ -120,12 +237,12 @@ esmagar e retirar sua vida muito rapidamente.
 8 8 0
 E
 #13119
-guarda guardi�o sagrado~
-o Guardi�o Sagrado~
-Um Guardi�o dos Corredores Sagrados est� aqui lhe fazendo sentir inc�modo.
+guarda guardiao sagrado~
+o Guardião Sagrado~
+Um Guardião dos Corredores Sagrados está aqui lhe fazendo sentir incômodo.
 ~
-Um gigante guardi�o vigia as portas dos Corredores Sagrados. Voc� pensa que 
-ele poderia levar isto realmente � mal se voc� tentasse entrar.
+Um gigante guardião vigia as portas dos Corredores Sagrados. Você pensa que 
+ele poderia levar isto realmente à mal se você tentasse entrar.
 ~
 2140250 0 0 0 0 0 0 0 100 E
 23 9 8 20d20+1130 2d4+11
@@ -135,10 +252,10 @@ E
 #13120
 monge antigo~
 um antigo monge~
-Um antigo monge est� limpando os corredores.
+Um antigo monge está limpando os corredores.
 ~
-Este monge j� est� limpando os corredores desde antes de voc� nascer.  
-As rugas na face e nas m�os lhe faz ter a id�ia da idade dele, e observando    
+Este monge já está limpando os corredores desde antes de você nascer.  
+As rugas na face e nas mãos lhe faz ter a idéia da idade dele, e observando    
 melhor percebe perfeitamente que ele viveu toda a vida aqui.
 ~
 2105436 0 0 0 0 0 0 0 10 E
@@ -149,9 +266,9 @@ E
 #13121
 sombra menos amiga opressiva~
 um sombra~
-Uma sombra menos opressiva est� aqui.
+Uma sombra menos opressiva está aqui.
 ~
-Estas sombras s�o amig�veis e definitivamente menos opressivas.
+Estas sombras são amigáveis e definitivamente menos opressivas.
 ~
 2097224 0 0 0 524288 0 0 0 50 E
 23 9 8 20d20+730 2d4+11
@@ -161,11 +278,11 @@ E
 #13122
 rei sombras sombra~
 o Rei das Sombras~
-O Rei das Sombras est� aqui criando mais sombras mal�ficas.
+O Rei das Sombras está aqui criando mais sombras maléficas.
 ~
-O Rei das Sombras que no passado foi o Rei de Torin, est� aqui. Ele est� 
-criando mais daquelas sombras que voc� viu anteriormente. Ele est� usando 
-uma magia muito poderosa; voc� consegue sentir isto daqui.
+O Rei das Sombras que no passado foi o Rei de Torin, está aqui. Ele está 
+criando mais daquelas sombras que você viu anteriormente. Ele está usando 
+uma magia muito poderosa; você consegue sentir isto daqui.
 ~
 2107514 0 0 0 270344 0 0 0 -600 E
 36 18 -20 1d1+2425 3d7+18
@@ -175,9 +292,9 @@ E
 #13123
 sombra mutante~
 uma sombra mutante~
-Este ser grotesco deve ser um legend�rio mutante.
+Este ser grotesco deve ser um legendário mutante.
 ~
-Deve ter sido este ser grotesco que conduziu Torin � destrui��o... 
+Deve ter sido este ser grotesco que conduziu Torin à destruição... 
 ~
 2105548 0 0 0 8192 0 0 0 -60 E
 20 8 2 20d20+730 2d3+10
@@ -187,11 +304,11 @@ E
 #13124
 grande sombra larga~
 uma grande sombra~
-Uma grande sombra est� aqui esperando pelas ordens de seu rei. 
+Uma grande sombra está aqui esperando pelas ordens de seu rei. 
 ~
-Uma das mais fortes sombras est� aqui. Esta parece ser uma daquela 
-recentemente criada pelo Rei. Elas est�o sendo criadas por uma magia 
-fort�ssima.
+Uma das mais fortes sombras está aqui. Esta parece ser uma daquela 
+recentemente criada pelo Rei. Elas estão sendo criadas por uma magia 
+fortíssima.
 ~
 2097226 0 0 0 0 0 0 0 -100 E
 26 11 -4 20d20+1430 2d5+13
@@ -199,13 +316,13 @@ fort�ssima.
 8 8 0
 E
 #13125
-mutante r� mutada~
-uma r� magicamente mutada~
-O que parece ter sido uma r� est� faminta.
+mutante ra mutada~
+uma rã magicamente mutada~
+O que parece ter sido uma rã está faminta.
 ~
-O que antes parecia ser uma r� foi magicamente alterado. Agora mesmo ele 
-olha ao redor procurando por comida. Voc� espera que ele n�o pense que 
-voc� seja uma.
+O que antes parecia ser uma rã foi magicamente alterado. Agora mesmo ele 
+olha ao redor procurando por comida. Você espera que ele não pense que 
+você seja uma.
 ~
 2097294 0 0 0 524288 0 0 0 0 E
 7 1 7 7d6+4 1d2+3
@@ -215,10 +332,10 @@ E
 #13126
 sombrio guarda grande~
 o guarda sombrio~
-Uma grande sombra est� aqui olhando voc�, ele possui a posi��o de um guarda.
+Uma grande sombra está aqui olhando você, ele possui a posição de um guarda.
 ~
-Esta grande sombra possui praticamente 1 metro a mais que voc�, e parece 
-querer lhe intimidar. Por causa do amuleto que ele usa voc� tem certeza 
+Esta grande sombra possui praticamente 1 metro a mais que você, e parece 
+querer lhe intimidar. Por causa do amuleto que ele usa você tem certeza 
 que ele foi um guarda da antiga cidade de Torin.
 ~
 2097162 0 0 0 524288 0 0 0 -140 E
@@ -229,9 +346,9 @@ E
 #13127
 tenente dorin sombra torin~
 tenente Dorin~
-O tenente Dorin do ex�rcito de Torin est� aqui.
+O tenente Dorin do exército de Torin está aqui.
 ~
-Este � o forte tenente de Torin. Embora, ele tenha se tornado uma das 
+Este é o forte tenente de Torin. Embora, ele tenha se tornado uma das 
 sombras que atacou esta cidade.
 ~
 35651594 0 0 0 16 0 0 0 0 E
@@ -242,12 +359,12 @@ E
 #13128
 fantasma jovem senhora transparente torin~
 o fantasma de uma jovem senhora~
-Uma jovem est� aqui, entretanto ela parece estar transparente, ser� um fantasma?
+Uma jovem está aqui, entretanto ela parece estar transparente, será um fantasma?
 ~
-Esta jovem se orgulha de poder estar em seu pr�prio quarto, entretanto voc� 
-n�o possui pista alguma do porque deste quarto estar fora dos corredores 
+Esta jovem se orgulha de poder estar em seu próprio quarto, entretanto você 
+não possui pista alguma do porque deste quarto estar fora dos corredores 
 principais de Torin. Ela parece ser um fantasma, pois esta transparente e 
-realmente n�o parece notar que voc� est� aqui.
+realmente não parece notar que você está aqui.
 ~
 539205706 0 0 0 0 0 0 0 0 E
 21 8 1 1d1+900 2d3+10
@@ -255,11 +372,11 @@ realmente n�o parece notar que voc� est� aqui.
 8 8 2
 E
 #13129
-cidad�o torin fantasmag�rico~
-o cidad�o fantasmag�rico de Torin~
-Um cidad�o de Torin, ou pelo menos j� foi um cidad�o de Torin.
+cidadao torin fantasmagorico~
+o cidadão fantasmagórico de Torin~
+Um cidadão de Torin, ou pelo menos já foi um cidadão de Torin.
 ~
-Uma vez esta coisa foi um cidad�o de, e h� pouco tempo era uma pessoa 
+Uma vez esta coisa foi um cidadão de, e há pouco tempo era uma pessoa 
 normal.  Mas de alguma maneira sua alma foi retirada.
 ~
 539140168 0 0 0 524288 0 0 0 0 E
@@ -268,15 +385,15 @@ normal.  Mas de alguma maneira sua alma foi retirada.
 8 8 1
 E
 #13130
-cidad�o torin fantasmag�rico~
-o cidad�o fantasmag�rico de Torin~
-Um cidad�o de Torin, ou pelo menos j� foi um cidad�o de Torin.
+cidadao torin fantasmagorico~
+o cidadão fantasmagórico de Torin~
+Um cidadão de Torin, ou pelo menos já foi um cidadão de Torin.
 ~
-Uma vez esta coisa foi um cidad�o de Torin, e h� pouco tempo era uma 
-pessoa normal. Mas de alguma maneira quando a ocupa��o come�ou ou talvez 
-depois da transforma��o que ocorreu, a pobre alma desta mulher foi 
+Uma vez esta coisa foi um cidadão de Torin, e há pouco tempo era uma 
+pessoa normal. Mas de alguma maneira quando a ocupação começou ou talvez 
+depois da transformação que ocorreu, a pobre alma desta mulher foi 
 apanhada. E agora ela caminha por estar ruas simplesmente esperando que 
-algu�m possa a livrar deste mal.
+alguém possa a livrar deste mal.
 ~
 539140168 0 0 0 0 0 0 0 0 E
 21 8 1 1d1+900 2d3+10
@@ -286,7 +403,7 @@ E
 #13131
 bola azul brilhante luz~
 a bola azul brilhante~
-Uma bola azul brilhante paira aqui, mas voc� n�o tem certeza como ela emitindo luz.
+Uma bola azul brilhante paira aqui, mas você não tem certeza como ela emitindo luz.
 ~
 Este estranho objeto parece estar vivo. Esta coisa brilha e de fato emite 
 bastante de luz.
@@ -298,11 +415,11 @@ bastante de luz.
 E
 #13132
 soldado Torin fantasmagorico procurando algo~
-um soldado fantasmag�rico de Torin~
-Este soldado caminha pelos quart�is do batalh�o, enquanto procura algo..
+um soldado fantasmagórico de Torin~
+Este soldado caminha pelos quartéis do batalhão, enquanto procura algo..
 ~
-Este soldado tem vagado por estes quart�is durante s�culos, desde a �ltima 
-batalha de Torin. Ele parece ter perdido algo e est� procurando.
+Este soldado tem vagado por estes quartéis durante séculos, desde a última 
+batalha de Torin. Ele parece ter perdido algo e está procurando.
 ~
 539140184 0 0 0 0 0 0 0 0 E
 21 8 1 1d1+900 2d3+10
@@ -311,11 +428,11 @@ batalha de Torin. Ele parece ter perdido algo e est� procurando.
 E
 #13133
 soldado Torin fantasmagorico procurando algo~
-um soldado fantasmag�rico de Torin~
-Este soldado caminha pelos quart�is do batalh�o, enquanto procura algo..
+um soldado fantasmagórico de Torin~
+Este soldado caminha pelos quartéis do batalhão, enquanto procura algo..
 ~
-Este soldado tem vagado por estes quart�is durante s�culos, desde a �ltima 
-batalha de Torin. Ele parece ter perdido algo e est� procurando.
+Este soldado tem vagado por estes quartéis durante séculos, desde a última 
+batalha de Torin. Ele parece ter perdido algo e está procurando.
 ~
 539140184 0 0 0 524288 0 0 0 0 E
 21 8 1 1d1+900 2d3+10
@@ -323,13 +440,13 @@ batalha de Torin. Ele parece ter perdido algo e est� procurando.
 8 8 2
 E
 #13134
-n�voa coisa escurid�o sombra~
-a n�voa~
-A n�voa se intensifica aqui... talvez seja algo, talvez uma sombra, talvez nada.
+nevoa coisa escuridao sombra~
+a névoa~
+A névoa se intensifica aqui... talvez seja algo, talvez uma sombra, talvez nada.
 ~
-Muita n�voa aqui. Parece ser quase uma criatura viva, mas voc� n�o tem 
-certeza.  Tudo o que voc� est� vendo n�o parece ser s�lido, pois se fosse 
-e se tiver vida esta criatura teria uma mobilidade incr�vel. 
+Muita névoa aqui. Parece ser quase uma criatura viva, mas você não tem 
+certeza.  Tudo o que você está vendo não parece ser sólido, pois se fosse 
+e se tiver vida esta criatura teria uma mobilidade incrível. 
 ~
 539748428 0 0 0 20 0 0 0 0 E
 32 15 -20 1d1+2325 3d5+16
@@ -339,12 +456,12 @@ E
 #13135
 mendo aprendiz luz cavaleiro~
 o aprendiz de mendo~
-Um aprendiz do poderoso cavaleiro Mendo est� aqui.
+Um aprendiz do poderoso cavaleiro Mendo está aqui.
 ~
-Este grande homem est� aqui, esperando pela pr�xima li��o que Mendo dar�. 
-Voc� pode o caracterizar pela sua roupa colorida, pela disposi��o, e pelo 
-fato dele servir a Mendo. Ele lembra vagamente de voc� como um paladino, 
-mas n�o existe nenhum paladino, a menos que ele esteja se confundindo.
+Este grande homem está aqui, esperando pela próxima lição que Mendo dará. 
+Você pode o caracterizar pela sua roupa colorida, pela disposição, e pelo 
+fato dele servir a Mendo. Ele lembra vagamente de você como um paladino, 
+mas não existe nenhum paladino, a menos que ele esteja se confundindo.
 ~
 2103626 0 0 0 8 0 0 0 500 E
 35 17 -20 1d1+2400 3d6+17
@@ -352,13 +469,13 @@ mas n�o existe nenhum paladino, a menos que ele esteja se confundindo.
 8 8 1
 E
 #13136
-bajulador oprimido homem cidad�o rei~
+bajulador oprimido homem cidadao rei~
 o bajulador que antecede a corte do rei~
-Um oprimido est� aqui em trapos antecedendo � corte do rei.
+Um oprimido está aqui em trapos antecedendo à corte do rei.
 ~
-Ele j� foi um s�cio do tribunal de Torin, e esta agora surrupiando comida 
+Ele já foi um sócio do tribunal de Torin, e esta agora surrupiando comida 
 dentro destas cavernas. Aparentemente muitos reis se perderam dentro deste 
-lugar e simplesmente nunca conseguiram encontrar uma sa�da, mas com certeza 
+lugar e simplesmente nunca conseguiram encontrar uma saída, mas com certeza 
 ainda devem estar vivos...
 ~
 2097224 0 0 0 0 0 0 0 0 E
@@ -367,11 +484,11 @@ ainda devem estar vivos...
 8 8 1
 E
 #13137
-cl�rigo branco roup�o mulher~
-um cl�rigo da luz~
-Um cl�rigo da luz est� aqui em seu roup�o branco.
+clerigo branco roupao mulher~
+um clérigo da luz~
+Um clérigo da luz está aqui em seu roupão branco.
 ~
-Este personagem parece estar brilhando, voc� n�o sabe como, mas a luz est� 
+Este personagem parece estar brilhando, você não sabe como, mas a luz está 
 vindo desta pessoa. Ela diria provavelmente que este brilho esta vindo de 
 outro lugar.
 ~
@@ -383,12 +500,12 @@ E
 #13138
 clerigo mestre priest luz~
 o Sacerdote Mestre da Luz~
-O sacerdote mestre da luz est� aqui, brilhando com sua F�. 
+O sacerdote mestre da luz está aqui, brilhando com sua Fé. 
 ~
-Voc� pode ver somente o brilho que o cerca gra�as � f�. Ele com certeza � a 
-pessoa mais iluminada que voc� j� viu. Voc� tenta lhe fazer perguntas, mas 
+Você pode ver somente o brilho que o cerca graças à fé. Ele com certeza é a 
+pessoa mais iluminada que você já viu. Você tenta lhe fazer perguntas, mas 
 ele lhe responde antes mesmo de as fazer. O conhecimento que ele possui 
-parece n�o haver nada igual... Voc� imagina que esta pessoa esteja temerosa 
+parece não haver nada igual... Você imagina que esta pessoa esteja temerosa 
 em uma briga devido a seu intelecto.
 ~
 2269258 0 0 0 0 0 0 0 0 E
