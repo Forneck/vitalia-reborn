@@ -1,52 +1,50 @@
 #15701
-pacato cidad�o~
-um pacato cidad�o~
-Um pacato cidad�o passeia por aqui.
+pacato cidadao~
+um pacato cidadao~
+Um pacato cidadão passeia por aqui.
 ~
-Ele � baixinho, gordo e de cabelos castanhos. Aparenta ser bem calmo e n�o
+Ele é baixinho, gordo e de cabelos castanhos. Aparenta ser bem calmo e não
 se irritar facilmente.
 ~
-2126016 0 0 0 0 0 0 0 350 E
-40 10 -2 3d10+700 4d5+10
-2000 6000
-8 8 1
-E
+ghmno :6:7 350 S                        
+40 10 -2 3d10+700 4d5+10          
+2000 6000                                
+8 8 1                    
 #15702
 guarda~
 um guarda~
-Um guarda est� aqui, guardando a entrada. 
+Um guarda está aqui, guardando a entrada. 
 ~
-Ele � forte e n�o est� com uma cara muito boa. Parece estar ali na mesma
-posi��o � dias, sem comer ou beber. Sua armadura est� muito enferrujada,
-mas ele parece n�o se importar.
+Ele é forte e não está com uma cara muito boa. Parece estar ali na mesma
+posição à dias, sem comer ou beber. Sua armadura está muito enferrujada,
+mas ele parece não se importar.
 ~
-2193410 0 0 0 0 0 0 0 40 E
+blmnoq :6:7:17 40 E
 60 5 -24 6d6+800 3d6+25
 2500 90000
-8 8 1
+8 8 1 
 BareHandAttack: 9
 E
 #15703
-mulher secret�ria~
-a secret�ria~
-Uma linda mulher est� organizando a papelada. 
+mulher secretária~
+a secretária~
+Uma linda mulher está organizando a papelada. 
 ~
-Ela � loira e tem olhos da cor do mel. Parece ser uma secret�ria e tem
+Ela é loira e tem olhos da cor do mel. Parece ser uma secretária e tem
 muito o que fazer. 
 ~
-2121730 0 0 0 0 0 0 0 350 E
+bno :6:7 350 S
 50 10 -9 3d10+700 4d5+10
 6000 50000
 8 6 2
-E
 #15704
 chefe cozinheiro~
 o chefe da cozinha~
-Um chefe de cozinha est� aqui, cuidando do jantar. 
+Um chefe de cozinha está aqui, cuidando do jantar. 
 ~
-� gordo, mas parece cozinhar muito bem.
+É gordo, mas parece cozinhar muito bem.
 ~
-2211842 0 0 0 0 0 0 0 400 E
+bopq :6:7:17 400 E
 70 3 -28 5d7+1500 3d8+20
 10000 100000
 8 8 1
@@ -55,250 +53,236 @@ E
 #15705
 zumbi bimuz~
 Bimuz, o zumbi~
-Um zumbi est� aqui, indo em sua dire��o. 
+Um zumbi está aqui, indo em sua direção. 
 ~
-"Ele est� morto, mas esqueceu de deitar"...voc� pensa. E fica andando pelos
+"Ele está morto, mas esqueceu de deitar"...você pensa. E fica andando pelos
 lugares, a fim de encontrar seu assassino. Sua pele de dissolve com um
-simples sopro, de t�o fr�gil que �.
+simples sopro, de tão frágil que é.
 ~
-2156594 0 0 0 0 0 0 0 -700 E
+beflnop :6:7:17 -700 S
 70 -4 -30 4d8+2800 5d5+20
 23000 200000
 8 8 1
-E
 #15706
 rato asqueroso~
 um asqueroso rato gigante~
-Um enorme rato est� aqui. 
+Um enorme rato está aqui. 
 ~
-� uma ratazana horr�vel, uma das maiores que voc� j� viu.
+É uma ratazana horrível, uma das maiores que você já viu.
 ~
-2097154 0 0 0 0 0 0 0 10 E
+b :6:7 10 S
 50 10 -9 3d10+600 4d5+10
-100 26000
+100 26000 
 8 8 1
-E
 #15707
 vigia guarda~
 o vigia~
-Um vigia est� dormindo aqui. 
+Um vigia está dormindo aqui. 
 ~
-Ele parece estar morto, mas n�o � bom arriscar. Pode estar dormindo apenas.
-Um sono profundo, voc� imagina, a julgar pela pac�fica apar�ncia que ele lhe
+Ele parece estar morto, mas não é bom arriscar. Pode estar dormindo apenas.
+Um sono profundo, você imagina, a julgar pela pacífica aparência que ele lhe
 transmite.
 ~
-2121730 0 0 0 0 0 0 0 50 E
+bno :6:7:17 50 S
 55 0 -18 4d6+1900 5d6+25
 13000 100000
 8 8 1
-E
 #15708
-neegre drag�o~
-Neegre, o drag�o verde~
-Um imenso drag�o verde est� cuspindo fogo aqui. 
+neegre dragao~
+Neegre, o dragão verde~
+Um imenso dragão verde está cuspindo fogo aqui. 
 ~
-Ele � imenso e n�o p�ra de cuspir fogo. Sua cor esverdeada � o que lhe faz
+Ele é imenso e não pára de cuspir fogo. Sua cor esverdeada é o que lhe faz
 ser diferente.
 ~
-2222134 0 0 0 0 0 0 0 -500 E
+bceflnopq :6:7:17:19 -500 E
 80 -20 -39 20d10+9500 6d8+45
-10000 700000
-8 6 1
+10000 700000 
+8 6 1 
 BareHandAttack: 8
 E
 #15709
 flyre ave~
-Flyre, a ave lend�ria~
-Uma linda ave est� aqui e seu olhar mortal parece ser mortal. 
+Flyre, a ave lendária~
+Uma linda ave está aqui e seu olhar mortal parece ser mortal. 
 ~
-� linda e sua beleza � indescrit�vel.  Contudo, embora maravilhosa, sua
-beleza lhe inspira uma sensa��o indiscritivelmente aterrorizante.  Talvez o
-pensamento de enfrent�-la n�o seja realmente uma boa id�ia.
+É linda e sua beleza é indescritível.  Contudo, embora maravilhosa, sua
+beleza lhe inspira uma sensação indiscritivelmente aterrorizante.  Talvez o
+pensamento de enfrentá-la não seja realmente uma boa idéia.
 ~
-2877490 0 0 0 0 0 0 0 -900 E
+beflnopqrt :6:7:15:17:22 -900 E
 101 -32 -50 20d10+12000 9d9+65
 50000 3500000
 8 8 2
 BareHandAttack: 12
-Dex: 25
 Int: 25
 Wis: 25
+Dex: 25
 Con: 25
 Cha: 25
 E
 #15710
 criada camareira~
 a criada~
-Uma camareira est� aqui. 
+Uma camareira está aqui. 
 ~
-Ela � alta e tem porte de rainha. Mas � uma camareira e, como tal, quer
-fazer seus afazeres da melhor maneira poss�vel.
+Ela é alta e tem porte de rainha. Mas é uma camareira e, como tal, quer
+fazer seus afazeres da melhor maneira possível.
 ~
-2126020 0 0 0 0 0 0 0 350 E
+cghmno :6:7 350 S
 50 10 -16 3d10+800 4d5+10
-200 40000
+200 40000 
 8 8 2
-E
 #15711
 rainha senhora altiva~
-a altiva e bel�ssima rainha~
-Uma jovem senhora muito linda e altiva, com porte de Rainha, est� im�vel aqui. 
+a altiva e belíssima rainha~
+Uma jovem senhora muito linda e altiva, com porte de Rainha, está imóvel aqui. 
 ~
-Ela � linda, com seus olhos azuis e cabelos loiros. Sua beleza n�o �
+Ela é linda, com seus olhos azuis e cabelos loiros. Sua beleza não é
 encontrada em nenhum outro lugar do mundo.
 ~
-2358290 0 0 0 0 0 0 0 200 E
+benmolkpqr :15:7:17:4:3:2 200 E
 95 -8 -29 7d10+4800 8d8+40
 60000 430000
-8 6 2
-Dex: 25
+8 6 2 
 Int: 25
 Wis: 25
+Dex: 25
 Con: 25
 Cha: 25
 E
 #15712
 rei senhor altivo~
 o portentoso e altivo rei~
-Um jovem senhor altivo e com ares portentoso est� aqui, im�vel. 
+Um jovem senhor altivo e com ares portentoso está aqui, imóvel. 
 ~
-Ele � moreno, cabelos longos e olhos esverdeados e sua apar�ncia demonstrar ser
-ele uma pessoa muito fina e inteligente. N�o aparenta ter mais de 30 anos.
+Ele é moreno, cabelos longos e olhos esverdeados e sua aparência demonstrar ser
+ele uma pessoa muito fina e inteligente. Não aparenta ter mais de 30 anos.
 ~
-2358290 0 0 0 0 0 0 0 200 E
+benopqkmrl :15:7:17:4:3:2 200 E
 95 -10 -30 7d10+5600 8d8+46
 80000 500000
-8 6 1
-Dex: 25
+8 6 1 
 Int: 25
 Wis: 25
+Dex: 25
 Con: 25
 Cha: 25
 E
 #15713
 governanta mulher~
 a governanta~
-Uma governanta se encontra aqui, im�vel. 
+Uma governanta se encontra aqui, imóvel. 
 ~
-Essa parece ser uma daquelas pessoas que nunca est�o satisfeitas com nada.
+Essa parece ser uma daquelas pessoas que nunca estão satisfeitas com nada.
 Ela aparenta ter uns 50 anos, mas ainda sonha em ser rainha.
 ~
-2121796 0 0 0 0 0 0 0 -360 E
+cgno :6:7 -360 S
 40 6 -20 3d10+800 6d5+10
-2000 50000
+2000 50000 
 8 8 2
-E
 #15714
 morcego~
 um morcego~
-Um morcego est� olhando para voc�. 
+Um morcego está olhando para você. 
 ~
-Se essa criatura estivesse se movimentando, com certeza voc� n�o teria mais
-sangue em seu corpo. Seus dentes enormes iriam lhe sugar at� a �ltima gota.
-Seus olhos passam uma sensa��o de muita fome, e ficar olhando para essa
-criatura n�o lhe parece uma boa id�ia.
+Se essa criatura estivesse se movimentando, com certeza você não teria mais
+sangue em seu corpo. Seus dentes enormes iriam lhe sugar até a última gota.
+Seus olhos passam uma sensação de muita fome, e ficar olhando para essa
+criatura não lhe parece uma boa idéia.
 ~
-2121924 0 0 0 0 0 0 0 -360 E
+cghno :6:7 -360 S 
 40 10 -10 3d10+550 6d5+10
-2 30000
+2 30000 
 8 8 1
-E
 #15715
 prisioneiro~
 um prisioneiro~
-Um prisioneiro est� aqui e seu olhar demonstra pura indiferen�a. 
+Um prisioneiro está aqui e seu olhar demonstra pura indiferença. 
 ~
-Ele est� quase im�vel, mas seu olhar lhe causa arrepios. Ele aparenta ter
+Ele está quase imóvel, mas seu olhar lhe causa arrepios. Ele aparenta ter
 sido um jovem muito bonito, mas se transformou completamente depois de sua
-pris�o.
+prisão.
 ~
-2122246 0 0 0 0 0 0 0 -500 E
+bcjno :6:7:17 -500 S
 80 0 -29 6d9+2800 6d7+18
-3000 70000
-8 6 1
-E
+3000 70000 
+8 6 1 
 #15716
 teleques esqueleto~
 Teleques, o esqueleto~
-Um esqueleto est� aqui. 
+Um esqueleto está aqui. 
 ~
-� apenas um monte de ossos.
+É apenas um monte de ossos.
 ~
-2122246 0 0 0 0 0 0 0 -360 E
+bcjno :6:7 -360 S
 50 10 -9 4d9+1600 5d6+30
-10000 60000
+10000 60000 
 8 8 1
-E
 #15717
-p�nei cavalo~
-um p�nei~
-Um pequeno p�nei est� aqui, im�vel. 
+ponei cavalo~
+um pônei~
+Um pequeno pônei está aqui, imóvel. 
 ~
-� um p�nei comum, sem coisas interessantes.
+É um pônei comum, sem coisas interessantes.
 ~
-2285570 0 0 0 0 0 0 0 100 E
+bnoprv :6:7 100 S
 25 7 -8 5d7+600 3d9+15
 20 20000
 8 5 1
-E
 #15718
 vaca~
 uma vaca~
-Uma vaca est� aqui, produzindo seu leite.
+Uma vaca está aqui, produzindo seu leite.
 ~
-� uma vaca comum.
+É uma vaca comum.
 ~
-2285570 0 0 0 0 0 0 0 100 E
+bnoprv :6:7 100 S
 25 7 -8 5d7+600 3d9+15
 20 20000
 8 5 2
-E
 #15719
 porco~
 um porco~
-Um porco est� aqui, contribuindo para o mal cheiro. 
+Um porco está aqui, contribuindo para o mal cheiro. 
 ~
-� um porco comum e, como tal, cheira muito mal.
+É um porco comum e, como tal, cheira muito mal.
 ~
-2285570 0 0 0 0 0 0 0 100 E
+bnoprv :6:7 100 S
 25 7 -8 5d7+600 3d9+15
 20 20000
 8 5 1
-E
 #15720
 galinha~
 uma galinha~
-Uma galinha est� aqui botando seus ovos. 
+Uma galinha está aqui botando seus ovos. 
 ~
-� uma galinha qualquer, botando seus ovos.
+É uma galinha qualquer, botando seus ovos.
 ~
-2285570 0 0 0 0 0 0 0 100 E
+bnoprv :6:7 100 S
 25 7 -8 5d7+600 3d9+15
 20 20000
 8 8 2
-E
 #15721
 criada mulher~
 uma criada~
-Uma criada est� aqui, colhendo algo. 
+Uma criada está aqui, colhendo algo. 
 ~
-� uma mulher simples que apenas quer cumprir seus deveres.
+É uma mulher simples que apenas quer cumprir seus deveres.
 ~
-2289728 0 0 0 0 0 0 0 200 E
+gmnopr :6:7 200 S
 40 7 -7 6d8+700 4d9+25
 200 31000
 8 8 2
-E
 #15722
 criado jovem raman~
 Raman~
-Um dos criados do rei est� aqui, separando os alimentos. 
+Um dos criados do rei está aqui, separando os alimentos. 
 ~
-Ele � jovem, tem uns 16 anos. E tenta(va) separar os alimentos.
+Ele é jovem, tem uns 16 anos. E tenta(va) separar os alimentos.
 ~
-2289666 0 0 0 0 0 0 0 200 E
+bmnopr :6:7 200 S
 40 13 -7 6d8+310 4d3+15
 5000 21000
 8 8 1
-E
-$
+$~
