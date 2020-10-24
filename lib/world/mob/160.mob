@@ -1,10 +1,10 @@
 #16000
 marechal verde~
-o Marechal do Exército verde~
-O Marechal do Exército verde está passando informações aqui.
+o Marechal do ExÃ©rcito verde~
+O Marechal do ExÃ©rcito verde estÃ¡ passando informaÃ§Ãµes aqui.
 ~
-Um homem de aparência imponente, trajando uniforme verde cheio de insígnias e
-um quepe, onde se vê bem no centro uma grande estrela negra entre folhas
+Um homem de aparÃªncia imponente, trajando uniforme verde cheio de insÃ­gnias e
+um quepe, onde se vÃª bem no centro uma grande estrela negra entre folhas
 de louro douradas.
 ~
 2160658 0 0 0 0 0 0 0 250 E
@@ -20,11 +20,11 @@ Cha: 18
 E
 #16001
 general verde~
-o General do exército verde~
-O General do exército verde está dando ordens aqui.
+o General do exÃ©rcito verde~
+O General do exÃ©rcito verde estÃ¡ dando ordens aqui.
 ~
-Segundo em poder dentro da hierarquia do exército verde, traja uniforme verde
-cheio de insígnias e o quepe com três estrelas sob fundos negros.
+Segundo em poder dentro da hierarquia do exÃ©rcito verde, traja uniforme verde
+cheio de insÃ­gnias e o quepe com trÃªs estrelas sob fundos negros.
 ~
 2349200 0 0 0 854032 0 0 0 1000 E
 90 -30 -20 10d8+2500 5d7+35
@@ -33,11 +33,11 @@ cheio de insígnias e o quepe com três estrelas sob fundos negros.
 E
 #16002
 coronel verde~
-um Coronel do exército verde~
-Um Coronel do exercito verde está aqui.
+um Coronel do exÃ©rcito verde~
+Um Coronel do exercito verde estÃ¡ aqui.
 ~
-Terceiro no grau de poder do exército verde, veste um uniforme verde com
-insígnias e seu quepe possuí três estrelas sendo duas sob fundo negro.
+Terceiro no grau de poder do exÃ©rcito verde, veste um uniforme verde com
+insÃ­gnias e seu quepe possuÃ­ trÃªs estrelas sendo duas sob fundo negro.
 ~
 2349200 0 0 0 591952 0 0 0 350 E
 70 -20 -20 8d6+2000 4d6+35
@@ -46,11 +46,11 @@ insígnias e seu quepe possuí três estrelas sendo duas sob fundo negro.
 E
 #16003
 major verde~
-um Major do exército verde~
-Um Major do exército verde está aqui.
+um Major do exÃ©rcito verde~
+Um Major do exÃ©rcito verde estÃ¡ aqui.
 ~
-Quarto no comando do exército verde, seu uniforme é verde com insígnias e seu
-quepe com três estrelas, uma sob fundo negro.
+Quarto no comando do exÃ©rcito verde, seu uniforme Ã© verde com insÃ­gnias e seu
+quepe com trÃªs estrelas, uma sob fundo negro.
 ~
 2349200 0 0 0 591952 0 0 0 350 E
 60 -15 -18 7d5+1500 4d6+30
@@ -58,12 +58,12 @@ quepe com três estrelas, uma sob fundo negro.
 8 8 1
 E
 #16004
-capitão verde~
-um Capitão do exército verde~
-Um Capitão do exército verde está aqui.
+capitao verde~
+um CapitÃ£o do exÃ©rcito verde~
+Um CapitÃ£o do exÃ©rcito verde estÃ¡ aqui.
 ~
-Quinto na hierarquia da força verde, traja o uniforme verde de seu exército e
-na cabeça um quepe com três estrelas.
+Quinto na hierarquia da forÃ§a verde, traja o uniforme verde de seu exÃ©rcito e
+na cabeÃ§a um quepe com trÃªs estrelas.
 ~
 2349200 0 0 0 591952 0 0 0 350 E
 50 -12 -16 6d5+1300 4d5+28
@@ -72,10 +72,10 @@ na cabeça um quepe com três estrelas.
 E
 #16005
 tenente verde~
-um Tenente do exército verde~
-Um Tenente do exército verde está aqui.
+um Tenente do exÃ©rcito verde~
+Um Tenente do exÃ©rcito verde estÃ¡ aqui.
 ~
-Traja a farda de seu exército verde, e tem na cabeça um capacete com uma
+Traja a farda de seu exÃ©rcito verde, e tem na cabeÃ§a um capacete com uma
 estrela no centro.
 ~
 2349200 0 0 0 591952 0 0 0 350 E
@@ -85,10 +85,10 @@ estrela no centro.
 E
 #16006
 sargento verde~
-um Sargento do exército verde~
-Um Sargento do exército verde está aqui.
+um Sargento do exÃ©rcito verde~
+Um Sargento do exÃ©rcito verde estÃ¡ aqui.
 ~
-Um homem de aparência severa, veste uma farda verde e um capacete com três
+Um homem de aparÃªncia severa, veste uma farda verde e um capacete com trÃªs
 listras brancas uma acima da outra.
 ~
 2349200 0 0 0 591952 0 0 0 300 E
@@ -98,10 +98,10 @@ listras brancas uma acima da outra.
 E
 #16007
 cabo verde~
-um Cabo do exército verde~
-Um Cabo do exército verde está aqui.
+um Cabo do exÃ©rcito verde~
+Um Cabo do exÃ©rcito verde estÃ¡ aqui.
 ~
-Veste uma farda verde e na cabeça utiliza um capacete com duas listras brancas
+Veste uma farda verde e na cabeÃ§a utiliza um capacete com duas listras brancas
 uma acima da outra.
 ~
 2349200 0 0 0 591952 0 0 0 300 E
@@ -111,8 +111,8 @@ uma acima da outra.
 E
 #16008
 soldado verde~
-um Soldado do exército verde~
-Um soldado do exército verde está combatendo aqui.
+um Soldado do exÃ©rcito verde~
+Um soldado do exÃ©rcito verde estÃ¡ combatendo aqui.
 ~
 Um homem jovem, mas bem treinado, traja sua farda verde e o capacete com
 apenas uma listra branca.
@@ -123,12 +123,12 @@ apenas uma listra branca.
 8 8 1
 E
 #16009
-espião verde~
-o Espião do Exército Verde~
-O Espião de algum exército está escondido aqui.
+espiao verde~
+o EspiÃ£o do ExÃ©rcito Verde~
+O EspiÃ£o de algum exÃ©rcito estÃ¡ escondido aqui.
 ~
-Um homem ágil, usando apenas roupas negras, o único vestígio que o denuncia é
-aquela faixa verde amarrada em seu braço.
+Um homem Ã¡gil, usando apenas roupas negras, o Ãºnico vestÃ­gio que o denuncia Ã©
+aquela faixa verde amarrada em seu braÃ§o.
 ~
 2349200 0 0 0 1640816 0 0 0 -350 E
 60 -15 -18 7d5+1500 4d6+30
@@ -137,11 +137,11 @@ aquela faixa verde amarrada em seu braço.
 E
 #16010
 marechal azul~
-o Marechal do exército azul~
-O Marechal do exército azul está passando informações aqui.
+o Marechal do exÃ©rcito azul~
+O Marechal do exÃ©rcito azul estÃ¡ passando informaÃ§Ãµes aqui.
 ~
-Um homem de aparência imponente, trajando uniforme azul cheio de insígnias e
-um quepe, onde se vê bem no centro uma grande estrela negra entre folhas
+Um homem de aparÃªncia imponente, trajando uniforme azul cheio de insÃ­gnias e
+um quepe, onde se vÃª bem no centro uma grande estrela negra entre folhas
 de louro douradas.
 ~
 2160658 0 0 0 0 0 0 0 250 E
@@ -158,10 +158,10 @@ E
 #16011
 general azul~
 o General do azul verde~
-O General do exército azul está dando ordens aqui.
+O General do exÃ©rcito azul estÃ¡ dando ordens aqui.
 ~
-Segundo em poder dentro da hierarquia do exército azul, traja uniforme  azul
-cheio de insígnias e o quepe com três estrelas sob fundos negros.
+Segundo em poder dentro da hierarquia do exÃ©rcito azul, traja uniforme  azul
+cheio de insÃ­gnias e o quepe com trÃªs estrelas sob fundos negros.
 ~
 2349200 0 0 0 854032 0 0 0 1000 E
 90 -30 -20 10d8+2500 5d7+35
@@ -170,11 +170,11 @@ cheio de insígnias e o quepe com três estrelas sob fundos negros.
 E
 #16012
 coronel azul~
-um Coronel do exército azul~
-Um Coronel do exercito azul está aqui.
+um Coronel do exÃ©rcito azul~
+Um Coronel do exercito azul estÃ¡ aqui.
 ~
-Terceiro no grau de poder do exército azul, veste um uniforme azul com
-insígnias e seu quepe possuí três estrelas sendo duas sob fundo negro.
+Terceiro no grau de poder do exÃ©rcito azul, veste um uniforme azul com
+insÃ­gnias e seu quepe possuÃ­ trÃªs estrelas sendo duas sob fundo negro.
 ~
 2349200 0 0 0 788496 0 0 0 1000 E
 90 -20 -20 10d8+2500 4d4+35
@@ -183,11 +183,11 @@ insígnias e seu quepe possuí três estrelas sendo duas sob fundo negro.
 E
 #16013
 major azul~
-um Major do exército azul~
-Um Major do exército azul está aqui.
+um Major do exÃ©rcito azul~
+Um Major do exÃ©rcito azul estÃ¡ aqui.
 ~
-Quarto no comando do exército azul, seu uniforme é azul com insígnias e seu
-quepe com três estrelas, uma sob fundo negro.
+Quarto no comando do exÃ©rcito azul, seu uniforme Ã© azul com insÃ­gnias e seu
+quepe com trÃªs estrelas, uma sob fundo negro.
 ~
 2349200 0 0 0 591952 0 0 0 350 E
 60 -15 -18 7d5+1500 4d6+30
@@ -195,12 +195,12 @@ quepe com três estrelas, uma sob fundo negro.
 8 8 1
 E
 #16014
-capitão azul~
-um Capitão do exército azul~
-Um Capitão do exército azul está aqui.
+capitao azul~
+um CapitÃ£o do exÃ©rcito azul~
+Um CapitÃ£o do exÃ©rcito azul estÃ¡ aqui.
 ~
-Quinto na hierarquia da força azul, traja o uniforme azul de seu exército  e
-na cabeça um quepe com três estrelas.
+Quinto na hierarquia da forÃ§a azul, traja o uniforme azul de seu exÃ©rcito  e
+na cabeÃ§a um quepe com trÃªs estrelas.
 ~
 2349200 0 0 0 591952 0 0 0 350 E
 50 -12 -16 6d5+1300 4d5+28
@@ -209,10 +209,10 @@ na cabeça um quepe com três estrelas.
 E
 #16015
 tenente azul~
-um Tenente do exército azul~
-Um Tenente do exército azul está aqui.
+um Tenente do exÃ©rcito azul~
+Um Tenente do exÃ©rcito azul estÃ¡ aqui.
 ~
-Traja a farda de seu exército azul, e tem na cabeça um capacete com uma
+Traja a farda de seu exÃ©rcito azul, e tem na cabeÃ§a um capacete com uma
 estrela no centro.
 ~
 2349200 0 0 0 591952 0 0 0 350 E
@@ -222,10 +222,10 @@ estrela no centro.
 E
 #16016
 sargento azul~
-um Sargento do exército azul~
-Um Sargento do exército azul está aqui.
+um Sargento do exÃ©rcito azul~
+Um Sargento do exÃ©rcito azul estÃ¡ aqui.
 ~
-Um homem de aparência severa, veste uma farda azul e um capacete com três
+Um homem de aparÃªncia severa, veste uma farda azul e um capacete com trÃªs
 listras brancas uma acima da outra.
 ~
 2349200 0 0 0 591952 0 0 0 300 E
@@ -235,10 +235,10 @@ listras brancas uma acima da outra.
 E
 #16017
 cabo azul~
-um Cabo do exército azul~
-Um Cabo do exército azul está aqui.
+um Cabo do exÃ©rcito azul~
+Um Cabo do exÃ©rcito azul estÃ¡ aqui.
 ~
-Veste uma farda azul e na cabeça utiliza um capacete com duas listras brancas
+Veste uma farda azul e na cabeÃ§a utiliza um capacete com duas listras brancas
 uma acima da outra.
 ~
 2349200 0 0 0 591952 0 0 0 300 E
@@ -248,8 +248,8 @@ uma acima da outra.
 E
 #16018
 soldado azul~
-um Soldado do exército azul~
-Um soldado do exército azul está combatendo aqui.
+um Soldado do exÃ©rcito azul~
+Um soldado do exÃ©rcito azul estÃ¡ combatendo aqui.
 ~
 Um homem jovem, mas bem treinado, traja sua farda azul e o capacete com
 apenas uma listra branca.
@@ -260,12 +260,12 @@ apenas uma listra branca.
 8 8 1
 E
 #16019
-espião azul~
-o Espião do Exército Azul~
-O Espião de algum exército está escondido aqui.
+espiao azul~
+o EspiÃ£o do ExÃ©rcito Azul~
+O EspiÃ£o de algum exÃ©rcito estÃ¡ escondido aqui.
 ~
-Um homem ágil, usando apenas roupas negras, o único vestígio que o denuncia
-é aquela faixa azul amarrada em seu braço.
+Um homem Ã¡gil, usando apenas roupas negras, o Ãºnico vestÃ­gio que o denuncia
+Ã© aquela faixa azul amarrada em seu braÃ§o.
 ~
 2349200 0 0 0 1640816 0 0 0 -350 E
 60 -15 -18 7d5+1500 4d6+30
@@ -274,11 +274,11 @@ Um homem ágil, usando apenas roupas negras, o único vestígio que o denuncia
 E
 #16020
 marechal vermelho~
-o Marechal do exército vermelho ~
-O Marechal do exército vermelho está passando informações aqui.
+o Marechal do exÃ©rcito vermelho ~
+O Marechal do exÃ©rcito vermelho estÃ¡ passando informaÃ§Ãµes aqui.
 ~
-Um homem de aparência imponente, trajando uniforme vermelho cheio de
-insígnias e um quepe, onde se vê bem no centro uma grande estrela negra
+Um homem de aparÃªncia imponente, trajando uniforme vermelho cheio de
+insÃ­gnias e um quepe, onde se vÃª bem no centro uma grande estrela negra
 entre folhas de louro douradas.
 ~
 2160658 0 0 0 0 0 0 0 250 E
@@ -294,11 +294,11 @@ Cha: 18
 E
 #16021
 general vermelho~
-o General do exército vermelho~
-O General do exército vermelho está dando ordens aqui.
+o General do exÃ©rcito vermelho~
+O General do exÃ©rcito vermelho estÃ¡ dando ordens aqui.
 ~
-Segundo em poder dentro da hierarquia do exército vermelho, traja uniforme
-vermelho cheio de insígnias e o quepe com três estrelas sob fundos negros.
+Segundo em poder dentro da hierarquia do exÃ©rcito vermelho, traja uniforme
+vermelho cheio de insÃ­gnias e o quepe com trÃªs estrelas sob fundos negros.
 ~
 2349200 0 0 0 854032 0 0 0 1000 E
 90 -30 -20 10d8+2500 5d7+35
@@ -307,11 +307,11 @@ vermelho cheio de insígnias e o quepe com três estrelas sob fundos negros.
 E
 #16022
 coronel vermelho~
-um Coronel do exército vermelho~
-Um Coronel do exercito vermelho está aqui.
+um Coronel do exÃ©rcito vermelho~
+Um Coronel do exercito vermelho estÃ¡ aqui.
 ~
-Terceiro no grau de poder do exército vermelho, veste um uniforme vermelho
-com insígnias e seu quepe possuí três estrelas sendo duas sob fundo negro.
+Terceiro no grau de poder do exÃ©rcito vermelho, veste um uniforme vermelho
+com insÃ­gnias e seu quepe possuÃ­ trÃªs estrelas sendo duas sob fundo negro.
 ~
 2349200 0 0 0 788496 0 0 0 1000 E
 90 -20 -20 10d8+2500 4d4+35
@@ -320,11 +320,11 @@ com insígnias e seu quepe possuí três estrelas sendo duas sob fundo negro.
 E
 #16023
 major vermelho~
-um Major do exército vermelho~
-Um Major do exército vermelho está aqui.
+um Major do exÃ©rcito vermelho~
+Um Major do exÃ©rcito vermelho estÃ¡ aqui.
 ~
-Quarto no comando do exército vermelho, seu uniforme é vermelho com
-insígnias e seu quepe com três estrelas, uma sob fundo negro.
+Quarto no comando do exÃ©rcito vermelho, seu uniforme Ã© vermelho com
+insÃ­gnias e seu quepe com trÃªs estrelas, uma sob fundo negro.
 ~
 2349200 0 0 0 591952 0 0 0 350 E
 60 -15 -18 7d5+1500 4d6+30
@@ -332,12 +332,12 @@ insígnias e seu quepe com três estrelas, uma sob fundo negro.
 8 8 1
 E
 #16024
-capitão vermelho~
-um Capitão do exército vermelho~
-Um Capitão do exército vermelho está aqui.
+capitao vermelho~
+um CapitÃ£o do exÃ©rcito vermelho~
+Um CapitÃ£o do exÃ©rcito vermelho estÃ¡ aqui.
 ~
-Quinto na hierarquia da força vermelha, traja o uniforme vermelho de seu
-exército e na cabeça um quepe com três estrelas.
+Quinto na hierarquia da forÃ§a vermelha, traja o uniforme vermelho de seu
+exÃ©rcito e na cabeÃ§a um quepe com trÃªs estrelas.
 ~
 2349200 0 0 0 591952 0 0 0 350 E
 50 -12 -16 6d5+1300 4d5+28
@@ -346,10 +346,10 @@ exército e na cabeça um quepe com três estrelas.
 E
 #16025
 tenente vermelho~
-um Tenente do exército vermelho~
-Um Tenente do exército vermelho está aqui.
+um Tenente do exÃ©rcito vermelho~
+Um Tenente do exÃ©rcito vermelho estÃ¡ aqui.
 ~
-Traja a farda de seu exército vermelho, e tem na cabeça um capacete com uma
+Traja a farda de seu exÃ©rcito vermelho, e tem na cabeÃ§a um capacete com uma
 estrela no centro.
 ~
 2349200 0 0 0 591952 0 0 0 350 E
@@ -359,10 +359,10 @@ estrela no centro.
 E
 #16026
 sargento vermelho~
-um Sargento do exército vermelho~
-Um Sargento do exército vermelho está aqui.
+um Sargento do exÃ©rcito vermelho~
+Um Sargento do exÃ©rcito vermelho estÃ¡ aqui.
 ~
-Um homem de aparência severa, veste uma farda vermelha e um capacete com três
+Um homem de aparÃªncia severa, veste uma farda vermelha e um capacete com trÃªs
 listras brancas uma acima da outra.
 ~
 2349200 0 0 0 591952 0 0 0 300 E
@@ -372,10 +372,10 @@ listras brancas uma acima da outra.
 E
 #16027
 cabo vermelho~
-um Cabo do exército vermelho~
-Um Cabo do exército vermelho está aqui.
+um Cabo do exÃ©rcito vermelho~
+Um Cabo do exÃ©rcito vermelho estÃ¡ aqui.
 ~
-Veste uma farda vermelha e na cabeça utiliza um capacete com duas listras
+Veste uma farda vermelha e na cabeÃ§a utiliza um capacete com duas listras
 brancas uma acima da outra.
 ~
 2349200 0 0 0 591952 0 0 0 300 E
@@ -385,8 +385,8 @@ brancas uma acima da outra.
 E
 #16028
 soldado vermelho~
-um Soldado do exército vermelho~
-Um soldado do exército vermelho está combatendo aqui.
+um Soldado do exÃ©rcito vermelho~
+Um soldado do exÃ©rcito vermelho estÃ¡ combatendo aqui.
 ~
 Um homem jovem, mas bem treinado, traja sua farda vermelha e o capacete com
 apenas uma listra branca.
@@ -397,12 +397,12 @@ apenas uma listra branca.
 8 8 1
 E
 #16029
-espião vermelho~
-o Espião do Exército Vermelho~
-O Espião de algum exército está escondido aqui.
+espiao vermelho~
+o EspiÃ£o do ExÃ©rcito Vermelho~
+O EspiÃ£o de algum exÃ©rcito estÃ¡ escondido aqui.
 ~
-Um homem ágil, usando apenas roupas negras, o único vestígio que o denuncia
-é aquela faixa vermelha amarrada em seu braço.
+Um homem Ã¡gil, usando apenas roupas negras, o Ãºnico vestÃ­gio que o denuncia
+Ã© aquela faixa vermelha amarrada em seu braÃ§o.
 ~
 2349200 0 0 0 1640816 0 0 0 -350 E
 60 -15 -18 7d5+1500 4d6+30
@@ -411,11 +411,11 @@ Um homem ágil, usando apenas roupas negras, o único vestígio que o denuncia
 E
 #16030
 marechal amarelo~
-o Marechal do exército amarelo~
-O Marechal do exército amarelo está passando informações aqui.
+o Marechal do exÃ©rcito amarelo~
+O Marechal do exÃ©rcito amarelo estÃ¡ passando informaÃ§Ãµes aqui.
 ~
-Um homem de aparência imponente, trajando uniforme amarelo cheio de
-insígnias e um quepe, onde se vê bem no centro uma grande estrela negra
+Um homem de aparÃªncia imponente, trajando uniforme amarelo cheio de
+insÃ­gnias e um quepe, onde se vÃª bem no centro uma grande estrela negra
 entre folhas de louro douradas.
 ~
 2160658 0 0 0 0 0 0 0 250 E
@@ -431,11 +431,11 @@ Cha: 18
 E
 #16031
 general amarelo~
-o General do exército amarelo~
-O General do exército amarelo está dando ordens aqui.
+o General do exÃ©rcito amarelo~
+O General do exÃ©rcito amarelo estÃ¡ dando ordens aqui.
 ~
-Segundo em poder dentro da hierarquia do exército amarelo, traja uniforme
-amarelo cheio de insígnias e o quepe com três estrelas sob fundos negros.
+Segundo em poder dentro da hierarquia do exÃ©rcito amarelo, traja uniforme
+amarelo cheio de insÃ­gnias e o quepe com trÃªs estrelas sob fundos negros.
 ~
 2349200 0 0 0 854032 0 0 0 1000 E
 90 -30 -20 10d8+2500 5d7+35
@@ -444,11 +444,11 @@ amarelo cheio de insígnias e o quepe com três estrelas sob fundos negros.
 E
 #16032
 coronel amarelo~
-um Coronel do exército amarelo~
-Um Coronel do exercito amarelo está aqui.
+um Coronel do exÃ©rcito amarelo~
+Um Coronel do exercito amarelo estÃ¡ aqui.
 ~
-Terceiro no grau de poder do exército amarelo, veste um uniforme amarelo com
-insígnias e seu quepe possuí três estrelas sendo duas sob fundo negro.
+Terceiro no grau de poder do exÃ©rcito amarelo, veste um uniforme amarelo com
+insÃ­gnias e seu quepe possuÃ­ trÃªs estrelas sendo duas sob fundo negro.
 ~
 2349200 0 0 0 591952 0 0 0 350 E
 70 -20 -20 8d6+2000 4d6+35
@@ -457,11 +457,11 @@ insígnias e seu quepe possuí três estrelas sendo duas sob fundo negro.
 E
 #16033
 major amarelo~
-um Major do exército amarelo~
-Um Major do exército amarelo está aqui.
+um Major do exÃ©rcito amarelo~
+Um Major do exÃ©rcito amarelo estÃ¡ aqui.
 ~
-Quarto no comando do exército amarelo, seu uniforme é amarelo com insígnias
-e seu quepe com três estrelas, uma sob fundo negro.
+Quarto no comando do exÃ©rcito amarelo, seu uniforme Ã© amarelo com insÃ­gnias
+e seu quepe com trÃªs estrelas, uma sob fundo negro.
 ~
 2349200 0 0 0 591952 0 0 0 350 E
 60 -15 -18 7d5+1500 4d6+30
@@ -469,12 +469,12 @@ e seu quepe com três estrelas, uma sob fundo negro.
 8 8 1
 E
 #16034
-capitão amarelo~
-um Capitão do exército amarelo~
-Um Capitão do exército amarelo está aqui.
+capitao amarelo~
+um CapitÃ£o do exÃ©rcito amarelo~
+Um CapitÃ£o do exÃ©rcito amarelo estÃ¡ aqui.
 ~
-Quinto na hierarquia da força amarela, traja o uniforme amarelo de seu
-exército e na cabeça um quepe com três estrelas.
+Quinto na hierarquia da forÃ§a amarela, traja o uniforme amarelo de seu
+exÃ©rcito e na cabeÃ§a um quepe com trÃªs estrelas.
 ~
 2349200 0 0 0 591952 0 0 0 350 E
 50 -12 -16 6d5+1300 4d5+28
@@ -483,10 +483,10 @@ exército e na cabeça um quepe com três estrelas.
 E
 #16035
 tenente amarelo~
-um Tenente do exército amarelo~
-Um Tenente do exército amarelo está aqui.
+um Tenente do exÃ©rcito amarelo~
+Um Tenente do exÃ©rcito amarelo estÃ¡ aqui.
 ~
-Traja a farda de seu exército amarelo, e tem na cabeça um capacete com uma
+Traja a farda de seu exÃ©rcito amarelo, e tem na cabeÃ§a um capacete com uma
 estrela no centro.
 ~
 2349200 0 0 0 591952 0 0 0 350 E
@@ -496,10 +496,10 @@ estrela no centro.
 E
 #16036
 sargento amarelo~
-um Sargento do exército amarelo~
-Um Sargento do exército amarelo está aqui.
+um Sargento do exÃ©rcito amarelo~
+Um Sargento do exÃ©rcito amarelo estÃ¡ aqui.
 ~
-Um homem de aparência severa, veste uma farda amarela e um capacete com três
+Um homem de aparÃªncia severa, veste uma farda amarela e um capacete com trÃªs
 listras brancas uma acima da outra.
 ~
 2349200 0 0 0 591952 0 0 0 300 E
@@ -509,10 +509,10 @@ listras brancas uma acima da outra.
 E
 #16037
 cabo amarelo~
-um Cabo do exército amarelo~
-Um Cabo do exército amarelo está aqui.
+um Cabo do exÃ©rcito amarelo~
+Um Cabo do exÃ©rcito amarelo estÃ¡ aqui.
 ~
-Veste uma farda amarela e na cabeça utiliza um capacete com duas listras
+Veste uma farda amarela e na cabeÃ§a utiliza um capacete com duas listras
 branca s uma acima da outra.
 ~
 2349200 0 0 0 591952 0 0 0 300 E
@@ -522,8 +522,8 @@ branca s uma acima da outra.
 E
 #16038
 soldado amarelo~
-um Soldado do exército amarelo~
-Um soldado do exército amarelo está combatendo aqui.
+um Soldado do exÃ©rcito amarelo~
+Um soldado do exÃ©rcito amarelo estÃ¡ combatendo aqui.
 ~
 Um homem jovem, mas bem treinado, traja sua farda amarela e o capacete com
 apenas uma listra branca.
@@ -534,12 +534,12 @@ apenas uma listra branca.
 8 8 1
 E
 #16039
-espião amarelo~
-o Espião do Exército Amarelo~
-O Espião de algum exército está escondido aqui.
+espiao amarelo~
+o EspiÃ£o do ExÃ©rcito Amarelo~
+O EspiÃ£o de algum exÃ©rcito estÃ¡ escondido aqui.
 ~
-Um homem ágil, usando apenas roupas negras, o único vestígio que o denuncia
-é aquela faixa amarela amarrada em seu braço.
+Um homem Ã¡gil, usando apenas roupas negras, o Ãºnico vestÃ­gio que o denuncia
+Ã© aquela faixa amarela amarrada em seu braÃ§o.
 ~
 2349200 0 0 0 1640816 0 0 0 -350 E
 60 -15 -18 7d5+1500 4d6+30
@@ -549,11 +549,11 @@ E
 #16040
 enorme crocodilo~
 o enorme crocodilo~
-Um enorme crocodilo está aqui, esperando sua próxima refeição.
+Um enorme crocodilo estÃ¡ aqui, esperando sua prÃ³xima refeiÃ§Ã£o.
 ~
-Ao ver este crocodilo você se espanta com seu tamanho.  Ele tem quase oito
-metros, e seus dentes são enormes, do tamanho do seu dedo mínimo.  Ele
-parece não ter comido há muito tempo e deve estar com muita fome.
+Ao ver este crocodilo vocÃª se espanta com seu tamanho.  Ele tem quase oito
+metros, e seus dentes sÃ£o enormes, do tamanho do seu dedo mÃ­nimo.  Ele
+parece nÃ£o ter comido hÃ¡ muito tempo e deve estar com muita fome.
 ~
 2353186 0 0 0 1114240 0 0 0 -500 E
 50 14 -30 8d10+2000 3d4+1
