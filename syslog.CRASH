@@ -1,30 +1,30 @@
-Oct 24 21:21:32 2020 :: SYSERR: object #20100 has unknown room flag, bit 50 (0 through 24 known).
-Oct 24 21:21:32 2020 :: SYSERR: object #20100 has unknown room flag, bit 51 (0 through 24 known).
-Oct 24 21:21:32 2020 :: SYSERR: object #20100 has unknown room flag, bit 52 (0 through 24 known).
-Oct 24 21:21:32 2020 :: SYSERR: object #20100 has unknown room flag, bit 53 (0 through 24 known).
-Oct 24 21:21:32 2020 :: SYSERR: object #20100 has unknown room flag, bit 54 (0 through 24 known).
-Oct 24 21:21:32 2020 :: SYSERR: object #20100 has unknown room flag, bit 55 (0 through 24 known).
-Oct 24 21:21:32 2020 :: SYSERR: object #20100 has unknown room flag, bit 56 (0 through 24 known).
-Oct 24 21:21:32 2020 :: SYSERR: object #20100 has unknown room flag, bit 57 (0 through 24 known).
-Oct 24 21:21:32 2020 :: SYSERR: object #20100 has unknown room flag, bit 58 (0 through 24 known).
-Oct 24 21:21:32 2020 :: SYSERR: object #20100 has unknown room flag, bit 59 (0 through 24 known).
-Oct 24 21:21:32 2020 :: SYSERR: object #20100 has unknown room flag, bit 60 (0 through 24 known).
-Oct 24 21:21:32 2020 :: SYSERR: object #20100 has unknown room flag, bit 61 (0 through 24 known).
-Oct 24 21:21:32 2020 :: SYSERR: object #20100 has unknown room flag, bit 62 (0 through 24 known).
-Oct 24 21:21:32 2020 :: SYSERR: object #20100 has unknown room flag, bit 63 (0 through 24 known).
-Oct 24 21:21:32 2020 :: SYSERR: object #20102 has unknown room flag, bit 29 (0 through 24 known).
-Oct 24 21:21:32 2020 :: SYSERR: object #20102 has unknown room flag, bit 34 (0 through 24 known).
-Oct 24 21:21:32 2020 :: SYSERR: object #20102 has unknown room flag, bit 35 (0 through 24 known).
-Oct 24 21:21:32 2020 :: SYSERR: object #20102 has unknown room flag, bit 61 (0 through 24 known).
-Oct 24 21:21:32 2020 :: Loading spells.
-Oct 24 21:21:32 2020 :: Assigning spells's function.
-Oct 24 21:21:32 2020 :: Renumbering rooms.
-Oct 24 21:21:32 2020 :: Checking start rooms.
-Oct 24 21:21:32 2020 :: Loading mobs and generating index.
-Oct 24 21:21:32 2020 ::    2571 mobs, 82272 bytes in index, 1666008 bytes in prototypes.
-Oct 24 21:21:32 2020 :: Converting mobile #9900 to 128bits..
-Oct 24 21:21:32 2020 ::    done.
-Oct 24 21:21:32 2020 :: SYSERR: Format error in mob file world/mob/99.mob near mob #9900
-Oct 24 21:21:32 2020 :: SYSERR: ... offending line: 'S'
+Oct 24 21:49:59 2020 :: SYSERR: object #20100 has unknown room flag, bit 48 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20100 has unknown room flag, bit 49 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20100 has unknown room flag, bit 50 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20100 has unknown room flag, bit 51 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20100 has unknown room flag, bit 52 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20100 has unknown room flag, bit 53 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20100 has unknown room flag, bit 54 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20100 has unknown room flag, bit 55 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20100 has unknown room flag, bit 56 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20100 has unknown room flag, bit 57 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20100 has unknown room flag, bit 58 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20100 has unknown room flag, bit 59 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20100 has unknown room flag, bit 60 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20100 has unknown room flag, bit 61 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20100 has unknown room flag, bit 62 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20100 has unknown room flag, bit 63 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20102 has unknown room flag, bit 29 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20102 has unknown room flag, bit 34 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20102 has unknown room flag, bit 35 (0 through 24 known).
+Oct 24 21:49:59 2020 :: SYSERR: object #20102 has unknown room flag, bit 61 (0 through 24 known).
+Oct 24 21:49:59 2020 :: Loading spells.
+Oct 24 21:49:59 2020 :: Assigning spells's function.
+Oct 24 21:49:59 2020 :: Renumbering rooms.
+Oct 24 21:49:59 2020 :: Checking start rooms.
+Oct 24 21:49:59 2020 :: Loading mobs and generating index.
+Oct 24 21:49:59 2020 ::    2580 mobs, 82560 bytes in index, 1671840 bytes in prototypes.
+Oct 24 21:49:59 2020 :: SYSERR: Format error in mob file world/mob/131.mob near mob #-1
+Oct 24 21:49:59 2020 :: SYSERR: ... offending line: '<<<<<<< HEAD'
 Quick boot mode -- rent check supressed.
 Using file descriptor for logging.
