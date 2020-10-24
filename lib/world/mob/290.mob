@@ -1,491 +1,455 @@
 #29000
-bar�o cailveh~
-o Bar�o de Cailveh~
-O Bar�o est� sentado confortavelmente em sua poltrona, lendo um grosso livro.
+barao cailveh~
+o Barão de Cailveh~
+O Barão está sentado confortavelmente em sua poltrona, lendo um grosso livro.
 ~
-Ele � um homem baixinho e atravancado que parece precisar de ajuda para se
-tornar quem ele deveria ser.  Seus olhos est�o um pouco vermelhos, como os
-de algu�m que tenha gasto muito tempo lendo.  Seus cabelos s�o quase
-impercept�veis, com exce��o das duas finas linhas dos lados de sua cabe�a.
+Ele é um homem baixinho e atravancado que parece precisar de ajuda para se
+tornar quem ele deveria ser.  Seus olhos estão um pouco vermelhos, como os
+de alguém que tenha gasto muito tempo lendo.  Seus cabelos são quase
+imperceptíveis, com exceção das duas finas linhas dos lados de sua cabeça.
 ~
-2344962 0 0 0 16432 0 0 0 800 E
+boqrlp den 800 E
 100 -30 -60 13d11+2600 6d7+46
 80200 1016419
 8 8 1
-Dex: 18
 Int: 18
 Wis: 18
+Dex: 18
 E
 #29001
 melinna cailveh baronesa esposa~
 Melinna, a Baronesa~
-Melinna, a esposa de Cailveh, est� honrando suas obriga��es enquanto seu marido n�o retorna.
+Melinna, a esposa de Cailveh, está honrando suas obrigações enquanto seu marido não retorna.
 ~
-A maioria das tarefas di�rias s�o deixadas para Melinna, uma mulher astuta
-politicamente.  H� um tipo de acordo n�o expl�cito entre o Bar�o e sua
+A maioria das tarefas diárias são deixadas para Melinna, uma mulher astuta
+politicamente.  Há um tipo de acordo não explícito entre o Barão e sua
 esposa, ela fica encarregada da maioria dos problemas mundanos para que ele
-possa continuar seus estudos sem interrup��es desnecess�rias.
+possa continuar seus estudos sem interrupções desnecessárias.
 ~
-2121730 0 0 0 0 0 0 0 900 E
+bno 0 900 S
 92 -20 -40 10d10+1405 5d7+32
 49500 787909
 8 8 2
-E
 #29002
 gilzaan filho velho~
 Gilzaan~
 O filho mais velho de Cailveh, Gilzaan, anda por aqui, cumprimentando as pessoas.
 ~
-Esse � Gilzaan, aquele que vai eventualmente prosperar o t�tulo que seus
-pais lhe deram.  Gilzaan leva sua responsabilidade a s�rio, a ponto de fazer
-com que todos os homem proeminentes de suas terras o conhe�am.
+Esse é Gilzaan, aquele que vai eventualmente prosperar o título que seus
+pais lhe deram.  Gilzaan leva sua responsabilidade a sério, a ponto de fazer
+com que todos os homem proeminentes de suas terras o conheçam.
 ~
-2103298 0 0 0 0 0 0 0 500 E
+blm 0 500 S
 86 -19 -39 10d10+1240 5d6+30
 36215 385396
 8 8 1
-E
 #29003
 necromocis filho novo~
 Necromocis~
 Necromocis, o filho mais novo de Cailveh, trabalha diligentemente em sua mesa.
 ~
-Embora n�o t�o forte ou imponente quanto seu irm�o mais velho, Necromocis
-possui suas habilidades em outras �reas.  Ele possui um intelecto bem
-desenvolvido, alcan�ado devido a muitos anos de estudo e dedica��o.  Ele
-certamente substituir� seu pai na hora em que for preciso.
+Embora não tão forte ou imponente quanto seu irmão mais velho, Necromocis
+possui suas habilidades em outras áreas.  Ele possui um intelecto bem
+desenvolvido, alcançado devido a muitos anos de estudo e dedicação.  Ele
+certamente substituirá seu pai na hora em que for preciso.
 ~
-2117634 0 0 0 112 0 0 0 600 E
+bmo def 600 S
 81 -15 -40 10d10+1135 5d6+29
 21150 273866
 8 8 1
-E
 #29004
-astr�nomo~
-o astr�nomo da corte~
-O astr�nomo da corte est� aqui, completamente desligado do mundo, observando o telesc�pio.
+astronomo~
+o astrônomo da corte~
+O astrônomo da corte está aqui, completamente desligado do mundo, observando o telescópio.
 ~
-Ele � um velho homem, que n�o parece ter muito tempo nesse plano de
-exist�ncia.  Ele rascunha algumas notas em um pequeno bloco de notas.
+Ele é um velho homem, que não parece ter muito tempo nesse plano de
+existência.  Ele rascunha algumas notas em um pequeno bloco de notas.
 ~
-2097154 0 0 0 0 0 0 0 300 E
+b 0 300 S
 53 -11 -32 10d10+900 4d5+24
 1650 160665
 8 8 1
-E
 #29005
 servo~
 um servo~
-Um servo desliza silenciosamente pela torre, servindo os h�spedes.
+Um servo desliza silenciosamente pela torre, servindo os hóspedes.
 ~
-Ele � um elegante senhor com um longo cabelo escuro, jogado sobre seu casaco. 
+Ele é um elegante senhor com um longo cabelo escuro, jogado sobre seu casaco. 
 ~
-2097220 0 0 0 0 0 0 0 400 E
+cg 0 400 S
 50 -9 -28 5d5+650 4d5+25
 900 138481
 8 8 1
-E
 #29006
 homem elegante~
 um elegante homem~
-Um elegante homem aguarda pacientemente para falar com o Bar�o.
+Um elegante homem aguarda pacientemente para falar com o Barão.
 ~
-Ele espera dentro dos confort�veis confins da torre.  Ele veste um grosso
+Ele espera dentro dos confortáveis confins da torre.  Ele veste um grosso
 manto negro com o capuz jogado em sua costas.  Ele irradia uma aura
 misteriosa.
 ~
-2097154 0 0 0 0 0 0 0 -500 E
+b 0 -500 S
 94 -34 -40 10d10+1450 6d7+51
 5150 374488
 8 8 1
-E
 #29007
-humilde peticion�rio~
-um humilde peticion�rio~
-Um humilde peticion�rio pleiteia sua causa � Baronesa.
+humilde peticionario~
+um humilde peticionário~
+Um humilde peticionário pleiteia sua causa à Baronesa.
 ~
-Ele parece ser um lenhador ou qualquer outro trabalhador comum, por�m ele,
-com uma postura forte, fala em voz firme � Baronesa sobre sua causa.
+Ele parece ser um lenhador ou qualquer outro trabalhador comum, porém ele,
+com uma postura forte, fala em voz firme à Baronesa sobre sua causa.
 ~
-2097154 0 0 0 0 0 0 0 400 E
+b 0 400 S
 54 -12 -32 10d10+987 4d5+27
 1243 168509
 8 8 1
-E
 #29008
-arrogante propriet�ria~
-uma arrogante propriet�ria~
-Uma arrogante propriet�ria de terras limpa sua garganta ruidosamente assim que voc� chega.
+arrogante proprietaria~
+uma arrogante proprietária~
+Uma arrogante proprietária de terras limpa sua garganta ruidosamente assim que você chega.
 ~
-Ela veste apenas roupas finas, e sua postura s� n�o � bela devido a todo
+Ela veste apenas roupas finas, e sua postura só não é bela devido a todo
 seu orgulho e mal-humor.
 ~
-2097154 0 0 0 0 0 0 0 200 E
+b 0 200 S
 56 -13 -32 10d10+780 4d6+28
 2800 184883
 8 8 2
-E
 #29009
 fazendeiro~
 um fazendeiro~
-Um fazendeiro pacientemente aguarda a audi�ncia com sua cabe�a abaixada.
+Um fazendeiro pacientemente aguarda a audiência com sua cabeça abaixada.
 ~
-Ele segura seu chap�u amassado em suas m�os, amassando-o ainda mais com seu nervosismo. 
+Ele segura seu chapéu amassado em suas mãos, amassando-o ainda mais com seu nervosismo. 
 ~
-2097154 0 0 0 0 0 0 0 600 E
+b 0 600 S
 51 -10 -32 10d10+999 4d5+25
 770 145654
 8 8 1
-E
 #29010
 assistente~
 uma assistente~
-Uma assistente est� em uma das mesas, trabalhando com alguns frascos.
+Uma assistente está em uma das mesas, trabalhando com alguns frascos.
 ~
-Ela parece ser uma mulher de meia idade, competente e respons�vel. 
+Ela parece ser uma mulher de meia idade, competente e responsável. 
 ~
-2097154 0 0 0 0 0 0 0 600 E
+b 0 600 S
 67 -18 -40 9d9+1340 5d6+33
 1350 292085
 8 8 2
-E
 #29011
-seguran�a quarto~
-o seguran�a do quarto~
-O seguran�a do quarto est� diante da porta. Ele bate os calcanhares rapidamente assim que voc� entra.
+seguranca quarto~
+o segurança do quarto~
+O segurança do quarto está diante da porta. Ele bate os calcanhares rapidamente assim que você entra.
 ~
-Ele parece ser mais uma parte da decora��o do que qualquer outra coisa, mas
-ele obviamente leva seu trabalho muito a s�rio.
+Ele parece ser mais uma parte da decoração do que qualquer outra coisa, mas
+ele obviamente leva seu trabalho muito a sério.
 ~
-2097154 0 0 0 0 0 0 0 400 E
+b 0 400 S
 79 -21 -40 8d11+1476 5d6+39
 1950 444598
 8 8 1
-E
 #29012
 empregada~
 uma empregada~
 Uma empregada anda sutilmente por aqui, limpando e organizando o aposento.
 ~
 Ela cantarola uma bonita melodia, o que ela parece gostar bastante de fazer.
-Ela parece n�o ter notado sua presen�a.
+Ela parece não ter notado sua presença.
 ~
-2097154 0 0 0 0 0 0 0 600 E
+b 0 600 S
 52 -12 -32 1d1+990 4d5+26
 600 153048
 8 8 2
-E
 #29013
 primo visitante~
 um primo visitante~
-Um primo visitante se senta relaxadamente em uma cadeira de balan�o, esperando a comida.
+Um primo visitante se senta relaxadamente em uma cadeira de balanço, esperando a comida.
 ~
-Ele parece ter vindo correndo sabendo que o Bar�o serviria a comida logo mais. 
+Ele parece ter vindo correndo sabendo que o Barão serviria a comida logo mais. 
 ~
-2115586 0 0 0 0 0 0 0 100 E
+blo 0 100 S
 84 -20 -40 1d1+1890 5d6+42
 300 319913
 8 8 1
-E
 #29014
 colono~
 o colono da fazenda~
-O colono da fazenda anda pelo celeiro, fazendo suas tarefas di�rias.
+O colono da fazenda anda pelo celeiro, fazendo suas tarefas diárias.
 ~
-Ele n�o parece ser muito simp�tico. Ele continua a trabalhar sem notar sua presen�a. 
+Ele não parece ser muito simpático. Ele continua a trabalhar sem notar sua presença. 
 ~
-2097154 0 0 0 0 0 0 0 500 E
+b 0 500 S
 51 -10 -32 9d9+990 4d5+25
 550 145654
 8 8 1
-E
 #29015
 vaca~
 uma vaca~
 Uma enorme vaca pasta por aqui, mascando grama.
 ~
-N�o importa o quanto voc� olhe, ela ainda parece uma imensa vaca gorda mascando grama. 
+Não importa o quanto você olhe, ela ainda parece uma imensa vaca gorda mascando grama. 
 ~
-2097216 0 0 0 0 0 0 0 0 E
+g 0 0 S
 21 0 2 6d6+870 2d3+10
 0 15159
 8 8 1
-E
 #29016
 mulher dona casa~
 uma dona de casa~
-Uma dona de casa anda incessantemente pela casa, limpando tudo o que v�.
+Uma dona de casa anda incessantemente pela casa, limpando tudo o que vê.
 ~
-Ela ainda n�o deve ter percebido que voc� entrou em sua casa. 
+Ela ainda não deve ter percebido que você entrou em sua casa. 
 ~
-2097154 0 0 0 0 0 0 0 400 E
+b 0 400 S
 43 -4 -24 6d6+760 4d5+21
 800 94267
 8 8 2
-E
 #29017
 fazendeiro~
 um fazendeiro~
-Um fazendeiro est� aqui, tirando um cochilo em sua cadeira de balan�o, voc� pode ouvir seu ronco de longe.
+Um fazendeiro está aqui, tirando um cochilo em sua cadeira de balanço, você pode ouvir seu ronco de longe.
 ~
 Ele parece ser um fazendeiro comum: um homem alto e magro, vestido com
 roupas velhas que cheiram a gado.
 ~
-2097154 0 0 0 0 0 0 0 400 E
+b 0 400 S
 50 -9 -28 7d7+980 4d5+25
 500 118481
 8 8 1
-E
 #29018
 lenhador desocupado~
 um lenhador desocupado~
 Um lenhador, ainda vestido com suas roupas de trabalho, descansa em uma poltrona.
 ~
-Ele parece estar muito cansado, parece bem relaxado em sua poltrona.  Voc�
-precisa mesmo incomod�-lo?
+Ele parece estar muito cansado, parece bem relaxado em sua poltrona.  Você
+precisa mesmo incomodá-lo?
 ~
-2097154 0 0 0 0 0 0 0 300 E
+b 0 300 S
 52 -8 -32 4d7+1000 4d5+26
 1600 133048
 8 8 1
-E
 #29019
 velho homem~
 um velho homem~
-Um velho homem sentado em uma cadeira de balan�o olha para voc�.
+Um velho homem sentado em uma cadeira de balanço olha para você.
 ~
 Ele parece ter algo a dizer, mas apenas continua sentado. 
 ~
-2097154 0 0 0 0 0 0 0 400 E
+b 0 400 S
 46 -8 -24 5d5+920 4d5+23
 2625 81957
 8 8 1
-E
 #29020
 dona casa mulher~
 a dona da casa~
-A dona da casa olha para voc� assustada assim que voc� entra em sua casa.
+A dona da casa olha para você assustada assim que você entra em sua casa.
 ~
-Ela n�o diz nada, apenas olha assustada para voc� esperando algo. H� medo em sua express�o.
+Ela não diz nada, apenas olha assustada para você esperando algo. Há medo em sua expressão.
 ~
-2097154 0 0 0 0 0 0 0 800 E
+b 0 800 S
 41 -2 -24 6d6+820 4d5+20
 300 73486
 8 8 2
-E
 #29021
 homem~
 um homem~
-H� um homem sentado em sua pequena mesa no fundo, terminando de comer um assado.
+Há um homem sentado em sua pequena mesa no fundo, terminando de comer um assado.
 ~
-Ele lhe cumprimenta assim que voc� entra, ele parece ligeiramente confuso. 
+Ele lhe cumprimenta assim que você entra, ele parece ligeiramente confuso. 
 ~
-2097154 0 0 0 0 0 0 0 499 E
+b 0 499 E
 48 -7 -28 6d11+543 4d5+24
-2900 104791
+1300 104791
 8 8 1
 E
 #29022
 professora~
 a professora~
-A professora est� em sua mesa, fazendo algumas anota��es.
+A professora está em sua mesa, fazendo algumas anotações.
 ~
-Ela mal olha para voc� quando voc� entra, dando-lhe um 'Em que posso te ajudar?' seco. 
+Ela mal olha para você quando você entra, dando-lhe um 'Em que posso te ajudar?' seco. 
 ~
-2097154 0 0 0 0 0 0 0 800 E
+b 0 800 S
 44 18 -24 7d8+1231 4d5+22
 900 99959
 8 8 2
-E
 #29023
 balconista~
 o balconista~
-O balconista sorri simpaticamente para voc�, cumprimentando-lhe.
+O balconista sorri simpaticamente para você, cumprimentando-lhe.
 ~
-Ele aponta para uma de suas mesas desocupadas, oferecendo-a a voc�.  Relaxe
+Ele aponta para uma de suas mesas desocupadas, oferecendo-a a você.  Relaxe
 enquanto ele traz um belo assado.
 ~
-2097154 0 0 0 0 0 0 0 400 E
+b 0 400 S
 77 -23 -40 5d8+1110 5d6+38
 1850 116457
 8 8 1
-E
 #29024
-contador hist�rias~
-um contador de hist�rias~
-H� um homem sentado em uma poltrona, falando alto, contando hist�rias sobre bravura e hero�smo.
+contador historias~
+um contador de histórias~
+Há um homem sentado em uma poltrona, falando alto, contando histórias sobre bravura e heroísmo.
 ~
-As hist�rias que ele conta n�o s�o hist�rias pr�prias, mas daqueles que
-fizeram parte delas.  Se tais homens realmente existiram n�o � poss�vel
-saber, mas hist�rias s�o sempre boas.
+As histórias que ele conta não são histórias próprias, mas daqueles que
+fizeram parte delas.  Se tais homens realmente existiram não é possível
+saber, mas histórias são sempre boas.
 ~
-2097154 0 0 0 0 0 0 0 400 E
+b 0 400 S
 61 -18 -40 7d7+760 4d6+30
 2050 209937
 8 8 1
-E
 #29025
 homem~
 um homem~
-Um homem est� sentado em sua poltrona, ouvindo o contador de hist�rias.
+Um homem está sentado em sua poltrona, ouvindo o contador de histórias.
 ~
-Seus olhos parecem um pouco turvos, ele sem d�vida est� cansado devido ao seu longo dia. 
+Seus olhos parecem um pouco turvos, ele sem dúvida está cansado devido ao seu longo dia. 
 ~
-2097154 0 0 0 0 0 0 0 600 E
+b 0 600 S
 63 -20 -40 5d4+1000 5d6+31
 1150 229653
 8 8 1
-E
 #29026
 elegante cavalheiro~
 um elegante cavalheiro~
-Um elegante cavalheiro est� no balc�o, degustando um copo de u�sque.
+Um elegante cavalheiro está no balcão, degustando um copo de uísque.
 ~
-Ele possui um semblante calmo, parecendo n�o querer interagir com ningu�m.
-Ele n�o parece ser daqui.
+Ele possui um semblante calmo, parecendo não querer interagir com ninguém.
+Ele não parece ser daqui.
 ~
-2097154 0 0 0 0 0 0 0 100 E
+b 0 100 S
 88 -25 -40 9d6+1530 5d6+44
 3722 485396
 8 8 1
-E
 #29027
 bela mulher~
 uma bela mulher~
-Uma bela mulher inclina-se em seu balc�o, sorrindo.
+Uma bela mulher inclina-se em seu balcão, sorrindo.
 ~
-Ela sorri carinhosamente para voc�. 
+Ela sorri carinhosamente para você. 
 ~
-2097154 0 0 0 0 0 0 0 300 E
+b 0 300 S
 76 -21 -40 10d10+750 5d6+38
 1800 152804
 8 8 2
-E
 #29028
 calintra herborista~
 Calintra, a herborista~
-Calintra, a herborista, moe algumas ervas em uma tigela enquanto sorri para voc�.
+Calintra, a herborista, moe algumas ervas em uma tigela enquanto sorri para você.
 ~
-Calintra � uma jovem mulher, uma das pessoas mais ocupadas da cidade, assim
+Calintra é uma jovem mulher, uma das pessoas mais ocupadas da cidade, assim
 como uma das mais belas.  Seus longos cabelos negros caem em sua face
 suavemente conforme ela moe as ervas, fazendo com que ela tenha de joga-los
-para tr�s constantemente.
+para trás constantemente.
 ~
-2351106 0 0 0 0 0 0 0 300 E
+bvnopqr 0 300 S
 101 0 -32 1d1+10000 4d5+25
 550 145654
 8 8 2
-E
 #29029
 salaylia mulher~
 Salaylia~
-Uma mulher rechonchuda lan�a um largo sorriso para voc� assim que voc� entra.
+Uma mulher rechonchuda lança um largo sorriso para você assim que você entra.
 ~
-Ela enxuga suas m�os em seu avental, e educadamente lhe aponta uma mesa vazia. 
+Ela enxuga suas mãos em seu avental, e educadamente lhe aponta uma mesa vazia. 
 ~
-2351106 0 0 0 0 0 0 0 300 E
+bvnopqr 0 300 S
 101 0 -32 1d1+10000 4d5+25
 550 145654
 8 8 2
-E
 #29030
 homem ferraria dono~
 o dono da ferraria~
-Um pequeno homem est� aqui, moendo um peda�o de ferro.
+Um pequeno homem está aqui, moendo um pedaço de ferro.
 ~
-Com exce��o de sua altura, o homem � a imagem perfeita de um ferreiro.
+Com exceção de sua altura, o homem é a imagem perfeita de um ferreiro.
 Forte, rude, um pouco sujo..
 ~
-2097154 0 0 0 0 0 0 0 400 E
+b 0 400 S
 51 -12 -32 7d8+1231 4d5+25
 550 145654
 8 8 1
-E
 #29031
-farmac�utico~
-o farmac�utico~
-O farmac�utico est� sentado confortavelmente em sua poltrona.
+farmaceutico~
+o farmacêutico~
+O farmacêutico está sentado confortavelmente em sua poltrona.
 ~
-Ele parece j� ter terminado todo seu trabalho di�rio e agora est� descansando um pouco. 
+Ele parece já ter terminado todo seu trabalho diário e agora está descansando um pouco. 
 ~
-2351106 0 0 0 0 0 0 0 300 E
+bvnopqr 0 300 S
 101 0 -32 1d1+10000 4d5+25
 550 145654
 8 8 1
-E
 #29032
 mochaaska~
 Mochaaska~
-Mochaaska est� aqui, entre seus v�rios barris de �gua, sorrindo para voc�.
+Mochaaska está aqui, entre seus vários barris de água, sorrindo para você.
 ~
-Mochaaska possui uma simpatia contagiante. Seus dentes s�o muito brancos. 
+Mochaaska possui uma simpatia contagiante. Seus dentes são muito brancos. 
 ~
-2351106 0 0 0 0 0 0 0 300 E
+bvnopqr 0 300 S
 101 0 -32 1d1+10000 4d5+25
 550 145654
 8 8 1
-E
 #29033
-propriet�ria dona loja~
-a propriet�ria da loja~
-A dona da loja est� aqui, limpado sua caixa registradora.
+proprietaria dona loja~
+a proprietária da loja~
+A dona da loja está aqui, limpado sua caixa registradora.
 ~
-Ela olha para voc� assim que voc� entra, lan�ando-lhe um leve aceno, e volta � sua limpeza. 
+Ela olha para você assim que você entra, lançando-lhe um leve aceno, e volta à sua limpeza. 
 ~
-2351106 0 0 0 0 0 0 0 300 E
+bvnopqr 0 300 S
 101 0 -32 1d1+10000 4d5+25
 550 145654
 8 8 2
-E
 #29034
 ministro cidade~
 o ministro da cidade~
-O estranho ministro da cidade caminha por aqui. Ele n�o parece estar muito bem.
+O estranho ministro da cidade caminha por aqui. Ele não parece estar muito bem.
 ~
-Apesar de sua sa�de estar visivelmente afetada, ningu�m consegue convenc�-lo
-de se abster de suas tarefas di�rias.  Todos os dias ele anda pela cidade
-oferecendo aux�lio para qualquer um que precise, at� para aqueles que apenas
+Apesar de sua saúde estar visivelmente afetada, ninguém consegue convencê-lo
+de se abster de suas tarefas diárias.  Todos os dias ele anda pela cidade
+oferecendo auxílio para qualquer um que precise, até para aqueles que apenas
 precisam sentar e conversar.
 ~
-2097216 0 0 0 0 0 0 0 900 E
+g 0 900 S
 57 -15 -32 7d8+1231 4d6+28
 350 173419
 8 8 1
-E
 #29035
-cidad�o~
-um cidad�o~
-Um cidad�o passa por voc� rapidamente.
+cidadao~
+um cidadão~
+Um cidadão passa por você rapidamente.
 ~
-Ele n�o parece estar muito feliz.
+Ele não parece estar muito feliz.
 ~
-2097216 0 0 0 0 0 0 0 600 E
+g 0 600 S
 44 4 -24 7d7+1059 4d5+22
 789 79959
 8 8 1
-E
 #29036
 garotinha~
 uma garotinha~
-Uma garotinha est� aqui, pulando alegremente.
+Uma garotinha está aqui, pulando alegremente.
 ~
-Sua face sardenta se abre em um lindo sorriso. Ela passa e pisca rapidamente para voc�.
+Sua face sardenta se abre em um lindo sorriso. Ela passa e pisca rapidamente para você.
 ~
-2097216 0 0 0 0 0 0 0 800 E
+g 0 800 S
 15 10 4 4d3+300 1d5+7
 25 6427
 8 8 2
-E
 #29037
 alfaite~
 o alfaite~
-O alfaiate est� aqui, esperando para lhe servir.
+O alfaiate está aqui, esperando para lhe servir.
 ~
-Ele n�o lhe diz nada, apenas aguarda com um sorriso simp�tico e paciente.
+Ele não lhe diz nada, apenas aguarda com um sorriso simpático e paciente.
 ~
-2351106 0 0 0 0 0 0 0 300 E
+bvnopqr 0 300 S
 101 0 -32 1d1+10000 4d5+25
 550 145654
 8 8 1
-E
-$
+$~
