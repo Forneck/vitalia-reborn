@@ -7,10 +7,11 @@ Ele é um lobo excepcionalmente grande, com uma grossa e negra cauda.   Saliva
 escorre rápidamente de suas brancas e longas presas.   Ele parece ser
 muito perigoso e bastante agressivo.
 ~
-fg k -350 S
+2097248 0 0 0 2048 0 0 0 -350 E
 5 16 5 1d12+60 2d4+0
 0 1000
 8 8 0
+E
 #6101
 lobo feroz~
 o lobo feroz~
@@ -20,10 +21,11 @@ Ele é um lobo excepcionalmente grande, com uma grossa e negra cauda.   Saliva
 escorre rápidamente de suas brancas e longas presas.   Ele parece ser
 muito perigoso e bastante agressivo.
 ~
-fg k -350 S
+2097248 0 0 0 2048 0 0 0 -350 E
 5 16 5 1d12+80 2d4+4
 0 1000
 8 8 0
+E
 #6102
 lobo cinzento~
 um grande lobo cinzento~
@@ -32,10 +34,11 @@ Um grande lobo cinzento está aqui, olhando ferozmente para você.
 Os grandes olhos acinzentados do lobo fitam você com interesse, enquanto
 uma baba viscosa vai escorrendo por entre os seus lábios.
 ~
-fg k -150 S
+2097248 0 0 0 2048 0 0 0 -150 E
 3 18 7 1d12+35 1d7+0
 0 450
 8 8 0
+E
 #6103
 lobo negro~
 um grande lobo negro~
@@ -44,10 +47,11 @@ Um grande lobo negro está aqui, olhando ferozmente para você.
 Os grandes olhos negros do lobo fitam você com interesse, enquanto
 uma baba viscosa vai escorrendo por entre os seus lábios.
 ~
-fg k -150 S
+2097248 0 0 0 2048 0 0 0 -150 E
 3 18 7 1d12+45 1d7+3
 0 450
 8 8 0
+E
 #6110
 arvore antiga milenar ancia~
 a árvore milenar~
@@ -60,10 +64,11 @@ comum.
 O gigantesco tronco acinzentado parece tremer, como se estivesse suspirando
 profundamente.
 ~
-glnopqr dfkstp 0 S
+2353216 0 0 0 1640528 0 0 0 0 E
 30 0 -10 1d1+1299 4d4+22
 0 500000
 8 8 2
+E
 #6111
 arvore antiga milenar ancia~
 a árvore milenar~
@@ -75,10 +80,11 @@ comum.
 
 O gigantesco tronco acinzentado emite um profundo gemido.
 ~
-glnopqr dfkstp 0 S
+2353216 0 0 0 1640528 0 0 0 0 E
 30 0 -10 1d1+999 4d4+18
 0 400000
 8 8 2
+E
 #6112
 dragao verde~
 o dragão verde~
@@ -91,10 +97,11 @@ asas, contam a história das inúmeras batalhas por ele vividas, bem como
 as diversas ranhuras dos chifres de sua cabeça.   Ele tem um cheiro
 insuportável, que apenas os dragões conseguem ter.
 ~
-fgnoq dk -1000 S
+2187360 0 0 0 2064 0 0 0 -1000 E
 20 1 0 1d12+248 2d6+9
 0 40000
 8 8 0
+E
 #6113
 aranha venenosa~
 a enorme aranha venenosa~
@@ -105,10 +112,11 @@ oito patas peludas lhe dão uma tremenda velocidade em práticamente qualquer
 tipo de superfície e suas possantes presas contém um poderoso veneno, capaz
 de paralizar ou matar em segundos.
 ~
-bfg dk -350 S
+2097250 0 0 0 2064 0 0 0 -350 E
 8 13 2 1d12+98 2d5+1
 0 4000
 8 8 0
+E
 #6114
 rainha aranha~
 a Rainha aranha~
@@ -119,10 +127,11 @@ oito patas peludas lhe dariam uma tremenda velocidade em práticamente qualquer
 tipo de superfície, se ela não fosse tão gorda.   Seus enormes olhos
 arredondados, estão fixos em você.
 ~
-bfgjl dfkp -1000 S
+2099810 0 0 0 67664 0 0 0 -1000 E
 15 6 1 1d12+185 2d8+3
 0 31000
 8 8 2
+E
 #6115
 shargugh elfo floresta~
 Shargugh~
@@ -132,10 +141,11 @@ Esta pequenina criatura tem apenas três pés de altura, com seus revoltos
 cabelos castanhos e sua longa barba embaraçada.   Ele veste um estranho e
 esfarrapado traje marrom e verde e parece que ele está se divertindo muito.
 ~
-cghl bdfgkstp 1000 S
+2099396 0 0 0 1640660 0 0 0 1000 E
 10 1 -10 1d12+47 1d8+0
 1000 11000
 8 8 1
+E
 #6116
 druida idoso ancião~
 o druida Ancião~
@@ -146,10 +156,11 @@ O druida parece ser bastante idoso.   Você poderia dizer que ele se trata de
 alguém quase santo, contudo, você sabe muito bem que ele é um adversário
 bastante difícil.
 ~
-bfij dfk 0 S
+2097954 0 0 0 2128 0 0 0 0 E
 19 2 0 1d12+236 3d6+4
 5000 45000
 8 8 1
+E
 #6117
 elfa isha~
 a Elfa negra Isha~
@@ -162,8 +173,9 @@ adornadas com fios de prata.   Suas costas estão cobertas por um grande
 manto com capuz, negro como sua pele e na cintura, um largo cinto de prata
 prende uma longa e delgada espada em seu bainha de prata.
 ~
-bml dks -1000 S
+2103298 0 0 0 526352 0 0 0 -1000 E
 20 1 0 1d12+245 3d6+4
 5000 40000
 8 8 2
+E
 $

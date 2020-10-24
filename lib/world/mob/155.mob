@@ -6,7 +6,7 @@ Um guarda da OmE está aqui, bloqueando sua passagem.
 Ele está em total atenção, e permanecendo com o corpo imóvel.  Parece ter 
 sido feito de metal.
 ~
-bjlmno 0 -200 E
+2128386 0 0 0 0 0 0 0 -200 E
 5 9 5 3d4+70 2d6+5
 150 1567
 8 8 1
@@ -20,7 +20,7 @@ Charley está aqui, com uma prancheta em mãos.
 Pobre homem, deve ter sido um fracassado na escola.  Agora ele tem esta 
 posição semi-oficial e a leva com muito carinho.
 ~
-blmno 0 -100 E
+2127874 0 0 0 0 0 0 0 -100 E
 5 8 5 4d6+83 2d3+2
 200 1767
 8 8 1
@@ -33,7 +33,7 @@ Um soldado da OmE está aqui, fitando-o.
 Ele se vira, olha para os lados, e para.  Da mais uma volta.  Olha ao 
 redor e diz, "Um, hei, era para você estar aqui?."
 ~
-fglmo 0 -200 E
+2119776 0 0 0 0 0 0 0 -200 E
 6 8 5 3d5+103 3d3+2
 200 1987
 8 8 1
@@ -45,7 +45,7 @@ O mestre de armas está aqui, praticando suas habilidades.
 ~
 Este homem aparenta ser forte o suficiente para esmaga-lo.
 ~
-beflmno 0 -200 E
+2127922 0 0 0 0 0 0 0 -200 E
 15 3 3 3d4+500 3d4+12
 230 15342
 8 8 1
@@ -58,7 +58,7 @@ O capitão da OmE está em pé aqui, com ódio no olhar.
 Possuindo um porte grande, e aparentando muito ódio, ele não deve ser um 
 oponente fácil.
 ~
-beflmno 0 -300 E
+2127922 0 0 0 0 0 0 0 -300 E
 15 3 3 3d5+500 2d4+12
 250 15678
 8 8 1
@@ -71,7 +71,7 @@ O tenente da OmE está aqui, lendo um pequeno livro.
 Ele parece estar um pouco confuso, pensando no porque de você estar nesta 
 sala.
 ~
-beflmno 0 -300 E
+2127922 0 0 0 0 0 0 0 -300 E
 15 3 2 4d6+500 3d3+3
 300 16523
 8 8 1
@@ -83,7 +83,7 @@ O sargento da OmE está aqui, parado.
 ~
 Este homem poderia ser um bom mestre de estábulos...
 ~
-beflmno 0 -300 E
+2127922 0 0 0 0 0 0 0 -300 E
 16 3 1 3d5+600 4d3+4
 370 18673
 8 8 1
@@ -96,7 +96,7 @@ O general da OmE está aqui, praticando um de seus horríveis discursos.
 Este homem não apresenta muita força, mas é tão alto que chega a 
 amedontra-lo.
 ~
-beflmno 0 -300 E
+2127922 0 0 0 0 0 0 0 -300 E
 17 3 1 3d5+321 3d5+4
 650 19787
 8 8 1
@@ -109,10 +109,9 @@ O Grande Cavaleiro está aqui.
 Talvez você devesse considerar a opção de sair correndo deste 
 local...
 ~
-beflmno 0 -400 E
+2127922 0 0 0 0 0 0 0 -400 E
 17 2 0 3d10+650 4d5+6
 600 22333
 8 8 1
 E
 $
-

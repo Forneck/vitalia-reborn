@@ -7,10 +7,11 @@ Você vê um homem, calvo e de estrutura grosseira, vestindo um manto branco.
 Ele escutou as histórias desta cidade de trevas, e veio para cá como 
 missionário. 
 ~
-bino :6:7:10:12 800 S
+2121986 0 0 0 0 0 0 0 800 E
 30 -2 -8 1d15+1200 9d3+3
 9436 108000
 8 8 1
+E
 #9901
 tumular criatura ossos~
 a criatura tumular~
@@ -19,10 +20,11 @@ Uma escangalhada pilha de farrapos e ossos está aqui.
 Você vê um morto-vivo, a única razão de sua existência é a de proteger seu
 túmulo na colina.
 ~
-blno :6 0 S
+2123778 0 0 0 0 0 0 0 0 E
 40 -3 -12 3d5+2200 7d5+5
 1000 112000
 8 8 2
+E
 #9902
 banshee mulher morta~
 a Banshee~
@@ -32,10 +34,11 @@ Este demônio é o espírito de uma perversa elfa, algo realmente raro.
 Seu cabelo é desordenado e revolto, além dela estar vestida em trapos 
 esfarrapados.
 ~
-efgnoq :1:6:15 -900 S
+2187376 0 0 0 0 0 0 0 -900 E
 35 -2 -10 3d8+1590 4d9+6
 5000 100000
 8 8 2
+E
 #9903
 argus monstro~
 o Argus~
@@ -45,10 +48,11 @@ Este é um enorme monstro, parecido com uma ameba, mas com um olho
 central com a pupila tripartida, e outra centena de olhos adaptados
 sobre as muitas e afiadas bocas dentadas...
 ~
-glnopqr :6 -666 S
+2353216 0 0 0 0 0 0 0 -666 E
 30 10 1 1d1+690 5d10+4
 7500 50000
 8 8 1
+E
 #9904
 bicho-papão bicho papao papão~
 O Bicho-Papão~
@@ -58,10 +62,11 @@ Grande e muito forte, esta criatura é recoberta por pêlos avermelhados.
 Apesar de possuir uma aparência humanóide, ele parece possuir o sangue
 dos mais terríveis predadores.
 ~
-cgo :6 -700 S
+2113604 0 0 0 0 0 0 0 -700 E
 15 0 10 1d3+210 3d7+2
 666 22300
 8 8 1
+E
 #9905
 quebrado~
 alguém todo quebrado~
@@ -70,10 +75,11 @@ Alguém todo quebrado está aqui, parecendo ameaçador.
 Este cara é realmente feio!  Ele tem a cabeça de um ogro, um pé de aranha,
 um pé humano, e várias outras partes de corpos incompatíveis.
 ~
-gjkno :6 -400 S
+2123328 0 0 0 0 0 0 0 -400 E
 20 -1 2 1d1+666 2d9+4
 2500 39000
 8 8 1
+E
 #9906
 capanga~
 o capanga~
@@ -81,10 +87,11 @@ Um capanga está parado aqui, preparado para defender o covil de seu mestre.
 ~
 Isto se parece com uma tartaruga ninja, exceto por ele ser um sapo.
 ~
-bcjmo :6 -699 S
+2118150 0 0 0 0 0 0 0 -699 E
 18 0 3 1d1+320 6d3+3
 1000 24450
 8 8 1
+E
 #9907
 planta~
 um homem-planta~
@@ -92,10 +99,11 @@ Uma grande planta exalando odores putrefatos está aqui, enojando o ambiente.
 ~
 Você vê uma gigantesca vênus armadilha de mosca, com dentes de 6 polegadas.
 ~
-bfno :6:28 -800 S
+2121762 0 0 0 0 0 0 0 -800 E
 40 -1 -9 2d9+2850 10d4+3
 12000 120000
 8 8 1
+E
 #9908
 gorgimera~
 a Gorgimera~
@@ -105,10 +113,11 @@ Este monstro possui três cabeças, de um górgona, de um leão, e de um cruel
 dragão. Isto tem a parte traseira de um grande e negra górgona, e a parte 
 dianteira de um gigantesco leão, com asas castanhas de um dragão. 
 ~
-bflnopq :6:17:19 100 S
+2222114 0 0 0 0 0 0 0 100 E
 80 0 -10 4d8+12001 10d9+25
 25000 500000
 8 8 2
+E
 #9909
 morte cavaleiro~
 O Cavaleiro da Morte~
@@ -117,10 +126,11 @@ Um cavaleiro da morte está aqui, desdenhando de você.
 Um grosseiro esqueleto, sua face de caveira é negra e recoberta por restos 
 de carne podre.
 ~
-glnoq :6:13:17 -900 S
+2189376 0 0 0 0 0 0 0 -900 E
 38 -10 -20 9d6+5050 11d4+20
 33000 250000
 8 8 1
+E
 #9910
 abismo dragao cobra~
 o dragão do abismo~
@@ -130,10 +140,11 @@ O dragão do abismo possui tonalidades marrons e tem cerca de 2,5 metros de
 comprimento. Conhecido por assumir várias formas, este animal é extremamente 
 perigoso e seria melhor você sair de seu lar imediatamente.
 ~
-bdjklnoq :6:7:28 -700 S
+2190858 0 0 0 0 0 0 0 -700 E
 43 -10 -30 1d1+12000 4d12+38
 66000 1100000
 8 8 1
+E
 #9911
 traidor anao~
 o Anão traidor~
@@ -142,10 +153,11 @@ O traidor está parado aqui, gritando.
 Você vê um anão com olhos brancos e brilhantes, sem pupilas.  A pele é 
 branca, mas ele parece ainda bastante vigoroso.
 ~
-gf :0:6 -250 S
+2097248 0 0 0 0 0 0 0 -250 E
 10 0 0 25d8+100 4d3+3
 6662 6950
 8 8 1
+E
 #9912
 elfo~
 o elfo errante~
@@ -155,10 +167,11 @@ Você vê um atraente rapaz, tem cerca de 1,5 metros de altura, com olhos
 cintilantes e fraca complexão.  Apesar de pequeno, ele mostra ser bastante 
 flexível e ágil.
 ~
-gilmno :6:7:12 700 S
+2128192 0 0 0 0 0 0 0 700 E
 30 -5 -10 250d1+1000 10d3+8
 1500 100000
 8 8 1
+E
 #9913
 efreeti espirito~
 o Efreeti~
@@ -168,10 +181,11 @@ Você vê um poderoso bruxo despido da cintura para cima, vestido apenas com
 um par de chinelos, calças de cor púrpura, e um bracelete cintilante de
 muitas cores.
 ~
-belnopqt :1:7:17:25 0 S
+2746386 0 0 0 0 0 0 0 0 E
 100 -40 -40 5d10+23900 11d11+70
 79000 4750000
 8 8 1
+E
 #9914
 medusa mulher~
 a Medusa~
@@ -180,10 +194,11 @@ Uma mulher está sentada na cama, de costas para você.
 Bem, você provavelmente não deveria olhar para esta mulher, pois, ela é 
 realmente feia.  Mas suponho que você queira saber o quão feia.
 ~
-bjlno :6:28 -800 S
+2124290 0 0 0 0 0 0 0 -800 E
 50 0 -10 6d66+3666 4d10+22
 30250 389000
 8 8 2
+E
 #9915
 estúpido orc~
 o Orc~
@@ -191,10 +206,11 @@ Um grande, estúpido Orc está movimentando-se pesadamente aqui.
 ~
 Ele é simplesmente horrível...
 ~
-cg :6 -1000 S
+2097220 0 0 0 0 0 0 0 -1000 E
 10 5 10 25d3+5 2d6+1
 250 1300
 8 8 1
+E
 #9916
 garcom~
 o garçom~
@@ -202,10 +218,11 @@ Há um garçom parado aqui, aguardando por suas ordens.
 ~
 É uma pessoa pequena, com pinos perfurando a carne em seu rosto...
 ~
-bmno :6 -100 S
+2125826 0 0 0 0 0 0 0 -100 E
 30 0 -10 1d1+5650 5d5+5
 15000 125000
 8 8 1
+E
 #9917
 cidadão~
 um cidadão de Ghenna~
@@ -214,10 +231,11 @@ Um cidadão de Ghenna está aqui.
 Você vê uma pessoa imunda, a muito insana devido a destruição de sua
 maravilhosa cidade.
 ~
-cg :6 666 S
+2097220 0 0 0 0 0 0 0 666 E
 10 3 9 1d1+150 6d2+3
 2200 6000
 8 8 1
+E
 #9918
 senhora velha vendedora~
 uma vendedora~
@@ -226,10 +244,11 @@ Uma velha senhora (obviamente perdida) está tentando vender maquiagem.
 Você vê uma velha senhora, de vestido cor de rosa.  Em seus braços ela
 carrega uma caixa de papel crepe em forma de coração.
 ~
-cgno :6 400 S
+2121796 0 0 0 0 0 0 0 400 E
 10 -5 10 1d1+450 2d10+2
 5000 7000
 8 8 2
+E
 #9923
 mestre espadachim homem~
 o mestre espadachim de Ghenna~
@@ -240,30 +259,35 @@ tatuado com runas da cabeça aos pés.  Envolto em mortalhas vermelhas, ele
 empunha uma espada de impressionante beleza, a qual emite zunidos cortando
 o ar assim que ele o ataca.
 ~
-belnopq :6:7:17 -700 S
+2222098 0 0 0 0 0 0 0 -700 E
 100 -30 -40 1d8+20000 14d3+65
 100000 3250000
 8 8 1
+E
 #9931
 parede pé~
 um pé saindo da parede~
 Parece que um pé está saindo da parede! 
 ~
+An undefined string.
 ~
-befh 0 0 S
+2097330 0 0 0 0 0 0 0 0 E
 20 2 10 1d10+750 2d5+8
 15 36000
 8 8 1
+E
 #9932
 parede braço~
 um braço saindo da parede~
 Parece que um braço está saindo da parede! 
 ~
+An undefined string.
 ~
-befh 0 0 S
+2097330 0 0 0 0 0 0 0 0 E
 20 2 10 1d10+720 2d6+7
 15 32000
 8 8 1
+E
 #9933
 estatua rocha golem~
 o golem de rocha~
@@ -273,10 +297,11 @@ Isto se parece com uma escultura em rocha de um ser humanóide de corpo
 extremamente anguloso, como um esboço de assustador homem.  Ele tem mais de
 3, 5 metros de altura, lançando uma sombra sobre você.
 ~
-blmo :6 0 S
+2119682 0 0 0 0 0 0 0 0 E
 61 0 -10 1d1+10000 10d3+25
 43567 700000
 8 8 1
+E
 #9964
 boneca~
 a boneca~
@@ -286,10 +311,11 @@ um dia a teve.
 Parece com um típico brinquedo de criança.  Tem cerca de 30 centímetros
 de altura, e parece ser de argila.
 ~
-bce 0 0 S
+2097174 0 0 0 0 0 0 0 0 E
 5 7 1 1d1+175 2d5+5
 200 5900
 8 8 2
+E
 #9971
 mulher~
 uma mulher~
@@ -297,10 +323,11 @@ Uma jovem, de aparência inocente está sentada aqui, lendo um revista.
 ~
 Ela encara você, e pisca o olho.
 ~
-bo 0 300 S
+2113538 0 0 0 0 0 0 0 300 E
 20 0 0 1d1+375 5d3+5
 5300 9000
 6 6 2
+E
 #9972
 lester~
 Lester~
@@ -308,10 +335,11 @@ Lester está aqui, apenas observando o movimento.
 ~
 Você observa um homem de má aparência, e percebe que está babando.
 ~
-bno 0 -600 S
+2121730 0 0 0 0 0 0 0 -600 E
 20 0 0 1d1+880 5d3+5
 3000 10250
 8 8 1
+E
 #9975
 mulher~
 a mulher~
@@ -320,10 +348,11 @@ Uma mulher desdentada está sentada na cama.
 Um olho, sem dentes e com uma pele branca, esta mulher parece o seu
 pior pesadelo.
 ~
-bfhjn 0 -700 S
+2106018 0 0 0 0 0 0 0 -700 E
 15 2 3 1d1+300 5d3+7
 10000 20000
 8 6 2
+E
 #9981
 morto anao~
 o Anão~
@@ -331,10 +360,11 @@ Um Anão está deitado aqui.
 ~
 Você não vê nada de especial.
 ~
-bfno 0 300 S
+2121762 0 0 0 0 0 0 0 300 E
 1 1 0 1d1+10 1d1+80
 250 250
 6 5 1
+E
 #9985
 maedar~
 o Maedar~
@@ -342,10 +372,11 @@ Um Maedar está aqui na penumbra.
 ~
 Você vê um musculoso e careca humanóide, vestido em uma túnica.
 ~
-gj 0 -600 S
+2097728 0 0 0 0 0 0 0 -600 E
 20 0 0 30d5+20 4d4+7
 943 10900
 8 8 1
+E
 #9986
 maedar mestre~
 o mestre Maedar~
@@ -353,10 +384,11 @@ Um Maedar está aqui na penumbra.
 ~
 Você vê um musculoso e careca humanóide, vestido em uma túnica.
 ~
-bjno :28 -700 S
+2122242 0 0 0 0 0 0 0 -700 E
 25 0 0 8d6+375 3d6+10
 2500 30950
 8 8 1
+E
 #9987
 elfo roger~
 Roger~
@@ -366,10 +398,11 @@ Você vê um jovem elfo, tem apenas cerca de 130 anos, ele age como se estivesse
 em uma cruzada.  Vestido numa armadura reluzente, persegue os agentes do mal 
 tentando erradica-los da face do planeta.
 ~
-gino :7:12 800 S
+2122048 0 0 0 0 0 0 0 800 E
 30 -3 0 5d5+625 4d4+10
 25000 138000
 8 8 1
+E
 #9989
 dragao dragonet~
 o Dragonet~
@@ -378,10 +411,11 @@ Um fraco e pequeno dragão esta parado aqui, olhando para você com profundos ol
 Você vê o que parece ser a miniatura de um dragão, com aproximadamente o tamanho 
 de um chihuahua.
 ~
-cg 0 500 S
+2097220 0 0 0 0 0 0 0 500 E
 30 0 0 2d4+100 3d4+3
 350 5200
 8 8 1
+E
 #9994
 barata~
 a barata~
@@ -389,10 +423,11 @@ A maior barata que você já viu está aqui, olhando para você.
 ~
 Você vê uma barata de aproximadamente 70 centímetros de comprimento.
 ~
-bnoq 0 -351 S
+2187266 0 0 0 0 0 0 0 -351 E
 50 -5 -10 1d1+750 5d7+33
 7500 99500
 8 8 2
+E
 #9997
 deepspawn~
 o Deepspawn~
@@ -404,8 +439,9 @@ braços-mandíbula, terminando em bocas de muitos dentes.  Tem também cerca de
 40 olhos flexíveis, longos e retráteis, que observam você de forma
 ameaçadora.
 ~
-bejnoq :12:13:17 -600 S
+2187794 0 0 0 0 0 0 0 -600 E
 60 -7 -10 1d1+1901 3d7+40
 40000 285000
 8 8 1
+E
 $

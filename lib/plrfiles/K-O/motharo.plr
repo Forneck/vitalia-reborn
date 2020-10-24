@@ -6,23 +6,24 @@ Clas: 6
 Levl: 1
 Id  : 14
 Brth: 1603385931
-Plyd: 677
-Last: 1603406082
+Plyd: 1267
+Last: 1603537913
+Lmot: 1603406303
+Lnew: 1603406297
 Htwn: 1372
 Host: 187.66.23.112
 Hite: 165
 Wate: 152
-Act : 0 0 0 0
+Act : y 0 0 0
 Aff : 0 0 0 0
 Pref: efghno 0 0 0
 Room: 65535
 Lern: 2
-Hung: 15
-Thir: 15
-Drnk: 15
-Hit : 23/23
-Mana : 100/100
-Move: 84/84
+Hung: -1
+Thir: -1
+Hit : 1/23
+Mana : 1/100
+Move: 1/84
 Str : 16/0
 Int : 12
 Wis : 12
@@ -32,6 +33,9 @@ Cha : 12
 Ac  : 100
 Exp : 1
 Olc : 0
-Page: 0
 Skil:
 0 0
+Alis: 1
+ sa
+ say $*
+1
