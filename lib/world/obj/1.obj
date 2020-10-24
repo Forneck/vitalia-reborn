@@ -1,7 +1,7 @@
 #100
 asas~
 um par de asas~
-Um par de asas está aqui.~
+Um par de asas estÃ¡ aqui.~
 ~
 24 0 0 0 0 ap 0 0 0 0 0 0 0
 0 0 0 0
@@ -31,9 +31,9 @@ Um papel foi deixado aqui.~
 0 0 0 0
 1 0 0 0 0
 #104
-anotação~
-uma anotação~
-Uma anotação foi deixada aqui.~
+anotaÃ§Ã£o~
+uma anotaÃ§Ã£o~
+Uma anotaÃ§Ã£o foi deixada aqui.~
 ~
 16 eq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -41,7 +41,7 @@ Uma anotação foi deixada aqui.~
 #105
 mensagem~
 uma mensagem~
-Há uma mensagem aqui.~
+HÃ¡ uma mensagem aqui.~
 ~
 16 eq 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
@@ -49,7 +49,7 @@ Há uma mensagem aqui.~
 #106
 papiro papel~
 um papiro~
-Um rolo de papiro está jogado no chão.~
+Um rolo de papiro estÃ¡ jogado no chÃ£o.~
 ~
 16 eq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -57,7 +57,7 @@ Um rolo de papiro está jogado no chão.~
 #107
 placa~
 uma placa~
-Há uma placa aqui. Talvez você deva lê-la!~
+HÃ¡ uma placa aqui. Talvez vocÃª deva lÃª-la!~
 ~
 16 eq 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
@@ -65,8 +65,8 @@ Há uma placa aqui. Talvez você deva lê-la!~
 #108
 importante mensagem~
 uma MENSAGEM IMPORTANTE~
-                   *** Há uma MENSAGEM IMPORTANTE aqui. ***
-                   *********** Você deve lê-la! ***********~
+                   *** HÃ¡ uma MENSAGEM IMPORTANTE aqui. ***
+                   *********** VocÃª deve lÃª-la! ***********~
 ~
 16 eq 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
@@ -74,8 +74,8 @@ uma MENSAGEM IMPORTANTE~
 #109
 importante placa~
 uma PLACA IMPORTANTE~
-                    *** Há uma PLACA IMPORTANTE aqui. ***
-                    ********* Você deve lê-la! **********~
+                    *** HÃ¡ uma PLACA IMPORTANTE aqui. ***
+                    ********* VocÃª deve lÃª-la! **********~
 ~
 16 eq 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
@@ -179,7 +179,7 @@ Uma carta brilhante foi deixada aqui.~
 #190
 dinamite~
 uma dinamite~
-Há uma dinamite aqui.~
+HÃ¡ uma dinamite aqui.~
 $p explode, e $n se machuca!~
 14 0 0 0 0 a 0 0 0 0 0 0 0
 0 24 -1 -1
