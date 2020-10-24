@@ -1,9 +1,9 @@
 #7500
-garanh�o orgulhoso~
-um garanh�o orgulhoso~
-Um grande garanh�o orgulhoso fica se mostrando aqui.
+garanhão orgulhoso~
+um garanhão orgulhoso~
+Um grande garanhão orgulhoso fica se mostrando aqui.
 ~
-O garanh�o se exibe e fica correndo ao seu redor.  
+O garanhão se exibe e fica correndo ao seu redor.  
 ~
 2449410 0 0 0 0 0 0 0 0 E
 15 11 0 12d12+300 4d5+7
@@ -13,10 +13,10 @@ E
 #7501
 gata peluda~
 uma gata muito peluda~
-Uma gata muito peluda anda ao redor de voc� a procura de ratos.
+Uma gata muito peluda anda ao redor de você a procura de ratos.
 ~
-A gata � bem gorda.  O p�lo dela est� bastante esticado apertando ao redor
-da barriga.  Na ca�a ela parece ser muito boa.
+A gata é bem gorda.  O pêlo dela está bastante esticado apertando ao redor
+da barriga.  Na caça ela parece ser muito boa.
 ~
 2097216 0 0 0 0 0 0 0 0 E
 4 15 3 6d8+100 4d4+4
@@ -24,13 +24,13 @@ da barriga.  Na ca�a ela parece ser muito boa.
 8 8 2
 E
 #7502
-darwin bar�o~
-Bar�o Darwin~
-O Bar�o Darwin est� aqui com um olhar vislumbre e ganancioso.
+darwin barao~
+Barão Darwin~
+O Barão Darwin está aqui com um olhar vislumbre e ganancioso.
 ~
-O Bar�o Darwin � um homem alto com uma m�dia massa muscular.  Seus longos e
-negros cabelos foram penteados para tr�s e utilizado um amarrador para
-prend�-los.  Os olhos dele lan�am um olhar atormentador.
+O Barão Darwin é um homem alto com uma média massa muscular.  Seus longos e
+negros cabelos foram penteados para trás e utilizado um amarrador para
+prendê-los.  Os olhos dele lançam um olhar atormentador.
 ~
 2353170 0 0 0 256 0 0 0 -1000 E
 90 -26 -40 12d12+5000 12d7+47
@@ -44,12 +44,12 @@ Wis: 17
 Con: 17
 E
 #7503
-thewin capit�o guardas~
-Capit�o Thewin~
-O capit�o Thewin patrulha a �rea enquanto inspeciona seus guardas.
+thewin capitao guardas~
+Capitão Thewin~
+O capitão Thewin patrulha a área enquanto inspeciona seus guardas.
 ~
-Thewin � um homem alto.  A altura dos ombros dele chega facilmente aos 3
-metros.  A face dele demonstra um aspecto de seguran�a, de um homem que
+Thewin é um homem alto.  A altura dos ombros dele chega facilmente aos 3
+metros.  A face dele demonstra um aspecto de segurança, de um homem que
 enfrentou a morte.
 ~
 2351106 0 0 0 0 0 0 0 -500 E
@@ -60,10 +60,10 @@ E
 #7504
 mullins tenente guarda~
 Tenente Mullins~
-o tenente Mullins vaga aqui inspecionando a seguran�a.
+o tenente Mullins vaga aqui inspecionando a segurança.
 ~
-Mullins � um homem jovem.  Conforme sua gradua��o deve ser um homem de
-promessa.  Ele est� de p� nos seus imensos 3 metros de altura com um longo
+Mullins é um homem jovem.  Conforme sua graduação deve ser um homem de
+promessa.  Ele está de pé nos seus imensos 3 metros de altura com um longo
 cabelo louro.
 ~
 2351106 0 0 0 0 0 0 0 -500 E
@@ -77,8 +77,8 @@ Sargento Stanchfield~
 O sargento Stanchfield sussura para ele mesmo.
 ~
 O Sargento Stanchfield tem facilmente 3 metros de altura.  Possui marcas no
-rosto que est�o tampadas por longas mechas de cabelo vermelho.  A face dele
-e orelhas s�o completamente vermelhas, e tamb�m possui uma grande cicatriz
+rosto que estão tampadas por longas mechas de cabelo vermelho.  A face dele
+e orelhas são completamente vermelhas, e também possui uma grande cicatriz
 no peito.
 ~
 2351106 0 0 0 0 0 0 0 -500 E
@@ -91,9 +91,9 @@ morris sargento guarda~
 Sargento Morris~
 O sargento Morris vadia sobre seu beliche.
 ~
-Sargento Morris � uma pessoa grande, gorda e fedorenta.  Os olhos dele est�o
-bastante inchados e seu enorme queixo est� repleto de vincos, formados por
-sua gordura.  Sua armadura foi arrancada do corpo e lan�ada com muita for�a
+Sargento Morris é uma pessoa grande, gorda e fedorenta.  Os olhos dele estão
+bastante inchados e seu enorme queixo está repleto de vincos, formados por
+sua gordura.  Sua armadura foi arrancada do corpo e lançada com muita força
 sobre sua barriga.
 ~
 2351106 0 0 0 0 0 0 0 -500 E
@@ -104,10 +104,10 @@ E
 #7507
 martin cozinha chefe homem~
 Chefe Martin~
-O chefe de cozinha continua a preparar a refei��o.
+O chefe de cozinha continua a preparar a refeição.
 ~
-O chefe de cozinha Martain est� rosnando intensamente para voc�.  Uma grande
-quantidade de cabelo saem para fora do bon� por todos os lados.  Ele possui
+O chefe de cozinha Martain está rosnando intensamente para você.  Uma grande
+quantidade de cabelo saem para fora do boné por todos os lados.  Ele possui
 um cabelo preto e bastante oleoso.
 ~
 2107394 0 0 0 0 0 0 0 0 E
@@ -118,11 +118,11 @@ E
 #7508
 ajudante cozinha~
 a ajudante de cozinha~
-Uma ajudante de cozinha tem um servi�o dif�cil, manter seu chefe feliz.
+Uma ajudante de cozinha tem um serviço difícil, manter seu chefe feliz.
 ~
-A ajudante de cozinha tem a concentra��o quebrada com a sua chegada.  Ela
-mant�m os olhos fixos no trabalho que est� fazendo.  Possui um pequeno
-ferimento na m�o direita, provavelmente tenha ocorrido no fechamento de
+A ajudante de cozinha tem a concentração quebrada com a sua chegada.  Ela
+mantém os olhos fixos no trabalho que está fazendo.  Possui um pequeno
+ferimento na mão direita, provavelmente tenha ocorrido no fechamento de
 uma porta.    
 ~
 2105474 0 0 0 0 0 0 0 0 E
@@ -133,10 +133,10 @@ E
 #7509
 empregada alegre mulher~
 uma empregada alegre~
-Uma empregada sussurra alegremente como se tivesse fazendo o servi�o. 
+Uma empregada sussurra alegremente como se tivesse fazendo o serviço. 
 ~
-A empregada � at� atraente.  Mas sua face tem um olhar debochado, como seu
-soubesse de alguma piada e n�o quisesse lhe contar.
+A empregada é até atraente.  Mas sua face tem um olhar debochado, como seu
+soubesse de alguma piada e não quisesse lhe contar.
 ~
 2105540 0 0 0 0 0 0 0 0 E
 26 0 -7 7d7+1000 5d6+18
@@ -148,9 +148,9 @@ mordomo quieto casmurro homem~
 um mordomo casmurro~
 Um homem distinto passeia pelo corredor fazendo o trabalho.
 ~
-O mordomo tem um olhar que � um misto de espanto e de severidade em sua
-face.  Sua postura � correta e seu andar � lento e desajeitado.  Ele olha
-para voc� com um olhar elegante.
+O mordomo tem um olhar que é um misto de espanto e de severidade em sua
+face.  Sua postura é correta e seu andar é lento e desajeitado.  Ele olha
+para você com um olhar elegante.
 ~
 2105350 0 0 0 0 0 0 0 0 E
 50 -9 -18 10d10+2000 8d6+28
@@ -160,11 +160,11 @@ E
 #7511
 chefe criados~
 a chefe dos criados~
-A chefe dos criados olha desconfiada para voc�.
+A chefe dos criados olha desconfiada para você.
 ~
-A face da velha feiticeira est� enrugada e parece estar rosnando.  Um fino
-cabelo cinza � retirado de cima de um p�o que est� sobre a cabe�a dela.  Sua
-roupa est� passada e bem engomada.
+A face da velha feiticeira está enrugada e parece estar rosnando.  Um fino
+cabelo cinza é retirado de cima de um pão que está sobre a cabeça dela.  Sua
+roupa está passada e bem engomada.
 ~
 2107394 0 0 0 0 0 0 0 -350 E
 55 -11 -20 10d10+2180 8d6+32
@@ -172,12 +172,12 @@ roupa est� passada e bem engomada.
 8 8 2
 E
 #7512
-guarda port�o~
-um guarda de port�o~
-Um guarda foi postado antes dos port�es do Pasto.
+guarda portao~
+um guarda de portão~
+Um guarda foi postado antes dos portões do Pasto.
 ~
 O guarda faz parte dos soldados profissionais pessoalmente escolhidos pelo
-Bar�o Darwin.  A armadura dele est� bem conservada e ele n�o parece estar
+Barão Darwin.  A armadura dele está bem conservada e ele não parece estar
 chateado, como a maioria dos outros soldados.
 ~
 2291730 0 0 0 0 0 0 0 -500 E
@@ -188,10 +188,10 @@ E
 #7513
 guarda perambulando~
 um guarda perambulando~
-Um guarda patrulha os ch�os do Pasto.
+Um guarda patrulha os chãos do Pasto.
 ~
 O guarda faz parte dos soldados profissionais pessoalmente escolhidos pelo
-Bar�o Darwin.  A armadura dele est� bem conservada e ele n�o parece estar
+Barão Darwin.  A armadura dele está bem conservada e ele não parece estar
 chateado, como a maioria dos outros soldados.
 ~
 2285570 0 0 0 0 0 0 0 -500 E
@@ -202,10 +202,10 @@ E
 #7514
 pajem ajudante~
 o pajem~
-O pajem est� pronto para ajudar o Bar�o.
+O pajem está pronto para ajudar o Barão.
 ~
-O jovem menino tem uma express�o de timidez na face.  O cabelo dele foi
-cortado bastante curto e a roupa est� estranhamente limpa para uma crian�a
+O jovem menino tem uma expressão de timidez na face.  O cabelo dele foi
+cortado bastante curto e a roupa está estranhamente limpa para uma criança
 da sua idade.
 ~
 2105474 0 0 0 0 0 0 0 0 E
@@ -214,12 +214,12 @@ da sua idade.
 8 8 1
 E
 #7515
-vigia homem ladr�o~
+vigia homem~
 o vigia~
 Um vigia monitora toda a zona rural.
 ~
 O guarda faz parte dos soldados profissionais pessoalmente escolhidos pelo
-Bar�o Darwin.  A armadura dele est� bem conservada e ele n�o parece estar
+Barão Darwin.  A armadura dele está bem conservada e ele não parece estar
 chateado, como a maioria dos outros soldados.
 ~
 2351122 0 0 0 0 0 0 0 -500 E
@@ -230,10 +230,10 @@ E
 #7516
 jardineiro homem~
 o jardineiro~
-Um homem velho est� inclinado ajeitando a terra.
+Um homem velho está inclinado ajeitando a terra.
 ~
-As m�os do velho homem est�o cobertas de grama e sujeira.  O velho acabara
-de se machucar, � o risco que ele corre fazendo este servi�o.
+As mãos do velho homem estão cobertas de grama e sujeira.  O velho acabara
+de se machucar, é o risco que ele corre fazendo este serviço.
 ~
 2105346 0 0 0 0 0 0 0 100 E
 47 -3 -18 10d10+1210 5d6+23
@@ -243,10 +243,10 @@ E
 #7517
 aprendiz homem jovem~
 um aprendiz~
-Um jovem homem estuda v�rias artes para sua profiss�o.
+Um jovem homem estuda várias artes para sua profissão.
 ~
-O jovem homem est� repleto de aten��o.  Ele tem a express�o estampada no
-rosto de uma grande excita��o, pois ele acabara de praticar novas
+O jovem homem está repleto de atenção.  Ele tem a expressão estampada no
+rosto de uma grande excitação, pois ele acabara de praticar novas
 habilidades.    
 ~
 2105346 0 0 0 0 0 0 0 -300 E
@@ -260,7 +260,7 @@ um guarda de folga~
 Um guarda de folga descansa em sua beliche.
 ~
 O guarda faz parte dos soldados profissionais pessoalmente escolhidos pelo
-Bar�o Darwin.  Como ele j� trabalhou bastante, tenta descansar um pouco.
+Barão Darwin.  Como ele já trabalhou bastante, tenta descansar um pouco.
 ~
 2105346 0 0 0 0 0 0 0 -500 E
 68 -17 -20 10d10+2400 8d7+32
@@ -270,10 +270,10 @@ E
 #7519
 soldado homem~
 um soldado~
-Um homem se ap�ia contra a parede de pedras.
+Um homem se apóia contra a parede de pedras.
 ~
 O guarda faz parte dos soldados profissionais pessoalmente escolhidos pelo
-Bar�o Darwin.  A armadura dele est� bem conservada e ele n�o parece estar
+Barão Darwin.  A armadura dele está bem conservada e ele não parece estar
 chateado, como a maioria dos outros soldados.
 ~
 2285570 0 0 0 0 0 0 0 -500 E
@@ -286,10 +286,10 @@ ferreiro homem grande~
 um ferreiro~
 Um homem muito grande coberto com fuligens se senta em um banco.
 ~
-O grande e forte homem tem cabelos castanhos claros.  Os bra�os dele s�o t�o
+O grande e forte homem tem cabelos castanhos claros.  Os braços dele são tão
 grandes quanto as pernas de muitas pessoas.  Ele possui antigas cicatrizes
 no rosto.  Cicatrizes providas de metais quentes que se soltam e voam na
-dire��o dele.
+direção dele.
 ~
 2351122 0 0 0 0 0 0 0 0 E
 57 -13 -19 10d10+1700 5d7+28
@@ -297,12 +297,12 @@ dire��o dele.
 5 5 1
 E
 #7521
-garoto est�bulo~
-o garoto do est�bulo~
-Um jovem garoto est� limpando os est�bulos.
+garoto estabulo~
+o garoto do estábulo~
+Um jovem garoto está limpando os estábulos.
 ~
-O jovem realiza o trabalho com uma express�o de desgosto.  Os p�s dele est�o
-cobertos com adubo e o cabelo est� fedendo muito.
+O jovem realiza o trabalho com uma expressão de desgosto.  Os pés dele estão
+cobertos com adubo e o cabelo está fedendo muito.
 ~
 2105474 0 0 0 0 0 0 0 0 E
 15 11 0 10d10+650 4d4+12
@@ -310,12 +310,12 @@ cobertos com adubo e o cabelo est� fedendo muito.
 8 8 1
 E
 #7522
-mestre est�bulo~
-um mestre dos est�bulos~
-O mestre dos est�bulos franzi as sobrancelhas para olhar ao redor.
+mestre estabulo~
+um mestre dos estábulos~
+O mestre dos estábulos franze as sobrancelhas para olhar ao redor.
 ~
-O mestre dos est�bulos tem uma face cruel.  Os olhos escuros clareia toda a
-sala com uma luz amea�adora.  Ele esfrega as m�os e segura o cabresto de um
+O mestre dos estábulos tem uma face cruel.  Os olhos escuros clareia toda a
+sala com uma luz ameaçadora.  Ele esfrega as mãos e segura o cabresto de um
 cavalo.
 ~
 2103306 0 0 0 0 0 0 0 -800 E
@@ -326,9 +326,9 @@ E
 #7523
 homem joalheiro~
 o joalheiro~
-Um homem est� sentado aqui trabalhando em algumas j�ias.
+Um homem está sentado aqui trabalhando em algumas jóias.
 ~
-O joalheiro tem m�os pequenas e muito �geis.  Seus olhos piscam quase que
+O joalheiro tem mãos pequenas e muito ágeis.  Seus olhos piscam quase que
 constantemente.
 ~
 2105346 0 0 0 0 0 0 0 -500 E
@@ -341,10 +341,10 @@ ourives mulher~
 a ourives~
 Uma mulher se levanta aqui derramando ouro dentro dos moldes.
 ~
-A ourives � uma mulher loura e ador�vel.  A face angelical dela � moldada
-pelo seu longo e castanho cabelo que vai at� os ombros.  Os olhos dela o
-olham de um jeito diferente.  Um intenso brilho que sai dela cobre voc�, um
-brilho suave e tranq�ilo.
+A ourives é uma mulher loura e adorável.  A face angelical dela é moldada
+pelo seu longo e castanho cabelo que vai até os ombros.  Os olhos dela o
+olham de um jeito diferente.  Um intenso brilho que sai dela cobre você, um
+brilho suave e tranqüilo.
 ~
 2105346 0 0 0 0 0 0 0 -500 E
 63 -16 -19 10d10+1800 5d7+31
@@ -354,10 +354,10 @@ E
 #7525
 guarda terra~
 um guarda~
-Um soldado se levanta protegendo este peda�o de terra.
+Um soldado se levanta protegendo este pedaço de terra.
 ~
 O guarda faz parte dos soldados profissionais pessoalmente escolhidos pelo
-Bar�o Darwin.  A armadura dele est� bem conservada e ele n�o parece estar
+Barão Darwin.  A armadura dele está bem conservada e ele não parece estar
 chateado, como a maioria dos outros soldados.
 ~
 2285570 0 0 0 0 0 0 0 -500 E
@@ -368,10 +368,10 @@ E
 #7526
 contadora mulher~
 a contadora~
-Uma mulher est� aqui, conferindo as raz�es.
+Uma mulher está aqui, conferindo as razões.
 ~
-A contadora tem manchas de tinta nas m�os e no nariz.  Os ossos da m�o dela
-s�o muito fortes de tanto digitar as cartas e calcular as contas do Bar�o.
+A contadora tem manchas de tinta nas mãos e no nariz.  Os ossos da mão dela
+são muito fortes de tanto digitar as cartas e calcular as contas do Barão.
 ~
 2285570 0 0 0 0 0 0 0 -600 E
 64 -16 -28 10d10+2710 7d7+33
@@ -383,9 +383,9 @@ estudande artes secretas~
 um estudante~
 Um estudante das artes secretas assiste a aula.
 ~
-Um jovem tem a express�o estampada no rosto de uma grande excita��o, pois
+Um jovem tem a expressão estampada no rosto de uma grande excitação, pois
 ele acabara de praticar novas habilidades.  Ele estuda intensamente o texto
-das habilidades na qual utilizar� constantemente no futuro.
+das habilidades na qual utilizará constantemente no futuro.
 ~
 2109570 0 0 0 0 0 0 0 -380 E
 48 -10 -17 10d10+1000 5d6+24
@@ -395,11 +395,11 @@ E
 #7528
 armeiro homem~
 o armeiro~
-Um homem se levanta aqui inspecionando os bra�os.
+Um homem se levanta aqui inspecionando os braços.
 ~
-O armeiro � um velho veterano de guerra mas agora ele gasta o tempo cuidando
+O armeiro é um velho veterano de guerra mas agora ele gasta o tempo cuidando
 das ferramentas e instrumentos que o mantiveram vivo durante todo este
-per�odo.  Ele cheira a �leo e carbono.
+período.  Ele cheira a óleo e carbono.
 ~
 2351122 0 0 0 0 0 0 0 -600 E
 70 -20 -30 10d10+3600 8d7+38
@@ -409,10 +409,10 @@ E
 #7529
 mulher costureira~
 a costureira~
-Um mulher est� aqui medindo algumas roupas.
+Um mulher está aqui medindo algumas roupas.
 ~
-A costureira � pequena e bastante gorda.  Sua face � vermelha e um pouco
-peluda, ela tenta cumprir todas as ordens do Bar�o e do seu pessoal.
+A costureira é pequena e bastante gorda.  Sua face é vermelha e um pouco
+peluda, ela tenta cumprir todas as ordens do Barão e do seu pessoal.
 ~
 2105474 0 0 0 0 0 0 0 0 E
 54 -5 -13 10d10+1210 5d6+22
@@ -420,12 +420,12 @@ peluda, ela tenta cumprir todas as ordens do Bar�o e do seu pessoal.
 8 8 2
 E
 #7530
-ladr�o homem seminu~
-um ladr�o seminu~
-Um homem est� aqui experimentando algumas roupas novas.
+ladrao homem seminu~
+um ladrão seminu~
+Um homem está aqui experimentando algumas roupas novas.
 ~
-O jovem homem tem um corpo magro e atl�tico.  Ele se levanta vestindo apenas
-suas roupas �ntimas.
+O jovem homem tem um corpo magro e atlético.  Ele se levanta vestindo apenas
+suas roupas íntimas.
 ~
 2351250 0 0 0 0 0 0 0 -600 E
 62 -15 -15 10d10+2120 5d7+31
@@ -435,10 +435,10 @@ E
 #7531
 homem interrogador~
 o interrogador~
-Um homem se levanta aqui com alguns dispositivos indecentes na m�o.
+Um homem se levanta aqui com alguns dispositivos indecentes na mão.
 ~
-Este mal�fico homem possui um olhar sinistro.  Um pequena quantidade de
-saliva est� no canto da boca.  Suas m�os fortes e grandes se parecem muito
+Este maléfico homem possui um olhar sinistro.  Um pequena quantidade de
+saliva está no canto da boca.  Suas mãos fortes e grandes se parecem muito
 com suas ferramentas de trabalho.
 ~
 2287106 0 0 0 0 0 0 0 -900 E
@@ -449,10 +449,10 @@ E
 #7532
 prisioneiro homem~
 um prisioneiro~
-Um homem foi amarrado e deixado no ch�o daqui.
+Um homem foi amarrado e deixado no chão daqui.
 ~
-O homem foi batido severamente.  Seus olhos est�o roxos e muito inchados de
-tanto apanhar.  O l�bio inferior dele possui um enorme corte e se contrai
+O homem foi batido severamente.  Seus olhos estão roxos e muito inchados de
+tanto apanhar.  O lábio inferior dele possui um enorme corte e se contrai
 irregularmente.
 ~
 2105346 0 0 0 0 0 0 0 100 E
