@@ -3,7 +3,7 @@ homem rocha obsidiana~
 um homem de rocha obsidiana~
 O muro parece se movimentar, e um homem rocha surge da parede.
 ~
-Um enorme bloco de pedra parece ter forma humana. Ele � forte o bastante 
+Um enorme bloco de pedra parece ter forma humana. Ele é forte o bastante 
 para explodir qualquer coisa que tente passar por aqui.
 ~
 2119730 0 0 0 0 0 0 0 0 E
@@ -12,14 +12,14 @@ para explodir qualquer coisa que tente passar por aqui.
 8 8 1
 E
 #4801
-homem p�lido~
-o homem p�lido~
-O homem p�lido observa voc�, formando planos para ataca-lo.
+homem palido~
+o homem pálido~
+O homem pálido observa você, formando planos para ataca-lo.
 ~
-Ele n�o tem mais de cinco p�s de altura. Por�m com seus guardi�es ao seu 
-lado, n�o necessita de estatura para impressiona-lo. Sua pele � 
-cor-de-leite e seus olhos negros como carv�o. Ele n�o tem nenhum cabelo 
-na cabe�a.
+Ele não tem mais de cinco pés de altura. Porém com seus guardiões ao seu 
+lado, não necessita de estatura para impressiona-lo. Sua pele é 
+cor-de-leite e seus olhos negros como carvão. Ele não tem nenhum cabelo 
+na cabeça.
 ~
 2353202 0 0 0 0 0 0 0 -900 E
 50 0 -5 20d22+3000 5d9+20
@@ -27,12 +27,12 @@ na cabe�a.
 8 8 1
 E
 #4802
-m�e aboleth~
-uma m�e aboleth~
-Um aboleth est� rangendo para voc�, na inten��o de devor�-lo com uma bocada.
+mae aboleth~
+uma mãe aboleth~
+Um aboleth está rangendo para você, na intenção de devorá-lo com uma bocada.
 ~
-Ela parece um peixe gigante e inteligente, com cerca de vinte p�s de 
-comprimento, sua pele � verde azulada com manchas de cor cinza.
+Ela parece um peixe gigante e inteligente, com cerca de vinte pés de 
+comprimento, sua pele é verde azulada com manchas de cor cinza.
 ~
 2097186 0 0 0 0 0 0 0 -700 E
 41 5 -4 14d16+1300 3d6+15
@@ -40,11 +40,11 @@ comprimento, sua pele � verde azulada com manchas de cor cinza.
 8 8 2
 E
 #4803
-beb� aboleth~
-um beb� aboleth~
-Um beb� aboleth segue sua m�e esperando por uma boa refei��o.
+bebe aboleth~
+um bebê aboleth~
+Um bebê aboleth segue sua mãe esperando por uma boa refeição.
 ~
-Ele se parece com sua m�e porem � menor e n�o tem manchas cinza.
+Ele se parece com sua mãe porém é menor e não tem manchas cinza.
 ~
 2128002 0 0 0 0 0 0 0 -200 E
 34 8 -3 11d15+1175 3d4+13
@@ -54,9 +54,9 @@ E
 #4804
 largo morcego~
 um largo morcego~
-Um largo morcego desce do teto para atacar voc�!
+Um largo morcego desce do teto para atacar você!
 ~
-Seus olhos s�o vermelhos como brasas e suas presas est�o prontas para o 
+Seus olhos são vermelhos como brasas e suas presas estão prontas para o 
 ataque.
 ~
 2103330 0 0 0 0 0 0 0 0 E
@@ -67,9 +67,9 @@ E
 #4805
 escravo imundo~
 um escravo imundo~
-Um escravo imundo move-se sorrateiramente por voc�, limpando restos no ch�o.
+Um escravo imundo move-se sorrateiramente por você, limpando restos no chão.
 ~
-Ele � um monte de carne podre e sangrenta que n�o tem c�rebro ele sabe 
+Ele é um monte de carne podre e sangrenta que não tem cérebro e sabe 
 apenas trabalhar.
 ~
 2097286 0 0 0 0 0 0 0 -100 E
@@ -78,9 +78,9 @@ apenas trabalhar.
 8 8 1
 E
 #4806
-r�ptil carnicento~
-um r�ptil carnicento~
-um r�ptil carnicento rasteja-se pela caverna, pegando tudo que consegue.
+reptil carnicento~
+um réptil carnicento~
+um réptil carnicento rasteja-se pela caverna, pegando tudo que consegue.
 ~
 Essa coisa parece um gigante com dentes. Anda de um lado para o outro 
 procurando por restos perdidos em batalhas.
@@ -93,9 +93,9 @@ E
 #4807
 beijo morte~
 o beijo da morte~
-O beijo da morte flutua perto de voc�, com seus tent�culos balan�ando.
+O beijo da morte flutua perto de você, com seus tentáculos balançando.
 ~
-Ele parece um contemplador, com varios olhos e tent�culos. Voc� se sente 
+Ele parece um contemplador, com varios olhos e tentáculos. Você se sente 
 desconfortavel quando encarca um dos olhos.
 ~
 2189362 0 0 0 0 0 0 0 -1000 E
@@ -109,7 +109,7 @@ chefe bugbear~
 o chefe bugbear~
 O chefe bugbear rosnando ferozmente no seu lugar de descanso.
 ~
-Essa coisa n�o parece desejar intrusos. Ele � bastante �gil e est� pronto 
+Essa coisa não parece desejar intrusos. Ele é bastante ágil e está pronto 
 para atacar...
 ~
 2226210 0 0 0 0 0 0 0 -400 E
@@ -118,12 +118,12 @@ para atacar...
 8 8 1
 E
 #4809
-l�der bugbear~
-o l�der bugbear~
-O l�der bugbear est� aqui, praticando gritos de guerra.
+lider bugbear~
+o líder bugbear~
+O líder bugbear está aqui, praticando gritos de guerra.
 ~
-Parece que o seu fim est� pr�ximo, ele decidiu matar voc�. Ele parece muito 
-com os outros bugbears por�m mais largo e com presas maiores.
+Parece que o seu fim está próximo, ele decidiu matar você. Ele parece muito 
+com os outros bugbears porém mais largo e com presas maiores.
 ~
 2226210 0 0 0 0 0 0 0 -700 E
 38 2 -5 13d14+2475 8d5+6
@@ -132,10 +132,10 @@ com os outros bugbears por�m mais largo e com presas maiores.
 E
 #4810
 bugbear xama~
-o bugbear Xam�~
-O bugbear Xam� olha para voc� com raiva. Voc� o incomodou.
+o bugbear Xamã~
+O bugbear Xamã olha para você com raiva. Você o incomodou.
 ~
-Parece que esse bugbear sabe ler alguma coisa. Ele est� um Tomo Antigo.
+Parece que esse bugbear sabe ler alguma coisa. Ele está lendo um Tomo Antigo.
 ~
 2127906 0 0 0 0 0 0 0 -900 E
 37 3 -4 12d15+2150 3d5+4
@@ -145,11 +145,11 @@ E
 #4811
 criatura profundezas~
 a criatura das profundezas~
-A criatura das profundezas est� sentada no centro da sala olhando para voc�.
+A criatura das profundezas está sentada no centro da sala olhando para você.
 ~
-Essa abomina��o da natureza geralmente descansa no escuro, em lugares 
+Essa abominão da natureza geralmente descansa no escuro, em lugares 
 fedorentos e semelhantes ao inferno. Vive mandando criaturas para a ilha 
-da destrui��o.
+da destruição.
 ~
 2226210 0 0 0 0 0 0 0 -1000 E
 44 2 -5 16d16+2625 4d5+6
@@ -159,10 +159,10 @@ E
 #4812
 feyr dorminhoco~
 um feyr dorminhoco~
-Glup! Voc� trope�ou no feyr dorminhoco.
+Glup! Você tropeçou no feyr dorminhoco.
 ~
-Dizem que esta criatura m�stica � nascida das sombras mais profundas e 
-escuras. Ela � uma mistura de todos os horrores existentes na mente dos 
+Dizem que esta criatura mística é nascida das sombras mais profundas e 
+escuras. Ela é uma mistura de todos os horrores existentes na mente dos 
 X'Raantra's.
 ~
 2185250 0 0 0 0 0 0 0 -1000 E
@@ -172,10 +172,10 @@ X'Raantra's.
 E
 #4813
 gargula~
-um g�rgula~
-Uma est�tua de gargula est� apoiada na parede.
+um gárgula~
+Uma estátua de gargula está apoiada na parede.
 ~
-Voc� tem a impress�o de que esta estatua est� viva. Suas garras est�o 
+Você tem a impressão de que esta estatua está viva. Suas garras estão 
 mesmo se movendo?
 ~
 2099234 0 0 0 0 0 0 0 -900 E
@@ -186,11 +186,11 @@ BareHandAttack: 8
 E
 #4814
 gargula~
-o g�rgula~
-Um g�rgula extremamente largo descansa em um canto.
+o gárgula~
+Um gárgula extremamente largo descansa em um canto.
 ~
-Ele est� curvado, abra�ando os joelhos. Sua cabe�a esta abaixada, de 
-qualquer forma, parece que um dos olhos est� encarando voc�.
+Ele está curvado, abraçando os joelhos. Sua cabeça esta abaixada, de 
+qualquer forma, parece que um dos olhos está encarando você.
 ~
 2099234 0 0 0 0 0 0 0 -990 E
 46 3 -4 16d18+1800 4d7+16
@@ -201,9 +201,9 @@ E
 #4815
 corcunda~
 um corcunda~
-Um pequeno homem corcunda aponta a espada para voc�.
+Um pequeno homem corcunda aponta a espada para você.
 ~
-Esse uivante, berrador e barulhento corcunda parece amea�ado, de qualquer 
+Esse uivante, berrador e barulhento corcunda parece ameaçado, de qualquer 
 forma nunca se sabe.
 ~
 2127906 0 0 0 0 0 0 0 -500 E
@@ -214,10 +214,10 @@ E
 #4816
 monstro~
 o monstro~
-Um enorme monstro faminto bate os p�s e urra encarando voc�.
+Um enorme monstro faminto bate os pés e urra encarando você.
 ~
 Isso parece um giganteso touro com chifres como os de um minotauro.  Na 
-realidade ele � um minotauro, por�m o corpo n�o parece com o de um humano.
+realidade ele é um minotauro, porém o corpo não parece com o de um humano.
 ~
 2103330 0 0 0 0 0 0 0 -400 E
 36 3 -4 12d14+1425 5d4+17
@@ -228,10 +228,10 @@ E
 #4817
 diabinho~
 um diabinho~
-Um repugnante diabinho cinza estente os bra�os em sua dire��o.
+Um repugnante diabinho cinza estente os braços em sua direção.
 ~
 Ele esta vestido com alguns trapos imundos e esfarrapados, o resto do corpo 
-est� coberto por asquerosos cabelos longos e pretos. A pele � toda cinzenta 
+está coberto por asquerosos cabelos longos e pretos. A pele é toda cinzenta 
 e escamosa.
 ~
 2291746 0 0 0 0 0 0 0 -800 E
@@ -240,11 +240,11 @@ e escamosa.
 8 8 1
 E
 #4818
-assombra��o~
-uma assombra��o~
-Uma assombra��o aparece rapidamente tentando assusta-lo!
+assombracao~
+uma assombração~
+Uma assombração aparece rapidamente tentando assusta-lo!
 ~
-Ela � gigantesca, com aproximadamente nove p�s de altura e bastante 
+Ela é gigantesca, com aproximadamente nove pés de altura e bastante 
 pesada.  Parece um cruzamento de homem e fantasma, suas garras podem 
 arranhar e causar dor.
 ~
@@ -258,9 +258,9 @@ monte argila~
 um monte de argila~
 Um monte de argila suga o calor do lugar, inclusive o seu!
 ~
-Ele nao � nada mais que um monte de argila marrom no ch�o da caverna, 
-entretanto emana um poder que esta sugando todo o calor deste local.  Est� 
-se movendo constantemente e seus bra�o parecem tent�culos prontos para 
+Ele nao é nada mais que um monte de argila marrom no chão da caverna, 
+entretanto emana um poder que esta sugando todo o calor deste local.  Está
+se movendo constantemente e seus braço parecem tentáculos prontos para 
 ferir quem incomoda-lo.
 ~
 2103330 0 0 0 0 0 0 0 -200 E
@@ -271,10 +271,10 @@ E
 #4820
 homem argila~
 um homem de argila~
-Um homem de argila est� em posi��o de ataque, cuidado!
+Um homem de argila está em posição de ataque, cuidado!
 ~
-Ele n�o � t�o largo - tem cerca de quatro p�s de largura, mas n�o aparenta 
-ter muita for�a. Ele deve estar esperando uma oportunidade para atacar.
+Ele não é tão largo - tem cerca de quatro pés de largura, mas não aparenta 
+ter muita força. Ele deve estar esperando uma oportunidade para atacar.
 ~
 2103346 0 0 0 0 0 0 0 -300 E
 35 5 -4 12d13+1800 4d5+13
@@ -284,10 +284,10 @@ E
 #4821
 membro bugbear~
 um membro bugbear~
-Um membro bugbear est� vagando por aqui.
+Um membro bugbear está vagando por aqui.
 ~
-Ele est� coberto com uma pele grossa, suas sobrancelhas sobem e descem 
-deixando-o com uma apar�ncia assustadora.
+Ele está coberto com uma pele grossa, suas sobrancelhas sobem e descem 
+deixando-o com uma aparência assustadora.
 ~
 2120194 0 0 0 0 0 0 0 -200 E
 31 5 -2 10d1+1500 4d5+12
@@ -295,12 +295,12 @@ deixando-o com uma apar�ncia assustadora.
 8 8 1
 E
 #4822
-drag�o profundezas~
-o Drag�o das profundezas~
-O Drag�o das profundezas observa voc� com curiosidade.
+dragao profundezas~
+o Dragão das profundezas~
+O Dragão das profundezas observa você com curiosidade.
 ~
-Ele provavelmente est� tentando descobrir que tipo de homem tolo entraria 
-no esconderijo de um Drag�o.
+Ele provavelmente está tentando descobrir que tipo de homem tolo entraria 
+no esconderijo de um Dragão.
 ~
 2357298 0 0 0 0 0 0 0 -900 E
 60 2 -7 5d5+2700 5d9+20
