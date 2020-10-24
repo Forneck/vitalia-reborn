@@ -49,14 +49,14 @@ $n acusa todos.
 Você olha $R acusando.
 $n parece acusar $N.
 $n parece estar acusando você.
-Accuse somebody who's not even there??
-You accuse yourself.
-$n seems to have a bad conscience.
-You look accusingly at $S $t.
-$n looks accusingly at $N's $t.
-$n looks at your $t accusingly.
-You look accusingly at $p.
-$n looks accusingly at $p.
+Acusar alguém que não está aqui??
+Você acusa a si mesm$r.
+$n parece ter consciência pesada.
+Você olha acusando para $t $S.
+$n olha acusando para $t de $N.
+$n olha para $t acusando.
+Você olha acusando para $p.
+$n olha acusando para $p.
 
 ~ack ack 0 5 0 0
 ACK!
