@@ -1,10 +1,10 @@
 #4500
-ave �guia p�ssaro grande~
-uma �guia~
-Uma grande �guia est� sobrevoando o local, sempre atenta aos seus movimentos.
+ave aguia passaro grande~
+uma águia~
+Uma grande águia está sobrevoando o local, sempre atenta aos seus movimentos.
 ~
-Os maiores e mais nobres p�ssaros criados, as �guias s�o grandes o suficiente
-para carregar facilmente um Homem (ou um An�o mais um Hobbit).
+Os maiores e mais nobres pássaros criados, as águias são grandes o suficiente
+para carregar facilmente um Homem (ou um Anão mais um Hobbit).
 ~
 2713680 0 0 0 0 0 0 0 500 E
 60 -10 -20 10d10+2500 5d18+15
@@ -15,14 +15,14 @@ Int: 18
 Wis: 15
 E
 #4501
-�guia thorondor~
+aguia thorondor~
 Thorondor~
-Thorondor, o Senhor das �guias est� parado aqui, protegendo o local contra
-os espi�es dos inimigo.
+Thorondor, o Senhor das Águias está parado aqui, protegendo o local contra
+os espiões dos inimigo.
 ~
-Thorondor, a maior das �guias, tem uma extens�o das asas de 55 metros.
-Pode falar a l�ngua dos Homens e Elfos.  O Senhor das �guias est� aqui
-guiando seu exercito na prote��o de Gondolin.
+Thorondor, a maior das águias, tem uma extensão das asas de 55 metros.
+Pode falar a língua dos Homens e Elfos.  O Senhor das Águias está aqui
+guiando seu exercito na proteção de Gondolin.
 ~
 2750486 0 0 0 0 0 0 0 600 E
 101 -40 -40 10d10+13000 10d10+50
@@ -36,13 +36,14 @@ E
 #4502
 tuor~
 Tuor~
-Tuor, o mensageiro de Ulmo, est� em p� aqui.
+Tuor, o mensageiro de Ulmo, está em pé 
+aqui.
 ~
-Tuor � belo, alto e forte, com cabelos dourados como � de costume � sua Casa.
-Criado pelos elfos se tornou s�bio e habilidoso, como um pr�ncipe dos Homens,
-e isso o � por direito.  Filho de Huor e R�an veio a Gondolin com Voronw�
+Tuor é belo, alto e forte, com cabelos dourados como é de costume  sua Casa.
+Criado pelos elfos se tornou sábio e habilidoso, como um príncipe dos Homens,
+e isso o é por direito.  Filho de Huor e Rían veio a Gondolin com Voronwë
 trazendo a mensagem de Ulmo.  Casou-se com Idril e desse amor nasceu
-E�rendil, o Luminoso.
+Eärendil, o Luminoso.
 ~
 2222096 0 0 0 0 0 0 0 500 E
 100 -40 -50 8d10+15000 6d20+60
@@ -56,10 +57,10 @@ E
 #4503
 elemmakil~
 Elemmakil~
-Elemmakil, capit�o da Guarda, est� aqui segurando uma lanterna.
+Elemmakil, capitão da Guarda, está aqui segurando uma lanterna.
 ~
-Elemmakil, o capit�o da Guarda, traja cota de malha e est� armado com uma
-espada.  Na outra m�o, segura uma lanterna �lfica.
+Elemmakil, o capitão da Guarda, traja cota de malha e está armado com uma
+espada.  Na outra mão, segura uma lanterna élfica.
 ~
 2124034 0 0 0 0 0 0 0 600 E
 60 -8 -25 8d8+2000 8d10+20
@@ -69,9 +70,9 @@ E
 #4504
 sentinela madeira~
 o sentinela~
-O sentinela do Port�o de Madeira est� aqui, atento ao perigo.
+O sentinela do Portão de Madeira está aqui, atento ao perigo.
 ~
-O sentinela esta vestindo uma cota de malha �lfica e empunhando uma longa
+O sentinela esta vestindo uma cota de malha élfica e empunhando uma longa
 espada.
 ~
 2125826 0 0 0 0 0 0 0 500 E
@@ -82,7 +83,7 @@ E
 #4505
 sentinela pedra~
 o sentinela~
-O sentinela do Port�o de Pedra est� aqui, atento ao perigo.
+O sentinela do Portão de Pedra está aqui, atento ao perigo.
 ~
 O sentinela esta trajando vestes cinzas e segurando uma espada.
 ~
@@ -94,7 +95,7 @@ E
 #4506
 sentinela bronze~
 o sentinela~
-O sentinela do Port�o de Bronze est� aqui, atento ao perigo.
+O sentinela do Portão de Bronze está aqui, atento ao perigo.
 ~
 O sentinela esta vestindo cota de malha e empunhando um machado.
 ~
@@ -106,7 +107,7 @@ E
 #4507
 sentinela ferro~
 o sentinela~
-O sentinela do Port�o de Ferro est� aqui, atento ao perigo.
+O sentinela do Portão de Ferro está aqui, atento ao perigo.
 ~
 O sentinela veste manto e malha negras e segura um grande escudo negro.
 ~
@@ -118,7 +119,7 @@ E
 #4508
 sentinela prata~
 o sentinela~
-O sentinela do Port�o de Prata est� aqui, atento ao perigo.
+O sentinela do Portão de Prata está aqui, atento ao perigo.
 ~
 O sentinela traja vestes brancas e segura um belo arco.
 ~
@@ -130,7 +131,7 @@ E
 #4509
 sentinela ouro dourado~
 o sentinela~
-O sentinela do Port�o Dourado est� aqui, atento ao perigo.
+O sentinela do Portão Dourado está aqui, atento ao perigo.
 ~
 O sentinela traja malha com detalhes de ouro e segura um longo arco.
 ~
@@ -140,11 +141,11 @@ O sentinela traja malha com detalhes de ouro e segura um longo arco.
 8 8 1
 E
 #4510
-sentinela a�o~
+sentinela aco~
 o sentinela~
-O sentinela do Port�o de A�o est� aqui, atento ao perigo.
+O sentinela do Portão de Aço está aqui, atento ao perigo.
 ~
-O sentinela segura uma grande lan�a e usa armadura de a�o negro.
+O sentinela segura uma grande lança e usa armadura de aço negro.
 ~
 2187282 0 0 0 0 0 0 0 500 E
 46 -6 -20 12d8+1000 12d8+18
@@ -152,12 +153,12 @@ O sentinela segura uma grande lan�a e usa armadura de a�o negro.
 8 8 1
 E
 #4511
-guarni��o soldados pedra~
-a guarni��o do segundo port�o~
-Uma guarni��o de soldados �lficos est� em forma aqui, protegendo o caminho.
+guarnicaoo soldados pedra~
+a guarnição do segundo portão~
+Uma guarnição de soldados élficos está em forma aqui, protegendo o caminho.
 ~
-Os soldados desta guarni��o est�o trajando vestes cinzentas e empunhando longas
-espadas de duas m�os.
+Os soldados desta guarnição estáo trajando vestes cinzentas e empunhando longas
+espadas de duas mãos.
 ~
 2222082 0 0 0 0 0 0 0 600 E
 80 -18 -30 9d10+5000 9d9+20
@@ -165,12 +166,12 @@ espadas de duas m�os.
 8 8 2
 E
 #4512
-guarni��o soldados bronze~
-a guarni��o do terceiro port�o~
-Uma guarni��o de soldados �lficos est� em forma aqui, protegendo o caminho.
+guarnicao soldados bronze~
+a guarnição do terceiro portão~
+Uma guarnição de soldados élficos está em forma aqui, protegendo o caminho.
 ~
 Uma companhia ainda maior de guardas do que a anterior.  Vestidos em cotas de malha
-que refulgem p�lidas como o fogo ba�o, empunham machados com l�minas vermelhas.
+que refulgem pálidas como o fogo baço, empunham machados com lâminas vermelhas.
 ~
 2222082 0 0 0 0 0 0 0 600 E
 82 -21 -30 9d10+5200 10d9+23
@@ -178,12 +179,12 @@ que refulgem p�lidas como o fogo ba�o, empunham machados com l�minas verme
 8 8 2
 E
 #4513
-guarni��o soldados ferro~
-a guarni��o do quarto port�o~
-Uma guarni��o de soldados �lficos est� em forma aqui, protegendo o caminho.
+guarnicao soldados ferro~
+a guarnição do quarto portão~
+Uma guarnição de soldados élficos está em forma aqui, protegendo o caminho.
 ~
 Os Guardas de Ferro vestem mantos negros bem como suas malhas e seus longos escudos,
-e seus rostos mascarados por viseiras que ostentam cada uma um bico de �guia.
+e seus rostos mascarados por viseiras que ostentam cada uma um bico de águia.
 ~
 2222082 0 0 0 0 0 0 0 600 E
 85 -25 -30 9d10+6500 11d9+25
@@ -191,11 +192,11 @@ e seus rostos mascarados por viseiras que ostentam cada uma um bico de �guia.
 8 8 2
 E
 #4514
-guarni��o soldados prata~
-a guarni��o do quinto port�o~
-Uma guarni��o de soldados �lficos est� em forma aqui, protegendo o caminho.
+guarnicaoo soldados prata~
+a guarnição do quinto portão~
+Uma guarnição de soldados élficos está em forma aqui, protegendo o caminho.
 ~
-H� cem arqueiros de cada flanco, equipados com cotas de malha de prata e elmos
+Há cem arqueiros de cada flanco, equipados com cotas de malha de prata e elmos
 de cristas brancas.
 ~
 2222098 0 0 0 0 0 0 0 600 E
@@ -204,12 +205,12 @@ de cristas brancas.
 8 8 2
 E
 #4515
-guarni��o soldados ouro~
-a guarni��o do sexto port�o~
-Uma guarni��o de soldados �lficos est� em forma aqui, protegendo o caminho.
+guarnicao soldados ouro~
+a guarnição do sexto portão~
+Uma guarnição de soldados élficos está em forma aqui, protegendo o caminho.
 ~
 Trezentos arqueiros com arcos longos e malhas cobertas de ouro, altas plumas
-douradas erguem-se de seus elmos e seus grandes escudo redondos s�o vermelhos
+douradas erguem-se de seus elmos e seus grandes escudo redondos são vermelhos
 como chamas.
 ~
 2222098 0 0 0 0 0 0 0 600 E
@@ -220,15 +221,15 @@ E
 #4516
 ecthelion~
 Ecthelion~
-Ecthelion, o Senhor das Fontes, Guardi�o do Grande Port�o est� em p� aqui.
+Ecthelion, o Senhor das Fontes, Guardião do Grande Portão está em pé aqui.
 ~
-Ecthelion est� trajado todo de prata, e em seu elmo brilhante esta fixada uma
-ponta de a�o encimada por um diamante; e seu escudo cintila como se estivesse
-orvalhado por gotas de chuva, que s�o na verdade mil pinos de cristal.
-Ecthelion olha para voc� e fala imponente:
-&y"Voc� chega ao �ltimo Port�o.  Saiba, pois, que qualquer estranho que o
-atravesse jamais h� de sair outra vez, exceto pela porta da morte.  Diga
-agora a mando de quem viestes e a quem desejas encontrar!"&n
+Ecthelion está trajado todo de prata, e em seu elmo brilhante esta fixada uma
+ponta de aço encimada por um diamante; e seu escudo cintila como se estivesse
+orvalhado por gotas de chuva, que são na verdade mil pinos de cristal.
+Ecthelion olha para você e fala imponente:
+@y"Você chegou ao Último Portão.  Saiba, pois, que qualquer estranho que o
+atravesse jamais há de sair outra vez, exceto pela porta da morte.  Diga
+agora a mando de quem viestes e a quem desejas encontrar!"@n
 ~
 2222106 0 0 0 0 0 0 0 800 E
 101 -40 -40 10d12+14000 10d12+50
@@ -245,10 +246,10 @@ E
 #4517
 vigilante arqueiro~
 um vigilante~
-Um arqueiro est� vigiando atentamente daqui do alto da torre.
+Um arqueiro está vigiando atentamente daqui do alto da torre.
 ~
-Trajando vestes cincentas e segurando um grande arco, o arqueiro, com sua vis�o
-�lfica est� atento a qualquer movimento suspeito no caminho entre os port�es.
+Trajando vestes cincentas e segurando um grande arco, o arqueiro, com sua visão
+élfica está atento a qualquer movimento suspeito no caminho entre os portões.
 ~
 2220034 0 0 0 0 0 0 0 500 E
 40 0 -15 5d6+1500 5d5+13
@@ -256,13 +257,13 @@ Trajando vestes cincentas e segurando um grande arco, o arqueiro, com sua vis�
 8 8 1
 E
 #4518
-voronw�~
-Voronw�~
-Voronw�, o marinheiro, est� aqui pensando no grande mar.
+voronwe voronwë~
+Voronwë~
+Voronwë, o marinheiro, está aqui pensando no grande mar.
 ~
-Voronw�, filho de Aranw�, da casa de Fingolfin, amigo e guia de Tuor.  O �ltimo
-marujo do �ltimo navio que buscou o velho Oeste, foi salvo por Ulmo da f�ria de
-Oss� e desde ent�o aguarda o momento de voltar ao mar.
+Voronwë, filho de Aranwë, da casa de Fingolfin, amigo e guia de Tuor.  O último
+marujo do último navio que buscou o velho Oeste, foi salvo por Ulmo da fúria de
+Ossë e desde então aguarda o momento de voltar ao mar.
 ~
 2187328 0 0 0 0 0 0 0 700 E
 50 0 -20 5d9+2500 8d8+12
@@ -272,10 +273,10 @@ E
 #4519
 sentinela elfo~
 o sentinela~
-Um alto sentinela est� aqui, segurando uma grande lan�a.
+Um alto sentinela está aqui, segurando uma grande lança.
 ~
 Vestido em cota de malha de prata com detalhes de ouro, este sentinela armado
-com uma grande lan�a est� sempre atento � seguran�a da cidade.
+com uma grande lança está sempre atento à segurança da cidade.
 ~
 2126082 0 0 0 0 0 0 0 500 E
 40 0 -15 5d4+1000 4d6+10
@@ -285,10 +286,10 @@ E
 #4520
 idril celebrindal~
 Idril~
-Idril Celebrindal, a P�s-de-Prata est� aqui, descansando.
+Idril Celebrindal, a Pés-de-Prata está aqui, descansando.
 ~
-A mais bela de todas as maravilhas de Gondolin � Idril, seus cabelos s�o
-claros como o ouro.  Filha de Turgon, esposa de Tuor e m�e de E�rendil.
+A mais bela de todas as maravilhas de Gondolin é Idril, seus cabelos são
+claros como o ouro.  Filha de Turgon, esposa de Tuor e mãe de Eärendil.
 ~
 2187328 0 0 0 0 0 0 0 700 E
 50 -5 -15 7d8+2000 4d10+15
@@ -296,13 +297,13 @@ claros como o ouro.  Filha de Turgon, esposa de Tuor e m�e de E�rendil.
 5 5 2
 E
 #4521
-e�rendil~
-E�rendil~
-O pequeno E�rendil, o meio-elfo, olha para voc� curiosamente.
+earendil~
+Eärendil~
+O pequeno Eärendil, o meio-elfo, olha para você curiosamente.
 ~
-E�rendil, o Aben�oado, � filho de Tuor e Idril.  Herdou a beleza e a
-sabedoria dos elfos, bem como a for�a e resist�ncia dos homens.
-Apesar de ser muito pequeno, tendo em torno de 5 anos, voc� sente que
+Eärendil, o Abençoado, é filho de Tuor e Idril.  Herdou a beleza e a
+sabedoria dos elfos, bem como a força e resistëncia dos homens.
+Apesar de ser muito pequeno, tendo em torno de 5 anos, você sente que
 o destino reserva a ele um futuro grandioso.
 ~
 2121792 0 0 0 0 0 0 0 700 E
@@ -313,10 +314,10 @@ E
 #4522
 turgon rei~
 Turgon~
-Turgon, o Rei Supremo dos Noldor, est� sentado pacientemente em seu trono.
+Turgon, o Rei Supremo dos Noldor, está sentado pacientemente em seu trono.
 ~
-Turgon � filho de Fingolfin, e tornou-se Rei Supremo dos Noldor, construiu
-Gondolin secretamente para ser a �ltima fortaleza contra o Inimigo, Morgoth.
+Turgon é filho de Fingolfin, e tornou-se Rei Supremo dos Noldor, construiu
+Gondolin secretamente para ser a última fortaleza contra o Inimigo, Morgoth.
 ~
 2189570 0 0 0 0 0 0 0 650 E
 70 -20 -25 8d8+7000 8d8+20
@@ -326,11 +327,11 @@ E
 #4523
 maeglin~
 Maeglin~
-Maeglin est� parado aqui, vigiando cada movimento seu.
+Maeglin está parado aqui, vigiando cada movimento seu.
 ~
-Filho de E�l e Aredhel, irm� de Turgon.  Poderoso em Gondolin, desde a
+Filho de Eöl e Aredhel, irmã de Turgon.  Poderoso em Gondolin, desde a
 chegada de Tuor tornou-se sombrio, invejando tanto o amor que Idril sente
-por Tuor, quanto � estima do Rei por este mortal.
+por Tuor, quanto à estima do Rei por este mortal.
 ~
 2189380 0 0 0 0 0 0 0 0 E
 80 -15 -25 9d8+6000 9d9+20
@@ -340,9 +341,9 @@ E
 #4524
 glorfindel~
 Glorfindel~
-Glorfindel, o bravo, est� caminhando alegremente.
+Glorfindel, o bravo, está caminhando alegremente.
 ~
-Glorfindel, o Cabeleira Dourada, L�der da Casa da Flor Dourada de Gondolin.
+Glorfindel, o Cabeleira Dourada, Líder da Casa da Flor Dourada de Gondolin.
 Bravo entre os elfos e renomado em Gondolin.
 ~
 2193728 0 0 0 0 0 0 0 700 E
@@ -351,11 +352,11 @@ Bravo entre os elfos e renomado em Gondolin.
 8 8 1
 E
 #4525
-balrog dem�nio~
+balrog demonio~
 o balrog~
-Um terr�vel dem�nio de fogo est� aqui, procurando pelo reino oculto.
+Um terrível demônio de fogo está aqui, procurando pelo reino oculto.
 ~
-Este � um dos Balrogs, os Dem�nios de For�a, terr�veis esp�ritos de
+Este é um dos Balrogs, os Demônios de Força, terríveis espíritos de
 fogo que servem a Morgoth.
 ~
 2123266 0 0 0 0 0 0 0 -600 E
@@ -366,7 +367,7 @@ E
 #4526
 elfo~
 um elfo~
-Um alegre elfo de Gondolin est� aqui.
+Um alegre elfo de Gondolin está aqui.
 ~
 An undefined string.
 ~
@@ -378,7 +379,7 @@ E
 #4527
 elfa~
 uma elfa~
-Uma feliz elfa de Gondolin est� aqui.
+Uma feliz elfa de Gondolin está aqui.
 ~
 An undefined string.
 ~
@@ -388,9 +389,9 @@ An undefined string.
 8 8 2
 E
 #4528
-crian�a �lfica~
-uma crian�a �lfica~
-Uma crian�a �lfica brinca despreocupada aqui.
+crianca elfica~
+uma criança élfica~
+Uma criança élfica brinca despreocupada aqui.
 ~
 An undefined string.
 ~
