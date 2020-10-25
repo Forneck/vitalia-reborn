@@ -1,27 +1,28 @@
 ~... ... 0 5 0 0
-You're speechless.
-$n is speechless.
-You're speechless about what $E just did!
-$n is speechless about what $N just did!
-$n is speechless at what you just did!
-Well they're not here, eh who cares? You were speechless anyway!
-You're speechless about what you just did!
-$n is speechless about what $e just did!
-You're speechless about $S $t.
-$n is speechless about $N's $t.
-$n is speechless about your $t.
+Você está sem palavras.
+$n está sem palavras.
+Você está sem palavras sobre o que $E acabou de fazer!
+$n está sem palavras sobre o que $N acabou de fazer!
+$n está sem palavras sobre o que você acabou de fazer!
+Bom, essa pessoa não está aqui mas quem liga? Você está
+sem palavras de qualquer forma!
+Você está sem palavras sobre o que você acabou de fazer!
+$n está sem palavras sobre o que $e acabou de fazer!
+Você está sem palavras sobre $t $S.
+$n está sem palavras sobre &t de $N.
+$n está sem palavras sobre $t de você.
 #
 #
 
 ~abc abc 1 1 0 0
-You start to sing, "ABCD LSD, Gummy Bears are chasing me."
-$n starts to sing, "ABCD LSD, Gummy Bears are chasing me."
-You look at $N. "Are the gummy bears chasing you?"
-$n looks at $N and says, "Are the gummy bears chasing you?"
-$n looks at you and says, "Are the gummy bears chasing you?" You see a small gummy bear jumping up and down on their shoulder.
-You must be crazy... you can't see the gummy bears!
-You look behind you. You look back forward, worried. "ABCD LSD, Gummy Bears are chasing me."
-$n looks behind themselves. They look forward quickly, worried. "ABCD LSD, Gummy Bears are chasing me" escapes their lips.
+Você começa a cantar, "ABCD LSD, ursinhos de goma estão me perseguindo."
+$n começa a cantar, "ABCD LSD, ursinhos de goma estão me perseguindo."
+Você olha para $N. "Existem ursinhos de goma te perseguindo?"
+$n olha para $N e diz, "Existem ursinhos de goma te perseguindo?"
+$n olha para você e diz, "Existem ursinhos de goma te perseguindo?" Você vê um pequeno ursinho de goma pulando para cima e para baixo nos ombros de $n.
+Você deve ter enlouquecido... você não consegue ver os ursinhos de goma!
+Você olha para trás. Você olha para frente, apreensiv$r. "ABCD LSD, ursinhos de goma estão me perseguindo."
+$n olha para trás. E rapidamente olha para frente, apreensiv$r. "ABCD LSD, ursinhos de goma estão me perseguindo." escapa de seus lábios.
 #
 #
 #
@@ -46,70 +47,70 @@ $n recita as palavras, 'Abra Cadabra!'
 ~accuse accuse 0 5 0 0
 Acusar quem??
 $n acusa todos.
-Você olha $R acusando.
+VocÃª olha $R acusando.
 $n parece acusar $N.
-$n parece estar acusando você.
-Acusar alguém que não está aqui??
-Você acusa a si mesm$r.
-$n parece ter consciência pesada.
-Você olha acusando para $t $S.
+$n parece estar acusando vocÃª.
+Acusar alguÃ©m que nÃ£o estÃ¡ aqui??
+VocÃª acusa a si mesm$r.
+$n parece ter consciÃªncia pesada.
+VocÃª olha acusando para $t $S.
 $n olha acusando para $t de $N.
 $n olha para $t acusando.
-Você olha acusando para $p.
+VocÃª olha acusando para $p.
 $n olha acusando para $p.
 
 ~ack ack 0 5 0 0
 ACK!
-$n goes ACK!!
-You look at $M and go ACK!
-$n looks at $N and goes ACK!
-$n looks at you and goes ACK!
-You look for someone to go ACK! at.
-You look at yourself and go ACK!
-$n looks at $mself and goes ACK!
+$n faz ACK!!
+Você olha para $M e faz ACK!
+$n olha para $N e faz ACK!
+$n olha para você e faz ACK!
+Você procura alguém para dizer ACK!
+Você olha para si mesm$r e faz ACK!
+$n olha para si mesm$r e faz ACK!
 You look at $S $t and go ACK!
-$n looks atat $N's $t and goes ACK!
-$n looks at your $t and goes ACK!
-You look at $p and go ACK!
-$n looks at $p and goes ACK!
+$n olha para $t de $N e faz ACK!
+$n olha para $t de você e faz ACK!
+Você olha para $p e faz ACK!
+$n olha para $p e faz ACK!
 
 ~adieu adieu 0 5 0 0
-You bid adieu to the world.
-$n bids adieu to this world.
-You bid $M a fond adieu.
-$n bids $N a fond adieu.
-$n bids you a fond adieu.
-They must have already left.
-You bid yourself a fond adieu.
-$n bids $mself a fond adieu.
-You look at $S $t and say adieu.
-$n looks at $N's $t and bids it adieu.
-$n looks at your $t and bids it adieu.
-You look at $p and bids it adieu.
-$n looks at $p and bids it adieu.
+Você dá adeus ao mundo.
+$n dá adeus a esse mundo.
+Você dá a $M um carinhoso adeus.
+$n dá a $N um carinhoso adeus.
+$n dá a você um carinhoso adeus.
+Essa pessoa já deve ter ido embora.
+Você dá a si mesm$r um carinhoso adeus.
+$n dá a si mesm$r um carinhoso adeus.
+Você olha para $t de $S e diz adeus.
+$n olha para $t de $N e dá adeus a isso.
+$n olha para $t de você e dá adeus a isso.
+Você olha para $p e dá adeus a isso.
+$n olha para $p e dá adeus a isso.
 
 ~admire admire 0 5 0 0
-Who do you wish to admire in this Cruel World?
-$n admires the Cruel World $e has become part of.
-You look admiringly at $M.
-$n looks admiringly at $N.
-$n looks admiringly at you.
-Your idol seems not to be here...
-You must love yourself, huh?
-$n admires $mself... get a life, huh?
-You look admiringly at $S $t.
-$n looks admiringly at $N's $t.
-$n looks at your $t admiringly.
-You look admiringly at $p.
-$n looks admiringly at $p.
+Quem você gostaria de admirar nesse Mundo Cruel?
+$n admira o Mundo Cruel do qual $e se tornou parte.
+Você olha admirando para $M.
+$n olha admirando para $N.
+$n olha você, admirando.
+Seu ídolo parece não estar aqui...
+Você deve se amar, né?
+$n admira a si mesm$r... arruma uma vida, hein?
+Você olha admirando $t $S.
+$n olha admirando para $t de $N.
+$n olha para $t de você, admirando.
+Você olha admirando para $p.
+$n olha admirando para $p.
 
 ~adoring adoring 0 8 8 0
-You look around with adoring eyes.
-$n looks around with adoring eyes.
-You look at $N with adoring eyes.
-$n looks at $N with big, adoring eyes.
-$n is looking at you with big, adoring eyes. Hmm...
-You can't find that person! :(
+Você olha ao seu redor com olhos de adoração.
+$n olha ao redor com olhos de adoração.
+Você olha para $N com olhos de adoração.
+$n olha para $N com grandes olhos de adoração.
+$n está olhando para você com grandes olhos de adoração. Hmm...
+Você não consegue encontrar essa pessoa! :(
 #
 #
 #
@@ -134,49 +135,49 @@ You look at $p and nod in agreement.
 $n looks at $p and nods in agreement.
 
 ~ahem ahem 0 5 8 0
-You look down your nose and grunt 'Ahem!'
-$n looks down $s nose and grunts 'Ahem!'
-You look down your nose and grunt 'Ahem!' at $N.
-$n looks down $s nose and grunts 'Ahem!' at $N.
-$n looks down $s nose and grunts 'Ahem!' at you.
-Ahem! That person isn't here!
-You look down your nose and grunt 'Ahem!' to yourself.
-$n looks down $s nose and grunts 'Ahem!' to $mself.
-You look down your nose and grunt 'Ahem!' at $N's $t.
-$n looks down $s nose and grunts 'Ahem!' at $N's $t.
-$n looks down $s nose and grunts 'Ahem!' at your $t.
-You look down your nose and grunt 'Ahem!' at $p.
-$n looks down $s nose and grunts 'Ahem!' at your $p.
+Você olha para o seu nariz e grunhe 'Ahem!'
+$n olha para o nariz $l e grunhe 'Ahem!'
+Você olha para o seu nariz e grunhe 'Ahem!' para $N.
+$n olha para o nariz $l e grunhe 'Ahem!' para $N.
+$n olha para o nariz $l e grunhe 'Ahem!' para você.
+Ahem! Essa pessoa não está aqui!
+Você olha para o seu nariz e grunhe 'Ahem!' para si mesm$r.
+$n olha para o nariz $l e grunhe 'Ahem!' para si mesm$r.
+Você olha para o seu nariz e grunhe 'Ahem!' para $t de $N.
+$n olha para o nariz $l e grunhe 'Ahem!' para $t de $N.
+$n olha para o nariz $l e grunhe 'Ahem!' para $t de você.
+Você olha para o seu nariz e grunhe 'Ahem!' para $p.
+$n olha para o nariz $l e grunhe 'Ahem!' para $p de você.
 
 ~aim aim 0 5 0 0
-You have to point your weapon at someone!!!
-$n looks around the room frantically.  $e looks like $e's in a violent mood.
-You point your weapon at $N, showing $M you will kill $M in a heartbeat.
-$n points $s weapon at $N.  $e looks like $e means business!
-$n points $n weapon at you.  $e looks quite annoyed!
-How are you gonna scare $m with that if $e isn't even here???
-You point your weapon at yourself. Ready to die?
-$n points $s weapon at $mself, he's going to kill $mself!
-You point your weapon at $S $t preparing to strike.
-$n points $s weapon at $N's $t and prepares to strike.
-$n points $s weapon at your $t and prepares to strike.
-You take your best aim at $p.
-$n takes $s best aim at $p.
+Você precisa apontar a sua arma para alguém!!!
+$n olha ao redor da sala, freneticamente. Parece que $l está com um humor violento.
+Você aponta sua arma para $N, mostrando $M que você mataria $M sem pensar duas vezes.
+$n aponta a arma del$r para $N. Parece que $l está falando sério!
+$n aponta a arma del$r $n para você.  $e parece muito incomodad$r!
+Como você vai assustar $m com isso se $l nem está aqui???
+Você aponta sua arma para si mesm$r. Praparad$r para morrer?
+$n aponta a arma del$r para si mesm$r, &l vai se matar!
+Você aponta a sua arma para $S $t se preparando para atacar.
+$n aponta a arma del$r para $t de $N e se prepara para atacar.
+$n aponta a arma del$r para $t de você e se prepara para atacar.
+Você dá sua melhor mira em direção a $p.
+$n dá sua melhor mira em diração a $p.
 
 ~amused amused 0 8 8 0
-Your eyes flicker with amusement.
-$n's eyes flicker with amusement.
-You smile, amused with $N.
-$n seems to find $N very amusing.
-$n's eyes flicker with amusement at you.
-You find yourself very amused but not quite sure why.
-You find yourself very amusing.
-$n finds $mself very amusing.
-You find $N's $t very amusing.
-$n finds $N's $t very amusing.
-$n finds your $t very amusing.
-You smile, amused with $p.
-$n smiles, amused with $p.
+Seus olhos brilham de contentamento.
+Os olhos de $n brilham de contentamento.
+Você sorri, maravilhad$r com $N.
+$n parece achar $N muito divertid$R.
+Os olhos de $n brilham de contentamento ao olhar para você.
+Você se encontra num estado de encantamento mas não sabe ao certo o motivo.
+Você acha a si mesm$r muito divertid$r.
+$n acha a si mesm$r muito divertid$r.
+Você acha $t de $N muito divertid$R.
+$n acha $t de $N muito divertid$R.
+$n acha $t de você muito divertid$R.
+Você sorri, encantad$r com $p.
+$n sorri, encantad$r com $p.
 
 ~apologize apologize 0 5 0 0
 You apologize to the gods for your very existence.
@@ -209,64 +210,66 @@ You look at $p and applaud.
 $n looks at $p and applauds.
 
 ~arch arch 0 5 0 0
-You arch an eyebrow.
-$n raises an eyebrow speculatively.
-You raise an eyebrow at $N.
-$n arches an eyebrow at $N.
-$n raise an eyebrow at you.
-They seem to have left.
-What's the matter? Right brain not talking to the left?
-$n furiously waggles $s eyebrows... What a loony!
-You look at $S $t and arch an eyebrow in speculation.
-$n looks at $N's $t and raises an eyebrow speculatively.
-$n looks at your $t and raises an eyebrow speculatively.
-You look at $p and arch an eyebrow in speculation.
-$n looks at $p and raises an eyebrow in speculation.
+Você levanta uma sobrancelha.
+$n levanta uma sobrancelha de maneira especulatória.
+Você levanta uma sobrancelha para $N.
+$n levanta uma sobrancelha para $N.
+$n levanta uma sobrancelha para você.
+Essa pessoa parece ter ido embora.
+Qual é o problema? O lado direito do cérebro não está se comunicando com o esquerdo?
+$n balança furiosamente as sobrancelhas $s... Que lunatic$r!
+Você olha para $t $S e levanta uma sobrancelha de maneira especulatória.
+$n olha para $t de $N e levanta uma sobrancelha de maneira especulatória.
+$n olha para $t de você de levanta uma sobrancelha de maneira especulatória.
+Você olha para $p e levanta uma sobrancelha de maneira especulatória.
+$n olha para $p e levanta uma sobrancelha de maneira especulatória.
 
 ~argh argh 0 8 8 0
-You slap your hands on your face - AARRGGHH!!
-$n slaps $s hands on $s face - AARRGGHH!!
-You take one look at $N - AARRGGHH!!
-$n screams AARRGGHH at $N!!
-$n screams AARRGGHH at you!!
-ARGH! They're not here!
-You provoke yourself into screaming AARRGGHH!
-$n provokes $mself into screaming AARRGGHH!
-You take one look at $N's $t - AARRGGHH!!
-$n screams AARRGGHH at $N's $t!!
-$n screams AARRGGHH at your $t!!
-You take one look at $p - AARRGGHH!!
-$n screams AARRGGHH at $p!!
+Você bate com suas mãos na cara - AARRGGHH!!
+$n bate as mãos $s em sua própria cara - AARRGGHH!!
+Você dá uma olhada para $N - AARRGGHH!!
+$n grita AARRGGHH para $N!!
+$n grita AARRGGHH para você!!
+ARGH! Essa pessoa não está aqui!
+Você se provoca até gritar AARRGGHH!
+$n provoca el$r mesm$r até gritar AARRGGHH!
+Você dá uma olhada para $t de $N - AARRGGHH!!
+$n grita AARRGGHH para $t de $N!!
+$n grita AARRGGHH para seu $t!!
+Você dá uma olhada para $p - AARRGGHH!!
+$n grita AARRGGHH para $p!!
 
 ~armcross armcross 0 5 0 0
-You cross your arms.
-$n crosses $s arms.
-You look at $N, crossing your arms and being somewhat deffensive.
-$n looks at $N, crossing $s arms and being somewhat deffensive.
-$n looks at you, crossing $s arms and being somewhat deffensive.
-They left before you had the chance to become deffensive.
-You cross your arms and look at yourself deffensively? 
-$n crosses $s arms and looks at $mself deffensively.
-You look at $S $t and cross your arms deffensively.
-$n looks at $N's $t and crosses $s arms deffensively.
-$n looks at your $t and crosses $s arms deffensively.
-You look at $p and cross your arms deffensively.
-$n looks at $p and crosses $s arms deffensively.
+Você cruza os braços.
+$n cruza os braços $s.
+Você olha para $N, cruzando os seus braços e agindo
+de maneira defensiva.
+$n olha para $N, cruza os braços $s e age de maneira defensiva.
+$n olha para você, cruza os braços $s e age de maneira defensiva.
+Essa pessoa foi embora antes que você tivesse a chance de ficar na defensiva.
+Você cruza os braços e olha para si mesm$r de maneira defensiva? 
+$n cruza os braços $s e olha para si mesm$r de maneira defensiva.
+Você olha para $t $S e cruza os braços de maneira defensiva.
+$n olha para $t de $N e cruza os braços $s de maneira defensiva.
+$n olha para $t de você e cruza os braços $s de maneira defensiva.
+Você olha para $p e cruza os braços de maneira defensiva.
+$n olha para $p e cruza os braços $s de maneira defensiva.
 
 ~arrest arrest 0 5 0 0
-You read everyone their rights. But you skip the part about the phonecall... ;)
-$n has placed you all under arrest. 'You have the right to...bla bla bla...' 
-You read $N $S rights.
-$n has placed $N under arrest. Everything $E will, and can say, will be used against $M.
-$n says, 'You have the right to remain silent. You have the right to....' $e just arrested you!
-NOOO! They fled! After them!
-You read the rights to yourself and wait for someone to take you to jail.
-$n reads the rights to $mself and sits down waiting for someone to take $m to jail.
-You look at $S $t and try to arrest it.
-$n looks at $N's $t and places it under arrest.
-$n looks at your $t and places it under arrest, I hope you didn't need that.
-You look at $p and place it under arrest.
-$n looks at $p and places it under arrest.
+Você lê os direitos de todo mundo. Mas você pula a parte
+sobre o telefonema... ;)
+$n prendeu todos vocês. 'Você tem o direito de...bla bla bla...' 
+Você lê para $N os direitos $S.
+$n prendeu $N. Tudo o que $L fizer e disser vai ser usado contra $L.
+$n diz, 'Você tem o direito de permanecer em silêncio. Você tem o direito de....' $l acabou de prender você!
+NÃOO! Eles FUGIRAM! Atrás deles!
+Você lê os seus direitos para si mesmo e aguarda alguém te levar para a prisão.
+$n lê seus direitos para si mesm$r e se senta, esperando que alguém $r leve para a prisão.
+Você olha para $t $S e tenta prender isso.
+$n olha para $t de $N e prende isso.
+$n olha para $t de você e prende isso, espero que você não precisava disso.
+Você olha para $p e prende isso.
+$n olha para $p e prende isso.
 
 ~avsalute avsalute 0 5 0 0
 @YYou stamp your foot and give the mighty Avatar Salute!@n
@@ -284,14 +287,14 @@ $n stamps $s foot and throws $s fist in the air, giving you the Avatar Salute!
 #
 
 ~aww aww 0 8 8 0
-You go AWWW.
-$n goes AWWW.
-You go AWWW at $N.
-$n goes AWWW at $N.
-$n goes AWWW at you.
-You go AWWW, they're not here.
-You go AWWW at yourself.
-$n goes AWWW at $mself.
+Você faz AWWW.
+$n faz AWWW.
+Você faz AWWW para $N.
+$n faz AWWW para $N.
+$n faz AWWW para você.
+Você faz AWWW, essa pessoa não está aqui.
+Você faz AWWW para você mesm$r.
+$n faz AWWW para si mesm$r.
 #
 #
 #
@@ -329,42 +332,42 @@ $n claps $mself on the back, $e did a good job!
 #
 
 ~bark bark 0 5 0 0
-You bark like a dog.
-$n barks! Has $e taken $s medication lately?
-You bark angrily at $M.
-$n is barking angrily at $N.
-$n barks at you!
-Your bark would make a tree proud -- too bad no one can hear you.
-You make like a dog and bark at yourself.
-$n seems to be barking at $mself. $E must think $e is a dog!
-You look at $S $t and start barking.
-$n looks at $N's $t and barks at it.
-$n looks at your $t and barks at it.
-You look at $p and start barking.
-$n looks at $p and barks at it.
+Você late como um cachorro.
+$n late! Será que $e tem tomado seus medicamentos?
+Você late furiosamente para $M.
+$n está latindo furiosamente para $N.
+$n late para você!
+O seu latido deixaria uma árvore orgulhosa -- pena que ninguém pode te escutar.
+Você faz como um cachorro e late para si mesm$r.
+$n parece estar latindo para si mesm$r. Deve achar que é um cachorro!
+Você olha para $t $X e começa a latir.
+$n olha para $t de $N e late para isso.
+$n olha para $t de você e late para isso.
+Você olha para $p e começa a latir.
+$n olha para $p e late para isso.
 
 ~bat bat 1 5 0 0
-You bat your eyelashes.
-$n bats $s eyelashes and looks cute.
-You bat your eyelashes convincingly at $M.
-$n bats $s eyelashes at $N.
-$n bats $s eyelashes at you, how cute.
-$E isn't here to be charmed!
-How exactly do you propose to do that?
-$n tries to bat $s eyelashes at $mself. It looks weird.
+Você pestaneja.
+$n pestaneja e parece meig$r.
+Você pestaneja convincentemente para $M.
+$n pestaneja os olhos $l para $N.
+$n pesteneja os olhos $l para você, que meig$r.
+$E não está aqui para ser encantad$R!
+Como exatamente você espera fazer isso?
+$n tenta pestanejar os olhos $l para si mesm$r. Isso parece estranho.
 #
 #
 #
-For some reason, you bat your eyelashes at $p.
-$n bats $s eyelashes at $p. Strange.
+Por algum motivo, você pestaneja seus olhos para $p.
+$n pestaneja os olhos $l para $p. Estranho.
 
 ~batman batman 0 5 0 0
-'Quick Robin, to the BATMOBILE!'
-$n exclaims, 'Quick Robin, to the BATMOBILE!' as $e dashes off!
-You exclaim, 'Quick $N, to the BATMOBILE!' and dash off!
-$n exclaims, 'Quick $N, to the BATMOBILE!' and dashes off!
-$n exclaims, 'Quick $N, to the BATMOBILE!' and dashes off!
-You don't see them here.
+'Rápido Robin, para o BATMÓVEL!'
+$n exclama, 'Rápido Robin, para o BATMÓVEL!' enquanto $l vai embora!
+Você exclama, 'Rápido $N, para o BATMÓVEL!' e vai embora!
+$n exclama, 'Rápido $N, para o BATMÓVEL!' e vai embora!
+$n exclama, 'Rápido $N, para o BATMÓVEL!' e vai embora!
+Você não vê essa pessoa aqui.
 #
 #
 #
@@ -434,19 +437,19 @@ You look at $p and beckon it closer.
 $n looks at $p and beckons it closer.
 
 ~beer beer 0 5 0 0
-Aaaaaaaah! Better now...
-$n opens up a bottle of beer and drinks it in less than 0 seconds!!!
-Dang! You spilled the beer all over $N!
-$n, sloppy as always, spills $s beer over $N!
-$n spills $s beer all over you!
-They're not here, you'll have to drink it yourself, darn it?
-You spill it all over yourself! GAAAhhhhhh!
-$n is so drunk that $e spills the beer over $mself.
+Aaaaaaaah! Melhor agora...
+$n abre uma garrafa de cerveja e toma tudo em menos de 0 segundos!!!
+Droga! Você derramou a cerveja toda em cima de $N!
+$n, desatrad$r como sempre, derrama a cerveja $l em cima de $N!
+$n derrama a cerveja $l em cima de você!
+Eles não estão aqui, você vai ter que beber sozinh$r, entendeu?
+Você derrama tudo em cima de você! AAAhhhhhh!
+$n está tão bêbad$r que derramou sua cerveja em cima $l mesm$r.
 You spill beer on $S $t.
-$n spills beer on $N's $t, what a sloppy drunk.
-$n spills beer on your $t, what a sloppy drunk.
-You spill beer on $p, what a waste.
-$n spills beer on $p, what a sloppy drunk.
+$n derrama cerveja sobre $t de $N, que bêbad$r desastrad$r.
+$n derrama cerveja sobre $t de você, que bêbad$r desastrad$r.
+Você derrama cerveja em $p, que desperdício.
+$n derrama cerveja em $p, que bêbad$r desastrad$r.
 
 ~beg beg 0 5 0 0
 You beg the gods for mercy.  (No way you're gonna get it! :-))
@@ -464,19 +467,19 @@ You look at $p and beg pitifully.
 $n looks at $p and begs pitifully.
 
 ~behind behind 1 8 0 0
-Whom do you want to hide behind?
+Você quer se esconder atrás de quem?
 #
-You hide behind $N.
-$n hides behind $N.
-$n hides behind you.
-That person isn't here to hide behind.
-You can't hide behind yourself!
-$n tries to hide behind $mself, and fails miserably.
+Você se esconde atrás de $N.
+$n se esconde atrás de $N.
+$n se esconde atrás de você.
+Essa pessoa não está aqui para você se esconder atrás dela.
+Você não pode se esconder atrás de si mesm$r!
+$n tenta se esconder atrás de si mesm$r, e falha miseravelmente.
 #
 #
 #
-You hide behind $p.
-$n hides behind $p.
+Você se esconde atrás de $p.
+$n se esconde atrás de $p.
 
 ~belch belch 0 5 0 0
 A belch rumbles from the bottom of your stomach and echoes loudly in the room!
@@ -494,34 +497,34 @@ You look at $p and belch at it.
 $n looks at $p and belches at it.
 
 ~bite bite 0 5 5 0
-Who do you want to bite?
+Quem você quer morder?
 #
-You savagely bite $N.
-$n savagely bites $N.
-$n savagely bites you!
-I cannot see that person here.
-You attempt to bite yourself on the neck.
-$n attempts to bite $mself on the neck.
-You sink your teeth into $N's $t.
-$n sinks $s teeth into $N's $t.
-$n sinks $s teeth into your $t.
+Você morde $N de maneira selvagem.
+$n morde $N de maneira selvagem.
+$n morde você de maneira selvagem!
+Não consigo encontrar essa pessoa aqui.
+Você tenta morder seu próprio pescoço.
+$n tenta morder a si mesm$r no pescoço.
+Você crava seus dentes em $t de $N.
+$n crava os dentes $l em $t de $N.
+$n crava os dentes $l em $t de você.
 #
 #
 
 ~blah blah 0 8 8 0
-You say, "BLAH!!"
-$n goes, "BLAH!!"
-You look at $N and go, "BLAH!"
-$n looks at $N and goes, "BLAH!"
-$n looks at you and goes, "BLAH!"
-There's no one around by that name.
-You look at yourself and go, "BLAH!"
-$n looks at $mself and goes, "BLAH!"
-You take a marker and write "BLAH!" on $N's $t.
-$n takes a marker and writes "BLAH!" on $N's $t.
-$n takes a marker and writes "BLAH!" on your $t.
-You take a marker and write "BLAH!" on $p.
-$n takes a marker and writes "BLAH!" on $p.
+Você diz, "BLAH!!"
+$n faz, "BLAH!!"
+Você olha para $N e faz, "BLAH!"
+$n olha para $N e faz, "BLAH!"
+$n olha para você e faz, "BLAH!"
+Não há ninguém aqui com esse nome.
+Você olha para si mesm$r e faz, "BLAH!"
+$n olha para si mesm$r e faz, "BLAH!"
+Você pega um marcador e escreve "BLAH!" em $t de $N.
+$n pega um marcador e escreve "BLAH!" em $t de $N.
+$n pega um marcador e escreve "BLAH!" em $t de você.
+Você pega um marcador e escreve "BLAH!" em $p.
+$n pega um marcador e escreve "BLAH!" em $p.
 
 ~blame blame 0 5 0 0
 You blame everyone!
@@ -689,8 +692,8 @@ You bonk $p.
 $n bonk $p.
 
 ~boo boo 0 5 0 0
-'BOO!' you're a frightening person, aren't ya?
-From out of nowhere, $n goes, "BOO!"
+'BOO!' você é uma pessoa assustadora, não é mesmo?
+Do absoluto nada, $n faz, "BOO!"
 #
 #
 #
@@ -764,14 +767,14 @@ You bow at $p.
 $n bows at $p.
 
 ~box box 0 8 8 0
-You look for someone to box.
-$n looks for someone to box.
-You beat $N up. KO!
-$n boxes $N. They both lose.
-$n boxes with you. Oi... KO!
-You beet him to a bloody pulp, they arn't here...
-You can't beat yourself up!
-Back away! $n is beating themselves up!
+Você procura alguém para boxear.
+$n procura alguém para boxear.
+Você enche $N de porrada. KO!
+$n luta boxe contra $N. Ambos perdem.
+$n luta boxe com você. Oi... KO!
+Você bate nessa pessoa até fazer uma poça de sangue, essa pessoa não está aqui...
+Você não pode se bater!
+Para trás! $n está se batendo!
 #
 #
 #
@@ -779,19 +782,19 @@ Back away! $n is beating themselves up!
 #
 
 ~brag brag 0 5 0 0
-You brag about your adventures.
-$n brags about deeds, done during $s countless adventures.
-You brag to $M about your adventures.
-$n brags to $N.
-$n brags to you about $s adventures.
-Your brags seem generally ignored.
-You brag to yourself and make your head swell.
-$n brags about $mself, how conceited.
-You brag about $S $t.
-$n brags about $N's $t.
-$n bragss about your $t.
-You brag about $p.
-$n brags about $p.
+Você se vangloria das suas aventuras.
+$n se vangloria de feitos, realizados durante as incontáveis aventuras $l.
+Você se vangloria para $M sobre as suas aventuras.
+$n se vangloria para $N.
+$n se vangloria para você sobre as aventuras $l.
+Parece que suas histórias geralmente são ignoradas.
+Você se vangloria sobre você mesm$r e faz a sua cabeça inchar.
+$n se vangloria sobre si mesm$r, que convencid$r.
+Você se vangloria sobre $t $L.
+$n se vangloria sobre $t de $N.
+$n se vangloria sobre $t de você.
+Você se vangloria sobre $p.
+$n se vangloria sobre $p.
 
 ~brb brb 0 5 0 0
 You let everyone know that you'll be right back!
@@ -809,14 +812,14 @@ You tell $p that you'll be right back.
 $n tells $p that you'll be right back.
 
 ~breathe breathe 0 5 0 0
-You breathe slowly and steadily.
-$n breathes.
-You breathe on $M.
-$n breathes on $N.
-$n's breathes deeply, $s breath warm against your skin.
-You can't breathe on someone that isn't even here!
-You breathe onto your hand and sniff it... what a pong!
-$n breathes onto $s hand and sniffs it.
+Você respira devagar e de modo contínuo.
+$n respira.
+Você respira em $M.
+$n respira em $N.
+$n respira profundamente, você sente a respiração quente $l em sua pele.
+Você não pode respirar em alguém que nem está aqui!
+Você respira na sua mão e a cheira... que catinga!
+$n respira na mão $l e cheira.
 #
 #
 #
@@ -824,19 +827,19 @@ $n breathes onto $s hand and sniffs it.
 #
 
 ~burn burn 0 8 8 0
-You shriek for the witch to be BURNED!
-$n shrieks for the witch to be BURNED!
-You shriek that $N is a witch! BURN $M!
-$n shrieks that $N is a witch! BURN $M!
-$n shrieks that you are a witch! Do you smell smoke?
-You need to find them first!
-You're a witch, BURN!
-$n shrieks that $e's a witch, and promptly BURNS $mself!
-You shriek that $N's $t is the sign of a witch! BURN $M!
-$n shrieks that $N's $t is the sign of a witch! BURN $M!
-$n shrieks that your $t is the sign of a witch! Do you smell smoke?
-You shriek that $p is the sign of a witch! BURN it!
-$n shrieks that $p is the sign of a witch! BURN it!
+Você guincha para a bruxa ser QUEIMADA!
+$n guincha para a bruxa ser QUEIMADA!
+Você guincha que $N é uma bruxa! QUEIME $L!
+$n guincha que $N é uma bruxa! QUEIME $L!
+$n guincha que você é uma bruxa! Você sente cheiro de fumaça?
+Você precisa encontrar essa pessoa primeiro!
+Você é uma bruxa, QUEIME!
+$n guincha que $x é uma bruxa, e prontamente QUEIMA a si mesm$r!
+Você guincha que $t de $N é uma marca de bruxa! QUEIME $L!
+$n guincha que $t de $N é uma marca de bruxa! QUEIME $L!
+$n guincha que $t de você é uma marca de bruxa! Você sente cheiro de fumaça?
+Você guincha que $p é um sinal de bruxaria! QUEIME isso!
+$n guincha que $p é um sinal de bruxaria! QUEIME isso!
 
 ~burp burp 0 5 0 0
 You burp loudly! Better excuse yourself.
@@ -884,32 +887,32 @@ You cackles insanely at $p.
 $n cackles insanely at $p.
 
 ~cake cake 0 5 0 0
-Piece of cake!
-$n thinks it will be a `piece of cake!'
-You tell $M that it will be a 'piece of cake.'
-$n tells $N that that it will be a 'piece of cake.'
-$n tells you that that it will be a 'piece of cake.'
-You tell someone that it will be a 'piece of cake.'
-You tell yourself that it will be a 'piece of cake.'
-$n tells $mself that that it will be a 'piece of cake.'
-You tell $S $t that it will be a 'piece of cake.'
-$n tells $N's $t that it will be a 'piece of cake.'
-$n tells your $t that it will be a 'piece of cake.'
-You tell $p that it will be a 'piece of cake.'
-$n tells $p that it will be a 'piece of cake.'
+Muito fácil!
+$n acha que vai ser `muito fácil!'
+Você fala para $M que isso vai ser 'muito fácil.'
+$n fala para $N que isso vai ser 'muito fácil.'
+$n fala para você que isso vai ser 'muito fácil.'
+Você fala para alguém que isso vai ser 'muito fácil.'
+Você fala para si mesm$r que isso vai ser 'muito fácil.'
+$n fala para si mesm$r que isso vai ser 'muito fácil.'
+Você fala para $t $L que isso vai ser 'muito fácil.'
+$n fala para $t de $N que isso vai ser 'muito fácil.'
+$n fala para $t de você que isso vai ser 'muito fácil.'
+Você fala para $p que isso vai ser 'muito fácil.'
+$n fala para $p que isso vai ser 'muito fácil.'
 
 ~calm calm 0 5 0 0
-You breathe deeply and count to 10.
-$n takes in a few deep breaths and counts to 10.
-You try to calm $N down.
-$n tries to calm $N down.
-$n tries to calm you down.
-To late!
-You breathe deeply and think happy thoughts.
-$n breathes deeply and tries to calm $mself down.
-You look at $N's $t and tell it to calm down.
-$n looks at $N's $t and tells it to calm down.
-$n looks at your $t and tells it to calm down.
+Você respira profundamente e conta até 10.
+$n respira profundamente algumas vezes e conta até 10.
+Você tenta acalmar $N.
+$n tenta acalmar $N.
+$n tenta acalmar você.
+Tarde demais!
+Você respira profundamente e pensa em coisas felizes.
+$n respira profundamente e tenta acalmar a si mesm$r.
+Você olha para $t de $N e diz para isso se acalmar.
+$n olha para $t de $N e diz para isso se acalmar.
+$n olha para $t de você e diz para isso se acalmar.
 #
 #
 
@@ -974,14 +977,14 @@ You challenge $p to a duel.
 $n challenge $p to a duel.
 
 ~channel channel 0 8 8 0
-You receive the "I don't know how to talk on the right channel" award.
-$n wins the "I don't know how to talk on the right channel" award.
-You give $N the "I don't know how to talk on the right channel" award.
-$n gives $N the "I don't know how to talk on the right channel" award.
-$n gives you the "I don't know how to talk on the right channel" award.
-They left before you could present the award.
-You award yourself for your accomplishments.
-$n gives $mself the "I don't know how to talk on the right channel" award.
+Você recebe o prêmio de "Eu não sei como falar no canal certo".
+$n vence o prêmio de "Eu não sei como falar no canal certo".
+Você dá a $N o prêmio de "Eu não sei como falar no canal certo".
+$n dá a $N o prêmio de "Eu não sei como falar no canal certo".
+$n dá a você o prêmio de "Eu não sei como falar no canal certo".
+Eles saíram antes que você pudesse apresentar a premiação.
+Você premia a si mesmo pelas suas conquistas.
+$n dá a si mesm$r o prêmio de "Eu não sei como falar no canal certo".
 #
 #
 #
@@ -1064,12 +1067,12 @@ $n is slowly choking to death. Help!
 #
 
 ~chortle chortle 0 5 0 0
-You chortle.
-$n chortles.
-You chortle at $N.
-$n chortles at $N.
-$n chortles at you.
-You don't see them here!
+Você dá uma gargalhada.
+$n gargalha.
+Você gargalha para $N.
+$n gargalha para $N.
+$n gargalha para você.
+Você não vê essa pessoa aqui!
 #
 #
 #
@@ -1079,14 +1082,14 @@ You don't see them here!
 #
 
 ~christmas christmas 0 8 8 0
-You wish everyone a Merry Christmas!!!
-$n wishes everyone a Merry Christmas!!!
-You wish $N a Merry Christmas!!!
-$n wishes $N a very Merry Christmas!!!
-$n wishes you a very Merry Christmas!!!
-First sign of insanity...
-You wish yourself a very Merry Christmas.
-$n wishes $mself a very Merry Christmas.
+Você deseja a todos um Feliz Natal!!!
+$n deseja a todos um Feliz Natal!!!
+Você deseja a $N um Feliz Natal!!!
+$n deseja a $N um Feliz Natal!!!
+$n deseja a você um Feliz Natal!!!
+Primeiro sinal de insanidade...
+Você deseja a si mesm$r um Feliz Natal.
+$n deseja a si mesm$r um Feliz Natal.
 #
 #
 #
@@ -6109,7 +6112,7 @@ $n looks around for a victim to strangle.
 You throw yourself against $N's throat, trying to squeeze the life out.
 $n throws $mself after $N's throat.
 $n throws $mself after your throat, you try to defend yourself.
-AARGH! They must have left... #&%�@!
+AARGH! They must have left... #&%ï¿½@!
 You put your hands around your throat and stop breathing.
 $n tries to strangle $mself, making a very strange noise and getting blue in the face.
 You strangle $M $t.
