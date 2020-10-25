@@ -56,8 +56,8 @@ Um par de enormes asas foi deixado aqui.~
 15 10000 1000 45 0
 E
 asas~
-Realmente enorme estas asas, com uma extens„o de 55 metros. VocÍ fica
-a imaginar o tamanho da ave que a possuÌa.
+Realmente enorme estas asas, com uma extens√£o de 55 metros. Voc√™ fica
+a imaginar o tamanho da ave que a possu√≠a.
 ~
 A
 1 2
@@ -68,17 +68,17 @@ A
 A
 19 1
 #4507
-lanterna Èlfica~
-uma lanterna Èlfica~
+lanterna elfica~
+uma lanterna √©lfica~
 Uma lanterna, esquecida aqui, ilumina o ambiente.~
 ~
 1 a 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
 5 50000 5000 20 0
 E
-lanterna Èlfica~
-Maravilhosa! Est· lanterna sÛ pode ter sido elaborada por h·beis escultores
-Èlficos.  Conta-se que as verdadeiras intenÁıes das pessoas s„o reveladas
+lanterna elfica~
+Maravilhosa! Est√° lanterna s√≥ pode ter sido elaborada por h√°beis escultores
+√©lficos.  Conta-se que as verdadeiras inten√ß√µes das pessoas s√£o reveladas
 ao ser atingido por sua luz.
 ~
 A
@@ -88,8 +88,8 @@ A
 A
 24 -1
 #4508
-espada Èlfica~
-uma grande espada Èlfica~
+espada elfica~
+uma grande espada √©lfica~
 Uma grande espada foi esquecida aqui.~
 ~
 5 r 0 0 0 an 0 0 0 0 0 0 0
@@ -102,8 +102,8 @@ A
 A
 19 2
 #4509
-machado Èlfico bronze~
-um machado com l‚mina vermelha~
+machado elfico bronze~
+um machado com l√¢mina vermelha~
 Um belo machado de bronze foi solto aqui.~
 ~
 5 r 0 0 0 an 0 0 0 0 0 0 0
@@ -114,16 +114,16 @@ A
 A
 19 1
 #4510
-viseira ·guia~
-uma viseira com bico de ·guia~
-Um bico de ·guia foi perdido por aqui.~
+viseira aguia~
+uma viseira com bico de √°guia~
+Um bico de √°guia foi perdido por aqui.~
 ~
 9 b 0 0 0 ar 0 0 0 0 0 0 0
 5 0 0 0
 6 12000 1200 25 0
 E
 viseira~
-Uma bela viseira negra, de ferro, com um bico de ·guia.
+Uma bela viseira negra, de ferro, com um bico de √°guia.
 ~
 A
 6 1
@@ -146,7 +146,7 @@ A
 #4512
 arco longo dourado~
 um arco longo dourado~
-Um maravilhoso arco dourado foi deixado no ch„o.~
+Um maravilhoso arco dourado foi deixado no ch√£o.~
 ~
 5 amnopu 0 0 0 ano 0 0 0 0 0 0 0
 0 4 6 11
@@ -162,7 +162,7 @@ A
 #4513
 flecha ouro~
 uma flecha de ouro~
-Uma flecha dourada est· largada no ch„o.~
+Uma flecha dourada est√° largada no ch√£o.~
 ~
 8 abmnopu 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -176,7 +176,7 @@ A
 #4514
 escudo cintilante cristal~
 um escudo cintilante~
-Um escudo cintilante como as gotas do orvalho est· caÌdo aqui.~
+Um escudo cintilante como as gotas do orvalho est√° ca√≠do aqui.~
 ~
 9 ak 0 0 0 aj 0 0 0 0 0 0 0
 10 0 0 0
@@ -184,7 +184,7 @@ Um escudo cintilante como as gotas do orvalho est· caÌdo aqui.~
 E
 escudo cintilante cristal~
 Cintilante como se estivesse orvalhado de gotas de chuva, mas na verdade
-s„o mil pinos de cristal.
+s√£o mil pinos de cristal.
 ~
 A
 6 2
@@ -195,9 +195,9 @@ A
 A
 19 -1
 #4515
-c·lice~
-um c·lice de vinho~
-H· um c·lice de vinho tinto aqui.~
+calice~
+um c√°lice de vinho~
+H√° um c√°lice de vinho tinto aqui.~
 ~
 17 0 0 0 0 a 0 0 0 0 0 0 0
 8 8 2 0
@@ -205,7 +205,7 @@ H· um c·lice de vinho tinto aqui.~
 #4516
 lembas~
 um lembas~
-H· um pouco de lembas aqui.~
+H√° um pouco de lembas aqui.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 24 0 0 0
@@ -220,7 +220,7 @@ Uma bolsa e um cinto foram esquecidos aqui.~
 9 2000 200 5 0
 E
 cinto bolsa~
-Nem a ·gua nem as interpÈries far„o mal ao que a bolsa guarda enquanto
+Nem a √°gua nem as interp√©ries far√£o mal ao que a bolsa guarda enquanto
 estiver selada.
 ~
 A
@@ -232,15 +232,15 @@ A
 #4518
 cisne elmo~
 o elmo dos cisnes~
-Um belo elmo com sete penas foi largado no ch„o.~
+Um belo elmo com sete penas foi largado no ch√£o.~
 ~
 9 egk 0 0 0 ae 0 0 0 0 0 0 0
 7 0 0 0
 7 50000 5000 85 0
 E
 elmo cisne pena~
-...E, os cisnes lhe fizeram reverÍncia, cada um arrancou uma grande pena das
-asas a Tuor.  E ele tomou as sete penas e as pÙs no cimo do elmo.
+...E, os cisnes lhe fizeram rever√™ncia, cada um arrancou uma grande pena das
+asas a Tuor.  E ele tomou as sete penas e as p√¥s no cimo do elmo.
 ~
 A
 2 -1
@@ -250,8 +250,8 @@ A
 19 2
 #4519
 manto cinzento~
-o manto cinzento do Senhor das ¡guas~
-Um pedaÁo de pano cinzento foi deixado para tr·s por alguÈm.~
+o manto cinzento do Senhor das √Åguas~
+Um peda√ßo de pano cinzento foi deixado para tr√°s por algu√©m.~
 ~
 11 g 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
@@ -270,42 +270,42 @@ A
 19 1
 #4520
 fonte gondolin~
-a fonte da praÁa central de Gondolin~
-Uma deslumbrante fonte de pedra, jorra ·gua cristalina em v·rias direÁıes.~
+a fonte da pra√ßa central de Gondolin~
+Uma deslumbrante fonte de pedra, jorra √°gua cristalina em v√°rias dire√ß√µes.~
 ~
 23 0 0 0 0 0 0 0 0 0 0 0 0
 1000 1000 15 0
 500 100000 1000 0 0
 E
 fonte~
-A mais deslumbrante das fontes de OndolindÎ.  As ·guas correm e esguicham
-jatos em v·rias direÁıes, entrecruzando-se no ar e criando desenhos variados
+A mais deslumbrante das fontes de Ondolind√´.  As √°guas correm e esguicham
+jatos em v√°rias dire√ß√µes, entrecruzando-se no ar e criando desenhos variados
 antes de cair em milhares de respingos.
 ~
 #4521
-·rvore belthil prata~
-Belthil, a ·rvore de prata~
-Belthil, a ¡rvore de Prata, foi esculpida neste belo jardim.~
+arvore belthil prata~
+Belthil, a √°rvore de prata~
+Belthil, a √Årvore de Prata, foi esculpida neste belo jardim.~
 ~
 8 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 100 10000000 100 0 0
 E
-·rvore belthil~
-Belthil, o Brilho Divino, È a imagem de Telperion feita por Turgon.  Suas
+arvore belthil~
+Belthil, o Brilho Divino, √© a imagem de Telperion feita por Turgon.  Suas
 belas flores de prata emitem um fulgir prateado que ilumina todo o ambiente.
 ~
 #4522
-·rvore glingal ouro~
-Glingal, a ·rvore de ouro~
-Glingal, a ¡rvore de Ouro, foi esculpida neste belo jardim.~
+arvore glingal ouro~
+Glingal, a √°rvore de ouro~
+Glingal, a √Årvore de Ouro, foi esculpida neste belo jardim.~
 ~
 8 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 100 10000000 100 0 0
 E
-·rvore glingal~
-Glingal, a Chama Suspensa, È a imagem de Laurelin feita por Turgon.
+arvore glingal~
+Glingal, a Chama Suspensa, √© a imagem de Laurelin feita por Turgon.
 Suas belas folhas de ouro emitem um fulgir dourado que ilumina todo o
 ambiente.
 ~
@@ -319,7 +319,7 @@ Uma das flores de prata de Belthil repousa no gramado.~
 3 100000 1000 10 0
 E
 flor prata~
-Esta È uma das flores de Belthil, esculpida pelas m„os de Turgon.
+Esta √© uma das flores de Belthil, esculpida pelas m√£os de Turgon.
 ~
 #4524
 folha ouro glingal~
@@ -331,24 +331,24 @@ Uma das folhas de ouro de Glingal repousa no gramado.~
 3 1000000 1000 10 0
 E
 folha ouro~
-Esta È uma das folhas de Glingal, esculpida pelas m„os de Turgon.
+Esta √© uma das folhas de Glingal, esculpida pelas m√£os de Turgon.
 ~
 #4525
-elessar jÛia~
-a jÛia Elessar~
-Uma belÌssima jÛia verde foi perdida por alguÈm e repousa aqui.~
+elessar joia~
+a j√≥ia Elessar~
+Uma bel√≠ssima j√≥ia verde foi perdida por algu√©m e repousa aqui.~
 ~
 8 adgikq 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
 3 1000000 1000 90 0
 E
-elessar jÛia~
+elessar joia~
 A Elessar foi feita em Gondolin por Celebrindal, o qual a deu a Idril,
 a filha do Rei.
-Esta jÛia brilha como se a luz lÌmpida do sol estivesse aprisionada, mas
-È verde como as folhas das ·rvores.  Diz-se que aqueles que olham atravÈs
-desta pedra vÍem coisas que haviam murchado ou queimado novamente s„s, ou
-tais como eram na graÁa de sua juventude, e que as m„os de quem a segure
+Esta j√≥ia brilha como se a luz l√≠mpida do sol estivesse aprisionada, mas
+√© verde como as folhas das √°rvores.  Diz-se que aqueles que olham atrav√©s
+desta pedra v√™em coisas que haviam murchado ou queimado novamente s√£s, ou
+tais como eram na gra√ßa de sua juventude, e que as m√£os de quem a segure
 levam a cura dos ferimentos a todos que tocarem.
 ~
 A
@@ -356,8 +356,8 @@ A
 A
 4 1
 #4526
-cetro justiÁa~
-o cetro de justiÁa~
+cetro justica~
+o cetro de justi√ßa~
 Um belo cetro de prata com um grande diamante foi deixado aqui.~
 ~
 4 adgkq 0 0 0 ao 0 0 0 0 0 0 0
@@ -374,14 +374,14 @@ A
 #4527
 trono turgon~
 o trono de Turgon~
-O trono de Turgon, feito de ouro est· posicionado sobre um estrado de m·rmore.~
+O trono de Turgon, feito de ouro est√° posicionado sobre um estrado de m√°rmore.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 50 10000000 10000 0 0
 E
 trono~
-Um belo trono de ouro sobre um estrado de m·rmore que pode ser movido.
+Um belo trono de ouro sobre um estrado de m√°rmore que pode ser movido.
 ~
 #4528
 chave~
@@ -394,7 +394,7 @@ Uma pequena chave de prata foi esquecida aqui.~
 #4529
 tesouro~
 uma parte do tesouro de Gondolin~
-Parte do tesouro de Gondolin est· aqui.~
+Parte do tesouro de Gondolin est√° aqui.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 200000 0 0 0
@@ -409,7 +409,7 @@ Um horrendo chicote em chamas foi largado aqui.~
 10 50000 5000 50 0
 E
 chicote balrog fogo~
-Um terrÌvel chicote com trÍs pontas que ardem intensamente.
+Um terr√≠vel chicote com tr√™s pontas que ardem intensamente.
 ~
 A
 4 -2
