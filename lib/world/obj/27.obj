@@ -1,7 +1,7 @@
 #2700
 chicote~
 um chicote revestido de ferro~
-Uma arma alongada, feita de couro, está enrolada no chão.~
+Uma arma alongada, feita de couro, estÃ¡ enrolada no chÃ£o.~
 ~
 5 aimnpt 0 0 0 ao 0 0 0 0 0 0 0
 0 4 3 2
@@ -9,49 +9,49 @@ Uma arma alongada, feita de couro, está enrolada no chão.~
 A
 18 2
 #2701
-Um pedaço de pão~
-um pedaço de pão de um viajante~
-Um pequeno pedaço de pão de viagem está aqui.~
+Um pedaÃ§o de pao~
+um pedaÃ§o de pÃ£o de um viajante~
+Um pequeno pedaÃ§o de pÃ£o de viagem estÃ¡ aqui.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 10 0 0 0
 1 15 5 0 0
 #2702
-Um pedaço de torta~
-um pedaço de torta~
-Um pedaço de torta de abóbora foi deixado aqui por alguém.~
+Um pedaÃ§o de torta~
+um pedaÃ§o de torta~
+Um pedaÃ§o de torta de abÃ³bora foi deixado aqui por alguÃ©m.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 10 0 0 0
 1 15 5 0 0
 #2703
-Rosca~
+broa milho~
 uma broa de milho~
-Uma broa de milho está em uma prateleira daqui.~
+Uma broa de milho estÃ¡ em uma prateleira daqui.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 20 0 0 0
 1 25 10 0 0
 #2704
-bengala pão~
-alguns pães bengala~
-Uma porção de pães tipo bengala estão aqui.~
+bengala pao~
+alguns pÃ£es bengala~
+Uma porÃ§Ã£o de pÃ£es tipo bengala estÃ£o aqui.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 10 0 0 0
 1 20 10 0 0
 #2705
-pão centeio~
-Um pedaço de pão de centeio~
-Um pedaço de pão de centeio, quase caindo de dentro de uma sacola, está aqui.~
+pao centeio~
+Um pedaÃ§o de pÃ£o de centeio~
+Um pedaÃ§o de pÃ£o de centeio, quase caindo de dentro de uma sacola, estÃ¡ aqui.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 24 0 0 0
 1 25 10 0 0
 #2706
-pão francês~
-um pedaço de pão francês assado~
-Um pedaço de pão francês está aqui, intacto.~
+pao frances~
+um pedaÃ§o de pÃ£o francÃªs assado~
+Um pedaÃ§o de pÃ£o francÃªs estÃ¡ aqui, intacto.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 24 0 0 0
@@ -59,15 +59,15 @@ Um pedaço de pão francês está aqui, intacto.~
 #2707
 bandeja recipiente~
 uma bandeja de segurar~
-Uma bandeja vazia está aqui.~
+Uma bandeja vazia estÃ¡ aqui.~
 ~
 15 acgq 0 0 0 ao 0 0 0 0 0 0 0
 30 0 -1 0
 15 800 0 0 0
 #2708
-metal malha braçadeira~
-um par de braçadeiras de malha de metal~
-Um par de braçadeiras de malha de metal está aqui.~
+metal malha braÃ§adeira~
+um par de braÃ§adeiras de malha de metal~
+Um par de braÃ§adeiras de malha de metal estÃ¡ aqui.~
 ~
 9 bg 0 0 0 ai 0 0 0 0 0 0 0
 4 0 0 0
@@ -75,7 +75,7 @@ Um par de braçadeiras de malha de metal está aqui.~
 #2709
 metal malha perneira~
 um par de perneiras de malha de metal~
-Um par de perneiras de malha de metal estão aqui, prontas para serem vestidas.~
+Um par de perneiras de malha de metal estÃ£o aqui, prontas para serem vestidas.~
 ~
 9 bg 0 0 0 af 0 0 0 0 0 0 0
 4 0 0 0
@@ -93,7 +93,7 @@ Um escudo de ferro azulado brilha suavemente sob a luz da tocha.~
 #2711
 botas malha metal~
 um par de botas de malha de metal~
-Um par de botas de malha de metal está jogado no canto.~
+Um par de botas de malha de metal estÃ¡ jogado no canto.~
 ~
 9 dgmnpst 0 0 0 ag 0 0 0 0 0 0 0
 5 0 0 0
@@ -103,9 +103,9 @@ A
 A
 1 5
 #2712
-bastão~
-um bastão de seis pés~
-Uma barra de alguma espécie está aqui, empoeirada.~
+bastao~
+um bastÃ£o de seis pÃ©s~
+Uma barra de alguma espÃ©cie estÃ¡ aqui, empoeirada.~
 ~
 5 bdglmnpqrt 0 0 0 an 0 0 0 0 0 0 0
 0 4 3 7
@@ -113,9 +113,9 @@ Uma barra de alguma espécie está aqui, empoeirada.~
 A
 19 2
 #2713
-pele vaca calça~
-um par de calças de pele de vaca~
-Um par de calças pretas e brancas está em uma pilha no chão.~
+pele vaca calca~
+um par de calÃ§as de pele de vaca~
+Um par de calÃ§as pretas e brancas estÃ¡ em uma pilha no chÃ£o.~
 ~
 9 0 0 0 0 af 0 0 0 0 0 0 0
 2 0 0 0
@@ -125,7 +125,7 @@ A
 #2714
 camisa malha metal~
 uma camisa de malha de metal~
-Uma camisa de malha de metal está no chão, impecávelmente dobrada.~
+Uma camisa de malha de metal estÃ¡ no chÃ£o, impecÃ¡velmente dobrada.~
 ~
 9 0 0 0 0 ad 0 0 0 0 0 0 0
 3 0 0 0
@@ -133,25 +133,25 @@ Uma camisa de malha de metal está no chão, impecávelmente dobrada.~
 A
 5 2
 #2715
-Cinza lança~
-uma lança feita de cinzas~
-Uma lança, a qual faz você tropeçar conforme anda, está no chão.~
+Cinza lanca~
+uma lanÃ§a feita de cinzas~
+Uma lanÃ§a, a qual faz vocÃª tropeÃ§ar conforme anda, estÃ¡ no chÃ£o.~
 ~
 5 aq 0 0 0 an 0 0 0 0 0 0 0
 0 3 4 15
 10 400 0 8 0
 #2716
-bardiche aço~
-um bardiche feito de aço~
-Uma longa haste de aço, com uma perigosa lâmina na ponta, está aqui.~
+bardiche aco~
+um bardiche feito de aÃ§o~
+Uma longa haste de aÃ§o, com uma perigosa lÃ¢mina na ponta, estÃ¡ aqui.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 0 4 2 11
 8 300 200 8 0
 #2717
-irgaak~
-um Irgaak de ferro~
-Uma longa espada com o corte serrilhado está aqui.~
+irgaak espada ferro~
+um irgaak de ferro~
+Uma longa espada com o corte serrilhado estÃ¡ aqui.~
 ~
 5 bgmnt 0 0 0 an 0 0 0 0 0 0 0
 0 3 4 3
@@ -161,7 +161,7 @@ A
 #2718
 ferradura~
 uma ferradura~
-Alguém deixou sua ferradura da sorte aqui.~
+AlguÃ©m deixou sua ferradura da sorte aqui.~
 ~
 12 0 0 0 0 ag 0 0 0 0 0 0 0
 0 0 0 0
@@ -169,7 +169,7 @@ Alguém deixou sua ferradura da sorte aqui.~
 #2719
 ferro forjado bracelete~
 um bracelete forjado em ferro~
-Um bracelete feito de ferro está aqui.~
+Um bracelete feito de ferro estÃ¡ aqui.~
 ~
 9 l 0 0 0 am 0 0 0 0 0 0 0
 3 0 0 0
@@ -177,7 +177,7 @@ Um bracelete feito de ferro está aqui.~
 #2720
 tacha ferro~
 uma tacha de ferro~
-Uma tacha de ferro sobressai do chão.~
+Uma tacha de ferro sobressai do chÃ£o.~
 ~
 9 bh 0 0 0 as 0 0 0 0 0 0 0
 2 0 0 0
@@ -189,15 +189,15 @@ A
 #2721
 balde~
 um balde~
-Um balde vazio está aqui, tombado.~
+Um balde vazio estÃ¡ aqui, tombado.~
 ~
 17 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 5 200 0 0 0
 #2722
-bec-de-corbin~
+bec-de-corbin adaga~
 uma Bec-de-Corbin~
-Uma adaga temida, afiada e aparentemente frágil está aqui.~
+Uma adaga temida, afiada e aparentemente frÃ¡gil estÃ¡ aqui.~
 ~
 5 ajmnpqt 0 0 0 ano 0 0 0 0 0 0 0
 0 3 4 14
@@ -205,9 +205,9 @@ Uma adaga temida, afiada e aparentemente frágil está aqui.~
 A
 18 2
 #2731
-balsa inflável~
-uma balsa inflável~
-Uma balsa não inflada está aqui, bem dobrada.~
+balsa inflavel~
+uma balsa inflÃ¡vel~
+Uma balsa nÃ£o inflada estÃ¡ aqui, bem dobrada.~
 ~
 22 aghq 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
@@ -215,7 +215,7 @@ Uma balsa não inflada está aqui, bem dobrada.~
 #2732
 cajado pedra~
 um estranho cajado feito de pedra~
-Um estranho cajado feito de pedra chama a sua atenção.~
+Um estranho cajado feito de pedra chama a sua atenÃ§Ã£o.~
 ~
 3 adgkmnqt 0 0 0 ao 0 0 0 0 0 0 0
 15 2 1 52
@@ -223,7 +223,7 @@ Um estranho cajado feito de pedra chama a sua atenção.~
 #2733
 lama brilhante argila~
 um pouco de lama brilhante~
-Um estranho tipo de argila brilhante está aqui.~
+Um estranho tipo de argila brilhante estÃ¡ aqui.~
 ~
 1 agh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 68 0
@@ -231,7 +231,7 @@ Um estranho tipo de argila brilhante está aqui.~
 #2734
 real manto veludo negro~
 um Manto Real de veludo negro~
-Há um belíssimo manto de veludo negro esquecido aqui.~
+HÃ¡ um belÃ­ssimo manto de veludo negro esquecido aqui.~
 ~
 11 afgkoqu 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
@@ -245,7 +245,7 @@ A
 #2735
 real coroa ouro prata~
 uma Coroa Real~
-Uma riquíssima coroa de ouro e prata está aqui.~
+Uma riquÃ­ssima coroa de ouro e prata estÃ¡ aqui.~
 ~
 11 afgkoqu 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
@@ -259,7 +259,7 @@ A
 #2736
 cetro diamante~
 um Cetro cravejado de diamantes~
-Brilhantes e imensos diamantes torneiam o cetro, convidando-o a pegá-lo.~
+Brilhantes e imensos diamantes torneiam o cetro, convidando-o a pegÃ¡-lo.~
 ~
 11 afgkoqu 0 0 0 ano 0 0 0 0 0 0 0
 0 4 4 6
@@ -269,7 +269,7 @@ A
 #2737
 enfeitado colar~
 um colar enfeitado~
-Um colar ricamente decorado com jóias permanece aqui, perdido.~
+Um colar ricamente decorado com jÃ³ias permanece aqui, perdido.~
 ~
 9 agq 0 0 0 ac 0 0 0 0 0 0 0
 5 0 0 0
@@ -279,7 +279,7 @@ A
 #2738
 bandagens curativos~
 enormes curativos sujos de sangue~
-Uma suja e infectada pilha de trapos está aqui, atraindo moscas.~
+Uma suja e infectada pilha de trapos estÃ¡ aqui, atraindo moscas.~
 ~
 11 a 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
@@ -291,9 +291,9 @@ A
 A
 4 1
 #2739
-cirúrgico bisturi~
-um bisturi cirúrgico~
-Um bisturi muito afiado está aqui, brilhando sob a luz intensa.~
+cirurgico bisturi~
+um bisturi cirÃºrgico~
+Um bisturi muito afiado estÃ¡ aqui, brilhando sob a luz intensa.~
 ~
 5 bghn 0 0 0 an 0 0 0 0 0 0 0
 0 3 4 11
@@ -303,7 +303,7 @@ A
 #2740
 elmo prateado~
 um elmo prateado~
-Um pequeno raio de sol atrai seus olhos para um elmo prateado no chão.~
+Um pequeno raio de sol atrai seus olhos para um elmo prateado no chÃ£o.~
 ~
 9 adg 0 0 0 ae 0 0 0 0 0 0 0
 4 0 0 0
@@ -315,7 +315,7 @@ A
 #2741
 escudo paladina~
 O Escudo da Paladina~
-Um escudo feito de uma grossa placa de prata está aqui.~
+Um escudo feito de uma grossa placa de prata estÃ¡ aqui.~
 ~
 9 bdegkou 0 0 0 aj 0 0 0 0 0 0 0
 5 0 0 0
@@ -333,9 +333,9 @@ Um pequeno raio de sol atrai seus olhos para um par de perneiras prateadas.~
 A
 17 -4
 #2743
-braçadeira prateada~
-um par de braçadeiras prateadas~
-Um pequeno raio de sol atrai seus olhos para um par de braçadeiras prateadas.~
+bracadeira prateada~
+um par de braÃ§adeiras prateadas~
+Um pequeno raio de sol atrai seus olhos para um par de braÃ§adeiras prateadas.~
 ~
 9 bdegkou 0 0 0 ai 0 0 0 0 0 0 0
 4 0 0 0
@@ -389,8 +389,8 @@ A
 5 2
 #2748
 elmo~
-um elmo com uma insígnia~
-Um elmo com o símbolo da Rosa Branca está aqui.~
+um elmo com uma insÃ­gnia~
+Um elmo com o sÃ­mbolo da Rosa Branca estÃ¡ aqui.~
 ~
 9 adegkou 0 0 0 ae 0 0 0 0 0 0 0
 4 0 0 0
@@ -400,7 +400,7 @@ A
 #2749
 escudo~
 O Escudo da Rosa Branca~
-Um escudo com o símbolo da Rosa Branca incrustrado está aqui.~
+Um escudo com o sÃ­mbolo da Rosa Branca incrustrado estÃ¡ aqui.~
 ~
 9 adegkou 0 0 0 aj 0 0 0 0 0 0 0
 6 0 0 0
@@ -411,8 +411,8 @@ A
 13 2
 #2750
 perneiras~
-um par de perneiras com uma insígnia~
-Um par de perneiras com o símbolo da Rosa Branca está aqui.~
+um par de perneiras com uma insÃ­gnia~
+Um par de perneiras com o sÃ­mbolo da Rosa Branca estÃ¡ aqui.~
 ~
 9 adegkou 0 0 0 af 0 0 0 0 0 0 0
 5 0 0 0
@@ -420,9 +420,9 @@ Um par de perneiras com o símbolo da Rosa Branca está aqui.~
 A
 2 2
 #2751
-braçadeiras~
-um par de braçadeiras com uma insígnia~
-Um par de braçadeiras com o símbolo da Rosa Branca está aqui.~
+bracadeiras~
+um par de braÃ§adeiras com uma insÃ­gnia~
+Um par de braÃ§adeiras com o sÃ­mbolo da Rosa Branca estÃ¡ aqui.~
 ~
 9 adegkou 0 0 0 ai 0 0 0 0 0 0 0
 5 0 0 0
@@ -431,8 +431,8 @@ A
 18 1
 #2752
 peitoral~
-um peitoral com uma insígnia~
-Um peitoral ostentando o símbolo da Rosa Branca está aqui.~
+um peitoral com uma insÃ­gnia~
+Um peitoral ostentando o sÃ­mbolo da Rosa Branca estÃ¡ aqui.~
 ~
 9 adegkou 0 0 0 ad 0 0 0 0 0 0 0
 5 0 0 0
@@ -441,8 +441,8 @@ A
 24 -1
 #2753
 botas~
-um par de botas com uma insígnia~
-Um par de botas adornadas com o símbolo da Rosa Branca está aqui.~
+um par de botas com uma insÃ­gnia~
+Um par de botas adornadas com o sÃ­mbolo da Rosa Branca estÃ¡ aqui.~
 ~
 9 adegkou 0 0 0 ag 0 0 0 0 0 0 0
 6 0 0 0
@@ -453,8 +453,8 @@ A
 19 -1
 #2754
 manoplas~
-um par de manoplas com uma insígnia~
-Um par de manoplas ostentando o símbolo da Rosa Branca está aqui.~
+um par de manoplas com uma insÃ­gnia~
+Um par de manoplas ostentando o sÃ­mbolo da Rosa Branca estÃ¡ aqui.~
 ~
 9 adegkou 0 0 0 ah 0 0 0 0 0 0 0
 3 0 0 0
@@ -463,16 +463,16 @@ A
 19 1
 #2755
 cinto~
-um cinto com uma insígnia~
-Um rígido cinto feito de correntes, com o símbolo da Rosa Branca, está aqui.~
+um cinto com uma insÃ­gnia~
+Um rÃ­gido cinto feito de correntes, com o sÃ­mbolo da Rosa Branca, estÃ¡ aqui.~
 ~
 9 adegkou 0 0 0 al 0 0 0 0 0 0 0
 4 0 0 0
 5 1000 0 25 0
 #2756
 branca rosa anel~
-O belíssimo Anel da Rosa Branca~
-Um anel sustentando o símbolo da Rosa Branca está aqui.~
+O belÃ­ssimo Anel da Rosa Branca~
+Um anel sustentando o sÃ­mbolo da Rosa Branca estÃ¡ aqui.~
 ~
 9 adegkou 0 0 0 ab 0 0 0 0 0 0 0
 2 0 0 0
@@ -484,21 +484,21 @@ A
 #2757
 fonte~
 uma grande Fonte~
-Uma grande Fonte está no centro do pátio.~
+Uma grande Fonte estÃ¡ no centro do pÃ¡tio.~
 ~
 23 0 0 0 0 0 0 0 0 0 0 0 0
 999 999 15 0
 1004 0 0 0 0
 E
 fonte~
-A grande fonte tem proximadamente seis pés de altura. Sua água
-limpa flui para baixo, caindo em várias bacias até que finalmente
-cai em um pequeno reservatório de água onde nadam alguns peixes dourados.
+A grande fonte tem proximadamente seis pÃ©s de altura. Sua Ã¡gua
+limpa flui para baixo, caindo em vÃ¡rias bacias atÃ© que finalmente
+cai em um pequeno reservatÃ³rio de Ã¡gua onde nadam alguns peixes dourados.
 ~
 #2758
 negros espinhos escudo~
 um escudo com espinhos negros~
-Um escudo recoberto por grandes e afiados espinhos está aqui.~
+Um escudo recoberto por grandes e afiados espinhos estÃ¡ aqui.~
 ~
 9 bghjlmnqt 0 0 0 aj 0 0 0 0 0 0 0
 5 0 0 0
@@ -508,15 +508,15 @@ A
 #2759
 negros espinhos manoplas~
 Um par de manoplas com espinhos negros~
-Um par de manoplas enfeitadas maldosamente com afiados espinhos está aqui.~
+Um par de manoplas enfeitadas maldosamente com afiados espinhos estÃ¡ aqui.~
 ~
 9 bghjlmnqt 0 0 0 ah 0 0 0 0 0 0 0
 5 0 0 0
 3 500 0 15 0
 #2760
-negros espinhos braçadeiras~
-um par de braçadeiras com espinhos negros~
-Um par de braçadeiras adornadas com grandes e afiados espinhos está aqui.~
+negros espinhos bracadeiras~
+um par de braÃ§adeiras com espinhos negros~
+Um par de braÃ§adeiras adornadas com grandes e afiados espinhos estÃ¡ aqui.~
 ~
 9 bghjlmnqt 0 0 0 ai 0 0 0 0 0 0 0
 5 0 0 0
@@ -526,7 +526,7 @@ A
 #2761
 negros espinhos perneiras~
 um par de perneiras com espinhos negros~
-Um par de perneiras protegidas com espinhos negros e afiados está à sua frente.~
+Um par de perneiras protegidas com espinhos negros e afiados estÃ¡ Ã  sua frente.~
 ~
 9 bghjlmnqt 0 0 0 af 0 0 0 0 0 0 0
 3 0 0 0
@@ -534,9 +534,9 @@ Um par de perneiras protegidas com espinhos negros e afiados está à sua frente.~
 A
 2 2
 #2762
-negros espinhos cinturão~
-um cinturão com espinhos negros~
-Um cinturão adornado com afiados espinhos está aqui, esperando para ser usado.~
+negros espinhos cinturao~
+um cinturÃ£o com espinhos negros~
+Um cinturÃ£o adornado com afiados espinhos estÃ¡ aqui, esperando para ser usado.~
 ~
 9 bghjlmnqt 0 0 0 al 0 0 0 0 0 0 0
 4 0 0 0
@@ -546,7 +546,7 @@ A
 #2763
 negro espinho anel~
 o Anel do Espinho Negro~
-Um anel esculpido em um espinho negro está aqui.~
+Um anel esculpido em um espinho negro estÃ¡ aqui.~
 ~
 9 bghjlmnqt 0 0 0 ah 0 0 0 0 0 0 0
 2 0 0 0
@@ -558,7 +558,7 @@ A
 #2764
 negro espinho escudo~
 um escudo do Espinho Negro~
-O escudo Espinho Negro está aqui.~
+O escudo Espinho Negro estÃ¡ aqui.~
 ~
 9 bghjlmnqt 0 0 0 aj 0 0 0 0 0 0 0
 2 0 0 0
@@ -568,9 +568,9 @@ A
 A
 6 1
 #2765
-luvas cirúrgicas~
-luvas cirúrgicas~
-Um par de luvas cirúrgicas nunca usadas está aqui.~
+luvas cirurgicas~
+luvas cirÃºrgicas~
+Um par de luvas cirÃºrgicas nunca usadas estÃ¡ aqui.~
 ~
 9 0 0 0 0 ah 0 0 0 0 0 0 0
 3 0 0 0
@@ -578,9 +578,9 @@ Um par de luvas cirúrgicas nunca usadas está aqui.~
 A
 2 1
 #2766
-calças couro endurecido~
-um par de calças de couro endurecido~
-Algumas calças estão amarrotadas em uma pilha.~
+calcas couro endurecido~
+um par de calÃ§as de couro endurecido~
+Algumas calÃ§as estÃ£o amarrotadas em uma pilha.~
 ~
 9 0 0 0 0 af 0 0 0 0 0 0 0
 2 0 0 0
@@ -588,9 +588,9 @@ Algumas calças estão amarrotadas em uma pilha.~
 A
 19 1
 #2767
-braçadeiras couro endurecido~
-um par de braçadeiras de couro endurecido~
-Um par de braçadeiras de couro está amontoado aqui.~
+bracadeiras couro endurecido~
+um par de braÃ§adeiras de couro endurecido~
+Um par de braÃ§adeiras de couro estÃ¡ amontoado aqui.~
 ~
 9 0 0 0 0 ai 0 0 0 0 0 0 0
 4 0 0 0
@@ -598,9 +598,9 @@ Um par de braçadeiras de couro está amontoado aqui.~
 A
 18 1
 #2768
-túnica cirúrgica~
-uma túnica cirúrgica~
-Uma túnica cirúrgica está aqui, totalmente amontoada no canto.~
+tunica cirurgica~
+uma tÃºnica cirÃºrgica~
+Uma tÃºnica cirÃºrgica estÃ¡ aqui, totalmente amontoada no canto.~
 ~
 9 0 0 0 0 ak 0 0 0 0 0 0 0
 6 0 0 0
@@ -608,9 +608,9 @@ Uma túnica cirúrgica está aqui, totalmente amontoada no canto.~
 A
 1 2
 #2769
-máscara cirúrgica~
-uma máscara cirúrgica~
-Uma máscara cirúrgica sem uso foi jogada fora aqui.~
+mascara cirurgica~
+uma mÃ¡scara cirÃºrgica~
+Uma mÃ¡scara cirÃºrgica sem uso foi jogada fora aqui.~
 ~
 9 0 0 0 0 ar 0 0 0 0 0 0 0
 2 0 0 0
