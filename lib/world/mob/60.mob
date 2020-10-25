@@ -1,12 +1,12 @@
 #6000
 john lenhador~
 John o Lenhador~
-John o Lenhador est� aqui, a procura de �rvores para cortar.
+John o Lenhador está aqui, a procura de árvores para cortar.
 ~
-Ele tem seis p�s de altura e parece ser muito forte, com os m�sculos de seu
-peito quase estourando sua camisa xadrez.   Sua bonita figura est� vestida
-com roupas de alguem que d� muito duro e sua express�o � de algu�m que
-vive uma vida simples e pac�fica.
+Ele tem seis pés de altura e parece ser muito forte, com os músculos de seu
+peito quase estourando sua camisa xadrez.   Sua bonita figura está vestida
+com roupas de alguem que dá muito duro e sua expressão é de alguém que
+vive uma vida simples e pacífica.
 ~
 cglm f 370 S
 5 15 6 1d12+60 1d4+3
@@ -15,9 +15,9 @@ cglm f 370 S
 #6001
 pequeno coelho~
 o coelho~
-O pequeno coelho est� disparando na dire��o dos arbustos daqui.
+O pequeno coelho está disparando na direção dos arbustos daqui.
 ~
-� uma criatura pequenina e peluda, com orelhas compridas e p�s maiores ainda.
+É uma criatura pequenina e peluda, com orelhas compridas e pés maiores ainda.
 ~
 g 0 0 S
 0 20 6 1d4+1 1d4+0
@@ -26,10 +26,10 @@ g 0 0 S
 #6002
 urso marrom~
 o urso marrom~
-Um urso enorme, marrom, com cara de estar faminto, est� aqui.
+Um urso enorme, marrom, com cara de estar faminto, está aqui.
 ~
-O urso � enorme, marrom, um peludo animal com garras muito grandes e dentes
-muito afiados.   De modo algum ele lembra aqueles ursinhos de brinquedos, t�o
+O urso é enorme, marrom, um peludo animal com garras muito grandes e dentes
+muito afiados.   De modo algum ele lembra aqueles ursinhos de brinquedos, tão
 lindinhos.
 ~
 fgk 0 -50 S
@@ -39,10 +39,10 @@ fgk 0 -50 S
 #6003
 coelho feroz~
 o coelho feroz~
-Um coelho feroz est� aqui, olhando para voc� com cara de faminto.
+Um coelho feroz está aqui, olhando para você com cara de faminto.
 ~
-Esta pequena criatura peluda, com orelhas compridas e enormes p�s, parece que
-foi atacada por coelhos com c�lera, uma doen�a terr�vel, que transforma
+Esta pequena criatura peluda, com orelhas compridas e enormes pés, parece que
+foi atacada por coelhos com cólera, uma doença terrível, que transforma
 coelhinhos inocentes em criaturas ferozes e sedentas por sangue.
 ~
 fg 0 -150 S
@@ -50,12 +50,12 @@ fg 0 -150 S
 0 350
 4 8 0
 #6004
-cor�a cervo gamo~
+corca cervo gamo~
 o cervo da terra~
-Um cervo da terra est� calmamente pastando aqui.
+Um cervo da terra está calmamente pastando aqui.
 ~
-Esta � uma graciosa criatura, com pernas esguias e longas e com imensos olhos
-castanhos que olham fixamente para voc�, com grande interesse.
+Esta é uma graciosa criatura, com pernas esguias e longas e com imensos olhos
+castanhos que olham fixamente para você, com grande interesse.
 ~
 gh d 350 S
 2 19 5 2d8+8 1d6+0
@@ -64,9 +64,9 @@ gh d 350 S
 #6005
 raposa marrom~
 a raposa marrom~
-Uma raposa marrom est� perseguindo coelhos por entre os arbustos daqui.
+Uma raposa marrom está perseguindo coelhos por entre os arbustos daqui.
 ~
-Ela � uma raposa grande, com uma pelagem marrom-avermelhada e uma longa e
+Ela é uma raposa grande, com uma pelagem marrom-avermelhada e uma longa e
 peluda cauda.
 ~
 g 0 -50 S
@@ -74,11 +74,11 @@ g 0 -50 S
 0 225
 8 8 0
 #6006
-p�ssaro grande~
-o p�ssaro~
-Um grande p�ssaro com uma das asas quebrada, est� encolhidinho aqui.
+passaro grande~
+o pássaro~
+Um grande pássaro com uma das asas quebrada, está encolhidinho aqui.
 ~
-O p�ssaro parece que n�o vai viver muito, pelo jeito.
+O pássaro parece que não vai viver muito, pelo jeito.
 ~
 b 0 0 S
 0 17 10 2d3+1 1d2+1
@@ -87,10 +87,10 @@ b 0 0 S
 #6007
 gato lince gato-selvagem~
 o lince~
-Um lince de tamanho m�dio est� espreitando um p�ssaro, aqui.
+Um lince de tamanho médio está espreitando um pássaro, aqui.
 ~
-O lince possui dentes e garras afiadas e provavelmente ir� come-lo, no lugar do
-p�ssaro, se voc� lhe der chance.
+O lince possui dentes e garras afiadas e provavelmente irá come-lo, no lugar do
+pássaro, se você lhe der chance.
 ~
 bf dk -150 S
 5 15 5 1d12+60 2d4+3
@@ -99,7 +99,7 @@ bf dk -150 S
 #6008
 pardal~
 o pardal~
-Um pardal est� ciscando na terra.
+Um pardal está ciscando na terra.
 ~
 O pardal parece estar aproveitando bem a vida.
 ~
@@ -110,7 +110,7 @@ g 0 200 S
 #6009
 tordo~
 o tordo~
-Um tordo est� ciscando por aqui, � procura de insetos para comer.
+Um tordo está ciscando por aqui, à procura de insetos para comer.
 ~
 O tordo parece bem decidido em encontrar um inseto ou uma minhoca para comer.
 ~
@@ -121,10 +121,10 @@ g 0 200 S
 #6010
 esquilo~
 o esquilo~
-Um esquilo est� aqui, procurando ref�gio em sua toca.
+Um esquilo está aqui, procurando refúgio em sua toca.
 ~
 Ele sai um pouco de sua toca e o olha ansiosamente, parecendo estar torcendo
-silenciosamente para que voc� saia dali e o deixe s�zinho.
+silenciosamente para que você saia dali e o deixe sózinho.
 ~
 b st 200 S
 1 20 8 1d7+9 1d5+0
@@ -133,11 +133,11 @@ b st 200 S
 #6011
 texugo~
 o texugo sonolento~
-Um peludo texugo marrom est� deitado sobre uma tora aqui.
+Um peludo texugo marrom está deitado sobre uma tora aqui.
 ~
-O texugo est� acordando devagarinho e observando voc� de sua toca.  Voc� sabe
-que que ele n�o ir� se mexer por um longo tempo.   Seus dentes e garras afiadas
-prendem a sua aten��o, enquanto voc� fica considerando se deve ou n�o mat�-lo.
+O texugo está acordando devagarinho e observando você de sua toca.  Você sabe
+que que ele não irá se mexer por um longo tempo.   Seus dentes e garras afiadas
+prendem a sua atenção, enquanto você fica considerando se deve ou não matá-lo.
 ~
 b t 50 S
 4 17 5 1d5+48 2d3+2
@@ -146,11 +146,11 @@ b t 50 S
 #6012
 esquilo cinzento~
 o esquilo cinzento~
-Um esquilo cinzendo, com um grosso e peludo rabo est� a procura de nozes aqui.
+Um esquilo cinzendo, com um grosso e peludo rabo está a procura de nozes aqui.
 ~
-Est� feliz criatura parece que n�o liga a m�nima para a sua presen�a e continua
-a sua busca por nozes, entre as folhas e os gravetos que est�o espalhados
-no ch�o.
+Está feliz criatura parece que não liga a mínima para a sua presença e continua
+a sua busca por nozes, entre as folhas e os gravetos que estão espalhados
+no chão.
 ~
 g s 150 S
 2 19 8 1d12+22 1d6+0
@@ -159,23 +159,23 @@ g s 150 S
 #6013
 esquilinho~
 o esquilinho~
-Um pequeno esquilinho marrom-avermelhado salta de �rvore em �rvore, aqui.
+Um pequeno esquilinho marrom-avermelhado salta de árvore em árvore, aqui.
 ~
-Ele � absurdamente hiper-ativo!!...este pequeno roedor parece que nunca se cansa
+Ele é absurdamente hiper-ativo!!...este pequeno roedor parece que nunca se cansa
 de ficar correndo de um lado para o outro, de cima para baixo e em volta das
-�rvores desta �rea.   Se voc� conseguisse peg�-lo, seria uma refei��o e tanto,
-pensa voc�.
+árvores desta área.   Se você conseguisse pegá-lo, seria uma refeição e tanto,
+pensa você.
 ~
 g s 170 S
 0 20 5 2d5+3 1d4+0
 0 40
 8 8 0
 #6014
-corvo negro p�ssaro~
+corvo negro passaro~
 o grande corvo negro~
 Um grande corvo negro voa por aqui, procurando coisas para comer.
 ~
-O p�ssaro olha voc� com uma certa agressividade mas continua a procurar por
+O pássaro olha você com uma certa agressividade mas continua a procurar por
 comida.
 ~
 bch 0 -20 S
@@ -185,12 +185,12 @@ bch 0 -20 S
 #6015
 grotesco abutre urubu~
 o grotesco abutre~
-Um grotesco abutre, coberto por sangue e carni�a, est� aqui, se alimentando
+Um grotesco abutre, coberto por sangue e carniça, está aqui, se alimentando
 como louco.
 ~
-Voc� fica enjoado s� de olhar para este animal nojento.   Peda�os de carni�a
-ressecada, est�o grudadas em seu bico e um organismo indentific�vel fica
-pulando em meio �s suas penas.   Ele olha para voc� e o ataca, na tentativa
+Você fica enjoado só de olhar para este animal nojento.   Pedaços de carniça
+ressecada, estão grudadas em seu bico e um organismo indentificável fica
+pulando em meio às suas penas.   Ele olha para você e o ataca, na tentativa
 de proteger o seu banquete.
 ~
 bcf dhk -700 S
@@ -200,11 +200,11 @@ bcf dhk -700 S
 #6016
 alce gamo~
 o jovem alce~
-Um jovem alce est� aqui, bebendo �gua no lago.
+Um jovem alce está aqui, bebendo água no lago.
 ~
-Este jovem macho alce, est� bebendo �gua na margem do lago e observando
-voc�, desconfiado.   Sua galhada ainda n�o est� totalmente crescida, mas com
-certeza ser�o bastante expressivas dentro de alguns anos.
+Este jovem macho alce, está bebendo água na margem do lago e observando
+você, desconfiado.   Sua galhada ainda não está totalmente crescida, mas com
+certeza serão bastante expressivas dentro de alguns anos.
 ~
 bg d 350 S
 4 17 4 1d12+48 1d5+3
@@ -213,9 +213,9 @@ bg d 350 S
 #6017
 peixe~
 o peixe~
-Um peixe est� nadando por aqui.
+Um peixe está nadando por aqui.
 ~
-O peixe tem exatamente o tamanho certo para um excelente refei��o.
+O peixe tem exatamente o tamanho certo para um excelente refeição.
 ~
 b g 100 S
 0 20 10 2d5+0 1d3+0
@@ -224,9 +224,9 @@ b g 100 S
 #6018
 patinho~
 o patinho~
-Um patinho est� nadando no lago.
+Um patinho está nadando no lago.
 ~
-O patinho � ador�vel!   Ele se parece com uma bolinha de penugem.
+O patinho é adorável!   Ele se parece com uma bolinha de penugem.
 ~
 b 0 1000 S
 0 20 10 1d1+0 1d1+0
@@ -235,9 +235,9 @@ b 0 1000 S
 #6019
 pato~
 o pato~
-O pato est� aqui, grasnando todo feliz.
+O pato está aqui, grasnando todo feliz.
 ~
-O pato � bastante gordo.   Ele parece estar aproveitando bem sua vida.
+O pato é bastante gordo.   Ele parece estar aproveitando bem sua vida.
 ~
 g 0 1000 S
 1 20 10 2d6+5 1d4+0
