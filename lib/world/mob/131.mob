@@ -1,117 +1,3 @@
-#13101
-guarda preguicoso soldado~
-um guarda preguiçoso~
-Uma solitária sentinela está aqui vigiando a entrada.
-~
-Esta sentinela parece ter muito tempo livre, pois não possui serviço algum. 
-Ele é grisalho e parece ser bastante idoso...
-~
-43098 0 100 S
-20 8 2 20d30+950 2d3+10
-550 13385
-8 8 0
-#13102
-sombra monstro~
-uma sombra~
-Sombras se movem ao seu redor, parcialmente substanciais porém vivas.
-~
-Esta criatura da sombra está temporariamente aqui nesta dimensão e está 
-olhando você com bastante medo. Você gostaria de bater intensamente nela, 
-pois ela está lhe tocando...  
-~
-237640 524288 -100 S
-20 8 2 5d20+943 2d3+10
-0 13385
-8 8 0
-#13103
-homem serpente cobra lagarto~
-um homem-serpente~
-Um homem-serpente está aqui bastante confuso observando ao redor. 
-~
-Um homem-serpente está aqui dizendo: "eu devo servir ao mestre". Você 
-gostaria de saber o motivo...?
-~
-202 0 0 S
-23 9 1 30d30+1546 2d4+11
-700 19117
-8 8 0
-#13104
-lorgeth homem sombra rei~
-Lorgeth~
-Um homem está aqui mexendo os braços e dando ordens às sombras.
-~
-Um gigante de mais ou menos 3 metros de altura está aqui. Ele possui um 
-olhar como se quisesse impor algo. Todas as sombras estão fazendo o que 
-ele pede, igual um fanatismo religioso. As sombras ao seu redor pedem que 
-você se curve perante Lorgeth. Quem é Lorgeth?  Oh, este homem aqui deve 
-ser Lorgeth.
-~
-10314 0 -50 S
-50 29 -3 1d1+5000 4d5+25
-2333 138481
-8 8 0
-#13105
-fonte animada movendo~
-uma fonte animada~
-Uma fonte cheia de um líquido verde está aqui.
-~
-Esta fonte está cheia de um líquido verde. Quando você observa mais de 
-perto consegue ver seu movimento! De fato, ela está movendo-se na sua 
-direção... 
-~
-6154 0 -30 S
-20 8 2 8d20+952 2d3+10
-0 13385
-8 8 0
-#13106
-sharel sombra~
-Sharel~
-O chefe do exército das sombras, Sharel, se levanta aqui no meio de suas tropas.
-~
-Esta sombra parece ser muito importante. Você imagina ser o comandante. 
-Seu nome é Sharel, pois foi sussurrado pelas sombras ao seu redor.
-~
-2138 0 -30 S
-23 9 1 10d23+1537 2d4+11
-700 19117
-8 8 0
-#13107
-monstro escuridao olhos~
-o monstro da escuridão~
-Olhos vermelhos e brilhantes estão fixados em você do meio da escuridão.
-~
-Esta criatura deve possuir um tamanho incrível, pois você consegue ver 
-somente algumas pequenas partes dele enquanto se aproxima.
-~
-198666 0 -300 S
-22 9 1 22d12+1400 2d3+11
-0 17068
-8 8 0
-#13108
-garin homem camuflado~
-Garin~
-Um homem está aqui encostado contra a parede tentando se camuflar.
-~
-Olhando melhor você nota que Garin é um veterano de guerra. Aprendeu a se 
-esconder com grande facilidade e você não tem certeza de estar vendo ele, 
-pois poderia ser somente uma sombra deste grande guerreiro. 
-~
-174170 524288 0 S
-25 11 0 25d12+1934 2d4+12
-800 23646
-8 8 0
-#13109
-criado humilde templo~
-o criado~
-Um humilde criado está aqui limpando o templo.
-~
-Este empregado viveu uma vida privada e solitária. Viveu toda sua vida nos 
-templos.
-~
-204 0 50 S
-18 7 3 18d12+715 1d6+9
-450 10232
-8 8 0
 #13110
 mendo cavaleiro templar~
 o cavaleiro Mendo~
@@ -121,10 +7,11 @@ Um homem antigo, contudo grande está aqui. Deve ser o Templar Mendo, porque
 foram espalhados boatos de que nada poderia prejudicá-lo pois possui a 
 proteção de um deus.
 ~
-2394 0 300 S
+2099546 0 0 0 0 0 0 0 300 E
 50 29 -3 1d1+5000 4d5+25
 2500 138481
 8 8 0
+E
 #13111
 cidadao torin~
 um cidadão~
@@ -133,10 +20,11 @@ Um cidadão de Torin admira a ordem que é mantida aqui.
 Esta é uma pessoa normal. Ela parece estar vagando há pouco tempo por 
 estas ruas que ainda não foram infestadas pelas sombras.
 ~
-72 0 20 S
+2097224 0 0 0 0 0 0 0 20 E
 15 5 4 15d12+430 1d5+7
 325 6427
 8 8 0
+E
 #13112
 guarda cidade sentinela torin~
 um sentinela de Torin~
@@ -145,10 +33,11 @@ Um homem está aqui guardando as ruas da cidade.
 Um veterano das guerras de Torin está trabalhando agora como um sentinela. 
 Infelizmente :(
 ~
-6236 0 150 S
+2103388 0 0 0 0 0 0 0 150 E
 25 11 0 25d12+1900 2d4+12
 800 23646
 8 8 0
+E
 #13113
 sagrado guarda~
 o guarda sagrado~
@@ -157,10 +46,11 @@ Um dos guardas Sagrados contra a invasão das Sombras.
 Um enorme guarda está aqui protegendo sua amada cidade, o lugar sagrado, 
 onde as sombras não são permitidas irem.
 ~
-39002 0 100 S
+2136154 0 0 0 0 0 0 0 100 E
 34 17 -20 12d14+400 3d6+17
 850 51795
 8 8 0
+E
 #13114
 melki homem cidadao caverna~
 Melki~
@@ -171,10 +61,11 @@ Suas roupas estão completamente rasgadas e sujas. Isto parece ter acontecido
 em das invasões das sombras. Você nota que ele está usando uma etiqueta com 
 o nome... Dizendo o seguinte "Melki, inquisidor principal do Império".
 ~
-8268 0 10 S
+2105420 0 0 0 0 0 0 0 10 E
 26 11 -4 12d20+1965 2d5+13
 850 26133
 8 8 0
+E
 #13115
 adorin homem caverna cidadao~
 Adorin~
@@ -183,10 +74,11 @@ No passado este cidadão de Torin se orgulhava de ver o mundo se desmoronando.
 Adorin, o conselheiro do Rei de Torin está aqui olhando desanimado. Ele 
 esteve desempregado durante um bom tempo só pelo aspecto de suas roupas.
 ~
-14412 0 10 S
+2111564 0 0 0 0 0 0 0 10 E
 26 11 -4 20d20+1765 2d5+13
 850 26133
 8 8 0
+E
 #13116
 lesma escala parede~
 uma lesma~
@@ -196,10 +88,11 @@ Uma antiga e gigantesca lesma escala as paredes da caverna. Aparentemente
 ela é mais antiga que a própria caverna. Não faça muita amizade com esta 
 coisa, pois ela possui dentes...
 ~
-32840 0 -50 S
+2129992 0 0 0 0 0 0 0 -50 E
 18 7 3 20d20+400 1d6+9
 0 10232
 8 8 0
+E
 #13117
 morcego rato voando~
 um morcego~
@@ -208,10 +101,11 @@ Um ENORME morcego está voando por aqui.
 Quando você olha melhor percebe que não é um rato, e sim um gigantesco 
 morcego! Não parece ser muito amigável.
 ~
-216 8388608 -50 S
+2097368 0 0 0 0 0 0 0 -50 E
 15 5 4 20d20+791 1d5+7
 0 6427
 8 8 0
+E
 #13118
 gigante pedra secreto~
 um gigantesco gárgula de pedra~
@@ -220,10 +114,11 @@ Um gigante de pedra está parado aqui parecendo que está dormindo.
 Este antigo gigante se transformou em pedra. Seu imenso punho poderia lhe 
 esmagar e retirar sua vida muito rapidamente.
 ~
-254042 0 0 S
+2351194 0 0 0 0 0 0 0 0 E
 50 29 -28 1d1+5000 4d5+25
 2500 138481
 8 8 0
+E
 #13119
 guarda guardiao sagrado~
 o Guardião Sagrado~
@@ -232,10 +127,11 @@ Um Guardião dos Corredores Sagrados está aqui lhe fazendo sentir incômodo.
 Um gigante guardião vigia as portas dos Corredores Sagrados. Você pensa que 
 ele poderia levar isto realmente à mal se você tentasse entrar.
 ~
-43098 0 100 S
+2140250 0 0 0 0 0 0 0 100 E
 23 9 8 20d20+1130 2d4+11
 700 19117
 8 8 0
+E
 #13120
 monge antigo~
 um antigo monge~
@@ -245,10 +141,11 @@ Este monge já está limpando os corredores desde antes de você nascer.
 As rugas na face e nas mãos lhe faz ter a idéia da idade dele, e observando    
 melhor percebe perfeitamente que ele viveu toda a vida aqui.
 ~
-8284 0 10 S
+2105436 0 0 0 0 0 0 0 10 E
 20 8 2 20d20+730 2d3+10
 550 13385
 8 8 0
+E
 #13121
 sombra menos amiga opressiva~
 um sombra~
@@ -256,10 +153,11 @@ Uma sombra menos opressiva está aqui.
 ~
 Estas sombras são amigáveis e definitivamente menos opressivas.
 ~
-72 524288 50 S
+2097224 0 0 0 524288 0 0 0 50 E
 23 9 8 20d20+730 2d4+11
 700 19117
 8 8 0
+E
 #13122
 rei sombras sombra~
 o Rei das Sombras~
@@ -269,10 +167,11 @@ O Rei das Sombras que no passado foi o Rei de Torin, está aqui. Ele está
 criando mais daquelas sombras que você viu anteriormente. Ele está usando 
 uma magia muito poderosa; você consegue sentir isto daqui.
 ~
-10362 270344 -600 S
+2107514 0 0 0 270344 0 0 0 -600 E
 36 18 -20 1d1+2425 3d7+18
 1350 65914
 8 8 0
+E
 #13123
 sombra mutante~
 uma sombra mutante~
@@ -280,10 +179,11 @@ Este ser grotesco deve ser um legendário mutante.
 ~
 Deve ter sido este ser grotesco que conduziu Torin à destruição... 
 ~
-8396 8192 -60 S
+2105548 0 0 0 8192 0 0 0 -60 E
 20 8 2 20d20+730 2d3+10
 200 13385
 8 8 0
+E
 #13124
 grande sombra larga~
 uma grande sombra~
@@ -293,10 +193,11 @@ Uma das mais fortes sombras está aqui. Esta parece ser uma daquela
 recentemente criada pelo Rei. Elas estão sendo criadas por uma magia 
 fortíssima.
 ~
-74 0 -100 S
+2097226 0 0 0 0 0 0 0 -100 E
 26 11 -4 20d20+1430 2d5+13
 0 26133
 8 8 0
+E
 #13125
 mutante ra mutada~
 uma rã magicamente mutada~
@@ -306,10 +207,11 @@ O que antes parecia ser uma rã foi magicamente alterado. Agora mesmo ele
 olha ao redor procurando por comida. Você espera que ele não pense que 
 você seja uma.
 ~
-142 524288 0 S
+2097294 0 0 0 524288 0 0 0 0 E
 7 1 7 7d6+4 1d2+3
 0 920
 8 8 0
+E
 #13126
 sombrio guarda grande~
 o guarda sombrio~
@@ -319,10 +221,11 @@ Esta grande sombra possui praticamente 1 metro a mais que você, e parece
 querer lhe intimidar. Por causa do amuleto que ele usa você tem certeza 
 que ele foi um guarda da antiga cidade de Torin.
 ~
-10 524288 -140 S
+2097162 0 0 0 524288 0 0 0 -140 E
 27 12 -8 1d1+2100 2d6+13
 900 28773
 8 8 1
+E
 #13127
 tenente dorin sombra torin~
 tenente Dorin~
@@ -331,10 +234,11 @@ O tenente Dorin do exército de Torin está aqui.
 Este é o forte tenente de Torin. Embora, ele tenha se tornado uma das 
 sombras que atacou esta cidade.
 ~
-33554442 16 0 S
+35651594 0 0 0 16 0 0 0 0 E
 28 13 -12 1d1+2150 2d6+14
 950 31569
 8 8 1
+E
 #13128
 fantasma jovem senhora transparente torin~
 o fantasma de uma jovem senhora~
@@ -345,10 +249,11 @@ não possui pista alguma do porque deste quarto estar fora dos corredores
 principais de Torin. Ela parece ser um fantasma, pois esta transparente e 
 realmente não parece notar que você está aqui.
 ~
-539205706 8388608 0 S
+539205706 0 0 0 0 0 0 0 0 E
 21 8 1 1d1+900 2d3+10
 600 15159
 8 8 2
+E
 #13129
 cidadao torin fantasmagorico~
 o cidadão fantasmagórico de Torin~
@@ -357,10 +262,11 @@ Um cidadão de Torin, ou pelo menos já foi um cidadão de Torin.
 Uma vez esta coisa foi um cidadão de, e há pouco tempo era uma pessoa 
 normal.  Mas de alguma maneira sua alma foi retirada.
 ~
-537043016 524288 0 S
+539140168 0 0 0 524288 0 0 0 0 E
 21 8 1 1d1+900 2d3+10
 600 15159
 8 8 1
+E
 #13130
 cidadao torin fantasmagorico~
 o cidadão fantasmagórico de Torin~
@@ -372,10 +278,11 @@ depois da transformação que ocorreu, a pobre alma desta mulher foi
 apanhada. E agora ela caminha por estar ruas simplesmente esperando que 
 alguém possa a livrar deste mal.
 ~
-537043016 0 0 S
+539140168 0 0 0 0 0 0 0 0 E
 21 8 1 1d1+900 2d3+10
 600 15159
 8 8 2
+E
 #13131
 bola azul brilhante luz~
 a bola azul brilhante~
@@ -384,10 +291,11 @@ Uma bola azul brilhante paira aqui, mas você não tem certeza como ela emitindo
 Este estranho objeto parece estar vivo. Esta coisa brilha e de fato emite 
 bastante de luz.
 ~
-133146 524288 -10 S
+2230298 0 0 0 524288 0 0 0 -10 E
 32 15 -20 1d1+2325 3d5+16
 0 44376
 8 8 0
+E
 #13132
 soldado Torin fantasmagorico procurando algo~
 um soldado fantasmagórico de Torin~
@@ -396,10 +304,11 @@ Este soldado caminha pelos quartéis do batalhão, enquanto procura algo..
 Este soldado tem vagado por estes quartéis durante séculos, desde a última 
 batalha de Torin. Ele parece ter perdido algo e está procurando.
 ~
-539140184 0 0 S
+539140184 0 0 0 0 0 0 0 0 E
 21 8 1 1d1+900 2d3+10
 600 15159
 8 8 1
+E
 #13133
 soldado Torin fantasmagorico procurando algo~
 um soldado fantasmagórico de Torin~
@@ -408,10 +317,11 @@ Este soldado caminha pelos quartéis do batalhão, enquanto procura algo..
 Este soldado tem vagado por estes quartéis durante séculos, desde a última 
 batalha de Torin. Ele parece ter perdido algo e está procurando.
 ~
-539140184 524288 0 S
+539140184 0 0 0 524288 0 0 0 0 E
 21 8 1 1d1+900 2d3+10
 600 15159
 8 8 2
+E
 #13134
 nevoa coisa escuridao sombra~
 a névoa~
@@ -421,10 +331,11 @@ Muita névoa aqui. Parece ser quase uma criatura viva, mas você não tem
 certeza.  Tudo o que você está vendo não parece ser sólido, pois se fosse 
 e se tiver vida esta criatura teria uma mobilidade incrível. 
 ~
-539748428 8388628 0 S
+539748428 0 0 0 20 0 0 0 0 E
 32 15 -20 1d1+2325 3d5+16
 0 44376
 8 8 0
+E
 #13135
 mendo aprendiz luz cavaleiro~
 o aprendiz de mendo~
@@ -435,10 +346,11 @@ Você pode o caracterizar pela sua roupa colorida, pela disposição, e pelo
 fato dele servir a Mendo. Ele lembra vagamente de você como um paladino, 
 mas não existe nenhum paladino, a menos que ele esteja se confundindo.
 ~
-6474 8 500 S
+2103626 0 0 0 8 0 0 0 500 E
 35 17 -20 1d1+2400 3d6+17
 990 55768
 8 8 1
+E
 #13136
 bajulador oprimido homem cidadao rei~
 o bajulador que antecede a corte do rei~
@@ -449,10 +361,11 @@ dentro destas cavernas. Aparentemente muitos reis se perderam dentro deste
 lugar e simplesmente nunca conseguiram encontrar uma saída, mas com certeza 
 ainda devem estar vivos...
 ~
-72 0 0 S
+2097224 0 0 0 0 0 0 0 0 E
 30 14 -20 1d1+2250 3d4+15
 1050 37642
 8 8 1
+E
 #13137
 clerigo branco roupao mulher~
 um clérigo da luz~
@@ -462,10 +375,11 @@ Este personagem parece estar brilhando, você não sabe como, mas a luz está
 vindo desta pessoa. Ela diria provavelmente que este brilho esta vindo de 
 outro lugar.
 ~
-137482 0 0 S
+2234634 0 0 0 0 0 0 0 0 E
 30 0 -20 1d1+2250 5d4+15
 1050 37642
 8 8 2
+E
 #13138
 clerigo mestre priest luz~
 o Sacerdote Mestre da Luz~
@@ -477,8 +391,9 @@ ele lhe responde antes mesmo de as fazer. O conhecimento que ele possui
 parece não haver nada igual... Você imagina que esta pessoa esteja temerosa 
 em uma briga devido a seu intelecto.
 ~
-172106 0 0 S
+2269258 0 0 0 0 0 0 0 0 E
 48 27 -28 1d1+2800 4d5+24
 2300 124791
 8 8 2
+E
 $

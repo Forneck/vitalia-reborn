@@ -8,15 +8,15 @@ expressa claramente em seu rosto um sentimento de angústia.  A celestial
 elfa se perdeu do seu povo, quando os anões acordaram um terrível mal nas
 montanhas.
 ~
-blmnopqr :3:7: +1000 E
+2357250 0 0 0 0 0 0 0 1000 E
 101 -30 -25 5d15+8000 10d9+30
 0 2000000
 8 8 2
 BareHandAttack: 13
 Str: 18
+Dex: 18
 Int: 18
 Wis: 18
-Dex: 18
 Con: 18
 Cha: 18
 E
@@ -29,15 +29,15 @@ Você observa um alto e impávido elfo, seu nome é Amroth e seu coração está
 procura da sua metade:  A linda e celestial Nimrodel.  Você observa uma
 triste expressão de angústia estampada no rosto dele.
 ~
-blmnopqr :3:7: +1000 E
+2357250 0 0 0 0 0 0 0 1000 E
 101 -35 -30 5d15+8200 10d9+35
 0 2000000
 8 8 1
 BareHandAttack: 13
 Str: 18
+Dex: 18
 Int: 18
 Wis: 18
-Dex: 18
 Con: 18
 Cha: 18
 E
@@ -51,15 +51,15 @@ Haldir de Lórien possui um olhar encantador e demonstra a força e coragem do
 seu povo nos seus olhos.  Haldir de Lórien é irmão dos belos elfos Orophin e
 Rúmil de Lórien.
 ~
-blmnopqr :2:3:5:7:12:15 +1000 E
+2357250 0 0 0 0 0 0 0 1000 E
 50 -5 -12 5d15+2200 7d9+25
 15000 120000
 8 8 1
 BareHandAttack: 13
 Str: 15
+Dex: 18
 Int: 18
 Wis: 18
-Dex: 18
 Con: 18
 Cha: 18
 E
@@ -72,15 +72,15 @@ Você observa um magnífico elfo de cabelos prateados e pele alva.  Rúmil de
 Lórien é um dos guardiões da floresta dourada de Lothlórien e dos Galadhrim.
 Rúmil é irmão de Haldir e Orophin de Lórien.
 ~
-blmnopqr :2:3:5:7:12:15 +1000 E
+2357250 0 0 0 0 0 0 0 1000 E
 45 -2 -10 5d10+1800 7d8+20
 10000 105000
 8 8 1
 BareHandAttack: 13
 Str: 15
+Dex: 18
 Int: 18
 Wis: 18
-Dex: 18
 Con: 18
 Cha: 18
 E
@@ -93,15 +93,15 @@ Você observa um jovem e belíssimo elfo de Lothlórien.  Orophin de Lórien é
 um dos guardiões da floresta dourada de Lothlórien e dos Galadhrim.  Orophin
 é irmão de Haldir e Rúmil de Lórien.
 ~
-blmnopqr :2:3:5:7:12:15 +1000 E
+2357250 0 0 0 0 0 0 0 1000 E
 45 -2 -10 5d10+1800 7d8+20
 10000 105000
 8 8 1
 BareHandAttack: 13
 Str: 15
+Dex: 18
 Int: 18
 Wis: 18
-Dex: 18
 Con: 18
 Cha: 18
 E
@@ -118,15 +118,15 @@ celestial senhora de Lothlórien está vestida com trajes completamente
 brancos.  Galadriel possui um enorme poder e vive pacificamente ao lado do
 seu povo, os Galadhrim.
 ~
-blmnopqr :2:3:5:7:12:15 +1000 E
+2357250 0 0 0 0 0 0 0 1000 E
 70 -15 -30 5d10+4500 7d10+25
 25000 268000
 8 8 2
 BareHandAttack: 13
 Str: 18
+Dex: 18
 Int: 18
 Wis: 18
-Dex: 18
 Con: 18
 Cha: 18
 E
@@ -140,15 +140,15 @@ imponente.  Celeborn possui lindos cabelos prateados e longos, e veste
 trajes completamente brancos.  O Senhor de Lothlórien vive ao lado da bela
 Galadriel na maravilhosa cidade de Caras Galadhon.
 ~
-blmnopqr :2:3:5:7:12:15 +1000 E
+2357250 0 0 0 0 0 0 0 1000 E
 70 -15 -30 5d10+4600 7d10+25
 25000 268000
 8 8 1
 BareHandAttack: 13
 Str: 18
+Dex: 18
 Int: 18
 Wis: 18
-Dex: 18
 Con: 18
 Cha: 18
 E
@@ -161,15 +161,15 @@ Você observa um belo elfo de cabelos prateados e de uma postura imponente.
 Os Galadhrim vivem na gloriosa Caras Galadhon e cultivam a paz e a harmonia
 entre os povos.
 ~
-blmnopqr :2:3:5:7:12:15 +1000 E
+2357250 0 0 0 0 0 0 0 1000 E
 40 0 -7 5d10+1600 7d8+20
 8000 80000
 8 8 1
 BareHandAttack: 13
 Str: 15
+Dex: 18
 Int: 18
 Wis: 18
-Dex: 18
 Con: 18
 Cha: 18
 E
@@ -182,15 +182,15 @@ Você observa uma majestosa elfa de Lórien de belos cabelos dourados bastante
 longos e olhos encantadores.  Os Galadhrim vivem na gloriosa Caras Galadhon
 e cultivam a paz e a harmonia entre os povos.
 ~
-blmnopqr :2:3:5:7:12:15 +1000 E
+2357250 0 0 0 0 0 0 0 1000 E
 40 0 -7 5d10+1550 7d8+20
 8000 80000
 8 8 2
 BareHandAttack: 13
 Str: 15
+Dex: 18
 Int: 18
 Wis: 18
-Dex: 18
 Con: 18
 Cha: 18
 E
@@ -203,17 +203,11 @@ Você observa uma bela criança elfa de cabelos prateados e olhos
 encantadores.  Ao chegar mais próximo dela, você a observa brincando em
 seu mundo mágico e imaginário.
 ~
-blmnopqr :2:3:5:7:12:15 +1000 E
+2357250 0 0 0 0 0 0 0 1000 E
 15 15 -2 5d10+400 4d6+5
 2000 7000
 8 8 2
 BareHandAttack: 13
-Str: 11
-Int: 11
-Wis: 11
-Dex: 11
-Con: 11
-Cha: 11
 E
 #13710
 passaro prateado~
@@ -223,7 +217,7 @@ Um lindo pássaro prateado está aqui, cantando sem parar belas melodias.
 Você observa um maravilhoso pássaro de penas prateadas que emitem um brilho
 intenso e magnífico.
 ~
-egq :25: +500 E
+2162768 0 0 0 0 0 0 0 500 E
 1 16 5 2d2+10 1d2+4
 0 300
 8 8 1
@@ -231,7 +225,6 @@ BareHandAttack: 13
 Str: 6
 Int: 10
 Wis: 8
-Dex: 11
 Con: 7
 Cha: 18
 E
@@ -243,16 +236,14 @@ Um belo esquilo dourado está aqui, saltando sobre troncos de mallorns.
 Você observa um lindo e brincalhão esquilo dourado que vive nas florestas
 douradas de Lothlórien.
 ~
-egq : +500 E
+2162768 0 0 0 0 0 0 0 500 E
 2 14 1 4d4+20 2d2+6
 0 600
 8 8 1
 BareHandAttack: 13
 Str: 7
-Int: 11
 Wis: 8
-Dex: 11
 Con: 8
 Cha: 18
 E
-$~
+$

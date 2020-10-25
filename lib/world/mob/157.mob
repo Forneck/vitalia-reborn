@@ -6,10 +6,11 @@ Um pacato cidadão passeia por aqui.
 Ele é baixinho, gordo e de cabelos castanhos. Aparenta ser bem calmo e não
 se irritar facilmente.
 ~
-ghmno :6:7 350 S                        
-40 10 -2 3d10+700 4d5+10          
-2000 6000                                
-8 8 1                    
+2126016 0 0 0 0 0 0 0 350 E
+40 10 -2 3d10+700 4d5+10
+2000 6000
+8 8 1
+E
 #15702
 guarda~
 um guarda~
@@ -19,10 +20,10 @@ Ele é forte e não está com uma cara muito boa. Parece estar ali na mesma
 posição à dias, sem comer ou beber. Sua armadura está muito enferrujada,
 mas ele parece não se importar.
 ~
-blmnoq :6:7:17 40 E
+2193410 0 0 0 0 0 0 0 40 E
 60 5 -24 6d6+800 3d6+25
 2500 90000
-8 8 1 
+8 8 1
 BareHandAttack: 9
 E
 #15703
@@ -33,10 +34,11 @@ Uma linda mulher está organizando a papelada.
 Ela é loira e tem olhos da cor do mel. Parece ser uma secretária e tem
 muito o que fazer. 
 ~
-bno :6:7 350 S
+2121730 0 0 0 0 0 0 0 350 E
 50 10 -9 3d10+700 4d5+10
 6000 50000
 8 6 2
+E
 #15704
 chefe cozinheiro~
 o chefe da cozinha~
@@ -44,7 +46,7 @@ Um chefe de cozinha está aqui, cuidando do jantar.
 ~
 É gordo, mas parece cozinhar muito bem.
 ~
-bopq :6:7:17 400 E
+2211842 0 0 0 0 0 0 0 400 E
 70 3 -28 5d7+1500 3d8+20
 10000 100000
 8 8 1
@@ -59,10 +61,11 @@ Um zumbi está aqui, indo em sua direção.
 lugares, a fim de encontrar seu assassino. Sua pele de dissolve com um
 simples sopro, de tão frágil que é.
 ~
-beflnop :6:7:17 -700 S
+2156594 0 0 0 0 0 0 0 -700 E
 70 -4 -30 4d8+2800 5d5+20
 23000 200000
 8 8 1
+E
 #15706
 rato asqueroso~
 um asqueroso rato gigante~
@@ -70,10 +73,11 @@ Um enorme rato está aqui.
 ~
 É uma ratazana horrível, uma das maiores que você já viu.
 ~
-b :6:7 10 S
+2097154 0 0 0 0 0 0 0 10 E
 50 10 -9 3d10+600 4d5+10
-100 26000 
+100 26000
 8 8 1
+E
 #15707
 vigia guarda~
 o vigia~
@@ -83,10 +87,11 @@ Ele parece estar morto, mas não é bom arriscar. Pode estar dormindo apenas.
 Um sono profundo, você imagina, a julgar pela pacífica aparência que ele lhe
 transmite.
 ~
-bno :6:7:17 50 S
+2121730 0 0 0 0 0 0 0 50 E
 55 0 -18 4d6+1900 5d6+25
 13000 100000
 8 8 1
+E
 #15708
 neegre dragao~
 Neegre, o dragão verde~
@@ -95,10 +100,10 @@ Um imenso dragão verde está cuspindo fogo aqui.
 Ele é imenso e não pára de cuspir fogo. Sua cor esverdeada é o que lhe faz
 ser diferente.
 ~
-bceflnopq :6:7:17:19 -500 E
+2222134 0 0 0 0 0 0 0 -500 E
 80 -20 -39 20d10+9500 6d8+45
-10000 700000 
-8 6 1 
+10000 700000
+8 6 1
 BareHandAttack: 8
 E
 #15709
@@ -110,14 +115,14 @@ Uma linda ave está aqui e seu olhar mortal parece ser mortal.
 beleza lhe inspira uma sensação indiscritivelmente aterrorizante.  Talvez o
 pensamento de enfrentá-la não seja realmente uma boa idéia.
 ~
-beflnopqrt :6:7:15:17:22 -900 E
+2877490 0 0 0 0 0 0 0 -900 E
 101 -32 -50 20d10+12000 9d9+65
 50000 3500000
 8 8 2
 BareHandAttack: 12
+Dex: 25
 Int: 25
 Wis: 25
-Dex: 25
 Con: 25
 Cha: 25
 E
@@ -129,10 +134,11 @@ Uma camareira está aqui.
 Ela é alta e tem porte de rainha. Mas é uma camareira e, como tal, quer
 fazer seus afazeres da melhor maneira possível.
 ~
-cghmno :6:7 350 S
+2126020 0 0 0 0 0 0 0 350 E
 50 10 -16 3d10+800 4d5+10
-200 40000 
+200 40000
 8 8 2
+E
 #15711
 rainha senhora altiva~
 a altiva e belíssima rainha~
@@ -141,13 +147,13 @@ Uma jovem senhora muito linda e altiva, com porte de Rainha, está imóvel aqui.
 Ela é linda, com seus olhos azuis e cabelos loiros. Sua beleza não é
 encontrada em nenhum outro lugar do mundo.
 ~
-benmolkpqr :15:7:17:4:3:2 200 E
+2358290 0 0 0 0 0 0 0 200 E
 95 -8 -29 7d10+4800 8d8+40
 60000 430000
-8 6 2 
+8 6 2
+Dex: 25
 Int: 25
 Wis: 25
-Dex: 25
 Con: 25
 Cha: 25
 E
@@ -159,13 +165,13 @@ Um jovem senhor altivo e com ares portentoso está aqui, imóvel.
 Ele é moreno, cabelos longos e olhos esverdeados e sua aparência demonstrar ser
 ele uma pessoa muito fina e inteligente. Não aparenta ter mais de 30 anos.
 ~
-benopqkmrl :15:7:17:4:3:2 200 E
+2358290 0 0 0 0 0 0 0 200 E
 95 -10 -30 7d10+5600 8d8+46
 80000 500000
-8 6 1 
+8 6 1
+Dex: 25
 Int: 25
 Wis: 25
-Dex: 25
 Con: 25
 Cha: 25
 E
@@ -177,10 +183,11 @@ Uma governanta se encontra aqui, imóvel.
 Essa parece ser uma daquelas pessoas que nunca estão satisfeitas com nada.
 Ela aparenta ter uns 50 anos, mas ainda sonha em ser rainha.
 ~
-cgno :6:7 -360 S
+2121796 0 0 0 0 0 0 0 -360 E
 40 6 -20 3d10+800 6d5+10
-2000 50000 
+2000 50000
 8 8 2
+E
 #15714
 morcego~
 um morcego~
@@ -191,10 +198,11 @@ sangue em seu corpo. Seus dentes enormes iriam lhe sugar até a última gota.
 Seus olhos passam uma sensação de muita fome, e ficar olhando para essa
 criatura não lhe parece uma boa idéia.
 ~
-cghno :6:7 -360 S 
+2121924 0 0 0 0 0 0 0 -360 E
 40 10 -10 3d10+550 6d5+10
-2 30000 
+2 30000
 8 8 1
+E
 #15715
 prisioneiro~
 um prisioneiro~
@@ -204,10 +212,11 @@ Ele está quase imóvel, mas seu olhar lhe causa arrepios. Ele aparenta ter
 sido um jovem muito bonito, mas se transformou completamente depois de sua
 prisão.
 ~
-bcjno :6:7:17 -500 S
+2122246 0 0 0 0 0 0 0 -500 E
 80 0 -29 6d9+2800 6d7+18
-3000 70000 
-8 6 1 
+3000 70000
+8 6 1
+E
 #15716
 teleques esqueleto~
 Teleques, o esqueleto~
@@ -215,10 +224,11 @@ Um esqueleto está aqui.
 ~
 É apenas um monte de ossos.
 ~
-bcjno :6:7 -360 S
+2122246 0 0 0 0 0 0 0 -360 E
 50 10 -9 4d9+1600 5d6+30
-10000 60000 
+10000 60000
 8 8 1
+E
 #15717
 ponei cavalo~
 um pônei~
@@ -226,10 +236,11 @@ Um pequeno pônei está aqui, imóvel.
 ~
 É um pônei comum, sem coisas interessantes.
 ~
-bnoprv :6:7 100 S
+2285570 0 0 0 0 0 0 0 100 E
 25 7 -8 5d7+600 3d9+15
 20 20000
 8 5 1
+E
 #15718
 vaca~
 uma vaca~
@@ -237,10 +248,11 @@ Uma vaca está aqui, produzindo seu leite.
 ~
 É uma vaca comum.
 ~
-bnoprv :6:7 100 S
+2285570 0 0 0 0 0 0 0 100 E
 25 7 -8 5d7+600 3d9+15
 20 20000
 8 5 2
+E
 #15719
 porco~
 um porco~
@@ -248,10 +260,11 @@ Um porco está aqui, contribuindo para o mal cheiro.
 ~
 É um porco comum e, como tal, cheira muito mal.
 ~
-bnoprv :6:7 100 S
+2285570 0 0 0 0 0 0 0 100 E
 25 7 -8 5d7+600 3d9+15
 20 20000
 8 5 1
+E
 #15720
 galinha~
 uma galinha~
@@ -259,10 +272,11 @@ Uma galinha está aqui botando seus ovos.
 ~
 É uma galinha qualquer, botando seus ovos.
 ~
-bnoprv :6:7 100 S
+2285570 0 0 0 0 0 0 0 100 E
 25 7 -8 5d7+600 3d9+15
 20 20000
 8 8 2
+E
 #15721
 criada mulher~
 uma criada~
@@ -270,10 +284,11 @@ Uma criada está aqui, colhendo algo.
 ~
 É uma mulher simples que apenas quer cumprir seus deveres.
 ~
-gmnopr :6:7 200 S
+2289728 0 0 0 0 0 0 0 200 E
 40 7 -7 6d8+700 4d9+25
 200 31000
 8 8 2
+E
 #15722
 criado jovem raman~
 Raman~
@@ -281,8 +296,9 @@ Um dos criados do rei está aqui, separando os alimentos.
 ~
 Ele é jovem, tem uns 16 anos. E tenta(va) separar os alimentos.
 ~
-bmnopr :6:7 200 S
+2289666 0 0 0 0 0 0 0 200 E
 40 13 -7 6d8+310 4d3+15
 5000 21000
 8 8 1
-$~
+E
+$

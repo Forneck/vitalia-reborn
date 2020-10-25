@@ -5,10 +5,11 @@ Um sentinela está aqui, guardando a entrada.
 ~
 Forte e musculoso, alguém não muito fácil de se encarar.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2001
 anluzir~
 Anluzir~
@@ -20,10 +21,11 @@ flutua como se um vento mágico a deixa-se sempre ouriçada.  Suas longas asas
 fazem leves e graciosos gestos para manter esse belíssimo animal flutuando
 no ar.
 ~
-gnopqrv 0 0 S
+2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
 8 8 1
+E
 #2010
 tritão~
 o Tritão~
@@ -32,10 +34,11 @@ Existe um tritão em pé observando seus movimentos.
 Um ser metade homem metade peixe, ele parece ter sua força expressa pela
 dureza do olhar desafiador que ele lança sobre você.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 0 600000
 8 8 1
+E
 #2011
 sereia~
 a Sereia~
@@ -45,10 +48,11 @@ Um ser metade mulher metade peixe, este belo ser o encanta com os seus olhos
 fixos na entrada.  Talvez um aventureiro inexperiente cairia em tais
 caprichos.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 0 600000
 8 8 2
+E
 #2020
 anjo~
 um anjo~
@@ -60,10 +64,11 @@ empunha uma bela espada num braço e segura um escudo noutro.  Ambos os
 objetos foram marcados com símbolos sagrados.  Você se sente incapaz de
 lutar com ele e, mesmo que estivesse em condições, jamais o venceria.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2021
 elfo ancião mitra~
 o elfo ancião~
@@ -80,10 +85,11 @@ Veste roupas simples e em sua bainha está uma lâmina de beleza incomparável.
 Poucos instantes depois, a figura desaparece.  Será tudo isso fruto de sua
 imaginação?...
 ~
-gnopqrv bs 0 S
+2351168 0 0 0 524292 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
 8 8 1
+E
 #2030
 jasmin arcanja~
 Jasmin, a Arcanja~
@@ -96,10 +102,11 @@ Antigas lendas dizem que se um anjo perder uma pena de sua asa, ele perde
 uma virtude, e, apenas pedindo "a cura" para Jasmin que esta pena poderá
 voltar.  Jasmin apesar de sua beleza, mostra uma grande força de combate.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 2
+E
 #2031
 lucipher demônio~
 Lucipher, o Demônio~
@@ -112,10 +119,11 @@ perdão, então, a partir deste dia ele protege as Virtudes.
 Lucipher esta aqui brincando com suas façanhas com fogo...eu não o encararia
 se fosse você.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2032
 kentaurus centauro~
 Kentaurus, o Centauro~
@@ -129,10 +137,11 @@ contém um sorriso amigável.
 Kentaurus é muito falador... não fique aí olhando-o por muito tempo... ele
 começará a contar suas looooooongas aventuras.
 ~
-gnopqrv 0 0 S
+2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
 8 8 1
+E
 #2040
 sentinela~
 o sentinela~
@@ -140,10 +149,11 @@ Um sentinela está aqui, guardando a entrada.
 ~
 Forte e musculoso, alguém não muito fácil de se encarar.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2050
 glyph~
 Glyph~
@@ -154,10 +164,11 @@ defender o Templo Solis com suas vidas.  Ao estar perto deles, você não
 corre nenhum perigo, pois dizem que eles possuem um enorme poder que foi
 dado a eles pelo Deus Odin.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2051
 holy~
 Holy~
@@ -168,10 +179,11 @@ defender o Templo Solis com suas vidas.  Ao estar perto deles, você não
 corre nenhum perigo, pois dizem que eles possuem um enorme poder que foi
 dado a eles pelo Deus Odin.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2052
 luna esfera brilhante sol~
 Luna~
@@ -183,10 +195,11 @@ dores e problemas de sua vida.  Você se lembra do grande Solis em seu
 momento de glória, como se a luz irradiada por essa esfera, fosse a mesma
 que iluminou Solis em sua mais gloriosa oração.
 ~
-gnopqrv 0 0 S
+2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
 8 8 2
+E
 #2060
 sentinela~
 o sentinela~
@@ -194,10 +207,11 @@ Um sentinela está aqui, guardando a entrada.
 ~
 Forte e musculoso, alguém não muito fácil de se encarar.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2070
 bucky~
 Bucky~
@@ -206,10 +220,11 @@ Bucky, o poderoso sentinela está aqui, protegendo o portão.
 Bucky é um sentinela que aterroriza com seu olhar, e com seu enorme poder,
 protege a entrada com sua vida.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2071
 giback~
 Giback~
@@ -218,10 +233,11 @@ Giback, o destemído sentinela está aqui, protegendo o portão.
 Giback o destemido sentinela, que com sua força devastadora vence os
 invasores.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2080
 esfinge~
 a esfinge~
@@ -232,10 +248,11 @@ protegem a entrada para a pirâmide do Deus Seth.  Você percebe um lindo
 medalhão no pescoço da esfinge.  Ninguém que não seja seguidor do Deus pode
 passar.  Cuidado elas são perigosas.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 2
+E
 #2082
 órix animal~
 Órix~
@@ -248,10 +265,11 @@ nos desertos.  Seus longos chifres e sua bela pelagem são extremamente
 valiosos.  Quando o Órix vira a sua cabeça para observá-lo, você nota uma
 mancha branca em forma de raio entre seus chifres.
 ~
-gnopqrv h 0 S
+2351168 0 0 0 256 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
 8 8 1
+E
 #2090
 efil~
 Efil~
@@ -260,10 +278,11 @@ Aqui está Efil, O Santo, guardando a entrada.
 Este é um forte sentinela, de aparência poderosa e assustadora, pelo olhar
 você percebe que não deve incomoda-lo.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2091
 flahr~
 Flahr~
@@ -272,10 +291,11 @@ Aqui está Flahr, O Santo, guardando a entrada.
 Este é um forte sentinela, de aparência poderosa e assustadora, pelo olhar
 você percebe que não deve incomoda-lo.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2092
 pói~
 Pói~
@@ -285,10 +305,11 @@ Este é um animal muito bonito, com um pelo bastante claro e brilhante,
 parecendo ser um coelhinho bastante novo, apesar dele ter dezenas de anos e
 ser um animal muito fofo.
 ~
-gnopqrv 0 0 S
+2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
 8 8 0
+E
 #2100
 avatar hela~
 um Avatar de Hela~
@@ -307,10 +328,11 @@ fria e cruel com aqueles que ousam perturbá-la.
 O Avatar de Hela olha para você com um olhar gélido que lhe arrepia até os
 ossos.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2101
 avatar hades~
 um Avatar de Hades~
@@ -329,10 +351,11 @@ guerreiro forte e imbatível, capaz de aniquilar exércitos inteiros.
 O Avatar de Hades olha para você de forma tão intensa que você começa a
 tremer.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2102
 tríade suicidas~
 a tríade dos Suicidas~
@@ -350,10 +373,11 @@ pelos Suicidas originais, é a própria esperança que a morte não é o fim,
 mas parte de um ciclo no qual a vida sempre há de renascer.   Os mascotes
 suicidas estão em excelente condição.
 ~
-gnopqrv h 0 S
+2351168 0 0 0 256 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
 8 8 1
+E
 #2110
 espírito~
 o Espírito~
@@ -365,10 +389,11 @@ se tornou a guardiã dos Vingadores.  Você não consegue ver os traços de seu
 corpo, mas pode perceber que ela carrega consigo um lindo sorriso, que lhe
 faz pensar que mesmo após ter morrido, vive feliz perto de sua aldeia.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2111
 anjo~
 o Anjo~
@@ -380,10 +405,11 @@ Miaguy.  Após sua morte, Miaguy foi transformada em uma linda anja por ordem
 divina e até hoje, guarda o portão dos vingadores, para que nenhum intruso
 ou pessoa impura, adentre este ambiente sagrado.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2120
 raish~
 Raish, Principe dos Raios~
@@ -392,10 +418,11 @@ Raish, Principe dos Raios está aqui, guardando a entrada.
 Você olha para ele, e vê um homem com os olhos faiscando, parece que raios
 rodeiam seu corpo, você sente medo só de pensar em passar perto dele.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2121
 ramires~
 Ramires, Princesa dos Ventos~
@@ -404,10 +431,11 @@ Ramires, Princesa dos Ventos está aqui, guardando a entrada.
 Você olha para ela, e se encanta com tamanha beleza.  Ela tem muito mais
 poder que aparenta ter.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 2
+E
 #2122
 seimer águia~
 Seimer, a Águia~
@@ -419,10 +447,11 @@ deixado por Thal aos Senhores da Tempestade.  Diz a lenda que ela é a visão
 de Thal e que está sempre olhando a família.  Quando ela se aproxima, você
 sente um grande poder que o faz arrepiar.
 ~
-gnopqrv h 0 S
+2351168 0 0 0 256 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
 8 8 2
+E
 #2130
 olho grande~
 o grande Olho~
@@ -434,10 +463,11 @@ olho, consegue ver os mortais que se aproximam do clan.  Ex guardiao do
 Reino de Sauron, hoje O grande Olho protege o Reino dos Seguidores da
 Dinastia de Breyldon.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 0
+E
 #2131
 olho grande~
 o grande Olho~
@@ -449,10 +479,11 @@ olho, consegue ver os mortais que se aproximam do clan.  Ex guardiao do
 Reino de Sauron, hoje O grande Olho protege o Reino dos Seguidores da
 Dinastia de Breyldon.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 0
+E
 #2132
 essência ser etéreo~
 a essência de Breyldon~
@@ -461,10 +492,11 @@ Um ser etéreo observa atentamente os seus passos.
 Essa entidade parece ser a essência de todos os guerreiros que participaram
 da Grande Batalha do Exército de Breyldon.
 ~
-gnopqrv 0 0 S
+2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
 8 8 0
+E
 #2140
 colossus sentinela~
 Colossus, o sentinela~
@@ -473,10 +505,11 @@ Colossus está aqui guardando os portões da prisão.
 Um guardião nato, gosta de arrumar brigas, mas obediente.  Como foi lhe dada
 a ordem da guarda dessa guilda ele não sairá desse local.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2141
 kurast sentinela~
 Kurast, o sentinela~
@@ -485,10 +518,11 @@ Kurast está aqui guardando os portões da prisão.
 Renomado, corajoso e temeroso combatente, este sentinela e muito forte,
 parece estar em uma espécie de transe, não o incomode.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2142
 alma balor~
 a Alma de Balor~
@@ -498,10 +532,11 @@ Você vê o que pensa ser a alma de Balor que e exatamente igual a estatua que
 você viu no santuário.  Você olha fixamente seu rosto e em seus olhos você
 vê uma árdua batalha sendo travada entre anjos e demônios.
 ~
-gnopqrv 0 0 S
+2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
 8 8 1
+E
 #2150
 guarda élfico~
 um enorme guarda~
@@ -513,10 +548,11 @@ desrespeite este solo que pisa.  Muitos andaram por aqui com o intuito de
 fazer o mal, mas isso nunca mais ocorrerá.  Siga seu caminho e que ele seja
 de honra e respeito.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2151
 guarda élfico~
 um enorme guarda~
@@ -528,10 +564,11 @@ desrespeite este solo que pisa.  Muitos andaram por aqui com o intuito de
 fazer o mal, mas isso nunca mais ocorrerá.  Siga seu caminho e que ele seja
 de honra e respeito.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2152
 rayana~
 Rayana~
@@ -542,10 +579,11 @@ beleza e o mistério.  Se sente muito feliz por poder ajudar, da sua maneira,
 a Sociedade da Luz, e todos da Sociedade também são gratos pelos seus
 esforços.
 ~
-gnopqrv 0 0 S
+2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
 8 8 2
+E
 #2160
 ares deus guerra~
 Ares, o Deus da Guerra~
@@ -555,10 +593,11 @@ Você observa um homem atlético, vestido com uma armadura de bronze e um
 capacete brilhante e equipado com uma imensa lança e um escudo absolutamente
 gigante.  Seu olhar é feroz.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2161
 diana deusa caça~
 Diana, a Deusa da Caça~
@@ -567,10 +606,11 @@ Diana, a Deusa da Caça lhe observa calmamente.
 Você observa uma mulher alta, magra, trajando uma belíssima túnica curta e
 muito branca e armada com um arco e flechas.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 2
+E
 #2162
 mary~
 Mary~
@@ -579,10 +619,11 @@ Mary, a amada de O'Connel está aqui.
 Você observa uma mulher linda, com traços suaves e pele macia.  Ela parece
 estar à procura de O'Connel.
 ~
-gnopqrv 0 0 S
+2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
 8 8 2
+E
 #2170
 wyvern dragão~
 Wyvern~
@@ -595,10 +636,11 @@ onde se projeta um ferrão muito similar ao dos escorpiões com um poderoso
 veneno.  Suas asas são semelhantes à dos morcegos, sua mandíbula é cheia de
 dentes longos e pontiagudos e seus olhos são avermelhados.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2171
 wyvern dragão~
 Wyvern~
@@ -611,10 +653,11 @@ onde se projeta um ferrão muito similar ao dos escorpiões com um poderoso
 veneno.  Suas asas são semelhantes à dos morcegos, sua mandíbula é cheia de
 dentes longos e pontiagudos e seus olhos são avermelhados.
 ~
-bgnopqrv dhk 0 S
+2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
 8 8 1
+E
 #2172
 flame dragão~
 Flame, o Dragão das Trevas~
@@ -628,8 +671,9 @@ olhar contém uma grande frieza.  Suas garras são laminas grandes e afiadas,
 com um poderoso veneno que mata em instantes.  Pode-se sentir seu hálito
 quente à distância e sua chama negra é fatal.
 ~
-gnopqrv 0 0 S
+2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
 8 8 1
+E
 $

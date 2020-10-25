@@ -8,13 +8,13 @@ tornar quem ele deveria ser.  Seus olhos estão um pouco vermelhos, como os
 de alguém que tenha gasto muito tempo lendo.  Seus cabelos são quase
 imperceptíveis, com exceção das duas finas linhas dos lados de sua cabeça.
 ~
-boqrlp den 800 E
+2344962 0 0 0 16432 0 0 0 800 E
 100 -30 -60 13d11+2600 6d7+46
 80200 1016419
 8 8 1
+Dex: 18
 Int: 18
 Wis: 18
-Dex: 18
 E
 #29001
 melinna cailveh baronesa esposa~
@@ -26,10 +26,11 @@ politicamente.  Há um tipo de acordo não explícito entre o Barão e sua
 esposa, ela fica encarregada da maioria dos problemas mundanos para que ele
 possa continuar seus estudos sem interrupções desnecessárias.
 ~
-bno 0 900 S
+2121730 0 0 0 0 0 0 0 900 E
 92 -20 -40 10d10+1405 5d7+32
 49500 787909
 8 8 2
+E
 #29002
 gilzaan filho velho~
 Gilzaan~
@@ -39,10 +40,11 @@ Esse é Gilzaan, aquele que vai eventualmente prosperar o título que seus
 pais lhe deram.  Gilzaan leva sua responsabilidade a sério, a ponto de fazer
 com que todos os homem proeminentes de suas terras o conheçam.
 ~
-blm 0 500 S
+2103298 0 0 0 0 0 0 0 500 E
 86 -19 -39 10d10+1240 5d6+30
 36215 385396
 8 8 1
+E
 #29003
 necromocis filho novo~
 Necromocis~
@@ -53,10 +55,11 @@ possui suas habilidades em outras áreas.  Ele possui um intelecto bem
 desenvolvido, alcançado devido a muitos anos de estudo e dedicação.  Ele
 certamente substituirá seu pai na hora em que for preciso.
 ~
-bmo def 600 S
+2117634 0 0 0 112 0 0 0 600 E
 81 -15 -40 10d10+1135 5d6+29
 21150 273866
 8 8 1
+E
 #29004
 astronomo~
 o astrônomo da corte~
@@ -65,10 +68,11 @@ O astrônomo da corte está aqui, completamente desligado do mundo, observando o
 Ele é um velho homem, que não parece ter muito tempo nesse plano de
 existência.  Ele rascunha algumas notas em um pequeno bloco de notas.
 ~
-b 0 300 S
+2097154 0 0 0 0 0 0 0 300 E
 53 -11 -32 10d10+900 4d5+24
 1650 160665
 8 8 1
+E
 #29005
 servo~
 um servo~
@@ -76,10 +80,11 @@ Um servo desliza silenciosamente pela torre, servindo os hóspedes.
 ~
 Ele é um elegante senhor com um longo cabelo escuro, jogado sobre seu casaco. 
 ~
-cg 0 400 S
+2097220 0 0 0 0 0 0 0 400 E
 50 -9 -28 5d5+650 4d5+25
 900 138481
 8 8 1
+E
 #29006
 homem elegante~
 um elegante homem~
@@ -89,10 +94,11 @@ Ele espera dentro dos confortáveis confins da torre.  Ele veste um grosso
 manto negro com o capuz jogado em sua costas.  Ele irradia uma aura
 misteriosa.
 ~
-b 0 -500 S
+2097154 0 0 0 0 0 0 0 -500 E
 94 -34 -40 10d10+1450 6d7+51
 5150 374488
 8 8 1
+E
 #29007
 humilde peticionario~
 um humilde peticionário~
@@ -101,10 +107,11 @@ Um humilde peticionário pleiteia sua causa à Baronesa.
 Ele parece ser um lenhador ou qualquer outro trabalhador comum, porém ele,
 com uma postura forte, fala em voz firme à Baronesa sobre sua causa.
 ~
-b 0 400 S
+2097154 0 0 0 0 0 0 0 400 E
 54 -12 -32 10d10+987 4d5+27
 1243 168509
 8 8 1
+E
 #29008
 arrogante proprietaria~
 uma arrogante proprietária~
@@ -113,10 +120,11 @@ Uma arrogante proprietária de terras limpa sua garganta ruidosamente assim que 
 Ela veste apenas roupas finas, e sua postura só não é bela devido a todo
 seu orgulho e mal-humor.
 ~
-b 0 200 S
+2097154 0 0 0 0 0 0 0 200 E
 56 -13 -32 10d10+780 4d6+28
 2800 184883
 8 8 2
+E
 #29009
 fazendeiro~
 um fazendeiro~
@@ -124,10 +132,11 @@ Um fazendeiro pacientemente aguarda a audiência com sua cabeça abaixada.
 ~
 Ele segura seu chapéu amassado em suas mãos, amassando-o ainda mais com seu nervosismo. 
 ~
-b 0 600 S
+2097154 0 0 0 0 0 0 0 600 E
 51 -10 -32 10d10+999 4d5+25
 770 145654
 8 8 1
+E
 #29010
 assistente~
 uma assistente~
@@ -135,10 +144,11 @@ Uma assistente está em uma das mesas, trabalhando com alguns frascos.
 ~
 Ela parece ser uma mulher de meia idade, competente e responsável. 
 ~
-b 0 600 S
+2097154 0 0 0 0 0 0 0 600 E
 67 -18 -40 9d9+1340 5d6+33
 1350 292085
 8 8 2
+E
 #29011
 seguranca quarto~
 o segurança do quarto~
@@ -147,10 +157,11 @@ O segurança do quarto está diante da porta. Ele bate os calcanhares rapidament
 Ele parece ser mais uma parte da decoração do que qualquer outra coisa, mas
 ele obviamente leva seu trabalho muito a sério.
 ~
-b 0 400 S
+2097154 0 0 0 0 0 0 0 400 E
 79 -21 -40 8d11+1476 5d6+39
 1950 444598
 8 8 1
+E
 #29012
 empregada~
 uma empregada~
@@ -159,10 +170,11 @@ Uma empregada anda sutilmente por aqui, limpando e organizando o aposento.
 Ela cantarola uma bonita melodia, o que ela parece gostar bastante de fazer.
 Ela parece não ter notado sua presença.
 ~
-b 0 600 S
+2097154 0 0 0 0 0 0 0 600 E
 52 -12 -32 1d1+990 4d5+26
 600 153048
 8 8 2
+E
 #29013
 primo visitante~
 um primo visitante~
@@ -170,10 +182,11 @@ Um primo visitante se senta relaxadamente em uma cadeira de balanço, esperando 
 ~
 Ele parece ter vindo correndo sabendo que o Barão serviria a comida logo mais. 
 ~
-blo 0 100 S
+2115586 0 0 0 0 0 0 0 100 E
 84 -20 -40 1d1+1890 5d6+42
 300 319913
 8 8 1
+E
 #29014
 colono~
 o colono da fazenda~
@@ -181,10 +194,11 @@ O colono da fazenda anda pelo celeiro, fazendo suas tarefas diárias.
 ~
 Ele não parece ser muito simpático. Ele continua a trabalhar sem notar sua presença. 
 ~
-b 0 500 S
+2097154 0 0 0 0 0 0 0 500 E
 51 -10 -32 9d9+990 4d5+25
 550 145654
 8 8 1
+E
 #29015
 vaca~
 uma vaca~
@@ -192,10 +206,11 @@ Uma enorme vaca pasta por aqui, mascando grama.
 ~
 Não importa o quanto você olhe, ela ainda parece uma imensa vaca gorda mascando grama. 
 ~
-g 0 0 S
+2097216 0 0 0 0 0 0 0 0 E
 21 0 2 6d6+870 2d3+10
 0 15159
 8 8 1
+E
 #29016
 mulher dona casa~
 uma dona de casa~
@@ -203,10 +218,11 @@ Uma dona de casa anda incessantemente pela casa, limpando tudo o que vê.
 ~
 Ela ainda não deve ter percebido que você entrou em sua casa. 
 ~
-b 0 400 S
+2097154 0 0 0 0 0 0 0 400 E
 43 -4 -24 6d6+760 4d5+21
 800 94267
 8 8 2
+E
 #29017
 fazendeiro~
 um fazendeiro~
@@ -215,10 +231,11 @@ Um fazendeiro está aqui, tirando um cochilo em sua cadeira de balanço, você p
 Ele parece ser um fazendeiro comum: um homem alto e magro, vestido com
 roupas velhas que cheiram a gado.
 ~
-b 0 400 S
+2097154 0 0 0 0 0 0 0 400 E
 50 -9 -28 7d7+980 4d5+25
 500 118481
 8 8 1
+E
 #29018
 lenhador desocupado~
 um lenhador desocupado~
@@ -227,10 +244,11 @@ Um lenhador, ainda vestido com suas roupas de trabalho, descansa em uma poltrona
 Ele parece estar muito cansado, parece bem relaxado em sua poltrona.  Você
 precisa mesmo incomodá-lo?
 ~
-b 0 300 S
+2097154 0 0 0 0 0 0 0 300 E
 52 -8 -32 4d7+1000 4d5+26
 1600 133048
 8 8 1
+E
 #29019
 velho homem~
 um velho homem~
@@ -238,10 +256,11 @@ Um velho homem sentado em uma cadeira de balanço olha para você.
 ~
 Ele parece ter algo a dizer, mas apenas continua sentado. 
 ~
-b 0 400 S
+2097154 0 0 0 0 0 0 0 400 E
 46 -8 -24 5d5+920 4d5+23
 2625 81957
 8 8 1
+E
 #29020
 dona casa mulher~
 a dona da casa~
@@ -249,10 +268,11 @@ A dona da casa olha para você assustada assim que você entra em sua casa.
 ~
 Ela não diz nada, apenas olha assustada para você esperando algo. Há medo em sua expressão.
 ~
-b 0 800 S
+2097154 0 0 0 0 0 0 0 800 E
 41 -2 -24 6d6+820 4d5+20
 300 73486
 8 8 2
+E
 #29021
 homem~
 um homem~
@@ -260,7 +280,7 @@ Há um homem sentado em sua pequena mesa no fundo, terminando de comer um assado
 ~
 Ele lhe cumprimenta assim que você entra, ele parece ligeiramente confuso. 
 ~
-b 0 499 E
+2097154 0 0 0 0 0 0 0 499 E
 48 -7 -28 6d11+543 4d5+24
 1300 104791
 8 8 1
@@ -272,10 +292,11 @@ A professora está em sua mesa, fazendo algumas anotações.
 ~
 Ela mal olha para você quando você entra, dando-lhe um 'Em que posso te ajudar?' seco. 
 ~
-b 0 800 S
+2097154 0 0 0 0 0 0 0 800 E
 44 18 -24 7d8+1231 4d5+22
 900 99959
 8 8 2
+E
 #29023
 balconista~
 o balconista~
@@ -284,10 +305,11 @@ O balconista sorri simpaticamente para você, cumprimentando-lhe.
 Ele aponta para uma de suas mesas desocupadas, oferecendo-a a você.  Relaxe
 enquanto ele traz um belo assado.
 ~
-b 0 400 S
+2097154 0 0 0 0 0 0 0 400 E
 77 -23 -40 5d8+1110 5d6+38
 1850 116457
 8 8 1
+E
 #29024
 contador historias~
 um contador de histórias~
@@ -297,10 +319,11 @@ As histórias que ele conta não são histórias próprias, mas daqueles que
 fizeram parte delas.  Se tais homens realmente existiram não é possível
 saber, mas histórias são sempre boas.
 ~
-b 0 400 S
+2097154 0 0 0 0 0 0 0 400 E
 61 -18 -40 7d7+760 4d6+30
 2050 209937
 8 8 1
+E
 #29025
 homem~
 um homem~
@@ -308,10 +331,11 @@ Um homem está sentado em sua poltrona, ouvindo o contador de histórias.
 ~
 Seus olhos parecem um pouco turvos, ele sem dúvida está cansado devido ao seu longo dia. 
 ~
-b 0 600 S
+2097154 0 0 0 0 0 0 0 600 E
 63 -20 -40 5d4+1000 5d6+31
 1150 229653
 8 8 1
+E
 #29026
 elegante cavalheiro~
 um elegante cavalheiro~
@@ -320,10 +344,11 @@ Um elegante cavalheiro está no balcão, degustando um copo de uísque.
 Ele possui um semblante calmo, parecendo não querer interagir com ninguém.
 Ele não parece ser daqui.
 ~
-b 0 100 S
+2097154 0 0 0 0 0 0 0 100 E
 88 -25 -40 9d6+1530 5d6+44
 3722 485396
 8 8 1
+E
 #29027
 bela mulher~
 uma bela mulher~
@@ -331,10 +356,11 @@ Uma bela mulher inclina-se em seu balcão, sorrindo.
 ~
 Ela sorri carinhosamente para você. 
 ~
-b 0 300 S
+2097154 0 0 0 0 0 0 0 300 E
 76 -21 -40 10d10+750 5d6+38
 1800 152804
 8 8 2
+E
 #29028
 calintra herborista~
 Calintra, a herborista~
@@ -345,10 +371,11 @@ como uma das mais belas.  Seus longos cabelos negros caem em sua face
 suavemente conforme ela moe as ervas, fazendo com que ela tenha de joga-los
 para trás constantemente.
 ~
-bvnopqr 0 300 S
+2351106 0 0 0 0 0 0 0 300 E
 101 0 -32 1d1+10000 4d5+25
 550 145654
 8 8 2
+E
 #29029
 salaylia mulher~
 Salaylia~
@@ -356,10 +383,11 @@ Uma mulher rechonchuda lança um largo sorriso para você assim que você entra.
 ~
 Ela enxuga suas mãos em seu avental, e educadamente lhe aponta uma mesa vazia. 
 ~
-bvnopqr 0 300 S
+2351106 0 0 0 0 0 0 0 300 E
 101 0 -32 1d1+10000 4d5+25
 550 145654
 8 8 2
+E
 #29030
 homem ferraria dono~
 o dono da ferraria~
@@ -368,10 +396,11 @@ Um pequeno homem está aqui, moendo um pedaço de ferro.
 Com exceção de sua altura, o homem é a imagem perfeita de um ferreiro.
 Forte, rude, um pouco sujo..
 ~
-b 0 400 S
+2097154 0 0 0 0 0 0 0 400 E
 51 -12 -32 7d8+1231 4d5+25
 550 145654
 8 8 1
+E
 #29031
 farmaceutico~
 o farmacêutico~
@@ -379,10 +408,11 @@ O farmacêutico está sentado confortavelmente em sua poltrona.
 ~
 Ele parece já ter terminado todo seu trabalho diário e agora está descansando um pouco. 
 ~
-bvnopqr 0 300 S
+2351106 0 0 0 0 0 0 0 300 E
 101 0 -32 1d1+10000 4d5+25
 550 145654
 8 8 1
+E
 #29032
 mochaaska~
 Mochaaska~
@@ -390,10 +420,11 @@ Mochaaska está aqui, entre seus vários barris de água, sorrindo para você.
 ~
 Mochaaska possui uma simpatia contagiante. Seus dentes são muito brancos. 
 ~
-bvnopqr 0 300 S
+2351106 0 0 0 0 0 0 0 300 E
 101 0 -32 1d1+10000 4d5+25
 550 145654
 8 8 1
+E
 #29033
 proprietaria dona loja~
 a proprietária da loja~
@@ -401,10 +432,11 @@ A dona da loja está aqui, limpado sua caixa registradora.
 ~
 Ela olha para você assim que você entra, lançando-lhe um leve aceno, e volta à sua limpeza. 
 ~
-bvnopqr 0 300 S
+2351106 0 0 0 0 0 0 0 300 E
 101 0 -32 1d1+10000 4d5+25
 550 145654
 8 8 2
+E
 #29034
 ministro cidade~
 o ministro da cidade~
@@ -415,10 +447,11 @@ de se abster de suas tarefas diárias.  Todos os dias ele anda pela cidade
 oferecendo auxílio para qualquer um que precise, até para aqueles que apenas
 precisam sentar e conversar.
 ~
-g 0 900 S
+2097216 0 0 0 0 0 0 0 900 E
 57 -15 -32 7d8+1231 4d6+28
 350 173419
 8 8 1
+E
 #29035
 cidadao~
 um cidadão~
@@ -426,10 +459,11 @@ Um cidadão passa por você rapidamente.
 ~
 Ele não parece estar muito feliz.
 ~
-g 0 600 S
+2097216 0 0 0 0 0 0 0 600 E
 44 4 -24 7d7+1059 4d5+22
 789 79959
 8 8 1
+E
 #29036
 garotinha~
 uma garotinha~
@@ -437,10 +471,11 @@ Uma garotinha está aqui, pulando alegremente.
 ~
 Sua face sardenta se abre em um lindo sorriso. Ela passa e pisca rapidamente para você.
 ~
-g 0 800 S
+2097216 0 0 0 0 0 0 0 800 E
 15 10 4 4d3+300 1d5+7
 25 6427
 8 8 2
+E
 #29037
 alfaite~
 o alfaite~
@@ -448,8 +483,9 @@ O alfaiate está aqui, esperando para lhe servir.
 ~
 Ele não lhe diz nada, apenas aguarda com um sorriso simpático e paciente.
 ~
-bvnopqr 0 300 S
+2351106 0 0 0 0 0 0 0 300 E
 101 0 -32 1d1+10000 4d5+25
 550 145654
 8 8 1
-$~
+E
+$

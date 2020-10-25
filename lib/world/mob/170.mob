@@ -5,10 +5,11 @@ Um alpinista trilhando o mesmo caminho que você, está aqui.
 ~
 Ele parece tentar alcançar o outro lado da montanha, assim como você.
 ~
-bgo :6 0 S
-10 10 0 1d10+160 2d10+8 
+2113602 0 0 0 0 0 0 0 0 E
+10 10 0 1d10+160 2d10+8
 400 600
 8 8 1
+E
 #17002
 ciclope~
 o cíclope~
@@ -16,10 +17,11 @@ Um faminto cíclope avança em sua direção rosnando!
 ~
 Ele parece estar atrás de um almoço..
 ~
-bfno :6 -700 S
-22 0 0 1d5+380 3d5+20 
+2121762 0 0 0 0 0 0 0 -700 E
+22 0 0 1d5+380 3d5+20
 1000 20000
 8 8 1
+E
 #17003
 elemental~
 um pequeno elemental~
@@ -27,10 +29,11 @@ Um pequeno elemental com um olhar mórbido está aqui.
 ~
 Um pouco menor do que um elemental comum. Ele parece ser um rejeitado.
 ~
-bho :6:25 0 S
-10 1 -1 1d5+100 3d8+10 
+2113666 0 0 0 0 0 0 0 0 E
+10 1 -1 1d5+100 3d8+10
 1100 6000
 8 8 1
+E
 #17004
 elemental guardiao~
 o elemental guardião~
@@ -39,40 +42,47 @@ O elemental gurdião está aqui.
 Você não sabe dizer qual rei esse elemental protege, talvez um pouco
 a todos?
 ~
-bmnop :6:25:28 0 S
+2158594 0 0 0 0 0 0 0 0 E
 20 -4 -5 1d5+650 8d4+17
-3000 50000 
+3000 50000
 8 8 1
+E
 #17005
 pequeno elemental~
 um pequeno elemental~
 Um pequeno elemental está aqui.
 ~
+An undefined string.
 ~
-ghnot :6:18:25 0 S
-5 0 -4 2d5+150 2d6+4 
+2646208 0 0 0 0 0 0 0 0 E
+5 0 -4 2d5+150 2d6+4
 1000 6000
 8 8 1
+E
 #17006
 elemental~
 um elemental~
 Um elemental está aqui.
 ~
+An undefined string.
 ~
-ghnot :6:18:25 10 S
-10 6 -2 3d5+200 3d6+6 
+2646208 0 0 0 0 0 0 0 10 E
+10 6 -2 3d5+200 3d6+6
 1750 9000
 8 8 1
+E
 #17007
 elemental grande~
 um grande elemental~
 Um grande elemental está aqui, te encarando.
 ~
+An undefined string.
 ~
-ghnot :6:7:18:25 20 S
-15 -4 -6 5d5+250 4d9+17 
-2200 20000 
+2646208 0 0 0 0 0 0 0 20 E
+15 -4 -6 5d5+250 4d9+17
+2200 20000
 8 8 1
+E
 #17008
 lider elemental terra~
 o líder dos elementais de Terra~
@@ -82,10 +92,11 @@ Ele parece tão antigo quanto a terra. Parece conhecer os mais obscuros
 segredos de Vitália. Você não consegue dizer com certeza aonde ele começa
 e aonde termina a parede.
 ~
-blnopt :6:28 128 S
+2680834 0 0 0 0 0 0 0 128 E
 30 -4 -11 1d5+600 5d10+21
 4120 70000
 8 8 1
+E
 #17009
 lider elemental fogo~
 o líder dos elementais de Fogo~
@@ -93,10 +104,11 @@ O Grande Líder dos elementais de Fogo está aqui.
 ~
 Assim que você olha para ele, ele se mistura ao fogo de seu trono.
 ~
-blnopt :6:28 128 S
+2680834 0 0 0 0 0 0 0 128 E
 30 -4 -11 1d5+600 5d10+21
 4120 70000
 8 8 1
+E
 #17010
 lider elemental ar~
 o líder dos elementais de Ar~
@@ -104,10 +116,11 @@ O Grande Líder dos elementais de Ar está aqui.
 ~
 Você parece estar olhando para os céus.
 ~
-blnopt :6:28 128 S
+2680834 0 0 0 0 0 0 0 128 E
 30 -4 -11 1d5+600 5d10+21
 4120 70000
 8 8 1
+E
 #17011
 lider elemental trovao~
 o líder dos elementais do Trovão~
@@ -116,10 +129,11 @@ O Grande Líder dos elementais do Trovão está aqui.
 Ele possui um sorriso maligno. Assim que você o olha, ele emite um
 forte feixe que lhe cega.
 ~
-blnopt :6:28 128 S
+2680834 0 0 0 0 0 0 0 128 E
 30 -4 -11 1d5+600 5d10+21
 4120 70000
 8 8 1
+E
 #17012
 lider elemental agua~
 o líder dos elementais de Água~
@@ -128,10 +142,11 @@ O Grande Líder dos elementais de Água está aqui.
 Ele se transforma em um gigantesco redemoinho de água e avança
 em sua direção.
 ~
-blnopt :6:28 128 S
+2680834 0 0 0 0 0 0 0 128 E
 30 -4 -11 1d5+600 5d10+21
 4120 70000
 8 8 1
+E
 #17014
 poca agua elemental~
 uma poça~
@@ -139,10 +154,11 @@ Uma pequena poça de água viva avança em sua direção.
 ~
 Ela percorre o chão em sua direção.
 ~
-fghno :6:7 0 S
-8 2 0 1d5+200 1d10+3 
+2121952 0 0 0 0 0 0 0 0 E
+8 2 0 1d5+200 1d10+3
 980 5000
 8 8 2
+E
 #17015
 chama elemental fogo~
 uma chama~
@@ -150,10 +166,11 @@ Uma pequena chama viva corre histericamente ao seu redor.
 ~
 Ela corre ao seu redor, esperando uma brecha.
 ~
-fghno :6:17 0 S
-8 1 0 1d5+200 1d10+3 
+2121952 0 0 0 0 0 0 0 0 E
+8 1 0 1d5+200 1d10+3
 850 5000
 8 8 2
+E
 #17016
 elemental neve humanoide cristal~
 um pequeno humanóide de neve~
@@ -161,10 +178,11 @@ Um pequeno humanóide de cristal está aqui.
 ~
 Ele parece incapaz de se mover.
 ~
-bno :6:7 520 S
+2121730 0 0 0 0 0 0 0 520 E
 3 5 2 1d5+100 2d5+4
 400 3000
 8 8 1
+E
 #17017
 elemental rocha humanoide~
 um pequeno humanóide de rochas~
@@ -172,10 +190,11 @@ Uma estranha rocha está no chão.
 ~
 Ela se mexeu?!
 ~
-bno :6 520 S
+2121730 0 0 0 0 0 0 0 520 E
 3 5 2 1d5+200 2d5+4
 400 3000
 8 8 1
+E
 #17018
 orbe elemental humanoide~
 um humanóide elétrico~
@@ -184,10 +203,11 @@ Uma misteriosa orbe elétrica está flutuando aqui.
 Você quase não consegue acompanhar sua velocidade. Ele pula por
 todos os lados, produzindo barulhentas explosões.
 ~
-bno :6:17 520 S
-3 5 2 1d5+200 2d5+4 
+2121730 0 0 0 0 0 0 0 520 E
+3 5 2 1d5+200 2d5+4
 400 3000
 8 8 1
+E
 #17019
 elemental acido liquido humanoide~
 um humanóide ácido~
@@ -195,10 +215,11 @@ Um estranho líquido escorre de um buraco na parede.
 ~
 O líquido se une dando origem a um pequeno humanóide corrosivo.
 ~
-bno :6:17 520 S
-3 5 2 1d5+200 2d5+4 
+2121730 0 0 0 0 0 0 0 520 E
+3 5 2 1d5+200 2d5+4
 400 3000
 8 8 1
+E
 #17020
 besta lava elemental~
 uma besta de lava~
@@ -207,10 +228,11 @@ Uma grande besta de lava surge em sua frente.
 Uma enorme besta feita de magma borbulhante...  Vamos esperar
 que suas calças sequem rápido.
 ~
-gfhno :6:17 -20 S
-8 12 1 1d5+250 3d5+4 
-1000 4000 
+2121952 0 0 0 0 0 0 0 -20 E
+8 12 1 1d5+250 3d5+4
+1000 4000
 8 8 2
+E
 #17021
 lama monstro elemental~
 um monstro de lama~
@@ -218,10 +240,11 @@ Um grudento monstro de lama se forma em sua frente.
 ~
 O que há de interessante nisso?  Terra, água... garras??
 ~
-gfhno :6 -10 S
+2121952 0 0 0 0 0 0 0 -10 E
 7 12 -2 1d5+250 3d5+6
 1000 4000
 8 8 1
+E
 #17022
 tufao elemental~
 um pequeno tufão~
@@ -229,10 +252,11 @@ Um tufão mágico pára diante de você.
 ~
 Ele parece um tanto quanto imprevisível.
 ~
-gfhno :6 -20 S
-6 12 -3 1d5+250 3d5+5 
+2121952 0 0 0 0 0 0 0 -20 E
+6 12 -3 1d5+250 3d5+5
 1000 4000
 8 8 1
+E
 #17023
 particula elemental coisa~
 uma partícula subatômica~
@@ -240,10 +264,11 @@ Alguma coisa parece lhe observar.
 ~
 Uma intrigante manifestação de energia.
 ~
-gfhno :6 0 S
-5 14 -15 1d5+200 2d5+3 
+2121952 0 0 0 0 0 0 0 0 E
+5 14 -15 1d5+200 2d5+3
 1000 3000
 8 8 2
+E
 #17024
 nuvem poeira elemental~
 uma nuvem de poeira~
@@ -251,20 +276,23 @@ Uma estranha nuvem de poeira te envolve subitamente.
 ~
 Uma estranha mistura de terra e ar.. ela não parece nem te ver.
 ~
-gfhno :6 0 S
-5 14 -15 1d5+200 2d5+3 
+2121952 0 0 0 0 0 0 0 0 E
+5 14 -15 1d5+200 2d5+3
 1000 3000
 8 8 2
+E
 #17025
 redemoinho tornado elemental~
 um pequeno redemoinho~
 Uma estranha miniatura de tornado está parada na sua frente.
 ~
+An undefined string.
 ~
-gfhno :6 0 S
-2 17 2 1d5+100 1d8+1 
+2121952 0 0 0 0 0 0 0 0 E
+2 17 2 1d5+100 1d8+1
 450 1000
 8 8 1
+E
 #17026
 chama elemental azul humanoide~
 uma chama azul~
@@ -273,10 +301,11 @@ Você se depara com um traiçoeiro humanóide feito de chamas azuis.
 Ele possui uma face diabólica. Com seu constante sorriso de escárnio
 e seus bruxuleantes membros, que parecem ser afiados como garras.
 ~
-fgno :6:17 -450 S
-26 -2 -5 1d5+590 6d4+14 
+2121824 0 0 0 0 0 0 0 -450 E
+26 -2 -5 1d5+590 6d4+14
 3000 30000
 8 8 2
+E
 #17027
 magneto elemental humanoide~
 o magneto~
@@ -284,10 +313,11 @@ Um estranho ser magnético está te encarando.
 ~
 Um humanóide que parece ter sido preso em um campo magnético.
 ~
-fgno :6 -450 S
-26 -2 -5 1d5+640 6d5+14 
+2121824 0 0 0 0 0 0 0 -450 E
+26 -2 -5 1d5+640 6d5+14
 3000 30000
 8 8 1
+E
 #17028
 neve bandido~
 um humanóide de cristal~
@@ -296,10 +326,11 @@ Um misterioso ser feito de neve lhe olha de soslaio.
 Ele possui uma força emanando de seu corpo.. Você sente um sopro
 frio subindo por suas costas.
 ~
-fgno :6 -450 S
+2121824 0 0 0 0 0 0 0 -450 E
 26 -2 -5 1d5+630 6d5+13
 3000 30000
 8 8 1
+E
 #17029
 rochas monstro~
 um monstro de rochas~
@@ -308,10 +339,11 @@ Subitamente algumas rochas começam a se empilhar diante de seus olhos.
 Elas parecem estar formando um tipo de humanóide. E sua expressão não
 é muito agradável.
 ~
-fgno :6 -450 S
+2121824 0 0 0 0 0 0 0 -450 E
 26 -2 -5 1d5+620 6d5+12
 3000 30000
 8 8 1
+E
 #17030
 furacao~
 um furacão~
@@ -320,10 +352,11 @@ Um furação enfurecido rasgando os céus vem em sua direção.
 Você não parece ter muitas chances contra sua ira.. e nem muito
 tempo até que ela lhe atinja.
 ~
-fgno :6 -450 S
+2121824 0 0 0 0 0 0 0 -450 E
 26 -2 -7 1d5+650 6d5+11
 3000 30000
 8 8 1
+E
 #17031
 anciao mago elemental~
 um mago elemental~
@@ -333,10 +366,11 @@ Uma estranha voz ecoa em sua mente...
    "Séculos, Mundos, Espíritos...  Violarei cada um, até encontrar
 a Pedra da Rendição. Afaste-se.. enquanto ainda possui sua alma..."
 ~
-bfhnop :6:7:17:25 -360 S
+2154658 0 0 0 0 0 0 0 -360 E
 25 -4 -7 1d5+700 6d4+18
 6000 40000
 8 8 1
+E
 #17032
 guerreiro alvorecer~
 o guerreiro do alvorecer~
@@ -345,10 +379,11 @@ O grande guerreiro do alvorecer está aqui, cultuando suas crenças.
 Quando percebe que você está aqui, ele lhe olha de soslaio calmamente.
 Você sente uma sensação de perigo passar por você como um trovão.
 ~
-bno :6:7:25:28 500 S
-18 -4 -9 1d5+910 5d5+19 
+2121730 0 0 0 0 0 0 0 500 E
+18 -4 -9 1d5+910 5d5+19
 4000 45000
 8 8 1
+E
 #17033
 ilusionista homem~
 um ilusionista~
@@ -359,10 +394,11 @@ a embaçar e você se torna incapaz de vê-lo durante alguns segundos.
 Imediatamente seus olhos voltam ao normal. Ele sorri maldosamente para você 
 enquanto cria outra bola negra nas mãos.
 ~
-glnop :1:6:17:18:25 -370 S
+2156608 0 0 0 0 0 0 0 -370 E
 20 -4 -9 2d10+900 10d4+19
 9000 45000
 8 8 1
+E
 #17034
 alquimista~
 um alquimista~
@@ -370,10 +406,11 @@ Um esquisito alquimista anda ao redor com algumas ervas.
 ~
 As ervas que ele carrega parecem ser raras.
 ~
-bhno :6:28 -50 S
-13 10 -9 1d5+450 1d20+4 
-2900 10000 
+2121858 0 0 0 0 0 0 0 -50 E
+13 10 -9 1d5+450 1d20+4
+2900 10000
 8 8 1
+E
 #17035
 bebe dragao~
 um bebê dragão multicolorido~
@@ -382,10 +419,11 @@ Um bebê dragão está no chão, brincando com os elementos que cria.
 Ele parece um dragão comum. Se não fosse o fato de poder controlar
 todos os elementos da natureza.
 ~
-bclnoq :6:17:25 0 S
+2189318 0 0 0 0 0 0 0 0 E
 16 0 -5 1d5+1090 3d15+12
-2400 30000 
+2400 30000
 8 8 1
+E
 #17036
 escravo~
 um pequeno escravo~
@@ -393,10 +431,11 @@ Um raquítico escravo passa rapidamente por você.
 ~
 Ele se assemelha bastante a um desagradável inseto.
 ~
-cghno :6 -500 S
-5 16 4 1d5+90 2d4+1 
+2121924 0 0 0 0 0 0 0 -500 E
+5 16 4 1d5+90 2d4+1
 800 1000
 8 8 1
+E
 #17037
 gigantesco elemental~
 um gigantesco elemental~
@@ -404,10 +443,11 @@ Um gigantesco elemental se põe em sua frente.
 ~
 GIGANTESCO, é preciso mais??
 ~
-glnoq :6 30 S
+2189376 0 0 0 0 0 0 0 30 E
 20 -6 -8 1d5+1970 5d6+19
 3000 68000
 8 8 1
+E
 #17038
 vendedor~
 o vendedor de elixir~
@@ -415,8 +455,9 @@ O vendedor está aqui, oferecendo um estranho elixir.
 ~
 Ele possui um olhar misterioso.. parece ter muitos segredos em suas mangas.
 ~
-bno :6:28 1000 S
-30 0 -10 1d1+1600 2d6+5 
+2121730 0 0 0 0 0 0 0 1000 E
+30 0 -10 1d1+1600 2d6+5
 5400 10000
 8 8 1
-$~
+E
+$

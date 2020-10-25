@@ -7,10 +7,11 @@ A dríade é uma pequenina e graciosa entidade.  Ela possui asas iguais as
 asas das borboletas, que permitem a ela voar com graça e delicadesa e seu
 corpo possui um brilho luminoso.
 ~
-243794 130 1000 S
+2340946 0 0 0 130 0 0 0 1000 E
 15 3 -4 3d8+300 4d4+6
 1000 25000
 8 8 2
+E
 #28002
 trabalhador~
 o trabalhador~
@@ -21,10 +22,11 @@ vieram de outras para Callyus em busca de oportunidades e de fortuna.
 Contudo, eles não se adaptaram ao estilo de vida de callyuni e trabalham
 agora em atividades braçais.
 ~
-66 0 100 S
+2097218 0 0 0 0 0 0 0 100 E
 12 8 1 3d5+250 3d3+7
 800 3000
 8 8 1
+E
 #28003
 trabalhadora~
 a trabalhadora~
@@ -35,10 +37,11 @@ imigrantes, que vieram de outras terras para Callyus em busca de
 oportunidades e de fortuna.  Contudo, eles não se adaptaram ao estilo de
 vida callyuni e trabalham agora em atividades braçais.
 ~
-66 0 100 S
+2097218 0 0 0 0 0 0 0 100 E
 12 8 1 3d5+250 3d3+7
 800 3000
 8 8 2
+E
 #28004
 sanguessuga parasita~
 a grotesca sanguessuga gigante~
@@ -47,10 +50,11 @@ Uma grotesca sanguessuga gigante está aqui, tentando sugar seu sangue.
 Esta criatura grotesta é tão asquerosa que fica difícil descrevê-la de forma
 detalhada sem sentir o estômago embrulhar.
 ~
-1906 8 -1000 S
+2099058 0 0 0 8 0 0 0 -1000 E
 15 5 0 5d6+420 3d5+10
 0 30000
 8 8 0
+E
 #28005
 espantalho boneco palha~
 o espantalho~
@@ -59,10 +63,11 @@ Um espantalho foi colocado aqui para proteger os campos.
 O espantalho é uma criatura que foi pobremente vestida, com o objetivo de
 proteger os campos contra os ataques dos pássaros.
 ~
-66 0 0 S
+2097218 0 0 0 0 0 0 0 0 E
 15 4 0 4d5+380 2d9+6
 0 25000
 8 8 0
+E
 #28006
 goblin~
 o goblin aquático~
@@ -70,10 +75,11 @@ Ali está um estranho goblin nadando.
 ~
 Você vê um goblin com nadadeiras e barbatanas.
 ~
-3670 64 -250 S
+2100822 0 0 0 64 0 0 0 -250 E
 15 5 0 3d10+280 4d3+8
 500 7000
 8 8 0
+E
 #28007
 gafanhoto inseto~
 o gafanhoto~
@@ -81,10 +87,11 @@ Ali está um gafanhoto, a procura de plantas para comer.
 ~
 Um pequeno inseto marrom e verde que parece ser extremamente voraz.
 ~
-66 0 -100 S
+2097218 0 0 0 0 0 0 0 -100 E
 10 10 10 2d5+130 2d4+8
 1 1000
 8 8 0
+E
 #28008
 vaca louca~
 a vaca louca~
@@ -92,10 +99,11 @@ Ali está uma vaca louca, usando um chapéu de Viking!
 ~
 É apenas uma vaca....mas tão diferente!!!
 ~
-1906 0 -250 S
+2099058 0 0 0 0 0 0 0 -250 E
 12 7 0 3d5+200 3d5+7
 1000 13000
 8 8 0
+E
 #28009
 estatua idolo metal guerreiro~
 a estátua de metal~
@@ -105,10 +113,11 @@ Você vê uma placa em sua base.  Há uma inscrição ali:
    "Esta estátua foi feita para celebrar e mostrar a todos os visitantes
        de outras terras, toda a honra e coragem do povo de Callyus"
 ~
-254034 4224 250 S
+2351186 0 0 0 128 0 0 0 250 E
 40 -3 -15 10d25+2000 6d8+21
 0 200000
 8 8 0
+E
 #28010
 vaca~
 a vaca~
@@ -116,10 +125,11 @@ Há uma vaca aqui, pastando calmamente.
 ~
 Apenas uma vaquinha...
 ~
-66 0 250 S
+2097218 0 0 0 0 0 0 0 250 E
 12 7 0 3d5+200 3d5+3
 0 13000
 8 8 0
+E
 #28011
 cavalo~
 o cavalo~
@@ -127,10 +137,11 @@ Um cavalo está aqui.
 ~
 Você vê um magnífico cavalo Árabe.
 ~
-66 0 250 S
+2097218 0 0 0 0 0 0 0 250 E
 12 7 1 2d3+210 3d5+5
 0 15000
 8 8 0
+E
 #28012
 mulher vendedora~
 a jovem vendedora~
@@ -138,10 +149,11 @@ Uma jovem mulher está aqui, vendendo pães de viagem.
 ~
 Ela é bonita, com traços suaves e olhos sonhadores.
 ~
-254160 0 500 S
+2351312 0 0 0 0 0 0 0 500 E
 20 -5 -10 0d0+500 4d6+14
 50000 26000
 8 8 2
+E
 #28013
 guardiao~
 O Guardião das Águas~
@@ -151,10 +163,11 @@ O Guardião das Águas é um ser fluídico.  À primeira vista, parece tratar-se
 de uma entidade feminina mas de repente isto vai mudando, transformando-se
 em inúmeras outras formas.
 ~
-30802 38122 250 S
+2127954 0 0 0 1258 0 0 0 250 E
 30 -10 -20 8d20+1200 4d8+25
 0 120000
 8 8 0
+E
 #28014
 guardiao florestas floresta~
 O Guardião das Florestas~
@@ -163,10 +176,11 @@ O Guardião das Florestas está aqui para proteger os seres da floresta.
 É muito difícil descrever a aparência desta entidade.  Você pode ver apenas
 uma sombra esfumaçada, movendo-se por entre a folhagem.
 ~
-30800 45226 250 S
+2127952 0 0 0 8362 0 0 0 250 E
 30 -10 -20 5d30+1200 4d8+25
 0 80000
 8 8 0
+E
 #28015
 guardiao sombras escuridao~
 O Guardião da Escuridão~
@@ -177,22 +191,24 @@ escuridão e movendo-se, sem tocar o solo, por entre as sombras.  Ainda que
 este local seja bastante escuro, você consegue ver as unhas longas e afiadas
 e os grandes olhos vermelhos.
 ~
-26706 46314 -500 S
+2123858 0 0 0 9450 0 0 0 -500 E
 30 -8 -18 8d25+1150 4d9+21
 0 120000
 8 8 0
+E
 #28016
 ninfa~
-A ninfa~
+a ninfa~
 Uma ninfa está aqui, olhando curiosamente para você.
 ~
 A ninfa é uma criatura das águas.  Ela é uma mulher com corpo e rosto mas
 existe alguma coisa diferente nela e você não consegue saber o que.
 ~
-4162 64 500 S
+2101314 0 0 0 64 0 0 0 500 E
 18 3 -5 5d6+490 4d4+5
 2000 20000
 8 8 2
+E
 #28017
 guarda cally~
 o guarda cally~
@@ -201,10 +217,11 @@ Um guarda cally está aqui, procurando por encrenca.
 Você vê um guerreiro fortemente armado que parece ter sido muito bem
 treinado para proteger os cidadãos callyunis dos problemas e dos rufiões.
 ~
-6224 0 250 S
+2103376 0 0 0 0 0 0 0 250 E
 20 -5 -5 5d6+800 4d4+12
 1500 90000
 8 8 1
+E
 #28018
 almirante dasher~
 O Almirante Dasher~
@@ -214,10 +231,11 @@ O Almirante Dasher é um homem forte, com barba e cabelos brancos.  Suas
 roupas estão cobertas por medalhas e seu chapéu tem o símbolo do Exército de
 Callyus.
 ~
-256082 46248 500 S
+2353234 0 0 0 9384 0 0 0 500 E
 50 -15 -60 10d15+1700 5d7+25
 100000 400000
 8 8 1
+E
 #28019
 secretaria ginger~
 senhorita Ginger~
@@ -229,10 +247,11 @@ maquiagem, óculos listrados e uma roupa totalmente cor-de-rosa.  Ela não se
 parece em nada com aquilo que se espera da secretária de um importante
 almirante...
 ~
-59606 0 500 S
+2156758 0 0 0 0 0 0 0 500 E
 27 -2 -25 12d5+800 3d8+12
 20000 40000
 8 8 2
+E
 #28020
 salomao mestre estaleiro~
 Salomão~
@@ -243,10 +262,11 @@ comprido e boné preto.  Enquanto observa Salomão andando, você nota que ele
 é coxo.  Sua perna esquerda ficou menor que a direita por causa do ataque de
 um tubarão, há muitos anos atrás.
 ~
-26710 0 250 S
+2123862 0 0 0 0 0 0 0 250 E
 30 -8 -40 12d5+1200 3d8+18
 50000 100000
 8 8 1
+E
 #28021
 mestre docas estivador~
 o mestre das docas~
@@ -255,10 +275,11 @@ O mestre das docas está aqui.
 Você vê um empregado das docas.  Sua função é auxiliar os comandantes dos
 navios, coordenar os trabalhadores e manter as instalações das docas.
 ~
-2116 0 100 S
+2099268 0 0 0 0 0 0 0 100 E
 20 10 -8 4d5+990 3d6+12
 500 7000
 8 8 1
+E
 #28022
 trabalhador estivador~
 estivador~
@@ -266,10 +287,11 @@ Um estivador está aqui, carregando mercadorias para embarcar num navio.
 ~
 O estivador é um homem forte.
 ~
-64 0 0 S
+2097216 0 0 0 0 0 0 0 0 E
 15 5 -5 6d10+650 3d5+8
 500 5000
 8 8 1
+E
 #28023
 marinheiro~
 o marinheiro~
@@ -277,8 +299,9 @@ Um marinheiro está aqui.
 ~
 Você vê um homem vestindo uma farda branca.
 ~
-2112 0 50 S
+2099264 0 0 0 0 0 0 0 50 E
 15 7 -2 1d10+490 2d5+12
 7500 2000
 8 8 1
+E
 $
