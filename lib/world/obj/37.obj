@@ -1,7 +1,7 @@
 #3700
-bast„o destino~
-o bast„o do Destino~
-Um estreito objeto, como um bast„o, est· aqui no ch„o.~
+bastao destino~
+o bast√£o do Destino~
+Um estreito objeto, como um bast√£o, est√° aqui no ch√£o.~
 ~
 5 aegin 0 0 0 an 0 0 0 0 0 0 0
 0 5 5 5
@@ -15,7 +15,7 @@ A
 #3701
 grilheta destino~
 a Grilheta do Destino~
-Uma longa grilheta est· aqui, vergando sobre seu prÛprio peso.~
+Uma longa grilheta est√° aqui, vergando sobre seu pr√≥prio peso.~
 ~
 9 aep 0 0 0 am 0 0 0 0 0 0 0
 5 0 0 0
@@ -29,7 +29,7 @@ A
 #3702
 tesoura destino~
 a tesoura do Destino~
-Um afiado par de tesouras est· aqui.~
+Um afiado par de tesouras est√° aqui.~
 ~
 5 bep 0 0 0 an 0 0 0 0 0 0 0
 0 4 5 11
@@ -39,9 +39,9 @@ A
 A
 19 1
 #3703
-lanÁa pontuda~
-uma lanÁa pontuda~
-Uma lanÁa pontuda est· aqui, parcialmente coberta por sujeira.~
+lanca pontuda~
+uma lan√ßa pontuda~
+Uma lan√ßa pontuda est√° aqui, parcialmente coberta por sujeira.~
 ~
 5 egi 0 0 0 an 0 0 0 0 0 0 0
 0 5 5 15
@@ -57,9 +57,9 @@ A
 A
 2 -2
 #3704
-l·grimas adaga~
-a adaga das l·grimas~
-Uma adaga est· aqui, arrepiando no ch„o.~
+lagrimas adaga~
+a adaga das l√°grimas~
+Uma adaga est√° aqui, arrepiando no ch√£o.~
 ~
 5 abo 0 0 0 an 0 0 0 0 0 0 0
 0 6 5 11
@@ -73,7 +73,7 @@ A
 #3705
 espada sofrimento~
 a espada do sofrimento~
-Um misterioso clamor ecoa da l‚mina que est· aqui.~
+Um misterioso clamor ecoa da l√¢mina que est√° aqui.~
 ~
 5 aegi 0 0 0 an 0 0 0 0 0 0 0
 0 6 5 3
@@ -95,9 +95,9 @@ Ecoantes gemidos rodeiam este machado, resplandescendo aqui.~
 A
 18 -1
 #3707
-bast„o desespero~
-o bast„o do desespero~
-Sons de melancolia erradiam do bast„o que est· aqui no ch„o.~
+bastao desespero~
+o bast√£o do desespero~
+Sons de melancolia erradiam do bast√£o que est√° aqui no ch√£o.~
 ~
 5 begin 0 0 0 an 0 0 0 0 0 0 0
 0 5 6 7
@@ -111,7 +111,7 @@ A
 #3708
 terror espada~
 a espada do Terror~
-Uma estranha arma descansa aqui no ch„o.~
+Uma estranha arma descansa aqui no ch√£o.~
 ~
 5 bg 0 0 0 an 0 0 0 0 0 0 0
 0 7 4 3
@@ -125,7 +125,7 @@ A
 #3709
 clamor adaga~
 a adaga do Clamor~
-Uma estranha arma descansa aqui no ch„o.~
+Uma estranha arma descansa aqui no ch√£o.~
 ~
 5 ai 0 0 0 an 0 0 0 0 0 0 0
 0 7 4 1
@@ -139,7 +139,7 @@ A
 #3710
 vestimenta grande negra~
 uma grande vestimenta negra~
-Um traje, mais negro do que a noite est· aqui.~
+Um traje, mais negro do que a noite est√° aqui.~
 ~
 11 abep 0 0 0 ad 0 0 0 0 0 0 0
 0 0 0 0
@@ -153,9 +153,9 @@ A
 A
 2 -2
 #3711
-decadÍncia garra~
-a garra da decadÍncia~
-Uma envelhecida garra est· aqui, brilhando fracamente.~
+decadencia garra~
+a garra da decad√™ncia~
+Uma envelhecida garra est√° aqui, brilhando fracamente.~
 ~
 5 abegi 0 0 0 an 0 0 0 0 0 0 0
 0 5 5 8
@@ -169,8 +169,8 @@ A
 A
 24 -3
 #3712
-silÍncio bast„o~
-o bast„o do silÍncio~
+silencio bastao~
+o bast√£o do sil√™ncio~
 O ar enfraquece enquanto esta estranha arma pulsa misteriosamente.~
 ~
 5 abegi 0 0 0 an 0 0 0 0 0 0 0
@@ -185,7 +185,7 @@ A
 #3713
 asas da morte~
 as asas da morte~
-Uma intensa aura de morte circula a pilha de tecido que est· aqui.~
+Uma intensa aura de morte circula a pilha de tecido que est√° aqui.~
 ~
 11 be 0 0 0 ad 0 0 0 0 0 0 0
 0 0 0 0
@@ -195,7 +195,7 @@ A
 #3714
 espada flamejante~
 uma espada flamejante~
-Uma espada est· aqui, queimando ferozmente.~
+Uma espada est√° aqui, queimando ferozmente.~
 ~
 5 agi 0 0 0 an 0 0 0 0 0 0 0
 0 5 4 3
@@ -209,7 +209,7 @@ A
 #3715
 bracelete flamejante~
 um bracelete flamejante~
-Um bracelete feito por fogo m·gico est· queimando aqui.~
+Um bracelete feito por fogo m√°gico est√° queimando aqui.~
 ~
 11 aip 0 0 0 am 0 0 0 0 0 0 0
 0 0 0 0
@@ -239,7 +239,7 @@ A
 #3717
 garra sangrenta~
 a garra sangrenta~
-Um conjunto de garras est· aqui, com sede de sangue.~
+Um conjunto de garras est√° aqui, com sede de sangue.~
 ~
 5 egi 0 0 0 an 0 0 0 0 0 0 0
 0 6 4 8
@@ -249,9 +249,9 @@ A
 A
 19 2
 #3718
-osso pedaÁo~
-um pedaÁo de osso~
-Um fino pedaÁo de osso da perna de alguma raÁa anci„ est· aqui.~
+osso pedaco~
+um peda√ßo de osso~
+Um fino peda√ßo de osso da perna de alguma ra√ßa anci√£ est√° aqui.~
 ~
 5 begi 0 0 0 an 0 0 0 0 0 0 0
 0 6 3 5
@@ -263,9 +263,9 @@ A
 A
 12 20
 #3719
-mandÌbula cessaÁ„o~
-a mandÌbula da cessaÁ„o~
-Um par de mandÌbulas est· aqui, em meio a poeira.~
+mandibula cessacao~
+a mand√≠bula da cessa√ß√£o~
+Um par de mand√≠bulas est√° aqui, em meio a poeira.~
 ~
 11 beo 0 0 0 ar 0 0 0 0 0 0 0
 0 0 0 0
@@ -275,9 +275,9 @@ A
 A
 24 5
 #3720
-pedaÁo osso~
-um pedaÁo de osso~
-Um fino pedaÁo de osso est· aqui, resplandecendo suavemente na luz.~
+pedaco osso~
+um peda√ßo de osso~
+Um fino peda√ßo de osso est√° aqui, resplandecendo suavemente na luz.~
 ~
 5 begi 0 0 0 an 0 0 0 0 0 0 0
 0 6 3 14
@@ -289,9 +289,9 @@ A
 A
 19 1
 #3721
-demoliÁ„o espada~
-a espada da DemoliÁ„o~
-Uma arma com grande poder de est· aqui, zunindo intensamente.~
+demolicao espada~
+a espada da Demoli√ß√£o~
+Uma arma com grande poder de est√° aqui, zunindo intensamente.~
 ~
 5 egi 0 0 0 an 0 0 0 0 0 0 0
 0 7 3 3
@@ -303,9 +303,9 @@ A
 A
 19 2
 #3722
-destruiÁ„o adaga~
-a adaga da DestruiÁ„o~
-Uma arma com grande poder de destruiÁ„o est· aqui, brilhando fracamente.~
+destruicao adaga~
+a adaga da Destrui√ß√£o~
+Uma arma com grande poder de destrui√ß√£o est√° aqui, brilhando fracamente.~
 ~
 5 aegin 0 0 0 an 0 0 0 0 0 0 0
 0 5 4 14
@@ -321,7 +321,7 @@ A
 #3723
 foice morte~
 a poderosa foice da morte~
-A foice da Morte est· aqui, erradiando uma aura de morte.~
+A foice da Morte est√° aqui, erradiando uma aura de morte.~
 ~
 5 begin 0 0 0 an 0 0 0 0 0 0 0
 0 5 6 17
@@ -339,7 +339,7 @@ A
 #3724
 frio adaga~
 a adaga do Frio~
-Uma aura de frio circula a arma que est· aqui.~
+Uma aura de frio circula a arma que est√° aqui.~
 ~
 5 ae 0 0 0 an 0 0 0 0 0 0 0
 0 4 4 14
@@ -355,7 +355,7 @@ A
 #3725
 calor espada~
 a espada do Calor~
-Um intenso, e pulsante calor È erradiado por esta arma que est· no ch„o.~
+Um intenso, e pulsante calor √© erradiado por esta arma que est√° no ch√£o.~
 ~
 5 aegit 0 0 0 an 0 0 0 0 0 0 0
 0 10 3 3
@@ -367,9 +367,9 @@ A
 A
 24 4
 #3726
-fome bast„o~
-o bast„o da Fome~
-Uma ˙nica arma flutua, imÛvel no ar.~
+fome bastao~
+o bast√£o da Fome~
+Uma √∫nica arma flutua, im√≥vel no ar.~
 ~
 5 eim 0 0 0 an 0 0 0 0 0 0 0
 0 7 3 5
@@ -387,7 +387,7 @@ A
 #3727
 arco guerra~
 o arco da guerra~
-O arco da guerra est· aqui, flamejando ferozmente.~
+O arco da guerra est√° aqui, flamejando ferozmente.~
 ~
 5 aegi 0 0 0 an 0 0 0 0 0 0 0
 0 5 4 12
@@ -403,9 +403,9 @@ A
 A
 1 -2
 #3728
-anci„o amuleto~
-o amuleto anci„o~
-Uma amuleto muito antigo est· aqui, juntando poeira.~
+anciao amuleto~
+o amuleto anci√£o~
+Uma amuleto muito antigo est√° aqui, juntando poeira.~
 ~
 11 bep 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
@@ -421,9 +421,9 @@ A
 A
 13 -25
 #3729
-braÁadeira tempo~
-a braÁadeira do tempo~
-Uma ofuscante braÁadeira est· aqui.~
+bracadeira tempo~
+a bra√ßadeira do tempo~
+Uma ofuscante bra√ßadeira est√° aqui.~
 ~
 9 abe 0 0 0 am 0 0 0 0 0 0 0
 5 0 0 0
@@ -437,7 +437,7 @@ A
 #3730
 espada estelar~
 uma espada dos astros~
-Uma pequena arma, cotada de poeira estelar, est· aqui.~
+Uma pequena arma, cotada de poeira estelar, est√° aqui.~
 ~
 5 ae 0 0 0 an 0 0 0 0 0 0 0
 0 4 6 3
@@ -453,7 +453,7 @@ A
 #3731
 escudo gwnar~
 o escudo de Gwnar~
-Um poderoso escudo est· aqui, esperando para ser novamente usado.~
+Um poderoso escudo est√° aqui, esperando para ser novamente usado.~
 ~
 9 ae 0 0 0 aj 0 0 0 0 0 0 0
 7 0 0 0
@@ -469,7 +469,7 @@ A
 #3732
 cesta simples~
 uma cesta~
-Uma cesta simples est· aqui.~
+Uma cesta simples est√° aqui.~
 ~
 15 b 0 0 0 a 0 0 0 0 0 0 0
 100 1 -1 0
@@ -477,7 +477,7 @@ Uma cesta simples est· aqui.~
 #3733
 brinco eterno~
 o brinco eterno~
-Um pequeno brinco cintila aqui no ch„o.~
+Um pequeno brinco cintila aqui no ch√£o.~
 ~
 11 bem 0 0 0 aq 0 0 0 0 0 0 0
 0 0 0 0
@@ -491,7 +491,7 @@ A
 #3734
 anel armadura divina~
 um anel da armadura divina~
-Um pequeno anel est· aqui, brilhando com uma luz sagrada.~
+Um pequeno anel est√° aqui, brilhando com uma luz sagrada.~
 ~
 9 eo 0 0 0 ab 0 0 0 0 0 0 0
 3 0 0 0
@@ -505,9 +505,9 @@ A
 A
 17 -10
 #3735
-manto servid„o~
-o manto da servid„o~
-Um longo, e grosso tecido est· aqui, brilhando e zunindo poderosamente.~
+manto servidao~
+o manto da servid√£o~
+Um longo, e grosso tecido est√° aqui, brilhando e zunindo poderosamente.~
 ~
 11 abe 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
@@ -527,9 +527,9 @@ Uma chave foi esquecida aqui.~
 0 0 0 0
 1 0 0 0 0
 #3796
-punhal Èbano~
-um punhal de Èbano~
-Aqui no ch„o h· um punhal mortal.~
+punhal ebano~
+um punhal de √©bano~
+Aqui no ch√£o h√° um punhal mortal.~
 ~
 5 gi 0 0 0 an 0 0 0 0 0 0 0
 0 4 5 11
@@ -543,15 +543,15 @@ A
 #3797
 saco ervas~
 um saco de ervas~
-H· um saco de ervas jogado aqui no ch„o.~
+H√° um saco de ervas jogado aqui no ch√£o.~
 ~
 19 ab 0 0 0 a 0 0 0 0 0 0 0
 12 0 0 0
 2 150 0 0 0
 #3798
-argola aÁo~
-uma argola de aÁo~
-Uma argola feita de aÁo est· aqui no ch„o, juntando poeira.~
+argola aco~
+uma argola de a√ßo~
+Uma argola feita de a√ßo est√° aqui no ch√£o, juntando poeira.~
 ~
 11 mt 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
@@ -561,7 +561,7 @@ A
 #3799
 chave ferro trabalhado~
 uma chave de ferro trabalhado~
-Uma pequena chave feita de ferro est· aqui, parcialmente escondida na sujeira.~
+Uma pequena chave feita de ferro est√° aqui, parcialmente escondida na sujeira.~
 ~
 18 bc 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
