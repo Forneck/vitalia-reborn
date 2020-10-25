@@ -1,31 +1,31 @@
 #3600
-armadura preta pe„o~
-uma armadura do Pe„o Negro~
-Um amontoado de armadura negra est· aqui.~
+armadura preta peao~
+uma armadura do Pe√£o Negro~
+Um amontoado de armadura negra est√° aqui.~
 ~
 9 j 0 0 0 ad 0 0 0 0 0 0 0
 1 0 0 0
 13 200 1 0 0
 #3601
-armadura branca pe„o~
-uma armadura de Pe„o Branco~
-Um amontoado de armadura branca est· aqui.~
+armadura branca peao~
+uma armadura de Pe√£o Branco~
+Um amontoado de armadura branca est√° aqui.~
 ~
 9 k 0 0 0 ad 0 0 0 0 0 0 0
 1 0 0 0
 13 200 1 0 0
 #3602
-espada negra pe„o~
-uma espada do Pe„o Negro~
-A espada do Pe„o da corte Negra est· aqui.~
+espada negra peao~
+uma espada do Pe√£o Negro~
+A espada do Pe√£o da corte Negra est√° aqui.~
 ~
 5 j 0 0 0 an 0 0 0 0 0 0 0
 0 3 3 3
 10 100 1 0 0
 #3603
-espada branca pe„o~
-uma espada do Pe„o Branco~
-A espada do Pe„o da corte Branca est· aqui.~
+espada branca peao~
+uma espada do Pe√£o Branco~
+A espada do Pe√£o da corte Branca est√° aqui.~
 ~
 5 k 0 0 0 an 0 0 0 0 0 0 0
 0 3 3 3
@@ -33,7 +33,7 @@ A espada do Pe„o da corte Branca est· aqui.~
 #3604
 armadura negra torre~
 uma armadura da Torre Negra~
-Uma armadura forjada dos restos mortais da Torre Negra est· jogada no ch„o.~
+Uma armadura forjada dos restos mortais da Torre Negra est√° jogada no ch√£o.~
 ~
 9 ahj 0 0 0 ad 0 0 0 0 0 0 0
 2 0 0 0
@@ -45,7 +45,7 @@ A
 #3605
 armadura branca torre~
 uma armadura da Torre Branca~
-Uma armadura forjada dos restos mortais da Torre Branca est· jogada no ch„o.~
+Uma armadura forjada dos restos mortais da Torre Branca est√° jogada no ch√£o.~
 ~
 9 agk 0 0 0 ad 0 0 0 0 0 0 0
 2 0 0 0
@@ -55,9 +55,9 @@ A
 A
 5 1
 #3606
-lanÁa negra cavalo cavaleiro~
-a lanÁa do Cavaleiro da Corte Negra~
-A lanÁa do Cavaleiro da Corte Negra est· aqui, criando ferrugem.~
+lanca negra cavalo cavaleiro~
+a lan√ßa do Cavaleiro da Corte Negra~
+A lan√ßa do Cavaleiro da Corte Negra est√° aqui, criando ferrugem.~
 ~
 5 bgj 0 0 0 an 0 0 0 0 0 0 0
 0 3 5 15
@@ -67,9 +67,9 @@ A
 A
 23 5
 #3607
-lanÁa branca cavalo cavaleiro~
-a lanÁa do Cavaleiro da Corte Branca~
-A lanÁa do Cavaleiro da Corte Branca est· aqui, criando ferrugem.~
+lanca branca cavalo cavaleiro~
+a lan√ßa do Cavaleiro da Corte Branca~
+A lan√ßa do Cavaleiro da Corte Branca est√° aqui, criando ferrugem.~
 ~
 5 bgk 0 0 0 an 0 0 0 0 0 0 0
 0 3 5 15
@@ -81,7 +81,7 @@ A
 #3608
 cajado negro bispo~
 o cajado do Bispo Negro~
-O cajado do Bispo Negro est· jogado aqui.~
+O cajado do Bispo Negro est√° jogado aqui.~
 ~
 4 agj 0 0 0 ao 0 0 0 0 0 0 0
 20 3 3 36
@@ -89,7 +89,7 @@ O cajado do Bispo Negro est· jogado aqui.~
 #3609
 cajado branco bispo~
 o cajado do Bispo Branco~
-O cajado do Bispo Branco est· jogado aqui.~
+O cajado do Bispo Branco est√° jogado aqui.~
 ~
 4 agk 0 0 0 ao 0 0 0 0 0 0 0
 20 3 3 36
@@ -121,7 +121,7 @@ A
 #3612
 cetro negro rei~
 o cetro do Rei Negro~
-O Cetro do Rei Negro est· tomando poeira aqui.~
+O Cetro do Rei Negro est√° tomando poeira aqui.~
 ~
 8 bfgj 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -135,7 +135,7 @@ A
 #3613
 cetro branco rei~
 o cetro do Rei Branco~
-O Cetro do Rei Branco est· tomando poeira aqui.~
+O Cetro do Rei Branco est√° tomando poeira aqui.~
 ~
 8 bfgk 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -149,7 +149,7 @@ A
 #3614
 chave negra tesouro~
 a chave do Tesouro da Corte Negra~
-VocÍ nota uma sinistra chave negra jogada aqui.~
+Voc√™ nota uma sinistra chave negra jogada aqui.~
 ~
 18 cdfq 0 0 0 ao 0 0 0 0 0 0 0
 3614 0 0 0
@@ -157,7 +157,7 @@ VocÍ nota uma sinistra chave negra jogada aqui.~
 #3615
 chave branca tesouro~
 a chave do Tesouro da Corte Branca~
-VocÍ nota uma chave branca e brilhante jogada aqui.~
+Voc√™ nota uma chave branca e brilhante jogada aqui.~
 ~
 18 cdfq 0 0 0 ao 0 0 0 0 0 0 0
 3615 0 0 0
@@ -165,7 +165,7 @@ VocÍ nota uma chave branca e brilhante jogada aqui.~
 #3616
 moedas ouro negra real tesouro~
 o Tesouro Real da Corte Negra~
-H· MUITAS moedas de ouro aqui.~
+H√° MUITAS moedas de ouro aqui.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 10000 0 0 0
@@ -173,7 +173,7 @@ H· MUITAS moedas de ouro aqui.~
 #3617
 moedas ouro branca real tesouro~
 o Tesouro Real da Corte Branca~
-H· MUITAS moedas de ouro aqui.~
+H√° MUITAS moedas de ouro aqui.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 10000 0 0 0
