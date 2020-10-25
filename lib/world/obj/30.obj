@@ -47,7 +47,7 @@ Uma chave feita de um metal fosco foi abandonada no chão.~
 3005 0 0 0
 1 0 0 0 0
 #3009
-viagem pão lemba~
+viagem pao lembas~
 um pão de viagem~
 Um pão de viagem foi deixado aqui.~
 ~
@@ -55,13 +55,13 @@ Um pão de viagem foi deixado aqui.~
 24 0 0 0
 1 50 50 0 0
 E
-viagem pão lemba~
+viagem pao lembas~
 O pão de viagem é a comida tradicional dos elfos durante viagens, sendo
 chamado de lembas.  Dizem que eles saciam a fome dos cansados viajantes
 rapidamente.
 ~
 #3010
-pão fatia~
+pao fatia~
 uma fatia de pão~
 Uma fatia de pão foi deixada aqui.~
 ~
@@ -69,7 +69,7 @@ Uma fatia de pão foi deixada aqui.~
 12 0 0 0
 1 10 10 0 0
 #3011
-bolo tâmaras~
+bolo tamaras~
 um bolo de tâmaras~
 Alguém deixou aqui um bolo de tâmaras de aparência apetitosa.~
 ~
@@ -106,7 +106,7 @@ Eles estão cobertos por muito queijo.  Parecem ser um dos especiais feitos
 pelo Tio Juan.
 ~
 #3015
-carne pedaço~
+carne pedaco~
 um pedaço de carne~
 Um pedaço de carne de origem duvidosa foi deixado aqui.~
 ~
@@ -114,7 +114,7 @@ Um pedaço de carne de origem duvidosa foi deixado aqui.~
 14 0 0 0
 5 24 10 0 0
 E
-carne pedaço~
+carne pedaco~
 Não que aparente estar envenenada ou algo assim, mas você não está muito
 seguro quanto á origem dessa carne.  Realmente, é pouco provável que um
 caçador derrubasse uma peça de carne de cervo ou de coelho...  'de que lugar
@@ -174,7 +174,7 @@ Um espadim foi deixado aqui, no chão.~
 0 1 6 11
 3 60 10 0 0
 E
-inscrição~
+inscricao~
 Esté escrito: 'Faça com que essa espada seja uma boa companheira.'
 ~
 E
@@ -222,7 +222,7 @@ Uma garrafa de sidra foi deixada aqui.~
 20 20 19 0
 25 80 1 0 0
 #3027
-fatia pão centeio~
+fatia pao centeio~
 uma fatia de pão de centeio~
 Uma fatia de pão de centeio foi deixada aqui.~
 ~
@@ -230,7 +230,7 @@ Uma fatia de pão de centeio foi deixada aqui.~
 10 0 0 0
 1 15 5 0 0
 #3028
-pedaço torta nozes~
+pedaco torta nozes~
 um pedaço de torta de nozes~
 Um pedaço de torta foi deixado aqui.~
 ~
@@ -254,7 +254,7 @@ Uma grande tocha foi deixada aqui.~
 0 0 24 0
 1 10 10 0 0
 #3031
-lanterna latão~
+lanterna latao~
 uma lanterna~
 Uma lanterna de latão foi deixada aqui.~
 ~
@@ -303,7 +303,7 @@ borbulhando incessantemente.~
 9999 9999 15 0
 9999 0 0 0 0
 E
-mármore fonte grande veios azulados~
+marmore fonte grande veios azulados~
 É um trabalho muito bem feito, escupida de um simples pedaço de um belo
 mármore branco com veios de profundo azul, que mais parecem relâmpagos
 azulados dançando por toda a superfície da fonte.  Toda a peça parece estar,
@@ -311,7 +311,7 @@ de alguma maneira, sob efeito de um encantamento pois o nível da água parece
 nunca diminuir.
 ~
 #3036
-cartão crédito~
+cartao credito~
 um cartão de crédito~
 Um bonito e prático cartão de crédito foi esquecido no chão daqui.~
 ~
@@ -319,7 +319,7 @@ Um bonito e prático cartão de crédito foi esquecido no chão daqui.~
 0 0 0 0
 1 10000 10 0 0
 E
-cartao crédito~
+cartao credito~
 Há algo escrito na parte de tras do cartão. Lê-se:
 
 Para usar, digite 'BALANCE', 'WITHDRAW' <quantia>, ou 'DEPOSIT <quantia>'.
@@ -363,7 +363,7 @@ panela~
 É uma ótima panela. Você poderia usá-la, se fosse menos atrapalhado.
 ~
 #3040
-peitoral metálico~
+peitoral metalico~
 um peitoral metálico~
 Um peitoral metálico foi esquecido no chão.~
 ~
@@ -371,7 +371,7 @@ Um peitoral metálico foi esquecido no chão.~
 7 0 0 0
 100 18000 150 0 0
 #3041
-cota elos metálicos~
+cota elos metalicos~
 uma cota de elos metálicos~
 Alguém esqueceu aqui uma cota de elos metálicos.~
 ~
@@ -419,7 +419,7 @@ Um peitoral de bronze foi deixado no chão.~
 6 0 0 0
 80 7000 100 0 0
 #3049
-vermelha poção juventude frasco~
+vermelha pocao juventude frasco~
 uma poção vermelha da juventude~
 Um frasco com uma poção vermelha foi deixado aqui.~
 ~
@@ -427,11 +427,11 @@ Um frasco com uma poção vermelha foi deixado aqui.~
 12 307 -1 -1
 1 50000 500 0 0
 E
-vermelha poção juventude frasco~
+vermelha pocao juventude frasco~
 A poção possui um símbolo desenhado no frasco. Parece ser um "Y".
 ~
 #3050
-pergaminho identificação~
+pergaminho identificacao~
 um pergaminho de identificação~
 Um pergaminho foi desleixadamente deixado aqui.~
 ~
@@ -439,7 +439,7 @@ Um pergaminho foi desleixadamente deixado aqui.~
 12 301 -1 -1
 1 2001 10 0 0
 E
-pergaminho identificaçãoo~
+pergaminho identificacao~
 O pergaminho possui a seguinte fórmula mágica escrita:
 
      ???
@@ -451,7 +451,7 @@ O pergaminho possui a seguinte fórmula mágica escrita:
 
 ~
 #3051
-poção amarela~
+pocao amarela~
 uma poção amarela de detectar invisibilidade~
 Um pequeno frasco com uma poção de cor amarela foi descuidadamente esquecido
 aqui.~
@@ -460,7 +460,7 @@ aqui.~
 12 19 -1 -1
 1 400 10 0 0
 E
-poção amarela~
+pocao amarela~
 O frasco da poção possui um pequeno rótulo 'Detectar O Invisível'.
 ~
 #3052
@@ -495,7 +495,7 @@ isso:
 
 ~
 #3054
-bastão retorcido~
+bastao retorcido~
 um bastão retorcido~
 Um bastão retorcido foi desleixadamente esquecido aqui.~
 ~
@@ -503,7 +503,7 @@ Um bastão retorcido foi desleixadamente esquecido aqui.~
 12 1 1 38
 17 7000 5000 0 0
 E
-bastão retorcido~
+bastao retorcido~
 O bastão é feito de madeira de carvalho, medindo cerca de cinco pés.  Ele se
 ajusta perfeitamente a sua mão.  Você nota um pequeno símbolo gravado em sua
 base, parecendo-se com isso:
@@ -516,7 +516,7 @@ base, parecendo-se com isso:
 
 ~
 #3055
-bastão metal~
+bastao metal~
 um bastão de metal~
 Alguém deixou um bastão de metal aqui.~
 ~
@@ -524,11 +524,11 @@ Alguém deixou um bastão de metal aqui.~
 10 8 8 15
 7 8500 300 0 0
 E
-bastão metal~
+bastao metal~
 O bastão é feito de um metal desconhecido por você.
 ~
 #3056
-pergaminho ressurreição~
+pergaminho ressurreicao~
 um pergaminho da ressurreição~
 Um pergaminho da ressurreição foi deixado aqui, esperando para trazer as pessoas dos braços da Morte.~
 ~
@@ -536,12 +536,12 @@ Um pergaminho da ressurreição foi deixado aqui, esperando para trazer as pesso
 15 58 -1 -1
 1 6200 280 0 0
 E
-pergaminho ressurreição~
+pergaminho ressurreicao~
 Você vê um pergaminho feito por poderosos clérigos no intuito de ajudar os
 cidadãos de Midgaard.
 ~
 #3057
-pergaminho remove maldições maldição~
+pergaminho remove maldicoes maldicao~
 um pergaminho que remove maldições~
 Um pergaminho que remove maldições foi deixado aqui, emanando uma suave luz azul.~
 ~
@@ -549,7 +549,7 @@ Um pergaminho que remove maldições foi deixado aqui, emanando uma suave luz az
 21 35 43 -1
 1 21000 140 0 0
 E
-pergaminho remove maldições maldiçõo~
+pergaminho remove maldicoes maldicao~
 O pergaminho foi escrito em um papel que emana uma suave luz azul.  Ele foi
 feito por poderosos clérigos no intuito de ajudar os cidadãos que possuem
 itens amaldiçoados.
@@ -605,7 +605,7 @@ Um prato de pernil de javali foi deixado aqui.~
 30 0 0 0
 1 35 5 0 0
 #3063
-sopa de feijão~
+sopa de feijao~
 sopa de feijão~
 Uma tigela com sopa de feijão foi deixada aqui.~
 ~
@@ -613,7 +613,7 @@ Uma tigela com sopa de feijão foi deixada aqui.~
 20 0 0 0
 1 16 16 0 0
 #3064
-bolinhos açucarados~
+bolinhos acucarados~
 bolinhos açucarados~
 Um prato de bolinhos fritos e cobertos com açúcar foi deixado aqui.~
 ~
@@ -653,7 +653,7 @@ Um prato de torradas com manteiga e mel foi deixado aqui.~
 15 0 0 0
 1 12 12 0 0
 #3069
-escudo brasonado brasão bardo~
+escudo brasonado brasao bardo~
 um escudo com o brasão bardo~
 Um escudo brasonado foi deixado aqui emanando suave melodia.~
 ~
@@ -661,7 +661,7 @@ Um escudo brasonado foi deixado aqui emanando suave melodia.~
 8 0 0 0
 4 20000 0 31 0
 E
-brasão~
+brasao~
 Num fundo negro você vê a figura de uma harpa dourada de cordas flanejantes,
 esta envolvida por um círculo brilhante formado por palavras em uma escrita
 muito antiga. Nas bordas do brasão estão as notas do início de uma canção
@@ -691,7 +691,7 @@ Um par de luvas de couro foi deixado no chão.~
 3 0 0 0
 3 75 10 0 0
 #3072
-punhal dourada lâmina brasão bardo~
+punhal dourada lamina brasao bardo~
 um punhal com o brasão bardo~
 Um punhal de lâmina dourada foi deixado aqui emitindo suave melodia.~
 ~
@@ -699,7 +699,7 @@ Um punhal de lâmina dourada foi deixado aqui emitindo suave melodia.~
 0 4 4 11
 3 15000 0 31 0
 E
-brasão~
+brasao~
 O brasão propriamente dito foi colocado em uma fina moldura dourada, sendo
 ele uma perfeita miniatura dos maiores: num fundo negro há a figura de uma
 harpa dourada de cordas flanejantes, esta envolvida por um círculo brilhante
@@ -707,7 +707,7 @@ formado por palavras em uma escrita muito antiga.  Nas bordas estão as notas
 do início de uma canção que ninguém ousa nem assoviar.
 ~
 E
-punhal lâmina dourada~
+punhal lamina dourada~
 O punhal é leve e afiado, tendo sua lâmina dourada um polimento tão
 perfeito quanto um espelho. A empunhadura negra, de metal fosco, acompanha
 adapta-se perfeitamente á mão do bardo, tendo ela como único enfeite um
@@ -716,7 +716,7 @@ pequeno brasão esmaltado.
 A
 18 1
 #3073
-brasonado peitoral brasão bardo~
+brasonado peitoral brasao bardo~
 um peitoral com o brasão bardo~
 Um peitoral brasonado emite suave melodia mesmo jogado no chão.~
 ~
@@ -724,7 +724,7 @@ Um peitoral brasonado emite suave melodia mesmo jogado no chão.~
 7 0 0 0
 5 30000 0 31 0
 E
-brasão~
+brasao~
 Num fundo negro você vê a figura de uma harpa dourada de cordas flanejantes,
 esta envolvida por um círculo brilhante formado por palavras em uma escrita
 muito antiga. Nas bordas do brasão estão as notas do início de uma canção
@@ -746,7 +746,7 @@ Uma camisa negra foi deixada aqui.~
 4 0 0 0
 1 12000 0 31 0
 E
-brasão~
+brasao~
 Num fundo negro você vê a figura de uma harpa dourada de cordas flanejantes,
 esta envolvida por um círculo brilhante formado por palavras em uma escrita
 muito antiga. Nas bordas do brasão estão as notas do início de uma canção
@@ -785,7 +785,7 @@ Um par de luvas de couro foi deixado aqui.~
 3 0 0 0
 1 7000 0 31 0
 E
-botão brasão~
+botao brasao~
 Num fundo negro você vê a figura de uma harpa dourada de cordas flanejantes,
 esta envolvida por um círculo brilhante formado por palavras em uma escrita
 muito antiga. Nas bordas do brasão estão as notas do início de uma canção
@@ -822,7 +822,7 @@ danificado, sendo ainda impermeável.  As alças ajustáveis são presas com
 duas fivelas douradas, cada uma delas ostentando um pequeno brasão.
 ~
 #3079
-negro chapéu abas~
+negro chapeu abas~
 um chapéu negro com grandes abas~
 Um chapéu de grandes abas foi deixado aqui.~
 ~
@@ -830,7 +830,7 @@ Um chapéu de grandes abas foi deixado aqui.~
 4 0 0 0
 3 10000 0 31 0
 E
-brasão broche~
+brasao broche~
 O face do broche é uma moldura dourada em que o brasão se apoia.  Ele é de
 fundo negro, havendo a figura de uma harpa dourada de cordas flanejantes em
 seu centro.  Esta é envolta por um círculo brilhante formado por palavras em
@@ -838,7 +838,7 @@ uma escrita muito antiga.  Nas bordas do brasão estão as notas do início de
 uma canção que ninguém ousa nem assoviar.
 ~
 E
-negro chapéu abas~
+negro chapeu abas~
 O chapéu de copa plana é muito elegante e útil com seu tecido negro e
 armação metálica leve.  As grandes abas lançam sombras protetoras sobre a
 face de quem o usa, parecendo uma boa opção para dias de muito sol, chuva ou
@@ -854,7 +854,7 @@ Um par de perneiras de bronze está aqui, esquecido no chão.~
 6 0 0 0
 8 3500 100 0 0
 #3081
-calça couro~
+calca couro~
 uma calça de couro~
 Uma calça de couro foi deixada no chão.~
 ~
@@ -927,7 +927,7 @@ Essa delicada mandola, semelhante a um alaúde, mas bem menor,
 do corpo do instrumento há um grande brasão.
 ~
 #3085
-braçadeiras bronze~
+bracadeiras bronze~
 um par de braçadeiras de bronze~
 Um par de braçadeiras de bronze foram deixadas aqui.~
 ~
@@ -935,7 +935,7 @@ Um par de braçadeiras de bronze foram deixadas aqui.~
 6 0 0 0
 8 1750 100 0 0
 #3086
-braçais couro~
+bracais couro~
 um par de braçais de couro~
 Um par de braçais de couro foram deixados no chão daqui.~
 ~
@@ -951,7 +951,7 @@ Um bonito pandeiro foi deixado aqui~
 0 0 0 0
 2 1000 0 31 0
 E
-brasão membrana~
+brasao membrana~
 No fundo negro você vê a figura de uma harpa dourada de cordas flanejantes,
 esta envolvida por um círculo brilhante formado por palavras em uma escrita
 muito antiga. Nas bordas do brasão estão as notas do início de uma canção
