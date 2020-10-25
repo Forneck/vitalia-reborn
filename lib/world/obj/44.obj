@@ -7,18 +7,18 @@ Uma pilha de tecido escuro foi jogada aqui.~
 7 0 0 0
 5 2110 0 0 0
 #4401
-nirin madeira cajado amaldiçoado~
-um amaldiçoado cajado de madeira Nirin~
+nirin madeira cajado amaldicoado~
+um amaldiÃ§oado cajado de madeira Nirin~
 Um cajado de madeira foi deixado aqui.~
 ~
 1 a 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
 4 8400 0 0 0
 E
-nirin madeira cajado amaldiçoado~
-O cajado de madeira escura tem cerca de seis pés de comprimento.  Ele foi
-feito a partir da madeira de uma árvore Nirin amaldiçoada.  É um tanto
-difícil achar.
+nirin madeira cajado amaldicoado~
+O cajado de madeira escura tem cerca de seis pÃ©s de comprimento.  Ele foi
+feito a partir da madeira de uma Ã¡rvore Nirin amaldiÃ§oada.  Ã‰ um tanto
+difÃ­cil achar.
 ~
 #4402
 peixe grande~
@@ -31,7 +31,7 @@ Um peixe muito grande foi deixado aqui.~
 #4403
 estranha noz~
 uma estranha noz~
-Uma estranha noz está aqui.~
+Uma estranha noz estÃ¡ aqui.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 10 0 0 0
@@ -39,19 +39,19 @@ Uma estranha noz está aqui.~
 #4404
 estranha noz~
 uma estranha noz~
-Uma estranha noz está aqui.~
+Uma estranha noz estÃ¡ aqui.~
 ~
 18 ac 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 1 0 0 0 0
 E
 estranha noz~
-Estranho... Ela parece atraí-lo em direção à lagoa.
+Estranho... Ela parece atraÃ­-lo em direÃ§Ã£o Ã  lagoa.
 ~
 #4405
 garra espinhos galhos~
 uma garra de galhos cheia de espinhos~
-Uma garra feita de galhos e cheia de espinhos está aqui.~
+Uma garra feita de galhos e cheia de espinhos estÃ¡ aqui.~
 ~
 5 a 0 0 0 an 0 0 0 0 0 0 0
 0 5 4 8
@@ -71,27 +71,27 @@ Uma placa de madeira foi pregada num poste.~
 E
 aviso placa poste~
 
-Você lê:
-&W
-&W                      ,--------,&n
-&W         .............:........:.............  &n
-&W       .´                                    `.&n
-&W      '&n          &B&uBem-vindo a Qui'lur!&n&W          '&n
-&W      '                                        '&n
-&W      '&n     &R*&n &YA Aldeia fica a leste&n&W            '&n
-&W      '                                        '&n
-&W      '&n     &R*&n &YProibida a entrada de&n &Y&uLobos&n &You&n&W   '&n
-&W      ' &n  &Y&uMinotauros&u&Y, por favor...&n&W             '&n
-&W       `.             _        _             .`&n
-&W         ´´´´´´´´´´´´´:´´´´´´´´:´´´´´´´´´´´´´&n
-&W                      :        :&n
+VocÃª lÃª:
+@W
+@W                      ,--------,@n
+@W         .............:........:.............  @n
+@W       .Â´                                    `.@n
+@W      '@n          @B@uBem-vindo a Qui'lur!@n@W          '@n
+@W      '                                        '@n
+@W      '@n     @R*@n @YA Aldeia fica a leste@n@W            '@n
+@W      '                                        '@n
+@W      '@n     @R*@n @YProibida a entrada de@n @Y@uLobos@n @You@n@W   '@n
+@W      ' @n  @Y@uMinotauros@u@Y, por favor...@n@W             '@n
+@W       `.             _        _             .`@n
+@W         Â´Â´Â´Â´Â´Â´Â´Â´Â´Â´Â´Â´Â´:Â´Â´Â´Â´Â´Â´Â´Â´:Â´Â´Â´Â´Â´Â´Â´Â´Â´Â´Â´Â´Â´@n
+@W                      :        :@n
                        
        
 ~
 #4458
-pesca arpão~
-um arpão de pesca~
-Um arpão de pesca está jogado aqui.~
+pesca arpao~
+um arpÃ£o de pesca~
+Um arpÃ£o de pesca estÃ¡ jogado aqui.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 0 5 4 11
