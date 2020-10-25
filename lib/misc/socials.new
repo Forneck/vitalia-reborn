@@ -47,16 +47,16 @@ $n recita as palavras, 'Abra Cadabra!'
 ~accuse accuse 0 5 0 0
 Acusar quem??
 $n acusa todos.
-VocÃª olha $R acusando.
+Você olha $R acusando.
 $n parece acusar $N.
-$n parece estar acusando vocÃª.
-Acusar alguÃ©m que nÃ£o estÃ¡ aqui??
-VocÃª acusa a si mesm$r.
-$n parece ter consciÃªncia pesada.
-VocÃª olha acusando para $t $S.
+$n parece estar acusando você.
+Acusar alguêm que não está aqui??
+Você acusa a si mesm$r.
+$n parece ter consciência pesada.
+Você olha acusando para $t $S.
 $n olha acusando para $t de $N.
 $n olha para $t acusando.
-VocÃª olha acusando para $p.
+Você olha acusando para $p.
 $n olha acusando para $p.
 
 ~ack ack 0 5 0 0
