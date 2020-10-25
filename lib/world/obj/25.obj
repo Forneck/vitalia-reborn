@@ -8,76 +8,76 @@ Uma brilhante chave de diamante foi deixada aqui.~
 2 0 0 30 0
 #2501
 forno preto~
-um forno~
-undefined~
+.um forno~
+Um forno preto est√° aceso aqui.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 1000 5 -1 0
 1000 1000 1000 30 0
 #2502
-arm·rio~
-um arm·rio de carnes~
-undefined~
+armario~
+.um arm√°rio de carnes~
+Um arm√°rio cheio de carnes foi deixado em um canto.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 1000 5 -1 0
 1000 1000 1000 30 0
 E
-arm·rio~
-Acaba de lhe ocorrer a horrÌvel idÈia de haver um cad·ver ali dentro.
+arm√°rio~
+Acaba de lhe ocorrer a horr√≠vel id√©ia de haver um cad√°ver ali dentro.
 ~
 #2503
 prateleira especiarias~
-uma prateleira de especiarias ~
-undefined~
+.uma prateleira de especiarias ~
+Uma prateleira com especiarias est√° perfumando todo o lugar.~
 ~
 15 0 0 0 0 a 0 0 0 0 0 0 0
 50 0 -1 0
 10 1500 500 30 0
 #2504
-fatia p„o viajante~
-uma fatia de p„o de viajante~
-Uma fatia de p„o de viajante est· aqui, parecendo muito apetitosa.~
+fatia pao viajante~
+uma fatia de p√£o de viajante~
+Uma fatia de p√£o de viajante est√° aqui, parecendo muito apetitosa.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 15 0 0 0
 1 12 3 30 0
 #2505
-pedaÁo carne~
-um grande pedaÁo de carne~
-Um grande pedaÁo de carne est· aqui.~
+pedaco carne~
+um grande peda√ßo de carne~
+Um grande peda√ßo de carne est√° aqui.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 24 0 0 1
 2 20 5 30 0
 #2506
-sanduÌche~
-um sanduÌche de dedos~
-Um sanduÌche de dedos est· aqui.~
+sanduiche~
+um sandu√≠che de dedos~
+Um sandu√≠che de dedos est√° aqui.~
 ~
 19 q 0 0 0 a 0 0 0 0 0 0 0
 20 0 0 0
 2 15 5 30 0
 E
-sanduÌche dedos~
+sanduiche dedos~
 Isso pareceria bem mais gostoso se as unhas tivesse sido cortadas antes!
 ~
 #2507
 vassoura palha~
 uma vassoura de palha~
-Uma vassoura de palha est· encostada na parede.~
+Uma vassoura de palha est√° encostada na parede.~
 ~
 22 d 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 5 5 600 30 0
 E
 vassoura palha~
-Uma vassoura m·gica voadora?  Nah!  N„o aqui.
+Uma vassoura m√°gica voadora?  Nah!  N√£o aqui.
 ~
 #2508
-arm·rio~
-um arm·rio~
-Um arm·rio est· aqui.~
+armario~
+um arm√°rio~
+Um arm√°rio est√° aqui.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 5000 5 -1 0
@@ -127,9 +127,9 @@ A
 A
 1 1
 #2514
-ba˙~
-um ba˙~
-Um ba˙ est· aqui.~
+bau~
+um ba√∫~
+Um ba√∫ est√° aqui.~
 ~
 15 a 0 0 0 0 0 0 0 0 0 0 0
 5000 15 2515 0
@@ -157,7 +157,7 @@ A
 #2517
 adaga prata~
 uma adaga de prata~
-Uma adaga feita de prata, finamente trabalhada, est· sobre o solo.~
+Uma adaga feita de prata, finamente trabalhada, est√° sobre o solo.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 0 3 3 11
@@ -169,7 +169,7 @@ A
 #2518
 cimitarra~
 uma cimitarra curvada~
-Uma cimitarra curvada est· aqui, numa bainha cravejada de jÛias.~
+Uma cimitarra curvada est√° aqui, numa bainha cravejada de j√≥ias.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 0 2 7 3
@@ -179,23 +179,23 @@ A
 #2519
 cajado madeira~
 um cajado de madeira~
-Um cajado de madeira est· encostado na parede.~
+Um cajado de madeira est√° encostado na parede.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 0 1 4 8
 6 10 5 30 0
 #2520
-arm·rio prata~
-um arm·rio com relevos de prata~
-Um grande arm·rio com acabamento em relevos de prata est· aqui.~
+armario prata~
+um arm√°rio com relevos de prata~
+Um grande arm√°rio com acabamento em relevos de prata est√° aqui.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 5000 15 2523 0
 10000 1 1 30 0
 #2521
-arm·rio prata~
-um arm·rio com relevos de prata~
-Um grande arm·rio com acabamento em relevos de prata est· aqui.~
+armario prata~
+um arm√°rio com relevos de prata~
+Um grande arm√°rio com acabamento em relevos de prata est√° aqui.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 5000 15 2523 0
@@ -203,7 +203,7 @@ Um grande arm·rio com acabamento em relevos de prata est· aqui.~
 #2522
 chave velha~
 uma chave velha~
-Uma chave velha est· aqui.~
+Uma chave velha est√° aqui.~
 ~
 18 cdq 0 0 0 a 0 0 0 0 0 0 0
 2522 0 0 0
@@ -227,7 +227,7 @@ Uma chave prateada foi deixada aqui.~
 #2525
 cajado vermelho branco~
 um cajado vermelho e branco~
-Um cajado vermelho e branco est· encostado na parede.~
+Um cajado vermelho e branco est√° encostado na parede.~
 ~
 4 0 0 0 0 ao 0 0 0 0 0 0 0
 20 3 3 28
@@ -235,15 +235,15 @@ Um cajado vermelho e branco est· encostado na parede.~
 #2526
 cajado queimado~
 um cajado queimado~
-Um cajado queimado est· encostado na parede.~
+Um cajado queimado est√° encostado na parede.~
 ~
 4 0 0 0 0 ao 0 0 0 0 0 0 0
 20 4 4 4
 6 1100 600 30 0
 #2527
-bast„o preto~
-um bast„o preto~
-Um bast„o preto foi deixado aqui.~
+bastao preto~
+um bast√£o preto~
+Um bast√£o preto foi deixado aqui.~
 ~
 3 0 0 0 0 ao 0 0 0 0 0 0 0
 20 3 3 22
@@ -251,7 +251,7 @@ Um bast„o preto foi deixado aqui.~
 #2528
 varinha madeira~
 uma varinha de madeira~
-Uma varinha de madeira est· aqui.~
+Uma varinha de madeira est√° aqui.~
 ~
 3 0 0 0 0 ao 0 0 0 0 0 0 0
 20 10 10 3
@@ -259,15 +259,15 @@ Uma varinha de madeira est· aqui.~
 #2529
 varinha metal~
 uma varinha de metal~
-Uma varinha de metal est· aqui.~
+Uma varinha de metal est√° aqui.~
 ~
 3 0 0 0 0 ao 0 0 0 0 0 0 0
 20 20 4 25
 5 2000 350 30 0
 #2530
-caldeir„o negro~
-um caldeir„o negro~
-Um grande caldeir„o negro est· aqui, borbulhando.~
+caldeirao negro~
+um caldeir√£o negro~
+Um grande caldeir√£o negro est√° aqui, borbulhando.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 1000 0 -1 0
@@ -275,7 +275,7 @@ Um grande caldeir„o negro est· aqui, borbulhando.~
 #2531
 asas morcego~
 um pequeno par de asas de morcego~
-Um pequeno par de asas de morcego est· aqui.~
+Um pequeno par de asas de morcego est√° aqui.~
 ~
 13 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
@@ -291,15 +291,15 @@ Um olho foi deixado aqui~
 #2533
 livro tomo~
 o livro de magia~
-Um enorme livro est· aberto sobre o ch„o.~
+Um enorme livro est√° aberto sobre o ch√£o.~
 ~
 15 ag 0 0 0 0 0 0 0 0 0 0 0
 500 0 -1 0
 5000 0 0 30 0
 #2534
-Ûculos~
-um par de Ûculos~
-Um par de Ûculos de aro de arame foi deixado aqui.~
+oculos~
+um par de √≥culos~
+Um par de √≥culos de aro de arame foi deixado aqui.~
 ~
 9 g 0 0 0 ar 0 0 0 0 0 0 0
 0 0 0 0
@@ -310,16 +310,16 @@ A
 4 1
 #2535
 altar~
-um altar dourado~
-undefined~
+.um altar dourado~
+Um altar dourado foi erguido no centro deste lugar.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 1000 5 -1 0
 5000 1 1 30 0
 #2536
-medalh„o coraÁ„o~
-um medalh„o em forma de coraÁ„o~
-Um medalh„o em forma de coraÁ„o est· aqui.~
+medalhao coracao~
+um medalh√£o em forma de cora√ß√£o~
+Um medalh√£o em forma de cora√ß√£o est√° aqui.~
 ~
 9 bdei 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
@@ -329,9 +329,9 @@ A
 A
 5 -1
 #2537
-ba˙~
-um ba˙ grande~
-Um ba˙ grande est· aqui.~
+bau~
+um ba√∫ grande~
+Um ba√∫ grande est√° aqui.~
 ~
 15 ag 0 0 0 0 0 0 0 0 0 0 0
 2000 15 2538 0
@@ -349,7 +349,7 @@ A
 #2539
 pilha moedas~
 uma pilha de moedas~
-Uma pilha de moedas est· aqui.~
+Uma pilha de moedas est√° aqui.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 23574 0 0 0
@@ -367,9 +367,9 @@ A
 A
 24 -3
 #2541
-camale„o poncho tecido~
-um poncho camale„o~
-Um tipo de tecido multicolorido est· sobre o ch„o.~
+camaleao poncho tecido~
+um poncho camale√£o~
+Um tipo de tecido multicolorido est√° sobre o ch√£o.~
 ~
 9 g 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
@@ -381,7 +381,7 @@ A
 #2542
 botas usadas~
 um par de botas velhas~
-Um par de botas velhas est· aqui, parecem muito confort·veis.~
+Um par de botas velhas est√° aqui, parecem muito confort√°veis.~
 ~
 9 g 0 0 0 ag 0 0 0 0 0 0 0
 0 0 0 0
@@ -399,39 +399,39 @@ Uma pequena concha marinha foi deixada aqui.~
 #2544
 mochila couro~
 uma mochila de couro~
-Uma mochila de couro est· aqui.~
+Uma mochila de couro est√° aqui.~
 ~
 15 0 0 0 0 ak 0 0 0 0 0 0 0
 500 0 -1 0
 9 750 50 30 0
 #2545
-xÌcara infus„o herb·cia~
-uma infus„o de ervas~
-Uma infus„o de ervas est· aqui.~
+xicara infusao herbacia~
+uma infus√£o de ervas~
+Uma infus√£o de ervas est√° aqui.~
 ~
 17 0 0 0 0 a 0 0 0 0 0 0 0
 5 5 11 1
 10 11 5 30 0
 #2546
-p„o~
-um p„o de viagem~
-Um naco de p„o de viagem foi deixado aqui.~
+pao~
+um p√£o de viagem~
+Um naco de p√£o de viagem foi deixado aqui.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 32 0 0 0
 3 65 5 30 0
 #2547
 cutelo~
-um cutelo de aÁougueiro~
-Um cutelo de aÁougueiro est· pendurado na parede.~
+um cutelo de a√ßougueiro~
+Um cutelo de a√ßougueiro est√° pendurado na parede.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 0 3 4 1
 8 600 100 30 0
 #2548
-correntes grilhıes~
-alguns grilhıes e correntes~
-Alguns grilhıes e correntes foram abandonados aqui.~
+correntes grilhoes~
+alguns grilh√µes e correntes~
+Alguns grilh√µes e correntes foram abandonados aqui.~
 ~
 13 gh 0 0 0 al 0 0 0 0 0 0 0
 0 0 0 0
@@ -443,7 +443,7 @@ A
 #2549
 adaga prateada~
 uma adaga prateada~
-Uma adaga longa que parece ser feita de prata est· aqui.~
+Uma adaga longa que parece ser feita de prata est√° aqui.~
 ~
 5 g 0 0 0 an 0 0 0 0 0 0 0
 0 2 4 11
@@ -453,15 +453,15 @@ A
 #2550
 pergaminho~
 um pergaminho~
-Um pergaminho est· aqui.~
+Um pergaminho est√° aqui.~
 ~
 2 0 0 0 0 ao 0 0 0 0 0 0 0
 21 4 17 38
 5 3000 1000 30 0
 #2551
-divisÛria papel~
-uma divisÛria de papel~
-Uma divisÛria de papel est· aqui, soprando ao sabor do vento.~
+divisoria papel~
+uma divis√≥ria de papel~
+Uma divis√≥ria de papel est√° aqui, soprando ao sabor do vento.~
 ~
 2 g 0 0 0 ao 0 0 0 0 0 0 0
 16 1 2 34
@@ -470,8 +470,8 @@ A
 17 -6
 #2552
 tubo cilindro~
-um longo tubo cilÌndrico~
-Um longo tubo cilÌndrico est· rolando por aqui.~
+um longo tubo cil√≠ndrico~
+Um longo tubo cil√≠ndrico est√° rolando por aqui.~
 ~
 15 g 0 0 0 a 0 0 0 0 0 0 0
 100 5 -1 0
@@ -495,7 +495,7 @@ Um pergaminho azul foi deixado aqui.~
 #2555
 bolsa couro~
 uma bolsa de couro~
-Uma bolsa de couro est· sobre o ch„o.~
+Uma bolsa de couro est√° sobre o ch√£o.~
 ~
 15 g 0 0 0 ao 0 0 0 0 0 0 0
 150 0 -1 0
@@ -511,45 +511,45 @@ Uma colher de prata foi deixada aqui.~
 A
 24 -1
 #2557
-poÁ„o azul~
-uma poÁ„o azul~
-Uma poÁ„o azul est· aqui.~
+pocao azul~
+uma po√ß√£o azul~
+Uma po√ß√£o azul est√° aqui.~
 ~
 10 g 0 0 0 ao 0 0 0 0 0 0 0
 24 27 27 27
 2 9000 500 30 0
 #2558
-poÁ„o vermelha~
-uma poÁ„o vermelho-clara~
-Uma poÁ„o vermelho-clara est· aqui.~
+pocao vermelha~
+uma po√ß√£o vermelho-clara~
+Uma po√ß√£o vermelho-clara est√° aqui.~
 ~
 10 g 0 0 0 ao 0 0 0 0 0 0 0
 15 15 -1 -1
 2 1500 500 30 0
 #2559
-poÁ„o verde~
-uma poÁ„o verde~
-Uma poÁ„o verde est· aqui.~
+pocao verde~
+uma po√ß√£o verde~
+Uma po√ß√£o verde est√° aqui.~
 ~
 10 g 0 0 0 ao 0 0 0 0 0 0 0
 20 4 2 14
 2 1500 150 30 0
 #2560
-poÁ„o efervescente~
-uma poÁ„o efervescente~
-Uma poÁ„o efervescente est· aqui, borbulhando.~
+pocao efervescente~
+uma po√ß√£o efervescente~
+Uma po√ß√£o efervescente est√° aqui, borbulhando.~
 ~
 10 g 0 0 0 ao 0 0 0 0 0 0 0
 16 18 19 20
 2 1000 150 30 0
 E
-poÁ„o efervescente~
-Ahh!  Soda Borbulhante Schwepes È t„o refrescante!
+pocao efervescente~
+Ahh!  Soda Borbulhante Schwepes √© t√£o refrescante!
 ~
 #2561
-poÁ„o branca leitosa~
-uma poÁ„o branca e leitosa~
-Uma poÁ„o branca e leitosa est· aqui.~
+pocao branca leitosa~
+uma po√ß√£o branca e leitosa~
+Uma po√ß√£o branca e leitosa est√° aqui.~
 ~
 10 0 0 0 0 ao 0 0 0 0 0 0 0
 14 42 -1 -1
@@ -557,7 +557,7 @@ Uma poÁ„o branca e leitosa est· aqui.~
 #2562
 cajado negro~
 um cajado negro~
-Um cajado negro est· encostado contra a parede.~
+Um cajado negro est√° encostado contra a parede.~
 ~
 4 g 0 0 0 ao 0 0 0 0 0 0 0
 18 2 2 2
@@ -573,9 +573,9 @@ Uma flauta dourada foi deixada aqui.~
 A
 3 -6
 #2564
-estatueta humanÛide pequena~
+estatueta humanoide pequena~
 uma pequena estatueta~
-Uma pequena estatueta de forma humanÛide est· parada aqui.~
+Uma pequena estatueta de forma human√≥ide est√° parada aqui.~
 ~
 4 g 0 0 0 ao 0 0 0 0 0 0 0
 21 10 10 32
@@ -583,7 +583,7 @@ Uma pequena estatueta de forma humanÛide est· parada aqui.~
 #2565
 cinto coldre~
 um cinto com coldre~
-Um cinto com coldre est· aqui.~
+Um cinto com coldre est√° aqui.~
 ~
 15 0 0 0 0 al 0 0 0 0 0 0 0
 20 0 -1 0
@@ -591,15 +591,15 @@ Um cinto com coldre est· aqui.~
 #2566
 varinha~
 uma varinha escurecida~
-Uma varinha escurecida est· aqui.~
+Uma varinha escurecida est√° aqui.~
 ~
 3 g 0 0 0 ao 0 0 0 0 0 0 0
 17 5 1 26
 4 2500 500 30 0
 #2567
-cinzel r˙nico~
-um cinzel r˙nico~
-Um cinzel r˙nico est· aqui.~
+cinzel runico~
+um cinzel r√∫nico~
+Um cinzel r√∫nico est√° aqui.~
 ~
 5 ag 0 0 0 an 0 0 0 0 0 0 0
 0 2 3 11
@@ -609,7 +609,7 @@ A
 #2568
 bolsa cinto pochete~
 uma pochete~
-Uma pochete est· aqui.~
+Uma pochete est√° aqui.~
 ~
 15 0 0 0 0 al 0 0 0 0 0 0 0
 50 0 -1 0
@@ -617,15 +617,15 @@ Uma pochete est· aqui.~
 #2569
 poeira~
 um pouco de poeira brilhante~
-Um pouco de poeira brilhante est· amontoada aqui.~
+Um pouco de poeira brilhante est√° amontoada aqui.~
 ~
 4 0 0 0 0 ao 0 0 0 0 0 0 0
 20 1 1 38
 2 1000 150 30 0
 #2570
-h·bito negro~
-um h·bito negro~
-Um h·bito negro est· aqui.~
+habito negro~
+um h√°bito negro~
+Um h√°bito negro est√° aqui.~
 ~
 9 abgj 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
@@ -637,7 +637,7 @@ A
 #2571
 varinha cinzenta~
 uma varinha cinzenta~
-Uma varinha cinzenta est· aqui.~
+Uma varinha cinzenta est√° aqui.~
 ~
 3 j 0 0 0 ao 0 0 0 0 0 0 0
 20 4 4 63
@@ -665,7 +665,7 @@ A
 #2574
 bracelete prata~
 um bracelete de prata reluzente~
-Um reluzente aro de metal prateado est· aqui.~
+Um reluzente aro de metal prateado est√° aqui.~
 ~
 9 gjk 0 0 0 am 0 0 0 0 0 0 0
 0 0 0 0
@@ -686,8 +686,8 @@ A
 24 -3
 #2576
 cajado~
-um cajado reforÁado com ferro~
-Um pedaÁo de madeira cinza reforÁado com ferro foi deixado aqui.~
+um cajado refor√ßado com ferro~
+Um peda√ßo de madeira cinza refor√ßado com ferro foi deixado aqui.~
 ~
 5 gjk 0 0 0 an 0 0 0 0 0 0 0
 0 2 7 8
@@ -695,9 +695,9 @@ Um pedaÁo de madeira cinza reforÁado com ferro foi deixado aqui.~
 A
 18 3
 #2577
-menor proteÁ„o cubo trasparente~
-um cubo de proteÁ„o menor~
-Um pequeno cubo transparente est· acomodado aqui.~
+menor protecao cubo trasparente~
+um cubo de prote√ß√£o menor~
+Um pequeno cubo transparente est√° acomodado aqui.~
 ~
 9 ag 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -707,7 +707,7 @@ A
 #2578
 robe preto~
 um robe preto~
-Uma pilha de tecido preto est· sobre o ch„o.~
+Uma pilha de tecido preto est√° sobre o ch√£o.~
 ~
 15 gjl 0 0 0 ak 0 0 0 0 0 0 0
 50 0 -1 0
@@ -717,9 +717,9 @@ A
 A
 24 -2
 #2579
-bracelete Ùnix~
-um bracelete de Ùnix~
-Um aro de Ùnix negro est· aqui.~
+bracelete onix~
+um bracelete de √¥nix~
+Um aro de √¥nix negro est√° aqui.~
 ~
 9 gjl 0 0 0 am 0 0 0 0 0 0 0
 0 0 0 0
@@ -729,7 +729,7 @@ A
 #2580
 manto preto sombrio~
 um manto preto sombrio~
-Uma pilha de tecido preto est· sobre o ch„o.~
+Uma pilha de tecido preto est√° sobre o ch√£o.~
 ~
 9 gjl 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
@@ -741,7 +741,7 @@ A
 #2581
 lasca vidro preto obsidiana~
 uma lasca afiada de obsidiana~
-Um pedaÁo de vidro preto est· aqui.~
+Um peda√ßo de vidro preto est√° aqui.~
 ~
 5 gjl 0 0 0 an 0 0 0 0 0 0 0
 0 2 7 1
@@ -751,7 +751,7 @@ A
 #2582
 robe branco~
 um robe branco~
-Uma pilha de tecido branco est· sobre o ch„o.~
+Uma pilha de tecido branco est√° sobre o ch√£o.~
 ~
 15 gkl 0 0 0 ak 0 0 0 0 0 0 0
 50 0 -1 0
@@ -763,7 +763,7 @@ A
 #2583
 bracelete ouro branco~
 um bracelete de ouro branco~
-Um aro de metal prateado est· aqui.~
+Um aro de metal prateado est√° aqui.~
 ~
 9 gkl 0 0 0 am 0 0 0 0 0 0 0
 0 0 0 0
@@ -773,7 +773,7 @@ A
 #2584
 manto branco~
 um manto branco~
-Uma pilha de tecido branco est· sobre o ch„o.~
+Uma pilha de tecido branco est√° sobre o ch√£o.~
 ~
 9 gikl 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
@@ -797,7 +797,7 @@ A
 #2586
 colar espinhos~
 um colar de espinhos~
-Um pequeno colar de espinhos est· aqui.~
+Um pequeno colar de espinhos est√° aqui.~
 ~
 9 g 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
@@ -809,7 +809,7 @@ A
 #2587
 manto cintilante pilha tecido~
 um manto cintilante de muitas cores~
-Uma pilha multicolorida de tecido est· aqui.~
+Uma pilha multicolorida de tecido est√° aqui.~
 ~
 15 ag 0 0 0 ac 0 0 0 0 0 0 0
 100 0 -1 0
@@ -821,7 +821,7 @@ A
 #2588
 esmeralda anel~
 Um pequeno anel de esmeralda~
-Um pequeno anel com uma gema verde est· aqui.~
+Um pequeno anel com uma gema verde est√° aqui.~
 ~
 9 g 0 0 0 ab 0 0 0 0 0 0 0
 0 0 0 0
@@ -831,7 +831,7 @@ A
 #2589
 bracelete esmeralda~
 um bracelete de esmeralda~
-Um aro de esmeralda belamente trabalhado est· aqui.~
+Um aro de esmeralda belamente trabalhado est√° aqui.~
 ~
 9 g 0 0 0 am 0 0 0 0 0 0 0
 0 0 0 0
@@ -841,9 +841,9 @@ A
 A
 3 1
 #2590
-maior proteÁ„o cubo transparente cristal~
-um cubo de proteÁ„o maior~
-Um grande cubo de cristal trasparente est· aqui.~
+maior protecao cubo transparente cristal~
+um cubo de prote√ß√£o maior~
+Um grande cubo de cristal trasparente est√° aqui.~
 ~
 9 ag 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -853,9 +853,9 @@ A
 A
 24 -2
 #2591
-Èbano ondulada adaga~
-a adaga ondulada de Èbano~
-Uma l‚mina ondulada feita de Èbano est· aqui.~
+ebano ondulada adaga~
+a adaga ondulada de √©bano~
+Uma l√¢mina ondulada feita de √©bano est√° aqui.~
 ~
 5 g 0 0 0 an 0 0 0 0 0 0 0
 0 3 4 11
@@ -866,16 +866,16 @@ A
 19 5
 #2592
 verde escamas camisa~
-uma camisa justa de escamas de drag„o verde~
-Algumas escamas de drag„o verde que foram costuradas juntas est„o aqui.~
+uma camisa justa de escamas de drag√£o verde~
+Algumas escamas de drag√£o verde que foram costuradas juntas est√£o aqui.~
 ~
 9 g 0 0 0 ad 0 0 0 0 0 0 0
 10 0 0 0
 9 10000 1000 30 0
 E
 verde escamas camisa~
-Esta camisa de escamas de drag„o verde foi feita a partir de um pobre e 
-azarado drag„o verde.
+Esta camisa de escamas de drag√£o verde foi feita a partir de um pobre e 
+azarado drag√£o verde.
 ~
 A
 2 3
