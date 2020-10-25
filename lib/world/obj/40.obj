@@ -1,21 +1,21 @@
 #4000
 anel amarelo verde~
 um anel amarelo e verde~
-Um anel está aqui, com ornamentos em amarelo e verde.  Ele parece muito antigo.~
+Um anel estÃ¡ aqui, com ornamentos em amarelo e verde.  Ele parece muito antigo.~
 ~
 9 dhq 0 0 0 ab 0 0 0 0 0 0 0
 0 0 0 0
 1 50 20 0 0
 E
 anel amarelo verde~
-Você sente que ele é muito pesado.
+VocÃª sente que ele Ã© muito pesado.
 ~
 A
 1 -2
 #4001
 corpo goblin~
 um corpo de goblin~
-Um corpo de goblin em estado de putrefação está aqui, exalando um terrível mau cheiro~
+Um corpo de goblin em estado de putrefaÃ§Ã£o estÃ¡ aqui, exalando um terrÃ­vel mau cheiro~
 ~
 15 0 0 0 0 a 0 0 0 0 0 0 0
 1 0 -1 0
@@ -23,21 +23,21 @@ Um corpo de goblin em estado de putrefação está aqui, exalando um terrível mau c
 #4002
 moeda moedas~
 algumas moedas~
-Um punhado de moedas está jogado no chão.~
+Um punhado de moedas estÃ¡ jogado no chÃ£o.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 500 0 0 0
 5 0 0 0 0
 #4050
-poção púrpura~
-uma poção púrpura~
-Uma poção púrpura está aqui.~
+pocao purpura~
+uma poÃ§Ã£o pÃºrpura~
+Uma poÃ§Ã£o pÃºrpura estÃ¡ aqui.~
 ~
 10 0 0 0 0 ao 0 0 0 0 0 0 0
 17 14 36 33
 1 35500 2000 0 0
 E
-poção púrpura~
+pocao purpura~
 Ela parece muito estranha!
 ~
 #4051
@@ -50,7 +50,7 @@ Um elmo de metal jogado por aqui.~
 4 3000 100 0 0
 E
 elmo metal~
-Ele parece ter algo de mágico!
+Ele parece ter algo de mÃ¡gico!
 ~
 A
 24 -2
@@ -59,18 +59,18 @@ A
 #4052
 cogumelo~
 um cogumelo~
-Um pequeno cogumelo está aqui.~
+Um pequeno cogumelo estÃ¡ aqui.~
 ~
 19 0 0 0 0 ao 0 0 0 0 0 0 0
 2 0 0 1
 1 9 3 0 0
 E
 cogumelo~
-Vejamos assim... - Eu NÃO comeria isso!!!
+Vejamos assim... - Eu NÃƒO comeria isso!!!
 ~
 #4053
 punhal~
-um punhal de ladrão~
+um punhal de ladrÃ£o~
 Um punhal belamente forjado foi deixado aqui.~
 ~
 5 np 0 0 0 an 0 0 0 0 0 0 0
@@ -78,31 +78,31 @@ Um punhal belamente forjado foi deixado aqui.~
 2 850 500 0 0
 E
 punhal~
-É um punhal de tamanho médio, belamente forjado de uma liga mertálica 
-cinzenta.   Sua lâmina tem duas pontas muito finas.. esta parece ser uma 
-boa arma de ladrões.
+Ã‰ um punhal de tamanho mÃ©dio, belamente forjado de uma liga mertÃ¡lica 
+cinzenta.   Sua lÃ¢mina tem duas pontas muito finas.. esta parece ser uma 
+boa arma de ladrÃµes.
 ~
 A
 18 1
 A
 19 1
 #4100
-lâmina negra demônio~
-uma lâmina do demônio negro~
-Uma lâmina do demônio negro está aqui.~
+lamina negra demonio~
+uma lÃ¢mina do demÃ´nio negro~
+Uma lÃ¢mina do demÃ´nio negro estÃ¡ aqui.~
 ~
 5 jlm 0 0 0 an 0 0 0 0 0 0 0
 0 3 4 11
 8 10000 800 0 0
 E
-lâmina negra demônio~
-Você se tornará tão mau quanto a arma se vier a usá-la, pois você sente forças
-malígnas controlando a arma...
+lamina negra demonio~
+VocÃª se tornarÃ¡ tÃ£o mau quanto a arma se vier a usÃ¡-la, pois vocÃª sente forÃ§as
+malÃ­gnas controlando a arma...
 ~
 #4101
 luvas espadachim~
 Um par de luvas de espadachim~
-Um par de belíssimas luvas feitas a mão está jogado no chão aqui.~
+Um par de belÃ­ssimas luvas feitas a mÃ£o estÃ¡ jogado no chÃ£o aqui.~
 ~
 9 j 0 0 0 ah 0 0 0 0 0 0 0
 0 0 0 0
@@ -117,8 +117,8 @@ A
 19 1
 #4102
 pergaminho ysafg~
-um pergaminho onde se lê 'ysafg'~
-Um pergaminho onde se lê 'ysafg', ele parece muito frágil e bastante antigo.~
+um pergaminho onde se lÃª 'ysafg'~
+Um pergaminho onde se lÃª 'ysafg', ele parece muito frÃ¡gil e bastante antigo.~
 ~
 2 0 0 0 0 a 0 0 0 0 0 0 0
 1 53 -1 -1
@@ -130,25 +130,25 @@ Ele parece instrutivo.
 #4103
 limo mofado mofo verde~
 Um limo verde e mofado~
-Um limo verde e mofado está aqui.  Você não acredita o quanto isso fede!~
+Um limo verde e mofado estÃ¡ aqui.  VocÃª nÃ£o acredita o quanto isso fede!~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 24 0 0 0
 1 20 8 0 0
 E
 limo mofado mofo verde~
-Isso não parece ser comida -- ao menos não para humanos.
+Isso nÃ£o parece ser comida -- ao menos nÃ£o para humanos.
 ~
 #4104
 limo mofado mofo verde~
 Um limo verde e mofado~
-Um limo verde e mofado está aqui.  Você não acredita o quanto isso fede!~
+Um limo verde e mofado estÃ¡ aqui.  VocÃª nÃ£o acredita o quanto isso fede!~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 24 0 0 1
 1 20 8 0 0
 E
 limo mofado mofo verde~
-Isso não parece ser comida -- ao menos não para humanos.
+Isso nÃ£o parece ser comida -- ao menos nÃ£o para humanos.
 ~
 $~
