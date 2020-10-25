@@ -1,22 +1,22 @@
 #3400
-chave espera c‚mara villspah~
-a chave para a c‚mara de espera de Villspah~
-Uma chave longa, e branca est· aqui no ch„o.~
+chave espera camara villspah~
+a chave para a c√¢mara de espera de Villspah~
+Uma chave longa, e branca est√° aqui no ch√£o.~
 ~
 18 c 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 3 10 0 1 0
 #3401
-chave c‚mara estado~
-a chave para a c‚mara de Estado~
+chave camara estado~
+a chave para a c√¢mara de Estado~
 Uma grande e amarela chave foi perdida aqui.~
 ~
 18 c 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 3 10 0 1 0
 #3402
-chave festas c‚mara~
-a sala para o sal„o de festas~
+chave festas camara~
+a sala para o sal√£o de festas~
 Uma chave pequena, e circular foi deixada aqui.~
 ~
 18 c 0 0 0 a 0 0 0 0 0 0 0
@@ -33,7 +33,7 @@ Uma pequena chave foi esquecida aqui.~
 #3404
 chave pequena~
 uma pequena chave~
-Uma pequena chave de bronze est· aqui no ch„o.~
+Uma pequena chave de bronze est√° aqui no ch√£o.~
 ~
 18 c 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -41,14 +41,14 @@ Uma pequena chave de bronze est· aqui no ch„o.~
 #3405
 celas chave villspah~
 a chave das celas~
-Um conjunto de chaves est· aqui no ch„o, fixadas a um anel de aÁo.~
+Um conjunto de chaves est√° aqui no ch√£o, fixadas a um anel de a√ßo.~
 ~
 18 c 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 3 10 0 1 0
 #3406
-chave pequena aposentos bar„o~
-a chave para os aposentos do Bar„o~
+chave pequena aposentos barao~
+a chave para os aposentos do Bar√£o~
 Uma pequena chave foi deixada aqui.~
 ~
 18 c 0 0 0 ao 0 0 0 0 0 0 0
@@ -69,9 +69,9 @@ A
 A
 1 -2
 #3408
-bast„o guerra villspath~
-o bast„o de guerra de um soldado~
-Um longo bast„o farpado de madeira foi perdido aqui.~
+bastao guerra villspath~
+o bast√£o de guerra de um soldado~
+Um longo bast√£o farpado de madeira foi perdido aqui.~
 ~
 5 aegimnt 0 0 0 an 0 0 0 0 0 0 0
 0 4 4 5
@@ -81,9 +81,9 @@ A
 A
 12 25
 #3409
-bast„o metal~
-um bast„o de metal~
-Um bast„o de metal est· aqui no ch„o.~
+bastao metal~
+um bast√£o de metal~
+Um bast√£o de metal est√° aqui no ch√£o.~
 ~
 5 aenp 0 0 0 ano 0 0 0 0 0 0 0
 0 3 4 5
@@ -99,7 +99,7 @@ A
 #3410
 adaga mago villspah~
 a adaga do mago~
-Uma pequena, mas potente adaga est· aqui no ch„o.~
+Uma pequena, mas potente adaga est√° aqui no ch√£o.~
 ~
 5 abeikt 0 0 0 ano 0 0 0 0 0 0 0
 0 4 3 11
@@ -125,16 +125,16 @@ A
 A
 4 1
 #3412
-mapa ·reas bar„o~
-o mapa das ·reas do Bar„o~
-O mapa das ·reas do Bar„o est· aqui no ch„o.~
+mapa areas barao~
+o mapa das √°reas do Bar√£o~
+O mapa das √°reas do Bar√£o est√° aqui no ch√£o.~
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 2 35 0 10 0
 E
 mapa~
-Se vocÍ encontrou este mapa significa que est· no caminho certo!   Continue
+Se voc√™ encontrou este mapa significa que est√° no caminho certo!   Continue
 sua jornada sem se esquecer de ser cuidadoso e audaz, ao mesmo tempo.   Boa
 sorte!			
 ~
@@ -148,7 +148,7 @@ O mapa de Jareth foi perdido aqui.~
 2 70 0 0 0
 E
 mapa~
-Se vocÍ encontrou este mapa significa que vocÍ pode n„o estar no caminho certo!
+Se voc√™ encontrou este mapa significa que voc√™ pode n√£o estar no caminho certo!
 Continue sua jornada sem se esquecer de ser cuidadoso e audaz, ao mesmo tempo.
 Boa sorte!
 ~
@@ -167,7 +167,7 @@ A
 #3415
 manto brilhante verde~
 um brilhante manto verde~
-Um brilhante manto verde est· aqui no ch„o.~
+Um brilhante manto verde est√° aqui no ch√£o.~
 ~
 11 abeg 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
@@ -179,9 +179,9 @@ A
 A
 18 1
 #3416
-manto clÈrigo~
-o manto de um clÈrigo~
-O manto de um clÈrigo foi perdido aqui.~
+manto clerigo~
+o manto de um cl√©rigo~
+O manto de um cl√©rigo foi perdido aqui.~
 ~
 11 aegop 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
@@ -195,7 +195,7 @@ A
 #3417
 bolsa cintura~
 uma bolsa de cintura~
-Uma enorme bolsa para cintura est· aqui no ch„o.~
+Uma enorme bolsa para cintura est√° aqui no ch√£o.~
 ~
 15 0 0 0 0 al 0 0 0 0 0 0 0
 55 15 3418 0
@@ -223,31 +223,31 @@ Uma chave marrom esverdeada foi deixada aqui.~
 #3420
 tapete~
 um tapete~
-Um tapete encontra-se aqui no ch„o.~
+Um tapete encontra-se aqui no ch√£o.~
 ~
 12 d 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 10 10 0 0 0
 E
 tapete~
-Empurrando o tapete para o lado com o seu pÈ, vocÍ percebe uma pequena ·rea 
-do piso que est· cortada, com dobradiÁas em um dos lados.
+Empurrando o tapete para o lado com o seu p√©, voc√™ percebe uma pequena √°rea 
+do piso que est√° cortada, com dobradi√ßas em um dos lados.
 ~
 #3421
-piso pedaÁo~
-um pedaÁo de piso~
-Um pequeno pedaÁo de piso est· aqui no ch„o.~
+piso pedaco~
+um peda√ßo de piso~
+Um pequeno peda√ßo de piso est√° aqui no ch√£o.~
 ~
 15 d 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 5 0 0 1 0
 E
 piso~
-Parece que alguÈm facilmente tirou um pedaÁo de piso com a ponta de uma 
+Parece que algu√©m facilmente tirou um peda√ßo de piso com a ponta de uma 
 adaga, ou com algo similar.
 ~
 #3422
-coroa bar„o reino villspah~
+coroa barao reino villspah~
 a Coroa do reino de Villspah~
 Uma linda coroa foi perdida aqui.~
 ~
@@ -289,9 +289,9 @@ A
 A
 1 1
 #3425
-calÁas verdes~
-um par de calÁas verdes~
-Um par de calÁas verdes est· aqui sobre o ch„o.~
+calcas verdes~
+um par de cal√ßas verdes~
+Um par de cal√ßas verdes est√° aqui sobre o ch√£o.~
 ~
 9 aeq 0 0 0 af 0 0 0 0 0 0 0
 4 0 0 0
@@ -317,8 +317,8 @@ A
 A
 17 -4
 #3427
-bracelete bar„o villspah~
-o bracelete do Bar„o de Villspah~
+bracelete barao villspah~
+o bracelete do Bar√£o de Villspah~
 Um pequeno bracelete verde foi perdido aqui.~
 ~
 11 aboq 0 0 0 ai 0 0 0 0 0 0 0
@@ -343,14 +343,14 @@ O passe para a ponte foi deixado aqui.~
 #3429
 vitral~
 um vitral~
-Um lindo vitral colorido est· fixado na parede oeste.~
+Um lindo vitral colorido est√° fixado na parede oeste.~
 ~
 26 d 0 0 0 0 0 0 0 0 0 0 0
 3409 0 0 0
 1 1 0 1 0
 E
 vitral colorido~
-Na medida em que vocÍ olha para este vitral, vocÍ percebe que n„o se trata 
+Na medida em que voc√™ olha para este vitral, voc√™ percebe que n√£o se trata 
 somente disto, mas sim de uma neblina de cores vislumbrando em um portal.    
 ~
 $~
