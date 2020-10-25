@@ -144,7 +144,6 @@ struct reset_q_type reset_q;	/* queue of zones to be reset */
 
 struct happyhour happy_data = { 0, 0, 0, 0 };
 
-struct fann *guerreiro;
 /* declaration of local (file scope) variables */
 static int converting = FALSE;
 
