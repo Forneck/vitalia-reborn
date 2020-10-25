@@ -6,22 +6,22 @@ Clas: 1
 Levl: 15
 Id  : 7
 Brth: 1603327969
-Plyd: 900
-Last: 1603329933
-Lmot: 1603328735
+Plyd: 3663
+Last: 1603568038
+Lmot: 1603408606
 Lnew: 1603328555
 Htwn: 1372
 Host: 189.93.105.43
 Hite: 188
 Wate: 133
-Act : h 0 0 0
+Act : gh 0 0 0
 Aff : 0 0 0 0
-Pref: efghno 0 0 0
-Room: 65535
-Lern: 41
-Hung: 12
-Thir: 12
-Hit : 88/119
+Pref: efghinoF 0 0 0
+Room: 3001
+Lern: 37
+Hung: -1
+Thir: -1
+Hit : 119/119
 Mana : 257/257
 Move: 102/102
 Str : 11/0
@@ -31,8 +31,14 @@ Dex : 9
 Con : 8
 Cha : 7
 Ac  : 100
-Exp : 1400213
+Gold: 250
+Exp : 1400744
 Olc : 0
 Skil:
 3 95
+50 95
 0 0
+Alis: 1
+ .
+ gos $*
+1

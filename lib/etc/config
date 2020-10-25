@@ -41,7 +41,7 @@ max_pc_corpse_time = 168
 idle_void = 8
 
 * Number of tics before a PC is autorented.
-idle_rent_time = 48
+idle_rent_time = 24
 
 * Level and above of players whom are immune to idle penalties.
 idle_max_level = 106
@@ -53,7 +53,7 @@ dts_are_dumps = 0
 load_into_inventory = 1
 
 * Should PC's be able to track through hidden or closed doors?
-track_through_doors = 0
+track_through_doors = 1
 
 * Should players who reach enough exp be prevented from automatically levelling to immortal?
 no_mort_to_immort = 1

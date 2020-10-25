@@ -502,6 +502,12 @@ D0
 ~
 0 -1 19725
 E
+portão pedra esculpido~
+Você contempla um portão nada belo.  As pedras que o compõem são sujas e mal
+lascadas formando um arco imperfeito.  O Portão parece estar sempre aberto e
+a passagem é livre.  Nenhum sinal de guardas ou algo parecido.
+~
+E
 placa sinal~
 **************************
 *  Vale dos Orcs Negros  *
@@ -509,12 +515,6 @@ placa sinal~
 *  Lembre-se: Você não é *
 *             Bem vindo  *
 **************************
-~
-E
-portão pedra esculpido~
-Você contempla um portão nada belo.  As pedras que o compõem são sujas e mal
-lascadas formando um arco imperfeito.  O Portão parece estar sempre aberto e
-a passagem é livre.  Nenhum sinal de guardas ou algo parecido.
 ~
 S
 #19725
@@ -999,7 +999,7 @@ D5
 Você vê um alçapão.
 ~
 alçapão~
-1 13000 19751
+1 29000 19751
 S
 #19751
 O Calabouço~
@@ -1020,7 +1020,7 @@ D4
 Você vê um alçapão.
 ~
 alçapão~
-1 13000 19750
+1 29000 19750
 E
 cabeça~
 Aproximando sua luz você vê uma cabeça com um semblante de dor estampado

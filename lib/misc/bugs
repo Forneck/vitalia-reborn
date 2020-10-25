@@ -16,7 +16,7 @@ IdNum     2
 Dated     1591249071
 Level     1
 Room      18602
-Flags     0 0 0 0
+Flags     1 0 0 0
 End
 Text      Set Help~
 Body      Set help derruba o mud
@@ -48,7 +48,7 @@ Level     110
 Room      1204
 Flags     0 0 0 0
 End
-Text       guilda ranger~
+Text      guilda ranger~
 Body      fazer guilda de ranger em mid e nt
 ~
 Name      Cansian~
@@ -56,5 +56,5 @@ IdNum     1
 Dated     1603325631
 Level     110
 Room      3001
-Flags     0 0 0 0
+Flags     1 0 0 0
 End
