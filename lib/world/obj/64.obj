@@ -11,14 +11,14 @@ A
 #6401
 armadura brilhante chapa metal~
 uma brilhante armadura de chapas de metal~
-Uma armadura de chapas de metal está aqui.~
+Uma armadura de chapas de metal estÃ¡ aqui.~
 ~
 9 ag 0 0 0 ad 0 0 0 0 0 0 0
 15 0 0 0
 150 30000 10000 30 0
 #6402
 agata pedra~
-uma ágata~
+uma Ã¡gata~
 Uma pequena pedra repousa aqui.~
 ~
 8 0 0 0 0 a 0 0 0 0 0 0 0
@@ -26,8 +26,8 @@ Uma pequena pedra repousa aqui.~
 1 5000 500 0 0
 #6403
 jade joia~
-um pedaço de Jade~
-Uma pequena jóia brilha aqui.~
+um pedaÃ§o de Jade~
+Uma pequena jÃ³ia brilha aqui.~
 ~
 8 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
@@ -35,21 +35,21 @@ Uma pequena jóia brilha aqui.~
 #6404
 escultura~
 uma escultura~
-Uma bela escultura está aqui.~
+Uma bela escultura estÃ¡ aqui.~
 ~
 8 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 75 20000 2000 0 0
 E
 escultura~
-É de uma linda mulher, porém está esmagada em baixo de muito peso.  Ela
-parece cansada, com talhos, rasgões e manchas em sua face, o que entristece
-muito você.
+Ã‰ de uma linda mulher, porÃ©m estÃ¡ esmagada em baixo de muito peso.  Ela
+parece cansada, com talhos, rasgÃµes e manchas em sua face, o que entristece
+muito vocÃª.
 ~
 #6405
 frasco dragao sangue~
-um frasco com sangue do dragão~
-Um pequeno frasco cheio com um fluido vermelho repousa neste chão imundo.~
+um frasco com sangue do dragÃ£o~
+Um pequeno frasco cheio com um fluido vermelho repousa neste chÃ£o imundo.~
 ~
 10 0 0 0 0 a 0 0 0 0 0 0 0
 7 39 39 39
@@ -57,7 +57,7 @@ Um pequeno frasco cheio com um fluido vermelho repousa neste chão imundo.~
 #6406
 amuleto~
 um amuleto~
-Alguém jogou fora um excêntrico amuleto neste local.~
+AlguÃ©m jogou fora um excÃªntrico amuleto neste local.~
 ~
 9 ag 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
@@ -74,8 +74,8 @@ Um mastro de barraca foi jogado aqui.~
 10 25000 5000 0 0
 #6408
 saco po riqueza~
-um saco de Pó da Riqueza~
-Um pequeno saco cheio de Pó da Riqueza repousa aqui.~
+um saco de PÃ³ da Riqueza~
+Um pequeno saco cheio de PÃ³ da Riqueza repousa aqui.~
 ~
 20 ag 0 0 0 a 0 0 0 0 0 0 0
 100000 0 0 0
@@ -83,7 +83,7 @@ Um pequeno saco cheio de Pó da Riqueza repousa aqui.~
 #6409
 escrivaninha~
 uma escrivaninha~
-Há uma escrivaninha feita em ébano aqui.~
+HÃ¡ uma escrivaninha feita em Ã©bano aqui.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 100 13 0 0
@@ -91,14 +91,14 @@ Há uma escrivaninha feita em ébano aqui.~
 #6410
 livro caos~
 o Livro do Caos~
-Um livro cujo título foi escrito com letras que se movem repousa aqui.~
+Um livro cujo tÃ­tulo foi escrito com letras que se movem repousa aqui.~
 ~
 3 abgh 0 0 0 ao 0 0 0 0 0 0 0
 20 1 1 26
 25 100000 25000 0 0
 #6411
 livro anciao~
-o Livro do Ancião~
+o Livro do AnciÃ£o~
 Um livro contornado de cinzas repousa aqui.~
 ~
 3 abg 0 0 0 ao 0 0 0 0 0 0 0
@@ -107,7 +107,7 @@ Um livro contornado de cinzas repousa aqui.~
 #6412
 lentes absorventes~
 as lentes absorventes~
-Estas lentes que estão na terra parecem ter sido perdidas durante uma batalha.~
+Estas lentes que estÃ£o na terra parecem ter sido perdidas durante uma batalha.~
 ~
 1 aghjk 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -131,19 +131,19 @@ Tomar isso pode dar resultados muito interessantes.
 #6414
 frasco peska~
 um frasco de peska~
-Esta é uma garrafa que contém um fluido leitoso.~
+Esta Ã© uma garrafa que contÃ©m um fluido leitoso.~
 ~
 10 0 0 0 0 a 0 0 0 0 0 0 0
 30 28 3 1
 12 15000 3000 0 0
 E
 frasco peska~
-É uma mistura leitosa, com estranhos grãos flutuando.
+Ã‰ uma mistura leitosa, com estranhos grÃ£os flutuando.
 ~
 #6415
 cajado rand~
 o Cajado de Rand~
-Há um cajado de metal aqui.~
+HÃ¡ um cajado de metal aqui.~
 ~
 9 agnopt 0 0 0 ao 0 0 0 0 0 0 0
 8 0 0 0
@@ -154,32 +154,32 @@ A
 17 -5
 #6416
 bau madeira~
-um baú de madeira~
-Há um baú de madeira aqui.~
+um baÃº de madeira~
+HÃ¡ um baÃº de madeira aqui.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 500 13 0 0
 0 0 0 0 0
 #6417
 bau madeira~
-um baú de madeira~
-Há um baú de madeira aqui.~
+um baÃº de madeira~
+HÃ¡ um baÃº de madeira aqui.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 500 13 0 0
 0 0 0 0 0
 #6418
 bau madeira~
-um baú de madeira~
-Há um baú de madeira aqui.~
+um baÃº de madeira~
+HÃ¡ um baÃº de madeira aqui.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 500 13 0 0
 0 0 0 0 0
 #6419
 bacia~
-uma bacia de água~
-Uma bacia cheia com uma água fresca e limpa está aqui.~
+uma bacia de Ã¡gua~
+Uma bacia cheia com uma Ã¡gua fresca e limpa estÃ¡ aqui.~
 ~
 23 a 0 0 0 0 0 0 0 0 0 0 0
 100 100 0 0
@@ -187,14 +187,14 @@ Uma bacia cheia com uma água fresca e limpa está aqui.~
 #6420
 comida~
 um pouco de comida~
-Há um pouco de comida repousando aqui.~
+HÃ¡ um pouco de comida repousando aqui.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 8 0 0 0
 3 20 10 0 0
 E
 comida~
-É apenas comida sortida encontrada ao acaso.
-Não faça perguntas, isso É APENAS UM JOGO!!!
+Ã‰ apenas comida sortida encontrada ao acaso.
+NÃ£o faÃ§a perguntas, isso Ã‰ APENAS UM JOGO!!!
 ~
 $~
