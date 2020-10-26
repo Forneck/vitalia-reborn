@@ -1,7 +1,7 @@
 #9200
 chave coringa forma indefinida~
 a chave do Reino Coringa~
-VocÍ vÍ uma chave com um desenho de forma indefinida no ch„o.~
+Voc√™ v√™ uma chave com um desenho de forma indefinida no ch√£o.~
 ~
 18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -13,7 +13,7 @@ A chave tem um desenho com os quatro naipes de um baralho.
 #9201
 chave copas~
 a chave do Reino de Copas~
-VocÍ vÍ uma chave no ch„o.~
+Voc√™ v√™ uma chave no ch√£o.~
 ~
 18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -25,7 +25,7 @@ A chave tem um desenho na forma de um naipe de Copas.
 #9202
 chave ouros~
 a chave do Reino de Ouros~
-VocÍ vÍ uma chave no ch„o.~
+Voc√™ v√™ uma chave no ch√£o.~
 ~
 18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -37,7 +37,7 @@ A chave tem um desenho na forma de um naipe de Ouros.
 #9203
 chave espadas~
 a chave do Reino de Espadas~
-VocÍ vÍ uma chave no ch„o.~
+Voc√™ v√™ uma chave no ch√£o.~
 ~
 18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -49,7 +49,7 @@ A chave tem um desenho na forma de um naipe de Espadas.
 #9204
 chave paus~
 a chave do Reino de Paus~
-VocÍ vÍ uma chave no ch„o.~
+Voc√™ v√™ uma chave no ch√£o.~
 ~
 18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -59,74 +59,74 @@ chave paus~
 A chave tem um desenho na forma de um naipe de Paus.
 ~
 #9205
-alabarda valete arma cabo copas l‚mina~
+alabarda valete arma cabo copas lamina~
 a alabarda do Valete de Copas~
-VocÍ encontra uma arma com um longo cabo e uma l‚mina na ponta.~
+Voc√™ encontra uma arma com um longo cabo e uma l√¢mina na ponta.~
 ~
 5 gjl 0 0 0 an 0 0 0 0 0 0 0
 0 3 4 17
 6 5000 500 10 0
 E
-alabarda cabo l‚mina copas~
-Ao examinar de perto esta bela alabarda, vocÍ percebe que em todo o 
-seu cabo h· um entalhe muito bem feito no formato do naipe de copas.
+alabarda cabo lamina copas~
+Ao examinar de perto esta bela alabarda, voc√™ percebe que em todo o 
+seu cabo h√° um entalhe muito bem feito no formato do naipe de copas.
 ~
 #9206
-alabarda valete arma cabo ouros l‚mina~
+alabarda valete arma cabo ouros lamina~
 a alabarda do Valete de Ouros~
-VocÍ encontra uma arma com um longo cabo e uma l‚mina na ponta.~
+Voc√™ encontra uma arma com um longo cabo e uma l√¢mina na ponta.~
 ~
 5 gjl 0 0 0 an 0 0 0 0 0 0 0
 0 3 4 17
 6 5000 500 10 0
 E
-alabarda cabo l‚mina ouros~
-Ao examinar de perto esta bela alabarda, vocÍ percebe que em todo o
-seu cabo h· um entalhe muito bem feito no formato do naipe de ouros.
+alabarda cabo lamina ouros~
+Ao examinar de perto esta bela alabarda, voc√™ percebe que em todo o
+seu cabo h√° um entalhe muito bem feito no formato do naipe de ouros.
 ~
 #9207
-alabarda valete arma cabo l‚mina espadas~
+alabarda valete arma cabo lamina espadas~
 a alabarda do Valete de Espadas~
-VocÍ encontra uma arma com um longo cabo e uma l‚mina na ponta.~
+Voc√™ encontra uma arma com um longo cabo e uma l√¢mina na ponta.~
 ~
 5 gkl 0 0 0 an 0 0 0 0 0 0 0
 0 3 4 17
 6 5000 500 10 0
 E
-alabarda cabo l‚mina espadas~
-Ao examinar de perto esta bela alabarda, vocÍ percebe que em todo o
-seu cabo h· um entalhe muito bem feito no formato do naipe de espadas.
+alabarda cabo lamina espadas~
+Ao examinar de perto esta bela alabarda, voc√™ percebe que em todo o
+seu cabo h√° um entalhe muito bem feito no formato do naipe de espadas.
 ~
 #9208
-alabarda valete arma cabo paus l‚mina~
+alabarda valete arma cabo paus lamina~
 a alabarda do Valete de Paus~
-VocÍ encontra uma arma com um longo cabo e uma l‚mina na ponta.~
+Voc√™ encontra uma arma com um longo cabo e uma l√¢mina na ponta.~
 ~
 5 gkl 0 0 0 an 0 0 0 0 0 0 0
 0 3 4 17
 6 5000 500 10 0
 E
-alabarda cabo l‚mina paus~
-Ao examinar de perto esta bela alabarda, vocÍ percebe que em todo o
-seu cabo h· um entalhe muito bem feito no formato do naipe de espadas.
+alabarda cabo lamina paus~
+Ao examinar de perto esta bela alabarda, voc√™ percebe que em todo o
+seu cabo h√° um entalhe muito bem feito no formato do naipe de espadas.
 ~
 #9209
 alabarda valete arma lamina cabo~
 a alabarda do Valete Coringa~
-VocÍ encontra uma arma com um longo cabo e uma l‚mina na ponta.~
+Voc√™ encontra uma arma com um longo cabo e uma l√¢mina na ponta.~
 ~
 5 gjk 0 0 0 an 0 0 0 0 0 0 0
 0 3 4 17
 6 5000 500 10 0
 E
-alabarda cabo l‚mina coringa~
-Ao examinar de perto esta bela alabarda, vocÍ percebe que em todo o
-seu cabo h· um entalhe muito bem feito no formato dos naipes do baralho.
+alabarda cabo lamina coringa~
+Ao examinar de perto esta bela alabarda, voc√™ percebe que em todo o
+seu cabo h√° um entalhe muito bem feito no formato dos naipes do baralho.
 ~
 #9210
 espada rei real copas bela~
 a espada do Rei de Copas~
-Uma bela espada real encontra-se fincada no ch„o.~
+Uma bela espada real encontra-se fincada no ch√£o.~
 ~
 5 agjlr 0 0 0 an 0 0 0 0 0 0 0
 0 4 6 3
@@ -139,7 +139,7 @@ ela pertenceu a um grande Rei!
 #9211
 espada rei real ouros bela~
 a espada do Rei de Ouros~
-Uma bela espada real encontra-se fincada no ch„o.~
+Uma bela espada real encontra-se fincada no ch√£o.~
 ~
 5 agjlr 0 0 0 an 0 0 0 0 0 0 0
 0 4 6 3
@@ -152,7 +152,7 @@ ela pertenceu a um grande Rei!
 #9212
 espada rei real espadas~
 a espada do Rei de Espadas~
-Uma bela espada real encontra-se fincada no ch„o.~
+Uma bela espada real encontra-se fincada no ch√£o.~
 ~
 5 agklr 0 0 0 an 0 0 0 0 0 0 0
 0 4 6 3
@@ -165,7 +165,7 @@ ela pertenceu a um grande Rei!
 #9213
 espada rei real paus~
 a espada do Rei de Paus~
-Uma bela espada real encontra-se fincada no ch„o.~
+Uma bela espada real encontra-se fincada no ch√£o.~
 ~
 5 agklr 0 0 0 an 0 0 0 0 0 0 0
 0 4 6 3
@@ -178,7 +178,7 @@ ela pertenceu a um grande Rei!
 #9214
 espada rei real coringa~
 a espada do Rei Coringa~
-Uma bela espada real encontra-se fincada no ch„o.~
+Uma bela espada real encontra-se fincada no ch√£o.~
 ~
 5 agjkr 0 0 0 an 0 0 0 0 0 0 0
 0 4 6 3
@@ -190,7 +190,7 @@ ela pertenceu a um grande Rei!
 ~
 #9215
 chicote copas~
-o chicote do ¡s de Copas~
+o chicote do √Ås de Copas~
 Um belo chicote foi deixado aqui.~
 ~
 5 abgjl 0 0 0 an 0 0 0 0 0 0 0
@@ -198,7 +198,7 @@ Um belo chicote foi deixado aqui.~
 3 10000 1000 15 0
 #9216
 chicote ouros~
-o chicote do ¡s de Ouros~
+o chicote do √Ås de Ouros~
 Um belo chicote foi deixado aqui.~
 ~
 5 abgjl 0 0 0 an 0 0 0 0 0 0 0
@@ -206,7 +206,7 @@ Um belo chicote foi deixado aqui.~
 3 10000 1000 15 0
 #9217
 chicote espadas~
-o chicote do ¡s de Espadas~
+o chicote do √Ås de Espadas~
 Um belo chicote foi deixado aqui.~
 ~
 5 abgkl 0 0 0 an 0 0 0 0 0 0 0
@@ -214,7 +214,7 @@ Um belo chicote foi deixado aqui.~
 3 10000 1000 15 0
 #9218
 chicote paus~
-o chicote do ¡s de Paus~
+o chicote do √Ås de Paus~
 Um belo chicote foi deixado aqui.~
 ~
 5 abgkl 0 0 0 an 0 0 0 0 0 0 0
@@ -222,48 +222,48 @@ Um belo chicote foi deixado aqui.~
 3 10000 1000 15 0
 #9219
 chicote falso~
-o chicote do Falso ¡s~
+o chicote do Falso √Ås~
 Um belo chicote foi deixado aqui.~
 ~
 5 abgjk 0 0 0 an 0 0 0 0 0 0 0
 2 4 4 2
 3 10000 1000 15 0
 #9220
-florete copas trÍs~
-o florete do TrÍs de Copas~
-Um florete est· jogado ali no canto.~
+florete copas tr√™s~
+o florete do Tr√™s de Copas~
+Um florete est√° jogado ali no canto.~
 ~
 5 ag 0 0 0 an 0 0 0 0 0 0 0
 0 2 6 3
 3 1000 100 5 0
 #9221
-florete ouros trÍs~
-o florete do TrÍs de Ouros~
-Um florete est· jogado ali no canto.~
+florete ouros tr√™s~
+o florete do Tr√™s de Ouros~
+Um florete est√° jogado ali no canto.~
 ~
 5 ag 0 0 0 an 0 0 0 0 0 0 0
 0 2 6 3
 3 1000 100 5 0
 #9222
-florete espadas trÍs~
-o florete do TrÍs de Espadas~
-Um florete est· jogado ali no canto.~
+florete espadas tr√™s~
+o florete do Tr√™s de Espadas~
+Um florete est√° jogado ali no canto.~
 ~
 5 ag 0 0 0 an 0 0 0 0 0 0 0
 0 2 6 3
 3 1000 100 5 0
 #9223
-florete paus trÍs~
-o florete do TrÍs de Paus~
-Um florete est· jogado ali no canto.~
+florete paus tr√™s~
+o florete do Tr√™s de Paus~
+Um florete est√° jogado ali no canto.~
 ~
 5 ag 0 0 0 an 0 0 0 0 0 0 0
 0 2 6 3
 3 1000 100 5 0
 #9224
 florete coringa~
-o florete do Coringa TrÍs ~
-Um florete est· jogado ali no canto.~
+o florete do Coringa Tr√™s ~
+Um florete est√° jogado ali no canto.~
 ~
 5 ag 0 0 0 an 0 0 0 0 0 0 0
 0 2 6 3
@@ -311,7 +311,7 @@ Um punhal em forma de sete foi esquecido aqui.~
 #9230
 manto rei real bordado copas~
 o manto bordado do Rei de Copas~
-Um manto bordado com o bras„o do Rei de Copas foi deixado aqui.~
+Um manto bordado com o bras√£o do Rei de Copas foi deixado aqui.~
 ~
 11 abfjl 0 0 0 ack 0 0 0 0 0 0 0
 0 0 0 0
@@ -323,7 +323,7 @@ A
 #9231
 manto rei real bordado ouros~
 o manto bordado do Rei de Ouros~
-Um manto bordado com o bras„o do Rei de Ouros foi deixado aqui.~
+Um manto bordado com o bras√£o do Rei de Ouros foi deixado aqui.~
 ~
 11 abfjl 0 0 0 ack 0 0 0 0 0 0 0
 0 0 0 0
@@ -335,7 +335,7 @@ A
 #9232
 manto rei real bordado espadas~
 o manto bordado do Rei de Espadas~
-Um manto bordado com o bras„o do Rei de Espadas foi deixado aqui.~
+Um manto bordado com o bras√£o do Rei de Espadas foi deixado aqui.~
 ~
 11 abfkl 0 0 0 ack 0 0 0 0 0 0 0
 0 0 0 0
@@ -347,7 +347,7 @@ A
 #9233
 manto rei real bordado paus~
 o manto bordado do Rei de Paus~
-Um manto bordado com o bras„o do Rei de Paus foi deixado aqui.~
+Um manto bordado com o bras√£o do Rei de Paus foi deixado aqui.~
 ~
 11 abfkl 0 0 0 ack 0 0 0 0 0 0 0
 0 0 0 0
@@ -359,7 +359,7 @@ A
 #9234
 manto rei real bordado coringa~
 o manto bordado do Rei Coringa~
-Um manto bordado com o bras„o do Rei Coringa foi deixado aqui.~
+Um manto bordado com o bras√£o do Rei Coringa foi deixado aqui.~
 ~
 11 abfjk 0 0 0 ack 0 0 0 0 0 0 0
 0 0 0 0
@@ -371,7 +371,7 @@ A
 #9235
 brinco dama copas~
 um brinco da Dama de Copas~
-Um brinco brilha mesmo na ausÍncia da luz aqui no ch„o~
+Um brinco brilha mesmo na aus√™ncia da luz aqui no ch√£o~
 ~
 9 abgjl 0 0 0 aq 0 0 0 0 0 0 0
 0 0 0 0
@@ -385,7 +385,7 @@ A
 #9236
 brinco dama ouros~
 um brinco da Dama de Ouros~
-Um brinco brilha mesmo na ausÍncia da luz aqui no ch„o~
+Um brinco brilha mesmo na aus√™ncia da luz aqui no ch√£o~
 ~
 9 abgjl 0 0 0 aq 0 0 0 0 0 0 0
 0 0 0 0
@@ -399,7 +399,7 @@ A
 #9237
 brinco dama espadas~
 um brinco da Dama de Espadas~
-Um brinco brilha mesmo na ausÍncia da luz aqui no ch„o~
+Um brinco brilha mesmo na aus√™ncia da luz aqui no ch√£o~
 ~
 9 abgkl 0 0 0 aq 0 0 0 0 0 0 0
 0 0 0 0
@@ -413,7 +413,7 @@ A
 #9238
 brinco dama paus~
 um brinco da Dama de Paus~
-Um brinco brilha mesmo na ausÍncia da luz aqui no ch„o~
+Um brinco brilha mesmo na aus√™ncia da luz aqui no ch√£o~
 ~
 9 abgkl 0 0 0 aq 0 0 0 0 0 0 0
 0 0 0 0
@@ -427,7 +427,7 @@ A
 #9239
 brinco dama coringa~
 um brinco da Dama Coringa~
-Um brinco brilha mesmo na ausÍncia da luz aqui no ch„o~
+Um brinco brilha mesmo na aus√™ncia da luz aqui no ch√£o~
 ~
 9 abgjk 0 0 0 aq 0 0 0 0 0 0 0
 0 0 0 0
@@ -509,81 +509,81 @@ A
 A
 18 2
 #9245
-ba˙ tesouro copas~
-o ba˙ do tesouro de Copas~
-Um belo ba˙ com o Bras„o do Rei de Copas est· aqui.~
+bau tesouro copas~
+o ba√∫ do tesouro de Copas~
+Um belo ba√∫ com o Bras√£o do Rei de Copas est√° aqui.~
 ~
 15 b 0 0 0 0 0 0 0 0 0 0 0
 100 15 9260 0
 500 0 0 0 0
 #9246
-ba˙ tesouro ouros~
-o ba˙ do tesouro de Ouros~
-Um belo ba˙ com o Bras„o do Rei de Ouros est· aqui.~
+bau tesouro ouros~
+o ba√∫ do tesouro de Ouros~
+Um belo ba√∫ com o Bras√£o do Rei de Ouros est√° aqui.~
 ~
 15 b 0 0 0 0 0 0 0 0 0 0 0
 100 15 9261 0
 500 0 0 0 0
 #9247
-ba˙ tesouro espadas~
-o ba˙ do tesouro de Espadas~
-Um belo ba˙ com o Bras„o do Rei de Espadas est· aqui.~
+bau tesouro espadas~
+o ba√∫ do tesouro de Espadas~
+Um belo ba√∫ com o Bras√£o do Rei de Espadas est√° aqui.~
 ~
 15 b 0 0 0 0 0 0 0 0 0 0 0
 100 15 9262 0
 500 0 0 0 0
 #9248
-ba˙ tesouro paus~
-o ba˙ do tesouro de Paus~
-Um belo ba˙ com o Bras„o do Rei de Paus est· aqui.~
+bau tesouro paus~
+o ba√∫ do tesouro de Paus~
+Um belo ba√∫ com o Bras√£o do Rei de Paus est√° aqui.~
 ~
 15 b 0 0 0 0 0 0 0 0 0 0 0
 100 15 9263 0
 500 0 0 0 0
 #9249
-ba˙ tesouro coringa~
-o ba˙ do tesouro Coringa~
-Um belo ba˙ com o Bras„o do Rei coringa est· aqui.~
+bau tesouro coringa~
+o ba√∫ do tesouro Coringa~
+Um belo ba√∫ com o Bras√£o do Rei coringa est√° aqui.~
 ~
 15 b 0 0 0 0 0 0 0 0 0 0 0
 100 15 9264 0
 500 0 0 0 0
 #9250
 arca copas~
-a arca do quarto do ¡s de Copas~
-Uma arca de madeira est· no canto em harmonia com a decoraÁ„o do quarto.~
+a arca do quarto do √Ås de Copas~
+Uma arca de madeira est√° no canto em harmonia com a decora√ß√£o do quarto.~
 ~
 15 b 0 0 0 0 0 0 0 0 0 0 0
 100 15 9265 0
 500 0 0 0 0
 #9251
 arca ouros~
-a arca do quarto do ¡s de Ouros~
-Uma arca de madeira est· no canto em harmonia com a decoraÁ„o do quarto.~
+a arca do quarto do √Ås de Ouros~
+Uma arca de madeira est√° no canto em harmonia com a decora√ß√£o do quarto.~
 ~
 15 b 0 0 0 0 0 0 0 0 0 0 0
 100 15 9266 0
 500 0 0 0 0
 #9252
 arca espadas~
-a arca do quarto do ¡s de Espadas~
-Uma arca de madeira est· no canto em harmonia com a decoraÁ„o do quarto.~
+a arca do quarto do √Ås de Espadas~
+Uma arca de madeira est√° no canto em harmonia com a decora√ß√£o do quarto.~
 ~
 15 b 0 0 0 0 0 0 0 0 0 0 0
 100 15 9267 0
 500 0 0 0 0
 #9253
 arca paus~
-a arca do quarto do ¡s de Paus~
-Uma arca de madeira est· no canto em harmonia com a decoraÁ„o do quarto.~
+a arca do quarto do √Ås de Paus~
+Uma arca de madeira est√° no canto em harmonia com a decora√ß√£o do quarto.~
 ~
 15 b 0 0 0 0 0 0 0 0 0 0 0
 100 15 9268 0
 500 0 0 0 0
 #9254
 arca falso~
-a arca do quarto do Falso ¡s~
-Uma arca de madeira est· no canto em harmonia com a decoraÁ„o do quarto.~
+a arca do quarto do Falso √Ås~
+Uma arca de madeira est√° no canto em harmonia com a decora√ß√£o do quarto.~
 ~
 15 b 0 0 0 0 0 0 0 0 0 0 0
 100 15 9269 0
@@ -591,7 +591,7 @@ Uma arca de madeira est· no canto em harmonia com a decoraÁ„o do quarto.~
 #9255
 coroa rainha copas~
 a coroa da Rainha de Copas~
-Uma coroa foi esquecida e est· aqui juntando poeira.~
+Uma coroa foi esquecida e est√° aqui juntando poeira.~
 ~
 11 aijl 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
@@ -605,7 +605,7 @@ A
 #9256
 coroa rainha ouros~
 a coroa da Rainha de Ouros~
-Uma coroa foi esquecida e est· aqui juntando poeira.~
+Uma coroa foi esquecida e est√° aqui juntando poeira.~
 ~
 11 aijl 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
@@ -619,7 +619,7 @@ A
 #9257
 coroa rainha espadas~
 a coroa da Rainha de Espadas~
-Uma coroa foi esquecida e est· aqui juntando poeira.~
+Uma coroa foi esquecida e est√° aqui juntando poeira.~
 ~
 11 aikl 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
@@ -633,7 +633,7 @@ A
 #9258
 coroa rainha paus~
 a coroa da Rainha de Paus~
-Uma coroa foi esquecida e est· aqui juntando poeira.~
+Uma coroa foi esquecida e est√° aqui juntando poeira.~
 ~
 11 aikl 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
@@ -647,7 +647,7 @@ A
 #9259
 coroa rainha coringa~
 a coroa da Rainha Coringa~
-Uma coroa foi esquecida e est· aqui juntando poeira.~
+Uma coroa foi esquecida e est√° aqui juntando poeira.~
 ~
 11 aijk 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
@@ -661,137 +661,137 @@ A
 #9260
 chave tesouro copas~
 a chave do tesouro de Copas~
-A chave do tesouro est· jogada no ch„o.~
+A chave do tesouro est√° jogada no ch√£o.~
 ~
 18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 2 0 0 0 0
 E
 chave tesouro copas~
-VocÍ se esforÁa e consegue enxergar o desenho muito pequeno no formato do
+Voc√™ se esfor√ßa e consegue enxergar o desenho muito pequeno no formato do
 naipe de copas.
 ~
 #9261
 chave tesouro ouros~
 a chave do tesouro de Ouros~
-A chave do tesouro est· jogada no ch„o.~
+A chave do tesouro est√° jogada no ch√£o.~
 ~
 18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 2 0 0 0 0
 E
 chave tesouro ouros~
-VocÍ se esforÁa e consegue enxergar o desenho muito pequeno no formato do
+Voc√™ se esfor√ßa e consegue enxergar o desenho muito pequeno no formato do
 naipe de ouros.
 ~
 #9262
 chave tesouro espadas~
 a chave do tesouro de Espadas~
-A chave do tesouro est· jogada no ch„o.~
+A chave do tesouro est√° jogada no ch√£o.~
 ~
 18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 2 0 0 0 0
 E
 chave tesouro espadas~
-VocÍ se esforÁa e consegue enxergar o desenho muito pequeno no formato do
+Voc√™ se esfor√ßa e consegue enxergar o desenho muito pequeno no formato do
 naipe de Espadas.
 ~
 #9263
 chave tesouro paus~
 a chave do tesouro de Paus~
-A chave do tesouro est· jogada no ch„o.~
+A chave do tesouro est√° jogada no ch√£o.~
 ~
 18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 2 0 0 0 0
 E
 chave tesouro paus~
-VocÍ se esforÁa e consegue enxergar o desenho muito pequeno no formato do
+Voc√™ se esfor√ßa e consegue enxergar o desenho muito pequeno no formato do
 naipe de paus.
 ~
 #9264
 chave tesouro coringa~
 a chave do tesouro Coringa~
-A chave do tesouro est· jogada no ch„o.~
+A chave do tesouro est√° jogada no ch√£o.~
 ~
 18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 2 0 0 0 0
 E
 chave tesouro coringa~
-VocÍ se esforÁa e consegue enxergar o desenho muito pequeno no formato dos
+Voc√™ se esfor√ßa e consegue enxergar o desenho muito pequeno no formato dos
 quatro naipes do baralho.
 ~
 #9265
-chave esculpida m„o~
-uma chave esculpida a m„o~
-Uma chave esculpida por m„os muito habilidosas est· no ch„o.~
+chave esculpida mao~
+uma chave esculpida a m√£o~
+Uma chave esculpida por m√£os muito habilidosas est√° no ch√£o.~
 ~
 18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 2 0 0 0 0
 E
-esculpida chave m„o~
-M„os habilidosas esculpiram esta chave. VocÍ pode ver a assinatura do 
-¡s de copas!!
+esculpida chave mao~
+M√£os habilidosas esculpiram esta chave. Voc√™ pode ver a assinatura do 
+√Ås de copas!!
 ~
 #9266
-chave esculpida m„o~
-uma chave esculpida a m„o~
-Uma chave esculpida por m„os muito habilidosas est· no ch„o.~
+chave esculpida mao~
+uma chave esculpida a m√£o~
+Uma chave esculpida por m√£os muito habilidosas est√° no ch√£o.~
 ~
 18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 2 0 0 0 0
 E
-esculpida chave m„o~
-M„os habilidosas esculpiram esta chave. VocÍ pode ver a assinatura do 
-¡s de Ouros!!
+esculpida chave mao~
+M√£os habilidosas esculpiram esta chave. Voc√™ pode ver a assinatura do 
+√Ås de Ouros!!
 ~
 #9267
-chave esculpida m„o~
-uma chave esculpida a m„o~
-Uma chave esculpida por m„os muito habilidosas est· no ch„o.~
+chave esculpida mao~
+uma chave esculpida a m√£o~
+Uma chave esculpida por m√£os muito habilidosas est√° no ch√£o.~
 ~
 18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 2 0 0 0 0
 E
-esculpida chave m„o~
-M„os habilidosas esculpiram esta chave. VocÍ pode ver a assinatura do 
-¡s de Espadas!!
+esculpida chave mao~
+M√£os habilidosas esculpiram esta chave. Voc√™ pode ver a assinatura do 
+√Ås de Espadas!!
 ~
 #9268
-chave esculpida m„o~
-uma chave esculpida a m„o~
-Uma chave esculpida por m„os muito habilidosas est· no ch„o.~
+chave esculpida mao~
+uma chave esculpida a m√£o~
+Uma chave esculpida por m√£os muito habilidosas est√° no ch√£o.~
 ~
 18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 2 0 0 0 0
 E
-esculpida chave m„o~
-M„os habilidosas esculpiram esta chave. VocÍ pode ver a assinatura do 
-¡s de Paus!!
+esculpida chave mao~
+M√£os habilidosas esculpiram esta chave. Voc√™ pode ver a assinatura do 
+√Ås de Paus!!
 ~
 #9269
-chave esculpida m„o~
-uma chave esculpida a m„o~
-Uma chave esculpida por m„os muito habilidosas est· no ch„o.~
+chave esculpida mao~
+uma chave esculpida a m√£o~
+Uma chave esculpida por m√£os muito habilidosas est√° no ch√£o.~
 ~
 18 bcdh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 2 0 0 0 0
 E
-esculpida chave m„o~
-M„os habilidosas esculpiram esta chave. VocÍ pode ver a assinatura do 
-Falso ¡s!!
+esculpida chave mao~
+M√£os habilidosas esculpiram esta chave. Voc√™ pode ver a assinatura do 
+Falso √Ås!!
 ~
 #9270
 moedas ouro fortuna~
 a fortuna do Rei de Copas~
-Uma fortuna em moedas de ouro est· aqui.~
+Uma fortuna em moedas de ouro est√° aqui.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 15000 0 0 0
@@ -799,7 +799,7 @@ Uma fortuna em moedas de ouro est· aqui.~
 #9271
 moedas ouro fortuna~
 a fortuna do Rei de Ouros~
-Uma fortuna em moedas de ouro est· aqui.~
+Uma fortuna em moedas de ouro est√° aqui.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 15000 0 0 0
@@ -807,7 +807,7 @@ Uma fortuna em moedas de ouro est· aqui.~
 #9272
 moedas ouro fortuna~
 a fortuna do Rei de Espadas~
-Uma fortuna em moedas de ouro est· aqui.~
+Uma fortuna em moedas de ouro est√° aqui.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 15000 0 0 0
@@ -815,7 +815,7 @@ Uma fortuna em moedas de ouro est· aqui.~
 #9273
 moedas ouro fortuna~
 a fortuna do Rei de Paus~
-Uma fortuna em moedas de ouro est· aqui.~
+Uma fortuna em moedas de ouro est√° aqui.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 15000 0 0 0
@@ -823,47 +823,47 @@ Uma fortuna em moedas de ouro est· aqui.~
 #9274
 moedas ouro fortuna~
 a fortuna do Rei Coringa~
-Uma fortuna em moedas de ouro est· aqui.~
+Uma fortuna em moedas de ouro est√° aqui.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 15000 0 0 0
 5 15000 0 0 0
 #9275
 moedas ouro economias~
-as economias do ¡s de Copas~
-H· algumas moedas de ouro, as economias do ¡s de Copas, espalhadas aqui.~
+as economias do √Ås de Copas~
+H√° algumas moedas de ouro, as economias do √Ås de Copas, espalhadas aqui.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 10000 0 0 0
 5 10000 0 0 0
 #9276
 moedas ouro economias~
-as economias do ¡s de Ouros~
-H· algumas moedas de ouro, as economias do ¡s de Ouros, espalhadas aqui.~
+as economias do √Ås de Ouros~
+H√° algumas moedas de ouro, as economias do √Ås de Ouros, espalhadas aqui.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 10000 0 0 0
 5 10000 0 0 0
 #9277
 moedas ouro economias~
-as economias do ¡s de Espadas~
-H· algumas moedas de ouro, as economias do ¡s de Espadas, espalhadas aqui.~
+as economias do √Ås de Espadas~
+H√° algumas moedas de ouro, as economias do √Ås de Espadas, espalhadas aqui.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 10000 0 0 0
 5 10000 0 0 0
 #9278
 moedas ouro economias~
-as economias do ¡s de Paus~
-H· algumas moedas de ouro, as economias do ¡s de Paus, espalhadas aqui.~
+as economias do √Ås de Paus~
+H√° algumas moedas de ouro, as economias do √Ås de Paus, espalhadas aqui.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 10000 0 0 0
 5 10000 0 0 0
 #9279
 moedas ouro economias~
-as economias do Falso ¡s~
-H· algumas moedas de ouro, as economias do Falso ¡s, espalhadas aqui.~
+as economias do Falso √Ås~
+H√° algumas moedas de ouro, as economias do Falso √Ås, espalhadas aqui.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 10000 0 0 0

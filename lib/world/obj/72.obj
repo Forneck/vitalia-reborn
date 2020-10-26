@@ -1,162 +1,162 @@
 #7200
 vara maligna~
 a vara maligna~
-Uma misteriosa vara maligna está no chão.~
+Uma misteriosa vara maligna estÃ¡ no chÃ£o.~
 ~
 5 gj 0 0 0 an 0 0 0 0 0 0 0
 0 2 5 3
 6 16000 800 0 0
 E
 vara maligna~
-Isso é, de fato, uma vara misteriosa.  Ela é negra na base e tem quatro
-tentáculos roxos e afiados no fim.
+Isso Ã©, de fato, uma vara misteriosa.  Ela Ã© negra na base e tem quatro
+tentÃ¡culos roxos e afiados no fim.
 ~
 A
 18 3
 A
 1 -1
 #7201
-grande maça~
-a grande maça~
-Uma grande maça está aqui.~
+grande maca~
+a grande maÃ§a~
+Uma grande maÃ§a estÃ¡ aqui.~
 ~
 5 g 0 0 0 an 0 0 0 0 0 0 0
 0 1 6 7
 10 1000 400 0 0
 E
-grande maça~
-A maça é grande e bonita e deve pesar umas 10 libras.  Na cabeça há quatro
-tentáculos amarrados juntos.
+grande maca~
+A maÃ§a Ã© grande e bonita e deve pesar umas 10 libras.  Na cabeÃ§a hÃ¡ quatro
+tentÃ¡culos amarrados juntos.
 ~
 A
 19 2
 #7202
-pequena maça~
-a pequena maça~
-Uma pequena maça foi deixada aqui.~
+pequena maca~
+a pequena maÃ§a~
+Uma pequena maÃ§a foi deixada aqui.~
 ~
 5 g 0 0 0 an 0 0 0 0 0 0 0
 0 1 6 7
 6 600 200 0 0
 E
-pequena macaa maça~
-Esta arma não parece causar um grande dano, porém nunca se sabe.  Ela
-consiste de um cabo preto e uma cabeça roxa.
+pequena maca~
+Esta arma nÃ£o parece causar um grande dano, porÃ©m nunca se sabe.  Ela
+consiste de um cabo preto e uma cabeÃ§a roxa.
 ~
 A
 19 1
 #7203
 capa roxa~
 uma capa roxa~
-Uma capa roxa está no chão.~
+Uma capa roxa estÃ¡ no chÃ£o.~
 ~
 11 g 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
 20 5000 6000 0 0
 E
 capa roxa~
-Ela é uma capa feita de um material muito fino e desconhecido, de uma
-coloração roxa muito bonita.
+Ela Ã© uma capa feita de um material muito fino e desconhecido, de uma
+coloraÃ§Ã£o roxa muito bonita.
 ~
 A
 24 2
 A
 17 -10
 #7204
-poção azul neon~
-uma poção azul neon~
-Uma poção azul neon está no chão.~
+pocao azul neon~
+uma poÃ§Ã£o azul neon~
+Uma poÃ§Ã£o azul neon estÃ¡ no chÃ£o.~
 ~
 10 g 0 0 0 a 0 0 0 0 0 0 0
 14 6 15 16
 4 100 1000 0 0
 E
-poção azul~
-No frasco há um líquido azul, transparente e elétrico.
+pocao azul~
+No frasco hÃ¡ um lÃ­quido azul, transparente e elÃ©trico.
 ~
 #7205
 chave preta~
 uma chave preta~
-Uma chave preta foi deixada aqui no chão.~
+Uma chave preta foi deixada aqui no chÃ£o.~
 ~
 18 c 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 2 0 0 0 0
 E
 chave preta~
-Esta pequena chave é feita de um material negro de origem desconhecida.
+Esta pequena chave Ã© feita de um material negro de origem desconhecida.
 ~
 #7206
-crânio branco~
-um estranho crânio branco~
-Um estranho crânio branco está no chão, olhando para você.~
+cranio branco~
+um estranho crÃ¢nio branco~
+Um estranho crÃ¢nio branco estÃ¡ no chÃ£o, olhando para vocÃª.~
 ~
 9 abh 0 0 0 ae 0 0 0 0 0 0 0
 1 0 0 0
 30 0 250 0 0
 E
 texto escritura~
-Você lê o número '666'.
+VocÃª lÃª o nÃºmero '666'.
 ~
 E
-crânio branco~
-O crânio tem dois chifres na fronte.  Você nota uma escritura no lado
+cranio branco~
+O crÃ¢nio tem dois chifres na fronte.  VocÃª nota uma escritura no lado
 de dentro.
 ~
 A
 2 -4
 #7207
-manoplas lamaçentas~
-um par de manoplas lamaçentas~
-Um par de manoplas lamaçentas foram jogadas aqui.~
+manoplas lamacentas~
+um par de manoplas lamaÃ§entas~
+Um par de manoplas lamaÃ§entas foram jogadas aqui.~
 ~
 9 g 0 0 0 ah 0 0 0 0 0 0 0
 6 0 0 0
 10 6000 1500 0 0
 E
-manoplas lamaçentas~
-Estas manoplas são realmente lamaçentas porém parecem muito eficazes.
+manoplas lamaÃ§entas~
+Estas manoplas sÃ£o realmente lamaÃ§entas porÃ©m parecem muito eficazes.
 ~
 A
 1 1
 #7208
 pequena bengala~
 uma pequena bengala~
-Uma pequena bengala está aqui.~
+Uma pequena bengala estÃ¡ aqui.~
 ~
 1 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
 4 200 200 0 0
 E
 letras letra~
-Você lê:
+VocÃª lÃª:
 
 Segure-me
 
 ~
 E
 pequena bengala~
-A pequena bengala não parece interessante.  Mas quando você vai jogá-la fora,
-você nota pequenas letras nela.
+A pequena bengala nÃ£o parece interessante.  Mas quando vocÃª vai jogÃ¡-la fora,
+vocÃª nota pequenas letras nela.
 ~
 #7209
-botas lamaçentas~
-um par de botas lamaçentas~
-Um par de botas lamaçentas foi jogada aqui.~
+botas lamacentas~
+um par de botas lamaÃ§entas~
+Um par de botas lamaÃ§entas foi jogada aqui.~
 ~
 9 g 0 0 0 ag 0 0 0 0 0 0 0
 4 0 0 0
 10 75 500 0 0
 E
-botas lamaçentas~
-As botas são lamaçentas e parecem bem gastas mas são bem confortáveis.
+botas lamacentas~
+As botas sÃ£o lamaÃ§entas e parecem bem gastas mas sÃ£o bem confortÃ¡veis.
 ~
 A
 14 15
 #7210
 tesouro moedas~
 um grande tesouro~
-Há um grande tesouro aqui, aparentando ser bem valioso.~
+HÃ¡ um grande tesouro aqui, aparentando ser bem valioso.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 6522 0 0 0
@@ -168,13 +168,13 @@ Parece ser um monte de moedas.
 #7211
 espada pequena~
 uma espada pequena~
-Uma espada pequena está aqui.~
+Uma espada pequena estÃ¡ aqui.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 0 2 3 3
 4 100 300 0 0
 E
 espada pequena~
-Ela é uma arma pequena muito boa.
+Ela Ã© uma arma pequena muito boa.
 ~
 $~

@@ -1,38 +1,38 @@
 #7900
-chave aço~
-uma grande chave de aço~
-Uma grande chave de aço foi deixada aqui.~
+chave aco~
+uma grande chave de aÃ§o~
+Uma grande chave de aÃ§o foi deixada aqui.~
 ~
 18 c 0 0 0 ao 0 0 0 0 0 0 0
 7900 0 0 0
 2 0 0 0 0
 E
-aço chave~
-Esta enorme chave é feita de aço sólido.
+aÃ§o chave~
+Esta enorme chave Ã© feita de aÃ§o sÃ³lido.
 ~
 #7901
 chave bronze~
 uma chave de bronze~
-Uma chave de bronze foi deixada no chão.~
+Uma chave de bronze foi deixada no chÃ£o.~
 ~
 18 c 0 0 0 ao 0 0 0 0 0 0 0
 7901 0 0 0
 2 0 0 0 0
 E
 bronze chave~
-Esta pequena chave é feita de bronze.
+Esta pequena chave Ã© feita de bronze.
 ~
 #7902
-chave latão~
-uma pequena chave de latão~
-Uma pequena chave de latão está aqui.~
+chave latao~
+uma pequena chave de latÃ£o~
+Uma pequena chave de latÃ£o estÃ¡ aqui.~
 ~
 18 c 0 0 0 ao 0 0 0 0 0 0 0
 7902 0 0 0
 1 10 4 0 0
 E
-chave latão~
-É uma pequena, simples chave de latão sem inscrições ou marcas de
+chave latao~
+Ã‰ uma pequena, simples chave de latÃ£o sem inscriÃ§Ãµes ou marcas de
 qualquer tipo.
 ~
 #7903
@@ -45,25 +45,25 @@ Existe um grande tesouro aqui, parecendo moderadamente valioso.~
 5 7734 0 0 0
 E
 tesouro~
-Isto parece como um monte de moedas, mas não tantas quanto você esperava.
+Isto parece como um monte de moedas, mas nÃ£o tantas quanto vocÃª esperava.
 ~
 #7904
 caixa madeira~
 uma caixa de madeira~
-Uma caixa de madeira está no canto.~
+Uma caixa de madeira estÃ¡ no canto.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 100 15 7902 0
 0 0 0 0 0
 E
 caixa madeira~
-É uma robusta caixa feita de curtas, pesadas tábuas que foram fixadas com juntas.
-A caixa está equipada com uma fechadura de latão simples.
+Ã‰ uma robusta caixa feita de curtas, pesadas tÃ¡buas que foram fixadas com juntas.
+A caixa estÃ¡ equipada com uma fechadura de latÃ£o simples.
 ~
 #7905
 caixa~
 uma caixa~
-Uma pesada caixa de ferro está em um canto da sala.~
+Uma pesada caixa de ferro estÃ¡ em um canto da sala.~
 ~
 15 f 0 0 0 0 0 0 0 0 0 0 0
 15 15 7902 0
@@ -91,16 +91,16 @@ Um grande bracelete com espinhos foi deixado aqui.~
 A
 17 -4
 #7908
-viagem pão lemba~
-um pão de viagem~
-Um pão de viagem foi deixado aqui.~
+viagem pao lemba~
+um pÃ£o de viagem~
+Um pÃ£o de viagem foi deixado aqui.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 24 0 0 0
 1 50 50 0 0
 E
-viagem pão lemba~
-O pão de viagem é a comida tradicional dos elfos durante viagens, sendo
+viagem pÃ£o lemba~
+O pÃ£o de viagem Ã© a comida tradicional dos elfos durante viagens, sendo
 chamado de lembas.  Dizem que eles saciam a fome dos cansados viajantes
 rapidamente.
 ~
@@ -131,48 +131,48 @@ A
 #7911
 elmo grande~
 um grande elmo~
-Existe um grande elmo no chão.~
+Existe um grande elmo no chÃ£o.~
 ~
 9 g 0 0 0 ae 0 0 0 0 0 0 0
 7 0 0 0
 5 4500 1500 0 0
 E
 grande elmo~
-Isto parece ter uma proteção pesada, para a cabeça é claro.
+Isto parece ter uma proteÃ§Ã£o pesada, para a cabeÃ§a Ã© claro.
 ~
 #7912
-elmo caótico~
-um elmo caótico~
-No chão está um elmo caótico grande e de má aparência.~
+elmo caotico~
+um elmo caÃ³tico~
+No chÃ£o estÃ¡ um elmo caÃ³tico grande e de mÃ¡ aparÃªncia.~
 ~
 9 fgj 0 0 0 ae 0 0 0 0 0 0 0
 8 0 0 0
 8 2300 1000 0 0
 E
-caótico elmo~
+caotico elmo~
 Este elmo tem espinhos amedrontadores, enfileirados na frente.
-Mas isto parece ser boa proteção.
+Mas isto parece ser boa proteÃ§Ã£o.
 ~
 A
 19 2
 A
 24 -2
 #7913
-espada duas-mãos~
-uma espada para duas-mãos~
-Uma enorme espada para duas-mãos foi deixada aqui.~
+espada duas-maos~
+uma espada para duas-mÃ£os~
+Uma enorme espada para duas-mÃ£os foi deixada aqui.~
 ~
 5 gjkmr 0 0 0 an 0 0 0 0 0 0 0
 0 3 6 3
 22 3500 3500 0 0
 E
 runas~
-Na lâmina você pode ler 'Fogo e Força Unidos São O Poder De Minha Alma'.
+Na lÃ¢mina vocÃª pode ler 'Fogo e ForÃ§a Unidos SÃ£o O Poder De Minha Alma'.
 ~
 E
-duas-mãos espada~
-Você nota em que foram escritas algumas runas e um tipo de desenho,
-que lembram chamas queimando sobre uma lâmina.
+duas-maos espada~
+VocÃª nota em que foram escritas algumas runas e um tipo de desenho,
+que lembram chamas queimando sobre uma lÃ¢mina.
 ~
 A
 17 10
@@ -181,20 +181,20 @@ A
 #7914
 placa peito prateada prata~
 uma placa de peito prateada~
-Existe uma placa de peito prateada no chão.~
+Existe uma placa de peito prateada no chÃ£o.~
 ~
 9 gkl 0 0 0 ad 0 0 0 0 0 0 0
 10 7000 0 0
 70 20000 5000 0 0
 E
 placa peito prateada prata~
-Na placa de peito você vê uma grande rosa em alto relevo.  O metal 
+Na placa de peito vocÃª vÃª uma grande rosa em alto relevo.  O metal 
 parece ser algum tipo de prata ou platina.
 ~
 #7915
 placas perna prateadas~
 algumas placas prateadas de perna~
-No chão você vê algumas placas de perna.~
+No chÃ£o vocÃª vÃª algumas placas de perna.~
 ~
 9 gkl 0 0 0 af 0 0 0 0 0 0 0
 7 7000 0 0
@@ -202,82 +202,82 @@ No chão você vê algumas placas de perna.~
 E
 perna placas prateadas prata~
 Elas parecem ser feitas de prata ou platina.  
-Você vê o desenho de uma rosa.
+VocÃª vÃª o desenho de uma rosa.
 ~
 #7916
 luvas prateadas prata~
 um par de luvas prateadas~
-Você pode ver um par de luvas no chão.~
+VocÃª pode ver um par de luvas no chÃ£o.~
 ~
 9 gkl 0 0 0 ah 0 0 0 0 0 0 0
 5 7000 0 0
 14 2500 2000 0 0
 E
 luvas prateadas prata~
-As luvas são feitas de fios de prata.
+As luvas sÃ£o feitas de fios de prata.
 ~
 A
 18 1
 #7917
 elmo prateado prata~
 um elmo prateado~
-O elmo prateado está aqui.~
+O elmo prateado estÃ¡ aqui.~
 ~
 9 gkl 0 0 0 ae 0 0 0 0 0 0 0
 8 7000 0 0
 35 9000 5000 0 0
 E
 elmo prateado prata~
-O elmo é feito de platina ou prata e tem uma pena branca no topo.
+O elmo Ã© feito de platina ou prata e tem uma pena branca no topo.
 ~
 #7918
 escudo rosa~
 o escudo da rosa~
-O escudo da rosa está no chão.~
+O escudo da rosa estÃ¡ no chÃ£o.~
 ~
 9 gkl 0 0 0 aj 0 0 0 0 0 0 0
 12 7000 0 0
 60 15000 7500 0 0
 E
-inscrição~
-A inscrição diz:
+inscriÃ§Ã£o~
+A inscriÃ§Ã£o diz:
 
 Pax Est Sanctuum
 
 ~
 E
 escudo rosa~
-No escudo você vê um claro e perfeito desenho de uma rosa vermelho-escuro
-em um fundo branco.  Você também vê uma inscrição.
+No escudo vocÃª vÃª um claro e perfeito desenho de uma rosa vermelho-escuro
+em um fundo branco.  VocÃª tambÃ©m vÃª uma inscriÃ§Ã£o.
 ~
 #7919
-botas pesadamente reforçadas~
-um par de botas pesadamente reforçadas~
-Um par de botas pesadamente reforçadas está no chão.~
+botas pesadamente reforcadas~
+um par de botas pesadamente reforÃ§adas~
+Um par de botas pesadamente reforÃ§adas estÃ¡ no chÃ£o.~
 ~
 9 gkl 0 0 0 ag 0 0 0 0 0 0 0
 5 7000 0 0
 40 3500 3500 0 0
 E
-botas pesadamente reforçadas~
-As botas são feitas de um metal prateado.
+botas pesadamente reforcadas~
+As botas sÃ£o feitas de um metal prateado.
 ~
 #7920
-placas braço prateadas prata~
-algumas placas prateadas de braço~
-No chão você vê algumas placas de braço.~
+placas braco prateadas prata~
+algumas placas prateadas de braÃ§o~
+No chÃ£o vocÃª vÃª algumas placas de braÃ§o.~
 ~
 9 gkl 0 0 0 ai 0 0 0 0 0 0 0
 7 7000 0 0
 40 12500 5000 0 0
 E
-placas braço prateadas prata~
-Elas parecem ser feitas de prata ou platina.  Você vê o desenho de uma rosa
+placas braco prateadas prata~
+Elas parecem ser feitas de prata ou platina.  VocÃª vÃª o desenho de uma rosa
 ~
 #7921
 barril~
 um barril~
-Um barril de água foi deixado aqui.~
+Um barril de Ã¡gua foi deixado aqui.~
 ~
 17 0 0 0 0 a 0 0 0 0 0 0 0
 40 40 15 0

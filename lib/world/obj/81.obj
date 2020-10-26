@@ -1,30 +1,30 @@
 #8101
 osso~
 um osso~
-Há aqui um grande osso destacando-se dentre os restos mortais de uma criatura.~
+HÃ¡ aqui um grande osso destacando-se dentre os restos mortais de uma criatura.~
 ~
 13 dh 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 2 1 1 0 0
 #8102
-crânio~
-um crânio~
-Um crânio empoeirado está jogado aqui.~
+cranio~
+um crÃ¢nio~
+Um crÃ¢nio empoeirado estÃ¡ jogado aqui.~
 ~
 13 dh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 4 1 1 0 0
 #8103
-máscara anúbis~
-a máscara de Anúbis~
-Algo semelhante à cabeça de um chacal foi deixada no chão, atraindo a sua atenção.~
+mascara anubis~
+a mÃ¡scara de AnÃºbis~
+Algo semelhante Ã  cabeÃ§a de um chacal foi deixada no chÃ£o, atraindo a sua atenÃ§Ã£o.~
 ~
 9 agl 0 0 0 ae 0 0 0 0 0 0 0
 8 0 0 0
 25 800000 80000 78 0
 E
-máscara anúbis~
-Você tem em mãos a assustadora e inexpressiva face de um chacal.
+mascara anubis~
+VocÃª tem em mÃ£os a assustadora e inexpressiva face de um chacal.
 ~
 A
 19 3
@@ -35,15 +35,15 @@ A
 #8104
 coroa nefertiti~
 a coroa de Nefertiti~
-A magnífica coroa da rainha do Egito foi esquecida aqui.~
+A magnÃ­fica coroa da rainha do Egito foi esquecida aqui.~
 ~
 11 agk 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
 10 300000 30000 80 0
 E
 coroa nefertiti~
-Examinando-a você só consegue pensar em uma coisa: está à altura da
-belíssima Nefertiti.
+Examinando-a vocÃª sÃ³ consegue pensar em uma coisa: estÃ¡ Ã  altura da
+belÃ­ssima Nefertiti.
 ~
 A
 6 2
@@ -52,7 +52,7 @@ A
 #8105
 papiro~
 um papiro~
-Há um pedaço de papiro amarrotado no chão.~
+HÃ¡ um pedaÃ§o de papiro amarrotado no chÃ£o.~
 ~
 13 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
@@ -66,9 +66,9 @@ Uma tocha ardendo em chamas foi jogada aqui.~
 0 0 10 0
 10 90 9 0 0
 #8107
-tâmara~
-uma tâmara~
-Você se depara com uma tâmara jogada no chão.~
+tamara~
+uma tÃ¢mara~
+VocÃª se depara com uma tÃ¢mara jogada no chÃ£o.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 3 0 0 0
@@ -76,7 +76,7 @@ Você se depara com uma tâmara jogada no chão.~
 #8108
 figo seco~
 um figo seco~
-Parece que alguém perdeu aqui um apetitoso figo seco.~
+Parece que alguÃ©m perdeu aqui um apetitoso figo seco.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 4 0 0 0
@@ -90,9 +90,9 @@ Um grande cacho de uvas foi jogado aqui.~
 3 0 0 0
 3 5 1 0 0
 #8110
-maçã~
-uma maçã~
-Você se depara com uma bonita maçã jogada no chão.~
+maca~
+uma maÃ§Ã£~
+VocÃª se depara com uma bonita maÃ§Ã£ jogada no chÃ£o.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 3 0 0 0
@@ -100,23 +100,23 @@ Você se depara com uma bonita maçã jogada no chão.~
 #8111
 liteira~
 uma liteira~
-Uma preciosa liteira adornada com pedras preciosas foi cuidadosamente depositada no chão.~
+Uma preciosa liteira adornada com pedras preciosas foi cuidadosamente depositada no chÃ£o.~
 ~
 22 d 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 40 400 40 30 0
 #8112
-sandálias egípcias~
-um par de sandálias egípcias~
+sandalias egipcias~
+um par de sandÃ¡lias egÃ­pcias~
 Um par de sandalias foi esquecido aqui.~
 ~
 9 0 0 0 0 ag 0 0 0 0 0 0 0
 7 0 0 0
 10 1000 100 10 0
 #8113
-sandálias akhenaton~
-as sandálias de Akhenaton~
-Um par de sandálias digno de um faraó foi deixado aqui.~
+sandalias akhenaton~
+as sandÃ¡lias de Akhenaton~
+Um par de sandÃ¡lias digno de um faraÃ³ foi deixado aqui.~
 ~
 9 bk 0 0 0 ag 0 0 0 0 0 0 0
 10 0 0 0
@@ -126,7 +126,7 @@ A
 #8114
 algumas bandagens~
 algumas bandagens~
-Há algumas bandagens encardidas aqui.~
+HÃ¡ algumas bandagens encardidas aqui.~
 ~
 13 a 0 0 0 ad 0 0 0 0 0 0 0
 0 0 0 0
@@ -136,22 +136,22 @@ A
 #8115
 cesta~
 uma cesta~
-Uma velha cesta foi jogada no chão daqui.~
+Uma velha cesta foi jogada no chÃ£o daqui.~
 ~
 15 0 0 0 0 ao 0 0 0 0 0 0 0
 80 0 -1 0
 8 30 5 0 0
 #8116
-amuleto hórus~
-o amuleto de Hórus~
-Um misterioso amuleto parece magicamente atrair a sua atenção.~
+amuleto horus~
+o amuleto de HÃ³rus~
+Um misterioso amuleto parece magicamente atrair a sua atenÃ§Ã£o.~
 ~
 11 bgjn 0 0 0 ac 0 0 0 defl 0 0 0
 0 0 0 0
 15 900000 150000 70 0
 E
-amuleto hórus~
-O poder que emana do amuleto lhe dá uma sensação de força...
+amuleto horus~
+O poder que emana do amuleto lhe dÃ¡ uma sensaÃ§Ã£o de forÃ§a...
 ~
 A
 17 -10
@@ -160,18 +160,18 @@ A
 A
 2 1
 #8117
-lança Sekmet~
-a lança de Sekmet~
-Uma grande e bela lança foi esquecida aqui.~
+lanca Sekmet~
+a lanÃ§a de Sekmet~
+Uma grande e bela lanÃ§a foi esquecida aqui.~
 ~
 5 bgjl 0 0 0 an 0 0 0 0 0 0 0
 0 5 7 11
 20 500000 60000 70 0
 E
-lança Sekmet~
-Essa bela lança foi feita de algum estranho e raro material.  Você examina
-com atenção o grande número de desenhos inscritos por toda sua extensão, mas
-não consegue entendê-los.
+lanca Sekmet~
+Essa bela lanÃ§a foi feita de algum estranho e raro material.  VocÃª examina
+com atenÃ§Ã£o o grande nÃºmero de desenhos inscritos por toda sua extensÃ£o, mas
+nÃ£o consegue entendÃª-los.
 ~
 A
 18 7
@@ -206,16 +206,16 @@ A
 A
 17 -7
 #8120
-ankh osíris~
-a ankh de Osíris~
-Uma poderosa ankh jaz aqui a espera de um guardião. Ela brilha ao seu olhar.~
+ankh osiris~
+a ankh de OsÃ­ris~
+Uma poderosa ankh jaz aqui a espera de um guardiÃ£o. Ela brilha ao seu olhar.~
 ~
 11 aglo 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
 7 750000 75000 70 0
 E
 ankh osiris~
-Esse artefato possui um poder incrível...  O espírito de Osíris parece
+Esse artefato possui um poder incrÃ­vel...  O espÃ­rito de OsÃ­ris parece
 descansar em seu interior.
 ~
 A
@@ -225,9 +225,9 @@ A
 A
 17 -10
 #8121
-pote~
-um pote de água~
-Um pequeno pote de água está aqui.~
+pote agua~
+um pote de Ã¡gua~
+Um pequeno pote de Ã¡gua estÃ¡ aqui.~
 ~
 17 0 0 0 0 a 0 0 0 0 0 0 0
 4 4 0 0
@@ -235,7 +235,7 @@ Um pequeno pote de água está aqui.~
 #8122
 lamparina~
 uma lamparina~
-Você vê uma lamparina jogada aqui.~
+VocÃª vÃª uma lamparina jogada aqui.~
 ~
 1 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 5 0
@@ -243,7 +243,7 @@ Você vê uma lamparina jogada aqui.~
 #8123
 esfinge ouro~
 uma esfinge de ouro~
-Uma belíssima réplica em ouro de uma esfinge foi deixada aqui.~
+Uma belÃ­ssima rÃ©plica em ouro de uma esfinge foi deixada aqui.~
 ~
 8 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
@@ -267,7 +267,7 @@ A
 #8125
 cetro immothep~
 o cetro de Immothep~
-Um estranho cetro está aqui.~
+Um estranho cetro estÃ¡ aqui.~
 ~
 12 gjnp 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -279,33 +279,33 @@ A
 A
 1 3
 #8126
-qebehsenuef canópica bela~
-a canópica de Qebehsenuef~
-Uma bela canópica foi colocada aqui.~
+qebehsenuef canopica bela~
+a canÃ³pica de Qebehsenuef~
+Uma bela canÃ³pica foi colocada aqui.~
 ~
 17 bh 0 0 0 ao 0 0 0 0 0 0 0
 5 4 13 1
 40 5000 500 30 0
 #8127
-hapi canópica ornamentada~
-a canópica de Hapi~
-Uma canópica ornamentada foi deixada aqui.~
+hapi canopica ornamentada~
+a canÃ³pica de Hapi~
+Uma canÃ³pica ornamentada foi deixada aqui.~
 ~
 17 abh 0 0 0 ao 0 0 0 0 0 0 0
 6 6 13 0
 30 6000 300 30 0
 #8128
-canópica ouro deimsety~
-a canópica de Deimsety~
-Uma canópica de ouro está brilhando aqui.~
+canopica ouro deimsety~
+a canÃ³pica de Deimsety~
+Uma canÃ³pica de ouro estÃ¡ brilhando aqui.~
 ~
 12 bghj 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 30 80000 5000 40 0
 #8129
-canópica esplêndida duamutef~
-a canópica de Duamutef~
-Uma esplêndida canópica com confusos desenhos foi guardada aqui.~
+canopica esplendida duamutef~
+a canÃ³pica de Duamutef~
+Uma esplÃªndida canÃ³pica com confusos desenhos foi guardada aqui.~
 ~
 12 bghl 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -313,15 +313,15 @@ Uma esplêndida canópica com confusos desenhos foi guardada aqui.~
 #8130
 livro mortos~
 o Livro dos mortos~
-Um grande livro negro está aqui envolto por uma misteriosa luz.~
+Um grande livro negro estÃ¡ aqui envolto por uma misteriosa luz.~
 ~
 12 bgjop 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 30 900000 150000 80 0
 E
 livro mortos~
-Ele é um grande e velho livro com antigas preces egípcias.  Segundo dizem, é
-um dos mais poderosos livros que já existiu.
+Ele Ã© um grande e velho livro com antigas preces egÃ­pcias.  Segundo dizem, Ã©
+um dos mais poderosos livros que jÃ¡ existiu.
 ~
 A
 12 100
@@ -330,7 +330,7 @@ A
 #8131
 frasco veneno negro~
 um frasco de veneno~
-Um pequeno frasco negro está no chão.~
+Um pequeno frasco negro estÃ¡ no chÃ£o.~
 ~
 17 0 0 0 0 a 0 0 0 0 0 0 0
 2 2 13 1
@@ -338,38 +338,38 @@ Um pequeno frasco negro está no chão.~
 #8132
 frasco perfume belo~
 um frasco de perfume~
-Um belo frasco de perfume está aqui.~
+Um belo frasco de perfume estÃ¡ aqui.~
 ~
 8 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 13 8000 800 0 0
 #8133
-adaga egípcia hieróglifos~
-uma adaga egípcia~
-Uma adaga com confusos hieróglifos foi jogada aqui.~
+adaga egipcia hieroglifos~
+uma adaga egÃ­pcia~
+Uma adaga com confusos hierÃ³glifos foi jogada aqui.~
 ~
 5 gln 0 0 0 ano 0 0 0 0 0 0 0
 0 2 4 11
 7 60000 5000 30 0
 #8134
-lança egípcia bela~
-uma lança egípcia~
-Uma bela lança foi deixada aqui.~
+lanÃ§a egipcia bela~
+uma lanÃ§a egÃ­pcia~
+Uma bela lanÃ§a foi deixada aqui.~
 ~
 5 gl 0 0 0 an 0 0 0 0 0 0 0
 0 3 5 11
 15 70000 5000 30 0
 #8135
-faca egípcia~
-uma faca egípcia~
+faca egipcia~
+uma faca egÃ­pcia~
 Uma faca reluzindo uma luz maligna foi jogada aqui.~
 ~
 5 agjln 0 0 0 ano 0 0 0 0 0 0 0
 0 5 7 3
 8 900000 200000 50 0
 E
-faca egípcia~
-Esta faca está coberta por desenhos de chamas...  Dela se desprende uma
+faca egipcia~
+Esta faca estÃ¡ coberta por desenhos de chamas...  Dela se desprende uma
 energia maligna.
 ~
 A
@@ -379,8 +379,8 @@ A
 A
 18 2
 #8136
-espada egípcia grande~
-uma espada egípcia~
+espada egipcia grande~
+uma espada egÃ­pcia~
 Uma grande espada jaz aqui esperando um futuro banho de sangue.~
 ~
 5 abjmnotu 0 0 0 an 0 0 0 0 0 0 0
@@ -393,9 +393,9 @@ A
 A
 17 -2
 #8137
-machado egípcio~
-um machado egípcio~
-Um machado de aparência ameaçadora foi jogado aqui.~
+machado egipcio~
+um machado egÃ­pcio~
+Um machado de aparÃªncia ameaÃ§adora foi jogado aqui.~
 ~
 5 bgjmnortu 0 0 0 an 0 0 0 0 0 0 0
 0 3 9 6
@@ -405,8 +405,8 @@ A
 A
 19 1
 #8138
-turbante egípcio velho~
-um turbante egípcio~
+turbante egipcio velho~
+um turbante egÃ­pcio~
 Um velho turbante foi esquecido aqui.~
 ~
 11 al 0 0 0 ae 0 0 0 0 0 0 0
@@ -419,7 +419,7 @@ A
 #8139
 turbante vizir~
 o turbante do Vizir~
-Um turbante feito em fino tecido foi jogado no chão.~
+Um turbante feito em fino tecido foi jogado no chÃ£o.~
 ~
 11 aj 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
@@ -445,8 +445,8 @@ A
 A
 12 10
 #8141
-embrace egípcio velho~
-um embrace egípcio~
+embrace egipcio velho~
+um embrace egÃ­pcio~
 Um velho embrace foi jogado aqui.~
 ~
 9 bl 0 0 0 ai 0 0 0 0 0 0 0
@@ -455,16 +455,16 @@ Um velho embrace foi jogado aqui.~
 A
 18 1
 #8142
-boi amuleto pequeno ápis~
-o boi Ápis~
+boi amuleto pequeno apis~
+o boi Ãpis~
 Um pequeno amuleto foi deixado aqui.~
 ~
 8 bdgh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 10 5000 500 0 0
 E
-boi ápis amuleto~
-Esse amuleto traz a imagem de uma poderosa divindade egípcia.
+boi apis amuleto~
+Esse amuleto traz a imagem de uma poderosa divindade egÃ­pcia.
 ~
 #8143
 capa linho branco~
@@ -487,8 +487,8 @@ Uma capa negra foi deixada aqui.~
 A
 17 -1
 #8145
-amuleto ápis misterioso~
-o amuleto de Ápis~
+amuleto apis misterioso~
+o amuleto de Ãpis~
 Um misterioso amuleto foi deixado aqui.~
 ~
 9 b 0 0 0 ac 0 0 0 0 0 0 0
@@ -497,9 +497,9 @@ Um misterioso amuleto foi deixado aqui.~
 A
 17 -3
 #8146
-pedra egípcia~
-uma pedra egípcia~
-Uma velha pedra está aqui brilhando suavemente.~
+pedra egipcia~
+uma pedra egÃ­pcia~
+Uma velha pedra estÃ¡ aqui brilhando suavemente.~
 ~
 1 a 0 0 0 ao 0 0 0 0 0 0 0
 0 0 120 0
@@ -508,7 +508,7 @@ A
 17 -5
 #8147
 papiro smmrmb velho~
-um papiro que lê 'smmrmb'~
+um papiro que lÃª 'smmrmb'~
 Um velho papiro foi jogado aqui.~
 ~
 2 g 0 0 0 a 0 0 0 0 0 0 0
@@ -516,32 +516,32 @@ Um velho papiro foi jogado aqui.~
 2 1000 150 0 0
 #8148
 papiro momr~
-um papiro que lê 'momr'~
-Um papiro bem conservado está aqui.~
+um papiro que lÃª 'momr'~
+Um papiro bem conservado estÃ¡ aqui.~
 ~
 2 g 0 0 0 a 0 0 0 0 0 0 0
 50 56 -1 -1
 4 2000 50 0 0
 #8149
 papiro aamb~
-um papiro que lê 'aamb'~
+um papiro que lÃª 'aamb'~
 Um pequeno papiro foi jogado aqui.~
 ~
 2 g 0 0 0 a 0 0 0 0 0 0 0
 70 59 -1 -1
 4 5000 300 0 0
 #8150
-frasco poção anúbis~
-a poção de Anúbis~
-Um frasco com um líquido misterioso foi deixado aqui.~
+frasco pocao anubis~
+a poÃ§Ã£o de AnÃºbis~
+Um frasco com um lÃ­quido misterioso foi deixado aqui.~
 ~
 10 g 0 0 0 a 0 0 0 0 0 0 0
 28 36 35 16
 15 50000 2000 0 0
 #8151
-poção íbis clara~
-a poção do Íbis~
-Uma poção clara foi esquecida aqui.~
+poÃ§Ã£o ibis clara~
+a poÃ§Ã£o do Ãbis~
+Uma poÃ§Ã£o clara foi esquecida aqui.~
 ~
 10 cg 0 0 0 a 0 0 0 0 0 0 0
 20 39 39 -1
@@ -555,16 +555,16 @@ Um papiro bem ornamentado foi deixado aqui.~
 36 1 -1 -1
 5 15000 150 0 0
 #8153
-pão integral~
-um pão integral~
-Um pão está jogado aqui.~
+pao integral~
+um pÃ£o integral~
+Um pÃ£o estÃ¡ jogado aqui.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 13 0 0 0
 2 60 6 0 0
 #8154
-tanga egípcia~
-uma tanga egípcia~
+tanga egipcia~
+uma tanga egÃ­pcia~
 Uma bela tanga foi deixada aqui.~
 ~
 9 k 0 0 0 al 0 0 0 0 0 0 0
@@ -581,8 +581,8 @@ Um bracelete de bronze foi esquecido aqui.~
 A
 1 1
 #8156
-cinto egípcio~
-um cinto egípcio~
+cinto egipcio~
+um cinto egÃ­pcio~
 Um belo cinto foi deixado aqui.~
 ~
 9 al 0 0 0 al 0 0 0 0 0 0 0
@@ -593,15 +593,15 @@ A
 #8157
 coroa bronze~
 uma coroa de bronze~
-Uma coroa de bronze foi esquecida no chão.~
+Uma coroa de bronze foi esquecida no chÃ£o.~
 ~
 9 abln 0 0 0 ae 0 0 0 0 0 0 0
 8 0 0 0
 7 400 40 30 0
 #8158
-máscara prata~
-uma máscara de prata~
-Uma brilhante máscara de prata foi jogada aqui.~
+mascara prata~
+uma mÃ¡scara de prata~
+Uma brilhante mÃ¡scara de prata foi jogada aqui.~
 ~
 9 aklm 0 0 0 ae 0 0 0 0 0 0 0
 9 0 0 0
@@ -609,15 +609,15 @@ Uma brilhante máscara de prata foi jogada aqui.~
 #8159
 bracelete prata~
 um bracelete de prata~
-Um belo bracelete de prata está aqui.~
+Um belo bracelete de prata estÃ¡ aqui.~
 ~
 9 ajlm 0 0 0 am 0 0 0 0 0 0 0
 5 0 0 0
 3 500 50 0 0
 #8160
-escaravelho coleóptero~
-um escaravelho-coleóptero~
-Um escaravelho está aqui, brilhando levemente.~
+escaravelho coleoptero~
+um escaravelho-coleÃ³ptero~
+Um escaravelho estÃ¡ aqui, brilhando levemente.~
 ~
 1 ab 0 0 0 ao 0 0 0 0 0 0 0
 0 0 100 0
@@ -639,9 +639,9 @@ A
 A
 18 1
 #8162
-cabeça serpente~
-uma cabeça de serpente~
-Uma cabeça de serpente o fita ameaçadoramente.~
+cabeca serpente~
+uma cabeÃ§a de serpente~
+Uma cabeÃ§a de serpente o fita ameaÃ§adoramente.~
 ~
 11 bop 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
@@ -651,9 +651,9 @@ A
 A
 12 30
 #8163
-pássaro alma esplêndido~
-um pássaro alma~
-Um esplêndido pássaro pousou aqui.~
+passaro alma esplendido~
+um pÃ¡ssaro alma~
+Um esplÃªndido pÃ¡ssaro pousou aqui.~
 ~
 1 ab 0 0 0 ac 0 0 0 0 0 0 0
 0 0 80 0
@@ -679,64 +679,64 @@ A
 #8165
 pena~
 uma pena~
-Um magnífica pena foi deixada aqui.~
+Um magnÃ­fica pena foi deixada aqui.~
 ~
 12 agj 0 0 0 ao 0 0 0 v 0 0 0
 0 0 0 0
 2 50000 500 30 0
 E
 pena~
-Essa bela pena possui um estranho brilho...  É possível sentir uma aura de
-força a rodeando.
+Essa bela pena possui um estranho brilho...  Ã‰ possÃ­vel sentir uma aura de
+forÃ§a a rodeando.
 ~
 A
 12 40
 #8166
-balança~
-uma balança~
-Uma balança rodeada de hieróglifos está aqui.~
+balanca~
+uma balanÃ§a~
+Uma balanÃ§a rodeada de hierÃ³glifos estÃ¡ aqui.~
 ~
 12 abg 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 80 30000 300 0 0
 E
-balança~
-Esta bonita balança foi feita de um material bastante raro...  Você a
-examina, admirando seus hieróglifos.
+balanca~
+Esta bonita balanÃ§a foi feita de um material bastante raro...  VocÃª a
+examina, admirando seus hierÃ³glifos.
 ~
 #8167
-sarcófago~
-um enorme sarcófago~
-Há um enorme sarcófago aqui.~
+sarcofago~
+um enorme sarcÃ³fago~
+HÃ¡ um enorme sarcÃ³fago aqui.~
 ~
 12 a 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 800 50000 500 0 0
 E
-sarcófago~
-Há algo nesse grande sarcófago que o atrai...  É estranho, mas em meio a um
-lugar tão mórbido, ele se mantém limpo e belo.  Há um desenho em sua tampa,
-uma espécie de inscrição...  Isso só poderia ter sido feito por algo
+sarcofago~
+HÃ¡ algo nesse grande sarcÃ³fago que o atrai...  Ã‰ estranho, mas em meio a um
+lugar tÃ£o mÃ³rbido, ele se mantÃ©m limpo e belo.  HÃ¡ um desenho em sua tampa,
+uma espÃ©cie de inscriÃ§Ã£o...  Isso sÃ³ poderia ter sido feito por algo
 sobre-humano.
 ~
 #8168
 parede~
 uma parede~
-Uma das paredes emite uma estranha força.~
+Uma das paredes emite uma estranha forÃ§a.~
 ~
 12 a 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 4000 400 40 0 0
 E
 parede~
-Você observa essa gigantesca parede que estranhamente parece brilhar.
-Há por toda sua extensão um grande número de hieroglifós que, mesmo você
-não entendendo tudo o que dizem, alertam sobre um grande perigo...
+VocÃª observa essa gigantesca parede que estranhamente parece brilhar.
+HÃ¡ por toda sua extensÃ£o um grande nÃºmero de hieroglifÃ³s que, mesmo vocÃª
+nÃ£o entendendo tudo o que dizem, alertam sobre um grande perigo...
 ~
 #8169
 pilar djed pilar-djed~
 o Pilar-Djed~
-Há um grande pilar no meio da sala.~
+HÃ¡ um grande pilar no meio da sala.~
 ~
 12 a 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
@@ -744,15 +744,15 @@ Há um grande pilar no meio da sala.~
 E
 pilar djed pilar-djed~
 Uma leve luz avermelhada rodeia esse grande pilar de pedra iluminando toda a
-sala.  Os hieróglifos nele esculpidos são muito confusos pelo que você
-conseguiu analisar.  Eles dizem algo sobre uma terrível batalha entre os
-deuses do Egito...  E sobre uma enorme serpente cuspidora de fogo.  Há ainda
-uma inscrição que diz '...Pilar-Djed...'.
+sala.  Os hierÃ³glifos nele esculpidos sÃ£o muito confusos pelo que vocÃª
+conseguiu analisar.  Eles dizem algo sobre uma terrÃ­vel batalha entre os
+deuses do Egito...  E sobre uma enorme serpente cuspidora de fogo.  HÃ¡ ainda
+uma inscriÃ§Ã£o que diz '...Pilar-Djed...'.
 ~
 #8170
-laço ísis~
-o laço de Ísis~
-Um belo laço foi deixado aqui.~
+laco isis~
+o laÃ§o de Ãsis~
+Um belo laÃ§o foi deixado aqui.~
 ~
 11 bjl 0 0 0 al 0 0 0 0 0 0 0
 0 0 0 0
@@ -764,17 +764,17 @@ A
 A
 19 1
 #8171
-hieróglifo~
-um velho hieróglifo~
-Um hieróglifo empoeirado caiu aqui.~
+hieroglifo~
+um velho hierÃ³glifo~
+Um hierÃ³glifo empoeirado caiu aqui.~
 ~
 18 a 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 4 200 20 0 0
 #8172
-crânio acinzentado~
-um crânio acinzentado~
-Um crânio acinzentado foi jogado aqui.~
+cranio acinzentado~
+um crÃ¢nio acinzentado~
+Um crÃ¢nio acinzentado foi jogado aqui.~
 ~
 18 a 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
