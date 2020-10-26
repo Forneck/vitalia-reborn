@@ -8,7 +8,7 @@ Bom, essa pessoa não está aqui mas quem liga? Você está sem palavras de qual
 Você está sem palavras sobre o que você acabou de fazer!
 $n está sem palavras sobre o que $e acabou de fazer!
 Você está sem palavras sobre $t $S.
-$n está sem palavras sobre &t de $N.
+$n está sem palavras sobre $t de $N.
 $n está sem palavras sobre $t de você.
 #
 #
@@ -156,7 +156,7 @@ $n aponta a arma del$r para $N. Parece que $l está falando sério!
 $n aponta a arma del$r $n para você.  $e parece muito incomodad$r!
 Como você vai assustar $m com isso se $l nem está aqui???
 Você aponta sua arma para si mesm$r. Praparad$r para morrer?
-$n aponta a arma del$r para si mesm$r, &l vai se matar!
+$n aponta a arma del$r para si mesm$r, $l vai se matar!
 Você aponta a sua arma para $S $t se preparando para atacar.
 $n aponta a arma del$r para $t de $N e se prepara para atacar.
 $n aponta a arma del$r para $t de você e se prepara para atacar.
