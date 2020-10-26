@@ -9,7 +9,7 @@ Existe uma chave para a tesouraria aqui.~
 #6501
 ouro tesouro moedas~
 o tesouro da Rainha~
-Uma grande pilha de tesouro foi deixada aqui. Ela deve pertencer ‡ Rainha.~
+Uma grande pilha de tesouro foi deixada aqui. Ela deve pertencer √† Rainha.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 65000 0 0 0
@@ -17,7 +17,7 @@ Uma grande pilha de tesouro foi deixada aqui. Ela deve pertencer ‡ Rainha.~
 #6502
 chave mina~
 uma chave da mina~
-Existe uma chave para as minas aqui no ch„o.~
+Existe uma chave para as minas aqui no ch√£o.~
 ~
 18 c 0 0 0 ao 0 0 0 0 0 0 0
 6502 0 0 0
@@ -25,55 +25,55 @@ Existe uma chave para as minas aqui no ch„o.~
 #6503
 chave brilhante ouro~
 uma chave de ouro brilhante~
-Existe uma chave de ouro brilhante aqui no ch„o.~
+Existe uma chave de ouro brilhante aqui no ch√£o.~
 ~
 18 c 0 0 0 ao 0 0 0 0 0 0 0
 6503 0 0 0
 1 0 0 0 0
 #6504
-martelo an„o~
-um martelo de an„o~
-Existe um martelo de an„o aqui.~
+martelo anao~
+um martelo de an√£o~
+Existe um martelo de an√£o aqui.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 0 2 6 7
 13 5500 1000 0 0
 #6505
-placa an„o armadura~
-uma armadura de placas de an„o~
-Uma armadura de placas de an„o encontra-se aqui.~
+placa anao armadura~
+uma armadura de placas de an√£o~
+Uma armadura de placas de an√£o encontra-se aqui.~
 ~
 9 0 0 0 0 ad 0 0 0 0 0 0 0
 6 0 0 0
 80 4500 300 0 0
 #6506
-bast„o preto longo~
-um bast„o longo e preto~
-Um bast„o longo e preto jaz aqui.~
+bastao preto longo~
+um bast√£o longo e preto~
+Um bast√£o longo e preto jaz aqui.~
 ~
 4 q 0 0 0 ao 0 0 0 0 0 0 0
 4 2 2 28
 1 100 6000 0 0
 #6507
-bast„o preto longo~
-um bast„o longo e preto~
-Existe um bast„o longo e preto aqui.~
+bastao preto longo~
+um bast√£o longo e preto~
+Existe um bast√£o longo e preto aqui.~
 ~
 1 q 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100 6000 0 0
 #6508
-clava an„o~
-uma clava de an„o~
-Uma clava de an„o encontra-se aqui.~
+clava anao~
+uma clava de an√£o~
+Uma clava de an√£o encontra-se aqui.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 0 2 3 3
 12 3000 300 0 0
 #6509
-machado an„o~
-um machado de duas m„os an„o~
-Um machado de duas m„os an„o est· aqui.~
+machado anao~
+um machado de duas m√£os an√£o~
+Um machado de duas m√£os an√£o est√° aqui.~
 ~
 5 gr 0 0 0 an 0 0 0 0 0 0 0
 0 2 7 3
@@ -83,17 +83,17 @@ A
 A
 1 2
 #6510
-elmo an„o~
-um elmo de an„o~
-Um elmo de an„o est· aqui.~
+elmo anao~
+um elmo de an√£o~
+Um elmo de an√£o est√° aqui.~
 ~
 9 0 0 0 0 ae 0 0 0 0 0 0 0
 4 0 0 0
 4 2500 500 0 0
 #6511
-anel ouro an„o~
-um anel de an„o feito de ouro~
-Um anel de an„o feito de ouro encontra-se aqui.~
+anel ouro anao~
+um anel de an√£o feito de ouro~
+Um anel de an√£o feito de ouro encontra-se aqui.~
 ~
 11 g 0 0 0 ab 0 0 0 0 0 0 0
 0 0 0 0
@@ -103,9 +103,9 @@ A
 A
 19 1
 #6512
-luvas an„o~
-um par de luvas de an„o~
-Um par de grossas luvas de an„o jaz aqui.~
+luvas anao~
+um par de luvas de an√£o~
+Um par de grossas luvas de an√£o jaz aqui.~
 ~
 9 0 0 0 0 ah 0 0 0 0 0 0 0
 1 0 0 0
@@ -115,9 +115,9 @@ A
 A
 2 1
 #6513
-carv„o pilha~
-uma pilha de carv„o~
-Existe uma pilha de carv„o aqui.~
+carvao pilha~
+uma pilha de carv√£o~
+Existe uma pilha de carv√£o aqui.~
 ~
 13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -125,19 +125,19 @@ Existe uma pilha de carv„o aqui.~
 #6514
 picareta escavar~
 uma picareta de escavar~
-Existe uma picareta usada para escavaÁ„o aqui.~
+Existe uma picareta usada para escava√ß√£o aqui.~
 ~
 5 i 0 0 0 an 0 0 0 0 0 0 0
 0 2 3 11
 9 300 10 0 0
 E
 picareta escavar~
-Ela parece ser abenÁoada!
+Ela parece ser aben√ßoada!
 ~
 #6515
 chave escuro verde~
 uma chave verde escuro~
-Existe uma chave verde escuro aqui no ch„o.~
+Existe uma chave verde escuro aqui no ch√£o.~
 ~
 18 c 0 0 0 ao 0 0 0 0 0 0 0
 6515 0 0 0
@@ -145,7 +145,7 @@ Existe uma chave verde escuro aqui no ch„o.~
 #6516
 chave antiga~
 uma chave antiga~
-AlguÈm parece ter deixado uma chave antiga.~
+Algu√©m parece ter deixado uma chave antiga.~
 ~
 18 c 0 0 0 ao 0 0 0 0 0 0 0
 6516 0 0 0
