@@ -527,6 +527,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	char arg[MAX_INPUT_LENGTH];
    /* ann teste - forneck */
   struct fann *ann;
+  fann_type *calc_output;
    ann = fann_create_from_file("etc/aventureiro.fann");
   fann_type input[10] = {GET_HIT(ch), GET_MAX_HIT(ch),GET_MANA(ch),GET_MAX_MANA(ch),GET_MOVE(ch),GET_MAX_MOVE(ch),GET_EXP(ch),GET_ROOM_VNUM(IN_ROOM(ch)),GET_CLASS(ch),GET_POS(ch)};
   fann_type output[2];
@@ -670,10 +671,10 @@ void command_interpreter(struct char_data *ch, char *argument)
    output[1] = 0;
   fann_train(ann,input,output);
   
-  output = fann_run(ann,input);
-  	send_to_char(ch, "  DEBUG AVENTUREIRO: Comando %s\r\n", cmd_info[output[0]].command);
+  calc_output = fann_run(ann,input);
+  	send_to_char(ch, "  DEBUG AVENTUREIRO: Comando %s\r\n", cmd_info[calc_output[0]].command);
   
-                   
+   fann_save(ann,"etc/aventureiro.fann");
   fann_destroy(ann);
 	
 		((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd, complete_cmd_info[cmd].subcmd));
