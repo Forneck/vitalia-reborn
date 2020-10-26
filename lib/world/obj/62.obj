@@ -1,81 +1,81 @@
 #6200
 chave~
 uma chave~
-Uma chave est· aqui~
+Uma chave est√° aqui~
 ~
 18 cdq 0 0 0 ao 0 0 0 0 0 0 0
 6200 0 0 0
 1 20 0 0 0
 E
 chave~
-Ela È uma chave lisa.
+Ela √© uma chave lisa.
 ~
 #6201
 algemas~
 um par de algemas~
-Um par de algemas de aÁo est· aqui.~
+Um par de algemas de a√ßo est√° aqui.~
 ~
 9 h 0 0 0 ah 0 0 0 0 0 0 0
 0 0 0 0
 20 100 20 0 0
 E
 algemas~
-Elas s„o grandes objetos de aÁo, feitas para prender ao redor das m„os.
+Elas s√£o grandes objetos de a√ßo, feitas para prender ao redor das m√£os.
 ~
 A
 18 -20
 #6202
-grilhıes~
-um par de grilhıes~
-Um par de grilhıes foi deixado aqui, descartado.~
+grilhoes~
+um par de grilh√µes~
+Um par de grilh√µes foi deixado aqui, descartado.~
 ~
 9 h 0 0 0 ag 0 0 0 0 0 0 0
 0 0 0 0
 20 100 20 0 0
 E
-grilhıes~
-Grandes grilhıes de ferro, feitos para prender ao redor dos tornozelos.
+grilhoes~
+Grandes grilh√µes de ferro, feitos para prender ao redor dos tornozelos.
 ~
 A
 14 -80
 #6203
 pedra runa~
 Uma Pedra Runa~
-Uma pequena pedra com uma inscriÁ„o est· aqui.~
+Uma pequena pedra com uma inscri√ß√£o est√° aqui.~
 ~
 1 a 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
 1 10000 2000 0 0
 E
 pedra runa~
-Ela È uma pequena pedra encravada com um estranho sÌmbolo.  Estranho...
+Ela √© uma pequena pedra encravada com um estranho s√≠mbolo.  Estranho...
 ~
 A
 12 8
 #6204
 clava~
 uma clava~
-Uma tosca clava de madeira est· aqui.~
+Uma tosca clava de madeira est√° aqui.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 0 2 2 7
 12 10 2 0 0
 E
 clava~
-Ele È uma grande, clava de madeira.
+Ele √© uma grande, clava de madeira.
 ~
 #6205
-faca l‚mina~
-a L‚mina RÌgida~
+faca lamina~
+a L√¢mina R√≠gida~
 Uma faca vibrando com eterna energia aqui.~
 ~
 5 bp 0 0 0 an 0 0 0 0 0 0 0
 0 3 7 3
 1 100000 20000 0 0
 E
-faca l‚mina~
-Ela È uma faca ˙nica, com uma safira em forma de inseto no punho.  Ela vibra 
-constantemente e sua m„o treme um pouco quando vocÍ a toca.
+faca lamina~
+Ela √© uma faca √∫nica, com uma safira em forma de inseto no punho.  Ela vibra 
+constantemente e sua m√£o treme um pouco quando voc√™ a toca.
 ~
 A
 12 10
