@@ -22,10 +22,3 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "./include/fannconfig.h"
 #include "./include/floatfann.h"
 #include "math.h"
-
-#include "fann.c"
-#include "fann_io.c"
-#include "fann_train.c"
-#include "fann_train_data.c"
-#include "fann_error.c"
-#include "fann_cascade.c"
