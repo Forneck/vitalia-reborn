@@ -38,7 +38,7 @@
 #include "ibt.h"
 #include "mud_event.h"
 #include "spedit.h"
-#include "./fann/include/floatfann.h"
+#include "./include/floatfann.h"
 
 ACMD(do_formula);
 
@@ -526,11 +526,11 @@ void command_interpreter(struct char_data *ch, char *argument)
 	char *line;
 	char arg[MAX_INPUT_LENGTH];
    /* ann teste - forneck */
-/*   struct fann *ann;
+  struct fann *ann;
    ann = fann_create_from_file("etc/aventureiro.fann");
   fann_type *input[9] = {GET_HIT(ch), GET_MAX_HIT(ch),GET_MANA(ch),GET_MAX_MANA(ch),GET_MOVE(ch),GET_MAX_MOVE(ch),GET_ROOM_VNUM(IN_ROOM(ch)),GET_CLASS(ch),GET_POS(ch)};
   fann_type *output[2];
-*/
+
 	REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
     
   
@@ -597,11 +597,11 @@ void command_interpreter(struct char_data *ch, char *argument)
 			do_cast(ch, line, 1, skill->vnum);
 		    /* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos
     o = cmd, arg = vnum -- forneck
-   
+   */
    output[0] = cmd;
    output[1] = skill->vnum;
   fann_train(ann,input,output);
-  */
+  
 			return;
 		}
 
@@ -666,12 +666,13 @@ void command_interpreter(struct char_data *ch, char *argument)
 	
 		    /* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos
     o = cmd, arg = 0 -- forneck
+   */
    
    output[0] = cmd;
    output[1] = 0;
   fann_train(ann,input,output);
   fann_destroy(ann);
-	*/
+	
 		((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd, complete_cmd_info[cmd].subcmd));
 }
 
