@@ -669,6 +669,11 @@ void command_interpreter(struct char_data *ch, char *argument)
    output[0] = cmd;
    output[1] = 0;
   fann_train(ann,input,output);
+  
+  output = fann_run(ann,input);
+  	send_to_char(ch, "  DEBUG AVENTUREIRO: Comando %s\r\n", cmd_info[output[0]].command);
+  
+                   
   fann_destroy(ann);
 	
 		((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd, complete_cmd_info[cmd].subcmd));
