@@ -672,7 +672,7 @@ void command_interpreter(struct char_data *ch, char *argument)
   fann_train(ann,input,output);
   
   calc_output = fann_run(ann,input);
-  	send_to_char(ch, "  DEBUG AVENTUREIRO: Comando %s\r\n", cmd_info[calc_output[0]].command);
+  	send_to_char(ch, "  DEBUG AVENTUREIRO: Comando %s\r\n", cmd_info[(int) calc_output[0]].command);
   
    fann_save(ann,"etc/aventureiro.fann");
   fann_destroy(ann);
