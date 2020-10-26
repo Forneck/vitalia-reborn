@@ -1,20 +1,20 @@
 #5900
 fonte rachada~
 uma velha fonte rachada~
-Há uma velha fonte rachada com uma estátua no centro aqui.~
+HÃ¡ uma velha fonte rachada com uma estÃ¡tua no centro aqui.~
 ~
 23 0 0 0 0 0 0 0 0 0 0 0 0
 800 800 13 1
 1000 0 0 0 0
 E
-fonte estátua~
-A estátua representa um homem que parece ser orgulhoso e muito sábio.  Ele
-parece fitar, imponente, algum ponto além do horizonte.
+fonte estatua~
+A estÃ¡tua representa um homem que parece ser orgulhoso e muito sÃ¡bio.  Ele
+parece fitar, imponente, algum ponto alÃ©m do horizonte.
 ~
 #5901
-taça vidro despedaçada~
-uma taça despedaçada~
-Há no chão os restos de uma despedaçada taça de vidro.~
+taca vidro despedacada~
+uma taÃ§a despedaÃ§ada~
+HÃ¡ no chÃ£o os restos de uma despedaÃ§ada taÃ§a de vidro.~
 ~
 17 0 0 0 0 a 0 0 0 0 0 0 0
 10 7 13 1
@@ -22,37 +22,37 @@ Há no chão os restos de uma despedaçada taça de vidro.~
 #5902
 manto trapo podre apodrecido~
 um trapo apodrecido~
-Um pedaço de manto podre foi deixado aqui.~
+Um pedaÃ§o de manto podre foi deixado aqui.~
 ~
 9 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 2 0 0 0 0
 #5903
-poça~
-uma poça de sangue~
-O chão desse belvedere foi banhado com sangue.~
+poca~
+uma poÃ§a de sangue~
+O chÃ£o desse belvedere foi banhado com sangue.~
 ~
 23 0 0 0 0 0 0 0 0 0 0 0 0
 100 100 13 1
 0 0 0 0 0
 #5904
-altar chão~
+altar chao~
 um altar negro banhado com sangue~
-Há um grande altar negro banhado em sangue no centro da sala, esperando sua próxima vítima.~
+HÃ¡ um grande altar negro banhado em sangue no centro da sala, esperando sua prÃ³xima vÃ­tima.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 1000 0 0 0 0
 E
 altar~
-Isso parece ser nada mais do que algumas rochas empilhadas.  Porém com o
-longo tecido negro em seu topo e as inúmeras manchas de sangue, isso adquire
+Isso parece ser nada mais do que algumas rochas empilhadas.  PorÃ©m com o
+longo tecido negro em seu topo e as inÃºmeras manchas de sangue, isso adquire
 um aspecto assombroso.
 ~
 #5905
 estante~
 uma velha estante~
-Uma velha estante agarra-se fragilmente à parede. Isso pode desabar a qualquer momento.~
+Uma velha estante agarra-se fragilmente Ã  parede. Isso pode desabar a qualquer momento.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 500 0 -1 0
@@ -66,9 +66,9 @@ Um grande livro com manchas de sangue foi deixado aqui.~
 10 17 17 -1
 8 3000 300 0 0
 #5907
-cadáver homem~
-o cadáver de um homem~
-Há um cadáver de um homem com o tórax aberto próximo à parede.~
+cadaver homem~
+o cadÃ¡ver de um homem~
+HÃ¡ um cadÃ¡ver de um homem com o tÃ³rax aberto prÃ³ximo Ã  parede.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
@@ -76,38 +76,38 @@ Há um cadáver de um homem com o tórax aberto próximo à parede.~
 #5908
 barril~
 um barril com fogo~
-Há um grande barril queimando lixo aqui.~
+HÃ¡ um grande barril queimando lixo aqui.~
 ~
 1 q 0 0 0 0 0 0 0 0 0 0 0
 0 0 -1 0
 500 0 0 0 0
 #5909
-corpo cadáver~
-um cadáver fresco~
-Um cadáver fresco foi deixado aqui, derramando muito sangue.~
+corpo cadaver~
+um cadÃ¡ver fresco~
+Um cadÃ¡ver fresco foi deixado aqui, derramando muito sangue.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 160 0 0 0 0
 E
-corpo cadáver~
-Parece que isso estava vivo há poucos minutos.  O sangue que flui de seu
-interior ainda é quente.  Seu peito foi aberto, praticamente dividido em
-dois.  Pelas marcas de sangue por aqui, o coração da vítima deve ter sido
+corpo cadaver~
+Parece que isso estava vivo hÃ¡ poucos minutos.  O sangue que flui de seu
+interior ainda Ã© quente.  Seu peito foi aberto, praticamente dividido em
+dois.  Pelas marcas de sangue por aqui, o coraÃ§Ã£o da vÃ­tima deve ter sido
 arrancado ferozmente.
 ~
 #5910
 corpo apodrecido~
 um corpo apodrecido~
-Um corpo apodrecido foi jogado aqui. Em seu peito há um grande buraco.~
+Um corpo apodrecido foi jogado aqui. Em seu peito hÃ¡ um grande buraco.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 165 0 0 0 0
 #5911
-negra profana lâmina adaga~
+negra profana lamina adaga~
 uma profana adaga negra~
-Uma adaga negra com uma lâmina curva emite sua profana luz aqui.~
+Uma adaga negra com uma lÃ¢mina curva emite sua profana luz aqui.~
 ~
 5 ahjlnqt 0 0 0 ano 0 0 0 0 0 0 0
 0 4 4 11
@@ -119,9 +119,9 @@ A
 A
 18 -2
 #5912
-manto sujo ensangüentado~
-um manto sujo e ensangüentado~
-Um manto ensangüentado foi jogado aqui.~
+manto sujo ensanguentado~
+um manto sujo e ensangÃ¼entado~
+Um manto ensangÃ¼entado foi jogado aqui.~
 ~
 9 jlq 0 0 0 ak 0 0 0 0 0 0 0
 5 0 0 0
@@ -147,9 +147,9 @@ Uma jaqueta imunda foi deixada aqui.~
 0 0 0 0
 4 0 0 0 0
 #5915
-sangue inocente poça~
-uma poça de sangue inocente~
-Há uma poça de sangue inocente no chão.~
+sangue inocente poca~
+uma poÃ§a de sangue inocente~
+HÃ¡ uma poÃ§a de sangue inocente no chÃ£o.~
 ~
 12 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -160,16 +160,16 @@ A
 18 2
 #5916
 couro rasgado~
-alguns pedaços de couro rasgado~
-Alguns pedaços de couro rasgado foram deixados aqui.~
+alguns pedaÃ§os de couro rasgado~
+Alguns pedaÃ§os de couro rasgado foram deixados aqui.~
 ~
 9 jq 0 0 0 ac 0 0 0 0 0 0 0
 3 0 0 0
 8 550 55 0 0
 #5917
-camada vômito poça~
-uma poça de vômito~
-Uma grossa camada de vômito cobre o chão.~
+camada vomito poca~
+uma poÃ§a de vÃ´mito~
+Uma grossa camada de vÃ´mito cobre o chÃ£o.~
 ~
 12 hjlq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -177,9 +177,9 @@ Uma grossa camada de vômito cobre o chão.~
 A
 6 -12
 #5918
-couro imundo pedaço~
-um imundo pedaço de couro~
-Um imundo pedaço de couro foi deixado aqui.~
+couro imundo pedaco~
+um imundo pedaÃ§o de couro~
+Um imundo pedaÃ§o de couro foi deixado aqui.~
 ~
 9 hjq 0 0 0 ac 0 0 0 0 0 0 0
 3 0 0 0
@@ -197,9 +197,9 @@ A
 A
 18 2
 #5920
-humano coração~
-um coração humano~
-O coração de alguém foi deixado aqui.~
+humano coracao~
+um coraÃ§Ã£o humano~
+O coraÃ§Ã£o de alguÃ©m foi deixado aqui.~
 ~
 12 hjlq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -212,8 +212,8 @@ A
 1 1
 #5921
 couro costas~
-o couro das costas de alguém~
-O couro das costas de alguém foi jogado aqui.~
+o couro das costas de alguÃ©m~
+O couro das costas de alguÃ©m foi jogado aqui.~
 ~
 9 hjlq 0 0 0 ac 0 0 0 0 0 0 0
 5 0 0 0
@@ -245,9 +245,9 @@ Um pergaminho negro escrito em tinta vermelha foi jogado aqui.~
 E
 palavra raantra pergaminho~
 O pergaminho, dado a Gunter por Raantra, representa uma de suas palavras de ordem.
-Você lê:
+VocÃª lÃª:
 
-Sacrifício
+SacrifÃ­cio
 
 ~
 A
