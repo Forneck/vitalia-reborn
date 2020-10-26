@@ -520,12 +520,12 @@ void command_interpreter(struct char_data *ch, char *argument)
 	char arg[MAX_INPUT_LENGTH];
    /* ann teste - forneck */
    struct fann *ann;
-   fann_create_from_file(ann, "etc/aventureiro.fann");
-  fann_type *input[9];
+   ann = fann_create_from_file("etc/aventureiro.fann");
+  fann_type *input[9] = {GET_HIT(ch), GET_MAX_HIT(ch),GET_MANA(ch),GET_MAX_MANA(ch),GET_MOVE(ch),GET_MAX_MOVE(ch),GET_ROOM_VNUM(IN_ROOM(ch)),GET_CLASS(ch),GET_POS(ch)};
   fann_type *output[2];
 
 	REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
-     input = {GET_HIT(ch), GET_MAX_HIT(ch),GET_MANA(ch),GET_MAX_MANA(ch),GET_MOVE(ch),GET_MAX_MOVE(ch),GET_ROOM_VNUM(IN_ROOM(ch)),GET_CLASS(ch),GET_POS(ch)};
+    
   
 	/* just drop to next line for hitting CR */
 	skip_spaces(&argument);
