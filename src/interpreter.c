@@ -53,6 +53,11 @@ static int sort_commands_helper(const void *a, const void *b);
 int parse_hometown(char arg);
 void hometown_menu(struct descriptor_data *d);
 
+/*forneck*/
+FANN_EXTERNAL struct fann *FANN_API fann_create_from_file(const char *configuration_file);
+FANN_EXTERNAL void FANN_API fann_train(struct fann *ann, fann_type 	*input,fann_type *desired_output);
+FANN_EXTERNAL void FANN_API fann_destroy(struct fann *ann);
+
 /* globals defined here, used here and elsewhere */
 int *cmd_sort_info = NULL;
 
