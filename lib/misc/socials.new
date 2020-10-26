@@ -154,9 +154,9 @@ $n olha ao redor da sala, freneticamente. Parece que $l está com um humor viole
 Você aponta sua arma para $N, mostrando $M que você mataria $M sem pensar duas vezes.
 $n aponta a arma del$r para $N. Parece que $l está falando sério!
 $n aponta a arma del$r $n para você.  $e parece muito incomodad$r!
-Como você vai assustar $m com isso se $l nem está aqui???
-Você aponta sua arma para si mesm$r. Praparad$r para morrer?
-$n aponta a arma del$r para si mesm$r, $l vai se matar!
+Como você vai assustar $m com isso se $x(ele,ela) nem está aqui???
+Você aponta sua arma para si mesm$r. Preparad$r para morrer?
+$n aponta a arma del$r para si mesm$r, $x(ele,ela) vai se matar!
 Você aponta a sua arma para $S $t se preparando para atacar.
 $n aponta a arma del$r para $t de $N e se prepara para atacar.
 $n aponta a arma del$r para $t de você e se prepara para atacar.
