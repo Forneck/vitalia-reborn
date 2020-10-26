@@ -522,7 +522,7 @@ void command_interpreter(struct char_data *ch, char *argument)
    struct fann *ann;
    fann_create_from_file(ann, "etc/aventureiro.fann");
   float *input[9];
-  float *output [2];
+  float *output[2];
 
 	REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
      input = {GET_HIT(ch), GET_MAX_HIT(ch),GET_MANA(ch),GET_MAX_MANA(ch),GET_MOVE(ch),GET_MAX_MOVE(ch),GET_ROOM_VNUM(IN_ROOM(ch)),GET_CLASS(ch),GET_POS(ch)};
