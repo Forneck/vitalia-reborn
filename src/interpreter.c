@@ -38,7 +38,7 @@
 #include "ibt.h"
 #include "mud_event.h"
 #include "spedit.h"
-#include "./fann/floatfann.h"
+#include "./fann/include/floatfann.h"
 
 ACMD(do_formula);
 
