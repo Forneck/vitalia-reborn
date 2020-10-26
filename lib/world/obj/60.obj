@@ -8,7 +8,7 @@ Um pesado machado de serra se encontra aqui.~
 12 50 15 0 0
 E
 machado serra~
-… um machado pesado, do tipo que lenhadores usam para derrubar ·rvores.
+√â um machado pesado, do tipo que lenhadores usam para derrubar √°rvores.
 ~
 A
 18 1
@@ -22,20 +22,20 @@ Um camisa xadrez foi deixada aqui~
 2 20 8 0 0
 E
 camisa xadrez~
-… uma camisa tamanho gigante, xadrez, feita com flanela grossa.
+√â uma camisa tamanho gigante, xadrez, feita com flanela grossa.
 ~
 #6002
 botas couro~
 um par de botas de couro curtido~
-Um par de botas de couro curtido est„o aqui.~
+Um par de botas de couro curtido est√£o aqui.~
 ~
 9 d 0 0 0 ag 0 0 0 0 0 0 0
 2 0 0 0
 4 60 10 0 0
 E
 botas~
-Elas foram fabricadas com um couro r˙stico que foi bastante untado com Ûleo,
-a fim de se tornar ‡ prova d'·gua.   Embora r˙sticas, elas parecem ser bastante
+Elas foram fabricadas com um couro r√∫stico que foi bastante untado com √≥leo,
+a fim de se tornar √† prova d'√°gua.   Embora r√∫sticas, elas parecem ser bastante
 funcionais.
 ~
 #6003
@@ -49,13 +49,13 @@ Uma lareira feita de pedra foi colocada na parede do leste.~
 E
 lareira~
 Feita de pedras de tamanhos variados, que foram sendo colocadas umas sobre as
-outras e fixadas por argamassa.   Sua chaminÈ foi feita de maneira a tirar toda
-a fumaÁa do forro da cabana.
+outras e fixadas por argamassa.   Sua chamin√© foi feita de maneira a tirar toda
+a fuma√ßa do forro da cabana.
 ~
 #6004
-lanterna lat„o coberta~
-uma lanterna de lat„o coberta~
-Uma lanterna de lat„o coberta foi deixada aqui.~
+lanterna latao coberta~
+uma lanterna de lat√£o coberta~
+Uma lanterna de lat√£o coberta foi deixada aqui.~
 ~
 1 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 100 0
@@ -68,50 +68,50 @@ Use 'hold lanterna' para acionar.
 
 ~
 E
-lanterna lat„o coberta~
-Ela È grande e bastante robusta e usando Ûleo como combustÌvel, esta lanterna
-feita de lat„o foi feita com uma alÁa para carreg·-la e possui uma espÈcie de
-tampa, que protege a chama, dos ventos.   Algumas palavras est„o escritas
+lanterna latao coberta~
+Ela √© grande e bastante robusta e usando √≥leo como combust√≠vel, esta lanterna
+feita de lat√£o foi feita com uma al√ßa para carreg√°-la e possui uma esp√©cie de
+tampa, que protege a chama, dos ventos.   Algumas palavras est√£o escritas
 embaixo dela.
 ~
 #6005
-cÙmoda madeira~
-uma cÙmoda de madeira~
-Uma cÙmoda de madeira foi colocada no canto.~
+comoda madeira~
+uma c√¥moda de madeira~
+Uma c√¥moda de madeira foi colocada no canto.~
 ~
 15 0 0 0 0 a 0 0 0 0 0 0 0
 100 15 6006 0
 20 100 10 0 0
 E
 arca madeira~
-… uma grande arca, feita com pequenas pranchas de madeira que foram alinhadas
-e presas com grandes parafusos.   Um puxador simples, de lat„o foi colocado
+√â uma grande arca, feita com pequenas pranchas de madeira que foram alinhadas
+e presas com grandes parafusos.   Um puxador simples, de lat√£o foi colocado
 nela.
 ~
 #6006
-chave lat„o~
-uma pequena chave de lat„o~
-Uma pequena chave de lat„o foi deixada aqui.~
+chave latao~
+uma pequena chave de lat√£o~
+Uma pequena chave de lat√£o foi deixada aqui.~
 ~
 18 c 0 0 0 ao 0 0 0 0 0 0 0
 6006 0 0 0
 1 0 0 0 0
 E
-chave lat„o~
-… uma pequena e bem simples chave de lat„o, que n„o possui nenhuma marca ou
-inscriÁ„o nela.
+chave lat√£o~
+√â uma pequena e bem simples chave de lat√£o, que n√£o possui nenhuma marca ou
+inscri√ß√£o nela.
 ~
 #6007
 moedas ouro~
 um punhado de moedas de ouro~
-Algumas moedas de ouro foram deixadas numa pilha bem no ch„o.~
+Algumas moedas de ouro foram deixadas numa pilha bem no ch√£o.~
 ~
 20 0 0 0 0 a 0 0 0 0 0 0 0
 127 0 0 0
 1 127 0 0 0
 E
 moedas ouro~
-As moedas parecem ser de ouro.   Obviamente elas s„o bastante valiosas.
+As moedas parecem ser de ouro.   Obviamente elas s√£o bastante valiosas.
 ~
 #6010
 amoras-pretas frutinhas~
@@ -147,31 +147,31 @@ Um grande aviso, preso num poste, foi colocado ao lado da estrada.~
 100 0 0 0 0
 E
 aviso~
-Est· escrito:-
+Est√° escrito:-
 
                          Haon-Dor
                          --------
- Esta È a Floresta de Haon-Dor.  Fica sob a sua responsabilidade a sua entrada.
-  Este È um lugar onde nem tudo que vocÍ enxerga È real e nem sempre o real
-    aparece.   Tenha cuidado com as suas intenÁıes, nem sempre elas poder„o
+ Esta √© a Floresta de Haon-Dor.  Fica sob a sua responsabilidade a sua entrada.
+  Este √© um lugar onde nem tudo que voc√™ enxerga √© real e nem sempre o real
+    aparece.   Tenha cuidado com as suas inten√ß√µes, nem sempre elas poder√£o
  ser bem interpretadas.
 ~
 E
 poste~
-N„o È o poste mais interessante do mundo.
-Melhor deixar isso aqui, atÈ porque um grande aviso foi pregado nele.
+N√£o √© o poste mais interessante do mundo.
+Melhor deixar isso aqui, at√© porque um grande aviso foi pregado nele.
 
 ~
 #6013
 barril~
 um barril~
-Um barril de ·gua foi deixado aqui.~
+Um barril de √°gua foi deixado aqui.~
 ~
 17 0 0 0 0 a 0 0 0 0 0 0 0
 40 40 15 0
 45 60 20 0 0
 #6014
-riacho cÛrrego~
+riacho corrego~
 um pequeno riacho~
 Um pequeno riacho serpenteia pela floresta ao lado da estrada.~
 ~
@@ -179,37 +179,37 @@ Um pequeno riacho serpenteia pela floresta ao lado da estrada.~
 50000 50000 15 0
 0 0 0 0 0
 E
-riacho cÛrrego~
-A ·gua parece estar limpa e refrescante.
+riacho corrego~
+A √°gua parece estar limpa e refrescante.
 ~
 #6015
 lago~
 o lago~
-H· um lago aqui, convidando-o para nadar.~
+H√° um lago aqui, convidando-o para nadar.~
 ~
 23 0 0 0 0 0 0 0 0 0 0 0 0
 50000 50000 0 0
 0 0 0 0 0
 #6016
-galho carvalho bast„o~
-um bast„o feito de carvalho~
-H· um bast„o de carvalho caÌdo aqui.~
+galho carvalho bastao~
+um bast√£o feito de carvalho~
+H√° um bast√£o de carvalho ca√≠do aqui.~
 ~
 5 g 0 0 0 an 0 0 0 0 0 0 0
 0 1 7 7
 16 1 20 0 0
 E
-galho carvalho bast„o cassetete~
-O galho de carvalho parece bastante sÛlido e poderia ser uma boa arma.
+galho carvalho bastao cassetete~
+O galho de carvalho parece bastante s√≥lido e poderia ser uma boa arma.
 ~
 A
 19 2
 A
 1 -2
 #6017
-corpo cad·ver porco-do-mato~
+corpo cad√°ver porco-do-mato~
 o corpo de um porco-do-mato~
-O corpo mutilado de um porco-do-mato foi deixado no ch„o.~
+O corpo mutilado de um porco-do-mato foi deixado no ch√£o.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 100 0 0 0
@@ -217,14 +217,14 @@ O corpo mutilado de um porco-do-mato foi deixado no ch„o.~
 #6018
 fatia grossa carne~
 uma grande e grossa fatia de carne~
-Uma grande fatia grossa de carne fresca de porco-do-mato est· aqui no ch„o.~
+Uma grande fatia grossa de carne fresca de porco-do-mato est√° aqui no ch√£o.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 24 0 0 0
 15 40 1 0 0
 E
 fatia grossa carne~
-Isso parece dar bastante sustanÁa.
+Isso parece dar bastante sustan√ßa.
 ~
 #6019
 presas dentes par~
@@ -236,23 +236,23 @@ Um par de grandes presas de porco-do-mato foi derrubado aqui.~
 10 60 1 0 0
 E
 presas dentes par~
-Eles parecem que podem ter algum valor nas m„os de um artes„o.
+Eles parecem que podem ter algum valor nas m√£os de um artes√£o.
 ~
 #6020
-cepo tora cÙncavo girando~
-uma tora cÙncava~
-H· uma tora cÙncava no ch„o.~
+cepo tora concavo girando~
+uma tora c√¥ncava~
+H√° uma tora c√¥ncava no ch√£o.~
 ~
 22 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 48 2 1 0 0
 E
 tora~
-Parece que isso poderia f·cilmente flutuar.
+Parece que isso poderia f√°cilmente flutuar.
 ~
 #6021
-ninho p·ssaro~
-o ninho do p·ssaro~
+ninho passaro~
+o ninho do p√°ssaro~
 undefined~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
@@ -268,20 +268,20 @@ Um pequenino ovo azulado foi deixado aqui.~
 1 10 0 0 0
 E
 ovo azul tordo~
-Ele È pequeninho, mas alimenta.
+Ele √© pequeninho, mas alimenta.
 ~
 #6023
 carne coelho~
-um pedaÁo de carne de coelho~
-Um grande pedaÁo de carne de coelho.~
+um peda√ßo de carne de coelho~
+Um grande peda√ßo de carne de coelho.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 12 0 0 0
 5 29 20 0 0
 #6024
-carne gamo corÁa cervo~
-um pedaÁo de carne de cervo~
-Um grande pedaÁo de carne de cervo.~
+carne gamo cor√ßa cervo~
+um peda√ßo de carne de cervo~
+Um grande peda√ßo de carne de cervo.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 24 0 0 0
