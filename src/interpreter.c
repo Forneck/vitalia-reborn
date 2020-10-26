@@ -290,8 +290,8 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"rcopy", "rcopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_REDIT},
 	{"roomflags", "roomflags", POS_DEAD, do_gen_tog, LVL_IMMORT, SCMD_SHOWVNUMS},
 
-	{"sacrifice", "sac", POS_RESTING, do_sac, 0, 0},
 	{"say", "s", POS_RESTING, do_say, 0, 0},
+	{"sacrifice", "sac", POS_RESTING, do_sac, 0, 0},
 	{"score", "sc", POS_DEAD, do_score, 0, 0},
 	{"scan", "sca", POS_RESTING, do_cast, 1, SKILL_SCAN},
 	{"scopy", "scopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_SEDIT},
@@ -572,6 +572,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 				if (GET_LEVEL(ch) >= complete_cmd_info[cmd].minimum_level)
 					break;
 
+
 	if (*complete_cmd_info[cmd].command == '\n')
 	{
 		int found = 0;
@@ -581,6 +582,10 @@ void command_interpreter(struct char_data *ch, char *argument)
 		if (skill)
 		{
 			do_cast(ch, line, 1, skill->vnum);
+	
+		    /* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos
+    o = cmd, arg = vnum
+   */
 			return;
 		}
 
@@ -642,7 +647,11 @@ void command_interpreter(struct char_data *ch, char *argument)
 			break;
 		}
 	else if (no_specials || !special(ch, cmd, line))
-		((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd, complete_cmd_info[cmd].subcmd));
+	
+		    /* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos
+    o = cmd, arg = 0
+   */
+				((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd, complete_cmd_info[cmd].subcmd));
 }
 
 /* Routines to handle aliasing. */
