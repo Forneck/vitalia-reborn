@@ -592,7 +592,8 @@ void command_interpreter(struct char_data *ch, char *argument)
 		    /* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos
     o = cmd, arg = vnum
    */
-   output = {cmd,1};
+   output[0] = cmd;
+   output[1] = skill->vnum;
   fann_train(ann,input,output);
 			return;
 		}
@@ -659,7 +660,8 @@ void command_interpreter(struct char_data *ch, char *argument)
 		    /* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos
     o = cmd, arg = 0
    */
-   output = {cmd,0};
+   output[0] = cmd;
+   output[1] = 0;
   fann_train(ann,input,output);
   fann_destroy(ann);
 		((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd, complete_cmd_info[cmd].subcmd));
