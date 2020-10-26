@@ -521,8 +521,8 @@ void command_interpreter(struct char_data *ch, char *argument)
    /* ann teste - forneck */
    struct fann *ann;
    fann_create_from_file(ann, "etc/aventureiro.fann");
-  float input[9];
-  float output[2];
+  fann_type *input[9];
+  fann_type *output[2];
 
 	REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
      input = {GET_HIT(ch), GET_MAX_HIT(ch),GET_MANA(ch),GET_MAX_MANA(ch),GET_MOVE(ch),GET_MAX_MOVE(ch),GET_ROOM_VNUM(IN_ROOM(ch)),GET_CLASS(ch),GET_POS(ch)};
@@ -592,7 +592,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		    /* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos
     o = cmd, arg = vnum
    */
-   output = {cmd,skill->vnum};
+   output = {cmd,1};
   fann_train(ann,input,output);
 			return;
 		}
