@@ -667,7 +667,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 
   	if (CONFIG_DEBUG_MODE >= NRM) {  
 calc_output = fann_run(ann,input);
-  	send_to_char(ch, "  DEBUG AVENTUREIRO: Comando %s arg %d\r\n", cmd_info[(int) calc_output[0]].command,calc_output[1]); 
+  	send_to_char(ch, "  DEBUG AVENTUREIRO: Comando %s arg %l\r\n", cmd_info[(int) calc_output[0]].command,calc_output[1]); 
   	}
   	
    fann_save(ann,"etc/aventureiro.fann");
