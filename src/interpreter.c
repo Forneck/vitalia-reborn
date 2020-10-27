@@ -521,7 +521,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	int door;
 	int grupo;
    mob_vnum mob;
-   object_vnum obj;
+   obj_vnum obj;
    
 	if (GROUP(ch) != NULL)
 		grupo = 1;
@@ -840,7 +840,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			if (type2 == 1)		/* mob */
 			{
 				output[4] = CMD_ARG_MOB;
-				output[5] = mob
+				output[5] = mob;
 			}
 			else if (type2 == 2)	/* player */
 			{
