@@ -1194,7 +1194,7 @@ ACMD(do_recall)
 		return;
 	}
 
-	if (PLR_FLAGGED(ch, PLR_DEAD | PLR_JAILED))
+	if (PLR_FLAGGED(ch, PLR_GHOST | PLR_JAILED))
 	{
 		send_to_char(ch, "Nah... nem pensar!\r\n");
 		return;
