@@ -329,9 +329,9 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
 	{
 		if (GET_LEVEL(ch) < LVL_IMMORT)
 		{
-			SET_BIT_AR(PLR_FLAGS(ch), PLR_DEAD);
+			SET_BIT_AR(PLR_FLAGS(ch), PLR_GHOST);
 			GET_COND(ch, HUNGER) = -1;
-			GET_COND(ch, THIRST) = -1;
+			GET_COND(ch, THIRST) = -1;			
 		}
 		GET_DEATH(ch)++;
 		GET_HIT(ch) = 0;
