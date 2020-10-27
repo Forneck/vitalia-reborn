@@ -165,10 +165,10 @@ interpreter.o: interpreter.c conf.h sysdep.h structs.h protocol.h lists.h \
  utils.h comm.h interpreter.h db.h spells.h handler.h mail.h screen.h \
  genolc.h oasis.h improved-edit.h dg_scripts.h constants.h act.h ban.h \
  class.h graph.h hedit.h house.h config.h modify.h quest.h asciimap.h \
- prefedit.h ibt.h mud_event.h dg_event.h spedit.h include/floatfann.h \
- include/fann.h include/fann_error.h include/fann_activation.h \
- include/fann_data.h include/fann_internal.h include/fann_train.h \
- include/fann_cascade.h include/fann_io.h
+ prefedit.h ibt.h mud_event.h dg_event.h spedit.h fight.h \
+ include/floatfann.h include/fann.h include/fann_error.h \
+ include/fann_activation.h include/fann_data.h include/fann_internal.h \
+ include/fann_train.h include/fann_cascade.h include/fann_io.h
 limits.o: limits.c conf.h sysdep.h structs.h protocol.h lists.h utils.h \
  spells.h comm.h db.h handler.h interpreter.h dg_scripts.h class.h \
  fight.h screen.h mud_event.h dg_event.h
