@@ -764,7 +764,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			output[3] = -1;
 		}
 		/* vitima eh mob */
-		if (((victim = get_char_vis(ch, arg1, NULL, FIND_CHAR_WORLD) != NULL) && IS_NPC(victim)))
+		if ((victim = get_char_vis(ch, arg1, NULL, FIND_CHAR_WORLD))  && IS_NPC(victim))
 		{
 			type1 = 1;
 			mob = GET_MOB_VNUM(victim);
@@ -785,7 +785,9 @@ void command_interpreter(struct char_data *ch, char *argument)
 			type1 = 3;
          obj = GET_OBJ_VNUM(object);
 		}
-
+      
+      door = EXIT(ch, arg1);
+      
 		if (type1 == 1)			/* mob */
 		{
 			output[2] = CMD_ARG_MOB;
@@ -809,7 +811,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 
 		/* arg 2 */
 		/* vitima eh mob */
-		if (((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD) != NULL) && IS_NPC(victim)))
+			if ((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD))  && IS_NPC(victim))
 		{
 			type2 = 1;
 			mob = GET_MOB_VNUM(victim);
