@@ -237,7 +237,7 @@
 #define PLR_JAILED 21 /**< Player is jailed */
 #define PLR_TRNS 22 /**< Player transcended */
 #define PLR_HERETIC 23 /* Player can't pray */
-#define PLR_DEAD 24 /* Player is a ghost */
+#define PLR_GHOST 24 /* Player is a ghost */
 
 /* Mobile flags: used by char_data.char_specials.act */
 #define MOB_SPEC            0   /**< Mob has a callable spec-proc */
