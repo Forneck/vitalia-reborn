@@ -593,7 +593,8 @@ void command_interpreter(struct char_data *ch, char *argument)
 		    /* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos
     o = cmd, arg = vnum -- forneck
    */
-   output = {cmd, skill->vnum};
+   output[0] = cmd;
+   output[1] = skill->vnum;
   fann_train(ann,input,output);
 			return;
 		}
@@ -658,10 +659,11 @@ void command_interpreter(struct char_data *ch, char *argument)
 	else if (no_specials || !special(ch, cmd, line))
 	
 		    /* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos
-    o = cmd, arg = 0 -- forneck
+    o = cmd, arg = (baseado no comando) -- forneck
    */
    
-   output = { cmd, 0};
+   output[0] = cmd;
+   output[1] = 0;
   fann_train(ann,input,output);
 
   	if (CONFIG_DEBUG_MODE >= NRM) {  
