@@ -94,14 +94,14 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 	if (!raiser)
 	{
 		act("$n foi trazid$r devolta à vida pelos Deuses!", TRUE, ch, 0, 0, TO_ROOM);
-		act("@WVocê foi trazid$r devolta à vida pelos Deuses!@n", FALSE, ch, 0, 0, TO_CHAR);
+		act("\tWVocê foi trazid$r devolta à vida pelos Deuses!\tn", FALSE, ch, 0, 0, TO_CHAR);
 	}
 	else if (GET_LEVEL(raiser) >= LVL_IMMORT)
 	{
 		act("Sua força divina trouxe $N devolta à vida.", FALSE, raiser, 0, ch, TO_CHAR);
 		act("$n foi trazid$r devolta à vida pela força divina de $N!", FALSE, ch, 0, raiser,
 			TO_NOTVICT);
-		act("@WVocê foi trazid$r devolta à vida pela força divina de $N!@n", FALSE, ch, 0,
+		act("\tWVocê foi trazid$r devolta à vida pela força divina de $N!\tn", FALSE, ch, 0,
 			raiser, TO_CHAR);
 	}
 	else
@@ -109,7 +109,7 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 		act("Você sente a força de seu Deus trazendo $N devolta à vida!@n", FALSE, raiser, 0,
 			ch, TO_CHAR);
 		act("$n foi trazid$r devolta à vida pelo Deus de $N!", FALSE, ch, 0, raiser, TO_NOTVICT);
-		act("@WVocê foi trazid$r devolta à vida pela força divina dos Deuses de $N!@n", FALSE,
+		act("\tWVocê foi trazid$r devolta à vida pela força divina dos Deuses de $N!\tn", FALSE,
 			ch, 0, raiser, TO_CHAR);
 	}
 
