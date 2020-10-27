@@ -355,7 +355,7 @@ void check_thief(struct char_data *ch, struct char_data *vict)
   }
 }
 
-ACMD(do_practice)
+ACMD(practice)
 {
 	char arg[MAX_INPUT_LENGTH];
 
