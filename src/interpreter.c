@@ -543,6 +543,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	struct char_data *victim;
 	struct obj_data *object;
 	int id_player;
+	int door;
 
 	REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
 
