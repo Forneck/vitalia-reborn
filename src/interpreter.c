@@ -1420,7 +1420,7 @@ int enter_player_game(struct descriptor_data *d)
 	}
 	if (PLR_FLAGGED(d->character, PLR_FROZEN))
 		load_room = r_frozen_start_room;
-	if (PLR_FLAGGED(d->character, PLR_DEAD))
+	if (PLR_FLAGGED(d->character, PLR_GHOST))
 		load_room = r_dead_start_room;
 
 	/* copyover */
