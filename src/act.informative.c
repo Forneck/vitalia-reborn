@@ -708,7 +708,7 @@ void look_at_room(struct char_data *ch, int ignore_brief)
 			send_to_char(ch, "%s", world[IN_ROOM(ch)].description);
 	}
 
-  if (ALIVE(ch)){
+  if (!PLR_FLAGGED(ch,PLR_GHOST)){
 	for (i = 0; i < NUM_OF_DIRS; i++)
 		if (EXIT(ch, i) && EXIT(ch, i)->to_room && ROOM_FLAGGED(EXIT(ch, i)->to_room, ROOM_DEATH))
 		{
