@@ -54,7 +54,6 @@ static int sort_commands_helper(const void *a, const void *b);
 int parse_hometown(char arg);
 void hometown_menu(struct descriptor_data *d);
 
-
 /* globals defined here, used here and elsewhere */
 int *cmd_sort_info = NULL;
 
@@ -119,7 +118,6 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"buildwalk", "buildwalk", POS_STANDING, do_gen_tog, LVL_BUILDER, SCMD_BUILDWALK, CMD_SELF},
 	{"buy", "bu", POS_STANDING, do_not_here, 0, 0, CMD_OBJ},
 	{"bug", "bug", POS_DEAD, do_ibt, 0, SCMD_BUG, CMD_NONE},
-
 	{"cast", "c", POS_SITTING, do_cast, 1, SCMD_SPELL, CMD_MISC},
 	{"cedit", "cedit", POS_DEAD, do_oasis_cedit, LVL_IMPL, CMD_NONE},
 	{"changelog", "cha", POS_DEAD, do_changelog, LVL_IMPL, CMD_NONE},
@@ -134,7 +132,6 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"compact", "comp", POS_DEAD, do_gen_tog, 0, SCMD_COMPACT, CMD_SELF},
 	{"copyover", "copyover", POS_DEAD, do_copyover, LVL_GRGOD, 0, CMD_NONE},
 	{"credits", "cred", POS_DEAD, do_gen_ps, 0, SCMD_CREDITS, CMD_NONE},
-
 	{"date", "da", POS_DEAD, do_date, LVL_IMMORT, SCMD_DATE, CMD_NONE},
 	{"dc", "dc", POS_DEAD, do_dc, LVL_GOD, 0, CMD_NONE},
 	{"deposit", "depo", POS_STANDING, do_not_here, 1, 0, CMD_SELF},
@@ -145,7 +142,6 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"donate", "don", POS_RESTING, do_drop, 0, SCMD_DONATE, CMD_OBJ},
 	{"drink", "dri", POS_RESTING, do_drink, 0, SCMD_DRINK, CMD_OBJ},
 	{"drop", "dro", POS_RESTING, do_drop, 0, SCMD_DROP, CMD_OBJ},
-
 	{"eat", "ea", POS_RESTING, do_eat, 0, SCMD_EAT, CMD_OBJ},
 	{"echo", "ec", POS_SLEEPING, do_echo, LVL_IMMORT, SCMD_ECHO, CMD_COMM},
 	{"emote", "em", POS_RESTING, do_echo, 0, SCMD_EMOTE, CMD_COMM},
@@ -155,7 +151,6 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"exits", "ex", POS_RESTING, do_exits, 0, 0, CMD_SELF},
 	{"examine", "exa", POS_SITTING, do_examine, 0, 0, CMD_MISC},
 	{"export", "export", POS_DEAD, do_export_zone, LVL_IMPL, 0, CMD_NONE},
-
 	{"force", "force", POS_SLEEPING, do_force, LVL_GOD, 0, CMD_PLAYERS},
 	{"fill", "fil", POS_STANDING, do_pour, 0, SCMD_FILL, CMD_OBJ},
 	{"file", "file", POS_SLEEPING, do_file, LVL_GOD, 0, CMD_NONE},
@@ -164,7 +159,6 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"follow", "fol", POS_RESTING, do_follow, 0, 0, CMD_PLAYERS},
 	{"formula", "form", POS_DEAD, do_formula, LVL_GOD, 0, CMD_NONE},
 	{"freeze", "freeze", POS_DEAD, do_wizutil, LVL_GRGOD, SCMD_FREEZE, CMD_PLAYERS},
-
 	{"gassist", "gas", POS_FIGHTING, do_gassist, 1, 0, CMD_SELF},
 	{"get", "g", POS_RESTING, do_get, 0, 0, CMD_OBJ},
 	{"gecho", "gecho", POS_DEAD, do_gecho, LVL_GOD, 0, CMD_COMM},
@@ -178,7 +172,6 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"grats", "grat", POS_SLEEPING, do_gen_comm, 0, SCMD_GRATZ, CMD_COMM},
 	{"gsay", "gsay", POS_SLEEPING, do_gsay, 0, 0, CMD_COMM},
 	{"gtell", "gt", POS_SLEEPING, do_gsay, 0, 0, CMD_COMM},
-
 	{"help", "h", POS_DEAD, do_help, 0, 0, CMD_NONE},
 	{"happyhour", "ha", POS_DEAD, do_happyhour, 0, 0, CMD_SELF},
 	{"hedit", "hedit", POS_DEAD, do_oasis_hedit, LVL_GOD, 0, CMD_NONE},
@@ -192,7 +185,6 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"hold", "hold", POS_RESTING, do_grab, 1, 0, CMD_OBJ},
 	{"holylight", "holy", POS_DEAD, do_gen_tog, LVL_IMMORT, SCMD_HOLYLIGHT, CMD_SELF},
 	{"house", "house", POS_RESTING, do_house, 0, 0, CMD_PLAYERS},
-
 	{"inventory", "i", POS_DEAD, do_inventory, 0, 0, CMD_SELF},
 	{"identify", "id", POS_STANDING, do_not_here, 1, 0, CMD_OBJ},
 	{"idea", "ide", POS_DEAD, do_ibt, 0, SCMD_IDEA, CMD_NONE},
@@ -200,12 +192,9 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"immlist", "imm", POS_DEAD, do_gen_ps, 0, SCMD_IMMLIST, CMD_NONE},
 	{"info", "info", POS_SLEEPING, do_gen_ps, 0, SCMD_INFO, CMD_NONE},
 	{"invis", "invi", POS_DEAD, do_invis, LVL_IMMORT, 0, CMD_SELF},
-
 	{"junk", "j", POS_RESTING, do_drop, 0, SCMD_JUNK, CMD_OBJ},
-
 	{"kill", "k", POS_FIGHTING, do_kill, 0, 0, CMD_PLAYERS},
 	{"kick", "ki", POS_FIGHTING, do_cast, 1, SKILL_KICK, CMD_PLAYERS},
-
 	{"look", "l", POS_RESTING, do_look, 0, SCMD_LOOK, CMD_NONE},
 	{"last", "last", POS_DEAD, do_last, LVL_GOD, 0, CMD_NONE},
 	{"land", "lan", POS_DEAD, do_fly, 1, SCMD_LAND, CMD_SELF},
@@ -215,7 +204,6 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"links", "lin", POS_STANDING, do_links, LVL_GOD, 0, CMD_NONE},
 	{"lock", "loc", POS_SITTING, do_gen_door, 0, SCMD_LOCK, CMD_EXITS},
 	{"load", "load", POS_DEAD, do_load, LVL_BUILDER, 0, CMD_MISC},
-
 	{"motd", "motd", POS_DEAD, do_gen_ps, 0, SCMD_MOTD, CMD_NONE},
 	{"mail", "mail", POS_STANDING, do_not_here, 1, 0, CMD_PLAYERS},
 	{"map", "map", POS_STANDING, do_map, 1, 0, CMD_SELF},
@@ -226,7 +214,6 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"msgedit", "msgedit", POS_DEAD, do_msgedit, LVL_GOD, 0, CMD_NONE},
 	{"murder", "mur", POS_FIGHTING, do_hit, 0, SCMD_MURDER, CMD_PLAYERS},
 	{"mute", "mute", POS_DEAD, do_wizutil, LVL_GOD, SCMD_MUTE, CMD_PLAYERS},
-
 	{"news", "news", POS_SLEEPING, do_gen_ps, 0, SCMD_NEWS, CMD_NONE},
 	{"noauction", "noauction", POS_DEAD, do_gen_tog, 0, SCMD_NOAUCTION, CMD_SELF},
 	{"nogossip", "nogossip", POS_DEAD, do_gen_tog, 0, SCMD_NOGOSSIP, CMD_SELF},
@@ -238,7 +225,6 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"notell", "notell", POS_DEAD, do_gen_tog, 1, SCMD_NOTELL, CMD_SELF},
 	{"notitle", "notitle", POS_DEAD, do_wizutil, LVL_GOD, SCMD_NOTITLE, CMD_SELF},
 	{"nowiz", "nowiz", POS_DEAD, do_gen_tog, LVL_IMMORT, SCMD_NOWIZ, CMD_SELF},
-
 	{"open", "o", POS_SITTING, do_gen_door, 0, SCMD_OPEN, CMD_EXITS},
 	{"order", "ord", POS_RESTING, do_order, 1, 0, CMD_PLAYERS},
 	{"offer", "off", POS_STANDING, do_not_here, 1, 0, CMD_SELF},
@@ -247,7 +233,6 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"oedit", "oedit", POS_DEAD, do_oasis_oedit, LVL_BUILDER, 0, CMD_OBJ},
 	{"oset", "oset", POS_DEAD, do_oset, LVL_BUILDER, 0, CMD_OBJ},
 	{"ocopy", "ocopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_OEDIT, CMD_OBJ},
-
 	{"put", "p", POS_RESTING, do_put, 0, 0, CMD_OBJ},
 	{"peace", "pe", POS_DEAD, do_peace, LVL_BUILDER, 0, CMD_NONE},
 	{"pick", "pi", POS_STANDING, do_gen_door, 1, SCMD_PICK, CMD_EXITS},
@@ -262,7 +247,6 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"prompt", "pro", POS_DEAD, do_display, 0, 0, CMD_NONE},
 	{"prefedit", "pre", POS_DEAD, do_oasis_prefedit, 0, 0, CMD_NONE},
 	{"purge", "purge", POS_DEAD, do_purge, LVL_BUILDER, 0, CMD_NONE},
-
 	{"qedit", "qedit", POS_DEAD, do_oasis_qedit, LVL_BUILDER, 0, CMD_NONE},
 	{"qlist", "qlist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_QLIST, CMD_ZONE},
 	{"quaff", "qua", POS_RESTING, do_use, 0, SCMD_QUAFF, CMD_OBJ},
@@ -536,7 +520,9 @@ void command_interpreter(struct char_data *ch, char *argument)
 	int id_player;
 	int door;
 	int grupo;
-
+   mob_vnum mob;
+   object_vnum obj;
+   
 	if (GROUP(ch) != NULL)
 		grupo = 1;
 	else
@@ -644,6 +630,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			if ((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD) != NULL) && IS_NPC(victim))
 			{
 				type2 = 1;
+				mob = GET_MOB_VNUM(victim);
 			}
 			/* vitima eh player */
 			for (i = 0; i <= top_of_p_table; i++)
@@ -657,8 +644,10 @@ void command_interpreter(struct char_data *ch, char *argument)
 			}
 			/* em objeto */
 			if ((object = get_obj_vis(ch, arg2, NULL)) != NULL)
+			{
 				type2 = 3;
-
+            obj = GET_OBJ_VNUM(object);
+			}
 			/* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos 
 			   o = cmd, arg = vnum -- forneck */
 			output[0] = cmd;
@@ -668,7 +657,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			if (type2 == 1)		/* mob */
 			{
 				output[4] = CMD_ARG_MOB;
-				output[5] = GET_MOB_VNUM(victim);
+				output[5] = mob;
 			}
 			else if (type2 == 2)	/* player */
 			{
@@ -678,7 +667,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			else
 			{
 				output[4] = CMD_ARG_OBJ;
-				output[5] = GET_OBJ_VNUM(object);
+				output[5] = obj;
 			}
 			fann_train(ann, input, output);
 			return;
@@ -778,6 +767,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		if (((victim = get_char_vis(ch, arg1, NULL, FIND_CHAR_WORLD) != NULL) && IS_NPC(victim)))
 		{
 			type1 = 1;
+			mob = GET_MOB_VNUM(victim);
 		}
 		/* vitima eh player */
 		for (i = 0; i <= top_of_p_table; i++)
@@ -791,25 +781,25 @@ void command_interpreter(struct char_data *ch, char *argument)
 		}
 		/* eh objeto */
 		if ((object = get_obj_vis(ch, arg1, NULL)) != NULL)
+		{
 			type1 = 3;
-
-		/* arg1 dir */
-		door = search_block(arg1, dirs, FALSE);
+         obj = GET_OBJ_VNUM(object);
+		}
 
 		if (type1 == 1)			/* mob */
 		{
 			output[2] = CMD_ARG_MOB;
-			output[3] = GET_MOB_VNUM(victim);
+			output[3] = mob;
 		}
 		else if (type1 == 2)	/* player */
 		{
 			output[2] = CMD_ARG_PLAYER;
-			output[3] = GET_IDNUM(victim);
+			output[3] = id_player;
 		}
 		else if (type1 == 3)
 		{
 			output[2] = CMD_ARG_OBJ;
-			output[3] = GET_OBJ_VNUM(object);
+			output[3] = obj;
 		}
 		else
 		{
@@ -822,6 +812,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		if (((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD) != NULL) && IS_NPC(victim)))
 		{
 			type2 = 1;
+			mob = GET_MOB_VNUM(victim);
 		}
 		/* vitima eh player */
 		for (i = 0; i <= top_of_p_table; i++)
@@ -835,8 +826,10 @@ void command_interpreter(struct char_data *ch, char *argument)
 		}
 		/* eh objeto */
 		if ((object = get_obj_vis(ch, arg2, NULL)) != NULL)
+		{
 			type2 = 3;
-
+         obj = GET_OBJ_VNUM(object);
+		}
 		if (!*arg2)
 		{
 			output[4] = -1;
@@ -847,17 +840,17 @@ void command_interpreter(struct char_data *ch, char *argument)
 			if (type2 == 1)		/* mob */
 			{
 				output[4] = CMD_ARG_MOB;
-				output[5] = GET_MOB_VNUM(victim);
+				output[5] = mob
 			}
 			else if (type2 == 2)	/* player */
 			{
 				output[4] = CMD_ARG_PLAYER;
-				output[5] = GET_IDNUM(victim);
+				output[5] = id_player;
 			}
 			else if (type2 == 3)
 			{
 				output[4] = CMD_ARG_OBJ;
-				output[5] = GET_OBJ_VNUM(object);
+				output[5] = obj;
 			}
 		}
 
