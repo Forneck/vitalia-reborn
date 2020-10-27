@@ -454,7 +454,7 @@ static void check_idling(struct char_data *ch)
 	if (ch->char_specials.timer > CONFIG_IDLE_VOID)
 	{
 		if (GET_WAS_IN(ch) == NOWHERE && IN_ROOM(ch) != NOWHERE
-			&& !PLR_FLAGGED(ch, PLR_DEAD | PLR_FROZEN | PLR_JAILED))
+			&& !PLR_FLAGGED(ch, PLR_GHOST | PLR_FROZEN | PLR_JAILED))
 		{
 			GET_WAS_IN(ch) = IN_ROOM(ch);
 			if (FIGHTING(ch))
