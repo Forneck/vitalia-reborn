@@ -69,324 +69,326 @@ struct command_info *complete_cmd_info;
    dangerously destructive commands should have low priority. */
 
 cpp_extern const struct command_info cmd_info[] = {
-	{"RESERVED", "", 0, 0, 0, 0},	/* this must be first -- for specprocs */
+	{"RESERVED", "", 0, 0, 0, 0, 0},	/* this must be first -- for specprocs 
+										 */
 
 	/* directions must come before other commands but after RESERVED */
-	{"north", "n", POS_STANDING, do_move, 0, SCMD_NORTH},
-	{"east", "e", POS_STANDING, do_move, 0, SCMD_EAST},
-	{"south", "s", POS_STANDING, do_move, 0, SCMD_SOUTH},
-	{"west", "w", POS_STANDING, do_move, 0, SCMD_WEST},
-	{"up", "u", POS_STANDING, do_move, 0, SCMD_UP},
-	{"down", "d", POS_STANDING, do_move, 0, SCMD_DOWN},
-	{"northwest", "northw", POS_STANDING, do_move, 0, SCMD_NW},
-	{"nw", "nw", POS_STANDING, do_move, 0, SCMD_NW},
-	{"northeast", "northe", POS_STANDING, do_move, 0, SCMD_NE},
-	{"ne", "ne", POS_STANDING, do_move, 0, SCMD_NE},
-	{"southeast", "southe", POS_STANDING, do_move, 0, SCMD_SE},
-	{"se", "se", POS_STANDING, do_move, 0, SCMD_SE},
-	{"southwest", "southw", POS_STANDING, do_move, 0, SCMD_SW},
-	{"sw", "sw", POS_STANDING, do_move, 0, SCMD_SW},
+	{"north", "n", POS_STANDING, do_move, 0, SCMD_NORTH, CMD_SELF},
+	{"east", "e", POS_STANDING, do_move, 0, SCMD_EAST, CMD_SELF},
+	{"south", "s", POS_STANDING, do_move, 0, SCMD_SOUTH, CMD_SELF},
+	{"west", "w", POS_STANDING, do_move, 0, SCMD_WEST, CMD_SELF},
+	{"up", "u", POS_STANDING, do_move, 0, SCMD_UP, CMD_SELF},
+	{"down", "d", POS_STANDING, do_move, 0, SCMD_DOWN, CMD_SELF},
+	{"northwest", "northw", POS_STANDING, do_move, 0, SCMD_NW, CMD_SELF},
+	{"nw", "nw", POS_STANDING, do_move, 0, SCMD_NW, CMD_SELF},
+	{"northeast", "northe", POS_STANDING, do_move, 0, SCMD_NE, CMD_SELF},
+	{"ne", "ne", POS_STANDING, do_move, 0, SCMD_NE, CMD_SELF},
+	{"southeast", "southe", POS_STANDING, do_move, 0, SCMD_SE, CMD_SELF},
+	{"se", "se", POS_STANDING, do_move, 0, SCMD_SE, CMD_SELF},
+	{"southwest", "southw", POS_STANDING, do_move, 0, SCMD_SW, CMD_SELF},
+	{"sw", "sw", POS_STANDING, do_move, 0, SCMD_SW, CMD_SELF},
 
 	/* now, the main list */
-	{"at", "at", POS_DEAD, do_at, LVL_IMMORT, 0},
-	{"advance", "adv", POS_DEAD, do_advance, LVL_GRGOD, 0},
-	{"aedit", "aed", POS_DEAD, do_oasis_aedit, LVL_GOD, 0},
-	{"alias", "ali", POS_DEAD, do_alias, 0, 0},
-	{"areas", "are", POS_DEAD, do_areas, 0, 0},
-	{"assist", "as", POS_FIGHTING, do_assist, 1, 0},
-	{"ask", "ask", POS_RESTING, do_spec_comm, 0, SCMD_ASK},
-	{"astat", "ast", POS_DEAD, do_astat, 0, 0},
-	{"attach", "attach", POS_DEAD, do_attach, LVL_BUILDER, 0},
-	{"auction", "auc", POS_SLEEPING, do_gen_comm, 0, SCMD_AUCTION},
-	{"autoexits", "autoex", POS_DEAD, do_gen_tog, 0, SCMD_AUTOEXIT},
-	{"autoassist", "autoass", POS_DEAD, do_gen_tog, 0, SCMD_AUTOASSIST},
-	{"autodoor", "autodoor", POS_DEAD, do_gen_tog, 0, SCMD_AUTODOOR},
-	{"autogold", "autogold", POS_DEAD, do_gen_tog, 0, SCMD_AUTOGOLD},
-	{"autokey", "autokey", POS_DEAD, do_gen_tog, 0, SCMD_AUTOKEY},
-	{"autoloot", "autoloot", POS_DEAD, do_gen_tog, 0, SCMD_AUTOLOOT},
-	{"automap", "automap", POS_DEAD, do_gen_tog, 0, SCMD_AUTOMAP},
-	{"autosac", "autosac", POS_DEAD, do_gen_tog, 0, SCMD_AUTOSAC},
-	{"autosplit", "autospl", POS_DEAD, do_gen_tog, 0, SCMD_AUTOSPLIT},
-		{"away", "aw", POS_DEAD, do_gen_tog, 0, SCMD_AFK},
+	{"at", "at", POS_DEAD, do_at, LVL_IMMORT, 0, CMD_MISC},
+	{"advance", "adv", POS_DEAD, do_advance, LVL_GRGOD, 0, CMD_PLAYERS},
+	{"aedit", "aed", POS_DEAD, do_oasis_aedit, LVL_GOD, 0, CMD_NONE},
+	{"alias", "ali", POS_DEAD, do_alias, 0, 0, CMD_NONE},
+	{"areas", "are", POS_DEAD, do_areas, 0, 0, CMD_NONE},
+	{"assist", "as", POS_FIGHTING, do_assist, 1, 0, CMD_PLAYERS},
+	{"ask", "ask", POS_RESTING, do_spec_comm, 0, SCMD_ASK, CMD_PLAYERS},
+	{"astat", "ast", POS_DEAD, do_astat, 0, 0, CMD_NONE},
+	{"attach", "attach", POS_DEAD, do_attach, LVL_BUILDER, 0, CMD_MISC},
+	{"auction", "auc", POS_SLEEPING, do_gen_comm, 0, SCMD_AUCTION, CMD_OBJECT},
+	{"autoexits", "autoex", POS_DEAD, do_gen_tog, 0, SCMD_AUTOEXIT, CMD_SELF},
+	{"autoassist", "autoass", POS_DEAD, do_gen_tog, 0, SCMD_AUTOASSIST, CMD_SELF},
+	{"autodoor", "autodoor", POS_DEAD, do_gen_tog, 0, SCMD_AUTODOOR, CMD_SELF},
+	{"autogold", "autogold", POS_DEAD, do_gen_tog, 0, SCMD_AUTOGOLD, CMD_SELF},
+	{"autokey", "autokey", POS_DEAD, do_gen_tog, 0, SCMD_AUTOKEY, CMD_SELF},
+	{"autoloot", "autoloot", POS_DEAD, do_gen_tog, 0, SCMD_AUTOLOOT, CMD_SELF},
+	{"automap", "automap", POS_DEAD, do_gen_tog, 0, SCMD_AUTOMAP, CMD_SELF},
+	{"autosac", "autosac", POS_DEAD, do_gen_tog, 0, SCMD_AUTOSAC, CMD_SELF},
+	{"autosplit", "autospl", POS_DEAD, do_gen_tog, 0, SCMD_AUTOSPLIT, CMD_SELF},
+	{"away", "aw", POS_DEAD, do_gen_tog, 0, SCMD_AFK, CMD_SELF},
+	{"backstab", "ba", POS_STANDING, do_cast, 1, SKILL_BACKSTAB, CMD_PLAYERS},
+	{"backflip", "bac", POS_FIGHTING, do_cast, 1, SKILL_BACKFLIP, CMD_PLAYERS},
+	{"ban", "ban", POS_DEAD, do_ban, LVL_GRGOD, 0, CMD_PLAYERS},
+	{"bandage", "band", POS_RESTING, do_cast, 1, SKILL_BANDAGE, CMD_PLAYERS},
+	{"balance", "bal", POS_STANDING, do_not_here, 1, 0, CMD_SELF},
+	{"bash", "bas", POS_FIGHTING, do_cast, 1, SKILL_BASH, CMD_PLAYERS},
+	{"brief", "br", POS_DEAD, do_gen_tog, 0, SCMD_BRIEF, CMD_SELF},
+	{"buildwalk", "buildwalk", POS_STANDING, do_gen_tog, LVL_BUILDER, SCMD_BUILDWALK, CMD_SELF},
+	{"buy", "bu", POS_STANDING, do_not_here, 0, 0, CMD_OBJ},
+	{"bug", "bug", POS_DEAD, do_ibt, 0, SCMD_BUG, CMD_NONE},
 
-	{"backstab", "ba", POS_STANDING, do_cast, 1, SKILL_BACKSTAB},
-   {"backflip", "bac", POS_FIGHTING, do_cast, 1, SKILL_BACKFLIP},
-	{"ban", "ban", POS_DEAD, do_ban, LVL_GRGOD, 0},
-	{"bandage", "band", POS_RESTING, do_cast, 1, SKILL_BANDAGE},
-	{"balance", "bal", POS_STANDING, do_not_here, 1, 0},
-	{"bash", "bas", POS_FIGHTING, do_cast, 1, SKILL_BASH},
-	{"brief", "br", POS_DEAD, do_gen_tog, 0, SCMD_BRIEF},
-	{"buildwalk", "buildwalk", POS_STANDING, do_gen_tog, LVL_BUILDER, SCMD_BUILDWALK},
-	{"buy", "bu", POS_STANDING, do_not_here, 0, 0},
-	{"bug", "bug", POS_DEAD, do_ibt, 0, SCMD_BUG},
+	{"cast", "c", POS_SITTING, do_cast, 1, SCMD_SPELL, CMD_MISC},
+	{"cedit", "cedit", POS_DEAD, do_oasis_cedit, LVL_IMPL, CMD_NONE},
+	{"changelog", "cha", POS_DEAD, do_changelog, LVL_IMPL, CMD_NONE},
+	{"check", "ch", POS_STANDING, do_not_here, 1, CMD_MISC},
+	{"checkload", "checkl", POS_DEAD, do_checkloadstatus, LVL_GOD, CMD_BOTH},
+	{"close", "cl", POS_SITTING, do_gen_door, 0, SCMD_CLOSE, CMD_EXITS},
+	{"clear", "cle", POS_DEAD, do_gen_ps, 0, SCMD_CLEAR, CMD_NONE},
+	{"cls", "cls", POS_DEAD, do_gen_ps, 0, SCMD_CLEAR, CMD_NONE},
+	{"consider", "con", POS_RESTING, do_consider, 0, 0, CMD_MOB},
+	{"commands", "com", POS_DEAD, do_commands, 0, SCMD_COMMANDS, CMD_SELF},
+	{"combo", "comb", POS_FIGHTING, do_cast, 1, SKILL_COMBO_ATTACK, CMD_PLAYERS},
+	{"compact", "comp", POS_DEAD, do_gen_tog, 0, SCMD_COMPACT, CMD_SELF},
+	{"copyover", "copyover", POS_DEAD, do_copyover, LVL_GRGOD, 0, CMD_NONE},
+	{"credits", "cred", POS_DEAD, do_gen_ps, 0, SCMD_CREDITS, CMD_NONE},
 
-	{"cast", "c", POS_SITTING, do_cast, 1, SCMD_SPELL},
-	{"cedit", "cedit", POS_DEAD, do_oasis_cedit, LVL_IMPL, 0},
-	{"changelog", "cha", POS_DEAD, do_changelog, LVL_IMPL, 0},
-	{"check", "ch", POS_STANDING, do_not_here, 1, 0},
-	{"checkload", "checkl", POS_DEAD, do_checkloadstatus, LVL_GOD, 0},
-	{"close", "cl", POS_SITTING, do_gen_door, 0, SCMD_CLOSE},
-	{"clear", "cle", POS_DEAD, do_gen_ps, 0, SCMD_CLEAR},
-	{"cls", "cls", POS_DEAD, do_gen_ps, 0, SCMD_CLEAR},
-	{"consider", "con", POS_RESTING, do_consider, 0, 0},
-	{"commands", "com", POS_DEAD, do_commands, 0, SCMD_COMMANDS},
-		{"combo", "comb", POS_FIGHTING, do_cast, 1, SKILL_COMBO_ATTACK},
-	{"compact", "comp", POS_DEAD, do_gen_tog, 0, SCMD_COMPACT},
-	{"copyover", "copyover", POS_DEAD, do_copyover, LVL_GRGOD, 0},
-	{"credits", "cred", POS_DEAD, do_gen_ps, 0, SCMD_CREDITS},
+	{"date", "da", POS_DEAD, do_date, LVL_IMMORT, SCMD_DATE, CMD_NONE},
+	{"dc", "dc", POS_DEAD, do_dc, LVL_GOD, 0, CMD_NONE},
+	{"deposit", "depo", POS_STANDING, do_not_here, 1, 0, CMD_SELF},
+	{"detach", "detach", POS_DEAD, do_detach, LVL_BUILDER, 0, CMD_NONE},
+	{"diagnose", "diag", POS_RESTING, do_diagnose, 0, 0, CMD_PLAYERS},
+	{"dig", "dig", POS_DEAD, do_dig, LVL_BUILDER, 0, CMD_NONE},
+	{"display", "disp", POS_DEAD, do_display, 0, 0, CMD_SELF},
+	{"donate", "don", POS_RESTING, do_drop, 0, SCMD_DONATE, CMD_OBJ},
+	{"drink", "dri", POS_RESTING, do_drink, 0, SCMD_DRINK, CMD_OBJ},
+	{"drop", "dro", POS_RESTING, do_drop, 0, SCMD_DROP, CMD_OBJ},
 
-	{"date", "da", POS_DEAD, do_date, LVL_IMMORT, SCMD_DATE},
-	{"dc", "dc", POS_DEAD, do_dc, LVL_GOD, 0},
-	{"deposit", "depo", POS_STANDING, do_not_here, 1, 0},
-	{"detach", "detach", POS_DEAD, do_detach, LVL_BUILDER, 0},
-	{"diagnose", "diag", POS_RESTING, do_diagnose, 0, 0},
-	{"dig", "dig", POS_DEAD, do_dig, LVL_BUILDER, 0},
-	{"display", "disp", POS_DEAD, do_display, 0, 0},
-	{"donate", "don", POS_RESTING, do_drop, 0, SCMD_DONATE},
-	{"drink", "dri", POS_RESTING, do_drink, 0, SCMD_DRINK},
-	{"drop", "dro", POS_RESTING, do_drop, 0, SCMD_DROP},
+	{"eat", "ea", POS_RESTING, do_eat, 0, SCMD_EAT, CMD_OBJ},
+	{"echo", "ec", POS_SLEEPING, do_echo, LVL_IMMORT, SCMD_ECHO, CMD_COMM},
+	{"emote", "em", POS_RESTING, do_echo, 0, SCMD_EMOTE, CMD_COMM},
+	{":", ":", POS_RESTING, do_echo, 1, SCMD_EMOTE, CMD_COMM},
+	{"enter", "ent", POS_STANDING, do_enter, 0, 0, CMD_OBJ},
+	{"equipment", "eq", POS_SLEEPING, do_equipment, 0, 0, CMD_SELF},
+	{"exits", "ex", POS_RESTING, do_exits, 0, 0, CMD_SELF},
+	{"examine", "exa", POS_SITTING, do_examine, 0, 0, CMD_MISC},
+	{"export", "export", POS_DEAD, do_export_zone, LVL_IMPL, 0, CMD_NONE},
 
-	{"eat", "ea", POS_RESTING, do_eat, 0, SCMD_EAT},
-	{"echo", "ec", POS_SLEEPING, do_echo, LVL_IMMORT, SCMD_ECHO},
-	{"emote", "em", POS_RESTING, do_echo, 0, SCMD_EMOTE},
-	{":", ":", POS_RESTING, do_echo, 1, SCMD_EMOTE},
-	{"enter", "ent", POS_STANDING, do_enter, 0, 0},
-	{"equipment", "eq", POS_SLEEPING, do_equipment, 0, 0},
-	{"exits", "ex", POS_RESTING, do_exits, 0, 0},
-	{"examine", "exa", POS_SITTING, do_examine, 0, 0},
-	{"export", "export", POS_DEAD, do_export_zone, LVL_IMPL, 0},
+	{"force", "force", POS_SLEEPING, do_force, LVL_GOD, 0, CMD_PLAYERS},
+	{"fill", "fil", POS_STANDING, do_pour, 0, SCMD_FILL, CMD_OBJ},
+	{"file", "file", POS_SLEEPING, do_file, LVL_GOD, 0, CMD_NONE},
+	{"flee", "fl", POS_FIGHTING, do_flee, 1, 0, CMD_SELF},
+	{"fly", "fly", POS_DEAD, do_fly, 1, SCMD_FLY, CMD_SELF},
+	{"follow", "fol", POS_RESTING, do_follow, 0, 0, CMD_PLAYERS},
+	{"formula", "form", POS_DEAD, do_formula, LVL_GOD, 0, CMD_NONE},
+	{"freeze", "freeze", POS_DEAD, do_wizutil, LVL_GRGOD, SCMD_FREEZE, CMD_PLAYERS},
 
-	{"force", "force", POS_SLEEPING, do_force, LVL_GOD, 0},
-	{"fill", "fil", POS_STANDING, do_pour, 0, SCMD_FILL},
-	{"file", "file", POS_SLEEPING, do_file, LVL_GOD, 0},
-	{"flee", "fl", POS_FIGHTING, do_flee, 1, 0},
-	{"fly", "fly",POS_DEAD,do_fly,1,SCMD_FLY},
-	{"follow", "fol", POS_RESTING, do_follow, 0, 0},
-	{"formula", "form", POS_DEAD, do_formula, LVL_GOD, 0},
-	{"freeze", "freeze", POS_DEAD, do_wizutil, LVL_GRGOD, SCMD_FREEZE},
+	{"gassist", "gas", POS_FIGHTING, do_gassist, 1, 0, CMD_SELF},
+	{"get", "g", POS_RESTING, do_get, 0, 0, CMD_OBJ},
+	{"gecho", "gecho", POS_DEAD, do_gecho, LVL_GOD, 0, CMD_COMM},
+	{"gemote", "gem", POS_SLEEPING, do_gen_comm, 0, SCMD_GEMOTE, CMD_COMM},
+	{"give", "giv", POS_RESTING, do_give, 0, 0, CMD_BOTH},
+	{"goto", "go", POS_SLEEPING, do_goto, LVL_IMMORT, 0, CMD_MISC},
+	{"gold", "gol", POS_RESTING, do_gold, 0, 0, CMD_SELF},
+	{"gossip", "gos", POS_SLEEPING, do_gen_comm, 0, SCMD_GOSSIP, CMD_COMM},
+	{"group", "gr", POS_RESTING, do_group, 1, 0, CMD_MISC},
+	{"grab", "grab", POS_RESTING, do_grab, 0, 0, CMD_OBJ},
+	{"grats", "grat", POS_SLEEPING, do_gen_comm, 0, SCMD_GRATZ, CMD_COMM},
+	{"gsay", "gsay", POS_SLEEPING, do_gsay, 0, 0, CMD_COMM},
+	{"gtell", "gt", POS_SLEEPING, do_gsay, 0, 0, CMD_COMM},
 
-	{"gassist", "gas", POS_FIGHTING, do_gassist, 1, 0},
-	{"get", "g", POS_RESTING, do_get, 0, 0},
-	{"gecho", "gecho", POS_DEAD, do_gecho, LVL_GOD, 0},
-	{"gemote", "gem", POS_SLEEPING, do_gen_comm, 0, SCMD_GEMOTE},
-	{"give", "giv", POS_RESTING, do_give, 0, 0},
-	{"goto", "go", POS_SLEEPING, do_goto, LVL_IMMORT, 0},
-	{"gold", "gol", POS_RESTING, do_gold, 0, 0},
-	{"gossip", "gos", POS_SLEEPING, do_gen_comm, 0, SCMD_GOSSIP},
-	{"group", "gr", POS_RESTING, do_group, 1, 0},
-	{"grab", "grab", POS_RESTING, do_grab, 0, 0},
-	{"grats", "grat", POS_SLEEPING, do_gen_comm, 0, SCMD_GRATZ},
-	{"gsay", "gsay", POS_SLEEPING, do_gsay, 0, 0},
-	{"gtell", "gt", POS_SLEEPING, do_gsay, 0, 0},
+	{"help", "h", POS_DEAD, do_help, 0, 0, CMD_NONE},
+	{"happyhour", "ha", POS_DEAD, do_happyhour, 0, 0, CMD_SELF},
+	{"hedit", "hedit", POS_DEAD, do_oasis_hedit, LVL_GOD, 0, CMD_NONE},
+	{"helpcheck", "helpch", POS_DEAD, do_helpcheck, LVL_GOD, 0, CMD_NONE},
+	{"hide", "hi", POS_RESTING, do_cast, 1, SKILL_HIDE, CMD_SELF},
+	{"hindex", "hind", POS_DEAD, do_hindex, 0, 0, CMD_NONE},
+	{"handbook", "handb", POS_DEAD, do_gen_ps, LVL_IMMORT, SCMD_HANDBOOK, CMD_NONE},
+	{"hcontrol", "hcontrol", POS_DEAD, do_hcontrol, LVL_GRGOD, 0, CMD_NONE},
+	{"history", "history", POS_DEAD, do_history, 0, 0, CMD_SELF},
+	{"hit", "hit", POS_FIGHTING, do_hit, 0, SCMD_HIT, CMD_PLAYERS},
+	{"hold", "hold", POS_RESTING, do_grab, 1, 0, CMD_OBJ},
+	{"holylight", "holy", POS_DEAD, do_gen_tog, LVL_IMMORT, SCMD_HOLYLIGHT, CMD_SELF},
+	{"house", "house", POS_RESTING, do_house, 0, 0, CMD_PLAYERS},
 
-	{"help", "h", POS_DEAD, do_help, 0, 0},
-	{"happyhour", "ha", POS_DEAD, do_happyhour, 0, 0},
-	{"hedit", "hedit", POS_DEAD, do_oasis_hedit, LVL_GOD, 0},
-	{"helpcheck", "helpch", POS_DEAD, do_helpcheck, LVL_GOD, 0},
-	{"hide", "hi", POS_RESTING, do_cast, 1, SKILL_HIDE},
-	{"hindex", "hind", POS_DEAD, do_hindex, 0, 0},
-	{"handbook", "handb", POS_DEAD, do_gen_ps, LVL_IMMORT, SCMD_HANDBOOK},
-	{"hcontrol", "hcontrol", POS_DEAD, do_hcontrol, LVL_GRGOD, 0},
-	{"history", "history", POS_DEAD, do_history, 0, 0},
-	{"hit", "hit", POS_FIGHTING, do_hit, 0, SCMD_HIT},
-	{"hold", "hold", POS_RESTING, do_grab, 1, 0},
-	{"holylight", "holy", POS_DEAD, do_gen_tog, LVL_IMMORT, SCMD_HOLYLIGHT},
-	{"house", "house", POS_RESTING, do_house, 0, 0},
+	{"inventory", "i", POS_DEAD, do_inventory, 0, 0, CMD_SELF},
+	{"identify", "id", POS_STANDING, do_not_here, 1, 0, CMD_OBJ},
+	{"idea", "ide", POS_DEAD, do_ibt, 0, SCMD_IDEA, CMD_NONE},
+	{"imotd", "imo", POS_DEAD, do_gen_ps, LVL_IMMORT, SCMD_IMOTD, CMD_NONE},
+	{"immlist", "imm", POS_DEAD, do_gen_ps, 0, SCMD_IMMLIST, CMD_NONE},
+	{"info", "info", POS_SLEEPING, do_gen_ps, 0, SCMD_INFO, CMD_NONE},
+	{"invis", "invi", POS_DEAD, do_invis, LVL_IMMORT, 0, CMD_SELF},
 
-	{"inventory", "i", POS_DEAD, do_inventory, 0, 0},
-	{"identify", "id", POS_STANDING, do_not_here, 1, 0},
-	{"idea", "ide", POS_DEAD, do_ibt, 0, SCMD_IDEA},
-	{"imotd", "imo", POS_DEAD, do_gen_ps, LVL_IMMORT, SCMD_IMOTD},
-	{"immlist", "imm", POS_DEAD, do_gen_ps, 0, SCMD_IMMLIST},
-	{"info", "info", POS_SLEEPING, do_gen_ps, 0, SCMD_INFO},
-	{"invis", "invi", POS_DEAD, do_invis, LVL_IMMORT, 0},
+	{"junk", "j", POS_RESTING, do_drop, 0, SCMD_JUNK, CMD_OBJ},
 
-	{"junk", "j", POS_RESTING, do_drop, 0, SCMD_JUNK},
+	{"kill", "k", POS_FIGHTING, do_kill, 0, 0, CMD_PLAYERS},
+	{"kick", "ki", POS_FIGHTING, do_cast, 1, SKILL_KICK, CMD_PLAYERS},
 
-	{"kill", "k", POS_FIGHTING, do_kill, 0, 0},
-	{"kick", "ki", POS_FIGHTING, do_cast, 1, SKILL_KICK},
+	{"look", "l", POS_RESTING, do_look, 0, SCMD_LOOK, CMD_NONE},
+	{"last", "last", POS_DEAD, do_last, LVL_GOD, 0, CMD_NONE},
+	{"land", "lan", POS_DEAD, do_fly, 1, SCMD_LAND, CMD_SELF},
+	{"leave", "lea", POS_STANDING, do_leave, 0, 0, CMD_EXITS},
+	{"levels", "lev", POS_DEAD, do_levels, 0, 0, CMD_NONE},
+	{"list", "lis", POS_STANDING, do_not_here, 0, 0, CMD_NONE},
+	{"links", "lin", POS_STANDING, do_links, LVL_GOD, 0, CMD_NONE},
+	{"lock", "loc", POS_SITTING, do_gen_door, 0, SCMD_LOCK, CMD_EXITS},
+	{"load", "load", POS_DEAD, do_load, LVL_BUILDER, 0, CMD_MISC},
 
-	{"look", "l", POS_RESTING, do_look, 0, SCMD_LOOK},
-	{"last", "last", POS_DEAD, do_last, LVL_GOD, 0},
-		{"land", "lan",POS_DEAD,do_fly,1,SCMD_LAND},
-	{"leave", "lea", POS_STANDING, do_leave, 0, 0},
-	{"levels", "lev", POS_DEAD, do_levels, 0, 0},
-	{"list", "lis", POS_STANDING, do_not_here, 0, 0},
-	{"links", "lin", POS_STANDING, do_links, LVL_GOD, 0},
-	{"lock", "loc", POS_SITTING, do_gen_door, 0, SCMD_LOCK},
-	{"load", "load", POS_DEAD, do_load, LVL_BUILDER, 0},
+	{"motd", "motd", POS_DEAD, do_gen_ps, 0, SCMD_MOTD, CMD_NONE},
+	{"mail", "mail", POS_STANDING, do_not_here, 1, 0, CMD_PLAYERS},
+	{"map", "map", POS_STANDING, do_map, 1, 0, CMD_SELF},
+	{"medit", "med", POS_DEAD, do_oasis_medit, LVL_BUILDER, 0, CMD_MOB},
+	{"meditate", "medi", POS_DEAD, do_cast, 1, SKILL_MEDITATE, CMD_SELF},
+	{"mlist", "mlist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_MLIST, CMD_MOB},
+	{"mcopy", "mcopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_MEDIT, CMD_MOB},
+	{"msgedit", "msgedit", POS_DEAD, do_msgedit, LVL_GOD, 0, CMD_NONE},
+	{"murder", "mur", POS_FIGHTING, do_hit, 0, SCMD_MURDER, CMD_PLAYERS},
+	{"mute", "mute", POS_DEAD, do_wizutil, LVL_GOD, SCMD_MUTE, CMD_PLAYERS},
 
-	{"motd", "motd", POS_DEAD, do_gen_ps, 0, SCMD_MOTD},
-	{"mail", "mail", POS_STANDING, do_not_here, 1, 0},
-	{"map", "map", POS_STANDING, do_map, 1, 0},
-	{"medit", "med", POS_DEAD, do_oasis_medit, LVL_BUILDER, 0},
-  {"meditate", "medi", POS_DEAD, do_cast, 1, SKILL_MEDITATE},
-	{"mlist", "mlist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_MLIST},
-	{"mcopy", "mcopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_MEDIT},
-	{"msgedit", "msgedit", POS_DEAD, do_msgedit, LVL_GOD, 0},
-		{"murder", "mur", POS_FIGHTING, do_hit, 0, SCMD_MURDER},
-	{"mute", "mute", POS_DEAD, do_wizutil, LVL_GOD, SCMD_MUTE},
+	{"news", "news", POS_SLEEPING, do_gen_ps, 0, SCMD_NEWS, CMD_NONE},
+	{"noauction", "noauction", POS_DEAD, do_gen_tog, 0, SCMD_NOAUCTION, CMD_SELF},
+	{"nogossip", "nogossip", POS_DEAD, do_gen_tog, 0, SCMD_NOGOSSIP, CMD_SELF},
+	{"nograts", "nograts", POS_DEAD, do_gen_tog, 0, SCMD_NOGRATZ, CMD_SELF},
+	{"nohassle", "nohassle", POS_DEAD, do_gen_tog, LVL_IMMORT, SCMD_NOHASSLE, CMD_SELF},
+	{"norepeat", "norepeat", POS_DEAD, do_gen_tog, 0, SCMD_NOREPEAT, CMD_SELF},
+	{"noshout", "noshout", POS_SLEEPING, do_gen_tog, 1, SCMD_NOSHOUT, CMD_SELF},
+	{"nosummon", "nosummon", POS_DEAD, do_gen_tog, 1, SCMD_NOSUMMON, CMD_SELF},
+	{"notell", "notell", POS_DEAD, do_gen_tog, 1, SCMD_NOTELL, CMD_SELF},
+	{"notitle", "notitle", POS_DEAD, do_wizutil, LVL_GOD, SCMD_NOTITLE, CMD_SELF},
+	{"nowiz", "nowiz", POS_DEAD, do_gen_tog, LVL_IMMORT, SCMD_NOWIZ, CMD_SELF},
 
-	{"news", "news", POS_SLEEPING, do_gen_ps, 0, SCMD_NEWS},
-	{"noauction", "noauction", POS_DEAD, do_gen_tog, 0, SCMD_NOAUCTION},
-	{"nogossip", "nogossip", POS_DEAD, do_gen_tog, 0, SCMD_NOGOSSIP},
-	{"nograts", "nograts", POS_DEAD, do_gen_tog, 0, SCMD_NOGRATZ},
-	{"nohassle", "nohassle", POS_DEAD, do_gen_tog, LVL_IMMORT, SCMD_NOHASSLE},
-	{"norepeat", "norepeat", POS_DEAD, do_gen_tog, 0, SCMD_NOREPEAT},
-	{"noshout", "noshout", POS_SLEEPING, do_gen_tog, 1, SCMD_NOSHOUT},
-	{"nosummon", "nosummon", POS_DEAD, do_gen_tog, 1, SCMD_NOSUMMON},
-	{"notell", "notell", POS_DEAD, do_gen_tog, 1, SCMD_NOTELL},
-	{"notitle", "notitle", POS_DEAD, do_wizutil, LVL_GOD, SCMD_NOTITLE},
-	{"nowiz", "nowiz", POS_DEAD, do_gen_tog, LVL_IMMORT, SCMD_NOWIZ},
+	{"open", "o", POS_SITTING, do_gen_door, 0, SCMD_OPEN, CMD_EXITS},
+	{"order", "ord", POS_RESTING, do_order, 1, 0, CMD_PLAYERS, CMD_PLAYERS},
+	{"offer", "off", POS_STANDING, do_not_here, 1, 0, CMD_SELF},
+	{"olc", "olc", POS_DEAD, do_show_save_list, LVL_BUILDER, 0, CMD_NONE},
+	{"olist", "olist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_OLIST, CMD_ZONE},
+	{"oedit", "oedit", POS_DEAD, do_oasis_oedit, LVL_BUILDER, 0, CMD_OBJ},
+	{"oset", "oset", POS_DEAD, do_oset, LVL_BUILDER, 0, CMD_OBJ},
+	{"ocopy", "ocopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_OEDIT, CMD_OBJ},
 
-	{"open", "o", POS_SITTING, do_gen_door, 0, SCMD_OPEN},
-	{"order", "ord", POS_RESTING, do_order, 1, 0},
-	{"offer", "off", POS_STANDING, do_not_here, 1, 0},
-	{"olc", "olc", POS_DEAD, do_show_save_list, LVL_BUILDER, 0},
-	{"olist", "olist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_OLIST},
-	{"oedit", "oedit", POS_DEAD, do_oasis_oedit, LVL_BUILDER, 0},
-	{"oset", "oset", POS_DEAD, do_oset, LVL_BUILDER, 0},
-	{"ocopy", "ocopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_OEDIT},
+	{"put", "p", POS_RESTING, do_put, 0, 0, CMD_OBJ},
+	{"peace", "pe", POS_DEAD, do_peace, LVL_BUILDER, 0, CMD_NONE},
+	{"pick", "pi", POS_STANDING, do_gen_door, 1, SCMD_PICK, CMD_EXITS},
+	{"practice", "pr", POS_RESTING, do_practice, 1, 0, CMD_MISC},
+	{"page", "pag", POS_DEAD, do_page, 1, 0, CMD_COMM},
+	{"pardon", "pardon", POS_DEAD, do_wizutil, LVL_GOD, SCMD_PARDON, CMD_PLAYERS},
+	{"plist", "plist", POS_DEAD, do_plist, LVL_GOD, 0, CMD_NONE},
+	{"plrload", "plrload", POS_DEAD, do_plrload, LVL_GRGOD, 0, CMD_PLAYERS},
+	{"policy", "pol", POS_DEAD, do_gen_ps, 0, SCMD_POLICIES, CMD_NONE},
+	{"pour", "pour", POS_STANDING, do_pour, 0, SCMD_POUR, CMD_OBJ},
+	{"pray", "pra", POS_RESTING, do_pray, 0, 0, CMD_COMM},
+	{"prompt", "pro", POS_DEAD, do_display, 0, 0, CMD_NONE},
+	{"prefedit", "pre", POS_DEAD, do_oasis_prefedit, 0, 0, CMD_NONE},
+	{"purge", "purge", POS_DEAD, do_purge, LVL_BUILDER, 0, CMD_NONE},
 
-	{"put", "p", POS_RESTING, do_put, 0, 0},
-	{"peace", "pe", POS_DEAD, do_peace, LVL_BUILDER, 0},
-	{"pick", "pi", POS_STANDING, do_gen_door, 1, SCMD_PICK},
-	{"practice", "pr", POS_RESTING, do_practice, 1, 0},
-	{"page", "pag", POS_DEAD, do_page, 1, 0},
-	{"pardon", "pardon", POS_DEAD, do_wizutil, LVL_GOD, SCMD_PARDON},
-	{"plist", "plist", POS_DEAD, do_plist, LVL_GOD, 0},
-	{"plrload", "plrload", POS_DEAD, do_plrload, LVL_GRGOD, 0},
-	{"policy", "pol", POS_DEAD, do_gen_ps, 0, SCMD_POLICIES},
-	{"pour", "pour", POS_STANDING, do_pour, 0, SCMD_POUR},
-	{"pray", "pra", POS_RESTING, do_pray, 0, 0},
-	{"prompt", "pro", POS_DEAD, do_display, 0, 0},
-	{"prefedit", "pre", POS_DEAD, do_oasis_prefedit, 0, 0},
-	{"purge", "purge", POS_DEAD, do_purge, LVL_BUILDER, 0},
+	{"qedit", "qedit", POS_DEAD, do_oasis_qedit, LVL_BUILDER, 0, CMD_NONE},
+	{"qlist", "qlist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_QLIST, CMD_ZONE},
+	{"quaff", "qua", POS_RESTING, do_use, 0, SCMD_QUAFF, CMD_OBJ},
+	{"qecho", "qec", POS_DEAD, do_qcomm, LVL_GOD, SCMD_QECHO, CMD_COMM},
+	{"quest", "que", POS_DEAD, do_quest, 0, 0, CMD_NONE},
+	{"qui", "qui", POS_DEAD, do_quit, 0, 0, CMD_NONE},
+	{"quit", "quit", POS_DEAD, do_quit, 0, SCMD_QUIT, CMD_NONE},
+	{"qsay", "qsay", POS_RESTING, do_qcomm, 0, SCMD_QSAY, CMD_NONE},
 
-	{"qedit", "qedit", POS_DEAD, do_oasis_qedit, LVL_BUILDER, 0},
-	{"qlist", "qlist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_QLIST},
-	{"quaff", "qua", POS_RESTING, do_use, 0, SCMD_QUAFF},
-	{"qecho", "qec", POS_DEAD, do_qcomm, LVL_GOD, SCMD_QECHO},
-	{"quest", "que", POS_DEAD, do_quest, 0, 0},
-	{"qui", "qui", POS_DEAD, do_quit, 0, 0},
-	{"quit", "quit", POS_DEAD, do_quit, 0, SCMD_QUIT},
-	{"qsay", "qsay", POS_RESTING, do_qcomm, 0, SCMD_QSAY},
+	{"reply", "r", POS_SLEEPING, do_reply, 0, 0, CMD_NONE},
+	{"rest", "res", POS_RESTING, do_rest, 0, 0, CMD_NONE},
+	{"read", "rea", POS_RESTING, do_look, 0, SCMD_READ, CMD_OBJ},
+	{"reload", "reload", POS_DEAD, do_reboot, LVL_IMPL, 0, CMD_NONE},
+	{"recall", "reca", POS_RESTING, do_recall, 0, 0, CMD_NONE},
+	{"recite", "reci", POS_RESTING, do_use, 0, SCMD_RECITE, CMD_OBJ},
+	{"receive", "rece", POS_STANDING, do_not_here, 1, 0, CMD_NONE},
+	{"recent", "recent", POS_DEAD, do_recent, LVL_IMMORT, 0, CMD_NONE},
+	{"remove", "rem", POS_RESTING, do_remove, 0, 0, CMD_OBJ},
+	{"rent", "rent", POS_STANDING, do_not_here, 1, 0, CMD_NONE},
+	{"report", "repo", POS_RESTING, do_report, 0, 0, CMD_NONE},
+	{"reroll", "rero", POS_DEAD, do_wizutil, LVL_GRGOD, SCMD_REROLL, CMD_PLAYERS},
+	{"rescue", "resc", POS_FIGHTING, do_cast, 1, SKILL_RESCUE, CMD_PLAYERS},
+	{"ressucite", "ress", POS_DEAD, do_ressucite, LVL_GOD, 0, CMD_PLAYERS},
+	{"restore", "resto", POS_DEAD, do_restore, LVL_GOD, 0, CMD_PLAYERS},
+	{"return", "retu", POS_DEAD, do_return, 0, 0, CMD_NONE},
+	{"redit", "redit", POS_DEAD, do_oasis_redit, LVL_BUILDER, 0, CMD_NONE},
+	{"rlist", "rlist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_RLIST, CMD_ZONE},
+	{"rcopy", "rcopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_REDIT, CMD_NONE},
+	{"roomflags", "roomflags", POS_DEAD, do_gen_tog, LVL_IMMORT, SCMD_SHOWVNUMS, CMD_SELF},
 
-	{"reply", "r", POS_SLEEPING, do_reply, 0, 0},
-	{"rest", "res", POS_RESTING, do_rest, 0, 0},
-	{"read", "rea", POS_RESTING, do_look, 0, SCMD_READ},
-	{"reload", "reload", POS_DEAD, do_reboot, LVL_IMPL, 0},
-	{"recall", "reca", POS_RESTING, do_recall,0,0},
-	{"recite", "reci", POS_RESTING, do_use, 0, SCMD_RECITE},
-	{"receive", "rece", POS_STANDING, do_not_here, 1, 0},
-	{"recent", "recent", POS_DEAD, do_recent, LVL_IMMORT, 0},
-	{"remove", "rem", POS_RESTING, do_remove, 0, 0},
-	{"rent", "rent", POS_STANDING, do_not_here, 1, 0},
-	{"report", "repo", POS_RESTING, do_report, 0, 0},
-	{"reroll", "rero", POS_DEAD, do_wizutil, LVL_GRGOD, SCMD_REROLL},
-	{"rescue", "resc", POS_FIGHTING, do_cast, 1, SKILL_RESCUE},
-	{"ressucite", "ress", POS_DEAD, do_ressucite, LVL_GOD, 0},
-	{"restore", "resto", POS_DEAD, do_restore, LVL_GOD, 0},
-	{"return", "retu", POS_DEAD, do_return, 0, 0},
-	{"redit", "redit", POS_DEAD, do_oasis_redit, LVL_BUILDER, 0},
-	{"rlist", "rlist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_RLIST},
-	{"rcopy", "rcopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_REDIT},
-	{"roomflags", "roomflags", POS_DEAD, do_gen_tog, LVL_IMMORT, SCMD_SHOWVNUMS},
+	{"say", "s", POS_RESTING, do_say, 0, 0, CMD_COMM},
+	{"sacrifice", "sac", POS_RESTING, do_sac, 0, 0, CMD_OBJ},
+	{"score", "sc", POS_DEAD, do_score, 0, 0, CMD_NONE},
+	{"scan", "sca", POS_RESTING, do_cast, 1, SKILL_SCAN, CMD_NONE},
+	{"scopy", "scopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_SEDIT, CMD_NONE},
+	{"sit", "si", POS_RESTING, do_sit, 0, 0, CMD_NONE},
+	{"'", "'", POS_RESTING, do_say, 0, 0, CMD_COMM},
+	{"save", "sav", POS_SLEEPING, do_save, 0, 0, CMD_NONE},
+	{"saveall", "saveall", POS_DEAD, do_saveall, LVL_BUILDER, 0, CMD_NONE},
+	{"sell", "sell", POS_STANDING, do_not_here, 0, 0, CMD_OBJ},
+	{"sedit", "sedit", POS_DEAD, do_oasis_sedit, LVL_BUILDER, 0, CMD_NONE},
+	{"send", "send", POS_SLEEPING, do_send, LVL_GOD, 0, CMD_COMM},
+	{"set", "set", POS_DEAD, do_set, LVL_IMMORT, 0, CMD_NONE},
+	{"shout", "sho", POS_RESTING, do_gen_comm, 0, SCMD_SHOUT, CMD_COMM},
+	{"show", "show", POS_DEAD, do_show, LVL_IMMORT, 0, CMD_NONE},
+	{"shutdow", "shutdow", POS_DEAD, do_shutdown, LVL_IMPL, 0, CMD_NONE},
+	{"shutdown", "shutdown", POS_DEAD, do_shutdown, LVL_IMPL, SCMD_SHUTDOWN, CMD_NONE},
+	{"sip", "sip", POS_RESTING, do_drink, 0, SCMD_SIP, CMD_OBJ},
+	{"skillset", "skillset", POS_SLEEPING, do_skillset, LVL_GRGOD, 0, CMD_NONE},
+	{"sleep", "sl", POS_SLEEPING, do_sleep, 0, 0, CMD_NONE},
+	{"slist", "slist", POS_SLEEPING, do_oasis_list, LVL_BUILDER, SCMD_OASIS_SLIST, CMD_ZONE},
+	{"sneak", "sneak", POS_STANDING, do_cast, 1, SKILL_SNEAK, CMD_SELF},
+	{"snoop", "snoop", POS_DEAD, do_snoop, LVL_GOD, 0, CMD_PLAYERS},
+	{"spedit", "spe", POS_DEAD, do_spedit, LVL_GRGOD, 0, CMD_NONE},
+	{"splist", "splist", POS_DEAD, do_splist, LVL_BUILDER, 0, CMD_ZONE},
+	{"socials", "socials", POS_DEAD, do_commands, 0, SCMD_SOCIALS, CMD_NONE},
+	{"split", "split", POS_SITTING, do_split, 1, 0, CMD_MISC},
+	{"stand", "st", POS_RESTING, do_stand, 0, 0, CMD_NONE},
+	{"stat", "stat", POS_DEAD, do_stat, LVL_IMMORT, 0, CMD_MISC},
+	{"steal", "ste", POS_STANDING, do_cast, 1, SKILL_STEAL, CMD_PLAYERS},
+	{"switch", "switch", POS_DEAD, do_switch, LVL_GOD, 0, CMD_PLAYERS},
 
-	{"say", "s", POS_RESTING, do_say, 0, 0},
-	{"sacrifice", "sac", POS_RESTING, do_sac, 0, 0},
-	{"score", "sc", POS_DEAD, do_score, 0, 0},
-	{"scan", "sca", POS_RESTING, do_cast, 1, SKILL_SCAN},
-	{"scopy", "scopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_SEDIT},
-	{"sit", "si", POS_RESTING, do_sit, 0, 0},
-	{"'", "'", POS_RESTING, do_say, 0, 0},
-	{"save", "sav", POS_SLEEPING, do_save, 0, 0},
-	{"saveall", "saveall", POS_DEAD, do_saveall, LVL_BUILDER, 0},
-	{"sell", "sell", POS_STANDING, do_not_here, 0, 0},
-	{"sedit", "sedit", POS_DEAD, do_oasis_sedit, LVL_BUILDER, 0},
-	{"send", "send", POS_SLEEPING, do_send, LVL_GOD, 0},
-	{"set", "set", POS_DEAD, do_set, LVL_IMMORT, 0},
-	{"shout", "sho", POS_RESTING, do_gen_comm, 0, SCMD_SHOUT},
-	{"show", "show", POS_DEAD, do_show, LVL_IMMORT, 0},
-	{"shutdow", "shutdow", POS_DEAD, do_shutdown, LVL_IMPL, 0},
-	{"shutdown", "shutdown", POS_DEAD, do_shutdown, LVL_IMPL, SCMD_SHUTDOWN},
-	{"sip", "sip", POS_RESTING, do_drink, 0, SCMD_SIP},
-	{"skillset", "skillset", POS_SLEEPING, do_skillset, LVL_GRGOD, 0},
-	{"sleep", "sl", POS_SLEEPING, do_sleep, 0, 0},
-	{"slist", "slist", POS_SLEEPING, do_oasis_list, LVL_BUILDER, SCMD_OASIS_SLIST},
-	{"sneak", "sneak", POS_STANDING, do_cast, 1, SKILL_SNEAK},
-	{"snoop", "snoop", POS_DEAD, do_snoop, LVL_GOD, 0},
-	{"spedit", "spe", POS_DEAD, do_spedit, LVL_GRGOD, 0},
-	{"splist", "splist", POS_DEAD, do_splist, LVL_BUILDER, 0},
-	{"socials", "socials", POS_DEAD, do_commands, 0, SCMD_SOCIALS},
-	{"split", "split", POS_SITTING, do_split, 1, 0},
-	{"stand", "st", POS_RESTING, do_stand, 0, 0},
-	{"stat", "stat", POS_DEAD, do_stat, LVL_IMMORT, 0},
-	{"steal", "ste", POS_STANDING, do_cast, 1, SKILL_STEAL},
-	{"switch", "switch", POS_DEAD, do_switch, LVL_GOD, 0},
+	{"tell", "t", POS_DEAD, do_tell, 0, 0, CMD_COMM},
+	{"take", "ta", POS_RESTING, do_get, 0, 0, CMD_OBJ},
+	{"taste", "tas", POS_RESTING, do_eat, 0, SCMD_TASTE, CMD_OBJ},
+	{"teleport", "tele", POS_DEAD, do_teleport, LVL_BUILDER, 0, CMD_PLAYERS},
+	{"tedit", "tedit", POS_DEAD, do_tedit, LVL_GOD, 0, CMD_NONE},	/* XXX:
+																	   Oasisify 
+																	 */
+	{"thaw", "thaw", POS_DEAD, do_wizutil, LVL_GRGOD, SCMD_THAW, CMD_PLAYERS},
+	{"title", "title", POS_DEAD, do_title, 0, 0, CMD_SELF},
+	{"time", "time", POS_DEAD, do_time, 0, 0, CMD_NONE},
+	{"toggle", "toggle", POS_DEAD, do_toggle, 0, 0, CMD_NONE},
+	{"track", "track", POS_STANDING, do_cast, 0, SKILL_TRACK, CMD_PLAYERS},
+	{"transfer", "transfer", POS_SLEEPING, do_trans, LVL_GOD, 0, CMD_PLAYERS},
+	{"trigedit", "trigedit", POS_DEAD, do_oasis_trigedit, LVL_BUILDER, 0, CMD_NONE},
+	{"trip", "tri", POS_FIGHTING, do_cast, 1, SKILL_TRIP, CMD_PLAYERS},
+	{"typo", "typo", POS_DEAD, do_ibt, 0, SCMD_TYPO, CMD_NONE},
+	{"tlist", "tlist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_TLIST, CMD_ZONE},
+	{"tcopy", "tcopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_TRIGEDIT, CMD_NONE},
+	{"tstat", "tstat", POS_DEAD, do_tstat, LVL_BUILDER, 0, CMD_NONE},
 
-	{"tell", "t", POS_DEAD, do_tell, 0, 0},
-	{"take", "ta", POS_RESTING, do_get, 0, 0},
-	{"taste", "tas", POS_RESTING, do_eat, 0, SCMD_TASTE},
-	{"teleport", "tele", POS_DEAD, do_teleport, LVL_BUILDER, 0},
-	{"tedit", "tedit", POS_DEAD, do_tedit, LVL_GOD, 0},	/* XXX: Oasisify */
-	{"thaw", "thaw", POS_DEAD, do_wizutil, LVL_GRGOD, SCMD_THAW},
-	{"title", "title", POS_DEAD, do_title, 0, 0},
-	{"time", "time", POS_DEAD, do_time, 0, 0},
-	{"toggle", "toggle", POS_DEAD, do_toggle, 0, 0},
-	{"track", "track", POS_STANDING, do_cast, 0, SKILL_TRACK},
-	{"transfer", "transfer", POS_SLEEPING, do_trans, LVL_GOD, 0},
-	{"trigedit", "trigedit", POS_DEAD, do_oasis_trigedit, LVL_BUILDER, 0},
-	{"trip", "tri", POS_FIGHTING, do_cast, 1, SKILL_TRIP},
-	{"typo", "typo", POS_DEAD, do_ibt, 0, SCMD_TYPO},
-	{"tlist", "tlist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_TLIST},
-	{"tcopy", "tcopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_TRIGEDIT},
-	{"tstat", "tstat", POS_DEAD, do_tstat, LVL_BUILDER, 0},
+	{"unlock", "unlock", POS_SITTING, do_gen_door, 0, SCMD_UNLOCK, CMD_EXITS},
+	{"unban", "unban", POS_DEAD, do_unban, LVL_GRGOD, 0, CMD_PLAYERS},
+	{"unaffect", "unaffect", POS_DEAD, do_wizutil, LVL_GOD, SCMD_UNAFFECT, CMD_PLAYERS},
+	{"unfollow", "unf", POS_RESTING, do_unfollow, 0, 0, CMD_NONE},
+	{"uptime", "uptime", POS_DEAD, do_date, LVL_GOD, SCMD_UPTIME, CMD_NONE},
+	{"use", "use", POS_SITTING, do_use, 1, SCMD_USE, CMD_OBJ},
+	{"users", "users", POS_DEAD, do_users, LVL_GOD, 0, CMD_NONE},
 
-	{"unlock", "unlock", POS_SITTING, do_gen_door, 0, SCMD_UNLOCK},
-	{"unban", "unban", POS_DEAD, do_unban, LVL_GRGOD, 0},
-	{"unaffect", "unaffect", POS_DEAD, do_wizutil, LVL_GOD, SCMD_UNAFFECT},
-	{"unfollow", "unf", POS_RESTING, do_unfollow, 0, 0},
-	{"uptime", "uptime", POS_DEAD, do_date, LVL_GOD, SCMD_UPTIME},
-	{"use", "use", POS_SITTING, do_use, 1, SCMD_USE},
-	{"users", "users", POS_DEAD, do_users, LVL_GOD, 0},
+	{"value", "val", POS_STANDING, do_not_here, 0, 0, CMD_OBJ},
+	{"version", "ver", POS_DEAD, do_gen_ps, 0, SCMD_VERSION, CMD_NONE},
+	{"visible", "vis", POS_RESTING, do_visible, 1, 0, CMD_SELF},
+	{"vnum", "vnum", POS_DEAD, do_vnum, LVL_IMMORT, 0, CMD_NONE},
+	{"vstat", "vstat", POS_DEAD, do_vstat, LVL_IMMORT, 0, CMD_NONE},
+	{"vdelete", "vdelete", POS_DEAD, do_vdelete, LVL_BUILDER, 0, CMD_MISC},
 
-	{"value", "val", POS_STANDING, do_not_here, 0, 0},
-	{"version", "ver", POS_DEAD, do_gen_ps, 0, SCMD_VERSION},
-	{"visible", "vis", POS_RESTING, do_visible, 1, 0},
-	{"vnum", "vnum", POS_DEAD, do_vnum, LVL_IMMORT, 0},
-	{"vstat", "vstat", POS_DEAD, do_vstat, LVL_IMMORT, 0},
-	{"vdelete", "vdelete", POS_DEAD, do_vdelete, LVL_BUILDER, 0},
+	{"wake", "wake", POS_SLEEPING, do_wake, 0, 0, CMD_NONE},
+	{"wear", "wea", POS_RESTING, do_wear, 0, 0, CMD_OBJ},
+	{"weather", "weather", POS_RESTING, do_weather, 0, 0, CMD_NONE},
+	{"who", "wh", POS_DEAD, do_who, 0, 0, CMD_NONE},
+	{"whois", "whoi", POS_DEAD, do_whois, 0, 0, CMD_PLAYERS},
+	{"whoami", "whoami", POS_DEAD, do_gen_ps, 0, SCMD_WHOAMI, CMD_SELF},
+	{"where", "where", POS_RESTING, do_where, 1, 0, CMD_NONE},
+	{"whisper", "whisper", POS_RESTING, do_spec_comm, 0, SCMD_WHISPER, CMD_COMM},
+	{"whirlwind", "whirl", POS_FIGHTING, do_cast, 0, SKILL_WHIRLWIND, CMD_PLAYERS},
+	{"wield", "wie", POS_RESTING, do_wield, 0, 0, CMD_OBJ},
+	{"withdraw", "withdraw", POS_STANDING, do_not_here, 1, 0, CMD_SELF},
+	{"wiznet", "wiz", POS_DEAD, do_wiznet, LVL_IMMORT, 0, CMD_COMM},
+	{";", ";", POS_DEAD, do_wiznet, LVL_IMMORT, 0, CMD_COMM},
+	{"wizhelp", "wizhelp", POS_DEAD, do_wizhelp, LVL_IMMORT, 0, CMD_NONE},
+	{"wizlist", "wizlist", POS_DEAD, do_gen_ps, 0, SCMD_WIZLIST, CMD_NONE},
+	{"wizupdate", "wizupde", POS_DEAD, do_wizupdate, LVL_GRGOD, 0, CMD_NONE},
+	{"wizlock", "wizlock", POS_DEAD, do_wizlock, LVL_IMPL, 0, CMD_MISC},
+	{"write", "write", POS_STANDING, do_write, 1, 0, CMD_COMM},
 
-	{"wake", "wake", POS_SLEEPING, do_wake, 0, 0},
-	{"wear", "wea", POS_RESTING, do_wear, 0, 0},
-	{"weather", "weather", POS_RESTING, do_weather, 0, 0},
-	{"who", "wh", POS_DEAD, do_who, 0, 0},
-	{"whois", "whoi", POS_DEAD, do_whois, 0, 0},
-	{"whoami", "whoami", POS_DEAD, do_gen_ps, 0, SCMD_WHOAMI},
-	{"where", "where", POS_RESTING, do_where, 1, 0},
-	{"whisper", "whisper", POS_RESTING, do_spec_comm, 0, SCMD_WHISPER},
-	{"whirlwind", "whirl", POS_FIGHTING, do_cast, 0, SKILL_WHIRLWIND},
-	{"wield", "wie", POS_RESTING, do_wield, 0, 0},
-	{"withdraw", "withdraw", POS_STANDING, do_not_here, 1, 0},
-	{"wiznet", "wiz", POS_DEAD, do_wiznet, LVL_IMMORT, 0},
-	{";", ";", POS_DEAD, do_wiznet, LVL_IMMORT, 0},
-	{"wizhelp", "wizhelp", POS_DEAD, do_wizhelp, LVL_IMMORT, 0},
-	{"wizlist", "wizlist", POS_DEAD, do_gen_ps, 0, SCMD_WIZLIST},
-	{"wizupdate", "wizupde", POS_DEAD, do_wizupdate, LVL_GRGOD, 0},
-	{"wizlock", "wizlock", POS_DEAD, do_wizlock, LVL_IMPL, 0},
-	{"write", "write", POS_STANDING, do_write, 1, 0},
+	{"zoneresets", "zoner", POS_DEAD, do_gen_tog, LVL_IMPL, SCMD_ZONERESETS, CMD_SELF},
+	{"zreset", "zreset", POS_DEAD, do_zreset, LVL_BUILDER, 0, CMD_ZONE},
+	{"zedit", "zedit", POS_DEAD, do_oasis_zedit, LVL_BUILDER, 0, CMD_NONE},
+	{"zlist", "zlist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_ZLIST, CMD_ZONE},
+	{"zlock", "zlock", POS_DEAD, do_zlock, LVL_GOD, 0, CMD_ZONE},
+	{"zunlock", "zunlock", POS_DEAD, do_zunlock, LVL_GOD, 0, CMD_ZONE},
+	{"zcheck", "zcheck", POS_DEAD, do_zcheck, LVL_BUILDER, 0, CMD_ZONE},
+	{"zpurge", "zpurge", POS_DEAD, do_zpurge, LVL_BUILDER, 0, CMD_ZONE},
 
-	{"zoneresets", "zoner", POS_DEAD, do_gen_tog, LVL_IMPL, SCMD_ZONERESETS},
-	{"zreset", "zreset", POS_DEAD, do_zreset, LVL_BUILDER, 0},
-	{"zedit", "zedit", POS_DEAD, do_oasis_zedit, LVL_BUILDER, 0},
-	{"zlist", "zlist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_ZLIST},
-	{"zlock", "zlock", POS_DEAD, do_zlock, LVL_GOD, 0},
-	{"zunlock", "zunlock", POS_DEAD, do_zunlock, LVL_GOD, 0},
-	{"zcheck", "zcheck", POS_DEAD, do_zcheck, LVL_BUILDER, 0},
-	{"zpurge", "zpurge", POS_DEAD, do_zpurge, LVL_BUILDER, 0},
-
-	{"\n", "zzzzzzz", 0, 0, 0, 0}
+	{"\n", "zzzzzzz", 0, 0, 0, 0, CMD_NONE}
 };								/* this must be last */
 
 
@@ -520,15 +522,30 @@ void command_interpreter(struct char_data *ch, char *argument)
 	int cmd, length;
 	char *line;
 	char arg[MAX_INPUT_LENGTH];
-   /* ann teste - forneck */
-  struct fann *ann;
-  fann_type *calc_output;
-   ann = fann_create_from_file("etc/aventureiro.fann");
-  fann_type input[18] = {GET_HIT(ch), GET_MAX_HIT(ch),GET_MANA(ch),GET_MAX_MANA(ch),GET_MOVE(ch),GET_MAX_MOVE(ch),GET_EXP(ch),GET_ROOM_VNUM(IN_ROOM(ch)),GET_CLASS(ch),GET_POS(ch), GET_ALIGNMENT(ch),compute_armor_class(ch),GET_STR(ch), GET_ADD(ch),GET_INT(ch),GET_WIS(ch),GET_CON(ch),GET_DEX(ch)};
-  fann_type output[2];
+
+	char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
+	/* ann teste - forneck */
+	int i, type1, type2;
+	struct fann *ann;
+	fann_type *calc_output;
+	ann = fann_create_from_file("etc/aventureiro.fann");
+	fann_type input[26] =
+		{ GET_HIT(ch), GET_MAX_HIT(ch), GET_MANA(ch), GET_MAX_MANA(ch), GET_MOVE(ch),
+		GET_MAX_MOVE(ch), GET_EXP(ch), GET_ROOM_VNUM(IN_ROOM(ch)), GET_CLASS(ch), GET_POS(ch),
+		GET_ALIGNMENT(ch),
+		compute_armor_class(ch), GET_STR(ch), GET_ADD(ch), GET_INT(ch), GET_WIS(ch), GET_CON(ch),
+		GET_DEX(ch),
+		GET_GOLD(ch), GET_BANK_GOLD(ch), GET_COND(ch, HUNGER), GET_COND(ch, THIRST),
+		GET_PRACTICES(ch),
+		GROUP(ch), time_info.hours, GET_BREATH(ch))
+	};
+	fann_type output[6];
+	struct char_data *victim;
+	struct obj_data *object;
+	int id_player;
 
 	REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
-    
+
 	/* just drop to next line for hitting CR */
 	skip_spaces(&argument);
 	if (!*argument)
@@ -545,6 +562,9 @@ void command_interpreter(struct char_data *ch, char *argument)
 	}
 	else
 		line = any_one_arg(argument, arg);
+
+	/* Split argument for ann */
+	two_arguments(line, arg1, arg2);
 
 	/* Since all command triggers check for valid_dg_target before acting, the 
 	   levelcheck here has been removed. Otherwise, find the command. */
@@ -590,22 +610,60 @@ void command_interpreter(struct char_data *ch, char *argument)
 		if (skill)
 		{
 			do_cast(ch, line, 1, skill->vnum);
-		    /* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos
-    o = cmd, arg = vnum -- forneck
-   */
-   output[0] = cmd;
-   output[1] = skill->vnum;
-  fann_train(ann,input,output);
+			if (!*arg2)
+			{
+				output[4] = -1;
+				output[5] = -1;
+			}
+			/* vitima eh mob */
+			if ((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD) != NULL) && IS_NPC(victim))
+			{
+				type2 = 1;
+			}
+			/* vitima eh player */
+			for (i = 0; i <= top_of_p_table; i++)
+			{
+				if (*arg2 && str_cmp(arg2, player_table[i].name))
+				{
+					type2 = 2;
+					id_player = player_table[i].id;
+					break;
+				}
+			}
+			/* em objeto */
+			if ((object = get_obj_vis(ch, arg2, NULL)) != NULL)
+				type2 = 3;
+
+			/* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos 
+			   o = cmd, arg = vnum -- forneck */
+			output[0] = cmd;
+			output[1] = CMD_TYPE;
+			output[2] = skill->vnum;
+			output[3] = CMD_ARG_SKILL;
+			if (type2 == 1)		/* mob */
+			{
+				output[4] = CMD_ARG_MOB;
+				output[5] = GET_MOB_VNUM(victim);
+			}
+			else if (type2 == 2)	/* player */
+			{
+				output[4] = CMD_ARG_PLAYER;
+				output[5] = GET_IDNUM(victim);
+			}
+			else
+			{
+				output[4] = CMD_ARG_OBJ;
+				output[5] = GET_OBJ_VNUM(object);
+			}
+			fann_train(ann, input, output);
 			return;
 		}
 
 		send_to_char(ch, "%s", CONFIG_HUH);
-
 		for (cmd = 0; *cmd_info[cmd].command != '\n'; cmd++)
 		{
 			if (*arg != *cmd_info[cmd].command || cmd_info[cmd].minimum_level > GET_LEVEL(ch))
 				continue;
-
 			/* Only apply levenshtein counts if the command is not a trigger
 			   command. */
 			if ((levenshtein_distance(arg, cmd_info[cmd].command) <= 2) &&
@@ -620,6 +678,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			}
 		}
 	}
+
 	else if (!IS_NPC(ch) && PLR_FLAGGED(ch, PLR_FROZEN) && GET_LEVEL(ch) < LVL_IMPL)
 		send_to_char(ch, "Você tenta, mas o gelo impede...\r\n");
 	else if (complete_cmd_info[cmd].command_pointer == NULL)
@@ -657,24 +716,139 @@ void command_interpreter(struct char_data *ch, char *argument)
 			break;
 		}
 	else if (no_specials || !special(ch, cmd, line))
-	
-		    /* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos
-    o = cmd, arg = (baseado no comando) -- forneck
-   */
-   
-   output[0] = cmd;
-   output[1] = 0;
-  fann_train(ann,input,output);
+		/* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos o = 
+		   cmd, arg = (baseado no comando) -- forneck */
+		output[0] = cmd;
+	output[1] = CMD_TYPE;
+	if (CMD_TYPE == (CMD_NONE || CMD_COMM))
+	{
+		output[2] = output[3] = output[4] = output[5] = -1;
+	}
+	if (CMD_TYPE == (CMD_ZONE))
+	{
+		output[2] = atoi(arg1);
+		output[3] = output[4] = output[5] = -1;
+	}
+	if (!str_cmp(arg2, "fora") || !str_cmp(arg2, "out"))
+	{
+		output[4] = CMD_ARG_OUT;
+		output[5] = -1;
+	}
 
-  	if (CONFIG_DEBUG_MODE >= NRM) {  
-calc_output = fann_run(ann,input);
-  	send_to_char(ch, "  DEBUG AVENTUREIRO: Comando %s arg %f \r\n", cmd_info[(int) calc_output[0]].command,calc_output[1]); 
-  	}
-  	
-   fann_save(ann,"etc/aventureiro.fann");
-  fann_destroy(ann);
+	if (!str_cmp("moedas", arg1) || !str_cmp("moeda", arg1))
+	{
+		output[2] = CMD_ARG_MONEY;
+		output[3] = atoi(arg1);
+	}
+	if (!*arg1)
+	{
+		output[2] = -1;
+		output[3] = -1;
+	}
+	/* vitima eh mob */
+	if (((victim = get_char_vis(ch, arg1), NULL, FIND_CHAR_WORLD) != NULL) && IS_NPC(victim))
+	{
+		type1 = 1;
+	}
+	/* vitima eh player */
+	for (i = 0; i <= top_of_p_table; i++)
+	{
+		if (*arg1 && str_cmp(arg1, player_table[i].name))
+		{
+			type1 = 2;
+			id_player = player_table[i].id;
+			break;
+		}
+	}
+
+	/* em objeto */
+	if ((object = get_obj_vis(ch, arg1, NULL)) != NULL)
+		type1 = 3;
+		
+	if (!generic_find(type, FIND_OBJ_INV | FIND_OBJ_ROOM, ch, &victim, &object))
+		door = find_door(ch, arg1, arg2, cmd_door[subcmd]);
+
+	if (type1 == 1)				/* mob */
+	{
+		output[2] = CMD_ARG_MOB;
+		output[3] = GET_MOB_VNUM(victim);
+	}
+	else if (type1 == 2)		/* player */
+	{
+		output[2] = CMD_ARG_PLAYER;
+		output[3] = GET_IDNUM(victim);
+	}
+	else if (type1 == 3)
+	{
+		output[2] = CMD_ARG_OBJ;
+		output[3] = GET_OBJ_VNUM(object);
+	}
+	else
+	{
+		output[2] = CMD_ARG_DIR;
+		output[3] = door;
+	}
+
+	/* vitima eh mob */
+	if (((victim = get_char_vis(ch, arg2), NULL, FIND_CHAR_WORLD) != NULL) && IS_NPC(victim))
+	{
+		type2 = 1;
+	}
 	
-		((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd, complete_cmd_info[cmd].subcmd));
+		/* vitima eh player */
+		for (i = 0; i <= top_of_p_table; i++)
+	{
+		if (*arg2 && str_cmp(arg2, player_table[i].name))
+		{
+			type2 = 2;
+			id_player = player_table[i].id;
+			break;
+		}
+	}
+
+	/* em objeto */
+	if ((object = get_obj_vis(ch, arg2, NULL)) != NULL)
+		type2 = 3;
+
+	/* ver arg2 */
+	if (!*arg2)
+	{
+		output[4] = -1;
+		output[5] = -1;
+	}
+	else
+	{
+		if (type2 == 1)				/* mob */
+	{
+		output[4] = CMD_ARG_MOB;
+		output[5] = GET_MOB_VNUM(victim);
+	}
+	else if (type2 == 2)		/* player */
+	{
+		output[4] = CMD_ARG_PLAYER;
+		output[5] = GET_IDNUM(victim);
+	}
+	else if (type2 == 3)
+	{
+		output[4] = CMD_ARG_OBJ;
+		output[5] = GET_OBJ_VNUM(object);
+	}
+
+	fann_train(ann, input, output);
+	if ((CONFIG_DEBUG_MODE >= NRM) && (GET_LEVEL(ch) == LVL_IMPL))
+	{
+		calc_output = fann_run(ann, input);
+		send_to_char(ch,"  DEBUG AVENTUREIRO: \r\n"); 
+		send_to_char(ch,"Comando Calculado %s  tipo %f arg1 %f %f arg2 %f %f \r\n",
+					 cmd_info[(int)calc_output[0]].command, calc_output[1],
+					 calc_output[2], calc_output[3], calc_output[4], calc_output[5]);
+		send_to_char(ch,"Comando Executado %s  tipo %f arg1 %f %f arg2 %f %f \r\n",
+					 cmd_info[(int)output[0]].command, output[1],output[2], output[3], output[4], output[5]);
+	}
+
+	fann_save(ann, "etc/aventureiro.fann");
+	fann_destroy(ann);
+	((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd, complete_cmd_info[cmd].subcmd));
 }
 
 /* Routines to handle aliasing. */
@@ -685,7 +859,6 @@ static struct alias_data *find_alias(struct alias_data *alias_list, char *str)
 		if (*str == *alias_list->alias)	/* hey, every little bit counts :-) */
 			if (!strcmp(str, alias_list->alias))
 				return (alias_list);
-
 		alias_list = alias_list->next;
 	}
 
@@ -707,12 +880,9 @@ ACMD(do_alias)
 	char arg[MAX_INPUT_LENGTH];
 	char *repl;
 	struct alias_data *a, *temp;
-
 	if (IS_NPC(ch))
 		return;
-
 	repl = any_one_arg(argument, arg);
-
 	if (!*arg)
 	{							/* no argument specified -- list currently
 								   defined aliases */
@@ -779,11 +949,10 @@ static void perform_complex_alias(struct txt_q *input_q, char *orig, struct alia
 	char *tokens[NUM_TOKENS], *temp, *write_point;
 	char buf2[MAX_RAW_INPUT_LENGTH], buf[MAX_RAW_INPUT_LENGTH];	/* raw? */
 	int num_of_tokens = 0, num;
-
 	/* First, parse the original string */
-	strcpy(buf2, orig);			/* strcpy: OK (orig:MAX_INPUT_LENGTH <
+	  strcpy(buf2, orig);		/* strcpy: OK (orig:MAX_INPUT_LENGTH <
 								   buf2:MAX_RAW_INPUT_LENGTH) */
-	temp = strtok(buf2, " ");
+	  temp = strtok(buf2, " ");
 	while (temp != NULL && num_of_tokens < NUM_TOKENS)
 	{
 		tokens[num_of_tokens++] = temp;
@@ -793,7 +962,6 @@ static void perform_complex_alias(struct txt_q *input_q, char *orig, struct alia
 	/* initialize */
 	write_point = buf;
 	temp_queue.head = temp_queue.tail = NULL;
-
 	/* now parse the alias */
 	for (temp = a->replacement; *temp; temp++)
 	{
@@ -829,7 +997,6 @@ static void perform_complex_alias(struct txt_q *input_q, char *orig, struct alia
 	*write_point = '\0';
 	buf[MAX_INPUT_LENGTH - 1] = '\0';
 	write_to_q(buf, &temp_queue, 1);
-
 	/* push our temp_queue on to the _front_ of the input queue */
 	if (input_q->head == NULL)
 		*input_q = temp_queue;
@@ -848,26 +1015,20 @@ int perform_alias(struct descriptor_data *d, char *orig, size_t maxlen)
 {
 	char first_arg[MAX_INPUT_LENGTH], *ptr;
 	struct alias_data *a, *tmp;
-
 	/* Mobs don't have alaises. */
 	if (IS_NPC(d->character))
-		return (0);
-
+		  return (0);
 	/* bail out immediately if the guy doesn't have any aliases */
 	if ((tmp = GET_ALIASES(d->character)) == NULL)
 		return (0);
-
 	/* find the alias we're supposed to match */
-	ptr = any_one_arg(orig, first_arg);
-
+	  ptr = any_one_arg(orig, first_arg);
 	/* bail out if it's null */
 	if (!*first_arg)
-		return (0);
-
+		  return (0);
 	/* if the first arg is not an alias, return without doing anything */
 	if ((a = find_alias(tmp, first_arg)) == NULL)
 		return (0);
-
 	if (a->type == ALIAS_SIMPLE)
 	{
 		strlcpy(orig, a->replacement, maxlen);
@@ -889,7 +1050,6 @@ int perform_alias(struct descriptor_data *d, char *orig, size_t maxlen)
 int search_block(char *arg, const char **list, int exact)
 {
 	int i, l;
-
 	/* We used to have \r as the first character on certain array items to
 	   prevent the explicit choice of that point.  It seems a bit silly to
 	   dump control characters into arrays to prevent that, so we'll just
@@ -897,11 +1057,9 @@ int search_block(char *arg, const char **list, int exact)
 	   if so, just blindly return a '-1' for not found. - ae. */
 	if (*arg == '!')
 		return (-1);
-
 	/* Make into lower case, and get length of string */
 	for (l = 0; *(arg + l); l++)
-		*(arg + l) = LOWER(*(arg + l));
-
+		* (arg + l) = LOWER(*(arg + l));
 	if (exact)
 	{
 		for (i = 0; **(list + i) != '\n'; i++)
@@ -930,7 +1088,6 @@ int is_number(const char *str)
 	while (*str)
 		if (!isdigit(*(str++)))
 			return (0);
-
 	return (1);
 }
 
@@ -951,23 +1108,17 @@ void skip_spaces(char **string)
 char *delete_doubledollar(char *string)
 {
 	char *ddread, *ddwrite;
-
 	/* If the string has no dollar signs, return immediately */
 	if ((ddwrite = strchr(string, '$')) == NULL)
 		return (string);
-
 	/* Start from the location of the first dollar sign */
-	ddread = ddwrite;
-
-
+	  ddread = ddwrite;
 	while (*ddread)				/* Until we reach the end of the string... */
 		if ((*(ddwrite++) = *(ddread++)) == '$')	/* copy one char */
 			if (*ddread == '$')
 				ddread++;		/* skip if we saw 2 $'s in a row */
-
-	*ddwrite = '\0';
-
-	return (string);
+	* ddwrite = '\0';
+	  return (string);
 }
 
 int fill_word(char *argument)
@@ -985,7 +1136,6 @@ int reserved_word(char *argument)
 char *one_argument(char *argument, char *first_arg)
 {
 	char *begin = first_arg;
-
 	if (!argument)
 	{
 		log1("SYSERR: one_argument received a NULL pointer!");
@@ -996,7 +1146,6 @@ char *one_argument(char *argument, char *first_arg)
 	do
 	{
 		skip_spaces(&argument);
-
 		first_arg = begin;
 		while (*argument && !isspace(*argument))
 		{
@@ -1007,16 +1156,14 @@ char *one_argument(char *argument, char *first_arg)
 		*first_arg = '\0';
 	}
 	while (fill_word(begin));
-
 	return (argument);
 }
 
-/* one_word is like any_one_arg, except that words in quotes ("") are
-   considered one word. No longer ignores fill words.  -dak */
+	/* one_word is like any_one_arg, except that words in quotes ("") are
+	   considered one word. No longer ignores fill words.  -dak */
 char *one_word(char *argument, char *first_arg)
 {
 	skip_spaces(&argument);
-
 	if (*argument == '\"')
 	{
 		argument++;
@@ -1040,68 +1187,61 @@ char *one_word(char *argument, char *first_arg)
 	return (argument);
 }
 
-/* Same as one_argument except that it doesn't ignore fill words. */
+	/* Same as one_argument except that it doesn't ignore fill words. */
 char *any_one_arg(char *argument, char *first_arg)
 {
 	skip_spaces(&argument);
-
 	while (*argument && !isspace(*argument))
 	{
 		*(first_arg++) = LOWER(*argument);
 		argument++;
 	}
 
-	*first_arg = '\0';
-
+	* first_arg = '\0';
 	return (argument);
 }
 
-/* Same as one_argument except that it takes two args and returns the rest;
-   ignores fill words */
+	/* Same as one_argument except that it takes two args and returns the
+	   rest; ignores fill words */
 char *two_arguments(char *argument, char *first_arg, char *second_arg)
 {
 	return (one_argument(one_argument(argument, first_arg), second_arg));	/* :-) 
 																			 */
 }
 
-/* Determine if a given string is an abbreviation of another. Returns 1 if
-   arg1 is an abbreviation of arg2. */
+	/* Determine if a given string is an abbreviation of another. Returns 1 if 
+	   arg1 is an abbreviation of arg2. */
 int is_abbrev(const char *arg1, const char *arg2)
 {
 	if (!*arg1)
 		return (0);
-
 	for (; *arg1 && *arg2; arg1++, arg2++)
 		if (LOWER(*arg1) != LOWER(*arg2))
 			return (0);
-
 	if (!*arg1)
 		return (1);
 	else
 		return (0);
 }
 
-/* Return first space-delimited token in arg1; remainder of string in arg2.
-   NOTE: Requires sizeof(arg2) >= sizeof(string) */
+	/* Return first space-delimited token in arg1; remainder of string in
+	   arg2. NOTE: Requires sizeof(arg2) >= sizeof(string) */
 void half_chop(char *string, char *arg1, char *arg2)
 {
 	char *temp;
-
-	temp = any_one_arg(string, arg1);
-	skip_spaces(&temp);
-	strcpy(arg2, temp);			/* strcpy: OK (documentation) */
+	  temp = any_one_arg(string, arg1);
+	  skip_spaces(&temp);
+	  strcpy(arg2, temp);		/* strcpy: OK (documentation) */
 }
 
-/* Used in specprocs, mostly.  (Exactly) matches "command" to cmd number */
+	/* Used in specprocs, mostly.  (Exactly) matches "command" to cmd number */
 int find_command(const char *command)
 {
 	int cmd;
-
 	for (cmd = 0; *complete_cmd_info[cmd].command != '\n'; cmd++)
 		if (!strcmp(complete_cmd_info[cmd].command, command))
-			return (cmd);
-
-	return (-1);
+			  return (cmd);
+	  return (-1);
 }
 
 int special(struct char_data *ch, int cmd, char *arg)
@@ -1109,61 +1249,52 @@ int special(struct char_data *ch, int cmd, char *arg)
 	struct obj_data *i;
 	struct char_data *k;
 	int j;
-
 	/* special in room? */
 	if (GET_ROOM_SPEC(IN_ROOM(ch)) != NULL)
 		if (GET_ROOM_SPEC(IN_ROOM(ch)) (ch, world + IN_ROOM(ch), cmd, arg))
-			return (1);
-
+			  return (1);
 	/* special in equipment list? */
 	for (j = 0; j < NUM_WEARS; j++)
 		if (GET_EQ(ch, j) && GET_OBJ_SPEC(GET_EQ(ch, j)) != NULL)
 			if (GET_OBJ_SPEC(GET_EQ(ch, j)) (ch, GET_EQ(ch, j), cmd, arg))
-				return (1);
-
+				  return (1);
 	/* special in inventory? */
 	for (i = ch->carrying; i; i = i->next_content)
 		if (GET_OBJ_SPEC(i) != NULL)
 			if (GET_OBJ_SPEC(i) (ch, i, cmd, arg))
 				return (1);
-
 	/* special in mobile present? */
 	for (k = world[IN_ROOM(ch)].people; k; k = k->next_in_room)
 		if (!MOB_FLAGGED(k, MOB_NOTDEADYET))
 			if (GET_MOB_SPEC(k) && GET_MOB_SPEC(k) (ch, k, cmd, arg))
 				return (1);
-
 	/* special in object present? */
 	for (i = world[IN_ROOM(ch)].contents; i; i = i->next_content)
 		if (GET_OBJ_SPEC(i) != NULL)
 			if (GET_OBJ_SPEC(i) (ch, i, cmd, arg))
 				return (1);
-
-	return (0);
+	  return (0);
 }
 
-/* Stuff for controlling the non-playing sockets (get name, pwd etc). This
-   function needs to die. */
+	/* Stuff for controlling the non-playing sockets (get name, pwd etc). This 
+	   function needs to die. */
 static int _parse_name(char *arg, char *name)
 {
 	int i;
-
-	skip_spaces(&arg);
+	  skip_spaces(&arg);
 	for (i = 0; (*name = *arg); arg++, i++, name++)
 		if (!isalpha(*arg))
-			return (1);
-
+			  return (1);
 	if (!i)
-		return (1);
-
-	return (0);
+		  return (1);
+	  return (0);
 }
 
 #define RECON		1
 #define USURP		2
 #define UNSWITCH	3
 
-/* This function seems a bit over-extended. */
+	/* This function seems a bit over-extended. */
 static int perform_dupe_check(struct descriptor_data *d)
 {
 	struct descriptor_data *k, *next_k;
@@ -1171,17 +1302,13 @@ static int perform_dupe_check(struct descriptor_data *d)
 	int mode = 0;
 	int pref_temp = 0;			/* for "last" log */
 	int id = GET_IDNUM(d->character);
-
 	/* Now that this descriptor has successfully logged in, disconnect all
 	   other descriptors controlling a character with the same ID number. */
-
 	for (k = descriptor_list; k; k = next_k)
 	{
 		next_k = k->next;
-
 		if (k == d)
 			continue;
-
 		if (k->original && (GET_IDNUM(k->original) == id))
 		{
 			/* Original descriptor was switched, booting it and restoring
@@ -1196,7 +1323,7 @@ static int perform_dupe_check(struct descriptor_data *d)
 				mode = UNSWITCH;
 			}
 			if (k->character)
-				k->character->desc = NULL;
+				  k->character->desc = NULL;
 			k->character = NULL;
 			k->original = NULL;
 		}
@@ -1211,7 +1338,6 @@ static int perform_dupe_check(struct descriptor_data *d)
 		{
 			/* Character taking over their own body. */
 			pref_temp = GET_PREF(k->character);
-
 			if (!target && STATE(k) == CON_PLAYING)
 			{
 				write_to_output(k, "\r\nEste corpo foi usurpado!\r\n");
@@ -1220,7 +1346,6 @@ static int perform_dupe_check(struct descriptor_data *d)
 			}
 			k->character->desc = NULL;
 			k->character = NULL;
-
 			if (k->original)
 			{
 				on_player_linkless(k->original);
@@ -1241,20 +1366,16 @@ static int perform_dupe_check(struct descriptor_data *d)
 	for (ch = character_list; ch; ch = next_ch)
 	{
 		next_ch = ch->next;
-
 		if (IS_NPC(ch))
 			continue;
 		if (GET_IDNUM(ch) != id)
 			continue;
-
 		/* ignore chars with descriptors (already handled by above step) */
 		if (ch->desc)
 			continue;
-
 		/* don't extract the target char we've found one already */
 		if (ch == target)
 			continue;
-
 		/* we don't already have a target and found a candidate for switching */
 		if (!target)
 		{
@@ -1284,10 +1405,8 @@ static int perform_dupe_check(struct descriptor_data *d)
 	if (GET_HOST(target))
 		free(GET_HOST(target));
 	GET_HOST(target) = strdup(d->host);
-
 	GET_PREF(target) = pref_temp;
 	add_llog_entry(target, LAST_RECONNECT);
-
 	/* Okay, we've found a target.  Connect d to target. */
 	free_char(d->character);	/* get rid of the old char */
 	d->character = target;
@@ -1298,12 +1417,10 @@ static int perform_dupe_check(struct descriptor_data *d)
 	REMOVE_BIT_AR(PLR_FLAGS(d->character), PLR_WRITING);
 	STATE(d) = CON_PLAYING;
 	MXPSendTag(d, "<VERSION>");
-
 	switch (mode)
 	{
 	case RECON:
 		write_to_output(d, "Reconectando.\r\n");
-
 		act("$n se reconectou.", TRUE, d->character, 0, 0, TO_ROOM);
 		mudlog(NRM, MAX(LVL_IMMORT, GET_INVIS_LEV(d->character)), TRUE, "%s [%s] has reconnected.",
 			   GET_NAME(d->character), d->host);
@@ -1319,33 +1436,28 @@ static int perform_dupe_check(struct descriptor_data *d)
 		break;
 	case UNSWITCH:
 		write_to_output(d, "Reconectando o personagem.\r\n");
-		mudlog(NRM, MAX(LVL_IMMORT, GET_INVIS_LEV(d->character)), TRUE, "%s [%s] has reconnected.",
-			   GET_NAME(d->character), d->host);
+		mudlog(NRM, MAX(LVL_IMMORT, GET_INVIS_LEV(d->character)), TRUE,
+			   "%s [%s] has reconnected.", GET_NAME(d->character), d->host);
 		break;
 	}
 
 	return (1);
 }
 
-/* New Char dupe-check called at the start of character creation */
+	/* New Char dupe-check called at the start of character creation */
 static bool perform_new_char_dupe_check(struct descriptor_data *d)
 {
 	struct descriptor_data *k, *next_k;
 	bool found = FALSE;
-
 	/* Now that this descriptor has successfully logged in, disconnect all
 	   other descriptors controlling a character with the same ID number. */
-
 	for (k = descriptor_list; k; k = next_k)
 	{
 		next_k = k->next;
-
 		if (k == d)
 			continue;
-
 		if (k->character == NULL)
 			continue;
-
 		/* Do the player names match? */
 		if (!strcmp(GET_NAME(k->character), GET_NAME(d->character)))
 		{
@@ -1358,10 +1470,8 @@ static bool perform_new_char_dupe_check(struct descriptor_data *d)
 				k->original = NULL;
 				write_to_output(k, "\r\nMultiplo login detectado -- desconectando.\r\n");
 				STATE(k) = CON_CLOSE;
-
 				mudlog(NRM, LVL_GOD, TRUE, "Multiple logins detected in char creation for %s.",
 					   GET_NAME(d->character));
-
 				found = TRUE;
 			}
 			else
@@ -1372,7 +1482,6 @@ static bool perform_new_char_dupe_check(struct descriptor_data *d)
 				k->original = NULL;
 				write_to_output(k, "\r\nMultiplo login detectado -- desconectando.\r\n");
 				STATE(k) = CON_CLOSE;
-
 				d->character->desc = NULL;
 				d->character = NULL;
 				d->original = NULL;
@@ -1380,10 +1489,8 @@ static bool perform_new_char_dupe_check(struct descriptor_data *d)
 								"\r\nDesculpe, devido a multiplas conexões, todas as suas conexões foram fechadas.\r\n");
 				write_to_output(d, "\r\nPor favor, reconecte.\r\n");
 				STATE(d) = CON_CLOSE;
-
 				mudlog(NRM, LVL_GOD, TRUE,
 					   "SYSERR: Multiple logins with 1st in-game and the 2nd in char creation.");
-
 				found = TRUE;
 			}
 		}
@@ -1391,22 +1498,19 @@ static bool perform_new_char_dupe_check(struct descriptor_data *d)
 	return (found);
 }
 
-/* load the player, put them in the right room - used by copyover_recover too */
+	/* load the player, put them in the right room - used by copyover_recover
+	   too */
 int enter_player_game(struct descriptor_data *d)
 {
 	int load_result;
 	room_vnum load_room;
-
-	reset_char(d->character);
-
+	  reset_char(d->character);
 	if (PLR_FLAGGED(d->character, PLR_INVSTART))
-		GET_INVIS_LEV(d->character) = GET_LEVEL(d->character);
-
+		  GET_INVIS_LEV(d->character) = GET_LEVEL(d->character);
 	/* We have to place the character in a room before equipping them or
 	   equip_char() will gripe about the person in NOWHERE. */
 	if ((load_room = GET_LOADROOM(d->character)) != NOWHERE)
 		load_room = real_room(load_room);
-
 	/* If char was saved with NOWHERE, or real_room above failed... */
 	if (load_room == NOWHERE)
 	{
@@ -1416,33 +1520,27 @@ int enter_player_game(struct descriptor_data *d)
 			load_room = r_newbie_start_room;
 	}
 	if (PLR_FLAGGED(d->character, PLR_FROZEN))
-		load_room = r_frozen_start_room;
+		  load_room = r_frozen_start_room;
 	if (PLR_FLAGGED(d->character, PLR_GHOST))
 		load_room = r_dead_start_room;
-
 	/* copyover */
 	d->character->script_id = GET_IDNUM(d->character);
 	/* find_char helper */
 	add_to_lookup_table(d->character->script_id, (void *)d->character);
-
 	/* After moving saving of variables to the player file, this should only
 	   be called in case nothing was found in the pfile. If something was
 	   found, SCRIPT(ch) will be set. */
 	if (!SCRIPT(d->character))
 		read_saved_vars(d->character);
-
 	d->character->next = character_list;
 	character_list = d->character;
 	char_to_room(d->character, load_room);
 	load_result = Crash_load(d->character);
-
 	/* Save the character and their object file */
 	save_char(d->character);
 	Crash_crashsave(d->character);
-
 	/* Check for a login trigger in the players' start room */
 	login_wtrigger(&world[IN_ROOM(d->character)], d->character);
-
 	return load_result;
 }
 
@@ -1452,49 +1550,40 @@ EVENTFUNC(get_protocols)
 	struct mud_event_data *pMudEvent;
 	char buf[MAX_STRING_LENGTH];
 	size_t len;
-
 	if (event_obj == NULL)
 		return 0;
-
 	pMudEvent = (struct mud_event_data *)event_obj;
 	d = (struct descriptor_data *)pMudEvent->pStruct;
-
 	/* Clear extra white space from the "protocol scroll" */
 	write_to_output(d, "[H[J");
-
 	len =
 		snprintf(buf, MAX_STRING_LENGTH, "\tO[\toCliente\tO] \tw%s\tn | ",
 				 d->pProtocol->pVariables[eMSDP_CLIENT_ID]->pValueString);
-
 	if (d->pProtocol->pVariables[eMSDP_XTERM_256_COLORS]->ValueInt)
 		len += snprintf(buf + len, MAX_STRING_LENGTH - len, "\tO[\toCores\tO] \tw256\tn | ");
 	else if (d->pProtocol->pVariables[eMSDP_ANSI_COLORS]->ValueInt)
 		len += snprintf(buf + len, MAX_STRING_LENGTH - len, "\tO[\toCores\tO] \twAnsi\tn | ");
 	else
 		len += snprintf(buf + len, MAX_STRING_LENGTH - len, "[Cores] Sem Cor | ");
-
 	len +=
 		snprintf(buf + len, MAX_STRING_LENGTH - len, "\tO[\toMXP\tO] \tw%s\tn | ",
 				 d->pProtocol->bMXP ? "Sim" : "Não");
 	len +=
 		snprintf(buf + len, MAX_STRING_LENGTH - len, "\tO[\toMSDP\tO] \tw%s\tn | ",
 				 d->pProtocol->bMSDP ? "Sim" : "Não");
-	snprintf(buf + len, MAX_STRING_LENGTH - len, "\tO[\toATCP\tO] \tw%s\tn\r\n\r\n",
-			 d->pProtocol->bATCP ? "Sim" : "Não");
-
+	snprintf(buf + len, MAX_STRING_LENGTH - len,
+			 "\tO[\toATCP\tO] \tw%s\tn\r\n\r\n", d->pProtocol->bATCP ? "Sim" : "Não");
 	write_to_output(d, buf, 0);
-
 	write_to_output(d, GREETINGS, 0);
 	STATE(d) = CON_GET_NAME;
 	return 0;
 }
 
-/* deal with newcomers and other non-playing sockets */
+	/* deal with newcomers and other non-playing sockets */
 void nanny(struct descriptor_data *d, char *arg)
 {
 	int load_result;			/* Overloaded variable */
 	int player_i;
-
 	/* OasisOLC states */
 	struct
 	{
@@ -1533,9 +1622,7 @@ void nanny(struct descriptor_data *d, char *arg)
 		{
 		-1, NULL}
 	};
-
 	skip_spaces(&arg);
-
 	/* Quick check for the OLC states. */
 	for (player_i = 0; olc_functions[player_i].state >= 0; player_i++)
 		if (STATE(d) == olc_functions[player_i].state)
@@ -1556,9 +1643,7 @@ void nanny(struct descriptor_data *d, char *arg)
 			CREATE(d->character, struct char_data, 1);
 			clear_char(d->character);
 			CREATE(d->character->player_specials, struct player_special_data, 1);
-
 			new_mobile_data(d->character);
-
 			GET_HOST(d->character) = strdup(d->host);
 			d->character->desc = d;
 		}
@@ -1567,7 +1652,6 @@ void nanny(struct descriptor_data *d, char *arg)
 		else
 		{
 			char buf[MAX_INPUT_LENGTH], tmp_name[MAX_INPUT_LENGTH];
-
 			if ((_parse_name(arg, tmp_name)) || strlen(tmp_name) < 2 ||
 				strlen(tmp_name) > MAX_NAME_LENGTH || !valid_name(tmp_name) ||
 				fill_word(strcpy(buf, tmp_name)) || reserved_word(buf))
@@ -1578,18 +1662,15 @@ void nanny(struct descriptor_data *d, char *arg)
 			if ((player_i = load_char(tmp_name, d->character)) > -1)
 			{
 				GET_PFILEPOS(d->character) = player_i;
-
 				if (PLR_FLAGGED(d->character, PLR_DELETED))
 				{
 					/* Make sure old files are removed so the new player
 					   doesn't get the deleted player's equipment. */
 					if ((player_i = get_ptable_by_name(tmp_name)) >= 0)
 						remove_player(player_i);
-
 					/* We get a false positive from the original deleted
 					   character. */
 					free_char(d->character);
-
 					/* Check for multiple creations. */
 					if (!valid_name(tmp_name))
 					{
@@ -1599,13 +1680,10 @@ void nanny(struct descriptor_data *d, char *arg)
 					CREATE(d->character, struct char_data, 1);
 					clear_char(d->character);
 					CREATE(d->character->player_specials, struct player_special_data, 1);
-
 					new_mobile_data(d->character);
-
 					if (GET_HOST(d->character))
 						free(GET_HOST(d->character));
 					GET_HOST(d->character) = strdup(d->host);
-
 					d->character->desc = d;
 					CREATE(d->character->player.name, char, strlen(tmp_name) + 1);
 					strcpy(d->character->player.name, CAP(tmp_name));	/* strcpy: 
@@ -1647,19 +1725,18 @@ void nanny(struct descriptor_data *d, char *arg)
 																	   (size
 																	   checked 
 																	   above) */
-
 				write_to_output(d, "O nome está correto, %s (\t(S\t)/\t(N\t))? ", tmp_name);
 				STATE(d) = CON_NAME_CNFRM;
 			}
 		}
 		break;
-
 	case CON_NAME_CNFRM:		/* wait for conf. of new name */
 		if (UPPER(*arg) == 'S')
 		{
 			if (isbanned(d->host) >= BAN_NEW)
 			{
-				mudlog(NRM, LVL_GOD, TRUE, "Request for new char %s denied from [%s] (siteban)",
+				mudlog(NRM, LVL_GOD, TRUE,
+					   "Request for new char %s denied from [%s] (siteban)",
 					   GET_PC_NAME(d->character), d->host);
 				write_to_output(d,
 								"Desculpe-me, novos personagens nao sao permitidos de seu provedor!\r\n");
@@ -1670,7 +1747,8 @@ void nanny(struct descriptor_data *d, char *arg)
 			{
 				write_to_output(d,
 								"Desculpe-me, o jogo foi temporariamente restrito.. tente novamente mais tarde.\r\n");
-				mudlog(NRM, LVL_GOD, TRUE, "Request for new char %s denied from [%s] (wizlock)",
+				mudlog(NRM, LVL_GOD, TRUE,
+					   "Request for new char %s denied from [%s] (wizlock)",
 					   GET_PC_NAME(d->character), d->host);
 				STATE(d) = CON_CLOSE;
 				return;
@@ -1691,11 +1769,10 @@ void nanny(struct descriptor_data *d, char *arg)
 		else
 			write_to_output(d, "Por favor, digite Sim ou Nao.\r\n");
 		break;
-
 	case CON_PASSWORD:			/* get pwd for known player */
 		/* To really prevent duping correctly, the player's record should be
 		   reloaded from disk at this point (after the password has been
-		   typed).  However I'm afraid that trying to load a character over an 
+		   typed). However I'm afraid that trying to load a character over an
 		   already loaded character is going to cause some problem down the
 		   road that I can't see at the moment. So to compensate, I'm going to 
 		   (1) add a 15 or 20-second time limit for entering a password, and
@@ -1703,11 +1780,9 @@ void nanny(struct descriptor_data *d, char *arg)
 		   6 Feb 96 */
 
 		echo_on(d);				/* turn echo back on */
-
 		/* New echo_on() eats the return on telnet. Extra space better than
 		   none. */
 		write_to_output(d, "\r\n");
-
 		if (!*arg)
 			STATE(d) = CON_CLOSE;
 		else
@@ -1735,7 +1810,6 @@ void nanny(struct descriptor_data *d, char *arg)
 			load_result = GET_BAD_PWS(d->character);
 			GET_BAD_PWS(d->character) = 0;
 			d->bad_pws = 0;
-
 			if (isbanned(d->host) == BAN_SELECT && !PLR_FLAGGED(d->character, PLR_SITEOK))
 			{
 				write_to_output(d,
@@ -1758,19 +1832,16 @@ void nanny(struct descriptor_data *d, char *arg)
 			   in */
 			if (perform_dupe_check(d))
 				return;
-
 			if (GET_LEVEL(d->character) >= LVL_IMMORT)
 				write_to_output(d, "%s", imotd);
 			else
 				write_to_output(d, "%s", motd);
-
 			if (GET_INVIS_LEV(d->character))
 				mudlog(BRF, MAX(LVL_IMMORT, GET_INVIS_LEV(d->character)), TRUE,
 					   "%s has connected. (invis %d)", GET_NAME(d->character),
 					   GET_INVIS_LEV(d->character));
 			else
 				mudlog(BRF, LVL_IMMORT, TRUE, "%s has connected.", GET_NAME(d->character));
-
 			/* Add to the list of 'recent' players (since last reboot) */
 			if (AddRecentPlayer(GET_NAME(d->character), d->host, FALSE, FALSE) == FALSE)
 			{
@@ -1790,7 +1861,6 @@ void nanny(struct descriptor_data *d, char *arg)
 			STATE(d) = CON_RMOTD;
 		}
 		break;
-
 	case CON_NEWPASSWD:
 	case CON_CHPWD_GETNEW:
 		if (!*arg || strlen(arg) > MAX_PWD_LENGTH || strlen(arg) < 3 ||
@@ -1804,18 +1874,16 @@ void nanny(struct descriptor_data *d, char *arg)
 																									   (G_P:MAX_PWD_LENGTH+1) 
 																									 */
 		*(GET_PASSWD(d->character) + MAX_PWD_LENGTH) = '\0';
-
 		write_to_output(d, "\r\nDigite novamente a senha: ");
 		if (STATE(d) == CON_NEWPASSWD)
 			STATE(d) = CON_CNFPASSWD;
 		else
 			STATE(d) = CON_CHPWD_VRFY;
 		break;
-
 	case CON_CNFPASSWD:
 	case CON_CHPWD_VRFY:
-		if (strncmp(CRYPT(arg, GET_PASSWD(d->character)), GET_PASSWD(d->character),
-					MAX_PWD_LENGTH))
+		if (strncmp
+			(CRYPT(arg, GET_PASSWD(d->character)), GET_PASSWD(d->character), MAX_PWD_LENGTH))
 		{
 			write_to_output(d, "As senhas nao combinaram... vamos comecar denovo.\r\n");
 			if (STATE(d) == CON_CNFPASSWD)
@@ -1825,7 +1893,6 @@ void nanny(struct descriptor_data *d, char *arg)
 			return;
 		}
 		echo_on(d);
-
 		if (STATE(d) == CON_CNFPASSWD)
 		{
 			write_to_output(d, "\r\n Qual o seu sexo (\t(M\t)/\t(F\t))? ");
@@ -1838,7 +1905,6 @@ void nanny(struct descriptor_data *d, char *arg)
 			STATE(d) = CON_MENU;
 		}
 		break;
-
 	case CON_QSEX:				/* query sex of new user */
 		switch (*arg)
 		{
@@ -1858,7 +1924,6 @@ void nanny(struct descriptor_data *d, char *arg)
 		write_to_output(d, "%s\r\nClasse: ", class_menu);
 		STATE(d) = CON_QCLASS;
 		break;
-
 	case CON_QCLASS:
 		load_result = parse_class(*arg);
 		if (load_result == CLASS_UNDEFINED)
@@ -1869,10 +1934,9 @@ void nanny(struct descriptor_data *d, char *arg)
 		else
 			GET_CLASS(d->character) = load_result;
 		write_to_output(d, "\r\nCidade Natal: ");
-      hometown_menu(d);
+		hometown_menu(d);
 		STATE(d) = CON_QHOME;
 		break;
-
 	case CON_QHOME:			/* query sex of new user */
 		load_result = parse_hometown(*arg);
 		if (load_result == 0)
@@ -1882,7 +1946,6 @@ void nanny(struct descriptor_data *d, char *arg)
 		}
 		else
 			GET_HOMETOWN(d->character) = load_result;
-
 		if (d->olc)
 		{
 			free(d->olc);
@@ -1899,9 +1962,7 @@ void nanny(struct descriptor_data *d, char *arg)
 		/* make sure the last log is updated correctly. */
 		GET_PREF(d->character) = rand_number(1, 128000);
 		GET_HOST(d->character) = strdup(d->host);
-
 		mudlog(NRM, LVL_GOD, TRUE, "%s [%s] new player.", GET_NAME(d->character), d->host);
-
 		/* Add to the list of 'recent' players (since last reboot) */
 		if (AddRecentPlayer(GET_NAME(d->character), d->host, TRUE, FALSE) == FALSE)
 		{
@@ -1909,7 +1970,6 @@ void nanny(struct descriptor_data *d, char *arg)
 				   "Failure to AddRecentPlayer (returned FALSE).");
 		}
 		break;
-
 	case CON_RMOTD:			/* read CR after printing motd */
 		write_to_output(d, "%s", CONFIG_MENU);
 		if (IS_HAPPYHOUR > 0)
@@ -1921,7 +1981,6 @@ void nanny(struct descriptor_data *d, char *arg)
 		add_llog_entry(d->character, LAST_CONNECT);
 		STATE(d) = CON_MENU;
 		break;
-
 	case CON_MENU:
 		{						/* get selection from main menu */
 
@@ -1933,21 +1992,16 @@ void nanny(struct descriptor_data *d, char *arg)
 				add_llog_entry(d->character, LAST_QUIT);
 				STATE(d) = CON_CLOSE;
 				break;
-
 			case '1':
 				load_result = enter_player_game(d);
 				send_to_char(d->character, "%s", CONFIG_WELC_MESSG);
-
 				/* Clear their load room if it's not persistant. */
 				if (!PLR_FLAGGED(d->character, PLR_LOADROOM))
 					GET_LOADROOM(d->character) = NOWHERE;
 				save_char(d->character);
-
 				greet_mtrigger(d->character, -1);
 				greet_memory_mtrigger(d->character);
-
 				act("$n entrou no jogo.", TRUE, d->character, 0, 0, TO_ROOM);
-
 				STATE(d) = CON_PLAYING;
 				MXPSendTag(d, "<VERSION>");
 				if (GET_LEVEL(d->character) == 0)
@@ -1967,12 +2021,10 @@ void nanny(struct descriptor_data *d, char *arg)
 				/* We've updated to 3.1 - some bits might be set wrongly: */
 				REMOVE_BIT_AR(PRF_FLAGS(d->character), PRF_BUILDWALK);
 				break;
-
 			case '2':
 				page_string(d, background, 0);
 				STATE(d) = CON_RMOTD;
 				break;
-
 			case '3':
 				if (d->character->player.description)
 				{
@@ -1990,19 +2042,16 @@ void nanny(struct descriptor_data *d, char *arg)
 				d->max_str = PLR_DESC_LENGTH;
 				STATE(d) = CON_PLR_DESC;
 				break;
-
 			case '4':
 				write_to_output(d, "\r\nEntre com sua senha atual: ");
 				echo_off(d);
 				STATE(d) = CON_CHPWD_GETOLD;
 				break;
-
 			case '9':
 				write_to_output(d, "\r\nEntre com a sua senha para verificacao: ");
 				echo_off(d);
 				STATE(d) = CON_DELCNF1;
 				break;
-
 			default:
 				write_to_output(d, "\r\nOpcao Invalida!\r\n%s", CONFIG_MENU);
 				break;
@@ -2024,13 +2073,13 @@ void nanny(struct descriptor_data *d, char *arg)
 			STATE(d) = CON_CHPWD_GETNEW;
 		}
 		return;
-
 	case CON_DELCNF1:
 		echo_on(d);
 		if (strncmp
 			(CRYPT(arg, GET_PASSWD(d->character)), GET_PASSWD(d->character), MAX_PWD_LENGTH))
 		{
-			write_to_output(d, "\r\n.Seu personagem NÃO foi apagado: senha incorreta.\r\n%s",
+			write_to_output(d,
+							"\r\n.Seu personagem NÃO foi apagado: senha incorreta.\r\n%s",
 							CONFIG_MENU);
 			STATE(d) = CON_MENU;
 		}
@@ -2043,7 +2092,6 @@ void nanny(struct descriptor_data *d, char *arg)
 			STATE(d) = CON_DELCNF2;
 		}
 		break;
-
 	case CON_DELCNF2:
 		if (!strcmp(arg, "sim") || !strcmp(arg, "SIM"))
 		{
@@ -2082,13 +2130,11 @@ void nanny(struct descriptor_data *d, char *arg)
 			STATE(d) = CON_MENU;
 		}
 		break;
-
 		/* It is possible, if enough pulses are missed, to kick someone off
 		   while they are at the password prompt. We'll let the game_loop()axe 
 		   them. */
 	case CON_CLOSE:
 		break;
-
 	default:
 		log1("SYSERR: Nanny: illegal state of con'ness (%d) for '%s'; closing connection.",
 			 STATE(d), d->character ? GET_NAME(d->character) : "<unknown>");
@@ -2100,7 +2146,6 @@ void nanny(struct descriptor_data *d, char *arg)
 void on_player_linkless(struct char_data *ch)
 {
 	act("$n perdeu a conexão.", TRUE, ch, 0, 0, TO_ROOM);
-
 	save_char(ch);
 }
 
@@ -2113,14 +2158,11 @@ void hometown_menu(struct descriptor_data *d)
 int parse_hometown(char arg)
 {
 	arg = LOWER(arg);
-
 	switch (arg)
 	{
 	case 'a':
 		return r_hometown_1;
-	case 'b':
-		return r_hometown_2;
-	default:
-		return 0;
+		case 'b':return r_hometown_2;
+		default:return 0;
 	}
 }

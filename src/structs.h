@@ -604,6 +604,28 @@
 #define CLIM_DESERT 4
 #define NUM_CLIM_FLAGS    5
 
+/* Types of command for aventureiro */
+#define CMD_NONE 0
+#define CMD_MOB 1
+#define CMD_OBJ 2
+#define CMD_BOTH 3
+#define CMD_PLAYERS 4
+#define CMD_SELF 5
+#define CMD_MISC 7
+#define CMD_COMM 8
+#define CMD_EXITS 9
+#define CMD_ZONE 10
+
+#define CMD_ARG_MOB 0
+#define CMD_ARG_PLAYER 1
+#define CMD_ARG_OBJ 2
+#define CMD_ARG_MONEY 3
+#define CMD_ARG_SKILL 4
+#define CMD_ARG_ALL 5
+#define CMD_ARG_OUT 6
+#define CMD_ARG_DIR 7
+
+
 /* Rent codes */
 #define RENT_UNDEF      0 /**< Character inv save status = undefined */
 #define RENT_CRASH      1 /**< Character inv save status = game crash */
