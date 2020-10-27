@@ -339,9 +339,9 @@ void gain_exp(struct char_data *ch, int gain)
 				   "%s advanced %d level%s to level %d.", GET_NAME(ch), num_levels,
 				   num_levels == 1 ? "" : "s", GET_LEVEL(ch));
 			if (num_levels == 1)
-				send_to_char(ch, "\a\a@WVocê aumentou um nível!@n\r\n");
+				send_to_char(ch, "\a\a\tWVocê aumentou um nível!\tn\r\n");
 			else
-				send_to_char(ch, "\a\a@WVocê aumentou %d níveis!@n\r\n", num_levels);
+				send_to_char(ch, "\a\a\tWVocê aumentou %d níveis!\tn\r\n", num_levels);
 			if (!PRF_FLAGGED(ch, PRF_AUTOTITLE))
 				set_title(ch, NULL);
 			if (GET_LEVEL(ch) >= LVL_IMMORT && !PLR_FLAGGED(ch, PLR_NOWIZLIST))
@@ -385,9 +385,9 @@ void gain_exp_regardless(struct char_data *ch, int gain)
 				   "%s advanced %d level%s to level %d.", GET_NAME(ch), num_levels,
 				   num_levels == 1 ? "" : "s", GET_LEVEL(ch));
 			if (num_levels == 1)
-				send_to_char(ch, "\a\a@WVocê aumentou um nível!@n\r\n");
+				send_to_char(ch, "\a\a\tWVocê aumentou um nível!\tn\r\n");
 			else
-				send_to_char(ch, "\a\a@WVocê aumentou %d níveis!@n\r\n", num_levels);
+				send_to_char(ch, "\a\a\tWVocê aumentou %d níveis!\tn\r\n", num_levels);
 			if (PRF_FLAGGED(ch, PRF_AUTOTITLE))
 				set_title(ch, NULL);
 		}
