@@ -820,7 +820,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	}
 
 	/* vitima eh mob */
-	if (((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD) != NULL) && IS_NPC(victim))
+	if (((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD) != NULL) && IS_NPC(victim)))
 	{
 		type2 = 1;
 	}
