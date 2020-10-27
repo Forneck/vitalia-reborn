@@ -11,7 +11,7 @@
 
 * [ Game Play Options ]
 * Is player killing allowed on the mud?
-pk_allowed = 0
+pk_allowed = 1
 
 * Is player thieving allowed on the mud?
 pt_allowed = 1
@@ -100,7 +100,7 @@ noeffect = Aparentemente, nada aconteceu.
 free_rent = 1
 
 * Maximum number of items players are allowed to rent.
-max_obj_save = 45
+max_obj_save = 100
 
 * Should the game automatically save people?
 auto_save = 1
@@ -128,7 +128,7 @@ immort_start_room = 1204
 frozen_start_room = 1202
 
 * The virtual number of the room that dead people should enter at.
-dead_start_room = 1890
+dead_start_room = 1891
 
 * The virtual numbers of the donation rooms.  Note: Add donation rooms
 * sequentially (1 & 2 before 3). If you don't, you might not be able to

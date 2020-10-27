@@ -1,126 +1,110 @@
 #131
 Vitalia~
 Torin~
-13100 13199 200 1 ae 0 0 0 -1 -1
--1
-M 0 13101 3 13101
-E 1 13100 99 16
-E 1 13118 100 11
-D 0 13101 1 1
-D 0 13101 3 1
-M 0 13102 10 13104
-E 1 13113 99 17
-M 0 13107 1 13103
-E 1 13105 10 20
-M 0 13122 1 13143
-E 1 13139 99 1
-E 1 13138 99 12
-E 1 13120 1 17
-E 1 13137 99 16
-M 0 13124 3 13143
-E 1 13136 9 16
-D 0 13137 0 1
-M 0 13121 5 13137
-M 0 13115 1 13168
-E 1 13132 99 16
-E 1 13134 99 3
-M 0 13114 1 13171
-E 1 13133 99 16
-E 1 13135 99 3
-D 0 13128 3 1
-M 0 13117 4 13128
-D 0 13126 1 1
-M 0 13116 4 13126
-M 0 13110 1 13163
-E 1 13116 99 11
-E 1 13114 99 9
-E 1 13111 99 6
-E 1 13110 99 5
-E 1 13109 99 16
-M 0 13135 2 13162
-E 1 13115 99 16
-E 1 13110 99 5
-M 0 13135 2 13161
-E 1 13115 99 16
-E 1 13117 99 11
-M 0 13109 3 13160
-M 0 13137 1 13160
-E 1 3816 1 17        Card Bastï¿½o de Bruenor(3816) com Clerigo(13137)
-M 0 13112 4 13158
-E 1 13107 99 16
-E 1 13108 99 11
-M 0 13111 10 13157
-E 1 13106 99 5
-M 0 13113 2 13123
-E 1 13140 99 11
-E 1 13141 99 16
-D 0 13123 2 1
-M 0 13113 2 13121
-G 1 13102 1
-E 1 13140 99 11
-E 1 13141 99 16
-M 0 13104 1 13145
-E 1 13122 99 16
-M 0 13133 4 13154
-E 1 13128 99 10
-M 0 13132 5 13155
-E 1 13129 99 11
-M 0 13133 5 13152
-E 1 13126 99 5
-E 1 13127 99 7
-M 0 13106 1 13149
-E 1 13130 99 16
-M 0 13132 5 13147
-E 1 13119 99 11
-M 0 13102 10 13106
-E 1 13113 99 17
-M 0 13102 10 13108
-E 1 13113 99 17
-D 0 13108 0 1
-M 0 13129 4 13115
-E 1 13106 99 5
-E 1 13112 99 8
-M 0 13130 4 13115
-E 1 13106 99 5
-E 1 13112 99 8
-M 0 13102 10 13110
-E 1 13113 99 17
-M 0 13126 1 13112
-E 1 13113 99 17
-M 0 13138 1 13164
-E 1 13121 1 16
-M 0 13123 2 13144
-M 0 13125 2 13144
-D 0 13142 1 1
-D 0 13134 0 1
-D 0 13134 2 1
-D 0 13135 0 1
-D 0 13133 2 1
-M 0 13120 9 13132
-D 0 13130 1 1
-M 0 13136 9 13169
-D 0 13125 3 1
-M 0 13134 5 13118
-M 0 13108 1 13122
-E 1 13125 1 10
-E 1 13124 1 7
-E 1 13123 1 5
-M 0 13132 4 13156
-M 0 13127 1 13148
-D 0 13117 3 1
-M 0 13131 1 13117
-D 0 13114 2 1
-M 0 13128 1 13114
-D 0 13113 0 1
-M 0 13103 3 13113
-G 1 13101 1
-M 0 13103 3 13113
-M 0 13103 3 13113
-M 0 13105 1 13116
-D 0 13116 1 1
-D 0 13102 1 1
-D 0 13111 3 1
-M 0 13102 10 13119
-D 0 13120 0 2
+13100 13199 200 1 aek 0 0 0 -1 -1
+E 1 13100 99 16 	(uma antiga espada enferrujada)
+E 1 13118 100 11 	(um escudo enferrujado)
+D 0 13101 1 1 	(A Entrada)
+D 0 13101 3 1 	(A Entrada)
+E 1 13113 99 17 	(um pedaço da sombra)
+E 1 13105 10 20 	(o dente de Bohemoth)
+M 0 13122 1 13143 	(o Rei das Sombras)
+E 1 13139 99 1 	(o anel do Rei)
+E 1 13138 99 12 	(o manto do Rei)
+E 1 13120 1 17 	(um bastão mágico)
+E 1 13137 99 16 	(uma vara do Rei)
+M 0 13124 3 13143 	(uma grande sombra)
+E 1 13136 9 16 	(uma lâmina sombria)
+D 0 13137 0 1 	(A Assombração)
+M 0 13121 5 13137 	(um sombra)
+M 0 13115 1 13168 	(Adorin)
+E 1 13132 99 16 	(um osso da perna)
+E 1 13134 99 3 	(o medalhão do Rei de Torin.)
+M 0 13114 1 13171 	(Melki)
+E 1 13133 99 16 	(um osso do braço)
+E 1 13135 99 3 	(um medalhão do Chefe Inquisitor de Torin)
+D 0 13128 3 1 	(A Grande Caverna)
+M 0 13117 4 13128 	(um morcego)
+D 0 13126 1 1 	(A Grande Caverna)
+M 0 13116 4 13126 	(uma lesma)
+M 0 13110 1 13163 	(o cavaleiro Mendo)
+E 1 13116 99 11 	(um escudo com o Símbolo da Luz)
+E 1 13114 99 9 	(uma manopla brilhante)
+E 1 13111 99 6 	(um capacete brilhante)
+E 1 13110 99 5 	(um armadura de placas brilhantes)
+E 1 13109 99 16 	(a espada larga incandescente de Mendo)
+M 0 13135 2 13162 	(o aprendiz de mendo)
+E 1 13115 99 16 	(uma espada longa bem trabalhada)
+E 1 13110 99 5 	(um armadura de placas brilhantes)
+M 0 13135 2 13161 	(o aprendiz de mendo)
+E 1 13115 99 16 	(uma espada longa bem trabalhada)
+E 1 13117 99 11 	(um escudo brilhante)
+M 0 13137 1 13160 	(um clÃ©rigo da luz)
+E 1 3816 1 17 	(o Card BastÃ£o de Bruenor)
+M 0 13112 4 13158 	(um sentinela de Torin)
+E 1 13107 99 16 	(uma lâmina que carrega o símbolo de Torin)
+E 1 13108 99 11 	(um escudo que possui o símbolo de Torin)
+M 0 13111 10 13157 	(um cidadÃ£o)
+E 1 13106 99 5 	(o roupão de um cidadão)
+M 0 13113 2 13123 	(o guarda sagrado)
+E 1 13140 99 11 	(um escudo largo)
+E 1 13141 99 16 	(uma clava brilhante)
+D 0 13123 2 1 	(O Quarto Do Portão)
+M 0 13113 2 13121 	(o guarda sagrado)
+G 1 13102 1 -1 	(uma chave prateada)
+E 1 13140 99 11 	(um escudo largo)
+E 1 13141 99 16 	(uma clava brilhante)
+E 1 13122 99 16 	(a espada de Lorgeth)
+M 0 13133 4 13154 	(um soldado fantasmagÃ³rico de Torin)
+E 1 13128 99 10 	(um par de braçadeiras fantasmagórica)
+M 0 13132 5 13155 	(um soldado fantasmagÃ³rico de Torin)
+E 1 13129 99 11 	(uma chapa universal fantasmagórica)
+M 0 13133 5 13152 	(um soldado fantasmagÃ³rico de Torin)
+E 1 13126 99 5 	(uma armadura fantasmagórica)
+E 1 13127 99 7 	(uma perneira fantasmagórica)
+E 1 13130 99 16 	(a espada longa adornada de Sharel)
+M 0 13132 5 13147 	(um soldado fantasmagÃ³rico de Torin)
+E 1 13119 99 11 	(um escudo fantasmagórico com o Símbolo de Torin)
+E 1 13113 99 17 	(um pedaço da sombra)
+E 1 13113 99 17 	(um pedaço da sombra)
+D 0 13108 0 1 	(Antes Dos Portões)
+M 0 13129 4 13115 	(o cidadÃ£o fantasmagÃ³rico de Torin)
+E 1 13106 99 5 	(o roupão de um cidadão)
+E 1 13112 99 8 	(uma sandália gasta)
+M 0 13130 4 13115 	(o cidadÃ£o fantasmagÃ³rico de Torin)
+E 1 13106 99 5 	(o roupão de um cidadão)
+E 1 13112 99 8 	(uma sandália gasta)
+E 1 13113 99 17 	(um pedaço da sombra)
+M 0 13126 1 13112 	(o guarda sombrio)
+E 1 13113 99 17 	(um pedaço da sombra)
+M 0 13138 1 13164 	(o Sacerdote Mestre da Luz)
+E 1 13121 1 16 	(uma clava da fé)
+M 0 13123 2 13144 	(uma sombra mutante)
+M 0 13125 2 13144 	(uma rÃ£ magicamente mutada)
+D 0 13142 1 1 	(O Corredor Das Sombras)
+D 0 13134 0 1 	(O Quarto Do Portão)
+D 0 13134 2 1 	(O Quarto Do Portão)
+D 0 13135 0 1 	(Os Corredores Vivos)
+D 0 13133 2 1 	(A Sala Do Tesouro)
+M 0 13120 9 13132 	(um antigo monge)
+D 0 13130 1 1 	(Os Corredores)
+M 0 13136 9 13169 	(o bajulador que antecede a corte do rei)
+D 0 13125 3 1 	(Uma Pequena Loja)
+M 0 13134 5 13118 	(a nÃ©voa)
+E 1 13125 1 10 	(um par de luvas de camaleão )
+E 1 13124 1 7 	(um par de calças de camaleão)
+E 1 13123 1 5 	(uma camisa de camaleão)
+M 0 13132 4 13156 	(um soldado fantasmagÃ³rico de Torin)
+M 0 13127 1 13148 	(tenente Dorin)
+D 0 13117 3 1 	(A Loja Silenciosa)
+M 0 13131 1 13117 	(a bola azul brilhante)
+D 0 13114 2 1 	(Deja-vu)
+M 0 13128 1 13114 	(o fantasma de uma jovem senhora)
+D 0 13113 0 1 	(O Quarto Dos Guardas)
+G 1 13101 1 -1 	(uma pequena chave marrom)
+D 0 13116 1 1 	(A Praça)
+D 0 13102 1 1 	(O Caminho Oeste)
+D 0 13111 3 1 	(O Caminho Leste)
+D 0 13120 0 2 	(Antes Dos Portões)
 S
 $

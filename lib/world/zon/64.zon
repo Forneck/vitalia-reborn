@@ -1,83 +1,74 @@
 #64
 Vitalia~
 A Torre de Rand~
-6400 6499 20 1 0 0 0 0 -1 -1
--1
-*
-* Created by Amanda Eterniale of C.A.W.
-* Official C.A.W. ftp site:  viemud.org /pub/caw
-* Mail Address: furry@viemud.org
-*
-* Mobiles
-M 0 6400 3 6400         Goats
-M 0 6400 3 6402         Goats
-M 0 6400 3 6404         Goats
-M 0 6401 2 6407         Demons
-M 0 6401 2 6407         Demons
-M 0 6402 1 6412         Book Monster
-G 1 6410 10                     Chaos Book
-G 1 6411 10                     Elder Book
-M 0 6403 1 6411         Bad Feeling
-M 0 6405 1 6437         Door Guardian
-O 0 6416 1 6416         Chest
-M 0 6404 3 6416         Worst Nightmare
-P 1 6401 4 6416                Glowing Platemail
-O 0 6417 1 6416         Chest
-M 0 6404 3 6416         Worst Nightmare
-P 1 6405 10 6417               Dragon's Blood
-P 1 6407 10 6417                Tent Pole
-O 0 6418 1 6416         Chest
-M 0 6404 1 6416         Worst Nightmare
-P 1 6406 10 6418               Amulet
-P 1 6408 1 6418                 Powder Of Wealth
-P 1 6412 10 6418                Occluded Lens
-* Objects
-R 0 6411 6404
-O 0 6404 5 6411         Sculpture
-O 0 6409 1 6411         Desk
-P 1 6402 25 6409                Agate
-P 1 6403 20 6409                Jade
-P 1 6400 20 6409                Glowing Dagger
-R 0 6441 6413
-O 0 6413 8 6441       Mevais
-R 0 6441 6414
-O 0 6414 8 6441       Peska
-R 0 6436 6415
-O 0 6415 2 6436        Rand's Staff
-R 0 6410 6419
-O 0 6419 1 6410         Water Basin
-R 0 6424 6420
-O 0 6420 10 6424        Food
-R 0 6424 6420
-O 0 6420 10 6424        Food
-* Doors
-D 0 6406 5 1
-D 0 6407 4 1
-D 0 6407 2 1
-D 0 6408 0 1
-D 0 6409 0 1
-D 0 6409 2 1
-D 0 6410 0 1
-D 0 6411 2 1
-D 0 6412 1 1
-D 0 6412 3 1
-D 0 6413 3 1
-D 0 6414 1 1
-D 0 6414 5 1
-D 0 6415 3 1
-D 0 6416 4 1
-D 0 6417 0 1
-D 0 6417 1 1
-D 0 6417 2 1
-D 0 6418 0 1
-D 0 6419 2 1
-D 0 6420 0 1
-D 0 6421 2 1
-D 0 6423 0 1
-D 0 6424 2 1
-D 0 6435 3 2
-D 0 6436 1 2
-D 0 6437 3 1
-D 0 6438 1 1
+6400 6499 20 1 k 0 0 0 -1 -1
+M 0 6400 3 6400 	(o bode montês)
+M 0 6400 3 6402 	(o bode montês)
+M 0 6400 3 6404 	(o bode montês)
+M 0 6401 2 6407 	(o Demônio da Podridão)
+M 0 6401 2 6407 	(o Demônio da Podridão)
+M 0 6402 1 6412 	(o Guardião de Livro)
+G 1 6410 10 -1 	(o Livro do Caos)
+G 1 6411 10 -1 	(o Livro do Ancião)
+M 0 6403 1 6411 	(um Mau Presságio)
+M 0 6405 1 6437 	(o Guardião)
+O 0 6416 1 6416 	(um baú de madeira)
+M 0 6404 3 6416 	(seu Pior Pesadelo)
+P 1 6401 4 6416 	(uma brilhante armadura de chapas de metal)
+O 0 6417 1 6416 	(um baú de madeira)
+M 0 6404 3 6416 	(seu Pior Pesadelo)
+P 1 6405 10 6417 	(um frasco com sangue do dragão)
+P 1 6407 10 6417 	(um mastro de barraca)
+O 0 6418 1 6416 	(um baú de madeira)
+M 0 6404 1 6416 	(seu Pior Pesadelo)
+P 1 6406 10 6418 	(um amuleto)
+P 1 6408 1 6418 	(um saco de Pó da Riqueza)
+P 1 6412 10 6418 	(as lentes absorventes)
+R 0 6411 6404 -1 	(uma escultura)
+O 0 6404 5 6411 	(uma escultura)
+O 0 6409 1 6411 	(uma escrivaninha)
+P 1 6402 25 6409 	(uma ágata)
+P 1 6403 20 6409 	(um pedaço de Jade)
+P 1 6400 20 6409 	(uma adaga brilhante)
+R 0 6441 6413 -1 	(uma folha de mevais)
+O 0 6413 8 6441 	(uma folha de mevais)
+R 0 6441 6414 -1 	(um frasco de peska)
+O 0 6414 8 6441 	(um frasco de peska)
+R 0 6436 6415 -1 	(o Cajado de Rand)
+O 0 6415 2 6436 	(o Cajado de Rand)
+R 0 6410 6419 -1 	(uma bacia de água)
+O 0 6419 1 6410 	(uma bacia de água)
+R 0 6424 6420 -1 	(um pouco de comida)
+O 0 6420 10 6424 	(um pouco de comida)
+R 0 6424 6420 -1 	(um pouco de comida)
+O 0 6420 10 6424 	(um pouco de comida)
+D 0 6406 5 1 	(Na clareira)
+D 0 6407 4 1 	(A Escadaria)
+D 0 6407 2 1 	(A Escadaria)
+D 0 6408 0 1 	(O Gabinete de Tecidos)
+D 0 6409 0 1 	(Um Corredor)
+D 0 6409 2 1 	(Um Corredor)
+D 0 6410 0 1 	(Um Banheiro)
+D 0 6411 2 1 	(O Quarto Principal)
+D 0 6412 1 1 	(A Biblioteca)
+D 0 6412 3 1 	(A Biblioteca)
+D 0 6413 3 1 	(A Escadaria)
+D 0 6414 1 1 	(Um Sagu�o Escondido)
+D 0 6414 5 1 	(Um Sagu�o Escondido)
+D 0 6415 3 1 	(A Escadaria)
+D 0 6416 4 1 	(A Sala Escondida do Tesouro)
+D 0 6417 0 1 	(Um Sagu�o)
+D 0 6417 1 1 	(Um Sagu�o)
+D 0 6417 2 1 	(Um Sagu�o)
+D 0 6418 0 1 	(A Sala dos Criados)
+D 0 6419 2 1 	(A Sala dos Criados)
+D 0 6420 0 1 	(Um Sagu�o)
+D 0 6421 2 1 	(A Sala dos Criados)
+D 0 6423 0 1 	(A Sala de Jantar)
+D 0 6424 2 1 	(A Cozinha)
+D 0 6435 3 2 	(A Entrada)
+D 0 6436 1 2 	(A Passagem)
+D 0 6437 3 1 	(O Sagu�o)
+D 0 6438 1 1 	(As Escadas)
 S
 $

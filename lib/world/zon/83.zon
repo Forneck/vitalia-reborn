@@ -1,135 +1,93 @@
 #83
 Vitalia~
 A Aldeia Maldita~
-8300 8399 300 0 ade 0 0 0 -1 -1
--1
-*
-*Loctus
-*
-M 0 8301 1 8325   carregar loctus
-E 1 8309 1 3      entregar colar loctus (equip)
-G 1 8305 1        entregar chave da liberdade a loctus
-*
-*Guardiao
-*
-M 0 8302 1 8324   carregar guardiao loctus
-G 1 8301 1        entregar chave loctus ao guardiao
-*
-*Serpentes
-*
-M 0 8303 1 8313   carregar serpente de fogo
-G 1 8302 1        entregar chave gelo a serpente fogo
-E 1 8307 1 19     entregar brinco fogo a serpente fogo (equip)
-E 1 3811 1 17     Card Escudo de Fogo(3811) com Serpente(8303)
-M 0 8304 1 8317   carregar serpente gelo
-G 1 8303 1        entregar chave arenosa a serpente gelo
-E 1 8308 1 19     entregar brinco gelo a serpente gelo (equip)
-M 0 8305 1 8320   carregar serpente areia
-G 1 8304 1        entregar chave pedra a serpente areia
-E 1 8314 1 19     entregar brinco areia a serpente areia (equip)
-*
-*Morcego
-*
-M 0 8306 2 8310   carregar morcego
-E 1 8306 10 22    entregar dente morcego ao morcego (equip)
-M 0 8306 2 8310   carregar morcego
-*
-*Prisioneiros
-*
-M 0 8307 1 8326   carregar mago
-M 0 8308 1 8326   carregar clerigo
-M 0 8309 1 8326   carregar ladrao
-M 0 8310 1 8326   carregar guerreiro
-M 0 8321 1 8326   carregar druida
-*
-*Portas
-*
-D 0 8315 2 2      porta fechada e trancada sala 8215
-D 0 8317 0 2      porta fechada e trancada sala 8217
-D 0 8319 3 2      porta fechada e trancada sala 8219
-D 0 8320 1 2      porta fechada e trancada sala 8220
-D 0 8323 2 2      porta fechada e trancada sala 8223
-D 0 8325 3 2      porta fechada e trancada sala 8225
-D 0 8310 2 2      porta fechada e trancada sala 8210
-*
-*
-*
-M 0 8314 12 8336
-E 1 8311 20 6
-E 1 8312 20 5
-M 0 8314 12 8336
-E 1 8311 20 6
-E 1 8312 20 5
-
-M 0 8311 12 8337
-E 1 8311 20 6
-E 1 8312 20 5
-M 0 8312 7 8337
-E 1 8311 20 6
-E 1 8312 20 5
-M 0 8313 12 8337
-E 1 8311 20 6
-E 1 8312 20 5
-
-D 0 8354 0 2
-
-M 0 8313 12 8338
-E 1 8311 20 6
-E 1 8312 20 5
-
-M 0 8314 2 8340
-E 1 8311 20 6
-E 1 8312 20 5
-
-M 0 8314 12 8340
-E 1 8311 20 6
-E 1 8312 20 5
-
-M 0 8312 7 8341
-E 1 8311 20 6
-E 1 8312 20 5
-
-M 0 8311 12 8342
-E 1 8311 20 6
-E 1 8312 20 5
-M 0 8313 12 8342
-E 1 8311 20 6
-E 1 8312 20 5
-
-M 0 8313 12 8346
-E 1 8311 20 6
-E 1 8312 20 5
-M 0 8313 12 8346
-E 1 8311 20 6
-E 1 8312 20 5
-
-M 0 8313 12 8347
-E 1 8311 20 6
-E 1 8312 20 5
-M 0 8313 2 8347
-E 1 8311 20 6
-E 1 8312 20 5
-
-M 0 8315 1 8351
-M 0 8316 1 8351
-M 0 8317 1 8351
-M 0 8318 1 8351
-M 0 8319 1 8351
-R 0 8351 8313
-O 1 8313 1 8351
-
-O 0 8310 1 8356
-
-M 0 8312 7 8352
-E 1 8311 20 6
-E 1 8312 20 5
-M 0 8311 7 8352
-E 1 8311 20 6
-E 1 8312 20 5
-M 0 8311 7 8352
-E 1 8311 20 6
-E 1 8312 20 5
-
-M 0 8320 1 8353
+8300 8399 300 0 adek 0 0 0 -1 -1
+M 0 8301 1 8325 	(o Loctus)
+E 1 8309 1 3 	(o colar de Loctus)
+G 1 8305 1 -1 	(a Chave para Liberdade)
+M 0 8302 1 8324 	(o Guardião de Loctus)
+G 1 8301 1 -1 	(a Chave de Loctus)
+M 0 8303 1 8313 	(a Serpente de Fogo)
+G 1 8302 1 -1 	(uma chave de gelo)
+E 1 8307 1 19 	(o brinco de fogo)
+E 1 3811 1 17 	(o Card Escudo de Fogo)
+M 0 8304 1 8317 	(a Serpente de Gelo)
+G 1 8303 1 -1 	(uma chave arenosa)
+E 1 8308 1 19 	(o brinco de gelo)
+M 0 8305 1 8320 	(a Serpente da Areia)
+G 1 8304 1 -1 	(a Chave de Pedra)
+E 1 8314 1 19 	(o brinco de areia)
+M 0 8306 2 8310 	(um morcego)
+E 1 8306 10 22 	(um dente de morcego)
+M 0 8306 2 8310 	(um morcego)
+M 0 8307 1 8326 	(o Mago)
+M 0 8308 1 8326 	(o Clérigo)
+M 0 8309 1 8326 	(o Ladrão)
+M 0 8310 1 8326 	(o Guerreiro)
+M 0 8321 1 8326 	(o Druida)
+D 0 8315 2 2 	(O T�nel Leste)
+D 0 8317 0 2 	(O Final do T�nel)
+D 0 8319 3 2 	(O T�nel Oeste)
+D 0 8320 1 2 	(O Final do T�nel)
+D 0 8323 2 2 	(A Entrada da C�mara)
+D 0 8325 3 2 	(O Cativeiro)
+D 0 8310 2 2 	(Muitos Caminhos)
+M 0 8314 12 8336 	(a nativa sentinela)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+M 0 8314 12 8336 	(a nativa sentinela)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+M 0 8311 12 8337 	(um nativo com nobre feições)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+M 0 8312 7 8337 	(uma nativa com nobre feições)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+M 0 8313 12 8337 	(um pequeno nativo com nobre feições)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+D 0 8354 0 2 	(Diante de uma Caverna)
+M 0 8313 12 8338 	(um pequeno nativo com nobre feições)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+M 0 8314 2 8340 	(a nativa sentinela)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+M 0 8314 12 8340 	(a nativa sentinela)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+M 0 8315 1 8351 	(a Guerreira)
+M 0 8316 1 8351 	(a Maga)
+M 0 8317 1 8351 	(a Clériga)
+M 0 8318 1 8351 	(a Ladra)
+M 0 8319 1 8351 	(a Druidesa)
+R 0 8351 8313 -1 	(uma grande t�bua)
+O 1 8313 1 8351 	(uma grande t�bua)
+O 0 8310 1 8356 	(o Bast�o da Luz)
+M 0 8312 7 8352 	(uma nativa com nobre feições)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+M 0 8311 7 8352 	(um nativo com nobre feições)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+M 0 8311 7 8352 	(um nativo com nobre feições)
+E 1 8311 20 6 	(um ardelune met�lico)
+E 1 8312 20 5 	(uma draenan)
+M 0 8320 1 8353 	(a bruxa da aldeia)
 S
-$~
+$

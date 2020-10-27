@@ -1,60 +1,49 @@
 #133
 Vitalia~
 O Templo do Grande B煤falo~
-13300 13399 30 1 0 0 0 -1 -1
--1
-*
-D 0 13303 0 2          Close and lock temple door
-D 0 13305 2 2
-D 0 13314 1 2          Close and lock Mateon's door
-D 0 13315 3 2
-D 0 13321 3 2          Close and lock door to Taurus
-D 0 13320 1 2
-*
-M 0 13301 2 13303       Load shaggy monk to door
-G 1 13305 3            Give marble key to monk
-*
-M 0 13307 10 13305      Load acolytes on first floor
-M 0 13307 10 13307
-M 0 13307 10 13309
-M 0 13307 10 13311
-*
-M 0 13307 10 13316      Load acolytes on second floor
-E 1 13301 10 3         Equip acolyte cape
-M 0 13307 10 13318
-E 1 13301 10 3         Equip acolyte cape
-*
-M 0 13302 4 13304       Load statue
-E 1 13302 10 16        Equip statue sword
-M 0 13302 4 13306
-E 1 13302 10 16
-M 0 13302 4 13310
-E 1 13302 10 16
-M 0 13302 4 13312
-E 1 13302 10 16
-*
-M 0 13303 4 13319       Load templar of Mateus
-E 1 13306 10 17        equip templar key hold
-E 1 13303 10 16        equip templar staff wield
-E 1 13301 10 3         equip templar cape neck
-M 0 13303 4 13314       Load another to guard Mateus
-M 0 13303 4 13314       Load another to guard Mateus
-M 0 13303 4 13314       Load another to guard Mateus
-*
-M 0 13304 1 13314       Load Mateus
-E 1 13307 10 17        equip mateus key hold
-E 1 13303 10 16        equip mateus staff wield
-E 1 13301 10 3         equip mateus cape neck
-*
-M 0 13305 2 13320       Load chambermaid
-E 1 13304 10 17        equip maid mop hold
-*
-M 0 13306 1 13322       Load Taurus
-E 1 13308 10 1         equip taurus ring finger
-E 1 13310 10 12        equip taurus cloak about_body
-E 1 13311 10 6         equip taurus mask head
-E 1 13316 10 7         equip taurus leggings leg
-E 1 13317 20 14       equip taurus bracelet wrist
-*
+13300 13399 30 1 k 0 0 0 -1 -1
+D 0 13303 0 2 	(Sob o Grande Arco)
+D 0 13305 2 2 	(O Templo)
+D 0 13314 1 2 	(O Quarto de Mateon)
+D 0 13315 3 2 	(A Parte Superior do Templo)
+D 0 13321 3 2 	(O Quarto Sombrio)
+D 0 13320 1 2 	(O Quarto de Wabat)
+M 0 13301 2 13303 	(o Monge Shaggy)
+G 1 13305 3 -1 	(uma chave de m醨more)
+M 0 13307 10 13305 	(um ac贸lito)
+M 0 13307 10 13307 	(um ac贸lito)
+M 0 13307 10 13309 	(um ac贸lito)
+M 0 13307 10 13311 	(um ac贸lito)
+M 0 13307 10 13316 	(um ac贸lito)
+E 1 13301 10 3 	(uma capa de pele marrom)
+M 0 13307 10 13318 	(um ac贸lito)
+E 1 13301 10 3 	(uma capa de pele marrom)
+M 0 13302 4 13304 	(a Estatua de Prata)
+E 1 13302 10 16 	(uma espada monumental)
+M 0 13302 4 13306 	(a Estatua de Prata)
+E 1 13302 10 16 	(uma espada monumental)
+M 0 13302 4 13310 	(a Estatua de Prata)
+E 1 13302 10 16 	(uma espada monumental)
+M 0 13302 4 13312 	(a Estatua de Prata)
+E 1 13302 10 16 	(uma espada monumental)
+M 0 13303 4 13319 	(o templar de Mateon)
+E 1 13306 10 17 	(uma chave de carvalho)
+E 1 13303 10 16 	(um cajado polido)
+E 1 13301 10 3 	(uma capa de pele marrom)
+M 0 13303 4 13314 	(o templar de Mateon)
+M 0 13303 4 13314 	(o templar de Mateon)
+M 0 13303 4 13314 	(o templar de Mateon)
+M 0 13304 1 13314 	(o grande Cavaleiro Mateon)
+E 1 13307 10 17 	(uma chave de ferro)
+E 1 13303 10 16 	(um cajado polido)
+E 1 13301 10 3 	(uma capa de pele marrom)
+M 0 13305 2 13320 	(a arrumadeira)
+E 1 13304 10 17 	(uma vassoura de pelo molhada)
+M 0 13306 1 13322 	(Taurus)
+E 1 13308 10 1 	(um anel de taurus)
+E 1 13310 10 12 	(o grande manto de pele)
+E 1 13311 10 6 	(uma m醩cara dourada com chifres)
+E 1 13316 10 7 	(um par de perneiras marrons de pele)
+E 1 13317 20 14 	(um bracelete de chifre retorcido)
 S
-$~
+$

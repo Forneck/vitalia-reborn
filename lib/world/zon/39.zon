@@ -1,88 +1,88 @@
 #39
 Vitalia~
 O Abismo Profundo~
-3900 3999 120 2 b 0 0 0 -1 -1
--1
-O 0 3935 1 3998
-P 1 3952 1 3935
-M 0 3906 1 3950
-E 1 3904 1 10
-M 0 3908 1 3956
-E 1 3920 1 16
-E 1 3921 1 12
-E 1 3902 1 1
-M 1 3909 1 3956
-E 1 3926 1 16
-M 0 3919 1 3902
-E 1 3859 7 17     Card valik(3859) com valik(3919)
-E 1 3925 1 16
-M 0 3927 1 3952
-E 1 3915 1 3
-M 0 3907 1 3947
-E 1 3901 1 16
-D 0 3991 4 2
-D 0 3939 5 1
-M 0 3923 1 3999
-G 1 3912 1 -1
-M 0 3902 4 3914
-G 1 3908 1 -1
-E 1 3903 1 3
-O 0 3911 1 3914
-M 0 3928 1 3958
-E 1 3906 1 16
-E 1 3907 1 5
-M 0 3910 1 3903
-E 1 3914 1 3
-E 1 3900 1 16
-O 0 3933 1 3975
-M 0 3918 2 3917
-O 0 3950 1 3917
-M 0 3916 3 3923
-M 0 3916 3 3912
-M 0 3916 3 3919
-M 0 3917 2 3932
-M 0 3917 2 3941
-M 0 3925 2 3976
-E 1 3934 1 16
-M 0 3904 1 3959
-E 1 3930 1 11
-O 0 3913 1 3993
-M 0 3922 1 3993
-E 1 3937 1 16
-E 1 3932 1 2
-G 1 3936 1 -1
-M 0 3924 2 3993
-M 0 3926 1 3908
-M 0 3920 1 3994
-E 1 3931 5 12
-E 1 3823 1 17      Card Manto do Inverno(3823) com Damorask(3920)
-M 0 3913 1 3954
-E 1 3927 1 6
-E 1 3928 1 9
-M 0 3913 1 3954
-M 0 3913 1 3934
-M 0 3913 1 3942
-M 0 3913 1 3948
-E 1 3927 1 6
-E 1 3928 1 9
-M 0 3913 1 3948
-M 0 3913 1 3944
-E 1 3927 1 6
-E 1 3928 1 9
-M 0 3913 1 3944
-M 0 3905 1 3943
-E 1 3929 10 19
-M 0 3914 1 3970
-M 0 3918 1 3951
-M 0 3914 1 3971
-M 0 3914 1 3966
-M 0 3914 1 3964
-M 0 3912 1 3946
-E 1 3909 1 16
-E 1 3910 1 12
-M 0 3915 2 3920
-M 0 3915 2 3920
-M 0 3911 1 3957
-M 0 3921 1 3939
-M 0 3903 1 3960
+3900 3999 120 2 bk 0 0 0 -1 -1
+O 0 3935 1 3998 	(um baú de gelo)
+P 1 3952 1 3935 	(um amontoado de moedas de ouro)
+M 0 3906 1 3950 	(a praga negra)
+E 1 3904 1 10 	(os braçais das pragas)
+M 0 3908 1 3956 	(Demilich)
+E 1 3920 1 16 	(a lâmina demônio)
+E 1 3921 1 12 	(um longo manto negro)
+E 1 3902 1 1 	(o Anel da Escuridão)
+M 1 3909 1 3956 	(o cavaleiro da morte)
+E 1 3926 1 16 	(a espada dos anciões)
+M 0 3919 1 3902 	(Valik, o dragão zumbi)
+E 1 3859 7 17 	(o Card Valik)
+E 1 3925 1 16 	(as garras de Valik)
+M 0 3927 1 3952 	(uma hidra gigante)
+E 1 3915 1 3 	(o amuleto alma)
+M 0 3907 1 3947 	(a febre amarela)
+E 1 3901 1 16 	(a adaga da cólera)
+D 0 3991 4 2 	(O Centro da Ilha Congelada)
+D 0 3939 5 1 	(No Altar)
+M 0 3923 1 3999 	(uma besta da neve)
+G 1 3912 1 -1 	(uma chave de cristal)
+M 0 3902 4 3914 	(um efreeti gigante)
+G 1 3908 1 -1 	(uma chave flamejante)
+E 1 3903 1 3 	(um colar flamejante)
+O 0 3911 1 3914 	(uma grande placa)
+M 0 3928 1 3958 	(um feiticeiro de marfim)
+E 1 3906 1 16 	(uma espada de cristal)
+E 1 3907 1 5 	(uma armadura brilhante)
+M 0 3910 1 3903 	(Kalas)
+E 1 3914 1 3 	(um amuleto ancião)
+E 1 3900 1 16 	(a lâmina do Destino Eterno)
+O 0 3933 1 3975 	(o braço de um esqueleto)
+M 0 3918 2 3917 	(a Vrock)
+O 0 3950 1 3917 	(uma fonte)
+M 0 3916 3 3923 	(o Bael)
+M 0 3916 3 3912 	(o Bael)
+M 0 3916 3 3919 	(o Bael)
+M 0 3917 2 3932 	(um Svern)
+M 0 3917 2 3941 	(um Svern)
+M 0 3925 2 3976 	(um yeti de água)
+E 1 3934 1 16 	(um chicote com cinco cabeças de lagarto)
+M 0 3904 1 3959 	(uma traíra)
+E 1 3930 1 11 	(o escudo dos elementos)
+O 0 3913 1 3993 	(o Trono de Gelo)
+M 0 3922 1 3993 	(um monolito gigante)
+E 1 3937 1 16 	(uma estalactite de gelo)
+E 1 3932 1 2 	(o anel do gelo)
+G 1 3936 1 -1 	(uma chave de gelo)
+M 0 3924 2 3993 	(um pilar de gelo)
+M 0 3926 1 3908 	(uma Pseudo-Hidra vermelha)
+M 0 3920 1 3994 	(Damorask)
+E 1 3931 5 12 	(um manto de sangue)
+E 1 3823 1 17 	(o Card Manto do Inverno)
+M 0 3913 1 3954 	(a tempestade gigante)
+E 1 3927 1 6 	(o capacete da tempestade)
+E 1 3928 1 9 	(as manoplas do trovão)
+M 0 3913 1 3954 	(a tempestade gigante)
+M 0 3913 1 3934 	(a tempestade gigante)
+M 0 3913 1 3942 	(a tempestade gigante)
+M 0 3913 1 3948 	(a tempestade gigante)
+E 1 3927 1 6 	(o capacete da tempestade)
+E 1 3928 1 9 	(as manoplas do trovão)
+M 0 3913 1 3948 	(a tempestade gigante)
+M 0 3913 1 3944 	(a tempestade gigante)
+E 1 3927 1 6 	(o capacete da tempestade)
+E 1 3928 1 9 	(as manoplas do trovão)
+M 0 3913 1 3944 	(a tempestade gigante)
+M 0 3905 1 3943 	(morte vermelha)
+E 1 3929 10 19 	(um brinco de crânio com ossos cruzados)
+M 0 3914 1 3970 	(um pequeno escravo da caverna)
+M 0 3918 1 3951 	(a Vrock)
+M 0 3914 1 3971 	(um pequeno escravo da caverna)
+M 0 3914 1 3966 	(um pequeno escravo da caverna)
+M 0 3914 1 3964 	(um pequeno escravo da caverna)
+M 0 3912 1 3946 	(o Magistrado)
+E 1 3909 1 16 	(o martelo do Juiz)
+E 1 3910 1 12 	(as vestes de um juiz)
+M 0 3915 2 3920 	(Um zumbi guerreiro do Abismo)
+M 0 3915 2 3920 	(Um zumbi guerreiro do Abismo)
+M 0 3911 1 3957 	(o mímico)
+M 0 3921 1 3939 	(o mímico)
+M 0 3903 1 3960 	(a Venus Armadilha de Mosca)
 S
+$

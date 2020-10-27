@@ -1,346 +1,336 @@
 #54
 Vitalia~
 Nova Thalos~
-5400 5699 20 2 0 0 0 0 -1 -1
--1
-*
-* Created by Duke of SillyMud?
-*
-* Edited and modified for CircleMUD by Furry
-*
-* Mobiles
-M 0 5400 1 5548         Mage Guildmaster
-M 0 5401 1 5503         Cleric Guildmaster
-M 0 5402 1 5534         Warrior Guildmaster
-M 0 5403 1 5546         Thief Guildmaster
-M 0 5491 1 5676		Druid Guildmaster -- jr
-M 0 5404 1 5401         Receptionist
-M 0 5405 1 5402         Old Withered Mage/Bartender - Shopkeeper
-M 0 5406 1 5402         Brother John
-M 0 5407 1 5403         Panhandler
-M 0 5408 1 5404         Panhandler
-M 0 5409 20 5410        Beggar
-M 0 5410 1 5535         Baker - Shopkeeper
-M 0 5411 1 5528         Shopkeeper - Shopkeeper
-M 0 5412 1 5521         Banker
-M 0 5413 1 5514         Ahkeem The Tailor - Shopkeeper
-E 1 5483 999 16                 Sewing Shears
-M 0 5414 1 5515         Vera The Veggie Lady - Shopkeeper
-M 0 5415 1 5522         Butch The Meatcutter - Shopkeeper
-E 1 5484 888 16                 Meat Cleaver
-M 0 5416 1 5529         Abdul The Armorer - Shopkeeper
-M 0 5417 1 5536         Igor The Weaponsmith - Shopkeeper
-M 0 5418 1 5432         Cassandra - Shopkeeper
-M 0 5419 1 5425         Foreman
-E 1 5485 1 16                   Fountain Pen
-M 0 5420 2 5425         Construction Worker
-E 1 5486 2 16                   Sledge Hammer
-M 0 5420 2 5425         Construction Worker
-E 1 5486 2 16                   Sledge Hammer
-M 0 5421 1 5511         Statue Of Brahman
-M 0 5422 1 5511         Statue Of Siva
-M 0 5423 1 5511         Statue Of Indra
-M 0 5424 1 5511         Statue Of Yama
-M 0 5425 1 5516         Statue Of Surya
-M 0 5426 1 5516         Statue Of Kali
-M 0 5427 1 5516         Statue Of Brihaspati
-M 0 5428 1 5516         Statue Of Puchan
-M 0 5429 1 5466         Aziz
-M 0 5430 1 5466         Mustafah
-M 0 5431 1 5466         Fatima
-M 0 5432 1 5466         Kareem
-M 0 5433 12 5406        Nomad Merchant
-M 0 5433 12 5509        Nomad Merchant
-M 0 5433 12 5414        Nomad Merchant
-M 0 5433 12 5426        Nomad Merchant
-M 0 5433 12 5449        Nomad Merchant
-M 0 5433 12 5462        Nomad Merchant
-M 0 5434 4 5589         Sultan's Bodyguard
-M 0 5434 4 5589         Sultan's Bodyguard
-M 0 5434 4 5589         Sultan's Bodyguard
-M 0 5434 4 5589         Sultan's Bodyguard
-M 0 5435 3 5468         Skinny Kid
-M 0 5435 3 5468         Skinny Kid
-M 0 5435 3 5468         Skinny Kid
-M 0 5436 8 5433         Dockworker
-M 0 5436 8 5433         Dockworker
-M 0 5436 8 5433         Dockworker
-M 0 5436 8 5434         Dockworker
-M 0 5436 8 5434         Dockworker
-M 0 5436 8 5435         Dockworker
-M 0 5436 8 5443         Dockworker
-M 0 5436 8 5443         Dockworker
-M 0 5437 2 5406         Taxcollector
-G 1 5400 2 -1                    The Palace Key Of New Thalos
-M 0 5438 1 5415         Gord 
-M 0 5439 1 5405         Chulainn
-E 1 5492 1 16                   Gae Bolg
-E 1 5415 60 5                   Banded Mail
-M 0 5440 1 5406         Daghdha
-M 0 5441 1 5415         Curley GreenLeaf
-M 0 5442 21 5410        Wandering Prophet
-M 0 5442 21 5424        Wandering Prophet
-M 0 5442 21 5508        Wandering Prophet
-M 0 5442 21 5509        Wandering Prophet
-M 0 5442 21 5513        Wandering Prophet
-M 0 5442 21 5513        Wandering Prophet
-M 0 5442 21 5514        Wandering Prophet
-M 0 5442 21 5631        Wandering Prophet
-M 0 5442 21 5631        Wandering Prophet
-M 0 5443 14 5465        Alley Cat
-M 0 5443 14 5467        Alley Cat
-M 0 5443 14 5469        Alley Cat
-M 0 5443 14 5473        Alley Cat
-M 0 5443 14 5514        Alley Cat
-M 0 5443 14 5569        Alley Cat
-M 0 5443 14 5617        Alley Cat
-M 0 5444 24 5429        Vulture
-M 0 5444 24 5430        Vulture
-M 0 5444 24 5453        Vulture
-M 0 5444 24 5463        Vulture
-M 0 5444 24 5507        Vulture
-M 0 5444 24 5522        Vulture
-M 0 5444 24 5523        Vulture
-M 0 5444 24 5524        Vulture
-M 0 5444 24 5532        Vulture
-M 0 5444 24 5549        Vulture
-M 0 5444 24 5555        Vulture
-M 0 5444 24 5567        Vulture
-M 0 5444 24 5568        Vulture
-M 0 5444 24 5692        Vulture
-M 0 5445 2 5455         Old Man
-E 1 5490 2 17                   Chessboard
-M 0 5445 2 5455         Old Man
-E 1 5490 2 17                   Chessboard
-M 0 5446 1 5551         Lugh The Librarian
-M 0 5447 1 5411         Dirt Devil
-M 0 5448 1 5411         Lamia
-M 0 5449 1 5411         Raggety Dervish
-M 0 5450 1 5589         Sultan
-M 0 5451 8 5587         Harem Girl
-M 0 5451 8 5587         Harem Girl
-M 0 5451 8 5587         Harem Girl
-M 0 5451 8 5587         Harem Girl
-M 0 5451 8 5587         Harem Girl
-M 0 5451 8 5587         Harem Girl
-M 0 5451 8 5587         Harem Girl
-M 0 5451 8 5587         Harem Girl
-M 0 5452 1 5591         Jailor
-G 1 5493 2 -1                     Jail Key
-M 0 5453 4 5587         Eunich
-M 0 5453 4 5587         Eunich
-M 0 5453 4 5587         Eunich
-M 0 5453 4 5587         Eunich
-M 0 5454 1 5587         Nichole, The Sultan's Favorite
-M 0 5455 1 5566         Allah
-E 1 5496 2 16                   The Wrath Of Allah
-M 0 5456 1 5525         Mage Guildguard
-M 0 5457 1 5512         Cleric Guildguard
-M 0 5458 1 5526         Warrior Guildguard
-M 0 5459 1 5532         Thief Guildguard
-M 0 5492 1 5673		Druid Guildguard -- jr
-M 0 5460 2 5561         Servant Boy
-M 0 5460 2 5561         Servant Boy
-M 0 5461 20 5412        Sultan's Guard
-E 1 5413 100 16                 Scimitar
-E 1 5417 53 5                   Suit Of Field Plate
-E 1 5421 52 11                  Splinted Shield
-M 0 5461 20 5418        Sultan's Guard
-E 1 5413 100 16                 Scimitar
-E 1 5417 43 5                   Suit Of Field Plate
-E 1 5421 42 11                  Splinted Shield
-M 0 5461 20 5419        Sultan's Guard
-E 1 5413 100 16                 Scimitar
-E 1 5417 43 5                   Suit Of Field Plate
-E 1 5421 42 11                  Splinted Shield
-M 0 5461 20 5420        Sultan's Guard
-E 1 5413 100 16                 Scimitar
-E 1 5417 43 5                   Suit Of Field Plate
-E 1 5421 42 11                  Splinted Shield
-M 0 5461 20 5444        Sultan's Guard
-M 0 5461 20 5445        Sultan's Guard
-M 0 5461 20 5446        Sultan's Guard
-M 0 5461 20 5447        Sultan's Guard
-M 0 5461 20 5572        Sultan's Guard
-M 0 5461 20 5581        Sultan's Guard
-M 0 5461 20 5582        Sultan's Guard
-M 0 5461 20 5588        Sultan's Guard
-M 0 5462 12 5413        Sultan's Guard
-E 1 5413 100 16                 Scimitar
-E 1 5417 53 5                   Suit Of Field Plate
-E 1 5421 72 11                  Splinted Shield
-M 0 5462 12 5413        Sultan's Guard
-E 1 5413 100 16                 Scimitar
-E 1 5417 53 5                   Suit Of Field Plate
-E 1 5421 42 11                  Splinted Shield
-M 0 5462 12 5422        Sultan's Guard
-E 1 5413 100 16                 Scimitar
-E 1 5417 43 5                   Suit Of Field Plate
-E 1 5421 42 11                  Splinted Shield
-M 0 5462 12 5422        Sultan's Guard
-E 1 5413 100 16                 Scimitar
-E 1 5417 43 5                   Suit Of Field Plate
-E 1 5421 42 11                  Splinted Shield
-M 0 5462 12 5423        Sultan's Guard
-E 1 5413 100 16                 Scimitar
-E 1 5417 43 5                   Suit Of Field Plate
-E 1 5421 42 11                  Splinted Shield
-M 0 5462 12 5423        Sultan's Guard
-E 1 5413 100 16                 Scimitar
-E 1 5417 43 5                   Suit Of Field Plate
-E 1 5421 42 11                  Splinted Shield
-M 0 5462 12 5431        Sultan's Guard
-E 1 5413 100 16                 Scimitar
-E 1 5417 43 5                   Suit Of Field Plate
-E 1 5421 42 11                  Splinted Shield
-M 0 5462 12 5431        Sultan's Guard
-E 1 5413 100 16                 Scimitar
-E 1 5417 43 5                   Suit Of Field Plate
-E 1 5421 42 11                  Splinted Shield
-M 0 5463 1 5406         Chief Sultan's Guard
-M 0 5464 1 5531         Mercenary
-M 0 5465 1 5542         Shipwright - Shopkeeper
-M 0 5466 1 5544         Blacksmith - Shopkeeper
-M 0 5467 6 5545         Horse
-M 0 5467 6 5545         Horse
-M 0 5467 6 5545         Horse
-M 0 5467 6 5545         Horse
-M 0 5467 6 5545         Horse
-M 0 5467 6 5545         Horse
-M 0 5468 8 5427         Tourist
-M 0 5468 8 5428         Tourist
-M 0 5469 1 5699         Ixitxachitl
-M 0 5470 1 5600         Cryohydra
-M 0 5471 1 5604         Minotaur Lizard
-M 0 5472 5 5599         Death Dog
-M 0 5472 5 5599         Death Dog
-M 0 5472 5 5599         Death Dog
-M 0 5472 5 5599         Death Dog
-M 0 5472 5 5599         Death Dog
-M 0 5473 1 5603         Spotted Lion
-M 0 5474 1 5598         Behir
-M 0 5475 1 5597         Chimera
-M 0 5476 1 5602         Couatl
-M 0 5477 1 5601         Giant Hornet
-M 0 5478 1 5583         Pegasus
-M 0 5479 1 5523         Elriva - Shopkeeper
-M 0 5480 1 5524         Braheem - Shopkeeper
-M 0 5481 1 5504         High Priest
-M 0 5482 15 5407        Royal Guard
-M 0 5482 15 5408        Royal Guard
-M 0 5482 15 5414        Royal Guard
-M 0 5482 15 5416        Royal Guard
-M 0 5482 15 5444        Royal Guard
-M 0 5482 15 5445        Royal Guard
-M 0 5482 15 5450        Royal Guard
-M 0 5482 15 5452        Royal Guard
-M 0 5483 1 5538         Patch The Bartender - Shopkeeper
-M 0 5484 1 5537         Stitch, The Leather Dude - Shopkeeper
-M 0 5485 1 5578         Gardener
-M 0 5486 1 5583         Nightmare
-M 0 5487 1 5596         Wolverine
-E 1 5495 1 16                   Wolverine Claw
-M 0 5488 1 5580         Mimic
-M 0 5489 1 5554         Mayor
-G 1 5401 2  -1                    Key To The City Of New Thalos
-M 0 5490 1 5561         Chef
-M 0 5494 1 5498		Postmaster
-M 0 5495 1 5499         guardiÔøΩ trovadora
-M 0 5496 1 5650         garÔøΩom
-M 0 5497 1 5677         mestra das trovas
-* Journal Seller
-M 0 5493 2 5406		Journal Seller
-M 0 5493 2 5410		Journal Seller
-* Objects
-R 0 5551 3099
-O 0 3099 10 5551	Mortal Bulletin Board
-R 0 5406 5402
-O 0 5402 2 5406         Large Central Fountain
-R 0 5521 3034
-O 0 3034 100 5521        ATM
-R 0 5499 3096
-O 0 3096 13 5499        Social Bulletin Board
-* Doors
-D 0 5413 2 2            The South Gate
-D 0 5411 0 2
-D 0 5422 0 2            The North Gate
-D 0 5567 2 2
-D 0 5423 3 2            The West Gate
-D 0 5569 1 2
-D 0 5431 1 2            The East Gate
-D 0 5568 3 2
-D 0 5444 2 2            Jail
-D 0 5553 0 2
-D 0 5459 5 1            Underground
-D 0 5475 4 1
-D 0 5470 5 1            Underground
-D 0 5478 4 1
-D 0 5474 5 1            Underground
-D 0 5481 4 1
-D 0 5483 3 1            Grating On River Ishtar
-D 0 5484 1 1
-D 0 5487 3 1            Grating On River Ishtar
-D 0 5623 1 1
-D 0 5491 4 1            Outside The Wall
-D 0 5503 1 1            Alley
-D 0 5517 2 1            Braheem's Magic Shop
-D 0 5530 1 1            The Thieves' Guild
-D 0 5532 3 1
-D 0 5534 1 1            Alley
-D 0 5546 2 1            Alley
-D 0 5675 2 1            Alley
-D 0 5558 3 2            The Palace Gate
-D 0 5550 1 2
-D 0 5563 2 1            The Kitchen
-D 0 5561 0 1
-D 0 5565 0 1            The Shrine Of Allah
-D 0 5566 2 1
-D 0 5572 2 1            Dining Hall
-D 0 5571 0 1
-D 0 5574 0 1            Entrance To The Dungeon
-D 0 5575 2 1
-D 0 5575 5 1            Jailer's Room
-D 0 5591 4 1
-D 0 5577 2 1            Guest Room
-D 0 5576 0 1
-D 0 5579 0 1            Art Exhibit
-D 0 5580 2 1
-D 0 5582 2 1            Guest Room
-D 0 5581 0 1
-D 0 5582 3 2            Harem
-D 0 5587 1 2
-D 0 5584 0 1            Guard Room
-D 0 5585 2 1
-D 0 5584 3 1            Throne Room
-D 0 5589 1 1
-D 0 5588 0 1            Throne Room
-D 0 5589 2 1
-D 0 5588 2 1            Harem
-D 0 5587 0 1
-D 0 5589 0 2            Treasury
-D 0 5590 2 2
-D 0 5591 1 1            Tunnel In The Dungeon
-D 0 5592 3 1            
-D 0 5592 0 2            Cell
-D 0 5597 2 2            
-D 0 5592 2 2            Cell
-D 0 5601 0 2            
-D 0 5593 0 2            Cell
-D 0 5598 2 2            
-D 0 5593 2 2            Cell
-D 0 5602 0 2            
-D 0 5594 0 2            Cell
-D 0 5599 2 2            
-D 0 5594 2 2            Cell
-D 0 5603 0 2            
-D 0 5595 0 2            Cell
-D 0 5600 2 2            
-D 0 5595 1 2            Secret Cell
-D 0 5596 3 2
-D 0 5595 2 2            Cell
-D 0 5604 0 2            
-D 0 5653 1 1            Boulder To River
-D 0 5698 3 1            Lair Of The Ixitxachitl
-D 0 5699 1 1            
+5400 5699 20 2 k 0 0 0 -1 -1
+M 0 5400 1 5548 	(o mestre da guilda dos magos)
+M 0 5401 1 5503 	(o mestre da guilda dos cl√©rigos)
+M 0 5402 1 5534 	(o mestre da guilda dos guerreiros)
+M 0 5403 1 5546 	(o mestre da guilda dos ladr√µes)
+M 0 5491 1 5676 	(o mestre da guilda dos druidas)
+M 0 5404 1 5401 	(a recepcionista)
+M 0 5405 1 5402 	(O velho caqu√©tico)
+M 0 5406 1 5402 	(Irm√£o John)
+M 0 5407 1 5403 	(o crente)
+M 0 5408 1 5404 	(o crente)
+M 0 5409 20 5410 	(o mendigo)
+M 0 5410 1 5535 	(o padeiro)
+M 0 5411 1 5528 	(o lojista)
+M 0 5412 1 5521 	(o banqueiro)
+M 0 5413 1 5514 	(Ahkeem o alfaiate)
+E 1 5483 999 16 	(uma tesoura de costura)
+M 0 5414 1 5515 	(Vera, a verdureira)
+M 0 5415 1 5522 	(Butch o a√ßougueiro)
+E 1 5484 888 16 	(um cutelo de carne)
+M 0 5416 1 5529 	(Abdul o vendedor de armaduras)
+M 0 5417 1 5536 	(Igor o armeiro)
+M 0 5418 1 5432 	(Cassandra)
+M 0 5419 1 5425 	(o capataz)
+E 1 5485 1 16 	(uma caneta-tinteiro)
+M 0 5420 2 5425 	(o trabalhador da constru√ß√£o)
+E 1 5486 2 16 	(uma marreta)
+M 0 5420 2 5425 	(o trabalhador da constru√ß√£o)
+E 1 5486 2 16 	(uma marreta)
+M 0 5421 1 5511 	(a est√°tua de Brahman)
+M 0 5422 1 5511 	(a est√°tua de Siva)
+M 0 5423 1 5511 	(a est√°tua de Indra)
+M 0 5424 1 5511 	(a est√°tua de Yama)
+M 0 5425 1 5516 	(a est√°tua de Surya)
+M 0 5426 1 5516 	(a est√°tua de Kali)
+M 0 5427 1 5516 	(a est√°tua de Brihaspati)
+M 0 5428 1 5516 	(a est√°tua de Puchan)
+M 0 5429 1 5466 	(Aziz)
+M 0 5430 1 5466 	(Mustafah)
+M 0 5431 1 5466 	(F√°tima)
+M 0 5432 1 5466 	(Kareem)
+M 0 5433 12 5406 	(o mercador n√¥made)
+M 0 5433 12 5509 	(o mercador n√¥made)
+M 0 5433 12 5414 	(o mercador n√¥made)
+M 0 5433 12 5426 	(o mercador n√¥made)
+M 0 5433 12 5449 	(o mercador n√¥made)
+M 0 5433 12 5462 	(o mercador n√¥made)
+M 0 5434 4 5589 	(O guarda-costa do Sult√£o)
+M 0 5434 4 5589 	(O guarda-costa do Sult√£o)
+M 0 5434 4 5589 	(O guarda-costa do Sult√£o)
+M 0 5434 4 5589 	(O guarda-costa do Sult√£o)
+M 0 5435 3 5468 	(Uma crian√ßa magra)
+M 0 5435 3 5468 	(Uma crian√ßa magra)
+M 0 5435 3 5468 	(Uma crian√ßa magra)
+M 0 5436 8 5433 	(o trabalhador das docas)
+M 0 5436 8 5433 	(o trabalhador das docas)
+M 0 5436 8 5433 	(o trabalhador das docas)
+M 0 5436 8 5434 	(o trabalhador das docas)
+M 0 5436 8 5434 	(o trabalhador das docas)
+M 0 5436 8 5435 	(o trabalhador das docas)
+M 0 5436 8 5443 	(o trabalhador das docas)
+M 0 5436 8 5443 	(o trabalhador das docas)
+M 0 5437 2 5406 	(o cobrador de impostos)
+G 1 5400 2 -1 	(as chaves do pal√°cio de Nova Thalos)
+M 0 5438 1 5415 	(Gord)
+M 0 5439 1 5405 	(Chulainn)
+E 1 5492 1 16 	(Gae Bolg)
+E 1 5415 60 5 	(uma armadura de elos)
+M 0 5440 1 5406 	(Daghdha)
+M 0 5441 1 5415 	(Curley Folhaverde)
+M 0 5442 21 5410 	(o profeta vagante)
+M 0 5442 21 5424 	(o profeta vagante)
+M 0 5442 21 5508 	(o profeta vagante)
+M 0 5442 21 5509 	(o profeta vagante)
+M 0 5442 21 5513 	(o profeta vagante)
+M 0 5442 21 5513 	(o profeta vagante)
+M 0 5442 21 5514 	(o profeta vagante)
+M 0 5442 21 5631 	(o profeta vagante)
+M 0 5442 21 5631 	(o profeta vagante)
+M 0 5443 14 5465 	(o gato de rua)
+M 0 5443 14 5467 	(o gato de rua)
+M 0 5443 14 5469 	(o gato de rua)
+M 0 5443 14 5473 	(o gato de rua)
+M 0 5443 14 5514 	(o gato de rua)
+M 0 5443 14 5569 	(o gato de rua)
+M 0 5443 14 5617 	(o gato de rua)
+M 0 5444 24 5429 	(o urubu)
+M 0 5444 24 5430 	(o urubu)
+M 0 5444 24 5453 	(o urubu)
+M 0 5444 24 5463 	(o urubu)
+M 0 5444 24 5507 	(o urubu)
+M 0 5444 24 5522 	(o urubu)
+M 0 5444 24 5523 	(o urubu)
+M 0 5444 24 5524 	(o urubu)
+M 0 5444 24 5532 	(o urubu)
+M 0 5444 24 5549 	(o urubu)
+M 0 5444 24 5555 	(o urubu)
+M 0 5444 24 5567 	(o urubu)
+M 0 5444 24 5568 	(o urubu)
+M 0 5444 24 5692 	(o urubu)
+M 0 5445 2 5455 	(o homem velho)
+E 1 5490 2 17 	(um tabuleiro de xadrez)
+M 0 5445 2 5455 	(o homem velho)
+E 1 5490 2 17 	(um tabuleiro de xadrez)
+M 0 5446 1 5551 	(Lugh, o Bibliotec√°rio)
+M 0 5447 1 5411 	(o dem√¥nio da sujeira)
+M 0 5448 1 5411 	(a l√¢mia)
+M 0 5449 1 5411 	(o dervixe esfarrapado)
+M 0 5450 1 5589 	(O Sult√£o)
+M 0 5451 8 5587 	(uma garota de har√©m)
+M 0 5451 8 5587 	(uma garota de har√©m)
+M 0 5451 8 5587 	(uma garota de har√©m)
+M 0 5451 8 5587 	(uma garota de har√©m)
+M 0 5451 8 5587 	(uma garota de har√©m)
+M 0 5451 8 5587 	(uma garota de har√©m)
+M 0 5451 8 5587 	(uma garota de har√©m)
+M 0 5451 8 5587 	(uma garota de har√©m)
+M 0 5452 1 5591 	(o carcereiro)
+G 1 5493 2 -1 	(a chave das celas)
+M 0 5453 4 5587 	(um eunuco)
+M 0 5453 4 5587 	(um eunuco)
+M 0 5453 4 5587 	(um eunuco)
+M 0 5453 4 5587 	(um eunuco)
+M 0 5454 1 5587 	(Nichole, a preferida do Sult√£o)
+M 0 5455 1 5566 	(Al√°)
+E 1 5496 2 16 	(a ira de Al√°)
+M 0 5456 1 5525 	(o guardi√£o da Guilda)
+M 0 5457 1 5512 	(o guardi√£o da Guilda)
+M 0 5458 1 5526 	(o guardi√£o da Guilda)
+M 0 5459 1 5532 	(o guardi√£o da Guilda)
+M 0 5492 1 5673 	(a guardi√£ da Guilda)
+M 0 5460 2 5561 	(o criado)
+M 0 5460 2 5561 	(o criado)
+M 0 5461 20 5412 	(o guarda do Sult√£o)
+E 1 5413 100 16 	(uma cimitarra)
+E 1 5417 53 5 	(uma armadura de placas lisas)
+E 1 5421 52 11 	(Um escudo de espinhos)
+M 0 5461 20 5418 	(o guarda do Sult√£o)
+E 1 5413 100 16 	(uma cimitarra)
+E 1 5417 43 5 	(uma armadura de placas lisas)
+E 1 5421 42 11 	(Um escudo de espinhos)
+M 0 5461 20 5419 	(o guarda do Sult√£o)
+E 1 5413 100 16 	(uma cimitarra)
+E 1 5417 43 5 	(uma armadura de placas lisas)
+E 1 5421 42 11 	(Um escudo de espinhos)
+M 0 5461 20 5420 	(o guarda do Sult√£o)
+E 1 5413 100 16 	(uma cimitarra)
+E 1 5417 43 5 	(uma armadura de placas lisas)
+E 1 5421 42 11 	(Um escudo de espinhos)
+M 0 5461 20 5444 	(o guarda do Sult√£o)
+M 0 5461 20 5445 	(o guarda do Sult√£o)
+M 0 5461 20 5446 	(o guarda do Sult√£o)
+M 0 5461 20 5447 	(o guarda do Sult√£o)
+M 0 5461 20 5572 	(o guarda do Sult√£o)
+M 0 5461 20 5581 	(o guarda do Sult√£o)
+M 0 5461 20 5582 	(o guarda do Sult√£o)
+M 0 5461 20 5588 	(o guarda do Sult√£o)
+M 0 5462 12 5413 	(o guarda do Sult√£o)
+E 1 5413 100 16 	(uma cimitarra)
+E 1 5417 53 5 	(uma armadura de placas lisas)
+E 1 5421 72 11 	(Um escudo de espinhos)
+M 0 5462 12 5413 	(o guarda do Sult√£o)
+E 1 5413 100 16 	(uma cimitarra)
+E 1 5417 53 5 	(uma armadura de placas lisas)
+E 1 5421 42 11 	(Um escudo de espinhos)
+M 0 5462 12 5422 	(o guarda do Sult√£o)
+E 1 5413 100 16 	(uma cimitarra)
+E 1 5417 43 5 	(uma armadura de placas lisas)
+E 1 5421 42 11 	(Um escudo de espinhos)
+M 0 5462 12 5422 	(o guarda do Sult√£o)
+E 1 5413 100 16 	(uma cimitarra)
+E 1 5417 43 5 	(uma armadura de placas lisas)
+E 1 5421 42 11 	(Um escudo de espinhos)
+M 0 5462 12 5423 	(o guarda do Sult√£o)
+E 1 5413 100 16 	(uma cimitarra)
+E 1 5417 43 5 	(uma armadura de placas lisas)
+E 1 5421 42 11 	(Um escudo de espinhos)
+M 0 5462 12 5423 	(o guarda do Sult√£o)
+E 1 5413 100 16 	(uma cimitarra)
+E 1 5417 43 5 	(uma armadura de placas lisas)
+E 1 5421 42 11 	(Um escudo de espinhos)
+M 0 5462 12 5431 	(o guarda do Sult√£o)
+E 1 5413 100 16 	(uma cimitarra)
+E 1 5417 43 5 	(uma armadura de placas lisas)
+E 1 5421 42 11 	(Um escudo de espinhos)
+M 0 5462 12 5431 	(o guarda do Sult√£o)
+E 1 5413 100 16 	(uma cimitarra)
+E 1 5417 43 5 	(uma armadura de placas lisas)
+E 1 5421 42 11 	(Um escudo de espinhos)
+M 0 5463 1 5406 	(o Chefe da Guarda)
+M 0 5464 1 5531 	(o mercen√°rio)
+M 0 5465 1 5542 	(o capit√£o)
+M 0 5466 1 5544 	(o ferreiro)
+M 0 5467 6 5545 	(o cavalo)
+M 0 5467 6 5545 	(o cavalo)
+M 0 5467 6 5545 	(o cavalo)
+M 0 5467 6 5545 	(o cavalo)
+M 0 5467 6 5545 	(o cavalo)
+M 0 5467 6 5545 	(o cavalo)
+M 0 5468 8 5427 	(o turista)
+M 0 5468 8 5428 	(o turista)
+M 0 5469 1 5699 	(o ixitxachitl)
+M 0 5470 1 5600 	(a cryohydra)
+M 0 5471 1 5604 	(o lagarto minotauro)
+M 0 5472 5 5599 	(o c√£o da morte)
+M 0 5472 5 5599 	(o c√£o da morte)
+M 0 5472 5 5599 	(o c√£o da morte)
+M 0 5472 5 5599 	(o c√£o da morte)
+M 0 5472 5 5599 	(o c√£o da morte)
+M 0 5473 1 5603 	(o le√£o manchado)
+M 0 5474 1 5598 	(a behir)
+M 0 5475 1 5597 	(a quimera)
+M 0 5476 1 5602 	(o couatl)
+M 0 5477 1 5601 	(o gigante chifrudo)
+M 0 5478 1 5583 	(o p√©gasus)
+M 0 5479 1 5523 	(Elriva)
+M 0 5480 1 5524 	(Braheem)
+M 0 5481 1 5504 	(o alto sacerdote)
+M 0 5482 15 5407 	(o Guarda Real)
+M 0 5482 15 5408 	(o Guarda Real)
+M 0 5482 15 5414 	(o Guarda Real)
+M 0 5482 15 5416 	(o Guarda Real)
+M 0 5482 15 5444 	(o Guarda Real)
+M 0 5482 15 5445 	(o Guarda Real)
+M 0 5482 15 5450 	(o Guarda Real)
+M 0 5482 15 5452 	(o Guarda Real)
+M 0 5483 1 5538 	(o gar√ßom)
+M 0 5484 1 5537 	(Stitch, o camarada do couro)
+M 0 5485 1 5578 	(o jardineiro)
+M 0 5486 1 5583 	(o pesadelo)
+M 0 5487 1 5596 	(o wolverine)
+E 1 5495 1 16 	(as garras de wolverine)
+M 0 5488 1 5580 	(o m√≠mico)
+M 0 5489 1 5554 	(o prefeito)
+G 1 5401 2 -1 	(a chave da cidade de Nova Thalos)
+M 0 5490 1 5561 	(o chefe)
+M 0 5494 1 5498 	(o agente postal)
+M 0 5495 1 5499 	(a trovadora guardi√£)
+M 0 5496 1 5650 	(o gar√ßom)
+M 0 5497 1 5677 	(a mestra de trovas)
+M 0 5493 2 5406 	(o vendedor de jornais)
+M 0 5493 2 5410 	(o vendedor de jornais)
+R 0 5551 3099 -1 	(um quadro de mensagens)
+O 0 3099 10 5551 	(um quadro de mensagens)
+R 0 5406 5402 -1 	(a grande fonte central)
+O 0 5402 2 5406 	(a grande fonte central)
+R 0 5521 3034 -1 	(um caixa autom√°tico)
+O 0 3034 100 5521 	(um caixa autom√°tico)
+R 0 5499 3096 -1 	(um quadro de mensagens sociais)
+O 0 3096 13 5499 	(um quadro de mensagens sociais)
+D 0 5413 2 2 	(Dentro do Port„o Sul de Nova Thalos)
+D 0 5411 0 2 	(Do Lado de Fora do Port„o Sul de Nova Thalos)
+D 0 5422 0 2 	(Dentro do Port„o Norte de Nova Thalos)
+D 0 5567 2 2 	(Do Lado De Fora Do Port„o Norte de Nova Thalos)
+D 0 5423 3 2 	(Dentro do Port„o Oeste de Nova Thalos)
+D 0 5569 1 2 	(Do Lado de Fora do Port„o Oeste de Nova Thalos)
+D 0 5431 1 2 	(Dentro do Port„o Oriental de Nova Thalos)
+D 0 5568 3 2 	(Do Lado de Fora do Port„o Leste de Nova Thalos)
+D 0 5444 2 2 	(O Casbah Ocidental)
+D 0 5553 0 2 	(A Pris„o)
+D 0 5459 5 1 	(Uma Ruela)
+D 0 5475 4 1 	(O Subterr‚neo)
+D 0 5470 5 1 	(Uma Ruela)
+D 0 5478 4 1 	(O Subterr‚neo)
+D 0 5474 5 1 	(Uma Ruela)
+D 0 5481 4 1 	(O Subterr‚neo)
+D 0 5483 3 1 	(O Rio Ishtar)
+D 0 5484 1 1 	(O Rio Ishtar)
+D 0 5487 3 1 	(O Rio Ishtar)
+D 0 5623 1 1 	(O Rio Ishtar)
+D 0 5491 4 1 	(Uma Passagem Escura)
+D 0 5503 1 1 	(O Santu·rio dos ClÈrigos)
+D 0 5517 2 1 	(A Base da Torre)
+D 0 5530 1 1 	(A Guilda dos Mercen·rios)
+D 0 5532 3 1 	(A Entrada Para a Guilda dos Ladrıes)
+D 0 5534 1 1 	(P·tio de Pr·tica e Torneio)
+D 0 5546 2 1 	(O P·tio Secreto)
+D 0 5675 2 1 	(Um Grande Sal„o)
+D 0 5558 3 2 	(Os Portıes do Pal·cio)
+D 0 5550 1 2 	(A Grande Entrada)
+D 0 5563 2 1 	(Um Corredor)
+D 0 5561 0 1 	(A Cozinha)
+D 0 5565 0 1 	(Um Corredor)
+D 0 5566 2 1 	(O Santu·rio de Al·)
+D 0 5572 2 1 	(Um Corredor)
+D 0 5571 0 1 	(O Grande Sagu„o de Jantar)
+D 0 5574 0 1 	(Um Corredor)
+D 0 5575 2 1 	(A Entrada para o CalabouÁo)
+D 0 5575 5 1 	(A Entrada para o CalabouÁo)
+D 0 5591 4 1 	(O Quarto do Carcereiro)
+D 0 5577 2 1 	(Um Corredor)
+D 0 5576 0 1 	(O Quarto dos Convidados)
+D 0 5579 0 1 	(Um Corredor)
+D 0 5580 2 1 	(A ExposiÁ„o de Arte)
+D 0 5582 2 1 	(Um Corredor)
+D 0 5581 0 1 	(Um Quarto de Hospedes)
+D 0 5582 3 2 	(Um Corredor)
+D 0 5587 1 2 	(O HarÈm)
+D 0 5584 0 1 	(Um Corredor)
+D 0 5585 2 1 	(A Sala da Guarda)
+D 0 5584 3 1 	(Um Corredor)
+D 0 5589 1 1 	(A Sala do Trono)
+D 0 5588 0 1 	(Uma Pequena Sala)
+D 0 5589 2 1 	(A Sala do Trono)
+D 0 5588 2 1 	(Uma Pequena Sala)
+D 0 5587 0 1 	(O HarÈm)
+D 0 5589 0 2 	(A Sala do Trono)
+D 0 5590 2 2 	(A Sala Do Tesouro)
+D 0 5591 1 1 	(O Quarto do Carcereiro)
+D 0 5592 3 1 	(Um T˙nel no CalabouÁo)
+D 0 5592 0 2 	(Um T˙nel no CalabouÁo)
+D 0 5597 2 2 	(A Cela)
+D 0 5592 2 2 	(Um T˙nel no CalabouÁo)
+D 0 5601 0 2 	(A Cela)
+D 0 5593 0 2 	(Um T˙nel no CalabouÁo)
+D 0 5598 2 2 	(A Cela)
+D 0 5593 2 2 	(Um T˙nel no CalabouÁo)
+D 0 5602 0 2 	(A Cela)
+D 0 5594 0 2 	(Um T˙nel no CalabouÁo)
+D 0 5599 2 2 	(A Cela)
+D 0 5594 2 2 	(Um T˙nel no CalabouÁo)
+D 0 5603 0 2 	(A Cela)
+D 0 5595 0 2 	(Um T˙nel no CalabouÁo)
+D 0 5600 2 2 	(A Cela)
+D 0 5595 1 2 	(Um T˙nel no CalabouÁo)
+D 0 5596 3 2 	(A Cela Secreta)
+D 0 5595 2 2 	(Um T˙nel no CalabouÁo)
+D 0 5604 0 2 	(A Cela)
+D 0 5653 1 1 	(Nas Montanhas)
+D 0 5698 3 1 	(Embaixo da Doca)
+D 0 5699 1 1 	(A Toca de Ixitxachitl)
 S
 $

@@ -1,177 +1,168 @@
 #138
 Vitalia~
 O ArquipÃ©lago de Yo~
-13800 13999 135 1 bde 0 0 0 -1 -1
--1
-*
-* Colocar os Monstros
-*
-M 0 13800 1 13898   Colocar Bahamut no Trono do Deus dos Bons Dragï¿½es
-E 1 13800 20 16     Entregar o Chicote de Platina para Bahamut
-E 1 13844 20 0      Entregar a Estrela Polar para Bahamut
-G 1 13839 20        Entregar a Chave de Diamante para Bahamut
-M 0 13801 1 13864   Colocar o Filho de Bahamut no Topo da Montanha Rochosa
-E 1 13822 20 21     Entregar a Mï¿½scara de Platina ao Filho de Bahamut
-M 0 13802 1 13819   Colocar o Dragï¿½o de Cobre no Palï¿½cio dos Dragï¿½es de Cobre
-E 1 13808 20 3      Entregar um Amuleto vermelho Metï¿½lico ao Dragï¿½o de Cobre
-E 1 13809 20 16     Entregar um Tridente Metï¿½lico ao Dragï¿½o de Cobre
-M 0 13803 1 13814   Colocar o Dragï¿½o de Latï¿½o no Palï¿½cio dos Dragï¿½es de Latï¿½o
-E 1 13810 20 3      Entregar um Amuleto de Latï¿½o ao Dragï¿½o de Latï¿½o
-E 1 13811 20 11     Entregar um Escudo de Latï¿½o ao Dragï¿½o de Latï¿½o
-M 0 13804 1 13828   Colocar o Dragï¿½o de Pedra Ametista numa Cï¿½mara da Mina de Ametistas
-E 1 13818 20 5      Entregar uma Armadura de Ametistas ao Dragï¿½o de Pedra Ametista
-E 1 13819 20 7      Entregar um par de Perneiras de Ametistas ao Dragï¿½o de Pedra Ametista
-M 0 13805 1 13852   Colocar o Dragï¿½o de Pedra Safira numa Cï¿½mara da Mina de Safiras
-E 1 13816 20 5      Entregar uma Armadura de Safiras ao Dragï¿½o de Pedra Safira
-E 1 13817 20 19     Entregar um Brinco de Safira ao Dragï¿½o de Pedra Safira
-M 0 13806 1 13836   Colocar o Dragï¿½o de Pedra Esmeralda numa Cï¿½mara da Mina de Esmeraldas
-E 1 13812 20 5      Entregar uma Armadura de Esmeraldas ao Dragï¿½o de Pedra Esmeralda
-E 1 13813 20 1      Entregar um Anel de Esmeralda ao Dragï¿½o de Pedra Esmeralda
-M 0 13807 1 13860   Colocar o Dragï¿½o de Pedra Topï¿½zio numa Cï¿½mara da Mina de Topï¿½zios
-E 1 13814 20 5      Entregar uma Armadura de Topï¿½zio ao Dragï¿½o de Pedra Topï¿½zio
-E 1 13815 20 1      Entregar um Anel de Topï¿½zio ao Dragï¿½o de Pedra Topï¿½zio
-M 0 13808 1 13844   Colocar o Dragï¿½o de Cristal numa Cï¿½mara da Mina de Cristal
-E 1 13820 20 5      Entregar uma Armadura de Cristal ao Dragï¿½o de Cristal
-E 1 13821 20 16     Entregar um Punhal de Cristal ao Dragï¿½o de Cristal
-C 0 13881 13809 -1     Verificar a presenï¿½a do Guardiï¿½o do Reino dos Cï¿½us
-M 1 13809 7 13881   Colocar um Guardiï¿½o do Reino dos Cï¿½us no Salï¿½o do Castelo de Bahamut
-E 1 13801 20 11     Entregar um Escudo de PLatina ao Guardiï¿½o
-C 0 13883 13809 -1    Verificar a presenï¿½a do Guardiï¿½o do Reino dos Cï¿½us
-M 1 13809 7 13883   Colocar um Guardiï¿½o do Reino dos Cï¿½us no Salï¿½o do Castelo de Bahamut
-E 1 13802 20 16     Entregar uma Lanï¿½a de Platina ao Guardiï¿½o
-C 0 13884 13809 -1    Verificar a presenï¿½a do Guardiï¿½o do Reino dos Cï¿½us
-M 1 13809 7 13884   Colocar um Guardiï¿½o do Reino dos Cï¿½us no Salï¿½o do Castelo de Bahamut
-E 1 13803 20 16     Entregar uma Foice de Platina ao Guardiï¿½o
-C 0 13893 13809 -1    Verificar a presenï¿½a do Guardiï¿½o do Reino dos Cï¿½us
-M 1 13809 7 13893   Colocar um Guardiï¿½o do Reino dos Cï¿½us no Salï¿½o do Castelo de Bahamut
-E 1 13804 20 21     Entregar uma Mï¿½scara Dourada ao Guardiï¿½o
-C 0 13894 13809 -1    Verificar a presenï¿½a do Guardiï¿½o do Reino dos Cï¿½us
-M 1 13809 7 13894   Colocar um Guardiï¿½o do Reino dos Cï¿½us no Salï¿½o do Castelo de Bahamut
-E 1 13805 20 5      Entregar a Armadura dos Dragï¿½es de Yo ao Guardiï¿½o
-C 0 13896 13809 -1    Verificar a presenï¿½a do Guardiï¿½o do Reino dos Cï¿½us
-M 1 13809 7 13896   Colocar um Guardiï¿½o do Reino dos Cï¿½us no Salï¿½o do Castelo de Bahamut
-G 1 13806 20        Entregar um Celestial Par de Asas
-C 0 13897 13809 -1    Verificar a presenï¿½a do Guardiï¿½o do Reino dos Cï¿½us
-M 1 13809 7 13897   Colocar um Guardiï¿½o do Reino dos Cï¿½us no Salï¿½o do Castelo de Bahamut
-E 1 13807 20 13     Entregar a Bainha de Diamante ao Guardiï¿½o
-M 0 13810 1 13870   Colocar um Dragï¿½o Aquï¿½tico no Fundo do Lago Brilhante
-E 1 13823 20 22     Entregar um Espinho Azul ao Dragï¿½o Aquï¿½tico
-M 0 13812 5 13828   Colocar um Filhote de Dragï¿½o na Mina de Ametistas
-M 0 13812 5 13852   Colocar um Filhote de Dragï¿½o na Mina de Safiras
-M 0 13812 5 13836   Colocar um Filhote de Dragï¿½o na Mina de Esmeraldas
-M 0 13812 5 13860   Colocar um Filhote de Dragï¿½o na Mina de Topï¿½zios
-M 0 13812 5 13844   Colocar um Filhote de Dragï¿½o na Mina de Cristal
-M 0 13813 1 13915   Colocar Chronepsis no Conselho dos Wyrms
-E 1 13845 20 17     Entregar a Harpa de Prata de Chronepsis
-M 0 13814 1 13916   Colocar Aasterinian no Conselho dos Wyrms
-E 1 13848 20 0      Entregar a Estrela Vï¿½sper para Aasterinian
-M 0 13815 1 13909   Colocar Faluzure nas Profundezas de Yo
-E 1 13847 20 21     Entregar um Crï¿½nio de Dragï¿½o a Faluzure
-M 0 13816 1 13910   Colocar um Dragï¿½o de Diamante Vermelho numa Colina Verde
-E 1 13856 20 10     Entregar um Par de Braï¿½adeiras de Diamantes Vermelhos ao Dragï¿½o
-M 0 13817 1 13885   Colocar um Dragï¿½o das Profundezas na Cela dos Amaldiï¿½oados
-E 1 13857 20 17     Entregar uma Coluna Vertebral ao Dragï¿½o das Profundezas
-M 0 13818 1 13906   Colocar um Dragï¿½o das Sombras na Caverna Maldita
-M 0 13819 1 13921   Colocar Yo na Celestial Estrela de Yo
-G 1 13846 20        Entregar o Cetro de Cinco Cabeï¿½as para Yo
-E 1 13850 10 0      Entregar a Estrela com Nove Pontas para Yo
-M 0 13820 1 13902   Colocar uma Horda de Dracoliches na Caverna Maldita
-M 0 13821 6 13801   Colocar um Pï¿½ssaro na Floresta dos Dragï¿½es
-M 0 13821 6 13804   Colocar um Pï¿½ssaro na Floresta dos Dragï¿½es
-M 0 13821 6 13806   Colocar um Pï¿½ssaro na Floresta dos Dragï¿½es
-M 0 13821 6 13862   Colocar um Pï¿½ssaro numa Colina Verde
-M 0 13821 6 13867   Colocar um Pï¿½ssaro numa Colina Verde
-M 0 13821 6 13875   Colocar um Pï¿½ssaro numa Colina Verde
-*
-* Colocar os Objetos
-*
-R 0 13800 13824     Retirar uma Monumental Estatua de Pedra
-O 0 13824 1 13800   Carregar uma Nova Monumental Estatua de Pedra
-R 0 13801 13825     Retirar uma Monumental Estatua de Pedra
-O 0 13825 1 13801   Carregar uma Nova Monumental Estatua de Pedra
-R 0 13814 13826     Retirar uma Fonte de Latï¿½o
-O 0 13826 1 13814   Carregar uma Nova Fonte de Latï¿½o
-R 0 13819 13827     Retirar uma Fonte de Cobre
-O 0 13827 1 13819   Carregar uma Nova Fonte de Cobre
-R 0 13828 13828     Retirar um Ninho de Dragï¿½o
-O 0 13828 5 13828   Carregar um Novo Ninho de Dragï¿½o
-P 1 13855 8 13828   Colocar um Ovo dentro do Ninho
-P 1 13855 8 13828   Colocar um Ovo dentro do Ninho
-R 0 13836 13828     Retirar um Ninho de Dragï¿½o
-O 0 13828 5 13836   Carregar um Novo Ninho de Dragï¿½o
-P 1 13855 8 13828   Colocar um Ovo dentro do Ninho
-P 1 13855 8 13828   Colocar um Ovo dentro do Ninho
-R 0 13851 13828     Retirar um Ninho de Dragï¿½o
-O 0 13828 5 13851   Carregar um Novo Ninho de Dragï¿½o
-P 1 13855 8 13828   Colocar um Ovo dentro do Ninho
-P 1 13855 8 13828   Colocar um Ovo dentro do Ninho
-R 0 13860 13828     Retirar um Ninho de Dragï¿½o
-O 0 13828 5 13860   Carregar um Novo Ninho de Dragï¿½o
-P 1 13855 8 13828   Colocar um Ovo dentro do Ninho
-P 1 13855 8 13828   Colocar um Ovo dentro do Ninho
-R 0 13842 13829     Retirar uma Fonte Cristal
-O 0 13829 1 13842   Carregar uma Nova Fonte de Cristal
-R 0 13852 13830     Retirar uma Monumental Pedra Safira
-O 0 13830 1 13852   Carregar uma Nova Monumental pedra Safira
-R 0 13851 13831     Retirar uma Fonte de Safira
-O 0 13831 1 13851   Carregar uma Nova Fonte de Safira
-R 0 13859 13832     Retirar uma Estatua de Topï¿½zio
-O 0 13832 1 13859   Carregar uma Nova Estatua de Topï¿½zio
-R 0 13860 13833     Retirar uma Fonte de Topï¿½zio
-O 0 13833 1 13860   Carregar uma Nova Fonte de Topï¿½zio
-R 0 13873 13834     Retirar um Monï¿½lito Colorido   
-O 0 13834 1 13873   Carregar um Novo Monï¿½lito Colorido
-R 0 13875 13835     Retirar um Monï¿½lito Metï¿½lico
-O 0 13835 1 13875   Carregar um Novo Monï¿½lito Metï¿½lico
-R 0 13874 13836     Retirar um Monï¿½lito Dourado
-O 0 13836 1 13874   Carregar um Novo Monï¿½lito Dourado
-R 0 13880 13838     Retirar uma Estatua dos Dragï¿½es
-O 0 13838 2 13880   Carregar uma Nova Estatua dos Dragï¿½es
-R 0 13882 13838     Retirar uma Estatua dos Dragï¿½es
-O 0 13838 2 13882   Carregar uma Nova Estatua dos Dragï¿½es
-R 0 13893 13837     Retirar uma Estatua dos Deuses e dos Dragï¿½es
-O 0 13837 4 13893   Carregar uma Nova Estatua dos Deuses e dos Dragï¿½es
-R 0 13894 13837     Retirar uma Estatua dos Deuses e dos Dragï¿½es
-O 0 13837 4 13894   Carregar uma Nova Estatua dos Deuses e dos Dragï¿½es
-R 0 13896 13837     Retirar uma Estatua dos Deuses e dos Dragï¿½es
-O 0 13837 4 13896   Carregar uma Nova Estatua dos Deuses e dos Dragï¿½es
-R 0 13897 13837     Retirar uma Estatua dos Deuses e dos Dragï¿½es
-O 0 13837 4 13897   Carregar uma Nova Estatua dos Deuses e dos Dragï¿½es
-R 0 13893 13840     Retirar um Quadro da Parede
-O 0 13840 1 13893   Carregar um Novo Quadro na Parede
-R 0 13894 13841     Retirar um Quadro da Parede
-O 0 13841 1 13894   Carregar um Novo Quadro na Parede
-R 0 13896 13842     Retirar um Quadro da Parede
-O 0 13842 1 13896   Carregar um Novo Quadro na Parede
-R 0 13897 13843     Retirar um Quadro da Parede
-O 0 13843 1 13897   Carregar um Novo Quadro na Parede
-R 0 13901 13849     Retirar uma Carniï¿½a
-O 0 13849 3 13901   Carregar uma Nova Carniï¿½a
-R 0 13904 13849     Retirar uma Carniï¿½a
-O 0 13849 3 13904   Carregar uma Nova Carniï¿½a
-R 0 13907 13849     Retirar uma Carniï¿½a
-O 0 13849 3 13907   Carregar uma Nova Carniï¿½a
-R 0 13913 13851     Retirar uma Esfera de Fogo
-O 0 13851 1 13913   Carregar uma Esfera de Fogo
-R 0 13914 13852     Retirar uma Esfera de Fogo
-O 0 13852 1 13914   Carregar uma Esfera de Fogo
-R 0 13918 13853     Retirar um Magnï¿½fico Portal 
-O 0 13853 1 13918   Carregar um Novo Magnï¿½fico Portal
-R 0 13919 13854     Retirar um Magnï¿½fico Portal 
-O 0 13854 1 13919   Carregar um Novo Magnï¿½fico Portal
-*
-* Ajustar as Portas
-*
-D 0 13872 6 1      Fechar a Cascata (Lado de Fora)
-D 0 13873 8 1      Fechar a Cascata (Lado de Dentro)
-D 0 13879 0 1      Fechar o Portï¿½o de Madeira (Lado de Fora)
-D 0 13881 2 1      Fechar o Portï¿½o de Madeira (Lado de Dentro)
-D 0 13885 6 2      Fechar e Trancar a Cela dos Amaldiï¿½oados (Lado de Dentro)
-D 0 13888 8 2      Fechar e Trancar a Cela dos Amaldiï¿½oados (Lado de Fora)
-D 0 13885 7 2      Fechar e Trancar a Cela dos Amaldiï¿½oados (Lado de Dentro)
-D 0 13888 8 2      Fechar e Trancar a Cela dos Amaldiï¿½oados (Lado de Fora)
-D 0 13885 8 2      Fechar e Trancar a Cela dos Amaldiï¿½oados (Lado de Dentro)
-D 0 13885 6 2      Fechar e Trancar a Cela dos Amaldiï¿½oados (Lado de Fora)
-D 0 13885 9 2      Fechar e Trancar a Cela dos Amaldiï¿½oados (Lado de Dentro)
-D 0 13887 7 2      Fechar e Trancar a Cela dos Amaldiï¿½oados (Lado de Fora)
+13800 13999 135 1 bdek 0 0 0 -1 -1
+M 0 13800 1 13898 	(Bahamut)
+E 1 13800 20 16 	(um magnífico chicote de platina)
+E 1 13844 20 0 	(a Estrela Polar sobre a Via Láctea)
+G 1 13839 20 -1 	(uma enorme chave de diamante)
+M 0 13801 1 13864 	(o magnÃ­fico dragÃ£o negro de platina)
+E 1 13822 20 21 	(uma máscara de platina)
+M 0 13802 1 13819 	(um gigantesco dragÃ£o de cobre)
+E 1 13808 20 3 	(um belo amuleto vermelho)
+E 1 13809 20 16 	(um belo tridente metálico)
+M 0 13803 1 13814 	(um enorme dragÃ£o de latÃ£o)
+E 1 13810 20 3 	(um amuleto de latão)
+E 1 13811 20 11 	(um escudo de latão)
+M 0 13804 1 13828 	(um majestoso dragÃ£o de pedra ametista)
+E 1 13818 20 5 	(uma maravilhosa armadura de ametistas)
+E 1 13819 20 7 	(um par de perneiras de ametistas)
+M 0 13805 1 13852 	(um magnÃ­fico dragÃ£o de pedra safira)
+E 1 13816 20 5 	(uma majestosa armadura de safiras)
+E 1 13817 20 19 	(um belo brinco de safira)
+M 0 13806 1 13836 	(um belo dragÃ£o de pedra esmeralda)
+E 1 13812 20 5 	(uma magnífica armadura de esmeraldas)
+E 1 13813 20 1 	(um anel de esmeralda)
+M 0 13807 1 13860 	(um imponente dragÃ£o de pedra topÃ¡zio)
+E 1 13814 20 5 	(uma poderosa armadura de topázios)
+E 1 13815 20 1 	(um anel de topázio)
+M 0 13808 1 13844 	(um sublime dragÃ£o de cristal)
+E 1 13820 20 5 	(uma sublime armadura de cristal)
+E 1 13821 20 16 	(um magnífico punhal de cristal)
+C 0 13881 13809 -1 	(um magnÃ­fico guardiÃ£o do reino do cÃ©u)
+M 1 13809 7 13881 	(um magnÃ­fico guardiÃ£o do reino do cÃ©u)
+E 1 13801 20 11 	(o indestrutível escudo de Bahamut)
+C 0 13883 13809 -1 	(um magnÃ­fico guardiÃ£o do reino do cÃ©u)
+M 1 13809 7 13883 	(um magnÃ­fico guardiÃ£o do reino do cÃ©u)
+E 1 13802 20 16 	(a lança de Bahamut)
+C 0 13884 13809 -1 	(um magnÃ­fico guardiÃ£o do reino do cÃ©u)
+M 1 13809 7 13884 	(um magnÃ­fico guardiÃ£o do reino do cÃ©u)
+E 1 13803 20 16 	(a foice de Bahamut)
+C 0 13893 13809 -1 	(um magnÃ­fico guardiÃ£o do reino do cÃ©u)
+M 1 13809 7 13893 	(um magnÃ­fico guardiÃ£o do reino do cÃ©u)
+E 1 13804 20 21 	(uma máscara dourada)
+C 0 13894 13809 -1 	(um magnÃ­fico guardiÃ£o do reino do cÃ©u)
+M 1 13809 7 13894 	(um magnÃ­fico guardiÃ£o do reino do cÃ©u)
+E 1 13805 20 5 	(a armadura dos dragões de Yo)
+C 0 13896 13809 -1 	(um magnÃ­fico guardiÃ£o do reino do cÃ©u)
+M 1 13809 7 13896 	(um magnÃ­fico guardiÃ£o do reino do cÃ©u)
+G 1 13806 20 -1 	(um celestial par de asas)
+C 0 13897 13809 -1 	(um magnÃ­fico guardiÃ£o do reino do cÃ©u)
+M 1 13809 7 13897 	(um magnÃ­fico guardiÃ£o do reino do cÃ©u)
+E 1 13807 20 13 	(a bainha de diamante dos dragões de Yo)
+M 0 13810 1 13870 	(um impetuoso dragÃ£o aquÃ¡tico)
+E 1 13823 20 22 	(um pequeno espinho azul)
+M 0 13812 5 13828 	(um filhote de dragÃ£o)
+M 0 13812 5 13852 	(um filhote de dragÃ£o)
+M 0 13812 5 13836 	(um filhote de dragÃ£o)
+M 0 13812 5 13860 	(um filhote de dragÃ£o)
+M 0 13812 5 13844 	(um filhote de dragÃ£o)
+M 0 13813 1 13915 	(Chronepsis)
+E 1 13845 20 17 	(a harpa de prata de Chronepsis)
+M 0 13814 1 13916 	(Aasterinian)
+E 1 13848 20 0 	(a Estrela Vésper)
+M 0 13815 1 13909 	(Faluzure)
+E 1 13847 20 21 	(a abominável máscara de Faluzure)
+M 0 13816 1 13910 	(um magnÃ­fico dragÃ£o de diamante vermelho)
+E 1 13856 20 10 	(um magnífico par de braçadeiras de diamantes vermelhos)
+M 0 13817 1 13885 	(um dragÃ£o das profundezas)
+E 1 13857 20 17 	(uma coluna vertebral humana)
+M 0 13818 1 13906 	(um dragÃ£o das sombras)
+M 0 13819 1 13921 	(Yo)
+G 1 13846 20 -1 	(o magnífico cetro de cinco cabeças)
+E 1 13850 10 0 	(a estrela de nove pontas de Yo)
+M 0 13820 1 13902 	(uma assustadora horda de dracoliches)
+M 0 13821 6 13801 	(um lindo pÃ¡ssaro)
+M 0 13821 6 13804 	(um lindo pÃ¡ssaro)
+M 0 13821 6 13806 	(um lindo pÃ¡ssaro)
+M 0 13821 6 13862 	(um lindo pÃ¡ssaro)
+M 0 13821 6 13867 	(um lindo pÃ¡ssaro)
+M 0 13821 6 13875 	(um lindo pÃ¡ssaro)
+R 0 13800 13824 -1 	(uma monumental estatua de pedra)
+O 0 13824 1 13800 	(uma monumental estatua de pedra)
+R 0 13801 13825 -1 	(uma monumental estatua de pedra)
+O 0 13825 1 13801 	(uma monumental estatua de pedra)
+R 0 13814 13826 -1 	(uma fonte de latão)
+O 0 13826 1 13814 	(uma fonte de latão)
+R 0 13819 13827 -1 	(uma fonte de cobre)
+O 0 13827 1 13819 	(uma fonte de cobre)
+R 0 13828 13828 -1 	(vários ninhos de dragões)
+O 0 13828 5 13828 	(vários ninhos de dragões)
+P 1 13855 8 13828 	(um ovo de dragão de pedra)
+P 1 13855 8 13828 	(um ovo de dragão de pedra)
+R 0 13836 13828 -1 	(vários ninhos de dragões)
+O 0 13828 5 13836 	(vários ninhos de dragões)
+P 1 13855 8 13828 	(um ovo de dragão de pedra)
+P 1 13855 8 13828 	(um ovo de dragão de pedra)
+R 0 13851 13828 -1 	(vários ninhos de dragões)
+O 0 13828 5 13851 	(vários ninhos de dragões)
+P 1 13855 8 13828 	(um ovo de dragão de pedra)
+P 1 13855 8 13828 	(um ovo de dragão de pedra)
+R 0 13860 13828 -1 	(vários ninhos de dragões)
+O 0 13828 5 13860 	(vários ninhos de dragões)
+P 1 13855 8 13828 	(um ovo de dragão de pedra)
+P 1 13855 8 13828 	(um ovo de dragão de pedra)
+R 0 13842 13829 -1 	(uma fonte de cristal)
+O 0 13829 1 13842 	(uma fonte de cristal)
+R 0 13852 13830 -1 	(uma monumental pedra safira)
+O 0 13830 1 13852 	(uma monumental pedra safira)
+R 0 13851 13831 -1 	(uma fonte de safira)
+O 0 13831 1 13851 	(uma fonte de safira)
+R 0 13859 13832 -1 	(uma esplendorosa estatua de topázios)
+O 0 13832 1 13859 	(uma esplendorosa estatua de topázios)
+R 0 13860 13833 -1 	(uma fonte de topázio)
+O 0 13833 1 13860 	(uma fonte de topázio)
+R 0 13873 13834 -1 	(um magnífico monólito colorido)
+O 0 13834 1 13873 	(um magnífico monólito colorido)
+R 0 13875 13835 -1 	(um magnífico monólito metálico)
+O 0 13835 1 13875 	(um magnífico monólito metálico)
+R 0 13874 13836 -1 	(um maravilhoso monólito dourado)
+O 0 13836 1 13874 	(um maravilhoso monólito dourado)
+R 0 13880 13838 -1 	(algumas majestosas estatuas dos dragões)
+O 0 13838 2 13880 	(algumas majestosas estatuas dos dragões)
+R 0 13882 13838 -1 	(algumas majestosas estatuas dos dragões)
+O 0 13838 2 13882 	(algumas majestosas estatuas dos dragões)
+R 0 13893 13837 -1 	(várias estatuas dos deuses e dos dragões)
+O 0 13837 4 13893 	(várias estatuas dos deuses e dos dragões)
+R 0 13894 13837 -1 	(várias estatuas dos deuses e dos dragões)
+O 0 13837 4 13894 	(várias estatuas dos deuses e dos dragões)
+R 0 13896 13837 -1 	(várias estatuas dos deuses e dos dragões)
+O 0 13837 4 13896 	(várias estatuas dos deuses e dos dragões)
+R 0 13897 13837 -1 	(várias estatuas dos deuses e dos dragões)
+O 0 13837 4 13897 	(várias estatuas dos deuses e dos dragões)
+R 0 13893 13840 -1 	(um maravilhoso quadro)
+O 0 13840 1 13893 	(um maravilhoso quadro)
+R 0 13894 13841 -1 	(um maravilhoso quadro)
+O 0 13841 1 13894 	(um maravilhoso quadro)
+R 0 13896 13842 -1 	(um maravilhoso quadro)
+O 0 13842 1 13896 	(um maravilhoso quadro)
+R 0 13897 13843 -1 	(um maravilhoso quadro)
+O 0 13843 1 13897 	(um maravilhoso quadro)
+R 0 13901 13849 -1 	(um corpo em decomposição)
+O 0 13849 3 13901 	(um corpo em decomposição)
+R 0 13904 13849 -1 	(um corpo em decomposição)
+O 0 13849 3 13904 	(um corpo em decomposição)
+R 0 13907 13849 -1 	(um corpo em decomposição)
+O 0 13849 3 13907 	(um corpo em decomposição)
+R 0 13913 13851 -1 	(uma gigantesca esfera de fogo)
+O 0 13851 1 13913 	(uma gigantesca esfera de fogo)
+R 0 13914 13852 -1 	(uma gigantesca esfera de fogo)
+O 0 13852 1 13914 	(uma gigantesca esfera de fogo)
+R 0 13918 13853 -1 	(um magnífico portal)
+O 0 13853 1 13918 	(um magnífico portal)
+R 0 13919 13854 -1 	(um magnífico portal)
+O 0 13854 1 13919 	(um magnífico portal)
+D 0 13872 6 1 	(As Magníficas Cascatas dos Dragões)
+D 0 13873 8 1 	(Uma Enorme Pedra Colorida)
+D 0 13879 0 1 	(O Esplendoroso Castelo Flutuante de Bahamut)
+D 0 13881 2 1 	(O Monumental Salão do Castelo de Bahamut)
+D 0 13885 6 2 	(A Cela dos Amaldiçoados)
+D 0 13888 8 2 	(Entre os Monumentais Tronos e Estatuas do Tribunal de Bahamut)
+D 0 13885 7 2 	(A Cela dos Amaldiçoados)
+D 0 13888 8 2 	(Entre os Monumentais Tronos e Estatuas do Tribunal de Bahamut)
+D 0 13885 8 2 	(A Cela dos Amaldiçoados)
+D 0 13885 6 2 	(A Cela dos Amaldiçoados)
+D 0 13885 9 2 	(A Cela dos Amaldiçoados)
+D 0 13887 7 2 	(Entre os Monumentais Tronos e Estatuas do Tribunal de Bahamut)
 S
+$

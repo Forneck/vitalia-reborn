@@ -1,246 +1,190 @@
 #151
 Vitalia~
 O Templo Samurai~
-15100 15199 150 1 ab 0 0 0 -1 -1
--1
-M 0 15100 12 15103      Trainee
-E 1 15153 15 5           vest
-E 1 15119 15 16            weapon
-*
-M 0 15100 12 15104      Trainee
-E 1 15153 15 5           vest
-E 1 15119 15 16           weapon
-*
-M 0 15100 12 15105      Trainee
-E 1 15153 15 5           vest
-E 1 15119 15 16           weapon
-*
-M 0 15100 12 15106      Trainee
-E 1 15153 15 5           vest
-E 1 15119 15 16           weapon
-*
-M 0 15100 12 15107      Trainee
-E 1 15153 15 5           vest
-E 1 15119 15 16          weapon
-*
-M 0 15100 12 15108      Trainee
-E 1 15153 15 5           vest
-E 1 15119 15 16           weapon
-*
-M 0 15100 12 15109      Trainee
-E 1 15153 15 5           vest
-E 1 15119 15 16           weapon
-*
-M 0 15100 12 15110      Trainee
-E 1 15153 15 5           vest
-E 1 15119 15 16           weapon
-*
-M 0 15100 12 15127      Trainee
-E 1 15153 15 5           vest
-E 1 15119 15 16           weapon
-*
-M 0 15100 12 15128      Trainee
-E 1 15153 15 5           vest
-E 1 15119 15 16           weapon
-*
-M 0 15100 12 15129      Trainee
-E 1 15153 15 5           vest
-E 1 15119 15 16           weapon
-*
-M 0 15100 12 15130      Trainee
-E 1 15153 15 5           vest
-E 1 15119 15 16           weapon
-*
-M 0 15101 12 15111      Apprentice
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15101 12 15112      Apprentice
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15101 12 15113      Apprentice
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15101 12 15114      Apprentice
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15101 12 15115      Apprentice
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15101 12 15116      Apprentice
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15101 12 15117      Apprentice
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15101 12 15118      Apprentice
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15101 12 15131      Apprentice
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15101 12 15132      Apprentice
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15101 12 15133      Apprentice
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16         weapon
-*
-M 0 15101 12 15134      Apprentice
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15102 15 15119      Warrior
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15102 15 15120      Warrior
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15102 15 15121      Warrior
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15102 15 15122      Warrior
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15102 15 15123      Warrior
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15102 15 15124      Warrior
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15102 15 15125      Warrior
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15102 15 15126      Warrior
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15102 15 15127      Warrior
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15102 15 15128      Warrior
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15102 15 15129      Warrior
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15102 15 15130      Warrior
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15102 15 15131      Warrior
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15102 15 15132      Warrior
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15102 15 15133      Warrior
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15102 15 15134      Warrior
-E 1 15153 15 5           vest
-E 1 15163 15 10          bracer
-E 1 15112 15 16          weapon
-*
-M 0 15103 1 15106         Jin Shogun
-G 1 15101 15           amulet
-E 1 15115 10 16          weapon
-*
-M 0 15104 1 15110         Ei Shogun
-G 1 15102 15           amulet
-E 1 15116 10 16          weapon
-*
-M 0 15105 1 15114         Chu Shogun
-G 1 15103 15           amulet
-E 1 15114 10 16          weapon
-*
-M 0 15106 1 15118         Ko Shogun
-G 1 15104 15           amulet
-E 1 15118 10 16          weapon
-*
-M 0 15107 1 15122         Rei Shogun
-G 1 15105 15           amulet
-E 1 15117 10 16          weapon
-*
-M 0 15108 1 15126         Chi Shogun
-G 1 15106 15           amulet
-E 1 15120 10 16          weapon
-*
-M 0 15109 1 15130         Shin Shogun
-G 1 15107 15           amulet
-E 1 15121 10 16          weapon
-*
-M 0 15110 1 15134         Tei Shogun
-G 1 15108 15           amulet
-E 1 15122 10 16          weapon
-*
-M 0 15111 1 15135         Tokugawa
-E 1 15109 10 16          Fugu Blade
-E 1 15110 15 3          Jewel
-E 1 15111 15 4           Suun Lu
-*
-D 0 15106 4 2
-*
-D 0 15110 4 2
-*
-D 0 15114 4 2
-*
-D 0 15118 4 2
-*
-D 0 15122 4 2
-*
-D 0 15126 4 2
-*
-D 0 15130 4 2
-*
-D 0 15132 4 2
+15100 15199 150 1 abk 0 0 0 -1 -1
+M 0 15100 12 15103 	(Um discÃ­pulo Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15119 15 16 	(a espada Kodachi)
+M 0 15100 12 15104 	(Um discÃ­pulo Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15119 15 16 	(a espada Kodachi)
+M 0 15100 12 15105 	(Um discÃ­pulo Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15119 15 16 	(a espada Kodachi)
+M 0 15100 12 15106 	(Um discÃ­pulo Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15119 15 16 	(a espada Kodachi)
+M 0 15100 12 15107 	(Um discÃ­pulo Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15119 15 16 	(a espada Kodachi)
+M 0 15100 12 15108 	(Um discÃ­pulo Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15119 15 16 	(a espada Kodachi)
+M 0 15100 12 15109 	(Um discÃ­pulo Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15119 15 16 	(a espada Kodachi)
+M 0 15100 12 15110 	(Um discÃ­pulo Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15119 15 16 	(a espada Kodachi)
+M 0 15100 12 15127 	(Um discÃ­pulo Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15119 15 16 	(a espada Kodachi)
+M 0 15100 12 15128 	(Um discÃ­pulo Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15119 15 16 	(a espada Kodachi)
+M 0 15100 12 15129 	(Um discÃ­pulo Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15119 15 16 	(a espada Kodachi)
+M 0 15100 12 15130 	(Um discÃ­pulo Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15119 15 16 	(a espada Kodachi)
+M 0 15101 12 15111 	(Um aprendiz de Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15101 12 15112 	(Um aprendiz de Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15101 12 15113 	(Um aprendiz de Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15101 12 15114 	(Um aprendiz de Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15101 12 15115 	(Um aprendiz de Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15101 12 15116 	(Um aprendiz de Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15101 12 15117 	(Um aprendiz de Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15101 12 15118 	(Um aprendiz de Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15101 12 15131 	(Um aprendiz de Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15101 12 15132 	(Um aprendiz de Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15101 12 15133 	(Um aprendiz de Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15101 12 15134 	(Um aprendiz de Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15102 15 15119 	(Um Guerreiro Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15102 15 15120 	(Um Guerreiro Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15102 15 15121 	(Um Guerreiro Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15102 15 15122 	(Um Guerreiro Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15102 15 15123 	(Um Guerreiro Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15102 15 15124 	(Um Guerreiro Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15102 15 15125 	(Um Guerreiro Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15102 15 15126 	(Um Guerreiro Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15102 15 15127 	(Um Guerreiro Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15102 15 15128 	(Um Guerreiro Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15102 15 15129 	(Um Guerreiro Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15102 15 15130 	(Um Guerreiro Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15102 15 15131 	(Um Guerreiro Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15102 15 15132 	(Um Guerreiro Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15102 15 15133 	(Um Guerreiro Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15102 15 15134 	(Um Guerreiro Samurai)
+E 1 15153 15 5 	(Uma túnica samurai)
+E 1 15163 15 10 	(Uma braçadeira samurai)
+E 1 15112 15 16 	(O Sabre Laroche)
+M 0 15103 1 15106 	(O Shogun da CompreensÃ£o)
+G 1 15101 15 -1 	(O Amuleto de Jin)
+E 1 15115 10 16 	(a espada Azami)
+M 0 15104 1 15110 	(O Shogum da Ã‰tica)
+G 1 15102 15 -1 	(O Amuleto de Gi)
+E 1 15116 10 16 	(a espada Katana)
+M 0 15105 1 15114 	(O Shogum da Lealdade)
+G 1 15103 15 -1 	(O Amuleto de Chu)
+E 1 15114 10 16 	(a espada Ninjato)
+M 0 15106 1 15118 	(O Shogum do Respeito)
+G 1 15104 15 -1 	(O Amuleto de Ko)
+E 1 15118 10 16 	(a espada Naginata)
+M 0 15107 1 15122 	(O Shogum da Autoridade)
+G 1 15105 15 -1 	(O Amuleto de Rei)
+E 1 15117 10 16 	(a espada Wakisashi)
+M 0 15108 1 15126 	(O Shogum do Conhecimento)
+G 1 15106 15 -1 	(O Amuleto de Chi)
+E 1 15120 10 16 	(O Kora)
+M 0 15109 1 15130 	(O Shogum da Verade)
+G 1 15107 15 -1 	(O Amuleto de Shin)
+E 1 15121 10 16 	(a espada Iaito)
+M 0 15110 1 15134 	(O Shogum do Caridade)
+G 1 15108 15 -1 	(O Amuleto de Tei)
+E 1 15122 10 16 	(O Mandarim Dau)
+M 0 15111 1 15135 	(Tokugawa Yoshikatsu)
+E 1 15109 10 16 	(Uma Lâmina Fugu)
+E 1 15110 15 3 	(a Jóia do Sol Nascente)
+E 1 15111 15 4 	(O Amuleto de Sun Lu)
+D 0 15106 4 2 	(Shogum Jin)
+D 0 15110 4 2 	(Shogum Gi)
+D 0 15114 4 2 	(Shogum Chu)
+D 0 15118 4 2 	(Shogum Ko)
+D 0 15122 4 2 	(Shogum Rei)
+D 0 15126 4 2 	(Shogum Chi)
+D 0 15130 4 2 	(Shogum Shin)
+D 0 15132 4 2 	(Shogum Tei)
 S
+$

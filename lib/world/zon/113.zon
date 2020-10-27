@@ -1,165 +1,156 @@
 #113
 Vitalia~
 Bhogavati, A Cidade das Jóias~
-11300 11399 120 1 ade 0 0 0 -1 -1
--1
-*
-*
-* Mobs
-M 0 11505 1 11306          Kurma, a tartaruga
-E 1 11520 1 17      a mil�sima p�tala
-M 0 11302 1 11315          Nihar
-E 1 11300 10 3      ins�gnia no pesco�o
-M 0 11303 1 11316          Anjali
-E 1 11301 16 3      ins�gnia no pesco�o
-M 0 11304 1 11319          Shashwat
-E 1 11301 16 3      ins�gnia no pesco�o
-M 0 11305 1 11318          Sapni
-E 1 11301 16 3      ins�gnia no pesco�o
-M 0 11306 1 11317          Pramsu
-E 1 11301 16 3      ins�gnia no pesco�o
-M 0 11307 1 11327          Mira
-M 0 11308 1 11326          Dhiraj
-M 0 11309 1 11325          Balraj
-M 0 11310 1 11324          Twashtri
-M 0 11311 1 11328          Hemadri
-M 0 11312 1 11354          Mishti
-M 0 11313 1 11355          Kshiraj
-M 0 11314 1 11355          grupo de yakshas b�bados
-M 0 11315 1 11355          gar�om
-E 1 11357 18 17     bandeja
-G 1 11357 18 -1     bandeja
-M 0 11316 1 11355          naga entediado
-E 1 11356 13 16     khatar prateado
-M 0 11317 1 11356          pisacha de ferro (dardos)
-E 1 11359 12 17     caixinha
-P 1 11358 27 11359  colocar dardo
-P 1 11358 27 11359  colocar dardo
-P 1 11358 27 11359  colocar dardo
-P 1 11358 27 11359  colocar dardo
-P 1 11358 27 11359  colocar dardo
-P 1 11358 27 11359  colocar dardo
-M 0 11318 1 11356          naga (dardos)
-E 1 11358 27 16     dardo
-M 0 11319 1 11356          rastreador
-E 1 11518 12 16     khatar de rastreador
-M 0 11320 1 11356          rakshasi
-E 1 11360 15 17     baralho
-E 1 11361 15 16     talwar de prata
-M 0 11321 1 11383          Senhor Kalidas
-M 0 11322 1 11347          Darshani
-M 0 11323 1 11349          Gaurang
-M 0 11324 1 11348          Nadish
-M 0 11325 1 11336          guia cl�rigos
-M 0 11326 1 11338          guia ladinos
-M 0 11328 1 11379          guia druidas
-M 0 11329 1 11340          guia guerreiros
-M 0 11330 1 11342          guia magos
-M 0 11331 1 11341          feiticeiro naga
-E 1 11362 18 16     khanda de ferro negro
-M 0 11332 1 11335          nagini templar
-E 1 11362 18 16     khanda de ferro negro
-M 0 11333 1 11337          assassina
-E 1 11362 18 16     khanda de ferro negro
-M 0 11334 1 11339          guerreira
-E 1 11362 18 16     khanda de ferro negro
-M 0 11335 1 11378          druida
-E 1 11362 18 16     khanda de ferro negro
-M 0 11336 4 11372          serpente de rubi
-G 1 11370 12 -1     ovo
-M 0 11336 4 11358          serpente de rubi
-G 1 11370 12 -1    ovo
-M 0 11336 4 11365          serpente de rubi
-G 1 11370 12 -1       ovo
-M 0 11336 4 11346          serpente de rubi
-G 1 11370 12 -1       ovo
-M 0 11337 3 11331          serpente de esmeralda
-G 1 11371 9 -1        escama
-M 0 11337 3 11329          serpente de esmeralda
-G 1 11371 9 -1        escama
-M 0 11337 3 11362          serpente de esmeralda
-G 1 11371 9 -1         escama
-M 0 11338 2 11322          tartaruga de opala
-G 1 11373 6 -1        casco
-M 0 11338 2 11374          tartaruga de opala
-G 1 11373 6 -1        casco
-M 0 11339 3 11344          lagarto de �nix
-G 1 11372 9 -1         folha dourada
-M 0 11339 3 11377          lagarto de �nix
-G 1 11372 9 -1         folha dourada
-M 0 11339 3 11334          lagarto de �nix
-G 1 11372 9 -1        folha dourada
-M 0 11340 2 11320          serpente de marfim
-G 1 11374 6 -1        escama de marfim e ouro
-M 0 11340 2 11368          serpente de marfim
-G 1 11374 6 -1        escama de marfim e ouro
-M 0 11341 6 11332          sentinela
-E 1 11363 10 16     urumi cravejada de safiras azuis
-M 0 11341 6 11369          sentinela
-E 1 11364 10 16     urumi cravejada de safiras verdes
-M 0 11341 6 11371          sentinela
-E 1 11365 10 16     urumi cravejada de safiras amarelas
-M 0 11341 6 11329          sentinela
-E 1 11363 10 16     urumi cravejada de safiras azuis
-M 0 11341 6 11371          sentinela
-E 1 11364 10 16     urumi cravejada de safiras verdes
-M 0 11341 6 11376          sentinela
-E 1 11365 10 16     urumi cravejada de safiras amarelas
-M 0 11342 6 11322          soldado
-E 1 11366 18 16     udaval de empunhadura de rubi
-E 1 11367 18 11     paricha coberto de rubis
-M 0 11342 6 11366          soldado
-E 1 11366 18 16     udaval de empunhadura de rubi
-E 1 11367 18 11     paricha coberto de rubis
-M 0 11342 6 11368          soldado
-E 1 11366 18 16     udaval de empunhadura de rubi
-E 1 11367 18 11     paricha coberto de rubis
-M 0 11342 6 11374          soldado
-E 1 11366 18 16     udaval de empunhadura de rubi
-E 1 11367 18 11     paricha coberto de rubis
-M 0 11342 6 11345          soldado
-E 1 11366 18 16     udaval de empunhadura de rubi
-E 1 11367 18 11     paricha coberto de rubis
-M 0 11342 6 11360          soldado
-E 1 11366 18 16     udaval de empunhadura de rubi
-E 1 11367 18 11     paricha coberto de rubis
-M 0 11343 4 11323          guardi�o
-E 1 11368 12 16     kuntham de prata naga
-E 1 11369 12 5      armadura de prata naga
-M 0 11343 4 11346          guardi�o
-E 1 11368 12 16     kuntham de prata naga
-E 1 11369 12 5      armadura de prata naga
-M 0 11343 4 11377          guardi�o
-E 1 11368 12 16     kuntham de prata naga
-E 1 11369 12 5      armadura de prata naga
-M 0 11343 4 11334          guardi�o
-E 1 11368 12 16     kuntham de prata naga
-E 1 11369 12 5      armadura de prata naga
-M 0 11300 1 11308          cardume de peixes de cristal
-M 0 11301 1 11310          serpente dourada
-M 0 11344 2 11387          kshatryia-vigia no p�tio/port�o
-E 1 11380 12 6      elmo dourado com engastes
-E 1 11381 12 10     bracelete de ouro e esmeraldas
-E 1 11382 12 16     khanda da divis�o ouro e esmeralda
-M 0 11344 2 11389          kshatryia-vigia no p�tio/port�o
-E 1 11380 12 6      elmo dourado com engastes
-E 1 11381 12 10     bracelete de ouro e esmeraldas
-E 1 11382 12 16     khanda da divis�o ouro e esmeralda
-*
-* Objetos
-R 0 11306 11510     o L�tus de Mil P�talas
-O 0 11510 1 11306
-P 1 11511 5 11510   Amrit�
-*
-* Portas
-D 0 11335 0 1
-D 0 11336 2 1
-D 0 11314 0 1
-D 0 11315 5 1
-D 0 11387 2 2
-D 0 11388 0 2
-D 0 11389 3 2
-D 0 11390 1 2
-*
+11300 11399 120 1 adek 0 0 0 -1 -1
+M 0 11505 1 11306 	(Kurma, a tartaruga)
+E 1 11520 1 17 	(a mil�sima p�tala)
+M 0 11302 1 11315 	(Nihar, o Sumo-Sacerdote)
+E 1 11300 10 3 	(a ins�gnia do Sumo-Sacerdote)
+M 0 11303 1 11316 	(Anjali, a sacerdotisa)
+E 1 11301 16 3 	(uma ins�gnia sacerdotal)
+M 0 11304 1 11319 	(Shashwat, o sacerdote)
+E 1 11301 16 3 	(uma ins�gnia sacerdotal)
+M 0 11305 1 11318 	(Sapni, a sacerdotisa)
+E 1 11301 16 3 	(uma ins�gnia sacerdotal)
+M 0 11306 1 11317 	(Pramsu, o sacerdote)
+E 1 11301 16 3 	(uma ins�gnia sacerdotal)
+M 0 11307 1 11327 	(Mira)
+M 0 11308 1 11326 	(Dhiraj)
+M 0 11309 1 11325 	(Balraj)
+M 0 11310 1 11324 	(Twashtri)
+M 0 11311 1 11328 	(Hemadri)
+M 0 11312 1 11354 	(Mishti)
+M 0 11313 1 11355 	(Kshiraj)
+M 0 11314 1 11355 	(um grupo de yakshas bêbados)
+M 0 11315 1 11355 	(um garçom)
+E 1 11357 18 17 	(uma bandeja redonda)
+G 1 11357 18 -1 	(uma bandeja redonda)
+M 0 11316 1 11355 	(um naga entediado)
+E 1 11356 13 16 	(um khatar de prata)
+M 0 11317 1 11356 	(um pisacha de ferro)
+E 1 11359 12 17 	(uma caixinha de dardos)
+P 1 11358 27 11359 	(um dardo afiado)
+P 1 11358 27 11359 	(um dardo afiado)
+P 1 11358 27 11359 	(um dardo afiado)
+P 1 11358 27 11359 	(um dardo afiado)
+P 1 11358 27 11359 	(um dardo afiado)
+P 1 11358 27 11359 	(um dardo afiado)
+M 0 11318 1 11356 	(um naga)
+E 1 11358 27 16 	(um dardo afiado)
+M 0 11319 1 11356 	(um rastreador)
+E 1 11518 12 16 	(um khatar de rastreador)
+M 0 11320 1 11356 	(uma habilidosa rakshasi)
+E 1 11360 15 17 	(um completo baralho naga)
+E 1 11361 15 16 	(um belo talwar de prata)
+M 0 11321 1 11383 	(o Senhor Kalidas)
+M 0 11322 1 11347 	(Darshani, a mensageira-chefe)
+M 0 11323 1 11349 	(Gaurang)
+M 0 11324 1 11348 	(Nadish)
+M 0 11325 1 11336 	(o mestre-guia dos clérigos)
+M 0 11326 1 11338 	(a mestra-guia dos ladinos)
+M 0 11328 1 11379 	(a mestra-guia dos druidas)
+M 0 11329 1 11340 	(o mestre-guia dos guerreiros)
+M 0 11330 1 11342 	(o mestre-guia dos magos)
+M 0 11331 1 11341 	(um feiticeiro naga)
+E 1 11362 18 16 	(um khanda de ferro negro)
+M 0 11332 1 11335 	(a nagini templar)
+E 1 11362 18 16 	(um khanda de ferro negro)
+M 0 11333 1 11337 	(a nagini assassina)
+E 1 11362 18 16 	(um khanda de ferro negro)
+M 0 11334 1 11339 	(a nagini guerreira)
+E 1 11362 18 16 	(um khanda de ferro negro)
+M 0 11335 1 11378 	(o druida naga)
+E 1 11362 18 16 	(um khanda de ferro negro)
+M 0 11336 4 11372 	(uma pequena serpente de rubi)
+G 1 11370 12 -1 	(um pequeno ovo de rubi)
+M 0 11336 4 11358 	(uma pequena serpente de rubi)
+G 1 11370 12 -1 	(um pequeno ovo de rubi)
+M 0 11336 4 11365 	(uma pequena serpente de rubi)
+G 1 11370 12 -1 	(um pequeno ovo de rubi)
+M 0 11336 4 11346 	(uma pequena serpente de rubi)
+G 1 11370 12 -1 	(um pequeno ovo de rubi)
+M 0 11337 3 11331 	(uma serpente de esmeralda)
+G 1 11371 9 -1 	(uma escama de serpente de esmeralda)
+M 0 11337 3 11329 	(uma serpente de esmeralda)
+G 1 11371 9 -1 	(uma escama de serpente de esmeralda)
+M 0 11337 3 11362 	(uma serpente de esmeralda)
+G 1 11371 9 -1 	(uma escama de serpente de esmeralda)
+M 0 11338 2 11322 	(uma tartaruga de opala azul)
+G 1 11373 6 -1 	(um casco de tartaruga de opala azul)
+M 0 11338 2 11374 	(uma tartaruga de opala azul)
+G 1 11373 6 -1 	(um casco de tartaruga de opala azul)
+M 0 11339 3 11344 	(um lagarto de ônix)
+G 1 11372 9 -1 	(uma pequena folha dourada)
+M 0 11339 3 11377 	(um lagarto de ônix)
+G 1 11372 9 -1 	(uma pequena folha dourada)
+M 0 11339 3 11334 	(um lagarto de ônix)
+G 1 11372 9 -1 	(uma pequena folha dourada)
+M 0 11340 2 11320 	(uma serpente de marfim)
+G 1 11374 6 -1 	(uma escama de marfim e ouro)
+M 0 11340 2 11368 	(uma serpente de marfim)
+G 1 11374 6 -1 	(uma escama de marfim e ouro)
+M 0 11341 6 11332 	(um sentinela da Guarda das Jóias)
+E 1 11363 10 16 	(uma urumi cravejada de safiras azuis)
+M 0 11341 6 11369 	(um sentinela da Guarda das Jóias)
+E 1 11364 10 16 	(uma urumi cravejada de safiras verdes)
+M 0 11341 6 11371 	(um sentinela da Guarda das Jóias)
+E 1 11365 10 16 	(uma urumi cravejada de safiras amarelas)
+M 0 11341 6 11329 	(um sentinela da Guarda das Jóias)
+E 1 11363 10 16 	(uma urumi cravejada de safiras azuis)
+M 0 11341 6 11371 	(um sentinela da Guarda das Jóias)
+E 1 11364 10 16 	(uma urumi cravejada de safiras verdes)
+M 0 11341 6 11376 	(um sentinela da Guarda das Jóias)
+E 1 11365 10 16 	(uma urumi cravejada de safiras amarelas)
+M 0 11342 6 11322 	(um soldado da Guarda das Jóias)
+E 1 11366 18 16 	(um udaval com empunhadura de rubi)
+E 1 11367 18 11 	(um paricha coberto de rubis)
+M 0 11342 6 11366 	(um soldado da Guarda das Jóias)
+E 1 11366 18 16 	(um udaval com empunhadura de rubi)
+E 1 11367 18 11 	(um paricha coberto de rubis)
+M 0 11342 6 11368 	(um soldado da Guarda das Jóias)
+E 1 11366 18 16 	(um udaval com empunhadura de rubi)
+E 1 11367 18 11 	(um paricha coberto de rubis)
+M 0 11342 6 11374 	(um soldado da Guarda das Jóias)
+E 1 11366 18 16 	(um udaval com empunhadura de rubi)
+E 1 11367 18 11 	(um paricha coberto de rubis)
+M 0 11342 6 11345 	(um soldado da Guarda das Jóias)
+E 1 11366 18 16 	(um udaval com empunhadura de rubi)
+E 1 11367 18 11 	(um paricha coberto de rubis)
+M 0 11342 6 11360 	(um soldado da Guarda das Jóias)
+E 1 11366 18 16 	(um udaval com empunhadura de rubi)
+E 1 11367 18 11 	(um paricha coberto de rubis)
+M 0 11343 4 11323 	(um guardião da Guarda das Jóias)
+E 1 11368 12 16 	(uma kuntham de prata naga)
+E 1 11369 12 5 	(uma armadura de prata naga)
+M 0 11343 4 11346 	(um guardião da Guarda das Jóias)
+E 1 11368 12 16 	(uma kuntham de prata naga)
+E 1 11369 12 5 	(uma armadura de prata naga)
+M 0 11343 4 11377 	(um guardião da Guarda das Jóias)
+E 1 11368 12 16 	(uma kuntham de prata naga)
+E 1 11369 12 5 	(uma armadura de prata naga)
+M 0 11343 4 11334 	(um guardião da Guarda das Jóias)
+E 1 11368 12 16 	(uma kuntham de prata naga)
+E 1 11369 12 5 	(uma armadura de prata naga)
+M 0 11300 1 11308 	(um cardume de peixes de cristal)
+M 0 11301 1 11310 	(uma serpente dourada)
+M 0 11344 2 11387 	(um kshatryia-vigia da Guarda das Jóias)
+E 1 11380 12 6 	(um elmo dourado com esmeraldas engastadas)
+E 1 11381 12 10 	(um par de braceletes de ouro e esmeralda)
+E 1 11382 12 16 	(um khanda da divis�o Ouro e Esmeralda)
+M 0 11344 2 11389 	(um kshatryia-vigia da Guarda das Jóias)
+E 1 11380 12 6 	(um elmo dourado com esmeraldas engastadas)
+E 1 11381 12 10 	(um par de braceletes de ouro e esmeralda)
+E 1 11382 12 16 	(um khanda da divis�o Ouro e Esmeralda)
+R 0 11306 11510 -1 	(o L�tus das Mil P�talas)
+O 0 11510 1 11306 	(o L�tus das Mil P�talas)
+P 1 11511 5 11510 	(um pequeno frasco de amrit�)
+D 0 11335 0 1 	(A Entrada da Congrega��o de Cl�rigos de Bhogavati)
+D 0 11336 2 1 	(A Congrega��o de Cl�rigos de Bhogavati)
+D 0 11314 0 1 	(No T�nel)
+D 0 11315 5 1 	(O Centro do Templo a Sesha)
+D 0 11387 2 2 	(O P�tio Sudeste)
+D 0 11388 0 2 	(Fora de Bhogavati)
+D 0 11389 3 2 	(O P�tio Noroeste)
+D 0 11390 1 2 	(Fora de Bhogavati)
 S
-$~
+$

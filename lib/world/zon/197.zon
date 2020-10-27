@@ -1,75 +1,73 @@
 #197
 Vitalia~
 O Vale dos Orcs Negros~
-19700 19799 50 1 0 0 0 0 -1 -1
--1
-**Portas**
-D 0 19700 3 1  **O mato link para 6150**
-D 0 19709 2 2  **um longo corredor - quarto**
-D 0 19710 0 2 **quarto - um longo corredor**
-D 0 19750 5 2 **alcapao  **
-D 0 19751 4 2 **alcapao**
-**mobs**
-M 0 19700 3 19706 **orc batedor na entrada da caverna **
-E 1 3848 16 17         Card Orc(3848) com Orc(19700)
-M 0 19700 3 19700 **orc batedor no inicio da area carrega a chave enferrujada**
-G 1 19700 1
-M 0 19700 3 19714 **or batedor equipado com uma mochila negra**
-E 1 19718 10 12
-M 0 19701 3 19714 **guarda orc - escudo e espada**
-E 1 19708 6 11
-G 1 19702 6 16
-M 0 19701 3 19711 **guarda orc - escudo e espada**
-G 1 19702 6 11
-E 1 19708 6 11
-M 0 19702 1 19710 **guarda orc chefe  - martelo**
-E 1 19706 4 16
-M 0 19703 1 19704 **aranha negra  - poï¿½ï¿½o negra**
-G 1 19704 10
-M 0 19704 1 19701 ** cobra negra **
-M 0 19705 1 19720 **cobra verde - sangue da cobra verde**
-G 1 19713 10
-M 0 19706 1 19730 **enorme orc - faca**
-E 1 19703 6 17
-M 0 19707 1 19736 **grande orc com um cinto **
-E 1 19716 4 13
-M 0 19708 1 19750 **lider dos orcs - botas luvas e machado  - chave do calabouï¿½o**
-G 1 19701 2
-E 1 19715 3 8
-E 1 19714 3 9
-E 1 19707 3 16
-M 0 19709 1 19745  **velho druida - poï¿½ï¿½o violeta**
-G 1 19717 3
-M 0 19710 1 19747 **feiticeiro orc - tï¿½nica negra**
-E 1 19719 6 12
-M 0 19711 1 19750 **donzela**
-M 0 19712 1 19732 **sacerdote orc -poncho de lï¿½**
-G 1 19705 8
-G 1 19705 8
-E 1 19720 6 12
-M 0 19713 1 19738   **velho homem**
-M 0 19714 1 19751 **prisioneiro elfo - grilhï¿½es nas pernas**
-E 1 19721 5 7
-M 0 19715 1 19751 **prisioneiro elfo**
-M 0 19716 2 19731 **crianï¿½a orc pequeno elmo**
-E 1 19711 15 6
-M 0 19716 2 19737 **crianï¿½a orc**
-E 1 19711 15 6
-M 0 19717 3 19750 **general orc**
-E 1 19707 6 16
-E 1 19714 6 9
-G 1 19705 6
-E 1 19710 6 6
-M 0 19717 3 19737 **general orc **
-E 1 19710 6 6
-E 1 19714 6 9
-G 1 19705 8
-E 1 19707 6 16
-M 0 19717 3 19731 **general orc**
-E 1 19707 6 16
-G 1 19705 8
-E 1 19714 6 9
-E 1 19710 6 6
-M 0 19718 1 19721 **aventureiro perdido - espada do aventureiro**
-E 1 19712 6 16
+19700 19799 50 1 k 0 0 0 -1 -1
+D 0 19700 3 1 	(Uma Estrada Escondida)
+D 0 19709 2 2 	(Um Longo Corredor)
+D 0 19710 0 2 	(Um Quarto de Pedra)
+D 0 19750 5 2 	(O Quartel General Central)
+D 0 19751 4 2 	(O Calabouço)
+M 0 19700 3 19706 	(o batedor orc)
+E 1 3848 16 17 	(o Card Orcs)
+M 0 19700 3 19700 	(o batedor orc)
+G 1 19700 1 -1 	(uma chave enferrujada)
+M 0 19700 3 19714 	(o batedor orc)
+E 1 19718 10 12 	(uma grande mochila)
+M 0 19701 3 19714 	(o guarda orc)
+E 1 19708 6 11 	(um escudo negro de orc)
+G 1 19702 6 -1 	(uma espada curta de orc)
+M 0 19701 3 19711 	(o guarda orc)
+G 1 19702 6 -1 	(uma espada curta de orc)
+E 1 19708 6 11 	(um escudo negro de orc)
+M 0 19702 1 19710 	(o chefe da guarda orc)
+E 1 19706 4 16 	(um enorme martelo de orc)
+M 0 19703 1 19704 	(uma aranha negra)
+G 1 19704 10 -1 	(uma poção negra)
+M 0 19704 1 19701 	(uma cobra negra)
+M 0 19705 1 19720 	(uma cobra verde)
+G 1 19713 10 -1 	(o sangue da cobra verde)
+M 0 19706 1 19730 	(um enorme orc)
+E 1 19703 6 17 	(uma faca orc)
+M 0 19707 1 19736 	(um grande orc negro)
+E 1 19716 4 13 	(um cinto negro de orc)
+M 0 19708 1 19750 	(o lÃ­der dos orcs negros)
+G 1 19701 2 -1 	(a chave do calabouço)
+E 1 19715 3 8 	(um par de botas de orc)
+E 1 19714 3 9 	(um par de luvas de orc)
+E 1 19707 3 16 	(um grande machado de orc)
+M 0 19709 1 19745 	(um velho druida)
+G 1 19717 3 -1 	(uma poção violeta)
+M 0 19710 1 19747 	(O feiticeiro orc)
+E 1 19719 6 12 	(uma túnica negra)
+M 0 19711 1 19750 	(a donzela)
+M 0 19712 1 19732 	(o sacerdote Orc)
+G 1 19705 8 -1 	(sangue de orc)
+G 1 19705 8 -1 	(sangue de orc)
+E 1 19720 6 12 	(um poncho de lã negra)
+M 0 19713 1 19738 	(um velho homem)
+M 0 19714 1 19751 	(um prisioneiro elfo)
+E 1 19721 5 7 	(grilhões de orc)
+M 0 19715 1 19751 	(o prisioneiro elfo)
+M 0 19716 2 19731 	(uma crianÃ§a orc)
+E 1 19711 15 6 	(um pequeno elmo de orc)
+M 0 19716 2 19737 	(uma crianÃ§a orc)
+E 1 19711 15 6 	(um pequeno elmo de orc)
+M 0 19717 3 19750 	(O General Orc)
+E 1 19707 6 16 	(um grande machado de orc)
+E 1 19714 6 9 	(um par de luvas de orc)
+G 1 19705 6 -1 	(sangue de orc)
+E 1 19710 6 6 	(um grande elmo de orc)
+M 0 19717 3 19737 	(O General Orc)
+E 1 19710 6 6 	(um grande elmo de orc)
+E 1 19714 6 9 	(um par de luvas de orc)
+G 1 19705 8 -1 	(sangue de orc)
+E 1 19707 6 16 	(um grande machado de orc)
+M 0 19717 3 19731 	(O General Orc)
+E 1 19707 6 16 	(um grande machado de orc)
+G 1 19705 8 -1 	(sangue de orc)
+E 1 19714 6 9 	(um par de luvas de orc)
+E 1 19710 6 6 	(um grande elmo de orc)
+M 0 19718 1 19721 	(o aventureiro perdido)
+E 1 19712 6 16 	(a espada do aventureiro)
 S
+$

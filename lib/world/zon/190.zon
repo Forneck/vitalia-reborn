@@ -1,156 +1,155 @@
 #190
 Vitalia~
 Os Bosques dos Elfos~
-19000 19099 60 2 0 0 0 -1 -1
--1
-*
-D 0 19078 4 1             porta da casa
-D 0 19052 5 1             porta da casa
-D 0 19061 0 1             porta da casa para a varanda
-D 0 19059 2 1             porta da varanda para a casa
-D 0 19060 0 1             porta da casa para a varanda
-D 0 19058 2 1             porta da varanda para a casa
-D 0 19037 4 1             porta da escada para a prefeitura
-D 0 19048 5 1             porta da prefeitura para a escada
-D 0 19033 1 1             portï¿½o da Alameda para bosques
-D 0 19001 3 1             portï¿½o dos bosques para Alameda
-D 0 19003 5 1
-D 0 19005 4 1
-M 0 19001 2 19001                   O Guardiï¿½o Elfo
-E 1 19003 10 5            uma cota de malha de Mithril no corpo
-E 1 19004 10 16           empunhar uma espada de duas mï¿½os de Mithril
-M 0 19001 2 19001                   O Guardiï¿½o Elfo
-E 1 19003 10 5            uma cota de malha de Mithril no corpo
-E 1 19004 10 16           empunhar uma espada de duas mï¿½os de Mithril
-M 0 19005 1 19010                   O Elfo Armeiro
-E 1 19001 0 16          uma espada com corte de diamante
-M 0 19004 1 19011                    O Elfo Vendedor de Armas
-E 1 19004 20 16          empunhar uma espada de duas mï¿½os de Mithril
-M 0 19006 1 19014                    O Mago Elfo
-E 1 19001 100 16          empunhar uma espada de duas mï¿½os de Mithril
-M 0 19007 1 19013                    Quintor (Armazï¿½m)
-E 1 19001 100 16          empunhar uma espada de duas mï¿½os de Mithril
-M 0 19008 1 19016                    O Barman (The Tavern of Hope)
-E 1 19001 100 16          empunhar uma espada de duas mï¿½os de Mithril
-M 0 19009 1 19090                     A Elfa Recepcionista
-E 1 19001 10 16           empunhar uma espada de duas mï¿½os de Mithril
-M 0 19010 1 19004                     O Chefe da Guarda ï¿½lfica
-E 1 19001 10 16           empunhar uma linda espada longa
-E 1 19002 10 5            cota de malha ï¿½lfica no corpo
-E 1 19007 10 6               usar coifa na cabeï¿½a
-M 0 19011 8 19018                     Guardas jogando baralho
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19011 8 19018                     Guardas jogando baralho
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19011 8 19018                     Guardas jogando baralho
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19011 8 19018                     Guardas jogando baralho
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19011 8 19003                     Guardas jogando baralho
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19011 8 19003                     Guardas jogando baralho
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19011 8 19003                     Guardas jogando baralho
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19011 8 19003                     Guardas jogando baralho
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19002 15 19006                    Soldado Elfo de guarda
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19002 10 19007                    Soldado Elfo de guarda
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19002 10 19008                    Soldado Elfo de guarda
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19002 10 19012                    Soldado Elfo de guarda
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19002 10 19009                    Soldado Elfo de guarda
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19002 10 19002                    Soldado Elfo de guarda
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19003 10 19008                    Guarda Elfa andando
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19003 10 19008                    Guarda Elfa andando
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19003 10 19008                    Guarda Elfa andando
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19003 15 19015                    Guarda Elfa andando
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-O 0 19005 1 19006         garregar o grande telescï¿½pio na plataforma
-O 0 15006 10 19027        carregar espada de treinamento
-O 0 15006 10 19027        carregar espada de treinamento
-O 0 15006 10 19027        carregar espada de treinamento
-O 0 3023 2 19027        carregar clava de madeira
-O 0 3023 2 19027        carregar clava de madeira
-O 0 19045 1 19048         estante na prefeitura
-M 0 19027 1 19052                     O Velho Druï¿½da na casa
-E 1 19004 10 16          empunhar uma espada de duas mï¿½os de Mithril
-E 1 19021 20 12           vestir acolhedora manta de lï¿½
-M 0 19028 1 19077                     Elemental
-E 1 19022 20 1            anel no dedo
-M 0 19029 4 19062                      Urso na floresta
-M 0 19030 3 19067                      Tigre na floresta
-M 0 19032 2 19082                      corvo na floresta
-M 0 19031 1 19019                      Campeï¿½o na sala
-E 1 3820 1 17            Card Nabaqila(3820) com Campeï¿½o(19031)
-E 1 19001 10 16          empunhar espada de fio de diamante
-E 1 19003 10 5           vestir cota de malha de Mithril
-E 1 19008 4 7             vestir grevas ï¿½lficas
-M 0 19012 1 19035         jardineiro no jardim do templo
-E 1 19047 10 17           segurar a tesoura
-E 1 19048 10 5            vertir a macacï¿½o
-M 0 19013 1 19047                      cidadï¿½o na rua
-M 0 19013 2 19043                      cidadï¿½o na rua
-E 1 3841 16 17               Card Elfo(3841) com elfo(19013)
-M 0 19013 1 19015                      cidadï¿½o na rua
-M 0 19014 1 19029                      cidadï¿½ na alameda
-M 0 19013 1 19032                      cidadï¿½o na alameda
-M 0 19014 2 19038                      cidadï¿½o na rua
-M 0 19015 1 19048                      Nï¿½dor na Prefeitura
-E 1 19042 1 13            vestir cinturï¿½o de metal na cintura
-M 0 19016 1 19059                      sacerdote das escadarias
-E 1 19038 4 5             usar as vestes sacerdotais
-E 1 19039 4 16            empunhar glï¿½dio de prata
-M 0 19017 1 19053                      sacerdotisa nas escadarias
-E 1 19038 4 5             usar as vestes sacerdotais
-E 1 19039 4 16            empunhar glï¿½dio de prata
-M 0 19018 1 19037                      sacerdote na rua
-E 1 19038 4 5             usar as vestes sacerdotais
-E 1 19040 12 20            usar brincos
-M 0 19019 1 19009                      sacerdotisa na rua
-E 1 19038 4 5             usar as vestes sacerdotais
-E 1 19040 12 19            usar brincos
-E 1 19040 12 20            usar brincos
-M 0 19020 1 19060                      dona de casa em sua casa
-E 1 19044 1 6
-M 0 19021 2 19061                      crianï¿½a brincando
-M 0 19021 1 19061                      crianï¿½a brincando
-O 0 19046 1 19061         baï¿½ de brinquedos na sala
-M 0 19022 1 19016                      elfo com pressa perto da estalagem
-G 1 19043 1
-M 0 19023 1 19051                      sabiï¿½ perto da ï¿½rvore
-M 0 19024 1 19048                      um rouxinol na prefeitura
-M 0 19025 1 19078                      um esquilo na ï¿½rvore
-G 1 19041 2               nozes com o esquilo
-M 0 19003 10 19034                     Guarda Elfa andando
-E 1 19001 10 16          empunhar uma linda espada longa
-E 1 19002 10 5           cota de malha ï¿½lfica no corpo
-M 0 19026 1 19016                      Elfo bardo na estalagem
-E 1 19049 2 16            empunhando um alaï¿½de
+19000 19099 60 2 k 0 0 0 -1 -1
+D 0 19078 4 1 	(Subindo na Árvore)
+D 0 19052 5 1 	(A Casa na Árvore)
+D 0 19061 0 1 	(Dentro da Casa)
+D 0 19059 2 1 	(Uma Casa Geminada)
+D 0 19060 0 1 	(Dentro da Casa)
+D 0 19058 2 1 	(Uma Casa Geminada)
+D 0 19037 4 1 	(Na Escada)
+D 0 19048 5 1 	(A Prefeitura)
+D 0 19033 1 1 	(Um Pátio na Alameda)
+D 0 19001 3 1 	(Entrada para a Floresta dos Elfos)
+D 0 19003 5 1 	(A Sala da Guarda)
+D 0 19005 4 1 	(Porão)
+M 0 19001 2 19001 	(O GuardiÃ£o Elfo)
+E 1 19003 10 5 	(uma cota de malha de Mithril)
+E 1 19004 10 16 	(uma espada de duas mãos de Mithril)
+M 0 19001 2 19001 	(O GuardiÃ£o Elfo)
+E 1 19003 10 5 	(uma cota de malha de Mithril)
+E 1 19004 10 16 	(uma espada de duas mãos de Mithril)
+M 0 19005 1 19010 	(O Elfo Armeiro)
+E 1 19001 0 16 	(uma linda espada longa)
+M 0 19004 1 19011 	(O Elfo Vendedor de Armas)
+E 1 19004 20 16 	(uma espada de duas mãos de Mithril)
+M 0 19006 1 19014 	(O Mago Elfo)
+E 1 19001 100 16 	(uma linda espada longa)
+M 0 19007 1 19013 	(O Elfo de Nome Quintor)
+E 1 19001 100 16 	(uma linda espada longa)
+M 0 19008 1 19016 	(O Barman Elfo)
+E 1 19001 100 16 	(uma linda espada longa)
+M 0 19009 1 19090 	(a Elfa Recepcionista)
+E 1 19001 10 16 	(uma linda espada longa)
+M 0 19010 1 19004 	(O Chefe da Guarda Ã‰lfica)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+E 1 19007 10 6 	(uma coifa élfica)
+M 0 19011 8 19018 	(O Guarda Elfo)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19011 8 19018 	(O Guarda Elfo)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19011 8 19018 	(O Guarda Elfo)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19011 8 19018 	(O Guarda Elfo)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19011 8 19003 	(O Guarda Elfo)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19011 8 19003 	(O Guarda Elfo)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19011 8 19003 	(O Guarda Elfo)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19011 8 19003 	(O Guarda Elfo)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19002 15 19006 	(O Soldado Elfo)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19002 10 19007 	(O Soldado Elfo)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19002 10 19008 	(O Soldado Elfo)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19002 10 19012 	(O Soldado Elfo)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19002 10 19009 	(O Soldado Elfo)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19002 10 19002 	(O Soldado Elfo)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19003 10 19008 	(a Guarda Elfa)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19003 10 19008 	(a Guarda Elfa)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19003 10 19008 	(a Guarda Elfa)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19003 15 19015 	(a Guarda Elfa)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+O 0 19005 1 19006 	(Um grande telescópio)
+O 0 15006 10 19027 	(uma espada de treinamento)
+O 0 15006 10 19027 	(uma espada de treinamento)
+O 0 15006 10 19027 	(uma espada de treinamento)
+O 0 3023 2 19027 	(uma clava de madeira)
+O 0 3023 2 19027 	(uma clava de madeira)
+O 0 19045 1 19048 	(uma grande estante de livros)
+M 0 19027 1 19052 	(O Velho Druida)
+E 1 19004 10 16 	(uma espada de duas mãos de Mithril)
+E 1 19021 20 12 	(uma acolhedora manta de lã)
+M 0 19028 1 19077 	(O Enorme Elemental do Fogo)
+E 1 19022 20 1 	(um pequenino anel com uma opala de fogo)
+M 0 19029 4 19062 	(O urso crescido)
+M 0 19030 3 19067 	(O enorme tigre)
+M 0 19032 2 19082 	(um enorme corvo negro)
+M 0 19031 1 19019 	(O CampeÃ£o)
+E 1 3820 1 17 	(o Card Chave de Nabaqila)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19003 10 5 	(uma cota de malha de Mithril)
+E 1 19008 4 7 	(um par de grevas élficas)
+M 0 19012 1 19035 	(O elfo jardineiro)
+E 1 19047 10 17 	(uma tesoura de poda)
+E 1 19048 10 5 	(um macacão de jardineiro)
+M 0 19013 1 19047 	(O cidadÃ£o elfo)
+M 0 19013 2 19043 	(O cidadÃ£o elfo)
+E 1 3841 16 17 	(o Card Elfos)
+M 0 19013 1 19015 	(O cidadÃ£o elfo)
+M 0 19014 1 19029 	(a cidadÃ£ elfa)
+M 0 19013 1 19032 	(O cidadÃ£o elfo)
+M 0 19014 2 19038 	(a cidadÃ£ elfa)
+M 0 19015 1 19048 	(NÃ¡dor BherlÃ¯on, o Prefeito)
+E 1 19042 1 13 	(um cinturão de metal)
+M 0 19016 1 19059 	(O elfo sacerdote)
+E 1 19038 4 5 	(as vestes sacerdotais)
+E 1 19039 4 16 	(O gládio prateado)
+M 0 19017 1 19053 	(a sacerdotisa elfa)
+E 1 19038 4 5 	(as vestes sacerdotais)
+E 1 19039 4 16 	(O gládio prateado)
+M 0 19018 1 19037 	(O elfo sacerdote)
+E 1 19038 4 5 	(as vestes sacerdotais)
+E 1 19040 12 20 	(o brinco de Mithril)
+M 0 19019 1 19009 	(a sacerdotisa elfa)
+E 1 19038 4 5 	(as vestes sacerdotais)
+E 1 19040 12 19 	(o brinco de Mithril)
+E 1 19040 12 20 	(o brinco de Mithril)
+M 0 19020 1 19060 	(a elfa dona-de-casa)
+E 1 19044 1 6 	(um lenço azul)
+M 0 19021 2 19061 	(a crianÃ§a elfa)
+M 0 19021 1 19061 	(a crianÃ§a elfa)
+O 0 19046 1 19061 	(um baú de brinquedos)
+M 0 19022 1 19016 	(O elfo apressado)
+G 1 19043 1 -1 	(alguns documentos)
+M 0 19023 1 19051 	(o sabiÃ¡ vermelho)
+M 0 19024 1 19048 	(o rouxinol azul)
+M 0 19025 1 19078 	(o esquilo engraÃ§ado)
+G 1 19041 2 -1 	(algumas nozes)
+M 0 19003 10 19034 	(a Guarda Elfa)
+E 1 19001 10 16 	(uma linda espada longa)
+E 1 19002 10 5 	(uma cota de malha élfica)
+M 0 19026 1 19016 	(O Bardo Elfo)
+E 1 19049 2 16 	(um alaúde élfico)
 S
+$

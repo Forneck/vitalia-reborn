@@ -1,66 +1,55 @@
 #79
 Vitalia~
 A Resid√™ncia de Redferne~
-7900 7999 50 2 0 0 0 0 -1 -1
--1
-*
-* Created for DikuMud
-*
-* Modified by Cyron of VieMud
-*
-* Mobiles
-M 0 7900 1 7900         Grand Knight of Paladins
-E 1 7901 4 17                   Copper Key
-E 1 7910 2 16                   Bastard Sword 
-E 1 7914 2 5                    Silvery Breast-Plate
-E 1 7915 2 7                    Silvery Leg Plates
-E 1 7916 2 9                    Silvery Gloves
-E 1 7917 2 6                    Silvery Helmet
-E 1 7918 2 11                   Shield of the Rose
-E 1 7919 2 8                    Heavy Boots
-E 1 7920 2 10                   Silvery Arm Plates
-M 0 7901 2 7907         Rat
-G 1 7900 2                      Brass Key
-M 0 7901 2 7907         Rat
-M 0 7902 1 7913         The Cleaver
-E 1 7907 15 14                  Spiked Bracelet
-E 1 7907 15 15                  Spiked Bracelet
-E 1 7911 7 6                    Large Helmet
-G 1 7902 2                      Steel Key
-* Objects
-R 0 7907 7908
-O 0 7908 40 7907        Waybread
-R 0 7908 7921
-O 0 7921 10 7908        Water Barrel
-R 0 7903 7904
-O 0 7904 1 7903         Chest
-P 1 7903 1 7904                 Money
-P 1 7909 4 7904                 Golden Ring
-R 0 7913 7905
-O 0 7905 1 7913         Chest
-P 1 7906 5 7905
-P 1 7912 3 7905                 Chaos Helmet
-P 1 7913 2 7905                 Two-Handed Sword
-* Doors
-D 0 7900 0 2            Residence Door
-D 0 7901 2 2
-D 0 7901 1 1            Treasure Room Door
-D 0 7910 3 1
-D 0 7901 3 1            Library Door
-D 0 7902 1 1            
-D 0 7910 1 2            Safe Entrance
-D 0 7903 3 2
-D 0 7904 1 1            Monster Pen Door
-D 0 7913 3 1
-D 0 7904 3 1            Sitting Room Door
-D 0 7905 1 1
-D 0 7906 0 1            Larder Door
-D 0 7907 2 1
-D 0 7906 1 1            Fridge Door
-D 0 7908 3 1
-D 0 7911 2 1            Balcony Doors
-D 0 7912 0 1
-*
+7900 7999 50 2 k 0 0 0 -1 -1
+M 0 7900 1 7900 	(o Grande Cavaleiro dos Paladinos)
+E 1 7901 4 17 	(uma chave de bronze)
+E 1 7910 2 16 	(uma enorme espada bastarda)
+E 1 7914 2 5 	(uma placa de peito prateada)
+E 1 7915 2 7 	(algumas placas prateadas de perna)
+E 1 7916 2 9 	(um par de luvas prateadas)
+E 1 7917 2 6 	(um elmo prateado)
+E 1 7918 2 11 	(o escudo da rosa)
+E 1 7919 2 8 	(um par de botas pesadamente refor√ßadas)
+E 1 7920 2 10 	(algumas placas prateadas de bra√ßo)
+M 0 7901 2 7907 	(o grande rato)
+G 1 7900 2 -1 	(uma grande chave de a√ßo)
+M 0 7901 2 7907 	(o grande rato)
+M 0 7902 1 7913 	(o Cutelo)
+E 1 7907 15 14 	(um grande bracelete com espinhos)
+E 1 7907 15 15 	(um grande bracelete com espinhos)
+E 1 7911 7 6 	(um grande elmo)
+G 1 7902 2 -1 	(uma pequena chave de lat√£o)
+R 0 7907 7908 -1 	(um p√£o de viagem)
+O 0 7908 40 7907 	(um p√£o de viagem)
+R 0 7908 7921 -1 	(um barril)
+O 0 7921 10 7908 	(um barril)
+R 0 7903 7904 -1 	(uma caixa de madeira)
+O 0 7904 1 7903 	(uma caixa de madeira)
+P 1 7903 1 7904 	(um grande tesouro)
+P 1 7909 4 7904 	(um anel dourado)
+R 0 7913 7905 -1 	(uma caixa)
+O 0 7905 1 7913 	(uma caixa)
+P 1 7906 5 7905 	(uma adaga simples)
+P 1 7912 3 7905 	(um elmo ca√≥tico)
+P 1 7913 2 7905 	(uma espada para duas-m√£os)
+D 0 7900 0 2 	(Do Lado de fora da Moradia de Redferne)
+D 0 7901 2 2 	(A Parte Meridional do Grande Sal„o)
+D 0 7901 1 1 	(A Parte Meridional do Grande Sal„o)
+D 0 7910 3 1 	(A Sala do Tesouro)
+D 0 7901 3 1 	(A Parte Meridional do Grande Sal„o)
+D 0 7902 1 1 	(A Biblioteca de Redferne)
+D 0 7910 1 2 	(A Sala do Tesouro)
+D 0 7903 3 2 	(A Sala dos Artefatos de Naris)
+D 0 7904 1 1 	(A Parte Setentrional do Grande Sal„o)
+D 0 7913 3 1 	(A Jaula do Monstro)
+D 0 7904 3 1 	(A Parte Setentrional do Grande Sal„o)
+D 0 7905 1 1 	(A Sala de Estar de Naris)
+D 0 7906 0 1 	(A Cozinha de Naris)
+D 0 7907 2 1 	(A Despensa)
+D 0 7906 1 1 	(A Cozinha de Naris)
+D 0 7908 3 1 	(A Geladeira)
+D 0 7911 2 1 	(O Quarto de Redferne)
+D 0 7912 0 1 	(A Varanda de Redferne)
 S
-$
 $

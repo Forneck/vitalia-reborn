@@ -1,280 +1,278 @@
 #75
 Vitalua~
 Nos DomÃ­nios do BarÃ£o Darwin~
-7500 7599 160 1 abd 0 0 0 -1 -1
--1
-*
-M 0 7514 1 7583                        pajem
-E 1 7536 25 7      calï¿½as pretas           
-E 1 7538 25 12     tï¿½nica vermelha
-M 0 7502 1 7583                        Barï¿½o
-E 1 7519 25 3      medalhï¿½o
-E 1 7566 1 17      chave de dragï¿½o
-E 1 7518 15 16     punhal de marfim     
-E 1 7517 20 8      botas
-E 1 7516 20 7      perneiras
-E 1 7515 20 5      doblete
-E 1 7514 10 1      anel com sete pontas
-D 0 7583 2 1
-D 0 7583 1 1
-R 0 7560 7512     tirar baï¿½
-M 0 7503 1 7560                         cap. Thewin
-G 1 7511 10       chave de bronze
-E 1 7523 25 2     anel de mercenï¿½rio
-E 1 7522 20 16    espada brilhante   
-E 1 7521 20 5     couraï¿½a de batalha
-E 1 7520 20 6     capacete danificado
-O 0 7512 1 7560   baï¿½
-P 1 7513 1 7512   pilha de moedas (mil)
-R 0 7581 7565     cofre dourado
-O 0 7565 1 7581   cofre dourado
-P 1 7560 1 7565   chave martelada
-P 1 7505 1 7565   chave de pedra polida
-P 1 7504 1 7565   chave de pedra
-P 1 7500 1 7565   chave em esqueleto
-R 0 7588 7563     grande caixa-forte
-O 0 7563 1 7588   grande caixa-forte
-P 1 7564 1 7563   quantia enorme de dinheiro (vinte mil)
-M 0 7532 1 7597                         prisioneiro
-M 0 7531 1 7597                         interrogador
-E 1 7559 15 6     capuz preto
-E 1 7558 10 21    mï¿½rcara verde
-E 1 7557 20 16    faca malï¿½fica
-M 0 7530 2 7594                         ladrï¿½o seminu
-E 1 7556 20 12    capa preta
-E 1 7555 15 8     botas
-M 0 7530 2 7594                         ladrï¿½o seminu
-E 1 7556 20 12    capa preta
-E 1 7555 15 8     botas
-M 0 7529 1 7593                         costureira 
-E 1 7554 10 17    alfinete
-D 0 7593 1 1
-D 0 7593 0 1
-D 0 7594 2 1
-M 0 7528 1 7591                         armeiro
-E 1 7553 10 16    machado de guerra
-M 0 7527 4 7590                         estudante
-M 0 7527 4 7590                         estudante
-M 0 7527 4 7590                         estudante
-M 0 7527 4 7590                         estudante
-D 0 7590 3 1
-M 0 7526 1 7598                         contadora 
-G 1 7562 1        chave brilhando amarelo
-E 1 7552 10 17    pena sem tinta
-M 0 7525 2 7587                         guarda
-E 1 7561 20 16    punhal fino e longo
-E 1 7551 20 7     perneiras em malha
-E 1 7550 20 5     armadura em malha
-E 1 7549 10 0     olho flutuante
-M 0 7525 2 7587                         guarda
-E 1 7561 20 16    punhal fino e longo
-E 1 7551 20 7     perneiras em malha
-E 1 7550 20 5     armadura em malha
-E 1 7549 10 0     olho flutuante (luz)
-D 0 7587 2 1
-D 0 7587 0 1
-D 0 7587 1 2
-M 0 7524 1 7529                          ourives
-D 0 7529 3 2
-M 0 7523 1 7528                          joaheiro
-O 0 7508 1 7528   mesa
-D 0 7528 3 1
-M 0 7521 1 7518                          garoto dos estï¿½bulos
-M 0 7522 1 7518                          mestre dos estï¿½bulos
-E 1 7548 25 16    chicote
-D 0 7518 1 1
-M 0 7520 1 7521                          ferreiro
-E 1 7547 30 12    colete de couro
-E 1 7546 20 16    martelo de mï¿½o
-D 0 7521 0 1
-D 0 7521 3 1
-M 0 7518 3 7556                          guarda de folga
-M 0 7518 3 7556                          guarda de folga
-M 0 7518 3 7556                          guarda de folga
-M 0 7517 6 7532                          aprendiz
-E 1 7544 20 16    espada de madeira
-E 1 7545 20 6     protetor de cabeï¿½a
-E 1 7541 20 5     armadura alcochoada
-M 0 7517 6 7532                          aprendiz
-E 1 7544 20 16    espada de madeira
-E 1 7545 20 6     protetor de cabeï¿½a
-E 1 7541 20 5     armadura alcochoada
-M 0 7517 6 7536                          aprendiz
-E 1 7542 10 16    uma faca equilibrada
-E 1 7545 20 6     protetor de cabeï¿½a
-E 1 7541 20 5     armadura alcochoada
-M 0 7517 6 7536                          aprendiz
-E 1 7542 10 16    uma faca equilibrada
-E 1 7545 20 6     protetor de cabeï¿½a
-E 1 7541 20 5     armadura alcochoada
-M 0 7517 6 7535                          aprendiz
-E 1 7543 10 16    boleadeiras   
-E 1 7545 20 6     protetor de cabeï¿½a
-E 1 7541 20 5     armadura alcochoada
-M 0 7517 6 7535                          aprendiz
-E 1 7543 10 16    boleadeiras
-E 1 7545 20 6     protetor de cabeï¿½a
-E 1 7541 20 5     armadura alcochoada
-D 0 7535 0 1
-M 0 7516 2 7563                          jardineiro
-E 1 7540 20 16    tesoura
-E 1 7539 10 5     macacï¿½o
-M 0 7510 3 7546                          mordomo
-E 1 7537 20 5     camisa branca
-E 1 7536 20 7     calï¿½as pretas
-E 1 7535 20 12    casaco preto formal
-M 0 7509 3 7546                          empregada alegre
-E 1 7534 20 17    espanador
-E 1 7533 20 5     uniforme
-M 0 7505 1 7546                          srgt. Stanchfield
-E 1 7530 25 16    espada simples
-E 1 7529 30 6     gorro de couro
-E 1 7528 30 5     jaqueta
-M 0 7510 3 7551                          mordomo
-E 1 7537 20 5     camisa branca
-E 1 7536 20 7     calï¿½as pretas
-E 1 7535 20 12    casaco preto formal
-M 0 7509 3 7551                          empregada alegre
-E 1 7534 20 17    espanador
-E 1 7533 20 5     uniforme
-D 0 7551 2 1
-D 0 7551 1 1
-M 0 7510 3 7550                          mordomo
-E 1 7537 20 5     camisa branca
-E 1 7536 20 7     calï¿½as pretas
-E 1 7535 20 12    casaco preto formal
-M 0 7509 3 7550                          empregada alegre
-E 1 7534 20 17    espanador
-E 1 7533 20 5     uniforme
-M 0 7508 2 7570                          ajudante de cozinha
-M 0 7507 1 7570                          Chefe Martin
-E 1 7532 20 16    cortador de carne
-D 0 7570 2 1
-D 0 7570 0 1
-D 0 7570 1 1
-M 0 7515 2 7585                          vigia
-E 1 7531 15 17    luneta
-E 1 7530 25 16    espada simples
-E 1 7529 30 6     gorro de couro
-E 1 7528 30 5     jaqueta     
-M 0 7515 2 7585                          vigia
-E 1 7531 15 17    luneta
-E 1 7530 25 16    espada simples
-E 1 7529 30 6     gorro de couro
-E 1 7528 30 5     jaqueta
-M 0 7513 6 7526                          guarda perambulando
-E 1 7530 25 16    espada simples
-E 1 7529 30 6     gorro de couro
-E 1 7528 30 5     jaqueta
-D 0 7526 1 2
-M 0 7513 6 7527                          guarda perambulando
-E 1 7530 25 16    espada simples
-E 1 7529 30 6     gorro de couro
-E 1 7528 30 5     jaqueta
-D 0 7527 1 2
-M 0 7513 6 7523                          guarda perambulando
-E 1 7530 25 16    espada simples
-E 1 7529 30 6     gorro de couro
-E 1 7528 30 5     jaqueta
-D 0 7523 0 1
-M 0 7513 6 7519                          guarda perambulando
-E 1 7530 25 16    espada simples
-E 1 7529 30 6     gorro de couro
-E 1 7528 30 5     jaqueta
-D 0 7519 2 1
-D 0 7519 3 1
-M 0 7513 6 7515                          guarda perambulando
-E 1 7530 25 16    espada simples
-E 1 7529 30 6     gorro de couro
-E 1 7528 30 5     jaqueta
-M 0 7513 6 7513                          guarda perambulando
-E 1 7530 25 16    espada simples
-E 1 7529 30 6     gorro de couro
-E 1 7528 30 5     jaqueta
-M 0 7519 2 7530                          soldado
-E 1 7530 25 16    espada simples
-E 1 7529 30 6     gorro de couro
-E 1 7528 30 5     jaqueta
-M 0 7519 2 7530                          soldado
-E 1 7530 25 16    espada simples
-E 1 7529 30 6     gorro de couro
-E 1 7528 30 5     jaqueta
-D 0 7530 2 2
-M 0 7506 1 7557                          srgt. Morris
-M 0 7504 1 7558                          ten. Mullins
-E 1 7525 10 16    sabre
-E 1 7527 20 12    capa arredondada
-E 1 7524 15 6     coifa
-E 1 7526 15 5     sombria armadura
-M 0 7511 1 7549                          chefe dos criados
-E 1 7510 1 17     chave de metal
-M 0 7512 3 7506                          guarda de portï¿½o
-E 1 7530 25 16    espada simples
-E 1 7529 30 6     gorro de couro
-E 1 7528 30 5     jaqueta
-M 0 7512 3 7506                          guarda de portï¿½o
-E 1 7530 25 16    espada simples
-E 1 7529 30 6     gorro de couro
-E 1 7528 30 5     jaqueta
-M 0 7512 3 7506                          guarda de portï¿½o
-G 1 7503 1        chave
-G 1 7502 1        chave
-G 1 7501 1        chave
-E 1 7530 25 16    espada simples
-E 1 7529 30 6     gorro de couro
-E 1 7528 30 5     jaqueta
-O 0 7507 1 7506   fonte
-D 0 7506 2 2
-D 0 7592 3 1
-D 0 7592 0 1
-D 0 7589 2 1
-D 0 7589 1 1
-D 0 7589 0 1
-D 0 7586 3 2
-D 0 7582 3 1
-D 0 7584 0 1
-D 0 7580 3 1
-D 0 7580 1 1
-D 0 7578 1 1
-D 0 7577 3 1
-D 0 7562 1 1
-D 0 7574 3 1
-D 0 7574 0 1
-D 0 7574 1 1
-D 0 7576 2 2
-D 0 7559 3 1
-D 0 7559 2 2
-D 0 7555 3 1
-D 0 7555 0 1
-D 0 7554 0 2
-D 0 7548 1 1
-D 0 7548 0 1
-D 0 7573 2 1
-D 0 7571 3 1
-D 0 7568 1 1
-M 0 7501 1 7520                          gata muito peluda
-D 0 7520 2 1
-M 0 7500 1 7522                          garanhï¿½o orgulhoso
-D 0 7522 1 1
-D 0 7522 0 1
-O 0 7509 1 7517   carruagem
-D 0 7517 1 1
-D 0 7544 3 1
-O 0 7506 1 7544   mesa de madeira
-D 0 7545 1 1
-D 0 7542 3 1
-D 0 7539 3 1
-D 0 7539 1 1
-D 0 7539 0 1
-D 0 7538 2 1
-D 0 7538 0 1
-D 0 7533 2 1
-D 0 7531 0 2
-D 0 7516 3 1
-D 0 7508 2 2
-D 0 7537 0 1
-D 0 7537 2 2
-D 0 7510 0 1
-D 0 7507 2 2
+7500 7599 160 1 abdk 0 0 0 -1 -1
+M 0 7514 1 7583 	(o pajem)
+E 1 7536 25 7 	(um par de calï¿½as pretas)
+E 1 7538 25 12 	(uma tï¿½nica vermelha)
+M 0 7502 1 7583 	(BarÃ£o Darwin)
+E 1 7519 25 3 	(um medalhï¿½o dourado)
+E 1 7566 1 17 	(uma pequena chave com a cabeï¿½a de um dragï¿½o)
+E 1 7518 15 16 	(um punhal com o cabo de marfim)
+E 1 7517 20 8 	(um par de botas de couro)
+E 1 7516 20 7 	(um elegante par de perneiras)
+E 1 7515 20 5 	(um doblete azul com um ornamento verde)
+E 1 7514 10 1 	(Um anel de ouro com sete pontas.)
+D 0 7583 2 1 	(O Quarto Privativo Do Barão Darwin)
+D 0 7583 1 1 	(O Quarto Privativo Do Barão Darwin)
+R 0 7560 7512 -1 	(um baï¿½)
+M 0 7503 1 7560 	(CapitÃ£o Thewin)
+G 1 7511 10 -1 	(uma chave de bronze)
+E 1 7523 25 2 	(o anel de um mercenï¿½rio)
+E 1 7522 20 16 	(uma espada longa muito brilhante)
+E 1 7521 20 5 	(uma couraï¿½a de batalha)
+E 1 7520 20 6 	(um capacete danificado)
+O 0 7512 1 7560 	(um baï¿½)
+P 1 7513 1 7512 	(uma pequena pilha de moedas)
+R 0 7581 7565 -1 	(um cofre dourado)
+O 0 7565 1 7581 	(um cofre dourado)
+P 1 7560 1 7565 	(uma chave de metal martelada)
+P 1 7505 1 7565 	(uma chave de pedra polida)
+P 1 7504 1 7565 	(uma chave de pedra)
+P 1 7500 1 7565 	(uma grande chave em forma de esqueleto)
+R 0 7588 7563 -1 	(uma grande caixa-forte)
+O 0 7563 1 7588 	(uma grande caixa-forte)
+P 1 7564 1 7563 	(uma quantia ENORME de moedas de ouro)
+M 0 7532 1 7597 	(um prisioneiro)
+M 0 7531 1 7597 	(o interrogador)
+E 1 7559 15 6 	(um capuz preto)
+E 1 7558 10 21 	(uma mï¿½scara verde com olhos vermelhos)
+E 1 7557 20 16 	(uma faca com uma lï¿½mina curvada)
+M 0 7530 2 7594 	(um ladrÃ£o seminu)
+E 1 7556 20 12 	(uma capa preta)
+E 1 7555 15 8 	(um par de macias botas)
+M 0 7530 2 7594 	(um ladrÃ£o seminu)
+E 1 7556 20 12 	(uma capa preta)
+E 1 7555 15 8 	(um par de macias botas)
+M 0 7529 1 7593 	(a costureira)
+E 1 7554 10 17 	(um minï¿½sculo alfinete)
+D 0 7593 1 1 	(O Quarto De Fantasias)
+D 0 7593 0 1 	(O Quarto De Fantasias)
+D 0 7594 2 1 	(O Vestiário)
+M 0 7528 1 7591 	(o armeiro)
+E 1 7553 10 16 	(um grande machado de guerra)
+M 0 7527 4 7590 	(um estudante)
+M 0 7527 4 7590 	(um estudante)
+M 0 7527 4 7590 	(um estudante)
+M 0 7527 4 7590 	(um estudante)
+D 0 7590 3 1 	(Uma Sala De Aula)
+M 0 7526 1 7598 	(a contadora)
+G 1 7562 1 -1 	(uma chave brilhando em amarelo)
+E 1 7552 10 17 	(uma pena sem tinta)
+M 0 7525 2 7587 	(um guarda)
+E 1 7561 20 16 	(um punhal fino e longo)
+E 1 7551 20 7 	(um par de perneiras em malha de aï¿½o)
+E 1 7550 20 5 	(uma armadura de malha de aï¿½o flexï¿½vel)
+E 1 7549 10 0 	(um olho flutuante)
+M 0 7525 2 7587 	(um guarda)
+E 1 7561 20 16 	(um punhal fino e longo)
+E 1 7551 20 7 	(um par de perneiras em malha de aï¿½o)
+E 1 7550 20 5 	(uma armadura de malha de aï¿½o flexï¿½vel)
+E 1 7549 10 0 	(um olho flutuante)
+D 0 7587 2 1 	(O Posto Dos Guardas)
+D 0 7587 0 1 	(O Posto Dos Guardas)
+D 0 7587 1 2 	(O Posto Dos Guardas)
+M 0 7524 1 7529 	(a ourives)
+D 0 7529 3 2 	(A Loja da Ourives)
+M 0 7523 1 7528 	(o joalheiro)
+O 0 7508 1 7528 	(uma grande mesa de trabalho de madeira)
+D 0 7528 3 1 	(A Loja Do Joalheiro)
+M 0 7521 1 7518 	(o garoto do estÃ¡bulo)
+M 0 7522 1 7518 	(um mestre dos estÃ¡bulos)
+E 1 7548 25 16 	(um chicote de cavalo)
+D 0 7518 1 1 	(Os Estábulos)
+M 0 7520 1 7521 	(um ferreiro)
+E 1 7547 30 12 	(um colete de couro)
+E 1 7546 20 16 	(um martelo)
+D 0 7521 0 1 	(A Ferraria)
+D 0 7521 3 1 	(A Ferraria)
+M 0 7518 3 7556 	(um guarda de folga)
+M 0 7518 3 7556 	(um guarda de folga)
+M 0 7518 3 7556 	(um guarda de folga)
+M 0 7517 6 7532 	(um aprendiz)
+E 1 7544 20 16 	(uma espada de madeira)
+E 1 7545 20 6 	(um protetor de cabeï¿½a)
+E 1 7541 20 5 	(uma armadura acolchoada de treinamento)
+M 0 7517 6 7532 	(um aprendiz)
+E 1 7544 20 16 	(uma espada de madeira)
+E 1 7545 20 6 	(um protetor de cabeï¿½a)
+E 1 7541 20 5 	(uma armadura acolchoada de treinamento)
+M 0 7517 6 7536 	(um aprendiz)
+E 1 7542 10 16 	(uma faca equilibrada)
+E 1 7545 20 6 	(um protetor de cabeï¿½a)
+E 1 7541 20 5 	(uma armadura acolchoada de treinamento)
+M 0 7517 6 7536 	(um aprendiz)
+E 1 7542 10 16 	(uma faca equilibrada)
+E 1 7545 20 6 	(um protetor de cabeï¿½a)
+E 1 7541 20 5 	(uma armadura acolchoada de treinamento)
+M 0 7517 6 7535 	(um aprendiz)
+E 1 7543 10 16 	(boleadeiras)
+E 1 7545 20 6 	(um protetor de cabeï¿½a)
+E 1 7541 20 5 	(uma armadura acolchoada de treinamento)
+M 0 7517 6 7535 	(um aprendiz)
+E 1 7543 10 16 	(boleadeiras)
+E 1 7545 20 6 	(um protetor de cabeï¿½a)
+E 1 7541 20 5 	(uma armadura acolchoada de treinamento)
+D 0 7535 0 1 	(A Área De Treinamento)
+M 0 7516 2 7563 	(o jardineiro)
+E 1 7540 20 16 	(uma tesoura de jardinagem)
+E 1 7539 10 5 	(um macacï¿½o sujo)
+M 0 7510 3 7546 	(um mordomo casmurro)
+E 1 7537 20 5 	(uma camisa branca)
+E 1 7536 20 7 	(um par de calï¿½as pretas)
+E 1 7535 20 12 	(um casaco preto formal)
+M 0 7509 3 7546 	(uma empregada alegre)
+E 1 7534 20 17 	(um espanador de pena)
+E 1 7533 20 5 	(o uniforme de uma empregada)
+M 0 7505 1 7546 	(Sargento Stanchfield)
+E 1 7530 25 16 	(uma simples espada do guarda)
+E 1 7529 30 6 	(um gorro de couro)
+E 1 7528 30 5 	(um jaqueta de couro)
+M 0 7510 3 7551 	(um mordomo casmurro)
+E 1 7537 20 5 	(uma camisa branca)
+E 1 7536 20 7 	(um par de calï¿½as pretas)
+E 1 7535 20 12 	(um casaco preto formal)
+M 0 7509 3 7551 	(uma empregada alegre)
+E 1 7534 20 17 	(um espanador de pena)
+E 1 7533 20 5 	(o uniforme de uma empregada)
+D 0 7551 2 1 	(O Fim Do Corredor Dos Criados)
+D 0 7551 1 1 	(O Fim Do Corredor Dos Criados)
+M 0 7510 3 7550 	(um mordomo casmurro)
+E 1 7537 20 5 	(uma camisa branca)
+E 1 7536 20 7 	(um par de calï¿½as pretas)
+E 1 7535 20 12 	(um casaco preto formal)
+M 0 7509 3 7550 	(uma empregada alegre)
+E 1 7534 20 17 	(um espanador de pena)
+E 1 7533 20 5 	(o uniforme de uma empregada)
+M 0 7508 2 7570 	(a ajudante de cozinha)
+M 0 7507 1 7570 	(Chefe Martin)
+E 1 7532 20 16 	(um cortador de carne)
+D 0 7570 2 1 	(A Cozinha)
+D 0 7570 0 1 	(A Cozinha)
+D 0 7570 1 1 	(A Cozinha)
+M 0 7515 2 7585 	(o vigia)
+E 1 7531 15 17 	(uma pequena luneta)
+E 1 7530 25 16 	(uma simples espada do guarda)
+E 1 7529 30 6 	(um gorro de couro)
+E 1 7528 30 5 	(um jaqueta de couro)
+M 0 7515 2 7585 	(o vigia)
+E 1 7531 15 17 	(uma pequena luneta)
+E 1 7530 25 16 	(uma simples espada do guarda)
+E 1 7529 30 6 	(um gorro de couro)
+E 1 7528 30 5 	(um jaqueta de couro)
+M 0 7513 6 7526 	(um guarda perambulando)
+E 1 7530 25 16 	(uma simples espada do guarda)
+E 1 7529 30 6 	(um gorro de couro)
+E 1 7528 30 5 	(um jaqueta de couro)
+D 0 7526 1 2 	(Um Largo Caminho)
+M 0 7513 6 7527 	(um guarda perambulando)
+E 1 7530 25 16 	(uma simples espada do guarda)
+E 1 7529 30 6 	(um gorro de couro)
+E 1 7528 30 5 	(um jaqueta de couro)
+D 0 7527 1 2 	(O Fim Do Caminho Coberto)
+M 0 7513 6 7523 	(um guarda perambulando)
+E 1 7530 25 16 	(uma simples espada do guarda)
+E 1 7529 30 6 	(um gorro de couro)
+E 1 7528 30 5 	(um jaqueta de couro)
+D 0 7523 0 1 	(Um Caminho Coberto)
+M 0 7513 6 7519 	(um guarda perambulando)
+E 1 7530 25 16 	(uma simples espada do guarda)
+E 1 7529 30 6 	(um gorro de couro)
+E 1 7528 30 5 	(um jaqueta de couro)
+D 0 7519 2 1 	(O Fim Do Caminho Com Pedregulho)
+D 0 7519 3 1 	(O Fim Do Caminho Com Pedregulho)
+M 0 7513 6 7515 	(um guarda perambulando)
+E 1 7530 25 16 	(uma simples espada do guarda)
+E 1 7529 30 6 	(um gorro de couro)
+E 1 7528 30 5 	(um jaqueta de couro)
+M 0 7513 6 7513 	(um guarda perambulando)
+E 1 7530 25 16 	(uma simples espada do guarda)
+E 1 7529 30 6 	(um gorro de couro)
+E 1 7528 30 5 	(um jaqueta de couro)
+M 0 7519 2 7530 	(um soldado)
+E 1 7530 25 16 	(uma simples espada do guarda)
+E 1 7529 30 6 	(um gorro de couro)
+E 1 7528 30 5 	(um jaqueta de couro)
+M 0 7519 2 7530 	(um soldado)
+E 1 7530 25 16 	(uma simples espada do guarda)
+E 1 7529 30 6 	(um gorro de couro)
+E 1 7528 30 5 	(um jaqueta de couro)
+D 0 7530 2 2 	(Uma Passagem Estreita)
+M 0 7506 1 7557 	(Sargento Morris)
+M 0 7504 1 7558 	(Tenente Mullins)
+E 1 7525 10 16 	(um sabre de cavalaria)
+E 1 7527 20 12 	(uma capa meio arredondada)
+E 1 7524 15 6 	(uma coifa de corrente)
+E 1 7526 15 5 	(uma sombria armadura de metal)
+M 0 7511 1 7549 	(a chefe dos criados)
+E 1 7510 1 17 	(uma pequena chave de metal)
+M 0 7512 3 7506 	(um guarda de portÃ£o)
+E 1 7530 25 16 	(uma simples espada do guarda)
+E 1 7529 30 6 	(um gorro de couro)
+E 1 7528 30 5 	(um jaqueta de couro)
+M 0 7512 3 7506 	(um guarda de portÃ£o)
+E 1 7530 25 16 	(uma simples espada do guarda)
+E 1 7529 30 6 	(um gorro de couro)
+E 1 7528 30 5 	(um jaqueta de couro)
+M 0 7512 3 7506 	(um guarda de portÃ£o)
+G 1 7503 1 -1 	(uma longa chave de metal)
+G 1 7502 1 -1 	(uma chave prateada)
+G 1 7501 1 -1 	(uma chave de metal enferrujada)
+E 1 7530 25 16 	(uma simples espada do guarda)
+E 1 7529 30 6 	(um gorro de couro)
+E 1 7528 30 5 	(um jaqueta de couro)
+O 0 7507 1 7506 	(uma fonte)
+D 0 7506 2 2 	(Um Pátio De Paralelepípedo)
+D 0 7592 3 1 	(Um Quarto Cavernoso)
+D 0 7592 0 1 	(Um Quarto Cavernoso)
+D 0 7589 2 1 	(Um Quarto Cavernoso)
+D 0 7589 1 1 	(Um Quarto Cavernoso)
+D 0 7589 0 1 	(Um Quarto Cavernoso)
+D 0 7586 3 2 	(Um Minúsculo Porão Mofado)
+D 0 7582 3 1 	(O Estúdio do Barão)
+D 0 7584 0 1 	(O Quarto de Descanço)
+D 0 7580 3 1 	(O Fim Do Corredor Escuro)
+D 0 7580 1 1 	(O Fim Do Corredor Escuro)
+D 0 7578 1 1 	(Um Corredor Iluminado)
+D 0 7577 3 1 	(O Topo Da Escada Em Espiral)
+D 0 7562 1 1 	(Caminhando Pelos Jardins)
+D 0 7574 3 1 	(A Sala De Jantar)
+D 0 7574 0 1 	(A Sala De Jantar)
+D 0 7574 1 1 	(A Sala De Jantar)
+D 0 7576 2 2 	(Uma Escada Em Espiral)
+D 0 7559 3 1 	(Fim Do Corredor Iluminado)
+D 0 7559 2 2 	(Fim Do Corredor Iluminado)
+D 0 7555 3 1 	(Um Corredor Iluminado)
+D 0 7555 0 1 	(Um Corredor Iluminado)
+D 0 7554 0 2 	(Um Corredor Iluminado)
+D 0 7548 1 1 	(O Corredor Dos Criados)
+D 0 7548 0 1 	(O Corredor Dos Criados)
+D 0 7573 2 1 	(Fim Do Corredor)
+D 0 7571 3 1 	(O Corredor Decorado)
+D 0 7568 1 1 	(O Corredor Decorado)
+M 0 7501 1 7520 	(uma gata muito peluda)
+D 0 7520 2 1 	(O Gramado Oeste)
+M 0 7500 1 7522 	(um garanhÃ£o orgulhoso)
+D 0 7522 1 1 	(O Curral)
+D 0 7522 0 1 	(O Curral)
+O 0 7509 1 7517 	(uma carruagem)
+D 0 7517 1 1 	(A Estalagem para Carruagens)
+D 0 7544 3 1 	(Sala De Reuniões)
+O 0 7506 1 7544 	(uma grande mesa de madeira)
+D 0 7545 1 1 	(O Corredor Decorado)
+D 0 7542 3 1 	(O Corredor Decorado)
+D 0 7539 3 1 	(O Corredor Decorado)
+D 0 7539 1 1 	(O Corredor Decorado)
+D 0 7539 0 1 	(O Corredor Decorado)
+D 0 7538 2 1 	(A Recepção)
+D 0 7538 0 1 	(A Recepção)
+D 0 7533 2 1 	(O Abrigo Das Armaduras)
+D 0 7531 0 2 	(Próximo A Uma Parede De Pedras)
+D 0 7516 3 1 	(Antes da Estalagem para Carruagens)
+D 0 7508 2 2 	(Um Caminho Coberto)
+D 0 7537 0 1 	(Um Modo De Entrar)
+D 0 7537 2 2 	(Um Modo De Entrar)
+D 0 7510 0 1 	(Um Caminho Com Cascalho)
+D 0 7507 2 2 	(Um Caminho Com Cascalho)
 S
 $

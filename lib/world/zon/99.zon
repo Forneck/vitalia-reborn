@@ -1,141 +1,141 @@
 #99
 Vitalia~
 Ghenna~
-9900 9999 240 1 0 0 0 0 -1 -1
--1
-O 0 9977 1 9901
-M 0 9907 1 9907
-G 1 9909 20
-G 1 9909 20
-G 1 9909 20
-M 0 9901 1 9900
-G 1 9903 5
-O 0 9900 5 9922
-O 0 9965 5 9965
-M 0 9902 5 9910
-M 0 9914 1 9920
-E 1 9920 5 6
-G 1 9966 5 
-M 0 9916 1 9916
-E 1 9916 5 19
-M 0 9906 9 9935
-E 1 9911 10 16
-M 0 9906 9 9935
-E 1 9911 10 16
-O 0 9908 10 9901
-O 0 9998 10 9907
-M 0 9906 9 9935
-E 1 9911 10 16
-M 0 9904 15 9903
-M 0 9904 15 9902
-M 0 9906 9 9935
-M 0 9911 2 9935
-E 1 9902 5 16
-M 0 9911 2 9935
-E 1 9902 5 0
-M 0 9908 1 9936
-E 1 9912 5 18
-M 0 9910 1 9937
-E 1 9918 5 16
-E 1 9917 5 1
-E 1 9913 5 0 
-E 1 9915 5 3
-M 0 9913 30 9941
-E 1 9910 5 13
-E 1 9921 5 14
-E 1 9922 5 7
-O 0 9901 10 9941
-O 0 9900 10 9941
-O 0 9919 10 9941
-M 0 9923 1 9952
-E 1 9923 4 16
-E 1 9999 4 17
-E 1 9924 4 8
-E 1 9925 4 7
-E 1 9926 4 10
-E 1 9927 4 11
-E 1 9928 4 12
-E 1 9929 4 9
-E 1 9930 4 6
-O 0 9931 5 9950
-P 1 9932 5 9931
-M 0 9915 1 9957
-M 0 9917 3 9957
-M 0 9912 1 9957
-M 0 9915 1 9959
-M 0 9903 3 9959
-M 0 9915 2 9901
-E 1 9911 10 16
-M 0 9917 2 9901
-M 0 9900 1 9901
-E 1 9902 10 16
-D 0 9901 4 1
-M 0 9933 1 9933
-D 0 9933 5 1
-M 0 9964 1 9964
-E 1 9964 5 16
-M 0 9975 1 9975
-M 0 9975 1 9977
-M 0 9905 9 9908
-M 0 9905 9 9910
-M 0 9971 3 9971
-M 0 9972 1 9972
-D 0 9991 3 1
-M 0 9997 1 9997
-E 1 9996 5 12
-E 1 9997 5 7
-M 0 9917 3 9998
-D 0 9998 2 1
-M 0 9981 1 9981
-E 1 9981 5 13
-M 0 9985 5 9985
-M 0 9986 3 9985
-E 1 9986 5 12
-M 0 9989 1 9989
-M 0 9915 1 9927
-M 0 9904 10 9906
-M 0 9994 1 9994
-M 0 9986 2 9986
-M 0 9915 2 9987
-M 0 9912 1 9987
-M 0 9987 1 9987
-E 1 9987 5 16
-M 0 9989 2 9903
-M 0 9902 1 9903
-M 0 9989 1 9909
-M 0 9918 1 9902
-G 1 9904 5
-M 0 9917 2 9902
-M 0 9903 1 9988
-M 0 9917 5 9954
-M 0 9917 5 9955
-M 0 9917 5 9955
-M 0 9932 5 9932
-M 0 9932 5 9926
-M 0 9931 5 9926
-M 0 9932 5 9926
-M 0 9931 5 9931
-M 0 9931 5 9927
-M 0 9932 5 9927
-M 0 9932 5 9929
-M 0 9931 5 9929
-M 0 9909 5 9956
-E 1 9914 5 5
-E 1 9966 5 17
-E 1 9995 5 1
-D 0 9921 2 2
-D 0 9900 5 2
-D 0 9903 5 1
-D 0 9904 0 1
-D 0 9906 5 1
-D 0 9907 5 1
-D 0 9915 2 1
-D 0 9919 0 1
-D 0 9923 0 1
-D 0 9934 4 1
-D 0 9937 4 1
-D 0 9947 2 1
-D 0 9948 5 1
-D 0 9957 0 1
-D 0 9965 5 2
+9900 9999 240 1 k 0 0 0 -1 -1
+O 0 9977 1 9901 	(sinal)
+M 0 9907 1 9907 	(um homem-planta)
+G 1 9909 20 -1 	(uma mosca morta)
+G 1 9909 20 -1 	(uma mosca morta)
+G 1 9909 20 -1 	(uma mosca morta)
+M 0 9901 1 9900 	(a criatura tumular)
+G 1 9903 5 -1 	(uma mosca morta)
+O 0 9900 5 9922 	(um candelabro)
+O 0 9965 5 9965 	(um par de sapatos infantis)
+M 0 9902 5 9910 	(a Banshee)
+M 0 9914 1 9920 	(a Medusa)
+E 1 9920 5 6 	(Uma coroa de cobras entrela�adas)
+G 1 9966 5 -1 	(Um totem vodu)
+M 0 9916 1 9916 	(o garçom)
+E 1 9916 5 19 	(Um brinco de esqueleto)
+M 0 9906 9 9935 	(o capanga)
+E 1 9911 10 16 	(uma lan�a)
+M 0 9906 9 9935 	(o capanga)
+E 1 9911 10 16 	(uma lan�a)
+O 0 9908 10 9901 	(uma m�o decepada)
+O 0 9998 10 9907 	(uma caveira)
+M 0 9906 9 9935 	(o capanga)
+E 1 9911 10 16 	(uma lan�a)
+M 0 9904 15 9903 	(O Bicho-Papão)
+M 0 9904 15 9902 	(O Bicho-Papão)
+M 0 9906 9 9935 	(o capanga)
+M 0 9911 2 9935 	(o Anão traidor)
+E 1 9902 5 16 	(uma lamparina)
+M 0 9911 2 9935 	(o Anão traidor)
+E 1 9902 5 0 	(uma lamparina)
+M 0 9908 1 9936 	(a Gorgimera)
+E 1 9912 5 18 	(um par de asas de drag�o)
+M 0 9910 1 9937 	(o dragão do abismo)
+E 1 9918 5 16 	(uma unha de drag�o)
+E 1 9917 5 1 	(um anel feito de intestino)
+E 1 9913 5 0 	(a mand�bula do Lorde Suzerain)
+E 1 9915 5 3 	(uma gravura do camafeu)
+M 0 9913 30 9941 	(o Efreeti)
+E 1 9910 5 13 	(um cinto do fantasma)
+E 1 9921 5 14 	(um bracelete prism�tico)
+E 1 9922 5 7 	(uma cal�a violeta mal ajustada)
+O 0 9901 10 9941 	(um travesseiro)
+O 0 9900 10 9941 	(um candelabro)
+O 0 9919 10 9941 	(um tapete oriental)
+M 0 9923 1 9952 	(o mestre espadachim de Ghenna)
+E 1 9923 4 16 	(a espada de Nosferatu)
+E 1 9999 4 17 	(um totem vodu)
+E 1 9924 4 8 	(botas com navalha)
+E 1 9925 4 7 	(perneiras cromadas)
+E 1 9926 4 10 	(bra�adeiras cromadas)
+E 1 9927 4 11 	(um escudo cromado)
+E 1 9928 4 12 	(um disfarce vermelho)
+E 1 9929 4 9 	(manoplas cromadas)
+E 1 9930 4 6 	(um elmo cromado)
+O 0 9931 5 9950 	(uma maleta)
+P 1 9932 5 9931 	(O livro de Wyrm)
+M 0 9915 1 9957 	(o Orc)
+M 0 9917 3 9957 	(um cidadão de Ghenna)
+M 0 9912 1 9957 	(o elfo errante)
+M 0 9915 1 9959 	(o Orc)
+M 0 9903 3 9959 	(o Argus)
+M 0 9915 2 9901 	(o Orc)
+E 1 9911 10 16 	(uma lan�a)
+M 0 9917 2 9901 	(um cidadão de Ghenna)
+M 0 9900 1 9901 	(Shamus)
+E 1 9902 10 16 	(uma lamparina)
+D 0 9901 4 1 	(Os Limites da Cidade de Ghenna)
+M 0 9933 1 9933 	(o golem de rocha)
+D 0 9933 5 1 	(A Boca da Grande Caverna)
+M 0 9964 1 9964 	(a boneca)
+E 1 9964 5 16 	(um chap�u)
+M 0 9975 1 9975 	(a mulher)
+M 0 9975 1 9977 	(a mulher)
+M 0 9905 9 9908 	(alguém todo quebrado)
+M 0 9905 9 9910 	(alguém todo quebrado)
+M 0 9971 3 9971 	(uma mulher)
+M 0 9972 1 9972 	(Lester)
+D 0 9991 3 1 	(O T�nel Leste-Oeste)
+M 0 9997 1 9997 	(o Deepspawn)
+E 1 9996 5 12 	(pele gelatinosa)
+E 1 9997 5 7 	(perneiras gelatinosas)
+M 0 9917 3 9998 	(um cidadão de Ghenna)
+D 0 9998 2 1 	(Um Beco Sem Sa�da)
+M 0 9981 1 9981 	(o Anão)
+E 1 9981 5 13 	(um cinto de mithril)
+M 0 9985 5 9985 	(o Maedar)
+M 0 9986 3 9985 	(o mestre Maedar)
+E 1 9986 5 12 	(uma t�nica transparente)
+M 0 9989 1 9989 	(o Dragonet)
+M 0 9915 1 9927 	(o Orc)
+M 0 9904 10 9906 	(O Bicho-Papão)
+M 0 9994 1 9994 	(a barata)
+M 0 9986 2 9986 	(o mestre Maedar)
+M 0 9915 2 9987 	(o Orc)
+M 0 9912 1 9987 	(o elfo errante)
+M 0 9987 1 9987 	(Roger)
+E 1 9987 5 16 	(um arco leve de mogno)
+M 0 9989 2 9903 	(o Dragonet)
+M 0 9902 1 9903 	(a Banshee)
+M 0 9989 1 9909 	(o Dragonet)
+M 0 9918 1 9902 	(uma vendedora)
+G 1 9904 5 -1 	(uma caixa em forma de cora��o)
+M 0 9917 2 9902 	(um cidadão de Ghenna)
+M 0 9903 1 9988 	(o Argus)
+M 0 9917 5 9954 	(um cidadão de Ghenna)
+M 0 9917 5 9955 	(um cidadão de Ghenna)
+M 0 9917 5 9955 	(um cidadão de Ghenna)
+M 0 9932 5 9932 	(um braço saindo da parede)
+M 0 9932 5 9926 	(um braço saindo da parede)
+M 0 9931 5 9926 	(um pé saindo da parede)
+M 0 9932 5 9926 	(um braço saindo da parede)
+M 0 9931 5 9931 	(um pé saindo da parede)
+M 0 9931 5 9927 	(um pé saindo da parede)
+M 0 9932 5 9927 	(um braço saindo da parede)
+M 0 9932 5 9929 	(um braço saindo da parede)
+M 0 9931 5 9929 	(um pé saindo da parede)
+M 0 9909 5 9956 	(O Cavaleiro da Morte)
+E 1 9914 5 5 	(uma carapa�a impenetr�vel)
+E 1 9966 5 17 	(Um totem vodu)
+E 1 9995 5 1 	(uma anel de platina)
+D 0 9921 2 2 	(O Corredor no Andar Superior)
+D 0 9900 5 2 	(A Colina do T�mulo)
+D 0 9903 5 1 	(O Cheiro da Morte)
+D 0 9904 0 1 	(Uma Pedra Circular)
+D 0 9906 5 1 	(A Cerca Contorcida)
+D 0 9907 5 1 	(A Cerca Contorcida)
+D 0 9915 2 1 	(Taverna Sangrenta)
+D 0 9919 0 1 	(O Corredor no Andar Superior)
+D 0 9923 0 1 	(O Banheiro)
+D 0 9934 4 1 	(Dentro da Entrada da Caverna)
+D 0 9937 4 1 	(Um Covil Cheio de Cad�veres)
+D 0 9947 2 1 	(Na Parte Posterior)
+D 0 9948 5 1 	(Queda Livre)
+D 0 9957 0 1 	(As Ruas de Ghenna)
+D 0 9965 5 2 	(Um Arm�rio Destru�do)
 S
+$

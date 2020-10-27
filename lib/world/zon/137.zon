@@ -1,188 +1,179 @@
 #137
 Vitalia~
 LothlÃ³rien~
-13700 13799 180 1 ab 0 0 0 -1 -1
--1
-*
-* Colocar os Mobs
-*
-M 0 13702 1 13797    Colocar Haldir de Lï¿½rien sobre um Talan
-E 1 13717 5 0        Entregar um Pï¿½ssaro Dourado para Haldir de Lï¿½rien
-E 1 13713 17 16      Entregar um Arco dos Galadhrim para Haldir de Lï¿½rien
-G 1 13728 3          Entregar uma Corda para Haldir de Lï¿½rien
-M 0 13703 1 13729    Colocar Rï¿½mil de Lï¿½rien sobre um Talan
-E 1 13715 5 14       Entregar um Bracelete de Lï¿½rien para Rï¿½mil de Lï¿½rien
-E 1 13713 17 16      Entregar um Arco dos Galadhrim para Rï¿½mil de Lï¿½rien
-G 1 13728 3          Entregar uma Corda para Rï¿½mil de Lï¿½rien
-M 0 13704 1 13732    Colocar Orophin de Lï¿½rien sobre um Talan
-E 1 13716 5 7        Entregar um Par de Perneiras de Lï¿½rien para Orophin de Lï¿½rien
-E 1 13713 17 16      Entregar um Arco dos Galadhrim para Orophin de Lï¿½rien
-G 1 13728 3          Entregar uma Corda para Orophin de Lï¿½rien
-M 0 13705 1 13798    Colocar Galadriel sobre um Talan
-E 1 13707 5 6        Entregar uma Coroa de Flores Douradas para Galadriel
-E 1 13708 5 17       Entregar uma Harpa Dourada para Galadriel
-M 0 13706 1 13798    Colocar Celeborn sobre um Talan
-E 1 13709 5 12       Entregar o Manto do Senhor de Lï¿½rien para Celeborn
-E 1 3810 1 17        Card Lamina de Alaric(3810) com Celeborn(13706)
-M 0 13707 14 13729   Colocar um Elfo de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de Lï¿½rien
-E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de Lï¿½rien
-M 0 13707 14 13729   Colocar um Elfo de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de Lï¿½rien
-E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de Lï¿½rien
-M 0 13707 14 13732   Colocar um Elfo de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de Lï¿½rien
-E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de Lï¿½rien
-M 0 13707 14 13732   Colocar um Elfo de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de Lï¿½rien
-E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de Lï¿½rien
-M 0 13707 14 13759   Colocar um Elfo de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de Lï¿½rien
-E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de Lï¿½rien
-M 0 13707 14 13759   Colocar um Elfo de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de Lï¿½rien
-E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de Lï¿½rien
-M 0 13707 14 13774   Colocar um Elfo de Lï¿½rien nos Jardins de Caras Galadhon 
-E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de Lï¿½rien
-E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de Lï¿½rien
-M 0 13707 14 13793   Colocar um Elfo de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de Lï¿½rien
-E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de Lï¿½rien
-M 0 13707 14 13771   Colocar um Elfo de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de Lï¿½rien
-E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de Lï¿½rien
-M 0 13707 14 13785   Colocar um Elfo de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de Lï¿½rien
-E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de Lï¿½rien
-M 0 13707 14 13787   Colocar um Elfo de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de Lï¿½rien
-E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de Lï¿½rien
-M 0 13707 14 13788   Colocar um Elfo de Lï¿½rien na Monumental Fonte de Pedra de Caras Galadhon
-E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de Lï¿½rien
-E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de Lï¿½rien
-M 0 13707 14 13794   Colocar um Elfo de Lï¿½rien num Belo Passeio Branco
-E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de Lï¿½rien
-E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de Lï¿½rien
-M 0 13707 14 13797   Colocar um Elfo de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para um Elfo de Lï¿½rien
-E 1 13713 17 16      Entregar um Arco dos Galadhrim para um Elfo de Lï¿½rien
-M 0 13708 10 13778   Colocar uma Elfa de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de Lï¿½rien
-G 1 13724 5          Entregar um Cacho de Flores Douradas a Elfa
-M 0 13708 10 13782   Colocar uma Elfa de Lï¿½rien num Belo Passeio Branco
-E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de Lï¿½rien
-G 1 13724 5          Entregar um Cacho de Flores Douradas a Elfa
-M 0 13708 10 13773   Colocar uma Elfa de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de Lï¿½rien
-G 1 13724 5          Entregar um Cacho de Flores Douradas a Elfa
-M 0 13708 10 13780   Colocar uma Elfa de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de Lï¿½rien
-G 1 13724 5          Entregar um Cacho de Flores Douradas a Elfa
-M 0 13708 10 13790   Colocar uma Elfa de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de Lï¿½rien
-G 1 13724 5          Entregar um Cacho de Flores Douradas a Elfa
-M 0 13708 10 13793   Colocar uma Elfa de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de Lï¿½rien
-M 0 13708 10 13795   Colocar uma Elfa de Lï¿½rien no Final do Passeio Branco
-E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de Lï¿½rien
-M 0 13708 10 13785   Colocar uma Elfa de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de Lï¿½rien
-M 0 13708 10 13775   Colocar uma Elfa de Lï¿½rien nos Jardins de Caras Galadhon
-E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de Lï¿½rien
-M 0 13708 10 13787   Colocar uma Elfa de Lï¿½rien sobre um Talan
-E 1 13714 24 12      Entregar um Manto Cinza para uma Elfa de Lï¿½rien
-M 0 13709 6 13788    Colocar uma Crianï¿½a Elfa na Monumental Fonte de Pedra de Caras Galadhon
-E 1 13718 6 0        Entregar uma Lamparina Prateada para a Crianï¿½a Elfa
-G 1 13727 6          Entregar um Pedaï¿½o de Lembas a uma Crianï¿½a Elfa
-M 0 13709 6 13778    Colocar uma Crianï¿½a Elfa sobre um Talan 
-E 1 13718 6 0        Entregar uma Lamparina Prateada para a Crianï¿½a Elfa
-G 1 13727 6          Entregar um Pedaï¿½o de Lembas a uma Crianï¿½a Elfa
-M 0 13709 6 13773    Colocar uma Crianï¿½a Elfa sobre um Talan 
-E 1 13718 6 0        Entregar uma Lamparina Prateada para a Crianï¿½a Elfa
-G 1 13727 6          Entregar um Pedaï¿½o de Lembas a uma Crianï¿½a Elfa
-M 0 13709 6 13771    Colocar uma Crianï¿½a Elfa sobre um Talan 
-E 1 13718 6 0        Entregar uma Lamparina Prateada para a Crianï¿½a Elfa
-G 1 13727 6          Entregar um Pedaï¿½o de Lembas a uma Crianï¿½a Elfa
-M 0 13709 6 13769    Colocar uma Crianï¿½a Elfa nos Jardins de Caras Galadhon 
-E 1 13718 6 0        Entregar uma Lamparina Prateada para a Crianï¿½a Elfa
-G 1 13727 6          Entregar um Pedaï¿½o de Lembas a uma Crianï¿½a Elfa
-M 0 13709 6 13786    Colocar uma Crianï¿½a Elfa numa Bela Escada sobre um tronco de Mallorn
-E 1 13718 6 0        Entregar uma Lamparina Prateada para a Crianï¿½a Elfa
-G 1 13727 6          Entregar um Pedaï¿½o de Lembas a uma Crianï¿½a Elfa
-M 0 13710 8 13756    Colocar um Pï¿½ssaro Prateado em Cerin Amroth
-M 0 13710 8 13716    Colocar um Pï¿½ssaro Prateado na Floresta de Lothlï¿½rien
-M 0 13710 8 13735    Colocar um Pï¿½ssaro Prateado na Floresta de Lothlï¿½rien
-M 0 13710 8 13761    Colocar um Pï¿½ssaro Prateado na Floresta de Lothlï¿½rien
-M 0 13710 8 13747    Colocar um Pï¿½ssaro Prateado na Colina de Amroth
-M 0 13710 8 13776    Colocar um Pï¿½ssaro Prateado nos Jardins de Caras Galadhon
-M 0 13710 8 13799    Colocar um Pï¿½ssaro Prateado no Espelho de Galadriel
-M 0 13710 8 13788    Colocar um Pï¿½ssaro Prateado na Monumental Fonte de Pedra de Caras Galadhon
-M 0 13711 8 13714    Colocar um Esquilo Dourado na Floresta de Lothlï¿½rien
-M 0 13711 8 13751    Colocar um Esquilo Dourado na Colina de Amroth
-M 0 13711 8 13718    Colocar um Esquilo Dourado na Floresta de Lothlï¿½rien
-M 0 13711 8 13743    Colocar um Esquilo Dourado na Floresta Dourada de Lothlï¿½rien
-M 0 13711 8 13734    Colocar um Esquilo Dourado na Floresta Dourada de Lothlï¿½rien
-M 0 13711 8 13791    Colocar um Esquilo Dourado em Caras Galadhon
-M 0 13711 8 13768    Colocar um Esquilo Dourado nos Jardins de Caras Galadhon
-M 0 13711 8 13783    Colocar um Esquilo Dourado em Caras Galadhon
-*
-* Colocar Objs
-*
-R 0 13799 13705      Retirar um Altar de Pedras do Espelho de Galadriel
-O 0 13705 1 13799    Colocar um novo Altar de Pedras no Espelho de Galadriel
-R 0 13799 13704      Retirar o Espelho de Galadriel do Jardim Fechado
-O 0 13704 1 13799    Colocar um novo Espelho de Galadriel no Jardim Fechado
-R 0 13799 13706      Retirar uma Fonte do Espelho de Galadriel
-O 0 13706 1 13799    Colocar uma nova Fonte no Espelho de Galadriel
-R 0 13788 13719      Retirar uma Fonte de Pedra de Caras Galadhon
-O 0 13719 1 13788    Colocar uma nova Fonte de Pedra em Caras Galadhon
-R 0 13774 13720      Retirar as Estatuas dos Jardins de Caras Galadhon
-O 0 13720 1 13774    Colocar novas Estatuas nos Jardins de Caras Galadhon
-R 0 13707 13721      Retirar a Nascente do Celebrant de sua Nascente
-O 0 13721 1 13707    Colocar uma Nova Nascente do Celebrant em sua Nascente
-R 0 13764 13722      Retirar um Barco ï¿½lfico do Veio de Prata
-O 0 13722 1 13764    Colocar um novo Barco ï¿½lfico no Veio de Prata
-R 0 13710 13723      Retirar uma Athelas do Campo Verde
-O 0 13723 1 13710    Colocar uma nova Athelas no Campo Verde
-R 0 13724 13725      Retirar uma Mallorn da Floresta Dourada de Lothlï¿½rien
-O 0 13725 9 13724    Colocar uma nova Mallorn na Floresta Dourada de Lothlï¿½rien
-R 0 13738 13725      Retirar uma Mallorn da Floresta Dourada de Lothlï¿½rien
-O 0 13725 9 13738    Colocar uma nova Mallorn na Floresta Dourada de Lothlï¿½rien
-R 0 13745 13725      Retirar uma Mallorn da Floresta Dourada de Lothlï¿½rien
-O 0 13725 9 13745    Colocar uma nova Mallorn na Floresta Dourada de Lothlï¿½rien
-R 0 13762 13725      Retirar uma Mallorn da Floresta Dourada de Lothlï¿½rien
-O 0 13725 9 13762    Colocar uma nova Mallorn na Floresta Dourada de Lothlï¿½rien
-R 0 13774 13725      Retirar uma Mallorn dos Jardins de Caras Galadhon
-O 0 13725 9 13774    Colocar uma nova Mallorn dos Jardins de Caras Galadhon
-R 0 13775 13725      Retirar uma Mallorn dos Jardins de Caras Galadhon
-O 0 13725 9 13775    Colocar uma nova Mallorn dos Jardins de Caras Galadhon
-R 0 13776 13725      Retirar uma Mallorn dos Jardins de Caras Galadhon
-O 0 13725 9 13776    Colocar uma nova Mallorn dos Jardins de Caras Galadhon
-R 0 13768 13725      Retirar uma Mallorn dos Jardins de Caras Galadhon
-O 0 13725 9 13768    Colocar uma nova Mallorn dos Jardins de Caras Galadhon
-R 0 13769 13725      Retirar uma Mallorn dos Jardins de Caras Galadhon
-O 0 13725 9 13769    Colocar uma nova Mallorn dos Jardins de Caras Galadhon
-R 0 13733 13726      Retirar uma Folha de Mallorn da Floresta Dourada de Lothlï¿½rien
-O 0 13726 5 13733    Colocar uma nova Folha de Mallorn na Floresta Dourada de Lothlï¿½rien
-R 0 13736 13726      Retirar uma Folha de Mallorn da Floresta Dourada de Lothlï¿½rien
-O 0 13726 5 13736    Colocar uma nova Folha de Mallorn na Floresta Dourada de Lothlï¿½rien
-R 0 13741 13726      Retirar uma Folha de Mallorn da Floresta Dourada de Lothlï¿½rien
-O 0 13726 5 13741    Colocar uma nova Folha de Mallorn na Floresta Dourada de Lothlï¿½rien
-R 0 13791 13726      Retirar uma Folha de Mallorn de Caras Galadhon
-O 0 13726 5 13791    Colocar uma nova Folha em Caras Galadhon
-R 0 13781 13726      Retirar uma Folha de Mallorn de Caras Galadhon
-O 0 13726 5 13781    Colocar uma nova Folha em Caras Galadhon
-R 0 13768 13729      Retirar uma Fumellar dos Jardins de Caras Galadhon
-O 0 13729 4 13768    Colocar uma nova Fumellar nos Jardins de Caras Galadhon
-R 0 13769 13729      Retirar uma Fumellar dos Jardins de Caras Galadhon
-O 0 13729 4 13769    Colocar uma nova Fumellar nos Jardins de Caras Galadhon
-R 0 13775 13729      Retirar uma Fumellar dos Jardins de Caras Galadhon
-O 0 13729 4 13775    Colocar uma nova Fumellar nos Jardins de Caras Galadhon
-R 0 13776 13729      Retirar uma Fumellar dos Jardins de Caras Galadhon
-O 0 13729 4 13776    Colocar uma nova Fumellar nos Jardins de Caras Galadhon
-*
-* Ajustando as Portas
-*
-D 0 13760 0 2       Ajustando o Portï¿½o de Madeira de Caras Galadhon (Lado de Fora)
-D 0 13774 2 2       Ajustando o Portï¿½o de Madeira de Caras Galadhon (Lado de Dentro)
+13700 13799 180 1 abk 0 0 0 -1 -1
+M 0 13702 1 13797 	(Haldir de LÃ³rien)
+E 1 13717 5 0 	(um impetuoso pássaro dourado)
+E 1 13713 17 16 	(um belo arco dos Galadhrim)
+G 1 13728 3 -1 	(uma corda de hithlain)
+M 0 13703 1 13729 	(RÃºmil de LÃ³rien)
+E 1 13715 5 14 	(um lindo bracelete de Lórien)
+E 1 13713 17 16 	(um belo arco dos Galadhrim)
+G 1 13728 3 -1 	(uma corda de hithlain)
+M 0 13704 1 13732 	(Orophin de LÃ³rien)
+E 1 13716 5 7 	(um par de perneiras prateadas de Lórien)
+E 1 13713 17 16 	(um belo arco dos Galadhrim)
+G 1 13728 3 -1 	(uma corda de hithlain)
+M 0 13705 1 13798 	(Galadriel)
+E 1 13707 5 6 	(uma majestosa coroa de flores douradas)
+E 1 13708 5 17 	(a bela harpa dourada da senhora de Lórien)
+M 0 13706 1 13798 	(Celeborn)
+E 1 13709 5 12 	(o magnífico manto do senhor de Lórien)
+E 1 3810 1 17 	(o Card LÃ¢mina Ã‰lfica de Alaric)
+M 0 13707 14 13729 	(um elfo de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+E 1 13713 17 16 	(um belo arco dos Galadhrim)
+M 0 13707 14 13729 	(um elfo de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+E 1 13713 17 16 	(um belo arco dos Galadhrim)
+M 0 13707 14 13732 	(um elfo de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+E 1 13713 17 16 	(um belo arco dos Galadhrim)
+M 0 13707 14 13732 	(um elfo de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+E 1 13713 17 16 	(um belo arco dos Galadhrim)
+M 0 13707 14 13759 	(um elfo de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+E 1 13713 17 16 	(um belo arco dos Galadhrim)
+M 0 13707 14 13759 	(um elfo de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+E 1 13713 17 16 	(um belo arco dos Galadhrim)
+M 0 13707 14 13774 	(um elfo de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+E 1 13713 17 16 	(um belo arco dos Galadhrim)
+M 0 13707 14 13793 	(um elfo de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+E 1 13713 17 16 	(um belo arco dos Galadhrim)
+M 0 13707 14 13771 	(um elfo de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+E 1 13713 17 16 	(um belo arco dos Galadhrim)
+M 0 13707 14 13785 	(um elfo de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+E 1 13713 17 16 	(um belo arco dos Galadhrim)
+M 0 13707 14 13787 	(um elfo de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+E 1 13713 17 16 	(um belo arco dos Galadhrim)
+M 0 13707 14 13788 	(um elfo de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+E 1 13713 17 16 	(um belo arco dos Galadhrim)
+M 0 13707 14 13794 	(um elfo de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+E 1 13713 17 16 	(um belo arco dos Galadhrim)
+M 0 13707 14 13797 	(um elfo de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+E 1 13713 17 16 	(um belo arco dos Galadhrim)
+M 0 13708 10 13778 	(uma elfa de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+G 1 13724 5 -1 	(um belo cacho de flores douradas de Lórien)
+M 0 13708 10 13782 	(uma elfa de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+G 1 13724 5 -1 	(um belo cacho de flores douradas de Lórien)
+M 0 13708 10 13773 	(uma elfa de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+G 1 13724 5 -1 	(um belo cacho de flores douradas de Lórien)
+M 0 13708 10 13780 	(uma elfa de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+G 1 13724 5 -1 	(um belo cacho de flores douradas de Lórien)
+M 0 13708 10 13790 	(uma elfa de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+G 1 13724 5 -1 	(um belo cacho de flores douradas de Lórien)
+M 0 13708 10 13793 	(uma elfa de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+M 0 13708 10 13795 	(uma elfa de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+M 0 13708 10 13785 	(uma elfa de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+M 0 13708 10 13775 	(uma elfa de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+M 0 13708 10 13787 	(uma elfa de LÃ³rien)
+E 1 13714 24 12 	(um belo manto de Lórien)
+M 0 13709 6 13788 	(uma linda crianÃ§a elfa)
+E 1 13718 6 0 	(uma linda lamparina prateada)
+G 1 13727 6 -1 	(um pedaço de lembas)
+M 0 13709 6 13778 	(uma linda crianÃ§a elfa)
+E 1 13718 6 0 	(uma linda lamparina prateada)
+G 1 13727 6 -1 	(um pedaço de lembas)
+M 0 13709 6 13773 	(uma linda crianÃ§a elfa)
+E 1 13718 6 0 	(uma linda lamparina prateada)
+G 1 13727 6 -1 	(um pedaço de lembas)
+M 0 13709 6 13771 	(uma linda crianÃ§a elfa)
+E 1 13718 6 0 	(uma linda lamparina prateada)
+G 1 13727 6 -1 	(um pedaço de lembas)
+M 0 13709 6 13769 	(uma linda crianÃ§a elfa)
+E 1 13718 6 0 	(uma linda lamparina prateada)
+G 1 13727 6 -1 	(um pedaço de lembas)
+M 0 13709 6 13786 	(uma linda crianÃ§a elfa)
+E 1 13718 6 0 	(uma linda lamparina prateada)
+G 1 13727 6 -1 	(um pedaço de lembas)
+M 0 13710 8 13756 	(um lindo pÃ¡ssaro prateado)
+M 0 13710 8 13716 	(um lindo pÃ¡ssaro prateado)
+M 0 13710 8 13735 	(um lindo pÃ¡ssaro prateado)
+M 0 13710 8 13761 	(um lindo pÃ¡ssaro prateado)
+M 0 13710 8 13747 	(um lindo pÃ¡ssaro prateado)
+M 0 13710 8 13776 	(um lindo pÃ¡ssaro prateado)
+M 0 13710 8 13799 	(um lindo pÃ¡ssaro prateado)
+M 0 13710 8 13788 	(um lindo pÃ¡ssaro prateado)
+M 0 13711 8 13714 	(um belo esquilo dourado)
+M 0 13711 8 13751 	(um belo esquilo dourado)
+M 0 13711 8 13718 	(um belo esquilo dourado)
+M 0 13711 8 13743 	(um belo esquilo dourado)
+M 0 13711 8 13734 	(um belo esquilo dourado)
+M 0 13711 8 13791 	(um belo esquilo dourado)
+M 0 13711 8 13768 	(um belo esquilo dourado)
+M 0 13711 8 13783 	(um belo esquilo dourado)
+R 0 13799 13705 -1 	(um altar de pedras)
+O 0 13705 1 13799 	(um altar de pedras)
+R 0 13799 13704 -1 	(o espelho de Galadriel)
+O 0 13704 1 13799 	(o espelho de Galadriel)
+R 0 13799 13706 -1 	(uma fonte)
+O 0 13706 1 13799 	(uma fonte)
+R 0 13788 13719 -1 	(a fonte de pedra de Caras Galadhon)
+O 0 13719 1 13788 	(a fonte de pedra de Caras Galadhon)
+R 0 13774 13720 -1 	(as formosas estatuas do jardim de Lórien)
+O 0 13720 1 13774 	(as formosas estatuas do jardim de Lórien)
+R 0 13707 13721 -1 	(a linda nascente do Celebrant)
+O 0 13721 1 13707 	(a linda nascente do Celebrant)
+R 0 13764 13722 -1 	(um sublime barco élfico)
+O 0 13722 1 13764 	(um sublime barco élfico)
+R 0 13710 13723 -1 	(uma folha de athelas)
+O 0 13723 1 13710 	(uma folha de athelas)
+R 0 13724 13725 -1 	(uma gigantesca mallorn)
+O 0 13725 9 13724 	(uma gigantesca mallorn)
+R 0 13738 13725 -1 	(uma gigantesca mallorn)
+O 0 13725 9 13738 	(uma gigantesca mallorn)
+R 0 13745 13725 -1 	(uma gigantesca mallorn)
+O 0 13725 9 13745 	(uma gigantesca mallorn)
+R 0 13762 13725 -1 	(uma gigantesca mallorn)
+O 0 13725 9 13762 	(uma gigantesca mallorn)
+R 0 13774 13725 -1 	(uma gigantesca mallorn)
+O 0 13725 9 13774 	(uma gigantesca mallorn)
+R 0 13775 13725 -1 	(uma gigantesca mallorn)
+O 0 13725 9 13775 	(uma gigantesca mallorn)
+R 0 13776 13725 -1 	(uma gigantesca mallorn)
+O 0 13725 9 13776 	(uma gigantesca mallorn)
+R 0 13768 13725 -1 	(uma gigantesca mallorn)
+O 0 13725 9 13768 	(uma gigantesca mallorn)
+R 0 13769 13725 -1 	(uma gigantesca mallorn)
+O 0 13725 9 13769 	(uma gigantesca mallorn)
+R 0 13733 13726 -1 	(uma folha dourada de mallorn)
+O 0 13726 5 13733 	(uma folha dourada de mallorn)
+R 0 13736 13726 -1 	(uma folha dourada de mallorn)
+O 0 13726 5 13736 	(uma folha dourada de mallorn)
+R 0 13741 13726 -1 	(uma folha dourada de mallorn)
+O 0 13726 5 13741 	(uma folha dourada de mallorn)
+R 0 13791 13726 -1 	(uma folha dourada de mallorn)
+O 0 13726 5 13791 	(uma folha dourada de mallorn)
+R 0 13781 13726 -1 	(uma folha dourada de mallorn)
+O 0 13726 5 13781 	(uma folha dourada de mallorn)
+R 0 13768 13729 -1 	(uma perfumada fumellar)
+O 0 13729 4 13768 	(uma perfumada fumellar)
+R 0 13769 13729 -1 	(uma perfumada fumellar)
+O 0 13729 4 13769 	(uma perfumada fumellar)
+R 0 13775 13729 -1 	(uma perfumada fumellar)
+O 0 13729 4 13775 	(uma perfumada fumellar)
+R 0 13776 13729 -1 	(uma perfumada fumellar)
+O 0 13729 4 13776 	(uma perfumada fumellar)
+D 0 13760 0 2 	(O Monumental Portão de Madeira)
+D 0 13774 2 2 	(Caras Galadhon, a Cidade dos Galadhrim)
 S
+$

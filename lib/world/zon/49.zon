@@ -1,81 +1,80 @@
 #49
 Vitalia~
 A Grande Árvore dos Inciantes~
-4900 4999 30 2 0 0 0 0 -1 -1
--1
-O 0 4905 1 4905 	
-P 1 4907 20 4905 	
-P 1 4908 20 4905 	
-P 1 4909 20 4905 	
-P 1 4906 20 4905 	
-D 0 4904 2 1 	
-D 0 4900 0 1 	
-M 0 4906 3 4906 
-M 0 4906 3 4922 	
-M 0 4906 3 4920 	
-M 0 4905 3 4921 	
-M 0 4905 3 4911 	
-M 0 4905 3 4923 	
-M 0 4904 2 4929 	
-M 0 4904 2 4924 	
-M 0 4903 3 4912 	
-M 0 4903 3 4913 
-M 0 4903 3 4914 	
-M 0 4902 3 4926 	
-M 0 4902 3 4910 	
-M 0 4902 3 4909 	
-M 0 4901 3 4907 	
-M 0 4901 3 4917 	
-M 0 4901 3 4919 	
-M 0 4900 3 4927 	
-M 0 4900 3 4918 	
-M 0 4900 3 4908 	
-M 0 4916 2 4949 	
-E 1 4902 200 8 	
-M 0 4916 2 4947 	
-E 1 4902 100 8 	
-M 0 4915 3 4948 	
-E 1 4903 100 18 	
-M 0 4915 3 4936 	
-E 1 4903 100 18 	
-M 0 4918 3 4950 	
-M 0 4918 3 4940 	
-M 0 4918 3 4939 
-M 0 4917 2 4935 	
-M 0 4917 2 4937 	
-M 0 4915 3 4953 	
-M 0 4908 2 4941 	
-E 1 4900 100 16 	
-M 0 4908 2 4951 	
-E 1 4900 100 16 	
-M 0 4907 2 4942 
-E 1 4901 100 17 	
-M 0 4910 2 4943 	
-M 0 4909 3 4943
-E 1 3834 7 17      Card Atom(3834) com Atom(4909)
-M 0 4910 2 4945 	
-M 0 4909 3 4934 
-M 0 4909 3 4933 	
-M 0 4907 2 4932 	
-M 0 4914 2 4967
-M 0 4914 2 4966 	
-M 0 4913 4 4964 	
-M 0 4913 4 4974 
-M 0 4913 4 4973 	
-M 0 4913 4 4977 	
-M 0 4912 4 4954 	
-M 0 4912 4 4958 	
-M 0 4912 4 4968 	
-M 0 4912 4 4969 	
-M 0 4911 5 4959 	
-E 1 4904 100 2 	
-M 0 4911 5 4972 	
-E 1 4904 100 2 	
-M 0 4911 5 4963 	
-E 1 4904 100 2 	
-M 0 4911 5 4955 	
-E 1 4904 100 2 	
-M 0 4911 5 4956 	
-E 1 4904 100 2 	
+4900 4999 30 2 k 0 0 0 -1 -1
+O 0 4905 1 4905 	(um pequeno peitoral verde)
+P 1 4907 20 4905 	(um colar de folhas)
+P 1 4908 20 4905 	(um punhal em forma de folha)
+P 1 4909 20 4905 	(cal�as de couro verde)
+P 1 4906 20 4905 	(uma varinha de novato)
+D 0 4904 2 1 	(No Interior do Tronco)
+D 0 4900 0 1 	(O Galho Mais Baixo da Grande �rvore)
+M 0 4906 3 4906 	(um macaco carnívoro)
+M 0 4906 3 4922 	(um macaco carnívoro)
+M 0 4906 3 4920 	(um macaco carnívoro)
+M 0 4905 3 4921 	(um babuíno selvagem)
+M 0 4905 3 4911 	(um babuíno selvagem)
+M 0 4905 3 4923 	(um babuíno selvagem)
+M 0 4904 2 4929 	(uma rã)
+M 0 4904 2 4924 	(uma rã)
+M 0 4903 3 4912 	(um jaculi)
+M 0 4903 3 4913 	(um jaculi)
+M 0 4903 3 4914 	(um jaculi)
+M 0 4902 3 4926 	(um leopardo manchado)
+M 0 4902 3 4910 	(um leopardo manchado)
+M 0 4902 3 4909 	(um leopardo manchado)
+M 0 4901 3 4907 	(um gato elfo)
+M 0 4901 3 4917 	(um gato elfo)
+M 0 4901 3 4919 	(um gato elfo)
+M 0 4900 3 4927 	(um furtivo jaguar marrom)
+M 0 4900 3 4918 	(um furtivo jaguar marrom)
+M 0 4900 3 4908 	(um furtivo jaguar marrom)
+M 0 4916 2 4949 	(um grigue)
+E 1 4902 200 8 	(as botas de salto Grigue)
+M 0 4916 2 4947 	(um grigue)
+E 1 4902 100 8 	(as botas de salto Grigue)
+M 0 4915 3 4948 	(um xamã grigue)
+E 1 4903 100 18 	(um par de asas grigue)
+M 0 4915 3 4936 	(um xamã grigue)
+E 1 4903 100 18 	(um par de asas grigue)
+M 0 4918 3 4950 	(uma criança grigue)
+M 0 4918 3 4940 	(uma criança grigue)
+M 0 4918 3 4939 	(uma criança grigue)
+M 0 4917 2 4935 	(uma grigue)
+M 0 4917 2 4937 	(uma grigue)
+M 0 4915 3 4953 	(um xamã grigue)
+M 0 4908 2 4941 	(um atom)
+E 1 4900 100 16 	(uma lan�a Atom)
+M 0 4908 2 4951 	(um atom)
+E 1 4900 100 16 	(uma lan�a Atom)
+M 0 4907 2 4942 	(um xamã atom)
+E 1 4901 100 17 	(um livro com uma capa de casca de �rvore)
+M 0 4910 2 4943 	(uma criança atom)
+M 0 4909 3 4943 	(uma atom)
+E 1 3834 7 17 	(o Card Atoms)
+M 0 4910 2 4945 	(uma criança atom)
+M 0 4909 3 4934 	(uma atom)
+M 0 4909 3 4933 	(uma atom)
+M 0 4907 2 4932 	(um xamã atom)
+M 0 4914 2 4967 	(um ettercap)
+M 0 4914 2 4966 	(um ettercap)
+M 0 4913 4 4964 	(um pequeno duende)
+M 0 4913 4 4974 	(um pequeno duende)
+M 0 4913 4 4973 	(um pequeno duende)
+M 0 4913 4 4977 	(um pequeno duende)
+M 0 4912 4 4954 	(uma sílfide)
+M 0 4912 4 4958 	(uma sílfide)
+M 0 4912 4 4968 	(uma sílfide)
+M 0 4912 4 4969 	(uma sílfide)
+M 0 4911 5 4959 	(uma dríade)
+E 1 4904 100 2 	(um pequeno anel brilhante)
+M 0 4911 5 4972 	(uma dríade)
+E 1 4904 100 2 	(um pequeno anel brilhante)
+M 0 4911 5 4963 	(uma dríade)
+E 1 4904 100 2 	(um pequeno anel brilhante)
+M 0 4911 5 4955 	(uma dríade)
+E 1 4904 100 2 	(um pequeno anel brilhante)
+M 0 4911 5 4956 	(uma dríade)
+E 1 4904 100 2 	(um pequeno anel brilhante)
 S
 $

@@ -1,306 +1,297 @@
 #107
 Vitalia~
 OtÃ¡via~
-10700 10799 240 1 bd 0 0 0 -1 -1
--1
-*
-* Colocar os monstros
-*
-M 0 10701 8 10742    colocar o cidadï¿½o na praï¿½a florida
-E 1 10700 50 12      entregar o manto otaviano para o cidadï¿½o
-E 1 10701 20 16      entregar a lï¿½mina de diamante para o cidadï¿½o
-M 0 10702 8 10742    colocar a cidadï¿½ na praï¿½a florida
-E 1 10700 50 12      entregar o manto otaviano para a cidadï¿½
-E 1 10702 50 17      entregar a flor colorida para a cidadï¿½
-M 0 10705 12 10742   colocar a crianï¿½a otaviana na praï¿½a florida
-E 1 10700 50 12      entregar o manto otaviano para a crianï¿½a
-M 0 10720 7 10742    colocar um gumbly na praï¿½a florida
-E 1 10715 10 3       entregar a coleira de diamante para o gumbly
-M 0 10707 3 10767    colocar o jardineiro na praï¿½a dos anciï¿½es
-E 1 10717 20 17      entregar um buque de flores ao jardineiro
-M 0 10701 8 10746    colocar o cidadï¿½o na praï¿½a da alegria
-E 1 10700 50 12      entregar o manto otaviano para o cidadï¿½o
-E 1 10701 20 16      entregar a lï¿½mina de diamante para o cidadï¿½o
-M 0 10702 8 10746    colocar a cidadï¿½ na praï¿½a da alegria
-E 1 10700 50 12      entregar o manto otaviano para a cidadï¿½
-E 1 10702 50 17      entregar a flor colorida para a cidadï¿½
-M 0 10705 12 10746   colocar a crianï¿½a otaviana na praï¿½a da alegria
-E 1 10700 50 12      entregar o manto otaviano para a crianï¿½a
-M 0 10720 7 10746    colocar um gumbly na praï¿½a alegria
-E 1 10715 10 3       entregar a coleira de diamante para o gumbly
-M 0 10707 3 10746    colocar o jardineiro na praï¿½a da alegria
-E 1 10717 20 17      entregar um buque de flores ao jardineiro
-M 0 10716 4 10767    colocar um anï¿½iï¿½o otaviano na praï¿½a dos anciï¿½es
-E 1 10700 50 12      entregar o manto otaviano para um anciï¿½o
-M 0 10716 4 10767    colocar um anï¿½iï¿½o otaviano na praï¿½a dos anciï¿½es
-E 1 10700 50 12      entregar o manto otaviano para um anciï¿½o
-M 0 10716 4 10767    colocar um anï¿½iï¿½o otaviano na praï¿½a dos anciï¿½es
-E 1 10700 50 12      entregar o manto otaviano para um anciï¿½o
-M 0 10707 3 10742    colocar o jardineiro na florida praï¿½a
-E 1 10717 20 17      entregar um buque de flores ao jardineiro
-M 0 10701 8 10769    colocar o cidadï¿½o na praï¿½a da amizade
-E 1 10700 50 12      entregar o manto otaviano para o cidadï¿½o
-E 1 10701 20 16      entregar a lï¿½mina de diamante para o cidadï¿½o
-M 0 10702 8 10769    colocar a cidadï¿½ na praï¿½a na praï¿½a da amizade
-E 1 10700 50 12      entregar o manto otaviano para a cidadï¿½
-E 1 10702 50 17      entregar a flor colorida para a cidadï¿½
-M 0 10705 12 10769   colocar a crianï¿½a otaviana na praï¿½a da amizade
-E 1 10700 50 12      entregar o manto otaviano para a crianï¿½a
-M 0 10720 7 10769    colocar um gumbly na praï¿½a da amizade
-E 1 10715 10 3       entregar a coleira de diamante para o gumbly
-M 0 10716 4 10767    colocar um anï¿½iï¿½o otaviano na praï¿½a da amizade
-E 1 10700 50 12      entregar o manto otaviano para um anciï¿½o
-M 0 10703 1 10730    colocar Fireheart na residï¿½ncia de Fireheart
-E 1 10703 1 16       entregar a espada de fogo a Fireheart
-M 0 10704 1 10735    colocar Waterheart na residï¿½ncia de Waterheart
-E 1 10714 1 16       entregar o chicote de ï¿½gua a Waterheart
-M 0 10710 1 10766    colocar a profetisa na residï¿½ncia da profetisa
-E 1 10719 1 19       entregar o brinco lua para a profetisa
-M 0 10728 1 10770    colocar a poetisa na residï¿½ncia da poetisa
-E 1 10718 1 19       entregar o brinco sol para a poetisa
-G 1 10725 20 -1      entregar uma fruta vermelha a poetisa
-M 0 10708 1 10732    colocar o escultor no edifico das artes
-E 1 10711 20 17      entregar uma picareta ao escultor
-M 0 10709 1 10733    colocar um pintor no atelier
-E 1 10712 20 16      entregar um pincel ao pintor
-E 1 10713 20 17      entregar uma paleta de cores ao pintor
-M 0 10702 8 10740    colocar a cidadï¿½ numa casa otaviana
-E 1 10700 50 12      entregar o manto otaviano para a cidadï¿½
-G 1 10725 20 -1      entregar uma fruta vermelha para a cidadï¿½
-M 0 10705 12 10740   colocar a crianï¿½a otaviana numa casa otaviana
-E 1 10700 50 12      entregar o manto otaviano para a crianï¿½a
-M 0 10701 8 10750    colocar um cidadï¿½o numa casa otaviana
-E 1 10700 50 12      entregar o manto otaviano para a cidadï¿½o
-E 1 10701 20 16      entregar a lï¿½mina de diamante para o cidadï¿½o
-M 0 10705 12 10750   colocar a crianï¿½a otaviana numa casa otaviana
-E 1 10700 50 12      entregar o manto otaviano para a crianï¿½a
-M 0 10702 8 10758    colocar a cidadï¿½ numa casa otaviana
-E 1 10700 50 12      entregar o manto otaviano para a cidadï¿½
-G 1 10725 20 -1         entregar uma fruta vermelha para a cidadï¿½
-M 0 10705 12 10758   colocar a crianï¿½a otaviana numa casa otaviana
-E 1 10700 50 12      entregar o manto otaviano para a crianï¿½a
-M 0 10701 8 10748    colocar um cidadï¿½o numa casa otaviana
-E 1 10700 50 12      entregar o manto otaviano para a cidadï¿½o
-E 1 10701 20 16      entregar a lï¿½mina de diamante para o cidadï¿½o
-M 0 10705 12 10748   colocar a crianï¿½a otaviana numa casa otaviana
-E 1 10700 50 12      entregar o manto otaviano para a crianï¿½a
-M 0 10705 12 10760   colocar a crianï¿½a otaviana numa casa otaviana
-E 1 10700 50 12      entregar o manto otaviano para a crianï¿½a
-M 0 10705 12 10760   colocar a crianï¿½a otaviana numa casa otaviana
-E 1 10700 50 12      entregar o manto otaviano para a crianï¿½a
-M 0 10720 7 10760    colocar um gumbly numa casa otaviana
-E 1 10715 10 3       entregar a coleira de diamante para o gumbly
-M 0 10705 12 10764   colocar a crianï¿½a otaviana numa casa otaviana
-E 1 10700 50 12      entregar o manto otaviano para a crianï¿½a
-M 0 10702 8 10764    colocar a cidadï¿½ numa casa otaviana
-E 1 10700 50 12      entregar o manto otaviano para a cidadï¿½
-G 1 10725 20 -1      entregar uma fruta vermelha para a cidadï¿½
-M 0 10705 12 10764   colocar a crianï¿½a otaviana numa casa otaviana
-E 1 10700 50 12      entregar o manto otaviano para a crianï¿½a
-M 0 10720 7 10760    colocar um gumbly numa casa otaviana
-E 1 10715 10 3       entregar a coleira de diamante para o gumbly
-M 0 10716 1 10757    colocar um anciï¿½o no observatï¿½rio
-E 1 10700 50 12      entregar o manto otaviano para um anciï¿½o
-M 0 10701 8 10757    colocar um cidadï¿½o no observatï¿½rio
-E 1 10700 50 12      entregar o manto otaviano para a cidadï¿½o
-E 1 10701 20 16      entregar a lï¿½mina de diamante para o cidadï¿½o
-M 0 10705 12 10764   colocar a crianï¿½a otaviana no observatï¿½rio
-E 1 10700 50 12      entregar o manto otaviano para a crianï¿½a
-M 0 10712 14 10751   colocar um guarda real na sala dos lendï¿½rios
-E 1 10722 15 16      entregar a besta otaviana para o guarda real
-E 1 10700 50 12      entregar o manto otaviano para o guarda real
-M 0 10712 14 10751   colocar um guarda real na sala dos lendï¿½rios
-E 1 10722 15 16      entregar a besta otaviana para o guarda real
-E 1 10700 50 12      entregar o manto otaviano para o guarda real
-M 0 10712 14 10727   colocar um guarda real na entrada oeste
-E 1 10722 15 16      entregar a besta otaviana para o guarda real
-E 1 10700 50 12      entregar o manto otaviano para o guarda real
-M 0 10712 14 10727   colocar um guarda real na entrada oeste
-E 1 10722 15 16      entregar a besta otaviana para o guarda real
-E 1 10700 50 12      entregar o manto otaviano para o guarda real
-M 0 10712 14 10738   colocar um guarda real na entrada leste
-E 1 10722 15 16      entregar a besta otaviana para o guarda real
-E 1 10700 50 12      entregar o manto otaviano para o guarda real
-M 0 10712 14 10738   colocar um guarda real na entrada leste
-E 1 10722 15 16      entregar a besta otaviana para o guarda real
-E 1 10700 50 12      entregar o manto otaviano para o guarda real
-M 0 10711 1 10771    colocar o trovador nos jardins reais
-E 1 10700 50 12      entregar o manto otaviano para o trovador
-M 0 10712 14 10771   colocar um guarda real nos jardins reais
-E 1 10722 15 16      entregar a besta otaviana para o guarda real
-E 1 10700 50 12      entregar o manto otaviano para o guarda real
-M 0 10712 14 10771   colocar um guarda real nos jardins reais
-E 1 10722 15 16      entregar a besta otaviana para o guarda real
-E 1 10700 50 12      entregar o manto otaviano para o guarda real
-M 0 10726 5 10771    colocar um pï¿½ssaro azul nos jardins reais
-M 0 10726 5 10731    colocar um pï¿½ssaro azul numa passarela
-M 0 10726 5 10738    colocar um pï¿½ssaro azul na entrada leste
-M 0 10726 5 10752    colocar um pï¿½ssaro azul numa passarela
-M 0 10706 3 10741    colocar um cidadï¿½o da limpeza numa passarela
-M 0 10706 3 10765    colocar um cidadï¿½o da limpeza numa passarela
-M 0 10706 3 10762    colocar um cidadï¿½o da limpeza no templo
-M 0 10701 8 10762    colocar o cidadï¿½o no templo
-E 1 10700 50 12      entregar o manto otaviano para o cidadï¿½o
-E 1 10701 20 16      entregar a lï¿½mina de diamante para o cidadï¿½o
-M 0 10702 8 10762    colocar a cidadï¿½ no templo
-E 1 10700 50 12      entregar o manto otaviano para a cidadï¿½
-E 1 10702 50 17      entregar a flor colorida para a cidadï¿½
-M 0 10717 1 10781    colocar Yasmim na varanda dos aposentos reais
-E 1 10716 1 12       entregar a redoma de ar para Yasmim
-E 1 10722 15 16      entregar a besta otaviana para Yasmim
-E 1 10737 1 6        entregar a coroa de diamante para Yasmim
-M 0 10712 14 10781   colocar um guarda real na varanda do aposento
-E 1 10722 15 16      entregar a besta otaviana para o guarda real
-E 1 10700 50 12      entregar o manto otaviano para o guarda real
-M 0 10712 14 10781   colocar um guarda real na varanda do aposento
-E 1 10722 15 16      entregar a besta otaviana para o guarda real
-E 1 10700 50 12      entregar o manto otaviano para o guarda real
-M 0 10712 14 10775   colocar um guarda real um corredor do palacio
-E 1 10722 15 16      entregar a besta otaviana para o guarda real
-E 1 10700 50 12      entregar o manto otaviano para o guarda real
-M 0 10712 14 10777   colocar um guarda real na sala da guarda
-E 1 10722 15 16      entregar a besta otaviana para o guarda real
-E 1 10700 50 12      entregar o manto otaviano para o guarda real
-M 0 10729 1 10776    colocar a cozinheira na cozinha do palacio
-E 1 10700 50 12      entregar o manto otaviano para a cozinheira
-M 0 10712 14 10772   colocar um guarda real na entrada do palacio
-E 1 10722 15 16      entregar a besta otaviana para o guarda real
-E 1 10700 50 12      entregar o manto otaviano para o guarda real
-M 0 10712 14 10772   colocar um guarda real na entrada do palacio
-E 1 10722 15 16      entregar a besta otaviana para o guarda real
-E 1 10700 50 12      entregar o manto otaviano para o guarda real
-M 0 10720 7 10780    colocar um gumbly nos aposentos reais
-E 1 10715 10 3       entregar a coleira de diamante para o gumbly
-M 0 10701 8 10755    colocar o cidadï¿½o no museu de Otï¿½via
-E 1 10700 50 12      entregar o manto otaviano para o cidadï¿½o
-E 1 10701 20 16      entregar a lï¿½mina de diamante para o cidadï¿½o
-M 0 10702 8 10763    colocar a cidadï¿½ na biblioteca de Otï¿½via
-E 1 10700 50 12      entregar o manto otaviano para a cidadï¿½
-E 1 10702 50 17      entregar a flor colorida para a cidadï¿½
-M 0 10705 12 10755   colocar a crianï¿½a otaviana no museu de Otï¿½via
-E 1 10700 50 12      entregar o manto otaviano para a crianï¿½a
-M 0 10718 2 10782    colocar um grifo dourado no topo da montanha
-E 1 10704 5 2        entregar anel armiliano para o grifo dourado
-M 0 10718 2 10721    colocar um grifo dourado no topo da montanha
-E 1 10705 5 2        entregar anel diomiriano para o grifo dourado
-M 0 10724 1 10722    colocar o guardiï¿½o da terra no arco-ï¿½ris
-E 1 10709 1 17       entregar o elemento terra para o guardiï¿½o
-M 0 10723 1 10723    colocar o guardiï¿½o do ar no arco-ï¿½ris
-E 1 10708 1 17       entregar o elemento ar para o guardiï¿½o
-M 0 10725 1 10724    colocar o guardiï¿½o do amor no arco-ï¿½ris
-E 1 10710 1 17       entregar o quinto elemento para o guardiï¿½o
-M 0 10722 1 10725    colocar o guardiï¿½o da ï¿½gua no arco-ï¿½ris
-E 1 10707 1 17       entregar o elemento ï¿½gua para o guardiï¿½o
-M 0 10721 1 10726    colocar o guardiï¿½o do fogo no arco-ï¿½ris
-E 1 10706 1 17       entregar o elemento fogo para o guardiï¿½o
-M 0 10727 10 10700   colocar um esquilo cinza na floresta boreal
-M 0 10720 7  10700   colocar um gumbly na floresta boreal
-M 0 10719 1 10702    colocar um cedro gigante na floresta boreal
-M 0 10726 5 10702    colocar um pï¿½ssaro azul na floresta boreal
-*
-* Colocar os objetos
-*
-R 0 10706 10723      retirar a piscina diomiriana 
-O 0 10723 2 10706    colocar uma nova piscina diomiriana
-R 0 10707 10723      retirar a piscina diomiriana 
-O 0 10723 2 10707    colocar uma nova piscina diomiriana
-R 0 10742 10724      retirar uma ï¿½rvore otaviana
-O 0 10724 4 10742    colocar uma nova ï¿½rvore otavaina
-P 1 10725 16 10724   colocar uma fruta vermelha dentro da ï¿½rvore
-P 1 10725 16 10724   colocar uma fruta vermelha dentro da ï¿½rvore
-P 1 10725 16 10724   colocar uma fruta vermelha dentro da ï¿½rvore
-P 1 10725 16 10724   colocar uma fruta vermelha dentro da ï¿½rvore
-R 0 10746 10724      retirar uma ï¿½rvore otaviana
-O 0 10724 4 10746    colocar uma nova ï¿½rvore otavaina
-P 1 10725 16 10724   colocar uma fruta vermelha dentro da ï¿½rvore
-P 1 10725 16 10724   colocar uma fruta vermelha dentro da ï¿½rvore
-P 1 10725 16 10724   colocar uma fruta vermelha dentro da ï¿½rvore
-P 1 10725 16 10724   colocar uma fruta vermelha dentro da ï¿½rvore
-R 0 10767 10724      retirar uma ï¿½rvore otaviana
-O 0 10724 4 10767    colocar uma nova ï¿½rvore otavaina
-P 1 10725 16 10724   colocar uma fruta vermelha dentro da ï¿½rvore
-P 1 10725 16 10724   colocar uma fruta vermelha dentro da ï¿½rvore
-P 1 10725 16 10724   colocar uma fruta vermelha dentro da ï¿½rvore
-P 1 10725 16 10724   colocar uma fruta vermelha dentro da ï¿½rvore
-R 0 10769 10724      retirar uma ï¿½rvore otaviana
-O 0 10724 4 10769    colocar uma nova ï¿½rvore otavaina
-P 1 10725 16 10724   colocar uma fruta vermelha dentro da ï¿½rvore
-P 1 10725 16 10724   colocar uma fruta vermelha dentro da ï¿½rvore
-P 1 10725 16 10724   colocar uma fruta vermelha dentro da ï¿½rvore
-P 1 10725 16 10724   colocar uma fruta vermelha dentro da ï¿½rvore
-R 0 10742 10726      retirar a fonte da praï¿½a florida
-O 0 10726 2 10742    colocar uma nova fonte na praï¿½a florida
-R 0 10769 10726      retirar a fonte da praï¿½a amizade
-O 0 10726 2 10769    colocar uma nova fonte na praï¿½a amizade
-R 0 10751 10727      retirar estatua da sala dos lendï¿½rios
-O 0 10727 1 10751    colocar nova estatua na sala dos lendï¿½rios
-R 0 10732 10728      retirar escultura do edifï¿½cio das artes
-O 0 10728 1 10732    colocar nova escultura no edifï¿½cio das artes
-R 0 10733 10729      retirar uma pintura do atelier de artes
-O 0 10729 1 10733    colocar uma nova pintura no atelier de artes
-R 0 10730 10730      retirar uma mesa de madeira
-O 0 10730 10 10730   colocar uma nova mesa de madeira
-R 0 10730 10731      retirar uma cama de madeira
-O 0 10731 10 10730   colocar uma nova cama de madeira
-R 0 10735 10730      retirar uma mesa de madeira
-O 0 10730 10 10735   colocar uma nova mesa de madeira
-R 0 10735 10731      retirar uma cama de madeira
-O 0 10731 10 10735   colocar uma nova cama de madeira
-R 0 10740 10730      retirar uma mesa de madeira
-O 0 10730 10 10740   colocar uma nova mesa de madeira
-R 0 10740 10731      retirar uma cama de madeira
-O 0 10731 10 10740   colocar uma nova cama de madeira
-R 0 10748 10730      retirar uma mesa de madeira
-O 0 10730 10 10748   colocar uma nova mesa de madeira
-R 0 10748 10731      retirar uma cama de madeira
-O 0 10731 10 10748   colocar uma nova cama de madeira
-R 0 10750 10730      retirar uma mesa de madeira
-O 0 10730 10 10750   colocar uma nova mesa de madeira
-R 0 10750 10731      retirar uma cama de madeira
-O 0 10731 10 10750   colocar uma nova cama de madeira
-R 0 10758 10730      retirar uma mesa de madeira
-O 0 10730 10 10758   colocar uma nova mesa de madeira
-R 0 10758 10731      retirar uma cama de madeira
-O 0 10731 10 10758   colocar uma nova cama de madeira
-R 0 10760 10730      retirar uma mesa de madeira
-O 0 10730 10 10760   colocar uma nova mesa de madeira
-R 0 10760 10731      retirar uma cama de madeira
-O 0 10731 10 10760   colocar uma nova cama de madeira
-R 0 10764 10730      retirar uma mesa de madeira
-O 0 10730 10 10764   colocar uma nova mesa de madeira
-R 0 10764 10731      retirar uma cama de madeira
-O 0 10731 10 10764   colocar uma nova cama de madeira
-R 0 10766 10730      retirar uma mesa de madeira
-O 0 10730 10 10766   colocar uma nova mesa de madeira
-R 0 10766 10731      retirar uma cama de madeira
-O 0 10731 10 10766   colocar uma nova cama de madeira
-R 0 10770 10730      retirar uma mesa de madeira
-O 0 10730 10 10770   colocar uma nova mesa de madeira
-R 0 10770 10731      retirar uma cama de madeira
-O 0 10731 10 10770   colocar uma nova cama de madeira
-R 0 10763 10732      retirar estante de madeira
-O 0 10732 1 10763    colocar nova estante de madeira
-P 1 10733 1 10732    colocar livro do ar dentro da estante
-P 1 10734 1 10732    colocar livro do fogo dentro da estante
-P 1 10735 1 10732    colocar livro da ï¿½gua dentro da estante
-P 1 10736 1 10732    colocar livro da terra dentro da estante
-*
-* Ajustar as passagens
-*
-D 0 10705 5 2        ajustar o alï¿½apï¿½o do lado de fora de Diomira
-D 0 10706 4 2        ajustar o alï¿½apï¿½o do lado de dentro de Diomira
-D 0 10706 6 1        ajustar portï¿½o de ferro (lado de fora)
-D 0 10709 8 1        ajustar portï¿½o de ferro (lado de dentro)
-D 0 10710 0 1        ajustar porta de ferro (lado de fora)
-D 0 10711 2 1        ajustar porta de ferro (lado de dentro)
-D 0 10775 0 1        ajustar porta de madeira (lado de fora)
-D 0 10775 2 1        ajustar porta de madeira (lado de fora)
-D 0 10775 7 1        ajustar porta de madeira (lado de fora)
-D 0 10776 2 1        ajustar porta de madeira (lado de dentro)
-D 0 10779 0 1        ajustar porta de madeira (lado de dentro)
-D 0 10777 9 1        ajustar porta de madeira (lado de dentro)
-D 0 10778 5 1        ajustar porta de madeira (lado de fora)
-D 0 10780 4 1        ajustar porta de madeira (lado de dentro)
-D 0 10792 5 2        ajustar o alï¿½apï¿½o do lado de fora de Armila
-D 0 10793 4 2        ajustar o alï¿½apï¿½o do lado de dentro de Armila
+10700 10799 240 1 bdk 0 0 0 -1 -1
+M 0 10701 8 10742 	(um cidadÃ£o otaviano)
+E 1 10700 50 12 	(um manto otaviano)
+E 1 10701 20 16 	(uma bela lâmina de diamante)
+M 0 10702 8 10742 	(uma cidadÃ£ otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+E 1 10702 50 17 	(Uma linda flor colorida)
+M 0 10705 12 10742 	(uma crianÃ§a otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10720 7 10742 	(um gumbly)
+E 1 10715 10 3 	(uma coleira de diamante)
+M 0 10707 3 10767 	(um jardineiro otaviano)
+E 1 10717 20 17 	(um lindo buquê de flores otavianas)
+M 0 10701 8 10746 	(um cidadÃ£o otaviano)
+E 1 10700 50 12 	(um manto otaviano)
+E 1 10701 20 16 	(uma bela lâmina de diamante)
+M 0 10702 8 10746 	(uma cidadÃ£ otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+E 1 10702 50 17 	(Uma linda flor colorida)
+M 0 10705 12 10746 	(uma crianÃ§a otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10720 7 10746 	(um gumbly)
+E 1 10715 10 3 	(uma coleira de diamante)
+M 0 10707 3 10746 	(um jardineiro otaviano)
+E 1 10717 20 17 	(um lindo buquê de flores otavianas)
+M 0 10716 4 10767 	(um anciÃ£o otaviano)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10716 4 10767 	(um anciÃ£o otaviano)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10716 4 10767 	(um anciÃ£o otaviano)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10707 3 10742 	(um jardineiro otaviano)
+E 1 10717 20 17 	(um lindo buquê de flores otavianas)
+M 0 10701 8 10769 	(um cidadÃ£o otaviano)
+E 1 10700 50 12 	(um manto otaviano)
+E 1 10701 20 16 	(uma bela lâmina de diamante)
+M 0 10702 8 10769 	(uma cidadÃ£ otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+E 1 10702 50 17 	(Uma linda flor colorida)
+M 0 10705 12 10769 	(uma crianÃ§a otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10720 7 10769 	(um gumbly)
+E 1 10715 10 3 	(uma coleira de diamante)
+M 0 10716 4 10767 	(um anciÃ£o otaviano)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10703 1 10730 	(Fireheart)
+E 1 10703 1 16 	(Uma espada de fogo)
+M 0 10704 1 10735 	(Waterheart)
+E 1 10714 1 16 	(um chicote de água)
+M 0 10710 1 10766 	(a profetisa otaviana)
+E 1 10719 1 19 	(o brinco lua)
+M 0 10728 1 10770 	(a poetisa otaviana)
+E 1 10718 1 19 	(o brinco sol)
+G 1 10725 20 -1 	(uma fruta vermelha)
+M 0 10708 1 10732 	(um escultor otaviano)
+E 1 10711 20 17 	(uma picareta de escultor)
+M 0 10709 1 10733 	(um pintor otaviano)
+E 1 10712 20 16 	(um pincel de madeira)
+E 1 10713 20 17 	(uma paleta de tintas)
+M 0 10702 8 10740 	(uma cidadÃ£ otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+G 1 10725 20 -1 	(uma fruta vermelha)
+M 0 10705 12 10740 	(uma crianÃ§a otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10701 8 10750 	(um cidadÃ£o otaviano)
+E 1 10700 50 12 	(um manto otaviano)
+E 1 10701 20 16 	(uma bela lâmina de diamante)
+M 0 10705 12 10750 	(uma crianÃ§a otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10702 8 10758 	(uma cidadÃ£ otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+G 1 10725 20 -1 	(uma fruta vermelha)
+M 0 10705 12 10758 	(uma crianÃ§a otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10701 8 10748 	(um cidadÃ£o otaviano)
+E 1 10700 50 12 	(um manto otaviano)
+E 1 10701 20 16 	(uma bela lâmina de diamante)
+M 0 10705 12 10748 	(uma crianÃ§a otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10705 12 10760 	(uma crianÃ§a otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10705 12 10760 	(uma crianÃ§a otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10720 7 10760 	(um gumbly)
+E 1 10715 10 3 	(uma coleira de diamante)
+M 0 10705 12 10764 	(uma crianÃ§a otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10702 8 10764 	(uma cidadÃ£ otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+G 1 10725 20 -1 	(uma fruta vermelha)
+M 0 10705 12 10764 	(uma crianÃ§a otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10720 7 10760 	(um gumbly)
+E 1 10715 10 3 	(uma coleira de diamante)
+M 0 10716 1 10757 	(um anciÃ£o otaviano)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10701 8 10757 	(um cidadÃ£o otaviano)
+E 1 10700 50 12 	(um manto otaviano)
+E 1 10701 20 16 	(uma bela lâmina de diamante)
+M 0 10705 12 10764 	(uma crianÃ§a otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10712 14 10751 	(um guarda-real otaviano)
+E 1 10722 15 16 	(uma besta otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10712 14 10751 	(um guarda-real otaviano)
+E 1 10722 15 16 	(uma besta otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10712 14 10727 	(um guarda-real otaviano)
+E 1 10722 15 16 	(uma besta otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10712 14 10727 	(um guarda-real otaviano)
+E 1 10722 15 16 	(uma besta otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10712 14 10738 	(um guarda-real otaviano)
+E 1 10722 15 16 	(uma besta otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10712 14 10738 	(um guarda-real otaviano)
+E 1 10722 15 16 	(uma besta otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10711 1 10771 	(o trovador otaviano)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10712 14 10771 	(um guarda-real otaviano)
+E 1 10722 15 16 	(uma besta otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10712 14 10771 	(um guarda-real otaviano)
+E 1 10722 15 16 	(uma besta otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10726 5 10771 	(um pÃ¡ssaro azul)
+M 0 10726 5 10731 	(um pÃ¡ssaro azul)
+M 0 10726 5 10738 	(um pÃ¡ssaro azul)
+M 0 10726 5 10752 	(um pÃ¡ssaro azul)
+M 0 10706 3 10741 	(um cidadÃ£o da limpeza)
+M 0 10706 3 10765 	(um cidadÃ£o da limpeza)
+M 0 10706 3 10762 	(um cidadÃ£o da limpeza)
+M 0 10701 8 10762 	(um cidadÃ£o otaviano)
+E 1 10700 50 12 	(um manto otaviano)
+E 1 10701 20 16 	(uma bela lâmina de diamante)
+M 0 10702 8 10762 	(uma cidadÃ£ otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+E 1 10702 50 17 	(Uma linda flor colorida)
+M 0 10717 1 10781 	(Yasmim, a lÃ­der dos otavianos)
+E 1 10716 1 12 	(uma redoma de ar)
+E 1 10722 15 16 	(uma besta otaviana)
+E 1 10737 1 6 	(uma coroa de diamante)
+M 0 10712 14 10781 	(um guarda-real otaviano)
+E 1 10722 15 16 	(uma besta otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10712 14 10781 	(um guarda-real otaviano)
+E 1 10722 15 16 	(uma besta otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10712 14 10775 	(um guarda-real otaviano)
+E 1 10722 15 16 	(uma besta otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10712 14 10777 	(um guarda-real otaviano)
+E 1 10722 15 16 	(uma besta otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10729 1 10776 	(a cozinheira otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10712 14 10772 	(um guarda-real otaviano)
+E 1 10722 15 16 	(uma besta otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10712 14 10772 	(um guarda-real otaviano)
+E 1 10722 15 16 	(uma besta otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10720 7 10780 	(um gumbly)
+E 1 10715 10 3 	(uma coleira de diamante)
+M 0 10701 8 10755 	(um cidadÃ£o otaviano)
+E 1 10700 50 12 	(um manto otaviano)
+E 1 10701 20 16 	(uma bela lâmina de diamante)
+M 0 10702 8 10763 	(uma cidadÃ£ otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+E 1 10702 50 17 	(Uma linda flor colorida)
+M 0 10705 12 10755 	(uma crianÃ§a otaviana)
+E 1 10700 50 12 	(um manto otaviano)
+M 0 10718 2 10782 	(um grifo dourado)
+E 1 10704 5 2 	(Um anel armiliano)
+M 0 10718 2 10721 	(um grifo dourado)
+E 1 10705 5 2 	(Um anel diomiriano)
+M 0 10724 1 10722 	(o guardiÃ£o da terra)
+E 1 10709 1 17 	(o elemento terra)
+M 0 10723 1 10723 	(o guardiÃ£o do ar)
+E 1 10708 1 17 	(o elemento ar)
+M 0 10725 1 10724 	(o guardiÃ£o do quinto elemento)
+E 1 10710 1 17 	(o quinto elemento)
+M 0 10722 1 10725 	(o guardiÃ£o da Ã¡gua)
+E 1 10707 1 17 	(o elemento água)
+M 0 10721 1 10726 	(o guardiÃ£o do fogo)
+E 1 10706 1 17 	(o elemento fogo)
+M 0 10727 10 10700 	(um esquilo cinza)
+M 0 10720 7 10700 	(um gumbly)
+M 0 10719 1 10702 	(o cedro gigante)
+M 0 10726 5 10702 	(um pÃ¡ssaro azul)
+R 0 10706 10723 -1 	(uma piscina diomiriana)
+O 0 10723 2 10706 	(uma piscina diomiriana)
+R 0 10707 10723 -1 	(uma piscina diomiriana)
+O 0 10723 2 10707 	(uma piscina diomiriana)
+R 0 10742 10724 -1 	(uma árvore otaviana)
+O 0 10724 4 10742 	(uma árvore otaviana)
+P 1 10725 16 10724 	(uma fruta vermelha)
+P 1 10725 16 10724 	(uma fruta vermelha)
+P 1 10725 16 10724 	(uma fruta vermelha)
+P 1 10725 16 10724 	(uma fruta vermelha)
+R 0 10746 10724 -1 	(uma árvore otaviana)
+O 0 10724 4 10746 	(uma árvore otaviana)
+P 1 10725 16 10724 	(uma fruta vermelha)
+P 1 10725 16 10724 	(uma fruta vermelha)
+P 1 10725 16 10724 	(uma fruta vermelha)
+P 1 10725 16 10724 	(uma fruta vermelha)
+R 0 10767 10724 -1 	(uma árvore otaviana)
+O 0 10724 4 10767 	(uma árvore otaviana)
+P 1 10725 16 10724 	(uma fruta vermelha)
+P 1 10725 16 10724 	(uma fruta vermelha)
+P 1 10725 16 10724 	(uma fruta vermelha)
+P 1 10725 16 10724 	(uma fruta vermelha)
+R 0 10769 10724 -1 	(uma árvore otaviana)
+O 0 10724 4 10769 	(uma árvore otaviana)
+P 1 10725 16 10724 	(uma fruta vermelha)
+P 1 10725 16 10724 	(uma fruta vermelha)
+P 1 10725 16 10724 	(uma fruta vermelha)
+P 1 10725 16 10724 	(uma fruta vermelha)
+R 0 10742 10726 -1 	(uma bela fonte)
+O 0 10726 2 10742 	(uma bela fonte)
+R 0 10769 10726 -1 	(uma bela fonte)
+O 0 10726 2 10769 	(uma bela fonte)
+R 0 10751 10727 -1 	(um estátua dos lendários cavaleiros otavianos)
+O 0 10727 1 10751 	(um estátua dos lendários cavaleiros otavianos)
+R 0 10732 10728 -1 	(uma escultura otaviana)
+O 0 10728 1 10732 	(uma escultura otaviana)
+R 0 10733 10729 -1 	(uma pintura otaviana)
+O 0 10729 1 10733 	(uma pintura otaviana)
+R 0 10730 10730 -1 	(uma mesa de madeira)
+O 0 10730 10 10730 	(uma mesa de madeira)
+R 0 10730 10731 -1 	(uma cama de madeira)
+O 0 10731 10 10730 	(uma cama de madeira)
+R 0 10735 10730 -1 	(uma mesa de madeira)
+O 0 10730 10 10735 	(uma mesa de madeira)
+R 0 10735 10731 -1 	(uma cama de madeira)
+O 0 10731 10 10735 	(uma cama de madeira)
+R 0 10740 10730 -1 	(uma mesa de madeira)
+O 0 10730 10 10740 	(uma mesa de madeira)
+R 0 10740 10731 -1 	(uma cama de madeira)
+O 0 10731 10 10740 	(uma cama de madeira)
+R 0 10748 10730 -1 	(uma mesa de madeira)
+O 0 10730 10 10748 	(uma mesa de madeira)
+R 0 10748 10731 -1 	(uma cama de madeira)
+O 0 10731 10 10748 	(uma cama de madeira)
+R 0 10750 10730 -1 	(uma mesa de madeira)
+O 0 10730 10 10750 	(uma mesa de madeira)
+R 0 10750 10731 -1 	(uma cama de madeira)
+O 0 10731 10 10750 	(uma cama de madeira)
+R 0 10758 10730 -1 	(uma mesa de madeira)
+O 0 10730 10 10758 	(uma mesa de madeira)
+R 0 10758 10731 -1 	(uma cama de madeira)
+O 0 10731 10 10758 	(uma cama de madeira)
+R 0 10760 10730 -1 	(uma mesa de madeira)
+O 0 10730 10 10760 	(uma mesa de madeira)
+R 0 10760 10731 -1 	(uma cama de madeira)
+O 0 10731 10 10760 	(uma cama de madeira)
+R 0 10764 10730 -1 	(uma mesa de madeira)
+O 0 10730 10 10764 	(uma mesa de madeira)
+R 0 10764 10731 -1 	(uma cama de madeira)
+O 0 10731 10 10764 	(uma cama de madeira)
+R 0 10766 10730 -1 	(uma mesa de madeira)
+O 0 10730 10 10766 	(uma mesa de madeira)
+R 0 10766 10731 -1 	(uma cama de madeira)
+O 0 10731 10 10766 	(uma cama de madeira)
+R 0 10770 10730 -1 	(uma mesa de madeira)
+O 0 10730 10 10770 	(uma mesa de madeira)
+R 0 10770 10731 -1 	(uma cama de madeira)
+O 0 10731 10 10770 	(uma cama de madeira)
+R 0 10763 10732 -1 	(uma estante de madeira)
+O 0 10732 1 10763 	(uma estante de madeira)
+P 1 10733 1 10732 	(o livro do ar)
+P 1 10734 1 10732 	(o livro do fogo)
+P 1 10735 1 10732 	(o livro da água)
+P 1 10736 1 10732 	(o livro da terra)
+D 0 10705 5 2 	(As Terras Esquecidas de Diomira)
+D 0 10706 4 2 	(Diomira, a cidade do fogo)
+D 0 10706 6 1 	(Diomira, a cidade do fogo)
+D 0 10709 8 1 	(O Cemitério Diomiriano)
+D 0 10710 0 1 	(Uma Pequena Casa)
+D 0 10711 2 1 	(Um Pequeno Quarto)
+D 0 10775 0 1 	(Um Corredor do Palácio Real)
+D 0 10775 2 1 	(Um Corredor do Palácio Real)
+D 0 10775 7 1 	(Um Corredor do Palácio Real)
+D 0 10776 2 1 	(A Cozinha do Palácio)
+D 0 10779 0 1 	(O Quarto de Hospedes)
+D 0 10777 9 1 	(A Sala da Guarda Real)
+D 0 10778 5 1 	(Uma Escadaria de Marfim)
+D 0 10780 4 1 	(Os Aposentos Reais)
+D 0 10792 5 2 	(As Terras Esquecidas de Armila)
+D 0 10793 4 2 	(Armila, a Cidade da Água)
 S
+$

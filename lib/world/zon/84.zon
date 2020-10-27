@@ -1,265 +1,255 @@
 #84
 Vitalia~
 Valfenda~
-8400 8499 120 1 a 0 0 0 -1 -1
--1
-*
-* Colocar MOBS
-*
-M 0 8400 7 8410   Colocar uma novem de mosquitos no Pï¿½ntano dos Mosquitos
-M 0 8400 7 8411   Colocar uma novem de mosquitos no Pï¿½ntano dos Mosquitos
-M 0 8400 7 8412   Colocar uma novem de mosquitos no Pï¿½ntano dos Mosquitos
-M 0 8400 7 8413   Colocar uma novem de mosquitos no Pï¿½ntano dos Mosquitos
-M 0 8400 7 8414   Colocar uma novem de mosquitos no Pï¿½ntano dos Mosquitos
-M 0 8400 7 8415   Colocar uma novem de mosquitos no Pï¿½ntano dos Mosquitos
-M 0 8400 7 8416   Colocar uma novem de mosquitos no Pï¿½ntano dos Mosquitos
-M 0 8403 1 8498   Colocar Elrond nos Aposentos de Elrond
-E 1 8405 1 6      Entregar um Diadema de Prata para Elrond
-G 1 8433 1        Entregar uma pequena chave dourada para Elrond
-M 0 8404 1 8499   Colocar Arwen Undï¿½miel no Quarto da Bela Arwen
-E 1 8407 1 13     Entregar um Belo Cinto de folhas de prata para Arwen
-E 1 8406 1 6      Entregar uma Touca de Rendas Prateadas para Arwen
-G 1 8435 1        Entregar uma pequena chave prateada para Arwen
-M 0 8405 1 8467   Colocar Glorfindel na Maravilhosa Praï¿½a Florida
-E 1 8441 1 10     Entregar as Braï¿½adeiras Prateadas para Glorfindel
-M 0 8406 1 8478   Colocar Elladan num Amplo Pï¿½tio no Centro de Imladris
-E 1 8442 1 16     Entregar a Faca de Prata de Elladan para Elladan
-M 0 8407 1 8459   Colocar Elrohir em Valfenda, a Casa dos Senhores de Eldar
-E 1 8443 1 16     Entregar o Arco Guardiï¿½o de Elrohir para Elrohir
-M 0 8408 1 8481   Colocar Lindir na Monumental Casa do Senhor de Valfenda
-E 1 8444 1 17     Entregar a Encantadora Flauta Dourada de Lindir para Lindir
-G 1 8426 1        Entregar uma Pequenina Chave Verde para Lindir
-M 0 8409 1 8493   Colocar Erestor no Conselho de Elrond
-E 1 8445 1 3      Entregar o Medalhï¿½o da Sabedoria de Erestor para Erestor
-M 0 8410 2 8493   Colocar um Elfo Conselheiro no Conselho de Elrond
-E 1 8446 1 13     Entregar um Cinto ï¿½lfico de Tecido Azul para o Elfo Conselheiro
-M 0 8410 2 8493   Colocar um Elfo Conselheiro no Conselho de Elrond
-E 1 8447 1 9      Entregar um par de luvas ï¿½lficas de Tecido Azul para o Elfo Conselheiro
-M 0 8411 2 8492   Colocar um Menestrel ï¿½lfico no Salï¿½o do Fogo
-E 1 8448 2 17     Entregar uma Harpa Dourada ï¿½lfica para o Menestrel
-M 0 8411 2 8492   Colocar um Menestrel ï¿½lfico no Salï¿½o do Fogo
-E 1 8448 2 17     Entregar uma Harpa Dourada ï¿½lfica para o Menestrel
-M 0 8412 10 8461  Colocar um Elfo de Imladris nos Esplendorosos Jardins de Valfenda
-E 1 8437 10 12    Entregar um Manto ï¿½lfico ao Elfo de Imladris
-E 1 8440 10 8     Entregar um par de botas ï¿½lficas ao Elfo de Imladris
-M 0 8412 10 8462  Colocar um Elfo de Imladris nos Esplendorosos Jardins de Valfenda
-E 1 8437 10 12    Entregar um Manto ï¿½lfico ao Elfo de Imladris
-E 1 8440 10 8     Entregar um par de botas ï¿½lficas ao Elfo de Imladris
-M 0 8412 10 8468  Colocar um Elfo de Imladris numa Belï¿½ssima Casa ï¿½lfica
-E 1 8437 10 12    Entregar um Manto ï¿½lfico ao Elfo de Imladris
-E 1 8440 10 8     Entregar um par de botas ï¿½lficas ao Elfo de Imladris
-M 0 8412 10 8471  Colocar um Elfo de Imladris numa Magnï¿½fica Casa ï¿½lfica
-E 1 8437 10 12    Entregar um Manto ï¿½lfico ao Elfo de Imladris
-E 1 8440 10 8     Entregar um par de botas ï¿½lficas ao Elfo de Imladris
-M 0 8412 10 8472  Colocar um Elfo de Imladris na Alameda das Flores
-E 1 8437 10 12    Entregar um Manto ï¿½lfico ao Elfo de Imladris
-E 1 8440 10 8     Entregar um par de botas ï¿½lficas ao Elfo de Imladris
-M 0 8412 10 8476  Colocar um Elfo de Imladris numa Esplendorosa Casa ï¿½lfica
-E 1 8437 10 12    Entregar um Manto ï¿½lfico ao Elfo de Imladris
-E 1 8440 10 8     Entregar um par de botas ï¿½lficas ao Elfo de Imladris
-M 0 8412 10 8479  Colocar um Elfo de Imladris numa Magnï¿½fica Casa ï¿½lfica
-E 1 8437 10 12    Entregar um Manto ï¿½lfico ao Elfo de Imladris
-E 1 8440 10 8     Entregar um par de botas ï¿½lficas ao Elfo de Imladris
-M 0 8412 10 8482  Colocar um Elfo de Imladris nos Monumentais Jardins de Elrond
-E 1 8437 10 12    Entregar um Manto ï¿½lfico ao Elfo de Imladris
-E 1 8440 10 8     Entregar um par de botas ï¿½lficas ao Elfo de Imladris
-M 0 8412 10 8490  Colocar um Elfo de Imladris num Longo Corredor na Casa de Elrond
-E 1 8437 10 12    Entregar um Manto ï¿½lfico ao Elfo de Imladris
-E 1 8440 10 8     Entregar um par de botas ï¿½lficas ao Elfo de Imladris
-M 0 8412 10 8494  Colocar um Elfo de Imladris numa Maravilhosa Cachoeira de Valfenda
-E 1 8437 10 12    Entregar um Manto ï¿½lfico ao Elfo de Imladris
-E 1 8440 10 8     Entregar um par de botas ï¿½lficas ao Elfo de Imladris
-M 0 8413 8 8464   Colocar uma Elfa de Imladris nos Esplendorosos Jardins de Valfenda
-E 1 8438 8 12     Entregar um Vestido ï¿½lfico Azul-Celeste para a Elfa de Imladris
-E 1 8439 8 19     Entregar um Brinco de Cristais Luminosos para a Elfa de Imladris
-M 0 8413 8 8466   Colocar uma Elfa de Imladris numa Bela Passarela de Pedras Brancas
-E 1 8438 8 12     Entregar um Vestido ï¿½lfico Azul-Celeste para a Elfa de Imladris
-E 1 8439 8 19     Entregar um Brinco de Cristais Luminosos para a Elfa de Imladris
-M 0 8413 8 8469   Colocar uma Elfa de Imladris numa Esplendorosa Casa ï¿½lfica
-E 1 8438 8 12     Entregar um Vestido ï¿½lfico Azul-Celeste para a Elfa de Imladris
-E 1 8439 8 19     Entregar um Brinco de Cristais Luminosos para a Elfa de Imladris
-M 0 8413 8 8475   Colocar uma Elfa de Imladris numa Magnï¿½fica Passarela de Pedras Brancas
-E 1 8438 8 12     Entregar um Vestido ï¿½lfico Azul-Celeste para a Elfa de Imladris
-E 1 8439 8 19     Entregar um Brinco de Cristais Luminosos para a Elfa de Imladris
-M 0 8413 8 8477   Colocar uma Elfa de Imladris numa Belï¿½ssima Casa ï¿½lfica
-E 1 8438 8 12     Entregar um Vestido ï¿½lfico Azul-Celeste para a Elfa de Imladris
-E 1 8439 8 19     Entregar um Brinco de Cristais Luminosos para a Elfa de Imladris
-M 0 8413 8 8480   Colocar uma Elfa de Imladris numa Esplendorosa Casa ï¿½lfica
-E 1 8438 8 12     Entregar um Vestido ï¿½lfico Azul-Celeste para a Elfa de Imladris
-E 1 8439 8 19     Entregar um Brinco de Cristais Luminosos para a Elfa de Imladris
-M 0 8413 8 8483   Colocar uma Elfa de Imladris nos Monumentais Jardins de Elrond
-E 1 8438 8 12     Entregar um Vestido ï¿½lfico Azul-Celeste para a Elfa de Imladris
-E 1 8439 8 19     Entregar um Brinco de Cristais Luminosos para a Elfa de Imladris
-M 0 8413 8 8491   Colocar uma Elfa de Imladris num Longo Corredor na Casa de Elrond
-E 1 8438 8 12     Entregar um Vestido ï¿½lfico Azul-Celeste para a Elfa de Imladris
-E 1 8439 8 19     Entregar um Brinco de Cristais Luminosos para a Elfa de Imladris
-M 0 8414 8 8462   Colocar uma Crianï¿½a Elfa nos Esplendorosos Jardins de Valfenda
-E 1 8449 8 3      Entregar uma Pequena Bï¿½ssola para a Crianï¿½a Elfa
-M 0 8414 8 8463   Colocar uma Crianï¿½a Elfa nas Monumentais Cachoeiras de Valfenda
-E 1 8449 8 3      Entregar uma Pequena Bï¿½ssola para a Crianï¿½a Elfa
-M 0 8414 8 8469   Colocar uma Crianï¿½a Elfa numa Esplendorosa Casa ï¿½lfica 
-E 1 8449 8 3      Entregar uma Pequena Bï¿½ssola para a Crianï¿½a Elfa
-M 0 8414 8 8473   Colocar uma Crianï¿½a Elfa numa Belï¿½ssima Casa ï¿½lfica
-E 1 8449 8 3      Entregar uma Pequena Bï¿½ssola para a Crianï¿½a Elfa
-M 0 8414 8 8477   Colocar uma Crianï¿½a Elfa numa Belï¿½ssima Casa ï¿½lfica
-E 1 8449 8 3      Entregar uma Pequena Bï¿½ssola para a Crianï¿½a Elfa
-M 0 8414 8 8478   Colocar uma Crianï¿½a Elfa num Amplo Pï¿½tio no Centro de Imladris 
-E 1 8449 8 3      Entregar uma Pequena Bï¿½ssola para a Crianï¿½a Elfa
-M 0 8414 8 8480   Colocar uma Crianï¿½a Elfa numa Esplendorosa Casa ï¿½lfica
-E 1 8449 8 3      Entregar uma Pequena Bï¿½ssola para a Crianï¿½a Elfa
-M 0 8414 8 8482   Colocar uma Crianï¿½a Elfa nos Monumentais Jardins de Elrond
-E 1 8449 8 3      Entregar uma Pequena Bï¿½ssola para a Crianï¿½a Elfa
-M 0 8415 8 8444   Colocar Um Pï¿½ssaro Verde na Mata dos Trolls
-M 0 8415 8 8446   Colocar Um Pï¿½ssaro Verde na Mata dos Trolls
-M 0 8415 8 8450   Colocar Um Pï¿½ssaro Verde na Mata dos Trolls
-M 0 8415 8 8441   Colocar Um Pï¿½ssaro Verde num Campo Verde
-M 0 8415 8 8452   Colocar Um Pï¿½ssaro Verde na Encosta da Montanha no Vau de Bruinen
-M 0 8415 8 8461   Colocar Um Pï¿½ssaro Verde nos Esplendorosos Jardins de Valfenda
-M 0 8415 8 8470   Colocar Um Pï¿½ssaro Verde na Alameda de Flores
-M 0 8415 8 8478   Colocar Um Pï¿½ssaro Verde num Amplo Pï¿½tio no Centro de Imladris
-*
-* Colocar os OBJS
-*
-R 0 8442 8400     Retirar um Pequeno Arbusto de Athelas na Mata dos Trolls
-O 0 8400 1 8442   Colocar um novo Pequeno Arbusto de Athelas na Mata dos Trolls
-R 0 8447 8401     Retirar Vï¿½rias Vasilhas Vazias e Potes Quebrados na toca dos Trolls
-O 0 8401 1 8447   Colocar novas Vï¿½rias Vasilhas Vazias e Potes Quebrados na Toca dos Trolls
-R 0 8447 8402     Retirar Vï¿½rios Ossos Quebrados na Toca dos Trolls
-O 0 8402 1 8447   Colocar novos Vï¿½rios Ossos Quebrados na Toca dos Trolls
-R 0 8450 8403     Retirar Trï¿½s Imensos Trolls de Pedra da Mata dos Trolls
-O 0 8403 1 8450   Colocar novos Trï¿½s Imensos Trolls de Pedra na Mata dos Trolls
-R 0 8443 8404     Retirar uma Antiga Rocha na Mata dos Trolls
-O 0 8404 1 8443   Colocar uma Nova Antiga Rocha na Mata dos Trolls
-R 0 8491 8408     Retirar os Fragmentos da Esplendorosa Narsil num Longo Corredor
-O 0 8408 1 8491   Colocar novos Fragmentos da Esplendorosa Narsil num Longo Corredor
-R 0 8461 8409     Retirar uma Cï¿½pula de Cristal nos Esplendorosos Jardins de Valfenda
-O 0 8409 5 8461   Colocar uma nova Cï¿½pula de Cristal nos Jardins de Valfenda
-R 0 8462 8409     Retirar uma Cï¿½pula de Cristal nos Esplendorosos Jardins de Valfenda
-O 0 8409 5 8462   Colocar uma nova Cï¿½pula de Cristal nos Jardins de Valfenda
-R 0 8464 8409     Retirar uma Cï¿½pula de Cristal nos Esplendorosos Jardins de Valfenda
-O 0 8409 5 8464   Colocar uma nova Cï¿½pula de Cristal nos Jardins de Valfenda
-R 0 8482 8409     Retirar uma Cï¿½pula de Cristal nos Jardins de Elrond
-O 0 8409 5 8482   Colocar uma nova Cï¿½pula de Cristal nos Jardins de Elrond
-R 0 8483 8409     Retirar uma Cï¿½pula de Cristal nos Jardins de Elrond
-O 0 8409 5 8483   Colocar uma nova Cï¿½pula de Cristal nos Jardins de Elrond
-R 0 8461 8410     Retirar uma Estatua de Arwen dos Esplendorosos Jardins de Valfenda
-O 0 8410 1 8461   Colocar uma nova Estatua de Arwen nos Jardins de Valfenda
-R 0 8462 8411     Retirar uma Estatua de Beren dos Esplendorosos Jardins de Valfenda
-O 0 8411 1 8462   Colocar uma nova Estatua de Beren nos Jardins de Valfenda
-R 0 8464 8412     Retirar uma Estatua de Luthien dos Esplendorosos Jardins de Valfenda
-O 0 8412 1 8464   Colocar uma nova Estatua de Luthien nos Jardins de Valfenda
-R 0 8458 8413     Retirar Algumas Estatuas Esculpidas no Muro
-O 0 8413 1 8458   Colocar novas Estatuas Esculpidas no Muro
-R 0 8490 8414     Retirar uma Estante de Livros do Longo Corredor
-O 0 8414 2 8490   Colocar uma nova Estante de Livros do Longo Corredor
-P 1 8415 2 8414   Carregar Vï¿½rios LIvros Antigos Dentro da Estante de Livros
-R 0 8498 8414     Retirar uma Estante de Livros dos Aposentos de Elrond 
-O 0 8414 2 8498   Colocar uma nova Estante de Livros dos Aposentos de Elrond
-P 1 8415 2 8414   Carregar Vï¿½rios LIvros Antigos Dentro da Estante de Livros
-R 0 8491 8417     Retirar uma Estatua de Mï¿½rmore Branco do Longo Corredor
-O 0 8417 1 8491   Colocar uma nova Estatua de Mï¿½rmore Branco do longo Corredor
-R 0 8491 8416     Retirar o Quadro da Batalha de Sauron e Isildur no Longo Corredor
-O 0 8416 1 8491   Colocar um novo Quadro da Batalha de Sauron e Isildur no Longo Corredor
-R 0 8493 8418     Retirar uma Enorme ï¿½rvore do Conselho de Elrond
-O 0 8418 1 8493   Colocar uma nova ï¿½rvore do Conselho de Elrond
-R 0 8493 8419     Retirar um Pequeno Pï¿½lpito no Conselho de Elrond
-O 0 8419 1 8493   Colocar um novo Pequeno Pï¿½lpito no Conselho de Elrond
-R 0 8493 8420     Retirar Vï¿½rias Cadeiras de Madeira do Conselho de Elrond
-O 0 8420 1 8493   Colocar novas Cadeiras de Madeira no Conselho de Elrond
-R 0 8493 8421     Retirar Majestosas Estatuas ï¿½lficas do Conselho de Elrond
-O 0 8421 1 8493   Colocar novas Estatuas ï¿½lficas no Conselho de Elrond
-R 0 8484 8422     Retirar Tapeï¿½arias Tecidas do Grande Salï¿½o da Casa de Elrond
-O 0 8422 2 8484   Colocar novas Tapeï¿½arias Tecidas no Grande Salï¿½o da Casa de Elrond
-R 0 8481 8422     Retirar Tapeï¿½arias Tecidas da Monumental Casa de Elrond
-O 0 8422 2 8481   Colocar novas Tapeï¿½arias Tecidas da Monumental Casa de Elrond 
-R 0 8484 8423     Retirar uma Mesa Comprida do Grande Salï¿½o da Casa de Elrond
-O 0 8423 1 8484   Colocar uma nova Mesa Comprida no Grande Salï¿½o da Casa de Elrond
-R 0 8492 8424     Retirar uma Grande Lareira do Salï¿½o do Fogo
-O 0 8424 1 8492   Colocar uma nova Grande Lareira do Salï¿½o do Fogo
-R 0 8482 8425     Retirar uma Fonte de Mï¿½rmore Branco dos Jardins de Elrond
-O 0 8425 2 8482   Colocar uma nova Fonte de Mï¿½rmore Branco dos Jardins de Elrond
-R 0 8483 8425     Retirar uma Fonte de Mï¿½rmore Branco dos Jardins de Elrond
-O 0 8425 2 8483   Colocar uma nova Fonte de Mï¿½rmore Branco dos Jardins de Elrond
-R 0 8468 8429     Retirar uma Cama de Madeira de uma Casa ï¿½lfica
-O 0 8429 11 8468  Colocar uma nova Cama de Madeira de uma Casa ï¿½lfica
-R 0 8468 8430     Retirar uma Mesa de Madeira de uma Casa ï¿½lfica
-O 0 8430 8 8468   Colocar uma nova Mesa de Madeira de uma Casa ï¿½lfica
-R 0 8469 8429     Retirar uma Cama de Madeira de uma Casa ï¿½lfica
-O 0 8429 11 8469  Colocar uma nova Cama de Madeira de uma Casa ï¿½lfica
-R 0 8469 8430     Retirar uma Mesa de Madeira de uma Casa ï¿½lfica
-O 0 8430 8 8469   Colocar uma nova Mesa de Madeira de uma Casa ï¿½lfica
-R 0 8471 8429     Retirar uma Cama de Madeira de uma Casa ï¿½lfica
-O 0 8429 11 8471  Colocar uma nova Cama de Madeira de uma Casa ï¿½lfica
-R 0 8471 8430     Retirar uma Mesa de Madeira de uma Casa ï¿½lfica
-O 0 8430 8 8471   Colocar uma nova Mesa de Madeira de uma Casa ï¿½lfica
-R 0 8473 8429     Retirar uma Cama de Madeira de uma Casa ï¿½lfica
-O 0 8429 11 8473  Colocar uma nova Cama de Madeira de uma Casa ï¿½lfica
-R 0 8473 8430     Retirar uma Mesa de Madeira de uma Casa ï¿½lfica
-O 0 8430 8 8473   Colocar uma nova Mesa de Madeira de uma Casa ï¿½lfica
-R 0 8476 8429     Retirar uma Cama de Madeira de uma Casa ï¿½lfica
-O 0 8429 11 8476  Colocar uma nova Cama de Madeira de uma Casa ï¿½lfica
-R 0 8476 8430     Retirar uma Mesa de Madeira de uma Casa ï¿½lfica
-O 0 8430 8 8476   Colocar uma nova Mesa de Madeira de uma Casa ï¿½lfica
-R 0 8477 8429     Retirar uma Cama de Madeira de uma Casa ï¿½lfica
-O 0 8429 11 8477  Colocar uma nova Cama de Madeira de uma Casa ï¿½lfica
-R 0 8477 8430     Retirar uma Mesa de Madeira de uma Casa ï¿½lfica
-O 0 8430 8 8477   Colocar uma nova Mesa de Madeira de uma Casa ï¿½lfica
-R 0 8479 8429     Retirar uma Cama de Madeira de uma Casa ï¿½lfica
-O 0 8429 11 8479  Colocar uma nova Cama de Madeira de uma Casa ï¿½lfica
-R 0 8479 8430     Retirar uma Mesa de Madeira de uma Casa ï¿½lfica
-O 0 8430 8 8479   Colocar uma nova Mesa de Madeira de uma Casa ï¿½lfica
-R 0 8480 8429     Retirar uma Cama de Madeira de uma Casa ï¿½lfica
-O 0 8429 11 8480  Colocar uma nova Cama de Madeira de uma Casa ï¿½lfica
-R 0 8480 8430     Retirar uma Mesa de Madeira de uma Casa ï¿½lfica
-O 0 8430 8 8480   Colocar uma nova Mesa de Madeira de uma Casa ï¿½lfica
-R 0 8497 8429     Retirar uma Cama de Madeira de um Belo Quarto 
-O 0 8429 11 8497  Colocar uma nova Cama de Madeira no Belo Quarto
-R 0 8498 8429     Retirar uma Cama de Madeira dos Aposentos de Elrond
-O 0 8429 11 8498  Colocar uma nova Cama de Madeira nos Aposentos de Elrond
-R 0 8499 8429     Retirar uma Cama de Madeira do Quarto de Arwen
-O 0 8429 11 8499  Colocar uma nova Cama de Madeira no Quarto de Arwen
-R 0 8492 8431     Retirar um Cï¿½lice de Prata do Salï¿½o do Fogo
-O 0 8431 1 8492   Colocar um novo Cï¿½lice de Prata do Salï¿½o do Fogo
-R 0 8488 8432     Retirar um Baï¿½ Dourado com Pï¿½rolas da Sala de Heranï¿½as 
-O 0 8432 1 8488   Colocar um novo Baï¿½ Dourado com Pï¿½rolas da Sala de Heranï¿½as
-P 1 8427 1 8432   Carregar o Cetro de Annï¿½minas dentro do Baï¿½ Dourado com Pï¿½rolas
-R 0 8488 8434     Retirar um Baï¿½ Prateado com Pï¿½rolas da Sala de Heranï¿½as
-O 0 8434 1 8488   Colocar um novo Baï¿½ Prateado com Pï¿½rolas na Sala de Heranï¿½as
-P 1 8428 1 8434   Carregar o Anel de Barahir dentro do Baï¿½ Prateado com Pï¿½rolas
-*
-* Ajustar as Passagens
-*
-D 0 8458 7 1      Fechar o Portï¿½o de Madeira (Fora)
-D 0 8459 9 1      Fechar o Portï¿½o de Madeira (Dentro)
-D 0 8467 1 1      Fechar a Porta de Madeira  (Fora)
-D 0 8469 3 1      Fechar a Porta de Madeira  (Dentro)
-D 0 8467 7 1      Fechar a Porta de Madeira  (Fora)
-D 0 8471 9 1      Fechar a Porta de Madeira  (Dentro)
-D 0 8467 8 1      Fechar a Porta de Madeira  (Fora)
-D 0 8468 6 1      Fechar a Porta de Madeira  (Dentro)
-D 0 8473 6 1      Fechar a Porta de Madeira  (Dentro) 
-D 0 8474 8 1      Fechar a Porta de Madeira  (Fora)
-D 0 8476 0 1      Fechar a Porta de Madeira  (Dentro) 
-D 0 8478 2 1      Fechar a Porta de Madeira  (Fora)
-D 0 8477 6 1      Fechar a Porta de Madeira  (Dentro)
-D 0 8478 8 1      Fechar a Porta de Madeira  (Fora)
-D 0 8478 0 1      Fechar a Porta de Madeira  (Fora)
-D 0 8481 2 1      Fechar a Porta de Madeira  (Dentro)
-D 0 8478 1 1      Fechar a Porta de Madeira  (Fora)
-D 0 8479 3 1      Fechar a Porta de Madeira  (Dentro)
-D 0 8478 7 1      Fechar a Porta de Madeira  (Fora)
-D 0 8480 9 1      Fechar a Porta de Madeira  (Dentro)
-D 0 8486 0 1      Fechar a Porta de Madeira  (Fora)
-D 0 8489 2 1      Fechar a Porta de Madeira  (Dentro)
-D 0 8486 3 1      Fechar a Porta de Madeira  (Fora)
-D 0 8487 1 1      Fechar a Porta de Madeira  (Dentro)
-D 0 8486 6 2      Fechar e Trancar a Porta de Madeira  (Fora)
-D 0 8488 8 2      Fechar e Trancar a Porta de Madeira  (dentro)
-D 0 8496 1 1      Fechar a Porta de Madeira  (Fora)
-D 0 8498 3 1      Fechar a Porta de Madeira  (Dentro)
-D 0 8496 2 1      Fechar a Porta de Madeira  (Fora)
-D 0 8499 0 1      Fechar a Porta de Madeira  (Dentro)
-D 0 8496 7 1      Fechar a Porta de Madeira  (Fora)
-D 0 8497 9 1      Fechar a Porta de Madeira  (Dentro)
+8400 8499 120 1 ak 0 0 0 -1 -1
+M 0 8400 7 8410 	(uma imensa nuvem de mosquitos)
+M 0 8400 7 8411 	(uma imensa nuvem de mosquitos)
+M 0 8400 7 8412 	(uma imensa nuvem de mosquitos)
+M 0 8400 7 8413 	(uma imensa nuvem de mosquitos)
+M 0 8400 7 8414 	(uma imensa nuvem de mosquitos)
+M 0 8400 7 8415 	(uma imensa nuvem de mosquitos)
+M 0 8400 7 8416 	(uma imensa nuvem de mosquitos)
+M 0 8403 1 8498 	(Elrond)
+E 1 8405 1 6 	(um diadema de prata)
+G 1 8433 1 -1 	(uma pequena chave dourada)
+M 0 8404 1 8499 	(Arwen UndÃ³miel)
+E 1 8407 1 13 	(um belo cinto de folhas de prata)
+E 1 8406 1 6 	(uma bela touca de rendas prateadas)
+G 1 8435 1 -1 	(uma pequena chave prateada)
+M 0 8405 1 8467 	(Glorfindel)
+E 1 8441 1 10 	(as braï¿½adeiras de Glorfindel)
+M 0 8406 1 8478 	(Elladan)
+E 1 8442 1 16 	(a faca de prata de Elladan)
+M 0 8407 1 8459 	(Elrohir)
+E 1 8443 1 16 	(o arco guardiï¿½o de Elrohir)
+M 0 8408 1 8481 	(Lindir)
+E 1 8444 1 17 	(a encantadora flauta dourada de Lindir)
+G 1 8426 1 -1 	(uma pequenina chave verde)
+M 0 8409 1 8493 	(Erestor)
+E 1 8445 1 3 	(o medalhï¿½o da sabedoria de Erestor)
+M 0 8410 2 8493 	(um elfo conselheiro da casa de Elrond)
+E 1 8446 1 13 	(um lindo cinto ï¿½lfico azul)
+M 0 8410 2 8493 	(um elfo conselheiro da casa de Elrond)
+E 1 8447 1 9 	(um belo par de luvas ï¿½lficas)
+M 0 8411 2 8492 	(um menestrel Ã©lfico)
+E 1 8448 2 17 	(uma maravilhosa harpa ï¿½lfica dourada)
+M 0 8411 2 8492 	(um menestrel Ã©lfico)
+E 1 8448 2 17 	(uma maravilhosa harpa ï¿½lfica dourada)
+M 0 8412 10 8461 	(um elfo de Valfenda)
+E 1 8437 10 12 	(um belo manto ï¿½lfico)
+E 1 8440 10 8 	(um par de botas ï¿½lficas)
+M 0 8412 10 8462 	(um elfo de Valfenda)
+E 1 8437 10 12 	(um belo manto ï¿½lfico)
+E 1 8440 10 8 	(um par de botas ï¿½lficas)
+M 0 8412 10 8468 	(um elfo de Valfenda)
+E 1 8437 10 12 	(um belo manto ï¿½lfico)
+E 1 8440 10 8 	(um par de botas ï¿½lficas)
+M 0 8412 10 8471 	(um elfo de Valfenda)
+E 1 8437 10 12 	(um belo manto ï¿½lfico)
+E 1 8440 10 8 	(um par de botas ï¿½lficas)
+M 0 8412 10 8472 	(um elfo de Valfenda)
+E 1 8437 10 12 	(um belo manto ï¿½lfico)
+E 1 8440 10 8 	(um par de botas ï¿½lficas)
+M 0 8412 10 8476 	(um elfo de Valfenda)
+E 1 8437 10 12 	(um belo manto ï¿½lfico)
+E 1 8440 10 8 	(um par de botas ï¿½lficas)
+M 0 8412 10 8479 	(um elfo de Valfenda)
+E 1 8437 10 12 	(um belo manto ï¿½lfico)
+E 1 8440 10 8 	(um par de botas ï¿½lficas)
+M 0 8412 10 8482 	(um elfo de Valfenda)
+E 1 8437 10 12 	(um belo manto ï¿½lfico)
+E 1 8440 10 8 	(um par de botas ï¿½lficas)
+M 0 8412 10 8490 	(um elfo de Valfenda)
+E 1 8437 10 12 	(um belo manto ï¿½lfico)
+E 1 8440 10 8 	(um par de botas ï¿½lficas)
+M 0 8412 10 8494 	(um elfo de Valfenda)
+E 1 8437 10 12 	(um belo manto ï¿½lfico)
+E 1 8440 10 8 	(um par de botas ï¿½lficas)
+M 0 8413 8 8464 	(uma elfa de Valfenda)
+E 1 8438 8 12 	(um lindo vestido ï¿½lfico azul-celeste)
+E 1 8439 8 19 	(um brinco de cristais luminosos)
+M 0 8413 8 8466 	(uma elfa de Valfenda)
+E 1 8438 8 12 	(um lindo vestido ï¿½lfico azul-celeste)
+E 1 8439 8 19 	(um brinco de cristais luminosos)
+M 0 8413 8 8469 	(uma elfa de Valfenda)
+E 1 8438 8 12 	(um lindo vestido ï¿½lfico azul-celeste)
+E 1 8439 8 19 	(um brinco de cristais luminosos)
+M 0 8413 8 8475 	(uma elfa de Valfenda)
+E 1 8438 8 12 	(um lindo vestido ï¿½lfico azul-celeste)
+E 1 8439 8 19 	(um brinco de cristais luminosos)
+M 0 8413 8 8477 	(uma elfa de Valfenda)
+E 1 8438 8 12 	(um lindo vestido ï¿½lfico azul-celeste)
+E 1 8439 8 19 	(um brinco de cristais luminosos)
+M 0 8413 8 8480 	(uma elfa de Valfenda)
+E 1 8438 8 12 	(um lindo vestido ï¿½lfico azul-celeste)
+E 1 8439 8 19 	(um brinco de cristais luminosos)
+M 0 8413 8 8483 	(uma elfa de Valfenda)
+E 1 8438 8 12 	(um lindo vestido ï¿½lfico azul-celeste)
+E 1 8439 8 19 	(um brinco de cristais luminosos)
+M 0 8413 8 8491 	(uma elfa de Valfenda)
+E 1 8438 8 12 	(um lindo vestido ï¿½lfico azul-celeste)
+E 1 8439 8 19 	(um brinco de cristais luminosos)
+M 0 8414 8 8462 	(uma encantadora crianÃ§a elfa)
+E 1 8449 8 3 	(uma pequenina bï¿½ssola)
+M 0 8414 8 8463 	(uma encantadora crianÃ§a elfa)
+E 1 8449 8 3 	(uma pequenina bï¿½ssola)
+M 0 8414 8 8469 	(uma encantadora crianÃ§a elfa)
+E 1 8449 8 3 	(uma pequenina bï¿½ssola)
+M 0 8414 8 8473 	(uma encantadora crianÃ§a elfa)
+E 1 8449 8 3 	(uma pequenina bï¿½ssola)
+M 0 8414 8 8477 	(uma encantadora crianÃ§a elfa)
+E 1 8449 8 3 	(uma pequenina bï¿½ssola)
+M 0 8414 8 8478 	(uma encantadora crianÃ§a elfa)
+E 1 8449 8 3 	(uma pequenina bï¿½ssola)
+M 0 8414 8 8480 	(uma encantadora crianÃ§a elfa)
+E 1 8449 8 3 	(uma pequenina bï¿½ssola)
+M 0 8414 8 8482 	(uma encantadora crianÃ§a elfa)
+E 1 8449 8 3 	(uma pequenina bï¿½ssola)
+M 0 8415 8 8444 	(um lindo pÃ¡ssaro verde)
+M 0 8415 8 8446 	(um lindo pÃ¡ssaro verde)
+M 0 8415 8 8450 	(um lindo pÃ¡ssaro verde)
+M 0 8415 8 8441 	(um lindo pÃ¡ssaro verde)
+M 0 8415 8 8452 	(um lindo pÃ¡ssaro verde)
+M 0 8415 8 8461 	(um lindo pÃ¡ssaro verde)
+M 0 8415 8 8470 	(um lindo pÃ¡ssaro verde)
+M 0 8415 8 8478 	(um lindo pÃ¡ssaro verde)
+R 0 8442 8400 -1 	(um pequeno arbusto de athelas)
+O 0 8400 1 8442 	(um pequeno arbusto de athelas)
+R 0 8447 8401 -1 	(vï¿½rias vasilhas vazias e potes quebrados)
+O 0 8401 1 8447 	(vï¿½rias vasilhas vazias e potes quebrados)
+R 0 8447 8402 -1 	(vï¿½rios ossos velhos)
+O 0 8402 1 8447 	(vï¿½rios ossos velhos)
+R 0 8450 8403 -1 	(trï¿½s imensos trolls de pedra)
+O 0 8403 1 8450 	(trï¿½s imensos trolls de pedra)
+R 0 8443 8404 -1 	(uma antiga pedra)
+O 0 8404 1 8443 	(uma antiga pedra)
+R 0 8491 8408 -1 	(os fragmentos da esplendorosa Narsil)
+O 0 8408 1 8491 	(os fragmentos da esplendorosa Narsil)
+R 0 8461 8409 -1 	(uma belï¿½ssima cï¿½pula de cristal)
+O 0 8409 5 8461 	(uma belï¿½ssima cï¿½pula de cristal)
+R 0 8462 8409 -1 	(uma belï¿½ssima cï¿½pula de cristal)
+O 0 8409 5 8462 	(uma belï¿½ssima cï¿½pula de cristal)
+R 0 8464 8409 -1 	(uma belï¿½ssima cï¿½pula de cristal)
+O 0 8409 5 8464 	(uma belï¿½ssima cï¿½pula de cristal)
+R 0 8482 8409 -1 	(uma belï¿½ssima cï¿½pula de cristal)
+O 0 8409 5 8482 	(uma belï¿½ssima cï¿½pula de cristal)
+R 0 8483 8409 -1 	(uma belï¿½ssima cï¿½pula de cristal)
+O 0 8409 5 8483 	(uma belï¿½ssima cï¿½pula de cristal)
+R 0 8461 8410 -1 	(uma estatua de Arwen)
+O 0 8410 1 8461 	(uma estatua de Arwen)
+R 0 8462 8411 -1 	(uma estï¿½tua de Beren)
+O 0 8411 1 8462 	(uma estï¿½tua de Beren)
+R 0 8464 8412 -1 	(uma estï¿½tua de Lï¿½thien Tinï¿½viel)
+O 0 8412 1 8464 	(uma estï¿½tua de Lï¿½thien Tinï¿½viel)
+R 0 8458 8413 -1 	(algumas estatuas esculpidas no muro)
+O 0 8413 1 8458 	(algumas estatuas esculpidas no muro)
+R 0 8490 8414 -1 	(uma bela estante de livros)
+O 0 8414 2 8490 	(uma bela estante de livros)
+P 1 8415 2 8414 	(vï¿½rios livros antigos)
+R 0 8498 8414 -1 	(uma bela estante de livros)
+O 0 8414 2 8498 	(uma bela estante de livros)
+P 1 8415 2 8414 	(vï¿½rios livros antigos)
+R 0 8491 8417 -1 	(uma estatua de mï¿½rmore branco)
+O 0 8417 1 8491 	(uma estatua de mï¿½rmore branco)
+R 0 8491 8416 -1 	(o quadro da batalha de Sauron e Isildur)
+O 0 8416 1 8491 	(o quadro da batalha de Sauron e Isildur)
+R 0 8493 8418 -1 	(uma magnï¿½fica ï¿½rvore)
+O 0 8418 1 8493 	(uma magnï¿½fica ï¿½rvore)
+R 0 8493 8419 -1 	(um pequeno pï¿½lpito de pedra)
+O 0 8419 1 8493 	(um pequeno pï¿½lpito de pedra)
+R 0 8493 8420 -1 	(vï¿½rias cadeiras de madeira)
+O 0 8420 1 8493 	(vï¿½rias cadeiras de madeira)
+R 0 8493 8421 -1 	(majestosas estatuas ï¿½lficas)
+O 0 8421 1 8493 	(majestosas estatuas ï¿½lficas)
+R 0 8484 8422 -1 	(majestosas tapeï¿½arias tecidas)
+O 0 8422 2 8484 	(majestosas tapeï¿½arias tecidas)
+R 0 8481 8422 -1 	(majestosas tapeï¿½arias tecidas)
+O 0 8422 2 8481 	(majestosas tapeï¿½arias tecidas)
+R 0 8484 8423 -1 	(uma mesa comprida)
+O 0 8423 1 8484 	(uma mesa comprida)
+R 0 8492 8424 -1 	(uma grande lareira)
+O 0 8424 1 8492 	(uma grande lareira)
+R 0 8482 8425 -1 	(uma bela fonte de mï¿½rmore branco)
+O 0 8425 2 8482 	(uma bela fonte de mï¿½rmore branco)
+R 0 8483 8425 -1 	(uma bela fonte de mï¿½rmore branco)
+O 0 8425 2 8483 	(uma bela fonte de mï¿½rmore branco)
+R 0 8468 8429 -1 	(uma cama de madeira)
+O 0 8429 11 8468 	(uma cama de madeira)
+R 0 8468 8430 -1 	(uma mesa de madeira)
+O 0 8430 8 8468 	(uma mesa de madeira)
+R 0 8469 8429 -1 	(uma cama de madeira)
+O 0 8429 11 8469 	(uma cama de madeira)
+R 0 8469 8430 -1 	(uma mesa de madeira)
+O 0 8430 8 8469 	(uma mesa de madeira)
+R 0 8471 8429 -1 	(uma cama de madeira)
+O 0 8429 11 8471 	(uma cama de madeira)
+R 0 8471 8430 -1 	(uma mesa de madeira)
+O 0 8430 8 8471 	(uma mesa de madeira)
+R 0 8473 8429 -1 	(uma cama de madeira)
+O 0 8429 11 8473 	(uma cama de madeira)
+R 0 8473 8430 -1 	(uma mesa de madeira)
+O 0 8430 8 8473 	(uma mesa de madeira)
+R 0 8476 8429 -1 	(uma cama de madeira)
+O 0 8429 11 8476 	(uma cama de madeira)
+R 0 8476 8430 -1 	(uma mesa de madeira)
+O 0 8430 8 8476 	(uma mesa de madeira)
+R 0 8477 8429 -1 	(uma cama de madeira)
+O 0 8429 11 8477 	(uma cama de madeira)
+R 0 8477 8430 -1 	(uma mesa de madeira)
+O 0 8430 8 8477 	(uma mesa de madeira)
+R 0 8479 8429 -1 	(uma cama de madeira)
+O 0 8429 11 8479 	(uma cama de madeira)
+R 0 8479 8430 -1 	(uma mesa de madeira)
+O 0 8430 8 8479 	(uma mesa de madeira)
+R 0 8480 8429 -1 	(uma cama de madeira)
+O 0 8429 11 8480 	(uma cama de madeira)
+R 0 8480 8430 -1 	(uma mesa de madeira)
+O 0 8430 8 8480 	(uma mesa de madeira)
+R 0 8497 8429 -1 	(uma cama de madeira)
+O 0 8429 11 8497 	(uma cama de madeira)
+R 0 8498 8429 -1 	(uma cama de madeira)
+O 0 8429 11 8498 	(uma cama de madeira)
+R 0 8499 8429 -1 	(uma cama de madeira)
+O 0 8429 11 8499 	(uma cama de madeira)
+R 0 8492 8431 -1 	(um belo cï¿½lice de prata)
+O 0 8431 1 8492 	(um belo cï¿½lice de prata)
+R 0 8488 8432 -1 	(um maravilhoso baï¿½ dourado com pï¿½rolas)
+O 0 8432 1 8488 	(um maravilhoso baï¿½ dourado com pï¿½rolas)
+P 1 8427 1 8432 	(o cetro de annï¿½minas)
+R 0 8488 8434 -1 	(um maravilhoso baï¿½ prateado com pï¿½rolas)
+O 0 8434 1 8488 	(um maravilhoso baï¿½ prateado com pï¿½rolas)
+P 1 8428 1 8434 	(o anel de Barahir)
+D 0 8458 7 1 	(A Ponte de Pedra)
+D 0 8459 9 1 	(Valfenda, a Casa dos Senhores de Eldar)
+D 0 8467 1 1 	(Uma Maravilhosa Praça Florida)
+D 0 8469 3 1 	(Uma Esplendorosa Casa Élfica)
+D 0 8467 7 1 	(Uma Maravilhosa Praça Florida)
+D 0 8471 9 1 	(Uma Magnífica Casa Élfica)
+D 0 8467 8 1 	(Uma Maravilhosa Praça Florida)
+D 0 8468 6 1 	(Uma Belíssima Casa Élfica)
+D 0 8473 6 1 	(Uma Belíssima Casa Élfica)
+D 0 8474 8 1 	(Uma Magnífica Passarela de Pedras Brancas)
+D 0 8476 0 1 	(Uma Esplendorosa Casa Élfica)
+D 0 8478 2 1 	(Um Amplo Pátio no Centro de Imladris)
+D 0 8477 6 1 	(Uma Belíssima Casa Élfica)
+D 0 8478 8 1 	(Um Amplo Pátio no Centro de Imladris)
+D 0 8478 0 1 	(Um Amplo Pátio no Centro de Imladris)
+D 0 8481 2 1 	(A Monumental Casa do Senhor de Valfenda)
+D 0 8478 1 1 	(Um Amplo Pátio no Centro de Imladris)
+D 0 8479 3 1 	(Uma Magnífica Casa Élfica)
+D 0 8478 7 1 	(Um Amplo Pátio no Centro de Imladris)
+D 0 8480 9 1 	(Uma Esplendorosa Casa Élfica)
+D 0 8486 0 1 	(Um Longo Corredor)
+D 0 8489 2 1 	(Um Maravilhoso Quarto)
+D 0 8486 3 1 	(Um Longo Corredor)
+D 0 8487 1 1 	(Um Belo Quarto)
+D 0 8486 6 2 	(Um Longo Corredor)
+D 0 8488 8 2 	(A Gloriosa Sala das Heranças)
+D 0 8496 1 1 	(Uma Ampla Varanda na Casa de Elrond)
+D 0 8498 3 1 	(Os Aposentos de Elrond)
+D 0 8496 2 1 	(Uma Ampla Varanda na Casa de Elrond)
+D 0 8499 0 1 	(O Quarto da Bela Arwen Undómiel)
+D 0 8496 7 1 	(Uma Ampla Varanda na Casa de Elrond)
+D 0 8497 9 1 	(Um Belo Quarto)
 S
 $

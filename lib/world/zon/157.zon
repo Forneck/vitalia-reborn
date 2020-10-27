@@ -1,102 +1,91 @@
 #157
 Vitalia~
 O Castelo de Flyre~
-15700 15799 75 1 abe 0 0 0 -1 -1
--1
-*
-* Colocando os monstros
-*
-M 0 15701 10 15704         pacato cidadï¿½o (praï¿½a)
-M 0 15701 10 15704         pacato cidadï¿½o (praï¿½a)
-M 0 15701 10 15705         pacato cidadï¿½o (centro da praï¿½a)
-M 0 15702 5 15708          guarda (porta)
-M 0 15702 5 15708          guarda (porta)
-M 0 15703 1 15712          secretï¿½ria (escritï¿½rio)
-M 0 15704 1 15713          cozinheiro (cozinha)
-G 1 15702 1                bastï¿½o amarelo (entregar para o cozinheiro)
-M 0 15705 1 15715          zumbi (corredor escuro)
-M 0 15706 8 15718          rato (porï¿½o)
-M 0 15707 1 15720          vigia (prisï¿½o)
-G 1 15703 1                molho de chaves (entregar para o vigia)
-M 0 15708 1 15703          dragï¿½o (cela)
-E 1 15704 16 2             equipar o dragï¿½o com a unha (dedo esquerdo)
-M 0 15709 1 15725          Flyre (cela isolada)
-G 1 15705 1                chave em chamas (entregar para Flyre)
-O 1 15706 16 15756         colar em chamas (ascensï¿½o)
-M 0 15710 10 15732         camareira (quarto de hï¿½spedes)
-M 0 15710 10 15733         camareira (quarto de hï¿½spedes)
-M 0 15710 10 15734         camareira (quarto de hï¿½spedes)
-M 0 15710 10 15735         camareira (quarto de hï¿½spedes)
-M 0 15710 10 15736         camareira (quarto de hï¿½spedes)
-M 0 15710 10 15737         camareira (quarto de hï¿½spedes)
-M 0 15710 10 15738         camareira (quarto de hï¿½spedes)
-M 0 15711 1 15739          rainha (trono)
-G 1 15708 1                cetro vermelho (entregar para a rainha)
-E 1 15710 18 12            manto vermelho (equipar na rainha)
-M 0 15712 1 15739          rei (trono)
-G 1 15707 1                cetro azul (entregar para o rei)
-E 1 15709 18 12            manto azulado (equipar no rei)
-M 0 15713 1 15740          governanta (aposento real)
-M 0 15714 10 15741         morcego (subindo para as torres)
-M 0 15714 10 15741         morcego (subindo para as torres)
-M 0 15714 10 15744         morcego (torre de apoio)
-M 0 15714 10 15744         morcego (torre de apoio)
-M 0 15714 10 15745         morcego (torre de apoio)
-M 0 15714 10 15745         morcego (torre de apoio)
-M 0 15715 2 15742          prisioneiro (torre principal)
-G 1 15716 1                velho pergaminho (entregar pro prisioneiro)
-P 1 15715 1 15716          chave secreta (dentro do velho pergaminho)
-M 0 15716 2 15744          esqueleto (torre de apoio)
-M 0 15716 2 15745          esqueleto (torre de apoio) 
-M 0 15717 1 15747          pï¿½nei (celeiro)
-M 0 15717 1 15747          pï¿½nei (celeiro)
-M 0 15718 1 15748          vaca (curral)
-M 0 15718 1 15748          vaca (curral)
-M 0 15718 1 15748          vaca (curral)
-M 0 15718 1 15748          vaca (curral)
-M 0 15719 1 15749          porco (chiqueiro)
-M 0 15719 1 15749          porco (chiqueiro)
-M 0 15719 1 15749          porco (chiqueiro)
-M 0 15720 1 15750          galinha (galinheiro)
-M 0 15720 1 15750          galinha (galinheiro)
-M 0 15720 1 15750          galinha (galinheiro)
-M 0 15720 1 15750          galinha (galinheiro)
-M 0 15721 5 15751          criada (plantaï¿½ï¿½o de cenouras)
-M 0 15721 5 15752          criada (milharal)
-M 0 15721 5 15753          criada (plantaï¿½ï¿½o de morangos)
-M 0 15722 1 15754          Raman (depï¿½sito)
-M 0 15721 5 15755          criada (plantaï¿½ï¿½o de trigo)
-*
-* Colocando os objetos
-* 
-R 0 15705 15701            retirar o chafariz
-O 1 15701 1 15705          carregar o chafariz
-R 0 15718 15717            retirar o livro
-O 1 15717 1 15718          carregar o livro (porï¿½o)
-R 0 15740 15711          retirar a caixa de jï¿½ias
-O 1 15711 1 15740          carregar a caixa de jï¿½ias (aposento real)
-P 1 15712 1 15711          anel de brilhantes (caixa de jï¿½ias)
-P 1 15713 1 15711          colar de brilhantes (caixa de jï¿½ias)
-P 1 15714 1 15711          brinco de brilhantes (caixa de jï¿½ias)
-*
-* Ajustando passagens
-*
-D 0 15708 2 1               entrada
-D 0 15709 0 1               entrada
-D 0 15710 3 1               corredor
-D 0 15712 1 1               escritï¿½rio
-D 0 15711 3 2               passagem secreta
-D 0 15720 3 2               prisï¿½o
-D 0 15721 1 2               prisï¿½o
-D 0 15721 3 2               prisï¿½o
-D 0 15722 1 2               cela
-D 0 15723 3 2               cela
-D 0 15724 1 2               cela
-D 0 15724 9 2               cela
-D 0 15725 4 2               cela isolada
-*D 0 15756 5 2 
-D 0 15731 4 1               um grande corredor
-D 0 15753 2 1               plantaï¿½ï¿½o de morangos
-D 0 15754 0 1               depï¿½sito
+15700 15799 75 1 abek 0 0 0 -1 -1
+M 0 15701 10 15704 	(um pacato cidadao)
+M 0 15701 10 15704 	(um pacato cidadao)
+M 0 15701 10 15705 	(um pacato cidadao)
+M 0 15702 5 15708 	(um guarda)
+M 0 15702 5 15708 	(um guarda)
+M 0 15703 1 15712 	(a secretÃ¡ria)
+M 0 15704 1 15713 	(o chefe da cozinha)
+G 1 15702 1 -1 	(um bastï¿½o amarelo)
+M 0 15705 1 15715 	(Bimuz, o zumbi)
+M 0 15706 8 15718 	(um asqueroso rato gigante)
+M 0 15707 1 15720 	(o vigia)
+G 1 15703 1 -1 	(um molho de chaves)
+M 0 15708 1 15703 	(Neegre, o dragÃ£o verde)
+E 1 15704 16 2 	(uma pedaï¿½o de unha roï¿½da)
+M 0 15709 1 15725 	(Flyre, a ave lendÃ¡ria)
+G 1 15705 1 -1 	(a chave prateada em chamas)
+O 1 15706 16 15756 	(um colar em chamas)
+M 0 15710 10 15732 	(a criada)
+M 0 15710 10 15733 	(a criada)
+M 0 15710 10 15734 	(a criada)
+M 0 15710 10 15735 	(a criada)
+M 0 15710 10 15736 	(a criada)
+M 0 15710 10 15737 	(a criada)
+M 0 15710 10 15738 	(a criada)
+M 0 15711 1 15739 	(a altiva e belÃ­ssima rainha)
+G 1 15708 1 -1 	(um cetro vermelho)
+E 1 15710 18 12 	(um manto avermelhado)
+M 0 15712 1 15739 	(o portentoso e altivo rei)
+G 1 15707 1 -1 	(um cetro azul)
+E 1 15709 18 12 	(um manto azulado)
+M 0 15713 1 15740 	(a governanta)
+M 0 15714 10 15741 	(um morcego)
+M 0 15714 10 15741 	(um morcego)
+M 0 15714 10 15744 	(um morcego)
+M 0 15714 10 15744 	(um morcego)
+M 0 15714 10 15745 	(um morcego)
+M 0 15714 10 15745 	(um morcego)
+M 0 15715 2 15742 	(um prisioneiro)
+G 1 15716 1 -1 	(um velho pergaminho)
+P 1 15715 1 15716 	(a chave secreta)
+M 0 15716 2 15744 	(Teleques, o esqueleto)
+M 0 15716 2 15745 	(Teleques, o esqueleto)
+M 0 15717 1 15747 	(um pÃ´nei)
+M 0 15717 1 15747 	(um pÃ´nei)
+M 0 15718 1 15748 	(uma vaca)
+M 0 15718 1 15748 	(uma vaca)
+M 0 15718 1 15748 	(uma vaca)
+M 0 15718 1 15748 	(uma vaca)
+M 0 15719 1 15749 	(um porco)
+M 0 15719 1 15749 	(um porco)
+M 0 15719 1 15749 	(um porco)
+M 0 15720 1 15750 	(uma galinha)
+M 0 15720 1 15750 	(uma galinha)
+M 0 15720 1 15750 	(uma galinha)
+M 0 15720 1 15750 	(uma galinha)
+M 0 15721 5 15751 	(uma criada)
+M 0 15721 5 15752 	(uma criada)
+M 0 15721 5 15753 	(uma criada)
+M 0 15722 1 15754 	(Raman)
+M 0 15721 5 15755 	(uma criada)
+R 0 15705 15701 -1 	(um chafariz)
+O 1 15701 1 15705 	(um chafariz)
+R 0 15718 15717 -1 	(um livro antigo)
+O 1 15717 1 15718 	(um livro antigo)
+R 0 15740 15711 -1 	(uma caixa de jï¿½ias)
+O 1 15711 1 15740 	(uma caixa de jï¿½ias)
+P 1 15712 1 15711 	(um anel de brilhantes)
+P 1 15713 1 15711 	(um colar de brilhantes)
+P 1 15714 1 15711 	(um brinco de brilhantes)
+D 0 15708 2 1 	(A Porta)
+D 0 15709 0 1 	(O Imenso Salão)
+D 0 15710 3 1 	(Um Corredor)
+D 0 15712 1 1 	(O Escritório)
+D 0 15711 3 2 	(Um Corredor)
+D 0 15720 3 2 	(A Prisão)
+D 0 15721 1 2 	(A Prisão)
+D 0 15721 3 2 	(A Prisão)
+D 0 15722 1 2 	(A Cela)
+D 0 15723 3 2 	(A Cela)
+D 0 15724 1 2 	(A Cela)
+D 0 15724 9 2 	(A Cela)
+D 0 15725 4 2 	(A Cela Isolada)
+D 0 15731 4 1 	(Um Grande Corredor)
+D 0 15753 2 1 	(A Plantação de Morangos)
+D 0 15754 0 1 	(O Depósito)
 S
 $

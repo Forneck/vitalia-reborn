@@ -1,21 +1,19 @@
 #222
 Vitalia~
 O SantuÃ¡rio das GlÃ³rias~
-22200 22299 0 0 0 0 0 -1 -1
--1
-*
-M 0 22200 1 22201	carregar o guarda
-E 1 22201 1 16		empunhar a lanï¿½a dos bravos
-M 0 22201 1 22212	carregar robin hood
-M 0 22202 1 22215	carregar hans tadden
-M 0 22203 1 22221	carregar a essencia de Arthur
-M 0 22204 1 22216	carregar Jasao
-O 0 22203 1 22208	carregar Ken
-O 0 22204 1 22208	carregar Kidaf
-O 0 22205 1 22208	carregar Nanoc
-O 0 22206 1 22208	carregar Nimue
-O 0 22207 1 22208       carregar Aqua
-O 0 22208 1 22208       carregar Torvante
-O 0 22209 1 22208       carregar Lupulis
+22200 22299 0 0 k 0 0 0 -1 -1
+M 0 22200 1 22201 	(O GuardiÃ£o dos Portais)
+E 1 22201 1 16 	(a Lança dos Bravos)
+M 0 22201 1 22212 	(Robin Hood, o PrÃ­ncipe dos LadrÃµes)
+M 0 22202 1 22215 	(Hans Tadden)
+M 0 22203 1 22221 	(a EssÃªncia do Rei Arthur)
+M 0 22204 1 22216 	(JasÃ£o, o LÃ­der dos 50 Argonautas)
+O 0 22203 1 22208 	(a estátua de Ken)
+O 0 22204 1 22208 	(a estátua de Kidaf)
+O 0 22205 1 22208 	(a estátua de Nanoc)
+O 0 22206 1 22208 	(a estátua de Nimue)
+O 0 22207 1 22208 	(a estátua de Aqua)
+O 0 22208 1 22208 	(a estátua de Torvante)
+O 0 22209 1 22208 	(a estátua de Lupulis)
 S
 $

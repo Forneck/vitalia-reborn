@@ -1,18 +1,14 @@
 #13
 Vitalia~
 Residencial Midgaard~
-1300 1399 300 2 0 0 0 -1 -1
--1
-*
-R 0 1302 1300       retirar o poï¿½o
-O 1 1300 1 1302     recolocar o poï¿½o
-*
-* ajustar portas
-*
-D 0 1310 0 1
-D 0 1311 2 1
-D 0 1320 3 1
-D 0 1321 1 1
-D 0 1322 1 1
-D 0 1323 3 1
+1300 1399 300 2 k 0 0 0 -1 -1
+R 0 1302 1300 -1 	(um poÃ§o de pedra.)
+O 1 1300 1 1302 	(um poÃ§o de pedra.)
+D 0 1310 0 1 	(Os Jardins da Família Lindyhurst)
+D 0 1311 2 1 	(A Casa da Família Lindyhurst)
+D 0 1320 3 1 	(Entrada da Confraria da Família Paice)
+D 0 1321 1 1 	(Sala de Reunião da Família Paice)
+D 0 1322 1 1 	(A Sala de Visitas)
+D 0 1323 3 1 	(A Sala de Estar)
 S
+$

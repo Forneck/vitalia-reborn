@@ -1,142 +1,125 @@
 #45
 Vitalia~
 Gondolin, o Reino Oculto~
-4500 4599 780 1 ad 0 0 0 -1 -1
--1
-*
-* Ajustar portï¿½es:
-D 0 4512 5 1            Entrada das montanhas
-D 0 4513 4 1
-D 0 4520 0 2            Portï¿½o de madeira
-D 0 4528 0 2            Portï¿½o de pedra
-D 0 4529 2 1
-D 0 4536 1 2            Portï¿½o de bronze
-D 0 4537 3 1
-D 0 4542 0 2            Portï¿½o de ferro
-D 0 4543 2 1
-D 0 4546 0 2            Portï¿½o de prata
-D 0 4547 2 1
-D 0 4549 0 2            Portï¿½o de ouro
-D 0 4550 2 1
-D 0 4553 0 2            Portï¿½o de aï¿½o
-D 0 4554 2 1
-D 0 4529 8 1            Torres do portï¿½o de pedra
-D 0 4529 9 1
-D 0 4530 6 1
-D 0 4531 7 1
-D 0 4564 1 1            Porta da torre do rei
-D 0 4565 3 1
-D 0 4570 2 1            Porta no salï¿½o de cristal
-D 0 4572 0 1            Aposentos de Idril
-D 0 4572 2 1            Aposentos de Idril
-D 0 4573 0 1            Quarto de Earendil
-D 0 4574 3 1            Escada
-D 0 4575 1 1            Salï¿½o de audiï¿½ncias
-D 0 4575 3 2            Sala do tesouro
-D 0 4576 1 1            Sala do tesouro
-D 0 4568 5 2            Tuneis de fuga
-D 0 4577 4 2            Tuneis de fuga
-D 0 4581 0 1            Porta de uma casa
-D 0 4582 2 1
-D 0 4586 2 1            Porta de uma casa
-D 0 4588 0 1
-*
-* Mobs e itens atï¿½ o sï¿½timo portï¿½o:
-M 0 4500 2 4508         ï¿½guia
-M 0 4500 2 4503         ï¿½guia
-M 0 4501 1 4512         Thorondor
-E 1 4506 5 18           asas de Thorondor
-M 0 4503 1 4517         Elemmakil
-E 1 4507 5 0            lanterna ï¿½lfica
-*
-M 0 4504 2 4520         sentinela de madeira
-M 0 4504 2 4520         sentinela de madeira
-G 1 4500 1      -1        chave de madeira
-M 0 4505 2 4528         sentinela de pedra
-M 0 4505 2 4528         sentinela de pedra
-G 1 4501 1     -1         chave de pedra
-M 0 4506 2 4536         sentinela de bronze
-M 0 4506 2 4536         sentinela de bronze
-G 1 4502 1 -1             chave de bronze
-M 0 4507 2 4542         sentinela de ferro
-M 0 4507 2 4542         sentenela de ferro
-G 1 4503 1  -1            chave de ferro
-M 0 4508 2 4546         sentinela de prata
-M 0 4508 2 4546         sentinela de prata
-G 1 4504 1  -1            chave de prata
-M 0 4509 2 4549         sentinela de ouro
-M 0 4509 2 4549         sentinela de ouro
-G 1 4505 1 -1             chave de ouro
-M 0 4510 1 4553         sentinela de aï¿½o
-*
-M 0 4511 1 4534         soldados do segundo portï¿½o
-E 1 4508 5 16           uma grande espada ï¿½lfica
-M 0 4512 1 4537         soldados do terceiro portï¿½o
-E 1 4509 5 16           um machado com lï¿½mina vermelha
-M 0 4513 1 4544         soldados do quarto portï¿½o
-E 1 4510 5 21           uma viseira com bico de ï¿½guia
-M 0 4514 1 4547         soldados do quinto portï¿½o
-E 1 4511 5 5            cota de malha de prata
-M 0 4515 1 4550         soldados do sexto portï¿½o
-E 1 4512 10 16          arco longo dourado
-E 1 4513 10 17          flecha de ouro
-*
-M 0 4516 1 4553         Ecthelion
-E 1 4514 5 11           um escudo cintilante
-*
-O 0 4515 10 4530        uma taï¿½a de vinho
-O 0 4516 20 4530        um lembas
-O 0 4515 10 4531        uma taï¿½a de vinho
-O 0 4516 20 4531        um lembas
-M 0 4517 2 4533         um vigia
-M 0 4517 2 4532         um vigia
-*
-* Mobs e itens alï¿½m do sï¿½timo portï¿½o:
-M 0 4518 1 4554         Voronwe
-E 1 4517 6 13           uma bolsa presa ao cinto
-P 1 4516 20 4517        lembas dentro da bolsa
-*
-M 0 4502 1 4554         Tuor
-E 1 4518 1 6            o elmo dos cisnes
-E 1 4519 1 12           o manto cinzento
-*
-C 0 4557 4519 -1
-M 1 4519 5 4557         sentinela no portï¿½o de entrada
-M 1 4519 5 4557         sentinela
-C 0 4564 4519 -1
-M 1 4519 5 4564         sentinela na torre do rei
-M 1 4519 5 4564         sentinela
-C 0 4574 4519 -1
-M 1 4519 5 4574         sentinela do salï¿½o de audiï¿½ncias
-*
-R 0 4561 4520
-O 0 4520 1 4561         fonte central
-*
-O 0 4521 1 4566         Belthil
-R 0 4566 4523
-O 1 4523 5 4566        flor
-O 0 4522 1 4567         Glingal
-R 0 4567 4524
-O 1 4524 5 4567        folha
-*
-M 0 4523 1 4571         Maeglin
-M 0 4520 1 4572         Idril
-E 1 4525 2 3            a jï¿½ia Elessar
-M 0 4521 1 4573         Eï¿½rendil
-M 0 4522 1 4575         Turgon
-E 1 4526 5 17           cetro de justiï¿½a
-G 1 4528 1  -1            chave de prata
-M 0 4524 1 4561         Glorfindel
-O 0 4527 1 4575         trono
-O 0 4529 1 4576         tesouro
-*
-M 0 4525 1 4579         Balrog
-E 1 4530 5 16           chicote
-*
-M 0 4526 2 4587         elfo
-M 0 4526 2 4581         elfo
-M 0 4527 2 4588         elfa
-M 0 4527 2 4582         elfa
-M 0 4528 2 4583         crianï¿½a
-M 0 4528 2 4585         crianï¿½a
+4500 4599 780 1 adk 0 0 0 -1 -1
+D 0 4512 5 1 	(Um Círculo de Montanhas)
+D 0 4513 4 1 	(No Interior das Montanhas Circundantes)
+D 0 4520 0 2 	(O Portão de Madeira)
+D 0 4528 0 2 	(O Portão de Pedra)
+D 0 4529 2 1 	(Um Grande Pátio)
+D 0 4536 1 2 	(O Portão de Bronze)
+D 0 4537 3 1 	(O Pátio do Terceiro Portão)
+D 0 4542 0 2 	(O Portão de Ferro Forjado)
+D 0 4543 2 1 	(Dentro do Quarto Portão)
+D 0 4546 0 2 	(O Portão de Prata)
+D 0 4547 2 1 	(O Pátio de Prata)
+D 0 4549 0 2 	(O Portão Dourado)
+D 0 4550 2 1 	(O Pátio Dourado)
+D 0 4553 0 2 	(O Portão de Aço)
+D 0 4554 2 1 	(O Alto Gramado)
+D 0 4529 8 1 	(Um Grande Pátio)
+D 0 4529 9 1 	(Um Grande Pátio)
+D 0 4530 6 1 	(De Baixo da Torre Leste)
+D 0 4531 7 1 	(De Baixo da Torre Oeste)
+D 0 4564 1 1 	(O Arco de Entrada)
+D 0 4565 3 1 	(O Salão de Entrada da Torre)
+D 0 4570 2 1 	(O Salão de Cristal)
+D 0 4572 0 1 	(Os Aposentos de Idril)
+D 0 4572 2 1 	(Os Aposentos de Idril)
+D 0 4573 0 1 	(O Quarto de Eärendil)
+D 0 4574 3 1 	(As Escadas do Terceiro Andar)
+D 0 4575 1 1 	(O Salão de Audiências)
+D 0 4575 3 2 	(O Salão de Audiências)
+D 0 4576 1 1 	(A Sala do Tesouro)
+D 0 4568 5 2 	(As Escadas do Primeiro Andar)
+D 0 4577 4 2 	(Os Túneis de Fuga)
+D 0 4581 0 1 	(As Ruas de Gondolin)
+D 0 4582 2 1 	(Uma Bela Casa)
+D 0 4586 2 1 	(As Ruas de Gondolin)
+D 0 4588 0 1 	(Uma Bela Casa)
+M 0 4500 2 4508 	(uma Ã¡guia)
+M 0 4500 2 4503 	(uma Ã¡guia)
+M 0 4501 1 4512 	(Thorondor)
+E 1 4506 5 18 	(as asas de Thorondor)
+M 0 4503 1 4517 	(Elemmakil)
+E 1 4507 5 0 	(uma lanterna Ã©lfica)
+M 0 4504 2 4520 	(o sentinela)
+M 0 4504 2 4520 	(o sentinela)
+G 1 4500 1 -1 	(uma chave de madeira)
+M 0 4505 2 4528 	(o sentinela)
+M 0 4505 2 4528 	(o sentinela)
+G 1 4501 1 -1 	(uma chave de pedra)
+M 0 4506 2 4536 	(o sentinela)
+M 0 4506 2 4536 	(o sentinela)
+G 1 4502 1 -1 	(uma chave de bronze)
+M 0 4507 2 4542 	(o sentinela)
+M 0 4507 2 4542 	(o sentinela)
+G 1 4503 1 -1 	(uma chave de ferro)
+M 0 4508 2 4546 	(o sentinela)
+M 0 4508 2 4546 	(o sentinela)
+G 1 4504 1 -1 	(uma chave de prata)
+M 0 4509 2 4549 	(o sentinela)
+M 0 4509 2 4549 	(o sentinela)
+G 1 4505 1 -1 	(uma chave de ouro)
+M 0 4510 1 4553 	(o sentinela)
+M 0 4511 1 4534 	(a guarniÃ§Ã£o do segundo portÃ£o)
+E 1 4508 5 16 	(uma grande espada Ã©lfica)
+M 0 4512 1 4537 	(a guarniÃ§Ã£o do terceiro portÃ£o)
+E 1 4509 5 16 	(um machado com lÃ¢mina vermelha)
+M 0 4513 1 4544 	(a guarniÃ§Ã£o do quarto portÃ£o)
+E 1 4510 5 21 	(uma viseira com bico de Ã¡guia)
+M 0 4514 1 4547 	(a guarniÃ§Ã£o do quinto portÃ£o)
+E 1 4511 5 5 	(uma cota de malha de prata)
+M 0 4515 1 4550 	(a guarniÃ§Ã£o do sexto portÃ£o)
+E 1 4512 10 16 	(um arco longo dourado)
+E 1 4513 10 17 	(uma flecha de ouro)
+M 0 4516 1 4553 	(Ecthelion)
+E 1 4514 5 11 	(um escudo cintilante)
+O 0 4515 10 4530 	(um cÃ¡lice de vinho)
+O 0 4516 20 4530 	(um lembas)
+O 0 4515 10 4531 	(um cÃ¡lice de vinho)
+O 0 4516 20 4531 	(um lembas)
+M 0 4517 2 4533 	(um vigilante)
+M 0 4517 2 4532 	(um vigilante)
+M 0 4518 1 4554 	(VoronwÃ«)
+E 1 4517 6 13 	(uma bolsa presa ao cinto)
+P 1 4516 20 4517 	(um lembas)
+M 0 4502 1 4554 	(Tuor)
+E 1 4518 1 6 	(o elmo dos cisnes)
+E 1 4519 1 12 	(o manto cinzento do Senhor das Ãguas)
+C 0 4557 4519 -1 	(o sentinela)
+M 1 4519 5 4557 	(o sentinela)
+M 1 4519 5 4557 	(o sentinela)
+C 0 4564 4519 -1 	(o sentinela)
+M 1 4519 5 4564 	(o sentinela)
+M 1 4519 5 4564 	(o sentinela)
+C 0 4574 4519 -1 	(o sentinela)
+M 1 4519 5 4574 	(o sentinela)
+R 0 4561 4520 -1 	(a fonte da praÃ§a central de Gondolin)
+O 0 4520 1 4561 	(a fonte da praÃ§a central de Gondolin)
+O 0 4521 1 4566 	(Belthil, a Ã¡rvore de prata)
+R 0 4566 4523 -1 	(a flor de prata de Belthil)
+O 1 4523 5 4566 	(a flor de prata de Belthil)
+O 0 4522 1 4567 	(Glingal, a Ã¡rvore de ouro)
+R 0 4567 4524 -1 	(a folha de ouro de Glingal)
+O 1 4524 5 4567 	(a folha de ouro de Glingal)
+M 0 4523 1 4571 	(Maeglin)
+M 0 4520 1 4572 	(Idril)
+E 1 4525 2 3 	(a jÃ³ia Elessar)
+M 0 4521 1 4573 	(EÃ¤rendil)
+M 0 4522 1 4575 	(Turgon)
+E 1 4526 5 17 	(o cetro de justiÃ§a)
+G 1 4528 1 -1 	(uma chave de prata)
+M 0 4524 1 4561 	(Glorfindel)
+O 0 4527 1 4575 	(o trono de Turgon)
+O 0 4529 1 4576 	(uma parte do tesouro de Gondolin)
+M 0 4525 1 4579 	(o balrog)
+E 1 4530 5 16 	(o chicote de fogo dos Balrogs)
+M 0 4526 2 4587 	(um elfo)
+M 0 4526 2 4581 	(um elfo)
+M 0 4527 2 4588 	(uma elfa)
+M 0 4527 2 4582 	(uma elfa)
+M 0 4528 2 4583 	(uma crianÃ§a Ã©lfica)
+M 0 4528 2 4585 	(uma crianÃ§a Ã©lfica)
 S
+$

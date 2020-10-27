@@ -1,99 +1,97 @@
 #102
 Vitalia~
 O Castelo de Jareth~
-10200 10299 70 1 abe 0 0 0 -1 -1
--1
-*
-M 0 10216 1 10240
-E 1 10218 13 1 
-D 0 10240 3 1
-M 0 10218 1 10228
-E 1 10222 15 5
-E 1 10221 10 17
-D 0 10228 3 1
-M 0 10217 1 10243
-E 1 10219 15 9
-E 1 10220 15 2
-D 0 10243 1 1
-M 0 10215 1 10274
-E 1 10217 20 8
-M 0 10214 3 10218
-M 0 10214 3 10219
-M 0 10214 3 10219
-D 0 10219 2 1
-M 0 10213 1 10212
-E 1 10216 13 17
-M 0 10205 1 10212
-E 1 10209 13 21
-E 1 10210 13 8
-M 0 10204 1 10212
-E 1 10207 20 17
-E 1 10208 20 13
-M 0 10212 1 10212
-M 0 10211 1 10238
-E 1 10214 13 21
-E 1 10215 20 12
-D 0 10238 0 1
-M 0 10210 4 10211
-M 0 10202 1 10211
-E 1 10205 20 21
-D 0 10211 3 1
-M 0 10210 4 10221
-M 0 10210 4 10208
-D 0 10208 2 1
-M 0 10209 1 10209
-E 1 10213 20 9
-D 0 10209 3 1
-D 0 10209 0 1
-M 0 10207 3 10272
-E 1 10212 20 11
-M 0 10206 2 10272
-M 0 10208 1 10272
-E 1 10211 20 9
-M 0 10203 1 10204
-E 1 10206 20 0
-D 0 10204 2 1
-M 0 10201 1 10213
-E 1 10202 20 14
-E 1 10203 20 5
-E 1 10204 20 3
-M 0 10200 1 10210
-E 1 10200 20 21
-E 1 10201 20 5
-D 0 10229 1 1
-D 0 10230 0 1
-D 0 10227 2 1
-D 0 10242 3 1
-D 0 10231 1 1
-D 0 10231 3 1
-D 0 10241 3 1
-D 0 10232 1 1
-D 0 10232 3 1
-D 0 10244 1 1
-D 0 10233 1 1
-D 0 10233 3 1
-D 0 10245 1 1
-D 0 10239 3 1
-D 0 10234 1 1
-D 0 10234 3 1
-D 0 10246 1 1
-D 0 10235 2 1
-D 0 10236 1 1
-D 0 10237 3 1
-D 0 10226 1 1
-D 0 10226 2 1
-D 0 10225 0 1
-D 0 10222 1 1
-D 0 10283 0 1
-D 0 10214 1 1
-D 0 10206 3 1
-D 0 10206 2 1
-D 0 10205 0 1
-D 0 10203 2 1
-D 0 10203 0 1
-D 0 10203 1 1
-D 0 10204 2 1
-D 0 10207 0 1
-D 0 10202 3 1
+10200 10299 70 1 abek 0 0 0 -1 -1
+M 0 10216 1 10240 	(um vendedor de cerveja)
+E 1 10218 13 1 	(um belo anel articulado)
+D 0 10240 3 1 	(O Quarto de HÛspedes)
+M 0 10218 1 10228 	(Dominum, o curandeiro)
+E 1 10222 15 5 	(um cassoque negro)
+E 1 10221 10 17 	(o Livro da Vida)
+D 0 10228 3 1 	(O Quarto de HÛspedes)
+M 0 10217 1 10243 	(Fortuna, a necromante)
+E 1 10219 15 9 	(uma manopla cravejada com jÛias)
+E 1 10220 15 2 	(uma anel de teias)
+D 0 10243 1 1 	(O Quarto de HÛspedes)
+M 0 10215 1 10274 	(o garoto do est√°bulo)
+E 1 10217 20 8 	(um par de botas de trabalhador)
+M 0 10214 3 10218 	(um cozinheiro)
+M 0 10214 3 10219 	(um cozinheiro)
+M 0 10214 3 10219 	(um cozinheiro)
+D 0 10219 2 1 	(A Cozinha)
+M 0 10213 1 10212 	(um artista)
+E 1 10216 13 17 	(um magnÌfico violino)
+M 0 10205 1 10212 	(o irm√£o do Senhor)
+E 1 10209 13 21 	(uma m·scara de ferro trabalhada)
+E 1 10210 13 8 	(um par de botas batidas)
+M 0 10204 1 10212 	(o irm√£o da Senhora)
+E 1 10207 20 17 	(uma garrafa de uÌsque)
+E 1 10208 20 13 	(um grosso cinto com uma fivela ornada com relevos)
+M 0 10212 1 10212 	(uma dama)
+M 0 10211 1 10238 	(um s√°bio)
+E 1 10214 13 21 	(um par de Ûculos de aro negro)
+E 1 10215 20 12 	(uma bolsa de livros)
+D 0 10238 0 1 	(O Quarto de HÛspedes)
+M 0 10210 4 10211 	(uma dama esperando por algu√©m)
+M 0 10202 1 10211 	(a dama de companhia da Senhora)
+E 1 10205 20 21 	(um vÈu de donzela)
+D 0 10211 3 1 	(A C‚mara Principal)
+M 0 10210 4 10221 	(uma dama esperando por algu√©m)
+M 0 10210 4 10208 	(uma dama esperando por algu√©m)
+D 0 10208 2 1 	(Um Curto Corredor)
+M 0 10209 1 10209 	(a ama)
+E 1 10213 20 9 	(um par de luvas brancas)
+D 0 10209 3 1 	(Os Aposentos do Senhor e da Senhora)
+D 0 10209 0 1 	(Os Aposentos do Senhor e da Senhora)
+M 0 10207 3 10272 	(um soldado impaciente)
+E 1 10212 20 11 	(um enorme escudo de ferro)
+M 0 10206 2 10272 	(um soldado)
+M 0 10208 1 10272 	(um soldado entediado)
+E 1 10211 20 9 	(um par de luvas de couro que alcanÁam o cotovelo)
+M 0 10203 1 10204 	(o criado particular do Senhor)
+E 1 10206 20 0 	(uma lumin·ria de servo)
+D 0 10204 2 1 	(Um Curto Corredor)
+M 0 10201 1 10213 	(a Senhora das Terras de Jareth)
+E 1 10202 20 14 	(um bracelete delicado)
+E 1 10203 20 5 	(um elegante vestido)
+E 1 10204 20 3 	(um colar de pÈrolas)
+M 0 10200 1 10210 	(o Senhor das Terras de Jareth)
+E 1 10200 20 21 	(um olho de bronze)
+E 1 10201 20 5 	(uma elegante armadura)
+D 0 10229 1 1 	(O Final Norte do Corredor)
+D 0 10230 0 1 	(O Corredor Superior)
+D 0 10227 2 1 	(O Quarto de HÛspedes)
+D 0 10242 3 1 	(O Quarto de HÛspedes)
+D 0 10231 1 1 	(O Corredor Superior)
+D 0 10231 3 1 	(O Corredor Superior)
+D 0 10241 3 1 	(O Quarto de HÛspedes)
+D 0 10232 1 1 	(O Corredor Superior)
+D 0 10232 3 1 	(O Corredor Superior)
+D 0 10244 1 1 	(O Quarto de HÛspedes)
+D 0 10233 1 1 	(O Corredor Superior)
+D 0 10233 3 1 	(O Corredor Superior)
+D 0 10245 1 1 	(O Quarto de HÛspedes)
+D 0 10239 3 1 	(O Quarto de HÛspedes)
+D 0 10234 1 1 	(O Corredor Superior)
+D 0 10234 3 1 	(O Corredor Superior)
+D 0 10246 1 1 	(O Quarto de HÛspedes)
+D 0 10235 2 1 	(O Corredor Superior)
+D 0 10236 1 1 	(O Final Sul do Corredor)
+D 0 10237 3 1 	(O Quarto de HÛspedes)
+D 0 10226 1 1 	(A Base da Escadaria)
+D 0 10226 2 1 	(A Base da Escadaria)
+D 0 10225 0 1 	(Corredor Oeste)
+D 0 10222 1 1 	(O Corredor Sul)
+D 0 10283 0 1 	(A Despensa Fria)
+D 0 10214 1 1 	(Um Corredor Esquecido)
+D 0 10206 3 1 	(O Quarto Particular do Senhor)
+D 0 10206 2 1 	(O Quarto Particular do Senhor)
+D 0 10205 0 1 	(Um Curto Corredor)
+D 0 10203 2 1 	(A Chapelaria)
+D 0 10203 0 1 	(A Chapelaria)
+D 0 10203 1 1 	(A Chapelaria)
+D 0 10204 2 1 	(Um Curto Corredor)
+D 0 10207 0 1 	(Um Curto Corredor)
+D 0 10202 3 1 	(Na Entrada do Castelo)
 S
-$~
+$

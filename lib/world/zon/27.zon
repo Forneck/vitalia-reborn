@@ -1,156 +1,155 @@
 #27
 Vitalia~
 Os Mistérios de Midantra~
-2700 2799 30 2 0 0 0 0 -1 -1
--1
-M 0 2727 2 2728
-M 0 2738 1 2728
-E 1 2748 100 6
-E 1 2749 100 11
-E 1 2750 100 7
-E 1 2751 100 10
-E 1 2752 100 5
-E 1 2753 100 8
-E 1 2754 100 9
-E 1 2755 100 13
-E 1 2756 100 1
-M 0 2736 1 2733
-E 1 2738 1 6
-E 1 2739 1 16
-E 1 2765 1 9
-E 1 2766 1 7
-E 1 2767 1 10
-E 1 2768 1 12
-E 1 2769 1 21
-M 0 2745 1 2781
-E 1 2758 1 11
-E 1 2761 1 7
-E 1 2760 1 10
-E 1 2759 1 9
-E 1 2762 1 13
-M 0 2740 6 2780
-M 0 2740 6 2780
-M 0 2739 4 2780
-R 0 2753 2757
-O 0 2757 10 2753
-M 0 2701 8 2753
-M 0 2701 8 2753
-M 0 2706 2 2753
-M 0 2735 2 2731
-M 0 2737 1 2731
-E 1 2740 1 6
-E 1 2741 1 11
-E 1 2742 1 7
-E 1 2743 1 10
-E 1 2744 1 5
-E 1 2745 1 8
-E 1 2746 1 9
-E 1 2747 1 21
-M 0 2731 1 2719
-E 1 2734 1 12
-E 1 2735 1 6
-M 0 2732 1 2757
-E 1 2736 1 16
-E 1 2737 1 4
-M 0 2728 1 2758		loja: o vendedor de armas
-M 0 2702 1 2754		loja: o ferreiro
-M 0 2733 7 2770
-M 0 2733 7 2766
-M 0 2733 7 2726
-M 0 2733 7 2726
-M 0 2733 7 2737
-M 0 2733 7 2737
-M 0 2734 6 2771
-M 0 2734 6 2764
-M 0 2734 6 2779
-M 0 2734 6 2779
-M 0 2734 6 2735
-M 0 2734 6 2735
-M 0 2739 4 2736
-M 0 2739 4 2738
-M 0 2739 4 2738
-M 0 2740 6 2734
-M 0 2740 6 2724
-M 0 2740 6 2730
-M 0 2740 6 2730
-M 0 2744 1 2703		loja: rizzo
-M 0 2706 2 2703
-M 0 2707 13 2714
-M 0 2707 13 2750
-M 0 2707 13 2718
-M 0 2707 13 2705
-M 0 2707 13 2705
-M 0 2707 13 2705
-M 0 2707 13 2755
-M 0 2707 13 2755
-M 0 2707 13 2751
-M 0 2707 13 2751
-M 0 2707 13 2715
-M 0 2707 13 2717
-M 0 2707 13 2716
-M 0 2707 13 2719
-M 0 2705 4 2768
-M 0 2705 4 2772
-M 0 2705 4 2763
-M 0 2729 1 2759		loja: a fabricante de armaduras
-M 0 2701 8 2722
-M 0 2701 8 2722
-M 0 2726 1 2756		loja: o padeiro empedernido
-M 0 2730 1 2756
-M 0 2735 2 2732
-M 0 2727 2 2729
-M 0 2701 8 2774
-M 0 2701 8 2774
-M 0 2701 8 2761
-M 0 2701 8 2761
-M 0 2700 2 2711
-M 0 2710 2 2747
-M 0 2710 1 2747
-M 0 2710 2 2748
-M 0 2703 1 2743
-M 0 2704 1 2743
-M 0 2722 4 2743
-M 0 2723 2 2743
-M 0 2724 2 2743
-M 0 2725 1 2743
-M 0 2742 1 2741
-M 0 2741 2 2709
-M 0 2741 2 2708
-M 0 2743 1 2798
-M 0 2718 5 2791
-M 1 2718 5 2791
-M 0 2720 8 2777
-M 1 2720 8 2777
-M 1 2720 8 2777
-M 1 2720 8 2777
-M 1 2720 8 2777
-M 1 2720 8 2777
-M 0 2718 5 2799
-M 1 2718 5 2799
-M 0 2718 5 2789
-M 1 2720 8 2789
-M 1 2721 8 2789
-M 0 2720 8 2785
-M 1 2721 8 2785
-M 1 2719 3 2785
-M 0 2719 3 2790
-M 0 2721 8 2795
-M 1 2721 8 2795
-M 1 2721 8 2795
-M 1 2719 3 2795
-M 0 2721 8 2783
-M 1 2721 8 2783
-M 1 2721 8 2783
-M 0 2716 1 2776
-M 0 2717 2 2776
-M 0 2717 2 2776
-M 0 2713 1 2745
-M 0 2711 1 2744
-M 0 2709 2 2742
-M 0 2708 4 2739
-M 0 2708 4 2702
-M 0 2708 4 2712
-M 0 2712 1 2749
-M 0 2708 4 2713
+2700 2799 30 2 k 0 0 0 -1 -1
+M 0 2727 2 2728 	(um escudeiro)
+M 0 2738 1 2728 	(o Cavaleiro da Rosa Branca)
+E 1 2748 100 6 	(um elmo com uma insígnia)
+E 1 2749 100 11 	(O Escudo da Rosa Branca)
+E 1 2750 100 7 	(um par de perneiras com uma insígnia)
+E 1 2751 100 10 	(um par de braçadeiras com uma insígnia)
+E 1 2752 100 5 	(um peitoral com uma insígnia)
+E 1 2753 100 8 	(um par de botas com uma insígnia)
+E 1 2754 100 9 	(um par de manoplas com uma insígnia)
+E 1 2755 100 13 	(um cinto com uma insígnia)
+E 1 2756 100 1 	(O belíssimo Anel da Rosa Branca)
+M 0 2736 1 2733 	(o treinador)
+E 1 2738 1 6 	(enormes curativos sujos de sangue)
+E 1 2739 1 16 	(um bisturi cirúrgico)
+E 1 2765 1 9 	(luvas cirúrgicas)
+E 1 2766 1 7 	(um par de calças de couro endurecido)
+E 1 2767 1 10 	(um par de braçadeiras de couro endurecido)
+E 1 2768 1 12 	(uma túnica cirúrgica)
+E 1 2769 1 21 	(uma máscara cirúrgica)
+M 0 2745 1 2781 	(O Cavaleiro do Espinho Negro)
+E 1 2758 1 11 	(um escudo com espinhos negros)
+E 1 2761 1 7 	(um par de perneiras com espinhos negros)
+E 1 2760 1 10 	(um par de braçadeiras com espinhos negros)
+E 1 2759 1 9 	(Um par de manoplas com espinhos negros)
+E 1 2762 1 13 	(um cinturão com espinhos negros)
+M 0 2740 6 2780 	(um cavaleiro distraído)
+M 0 2740 6 2780 	(um cavaleiro distraído)
+M 0 2739 4 2780 	(um homem de fama)
+R 0 2753 2757 -1 	(uma grande Fonte)
+O 0 2757 10 2753 	(uma grande Fonte)
+M 0 2701 8 2753 	(um camponês)
+M 0 2701 8 2753 	(um camponês)
+M 0 2706 2 2753 	(um nobre)
+M 0 2735 2 2731 	(uma jovem)
+M 0 2737 1 2731 	(uma linda paladina)
+E 1 2740 1 6 	(um elmo prateado)
+E 1 2741 1 11 	(O Escudo da Paladina)
+E 1 2742 1 7 	(um par de perneiras de prata)
+E 1 2743 1 10 	(um par de braçadeiras prateadas)
+E 1 2744 1 5 	(Um peitoral prateado)
+E 1 2745 1 8 	(um par de pesadas botas prateadas)
+E 1 2746 1 9 	(um par de manoplas prateadas)
+E 1 2747 1 21 	(uma viseira prateada)
+M 0 2731 1 2719 	(O Rei Jorus)
+E 1 2734 1 12 	(um Manto Real de veludo negro)
+E 1 2735 1 6 	(uma Coroa Real)
+M 0 2732 1 2757 	(a Rainha Elsa)
+E 1 2736 1 16 	(um Cetro cravejado de diamantes)
+E 1 2737 1 4 	(um colar enfeitado)
+M 0 2728 1 2758 	(o vendedor de armas)
+M 0 2702 1 2754 	(o ferreiro)
+M 0 2733 7 2770 	(um mercenário)
+M 0 2733 7 2766 	(um mercenário)
+M 0 2733 7 2726 	(um mercenário)
+M 0 2733 7 2726 	(um mercenário)
+M 0 2733 7 2737 	(um mercenário)
+M 0 2733 7 2737 	(um mercenário)
+M 0 2734 6 2771 	(Alguma coisa)
+M 0 2734 6 2764 	(Alguma coisa)
+M 0 2734 6 2779 	(Alguma coisa)
+M 0 2734 6 2779 	(Alguma coisa)
+M 0 2734 6 2735 	(Alguma coisa)
+M 0 2734 6 2735 	(Alguma coisa)
+M 0 2739 4 2736 	(um homem de fama)
+M 0 2739 4 2738 	(um homem de fama)
+M 0 2739 4 2738 	(um homem de fama)
+M 0 2740 6 2734 	(um cavaleiro distraído)
+M 0 2740 6 2724 	(um cavaleiro distraído)
+M 0 2740 6 2730 	(um cavaleiro distraído)
+M 0 2740 6 2730 	(um cavaleiro distraído)
+M 0 2744 1 2703 	(Rizzo, o supervisor geral da loja)
+M 0 2706 2 2703 	(um nobre)
+M 0 2707 13 2714 	(o guarda real)
+M 0 2707 13 2750 	(o guarda real)
+M 0 2707 13 2718 	(o guarda real)
+M 0 2707 13 2705 	(o guarda real)
+M 0 2707 13 2705 	(o guarda real)
+M 0 2707 13 2705 	(o guarda real)
+M 0 2707 13 2755 	(o guarda real)
+M 0 2707 13 2755 	(o guarda real)
+M 0 2707 13 2751 	(o guarda real)
+M 0 2707 13 2751 	(o guarda real)
+M 0 2707 13 2715 	(o guarda real)
+M 0 2707 13 2717 	(o guarda real)
+M 0 2707 13 2716 	(o guarda real)
+M 0 2707 13 2719 	(o guarda real)
+M 0 2705 4 2768 	(uma senhora coquete)
+M 0 2705 4 2772 	(uma senhora coquete)
+M 0 2705 4 2763 	(uma senhora coquete)
+M 0 2729 1 2759 	(a fabricante de armaduras)
+M 0 2701 8 2722 	(um camponês)
+M 0 2701 8 2722 	(um camponês)
+M 0 2726 1 2756 	(o padeiro empedernido)
+M 0 2730 1 2756 	(a mulher do padeiro)
+M 0 2735 2 2732 	(uma jovem)
+M 0 2727 2 2729 	(um escudeiro)
+M 0 2701 8 2774 	(um camponês)
+M 0 2701 8 2774 	(um camponês)
+M 0 2701 8 2761 	(um camponês)
+M 0 2701 8 2761 	(um camponês)
+M 0 2700 2 2711 	(um regateador)
+M 0 2710 2 2747 	(o torturador)
+M 0 2710 1 2747 	(o torturador)
+M 0 2710 2 2748 	(o torturador)
+M 0 2703 1 2743 	(o chefe do estábulo)
+M 0 2704 1 2743 	(o garoto do estábulo)
+M 0 2722 4 2743 	(um porco enlameado)
+M 0 2723 2 2743 	(uma vaca preguiçosa)
+M 0 2724 2 2743 	(um cavalo muito forte)
+M 0 2725 1 2743 	(um cavalo de guerra)
+M 0 2742 1 2741 	(o monstro do canal)
+M 0 2741 2 2709 	(uma sanguessuga)
+M 0 2741 2 2708 	(uma sanguessuga)
+M 0 2743 1 2798 	(um nobre cervo)
+M 0 2718 5 2791 	(uma corça)
+M 1 2718 5 2791 	(uma corça)
+M 0 2720 8 2777 	(um pássaro)
+M 1 2720 8 2777 	(um pássaro)
+M 1 2720 8 2777 	(um pássaro)
+M 1 2720 8 2777 	(um pássaro)
+M 1 2720 8 2777 	(um pássaro)
+M 1 2720 8 2777 	(um pássaro)
+M 0 2718 5 2799 	(uma corça)
+M 1 2718 5 2799 	(uma corça)
+M 0 2718 5 2789 	(uma corça)
+M 1 2720 8 2789 	(um pássaro)
+M 1 2721 8 2789 	(uma borboleta)
+M 0 2720 8 2785 	(um pássaro)
+M 1 2721 8 2785 	(uma borboleta)
+M 1 2719 3 2785 	(uma raposa cinza)
+M 0 2719 3 2790 	(uma raposa cinza)
+M 0 2721 8 2795 	(uma borboleta)
+M 1 2721 8 2795 	(uma borboleta)
+M 1 2721 8 2795 	(uma borboleta)
+M 1 2719 3 2795 	(uma raposa cinza)
+M 0 2721 8 2783 	(uma borboleta)
+M 1 2721 8 2783 	(uma borboleta)
+M 1 2721 8 2783 	(uma borboleta)
+M 0 2716 1 2776 	(a mamãe ursa)
+M 0 2717 2 2776 	(um filhote de urso)
+M 0 2717 2 2776 	(um filhote de urso)
+M 0 2713 1 2745 	(o guarda carcerário)
+M 0 2711 1 2744 	(o torturador veterano)
+M 0 2709 2 2742 	(o carcereiro)
+M 0 2708 4 2739 	(um sentinela atento)
+M 0 2708 4 2702 	(um sentinela atento)
+M 0 2708 4 2712 	(um sentinela atento)
+M 0 2712 1 2749 	(o Mestre Torturador)
+M 0 2708 4 2713 	(um sentinela atento)
 S
 $

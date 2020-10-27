@@ -1,191 +1,188 @@
 #92
 Vitania~
 Os Cinco Reinos~
-9200 9299 5 1 d 0 0 0 -1 -1
--1
-*portas
-D 0 9205 0 2
-D 0 9214 2 2
-D 0 9206 0 2
-D 0 9210 2 2
-D 0 9207 0 2
-D 0 9211 2 2
-D 0 9208 0 2
-D 0 9212 2 2
-D 0 9209 0 2
-D 0 9213 2 2
-D 0 9225 1 1
-D 0 9230 3 1
-D 0 9226 1 1
-D 0 9231 3 1
-D 0 9227 1 1
-D 0 9232 3 1
-D 0 9228 1 1
-D 0 9233 3 1
-D 0 9229 1 1
-D 0 9234 3 1
-D 0 9235 0 1
-D 0 9236 0 1
-D 0 9237 0 1
-D 0 9238 0 1
-D 0 9239 0 1
-*MOBS
-M 0 9200 1 9202     cartomante
-M 0 9201 2 9206     valete copas
-E 1 9205 5 16
-M 0 9201 2 9206     valete copas
-G 1 9201 6
-M 0 9202 2 9207     valete ouros
-E 1 9206 5 16
-M 0 9202 2 9207     valete ouros
-G 1 9202 6 
-M 0 9203 2 9208     valete espadas
-E 1 9207 5 16
-M 0 9203 2 9208     valete espadas
-G 1 9203 6
-M 0 9204 2 9209     valete paus
-E 1 9208 5 16
-M 0 9204 2 9209     valete paus
-G 1 9204 6
-M 0 9205 2 9205     valete coringa
-E 1 9209 5 16
-M 0 9205 2 9205     valete coringa
-G 1 9200 6
-M 0 9206 3 9215     sete copas
-E 1 9225 5 16
-M 0 9207 3 9216     sete ouros
-E 1 9226 5 16
-M 0 9208 3 9217     sete espadas
-E 1 9227 5 16
-M 0 9209 3 9218     sete paus
-E 1 9228 5 16
-M 0 9210 3 9219     sete coringa
-E 1 9229 5 16
-M 0 9211 3 9215     tres copas
-E 1 9220 5 16
-M 0 9212 3 9216     tres ouros
-E 1 9221 5 16
-M 0 9213 3 9217     tres espadas
-E 1 9222 5 16
-M 0 9214 3 9218     tres paus
-E 1 9223 5 16
-M 0 9215 3 9219     tres coringa
-E 1 9224 5 16
-M 0 9216 2 9220     canastra copas
-M 0 9217 2 9221     canastra ouros
-E 1 3840 16 17       Card Carta(3840) com Carta de ouro(9217)
-M 0 9218 2 9222     canastra espadas
-M 0 9219 2 9223     canastra paus
-M 0 9220 2 9224     canastra coringa
-M 0 9221 1 9225     rei copas
-E 1 9210 3 16
-E 1 9230 3 3
-G 1 9260 2
-M 0 9222 1 9226     rei ouros
-E 1 9211 3 16
-E 1 9231 3 3
-G 1 9261 2 
-M 0 9223 1 9227     rei espadas
-E 1 9212 3 16
-E 1 9232 3 3
-G 1 9262 2
-M 0 9224 1 9228     rei paus
-E 1 9213 3 16
-E 1 9233 3 3
-G 1 9263 2
-M 0 9225 1 9229     rei coringa
-E 1 9214 3 16
-E 1 9234 3 3
-G 1 9264 2
-M 0 9226 1 9230     as copas
-E 1 9215 5 16
-M 0 9227 1 9231     as ouros
-E 1 9216 5 16
-M 0 9228 1 9232     as espadas
-E 1 9217 5 16
-M 0 9229 1 9233     as paus
-E 1 9218 5 16
-M 0 9230 1 9234     as coringa
-E 1 9219 5 16
-M 0 9231 1 9240     dama copas
-E 1 9235 6 19
-E 1 9235 6 20
-E 1 9240 4 3
-G 1 9265 2
-M 0 9232 1 9241     dama ouros
-E 1 9236 6 19
-E 1 9236 6 20
-E 1 9241 4 3
-G 1 9266 2
-M 0 9233 1 9242     dama espadas
-E 1 9237 6 19
-E 1 9237 6 20
-E 1 9242 4 3
-G 1 9267 2
-M 0 9234 1 9243     dama paus
-E 1 9238 6 19
-E 1 9238 6 20
-E 1 9243 4 3
-G 1 9268 2
-M 0 9235 1 9244     dama coringa
-E 1 9239 6 19
-E 1 9239 6 20
-E 1 9244 4 3
-G 1 9269 2
-M 0 9236 1 9206     ladr�o de chaves copas
-G 1 9201 6 
-M 0 9236 1 9207     ladr�o de chaves ouros
-G 1 9202 6
-M 0 9236 1 9208     ladr�o de chaves espadas
-G 1 9203 6
-M 0 9236 1 9209     ladr�o de chaves paus
-G 1 9204 6
-M 0 9236 1 9205     ladr�o de chaves coringa
-G 1 9200 6 
-*OBJ
-R 0 9240 9245       Bau copas
-O 0 9245 1 9240     Bau copas
-P 1 9270 1 9245     tesouro de copas
-R 0 9241 9246       Bau ouros
-O 0 9246 1 9241     Bau ouros
-P 1 9271 1 9246     tesouro de ouros
-R 0 9242 9247       Bau espadas
-O 0 9247 1 9242     Bau espadas
-P 1 9272 1 9247     tesouro de espadas
-R 0 9243 9248       Bau paus
-O 0 9248 1 9243     Bau paus
-P 1 9273 1 9248     tesouro de paus
-R 0 9244 9249       Bau coringa
-O 0 9249 1 9244     Bau coringa
-P 1 9274 1 9249     tesouro de copas
-R 0 9230 9250       arca copas
-O 0 9250 1 9230     arca copas
-P 1 9275 1 9250     economias do as de copas
-R 0 9231 9251       arca ouros
-O 0 9251 1 9231     arca ouros
-P 1 9276 1 9251     economias do as de ouros
-R 0 9232 9252       arca espadas
-O 0 9252 1 9232     arca espadas
-P 1 9277 1 9252     economias do as de espadas
-R 0 9233 9253       arca paus
-O 0 9253 1 9233     arca paus
-P 1 9278 1 9253     economias do as de paus
-R 0 9234 9254       arca coringa
-O 0 9254 1 9234     arca coringa
-P 1 9279 1 9254     economias do as coringa
-R 0 9225 9280       trono copas
-O 0 9280 5 9225     trono copas
-P 1 9255 1 9280     coroa da rainha copas
-R 0 9226 9280       trono ouros
-O 0 9280 5 9226     trono ouros
-P 1 9256 1 9280     coroa da rainha ouros
-R 0 9227 9280       trono espadas
-O 0 9280 5 9227     trono espadas
-P 1 9257 1 9280     coroa da rainha espadas
-R 0 9228 9280       trono paus 
-O 0 9280 5 9228     trono paus 
-P 1 9258 1 9280     coroa da rainha paus
-R 0 9229 9280       trono coringa
-O 0 9280 5 9229     trono coringa
-P 1 9259 1 9280     coroa da rainha coringa
+9200 9299 5 1 dk 0 0 0 -1 -1
+D 0 9205 0 2 	(O Port�o de Forma Indefinida)
+D 0 9214 2 2 	(Estrada para o Castelo Multiforme)
+D 0 9206 0 2 	(O Port�o para o Reino de Copas)
+D 0 9210 2 2 	(Estrada para o Castelo de Copas)
+D 0 9207 0 2 	(O Port�o para o Reino de Ouros)
+D 0 9211 2 2 	(Estrada para o Castelo de Ouros)
+D 0 9208 0 2 	(O Port�o para o Reino de Espadas)
+D 0 9212 2 2 	(Estrada para o Castelo de Espadas)
+D 0 9209 0 2 	(O Port�o para o Reino de Paus)
+D 0 9213 2 2 	(Estrada para o Castelo de Paus)
+D 0 9225 1 1 	(A Sala do Trono de Copas)
+D 0 9230 3 1 	(O Quarto do �s de Copas)
+D 0 9226 1 1 	(A Sala do Trono de Ouros)
+D 0 9231 3 1 	(O Quarto do �s de Ouros)
+D 0 9227 1 1 	(A Sala do Trono de Espadas)
+D 0 9232 3 1 	(O Quarto do �s de Espadas)
+D 0 9228 1 1 	(A Sala do Trono de Paus)
+D 0 9233 3 1 	(O Quarto do �s de Paus)
+D 0 9229 1 1 	(A Sala do Trono do Rei Coringa)
+D 0 9234 3 1 	(O Quarto do Falso �s)
+D 0 9235 0 1 	(A Subindo a Torre de Copas)
+D 0 9236 0 1 	(A Subindo a Torre de Ouros)
+D 0 9237 0 1 	(A Subindo a Torre de Espadas)
+D 0 9238 0 1 	(A Subindo a Torre de Paus)
+D 0 9239 0 1 	(A Subindo a Torre Coringa)
+M 0 9200 1 9202 	(a cartomante)
+M 0 9201 2 9206 	(o valete de copas)
+E 1 9205 5 16 	(a alabarda do Valete de Copas)
+M 0 9201 2 9206 	(o valete de copas)
+G 1 9201 6 -1 	(a chave do Reino de Copas)
+M 0 9202 2 9207 	(o valete de ouros)
+E 1 9206 5 16 	(a alabarda do Valete de Ouros)
+M 0 9202 2 9207 	(o valete de ouros)
+G 1 9202 6 -1 	(a chave do Reino de Ouros)
+M 0 9203 2 9208 	(o valete de espadas)
+E 1 9207 5 16 	(a alabarda do Valete de Espadas)
+M 0 9203 2 9208 	(o valete de espadas)
+G 1 9203 6 -1 	(a chave do Reino de Espadas)
+M 0 9204 2 9209 	(o valete de paus)
+E 1 9208 5 16 	(a alabarda do Valete de Paus)
+M 0 9204 2 9209 	(o valete de paus)
+G 1 9204 6 -1 	(a chave do Reino de Paus)
+M 0 9205 2 9205 	(o coringa disfarçado em valete)
+E 1 9209 5 16 	(a alabarda do Valete Coringa)
+M 0 9205 2 9205 	(o coringa disfarçado em valete)
+G 1 9200 6 -1 	(a chave do Reino Coringa)
+M 0 9206 3 9215 	(o sete de copas)
+E 1 9225 5 16 	(o punhal do Sete de Copas)
+M 0 9207 3 9216 	(o sete de ouros)
+E 1 9226 5 16 	(o punhal do Sete de Ouros)
+M 0 9208 3 9217 	(o sete de espadas)
+E 1 9227 5 16 	(o punhal do Sete de Espadas)
+M 0 9209 3 9218 	(o sete de paus)
+E 1 9228 5 16 	(o punhal do Sete de Paus)
+M 0 9210 3 9219 	(o coringa fingindo ser um sete)
+E 1 9229 5 16 	(o punhal do Coringa Sete)
+M 0 9211 3 9215 	(um três de copas)
+E 1 9220 5 16 	(o florete do Três de Copas)
+M 0 9212 3 9216 	(um três de ouros)
+E 1 9221 5 16 	(o florete do Três de Ouros)
+M 0 9213 3 9217 	(um três de espadas)
+E 1 9222 5 16 	(o florete do Três de Espadas)
+M 0 9214 3 9218 	(um três de paus)
+E 1 9223 5 16 	(o florete do Três de Paus)
+M 0 9215 3 9219 	(um coringa disfarçado de três)
+E 1 9224 5 16 	(o florete do Coringa Três )
+M 0 9216 2 9220 	(a canastra de copas)
+M 0 9217 2 9221 	(a canastra de ouros)
+E 1 3840 16 17 	(o Card Cartas de Baralho)
+M 0 9218 2 9222 	(a canastra de espadas)
+M 0 9219 2 9223 	(a canastra de paus)
+M 0 9220 2 9224 	(a canastra suja)
+M 0 9221 1 9225 	(o Rei de Copas)
+E 1 9210 3 16 	(a espada do Rei de Copas)
+E 1 9230 3 3 	(o manto bordado do Rei de Copas)
+G 1 9260 2 -1 	(a chave do tesouro de Copas)
+M 0 9222 1 9226 	(o Rei de Ouros)
+E 1 9211 3 16 	(a espada do Rei de Ouros)
+E 1 9231 3 3 	(o manto bordado do Rei de Ouros)
+G 1 9261 2 -1 	(a chave do tesouro de Ouros)
+M 0 9223 1 9227 	(o Rei de Espadas)
+E 1 9212 3 16 	(a espada do Rei de Espadas)
+E 1 9232 3 3 	(o manto bordado do Rei de Espadas)
+G 1 9262 2 -1 	(a chave do tesouro de Espadas)
+M 0 9224 1 9228 	(o Rei de Paus)
+E 1 9213 3 16 	(a espada do Rei de Paus)
+E 1 9233 3 3 	(o manto bordado do Rei de Paus)
+G 1 9263 2 -1 	(a chave do tesouro de Paus)
+M 0 9225 1 9229 	(o Rei Coringa)
+E 1 9214 3 16 	(a espada do Rei Coringa)
+E 1 9234 3 3 	(o manto bordado do Rei Coringa)
+G 1 9264 2 -1 	(a chave do tesouro Coringa)
+M 0 9226 1 9230 	(o Ás de copas)
+E 1 9215 5 16 	(o chicote do Ás de Copas)
+M 0 9227 1 9231 	(o Ás de Ouros)
+E 1 9216 5 16 	(o chicote do Ás de Ouros)
+M 0 9228 1 9232 	(o Ás de Espadas)
+E 1 9217 5 16 	(o chicote do Ás de Espadas)
+M 0 9229 1 9233 	(o Ás de Paus)
+E 1 9218 5 16 	(o chicote do Ás de Paus)
+M 0 9230 1 9234 	(o Falso Ás)
+E 1 9219 5 16 	(o chicote do Falso Ás)
+M 0 9231 1 9240 	(a Dama de Copas)
+E 1 9235 6 19 	(um brinco da Dama de Copas)
+E 1 9235 6 20 	(um brinco da Dama de Copas)
+E 1 9240 4 3 	(o colar da Dama de Copas)
+G 1 9265 2 -1 	(uma chave esculpida a mão)
+M 0 9232 1 9241 	(a Dama de Ouros)
+E 1 9236 6 19 	(um brinco da Dama de Ouros)
+E 1 9236 6 20 	(um brinco da Dama de Ouros)
+E 1 9241 4 3 	(o colar da Dama de Ouros)
+G 1 9266 2 -1 	(uma chave esculpida a mão)
+M 0 9233 1 9242 	(a Dama de Espadas)
+E 1 9237 6 19 	(um brinco da Dama de Espadas)
+E 1 9237 6 20 	(um brinco da Dama de Espadas)
+E 1 9242 4 3 	(o colar da Dama de Espadas)
+G 1 9267 2 -1 	(uma chave esculpida a mão)
+M 0 9234 1 9243 	(a Dama de Paus)
+E 1 9238 6 19 	(um brinco da Dama de Paus)
+E 1 9238 6 20 	(um brinco da Dama de Paus)
+E 1 9243 4 3 	(o colar da Dama de Paus)
+G 1 9268 2 -1 	(uma chave esculpida a mão)
+M 0 9235 1 9244 	(a Dama Coringa)
+E 1 9239 6 19 	(um brinco da Dama Coringa)
+E 1 9239 6 20 	(um brinco da Dama Coringa)
+E 1 9244 4 3 	(o colar da Dama Coringa)
+G 1 9269 2 -1 	(uma chave esculpida a mão)
+M 0 9236 1 9206 	(o pequeno chaveiro)
+G 1 9201 6 -1 	(a chave do Reino de Copas)
+M 0 9236 1 9207 	(o pequeno chaveiro)
+G 1 9202 6 -1 	(a chave do Reino de Ouros)
+M 0 9236 1 9208 	(o pequeno chaveiro)
+G 1 9203 6 -1 	(a chave do Reino de Espadas)
+M 0 9236 1 9209 	(o pequeno chaveiro)
+G 1 9204 6 -1 	(a chave do Reino de Paus)
+M 0 9236 1 9205 	(o pequeno chaveiro)
+G 1 9200 6 -1 	(a chave do Reino Coringa)
+R 0 9240 9245 -1 	(o baú do tesouro de Copas)
+O 0 9245 1 9240 	(o baú do tesouro de Copas)
+P 1 9270 1 9245 	(a fortuna do Rei de Copas)
+R 0 9241 9246 -1 	(o baú do tesouro de Ouros)
+O 0 9246 1 9241 	(o baú do tesouro de Ouros)
+P 1 9271 1 9246 	(a fortuna do Rei de Ouros)
+R 0 9242 9247 -1 	(o baú do tesouro de Espadas)
+O 0 9247 1 9242 	(o baú do tesouro de Espadas)
+P 1 9272 1 9247 	(a fortuna do Rei de Espadas)
+R 0 9243 9248 -1 	(o baú do tesouro de Paus)
+O 0 9248 1 9243 	(o baú do tesouro de Paus)
+P 1 9273 1 9248 	(a fortuna do Rei de Paus)
+R 0 9244 9249 -1 	(o baú do tesouro Coringa)
+O 0 9249 1 9244 	(o baú do tesouro Coringa)
+P 1 9274 1 9249 	(a fortuna do Rei Coringa)
+R 0 9230 9250 -1 	(a arca do quarto do Ás de Copas)
+O 0 9250 1 9230 	(a arca do quarto do Ás de Copas)
+P 1 9275 1 9250 	(as economias do Ás de Copas)
+R 0 9231 9251 -1 	(a arca do quarto do Ás de Ouros)
+O 0 9251 1 9231 	(a arca do quarto do Ás de Ouros)
+P 1 9276 1 9251 	(as economias do Ás de Ouros)
+R 0 9232 9252 -1 	(a arca do quarto do Ás de Espadas)
+O 0 9252 1 9232 	(a arca do quarto do Ás de Espadas)
+P 1 9277 1 9252 	(as economias do Ás de Espadas)
+R 0 9233 9253 -1 	(a arca do quarto do Ás de Paus)
+O 0 9253 1 9233 	(a arca do quarto do Ás de Paus)
+P 1 9278 1 9253 	(as economias do Ás de Paus)
+R 0 9234 9254 -1 	(a arca do quarto do Falso Ás)
+O 0 9254 1 9234 	(a arca do quarto do Falso Ás)
+P 1 9279 1 9254 	(as economias do Falso Ás)
+R 0 9225 9280 -1 	(um trono menor)
+O 0 9280 5 9225 	(um trono menor)
+P 1 9255 1 9280 	(a coroa da Rainha de Copas)
+R 0 9226 9280 -1 	(um trono menor)
+O 0 9280 5 9226 	(um trono menor)
+P 1 9256 1 9280 	(a coroa da Rainha de Ouros)
+R 0 9227 9280 -1 	(um trono menor)
+O 0 9280 5 9227 	(um trono menor)
+P 1 9257 1 9280 	(a coroa da Rainha de Espadas)
+R 0 9228 9280 -1 	(um trono menor)
+O 0 9280 5 9228 	(um trono menor)
+P 1 9258 1 9280 	(a coroa da Rainha de Paus)
+R 0 9229 9280 -1 	(um trono menor)
+O 0 9280 5 9229 	(um trono menor)
+P 1 9259 1 9280 	(a coroa da Rainha Coringa)
 S
+$

@@ -1,220 +1,206 @@
 #66
 Vitalia~
 Vila de Nova Thalos~
-6600 6799 15 2 0 0 0 0 -1 -1
--1
-*
-* Portas
-*
-* Rua de Laksmi 
-D 0 6610 0 1		casa 1
-D 0 6700 2 1
-D 0 6610 2 1		casa 2
-D 0 6701 0 1
-D 0 6611 0 1		casa 3
-D 0 6702 2 1
-D 0 6611 2 1		casa 4
-D 0 6703 0 1
-D 0 6612 0 1		casa 5
-D 0 6704 2 1
-D 0 6612 2 1		casa 6
-D 0 6705 0 1
-D 0 6613 0 1		casa 7
-D 0 6706 2 1
-D 0 6613 2 1		casa 8
-D 0 6707 0 1
-D 0 6614 0 1		casa 9
-D 0 6708 2 1
-D 0 6614 2 1		casa 10
-D 0 6709 0 1
-D 0 6615 0 1		casa 11
-D 0 6710 2 1
-D 0 6615 2 1		casa 12
-D 0 6711 0 1
-D 0 6616 0 1		casa 13
-D 0 6712 2 1
-D 0 6616 2 1		casa 14
-D 0 6713 0 1
-D 0 6617 0 1		casa 15
-D 0 6714 2 1
-D 0 6617 2 1		casa 16
-D 0 6715 0 1
-D 0 6618 0 1		casa 17
-D 0 6716 2 1
-D 0 6618 2 1		casa 18
-D 0 6717 0 1
-D 0 6619 0 1		casa 19
-D 0 6718 2 1
-D 0 6619 2 1		casa 20
-D 0 6719 0 1
-*
-* Rua de Krishna
-D 0 6620 0 1		casa 1
-D 0 6720 2 1
-D 0 6620 2 1		casa 2
-D 0 6721 0 1
-D 0 6621 0 1		casa 3
-D 0 6722 2 1
-D 0 6621 2 1		casa 4
-D 0 6723 0 1
-D 0 6622 0 1		casa 5
-D 0 6724 2 1
-D 0 6622 2 1		casa 6
-D 0 6725 0 1
-D 0 6623 0 1		casa 7
-D 0 6726 2 1
-D 0 6623 2 1		casa 8
-D 0 6727 0 1
-D 0 6624 0 1		casa 9
-D 0 6728 2 1
-D 0 6624 2 1		casa 10
-D 0 6729 0 1
-D 0 6625 0 1		casa 11
-D 0 6730 2 1
-D 0 6625 2 1		casa 12
-D 0 6731 0 1
-D 0 6626 0 1		casa 13
-D 0 6732 2 1
-D 0 6626 2 1		casa 14
-D 0 6733 0 1
-D 0 6627 0 1		casa 15
-D 0 6734 2 1
-D 0 6627 2 1		casa 16
-D 0 6735 0 1
-D 0 6628 0 1		casa 17
-D 0 6736 2 1
-D 0 6628 2 1		casa 18
-D 0 6737 0 1
-D 0 6629 0 1		casa 19
-D 0 6738 2 1
-D 0 6629 2 1		casa 20
-D 0 6739 0 1
-*
-* Rua de Ganesh
-D 0 6630 0 1		casa 1
-D 0 6740 2 1
-D 0 6630 2 1		casa 2
-D 0 6741 0 1
-D 0 6631 0 1		casa 3
-D 0 6742 2 1
-D 0 6631 2 1		casa 4
-D 0 6743 0 1
-D 0 6632 0 1		casa 5
-D 0 6744 2 1
-D 0 6632 2 1		casa 6
-D 0 6745 0 1
-D 0 6633 0 1		casa 7
-D 0 6746 2 1
-D 0 6633 2 1		casa 8
-D 0 6747 0 1
-D 0 6634 0 1		casa 9
-D 0 6748 2 1
-D 0 6634 2 1		casa 10
-D 0 6749 0 1
-D 0 6635 0 1		casa 11
-D 0 6750 2 1
-D 0 6635 2 1		casa 12
-D 0 6751 0 1
-D 0 6636 0 1		casa 13
-D 0 6752 2 1
-D 0 6636 2 1		casa 14
-D 0 6753 0 1
-D 0 6637 0 1		casa 15
-D 0 6754 2 1
-D 0 6637 2 1		casa 16
-D 0 6755 0 1
-D 0 6638 0 1		casa 17
-D 0 6756 2 1
-D 0 6638 2 1		casa 18
-D 0 6757 0 1
-D 0 6639 0 1		casa 19
-D 0 6758 2 1
-D 0 6639 2 1		casa 20
-D 0 6759 0 1
-*
-* Rua de Indra
-D 0 6640 0 1		casa 1
-D 0 6760 2 1
-D 0 6640 2 1		casa 2
-D 0 6761 0 1
-D 0 6641 0 1		casa 3
-D 0 6762 2 1
-D 0 6641 2 1		casa 4
-D 0 6763 0 1
-D 0 6642 0 1		casa 5
-D 0 6764 2 1
-D 0 6642 2 1		casa 6
-D 0 6765 0 1
-D 0 6643 0 1		casa 7
-D 0 6766 2 1
-D 0 6643 2 1		casa 8
-D 0 6767 0 1
-D 0 6644 0 1		casa 9
-D 0 6768 2 1
-D 0 6644 2 1		casa 10
-D 0 6769 0 1
-D 0 6645 0 1		casa 11
-D 0 6770 2 1
-D 0 6645 2 1		casa 12
-D 0 6771 0 1
-D 0 6646 0 1		casa 13
-D 0 6772 2 1
-D 0 6646 2 1		casa 14
-D 0 6773 0 1
-D 0 6647 0 1		casa 15
-D 0 6774 2 1
-D 0 6647 2 1		casa 16
-D 0 6775 0 1
-D 0 6648 0 1		casa 17
-D 0 6776 2 1
-D 0 6648 2 1		casa 18
-D 0 6777 0 1
-D 0 6649 0 1		casa 19
-D 0 6778 2 1
-D 0 6649 2 1		casa 20
-D 0 6779 0 1
-*
-* Rua de Matsia
-D 0 6650 0 1		casa 1
-D 0 6780 2 1
-D 0 6650 2 1		casa 2
-D 0 6781 0 1
-D 0 6651 0 1		casa 3
-D 0 6782 2 1
-D 0 6651 2 1		casa 4
-D 0 6783 0 1
-D 0 6652 0 1		casa 5
-D 0 6784 2 1
-D 0 6652 2 1		casa 6
-D 0 6785 0 1
-D 0 6653 0 1		casa 7
-D 0 6786 2 1
-D 0 6653 2 1		casa 8
-D 0 6787 0 1
-D 0 6654 0 1		casa 9
-D 0 6788 2 1
-D 0 6654 2 1		casa 10
-D 0 6789 0 1
-D 0 6655 0 1		casa 11
-D 0 6790 2 1
-D 0 6655 2 1		casa 12
-D 0 6791 0 1
-D 0 6656 0 1		casa 13
-D 0 6792 2 1
-D 0 6656 2 1		casa 14
-D 0 6793 0 1
-D 0 6657 0 1		casa 15
-D 0 6794 2 1
-D 0 6657 2 1		casa 16
-D 0 6795 0 1
-D 0 6658 0 1		casa 17
-D 0 6796 2 1
-D 0 6658 2 1		casa 18
-D 0 6797 0 1
-D 0 6659 0 1		casa 19
-D 0 6798 2 1
-D 0 6659 2 1		casa 20
-D 0 6799 0 1
-*
+6600 6799 15 2 k 0 0 0 -1 -1
+D 0 6610 0 1 	(A Rua de Laksmi)
+D 0 6700 2 1 	(A Casa 1 da Rua de Laksmi)
+D 0 6610 2 1 	(A Rua de Laksmi)
+D 0 6701 0 1 	(A Casa 2 da Rua de Laksmi)
+D 0 6611 0 1 	(A Rua de Laksmi)
+D 0 6702 2 1 	(A Casa 3 da Rua de Laksmi)
+D 0 6611 2 1 	(A Rua de Laksmi)
+D 0 6703 0 1 	(A Casa 4 da Rua de Laksmi)
+D 0 6612 0 1 	(A Rua de Laksmi)
+D 0 6704 2 1 	(A Casa 5 da Rua de Laksmi)
+D 0 6612 2 1 	(A Rua de Laksmi)
+D 0 6705 0 1 	(A Casa 6 da Rua de Laksmi)
+D 0 6613 0 1 	(A Rua de Laksmi)
+D 0 6706 2 1 	(A Casa 7 da Rua de Laksmi)
+D 0 6613 2 1 	(A Rua de Laksmi)
+D 0 6707 0 1 	(A Casa 8 da Rua de Laksmi)
+D 0 6614 0 1 	(A Rua de Laksmi)
+D 0 6708 2 1 	(A Casa 9 da Rua de Laksmi)
+D 0 6614 2 1 	(A Rua de Laksmi)
+D 0 6709 0 1 	(A Casa 10 da Rua de Laksmi)
+D 0 6615 0 1 	(A Rua de Laksmi)
+D 0 6710 2 1 	(A Casa 11 da Rua de Laksmi)
+D 0 6615 2 1 	(A Rua de Laksmi)
+D 0 6711 0 1 	(A Casa 12 da Rua de Laksmi)
+D 0 6616 0 1 	(A Rua de Laksmi)
+D 0 6712 2 1 	(A Casa 13 da Rua de Laksmi)
+D 0 6616 2 1 	(A Rua de Laksmi)
+D 0 6713 0 1 	(A Casa 14 da Rua de Laksmi)
+D 0 6617 0 1 	(A Rua de Laksmi)
+D 0 6714 2 1 	(A Casa 15 da Rua de Laksmi)
+D 0 6617 2 1 	(A Rua de Laksmi)
+D 0 6715 0 1 	(A Casa 16 da Rua de Laksmi)
+D 0 6618 0 1 	(A Rua de Laksmi)
+D 0 6716 2 1 	(A Casa 17 da Rua de Laksmi)
+D 0 6618 2 1 	(A Rua de Laksmi)
+D 0 6717 0 1 	(A Casa 18 da Rua de Laksmi)
+D 0 6619 0 1 	(A Rua de Laksmi)
+D 0 6718 2 1 	(A Casa 19 da Rua de Laksmi)
+D 0 6619 2 1 	(A Rua de Laksmi)
+D 0 6719 0 1 	(A Casa 20 da Rua de Laksmi)
+D 0 6620 0 1 	(A Rua de Krishna)
+D 0 6720 2 1 	(A Casa 1 da Rua de Krishna)
+D 0 6620 2 1 	(A Rua de Krishna)
+D 0 6721 0 1 	(A Casa 2 da Rua de Krishna)
+D 0 6621 0 1 	(A Rua de Krishna)
+D 0 6722 2 1 	(A Casa 3 da Rua de Krishna)
+D 0 6621 2 1 	(A Rua de Krishna)
+D 0 6723 0 1 	(A Casa 4 da Rua de Krishna)
+D 0 6622 0 1 	(A Rua de Krishna)
+D 0 6724 2 1 	(A Casa 5 da Rua de Krishna)
+D 0 6622 2 1 	(A Rua de Krishna)
+D 0 6725 0 1 	(A Casa 6 da Rua de Krishna)
+D 0 6623 0 1 	(A Rua de Krishna)
+D 0 6726 2 1 	(A Casa 7 da Rua de Krishna)
+D 0 6623 2 1 	(A Rua de Krishna)
+D 0 6727 0 1 	(A Casa 8 da Rua de Krishna)
+D 0 6624 0 1 	(A Rua de Krishna)
+D 0 6728 2 1 	(A Casa 9 da Rua de Krishna)
+D 0 6624 2 1 	(A Rua de Krishna)
+D 0 6729 0 1 	(A Casa 10 da Rua de Krishna)
+D 0 6625 0 1 	(A Rua de Krishna)
+D 0 6730 2 1 	(A Casa 11 da Rua de Krishna)
+D 0 6625 2 1 	(A Rua de Krishna)
+D 0 6731 0 1 	(A Casa 12 da Rua de Krishna)
+D 0 6626 0 1 	(A Rua de Krishna)
+D 0 6732 2 1 	(A Casa 13 da Rua de Krishna)
+D 0 6626 2 1 	(A Rua de Krishna)
+D 0 6733 0 1 	(A Casa 14 da Rua de Krishna)
+D 0 6627 0 1 	(A Rua de Krishna)
+D 0 6734 2 1 	(A Casa 15 da Rua de Krishna)
+D 0 6627 2 1 	(A Rua de Krishna)
+D 0 6735 0 1 	(A Casa 16 da Rua de Krishna)
+D 0 6628 0 1 	(A Rua de Krishna)
+D 0 6736 2 1 	(A Casa 17 da Rua de Krishna)
+D 0 6628 2 1 	(A Rua de Krishna)
+D 0 6737 0 1 	(A Casa 18 da Rua de Krishna)
+D 0 6629 0 1 	(A Rua de Krishna)
+D 0 6738 2 1 	(A Casa 19 da Rua de Krishna)
+D 0 6629 2 1 	(A Rua de Krishna)
+D 0 6739 0 1 	(A Casa 20 da Rua de Krishna)
+D 0 6630 0 1 	(A Rua de Ganesh)
+D 0 6740 2 1 	(A Casa 1 da Rua de Ganesh)
+D 0 6630 2 1 	(A Rua de Ganesh)
+D 0 6741 0 1 	(A Casa 2 da Rua de Ganesh)
+D 0 6631 0 1 	(A Rua de Ganesh)
+D 0 6742 2 1 	(A Casa 3 da Rua de Ganesh)
+D 0 6631 2 1 	(A Rua de Ganesh)
+D 0 6743 0 1 	(A Casa 4 da Rua de Ganesh)
+D 0 6632 0 1 	(A Rua de Ganesh)
+D 0 6744 2 1 	(A Casa 5 da Rua de Ganesh)
+D 0 6632 2 1 	(A Rua de Ganesh)
+D 0 6745 0 1 	(A Casa 6 da Rua de Ganesh)
+D 0 6633 0 1 	(A Rua de Ganesh)
+D 0 6746 2 1 	(A Casa 7 da Rua de Ganesh)
+D 0 6633 2 1 	(A Rua de Ganesh)
+D 0 6747 0 1 	(A Casa 8 da Rua de Ganesh)
+D 0 6634 0 1 	(A Rua de Ganesh)
+D 0 6748 2 1 	(A Casa 9 da Rua de Ganesh)
+D 0 6634 2 1 	(A Rua de Ganesh)
+D 0 6749 0 1 	(A Casa 10 da Rua de Ganesh)
+D 0 6635 0 1 	(A Rua de Ganesh)
+D 0 6750 2 1 	(A Casa 11 da Rua de Ganesh)
+D 0 6635 2 1 	(A Rua de Ganesh)
+D 0 6751 0 1 	(A Casa 12 da Rua de Ganesh)
+D 0 6636 0 1 	(A Rua de Ganesh)
+D 0 6752 2 1 	(A Casa 13 da Rua de Ganesh)
+D 0 6636 2 1 	(A Rua de Ganesh)
+D 0 6753 0 1 	(A Casa 14 da Rua de Ganesh)
+D 0 6637 0 1 	(A Rua de Ganesh)
+D 0 6754 2 1 	(A Casa 15 da Rua de Ganesh)
+D 0 6637 2 1 	(A Rua de Ganesh)
+D 0 6755 0 1 	(A Casa 16 da Rua de Ganesh)
+D 0 6638 0 1 	(A Rua de Ganesh)
+D 0 6756 2 1 	(A Casa 17 da Rua de Ganesh)
+D 0 6638 2 1 	(A Rua de Ganesh)
+D 0 6757 0 1 	(A Casa 18 da Rua de Ganesh)
+D 0 6639 0 1 	(A Rua de Ganesh)
+D 0 6758 2 1 	(A Casa 19 da Rua de Ganesh)
+D 0 6639 2 1 	(A Rua de Ganesh)
+D 0 6759 0 1 	(A Casa 20 da Rua de Ganesh)
+D 0 6640 0 1 	(A Rua de Indra)
+D 0 6760 2 1 	(A Casa 1 da Rua de Indra)
+D 0 6640 2 1 	(A Rua de Indra)
+D 0 6761 0 1 	(A Casa 2 da Rua de Indra)
+D 0 6641 0 1 	(A Rua de Indra)
+D 0 6762 2 1 	(A Casa 3 da Rua de Indra)
+D 0 6641 2 1 	(A Rua de Indra)
+D 0 6763 0 1 	(A Casa 4 da Rua de Indra)
+D 0 6642 0 1 	(A Rua de Indra)
+D 0 6764 2 1 	(A Casa 5 da Rua de Indra)
+D 0 6642 2 1 	(A Rua de Indra)
+D 0 6765 0 1 	(A Casa 6 da Rua de Indra)
+D 0 6643 0 1 	(A Rua de Indra)
+D 0 6766 2 1 	(A Casa 7 da Rua de Indra)
+D 0 6643 2 1 	(A Rua de Indra)
+D 0 6767 0 1 	(A Casa 8 da Rua de Indra)
+D 0 6644 0 1 	(A Rua de Indra)
+D 0 6768 2 1 	(A Casa 9 da Rua de Indra)
+D 0 6644 2 1 	(A Rua de Indra)
+D 0 6769 0 1 	(A Casa 10 da Rua de Indra)
+D 0 6645 0 1 	(A Rua de Indra)
+D 0 6770 2 1 	(A Casa 11 da Rua de Indra)
+D 0 6645 2 1 	(A Rua de Indra)
+D 0 6771 0 1 	(A Casa 12 da Rua de Indra)
+D 0 6646 0 1 	(A Rua de Indra)
+D 0 6772 2 1 	(A Casa 13 da Rua de Indra)
+D 0 6646 2 1 	(A Rua de Indra)
+D 0 6773 0 1 	(A Casa 14 da Rua de Indra)
+D 0 6647 0 1 	(A Rua de Indra)
+D 0 6774 2 1 	(A Casa 15 da Rua de Indra)
+D 0 6647 2 1 	(A Rua de Indra)
+D 0 6775 0 1 	(A Casa 16 da Rua de Indra)
+D 0 6648 0 1 	(A Rua de Indra)
+D 0 6776 2 1 	(A Casa 17 da Rua de Indra)
+D 0 6648 2 1 	(A Rua de Indra)
+D 0 6777 0 1 	(A Casa 18 da Rua de Indra)
+D 0 6649 0 1 	(A Rua de Indra)
+D 0 6778 2 1 	(A Casa 19 da Rua de Indra)
+D 0 6649 2 1 	(A Rua de Indra)
+D 0 6779 0 1 	(A Casa 20 da Rua de Indra)
+D 0 6650 0 1 	(A Rua de Matsia)
+D 0 6780 2 1 	(A Casa 1 da Rua de Matsia)
+D 0 6650 2 1 	(A Rua de Matsia)
+D 0 6781 0 1 	(A Casa 2 da Rua de Matsia)
+D 0 6651 0 1 	(A Rua de Matsia)
+D 0 6782 2 1 	(A Casa 3 da Rua de Matsia)
+D 0 6651 2 1 	(A Rua de Matsia)
+D 0 6783 0 1 	(A Casa 4 da Rua de Matsia)
+D 0 6652 0 1 	(A Rua de Matsia)
+D 0 6784 2 1 	(A Casa 5 da Rua de Matsia)
+D 0 6652 2 1 	(A Rua de Matsia)
+D 0 6785 0 1 	(A Casa 6 da Rua de Matsia)
+D 0 6653 0 1 	(A Rua de Matsia)
+D 0 6786 2 1 	(A Casa 7 da Rua de Matsia)
+D 0 6653 2 1 	(A Rua de Matsia)
+D 0 6787 0 1 	(A Casa 8 da Rua de Matsia)
+D 0 6654 0 1 	(A Rua de Matsia)
+D 0 6788 2 1 	(A Casa 9 da Rua de Matsia)
+D 0 6654 2 1 	(A Rua de Matsia)
+D 0 6789 0 1 	(A Casa 10 da Rua de Matsia)
+D 0 6655 0 1 	(A Rua de Matsia)
+D 0 6790 2 1 	(A Casa 11 da Rua de Matsia)
+D 0 6655 2 1 	(A Rua de Matsia)
+D 0 6791 0 1 	(A Casa 12 da Rua de Matsia)
+D 0 6656 0 1 	(A Rua de Matsia)
+D 0 6792 2 1 	(A Casa 13 da Rua de Matsia)
+D 0 6656 2 1 	(A Rua de Matsia)
+D 0 6793 0 1 	(A Casa 14 da Rua de Matsia)
+D 0 6657 0 1 	(A Rua de Matsia)
+D 0 6794 2 1 	(A Casa 15 da Rua de Matsia)
+D 0 6657 2 1 	(A Rua de Matsia)
+D 0 6795 0 1 	(A Casa 16 da Rua de Matsia)
+D 0 6658 0 1 	(A Rua de Matsia)
+D 0 6796 2 1 	(A Casa 17 da Rua de Matsia)
+D 0 6658 2 1 	(A Rua de Matsia)
+D 0 6797 0 1 	(A Casa 18 da Rua de Matsia)
+D 0 6659 0 1 	(A Rua de Matsia)
+D 0 6798 2 1 	(A Casa 19 da Rua de Matsia)
+D 0 6659 2 1 	(A Rua de Matsia)
+D 0 6799 0 1 	(A Casa 20 da Rua de Matsia)
 S
 $

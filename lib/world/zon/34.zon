@@ -1,131 +1,130 @@
 #34
 Vitalia~
 A Vila de Villspah~
-3400 3499 400 2 ae 0 0 0 -1 -1
--1
-R 0 3471 3429
-O 0 3429 1 3471
-M 0 3442 1 3471
-E 1 3423 4 16
-E 1 3424 5 20
-E 1 3425 8 7
-E 1 3426 10 19
-M 0 3419 1 3437
-M 0 3421 1 3439
-G 1 3412 20 -1
-G 1 3413 20 -1
-M 0 3417 1 3436
-M 0 3416 1 3434
-M 0 3443 1 3455
-D 0 3455 2 2
-M 0 3401 1 3428
-M 0 3403 2 3400
-E 1 3407 10 3
-E 1 3408 5 16
-M 0 3403 2 3400
-E 1 3407 10 3
-M 0 3428 2 3446
-E 1 3427 10 10
-M 0 3428 2 3446
-E 1 3427 10 10
-M 0 3444 1 3470
-D 0 3470 1 2
-O 0 3421 1 3473
-P 1 3422 1 3421
-R 0 3473 3420
-O 0 3420 1 3473
-M 0 3441 3 3469
-M 0 3441 3 3469
-M 0 3441 3 3469
-D 0 3469 3 2
-M 0 3440 1 3468
-D 0 3468 2 2
-M 0 3439 1 3467
-D 0 3467 2 2
-M 0 3438 1 3466
-D 0 3466 2 2
-M 0 3437 2 3464
-D 0 3464 0 2
-M 0 3436 6 3459
-G 1 3419 1 -1
-D 0 3459 0 1
-M 0 3436 10 3460
-D 0 3460 0 1
-M 0 3435 1 3454
-D 0 3454 3 2
-M 0 3434 1 3456
-M 0 3432 2 3456
-M 0 3432 2 3456
-M 0 3433 1 3456
-M 0 3431 1 3452
-D 0 3452 2 2
-D 0 3452 0 2
-D 0 3452 1 2
-M 0 3430 1 3451
-M 0 3429 1 3449
-M 0 3427 1 3407
-M 0 3426 1 3419
-E 1 3417 1 13
-G 1 3418 10 -1
-M 0 3425 6 3406
-M 0 3425 6 3421
-M 0 3425 6 3423
-M 0 3424 1 3440
-E 1 3416 10 12
-M 0 3423 10 3416
-E 1 3414 20 8
-E 1 3415 20 12
-M 0 3423 10 3413
-E 1 3414 20 8
-E 1 3415 20 12
-M 0 3423 10 3426
-E 1 3414 20 8
-E 1 3415 20 12
-M 0 3423 10 3424
-E 1 3414 20 8
-E 1 3415 20 12
-M 0 3422 1 3442
-M 0 3420 1 3438
-E 1 3411 20 21
-M 0 3418 1 3435
-M 0 3415 1 3433
-G 1 3409 20 -1
-G 1 3410 20 -1
-M 0 3414 1 3432
-G 1 3081 20 -1
-G 1 3076 20 -1
-G 1 3061 20 -1
-G 1 3039 20 -1
-M 0 3413 1 3431
-M 0 3411 1 3429
-M 0 3410 1 3429
-M 0 3409 1 3429
-M 0 3408 1 3429
-M 0 3407 1 3429
-M 0 3406 1 3429
-M 0 3405 1 3429
-M 0 3412 1 3430
-M 0 3404 1 3430
-D 0 3463 0 2
-D 0 3463 1 2
-D 0 3465 0 2
-D 0 3461 3 2
-D 0 3461 4 2
-D 0 3458 5 2
-D 0 3458 2 1
-D 0 3457 2 1
-D 0 3457 0 2
-D 0 3453 1 2
-D 0 3453 3 2
-D 0 3447 2 1
-D 0 3447 0 1
-D 0 3450 0 1
-D 0 3448 2 1
-D 0 3441 0 1
-D 0 3425 2 1
-M 0 3402 1 3445
-M 0 3400 1 3427
-D 0 3427 2 1
-D 0 3404 0 1
+3400 3499 400 2 aek 0 0 0 -1 -1
+R 0 3471 3429 -1 	(um vitral)
+O 0 3429 1 3471 	(um vitral)
+M 0 3442 1 3471 	(o Bar√£o de Villspath)
+E 1 3423 4 16 	(uma vistosa adaga verde)
+E 1 3424 5 20 	(uma argola verde-esmeralda)
+E 1 3425 8 7 	(um par de cal√ßas verdes)
+E 1 3426 10 19 	(um lindo brinco de jade)
+M 0 3419 1 3437 	(Jaane, a herborista)
+M 0 3421 1 3439 	(o cart√≥grafo)
+G 1 3412 20 -1 	(o mapa das √°reas do Bar√£o)
+G 1 3413 20 -1 	(o mapa de Jareth)
+M 0 3417 1 3436 	(uma alegre mulher)
+M 0 3416 1 3434 	(um dos estudantes do Bar√£o)
+M 0 3443 1 3455 	(um servente do castelo)
+D 0 3455 2 2 	(O Sal„o de Festas)
+M 0 3401 1 3428 	(um radiante p√©gaso)
+M 0 3403 2 3400 	(o guarda da entrada)
+E 1 3407 10 3 	(o colar de Villspah)
+E 1 3408 5 16 	(o bast√£o de guerra de um soldado)
+M 0 3403 2 3400 	(o guarda da entrada)
+E 1 3407 10 3 	(o colar de Villspah)
+M 0 3428 2 3446 	(um guarda da ponte)
+E 1 3427 10 10 	(o bracelete do Bar√£o de Villspah)
+M 0 3428 2 3446 	(um guarda da ponte)
+E 1 3427 10 10 	(o bracelete do Bar√£o de Villspah)
+M 0 3444 1 3470 	(uma amante do Bar√£o)
+D 0 3470 1 2 	(Os Aposentos do Bar„o)
+O 0 3421 1 3473 	(um peda√ßo de piso)
+P 1 3422 1 3421 	(a Coroa do reino de Villspah)
+R 0 3473 3420 -1 	(um tapete)
+O 0 3420 1 3473 	(um tapete)
+M 0 3441 3 3469 	(um guarda pessoal do Bar√£o)
+M 0 3441 3 3469 	(um guarda pessoal do Bar√£o)
+M 0 3441 3 3469 	(um guarda pessoal do Bar√£o)
+D 0 3469 3 2 	(Parte Superior da Sala de Guarda)
+M 0 3440 1 3468 	(um alto membro do conselho)
+D 0 3468 2 2 	(Uma Cela)
+M 0 3439 1 3467 	(o chefe estrategista)
+D 0 3467 2 2 	(Uma Cela)
+M 0 3438 1 3466 	(o tenente da cavalaria do Bar√£o)
+D 0 3466 2 2 	(Uma Cela)
+M 0 3437 2 3464 	(o guarda do por√£o)
+D 0 3464 0 2 	(O CalabouÁo)
+M 0 3436 6 3459 	(um miliciano)
+G 1 3419 1 -1 	(uma chave marrom esverdeada)
+D 0 3459 0 1 	(A Sala de Guarda)
+M 0 3436 10 3460 	(um miliciano)
+D 0 3460 0 1 	(A Sala de Guarda)
+M 0 3435 1 3454 	(um homem da realeza)
+D 0 3454 3 2 	(A C‚mara de Estado)
+M 0 3434 1 3456 	(uma servente)
+M 0 3432 2 3456 	(a apressada cozinheira)
+M 0 3432 2 3456 	(a apressada cozinheira)
+M 0 3433 1 3456 	(a ajudante de cozinha)
+M 0 3431 1 3452 	(o consultor do Bar√£o)
+D 0 3452 2 2 	(A RecepÁ„o)
+D 0 3452 0 2 	(A RecepÁ„o)
+D 0 3452 1 2 	(A RecepÁ„o)
+M 0 3430 1 3451 	(o guarda da torre sul)
+M 0 3429 1 3449 	(o guarda da torre norte)
+M 0 3427 1 3407 	(um jovem rapaz)
+M 0 3426 1 3419 	(um mercador viajante)
+E 1 3417 1 13 	(uma bolsa de cintura)
+G 1 3418 10 -1 	(a chave de uma bolsa)
+M 0 3425 6 3406 	(um habitante de Villspah)
+M 0 3425 6 3421 	(um habitante de Villspah)
+M 0 3425 6 3423 	(um habitante de Villspah)
+M 0 3424 1 3440 	(o pastor da vila)
+E 1 3416 10 12 	(o manto de um cl√©rigo)
+M 0 3423 10 3416 	(um cavaleiro de Villspah)
+E 1 3414 20 8 	(um par de botas de couro verde)
+E 1 3415 20 12 	(um brilhante manto verde)
+M 0 3423 10 3413 	(um cavaleiro de Villspah)
+E 1 3414 20 8 	(um par de botas de couro verde)
+E 1 3415 20 12 	(um brilhante manto verde)
+M 0 3423 10 3426 	(um cavaleiro de Villspah)
+E 1 3414 20 8 	(um par de botas de couro verde)
+E 1 3415 20 12 	(um brilhante manto verde)
+M 0 3423 10 3424 	(um cavaleiro de Villspah)
+E 1 3414 20 8 	(um par de botas de couro verde)
+E 1 3415 20 12 	(um brilhante manto verde)
+M 0 3422 1 3442 	(a mulher dos p√°ssaros)
+M 0 3420 1 3438 	(o joalheiro)
+E 1 3411 20 21 	(a lupa de olho do joalheiro)
+M 0 3418 1 3435 	(o moleiro)
+M 0 3415 1 3433 	(o ferreiro)
+G 1 3409 20 -1 	(um bast√£o de metal)
+G 1 3410 20 -1 	(a adaga do mago)
+M 0 3414 1 3432 	(um grande e sorridente homem)
+G 1 3081 20 -1 	(uma cal√ßa de couro)
+G 1 3076 20 -1 	(um gorro de couro)
+G 1 3061 20 -1 	(uma canoa)
+G 1 3039 20 -1 	(uma panela)
+M 0 3413 1 3431 	(o negociante de alimentos)
+M 0 3411 1 3429 	(a professora)
+M 0 3410 1 3429 	(um velho madeireiro)
+M 0 3409 1 3429 	(um velho)
+M 0 3408 1 3429 	(uma mulher local)
+M 0 3407 1 3429 	(um habitante local)
+M 0 3406 1 3429 	(um fregu√™s)
+M 0 3405 1 3429 	(uma criada)
+M 0 3412 1 3430 	(uma mulher)
+M 0 3404 1 3430 	(o hospedeiro)
+D 0 3463 0 2 	(Entrada do CalabouÁo)
+D 0 3463 1 2 	(Entrada do CalabouÁo)
+D 0 3465 0 2 	(O CalabouÁo)
+D 0 3461 3 2 	(Uma Despensa ⁄mida)
+D 0 3461 4 2 	(Uma Despensa ⁄mida)
+D 0 3458 5 2 	(Um Corredor Vazio)
+D 0 3458 2 1 	(Um Corredor Vazio)
+D 0 3457 2 1 	(Um Corredor Vazio)
+D 0 3457 0 2 	(Um Corredor Vazio)
+D 0 3453 1 2 	(Sala de Espera)
+D 0 3453 3 2 	(Sala de Espera)
+D 0 3447 2 1 	(O Hall de Entrada)
+D 0 3447 0 1 	(O Hall de Entrada)
+D 0 3450 0 1 	(Torre de Guarda Sul)
+D 0 3448 2 1 	(Torre de Guarda Norte)
+D 0 3441 0 1 	(O CemitÈrio de Villspah)
+D 0 3425 2 1 	(LaÁo Sul de Villspah, Lado Sudeste)
+M 0 3402 1 3445 	(o mestre de est√°bulo)
+M 0 3400 1 3427 	(Monquis)
+D 0 3427 2 1 	(A Ferraria)
+D 0 3404 0 1 	(Entrando em Villspah)
 S
-$~
+$

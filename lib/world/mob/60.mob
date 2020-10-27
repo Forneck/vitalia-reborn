@@ -8,10 +8,11 @@ peito quase estourando sua camisa xadrez.   Sua bonita figura está vestida
 com roupas de alguem que dá muito duro e sua expressão é de alguém que
 vive uma vida simples e pacífica.
 ~
-cglm f 370 S
+2103364 0 0 0 64 0 0 0 370 E
 5 15 6 1d12+60 1d4+3
 100 1050
 8 8 1
+E
 #6001
 pequeno coelho~
 o coelho~
@@ -19,10 +20,11 @@ O pequeno coelho está disparando na direção dos arbustos daqui.
 ~
 É uma criatura pequenina e peluda, com orelhas compridas e pés maiores ainda.
 ~
-g 0 0 S
+2097216 0 0 0 0 0 0 0 0 E
 0 20 6 1d4+1 1d4+0
 0 60
 8 8 0
+E
 #6002
 urso marrom~
 o urso marrom~
@@ -32,10 +34,11 @@ O urso é enorme, marrom, um peludo animal com garras muito grandes e dentes
 muito afiados.   De modo algum ele lembra aqueles ursinhos de brinquedos, tão
 lindinhos.
 ~
-fgk 0 -50 S
+2098272 0 0 0 0 0 0 0 -50 E
 8 13 3 1d12+98 2d6+2
 0 4000
 4 8 0
+E
 #6003
 coelho feroz~
 o coelho feroz~
@@ -45,10 +48,11 @@ Esta pequena criatura peluda, com orelhas compridas e enormes pés, parece que
 foi atacada por coelhos com cólera, uma doença terrível, que transforma
 coelhinhos inocentes em criaturas ferozes e sedentas por sangue.
 ~
-fg 0 -150 S
+2097248 0 0 0 0 0 0 0 -150 E
 3 17 6 1d4+26 1d8+0
 0 350
 4 8 0
+E
 #6004
 corca cervo gamo~
 o cervo da terra~
@@ -57,10 +61,11 @@ Um cervo da terra está calmamente pastando aqui.
 Esta é uma graciosa criatura, com pernas esguias e longas e com imensos olhos
 castanhos que olham fixamente para você, com grande interesse.
 ~
-gh d 350 S
+2097344 0 0 0 16 0 0 0 350 E
 2 19 5 2d8+8 1d6+0
 0 230
 8 8 2
+E
 #6005
 raposa marrom~
 a raposa marrom~
@@ -69,10 +74,11 @@ Uma raposa marrom está perseguindo coelhos por entre os arbustos daqui.
 Ela é uma raposa grande, com uma pelagem marrom-avermelhada e uma longa e
 peluda cauda.
 ~
-g 0 -50 S
+2097216 0 0 0 0 0 0 0 -50 E
 2 18 6 1d4+18 1d6+0
 0 225
 8 8 0
+E
 #6006
 passaro grande~
 o pássaro~
@@ -80,10 +86,11 @@ Um grande pássaro com uma das asas quebrada, está encolhidinho aqui.
 ~
 O pássaro parece que não vai viver muito, pelo jeito.
 ~
-b 0 0 S
+2097154 0 0 0 0 0 0 0 0 E
 0 17 10 2d3+1 1d2+1
 0 25
 8 8 0
+E
 #6007
 gato lince gato-selvagem~
 o lince~
@@ -92,10 +99,11 @@ Um lince de tamanho médio está espreitando um pássaro, aqui.
 O lince possui dentes e garras afiadas e provavelmente irá come-lo, no lugar do
 pássaro, se você lhe der chance.
 ~
-bf dk -150 S
+2097186 0 0 0 2064 0 0 0 -150 E
 5 15 5 1d12+60 2d4+3
 0 1100
 8 8 0
+E
 #6008
 pardal~
 o pardal~
@@ -103,10 +111,11 @@ Um pardal está ciscando na terra.
 ~
 O pardal parece estar aproveitando bem a vida.
 ~
-g 0 200 S
+2097216 0 0 0 0 0 0 0 200 E
 0 20 9 3d3+1 1d4+0
 0 25
 8 8 0
+E
 #6009
 tordo~
 o tordo~
@@ -114,10 +123,11 @@ Um tordo está ciscando por aqui, à procura de insetos para comer.
 ~
 O tordo parece bem decidido em encontrar um inseto ou uma minhoca para comer.
 ~
-g 0 200 S
+2097216 0 0 0 0 0 0 0 200 E
 0 20 9 3d3+1 1d4+0
 0 25
 8 8 0
+E
 #6010
 esquilo~
 o esquilo~
@@ -126,10 +136,11 @@ Um esquilo está aqui, procurando refúgio em sua toca.
 Ele sai um pouco de sua toca e o olha ansiosamente, parecendo estar torcendo
 silenciosamente para que você saia dali e o deixe sózinho.
 ~
-b st 200 S
+2097154 0 0 0 1572864 0 0 0 200 E
 1 20 8 1d7+9 1d5+0
 0 120
 8 8 0
+E
 #6011
 texugo~
 o texugo sonolento~
@@ -139,10 +150,11 @@ O texugo está acordando devagarinho e observando você de sua toca.  Você sabe
 que que ele não irá se mexer por um longo tempo.   Seus dentes e garras afiadas
 prendem a sua atenção, enquanto você fica considerando se deve ou não matá-lo.
 ~
-b t 50 S
+2097154 0 0 0 1048576 0 0 0 50 E
 4 17 5 1d5+48 2d3+2
 0 650
 8 8 0
+E
 #6012
 esquilo cinzento~
 o esquilo cinzento~
@@ -152,10 +164,11 @@ Está feliz criatura parece que não liga a mínima para a sua presença e conti
 a sua busca por nozes, entre as folhas e os gravetos que estão espalhados
 no chão.
 ~
-g s 150 S
+2097216 0 0 0 524288 0 0 0 150 E
 2 19 8 1d12+22 1d6+0
 0 200
 8 8 0
+E
 #6013
 esquilinho~
 o esquilinho~
@@ -166,10 +179,11 @@ de ficar correndo de um lado para o outro, de cima para baixo e em volta das
 árvores desta área.   Se você conseguisse pegá-lo, seria uma refeição e tanto,
 pensa você.
 ~
-g s 170 S
+2097216 0 0 0 524288 0 0 0 170 E
 0 20 5 2d5+3 1d4+0
 0 40
 8 8 0
+E
 #6014
 corvo negro passaro~
 o grande corvo negro~
@@ -178,10 +192,11 @@ Um grande corvo negro voa por aqui, procurando coisas para comer.
 O pássaro olha você com uma certa agressividade mas continua a procurar por
 comida.
 ~
-bch 0 -20 S
+2097286 0 0 0 0 0 0 0 -20 E
 2 19 8 1d12+22 1d5+1
 3 200
 8 8 0
+E
 #6015
 grotesco abutre urubu~
 o grotesco abutre~
@@ -193,10 +208,11 @@ ressecada, estão grudadas em seu bico e um organismo indentificável fica
 pulando em meio às suas penas.   Ele olha para você e o ataca, na tentativa
 de proteger o seu banquete.
 ~
-bcf dhk -700 S
+2097190 0 0 0 2320 0 0 0 -700 E
 6 15 4 1d12+68 2d3+2
 14 1750
 8 8 0
+E
 #6016
 alce gamo~
 o jovem alce~
@@ -206,10 +222,11 @@ Este jovem macho alce, está bebendo água na margem do lago e observando
 você, desconfiado.   Sua galhada ainda não está totalmente crescida, mas com
 certeza serão bastante expressivas dentro de alguns anos.
 ~
-bg d 350 S
+2097218 0 0 0 16 0 0 0 350 E
 4 17 4 1d12+48 1d5+3
 0 750
 8 8 1
+E
 #6017
 peixe~
 o peixe~
@@ -217,10 +234,11 @@ Um peixe está nadando por aqui.
 ~
 O peixe tem exatamente o tamanho certo para um excelente refeição.
 ~
-b g 100 S
+2097154 0 0 0 128 0 0 0 100 E
 0 20 10 2d5+0 1d3+0
 0 30
 8 8 0
+E
 #6018
 patinho~
 o patinho~
@@ -228,10 +246,11 @@ Um patinho está nadando no lago.
 ~
 O patinho é adorável!   Ele se parece com uma bolinha de penugem.
 ~
-b 0 1000 S
+2097154 0 0 0 0 0 0 0 1000 E
 0 20 10 1d1+0 1d1+0
 0 1
 8 8 0
+E
 #6019
 pato~
 o pato~
@@ -239,8 +258,9 @@ O pato está aqui, grasnando todo feliz.
 ~
 O pato é bastante gordo.   Ele parece estar aproveitando bem sua vida.
 ~
-g 0 1000 S
+2097216 0 0 0 0 0 0 0 1000 E
 1 20 10 2d6+5 1d4+0
 0 75
 8 8 0
+E
 $

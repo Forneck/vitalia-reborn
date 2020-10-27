@@ -1,246 +1,244 @@
 #173
 Vitalia~
 Camelot~
-17300 17399 135 1 0 0 0 0 -1 -1
--1
-*
-M 0 17307 1 17302                      Black knight to crossroads
-E 1 17318 8 7   Black greaves
-M 0 17315 1 17303                      Pellinore to forest arden
-E 1 17320 8 5   backpack to body
-G 1 17321 2                    holds the key
-P 1 17322 8 17320                      Puts rations in pellinores pack
-P 1 17323 8 17320                      Puts wine in Pellinores pack
-M 0 17316 1 17307                      Load in questing beast in lair
-O 0 17324 1 17307                      Put bones in lair
-O 0 17325 1 17307                      Put skull in lair
-O 0 17326 6 17307                      Put rock in lair
-M 0 17309 1 17312                      Put garlon in Dark Hollow
-E 1 17312 8 10  garlon dons his armbands
-M 0 17314 1 17323                      Put Morgan in inviting hut
-E 1 17319 8 17  Give Morgana her wand
-M 0 17305 1 17317                      Put Benlad in Blackmoor
-E 1 17304 8 5   Benlad wears green armor
-E 1 17305 8 16  Benlad wields his axe
-M 0 17327 1 17322                      Put Perimones at chasm
-E 1 17335 8 5   Put red armor on perimones
-M 0 17310 1 17368                      Load in Gawaine in Tourney Yard
-E 1 17313 8 6   Gawaine's helm
-M 0 17312 1 17359                      Load in Lancelot in Tourney Yard
-E 1 17315 8 9   Lancelot dons his gauntlets of bravery
-E 1 3822 1 17       Card Calice(3822) com Lancelot(17312)
-M 0 17317 1 17369                      Load in Tristram in Tourney Yard
-G 1 17327 8     Give Tristram the love letter
-M 0 17306 1 17315                      Put galahad on return quest in battleplain at war
-E 1 17306 8 14  Galahad dons his white bracers
-E 1 17307 8 17  Galahad holds the grail
-M 0 17326 1 17315                      Turquine, the evil knight, pawn of Mordred, fighting G.
-E 1 17334 8 6   Turquine dons his wolf helm
-M 0 17311 1 17374                      Puts Lamorak in barracks (gawaine kicked his butt today)
-E 1 17314 8 8   Still wearing spurs
-M 0 17318 1 17340                      Mordred in his dark hall
-E 1 17328 8 5   Mordred dons his golden armor
-E 1 17329 8 16  Mordred wields his unholy spear
-M 0 17304 1 17370                      Arthur in his court of camelot
-E 1 17311 8 13  Wears his scabbard
-E 1 17310 8 16  Wields Excalibur 
-M 0 17313 1 17375                      Load Merlin in his tower
-E 1 17316 8 1   Merlin dons his ring
-E 1 17317 8 17  Merlin dons his staff
-O 0 17336 5 17375                      Merlin has left his key here
-M 0 17322 1 17377                      Load Gwen in Arthur's Chambers
-E 1 17331 8 4   Gwen wears her necklace
-M 0 17337 1 17381                      Load demon in pentagram
-E 1 3819 1 17      Card Cranaloc(3819) com Demonio(17337)
-M 0 17328 1 17337                      Load damsel in distress in NE tower of Blackmoor
-G 1 17337 1     Give damsel the reward for her rescue
-M 0 17325 1 17370                      Load dagonet in court
-E 1 17333 8 6   Dagonet wears his motley 
-M 0 17324 1 17361                      Load Barant near S. Gate
-E 1 17332 8 16  Give Barant his ball and chain
-M 0 17308 1 17351                      Load Gareth in the Tower of Valor
-E 1 17308 8 12  Gareth wears his many colored cloak
-E 1 17309 8 11  Gareth wears his many colored shield
-M 0 17301 9 17374                      Knights of reknown in barracks
-E 1 17302 15 16			Mace
-M 0 17301 9 17374                      ditto
-E 1 17302 15 16
-M 0 17301 9 17361                      S. Gate
-E 1 17302 15 16
-M 0 17301 9 17361
-E 1 17302 15 16
-M 0 17301 9 17355                      N. Gate
-E 1 17302 15 16
-M 0 17301 9 17355
-E 1 17302 15 16
-M 0 17301 9 17371                      Feast Hall
-E 1 17302 15 16
-M 0 17301 9 17353                      Tower of Honor
-E 1 17302 15 16
-M 0 17301 9 17366                      Nobles quarters
-E 1 17302 15 16
-M 0 17302 9 17357			3 in squires barracks
-E 1 17301 15 16  equipped with daggers
-M 0 17302 9 17357
-E 1 17301 15 16
-M 0 17302 9 17357
-E 1 17301 15 16
-M 0 17302 9 17362			2 In the Tourney Yard
-E 1 17301 15 16
-M 0 17302 9 17352
-E 1 17301 15 16
-M 0 17302 9 17371			One in feast hall
-E 1 17301 15 16
-M 0 17302 9 17346			One in stables
-E 1 17301 15 16
-M 0 17302 9 17348			One in armory
-E 1 17301 15 16
-M 0 17302 9 17341                      On at junction victory road & knights
-E 1 17301 15 16
-M 0 17303 9 17341                      2 at West Gate
-E 1 17303 15 16 lance
-M 0 17303 9 17341
-E 1 17303 15 16
-M 0 17303 9 17358                      2 in tourney yard
-E 1 17303 15 16
-M 0 17303 9 17365
-E 1 17303 15 16
-M 0 17303 9 17374                      2 in barracks
-E 1 17303 15 16
-M 0 17303 9 17374
-E 1 17303 15 16
-M 0 17303 9 17314                      1 at creek
-E 1 17303 15 16
-M 0 17303 9 17371                      1 in feat hall
-E 1 17303 15 16
-M 0 17303 9 17376                      1 in Round Table
-E 1 17303 15 16
-M 0 17319 5 17336                      NW tower of Blackmoor
-M 0 17319 5 17340                      1 Dark hall
-M 0 17319 5 17338                      1 in SW tower
-M 0 17319 5 17315                      1 in battleplain
-M 0 17319 5 17318                      1 in front of inviting hut
-M 0 17320 3 17340                      In dark hall
-M 0 17320 3 17315                      In battle plain
-M 0 17320 3 17327                      In Bailey
-M 0 17323 7 17340                      1 in dark hall
-M 0 17323 7 17332                      1 in st
-M 0 17323 7 17335                      1 in st
-M 0 17323 7 17330                      One inside curtain wall
-M 0 17323 7 17339                      One in SE tower of Blackmoor
-M 0 17323 7 17316                      One Before blackmoor
-M 0 17323 7 17314                      One at creek
-M 0 17321 7 17373                      3 in maiden tower
-E 1 17330 14 17			silken favor
-M 0 17321 7 17373
-E 1 17330 14 17
-M 0 17321 7 17373
-E 1 17330 14 17
-M 0 17321 7 17370                      One in court
-E 1 17330 14 17
-M 0 17321 7 17372                      1 in Ladies Quarters
-E 1 17330 14 17
-M 0 17321 7 17371                      1 in Feast hall
-E 1 17330 14 17
-M 0 17321 7 17398                      1 in stables
-E 1 17330 14 17
-M 1 17329 1 17371                      1 in feast hall
-G 1 17339 8          his purse
-G 1 17338 2             his room key
-O 0 17339 2 17380  load a spare pouch in locked room
-M 0 17330 4 17398                      stables
-M 0 17330 4 17348                      armory
-M 0 17330 4 17371                      feast hall
-M 0 17330 4 17305                      in front of hut
-M 0 17331 2 17354                      Noble Road
-M 0 17331 2 17355                      Squires
-M 0 17332 2 17373                      Maidens tower
-M 0 17332 2 17349                      in camelot
-M 0 17333 1 17370                      In court
-M 0 17334 1 17371                      Feast Hall
-M 0 17335 1 17370                      In court
-M 0 17336 8 17371                      2 in feast hall
-M 0 17336 8 17371
-M 0 17336 8 17372                      1 in ladies quarters
-M 0 17336 8 17373                      2 in maiden tower
-M 0 17336 8 17373
-M 0 17336 8 17378                      Noble chamber
-M 0 17336 8 17366                      Noble quarters
-M 0 17336 8 17374                      Knights quarters
-M 0 17338 1 17348                      Iron Jack in armory
-M 0 17339 1 17398                      Stirrup in stables
-M 0 17340 1 17399                      load in riding horse
-M 0 17341 1 17399                      med warhorse
-M 0 17342 1 17399                      heavy warhorse
-M 0 17343 1 17389                      Saxon raiders on rocky beach
-M 0 17344 2 17389                      captives of raiders
-M 0 17345 1 17389                      Saxon Chief
-E 1 17340 8 12  Lice infested cloak
-M 0 17346 2 17388                      Border Guards at outpost
-M 0 17347 1 17388                      Outpost commander
-E 1 17341 8 16  Sword in sheath
-M 0 17348 2 17390                      Clansmen in Scot Keep
-M 0 17349 1 17390                      Scot clan chief
-G 1 17342 8     His wee bit of whiskey
-M 0 17363 2 17389                      slaves of scots
-M 0 17350 9 17391                      Serfs in field
-M 0 17350 9 17392                      "
-M 0 17350 9 17393                      "
-M 0 17350 9 17394                      "
-M 0 17351 2 17395			Angle raider
-M 0 17352 1 17395			Angle chief
-E 1 17344 8 16   Chief wields angle
-O 0 17343 1 17395			Put dragon ship ashore
-M 0 17360 1 17395			Load Gaheris at angle raid
-E 1 17349 8 16   Gaheris wields his axe
-M 0 17353 1 17397			Calvary at battle
-M 0 17354 1 17397			Infantry unit at battle
-M 0 17355 1 17397			Pict hoard at battle
-M 0 17357 1 17397			Persante at battle
-E 1 17346 8 0    Persante hold banner
-M 0 17358 1 17397			Dodinas at battle
-E 1 17347 8 16   Dodinas wields lifecutter
-M 0 17359 1 17397			Lionel at battle
-E 1 17348 8 5    Lionel wears plate armor
-M 0 17356 1 17346			Pict leader behind lines
-E 1 17345 8 17   Give him staff of command
-M 0 17362 2 17396                      Border Guards at outpost
-M 0 17361 1 17396                      Outpost commander
-E 1 17341 8 16  Sword in sheath
-D 0 17305 3 2
-D 0 17308 1 2
-D 0 17318 3 1
-D 0 17323 1 1
-D 0 17316 0 1
-D 0 17327 0 1
-D 0 17327 2 1
-D 0 17328 2 1
-D 0 17333 2 1
-D 0 17340 0 1
-D 0 17326 1 1
-D 0 17341 3 1
-D 0 17356 2 1
-D 0 17355 0 1
-D 0 17361 0 1
-D 0 17361 2 1
-D 0 17366 0 1
-D 0 17366 1 0
-D 0 17366 2 1
-D 0 17366 3 2
-D 0 17378 2 1
-D 0 17379 3 0
-D 0 17380 1 2
-D 0 17371 2 1                  ; The Feast Hall Close South
-D 0 17372 0 1
-D 0 17375 4 2
-D 0 17385 0 1
-D 0 17385 1 1
-D 0 17388 3 1
-D 0 17397 3 1
-D 0 17346 1 1
-D 0 17370 0 1                  ; The Court of Camelot Close North
-D 0 17370 1 1                  ; The Court of Camelot Close East
-D 0 17374 2 1                  ; Knight's Barracks Close South
-D 0 17376 3 1                  ; The Round Table Close West
+17300 17399 135 1 k 0 0 0 -1 -1
+M 0 17307 1 17302 	(o cavaleiro negro)
+E 1 17318 8 7 	(um par de grevas de aço enegrecido)
+M 0 17315 1 17303 	(Rei Pellinore)
+E 1 17320 8 5 	(mochila de pellinore)
+G 1 17321 2 -1 	(uma chave com a letra "p")
+P 1 17322 8 17320 	(algumas provisões para viagem)
+P 1 17323 8 17320 	(uma garrafa de delicioso vinho tinto)
+M 0 17316 1 17307 	(a Besta da Busca)
+O 0 17324 1 17307 	(uma pilha de ossos)
+O 0 17325 1 17307 	(um crânio humano)
+O 0 17326 6 17307 	(uma pequena pedra preta)
+M 0 17309 1 17312 	(Sir Garlon)
+E 1 17312 8 10 	(as braçadeiras invisíveis de garlon)
+M 0 17314 1 17323 	(Morgana das Fadas)
+E 1 17319 8 17 	(uma vara de mármore com uma incandescente ponteira branca)
+M 0 17305 1 17317 	(Sir Benlad de Haudtesert)
+E 1 17304 8 5 	(uma cota de armadura verde)
+E 1 17305 8 16 	(machado de Benlad)
+M 0 17327 1 17322 	(Perimones)
+E 1 17335 8 5 	(a resplandecente couraça de uma armadura vermelha)
+M 0 17310 1 17368 	(Sir Gawaine)
+E 1 17313 8 6 	(o elmo de chifres pertencente a Gawaine)
+M 0 17312 1 17359 	(Sir Lancelot do Lago)
+E 1 17315 8 9 	(as manoplas de um bravo)
+E 1 3822 1 17 	(o Card CÃ¡lice Sagrado)
+M 0 17317 1 17369 	(Sir TristÃ£o de Lyoness)
+G 1 17327 8 -1 	(uma carta de amor)
+M 0 17306 1 17315 	(Sir Galahad)
+E 1 17306 8 14 	(um embrace branco)
+E 1 17307 8 17 	(o Santo Graal)
+M 0 17326 1 17315 	(Turquine)
+E 1 17334 8 6 	(um elmo em forma de lobo)
+M 0 17311 1 17374 	(Sir Lamorak)
+E 1 17314 8 8 	(as esporas de lamorak)
+M 0 17318 1 17340 	(Mordred)
+E 1 17328 8 5 	(uma couraça dourada)
+E 1 17329 8 16 	(uma lança reluzindo uma profana luz negra)
+M 0 17304 1 17370 	(Rei Arthur)
+E 1 17311 8 13 	(a bainha de Arthur)
+E 1 17310 8 16 	(a Excalibur)
+M 0 17313 1 17375 	(Merlin)
+E 1 17316 8 1 	(o anel com o sinal de Incubus)
+E 1 17317 8 17 	(o bastão de merlin)
+O 0 17336 5 17375 	(uma chave enferrujada)
+M 0 17322 1 17377 	(Rainha Guinevere)
+E 1 17331 8 4 	(uma gargantilha de esmeralda)
+M 0 17337 1 17381 	(um gigantesco demÃ´nio de escamas negras)
+E 1 3819 1 17 	(o Card Anel de Cranaloc)
+M 0 17328 1 17337 	(uma donzela em perigo)
+G 1 17337 1 -1 	(a recompensa)
+M 0 17325 1 17370 	(Dagonet)
+E 1 17333 8 6 	(roupa de bufão)
+M 0 17324 1 17361 	(Barant Les Apres)
+E 1 17332 8 16 	(uma pesada maça)
+M 0 17308 1 17351 	(Sir Gareth)
+E 1 17308 8 12 	(um capote colorido)
+E 1 17309 8 11 	(um escudo de muitas cores)
+M 0 17301 9 17374 	(o renomado cavaleiro)
+E 1 17302 15 16 	(Uma maça de cavaleiro)
+M 0 17301 9 17374 	(o renomado cavaleiro)
+E 1 17302 15 16 	(Uma maça de cavaleiro)
+M 0 17301 9 17361 	(o renomado cavaleiro)
+E 1 17302 15 16 	(Uma maça de cavaleiro)
+M 0 17301 9 17361 	(o renomado cavaleiro)
+E 1 17302 15 16 	(Uma maça de cavaleiro)
+M 0 17301 9 17355 	(o renomado cavaleiro)
+E 1 17302 15 16 	(Uma maça de cavaleiro)
+M 0 17301 9 17355 	(o renomado cavaleiro)
+E 1 17302 15 16 	(Uma maça de cavaleiro)
+M 0 17301 9 17371 	(o renomado cavaleiro)
+E 1 17302 15 16 	(Uma maça de cavaleiro)
+M 0 17301 9 17353 	(o renomado cavaleiro)
+E 1 17302 15 16 	(Uma maça de cavaleiro)
+M 0 17301 9 17366 	(o renomado cavaleiro)
+E 1 17302 15 16 	(Uma maça de cavaleiro)
+M 0 17302 9 17357 	(o escudeiro)
+E 1 17301 15 16 	(adaga de escudeiro)
+M 0 17302 9 17357 	(o escudeiro)
+E 1 17301 15 16 	(adaga de escudeiro)
+M 0 17302 9 17357 	(o escudeiro)
+E 1 17301 15 16 	(adaga de escudeiro)
+M 0 17302 9 17362 	(o escudeiro)
+E 1 17301 15 16 	(adaga de escudeiro)
+M 0 17302 9 17352 	(o escudeiro)
+E 1 17301 15 16 	(adaga de escudeiro)
+M 0 17302 9 17371 	(o escudeiro)
+E 1 17301 15 16 	(adaga de escudeiro)
+M 0 17302 9 17346 	(o escudeiro)
+E 1 17301 15 16 	(adaga de escudeiro)
+M 0 17302 9 17348 	(o escudeiro)
+E 1 17301 15 16 	(adaga de escudeiro)
+M 0 17302 9 17341 	(o escudeiro)
+E 1 17301 15 16 	(adaga de escudeiro)
+M 0 17303 9 17341 	(o cavaleiro nobre)
+E 1 17303 15 16 	(uma lança de cavaleiro)
+M 0 17303 9 17341 	(o cavaleiro nobre)
+E 1 17303 15 16 	(uma lança de cavaleiro)
+M 0 17303 9 17358 	(o cavaleiro nobre)
+E 1 17303 15 16 	(uma lança de cavaleiro)
+M 0 17303 9 17365 	(o cavaleiro nobre)
+E 1 17303 15 16 	(uma lança de cavaleiro)
+M 0 17303 9 17374 	(o cavaleiro nobre)
+E 1 17303 15 16 	(uma lança de cavaleiro)
+M 0 17303 9 17374 	(o cavaleiro nobre)
+E 1 17303 15 16 	(uma lança de cavaleiro)
+M 0 17303 9 17314 	(o cavaleiro nobre)
+E 1 17303 15 16 	(uma lança de cavaleiro)
+M 0 17303 9 17371 	(o cavaleiro nobre)
+E 1 17303 15 16 	(uma lança de cavaleiro)
+M 0 17303 9 17376 	(o cavaleiro nobre)
+E 1 17303 15 16 	(uma lança de cavaleiro)
+M 0 17319 5 17336 	(o Cavaleiro encantado de renome)
+M 0 17319 5 17340 	(o Cavaleiro encantado de renome)
+M 0 17319 5 17338 	(o Cavaleiro encantado de renome)
+M 0 17319 5 17315 	(o Cavaleiro encantado de renome)
+M 0 17319 5 17318 	(o Cavaleiro encantado de renome)
+M 0 17320 3 17340 	(o graduado Cavaleiro Encantado)
+M 0 17320 3 17315 	(o graduado Cavaleiro Encantado)
+M 0 17320 3 17327 	(o graduado Cavaleiro Encantado)
+M 0 17323 7 17340 	(o Escudeiro Encantado)
+M 0 17323 7 17332 	(o Escudeiro Encantado)
+M 0 17323 7 17335 	(o Escudeiro Encantado)
+M 0 17323 7 17330 	(o Escudeiro Encantado)
+M 0 17323 7 17339 	(o Escudeiro Encantado)
+M 0 17323 7 17316 	(o Escudeiro Encantado)
+M 0 17323 7 17314 	(o Escudeiro Encantado)
+M 0 17321 7 17373 	(uma dama em espera)
+E 1 17330 14 17 	(um lenço de seda)
+M 0 17321 7 17373 	(uma dama em espera)
+E 1 17330 14 17 	(um lenço de seda)
+M 0 17321 7 17373 	(uma dama em espera)
+E 1 17330 14 17 	(um lenço de seda)
+M 0 17321 7 17370 	(uma dama em espera)
+E 1 17330 14 17 	(um lenço de seda)
+M 0 17321 7 17372 	(uma dama em espera)
+E 1 17330 14 17 	(um lenço de seda)
+M 0 17321 7 17371 	(uma dama em espera)
+E 1 17330 14 17 	(um lenço de seda)
+M 0 17321 7 17398 	(uma dama em espera)
+E 1 17330 14 17 	(um lenço de seda)
+M 1 17329 1 17371 	(um nobre)
+G 1 17339 8 -1 	(uma bolsa que parece ser pesada)
+G 1 17338 2 -1 	(uma chave de quarto)
+O 0 17339 2 17380 	(uma bolsa que parece ser pesada)
+M 0 17330 4 17398 	(um serviÃ§al)
+M 0 17330 4 17348 	(um serviÃ§al)
+M 0 17330 4 17371 	(um serviÃ§al)
+M 0 17330 4 17305 	(um serviÃ§al)
+M 0 17331 2 17354 	(um mercador)
+M 0 17331 2 17355 	(um mercador)
+M 0 17332 2 17373 	(um Monge)
+M 0 17332 2 17349 	(um Monge)
+M 0 17333 1 17370 	(um trovador)
+M 0 17334 1 17371 	(um bardo)
+M 0 17335 1 17370 	(um artista)
+M 0 17336 8 17371 	(um criado)
+M 0 17336 8 17371 	(um criado)
+M 0 17336 8 17372 	(um criado)
+M 0 17336 8 17373 	(um criado)
+M 0 17336 8 17373 	(um criado)
+M 0 17336 8 17378 	(um criado)
+M 0 17336 8 17366 	(um criado)
+M 0 17336 8 17374 	(um criado)
+M 0 17338 1 17348 	(Iron Jack)
+M 0 17339 1 17398 	(Stirrup)
+M 0 17340 1 17399 	(um cavalo de montaria)
+M 0 17341 1 17399 	(um mediano cavalo de guerra)
+M 0 17342 1 17399 	(um pesado cavalo de guerra)
+M 0 17343 1 17389 	(um invasor saxÃ£o)
+M 0 17344 2 17389 	(uma escrava)
+M 0 17345 1 17389 	(um chefe saxÃ£o)
+E 1 17340 8 12 	(um capote infestado por piolhos)
+M 0 17346 2 17388 	(um guarda da fronteira norte)
+M 0 17347 1 17388 	(o comandante de posto mais avanÃ§ado do norte)
+E 1 17341 8 16 	(uma larga espada de aço de comandante)
+M 0 17348 2 17390 	(um membro de um clÃ£ escocÃªs)
+M 0 17349 1 17390 	(o Chefe do clÃ£ escocÃªs)
+G 1 17342 8 -1 	(um odre cheirando a uísque)
+M 0 17363 2 17389 	(uma escrava)
+M 0 17350 9 17391 	(um servo atarefado)
+M 0 17350 9 17392 	(um servo atarefado)
+M 0 17350 9 17393 	(um servo atarefado)
+M 0 17350 9 17394 	(um servo atarefado)
+M 0 17351 2 17395 	(um invasor Anglo)
+M 0 17352 1 17395 	(o chefe Anglo)
+E 1 17344 8 16 	(um anglo)
+O 0 17343 1 17395 	(uma barca em forma de dragão)
+M 0 17360 1 17395 	(Gaheris)
+E 1 17349 8 16 	(um enorme machado)
+M 0 17353 1 17397 	(a unidade de cavalaria)
+M 0 17354 1 17397 	(a unidade de infantaria)
+M 0 17355 1 17397 	(a horda de picts)
+M 0 17357 1 17397 	(Persante de Inde)
+E 1 17346 8 0 	(o estandarte azul de guerra de Persante de Inde)
+M 0 17358 1 17397 	(Dodinas le Savage)
+E 1 17347 8 16 	(lifecutter)
+M 0 17359 1 17397 	(Lionel)
+E 1 17348 8 5 	(uma armadura de elos de metal)
+M 0 17356 1 17346 	(o lÃ­der dos Picts)
+E 1 17345 8 17 	(uma vara de comando)
+M 0 17362 2 17396 	(um guarda da fronteira do sul)
+M 0 17361 1 17396 	(o comandante de posto mais avanÃ§ado do sul)
+E 1 17341 8 16 	(uma larga espada de aço de comandante)
+D 0 17305 3 2 	(Uma Cabana na Floresta Arden)
+D 0 17308 1 2 	(Dentro de uma cabana)
+D 0 17318 3 1 	(Diante a uma aconchegante cabana)
+D 0 17323 1 1 	(Dentro da Cabana Aconchegante)
+D 0 17316 0 1 	(Diante Blackmoor)
+D 0 17327 0 1 	(A Muralha de Blackmoor)
+D 0 17327 2 1 	(A Muralha de Blackmoor)
+D 0 17328 2 1 	(Dentro da Cortina)
+D 0 17333 2 1 	(A Entrada para a Fortaleza)
+D 0 17340 0 1 	(O Salão Negro de Mordred)
+D 0 17326 1 1 	(O Portão Oeste de Camelot)
+D 0 17341 3 1 	(Rua da Vitória e o Caminho dos Cavaleiros)
+D 0 17356 2 1 	(O Grande Portão Norte de Camelot)
+D 0 17355 0 1 	(A Senda do Escudeiro no Portão Norte)
+D 0 17361 0 1 	(A Estrada Nobre no Portão Sul)
+D 0 17361 2 1 	(A Estrada Nobre no Portão Sul)
+D 0 17366 0 1 	(Aposentos Nobres)
+D 0 17366 1 0 	(Aposentos Nobres)
+D 0 17366 2 1 	(Aposentos Nobres)
+D 0 17366 3 2 	(Aposentos Nobres)
+D 0 17378 2 1 	(Aposentos Nobres)
+D 0 17379 3 0 	(Aposentos Nobres)
+D 0 17380 1 2 	(Aposentos Nobres)
+D 0 17371 2 1 	(O Salão de Banquetes)
+D 0 17372 0 1 	(Os Aposentos das Senhoras)
+D 0 17375 4 2 	(A Torre de Merlin)
+D 0 17385 0 1 	(As Terras Altas)
+D 0 17385 1 1 	(As Terras Altas)
+D 0 17388 3 1 	(O Posto Avançado)
+D 0 17397 3 1 	(Batalha!)
+D 0 17346 1 1 	(Atrás das Linhas dos Picts)
+D 0 17370 0 1 	(A Corte de Camelot)
+D 0 17370 1 1 	(A Corte de Camelot)
+D 0 17374 2 1 	(O Alojamento dos Cavaleiros)
+D 0 17376 3 1 	(A Távola Redonda)
 S
-$~
+$

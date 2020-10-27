@@ -1,308 +1,254 @@
 #20
 Vitalia~
 Clãs~
-2000 2199 20 2 abd 0 0 0 -1 -1
--1
-*
-* A Ordem dos Disc�pulos da Luz
-*
-M 0 2000 2 2000		sentinela
-M 0 2000 2 2000		sentinela
-M 0 2001 1 2009		Anluzir (mascote)
-R 0 2009 2000		a estatua de anluzir
-O 0 2000 1 2009		a estatua de anluzir
-R 0 2007 2001		a placa
-O 0 2001 1 2007		a placa
-R 0 2002 2002		a esfera de energia
-O 0 2002 1 2002		a esfera de energia
-R 0 2001 2003		o velho codigo
-O 0 2003 1 2001		o velho codigo
-R 0 2001 2004		o brasao
-O 0 2004 1 2001		o brasao
-R 0 2001 2005		o livro de regras
-O 0 2005 1 2001		o livro de regras
-R 0 2009 2008		a fonte de agua
-O 0 2008 1 2009		a fonte de agua
-R 0 2001 2009		o quadro de mensagens
-O 0 2009 1 2001		o quadro de mensagens
-*
-* Os Guardi�es do Legado de Atl�ntida
-*
-M 0 2010 1 2010		sentinela
-M 0 2011 1 2010		sentinela
-R 0 2010 2010		o brasao
-O 0 2010 1 2010		o brasao
-R 0 2012 2011		o simbolo
-O 0 2011 1 2012		o simbolo
-R 0 2013 2012		o livro de historia
-O 0 2012 1 2013		o livro de historia
-R 0 2011 2013		a placa de jade
-O 0 2013 1 2011		a placa de jade
-R 0 2016 2014		a estatua de Saturno
-O 0 2014 1 2016		a estatua de Saturno
-R 0 2019 2015		o quadro
-O 0 2015 1 2019		o quadro
-R 0 2014 2018		a fonte de agua
-O 0 2018 1 2014		a fonte de agua
-R 0 2013 2019		o quadro de mensagens
-O 0 2019 1 2013		o quadro de mensagens
-*
-* Os Olhos de Mitra
-*
-M 0 2020 2 2020		sentinela
-M 0 2020 2 2020		sentinela
-M 0 2021 1 2022		o elfo anci�o (mascote)
-R 0 2020 2023		a bandeira
-O 0 2023 1 2020		a bandeira
-R 0 2021 2029		o quadro de mensagens
-O 0 2029 1 2021		o quadro de mensagens
-R 0 2021 2021		a pedra do destino
-O 0 2021 1 2021		a pedra do destino
-R 0 2021 2024		o livro
-O 0 2024 1 2021		o livro
-R 0 2022 2028		a fonte de agua
-O 0 2028 1 2022		a fonte de agua
-R 0 2025 2025		a estatua
-O 0 2025 1 2025		a estatua
-R 0 2026 2020		o olho de mitra
-O 0 2020 1 2026		o olho de mitra
-R 0 2027 2022		o telescopio
-O 0 2022 1 2027		o telescopio
-*
-* Os Cavaleiros da Virtude
-*
-M 0 2030 1 2030		sentinela (jasmin)
-M 0 2031 1 2030		sentinela (lucipher)
-M 0 2032 1 2038		mascote (kentaurus)
-R 0 2031 2030		o pergaminho sagrado
-O 0 2030 1 2031		o pergaminho sagrado
-R 0 2037 2031		a estatua dos deuses
-O 0 2031 1 2037		a estatua dos deuses
-R 0 2039 2032		o hino das virtudes
-O 0 2032 1 2039		o hino das virtudes
-R 0 2032 2034		a estatua do membro
-O 0 2034 1 2032		a estatua do membro
-R 0 2036 2039		o quadro de mensagens
-O 0 2039 1 2036		o quadro de mensagens
-R 0 2038 2038		a fonte de agua
-O 0 2038 1 2038		a fonte de agua
-D 0 2032 1 1		fechar a porta
-D 0 2033 3 1		fechar a porta
-*
-* Remanescentes Cavaleiros de N�menor
-*
-M 0 2040 2 2040		sentinela
-M 0 2040 2 2040		sentinela
-R 0 2045 2040		a placa
-O 0 2040 1 2045		a placa
-R 0 2047 2041		a estatua
-O 0 2041 1 2047		a estatua
-R 0 2046 2049		o quadro de mensagens
-O 0 2049 1 2046		o quadro de mensagens
-R 0 2042 2048		a fonte de agua
-O 0 2048 1 2042		a fonte de agua
-D 0 2047 1 1		porta
-D 0 2049 3 1		porta
-*
-* Solis
-*
-M 0 2050 1 2050		sentinela
-M 0 2051 1 2050		sentinela
-M 0 2052 1 2052		mascote
-R 0 2051 2051		um grande mapa
-O 0 2051 1 2051		um grande mapa
-R 0 2052 2058		a fonte de agua
-O 0 2058 1 2052		a fonte de agua
-R 0 2053 2053		um grande pergaminho
-O 0 2053 1 2053		um grande pergaminho
-R 0 2054 2052		uma bela estatua
-O 0 2052 1 2054		uma bela estatua
-R 0 2059 2054		a espada dourada
-O 0 2054 1 2059		a espada dourada
-R 0 2050 2055		um disco dourado
-O 0 2055 1 2050		um disco dourado
-R 0 2056 2059		o quadro de mensagens
-O 0 2059 1 2056		o quadro de mensagens
-*
-* Os Guardi�es do Segredo dos JVKB
-*
-M 0 2060 2 2060		sentinela
-M 0 2060 2 2060		sentinela
-R 0 2064 2063		est�tuas
-O 0 2063 1 2064		est�tuas
-R 0 2061 2069		o quadro de mensagens
-O 0 2069 1 2061		o quadro de mensagens
-R 0 2061 2068		a fonte de �gua
-O 0 2068 1 2061		a fonte de �gua
-*
-* Os Cavaleiros da fam�lia Dragoon
-*
-M 0 2070 1 2070		Bucky
-M 0 2071 1 2070		Giback
-R 0 2071 2078		a fonte
-O 0 2078 1 2071		a fonte
-R 0 2073 2079		o quadro de mensagens
-O 0 2079 1 2073		o quadro de mensagens
-*
-* Os Filhos de Seth
-*
-M 0 2080 2 2080		sentinela
-M 0 2080 2 2080		sentinela
-M 0 2082 1 2082		mascote
-R 0 2084 2080		almofadas
-O 0 2080 1 2084		almofadas
-R 0 2085 2081		o papiro dos deveres
-O 0 2081 1 2085		o papiro dos deveres
-R 0 2086 2082		a est�tua de seth
-O 0 2082 1 2086		a est�tua de seth
-R 0 2089 2083		o sarc�fago
-O 0 2083 1 2089		o sarc�fago
-R 0 2087 2084		a tabuleta da ordem
-O 0 2084 1 2087		a tabuleta da ordem
-R 0 2088 2085		os segredos do egito
-O 0 2085 1 2088		os segredos do egito
-R 0 2082 2088		a fonte de �gua
-O 0 2088 1 2082		a fonte de �gua
-R 0 2083 2089		o quadro de mensagens
-O 0 2089 1 2083		o quadro de mensagens
-*
-* Os Protetores do Bem
-*
-M 0 2090 1 2090		Efil
-M 0 2091 1 2090		Flahr
-M 0 2092 1 2094		P�i
-R 0 2095 2090		o Livro
-O 0 2090 1 2095		o Livro
-R 0 2098 2092		Pintura
-O 0 2092 1 2098		Pintura
-R 0 2094 2098		a fonte
-O 0 2098 1 2094		a fonte
-R 0 2095 2099		o quadro de mensagens
-O 0 2099 1 2095		o quadro de mensagens
-*
-* Ex�rcito Suicida de Vit�lia
-*
-M 0 2100 1 2100		sentinela
-M 0 2101 1 2100		sentinela
-M 0 2102 1 2101		mascote
-R 0 2102 2100		a estatua de cristal
-O 0 2100 1 2102		a estatua de cristal
-R 0 2103 2101		o estandarte
-O 0 2101 1 2103		o estandarte
-R 0 2101 2108		a fonte de �gua
-O 0 2108 1 2101		a fonte de �gua
-R 0 2103 2109		o quadro de mensagens
-O 0 2109 1 2103		o quadro de mensagens
-D 0 2103 0 1            passagem da sala de reuni�es
-D 0 2107 2 1            passagem da biblioteca
-*
-* Os Vingadores de Iris
-*
-M 0 2110 1 2110		O Espirito
-M 0 2111 1 2110		O Anjo
-R 0 2111 2110		A Espada da Sapi�ncia
-O 0 2110 1 2111		A Espada da Sapi�ncia
-R 0 2111 2111		Os Amuletos da Sapi�ncia
-O 0 2111 1 2111		Os Amuletos da Sapi�ncia
-R 0 2112 2118		Uma enorme fonte
-O 0 2118 1 2112		Uma enorme fonte
-R 0 2116 2119		o quadro de mensagens
-O 0 2119 1 2116		o quadro de mensagens
-D 0 2113 0 1
-D 0 2115 2 1
-*
-* Os Senhores da Tempestade
-*
-M 0 2120 1 2120		sentinela
-M 0 2121 1 2120		sentinela
-M 0 2122 1 2121		mascote
-R 0 2123 2120		uma trombeta
-O 0 2120 1 2123		uma trombeta
-R 0 2124 2121		o brasao
-O 0 2121 1 2124		o brasao
-R 0 2125 2122		a estatua dos anjos
-O 0 2122 1 2125		a estatua dos anjos
-R 0 2127 2123		um livro
-O 0 2123 1 2127		um livro
-R 0 2121 2128		a fonte de �gua
-O 0 2128 1 2121		a fonte de �gua
-R 0 2122 2129		o quadro de mensagens
-O 0 2129 1 2122		o quadro de mensagens
-D 0 2125 3 1		fechar a porta
-D 0 2126 1 1		fechar a porta
-*
-* Seguidores da Dinastia Breyldon
-*
-M 0 2130 1 2130		o sentinela
-M 0 2131 1 2130		o sentinela
-M 0 2132 1 2131		A ess�ncia de Breyldon
-R 0 2132 2131		mapa
-O 0 2131 1 2132		mapa
-R 0 2135 2132		uma est�tua
-O 0 2132 1 2135		uma est�tua
-R 0 2132 2133		o pergaminho da Sabedoria
-O 0 2133 1 2132		o pergaminho da Sabedoria
-R 0 2134 2138		a Cachoeira
-O 0 2138 1 2134		a Cachoeira
-R 0 2135 2139		o quadro de mensagens
-O 0 2139 1 2135		o quadro de mensagens
-*
-* Os guardi�es da pris�o de Kildner
-*
-M 0 2140 1 2140		Colossus, o sentinela
-M 0 2141 1 2140		Kurast, o sentinela
-M 0 2142 1 2141		A alma de Balor.
-R 0 2142 2140		a Est�tua de Balor
-O 0 2140 1 2142		a Est�tua de Balor
-R 0 2144 2141		as regras
-O 0 2141 1 2144		as regras
-R 0 2146 2142		Regras lapidadas na montanha
-O 0 2142 1 2146		Regras lapidadas na montanha
-R 0 2141 2148		a fonte
-O 0 2148 1 2141		a fonte
-R 0 2144 2149		o quadro de mensagens
-O 0 2149 1 2144		o quadro de mensagens
-D 0 2146 5 2
-*
-* A Eterna Sociedade da Luz
-*
-M 0 2150 1 2150		um enorme Guarda
-M 0 2151 1 2150		um enorme Guarda
-M 0 2152 1 2151		Rayana
-R 0 2154 2150		uma rocha
-O 0 2150 1 2154		uma rocha
-R 0 2156 2151		um lindo altar
-O 0 2151 1 2156		um lindo altar
-R 0 2151 2158		a nascente
-O 0 2158 1 2151		a nascente
-R 0 2155 2159		o quadro de mensagens
-O 0 2159 1 2155		o quadro de mensagens
-*
-* Os protetores da Fam�lia Mclaud
-*
-M 0 2160 1 2160		Ares, o Deus da guerra
-M 0 2161 1 2160		Diana, a Deusa da ca�a
-M 0 2162 1 2165		Mary
-R 0 2162 2160		Est�tua de O\'Connel Mclaud
-O 0 2160 1 2162		Est�tua de O\'Connel Mclaud
-R 0 2161 2161		Um livro com a hist�ria do Cl� Mclaud
-O 0 2161 1 2161		Um livro com a hist�ria do Cl� Mclaud
-R 0 2165 2168		A fonte de �gua
-O 0 2168 1 2165		A fonte de �gua
-R 0 2161 2169		o quadro de mensagens
-O 0 2169 1 2161		o quadro de mensagens
-*
-* Os Seguidores da Disciplina das Trevas
-*
-M 0 2170 1 2170		Wyvern
-M 0 2171 1 2170		Wyvern
-M 0 2172 1 2171		Flame, o Dragao das Trevas
-R 0 2177 2170		A Estatua de Tenebra
-O 0 2170 1 2177		A Estatua de Tenebra
-R 0 2174 2171		O Pergaminho das Leis do Cla
-O 0 2171 1 2174		O Pergaminho das Leis do Cla
-R 0 2171 2178		A Fonte Negra
-O 0 2178 1 2171		A Fonte Negra
-R 0 2173 2179		o quadro de mensagens
-O 0 2179 1 2173		o quadro de mensagens
+2000 2199 20 2 abdk 0 0 0 -1 -1
+M 0 2000 2 2000 	(o sentinela)
+M 0 2000 2 2000 	(o sentinela)
+M 0 2001 1 2009 	(Anluzir)
+R 0 2009 2000 -1 	(a Estátua de Anluzir)
+O 0 2000 1 2009 	(a Estátua de Anluzir)
+R 0 2007 2001 -1 	(uma placa)
+O 0 2001 1 2007 	(uma placa)
+R 0 2002 2002 -1 	(a Esfera de Energia)
+O 0 2002 1 2002 	(a Esfera de Energia)
+R 0 2001 2003 -1 	(o Velho Código)
+O 0 2003 1 2001 	(o Velho Código)
+R 0 2001 2004 -1 	(o Brasão dos Discípulos da Luz)
+O 0 2004 1 2001 	(o Brasão dos Discípulos da Luz)
+R 0 2001 2005 -1 	(o Livro de Regras)
+O 0 2005 1 2001 	(o Livro de Regras)
+R 0 2009 2008 -1 	(a fonte)
+O 0 2008 1 2009 	(a fonte)
+R 0 2001 2009 -1 	(o quadro de mensagens)
+O 0 2009 1 2001 	(o quadro de mensagens)
+M 0 2010 1 2010 	(o Tritão)
+M 0 2011 1 2010 	(a Sereia)
+R 0 2010 2010 -1 	(o Brasão do Legado de Atlântida)
+O 0 2010 1 2010 	(o Brasão do Legado de Atlântida)
+R 0 2012 2011 -1 	(um símbolo)
+O 0 2011 1 2012 	(um símbolo)
+R 0 2013 2012 -1 	(um livro)
+O 0 2012 1 2013 	(um livro)
+R 0 2011 2013 -1 	(uma placa de jade)
+O 0 2013 1 2011 	(uma placa de jade)
+R 0 2016 2014 -1 	(uma estátua de bronze de Saturno)
+O 0 2014 1 2016 	(uma estátua de bronze de Saturno)
+R 0 2019 2015 -1 	(um quadro)
+O 0 2015 1 2019 	(um quadro)
+R 0 2014 2018 -1 	(a fonte)
+O 0 2018 1 2014 	(a fonte)
+R 0 2013 2019 -1 	(o quadro de mensagens)
+O 0 2019 1 2013 	(o quadro de mensagens)
+M 0 2020 2 2020 	(um anjo)
+M 0 2020 2 2020 	(um anjo)
+M 0 2021 1 2022 	(o elfo ancião)
+R 0 2020 2023 -1 	(a bandeira)
+O 0 2023 1 2020 	(a bandeira)
+R 0 2021 2029 -1 	(o quadro de mensagens)
+O 0 2029 1 2021 	(o quadro de mensagens)
+R 0 2021 2021 -1 	(a Pedra do Destino)
+O 0 2021 1 2021 	(a Pedra do Destino)
+R 0 2021 2024 -1 	(o Livro do Clã)
+O 0 2024 1 2021 	(o Livro do Clã)
+R 0 2022 2028 -1 	(a fonte)
+O 0 2028 1 2022 	(a fonte)
+R 0 2025 2025 -1 	(a Estátua de Mitra)
+O 0 2025 1 2025 	(a Estátua de Mitra)
+R 0 2026 2020 -1 	(o Olho de Mitra)
+O 0 2020 1 2026 	(o Olho de Mitra)
+R 0 2027 2022 -1 	(o telescópio)
+O 0 2022 1 2027 	(o telescópio)
+M 0 2030 1 2030 	(Jasmin, a Arcanja)
+M 0 2031 1 2030 	(Lucipher, o Demônio)
+M 0 2032 1 2038 	(Kentaurus, o Centauro)
+R 0 2031 2030 -1 	(o Pergaminho Sagrado)
+O 0 2030 1 2031 	(o Pergaminho Sagrado)
+R 0 2037 2031 -1 	(a Estátua dos Deuses de Vitália)
+O 0 2031 1 2037 	(a Estátua dos Deuses de Vitália)
+R 0 2039 2032 -1 	(o Hino das Virtudes)
+O 0 2032 1 2039 	(o Hino das Virtudes)
+R 0 2032 2034 -1 	(a estátua do membro)
+O 0 2034 1 2032 	(a estátua do membro)
+R 0 2036 2039 -1 	(o quadro de mensagens)
+O 0 2039 1 2036 	(o quadro de mensagens)
+R 0 2038 2038 -1 	(a fonte)
+O 0 2038 1 2038 	(a fonte)
+D 0 2032 1 1 	(A Sala da Sabedoria)
+D 0 2033 3 1 	(O Corredor da F�)
+M 0 2040 2 2040 	(o sentinela)
+M 0 2040 2 2040 	(o sentinela)
+R 0 2045 2040 -1 	(uma placa)
+O 0 2040 1 2045 	(uma placa)
+R 0 2047 2041 -1 	(uma estátua)
+O 0 2041 1 2047 	(uma estátua)
+R 0 2046 2049 -1 	(o quadro de mensagens)
+O 0 2049 1 2046 	(o quadro de mensagens)
+R 0 2042 2048 -1 	(uma pocilga)
+O 0 2048 1 2042 	(uma pocilga)
+D 0 2047 1 1 	(Uma Grande Gruta)
+D 0 2049 3 1 	(O Ref�gio)
+M 0 2050 1 2050 	(Glyph)
+M 0 2051 1 2050 	(Holy)
+M 0 2052 1 2052 	(Luna)
+R 0 2051 2051 -1 	(um grande mapa)
+O 0 2051 1 2051 	(um grande mapa)
+R 0 2052 2058 -1 	(uma fonte de água)
+O 0 2058 1 2052 	(uma fonte de água)
+R 0 2053 2053 -1 	(o pergaminho de regras)
+O 0 2053 1 2053 	(o pergaminho de regras)
+R 0 2054 2052 -1 	(uma bela estátua)
+O 0 2052 1 2054 	(uma bela estátua)
+R 0 2059 2054 -1 	(a espada dourada)
+O 0 2054 1 2059 	(a espada dourada)
+R 0 2050 2055 -1 	(um disco dourado)
+O 0 2055 1 2050 	(um disco dourado)
+R 0 2056 2059 -1 	(o quadro de mensagens)
+O 0 2059 1 2056 	(o quadro de mensagens)
+M 0 2060 2 2060 	(o sentinela)
+M 0 2060 2 2060 	(o sentinela)
+R 0 2064 2063 -1 	(as quatro estátuas)
+O 0 2063 1 2064 	(as quatro estátuas)
+R 0 2061 2069 -1 	(o quadro de mensagens)
+O 0 2069 1 2061 	(o quadro de mensagens)
+R 0 2061 2068 -1 	(uma fonte de água)
+O 0 2068 1 2061 	(uma fonte de água)
+M 0 2070 1 2070 	(Bucky)
+M 0 2071 1 2070 	(Giback)
+R 0 2071 2078 -1 	(a fonte)
+O 0 2078 1 2071 	(a fonte)
+R 0 2073 2079 -1 	(o quadro de mensagens)
+O 0 2079 1 2073 	(o quadro de mensagens)
+M 0 2080 2 2080 	(a esfinge)
+M 0 2080 2 2080 	(a esfinge)
+M 0 2082 1 2082 	(Órix)
+R 0 2084 2080 -1 	(almofadas)
+O 0 2080 1 2084 	(almofadas)
+R 0 2085 2081 -1 	(o Papiro dos Deveres)
+O 0 2081 1 2085 	(o Papiro dos Deveres)
+R 0 2086 2082 -1 	(a Estátua de Seth)
+O 0 2082 1 2086 	(a Estátua de Seth)
+R 0 2089 2083 -1 	(o Sarcófago de Muwattali)
+O 0 2083 1 2089 	(o Sarcófago de Muwattali)
+R 0 2087 2084 -1 	(a Tabuleta da Ordem)
+O 0 2084 1 2087 	(a Tabuleta da Ordem)
+R 0 2088 2085 -1 	(os Segredos do Egito)
+O 0 2085 1 2088 	(os Segredos do Egito)
+R 0 2082 2088 -1 	(um lago)
+O 0 2088 1 2082 	(um lago)
+R 0 2083 2089 -1 	(parede de hieróglifos)
+O 0 2089 1 2083 	(parede de hieróglifos)
+M 0 2090 1 2090 	(Efil)
+M 0 2091 1 2090 	(Flahr)
+M 0 2092 1 2094 	(Pói)
+R 0 2095 2090 -1 	(um livro)
+O 0 2090 1 2095 	(um livro)
+R 0 2098 2092 -1 	(uma pintura)
+O 0 2092 1 2098 	(uma pintura)
+R 0 2094 2098 -1 	(a fonte)
+O 0 2098 1 2094 	(a fonte)
+R 0 2095 2099 -1 	(o quadro de mensagens)
+O 0 2099 1 2095 	(o quadro de mensagens)
+M 0 2100 1 2100 	(um Avatar de Hela)
+M 0 2101 1 2100 	(um Avatar de Hades)
+M 0 2102 1 2101 	(a tríade dos Suicidas)
+R 0 2102 2100 -1 	(a estátua de cristal)
+O 0 2100 1 2102 	(a estátua de cristal)
+R 0 2103 2101 -1 	(o estandarte)
+O 0 2101 1 2103 	(o estandarte)
+R 0 2101 2108 -1 	(a fonte)
+O 0 2108 1 2101 	(a fonte)
+R 0 2103 2109 -1 	(o quadro de mensagens)
+O 0 2109 1 2103 	(o quadro de mensagens)
+D 0 2103 0 1 	(Sala de Reuni�es)
+D 0 2107 2 1 	(Biblioteca do Exercito)
+M 0 2110 1 2110 	(o Espírito)
+M 0 2111 1 2110 	(o Anjo)
+R 0 2111 2110 -1 	(a Espada da Sapiência)
+O 0 2110 1 2111 	(a Espada da Sapiência)
+R 0 2111 2111 -1 	(os Amuletos da Sapiência)
+O 0 2111 1 2111 	(os Amuletos da Sapiência)
+R 0 2112 2118 -1 	(Uma enorme fonte)
+O 0 2118 1 2112 	(Uma enorme fonte)
+R 0 2116 2119 -1 	(o quadro de mensagens)
+O 0 2119 1 2116 	(o quadro de mensagens)
+D 0 2113 0 1 	(Os Aposentos de Iris)
+D 0 2115 2 1 	(O Ref�gio)
+M 0 2120 1 2120 	(Raish, Principe dos Raios)
+M 0 2121 1 2120 	(Ramires, Princesa dos Ventos)
+M 0 2122 1 2121 	(Seimer, a Águia)
+R 0 2123 2120 -1 	(uma trombeta)
+O 0 2120 1 2123 	(uma trombeta)
+R 0 2124 2121 -1 	(o brasão)
+O 0 2121 1 2124 	(o brasão)
+R 0 2125 2122 -1 	(a estátua dos anjos)
+O 0 2122 1 2125 	(a estátua dos anjos)
+R 0 2127 2123 -1 	(um livro)
+O 0 2123 1 2127 	(um livro)
+R 0 2121 2128 -1 	(a fonte)
+O 0 2128 1 2121 	(a fonte)
+R 0 2122 2129 -1 	(o quadro de mensagens)
+O 0 2129 1 2122 	(o quadro de mensagens)
+D 0 2125 3 1 	(A Sala da Reflex�o)
+D 0 2126 1 1 	(Sala de Reuni�o)
+M 0 2130 1 2130 	(o grande Olho)
+M 0 2131 1 2130 	(o grande Olho)
+M 0 2132 1 2131 	(a essência de Breyldon)
+R 0 2132 2131 -1 	(um mapa)
+O 0 2131 1 2132 	(um mapa)
+R 0 2135 2132 -1 	(uma estátua)
+O 0 2132 1 2135 	(uma estátua)
+R 0 2132 2133 -1 	(o Pergaminho da Sabedoria)
+O 0 2133 1 2132 	(o Pergaminho da Sabedoria)
+R 0 2134 2138 -1 	(a cachoeira)
+O 0 2138 1 2134 	(a cachoeira)
+R 0 2135 2139 -1 	(o quadro de mensagens)
+O 0 2139 1 2135 	(o quadro de mensagens)
+M 0 2140 1 2140 	(Colossus, o sentinela)
+M 0 2141 1 2140 	(Kurast, o sentinela)
+M 0 2142 1 2141 	(a Alma de Balor)
+R 0 2142 2140 -1 	(a Estátua de Balor)
+O 0 2140 1 2142 	(a Estátua de Balor)
+R 0 2144 2141 -1 	(as regras)
+O 0 2141 1 2144 	(as regras)
+R 0 2146 2142 -1 	(uma grande mesa)
+O 0 2142 1 2146 	(uma grande mesa)
+R 0 2141 2148 -1 	(a fonte)
+O 0 2148 1 2141 	(a fonte)
+R 0 2144 2149 -1 	(o quadro de mensagens)
+O 0 2149 1 2144 	(o quadro de mensagens)
+D 0 2146 5 2 	(O Segredo da Montanha)
+M 0 2150 1 2150 	(um enorme guarda)
+M 0 2151 1 2150 	(um enorme guarda)
+M 0 2152 1 2151 	(Rayana)
+R 0 2154 2150 -1 	(uma rocha)
+O 0 2150 1 2154 	(uma rocha)
+R 0 2156 2151 -1 	(um lindo altar)
+O 0 2151 1 2156 	(um lindo altar)
+R 0 2151 2158 -1 	(a nascente)
+O 0 2158 1 2151 	(a nascente)
+R 0 2155 2159 -1 	(o quadro de mensagens)
+O 0 2159 1 2155 	(o quadro de mensagens)
+M 0 2160 1 2160 	(Ares, o Deus da Guerra)
+M 0 2161 1 2160 	(Diana, a Deusa da Caça)
+M 0 2162 1 2165 	(Mary)
+R 0 2162 2160 -1 	(a Estátua de O'Connel Mclaud)
+O 0 2160 1 2162 	(a Estátua de O'Connel Mclaud)
+R 0 2161 2161 -1 	(um livro)
+O 0 2161 1 2161 	(um livro)
+R 0 2165 2168 -1 	(a fonte de água)
+O 0 2168 1 2165 	(a fonte de água)
+R 0 2161 2169 -1 	(O Quadro de Mensagens)
+O 0 2169 1 2161 	(O Quadro de Mensagens)
+M 0 2170 1 2170 	(Wyvern)
+M 0 2171 1 2170 	(Wyvern)
+M 0 2172 1 2171 	(Flame, o Dragão das Trevas)
+R 0 2177 2170 -1 	(a Estátua de Tenebra)
+O 0 2170 1 2177 	(a Estátua de Tenebra)
+R 0 2174 2171 -1 	(o Pergaminho das Leis do Clã)
+O 0 2171 1 2174 	(o Pergaminho das Leis do Clã)
+R 0 2171 2178 -1 	(a Fonte Negra)
+O 0 2178 1 2171 	(a Fonte Negra)
+R 0 2173 2179 -1 	(o quadro de mensagens)
+O 0 2179 1 2173 	(o quadro de mensagens)
 S
+$

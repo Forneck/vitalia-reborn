@@ -1,98 +1,89 @@
 #33
 Vitalia~
 O Três de Espadas~
-3300 3399 30 2 0 0 0 -1 -1
--1
-*
-* Created by Amanda Eterniale & Builder_5 of C.A.W.
-* Official C.A.W. ftp site:  viemud.org /pub/caw
-* Mail Address: furry@viemud.org
-*
-* Mobiles
-M 0 3300 2 3346         Farmer
-M 0 3300 2 3353         Farmer
-M 0 3301 1 3345         Storekeeper
-M 0 3302 1 3347         Cowgirl
-M 0 3303 4 3347         Horse
-M 0 3303 4 3347         Horse
-M 0 3303 4 3347         Horse
-M 0 3303 4 3347         Horse
-M 0 3304 1 3350         Farmer's Wife
-M 0 3305 1 3375         Aglandiir
-E 1 3854 7 17            Card Agland(3854) com Aglandiir(3305)
-G 1 3313 1 -1                      Short Sword
-O 1 3302 5 3375         Zither
-O 1 3303 5 3375         Barrel Of Perfume
-O 1 3304 5 3375         Statue
-O 1 3305 25 3375        Halberd
-O 1 3306 25 3375        Potion Of Protection
-O 1 3307 1 3375         Dragon's Crown
-M 0 3306 3 3368         Cyclops
-M 0 3306 3 3368         Cyclops
-M 0 3306 3 3368         Cyclops
-M 0 3307 1 3357         Salle
-E 1 3318 25 5                   Leather Vest
-E 1 3312 20 16                  Long Sword
-M 0 3308 1 3330         Duwick
-E 1 3311 15 16                  Knife
-M 0 3309 1 3358         Receptionist
-M 0 3310 1 3356         Innkeeper
-M 0 3311 2 3349         Hunter
-E 1 3317 1000 16                Hunting Bow
-M 0 3311 2 3355         Hunter
-E 1 3317 1000 16                Hunting Bow
-M 0 3312 1 3357         Waiter
-M 0 3313 1 3357         Waitress
-M 0 3314 1 3357         Bartender
-M 0 3315 9 3319         Bandit
-E 1 3315 1000 16                Scimitar
-M 0 3315 9 3323         Bandit
-E 1 3315 1000 16                Scimitar
-M 0 3315 9 3325         Bandit
-E 1 3315 1000 16                Scimitar
-M 0 3315 9 3327         Bandit
-E 1 3315 1000 16                Scimitar
-M 0 3315 9 3332         Bandit
-E 1 3315 1000 16                Scimitar
-M 0 3315 9 3336         Bandit
-E 1 3315 1000 16                Scimitar
-M 0 3315 9 3339         Bandit
-E 1 3315 1000 16                Scimitar
-M 0 3315 9 3321         Bandit
-E 1 3315 1000 16                Scimitar
-M 0 3315 9 3327         Bandit
-E 1 3315 1000 16                Scimitar
-M 0 3316 5 3329         Bandit Guard
-E 1 3315 1000 16                Scimitar
-M 0 3316 5 3329         Bandit Guard
-E 1 3315 1000 16                Scimitar
-M 0 3316 5 3340         Bandit Guard
-E 1 3315 1000 16                Scimitar
-M 0 3316 5 3340         Bandit Guard
-E 1 3315 1000 16                Scimitar
-M 0 3316 5 3317         Bandit Guard
-E 1 3315 1000 16                Scimitar
-M 0 3317 2 3340         Slave
-M 0 3317 2 3340         Slave
-M 0 3318 2 3357         Farmer
-M 0 3318 2 3357         Farmer
-M 0 3319 1 3357         Hunter
-E 1 3317 1000 16                Hunting Bow
-* Objects
-O 0 3314 1 3304         Corpse
-O 0 3315 16 3323         Scimitar
-O 0 3315 16 3323         Scimitar
-O 0 3316 3 3330         Crate
-O 0 3316 3 3330         Crate
-O 0 3316 3 3330         Crate
-* Doors
-D 0 3329 0 1
-D 0 3330 2 1
-D 0 3351 1 1
-D 0 3352 3 1
-D 0 3353 2 1
-D 0 3354 0 1
-D 0 3355 0 1
-D 0 3356 2 1
+3300 3399 30 2 k 0 0 0 -1 -1
+M 0 3300 2 3346 	(o fazendeiro)
+M 0 3300 2 3353 	(o fazendeiro)
+M 0 3301 1 3345 	(o comerciante)
+M 0 3302 1 3347 	(a amazona)
+M 0 3303 4 3347 	(o cavalo)
+M 0 3303 4 3347 	(o cavalo)
+M 0 3303 4 3347 	(o cavalo)
+M 0 3303 4 3347 	(o cavalo)
+M 0 3304 1 3350 	(a mulher do fazendeiro)
+M 0 3305 1 3375 	(Aglandiir)
+E 1 3854 7 17 	(o Card Aglandiir)
+G 1 3313 1 -1 	(uma espada curta)
+O 1 3302 5 3375 	(uma grande c�tara)
+O 1 3303 5 3375 	(um barril de perfume)
+O 1 3304 5 3375 	(uma est�tua)
+O 1 3305 25 3375 	(uma alabarda)
+O 1 3306 25 3375 	(uma po��o de prote��o)
+O 1 3307 1 3375 	(uma coroa de drag�o)
+M 0 3306 3 3368 	(o cíclope)
+M 0 3306 3 3368 	(o cíclope)
+M 0 3306 3 3368 	(o cíclope)
+M 0 3307 1 3357 	(Salle)
+E 1 3318 25 5 	(um colete de couro)
+E 1 3312 20 16 	(uma espada longa)
+M 0 3308 1 3330 	(Duwick)
+E 1 3311 15 16 	(uma faca)
+M 0 3309 1 3358 	(o Recepcionista)
+M 0 3310 1 3356 	(o dono da hospedaria)
+M 0 3311 2 3349 	(o caçador)
+E 1 3317 1000 16 	(um arco de ca�a)
+M 0 3311 2 3355 	(o caçador)
+E 1 3317 1000 16 	(um arco de ca�a)
+M 0 3312 1 3357 	(um garçom)
+M 0 3313 1 3357 	(uma garçonete)
+M 0 3314 1 3357 	(o homem do bar)
+M 0 3315 9 3319 	(o bandido)
+E 1 3315 1000 16 	(uma cimitarra)
+M 0 3315 9 3323 	(o bandido)
+E 1 3315 1000 16 	(uma cimitarra)
+M 0 3315 9 3325 	(o bandido)
+E 1 3315 1000 16 	(uma cimitarra)
+M 0 3315 9 3327 	(o bandido)
+E 1 3315 1000 16 	(uma cimitarra)
+M 0 3315 9 3332 	(o bandido)
+E 1 3315 1000 16 	(uma cimitarra)
+M 0 3315 9 3336 	(o bandido)
+E 1 3315 1000 16 	(uma cimitarra)
+M 0 3315 9 3339 	(o bandido)
+E 1 3315 1000 16 	(uma cimitarra)
+M 0 3315 9 3321 	(o bandido)
+E 1 3315 1000 16 	(uma cimitarra)
+M 0 3315 9 3327 	(o bandido)
+E 1 3315 1000 16 	(uma cimitarra)
+M 0 3316 5 3329 	(o bandido sentinela)
+E 1 3315 1000 16 	(uma cimitarra)
+M 0 3316 5 3329 	(o bandido sentinela)
+E 1 3315 1000 16 	(uma cimitarra)
+M 0 3316 5 3340 	(o bandido sentinela)
+E 1 3315 1000 16 	(uma cimitarra)
+M 0 3316 5 3340 	(o bandido sentinela)
+E 1 3315 1000 16 	(uma cimitarra)
+M 0 3316 5 3317 	(o bandido sentinela)
+E 1 3315 1000 16 	(uma cimitarra)
+M 0 3317 2 3340 	(o escravo)
+M 0 3317 2 3340 	(o escravo)
+M 0 3318 2 3357 	(o fazendeiro)
+M 0 3318 2 3357 	(o fazendeiro)
+M 0 3319 1 3357 	(o caçador)
+E 1 3317 1000 16 	(um arco de ca�a)
+O 0 3314 1 3304 	(um corpo queimado e desmembrado)
+O 0 3315 16 3323 	(uma cimitarra)
+O 0 3315 16 3323 	(uma cimitarra)
+O 0 3316 3 3330 	(um engradado)
+O 0 3316 3 3330 	(um engradado)
+O 0 3316 3 3330 	(um engradado)
+D 0 3329 0 1 	(O Final da Passagem)
+D 0 3330 2 1 	(Uma Caverna)
+D 0 3351 1 1 	(Uma Pequena Rua)
+D 0 3352 3 1 	(Uma Casa Particular)
+D 0 3353 2 1 	(Uma Pequena Rua)
+D 0 3354 0 1 	(Uma Casa Particular)
+D 0 3355 0 1 	(Rua Principal)
+D 0 3356 2 1 	(A Hospedaria de Stanneg)
 S
 $

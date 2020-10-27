@@ -1,69 +1,62 @@
 #186
 Vitalia~
 Zona dos Iniciantes~
-18600 18699 10 2 0 0 0 -1 -1
--1
-*
-* Created by Maynard of StrangeMUD
-*
-* Mobiles
-M 0 18601 1 18605       Pit Beast
-E 1 18604 50 12                 Cloak
-M 0 18602 3 18600       Newbie Monster
-E 1 18602 99 5                  Vest
-M 0 18602 3 18607       Newbie Monster
-E 1 18606 99 16                 Dagger
-M 0 18611 1 18646       Annoying Newbie
-E 1 18606 99 16                 Dagger
-M 0 18612 1 18642       Clueless Newbie
-M 0 18613 1 18640       Friendly Newbie
-E 1 18602 99 5                  Vest
-M 0 18614 1 18604       Lost Newbie
-E 1 3831 1 17              Card Novatos(3831) com Novato(18614)
-M 0 18615 1 18645       Smart Newbie
-E 1 18613 99 10                 Sleeves
-E 1 18612 99 7                  Leggings
-E 1 18602 99 5                  Vest
-E 1 18614 30 16                 Mace
-M 0 18603 1 18602       Dragon
-E 1 18607 99 3                  Collar
-E 1 3852 1 17             Card drag bebe(3852) com bebe drag(18607)
-M 0 18604 1 18606       Newbie Guard
-E 1 18605 10 1                  Ring
-G 1 18608 4                     Key
-E 1 18603 30 6                  Helm
-M 0 18605 1 18612       Alchemist
-G 1 18609 50                    Light
-M 0 18606 4 18602       Crawler
-M 0 18606 4 18606       Crawler
-M 0 18606 4 18609       Crawler
-M 0 18607 5 18620       Zombie
-M 0 18607 5 18624       Zombie
-M 0 18607 5 18637       Zombie
-M 0 18607 5 18633       Zombie
-M 0 18608 5 18627       Quasit
-M 0 18608 5 18636       Quasit
-M 0 18608 5 18638       Quasit
-M 0 18608 5 18621       Quasit
-M 0 18609 1 18629       Minotaur
-E 1 18610 50 6                  Horns
-E 1 18611 50 5                  Hide
-M 0 18610 1 18639       Spectre
-* Doors
-D 0 18602 2 1           A Small Room
-D 0 18606 0 1
-D 0 18603 0 1           Bright Hallway
-D 0 18644 2 1
-D 0 18603 1 1           Bright Hallway
-D 0 18646 3 1
-D 0 18604 2 1           Alchemist's Chamber
-D 0 18612 0 1
-D 0 18606 5 2           Dark Pit
-D 0 18605 4 2
-D 0 18607 3 1           A Small Room
-D 0 18606 1 1
-D 0 18611 1 1           Alchemist's Chamber
-D 0 18612 3 1
-*
+18600 18699 10 2 k 0 0 0 -1 -1
+M 0 18601 1 18605 	(o demônio da sepultura)
+E 1 18604 50 12 	(um manto escuro novo)
+M 0 18602 3 18600 	(o monstro novato)
+E 1 18602 99 5 	(uma camisa verde nova)
+M 0 18602 3 18607 	(o monstro novato)
+E 1 18606 99 16 	(uma brilhante adaga nova)
+M 0 18611 1 18646 	(o imbecil chato)
+E 1 18606 99 16 	(uma brilhante adaga nova)
+M 0 18612 1 18642 	(o novato ignorante)
+M 0 18613 1 18640 	(a novata tagarela)
+E 1 18602 99 5 	(uma camisa verde nova)
+M 0 18614 1 18604 	(o novato perdido)
+E 1 3831 1 17 	(o Card Novatos)
+M 0 18615 1 18645 	(o novato esperto)
+E 1 18613 99 10 	(um par de bonitas bra�adeiras novas)
+E 1 18612 99 7 	(um par de bonitas perneiras novas)
+E 1 18602 99 5 	(uma camisa verde nova)
+E 1 18614 30 16 	(um bast�o incandescente novo)
+M 0 18603 1 18602 	(o dragão-bebê)
+E 1 18607 99 3 	(uma coleira de drag�o)
+E 1 3852 1 17 	(o Card Bebê Dragão)
+M 0 18604 1 18606 	(o Guarda Novato)
+E 1 18605 10 1 	(um sinete novo)
+G 1 18608 4 -1 	(uma pequenina chave)
+E 1 18603 30 6 	(um brilhante capacete novo)
+M 0 18605 1 18612 	(o Alquimista Novato)
+G 1 18609 50 -1 	(uma botija incandescente)
+M 0 18606 4 18602 	(o réptil nojento)
+M 0 18606 4 18606 	(o réptil nojento)
+M 0 18606 4 18609 	(o réptil nojento)
+M 0 18607 5 18620 	(o zumbi novato)
+M 0 18607 5 18624 	(o zumbi novato)
+M 0 18607 5 18637 	(o zumbi novato)
+M 0 18607 5 18633 	(o zumbi novato)
+M 0 18608 5 18627 	(o diabo travesso)
+M 0 18608 5 18636 	(o diabo travesso)
+M 0 18608 5 18638 	(o diabo travesso)
+M 0 18608 5 18621 	(o diabo travesso)
+M 0 18609 1 18629 	(o Poderoso Minotauro)
+E 1 18610 50 6 	(os chifres do Minotauro)
+E 1 18611 50 5 	(o fedorendo disfarce do Minotauro)
+M 0 18610 1 18639 	(o espectro escuro)
+D 0 18602 2 1 	(A Antec�mara Suja)
+D 0 18606 0 1 	(Um Pequeno Quarto)
+D 0 18603 0 1 	(Um Nexus)
+D 0 18644 2 1 	(Uma Antec�mara Iluminada)
+D 0 18603 1 1 	(Um Nexus)
+D 0 18646 3 1 	(Uma Antec�mara Iluminada)
+D 0 18604 2 1 	(Uma Passagem Estreita)
+D 0 18612 0 1 	(A Sala do Alquimista)
+D 0 18606 5 2 	(Um Pequeno Quarto)
+D 0 18605 4 2 	(O Fosso Escuro)
+D 0 18607 3 1 	(Mais da Antec�mara)
+D 0 18606 1 1 	(Um Pequeno Quarto)
+D 0 18611 1 1 	(Outro Canto)
+D 0 18612 3 1 	(A Sala do Alquimista)
 S
 $

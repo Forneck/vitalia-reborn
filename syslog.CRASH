@@ -1,30 +1,30 @@
-Oct 25 03:00:13 2020 :: Resetting #151: O Templo Samurai (rooms 15100-15199).
-Oct 25 03:00:13 2020 :: Resetting #155: O Moinho de Vento (rooms 15500-15599).
-Oct 25 03:00:13 2020 :: Resetting #157: O Castelo de Flyre (rooms 15700-15799).
-Oct 25 03:00:13 2020 :: Resetting #160: Os Estrategistas de Vitália (rooms 16000-16399).
-Oct 25 03:00:13 2020 :: Resetting #170: O Canyon dos Elementais (rooms 17000-17099).
-Oct 25 03:00:13 2020 :: Resetting #173: Camelot (rooms 17300-17399).
-Oct 25 03:00:13 2020 :: Resetting #176: O Império Chinês (rooms 17600-17999).
-Oct 25 03:00:13 2020 :: Resetting #181: Os Caminhos Iniciais (rooms 18100-18199).
-Oct 25 03:00:13 2020 :: Resetting #186: Zona dos Iniciantes (rooms 18600-18699).
-Oct 25 03:00:13 2020 :: Resetting #190: Os Bosques dos Elfos (rooms 19000-19099).
-Oct 25 03:00:13 2020 :: Resetting #197: O Vale dos Orcs Negros (rooms 19700-19799).
-Oct 25 03:00:13 2020 :: Resetting #198: O Labirinto das Almas Perdidas (rooms 19800-19899).
-Oct 25 03:00:13 2020 :: Resetting #201: O Asilo dos Novatos (rooms 20100-20199).
-Oct 25 03:00:13 2020 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
-Oct 25 03:00:13 2020 :: Resetting #220: Anexo (rooms 22000-22099).
-Oct 25 03:00:13 2020 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
-Oct 25 03:00:13 2020 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
-Oct 25 03:00:13 2020 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
-Oct 25 03:00:13 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
-Oct 25 03:00:13 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
-Oct 25 03:00:13 2020 :: Boot db -- DONE.
-Oct 25 03:00:13 2020 :: Signal trapping.
-Oct 25 03:00:13 2020 :: Entering game loop.
-Oct 25 03:00:13 2020 :: No connections.  Going to sleep.
-Oct 25 03:00:28 2020 :: New connection.  Waking up.
-Oct 25 03:00:35 2020 :: Cansian has connected.
-Oct 25 03:00:37 2020 :: Cansian had no variable file
-Oct 25 03:00:37 2020 :: Cansian retrieving crash-saved items and entering game.
-Oct 25 03:00:37 2020 :: Cansian (level 110) has 4 objects (max 45).
+Oct 27 02:38:39 2020 :: Resetting #170: O Canyon dos Elementais (rooms 17000-17099).
+Oct 27 02:38:39 2020 :: Resetting #173: Camelot (rooms 17300-17399).
+Oct 27 02:38:39 2020 :: Resetting #176: O Império Chinês (rooms 17600-17999).
+Oct 27 02:38:39 2020 :: Resetting #181: Os Caminhos Iniciais (rooms 18100-18199).
+Oct 27 02:38:39 2020 :: Resetting #186: Zona dos Iniciantes (rooms 18600-18699).
+Oct 27 02:38:39 2020 :: Resetting #190: Os Bosques dos Elfos (rooms 19000-19099).
+Oct 27 02:38:39 2020 :: Resetting #197: O Vale dos Orcs Negros (rooms 19700-19799).
+Oct 27 02:38:39 2020 :: Resetting #198: O Labirinto das Almas Perdidas (rooms 19800-19899).
+Oct 27 02:38:39 2020 :: Resetting #201: O Asilo dos Novatos (rooms 20100-20199).
+Oct 27 02:38:39 2020 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
+Oct 27 02:38:39 2020 :: Resetting #220: Anexo (rooms 22000-22099).
+Oct 27 02:38:39 2020 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
+Oct 27 02:38:39 2020 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
+Oct 27 02:38:39 2020 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
+Oct 27 02:38:39 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
+Oct 27 02:38:39 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
+Oct 27 02:38:39 2020 :: Boot db -- DONE.
+Oct 27 02:38:39 2020 :: Signal trapping.
+Oct 27 02:38:39 2020 :: Entering game loop.
+Oct 27 02:38:39 2020 :: No connections.  Going to sleep.
+Oct 27 02:38:40 2020 :: New connection.  Waking up.
+Oct 27 02:39:10 2020 :: Losing descriptor without char.
+Oct 27 02:39:10 2020 :: No connections.  Going to sleep.
+Oct 27 02:39:27 2020 :: New connection.  Waking up.
+Oct 27 02:39:34 2020 :: Cansian has connected.
+Oct 27 02:39:36 2020 :: Cansian had no variable file
+Oct 27 02:39:36 2020 :: Cansian retrieving crash-saved items and entering game.
+Oct 27 02:39:36 2020 :: Cansian (level 110) has 2 objects (max 100).
+FANN Error 5: Error reading neuron info from configuration file "etc/aventureiro.fann".
 Segmentation fault (core dumped)
