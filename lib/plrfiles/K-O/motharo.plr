@@ -6,8 +6,8 @@ Clas: 1
 Levl: 1
 Id  : 18
 Brth: 1603721837
-Plyd: 2
-Last: 1603735311
+Plyd: 693
+Last: 1603809957
 Lnew: 1603721842
 Htwn: 1372
 Host: 187.66.23.112
@@ -18,11 +18,11 @@ Aff : 0 0 0 0
 Pref: efghno 0 0 0
 Room: 3001
 Lern: 3
-Hung: 24
-Thir: 24
+Hung: 14
+Thir: 14
 Hit : 19/19
 Mana : 100/100
-Move: 79/84
+Move: 84/84
 Str : 12/0
 Int : 13
 Wis : 15

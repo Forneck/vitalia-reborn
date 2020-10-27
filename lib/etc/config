@@ -240,7 +240,7 @@ ibt_autosave = 1
 use_autowiz = 1
 
 * If yes, what is the lowest level which should be on the wizlist?
-min_wizlist_lev = 107
+min_wizlist_lev = 101
 
 * If yes, enable the protocol negotiation system.
 protocol_negotiation = 1

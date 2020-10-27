@@ -1,30 +1,30 @@
-Oct 27 02:38:39 2020 :: Resetting #170: O Canyon dos Elementais (rooms 17000-17099).
-Oct 27 02:38:39 2020 :: Resetting #173: Camelot (rooms 17300-17399).
-Oct 27 02:38:39 2020 :: Resetting #176: O Império Chinês (rooms 17600-17999).
-Oct 27 02:38:39 2020 :: Resetting #181: Os Caminhos Iniciais (rooms 18100-18199).
-Oct 27 02:38:39 2020 :: Resetting #186: Zona dos Iniciantes (rooms 18600-18699).
-Oct 27 02:38:39 2020 :: Resetting #190: Os Bosques dos Elfos (rooms 19000-19099).
-Oct 27 02:38:39 2020 :: Resetting #197: O Vale dos Orcs Negros (rooms 19700-19799).
-Oct 27 02:38:39 2020 :: Resetting #198: O Labirinto das Almas Perdidas (rooms 19800-19899).
-Oct 27 02:38:39 2020 :: Resetting #201: O Asilo dos Novatos (rooms 20100-20199).
-Oct 27 02:38:39 2020 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
-Oct 27 02:38:39 2020 :: Resetting #220: Anexo (rooms 22000-22099).
-Oct 27 02:38:39 2020 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
-Oct 27 02:38:39 2020 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
-Oct 27 02:38:39 2020 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
-Oct 27 02:38:39 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
-Oct 27 02:38:39 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
-Oct 27 02:38:39 2020 :: Boot db -- DONE.
-Oct 27 02:38:39 2020 :: Signal trapping.
-Oct 27 02:38:39 2020 :: Entering game loop.
-Oct 27 02:38:39 2020 :: No connections.  Going to sleep.
-Oct 27 02:38:40 2020 :: New connection.  Waking up.
-Oct 27 02:39:10 2020 :: Losing descriptor without char.
-Oct 27 02:39:10 2020 :: No connections.  Going to sleep.
-Oct 27 02:39:27 2020 :: New connection.  Waking up.
-Oct 27 02:39:34 2020 :: Cansian has connected.
-Oct 27 02:39:36 2020 :: Cansian had no variable file
-Oct 27 02:39:36 2020 :: Cansian retrieving crash-saved items and entering game.
-Oct 27 02:39:36 2020 :: Cansian (level 110) has 2 objects (max 100).
-FANN Error 5: Error reading neuron info from configuration file "etc/aventureiro.fann".
+Oct 27 11:39:01 2020 :: WARNING: EOF on socket read (connection broken by peer)
+Oct 27 11:39:01 2020 :: Losing descriptor without char.
+Oct 27 11:39:02 2020 :: WARNING: EOF on socket read (connection broken by peer)
+Oct 27 11:39:02 2020 :: Closing link to: Cansian.
+Oct 27 11:39:02 2020 :: No connections.  Going to sleep.
+Oct 27 11:39:08 2020 :: New connection.  Waking up.
+Oct 27 11:39:15 2020 :: Cansian [177.220.172.147] has reconnected.
+Oct 27 11:39:22 2020 :: OLC: Cansian starts editing the game configuration.
+Oct 27 11:39:37 2020 :: OLC: Cansian modifies the game configuration.
+Oct 27 11:39:37 2020 :: OLC: Cansian stops editing the game configuration
+Oct 27 11:40:42 2020 :: Cansian has quit the game.
+Oct 27 11:40:46 2020 :: Losing player: Cansian.
+Oct 27 11:40:46 2020 :: No connections.  Going to sleep.
+Oct 27 12:16:59 2020 :: New connection.  Waking up.
+Oct 27 12:17:03 2020 :: Motharo has connected.
+Oct 27 12:17:04 2020 :: Motharo had no variable file
+Oct 27 12:17:04 2020 :: Motharo un-renting and entering game.
+Oct 27 12:17:04 2020 :: Motharo (level 1) has 0 objects (max 100).
+Oct 27 12:18:34 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Oct 27 12:23:33 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Oct 27 12:28:34 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Oct 27 12:33:34 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Oct 27 12:38:33 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Oct 27 12:43:34 2020 :: nusage: 1   sockets connected, 1   sockets playing
+SYSERR: perform_socket_read: about to lose connection: Connection timed out
+Oct 27 12:44:02 2020 :: Closing link to: Motharo.
+Oct 27 12:44:02 2020 :: No connections.  Going to sleep.
+Oct 27 13:14:04 2020 :: New connection.  Waking up.
+Oct 27 13:14:09 2020 :: Motharo [187.66.23.112] has reconnected.
 Segmentation fault (core dumped)

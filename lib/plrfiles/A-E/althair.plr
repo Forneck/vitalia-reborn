@@ -1,40 +1,44 @@
 Name: Althair
 Pass: Al0/4XKfoKti2
-Titl: the Fledgling
+Titl: the Tenderfoot
 Sex : 1
 Clas: 6
-Levl: 1
-Id  : 3
-Brth: 1602113319
-Plyd: 1887
-Last: 1603766268
-Lmot: 1603258761
-Lnew: 1603258754
+Levl: 2
+Id  : 20
+Brth: 1603768097
+Plyd: 2381
+Last: 1603770708
+Lmot: 1603768107
+Lnew: 1603768103
 Htwn: 1372
 Host: 177.220.172.147
-Hite: 161
-Wate: 129
-Alin: 63
-Act : hly 0 0 0
+Hite: 195
+Wate: 172
+Alin: 45
+Act : gh 0 0 0
 Aff : 0 0 0 0
-Pref: efghknoBCDE d 0 0
+Pref: efghknoBCDE abd 0 0
 Wimp: 10
-Room: 1890
-Hung: -1
-Thir: -1
-Hit : 1/22
-Mana : 1/100
-Move: 1/86
+Room: 3001
+Lern: 2
+Hung: 11
+Thir: 20
+Hit : 47/32
+Mana : 102/102
+Move: 82/87
 Str : 16/0
-Int : 13
-Wis : 13
+Int : 14
+Wis : 12
 Dex : 14
-Con : 14
-Cha : 10
+Con : 15
+Cha : 4
 Ac  : 100
-Exp : 591
+Gold: 504
+Exp : 1455
 Olc : 0
 Skil:
-44 25
-224 25
+224 60
 0 0
+Affs:
+19 0 0 29 16 0 0 0
+0 0 0 0 0 0 0 0
