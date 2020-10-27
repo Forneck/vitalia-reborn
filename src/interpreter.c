@@ -53,12 +53,6 @@ static int sort_commands_helper(const void *a, const void *b);
 int parse_hometown(char arg);
 void hometown_menu(struct descriptor_data *d);
 
-/*forneck*/
-/*
-FANN_EXTERNAL struct fann *FANN_API fann_create_from_file(const char *configuration_file);
-FANN_EXTERNAL void FANN_API fann_train(struct fann *ann, fann_type 	*input,fann_type *desired_output);
-FANN_EXTERNAL void FANN_API fann_destroy(struct fann *ann);
-*/
 
 /* globals defined here, used here and elsewhere */
 int *cmd_sort_info = NULL;
@@ -670,10 +664,12 @@ void command_interpreter(struct char_data *ch, char *argument)
    output[0] = cmd;
    output[1] = 0;
   fann_train(ann,input,output);
-  
-/*  calc_output = fann_run(ann,input);
-  	send_to_char(ch, "  DEBUG AVENTUREIRO: Comando %s\r\n", cmd_info[(int) calc_output[0]].command); */
-  
+
+  	if (CONFIG_DEBUG_MODE >= NRM) {  
+calc_output = fann_run(ann,input);
+  	send_to_char(ch, "  DEBUG AVENTUREIRO: Comando %s\r\n", cmd_info[(int) calc_output[0]].command); 
+  	}
+  	
    fann_save(ann,"etc/aventureiro.fann");
   fann_destroy(ann);
 	
