@@ -98,7 +98,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"ask", "ask", POS_RESTING, do_spec_comm, 0, SCMD_ASK, CMD_PLAYERS},
 	{"astat", "ast", POS_DEAD, do_astat, 0, 0, CMD_NONE},
 	{"attach", "attach", POS_DEAD, do_attach, LVL_BUILDER, 0, CMD_MISC},
-	{"auction", "auc", POS_SLEEPING, do_gen_comm, 0, SCMD_AUCTION, CMD_OBJECT},
+	{"auction", "auc", POS_SLEEPING, do_gen_comm, 0, SCMD_AUCTION, CMD_OBJ},
 	{"autoexits", "autoex", POS_DEAD, do_gen_tog, 0, SCMD_AUTOEXIT, CMD_SELF},
 	{"autoassist", "autoass", POS_DEAD, do_gen_tog, 0, SCMD_AUTOASSIST, CMD_SELF},
 	{"autodoor", "autodoor", POS_DEAD, do_gen_tog, 0, SCMD_AUTODOOR, CMD_SELF},
@@ -240,7 +240,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"nowiz", "nowiz", POS_DEAD, do_gen_tog, LVL_IMMORT, SCMD_NOWIZ, CMD_SELF},
 
 	{"open", "o", POS_SITTING, do_gen_door, 0, SCMD_OPEN, CMD_EXITS},
-	{"order", "ord", POS_RESTING, do_order, 1, 0, CMD_PLAYERS, CMD_PLAYERS},
+	{"order", "ord", POS_RESTING, do_order, 1, 0, CMD_PLAYERS},
 	{"offer", "off", POS_STANDING, do_not_here, 1, 0, CMD_SELF},
 	{"olc", "olc", POS_DEAD, do_show_save_list, LVL_BUILDER, 0, CMD_NONE},
 	{"olist", "olist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_OLIST, CMD_ZONE},
@@ -529,7 +529,20 @@ void command_interpreter(struct char_data *ch, char *argument)
 	struct fann *ann;
 	fann_type *calc_output;
 	ann = fann_create_from_file("etc/aventureiro.fann");
-	fann_type input[26] =
+	fann_type input[26];
+	fann_type output[6];
+	struct char_data *victim;
+	struct obj_data *object;
+	int id_player;
+	int door;
+	int grupo;
+	
+	if (GROUP(ch) != NULL)
+	grupo = 1;
+	else
+	grupo = 0;
+	
+	input =
 		{ GET_HIT(ch), GET_MAX_HIT(ch), GET_MANA(ch), GET_MAX_MANA(ch), GET_MOVE(ch),
 		GET_MAX_MOVE(ch), GET_EXP(ch), GET_ROOM_VNUM(IN_ROOM(ch)), GET_CLASS(ch), GET_POS(ch),
 		GET_ALIGNMENT(ch),
@@ -537,13 +550,9 @@ void command_interpreter(struct char_data *ch, char *argument)
 		GET_DEX(ch),
 		GET_GOLD(ch), GET_BANK_GOLD(ch), GET_COND(ch, HUNGER), GET_COND(ch, THIRST),
 		GET_PRACTICES(ch),
-		GROUP(ch), time_info.hours, GET_BREATH(ch))
+		grupo, time_info.hours, GET_BREATH(ch))
 	};
-	fann_type output[6];
-	struct char_data *victim;
-	struct obj_data *object;
-	int id_player;
-	int door;
+	
 
 	REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
 
