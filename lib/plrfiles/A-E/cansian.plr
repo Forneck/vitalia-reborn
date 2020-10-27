@@ -6,19 +6,19 @@ Clas: 4
 Levl: 110
 Id  : 1
 Brth: 1601790482
-Plyd: 19454
-Last: 1603605263
+Plyd: 33458
+Last: 1603764385
 Lmot: 1603226112
 Lnew: 1603501210
 Htwn: 1372
-Host: 138.204.26.108
+Host: 177.220.172.147
 Hite: 151
 Wate: 113
 Alin: -135
-Act : g 0 0 0
+Act : 0 0 0 0
 Aff : 0 0 0 0
-Pref: efghimnoqrvxAB d 0 0
-Room: 3001
+Pref: efghimnoqrvxAB cd 0 0
+Room: 1803
 Hit : 2000/2000
 Mana : 100/100
 Move: 82/82
@@ -32,3 +32,7 @@ Ac  : 100
 Gold: 100
 Exp : 7000000
 Olc : 0
+Alis: 1
+ sa
+ say @Y$*@n
+1

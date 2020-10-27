@@ -1,55 +1,46 @@
 #114
 Vitalia~
 A Fenda Entre Mundos~
-11400 11499 120 1 ade 0 0 0 -1 -1
--1
-*
-*
-*
-O 0 11400 1 11400      vï¿½rtice de energia
-O 0 11401 1 11417      placa
-M 0 11400 2 11402          yaksha de nï¿½voa
-M 0 11400 2 11404          yaksha de nï¿½voa
-D 0 11417 1 2          escuridï¿½o
-D 0 11421 1 2          porta de pedra
-D 0 11423 3 2          porta de madeira
-D 0 11425 1 2          buraco
-D 0 11427 3 2          porta prateada
-D 0 11429 1 2          porta dourada
-D 0 11431 3 2          retï¿½ngulo
-D 0 11433 1 2          porta de jade
-D 0 11434 3 2          porta de jade
-*
-* Os dois mobs a seguir vestem o objeto [11403] 'a coleira do cï¿½o-demï¿½nio'
-* que ï¿½ TAKE WAIST no pescoï¿½o. Isso estï¿½ certo, pois ela ï¿½ bem grande para
-* um personagem normal.
-*
-M 0 11405 2 11417          cï¿½o demï¿½nio
-E 1 11403 10 3         coleira
-M 0 11405 2 11417          cï¿½o demï¿½nio
-E 1 11403 10 3         coleira
-M 0 11403 2 11418          morcego
-M 0 11409 1 11436          Narada
-E 1 11412 10 5         gasta tï¿½nica
-E 1 11413 10 17        velho cajado
-M 0 11406 1 11420          Chitragupta
-E 1 11405 10 0         livro da vida
-M 0 11407 1 11420          Yama
-E 1 11406 5 6          coroa
-E 1 11407 5 12         manto
-E 1 11408 5 16         clava
-E 1 11409 5 17         laï¿½o
-M 0 11408 1 11420          multidï¿½o de almas
-M 0 11401 2 11408          pisacha-pedra
-M 0 11401 2 11411          pisacha-pedra
-M 0 11402 2 11413          pisacha-grama
-M 0 11402 2 11415          pisacha-grama
-M 0 11404 1 11410          pisachi-sombra
-E 1 11404 10 12        tï¿½nica de sombras
-M 0 11410 1 11434          estï¿½tua do guarda naga
-E 1 11414 5 16         tabar de pedra
-E 1 11415 5 11         dahl de pedra
-O 0 11410 1 11433      seixo
-O 0 11411 1 11433      seixo
+11400 11499 120 1 adek 0 0 0 -1 -1
+O 0 11400 1 11400 	(um vórtice de energia)
+O 0 11401 1 11417 	(a placa de indicações)
+M 0 11400 2 11402 	(um yaksha de nÃ©voa)
+M 0 11400 2 11404 	(um yaksha de nÃ©voa)
+D 0 11417 1 2 	(A Fenda Entre Mundos)
+D 0 11421 1 2 	(A Entrada de Sutala)
+D 0 11423 3 2 	(A Entrada de Vitalaloka)
+D 0 11425 1 2 	(A Entrada de Talatala)
+D 0 11427 3 2 	(A Entrada de Mahatala)
+D 0 11429 1 2 	(A Entrada de Raratala)
+D 0 11431 3 2 	(A Entrada de Atalaloka)
+D 0 11433 1 2 	(A Entrada de Patala)
+D 0 11434 3 2 	(O Sétimo Submundo)
+M 0 11405 2 11417 	(um cÃ£o-demÃ´nio)
+E 1 11403 10 3 	(a coleira do cão-demônio)
+M 0 11405 2 11417 	(um cÃ£o-demÃ´nio)
+E 1 11403 10 3 	(a coleira do cão-demônio)
+M 0 11403 2 11418 	(um morcego)
+M 0 11409 1 11436 	(Narada, o andarilho divino)
+E 1 11412 10 5 	(uma gasta túnica branca)
+E 1 11413 10 17 	(uma cítara de madeira escura)
+M 0 11406 1 11420 	(Chitragupta)
+E 1 11405 10 0 	(um livro da vida)
+M 0 11407 1 11420 	(Yama, o Deus da Morte)
+E 1 11406 5 6 	(a coroa de Yama)
+E 1 11407 5 12 	(o manto de Yama)
+E 1 11408 5 16 	(a clava de Yama)
+E 1 11409 5 17 	(o laço de Yama)
+M 0 11408 1 11420 	(a multidÃ£o de almas)
+M 0 11401 2 11408 	(um pisacha-pedra)
+M 0 11401 2 11411 	(um pisacha-pedra)
+M 0 11402 2 11413 	(um pisacha-grama)
+M 0 11402 2 11415 	(um pisacha-grama)
+M 0 11404 1 11410 	(uma pisachi-sombra)
+E 1 11404 10 12 	(uma túnica de sombras)
+M 0 11410 1 11434 	(a estÃ¡tua de um guarda naga)
+E 1 11414 5 16 	(um gigantesco tabar de pedra)
+E 1 11415 5 11 	(um pesado dahl de pedra)
+O 0 11410 1 11433 	(um pequeno seixo verde)
+O 0 11411 1 11433 	(um pequeno seixo verde)
 S
 $

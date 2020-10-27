@@ -1,38 +1,37 @@
 #136
 Vitalia~
 A Floresta Leste de Thewster~
-13600 13699 15 2 0 0 0 -1 -1
--1
-M 0 13600 5 13587
-M 0 13600 5 13587
-M 0 13600 5 13587
-M 0 13601 1 13587
-M 0 13602 5 13587
-M 0 13602 5 13587
-M 0 13602 5 13587
-M 0 13603 5 13587
-M 0 13603 5 13587
-M 0 13604 5 13587
-E 1 13600 10 6
-M 0 13603 5 13587
-M 0 13605 5 13587
-M 0 13605 5 13587
-M 0 13605 5 13587
-M 0 13606 5 13587
-M 0 13606 5 13587
-M 0 13607 5 13587
-M 0 13607 5 13587
-O 0 13602 1 13582
-M 0 13607 5 13588
-M 0 13607 5 13588
-M 0 13608 5 13588
-M 0 13608 5 13588
-M 0 13609 1 13588
-G 1 13601 5
-M 0 13610 2 13588
-M 0 13608 5 13588
-M 0 13608 5 13588
-M 0 13608 5 13588
-M 0 13607 5 13588
+13600 13699 15 2 k 0 0 0 -1 -1
+M 0 13600 5 13587 	(uma andorinha)
+M 0 13600 5 13587 	(uma andorinha)
+M 0 13600 5 13587 	(uma andorinha)
+M 0 13601 1 13587 	(um pequeno dragão negro)
+M 0 13602 5 13587 	(um pequeno corcunda)
+M 0 13602 5 13587 	(um pequeno corcunda)
+M 0 13602 5 13587 	(um pequeno corcunda)
+M 0 13603 5 13587 	(uma corça)
+M 0 13603 5 13587 	(uma corça)
+M 0 13604 5 13587 	(um veado)
+E 1 13600 10 6 	(um belo par de chifres de cervo)
+M 0 13603 5 13587 	(uma corça)
+M 0 13605 5 13587 	(um duende da floresta)
+M 0 13605 5 13587 	(um duende da floresta)
+M 0 13605 5 13587 	(um duende da floresta)
+M 0 13606 5 13587 	(uma ágil raposa)
+M 0 13606 5 13587 	(uma ágil raposa)
+M 0 13607 5 13587 	(uma borboleta)
+M 0 13607 5 13587 	(uma borboleta)
+O 0 13602 1 13582 	(um balde de chuva)
+M 0 13607 5 13588 	(uma borboleta)
+M 0 13607 5 13588 	(uma borboleta)
+M 0 13608 5 13588 	(um grande girassol)
+M 0 13608 5 13588 	(um grande girassol)
+M 0 13609 1 13588 	(uma árvore Nirin)
+G 1 13601 5 -1 	(um peda�o de casca de Nirin)
+M 0 13610 2 13588 	(um inseto-pedra)
+M 0 13608 5 13588 	(um grande girassol)
+M 0 13608 5 13588 	(um grande girassol)
+M 0 13608 5 13588 	(um grande girassol)
+M 0 13607 5 13588 	(uma borboleta)
 S
 $

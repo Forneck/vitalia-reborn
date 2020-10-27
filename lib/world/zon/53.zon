@@ -1,130 +1,112 @@
 #53
 Vitalia~
 A Grande Pirâmide~
-5300 5399 80 2 0 0 0 0 -1 -1
-4
-*
-* Created by Andersen of HexOynx.
-*
-* Modifed and edited for CircleMUD by Furry
-*
-* Mobiles
-M 0 5300 6 5302         Asp
-M 0 5300 6 5305         Asp
-M 0 5300 6 5313         Asp
-M 0 5300 6 5340         Asp
-M 0 5301 4 5303         Cobra
-M 0 5301 4 5341         Cobra
-M 0 5302 3 5306         Mongoose
-M 0 5302 3 5316         Mongoose
-M 0 5302 3 5326         Mongoose
-M 0 5303 6 5309         Pyramid Watcher
-E 1 5300 6 16                   Egyptian Mace
-M 0 5303 6 5309         Pyramid Watcher
-E 1 5301 10 12                  Sand-Coloured Robes
-M 0 5303 6 5337         Pyramid Watcher
-E 1 5300 6 16                   Egyptian Mace
-M 0 5303 6 5337         Pyramid Watcher
-E 1 5301 10 12                  Sand-Coloured Robes
-M 0 5303 6 5340         Pyramid Watcher
-E 1 5300 6 16                   Egyptian Mace
-M 0 5303 6 5340         Pyramid Watcher
-E 1 5301 10 12                  Sand-Coloured Robes
-M 0 5304 6 5325         Tomb Thief
-E 1 5302 7 16                   Obsidian Dagger
-M 0 5304 6 5326         Tomb Thief
-E 1 5302 7 16                   Obsidian Dagger
-M 0 5304 6 5333         Tomb Thief
-E 1 5302 7 16                   Obsidian Dagger
-M 0 5304 6 5334         Tomb Thief
-E 1 5302 7 16                   Obsidian Dagger
-M 0 5304 6 5335         Tomb Thief
-E 1 5302 7 16                   Obsidian Dagger
-M 0 5304 6 5342         Tomb Thief
-E 1 5302 7 16                   Obsidian Dagger
-M 0 5305 1 5343         Ali Baba
-E 1 5303 4 6                    Cloth Turban
-E 1 5302 7 16                   Obsidian Dagger
-M 0 5306 1 5323         Magic Carpet
-M 0 5307 4 5325         Mummy
-E 1 5304 5 5                    Cloth Wrappings
-G 1 5306 3 -1                      Jar Of Formaldehyde
-M 0 5307 4 5325         Mummy
-E 1 5304 5 5                    Cloth Wrappings
-G 1 5305 2 -1                     Bottle Of Embalming Fluid
-M 0 5307 4 5337         Mummy
-E 1 5304 5 5                    Cloth Wrappings
-M 0 5307 4 5341         Mummy
-E 1 5304 5 5                    Cloth Wrappings
-M 0 5308 4 5354         Sandman
-M 0 5308 4 5355         Sandman
-M 0 5308 4 5356         Sandman
-M 0 5308 4 5357         Sandman
-M 0 5309 1 5311         Efreet
-E 1 5307 5 0                    Ball Of Flame
-E 1 3824 1 17           Card Brac Ver�o(3824) com Efreeti(5309)
-M 0 5310 2 5345         Caryatid
-E 1 5308 3 16                   Stone Scimitar
-M 0 5310 2 5345         Caryatid
-E 1 5308 3 16                   Stone Scimitar
-G 1 5309 2 -1                     Stone Key
-*
-* Note: The Second One Was Given The Key To Require That BOTH Be Killed
-* At Some Time For The Key To Be Reloaded.  This Way If Players Only Kill
-* The Second One, The First One Will Be Loaded W/O Key On The Next Reset.
-* Of Course, This Won't Really FORCE The Previous Players To Kill Both,
-* But It Is More Balanced Than Always Fighting Only The First Caraytid.
-* And Also The Treasure Of The Pharoahs
-*
-M 0 5311 1 5323         Djinn
-E 1 5313 4 17                   Lamp
-M 0 5312 3 5348         Hieracosphinx
-M 0 5312 3 5349         Hieracosphinx
-M 0 5312 3 5351         Hieracosphinx
-M 0 5313 2 5350         Gynosphinx
-M 0 5313 2 5350         Gynosphinx
-G 1 5314 2 -1                     Ankh
-M 0 5314 2 5352         Criosphinx
-M 0 5314 2 5352         Criosphinx
-G 1 5315 2  -1                    Book Of Riddles
-M 0 5315 1 5347         Androsphinx
-G 1 5316 2 -1                     Lion's Paw
-M 0 5316 1 5358         Great Sphinx
-E 1 5317 2 17                   Answer
-M 0 5317 1 5332         Lord Ramses
-G 1 5319 5 -1                     Pile Of Sand
-G 1 5320 5 -1                     Curse Of The Mummy
-G 1 5321 20 -1                   Small Elixir
-G 1 5321 20 -1                     Small Elixir
-E 1 5322 10 6                    Golden Mask
-* Objects
-O 1 5318 1 5359         The Treasure Of The Sphinx
-O 1 5324 10 5359        A Sun Wand
-O 1 5325 10 5359        A Sandy Ring
-O 1 5326 10 5359        A Small Golden Sphinx
-O 1 5327 10 5359        Sphinxian Leggings
-O 0 5323 2 5319         Key
-O 0 5310 1 5345         The Stone Sarcophagus
-P 1 5311 2 5310                 Dust
-P 1 5312 2 5310                 The Scarab
-* Doors
-D 0 5306 5 1     Stone Atop The Pyramid
-D 0 5308 4 1     
-D 0 5309 3 1     Fire Pool
-D 0 5310 1 1     
-D 0 5322 2 2     Entrance To The Vault Of The Lamp
-D 0 5323 0 2     
-D 0 5326 3 2     Coffin Lid
-D 0 5327 1 2       * Note That This Has No Key Number, Locking You In
-D 0 5329 2 1     Stone Into The Ancient Hall
-D 0 5330 0 1     
-D 0 5331 5 1     The Stone Into The Tomb Of Ramses
-D 0 5332 4 1     
-D 0 5343 5 1     Floor Into The Tomb
-D 0 5344 4 1     
-D 0 5344 0 1     Tomb Of The Pharoahs
-D 0 5345 2 1     
-D 0 5358 2 2     Entrance To The Hole In The Sand
-*
+5300 5399 80 2 k 0 0 0 -1 -1
+M 0 5300 6 5302 	(a horrível cobra)
+M 0 5300 6 5305 	(a horrível cobra)
+M 0 5300 6 5313 	(a horrível cobra)
+M 0 5300 6 5340 	(a horrível cobra)
+M 0 5301 4 5303 	(a cobra naja)
+M 0 5301 4 5341 	(a cobra naja)
+M 0 5302 3 5306 	(o pequeno mangusto)
+M 0 5302 3 5316 	(o pequeno mangusto)
+M 0 5302 3 5326 	(o pequeno mangusto)
+M 0 5303 6 5309 	(o guardião da pirâmide)
+E 1 5300 6 16 	(uma maça egípcia)
+M 0 5303 6 5309 	(o guardião da pirâmide)
+E 1 5301 10 12 	(um robe cor de areia)
+M 0 5303 6 5337 	(o guardião da pirâmide)
+E 1 5300 6 16 	(uma maça egípcia)
+M 0 5303 6 5337 	(o guardião da pirâmide)
+E 1 5301 10 12 	(um robe cor de areia)
+M 0 5303 6 5340 	(o guardião da pirâmide)
+E 1 5300 6 16 	(uma maça egípcia)
+M 0 5303 6 5340 	(o guardião da pirâmide)
+E 1 5301 10 12 	(um robe cor de areia)
+M 0 5304 6 5325 	(um ladrão de tumba)
+E 1 5302 7 16 	(uma navalha achatada)
+M 0 5304 6 5326 	(um ladrão de tumba)
+E 1 5302 7 16 	(uma navalha achatada)
+M 0 5304 6 5333 	(um ladrão de tumba)
+E 1 5302 7 16 	(uma navalha achatada)
+M 0 5304 6 5334 	(um ladrão de tumba)
+E 1 5302 7 16 	(uma navalha achatada)
+M 0 5304 6 5335 	(um ladrão de tumba)
+E 1 5302 7 16 	(uma navalha achatada)
+M 0 5304 6 5342 	(um ladrão de tumba)
+E 1 5302 7 16 	(uma navalha achatada)
+M 0 5305 1 5343 	(Ali Babá)
+E 1 5303 4 6 	(um sujo turbante de pano)
+E 1 5302 7 16 	(uma navalha achatada)
+M 0 5306 1 5323 	(o tapete magico)
+M 0 5307 4 5325 	(a múmia)
+E 1 5304 5 5 	(algumas faixas de pano)
+G 1 5306 3 -1 	(um pote de natrão)
+M 0 5307 4 5325 	(a múmia)
+E 1 5304 5 5 	(algumas faixas de pano)
+G 1 5305 2 -1 	(uma garrafa de fluido embalsamandor)
+M 0 5307 4 5337 	(a múmia)
+E 1 5304 5 5 	(algumas faixas de pano)
+M 0 5307 4 5341 	(a múmia)
+E 1 5304 5 5 	(algumas faixas de pano)
+M 0 5308 4 5354 	(o homem de areia)
+M 0 5308 4 5355 	(o homem de areia)
+M 0 5308 4 5356 	(o homem de areia)
+M 0 5308 4 5357 	(o homem de areia)
+M 0 5309 1 5311 	(O Efreeti)
+E 1 5307 5 0 	(uma pequena bola quente de fogo)
+E 1 3824 1 17 	(o Card Bracelete do Verão)
+M 0 5310 2 5345 	(a cariátide)
+E 1 5308 3 16 	(uma cimitarra de pedra)
+M 0 5310 2 5345 	(a cariátide)
+E 1 5308 3 16 	(uma cimitarra de pedra)
+G 1 5309 2 -1 	(uma chave de pedra)
+M 0 5311 1 5323 	(o gênio)
+E 1 5313 4 17 	(uma lâmpada)
+M 0 5312 3 5348 	(a hieracoesfinge)
+M 0 5312 3 5349 	(a hieracoesfinge)
+M 0 5312 3 5351 	(a hieracoesfinge)
+M 0 5313 2 5350 	(a ginoesfinge)
+M 0 5313 2 5350 	(a ginoesfinge)
+G 1 5314 2 -1 	(uma ankh)
+M 0 5314 2 5352 	(a esfinge)
+M 0 5314 2 5352 	(a esfinge)
+G 1 5315 2 -1 	(um livro de enigmas)
+M 0 5315 1 5347 	(a androesfinge)
+G 1 5316 2 -1 	(uma pata de leão)
+M 0 5316 1 5358 	(a grande esfinge)
+E 1 5317 2 17 	(a resposta)
+M 0 5317 1 5332 	(Ramsés, o Maldito)
+G 1 5319 5 -1 	(uma pilha de areia)
+G 1 5320 5 -1 	(a maldição da múmia)
+G 1 5321 20 -1 	(um pequeno elixir)
+G 1 5321 20 -1 	(um pequeno elixir)
+E 1 5322 10 6 	(uma máscara dourada)
+O 1 5318 1 5359 	(o tesouro da esfinge)
+O 1 5324 10 5359 	(uma vara reluzente como o sol)
+O 1 5325 10 5359 	(um anel cor de areia)
+O 1 5326 10 5359 	(uma pequena esfinge dourada)
+O 1 5327 10 5359 	(perneiras em forma de esfinge)
+O 0 5323 2 5319 	(o diamante)
+O 0 5310 1 5345 	(um imponente sarcófago de pedra)
+P 1 5311 2 5310 	(alguma poeira antiga)
+P 1 5312 2 5310 	(uma esmeralda em forma de escaravelho)
+D 0 5306 5 1 	(O �pice da Grande Pir�mide)
+D 0 5308 4 1 	(A Escada)
+D 0 5309 3 1 	(Uma C�mara Mofada)
+D 0 5310 1 1 	(A Piscina de Fogo)
+D 0 5322 2 2 	(No Final da Fenda)
+D 0 5323 0 2 	(A Ab�bada de uma L�mpada)
+D 0 5326 3 2 	(Uma Tumba Demolida)
+D 0 5327 1 2 	(Uma Escada)
+D 0 5329 2 1 	(Uma Escada)
+D 0 5330 0 1 	(O Corredor Antigo)
+D 0 5331 5 1 	(O Altar Elevado)
+D 0 5332 4 1 	(A Tumba de Rams�s)
+D 0 5343 5 1 	(Uma Sala sem Sa�da)
+D 0 5344 4 1 	(A Entrada da Tumba)
+D 0 5344 0 1 	(A Entrada da Tumba)
+D 0 5345 2 1 	(A Tumba dos Fara�s)
+D 0 5358 2 2 	(Uma Volumosa Duna de Areia)
 S
 $

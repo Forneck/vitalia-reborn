@@ -1,21 +1,17 @@
 #94
 Vitalia~
 Trilha do Destino~
-9400 9499 60 2 0 0 0 0 -1 -1
--1
-* Objetos
-O 0 9410 1 9406        carregar uma nova fonte de �gua
-O 0 9411 1 9411        carregar uma nova fonte de sangue
-O 0 9403 1 9407        colocar a est�tua de Blug
-O 0 9401 1 9407        colocar a est�tua de Maegali
-O 0 9402 1 9407        colocar a est�tua de Nemesis
-O 0 9404 1 9408        colocar a est�tua de Boromir
-O 0 9406 1 9413        colocar o bloco de gelo com o corpo do Cl�rigo
-O 0 9407 1 9413        colocar o bloco de gelo com o corpo do Guerreiro
-O 0 9408 1 9412        colocar o bloco de gelo com o corpo do Mago
-O 0 9409 1 9412        colocar o bloco de gelo com o corpo do Ladr�o
-* Sa�das
-D 0 9422 3 2           fechar a porta de ferro (dentro) <--fora n�o ser� fechado
-*
+9400 9499 60 2 k 0 0 0 -1 -1
+O 0 9410 1 9406 	(uma fonte de agua celestial)
+O 0 9411 1 9411 	(uma fonte de sangue)
+O 0 9403 1 9407 	(uma estátua de Blug)
+O 0 9401 1 9407 	(uma estátua de Maegali)
+O 0 9402 1 9407 	(uma estátua de Nemesis)
+O 0 9404 1 9408 	(uma estátua de Boromir)
+O 0 9406 1 9413 	(um enorme bloco de gelo)
+O 0 9407 1 9413 	(um enorme bloco de gelo)
+O 0 9408 1 9412 	(um enorme bloco de gelo)
+O 0 9409 1 9412 	(um enorme bloco de gelo)
+D 0 9422 3 2 	(O Fim da Escada)
 S
 $

@@ -1,93 +1,86 @@
 #28
 Vitalia~
 A Grande Catedral de Cristal~
-2800 2899 30 1 abcde 0 0 0 -1 -1
--1
-*
-*Portas
-*
-D 0 2807 1 1
-D 0 2807 3 1
-D 0 2811 4 2
-D 0 2811 0 2
-D 0 2811 3 2
-D 0 2811 2 2
-D 0 2811 8 2
-D 0 2812 8 2
-D 0 2812 7 2
-D 0 2813 8 2
-D 0 2813 7 2
-D 0 2814 8 2
-D 0 2814 7 2
-D 0 2815 7 2
-D 0 2815 8 2
-D 0 2816 5 2
-D 0 2816 0 2
-D 0 2816 2 2
-D 0 2817 5 2
-D 0 2817 3 2
-D 0 2817 1 2
-D 0 2818 3 1
-D 0 2822 5 1
-D 0 2823 1 1
-D 0 2829 4 1
-D 0 2829 8 1
-D 0 2830 3 2
-D 0 2830 6 2
-D 0 2830 9 1
-D 0 2835 4 1
-D 0 2836 5 2
-D 0 2836 2 2
-D 0 2838 1 1
-D 0 2838 4 1
-D 0 2839 5 1
-D 0 2842 4 2
-D 0 2842 5 2
-D 0 2842 7 2
-D 0 2843 5 2
-D 0 2843 2 2
-D 0 2843 4 2
-D 0 2843 1 2
-D 0 2843 5 2
-D 0 2844 7 2
-D 0 2845 3 2
-D 0 2845 4 2
-*
-*Mobs e Objetos
-*
-R 0 2810 2800          remover bebedouro
-O 0 2800 1 2810        carregar bebedouro
-R 0 2816 2802          remover painel
-O 0 2802 1 2816        carregar painel
-R 0 2806 2801          remover musica
-O 0 2801 1 2806        carregar musica
-M 0 2800 1 2836        carregar Sulatnat
-R 0 2807 2813          remover carruagem
-O 0 2813 1 2807        carregar carruagem
-R 0 2844 2816          remover fonte
-O 0 2816 1 2844        carregar fonte
-M 0 2802 1 2845        carregar Horï¿½cio
-E 1 2831 1 17            bandeja de prata
-R 0 2817 2823          remover baï¿½ azul
-O 0 2823 1 2817        carregar baï¿½ azul
-P 1 2810 1 2823          carregar manto nupcial no baï¿½ azul
-P 1 2825 1 2823          carregar botas camurï¿½a no baï¿½ azul
-P 1 2826 1 2823          carregar coroa de louro no baï¿½ azul
-P 1 2827 1 2823          carregar corrente de louro no baï¿½ azul
-P 1 2829 1 2823          carregar camisa seda no baï¿½ azul
-P 1 2830 1 2823          carregar calï¿½a linho branco no baï¿½ azul
-P 1 1042 1000 2823       carregar alianca no baï¿½ azul
-P 1 1042 1000 2823       carregar alianca no baï¿½ azul
-P 1 1043 1000 2823       carregar espelho no baï¿½ azul
-R 0 2843 2824          remover baï¿½ rosa
-O 0 2824 1 2843          carregar baï¿½ rosa
-P 1 2804 1 2824          carregar vestido de noiva no baï¿½ rosa
-P 1 2806 1 2824          carregar vï¿½u de noiva no baï¿½ rosa
-P 1 2807 1 2824          carregar grinalda no baï¿½ rosa
-P 1 2808 1 2824          carregar bouquete no baï¿½ rosa
-P 1 2809 1 2824          carregar sapatos de cristal no baï¿½ rosa
-P 1 2828 1 2824          carregar colar de brilhantes no baï¿½ rosa
-P 1 2832 1 2824          carregar maquiagem no baï¿½ rosa
-P 1 1043 1000 2824       carregar espelho no baï¿½ rosa
-*
+2800 2899 30 1 abcdek 0 0 0 -1 -1
+D 0 2807 1 1 	(Em Frente À Grande Catedral de Luz)
+D 0 2807 3 1 	(Em Frente À Grande Catedral de Luz)
+D 0 2811 4 2 	(Diante do Altar-Mor)
+D 0 2811 0 2 	(Diante do Altar-Mor)
+D 0 2811 3 2 	(Diante do Altar-Mor)
+D 0 2811 2 2 	(Diante do Altar-Mor)
+D 0 2811 8 2 	(Diante do Altar-Mor)
+D 0 2812 8 2 	(As Cerimônias Sagradas)
+D 0 2812 7 2 	(As Cerimônias Sagradas)
+D 0 2813 8 2 	(As Cerimônias Sagradas)
+D 0 2813 7 2 	(As Cerimônias Sagradas)
+D 0 2814 8 2 	(As Cerimônias Sagradas)
+D 0 2814 7 2 	(As Cerimônias Sagradas)
+D 0 2815 7 2 	(As Cerimônias Sagradas)
+D 0 2815 8 2 	(As Cerimônias Sagradas)
+D 0 2816 5 2 	(A Sala das Divindades)
+D 0 2816 0 2 	(A Sala das Divindades)
+D 0 2816 2 2 	(A Sala das Divindades)
+D 0 2817 5 2 	(Os Preparativos do Noivo)
+D 0 2817 3 2 	(Os Preparativos do Noivo)
+D 0 2817 1 2 	(Os Preparativos do Noivo)
+D 0 2818 3 1 	(A Escadaria da Grande Torre Leste)
+D 0 2822 5 1 	(A Grande Torre Leste da Catedral)
+D 0 2823 1 1 	(A Escadaria da Grande Torre Oeste)
+D 0 2829 4 1 	(A Base Leste da Escadaria)
+D 0 2829 8 1 	(A Base Leste da Escadaria)
+D 0 2830 3 2 	(O Longo Corredor de Murais)
+D 0 2830 6 2 	(O Longo Corredor de Murais)
+D 0 2830 9 1 	(O Longo Corredor de Murais)
+D 0 2835 4 1 	(O Longo Corredor de Murais)
+D 0 2836 5 2 	(O Quarto Místico)
+D 0 2836 2 2 	(O Quarto Místico)
+D 0 2838 1 1 	(A Base Oeste da Escadaria)
+D 0 2838 4 1 	(A Base Oeste da Escadaria)
+D 0 2839 5 1 	(A Grande Torre Oeste da Catedral)
+D 0 2842 4 2 	(O Longo Corredor)
+D 0 2842 5 2 	(O Longo Corredor)
+D 0 2842 7 2 	(O Longo Corredor)
+D 0 2843 5 2 	(Os Preparativos da Noiva)
+D 0 2843 2 2 	(Os Preparativos da Noiva)
+D 0 2843 4 2 	(Os Preparativos da Noiva)
+D 0 2843 1 2 	(Os Preparativos da Noiva)
+D 0 2843 5 2 	(Os Preparativos da Noiva)
+D 0 2844 7 2 	(Os Jardins do Grande Salão de Cristal)
+D 0 2845 3 2 	(O Grande Salão de Cristal)
+D 0 2845 4 2 	(O Grande Salão de Cristal)
+R 0 2810 2800 -1 	(uma pï¿½rola gigante)
+O 0 2800 1 2810 	(uma pï¿½rola gigante)
+R 0 2816 2802 -1 	(o grande cristal mï¿½stico)
+O 0 2802 1 2816 	(o grande cristal mï¿½stico)
+R 0 2806 2801 -1 	(a mï¿½sica viva)
+O 0 2801 1 2806 	(a mï¿½sica viva)
+M 0 2800 1 2836 	(Sulatnat, o Sacerdote Profeta)
+R 0 2807 2813 -1 	(uma linda carruagem de cristal)
+O 0 2813 1 2807 	(uma linda carruagem de cristal)
+R 0 2844 2816 -1 	(uma belï¿½ssima fonte emitindo luz)
+O 0 2816 1 2844 	(uma belï¿½ssima fonte emitindo luz)
+M 0 2802 1 2845 	(HorÃ¡cio, o mordomo)
+E 1 2831 1 17 	(uma pesada bandeja de prata repleta de finas iguarias)
+R 0 2817 2823 -1 	(um baï¿½ de cristal &Cazul&n)
+O 0 2823 1 2817 	(um baï¿½ de cristal &Cazul&n)
+P 1 2810 1 2823 	(uma capa nupcial de veludo negro)
+P 1 2825 1 2823 	(um par de botas de camurï¿½a negra)
+P 1 2826 1 2823 	(uma coroa de louro feita de ouro)
+P 1 2827 1 2823 	(uma pesadï¿½ssima corrente de ouro)
+P 1 2829 1 2823 	(uma camisa de seda branca)
+P 1 2830 1 2823 	(uma elegante calï¿½a de linho branco)
+P 1 1042 1000 2823 	(uma linda alianÃ§a de casamento)
+P 1 1042 1000 2823 	(uma linda alianÃ§a de casamento)
+P 1 1043 1000 2823 	(um espelho de cristal)
+R 0 2843 2824 -1 	(um baï¿½ de cristal &Mrosa&n)
+O 0 2824 1 2843 	(um baï¿½ de cristal &Mrosa&n)
+P 1 2804 1 2824 	(um belï¿½ssimo vestido de noiva)
+P 1 2806 1 2824 	(um vï¿½u de noiva longuï¿½ssimo)
+P 1 2807 1 2824 	(a delicada grinalda de noiva)
+P 1 2808 1 2824 	(um perfumado bouquet de noiva)
+P 1 2809 1 2824 	(um par de sapatos de cristal)
+P 1 2828 1 2824 	(um colar de brilhantes e pï¿½rolas delicadï¿½ssimo)
+P 1 2832 1 2824 	(um delicado estojo de maquiagem)
+P 1 1043 1000 2824 	(um espelho de cristal)
 S
+$

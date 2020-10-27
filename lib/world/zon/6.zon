@@ -1,33 +1,30 @@
 #6
 Vitalia~
 A PrisÃ£o~
-600 699 60 2 abcd 0 0 0 -1 -1
--1
-*
-* Doors
-D 0 600 3 2	Main gate
-D 0 601 1 2
-D 0 604 0 2	Cell 632
-D 0 632 2 2
-D 0 604 2 2	Cell 633
-D 0 633 0 2
-D 0 605 0 2	Cell 634
-D 0 634 2 2
-D 0 605 2 2	Cell 635
-D 0 635 0 2
-D 0 606 0 2	Cell 636
-D 0 636 2 2
-D 0 606 2 2	Cell 637
-D 0 637 0 2
-D 0 607 0 2	Cell 638
-D 0 638 2 2
-D 0 607 2 2	Cell 639
-D 0 639 0 2
-D 0 608 0 2	Cell 640
-D 0 640 2 2
-D 0 608 2 2	Cell 641
-D 0 641 0 2
-D 0 608 3 2	Cell 642
-D 0 642 1 2
-*
+600 699 60 2 abcdk 0 0 0 -1 -1
+D 0 600 3 2 	(A Entrada Para a Prisão)
+D 0 601 1 2 	(Dentro da Prisão)
+D 0 604 0 2 	(O Corredor dos Calabouços)
+D 0 632 2 2 	(O Calabouço)
+D 0 604 2 2 	(O Corredor dos Calabouços)
+D 0 633 0 2 	(O Calabouço)
+D 0 605 0 2 	(O Corredor dos Calabouços)
+D 0 634 2 2 	(O Calabouço)
+D 0 605 2 2 	(O Corredor dos Calabouços)
+D 0 635 0 2 	(O Calabouço)
+D 0 606 0 2 	(O Corredor dos Calabouços)
+D 0 636 2 2 	(O Calabouço)
+D 0 606 2 2 	(O Corredor dos Calabouços)
+D 0 637 0 2 	(O Calabouço)
+D 0 607 0 2 	(O Corredor dos Calabouços)
+D 0 638 2 2 	(O Calabouço)
+D 0 607 2 2 	(O Corredor dos Calabouços)
+D 0 639 0 2 	(O Calabouço)
+D 0 608 0 2 	(O Corredor dos Calabouços)
+D 0 640 2 2 	(O Calabouço)
+D 0 608 2 2 	(O Corredor dos Calabouços)
+D 0 641 0 2 	(O Calabouço)
+D 0 608 3 2 	(O Corredor dos Calabouços)
+D 0 642 1 2 	(O Calabouço)
 S
+$

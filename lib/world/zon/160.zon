@@ -1,175 +1,157 @@
 #160
 Vitalia~
 Os Estrategistas de Vit√°lia~
-16000 16399 60 1 adef 0 0 0 -1 -1
--1
-*
-*Boards
-R 0 16394 16021 Quadro da Vitoria
-O 0 16021 1 16394
-*
-* Colocar objetos
-*
-O 0 16021 1 16394
-*
-* Colocar as fontes
-*
-R 0 16002 16026
-O 0 16026 4 16002
-*
-R 0 16227 16026
-O 0 16026 4 16227
-*
-R 0 16077 16026
-O 0 16026 4 16077
-*
-R 0 16152 16026
-O 0 16026 4 16152
-*
-* Colocar os mobs
-*
-M 0 16040 3 16364
-M 0 16040 3 16365
-M 0 16040 3 16366
-M 0 16000 1 16002
-M 0 16010 1 16227
-M 0 16020 1 16077
-M 0 16030 1 16152
-*
-* Ajustar as passagens
-*
-D 0 16002 2 2
-D 0 16003 0 2
-D 0 16012 1 1
-D 0 16031 4 1
-D 0 16032 5 1
-D 0 16033 4 1
-D 0 16034 5 1
-D 0 16046 5 1
-D 0 16047 0 1
-D 0 16048 0 1
-D 0 16049 4 1
-D 0 16050 2 1
-D 0 16052 1 1
-D 0 16053 0 1
-D 0 16054 0 1
-D 0 16055 3 1
-D 0 16055 0 1
-D 0 16055 2 1
-D 0 16056 2 1
-D 0 16056 0 1
-D 0 16057 2 1
-D 0 16058 2 1
-D 0 16059 1 1
-D 0 16060 2 1
-D 0 16065 2 1
-D 0 16069 2 1
-D 0 16073 0 1
-D 0 16074 3 1
-D 0 16077 0 2
-D 0 16078 2 2
-D 0 16087 3 1
-D 0 16106 4 1
-D 0 16107 5 1
-D 0 16108 4 1
-D 0 16109 5 1
-D 0 16121 5 1
-D 0 16122 0 1
-D 0 16123 0 1
-D 0 16124 4 1
-D 0 16125 0 1
-D 0 16127 3 1
-D 0 16128 2 1
-D 0 16129 2 1
-D 0 16130 1 1
-D 0 16130 0 1
-D 0 16130 2 1
-D 0 16131 0 1
-D 0 16131 2 1
-D 0 16132 0 1
-D 0 16133 0 1
-D 0 16134 3 1
-D 0 16135 2 1
-D 0 16140 2 1
-D 0 16144 2 1
-D 0 16148 0 1
-D 0 16149 1 1
-D 0 16152 1 2
-D 0 16153 3 2
-D 0 16162 0 1
-D 0 16181 4 1
-D 0 16182 5 1
-D 0 16183 4 1
-D 0 16184 5 1
-D 0 16196 5 1
-D 0 16197 1 1
-D 0 16198 1 1
-D 0 16199 4 1
-D 0 16200 1 1
-D 0 16202 0 1
-D 0 16203 3 1
-D 0 16204 3 1
-D 0 16205 1 1
-D 0 16205 3 1
-D 0 16205 2 1
-D 0 16206 1 1
-D 0 16206 3 1
-D 0 16207 1 1
-D 0 16208 1 1
-D 0 16209 0 1
-D 0 16210 3 1
-D 0 16215 3 1
-D 0 16219 3 1
-D 0 16223 1 1
-D 0 16224 2 1
-D 0 16227 3 2
-D 0 16228 1 2
-D 0 16237 2 1
-D 0 16256 4 1
-D 0 16257 5 1
-D 0 16258 4 1
-D 0 16259 5 1
-D 0 16271 5 1
-D 0 16272 1 1
-D 0 16273 1 1
-D 0 16274 4 1
-D 0 16275 3 1
-D 0 16277 2 1
-D 0 16278 1 1
-D 0 16279 1 1
-D 0 16280 0 1
-D 0 16280 1 1
-D 0 16280 3 1
-D 0 16281 1 1
-D 0 16281 3 1
-D 0 16282 3 1
-D 0 16283 3 1
-D 0 16284 2 1
-D 0 16285 3 1
-D 0 16290 3 1
-D 0 16294 3 1
-D 0 16298 1 1
-D 0 16299 0 1
-D 0 16370 4 1
-D 0 16371 4 1
-D 0 16371 5 1
-D 0 16372 5 1
-D 0 16376 4 1
-D 0 16377 4 1
-D 0 16377 5 1
-D 0 16378 5 1
-D 0 16382 4 1
-D 0 16383 4 1
-D 0 16383 5 1
-D 0 16384 5 1
-D 0 16388 4 1
-D 0 16389 4 1
-D 0 16389 5 1
-D 0 16390 5 1
-D 0 16393 0 2
-D 0 16393 1 2
-D 0 16393 2 2
-D 0 16393 3 2
-D 0 16394 0 2
+16000 16399 60 1 adefk 0 0 0 -1 -1
+R 0 16394 16021 -1 	(o painel das vitÛrias)
+O 0 16021 1 16394 	(o painel das vitÛrias)
+O 0 16021 1 16394 	(o painel das vitÛrias)
+R 0 16002 16026 -1 	(uma fonte de abastecimento)
+O 0 16026 4 16002 	(uma fonte de abastecimento)
+R 0 16227 16026 -1 	(uma fonte de abastecimento)
+O 0 16026 4 16227 	(uma fonte de abastecimento)
+R 0 16077 16026 -1 	(uma fonte de abastecimento)
+O 0 16026 4 16077 	(uma fonte de abastecimento)
+R 0 16152 16026 -1 	(uma fonte de abastecimento)
+O 0 16026 4 16152 	(uma fonte de abastecimento)
+M 0 16040 3 16364 	(o enorme crocodilo)
+M 0 16040 3 16365 	(o enorme crocodilo)
+M 0 16040 3 16366 	(o enorme crocodilo)
+M 0 16000 1 16002 	(o Marechal do Ex√©rcito verde)
+M 0 16010 1 16227 	(o Marechal do ex√©rcito azul)
+M 0 16020 1 16077 	(o Marechal do ex√©rcito vermelho )
+M 0 16030 1 16152 	(o Marechal do ex√©rcito amarelo)
+D 0 16002 2 2 	(O Imponente Port„o)
+D 0 16003 0 2 	(A Entrada do Castelo)
+D 0 16012 1 1 	(O Canto Sudeste do Castelo)
+D 0 16031 4 1 	(A Escadaria da Torre Leste)
+D 0 16032 5 1 	(O Topo da Torre Leste)
+D 0 16033 4 1 	(A Escadaria da Torre Oeste)
+D 0 16034 5 1 	(O Topo da Torre Oeste)
+D 0 16046 5 1 	(Acesso as Masmorras)
+D 0 16047 0 1 	(No Topo da Escadaria)
+D 0 16048 0 1 	(No Topo da Escadaria)
+D 0 16049 4 1 	(A Entrada das Masmorras)
+D 0 16050 2 1 	(Corredores das Masmorras)
+D 0 16052 1 1 	(Corredores das Masmorras)
+D 0 16053 0 1 	(Uma Cela)
+D 0 16054 0 1 	(Uma Cela)
+D 0 16055 3 1 	(Corredores das Masmorras)
+D 0 16055 0 1 	(Corredores das Masmorras)
+D 0 16055 2 1 	(Corredores das Masmorras)
+D 0 16056 2 1 	(Corredores das Masmorras)
+D 0 16056 0 1 	(Corredores das Masmorras)
+D 0 16057 2 1 	(Uma Cela)
+D 0 16058 2 1 	(Uma Cela)
+D 0 16059 1 1 	(Uma Cela)
+D 0 16060 2 1 	(Entrada do Segundo Andar)
+D 0 16065 2 1 	(Entrada do Segundo Andar)
+D 0 16069 2 1 	(Biblioteca do Castelo Verde)
+D 0 16073 0 1 	(A Passagem Secreta)
+D 0 16074 3 1 	(A Passagem Escondida)
+D 0 16077 0 2 	(O Imponente Port„o)
+D 0 16078 2 2 	(A Entrada do Castelo)
+D 0 16087 3 1 	(O Canto Noroeste do Castelo)
+D 0 16106 4 1 	(A Escadaria da Torre Oeste)
+D 0 16107 5 1 	(O Topo da Torre Oeste)
+D 0 16108 4 1 	(A Escadaria da Torre Leste)
+D 0 16109 5 1 	(O Topo da Torre Leste)
+D 0 16121 5 1 	(Acesso as Masmorras)
+D 0 16122 0 1 	(No Topo da Escadaria)
+D 0 16123 0 1 	(No Topo da Escadaria)
+D 0 16124 4 1 	(A Entrada das Masmorras)
+D 0 16125 0 1 	(Corredores das Masmorras)
+D 0 16127 3 1 	(Corredores das Masmorras)
+D 0 16128 2 1 	(Uma Cela)
+D 0 16129 2 1 	(Uma Cela)
+D 0 16130 1 1 	(Corredores das Masmorras)
+D 0 16130 0 1 	(Corredores das Masmorras)
+D 0 16130 2 1 	(Corredores das Masmorras)
+D 0 16131 0 1 	(Corredores das Masmorras)
+D 0 16131 2 1 	(Corredores das Masmorras)
+D 0 16132 0 1 	(Uma Cela)
+D 0 16133 0 1 	(Uma Cela)
+D 0 16134 3 1 	(Uma Cela)
+D 0 16135 2 1 	(Entrada do Segundo Andar)
+D 0 16140 2 1 	(Entrada do Segundo Andar)
+D 0 16144 2 1 	(Biblioteca do Castelo Vermelho)
+D 0 16148 0 1 	(A Passagem Secreta)
+D 0 16149 1 1 	(A Passagem Escondida)
+D 0 16152 1 2 	(O Imponente Port„o)
+D 0 16153 3 2 	(A Entrada do Castelo)
+D 0 16162 0 1 	(O Canto Nordeste do Castelo)
+D 0 16181 4 1 	(A Escadaria da Torre Norte)
+D 0 16182 5 1 	(O Topo da Torre Norte)
+D 0 16183 4 1 	(A Escadaria da Torre Sul)
+D 0 16184 5 1 	(O Topo da Torre Sul)
+D 0 16196 5 1 	(Acesso as Masmorras)
+D 0 16197 1 1 	(No Topo da Escadaria)
+D 0 16198 1 1 	(No Topo da Escadaria)
+D 0 16199 4 1 	(A Entrada das Masmorras)
+D 0 16200 1 1 	(Corredores das Masmorras)
+D 0 16202 0 1 	(Corredores das Masmorras)
+D 0 16203 3 1 	(Uma Cela)
+D 0 16204 3 1 	(Uma Cela)
+D 0 16205 1 1 	(Corredores das Masmorras)
+D 0 16205 3 1 	(Corredores das Masmorras)
+D 0 16205 2 1 	(Corredores das Masmorras)
+D 0 16206 1 1 	(Corredores das Masmorras)
+D 0 16206 3 1 	(Corredores das Masmorras)
+D 0 16207 1 1 	(Uma Cela)
+D 0 16208 1 1 	(Uma Cela)
+D 0 16209 0 1 	(Uma Cela)
+D 0 16210 3 1 	(Entrada do Segundo Andar)
+D 0 16215 3 1 	(Entrada do Segundo Andar)
+D 0 16219 3 1 	(Biblioteca do Castelo Amarelo)
+D 0 16223 1 1 	(A Passagem Secreta)
+D 0 16224 2 1 	(A Passagem Escondida)
+D 0 16227 3 2 	(O Imponente Port„o)
+D 0 16228 1 2 	(A Entrada do Castelo)
+D 0 16237 2 1 	(O Canto Sudoeste do Castelo)
+D 0 16256 4 1 	(A Escadaria da Torre Sul)
+D 0 16257 5 1 	(O Topo da Torre Sul)
+D 0 16258 4 1 	(A Escadaria da Torre Norte)
+D 0 16259 5 1 	(O Topo da Torre Norte)
+D 0 16271 5 1 	(Acesso as Masmorras)
+D 0 16272 1 1 	(No Topo da Escadaria)
+D 0 16273 1 1 	(No Topo da Escadaria)
+D 0 16274 4 1 	(A Entrada das Masmorras)
+D 0 16275 3 1 	(Corredores das Masmorras)
+D 0 16277 2 1 	(Corredores das Masmorras)
+D 0 16278 1 1 	(Uma Cela)
+D 0 16279 1 1 	(Uma Cela)
+D 0 16280 0 1 	(Corredores das Masmorras)
+D 0 16280 1 1 	(Corredores das Masmorras)
+D 0 16280 3 1 	(Corredores das Masmorras)
+D 0 16281 1 1 	(Corredores das Masmorras)
+D 0 16281 3 1 	(Corredores das Masmorras)
+D 0 16282 3 1 	(Uma Cela)
+D 0 16283 3 1 	(Uma Cela)
+D 0 16284 2 1 	(Uma Cela)
+D 0 16285 3 1 	(Entrada do Segundo Andar)
+D 0 16290 3 1 	(Entrada do Segundo Andar)
+D 0 16294 3 1 	(Biblioteca do Castelo Azul)
+D 0 16298 1 1 	(A Passagem Secreta)
+D 0 16299 0 1 	(A Passagem Escondida)
+D 0 16370 4 1 	(Torre de Vigil‚ncia)
+D 0 16371 4 1 	(Torre de Vigil‚ncia)
+D 0 16371 5 1 	(Torre de Vigil‚ncia)
+D 0 16372 5 1 	(Torre de Vigil‚ncia)
+D 0 16376 4 1 	(Torre de Vigil‚ncia)
+D 0 16377 4 1 	(Torre de Vigil‚ncia)
+D 0 16377 5 1 	(Torre de Vigil‚ncia)
+D 0 16378 5 1 	(Torre de Vigil‚ncia)
+D 0 16382 4 1 	(Torre de Vigil‚ncia)
+D 0 16383 4 1 	(Torre de Vigil‚ncia)
+D 0 16383 5 1 	(Torre de Vigil‚ncia)
+D 0 16384 5 1 	(Torre de Vigil‚ncia)
+D 0 16388 4 1 	(Torre de Vigil‚ncia)
+D 0 16389 4 1 	(Torre de Vigil‚ncia)
+D 0 16389 5 1 	(Torre de Vigil‚ncia)
+D 0 16390 5 1 	(Torre de Vigil‚ncia)
+D 0 16393 0 2 	(Os Quatro Destinos)
+D 0 16393 1 2 	(Os Quatro Destinos)
+D 0 16393 2 2 	(Os Quatro Destinos)
+D 0 16393 3 2 	(Os Quatro Destinos)
+D 0 16394 0 2 	(A Sala do Tesouro)
 S
 $

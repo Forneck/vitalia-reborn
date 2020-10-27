@@ -1,27 +1,22 @@
 #71
 Vitalia~
 O Segundo Esgoto~
-7100 7199 20 2 0 0 0 0 -1 -1
--1
-*
-* Mobiles
-M 0 7004 3 7102         O Besouro da Terra
-M 0 7005 7 7112         A Grande Larva
-M 0 7005 7 7112         A Grande Larva
-M 0 7005 7 7122         A Grande Larva
-M 0 7002 7 7104         O Rato de Esgoto
-M 0 7000 3 7103         O Horripilante Monstro Lama�ento
-M 0 7000 3 7103         O Horripilante Monstro Lama�ento
-M 0 7006 7 7113         A Cobra Escorregadia
-M 0 7006 7 7122         A Cobra Escorregadia
-M 0 7006 7 7122         A Cobra Escorregadia
-* Doors
-D 0 7106 5 1            O Abismo
-D 0 7111 5 1            O Abismo
-D 0 7121 5 1            O Abismo
-D 0 7279 4 1
-D 0 7116 5 1            Caminho Secreto para Baixo
-D 0 7280 4 1
-*
+7100 7199 20 2 k 0 0 0 -1 -1
+M 0 7004 3 7102 	(o gigante besouro terra)
+M 0 7005 7 7112 	(a larva)
+M 0 7005 7 7112 	(a larva)
+M 0 7005 7 7122 	(a larva)
+M 0 7002 7 7104 	(o rato de esgoto)
+M 0 7000 3 7103 	(o horripilante Monstro lamaçento)
+M 0 7000 3 7103 	(o horripilante Monstro lamaçento)
+M 0 7006 7 7113 	(a cobra)
+M 0 7006 7 7122 	(a cobra)
+M 0 7006 7 7122 	(a cobra)
+D 0 7106 5 1 	(O Canto Noroeste do Peitoril)
+D 0 7111 5 1 	(O Canto Sudoeste do Peitoril)
+D 0 7121 5 1 	(O Canto Sudeste do Peitoril)
+D 0 7279 4 1 	(As Paredes do Abismo)
+D 0 7116 5 1 	(O Canto Nordeste do Peitoril)
+D 0 7280 4 1 	(A Entrada)
 S
 $

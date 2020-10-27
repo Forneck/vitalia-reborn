@@ -1,76 +1,69 @@
 #50
 Vitalia~
 O Grande Deserto Oriental~
-5000 5099 30 2 0 0 0 -1 -1
-4
-*
-* Created by Rorschach of ?
-*
-* Mobiles
-M 0 5015 3 5039         Dustdigger
-M 0 5015 3 5033         Dustdigger
-M 0 5015 3 5049         Dustdigger
-M 0 5017 1 5058         Rabid Camel
-M 0 5000 5 5047         Dervish
-E 1 7211 100 16                 Short Sword
-M 0 5000 5 5033         Dervish
-E 1 7211 100 16                 Short Sword
-M 0 5001 8 5040         Large Dervish
-E 1 3022 100 16                 Long Sword
-M 0 5002 5 5031         Coral Snake
-M 0 5003 5 5050         Small Scorpion
-M 0 5004 1 5036         Purple Worm
-G 1 5019 10 -1               Pink Potion
-G 1 5020 5 -1                     Platinum Wand
-G 1 5021 1 -1                     Energy Bow
-M 0 5005 1 5065         Brass Dragon
-G 1 5024 2 -1                     Golden Key
-G 1 5022 10 -1                    Encrypted Scroll
-M 0 5006 1 5061         Nomad Leader
-E 1 5016 10 16                  Sabre
-M 0 5007 1 5060         Nomad Commander
-E 1 5017 15 16                  Scimitar
-M 0 5008 5 5059         Nomad Warrior
-E 1 5018 25 16                  Cutlass
-M 0 5009 10 5057        Slave
-M 0 5010 1 5011         Dracolich
-E 1 5001 16 5                   Banded Mail
-E 1 5002 16 16                  Halberd
-E 1 3858 7 17            Card dracol(3858) com dracolich(5010)
-M 0 5011 3 5009         Drider
-E 1 3022 50 16                  Long Sword
-M 0 5012 3 5014         Duergar
-E 1 5000 15 16                  Mining Pick
-M 0 5013 4 5021         Myconoid
-E 1 3837 7 17            Card Miconoide(3837) com Miconoide(5013)
-M 0 5014 1 5021         Myconoid Shaman
-E 1 5003 10 3                    Mushroom Amulet
-* Objects
-O 0 5005 1 5011         Bone
-R 0 5049 5006
-O 0 5006 6 5049         Cactus Cup
-R 0 5031 5006
-O 0 5006 6 5031         Cactus Cup
-R 0 5044 5006
-O 0 5006 6 5044         Cactus Cup
-O 0 5007 1 5060         Basket
-P 0 5012 1 5007                 Stakes
-P 0 5011 1 5007                 Coil Of Rope
-O 0 5008 1 5061         Basket
-P 1 5014 5 5008                 Turban
-O 0 5009 1 5061         Basket
-O 0 5010 1 5061         Basket
-P 1 5013 50 5010                Tattered Map
-O 0 5023 1 5070         Iron Chest
-P 1 5025 3 5023                 Bracelet
-P 1 5026 3 5023                 Ruby
-P 1 5027 3 5023                 Diamond
-P 1 5028 3 5023                 Sapphire
-P 1 5029 3 5023                 Lapis
-P 1 5030 1 5023                 Tiger Jewel
-P 1 5031 1 5023                 Red-Eyed Jewel
-P 1 5032 3 5023                 Emerald
-P 1 5015 1 5023                 Gold
-*
+5000 5099 30 2 k 0 0 0 -1 -1
+M 0 5015 3 5039 	(uma escavadeira empoeirada)
+M 0 5015 3 5033 	(uma escavadeira empoeirada)
+M 0 5015 3 5049 	(uma escavadeira empoeirada)
+M 0 5017 1 5058 	(o camelo selvagem)
+M 0 5000 5 5047 	(o dervixe esfarrapado)
+E 1 7211 100 16 	(uma espada pequena)
+M 0 5000 5 5033 	(o dervixe esfarrapado)
+E 1 7211 100 16 	(uma espada pequena)
+M 0 5001 8 5040 	(o dervixe)
+E 1 3022 100 16 	(uma espada longa)
+M 0 5002 5 5031 	(a cobra coral)
+M 0 5003 5 5050 	(o escorpião pequeno)
+M 0 5004 1 5036 	(o verme da areia)
+G 1 5019 10 -1 	(uma poção rosada)
+G 1 5020 5 -1 	(uma vara de platina)
+G 1 5021 1 -1 	(um arco dourado)
+M 0 5005 1 5065 	(o dragão de bronze)
+G 1 5024 2 -1 	(uma chave dourada)
+G 1 5022 10 -1 	(um pergaminho codificado)
+M 0 5006 1 5061 	(o líder nômade)
+E 1 5016 10 16 	(um sabre de lâmina longa e curva)
+M 0 5007 1 5060 	(o chefe nômade)
+E 1 5017 15 16 	(uma cimitarra curvada)
+M 0 5008 5 5059 	(o guerreiro  nômade)
+E 1 5018 25 16 	(um longo e pontiagudo cutelo)
+M 0 5009 10 5057 	(a escrava)
+M 0 5010 1 5011 	(o dracolich)
+E 1 5001 16 5 	(uma reluzente cota de malha)
+E 1 5002 16 16 	(uma alabarda)
+E 1 3858 7 17 	(o Card Dracolich)
+M 0 5011 3 5009 	(o drider)
+E 1 3022 50 16 	(uma espada longa)
+M 0 5012 3 5014 	(o sombrio anão)
+E 1 5000 15 16 	(uma picareta de minerador)
+M 0 5013 4 5021 	(o miconóide)
+E 1 3837 7 17 	(o Card Miconóides)
+M 0 5014 1 5021 	(o miconóide xamã)
+E 1 5003 10 3 	(um cogumelo amuleto)
+O 0 5005 1 5011 	(um grande osso de perna)
+R 0 5049 5006 -1 	(uma pequena xícara de cacto)
+O 0 5006 6 5049 	(uma pequena xícara de cacto)
+R 0 5031 5006 -1 	(uma pequena xícara de cacto)
+O 0 5006 6 5031 	(uma pequena xícara de cacto)
+R 0 5044 5006 -1 	(uma pequena xícara de cacto)
+O 0 5006 6 5044 	(uma pequena xícara de cacto)
+O 0 5007 1 5060 	(uma pequena cesta de vime)
+P 0 5012 1 5007 	(um pacote de estacas)
+P 0 5011 1 5007 	(um rolo de corda)
+O 0 5008 1 5061 	(uma pequena cesta de vime)
+P 1 5014 5 5008 	(um grosso turbante acolchoado)
+O 0 5009 1 5061 	(uma pequena cesta de vime)
+O 0 5010 1 5061 	(uma cesta pequena de vime)
+P 1 5013 50 5010 	(um mapa velho, despedaçado)
+O 0 5023 1 5070 	(um baú de ferro)
+P 1 5025 3 5023 	(uma pulseira de cobre)
+P 1 5026 3 5023 	(um grande rubi)
+P 1 5027 3 5023 	(um diamante resplandescente)
+P 1 5028 3 5023 	(uma safira deslumbrante)
+P 1 5029 3 5023 	(um lápis-lazuli azul escuro)
+P 1 5030 1 5023 	(a Jóia Olho-de-tigre)
+P 1 5031 1 5023 	(uma granada de vermelho intenso)
+P 1 5032 3 5023 	(uma esmeralda verde faiscante)
+P 1 5015 1 5023 	(uma grande pilha de moedas de ouro)
 S
 $

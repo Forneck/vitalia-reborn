@@ -1,116 +1,108 @@
 #51
 Vitalia~
 Cidade Drow~
-5100 5199 30 1 0 0 0 0 -1 -1
--1
-*
-* Created by Rorschach of ?
-*
-* Mobiles
-M 0 5100 15 5122        Goblin Slave         
-M 0 5100 15 5122        Goblin Slave         
-M 0 5100 15 5122        Goblin Slave         
-M 0 5100 15 5122        Goblin Slave         
-M 0 5100 15 5122        Goblin Slave         
-M 0 5100 15 5122        Goblin Slave         
-M 0 5100 15 5122        Goblin Slave         
-M 0 5100 15 5122        Goblin Slave         
-M 0 5101 10 5118        Drow Commoner
-E 1 5100 50 16                  Commoner's Longsword
-M 0 5101 10 5133        Drow Commoner   
-E 1 5100 50 16                  Commoner's Longsword
-M 0 5102 4 5104         Drow Warrior
-E 1 5101 12 16                  Noble's Longsword
-M 0 5102 4 5124         Drow Warrior
-E 1 5101 12 16                  Noble's Longsword
-M 0 5102 4 5108         Drow Warrior
-E 1 5101 12 16                  Noble's Longsword
-M 0 5102 4 5111         Drow Warrior
-E 1 5101 12 16                  Noble's Longsword
-M 0 5103 4 5104         Drow Mage
-E 1 5102 12 16                  Two-Headed Snake Whip
-M 0 5103 4 5124         Drow Mage
-E 1 5102 12 16                  Two-Headed Snake Whip
-M 0 5103 4 5108         Drow Mage
-E 1 5102 12 16                  Two-Headed Snake Whip
-M 0 5103 4 5111         Drow Mage
-E 1 5102 12 16                  Two-Headed Snake Whip
-M 0 5104 4 5104         Drow Priestess
-E 1 5103 12 16                  Three-Headed Snake Whip
-M 0 5104 4 5124         Drow Priestess
-E 1 5103 12 16                  Three-Headed Snake Whip
-M 0 5104 4 5108         Drow Priestess
-E 1 5103 12 16                  Three-Headed Snake Whip
-M 0 5104 4 5111         Drow Priestess
-E 1 5103 12 16                  Three-Headed Snake Whip
-M 0 5105 3 5118         Drow Master
-E 1 5105 5 16                   Black Longsword
-E 1 5110 5 17                   Silvery Blue Wand
-M 0 5105 3 5120         Drow Master
-E 1 5104 8 16                   Four-Headed Snake Whip
-E 1 5110 8 17                   Silvery Blue Wand
-M 0 5105 3 5116         Drow Master
-E 1 5104 8 16                   Four-Headed Snake Whip
-E 1 5110 8 17                   Silvery Blue Wand
-M 0 5106 2 5150         Drow Weapons Master
-E 1 5105 5 16                   Black Longsword
-E 1 5109 1 9                    Gauntlets
-M 0 5106 2 5101         Drow Weapons Master
-E 1 5105 5 16                   Black Longsword
-M 0 5107 3 5125         4th Matron Mother
-E 1 5106 8 16                   Five-Headed Snake Whip
-G 1 5114 8 -1                   Green Hat
-M 0 5107 3 5105         3rd Matron Mother
-E 1 5106 8 16                   Five-Headed Snake Whip
-E 1 5111 8 6                    Small Helmet
-M 0 5107 3 5109         2nd Matron Mother
-E 1 5106 8 16                   Five-Headed Snake Whip
-E 1 5108 8 10                   Iron Bracers
-M 0 5108 1 5113         1st Matron Mother
-E 1 5107 5 16                   Six-Headed Snake Whip
-E 1 5112 5 1                    Ruby Ring
-M 0 5109 6 5101         Drider
-M 0 5109 6 5106         Drider
-M 0 5109 6 5115         Drider
-M 0 5109 6 5121         Drider
-M 0 5110 2 5110         Drider
-M 0 5110 2 5110         Drider
-M 0 5111 1 5148         Yochlol
-E 1 5113 1 16                   Spider Dagger
-E 1 5115 2 17                   Adamantite Key
-* Objects
-O 1 5116 1 5149         Treasure
-* Doors
-D 0 5100 3 0            City Gates
-D 0 5101 1 0
-D 0 5104 2 1            3rd House Throne Room
-D 0 5105 0 1
-D 0 5108 3 1            2nd House Throne Room
-D 0 5109 1 1
-D 0 5110 3 1            1st House Main Gate
-D 0 5111 1 1
-D 0 5112 0 1            1st House Main Chamber
-D 0 5113 2 1
-D 0 5117 0 1            Temple Of Lloth
-D 0 5119 2 1
-D 0 5123 0 1            4th House Entrance
-D 0 5124 2 1
-D 0 5129 0 1            Weaponsmaster's Chamber
-D 0 5150 2 1
-D 0 5132 2 1            Warriors' Barracks
-D 0 5133 0 1
-D 0 5136 1 1            Mages' Barracks
-D 0 5137 3 1
-D 0 5138 3 1            Clerics' Barracks
-D 0 5139 1 1
-D 0 5140 0 1            Temple Main Chamber
-D 0 5141 2 1
-D 0 5142 1 1            Slave Cells
-D 0 5146 3 1
-D 0 5146 0 1            Slave Pen
-D 0 5147 2 1
-D 0 5148 3 2            Treasure Chamber
-D 0 5149 1 2
-*
+5100 5199 30 1 k 0 0 0 -1 -1
+M 0 5100 15 5122 	(o Goblin Escravo)
+M 0 5100 15 5122 	(o Goblin Escravo)
+M 0 5100 15 5122 	(o Goblin Escravo)
+M 0 5100 15 5122 	(o Goblin Escravo)
+M 0 5100 15 5122 	(o Goblin Escravo)
+M 0 5100 15 5122 	(o Goblin Escravo)
+M 0 5100 15 5122 	(o Goblin Escravo)
+M 0 5100 15 5122 	(o Goblin Escravo)
+M 0 5101 10 5118 	(o Cidadão Drow)
+E 1 5100 50 16 	(uma espada longa de um cidadão)
+M 0 5101 10 5133 	(o Cidadão Drow)
+E 1 5100 50 16 	(uma espada longa de um cidadão)
+M 0 5102 4 5104 	(o Guerreiro Drow)
+E 1 5101 12 16 	(uma espada longa de um nobre)
+M 0 5102 4 5124 	(o Guerreiro Drow)
+E 1 5101 12 16 	(uma espada longa de um nobre)
+M 0 5102 4 5108 	(o Guerreiro Drow)
+E 1 5101 12 16 	(uma espada longa de um nobre)
+M 0 5102 4 5111 	(o Guerreiro Drow)
+E 1 5101 12 16 	(uma espada longa de um nobre)
+M 0 5103 4 5104 	(o Mago Drow)
+E 1 5102 12 16 	(um chicote com duas cabeças de cobra)
+M 0 5103 4 5124 	(o Mago Drow)
+E 1 5102 12 16 	(um chicote com duas cabeças de cobra)
+M 0 5103 4 5108 	(o Mago Drow)
+E 1 5102 12 16 	(um chicote com duas cabeças de cobra)
+M 0 5103 4 5111 	(o Mago Drow)
+E 1 5102 12 16 	(um chicote com duas cabeças de cobra)
+M 0 5104 4 5104 	(a Sacerdotiza Drow)
+E 1 5103 12 16 	(um chicote com três cabeças de cobra)
+M 0 5104 4 5124 	(a Sacerdotiza Drow)
+E 1 5103 12 16 	(um chicote com três cabeças de cobra)
+M 0 5104 4 5108 	(a Sacerdotiza Drow)
+E 1 5103 12 16 	(um chicote com três cabeças de cobra)
+M 0 5104 4 5111 	(a Sacerdotiza Drow)
+E 1 5103 12 16 	(um chicote com três cabeças de cobra)
+M 0 5105 3 5118 	(o Mestre Drow)
+E 1 5105 5 16 	(uma longa espada negra)
+E 1 5110 5 17 	(uma vara azul prateada)
+M 0 5105 3 5120 	(o Mestre Drow)
+E 1 5104 8 16 	(um chicote com quatro cabeças de cobra)
+E 1 5110 8 17 	(uma vara azul prateada)
+M 0 5105 3 5116 	(o Mestre Drow)
+E 1 5104 8 16 	(um chicote com quatro cabeças de cobra)
+E 1 5110 8 17 	(uma vara azul prateada)
+M 0 5106 2 5150 	(o Mestre de Armas Drow)
+E 1 5105 5 16 	(uma longa espada negra)
+E 1 5109 1 9 	(um par de luvas)
+M 0 5106 2 5101 	(o Mestre de Armas Drow)
+E 1 5105 5 16 	(uma longa espada negra)
+M 0 5107 3 5125 	(a Matriarca)
+E 1 5106 8 16 	(um chicote com cinco cabeças de cobra)
+G 1 5114 8 -1 	(um pequeno e brilhante chapéu verde)
+M 0 5107 3 5105 	(a Matriarca)
+E 1 5106 8 16 	(um chicote com cinco cabeças de cobra)
+E 1 5111 8 6 	(um pequeno capacete)
+M 0 5107 3 5109 	(a Matriarca)
+E 1 5106 8 16 	(um chicote com cinco cabeças de cobra)
+E 1 5108 8 10 	(um par de protetores de braço)
+M 0 5108 1 5113 	(a Matriarca)
+E 1 5107 5 16 	(um chicote com seis cabeças de cobra)
+E 1 5112 5 1 	(um pequeno anel de rubi)
+M 0 5109 6 5101 	(o Drow-aranha)
+M 0 5109 6 5106 	(o Drow-aranha)
+M 0 5109 6 5115 	(o Drow-aranha)
+M 0 5109 6 5121 	(o Drow-aranha)
+M 0 5110 2 5110 	(o Drow-aranha)
+M 0 5110 2 5110 	(o Drow-aranha)
+M 0 5111 1 5148 	(Yochlol)
+E 1 5113 1 16 	(uma adaga em formato de aranha)
+E 1 5115 2 17 	(uma chave de adamantite)
+O 1 5116 1 5149 	(uma pilha de moedas de ouro)
+D 0 5100 3 0 	(A Entrada da Cidade)
+D 0 5101 1 0 	(Uma Rua da Cidade)
+D 0 5104 2 1 	(A Terceira Casa)
+D 0 5105 0 1 	(A Sala do Trono)
+D 0 5108 3 1 	(A Segunda Casa)
+D 0 5109 1 1 	(A Sala do Trono)
+D 0 5110 3 1 	(O Port�o Principal)
+D 0 5111 1 1 	(A Primeira Casa)
+D 0 5112 0 1 	(A Sala do Trono)
+D 0 5113 2 1 	(A C�mara Principal)
+D 0 5117 0 1 	(Uma Rua da Cidade)
+D 0 5119 2 1 	(A Entrada para o Templo de Lloth)
+D 0 5123 0 1 	(Uma Rua da Cidade)
+D 0 5124 2 1 	(A Quarta Casa)
+D 0 5129 0 1 	(Uma Sala Longa)
+D 0 5150 2 1 	(A C�mara do Mestre de Armas)
+D 0 5132 2 1 	(Uma Sala Longa)
+D 0 5133 0 1 	(O Quartel dos Guerreiros)
+D 0 5136 1 1 	(O Sal�o Principal)
+D 0 5137 3 1 	(O Quartel dos Magos)
+D 0 5138 3 1 	(O Sal�o Principal)
+D 0 5139 1 1 	(O Quartel dos Sacerdotes)
+D 0 5140 0 1 	(A Escada Principal)
+D 0 5141 2 1 	(A C�mara Principal)
+D 0 5142 1 1 	(O Lado Leste da C�mara Principal)
+D 0 5146 3 1 	(As Celas dos Escravos)
+D 0 5146 0 1 	(As Celas dos Escravos)
+D 0 5147 2 1 	(O Curral dos Escravos)
+D 0 5148 3 2 	(A Sacristia)
+D 0 5149 1 2 	(O Tesouro)
 S
 $

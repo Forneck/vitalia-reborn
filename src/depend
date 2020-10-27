@@ -91,9 +91,38 @@ dg_variables.o: dg_variables.c conf.h sysdep.h structs.h protocol.h \
 dg_wldcmd.o: dg_wldcmd.c conf.h sysdep.h structs.h protocol.h lists.h \
  screen.h dg_scripts.h utils.h comm.h interpreter.h handler.h db.h \
  constants.h genzon.h fight.h
+fann.o: fann.c include/fannconfig.h include/fann.h include/floatfann.h \
+ include/fann.h include/fann_error.h include/fann_activation.h \
+ include/fann_data.h include/fann_internal.h include/fann_train.h \
+ include/fann_cascade.h include/fann_io.h
+fann_cascade.o: fann_cascade.c include/fannconfig.h include/fann.h \
+ include/floatfann.h include/fann.h include/fann_error.h \
+ include/fann_activation.h include/fann_data.h include/fann_internal.h \
+ include/fann_train.h include/fann_cascade.h include/fann_io.h
+fann_error.o: fann_error.c include/fannconfig.h include/fann.h \
+ include/floatfann.h include/fann.h include/fann_error.h \
+ include/fann_activation.h include/fann_data.h include/fann_internal.h \
+ include/fann_train.h include/fann_cascade.h include/fann_io.h
+fann_io.o: fann_io.c include/fannconfig.h include/fann.h \
+ include/floatfann.h include/fann.h include/fann_error.h \
+ include/fann_activation.h include/fann_data.h include/fann_internal.h \
+ include/fann_train.h include/fann_cascade.h include/fann_io.h \
+ include/fann_data.h
+fann_train.o: fann_train.c include/fannconfig.h include/fann.h \
+ include/floatfann.h include/fann.h include/fann_error.h \
+ include/fann_activation.h include/fann_data.h include/fann_internal.h \
+ include/fann_train.h include/fann_cascade.h include/fann_io.h
+fann_train_data.o: fann_train_data.c include/fannconfig.h include/fann.h \
+ include/floatfann.h include/fann.h include/fann_error.h \
+ include/fann_activation.h include/fann_data.h include/fann_internal.h \
+ include/fann_train.h include/fann_cascade.h include/fann_io.h
 fight.o: fight.c conf.h sysdep.h structs.h protocol.h lists.h utils.h \
  comm.h handler.h interpreter.h db.h spells.h screen.h constants.h \
  dg_scripts.h act.h class.h fight.h shop.h quest.h spedit.h
+floatfann.o: floatfann.c include/fannconfig.h include/floatfann.h \
+ include/fann.h include/fann_error.h include/fann_activation.h \
+ include/fann_data.h include/fann_internal.h include/fann_train.h \
+ include/fann_cascade.h include/fann_io.h
 formula.o: formula.c conf.h sysdep.h structs.h protocol.h lists.h comm.h \
  utils.h spells.h oasis.h spedit.h db.h formula.h
 genmob.o: genmob.c conf.h sysdep.h structs.h protocol.h lists.h utils.h \
@@ -136,7 +165,10 @@ interpreter.o: interpreter.c conf.h sysdep.h structs.h protocol.h lists.h \
  utils.h comm.h interpreter.h db.h spells.h handler.h mail.h screen.h \
  genolc.h oasis.h improved-edit.h dg_scripts.h constants.h act.h ban.h \
  class.h graph.h hedit.h house.h config.h modify.h quest.h asciimap.h \
- prefedit.h ibt.h mud_event.h dg_event.h spedit.h
+ prefedit.h ibt.h mud_event.h dg_event.h spedit.h include/floatfann.h \
+ include/fann.h include/fann_error.h include/fann_activation.h \
+ include/fann_data.h include/fann_internal.h include/fann_train.h \
+ include/fann_cascade.h include/fann_io.h
 limits.o: limits.c conf.h sysdep.h structs.h protocol.h lists.h utils.h \
  spells.h comm.h db.h handler.h interpreter.h dg_scripts.h class.h \
  fight.h screen.h mud_event.h dg_event.h

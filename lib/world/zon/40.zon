@@ -1,96 +1,75 @@
 #40
 Vitalia~
 Moria~
-4000 4199 20 2 0 0 0 0 -1 -1
--1
-*
-*  Created for DikuMud
-*  Heavily rewritten descriptions for CircleMud by Furry
-*
-* Level 1
-*
-* Mobiles
-M 0 4000 1 4030         Large Snake
-G 1 4001 1 -1                    Goblin Corpse
-P 1 4002 1 4001                         500 Coins
-M 0 4001 2 4025         Green Snake
-M 0 4001 2 4015         Green Snake
-M 0 4002 3 4023         Centipede
-M 0 4002 3 4017         Centipede
-M 0 4002 3 4020         Centipede
-M 0 4003 6 4021         Kobold
-M 0 4003 6 4021         Kobold
-M 0 4003 6 4013         Kobold
-M 0 4003 6 4013         Kobold
-M 0 4003 6 4027         Kobold
-M 0 4003 6 4027         Kobold
-M 0 4004 3 4015         Orc
-M 0 4004 3 4028         Orc
-M 0 4004 3 4028         Orc
-M 0 4005 1 4022         Large Orc
-E 1 4000 5 1                    Yellow Green Ring
-*
-* Level 2
-*
-M 0 4050 1 4062         Warrior
-G 1 4051 3  -1                    Helmet
-M 0 4051 4 4070         Warrior
-M 0 4051 4 4050         Warrior
-M 0 4051 4 4073         Warrior
-M 0 4051 4 4055         Warrior
-M 0 4052 3 4056         Hobgoblin
-M 0 4052 3 4065         Hobgoblin
-E 1 3847 16 17           Card Hobgob(3847) com Hobgoblin(4052)
-M 0 4052 3 4059         Hobgoblin
-M 0 4053 2 4058         Snake
-M 0 4053 2 4068         Snake
-M 0 4054 3 4060         Centipede
-M 0 4054 3 4053         Centipede
-M 0 4054 3 4052         Centipede
-M 0 4055 2 4064         Hobgoblin
-G 1 4050 20 -1                    Purple Potion
-M 0 4055 2 4071         Hobgoblin
-G 1 4050 20   -1                  Purple Potion
-M 0 4056 2 4067         Orc
-M 0 4056 2 4057         Orc
-* Objects
-R 0 4068 4052
-O 0 4052 8 4068         Mushroom
-R 0 4069 4052
-O 0 4052 8 4069         Mushroom
-R 0 4070 4052
-O 0 4052 8 4070         Mushroom
-R 0 4071 4052
-O 0 4052 8 4071         Mushroom
-*
-* Level 3
-*
-* Mobiles
-M 0 4100 1 4114         Mage
-G 1 4102 2      -1                Scroll Of Identify
-M 0 4101 1 4122         Troll
-G 1 4100 2 -1                     Demon Blade
-M 0 4102 3 4111         Snake
-G 1 4103 10 -1                    Slime
-M 0 4102 3 4111         Snake
-G 1 4104 3 -1                     Poisoned slime
-M 0 4103 6 4103         Thief
-M 0 4103 2 4124         Thief
-E 1 4053 3 16                   Dirk
-M 0 4105 3 4108         Centipede
-M 0 4106 2 4113         Warrior
-G 1 4101 1 -1                     Swordsman's Gloves
-M 0 4107 1 4119         Kobold
-G 1 4104 10 -1                    Slime
-* Doors
-D 0 4119 3 1            Secret Passage
-D 0 4121 1 1
-*
-* North Of Mountain -- Wilderness
-*
-M 0 4057 2 4038         Lion
-M 0 4057 2 4041         Lion
-M 0 4058 1 4044         Hill Giant
-*
+4000 4199 20 2 k 0 0 0 -1 -1
+M 0 4000 1 4030 	(a serpente)
+G 1 4001 1 -1 	(um corpo de goblin)
+P 1 4002 1 4001 	(algumas moedas)
+M 0 4001 2 4025 	(uma serpente verde)
+M 0 4001 2 4015 	(uma serpente verde)
+M 0 4002 3 4023 	(a centopéia)
+M 0 4002 3 4017 	(a centopéia)
+M 0 4002 3 4020 	(a centopéia)
+M 0 4003 6 4021 	(o kobold)
+M 0 4003 6 4021 	(o kobold)
+M 0 4003 6 4013 	(o kobold)
+M 0 4003 6 4013 	(o kobold)
+M 0 4003 6 4027 	(o kobold)
+M 0 4003 6 4027 	(o kobold)
+M 0 4004 3 4015 	(o orc)
+M 0 4004 3 4028 	(o orc)
+M 0 4004 3 4028 	(o orc)
+M 0 4005 1 4022 	(um orc)
+E 1 4000 5 1 	(um anel amarelo e verde)
+M 0 4050 1 4062 	(o guerreiro)
+G 1 4051 3 -1 	(um elmo de metal)
+M 0 4051 4 4070 	(o guerreiro)
+M 0 4051 4 4050 	(o guerreiro)
+M 0 4051 4 4073 	(o guerreiro)
+M 0 4051 4 4055 	(o guerreiro)
+M 0 4052 3 4056 	(o hobgoblin)
+M 0 4052 3 4065 	(o hobgoblin)
+E 1 3847 16 17 	(o Card Hobgoblins)
+M 0 4052 3 4059 	(o hobgoblin)
+M 0 4053 2 4058 	(a serpente)
+M 0 4053 2 4068 	(a serpente)
+M 0 4054 3 4060 	(a centopéia)
+M 0 4054 3 4053 	(a centopéia)
+M 0 4054 3 4052 	(a centopéia)
+M 0 4055 2 4064 	(o hobgoblin)
+G 1 4050 20 -1 	(uma poção púrpura)
+M 0 4055 2 4071 	(o hobgoblin)
+G 1 4050 20 -1 	(uma poção púrpura)
+M 0 4056 2 4067 	(o orc)
+M 0 4056 2 4057 	(o orc)
+R 0 4068 4052 -1 	(um cogumelo)
+O 0 4052 8 4068 	(um cogumelo)
+R 0 4069 4052 -1 	(um cogumelo)
+O 0 4052 8 4069 	(um cogumelo)
+R 0 4070 4052 -1 	(um cogumelo)
+O 0 4052 8 4070 	(um cogumelo)
+R 0 4071 4052 -1 	(um cogumelo)
+O 0 4052 8 4071 	(um cogumelo)
+M 0 4100 1 4114 	(o mago)
+G 1 4102 2 -1 	(um pergaminho onde se lê 'ysafg')
+M 0 4101 1 4122 	(o troll)
+G 1 4100 2 -1 	(uma lâmina do demônio negro)
+M 0 4102 3 4111 	(a serpente)
+G 1 4103 10 -1 	(Um limo verde e mofado)
+M 0 4102 3 4111 	(a serpente)
+G 1 4104 3 -1 	(Um limo verde e mofado)
+M 0 4103 6 4103 	(o ladrão)
+M 0 4103 2 4124 	(o ladrão)
+E 1 4053 3 16 	(um punhal de ladrão)
+M 0 4105 3 4108 	(a centopéia)
+M 0 4106 2 4113 	(o guerreiro)
+G 1 4101 1 -1 	(Um par de luvas de espadachim)
+M 0 4107 1 4119 	(o kobold)
+G 1 4104 10 -1 	(Um limo verde e mofado)
+D 0 4119 3 1 	(A Caverna)
+D 0 4121 1 1 	(O T�nel Secreto)
+M 0 4057 2 4038 	(o leão da montanha)
+M 0 4057 2 4041 	(o leão da montanha)
+M 0 4058 1 4044 	(o gigante da colina)
 S
 $

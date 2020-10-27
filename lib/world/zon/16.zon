@@ -1,123 +1,122 @@
 #16
 Vitalia~
 A Vila dos Gnomos~
-1600 1699 60 1 0 0 0 0 -1 -1
--1
-M 0 1602 3 1603			; Mob: #1602 a gnome man => #1603 A Road in the Village
-E 1 1603 20 16 ; -- Equip: #1603 A gnarled staff (Wield)
-M 0 1602 3 1605			; Mob: #1602 a gnome man => #1605 A Road in the Village
-E 1 1603 20 16 ; -- Equip: #1603 A gnarled staff (Wield)
-M 0 1602 3 1606			; Mob: #1602 a gnome man => #1606 A Road in the Village
-E 1 1603 20 16 ; -- Equip: #1603 A gnarled staff (Wield)
-M 0 1600 3 1609			; Mob: #1600 a gnome child => #1609 A Small Gnome House
-G 1 1602 20 -1			; -- Give:  #1602 A toy boomerang
-M 0 1601 3 1609			; Mob: #1601 a gnome woman => #1609 A Small Gnome House
-E 1 3842 16 17                   Card Gnomo(3842) com Mulher Gnomo(1601)
-M 0 1600 3 1610			; Mob: #1600 a gnome child => #1610 A Small Gnome House
-G 1 1602 20 -1			; -- Give:  #1602 A toy boomerang
-M 0 1601 3 1610			; Mob: #1601 a gnome woman => #1610 A Small Gnome House
-M 0 1600 3 1611			; Mob: #1600 a gnome child => #1611 A Small Gnome House
-G 1 1602 20 -1			; -- Give:  #1602 A toy boomerang
-M 0 1601 3 1611			; Mob: #1601 a gnome woman => #1611 A Small Gnome House
-M 0 1603 3 1613			; Mob: #1603 a gnome scientist => #1613 A Small Gnome House
-G 1 1611 12 -1			; -- Give:  #1611 a wicker basket
-P 1 1613 12 1611			; Put: #1613 some grain => #1611 a wicker basket
-M 0 1603 3 1614			; Mob: #1603 a gnome scientist => #1614 A Gnome Shop
-G 1 1611 12 -1			; -- Give:  #1611 a wicker basket
-P 1 1612 12 1611			; Put: #1612 some peanuts => #1611 a wicker basket
-M 0 1603 3 1615			; Mob: #1603 a gnome scientist => #1615 A Gnome Shop
-G 1 1614 12 -1			; -- Give: #1614 a skiff
-M 0 1604 3 1619			; Mob: #1604 a gnome guard => #1619 A Small Hut
-E 1 1607 10 3 ; -- Equip: #1607 a bloody cloak (Neck-1)
-G 1 1600 3 -1			; -- Give:  #1600 a bloody key
-G 1 1606 10 -1			; -- Give:  #1606 a bloody potion
-M 0 1608 2 1622			; Mob: #1608 a field mouse => #1622 The Field of Mice's Dreams
-M 0 1608 2 1622			; Mob: #1608 a field mouse => #1622 The Field of Mice's Dreams
-M 0 1607 1 1624			; Mob: #1607 a small troll => #1624 Darker Cave
-M 0 1604 6 1627			; Mob: #1604 a gnome guard => #1627 The Iron Gateway
-E 1 1604 20 16 ; -- Equip: #1604 A gnome sword (Wield)
-M 0 1604 6 1630			; Mob: #1604 a gnome guard => #1630 The Barracks
-E 1 1604 20 16 ; -- Equip: #1604 A gnome sword (Wield)
-M 0 1604 6 1630			; Mob: #1604 a gnome guard => #1630 The Barracks
-E 1 1604 20 16 ; -- Equip: #1604 A gnome sword (Wield)
-M 0 1604 6 1634			; Mob: #1604 a gnome guard => #1634 The Mess Hall
-E 1 1604 12 16 ; -- Equip: #1604 A gnome sword (Wield)
-D 1 1636 1 2 ; Door: #1636 A Small Unused Room/East => closed and locked
-M 0 1609 3 1641			; Mob: #1609 a rat => #1641 Prison Cell
-E 1 1605 10 11 ; -- Equip: #1605 a studded shield (Shield)
-M 0 1610 3 1642			; Mob: #1610 a large rat => #1642 Prison Cell
-E 1 1603 12 16 ; -- Equip: #1603 A gnarled staff (Wield)
-M 0 1611 3 1643			; Mob: #1611 a giant rat => #1643 Prison Cell
-M 0 1612 1 1645			; Mob: #1612 the troll => #1645 End of the Dark Hallway
-G 1 1601 4 -1			; -- Give:  #1601 a dirty key
-D 1 1645 3 2 ; Door: #1645 End of the Dark Hallway/West => closed and locked
-D 1 1646 1 2 ; Door: #1646 A Ladder/East => closed and locked
-M 0 1613 10 1648			; Mob: #1613 a black bat => #1648 A Damp Hallway
-M 0 1614 10 1648			; Mob: #1614 the zombie gnome => #1648 A Damp Hallway
-M 0 1613 10 1650			; Mob: #1613 a black bat => #1650 A Damp Hallway
-M 0 1614 10 1650			; Mob: #1614 the zombie gnome => #1650 A Damp Hallway
-M 0 1613 10 1651			; Mob: #1613 a black bat => #1651 A Damp Hallway
-M 0 1614 10 1651			; Mob: #1614 the zombie gnome => #1651 A Damp Hallway
-M 0 1613 10 1653			; Mob: #1613 a black bat => #1653 A Damp Hallway
-M 0 1614 10 1653			; Mob: #1614 the zombie gnome => #1653 A Damp Hallway
-M 0 1613 10 1655			; Mob: #1613 a black bat => #1655 A Damp Hallway
-M 0 1614 10 1655			; Mob: #1614 the zombie gnome => #1655 A Damp Hallway
-M 0 1615 1 1656			; Mob: #1615 the fire bat => #1656 The End of the Hallway
-G 1 1605 18 -1			; -- Give:  #1605 a studded shield
-G 1 1612 20 -1			; -- Give:  #1612 some peanuts
-G 1 1616 3 -1		; -- Give:  #1616 a pile of coins
-O 1 1617 3 1657 ; Object: #1617 a pile of coins => #1657 The Altar
-O 1 1618 3 1657 ; Object: #1618 a pile of coins => #1657 The Altar
-M 0 1605 1 1658			; Mob: #1605 the chief gnome => #1658 The Chief's House
-E 1 1608 6 1 ; -- Equip: #1608 A bat ring (Finger-L)
-E 1 1609 12 3 ; -- Equip: #1609 A bead necklace (Neck-1)
-E 1 1610 5 16 ; -- Equip: #1610 An electrum sword (Wield)
-E 1 3826 1 17        Card Cint Outono(3826) com Chefe Gnomo(1605)
-M 0 1620 6 1663			; Mob: #1620 a hobgoblin miner => #1663 Mine Shaft
-M 0 1620 6 1665			; Mob: #1620 a hobgoblin miner => #1665 Mine Shaft
-M 0 1618 5 1669			; Mob: #1618 the hobgoblin bodyguard => #1669 The Throne Room
-E 1 1621 30 16 ; -- Equip: #1621 a large club (Wield)
-M 0 1618 5 1669			; Mob: #1618 the hobgoblin bodyguard => #1669 The Throne Room
-E 1 1621 30 16 ; -- Equip: #1621 a large club (Wield)
-M 0 1618 5 1669			; Mob: #1618 the hobgoblin bodyguard => #1669 The Throne Room
-E 1 1621 30 16 ; -- Equip: #1621 a large club (Wield)
-M 0 1618 5 1669			; Mob: #1618 the hobgoblin bodyguard => #1669 The Throne Room
-E 1 1621 30 16 ; -- Equip: #1621 a large club (Wield)
-M 0 1618 5 1669			; Mob: #1618 the hobgoblin bodyguard => #1669 The Throne Room
-E 1 1621 30 16 ; -- Equip: #1621 a large club (Wield)
-M 0 1619 1 1669			; Mob: #1619 the king of the hobgoblins => #1669 The Throne Room
-E 1 1620 5 5 ; -- Equip: #1620 heavy banded mail (Body)
-M 0 1621 1 1670			; Mob: #1621 the treasurer => #1670 The Treasury
-O 1 1616 10 1670 ; Object: #1616 a pile of coins => #1670 The Treasury
-O 1 1617 10 1670 ; Object: #1617 a pile of coins => #1670 The Treasury
-M 0 1617 30 1671			; Mob: #1617 the hobgoblin soldier => #1671 Guarded Room
-E 1 1621 40 16 ; -- Equip: #1621 a large club (Wield)
-M 0 1617 30 1671			; Mob: #1617 the hobgoblin soldier => #1671 Guarded Room
-E 1 1621 40 16 ; -- Equip: #1621 a large club (Wield)
-M 0 1617 30 1671			; Mob: #1617 the hobgoblin soldier => #1671 Guarded Room
-E 1 1621 40 16 ; -- Equip: #1621 a large club (Wield)
-M 0 1617 30 1671			; Mob: #1617 the hobgoblin soldier => #1671 Guarded Room
-E 1 1621 40 16 ; -- Equip: #1621 a large club (Wield)
-M 0 1617 30 1672			; Mob: #1617 the hobgoblin soldier => #1672 Guarded Room
-E 1 1621 40 16 ; -- Equip: #1621 a large club (Wield)
-M 0 1617 30 1672			; Mob: #1617 the hobgoblin soldier => #1672 Guarded Room
-E 1 1621 40 16 ; -- Equip: #1621 a large club (Wield)
-M 0 1617 30 1672			; Mob: #1617 the hobgoblin soldier => #1672 Guarded Room
-E 1 1621 40 16 ; -- Equip: #1621 a large club (Wield)
-M 0 1617 30 1672			; Mob: #1617 the hobgoblin soldier => #1672 Guarded Room
-E 1 1621 40 16 ; -- Equip: #1621 a large club (Wield)
-O 1 1621 40 1673 ; Object: #1621 a large club => #1673 Hobgoblin Armory
-M 0 1622 6 1677			; Mob: #1622 a gnome prisoner => #1677 A Jail Cell
-M 0 1622 6 1678			; Mob: #1622 a gnome prisoner => #1678 The Jail Cell
-M 0 1622 6 1679			; Mob: #1622 a gnome prisoner => #1679 The Jail Cell
-M 0 1623 6 1680			; Mob: #1623 a human prisoner => #1680 The Jail Cell
-M 0 1623 6 1681			; Mob: #1623 a human prisoner => #1681 The Jail Cell
-M 0 1617 20 1683			; Mob: #1617 the hobgoblin soldier => #1683 Hobgoblin Barracks
-M 0 1617 20 1683			; Mob: #1617 the hobgoblin soldier => #1683 Hobgoblin Barracks
-M 0 1617 20 1684			; Mob: #1617 the hobgoblin soldier => #1684 Hobgoblin Barracks
-M 0 1617 20 1684			; Mob: #1617 the hobgoblin soldier => #1684 Hobgoblin Barracks
-M 0 1626 1 1687			; Mob: #1626 the cook => #1687 The Kitchen
-M 0 1624 1 1689			; Mob: #1624 a hermit => #1689 Hermit's Lair
-M 0 1620 6 1690			; Mob: #1620 a hobgoblin miner => #1690 A Hole
+1600 1699 60 1 k 0 0 0 -1 -1
+M 0 1602 3 1603 	(Um homem gnomo)
+E 1 1603 20 16 	(Um cajado retorcido)
+M 0 1602 3 1605 	(Um homem gnomo)
+E 1 1603 20 16 	(Um cajado retorcido)
+M 0 1602 3 1606 	(Um homem gnomo)
+E 1 1603 20 16 	(Um cajado retorcido)
+M 0 1600 3 1609 	(uma criança gnomo)
+G 1 1602 20 -1 	(Um bumerangue de brinquedo)
+M 0 1601 3 1609 	(uma mulher gnomo)
+E 1 3842 16 17 	(o Card Gnomos)
+M 0 1600 3 1610 	(uma criança gnomo)
+G 1 1602 20 -1 	(Um bumerangue de brinquedo)
+M 0 1601 3 1610 	(uma mulher gnomo)
+M 0 1600 3 1611 	(uma criança gnomo)
+G 1 1602 20 -1 	(Um bumerangue de brinquedo)
+M 0 1601 3 1611 	(uma mulher gnomo)
+M 0 1603 3 1613 	(um gnomo cientista)
+G 1 1611 12 -1 	(uma cesta de vime)
+P 1 1613 12 1611 	(alguns grãos)
+M 0 1603 3 1614 	(um gnomo cientista)
+G 1 1611 12 -1 	(uma cesta de vime)
+P 1 1612 12 1611 	(alguns amendoins)
+M 0 1603 3 1615 	(um gnomo cientista)
+G 1 1614 12 -1 	(um esquife)
+M 0 1604 3 1619 	(um guarda gnomo)
+E 1 1607 10 3 	(um manto sangrento)
+G 1 1600 3 -1 	(uma chave ensanguentada)
+G 1 1606 10 -1 	(uma poção sangrenta)
+M 0 1608 2 1622 	(um rato de campo)
+M 0 1608 2 1622 	(um rato de campo)
+M 0 1607 1 1624 	(um pequeno troll)
+M 0 1604 6 1627 	(um guarda gnomo)
+E 1 1604 20 16 	(uma espada de gnomo)
+M 0 1604 6 1630 	(um guarda gnomo)
+E 1 1604 20 16 	(uma espada de gnomo)
+M 0 1604 6 1630 	(um guarda gnomo)
+E 1 1604 20 16 	(uma espada de gnomo)
+M 0 1604 6 1634 	(um guarda gnomo)
+E 1 1604 12 16 	(uma espada de gnomo)
+D 1 1636 1 2 	(Um Pequeno Quarto sem Uso)
+M 0 1609 3 1641 	(um rato)
+E 1 1605 10 11 	(um escudo cravejado de pregos)
+M 0 1610 3 1642 	(um rato grande)
+E 1 1603 12 16 	(Um cajado retorcido)
+M 0 1611 3 1643 	(um rato gigante)
+M 0 1612 1 1645 	(o troll)
+G 1 1601 4 -1 	(uma chave imunda)
+D 1 1645 3 2 	(Final do Corredor Escuro)
+D 1 1646 1 2 	(Uma Escada)
+M 0 1613 10 1648 	(morcego negro)
+M 0 1614 10 1648 	(o gnomo zumbi)
+M 0 1613 10 1650 	(morcego negro)
+M 0 1614 10 1650 	(o gnomo zumbi)
+M 0 1613 10 1651 	(morcego negro)
+M 0 1614 10 1651 	(o gnomo zumbi)
+M 0 1613 10 1653 	(morcego negro)
+M 0 1614 10 1653 	(o gnomo zumbi)
+M 0 1613 10 1655 	(morcego negro)
+M 0 1614 10 1655 	(o gnomo zumbi)
+M 0 1615 1 1656 	(o morcego de fogo)
+G 1 1605 18 -1 	(um escudo cravejado de pregos)
+G 1 1612 20 -1 	(alguns amendoins)
+G 1 1616 3 -1 	(uma pilha de moedas)
+O 1 1617 3 1657 	(uma pilha de moedas)
+O 1 1618 3 1657 	(uma pilha de moedas)
+M 0 1605 1 1658 	(o chefe gnomo)
+E 1 1608 6 1 	(Um anel de morcego)
+E 1 1609 12 3 	(Um colar de contas)
+E 1 1610 5 16 	(uma espada electrum)
+E 1 3826 1 17 	(o Card Cinturão do Outono)
+M 0 1620 6 1663 	(um hobgoblin mineiro)
+M 0 1620 6 1665 	(um hobgoblin mineiro)
+M 0 1618 5 1669 	(o guarda-costas hobgoblin)
+E 1 1621 30 16 	(uma clava grande)
+M 0 1618 5 1669 	(o guarda-costas hobgoblin)
+E 1 1621 30 16 	(uma clava grande)
+M 0 1618 5 1669 	(o guarda-costas hobgoblin)
+E 1 1621 30 16 	(uma clava grande)
+M 0 1618 5 1669 	(o guarda-costas hobgoblin)
+E 1 1621 30 16 	(uma clava grande)
+M 0 1618 5 1669 	(o guarda-costas hobgoblin)
+E 1 1621 30 16 	(uma clava grande)
+M 0 1619 1 1669 	(o rei dos hobgoblins)
+E 1 1620 5 5 	(uma pesada malha metálica)
+M 0 1621 1 1670 	(o tesoureiro)
+O 1 1616 10 1670 	(uma pilha de moedas)
+O 1 1617 10 1670 	(uma pilha de moedas)
+M 0 1617 30 1671 	(o soldado hobgoblin)
+E 1 1621 40 16 	(uma clava grande)
+M 0 1617 30 1671 	(o soldado hobgoblin)
+E 1 1621 40 16 	(uma clava grande)
+M 0 1617 30 1671 	(o soldado hobgoblin)
+E 1 1621 40 16 	(uma clava grande)
+M 0 1617 30 1671 	(o soldado hobgoblin)
+E 1 1621 40 16 	(uma clava grande)
+M 0 1617 30 1672 	(o soldado hobgoblin)
+E 1 1621 40 16 	(uma clava grande)
+M 0 1617 30 1672 	(o soldado hobgoblin)
+E 1 1621 40 16 	(uma clava grande)
+M 0 1617 30 1672 	(o soldado hobgoblin)
+E 1 1621 40 16 	(uma clava grande)
+M 0 1617 30 1672 	(o soldado hobgoblin)
+E 1 1621 40 16 	(uma clava grande)
+O 1 1621 40 1673 	(uma clava grande)
+M 0 1622 6 1677 	(um prisioneiro gnomo)
+M 0 1622 6 1678 	(um prisioneiro gnomo)
+M 0 1622 6 1679 	(um prisioneiro gnomo)
+M 0 1623 6 1680 	(um prisioneiro humano)
+M 0 1623 6 1681 	(um prisioneiro humano)
+M 0 1617 20 1683 	(o soldado hobgoblin)
+M 0 1617 20 1683 	(o soldado hobgoblin)
+M 0 1617 20 1684 	(o soldado hobgoblin)
+M 0 1617 20 1684 	(o soldado hobgoblin)
+M 0 1626 1 1687 	(o cozinheiro)
+M 0 1624 1 1689 	(um eremita)
+M 0 1620 6 1690 	(um hobgoblin mineiro)
 S
-$~
+$

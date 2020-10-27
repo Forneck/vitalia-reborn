@@ -1,48 +1,41 @@
 #12
-Vitalia
+Vitalia~
 O Reino dos Imortais~
-1200 1299 10 2 bd 0 0 0 -1 -1
--1
-*
-* Mobiles
-M 0 1201 1 1205     Carteiro Imortal
-M 0 1202 2 1201     Espirito vagueante
-M 0 1202 2 1204     Espirito vagueante
-* Boards
-R 0 1203 3099
-O 0 3099 10 1203    Mortal Bulletin Board
-R 0 1206 3096
-O 0 3096 10 1206    Social Bulletin Board
-R 0 1202 3097
-O 0 3097 1 1202     Frozen Bulletin Board
-R 0 1201 3098
-O 0 3098 1 1201     Immort Bulletin Board
-R 0 1207 1299
-O 0 1299 1 1207     Gods Bulletin Board
-R 0 1213 1298
-O 0 1298 1 1213     DemiGods Bulletin Board
-R 0 1221 1297
-O 0 1297 1 1221     GAIVI Bulletin Board
-R 0 189 1296
-O 0 1296 1 189	    Quadro da Sabedoria
-R 0 1216 1210
-O 0 1210 1 1216	    Quadro da Azul da Sala de Controle
-R 0 1217 1211
-O 0 1211 1 1217	    Quadro da Vermelho da Sala de Controle
-* Objects
-R 0 1222 1292
-O 0 1292 1 1222
-R 0 1222 1291
-O 0 1291 1 1222
-R 0 1222 1290
-O 0 1290 1 1222
-* Doors
-D 0 1204 2 1        Patio <-> Sala de reuniao
-D 0 1200 0 1
-D 0 1200 3 2        Sala de reuniao <-> Armario
-D 0 1208 1 2
-D 0 1206 3 2        Encontros <-> Correio
-D 0 1205 1 2
-*
+1200 1299 10 2 bdk 0 0 0 -1 -1
+M 0 1201 1 1205 	(a Carteira Imortal)
+M 0 1202 2 1201 	(o espírito vagueante)
+M 0 1202 2 1204 	(o espírito vagueante)
+R 0 1203 3099 -1 	(um quadro de mensagens)
+O 0 3099 10 1203 	(um quadro de mensagens)
+R 0 1206 3096 -1 	(um quadro de mensagens sociais)
+O 0 3096 10 1206 	(um quadro de mensagens sociais)
+R 0 1202 3097 -1 	(um quadro de mensagens congelado)
+O 0 3097 1 1202 	(um quadro de mensagens congelado)
+R 0 1201 3098 -1 	(um quadro sagrado de mensagens)
+O 0 3098 1 1201 	(um quadro sagrado de mensagens)
+R 0 1207 1299 -1 	(o quadro dos Deuses)
+O 0 1299 1 1207 	(o quadro dos Deuses)
+R 0 1213 1298 -1 	(o quadro dos Deuses)
+O 0 1298 1 1213 	(o quadro dos Deuses)
+R 0 1221 1297 -1 	(o quadro dos heróis)
+O 0 1297 1 1221 	(o quadro dos heróis)
+R 0 189 1296 -1 	(o quadro da sabedoria)
+O 0 1296 1 189 	(o quadro da sabedoria)
+R 0 1216 1210 -1 	(o quadro azul)
+O 0 1210 1 1216 	(o quadro azul)
+R 0 1217 1211 -1 	(o quadro vermelho)
+O 0 1211 1 1217 	(o quadro vermelho)
+R 0 1222 1292 -1 	(uma grande tábua)
+O 0 1292 1 1222 	(uma grande tábua)
+R 0 1222 1291 -1 	(uma grande tábua)
+O 0 1291 1 1222 	(uma grande tábua)
+R 0 1222 1290 -1 	(uma grande tábua)
+O 0 1290 1 1222 	(uma grande tábua)
+D 0 1204 2 1 	(O P�tio do Reino dos Imortais)
+D 0 1200 0 1 	(A Sala de Reuni�o dos Deuses)
+D 0 1200 3 2 	(A Sala de Reuni�o dos Deuses)
+D 0 1208 1 2 	(O Arm�rio dos Deuses)
+D 0 1206 3 2 	(A Sala de Encontros Sociais)
+D 0 1205 1 2 	(O Escrit�rio Postal dos Imortais)
 S
 $

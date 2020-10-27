@@ -1,97 +1,92 @@
 #115
 Vitalia~
 O SÃ©timo Mundo Oculto, Patala~
-11500 11599 160 1 a 0 0 0 -1 -1
--1
-*
-* Monstros (muralha)
-M 0 11500 4 11505      guarda naga
-E 1 11500 30 16               empunhar barchi
-E 1 11505 30 5                vestir couraï¿½a no corpo
-E 1 11506 30 11               usar escudo
-M 0 11500 4 11510      guarda naga
-E 1 11500 30 16               empunhar barchi
-E 1 11505 30 5                vestir couraï¿½a no corpo
-E 1 11506 30 11               usar escudo
-M 0 11500 4 11515      guarda naga
-E 1 11500 30 16               empunhar barchi
-E 1 11505 30 5                vestir couraï¿½a no corpo
-E 1 11506 30 11               usar escudo
-M 0 11500 4 11525      guarda naga
-E 1 11500 30 16               empunhar barchi
-E 1 11505 30 5                vestir couraï¿½a no corpo
-E 1 11506 30 11               usar escudo
-M 0 11501 1 11500      Khanti
-E 1 11502 20 19               usar brinco
-E 1 11503 15 5                vestir sari-armadura no corpo
-E 1 11504 15 16               empunhar khanda
-E 1 11507 1 17                segurar a primeira das chaves do Mundo Oculto
-E 1 11501 15 21               usar bindu
-E 1 11508 15 22               usar nath
-M 0 11502 3 11541      espinhal agressivo
-M 0 11502 3 11550      espinhal agressivo
-M 0 11502 3 11544      espinhal agressivo
-M 0 11503 2 11553      monstro de lama
-M 0 11503 2 11537      monstro de lama
-M 0 11504 1 11559      um Braï¿½o de Khura
-E 1 11509 3 17                segurar a segunda das chaves do Mundo Oculto
-M 0 11506 3 11565      o pequeno yaksha
-E 1 11512 30 16               empunhar gadba de madeira
-E 1 11514 30 5                pintar corpo com sangue
-M 0 11506 3 11591      o pequeno yaksha
-E 1 11512 30 16               empunhar gadba de madeira
-E 1 11514 30 5                pintar corpo com sangue
-M 0 11506 3 11596      o pequeno yaksha
-E 1 11512 30 16               empunhar gadba de madeira
-E 1 11514 30 5                pintar corpo com sangue
-M 0 11507 1 11599      o yaksha resmungï¿½o
-E 1 11513 30 16               empunhar mazhu de ferro
-E 1 11515 30 6                usar chifres de yaksha adulto
-M 0 11508 2 11584      um naga caï¿½ador
-E 1 11516 10 3                um medalhï¿½o de proteï¿½ï¿½o
-M 0 11508 2 11589      um naga caï¿½ador
-E 1 11517 10 16               uma lathi de ametista
-M 0 11509 1 11567      uma nagini rastreadora
-E 1 11518 10 16               um khatar de rastreador
-E 1 11519 10 22               um nath de prata
-M 0 11510 5 11577      uma coluna d'ï¿½gua
-M 0 11510 5 11569      uma coluna d'ï¿½gua
-M 0 11510 5 11590      uma coluna d'ï¿½gua
-M 0 11510 5 11571      uma coluna d'ï¿½gua
-M 0 11510 5 11580      uma coluna d'ï¿½gua
-M 0 11511 2 11566      uma nagini caï¿½adora
-E 1 11521 10 16               um arpï¿½o de prata
-M 0 11511 2 11581      uma nagini caï¿½adora
-E 1 11521 10 16               um arpï¿½o de prata
-O 0 11522 5 11572             esfera d'ï¿½gua
-O 0 11522 5 11576             esfera d'ï¿½gua
-O 0 11522 5 11568             esfera d'ï¿½gua
-O 0 11522 5 11585             esfera d'ï¿½gua
-O 0 11522 5 11579             esfera d'ï¿½gua
-M 0 11512 1 11555      geï¿½logo
-E 1 11525 15 16               martelo
-E 1 11526 10 12               bolsa
-P 1 11523 15 11526            formï¿½o
-P 1 11524 15 11526            formï¿½o
-P 1 11527 15 11526            pincel
-M 0 11513 1 11531      mineralogista
-E 1 11529 10 17               valise
-P 1 11528 10 11529            anotaï¿½ï¿½es
-P 1 19031 20 11529            luvas
-P 1 11534 20 11529            caixinha
-P 1 11530 10 11534            amostra
-P 1 11534 20 11529            caixinha
-P 1 11531 10 11534            amostra
-P 1 11534 20 11529            caixinha
-P 1 11532 10 11534            amostra
-P 1 11534 20 11529            caixinha
-P 1 11533 10 11534            amostra
-M 0 11514 1 11552      Vijay
-E 1 11535 10 16               lanï¿½a negra
-*
-* Portas
-D 0 11500 0 2               fechar portï¿½o de ferro
-D 0 11530 2 2               fechar portï¿½o de ferro
-D 0 11559 1 2               o muro de espinhos
+11500 11599 160 1 ak 0 0 0 -1 -1
+M 0 11500 4 11505 	(um Guarda Naga)
+E 1 11500 30 16 	(uma barchi)
+E 1 11505 30 5 	(uma couraça da guarda naga)
+E 1 11506 30 11 	(um escudo da guarda naga)
+M 0 11500 4 11510 	(um Guarda Naga)
+E 1 11500 30 16 	(uma barchi)
+E 1 11505 30 5 	(uma couraça da guarda naga)
+E 1 11506 30 11 	(um escudo da guarda naga)
+M 0 11500 4 11515 	(um Guarda Naga)
+E 1 11500 30 16 	(uma barchi)
+E 1 11505 30 5 	(uma couraça da guarda naga)
+E 1 11506 30 11 	(um escudo da guarda naga)
+M 0 11500 4 11525 	(um Guarda Naga)
+E 1 11500 30 16 	(uma barchi)
+E 1 11505 30 5 	(uma couraça da guarda naga)
+E 1 11506 30 11 	(um escudo da guarda naga)
+M 0 11501 1 11500 	(Khanti, a nagini GuardiÃ£)
+E 1 11502 20 19 	(um brinco de ouro)
+E 1 11503 15 5 	(um sari-armadura vermelho)
+E 1 11504 15 16 	(o khanda da guardiã)
+E 1 11507 1 17 	(a chave do portão externo)
+E 1 11501 15 21 	(um bindi de ouro)
+E 1 11508 15 22 	(um nath de ouro)
+M 0 11502 3 11541 	(o espinhal agressivo)
+M 0 11502 3 11550 	(o espinhal agressivo)
+M 0 11502 3 11544 	(o espinhal agressivo)
+M 0 11503 2 11553 	(o monstro de lama)
+M 0 11503 2 11537 	(o monstro de lama)
+M 0 11504 1 11559 	(um BraÃ§o de Khura)
+E 1 11509 3 17 	(um estranho espinho)
+M 0 11506 3 11565 	(o pequeno rakshasa)
+E 1 11512 30 16 	(uma gadba de madeira)
+E 1 11514 30 5 	(pinturas feitas com sangue fresco)
+M 0 11506 3 11591 	(o pequeno rakshasa)
+E 1 11512 30 16 	(uma gadba de madeira)
+E 1 11514 30 5 	(pinturas feitas com sangue fresco)
+M 0 11506 3 11596 	(o pequeno rakshasa)
+E 1 11512 30 16 	(uma gadba de madeira)
+E 1 11514 30 5 	(pinturas feitas com sangue fresco)
+M 0 11507 1 11599 	(o rakshasa resmungÃ£o)
+E 1 11513 30 16 	(um mazhu de ferro)
+E 1 11515 30 6 	(os chifres de um rakshasa adulto)
+M 0 11508 2 11584 	(um naga caÃ§ador)
+E 1 11516 10 3 	(um medalhão de proteção)
+M 0 11508 2 11589 	(um naga caÃ§ador)
+E 1 11517 10 16 	(uma lathi de ametista)
+M 0 11509 1 11567 	(uma nagini rastreadora)
+E 1 11518 10 16 	(um khatar de rastreador)
+E 1 11519 10 22 	(um nath de prata)
+M 0 11510 5 11577 	(uma coluna de Ã¡gua)
+M 0 11510 5 11569 	(uma coluna de Ã¡gua)
+M 0 11510 5 11590 	(uma coluna de Ã¡gua)
+M 0 11510 5 11571 	(uma coluna de Ã¡gua)
+M 0 11510 5 11580 	(uma coluna de Ã¡gua)
+M 0 11511 2 11566 	(uma nagini caÃ§adora)
+E 1 11521 10 16 	(um arpão de prata)
+M 0 11511 2 11581 	(uma nagini caÃ§adora)
+E 1 11521 10 16 	(um arpão de prata)
+O 0 11522 5 11572 	(a esfera d'água)
+O 0 11522 5 11576 	(a esfera d'água)
+O 0 11522 5 11568 	(a esfera d'água)
+O 0 11522 5 11585 	(a esfera d'água)
+O 0 11522 5 11579 	(a esfera d'água)
+M 0 11512 1 11555 	(um naga geÃ³logo)
+E 1 11525 15 16 	(um martelo de geólogo)
+E 1 11526 10 12 	(uma bolsa repleta de compartimentos)
+P 1 11523 15 11526 	(um formão de ponta fina)
+P 1 11524 15 11526 	(um formão de ponta larga)
+P 1 11527 15 11526 	(um pincel de limpeza)
+M 0 11513 1 11531 	(uma nagini mineralogista)
+E 1 11529 10 17 	(uma valise)
+P 1 11528 10 11529 	(um caderno de anotações)
+P 1 19031 20 11529 	(um par de luvas de algodão)
+P 1 11534 20 11529 	(uma caixinha de papel)
+P 1 11530 10 11534 	(uma amostra de berilo verde)
+P 1 11534 20 11529 	(uma caixinha de papel)
+P 1 11531 10 11534 	(uma amostra de diamante bruto)
+P 1 11534 20 11529 	(uma caixinha de papel)
+P 1 11532 10 11534 	(uma amostra de corindo vermelho)
+P 1 11534 20 11529 	(uma caixinha de papel)
+P 1 11533 10 11534 	(uma amostra de corindo azul)
+M 0 11514 1 11552 	(Vijay, o naga do pÃ¢ntano)
+E 1 11535 10 16 	(a negra lança de Vijay)
+D 0 11500 0 2 	(O Portão Externo Para Patala)
+D 0 11530 2 2 	(No Reino Oculto)
+D 0 11559 1 2 	(O Ataque de Khura)
 S
 $

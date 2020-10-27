@@ -1,176 +1,175 @@
 #170
 Vitalia~
 O Canyon dos Elementais~
-17000 17099 240 1 ae 0 0 0 -1 -1
--1
-M 0 17001 3 17001
-M 0 17001 3 17002
-M 0 17001 3 17003
-M 0 17038 1 17003
-G 1 17031 6
-M 0 17002 2 17004
-E 1 17013 8 10
-E 1 17014 8 7
-M 0 17004 1 17009
-E 1 17011 6 3
-E 1 17012 6 14
-M 0 17008 1 17027
-E 1 17001 5 1
-E 1 17002 5 5
-M 0 17009 1 17045
-E 1 17003 5 16
-E 1 17004 5 12
-M 0 17010 1 17060
-E 1 17005 5 8
-E 1 17006 5 6
-M 0 17011 1 17052
-E 1 17007 5 16
-E 1 17008 5 11
-M 0 17012 1 17036
-E 1 17009 5 13
-E 1 17010 5 12
-M 0 17003 15 17008
-M 0 17003 15 17010
-M 0 17003 15 17017
-M 0 17003 15 17019
-E 1 17025 8 17
-M 0 17003 15 17015
-M 0 17003 15 17015
-M 0 17003 15 17018
-M 0 17005 15 17018
-M 0 17005 12 17007
-M 0 17005 12 17050
-M 0 17005 12 17009
-M 0 17005 12 17034
-M 0 17005 12 17022
-E 1 17024 10 17
-M 0 17006 9 17046
-M 0 17006 9 17012
-E 1 17021 8 17
-M 0 17006 9 17054
-M 0 17006 9 17025
-E 1 17019 7 17
-M 0 17007 6 17018
-M 0 17007 6 17060
-E 1 17020 12 16
-M 0 17007 6 17042
-M 0 17007 6 17009
-M 0 17007 6 17018
-E 1 17023 7 17
-M 0 17026 1 17038
-E 1 17026 8 16
-M 0 17027 1 17038
-E 1 17030 7 16
-M 0 17028 1 17042
-E 1 17027 10 16
-M 0 17029 1 17042
-E 1 17028 10 16
-M 0 17030 1 17042
-E 1 17029 7 16
-M 0 17031 5 17016
-E 1 17015 5 17
-M 0 17031 5 17011
-E 1 17015 10 17
-M 0 17032 8 17009
-E 1 17020 12 16
-M 0 17032 8 17008
-M 0 17033 8 17053
-M 0 17033 7 17018
-M 0 17033 7 17055
-M 0 17034 6 17030
-E 1 17018 10 17
-M 0 17034 6 17038
-E 1 17017 10 17
-M 0 17035 2 17049
-M 0 17035 2 17057
-E 1 17016 10 17
-M 0 17036 15 17002
-M 0 17036 15 17007
-M 0 17036 15 17037
-M 0 17036 15 17020
-M 0 17036 15 17028
-M 0 17036 15 17046
-M 0 17036 15 17055
-M 0 17014 15 17033
-E 1 17016 5 17
-M 0 17014 15 17034
-M 0 17014 15 17035
-E 1 17024 10 17
-M 0 17014 15 17030
-M 0 17014 15 17031
-M 0 17014 15 17032
-M 0 17014 15 17036
-M 0 17014 15 17036
-M 0 17015 15 17042
-M 0 17015 15 17045
-E 1 17015 5 17
-M 0 17015 15 17042
-E 1 17015 5 17
-M 0 17015 15 17042
-M 0 17015 15 17045
-M 0 17015 15 17045
-M 0 17017 15 17021
-M 0 17017 15 17022
-M 0 17017 15 17023
-E 1 17017 5 17
-M 0 17017 15 17024
-M 0 17017 15 17025
-M 0 17017 15 17027
-E 1 17020 12 16
-M 0 17017 15 17027
-M 0 17017 15 17026
-M 0 17018 15 17047
-M 0 17018 15 17048
-M 0 17018 15 17049
-M 0 17018 15 17050
-E 1 17019 6 17
-M 0 17018 15 17051
-M 0 17018 15 17052
-E 1 17018 6 17
-M 0 17018 15 17052
-M 0 17018 15 17046
-M 0 17025 15 17055
-E 1 17018 6 17
-M 0 17025 15 17056
-M 0 17025 15 17057
-M 0 17025 15 17058
-M 0 17025 15 17059
-M 0 17025 15 17060
-M 0 17025 15 17060
-M 0 17025 15 17055
-E 1 17025 8 17
-M 0 17019 8 17028
-M 0 17019 8 17029
-M 0 17019 8 17038
-M 0 17019 8 17046
-M 0 17016 5 17032
-M 0 17016 5 17032
-M 0 17016 5 17012
-M 0 17016 5 17025
-M 0 17020 8 17038
-M 0 17020 8 17042
-M 0 17020 8 17020
-E 1 17022 10 17
-M 0 17020 8 17021
-M 0 17021 8 17022
-M 0 17021 8 17022
-M 0 17021 8 17031
-M 0 17021 8 17031
-M 0 17022 8 17032
-M 0 17022 8 17013
-M 0 17022 8 17055
-M 0 17022 8 17054
-M 0 17023 8 17048
-M 0 17023 8 17053
-M 0 17023 8 17021
-M 0 17023 8 17010
-E 1 17021 10 17
-M 0 17024 8 17027
-M 0 17024 8 17022
-E 1 17025 10 5
-M 0 17024 8 17059
-M 0 17024 8 17057
-M 0 17037 10 17007
-M 0 17037 10 17007
+17000 17099 240 1 aek 0 0 0 -1 -1
+M 0 17001 3 17001 	(um alpinista)
+M 0 17001 3 17002 	(um alpinista)
+M 0 17001 3 17003 	(um alpinista)
+M 0 17038 1 17003 	(o vendedor de elixir)
+G 1 17031 6 -1 	(o elixir anti-ciclope)
+M 0 17002 2 17004 	(o cíclope)
+E 1 17013 8 10 	(um par de bra�adeiras de platina)
+E 1 17014 8 7 	(um par de perneiras de platina)
+M 0 17004 1 17009 	(o elemental guardião)
+E 1 17011 6 3 	(um amuleto elemental)
+E 1 17012 6 14 	(um bracelete elemental)
+M 0 17008 1 17027 	(o líder dos elementais de Terra)
+E 1 17001 5 1 	(o anel da terra)
+E 1 17002 5 5 	(um peitoral de pedra)
+M 0 17009 1 17045 	(o líder dos elementais de Fogo)
+E 1 17003 5 16 	(uma adaga flamejante)
+E 1 17004 5 12 	(uma capa de chamas)
+M 0 17010 1 17060 	(o líder dos elementais de Ar)
+E 1 17005 5 8 	(as botas do vento)
+E 1 17006 5 6 	(o capacete furac�o)
+M 0 17011 1 17052 	(o líder dos elementais do Trovão)
+E 1 17007 5 16 	(a reluzente espada trov�o)
+E 1 17008 5 11 	(um escudo el�trico)
+M 0 17012 1 17036 	(o líder dos elementais de Água)
+E 1 17009 5 13 	(um cintur�o de gelo)
+E 1 17010 5 12 	(o manto dos mares)
+M 0 17003 15 17008 	(um pequeno elemental)
+M 0 17003 15 17010 	(um pequeno elemental)
+M 0 17003 15 17017 	(um pequeno elemental)
+M 0 17003 15 17019 	(um pequeno elemental)
+E 1 17025 8 17 	(um pouco de p� m�gico)
+M 0 17003 15 17015 	(um pequeno elemental)
+M 0 17003 15 17015 	(um pequeno elemental)
+M 0 17003 15 17018 	(um pequeno elemental)
+M 0 17005 15 17018 	(um pequeno elemental)
+M 0 17005 12 17007 	(um pequeno elemental)
+M 0 17005 12 17050 	(um pequeno elemental)
+M 0 17005 12 17009 	(um pequeno elemental)
+M 0 17005 12 17034 	(um pequeno elemental)
+M 0 17005 12 17022 	(um pequeno elemental)
+E 1 17024 10 17 	(um jarro de �gua)
+M 0 17006 9 17046 	(um elemental)
+M 0 17006 9 17012 	(um elemental)
+E 1 17021 8 17 	(uma magnetita)
+M 0 17006 9 17054 	(um elemental)
+M 0 17006 9 17025 	(um elemental)
+E 1 17019 7 17 	(a vara elemental do trov�o)
+M 0 17007 6 17018 	(um grande elemental)
+M 0 17007 6 17060 	(um grande elemental)
+E 1 17020 12 16 	(uma clava de pedra)
+M 0 17007 6 17042 	(um grande elemental)
+M 0 17007 6 17009 	(um grande elemental)
+M 0 17007 6 17018 	(um grande elemental)
+E 1 17023 7 17 	(um pergaminho de energia)
+M 0 17026 1 17038 	(uma chama azul)
+E 1 17026 8 16 	(uma lan�a de fogo)
+M 0 17027 1 17038 	(o magneto)
+E 1 17030 7 16 	(o chicote trov�o)
+M 0 17028 1 17042 	(um humanóide de cristal)
+E 1 17027 10 16 	(uma fria adaga)
+M 0 17029 1 17042 	(um monstro de rochas)
+E 1 17028 10 16 	(uma rocha glacial)
+M 0 17030 1 17042 	(um furacão)
+E 1 17029 7 16 	(uma foice)
+M 0 17031 5 17016 	(um mago elemental)
+E 1 17015 5 17 	(a vara elemental do fogo)
+M 0 17031 5 17011 	(um mago elemental)
+E 1 17015 10 17 	(a vara elemental do fogo)
+M 0 17032 8 17009 	(o guerreiro do alvorecer)
+E 1 17020 12 16 	(uma clava de pedra)
+M 0 17032 8 17008 	(o guerreiro do alvorecer)
+M 0 17033 8 17053 	(um ilusionista)
+M 0 17033 7 17018 	(um ilusionista)
+M 0 17033 7 17055 	(um ilusionista)
+M 0 17034 6 17030 	(um alquimista)
+E 1 17018 10 17 	(a vara elemental do ar)
+M 0 17034 6 17038 	(um alquimista)
+E 1 17017 10 17 	(a vara elemental da terra)
+M 0 17035 2 17049 	(um bebê dragão multicolorido)
+M 0 17035 2 17057 	(um bebê dragão multicolorido)
+E 1 17016 10 17 	(a vara elemental do gelo)
+M 0 17036 15 17002 	(um pequeno escravo)
+M 0 17036 15 17007 	(um pequeno escravo)
+M 0 17036 15 17037 	(um pequeno escravo)
+M 0 17036 15 17020 	(um pequeno escravo)
+M 0 17036 15 17028 	(um pequeno escravo)
+M 0 17036 15 17046 	(um pequeno escravo)
+M 0 17036 15 17055 	(um pequeno escravo)
+M 0 17014 15 17033 	(uma poça)
+E 1 17016 5 17 	(a vara elemental do gelo)
+M 0 17014 15 17034 	(uma poça)
+M 0 17014 15 17035 	(uma poça)
+E 1 17024 10 17 	(um jarro de �gua)
+M 0 17014 15 17030 	(uma poça)
+M 0 17014 15 17031 	(uma poça)
+M 0 17014 15 17032 	(uma poça)
+M 0 17014 15 17036 	(uma poça)
+M 0 17014 15 17036 	(uma poça)
+M 0 17015 15 17042 	(uma chama)
+M 0 17015 15 17045 	(uma chama)
+E 1 17015 5 17 	(a vara elemental do fogo)
+M 0 17015 15 17042 	(uma chama)
+E 1 17015 5 17 	(a vara elemental do fogo)
+M 0 17015 15 17042 	(uma chama)
+M 0 17015 15 17045 	(uma chama)
+M 0 17015 15 17045 	(uma chama)
+M 0 17017 15 17021 	(um pequeno humanóide de rochas)
+M 0 17017 15 17022 	(um pequeno humanóide de rochas)
+M 0 17017 15 17023 	(um pequeno humanóide de rochas)
+E 1 17017 5 17 	(a vara elemental da terra)
+M 0 17017 15 17024 	(um pequeno humanóide de rochas)
+M 0 17017 15 17025 	(um pequeno humanóide de rochas)
+M 0 17017 15 17027 	(um pequeno humanóide de rochas)
+E 1 17020 12 16 	(uma clava de pedra)
+M 0 17017 15 17027 	(um pequeno humanóide de rochas)
+M 0 17017 15 17026 	(um pequeno humanóide de rochas)
+M 0 17018 15 17047 	(um humanóide elétrico)
+M 0 17018 15 17048 	(um humanóide elétrico)
+M 0 17018 15 17049 	(um humanóide elétrico)
+M 0 17018 15 17050 	(um humanóide elétrico)
+E 1 17019 6 17 	(a vara elemental do trov�o)
+M 0 17018 15 17051 	(um humanóide elétrico)
+M 0 17018 15 17052 	(um humanóide elétrico)
+E 1 17018 6 17 	(a vara elemental do ar)
+M 0 17018 15 17052 	(um humanóide elétrico)
+M 0 17018 15 17046 	(um humanóide elétrico)
+M 0 17025 15 17055 	(um pequeno redemoinho)
+E 1 17018 6 17 	(a vara elemental do ar)
+M 0 17025 15 17056 	(um pequeno redemoinho)
+M 0 17025 15 17057 	(um pequeno redemoinho)
+M 0 17025 15 17058 	(um pequeno redemoinho)
+M 0 17025 15 17059 	(um pequeno redemoinho)
+M 0 17025 15 17060 	(um pequeno redemoinho)
+M 0 17025 15 17060 	(um pequeno redemoinho)
+M 0 17025 15 17055 	(um pequeno redemoinho)
+E 1 17025 8 17 	(um pouco de p� m�gico)
+M 0 17019 8 17028 	(um humanóide ácido)
+M 0 17019 8 17029 	(um humanóide ácido)
+M 0 17019 8 17038 	(um humanóide ácido)
+M 0 17019 8 17046 	(um humanóide ácido)
+M 0 17016 5 17032 	(um pequeno humanóide de neve)
+M 0 17016 5 17032 	(um pequeno humanóide de neve)
+M 0 17016 5 17012 	(um pequeno humanóide de neve)
+M 0 17016 5 17025 	(um pequeno humanóide de neve)
+M 0 17020 8 17038 	(uma besta de lava)
+M 0 17020 8 17042 	(uma besta de lava)
+M 0 17020 8 17020 	(uma besta de lava)
+E 1 17022 10 17 	(uma brasa)
+M 0 17020 8 17021 	(uma besta de lava)
+M 0 17021 8 17022 	(um monstro de lama)
+M 0 17021 8 17022 	(um monstro de lama)
+M 0 17021 8 17031 	(um monstro de lama)
+M 0 17021 8 17031 	(um monstro de lama)
+M 0 17022 8 17032 	(um pequeno tufão)
+M 0 17022 8 17013 	(um pequeno tufão)
+M 0 17022 8 17055 	(um pequeno tufão)
+M 0 17022 8 17054 	(um pequeno tufão)
+M 0 17023 8 17048 	(uma partícula subatômica)
+M 0 17023 8 17053 	(uma partícula subatômica)
+M 0 17023 8 17021 	(uma partícula subatômica)
+M 0 17023 8 17010 	(uma partícula subatômica)
+E 1 17021 10 17 	(uma magnetita)
+M 0 17024 8 17027 	(uma nuvem de poeira)
+M 0 17024 8 17022 	(uma nuvem de poeira)
+E 1 17025 10 5 	(um pouco de p� m�gico)
+M 0 17024 8 17059 	(uma nuvem de poeira)
+M 0 17024 8 17057 	(uma nuvem de poeira)
+M 0 17037 10 17007 	(um gigantesco elemental)
+M 0 17037 10 17007 	(um gigantesco elemental)
 S
-$~
+$

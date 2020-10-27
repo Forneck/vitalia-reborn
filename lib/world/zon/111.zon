@@ -1,59 +1,49 @@
 #111
 Vitalia~
 O Reino das Pedras~
-11100 11199 180 0 bc 0 0 0 -1 -1
--1
-*
-*Colocar os monstros
-*
-M 0 11101 1 11176     colocar o guardiï¿½o na entrada
-G 1 11105 1 17    entregar a chave ao guardiï¿½o
-M 0 11101 1 11182     colocar o guardiï¿½o na entrada
-G 1 11105 1 17       entregar a chave ao guardiï¿½o
-M 0 11102 1 11184     colocar o monstro de pedra
-M 0 11103 1 11134     colocar o urso na caverna
-*
-*Colocar os objetos
-*
-O 0 11100 10 11116 	   carregar uma pedra 
-O 0 11100 10 11116 	   carregar uma pedra 
-O 0 11100 10 11141 	   carregar uma pedra 
-O 0 6402 25 11141  	   carregar uma agata 
-O 0 11100 10 11142  	   carregar uma pedra 
-O 0 5230 4 11143    	   carregar uma pedra azul claro 
-O 0 9322 5 11144    	   carregar um monolito de pedra 
-O 0 17326 6 11145     	   carregar uma pequena pedra preta 
-O 0 5230 4 11146    	   carregar uma pedra azul claro 
-O 0 9322 5 11147     	   carregar um monolito de pedra 
-O 0 17326 6 11151     	   carregar uma pequena pedra preta 
-O 0 11100 10 11154   	   carregar uma pedra 
-O 0 11100 10 11154  	   carregar uma pedra 
-O 0 11101 1 11154  	   carregar uma pedra 
-O 0 11100 10 11154  	   carregar uma pedra 
-O 0 6402 25 11154  	   carregar uma agata 
-O 0 17326 6 11154     	   carregar uma pequena pedra preta 
-O 0 11100 10 11157     	   carregar uma pedra 
-O 0 6402 25 11163     	   carregar uma agata 
-O 0 9322 5 11168     	   carregar um monolito de pedra 
-O 0 17326 6 11172     	   carregar uma pequena pedra preta 
-O 0 5230 4 11174     	   carregar uma pedra azul claro 
-O 0 6402 25 11175     	   carregar uma agata 
-O 0 17326 6 11183     	   carregar uma pequena pedra preta 
-O 0 9322 5 11187   	   carregar um monolito de pedra 
-O 0 6402 25 11190     	   carregar uma agata 
-O 0 11100 10 11198         carregar uma pedra 
-O 0 8146 20 11199 	   carregar uma pedra egï¿½pcia 
-R 0 11139 11103       	   retirar o baï¿½ da floresta
-O 0 11103 1 11139   	   carregar um novo baï¿½
-P 1 11106 1 11103          carregar um papel dentro do baï¿½
-R 0 11198 11104       	   retirar o baï¿½ do calabouï¿½o
-O 0 11104 1 11198   	   carregar um novo baï¿½ no calabouï¿½o
-P 1 11102 1 11104          carregar a chave dentro do baï¿½
-*
-* Ajustar as passagens
-*
-D 0 11176 3 2        fechar os portï¿½es do calabouï¿½o (lado de fora)
-D 0 11198 1 2	     fechar os portï¿½es do calabouï¿½o (lado de dentro)
-D 0 11182 1 2        fechar os portï¿½es do calabouï¿½o (lado de fora)
+11100 11199 180 0 bck 0 0 0 -1 -1
+M 0 11101 1 11176 	(o GuardiÃ£o de Pedra)
+G 1 11105 1 -1 	(uma chave antiga e suja)
+M 0 11101 1 11182 	(o GuardiÃ£o de Pedra)
+G 1 11105 1 -1 	(uma chave antiga e suja)
+M 0 11102 1 11184 	(o Monstro de Pedra)
+M 0 11103 1 11134 	(o grande urso da montanha)
+O 0 11100 10 11116 	(uma pedra)
+O 0 11100 10 11116 	(uma pedra)
+O 0 11100 10 11141 	(uma pedra)
+O 0 6402 25 11141 	(uma Ã¡gata)
+O 0 11100 10 11142 	(uma pedra)
+O 0 5230 4 11143 	(uma pedra azul claro)
+O 0 9322 5 11144 	(um monolito de pedra)
+O 0 17326 6 11145 	(uma pequena pedra preta)
+O 0 5230 4 11146 	(uma pedra azul claro)
+O 0 9322 5 11147 	(um monolito de pedra)
+O 0 17326 6 11151 	(uma pequena pedra preta)
+O 0 11100 10 11154 	(uma pedra)
+O 0 11100 10 11154 	(uma pedra)
+O 0 11101 1 11154 	(uma pedra)
+O 0 11100 10 11154 	(uma pedra)
+O 0 6402 25 11154 	(uma Ã¡gata)
+O 0 17326 6 11154 	(uma pequena pedra preta)
+O 0 11100 10 11157 	(uma pedra)
+O 0 6402 25 11163 	(uma Ã¡gata)
+O 0 9322 5 11168 	(um monolito de pedra)
+O 0 17326 6 11172 	(uma pequena pedra preta)
+O 0 5230 4 11174 	(uma pedra azul claro)
+O 0 6402 25 11175 	(uma Ã¡gata)
+O 0 17326 6 11183 	(uma pequena pedra preta)
+O 0 9322 5 11187 	(um monolito de pedra)
+O 0 6402 25 11190 	(uma Ã¡gata)
+O 0 11100 10 11198 	(uma pedra)
+O 0 8146 20 11199 	(uma pedra egÃ­pcia)
+R 0 11139 11103 -1 	(um antigo baú)
+O 0 11103 1 11139 	(um antigo baú)
+P 1 11106 1 11103 	(um papel muito velho)
+R 0 11198 11104 -1 	(um antigo baú)
+O 0 11104 1 11198 	(um antigo baú)
+P 1 11102 1 11104 	(uma chave antiga e suja)
+D 0 11176 3 2 	(Dentro do Portão Oeste de Midgaard)
+D 0 11198 1 2 	(O Calabouço de Pedra)
+D 0 11182 1 2 	(Dentro do portão Leste de Midgaard)
 S
-$~
+$

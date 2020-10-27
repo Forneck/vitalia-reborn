@@ -1,763 +1,754 @@
 #126
 Vitalia~
 Escandinávia, a Terra do Gelo~
-12600 12899 380 1 abde 0 0 0 -1 -1
--1
-*
-* Colocar os monstros
-*
-M 0 12600 1 12750  colocar Odin na Morada do supremo
-E 1 12600 25 3     entregar a runa de Odin para Odin
-E 1 12625 25 16    entregar Gungnir a Odin
-E 1 12626 25 6     entregar o elmo de Odin para Odin
-E 1 12627 25 1     entregar Draupnir para Odin
-M 0 12601 1 12751  colocar Herda nos Jardins do Pal�cio Valhala
-E 1 12663 25 12    entregar um vestido de fios de ouro a Herda
-E 1 12664 25 13    entregar uma faixa de seda a Herda
-M 0 12602 1 12747  colocar Vili no sal�o dos festins do Valhala
-E 1 12665 25 7     entregar as perneiras divinas para Vili
-M 0 12603 1 12749  colocar Ve no sal�o dos festins do Valhala
-E 1 12666 25 6     entregar o elmo divino a Ve
-M 0 12604 1 12726  colocar Frei no cora��o do bosque de Asgard
-E 1 12667 25 12    entregar o manto dourado de Frei a Frei
-M 0 12605 1 12821  colocar Freyr no Sol de Alfheim
-E 1 12668 25 5     entregar a armadura solar para Freyr
-E 1 12601 25 3     entregar o amuleto Fehu a Freyr
-E 1 12604 25 4     entregar o amuleto de Inguz a Freyr
-M 0 12606 1 12806  colocar Thor no belo pal�cio Bilskirnir
-E 1 12628 25 16    entregar Mjollnir a Thor
-E 1 12629 25 13    entregar o cinto da for�a a Thor
-E 1 12630 25 9     entregar as luvas de ferro a Thor
-E 1 12607 25 3     entregar o amuleto de Thurisaz a Thor
-E 1 12608 25 4     entregar o amuleto de Algiz a Thor
-M 0 12607 1 12800  colocar Tir na plan�cie de Vigrid
-E 1 12669 25 5     entregar a armadura sanguinolenta a Tir
-E 1 12605 25 3     entregar o amuleto de Uruz a Tir
-E 1 12606 25 4     entregar o amuleto de Tir
-M 0 12608 1 12766  colocar Loge na Monumental Floresta de Jotunheim
-E 1 12670 25 21    entregar a m�scara do caluniador a Loge
-E 1 12612 25 0     entregar o amuleto de Kano a Loge
-M 0 12609 1 12742  colocar Friga nos Jardins do Pal�cio Valhala
-E 1 12671 25 17    entregar a ess�ncia da vida a Friga
-E 1 12624 25 3     entregar o amuleto de p�rola a Friga
-E 1 12617 25 4     entregar o amuleto de Berkana a Friga
-M 0 12610 1 12813  colocar Freia no pal�cio Sessrumir
-E 1 12652 25 6     entregar a tiara de prata a Freia
-E 1 12653 25 3     entregar Brisings a Freia
-E 1 12603 25 4     entregar o amuleto de Geibo
-M 0 12612 1 12740  colocar Iduna nos Jardins do Pal�cio do Valhala
-G 1 12654 25 -1     entregar a caixa da mocidade a Iduna
-P 1 12655 25 12654 colocar uma ma�� da mocidade na caixa
-P 1 12655 25 12654 colocar uma ma�� da mocidade na caixa
-P 1 12655 25 12654 colocar uma ma�� da mocidade na caixa
-P 1 12655 25 12654 colocar uma ma�� da mocidade na caixa
-M 0 12613 1 12741  colocar Bragi na bela fonte de ouro do Valhala
-E 1 12672 25 10    entregar as bra�adeiras de Bragi a Bragi
-E 1 12609 25 3     entregar o amuleto de Ansuz a Bragi
-M 0 12614 1 12709  colocar Njord no mar glacial �rtico
-E 1 12673 25 16    entregar a serpente dourada a Njord
-M 0 12615 1 12724  colocar Urdur na Bela Cupula de Prata
-G 1 12677 25 -1      entregar a chave do passado a Urdur
-M 0 12616 1 12728  colocar Verdande na Bela Cupula de Ouro
-G 1 12678 25 -1       entregar a chave do presente a Verdande
-E 1 12611 25 3     entregar o amuleto de Peorth a Verdande
-M 0 12617 1 12721  colocar Skuld na c�pula de cristal
-G 1 12679 25 -1      entregar a chave do futuro para Skuld
-E 1 12610 25 3     entregar o amuleto de Raido a Skuld
-M 0 12618 1 12801  colocar Trudr na plan�cie de Vigrid
-E 1 12681 25 3     entregar o medalhao da for�a para Trudr
-M 0 12619 1 12802  colocar Magni na plan�cie de Vigrid
-E 1 12683 25 3     entregar o medalh�o do poder para Magni
-M 0 12620 1 12803  colocar Modi na plan�cie de Vigrid
-E 1 12682 25 3     entregar o medalh�o da intelig�ncia a Modi
-M 0 12621 1 12797  colocar Hela no Trono das Trevas
-E 1 12621 25 3     entregar o amuleto de Nauthiz a Hela
-E 1 12661 25 16    entregar a inani��o a Hela
-E 1 12662 25 1     entregar a ess�ncia da morte para Hela
-M 0 12622 1 12704  colocar Siegfried na terra do sol da meia-noite
-E 1 12641 25 16    entregar a Balmung a Siegfried
-E 1 12614 25 3     entregar o amuleto de Jera a Siegfried
-M 0 12623 1 12688  colocar Haquem na terra do sol da meia-noite
-E 1 12684 25 11    entregar o escudo de gelo a Haquem
-M 0 12624 1 12693  colocar Alberish na terra do sol da meia-noite
-E 1 12685 25 1     entregar o anel dos Nibelungos a Alberish
-M 0 12625 1 12714  colocar Heindall no Bifrost
-E 1 12640 25 17    entregar a Gjall a Heindall
-E 1 12602 25 3     entregar o amuleto de Othila a Heindall
-G 1 12730 10 -1      entregar a chave do pal�cio para Heindall
-M 0 12626 1 12686  colocar Fafnir na terra do sol da meia-noite
-G 1 12656 25 -1      entregar a bolsa de couro de foca a fafnir
-P 1 12657 25 12656 colocar o bracelete de neve dentro da bolsa
-P 1 12658 25 12656 colocar um amontoado de moedas de ouro dentro da bolsa
-E 1 3857 7 17       Card Fafnir(3857) com Fafnir(12626)
-M 0 12627 3 12766  colocar um gigante na monumental floresta de Jotunheim
-E 1 12622 25 3     entregar o amuleto Hagalaz ao gigante de Jotunheim
-E 1 12660 25 0     entregar a luz das tempestades ao gigante de Jotunheim
-M 0 12627 3 12782  colocar um gigante na monumental floresta de Jotunheim
-E 1 12622 25 3     entregar o amuleto Hagalaz ao gigante de Jotunheim
-E 1 12660 25 0     entregar a luz das tempestades ao gigante de Jotunheim
-M 0 12627 3 12768  colocar um gigante na monumental floresta de Jotunheim
-E 1 12622 25 3     entregar o amuleto Hagalaz ao gigante de Jotunheim
-E 1 12660 25 0     entregar a luz das tempestades ao gigante de Jotunheim
-M 0 12628 3 12748  colocar um Einherjar no sal�o dos Einherjars
-E 1 12686 25 5     entregar a armadura divina ao Einherjar
-E 1 12687 25 11    entregar o escudo celestial ao Einherjar
-E 1 12688 25 16    entregar a espada da vit�ria ao Einherjar
-M 0 12628 3 12744  colocar um Einherjar no sal�o dos Einherjars
-E 1 12686 25 5     entregar a armadura divina ao Einherjar
-E 1 12687 25 11    entregar o escudo celestial ao Einherjar
-E 1 12688 25 16    entregar a espada da vit�ria ao Einherjar
-M 0 12628 3 12746  colocar um Einherjar no sal�o dos Einherjars
-E 1 12686 25 5     entregar a armadura divina ao Einherjar
-E 1 12687 25 11    entregar o escudo celestial ao Einherjar
-E 1 12688 25 16    entregar a espada da vit�ria ao Einherjar
-M 0 12629 1 12745  colocar Brunnhilde no sal�o dos Einherjars
-E 1 12631 10 6     entregar o elmo das virgens a Brunnhilde
-E 1 12632 10 11    entregar o escudo da aurora a Brunnhilde
-E 1 12633 10 16    entregar a lan�a do destino a Brunnhilde
-E 1 12623 5 3      entregar o amuleto Ehwaz a Brunnhilde
-M 0 12630 1 12621  colocar Helmwige no centro da vila viking
-E 1 12631 10 6     entregar o elmo das virgens a Helmwige
-E 1 12632 10 11    entregar o escudo da aurora a Helmwige
-E 1 12633 10 16    entregar a lan�a do destino a Helmwige
-M 0 12631 1 12627  colocar Ortlinde na vila viking sueca
-E 1 12631 10 6     entregar o elmo das virgens a Ortlinde
-E 1 12632 10 11    entregar o escudo da aurora a Ortlinde
-E 1 12633 10 16    entregar a lan�a do destino a Ortlinde
-M 0 12632 1 12675  colocar Waltraute nos Alpes Escandinavos
-E 1 12631 10 6     entregar o elmo das virgens a Waltraute
-E 1 12632 10 11    entregar o escudo da aurora a Waltraute
-E 1 12633 10 16    entregar a lan�a do destino a Waltraute
-M 0 12633 1 12690  colocar Rossweisse no deserto de gelo
-E 1 12631 10 6     entregar o elmo das virgens a Rossweisse
-E 1 12632 10 11    entregar o escudo da aurora a Rossweisse
-E 1 12633 10 16    entregar a lan�a do destino a Rossweisse
-M 0 12634 1 12701  colocar Siegrune num fiorde noruegu�s
-E 1 12631 10 6     entregar o elmo das virgens a Siegrune
-E 1 12632 10 11    entregar o escudo da aurora a Siegrune
-E 1 12633 10 16    entregar a lan�a do destino a Siegrune
-M 0 12635 1 12680  colocar Grimgerde numa vila viking norueguesa
-E 1 12631 10 6     entregar o elmo das virgens a Grimgerde
-E 1 12632 10 11    entregar o escudo da aurora a Grimgerde
-E 1 12633 10 16    entregar a lan�a do destino a Grimgerde
-M 0 12636 1 12615  colocar Schwertleite na floresta de gelo
-E 1 12631 10 6     entregar o elmo das virgens a Schwertleite
-E 1 12632 10 11    entregar o escudo da aurora a Schwertleite
-E 1 12633 10 16    entregar a lan�a do destino a Schwertleite
-M 0 12637 1 12692  colocar Gerhilde na terra do sol da meia-noite
-E 1 12631 10 6     entregar o elmo das virgens a Gerhilde
-E 1 12632 10 11    entregar o escudo da aurora a Gerhilde
-E 1 12633 10 16    entregar a lan�a do destino a Gerhilde
-M 0 12638 3 12622  colocar um Hofgodi no centro da vila viking
-G 1 12689 20 -1      entregar uma bolsa de pele de lobo ao Hofgodi
-M 0 12638 3 12633  colocar um Hofgodi no santu�rio de Odin
-G 1 12689 20 -1     entregar uma bolsa de pele de lobo ao Hofgodi
-M 0 12638 3 12888  colocar um Hofgodi na vila viking da Isl�ndia
-G 1 12689 20 -1      entregar uma bolsa de pele de lobo ao Hofgodi
-M 0 12639 1 12631  colocar Eric no Trono de Eric
-G 1 12722 1 -1      entregar a chave rudimentar de ferro a Eric
-E 1 12636 10 5     entregar a armadura viking a Eric
-E 1 12638 10 14    entregar um bracelete viking a Eric
-E 1 12639 10 8     entregar um par de botas vikings a Eric
-G 1 12690 25 6     entregar a coroa de ouro a Eric
-E 1 12691 25 16    entregar a monumental espada da coragem a Eric
-M 0 12640 1 12784  colocar Anidhogge na monumental raiz de Niffleheim
-E 1 12692 25 21    entregar a m�scara de Anidhogge a Anidhogge
-M 0 12641 1 12770  colocar Gerda numa enorme clareira
-E 1 12659 25 20    entregar a Gerda um brinco de cristal
-E 1 12619 25 3     entregar o la�o de Wundo a Gerda
-M 0 12642 1 12730  colocar Tialfi no bosque de Asgard
-E 1 12693 25 18    entregar as plumas dos ventos a Tialfi
-M 0 12643 1 12795  colocar Hermod na c�pula negra de Balder
-E 1 12694 25 5     entregar a armadura de Hermod a Hermod
-E 1 12615 25 3     entregar o amuleto de Yr a Hermod
-M 0 12644 1 12789  colocar o atraso no Elvinder, o Pal�cio de Hela
-E 1 12695 25 11    entregar o escudo das trevas de Niffleheim ao Atraso
-M 0 12645 1 12794  colocar a avareza no sal�o dos mortos e das trevas
-E 1 12696 25 16    entregar a avareza a foice das trevas de Niffleheim
-M 0 12646 1 12857  colocar Eric, o ruivo num belo campo
-E 1 12634 60 6     entregar um elmo viking a Eric, o ruivo
-E 1 12635 60 16    entregar a espada de batalha viking a Eric, o ruivo
-E 1 12636 60 5     entregar a armadura viking a Eric, o ruivo
-E 1 12638 60 14    entregar um bracelete viking a Eric, o ruivo
-E 1 12639 60 8     entregar um par de botas vikings a Eric, o ruivo
-M 0 12647 1 12857  colocar Leif Ericsson num belo campo
-E 1 12634 60 6     entregar um elmo viking para Leif Ericsson
-E 1 12635 60 16    entregar a espada de batalha viking para Leif Ericsson
-E 1 12636 60 5     entregar a armadura viking para Leif Ericsson
-E 1 12638 60 14    entregar um bracelete viking para Leif Ericsson
-E 1 12639 60 8     entregar um par de botas vikings para Leif Ericsson
-M 0 12648 1 12873  colocar Aegir no mar da Groenl�ndia
-E 1 12697 25 16    entregar o machado de corais a Aegir
-M 0 12649 1 12695  colocar Zorgerdr no deserto escandinavo gelo
-E 1 12698 25 3     entregar o medalh�o das tempestades a Zorgerdr
-M 0 12650 1 12660  colocar Irpa nos monumentais Alpes escandinavos
-E 1 12699 25 17    entregar a corneta da neve a Irpa
-M 0 12651 1 12703  colocar Mime na terra do sol da meia-noite
-E 1 12700 25 9     entregar as luvas dos nibelungos a Mime
-E 1 12613 25 3     entregar o amuleto de Isa a Mime
-M 0 12652 1 12696  colocar Thryn no deserto escandinavo de gelo
-E 1 12701 25 16    entregar a esfera m�gica de Thryn a Thryn
-M 0 12653 1 12651  colocar Skrymir nos Alpes escandinavos
-E 1 12702 25 19    entregar a argola de ouro do lend�rio Ymir a Skrymir
-M 0 12654 1 12780  colocar Utgard-loki nos aposentos de Utgard-loki
-E 1 12703 25 21    entregar a Utgard-loki as mil faces da ilus�o
-G 1 12737 10 -1     entregar a chave pequena de bronze a Utgard-loki
-M 0 12655 1 12774  colocar Logi na Taverna de Utgard
-E 1 12704 25 16    entregar o arco flamejante de Logi a Logi
-M 0 12656 1 12781  colocar Angerbode na monumental floresta de Jotunheim
-E 1 12705 25 17    entregar a pedra das vis�es de Angerbode a Angerbode
-M 0 12657 1 12704  colocar Greyfell na terra do sol da meia-noite
-G 1 12706 25 -1      entregar a ferradura de Greyfell a Greyfell
-M 0 12658 1 12750  colocar Hugin na morada Odin
-G 1 12707 25 -1     entregar a carne de Schrinnir a Hugin
-M 0 12659 1 12750  colocar Munin na Morada de Odin
-G 1 12707 25 -1    entregar a carne de Schrinnir a Munin
-M 0 12660 1 12750  colocar Geri na morada de Odin
-G 1 12707 25 -1       entregar a carne de Schrinnir a Geri
-M 0 12661 1 12750  colocar Freki na morada de Odin
-G 1 12707 25 -1       entregar a carne de Schrinnir a Freki
-M 0 12662 1 12729  colocar Schrinnir no bosque de Asgard
-G 1 12707 25 -1     entregar a carne de Schrinnir a Schrinnir
-M 0 12663 1 12729  colocar Heidrum no bosque de Asgard
-M 0 12664 1 12805  colocar Fenris na pequena ilha de Lyngvi
-E 1 12708 25 17    entregar Gleipnir, a corrente de seda, a Fenris
-M 0 12665 1 12752  colocar Sleipnir nos jardins do pal�cio Valhala
-G 1 12709 25 -1     entregar a ferradura de Sleipnir a Sleipnir
-M 0 12666 1 12814  colocar Gulltopp no Himinbjorg
-G 1 12710 25 -1      entregar a ferradura de Gulltopp a Gulltopp
-M 0 12667 1 12700  colocar Jormungand no mar glacial �rtico
-G 1 12711 25 -1    entregar uma gigantesca escama para Jormungand
-M 0 12669 1 12741  colocar Gullinkambi na bela ponte de ouro do Valhala
-M 0 12670 1 12706  colocar Nidhogg em Yggdrasill, o Elo entre os Mundos
-E 1 12712 25 0     entregar o grande olho flamejante a Nidhogg
-E 1 3853 1 17       Card nidh(3853) com Nidhog(12670)
-M 0 12671 1 12706  colocar a �guia guardi� em Yggdraill, o elo entre os mundos
-E 1 12713 25 18    entregar as asas da guardi� para a �guia guardi�
-M 0 12672 1 12806  colocar Tanngnost no belo pal�cio Bilskirnir
-M 0 12673 1 12806  colocar Tanngrisni no belo pal�cio Bilskirnir
-M 0 12674 1 12706  colocar Ratatosk em Yggdrasill, o elo entre os mundos
-M 0 12675 1 12837  colocar Dvalin na depress�o das trevas
-E 1 12648 10 16    entregar o machado das trevas a Dvalin
-E 1 12649 10 9     entregar as luvas rasgadas a Dvalin
-E 1 12650 10 12    entregar um manto negro a Dvalin
-E 1 12651 10 6     entregar o elmo das trevas de Niffleheim a Dvalin
-M 0 12676 1 12822  colocar Dain na floresta dourada de Aflheim
-E 1 12647 25 3     entregar a Dain o medalh�o da imortalidade �lfica
-E 1 12644 10 12    entregar um manto transparente a Dain
-E 1 12645 10 13    entregar o cinto luminoso a Dain
-E 1 12646 10 16    entregar o arco do sol a Dain
-M 0 12677 3 12786  colocar uma alma assustadora nas trevas de Niffleheim
-M 0 12677 3 12791  colocar uma alma assustadora no sal�o dos mortos
-M 0 12677 3 12793  colocar uma alma assustadora em A Morte
-M 0 12678 7 12626  colocar um viking sueco numa cabana de madeira
-E 1 12620 60 3     entregar um amuleto Mannaz ao viking sueco
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12678 7 12634  colocar um viking sueco no centro da vila viking
-E 1 12620 60 3     entregar um amuleto Mannaz ao viking sueco
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12678 7 12654  colocar um viking sueco na grande cabana viking
-E 1 12620 60 3     entregar um amuleto Mannaz ao viking sueco
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12678 7 12645  colocar um viking sueco na vila viking sueca
-E 1 12620 60 3     entregar um amuleto Mannaz ao viking sueco
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12678 7 12656  colocar um viking sueco no armaz�m da vila
-E 1 12620 60 3     entregar um amuleto Mannaz ao viking sueco
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12678 7 12642  colocar um viking sueco na sala da guarda da fortaleza
-E 1 12620 60 3     entregar um amuleto Mannaz ao viking sueco
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12678 7 12642  colocar um viking sueco na sala da guarda da fortaleza
-E 1 12620 60 3     entregar um amuleto Mannaz ao viking sueco
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12679 9 12614  colocar um viking noruegu�s no santu�rio de Odin
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12679 9 12623  colocar um viking noruegu�s na longa cabana
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12679 9 12622  colocar um viking noruegu�s no centro da vila viking
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12679 9 12620  colocar um viking noruegu�s numa vila viking norueguesa
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12679 9 12629  colocar um viking noruegu�s no armaz�m da vila
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12679 9 12674  colocar um viking noruegu�s na longa cabana
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12679 9 12678  colocar um viking noruegu�s uma bela plan�cie
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12679 9 12678  colocar um viking noruegu�s uma bela plan�cie
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12679 9 12665  colocar um viking noruegu�s numa cabana de madeira
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12680 10 12881 colocar um viking island�s na cabana
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12680 10 12897 colocar um viking island�s no Parlamento de Althing
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12680 10 12897 colocar um viking island�s no Parlamento de Althing
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12680 10 12897 colocar um viking island�s no Parlamento de Althing
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12680 10 12883 colocar um viking island�s num belo campo verde
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12680 10 12894 colocar um viking island�s na longa cabana
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12680 10 12861 colocar um viking island�s na longa cabana
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12680 10 12861 colocar um viking island�s na longa cabana
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12680 10 12862 colocar um viking island�s no centro da vila viking
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12680 10 12864 colocar um viking island�s na cabana do ferreiro
-E 1 12620 60 3     entregar o amuleto Mannaz ao viking
-E 1 12634 60 6     entregar um elmo viking ao viking
-E 1 12635 60 16    entregar uma espada viking de batalha ao viking
-E 1 12636 60 5     entregar a armadura viking ao viking
-E 1 12638 60 14    entregar um bracelete viking ao viking
-E 1 12639 60 8     entregar um par de botas vikings ao viking
-M 0 12681 4 12631  colocar uma viking sueca no sal�o real de Eric
-E 1 12637 17 12    entregar um velho vestido a viking
-E 1 12638 60 14    entregar um bracelete viking a viking
-E 1 12639 60 8     entregar um par de botas vikings a viking
-M 0 12681 4 12626  colocar uma viking sueca na cabana
-E 1 12637 17 12    entregar um velho vestido a viking
-E 1 12638 60 14    entregar um bracelete viking a viking
-E 1 12639 60 8     entregar um par de botas vikings a viking
-M 0 12681 4 12633  colocar uma viking sueca no santu�rio de Odin
-E 1 12637 17 12    entregar um velho vestido a viking
-E 1 12638 60 14    entregar um bracelete viking a viking
-E 1 12639 60 8     entregar um par de botas vikings a viking
-M 0 12681 4 12654  colocar uma viking sueca na grande cabana viking
-E 1 12637 17 12    entregar um velho vestido a viking
-E 1 12638 60 14    entregar um bracelete viking a viking
-E 1 12639 60 8     entregar um par de botas vikings a viking
-M 0 12682 6 12623  colocar uma viking norueguesa na longa cabana
-E 1 12637 17 12    entregar um velho vestido a viking
-E 1 12638 60 14    entregar um bracelete viking a viking
-E 1 12639 60 8     entregar um par de botas vikings a viking
-M 0 12682 6 12622  colocar uma viking norueguesa no centro da vila viking
-E 1 12637 17 12    entregar um velho vestido a viking
-E 1 12638 60 14    entregar um bracelete viking a viking
-E 1 12639 60 8     entregar um par de botas vikings a viking
-M 0 12682 6 12621  colocar uma viking norueguesa no centro da vila viking
-E 1 12637 17 12    entregar um velho vestido a viking
-E 1 12638 60 14    entregar um bracelete viking a viking
-E 1 12639 60 8     entregar um par de botas vikings a viking
-M 0 12682 6 12674  colocar uma viking norueguesa na longa cabana
-E 1 12637 17 12    entregar um velho vestido a viking
-E 1 12638 60 14    entregar um bracelete viking a viking
-E 1 12639 60 8     entregar um par de botas vikings a viking
-M 0 12682 6 12679  colocar uma viking norueguesa no armaz�m da vila
-E 1 12637 17 12    entregar um velho vestido a viking
-E 1 12638 60 14    entregar um bracelete viking a viking
-E 1 12639 60 8     entregar um par de botas vikings a viking
-M 0 12682 6 12665  colocar uma viking norueguesa numa cabana de madeira
-E 1 12637 17 12    entregar um velho vestido a viking
-E 1 12638 60 14    entregar um bracelete viking a viking
-E 1 12639 60 8     entregar um par de botas vikings a viking
-M 0 12683 7 12861  colocar uma viking islandesa na longa cabana
-E 1 12637 17 12    entregar um velho vestido a viking
-E 1 12638 60 14    entregar um bracelete viking a viking
-E 1 12639 60 8     entregar um par de botas vikings a viking
-M 0 12683 7 12865  colocar uma viking islandesa numa pequena cabana
-E 1 12637 17 12    entregar um velho vestido a viking
-E 1 12638 60 14    entregar um bracelete viking a viking
-E 1 12639 60 8     entregar um par de botas vikings a viking
-M 0 12683 7 12857  colocar uma viking islandesa num campo verde
-E 1 12637 17 12    entregar um velho vestido a viking
-E 1 12638 60 14    entregar um bracelete viking a viking
-E 1 12639 60 8     entregar um par de botas vikings a viking
-M 0 12683 7 12894  colocar uma viking islandesa na longa cabana
-E 1 12637 17 12    entregar um velho vestido a viking
-E 1 12638 60 14    entregar um bracelete viking a viking
-E 1 12639 60 8     entregar um par de botas vikings a viking
-M 0 12683 7 12897  colocar uma viking islandesa no parlamento Althing
-E 1 12637 17 12    entregar um velho vestido a viking
-E 1 12638 60 14    entregar um bracelete viking a viking
-E 1 12639 60 8     entregar um par de botas vikings a viking
-M 0 12683 7 12886  colocar uma viking islandesa na pequena cabana 
-E 1 12637 17 12    entregar um velho vestido a viking
-E 1 12638 60 14    entregar um bracelete viking a viking
-E 1 12639 60 8     entregar um par de botas vikings a viking
-M 0 12683 7 12889  colocar uma viking islandesa num belo campo verde
-E 1 12637 17 12    entregar um velho vestido a viking
-E 1 12638 60 14    entregar um bracelete viking a viking
-E 1 12639 60 8     entregar um par de botas vikings a viking
-M 0 12684 15 12622 colocar uma crian�a viking no centro da vila
-M 0 12684 15 12623 colocar uma crian�a viking na longa cabana
-M 0 12684 15 12621 colocar uma crian�a viking no centro da vila
-M 0 12684 15 12626 colocar uma crian�a viking na cabana
-M 0 12684 15 12644 colocar uma crian�a viking no centro da vila
-M 0 12684 15 12654 colocar uma crian�a viking na cabana longa
-M 0 12684 15 12674 colocar uma crian�a viking na cabana longa
-M 0 12684 15 12665 colocar uma crian�a viking na cabana de madeira
-M 0 12684 15 12678 colocar uma crian�a viking numa bela plan�cie
-M 0 12684 15 12861 colocar uma crian�a viking na longa cabana
-M 0 12684 15 12866 colocar uma crian�a viking na cabana
-M 0 12684 15 12887 colocar uma crian�a viking num belo campo verde
-M 0 12684 15 12885 colocar uma crian�a viking num belo campo verde
-M 0 12684 15 12888 colocar uma crian�a viking na monumental estatua de Thor
-M 0 12684 15 12894 colocar uma crian�a viking na longa cabana
-M 0 12685 2 12649  colocar um cavalo selvagem na floresta de gelo
-M 0 12685 2 12664  colocar um cavalo selvagem na floresta de gelo
-M 0 12686 6 12602  colocar um navio de guerra viking nas �guas do atl�ntico
-M 0 12686 6 12609  colocar um navio de guerra viking no mar b�ltico
-M 0 12686 6 12699  colocar um navio de guerra viking no golfo de Bothnia
-M 0 12686 6 12685  colocar um navio de guerra viking no mar da Noruega
-M 0 12686 6 12879  colocar um navio de guerra viking no mar da Groenl�ndia
-M 0 12686 6 12873  colocar um navio de guerra viking no mar da Groenl�ndia
-M 0 12687 4 12819  colocar um elfo luminoso na floresta dourada de Alfheim
-E 1 12644 10 12    entregar um manto transparente ao elfo luminoso
-E 1 12646 10 16    entregar o arco do sol ao elfo luminoso
-M 0 12687 4 12818  colocar um elfo luminoso na floresta dourada de Alfheim
-E 1 12644 10 12    entregar um manto transparente ao elfo luminoso
-E 1 12646 10 16    entregar o arco do sol ao elfo luminoso
-M 0 12687 4 12820  colocar um elfo luminoso na floresta dourada de Alfheim
-E 1 12644 10 12    entregar um manto transparente ao elfo luminoso
-E 1 12646 10 16    entregar o arco do sol ao elfo luminoso
-M 0 12687 4 12824  colocar um elfo luminoso na floresta dourada de Alfheim
-E 1 12644 10 12    entregar um manto transparente ao elfo luminoso
-E 1 12646 10 16    entregar o arco do sol ao elfo luminoso
-M 0 12688 2 12823  colocar uma elfa luminosa na floresta dourada de Alfheim
-E 1 12642 10 12    entregar um vestido transparente a elfa luminosa
-E 1 12643 10 20    entregar o brinco da luz a elfa luminosa
-M 0 12688 2 12824  colocar uma elfa luminosa na floresta dourada de Alfheim
-E 1 12642 10 12    entregar um vestido transparente a elfa luminosa
-E 1 12643 10 20    entregar o brinco da luz a elfa luminosa
-M 0 12689 3 12828  colocar um an�o do subterr�neo no p�tio da escurid�o
-E 1 12649 10 9     entregar um par de luvas rasgadas ao an�o do subterr�neo
-E 1 12650 10 12    entregar um manto rasgado ao an�o do subterr�neo
-M 0 12689 3 12830  colocar um an�o do subterr�neo no fim do corredor
-E 1 12649 10 9     entregar um par de luvas rasgadas ao an�o do subterr�neo
-E 1 12650 10 12    entregar um manto rasgado ao an�o do subterr�neo
-M 0 12689 3 12831  colocar um an�o do subterr�neo no p�tio da podrid�o
-E 1 12649 10 9     entregar um par de luvas rasgadas ao an�o do subterr�neo
-E 1 12650 10 12    entregar um manto rasgado ao an�o do subterr�neo
-M 0 12690 3 12828  colocar uma an� do subterr�neo no p�tio da escurid�o
-E 1 12649 10 9     entregar um par de luvas rasgadas a an� do subterr�neo
-E 1 12650 10 12    entregar um manto rasgado a an� do subterr�neo
-M 0 12690 3 12830  colocar uma an� do subterr�neo no fim do corredor
-E 1 12649 10 9     entregar um par de luvas rasgadas a an� do subterr�neo
-E 1 12650 10 12    entregar um manto rasgado a an� do subterr�neo
-M 0 12690 3 12831  colocar uma an� do subterr�neo no p�tio da podrid�o
-E 1 12649 10 9     entregar um par de luvas rasgadas a an� do subterr�neo
-E 1 12650 10 12    entregar um manto rasgado a an� do subterr�neo
-M 0 12691 2 12676  colocar uma rena nos alpes escandinavos
-G 1 12749 25 -1     entregar um peda�o de carne de rena a rena
-M 0 12691 2 12666  colocar uma rena nos alpes escandinavos
-G 1 12749 25 -1       entregar um peda�o de carne de rena a rena
-M 0 12692 3 12637  colocar uma foca no rio Glama
-G 1 12747 25 -1     entregar um peda�o de carne de foca a foca
-M 0 12692 3 12667  colocar uma foca no rio Angerman
-G 1 12747 25 -1     entregar um peda�o de carne de foca a foca
-M 0 12692 3 12871  colocar uma foca nas �guas g�lidas do rio Blanda
-G 1 12747 25 -1    entregar um peda�o de carne de foca a foca
-M 0 12693 2 12661  colocar um cisne no rio Angerman
-M 0 12693 2 12868  colocar um cisne nas �guas g�lidas do rio Blanda
-M 0 12694 1 12653  colocar o urso negro na floresta de gelo
-M 0 12695 1 12659  colocar uma alce na floresta de gelo
-M 0 12696 2 12689  colocar um lobo branco no deserto de gelo escandinavo
-M 0 12696 2 12846  colocar um lobo branco numa monumental calota de gelo
-M 0 12697 2 12842  colocar uma ave marinha na Isl�ndia, a terra do gelo
-M 0 12697 2 12646  colocar uma ave marinha numa praia escandinava
-M 0 12698 2 12732  colocar um Berserk no mar de neve
-E 1 12714 25 7     entregar as perneiras da f�ria ao Berserk
-M 0 12698 2 12738  colocar um Berserk no mar de neve
-E 1 12714 25 7     entregar as perneiras da f�ria ao Berserk
-M 0 12699 1 12806  colocar Sif no belo pal�cio Bilskirnir
-E 1 12715 10 17    entregar a Sif um punhado de fios de cabelo de ouro
-*
-* Colocar os objetos
-*
-R 0 12611 12716    retirar a estatua de bronze de um viking noruegu�s
-O 0 12716 1 12611  colocar uma nova estatua de bronze do viking noruegu�s
-R 0 12614 12717    retirar a estatua de Thor
-O 0 12717 3 12614  colocar uma nova estatua de Thor 
-R 0 12862 12717    retirar a estatua de Thor
-O 0 12717 3 12862  colocar uma nova estatua de Thor
-R 0 12888 12717    retirar a estatua de Thor
-O 0 12717 3 12888  colocar uma nova estatua de Thor
-R 0 12618 12718    retirar uma estatua de bronze de um viking sueco
-O 0 12718 1 12618  colocar uma nova estatua de bronze de uma viking sueco
-R 0 12623 12719    retirar a cadeira de madeira
-O 0 12719 1 12623  colocar uma nova cadeira de madeira
-R 0 12623 12720    retirar uma longa mesa de madeira
-O 0 12720 4 12623  colocar uma nova longa mesa de madeira
-R 0 12654 12720    retirar uma longa mesa de madeira
-O 0 12720 4 12654  colocar uma nova longa mesa de madeira
-R 0 12861 12720    retirar uma longa mesa de madeira
-O 0 12720 4 12861  colocar uma nova longa mesa de madeira
-R 0 12894 12720    retirar uma longa mesa de madeira
-O 0 12720 4 12894  colocar uma nova longa mesa de madeira
-R 0 12624 12721    retirar um grande tesouro de moedas
-O 0 12721 1 12624  colocar um novo grande tesouro de moedas
-R 0 12631 12723    retirar o trono de Eric
-O 0 12723 1 12631  colocar um novo trono de Eric
-R 0 12633 12724    retirar uma estatua de Odin
-O 0 12724 1 12633  colocar uma nova estatua de Odin
-R 0 12640 12725    retirar a pedra dos sacrif�cios
-O 0 12725 1 12640  colocar uma nova pedra dos sacrif�cios
-R 0 12644 12726    retirar uma enorme pedra para jogos
-O 0 12726 1 12644  colocar uma nova pedra para jogos
-R 0 12626 12727    retirar uma cama de feno
-O 0 12727 9 12626  colocar uma nova cama de feno
-R 0 12665 12727    retirar uma cama de feno
-O 0 12727 9 12665  colocar uma nova cama de feno
-R 0 12858 12727    retirar uma cama de feno
-O 0 12727 9 12858  colocar uma nova cama de feno
-R 0 12859 12727    retirar uma cama de feno
-O 0 12727 9 12859  colocar uma nova cama de feno
-R 0 12865 12727    retirar uma cama de feno
-O 0 12727 9 12865  colocar uma nova cama de feno
-R 0 12866 12727    retirar uma cama de feno
-O 0 12727 9 12866  colocar uma nova cama de feno
-R 0 12881 12727    retirar uma cama de feno
-O 0 12727 9 12881  colocar uma nova cama de feno
-R 0 12886 12727    retirar uma cama de feno
-O 0 12727 9 12886  colocar uma nova cama de feno
-R 0 12891 12727    retirar uma cama de feno
-O 0 12727 9 12891  colocar uma nova cama de feno
-R 0 12626 12728    retirar uma mesa rudimentar 
-O 0 12728 6 12626  colocar uma nova mesa rudimentar
-R 0 12665 12728    retirar uma mesa rudimentar 
-O 0 12728 6 12665  colocar uma nova mesa rudimentar
-R 0 12858 12728    retirar uma mesa rudimentar 
-O 0 12728 6 12858  colocar uma nova mesa rudimentar
-R 0 12859 12728    retirar uma mesa rudimentar 
-O 0 12728 6 12859  colocar uma nova mesa rudimentar
-R 0 12865 12728    retirar uma mesa rudimentar 
-O 0 12728 6 12865  colocar uma nova mesa rudimentar
-R 0 12866 12728    retirar uma mesa rudimentar 
-O 0 12728 6 12866  colocar uma nova mesa rudimentar
-R 0 12662 12729    retirar um navio de guerra viking
-O 0 12729 1 12662  colocar um novo navio de guerra viking
-R 0 12745 12731    retirar uma estatua dos Einherjars
-O 0 12731 1 12745  colocar uma nova estatua dos Einherjars
-R 0 12746 12732    retirar a t�bua do Ragnarok
-O 0 12732 1 12746  colocar uma nova t�bua do Ragnarok
-R 0 12750 12733    retirar o trono de Odin
-O 0 12733 1 12750  colocar um novo trono
-R 0 12759 12734    retirar o po�o de Ymir
-O 0 12734 1 12759  colocar um novo po�o de Ymir
-R 0 12772 12735    retirar uma gigantesca estatua
-O 0 12735 1 12772  colocar uma nova gigantesca estatua
-R 0 12775 12736    retirar a estatua de Ymir
-O 0 12736 1 12775  colocar uma nova estatua de Ymir
-R 0 12797 12738    retirar o trono de Hela
-O 0 12738 1 12797  colocar uma novo trono de Hela
-R 0 12715 12739    retirar a fonte de Urd
-O 0 12739 1 12715  colocar uma nova fonte de Urd
-R 0 12785 12740    retirar Hvergelnir, a fonte de Niffleheim
-O 0 12740 1 12785  coloca uma nova Hvergelnir, a fonte de Niffleheim
-R 0 12812 12741    retirar as rochas do santu�rio da alegria
-O 0 12741 1 12812  colocar novas pedras do santu�rio da alegria
-R 0 12813 12742    retirar as flores do Sessrumir
-O 0 12742 1 12813  colocar novas flores do Sessrumir
-R 0 12821 12743    retirar o sol de Alfheim
-O 0 12743 1 12821  colocar um novo sol de Alfheim
-R 0 12788 12744    retirar um an�o petrificado
-O 0 12744 1 12788  colocar um novo an�o petrificado
-R 0 12830 12745    retirar uma grande fogueira
-O 0 12745 1 12830  colocar uma nova grande fogueira
-R 0 12743 12746    retirar a erva visco
-O 0 12746 1 12743  colocar uma nova erva visco
-R 0 12744 12751    retirar uma garrafa seca de hidromel
-O 0 12751 1 12744  colocar uma nova garrafa seca de hidromel
-R 0 12744 12750    retirar um c�lice de prata
-O 0 12750 1 12744  colocar um novo c�lice de prata
-R 0 12702 12754    retirar um portal dourado
-O 0 12754 4 12702  colocar um novo portal dourado
-R 0 12694 12754    retirar um portal dourado
-O 0 12754 4 12694  colocar um novo portal dourado
-R 0 12687 12754    retirar um portal dourado
-O 0 12754 4 12687  colocar um novo portal dourado
-R 0 12703 12754    retirar um portal dourado
-O 0 12754 4 12703  colocar um novo portal dourado
-R 0 12702 12755    retirar um portal dourado
-O 0 12755 4 12702  colocar um novo portal dourado
-R 0 12704 12755    retirar um portal dourado
-O 0 12755 4 12704  colocar um novo portal dourado
-R 0 12693 12755    retirar um portal dourado
-O 0 12755 4 12693  colocar um novo portal dourado
-R 0 12687 12755    retirar um portal dourado
-O 0 12755 4 12687  colocar um novo portal dourado
-R 0 12702 12756    retirar um portal dourado
-O 0 12756 3 12702  colocar um novo portal dourado
-R 0 12692 12756    retirar um portal dourado
-O 0 12756 3 12692  colocar um novo portal dourado
-R 0 12687 12756    retirar um portal dourado
-O 0 12756 3 12687  colocar um novo portal dourado
-R 0 12692 12757    retirar um portal dourado
-O 0 12757 1 12692  colocar um novo portal dourado
-R 0 12694 12758    retirar um portal dourado
-O 0 12758 1 12694  colocar um novo portal dourado
-R 0 12703 12759    retirar um portal dourado
-O 0 12759 2 12703  colocar um novo portal dourado
-R 0 12704 12759    retirar um portal dourado
-O 0 12759 2 12704  colocar um novo portal dourado
-R 0 12686 12760    retirar um portal dourado
-O 0 12760 3 12686  colocar um novo portal dourado
-R 0 12688 12760    retirar um portal dourado
-O 0 12760 3 12688  colocar um novo portal dourado
-R 0 12704 12760    retirar um portal dourado
-O 0 12760 3 12704  colocar um novo portal dourado
-R 0 12703 12761    retirar um portal dourado
-O 0 12761 4 12703  colocar um novo portal dourado
-R 0 12693 12761    retirar um portal dourado
-O 0 12761 4 12693  colocar um novo portal dourado
-R 0 12686 12761    retirar um portal dourado
-O 0 12761 4 12686  colocar um novo portal dourado
-R 0 12688 12761    retirar um portal dourado
-O 0 12761 4 12688  colocar um novo portal dourado
-R 0 12692 12762    retirar um portal dourado
-O 0 12762 5 12692  colocar um novo portal dourado
-R 0 12693 12762    retirar um portal dourado
-O 0 12762 5 12693  colocar um novo portal dourado
-R 0 12694 12762    retirar um portal dourado
-O 0 12762 5 12694  colocar um novo portal dourado
-R 0 12686 12762    retirar um portal dourado
-O 0 12762 5 12686  colocar um novo portal dourado
-R 0 12688 12762    retirar um portal dourado
-O 0 12762 5 12688  colocar um novo portal dourado
-R 0 12795 12763    retirar o corpo de Balder
-O 0 12763 1 12795  colocar um novo corpo de Balder
-R 0 12721 12674    retirar a caixa do passado
-O 0 12674 5 12721  colocar uma nova caixa do passado
-P 1 12675 5 12674  colocar a caixa do presente dentro da caixa do passado
-P 1 12676 5 12675  colocar a caixa do futuro dentro da caixa do presente
-P 1 12680 5 12676  colocar o escudo do destino dentro da caixa do futuro
-R 0 12778 12721    retirar o tesouro da sala do tesouro de Utgard-loki
-O 0 12721 5 12778  colocar um novo tesouro na sala do tesouro de Utgard-loki
-*
-* Ajustar as passagens
-*
-D 0 12624 0 2      fechar e trancar a porta de madeira (lado de fora)
-D 0 12631 2 2      fechar e trancar a porta de madeira (lado de dentro)
-D 0 12639 2 1      fechar e trancar a porta de madeira (lado de fora)
-D 0 12631 0 1      fechar e trancar a porta de madeira (lado de dentro)
-D 0 12642 1 1      fechar e trancar a port�o de madeira (lado de fora)
-D 0 12643 3 1      fechar e trancar a port�o de madeira (lado de dentro)
-D 0 12735 0 2      fechar e trancar a port�o dourado (lado de fora)
-D 0 12739 2 2      fechar e trancar a port�o dourado (lado de dentro)
-D 0 12778 1 2      fechar e trancar a porta de ferro (lado de fora)
-D 0 12779 3 2      fechar e trancar a porta de ferro (lado de dentro)
-D 0 12787 0 1      fechar e trancar a port�o negro (lado de fora)
-D 0 12789 2 1      fechar e trancar a port�o negro  (lado de dentro)
+12600 12899 380 1 abdek 0 0 0 -1 -1
+M 0 12600 1 12750 	(Odin)
+E 1 12600 25 3 	(a runa de Odin)
+E 1 12625 25 16 	(Gungnir, a poderosa lan�a de Odin)
+E 1 12626 25 6 	(o elmo de Odin)
+E 1 12627 25 1 	(Draupnir, o anel m�gico de Odin)
+M 0 12601 1 12751 	(Herda)
+E 1 12663 25 12 	(um belo vestido de fios de ouro)
+E 1 12664 25 13 	(uma bela faixa de seda)
+M 0 12602 1 12747 	(Vili)
+E 1 12665 25 7 	(as perneiras divinas)
+M 0 12603 1 12749 	(Ve)
+E 1 12666 25 6 	(o elmo divino)
+M 0 12604 1 12726 	(Frei)
+E 1 12667 25 12 	(o manto dourado de Frei)
+M 0 12605 1 12821 	(Freyr)
+E 1 12668 25 5 	(a magn�fica armadura solar do Deus Freyr)
+E 1 12601 25 3 	(um amuleto de ouro)
+E 1 12604 25 4 	(um amuleto em forma de esfera)
+M 0 12606 1 12806 	(Thor)
+E 1 12628 25 16 	(Mjollnir, o poderoso martelo de Thor)
+E 1 12629 25 13 	(o cinto da for�a de Thor)
+E 1 12630 25 9 	(as luvas de ferro dos trov�es)
+E 1 12607 25 3 	(um amuleto de espinhos)
+E 1 12608 25 4 	(um amuleto de gravetos)
+M 0 12607 1 12800 	(Tir)
+E 1 12669 25 5 	(a armadura sanguinolenta de Tir)
+E 1 12605 25 3 	(um olho de auroque)
+E 1 12606 25 4 	(um amuleto de a�o)
+M 0 12608 1 12766 	(Loge)
+E 1 12670 25 21 	(a m�scara de Loge, o caluniador)
+E 1 12612 25 0 	(a luz de Kano)
+M 0 12609 1 12742 	(Friga)
+E 1 12671 25 17 	(a semente de Friga)
+E 1 12624 25 3 	(um amuleto de p�rola d'�gua)
+E 1 12617 25 4 	(um amuleto de brotos de b�tula)
+M 0 12610 1 12813 	(Freia)
+E 1 12652 25 6 	(uma bela tiara de prata)
+E 1 12653 25 3 	(o colar de Brisings)
+E 1 12603 25 4 	(um amuleto de diamante)
+M 0 12612 1 12740 	(Iduna)
+G 1 12654 25 -1 	(a caixa da mocidade)
+P 1 12655 25 12654 	(a divina ma�� da mocidade)
+P 1 12655 25 12654 	(a divina ma�� da mocidade)
+P 1 12655 25 12654 	(a divina ma�� da mocidade)
+P 1 12655 25 12654 	(a divina ma�� da mocidade)
+M 0 12613 1 12741 	(Brage)
+E 1 12672 25 10 	(as bra�adeiras de Bragi, o deus da poesia)
+E 1 12609 25 3 	(um amuleto de pedra)
+M 0 12614 1 12709 	(Njord)
+E 1 12673 25 16 	(a serpente dourada de Njord)
+M 0 12615 1 12724 	(Urdur)
+G 1 12677 25 -1 	(a chave do passado)
+M 0 12616 1 12728 	(Verdande)
+G 1 12678 25 -1 	(a chave do presente)
+E 1 12611 25 3 	(um amuleto de bronze)
+M 0 12617 1 12721 	(Skuld)
+G 1 12679 25 -1 	(a chave do futuro)
+E 1 12610 25 3 	(um amuleto de prata)
+M 0 12618 1 12801 	(Trudr)
+E 1 12681 25 3 	(o medalh�o da for�a)
+M 0 12619 1 12802 	(Magni)
+E 1 12683 25 3 	(o medalh�o do poder)
+M 0 12620 1 12803 	(Modi)
+E 1 12682 25 3 	(o medalh�o da intelig�ncia)
+M 0 12621 1 12797 	(Hela)
+E 1 12621 25 3 	(o amuleto de Hela)
+E 1 12661 25 16 	(a Inani��o, a faca da rainha das trevas)
+E 1 12662 25 1 	(a ess�ncia da morte)
+M 0 12622 1 12704 	(Siegfried)
+E 1 12641 25 16 	(Balmung, a espada sagrada de Sigmund)
+E 1 12614 25 3 	(um amuleto de metal vermelho)
+M 0 12623 1 12688 	(Haquem)
+E 1 12684 25 11 	(o escudo de gelo de Haquem)
+M 0 12624 1 12693 	(Alberish)
+E 1 12685 25 1 	(o anel de Nibelungos)
+M 0 12625 1 12714 	(Heindall)
+E 1 12640 25 17 	(Gjall, a trompa da anucia��o)
+E 1 12602 25 3 	(um amuleto de madeira)
+G 1 12730 10 -1 	(a chave do pal�cio)
+M 0 12626 1 12686 	(Fafnir)
+G 1 12656 25 -1 	(uma bolsa de couro de foca)
+P 1 12657 25 12656 	(o lend�rio bracelete de neve)
+P 1 12658 25 12656 	(um amontoado de moedas de ouro)
+E 1 3857 7 17 	(o Card Fafnir)
+M 0 12627 3 12766 	(um gigante de Jotunheim)
+E 1 12622 25 3 	(um amuleto de granizo)
+E 1 12660 25 0 	(a luz das tempestades)
+M 0 12627 3 12782 	(um gigante de Jotunheim)
+E 1 12622 25 3 	(um amuleto de granizo)
+E 1 12660 25 0 	(a luz das tempestades)
+M 0 12627 3 12768 	(um gigante de Jotunheim)
+E 1 12622 25 3 	(um amuleto de granizo)
+E 1 12660 25 0 	(a luz das tempestades)
+M 0 12628 3 12748 	(um Einherjar)
+E 1 12686 25 5 	(a armadura divina do ex�rcito de Odin)
+E 1 12687 25 11 	(o escudo celestial dos Einherjars)
+E 1 12688 25 16 	(a espada da vit�ria)
+M 0 12628 3 12744 	(um Einherjar)
+E 1 12686 25 5 	(a armadura divina do ex�rcito de Odin)
+E 1 12687 25 11 	(o escudo celestial dos Einherjars)
+E 1 12688 25 16 	(a espada da vit�ria)
+M 0 12628 3 12746 	(um Einherjar)
+E 1 12686 25 5 	(a armadura divina do ex�rcito de Odin)
+E 1 12687 25 11 	(o escudo celestial dos Einherjars)
+E 1 12688 25 16 	(a espada da vit�ria)
+M 0 12629 1 12745 	(Brunnhilde)
+E 1 12631 10 6 	(o elmo das virgens)
+E 1 12632 10 11 	(o escudo da aurora)
+E 1 12633 10 16 	(a lan�a do destino)
+E 1 12623 5 3 	(um amuleto em forma de ferradura)
+M 0 12630 1 12621 	(Helmwige)
+E 1 12631 10 6 	(o elmo das virgens)
+E 1 12632 10 11 	(o escudo da aurora)
+E 1 12633 10 16 	(a lan�a do destino)
+M 0 12631 1 12627 	(Ortlinde)
+E 1 12631 10 6 	(o elmo das virgens)
+E 1 12632 10 11 	(o escudo da aurora)
+E 1 12633 10 16 	(a lan�a do destino)
+M 0 12632 1 12675 	(Waltraute)
+E 1 12631 10 6 	(o elmo das virgens)
+E 1 12632 10 11 	(o escudo da aurora)
+E 1 12633 10 16 	(a lan�a do destino)
+M 0 12633 1 12690 	(Rossweisse)
+E 1 12631 10 6 	(o elmo das virgens)
+E 1 12632 10 11 	(o escudo da aurora)
+E 1 12633 10 16 	(a lan�a do destino)
+M 0 12634 1 12701 	(Siegrune)
+E 1 12631 10 6 	(o elmo das virgens)
+E 1 12632 10 11 	(o escudo da aurora)
+E 1 12633 10 16 	(a lan�a do destino)
+M 0 12635 1 12680 	(Grimgerde)
+E 1 12631 10 6 	(o elmo das virgens)
+E 1 12632 10 11 	(o escudo da aurora)
+E 1 12633 10 16 	(a lan�a do destino)
+M 0 12636 1 12615 	(Schwertleite)
+E 1 12631 10 6 	(o elmo das virgens)
+E 1 12632 10 11 	(o escudo da aurora)
+E 1 12633 10 16 	(a lan�a do destino)
+M 0 12637 1 12692 	(Gerhilde)
+E 1 12631 10 6 	(o elmo das virgens)
+E 1 12632 10 11 	(o escudo da aurora)
+E 1 12633 10 16 	(a lan�a do destino)
+M 0 12638 3 12622 	(um sacerdote hofgodi)
+G 1 12689 20 -1 	(uma bolsa de pele de lobo)
+M 0 12638 3 12633 	(um sacerdote hofgodi)
+G 1 12689 20 -1 	(uma bolsa de pele de lobo)
+M 0 12638 3 12888 	(um sacerdote hofgodi)
+G 1 12689 20 -1 	(uma bolsa de pele de lobo)
+M 0 12639 1 12631 	(Eric)
+G 1 12722 1 -1 	(uma chave viking rudimentar de ferro)
+E 1 12636 10 5 	(a sanguinolenta armadura viking)
+E 1 12638 10 14 	(um bracelete de bronze viking)
+E 1 12639 10 8 	(um par de botas viking)
+G 1 12690 25 -1 	(a coroa de ouro de Eric, o rei viking dos cl�s suecos)
+E 1 12691 25 16 	(a espada da coragem)
+M 0 12640 1 12784 	(Anidhogge)
+E 1 12692 25 21 	(a m�scara de Anidhogge)
+M 0 12641 1 12770 	(Gerda)
+E 1 12659 25 20 	(um brinco de cristal)
+E 1 12619 25 3 	(um la�o azul)
+M 0 12642 1 12730 	(Tialfi)
+E 1 12693 25 18 	(as plumas dos ventos)
+M 0 12643 1 12795 	(Hermod)
+E 1 12694 25 5 	(a armadura de Hermod)
+E 1 12615 25 3 	(um amuleto de cascas de teixo)
+M 0 12644 1 12789 	(o atraso)
+E 1 12695 25 11 	(o escudo das trevas de Niffheleim)
+M 0 12645 1 12794 	(a avareza)
+E 1 12696 25 16 	(a foice das trevas de Niffheleim)
+M 0 12646 1 12857 	(Eric, o ruivo)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12647 1 12857 	(Leif Ericsson)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12648 1 12873 	(Aegir)
+E 1 12697 25 16 	(o machado de corais de Aegir)
+M 0 12649 1 12695 	(Zorgerdr)
+E 1 12698 25 3 	(o medalh�o das tempestades)
+M 0 12650 1 12660 	(Irpa)
+E 1 12699 25 17 	(a corneta da neve de Irpa)
+M 0 12651 1 12703 	(Mime)
+E 1 12700 25 9 	(as luvas dos Nibelungos)
+E 1 12613 25 3 	(um amuleto de gelo)
+M 0 12652 1 12696 	(Thryn)
+E 1 12701 25 16 	(a esfera m�gica de Thryn)
+M 0 12653 1 12651 	(Skrymir)
+E 1 12702 25 19 	(a argola de ouro do lend�rio Ymir)
+M 0 12654 1 12780 	(Utgard-loki)
+E 1 12703 25 21 	(as mil faces da ilus�o)
+G 1 12737 10 -1 	(uma pequena chave de bronze)
+M 0 12655 1 12774 	(Logi)
+E 1 12704 25 16 	(o arco flamejante de Logi)
+M 0 12656 1 12781 	(Angerbode)
+E 1 12705 25 17 	(a pedra das vis�es de Angerbode)
+M 0 12657 1 12704 	(Greyfell)
+G 1 12706 25 -1 	(a ferradura de Greyfell)
+M 0 12658 1 12750 	(Hugin)
+G 1 12707 25 -1 	(um grande peda�o de carne de javali)
+M 0 12659 1 12750 	(Munin)
+G 1 12707 25 -1 	(um grande peda�o de carne de javali)
+M 0 12660 1 12750 	(Geri)
+G 1 12707 25 -1 	(um grande peda�o de carne de javali)
+M 0 12661 1 12750 	(Freki)
+G 1 12707 25 -1 	(um grande peda�o de carne de javali)
+M 0 12662 1 12729 	(Schrinnir)
+G 1 12707 25 -1 	(um grande peda�o de carne de javali)
+M 0 12663 1 12729 	(Heidrum)
+M 0 12664 1 12805 	(Fenris)
+E 1 12708 25 17 	(Gleipnir, a corrente de seda)
+M 0 12665 1 12752 	(Sleipnir)
+G 1 12709 25 -1 	(a ferradura de Sleipnir)
+M 0 12666 1 12814 	(Gulltopp)
+G 1 12710 25 -1 	(a ferradura de Gulltopp)
+M 0 12667 1 12700 	(Jormungand)
+G 1 12711 25 -1 	(uma escama da serpente de Midgaard)
+M 0 12669 1 12741 	(Gullinkambi)
+M 0 12670 1 12706 	(Nidhogg)
+E 1 12712 25 0 	(o olho flamejante de Nidhogg)
+E 1 3853 1 17 	(o Card Nidhogg)
+M 0 12671 1 12706 	(a águia guardiã de Yggdrasil)
+E 1 12713 25 18 	(as asas da guardi� de Yggdrasil)
+M 0 12672 1 12806 	(Tanngnost)
+M 0 12673 1 12806 	(Tanngrisni)
+M 0 12674 1 12706 	(Ratatosk)
+M 0 12675 1 12837 	(Dvalin)
+E 1 12648 10 16 	(um machado das trevas)
+E 1 12649 10 9 	(um par de luvas rasgadas)
+E 1 12650 10 12 	(um manto negro rasgado)
+E 1 12651 10 6 	(o elmo das trevas de Niffheleim)
+M 0 12676 1 12822 	(Dain)
+E 1 12647 25 3 	(o medalh�o da imortalidade)
+E 1 12644 10 12 	(um manto transparente)
+E 1 12645 10 13 	(o cinto luminoso)
+E 1 12646 10 16 	(o arco do sol)
+M 0 12677 3 12786 	(uma alma de Niffheleim)
+M 0 12677 3 12791 	(uma alma de Niffheleim)
+M 0 12677 3 12793 	(uma alma de Niffheleim)
+M 0 12678 7 12626 	(um viking sueco)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12678 7 12634 	(um viking sueco)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12678 7 12654 	(um viking sueco)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12678 7 12645 	(um viking sueco)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12678 7 12656 	(um viking sueco)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12678 7 12642 	(um viking sueco)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12678 7 12642 	(um viking sueco)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12679 9 12614 	(um viking norueguês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12679 9 12623 	(um viking norueguês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12679 9 12622 	(um viking norueguês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12679 9 12620 	(um viking norueguês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12679 9 12629 	(um viking norueguês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12679 9 12674 	(um viking norueguês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12679 9 12678 	(um viking norueguês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12679 9 12678 	(um viking norueguês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12679 9 12665 	(um viking norueguês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12680 10 12881 	(um viking islandês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12680 10 12897 	(um viking islandês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12680 10 12897 	(um viking islandês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12680 10 12897 	(um viking islandês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12680 10 12883 	(um viking islandês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12680 10 12894 	(um viking islandês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12680 10 12861 	(um viking islandês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12680 10 12861 	(um viking islandês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12680 10 12862 	(um viking islandês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12680 10 12864 	(um viking islandês)
+E 1 12620 60 3 	(uma esfera de sangue)
+E 1 12634 60 6 	(um elmo viking)
+E 1 12635 60 16 	(uma espada de batalha viking)
+E 1 12636 60 5 	(a sanguinolenta armadura viking)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12681 4 12631 	(uma viking sueca)
+E 1 12637 17 12 	(um velho vestido)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12681 4 12626 	(uma viking sueca)
+E 1 12637 17 12 	(um velho vestido)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12681 4 12633 	(uma viking sueca)
+E 1 12637 17 12 	(um velho vestido)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12681 4 12654 	(uma viking sueca)
+E 1 12637 17 12 	(um velho vestido)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12682 6 12623 	(uma viking norueguesa)
+E 1 12637 17 12 	(um velho vestido)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12682 6 12622 	(uma viking norueguesa)
+E 1 12637 17 12 	(um velho vestido)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12682 6 12621 	(uma viking norueguesa)
+E 1 12637 17 12 	(um velho vestido)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12682 6 12674 	(uma viking norueguesa)
+E 1 12637 17 12 	(um velho vestido)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12682 6 12679 	(uma viking norueguesa)
+E 1 12637 17 12 	(um velho vestido)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12682 6 12665 	(uma viking norueguesa)
+E 1 12637 17 12 	(um velho vestido)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12683 7 12861 	(uma viking islandesa)
+E 1 12637 17 12 	(um velho vestido)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12683 7 12865 	(uma viking islandesa)
+E 1 12637 17 12 	(um velho vestido)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12683 7 12857 	(uma viking islandesa)
+E 1 12637 17 12 	(um velho vestido)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12683 7 12894 	(uma viking islandesa)
+E 1 12637 17 12 	(um velho vestido)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12683 7 12897 	(uma viking islandesa)
+E 1 12637 17 12 	(um velho vestido)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12683 7 12886 	(uma viking islandesa)
+E 1 12637 17 12 	(um velho vestido)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12683 7 12889 	(uma viking islandesa)
+E 1 12637 17 12 	(um velho vestido)
+E 1 12638 60 14 	(um bracelete de bronze viking)
+E 1 12639 60 8 	(um par de botas viking)
+M 0 12684 15 12622 	(uma criança viking)
+M 0 12684 15 12623 	(uma criança viking)
+M 0 12684 15 12621 	(uma criança viking)
+M 0 12684 15 12626 	(uma criança viking)
+M 0 12684 15 12644 	(uma criança viking)
+M 0 12684 15 12654 	(uma criança viking)
+M 0 12684 15 12674 	(uma criança viking)
+M 0 12684 15 12665 	(uma criança viking)
+M 0 12684 15 12678 	(uma criança viking)
+M 0 12684 15 12861 	(uma criança viking)
+M 0 12684 15 12866 	(uma criança viking)
+M 0 12684 15 12887 	(uma criança viking)
+M 0 12684 15 12885 	(uma criança viking)
+M 0 12684 15 12888 	(uma criança viking)
+M 0 12684 15 12894 	(uma criança viking)
+M 0 12685 2 12649 	(um cavalo selvagem)
+M 0 12685 2 12664 	(um cavalo selvagem)
+M 0 12686 6 12602 	(um navio de guerra viking)
+M 0 12686 6 12609 	(um navio de guerra viking)
+M 0 12686 6 12699 	(um navio de guerra viking)
+M 0 12686 6 12685 	(um navio de guerra viking)
+M 0 12686 6 12879 	(um navio de guerra viking)
+M 0 12686 6 12873 	(um navio de guerra viking)
+M 0 12687 4 12819 	(um belo elfo luminoso)
+E 1 12644 10 12 	(um manto transparente)
+E 1 12646 10 16 	(o arco do sol)
+M 0 12687 4 12818 	(um belo elfo luminoso)
+E 1 12644 10 12 	(um manto transparente)
+E 1 12646 10 16 	(o arco do sol)
+M 0 12687 4 12820 	(um belo elfo luminoso)
+E 1 12644 10 12 	(um manto transparente)
+E 1 12646 10 16 	(o arco do sol)
+M 0 12687 4 12824 	(um belo elfo luminoso)
+E 1 12644 10 12 	(um manto transparente)
+E 1 12646 10 16 	(o arco do sol)
+M 0 12688 2 12823 	(uma linda elfa luminosa)
+E 1 12642 10 12 	(um belo vestido transparente)
+E 1 12643 10 20 	(o brinco da luz)
+M 0 12688 2 12824 	(uma linda elfa luminosa)
+E 1 12642 10 12 	(um belo vestido transparente)
+E 1 12643 10 20 	(o brinco da luz)
+M 0 12689 3 12828 	(um anão do subterrâneo)
+E 1 12649 10 9 	(um par de luvas rasgadas)
+E 1 12650 10 12 	(um manto negro rasgado)
+M 0 12689 3 12830 	(um anão do subterrâneo)
+E 1 12649 10 9 	(um par de luvas rasgadas)
+E 1 12650 10 12 	(um manto negro rasgado)
+M 0 12689 3 12831 	(um anão do subterrâneo)
+E 1 12649 10 9 	(um par de luvas rasgadas)
+E 1 12650 10 12 	(um manto negro rasgado)
+M 0 12690 3 12828 	(uma anã do subterrâneo)
+E 1 12649 10 9 	(um par de luvas rasgadas)
+E 1 12650 10 12 	(um manto negro rasgado)
+M 0 12690 3 12830 	(uma anã do subterrâneo)
+E 1 12649 10 9 	(um par de luvas rasgadas)
+E 1 12650 10 12 	(um manto negro rasgado)
+M 0 12690 3 12831 	(uma anã do subterrâneo)
+E 1 12649 10 9 	(um par de luvas rasgadas)
+E 1 12650 10 12 	(um manto negro rasgado)
+M 0 12691 2 12676 	(uma rena)
+G 1 12749 25 -1 	(um pequeno peda�o de carne de rena)
+M 0 12691 2 12666 	(uma rena)
+G 1 12749 25 -1 	(um pequeno peda�o de carne de rena)
+M 0 12692 3 12637 	(uma foca)
+G 1 12747 25 -1 	(um peda�o de carne de foca)
+M 0 12692 3 12667 	(uma foca)
+G 1 12747 25 -1 	(um peda�o de carne de foca)
+M 0 12692 3 12871 	(uma foca)
+G 1 12747 25 -1 	(um peda�o de carne de foca)
+M 0 12693 2 12661 	(um cisne)
+M 0 12693 2 12868 	(um cisne)
+M 0 12694 1 12653 	(um urso)
+M 0 12695 1 12659 	(um alce)
+M 0 12696 2 12689 	(um lobo)
+M 0 12696 2 12846 	(um lobo)
+M 0 12697 2 12842 	(uma ave marinha)
+M 0 12697 2 12646 	(uma ave marinha)
+M 0 12698 2 12732 	(um berserk)
+E 1 12714 25 7 	(as perneiras da f�ria)
+M 0 12698 2 12738 	(um berserk)
+E 1 12714 25 7 	(as perneiras da f�ria)
+M 0 12699 1 12806 	(Sif)
+E 1 12715 10 17 	(um punhado de fios de cabelo de ouro)
+R 0 12611 12716 -1 	(uma estatua de bronze de um viking noruegu�s)
+O 0 12716 1 12611 	(uma estatua de bronze de um viking noruegu�s)
+R 0 12614 12717 -1 	(uma bela estatua do senhor dos trov�es)
+O 0 12717 3 12614 	(uma bela estatua do senhor dos trov�es)
+R 0 12862 12717 -1 	(uma bela estatua do senhor dos trov�es)
+O 0 12717 3 12862 	(uma bela estatua do senhor dos trov�es)
+R 0 12888 12717 -1 	(uma bela estatua do senhor dos trov�es)
+O 0 12717 3 12888 	(uma bela estatua do senhor dos trov�es)
+R 0 12618 12718 -1 	(uma estatua de bronze de um viking sueco)
+O 0 12718 1 12618 	(uma estatua de bronze de um viking sueco)
+R 0 12623 12719 -1 	(uma cadeira de madeira)
+O 0 12719 1 12623 	(uma cadeira de madeira)
+R 0 12623 12720 -1 	(uma longa mesa de madeira)
+O 0 12720 4 12623 	(uma longa mesa de madeira)
+R 0 12654 12720 -1 	(uma longa mesa de madeira)
+O 0 12720 4 12654 	(uma longa mesa de madeira)
+R 0 12861 12720 -1 	(uma longa mesa de madeira)
+O 0 12720 4 12861 	(uma longa mesa de madeira)
+R 0 12894 12720 -1 	(uma longa mesa de madeira)
+O 0 12720 4 12894 	(uma longa mesa de madeira)
+R 0 12624 12721 -1 	(um grande tesouro de moedas de ouro)
+O 0 12721 1 12624 	(um grande tesouro de moedas de ouro)
+R 0 12631 12723 -1 	(o trono de ouro do rei Eric)
+O 0 12723 1 12631 	(o trono de ouro do rei Eric)
+R 0 12633 12724 -1 	(uma monumental estatua do Deus todo poderoso Odin)
+O 0 12724 1 12633 	(uma monumental estatua do Deus todo poderoso Odin)
+R 0 12640 12725 -1 	(a pedra dos sacrif�cios)
+O 0 12725 1 12640 	(a pedra dos sacrif�cios)
+R 0 12644 12726 -1 	(uma grande pedra para jogos de arremessos)
+O 0 12726 1 12644 	(uma grande pedra para jogos de arremessos)
+R 0 12626 12727 -1 	(uma cama de feno)
+O 0 12727 9 12626 	(uma cama de feno)
+R 0 12665 12727 -1 	(uma cama de feno)
+O 0 12727 9 12665 	(uma cama de feno)
+R 0 12858 12727 -1 	(uma cama de feno)
+O 0 12727 9 12858 	(uma cama de feno)
+R 0 12859 12727 -1 	(uma cama de feno)
+O 0 12727 9 12859 	(uma cama de feno)
+R 0 12865 12727 -1 	(uma cama de feno)
+O 0 12727 9 12865 	(uma cama de feno)
+R 0 12866 12727 -1 	(uma cama de feno)
+O 0 12727 9 12866 	(uma cama de feno)
+R 0 12881 12727 -1 	(uma cama de feno)
+O 0 12727 9 12881 	(uma cama de feno)
+R 0 12886 12727 -1 	(uma cama de feno)
+O 0 12727 9 12886 	(uma cama de feno)
+R 0 12891 12727 -1 	(uma cama de feno)
+O 0 12727 9 12891 	(uma cama de feno)
+R 0 12626 12728 -1 	(uma mesa rudimentar de madeira)
+O 0 12728 6 12626 	(uma mesa rudimentar de madeira)
+R 0 12665 12728 -1 	(uma mesa rudimentar de madeira)
+O 0 12728 6 12665 	(uma mesa rudimentar de madeira)
+R 0 12858 12728 -1 	(uma mesa rudimentar de madeira)
+O 0 12728 6 12858 	(uma mesa rudimentar de madeira)
+R 0 12859 12728 -1 	(uma mesa rudimentar de madeira)
+O 0 12728 6 12859 	(uma mesa rudimentar de madeira)
+R 0 12865 12728 -1 	(uma mesa rudimentar de madeira)
+O 0 12728 6 12865 	(uma mesa rudimentar de madeira)
+R 0 12866 12728 -1 	(uma mesa rudimentar de madeira)
+O 0 12728 6 12866 	(uma mesa rudimentar de madeira)
+R 0 12662 12729 -1 	(um grande navio de batalha viking em constru��o)
+O 0 12729 1 12662 	(um grande navio de batalha viking em constru��o)
+R 0 12745 12731 -1 	(uma estatua de um her�i Einherjar)
+O 0 12731 1 12745 	(uma estatua de um her�i Einherjar)
+R 0 12746 12732 -1 	(uma t�bua dourada)
+O 0 12732 1 12746 	(uma t�bua dourada)
+R 0 12750 12733 -1 	(o magn�fico trono de Odin)
+O 0 12733 1 12750 	(o magn�fico trono de Odin)
+R 0 12759 12734 -1 	(o po�o de Ymir)
+O 0 12734 1 12759 	(o po�o de Ymir)
+R 0 12772 12735 -1 	(uma gigantesca estatua)
+O 0 12735 1 12772 	(uma gigantesca estatua)
+R 0 12775 12736 -1 	(Ymir, a lenda da cria��o)
+O 0 12736 1 12775 	(Ymir, a lenda da cria��o)
+R 0 12797 12738 -1 	(o trono de Hela)
+O 0 12738 1 12797 	(o trono de Hela)
+R 0 12715 12739 -1 	(a fonte de Urd)
+O 0 12739 1 12715 	(a fonte de Urd)
+R 0 12785 12740 -1 	(Hvergelnir, a fonte de Niffleheim)
+O 0 12740 1 12785 	(Hvergelnir, a fonte de Niffleheim)
+R 0 12812 12741 -1 	(as rochas do santu�rio da alegria)
+O 0 12741 1 12812 	(as rochas do santu�rio da alegria)
+R 0 12813 12742 -1 	(as flores do pal�cio de Sessrumir)
+O 0 12742 1 12813 	(as flores do pal�cio de Sessrumir)
+R 0 12821 12743 -1 	(o sol de Alfheim)
+O 0 12743 1 12821 	(o sol de Alfheim)
+R 0 12788 12744 -1 	(um an�o do subterr�neo petrificado)
+O 0 12744 1 12788 	(um an�o do subterr�neo petrificado)
+R 0 12830 12745 -1 	(uma grande fogueira)
+O 0 12745 1 12830 	(uma grande fogueira)
+R 0 12743 12746 -1 	(algumas folhas de visco)
+O 0 12746 1 12743 	(algumas folhas de visco)
+R 0 12744 12751 -1 	(uma bela garrafa de hidromel)
+O 0 12751 1 12744 	(uma bela garrafa de hidromel)
+R 0 12744 12750 -1 	(um belo c�lice de prata)
+O 0 12750 1 12744 	(um belo c�lice de prata)
+R 0 12702 12754 -1 	(um portal em forma de c�rculo)
+O 0 12754 4 12702 	(um portal em forma de c�rculo)
+R 0 12694 12754 -1 	(um portal em forma de c�rculo)
+O 0 12754 4 12694 	(um portal em forma de c�rculo)
+R 0 12687 12754 -1 	(um portal em forma de c�rculo)
+O 0 12754 4 12687 	(um portal em forma de c�rculo)
+R 0 12703 12754 -1 	(um portal em forma de c�rculo)
+O 0 12754 4 12703 	(um portal em forma de c�rculo)
+R 0 12702 12755 -1 	(um portal em forma de c�rculo)
+O 0 12755 4 12702 	(um portal em forma de c�rculo)
+R 0 12704 12755 -1 	(um portal em forma de c�rculo)
+O 0 12755 4 12704 	(um portal em forma de c�rculo)
+R 0 12693 12755 -1 	(um portal em forma de c�rculo)
+O 0 12755 4 12693 	(um portal em forma de c�rculo)
+R 0 12687 12755 -1 	(um portal em forma de c�rculo)
+O 0 12755 4 12687 	(um portal em forma de c�rculo)
+R 0 12702 12756 -1 	(um portal em forma de c�rculo)
+O 0 12756 3 12702 	(um portal em forma de c�rculo)
+R 0 12692 12756 -1 	(um portal em forma de c�rculo)
+O 0 12756 3 12692 	(um portal em forma de c�rculo)
+R 0 12687 12756 -1 	(um portal em forma de c�rculo)
+O 0 12756 3 12687 	(um portal em forma de c�rculo)
+R 0 12692 12757 -1 	(um portal em forma de c�rculo)
+O 0 12757 1 12692 	(um portal em forma de c�rculo)
+R 0 12694 12758 -1 	(um portal em forma de c�rculo)
+O 0 12758 1 12694 	(um portal em forma de c�rculo)
+R 0 12703 12759 -1 	(um portal em forma de c�rculo)
+O 0 12759 2 12703 	(um portal em forma de c�rculo)
+R 0 12704 12759 -1 	(um portal em forma de c�rculo)
+O 0 12759 2 12704 	(um portal em forma de c�rculo)
+R 0 12686 12760 -1 	(um portal em forma de c�rculo)
+O 0 12760 3 12686 	(um portal em forma de c�rculo)
+R 0 12688 12760 -1 	(um portal em forma de c�rculo)
+O 0 12760 3 12688 	(um portal em forma de c�rculo)
+R 0 12704 12760 -1 	(um portal em forma de c�rculo)
+O 0 12760 3 12704 	(um portal em forma de c�rculo)
+R 0 12703 12761 -1 	(um portal em forma de c�rculo)
+O 0 12761 4 12703 	(um portal em forma de c�rculo)
+R 0 12693 12761 -1 	(um portal em forma de c�rculo)
+O 0 12761 4 12693 	(um portal em forma de c�rculo)
+R 0 12686 12761 -1 	(um portal em forma de c�rculo)
+O 0 12761 4 12686 	(um portal em forma de c�rculo)
+R 0 12688 12761 -1 	(um portal em forma de c�rculo)
+O 0 12761 4 12688 	(um portal em forma de c�rculo)
+R 0 12692 12762 -1 	(um portal em forma de c�rculo)
+O 0 12762 5 12692 	(um portal em forma de c�rculo)
+R 0 12693 12762 -1 	(um portal em forma de c�rculo)
+O 0 12762 5 12693 	(um portal em forma de c�rculo)
+R 0 12694 12762 -1 	(um portal em forma de c�rculo)
+O 0 12762 5 12694 	(um portal em forma de c�rculo)
+R 0 12686 12762 -1 	(um portal em forma de c�rculo)
+O 0 12762 5 12686 	(um portal em forma de c�rculo)
+R 0 12688 12762 -1 	(um portal em forma de c�rculo)
+O 0 12762 5 12688 	(um portal em forma de c�rculo)
+R 0 12795 12763 -1 	(o corpo do amado Balder)
+O 0 12763 1 12795 	(o corpo do amado Balder)
+R 0 12721 12674 -1 	(a caixa do passado)
+O 0 12674 5 12721 	(a caixa do passado)
+P 1 12675 5 12674 	(a caixa do presente)
+P 1 12676 5 12675 	(a caixa do futuro)
+P 1 12680 5 12676 	(o escudo do destino)
+R 0 12778 12721 -1 	(um grande tesouro de moedas de ouro)
+O 0 12721 5 12778 	(um grande tesouro de moedas de ouro)
+D 0 12624 0 2 	(A Sala das Riquezas Vikings)
+D 0 12631 2 2 	(O Sal�o Real de Eric)
+D 0 12639 2 1 	(O Aposento de Eric)
+D 0 12631 0 1 	(O Sal�o Real de Eric)
+D 0 12642 1 1 	(A Sala da Guarda da Fortaleza)
+D 0 12643 3 1 	(A Entrada da Fortaleza Viking)
+D 0 12735 0 2 	(A Entrada do Espl�ndido Valhala)
+D 0 12739 2 2 	(O Divino Pal�cio Valhala)
+D 0 12778 1 2 	(A Sala do Tesouro de Utgard-Loki)
+D 0 12779 3 2 	(O Pal�cio de Utgard-Loki)
+D 0 12787 0 1 	(As Trevas de Niffleheim)
+D 0 12789 2 1 	(Elvinder, o Pal�cio de Hela)
 S
+$

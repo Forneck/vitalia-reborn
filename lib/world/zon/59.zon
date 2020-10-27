@@ -1,123 +1,122 @@
 #59
 Vitalia~
 O Altar de Sacrifícios de Raantra~
-5900 5999 90 1 a 0 0 0 -1 -1
--1
-M 0 5902 1 5900
-E 1 5916 20 3
-D 0 5900 3 1
-M 0 5917 1 5922
-G 1 5929 20 -1
-D 0 5922 1 1
-D 0 5927 2 1
-M 0 5913 1 5927
-G 1 5927 20 -1
-E 1 5928 20 1
-M 0 5916 1 5906
-E 1 5926 20 12
-E 1 5925 20 6
-E 1 5924 20 16
-R 0 5906 5902
-O 0 5902 1 5906
-R 0 5957 5909
-O 0 5909 2 5957
-M 0 5918 3 5957
-M 0 5909 1 5957
-E 1 5923 20 17
-M 0 5910 1 5981
-E 1 5922 20 16
-E 1 5921 20 3
-D 0 5981 2 1
-M 0 5906 1 5982
-G 1 5920 20 -1
-D 0 5982 0 1
-M 0 5905 2 5988
-G 1 5919 20 -1
-M 0 5905 2 5989
-G 1 5919 20 -1
-M 0 5908 4 5945
-M 0 5904 3 5945
-E 1 5918 20 3
-M 0 5904 3 5946
-E 1 5918 20 3
-M 0 5918 3 5963
-M 0 5918 3 5963
-R 0 5963 5909
-O 0 5909 2 5963
-M 0 5904 3 5963
-E 1 5918 20 3
-R 0 5901 5900
-O 0 5900 1 5901
-M 0 5903 1 5901
-G 1 5917 20 -1
-R 0 5951 5903
-O 0 5903 1 5951
-R 0 5951 5904
-O 0 5904 1 5951
-M 0 5900 1 5951
-E 1 5913 20 1
-E 1 5912 20 12
-E 1 5911 20 16
-M 0 5901 2 5951
-E 1 5914 20 5
-E 1 5915 20 17
-M 0 5901 2 5951
-E 1 5914 20 5
-E 1 5915 20 17
-O 0 5910 1 5921
-D 0 5911 3 1
-M 0 5919 1 5911
-M 0 5920 1 5911
-M 0 5908 4 5919
-D 0 5919 3 1
-M 0 5915 5 5999
-M 0 5915 5 5947
-M 0 5915 5 5912
-D 0 5912 3 1
-M 0 5915 5 5904
-D 0 5904 1 1
-R 0 5904 5901
-O 0 5901 1 5904
-M 0 5915 5 5924
-M 0 5914 4 5980
-M 0 5914 4 5992
-M 0 5914 4 5939
-M 0 5914 4 5929
-D 0 5929 1 1
-M 0 5912 3 5962
-M 0 5912 3 5948
-M 0 5912 3 5955
-O 0 5908 1 5990
-M 0 5911 2 5990
-M 0 5908 4 5970
-M 0 5908 4 5902
-D 0 5902 2 1
-M 0 5907 1 5910
-D 0 5910 3 1
-O 0 5907 1 5910
-O 0 5905 1 5975
-P 1 5906 20 5905
-D 0 5967 0 1
-D 0 5967 3 1
-D 0 5968 2 1
-D 0 5960 1 1
-D 0 5931 0 1
-D 0 5931 1 1
-D 0 5932 3 1
-D 0 5930 3 1
-D 0 5925 0 1
-D 0 5905 3 1
-D 0 5920 1 1
-D 0 5913 1 1
-D 0 5918 3 1
-D 0 5914 1 1
-D 0 5917 3 1
-D 0 5916 3 0
-D 0 5915 1 0
-D 0 5907 1 1
-D 0 5907 3 1
-D 0 5908 1 1
-D 0 5909 1 1
-D 0 5999 5 1
+5900 5999 90 1 ak 0 0 0 -1 -1
+M 0 5902 1 5900 	(um corcunda)
+E 1 5916 20 3 	(alguns pedaços de couro rasgado)
+D 0 5900 3 1 	(A Entrada Para o Manic�mio)
+M 0 5917 1 5922 	(um aventureiro)
+G 1 5929 20 -1 	(uma mochila de viajante)
+D 0 5922 1 1 	(O Escrit�rio Administrativo)
+D 0 5927 2 1 	(Um Velho Escrit�rio)
+M 0 5913 1 5927 	(uma seguidora escondida)
+G 1 5927 20 -1 	(um frasco de sangue negro)
+E 1 5928 20 1 	(um anel vermelho-sangue)
+M 0 5916 1 5906 	(um entorpecido Cavaleiro da Morte)
+E 1 5926 20 12 	(uma capa preta)
+E 1 5925 20 6 	(um capacete enegrecido)
+E 1 5924 20 16 	(uma espada de bronze enegrecido)
+R 0 5906 5902 -1 	(um trapo apodrecido)
+O 0 5902 1 5906 	(um trapo apodrecido)
+R 0 5957 5909 -1 	(um cadáver fresco)
+O 0 5909 2 5957 	(um cadáver fresco)
+M 0 5918 3 5957 	(um humanóide ensanguentado)
+M 0 5909 1 5957 	(Gunter)
+E 1 5923 20 17 	(a palavra de Raantra)
+M 0 5910 1 5981 	(um carrasco)
+E 1 5922 20 16 	(um chicote negro de couro)
+E 1 5921 20 3 	(o couro das costas de alguém)
+D 0 5981 2 1 	(O Almoxarifado)
+M 0 5906 1 5982 	(uma criança apavorada)
+G 1 5920 20 -1 	(um coração humano)
+D 0 5982 0 1 	(O Quarto Gelado)
+M 0 5905 2 5988 	(um mendigo)
+G 1 5919 20 -1 	(uma manta esfarrapada)
+M 0 5905 2 5989 	(um mendigo)
+G 1 5919 20 -1 	(uma manta esfarrapada)
+M 0 5908 4 5945 	(um rato)
+M 0 5904 3 5945 	(uma mulher)
+E 1 5918 20 3 	(um imundo pedaço de couro)
+M 0 5904 3 5946 	(uma mulher)
+E 1 5918 20 3 	(um imundo pedaço de couro)
+M 0 5918 3 5963 	(um humanóide ensanguentado)
+M 0 5918 3 5963 	(um humanóide ensanguentado)
+R 0 5963 5909 -1 	(um cadáver fresco)
+O 0 5909 2 5963 	(um cadáver fresco)
+M 0 5904 3 5963 	(uma mulher)
+E 1 5918 20 3 	(um imundo pedaço de couro)
+R 0 5901 5900 -1 	(uma velha fonte rachada)
+O 0 5900 1 5901 	(uma velha fonte rachada)
+M 0 5903 1 5901 	(um elfo enjoado)
+G 1 5917 20 -1 	(uma poça de vômito)
+R 0 5951 5903 -1 	(uma poça de sangue)
+O 0 5903 1 5951 	(uma poça de sangue)
+R 0 5951 5904 -1 	(um altar negro banhado com sangue)
+O 0 5904 1 5951 	(um altar negro banhado com sangue)
+M 0 5900 1 5951 	(Raantra)
+E 1 5913 20 1 	(o anel do encantamento)
+E 1 5912 20 12 	(um manto sujo e ensangüentado)
+E 1 5911 20 16 	(uma profana adaga negra)
+M 0 5901 2 5951 	(um seguidor)
+E 1 5914 20 5 	(uma jaqueta suja)
+E 1 5915 20 17 	(uma poça de sangue inocente)
+M 0 5901 2 5951 	(um seguidor)
+E 1 5914 20 5 	(uma jaqueta suja)
+E 1 5915 20 17 	(uma poça de sangue inocente)
+O 0 5910 1 5921 	(um corpo apodrecido)
+D 0 5911 3 1 	(A Sala de Aula)
+M 0 5919 1 5911 	(um seguidor)
+M 0 5920 1 5911 	(um garoto em pânico)
+M 0 5908 4 5919 	(um rato)
+D 0 5919 3 1 	(O Fim do Corredor)
+M 0 5915 5 5999 	(uma tarântula)
+M 0 5915 5 5947 	(uma tarântula)
+M 0 5915 5 5912 	(uma tarântula)
+D 0 5912 3 1 	(A Sala de Aula)
+M 0 5915 5 5904 	(uma tarântula)
+D 0 5904 1 1 	(Pelo Manic�mio)
+R 0 5904 5901 -1 	(uma taça despedaçada)
+O 0 5901 1 5904 	(uma taça despedaçada)
+M 0 5915 5 5924 	(uma tarântula)
+M 0 5914 4 5980 	(um morcego marrom)
+M 0 5914 4 5992 	(um morcego marrom)
+M 0 5914 4 5939 	(um morcego marrom)
+M 0 5914 4 5929 	(um morcego marrom)
+D 0 5929 1 1 	(O Escrit�rio)
+M 0 5912 3 5962 	(um investigador)
+M 0 5912 3 5948 	(um investigador)
+M 0 5912 3 5955 	(um investigador)
+O 0 5908 1 5990 	(um barril com fogo)
+M 0 5911 2 5990 	(um homem esfarrapado)
+M 0 5908 4 5970 	(um rato)
+M 0 5908 4 5902 	(um rato)
+D 0 5902 2 1 	(Pelo Manic�mio)
+M 0 5907 1 5910 	(um homem em prantos)
+D 0 5910 3 1 	(A Sala de Aula)
+O 0 5907 1 5910 	(o cadáver de um homem)
+O 0 5905 1 5975 	(uma velha estante)
+P 1 5906 20 5905 	(um livro manchado com sangue)
+D 0 5967 0 1 	(Na Entrada da Capela)
+D 0 5967 3 1 	(Na Entrada da Capela)
+D 0 5968 2 1 	(A Chapelaria)
+D 0 5960 1 1 	(A Entrada da Capela)
+D 0 5931 0 1 	(A Recep��o)
+D 0 5931 1 1 	(A Recep��o)
+D 0 5932 3 1 	(A Sala de Estar)
+D 0 5930 3 1 	(O Fim do Corredor)
+D 0 5925 0 1 	(No Topo da Escada Caindo aos Peda�os)
+D 0 5905 3 1 	(Pelo Manic�mio)
+D 0 5920 1 1 	(O Corredor Interno)
+D 0 5913 1 1 	(O Corredor Superior)
+D 0 5918 3 1 	(A Sala de Aula)
+D 0 5914 1 1 	(O Corredor Superior)
+D 0 5917 3 1 	(A Sala de Aula)
+D 0 5916 3 0 	(A Sala de Aula)
+D 0 5915 1 0 	(O Corredor Interno)
+D 0 5907 1 1 	(A C�mara Interna do Manic�mio)
+D 0 5907 3 1 	(A C�mara Interna do Manic�mio)
+D 0 5908 1 1 	(A C�mara Interna da Academia)
+D 0 5909 1 1 	(A C�mara Interna da Academia)
+D 0 5999 5 1 	(Nas Ru�nas)
 S
 $

@@ -1,137 +1,107 @@
 #290
 Vitalia~
 A Torre do Barão de Cailveh~
-29000 29099 190 1 b 0 0 0 -1 -1
--1
-*
-M 0 29037 1 29049           alfaiate
-M 0 29032 1 29054           Mochaaska
-M 0 29033 1 29052           propriet�ria da loja
-M 0 29029 1 29045           Salaylia
-M 0 29031 1 29042           farmac�utico
-*
-M 0 29036 2 29038           garotinha
-*
-M 0 29035 3 29040           cidad�o
-M 0 29035 3 29050           cidad�o
-*
-M 0 29034 1 29047           ministro da cidade
-E 1 29015 15 13                           cintur�o branco
-*
-M 0 29030 1 29044           dono da ferraria 
-M 0 29028 1 29046           Calintra    
-M 0 29027 1 29048           bela mulher 
-M 0 29026 1 29048           elegante cavalheiro
-M 0 29025 1 29048           homem          
-M 0 29024 1 29048           contador de hist�rias      
-M 0 29023 1 29048           balconista          
-M 0 29022 1 29027           professora     
-M 0 29021 1 29028           homem     
-*
-D 0 29028 1 1 100
-M 0 29020 1 29024           dona da casa
-*
-D 0 29024 2 1
-M 0 29019 1 29035           velho homem
-*
-D 0 29035 3 1
-M 0 29018 1 29036           lenhador desocupado     
-*
-D 0 29036 3 1
-M 0 29017 1 29032           fazendeiro        
-*
-D 0 29032 1 1
-M 0 29016 1 29037           dona de casa 
-*
-D 0 29037 3 1
-M 0 29015 3 29017           vaca   
-M 0 29015 3 29018           vaca   
-M 0 29015 3 29016           vaca        
-*
-D 0 29016 0 1
-M 0 29014 1 29015           colono da fazenda          
-*
-D 0 29015 2 1
-M 0 29013 1 29061           primo visitante      
-E 1 29013 15 7                              par de perneiras desgastadas
-E 1 29014 15 13                            cinto manchado
-*
-D 0 29061 2 1
-M 0 29012 1 29073           empregada        
-*
-M 0 29008 1 29056           arrogante propriet�ria                   
-E 1 29010 20 19                             diamante cintilante                              
-M 0 29007 1 29056           humilde peticion�rio   
-*
-D 0 29056 3 1
-M 0 29011 2 29014           seguran�a do quarto               
-E 1 29012 15 11                             escudo de face prateada
-*
-M 0 29011 2 29014           seguran�a do quarto            
-E 1 29011 15 16                             enorme clava
-*
-D 0 29014 1 1
-M 0 29010 1 29077           assistente              
-*
-D 0 29077 2 2
-M 0 29009 1 29057           fazendeiro          
-*
-M 0 29006 1 29057           elegante homem          
-G 1 29009 15 0
-*
-M 0 29002 1 29057           Gilzaan           
-E 1 29006 15 2                               anel prateado de Cailveh
-*
-D 0 29057 0 1
-M 0 29005 1 29060           servo         
-*
-D 0 29060 2 1
-M 0 29004 1 29080           astr�nomo da corte       
-*
-M 0 29003 1 29076           Necromocis        
-E 1 29007 20 8                               par de sand�lias escolares
-E 1 29008 200 17                              livro da prote��o
-*
-M 0 29000 1 29079           Bar�o de Cailveh   
-E 1 29000 1 17                                velha e fr�gil chave 
-E 1 29001 15 16                               mangual do Bar�o  
-E 1 29002 15 12                               manto sagrado  
-E 1 29003 15 14                               bracelete de p�rolas  
-*
-D 0 29058 2 1           
-D 0 29058 0 1
-D 0 29058 1 1
-*
-M 0 29001 1 29058           Melinna    
-E 1 29004 15 19                               cruz de peltre   
-E 1 29005 15 5                                vestido branco liso
-*
-D 0 29081 0 2
-D 0 29071 4 1
-D 0 29071 1 1
-D 0 29075 5 1
-D 0 29066 3 1
-D 0 29070 0 1
-D 0 29064 2 1
-D 0 29065 0 1
-D 0 29067 2 1
-D 0 29062 0 1
-D 0 29059 3 1
-D 0 29023 3 1
-D 0 29023 1 1
-D 0 29023 0 1
-D 0 29034 1 1
-D 0 29022 1 1
-D 0 29022 3 1
-D 0 29033 1 1
-D 0 29021 1 1
-D 0 29021 3 1
-D 0 29031 3 1
-D 0 29025 1 1
-D 0 29029 3 1
-D 0 29026 1 1
-D 0 29026 3 1
-D 0 29000 7 1
-*
+29000 29099 190 1 bk 0 0 0 -1 -1
+M 0 29037 1 29049 	(o alfaite)
+M 0 29032 1 29054 	(Mochaaska)
+M 0 29033 1 29052 	(a proprietária da loja)
+M 0 29029 1 29045 	(Salaylia)
+M 0 29031 1 29042 	(o farmacêutico)
+M 0 29036 2 29038 	(uma garotinha)
+M 0 29035 3 29040 	(um cidadão)
+M 0 29035 3 29050 	(um cidadão)
+M 0 29034 1 29047 	(o ministro da cidade)
+E 1 29015 15 13 	(um cintur�o branco)
+M 0 29030 1 29044 	(o dono da ferraria)
+M 0 29028 1 29046 	(Calintra, a herborista)
+M 0 29027 1 29048 	(uma bela mulher)
+M 0 29026 1 29048 	(um elegante cavalheiro)
+M 0 29025 1 29048 	(um homem)
+M 0 29024 1 29048 	(um contador de histórias)
+M 0 29023 1 29048 	(o balconista)
+M 0 29022 1 29027 	(a professora)
+M 0 29021 1 29028 	(um homem)
+D 0 29028 1 1 	(Uma Pequena Casa)
+M 0 29020 1 29024 	(a dona da casa)
+D 0 29024 2 1 	(Uma Casa Simples)
+M 0 29019 1 29035 	(um velho homem)
+D 0 29035 3 1 	(Uma Casa de Telhado de Sap�)
+M 0 29018 1 29036 	(um lenhador desocupado)
+D 0 29036 3 1 	(Uma Pequena Casa Feita de Troncos)
+M 0 29017 1 29032 	(um fazendeiro)
+D 0 29032 1 1 	(Uma Casa Silenciosa)
+M 0 29016 1 29037 	(uma dona de casa)
+D 0 29037 3 1 	(Uma Casa Confort�vel)
+M 0 29015 3 29017 	(uma vaca)
+M 0 29015 3 29018 	(uma vaca)
+M 0 29015 3 29016 	(uma vaca)
+D 0 29016 0 1 	(Os Pastos)
+M 0 29014 1 29015 	(o colono da fazenda)
+D 0 29015 2 1 	(O Celeiro Minuciosamente Limpo)
+M 0 29013 1 29061 	(um primo visitante)
+E 1 29013 15 7 	(um par de perneiras desgastadas)
+E 1 29014 15 13 	(um cinto manchado)
+D 0 29061 2 1 	(O Sal�o de Festividades)
+M 0 29012 1 29073 	(uma empregada)
+M 0 29008 1 29056 	(uma arrogante proprietária)
+E 1 29010 20 19 	(um diamante cintilante)
+M 0 29007 1 29056 	(um humilde peticionário)
+D 0 29056 3 1 	(Entrada Para a C�mara Principal)
+M 0 29011 2 29014 	(o segurança do quarto)
+E 1 29012 15 11 	(um escudo de face prateada)
+M 0 29011 2 29014 	(o segurança do quarto)
+E 1 29011 15 16 	(uma enorme clava)
+D 0 29014 1 1 	(Os Portais de Entrada da Torre)
+M 0 29010 1 29077 	(uma assistente)
+D 0 29077 2 2 	(O Laborat�rio)
+M 0 29009 1 29057 	(um fazendeiro)
+M 0 29006 1 29057 	(um elegante homem)
+G 1 29009 15 -1 	(um bolo de pap�is)
+M 0 29002 1 29057 	(Gilzaan)
+E 1 29006 15 2 	(o anel prateado de Cailveh)
+D 0 29057 0 1 	(A C�mara Principal)
+M 0 29005 1 29060 	(um servo)
+D 0 29060 2 1 	(O Sal�o de Festividades)
+M 0 29004 1 29080 	(o astrônomo da corte)
+M 0 29003 1 29076 	(Necromocis)
+E 1 29007 20 8 	(um par de sand�lias escolares)
+E 1 29008 200 17 	(o livro da prote��o)
+M 0 29000 1 29079 	(o Barão de Cailveh)
+E 1 29000 1 17 	(uma velha e fr�gil chave)
+E 1 29001 15 16 	(o mangual do Bar�o)
+E 1 29002 15 12 	(um manto sagrado)
+E 1 29003 15 14 	(um bracelete de p�rolas)
+D 0 29058 2 1 	(A C�mara de Audi�ncias)
+D 0 29058 0 1 	(A C�mara de Audi�ncias)
+D 0 29058 1 1 	(A C�mara de Audi�ncias)
+M 0 29001 1 29058 	(Melinna, a Baronesa)
+E 1 29004 15 19 	(a cruz de peltre)
+E 1 29005 15 5 	(um vestido branco liso)
+D 0 29081 0 2 	(O Quarto de Artefatos)
+D 0 29071 4 1 	(A Sala de Estar)
+D 0 29071 1 1 	(A Sala de Estar)
+D 0 29075 5 1 	(A Escadaria de Runas)
+D 0 29066 3 1 	(O Fim do Corredor)
+D 0 29070 0 1 	(A C�mara Privada de Necromocis)
+D 0 29064 2 1 	(O Corredor de Pedra)
+D 0 29065 0 1 	(O Corredor de Pedra)
+D 0 29067 2 1 	(A C�mara Privada de Gilzaan)
+D 0 29062 0 1 	(A Sala Privada de Reuni�es)
+D 0 29059 3 1 	(Por Tr�s das Cortinas)
+D 0 29023 3 1 	(Um Beco Sem Sa�da)
+D 0 29023 1 1 	(Um Beco Sem Sa�da)
+D 0 29023 0 1 	(Um Beco Sem Sa�da)
+D 0 29034 1 1 	(Uma Pequena Casa)
+D 0 29022 1 1 	(A Estrada do Povoado)
+D 0 29022 3 1 	(A Estrada do Povoado)
+D 0 29033 1 1 	(Uma Casa Simples)
+D 0 29021 1 1 	(A Estrada do Povoado)
+D 0 29021 3 1 	(A Estrada do Povoado)
+D 0 29031 3 1 	(Uma Casa Recentemente Pintada)
+D 0 29025 1 1 	(A Estrada do Povoado)
+D 0 29029 3 1 	(Uma Casa Limpa)
+D 0 29026 1 1 	(A Pra�a do Col�gio)
+D 0 29026 3 1 	(A Pra�a do Col�gio)
+D 0 29000 7 1 	(O Port�o de Madeira)
 S
 $

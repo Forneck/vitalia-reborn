@@ -1,542 +1,533 @@
 #108
 Vitalia~
 A Cidade de TrÃ³ia~
-10800 10999 180 1 a 0 0 0 -1 -1
--1
-*
-* Colocar os monstros
-*
-M 0 10800 1 10937 colocar Poseidon nas ï¿½guas divinas de Poseidon
-E 1 10840 10 16   entregar o Tridente de Poseidon a Poseidon
-M 0 10801 1 10934 colocar Tritï¿½o em Anfitrite, a concha monumental
-E 1 10839 10 16   entregar a concha marinha para Tritï¿½o
-M 0 10802 1 10942 colocar Tï¿½tis no lar das nereidas
-E 1 10812 10 3    entregar um colar de conchas a Tï¿½tis
-E 1 10813 10 12   entregar um vestido branco a Tï¿½tis
-M 0 10803 1 10941 colocar Pï¿½gaso nos estï¿½bulos do Olimpo
-G 1 10822 10 -1   entregar a ferradura de Pï¿½gaso a Pï¿½gaso
-M 0 10804 1 10822 colocar Aquiles em o acampamento de Menelau
-E 1 10805 10 5    entregar a armadura de Aquils a Aquiles
-E 1 10806 10 11   entregar o escudo de Aquiles a Aquiles
-E 1 10880 14 16   entregar uma lanï¿½a de combate a Aquiles
-M 0 10805 1 10942 colocar Peleus no Lar das nereidas
-E 1 10927 10 0    entregar o coraï¿½ï¿½o da nereida a Peleus
-M 0 10806 1 10821 colocar Menelau numa tenda nobre grega
-E 1 10825 10 5    entregar a armadura de Menelau a Menelau
-E 1 10880 14 16   entregar uma lanï¿½a de combate a Menelau
-M 0 10807 1 10995 colocar Prï¿½amos na passarela dos muros do pï¿½lacio
-E 1 10802 10 5    entregar a armadura de bronze a Prï¿½amos
-E 1 10803 10 6    entregar a coroa de brilhantes a Prï¿½amos
-E 1 10853 10 14   entregar um bracelete de ouro a Prï¿½amos
-G 1 10882 1 -1      entregar a chave dourada a Prï¿½amos
-M 0 10808 1 10925 colocar Pï¿½ris num grande salï¿½o do pï¿½lacio
-E 1 10826 10 5    entregar a armadura de Pï¿½ris a Pï¿½ris
-E 1 10880 14 16   entregar uma lanï¿½a de combate a Pï¿½ris
-M 0 10809 1 10836 Colocar Quï¿½ron na gruta de Quï¿½ron
-E 1 10816 10 16   entregar o arco da sabedoria a Quï¿½ron
-M 0 10810 1 10844 colocar Agamemnon no acampamneto do rei Ulisses
-E 1 10827 10 5    entregar a armadura de Agamemnon a Agamemnon
-E 1 10880 14 16   entregar uma lanï¿½a de combate a Agamemnon
-M 0 10811 1 10929 colocar Heitor no salï¿½o real
-E 1 10828 10 5    entregar a armadura de Heitor a Heitor
-E 1 10880 14 16   entregar uma lanï¿½a de combate a Heitor
-M 0 10812 1 10842 colocar o rei Reso no acampamento do rei Reso
-E 1 10829 10 5    entregar a armadura de Reso a Reso
-E 1 10860 10 14   entregar um bracelete de marfim a Reso
-M 0 10813 1 10978 colocar Pentesilï¿½ia na praia de Dardanelos
-E 1 10842 10 5    entregar a armadura da guerreira a Pentesilï¿½ia
-E 1 10843 10 16   entregar o arco de Pentesilï¿½ia a Pentesilï¿½ia
-E 1 10844 10 20   entregar o brinco da guerreia a Pentesilï¿½ia
-E 1 10845 10 3    entregar o colar da coragem a Pentesilï¿½ia
-M 0 10814 1 10868 colocar Mï¿½mnon na estrada de pedras
-E 1 10818 10 11   entregar um escudo etï¿½ope a Mï¿½mnon
-E 1 10819 10 16   entregar a lanï¿½a da coragem a Mï¿½mnon
-E 1 10820 10 3    entregar um colar de dentes a Mï¿½mnon
-E 1 10821 10 12   entregar um manto de pele a Mï¿½mnon
-M 0 10815 1 10980 colocar Ajaz no acampamento do rei Ulisses
-E 1 10830 10 5    entregar a armadura de Ajax a Ajax
-E 1 10880 14 16   entregar uma lanï¿½a de combate a Ajax
-M 0 10816 1 10843 Colocar Ulisses numa tenda nobre grega
-E 1 10831 10 5    entregar a armadura de Ulisses a Ulisses
-E 1 10880 14 16   entregar uma lanï¿½a de combate a Ulisses
-M 0 10817 1 10993 colocar Andrï¿½maca na passarela dos muros do pï¿½lacio
-E 1 10848 10 12   entregar um vestido de seda a Andrï¿½maca
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a Andrï¿½maca
-E 1 10861 10 20   entregar um brinco de conchas a Andrï¿½maca
-M 0 10818 1 10861 colocar Diomedes em Terror, a batalha do medo
-E 1 10832 10 5    entregar a armadura de Diomedes a Diomedes
-M 0 10819 1 10817 colocar Eaco na ilha de Egina
-E 1 10824 10 3    entregar a Eaco o colar da esperanï¿½a
-E 1 10854 10 14   entregar um bracelete de prata a Eaco
-M 0 10820 1 10822 colocar Pï¿½troclo no acampamento de Menelau
-E 1 10833 10 5    entregar a armadura de Pï¿½troclo a Pï¿½troclo
-E 1 10855 10 14   entregar um bracelete de cobre a Pï¿½troclo
-E 1 10880 14 16   entregar uma lanï¿½a de combate a Pï¿½troclo
-M 0 10821 1 10935 colocar o Leviatï¿½ no reino dos mares
-G 1 10928 10 -1      entregar a poderosa escama do leviatï¿½ ao Leviatï¿½
-M 0 10822 1 10995 colocar Hï¿½cuba na passarela dos muros do pï¿½lacio
-E 1 10814 10 20   entregar a Hï¿½cuba um brinco de brilhantes
-E 1 10848 10 12   entregar um vestido de seda a Hï¿½cuba
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a Hï¿½cuba
-G 1 10883 1 -1       entregar a chave do tesouro a Hï¿½cuba
-M 0 10823 1 10925 colocar Helena num grande salï¿½o pï¿½lacio
-E 1 10848 10 12   entregar um vestido de seda a Helena
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a Helena
-E 1 10857 10 20   entregar a Helena um brinco de jade
-M 0 10824 1 10920 colocar Cassandra nos jardins do pï¿½lacio
-E 1 10804 10 3    entregar o colar de Apolo a Cassandra
-E 1 10848 10 12   entregar um vestido de seda a Cassandra
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a Cassandra
-M 0 10825 8 10903 colocar um guarda troiano num posto de guarda
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao guarda troiano
-E 1 10875 10 7    entregar uma perneira troiana ao guarda troiano
-E 1 10876 10 10   entregar uma braï¿½adeira troiana ao guarda troiano
-E 1 10877 10 6    entregar uma elmo troiano ao guarda troiano
-E 1 10878 10 5    entregar uma armadura troiana ao guarda troiano
-E 1 10879 10 16   entregar uma espada curta ao guarda troiano
-M 0 10825 8 10903 colocar um guarda troiano num posto de guarda
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao guarda troiano
-E 1 10875 10 7    entregar uma perneira troiana ao guarda troiano
-E 1 10876 10 10   entregar uma braï¿½adeira troiana ao guarda troiano
-E 1 10877 10 6    entregar uma elmo troiano ao guarda troiano
-E 1 10878 10 5    entregar uma armadura troiana ao guarda troiano
-E 1 10879 10 16   entregar uma espada curta ao guarda troiano
-M 0 10825 8 10904 colocar um guarda troiano num posto de guarda
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao guarda troiano
-E 1 10875 10 7    entregar uma perneira troiana ao guarda troiano
-E 1 10876 10 10   entregar uma braï¿½adeira troiana ao guarda troiano
-E 1 10877 10 6    entregar uma elmo troiano ao guarda troiano
-E 1 10878 10 5    entregar uma armadura troiana ao guarda troiano
-E 1 10879 10 16   entregar uma espada curta ao guarda troiano
-M 0 10825 8 10904 colocar um guarda troiano num posto de guarda
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao guarda troiano
-E 1 10875 10 7    entregar uma perneira troiana ao guarda troiano
-E 1 10876 10 10   entregar uma braï¿½adeira troiana ao guarda troiano
-E 1 10877 10 6    entregar uma elmo troiano ao guarda troiano
-E 1 10878 10 5    entregar uma armadura troiana ao guarda troiano
-E 1 10879 10 16   entregar uma espada curta ao guarda troiano
-M 0 10825 8 10915 colocar um guarda troiano na entrada do pï¿½lacio
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao guarda troiano
-E 1 10875 10 7    entregar uma perneira troiana ao guarda troiano
-E 1 10876 10 10   entregar uma braï¿½adeira troiana ao guarda troiano
-E 1 10877 10 6    entregar uma elmo troiano ao guarda troiano
-E 1 10878 10 5    entregar uma armadura troiana ao guarda troiano
-E 1 10879 10 16   entregar uma espada curta ao guarda troiano
-M 0 10825 8 10915 colocar um guarda troiano na entrada do pï¿½lacio
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao guarda troiano
-E 1 10875 10 7    entregar uma perneira troiana ao guarda troiano
-E 1 10876 10 10   entregar uma braï¿½adeira troiana ao guarda troiano
-E 1 10877 10 6    entregar uma elmo troiano ao guarda troiano
-E 1 10878 10 5    entregar uma armadura troiana ao guarda troiano
-E 1 10879 10 16   entregar uma espada curta ao guarda troiano
-M 0 10825 8 10928 colocar um guarda troiano no salï¿½o real
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao guarda troiano
-E 1 10875 10 7    entregar uma perneira troiana ao guarda troiano
-E 1 10876 10 10   entregar uma braï¿½adeira troiana ao guarda troiano
-E 1 10877 10 6    entregar uma elmo troiano ao guarda troiano
-E 1 10878 10 5    entregar uma armadura troiana ao guarda troiano
-E 1 10879 10 16   entregar uma espada curta ao guarda troiano
-M 0 10825 8 10928 colocar um guarda troiano no salï¿½o real
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao guarda troiano
-E 1 10875 10 7    entregar uma perneira troiana ao guarda troiano
-E 1 10876 10 10   entregar uma braï¿½adeira troiana ao guarda troiano
-E 1 10877 10 6    entregar uma elmo troiano ao guarda troiano
-E 1 10878 10 5    entregar uma armadura troiana ao guarda troiano
-E 1 10879 10 16   entregar uma espada curta ao guarda troiano
-M 0 10826 8 10848 colocar um soldado troiano no porto natural
-E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
-E 1 10863 10 10   entregar uma braï¿½adeira prateada ao soldado troiano
-E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
-E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao soldado troiano
-G 1 10905 10 -1      entregar as rotas marï¿½timas ao soldado troiano
-M 0 10826 8 10848 colocar um soldado troiano no porto natural
-E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
-E 1 10863 10 10   entregar uma braï¿½adeira prateada ao soldado troiano
-E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
-E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao soldado troiano
-M 0 10826 8 10841 colocar um soldado troiano no acampamento de Reso
-E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
-E 1 10863 10 10   entregar uma braï¿½adeira prateada ao soldado troiano
-E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
-E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao soldado troiano
-M 0 10826 8 10841 colocar um soldado troiano no acampamento de Reso
-E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
-E 1 10863 10 10   entregar uma braï¿½adeira prateada ao soldado troiano
-E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
-E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao soldado troiano
-M 0 10826 8 10898 colocar um soldado troiano numa planï¿½cie no coraï¿½ï¿½o
-E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
-E 1 10863 10 10   entregar uma braï¿½adeira prateada ao soldado troiano
-E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
-E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao soldado troiano
-M 0 10826 8 10898 colocar um soldado troiano numa planï¿½cie no coraï¿½ï¿½o
-E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
-E 1 10863 10 10   entregar uma braï¿½adeira prateada ao soldado troiano
-E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
-E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao soldado troiano
-M 0 10826 8 10900 colocar um soldado troiano numa planï¿½cie no coraï¿½ï¿½o
-E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
-E 1 10863 10 10   entregar uma braï¿½adeira prateada ao soldado troiano
-E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
-E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao soldado troiano
-M 0 10826 8 10900 colocar um soldado troiano numa planï¿½cie no coraï¿½ï¿½o
-E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
-E 1 10863 10 10   entregar uma braï¿½adeira prateada ao soldado troiano
-E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
-E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao soldado troiano
-M 0 10827 3 10855 colocar um batalhï¿½o troiano na sanguinolï¿½ncia
-E 1 10866 10 7    entregar uma perneira dourada ao batalhï¿½o troiano
-E 1 10867 10 10   entregar uma braï¿½adeira dourada ao batalhï¿½o troiano
-E 1 10868 10 6    entregar uma elmo dourado ao batalhï¿½o troiano
-E 1 10869 10 5    entregar uma armadura dourado ao batalhï¿½o troiano
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao batalhï¿½o troiano
-E 1 10892 10 17   entregar um estandarte troiano ao batalhï¿½o troiano
-M 0 10827 3 10859 colocar um batalhï¿½o troiano na bravura
-E 1 10866 10 7    entregar uma perneira dourada ao batalhï¿½o troiano
-E 1 10867 10 10   entregar uma braï¿½adeira dourada ao batalhï¿½o troiano
-E 1 10868 10 6    entregar uma elmo dourado ao batalhï¿½o troiano
-E 1 10869 10 5    entregar uma armadura dourado ao batalhï¿½o troiano
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao batalhï¿½o troiano
-E 1 10892 10 17   entregar um estandarte troiano ao batalhï¿½o troiano
-M 0 10827 3 10861 colocar um batalhï¿½o troiano no terror
-E 1 10866 10 7    entregar uma perneira dourada ao batalhï¿½o troiano
-E 1 10867 10 10   entregar uma braï¿½adeira dourada ao batalhï¿½o troiano
-E 1 10868 10 6    entregar uma elmo dourado ao batalhï¿½o troiano
-E 1 10869 10 5    entregar uma armadura dourado ao batalhï¿½o troiano
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao batalhï¿½o troiano
-E 1 10892 10 17   entregar um estandarte troiano ao batalhï¿½o troiano
-M 0 10828 3 10855 colocar um batalhï¿½o grego na sanguinolï¿½ncia
-E 1 10866 10 7    entregar uma perneira dourada ao batalhï¿½o grego
-E 1 10867 10 10   entregar uma braï¿½adeira dourada ao batalhï¿½o grego
-E 1 10868 10 6    entregar uma elmo dourado ao batalhï¿½o grego
-E 1 10869 10 5    entregar uma armadura dourado ao batalhï¿½o grego
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao batalhï¿½o grego
-E 1 10891 10 17   entregar um estandarte grego ao batalhï¿½o grego
-M 0 10828 3 10859 colocar um batalhï¿½o grego na bravura
-E 1 10866 10 7    entregar uma perneira dourada ao batalhï¿½o grego
-E 1 10867 10 10   entregar uma braï¿½adeira dourada ao batalhï¿½o grego
-E 1 10868 10 6    entregar uma elmo dourado ao batalhï¿½o grego
-E 1 10869 10 5    entregar uma armadura dourado ao batalhï¿½o grego
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao batalhï¿½o grego
-E 1 10891 10 17   entregar um estandarte grego ao batalhï¿½o grego
-M 0 10828 3 10861 colocar um batalhï¿½o grego no terror
-E 1 10866 10 7    entregar uma perneira dourada ao batalhï¿½o grego
-E 1 10867 10 10   entregar uma braï¿½adeira dourada ao batalhï¿½o grego
-E 1 10868 10 6    entregar uma elmo dourado ao batalhï¿½o grego
-E 1 10869 10 5    entregar uma armadura dourado ao batalhï¿½o grego
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao batalhï¿½o grego
-E 1 10891 10 17   entregar um estandarte grego ao batalhï¿½o grego
-M 0 10829 2 10821 colocar um guarda grego numa tenda nobre grega
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao guarda grego
-E 1 10871 10 7    entregar uma perneira grega ao guarda grego
-E 1 10872 10 10   entregar uma braï¿½adeira grega ao guarda grego
-E 1 10873 10 6    entregar uma elmo grego ao guarda grego
-E 1 10874 10 5    entregar uma armadura grega ao guarda grego
-M 0 10829 2 10843 colocar um guarda grego numa tenda nobre grega
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao guarda grego
-E 1 10871 10 7    entregar uma perneira grega ao guarda grego
-E 1 10872 10 10   entregar uma braï¿½adeira grega ao guarda grego
-E 1 10873 10 6    entregar uma elmo grego ao guarda grego
-E 1 10874 10 5    entregar uma armadura grega ao guarda grego
-M 0 10830 6 10823 colocar um soldado grego num porto natural
-E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
-E 1 10863 10 10   entregar uma braï¿½adeira prateada ao soldado troiano
-E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
-E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao soldado troiano
-M 0 10830 6 10823 colocar um soldado grego num porto natural
-E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
-E 1 10863 10 10   entregar uma braï¿½adeira prateada ao soldado troiano
-E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
-E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao soldado troiano
-M 0 10830 6 10822 colocar um soldado grego no acampamento de Menelau
-E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
-E 1 10863 10 10   entregar uma braï¿½adeira prateada ao soldado troiano
-E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
-E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao soldado troiano
-M 0 10830 6 10822 colocar um soldado grego no acampamento de Menelau
-E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
-E 1 10863 10 10   entregar uma braï¿½adeira prateada ao soldado troiano
-E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
-E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao soldado troiano
-M 0 10830 6 10844 colocar um soldado grego no acampamento de Ulisses
-E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
-E 1 10863 10 10   entregar uma braï¿½adeira prateada ao soldado troiano
-E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
-E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao soldado troiano
-M 0 10830 6 10844 colocar um soldado grego no acampamento de Ulisses
-E 1 10862 10 7    entregar uma perneira prateada ao soldado troiano
-E 1 10863 10 10   entregar uma braï¿½adeira prateada ao soldado troiano
-E 1 10864 10 6    entregar uma elmo prateado ao soldado troiano
-E 1 10865 10 5    entregar uma armadura prateada ao soldado troiano
-E 1 10880 14 16   entregar uma lanï¿½a de combate ao soldado troiano
-M 0 10831 1 10868 colocar um batalhï¿½o etï¿½ope na estrada de pedras
-E 1 10817 10 19   entregar uma agulha de marfim ao batalhï¿½o etï¿½ope
-E 1 10818 10 11   entregar um escudo etï¿½ope ao batalhï¿½o etï¿½ope
-E 1 10819 10 16   entregar a lanï¿½a da coragem ao batalhï¿½o etï¿½ope
-M 0 10832 4 10905 colocar um cidadï¿½o troiano numa casa troiana
-E 1 10847 10 12   entregar um manto de seda ao cidadï¿½o troiano
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao cidadï¿½o troiano
-M 0 10833 4 10905 colocar uma cidadï¿½ troiana numa casa troiana
-E 1 10848 10 12   entregar um vestido de seda a cidadï¿½ troiana
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a cidadï¿½ troiana
-M 0 10833 4 10910 colocar uma cidadï¿½ troiana numa casa troiana
-E 1 10848 10 12   entregar um vestido de seda a cidadï¿½ troiana
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a cidadï¿½ troiana
-M 0 10833 4 10923 colocar uma cidadï¿½ troiana numa casa troiana
-E 1 10848 10 12   entregar um vestido de seda a cidadï¿½ troiana
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a cidadï¿½ troiana
-M 0 10832 4 10923 colocar um cidadï¿½o troiano numa casa troiana
-E 1 10847 10 12   entregar um manto de seda ao cidadï¿½o troiano
-E 1 10849 10 8    entregar uma sandï¿½lia de couro ao cidadï¿½o troiano
-M 0 10832 4 10917 colocar um cidadï¿½o troiano numa casa troiana
-E 1 10847 10 12   entregar um manto de seda ao cidadï¿½o troiano
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao cidadï¿½o troiano
-M 0 10833 4 10911 colocar uma cidadï¿½ troiana no templo de Trï¿½ia
-E 1 10848 10 12   entregar um vestido de seda a cidadï¿½ troiana
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a cidadï¿½ troiana
-M 0 10832 4 10911 colocar um cidadï¿½o troiano no templo de Trï¿½ia
-E 1 10847 10 12   entregar um manto de seda ao cidadï¿½o troiano
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao cidadï¿½o troiano
-M 0 10834 3 10909 colocar uma crianï¿½a troiana numa rua
-E 1 10847 10 12   entregar um manto de seda a uma crianï¿½a troiana
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a uma crianï¿½a troiana
-G 1 10915 10 -1      entregar a harpa do bardo a uma crianï¿½a troiana
-M 0 10834 3 10906 colocar uma crianï¿½a troiana numa casa troiana
-E 1 10847 10 12   entregar um manto de seda a uma crianï¿½a troiana
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a uma crianï¿½a troiana
-M 0 10834 3 10916 colocar uma crianï¿½a troiana na praï¿½a de Trï¿½ia
-E 1 10847 10 12   entregar um manto de seda a uma crianï¿½a troiana
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a uma crianï¿½a troiana
-M 0 10835 1 10916 colocar um artesï¿½o troiano na praï¿½a de Trï¿½ia
-E 1 10847 10 12   entregar um manto de seda a uma crianï¿½a troiana
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a uma crianï¿½a troiana
-M 0 10836 1 10845 colocar o mestre artesï¿½o-grego no cavalo de Trï¿½ia
-E 1 10847 10 12   entregar um manto de seda ao mestre-artesï¿½o-grego
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao mestre-artesï¿½o
-G 1 10893 10 -1     entregar um pergaminho do mestre-artesï¿½o ao mestre
-M 0 10837 3 10912 colocar um comerciante troiano na praï¿½a
-E 1 10847 10 12   entregar um manto de seda ao comerciante troiano
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao comerciante troiano
-G 1 10896 10 -1     entregar um tapete persa ao comerciante troiano
-M 0 10837 3 10916 colocar um comerciante troiano na praï¿½a
-E 1 10847 10 12   entregar um manto de seda ao comerciante troiano
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao comerciante troiano
-G 1 10894 10 -1      entregar uma ï¿½nfora de micenos ao comerciante troiano
-M 0 10837 3 10907 colocar um comerciante troiano na praï¿½a
-E 1 10847 10 12   entregar um manto de seda ao comerciante troiano
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao comerciante troiano
-G 1 10895 10 -1     entregar um prato de cerï¿½mica do Chipre ao comerciante
-G 1 10924 50 -1      entregar uma garrafa de vinho ao comerciante
-M 0 10838 1 10911 colocar Laocoonte no templo de Trï¿½ia
-E 1 10807 10 12   entregar o manto sacerdotal de Laocoonte a Laocoonte
-E 1 10808 10 16   entregar o cajado do cï¿½tico a Laocoonte
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a Laocoonte
-M 0 10839 1 10990 colocar Sï¿½non atrï¿½s dos arbustos
-E 1 10815 10 16   entregar a faca do espiï¿½o a Sï¿½non
-E 1 10847 10 12   entregar um manto de seda a Sï¿½non
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a Sï¿½non
-G 1 10912 10 -1     entregar um pergaminho a Sï¿½non
-M 0 10840 1 10991 colocar Enï¿½ias no santuï¿½rio dos guerreiros
-E 1 10823 10 14   entregar o bracelete de Afrodite a Enï¿½ias
-E 1 10929 10 5    entregar a armadura de Enï¿½ias a Enï¿½ias
-E 1 10880 14 16   entregar uma lanï¿½a de combate a Enï¿½ias
-M 0 10841 1 10991 colocar Anquises no santuï¿½rio dos guerreiros
-E 1 10847 10 12   entregar um manto de seda a Anquises
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a Anquises
-E 1 10851 10 14   entregar um bracelete de Zinco a Anquises
-M 0 10842 1 10994 colocar Creusa na passarela dos muros do pï¿½lacio
-E 1 10848 10 12   entregar um vestido de seda a Creusa
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a Creusa
-E 1 10870 10 2    entregar um anel de diamante a Creusa
-M 0 10843 1 10994 colocar Ascï¿½nio na passarela dos muros do pï¿½lacio
-E 1 10847 10 12   entregar um manto de seda a Ascï¿½nio
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a Ascï¿½nio
-E 1 10852 10 14   entregar um bracelete da Pomerï¿½nia a Ascï¿½nio
-M 0 10844 1 10843 Colocar Briseis numa tenda nobre grega
-E 1 10848 10 12   entregar um vestido de seda a Briseis
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a Briseis
-E 1 10856 10 19   entregar um brinco de ouro a Briseis
-M 0 10845 3 10978 colocar uma amazona na praia de Dardanelos
-E 1 10841 10 16   entregar um arco da amazona a uma amazona
-E 1 10842 10 5    entregar a armadura da guerreira a uma amazona
-M 0 10845 3 10978 colocar uma amazona na praia de Dardanelos
-E 1 10841 10 16   entregar um arco da amazona a uma amazona
-E 1 10842 10 5    entregar a armadura da guerreira a uma amazona
-M 0 10845 3 10978 colocar uma amazona na praia de Dardanelos
-E 1 10841 10 16   entregar um arco da amazona a uma amazona
-E 1 10842 10 5    entregar a armadura da guerreira a uma amazona
-M 0 10846 1 10834 colocar Dolon na colina de Quï¿½ron
-E 1 10847 10 12   entregar um manto de seda a Dolon
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a Dolon
-E 1 10899 10 17   entregar um estranho tubo de aumento a Dolon
-M 0 10847 1 10817 colocar os mirmidï¿½es na ilha de Egina
-E 1 10850 10 11   entregar um escudo de bronze aos mirmidï¿½es
-E 1 10880 14 16   entregar uma lanï¿½a de combate aos mirmidï¿½es
-E 1 10930 10 5    entregar aos mirmidï¿½es a armadura das formigas
-M 0 10848 2 10937 colocar uma sereia nas ï¿½guas divinas de Poseidon
-E 1 10809 10 20   entregar um brinco de corais a uma sereia
-M 0 10848 2 10938 colocar uma sereia na entrada da caverna de corais
-E 1 10809 10 20   entregar um brinco de corais a uma sereia
-E 1 3817 1 17     Card Tiara(3817) com Sereia(10848)
-M 0 10849 1 10840 colocar um pastor de ovelhas no monte Ida
-E 1 10810 10 17   entregar um cajado ao pastor
-E 1 10811 10 12   entregar um manto de pele ao Pastor
-E 1 10849 50 8    entregar uma sandï¿½lia de couro ao Pastor
-G 1 10919 10 -1    entregar uma garrafa de leite de ovelha ao Pastor
-M 0 10850 1 10942 colocar Anfitrite no lar das nereidas
-E 1 10800 10 6    entregar um elmo de corais a Anfitrite
-E 1 10801 10 12   entregar um vestido celeste a Anfitrite
-M 0 10851 1 10986 colocar Nestor no acampamento do rei Menelau
-E 1 10834 10 5    entregar a armadura de Nestor a Nestor
-E 1 10880 14 16   entregar uma lanï¿½a de combate a Nestor
-M 0 10852 1 10920 colocar Pï¿½ndaro nos jardins do pï¿½lacio
-E 1 10835 10 5    entregar a armadura de Pï¿½ndaro a Pï¿½ndaro
-E 1 10880 14 16   entregar uma lanï¿½a de combate a Pï¿½ndaro
-E 1 10858 10 3    entregar um colar de marfim a Pï¿½ndaro
-M 0 10853 1 10902 colocar Polidoro na cidade de Trï¿½ia
-E 1 10847 10 12   entregar um manto de seda a Polidoro
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a Polidoro
-E 1 10881 10 16   entregar uma adaga de marfim a Polidoro
-M 0 10854 1 10841 colocar Sarpï¿½don no acampamento do rei Reso
-E 1 10836 10 5    entregar a armadura de Sarpï¿½don a Sarpï¿½don
-E 1 10880 14 16   entregar uma lanï¿½a de combate a Sarpï¿½don
-M 0 10855 1 10980 colocar Fï¿½nix no acampamento do rei Ulisses
-E 1 10837 10 5    entregar a armadura de Fï¿½nix a Fï¿½nix
-E 1 10880 14 16   entregar uma lanï¿½a de combate a Fï¿½nix
-M 0 10856 1 10935 colocar uma tartaruga marinha no reino dos mares
-M 0 10857 1 10817 colocar o cisne de Egina na ilha de Egina
-M 0 10858 1 10890 colocar a serpente guardiï¿½ nos anï¿½is de Trï¿½ia
-M 0 10859 2 10840 colocar uma ovelha no monte Ida
-M 0 10859 2 10840 colocar uma ovelha no monte Ida
-M 0 10860 2 10833 colocar um cavalo na colina de Quï¿½ron
-M 0 10860 2 10837 colocar um cavalo na colina de Quï¿½ron
-M 0 10861 1 10937 colocar um golfinho com Poseidon
-M 0 10862 1 10940 colocar o Octopos no mal pressï¿½gio
-M 0 10863 1 10933 colocar um tubarï¿½o no reino dos mares
-M 0 10864 1 10932 colocar um cardume de peixes no mar Egeu
-M 0 10865 1 10840 colocar um cï¿½o pastor no monte Ida
-M 0 10866 1 10907 colocar um galo na praï¿½a de Trï¿½ia
-M 0 10867 1 10833 colocar um garanhï¿½o na colina de Quï¿½ron
-M 0 10868 1 10820 colocar um galeï¿½o grego no mar Egeu
-M 0 10869 1 10852 colocar um galeï¿½o troiano no mar Negro
-M 0 10870 1 10804 colocar o navio fantasma no mar Egeu
-M 0 10871 1 10927 colocar Polixena num pequeno lago
-E 1 10848 10 12   entregar um vestido de seda a Polixena
-E 1 10849 50 8    entregar uma sandï¿½lia de couro a Polixena
-E 1 10859 10 20   entregar um brinco de marfim a Polixena
-G 1 10898 10 -1      entregar um jarro de porcelana a Polixena
-G 1 10925 50 -1     entregar um cacho de uvas a Polixena
-M 0 10872 1 10823 colocar Neoptolemus no porto natural
-E 1 10838 10 5    entregar a armadura de Neoptolemus a Neoptolemus
-E 1 10846 10 16   entregar o machado a Neoptolemus
-*
-* Colocar objetos
-*
-R 0 10911 10884    retirar a estatua de Poseidon
-O 0 10884 1 10911  carregar uma nova estatua
-R 0 10981 10885    retirar a estatua de Atena
-O 0 10885 1 10981  carregar uma nova estatua
-R 0 10981 10886    retirar a estatua de Hera
-O 0 10886 1 10981  carregar uma nova estatua
-R 0 10981 10887    retirar a estatua de Afrodite
-O 0 10887 1 10981  carregar uma nova estatua
-R 0 10845 10888    retirar a enorme peï¿½a de xadrez
-O 0 10888 1 10845  carregar uma nova peï¿½a de xadrez
-R 0 10841 10889    retirar um mastro com uma bandeira troiana
-O 0 10889 5 10841  carregar uma novo mastro com a bandeira troiana
-R 0 10841 10913    retirar uma fogueira
-O 0 10913 10 10841 carregar uma nova fogueira
-R 0 10822 10890    retirar um mastro com uma bandeira grega
-O 0 10890 5 10822  carregar uma novo mastro com a bandeira grega
-R 0 10822 10913    retirar uma fogueira
-O 0 10913 10 10822 carregar uma nova fogueira
-R 0 10844 10890    retirar um mastro com uma bandeira grega
-O 0 10890 5 10844  carregar uma novo mastro com a bandeira grega
-R 0 10844 10913    retirar uma fogueira
-O 0 10913 10 10844 carregar uma nova fogueira
-R 0 10915 10889    retirar um mastro com uma bandeira troiana
-O 0 10889 5 10915  carregar uma novo mastro com a bandeira troiana
-R 0 10915 10913    retirar uma fogueira
-O 0 10913 10 10915 carregar uma nova fogueira
-R 0 10906 10900    retirar uma mesa de madeira
-O 0 10900 10 10906 carregar uma nova mesa
-R 0 10906 10902    retirar uma cadeira de madeira
-O 0 10902 10 10906 carregar uma nova cadeira
-R 0 10910 10900    retirar uma mesa de madeira
-O 0 10900 10 10910 carregar uma nova mesa
-R 0 10910 10902    retirar uma cadeira de madeira
-O 0 10902 10 10910 carregar uma nova cadeira
-R 0 10923 10900    retirar uma mesa de madeira
-O 0 10900 10 10923 carregar uma nova mesa
-R 0 10923 10902    retirar uma cadeira de madeira
-O 0 10902 10 10923 carregar uma nova cadeira
-R 0 10929 10901    retirar uma mesa de mï¿½rmore
-O 0 10901 10 10929 carregar uma nova mesa de mï¿½rmore
-R 0 10929 10903    retirar uma cadeira de mï¿½rmore
-O 0 10903 10 10929 carregar uma nova cadeira de mï¿½rmore
-R 0 10907 10904    retirar a fonte de mï¿½rmore
-O 0 10904 3 10907  carregar uma nova fonte
-R 0 10991 10911    retirar uma urna dourada
-O 0 10911 5 10991  carregar uma nova urna dourada
-R 0 10905 10908    retirar uma cama de madeira
-O 0 10908 3 10905 carregar uma nova cama
-R 0 10905 10914    retirar um armï¿½rio de madeira
-O 0 10914 3 10905 carregar um novo armï¿½rio
-R 0 10917 10908    retirar uma cama de madeira
-O 0 10908 3 10917 carregar uma nova cama
-R 0 10917 10914    retirar um armï¿½rio de madeira
-O 0 10914 3 10917 carregar um novo armï¿½rio
-R 0 10811 10917    retirar portal mï¿½gico
-O 0 10917 1 10811  carregar um novo portal
-R 0 10928 10906    retirar quadro de Poseidon
-O 0 10906 14 10928 carregar um novo quadro
-R 0 10928 10907    retirar quadro de Trï¿½ia
-O 0 10907 10 10928 carregar um novo quadro
-R 0 10998 10909    retirar uma cama real
-O 0 10909 3 10998 carregar uma nova cama
-R 0 10926 10909    retirar uma cama real
-O 0 10909 3 10926 carregar uma nova cama
-R 0 10931 10909    retirar uma cama real
-O 0 10909 3 10931 carregar uma nova cama
-R 0 10926 10910    retirar uma cama real
-O 0 10910 3 10926 carregar uma nova cama
-R 0 10931 10910    retirar uma cama real
-O 0 10910 3 10931 carregar uma nova cama
-R 0 10998 10910    retirar uma cama real
-O 0 10910 3 10998 carregar uma nova cama
-R 0 10999 10897    retirar um baï¿½ real
-O 0 10897 10 10999 carregar um novo baï¿½
-P 1 10918 1 10897 carregar moedas de ouro no baï¿½
-R 0 10921 10921    retirar um pï¿½o
-O 0 10921 50 10921 carregar um novo pï¿½o
-R 0 10921 10921    retirar um pï¿½o
-O 0 10921 50 10921 carregar um novo pï¿½o
-R 0 10921 10923    retirar um barril de vinho
-O 0 10923 50 10921 carregar um novo barril
-*
-* Ajustar as passagens
-*
-D 0 10898 2 2      fechar e trancar a porta de madeira (lado de fora)
-D 0 10902 0 2      fechar e trancar a porta de madeira (lado de dentro)
-D 0 10915 2 2      fechar e trancar a porta dourada (lado de fora)
-D 0 10920 0 2      fechar e trancar a porta dourada (lado de dentro)
-D 0 10925 8 2      fechar e trancar a porta dourada (lado de fora)
-D 0 10928 6 2      fechar e trancar a porta dourada (lado de dentro)
-D 0 10930 0 2      fechar e trancar a porta de madeira (lado de fora)
-D 0 10998 2 2      fechar e trancar a porta de madeira (lado de dentro)
-D 0 10998 7 2      fechar e trancar a porta dourada (lado de fora)
-D 0 10999 9 2      fechar e trancar a porta dourada (lado de dentro)
+10800 10999 180 1 ak 0 0 0 -1 -1
+M 0 10800 1 10937 	(Poseidon)
+E 1 10840 10 16 	(o imponente tridente de Poseidon)
+M 0 10801 1 10934 	(TritÃ£o)
+E 1 10839 10 16 	(uma bela concha marinha)
+M 0 10802 1 10942 	(TÃ©tis)
+E 1 10812 10 3 	(o colar de conchas)
+E 1 10813 10 12 	(o vestido celestial de Tétis)
+M 0 10803 1 10941 	(PÃ©gaso)
+G 1 10822 10 -1 	(a ferradura de Pégaso)
+M 0 10804 1 10822 	(Aquiles)
+E 1 10805 10 5 	(a armadura de Aquiles)
+E 1 10806 10 11 	(o escudo da ira)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10805 1 10942 	(Peleus)
+E 1 10927 10 0 	(o coração da nereida)
+M 0 10806 1 10821 	(Menelau)
+E 1 10825 10 5 	(a armadura de Menelau)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10807 1 10995 	(PrÃ­amos)
+E 1 10802 10 5 	(a armadura de Príamos)
+E 1 10803 10 6 	(uma coroa de brilhantes)
+E 1 10853 10 14 	(um bracelete de ouro)
+G 1 10882 1 -1 	(uma bela chave dourada)
+M 0 10808 1 10925 	(PÃ¡ris)
+E 1 10826 10 5 	(a armadura de Páris)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10809 1 10836 	(QuÃ­ron)
+E 1 10816 10 16 	(o arco da sabedoria)
+M 0 10810 1 10844 	(Agamemnon)
+E 1 10827 10 5 	(a armadura de Agamemnon)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10811 1 10929 	(Heitor)
+E 1 10828 10 5 	(a armadura de Heitor)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10812 1 10842 	(Reso)
+E 1 10829 10 5 	(a armadura de Reso)
+E 1 10860 10 14 	(um bracelete de marfim africano)
+M 0 10813 1 10978 	(PentesilÃ©ia)
+E 1 10842 10 5 	(a armadura das amazonas)
+E 1 10843 10 16 	(o arco de Pentensiléia)
+E 1 10844 10 20 	(o brinco das amazonas)
+E 1 10845 10 3 	(o colar da coragem)
+M 0 10814 1 10868 	(MÃªmnon)
+E 1 10818 10 11 	(um escudo etíope)
+E 1 10819 10 16 	(a lança da coragem)
+E 1 10820 10 3 	(um colar de dentes de leão)
+E 1 10821 10 12 	(um manto de pele de leão)
+M 0 10815 1 10980 	(Ajax)
+E 1 10830 10 5 	(a armadura de Ajax)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10816 1 10843 	(Ulisses)
+E 1 10831 10 5 	(a armadura de Ulisses)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10817 1 10993 	(AndrÃ´maca)
+E 1 10848 10 12 	(um vestido de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10861 10 20 	(um brinco de conchas marinhas)
+M 0 10818 1 10861 	(Diomedes)
+E 1 10832 10 5 	(a armadura de Diomedes)
+M 0 10819 1 10817 	(Eaco)
+E 1 10824 10 3 	(o colar da esperança)
+E 1 10854 10 14 	(um bracelete de prata)
+M 0 10820 1 10822 	(PÃ¡troclo)
+E 1 10833 10 5 	(a armadura de Pátroclo)
+E 1 10855 10 14 	(um bracelete de cobre)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10821 1 10935 	(LeviatÃ£)
+G 1 10928 10 -1 	(uma escama do poderoso Leviatã)
+M 0 10822 1 10995 	(HÃ©cuba)
+E 1 10814 10 20 	(um brinco de brilhantes)
+E 1 10848 10 12 	(um vestido de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+G 1 10883 1 -1 	(uma chave azulada)
+M 0 10823 1 10925 	(Helena)
+E 1 10848 10 12 	(um vestido de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10857 10 20 	(um brinco esverdeado)
+M 0 10824 1 10920 	(Cassandra)
+E 1 10804 10 3 	(o colar de Apolo)
+E 1 10848 10 12 	(um vestido de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+M 0 10825 8 10903 	(um guarda troiano)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10875 10 7 	(um par de perneiras troianas)
+E 1 10876 10 10 	(um par de braçadeiras troianas)
+E 1 10877 10 6 	(um elmo troiano)
+E 1 10878 10 5 	(uma armadura troiana)
+E 1 10879 10 16 	(uma espada curta)
+M 0 10825 8 10903 	(um guarda troiano)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10875 10 7 	(um par de perneiras troianas)
+E 1 10876 10 10 	(um par de braçadeiras troianas)
+E 1 10877 10 6 	(um elmo troiano)
+E 1 10878 10 5 	(uma armadura troiana)
+E 1 10879 10 16 	(uma espada curta)
+M 0 10825 8 10904 	(um guarda troiano)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10875 10 7 	(um par de perneiras troianas)
+E 1 10876 10 10 	(um par de braçadeiras troianas)
+E 1 10877 10 6 	(um elmo troiano)
+E 1 10878 10 5 	(uma armadura troiana)
+E 1 10879 10 16 	(uma espada curta)
+M 0 10825 8 10904 	(um guarda troiano)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10875 10 7 	(um par de perneiras troianas)
+E 1 10876 10 10 	(um par de braçadeiras troianas)
+E 1 10877 10 6 	(um elmo troiano)
+E 1 10878 10 5 	(uma armadura troiana)
+E 1 10879 10 16 	(uma espada curta)
+M 0 10825 8 10915 	(um guarda troiano)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10875 10 7 	(um par de perneiras troianas)
+E 1 10876 10 10 	(um par de braçadeiras troianas)
+E 1 10877 10 6 	(um elmo troiano)
+E 1 10878 10 5 	(uma armadura troiana)
+E 1 10879 10 16 	(uma espada curta)
+M 0 10825 8 10915 	(um guarda troiano)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10875 10 7 	(um par de perneiras troianas)
+E 1 10876 10 10 	(um par de braçadeiras troianas)
+E 1 10877 10 6 	(um elmo troiano)
+E 1 10878 10 5 	(uma armadura troiana)
+E 1 10879 10 16 	(uma espada curta)
+M 0 10825 8 10928 	(um guarda troiano)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10875 10 7 	(um par de perneiras troianas)
+E 1 10876 10 10 	(um par de braçadeiras troianas)
+E 1 10877 10 6 	(um elmo troiano)
+E 1 10878 10 5 	(uma armadura troiana)
+E 1 10879 10 16 	(uma espada curta)
+M 0 10825 8 10928 	(um guarda troiano)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10875 10 7 	(um par de perneiras troianas)
+E 1 10876 10 10 	(um par de braçadeiras troianas)
+E 1 10877 10 6 	(um elmo troiano)
+E 1 10878 10 5 	(uma armadura troiana)
+E 1 10879 10 16 	(uma espada curta)
+M 0 10826 8 10848 	(um soldado troiano)
+E 1 10862 10 7 	(as perneiras prateadas)
+E 1 10863 10 10 	(as braçadeiras prateadas)
+E 1 10864 10 6 	(um elmo prateado)
+E 1 10865 10 5 	(uma armadura prateada)
+E 1 10880 14 16 	(uma lança de combate)
+G 1 10905 10 -1 	(um pergaminho de navegação)
+M 0 10826 8 10848 	(um soldado troiano)
+E 1 10862 10 7 	(as perneiras prateadas)
+E 1 10863 10 10 	(as braçadeiras prateadas)
+E 1 10864 10 6 	(um elmo prateado)
+E 1 10865 10 5 	(uma armadura prateada)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10826 8 10841 	(um soldado troiano)
+E 1 10862 10 7 	(as perneiras prateadas)
+E 1 10863 10 10 	(as braçadeiras prateadas)
+E 1 10864 10 6 	(um elmo prateado)
+E 1 10865 10 5 	(uma armadura prateada)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10826 8 10841 	(um soldado troiano)
+E 1 10862 10 7 	(as perneiras prateadas)
+E 1 10863 10 10 	(as braçadeiras prateadas)
+E 1 10864 10 6 	(um elmo prateado)
+E 1 10865 10 5 	(uma armadura prateada)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10826 8 10898 	(um soldado troiano)
+E 1 10862 10 7 	(as perneiras prateadas)
+E 1 10863 10 10 	(as braçadeiras prateadas)
+E 1 10864 10 6 	(um elmo prateado)
+E 1 10865 10 5 	(uma armadura prateada)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10826 8 10898 	(um soldado troiano)
+E 1 10862 10 7 	(as perneiras prateadas)
+E 1 10863 10 10 	(as braçadeiras prateadas)
+E 1 10864 10 6 	(um elmo prateado)
+E 1 10865 10 5 	(uma armadura prateada)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10826 8 10900 	(um soldado troiano)
+E 1 10862 10 7 	(as perneiras prateadas)
+E 1 10863 10 10 	(as braçadeiras prateadas)
+E 1 10864 10 6 	(um elmo prateado)
+E 1 10865 10 5 	(uma armadura prateada)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10826 8 10900 	(um soldado troiano)
+E 1 10862 10 7 	(as perneiras prateadas)
+E 1 10863 10 10 	(as braçadeiras prateadas)
+E 1 10864 10 6 	(um elmo prateado)
+E 1 10865 10 5 	(uma armadura prateada)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10827 3 10855 	(um batalhÃ£o troiano)
+E 1 10866 10 7 	(as perneiras douradas)
+E 1 10867 10 10 	(as braçadeiras douradas)
+E 1 10868 10 6 	(um elmo dourado)
+E 1 10869 10 5 	(uma armadura dourada)
+E 1 10880 14 16 	(uma lança de combate)
+E 1 10892 10 17 	(um estandarte troiano)
+M 0 10827 3 10859 	(um batalhÃ£o troiano)
+E 1 10866 10 7 	(as perneiras douradas)
+E 1 10867 10 10 	(as braçadeiras douradas)
+E 1 10868 10 6 	(um elmo dourado)
+E 1 10869 10 5 	(uma armadura dourada)
+E 1 10880 14 16 	(uma lança de combate)
+E 1 10892 10 17 	(um estandarte troiano)
+M 0 10827 3 10861 	(um batalhÃ£o troiano)
+E 1 10866 10 7 	(as perneiras douradas)
+E 1 10867 10 10 	(as braçadeiras douradas)
+E 1 10868 10 6 	(um elmo dourado)
+E 1 10869 10 5 	(uma armadura dourada)
+E 1 10880 14 16 	(uma lança de combate)
+E 1 10892 10 17 	(um estandarte troiano)
+M 0 10828 3 10855 	(um batalhÃ£o grego)
+E 1 10866 10 7 	(as perneiras douradas)
+E 1 10867 10 10 	(as braçadeiras douradas)
+E 1 10868 10 6 	(um elmo dourado)
+E 1 10869 10 5 	(uma armadura dourada)
+E 1 10880 14 16 	(uma lança de combate)
+E 1 10891 10 17 	(um estandarte grego)
+M 0 10828 3 10859 	(um batalhÃ£o grego)
+E 1 10866 10 7 	(as perneiras douradas)
+E 1 10867 10 10 	(as braçadeiras douradas)
+E 1 10868 10 6 	(um elmo dourado)
+E 1 10869 10 5 	(uma armadura dourada)
+E 1 10880 14 16 	(uma lança de combate)
+E 1 10891 10 17 	(um estandarte grego)
+M 0 10828 3 10861 	(um batalhÃ£o grego)
+E 1 10866 10 7 	(as perneiras douradas)
+E 1 10867 10 10 	(as braçadeiras douradas)
+E 1 10868 10 6 	(um elmo dourado)
+E 1 10869 10 5 	(uma armadura dourada)
+E 1 10880 14 16 	(uma lança de combate)
+E 1 10891 10 17 	(um estandarte grego)
+M 0 10829 2 10821 	(um guarda grego)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10871 10 7 	(um par de perneiras gregas)
+E 1 10872 10 10 	(um par de braçadeiras gregas)
+E 1 10873 10 6 	(um elmo grego)
+E 1 10874 10 5 	(uma armadura grega)
+M 0 10829 2 10843 	(um guarda grego)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10871 10 7 	(um par de perneiras gregas)
+E 1 10872 10 10 	(um par de braçadeiras gregas)
+E 1 10873 10 6 	(um elmo grego)
+E 1 10874 10 5 	(uma armadura grega)
+M 0 10830 6 10823 	(um soldado grego)
+E 1 10862 10 7 	(as perneiras prateadas)
+E 1 10863 10 10 	(as braçadeiras prateadas)
+E 1 10864 10 6 	(um elmo prateado)
+E 1 10865 10 5 	(uma armadura prateada)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10830 6 10823 	(um soldado grego)
+E 1 10862 10 7 	(as perneiras prateadas)
+E 1 10863 10 10 	(as braçadeiras prateadas)
+E 1 10864 10 6 	(um elmo prateado)
+E 1 10865 10 5 	(uma armadura prateada)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10830 6 10822 	(um soldado grego)
+E 1 10862 10 7 	(as perneiras prateadas)
+E 1 10863 10 10 	(as braçadeiras prateadas)
+E 1 10864 10 6 	(um elmo prateado)
+E 1 10865 10 5 	(uma armadura prateada)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10830 6 10822 	(um soldado grego)
+E 1 10862 10 7 	(as perneiras prateadas)
+E 1 10863 10 10 	(as braçadeiras prateadas)
+E 1 10864 10 6 	(um elmo prateado)
+E 1 10865 10 5 	(uma armadura prateada)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10830 6 10844 	(um soldado grego)
+E 1 10862 10 7 	(as perneiras prateadas)
+E 1 10863 10 10 	(as braçadeiras prateadas)
+E 1 10864 10 6 	(um elmo prateado)
+E 1 10865 10 5 	(uma armadura prateada)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10830 6 10844 	(um soldado grego)
+E 1 10862 10 7 	(as perneiras prateadas)
+E 1 10863 10 10 	(as braçadeiras prateadas)
+E 1 10864 10 6 	(um elmo prateado)
+E 1 10865 10 5 	(uma armadura prateada)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10831 1 10868 	(um batalhÃ£o etÃ­ope)
+E 1 10817 10 19 	(uma argulha de marfim)
+E 1 10818 10 11 	(um escudo etíope)
+E 1 10819 10 16 	(a lança da coragem)
+M 0 10832 4 10905 	(um cidadÃ£o troiano)
+E 1 10847 10 12 	(um manto de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+M 0 10833 4 10905 	(uma cidadÃ£ troiana)
+E 1 10848 10 12 	(um vestido de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+M 0 10833 4 10910 	(uma cidadÃ£ troiana)
+E 1 10848 10 12 	(um vestido de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+M 0 10833 4 10923 	(uma cidadÃ£ troiana)
+E 1 10848 10 12 	(um vestido de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+M 0 10832 4 10923 	(um cidadÃ£o troiano)
+E 1 10847 10 12 	(um manto de seda)
+E 1 10849 10 8 	(uma sandália de couro)
+M 0 10832 4 10917 	(um cidadÃ£o troiano)
+E 1 10847 10 12 	(um manto de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+M 0 10833 4 10911 	(uma cidadÃ£ troiana)
+E 1 10848 10 12 	(um vestido de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+M 0 10832 4 10911 	(um cidadÃ£o troiano)
+E 1 10847 10 12 	(um manto de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+M 0 10834 3 10909 	(uma crianÃ§a troiana)
+E 1 10847 10 12 	(um manto de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+G 1 10915 10 -1 	(a harpa do bardo)
+M 0 10834 3 10906 	(uma crianÃ§a troiana)
+E 1 10847 10 12 	(um manto de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+M 0 10834 3 10916 	(uma crianÃ§a troiana)
+E 1 10847 10 12 	(um manto de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+M 0 10835 1 10916 	(um artesÃ£o troiano)
+E 1 10847 10 12 	(um manto de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+M 0 10836 1 10845 	(o mestre-artesÃ£o grego)
+E 1 10847 10 12 	(um manto de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+G 1 10893 10 -1 	(o pergaminho do mestre-artesão)
+M 0 10837 3 10912 	(um comerciante troiano)
+E 1 10847 10 12 	(um manto de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+G 1 10896 10 -1 	(um belo tapete persa)
+M 0 10837 3 10916 	(um comerciante troiano)
+E 1 10847 10 12 	(um manto de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+G 1 10894 10 -1 	(uma ânfora de Micenos)
+M 0 10837 3 10907 	(um comerciante troiano)
+E 1 10847 10 12 	(um manto de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+G 1 10895 10 -1 	(um prato de cerâmica do Chipre)
+G 1 10924 50 -1 	(uma garrafa de vinho)
+M 0 10838 1 10911 	(Laocoonte)
+E 1 10807 10 12 	(o manto sacerdotal de Laocoonte)
+E 1 10808 10 16 	(o cajado do cético)
+E 1 10849 50 8 	(uma sandália de couro)
+M 0 10839 1 10990 	(SÃ­non)
+E 1 10815 10 16 	(a faca do espião)
+E 1 10847 10 12 	(um manto de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+G 1 10912 10 -1 	(um pergaminho)
+M 0 10840 1 10991 	(EnÃ©ias)
+E 1 10823 10 14 	(o bracelete de Afrodite)
+E 1 10929 10 5 	(a armadura de Enéias)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10841 1 10991 	(Anquises)
+E 1 10847 10 12 	(um manto de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10851 10 14 	(um bracelete de zinco)
+M 0 10842 1 10994 	(Creusa)
+E 1 10848 10 12 	(um vestido de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10870 10 2 	(um anel de diamante)
+M 0 10843 1 10994 	(AscÃ¢nio)
+E 1 10847 10 12 	(um manto de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10852 10 14 	(um bracelete da Pomerânia)
+M 0 10844 1 10843 	(Briseis)
+E 1 10848 10 12 	(um vestido de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10856 10 19 	(um brinco de ouro)
+M 0 10845 3 10978 	(uma amazona)
+E 1 10841 10 16 	(o arco das amazonas)
+E 1 10842 10 5 	(a armadura das amazonas)
+M 0 10845 3 10978 	(uma amazona)
+E 1 10841 10 16 	(o arco das amazonas)
+E 1 10842 10 5 	(a armadura das amazonas)
+M 0 10845 3 10978 	(uma amazona)
+E 1 10841 10 16 	(o arco das amazonas)
+E 1 10842 10 5 	(a armadura das amazonas)
+M 0 10846 1 10834 	(Dolon)
+E 1 10847 10 12 	(um manto de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10899 10 17 	(um estranho tubo de aumento)
+M 0 10847 1 10817 	(os MirmidÃµes)
+E 1 10850 10 11 	(um escudo de bronze)
+E 1 10880 14 16 	(uma lança de combate)
+E 1 10930 10 5 	(a armadura negra das formigas)
+M 0 10848 2 10937 	(uma sereia)
+E 1 10809 10 20 	(um brinco de corais)
+M 0 10848 2 10938 	(uma sereia)
+E 1 10809 10 20 	(um brinco de corais)
+E 1 3817 1 17 	(o Card Tiara de CalÃ­ope)
+M 0 10849 1 10840 	(um pastor de ovelhas)
+E 1 10810 10 17 	(o cajado do pastor)
+E 1 10811 10 12 	(um manto de pele de ovelha)
+E 1 10849 50 8 	(uma sandália de couro)
+G 1 10919 10 -1 	(garrafa de leite de ovelha)
+M 0 10850 1 10942 	(Anfitrite)
+E 1 10800 10 6 	(o elmo de corais)
+E 1 10801 10 12 	(um vestido celeste)
+M 0 10851 1 10986 	(Nestor)
+E 1 10834 10 5 	(a armadura de Nestor)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10852 1 10920 	(PÃ¢ndaro)
+E 1 10835 10 5 	(a armadura de Pândaro)
+E 1 10880 14 16 	(uma lança de combate)
+E 1 10858 10 3 	(um colar de marfim africano)
+M 0 10853 1 10902 	(Polidoro)
+E 1 10847 10 12 	(um manto de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10881 10 16 	(uma adaga de marfim africano)
+M 0 10854 1 10841 	(SarpÃ©don)
+E 1 10836 10 5 	(a armadura de Sarpédon)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10855 1 10980 	(FÃªnix)
+E 1 10837 10 5 	(a armadura de Fênix)
+E 1 10880 14 16 	(uma lança de combate)
+M 0 10856 1 10935 	(uma tartaruga marinha)
+M 0 10857 1 10817 	(o cisne de Egina)
+M 0 10858 1 10890 	(a serpente dos anÃ©is)
+M 0 10859 2 10840 	(uma ovelha)
+M 0 10859 2 10840 	(uma ovelha)
+M 0 10860 2 10833 	(um cavalo selvagem)
+M 0 10860 2 10837 	(um cavalo selvagem)
+M 0 10861 1 10937 	(um golfinho)
+M 0 10862 1 10940 	(O Octopos)
+M 0 10863 1 10933 	(um tubarÃ£o)
+M 0 10864 1 10932 	(um cardume de peixes coloridos)
+M 0 10865 1 10840 	(um cÃ£o pastor)
+M 0 10866 1 10907 	(um galo)
+M 0 10867 1 10833 	(um garanhÃ£o branco)
+M 0 10868 1 10820 	(um navio grego)
+M 0 10869 1 10852 	(um navio troiano)
+M 0 10870 1 10804 	(um navio fantasma)
+M 0 10871 1 10927 	(Polixena)
+E 1 10848 10 12 	(um vestido de seda)
+E 1 10849 50 8 	(uma sandália de couro)
+E 1 10859 10 20 	(um brinco de marfim africano)
+G 1 10898 10 -1 	(um jarro de porcelana)
+G 1 10925 50 -1 	(um belo cacho de uvas)
+M 0 10872 1 10823 	(Neoptolemus)
+E 1 10838 10 5 	(a armadura de Neoptolemus)
+E 1 10846 10 16 	(o machado de Neoptolemus)
+R 0 10911 10884 -1 	(uma estátua do deus Poseidon)
+O 0 10884 1 10911 	(uma estátua do deus Poseidon)
+R 0 10981 10885 -1 	(uma estátua da deusa Palas Atena)
+O 0 10885 1 10981 	(uma estátua da deusa Palas Atena)
+R 0 10981 10886 -1 	(uma estátua da deusa Hera)
+O 0 10886 1 10981 	(uma estátua da deusa Hera)
+R 0 10981 10887 -1 	(uma estátua da deusa Afrodite)
+O 0 10887 1 10981 	(uma estátua da deusa Afrodite)
+R 0 10845 10888 -1 	(uma enorme peça de xadrez)
+O 0 10888 1 10845 	(uma enorme peça de xadrez)
+R 0 10841 10889 -1 	(um mastro de aço ostentando a gloriosa bandeira troiano)
+O 0 10889 5 10841 	(um mastro de aço ostentando a gloriosa bandeira troiano)
+R 0 10841 10913 -1 	(uma fogueira)
+O 0 10913 10 10841 	(uma fogueira)
+R 0 10822 10890 -1 	(um mastro de aço ostentando a imponente bandeira grega)
+O 0 10890 5 10822 	(um mastro de aço ostentando a imponente bandeira grega)
+R 0 10822 10913 -1 	(uma fogueira)
+O 0 10913 10 10822 	(uma fogueira)
+R 0 10844 10890 -1 	(um mastro de aço ostentando a imponente bandeira grega)
+O 0 10890 5 10844 	(um mastro de aço ostentando a imponente bandeira grega)
+R 0 10844 10913 -1 	(uma fogueira)
+O 0 10913 10 10844 	(uma fogueira)
+R 0 10915 10889 -1 	(um mastro de aço ostentando a gloriosa bandeira troiano)
+O 0 10889 5 10915 	(um mastro de aço ostentando a gloriosa bandeira troiano)
+R 0 10915 10913 -1 	(uma fogueira)
+O 0 10913 10 10915 	(uma fogueira)
+R 0 10906 10900 -1 	(uma mesa de madeira)
+O 0 10900 10 10906 	(uma mesa de madeira)
+R 0 10906 10902 -1 	(uma cadeira de madeira)
+O 0 10902 10 10906 	(uma cadeira de madeira)
+R 0 10910 10900 -1 	(uma mesa de madeira)
+O 0 10900 10 10910 	(uma mesa de madeira)
+R 0 10910 10902 -1 	(uma cadeira de madeira)
+O 0 10902 10 10910 	(uma cadeira de madeira)
+R 0 10923 10900 -1 	(uma mesa de madeira)
+O 0 10900 10 10923 	(uma mesa de madeira)
+R 0 10923 10902 -1 	(uma cadeira de madeira)
+O 0 10902 10 10923 	(uma cadeira de madeira)
+R 0 10929 10901 -1 	(uma mesa de mármore branco)
+O 0 10901 10 10929 	(uma mesa de mármore branco)
+R 0 10929 10903 -1 	(uma cadeira de mármore)
+O 0 10903 10 10929 	(uma cadeira de mármore)
+R 0 10907 10904 -1 	(uma fonte de mármore verde)
+O 0 10904 3 10907 	(uma fonte de mármore verde)
+R 0 10991 10911 -1 	(uma urna dourada)
+O 0 10911 5 10991 	(uma urna dourada)
+R 0 10905 10908 -1 	(uma cama de madeira)
+O 0 10908 3 10905 	(uma cama de madeira)
+R 0 10905 10914 -1 	(um armário de madeira)
+O 0 10914 3 10905 	(um armário de madeira)
+R 0 10917 10908 -1 	(uma cama de madeira)
+O 0 10908 3 10917 	(uma cama de madeira)
+R 0 10917 10914 -1 	(um armário de madeira)
+O 0 10914 3 10917 	(um armário de madeira)
+R 0 10811 10917 -1 	(o portal mágico de Pégaso)
+O 0 10917 1 10811 	(o portal mágico de Pégaso)
+R 0 10928 10906 -1 	(um lindo quadro de Poseidon)
+O 0 10906 14 10928 	(um lindo quadro de Poseidon)
+R 0 10928 10907 -1 	(um belo quadro de Tróia)
+O 0 10907 10 10928 	(um belo quadro de Tróia)
+R 0 10998 10909 -1 	(uma cama da realeza)
+O 0 10909 3 10998 	(uma cama da realeza)
+R 0 10926 10909 -1 	(uma cama da realeza)
+O 0 10909 3 10926 	(uma cama da realeza)
+R 0 10931 10909 -1 	(uma cama da realeza)
+O 0 10909 3 10931 	(uma cama da realeza)
+R 0 10926 10910 -1 	(um espelho real)
+O 0 10910 3 10926 	(um espelho real)
+R 0 10931 10910 -1 	(um espelho real)
+O 0 10910 3 10931 	(um espelho real)
+R 0 10998 10910 -1 	(um espelho real)
+O 0 10910 3 10998 	(um espelho real)
+R 0 10999 10897 -1 	(um baú da realeza troiana)
+O 0 10897 10 10999 	(um baú da realeza troiana)
+P 1 10918 1 10897 	(uma grande quantidade de moedas de ouro)
+R 0 10921 10921 -1 	(um pão troiano)
+O 0 10921 50 10921 	(um pão troiano)
+R 0 10921 10921 -1 	(um pão troiano)
+O 0 10921 50 10921 	(um pão troiano)
+R 0 10921 10923 -1 	(um barril de vinho)
+O 0 10923 50 10921 	(um barril de vinho)
+D 0 10898 2 2 	(Uma Planície no Coração de Tróia)
+D 0 10902 0 2 	(A Cidade de Tróia)
+D 0 10915 2 2 	(A Entrada do Palácio)
+D 0 10920 0 2 	(Os Jardins do Palácio)
+D 0 10925 8 2 	(O Grande Salão do Palácio)
+D 0 10928 6 2 	(O Salão Real)
+D 0 10930 0 2 	(Um Aposento Real)
+D 0 10998 2 2 	(Um Aposento Real)
+D 0 10998 7 2 	(Um Aposento Real)
+D 0 10999 9 2 	(A Sala do Tesouro)
 S
+$

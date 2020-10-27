@@ -1,35 +1,33 @@
 #91
 Vitalia~
 O Labirinto do Milharal~
-9100 9199 45 1 abdc 0 0 0 -1 -1
--1
-*
-O 0 9100 1 9100 
-M 0 9105 2 9114 
-M 0 9105 2 9141
-M 0 9104 2 9141 
-M 0 9104 2 9123 
-M 0 9103 2 9123 
-M 0 9103 2 9120 
-M 0 9102 4 9120 
-M 0 9102 2 9116 
-M 0 9102 4 9116 
-M 0 9102 4 9126 
-M 0 9100 8 9126 
-M 0 9102 4 9133 
-M 0 9101 8 9133 
-M 0 9101 8 9138 
-M 0 9101 8 9140 
-M 0 9101 8 9132 
-M 0 9101 8 9121 
-M 0 9101 8 9118 
-M 0 9100 8 9118 
-M 0 9101 8 9106 
-M 0 9100 8 9106
-M 0 9100 8 9139
-M 0 9100 8 9130
-M 0 9100 8 9108
-M 0 9100 8 9105
-M 0 9100 8 9109
+9100 9199 45 1 abcdk 0 0 0 -1 -1
+O 0 9100 1 9100 	(a placa aviso)
+M 0 9105 2 9114 	(o cavalo maluco)
+M 0 9105 2 9141 	(o cavalo maluco)
+M 0 9104 2 9141 	(o touro alienado)
+M 0 9104 2 9123 	(o touro alienado)
+M 0 9103 2 9123 	(a vaca louca)
+M 0 9103 2 9120 	(a vaca louca)
+M 0 9102 4 9120 	(o porco doido)
+M 0 9102 2 9116 	(o porco doido)
+M 0 9102 4 9116 	(o porco doido)
+M 0 9102 4 9126 	(o porco doido)
+M 0 9100 8 9126 	(a galinha biruta)
+M 0 9102 4 9133 	(o porco doido)
+M 0 9101 8 9133 	(o galo insano)
+M 0 9101 8 9138 	(o galo insano)
+M 0 9101 8 9140 	(o galo insano)
+M 0 9101 8 9132 	(o galo insano)
+M 0 9101 8 9121 	(o galo insano)
+M 0 9101 8 9118 	(o galo insano)
+M 0 9100 8 9118 	(a galinha biruta)
+M 0 9101 8 9106 	(o galo insano)
+M 0 9100 8 9106 	(a galinha biruta)
+M 0 9100 8 9139 	(a galinha biruta)
+M 0 9100 8 9130 	(a galinha biruta)
+M 0 9100 8 9108 	(a galinha biruta)
+M 0 9100 8 9105 	(a galinha biruta)
+M 0 9100 8 9109 	(a galinha biruta)
 S
 $

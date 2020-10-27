@@ -1,140 +1,139 @@
 #280
 Vitalia~
 As Plan√≠cies de Callyus~
-28000 28099 75 2 0 0 0 -1 -1
--1
-M 0 28004 3 28033
-M 0 28004 3 28033
-M 0 28004 3 28034
-M 0 28005 2 28039
-E 1 28020 2 15
-M 0 28005 2 28040
-E 1 28020 2 15
-M 0 28002 10 28036
-E 1 28004 19 16
-M 0 28002 10 28037
-E 1 28004 19 16
-M 0 28003 9 28039
-E 1 28004 19 16
-M 0 28006 4 28058
-M 0 28006 4 28059
-M 0 28001 4 28003
-M 0 28001 4 28003
-M 0 28001 4 28003
-M 0 28001 4 28003
-E 1 28003 1 16
-M 0 28009 1 28078
-E 1 28002 1 16
-M 0 28006 4 28059
-M 0 28008 2 28053
-G 1 28081 2
-M 0 28008 2 28054
-G 1 28081 2
-M 0 28010 3 28054
-G 1 28082 6
-M 0 28010 3 28053
-G 1 28082 6
-M 0 28011 3 28055
-G 1 28082 6
-M 0 28010 3 28054
-G 1 28082 6
-M 0 28011 3 28055
-G 1 28082 6
-M 0 28011 3 28055
-G 1 28082 6
-M 0 28012 2 28078	Vendedora
-M 0 28013 1 28030
-E 1 28054 5 10
-M 0 28014 1 28004
-E 1 28056 1 3
-M 0 28015 1 28009
-E 1 28055 1 1
-M 0 28002 10 28042
-E 1 28004 19 16
-M 0 28002 10 28042
-E 1 28004 19 16
-M 0 28003 9 28042
-E 1 28004 19 16
-M 0 28003 9 28043
-E 1 28004 19 16
-M 0 28003 9 28043
-E 1 28004 19 16
-M 0 28002 10 28043
-E 1 28004 19 16
-M 0 28007 3 28040
-M 0 28002 10 28040
-E 1 28004 19 16
-M 0 28003 9 28040
-E 1 28004 19 16
-M 0 28016 3 28030
-M 0 28016 3 28030
-M 0 28016 3 28030
-M 0 28017 6 28018
-E 1 28001 6 16
-M 0 28017 6 28018
-E 1 28001 6 16
-M 0 28017 6 28015
-E 1 28001 6 16
-G 1 28099 1
-M 0 28002 10 28039
-E 1 28004 19 16
-M 0 28003 9 28037
-E 1 28004 19 16
-M 0 28002 10 28037
-E 1 28004 19 16
-M 0 28003 9 28036
-E 1 28004 19 16
-M 0 28018 1 28076
-G 1 28096 1
-E 1 28052 1 9
-E 1 28053 1 8
-M 0 28019 1 28075
-G 1 28097 2
-M 0 28017 6 28065
-E 1 28001 6 16
-M 0 28017 6 28063
-E 1 28001 6 16
-M 0 28007 3 28045
-M 0 28007 3 28049
-M 0 28002 10 28046
-E 1 28004 19 16
-M 0 28003 9 28046
-E 1 28004 19 16
-M 0 28003 9 28048
-E 1 28004 19 16
-M 0 28002 10 28048
-E 1 28004 19 16
-M 0 28020 1 28071
-E 1 28050 1 12
-E 1 28051 1 6
-M 0 28021 2 28064
-G 1 28098 1
-M 0 28021 2 28061
-M 0 28022 4 28065
-M 0 28022 4 28066
-M 0 28023 3 28066
-M 0 28023 3 28078
-R 0 28078 28080
-O 0 28080 1 28078
-R 0 28053 28083
-O 0 28083 1 28053
-R 0 28076 28084
-O 0 28084 1 28076
-P 1 28010 1 28084
-P 1 28011 1 28084
-D 0 28007 0 1
-D 0 28011 5 1
-D 0 28015 1 1
-D 0 28016 2 2
-D 0 28016 3 1
-D 0 28016 4 1
-D 0 28017 0 2
-D 0 28018 5 1
-D 0 28067 1 1
-D 0 28070 1 2
-D 0 28070 3 1
-D 0 28071 3 2
-D 0 28075 1 2
-D 0 28076 3 2
+28000 28099 75 2 k 0 0 0 -1 -1
+M 0 28004 3 28033 	(a grotesca sanguessuga gigante)
+M 0 28004 3 28033 	(a grotesca sanguessuga gigante)
+M 0 28004 3 28034 	(a grotesca sanguessuga gigante)
+M 0 28005 2 28039 	(o espantalho)
+E 1 28020 2 15 	(um bracelete feito de grÔøΩos)
+M 0 28005 2 28040 	(o espantalho)
+E 1 28020 2 15 	(um bracelete feito de grÔøΩos)
+M 0 28002 10 28036 	(o trabalhador)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28002 10 28037 	(o trabalhador)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28003 9 28039 	(a trabalhadora)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28006 4 28058 	(o goblin aqu√°tico)
+M 0 28006 4 28059 	(o goblin aqu√°tico)
+M 0 28001 4 28003 	(a dr√≠ade)
+M 0 28001 4 28003 	(a dr√≠ade)
+M 0 28001 4 28003 	(a dr√≠ade)
+M 0 28001 4 28003 	(a dr√≠ade)
+E 1 28003 1 16 	(um cetro de carvalho vermelho)
+M 0 28009 1 28078 	(a est√°tua de metal)
+E 1 28002 1 16 	(uma lanÔøΩa de titÔøΩnio azulado)
+M 0 28006 4 28059 	(o goblin aqu√°tico)
+M 0 28008 2 28053 	(a vaca louca)
+G 1 28081 2 -1 	(um grande pedaÔøΩo de carne)
+M 0 28008 2 28054 	(a vaca louca)
+G 1 28081 2 -1 	(um grande pedaÔøΩo de carne)
+M 0 28010 3 28054 	(a vaca)
+G 1 28082 6 -1 	(um grande pedaÔøΩo de carne)
+M 0 28010 3 28053 	(a vaca)
+G 1 28082 6 -1 	(um grande pedaÔøΩo de carne)
+M 0 28011 3 28055 	(o cavalo)
+G 1 28082 6 -1 	(um grande pedaÔøΩo de carne)
+M 0 28010 3 28054 	(a vaca)
+G 1 28082 6 -1 	(um grande pedaÔøΩo de carne)
+M 0 28011 3 28055 	(o cavalo)
+G 1 28082 6 -1 	(um grande pedaÔøΩo de carne)
+M 0 28011 3 28055 	(o cavalo)
+G 1 28082 6 -1 	(um grande pedaÔøΩo de carne)
+M 0 28012 2 28078 	(a jovem vendedora)
+M 0 28013 1 28030 	(O Guardi√£o das √Åguas)
+E 1 28054 5 10 	(uma braÔøΩadeira feita de ÔøΩgua-marinha)
+M 0 28014 1 28004 	(O Guardi√£o das Florestas)
+E 1 28056 1 3 	(um colar de fibra de madeira)
+M 0 28015 1 28009 	(O Guardi√£o da Escurid√£o)
+E 1 28055 1 1 	(um anel-duplo negro)
+M 0 28002 10 28042 	(o trabalhador)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28002 10 28042 	(o trabalhador)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28003 9 28042 	(a trabalhadora)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28003 9 28043 	(a trabalhadora)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28003 9 28043 	(a trabalhadora)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28002 10 28043 	(o trabalhador)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28007 3 28040 	(o gafanhoto)
+M 0 28002 10 28040 	(o trabalhador)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28003 9 28040 	(a trabalhadora)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28016 3 28030 	(a ninfa)
+M 0 28016 3 28030 	(a ninfa)
+M 0 28016 3 28030 	(a ninfa)
+M 0 28017 6 28018 	(o guarda cally)
+E 1 28001 6 16 	(um sabre cally)
+M 0 28017 6 28018 	(o guarda cally)
+E 1 28001 6 16 	(um sabre cally)
+M 0 28017 6 28015 	(o guarda cally)
+E 1 28001 6 16 	(um sabre cally)
+G 1 28099 1 -1 	(uma pesada chave de ferro)
+M 0 28002 10 28039 	(o trabalhador)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28003 9 28037 	(a trabalhadora)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28002 10 28037 	(o trabalhador)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28003 9 28036 	(a trabalhadora)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28018 1 28076 	(O Almirante Dasher)
+G 1 28096 1 -1 	(uma chave de titÔøΩnio ornamentada)
+E 1 28052 1 9 	(um par de luvas de titÔøΩnio azulado)
+E 1 28053 1 8 	(um par de botas de titÔøΩnio azulado)
+M 0 28019 1 28075 	(senhorita Ginger)
+G 1 28097 2 -1 	(uma chave sextavada)
+M 0 28017 6 28065 	(o guarda cally)
+E 1 28001 6 16 	(um sabre cally)
+M 0 28017 6 28063 	(o guarda cally)
+E 1 28001 6 16 	(um sabre cally)
+M 0 28007 3 28045 	(o gafanhoto)
+M 0 28007 3 28049 	(o gafanhoto)
+M 0 28002 10 28046 	(o trabalhador)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28003 9 28046 	(a trabalhadora)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28003 9 28048 	(a trabalhadora)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28002 10 28048 	(o trabalhador)
+E 1 28004 19 16 	(uma pequena foice)
+M 0 28020 1 28071 	(Salom√£o)
+E 1 28050 1 12 	(um casaco de lÔøΩ)
+E 1 28051 1 6 	(um bonÔøΩ preto)
+M 0 28021 2 28064 	(o mestre das docas)
+G 1 28098 1 -1 	(uma chave com trÔøΩs lados)
+M 0 28021 2 28061 	(o mestre das docas)
+M 0 28022 4 28065 	(estivador)
+M 0 28022 4 28066 	(estivador)
+M 0 28023 3 28066 	(o marinheiro)
+M 0 28023 3 28078 	(o marinheiro)
+R 0 28078 28080 -1 	(uma cascata)
+O 0 28080 1 28078 	(uma cascata)
+R 0 28053 28083 -1 	(um tonel de leite)
+O 0 28083 1 28053 	(um tonel de leite)
+R 0 28076 28084 -1 	(um pesado cofre de aÔøΩo)
+O 0 28084 1 28076 	(um pesado cofre de aÔøΩo)
+P 1 28010 1 28084 	(um bÔøΩlsamo de vida)
+P 1 28011 1 28084 	(um bÔøΩlsamo cristalino)
+D 0 28007 0 1 	(Sob a Cachoeira)
+D 0 28011 5 1 	(Uma Estranha Piscina)
+D 0 28015 1 1 	(Fora do Pequeno PrÈdio da Margem do Rio)
+D 0 28016 2 2 	(Dentro do PrÈdio da Bomba D'¡gua)
+D 0 28016 3 1 	(Dentro do PrÈdio da Bomba D'¡gua)
+D 0 28016 4 1 	(Dentro do PrÈdio da Bomba D'¡gua)
+D 0 28017 0 2 	(O DepÛsito do PrÈdio da Bomba D'¡gua)
+D 0 28018 5 1 	(A Torre de Vigia do PrÈdio)
+D 0 28067 1 1 	(O EscritÛrio Central das Docas de Calyus)
+D 0 28070 1 2 	(O EscritÛrio do Mestre do Estaleiro)
+D 0 28070 3 1 	(O EscritÛrio do Mestre do Estaleiro)
+D 0 28071 3 2 	(O Quarto do Mestre do Estaleiro)
+D 0 28075 1 2 	(A Antec‚mara dos Aposentos do Almirante)
+D 0 28076 3 2 	(Os Aposentos do Almirante)
 S
 $

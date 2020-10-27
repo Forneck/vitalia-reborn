@@ -1,30 +1,30 @@
-Oct 25 03:00:13 2020 :: Resetting #151: O Templo Samurai (rooms 15100-15199).
-Oct 25 03:00:13 2020 :: Resetting #155: O Moinho de Vento (rooms 15500-15599).
-Oct 25 03:00:13 2020 :: Resetting #157: O Castelo de Flyre (rooms 15700-15799).
-Oct 25 03:00:13 2020 :: Resetting #160: Os Estrategistas de Vitália (rooms 16000-16399).
-Oct 25 03:00:13 2020 :: Resetting #170: O Canyon dos Elementais (rooms 17000-17099).
-Oct 25 03:00:13 2020 :: Resetting #173: Camelot (rooms 17300-17399).
-Oct 25 03:00:13 2020 :: Resetting #176: O Império Chinês (rooms 17600-17999).
-Oct 25 03:00:13 2020 :: Resetting #181: Os Caminhos Iniciais (rooms 18100-18199).
-Oct 25 03:00:13 2020 :: Resetting #186: Zona dos Iniciantes (rooms 18600-18699).
-Oct 25 03:00:13 2020 :: Resetting #190: Os Bosques dos Elfos (rooms 19000-19099).
-Oct 25 03:00:13 2020 :: Resetting #197: O Vale dos Orcs Negros (rooms 19700-19799).
-Oct 25 03:00:13 2020 :: Resetting #198: O Labirinto das Almas Perdidas (rooms 19800-19899).
-Oct 25 03:00:13 2020 :: Resetting #201: O Asilo dos Novatos (rooms 20100-20199).
-Oct 25 03:00:13 2020 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
-Oct 25 03:00:13 2020 :: Resetting #220: Anexo (rooms 22000-22099).
-Oct 25 03:00:13 2020 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
-Oct 25 03:00:13 2020 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
-Oct 25 03:00:13 2020 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
-Oct 25 03:00:13 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
-Oct 25 03:00:13 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
-Oct 25 03:00:13 2020 :: Boot db -- DONE.
-Oct 25 03:00:13 2020 :: Signal trapping.
-Oct 25 03:00:13 2020 :: Entering game loop.
-Oct 25 03:00:13 2020 :: No connections.  Going to sleep.
-Oct 25 03:00:28 2020 :: New connection.  Waking up.
-Oct 25 03:00:35 2020 :: Cansian has connected.
-Oct 25 03:00:37 2020 :: Cansian had no variable file
-Oct 25 03:00:37 2020 :: Cansian retrieving crash-saved items and entering game.
-Oct 25 03:00:37 2020 :: Cansian (level 110) has 4 objects (max 45).
-Segmentation fault (core dumped)
+Oct 27 01:13:36 2020 :: (GC) Cansian Switched into: Althair
+Oct 27 01:14:02 2020 :: (GC) Cansian Switched into: Althair
+Oct 27 01:14:08 2020 :: Althair hit death trap #6131 (A Teia de Aranha Mort�fera)
+Oct 27 01:14:13 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Oct 27 01:14:16 2020 :: Cansian has quit the game.
+Oct 27 01:14:20 2020 :: Losing player: Cansian.
+Oct 27 01:14:20 2020 :: No connections.  Going to sleep.
+Oct 27 01:14:21 2020 :: New connection.  Waking up.
+Oct 27 01:14:49 2020 :: Forneck [177.220.172.147] new player.
+Oct 27 01:14:50 2020 :: Forneck had no variable file
+Oct 27 01:14:50 2020 :: Forneck un-renting and entering game.
+Oct 27 01:14:50 2020 :: Forneck (level 0) has 11 objects (max 100).
+Oct 27 01:16:48 2020 :: Forneck hit death trap #6131 (A Teia de Aranha Mort�fera)
+Oct 27 01:16:50 2020 :: add_to_lookup updating existing value for uid=19 (0x556c3e039880 -> 0x556c3e039880)
+Oct 27 01:16:50 2020 :: Forneck entering game with no equipment.
+Oct 27 01:17:20 2020 :: Forneck has quit the game.
+Oct 27 01:17:22 2020 :: Losing player: Forneck.
+Oct 27 01:17:22 2020 :: No connections.  Going to sleep.
+Oct 27 01:17:23 2020 :: New connection.  Waking up.
+Oct 27 01:17:30 2020 :: Cansian has connected.
+Oct 27 01:17:31 2020 :: Cansian had no variable file
+Oct 27 01:17:31 2020 :: Cansian un-renting and entering game.
+Oct 27 01:17:31 2020 :: Cansian (level 110) has 5 objects (max 100).
+Oct 27 01:19:16 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Oct 27 01:24:16 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Oct 27 01:29:16 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Oct 27 01:34:16 2020 :: nusage: 1   sockets connected, 1   sockets playing
+do_copyover: execl: No such file or directory
+Quick boot mode -- rent check supressed.
+Using file descriptor for logging.

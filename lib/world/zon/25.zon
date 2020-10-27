@@ -1,343 +1,332 @@
 #25
 Vitalia~
 A Grande Torre de Magia~
-2500 2699 20 2 0 0 0 0 -1 -1
--1
-*
-* Created for SillyMUD by Skylar 
-*
-* Edited and modified for CircleMUD by Furry
-*
-* Mobiles
-M 0 2500 6 2502         Shadow Guardian
-M 0 2500 6 2504         Shadow Guardian
-M 0 2500 6 2506         Shadow Guardian
-M 0 2500 6 2508         Shadow Guardian
-M 0 2500 6 2511         Shadow Guardian
-M 0 2501 1 2511         Adventurer
-M 0 2502 1 2507         Edgar
-M 0 2503 1 2512         Diamond Golem
-E 1 2500 2 17                   Diamond Key
-M 0 2504 7 2513         Wandering Mage
-M 0 2504 7 2514         Wandering Mage
-M 0 2504 7 2514         Wandering Mage
-M 0 2504 7 2515         Wandering Mage
-M 0 2504 7 2516         Wandering Mage
-M 0 2504 7 2518         Wandering Mage
-M 0 2504 7 2519         Wandering Mage
-M 0 2505 1 2518         Strick The Bartender
-M 0 2506 1 2519         Tatorious The Wizard
-M 0 2507 1 2520         The Cook
-E 1 2547 2 16                   Meat Cleaver
-M 0 2508 1 2520         Assistant Cook
-M 0 2509 1 2527         Prisoner
-E 1 2548 1 13                   Chain Shackles
-M 0 2510 1 2528         Jailor
-E 1 2522 2 17                   Old Key
-M 0 2511 2 2533         Broom
-M 0 2511 2 2533         Broom
-M 0 2512 10 2535        Lesser Guardian
-M 0 2512 10 2540        Lesser Guardian
-M 0 2512 10 2630        Lesser Guardian
-M 0 2512 10 2535        Lesser Guardian
-M 0 2512 10 2535        Lesser Guardian
-M 0 2512 10 2535        Lesser Guardian
-M 0 2513 5 2535         Greater Guardian
-M 0 2513 5 2575         Greater Guardian
-M 0 2513 5 2600         Greater Guardian
-M 0 2513 5 2633         Greater Guardian
-M 0 2513 5 2649         Greater Guardian
-M 0 2514 1 2537         Visiting Mage
-M 0 2515 3 2542         Apprentice
-M 0 2515 3 2544         Apprentice
-M 0 2516 3 2544         Apprentice
-M 0 2516 3 2542         Apprentice
-M 0 2517 3 2542         Apprentice
-M 0 2517 3 2544         Apprentice
-M 0 2518 3 2545         Apprentice
-M 0 2518 3 2545         Apprentice
-M 0 2518 3 2545         Apprentice
-M 0 2519 1 2545         Kitten
-M 0 2520 4 2549         Student
-M 0 2520 4 2549         Student
-M 0 2520 4 2549         Student
-M 0 2520 4 2549         Student
-M 0 2521 1 2549         Teacher
-M 0 2522 4 2554         Student
-M 0 2522 4 2554         Student
-M 0 2522 4 2554         Student
-M 0 2522 4 2554         Student
-M 0 2523 1 2554         Teacher
-M 0 2524 3 2557         Listener
-M 0 2524 3 2557         Listener
-M 0 2524 3 2557         Listener
-M 0 2525 1 2557         Speaker
-M 0 2526 3 2559         Student
-E 1 2549 6 16                   Silvery Dagger
-M 0 2526 3 2559         Student
-E 1 2549 6 16                   Silvery Dagger
-M 0 2526 3 2559         Student
-E 1 2549 6 16                   Silvery Dagger
-M 0 2527 1 2559         Battle Master
-E 1 2549 6 17                   Silvery Dagger
-M 0 2528 2 2564         Teacher
-M 0 2529 1 2565         Sleeping Mage
-M 0 2530 1 2567         Scribe
-M 0 2512 10 2568        Lesser Guardian
-M 0 2531 2 2571         Scribe
-M 0 2531 2 2571         Scribe
-M 0 2532 1 2573         Master Scribe
-G 1 2552 1 -1                     Cylindrical Tube
-P 1 2550 2 2552                         Scroll
-P 1 2551 2 2552                         Bound Scroll
-M 0 2533 1 2573         Assistant Scribe
-G 1 2553 3 -1                     Old Scroll
-M 0 2534 1 2582         Enchanter
-E 1 2515 2 17                   Small Key
-G 1 2554 1 -1                     Scroll Of Enchantment
-M 0 2535 1 2582         Dancing Sword
-M 0 2536 1 2588         The Mad Alchemist
-E 1 2555 5 17                   Leather Pouch
-P 1 2556 2 2555                         Silver Spoon
-P 1 2558 2 2555                         Red Potion
-P 1 2559 2 2555                         Green Potion
-P 1 2560 2 2555                         Effervescent Potion
-P 1 2561 2 2555                         Milky White Potion
-M 0 2537 1 2590         The Summoner
-E 1 2562 2 17                   Teleport Staff
-M 0 2538 1 2595         Master Of Charm
-E 1 2563 1 17                   Golden Flute
-G 1 2564 1 -1                     Figurine
-M 0 2539 5 2568         Golem Sentry
-M 0 2539 5 2598         Golem Sentry
-M 0 2539 5 2598         Golem Sentry
-M 0 2539 5 2628         Golem Sentry
-M 0 2539 5 2628         Golem Sentry
-M 0 2540 1 2602         SpellBinder
-E 1 2524 2 17                   Silvery Key
-G 1 2523 2 -1                     Silvery Key
-E 1 2565 2 13                   Holstered Belt
-P 1 2566 2 2565                         Blackened Wand
-M 0 2541 1 2609         Golem Maker
-E 1 2567 2 17                   Runed Chisel
-M 0 2542 1 2609         Granite Golem
-M 0 2543 1 2611         Bronze Golem
-M 0 2544 1 2611         Flesh Golem
-M 0 2545 1 2609         Cloth Golem
-M 0 2546 1 2611         Adamantite Golem
-M 0 2547 1 2611         Clay Golem
-M 0 2548 1 2617         Master Of Illusion
-E 1 2568 3 13                   Beltpouch
-P 1 2569 3 2568                         Sparkling Dust
-M 0 2549 1 2625         The Necromancer
-E 1 2570 2 3                    Dark Cowl
-E 1 2571 2 17                   Ashen Wand
-M 0 2550 4 2625         Skeleton
-M 0 2550 4 2625         Skeleton
-M 0 2551 1 2625         Undead Giant
-E 1 2572 1 16                   Spiked Club
-M 0 2552 3 2635         Witch
-M 0 2552 3 2635         Witch
-M 0 2552 3 2635         Witch
-M 0 2553 1 2637         Librarian
-M 0 2554 1 2653         Neutral Apprentice
-E 1 2573 1 12                   Grey Robe
-E 1 2574 1 14                   Silver Bracelet
-M 0 2555 1 2654         Grey Familiar
-M 0 2556 1 2654         Neutral Guildmaster
-G 1 2593 2 -1                     Grey Key
-E 1 2575 1 3                    Grey Cloak
-E 1 2576 1 16                   Iron Shod Staff
-E 1 2577 3 17                   Ward Minor
-M 0 2557 1 2661         Evil Apprentice
-E 1 2578 1 12                   Black Robe
-E 1 2579 1 14                   Onyx Bracelet
-M 0 2558 1 2664         Black Familiar
-M 0 2559 1 2664         Evil Guildmaster
-G 1 2594 2 -1                     Black Key
-E 1 2580 1 3                    Dark Black Cloak
-E 1 2581 1 16                   Shard Of Obsidian
-E 1 2577 3 17                   Ward Minor
-M 0 2560 1 2667         Good Apprentice
-E 1 2582 1 12                   White Robe
-E 1 2583 1 14                   White Gold Bracelet
-M 0 2561 1 2669         White Familiar
-M 0 2562 1 2669         Good Guildmaster
-G 1 2595 2 -1                     White Key
-E 1 2584 1 3                    White Cloak
-E 1 2585 1 16                   Ivory Hilted Dagger
-E 1 2577 3 17                   Ward Minor
-M 0 2563 1 2677         Calico Cat
-E 1 2586 8 3                    Spiked Collar
-M 0 2564 1 2677         Grand Master Of Magic
-G 1 2538 2 -1                     Intricate Key
-E 1 2587 8 3                    Shimmering Cloak
-E 1 2592 10 5                    Green Dragon Scale Shirt
-E 1 2588 8 1                    Emerald Ring
-E 1 2589 8 14                   Emerald Bracelet
-E 1 2590 8 17                   Ward Major
-E 1 2591 8 16                   Ebony Kris
-* Objects
-O 0 2501 1 2520         Oven
-P 1 2504 200 2501               Traveller's Bread
-O 0 2502 1 2520         Meat Locker
-P 1 2505 1 2502                 Chunk Of Meat
-P 1 2506 1 2502                 Finger Sandwich
-R 0 2520 2503
-O 0 2503 3 2520         Spice Rack
-R 0 2533 2507
-R 0 2533 2507
-O 0 2507 8 2533         Broom
-O 0 2507 8 2533         Broom
-O 0 2508 1 2579         Cabinet
-P 1 3020 999 2508               Dagger
-P 1 3021 999 2508               Small Sword
-P 1 3022 999 2508               Long Sword
-O 0 2509 1 2579         Bar Of Silver
-O 0 2510 1 2579         Bar Of Gold
-O 0 2511 1 2579         Bar Of Mithral
-O 0 2512 1 2579         Bar Of Adamantite
-O 0 2513 1 2581         Mithral Hammer
-O 0 2514 1 2582         Chest
-P 1 2516 1 2514                 Long Sword
-P 1 2517 1 2514                 Silver Dagger
-P 1 2518 1 2514                 Scimitar
-O 0 2519 1 2601         Staff
-O 0 2520 1 2603         Cabinet
-P 1 2525 1 2520                 Red And White Staff
-P 1 2526 1 2520                 Burnt Staff
-O 0 2521 1 2603         Cabinet
-P 1 2527 1 2521                 Black Rod
-P 1 2528 1 2521                 Wooden Stick
-P 1 2529 1 2521                 Metal Wand
-O 0 2530 1 2635         Cauldron
-P 1 2531 1 2530                 Bat Wings
-P 1 2532 1 2530                 Eyeball
-O 0 2533 1 2645         The Book Of Magic
-P 1 2534 1 2533                 Spectacles Of True Seeing
-O 0 2535 1 2680         Golden Altar
-P 1 2536 1 2535                 Heart Shaped Medallion
-O 0 2537 1 2681         Chest
-P 1 2539 1 2537                 Coins
-O 0 2540 1 2682         Brown Cloak
-O 0 2541 1 2682         Chameleon Poncho
-O 0 2542 1 2682         Old Boots
-R 0 2682 2544		Leather Backpack
-O 0 2544 10 2682        Leather Backpack
-P 1 2543 1 2544                 Seashell Ring
-* Doors
-D 0 2512 0 2            Tower Entrance
-D 0 2513 2 2
-D 0 2516 3 1            Kitchen
-D 0 2520 1 1
-D 0 2517 5 1            Trapdoor
-D 0 2521 4 1
-D 0 2523 0 2            Dark Cell
-D 0 2527 2 2
-D 0 2524 1 1            Jailor's Office
-D 0 2528 3 1
-D 0 2530 0 1            Store Room
-D 0 2532 2 1
-D 0 2530 2 1            Broom Closet
-D 0 2533 0 1
-D 0 2531 0 1            A Hallway
-D 0 2534 2 1
-D 0 2531 1 1            Guest Bedroom 
-D 0 2536 3 1
-D 0 2531 2 1            Guardian's Chamber
-D 0 2535 0 1
-D 0 2534 1 1            Guest Bedroom
-D 0 2537 3 1
-D 0 2538 1 1            Burnt Room
-D 0 2539 3 1
-D 0 2540 0 1            Apprentices' Barracks
-D 0 2542 2 1
-D 0 2543 0 1            Apprentices' Barracks
-D 0 2544 2 1
-D 0 2545 0 1            Apprentices' Workshop
-D 0 2546 2 1
-D 0 2548 3 1            Classroom
-D 0 2549 1 1
-D 0 2550 3 1            Empty Classroom
-D 0 2552 1 1
-D 0 2551 3 1            Empty Classroom
-D 0 2554 1 1
-D 0 2555 2 1            Amphitheater
-D 0 2557 0 1
-D 0 2556 2 1            Training Room
-D 0 2559 0 1
-D 0 2558 2 1            Dueling Room
-D 0 2561 0 1
-D 0 2562 1 1            Spellmasters' Lounge
-D 0 2564 3 1
-D 0 2563 1 1            Bedroom
-D 0 2565 3 1
-D 0 2566 1 1            Study
-D 0 2567 3 1
-D 0 2570 0 1            Small Office
-D 0 2571 2 1
-D 0 2571 3 1            Master Scribe's Workshop
-D 0 2573 1 1
-D 0 2574 0 1            Store Room
-D 0 2575 2 1
-D 0 2577 3 1            Store Room
-D 0 2579 1 1
-D 0 2578 3 1            Very Hot Room
-D 0 2581 1 1
-D 0 2581 2 1            Master Enchanter's Chamber
-D 0 2582 0 1
-D 0 2581 4 1            Dark Room
-D 0 2612 5 1
-D 0 2584 2 1            Laboratory
-D 0 2586 0 1
-D 0 2587 2 1            Pentagram Chamber
-D 0 2590 0 1
-D 0 2591 1 1            Empty Room
-D 0 2594 3 1
-D 0 2593 1 1            Charm Master's Chamber
-D 0 2595 3 1
-D 0 2595 0 1            Animal Pens
-D 0 2597 2 1
-D 0 2600 0 1            Store Room
-D 0 2601 2 1
-D 0 2601 3 1            Master Spellbinder's Chamber
-D 0 2602 1 1
-D 0 2602 3 1            Master Spellbinder's Cache
-D 0 2603 1 1
-D 0 2605 0 1            Master Spellbinder's Cache
-D 0 2603 2 1
-D 0 2608 3 1            Golem Master's Workshop
-D 0 2609 1 1
-D 0 2609 5 1            Dark Room
-D 0 2612 4 1
-D 0 2616 2 1            Illusion Master's Chamber
-D 0 2617 0 1
-D 0 2619 2 1            Meditation Chamber
-D 0 2620 0 1
-D 0 2622 1 1            Necromancer's Room
-D 0 2623 3 1
-D 0 2634 1 1            Scrying Chamber
-D 0 2635 3 1
-D 0 2536 3 1            Library
-D 0 2637 1 1
-D 0 2652 2 1            Grey Antechamber
-D 0 2653 0 1
-D 0 2660 1 1            Black Antechamber
-D 0 2661 3 1
-D 0 2666 3 1            White Antechamber
-D 0 2667 1 1
-D 0 2673 0 2            Grey Door
-D 0 2674 2 2
-D 0 2674 0 2            Black Door
-D 0 2675 2 2
-D 0 2675 0 2            White Door
-D 0 2676 2 2
-D 0 2680 1 1            Treasury
-D 0 2681 3 1
-D 0 2680 3 1            Secret Excape Passage
-D 0 2682 1 1
-D 0 2689 9 1
-*
+2500 2699 20 2 k 0 0 0 -1 -1
+M 0 2500 6 2502 	(o guardi√£o das sombras)
+M 0 2500 6 2504 	(o guardi√£o das sombras)
+M 0 2500 6 2506 	(o guardi√£o das sombras)
+M 0 2500 6 2508 	(o guardi√£o das sombras)
+M 0 2500 6 2511 	(o guardi√£o das sombras)
+M 0 2501 1 2511 	(o aventureiro perdido)
+M 0 2502 1 2507 	(Edgar)
+M 0 2503 1 2512 	(o golem de diamante)
+E 1 2500 2 17 	(uma chave de diamante)
+M 0 2504 7 2513 	(o mago)
+M 0 2504 7 2514 	(o mago)
+M 0 2504 7 2514 	(o mago)
+M 0 2504 7 2515 	(o mago)
+M 0 2504 7 2516 	(o mago)
+M 0 2504 7 2518 	(o mago)
+M 0 2504 7 2519 	(o mago)
+M 0 2505 1 2518 	(Strick o barman)
+M 0 2506 1 2519 	(Tatorious)
+M 0 2507 1 2520 	(Ezmerelda)
+E 1 2547 2 16 	(um cutelo de a√ßougueiro)
+M 0 2508 1 2520 	(o assistente da cozinheira)
+M 0 2509 1 2527 	(o prisioneiro)
+E 1 2548 1 13 	(alguns grilh√µes e correntes)
+M 0 2510 1 2528 	(O Carcereiro)
+E 1 2522 2 17 	(uma chave velha)
+M 0 2511 2 2533 	(a vassoura)
+M 0 2511 2 2533 	(a vassoura)
+M 0 2512 10 2535 	(o par de maos sem corpo)
+M 0 2512 10 2540 	(o par de maos sem corpo)
+M 0 2512 10 2630 	(o par de maos sem corpo)
+M 0 2512 10 2535 	(o par de maos sem corpo)
+M 0 2512 10 2535 	(o par de maos sem corpo)
+M 0 2512 10 2535 	(o par de maos sem corpo)
+M 0 2513 5 2535 	(o par de olhos sem corpo)
+M 0 2513 5 2575 	(o par de olhos sem corpo)
+M 0 2513 5 2600 	(o par de olhos sem corpo)
+M 0 2513 5 2633 	(o par de olhos sem corpo)
+M 0 2513 5 2649 	(o par de olhos sem corpo)
+M 0 2514 1 2537 	(o mago)
+M 0 2515 3 2542 	(a jovem aprendiz de feiticeiro)
+M 0 2515 3 2544 	(a jovem aprendiz de feiticeiro)
+M 0 2516 3 2544 	(o jovem aprendiz)
+M 0 2516 3 2542 	(o jovem aprendiz)
+M 0 2517 3 2542 	(o jovem aprendiz)
+M 0 2517 3 2544 	(o jovem aprendiz)
+M 0 2518 3 2545 	(o jovem aprendiz)
+M 0 2518 3 2545 	(o jovem aprendiz)
+M 0 2518 3 2545 	(o jovem aprendiz)
+M 0 2519 1 2545 	(o pequeno gatinho)
+M 0 2520 4 2549 	(o estudante)
+M 0 2520 4 2549 	(o estudante)
+M 0 2520 4 2549 	(o estudante)
+M 0 2520 4 2549 	(o estudante)
+M 0 2521 1 2549 	(o instrutor de magia)
+M 0 2522 4 2554 	(o estudante de magias)
+M 0 2522 4 2554 	(o estudante de magias)
+M 0 2522 4 2554 	(o estudante de magias)
+M 0 2522 4 2554 	(o estudante de magias)
+M 0 2523 1 2554 	(o professor de magias)
+M 0 2524 3 2557 	(a estudante de magias)
+M 0 2524 3 2557 	(a estudante de magias)
+M 0 2524 3 2557 	(a estudante de magias)
+M 0 2525 1 2557 	(o mago)
+M 0 2526 3 2559 	(o jovem mago)
+E 1 2549 6 16 	(uma adaga prateada)
+M 0 2526 3 2559 	(o jovem mago)
+E 1 2549 6 16 	(uma adaga prateada)
+M 0 2526 3 2559 	(o jovem mago)
+E 1 2549 6 16 	(uma adaga prateada)
+M 0 2527 1 2559 	(a senhora de batalha)
+E 1 2549 6 17 	(uma adaga prateada)
+M 0 2528 2 2564 	(o professor de magia)
+M 0 2529 1 2565 	(o mago idoso)
+M 0 2530 1 2567 	(o escriv√£o)
+M 0 2512 10 2568 	(o par de maos sem corpo)
+M 0 2531 2 2571 	(o escriv√£)
+M 0 2531 2 2571 	(o escriv√£)
+M 0 2532 1 2573 	(o Mestre Escriv√£o)
+G 1 2552 1 -1 	(um longo tubo cil√≠ndrico)
+P 1 2550 2 2552 	(um pergaminho)
+P 1 2551 2 2552 	(uma divis√≥ria de papel)
+M 0 2533 1 2573 	(o assistente do escriv√£o)
+G 1 2553 3 -1 	(um pergaminho antigo)
+M 0 2534 1 2582 	(o Encantador)
+E 1 2515 2 17 	(uma pequena chave)
+G 1 2554 1 -1 	(um pergaminho escrito em papel azul)
+M 0 2535 1 2582 	(a espada dan√ßarina)
+M 0 2536 1 2588 	(o Alquimista Louco)
+E 1 2555 5 17 	(uma bolsa de couro)
+P 1 2556 2 2555 	(uma colher de prata)
+P 1 2558 2 2555 	(uma po√ß√£o vermelho-clara)
+P 1 2559 2 2555 	(uma po√ß√£o verde)
+P 1 2560 2 2555 	(uma po√ß√£o efervescente)
+P 1 2561 2 2555 	(uma po√ß√£o branca e leitosa)
+M 0 2537 1 2590 	(o Mestre Convocador)
+E 1 2562 2 17 	(um cajado negro)
+M 0 2538 1 2595 	(o Mestre Encantador)
+E 1 2563 1 17 	(uma flauta dourada)
+G 1 2564 1 -1 	(uma pequena estatueta)
+M 0 2539 5 2568 	(o golem de madeira)
+M 0 2539 5 2598 	(o golem de madeira)
+M 0 2539 5 2598 	(o golem de madeira)
+M 0 2539 5 2628 	(o golem de madeira)
+M 0 2539 5 2628 	(o golem de madeira)
+M 0 2540 1 2602 	(o Mestre Vinculador)
+E 1 2524 2 17 	(uma chave prateada)
+G 1 2523 2 -1 	(uma chave prateada)
+E 1 2565 2 13 	(um cinto com coldre)
+P 1 2566 2 2565 	(uma varinha escurecida)
+M 0 2541 1 2609 	(o Criador de Golem)
+E 1 2567 2 17 	(um cinzel r√∫nico)
+M 0 2542 1 2609 	(o golem de granito)
+M 0 2543 1 2611 	(o golem de bronze)
+M 0 2544 1 2611 	(o golem de carne)
+M 0 2545 1 2609 	(o golem de pano)
+M 0 2546 1 2611 	(o golem de adamantite)
+M 0 2547 1 2611 	(o golem de barro)
+M 0 2548 1 2617 	(o Mestre das Ilus√µes)
+E 1 2568 3 13 	(uma pochete)
+P 1 2569 3 2568 	(um pouco de poeira brilhante)
+M 0 2549 1 2625 	(o Necromante)
+E 1 2570 2 3 	(um h√°bito negro)
+E 1 2571 2 17 	(uma varinha cinzenta)
+M 0 2550 4 2625 	(o esqueleto animado)
+M 0 2550 4 2625 	(o esqueleto animado)
+M 0 2551 1 2625 	(o gigante morto-vivo)
+E 1 2572 1 16 	(uma enorme clava de espinhos)
+M 0 2552 3 2635 	(a bruxa feia)
+M 0 2552 3 2635 	(a bruxa feia)
+M 0 2552 3 2635 	(a bruxa feia)
+M 0 2553 1 2637 	(o Bibliotec√°rio)
+M 0 2554 1 2653 	(o aprendiz do Mestre)
+E 1 2573 1 12 	(um robe cinzento)
+E 1 2574 1 14 	(um bracelete de prata reluzente)
+M 0 2555 1 2654 	(o gato cinzento)
+M 0 2556 1 2654 	(o Mestre da Neutralidade)
+G 1 2593 2 -1 	(uma chave cinza)
+E 1 2575 1 3 	(um manto longo cinzento)
+E 1 2576 1 16 	(um cajado refor√ßado com ferro)
+E 1 2577 3 17 	(um cubo de prote√ß√£o menor)
+M 0 2557 1 2661 	(a aprendiza de robe negro)
+E 1 2578 1 12 	(um robe preto)
+E 1 2579 1 14 	(um bracelete de √¥nix)
+M 0 2558 1 2664 	(o gato preto)
+M 0 2559 1 2664 	(o Mestre dos Mantos Negros)
+G 1 2594 2 -1 	(uma chave negra)
+E 1 2580 1 3 	(um manto preto sombrio)
+E 1 2581 1 16 	(uma lasca afiada de obsidiana)
+E 1 2577 3 17 	(um cubo de prote√ß√£o menor)
+M 0 2560 1 2667 	(o aprendiz de robe branco)
+E 1 2582 1 12 	(um robe branco)
+E 1 2583 1 14 	(um bracelete de ouro branco)
+M 0 2561 1 2669 	(o gato branco)
+M 0 2562 1 2669 	(o Mestre da Bondade)
+G 1 2595 2 -1 	(uma chave branca)
+E 1 2584 1 3 	(um manto branco)
+E 1 2585 1 16 	(uma adaga de cabo de marfim)
+E 1 2577 3 17 	(um cubo de prote√ß√£o menor)
+M 0 2563 1 2677 	(o gato morim)
+E 1 2586 8 3 	(um colar de espinhos)
+M 0 2564 1 2677 	(a Grande Soberana)
+G 1 2538 2 -1 	(uma chave intrincadamente entalhada)
+E 1 2587 8 3 	(um manto cintilante de muitas cores)
+E 1 2592 10 5 	(uma camisa justa de escamas de drag√£o verde)
+E 1 2588 8 1 	(Um pequeno anel de esmeralda)
+E 1 2589 8 14 	(um bracelete de esmeralda)
+E 1 2590 8 17 	(um cubo de prote√ß√£o maior)
+E 1 2591 8 16 	(a adaga ondulada de √©bano)
+O 0 2501 1 2520 	(.um forno)
+P 1 2504 200 2501 	(uma fatia de p√£o de viajante)
+O 0 2502 1 2520 	(.um arm√°rio de carnes)
+P 1 2505 1 2502 	(um grande peda√ßo de carne)
+P 1 2506 1 2502 	(um sandu√≠che de dedos)
+R 0 2520 2503 -1 	(.uma prateleira de especiarias )
+O 0 2503 3 2520 	(.uma prateleira de especiarias )
+R 0 2533 2507 -1 	(uma vassoura de palha)
+R 0 2533 2507 -1 	(uma vassoura de palha)
+O 0 2507 8 2533 	(uma vassoura de palha)
+O 0 2507 8 2533 	(uma vassoura de palha)
+O 0 2508 1 2579 	(um arm√°rio)
+P 1 3020 999 2508 	(uma adaga)
+P 1 3021 999 2508 	(um espadim)
+P 1 3022 999 2508 	(uma espada longa)
+O 0 2509 1 2579 	(uma barra de prata)
+O 0 2510 1 2579 	(uma barra de ouro)
+O 0 2511 1 2579 	(uma barra de mithril)
+O 0 2512 1 2579 	(uma barra de adamantite)
+O 0 2513 1 2581 	(um martelo de mithril)
+O 0 2514 1 2582 	(um ba√∫)
+P 1 2516 1 2514 	(uma espada longa)
+P 1 2517 1 2514 	(uma adaga de prata)
+P 1 2518 1 2514 	(uma cimitarra curvada)
+O 0 2519 1 2601 	(um cajado de madeira)
+O 0 2520 1 2603 	(um arm√°rio com relevos de prata)
+P 1 2525 1 2520 	(um cajado vermelho e branco)
+P 1 2526 1 2520 	(um cajado queimado)
+O 0 2521 1 2603 	(um arm√°rio com relevos de prata)
+P 1 2527 1 2521 	(um bast√£o preto)
+P 1 2528 1 2521 	(uma varinha de madeira)
+P 1 2529 1 2521 	(uma varinha de metal)
+O 0 2530 1 2635 	(um caldeir√£o negro)
+P 1 2531 1 2530 	(um pequeno par de asas de morcego)
+P 1 2532 1 2530 	(um olho)
+O 0 2533 1 2645 	(o livro de magia)
+P 1 2534 1 2533 	(um par de √≥culos)
+O 0 2535 1 2680 	(.um altar dourado)
+P 1 2536 1 2535 	(um medalh√£o em forma de cora√ß√£o)
+O 0 2537 1 2681 	(um ba√∫ grande)
+P 1 2539 1 2537 	(uma pilha de moedas)
+O 0 2540 1 2682 	(um manto marrom)
+O 0 2541 1 2682 	(um poncho camale√£o)
+O 0 2542 1 2682 	(um par de botas velhas)
+R 0 2682 2544 -1 	(uma mochila de couro)
+O 0 2544 10 2682 	(uma mochila de couro)
+P 1 2543 1 2544 	(um anel de concha marinha)
+D 0 2512 0 2 	(A Entrada da Alta Torre)
+D 0 2513 2 2 	(Dentro da Alta Torre da Magia)
+D 0 2516 3 1 	(A Sala de Jantar)
+D 0 2520 1 1 	(A Cozinha)
+D 0 2517 5 1 	(Um Corredor Sombrio)
+D 0 2521 4 1 	(Sob O AlÁap„o)
+D 0 2523 0 2 	(Uma Galeria Escura)
+D 0 2527 2 2 	(Uma Cela Escura)
+D 0 2524 1 1 	(Uma Galeria Escura)
+D 0 2528 3 1 	(O EscritÛrio do Carcereiro)
+D 0 2530 0 1 	(Um Corredor)
+D 0 2532 2 1 	(Um DepÛsito)
+D 0 2530 2 1 	(Um Corredor)
+D 0 2533 0 1 	(Um Arm·rio de Vassouras)
+D 0 2531 0 1 	(Uma Curva No Corredor)
+D 0 2534 2 1 	(Um Corredor)
+D 0 2531 1 1 	(Uma Curva No Corredor)
+D 0 2536 3 1 	(Um Quarto de HÛspedes)
+D 0 2531 2 1 	(Uma Curva No Corredor)
+D 0 2535 0 1 	(A C‚mara do Guardi„o)
+D 0 2534 1 1 	(Um Corredor)
+D 0 2537 3 1 	(Um Quarto de HÛspedes)
+D 0 2538 1 1 	(Um Corredor)
+D 0 2539 3 1 	(O Quarto Queimado)
+D 0 2540 0 1 	(Um Corredor)
+D 0 2542 2 1 	(O Alojamento dos Aprendizes)
+D 0 2543 0 1 	(Um Corredor)
+D 0 2544 2 1 	(O Alojamento dos Aprendizes)
+D 0 2545 0 1 	(Um Corredor)
+D 0 2546 2 1 	(A Oficina dos Aprendizes)
+D 0 2548 3 1 	(O Corredor)
+D 0 2549 1 1 	(Uma Sala de Aula)
+D 0 2550 3 1 	(Um Corredor)
+D 0 2552 1 1 	(Uma Sala de Aula Vazia)
+D 0 2551 3 1 	(Um Corredor)
+D 0 2554 1 1 	(Um Sala de Aula Vazia)
+D 0 2555 2 1 	(Um Corredor)
+D 0 2557 0 1 	(O Anfiteatro)
+D 0 2556 2 1 	(Um Corredor)
+D 0 2559 0 1 	(A Sala de Treinamento)
+D 0 2558 2 1 	(Um Corredor)
+D 0 2561 0 1 	(Uma Sala de Duelo)
+D 0 2562 1 1 	(Um Corredor)
+D 0 2564 3 1 	(A Sala de Descanso dos Mestres)
+D 0 2563 1 1 	(Um Corredor)
+D 0 2565 3 1 	(Um Quarto)
+D 0 2566 1 1 	(Um Corredor)
+D 0 2567 3 1 	(O Est˙dio)
+D 0 2570 0 1 	(Um Corredor)
+D 0 2571 2 1 	(Um Pequeno EscritÛrio)
+D 0 2571 3 1 	(Um Pequeno EscritÛrio)
+D 0 2573 1 1 	(A Oficina do Escriv„o-Mor)
+D 0 2574 0 1 	(Um Corredor)
+D 0 2575 2 1 	(Um DepÛsito)
+D 0 2577 3 1 	(Um Corredor)
+D 0 2579 1 1 	(Um DepÛsito)
+D 0 2578 3 1 	(Um Corredor)
+D 0 2581 1 1 	(Uma Sala Muito Quente)
+D 0 2581 2 1 	(Uma Sala Muito Quente)
+D 0 2582 0 1 	(A C‚mara do Mestre Encantador)
+D 0 2581 4 1 	(Uma Sala Muito Quente)
+D 0 2612 5 1 	(Est· Muito Escuro Aqui...)
+D 0 2584 2 1 	(Um Corredor)
+D 0 2586 0 1 	(Um LaboratÛrio)
+D 0 2587 2 1 	(Um Corredor)
+D 0 2590 0 1 	(A C‚mara do Pentagrama)
+D 0 2591 1 1 	(Um Corredor)
+D 0 2594 3 1 	(Uma Sala Vazia)
+D 0 2593 1 1 	(Um Corredor)
+D 0 2595 3 1 	(A C‚mara do Mestre Feiticeiro)
+D 0 2595 0 1 	(A C‚mara do Mestre Feiticeiro)
+D 0 2597 2 1 	(As Jaulas dos Animais)
+D 0 2600 0 1 	(Um Corredor)
+D 0 2601 2 1 	(Um DepÛsito)
+D 0 2601 3 1 	(Um DepÛsito)
+D 0 2602 1 1 	(A C‚mara do Mestre Orador)
+D 0 2602 3 1 	(A C‚mara do Mestre Orador)
+D 0 2603 1 1 	(A Reserva do Mestre Orador)
+D 0 2605 0 1 	(Um Corredor)
+D 0 2603 2 1 	(A Reserva do Mestre Orador)
+D 0 2608 3 1 	(Um Corredor)
+D 0 2609 1 1 	(A Oficina do Mestre dos Golems)
+D 0 2609 5 1 	(A Oficina do Mestre dos Golems)
+D 0 2612 4 1 	(Est· Muito Escuro Aqui...)
+D 0 2616 2 1 	(Um Corredor)
+D 0 2617 0 1 	(A C‚mara do Mestre Ilusionista)
+D 0 2619 2 1 	(Um Corredor)
+D 0 2620 0 1 	(A C‚mara de MeditaÁ„o)
+D 0 2622 1 1 	(Um Corredor)
+D 0 2623 3 1 	(Uma Sala Sombria)
+D 0 2634 1 1 	(Um Corredor)
+D 0 2635 3 1 	(A C‚mara de ObservaÁ„o)
+D 0 2536 3 1 	(Um Quarto de HÛspedes)
+D 0 2637 1 1 	(A Entrada da Biblioteca)
+D 0 2652 2 1 	(Um Corredor de Ladrilhos Cinza)
+D 0 2653 0 1 	(A Antec‚mara)
+D 0 2660 1 1 	(O Fim do Corredor)
+D 0 2661 3 1 	(A C‚mara das Trevas)
+D 0 2666 3 1 	(Um Corredor Brilhante)
+D 0 2667 1 1 	(Uma Antec‚mara)
+D 0 2673 0 2 	(Um Corredor Amplo)
+D 0 2674 2 2 	(Um Corredor Amplo)
+D 0 2674 0 2 	(Um Corredor Amplo)
+D 0 2675 2 2 	(Um Corredor Amplo)
+D 0 2675 0 2 	(Um Corredor Amplo)
+D 0 2676 2 2 	(A Entrada)
+D 0 2680 1 1 	(O Altar)
+D 0 2681 3 1 	(O Cofre do Tesouro)
+D 0 2680 3 1 	(O Altar)
+D 0 2682 1 1 	(Uma Passagem)
+D 0 2689 9 1 	(O Bosque Sombrio)
 S
-
 $

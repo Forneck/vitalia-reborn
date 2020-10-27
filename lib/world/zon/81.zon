@@ -1,322 +1,318 @@
 #81
 Vitalia~
 Egito~
-8100 8299 180 1 b 0 0 0 -1 -1
-4
-*
-M 0 8101 4 8159
-E 1 8140 20 12
-M 0 8101 4 8164
-E 1 8140 20 12
-M 0 8101 3 8138
-E 1 8140 20 12
-M 0 8101 4 8212
-E 1 8140 20 12
-M 0 8102 9 8128
-E 1 8112 20 8
-M 0 8102 9 8123
-E 1 8112 20 8
-G 1 8171 2 
-M 0 8102 9 8121
-E 1 8112 20 8
-M 0 8102 9 8120
-E 1 8112 20 8
-M 0 8102 9 8164
-E 1 8112 20 8
-M 0 8102 9 8213
-E 1 8112 20 8
-M 0 8102 9 8212
-E 1 8112 20 8
-M 0 8102 9 8212
-E 1 8138 20 6
-E 1 8112 20 8
-M 0 8102 9 8212
-E 1 8138 20 6
-E 1 8112 20 8
-M 0 8103 2 8148
-E 1 8146 20 0
-M 0 8103 2 8121
-E 1 8146 20 0
-M 0 8104 9 8178
-M 0 8104 9 8178
-M 0 8104 9 8178
-M 0 8104 9 8161 
-G 1 8111 20
-M 0 8104 9 8161 
-G 1 8111 20
-M 0 8104 9 8161 
-G 1 8111 20
-M 0 8104 9 8161 
-G 1 8111 20
-M 0 8104 9 8123
-M 0 8104 9 8120
-M 0 8105 6 8123
-E 1 8154 20 13
-M 0 8105 6 8121
-E 1 8154 20 13
-M 0 8105 6 8125
-E 1 8154 20 13
-M 0 8105 6 8213
-E 1 8154 20 13
-M 0 8105 9 8149
-E 1 8154 20 13
-M 0 8105 9 8212
-E 1 8154 20 13
-M 0 8106 2 8142
-E 1 8139 25 6
-M 0 8106 2 8147
-E 1 8139 25 6
-M 0 8107 2 8159
-E 1 8143 25 3
-M 0 8107 2 8147
-E 1 8143 25 3
-M 0 8108 2 8159
-E 1 8144 25 3
-M 0 8108 2 8147
-E 1 8144 25 3
-M 0 8109 5 8160
-G 1 8105 20
-M 0 8109 5 8160
-G 1 8105 20
-M 0 8109 5 8123
-G 1 8105 20
-M 0 8109 5 8121
-G 1 8105 20
-M 0 8109 5 8212
-G 1 8105 20
-M 0 8110 1 8144
-E 1 8137 20 16
-M 0 8111 1 8126
-M 0 8112 1 8196
-G 1 8152 20
-M 0 8113 1 8183
-E 1 8158 25 6
-M 0 8114 1 8169
-E 1 8159 20 14
-E 1 8159 20 15
-M 0 8115 1 8144
-E 1 8117 20 16
-M 0 8116 1 8157
-E 1 8162 20 3
-M 0 8117 1 8190
-E 1 8116 20 4
-E 1 3813 1 17       Card Olho de Horus(3813) com Horus(8117)
-M 0 8118 1 8176
-E 1 8163 20 3
-M 0 8119 1 8186
-E 1 8160 20 0
-M 0 8120 1 8172
-E 1 8118 20 12
-E 1 8170 20 13
-M 0 8121 1 8133
-E 1 8145 20 4
-M 0 8122 1 8156
-E 1 8103 20 6
-G 1 8150 20
-M 0 8123 1 8204
-E 1 8120 20 4
-M 0 8124 1 8127
-E 1 8119 25 12
-M 0 8125 1 8137
-E 1 8155 25 14
-M 0 8126 1 8180
-E 1 8157 20 6
-M 0 8127 1 8180
-G 1 8115 20
-M 0 8128 1 8136
-E 1 8104 10 6
-G 1 8131 20
-G 1 8132 20
-M 0 8129 5 8127
-M 0 8129 5 8127
-M 0 8129 5 8127
-M 0 8129 5 8164
-M 0 8129 5 8164
-M 0 8130 2 8136
-M 0 8130 2 8136
-M 0 8131 4 8127
-G 1 8121 20
-M 0 8131 4 8146 
-G 1 8121 20
-M 0 8131 4 8136
-G 1 8121 20
-M 0 8131 4 8139
-G 1 8121 20
-M 0 8132 1 8148
-M 0 8133 1 8152
-E 1 8156 20 13
-M 0 8134 2 8146
-M 0 8134 2 8149
-M 0 8135 7 8146
-M 0 8135 7 8138
-M 0 8135 7 8132
-M 0 8135 7 8123
-M 0 8135 7 8127
-M 0 8135 7 8166
-M 0 8135 7 8182
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8201
-M 0 8136 26 8197
-M 0 8136 26 8199
-M 0 8136 26 8205
-M 0 8136 26 8171
-M 0 8136 26 8141
-M 0 8136 26 8189
-M 0 8137 2 8125
-M 0 8137 2 8125
-M 0 8138 1 8155
-E 1 8124 20 6
-M 0 8139 1 8181
-E 1 8114 10 5
-E 1 8125 10 17
-M 0 8140 1 8199
-E 1 8113 20 8
-E 1 8141 20 10
-G 1 8173 2
-M 0 8141 5 8168
-E 1 8123 10 17
-M 0 8141 5 8164
-E 1 8123 10 17
-M 0 8141 5 8162
-E 1 8123 10 17
-M 0 8142 6 8123
-M 0 8142 6 8195
-M 0 8142 6 8138
-M 0 8142 6 8157
-M 0 8143 2 8178
-M 0 8143 2 8104
-M 0 8144 6 8143
-E 1 8122 20 0
-M 0 8144 6 8144
-E 1 8122 20 0
-M 0 8144 6 8154
-E 1 8122 20 0
-M 0 8144 6 8153
-E 1 8122 20 0
-M 0 8144 6 8122
-E 1 8122 20 0
-M 0 8144 6 8127
-E 1 8122 20 0
-M 0 8145 5 8132
-M 0 8145 5 8183
-M 0 8145 5 8181
-M 0 8145 5 8177
-M 0 8146 3 8112
-E 1 8161 5 3
-M 0 8146 3 8123
-E 1 8161 5 3
-M 0 8146 3 8121
-E 1 8161 5 3
-M 0 8147 1 8206
-G 1 8142 10
-G 1 8130 5 17
-G 1 8172 2
-G 1 8130 5
-G 1 8172 2 
-M 0 8148 1 8209
-E 1 8133 25 17
-E 1 8134 25 16
-G 1 8136 25
-G 1 8133 25
-G 1 8134 25
-G 1 8137 25
-M 0 8149 1 8211 
-M 0 8150 1 8210
-E 1 8138 10 6
-E 1 8155 10 15
-E 1 8156 10 13
-O 1 8167 2 8199
-M 0 8151 6 8182
-M 0 8151 6 8179
-M 0 8151 6 8196
-M 0 8151 6 8163
-M 0 8151 6 8177
-M 0 8151 6 8151
-M 0 8152 6 8127
-E 1 8135 20 17
-E 1 8164 20 11
-M 0 8152 6 8127
-E 1 8135 20 17
-E 1 8164 20 11
-M 0 8152 6 8136
-E 1 8135 20 17
-E 1 8164 20 11
-M 0 8152 6 8123
-E 1 8135 20 17
-E 1 8164 20 11
-M 0 8152 6 8138
-E 1 8135 20 17
-E 1 8164 20 11
-M 0 8152 6 8162
-E 1 8135 20 17
-E 1 8164 20 11
-R 0 8101 8163
-R 0 8101 8163
-R 0 8101 8163
-O 1 8101 3 8163
-O 1 8101 3 8163
-O 1 8101 3 8163
-R 0 8181 8126
-O 1 8126 4 8181
-R 1 8181 8127
-O 1 8127 4 8181
-R 1 8181 8128
-O 1 8128 4 8181
-R 1 8181 8129
-O 1 8129 4 8181
-O 1 8165 1 8207
-O 1 8166 1 8207
-O 1 8167 2 8133
-O 1 8168 1 8197
-O 1 8169 1 8206
-D 0 8137 0 1
-D 0 8128 2 1 
-D 0 8139 2 1
-D 0 8128 0 1 
-D 0 8162 0 1
-D 0 8166 2 1 
-D 0 8181 1 1
-D 0 8185 3 1 
-D 0 8183 1 1
-D 0 8184 3 1
-D 0 8199 3 1
-D 0 8195 1 1 
-D 0 8154 2 1
-D 0 8155 0 1
-D 0 8156 2 1 
-D 0 8157 0 1
-D 0 8128 1 1
-D 0 8136 3 1 
-D 0 8128 3 1
-D 0 8129 1 1 
-D 0 8130 1 1 
-D 0 8129 3 1
-D 0 8127 1 2
-D 0 8123 3 2
-* eq 1618
-R 0 8203 1618
-* PORTAS
-D 0 8202 1 2
-D 0 8203 3 2
-D 0 8206 5 2
-D 0 8207 4 2
+8100 8299 180 1 bk 0 0 0 -1 -1
+M 0 8101 4 8159 	(um sacerdote)
+E 1 8140 20 12 	(o manto do sacerdote)
+M 0 8101 4 8164 	(um sacerdote)
+E 1 8140 20 12 	(o manto do sacerdote)
+M 0 8101 3 8138 	(um sacerdote)
+E 1 8140 20 12 	(o manto do sacerdote)
+M 0 8101 4 8212 	(um sacerdote)
+E 1 8140 20 12 	(o manto do sacerdote)
+M 0 8102 9 8128 	(o cidadão egípcio)
+E 1 8112 20 8 	(um par de sandálias egípcias)
+M 0 8102 9 8123 	(o cidadão egípcio)
+E 1 8112 20 8 	(um par de sandálias egípcias)
+G 1 8171 2 -1 	(um velho hieróglifo)
+M 0 8102 9 8121 	(o cidadão egípcio)
+E 1 8112 20 8 	(um par de sandálias egípcias)
+M 0 8102 9 8120 	(o cidadão egípcio)
+E 1 8112 20 8 	(um par de sandálias egípcias)
+M 0 8102 9 8164 	(o cidadão egípcio)
+E 1 8112 20 8 	(um par de sandálias egípcias)
+M 0 8102 9 8213 	(o cidadão egípcio)
+E 1 8112 20 8 	(um par de sandálias egípcias)
+M 0 8102 9 8212 	(o cidadão egípcio)
+E 1 8112 20 8 	(um par de sandálias egípcias)
+M 0 8102 9 8212 	(o cidadão egípcio)
+E 1 8138 20 6 	(um turbante egípcio)
+E 1 8112 20 8 	(um par de sandálias egípcias)
+M 0 8102 9 8212 	(o cidadão egípcio)
+E 1 8138 20 6 	(um turbante egípcio)
+E 1 8112 20 8 	(um par de sandálias egípcias)
+M 0 8103 2 8148 	(a esposa do faraó)
+E 1 8146 20 0 	(uma pedra egípcia)
+M 0 8103 2 8121 	(a esposa do faraó)
+E 1 8146 20 0 	(uma pedra egípcia)
+M 0 8104 9 8178 	(o escravo)
+M 0 8104 9 8178 	(o escravo)
+M 0 8104 9 8178 	(o escravo)
+M 0 8104 9 8161 	(o escravo)
+G 1 8111 20 -1 	(uma liteira)
+M 0 8104 9 8161 	(o escravo)
+G 1 8111 20 -1 	(uma liteira)
+M 0 8104 9 8161 	(o escravo)
+G 1 8111 20 -1 	(uma liteira)
+M 0 8104 9 8161 	(o escravo)
+G 1 8111 20 -1 	(uma liteira)
+M 0 8104 9 8123 	(o escravo)
+M 0 8104 9 8120 	(o escravo)
+M 0 8105 6 8123 	(o camponês)
+E 1 8154 20 13 	(uma tanga egípcia)
+M 0 8105 6 8121 	(o camponês)
+E 1 8154 20 13 	(uma tanga egípcia)
+M 0 8105 6 8125 	(o camponês)
+E 1 8154 20 13 	(uma tanga egípcia)
+M 0 8105 6 8213 	(o camponês)
+E 1 8154 20 13 	(uma tanga egípcia)
+M 0 8105 9 8149 	(o camponês)
+E 1 8154 20 13 	(uma tanga egípcia)
+M 0 8105 9 8212 	(o camponês)
+E 1 8154 20 13 	(uma tanga egípcia)
+M 0 8106 2 8142 	(o Vizir)
+E 1 8139 25 6 	(o turbante do Vizir)
+M 0 8106 2 8147 	(o Vizir)
+E 1 8139 25 6 	(o turbante do Vizir)
+M 0 8107 2 8159 	(o Imakhu)
+E 1 8143 25 3 	(uma capa de linho branco)
+M 0 8107 2 8147 	(o Imakhu)
+E 1 8143 25 3 	(uma capa de linho branco)
+M 0 8108 2 8159 	(o Nomarca)
+E 1 8144 25 3 	(uma capa de linho negro)
+M 0 8108 2 8147 	(o Nomarca)
+E 1 8144 25 3 	(uma capa de linho negro)
+M 0 8109 5 8160 	(o escriba)
+G 1 8105 20 -1 	(um papiro)
+M 0 8109 5 8160 	(o escriba)
+G 1 8105 20 -1 	(um papiro)
+M 0 8109 5 8123 	(o escriba)
+G 1 8105 20 -1 	(um papiro)
+M 0 8109 5 8121 	(o escriba)
+G 1 8105 20 -1 	(um papiro)
+M 0 8109 5 8212 	(o escriba)
+G 1 8105 20 -1 	(um papiro)
+M 0 8110 1 8144 	(um Hemutiu)
+E 1 8137 20 16 	(um machado egípcio)
+M 0 8111 1 8126 	(Radumah)
+M 0 8112 1 8196 	(Sobek)
+G 1 8152 20 -1 	(o papiro de Sobek)
+M 0 8113 1 8183 	(Thot)
+E 1 8158 25 6 	(uma máscara de prata)
+M 0 8114 1 8169 	(Seth)
+E 1 8159 20 14 	(um bracelete de prata)
+E 1 8159 20 15 	(um bracelete de prata)
+M 0 8115 1 8144 	(Sekmet)
+E 1 8117 20 16 	(a lança de Sekmet)
+M 0 8116 1 8157 	(Rá)
+E 1 8162 20 3 	(uma cabeça de serpente)
+M 0 8117 1 8190 	(Hórus)
+E 1 8116 20 4 	(o amuleto de Hórus)
+E 1 3813 1 17 	(o Card Olho de Horus)
+M 0 8118 1 8176 	(Hátor)
+E 1 8163 20 3 	(um pássaro alma)
+M 0 8119 1 8186 	(Ptah)
+E 1 8160 20 0 	(um escaravelho-coleóptero)
+M 0 8120 1 8172 	(Ísis)
+E 1 8118 20 12 	(um manto negro)
+E 1 8170 20 13 	(o laço de Ísis)
+M 0 8121 1 8133 	(Bes)
+E 1 8145 20 4 	(o amuleto de Ápis)
+M 0 8122 1 8156 	(anúbis)
+E 1 8103 20 6 	(a máscara de Anúbis)
+G 1 8150 20 -1 	(a poção de Anúbis)
+M 0 8123 1 8204 	(Osíris)
+E 1 8120 20 4 	(a ankh de Osíris)
+M 0 8124 1 8127 	(Seth I)
+E 1 8119 25 12 	(um manto prateado)
+M 0 8125 1 8137 	(o carrasco)
+E 1 8155 25 14 	(um bracelete de bronze)
+M 0 8126 1 8180 	(o embalsamador)
+E 1 8157 20 6 	(uma coroa de bronze)
+M 0 8127 1 8180 	(o ajudante de embalsamador)
+G 1 8115 20 -1 	(uma cesta)
+M 0 8128 1 8136 	(Nefertiti)
+E 1 8104 10 6 	(a coroa de Nefertiti)
+G 1 8131 20 -1 	(um frasco de veneno)
+G 1 8132 20 -1 	(um frasco de perfume)
+M 0 8129 5 8127 	(o pajem)
+M 0 8129 5 8127 	(o pajem)
+M 0 8129 5 8127 	(o pajem)
+M 0 8129 5 8164 	(o pajem)
+M 0 8129 5 8164 	(o pajem)
+M 0 8130 2 8136 	(o eunuco)
+M 0 8130 2 8136 	(o eunuco)
+M 0 8131 4 8127 	(o criado)
+G 1 8121 20 -1 	(um pote de água)
+M 0 8131 4 8146 	(o criado)
+G 1 8121 20 -1 	(um pote de água)
+M 0 8131 4 8136 	(o criado)
+G 1 8121 20 -1 	(um pote de água)
+M 0 8131 4 8139 	(o criado)
+G 1 8121 20 -1 	(um pote de água)
+M 0 8132 1 8148 	(o banqueiro)
+M 0 8133 1 8152 	(o tesoureiro)
+E 1 8156 20 13 	(um cinto egípcio)
+M 0 8134 2 8146 	(o íbis)
+M 0 8134 2 8149 	(o íbis)
+M 0 8135 7 8146 	(o gato)
+M 0 8135 7 8138 	(o gato)
+M 0 8135 7 8132 	(o gato)
+M 0 8135 7 8123 	(o gato)
+M 0 8135 7 8127 	(o gato)
+M 0 8135 7 8166 	(o gato)
+M 0 8135 7 8182 	(o gato)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8201 	(o escaravelho)
+M 0 8136 26 8197 	(o escaravelho)
+M 0 8136 26 8199 	(o escaravelho)
+M 0 8136 26 8205 	(o escaravelho)
+M 0 8136 26 8171 	(o escaravelho)
+M 0 8136 26 8141 	(o escaravelho)
+M 0 8136 26 8189 	(o escaravelho)
+M 0 8137 2 8125 	(o rato)
+M 0 8137 2 8125 	(o rato)
+M 0 8138 1 8155 	(Khons)
+E 1 8124 20 6 	(um turbante branco)
+M 0 8139 1 8181 	(Imothep)
+E 1 8114 10 5 	(algumas bandagens)
+E 1 8125 10 17 	(o cetro de Immothep)
+M 0 8140 1 8199 	(Akhenaton)
+E 1 8113 20 8 	(as sandálias de Akhenaton)
+E 1 8141 20 10 	(um embrace egípcio)
+G 1 8173 2 -1 	(uma velha chave enferrujada)
+M 0 8141 5 8168 	(o ladrão)
+E 1 8123 10 17 	(uma esfinge de ouro)
+M 0 8141 5 8164 	(o ladrão)
+E 1 8123 10 17 	(uma esfinge de ouro)
+M 0 8141 5 8162 	(o ladrão)
+E 1 8123 10 17 	(uma esfinge de ouro)
+M 0 8142 6 8123 	(o ladrão de tumbas)
+M 0 8142 6 8195 	(o ladrão de tumbas)
+M 0 8142 6 8138 	(o ladrão de tumbas)
+M 0 8142 6 8157 	(o ladrão de tumbas)
+M 0 8143 2 8178 	(um raro cordoniz)
+M 0 8143 2 8104 	(um raro cordoniz)
+M 0 8144 6 8143 	(o explorador)
+E 1 8122 20 0 	(uma lamparina)
+M 0 8144 6 8144 	(o explorador)
+E 1 8122 20 0 	(uma lamparina)
+M 0 8144 6 8154 	(o explorador)
+E 1 8122 20 0 	(uma lamparina)
+M 0 8144 6 8153 	(o explorador)
+E 1 8122 20 0 	(uma lamparina)
+M 0 8144 6 8122 	(o explorador)
+E 1 8122 20 0 	(uma lamparina)
+M 0 8144 6 8127 	(o explorador)
+E 1 8122 20 0 	(uma lamparina)
+M 0 8145 5 8132 	(a víbora)
+M 0 8145 5 8183 	(a víbora)
+M 0 8145 5 8181 	(a víbora)
+M 0 8145 5 8177 	(a víbora)
+M 0 8146 3 8112 	(a criança egípcia)
+E 1 8161 5 3 	(uma alarga)
+M 0 8146 3 8123 	(a criança egípcia)
+E 1 8161 5 3 	(uma alarga)
+M 0 8146 3 8121 	(a criança egípcia)
+E 1 8161 5 3 	(uma alarga)
+M 0 8147 1 8206 	(a Serpente)
+G 1 8142 10 -1 	(o boi Ápis)
+G 1 8130 5 -1 	(o Livro dos mortos)
+G 1 8172 2 -1 	(um crânio acinzentado)
+G 1 8130 5 -1 	(o Livro dos mortos)
+G 1 8172 2 -1 	(um crânio acinzentado)
+M 0 8148 1 8209 	(Harirf)
+E 1 8133 25 17 	(uma adaga egípcia)
+E 1 8134 25 16 	(uma lança egípcia)
+G 1 8136 25 -1 	(uma espada egípcia)
+G 1 8133 25 -1 	(uma adaga egípcia)
+G 1 8134 25 -1 	(uma lança egípcia)
+G 1 8137 25 -1 	(um machado egípcio)
+M 0 8149 1 8211 	(Rafertine)
+M 0 8150 1 8210 	(Musedic)
+E 1 8138 10 6 	(um turbante egípcio)
+E 1 8155 10 15 	(um bracelete de bronze)
+E 1 8156 10 13 	(um cinto egípcio)
+O 1 8167 2 8199 	(um enorme sarcófago)
+M 0 8151 6 8182 	(a múmia)
+M 0 8151 6 8179 	(a múmia)
+M 0 8151 6 8196 	(a múmia)
+M 0 8151 6 8163 	(a múmia)
+M 0 8151 6 8177 	(a múmia)
+M 0 8151 6 8151 	(a múmia)
+M 0 8152 6 8127 	(um soldado egípcio)
+E 1 8135 20 17 	(uma faca egípcia)
+E 1 8164 20 11 	(um escudo de soldado)
+M 0 8152 6 8127 	(um soldado egípcio)
+E 1 8135 20 17 	(uma faca egípcia)
+E 1 8164 20 11 	(um escudo de soldado)
+M 0 8152 6 8136 	(um soldado egípcio)
+E 1 8135 20 17 	(uma faca egípcia)
+E 1 8164 20 11 	(um escudo de soldado)
+M 0 8152 6 8123 	(um soldado egípcio)
+E 1 8135 20 17 	(uma faca egípcia)
+E 1 8164 20 11 	(um escudo de soldado)
+M 0 8152 6 8138 	(um soldado egípcio)
+E 1 8135 20 17 	(uma faca egípcia)
+E 1 8164 20 11 	(um escudo de soldado)
+M 0 8152 6 8162 	(um soldado egípcio)
+E 1 8135 20 17 	(uma faca egípcia)
+E 1 8164 20 11 	(um escudo de soldado)
+R 0 8101 8163 -1 	(um pássaro alma)
+R 0 8101 8163 -1 	(um pássaro alma)
+R 0 8101 8163 -1 	(um pássaro alma)
+O 1 8101 3 8163 	(um osso)
+O 1 8101 3 8163 	(um osso)
+O 1 8101 3 8163 	(um osso)
+R 0 8181 8126 -1 	(a canópica de Qebehsenuef)
+O 1 8126 4 8181 	(a canópica de Qebehsenuef)
+R 1 8181 8127 -1 	(a canópica de Hapi)
+O 1 8127 4 8181 	(a canópica de Hapi)
+R 1 8181 8128 -1 	(a canópica de Deimsety)
+O 1 8128 4 8181 	(a canópica de Deimsety)
+R 1 8181 8129 -1 	(a canópica de Duamutef)
+O 1 8129 4 8181 	(a canópica de Duamutef)
+O 1 8165 1 8207 	(uma pena)
+O 1 8166 1 8207 	(uma balança)
+O 1 8167 2 8133 	(um enorme sarcófago)
+O 1 8168 1 8197 	(uma parede)
+O 1 8169 1 8206 	(o Pilar-Djed)
+D 0 8137 0 1 	(A c�mara do carrasco)
+D 0 8128 2 1 	(Um Corredor)
+D 0 8139 2 1 	(A sala dos criados)
+D 0 8128 0 1 	(Um Corredor)
+D 0 8162 0 1 	(Entrada de Que�ps)
+D 0 8166 2 1 	(Dentro da Pir�mide de Que�ps)
+D 0 8181 1 1 	(A Tumba de Imhotep)
+D 0 8185 3 1 	(Uma Passagem na Areia)
+D 0 8183 1 1 	(A C�mara do Deus Thot)
+D 0 8184 3 1 	(Uma Sala Escura)
+D 0 8199 3 1 	(A Tumba de Hatshepsut)
+D 0 8195 1 1 	(Uma Passagem na Areia)
+D 0 8154 2 1 	(Um �trio)
+D 0 8155 0 1 	(O Tesouro de Khons)
+D 0 8156 2 1 	(O Tesouro de An�bis)
+D 0 8157 0 1 	(O Tesouro de R�)
+D 0 8128 1 1 	(Um Corredor)
+D 0 8136 3 1 	(Aposentos de Nefertiti)
+D 0 8128 3 1 	(Um Corredor)
+D 0 8129 1 1 	(Um Corredor)
+D 0 8130 1 1 	(Um Corredor)
+D 0 8129 3 1 	(Um Corredor)
+D 0 8127 1 2 	(A Sala do Fara�)
+D 0 8123 3 2 	(O Mercado de Iguarias)
+R 0 8203 1618 -1 	(uma pilha de moedas)
+D 0 8202 1 2 	(Uma Passagem Secreta)
+D 0 8203 3 2 	(A Sala dos Tesouros)
+D 0 8206 5 2 	(O Duat)
+D 0 8207 4 2 	(Os Port�es de Yaru)
 S
 $

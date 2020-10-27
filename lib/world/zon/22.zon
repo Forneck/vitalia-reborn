@@ -1,83 +1,80 @@
 #22
 Vitalia~
 O SafÃ¡ri no Covil dos Lagartos~
-2200 2299 45 1 0 0 0 0 -1 -1
--1
-* Mobiles
-M 0 2200 8 2202         Serpente
-M 0 2200 8 2202         Serpente
-M 0 2200 8 2202         Serpente
-M 0 2200 8 2202         Serpente
-M 0 2200 8 2202         Serpente
-M 0 2200 8 2202         Serpente
-M 0 2200 8 2202         Serpente
-M 0 2200 8 2202         Serpente
-M 0 2201 2 2203         Sentinela
-E 1 2201 100 16                 Espada Medieval
-E 1 2207 100 11                 Escudo
-E 1 2202 100 12                 Manto
-M 0 2201 2 2203         Sentinela
-E 1 2201 100 16                 Espada Medieval
-E 1 2207 100 11                 Escudo
-E 1 2202 100 12                 Manto
-M 0 2202 1 2206         Feiticeiro
-G 1 2206 10 -1                 Pergaminho Mï¿½gico 
-E 1 2202 100 12                 Mantos
-M 0 2203 1 2206         Elemental
-M 0 2204 12 2211        Guarda
-E 1 2201 100 16                 Espada Medieval
-E 1 2202 100 12                 Manto
-M 0 2204 12 2211        Guarda
-E 1 2201 100 16                 Espada Medieval
-E 1 2202 100 12                 Manto
-M 0 2204 12 2211        Guarda
-E 1 2201 100 16                 Espada Medieval
-E 1 2202 100 12                 Manto
-M 0 2204 12 2211        Guarda
-E 1 2201 100 16                 Espada Medieval
-E 1 2202 100 12                 Manto
-E 1 3836 7 17             Card Lagarto(3836) com Lagarto(2204)
-M 0 2204 12 2212        Guarda
-E 1 2201 100 16                 Espada Medieval
-E 1 2202 100 12                 Manto
-M 0 2204 12 2212        Guarda
-E 1 2201 100 16                 Espada Medieval
-E 1 2202 100 12                 Manto
-M 0 2204 12 2212        Guarda
-E 1 2201 100 16                 Espada Medieval
-E 1 2202 100 12                 Manto
-M 0 2204 12 2212        Guarda
-E 1 2201 100 16                 Espada Medieval
-E 1 2202 100 12                 Manto
-M 0 2204 12 2213        Guarda
-E 1 2201 100 16                 Espada Medieval
-E 1 2202 100 12                 Manto
-M 0 2204 12 2213        Guarda
-E 1 2201 100 16                 Espada Medieval
-E 1 2202 100 12                 Manto
-M 0 2204 12 2213        Guarda
-E 1 2201 100 16                 Espada Medieval
-E 1 2202 100 12                 Manto
-M 0 2204 12 2213        Guarda
-E 1 2201 100 16                 Espada Medieval
-E 1 2202 100 12                 Manto
-M 0 2205 1 2213         Prï¿½ncipe
-G 1 2205 1 -1                   Chave Verde Para A Saï¿½da
-E 1 2200 20 6                   Coroa
-E 1 2201 100 16                 Espada Medieval
-M 0 2206 1 2218         Senhor Hooper - Lojista
-* Objects
-O 0 2208 1 2216         SORTUDO (chave)
-O 0 2203 1 2208         Inï¿½til Chave
-O 0 2204 1 2213         Altar
-* Doors
-D 0 2202 0 1            SORTUDO (Sala) Porta
-D 0 2216 2 1            
-D 0 2205 3 2            Porta da Cï¿½mara de Magias
-D 0 2206 1 2            
-D 0 2213 1 2            Porta Final
-D 0 2214 3 2            
-D 0 2217 2 1            Porta Falsa No Fim Do Mundo 
-D 0 2202 1 2
-D 0 2203 3 2
+2200 2299 45 1 k 0 0 0 -1 -1
+M 0 2200 8 2202 	(a serpente marinha)
+M 0 2200 8 2202 	(a serpente marinha)
+M 0 2200 8 2202 	(a serpente marinha)
+M 0 2200 8 2202 	(a serpente marinha)
+M 0 2200 8 2202 	(a serpente marinha)
+M 0 2200 8 2202 	(a serpente marinha)
+M 0 2200 8 2202 	(a serpente marinha)
+M 0 2200 8 2202 	(a serpente marinha)
+M 0 2201 2 2203 	(o sentinela)
+E 1 2201 100 16 	(uma espada medieval)
+E 1 2207 100 11 	(um escudo)
+E 1 2202 100 12 	(um conjunto de mantos do homem lagarto)
+M 0 2201 2 2203 	(o sentinela)
+E 1 2201 100 16 	(uma espada medieval)
+E 1 2207 100 11 	(um escudo)
+E 1 2202 100 12 	(um conjunto de mantos do homem lagarto)
+M 0 2202 1 2206 	(o feiticeiro)
+G 1 2206 10 -1 	(um pergaminho mÃ¡gico)
+E 1 2202 100 12 	(um conjunto de mantos do homem lagarto)
+M 0 2203 1 2206 	(o elemental da Ã¡gua)
+M 0 2204 12 2211 	(o guarda)
+E 1 2201 100 16 	(uma espada medieval)
+E 1 2202 100 12 	(um conjunto de mantos do homem lagarto)
+M 0 2204 12 2211 	(o guarda)
+E 1 2201 100 16 	(uma espada medieval)
+E 1 2202 100 12 	(um conjunto de mantos do homem lagarto)
+M 0 2204 12 2211 	(o guarda)
+E 1 2201 100 16 	(uma espada medieval)
+E 1 2202 100 12 	(um conjunto de mantos do homem lagarto)
+M 0 2204 12 2211 	(o guarda)
+E 1 2201 100 16 	(uma espada medieval)
+E 1 2202 100 12 	(um conjunto de mantos do homem lagarto)
+E 1 3836 7 17 	(o Card Homens Lagarto)
+M 0 2204 12 2212 	(o guarda)
+E 1 2201 100 16 	(uma espada medieval)
+E 1 2202 100 12 	(um conjunto de mantos do homem lagarto)
+M 0 2204 12 2212 	(o guarda)
+E 1 2201 100 16 	(uma espada medieval)
+E 1 2202 100 12 	(um conjunto de mantos do homem lagarto)
+M 0 2204 12 2212 	(o guarda)
+E 1 2201 100 16 	(uma espada medieval)
+E 1 2202 100 12 	(um conjunto de mantos do homem lagarto)
+M 0 2204 12 2212 	(o guarda)
+E 1 2201 100 16 	(uma espada medieval)
+E 1 2202 100 12 	(um conjunto de mantos do homem lagarto)
+M 0 2204 12 2213 	(o guarda)
+E 1 2201 100 16 	(uma espada medieval)
+E 1 2202 100 12 	(um conjunto de mantos do homem lagarto)
+M 0 2204 12 2213 	(o guarda)
+E 1 2201 100 16 	(uma espada medieval)
+E 1 2202 100 12 	(um conjunto de mantos do homem lagarto)
+M 0 2204 12 2213 	(o guarda)
+E 1 2201 100 16 	(uma espada medieval)
+E 1 2202 100 12 	(um conjunto de mantos do homem lagarto)
+M 0 2204 12 2213 	(o guarda)
+E 1 2201 100 16 	(uma espada medieval)
+E 1 2202 100 12 	(um conjunto de mantos do homem lagarto)
+M 0 2205 1 2213 	(o principe)
+G 1 2205 1 -1 	(uma chave verde para a saÃ­da)
+E 1 2200 20 6 	(uma coroa de ouro)
+E 1 2201 100 16 	(uma espada medieval)
+M 0 2206 1 2218 	(Senhor Hooper)
+O 0 2208 1 2216 	(um SORTUDO)
+O 0 2203 1 2208 	(uma chave inÃºtil)
+O 0 2204 1 2213 	(um grande altar)
+D 0 2202 0 1 	(Um Túnel)
+D 0 2216 2 1 	(SORTUDO)
+D 0 2205 3 2 	(Fim do Túnel)
+D 0 2206 1 2 	(A Câmara De Magias)
+D 0 2213 1 2 	(Templo De Morgash)
+D 0 2214 3 2 	(O Fim Da Busca)
+D 0 2217 2 1 	(O Mundo Real Termina Aqui)
+D 0 2202 1 2 	(Um Túnel)
+D 0 2203 3 2 	(Um Túnel)
 S
+$

@@ -1,57 +1,50 @@
 #63
 Vitalia~
 Arachnos~
-6300 6399 34 2 0 0 0 0 -1 -1
--1
-*
-* Created by Mahatma of HexOynx
-*
-* Mobiles
-M 0 6301 10 6301        Young Spider
-M 0 6301 10 6306        Young Spider
-M 0 6301 10 6306        Young Spider
-M 0 6301 10 6304        Young Spider
-M 0 6305 1 6303         Wasp
-M 0 6310 1 6342         Bird Spider
-M 0 6303 1 6313         Wolf Spider
-M 0 6308 5 6308         Slave
-M 0 6308 5 6308         Slave
-M 0 6308 5 6308         Slave
-M 0 6308 5 6308         Slave
-M 0 6308 5 6308         Slave
-M 0 6309 2 6327         Quasit
-M 0 6307 5 6335         Ethereal Spider
-M 0 6307 5 6333         Ethereal Spider
-M 0 6304 1 6332         Stuck Orc
-G 1 6300 2 -1                  Key To Arachnos' Chambers
-M 0 6306 3 6321         Drone Spider
-G 1 6305 10 -1                     Black Potion
-M 0 6306 3 6331         Drone Spider
-G 1 6305 10 -1                    Black Potion
-M 0 6311 1 6373         Hermit
-G 1 6302 2 -1                      Wizard's Hat
-M 0 6315 1 6350         Ki-Rin
-G 1 6109 10 -1                    Blue Potion
-G 1 6109 10 -1                    Blue Potion
-M 0 6314 1 6399         Arachnos
-G 1 6301 5  -1                    Thief's Knife
-G 1 6302 2  -1                    Wizard's Hat
-G 1 6303 2  -1                    Pontiff's Headdress
-G 1 6304 2 -1                     Black Knight's Visor
-M 0 6312 1 6370         Donjonkeeper
-G 1 6301 10                      Thief's Knife
-G 1 6109 10                     Blue Potion
-E 1 3814 1 17           Card Carnax(3814) com Guardi�o da Torre(6312)
-M 0 6313 1 6367         Guardian
-M 0 6306 3 6330         Drone Spider
-M 0 6302 1 6360         Yevaud
-G 1 6304 2                      Black Knight's Visor
-G 1 7203 4                      Purple Cloak
-M 0 6316 1 6330         Baby Dragon
-M 0 6317 1 6340         Elder Wormkin
-* Doors
-D 0 6392 0 2                    Arachnos' Lair
-D 0 6399 2 2
-*
+6300 6399 34 2 k 0 0 0 -1 -1
+M 0 6301 10 6301 	(uma aranha jovem)
+M 0 6301 10 6306 	(uma aranha jovem)
+M 0 6301 10 6306 	(uma aranha jovem)
+M 0 6301 10 6304 	(uma aranha jovem)
+M 0 6305 1 6303 	(a vespa rainha)
+M 0 6310 1 6342 	(a aranha-pássaro)
+M 0 6303 1 6313 	(a aranha-lobo)
+M 0 6308 5 6308 	(o escravo)
+M 0 6308 5 6308 	(o escravo)
+M 0 6308 5 6308 	(o escravo)
+M 0 6308 5 6308 	(o escravo)
+M 0 6308 5 6308 	(o escravo)
+M 0 6309 2 6327 	(um quasit)
+M 0 6307 5 6335 	(uma aranha etérea)
+M 0 6307 5 6333 	(uma aranha etérea)
+M 0 6304 1 6332 	(o orc)
+G 1 6300 2 -1 	(uma chave negra)
+M 0 6306 3 6321 	(a aranha zangão)
+G 1 6305 10 -1 	(uma densa poção branca)
+M 0 6306 3 6331 	(a aranha zangão)
+G 1 6305 10 -1 	(uma densa poção branca)
+M 0 6311 1 6373 	(o eremita)
+G 1 6302 2 -1 	(um chapéu de mago)
+M 0 6315 1 6350 	(a Ki-Rin)
+G 1 6109 10 -1 	(uma poção azul)
+G 1 6109 10 -1 	(uma poção azul)
+M 0 6314 1 6399 	(Arachnos)
+G 1 6301 5 -1 	(uma faca muito afiada)
+G 1 6302 2 -1 	(um chapéu de mago)
+G 1 6303 2 -1 	(um chapéu de pontífice)
+G 1 6304 2 -1 	(uma viseira negra de cavaleiro)
+M 0 6312 1 6370 	(o Guardião da Torre)
+G 1 6301 10 -1 	(uma faca muito afiada)
+G 1 6109 10 -1 	(uma poção azul)
+E 1 3814 1 17 	(o Card Carnax)
+M 0 6313 1 6367 	(o guardião)
+M 0 6306 3 6330 	(a aranha zangão)
+M 0 6302 1 6360 	(Yevaud)
+G 1 6304 2 -1 	(uma viseira negra de cavaleiro)
+G 1 7203 4 -1 	(uma capa roxa)
+M 0 6316 1 6330 	(o pequeno wormkin)
+M 0 6317 1 6340 	(o wormkin velho)
+D 0 6392 0 2 	(A Grande Porta)
+D 0 6399 2 2 	(O Covil de Arachnos)
 S
 $

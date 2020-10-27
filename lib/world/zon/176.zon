@@ -1,207 +1,182 @@
 #176
 Vitalia~
 O ImpÃ©rio ChinÃªs~
-17600 17999 0 0 af 0 0 0 -1 -1
--1
-*
-******Deserto*******
-*Mobs
-*
-M 0 17600 5 17607
-M 0 17600 5 17618
-M 0 17600 5 17640
-M 0 17600 5 17613
-M 0 17600 5 17629
-M 0 17601 4 17603
-M 0 17601 4 17624
-M 0 17601 4 17608
-M 0 17601 4 17633
-M 0 17609 1 17625
-*
-*****Xi'an**********
-*Mobs
-*
-M 0 17602 2 17666
-M 0 17602 2 17670
-M 0 17603 1 17672
-M 0 17604 1 17668
-M 0 17605 1 17680
-M 0 17606 1 17678
-M 0 17607 1 17679
-M 0 17608 1 17677        exercito de xi'an
-*
-***Grande Muralha**********
-*Portas
-*
-D 0 17681 4 2 alcapao de entrada
-D 1 17682 5 2 alcapao de entrada
-D 0 17696 2 1
-D 0 17708 7 1
-D 0 17728 2 1
-D 0 17734 0 1
-D 0 17734 1 1
-D 0 17741 2 2
-D 1 17742 0 2
-*
-*Mobs
-*
-M 1 17610 1 17720   guarda oriental da muralha
-E 1 17601 1 17     chave do guarda oriental segurando
-M 0 17611 11 17684
-E 1 17616 14 16
-M 0 17611 11 17690
-M 0 17611 11 17700
-E 1 17617 10 5
-M 0 17611 11 17710
-M 0 17611 11 17717
-E 1 17616 14 16
-M 0 17611 11 17723
-M 0 17611 11 17726
-E 1 17618 5 11
-M 0 17611 11 17730
-M 0 17611 11 17737
-E 1 17617 10 5
-M 0 17611 11 17707
-M 0 17611 11 17728
-E 1 17618 5 11
-M 0 17612 1 17742    guardiao
-E 1 17602 1 5       armadura do guardiao
-M 0 17613 1 17681    guarda da entrada
-E 1 17600 1 17      chave do guarda segurando
-*
-*
-******Cidade Proibida************
-*
-*Portas
-*
-D 0 17744 0 2
-D 0 17745 2 2
-D 0 17767 0 1
-D 0 17788 0 1
-D 0 17789 2 1
-D 0 17789 1 1
-D 0 17791 3 1
-D 0 17803 3 1
-D 0 17804 0 1
-D 0 17804 1 1
-D 0 17806 2 1
-D 0 17812 3 1
-D 0 17813 1 1
-D 0 17813 3 1
-D 0 17814 1 1
-D 0 17820 2 1
-D 0 17821 0 1
-D 0 17821 3 1
-D 0 17823 1 1
-D 0 17835 1 1
-D 0 17836 3 1
-D 0 17836 2 1
-D 0 17838 0 1
-D 0 17845 2 1
-D 0 17849 0 1
-D 0 17850 0 1
-D 0 17850 2 1
-D 0 17851 0 1
-D 0 17851 2 1
-D 0 17852 0 1
-D 0 17852 2 1
-D 0 17853 1 2
-D 0 17853 0 1
-D 0 17853 2 1
-D 0 17854 3 1
-D 0 17855 2 1
-D 0 17864 0 1
-D 0 17873 9 1
-D 0 17874 7 1
-D 0 17879 2 1
-D 0 17880 0 1
-D 0 17885 0 1
-D 0 17886 2 1
-D 0 17886 0 2
-D 0 17887 0 1
-D 0 17887 1 1
-D 0 17887 2 2
-D 0 17888 3 1
-D 0 17889 0 1
-D 0 17889 2 1
-D 0 17890 0 1
-D 0 17890 2 1
-D 0 17891 0 1
-D 0 17891 2 1
-D 0 17892 2 1
-D 0 17893 0 1
-D 0 17894 2 1
-D 0 17895 0 2
-D 0 17896 2 2
-D 0 17914 0 1
-D 0 17915 0 2
-D 0 17915 2 1
-*
-*Mobs E Eqs
-*
-M 0 17615 3 17888   concubina
-E 1 17626 10 12    tunica da concubina
-M 0 17615 3 17888   concubina
-E 1 17626 10 12    tunica da concubina
-M 0 17615 3 17888   concubina
-E 1 17626 10 12    tunica da concubina
-M 0 17614 1 17865   nove dragoes
-E 1 17632 1 19     brinco dos nove dragï¿½es
-M 0 17623 1 17874   sacerdote budista
-E 1 17625 1 17     oracao do buda
-M 0 17624 1 17874   sacerdote budista
-E 1 17628 3 16     bastao gun
-M 0 17622 1 17888   eunuco
-E 1 17629 2 16     facao dao com eunuco
-M 0 17617 1 17759   leoes bronze
-M 0 17616 2 17744   guardiao entrada
-M 0 17616 2 17744   guardiao entrada
-E 1 17615 1 17     chave com guardiao
-M 0 17618 1 17790   guardiao da torre
-M 0 17619 1 17805   guardiao da torre
-M 0 17620 1 17822   guardiao da torre
-M 0 17621 1 17837   guardiao da torre
-M 0 17625 1 17886   guarda
-E 1 17619 1 17     chave com o guarda
-E 1 17627 1 16     lanca com o guarda
-M 0 17628 1 17903   Xiezhi
-E 1 17633 2 22     argola de xiezhi
-M 0 17629 1 17892   Qing, imperador chines
-E 1 17634 1 16     alabarda imperador
-E 1 17620 1 17     chave do imperador
-E 1 17622 3 12     tunica imperial
-E 1 17623 5 6      coroa imperial
-M 0 17630 8 17930   guarda chines
-M 0 17630 8 17871   guarda chines
-M 0 17630 8 17856   guarda chines
-M 0 17630 8 17861   guarda chines
-M 0 17630 8 17897   guarda chines
-M 0 17630 8 17907   guarda chines
-M 0 17630 8 17913   guarda chines
-M 0 17631 1 17854   fenix
-E 1 17631 1 0      pluma fenix
-M 0 17626 1 17880   chinesa opera
-M 0 17627 1 17880   chinesa opera
-R 0 17881 17635     tirar bau
-O 0 17635 1 17881   bau vermelho
-P 1 17637 10 17635  mascara bau
-P 1 17638 10 17635  mascara bau
-P 1 17639 10 17635  mascara bau
-R 0 17881 17636     tirar bau
-O 0 17636 1 17881   bau amarelo
-P 1 17640 10 17636  tunica bau
-P 1 17641 10 17636  tunica bau
-P 1 17642 10 17636  tunica bau
-R 0 17893 17643     tirar bau dourado
-O 0 17643 1 17893   bau dourado
-P 1 17645 1 17643   pagode de buda de ouro
-P 1 17646 1 17643   globo celestial de ouro
-R 0 17893 17644     tirar armario vermelho
-O 0 17644 1 17893   armario vermelho
-P 1 17647 1 17644   tunica
-M 0 17632 1 17911   ci xi imperatriz
-E 1 17630 1 17     punhal bi shou
-E 1 17648 5 12     tunica imperatriz
-M 0 17633 1 17935   dragao bronze
+17600 17999 0 0 afk 0 0 0 -1 -1
+M 0 17600 5 17607 	(um escorpiï¿½o)
+M 0 17600 5 17618 	(um escorpiï¿½o)
+M 0 17600 5 17640 	(um escorpiï¿½o)
+M 0 17600 5 17613 	(um escorpiï¿½o)
+M 0 17600 5 17629 	(um escorpiï¿½o)
+M 0 17601 4 17603 	(um lagarto)
+M 0 17601 4 17624 	(um lagarto)
+M 0 17601 4 17608 	(um lagarto)
+M 0 17601 4 17633 	(um lagarto)
+M 0 17609 1 17625 	(uma serpente do deserto)
+M 0 17602 2 17666 	(um cidadï¿½o de Xi'an)
+M 0 17602 2 17670 	(um cidadï¿½o de Xi'an)
+M 0 17603 1 17672 	(uma cidadï¿½ de Xi'an)
+M 0 17604 1 17668 	(um cidadï¿½o de Xi'an)
+M 0 17605 1 17680 	(Chaoyang)
+M 0 17606 1 17678 	(Tse-Ling)
+M 0 17607 1 17679 	(Guanghua)
+M 0 17608 1 17677 	(O exï¿½rcito de Xi'an)
+D 0 17681 4 2 	(A Entrada da Grande Muralha)
+D 1 17682 5 2 	(O Forte Principal da Grande Muralha)
+D 0 17696 2 1 	(A Sala de Armas)
+D 0 17708 7 1 	(O Andar Inferior do Forte)
+D 0 17728 2 1 	(O Piso Inferior do Forte)
+D 0 17734 0 1 	(Um Forte da Grande Muralha)
+D 0 17734 1 1 	(Um Forte da Grande Muralha)
+D 0 17741 2 2 	(O Último Forte Ocidental da Grande Muralha)
+D 1 17742 0 2 	(Os Aposentos do Guardião)
+M 1 17610 1 17720 	(O Guarda oriental da Grande Muralha)
+E 1 17601 1 17 	(uma grande chave de metal)
+M 0 17611 11 17684 	(Um soldado chinï¿½s)
+E 1 17616 14 16 	(a lança Whuang)
+M 0 17611 11 17690 	(Um soldado chinï¿½s)
+M 0 17611 11 17700 	(Um soldado chinï¿½s)
+E 1 17617 10 5 	(uma armadura chinesa)
+M 0 17611 11 17710 	(Um soldado chinï¿½s)
+M 0 17611 11 17717 	(Um soldado chinï¿½s)
+E 1 17616 14 16 	(a lança Whuang)
+M 0 17611 11 17723 	(Um soldado chinï¿½s)
+M 0 17611 11 17726 	(Um soldado chinï¿½s)
+E 1 17618 5 11 	(um pequeno escudo de madeira)
+M 0 17611 11 17730 	(Um soldado chinï¿½s)
+M 0 17611 11 17737 	(Um soldado chinï¿½s)
+E 1 17617 10 5 	(uma armadura chinesa)
+M 0 17611 11 17707 	(Um soldado chinï¿½s)
+M 0 17611 11 17728 	(Um soldado chinï¿½s)
+E 1 17618 5 11 	(um pequeno escudo de madeira)
+M 0 17612 1 17742 	(O Guardiï¿½o da muralha)
+E 1 17602 1 5 	(a armadura negra Shung-hai)
+M 0 17613 1 17681 	(O guarda da entrada)
+E 1 17600 1 17 	(uma chave enferrujada)
+D 0 17744 0 2 	(Os Portões da Cidade Proibida)
+D 0 17745 2 2 	(A Grande Entrada Meridional da Cidade Proibida)
+D 0 17767 0 1 	(O Pátio Central)
+D 0 17788 0 1 	(O Grande Muro da Cidade Proibida)
+D 0 17789 2 1 	(A Torre de Guarda)
+D 0 17789 1 1 	(A Torre de Guarda)
+D 0 17791 3 1 	(O Grande Muro da Cidade Proibida)
+D 0 17803 3 1 	(O Grande Muro da Cidade Proibida)
+D 0 17804 0 1 	(A Torre de Guarda)
+D 0 17804 1 1 	(A Torre de Guarda)
+D 0 17806 2 1 	(O Grande Muro da Cidade Proibida)
+D 0 17812 3 1 	(O Grande Muro da Cidade Proibida)
+D 0 17813 1 1 	(O Andar Superior do Portão de Shengwu)
+D 0 17813 3 1 	(O Andar Superior do Portão de Shengwu)
+D 0 17814 1 1 	(O Grande Muro da Cidade Proibida)
+D 0 17820 2 1 	(O Grande Muro da Cidade Proibida)
+D 0 17821 0 1 	(A Torre de Guarda)
+D 0 17821 3 1 	(A Torre de Guarda)
+D 0 17823 1 1 	(O Grande Muro da Cidade Proibida)
+D 0 17835 1 1 	(O Grande Muro da Cidade Proibida)
+D 0 17836 3 1 	(A Torre de Guarda)
+D 0 17836 2 1 	(A Torre de Guarda)
+D 0 17838 0 1 	(O Grande Muro da Cidade Proibida)
+D 0 17845 2 1 	(O Palácio da Harmonia Suprema)
+D 0 17849 0 1 	(O Palácio da Harmonia Suprema)
+D 0 17850 0 1 	(O Pátio Central)
+D 0 17850 2 1 	(O Pátio Central)
+D 0 17851 0 1 	(O Palácio da Harmonia Média)
+D 0 17851 2 1 	(O Palácio da Harmonia Média)
+D 0 17852 0 1 	(O Pátio Central)
+D 0 17852 2 1 	(O Pátio Central)
+D 0 17853 1 2 	(O Palácio da Preservação da Harmonia)
+D 0 17853 0 1 	(O Palácio da Preservação da Harmonia)
+D 0 17853 2 1 	(O Palácio da Preservação da Harmonia)
+D 0 17854 3 1 	(A Sala Vazia)
+D 0 17855 2 1 	(A Praça da Pureza Celestial)
+D 0 17864 0 1 	(O Caminho Oriental da Cidade Proibida)
+D 0 17873 9 1 	(O Caminho Ocidental da Cidade Proibida)
+D 0 17874 7 1 	(O Pavilhão Yuhua)
+D 0 17879 2 1 	(Uma Ponte no Rio Dourado)
+D 0 17880 0 1 	(O Teatro Changying)
+D 0 17885 0 1 	(A Praça Norte)
+D 0 17886 2 1 	(O Palácio da Pureza Celestial)
+D 0 17886 0 2 	(O Palácio da Pureza Celestial)
+D 0 17887 0 1 	(O Palácio da Pureza Celestial)
+D 0 17887 1 1 	(O Palácio da Pureza Celestial)
+D 0 17887 2 2 	(O Palácio da Pureza Celestial)
+D 0 17888 3 1 	(O Salão Taiji)
+D 0 17889 0 1 	(Uma Passarela)
+D 0 17889 2 1 	(Uma Passarela)
+D 0 17890 0 1 	(O Palácio da Grande União)
+D 0 17890 2 1 	(O Palácio da Grande União)
+D 0 17891 0 1 	(Uma Passarela)
+D 0 17891 2 1 	(Uma Passarela)
+D 0 17892 2 1 	(O Palácio Imperial)
+D 0 17893 0 1 	(O Palácio Imperial)
+D 0 17894 2 1 	(A Praça Imperial)
+D 0 17895 0 2 	(O Portal Qenan)
+D 0 17896 2 2 	(O Jardim Imperial)
+D 0 17914 0 1 	(O Jardim Imperial)
+D 0 17915 0 2 	(O Grande Portão Shengwu)
+D 0 17915 2 1 	(O Grande Portão Shengwu)
+M 0 17615 3 17888 	(uma concubina)
+E 1 17626 10 12 	(uma túnica vermelha de seda)
+M 0 17615 3 17888 	(uma concubina)
+E 1 17626 10 12 	(uma túnica vermelha de seda)
+M 0 17615 3 17888 	(uma concubina)
+E 1 17626 10 12 	(uma túnica vermelha de seda)
+M 0 17614 1 17865 	(os Nove Dragï¿½es)
+E 1 17632 1 19 	(o brinco dos Nove Dragões)
+M 0 17623 1 17874 	(um sacerdote budista)
+E 1 17625 1 17 	(a oração do buda dourado)
+M 0 17624 1 17874 	(um sacerdote budista)
+E 1 17628 3 16 	(o bastão Gun)
+M 0 17622 1 17888 	(um eunuco)
+E 1 17629 2 16 	(o facão Dao)
+M 0 17617 1 17759 	(os leï¿½es de bronze)
+M 0 17616 2 17744 	(o guardiï¿½o da entrada)
+M 0 17616 2 17744 	(o guardiï¿½o da entrada)
+E 1 17615 1 17 	(a grande chave dos portões de entrada)
+M 0 17618 1 17790 	(o guardiï¿½o da torre)
+M 0 17619 1 17805 	(o guardiï¿½o da torre)
+M 0 17620 1 17822 	(o guardiï¿½o da torre)
+M 0 17621 1 17837 	(o guardiï¿½o da torre)
+M 0 17625 1 17886 	(o guarda imperial)
+E 1 17619 1 17 	(a chave de Qianqing)
+E 1 17627 1 16 	(a lança Qiang)
+M 0 17628 1 17903 	(Xiezhi)
+E 1 17633 2 22 	(a argola de Xiezhi)
+M 0 17629 1 17892 	(Qing, o imperador chinï¿½s)
+E 1 17634 1 16 	(a alabarda imperial Kuan Tao)
+E 1 17620 1 17 	(as chaves imperiais)
+E 1 17622 3 12 	(a túnica imperial chinesa)
+E 1 17623 5 6 	(a coroa imperial chinesa)
+M 0 17630 8 17930 	(um guarda chinï¿½s)
+M 0 17630 8 17871 	(um guarda chinï¿½s)
+M 0 17630 8 17856 	(um guarda chinï¿½s)
+M 0 17630 8 17861 	(um guarda chinï¿½s)
+M 0 17630 8 17897 	(um guarda chinï¿½s)
+M 0 17630 8 17907 	(um guarda chinï¿½s)
+M 0 17630 8 17913 	(um guarda chinï¿½s)
+M 0 17631 1 17854 	(Fï¿½nix)
+E 1 17631 1 0 	(uma pluma dourada da Fênix)
+M 0 17626 1 17880 	(uma chinesa)
+M 0 17627 1 17880 	(uma chinesa)
+R 0 17881 17635 -1 	(um baú vermelho)
+O 0 17635 1 17881 	(um baú vermelho)
+P 1 17637 10 17635 	(uma máscara chinesa azul)
+P 1 17638 10 17635 	(uma máscara chinesa vermelha)
+P 1 17639 10 17635 	(uma máscara chinesa verde)
+R 0 17881 17636 -1 	(um baú amarelo)
+O 0 17636 1 17881 	(um baú amarelo)
+P 1 17640 10 17636 	(uma túnica azul de seda)
+P 1 17641 10 17636 	(uma túnica vermelha de seda)
+P 1 17642 10 17636 	(uma túnica verde de seda)
+R 0 17893 17643 -1 	(um baú dourado)
+O 0 17643 1 17893 	(um baú dourado)
+P 1 17645 1 17643 	(Pagode de Buda de Ouro)
+P 1 17646 1 17643 	(um globo celestial de ouro)
+R 0 17893 17644 -1 	(o grande armário vermelho)
+O 0 17644 1 17893 	(o grande armário vermelho)
+P 1 17647 1 17644 	(uma túnica imperial chinesa vermelha)
+M 0 17632 1 17911 	(Ci Xi, a imperatriz)
+E 1 17630 1 17 	(o punhal Bi Shou)
+E 1 17648 5 12 	(a túnica azul da imperatriz)
+M 0 17633 1 17935 	(o Dragï¿½o de bronze)
 S
 $

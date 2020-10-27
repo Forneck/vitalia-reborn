@@ -6,8 +6,8 @@ Clas: 3
 Levl: 16
 Id  : 6
 Brth: 1603323580
-Plyd: 2748
-Last: 1603393475
+Plyd: 4555
+Last: 1603673650
 Lmot: 1603324480
 Lnew: 1603323627
 Htwn: 3001
@@ -18,12 +18,12 @@ Alin: -74
 Act : g 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
-Room: 65535
+Room: 5518
 Hung: -1
 Thir: -1
 Hit : 265/250
 Mana : 200/200
-Move: 400/400
+Move: 397/400
 Str : 11/0
 Int : 13
 Wis : 11
@@ -37,3 +37,7 @@ Olc : 0
 Skil:
 224 12
 0 0
+Alis: 1
+ say
+ say @g$*@n
+1
