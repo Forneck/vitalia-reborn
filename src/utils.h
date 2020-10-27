@@ -437,7 +437,7 @@ do                                                              \
 /** Checks to see if a PC or NPC is dead. */
 #define DEAD(ch) (PLR_FLAGGED((ch), PLR_NOTDEADYET) || MOB_FLAGGED((ch), MOB_NOTDEADYET))
 
-#define IS_DEAD(ch)		(PLR_FLAGGED(ch, PLR_DEAD))
+#define IS_DEAD(ch)		(PLR_FLAGGED(ch, PLR_GHOST))
 #define ALIVE(ch)		(IS_NPC(ch) || !IS_DEAD(ch))
 
 /* room utils */
