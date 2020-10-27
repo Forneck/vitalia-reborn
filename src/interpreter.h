@@ -19,6 +19,7 @@
 #define CMD_NAME (complete_cmd_info[cmd].command)
 #define CMD_IS(cmd_name) (!strcmp(cmd_name, complete_cmd_info[cmd].command))
 #define IS_MOVE(cmdnum) (complete_cmd_info[cmdnum].command_pointer == do_move)
+#define CMD_TYPE (complete_cmd_info[cmd].type)
 
 void sort_commands(void);
 void	command_interpreter(struct char_data *ch, char *argument);
@@ -64,6 +65,7 @@ struct command_info {
 	   (struct char_data *ch, char *argument, int cmd, int subcmd);
    sh_int minimum_level;
    int	subcmd;
+   sh_int type;
 };
 
 struct mob_script_command_t {
