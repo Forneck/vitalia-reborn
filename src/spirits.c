@@ -55,7 +55,7 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 	act("@gUma estranha sensação percorre seu espírito, que é puxado por uma força\r\n"
 		"divina, carregando-$r por uma longa distância.", FALSE, ch, 0, 0, TO_CHAR);
 
-	REMOVE_BIT_AR(PLR_FLAGS(ch), PLR_DEAD);
+	REMOVE_BIT_AR(PLR_FLAGS(ch), PLR_GHOST);
 	if (AFF_FLAGGED(ch, AFF_FLYING))
 		REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_FLYING);
 
@@ -164,7 +164,7 @@ void raise_offline(struct char_data *ch, struct obj_data *corpse)
    struct obj_data *obj = NULL;
    
 	/* Raise player */
-	REMOVE_BIT_AR(PLR_FLAGS(ch), PLR_DEAD);
+	REMOVE_BIT_AR(PLR_FLAGS(ch), PLR_GHOST);
 	
 	/* System shock roll */
 	if ((GET_CON(ch) > 3) && (rand_number(1, 101) > (75 + GET_CON(ch))))
