@@ -766,8 +766,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	if ((object = get_obj_vis(ch, arg1, NULL)) != NULL)
 		type1 = 3;
 		
-	if (!generic_find(type, FIND_OBJ_INV | FIND_OBJ_ROOM, ch, &victim, &object))
-		door = find_door(ch, arg1, arg2, cmd_door[subcmd]);
+door = search_block(arg2, dirs, FALSE);
 
 	if (type1 == 1)				/* mob */
 	{
