@@ -18,22 +18,22 @@ Uma chave com aparência ligeiramente irreal está aqui.~
 #5
 corpo~
 o corpo de um monstro~
-O corpo de um monstro est� aqui.~
+O corpo de um monstro está aqui.~
 ~
 25 cdq 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 1000 0 100000 0 0
 #10
-p�o viagem lemba~
-um p�o de viagem~
-Um p�o de viagem foi deixado aqui.~
+pao viagem lemba~
+um pão de viagem~
+Um pão de viagem foi deixado aqui.~
 ~
 19 g 0 0 0 a 0 0 0 0 0 0 0
 24 0 0 0
 1 50 50 0 0
 E
-p�o viagem lemba~
-O p�o de viagem � a comida tradicional dos elfos durante viagens, sendo
+pao viagem lemba~
+O pão de viagem é a comida tradicional dos elfos durante viagens, sendo
 chamado de lembas.  Dizem que eles saciam a fome dos cansados viajantes
 rapidamente.
 ~
@@ -47,8 +47,8 @@ Um punhado de apetitosos morangos silvestres foi deixado aqui.~
 1 50 50 0 0
 E
 punhado morangos silvestres~
-Esses morangos devem ter vindo de algum lugar muito especial... S�o grandes,
-vermelhos, cheirosos... Voc� come�a a salivar s� de pensar em com�-los!
+Esses morangos devem ter vindo de algum lugar muito especial... São grandes,
+vermelhos, cheirosos... Você começa a salivar só de pensar em comê-los!
 Hum... Que tal fazer uma torta com eles?
 ~
 #31
@@ -62,15 +62,15 @@ Um portal nebuloso flutua aqui.~
 #32
 portal~
 um portal~
-Voc� v� um portal aberto aqui.~
+Você vê um portal aberto aqui.~
 ~
 26 cdeg 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 0 0 0 0 0
 #33
-sa�da~
-a sa�da do portal~
-Voc� v� a sa�da do portal, brilhando por entre as n�voas.~
+saida~
+a saída do portal~
+Você vê a saída do portal, brilhando por entre as névoas.~
 ~
 26 cdeg 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
@@ -78,15 +78,15 @@ Voc� v� a sa�da do portal, brilhando por entre as n�voas.~
 #34
 tocha encantada~
 uma tocha encantada~
-Uma tocha arde em chama branca ao emitir suave m�sica.~
+Uma tocha arde em chama branca ao emitir suave música.~
 ~
 1 abdegq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 72 0
 1 10000 0 0 0
 #40
 bandagem bandagens~
-v�rias bandagens~
-V�rias bandagens foram deixadas aqui.~
+várias bandagens~
+Várias bandagens foram deixadas aqui.~
 ~
 11 0 0 0 0 abcdefghilm 0 0 0 0 0 0 0
 0 0 0 0
@@ -117,34 +117,34 @@ mapa midgaard~
                               Templo
              :                   |
              |                   |
-(Casas)<-- Fonte -- Leitura -- Templo -- Doa��es
+(Casas)<-- Fonte -- Leitura -- Templo -- Doações
              |                   de
-             :                Midgaard                Recep��o
+             :                Midgaard                Recepção
                                  |      Correios    _,-'
                    Assoc.        |           |  _,-'
-                 Cl�rigos -- Praca do -- Grunting---Bar
+                 Clerigos -- Praca do -- Grunting---Bar
                               Templo     Boar Inn    |
                                  |                   Clube de Bardos
         Assoc. Loja de           |              Loja de
-       Druidas Magia   Padaria   |    Armaz�m   Armas
-           |       |      |    Pra�a     |        |        Port�o
-      <--Port�o----+------+---Mercado----+--------+--------Leste-->
+       Druidas Magia   Padaria   |    Armazém   Armas
+           |       |      |    Praça     |        |        Portão
+      <--Portão----+------+---Mercado----+--------+--------Leste-->
          Oeste     |      |      |       |        |         |
            |    Assoc.  Loja de  |    Loja de   Assoc.     Loja de
-         (Estr.  Magos  Armaduras|    Animais  Guerreiros  �gua
+         (Estr.  Magos  Armaduras|    Animais  Guerreiros  Água
           Muro)                  |
            |                     |           Residencial
            |         Confraria   |     Banco   Midgaard 
-           |              |    Pra�a     |        |
+           |              |    Praça     |        |
            +------+-------+---Mediana----+--------+
            |      |              |
            |    Jornal           |
-           |           Brech�    |                    Loja de Mapas
-           |              |    Pra�a                        |
+           |           Brechó    |                    Loja de Mapas
+           |              |    Praça                        |
            +--  (Beco  ---+----Comum-----(Beco Escuro)------+
-           |  Miser�vel)  |      |       |        |         |
-           |            Grubby   |    Assoc.   O Dique   Dep�sito
-           |             Inn     |    Ladr�es     |      Deserto
+           |  Miserável)  |      |       |        |         |
+           |            Grubby   |    Assoc.   O Dique   Depósito
+           |             Inn     |    Ladrões     |      Deserto
          (Estr.               Dep. de             |
           Muro)                Lixo               |
            |             Esgoto-'                 |
@@ -154,7 +154,7 @@ mapa midgaard~
            |
            +-----------+-(Passeio)--+-------------+----------+
            |           |            |             |          |
-           |           +            +----Caf�     +---Vint�m |
+           |           +            +----Café     +---Vintém |
            |           |  Parque--v |             |          |
            |  Quartel  |         +--+--+          |          |
            |    de ----+----+----+--o--+-----+----+---Escrit |
@@ -166,14 +166,14 @@ mapa midgaard~
            |           +-(Esmeralda)+             +---Olmo   |
            |           |                          |          |
            |           +---Asilo dos Novatos      +---Museu  |
-           |           |                          |   �rvore |
+           |           |                          |   Árvore |
            |           |                          |         \|
-  Port�o<--+-----------+-------(Passeio)----------+----------+
+  Portão<--+-----------+-------(Passeio)----------+----------+
     Sul                                           |
-                                              Cemit�rio
+                                              Cemitério
 ~
 #64
-mapa iniciantes sobre-terr�neo~
+mapa iniciantes sobre-terraneo~
 um mapa da Zona dos Iniciantes~
 Um mapa da Zona dos Iniciantes foi deixado aqui.~
 ~
@@ -206,15 +206,15 @@ mapa iniciantes sobre-terraneo~
                                                _,-'
 ~
 #65
-mapa iniciantes sub-terr�neo~
-um mapa da Zona dos Iniciantes - Sub-terr�neo~
+mapa iniciantes sub-terraneo~
+um mapa da Zona dos Iniciantes - Sub-terrâneo~
 Um mapa da Zona dos Iniciantes foi deixado aqui.~
 ~
 12 e 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 263 20 0 0
 E
-mapa iniciantes sub-terr�neo~
+mapa iniciantes sub-terraneo~
  ,--------------, Curva na                  Interseccao               Outro
  | Zona dos     | Passagem--------------------em 'T'------------------Canto
  | Iniciantes   |     |                          |                      |
