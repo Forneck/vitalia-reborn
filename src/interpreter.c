@@ -806,8 +806,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		{
 		  door = -1;
 		}
-	}
-      
+	
 		if (type1 == 1)			/* mob */
 		{
 			output[2] = CMD_ARG_MOB;
