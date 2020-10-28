@@ -29,6 +29,7 @@
 #include "shop.h"
 #include "quest.h"
 #include "modify.h"
+#include "./include/floatfann.h"
 
 /* Local defined utility functions */
 /* do_group utility functions */
@@ -1236,6 +1237,8 @@ ACMD(do_suggestion)
 	ann = fann_create_from_file("etc/aventureiro.fann");
 	fann_type input[26];
 	fann_type output[6];
+	int grupo;
+	
    	if (GROUP(ch) != NULL)
 		grupo = 1;
 	else
