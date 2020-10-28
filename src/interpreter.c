@@ -307,8 +307,8 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"stand", "st", POS_RESTING, do_stand, 0, 0, CMD_NONE},
 	{"stat", "stat", POS_DEAD, do_stat, LVL_IMMORT, 0, CMD_MISC},
 	{"steal", "ste", POS_STANDING, do_cast, 1, SKILL_STEAL, CMD_PLAYERS},
-	{"switch", "switch", POS_DEAD, do_switch, LVL_GOD, 0, CMD_PLAYERS},
 	{"suggestion", "sugg", POS_DEAD, do_suggestion, 0, 0, CMD_NONE},
+	{"switch", "switch", POS_DEAD, do_switch, LVL_GOD, 0, CMD_PLAYERS},
 
 	{"tell", "t", POS_DEAD, do_tell, 0, 0, CMD_COMM},
 	{"take", "ta", POS_RESTING, do_get, 0, 0, CMD_OBJ},
