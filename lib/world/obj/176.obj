@@ -23,9 +23,9 @@ Uma bela armadura chinesa negra foi perdida aqui.~
 12 0 0 0
 20 700000 10000 70 0
 E
-armadura negra guardião~
-Esta armadura foi feita de um metal negro, desconhecido por você.  Por toda 
-sua extensão, encontram-se caracteres chineses em vermelho, que brilham de 
+armadura negra guardiao~
+Esta armadura foi feita de um metal negro, desconhecido por vocÃª.  Por toda 
+sua extensÃ£o, encontram-se caracteres chineses em vermelho, que brilham de 
 tempos em tempos, produzindo um estranho zunir ao seu redor.
 ~
 A
@@ -41,9 +41,9 @@ Uma pata de urso foi esquecida aqui.~
 20 0 0 0
 3 60 0 1 0
 #17604
-escorpião~
-um escorpião~
-Um pequeno escorpião foi esquecido aqui.~
+escorpiao~
+um escorpiÃ£o~
+Um pequeno escorpiÃ£o foi esquecido aqui.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 7 0 0 0
@@ -51,21 +51,21 @@ Um pequeno escorpião foi esquecido aqui.~
 #17605
 leeyung huaang~
 um leeyung huaang~
-Algum tipo de alimento está aqui, junto ao chão.~
+Algum tipo de alimento estÃ¡ aqui, junto ao chÃ£o.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 16 0 0 0
 2 35 0 1 0
 E
 leeyung huaang~
-Esta é uma das especialidades de Tse-Ling.  Se trata de camarões moidos, 
+Esta Ã© uma das especialidades de Tse-Ling.  Se trata de camarÃµes moidos, 
 misturados com cogumelos e alguns vegetais, envoltos de uma massa muito 
 fina e fritos.
 ~
 #17606
-macarrão~
-uma cumbuca de madeira com macarrão~
-Uma pequena cumbuca está aqui, junto à poeira.~
+macarrao~
+uma cumbuca de madeira com macarrÃ£o~
+Uma pequena cumbuca estÃ¡ aqui, junto Ã  poeira.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 23 0 0 0
@@ -81,28 +81,28 @@ Uma pequena cumbuca com arroz foi deixada aqui.~
 #17608
 carne cachorro~
 um pouco de carne de cachorro~
-Um pouco de carne está aqui no chão.~
+Um pouco de carne estÃ¡ aqui no chÃ£o.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 18 0 0 0
 3 50 0 1 0
 #17609
 tunica seda~
-uma túnica de seda chinesa~
-Uma linda e colorida túnica foi perdida aqui.~
+uma tÃºnica de seda chinesa~
+Uma linda e colorida tÃºnica foi perdida aqui.~
 ~
 9 k 0 0 0 ak 0 0 0 0 0 0 0
 4 0 0 0
 10 250 50 0 0
 E
 tunica seda~
-Esta túnica vermelha chinesa é toda bordada com caracteres chineses, e 
-vários animais por toda sua extensão.  Um trabalho de gênio.
+Esta tÃºnica vermelha chinesa Ã© toda bordada com caracteres chineses, e 
+vÃ¡rios animais por toda sua extensÃ£o.  Um trabalho de gÃªnio.
 ~
 #17610
 calca seda~
-uma calça de seda vermelha~
-Uma linda calça vermelha foi esquecida aqui.~
+uma calÃ§a de seda vermelha~
+Uma linda calÃ§a vermelha foi esquecida aqui.~
 ~
 9 0 0 0 0 af 0 0 0 0 0 0 0
 3 0 0 0
@@ -118,20 +118,20 @@ Um lindo casaco brilhante foi perdido aqui.~
 E
 casaco seda~
 Este casaco preto de seda foi cuidadosamente bordado com grandes e 
-brilhantes dragões dourados por toda sua extensão.
+brilhantes dragÃµes dourados por toda sua extensÃ£o.
 ~
 #17612
 chapeu palha triangular chines~
-um chapéu triangular chinês~
-Um belo chapéu triangular foi esquecido aqui.~
+um chapÃ©u triangular chinÃªs~
+Um belo chapÃ©u triangular foi esquecido aqui.~
 ~
 9 0 0 0 0 ae 0 0 0 0 0 0 0
 3 0 0 0
 4 230 50 0 0
 E
 chapeu triangular chines palha~
-Este chapéu foi feito de palha trançada, possuindo um formato triangular, 
-característico da região da china, e uma pequena alça para prender no 
+Este chapÃ©u foi feito de palha tranÃ§ada, possuindo um formato triangular, 
+caracterÃ­stico da regiÃ£o da china, e uma pequena alÃ§a para prender no 
 queixo.
 ~
 #17613
@@ -145,23 +145,23 @@ Um pequena mochila bordada foi esquecida aqui.~
 #17614
 luva couro~
 um par de luvas de couro~
-Um par de luvas está aqui, junto à poeira.~
+Um par de luvas estÃ¡ aqui, junto Ã  poeira.~
 ~
 9 0 0 0 0 ah 0 0 0 0 0 0 0
 3 0 0 0
 3 130 15 0 0
 #17615
 chave entrada cidade~
-a grande chave dos portões de entrada~
+a grande chave dos portÃµes de entrada~
 Uma enorme chave foi perdida aqui.~
 ~
 18 c 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 5 500 10 0 0
 #17616
-lança whuang~
-a lança Whuang~
-Uma grande lança chinesa foi perdida aqui.~
+lanca whuang~
+a lanÃ§a Whuang~
+Uma grande lanÃ§a chinesa foi perdida aqui.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 0 3 4 15
@@ -201,26 +201,26 @@ Um grande conjunto de chaves foi perdido aqui.~
 #17621
 frasco empoeirado~
 um frasco empoeirado~
-Um pequeno fraso foi deixado aqui, junto à poeira.~
+Um pequeno fraso foi deixado aqui, junto Ã  poeira.~
 ~
 10 0 0 0 0 a 0 0 0 0 0 0 0
 40 1 39 62
 2 15000 100 0 0
 #17622
-túnica imperial chinesa~
-a túnica imperial chinesa~
-Uma bela túnica amarela foi perdida aqui.~
+tunica imperial chinesa~
+a tÃºnica imperial chinesa~
+Uma bela tÃºnica amarela foi perdida aqui.~
 ~
 9 ak 0 0 0 ak 0 0 0 0 0 0 0
 10 0 0 0
 17 100000 70000 73 0
 E
-túnica imperial chinesa~
-Está linda túnica imperial chinesa foi feita de seda amarela, possuindo 
-bordados dourados e vermelhos com o formato dos Nove Dragões chineses.  
-Apesar de parecer uma túnica normal, em uma primeira olhada, esta túnica 
-foi abençoada pelos sacerdotes chineses, para que o imperador, ou aquele 
-que a usasse, estivesse sempre sob a proteção dos Deuses chineses.
+tunica imperial chinesa~
+EstÃ¡ linda tÃºnica imperial chinesa foi feita de seda amarela, possuindo 
+bordados dourados e vermelhos com o formato dos Nove DragÃµes chineses.  
+Apesar de parecer uma tÃºnica normal, em uma primeira olhada, esta tÃºnica 
+foi abenÃ§oada pelos sacerdotes chineses, para que o imperador, ou aquele 
+que a usasse, estivesse sempre sob a proteÃ§Ã£o dos Deuses chineses.
 ~
 A
 2 1
@@ -240,7 +240,7 @@ E
 coroa chinesa imperial~
 Esta bela coroa imperial chinesa foi feita em seda, possuindo ornamentos em 
 ouro.  Ela possui uma grande base negra, e acima uma parte circular 
-vermelha.  Apesar de muito grande, ela não é muito pesada, mas muito bela.
+vermelha.  Apesar de muito grande, ela nÃ£o Ã© muito pesada, mas muito bela.
 ~
 A
 6 2
@@ -249,70 +249,70 @@ A
 A
 4 2
 #17624
-biscoito chinês~
-um biscoito da sorte chinês~
-Um delicioso biscoito chinês foi perdido aqui.~
+biscoito chines~
+um biscoito da sorte chinÃªs~
+Um delicioso biscoito chinÃªs foi perdido aqui.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 8 0 0 0
 3 20 0 0 0
 #17625
-oração buda~
-a oração do buda dourado~
+oracao buda~
+a oraÃ§Ã£o do buda dourado~
 Um pequeno pergaminho foi esquecido aqui.~
 ~
 13 c 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 5 0 0 0 0
 E
-oração buda~
+oracao buda~
 
 Kang ri ra wa sching kam sou
 Pen dang de wa ma lu dschung wa ne
-&Rbaohe lin tsung lee-dah&n
+@Rbaohe lin tsung lee-dah@n
 
-Chen´re zig wang ten Tzin gya Tso yi
+ChenÂ´re zig wang ten Tzin gya Tso yi
 Schab pe si ta bar du ten gyur tchig
-&Rbaohe lin tsung lee-duh&n
+@Rbaohe lin tsung lee-duh@n
 ~
 #17626
-túnica~
-uma túnica vermelha de seda~
-Uma bela e brilhante túnica de seda foi jogada aqui.~
+tunica~
+uma tÃºnica vermelha de seda~
+Uma bela e brilhante tÃºnica de seda foi jogada aqui.~
 ~
 9 0 0 0 0 ak 0 0 0 0 0 0 0
 3 0 0 0
 5 100 100 0 0
 #17627
-lança qiang~
-a lança Qiang~
-Uma enorme lança de bambu foi perdida aqui.~
+lanca qiang~
+a lanÃ§a Qiang~
+Uma enorme lanÃ§a de bambu foi perdida aqui.~
 ~
 5 a 0 0 0 an 0 0 0 0 0 0 0
 0 4 4 15
 6 25000 500 30 0
 E
-lança qiang~
-Está é uma lança muito longa, feita de bambu, e com uma lâmina cortante em 
-uma das estremidades.  É uma das armas adotadas pelos guardas da Cidade 
-Proibida, devido ao seu alto poder de destruição.
+lanca qiang~
+EstÃ¡ Ã© uma lanÃ§a muito longa, feita de bambu, e com uma lÃ¢mina cortante em 
+uma das estremidades.  Ã‰ uma das armas adotadas pelos guardas da Cidade 
+Proibida, devido ao seu alto poder de destruiÃ§Ã£o.
 ~
 A
 18 3
 A
 19 2
 #17628
-bastão gun~
-o bastão Gun~
-Um belo e grande bastão foi esquecido aqui.~
+bastao gun~
+o bastÃ£o Gun~
+Um belo e grande bastÃ£o foi esquecido aqui.~
 ~
 5 agikop 0 0 0 an 0 0 0 0 0 0 0
 0 4 5 5
 10 60000 700 33 0
 E
-bastão gun~
-Este bastão é feito de um longo pedaço de madeira resistente, com entalhes 
-em chinês.  Você pode perceber que este é um bastão abençoado, por ter sido 
+bastao gun~
+Este bastÃ£o Ã© feito de um longo pedaÃ§o de madeira resistente, com entalhes 
+em chinÃªs.  VocÃª pode perceber que este Ã© um bastÃ£o abenÃ§oado, por ter sido 
 usado pelos sacerdotes budistas chineses.
 ~
 A
@@ -320,18 +320,18 @@ A
 A
 19 2
 #17629
-facão dao~
-o facão Dao~
-Um enorme facão foi perdido aqui.~
+facao dao~
+o facÃ£o Dao~
+Um enorme facÃ£o foi perdido aqui.~
 ~
 5 begmn 0 0 0 an 0 0 0 0 0 0 0
 0 5 3 3
 15 50000 1000 45 0
 E
-facão dao~
-Este enorme facão consiste em uma afiadíssima lâmina de aço, e um cabo de 
-madeira, no qual encontra-se preso um pedaço de tecido, com a finalidade 
-de limpar o sangue da lâmina.
+facao dao~
+Este enorme facÃ£o consiste em uma afiadÃ­ssima lÃ¢mina de aÃ§o, e um cabo de 
+madeira, no qual encontra-se preso um pedaÃ§o de tecido, com a finalidade 
+de limpar o sangue da lÃ¢mina.
 ~
 A
 19 2
@@ -342,7 +342,7 @@ A
 #17630
 punhal bi shou~
 o punhal Bi Shou~
-Um pequeno e afiado punhal está aqui no chão.~
+Um pequeno e afiado punhal estÃ¡ aqui no chÃ£o.~
 ~
 5 egm 0 0 0 ao 0 0 0 0 0 0 0
 0 3 4 11
@@ -350,9 +350,9 @@ Um pequeno e afiado punhal está aqui no chão.~
 E
 punhal bi shou~
 Apesar de pequeno e curto, este punhal pode causar grandes estragos se usado
-contra alguém.  Ele possui uma pequena lâmina de ferro, e um cabo de
-madeira, no qual há preso um pedaço de tecido, para limpar o sangue da
-lâmina.
+contra alguÃ©m.  Ele possui uma pequena lÃ¢mina de ferro, e um cabo de
+madeira, no qual hÃ¡ preso um pedaÃ§o de tecido, para limpar o sangue da
+lÃ¢mina.
 ~
 A
 18 2
@@ -361,33 +361,33 @@ A
 A
 1 1
 #17631
-pluma fênix~
-uma pluma dourada da Fênix~
-Uma pequena pluma dourada brilha intensamente aqui no chão.~
+pluma fenix~
+uma pluma dourada da FÃªnix~
+Uma pequena pluma dourada brilha intensamente aqui no chÃ£o.~
 ~
 1 egk 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
 9 1000000 5000 73 0
 E
-pluma fênix~
-Você pode ver que está bela pluma dourada de uma Fênix emite tanta 
-luz, que é capaz de iluminar o seu caminho infinitamente.
+pluma fenix~
+VocÃª pode ver que estÃ¡ bela pluma dourada de uma FÃªnix emite tanta 
+luz, que Ã© capaz de iluminar o seu caminho infinitamente.
 ~
 A
 18 3
 A
 19 3
 #17632
-brinco nove dragões~
-o brinco dos Nove Dragões~
+brinco nove dragoes~
+o brinco dos Nove DragÃµes~
 Um pequenino e brilhante brinco foi perdido aqui.~
 ~
 11 afg 0 0 0 aq 0 0 0 0 0 0 0
 0 0 0 0
 5 15000 50 80 0
 E
-brinco nove dragões~
-Este precioso brinco chinês foi feito em ouro, e no centro possui uma 
+brinco nove dragoes~
+Este precioso brinco chinÃªs foi feito em ouro, e no centro possui uma 
 esfera rosada de energia.
 ~
 A
@@ -408,7 +408,7 @@ Uma pequenina argola avermelhada foi esquecida aqui.~
 4 7000 500 40 0
 E
 argola xiezhi~
-Você observa a pequenina argola vermelha de Xiezhi.
+VocÃª observa a pequenina argola vermelha de Xiezhi.
 ~
 A
 18 2
@@ -422,11 +422,11 @@ Uma bela alabarda parece o chamar com o seu brilho intenso.~
 14 800000 1000 87 0
 E
 alabarda kuan tao~
-Olhando para esta alabarda, você pode ver que ela foi de um longo pedaço 
+Olhando para esta alabarda, vocÃª pode ver que ela foi de um longo pedaÃ§o 
 de madeira muito negra e resistente.  Em uma das pontas encontra-se uma 
-grande esfera dourada com o desenho de um dragão.  Na outra extremidade 
-há uma longa lâmina dourada afiadíssima.  Tanto no cabo de madeira, quanto 
-na lâmina, encontram-se inumeros desenhos de dragões e fênix em vermelho.
+grande esfera dourada com o desenho de um dragÃ£o.  Na outra extremidade 
+hÃ¡ uma longa lÃ¢mina dourada afiadÃ­ssima.  Tanto no cabo de madeira, quanto 
+na lÃ¢mina, encontram-se inumeros desenhos de dragÃµes e fÃªnix em vermelho.
 ~
 A
 18 6
@@ -435,111 +435,111 @@ A
 A
 17 -5
 #17635
-baú vermelho~
-um baú vermelho~
-Um grande baú vermelho de figurinos.~
+bau vermelho~
+um baÃº vermelho~
+Um grande baÃº vermelho de figurinos.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 500 7 -1 0
 800 0 0 0 0
 #17636
-baú amarelo~
-um baú amarelo~
-Um grande baú amarelo de figurinos.~
+bau amarelo~
+um baÃº amarelo~
+Um grande baÃº amarelo de figurinos.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 500 7 -1 0
 800 0 0 0 0
 #17637
-máscara azul~
-uma máscara chinesa azul~
-Uma bela máscara azul foi perdida aqui.~
+mascara azul~
+uma mÃ¡scara chinesa azul~
+Uma bela mÃ¡scara azul foi perdida aqui.~
 ~
 11 deq 0 0 0 ar 0 0 0 0 0 0 0
 0 0 0 0
 4 0 0 0 0
 E
-máscara azul~
-Esta bela máscara azul é um dos figuridos usados pelos chineses nas óperas 
+mascara azul~
+Esta bela mÃ¡scara azul Ã© um dos figuridos usados pelos chineses nas Ã³peras 
 da Cidade Proibida.
 ~
 #17638
-máscara vermelha~
-uma máscara chinesa vermelha~
-Uma bela máscara vermelha foi perdida aqui.~
+mascara vermelha~
+uma mÃ¡scara chinesa vermelha~
+Uma bela mÃ¡scara vermelha foi perdida aqui.~
 ~
 11 deq 0 0 0 ar 0 0 0 0 0 0 0
 0 0 0 0
 4 0 0 0 0
 E
-máscara vermelha~
-Esta bela máscara vermelha é um dos figuridos usados pelos chineses nas 
-óperas da Cidade Proibida.
+mascara vermelha~
+Esta bela mÃ¡scara vermelha Ã© um dos figuridos usados pelos chineses nas 
+Ã³peras da Cidade Proibida.
 ~
 #17639
-máscara verde~
-uma máscara chinesa verde~
-Uma bela máscara verde foi perdida aqui.~
+mascara verde~
+uma mÃ¡scara chinesa verde~
+Uma bela mÃ¡scara verde foi perdida aqui.~
 ~
 11 deq 0 0 0 ar 0 0 0 0 0 0 0
 0 0 0 0
 4 0 0 0 0
 E
-máscara verde~
-Esta bela máscara verde é um dos figuridos usados pelos chineses nas óperas 
+mascara verde~
+Esta bela mÃ¡scara verde Ã© um dos figuridos usados pelos chineses nas Ã³peras 
 da Cidade Proibida.
 ~
 #17640
 tunica azul~
-uma túnica azul de seda~
-Uma bela túnica azul de seda foi deixada aqui.~
+uma tÃºnica azul de seda~
+Uma bela tÃºnica azul de seda foi deixada aqui.~
 ~
 11 adeq 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
 5 0 0 0 0
 E
 tunica azul~
-Esta bela túnica azul de seda é um dos figurionos usados pelos chineses nas 
-óperas da Cidade Proibida.
+Esta bela tÃºnica azul de seda Ã© um dos figurionos usados pelos chineses nas 
+Ã³peras da Cidade Proibida.
 ~
 #17641
 tunica vermelha~
-uma túnica vermelha de seda~
-Uma bela túnica vermelha de seda foi deixada aqui.~
+uma tÃºnica vermelha de seda~
+Uma bela tÃºnica vermelha de seda foi deixada aqui.~
 ~
 11 adeq 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
 5 0 0 0 0
 E
 tunica vermelha~
-Esta bela túnica vermelha de seda é um dos figurionos usados pelos chineses 
-nas óperas da Cidade Proibida.
+Esta bela tÃºnica vermelha de seda Ã© um dos figurionos usados pelos chineses 
+nas Ã³peras da Cidade Proibida.
 ~
 #17642
 tunica verde~
-uma túnica verde de seda~
-Uma bela túnica verde de seda foi deixada aqui.~
+uma tÃºnica verde de seda~
+Uma bela tÃºnica verde de seda foi deixada aqui.~
 ~
 11 adeq 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
 5 0 0 0 0
 E
 tunica verde~
-Esta bela túnica verde de seda é um dos figurionos usados pelos chineses 
-nas óperas da Cidade Proibida.
+Esta bela tÃºnica verde de seda Ã© um dos figurionos usados pelos chineses 
+nas Ã³peras da Cidade Proibida.
 ~
 #17643
-baú dourado~
-um baú dourado~
-Um grande baú dourado encontra-se junto à parede leste.~
+bau dourado~
+um baÃº dourado~
+Um grande baÃº dourado encontra-se junto Ã  parede leste.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 500 15 17620 0
 800 0 0 0 0
 #17644
-armário vermelho~
-o grande armário vermelho~
-O grande armário vermelho do imperador está aqui.~
+armario vermelho~
+o grande armÃ¡rio vermelho~
+O grande armÃ¡rio vermelho do imperador estÃ¡ aqui.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 500 15 17620 0
@@ -547,14 +547,14 @@ O grande armário vermelho do imperador está aqui.~
 #17645
 pagode buda ouro~
 Pagode de Buda de Ouro~
-Uma bela peça de ouro foi, de alguma forma, perdida aqui.~
+Uma bela peÃ§a de ouro foi, de alguma forma, perdida aqui.~
 ~
 8 abgi 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 10 850000 0 0 0
 E
 pagode buda ouro~
-Um grande pagode de Buda, feito do mais puro ouro, e com várias pedras 
+Um grande pagode de Buda, feito do mais puro ouro, e com vÃ¡rias pedras 
 preciosas de diversas cores incrustadas.
 ~
 #17646
@@ -567,10 +567,10 @@ Um belo e enfeitado artefato de ouro foi esquecido aqui.~
 7 600000 0 5 0
 E
 globo celestial~
-Olhando para o globo, você pode ver que ele foi feito do mais puro ouro, e 
-pequenas pérolas nele incrustadas representam as mais de trezentas 
-constelações, e três mil estrelas.  Sustentano o globo, há um grande 
-pedestal de ouro em forma de dragões.
+Olhando para o globo, vocÃª pode ver que ele foi feito do mais puro ouro, e 
+pequenas pÃ©rolas nele incrustadas representam as mais de trezentas 
+constelaÃ§Ãµes, e trÃªs mil estrelas.  Sustentano o globo, hÃ¡ um grande 
+pedestal de ouro em forma de dragÃµes.
 ~
 A
 5 2
@@ -578,29 +578,29 @@ A
 4 2
 #17647
 tunica imperial vermelha~
-uma túnica imperial chinesa vermelha~
-Uma bela túnica vermelha foi esquecida aqui.~
+uma tÃºnica imperial chinesa vermelha~
+Uma bela tÃºnica vermelha foi esquecida aqui.~
 ~
 11 a 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
 4 10000 50 0 0
 E
 tunica imperial vermelha~
-Esta túnica vermelha não tem nada de especial.  Ela era frequentemente 
+Esta tÃºnica vermelha nÃ£o tem nada de especial.  Ela era frequentemente 
 usada pelo imperador quando este ia se deitar.
 ~
 #17648
 tunica azul~
-a túnica azul da imperatriz~
-Uma brilhante túnica azul de seda foi esquecida aqui.~
+a tÃºnica azul da imperatriz~
+Uma brilhante tÃºnica azul de seda foi esquecida aqui.~
 ~
 9 a 0 0 0 ak 0 0 0 0 0 0 0
 5 0 0 0
 5 50000 50 46 0
 E
 tunica azul~
-Esta bela túnica azul pertencia a imperatriz chinesa.  Por toda a túnica há 
-bordados de dragões em dourado.  Realmente uma belíssima túnica.
+Esta bela tÃºnica azul pertencia a imperatriz chinesa.  Por toda a tÃºnica hÃ¡ 
+bordados de dragÃµes em dourado.  Realmente uma belÃ­ssima tÃºnica.
 ~
 A
 18 1
