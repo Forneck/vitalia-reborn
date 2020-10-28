@@ -1273,7 +1273,7 @@ ACMD(do_suggestion)
 	calc_output = fann_run(ann, input);
 
 		if (calc_output[3] <= 0 )
-		send_to_char(ch, "Sugestão de comando: %s \r\n", cmd_info[(int)calc_output[0]].command);    else if (calc_output[5] >=0)
+		send_to_char(ch, "Sugestão de comando: %s \r\n", cmd_info[(int)calc_output[0]].command);    else if (calc_output[5] > 0)
 	send_to_char(ch, "Comando Sugerido %s %f %f \r\n",
 			cmd_info[(int)calc_output[0]].command, calc_output[3], calc_output[5]);
 	else 
