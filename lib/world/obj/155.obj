@@ -1,14 +1,14 @@
 #15500
 armadura metal~
 uma armadura de metal da OmE~
-Um pedaço de metal está aqui no chão.~
+Um pedaÃ§o de metal estÃ¡ aqui no chÃ£o.~
 ~
 9 0 0 0 0 ad 0 0 0 0 0 0 0
 6 0 0 0
 6 7000 20 0 0
 E
 armadura metal~
-Ela está muito bem polida e limpa, tendo a aparência de ser uma boa e 
+Ela estÃ¡ muito bem polida e limpa, tendo a aparÃªncia de ser uma boa e 
 poderosa armadura.  Ela parece que nunca foi usada.
 ~
 A
@@ -18,29 +18,29 @@ A
 A
 6 1
 #15501
-espada aço~
-uma espada de aço~
-Uma simples espada de aço está aqui no chão.~
+espada aco~
+uma espada de aÃ§o~
+Uma simples espada de aÃ§o estÃ¡ aqui no chÃ£o.~
 ~
 5 ahm 0 0 0 an 0 0 0 0 0 0 0
 0 3 4 3
 9 1000 10 0 0
 E
-espada aço~
-Esta simples espada de aço ainda brilha, e possui a aparência de 
+espada aco~
+Esta simples espada de aÃ§o ainda brilha, e possui a aparÃªncia de 
 que nunca foi usada.
 ~
 #15502
-escudo aço~
-um escudo de aço~
+escudo aco~
+um escudo de aÃ§o~
 Um escudo da OmE foi deixado aqui.~
 ~
 9 0 0 0 0 aj 0 0 0 0 0 0 0
 7 0 0 0
 14 200 1 0 0
 E
-escudo aço~
-Este escudo exibe o símbolo da Ordem Militar da Espada, possuindo duas 
+escudo aco~
+Este escudo exibe o sÃ­mbolo da Ordem Militar da Espada, possuindo duas 
 espadas cruzadas apontando para baixo.
 ~
 #15503
@@ -53,7 +53,7 @@ Uma prancheta foi perdida aqui.~
 4 100 1 0 0
 E
 prancheta~
-Ela possui a superfície em madeira, e tem um grampo de metal na parte 
+Ela possui a superfÃ­cie em madeira, e tem um grampo de metal na parte 
 superior.  Certamente uma prancheta.
 ~
 A
@@ -79,15 +79,15 @@ A
 #15505
 estandarte~
 um estandarte cinza~
-Um pedaço de tecido cinza está aqui, jogado em um canto.~
+Um pedaÃ§o de tecido cinza estÃ¡ aqui, jogado em um canto.~
 ~
 12 b 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 5 100 5 0 0
 E
 estandarte~
-Esta tapeçaria representa a sociedade Elven, de seus anciões, desde o 
-passado até o presente.  Toda a história e magia da sociedade Elven está 
+Esta tapeÃ§aria representa a sociedade Elven, de seus anciÃµes, desde o 
+passado atÃ© o presente.  Toda a histÃ³ria e magia da sociedade Elven estÃ¡ 
 representado neste estandarte.
 ~
 A
