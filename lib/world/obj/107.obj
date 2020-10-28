@@ -8,7 +8,7 @@ Um manto otaviano foi deixado aqui.~
 7 15000 150 5 0
 E
 manto teia otaviano~
-Você observa um manto feito de teias mágicas.  O manto de teias é uma das
+VocÃª observa um manto feito de teias mÃ¡gicas.  O manto de teias Ã© uma das
 vestimentas otavianas e usado por todo seu povo.
 ~
 A
@@ -16,16 +16,16 @@ A
 A
 5 1
 #10701
-bela lâmina diamante~
-uma bela lâmina de diamante~
-Uma bela lâmina de diamante foi esquecida aqui.~
+bela lamina diamante~
+uma bela lÃ¢mina de diamante~
+Uma bela lÃ¢mina de diamante foi esquecida aqui.~
 ~
 5 anq 0 0 0 ano 0 0 0 0 0 0 0
 0 3 4 3
 7 500000 50000 10 0
 E
-bela lâmina diamante~
-Você observa uma bela arma.  Sua lâmina de diamante poderia cortar um golem
+bela lamina diamante~
+VocÃª observa uma bela arma.  Sua lÃ¢mina de diamante poderia cortar um golem
 de pedra ao meio.
 ~
 A
@@ -35,19 +35,19 @@ A
 A
 19 1
 #10702
-linda pétalas flor colorida~
+linda petalas flor colorida~
 Uma linda flor colorida~
-Uma linda flor com pétalas coloridas foi deixada aqui.~
+Uma linda flor com pÃ©talas coloridas foi deixada aqui.~
 ~
 28 ck 0 0 0 aeo 0 0 0 0 0 0 0
 0 0 0 0
 2 5000 500 0 0
 E
-linda flor pétalas colorida~
-Você observa uma bela flor de pétalas coloridas cultivada e unicamente 
-encontrada em Otávia.  É um costume do povo Otaviano entregar uma flor de 
-pétalas coloridas aos seus visitantes.  Você começa a pensar:  Como uma flor 
-bela como está poderia ser cultivada num jarro pendurado por teias e 
+linda flor petalas colorida~
+VocÃª observa uma bela flor de pÃ©talas coloridas cultivada e unicamente 
+encontrada em OtÃ¡via.  Ã‰ um costume do povo Otaviano entregar uma flor de 
+pÃ©talas coloridas aos seus visitantes.  VocÃª comeÃ§a a pensar:  Como uma flor 
+bela como estÃ¡ poderia ser cultivada num jarro pendurado por teias e 
 correntes.
 ~
 A
@@ -64,8 +64,8 @@ Uma espada em chamas foi esquecida aqui.~
 10 800000 8000 20 0
 E
 espada fogo chamas~
-Você observa uma magnífica espada em chamas.  Originaria das terras 
-diomirianas do seu povo cultuava o fogo.  Foi criada para que os lendários
+VocÃª observa uma magnÃ­fica espada em chamas.  Originaria das terras 
+diomirianas do seu povo cultuava o fogo.  Foi criada para que os lendÃ¡rios
 cavaleiros diomirianos protegessem Diomira.
 ~
 A
@@ -84,9 +84,9 @@ Um anel armiliano foi esquecido aqui.~
 5 700000 70000 15 0
 E
 anel armiliano~
-Você observa um anel de ouro com uma pequena esfera de água, onde é possível
-notar que a força deste anel vem da magia armiliana e de seu cultuado 
-elemento a água.  O anel armiliano pertencia a uma das famílias armilianas
+VocÃª observa um anel de ouro com uma pequena esfera de Ã¡gua, onde Ã© possÃ­vel
+notar que a forÃ§a deste anel vem da magia armiliana e de seu cultuado 
+elemento a Ã¡gua.  O anel armiliano pertencia a uma das famÃ­lias armilianas
 reais e que desapareceu com a sua jovem dona.
 ~
 A
@@ -105,9 +105,9 @@ Um anel diomiriano foi esquecido aqui.~
 5 700000 70000 15 0
 E
 anel diomiriano~
-Você observa um anel de ouro com uma pequena esfera de fogo, onde é possível
-notar que a força deste anel vem da magia diomiriana e de seu cultuado 
-elemento o fogo.  O anel diomiriano pertencia a uma das famílias diomirianas
+VocÃª observa um anel de ouro com uma pequena esfera de fogo, onde Ã© possÃ­vel
+notar que a forÃ§a deste anel vem da magia diomiriana e de seu cultuado 
+elemento o fogo.  O anel diomiriano pertencia a uma das famÃ­lias diomirianas
 reais e que desapareceu com o seu jovem dono.
 ~
 A
@@ -117,19 +117,19 @@ A
 A
 18 1
 #10706
-elemento esfera magnífica fogo~
+elemento esfera magnifica fogo~
 o elemento fogo~
-Uma magnífica esfera de fogo foi deixada aqui.~
+Uma magnÃ­fica esfera de fogo foi deixada aqui.~
 ~
 5 abegikmnopqtu 0 0 0 ao 0 0 0 ds 0 0 0
 0 4 5 12
 8 800000 80000 65 0
 E
 elemento esfera fogo~
-Você observa a esfera do elemento fogo até então protegida há milhares de
-anos pelo guardião do fogo.  A esfera contém poderes mágicos, capazes de
+VocÃª observa a esfera do elemento fogo atÃ© entÃ£o protegida hÃ¡ milhares de
+anos pelo guardiÃ£o do fogo.  A esfera contÃ©m poderes mÃ¡gicos, capazes de
 destruir cidade com suas perigosas chamas.  Ela deve sempre permanecer nas
-mãos de pessoas boas, ou então Vitália poderá correr grande perigo.
+mÃ£os de pessoas boas, ou entÃ£o VitÃ¡lia poderÃ¡ correr grande perigo.
 ~
 A
 4 1
@@ -138,19 +138,19 @@ A
 A
 19 2
 #10707
-elemento esfera magnífica água~
-o elemento água~
-Uma magnífica esfera de água foi deixada aqui.~
+elemento esfera magnifica Ã¡gua~
+o elemento Ã¡gua~
+Uma magnÃ­fica esfera de Ã¡gua foi deixada aqui.~
 ~
 5 abegikmnopqtu 0 0 0 ao 0 0 0 dh 0 0 0
 0 4 5 12
 8 800000 80000 60 0
 E
-elemento esfera água~
-Você observa a esfera do elemento água até então protegida há milhares de
-anos pelo guardião da água.  A esfera contém poderes mágicos, capazes de
+elemento esfera agua~
+VocÃª observa a esfera do elemento Ã¡gua atÃ© entÃ£o protegida hÃ¡ milhares de
+anos pelo guardiÃ£o da Ã¡gua.  A esfera contÃ©m poderes mÃ¡gicos, capazes de
 destruir cidade com suas perigosas ondas.  Ela deve sempre permanecer nas
-mãos de pessoas boas, ou então Vitália poderá correr grande perigo.
+mÃ£os de pessoas boas, ou entÃ£o VitÃ¡lia poderÃ¡ correr grande perigo.
 ~
 A
 4 1
@@ -159,19 +159,19 @@ A
 A
 24 -3
 #10708
-elemento bolha magnífica ar~
+elemento bolha magnifica ar~
 o elemento ar~
-Uma magnífica bolha de ar foi deixada aqui.~
+Uma magnÃ­fica bolha de ar foi deixada aqui.~
 ~
 5 abegikmnopqtu 0 0 0 ao 0 0 0 dA 0 0 0
 0 4 5 12
 8 800000 80000 65 0
 E
 elemento bolha ar~
-Você observa a esfera do elemento ar até então protegida há milhares de anos 
-pelo guardião do ar.  A esfera contém poderes mágicos, capazes de destruir 
-cidade com seus perigosos tornados e tufões.  Ela deve sempre permanecer nas 
-mãos de pessoas boas, ou então Vitália poderá correr grande perigo.
+VocÃª observa a esfera do elemento ar atÃ© entÃ£o protegida hÃ¡ milhares de anos 
+pelo guardiÃ£o do ar.  A esfera contÃ©m poderes mÃ¡gicos, capazes de destruir 
+cidade com seus perigosos tornados e tufÃµes.  Ela deve sempre permanecer nas 
+mÃ£os de pessoas boas, ou entÃ£o VitÃ¡lia poderÃ¡ correr grande perigo.
 ~
 A
 4 1
@@ -180,19 +180,19 @@ A
 A
 23 -3
 #10709
-elemento esfera magnífica terra~
+elemento esfera magnifica terra~
 o elemento terra~
-Uma magnífica esfera de terra foi deixada aqui.~
+Uma magnÃ­fica esfera de terra foi deixada aqui.~
 ~
 5 abegikmnopqtu 0 0 0 ao 0 0 0 d 0 0 0
 0 4 5 12
 8 800000 80000 60 0
 E
 elemento esfera terra~
-Você observa a esfera do elemento terra até então protegida há milhares de
-anos pelo guardião da terra.  A esfera contém poderes mágicos, capazes de
+VocÃª observa a esfera do elemento terra atÃ© entÃ£o protegida hÃ¡ milhares de
+anos pelo guardiÃ£o da terra.  A esfera contÃ©m poderes mÃ¡gicos, capazes de
 destruir cidade com seus perigosos terremotos.  Ela deve sempre permanecer 
-nas mãos de pessoas boas, ou então Vitália poderá correr grande perigo.
+nas mÃ£os de pessoas boas, ou entÃ£o VitÃ¡lia poderÃ¡ correr grande perigo.
 ~
 A
 4 2
@@ -201,16 +201,16 @@ A
 #10710
 amor quinto elemento~
 o quinto elemento~
-O quinto elemento está aqui, emitindo amor para toda Vitália.~
+O quinto elemento estÃ¡ aqui, emitindo amor para toda VitÃ¡lia.~
 ~
 5 abegikmnopqtu 0 0 0 ao 0 0 0 d 0 0 0
 0 4 6 12
 8 800000 80000 70 0
 E
 elemento amor quinto~
-Você observa o quinto elemento: o Amor.  Em suas mãos você carrega a semente
-do amor.  Poderás escolher o caminho do bem, e cultivá-la no coração dos
-vitalianos, ou o caminho do mal, e simplesmente usá-la para destruir e
+VocÃª observa o quinto elemento: o Amor.  Em suas mÃ£os vocÃª carrega a semente
+do amor.  PoderÃ¡s escolher o caminho do bem, e cultivÃ¡-la no coraÃ§Ã£o dos
+vitalianos, ou o caminho do mal, e simplesmente usÃ¡-la para destruir e
 semear a maldade.
 ~
 A
@@ -229,8 +229,8 @@ Uma picareta de escultor foi esquecida aqui pelo seu dono.~
 8 10000 100 0 0
 E
 picareta escultor~
-Você observa uma picareta feita de ferro, que deveria ser utilizada pelos
-escultores otavianos em seus ateliês.
+VocÃª observa uma picareta feita de ferro, que deveria ser utilizada pelos
+escultores otavianos em seus ateliÃªs.
 ~
 #10712
 pincel madeira~
@@ -242,7 +242,7 @@ Um pincel de madeira encharcado de tinta foi deixado aqui.~
 2 100 10 0 0
 E
 pincel madeira~
-Você observa um pincel de madeira encharcado de tinta vermelha.  Talvez você
+VocÃª observa um pincel de madeira encharcado de tinta vermelha.  Talvez vocÃª
 a partir de agora vire um artista vitaliano !
 ~
 #10713
@@ -255,24 +255,24 @@ Uma paleta de tintas frescas foi deixado aqui.~
 4 150 15 0 0
 E
 paleta tintas~
-Você observa uma paleta de tintas frescas.  Azul, vermelho, amarelo, verde,
-preto, branco e todas as cores do arco-íris estão sendo representadas na
-paleta.  Falta agora só o pincel para você se tornar mais um magnífico
-artista de Vitália.
+VocÃª observa uma paleta de tintas frescas.  Azul, vermelho, amarelo, verde,
+preto, branco e todas as cores do arco-Ã­ris estÃ£o sendo representadas na
+paleta.  Falta agora sÃ³ o pincel para vocÃª se tornar mais um magnÃ­fico
+artista de VitÃ¡lia.
 ~
 #10714
-chicote água~
-um chicote de água~
-Um majestoso chicote de água foi esquecido aqui.~
+chicote agua~
+um chicote de Ã¡gua~
+Um majestoso chicote de Ã¡gua foi esquecido aqui.~
 ~
 5 abgq 0 0 0 an 0 0 0 0 0 0 0
 0 4 4 2
 10 800000 8000 20 0
 E
-chicote água~
-Você observa um magnífico chicote de água, criado através da magia dos
-armilianos e a proteção do guardião da água.  O chicote de água pode se 
-estender a uma enorme distância para alcançar seu alvo.
+chicote agua~
+VocÃª observa um magnÃ­fico chicote de Ã¡gua, criado atravÃ©s da magia dos
+armilianos e a proteÃ§Ã£o do guardiÃ£o da Ã¡gua.  O chicote de Ã¡gua pode se 
+estender a uma enorme distÃ¢ncia para alcanÃ§ar seu alvo.
 ~
 A
 2 1
@@ -290,9 +290,9 @@ Uma coleira de diamante foi esquecida aqui.~
 5 100000 1000 5 0
 E
 coleira diamante~
-Você observa uma coleira de diamante feita para os pequeninos gumblys
-utilizarem principalmente quando fogem para a floresta mística, onde as
-vezes são brutalmente caçados.  A coleira de diamante impede que eles
+VocÃª observa uma coleira de diamante feita para os pequeninos gumblys
+utilizarem principalmente quando fogem para a floresta mÃ­stica, onde as
+vezes sÃ£o brutalmente caÃ§ados.  A coleira de diamante impede que eles
 sejam perseguidos.
 ~
 A
@@ -307,9 +307,9 @@ Uma misteriosa redoma de ar foi deixada aqui.~
 3 800000 80000 110 0
 E
 redoma ar~
-Você observa uma enorme redoma de ar.  A redoma poderia sem problemas 
-envolver o mais alto guerreiro de Vitália.  A redoma é uma das armas
-lendárias dos cavaleiros otavianos.
+VocÃª observa uma enorme redoma de ar.  A redoma poderia sem problemas 
+envolver o mais alto guerreiro de VitÃ¡lia.  A redoma Ã© uma das armas
+lendÃ¡rias dos cavaleiros otavianos.
 ~
 A
 14 25
@@ -320,17 +320,17 @@ A
 A
 24 -2
 #10717
-buquê flores~
-um lindo buquê de flores otavianas~
-Um belo buquê de flores otavianas foi deixado aqui.~
+buque flores~
+um lindo buquÃª de flores otavianas~
+Um belo buquÃª de flores otavianas foi deixado aqui.~
 ~
 12 c 0 0 0 ao 0 0 0 yA 0 0 0
 0 0 0 0
 5 2000 200 0 0
 E
-buquê flores~
-Você observa um belo buque de flores otavianas.  Flores vermelhas, azuis e
-amarelas compõem o seu lindo buque que possui um aroma magnífico.
+buque flores~
+VocÃª observa um belo buque de flores otavianas.  Flores vermelhas, azuis e
+amarelas compÃµem o seu lindo buque que possui um aroma magnÃ­fico.
 ~
 A
 6 3
@@ -346,8 +346,8 @@ Um brinco em forma de sol foi esquecido aqui.~
 5 250000 25000 10 0
 E
 brinco sol~
-Você observa um belo brinco feito de ouro com um formato de sol.  O brinco
-foi um presente da Líder dos otavianos Yasmim para a poetisa da cidade,
+VocÃª observa um belo brinco feito de ouro com um formato de sol.  O brinco
+foi um presente da LÃ­der dos otavianos Yasmim para a poetisa da cidade,
 pelas suas belas e encantadoras poesias.
 ~
 A
@@ -364,13 +364,13 @@ Um brinco em forma de lua foi deixado aqui.~
 5 250000 25000 10 0
 E
 brinco lua~
-Você observa um belo brinco feito de prata com um formato de lua.  O brinco
+VocÃª observa um belo brinco feito de prata com um formato de lua.  O brinco
 lua foi um presente criado por Merlim, o grande mago de Camelot, e entregue
-à profetisa otaviana, pois foi ela quem avisou a Merlim sobre a invasão a
-cidade dourada de Camelot, tendo sido esta planejada por uma legião de 
-demônios que residem nas trevas.  As visões da humilde otaviana 
+Ã  profetisa otaviana, pois foi ela quem avisou a Merlim sobre a invasÃ£o a
+cidade dourada de Camelot, tendo sido esta planejada por uma legiÃ£o de 
+demÃ´nios que residem nas trevas.  As visÃµes da humilde otaviana 
 foram decisivas para os cavaleiros de Camelot, que conseguiram impedir a
-entrada dos maléficos seres no reino. 
+entrada dos malÃ©ficos seres no reino. 
 ~
 A
 3 1
@@ -379,18 +379,18 @@ A
 A
 17 -4
 #10720
-redoma água~
-uma redoma de água~
-Uma misteriosa redoma de água foi deixada aqui.~
+redoma agua~
+uma redoma de Ã¡gua~
+Uma misteriosa redoma de Ã¡gua foi deixada aqui.~
 ~
 11 acegikmnopqtu 0 0 0 ak 0 0 0 y 0 0 0
 0 0 0 0
 12 800000 80000 110 0
 E
-redoma água~
-Você observa uma enorme redoma de água.  A redoma poderia sem problemas 
-envolver o mais alto guerreiro de Vitália.  A redoma é uma das armas
-lendárias dos cavaleiros armilianos.
+redoma agua~
+VocÃª observa uma enorme redoma de Ã¡gua.  A redoma poderia sem problemas 
+envolver o mais alto guerreiro de VitÃ¡lia.  A redoma Ã© uma das armas
+lendÃ¡rias dos cavaleiros armilianos.
 ~
 A
 14 15
@@ -410,9 +410,9 @@ Uma misteriosa redoma de fogo foi deixada aqui.~
 12 800000 80000 110 0
 E
 redoma fogo~
-Você observa uma enorme redoma de fogo.  A redoma poderia sem problemas 
-envolver o mais alto guerreiro de Vitália.  A redoma é uma das armas
-lendárias dos cavaleiros diomirianos.
+VocÃª observa uma enorme redoma de fogo.  A redoma poderia sem problemas 
+envolver o mais alto guerreiro de VitÃ¡lia.  A redoma Ã© uma das armas
+lendÃ¡rias dos cavaleiros diomirianos.
 ~
 A
 14 15
@@ -423,14 +423,14 @@ A
 #10722
 besta otaviana~
 uma besta otaviana~
-Uma magnífica besta otaviana foi esquecida aqui.~
+Uma magnÃ­fica besta otaviana foi esquecida aqui.~
 ~
 5 cegkmn 0 0 0 an 0 0 0 0 0 0 0
 0 4 3 12
 8 250000 25000 15 0
 E
 besta otaviana~
-Você observa uma magnífica besta otaviana. É uma arma feita nos mínimos 
+VocÃª observa uma magnÃ­fica besta otaviana. Ã‰ uma arma feita nos mÃ­nimos 
 detalhes para que o alvo, ou seja, o inimigo, nunca escape.
 ~
 A
@@ -447,24 +447,24 @@ Uma enorme piscina diomiriana foi construida aqui.~
 80 1000000 100000 0 0
 E
 piscina diomiriana~
-Você observa uma grande piscina de rochas vulcânicas que era utilizada pelos
+VocÃª observa uma grande piscina de rochas vulcÃ¢nicas que era utilizada pelos
 diomirianos para enaltecer o elemento fogo em sua cidade.  A piscina a muito
-tempo não é usada.  A lava já está sólida a mais de mil anos.
+tempo nÃ£o Ã© usada.  A lava jÃ¡ estÃ¡ sÃ³lida a mais de mil anos.
 ~
 #10724
-árvore otaviana~
-uma árvore otaviana~
-Uma árvore otaviana está pendurada por teias e correntes aqui.~
+arvore otaviana~
+uma Ã¡rvore otaviana~
+Uma Ã¡rvore otaviana estÃ¡ pendurada por teias e correntes aqui.~
 ~
 15 begi 0 0 0 0 0 0 0 0 0 0 0
 8 1 -1 0
 20 800000 80000 0 0
 E
-árvore otaviana~
-Você observa uma árvore otaviana pendurada em correntes e teias.  Suas 
-folhas são vermelhas e seus frutos são azuis.  Os otavianos cultivam estas
-árvore para a alimentação de todo seu povo.  Os otavianos dizem que a fruta
-desta árvore poderia alimentar bem um batalhão.
+arvore otaviana~
+VocÃª observa uma Ã¡rvore otaviana pendurada em correntes e teias.  Suas 
+folhas sÃ£o vermelhas e seus frutos sÃ£o azuis.  Os otavianos cultivam estas
+Ã¡rvore para a alimentaÃ§Ã£o de todo seu povo.  Os otavianos dizem que a fruta
+desta Ã¡rvore poderia alimentar bem um batalhÃ£o.
 ~
 #10725
 frutas vermelhas~
@@ -476,99 +476,99 @@ Uma fruta vermelha foi esquecida aqui.~
 2 500 50 0 0
 E
 frutas vermelhas~
-Você observa uma fruta das árvores que são cultivadas pelos otavianos.  Sua
-casca é vermelha e seu sabor é muito doce.  É o principal alimento do povo
+VocÃª observa uma fruta das Ã¡rvores que sÃ£o cultivadas pelos otavianos.  Sua
+casca Ã© vermelha e seu sabor Ã© muito doce.  Ã‰ o principal alimento do povo
 otaviano.
 ~
 #10726
 fonte~
 uma bela fonte~
-Uma bela fonte de água está aqui pendurada por correntes e teias.~
+Uma bela fonte de Ã¡gua estÃ¡ aqui pendurada por correntes e teias.~
 ~
 23 aegi 0 0 0 0 0 0 0 0 0 0 0
 300 300 15 0
 70 500000 50000 0 0
 E
 fonte~
-Você observa uma bela fonte feita pelos escultores otavianos de mármore 
+VocÃª observa uma bela fonte feita pelos escultores otavianos de mÃ¡rmore 
 branco.
 ~
 #10727
-estátuas~
-um estátua dos lendários cavaleiros otavianos~
-Uma estátua dos lendários cavaleiros otavianos está aqui.~
+estatuas~
+um estÃ¡tua dos lendÃ¡rios cavaleiros otavianos~
+Uma estÃ¡tua dos lendÃ¡rios cavaleiros otavianos estÃ¡ aqui.~
 ~
 8 aegi 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 70 1000000 100000 0 0
 E
-estátua lendários otavianos cavaleiros~
-Você observa uma estátua dos lendários cavaleiros otavianos envolvidos por
-redomas maáicas de seus elementos.  Eles semeavam e pregavam a paz e a união 
+estatua lendarios otavianos cavaleiros~
+VocÃª observa uma estÃ¡tua dos lendÃ¡rios cavaleiros otavianos envolvidos por
+redomas maÃ¡icas de seus elementos.  Eles semeavam e pregavam a paz e a uniÃ£o 
 entre os povos.
 ~
 #10728
 escultura~
 uma escultura otaviana~
-Uma bela escultura otaviana está pendurada aqui.~
+Uma bela escultura otaviana estÃ¡ pendurada aqui.~
 ~
 17 aegi 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 40 300000 30000 0 0
 E
 escultura~
-Você observa uma escultura que aparenta ser de um simples cidadão otaviano.
+VocÃª observa uma escultura que aparenta ser de um simples cidadÃ£o otaviano.
 ~
 #10729
 pintura~
 uma pintura otaviana~
-Um bela pintura otaviana está pendurada por teias e correntes aqui.~
+Um bela pintura otaviana estÃ¡ pendurada por teias e correntes aqui.~
 ~
 17 aegi 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 15 200000 20000 0 0
 E
 pintura~
-Você observa uma majestosa pintura da cidade de Otávia em seus dias de festa
-e comemorações, expressando a alegria e felicidade deste povo simples.
+VocÃª observa uma majestosa pintura da cidade de OtÃ¡via em seus dias de festa
+e comemoraÃ§Ãµes, expressando a alegria e felicidade deste povo simples.
 ~
 #10730
 mesa madeira~
 uma mesa de madeira~
-Uma mesa de madeira está pendurada por teias e correntes aqui.~
+Uma mesa de madeira estÃ¡ pendurada por teias e correntes aqui.~
 ~
 12 a 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 15 15000 1500 1 0
 E
 mesa madeira~
-Você observa uma mesa de madeira feita pelos artistas otavianos.
+VocÃª observa uma mesa de madeira feita pelos artistas otavianos.
 ~
 #10731
 cama madeira~
 uma cama de madeira~
-Uma cama de madeira está pendurada por correntes e teias aqui.~
+Uma cama de madeira estÃ¡ pendurada por correntes e teias aqui.~
 ~
 12 a 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 20 20000 2000 1 0
 E
 cama madeira~
-Você observa uma cama de madeira feita com muita precisão pelos artistas
+VocÃª observa uma cama de madeira feita com muita precisÃ£o pelos artistas
 otavianos.
 ~
 #10732
 estante madeira~
 uma estante de madeira~
-Uma estante de madeira está aqui pendurada por correntes e teias.~
+Uma estante de madeira estÃ¡ aqui pendurada por correntes e teias.~
 ~
 15 a 0 0 0 0 0 0 0 0 0 0 0
 50 1 -1 0
 100 28000 2800 1 0
 E
 estante madeira~
-Você observa uma estante de madeira feita pelos artistas otavianos em seus
-magníficos ateliês.
+VocÃª observa uma estante de madeira feita pelos artistas otavianos em seus
+magnÃ­ficos ateliÃªs.
 ~
 #10733
 livro ar~
@@ -580,7 +580,7 @@ O misterioso livro do ar foi deixado aqui.~
 10 100000 10000 10 0
 E
 livro ar~
-Você observa o misterioso livro que contém todos os segredos do elemento
+VocÃª observa o misterioso livro que contÃ©m todos os segredos do elemento
 ar.
 ~
 #10734
@@ -593,21 +593,21 @@ O misterioso livro do fogo em chamas foi deixado aqui.~
 10 100000 10000 10 0
 E
 livro fogo~
-Você observa o misterioso livro que contém todos os segredos do elemento
+VocÃª observa o misterioso livro que contÃ©m todos os segredos do elemento
 fogo.
 ~
 #10735
-livro água~
-o livro da água~
-O misterioso livro da água foi deixado aqui.~
+livro Ã¡gua~
+o livro da Ã¡gua~
+O misterioso livro da Ã¡gua foi deixado aqui.~
 ~
 2 abegiq 0 0 0 ao 0 0 0 0 0 0 0
 50 61 -1 -1
 10 100000 10000 10 0
 E
-livro água~
-Você observa o misterioso livro que contém todos os segredos do elemento
-água.
+livro agua~
+VocÃª observa o misterioso livro que contÃ©m todos os segredos do elemento
+Ã¡gua.
 ~
 #10736
 livro terra~
@@ -619,22 +619,22 @@ O misterioso livro da terra foi deixado aqui.~
 10 100000 10000 10 0
 E
 livro terra~
-Você observa o misterioso livro que contém todos os segredos do elemento 
+VocÃª observa o misterioso livro que contÃ©m todos os segredos do elemento 
 terra.
 ~
 #10737
 coroa diamante~
 uma coroa de diamante~
-Uma magnífica coroa de diamante está aqui, esperando sua rainha.~
+Uma magnÃ­fica coroa de diamante estÃ¡ aqui, esperando sua rainha.~
 ~
 9 aegikq 0 0 0 ae 0 0 0 c 0 0 0
 5 0 0 0
 6 800000 80000 20 0
 E
 coroa diamante~
-Você observa uma bela coroa de diamante digna de uma honrada rainha.  A
+VocÃª observa uma bela coroa de diamante digna de uma honrada rainha.  A
 coroa de diamante foi feita pelos artistas otavianos e encantada pelos
-mais poderosos magos de Vitália para que pertencesse a líder otaviana,
+mais poderosos magos de VitÃ¡lia para que pertencesse a lÃ­der otaviana,
 Yasmim.
 ~
 A
