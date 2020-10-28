@@ -1,7 +1,7 @@
 #10300
-lanÁa~
-uma lanÁa~
-Uma lanÁa comum foi deixada aqui.~
+lanca~
+uma lan√ßa~
+Uma lan√ßa comum foi deixada aqui.~
 ~
 5 ehjmnt 0 0 0 an 0 0 0 0 0 0 0
 0 3 3 11
@@ -19,53 +19,53 @@ fogueira~
 Ei, cuidado, isso parece bem quente!
 ~
 #10302
-coraÁ„o~
-um coraÁ„o humano~
-Um coraÁ„o humano ainda pulsa lentamente, largado no ch„o!~
+coracao~
+um cora√ß√£o humano~
+Um cora√ß√£o humano ainda pulsa lentamente, largado no ch√£o!~
 ~
 18 bc 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 2 0 0 0 0
 E
-coraÁ„o~
-Urgh! Ele ainda pulsa na sua m„o! Que magia estranha seria capaz disto?
+coracao~
+Urgh! Ele ainda pulsa na sua m√£o! Que magia estranha seria capaz disto?
 ~
 #10303
 ossos pilha~
 uma pilha de ossos~
-Uma pilha de ossos est· aqui no ch„o.~
+Uma pilha de ossos est√° aqui no ch√£o.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 0 0 0 0 0
 E
 ossos~
-Epa! Ossos humanos! Muitos deles! Deve ter sido uma boa refeiÁ„o.
+Epa! Ossos humanos! Muitos deles! Deve ter sido uma boa refei√ß√£o.
 ~
 #10304
 carne fatia~
 uma grande fatia de carne~
 Uma grande fatia de carne que parece com o formato de uma pequena perna foi
-deixada no ch„o.~
+deixada no ch√£o.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 12 0 0 1
 2 5 0 1 0
 E
 perna~
-Ah! uma perna humana! VocÍ nao vai comer ISTO, vai?
+Ah! uma perna humana! Voc√™ nao vai comer ISTO, vai?
 ~
 #10305
-pele le„o animal~
+pele leao animal~
 uma pele de animal~
-Uma pele de animal est· aqui.~
+Uma pele de animal est√° aqui.~
 ~
 11 0 0 0 0 ad 0 0 0 0 0 0 0
 0 0 0 0
 2 1000 0 8 0
 E
-pele le„o animal~
-… um pedaÁo de pele, prov·velmente de algum le„o.
+pele leao animal~
+√â um peda√ßo de pele, prov√°velmente de algum le√£o.
 ~
 A
 19 1
@@ -76,7 +76,7 @@ A
 #10306
 clava osso~
 uma clava feita de osso~
-Uma grande clava feita de ossos est· aqui.~
+Uma grande clava feita de ossos est√° aqui.~
 ~
 5 glr 0 0 0 an 0 0 0 0 0 0 0
 0 4 4 6
@@ -92,7 +92,7 @@ A
 #10307
 colar dentes~
 um colar de dentes~
-Um colar feito de dentes est· aqui.~
+Um colar feito de dentes est√° aqui.~
 ~
 11 b 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
@@ -108,26 +108,26 @@ A
 #10308
 galho~
 um galho~
-Um pequeno galho est· aqui.~
+Um pequeno galho est√° aqui.~
 ~
 13 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 5 0 0 0 0
 E
 galho~
-Feito de madeira! O que vocÍ esperava?-
+Feito de madeira! O que voc√™ esperava?-
 ~
 #10309
-cristal cr‚nio~
-um cr‚nio de cristal~
-Um cr‚nio feito de cristal!~
+cristal cranio~
+um cr√¢nio de cristal~
+Um cr√¢nio feito de cristal!~
 ~
 1 a 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
 10 3000 0 5 0
 E
-cristal cr‚nio~
-O cr‚nio parece ter sido feito de um cristal desconhecido...
+cristal cranio~
+O cr√¢nio parece ter sido feito de um cristal desconhecido...
 ~
 A
 4 1
@@ -138,27 +138,27 @@ A
 #10310
 fonte delicada granito branco~
 uma delicada fonte de granito branco~
-Uma linda fonte jorra sua ·gua por aqui.~
+Uma linda fonte jorra sua √°gua por aqui.~
 ~
 23 cdeg 0 0 0 0 0 0 0 0 0 0 0
 9999 9999 15 0
 9999 0 0 0 0
 E
 fonte delicada granito branco~
-… um trabalho muito delicado, foi totalmente esculpida em um ˙nico pedaÁo de
+√â um trabalho muito delicado, foi totalmente esculpida em um √∫nico peda√ßo de
 granito branco, com veios rosados e azuis. 
 ~
 #10311
-couraÁa troll~
-uma couraÁa de troll~
-Uma espessa couraÁa est· aqui.~
+couraca troll~
+uma coura√ßa de troll~
+Uma espessa coura√ßa est√° aqui.~
 ~
 11 bejn 0 0 0 ad 0 0 0 0 0 0 0
 0 0 0 0
 3 1000 500 7 0
 E
-couraÁa troll~
-Esta couraÁa negra de troll pode lhe fornecer uma enorme proteÁ„o.
+couraca troll~
+Esta coura√ßa negra de troll pode lhe fornecer uma enorme prote√ß√£o.
 ~
 A
 1 -1
