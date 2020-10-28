@@ -1,7 +1,7 @@
 #13100
 espada antiga enferrujada~
 uma antiga espada enferrujada~
-Uma antiga espada enferrujada está na poeira.~
+Uma antiga espada enferrujada estÃ¡ na poeira.~
 ~
 5 mnt 0 0 0 an 0 0 0 0 0 0 0
 0 4 3 3
@@ -13,84 +13,84 @@ A
 #13101
 chave dentes pequena marrom~
 uma pequena chave marrom~
-Uma pequena chave marrom que parece ter os dentes gastos está aqui.~
+Uma pequena chave marrom que parece ter os dentes gastos estÃ¡ aqui.~
 ~
 18 c 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 1 10 0 0 0
 E
 chave pequena marrom~
-Você vê uma pequena chave marrom que está aparentemente gasta.
+VocÃª vÃª uma pequena chave marrom que estÃ¡ aparentemente gasta.
 ~
 #13102
 chave prateada brilhante~
 uma chave prateada~
-Uma chave prateada brilhante encontra-se no chão.~
+Uma chave prateada brilhante encontra-se no chÃ£o.~
 ~
 18 c 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 1 10 0 0 0
 E
 chave prateada brilhante~
-Esta chave está em ótimo estado.  Esta pequena chave prateada parece 
-necessitar de um amigo...?  Que chave estranha. Porque você não fica com 
+Esta chave estÃ¡ em Ã³timo estado.  Esta pequena chave prateada parece 
+necessitar de um amigo...?  Que chave estranha. Porque vocÃª nÃ£o fica com 
 ela? 
 ~
 #13103
 chave antiga velha~
 uma chave antiga~
-Uma antiga chave está no chão.~
+Uma antiga chave estÃ¡ no chÃ£o.~
 ~
 18 c 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 1 10 0 0 0
 E
 chave antiga~
-Esta chave esta tão velha que você consegue sentir sua idade somente a
+Esta chave esta tÃ£o velha que vocÃª consegue sentir sua idade somente a
 segurando.
 ~
 #13104
-chave nublada deuses peça estranha~
+chave nublada deuses peca estranha~
 uma chave nublada feita pelos deuses~
-Uma estranha peça nublada com a forma de uma chave está aqui.~
+Uma estranha peÃ§a nublada com a forma de uma chave estÃ¡ aqui.~
 ~
 18 c 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 1 10 0 0 0
 E
 chave nublada deuses~
-Esta chave foi definitivamente feita por um deus e você acha que não
+Esta chave foi definitivamente feita por um deus e vocÃª acha que nÃ£o
 deveria estar vendo isto.
 ~
 #13105
 dentes bohemoth brancos afiados~
 o dente de Bohemoth~
-Alguns dentes brancos e afiados estão no solo aqui.~
+Alguns dentes brancos e afiados estÃ£o no solo aqui.~
 ~
 11 n 0 0 0 aq 0 0 0 0 0 0 0
 0 0 0 0
 4 10 0 80 0
 E
 dentes bohemoth~
-Estes dentes brancos são fortes e afiados. Eles possuem alguns furos,
-talvez por causa do esforço de arrancá-los.
+Estes dentes brancos sÃ£o fortes e afiados. Eles possuem alguns furos,
+talvez por causa do esforÃ§o de arrancÃ¡-los.
 ~
 A
 19 2
 A
 17 -4
 #13106
-cidadão roupão liso~
-o roupão de um cidadão~
-Um roupão liso está aqui.~
+cidadao roupao liso~
+o roupÃ£o de um cidadÃ£o~
+Um roupÃ£o liso estÃ¡ aqui.~
 ~
 9 0 0 0 0 ad 0 0 0 0 0 0 0
 4 0 0 0
 3 10 0 0 0
 #13107
-lâmina torin símbolo empoeirada~
-uma lâmina que carrega o símbolo de Torin~
-Uma lâmina empoeirada com o que parece ser o símbolo de Torin encontra-se
+lamina torin simbolo empoeirada~
+uma lÃ¢mina que carrega o sÃ­mbolo de Torin~
+Uma lÃ¢mina empoeirada com o que parece ser o sÃ­mbolo de Torin encontra-se
 aqui.~
 ~
 5 mnt 0 0 0 an 0 0 0 0 0 0 0
@@ -101,16 +101,16 @@ A
 A
 19 1
 #13108
-escudo torin símbolo empoeirado redondo grande~
-um escudo que possui o símbolo de Torin~
-Um grande escudo redondo e empoeirado está aqui;~
+escudo torin simbolo empoeirado redondo grande~
+um escudo que possui o sÃ­mbolo de Torin~
+Um grande escudo redondo e empoeirado estÃ¡ aqui;~
 ~
 9 m 0 0 0 aj 0 0 0 0 0 0 0
 8 0 0 0
 5 10 0 55 0
 E
-escudo torin símbolo empoeirado redondo grande~
-No centro deste escudo existe um símbolo de Torin.
+escudo torin simbolo empoeirado redondo grande~
+No centro deste escudo existe um sÃ­mbolo de Torin.
 ~
 A
 19 1
@@ -121,14 +121,14 @@ A
 #13109
 espada incandescente larga mendo~
 a espada larga incandescente de Mendo~
-Uma espada larga incandescente está no chão repelindo a poeira.~
+Uma espada larga incandescente estÃ¡ no chÃ£o repelindo a poeira.~
 ~
 5 ao 0 0 0 an 0 0 0 0 0 0 0
 0 5 4 3
 6 10 0 95 0
 E
 espada incandescente larga mendo~
-Há uma palavra rabiscada na lâmina: 'MENDO'.
+HÃ¡ uma palavra rabiscada na lÃ¢mina: 'MENDO'.
 ~
 A
 19 3
@@ -139,7 +139,7 @@ A
 #13110
 armadura brilhante placas~
 um armadura de placas brilhantes~
-Uma armadura de placas brilhantes está no chão repelindo a poeira.~
+Uma armadura de placas brilhantes estÃ¡ no chÃ£o repelindo a poeira.~
 ~
 9 amnt 0 0 0 ad 0 0 0 0 0 0 0
 10 0 0 0
@@ -149,7 +149,7 @@ A
 #13111
 capacete brilhante~
 um capacete brilhante~
-Um capacete brilhante está aqui repelindo a poeira.~
+Um capacete brilhante estÃ¡ aqui repelindo a poeira.~
 ~
 9 a 0 0 0 ae 0 0 0 0 0 0 0
 8 0 0 0
@@ -161,17 +161,17 @@ A
 A
 19 1
 #13112
-sandália gasta~
-uma sandália gasta~
-Uma sandália bastante gasta encontra-se aqui no chão.~
+sandalia gasta~
+uma sandÃ¡lia gasta~
+Uma sandÃ¡lia bastante gasta encontra-se aqui no chÃ£o.~
 ~
 11 0 0 0 0 ag 0 0 0 0 0 0 0
 0 0 0 0
 3 10 0 0 0
 #13113
-pedaço sombra~
-um pedaço da sombra~
-Um estranho pedaço de sombra está no chão, podendo ser apanhado.~
+pedaco sombra~
+um pedaÃ§o da sombra~
+Um estranho pedaÃ§o de sombra estÃ¡ no chÃ£o, podendo ser apanhado.~
 ~
 11 b 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
@@ -183,7 +183,7 @@ A
 #13114
 manopla brilhante~
 uma manopla brilhante~
-Uma manopla brilhante está no chão repelindo a poeira.~
+Uma manopla brilhante estÃ¡ no chÃ£o repelindo a poeira.~
 ~
 9 amnt 0 0 0 ah 0 0 0 0 0 0 0
 7 0 0 0
@@ -195,7 +195,7 @@ A
 #13115
 espada longa trabalhada~
 uma espada longa bem trabalhada~
-Uma espada longa bem trabalhada está aqui no chão.~
+Uma espada longa bem trabalhada estÃ¡ aqui no chÃ£o.~
 ~
 5 gmnt 0 0 0 an 0 0 0 0 0 0 0
 0 5 3 3
@@ -205,16 +205,16 @@ A
 A
 18 2
 #13116
-escudo símbolo luz grande~
-um escudo com o Símbolo da Luz~
-Um grande escudo está no chão.~
+escudo simbolo luz grande~
+um escudo com o SÃ­mbolo da Luz~
+Um grande escudo estÃ¡ no chÃ£o.~
 ~
 9 ak 0 0 0 aj 0 0 0 0 0 0 0
 9 0 0 0
 8 10 0 25 0
 E
-escudo símbolo luz grande~
-Isto possui um símbolo da Luz.
+escudo simbolo luz grande~
+Isto possui um sÃ­mbolo da Luz.
 ~
 A
 20 -2
@@ -229,7 +229,7 @@ A
 #13117
 escudo brilhante~
 um escudo brilhante~
-Um escudo brilhante está no chão repelindo a poeira.~
+Um escudo brilhante estÃ¡ no chÃ£o repelindo a poeira.~
 ~
 9 a 0 0 0 aj 0 0 0 0 0 0 0
 6 0 0 0
@@ -239,7 +239,7 @@ A
 #13118
 escudo enferrujado torinense~
 um escudo enferrujado~
-Um escudo enferrujado, que parece ser Torinense, está no chão.~
+Um escudo enferrujado, que parece ser Torinense, estÃ¡ no chÃ£o.~
 ~
 9 mnt 0 0 0 aj 0 0 0 0 0 0 0
 6 0 0 0
@@ -247,16 +247,16 @@ Um escudo enferrujado, que parece ser Torinense, está no chão.~
 A
 19 -1
 #13119
-escudo símbolo torin fantasmagórico~
-um escudo fantasmagórico com o Símbolo de Torin~
-Um escudo fantasmagórico está no chão.~
+escudo simbolo torin fantasmagorico~
+um escudo fantasmagÃ³rico com o SÃ­mbolo de Torin~
+Um escudo fantasmagÃ³rico estÃ¡ no chÃ£o.~
 ~
 9 f 0 0 0 aj 0 0 0 0 0 0 0
 7 0 0 0
 5 10 0 40 0
 E
-escudo símbolo torin fantasmagórico~
-Isto possui o Símbolo de Torin.
+escudo simbolo torin fantasmagorico~
+Isto possui o SÃ­mbolo de Torin.
 ~
 A
 23 -5
@@ -265,17 +265,17 @@ A
 A
 1 -1
 #13120
-bastão mágico brilhante poder~
-um bastão mágico~
-Um bastão brilhante de imenso poder está no chão.~
+bastao magico brilhante poder~
+um bastÃ£o mÃ¡gico~
+Um bastÃ£o brilhante de imenso poder estÃ¡ no chÃ£o.~
 ~
 4 bnoptu 0 0 0 ao 0 0 0 0 0 0 0
 30 4 2 1
 5 10 0 0 0
 E
-bastão mágico~
-Este poderoso bastão parece que está aqui há muito tempo, esperando por 
-alguém para encontrá-lo. Talvez você devesse contar esta proeza e levar 
+bastao magico~
+Este poderoso bastÃ£o parece que estÃ¡ aqui hÃ¡ muito tempo, esperando por 
+alguÃ©m para encontrÃ¡-lo. Talvez vocÃª devesse contar esta proeza e levar 
 consigo este milagre...
 ~
 A
@@ -283,16 +283,16 @@ A
 A
 13 25
 #13121
-clava fé poder~
-uma clava da fé~
-Uma clava que representa o poder e a fé encontra-se aqui no chão.~
+clava fe poder~
+uma clava da fÃ©~
+Uma clava que representa o poder e a fÃ© encontra-se aqui no chÃ£o.~
 ~
 5 gopr 0 0 0 an 0 0 0 0 0 0 0
 0 7 3 10
 6 10 0 85 0
 E
-clava fé~
-Esta clava está coberta de antigas runas, sendo possível sentir uma forte
+clava fe~
+Esta clava estÃ¡ coberta de antigas runas, sendo possÃ­vel sentir uma forte
 aura vindo dela.
 ~
 A
@@ -302,7 +302,7 @@ A
 #13122
 espada lorgeth monstruosa~
 a espada de Lorgeth~
-Uma monstruosa espada está aqui.~
+Uma monstruosa espada estÃ¡ aqui.~
 ~
 5 gmnt 0 0 0 an 0 0 0 0 0 0 0
 0 6 4 3
@@ -318,49 +318,49 @@ A
 A
 1 2
 #13123
-camisa camaleão~
-uma camisa de camaleão~
-Uma camisa está aqui, camuflando-se com o ambiente.~
+camisa camaleao~
+uma camisa de camaleÃ£o~
+Uma camisa estÃ¡ aqui, camuflando-se com o ambiente.~
 ~
 9 f 0 0 0 ad 0 0 0 0 0 0 0
 3 0 0 0
 3 10 0 3 0
 E
-camisa camaleão~
-Você consegue ver o esboço desta camisa no meio de tanta sujeira. Ela 
-está tão camuflada que você mal consegue vê-la. Conforme se movimenta 
+camisa camaleao~
+VocÃª consegue ver o esboÃ§o desta camisa no meio de tanta sujeira. Ela 
+estÃ¡ tÃ£o camuflada que vocÃª mal consegue vÃª-la. Conforme se movimenta 
 pelo ambiente ela modifica de cor, ou seja, se adapta ao lugar.
 ~
 #13124
-calças camaleão~
-um par de calças de camaleão~
-Um par de calças está realmente cheia de poeira.~
+calcas camaleao~
+um par de calÃ§as de camaleÃ£o~
+Um par de calÃ§as estÃ¡ realmente cheia de poeira.~
 ~
 9 f 0 0 0 af 0 0 0 0 0 0 0
 4 0 0 0
 3 10 0 3 0
 E
-calças camaleão~
-Você consegue ver apenas o esboço de uma calça no meio de tanta poeira.  
+calcas camaleao~
+VocÃª consegue ver apenas o esboÃ§o de uma calÃ§a no meio de tanta poeira.  
 ~
 #13125
-luvas camaleão~
-um par de luvas de camaleão ~
-Um par de luvas está aqui coberto de poeira.~
+luvas camaleao~
+um par de luvas de camaleÃ£o ~
+Um par de luvas estÃ¡ aqui coberto de poeira.~
 ~
 9 fmnpt 0 0 0 ai 0 0 0 0 0 0 0
 7 0 0 0
 4 10 0 40 0
 E
-luvas camaleão~
-Você consegue ver apenas o esboço de algumas luvas no meio da poeira.  
+luvas camaleao~
+VocÃª consegue ver apenas o esboÃ§o de algumas luvas no meio da poeira.  
 ~
 A
 5 2
 #13126
-armadura fantasmagórica~
-uma armadura fantasmagórica~
-Você vê uma armadura fantasmagórica aqui no chão.~
+armadura fantasmagorica~
+uma armadura fantasmagÃ³rica~
+VocÃª vÃª uma armadura fantasmagÃ³rica aqui no chÃ£o.~
 ~
 9 fmnt 0 0 0 ad 0 0 0 0 0 0 0
 8 0 0 0
@@ -372,9 +372,9 @@ A
 A
 6 -1
 #13127
-perneira fantasmagórica~
-uma perneira fantasmagórica~
-Uma perneira fantasmagórica está aqui.~
+perneira fantasmagorica~
+uma perneira fantasmagÃ³rica~
+Uma perneira fantasmagÃ³rica estÃ¡ aqui.~
 ~
 9 f 0 0 0 af 0 0 0 0 0 0 0
 6 0 0 0
@@ -384,9 +384,9 @@ A
 A
 20 -5
 #13128
-braçadeiras fantasmagórica~
-um par de braçadeiras fantasmagórica~
-Um par de braçadeiras fantasmagórica está aqui no chão.~
+bracadeiras fantasmagorica~
+um par de braÃ§adeiras fantasmagÃ³rica~
+Um par de braÃ§adeiras fantasmagÃ³rica estÃ¡ aqui no chÃ£o.~
 ~
 9 fmnt 0 0 0 ai 0 0 0 0 0 0 0
 6 0 0 0
@@ -396,9 +396,9 @@ A
 A
 1 2
 #13129
-chapa universal fantasmagórica~
-uma chapa universal fantasmagórica~
-Uma fantasmagórica chapa universal está aqui no chão.~
+chapa universal fantasmagorica~
+uma chapa universal fantasmagÃ³rica~
+Uma fantasmagÃ³rica chapa universal estÃ¡ aqui no chÃ£o.~
 ~
 9 fmnt 0 0 0 aj 0 0 0 0 0 0 0
 3 0 0 0
@@ -428,7 +428,7 @@ A
 #13131
 armadura enferrujada~
 uma armadura enferrujada~
-Uma armadura enferrujada está aqui.~
+Uma armadura enferrujada estÃ¡ aqui.~
 ~
 9 0 0 0 0 ad 0 0 0 0 0 0 0
 5 0 0 0
@@ -437,24 +437,24 @@ Uma armadura enferrujada está aqui.~
 osso perna~
 um osso da perna~
 Um osso da perna esta' aqui, mas isto parece estar danificado, provavelmente
-foi quando alguém tentou bater em algo.~
+foi quando alguÃ©m tentou bater em algo.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 0 3 2 5
 3 10 0 0 0
 #13133
-osso braço~
-um osso do braço~
-Um osso do braço esta' aqui, mas isto parece estar danificado, provavelmente
-foi quando alguém tentou bater em algo.~
+osso braco~
+um osso do braÃ§o~
+Um osso do braÃ§o esta' aqui, mas isto parece estar danificado, provavelmente
+foi quando alguÃ©m tentou bater em algo.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 0 2 3 5
 3 10 0 0 0
 #13134
-medalhão rei torin antigo~
-o medalhão do Rei de Torin.~
-Um antigo medalhão do Rei de Torin está aqui.~
+medalhao rei torin antigo~
+o medalhÃ£o do Rei de Torin.~
+Um antigo medalhÃ£o do Rei de Torin estÃ¡ aqui.~
 ~
 11 a 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
@@ -464,30 +464,30 @@ A
 A
 17 -2
 #13135
-medalhão torin inquisitor chefe~
-um medalhão do Chefe Inquisitor de Torin~
-Um estranho medalhão está no chão.~
+medalhao torin inquisitor chefe~
+um medalhÃ£o do Chefe Inquisitor de Torin~
+Um estranho medalhÃ£o estÃ¡ no chÃ£o.~
 ~
 11 b 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
 2 10 0 3 0
 E
-medalhão torin inquisitor chefe~
-Ele já foi usado por muito tempo pelo Chefe Inquisitor de Torin.
+medalhao torin inquisitor chefe~
+Ele jÃ¡ foi usado por muito tempo pelo Chefe Inquisitor de Torin.
 ~
 A
 24 -3
 #13136
-lâmina sombra sombria~
-uma lâmina sombria~
-Uma lâmina de ar sombrio está aqui.~
+lamina sombra sombria~
+uma lÃ¢mina sombria~
+Uma lÃ¢mina de ar sombrio estÃ¡ aqui.~
 ~
 5 gjmnt 0 0 0 an 0 0 0 0 0 0 0
 0 5 4 14
 3 10 0 10 0
 E
-lâmina sombra sombria~
-Não parece ter mais significado do que uma sombra, mas você ainda pode tocar
+lamina sombra sombria~
+NÃ£o parece ter mais significado do que uma sombra, mas vocÃª ainda pode tocar
 nisto, e incrivelmente ainda corta.
 ~
 A
@@ -495,9 +495,9 @@ A
 A
 10 -50
 #13137
-vara chão rei~
+vara chao rei~
 uma vara do Rei~
-Uma vara está no chão. Isto possui uma presença ao redor lhe dizendo que
+Uma vara estÃ¡ no chÃ£o. Isto possui uma presenÃ§a ao redor lhe dizendo que
 pertenceu ao rei.~
 ~
 3 a 0 0 0 an 0 0 0 0 0 0 0
@@ -506,7 +506,7 @@ pertenceu ao rei.~
 #13138
 manto rei~
 o manto do Rei~
-Um manto está no chão. Uma presença ao redor disto lhe indica que pertence
+Um manto estÃ¡ no chÃ£o. Uma presenÃ§a ao redor disto lhe indica que pertence
 ao Rei.~
 ~
 9 0 0 0 0 ak 0 0 0 0 0 0 0
@@ -519,7 +519,7 @@ A
 #13139
 anel rei~
 o anel do Rei~
-Um anel está no chão. Uma presença ao redor dele indica que este foi o anel
+Um anel estÃ¡ no chÃ£o. Uma presenÃ§a ao redor dele indica que este foi o anel
 pessoal do Rei.~
 ~
 11 0 0 0 0 ab 0 0 0 0 0 0 0
@@ -530,21 +530,21 @@ A
 #13140
 escudo largo~
 um escudo largo~
-Um escudo largo está aqui.~
+Um escudo largo estÃ¡ aqui.~
 ~
 9 m 0 0 0 aj 0 0 0 0 0 0 0
 10 0 0 0
 11 10 0 20 0
 E
 escudo largo~
-Isto parece ser tão largo que parece conseguir conter uma multidão.
+Isto parece ser tÃ£o largo que parece conseguir conter uma multidÃ£o.
 ~
 A
 1 2
 #13141
 clava brilhante~
 uma clava brilhante~
-Uma brilhante clava está aqui, repelindo o pó.~
+Uma brilhante clava estÃ¡ aqui, repelindo o pÃ³.~
 ~
 5 a 0 0 0 an 0 0 0 0 0 0 0
 0 6 3 5
