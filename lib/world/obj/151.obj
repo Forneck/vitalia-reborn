@@ -1,31 +1,31 @@
 #15101
 Jin Amuleto~
 O Amuleto de Jin~
-Um Amuleto branco, em forma de círculo está aqui no chão.~
+Um Amuleto branco, em forma de cÃ­rculo estÃ¡ aqui no chÃ£o.~
 ~
 18 cdeq 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
 5 10000 1000 0 0
 E
 Jin Amuleto~
-O Amuleto tem um formato único e estranho.
+O Amuleto tem um formato Ãºnico e estranho.
 ~
 #15102
 Gi Amuleto~
 O Amuleto de Gi~
-Um Amuleto com aparência singular foi deixado aqui.~
+Um Amuleto com aparÃªncia singular foi deixado aqui.~
 ~
 18 cdeq 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
 5 10000 1000 0 0
 E
 Gi Amuleto~
-Que aparência esquisita possui este Amuleto!
+Que aparÃªncia esquisita possui este Amuleto!
 ~
 #15103
 Chu Amuleto~
 O Amuleto de Chu~
-Um Amuleto com aparência estranha, cheio de marcas singulares, está aqui.~
+Um Amuleto com aparÃªncia estranha, cheio de marcas singulares, estÃ¡ aqui.~
 ~
 18 cdeq 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
@@ -61,7 +61,7 @@ O Amuleto possui muitas marcas estranhas.
 #15106
 Chi Amuleto~
 O Amuleto de Chi~
-Um amuleto lilás, com uma pequena corrente negra foi deixado aqui.~
+Um amuleto lilÃ¡s, com uma pequena corrente negra foi deixado aqui.~
 ~
 18 cdeq 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
@@ -95,32 +95,32 @@ Tei Amuleto~
 O Amuleto possui muitas marcas estranhas.
 ~
 #15109
-Fugu lâmina~
-Uma Lâmina Fugu~
-Uma lâmina com aparência poderosa foi deixada aqui.~
+Fugu lamina~
+Uma LÃ¢mina Fugu~
+Uma lÃ¢mina com aparÃªncia poderosa foi deixada aqui.~
 ~
 5 bg 0 0 0 an 0 0 0 0 0 0 0
 0 4 6 3
 10 10000 1000 30 0
 E
-Lâmina Fugu~
-Você vê a poderosa Lâmina Fugu.
+Lamina Fugu~
+VocÃª vÃª a poderosa LÃ¢mina Fugu.
 ~
 A
 18 4
 A
 19 4
 #15110
-sol jóia~
-a Jóia do Sol Nascente~
-Uma pequena jóia amarela parece iluminar o local onde ela caiu.~
+sol joia~
+a JÃ³ia do Sol Nascente~
+Uma pequena jÃ³ia amarela parece iluminar o local onde ela caiu.~
 ~
 9 ae 0 0 0 ac 0 0 0 0 0 0 0
 9 0 0 0
 5 10000 1000 80 0
 E
-sol jóia~
-Você percebe que aquela pedra brilha como um sol.
+sol joia~
+VocÃª percebe que aquela pedra brilha como um sol.
 ~
 A
 3 1
@@ -129,14 +129,14 @@ A
 #15111
 Amuleto~
 O Amuleto de Sun Lu~
-Um amuleto com aparência esquisita foi deixado aqui no chão.~
+Um amuleto com aparÃªncia esquisita foi deixado aqui no chÃ£o.~
 ~
 9 ae 0 0 0 ac 0 0 0 0 0 0 0
 8 0 0 0
 5 10000 1000 50 0
 E
 Amuleto~
-Este colar parece pertencer a alguém.
+Este colar parece pertencer a alguÃ©m.
 ~
 A
 13 20
@@ -145,7 +145,7 @@ A
 #15112
 laroche sabre~
 O Sabre Laroche~
-Um estranho sabre está jogado aqui no chão, refletindo a luz.~
+Um estranho sabre estÃ¡ jogado aqui no chÃ£o, refletindo a luz.~
 ~
 5 bk 0 0 0 an 0 0 0 0 0 0 0
 0 2 6 3
@@ -159,7 +159,7 @@ A
 #15113
 foice kusari~
 a foice Kusari~
-Uma exótica foice está decorando este lugar.~
+Uma exÃ³tica foice estÃ¡ decorando este lugar.~
 ~
 5 b 0 0 0 an 0 0 0 0 0 0 0
 0 2 6 17
@@ -189,7 +189,7 @@ A
 #15115
 eapada azami~
 a espada Azami~
-Uma espada com um formato meio ridículo foi deixada aqui.~
+Uma espada com um formato meio ridÃ­culo foi deixada aqui.~
 ~
 5 b 0 0 0 an 0 0 0 0 0 0 0
 0 2 9 3
@@ -205,7 +205,7 @@ A
 #15116
 espada katana~
 a espada Katana~
-Uma espada com longa lâmina foi deixada bem aqui.~
+Uma espada com longa lÃ¢mina foi deixada bem aqui.~
 ~
 5 b 0 0 0 an 0 0 0 0 0 0 0
 0 2 9 3
@@ -221,7 +221,7 @@ A
 #15117
 espada wakisashi~
 a espada Wakisashi~
-Uma espada de lâmina longa, de aspecto lúgubre e mortal, foi deixada aqui.~
+Uma espada de lÃ¢mina longa, de aspecto lÃºgubre e mortal, foi deixada aqui.~
 ~
 5 b 0 0 0 an 0 0 0 0 0 0 0
 0 2 10 11
@@ -239,7 +239,7 @@ A
 #15118
 espada naginata~
 a espada Naginata~
-Uma afiada espada, de lâmina torcida, com estranhas marcas, foi deixada aqui.~
+Uma afiada espada, de lÃ¢mina torcida, com estranhas marcas, foi deixada aqui.~
 ~
 5 b 0 0 0 an 0 0 0 0 0 0 0
 0 2 9 11
@@ -255,7 +255,7 @@ A
 #15119
 espada kodachi~
 a espada Kodachi~
-Uma espada com aparência esquisita foi jogada aqui.~
+Uma espada com aparÃªncia esquisita foi jogada aqui.~
 ~
 5 gik 0 0 0 an 0 0 0 0 0 0 0
 0 2 9 11
@@ -289,7 +289,7 @@ A
 #15121
 espada iaito~
 a espada Iaito~
-Uma afiada espada de lâmina dupla foi esquecida aqui.~
+Uma afiada espada de lÃ¢mina dupla foi esquecida aqui.~
 ~
 5 b 0 0 0 an 0 0 0 0 0 0 0
 0 2 11 3
@@ -330,10 +330,10 @@ Uma espada samurai foi deixada aqui.~
 3 100 100 20 0
 E
 espada samurai~
-Você vê uma espada que é um verdadeiro objeto de arte. Em um dos lados da
-lâmina, você pode ler uma inscrição:
+VocÃª vÃª uma espada que Ã© um verdadeiro objeto de arte. Em um dos lados da
+lÃ¢mina, vocÃª pode ler uma inscriÃ§Ã£o:
 "O verdadeiro guerreiro precisa manter sua lealdade, coragem, veracidade,
-compaixão e honra acima de tudo."
+compaixÃ£o e honra acima de tudo."
 ~
 A
 18 4
@@ -342,55 +342,55 @@ A
 #15151
 adaga samurai~
 Uma adaga samurai~
-Uma belíssima adaga samurai foi esquecida aqui.~
+Uma belÃ­ssima adaga samurai foi esquecida aqui.~
 ~
 5 bg 0 0 0 an 0 0 0 0 0 0 0
 0 2 10 11
 3 100 100 20 0
 E
 adaga samurai~
-Você vê uma adaga que é um verdadeiro objeto de arte. Em um dos lados da 
-lâmina, você pode ler uma inscrição:
+VocÃª vÃª uma adaga que Ã© um verdadeiro objeto de arte. Em um dos lados da 
+lÃ¢mina, vocÃª pode ler uma inscriÃ§Ã£o:
 "O verdadeiro guerreiro precisa manter sua lealdade, coragem, veracidade,
-compaixão e honra acima de tudo."
+compaixÃ£o e honra acima de tudo."
 ~
 A
 18 3
 A
 19 2
 #15152
-bastão samurai~
-Um bastão samurai~
-Um bastão samurai foi jogado aqui.~
+bastao samurai~
+Um bastÃ£o samurai~
+Um bastÃ£o samurai foi jogado aqui.~
 ~
 5 bg 0 0 0 an 0 0 0 0 0 0 0
 0 1 15 6
 3 100 100 20 0
 E
-bastão samurai~
-Você vê um bastão que é um verdadeiro objeto de arte. Em um dos seus lados  
-você pode ler uma inscrição:
+bastao samurai~
+VocÃª vÃª um bastÃ£o que Ã© um verdadeiro objeto de arte. Em um dos seus lados  
+vocÃª pode ler uma inscriÃ§Ã£o:
 "O verdadeiro guerreiro precisa manter sua lealdade, coragem, veracidade,
-compaixão e honra acima de tudo."
+compaixÃ£o e honra acima de tudo."
 ~
 A
 18 3
 A
 19 3
 #15153
-vestimenta túnica samurai~
-Uma túnica samurai~
-Uma túnica samurai foi deixada aqui no chão, acumulando poeira.~
+vestimenta tunica samurai~
+Uma tÃºnica samurai~
+Uma tÃºnica samurai foi deixada aqui no chÃ£o, acumulando poeira.~
 ~
 9 k 0 0 0 ad 0 0 0 0 0 0 0
 4 0 0 0
 2 100 100 0 0
 E
-vestimenta túnica samurai~
-Você vê uma peça de roupa que é um verdadeiro objeto de arte. Há uma espécie
-de bordado em uma de suas mangas, onde se pode ler uma inscrição:
+vestimenta tunica samurai~
+VocÃª vÃª uma peÃ§a de roupa que Ã© um verdadeiro objeto de arte. HÃ¡ uma espÃ©cie
+de bordado em uma de suas mangas, onde se pode ler uma inscriÃ§Ã£o:
 "O verdadeiro guerreiro precisa manter sua lealdade, coragem, veracidade,
-compaixão e honra acima de tudo."
+compaixÃ£o e honra acima de tudo."
 ~
 #15154
 escudo samurai~
@@ -402,10 +402,10 @@ Um escudo samurai foi solto aqui.~
 2 100 100 20 0
 E
 escudo samurai~
-Você vê um escudo que é um verdadeiro objeto de arte. Em um dos seus lados  
-você pode ler uma inscrição:
+VocÃª vÃª um escudo que Ã© um verdadeiro objeto de arte. Em um dos seus lados  
+vocÃª pode ler uma inscriÃ§Ã£o:
 "O verdadeiro guerreiro precisa manter sua lealdade, coragem, veracidade,
-compaixão e honra acima de tudo."
+compaixÃ£o e honra acima de tudo."
 ~
 A
 18 1
@@ -419,44 +419,44 @@ Um velho manto bastante usado foi jogado aqui.~
 2 100 100 10 0
 E
 manto samurai~
-Você vê uma peça de roupa que é um verdadeiro objeto de arte. Há uma espécie
-de bordado em uma de suas mangas, onde se pode ler uma inscrição:
+VocÃª vÃª uma peÃ§a de roupa que Ã© um verdadeiro objeto de arte. HÃ¡ uma espÃ©cie
+de bordado em uma de suas mangas, onde se pode ler uma inscriÃ§Ã£o:
 "O verdadeiro guerreiro precisa manter sua lealdade, coragem, veracidade,
-compaixão e honra acima de tudo."
+compaixÃ£o e honra acima de tudo."
 ~
 A
 2 2
 #15156
 capacete samurai~
 Um capacete samurai~
-Um pesado e imenso capacete para samurais foi jogado aqui no chão.~
+Um pesado e imenso capacete para samurais foi jogado aqui no chÃ£o.~
 ~
 9 b 0 0 0 ae 0 0 0 0 0 0 0
 7 0 0 0
 2 100 100 20 0
 E
 capacete samurai~
-Você vê um capacete que é um verdadeiro objeto de arte. Em um dos seus lados  
-você pode ler uma inscrição:
+VocÃª vÃª um capacete que Ã© um verdadeiro objeto de arte. Em um dos seus lados  
+vocÃª pode ler uma inscriÃ§Ã£o:
 "O verdadeiro guerreiro precisa manter sua lealdade, coragem, veracidade,
-compaixão e honra acima de tudo."
+compaixÃ£o e honra acima de tudo."
 ~
 A
 18 1
 #15157
 perneiras samurai~
 Um par de perneiras samurai~
-Um par de perneiras samurai está jogado aqui no chão.~
+Um par de perneiras samurai estÃ¡ jogado aqui no chÃ£o.~
 ~
 9 b 0 0 0 af 0 0 0 0 0 0 0
 6 0 0 0
 2 100 100 20 0
 E
 perneiras samurai~
-Você vê uma peça de roupa que é um verdadeiro objeto de arte. Há uma espécie
-de bordado em uma de suas mangas, onde se pode ler uma inscrição:
+VocÃª vÃª uma peÃ§a de roupa que Ã© um verdadeiro objeto de arte. HÃ¡ uma espÃ©cie
+de bordado em uma de suas mangas, onde se pode ler uma inscriÃ§Ã£o:
 "O verdadeiro guerreiro precisa manter sua lealdade, coragem, veracidade,
-compaixão e honra acima de tudo."
+compaixÃ£o e honra acima de tudo."
 ~
 A
 2 1
@@ -472,10 +472,10 @@ Um par de botas samurai foi deixado aqui por seu antigo dono.~
 2 100 100 20 0
 E
 botas samurai~
-Você vê um par de sapatos que é um verdadeiro objeto de arte. Há uma espécie
-de inscrição nas solas destas botas, onde se pode ler:
+VocÃª vÃª um par de sapatos que Ã© um verdadeiro objeto de arte. HÃ¡ uma espÃ©cie
+de inscriÃ§Ã£o nas solas destas botas, onde se pode ler:
 "O verdadeiro guerreiro precisa manter sua lealdade, coragem, veracidade,
-compaixão e honra acima de tudo."
+compaixÃ£o e honra acima de tudo."
 ~
 A
 17 -2
@@ -489,10 +489,10 @@ Um par de grossas luvas samurai foi deixado aqui.~
 2 100 100 20 0
 E
 luvas samurai~
-Você vê um par de luvas que é um verdadeiro objeto de arte. Há uma espécie
-de inscrição na barra destas luvas, onde se pode ler:
+VocÃª vÃª um par de luvas que Ã© um verdadeiro objeto de arte. HÃ¡ uma espÃ©cie
+de inscriÃ§Ã£o na barra destas luvas, onde se pode ler:
 "O verdadeiro guerreiro precisa manter sua lealdade, coragem, veracidade,
-compaixão e honra acima de tudo."
+compaixÃ£o e honra acima de tudo."
 ~
 A
 13 20
@@ -506,10 +506,10 @@ Um estranho par de cotoveleiras foi deixado aqui.~
 2 100 100 0 0
 E
 cotoveleiras samurai~
-Você vê um par de cotoveleiras que é um verdadeiro objeto de arte. Há uma 
-espécie de inscrição em um de seus lados, onde se pode ler:
+VocÃª vÃª um par de cotoveleiras que Ã© um verdadeiro objeto de arte. HÃ¡ uma 
+espÃ©cie de inscriÃ§Ã£o em um de seus lados, onde se pode ler:
 "O verdadeiro guerreiro precisa manter sua lealdade, coragem, veracidade,
-compaixão e honra acima de tudo."
+compaixÃ£o e honra acima de tudo."
 ~
 A
 17 -3
@@ -523,44 +523,44 @@ Uma capa negra como a noite, cheia de estranhas marcas, foi esquecida aqui.~
 2 100 100 15 0
 E
 capa samurai~
-Você vê uma peça de roupa que é um verdadeiro objeto de arte. Há uma espécie
-de bordado em uma de suas mangas, onde se pode ler uma inscrição:
+VocÃª vÃª uma peÃ§a de roupa que Ã© um verdadeiro objeto de arte. HÃ¡ uma espÃ©cie
+de bordado em uma de suas mangas, onde se pode ler uma inscriÃ§Ã£o:
 "O verdadeiro guerreiro precisa manter sua lealdade, coragem, veracidade,
-compaixão e honra acima de tudo."
+compaixÃ£o e honra acima de tudo."
 ~
 A
 17 -5
 #15162
 cinto samurai~
 Um cinto samurai~
-Um grosso cinto de couro está a espera de um novo dono.~
+Um grosso cinto de couro estÃ¡ a espera de um novo dono.~
 ~
 9 b 0 0 0 al 0 0 0 0 0 0 0
 6 0 0 0
 2 100 100 20 0
 E
 cinto samurai~
-Você vê uma peça de couro que é um verdadeiro objeto de arte. Há uma espécie
-De grande marca em um dos lados, onde se pode ler uma inscrição:
+VocÃª vÃª uma peÃ§a de couro que Ã© um verdadeiro objeto de arte. HÃ¡ uma espÃ©cie
+De grande marca em um dos lados, onde se pode ler uma inscriÃ§Ã£o:
 "O verdadeiro guerreiro precisa manter sua lealdade, coragem, veracidade,
-compaixão e honra acima de tudo."
+compaixÃ£o e honra acima de tudo."
 ~
 A
 1 2
 #15163
-braçadeira samurai~
-Uma braçadeira samurai~
-Braçadeiras estranhas estão aqui no chão.~
+bracadeira samurai~
+Uma braÃ§adeira samurai~
+BraÃ§adeiras estranhas estÃ£o aqui no chÃ£o.~
 ~
 9 ak 0 0 0 ai 0 0 0 0 0 0 0
 2 0 0 0
 5 100 100 10 0
 E
-braçadeira samurai~
-Você vê uma peça de couro que é um verdadeiro objeto de arte. Há uma espécie
-de grande marca em um dos lados, onde se pode ler uma inscrição:
+bracadeira samurai~
+VocÃª vÃª uma peÃ§a de couro que Ã© um verdadeiro objeto de arte. HÃ¡ uma espÃ©cie
+de grande marca em um dos lados, onde se pode ler uma inscriÃ§Ã£o:
 "O verdadeiro guerreiro precisa manter sua lealdade, coragem, veracidade,
-compaixão e honra acima de tudo."
+compaixÃ£o e honra acima de tudo."
 ~
 A
 18 1
