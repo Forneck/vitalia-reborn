@@ -635,7 +635,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			/* vitima eh player */
 			for (i = 0; i <= top_of_p_table; i++)
 			{
-				if (*arg2 && str_cmp(arg2, player_table[i].name))
+				if (*arg2 && !str_cmp(arg2, player_table[i].name))
 				{
 					type2 = 2;
 					id_player = player_table[i].id;
