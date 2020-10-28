@@ -7,9 +7,9 @@ Uma chave enferrujada foi deixada aqui.~
 0 0 0 0
 1 0 0 0 0
 #19701
-chave calabouÁo~
-a chave do calabouÁo~
-A chave do calabouÁo parece ter caido no ch„o em meio a confus„o~
+chave calabouco~
+a chave do calabouco~
+A chave do calabou√ßo parece ter caido no ch√£o em meio a confus√£o~
 ~
 18 df 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
@@ -17,38 +17,38 @@ A chave do calabouÁo parece ter caido no ch„o em meio a confus„o~
 #19702
 espada orc~
 uma espada curta de orc~
-Uma espada curta est· jogada no ch„o~
+Uma espada curta est√° jogada no ch√£o~
 ~
 5 ijln 0 0 0 an 0 0 0 0 0 0 0
 0 2 6 3
 3 10000 0 0 0
 E
 espada orc~
-… uma bela espada negra curta.
+√â uma bela espada negra curta.
 ~
 #19703
 faca orc~
 uma faca orc~
-Uma faca enferrujada est· fincada aqui no ch„o.~
+Uma faca enferrujada est√° fincada aqui no ch√£o.~
 ~
 5 jln 0 0 0 ano 0 0 0 0 0 0 0
 0 3 5 14
 2 10000 0 0 0
 E
 faca orc~
-'...quantas gargantas n„o foram cortadas por esta faca', vocÍ pensa...
+'...quantas gargantas n√£o foram cortadas por esta faca', voc√™ pensa...
 ~
 #19704
-poÁ„o negra~
-uma poÁ„o negra~
-Um frasco com algum liguido negro est· aqui~
+pocao negra~
+uma po√ß√£o negra~
+Um frasco com algum liguido negro est√° aqui~
 ~
 10 c 0 0 0 a 0 0 0 0 0 0 0
 20 21 64 -1
 1 12000 0 0 0
 E
-poÁ„o negra~
-H· um liquido preto dentro desse frasco ...
+pocao negra~
+H√° um liquido preto dentro desse frasco ...
 ~
 #19705
 sangue orc~
@@ -60,7 +60,7 @@ Um pouco de sangue orc foi derramado aqui~
 2 1000 0 0 0
 E
 sangue orc~
-VocÍ vÍ um lÌquido de cor indefinida e pegajoso neste pequeno frasco.
+Voc√™ v√™ um l√≠quido de cor indefinida e pegajoso neste pequeno frasco.
 ~
 #19706
 martelo orc~
@@ -80,14 +80,14 @@ A
 #19707
 machado orc~
 um grande machado de orc~
-Um machado com l‚mina enferrujada foi deixado no ch„o~
+Um machado com l√¢mina enferrujada foi deixado no ch√£o~
 ~
 5 gjl 0 0 0 an 0 0 0 0 0 0 0
 0 4 5 3
 15 12000 50 0 0
 E
 machado orc~
-'Um machado muito afiado', vocÍ pensa.
+'Um machado muito afiado', voc√™ pensa.
 ~
 A
 19 4
@@ -96,7 +96,7 @@ A
 #19708
 escudo negro orc~
 um escudo negro de orc~
-Um estranho escudo negro est· qui no ch„o~
+Um estranho escudo negro est√° qui no ch√£o~
 ~
 9 jl 0 0 0 aj 0 0 0 0 0 0 0
 5 0 0 0
@@ -107,15 +107,15 @@ palavras idioma~
 ~
 E
 escudo negro~
-H· um desenho de um grande orc nele.  Em baixo algumas palavras num idioma
-que vocÍ n„o consegue decifrar...
+H√° um desenho de um grande orc nele.  Em baixo algumas palavras num idioma
+que voc√™ n√£o consegue decifrar...
 ~
 A
 1 1
 #19709
 cota malha orc~
 uma cota de malha de orc~
-Uma cota de malha negra est· jogada no ch„o aqui.~
+Uma cota de malha negra est√° jogada no ch√£o aqui.~
 ~
 9 jl 0 0 0 ad 0 0 0 0 0 0 0
 10 0 0 0
@@ -130,35 +130,35 @@ A
 #19710
 elmo orc~
 um grande elmo de orc~
-Um grande elmo tÌpico dos orcs est· jogado aqui no ch„o~
+Um grande elmo t√≠pico dos orcs est√° jogado aqui no ch√£o~
 ~
 9 jl 0 0 0 ae 0 0 0 0 0 0 0
 6 0 0 0
 10 15000 0 10 0
 E
 elmo orc~
-Este elmo tem algumas presas postas em volta da borda para decoraÁ„o.
+Este elmo tem algumas presas postas em volta da borda para decora√ß√£o.
 ~
 A
 4 -1
 #19711
 pequeno elmo orc~
 um pequeno elmo de orc~
-Um pequeno elmo de orc est· aqui jogado.~
+Um pequeno elmo de orc est√° aqui jogado.~
 ~
 9 jl 0 0 0 ae 0 0 0 0 0 0 0
 2 0 0 0
 10 1000 0 0 0
 E
 pequeno elmo~
-Este elmo parece pertencer a uma crianÁa...
+Este elmo parece pertencer a uma crian√ßa...
 ~
 A
 9 -3
 #19712
 espada aventureiro~
 a espada do aventureiro~
-Uma digna espada est· fincada no ch„o brilhando~
+Uma digna espada est√° fincada no ch√£o brilhando~
 ~
 5 agio 0 0 0 an 0 0 0 0 0 0 0
 0 2 10 3
@@ -170,7 +170,7 @@ Esta espada parece ter pertencido a um honrado guerreiro.
 A
 19 4
 #19713
-poÁ„o verde sangue cobra~
+pocao verde sangue cobra~
 o sangue da cobra verde~
 Um pouco do sangue da cobra verde foi deixado aqui.~
 ~
@@ -180,62 +180,62 @@ Um pouco do sangue da cobra verde foi deixado aqui.~
 E
 sangue cobra~
 O sangue que escorreu da cobra foi juntado num recipiente, ou melhor, na
-pele da PR”PRIA cobra.
+pele da PR√ìPRIA cobra.
 ~
 #19714
 luvas orc~
 um par de luvas de orc~
-Um par de luvas de orc foi deixado no ch„o.~
+Um par de luvas de orc foi deixado no ch√£o.~
 ~
 9 ijl 0 0 0 ah 0 0 0 0 0 0 0
 6 0 0 0
 2 10000 0 0 0
 E
 luvas orc~
-Um par de confort·veis luvas. Ele serviria direitinho na sua m„o...
+Um par de confort√°veis luvas. Ele serviria direitinho na sua m√£o...
 ~
 #19715
 botas orc negro~
 um par de botas de orc~
-Um par de botas de couro negro est· no ch„o aqui.~
+Um par de botas de couro negro est√° no ch√£o aqui.~
 ~
 9 jl 0 0 0 ag 0 0 0 0 0 0 0
 4 0 0 0
 2 12000 0 0 0
 E
 botas negro orc~
-VocÍ sente que caminharia por horas com essas botas de orc.
+Voc√™ sente que caminharia por horas com essas botas de orc.
 ~
 A
 14 50
 #19716
 cinto negro orc~
 um cinto negro de orc~
-Um cinto negro com fivela enferrujada est· aqui.~
+Um cinto negro com fivela enferrujada est√° aqui.~
 ~
 9 jl 0 0 0 al 0 0 0 0 0 0 0
 5 0 0 0
 3 12000 0 0 0
 E
 cinto negro orc~
-VocÍ vÍ apenas um cinto com a fivela enferrujada.
+Voc√™ v√™ apenas um cinto com a fivela enferrujada.
 ~
 #19717
-poÁ„o violeta~
-uma poÁ„o violeta~
-Uma poÁ„o exalando uma suave frag‚ncia de violeta est· aqui.~
+pocao violeta~
+uma po√ß√£o violeta~
+Uma po√ß√£o exalando uma suave frag√¢ncia de violeta est√° aqui.~
 ~
 10 ac 0 0 0 a 0 0 0 0 0 0 0
 20 61 61 76
 1 10000 0 0 0
 E
-poÁ„o violeta~
-Um frasco com um lÌquido violeta.
+pocao violeta~
+Um frasco com um l√≠quido violeta.
 ~
 #19718
 mochila negra~
 uma grande mochila~
-Uma mochila negra est· jogada no ch„o~
+Uma mochila negra est√° jogada no ch√£o~
 ~
 15 j 0 0 0 ak 0 0 0 0 0 0 0
 500 0 0 0
@@ -245,47 +245,47 @@ mochila negra~
 Uma mochila de couro negro.
 ~
 #19719
-negra t˙nica~
-uma t˙nica negra~
-Uma t˙nica negra foi dobrada e posta ali no canto.~
+negra tunica~
+uma t√∫nica negra~
+Uma t√∫nica negra foi dobrada e posta ali no canto.~
 ~
 9 jl 0 0 0 ak 0 0 0 0 0 0 0
 7 0 0 0
 3 1000 0 15 0
 E
 detalhes dourados~
-&Y*.*.*.*.*.&n
+@Y*.*.*.*.*.@n
 ~
 E
-t˙nica~
-… uma t˙nica negra com alguns detalhes dourados.
+tunica~
+√â uma t√∫nica negra com alguns detalhes dourados.
 ~
 #19720
-poncho l„ ovelha negra pele~
-um poncho de l„ negra~
-Uma pele de ovelha negra foi deixada no ch„o~
+poncho la ovelha negra pele~
+um poncho de l√£ negra~
+Uma pele de ovelha negra foi deixada no ch√£o~
 ~
 9 jl 0 0 0 ak 0 0 0 0 0 0 0
 9 0 0 0
 2 0 0 20 0
 E
-poncho l„ pele ovelha~
-Feito com a mais pura l„ de ovelha este poncho parece poder protegÍ-lo bastante.
+poncho la pele ovelha~
+Feito com a mais pura l√£ de ovelha este poncho parece poder proteg√™-lo bastante.
 ~
 A
 13 20
 A
 19 1
 #19721
-grilhıes~
-grilhıes de orc~
-Um par de grilhıes est· jogado no ch„o.~
+grilhoes~
+grilh√µes de orc~
+Um par de grilh√µes est√° jogado no ch√£o.~
 ~
 9 h 0 0 0 acfhlm 0 0 0 0 0 0 0
 0 0 0 0
 1 0 0 0 0
 E
-grilhıes~
+grilhoes~
 Chega a dar medo olhar para isso.
 ~
 A
