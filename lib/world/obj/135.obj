@@ -8,12 +8,12 @@ Um pequeno riacho atravessa a clareira.~
 1000 0 0 0 0
 E
 riacho~
-A água parece limpa e cristalina.
+A Ã¡gua parece limpa e cristalina.
 ~
 #13501
 folha~
 uma folha seca~
-Uma folha seca caiu no chão.~
+Uma folha seca caiu no chÃ£o.~
 ~
 13 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
@@ -27,9 +27,9 @@ Um ingresso foi perdido aqui.~
 0 0 0 0
 2 100 0 0 0
 #13503
-couro pedaço animal esfarrapado~
-um pedaço de couro de animal esfarrapado~
-Um pedaço de couro esfarrapado foi abandonado aqui.~
+couro pedaco animal esfarrapado~
+um pedaÃ§o de couro de animal esfarrapado~
+Um pedaÃ§o de couro esfarrapado foi abandonado aqui.~
 ~
 9 0 0 0 0 ak 0 0 0 0 0 0 0
 3 0 0 0
@@ -45,7 +45,7 @@ Um manto esfarrapado foi perdido aqui. Nele foram desenhados um estranho dente e
 #13505
 colete esfarrapado~
 um colete esfarrapado~
-Um colete esfarrapado foi jogado aqui. Nele há o desenho de um dente e de um olho.~
+Um colete esfarrapado foi jogado aqui. Nele hÃ¡ o desenho de um dente e de um olho.~
 ~
 9 0 0 0 0 ac 0 0 0 0 0 0 0
 4 0 0 0
@@ -53,21 +53,21 @@ Um colete esfarrapado foi jogado aqui. Nele há o desenho de um dente e de um olh
 #13506
 chave madeira pequena~
 uma chave de madeira~
-Uma pequena chave de madeira está no chão.~
+Uma pequena chave de madeira estÃ¡ no chÃ£o.~
 ~
 18 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 1 0 0 0 0
 #13508
-armário~
-um armário~
-Há um grande armário de madeira num canto.~
+armario~
+um armÃ¡rio~
+HÃ¡ um grande armÃ¡rio de madeira num canto.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 100 1 -1 0
 500 0 0 0 0
 E
-armário~
+armario~
 Feito em madeira nobre, ele foi muito bem trabalhado. Obviamente em motivo escandinavo.
 ~
 #13509
@@ -79,16 +79,16 @@ Um pequeno jarro de tempero sem lacre foi posto aqui.~
 5 5 -1 0
 1 100 0 0 0
 #13510
-pó negro~
-um pouco de pó negro~
-Um pouco de pó negro com um cheiro muito forte foi espalhado aqui.~
+po negro~
+um pouco de pÃ³ negro~
+Um pouco de pÃ³ negro com um cheiro muito forte foi espalhado aqui.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 -2 0 0 0
 1 300 0 0 0
 E
-pó negro~
-Alguma coisa lhe diz que não é muito seguro brincar com isso.
+po negro~
+Alguma coisa lhe diz que nÃ£o Ã© muito seguro brincar com isso.
 ~
 #13511
 sementes amarelas~
@@ -99,29 +99,29 @@ Algumas sementes amarelas foram jogadas aqui.~
 1 0 0 0
 1 10 0 0 0
 #13512
-maço papeis amassados~
-um maço de papeis amassados~
-Um grande maço de papeis amassados foi deixado aqui.~
+maco papeis amassados~
+um maÃ§o de papeis amassados~
+Um grande maÃ§o de papeis amassados foi deixado aqui.~
 ~
 13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100 0 0 0
 E
-maço papeis amassados~
-Isso parece velho e gasto, mas você ainda pode ler algumas lânguidas
-palavras escritas por mãos muito estranhas.
+maco papeis amassados~
+Isso parece velho e gasto, mas vocÃª ainda pode ler algumas lÃ¢nguidas
+palavras escritas por mÃ£os muito estranhas.
 ~
 #13517
 cajado madeira negra~
 um cajado de madeira negra~
-Você vê um cajado de madeira negra jogado no chão.~
+VocÃª vÃª um cajado de madeira negra jogado no chÃ£o.~
 ~
 5 k 0 0 0 an 0 0 0 0 0 0 0
 0 2 3 7
 5 500 0 0 0
 E
 cajado madeira negra~
-Esse cajado de carvalho é forte, mas possui equilíbrio.
+Esse cajado de carvalho Ã© forte, mas possui equilÃ­brio.
 ~
 A
 4 2
@@ -135,7 +135,7 @@ Um manto marrom sujo foi abandonado aqui.~
 5 600 0 20 0
 E
 manto marrom sujo~
-Esse manto é rústico, e parece bem resistente.
+Esse manto Ã© rÃºstico, e parece bem resistente.
 ~
 A
 12 10
@@ -144,15 +144,15 @@ A
 #13520
 ervas rosadas~
 algumas ervas rosadas~
-Algumas ervas rosadas foram jogadas no chão.~
+Algumas ervas rosadas foram jogadas no chÃ£o.~
 ~
 10 c 0 0 0 a 0 0 0 0 0 0 0
 15 73 74 -1
 1 10 0 15 0
 #13521
-púrpuras ervas~
-algumas ervas púrpuras~
-Algumas ervas púrpuras foram deixadas aqui.~
+purpuras ervas~
+algumas ervas pÃºrpuras~
+Algumas ervas pÃºrpuras foram deixadas aqui.~
 ~
 10 c 0 0 0 a 0 0 0 0 0 0 0
 15 25 25 79
@@ -160,7 +160,7 @@ Algumas ervas púrpuras foram deixadas aqui.~
 #13522
 ervas negras~
 algumas ervas negras~
-Há algumas ervas negras espalhadas no chão.~
+HÃ¡ algumas ervas negras espalhadas no chÃ£o.~
 ~
 10 c 0 0 0 a 0 0 0 0 0 0 0
 10 4 57 -1
@@ -176,7 +176,7 @@ Algumas ervas cinzentas foram perdidas aqui.~
 #13524
 ervas vermelhas~
 algumas ervas vermelhas~
-Há algumas ervas vermelhas pisoteadas aqui.~
+HÃ¡ algumas ervas vermelhas pisoteadas aqui.~
 ~
 10 c 0 0 0 a 0 0 0 0 0 0 0
 15 20 20 -1
@@ -184,7 +184,7 @@ Há algumas ervas vermelhas pisoteadas aqui.~
 #13525
 ervas alaranjadas~
 algumas ervas alaranjadas~
-Alguém deixou algumas ervas alaranjadas jogadas aqui.~
+AlguÃ©m deixou algumas ervas alaranjadas jogadas aqui.~
 ~
 10 c 0 0 0 a 0 0 0 0 0 0 0
 5 16 66 66
@@ -192,7 +192,7 @@ Alguém deixou algumas ervas alaranjadas jogadas aqui.~
 #13526
 ervas roxas~
 algumas ervas roxas~
-Algumas ervas roxas estão no chão.~
+Algumas ervas roxas estÃ£o no chÃ£o.~
 ~
 10 c 0 0 0 a 0 0 0 0 0 0 0
 25 67 33 67
