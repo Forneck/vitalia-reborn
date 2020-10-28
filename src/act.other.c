@@ -1227,3 +1227,52 @@ ACMD(do_recall)
 	act("$n aparece no meio da sala.", TRUE, ch, 0, 0, TO_ROOM);
 	look_at_room(ch, 0);
 }
+
+
+ACMD(do_suggestion)
+{
+   struct fann *ann;
+	fann_type *calc_output;
+	ann = fann_create_from_file("etc/aventureiro.fann");
+	fann_type input[26];
+	fann_type output[6];
+   	if (GROUP(ch) != NULL)
+		grupo = 1;
+	else
+		grupo = 0;
+
+	input[0] = GET_HIT(ch);
+	input[1] = GET_MAX_HIT(ch);
+	input[2] = GET_MANA(ch);
+	input[3] = GET_MAX_MANA(ch);
+	input[4] = GET_MOVE(ch);
+	input[5] = GET_MAX_MOVE(ch);
+	input[6] = GET_EXP(ch);
+	input[7] = GET_ROOM_VNUM(IN_ROOM(ch));
+	input[8] = GET_CLASS(ch);
+	input[9] = GET_POS(ch);
+	input[10] = GET_ALIGNMENT(ch);
+	input[11] = compute_armor_class(ch);
+	input[12] = GET_STR(ch);
+	input[13] = GET_ADD(ch);
+	input[14] = GET_INT(ch);
+	input[15] = GET_WIS(ch);
+	input[16] = GET_CON(ch);
+	input[17] = GET_DEX(ch);
+	input[18] = GET_GOLD(ch);
+	input[19] = GET_BANK_GOLD(ch);
+	input[20] = GET_COND(ch, HUNGER);
+	input[21] = GET_COND(ch, THIRST);
+	input[22] = GET_PRACTICES(ch);
+	input[23] = grupo;
+	input[24] = time_info.hours;
+	input[25] = GET_BREATH(ch);
+	calc_output = fann_run(ann, input);
+
+		if (calc_output[3] <= 0 )
+		send_to_char(ch, "Sugestão de comando: %s \r\n", cmd_info[(int)calc_output[0]].command);    else if (calc_output[5] <=0)
+	send_to_char(ch, "Comando Sugerido %s %d %d \r\n",
+			cmd_info[(int)calc_output[0]].command, calc_output[3], calc_output[5]);
+	else 
+		send_to_char(ch, "Comando Sugerido %s %d \r\n",cmd_info[(int)calc_output[0]].command, calc_output[3]);
+}
