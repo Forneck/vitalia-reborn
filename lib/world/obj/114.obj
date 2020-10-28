@@ -1,31 +1,31 @@
 #11400
-portal energia vórtice~
-um vórtice de energia~
-Um imenso vórtice de energia brilha intensamente, atraindo-o para si.~
+portal energia vortice~
+um vÃ³rtice de energia~
+Um imenso vÃ³rtice de energia brilha intensamente, atraindo-o para si.~
 ~
 26 ab 0 0 0 0 0 0 0 0 0 0 0
 11401 0 0 0
 100 1000000 0 0 0
 E
-portal energia vórtice~
-Você observa esse imenso vórtice de energia cujo diâmetro deve ter duas
+portal energia vortice~
+VocÃª observa esse imenso vÃ³rtice de energia cujo diÃ¢metro deve ter duas
 vezes sua altura.  Sua intensa luz muda de cor a medida que seu centro gira,
-parecendo também emitir um estranho, porém agradável, zumbido.  O que ele
-faz aqui ou porque você não tem idéia, mas uma força invisível parece
-impelí-lo a se aproximar cada vez mais.
+parecendo tambÃ©m emitir um estranho, porÃ©m agradÃ¡vel, zumbido.  O que ele
+faz aqui ou porque vocÃª nÃ£o tem idÃ©ia, mas uma forÃ§a invisÃ­vel parece
+impelÃ­-lo a se aproximar cada vez mais.
 ~
 #11401
-indicações placa enorme brilhante importante~
-a placa de indicações~
-Há uma enorme placa brilhante bem à sua frente que parece bem importante.~
+indicacoes placa enorme brilhante importante~
+a placa de indicaÃ§Ãµes~
+HÃ¡ uma enorme placa brilhante bem Ã  sua frente que parece bem importante.~
 ~
 12 a 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 100 100000 0 0 0
 E
-indicações~
-A placa indica, com flechas, direções para cima e para baixo. Há sete em cada
-uma delas, num total de catorze "lugares":&n
+indicacoes~
+A placa indica, com flechas, direÃ§Ãµes para cima e para baixo. HÃ¡ sete em cada
+uma delas, num total de catorze "lugares":@n
                                         
                                        Satyaloka
                                            .
@@ -42,16 +42,16 @@ uma delas, num total de catorze "lugares":&n
                                            |
 
                                        Maharloka
-&B        P&n                                  .
-&B        R&n                                 /_\
-&B        A&n                                  |
-&B        R&n
-&B        .&n                              Svarloka
-&B        .&n                                  .
-&B        .&n                                 /_\
-&B        .&n                                  |
-&B        .&n
-&B        .&n                             Bhuvarloka
+@B        P@n                                  .
+@B        R@n                                 /_\
+@B        A@n                                  |
+@B        R@n
+@B        .@n                              Svarloka
+@B        .@n                                  .
+@B        .@n                                 /_\
+@B        .@n                                  |
+@B        .@n
+@B        .@n                             Bhuvarloka
                                            .
                                           /_\
                                            |
@@ -65,65 +65,65 @@ uma delas, num total de catorze "lugares":&n
 
                                          Sutala
                                            |
-&R        A&n                                 \¨/
-&R        V&n                                  '
-&R        A&n                              Vitalaloka
-&R        R&n                                  |
-&R        O&n                                 \¨/
-&R        H&n                                  '
-&R        A&n                               Talatala
-&R        N&n                                  |
-&R        A&n                                 \¨/
+@R        A@n                                 \Â¨/
+@R        V@n                                  '
+@R        A@n                              Vitalaloka
+@R        R@n                                  |
+@R        O@n                                 \Â¨/
+@R        H@n                                  '
+@R        A@n                               Talatala
+@R        N@n                                  |
+@R        A@n                                 \Â¨/
                                            '
                                         Mahatala
                                            |
-                                          \¨/
+                                          \Â¨/
                                            '
                                         Raratala
                                            |
-                                          \¨/
+                                          \Â¨/
                                            '
                                        Atalaloka
                                            |
-                                          \¨/
+                                          \Â¨/
                                            '
                                          Patala
 
 
-Você não entende nada que está escrito, mas sente que há alguma importante
-informação no que está escrito na placa.
+VocÃª nÃ£o entende nada que estÃ¡ escrito, mas sente que hÃ¡ alguma importante
+informaÃ§Ã£o no que estÃ¡ escrito na placa.
 ~
 E
 placa enorme brilhante importante~
-Quando você pensou enorme, você pensou pequeno.  Sim, porque essa placa é
-mais que enorme: você parece uma formiga perto dela...  Ela é basicamente um
-gigantesco poste de ferro negro com uma placa de superfície lisa brilhante
-repleta de indicações (que parecem inscrustradas no metal).  Talvez seja
-melhor olhá-las com mais atenção.
+Quando vocÃª pensou enorme, vocÃª pensou pequeno.  Sim, porque essa placa Ã©
+mais que enorme: vocÃª parece uma formiga perto dela...  Ela Ã© basicamente um
+gigantesco poste de ferro negro com uma placa de superfÃ­cie lisa brilhante
+repleta de indicaÃ§Ãµes (que parecem inscrustradas no metal).  Talvez seja
+melhor olhÃ¡-las com mais atenÃ§Ã£o.
 ~
 #11402
 sombra~
 uma sombra~
-Algo ou alguém perdeu sua sombra aqui.~
+Algo ou alguÃ©m perdeu sua sombra aqui.~
 ~
 9 f 0 0 0 ako 0 0 0 0 0 0 0
 3 0 0 0
 5 1000 100 0 0
 E
 sombra~
-Acredite: você está segurando uma sombra.
+Acredite: vocÃª estÃ¡ segurando uma sombra.
 ~
 #11403
-coleira demonío cão~
-a coleira do cão-demônio~
+coleira demonio cao~
+a coleira do cÃ£o-demÃ´nio~
 Uma enorme coleira negra parece absorver quase toda a luz desse lugar.~
 ~
 9 jl 0 0 0 al 0 0 0 0 0 0 0
 4 0 0 0
 6 2400 0 0 0
 E
-coleira cão demônio~
-Ela parece ter sido feita com a própria escuridão.  De tão grande, você pode
+coleira cao demonio~
+Ela parece ter sido feita com a prÃ³pria escuridÃ£o.  De tÃ£o grande, vocÃª pode
 usar em volta de sua cintura.
 ~
 A
@@ -131,38 +131,38 @@ A
 A
 19 1
 #11404
-túnica sombras escuridão lúgubre negra~
-uma túnica de sombras~
-Uma túnica de aparência lúgubre parece espalhar escuridão a seu redor.~
+tunica sombras escuridao lugubre negra~
+uma tÃºnica de sombras~
+Uma tÃºnica de aparÃªncia lÃºgubre parece espalhar escuridÃ£o a seu redor.~
 ~
 9 0 0 0 0 ak 0 0 0 0 0 0 0
 5 0 0 0
 6 5000 0 0 0
 E
-túnica sombras escuridão lúgubre negra~
-Você só sentiu algo funesto quando viu essa túnica, mas isso passou quando
-você a tocou.  Talvez isso tenha acontecido pois você pensava ser a morte
-algo triste e sombrio.  Mas as coisas não são como aparentam ser...
+tunica sombras escuridao lugubre negra~
+VocÃª sÃ³ sentiu algo funesto quando viu essa tÃºnica, mas isso passou quando
+vocÃª a tocou.  Talvez isso tenha acontecido pois vocÃª pensava ser a morte
+algo triste e sombrio.  Mas as coisas nÃ£o sÃ£o como aparentam ser...
 ~
 A
 1 1
 #11405
 livro vida imenso velho pergaminho~
 um livro da vida~
-Um imenso e velho pergaminho flutua à sua frente.~
+Um imenso e velho pergaminho flutua Ã  sua frente.~
 ~
 1 ajkq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
 6 700000 0 0 0
 E
 livro vida pergaminho velho imenso~
-Você foi curioso o bastante para tentar ler um livro da vida que não deveria
-estar em suas mãos, tendo sido pego de surpresa quando descobriu que o nome
-do livro era seu.  Sim, ali está escrito tudo que você viveu, suas mortes,
-reencarnações...  Há um grande espaço em branco, indicando que sua história
-ainda não acabou.  Você ainda tenta ler o que parecem ser comentários a
-respeito de seus atos passados, presentes e futuros, mas eles estão na
-língua sagrada, que lhe é desconhecida.
+VocÃª foi curioso o bastante para tentar ler um livro da vida que nÃ£o deveria
+estar em suas mÃ£os, tendo sido pego de surpresa quando descobriu que o nome
+do livro era seu.  Sim, ali estÃ¡ escrito tudo que vocÃª viveu, suas mortes,
+reencarnaÃ§Ãµes...  HÃ¡ um grande espaÃ§o em branco, indicando que sua histÃ³ria
+ainda nÃ£o acabou.  VocÃª ainda tenta ler o que parecem ser comentÃ¡rios a
+respeito de seus atos passados, presentes e futuros, mas eles estÃ£o na
+lÃ­ngua sagrada, que lhe Ã© desconhecida.
 ~
 A
 3 1
@@ -173,18 +173,18 @@ A
 #11406
 coroa deus morte yama resplandecente ouro~
 a coroa de Yama~
-De uma resplandecente coroa de ouro emana ainda a força de seu dono.~
+De uma resplandecente coroa de ouro emana ainda a forÃ§a de seu dono.~
 ~
 9 ajkq 0 0 0 ae 0 0 0 0 0 0 0
 7 0 0 0
 7 1000000 0 70 0
 E
 coroa deus morte yama resplandecente ouro~
-A enorme e pesada coroa de Yama é de ouro puro tornado extremamente duro por
+A enorme e pesada coroa de Yama Ã© de ouro puro tornado extremamente duro por
 magia. Pedras preciosas de todos os tipos foram incrustada ao longo das camadas
-da peça que, tendo a forma da abóboda celeste, possui uma imensa nagamani, gema
-criada e lapidada pelos lendários senhores de Patala. É, certamente, um tesouro
-de valor incalculável.
+da peÃ§a que, tendo a forma da abÃ³boda celeste, possui uma imensa nagamani, gema
+criada e lapidada pelos lendÃ¡rios senhores de Patala. Ã‰, certamente, um tesouro
+de valor incalculÃ¡vel.
 ~
 A
 2 2
@@ -200,10 +200,10 @@ Um longo manto de sombras captura a luz daqui.~
 7 10000000 0 65 0
 E
 manto yama longo sombras~
-As sombras que formam esse manto não são boas nem más: são simplesmente
+As sombras que formam esse manto nÃ£o sÃ£o boas nem mÃ¡s: sÃ£o simplesmente
 formadas daquilo que preserva o local onde Yama realiza seus julgamentos.
-Também não são frias nem quentes, visíveis ou invisíveis, novas ou velhas.
-Esse manto, por isso, é um dos símbolos do papel de Yama nesse mundo.
+TambÃ©m nÃ£o sÃ£o frias nem quentes, visÃ­veis ou invisÃ­veis, novas ou velhas.
+Esse manto, por isso, Ã© um dos sÃ­mbolos do papel de Yama nesse mundo.
 ~
 A
 19 1
@@ -212,16 +212,16 @@ A
 #11408
 negra gigantesca clava yama~
 a clava de Yama~
-Uma gigantesca clava negra permanece, sem apoio algum, em pé sobre o solo.~
+Uma gigantesca clava negra permanece, sem apoio algum, em pÃ© sobre o solo.~
 ~
 5 ajkq 0 0 0 an 0 0 0 0 0 0 0
 0 4 5 6
 10 10000000 0 75 0
 E
 negra gigantesca clava yama~
-Essa gigantesca clava é usada por Yama para punir os rebeldes.  Pelo
-tamanho, peso e quantidade de espinhos em sua cabeça, você imagina como
-seria desagradável tirar o deus da morte do sério a ponto de ser uma vítima
+Essa gigantesca clava Ã© usada por Yama para punir os rebeldes.  Pelo
+tamanho, peso e quantidade de espinhos em sua cabeÃ§a, vocÃª imagina como
+seria desagradÃ¡vel tirar o deus da morte do sÃ©rio a ponto de ser uma vÃ­tima
 de sua arma...
 ~
 A
@@ -229,18 +229,18 @@ A
 A
 1 1
 #11409
-laço medo yama~
-o laço de Yama~
-Um grande laço flutua sobre o chão.~
+laco medo yama~
+o laÃ§o de Yama~
+Um grande laÃ§o flutua sobre o chÃ£o.~
 ~
 12 ajkq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 6 1000000 0 63 0
 E
-laço medo yama~
-Esse enorme laço, feito de uma corda de medo puro, é usado por Yama para
+laco medo yama~
+Esse enorme laÃ§o, feito de uma corda de medo puro, Ã© usado por Yama para
 paralizar e capturar qualquer ser que tente se esquivar de estar em sua
-presença.  E parece ser, no mínimo, bem eficaz.
+presenÃ§a.  E parece ser, no mÃ­nimo, bem eficaz.
 ~
 A
 9 8
@@ -258,8 +258,8 @@ undefined~
 1 110 0 0 0
 E
 seixo pequeno verde-musgo verde musgo vidro~
-Dentre os vários seixos você encontrou um que possui uma inscrição em sua
-língua.  Está escrito: Patala.
+Dentre os vÃ¡rios seixos vocÃª encontrou um que possui uma inscriÃ§Ã£o em sua
+lÃ­ngua.  EstÃ¡ escrito: Patala.
 ~
 #11411
 seixo verde-musgo verde musgo vidro pequeno~
@@ -270,34 +270,34 @@ undefined~
 0 0 0 0
 1 110 0 0 0
 E
-incrustrações incrustrado dizeres~
-Há os seguintes dizeres: "Glória a Sesha".
+incrustracoes incrustrado dizeres~
+HÃ¡ os seguintes dizeres: "GlÃ³ria a Sesha".
 ~
 E
 seixo pequeno verde-musgo verde musgo vidro~
-Esse seixo parece especial pois o que está escrito nele não foi inscrito,
+Esse seixo parece especial pois o que estÃ¡ escrito nele nÃ£o foi inscrito,
 mas sim incrustrado.
 ~
 #11412
-túnica branca gasta~
-uma gasta túnica branca~
-Uma gasta túnica branca foi deixada aqui.~
+tunica branca gasta~
+uma gasta tÃºnica branca~
+Uma gasta tÃºnica branca foi deixada aqui.~
 ~
 9 0 0 0 0 ad 0 0 0 0 0 0 0
 6 0 0 0
 2 0 0 0 0
 #11413
-cítara madeira escura~
-uma cítara de madeira escura~
-Uma cítara de madeira foi esquecida aqui.~
+citara madeira escura~
+uma cÃ­tara de madeira escura~
+Uma cÃ­tara de madeira foi esquecida aqui.~
 ~
 12 a 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 3 0 0 0 0
 E
-cítara madeira escura~
-Essa cítara é a velha companheira do andarilho Narada.  Com ela muitas belas
-músicas foram tocadas, assim como ao seu som grandes histórias foram
+citara madeira escura~
+Essa cÃ­tara Ã© a velha companheira do andarilho Narada.  Com ela muitas belas
+mÃºsicas foram tocadas, assim como ao seu som grandes histÃ³rias foram
 contadas.
 ~
 A
@@ -307,18 +307,18 @@ A
 #11414
 tabar machado gigantesco pedra~
 um gigantesco tabar de pedra~
-Um gigantesco machado de pedra foi fincado no chão.~
+Um gigantesco machado de pedra foi fincado no chÃ£o.~
 ~
 5 agmnotu 0 0 0 an 0 0 0 0 0 0 0
 0 5 5 3
 19 100000 0 63 0
 E
 tabar machado gigantesco pedra~
-Esse gigantesco tabar, uma espécie de machado de guerra, deve ser empunhado
+Esse gigantesco tabar, uma espÃ©cie de machado de guerra, deve ser empunhado
 por guerreiros extremamente fortes.  Sabendo que um tabar normalmente possui
-uma arma oculta em seu cabo, como uma adaga ou até uma espada curta,
-dependendo de seu tamanho, você tenta retirar o fundo do enorme machado, mas
-é fraco demais para isso.  O antigo dono dessa arma devia ser extremamente
+uma arma oculta em seu cabo, como uma adaga ou atÃ© uma espada curta,
+dependendo de seu tamanho, vocÃª tenta retirar o fundo do enorme machado, mas
+Ã© fraco demais para isso.  O antigo dono dessa arma devia ser extremamente
 forte.
 ~
 A
@@ -330,15 +330,15 @@ A
 #11415
 pesado dahl pedra escudo~
 um pesado dahl de pedra~
-Um grande escudo de pedra foi deixado no chão, ocupando muito espaço.~
+Um grande escudo de pedra foi deixado no chÃ£o, ocupando muito espaÃ§o.~
 ~
 9 agmnotu 0 0 0 aj 0 0 0 0 0 0 0
 9 0 0 0
 15 1000000 0 63 0
 E
 pesado dahl pedra escudo~
-O pesado escudo é feito de pedra muito rígida, sendo repleto, em sua parte
-convexa, de inscrições nos caracteres nagas.  O tamanho de seu raio,
+O pesado escudo Ã© feito de pedra muito rÃ­gida, sendo repleto, em sua parte
+convexa, de inscriÃ§Ãµes nos caracteres nagas.  O tamanho de seu raio,
 aproximadamente 1 metro, indica que o guerreiro que usar esse dahl deve ser
 muito forte.
 ~
