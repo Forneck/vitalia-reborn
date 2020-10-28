@@ -627,7 +627,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 				output[5] = -1;
 			}
 			/* vitima eh mob */
-			if ((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD) != NULL) && IS_NPC(victim))
+			if ((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD))  && IS_NPC(victim))
 			{
 				type2 = 1;
 				mob = GET_MOB_VNUM(victim);
@@ -786,7 +786,27 @@ void command_interpreter(struct char_data *ch, char *argument)
          obj = GET_OBJ_VNUM(object);
 		}
       
-      door = EXIT(ch, arg1);
+      /*eh direcao */
+	if ((door = search_block(arg1, dirs, FALSE)) == -1)
+		{						/* Partial Match */
+			if ((door = search_block(arg1, autoexits, FALSE)) == -1)
+			{					/* Check 'short' dirs too */
+			door = -1;
+			}
+		}
+		if (EXIT(ch, door))
+		{						/* Braces added according to indent. -gg */
+			if (EXIT(ch, door)->keyword)
+			{
+				if (!is_name(arg1, EXIT(ch, door)->keyword))
+				door = -1;
+			}
+		}
+		else
+		{
+		  door = -1;
+		}
+	}
       
 		if (type1 == 1)			/* mob */
 		{
