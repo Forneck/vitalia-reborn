@@ -9,7 +9,7 @@ Uma chave de metal negro foi deixada aqui.~
 #19801
 chave verde~
 a chave verde~
-Uma chave verde está no chão.~
+Uma chave verde estÃ¡ no chÃ£o.~
 ~
 18 c 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -17,7 +17,7 @@ Uma chave verde está no chão.~
 #19802
 chave escura simples~
 uma chave escura simples~
-Uma chave simples está aqui no chão.~
+Uma chave simples estÃ¡ aqui no chÃ£o.~
 ~
 18 c 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -25,7 +25,7 @@ Uma chave simples está aqui no chão.~
 #19803
 chave amarela~
 uma chave amarela~
-Uma chave amarela está jogada no chão aqui.~
+Uma chave amarela estÃ¡ jogada no chÃ£o aqui.~
 ~
 18 c 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -33,7 +33,7 @@ Uma chave amarela está jogada no chão aqui.~
 #19804
 chave clara brilhante~
 uma chave brilhante~
-Uma chave brilha jogada no chão.~
+Uma chave brilha jogada no chÃ£o.~
 ~
 18 cd 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -47,25 +47,25 @@ Uma chave vermelha foi deixada aqui.~
 0 0 0 0
 1 0 0 0 0
 #19806
-chave saída~
-a chave da saída~
-Aos seus pés a chave da saída reluz.~
+chave saida~
+a chave da saÃ­da~
+Aos seus pÃ©s a chave da saÃ­da reluz.~
 ~
 18 abcdq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 0 0 0 0
 #19807
-cova catacumba túmulo~
-o túmulo do aventureiro~
-No canto, você vê uma bela catacumba.~
+cova catacumba tumulo~
+o tÃºmulo do aventureiro~
+No canto, vocÃª vÃª uma bela catacumba.~
 ~
 15 a 0 0 0 0 0 0 0 0 0 0 0
 1000 5 -1 0
 500 0 0 0 0
 E
-cova catacumba túmulo~
-Você olha mais de perto e percebe que a tampa da catacumba pode ser movida ..
-o que o haveria dentro?  Será que vale a pena descobrir?
+cova catacumba tumulo~
+VocÃª olha mais de perto e percebe que a tampa da catacumba pode ser movida ..
+o que o haveria dentro?  SerÃ¡ que vale a pena descobrir?
 ~
 #19808
 fonte pequena~
@@ -76,30 +76,30 @@ Uma pequena fonte foi cuidadosamente colocada aqui.~
 1000 1000 0 0
 0 0 0 0 0
 #19809
-cajado esperança brilhante~
-o cajado da esperança~
-Um cajado brilha verde trazendo esperança no chão.~
+cajado esperanca brilhante~
+o cajado da esperanÃ§a~
+Um cajado brilha verde trazendo esperanÃ§a no chÃ£o.~
 ~
 4 dg 0 0 0 ao 0 0 0 0 0 0 0
 10 1 1 42
 6 0 0 0 0
 E
-cajado esperança~
-Alguns símbolos estranhos estão cravados neste cajado.  Você não consegue
-saber muito bem o que eles querem dizer.  Provavelmente está escrito em uma
-língua antiga bem anterior a sua era...
+cajado esperanca~
+Alguns sÃ­mbolos estranhos estÃ£o cravados neste cajado.  VocÃª nÃ£o consegue
+saber muito bem o que eles querem dizer.  Provavelmente estÃ¡ escrito em uma
+lÃ­ngua antiga bem anterior a sua era...
 ~
 #19810
-machado guardião~
-o machado do guardião~
-Há um belo machado jogado no chão.~
+machado guardiao~
+o machado do guardiÃ£o~
+HÃ¡ um belo machado jogado no chÃ£o.~
 ~
 5 abg 0 0 0 an 0 0 0 0 0 0 0
 0 4 6 3
 10 100000 0 30 0
 E
-machado guardião~
-É um enorme machado.. poderia cortar a cabeça de um exército inteiro com ele.
+machado guardiao~
+Ã‰ um enorme machado.. poderia cortar a cabeÃ§a de um exÃ©rcito inteiro com ele.
 ~
 A
 5 2
@@ -108,32 +108,32 @@ A
 A
 19 4
 #19811
-anel guardião~
-o anel do guardião~
+anel guardiao~
+o anel do guardiÃ£o~
 Um belo anel foi deixado no canto.~
 ~
 11 f 0 0 0 ab 0 0 0 0 0 0 0
 0 0 0 0
 5 200000 0 75 0
 E
-anel guardião~
-Este anel tem sido usado por gerações e gerações da família dos guardiães do
-labirinto.  Seu peso é enorme. Você se sente mais poderoso com ele.
+anel guardiao~
+Este anel tem sido usado por geraÃ§Ãµes e geraÃ§Ãµes da famÃ­lia dos guardiÃ£es do
+labirinto.  Seu peso Ã© enorme. VocÃª se sente mais poderoso com ele.
 ~
 A
 14 -50
 A
 19 3
 #19812
-lençol fantasma~
-o lençol do fantasma~
-Um emaranhado de panos está jogado no chão.~
+lencol fantasma~
+o lenÃ§ol do fantasma~
+Um emaranhado de panos estÃ¡ jogado no chÃ£o.~
 ~
 11 fi 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
 2 100 66 0 0
 E
-lençol fantasma~
+lencol fantasma~
 Este emaranhado de panos parece servir muito bem como disfarce..
 ~
 A
@@ -141,28 +141,28 @@ A
 A
 17 -10
 #19813
-espada dragão~
-a espada do dragão~
+espada dragao~
+a espada do dragÃ£o~
 Uma espada foi deixada aqui.~
 ~
 5 gin 0 0 0 an 0 0 0 0 0 0 0
 0 5 6 3
 5 200000 30 0 0
 E
-espada dragão~
-É uma linda espada ornada com dragões por toda a lâmina.
+espada dragao~
+Ã‰ uma linda espada ornada com dragÃµes por toda a lÃ¢mina.
 ~
 #19814
 bola fogo~
 uma bola de fogo~
-Uma bola de fogo flutua sem razão aparente.~
+Uma bola de fogo flutua sem razÃ£o aparente.~
 ~
 1 abgiop 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
 2 30000 0 0 0
 E
 bola fogo~
-Esta bola de fogo traz a chama da magia. Você percebe que ela nunca irá apagar.
+Esta bola de fogo traz a chama da magia. VocÃª percebe que ela nunca irÃ¡ apagar.
 ~
 A
 12 100
@@ -171,9 +171,9 @@ A
 A
 24 -10
 #19815
-chifre unicórnio~
-um chifre de unicórnio~
-Um chifre de unicórino está jogado aqui no chão~
+chifre unicornio~
+um chifre de unicÃ³rnio~
+Um chifre de unicÃ³rino estÃ¡ jogado aqui no chÃ£o~
 ~
 8 abfi 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -194,7 +194,7 @@ Um escudo foi deixado no canto~
 10 150000 50 0 0
 E
 escudo verde~
-Este escudo verde traz desenhado o símbolo do demônio verde.
+Este escudo verde traz desenhado o sÃ­mbolo do demÃ´nio verde.
 ~
 A
 5 2
@@ -208,7 +208,7 @@ Um escudo vermelho foi deixado no canto.~
 10 150000 55 0 0
 E
 escudo vermelho~
-Este escudo vermelho traz desenhado o símbolo do demônio vermelho
+Este escudo vermelho traz desenhado o sÃ­mbolo do demÃ´nio vermelho
 ~
 A
 19 2
@@ -222,7 +222,7 @@ Um escudo amarelo foi deixado no canto.~
 10 0 0 60 0
 E
 escudo amarelo~
-Este escudo amarelo traz desenhado o símbolo do demônio amarelo.
+Este escudo amarelo traz desenhado o sÃ­mbolo do demÃ´nio amarelo.
 ~
 A
 12 100
@@ -237,31 +237,31 @@ Um materialista choraria ao ver tamanho tesouro.~
 #19820
 kris faca malaia~
 uma kris malaia~
-Há uma faca com um formato estranho no chão.~
+HÃ¡ uma faca com um formato estranho no chÃ£o.~
 ~
 5 ai 0 0 0 ano 0 0 0 0 0 0 0
 0 2 6 1
 5 25000 0 0 0
 E
 kris malaia faca~
-Esta kris parece ter sido usada muitas vezes em algum ritual pois há um pouco
-de sangue seco nela. O formato ondulado de sua lâmina poderia causar bastante
+Esta kris parece ter sido usada muitas vezes em algum ritual pois hÃ¡ um pouco
+de sangue seco nela. O formato ondulado de sua lÃ¢mina poderia causar bastante
 dano aos seus oponentes. Ela parece ideal para um assassino ou algo assim...
 ~
 A
 17 -5
 #19821
-medalhão proteção~
-um medalhão de proteção~
-Há uma corrente com um medalhão na ponta no chão.~
+medalhao protecao~
+um medalhÃ£o de proteÃ§Ã£o~
+HÃ¡ uma corrente com um medalhÃ£o na ponta no chÃ£o.~
 ~
 11 a 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
 2 130000 0 0 0
 E
-medalhão corrente proteção~
-A figura de um homem simples mas de aparencia poderosa está cravada no medalhão.
-Ele parece emanar uma força mística de proteção e magia.
+medalhao corrente protecao~
+A figura de um homem simples mas de aparencia poderosa estÃ¡ cravada no medalhÃ£o.
+Ele parece emanar uma forÃ§a mÃ­stica de proteÃ§Ã£o e magia.
 ~
 A
 6 2
@@ -271,29 +271,29 @@ A
 17 -3
 #19822
 varinha magica estrela~
-uma varinha mágica~
-Uma vara com uma estrela na ponta foi deixada no chão~
+uma varinha mÃ¡gica~
+Uma vara com uma estrela na ponta foi deixada no chÃ£o~
 ~
 3 ai 0 0 0 ao 0 0 0 0 0 0 0
 10 1 1 54
 2 50000 0 0 0
 E
 varinha vara magica estrela~
-Vários símbolos místicos de proteção estão desenhados nesta vara.  Você não é
+VÃ¡rios sÃ­mbolos mÃ­sticos de proteÃ§Ã£o estÃ£o desenhados nesta vara.  VocÃª nÃ£o Ã©
 capaz, no entanto, de saber qual sua utilidade..
 ~
 #19823
 armadura pesada~
 uma armadura pesada~
-Uma bela e resistente armadura está no chão aqui.~
+Uma bela e resistente armadura estÃ¡ no chÃ£o aqui.~
 ~
 9 ai 0 0 0 ad 0 0 0 0 0 0 0
 16 0 0 0
 13 50000 0 80 0
 E
 armadura pesada~
-Esta armadura parece absorver a maior parte dos golpes que um possível
-adversário viesse a desferir contra você. É muita antiga e resistente tambem.
+Esta armadura parece absorver a maior parte dos golpes que um possÃ­vel
+adversÃ¡rio viesse a desferir contra vocÃª. Ã‰ muita antiga e resistente tambem.
 Ela brilha como nova!
 ~
 A
@@ -303,42 +303,42 @@ A
 #19824
 cinto prateado~
 um cinto prateado~
-O reflexo do brilho de um cinto prateado cega você.~
+O reflexo do brilho de um cinto prateado cega vocÃª.~
 ~
 9 abgijl 0 0 0 al 0 0 0 0 0 0 0
 5 0 0 0
 2 0 0 0 0
 E
 cinto prateado~
-Este cinto parece ser parte de um conjunto de armaduras há muito roubado de um
-cavaleiro na Torre de Rand.. onde andaria o restante dos equipamentos? Mistério!
+Este cinto parece ser parte de um conjunto de armaduras hÃ¡ muito roubado de um
+cavaleiro na Torre de Rand.. onde andaria o restante dos equipamentos? MistÃ©rio!
 ~
 #19825
 perneiras andarilho~
 as perneiras do andarilho~
-Um par de perneiras foi deixada no chão.~
+Um par de perneiras foi deixada no chÃ£o.~
 ~
 9 0 0 0 0 af 0 0 0 0 0 0 0
 10 0 0 0
 2 500000 0 60 0
 E
 perneiras andarilho~
-Estas perneiras são leves, confortáveis e resistentes...boas para um aventureiro
-que gosta de caminhar e explorar como VOCÊ!
+Estas perneiras sÃ£o leves, confortÃ¡veis e resistentes...boas para um aventureiro
+que gosta de caminhar e explorar como VOCÃŠ!
 ~
 A
 14 80
 #19826
-crânio caveira cabeça~
-uma cabeça de caveira~
-Um crânio está jogado no canto.~
+cranio caveira cabeca~
+uma cabeÃ§a de caveira~
+Um crÃ¢nio estÃ¡ jogado no canto.~
 ~
 8 abij 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 2 10000 0 0 0
 E
-crânio caveira cabeça~
-Uma cabeça de caveira..  será que isso dá sorte?
+cranio caveira cabeca~
+Uma cabeÃ§a de caveira..  serÃ¡ que isso dÃ¡ sorte?
 ~
 A
 12 50
@@ -347,7 +347,7 @@ A
 #19827
 tesouro pedras preciosas~
 um tesouro de pedras preciosas~
-Um amontoado de pedras preciosas está aqui.~
+Um amontoado de pedras preciosas estÃ¡ aqui.~
 ~
 8 a 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -358,16 +358,16 @@ Elas tem um brilho intenso. Devem valer uma fortuna!!!
 ~
 #19828
 arco escura ebano madeira~
-Um arco de ébano~
-Há uma linda peça de madeira escura no chão~
+Um arco de Ã©bano~
+HÃ¡ uma linda peÃ§a de madeira escura no chÃ£o~
 ~
 5 ikr 0 0 0 an 0 0 0 0 0 0 0
 0 2 12 12
 6 100000 0 40 0
 E
-arco escura ébano madeira~
-É uma peça muito bem trabalhada de madeira maciça e escura como a noite.  Há
-algo de mágico nesta bela arma.
+arco escura ebano madeira~
+Ã‰ uma peÃ§a muito bem trabalhada de madeira maciÃ§a e escura como a noite.  HÃ¡
+algo de mÃ¡gico nesta bela arma.
 ~
 A
 5 1
