@@ -883,9 +883,6 @@ void command_interpreter(struct char_data *ch, char *argument)
 			send_to_char(ch, "Comando Calculado %s  tipo %f arg1 %f %f arg2 %f %f \r\n",
 						 cmd_info[(int)calc_output[0]].command, calc_output[1],
 						 calc_output[2], calc_output[3], calc_output[4], calc_output[5]);
-			send_to_char(ch, "Comando Executado %s  tipo %f arg1 %f %f arg2 %f %f \r\n",
-						 cmd_info[(int)output[0]].command, output[1], output[2], output[3],
-						 output[4], output[5]);
 		}
 		fann_save(ann, "etc/aventureiro.fann");
 		fann_destroy(ann);
