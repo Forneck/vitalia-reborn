@@ -6,25 +6,24 @@ Clas: 4
 Levl: 22
 Id  : 6
 Brth: 1603323580
-Plyd: 27338
-Last: 1603994420
+Plyd: 27710
+Last: 1603996502
 Lmot: 1603324480
 Lnew: 1603323627
 Htwn: 3001
 Host: 189.120.73.49
 Hite: 161
 Wate: 139
-Alin: -370
-Act : hl 0 0 0
+Alin: -298
+Act : ghl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
-Room: 1667
-Lern: 10
-Hung: 10
-Thir: 13
-Hit : 248/257
+Room: 5518
+Lern: 9
+Thir: 21
+Hit : 236/257
 Mana : 237/237
-Move: 96/126
+Move: 63/126
 Str : 17/0
 Int : 9
 Wis : 11
@@ -32,21 +31,19 @@ Dex : 15
 Con : 12
 Cha : 8
 Ac  : 100
-Gold: 154102
-Exp : 3349073
+Gold: 162352
+Exp : 3536320
 Olc : 0
 Skil:
 222 80
 224 48
 231 80
+243 25
 0 0
-Affs:
-36 10 0 33 256 0 0 0
-0 0 0 0 0 0 0 0
 Alis: 2
- say
- say @g$*@n
-1
  bash
  bash $*;st
+1
+ say
+ say @g$*@n
 1
