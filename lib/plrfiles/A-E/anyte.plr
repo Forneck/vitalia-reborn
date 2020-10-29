@@ -7,7 +7,7 @@ Levl: 22
 Id  : 6
 Brth: 1603323580
 Plyd: 27710
-Last: 1603996502
+Last: 1603997581
 Lmot: 1603324480
 Lnew: 1603323627
 Htwn: 3001
@@ -15,7 +15,7 @@ Host: 189.120.73.49
 Hite: 161
 Wate: 139
 Alin: -298
-Act : ghl 0 0 0
+Act : hl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
 Room: 5518
@@ -35,15 +35,17 @@ Gold: 162352
 Exp : 3536320
 Olc : 0
 Skil:
+7 100
+95 100
 222 80
 224 48
 231 80
 243 25
 0 0
 Alis: 2
+ 1
+ say
+0
  bash
  bash $*;st
-1
- say
- say @g$*@n
-1
+0
