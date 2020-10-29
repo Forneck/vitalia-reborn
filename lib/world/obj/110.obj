@@ -1,34 +1,34 @@
 #11000
 elmo luetn'amir metal esverdeado~
-&Go elmo de luetn'amir&n~
+@Go elmo de luetn'amir@n~
 Um majestoso elmo de metal esverdeado foi esquecido aqui.~
 ~
-9 acdeq 0 0 0 ae 0 0 0 0 0 0 0
+9 aqdce ae 0
 14 0 0 0
-20 0 0 101 0
-E
-viseira~
-� simplesmente a perfeita face de um impass�vel drag�o.  Tocando-a, voc�
-inesperadamente constata que ela n�o possui a dureza do metal e sim, passa a
-Sensa��o de estar-se em contato com a face de um desses seres.  Os olhos, ao
-inv�s de serem dois orif�cios que permitem a vis�o de quem usa o artigo, s�o
-duas �rbitas de extremo realismo que parecem o examinar, com suas �ris
-vermelhas, do mesmo jeito com que voc� os examina; o mais interessante �
-que, mesmo assim, quem usa abaixa essa viseira sobre o elmo consegue ver
-perfeitamente.  Por fim, voc� repara nas duas grandes presas que saem da
-boca da viseira: ainda bem que � de mentira...
-~
+20 0 0 101
 E
 elmo luetn'amir metal esverdeado~
-Voc� examina surpreso esse belo elmo pois � dif�cil n�o identificar o
-precioso metal com que ele foi feito: luetn'amir, a pedra de drag�o, um raro
+Você examina surpreso esse belo elmo pois é difícil não identificar o
+precioso metal com que ele foi feito: luetn'amir, a pedra de dragão, um raro
 mineral encontrado em grandes minas no interior das Montanhas Dragonhelm.
-H� muitos s�culos n�o se v� uma pe�a feita desse material pois ele �
+Há muitos séculos não se vê uma peça feita desse material pois ele é
 cuidadosamente guardado pelos estranhos seres que habitam a cordilheira
-norte.  Na parte superior do elmo voc� ainda observa, maravilhado, o s�mbolo
-que a muito tempo pareceu desaparecer do conhecimento dos mortais: o Bras�o
-de Vit�lia.  A viseira tamb�m � bastante... extraordin�ria. Definitivamente,
-� uma honra ter ente objeto em suas m�os.
+norte.  Na parte superior do elmo você ainda observa, maravilhado, o símbolo
+que a muito tempo pareceu desaparecer do conhecimento dos mortais: o Brasão
+de Vitália.  A viseira também é bastante... extraordinária. Definitivamente,
+é uma honra ter ente objeto em suas mãos.
+~
+E
+viseira~
+É simplesmente a perfeita face de um impassível dragão.  Tocando-a, você
+inesperadamente constata que ela não possui a dureza do metal e sim, passa a
+Sensação de estar-se em contato com a face de um desses seres.  Os olhos, ao
+invés de serem dois orifícios que permitem a visão de quem usa o artigo, são
+duas órbitas de extremo realismo que parecem o examinar, com suas íris
+vermelhas, do mesmo jeito com que você os examina; o mais interessante é
+que, mesmo assim, quem usa abaixa essa viseira sobre o elmo consegue ver
+perfeitamente.  Por fim, você repara nas duas grandes presas que saem da
+boca da viseira: ainda bem que é de mentira...
 ~
 A
 3 1
@@ -39,22 +39,22 @@ A
 A
 11 10
 #11001
-coura�a esverdeado luetn'amir metal~
-&Ga coura�a de luetn'amir&n~
-H� no ch�o uma coura�a de metal esverdeado fulgurando � luz do Sol.~
+couraça esverdeado luetn'amir metal~
+@Ga couraça de luetn'amir@n~
+Há no chão uma couraça de metal esverdeado fulgurando à luz do Sol.~
 ~
-9 acdeq 0 0 0 ad 0 0 0 0 0 0 0
+9 aqdce ad 0
 17 0 0 0
-40 0 0 101 0
+40 0 0 101
 E
-coura�a esverdeado luetn'amir metal~
-Impressionante!  Essa coura�a parece ter sido na verdade extra�da do tronco
-de algum raro drag�o de metal, e n�o feita a partir de luetn'amir, a verde
-"pedra do drag�o".  A parte do dorso imita perfeitamente o couro de um
+couraça esverdeado luetn'amir metal~
+Impressionante!  Essa couraça parece ter sido na verdade extraída do tronco
+de algum raro dragão de metal, e não feita a partir de luetn'amir, a verde
+"pedra do dragão".  A parte do dorso imita perfeitamente o couro de um
 desses poderosos seres, tendo enormes espinhos acompanhando a coluna
 vertebral por entre as grossas escamas.  A parte frontal, lisa, ostenta o
 que se chamaria de uma grande "tatuagem" que brilha levemente.  Trata-se,
-nada mais nada menos, do Bras�o de Vit�lia.
+nada mais nada menos, do Brasão de Vitália.
 ~
 A
 5 2
@@ -65,24 +65,24 @@ A
 A
 18 1
 #11002
-amuleto pedra drag�o~
-&Go amuleto Pedra do Drag�o&n~
+amuleto pedra dragao~
+@Go amuleto Pedra do Dragão@n~
 Um estranho amuleto flutua acima do solo, brilhando cada vez mais intensamente
-� medida que voc� se aproxima.~
+à medida que você se aproxima.~
 ~
-11 acdeq 0 0 0 ac 0 0 0 defgl 0 0 0
+11 aqdce ac cdefk
 0 0 0 0
-10 0 0 101 0
+10 0 0 101
 E
-amuleto pedra drag�o~
-N�o � s� pela sua apar�ncia, mas voc� sabe que esse amuleto � especial.  At�
-a pessoa mais insens�vel desse mundo sentiria a pulsante emana��o de for�a
-que se desprende desse artefato, provocando em voc� uma repentina onda de
-calor por todo seu corpo. Mais que esse calor, voc� tem uma s�bita sensa��o
-de paz, um r�pido instante em que voc� parece entender tudo, parece saber
-perfeitamente quem � e o que �, de onde voc� veio e para onde vai. Dura
-apenas um segundo essa completa sensa��o de n�o haver mais d�vidas, mas
-� o suficiente para faz�-lo admirar ainda mais esse estranho amuleto.
+amuleto pedra dragao~
+Não é só pela sua aparência, mas você sabe que esse amuleto é especial.  Até
+a pessoa mais insensível desse mundo sentiria a pulsante emanação de força
+que se desprende desse artefato, provocando em você uma repentina onda de
+calor por todo seu corpo. Mais que esse calor, você tem uma súbita sensação
+de paz, um rápido instante em que você parece entender tudo, parece saber
+perfeitamente quem é e o que é, de onde você veio e para onde vai. Dura
+apenas um segundo essa completa sensação de não haver mais dúvidas, mas
+é o suficiente para fazê-lo admirar ainda mais esse estranho amuleto.
 ~
 A
 4 2
@@ -96,20 +96,20 @@ A
 18 1
 #11003
 anel luetn'amir chancela~
-&Go anel de chancela&n~
-Um pequeno aro de luetn'amir foi cuidadosamente depositado no ch�o.~
+@Go anel de chancela@n~
+Um pequeno aro de luetn'amir foi cuidadosamente depositado no chão.~
 ~
-9 acdeq 0 0 0 ab 0 0 0 0 0 0 0
+9 aqdce ab 0
 0 0 0 0
-10 0 0 101 0
+10 0 0 101
 E
 anel luetn'amir chancela~
-Esse anel cabe perfeitamente em qualquer dedo de sua m�o.  Estranho isso,
-n�o?  Mas, j� que voc� aprendeu que quando se trabalha com esse rar�ssimo
-metal viridente que � o luetn'amir nada � estranho demais, se conforma em
+Esse anel cabe perfeitamente em qualquer dedo de sua mão.  Estranho isso,
+não?  Mas, já que você aprendeu que quando se trabalha com esse raríssimo
+metal viridente que é o luetn'amir nada é estranho demais, se conforma em
 continuar sem entender muita coisa e simplesmente admirar a beleza de tudo.
-Deixando suas divaga��es, voc� examina mais atentamente a parte iscrita da
-j�ia: ali est� representado nada mais nada menos do que o Selo de Vit�lia.
+Deixando suas divagações, você examina mais atentamente a parte iscrita da
+jóia: ali está representado nada mais nada menos do que o Selo de Vitália.
 ~
 A
 17 -10
@@ -120,22 +120,22 @@ A
 A
 19 2
 #11004
-escudo pedra drag�o luetn'amir metal esverdeado~
-&Go escudo Pedra do Drag�o&n~
-Algu�m muito desleixado esqueceu aqui um imenso escudo de metal esverdeado.~
+escudo pedra dragao luetn'amir metal esverdeado~
+@Go escudo Pedra do Dragão@n~
+Alguém muito desleixado esqueceu aqui um imenso escudo de metal esverdeado.~
 ~
-9 acdeq 0 0 0 aj 0 0 0 0 0 0 0
+9 aqdce aj 0
 15 0 0 0
-30 0 0 101 0
+30 0 0 101
 E
-escudo pedra drag�o luetn'amir metal esverdeado~
+escudo pedra dragao luetn'amir metal esverdeado~
 Extremamente grande, mas nada pesado, esse escudo consegue proteger sem
-atrapalhar os movimentos de que o usa.  O material usado s� pode ser
-luetn'amir fundido, sendo que a parte externa da pe�a recebeu incrusta��es
+atrapalhar os movimentos de que o usa.  O material usado só pode ser
+luetn'amir fundido, sendo que a parte externa da peça recebeu incrustações
 do mineral em seu estado bruto.  Essas mesmas formam figuras que representam
-dois drag�es duelando, os guerreiros em combate.  Na parte posterior, entre
-runas de prote��o, voc� consegue identificar, marcado com �cido sobre o
-metal, o Bras�o de Vit�lia.
+dois dragões duelando, os guerreiros em combate.  Na parte posterior, entre
+runas de proteção, você consegue identificar, marcado com ácido sobre o
+metal, o Brasão de Vitália.
 ~
 A
 1 1
@@ -146,23 +146,23 @@ A
 A
 4 1
 #11005
-garras met�licas luetn'amir drag�o~
-&GGarras do Drag�o&n~
-Um par de estranhas garras met�licas foram perdidas aqui.~
+garras metalicas luetn'amir dragao~
+@GGarras do Dragão@n~
+Um par de estranhas garras metálicas foram perdidas aqui.~
 ~
-9 acdeq 0 0 0 ah 0 0 0 0 0 0 0
+9 aqdce ah 0
 10 0 0 0
-20 0 0 101 0
+20 0 0 101
 E
-garras met�licas luetn'amir drag�o~
-De apar�ncia assustadora, essas manoplas em forma de garras s�o enormes, por
-fora, e ao mesmo tempo do tamanho exato para envolver suas m�os, por dentro.
+garras metalicas luetn'amir dragao~
+De aparência assustadora, essas manoplas em forma de garras são enormes, por
+fora, e ao mesmo tempo do tamanho exato para envolver suas mãos, por dentro.
 O tom esverdeado do luetn'amir e a forma com que foi feito (escamas
-sobrepostas e depois fundidas) d�o a sensa��o dessas pe�as terem sido
-cortadas de um verdadeiro drag�o de metal.  O grande n�mero de articula��es
-e de um complexo, por�m quase impercept�vel, sistema de lubrifica��o deixam
-essas garras ainda mais realistas.  H� tamb�m na "palma" uma grande tatuagem
-simbolizando o Bras�o de Vit�lia.  Voc� n�o consegue tirar da cabe�a que
+sobrepostas e depois fundidas) dão a sensação dessas peças terem sido
+cortadas de um verdadeiro dragão de metal.  O grande número de articulações
+e de um complexo, porém quase imperceptível, sistema de lubrificação deixam
+essas garras ainda mais realistas.  Há também na "palma" uma grande tatuagem
+simbolizando o Brasão de Vitália.  Você não consegue tirar da cabeça que
 todo esse realismo tem origem duvidosa...
 ~
 A
@@ -172,26 +172,26 @@ A
 A
 2 2
 #11006
-manto verde-musgo drag�o~
-&Go Manto do Drag�o&n~
-Um soberbo manto verde-musgo foi cuidadosamente dobrado e deixado no ch�o.~
+manto verde-musgo dragao~
+@Go Manto do Dragão@n~
+Um soberbo manto verde-musgo foi cuidadosamente dobrado e deixado no chão.~
 ~
-9 acdeq 0 0 0 ak 0 0 0 i 0 0 0
+9 aqdce ak h
 15 0 0 0
-15 0 0 101 0
+15 0 0 101
 E
-manto verde-musgo drag�o~
-Visto de um �ngulo parece veludo.  Mas n�o �.  Visto de outro, parece seda.
-Mas tamb�m n�o �.  Talvez linho?  Algod�o?  N�o...  Pode parecer estranho,
-mas esse tecido foi feito a partir de fios de barba de drag�o.  Voc� n�o tem
-como saber se foi tingido ou n�o j� que n�o sabe qual a cor da barba de um
-drag�o mas agora, tendo esse manto em m�os, consegue dizer que � uma
-excelente mat�ria-prima para as mais ricas fazendas ...  E al�m de
-bel�ssimo, esse manto tamb�m � pr�tico: duas grandes presilhas de luetn'amir
-permitem que, com com quatro orif�cos que servem perfeitamente nos espinhos
+manto verde-musgo dragao~
+Visto de um ângulo parece veludo.  Mas não é.  Visto de outro, parece seda.
+Mas também não é.  Talvez linho?  Algodão?  Não...  Pode parecer estranho,
+mas esse tecido foi feito a partir de fios de barba de dragão.  Você não tem
+como saber se foi tingido ou não já que não sabe qual a cor da barba de um
+dragão mas agora, tendo esse manto em mãos, consegue dizer que é uma
+excelente matéria-prima para as mais ricas fazendas ...  E além de
+belíssimo, esse manto também é prático: duas grandes presilhas de luetn'amir
+permitem que, com com quatro orifícos que servem perfeitamente nos espinhos
 do gorjal, ele seja preso nos ombros do guerreiro, o que evita perda de
-agilidade durante um combate.  Por fim, voc� v�, bordado com fios de ouro,
-um perfeito Bras�o de Vit�lia.
+agilidade durante um combate.  Por fim, você vê, bordado com fios de ouro,
+um perfeito Brasão de Vitália.
 ~
 A
 6 2
@@ -204,21 +204,21 @@ A
 A
 18 1
 #11007
-cal�as couro drag�o~
-&Gcal�as de couro de drag�o&n~
-Um par de cal�as feitas de um couro muito estranho foi deixado aqui.~
+calcas couro dragao~
+@Gcalças de couro de dragão@n~
+Um par de calças feitas de um couro muito estranho foi deixado aqui.~
 ~
-9 acdeq 0 0 0 af 0 0 0 0 0 0 0
+9 aqdce af 0
 10 0 0 0
-15 0 0 101 0
+15 0 0 101
 E
-cal�as couro drag�o~
-Voc� n�o sabe se classifica essa cal�a como sendo horrenda ou maravilhosa!
-� simplesmente estranh�ssimo o couro dela: de escamas verde-musgo, brilha
-como se fosse de um metal verde enferrujado.  O mais espantoso s�o os
+calcas couro dragao~
+Você não sabe se classifica essa calça como sendo horrenda ou maravilhosa!
+É simplesmente estranhíssimo o couro dela: de escamas verde-musgo, brilha
+como se fosse de um metal verde enferrujado.  O mais espantoso são os
 pequenos espinhos nas laterais da veste e os grandes espinhos na parte do
-joelho, todos eles naturais do couro do drag�o.  Definitivamente, voc� n�o
-gostaria de encontrar um drag�o do tipo que forneceu esse material...
+joelho, todos eles naturais do couro do dragão.  Definitivamente, você não
+gostaria de encontrar um dragão do tipo que forneceu esse material...
 ~
 A
 2 2
@@ -231,27 +231,27 @@ A
 A
 6 1
 #11008
-bra�ais drag�o bra�os~
-&GBra�ais do Drag�o&n~
-Um enorme par de bra�ais semelhantes aos bra�os de um drag�o foram perdidos
+bracais dragao bracos~
+@GBraçais do Dragão@n~
+Um enorme par de braçais semelhantes aos braços de um dragão foram perdidos
 por aqui.~
 ~
-9 acdeq 0 0 0 ai 0 0 0 0 0 0 0
+9 aqdce ai 0
 10 0 0 0
-20 0 0 101 0
+20 0 0 101
 E
-bra�ais drag�o bra�os~
-Esses bra�ais se encaixam perfeitamente nas Garras do Drag�o, fazendo com
-que quem as use juntas pare�a ter enorme bra�os de drag�o.  O padr�o
-utilizado no material das Garras tamb�m foi mantido: escamas sobrepostas de
-luetn'amir que, ap�s serem fundidas para se manterem juntas, de t�o
-realistas tornam poss�vel pensar-se que esses bra�ais foram parte do corpo
-de algum estranho drag�o de metal.  A maior das qualidades desses
-verdadeiros "bra�os" � que, ao contr�rio de pe�as comuns, n�o afeta a
-agilidade do guerreiro que os utiliza, j� que um complexo sistema de
-articula��es, lubrifica��o e amortecimento foi neles empregado.  Observando
-mais de perto cada um dos bra�ais, voc� percebe na regi�o que seria o b�ceps
-uma bela "tatuagem" do Bras�o de Vit�lia.
+bracais dragao bracos~
+Esses braçais se encaixam perfeitamente nas Garras do Dragão, fazendo com
+que quem as use juntas pareça ter enorme braços de dragão.  O padrão
+utilizado no material das Garras também foi mantido: escamas sobrepostas de
+luetn'amir que, após serem fundidas para se manterem juntas, de tão
+realistas tornam possível pensar-se que esses braçais foram parte do corpo
+de algum estranho dragão de metal.  A maior das qualidades desses
+verdadeiros "braços" é que, ao contrário de peças comuns, não afeta a
+agilidade do guerreiro que os utiliza, já que um complexo sistema de
+articulações, lubrificação e amortecimento foi neles empregado.  Observando
+mais de perto cada um dos braçais, você percebe na região que seria o bíceps
+uma bela "tatuagem" do Brasão de Vitália.
 ~
 A
 18 2
@@ -262,24 +262,24 @@ A
 A
 12 50
 #11009
-dente drag�o beb�~
-&Go Dente de Drag�o-beb�&n~
-Um pequeno dente de drag�o-beb� foi esquecido aqui.~
+dente dragao bebe~
+@Go Dente de Dragão-bebê@n~
+Um pequeno dente de dragão-bebê foi esquecido aqui.~
 ~
-11 acdeq 0 0 0 aq 0 0 0 0 0 0 0
+11 aqdce aq 0
 0 0 0 0
-1 0 0 101 0
+1 0 0 101
 E
-dente drag�o beb�~
-Esse dente n�o � T�O pequeno assim n�o...  Alias, � bem grande: do tamanho
-de seu dedo m�dio (agora, imagine se fosse de um drag�o adulto...).
-Extremamente pontiagudo e branco (v�-se ou que os drag�es-beb� t�m dentes
-bem cuidados ou que simplesmente essa pe�a foi muito bem polida), o
+dente dragao bebe~
+Esse dente não é TÃO pequeno assim não...  Alias, é bem grande: do tamanho
+de seu dedo médio (agora, imagine se fosse de um dragão adulto...).
+Extremamente pontiagudo e branco (vê-se ou que os dragões-bebê têm dentes
+bem cuidados ou que simplesmente essa peça foi muito bem polida), o
 "pequeno" dente foi preso como um pingente em um simples gancho de
 luetn'amir, servindo perfeitamente de brinco.  O guerreiro que o usar
-decididamente ganhar� um ar meio... selvagem.
+decididamente ganhará um ar meio... selvagem.
 ~
-A
+A 
 17 -6
 A
 3 2
@@ -288,45 +288,45 @@ A
 A
 13 10
 #11010
-espada drag�o brilho esverdeado~
-&Ga Espada do Drag�o&n~
-Voc� percebe que o estranho brilho esverdeado � sua frente nada mais � que
-uma enorme espada fincada no ch�o.~
+espada dragao brilho esverdeado~
+@Ga Espada do Dragão@n~
+Você percebe que o estranho brilho esverdeado à sua frente nada mais é que
+uma enorme espada fincada no chão.~
 ~
-5 acdegqr 0 0 0 an 0 0 0 0 0 0 0
+5 aqgdcer an 0
 0 7 5 3
-30 0 0 101 0
+30 0 0 101
 E
-l�mina~
-Comprida e larga, a l�mina foi feita com um raro luetn'amir (luetn'amir j� �
-um metal raro...  Imagine um luetn'amir mais raro ainda...) de tonalidade
-verde-�gua.  Extremamente duro, nada parece quebrar esse metal.  Voc� tenta
-imaginar que tipo de forja teria conseguido fazer t�o perfeita arma, mas
-nada que seus olhos j� tenham visto consegue dar-lhe uma id�ia...  H� sobre
-a perfeita superfic�e da l�mina s�mbolos que voc� n�o conhece e, da ponta �
-parte ligada � empunhadura, a figura de um enorme drag�o carregando um
-estandarte com o Bras�o de Vit�lia.
+espada dragao brilho esverdeado~
+Gigantesca.  Essa é a palavra.  Você não sabe como um homem consegue
+segurá-la (se é que consegue) de tão grande ela é. Facilmente
+identifica-se o material usado nessa arma: só pode ser luetn'amir...
+Uma forte luz esverdedada irradia dela e, quando você a toca, transmite
+parte do brilho à sua pele, mas apenas por alguns instantes. Da empunhadura à
+lâmina, tudo o supreende, amedronta e causa reverência.
 ~
 E
 empunhadura~
-A empunhadura � monstruosamente linda, representando um drag�o em pleno v�o
-que, com todos os detalhes, engole a l�mina.  A monstruosidade dela d�-se
-pelo fato que o corpo do drag�o � levemente quente e n�o totalmente duro,
-como seria uma empunhadura de metal comum, sendo perfeitamente adapt�vel �
-qualquer guerreiro.  � como se fosse o corpo de um drag�o em miniatura.
-Outros detalhes interessantes s�o os dentes do drag�o, feitos de um material
-parecido com marfim, e os olhos com p�lpebras que abrem e fecham, mostrando
-as avermelhadas �ris em formato de fenda que se expande ou contrai, dependendo
-da luz . Voc� estremece ao pensar que tavez ele esteja o vendo...
+A empunhadura é monstruosamente linda, representando um dragão em pleno vôo
+que, com todos os detalhes, engole a lâmina.  A monstruosidade dela dá-se
+pelo fato que o corpo do dragão é levemente quente e não totalmente duro,
+como seria uma empunhadura de metal comum, sendo perfeitamente adaptável à
+qualquer guerreiro.  É como se fosse o corpo de um dragão em miniatura.
+Outros detalhes interessantes são os dentes do dragão, feitos de um material
+parecido com marfim, e os olhos com pálpebras que abrem e fecham, mostrando
+as avermelhadas íris em formato de fenda que se expande ou contrai, dependendo
+da luz . Você estremece ao pensar que tavez ele esteja o vendo...
 ~
 E
-espada drag�o brilho esverdeado~
-Gigantesca.  Essa � a palavra.  Voc� n�o sabe como um homem consegue
-segur�-la (se � que consegue) de t�o grande ela �. Facilmente
-identifica-se o material usado nessa arma: s� pode ser luetn'amir...
-Uma forte luz esverdedada irradia dela e, quando voc� a toca, transmite
-parte do brilho � sua pele, mas apenas por alguns instantes. Da empunhadura �
-l�mina, tudo o supreende, amedronta e causa rever�ncia.
+lamina~
+Comprida e larga, a lâmina foi feita com um raro luetn'amir (luetn'amir já é
+um metal raro...  Imagine um luetn'amir mais raro ainda...) de tonalidade
+verde-água.  Extremamente duro, nada parece quebrar esse metal.  Você tenta
+imaginar que tipo de forja teria conseguido fazer tão perfeita arma, mas
+nada que seus olhos já tenham visto consegue dar-lhe uma idéia...  Há sobre
+a perfeita superficíe da lâmina símbolos que você não conhece e, da ponta à
+parte ligada à empunhadura, a figura de um enorme dragão carregando um
+estandarte com o Brasão de Vitália.
 ~
 A
 18 8
@@ -340,19 +340,19 @@ A
 1 -2
 #11011
 bracelete luetn'amir~
-&Go bracelete de luetn'amir&n~
-Um grande bracelete de luetn'amir foi esquecido no ch�o.~
+@Go bracelete de luetn'amir@n~
+Um grande bracelete de luetn'amir foi esquecido no chão.~
 ~
-11 acdeq 0 0 0 am 0 0 0 0 0 0 0
+11 aqdce am 0
 0 0 0 0
-5 0 0 101 0
+5 0 0 101
 E
 bracelete luetn'amir~
-Esse bracelete serve perfeitamente para ser usado com as Garras e os Bra�ais
-do Drag�o pois, n�o s� � feito do mesmo material, como d� mais firmeza em
-seu uso.  Semelhante ao couro de drag�o (semelhante demais pro seu
+Esse bracelete serve perfeitamente para ser usado com as Garras e os Braçais
+do Dragão pois, não só é feito do mesmo material, como dá mais firmeza em
+seu uso.  Semelhante ao couro de dragão (semelhante demais pro seu
 gosto...), grandes espinhos foram dispostos entre as escamas por toda a
-extens�o do bracelete, dando-lhe um aspecto brutal.
+extensão do bracelete, dando-lhe um aspecto brutal.
 ~
 A
 17 -7
@@ -363,26 +363,26 @@ A
 A
 1 1
 #11012
-botas pernas couro drag�o~
-&GBotas de Drag�o&n~
-Um par de pernas... pernas n�o, botas de couro de drag�o, foi esquecido aqui.~
+botas pernas couro dragao~
+@GBotas de Dragão@n~
+Um par de pernas... pernas não, botas de couro de dragão, foi esquecido aqui.~
 ~
-9 acdeq 0 0 0 ag 0 0 0 0 0 0 0
+9 aqdce ag 0
 10 0 0 0
-20 0 0 101 0
+20 0 0 101
 E
-botas pernas couro drag�o~
-Voc� olha...  Olha...  E olha para esse par de botas (ser�?) e tenda definir
+botas pernas couro dragao~
+Você olha...  Olha...  E olha para esse par de botas (será?) e tenda definir
 o que sente.  Horripilantemente maravilhado?  Maravilhosamente assustado?
-Voc� n�o sabe.  � simplesmente indescrit�vel o que essas botas
-possibilitam: voc� realmente parece ter patas de drag�o usando-as.  Seus p�s
-cabem perfeitamente dentro das enormes patas de onde tr�s grandes garras se
-projetam para frente, de tr�s dedos, e uma menor sai dos calcanhares de um
+Você não sabe.  É simplesmente indescritível o que essas botas
+possibilitam: você realmente parece ter patas de dragão usando-as.  Seus pés
+cabem perfeitamente dentro das enormes patas de onde três grandes garras se
+projetam para frente, de três dedos, e uma menor sai dos calcanhares de um
 dedo menor.  Surpreendentemente, os dedos das "patas", mesmo sendo elas
 bastante pesadas, parecem agilizar seu andar e facilitar saltos.  Muito
-engenhoso isso...  O material empregado � o mesmo couro de drag�o usado nas
-cal�as, sendo que os espinhos dessa vez ficaram exatamente sobre o peito
-dos p�s. De resto, voc� est� sem palavras...
+engenhoso isso...  O material empregado é o mesmo couro de dragão usado nas
+calças, sendo que os espinhos dessa vez ficaram exatamente sobre o peito
+dos pés. De resto, você está sem palavras...
 ~
 A
 1 1
@@ -397,23 +397,23 @@ A
 A
 14 100
 #11013
-gorjal drag�o luetn'amir metal esverdeado~
-&Go Gorjal do Drag�o&n~
-Um ex�tico gorjal de metal esverdeado foi perdido aqui.~
+gorjal dragao luetn'amir metal esverdeado~
+@Go Gorjal do Dragão@n~
+Um exótico gorjal de metal esverdeado foi perdido aqui.~
 ~
-9 acdeq 0 0 0 ac 0 0 0 0 0 0 0
+9 aqdce ac 0
 10 0 0 0
-10 0 0 101 0
+10 0 0 101
 E
-gorjal drag�o luetn'amir metal esverdeado~
+gorjal dragão luetn'amir metal esverdeado~
 Feito de luetn'amir trabalhado, esse gorjal passa perfeitamente como sendo
-de couro de algum raro drag�o de metal.  As articula��es e sistema de
-lubrifica��o empregado nessa pe�a permitem que voc� mova sua cabe�a e
-pesco�o sem perda alguma de movimento e agilidade, nem que se fira.
-Diferente de gorjais comuns, esse gorjal ainda se extende n�o s� pela regi�o
-do pesco�o, como tamb�m pelos ombros, servindo perfeitamente como jun��o da
-coura�a com o elmo.  Em cada ombro foram colocados quatro enormes espinhos
-pontiagudos tamb�m de luetn'amir, s� que de uma variedade rara, verde-�gua.
+de couro de algum raro dragão de metal.  As articulações e sistema de
+lubrificação empregado nessa peça permitem que você mova sua cabeça e
+pescoço sem perda alguma de movimento e agilidade, nem que se fira.
+Diferente de gorjais comuns, esse gorjal ainda se extende não só pela região
+do pescoço, como também pelos ombros, servindo perfeitamente como junção da
+couraça com o elmo.  Em cada ombro foram colocados quatro enormes espinhos
+pontiagudos também de luetn'amir, só que de uma variedade rara, verde-água.
 ~
 A
 3 1
@@ -424,22 +424,22 @@ A
 A
 18 2
 #11014
-cintur�o drag�o couro~
-&Go Cintur�o do Drag�o&n~
-Um belo cintur�o de couro de drag�o foi cuidadosamente enrolado e deixado aqui.~
+cinturao dragao couro~
+@Go Cinturão do Dragão@n~
+Um belo cinturão de couro de dragão foi cuidadosamente enrolado e deixado aqui.~
 ~
-9 acdeq 0 0 0 al 0 0 0 s 0 0 0
+9 aqdce al r
 0 0 0 0
-10 0 0 101 0
+10 0 0 101
 E
-cintur�o drag�o couro~
-Uma grossa e �nica tira de couro de drag�o foi usada nesse cinto, mas n�o de
-um drag�o comum: foi tirada de uma esp�cime de uma ra�a desconhecida (pelo
-menos por voc�) que possui um estranho couro de esverdeada apar�ncia
-met�lica.  H� bem no centro do cintur�o, de ponta a ponta, grossos espinhos
+cinturao dragao couro~
+Uma grossa e única tira de couro de dragão foi usada nesse cinto, mas não de
+um dragão comum: foi tirada de uma espécime de uma raça desconhecida (pelo
+menos por você) que possui um estranho couro de esverdeada aparência
+metálica.  Há bem no centro do cinturão, de ponta a ponta, grossos espinhos
 verde-musgo que parecem estar ali no intuito de torturar um guerreiro mais
-distra�do...  A fivela � de luetn'amir fundido e trabalhado sob o formato de
-uma garra de drag�o que, produto do minucioso trabalho de seu criador,
+distraído...  A fivela é de luetn'amir fundido e trabalhado sob o formato de
+uma garra de dragão que, produto do minucioso trabalho de seu criador,
 agarra, segura ou solta qualquer um dos espinhos como se fosse real.
 ~
 A
@@ -452,25 +452,25 @@ A
 1 1
 #11015
 camiseta camelo~
-uma camiseta com um simp�tico camelo estampado~
+uma camiseta com um simpático camelo estampado~
 Uma linda camiseta com uma estranha figura impressa nela, foi deixada aqui.~
 ~
-9 g 0 0 0 ad 0 0 0 s 0 0 0
+9 g 9
 10 0 0 0
-9 300 1000 0 0
+9 300 1000 0
 E
 camiseta camelo~
-Esta camiseta possui a estampa do camelo mais famoso de Vit�lia. Uma 
-frase est� escrita nas costas: &G"Vote em mim para Prefeito de Midgaard"&n
+Esta camiseta possui a estampa do camelo mais famoso de Vitália. Uma 
+frase está escrita nas costas: @G"Vote em mim para Prefeito de Midgaard"@n
 ~
 #11016
 camiseta raposa~
 uma camiseta com uma raposa estampada~
-Uma ex�tica camiseta estampada com a figura de uma estranha raposa foi deixada aqui.~
+Uma exótica camiseta estampada com a figura de uma estranha raposa foi deixada aqui.~
 ~
-9 g 0 0 0 ad 0 0 0 s 0 0 0
+9 g 9
 10 0 0 0
-9 300 1000 0 0
+9 300 1000 0
 E
 camiseta raposa~
 Que bela estampa a dela! E que ar de superioridade!! Pelo jeito, esta
@@ -478,360 +478,360 @@ raposa pensa que vai dominar o mundo.
 ~
 #11017
 bandeirinha numenor~
-uma bandeirinha do cl� Numenor~
-Uma bandeirinha do cl� Numenor foi deixada aqui.~
+uma bandeirinha do clã Numenor~
+Uma bandeirinha do clã Numenor foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
 bandeirinha numenor~
-� uma linda fl�mula &RVermelha&n, com um nome gravado em letras douradas:
- &yA Remanescentes Cavaleiros de N�menor&n.
+É uma linda flâmula @RVermelha@n, com um nome gravado em letras douradas:
+ @yA Remanescentes Cavaleiros de Númenor@n.
 ~
 #11018
-bandeirinha disc�pulos~
-uma bandeirinha do cl� Disc�pulos~
-Uma bandeirinha do cl� Disc�pulos foi deixada aqui.~
+bandeirinha discipulos~
+uma bandeirinha do clã Discípulos~
+Uma bandeirinha do clã Discípulos foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
-bandeirinha disc�pulos~
-� uma linda fl�mula &Cturquesa&n, com um nome gravado em letras douradas:
- &yA Ordem dos Disc�pulos da Luz&n.
+bandeirinha discipulos~
+É uma linda flâmula @Cturquesa@n, com um nome gravado em letras douradas:
+ @yA Ordem dos Discípulos da Luz@n.
 ~
 #11019
 bandeirinha virtude~
-uma bandeirinha do cl� Virtude~
-Uma bandeirinha do cl� Virtude foi deixada aqui.~
+uma bandeirinha do clã Virtude~
+Uma bandeirinha do clã Virtude foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
 bandeirinha virtude~
-� uma linda fl�mula &ccinza-azulado&n, com um nome gravado em letras douradas:
-&yOs Cavaleiros da Virtude&n.
+É uma linda flâmula @ccinza-azulado@n, com um nome gravado em letras douradas:
+@yOs Cavaleiros da Virtude@n.
 ~
 #11020
 bandeirinha solis~
-uma bandeirinha do cl� Solis~
-Uma bandeirinha do cl� Solis foi deixada aqui.~
+uma bandeirinha do clã Solis~
+Uma bandeirinha do clã Solis foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
 bandeirinha solis~
-� uma linda fl�mula &Wbranco-perolado&n, com um nome gravado em letras douradas:
- &yA Tribo Seguidora do Sol&n.
+É uma linda flâmula @Wbranco-perolado@n, com um nome gravado em letras douradas:
+ @yA Tribo Seguidora do Sol@n.
 ~
 #11021
 bandeirinha mitra~
-uma bandeirinha do cl� Mitra~
-Uma bandeirinha do cl� Mitra foi deixada aqui.~
+uma bandeirinha do clã Mitra~
+Uma bandeirinha do clã Mitra foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
 bandeirinha mitra~
-� uma linda fl�mula &Yamarela&n, com um nome gravado em letras douradas:
- &yOs Olhos de Mitra&n.
+É uma linda flâmula @Yamarela@n, com um nome gravado em letras douradas:
+ @yOs Olhos de Mitra@n.
 ~
 #11022
 bandeirinha atlantes~
-uma bandeirinha do cl� Atlantes~
-Uma bandeirinha do cl� Atlantes foi deixada aqui.~
+uma bandeirinha do clã Atlantes~
+Uma bandeirinha do clã Atlantes foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
 bandeirinha atlantes~
-� uma linda fl�mula &Gverde-claro&n, com um nome gravado em letras douradas:
- &yGuardi�es do Legado de Atl�ntida&n.
+É uma linda flâmula @Gverde-claro@n, com um nome gravado em letras douradas:
+ @yGuardiões do Legado de Atlântida@n.
 ~
 #11023
 bandeirinha jvkb~
-uma bandeirinha do cl� JVKB~
-Uma bandeirinha do cl� JVKB foi deixada aqui.~
+uma bandeirinha do clã JVKB~
+Uma bandeirinha do clã JVKB foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
 bandeirinha jvkb~
-� uma linda fl�mula &Bazul-claro&n, com um nome gravado em letras douradas:
- &yOs Guardi�es do Segredo dos JVKB&n.
+É uma linda flâmula @Bazul-claro@n, com um nome gravado em letras douradas:
+ @yOs Guardiões do Segredo dos JVKB@n.
 ~
 #11024
 bandeirinha exercito~
-uma bandeirinha do cl� Ex�rcito~
-Uma bandeirinha do cl� Ex�rcito foi deixada aqui.~
+uma bandeirinha do clã Exército~
+Uma bandeirinha do clã Exército foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
 bandeirinha exercito~
-� uma linda fl�mula com um nome gravado em letras douradas:
- &yEx�rcito Suicida de Vit�lia&n.
+É uma linda flâmula com um nome gravado em letras douradas:
+ @yExército Suicida de Vitália@n.
 ~
 #11025
 apito prata~
 um brilhante apito de prata~
 Um brilhante apito de prata foi deixado aqui.~
 ~
-9 g 0 0 0 ac 0 0 0 0 0 0 0
+9 64 5
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
+A
+18 1
 E
 apito prata~
 Este apito possui um som altamente estridente e irritante. Cuidado para
-n�o importunar as pessoas que est�o dormindo.
+não importunar as pessoas que estão dormindo.
 ~
-A
-18 1
 #11026
 medalha melhor torcedor mesnadas~
-&Ga Medalha de melhor torcedor das Mesnadas&n~
+@Ga Medalha de melhor torcedor das Mesnadas@n~
 Uma Medalha de cor esverdeada foi deixada aqui.~
 ~
-13 0 0 0 0 ac 0 0 0 0 0 0 0
+13 0 ac 0 
 0 0 0 0
-1 0 0 0 0
+1 0 0 0
 E
 medalha melhor torcedor mesnadas~
-Uma medalha reluzente, � dif�cil n�o identificar o precioso metal com que
-ela foi feita: Luetn'amir, a pedra de drag�o, um raro mineral encontrado em
-grandes minas no interior das Montanhas Dragonhelm.  Voc� com certeza
-mereceu esta grande Honraria!!  Parab�ns!
+Uma medalha reluzente, é difícil não identificar o precioso metal com que
+ela foi feita: Luetn'amir, a pedra de dragão, um raro mineral encontrado em
+grandes minas no interior das Montanhas Dragonhelm.  Você com certeza
+mereceu esta grande Honraria!!  Parabéns!
 ~
 #11027
 pipoca saquinho~
 um saquinho de pipocas~
 Um saquinho de pipocas foi deixado aqui.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 1
 12 0 0 0
-1 10 10 0 0
+1 10 10 0
 E
 pipoca saquinho~
-Hummm!!!  Que cheirinho bom!!  E est�o quentinhas, feitas quase agora!  Voc�
-mal consegue se controlar...  Se n�o as comer logo, vai morrer de vontade!
+Hummm!!!  Que cheirinho bom!!  E estão quentinhas, feitas quase agora!  Você
+mal consegue se controlar...  Se não as comer logo, vai morrer de vontade!
 ~
 #11028
 taco mexicano~
 um taco mexicano~
 Um taco mexicano, que aparenta estar delicioso, foi abandonado aqui.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 1
 15 0 0 0
-1 15 15 0 0
+1 15 15 0
 E
 taco mexicano~
-Ahhhhh...  Voc� mal consegue resistir a este delicioso taco mexicano!  Hei
+Ahhhhh...  Você mal consegue resistir a este delicioso taco mexicano!  Hei
 hombre!!  Calma!...
 ~
 #11029
 nachos nacho~
 alguns nachos com queijo~
-Algu�m deixou alguns nachos com queijo aqui.~
+Alguém deixou alguns nachos com queijo aqui.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 1
 5 0 0 0
-1 5 5 0 0
+1 5 5
 E
 nachos nacho~
-Eles est�o cobertos por muito queijo.  Parecem ser um dos especiais feitos
+Eles estão cobertos por muito queijo.  Parecem ser um dos especiais feitos
 pelo Tio Juan.
 ~
 #11030
 garrafa mineral~
 uma garrafa~
-Uma garrafa de �gua mineral gelada est� aqui.~
+Uma garrafa de água mineral gelada está aqui.~
 ~
-17 0 0 0 0 a 0 0 0 0 0 0 0
+17 0 1
 24 24 15 0
-29 10 6 0 0
-E
-r�tulo~
-Esta �gua est� geladinha e mata a sua sede completamente!
-~
+1 10 6 0
 E
 garrafa mineral~
-� uma garrafa azul e est� gelada.  E percebe-se que havia r�tulo grudado em um
+É uma garrafa azul e está gelada.  E percebe-se que havia rótulo grudado em um
 dos seus lados mas que parece ter se desgrudado.
+~
+E
+rotulo~
+Esta água está geladinha e mata a sua sede completamente!
 ~
 #11031
 garrafa pinot noir~
 uma garrafa~
-Uma garrafa de um delicioso, gelado vinho Pinot Noir est� aqui, apenas
+Uma garrafa de um delicioso, gelado vinho Pinot Noir está aqui, apenas
 esperando ser degustado.~
 ~
-17 a 0 0 0 a 0 0 0 0 0 0 0
+17 a a
 10 10 2 0
-15 400 500 0 0
+3 400 500 0
 E
 garrafa pinot noir~
 O vinho possui uma bela cor vermelho escuro, e cai bem com qualquer comida.
 ~
 #11032
-�culos~
-&Gum par de �culos&n~
-Um par de �culos de aro de arame foi deixado aqui.~
+oculos~
+@Gum par de óculos@n~
+Um par de óculos de aro de arame foi deixado aqui.~
 ~
-9 g 0 0 0 ar 0 0 0 0 0 0 0
+9 g ar
 10 0 0 0
-4 0 0 101 0
+4 0 0 101
 A
 3 1
 A
 4 1
 #11033
 bandeirinha seth~
-uma bandeirinha do cl� Seth~
-Uma bandeirinha do cl� Seth foi deixada aqui.~
+uma bandeirinha do clã Seth~
+Uma bandeirinha do clã Seth foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
 bandeirinha seth~
-� uma linda fl�mula &ymarrom&n, com um nome gravado em letras douradas:
- &yOs Filhos de Seth&n.
+É uma linda flâmula @ymarrom@n, com um nome gravado em letras douradas:
+ @yOs Filhos de Seth@n.
 ~
 #11034
 bandeirinha protetores~
-uma bandeirinha do cl� Protetores~
-Uma bandeirinha do cl� Protetores foi deixada aqui.~
+uma bandeirinha do clã Protetores~
+Uma bandeirinha do clã Protetores foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
 bandeirinha Protetores~
-� uma linda fl�mula &Wbranca&n, com um nome gravado em letras douradas:
- &yOs Protetores do Bem&n.
+É uma linda flâmula @Wbranca@n, com um nome gravado em letras douradas:
+ @yOs Protetores do Bem@n.
 ~
 #11035
 bandeirinha vingadores~
-uma bandeirinha do cl� Vingadores~
-Uma bandeirinha do cl� Vingadores foi deixada aqui.~
+uma bandeirinha do clã Vingadores~
+Uma bandeirinha do clã Vingadores foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
 bandeirinha vingadores~
-� uma linda fl�mula com um nome gravado em letras douradas:
- &yOs Vingadores de Iris&n.
+É uma linda flâmula com um nome gravado em letras douradas:
+ @yOs Vingadores de Iris@n.
 ~
 #11036
 bandeirinha tempestade~
-uma bandeirinha do cl� Tempestade~
-Uma bandeirinha do cl� Tempestade foi deixada aqui.~
+uma bandeirinha do clã Tempestade~
+Uma bandeirinha do clã Tempestade foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
 bandeirinha tempestade~
-� uma linda fl�mula &gverde&n, com um nome gravado em letras douradas:
- &yOs Senhores da Tempestade&n.
+É uma linda flâmula @gverde@n, com um nome gravado em letras douradas:
+ @yOs Senhores da Tempestade@n.
 ~
 #11037
 bandeirinha dinastia~
-uma bandeirinha do cl� Dinastia~
-Uma bandeirinha do cl� Dinastia foi deixada aqui.~
+uma bandeirinha do clã Dinastia~
+Uma bandeirinha do clã Dinastia foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
 bandeirinha dinastia~
-� uma linda fl�mula &wbranca&n, com um nome gravado em letras douradas:
- &ySeguidores da Dinastia Breyldon&n.
+É uma linda flâmula @wbranca@n, com um nome gravado em letras douradas:
+ @ySeguidores da Dinastia Breyldon@n.
 ~
 #11038
-bandeirinha guardi�es~
-uma bandeirinha do cl� Guardi�es~
-Uma bandeirinha do cl� Guardi�es foi deixada aqui.~
+bandeirinha guardioes~
+uma bandeirinha do clã Guardiões~
+Uma bandeirinha do clã Guardiões foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
-bandeirinha guardi�es~
-� uma linda fl�mula &Rvermelho-claro&n, com um nome gravado em letras douradas:
- &yOs Guardi�es da Pris�o de Kildner&n.
+bandeirinha guardioes~
+É uma linda flâmula @Rvermelho-claro@n, com um nome gravado em letras douradas:
+ @yOs Guardiões da Prisão de Kildner@n.
 ~
 #11039
 bandeirinha luz~
-uma bandeirinha do cl� Luz~
-Uma bandeirinha do cl� Luz foi deixada aqui.~
+uma bandeirinha do clã Luz~
+Uma bandeirinha do clã Luz foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
 bandeirinha luz~
-� uma linda fl�mula &Wbranca&n, com um nome gravado em letras douradas:
- &yA Eterna Sociedade da Luz&n.
+É uma linda flâmula @Wbranca@n, com um nome gravado em letras douradas:
+ @yA Eterna Sociedade da Luz@n.
 ~
 #11040
 bandeirinha mclaud~
-uma bandeirinha do cl� Mclaud~
-Uma bandeirinha do cl� Mclaud foi deixada aqui.~
+uma bandeirinha do clã Mclaud~
+Uma bandeirinha do clã Mclaud foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
 bandeirinha mclaud~
-� uma linda fl�mula &Bazul-claro&n, com um nome gravado em letras douradas:
- &yOs protetores da Fam�lia Mclaud&n.
+É uma linda flâmula @Bazul-claro@n, com um nome gravado em letras douradas:
+ @yOs protetores da Família Mclaud@n.
 ~
 #11041
 bandeirinha trevas~
-uma bandeirinha do cl� Trevas~
-Uma bandeirinha do cl� Trevas foi deixada aqui.~
+uma bandeirinha do clã Trevas~
+Uma bandeirinha do clã Trevas foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
 bandeirinha trevas~
-� uma linda fl�mula &lcinza-escuro&n, com um nome gravado em letras douradas:
- &yOs Seguidores da Disciplina das Trevas&n.
+É uma linda flâmula @lcinza-escuro@n, com um nome gravado em letras douradas:
+ @yOs Seguidores da Disciplina das Trevas@n.
 ~
 #11042
 bandeirinha dragoon~
-uma bandeirinha do cl� Dragoon~
-Uma bandeirinha do cl� Dragoon foi deixada aqui.~
+uma bandeirinha do clã Dragoon~
+Uma bandeirinha do clã Dragoon foi deixada aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 150 0 0 0
+1 150 0 0
 E
 bandeirinha dragoon~
-� uma linda fl�mula &rvermelha&n, com um nome gravado em letras douradas:
- &yOs Cavaleiros da fam�lia Dragoon&n.
+É uma linda flâmula @rvermelha@n, com um nome gravado em letras douradas:
+ @yOs Cavaleiros da família Dragoon@n.
 ~
 #11099
 portal~
-o portal da sa�da~
-H� um portal aqui, que o levar� devolta � sua cidade.~
+o portal da saída~
+Há um portal aqui, que o levará devolta à sua cidade.~
 ~
-26 cdegq 0 0 0 0 0 0 0 0 0 0 0
+26 cdegq 0 0
 50 0 0 0
-0 0 0 0 0
+0 0 0 0
 E
 portal~
-Atrav�s das n�voas do portal voc� pode ver um caminho que o levar� devolta �
+Através das névoas do portal você pode ver um caminho que o levará devolta à
 sua cidade.
 ~
-$~
+$
