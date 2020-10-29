@@ -427,11 +427,11 @@ void create_spells_db()
  
  spedit_save_internally(new_spell);
 
-// SPELL_CREATE_FOOD_DRUID #95
+// SPELL_CREATE_BERRIES#95
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
 
- new_spell->vnum = SPELL_CREATE_FOOD_DRUID;
+ new_spell->vnum = SPELL_CREATE_BERRIES;
  new_spell->status = available;
  new_spell->name = strdup("create berries");
  new_spell->type = SPELL;
