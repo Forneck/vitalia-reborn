@@ -1,43 +1,43 @@
 #5200
-malha elos ferro met�licos~
+malha elos ferro metalicos~
 uma malha de elos de ferro~
-Uma malha feita de pequenos elos de ferro foi jogada no ch�o.~
+Uma malha feita de pequenos elos de ferro foi jogada no chão.~
 ~
-9 ag 0 0 0 ad 0 0 0 0 0 0 0
+9 ag 9
 6 0 0 0
-60 12000 400 0 0
+60 12000 400
 A
 17 -1
 #5201
 capacete ferro~
 um capacete de ferro~
-Um capacete de ferro foi deixado no ch�o.~
+Um capacete de ferro foi deixado no chão.~
 ~
-9 0 0 0 0 ae 0 0 0 0 0 0 0
+9 0 17
 7 0 0 0
-10 5000 800 0 0
+10 5000 800
 A
 18 -2
 #5202
 luvas ferro~
 um par de luvas de ferro~
-Um par de luvas de ferros foi jogada no ch�o.~
+Um par de luvas de ferros foi jogada no chão.~
 ~
-9 0 0 0 0 ah 0 0 0 0 0 0 0
+9 0 129
 7 0 0 0
-10 2200 900 0 0
+10 2200 900
 A
 18 -3
 A
 19 1
 #5203
-bra�adeiras ferro~
-um par de bra�adeiras de ferro~
-Um par de bra�adeiras de ferro est� no ch�o.~
+bracadeiras ferro~
+um par de braçadeiras de ferro~
+Um par de braçadeiras de ferro está no chão.~
 ~
-9 0 0 0 0 ai 0 0 0 0 0 0 0
+9 0 257
 7 0 0 0
-10 2450 500 0 0
+10 2450 500
 A
 18 -4
 A
@@ -47,9 +47,9 @@ botas ferro~
 um par de botas de ferro~
 Um par de botas de ferro foi deixada aqui.~
 ~
-9 0 0 0 0 ag 0 0 0 0 0 0 0
+9 0 65
 4 0 0 0
-6 800 200 0 0
+6 800 200
 A
 18 -1
 A
@@ -57,31 +57,31 @@ A
 #5205
 perneiras ferro~
 um par de perneiras de ferro~
-Um par de perneiras de ferro foi largado no ch�o~
+Um par de perneiras de ferro foi largado no chão~
 ~
-9 0 0 0 0 af 0 0 0 0 0 0 0
+9 0 33
 7 0 0 0
-10 5400 210 0 0
+10 5400 210
 A
 18 -3
 A
 2 -3
 #5206
-cintur�o cinto ferro~
+cinturao cinto ferro~
 um cinto de ferro~
-H� um pequeno cinto de ferro aos seus p�s.~
+Há um pequeno cinto de ferro aos seus pés.~
 ~
-9 0 0 0 0 al 0 0 0 0 0 0 0
+9 0 2049
 4 0 0 0
-6 4200 600 0 0
+6 4200 600
 #5207
-coura�a peitoral ferro~
-uma coura�a de ferro amassada~
-Uma coura�a de ferro amassado foi deixada aqui.~
+couraca peitoral ferro~
+uma couraça de ferro amassada~
+Uma couraça de ferro amassado foi deixada aqui.~
 ~
-9 0 0 0 0 ad 0 0 0 0 0 0 0
-5 0 0 0
-125 13000 150 0 0
+9 0 9
+5 0 0 0 
+125 13000 150
 A
 18 -6
 #5208
@@ -89,77 +89,77 @@ escudo ferro~
 um resistente escudo de ferro~
 Um pequeno mas resistente escudo de ferro foi deixado aqui.~
 ~
-9 gh 0 0 0 aj 0 0 0 0 0 0 0
+9 gh 513
 5 0 0 0
-5 500 1000 0 0
+5 500 1000
 A
 23 -2
 A
 24 -2
 #5210
-po��o negra~
-uma po��o negra~
-Um pote com uma po��o negra est� bem ali, esperando que algu�m a pegue.~
+pocao negra~
+uma poção negra~
+Um pote com uma poção negra está bem ali, esperando que alguém a pegue.~
 ~
-10 fg 0 0 0 a 0 0 0 0 0 0 0
+10 fg 1
 16 4 36 39
-5 6000 1000 0 0
+5 6000 1000
 #5211
-po��o laranja~
-uma po��o laranja~
-Um pequeno frasco com uma po��o laranja est� aqui.~
+pocao laranja~
+uma poção laranja~
+Um pequeno frasco com uma poção laranja está aqui.~
 ~
-10 fg 0 0 0 a 0 0 0 0 0 0 0
+10 fg 1
 20 44 -1 -1
-10 7500 200 0 0
+10 7500 200
 #5213
 cajado torto~
 um torto cajado verde~
 Um torto cajado verde foi deixado aqui.~
 ~
-4 fg 0 0 0 ao 0 0 0 0 0 0 0
+4 fg 16385
 15 2 2 23
-12 6600 300 0 0
+12 6600 300
 #5214
 esfera quartzo liso~
 uma esfera de quartzo liso~
-Uma esfera de quartzo liso est� brilhando aqui.~
+Uma esfera de quartzo liso está brilhando aqui.~
 ~
-1 g 0 0 0 ao 0 0 0 0 0 0 0
+1 g 16385
 0 0 72 0
-30 3050 950 0 0
+30 3050 950
 #5215
 pergaminho rasgado~
 um pergaminho rasgado~
 Um pergaminho usado e rasgado foi deixado aqui.~
 ~
-2 g 0 0 0 a 0 0 0 0 0 0 0
+2 g 1
 24 24 44 4
-15 11000 4000 0 0
+15 11000 4000
 #5216
 pergaminho amarrotado~
 um pergaminho amarrotado~
-Um amarrotado pergaminho de descobrimento est� bem aos seus p�s.~
+Um amarrotado pergaminho de descobrimento está bem aos seus pés.~
 ~
-2 g 0 0 0 a 0 0 0 0 0 0 0
+2 g 1
 15 18 19 20
-15 4200 100 0 0
+15 4200 100
 #5217
 flauta prata~
 uma flauta de prata~
-Uma brilhante flauta de prata est� brilhando debaixo de uma pedra.~
+Uma brilhante flauta de prata está brilhando debaixo de uma pedra.~
 ~
-4 fg 0 0 0 ao 0 0 0 0 0 0 0
+4 fg 16385
 18 2 2 7
-3 10500 8000 0 0
+3 10500 8000
 #5218
-talism� dem�nio~
-um talism� com a face de um dem�nio~
-Um talism� com a face de um dem�nio parece encarar voc� com �dio~
+talisma demonio~
+um talismã com a face de um demônio~
+Um talismã com a face de um demônio parece encarar você com ódio~
 ~
-9 agh 0 0 0 ac 0 0 0 0 0 0 0
+9 agh 5
 5 0 0 0
-11 2500 150 0 0
+11 2500 150
 A
 1 -10
 A
@@ -167,103 +167,103 @@ A
 #5219
 naco carne cervo~
 um naco de carne de cervo~
-H� um grande peda�o de carne de cervo aqui, pronto para ser comido.~
+Há um grande pedaço de carne de cervo aqui, pronto para ser comido.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 1
 24 0 0 0
-20 100 20 0 0
+20 100 20
 #5220
 fonte trincada~
 uma grande fonte trincada~
-H� uma grande fonte de sangue trincada aqui.~
+Há uma grande fonte de sangue trincada aqui.~
 ~
-23 0 0 0 0 0 0 0 0 0 0 0 0
+23 0 0
 10 10 13 1
-0 0 0 0 0
+0 0 0
 E
 fonte trincada~
-Uma piscina de sangue est� no fundo da fonte.
+Uma piscina de sangue está no fundo da fonte.
 ~
 #5221
-espada duas-m�os~
-uma espada de duas-m�os~
-Uma bonita espada de duas-m�os est� pendurada em um gancho da parede.~
+espada duas-maos~
+uma espada de duas-mãos~
+Uma bonita espada de duas-mãos está pendurada em um gancho da parede.~
 ~
-5 r 0 0 0 an 0 0 0 0 0 0 0
+5 r 8193
 0 3 6 3
-22 55000 8000 0 0
+22 55000 8000
 A
 18 -3
 A
 19 4
 #5222
-t�nica negro seda~
-uma t�nica de seda negra~
-Uma t�nica de seda negra est� amontoada no canto.~
+tunica negro seda~
+uma túnica de seda negra~
+Uma túnica de seda negra está amontoada no canto.~
 ~
-9 0 0 0 0 ak 0 0 0 0 0 0 0
+9 0 1025
 1 0 0 0
-6 1300 500 0 0
+6 1300 500
 #5223
 manto verde~
 um manto verde-escuro~
-Algu�m derrubou um maravilhoso manto verde-escuro aqui.~
+Alguém derrubou um maravilhoso manto verde-escuro aqui.~
 ~
-9 ag 0 0 0 ac 0 0 0 0 0 0 0
+9 ag 5
 0 0 0 0
-12 14500 4000 0 0
+12 14500 4000
 A
 13 8
 A
 17 -5
 #5224
-selo �bano~
-um selo esculpido em �bano~
-H� um pequeno selo de �bano esculpido aqui.~
+selo ebano~
+um selo esculpido em ébano~
+Há um pequeno selo de ébano esculpido aqui.~
 ~
-18 c 0 0 0 ao 0 0 0 0 0 0 0
+18 c 16385
 5224 0 0 0
-2 0 0 0 0
+2 0 0
 #5225
 escrivaninha torta~
 a escrivaninha~
-undefined~
 ~
-15 0 0 0 0 0 0 0 0 0 0 0 0
+~
+15 0 0
 100 13 5224 0
-0 0 0 0 0
+0 0 0
 #5226
 selo marfim~
 um selo esculpido em marfim~
-H� um pequeno selo de marfim escupido aqui.~
+Há um pequeno selo de marfim escupido aqui.~
 ~
-18 c 0 0 0 ao 0 0 0 0 0 0 0
+18 c 16385
 5226 0 0 0
-2 0 0 0 0
+2 0 0
 #5227
-arm�rio cristal~
-o arm�rio de cristal~
-undefined~
+armario cristal~
+o armário de cristal~
 ~
-15 0 0 0 0 0 0 0 0 0 0 0 0
+~
+15 0 0
 500 13 5226 0
-0 0 0 0 0
+0 0 0
 #5228
-bra�o aprodrecido podre~
-a metade de um bra�o apodrecido~
-A metade de um bra�o apodrecido est� boiando bem perto dos seus p�s.~
+braco aprodrecido podre~
+a metade de um braço apodrecido~
+A metade de um braço apodrecido está boiando bem perto dos seus pés.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 1
 50 0 0 1
-20 0 10 0 0
+20 0 10
 #5230
-pedra p�lido claro azul~
+pedra palido claro azul~
 uma pedra azul claro~
-H� uma pedra azul claro aqui.~
+Há uma pedra azul claro aqui.~
 ~
-8 dg 0 0 0 ao 0 0 0 0 0 0 0
+8 dg 16385
 0 0 0 0
-10 5500 600 0 0
+10 5500 600
 A
 1 1
 #5231
@@ -271,49 +271,49 @@ pedra escarlate vermelha azul~
 uma pedra escarlate e azul~
 Uma linda pedra escarlate e azul foi derrubada aqui.~
 ~
-8 dg 0 0 0 ao 0 0 0 0 0 0 0
+8 dg 16385
 0 0 0 0
-10 5500 600 0 0
+10 5500 600
 A
 3 1
 #5232
 pedra azul incandescente~
 uma pedra azul incandescente~
-H� uma pequena pedra azul incandescente aqui.~
+Há uma pequena pedra azul incandescente aqui.~
 ~
-8 dg 0 0 0 ao 0 0 0 0 0 0 0
+8 dg 16385
 0 0 0 0
-10 5500 600 0 0
+10 5500 600
 A
 4 1
 #5233
 pedra vermelho escuro~
 uma pedra vermelho escuro~
-Algu�m deixou uma pedra vermelho escuro aqui.~
+Alguém deixou uma pedra vermelho escuro aqui.~
 ~
-8 dg 0 0 0 ao 0 0 0 0 0 0 0
+8 dg 16385
 0 0 0 0
-10 5500 600 0 0
+10 5500 600
 A
 2 1
 #5234
 pedra rosada~
 uma pedra rosada~
-H� uma pequenina pedra rosada aos seus p�s.~
+Há uma pequenina pedra rosada aos seus pés.~
 ~
-8 dg 0 0 0 ao 0 0 0 0 0 0 0
+8 dg 16385
 0 0 0 0
-10 5500 600 0 0
+10 5500 600
 A
 5 1
 #5235
 pedra perolado branco~
 uma pedra branco-perolado~
-Algu�m descuidadamente deixou uma linda pedra branco-perolado aqui.~
+Alguém descuidadamente deixou uma linda pedra branco-perolado aqui.~
 ~
-8 dg 0 0 0 ao 0 0 0 0 0 0 0
+8 dg 16385
 0 0 0 0
-10 8700 600 0 0
+10 8700 600
 A
 13 1
 #5236
@@ -321,103 +321,103 @@ pedra lavanda azulada avermelhada claro~
 uma pedra azul-avermelhada claro~
 Uma maravilhosa pedra azul-avermelhada claro.~
 ~
-8 dgh 0 0 0 ao 0 0 0 0 0 0 0
+8 dgh 16385
 0 0 0 0
-10 4300 600 0 0
+10 4300 600
 A
 24 -2
 #5237
 pedra lavanda verde azul-avermelhada~
 uma pedra verde e azul-avermelhada~
-Uma maravilhosa pedra verde e azul-avermelhada foi deixada aqui no ch�o.~
+Uma maravilhosa pedra verde e azul-avermelhada foi deixada aqui no chão.~
 ~
-8 dgh 0 0 0 ao 0 0 0 0 0 0 0
+8 dgh 16385
 0 0 0 0
-10 4700 600 0 0
+10 4700 600
 A
 24 -4
 #5238
 pedra rosa ferrugem~
 uma pedra cor-de-rosa ferrugem~
-H� uma pedra aqui, com um tom de rosa meio enferrujado e muito bonita.~
+Há uma pedra aqui, com um tom de rosa meio enferrujado e muito bonita.~
 ~
-8 dg 0 0 0 ao 0 0 0 0 0 0 0
+8 dg 16385
 0 0 0 0
-10 9800 600 0 0
+10 9800 600
 A
 17 -1
 #5239
 pedra cinza escuro~
 uma pedra cinza escuro~
-Voc� mal consegue ver uma pedra cinza escuro que est� jogada no ch�o.~
+Você mal consegue ver uma pedra cinza escuro que está jogada no chão.~
 ~
-8 dg 0 0 0 ao 0 0 0 0 0 0 0
+8 dg 16385
 0 0 0 0
-10 20 200 0 0
+10 20 200
 #5240
 pedra violeta vibrante~
 uma pedra violeta vibrante~
-Uma impressionante pedra cor de violeta vibrante atrai sua aten��o.~
+Uma impressionante pedra cor de violeta vibrante atrai sua atenção.~
 ~
-8 dgh 0 0 0 ao 0 0 0 0 0 0 0
+8 dgh 16385
 0 0 0 0
-10 10200 1000 0 0
+10 10200 1000
 A
 13 -50
 #5241
 pedra rosa verde~
 uma pedra rosa e verde~
-Algu�m deixou aqui uma pedra verde e rosa muito brilhante.~
+Alguém deixou aqui uma pedra verde e rosa muito brilhante.~
 ~
-8 dgh 0 0 0 ao 0 0 0 0 0 0 0
+8 dgh 16385
 0 0 0 0
-10 6600 1000 0 0
+10 6600 1000
 A
 18 -5
 #5242
-pedra verde p�lido claro~
+pedra verde palido claro~
 uma pedra verde claro~
-H� uma pedra verde claro juntando poeira aqui.~
+Há uma pedra verde claro juntando poeira aqui.~
 ~
-8 dgh 0 0 0 ao 0 0 0 0 0 0 0
+8 dgh 16385
 0 0 0 0
-10 7100 1000 0 0
+10 7100 1000
 A
 19 -5
 #5243
 pedra clara transparente~
 uma pedra transparente~
-H� uma estranha pedra transparente aos seus p�s.~
+Há uma estranha pedra transparente aos seus pés.~
 ~
-8 dgh 0 0 0 ao 0 0 0 0 0 0 0
+8 dgh 16385
 0 0 0 0
-10 8900 1000 0 0
+10 8900 1000
 A
 17 -3
 #5244
 pedra multicor~
 uma pedra multicolorida~
-Algu�m deixou uma grande pedra multicolorida aqui.~
+Alguém deixou uma grande pedra multicolorida aqui.~
 ~
-8 dgh 0 0 0 ao 0 0 0 0 0 0 0
+8 dgh 16385
 0 0 0 0
-10 3700 1000 0 0
+10 3700 1000
 A
 13 -100
 #5250
 bandolim~
 um bandolim~
-Um bandolim est� encostado contra a parede.~
+Um bandolim está encostado contra a parede.~
 ~
-4 g 0 0 0 ao 0 0 0 0 0 0 0
+4 g 16385
 13 3 3 15
-20 3000 1500 0 0
+20 3000 1500
 #5251
 harpa dourada~
 uma harpa dourada~
-Uma harpa dourada bem destru�da foi deixada aqui.~
+Uma harpa dourada bem destruída foi deixada aqui.~
 ~
-4 g 0 0 0 ao 0 0 0 0 0 0 0
+4 g 16385
 18 1 1 6
-100 2500 800 0 0
-$~
+100 2500 800
+$
