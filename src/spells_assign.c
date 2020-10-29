@@ -433,7 +433,7 @@ void create_spells_db()
 
  new_spell->vnum = SPELL_CREATE_FOOD_DRUID;
  new_spell->status = available;
- new_spell->name = strdup("create food");
+ new_spell->name = strdup("create druid food");
  new_spell->type = SPELL;
  new_spell->min_pos = POS_STANDING;
  new_spell->targ_flags = TAR_IGNORE;
