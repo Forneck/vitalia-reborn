@@ -1241,6 +1241,12 @@ ACMD(do_suggestion)
 	int grupo;
 	int count_obj = 0;
     
+    if ((GET_LEVEL(ch) >= LVL_GOD) || IS_NPC(ch))
+    {
+       send_to_char(ch,"Você já deveria ter experiência suficiente para dar as  sugestões.\r\n");
+       return;
+    }
+    
     /* verifica grupo e inventario */
 	if (GROUP(ch) != NULL)
 		grupo = 1;
