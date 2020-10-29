@@ -3,9 +3,9 @@ perola bacia bebedouro~
 uma pérola gigante~
 Uma pérola escavada em formato de bacia está aqui, vertendo água pura.~
 ~
-23 g 0 0
-9999 9999 15 0 0 0
-9000 0 0 0
+23 g 0 0 0 0 0 0 0 0 0 0 0
+9999 9999 15 0
+9000 0 0 0 0
 E
 bacia bebedouro perola~
 É uma espécie de bacia muito bonita, em formato de concha aberta, escavada em 
@@ -18,9 +18,9 @@ musica~
 a música viva~
 A música parece dançar diante dos seus olhos incrédulos.~
 ~
-12 dg 0 0
-0 0 0 0 0 0
-9000 0 0 0
+12 dg 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+9000 0 0 0 0
 E
 musica viva~
 É tão fantástico, que você se deixa levar sem nenhum receio ou medo.   É como
@@ -33,9 +33,9 @@ mistico cristal painel~
 o grande cristal místico~
 Há um grande painel feito de cristal puro aqui, flutuando de forma mística.~
 ~
-13 giq 0 0
-0 0 0 0 0 0
-100 0 0 0
+13 giq 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+100 0 0 0 0
 E
 mistico cristal painel~
 Olhar para algo tão extraordináriamente belo é de fato um privilégio.   Feito
@@ -47,17 +47,17 @@ convite lacre envelope pequeno belo casamento linho dourado~
 um convite de casamento feito de papel de linho e lacrado em dourado~
 Há aqui um pequeno e belo envelope fechado com lacre dourado.~
 ~
-12 g a 0
-0 0 0 0 0 0
-1 0 0 0
+12 g 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
 E
 convite lacre envelope pequeno belo casamento linho dourado~
 Você rompe o lacre e retira do envelope um papel escrito em delicadas letras
 douradas.  Está escrito:
 
-@yDigníssimo Amigo e Exma. Família:
+	yDigníssimo Amigo e Exma. Família:
 
-@yÉ com imensa satisfação que nós os convidamos para celebrar a união de duas
+	yÉ com imensa satisfação que nós os convidamos para celebrar a união de duas
 pessoas queridas. Sendo assim, se apresentem na hora marcada na Grande Catedral
 de Cristal, local da oficialização das Bodas dos Noivos.
 ~
@@ -66,9 +66,9 @@ vestido noiva~
 um belíssimo vestido de noiva~
 A mais bela de todas as noivas deve ter deixado este traje aqui.~
 ~
-9 0 ad
+9 0 0 0 0 ad 0 0 0 0 0 0 0
 5 0 0 0
-6 5000 0 0
+6 5000 0 0 0
 E
 vestido noiva~
 Olhar para este vestido é sonhar um pouco acordado.   É tão bonito que chega a
@@ -82,9 +82,9 @@ luz raio~
 um raio de luz~
 Um raio de luz que parece ter se materializado, atrai você de forma irresistível.~
 ~
-26 gc 0 :
+26 cg 0 0 0 0 0 0 0 0 0 0 0
 2800 0 0 0
-400 50000 5000 0
+400 50000 5000 0 0
 E
 portal luz raio~
 É uma luz tão intensa, que seus olhos chegam a doer e ao mesmo tempo, você se
@@ -95,9 +95,9 @@ veu noiva~
 um véu de noiva longuíssimo~
 Um véu de noiva muito longo e todo bordado foi deixado aqui.~
 ~
-9 ag ar
+9 ag 0 0 0 ar 0 0 0 0 0 0 0
 3 0 0 0
-2 1230 0
+2 1230 0 0 0
 E
 veu noiva~
 O longo véu cai solto sobre o rosto da noiva, dando-lhe a aparência de anjo.
@@ -109,9 +109,9 @@ grinalda noiva~
 a delicada grinalda de noiva~
 Uma grinalda de noiva, enfeitada por flores e pérolas foi deixada aqui.~
 ~
-9 ag ae
+9 ag 0 0 0 ae 0 0 0 0 0 0 0
 3 0 0 0
-2 1230 0
+2 1230 0 0 0
 E
 grinalda noiva~
 Coroando a beleza da noiva, esta pequena peça mais parece uma jóia rara.  
@@ -123,9 +123,9 @@ bouquet ramalhete noiva~
 um perfumado bouquet de noiva~
 Um estonteante bouquet de noiva parece que foi esquecido aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0 0
+1 0 0 0 0
 E
 bouquet ramalhete noiva~
 Ah! As moças solteiras vão querer muito pegar esse lindo bouquet! As flores 
@@ -137,26 +137,26 @@ sapatos cristal noiva~
 um par de sapatos de cristal~
 Um cintilante par de sapatos de cristal foi deixado aqui.~
 ~
-9 ag ag
+9 ag 0 0 0 ag 0 0 0 0 0 0 0
 4 0 0 0
-1 4500 0 0
-A
-10 -4
-A
-14 +30
+1 4500 0 0 0
 E
 sapatos cristal noiva~
 Que lindos sapatos!  Toda noiva deveria ter um par desses, não acha?  Feito de
 um cristal tão transparente e brilhante, que chegam a refletir a luz.
 ~
+A
+10 -4
+A
+14 30
 #2810
 capa nupcial veludo~
 uma capa nupcial de veludo negro~
 Uma capa nupcial foi deixado aqui por algum noivo distraído.~
 ~
-9 ag ak
+9 ag 0 0 0 ak 0 0 0 0 0 0 0
 8 0 0 0
-1 8999 0 0
+1 8999 0 0 0
 E
 capa nupcial veludo~
 É uma belíssima capa negra, que quase cobre o corpo do noivo.   Feita de veludo
@@ -170,9 +170,9 @@ bolo noiva~
 um bolo de noiva de três andares~
 Um IMENSO bolo de noiva foi deixado aqui por alguém muito distraído.~
 ~
-19 0 a 0
+19 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0 0
+1 0 0 0 0
 E
 bolo noiva~
 Hummmmm!  Com três andares de massa de pão-de-ló bem úmido, recheio de
@@ -186,9 +186,9 @@ taca~
 uma taça~
 Uma taça de vinho champagne bastante gelada está aqui.~
 ~
-17 0 a
+17 0 0 0 0 a 0 0 0 0 0 0 0
 10 10 17 0
-3 5000 500
+15 5000 500 0 0
 E
 taca~
 O vinho do tipo champagne possui uma bela cor dourada, e estando gelada como 
@@ -199,15 +199,15 @@ carruagem nupcial cristal~
 uma linda carruagem de cristal~
 Uma linda carruagem de cristal está estacionada aqui, aguardando pelos noivos.~
 ~
-13 0 0 0
+13 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-80 0 0 0
+80 0 0 0 0
 E
 carruagem nupcial cristal~
 É simplesmente tão fanstástica, que por alguns instantes você se recusa a 
 acreditar que ela seja real.   Totalmente feita de cristal mas parece ser 
 bastante confortável, já que seu interior é todinho forrado com veludo 
-vermelho e adornada com o @GBrasão de Vitália@n nas duas portas.  Puxada por
+vermelho e adornada com o 	GBrasão de Vitália	n nas duas portas.  Puxada por
 seis elegantes cavalos brancos, está parada, enquando o jovem cocheiro 
 aguarda a chegada dos nubentes.
 ~
@@ -216,9 +216,9 @@ fatia bolo noiva~
 uma deliciosa fatia de bolo de noiva~
 Um fatia de bolo de noiva foi deixada aqui, por alguém muito distraído.~
 ~
-19 0 a 0
+19 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0 0
+1 0 0 0 0
 E
 fatia bolo noiva~
 Hummmmm!  Com três camadas de massa de pão-de-ló bem úmido, recheio de
@@ -231,9 +231,9 @@ pequenina caixinha porcelana casamento lembrancinha dourado~
 uma caixinha de porcelana com as iniciais dos noivos gravadas em dourado~
 Uma lembrancinha de casamento com as inicias dos noivos foi deixada aqui.~
 ~
-15 g a 0
-15 5 -1 0 0 0
-1 0 0 0
+15 g 0 0 0 a 0 0 0 0 0 0 0
+15 5 -1 0
+1 0 0 0 0
 E
 pequenina porcelana casamento lembrancinha dourado~
 Você abre o pequenino pacote e encontra uma linda caixinha de porcelana muito
@@ -247,9 +247,9 @@ fonte luminosa luz~
 uma belíssima fonte emitindo luz~
 Uma belíssima fonte luminosa, emitindo suave melodia enquanto verte água pura.~
 ~
-23 g 0 0
-9999 9999 15 0 0 0
-9000 0 0 0
+23 g 0 0 0 0 0 0 0 0 0 0 0
+9999 9999 15 0
+9000 0 0 0 0
 E
 fonte luminosa~
 Suntuosidade e perfeição: são essas as palavras para descrever essa 
@@ -264,9 +264,9 @@ canape camarao~
 um saboroso canapé de camarão~
 Um pequeno canapé foi jogado no chão.~
 ~
-19 0 a 0
+19 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0 0
+1 0 0 0 0
 E
 canape camarao~
 Está quentinho e você mal pode esperar para dar uma mordida neste canapé que
@@ -277,9 +277,9 @@ bolinho queijo derretido~
 um fumegante bolinho de queijo~
 Um bolinho de queijo mordido foi deixado aqui.~
 ~
-19 0 a 0
+19 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0 0
+1 0 0 0 0
 E
 bolinho queijo derretido~
 Este bolinho está tão quente que você consegue puxar o queijo uns 30 
@@ -291,9 +291,9 @@ pastelzinho massa-folhada recheado quentinho~
 um pastelzinho bem recheado e quentinho~
 Um pastelzinho de massa-folhada foi esquecido aqui.~
 ~
-19 0 a 0
+19 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0 0
+1 0 0 0 0
 E
 pastelzinho massa-folhada~
 Deve ter sido tirado do forno agora mesmo, pois está saindo fumaça. Cuidado para
@@ -304,9 +304,9 @@ brigadeiro chocolate~
 um brigadeiro de chocolate~
 Alguém derrubou um brigadeiro de chocolate aqui no chão.~
 ~
-19 0 a 0
+19 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0 0
+1 0 0 0 0
 E
 brigadeiro chocolate~
 Esse brigadeiro está tão macio que você o coloca na boca e em instantes
@@ -318,9 +318,9 @@ bem-casado docinho ameixa coco~
 um bem-casado de ameixa com coco~
 Deixaram um pedaço de bem-casado de ameixa com coco aqui.~
 ~
-19 0 a 0
+19 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0 0
+1 0 0 0 0
 E
 bem-casado docinho ameixa coco~
 As mãos que fizeram este docinho são mágicas! O creme de coco está tão cremoso
@@ -332,9 +332,9 @@ ponche taca cristal~
 uma inebriante taça de ponche~
 Uma taça de cristal contendo ponche de néctar foi deixada aqui.~
 ~
-17 0 1
+17 0 0 0 0 a 0 0 0 0 0 0 0
 8 8 16 0
-1 5 1
+13 5 1 0 0
 E
 ponche nectar taca cristal~
 É tão suave, tão gostoso, que é difícil recusar uma segunda taça dessa 
@@ -346,12 +346,12 @@ bau cristal azul~
 um baú de cristal @Cazul@n~
 Um baú com as iniciais do nome do Noivo foi deixado aqui no chão.~
 ~
-15 deq 0 0
+15 deq 0 0 0 0 0 0 0 0 0 0 0
 1500 7 -1 0
-8 50000 25000 0
+8 50000 25000 0 0
 E
 bau cristal azul~
-É um lindo baú de cristal @Cazul@n que parece cintilar.  Em sua tampa, estão
+É um lindo baú de cristal 	Cazul	n que parece cintilar.  Em sua tampa, estão
 gravados em dourado, o nome do Noivo.  Parece que há um enxoval completo
 guardado dentro dele.  Não seria interessante abrir?
 ~
@@ -360,12 +360,12 @@ bau cristal rosa~
 um baú de cristal @Mrosa@n~
 Um baú com as iniciais do nome da Noiva foi deixado aqui no chão.~
 ~
-15 deq 0 0
+15 deq 0 0 0 0 0 0 0 0 0 0 0
 1500 7 -1 0
-8 50000 25000 0
+8 50000 25000 0 0
 E
 bau cristal rosa~
-É um lindo baú de cristal @Mrosado@n que parece cintilar.  Em sua tampa, 
+É um lindo baú de cristal 	Mrosado	n que parece cintilar.  Em sua tampa, 
 estão gravados em dourado, o nome da Noiva.  Parece que há um enxoval 
 completo guardado dentro dele.  Não seria interessante abrir?
 ~
@@ -374,26 +374,26 @@ botas camurca negra~
 um par de botas de camurça negra~
 Um par de botas de camurça negra foi deixado aqui.~
 ~
-9 ag ag
+9 ag 0 0 0 ag 0 0 0 0 0 0 0
 4 0 0 0
-1 4500 0 0
-A
-10 -4
-A
-14 +30
+1 4500 0 0 0
 E
 botas camurca negra~
 Essas botas parecem ser bastante confortáveis.  Extremamente macias e 
 elegantes, feitas de encomenda para o mais exigente dos noivos.
 ~
+A
+10 -4
+A
+14 30
 #2826
 coroa louro ouro~
 uma coroa de louro feita de ouro~
-uma intrigante coroa de louro dourada foi deixada aqui.~
+Uma intrigante coroa de louro dourada foi deixada aqui.~
 ~
-9 ag ae
+9 ag 0 0 0 ae 0 0 0 0 0 0 0
 3 0 0 0
-2 1230 0
+2 1230 0 0 0
 E
 coroa louro ouro~
 O louro sempre foi considerado símbolo da nobreza e usá-lo em tão importante
@@ -407,9 +407,9 @@ pesada corrente ouro antigo~
 uma pesadíssima corrente de ouro~
 Uma pesada corrente de ouro com aspecto antigo foi deixado aqui.~
 ~
-11 aqegik ac
+11 aegikq 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
-5 1000000 100000 0
+5 1000000 100000 0 0
 E
 pesada corrente ouro antigo~
 É um colar de aparência bem antiga e deve estar sendo passado de geração a 
@@ -428,9 +428,9 @@ colar brilhantes perolas delicado~
 um colar de brilhantes e pérolas delicadíssimo~
 Um delicado colar de brilhantes e pérolas parece ter sido esquecido aqui.~
 ~
-11 aqegik ac
+11 aegikq 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
-5 1000000 100000 0
+5 1000000 100000 0 0
 E
 colar brilhantes perolas delicado~
 É um colar tão bonito e tão valioso que as palavras são pobres e inócuas para 
@@ -449,9 +449,9 @@ camisa nupcial seda branca~
 uma camisa de seda branca~
 Uma belíssima camisa de seda branca foi deixada aqui por algum noivo apressado.~
 ~
-9 ag ad
+9 ag 0 0 0 ad 0 0 0 0 0 0 0
 8 0 0 0
-1 8999 0 0
+1 8999 0 0 0
 E
 camisa nupcial seda branca~
 A camisa é tão branca e tão macia que têm-se a impressão de que irá rasgar ao
@@ -464,9 +464,9 @@ calca linho branco~
 uma elegante calça de linho branco~
 Uma elegante calça de linho branco está no chão, à espera do noivo.~
 ~
-9 ag af
+9 ag 0 0 0 af 0 0 0 0 0 0 0
 8 0 0 0
-1 8999 0 0
+1 8999 0 0 0
 E
 calca linho branco~
 Feita do mais puro linho, esta calça parece vestir como uma luva.  Seu 
@@ -477,9 +477,9 @@ bandeja prata~
 uma pesada bandeja de prata repleta de finas iguarias~
 Uma pesada bandeja de prata com muita comida, foi deixada aqui no canto.~
 ~
-12 g ao 0
-0 0 0 0 0 0
-1 0 0 0
+12 g 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
 E
 bandeja prata~
 Que pesada essa bandeja de prata!  Também pudera, com tantas iguarias 
@@ -491,9 +491,9 @@ estojo maquiagem dourado~
 um delicado estojo de maquiagem~
 Um delicado estojo dourado, com pequeninos brilhantes e pérolas inscrutrados.~
 ~
-12 g ao 0
-0 0 0 0 0 0
-1 0 0 0
+12 g 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 0 0 0 0
 E
 estojo maquiagem dourado~
 Que trabalho delicado e perfeito.  O estojo é feito de ouro puro, e com um 
@@ -507,9 +507,9 @@ portal suave brisa~
 uma suave brisa que abraça você~
 Uma suave brisa o envolve por completo, como se fosse um convite para voar.~
 ~
-26 gc 0 :
+26 cg 0 0 0 0 0 0 0 0 0 0 0
 2845 0 0 0
-400 50000 5000 0
+400 50000 5000 0 0
 E
 portal suave brisa~
 É uma brisa suave, morna, acolhedora, que o abraça e o envolve de tal forma 

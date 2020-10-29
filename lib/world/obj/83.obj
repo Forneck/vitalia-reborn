@@ -3,49 +3,49 @@ chave loctus~
 a Chave de Loctus~
 Uma estranha chave foi deixada aqui.~
 ~
-18 bcqdge a 0
+18 bcdegq 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-2 0 0 1
+2 0 0 1 0
 #8302
 chave gelo~
 uma chave de gelo~
 Uma Chave de gelo está aqui.~
 ~
-18 cqdge a 0
+18 cdegq 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-2 0 0 1
+2 0 0 1 0
 #8303
 chave arenosa~
 uma chave arenosa~
 Uma chave arenosa está aqui.~
 ~
-18 cqdge a 0
+18 cdegq 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-2 0 0 1
+2 0 0 1 0
 #8304
 chave pedra~
 a Chave de Pedra~
 A chave de pedra está aqui.~
 ~
-18 cqdgea a 0
+18 acdegq 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-2 0 0 1
+2 0 0 1 0
 #8305
 chave liberdade~
 a Chave para Liberdade~
 Uma linda chave brilha no chão.~
 ~
-18 cqdgea a 0
+18 acdegq 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-2 0 0 1
+2 0 0 1 0
 #8306
 dente morcego~
 um dente de morcego~
 Um pequeno dente está aqui.~
 ~
-11 gjnm as
+11 gjmn 0 0 0 as 0 0 0 0 0 0 0
 0 0 0 0
-3 300 0 8
+3 300 0 8 0
 E
 dente morcego~
 Este dente parece ser muito afiado.
@@ -59,9 +59,9 @@ brinco fogo avermelhado~
 o brinco de fogo~
 Um avermelhado brinco brilha no chão.~
 ~
-11 bgjhqd aq 0
+11 bdghjq 0 0 0 aq 0 0 0 0 0 0 0
 0 0 0 0
-5 2000000 100000 73
+5 2000000 100000 73 0
 E
 brinco fogo avermelhado~
 Um brinco em forma de argola todo em chamas mas, incrível, você não é
@@ -76,9 +76,9 @@ brinco gelo resistente brilhante artefato~
 o brinco de gelo~
 Um resistente e brilhante artefato está aqui.~
 ~
-11 bgjhqd aq 0
+11 bdghjq 0 0 0 aq 0 0 0 0 0 0 0
 0 0 0 0
-5 2100000 150000 76
+5 2100000 150000 76 0
 E
 brinco gelo~
 Um brinco formado do mais puro gelo e, aparentemente, indestrutível.
@@ -92,9 +92,9 @@ colar loctus magnifico~
 o colar de Loctus~
 Um magnífico colar está aqui.~
 ~
-11 begjn ac :10
+11 begjn 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
-10 10000 1000 90
+10 10000 1000 90 0
 E
 loctus colar~
 Um colar de um estranho material prateado brilhante, todo ornado com 
@@ -112,9 +112,9 @@ o Bastão da Luz~
 Você vê algo parecido com uma bastão emitindo uma forte luz.~
 $n aponta o Bastão de Luz para a entrada da Caverna, que dissolve ante a ação
 da poderosa luz.~
-18 cdgkq ao :10
+18 cdgkq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-5 10000 0 20
+5 10000 0 20 0
 E
 bastao luz~
 Você tenta, mas assim que você olha para o Bastão da Luz, seus olhos queimam 
@@ -126,9 +126,9 @@ um ardelune metálico~
 Um pequeno ardelune, feito com estranho metal e cintilantes pedras, foi
 deixado aqui.~
 ~
-13 q ae :4
+13 q 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
-3 3000 300 30
+3 3000 300 30 0
 E
 ardelune metalico metal pedras cintilantes~
 Esse bem-feito ardelune de metal avermelhado, possui pequenos cristais
@@ -140,9 +140,9 @@ draenan~
 uma draenan~
 Uma draenan foi cuidadosamente deixada aqui.~
 ~
-9 a ad
+9 a 0 0 0 ad 0 0 0 0 0 0 0
 4 0 0 0
-2 100 10 10
+2 100 10 10 0
 E
 draenan~
 Essa bela túnica, usada tanto por homens quanto mulheres, é feita com um
@@ -155,9 +155,9 @@ grande tabua~
 uma grande tábua~
 Uma grande tábua, escrita com sangue está aqui.~
 ~
-12 0 0 0
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-100 0 0 0
+100 0 0 0 0
 E
 tabua pedra~
 "Não vá embora! Por favor, deixe-nos contar o que aconteceu conosco, 
@@ -181,9 +181,9 @@ brinco areia~
 o brinco de areia~
 Um estranho brinco foi esquecido aqui.~
 ~
-11 bgjhqd aq 0
+11 bdghjq 0 0 0 aq 0 0 0 0 0 0 0
 0 0 0 0
-5 2200000 200000 75
+5 2200000 200000 75 0
 E
 brinco areia~
 Um estranho brinco formado por areia, parecendo esconder um tremendo poder.
@@ -192,4 +192,4 @@ A
 19 1
 A
 17 -6
-$
+$~

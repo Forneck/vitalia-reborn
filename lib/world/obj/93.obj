@@ -3,9 +3,9 @@ coracao dragao~
 o coração do dragão~
 O Coração do dragão está aqui, emitindo sua energia para todos os lados.~
 ~
-1 abdegikq ao 0
+1 abdegikq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
-10 1000000 100000 101
+10 1000000 100000 101 0
 E
 coracao dragao~
 Você observa um enorme coração de dragão, envolvido por uma aura brilhante e
@@ -31,9 +31,9 @@ cajado bondade~
 o cajado da bondade~
 O Cajado da bondade está aqui a espera da dignidade e honra de seu dono.~
 ~
-5 adegikmopqt aon 0
+5 adegikmopqt 0 0 0 ano 0 0 0 0 0 0 0
 0 4 6 5
-18 500000 50000 70
+18 500000 50000 70 0
 E
 cajado bondade~
 Você observa uma simples cajado de madeira que esconde em sua singela
@@ -58,9 +58,9 @@ arco aventureiro~
 o arco do aventureiro~
 O Arco do aventureiro foi esquecido aqui.~
 ~
-5 adegimnqt an 0
+5 adegimnqt 0 0 0 an 0 0 0 0 0 0 0
 0 8 3 12
-19 500000 50000 60
+19 500000 50000 60 0
 E
 arco aventureiro~
 Este arco é feito da madeira mais resistente encontrada em Vitália, com
@@ -81,9 +81,9 @@ olho morte~
 o olho da morte~
 O Olho da morte está aqui, olhando para você de forma sinistra.~
 ~
-9 aegjq ac u
+9 aegjq 0 0 0 ac 0 0 0 v 0 0 0
 4 0 0 0
-5 4500000 450000 60
+5 4500000 450000 60 0
 E
 olho morte~
 Você observa um medalhão misterioso e interessante, que possui um profundo
@@ -110,9 +110,9 @@ escudo escamas~
 um escudo de escamas~
 Um Escudo de escamas foi deixado aqui.~
 ~
-9 aegq aj 0
+9 aegq 0 0 0 aj 0 0 0 0 0 0 0
 11 0 0 0
-12 4500000 450000 55
+12 4500000 450000 55 0
 E
 escudo escamas~
 Você observa um magnífico escudo feito com as mais belas escamas verdes de
@@ -133,9 +133,9 @@ garra dragao~
 uma garra de dragão~
 Uma Garra de dragão foi esquecida aqui.~
 ~
-5 aemnqt ao 0 
+5 aemnqt 0 0 0 ao 0 0 0 0 0 0 0
 0 4 5 8
-8 400000 40000 70
+8 400000 40000 70 0
 E
 garra dragao~
 Você observa a enorme garra de dragão, manchada com o sangue de várias
@@ -152,9 +152,9 @@ coroa cristal~
 uma coroa de cristal~
 Uma Coroa de cristal foi deixada aqui, emitindo seu esplendor para os céus.~
 ~
-9 abegiq ae 0
+9 abegiq 0 0 0 ae 0 0 0 0 0 0 0
 9 0 0 0
-5 500000 50000 60
+5 500000 50000 60 0
 E
 coroa cristal~
 Você observa a majestosa coroa de cristal, digna de um rei.  A Coroa de
@@ -174,9 +174,9 @@ tiara diamante~
 uma tiara de diamante~
 Uma Tiara de diamante foi esquecida aqui.~
 ~
-9 aegiq ae 0
+9 aegiq 0 0 0 ae 0 0 0 0 0 0 0
 9 0 0 0
-7 5000000 500000 55
+7 5000000 500000 55 0
 E
 tiara diamante~
 Você observa uma maravilhosa tiara feita de diamante, uma das mais
@@ -194,9 +194,9 @@ sol deserto~
 o sol do deserto~
 O Sol do deserto do paraíso dos dragõe está brilhando aqui.~
 ~
-1 abegiq ao 0
+1 abegiq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
-8 5500000 550000 60
+8 5500000 550000 60 0
 E
 sol deserto~
 Você observa uma esfera de fogo, lançando labaredas e chamas para todos os
@@ -220,16 +220,16 @@ anel ossos~
 um anel de ossos~
 Um anel de ossos, sombrio e misterioso, foi esquecido aqui.~
 ~
-9 begjlnq ab 0
+9 begjlnq 0 0 0 ab 0 0 0 0 0 0 0
 12 0 0 0
-5 5000000 500000 65
+5 5000000 500000 65 0
 E
 anel osso~
 Você observa um sombrio e macabro anel, feito com ossos de antigos dragões
 que cultuavam o mal.  Esse anel lhe dará todos os poderes dos antigos
 donos dos ossos, principalmente a maldade.
 ~
-A 
+A
 1 2
 A
 4 1
@@ -244,9 +244,9 @@ espada espirito~
 a espada espírito~
 A Espada espírito foi deixada aqui.~
 ~
-5 abeiq an 0
+5 abeiq 0 0 0 an 0 0 0 0 0 0 0
 0 4 7 3
-12 6000000 600000 80
+12 6000000 600000 80 0
 E
 espada espirito~
 Você observa uma das mais esplendorosas e magníficas espadas do mundo de
@@ -269,9 +269,9 @@ medalhao pestilencia~
 o medalhão da pestilência~
 O Medalhão da pestilência foi deixado aqui.~
 ~
-11 aegjlnq ac 0
+11 aegjlnq 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
-5 6000000 600000 80
+5 6000000 600000 80 0
 E
 medalhao pestilencia~
 Você observa um maravilhoso medalhão, feito de prata e com uma grande esfera
@@ -295,9 +295,9 @@ coroa flores~
 uma coroa de flores~
 Uma Coroa de flores foi deixada aqui.~
 ~
-11 begkq ae 0
+11 begkq 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
-5 500000 50000 15
+5 500000 50000 15 0
 E
 coroa flores~
 Você observa uma linda coroa, feita de várias flores de magnólias,
@@ -315,9 +315,9 @@ arco alegria~
 o arco da alegria~
 O Arco da alegria foi esquecido aqui.~
 ~
-5 aegikq an c
+5 aegikq 0 0 0 an 0 0 0 d 0 0 0
 0 3 6 12
-7 350000 35000 0
+7 350000 35000 0 0
 E
 arco alegria~
 Você observa um arco mágico, feito de madeira pelos dragões fadas.
@@ -331,9 +331,9 @@ escudo flores~
 um escudo de flores~
 Um escudo de flores foi deixado aqui.~
 ~
-9 egkq aj 0
+9 egkq 0 0 0 aj 0 0 0 0 0 0 0
 8 0 0 0
-6 300000 30000 0
+6 300000 30000 0 0
 E
 escudo flores~
 Você observa um maravilhoso escudo colorido de flores, feito de forma
@@ -346,22 +346,22 @@ calca folhas~
 uma calça de folhas~
 Uma calça de folhas foi deixada aqui.~
 ~
-9 egkq af 0
+9 egkq 0 0 0 af 0 0 0 0 0 0 0
 5 0 0 0
-7 320000 32000 0
+7 320000 32000 0 0
 E
 calca folhas~
 Você observa uma calça, feita de folhas verdes de forma escultural pelos
 dragões fadas.
 ~
-#9316 
+#9316
 par botas folhas~
 um par de botas de folhas~
 Um par de botas de folhas foi esquecido aqui.~
 ~
-11 egkq ag 0
+11 egkq 0 0 0 ag 0 0 0 0 0 0 0
 0 0 0 0
-5 300000 30000 0
+5 300000 30000 0 0
 E
 par botas folhas~
 Você observa um par de botas feitas de folhas secas pelos dragões fadas.
@@ -373,9 +373,9 @@ vestido flores~
 um vestido de flores~
 Um vestido de flores foi esquecido aqui.~
 ~
-9 egkq ad 0
+9 egkq 0 0 0 ad 0 0 0 0 0 0 0
 3 0 0 0
-7 320000 32000 0 
+7 320000 32000 0 0
 E
 vestido flores~
 Você observa um vestido colorido feito de vários tipos de flores, produzido
@@ -386,9 +386,9 @@ chave pestilencia~
 a chave da pestilência~
 A Chave da pestilência foi esquecida aqui.~
 ~
-18 bcdegq ao 0
+18 bcdegq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-5 1000000 100000 0
+5 1000000 100000 0 0
 E
 chave pestilencia~
 Você observa uma chave sombria e macabra.  A Chave é feita de um cristal
@@ -400,9 +400,9 @@ ampulheta tempo~
 a ampulheta do tempo~
 A Ampulheta do tempo de Vitália foi deixada aqui.~
 ~
-8 abdegikq ao 0
+8 abdegikq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-6 1000000 100000 106
+6 1000000 100000 106 0
 E
 ampulheta tempo~
 Você observa a magnífica e divina ampulheta do tempo, que possui os segredos
@@ -416,9 +416,9 @@ varinha magica~
 uma varinha mágica~
 Uma varinha mágica foi esquecida aqui.~
 ~
-3 aegkpq ao 0 
+3 aegkpq 0 0 0 ao 0 0 0 0 0 0 0
 1 5 5 32
-5 400000 40000 10
+5 400000 40000 10 0
 E
 varinha magica~
 Você observa uma pequena varinha mágica, feita de caules de plantas,
@@ -429,9 +429,9 @@ manto velho~
 um manto velho~
 Um manto velho foi esquecido aqui.~
 ~
-9 e ak 0 
+9 e 0 0 0 ak 0 0 0 0 0 0 0
 2 0 0 0
-8 20000 2000 1
+8 20000 2000 1 0
 E
 manto velho~
 Você observa um manto velho e desgastado pelo tempo, sujo de lama e com um
@@ -442,15 +442,9 @@ monolito pedra rocha~
 um monolito de pedra~
 Um enorme monólito de pedra foi fixado aqui.~
 ~
-12 aegi 0 0 
+12 aegi 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-80 0 0 1
-E
-monolito pedra rocha~
-Você observa as estranhas escrituras, feitas numa linguagem nunca vista
-antes por você em todo Mundo de Vitália.  No topo do monólito você observa
-uma escultura rudimentar de um Dragão.
-~
+80 0 0 1 0
 E
 escultura rudimentar dragao~
 Você observa a escultura do Dragão, feita da rocha mais resistente do reino.
@@ -458,14 +452,20 @@ Ao olhar para os olhos da figura, você sente uma estranha sensação de medo,
 ao mesmo tempo que observa que eles, antes petrificados, se acenderam como
 chamas de fogo.
 ~
+E
+monolito pedra rocha~
+Você observa as estranhas escrituras, feitas numa linguagem nunca vista
+antes por você em todo Mundo de Vitália.  No topo do monólito você observa
+uma escultura rudimentar de um Dragão.
+~
 #9323
 algas azuis~
 as algas azuis~
 Algumas algas azuis estão aqui.~
 ~
-19 eg a 0
+19 eg 0 0 0 a 0 0 0 0 0 0 0
 6 0 0 0
-3 30000 3000 1
+3 30000 3000 1 0
 E
 algas azuis~
 Você observa algumas algas azuis, encontradas apenas no paraíso dos dragões
@@ -477,9 +477,9 @@ tabua madeira~
 uma tábua de madeira~
 Uma tábua de madeira foi deixada aqui.~
 ~
-12 aegi a 0 
+12 aegi 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-30 0 0 1
+30 0 0 1 0
 E
 tabua madeira escrituras~
 Sois o Guardião da Paz, em tuas mãos eu entrego a Paz deste local sagrado.
@@ -491,23 +491,23 @@ tabua madeira~
 uma tábua de madeira~
 Uma tábua de madeira foi deixada aqui.~
 ~
-12 aegi a 0 
+12 aegi 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-30 0 0 1
+30 0 0 1 0
 E
 tabua madeira escrituras~
 Sois o Guardião da Harmonia, em tuas mãos eu entrego a Harmonia deste local
 sagrado.  Viverás aqui para sempre e não pouparás esforços para aniquilar
 qualquer invasor que tentar destruir o equilíbrio deste paraíso.
 ~
-#9326 
+#9326
 ninho~
 um ninho de dragões fadas~
 Um ninho de dragões fadas foi feito aqui.~
 ~
-15 aegi 0 0
+15 aegi 0 0 0 0 0 0 0 0 0 0 0
 10 5 -1 0
-15 0 0 1
+15 0 0 1 0
 E
 ninhos~
 Você observa uma verdadeira obra prima, feita com folhas secas e flores.  Os
@@ -520,9 +520,9 @@ ovo~
 um ovo de dragão fada~
 Um pequenino ovo de dragão fada foi esquecido aqui.~
 ~
-19 abegi a 0
+19 abegi 0 0 0 a 0 0 0 0 0 0 0
 6 0 0 0
-2 5000 0 1
+2 5000 0 1 0
 E
 ovo~
 Você observa um pequenino ovo colorido, com certeza são dos dragões fadas.
@@ -535,9 +535,9 @@ pequeno trono dourado~
 um pequeno trono dourado~
 Um pequeno trono dourado está aqui.~
 ~
-8 aegi 0 0
+8 aegi 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-20 500000 50000 1
+20 500000 50000 1 0
 E
 pequeno trono dourado~
 Você observa um lindo trono dourado, feito todo em ouro e com várias pedras
@@ -548,9 +548,9 @@ estante~
 uma estante de madeira~
 Uma estante de madeira está aqui.~
 ~
-15 eg 0 0
+15 eg 0 0 0 0 0 0 0 0 0 0 0
 30 5 -1 0
-30 5000 500 1
+30 5000 500 1 0
 E
 estante~
 Você vê uma estante de madeira muito antiga e cheia de livros empoeirados.
@@ -560,9 +560,9 @@ livro virtude~
 o livro da virtude~
 O Livro da virtude foi deixado aqui.~
 ~
-12 aegikq ao cm
+12 aegikq 0 0 0 ao 0 0 0 dn 0 0 0
 0 0 0 0
-15 300000 30000 1
+15 300000 30000 1 0
 E
 livro virtude~
 Você observa um antigo livro vitaliano, que contém as seguintes escrituras:
@@ -662,9 +662,9 @@ fonte~
 a fonte fantasmagórica~
 Um fonte estranha foi feita aqui.~
 ~
-23 abeg 0 0
+23 abeg 0 0 0 0 0 0 0 0 0 0 0
 70 70 13 0
-50 0 0 1
+50 0 0 1 0
 E
 fonte~
 Você observa uma grande fonte, feita de um líquido e transparente.  Você
@@ -676,9 +676,9 @@ azul~
 um monólito azul~
 Um enorme monólito de pedra azul foi fixado aqui.~
 ~
-12 aeg 0 0
+12 aeg 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-100 0 0 1
+100 0 0 1 0
 E
 azul~
 Você olha o monólito azul e observa a escritura que diz:  
@@ -691,9 +691,9 @@ verde~
 um monólito verde~
 Um enorme monólito de pedra verde foi fixado aqui.~
 ~
-12 aeg 0 0
+12 aeg 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-100 0 0 1
+100 0 0 1 0
 E
 verde~
 Você olha o monólito verde e observa a escritura que diz:  
@@ -706,9 +706,9 @@ preto~
 um monólito preto~
 Um enorme monólito de pedra preto foi fixado aqui.~
 ~
-12 aeg 0 0
+12 aeg 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-100 0 0 1
+100 0 0 1 0
 E
 preto~
 Você olha o monólito negro e observa a escritura que diz:  
@@ -722,9 +722,9 @@ branco~
 um monólito branco~
 Um enorme monólito de pedra branco foi fixado aqui.~
 ~
-12 aeg 0 0
+12 aeg 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-100 0 0 1
+100 0 0 1 0
 E
 branco~
 Você olha o monólito branco e observa a escritura que diz:  
@@ -733,14 +733,14 @@ Você olha o monólito branco e observa a escritura que diz:
 de sentirem prazer em fazê-lo e não pedirem nada em troca.  Esses serão
 sempre lembrados e eternamente exaltados.
 ~
-#9336 
+#9336
 esfera fogo~
 uma esfera de fogo~
 Uma enorme esfera de fogo foi deixada aqui.~
 ~
-12 abeg 0 0
+12 abeg 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-50 0 0 1
+50 0 0 1 0
 E
 esfera fogo~
 Você olha a esfera de fogo e fica imaginando quem será que criou tal
@@ -753,9 +753,9 @@ caixa pandora~
 a caixa de pandora~
 A Caixa de pandora foi deixada aqui.~
 ~
-15 adeghq ao 0
-20 5 -1 0 
-15 5000000 500000 1
+15 adeghq 0 0 0 ao 0 0 0 0 0 0 0
+20 5 -1 0
+15 5000000 500000 1 0
 E
 caixa pandora~
 Você observa a magnífica caixa, que é uma verdadeira obra prima.  Feita de
@@ -766,9 +766,9 @@ primeira chaga morte~
 a primeira chaga, a morte~
 A Morte, primeira chaga do universo foi deixada aqui.~
 ~
-12 adeghq ao ly
+12 adeghq 0 0 0 ao 0 0 0 mz 0 0 0
 0 0 0 0
-5 0 0 1
+5 0 0 1 0
 E
 morte primeira chaga~
 Você observa temeroso a sua frente a imagem mais assustadora da sua vida: a
@@ -779,9 +779,9 @@ segunda chaga miseria~
 a segunda chaga, a miséria~
 A Miséria,  segunda chaga do cosmo foi deixada aqui.~
 ~
-12 adeghq ao ly
+12 adeghq 0 0 0 ao 0 0 0 mz 0 0 0
 0 0 0 0
-5 0 0 1
+5 0 0 1 0
 E
 miseria segunda chaga~
 Você observa uma imagem terrível sobre o seu futuro e o futuro do seu povo,
@@ -793,9 +793,9 @@ terceira chaga peste~
 a terceira chaga, a peste~
 A Peste, terceira chaga do mundo foi deixada aqui.~
 ~
-12 adeghq ao ly
+12 adeghq 0 0 0 ao 0 0 0 mz 0 0 0
 0 0 0 0
-5 0 0 1
+5 0 0 1 0
 E
 peste terceira chaga~
 Você começa a sentir uma coceira terrível, seus cabelos e pêlos começam a
@@ -806,9 +806,9 @@ quarta chaga guerra~
 a quarta chaga, a guerra~
 A Guerra, quarta chaga do universo foi deixada aqui~
 ~
-12 adeghq ao y
+12 adeghq 0 0 0 ao 0 0 0 z 0 0 0
 0 0 0 0
-5 0 0 1
+5 0 0 1 0
 E
 guerra quarta chaga~
 Você começa a imaginar seu futuro e se vê numa guerra sangrenta, onde todos
@@ -820,9 +820,9 @@ flor lis~
 a flor-de-lis~
 Uma flor-de-lis está aqui, com seu perfume delicioso.~
 ~
-4 aegik ao 0
+4 aegik 0 0 0 ao 0 0 0 0 0 0 0
 15 5 5 59
-3 200000 20000 15
+3 200000 20000 15 0
 E
 flor lis~
 Você observa uma das mais lindas flores de Vitália, a flor-de-lis.  Suas
@@ -834,14 +834,9 @@ estatua dragao ouro~
 a estátua do dragão de ouro~
 A Estátua do dragão de ouro foi fixada aqui.~
 ~
-8 aegi 0 0
+8 aegi 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-100 6000000 600000 1
-E
-estatua ouro dragao~
-Você observa uma grande estátua de um dragão feita de ouro e percebe algumas
-escrituras em sua base.
-~
+100 6000000 600000 1 0
 E
 escrituras base~
 Você observa as escrituras que trazem as seguintes mensagens:
@@ -857,14 +852,19 @@ vida à maldade e se reproduzem em sofrimento"
  
 ****************************************************************************
 ~
+E
+estatua ouro dragao~
+Você observa uma grande estátua de um dragão feita de ouro e percebe algumas
+escrituras em sua base.
+~
 #9344
 ossos dragoes~
 ossos de dragões~
 Alguns ossos de dragões foram empilhados aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-35 0 0 1
+35 0 0 1 0
 E
 ossos~
 Você observa vários ossos empilhados dos mais variados tamanhos.  Alguns
@@ -875,9 +875,9 @@ garrafa antiga~
 uma garrafa antiga~
 Uma garrafa antiga foi esquecida aqui.~
 ~
-17 0 ao 0
+17 0 0 0 0 ao 0 0 0 0 0 0 0
 14 14 0 1
-8 10000 1000 1
+19 10000 1000 1 0
 E
 garrafa antiga~
 Você observa essa bela garrafa antiga.  Ela deve ter pelo menos uns 100
@@ -888,14 +888,9 @@ totem pedra~
 um totem de pedra~
 Um totem de pedra foi fixado aqui.~
 ~
-12 ae 0 0 
+12 ae 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-65 0 0 1
-E
-totem pedra~
-Você observa um totem de pedra formado por esculturas de dragões. Em seu
-topo você percebe a existência de uma escritura.
-~
+65 0 0 1 0
 E
 escritura topo~
 Você observa a escritura no topo do totem de pedra, que diz:
@@ -906,14 +901,19 @@ você conseguir vê-la, então será tarde demais.
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 ~
+E
+totem pedra~
+Você observa um totem de pedra formado por esculturas de dragões. Em seu
+topo você percebe a existência de uma escritura.
+~
 #9347
 trono ouro branco prata~
 um trono de ouro branco e prata~
 Um Trono de ouro branco e prata foi deixado aqui.~
 ~
-8 ae 0 0
+8 ae 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-35 3000000 300000 1
+35 3000000 300000 1 0
 E
 trono ouro branco prata~
 Você observa um majestoso trono feito de ouro branco e com alguns detalhes
@@ -924,9 +924,9 @@ flor deserto~
 a flor do deserto~
 Uma flor do deserto foi deixada aqui.~
 ~
-4 aegq ao k
+4 aegq 0 0 0 ao 0 0 0 l 0 0 0
 20 1 1 53
-3 500000 50000 20
+3 500000 50000 20 0
 E
 flor deserto~
 Você observa uma maravilhosa flor, a flor do deserto.  Ela surge dos galhos
@@ -938,9 +938,9 @@ arvore fogo~
 a árvore de fogo~
 A Árvore de fogo está aqui com seus galhos em chamas.~
 ~
-12 abe 0 0 
+12 abe 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-55 0 0 1
+55 0 0 1 0
 E
 arvore fogo galhos folhas tronco chamas~
 Você observa uma misteriosa árvore em chamas.  Seus galhos, troncos e folhas
@@ -953,9 +953,9 @@ pena tempo~
 a pena do tempo~
 A pena do tempo foi esquecida aqui.~
 ~
-21 adegijkq ao chm
+21 adegijkq 0 0 0 ao 0 0 0 din 0 0 0
 0 0 0 0
-2 2000000 200000 106
+2 2000000 200000 106 0
 E
 pena tempo~
 Você observa uma simples pena branca, que, apesar da aparência, é capaz de
@@ -968,9 +968,9 @@ diario sagrado~
 o diário sagrado~
 O Diário sagrado foi deixado aqui.~
 ~
-16 adegiklq ao chm
+16 adegiklq 0 0 0 ao 0 0 0 din 0 0 0
 0 0 0 0
-8 4000000 400000 106
+8 4000000 400000 106 0
 E
 diario sagrado~
 Você observa o diário sagrado do Senhor do Tempo.  Nele você presume estar
@@ -982,9 +982,9 @@ apito sagrado~
 o apito sagrado~
 O Apito sagrado foi esquecido aqui.~
 ~
-8 abdegiklq ao cdefhm
+8 abdegiklq 0 0 0 ao 0 0 0 defgin 0 0 0
 0 0 0 0
-10 8000000 800000 105
+10 8000000 800000 105 0
 E
 apito sagrado~
 Você observa um magnífico apito de ouro que, em momentos de extremo perigo
@@ -996,9 +996,9 @@ argolas douradas anciao~
 as argolas douradas do ancião~
 As argolas douradas do ancião foi esquecida aqui.~
 ~
-11 aegklq aq cm
+11 aegklq 0 0 0 aq 0 0 0 dn 0 0 0
 0 0 0 0
-5 2000000 200000 85
+5 2000000 200000 85 0
 E
 argolas douradas anciao~
 Você observa uma linda argola dourada, criada pelo poderoso Ancião Dragão
@@ -1016,14 +1016,14 @@ A
 18 1
 A
 19 1
-#9354 
+#9354
 brinco perolas~
 um brinco de pérolas~
 Um brinco de pérolas foi esquecido aqui.~
 ~
-11 aegjq aq n
+11 aegjq 0 0 0 aq 0 0 0 o 0 0 0
 0 0 0 0
-5 1500000 150000 70
+5 1500000 150000 70 0
 E
 brinco perolas~
 Você observa um majestoso brinco, feito com pérolas raras.  Para
@@ -1040,9 +1040,9 @@ brinco penas~
 um brinco de penas~
 Um brinco de penas foi esquecido aqui.~
 ~
-11 egq aq e
+11 egq 0 0 0 aq 0 0 0 f 0 0 0
 0 0 0 0
-5 1400000 140000 60
+5 1400000 140000 60 0
 E
 brinco penas~
 Você observa um colorido brinco de penas, feito com três penas de diferentes
@@ -1060,9 +1060,9 @@ argola firmamento~
 a argola do firmamento~
 A argola do firmamento foi esquecida aqui.~
 ~
-11 aegkq aq m
+11 aegkq 0 0 0 aq 0 0 0 n 0 0 0
 0 0 0 0
-3 1000000 100000 30
+3 1000000 100000 30 0
 E
 argola firmamento~
 Você observa uma misteriosa argola prateada com uma esfera em seu centro.  O
@@ -1077,14 +1077,14 @@ A
 12 25
 A
 17 -4
-#9357 
+#9357
 brinco bravo~
 o brinco do bravo~
 O brinco do bravo foi esquecido aqui.~
 ~
-11 aegkq aq cm
+11 aegkq 0 0 0 aq 0 0 0 dn 0 0 0
 0 0 0 0
-5 2000000 200000 55
+5 2000000 200000 55 0
 E
 brinco bravo~
 Você observa um maravilhoso brinco, feito de bronze e ornamentado com alguns
@@ -1101,4 +1101,4 @@ A
 13 25
 A
 18 1
-$
+$~

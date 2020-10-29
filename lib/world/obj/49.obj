@@ -3,9 +3,9 @@ lanca atom~
 uma lança Atom~
 Uma lança Atom foi deixada aqui.~
 ~
-5 ag an
+5 ag 0 0 0 an 0 0 0 0 0 0 0
 0 2 3 15
-4 10 0
+4 10 0 0 0
 A
 13 5
 #4901
@@ -13,17 +13,17 @@ livro historia grandes aventuras~
 um livro com uma capa de casca de árvore~
 Uma história de grandes aventuras foi deixada aqui.~
 ~
-2 1 ao
+2 a 0 0 0 ao 0 0 0 0 0 0 0
 1 11 -1 -1
-6 10 0
+6 10 0 0 0
 #4902
 botas grigue salto~
 as botas de salto Grigue~
 As botas de salto Grigue foram deixadas aqui.~
 ~
-9 a ag
+9 a 0 0 0 ag 0 0 0 0 0 0 0
 6 0 0 0
-5 10 0 2
+5 10 0 2 0
 A
 14 10
 #4903
@@ -31,17 +31,17 @@ asas grigue~
 um par de asas grigue~
 Um par de asas foi deixado aqui.~
 ~
-13 a ap
+13 a 0 0 0 ap 0 0 0 0 0 0 0
 0 0 0 0
-3 11 0 3
+3 11 0 3 0
 #4904
 anel pequeno brilhante~
 um pequeno anel brilhante~
 Um pequeno anel brilhante foi deixado aqui.~
 ~
-9 a ab 0
+9 a 0 0 0 ab 0 0 0 0 0 0 0
 2 0 0 0
-2 10 0 1
+2 10 0 1 0
 A
 13 10
 #4905
@@ -49,25 +49,25 @@ peitoral verde~
 um pequeno peitoral verde~
 Um pequeno peitoral verde está descansando no canto distante.~
 ~
-15 a 0
+15 a 0 0 0 0 0 0 0 0 0 0 0
 1000 5 -1 0
-0 0 0 0
+0 0 0 0 0
 #4906
 novato varinha~
 uma varinha de novato~
 Uma varinha de novato foi deixada aqui.~
 ~
-3 a ao
+3 a 0 0 0 ao 0 0 0 0 0 0 0
 10 3 3 12
-1 10 0 1
+1 10 0 1 0
 #4907
 colar folhas~
 um colar de folhas~
 Um simples colar de folhas caiu no chão.~
 ~
-9 64 5
+9 g 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0
+1 0 0 0 0
 A
 18 1
 A
@@ -77,9 +77,9 @@ punhal folha~
 um punhal em forma de folha~
 Um pequeno punhal em forma de folha foi esquecido aqui.~
 ~
-5 65 ano
+5 ag 0 0 0 ano 0 0 0 0 0 0 0
 0 1 4 11
-1 0 0
+1 0 0 0 0
 A
 19 1
 #4909
@@ -87,7 +87,7 @@ calcas couro verde~
 calças de couro verde~
 Um par de calças de couro verde foi deixado aqui.~
 ~
-9 0 33
+9 0 0 0 0 af 0 0 0 0 0 0 0
 4 0 0 0
-4 200 0
+4 200 0 0 0
 $~

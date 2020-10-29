@@ -3,9 +3,9 @@ chave grande esqueleto~
 uma grande chave em forma de esqueleto~
 Uma grande chave em forma de esqueleto foi perdida aqui.~
 ~
-18 b ao
+18 b 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0 0
+1 0 0 0 0
 E
 chave grande esqueleto~
 Os dentes na chave são muito grandes e precisos.
@@ -15,9 +15,9 @@ chave metal enferrujada~
 uma chave de metal enferrujada~
 Uma chave de metal enferrujada está aqui.~
 ~
-18 b ao
+18 b 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0 0
+1 0 0 0 0
 E
 chave metal enferrujada~
 A pequena chave de metal foi pouco utilizada em todos estes anos.  A falta
@@ -28,9 +28,9 @@ chave prateada~
 uma chave prateada~
 Uma chave prateada foi jogada aqui.~
 ~
-18 b ao
+18 b 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0 0
+1 0 0 0 0
 E
 chave prateada~
 A chave prateada parece ser muito forte porém foi cuidadosamente produzida.
@@ -40,17 +40,17 @@ chave grande metal~
 uma longa chave de metal~
 Uma longa chave de metal foi jogada aqui.~
 ~
-18 b ao
+18 b 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0 0
+1 0 0 0 0
 #7504
 chave pedra~
 uma chave de pedra~
 Uma chave feita de pedra foi perdida aqui.~
 ~
-18 b ao
+18 b 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-2 0 0
+2 0 0 0 0
 E
 chave pedra~
 Feita de ardósia, a chave tem uma superfície preta e sombria.
@@ -60,9 +60,9 @@ chave polida pedra~
 uma chave de pedra polida~
 Uma chave brilhante foi jogada aqui.~
 ~
-18 a ao
+18 a 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-2 0 0
+2 0 0 0 0
 E
 chave polida pedra~
 Feita de algum tipo de quartzo, a chave foi cuidadosamente polida.
@@ -72,9 +72,9 @@ mesa grande madeira carvalho~
 uma grande mesa de madeira~
 Uma grande mesa de madeira está no centro da sala.~
 ~
-13 0 0
+13 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-300 100 0
+300 100 0 0 0
 E
 mesa grande madeira carvalho~
 A mesa foi feita de carvalho.  Foi encerada com uma cera de abelhas onde deu
@@ -85,9 +85,9 @@ fonte barao homem estátua~
 uma fonte~
 Há uma fonte com a estátua de um homem murmurando baixinho aqui.~
 ~
-23 0 0
-1000 1000 0 0 
-10000 0 0
+23 0 0 0 0 0 0 0 0 0 0 0 0
+1000 1000 0 0
+10000 0 0 0 0
 E
 fonte barao homem estátua~
 A fonte foi toda feita de pedra numa forma oval.  Em uma plataforma no meio
@@ -98,9 +98,9 @@ mesa trabalho grande madeira~
 uma grande mesa de trabalho de madeira~
 Uma grande mesa de trabalho de madeira está contra uma parede distante.~
 ~
-13 0 0
+13 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-10000 0 0
+10000 0 0 0 0
 E
 mesa trabalho grande madeira~
 A mesa de trabalho ocupa muito espaço deste quarto.  Três tamboretes estão
@@ -112,9 +112,9 @@ carruagem~
 uma carruagem~
 Uma carruagem cara foi estacionada aqui.~
 ~
-13 0 0
+13 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-10000 0 0
+10000 0 0 0 0
 E
 carruagem~
 A carruagem é azul com detalhes em preto.  Existe um brasão pintado nas
@@ -125,9 +125,9 @@ chave pequena metal~
 uma pequena chave de metal~
 Uma pequena chave de metal foi jogada aqui.~
 ~
-18 b ao
+18 b 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0
+1 0 0 0 0
 E
 chave pequena metal~
 A chave é muito fina.  Isto com certeza é mais decrotiva do que funcional.
@@ -137,9 +137,9 @@ chave bronze~
 uma chave de bronze~
 Uma chave de bronze está sobre o chão.~
 ~
-18 b ao
+18 b 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0
+1 0 0 0 0
 E
 chave bronze~
 A chave é muito pequena e feita de bronze.  Existe um minúsculo cadeado em
@@ -150,9 +150,9 @@ bau trancado~
 um baú~
 Um baú está fixado na cabeceira da cama.~
 ~
-15 0 0
+15 0 0 0 0 0 0 0 0 0 0 0 0
 100 5 -1 0
-200 50 0
+200 50 0 0 0
 E
 bau trancado~
 O baú é de uma construção muito grande e pesada.  Isto foi feito de carvalho
@@ -163,17 +163,17 @@ moedas ouro~
 uma pequena pilha de moedas~
 Uma pequena pilha de moedas de ouro foi escondida aqui.~
 ~
-20 0 a
+20 0 0 0 0 a 0 0 0 0 0 0 0
 1000 0 0 0
-5 0 0
+5 0 0 0 0
 #7514
 anel ouro sete pontas~
 Um anel de ouro com sete pontas.~
 Um anel dourado foi perdido aqui.~
 ~
-11 af ab
+11 af 0 0 0 ab 0 0 0 0 0 0 0
 0 0 0 0
-8 1500 0
+8 1500 0 0 0
 E
 anel ouro sete pontas~
 O anel foi feito de um ouro altamente refinado.  E é bastante pesado para o
@@ -188,9 +188,9 @@ doblete roupas azul~
 um doblete azul com um ornamento verde~
 Algumas roupas foram descartadas aqui.~
 ~
-9 a ad
+9 a 0 0 0 ad 0 0 0 0 0 0 0
 6 0 0 0
-10 100 0
+10 100 0 0 0
 E
 doblete azul roupas~
 O doblete foi feito de uma lã muito macia.  Isto deve ter dado bastante
@@ -201,9 +201,9 @@ perneiras preta~
 um elegante par de perneiras~
 Um par de perneiras está amarrotado aqui.~
 ~
-9 a af
+9 a 0 0 0 af 0 0 0 0 0 0 0
 5 0 0 0
-6 500 0
+6 500 0 0 0
 E
 perneiras preta~
 As perneiras foram feitas de um tecido de seda bastante grosso.  Elas
@@ -214,9 +214,9 @@ botas couro caras~
 um par de botas de couro~
 Um par de botas bastante caras foi deixado aqui.~
 ~
-9 a ag
+9 a 0 0 0 ag 0 0 0 0 0 0 0
 2 0 0 0
-9 300 0
+9 300 0 0 0
 E
 botas couro caras~
 As botas são muito grandes e sua ponta é quadrada.  Com muitas marcas de
@@ -231,9 +231,9 @@ punhal cabo marfim~
 um punhal com o cabo de marfim~
 Um punhal com o cabo de marfim foi perdido aqui.~
 ~
-5 agjl an
+5 agjl 0 0 0 an 0 0 0 0 0 0 0
 0 4 4 11
-9 1000 0 60
+9 1000 0 60 0
 E
 punhal cabo marfim~
 O artesanato deste punhal não é superado.  A lâmina foi feita por um mestre
@@ -245,15 +245,15 @@ A
 A
 19 4
 A
-18 4 
+18 4
 #7519
 medalhao dourado~
 um medalhão dourado~
 Um medalhão dourado foi jogado aqui.~
 ~
-15 0 ac
+15 0 0 0 0 ac 0 0 0 0 0 0 0
 15 5 -1 0
-3 200 0
+3 200 0 0 0
 E
 medalhao~
 O medalhão dourado tem uma minúscula batida em um dos lados.  Dentro do
@@ -266,9 +266,9 @@ capacete danificado~
 um capacete danificado~
 Um capacete danificado foi deixado no chão.~
 ~
-9 jla ae
+9 ajl 0 0 0 ae 0 0 0 0 0 0 0
 5 0 0 0
-10 100 0 56
+10 100 0 56 0
 E
 capacete danificado~
 O capacete foi fortemente construído por um guarda de nariz comprido.  O
@@ -282,9 +282,9 @@ couraca batalha~
 uma couraça de batalha~
 Um belo equipamento foi deixado aqui.~
 ~
-9 jl ad
+9 jl 0 0 0 ad 0 0 0 0 0 0 0
 8 0 0 0
-12 300 0 60
+12 300 0 60 0
 E
 couraca batalha~
 Esta bela couraça de batalha está bem conservada.  O couro está bastante
@@ -297,9 +297,9 @@ espada longa brilhante~
 uma espada longa muito brilhante~
 Uma espada longa muito brilhante foi derrubada aqui.~
 ~
-5 jla an
+5 ajl 0 0 0 an 0 0 0 0 0 0 0
 0 4 4 3
-12 1300 0 40
+12 1300 0 40 0
 E
 espada longa brilhante~
 A longa espada de ferro foi polida deixando um brilho intenso.  Enquanto a
@@ -315,9 +315,9 @@ anel mercenario~
 o anel de um mercenário~
 Um anel com um estranho desenho foi esquecido aqui.~
 ~
-9 jl ab
+9 jl 0 0 0 ab 0 0 0 0 0 0 0
 4 0 0 0
-4 400 0 30
+4 400 0 30 0
 E
 anel mercenario~
 O anel foi feito de ferro com o desenho de uma bela pantera.
@@ -333,9 +333,9 @@ coifa corrente~
 uma coifa de corrente~
 Algumas correntes de armaduras foram deixadas aqui no chão.~
 ~
-9 jl ae
+9 jl 0 0 0 ae 0 0 0 0 0 0 0
 6 0 0 0
-8 650 0
+8 650 0 0 0
 E
 coifa corrente~
 As ligações que compõem a coifa são muito pequenas.  O metal se conservou
@@ -348,9 +348,9 @@ sabre espada cavalaria~
 um sabre de cavalaria~
 Uma espada longa e fina foi deixada aqui.~
 ~
-5 gjl an
+5 gjl 0 0 0 an 0 0 0 0 0 0 0
 0 5 3 3
-9 700 0 20
+9 700 0 20 0
 E
 sabre espada cavalaria~
 A sabre possui 3 metros de comprimento e é muito fina.  A lâmina possui uma
@@ -365,9 +365,9 @@ armadura sombria~
 uma sombria armadura de metal~
 Algumas armaduras de metal foram deixadas em uma pilha aqui.~
 ~
-9 jl ad
+9 jl 0 0 0 ad 0 0 0 0 0 0 0
 10 0 0 0
-10 500 0 43
+10 500 0 43 0
 E
 armadura sombria~
 A armadura de metal foi feita para não poder lustrar.  O ferreiro deve ter
@@ -383,9 +383,9 @@ capa vermelha arredondada~
 uma capa meio arredondada~
 Uma capa vermelha foi deixada aqui.~
 ~
-11 jl ak
+11 jl 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
-6 50 0
+6 50 0 0 0
 E
 capa vermelha arredondada~
 A capa foi feita de um material barato e lanoso e foi pintada em uma cor
@@ -400,9 +400,9 @@ jaqueta couro~
 um jaqueta de couro~
 Uma jaqueta de couro foi descartada aqui.~
 ~
-9 0 ad
+9 0 0 0 0 ad 0 0 0 0 0 0 0
 5 0 0 0
-10 300 0
+10 300 0 0 0
 E
 jaqueta couro~
 A jaqueta parece ter sido bastante usada.  Foi endurecida em óleo e o couro
@@ -413,9 +413,9 @@ gorro couro~
 um gorro de couro~
 Um gorro de couro foi esquecido aqui.~
 ~
-9 0 ae
+9 0 0 0 0 ae 0 0 0 0 0 0 0
 3 0 0 0
-5 100 0
+5 100 0 0 0
 E
 gorro couro~
 O gorro foi brutamente cortado de couro duro.  Pelo cheiro disto,
@@ -426,9 +426,9 @@ espada guarda simples~
 uma simples espada do guarda~
 Uma simples mas utilizável espada foi deixada aqui.~
 ~
-5 0 an
+5 0 0 0 0 an 0 0 0 0 0 0 0
 0 3 3 3
-12 130 0
+12 130 0 0 0
 E
 espada guarda simples~
 A espada parece ter sido feita por um bom ferreiro.  Ela é bastante plana e
@@ -439,9 +439,9 @@ pequena luneta estranho tubo~
 uma pequena luneta~
 Um estranho tubo foi jogado aqui.~
 ~
-12 0 ao
+12 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-15 1300 0
+15 1300 0 0 0
 E
 pequena luneta estranho tubo~
 A luneta mostra sinais de muito uso.  Porém parece trabalhar
@@ -454,9 +454,9 @@ cortador carne~
 um cortador de carne~
 Um cortador de carne foi deixado aqui.~
 ~
-5 0 an
+5 0 0 0 0 an 0 0 0 0 0 0 0
 0 2 5 3
-9 200 0
+9 200 0 0 0
 E
 cortador carne~
 O cortador possui algumas peças faltando da extremidade da lâmina.  A
@@ -467,9 +467,9 @@ pequeno empregada roupas pretas uniforme~
 o uniforme de uma empregada~
 Uma pequena quantidade de roupas pretas foram descartadas e estão aqui.~
 ~
-11 0 ad
+11 0 0 0 0 ad 0 0 0 0 0 0 0
 0 0 0 0
-5 50 0
+5 50 0 0 0
 E
 pequeno empregada roupas pretas uniforme~
 Esta é a roupa que uma empregada utiliza para trabalhar, mas não existe
@@ -480,9 +480,9 @@ espanador pena~
 um espanador de pena~
 Um espanador de penas foi deixado aqui.~
 ~
-13 0 ao
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-5 0 0
+5 0 0 0 0
 E
 espanador pena~
 O espanador de pena tem um longo cabo de madeira.
@@ -492,9 +492,9 @@ casaco preto~
 um casaco preto formal~
 Um casaco preto foi perdido aqui.~
 ~
-11 0 ak
+11 0 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
-8 200 0
+8 200 0 0 0
 E
 casaco preto~
 O casaco preto é usado pelo criado do Darwin.
@@ -504,9 +504,9 @@ calcas pretas~
 um par de calças pretas~
 Um par de calças pretas foi jogado no chão.~
 ~
-11 0 af
+11 0 0 0 0 af 0 0 0 0 0 0 0
 0 0 0 0
-5 100 0
+5 100 0 0 0
 E
 calcas pretas~
 As calças são de Darwin para seu uso formal e pessoal.
@@ -516,9 +516,9 @@ camisa branca~
 uma camisa branca~
 Uma camisa branca foi descartada aqui.~
 ~
-11 0 ad
+11 0 0 0 0 ad 0 0 0 0 0 0 0
 0 0 0 0
-5 100 0
+5 100 0 0 0
 E
 camisa branca~
 A camisa branca faz parte do traje pessoal do Darwin.
@@ -528,9 +528,9 @@ tunica vermelha pajem~
 uma túnica vermelha~
 Uma túnica vermelha de um pajem foi deixado aqui.~
 ~
-11 0 ak
+11 0 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
-5 50 0
+5 50 0 0 0
 E
 tunica vermelha pajem~
 A túnica vermelha tem o emblema de um pajem em seu peito.  Apesar de ser
@@ -541,9 +541,9 @@ macacao sujo~
 um macacão sujo~
 Um macacão foi deixado aqui.~
 ~
-11 0 ad
+11 0 0 0 0 ad 0 0 0 0 0 0 0
 0 0 0 0
-7 150 0
+7 150 0 0 0
 E
 macacao sujo~
 O macacão está completamente sujo com lama.  No joelho está muito gasto, e
@@ -556,9 +556,9 @@ tesoura jardinagem~
 uma tesoura de jardinagem~
 Uma velha tesoura de jardinagem foi esquecida aqui.~
 ~
-5 0 an
+5 0 0 0 0 an 0 0 0 0 0 0 0
 0 3 4 11
-8 50 0 9
+8 50 0 9 0
 A
 18 1
 #7541
@@ -566,9 +566,9 @@ armadura treinamento acolchoada~
 uma armadura acolchoada de treinamento~
 Uma armadura acolchoada de treinamento foi descartada aqui.~
 ~
-9 0 ad
+9 0 0 0 0 ad 0 0 0 0 0 0 0
 7 0 0 0
-10 175 0
+10 175 0 0 0
 E
 armadura treinamento acolchoada~
 A armadura de treinamento é feita de um couro bastante fino.  O interior foi
@@ -582,9 +582,9 @@ faca equilibrada~
 uma faca equilibrada~
 Uma longa faca com uma lâmina grossa foi deixada aqui no chão.~
 ~
-5 gj ano
+5 gj 0 0 0 ano 0 0 0 0 0 0 0
 0 2 6 11
-10 140 0
+10 140 0 0 0
 E
 faca equilibrada~
 A faca é muito bem equilibrada.  A pesada lâmina é longa, grossa e possui
@@ -601,9 +601,9 @@ jogo boleadeiras~
 boleadeiras~
 Um jogo de boleadeiras foi deixado aqui.~
 ~
-5 gj ano
+5 gj 0 0 0 ano 0 0 0 0 0 0 0
 0 3 4 9
-11 200 0
+11 200 0 0 0
 E
 boleadeiras~
 Foram presas várias bolas de pedra uma a outra por grossa corda.    
@@ -617,9 +617,9 @@ espada madeira treinamento~
 uma espada de madeira~
 Uma longa espada de madeira está aqui.~
 ~
-5 j an
+5 j 0 0 0 an 0 0 0 0 0 0 0
 0 2 5 9
-12 10 0
+12 10 0 0 0
 E
 espada madeira treinamento~
 A espada de madeira está bastante usada.  Existem várias marcas em sua
@@ -630,9 +630,9 @@ protetor cabeca~
 um protetor de cabeça~
 Um protetor de cabeça está aqui.~
 ~
-11 0 ae
+11 0 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
-8 10 0
+8 10 0 0 0
 E
 protetor cabeca~
 O protetor de cabeça é feito de couro com uma pesada espuma além de velha.     
@@ -644,9 +644,9 @@ pequeno martelo mao~
 um martelo~
 Um pequeno martelo de mão foi esquecido aqui.~
 ~
-5 g an
+5 g 0 0 0 an 0 0 0 0 0 0 0
 0 1 7 7
-10 100 0
+10 100 0 0 0
 E
 pequeno martelo mao~
 O martelo possui um cabo bastante curto.    
@@ -666,9 +666,9 @@ colete couro~
 um colete de couro~
 Um colete de couro foi deixado aqui.~
 ~
-11 0 ak
+11 0 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
-12 75 0
+12 75 0 0 0
 E
 colete couro~
 O colete foi feito com grossas camadas de couro.  Existem marcas de
@@ -681,9 +681,9 @@ chicote cavalo~
 um chicote de cavalo~
 Um chicote de cavalo foi deixado aqui.~
 ~
-5 0 an
+5 0 0 0 0 an 0 0 0 0 0 0 0
 0 2 5 2
-5 120 0
+5 120 0 0 0
 E
 chicote cavalo~
 O chicote de cavalo é comprido e negro. Na ponta existem uma parte de metal.    
@@ -693,9 +693,9 @@ olhos flutuante globo ocular~
 um olho flutuante~
 Parece ser um globo ocular que flutua aqui próximo ao chão.~
 ~
-1 jlc ao
+1 cjl 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
-1 1000 0 20
+1 1000 0 20 0
 E
 olhos flutuante ocular globo~
 Os olhos se movem em círculos. A pupila é vermelha com uma luz misteriosa.    
@@ -709,9 +709,9 @@ armadura malha aço flexivel~
 uma armadura de malha de aço flexível~
 Um objeto inacabado está aqui.~
 ~
-9 a ad
+9 a 0 0 0 ad 0 0 0 0 0 0 0
 10 0 0 0
-11 300 0
+11 300 0 0 0
 E
 armadura malha aço flexivel~
 A armadura foi construída de malha de aço.  Enquanto as ligações estiverem
@@ -725,9 +725,9 @@ perneiras malha aco~
 um par de perneiras em malha de aço~
 Um par de perneiras em malha de aço estão perdidas aqui.~
 ~
-9 a af
+9 a 0 0 0 af 0 0 0 0 0 0 0
 7 0 0 0
-9 350 0
+9 350 0 0 0
 E
 perneiras malha aco~
 As perneiras foram construídas em malha de aço.  Enquanto as ligações
@@ -741,9 +741,9 @@ pena tinta ponta~
 uma pena sem tinta~
 Uma pena sem tinta caiu aqui no chão.~
 ~
-13 0 ao
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-2 10 0
+2 10 0 0 0
 E
 pena tinta ponta~
 A pena é de um pavão.  Parece que havia tinta preta na ponta, mas ela secou.    
@@ -753,9 +753,9 @@ machado guerra grande~
 um grande machado de guerra~
 Um grande machado de guerra foi deixado aqui.~
 ~
-5 0 an
+5 0 0 0 0 an 0 0 0 0 0 0 0
 0 3 5 3
-20 400 0 10
+20 400 0 10 0
 E
 machado guerra grande~
 O machado de guerra tem uma lâmina com dois lados.  A arma é muito pesada e
@@ -766,9 +766,9 @@ minusculo alfinete~
 um minúsculo alfinete~
 Um minúsculo alfinete foi derrubado aqui.~
 ~
-13 0 ao
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 10 0
+1 10 0 0 0
 E
 minusculo alfinete~
 O alfinete é bastante fino e é usado para costura.
@@ -778,9 +778,9 @@ botas macias~
 um par de macias botas~
 Um par de botas foi esquecido aqui.~
 ~
-11 0 ag
+11 0 0 0 0 ag 0 0 0 0 0 0 0
 0 0 0 0
-7 240 0 20
+7 240 0 20 0
 E
 botas macias~
 As botas foram feitas de um couro macio.  As solas são confortavelmente
@@ -793,9 +793,9 @@ capa preta~
 uma capa preta~
 Uma capa preta foi deixada aqui.~
 ~
-11 0 ak
+11 0 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
-8 550 0
+8 550 0 0 0
 E
 capa preta~
 A capa preta é longa e serve em você facilmente.    
@@ -807,9 +807,9 @@ faca curvada malefica~
 uma faca com uma lâmina curvada~
 Uma faca maléfica foi perdida aqui.~
 ~
-5 gjl an
+5 gjl 0 0 0 an 0 0 0 0 0 0 0
 0 2 8 11
-7 175 0 50
+7 175 0 50 0
 E
 faca curvada malefica~
 Esta faca tem somente um propósito...  Infligir dor.  Possui uma longa e
@@ -826,9 +826,9 @@ mascara verde~
 uma máscara verde com olhos vermelhos~
 Uma máscara feia foi deixada aqui.~
 ~
-11 jl ar
+11 jl 0 0 0 ar 0 0 0 0 0 0 0
 0 0 0 0
-6 5 0
+6 5 0 0 0
 E
 mascara verde~
 A máscara é grande e fina.  Foi feita para se utilizar sobre os olhos e na
@@ -845,9 +845,9 @@ capuz preto~
 um capuz preto~
 Um capuz preto está aqui no chão.~
 ~
-11 jl ae
+11 jl 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
-6 15 0 30
+6 15 0 30 0
 E
 capuz preto~
 O capuz preto cobre seu rosto inteiro, mas a parte de trás da cabeça fica
@@ -864,9 +864,9 @@ chave martelada metal~
 uma chave de metal martelada~
 Uma chave feita brutalmente está aqui.~
 ~
-18 b ao
+18 b 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-2 0 0
+2 0 0 0 0
 E
 chave martelada metal~
 A chave foi feita brutalmente. Parece ter sido feita com pressa.
@@ -876,9 +876,9 @@ punhal grande fino longo~
 um punhal fino e longo~
 Um punhal fino e longo foi perdido aqui.~
 ~
-5 g an
+5 g 0 0 0 an 0 0 0 0 0 0 0
 0 3 7 11
-9 250 0 20
+9 250 0 20 0
 E
 punhal grande fino longo~
 O punhal possui um brilho intenso e sua ponta foi muito bem afiada.    
@@ -896,9 +896,9 @@ chave brilhante brilhando~
 uma chave brilhando em amarelo~
 Uma chave que emite um brilho intenso foi jogada aqui.~
 ~
-18 b ao
+18 b 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-2 0 0
+2 0 0 0 0
 E
 chave amarela~
 A chave foi feita de aço e deram um acabamento com uma pintura em amarelo.
@@ -909,9 +909,9 @@ caixa forte grande~
 uma grande caixa-forte~
 Uma grande caixa-forte foi fixado à parede.~
 ~
-15 0 0
+15 0 0 0 0 0 0 0 0 0 0 0 0
 100 15 7562 0
-2000 0 0
+2000 0 0 0 0
 E
 caixa forte grande~
 A grande caixa-forte de metal é muito bonito.  Existe uma fechadura na parte
@@ -922,9 +922,9 @@ tesouro fortuna darwin ouro moedas~
 uma quantia ENORME de moedas de ouro~
 A fortuna do barão Darwin está aqui.~
 ~
-20 0 a
+20 0 0 0 0 a 0 0 0 0 0 0 0
 20000 0 0 0
-5 0 0
+5 0 0 0 0
 E
 tesouro fortuna darwin ouro moedas~
 As moedas de ouro do Barão apresentam uma visão real e impressionante dele.
@@ -934,9 +934,9 @@ cofre dourado~
 um cofre dourado~
 Um cofre dourado está sobre uma mesa.~
 ~
-15 0 0
+15 0 0 0 0 0 0 0 0 0 0 0 0
 100 15 7566 0
-1000 0 0
+1000 0 0 0 0
 E
 cofre dourado~
 O cofre dourado é mesmo complicado.    
@@ -946,9 +946,9 @@ chave cabeça dragao~
 uma pequena chave com a cabeça de um dragão~
 Uma estranha chave está aqui.~
 ~
-18 b ao
+18 b 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-2 0 0 1
+2 0 0 1 0
 E
 chave cabeça dragao~
 A chave tem um cabo longo com a cabeça de um dragão.  Na boca do dragão está

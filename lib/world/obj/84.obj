@@ -3,9 +3,9 @@ athelas erva arbusto~
 um pequeno arbusto de athelas~
 Um pequeno arbusto verde está fincado aqui, emitindo um forte perfume.~
 ~
-19 0 a :
+19 0 0 0 0 a 0 0 0 0 0 0 0
 6 0 0 0
-4 100 10 1
+4 100 10 1 0
 E
 athelas erva arbusto~
 Você observa um belo arbusto verde, chamada de Athelas, a folha do rei.  Um
@@ -17,9 +17,9 @@ vasilhas potes~
 várias vasilhas vazias e potes quebrados~
 Várias vasilhas vazias e potes quebrados foram deixados aqui.~
 ~
-13 0 0 :
+13 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-100 10 1 1
+100 10 1 1 0
 E
 vasilhas potes~
 Você observa dezenas de vasilhas vazias e muitos potes quebrados.  Com
@@ -30,9 +30,9 @@ ossos velhos~
 vários ossos velhos~
 Inúmeros ossos velhos foram deixados aqui, espalhados no chão.~
 ~
-13 0 0 :
+13 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-200 10 1 1
+200 10 1 1 0
 E
 ossos velhos~
 Você observa vários ossos velhos espalhados sobre o chão.
@@ -42,9 +42,9 @@ trolls pedra estatua~
 três imensos trolls de pedra~
 Um enorme troll está aqui agachado, sendo observado por outros dois.~
 ~
-12 0 0 :
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-600 600 60 1
+600 600 60 1 0
 E
 trolls pedra estatua~
 Você observa três imensos e assustadores trolls petrificados.  Um está
@@ -56,27 +56,27 @@ antiga rocha pedra~
 uma antiga pedra~
 Uma rocha está aqui sobre o capim.~
 ~
-12 0 0 :
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-10 10 1 1
-E
-antiga rocha pedra~
-Você observa uma desgastada rocha com algumas runas de anões e estranhas
-marcas secretas entalhadas em sua superfície.
-~
+10 10 1 1 0
 E
 runas marcas secretas~
 Você observa atentamente as runas de anões e marcas secretas, porém não
 consegue identificar nada que faça sentido.
+~
+E
+antiga rocha pedra~
+Você observa uma desgastada rocha com algumas runas de anões e estranhas
+marcas secretas entalhadas em sua superfície.
 ~
 #8405
 diadema prata~
 um diadema de prata~
 Um diadema de prata foi deixado aqui, brilhando como a luz de uma estrela.~
 ~
-11 ak ae :
+11 ak 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
-7 2000000 200000 65
+7 2000000 200000 65 0
 E
 diadema de prata~
 Você observa um maravilhoso diadema de prata com misteriosas runas
@@ -91,9 +91,9 @@ touca rendas prateadas pedras~
 uma bela touca de rendas prateadas~
 Uma bela touca prateada foi esquecida aqui.~
 ~
-11 ak ae :
+11 ak 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
-8 2500000 250000 40
+8 2500000 250000 40 0
 E
 touca rendas prateadas pedras~
 Você observa uma linda touca de rendas prateadas, ornamentada por majestosas
@@ -106,9 +106,9 @@ cinto prata folhas~
 um belo cinto de folhas de prata~
 Um maravilhoso cinto de prata foi deixado aqui.~
 ~
-11 a al :
+11 a 0 0 0 al 0 0 0 0 0 0 0
 0 0 0 0
-10 2000000 200000 75
+10 2000000 200000 75 0
 E
 cinto prata folhas~
 Você observa um belíssimo cinto de folhas lavradas em prata.  Este belo
@@ -121,9 +121,9 @@ fragmentos espada narsil~
 os fragmentos da esplendorosa Narsil~
 Uma espada fragmentada está aqui, sobre as mãos de uma bela estatua.~
 ~
-8 aegi 0 : 
+8 aegi 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-50 5000000 500000 0
+50 5000000 500000 0 0
 E
 fragmentos espada narsil~
 Você observa os fragmentos da gloriosa Narsil.  Brilhante e imponente, a
@@ -136,9 +136,9 @@ cupula cristal~
 uma belíssima cúpula de cristal~
 Uma maravilhosa cúpula de cristal foi construída aqui.~
 ~
-12 0 0 :
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-100 10000 1000 0
+100 10000 1000 0 0
 E
 cupula cristal~
 Você observa uma sublime cúpula de cristal construída pelos encantadores
@@ -150,9 +150,9 @@ estatua arwen pedra~
 uma estatua de Arwen~
 Uma bela estatua de pedra foi fincada aqui, expressando o esplendor élfico.~
 ~
-12 0 0 :
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-180 10000 1000 0
+180 10000 1000 0 0
 E
 estatua arwen pedra~
 Você observa uma belíssima estatua élfica feita de pedra.  Você percebe uma
@@ -164,9 +164,9 @@ estatua beren pedra~
 uma estátua de Beren~
 Uma imponente estátua de pedra foi fincada aqui.~
 ~
-12 0 0 :
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-200 10000 1000 0
+200 10000 1000 0 0
 E
 estatua beren pedra~
 Você observa um belo homem mortal, de olhar marcante e forte.  Tão real,
@@ -177,9 +177,9 @@ estatua luthien pedra~
 uma estátua de Lúthien Tinúviel~
 Uma maravilhosa estátua de pedra foi fincada aqui.~
 ~
-12 0 0 :
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-180 10000 1000 0
+180 10000 1000 0 0
 E
 estatua luthien pedra~
 Você observa uma linda donzela élfica de cabelos longos e pele suave.
@@ -189,9 +189,9 @@ estatuas pedra muro~
 algumas estatuas esculpidas no muro~
 Belíssimas estatuas de pedra foram fincadas aqui, esculpidas no muro.~
 ~
-12 0 0 :
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-140 1000 100 0
+140 1000 100 0 0
 E
 estatuas pedra muro~
 Você observa lindas estatuas de pedra, esculpidas detalhadamente no muro que
@@ -204,9 +204,9 @@ estante livros madeira~
 uma bela estante de livros~
 Uma bela estante de madeira foi colocada aqui, protegendo vários livros.~
 ~
-15 0 0 :
+15 0 0 0 0 0 0 0 0 0 0 0 0
 80 5 -1 0
-160 100000 10000 0
+160 100000 10000 0 0
 E
 estante livros madeira~
 Você observa uma bela estante de livros feita de madeira.
@@ -216,9 +216,9 @@ livros antigos~
 vários livros antigos~
 Vários livros antigos estão guardados aqui.~
 ~
-12 0 a :
+12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-40 100000 10000 0
+40 100000 10000 0 0
 E
 livros antigos~
 Você observa vários livros élficos antigos.
@@ -228,9 +228,9 @@ quadro batalha~
 o quadro da batalha de Sauron e Isildur~
 Um grande quadro com bordas douradas está aqui, fixado na parede.~
 ~
-8 0 0 :
+8 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-35 100000 10000 0
+35 100000 10000 0 0
 E
 quadro batalha~
 Você observa um maravilhoso quadro com bordas douradas, que ilustra a
@@ -243,9 +243,9 @@ estatua elfica marmore branco~
 uma estatua de mármore branco~
 Uma bela estatua élfica de mármore branco foi colocada aqui.~
 ~
-8 0 0 :
+8 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-85 1000 100 0
+85 1000 100 0 0
 E
 estatua elfica marmore branco~
 Você observa uma maravilhosa estatua de mármore branco de uma linda donzela
@@ -257,9 +257,9 @@ arvore imensa~
 uma magnífica árvore~
 Uma imensa árvore está fincada aqui, fazendo sombra em todo o pátio.~
 ~
-12 0 0 :
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-55 1000 100 0
+55 1000 100 0 0
 E
 arvore imensa~
 Você observa uma magnífica árvore fincada no canto oeste do grande pátio.
@@ -269,9 +269,9 @@ pequeno pulpito pedra~
 um pequeno púlpito de pedra~
 Um pequeno púlpito de pedra foi construído no centro do pátio.~
 ~
-12 0 0 :
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-35 1000 100 0
+35 1000 100 0 0
 E
 pequeno pulpito pedra~
 Você observa um pequeno púlpito de pedra construído no centro do belo pátio
@@ -282,9 +282,9 @@ varias cadeiras madeira~
 várias cadeiras de madeira~
 Várias cadeiras de madeira foram colocadas aqui, formando um grande círculo.~
 ~
-12 0 0 :
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-12 100 10 0
+12 100 10 0 0
 E
 varias cadeiras madeira~
 Você observa várias cadeiras de madeira, organizadas ao longo do pátio.
@@ -294,9 +294,9 @@ estatuas pedra elficas~
 majestosas estatuas élficas~
 Maravilhosas estatuas élficas compõem a bela paisagem do conselho.~
 ~
-12 0 0 :
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-250 5000 500 0
+250 5000 500 0 0
 E
 estatuas pedra elficas~
 Você observa belíssimas estatuas élficas feitas de pedra.
@@ -306,9 +306,9 @@ tapecarias tecidas~
 majestosas tapeçarias tecidas~
 Majestosas tapeçarias tecidas estão aqui, penduradas nas paredes.~
 ~
-8 0 0 :
+8 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-12 1000 100 0
+12 1000 100 0 0
 E
 tapecarias tecidas~
 Você observa maravilhosas tapeçarias tecidas penduradas nas paredes, com
@@ -319,9 +319,9 @@ mesa comprida madeira~
 uma mesa comprida~
 Uma bela mesa comprida de madeira foi colocada aqui.~
 ~
-12 0 0 :
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-45 1000 100 0
+45 1000 100 0 0
 E
 mesa comprida madeira~
 Você observa uma maravilhosa mesa comprida feita de madeira e com belíssimos
@@ -332,9 +332,9 @@ grande lareira~
 uma grande lareira~
 Uma grande lareira foi construída aqui, iluminando todo o salão.~
 ~
-1 0 0 :
+1 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 -1 0
-50 100 10 0
+50 100 10 0 0
 E
 grande lareira~
 Você observa uma grande lareira construída em meio a dois pilares
@@ -345,9 +345,9 @@ fonte marmore branco~
 uma bela fonte de mármore branco~
 Uma bela fonte de mármore branco foi construída aqui.~
 ~
-23 a 0 :
+23 a 0 0 0 0 0 0 0 0 0 0 0
 80 80 15 0
-100 10000 1000 0
+100 10000 1000 0 0
 E
 fonte marmore branco~
 Você observa uma maravilhosa fonte feita de mármore branco.  Sua superfície
@@ -359,26 +359,26 @@ chave jade~
 uma pequenina chave verde~
 Uma pequenina chave verde foi esquecida aqui.~
 ~
-18 cf a :
+18 cf 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-3 500 50 0
+3 500 50 0 0
+E
+runas antigas estranhas~
+Você não consegue entendê-las.
+~
 E
 chave jade~
 Você observa uma pequenina chave esculpida numa pedra jade.  Em sua
 superfície você observa estranhas e antigas runas.
-~
-E
-runas antigas estranhas~
-Você não consegue entendê-las.
 ~
 #8427
 cetro annuminas~
 o cetro de annúminas~
 Um magnífico bastão de prata foi deixado aqui, brilhando como uma estrela.~
 ~
-4 agi ano :19 
+4 agi 0 0 0 ano 0 0 0 0 0 0 0
 100 8 8 53
-12 5000000 500000 101
+12 5000000 500000 101 0
 E
 cetro annuminas~
 Você observa um magnífico bastão de prata, o belíssimo cetro de Annúminas,
@@ -397,9 +397,9 @@ anel barahir dourado serpentes gemeas~
 o anel de Barahir~
 Duas pequenas serpentes gêmeas com olhos verdes estão aqui.~
 ~
-11 agi ab :
+11 agi 0 0 0 ab 0 0 0 0 0 0 0
 0 0 0 0
-4 5000000 500000 101
+4 5000000 500000 101 0
 E
 anel barahir dourado serpentes gemeas~
 Você observa o magnífico anel de Barahir.  Este belíssimo anel foi feito em
@@ -417,9 +417,9 @@ cama madeira~
 uma cama de madeira~
 Uma belíssima cama de madeira foi colocada aqui.~
 ~
-12 0 0 0
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-45 100 10
+45 100 10 0 0
 E
 cama madeira~
 Você observa uma belíssima cama de madeira esculpida majestosamente. 
@@ -429,9 +429,9 @@ mesa madeira~
 uma mesa de madeira~
 Uma mesa de madeira foi colocada aqui.~
 ~
-12 0 0 0
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-45 100 10
+45 100 10 0 0
 E
 mesa madeira~
 Você observa uma maravilhosa mesa feita de madeira e com belíssimos detalhes
@@ -442,9 +442,9 @@ calice prata~
 um belo cálice de prata~
 Um belo cálice de prata foi esquecido aqui.~
 ~
-17 0 ao :
+17 0 0 0 0 ao 0 0 0 0 0 0 0
 3 3 15 0
-8 50 5 :
+8 50 5 0 0
 E
 calice prata~
 Você observa um maravilhoso cálice de prata com uma bela pedra verde fincada
@@ -455,9 +455,9 @@ bau dourado perolas~
 um maravilhoso baú dourado com pérolas~
 Um maravilhoso baú dourado com pérolas foi deixado aqui.~
 ~
-15 ae 0 :
+15 ae 0 0 0 0 0 0 0 0 0 0 0
 60 15 8433 0
-25 100000 10000 0
+25 100000 10000 0 0
 E
 bau dourado perolas~
 Você observa um belíssimo baú dourado com majestoso desenhos esculpidos em
@@ -468,9 +468,9 @@ chave dourada pequena~
 uma pequena chave dourada~
 Uma pequena chave dourada foi esquecida aqui.~
 ~
-18 ae ao :
+18 ae 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-2 100 10 0
+2 100 10 0 0
 E
 chave dourada pequena~
 Você observa uma pequena chave dourada ornamentada por uma grande pérola em
@@ -481,9 +481,9 @@ bau prateado perolas~
 um maravilhoso baú prateado com pérolas~
 Um maravilhoso baú prateado com pérolas foi deixado aqui.~
 ~
-15 ae 0 :
+15 ae 0 0 0 0 0 0 0 0 0 0 0
 60 15 8435 0
-25 100000 10000 0
+25 100000 10000 0 0
 E
 bau prateado perolas~
 Você observa um belíssimo baú prateado com majestoso desenhos esculpidos em
@@ -494,9 +494,9 @@ chave prateada pequena~
 uma pequena chave prateada~
 Uma pequena chave prateada foi esquecida aqui.~
 ~
-18 ae ao :
+18 ae 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-2 100 10 0
+2 100 10 0 0
 E
 chave prateada pequena~
 Você observa uma pequena chave prateada ornamentada por uma grande pérola em
@@ -507,9 +507,9 @@ vilya ouro safira anel~
 Vilya, o anel do poder~
 Um magnífico anel de ouro foi deixado aqui, brilhando intensamente.~
 ~
-11 adegi ab :22:23:
+11 adegi 0 0 0 ab 0 0 0 0 0 0 0
 0 0 0 0
-4 5000000 500000 101
+4 5000000 500000 101 0
 E
 vilya ouro safira anel~
 Você observa um belíssimo anel feito de ouro com uma magnífica safira
@@ -532,9 +532,9 @@ manto branco elfico~
 um belo manto élfico~
 Um belíssimo manto branco élfico foi deixado aqui.~
 ~
-11 ag ak :
+11 ag 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
-6 160000 16000 10
+6 160000 16000 10 0
 E
 manto branco elfico~
 Você observa um belo manto branco élfico com maravilhosos detalhes em alto
@@ -549,9 +549,9 @@ vestido azul celeste elfico~
 um lindo vestido élfico azul-celeste~
 Um lindo vestido élfico azul-celeste foi deixado aqui.~
 ~
-11 ag ak :
+11 ag 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
-6 650000 65000 20
+6 650000 65000 20 0
 E
 vestido azul celeste elfico~
 Você observa um maravilhoso vestido élfico azul celeste feito com fios
@@ -564,9 +564,9 @@ brinco cristais luminosos~
 um brinco de cristais luminosos~
 Pequeninos cristais luminosos foram deixados aqui, brilhando intensamente.~
 ~
-11 0 aq :
+11 0 0 0 0 aq 0 0 0 0 0 0 0
 0 0 0 0
-5 3000 300 10
+5 3000 300 10 0
 E
 brinco cristais luminosos~
 Você observa um belíssimo brinco feito com majestosos cristais luminosos
@@ -582,9 +582,9 @@ par botas azul elficas~
 um par de botas élficas~
 Um belo par de botas élficas foi deixado aqui.~
 ~
-11 0 ag :1
+11 0 0 0 0 ag 0 0 0 0 0 0 0
 0 0 0 0
-5 10000 1000 5
+5 10000 1000 5 0
 E
 par botas azul elficas~
 Você observa um lindo par de botas leve, feito com um resistente tecido azul
@@ -599,9 +599,9 @@ bracadeiras prata prateadas~
 as braçadeiras de Glorfindel~
 Um magnífico par de braçadeiras prateadas foi esquecido aqui.~
 ~
-9 aeg ai 0
+9 aeg 0 0 0 ai 0 0 0 0 0 0 0
 8 0 0 0
-7 125000 12500 25
+7 125000 12500 25 0
 E
 bracadeiras prata prateadas~
 Você observa um magnífico par de braçadeiras prateadas com belíssimos
@@ -615,9 +615,9 @@ faca prata~
 a faca de prata de Elladan~
 Uma magnífica faca de prata foi deixada aqui, fincada sobre o chão.~
 ~
-5 dn ano :
+5 dn 0 0 0 ano 0 0 0 0 0 0 0
 0 4 5 11
-12 1500000 150000 35
+12 1500000 150000 35 0
 E
 faca prata~
 Você observa uma monumental faca prateada com lindos desenhos élficos
@@ -634,9 +634,9 @@ arco guardiao marfim prata~
 o arco guardião de Elrohir~
 Um belo arco de marfim e prata foi deixado aqui, brilhando como uma estrela.~
 ~
-5 adnr an :5:
+5 adnr 0 0 0 an 0 0 0 0 0 0 0
 0 4 5 12
-12 2000000 200000 20
+12 2000000 200000 20 0
 E
 arco guardiao marfim prata~
 Você observa um magnífico arco feito de marfim e prata pelas caprichosas e
@@ -655,9 +655,9 @@ flauta dourada~
 a encantadora flauta dourada de Lindir~
 Uma linda flauta dourada foi esquecida aqui.~
 ~
-3 adgik ao :
+3 adgik 0 0 0 ao 0 0 0 0 0 0 0
 25 6 4 7
-8 1000000 100000 25
+8 1000000 100000 25 0
 E
 flauta dourada~
 Você observa uma maravilhosa flauta dourada feita em ouro pelos sábios e
@@ -674,9 +674,9 @@ verde escuro medalhao sabedoria~
 o medalhão da sabedoria de Erestor~
 Um maravilhoso medalhão verde-escuro foi esquecido aqui.~
 ~
-11 aei ac :
+11 aei 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
-6 1200000 120000 30
+6 1200000 120000 30 0
 E
 verde escuro medalhao sabedoria~
 Você observa o maravilhoso medalhão da sabedoria do sábio chefe do conselho
@@ -690,9 +690,9 @@ cinto elfico tecido azul~
 um lindo cinto élfico azul~
 Um lindo cinto élfico azul foi esquecido aqui.~
 ~
-11 eq al :
+11 eq 0 0 0 al 0 0 0 0 0 0 0
 0 0 0 0
-6 50000 5000 1
+6 50000 5000 1 0
 E
 cinto elfico tecido azul~
 Você observa um belíssimo cinto élfico feito de um tecido azul bastante
@@ -707,9 +707,9 @@ luva elfica tecido azul azuis~
 um belo par de luvas élficas~
 Um belo par de luvas élficas azuis foi deixado aqui.~
 ~
-11 eq ah :
+11 eq 0 0 0 ah 0 0 0 0 0 0 0
 0 0 0 0
-6 50000 5000 1
+6 50000 5000 1 0
 E
 luva elfica tecido azul azuis~
 Você observa um belíssimo par de luvas élficas feito de um tecido azul
@@ -724,9 +724,9 @@ harpa elfica dourada~
 uma maravilhosa harpa élfica dourada~
 Uma maravilhosa harpa élfica dourada foi deixada aqui.~
 ~
-12 aeq ao :
+12 aeq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-20 250000 25000 1
+20 250000 25000 1 0
 E
 harpa elfica dourada~
 Você observa uma magnífica harpa élfica dourada feita pelas caprichosas mãos
@@ -741,9 +741,9 @@ bussola brinquedo~
 uma pequenina bússola~
 Um pequenino brinquedo foi esquecido aqui, por alguma criança traquina.~
 ~
-12 q ac :
+12 q 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
-3 100 10 1
+3 100 10 1 0
 E
 bussola brinquedo~
 Você observa uma pequenina bússola e o seu ponteiro louco, girando para um
@@ -752,4 +752,4 @@ pequena bússola.
 ~
 A
 17 -3
-$
+$~
