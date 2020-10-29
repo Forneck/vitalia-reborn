@@ -512,7 +512,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	/* ann teste - forneck */
 	int i, type1, type2;
 	struct fann *ann;
-	
+
 	ann = fann_create_from_file("etc/aventureiro.fann");
 	fann_type input[26];
 	fann_type output[6];
@@ -670,7 +670,8 @@ void command_interpreter(struct char_data *ch, char *argument)
 				output[4] = CMD_ARG_OBJ;
 				output[5] = obj;
 			}
-			fann_train(ann, input, output);
+			if (GET_LEVEL(ch) < LVL_GOD)
+				fann_train(ann, input, output);
 			return;
 		}
 
@@ -880,8 +881,15 @@ void command_interpreter(struct char_data *ch, char *argument)
 			fann_train(ann, input, output);
 
 		fann_save(ann, "etc/aventureiro.fann");
-		 fann_destroy(ann);
-		((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd, complete_cmd_info[cmd].subcmd));
+		fann_destroy(ann);
+		if (GET_LEVEL(ch) == LVL_IMPL)
+		{
+			send_to_char(ch, "%f, %f, %f, %f, %f, %d", output[0], output[1], output[2], output[3],
+						 output[4], ooutput[5], cmd);
+		}
+		((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd,
+																	 complete_cmd_info[cmd].
+																	 subcmd));
 	}
 }
 
