@@ -518,7 +518,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	fann_type output[6];
 	struct char_data *victim;
 	struct obj_data *object;
-	int id_player;
+	int id_player = 0;
 	int door;
 	int grupo;
 	mob_vnum mob = 0;
