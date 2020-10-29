@@ -1,158 +1,158 @@
 #3300
 laranja~
 uma laranja~
-Uma laranja est� no ch�o aqui.~
+Uma laranja está no chão aqui.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 1
 8 0 0 0
-1 8 8 0 0
+1 8 8
 E
 laranja~
-Voc� imagina como ela veio parar aqui, visto
-que laranjas n�o costumam migrar.
+Você imagina como ela veio parar aqui, visto
+que laranjas não costumam migrar.
 ~
 #3301
 fardo trigo~
 um fardo de trigo~
 Existe um fardo de trigo aqui.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 1
 24 0 0 0
-100 1000 1000 0 0
+100 1000 1000
 E
 fardo trigo~
-Ele n�o lhe parece apetitoso, mas um
+Ele não lhe parece apetitoso, mas um
 cavalo adoraria isso...
 ~
 #3302
 citara~
-uma grande c�tara~
-Uma ENORME c�tara feita de ouro foi deixada em um canto.~
+uma grande cítara~
+Uma ENORME cítara feita de ouro foi deixada em um canto.~
 ~
-8 0 0 0 0 a 0 0 0 0 0 0 0
+8 0 1
 0 0 0 0
-40 200000 20000 0 0
+40 200000 20000
 E
 citara~
-Algu�m realmente forte, com grandes dedos poderia tocar isso. Voc� n�o.
+Alguém realmente forte, com grandes dedos poderia tocar isso. Você não.
 ~
 #3303
 barril perfume~
 um barril de perfume~
-Voc� pode sentir daqui o cheiro do barril no outro lado da sala.~
+Você pode sentir daqui o cheiro do barril no outro lado da sala.~
 ~
-8 0 0 0 0 a 0 0 0 0 0 0 0
+8 0 1
 0 0 0 0
-20 100000 10000 0 0
+20 100000 10000
 E
 barril perfume~
-Cheira bem... o r�tulo diz:
+Cheira bem... o rótulo diz:
 
    "Em algum lugar entre GPA e MUD encontra-se...
-                OBSESS�O"
+                OBSESSÃO"
 ~
 #3304
 estatua~
-uma est�tua~
-Existe uma est�tua do Aglandiir aqui, feita de ouro s�lido.~
+uma estátua~
+Existe uma estátua do Aglandiir aqui, feita de ouro sólido.~
 ~
-8 0 0 0 0 a 0 0 0 0 0 0 0
+8 0 1 
 0 0 0 0
-30 150000 15000 0 0
+30 150000 15000
 E
 estatua~
-Ele � um lindo e extraordin�rio sujeito, para um drag�o.
+Ele é um lindo e extraordinário sujeito, para um dragão.
 ~
 #3305
 alabarda~
 uma alabarda~
-Uma alabarda feita de runas encontra-se aqui no ch�o.~
+Uma alabarda feita de runas encontra-se aqui no chão.~
 ~
-5 g 0 0 0 an 0 0 0 0 0 0 0
+5 g 8193
 0 1 12 17
-16 10000 3000 0 0
+16 10000 3000
+A 
+18 5
 E
 alabarda~
-As runas resplandecem com uma luz clara, fazendo voc�
-pensar que esta deve ser uma respeit�vel arma.
+As runas resplandecem com uma luz clara, fazendo você
+pensar que esta deve ser uma respeitável arma.
 ~
-A
-18 5
 #3306
 pocao protecao parda frasco~
-uma po��o de prote��o~
-Existe um frasco com um flu�do pardo aqui.~
+uma poção de proteção~
+Existe um frasco com um fluído pardo aqui.~
 ~
-10 a 0 0 0 a 0 0 0 0 0 0 0
+10 a 1
 20 36 1 3
-1 10000 2000 0 0
+1 10000 2000
 E
 pocao protecao parda frasco~
 Parece grossa e castanho-cinzenta (parda). Eca!
 ~
 #3307
 coroa~
-uma coroa de drag�o~
-A coroa do Aglandiir encontra-se aqui, irradiando uma prote��o.~
+uma coroa de dragão~
+A coroa do Aglandiir encontra-se aqui, irradiando uma proteção.~
 ~
-8 a 0 0 0 0 0 0 0 0 0 0 0
+8 a 0
 0 0 0 0
-400 0 0 0 0
+400 0 0
 E
 coroa~
-A prote��o repele voc�, fazendo voc� imaginar como
-voc� vai colocar sua m�os nesta enorme e valiosa
-pe�a de ouro...
+A proteção repele você, fazendo você imaginar como
+você vai colocar sua mãos nesta enorme e valiosa
+peça de ouro...
 ~
 #3308
 maca~
-uma ma��~
-Uma ma�� vermelha, mas muito magra, est� aqui.~
+uma maçã~
+Uma maçã vermelha, mas muito magra, está aqui.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 1
 4 0 0 0
-1 5 2 0 0
+1 5 2
 E
 maca~
-Ela n�o est� bichada... ainda.
+Ela não está bichada... ainda.
 ~
 #3309
 pao cesta~
-uma cesta de p�es~
-Uma cesta cheia de p�es frescos encontra-se aqui.~
+uma cesta de pães~
+Uma cesta cheia de pães frescos encontra-se aqui.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 1
 12 0 0 0
-1 10 5 0 0
+1 10 5
 E
 pao cesta~
 Mmmm... Centeio!
 ~
 #3310
 melao~
-um mel�o~
-Um mel�o est� aqui, descartado evidentemente.~
+um melão~
+Um melão está aqui, descartado evidentemente.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 1
 8 0 0 0
-3 8 3 0 0
+3 8 3
 E
 melao~
-Uau!  Olhe para o tamanho daquele mel�o!
+Uau!  Olhe para o tamanho daquele melão!
 ~
 #3311
 faca~
 uma faca~
 Uma faca em perfeita arte descansa aqui.~
 ~
-5 dn 0 0 0 ano 0 0 0 0 0 0 0
+5 dn 24577
 0 3 5 11
-8 1000000 20000 0 0
+8 1000000 20000
 E
 faca~
-O artes�o... isto tira sua respira��o! Esta
+O artesão... isto tira sua respiração! Esta
 faca... ela deve ter sido forjada pelo
-legend�rio ferreiro Gabadiel. A faca deve
+legendário ferreiro Gabadiel. A faca deve
 valer uma fortuna!
 ~
 A
@@ -162,16 +162,16 @@ A
 #3312
 espada longa~
 uma espada longa~
-Uma magn�fica espada longa est� enfiada na terra.~
+Uma magnífica espada longa está enfiada na terra.~
 ~
-5 dmnt 0 0 0 ano 0 0 0 0 0 0 0
+5 dmnt 24577
 0 2 7 3
-15 750000 15000 0 0
+15 750000 15000
 E
 espada longa~
-Esta espada � leve mas seu corpo � perfeitamente
-balanceado. Tal arma incr�vel s� pode ter sido
-forjada pelo legend�rio ferreiro Gabadiel e como
+Esta espada é leve mas seu corpo é perfeitamente
+balanceado. Tal arma incrível só pode ter sido
+forjada pelo legendário ferreiro Gabadiel e como
 tal, deve valer uma fortuna!
 ~
 A
@@ -181,16 +181,16 @@ A
 #3313
 espada curta~
 uma espada curta~
-Uma espada curta encontra-se aqui... trabalho expl�ndido~
+Uma espada curta encontra-se aqui... trabalho explêndido~
 ~
-5 adgimnqt 0 0 0 ano 0 0 0 0 0 0 0
+5 adgimnqt 24577
 0 5 6 3
-10 10000000 30000 101 0
+10 10000000 30000 101
 E
 espada curta~
-Ela traz l�grimas ao seus olhos. Esta deve ter
+Ela traz lágrimas ao seus olhos. Esta deve ter
 sido o grande trabalho do ferreiro Gabadiel; seu
-trabalho final. Simplesmente de valor incalcul�vel.
+trabalho final. Simplesmente de valor incalculável.
 ~
 A
 18 10
@@ -201,53 +201,53 @@ A
 #3314
 corpo~
 um corpo queimado e desmembrado~
-Um corpo queimado e desmembrado est� aqui no ch�o.~
+Um corpo queimado e desmembrado está aqui no chão.~
 ~
-13 0 0 0 0 0 0 0 0 0 0 0 0
+13 0 0
 0 0 0 0
-1 1 1 0 0
+1 1 1
 E
 corpo~
-Ele ainda est� ardendo um pouco; os criminosos n�o
+Ele ainda está ardendo um pouco; os criminosos não
 devem estar muito longe!
 ~
 #3315
 cimitarra~
 uma cimitarra~
-Uma cimitarra t�o grande quanto seu bra�o est� aqui.~
+Uma cimitarra tão grande quanto seu braço está aqui.~
 ~
-5 0 0 0 0 an 0 0 0 0 0 0 0
+5 0 8193
 0 1 7 3
-10 500 50 0 0
+10 500 50
 E
 cimitarra~
-Esta arma realmente n�o � de muita qualidade.
+Esta arma realmente não é de muita qualidade.
 ~
 #3316
 engradado~
 um engradado~
-Um engradado est� acondicionado aqui.~
+Um engradado está acondicionado aqui.~
 ~
-15 0 0 0 0 a 0 0 0 0 0 0 0
+15 0 1
 200 5 0 0
-50 100 20 0 0
+50 100 20
 E
 engradado~
-� um engradado normal feito de madeira.
+É um engradado normal feito de madeira.
 ~
 #3317
-arco ca�a~
-um arco de ca�a~
-Um arco de ca�a encontra-se aqui, sem dono~
+arco caca~
+um arco de caça~
+Um arco de caça encontra-se aqui, sem dono~
 ~
-5 0 0 0 0 an 0 0 0 0 0 0 0
+5 0 8193
 0 1 5 11
-6 400 40 0 0
+6 400 40
 E
-arco ca�a~
-Este � o tipo de arma que voc� usaria para ca�ar
-alguns veados ou coelhos, mas n�o � do tipo que
-voc� levaria para uma batalha...
+arco caca~
+Este é o tipo de arma que você usaria para caçar
+alguns veados ou coelhos, mas não é do tipo que
+você levaria para uma batalha...
 ~
 A
 19 1
@@ -256,9 +256,9 @@ colete couro~
 um colete de couro~
 Um bom colete de couro encontra-se aqui.~
 ~
-9 g 0 0 0 ad 0 0 0 0 0 0 0
+9 g 9
 6 0 0 0
-6 5000 500 0 0
+6 5000 500
 E
 colete couro~
 As bainhas foram delicadamente costuradas com uma linha...
@@ -266,38 +266,38 @@ As bainhas foram delicadamente costuradas com uma linha...
 #3319
 copo~
 um copo~
-Um copo de cerveja est� esquecido aqui.~
+Um copo de cerveja está esquecido aqui.~
 ~
-17 0 0 0 0 ao 0 0 0 0 0 0 0
+17 0 16385
 1 1 1 0
-2 5 1 0 0
+2 5 1
 E
 copo~
-Este � um bom copo cheio de cerveja caseira. N�o parece existir
+Este é um bom copo cheio de cerveja caseira. Não parece existir
 muita coisa flutuando nela.
 ~
 #3320
 copo~
 um copo~
-Um grande copo de um l�quido amarelo est� aqui, frio e coberto de gelo.~
+Um grande copo de um líquido amarelo está aqui, frio e coberto de gelo.~
 ~
-17 0 0 0 0 ao 0 0 0 0 0 0 0
+17 0 16385
 1 1 3 0
-2 8 3 0 0
+2 8 3
 E
 copo~
-Parece bom. Parece aquecido. N�o importa; ele ainda parece bom.
+Parece bom. Parece aquecido. Não importa; ele ainda parece bom.
 ~
 #3321
 dose~
 uma dose~
-Uma dose de u�sque est� aqui.~
+Uma dose de uísque está aqui.~
 ~
-17 0 0 0 0 ao 0 0 0 0 0 0 0
+17 0 16385
 1 1 5 0
-1 10 5 0 0
+1 10 5
 E
 dose~
 Uau!  Parece ser um material muito potente!
 ~
-$~
+$
