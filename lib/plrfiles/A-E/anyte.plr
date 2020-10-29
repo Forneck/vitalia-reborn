@@ -3,28 +3,28 @@ Pass: AnRCfBykX0mXk
 Titl: a Iniciada no Terceiro C�rculo
 Sex : 2
 Clas: 4
-Levl: 21
+Levl: 22
 Id  : 6
 Brth: 1603323580
-Plyd: 26198
-Last: 1603993280
+Plyd: 27338
+Last: 1603994420
 Lmot: 1603324480
 Lnew: 1603323627
 Htwn: 3001
 Host: 189.120.73.49
 Hite: 161
 Wate: 139
-Alin: -79
+Alin: -370
 Act : hl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
 Room: 1667
-Lern: 8
-Hung: 8
-Thir: 11
-Hit : 138/246
-Mana : 214/214
-Move: 9/124
+Lern: 10
+Hung: 10
+Thir: 13
+Hit : 248/257
+Mana : 237/237
+Move: 96/126
 Str : 17/0
 Int : 9
 Wis : 11
@@ -32,8 +32,8 @@ Dex : 15
 Con : 12
 Cha : 8
 Ac  : 100
-Gold: 107402
-Exp : 3057732
+Gold: 154102
+Exp : 3349073
 Olc : 0
 Skil:
 222 80
@@ -41,7 +41,7 @@ Skil:
 231 80
 0 0
 Affs:
-36 32 0 33 256 0 0 0
+36 10 0 33 256 0 0 0
 0 0 0 0 0 0 0 0
 Alis: 2
  say

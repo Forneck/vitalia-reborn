@@ -6,25 +6,25 @@ Clas: 3
 Levl: 3
 Id  : 11
 Brth: 1603375575
-Plyd: 1953
-Last: 1603992929
+Plyd: 2193
+Last: 1603993880
 Lmot: 1603375637
 Lnew: 1603375634
 Htwn: 1372
 Host: 168.194.161.183
 Hite: 166
 Wate: 135
-Alin: 11
+Alin: -4
 Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghno 0 0 0
 Room: 3001
 Lern: 6
-Hung: 11
-Thir: 11
-Hit : 42/49
+Hung: 8
+Thir: 8
+Hit : 51/49
 Mana : 100/100
-Move: 86/86
+Move: 84/86
 Str : 17/0
 Int : 11
 Wis : 13
@@ -32,11 +32,11 @@ Dex : 15
 Con : 14
 Cha : 8
 Ac  : 100
-Gold: 3408
-Exp : 5369
+Gold: 4258
+Exp : 7276
 Olc : 0
 Skil:
 0 0
 Affs:
-63 26 0 42 131072 0 0 0
+63 23 0 42 131072 0 0 0
 0 0 0 0 0 0 0 0
