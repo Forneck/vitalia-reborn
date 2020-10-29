@@ -512,7 +512,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	/* ann teste - forneck */
 	int i, type1, type2;
 	struct fann *ann;
-	fann_type *calc_output;
+	
 	ann = fann_create_from_file("etc/aventureiro.fann");
 	fann_type input[26];
 	fann_type output[6];
@@ -521,8 +521,8 @@ void command_interpreter(struct char_data *ch, char *argument)
 	int id_player;
 	int door;
 	int grupo;
-	mob_vnum mob;
-	obj_vnum obj;
+	mob_vnum mob = 0;
+	obj_vnum obj = 0;
 
 	if (GROUP(ch) != NULL)
 		grupo = 1;
