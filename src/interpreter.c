@@ -521,9 +521,9 @@ void command_interpreter(struct char_data *ch, char *argument)
 	int id_player;
 	int door;
 	int grupo;
-   mob_vnum mob;
-   obj_vnum obj;
-   
+	mob_vnum mob;
+	obj_vnum obj;
+
 	if (GROUP(ch) != NULL)
 		grupo = 1;
 	else
@@ -628,7 +628,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 				output[5] = -1;
 			}
 			/* vitima eh mob */
-			if ((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD))  && IS_NPC(victim))
+			if ((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD)) && IS_NPC(victim))
 			{
 				type2 = 1;
 				mob = GET_MOB_VNUM(victim);
@@ -647,7 +647,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			if ((object = get_obj_vis(ch, arg2, NULL)) != NULL)
 			{
 				type2 = 3;
-            obj = GET_OBJ_VNUM(object);
+				obj = GET_OBJ_VNUM(object);
 			}
 			/* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos 
 			   o = cmd, arg = vnum -- forneck */
@@ -765,7 +765,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			output[3] = -1;
 		}
 		/* vitima eh mob */
-		if ((victim = get_char_vis(ch, arg1, NULL, FIND_CHAR_WORLD))  && IS_NPC(victim))
+		if ((victim = get_char_vis(ch, arg1, NULL, FIND_CHAR_WORLD)) && IS_NPC(victim))
 		{
 			type1 = 1;
 			mob = GET_MOB_VNUM(victim);
@@ -784,15 +784,15 @@ void command_interpreter(struct char_data *ch, char *argument)
 		if ((object = get_obj_vis(ch, arg1, NULL)) != NULL)
 		{
 			type1 = 3;
-         obj = GET_OBJ_VNUM(object);
+			obj = GET_OBJ_VNUM(object);
 		}
-      
-      /*eh direcao */
-	if ((door = search_block(arg1, dirs, FALSE)) == -1)
+
+		/* eh direcao */
+		if ((door = search_block(arg1, dirs, FALSE)) == -1)
 		{						/* Partial Match */
 			if ((door = search_block(arg1, autoexits, FALSE)) == -1)
 			{					/* Check 'short' dirs too */
-			door = -1;
+				door = -1;
 			}
 		}
 		if (EXIT(ch, door))
@@ -800,14 +800,14 @@ void command_interpreter(struct char_data *ch, char *argument)
 			if (EXIT(ch, door)->keyword)
 			{
 				if (!is_name(arg1, EXIT(ch, door)->keyword))
-				door = -1;
+					door = -1;
 			}
 		}
 		else
 		{
-		  door = -1;
+			door = -1;
 		}
-	
+
 		if (type1 == 1)			/* mob */
 		{
 			output[2] = CMD_ARG_MOB;
@@ -831,7 +831,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 
 		/* arg 2 */
 		/* vitima eh mob */
-			if ((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD))  && IS_NPC(victim))
+		if ((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD)) && IS_NPC(victim))
 		{
 			type2 = 1;
 			mob = GET_MOB_VNUM(victim);
@@ -850,7 +850,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		if ((object = get_obj_vis(ch, arg2, NULL)) != NULL)
 		{
 			type2 = 3;
-         obj = GET_OBJ_VNUM(object);
+			obj = GET_OBJ_VNUM(object);
 		}
 		if (!*arg2)
 		{
@@ -876,20 +876,14 @@ void command_interpreter(struct char_data *ch, char *argument)
 			}
 		}
 
-		fann_train(ann, input, output);
-		if ((CONFIG_DEBUG_MODE >= NRM) && (GET_LEVEL(ch) == LVL_IMPL))
-		{
-			calc_output = fann_run(ann, input);
-			send_to_char(ch, "  DEBUG AVENTUREIRO: \r\n");
-			send_to_char(ch, "Comando Calculado %s  tipo %f arg1 %f %f arg2 %f %f \r\n",
-						 cmd_info[(int)calc_output[0]].command, calc_output[1],
-						 calc_output[2], calc_output[3], calc_output[4], calc_output[5]);
-		}
+		if (GET_LEVEL(ch) < LVL_GOD)
+			fann_train(ann, input, output);
+
 		fann_save(ann, "etc/aventureiro.fann");
-		fann_destroy(ann);
+		 fann_destroy(ann);
 		((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd, complete_cmd_info[cmd].subcmd));
 	}
-} 
+}
 
 	/* Routines to handle aliasing. */
 static struct alias_data *find_alias(struct alias_data *alias_list, char *str)
