@@ -172,7 +172,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"grats", "grat", POS_SLEEPING, do_gen_comm, 0, SCMD_GRATZ, CMD_COMM},
 	{"gsay", "gsay", POS_SLEEPING, do_gsay, 0, 0, CMD_COMM},
 	{"gtell", "gt", POS_SLEEPING, do_gsay, 0, 0, CMD_COMM},
-	{"help", "h", POS_DEAD, do_help, 0, 0, CMD_NONE},
+//	{"help", "h", POS_DEAD, do_help, 0, 0, CMD_NONE},
 	{"happyhour", "ha", POS_DEAD, do_happyhour, 0, 0, CMD_SELF},
 	{"hedit", "hedit", POS_DEAD, do_oasis_hedit, LVL_GOD, 0, CMD_NONE},
 	{"helpcheck", "helpch", POS_DEAD, do_helpcheck, LVL_GOD, 0, CMD_NONE},
