@@ -885,7 +885,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		if (GET_LEVEL(ch) == LVL_IMPL)
 		{
 			send_to_char(ch, "%f, %f, %f, %f, %f, %f, %d", output[0], output[1], output[2], output[3],
-						 output[4], ooutput[5], cmd);
+						 output[4], output[5], cmd);
 		}
 		((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd,
 																	 complete_cmd_info[cmd].
