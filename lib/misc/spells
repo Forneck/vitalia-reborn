@@ -508,7 +508,7 @@
 99 (40 - (3 * self.level)) > 10 ? (40 - (3 * self.level)) : 10
  4 100
  1 P 95 1 1 512 8 0
- 2 create druid food
+ 2 create berries
 40 11
 90 4 7 
 99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
