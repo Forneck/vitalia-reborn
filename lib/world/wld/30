@@ -1,0 +1,1948 @@
+#3000
+A Sala de Leitura~
+   Você está em uma pequena e simples sala que é em sua maior parte vazia,
+exceto por algumas escrivaninhas e cadeiras.  Para leste, você ouve a
+movimentação do Templo de Midgaard, um grande contraste relacionado com essa
+pequena sala onde você se encontra.
+   A oeste, uma escadaria leva a zona residencial de Midgaard.
+~
+30 cdeh 0
+D0
+Você pode ver a Grande Biblioteca de Vitália.
+~
+~
+0 -1 22100
+D1
+Você pode ver o Templo de Midgaard.
+~
+~
+0 -1 3001
+D3
+Uma escadaria leva até a zona residencial de Midgaard.
+~
+~
+0 -1 1001
+S
+#3001
+O Templo de Midgaard~
+   Você está a sul do hall do Templo de Midgaard. O templo foi construído 
+com blocos gigantes de mármore, com aparência eterna, e muitas paredes
+são cobertas por velhas pinturas de Deuses, Gigantes e camponeses.
+   Grandes degraus descem logo após o portal do templo, descendo o enorme
+monte sobre o qual o templo está construído e termina na Praca do Templo
+logo abaixo. Para oeste você pode ver a Sala de Leitura. A Sala de
+Doações é uma pequena sala para o leste.
+~
+30 cdeh 0
+ON midgaard
+ON z30
+D0
+Ao norte do hall do Templo existe uma estátua e um grande altar.
+~
+~
+0 -1 3054
+D1
+Para o leste Você vê uma pequena alcova com uma placa de madeira onde 
+pode-se ler "Sala de Doações de Midgaard."
+~
+~
+0 -1 3063
+D2
+Você pode ver escadas que descem até a Praca do Templo.
+~
+~
+0 -1 3005
+D3
+Você pode ver a Sala de Leitura.
+~
+~
+0 -1 3000
+D5
+Você vê a Praca do Templo.
+~
+~
+0 -1 3005
+S
+#3002
+O Santuário Interno dos Clérigos~
+   Este é o santuário interno. Uma pintura do poderoso Thor está pendurada
+na parede, sobre o altar, localizado na parede oeste. Um fosso no meio da
+sala desce para a escuridão...  Um odor abjeto emana das profundezas.
+~
+30 cd 0
+D1
+Você vê seu lugar favorito: o Bar das Divindades.
+~
+~
+0 -1 3003
+D5
+Você não consegue ver o que existe porque está muito escuro. Observe que
+é impossivel voltar se você descer.
+~
+~
+0 -1 7026
+S
+#3003
+O Bar das Divindades~
+   O bar é um dos mais finos da terra, observe que é apenas para membros.
+Finas peças de metais e pedras preciosas enfeitam toda a sala. Um pequeno
+aviso está pendurado na parede.
+~
+30 cdh 0
+D2
+Você vê a entrada.
+~
+~
+0 -1 3004
+D3
+Você vê o santuário interno.
+~
+~
+0 -1 3002
+E
+aviso~
+O aviso diz:
+Intruções grátis fornecidas pelo garçon:
+
+   BUY  - Compra alguma coisa (bebida) do garçon.
+   LIST - O garçon lhe mostrará todas a diferentes bebidas e
+	  especialidades, e dizá o preço de cada uma.
+~
+S
+#3004
+A Entrada para a Associação dos Clérigos~
+   A entrada para a sala é um pequeno e modesto quarto, refletindo a verdade
+sobre a natureza dos Clérigos. Existe uma saída para o leste que leva
+para a Praça do Templo. O bar está ao norte daqui.
+~
+30 d 0
+D0
+Você vê o bar, ricamente decorado com mobília realmente de bom gosto.
+~
+~
+0 -1 3003
+D1
+Você pode ver a Praça do Templo.
+~
+~
+0 -1 3005
+S
+#3005
+A Praça do Templo~
+   Você está parado na Praca do Templo. Uma enorme escada de mármore conduz 
+para o portão do templo. Para oeste você pode ver a Associação dos Clérigos,
+e para leste a velha Hospedaria Grunting Boar. Para o sul você pode ver a
+praça do mercado, o centro de Midgaard e do nordeste parece que suave melodia
+alcança seus aguçados ouvidos.
+~
+30 0 1
+D0
+Você pode ver o Templo.
+~
+~
+0 -1 3001
+D1
+Você vê a velha Hospedaria Grunting Boar.
+~
+~
+0 -1 3006
+D2
+Você pode ver a Praça do Mercado.
+~
+~
+0 -1 3014
+D3
+Você pode ver a entrada para a Associação dos Clerigos.
+~
+~
+0 -1 3004
+D7
+Você pode ouvir suave melodia.
+~
+~
+0 -1 22030
+S
+#3006
+O Salão de Entrada da Hospedaria Grunting Boar~
+   Você está na entrada da Hospedaria Grunting Boar Inn.  O salao foi
+sabiamente decorado com mobília simples e funcional. O cheiro de poeira e
+papel velho vem do Serviço de Correios, ao norte. O bar (oba!) é ao leste.
+~
+30 d 0
+D0
+Você vê o Serviço de Correios de Midgaard.
+~
+~
+0 -1 3062
+D1
+Surpresa!  Você vê o bar.
+~
+~
+0 -1 3007
+D3
+Você pode ver a Praça do Templo.
+~
+~
+0 -1 3005
+S
+#3007
+O Grunting Boar~
+   Você está no bar. O bar fica contra a parede norte, escrita antiga,
+gravações e símbolos cobrem sua superfície. Uma lareira é construída
+na parede oeste, e através das janelas ao sul você pode ver o a Praça
+do Templo. Este lugar lhe faz sentir-se em casa. Um pequeno aviso com
+letras grandes está pregado ao bar.
+   A sul fica um estreito corredor, muito mal iluminado.
+~
+30 dh 0
+D3
+Você vê a saída para o hall de entrada.
+~
+~
+0 -1 3006
+D2
+Você vê um corredor.
+~
+~
+0 -1 3086
+E
+aviso~
+O aviso diz:
+Instruções grátis fornecidas pela Hospedaria Grunting Boar.
+
+   BUY  - Comprar alguma coisa (bebida) do taverneiro.
+   LIST - O taverneiro vai lhe mostrar todas as diferentes bebidas e
+	  especialidades, e dirá o preço de cada uma.
+~
+E
+escritas gravacao gravacoes simbolos~
+Mesmo parecendo difícil de entender, você acha que parece muito com cerveja,
+poemas sobre cerveja, e pequenas canequinhas de cerveja.
+~
+S
+#3009
+A Padaria~
+   Você esta dentro de uma pequena padaria. O doce perfume dos pães da
+Dinamarca enchem a sala.  Os pães da Dinamarca são arrumados em perfeita
+ordem nas prateleiras, e parecem ser da melhor qualidade.
+Há um pequeno aviso no balcao.
+~
+30 dh 0
+D2
+Você pode ver a Rua Principal.
+~
+~
+0 -1 3013
+E
+paes prateleiras bolos~
+   Você que vê que há pasteis realmente deliciosos. Devem ser feitos por um
+dinamarquês da Dinamarca (que na verdade não é a capital da Suécia!). Antigas
+receitas da Escandinávia, Inglaterra, Alemanha Meridional, França Meridional,
+Rússia, Groelândia, Islandia, Estônia etc, etc.
+   A visão desses enormes, impressionantes bolos de chocolates fazem sua boca
+encher d'água e sua alma cantar.
+~
+E
+aviso~
+Instruções grátis fornecidas pela loja:
+
+   BUY  - Compra algum pão ou pastel.
+   LIST - O padeiro gentilmente lhe dirá o preço e tipo de cada pão
+	  em sua padaria.
+~
+S
+#3010
+O Armazém~
+   Você está dentro do armazém. Todo tipo de items estão nas prateleiras
+por trás do balcão, seguros, fora do seu alcance.
+Uma pequena nota está pendurada na parede.
+~
+30 dh 0
+D2
+Você pode ver a Rua Principal.
+~
+~
+0 -1 3015
+E
+nota~
+A nota diz:
+
+  LIST  - Mostras os vários itens do armazem.
+  BUY   - Compra um item.
+  VALUE - O vendedor irá (gratuitamente) dizer quanto ele pagará
+	  pelo seu item.
+  SELL  - Vende um item.
+~
+S
+#3011
+A Loja de Armas~
+   Você esta dentro da loja de armas. Existe uma pequena nota no balcão.
+~
+30 dh 0
+D2
+Você pode ver a Rua Principal.
+~
+~
+0 -1 3016
+E
+nota~
+Na nota está escrito:
+
+  LIST  - Mostra os vários itens que há na loja de armas.
+  BUY   - Compra um item.
+  VALUE - O vendedor irá (gratuitamente) dizer quanto ele pagará
+	  pelo seu item.
+  SELL  - Vende um item.
+~
+S
+#3012
+Rua Principal~
+   Você está no fim da rua principal de Midgaard.  Ao sul fica a entrada
+da Associação dos Magos. A rua continua ao leste levando à
+praça do mercado. A loja de mágica fica ao norte e para o oeste está o
+portão da cidade.
+~
+30 0 1
+D0
+Você pode ver a Loja de Mágica.
+~
+~
+0 -1 3033
+D1
+Você pode ver a Rua Principal.
+~
+~
+0 -1 3013
+D2
+Você pode ver a entrada para o Associação dos Magos.
+~
+~
+0 -1 3017
+D3
+Você pode ver o portão da cidade.
+~
+~
+0 -1 3040
+S
+#3013
+Rua Principal~
+   Você está na rua principal atravessando a Cidade de Midgaard.  Ao sul
+daqui fica a entrada para a Loja de Armaduras, e a padaria é ao norte.
+A leste daqui fica a praça do mercado.
+~
+30 0 1
+D0
+Você pode ver a padaria.
+~
+~
+0 -1 3009
+D1
+Você pode ver a Praca do Mercado.
+~
+~
+0 -1 3014
+D2
+Você pode ver a Loja de Armaduras.
+~
+~
+0 -1 3020
+D3
+Você pode ver a Rua Principal.
+~
+~
+0 -1 3012
+S
+#3014
+A Praça do Mercado~
+   Você está diante da Praca do Mercado, a famosa Praça de Midgaard.
+Há uma grande e estranha estátua no meio da praça. Ela é esculpida
+em bronze e pedra. Dizem as lendas que ela pode tomar vida para defender
+Midgaard de ataques malignos.
+   Ruas saem em todas as direções, para norte a praca do templo, para
+sul a Praca Comum, leste e oeste saem na Rua Principal.
+~
+30 0 1
+D0
+Você pode ver a Praca do Templo.
+~
+~
+0 -1 3005
+D1
+Você pode ver a Rua Principal.
+~
+~
+0 -1 3015
+D2
+Você pode ver a Praca Mediana.
+~
+~
+0 -1 3075
+D3
+Você pode ver a Rua Principal.
+~
+~
+0 -1 3013
+E
+estatua~
+O que você vê é o Verme Midgaard, enrolado em volta do Palácio de Midgaard.
+~
+S
+#3015
+Rua Principal~
+   Você está na rua principal, atravessando a cidade. Ao norte há
+o armazem, e a rua principal prolonga-se para leste. A oeste você vê e ouve
+a praça do mercado, ao sul uma pequena porta leva à Loja de Animais.
+~
+30 0 1
+D0
+Você pode ver o Armazem.
+~
+~
+0 -1 3010
+D1
+Você pode ver a Rua Principal.
+~
+~
+0 -1 3016
+D2
+Você pode ver a Loja de Animais.
+~
+~
+0 -1 3031
+D3
+Você pode ver a Praca do Mercado.
+~
+~
+0 -1 3014
+S
+#3016
+Rua Principal~
+   A rua principal. Ao norte você tem a loja de armas e ao sul a
+Associação dos Guerreiros. A leste você deixa a cidade e para oeste
+a rua leva à praca do mercado.
+~
+30 0 1
+D0
+Você pode ver a Loja de Armas.
+~
+~
+0 -1 3011
+D1
+Você pode ver os portoes da cidade.
+~
+~
+0 -1 3041
+D2
+Você pode ver a Associação dos Guerreiros.
+~
+~
+0 -1 3021
+D3
+Você vê a Rua Principal, que leva à Praca do Mercado.
+~
+~
+0 -1 3015
+S
+#3017
+A Entrada para o Associação dos Magos~
+   O corredor de entrada para esse guia é pequeno, iluminado por uma
+luz que altera sua cor entre azul e roxo.
+~
+30 d 0
+D0
+Você pode ver a Rua Principal.
+~
+~
+0 -1 3012
+D2
+Você vê seu lugar favorito: o Bar dos Magos.
+~
+~
+0 -1 3018
+S
+#3018
+O Bar dos Magos~
+   Esse bar é um dos mais estranhos da terra. Imagens misticas flutuam
+pelo ar. Ilusões de fina mobília aparecem por toda a sala.
+~
+30 cdh 0
+D0
+Você vê o vestíbulo.
+~
+~
+0 -1 3017
+D1
+Você pode ver o laboratório.
+~
+~
+0 -1 3019
+S
+#3019
+O Laboratório dos Magos~
+   Este é o Laboratório de Experimentos Mágicos. Arcos de pedra escurecidos
+pela fumaça sobre pesadas mesas de carvalho, a maioria delas povoadas de
+estranhos potes e frascos. O chão é coberto com pentagramas semi-apagados
+e símbolos ainda mais estranhos, e num quadro negro parcialmente limpo
+num canto escuro, algumas dolorosas letras são levemente visíveis. Um fosso
+no meio da sala leva à escuridão. Um odor pútrido exala das profundezas.
+~
+30 cd 0
+D3
+Você vê o bar.
+~
+~
+0 -1 3018
+D5
+Você não pode descer lá, é muito escuro. Parece que seria impossível
+subir novamente.
+~
+~
+0 -1 7017
+S
+#3020
+A Loja de Armaduras~
+   Uma loja com todos os tipos de armaduras sobre as paredes e janelas.
+Você vê elmos, escudos e malhas de aco. Ao norte fica a rua principal.
+Na parede se vê uma nota.
+~
+30 dh 0
+D0
+Você pode ver a Rua Principal.
+~
+~
+0 -1 3013
+E
+nota~
+Você pode usar esse comandos para negociar:
+
+  VALUE <item>     Para ter o preço do item em seu poder.
+  SELL <item>      Para vender algo.
+  BUY <item>       Para comprar algo (desde que haja em estoque).
+  LIST             Dá a lista dos itens em estoque.
+
+	 NÓS NÃO DAMOS CRÉDITO; NÃO ESPERAMOS RECEBER CREDITO!
+			   FIADO SÓ AMANHÃ
+~
+S
+#3021
+O Salao de Entrada da Associação dos Guerreiros~
+   Um lugar onde tem que se tomar cuidado em não falar nada
+errado (ou certo). A leste fica o bar e ao norte a rua principal.
+~
+30 d 0
+D0
+Você pode ver a Rua Principal.
+~
+~
+0 -1 3016
+D1
+Você vê o bar da Associação dos Guerreiros. Muito barulho vem de lá.
+~
+~
+0 -1 3022
+S
+#3022
+O Bar dos Guerreiros~
+   O Bar dos Guerreiros. Esse lugar foi um dia belamente mobiliado... Mas
+agora a mobilia está toda por aí, em pequenos pedaços. Ao sul fica o pátio,
+e a oeste o salão de entrada.
+~
+30 cdh 0
+D2
+Você vê o pátio de treinamento.
+~
+~
+0 -1 3023
+D3
+Você vê o salão de entrada da Associação dos Guerreiros.
+~
+~
+0 -1 3021
+S
+#3023
+O Pátio de Torneios e Treinamento~
+   Este é o pátio de treinamento dos guerreiros. Ao norte fica o bar.
+Um fosso desce para a escuridão.
+~
+30 cd 0
+D0
+Você vê o bar.
+~
+~
+0 -1 3022
+D5
+Você não pode ver o que há lá embaixo, é muito escuro. Parece impossível
+subir novamente.
+~
+~
+0 -1 7048
+S
+#3024
+O Final Leste do Beco Miserável~
+   Você está no beco miserável.  Ao norte há uma loja estranha, ao sul fica
+a Hospedaria Grubby e a leste você vê a praça comum.  O beco continua a
+oeste.
+~
+30 0 1
+D0
+Você vê uma loja estranha.
+~
+~
+0 -1 3081
+D1
+Você vê a praça comum.
+~
+~
+0 -1 3025
+D2
+Você vê a hospedaria.
+~
+~
+0 -1 3048
+D3
+Você vê o beco miserável.
+~
+~
+0 -1 3044
+S
+#3025
+A Praça Comum~
+   A praça comum, pessoas passam por você, conversando. A oeste
+o beco miserável e a leste um beco escuro. Ao norte, esta praça está ligada
+à praça do mercado. Ao sul você nota um cheiro desagradável.
+~
+30 0 1
+D0
+Você vê a Praça do Mediana.
+~
+~
+0 -1 3075
+D1
+Você vê o beco escuro.
+~
+~
+0 -1 3026
+D2
+Você vê o depósito de lixo.
+~
+~
+0 -1 3030
+D3
+Você vê o beco miserável.
+~
+~
+0 -1 3024
+S
+#3026
+O Beco Escuro~
+   O beco escuro, a oeste fica a praça comum e ao sul a Associação dos
+Ladrões. O beco continua a leste.
+~
+30 0 1
+D1
+O beco continua a leste.
+~
+~
+0 -1 3045
+D2
+Você vê a entrada da associação dos ladroes.
+~
+~
+0 -1 3027
+D3
+Você vê a praca comum.
+~
+~
+0 -1 3025
+E
+associação~
+Associação dos Ladrões. Não entre se você é ligado à sua saúde de sua carteira.
+~
+S
+#3027
+O Salão de Entrada da Associação dos Ladrões~
+   O salão de entrada da associação dos ladrões e assassinos. Um lugar onde
+você pode perder sua vida e dinheiro, se não ficar esperto. Ao norte
+há o beco escuro e a leste o bar dos ladrões.
+~
+30 d 0
+D0
+Você vê o beco.
+~
+~
+0 -1 3026
+D1
+Você vê o bar dos ladrões, onde tudo desaparece.
+~
+~
+0 -1 3028
+S
+#3028
+O Bar dos Ladrões~
+   O bar dos ladroes. Este foi uma vez um lugar belamente mobiliado,
+mas agora parece quase vazio. Ao sul há o pátio, e a oeste o salão
+de entrada.
+   (Será que a mobília foi roubada?!?)
+~
+30 cdh 0
+D2
+Você vê o patio secreto.
+~
+~
+0 -1 3029
+D3
+Você vê o salão de entrada da associação do ladrões.
+~
+~
+0 -1 3027
+E
+mobília~
+Enquanto você examina a mobília, a cadeira em que você está
+sentado desaparece misteriosamente.
+~
+S
+#3029
+O Pátio Secreto~
+   O pátio secreto de treinamento de ladroes e assassinos. Ao norte
+fica o bar. Um fosso desce para a escuridão.
+~
+30 cd 0
+D0
+Você vê o bar.
+~
+~
+0 -1 3028
+D5
+Você não pode ver lá embaixo, tá muito escuro. Se você descer,
+acho que não volta mais.
+~
+~
+0 -1 7043
+S
+#3030
+O Depósito de Lixo~
+   O depósito de lixo, onde o povo da cidade deixa o seu lixo. Através do
+lixo, você vê uma grande conexão de canos. Parece a entrada para
+o sistema de esgoto. Ao norte você pode ver a praça comum.
+~
+30 c 2
+D0
+Você pode ver a praça comum.
+~
+~
+0 -1 3025
+D5
+Você vê os esgotos.
+~
+grade~
+:n 2
+2 3005 7030
+S
+#3031
+A Loja de Animais~
+   A loja de animais é uma pequena loja atulhada, cheia de gaiolas e animais
+de todos os tamanhos (ei! acho que ví minha sogra!). Há um aviso na parede.
+~
+30 cdh 0
+D0
+Você vê a rua principal.
+~
+~
+0 -1 3015
+E
+aviso~
+O aviso diz:
+
+  Use 'LIST' para ver os animais disponíveis.
+  Use 'BUY <animal>' para comprar um bichinho.
+
+  Instruções para cuidar de seu bichinho:
+
+  Use 'ORDER <animal> <instruções>' para chamar seu animal.
+  Se você abusar de seu animal, ele não vai mais te reconhecer como mestre.
+  Se você tiver varios animais, use 'ORDER FOLLOWERS <instrucoes>'
+
+  Você pode batizar seu animal com: 'BUY <animal> <nome>'
+
+ Saudações,
+
+ A Gerência
+
+~
+S
+#3032
+A Loja de Animais~
+   Este é o pequeno quarto onde a loja mantém seus animais.
+É vital que o número destes quartos seja exatamente um a mais
+que o número da Loja de Animais.
+~
+30 d 0
+OL 108
+S
+#3033
+A Loja de Mágica~
+   Atrás do balcão você vê vários itens, primorosamente dispostos em
+prateleiras, provavelmente a maioria deles são mágicos.
+~
+30 dh 0
+D2
+Você vê a rua principal.
+~
+~
+0 -1 3012
+S
+#3034
+A Loja de Mapas~
+   Você vê vários mapas pelas paredes, das mais diversas partes do mundo.
+Estão colados um ao lado do outro, de forma que seja fácil a consulta de
+qualquer um dos mapas. No canto, há uma mesa onde um velho senhor desenha
+seus mapas.
+~
+30 dh 0
+D2
+Você vê o final leste do beco.
+~
+~
+0 -1 3046
+S
+#3040
+Dentro do Portão Oeste de Midgaard~
+   Você esta entre duas pequenas torres construídas nos muros da cidade e
+ligadas a uma pequena ponte através do pesado portão de madeira. A Rua
+Principal leva para leste e a Estrada do Muro vai para o sul. A norte você
+vê a Confraria dos Druidas, construção até pouco tempo atrás oculta aos olhos
+dos comuns...
+~
+30 0 1
+D0
+Lá está a Confraria de Druidas.
+~
+~
+0 -1 3071
+D1
+Você vê a Rua Principal.
+~
+~
+0 -1 3012
+D2
+Você vê a estrada ao longo do lado interno dos muros da cidade. Você repara
+que é chamada de Estrada do Muro.
+~
+~
+0 -1 3042
+D3
+O portão da cidade é a oeste.
+~
+portao~
+:n 1 o portão da cidade de Midgaard
+1 3112 3052
+E
+ponte~
+É muito alta para alcancar mas parece que alguem poderia facilmente passar
+de uma torre para outra.
+~
+E
+portao~
+São portas duplas feitas de madeira muito resistente. São reforçadas com
+grandes tiras de ferro para deixá-las ainda mais resistentes. Uma das portas
+possui uma fechadura enorme.
+~
+E
+torre torres~
+Ambas as torres são construídas com grandes rochas unidas entre si com
+algum tipo de cimento, assim como o muro da cidade.
+~
+E
+muro~
+É construído de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. É muito alto pra subir.
+~
+S
+#3041
+Dentro do Portao Leste de Midgaard~
+   Você está entre duas pequenas torres construídas nos muros da cidade e
+ligadas a uma pequena ponte atraves do pesado portão de madeira. A Rua
+Principal leva para oeste e ao sul Você vê a Loja de Água.
+~
+30 0 1
+D1
+Você vê o portao da cidade.
+~
+portao~
+:n 1 o portão da cidade de Midgaard
+1 3112 3053
+D2
+Você vê a loja de água.
+~
+~
+0 -1 3058
+D3
+Você vê a Rua Principal.
+~
+~
+0 -1 3016
+E
+ponte~
+É muito alta para alcançar mas parece que alguem poderia facilmente passar
+de uma torre para outra.
+~
+E
+portao~
+São portas duplas feitas de madeira muito resistente. São reforçadas com
+grandes tiras de ferro para deixa-las ainda mais resistentes. Uma das portas
+possui uma fechadura enorme.
+~
+E
+torre torres~
+Ambas as torres são construídas com grandes rochas unidas entre si com
+algum tipo de cimento, assim como o muro da cidade.
+~
+E
+muro~
+É construído de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. É muito alto pra subir.
+~
+S
+#3042
+Estrada do Muro~
+   Você está andando próximo ao muro oeste da cidade.  A estrada continua
+para o sul e o portão da cidade está a norte daqui.  A leste está a Avenida
+Midgaard.
+~
+30 0 1
+D0
+Você vê o portão da cidade.
+~
+~
+0 -1 3040
+D1
+Você vê a Avenida Midgaard.
+~
+~
+0 -1 3080
+D2
+A estrada continua para o sul.
+~
+~
+0 -1 3043
+E
+muro~
+É construído de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. É muito alto pra subir.
+~
+S
+#3043
+Estrada do Muro~
+   Você está andando próximo ao muro oeste da cidade. A Estrada do Muro
+continua ao norte e sul. Um pequeno e miserável beco leva para leste.
+Algo foi escrito no muro.
+~
+30 0 1
+D0
+A estrada continua para o norte.
+~
+~
+0 -1 3042
+D1
+O Beco Miserável vai para leste.
+~
+~
+0 -1 3044
+D2
+A estrada continua para o sul.
+~
+~
+0 -1 3047
+E
+escrito escrita~
+Diz: 'Quem vigia os vigias?'
+E tambem: 'Morfetus esta próximo'
+~
+E
+muro~
+É construído de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. É muito alto pra subir.
+~
+S
+#3044
+Beco Miserável~
+   Você está no Beco Miserável, que continua a leste. Você vê
+o muro da cidade a oeste.
+~
+30 0 1
+D1
+O beco leva a leste.
+~
+~
+0 -1 3024
+D3
+O beco leva a oeste.
+~
+~
+0 -1 3043
+S
+#3045
+O Beco Escuro no Dique~
+   Você está em um beco que segue para leste e oeste. Ao sul
+daqui você vê o dique.
+~
+30 0 1
+D1
+O beco leva a leste.
+~
+~
+0 -1 3046
+D2
+Você vê o dique.
+~
+~
+0 -1 3049
+D3
+O beco leva a oeste.
+~
+~
+0 -1 3026
+S
+#3046
+O Final Leste do Beco~
+   Você está no final leste do beco, o muro da cidade está a leste
+bloqueando qualquer movimento. Um pequeno depósito está a sul daqui.
+Ao norte, uma pequena e velha loja... o que será que vende alí?
+~
+30 0 1
+D0
+Você vê a loja de mapas.
+~
+~
+0 -1 3034
+D2
+Você vê o depósito.
+~
+~
+0 -1 3050
+D3
+Você vê o beco.
+~
+~
+0 -1 3045
+S
+#3047
+Estrada do Muro~
+   Você está na estrada próximo ao muro oeste da cidade, que continua ao
+Norte. Ao sul ha uma ponte através do rio.
+~
+30 0 1
+D0
+Você vê a estrada.
+~
+~
+0 -1 3043
+D2
+Você vê a ponte.
+~
+~
+0 -1 3051
+E
+muro~
+É construído de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. É muito alto pra subir.
+~
+S
+#3048
+Hospedaria Grubby~
+   Você está dentro da velha Hospedaria Grubby. Este lugar não foi limpo por
+várias décadas; o cheiro de podre deixa você zonzo.
+~
+30 dh 0
+D0
+Você vê o beco.
+~
+~
+0 -1 3024
+S
+#3049
+O Dique~
+   Você está no dique. Ao sul daqui você vê o rio fluindo calmamente para
+oeste. O rio é muito raso, o que permite entrar nele.
+~
+30 h 1
+D0
+Você vê o beco.
+~
+~
+0 -1 3045
+D2
+Você vê o rio fluindo para oeste.
+~
+~
+0 -1 3203
+S
+#3050
+O Deposito Deserto~
+   Você está dentro do depósito. O lugar está decorado com várias peças
+antigas de navios.
+~
+30 d 0
+D0
+Você vê o beco.
+~
+~
+0 -1 3046
+S
+#3051
+Na Ponte~
+   Você está na ponte de pedra que atravessa o rio. A ponte é construída
+fora do muro oeste da cidade e o rio flui para oeste através de uma abertura
+no muro, três metros sob a ponte.
+~
+30 0 1
+D0
+Você vê a estrada.
+~
+~
+0 -1 3047
+D2
+Você vê a confluência.
+~
+~
+0 -1 3100
+E
+ponte~
+É construída com grande rochas, unidas entre si com algum tipo de cimento,
+Assim como o muro. Odyssey costuma tomar cerveja lá embaixo.
+~
+E
+abertura~
+Você não consegue ver daqui como se estivesse bem abaixo de seus pés.
+~
+E
+muro~
+É construído de grandes rochas cinzas unidas entre sí com algum tipo de
+cimento. É muito alto pra subir.
+~
+S
+#3052
+Fora do Portão Oeste de Midgaard~
+   Você está entre duas pequenas torres construídas nos muros da cidade e
+ligadas a uma pequena ponte através do pesado portão de madeira. A oeste
+você pode ver a margem de uma grande floresta.
+~
+30 0 1
+D1
+O portão da cidade é a leste.
+~
+portao~
+:n 1 o portão da cidade de Midgaard
+1 3112 3040
+D3
+A margem da floresta é a oeste.
+~
+~
+0 -1 6092
+E
+ponte~
+É muito alta para alcançar mas parece que alguém poderia facilmente passar
+de uma torre para outra.
+~
+E
+portao~
+São portas duplas feitas de madeira muito resistente. São reforçadas com
+grandes tiras de ferro para deixá-las ainda mais resistentes. Uma das portas
+possui uma fechadura enorme.
+~
+E
+torre torres~
+Ambas as torres são construídas com grandes rochas unidas entre si com
+algum tipo de cimento, assim como o muro da cidade.
+~
+E
+muro~
+É construído de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. É muito alto pra subir.
+~
+S
+#3053
+Fora do Portão Leste de Midgaard~
+   Você esta entre duas pequenas torres construídas nos muros da cidade e
+ligadas a uma pequena ponte através do pesado portão de madeira. Ao leste
+a planície desaparece ao longe.
+~
+30 0 1
+D1
+Você vê a planicie.
+~
+~
+0 -1 3503
+D3
+Você vê o portão da cidade.
+~
+portao~
+:n 1 o portão da cidade de Midgaard
+1 3112 3041
+E
+ponte~
+É muito alta para alcançar mas parece que alguém poderia facilmente passar
+de uma torre para outra.
+~
+E
+portao~
+São portas duplas feitas de madeira muito resistente. São reforçadas com
+grandes tiras de ferro para deixá-las ainda mais resistentes. Uma das portas
+possui uma fechadura enorme.
+~
+E
+torre torres~
+Ambas as torres são construídas com grandes rochas unidas entre si com
+algum tipo de cimento, assim como o muro da cidade.
+~
+E
+muro~
+É construído de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. É muito alto pra subir.
+~
+S
+#3054
+No Altar do Templo~
+   Você está no altar do templo no extremo norte do Templo de Midgaard.
+Um grande altar feito de mármore branco polido esta à sua frente e atrás
+dele com três metros de altura uma estatua de Odin, o Rei dos Deuses.
+   Ao norte, degraus levam aos fundos do templo, à zona rural.
+~
+30 d 0
+D0
+Você vê a vasta zona rural de Midgaard.
+~
+~
+0 -1 3059
+D1
+Você vê uma estrada.
+~
+~
+0 -1 400
+D2
+Você vê o extremo sul do templo.
+~
+~
+0 -1 3001
+E
+altar~
+Mesmo tendo mais de três metros de comprimento, o altar aparentemente é
+feito de um único bloco de marmore virgem.
+~
+E
+estatua odin rei deus~
+A estátua representa Odin sentado em seu trono. Ele tem longos cabelos
+grisalhos e barba, e um olhar severo em seu rosto. Acima de seu trono,
+bem sobre seus ombros, seus dois abutres Hugin e Munin estão pousados
+e a seus pés seus lobos Gere e Freke.
+~
+S
+#3055
+Loja de Odin~
+   Este é o pequeno quarto escuro onde Odin mantém os itens de jogadores
+que ele toma conta. É vital que o número destes quartos seja exatamente
+um a mais que o número do altar do templo.
+~
+30 dj 0
+OL 107
+S
+#3058
+A Velha Loja de Água~
+   Você esta no centro de uma pequena loja cujas paredes estão cobertas
+com prateleiras e prateleiras de cantaros d'água. Muitos grandes barris
+com torneiras estão empilhados num canto.
+~
+30 dh 0
+D0
+Você vê o Portão Leste.
+~
+~
+0 -1 3041
+S
+#3059
+Atrás do Altar do Templo~
+   Você está num caminho sujo que deixa o templo do altar, a sul daqui.
+Ao norte, o caminho continua através da verdejante zona rural de Midgaard
+na direção das Montanhas Dragonhelm, longe ao norte.
+~
+30 0 1
+D0
+Você vê a viscosa, verde zona rual de Midgaard.
+~
+~
+0 -1 3060
+D2
+Você vê o Altar do Templo.
+~
+~
+0 -1 3054
+S
+#3060
+O Grande Campo de Midgaard~
+   Você está andando no amplo caminho de terra através da viscosa, verde,
+fresca zona rural de Midgaard. Você pode ver o horizonte ao norte, leste
+e oeste; a ocupada cidade de Midgaard fica ao sul. Tudo a sua volta
+é grama verde e um ocasional carvalho. O Sol cai maravilhoso em sua
+face e um prazeiroso vento sopra através de seus cabelos. Passaros gorjeiam
+calmamente entre si e você pode sentir o suave aroma das flores e da grama
+recem cortada. Você sente como se pudesse deitar-se na grama e ficar aqui
+para sempre, dominado pela poderosa beleza em todas as direções.
+   O caminho em que você está segue para norte através do campo e ao sul,
+retornado a Midgaard. Há um caminho construído com grandes pedras redondas
+a oeste.
+~
+30 0 1
+D0
+Você não vê mais que o caminho atraves do Grande Campo.
+~
+~
+0 -1 3061
+D2
+Você vê o caminho de volta a Midgaard.
+~
+~
+0 -1 3059
+D3
+Você um caminho bem preservado, construído com grandes pedras redondas.
+~
+~
+0 -1 1800
+S
+#3061
+O Grande Campo de Midgaard~
+   Você está andando no amplo caminho de terra através da viscosa, verde,
+fresca zona rural de Midgaard. Você pode ver o horizonte ao norte, leste
+e oeste; a ocupada cidade de Midgaard fica ao sul. Tudo a sua volta
+é grama verde e um ocasional carvalho. O Sol cai maravilhoso em sua
+face e um prazeiroso vento sopra através de seus cabelos. Passaros gorjeiam
+calmamente entre si e você pode sentir o suave aroma das flores e da grama
+recem cortada. Você sente como se pudesse deitar-se na grama e ficar aqui
+para sempre, dominado pela poderosa beleza em todas as direções.
+   Há uma estrutura estranha no lado leste do caminho. Um pequeno caminho
+de terra afasta-se do caminho principal e leva para oeste.
+~
+30 c 1
+D0
+O caminho continua para norte, trazendo você cada vez mais perto das
+Montanhas Dragonhelm.
+~
+~
+0 -1 3065
+D1
+Há uma estranha estrutura a leste na beira da trilha.
+~
+~
+0 -1 18600
+D2
+Você vê mais Campo.
+~
+~
+0 -1 3060
+D3
+Há um estranho caminho levando em direcao um portão enferrujado a oeste.
+~
+~
+0 -1 3066
+S
+#3062
+O Serviço de Correios~
+   Você esta na central de correios de Midgaard. Pilhas de correspondência
+permanecem intocadas nos cantos, juntando teias de aranha. Vários engradados
+foram violados por curiosos agentes da alfândega, e estão agora empilhados
+ao longo da parede oeste, escondendo vários cartazes de 'PROCURADO'.
+Há um pequeno aviso na parede.
+~
+30 deh 1
+D2
+Você vê a entrada da Hospedaria Grunting Boar.
+~
+~
+0 -1 3006
+E
+aviso~
+,----------------------------------------------------------.
+| Instruções do Correio:                                   |
+|                                                          |
+|      Para enviar uma nota a alguém:                      |
+|         MAIL <nome do jogador>                           |
+|                                                          |
+|      Para verificar se você recebeu correspondêcia:      |
+|         CHECK                                            |
+|                                                          |
+|      Para receber sua correspondencia:                   |
+|         RECEIVE                                          |
+|                                                          |
+|         Selos custam 150 moedas por carta                |
+|         Digite 'HELP MAIL' para mais informações         |
+`----------------------------------------------------------'
+~
+E
+envelopes correspondecia~
+Envelopes de todos os tamanhos estão empilhados em grande montes pelo chão.
+Olhando de perto, você vê uma carta que você enviou bem a uma semana atrás,
+esquecida e meio roida por ratos em uma das pilhas.
+~
+E
+teias~
+Parecem cobrir tudo, inclusive o carteiro.
+~
+E
+engradados~
+Como você sabe, é ilegal enviar itens de contrabando pelo correio de
+Midgaard. Os agentes da alfândega usam isso com desculpa para afanar
+bebidas, especiarias raras, ou qualquer coisa que eles possa achar
+útil ou desejável.
+~
+E
+procurados parede~
+Rostos de vários Assassinos e Ladrões conhecidos mal podem ser vistos atrás
+dos engradados na parede oeste. Alguns deles parecem familiares como aquele
+cara que você viu na Recepção ha um minuto... Mas eles são difíceis de ver
+atrás dos engradados.
+~
+S
+#3063
+A Sala de Doações de Midgaard~
+   Você está num quarto pequeno e sem decoração, junto ao templo principal.
+Há um par de pequenos bancos de madeira onde as pessoas ocasionalmente
+sentam enquanto esperam. O templo fica a oeste. Uma pequena e velha porta
+de madeira parece ter sido esquecida nos fundos da sala.
+~
+30 cde 1
+D1
+Tem uma velha porta de madeira que foi esquecida nos fundos.
+~
+porta~
+:n 2
+1 -1 1100
+D3
+O templo fica a oeste.
+~
+~
+0 -1 3001
+E
+porta~
+Parece bem velha...
+~
+S
+#3065
+O Grande Campo de Midgaard~
+   Você está andando no amplo caminho de terra através da viscosa, verde,
+fresca zona rural de Midgaard. Você pode ver o horizonte ao norte, leste
+e oeste; a ocupada cidade de Midgaard fica ao sul. Tudo a sua volta
+é grama verde e um ocasional carvalho. O Sol cai maravilhoso em sua
+face e um prazeiroso vento sopra através de seus cabelos. Passaros gorjeiam
+calmamente entre si e você pode sentir o suave aroma das flores e da grama
+recem cortada. Você sente como se pudesse deitar-se na grama e ficar aqui
+para sempre, dominado pela poderosa beleza em todas as direções.
+   O caminho ao norte parece finalmente ter sido aberto, podendo ainda se
+ver as marcas do aparato que o bloqueava.  Há também um caminho para oeste.
+~
+30 0 2
+D0
+O caminho está livre!  Fora as marcas do aparato, você consegue ver...
+Algo.
+~
+~
+0 -1 3068
+D2
+O caminho continua através do campo para o sul passando uma estranha estrutura
+no lado leste do caminho.
+~
+~
+0 -1 3061
+D3
+Que belíssimo jardim! Tão bem cuidado que você acredita que ali deve ser o lar
+de alguém muito especial.
+~
+~
+0 -1 22025
+E
+marcas aparato~
+Aquele aparato estava a muito, muito tempo nesse lugar...  Ele parece ter
+marcado esse caminho para sempre.  Tomara que o que você encontre do outro
+lado seja seguro...
+~
+S
+#3066
+O Caminho de Terra~
+   Você está andando no amplo caminho de terra através da viscosa, verde,
+fresca zona rural de Midgaard. Você pode ver o horizonte ao norte, leste
+e oeste; a ocupada cidade de Midgaard fica ao sul. Tudo a sua volta
+é grama verde e um ocasional carvalho. O Sol cai maravilhoso em sua
+face e um prazeiroso vento sopra através de seus cabelos. Passaros gorjeiam
+calmamente entre si e você pode sentir o suave aroma das flores e da grama
+recem cortada. Você sente como se pudesse deitar-se na grama e ficar aqui
+para sempre, dominado pela poderosa beleza em todas as direções.
+   Há um grande portão enferrujado em um arco de pedra a oeste.
+~
+30 0 2
+D1
+O caminho se une a um caminho maior a leste.
+~
+~
+0 -1 3061
+D3
+Há um portão enferrujado a oeste.
+~
+portao~
+:n 1 o portão enferrujado
+15 -1 3067
+E
+portao~
+Está muito enferrujado por sinal.
+~
+S
+#3067
+Atravessando o portão~
+   Você vê o portão enferrujado a leste. A oeste você vê uma estranha
+estrutura, como um tabuleiro de xadrez. Você ouve sons vindos de lá,
+sons de uma... batalha de xadrez?!?
+~
+30 0 2
+D1
+Você vê o portão enferrujado.
+~
+portao~
+:n 1 o portão enferrujado
+1 6300 3066
+D3
+Você vê uma estranha estrutura, um tabuleiro de xadrez, talvez.
+~
+~
+0 -1 3600
+E
+portao~
+Está muito enferrujado por sinal.
+~
+S
+#3068
+Além do Grande Campo de Midgaard~
+   Finalmente é possível ver o que havia além daquele estranho aparato, que
+simplesmente sumiu de seu antigo lugar.  A trilha que seguia pelo campo
+continua aqui, só que agora parece estar ficando mais larga a medida que
+você caminha por ela.  Ao seu redor, a mudança também não foi muito grande,
+sendo a única coisa chamativa a parte mais adiante da trilha e, mais ao
+longe, o que parece ser a parte mais alta de cinco torres.
+~
+30 0 2
+D0
+Para lá segue o solitário caminho de terra...
+~
+~
+0 -1 3069
+D1
+~
+~
+0 -1 2090
+D2
+Você vê o Grande Campo de Midgaard.
+~
+~
+0 -1 3065
+S
+#3069
+Além do Grande Campo de Midgaard~
+   Você está cada vez mais longe do Grande Campo de Midgaard.  Olhando para
+trás, você tem a impressão de que andou muito mais do que pensava, e se
+sente perdido e tão solitário quanto a estrada pela qual caminha.  Ainda
+longe, ao norte, você vê a silhueta de cinco torres cortando o céu no
+horizonte.
+~
+30 0 2
+D0
+Para lá segue o solitário caminho de terra...
+~
+~
+0 -1 3070
+D2
+Para lá segue o solitário caminho de terra... E mais longe, Midgaard.
+~
+~
+0 -1 3068
+S
+#3070
+Além do Grande Campo de Midgaard~
+   Você continua a se distanciar de Midgaard, agora tendo resolvido seguir o
+caminho até o fim.  A estrada parece mudar a partir daqui, sendo agora ladeada
+por pedras muito brancas e bem cortadas.  A silhueta daquelas misteriosas
+cinco torres também está mais próxima, mas ainda é difícil de ver com mais
+detalhes.  Seguindo norte você continua pelo caminho, e por sul, você tem a
+possibilidade de voltar para Midgaard.
+~
+30 0 2
+D0
+Para lá segue o solitário caminho de terra... E mais alguma coisa
+~
+~
+0 -1 9200
+D2
+Para lá segue o solitário caminho de terra... E longe, muito longe, Midgaard.
+~
+~
+0 -1 3069
+S
+#3071
+A Entrada para a Confraria dos Druidas~
+   A entrada da confraria se parece mais com a entrada de uma caverna.  As
+paredes de pedra são recobertas por runas, indicando que o lugar inteiro
+está protegido por forte magia.  Grandes tochas iluminam as câmaras mais
+profundas.  A oeste você vê uma espécie de bar, enquanto a sul está uma das
+ruas de Midgaard.
+~
+30 d 0
+D2
+Você vê o fim da Rua Principal.
+~
+~
+0 -1 3040
+D3
+Ali está uma espécie de bar.
+~
+~
+0 -1 3072
+S
+#3072
+O Bar dos Druidas~
+   O bar ocupa uma grande câmara da caverna.  Você percebe veios de pedras
+preciosas na rocha das paredes, mas acha melhor não olhar demais (cuidado
+com a ganância!)...  Toda mobília foi entalhada em uma espécie de cristal,
+sendo muito bonito o efeito que a luz das tochas produz quando incide sobre
+alguma das peças.  A sul você percebe um aposento mergulhado no mais profundo
+breu.
+~
+30 cdh 0
+D2
+Você não consegue enxergar nada...
+~
+~
+0 -1 3073
+D1
+Você vê a entrada da Confraria dos Druidas.
+~
+~
+0 -1 3071
+S
+#3073
+O Círculo Druídico~
+   Você está no imenso salão onde os druidas aprendem sobre suas tradições,
+leis e poderes.  Megalitos foram, como que por mágica, dispostos em um
+grande círculo, tendo como centro um altar feito de rocha azulada.  Sobre um
+pedestal de ouro, junto ao altar, duas grandes esferas de fogo violeta
+iluminam o Círculo com seu estranho brilho.
+~
+30 cdh 0
+D0
+Você vê o Bar dos Druidas.
+~
+~
+0 -1 3072
+D5
+Você não pode ver o que há lá embaixo, é muito escuro. Parece impossível
+subir novamente.
+~
+~
+0 -1 7048
+S
+#3075
+A Praça Mediana~
+   Você está na Praça Mediana de Midgaard.  Essa praça parece ter sido
+construída recentemente, devido à necessidade de expansão da cidade.
+Pessoas de todos os tipos passam por você, conversando.
+   Ruas saem em todas as direções, para norte a Praça do Mercado, para sul a
+Praça Comum, para leste e oeste a Avenida Midgaard.
+~
+30 0 1
+D0
+Você vê a Praça do Mercado.
+~
+~
+0 -1 3014
+D1
+Você vê a Avenida Midgaard.
+~
+~
+0 -1 3076
+D2
+Você vê a Praça Comum.
+~
+~
+0 -1 3025
+D3
+Você vê a Avenida Midgaard.
+~
+~
+0 -1 3079
+S
+#3076
+Avenida Midgaard~
+   Você está na Avenida Midgaard.  Ao norte você vê a agência local do Banco
+de Vitália.  Ao leste você vê o final da Avenida Midgaard, e ao oeste você
+vê a Praça Mediana.
+~
+30 0 1
+D0
+Você vê a agência de Midgaard do Banco de Vitália.
+~
+~
+0 -1 22010
+D1
+Você vê a Avenida Midgaard.
+~
+~
+0 -1 3077
+D3
+Você vê a Praça Mediana.
+~
+~
+0 -1 3075
+S
+#3077
+Avenida Midgaard~
+   Você está no final da Avenida Midgaard.  Ao norte você pode ver algumas
+construções recentes.
+   A avenida continua para o oeste.
+~
+30 0 1
+D0
+Há algumas construções para o norte.
+~
+~
+0 -1 1300
+D3
+Você vê a Avenida Midgaard.
+~
+~
+0 -1 3076
+S
+#3079
+Avenida Midgaard~
+   Você está na Avenida Midgaard.  Ao norte você vê uma confraria e pode-se
+avistar uma imensa torre daqui, que parece ser bastante interessante.
+   A avenida continua para o oeste, e para o leste você vê a Praça Mediana.
+~
+30 0 1
+D0
+Você vê a Confraria da Família Daguerreo.
+~
+~
+0 -1 22015
+D1
+Você vê a Praça Mediana.
+~
+~
+0 -1 3075
+D3
+Você vê a Avenida Midgaard.
+~
+~
+0 -1 3080
+S
+#3080
+Avenida Midgaard~
+   Você está na Avenida Midgaard.  Não há muita coisa por aqui, mas você
+nota várias construções em andamento.  Ao sul, fica uma grande torre, onde
+funcionam as instalações de um grande jornal.
+   A avenida continua para o leste, para o oeste você vê a estrada do muro.
+~
+30 0 1
+D1
+Você vê a Avenida Midgaard.
+~
+~
+0 -1 3079
+D2
+Você vê a Torre do Jornal de Vitália.
+~
+~
+0 -1 22020
+D3
+Você vê a Estrada do Muro.
+~
+~
+0 -1 3042
+S
+#3081
+O Brechó do Belchior~
+   Você acabou de entrar num lugar absolutamente caótico!  Pilhas e mais
+pilhas de roupas, calçados, livros e até mesmo um número absurdo dos mais
+variados tipos de espadas, armaduras, se espalham por todos os lados.
+   É um lugar absolutamente desarrumado mas com certeza tudo o que você
+estiver procurando para comprar, sem pagar um preço absurdo, você encontra
+aqui.  Procurando por roupas, armas ou simplesmente objetos inúteis e não
+tem muito dinheiro?  Ou então precisa de dinheiro e quer vender alguma
+coisa?  Deixe seu recado escrito no enorme quadro.
+~
+30 dh 0
+D2
+Você vê o beco.
+~
+~
+0 -1 3024
+S
+#3082
+Em Frente à Taverna~
+   Você magicamente foi trazido de onde estava até esse lugar, a descampada
+cabeça de uma colina cercada de imensas árvores.  Você vê, por entre a mata,
+quatro longas trilhas margeadas por pedras brancas, polidas como grandes
+seixos brilhantes.  Há, a sua frente, uma espécie de grande chalé de porta
+dupla, lugar de onde vem delicioso cheiro de comida, bebida e onde alegres
+vozes conversam e cantam ao som de boa música.  Uma placa sobre a porta
+chama sua atenção.
+~
+30.2 egh 2
+D0
+Você vê a entrada da taverna.
+~
+porta~
+:n 2 a porta
+ag -1 3083
+E
+placa~
+Você lê a placa amarela escrita em caprichadas letras coloridas:
+
+&Y              ._______________________________.&n
+&Y              |                               &Y|&n
+&Y              |    &CTaverna&n                    &Y|&n
+&Y              |          &RA BADERNA&n            &Y|&n
+&Y              |    &Co refúgio do bom bardo.&n    &Y|&n
+&Y              |                               &Y|&n
+&Y              |   &BSe a ti pesado é o fardo,&n   &Y|&n
+&Y              |   &Baqui te podes descansar,&n    &Y|&n
+&Y              |   &Brecebemos qualquer bardo:&n   &Y|&n
+&Y              |   &B- é &WA Baderna&n&B um bom lar!&n   &Y|&n
+&Y              |                               &Y|&n
+&Y              '-------------------------------'&n
+
+~
+S
+#3083
+A Baderna~
+   Você está em uma espécie de grande chalé que foi transformado em uma
+aconchegante taverna.  Tudo aqui (móveis, paredes, teto) é de madeira nobre,
+de várias partes do mundo, mas nada pomposo demais.  Mesas redondas,
+quadradas, compridas ou estreitas se espalham pelo recinto sendo usadas nas
+refeições, jogos, conversa entre amigos ou duelos de canções.  A iluminação
+é feita por vários lustres que, redondos como rodas de carroças, amparam
+grandes velas de chama colorida.  Um grande balcão de madeira, todo
+enfeitado com notas musicais, fica da parede oposta à da porta de entrada,
+tendo atrás de si várias estantes atulhadas das mais variadas bebidas.  As
+paredes, por sua vez, exibem um diversificado número de enfeites:
+instrumentos músicais, retratos, letras de canções e poesias enquadradas,
+melodias a serem tocadas e qualquer coisa que um bardo acharia bonito e
+gostaria de ver a todo momento.
+   A porta de entrada fica a sul, havendo ainda mais uma a leste e a oeste.
+~
+30.2 dg 0
+D2
+Você vê o templo de sua cidade!
+~
+~
+a -1 50
+D3
+~
+~
+agb -1 3084
+D1
+~
+~
+agb -1 3085
+E
+retratos~
+Você vê retratos, pintados com maestria, de grandes menestréis, trovadores e
+bardos como Arnaut Daniel; Bertran de Born; D.  Dinis; Raimbaut de
+Vaqueiras; D.  Afonso X, o Sábio; Châtelain de Couci; Dame de Fayel e muitos
+outros.
+~
+S
+#3084
+A Sala de Estudos na Baderna~
+   Você está em um cômodo de largas janelas e portas de vidro que dão para
+fora da taverna, muito iluminado por isso e pela grande quantidade de velas
+dispostas em lustres e candelabros.  Há armários de vitrine em quase todas
+as paredes, estando dentro deles ricos e muito diversificados instrumentos
+musicais.  O número de estantes também é grande, podendo nelas se ver
+livros, papéis avulsos, pergaminhos, tábuas e onde mais se pode escrever
+algo.  Além disso você vê muitos desenhos sobre algumas escrivaninhas, além
+de estranhos objetos de madeira, metal e pedra.  O largo tablado, em frente
+às mesas, possui um pequeno sofá de tecido rubro, talvez sendo o lugar de
+algum professor que gosta de conforto.
+~
+30.2 dg 0
+D1
+~
+~
+agb -1 3083
+S
+#3085
+Bardices e Bernardices na Baderna~
+   Você está uma vasta sala que parece emanar o mesmo calor acalentador de
+uma coberta fofa em dias muitos frios.  Numa lareira o fogo crepita formando
+figuras surpreendentes, enquanto a madeira queimada libera um suave odor de
+incenso.  Um imenso balcão de madeira avermelhada foi colocado na parede em
+frente à maior janela do recinto, tendo uma vista privilegiada.  Pesados
+armários cobrem as parede adjacentes ao balcão.  Sob a maior janela ainda
+foram dispostos enormes sofás acolchoados para o descanso dos clientes, que
+podem admirar os enfeites vindos de todas as partes desse mundo.  A entrada
+da Baderna fica a oeste.
+~
+30.2 dg 0
+D3
+~
+~
+agb -1 3083
+S
+#3086
+Um Corredor~
+   Você está no estreito corredor que liga o Grunting Boar ao Clube de
+Bardos.  O lugar, a leste, parece ser bem animado.
+~
+30 adg 0
+D1
+Ali fica o Clube de Bardos.
+~
+~
+0 -1 3087
+D0
+Você vê o Grunting Boar.
+~
+~
+0 -1 3007
+S
+#3087
+O Clube de Bardos~
+   Você está num alegre ponto de encontro de bardos vindos dos mais
+diferentes cantos do mundo.  As mesas aqui estão sempre lotadas de
+verdadeiros artistas e pessoas de diversos talentos, estando elas sempre
+prontas para se divertir com um de seus companheiros de classe.  Música aqui
+não falta, muito menos dança e bebida!
+   A entrada do Clube fica a oeste; acima, indo por um lance de escadas,
+fica a sala dos mestres.
+~
+30 dg 0
+D3
+~
+~
+0 -1 3086
+D4
+~
+~
+0 -1 3088
+S
+#3088
+A Sala dos Mestres~
+   Mesmo sem qualquer música ser tocada, você sente que ela é parte desse
+lugar.  Aqui, os mais aclamados mestres da arte estiveram tanto como pupilos
+quanto como professores.  Deixaram os sons de suas obras aqui, impregnados
+em suas paredes repletas de retratos, nos instrumentos espalhados sobre as
+mesas, no cheiro doce de flores misturado com a comida e bebida lá debaixo.
+E você, só de entrar no recinto, começou a deixar sua própria música no ar,
+numa suave melodia que conta a sua vida.
+~
+30 dg 0
+D5
+~
+~
+0 -1 3087
+S
+$
