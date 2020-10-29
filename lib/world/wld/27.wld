@@ -1,16 +1,17 @@
 #2700
-A Ponte LevadiÁa~
-   O castelo est· ‡ sua frente.  Uma pequena ponte levadiÁa permite o acesso
-ao castelo.  Ela È feita de robustas t·buas de carvalho presas por amarras
-de ferro.  Numerosas batidas na madeira contam histÛrias dos incont·veis
+A Ponte Levadi√ßa~
+   O castelo est√° √† sua frente.  Uma pequena ponte levadi√ßa permite o acesso
+ao castelo.  Ela √© feita de robustas t√°buas de carvalho presas por amarras
+de ferro.  Numerosas batidas na madeira contam hist√≥rias dos incont√°veis
 cercos que resistiu.  Os bancos impregnados de fossas nojentas e fedorentas
-est„o a esquerda e a direita.  O castelo situa-se a frente, para o norte, ou
-vocÍ pode deix·-lo indo para o sul.
+est√£o a esquerda e a direita.  O castelo situa-se a frente, para o norte, ou
+voc√™ pode deix√°-lo indo para o sul.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
-ponte levadiÁa~
+ponte levadica~
+:n 1 a ponte levadica
 1 0 2701
 D1
 ~
@@ -27,13 +28,13 @@ D3
 S
 #2701
 A Primeira Entrada Para o Castelo~
-   Esta pequena penÌnsula de terra que sai do continente do castelo e
+   Esta pequena pen√≠nsula de terra que sai do continente do castelo e
 dirigi-se para o canal serve como posto de comando.  Visitantes vindos de
-todo o reino est„o parados e examinando aqui.  Os bancos impregnados de
-fossas est„o a esquerda e a direita.  O castelo situa-se a frente, na
-direÁ„o norte, ou vocÍ pode deix·-lo indo para o sul.
+todo o reino est√£o parados e examinando aqui.  Os bancos impregnados de
+fossas est√£o a esquerda e a direita.  O castelo situa-se a frente, na
+dire√ß√£o norte, ou voc√™ pode deix√°-lo indo para o sul.
 ~
-27 4 0 0 0 0
+27 4 0
 D0
 ~
 ~
@@ -53,12 +54,12 @@ D3
 S
 #2702
 A Grande Entrada do Castelo~
-   Esta È a Grande Entrada do castelo.  Estandartes coloridos mostrando
-todos os emblemas dos aliados do castelo balanÁam alegremente no topo.
-Tochas brilhantes iluminam o caminho para o coraÁ„o do castelo.  A passagem
-entre as paredes do castelo comeÁam para o leste e oeste.
+   Esta √© a Grande Entrada do castelo.  Estandartes coloridos mostrando
+todos os emblemas dos aliados do castelo balan√ßam alegremente no topo.
+Tochas brilhantes iluminam o caminho para o cora√ß√£o do castelo.  A passagem
+entre as paredes do castelo come√ßam para o leste e oeste.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -78,13 +79,13 @@ D3
 S
 #2703
 A Rua Principal~
-   Esta È uma pequena rua de direÁ„o norte/sul que passa pelo castelo.  Na
-verdade esta È a ˙nica rua aqui.  Ao longo dela vocÍ vÍ v·rias pessoas
-andando.  Algumas delas se encaminham ‡s lojas, outras para o p·tio.
-Qualquer coisa que seja necess·ria pode ser encontrada ao longo da Rua
+   Esta √© uma pequena rua de dire√ß√£o norte/sul que passa pelo castelo.  Na
+verdade esta √© a √∫nica rua aqui.  Ao longo dela voc√™ v√™ v√°rias pessoas
+andando.  Algumas delas se encaminham √†s lojas, outras para o p√°tio.
+Qualquer coisa que seja necess√°ria pode ser encontrada ao longo da Rua
 Principal.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -104,13 +105,13 @@ D3
 S
 #2704
 A Rua Principal~
-   Esta È uma pequena rua de direÁ„o norte/sul que passa pelo castelo.  Na
-verdade esta È a ˙nica rua aqui.  Ao longo dela vocÍ vÍ muitas pessoas
-andando.  Algumas delas se encaminham para as lojas, outras para o p·tio.
-Qualquer coisa que seja necess·ria pode ser encontrada ao longo da Rua
+   Esta √© uma pequena rua de dire√ß√£o norte/sul que passa pelo castelo.  Na
+verdade esta √© a √∫nica rua aqui.  Ao longo dela voc√™ v√™ muitas pessoas
+andando.  Algumas delas se encaminham para as lojas, outras para o p√°tio.
+Qualquer coisa que seja necess√°ria pode ser encontrada ao longo da Rua
 Principal.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -126,13 +127,13 @@ D2
 S
 #2705
 O Fim da Rua Principal~
-   Esta È uma pequena rua de direÁ„o norte/sul que passa pelo castelo.  Na
-verdade esta È a ˙nica rua aqui.  Ao longo dela vocÍ vÍ muitas pessoas
-andando.  Algumas delas se encaminham para as lojas, outras para o p·tio.
-Qualquer coisa que seja necess·ria pode ser encontrada ao longo da Rua
+   Esta √© uma pequena rua de dire√ß√£o norte/sul que passa pelo castelo.  Na
+verdade esta √© a √∫nica rua aqui.  Ao longo dela voc√™ v√™ muitas pessoas
+andando.  Algumas delas se encaminham para as lojas, outras para o p√°tio.
+Qualquer coisa que seja necess√°ria pode ser encontrada ao longo da Rua
 Principal.
 ~
-27 0 0 0 0 0
+27 0 0
 D1
 ~
 ~
@@ -148,13 +149,13 @@ D3
 S
 #2706
 O Canal~
-   A ·gua do canal È estagnada e tem um cheiro nojento.  A ·gua preta e
+   A √°gua do canal √© estagnada e tem um cheiro nojento.  A √°gua preta e
 turva forma redemoinhos enquanto coisas nunca vistas nadam envolta.  Sob a
-superfÌcie.  Bolhas de gases nocivos elevam-se das profundezas e estouram na
-superfÌcie.  Funcionando como um maravilhoso mecanismo de defesa, eles
+superf√≠cie.  Bolhas de gases nocivos elevam-se das profundezas e estouram na
+superf√≠cie.  Funcionando como um maravilhoso mecanismo de defesa, eles
 cercam todo o castelo.
 ~
-27 0 0 0 0 6
+27 0 6
 D0
 ~
 ~
@@ -166,13 +167,13 @@ D3
 S
 #2707
 O Canal~
-   A ·gua do canal È estagnada e tem um cheiro nojento.  A ·gua preta e
+   A √°gua do canal √© estagnada e tem um cheiro nojento.  A √°gua preta e
 turva forma redemoinhos enquanto coisas nunca vistas nadam envolta.  Sob a
-superfÌcie.  Bolhas de gases nocivos elevam-se das profundezas e estouram na
-superfÌcie.  Funcionando como um maravilhoso mecanismo de defesa, eles
+superf√≠cie.  Bolhas de gases nocivos elevam-se das profundezas e estouram na
+superf√≠cie.  Funcionando como um maravilhoso mecanismo de defesa, eles
 cercam todo o castelo.
 ~
-27 0 0 0 0 6
+27 0 6
 D0
 ~
 ~
@@ -184,13 +185,13 @@ D1
 S
 #2708
 O Canal~
-   A ·gua do canal È estagnada e tem um cheiro nojento.  A ·gua preta e
+   A √°gua do canal √© estagnada e tem um cheiro nojento.  A √°gua preta e
 turva forma redemoinhos enquanto coisas nunca vistas nadam envolta.  Sob a
-superfÌcie.  Bolhas de gases nocivos elevam-se das profundezas e estouram na
-superfÌcie.  Funcionando como um maravilhoso mecanismo de defesa, eles
+superf√≠cie.  Bolhas de gases nocivos elevam-se das profundezas e estouram na
+superf√≠cie.  Funcionando como um maravilhoso mecanismo de defesa, eles
 cercam todo o castelo.
 ~
-27 4 0 0 0 0
+27 4 0
 D2
 ~
 ~
@@ -198,36 +199,36 @@ D2
 S
 #2709
 O Canal~
-   A ·gua do canal È estagnada e tem um cheiro nojento.  A ·gua preta e
+   A √°gua do canal √© estagnada e tem um cheiro nojento.  A √°gua preta e
 turva forma redemoinhos enquanto coisas nunca vistas nadam envolta.  Sob a
-superfÌcie.  Bolhas de gases nocivos elevam-se das profundezas e estouram na
-superfÌcie.  Funcionando como um maravilhoso mecanismo de defesa, eles
-cercam todo o castelo.  Um estranho mecanismo de filtragem de ·gua foi
-montado no desnÌvel norte do canal.  Ele permite que a ·gua entre, vinda do
-rio, que fica justamente ao norte daqui, mas n„o saia.  Isto provavelmente
-acontece pela press„o exercÌda nas barreiras no Castelo Midan para manter o
-rio livre deste horrÌvel canal.  VocÍ pode escalar o aparelho e ir em
-direÁ„o ao rio ou voltar, pelo canal, para a passagem do castelo.
+superf√≠cie.  Bolhas de gases nocivos elevam-se das profundezas e estouram na
+superf√≠cie.  Funcionando como um maravilhoso mecanismo de defesa, eles
+cercam todo o castelo.  Um estranho mecanismo de filtragem de √°gua foi
+montado no desn√≠vel norte do canal.  Ele permite que a √°gua entre, vinda do
+rio, que fica justamente ao norte daqui, mas n√£o saia.  Isto provavelmente
+acontece pela press√£o exerc√≠da nas barreiras no Castelo Midan para manter o
+rio livre deste horr√≠vel canal.  Voc√™ pode escalar o aparelho e ir em
+dire√ß√£o ao rio ou voltar, pelo canal, para a passagem do castelo.
 ~
-27 4 0 0 0 6
-D2
-~
-~
-0 -1 2706
+27 4 6
 D3
 ~
 ~
 0 -1 2701
+D2
+~
+~
+0 -1 2706
 S
 #2710
-Entre as FortificaÁıes do Castelo~
-   Pedras cinzas do interior e exterior das fortificaÁıes demarcam a
-passagem.  Fendas atravÈs das paredes de ambos os lados permitem que
-defensores atirem flechas em qualquer atacante, em caso de um cerco.  VocÍ
-percebe que este castelo È bem protegido e n„o cair· facilmente nas m„os de
+Entre as Fortifica√ß√µes do Castelo~
+   Pedras cinzas do interior e exterior das fortifica√ß√µes demarcam a
+passagem.  Fendas atrav√©s das paredes de ambos os lados permitem que
+defensores atirem flechas em qualquer atacante, em caso de um cerco.  Voc√™
+percebe que este castelo √© bem protegido e n√£o cair√° facilmente nas m√£os de
 inimigos.
 ~
-27 4 0 0 0 0
+27 4 0
 D1
 ~
 ~
@@ -239,12 +240,12 @@ D3
 S
 #2711
 A Fileira do Regateador~
-   Tendas est„o montadas por toda essa fileira.  Produtos de todos os tipos
-podem ser comprados aqui pela populaÁ„o local.  Pessoas correm ao redor de
-vocÍ enquanto tentam pegar o que podem enquanto est· a venda.  Isto È
-realmente o paraÌso dos compradores.
+   Tendas est√£o montadas por toda essa fileira.  Produtos de todos os tipos
+podem ser comprados aqui pela popula√ß√£o local.  Pessoas correm ao redor de
+voc√™ enquanto tentam pegar o que podem enquanto est√° a venda.  Isto √©
+realmente o para√≠so dos compradores.
 ~
-27 4 0 0 0 0
+27 4 0
 D1
 ~
 ~
@@ -256,12 +257,12 @@ D3
 S
 #2712
 A Base da Torre do Rei~
-   A Torre do Rei levanta-se acima de vocÍ, bloqueando o sol.  Velhas
-edificaÁıes ainda aguentam firme e, claro, desgostam a abund‚ncia do musgo
+   A Torre do Rei levanta-se acima de voc√™, bloqueando o sol.  Velhas
+edifica√ß√µes ainda aguentam firme e, claro, desgostam a abund√¢ncia do musgo
 verde cescendo nas fendas.  Heras inglesas graciosamente adornam a torre.
-Esta È a casa da famÌlia governante do castelo.
+Esta √© a casa da fam√≠lia governante do castelo.
 ~
-27 12 0 0 0 0
+27 12 0
 D0
 ~
 ~
@@ -277,11 +278,11 @@ D4
 S
 #2713
 A Torre para o Quarto do Rei~
-   Este È o centro da torre que foi obviamente construida por finos
-construtores.  Tapetes vermelhos estendem-se pelo ch„o e tapeÁarias cobrem
-as paredes.  Membros da famÌlia real tÍm seus quartos aqui.
+   Este √© o centro da torre que foi obviamente construida por finos
+construtores.  Tapetes vermelhos estendem-se pelo ch√£o e tape√ßarias cobrem
+as paredes.  Membros da fam√≠lia real t√™m seus quartos aqui.
 ~
-27 8 0 0 0 0
+27 8 0
 D0
 ~
 ~
@@ -304,26 +305,26 @@ D5
 0 -1 2712
 S
 #2714
-O Sagu„o Real~
-   VocÍ entrou em um grande sagu„o.  H· uma grande manta de ornamento, no
-ch„o que estende-se por todo o comprimento do sagu„o.  H· tambÈm duas
-grandes tepeÁarias nas paredes, uma de cada lado.  Tochas nas paredes
+O Sagu√£o Real~
+   Voc√™ entrou em um grande sagu√£o.  H√° uma grande manta de ornamento, no
+ch√£o que estende-se por todo o comprimento do sagu√£o.  H√° tamb√©m duas
+grandes tepe√ßarias nas paredes, uma de cada lado.  Tochas nas paredes
 fornecem luz paras as pessoas verem.
 ~
-27 8 0 0 0 0
+27 8 0
 D1
 ~
 ~
 0 -1 2713
 S
 #2715
-O Sagu„o Real~
-   VocÍ entrou em um grande sagu„o.  H· uma grande manta de ornamento, no
-ch„o que estende-se por todo o comprimento do sagu„o.  H· tambÈm duas
-grandes tepeÁarias nas paredes, uma de cada lado.  Tochas nas paredes
+O Sagu√£o Real~
+   Voc√™ entrou em um grande sagu√£o.  H√° uma grande manta de ornamento, no
+ch√£o que estende-se por todo o comprimento do sagu√£o.  H√° tamb√©m duas
+grandes tepe√ßarias nas paredes, uma de cada lado.  Tochas nas paredes
 fornecem luz paras as pessoas verem.
 ~
-27 8 0 0 0 0
+27 8 0
 D0
 ~
 ~
@@ -334,13 +335,13 @@ D1
 0 -1 2716
 S
 #2716
-O Sagu„o Real~
-   VocÍ entrou em um grande sagu„o.  H· uma grande manta de ornamento, no
-ch„o que estende-se por todo o comprimento do sagu„o.  H· tambÈm duas
-grandes tepeÁarias nas paredes, uma de cada lado.  Tochas nas paredes
+O Sagu√£o Real~
+   Voc√™ entrou em um grande sagu√£o.  H√° uma grande manta de ornamento, no
+ch√£o que estende-se por todo o comprimento do sagu√£o.  H√° tamb√©m duas
+grandes tepe√ßarias nas paredes, uma de cada lado.  Tochas nas paredes
 fornecem luz paras as pessoas verem.
 ~
-27 8 0 0 0 0
+27 8 0
 D0
 ~
 ~
@@ -355,13 +356,13 @@ D3
 0 -1 2715
 S
 #2717
-O Fim do Sagu„o Real~
-   VocÍ entrou em um grande sagu„o.  H· uma grande manta de ornamento, no
-ch„o que estende-se por todo o comprimento do sagu„o.  H· tambÈm duas
-grandes tepeÁarias nas paredes, uma de cada lado.  Tochas nas paredes
+O Fim do Sagu√£o Real~
+   Voc√™ entrou em um grande sagu√£o.  H√° uma grande manta de ornamento, no
+ch√£o que estende-se por todo o comprimento do sagu√£o.  H√° tamb√©m duas
+grandes tepe√ßarias nas paredes, uma de cada lado.  Tochas nas paredes
 fornecem luz paras as pessoas verem.
 ~
-27 8 0 0 0 0
+27 8 0
 D3
 ~
 ~
@@ -369,12 +370,12 @@ D3
 S
 #2718
 Os Quartos do Guardas Reais~
-   Tudo neste grande quarto È port·til.  Beliches em estilo militar est„o no
-fundo do quarto.  Uniformes est„o pendurados organizadamente em um pequeno
-arm·rio embutido, na parede leste.  Aqui È onde os guardas reais moram e
+   Tudo neste grande quarto √© port√°til.  Beliches em estilo militar est√£o no
+fundo do quarto.  Uniformes est√£o pendurados organizadamente em um pequeno
+arm√°rio embutido, na parede leste.  Aqui √© onde os guardas reais moram e
 dormem.
 ~
-27 8 0 0 0 0
+27 8 0
 D2
 ~
 ~
@@ -382,13 +383,13 @@ D2
 S
 #2719
 O Quarto do Rei~
-   Uma grande clarabÛia permite que a luz do sol entre nesse quarto
-abundantemente mobiliado.  Ouro adorna o teto e espelhos presos ‡s paredes.
-Uma grande escrivaninha est· a leste.  Nela est„o a estampa do selo real,
+   Uma grande clarab√≥ia permite que a luz do sol entre nesse quarto
+abundantemente mobiliado.  Ouro adorna o teto e espelhos presos √†s paredes.
+Uma grande escrivaninha est√° a leste.  Nela est√£o a estampa do selo real,
 pergaminhos de impostos, blocos de cera e um tubo emplumado.  De fato, este
-È o aposento do Rei!
+√© o aposento do Rei!
 ~
-27 8 0 0 0 0
+27 8 0
 D0
 Nada.
 ~
@@ -401,12 +402,12 @@ D5
 S
 #2720
 O Caminho para o Castelo~
-   Este largo caminho foi bem mantido durante os anos.  Diferente de v·rios
-outros caminhos e estradas, ele oferece uma viagem est·vel e confort·vel.
-Campos de trigo e aveia balanÁam com a brisa ao longo deste caminhos.  O
+   Este largo caminho foi bem mantido durante os anos.  Diferente de v√°rios
+outros caminhos e estradas, ele oferece uma viagem est√°vel e confort√°vel.
+Campos de trigo e aveia balan√ßam com a brisa ao longo deste caminhos.  O
 castelo situa-se ao norte.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -418,11 +419,11 @@ D1
 S
 #2721
 Um Cruzamento em T~
-   Existem trÍs caminhos, uma pode ir deste ponto.  O caminhos bem mantido
-para o castelo È para o oeste.  Um caminho muito utilizado vai para o sul.
-Um caminho sujo em direÁ„o a uma clareira fica ao leste.
+   Existem tr√™s caminhos, uma pode ir deste ponto.  O caminhos bem mantido
+para o castelo √© para o oeste.  Um caminho muito utilizado vai para o sul.
+Um caminho sujo em dire√ß√£o a uma clareira fica ao leste.
 ~
-27 4 0 0 0 2
+27 4 2
 D1
 ~
 ~
@@ -438,12 +439,12 @@ D3
 S
 #2722
 Um Caminho Bastante Utilizado~
-   As pisadas de incont·veis pÈs maltrataram a vegetaÁ„o daqui, mantando-a.
-Tudo que restou ao longo deste caminho s„o escassas ervas daninhas que
+   As pisadas de incont√°veis p√©s maltrataram a vegeta√ß√£o daqui, mantando-a.
+Tudo que restou ao longo deste caminho s√£o escassas ervas daninhas que
 crescem nas bordas do caminho.  Gritos de guerra e gritos de dor podem ser
 ouvidos, vindos do leste.  O caminho segue ao norte e ao sul.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -459,11 +460,11 @@ D2
 S
 #2723
 O Caminho para os Campos de Guerra~
-   Um caminho pedrego vai em direÁ„o ‡ origem dos gritos e sons que ressoam,
-ao leste.  O castelo e os campos de treino situam-se ‡ oeste.  Gotas de
+   Um caminho pedrego vai em dire√ß√£o √† origem dos gritos e sons que ressoam,
+ao leste.  O castelo e os campos de treino situam-se √† oeste.  Gotas de
 sangue recentes e secas podem ser vistas aqui, respingadas entre as pedras.
 ~
-27 4 0 0 0 2
+27 4 2
 D1
 ~
 ~
@@ -475,12 +476,12 @@ D3
 S
 #2724
 O Caminho para os Campos de Treino dos Cavaleiros~
-   O caminho n„o È t„o utilizada como era ao norte.  Gramas crescem verdes e
-fortes aqui, devido aos poucos pisıes recebidos.  Pode-se dizer que cavalos
-passam rotinamente por aqui, pelas pegadas no ch„o.  Olhando a frente, para
-o sul, vocÍ pode ver claramente coloridas tendas motadas em um grande campo.
+   O caminho n√£o √© t√£o utilizada como era ao norte.  Gramas crescem verdes e
+fortes aqui, devido aos poucos pis√µes recebidos.  Pode-se dizer que cavalos
+passam rotinamente por aqui, pelas pegadas no ch√£o.  Olhando a frente, para
+o sul, voc√™ pode ver claramente coloridas tendas motadas em um grande campo.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -491,12 +492,12 @@ D2
 0 -1 2727
 S
 #2725
-Um Caminho pelos Campos de ExtermÌnio~
-   Tudo ao seu redor s„o os Campos de ExtermÌnio, onde treinos reais e ao
-vivo acontecem.  Algumas pessoas est„o aqui pelo prazer da luta, outras para
+Um Caminho pelos Campos de Exterm√≠nio~
+   Tudo ao seu redor s√£o os Campos de Exterm√≠nio, onde treinos reais e ao
+vivo acontecem.  Algumas pessoas est√£o aqui pelo prazer da luta, outras para
 o treino.  Fique em guarda, acidentes acontecem.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -515,12 +516,12 @@ D3
 0 -1 2723
 S
 #2726
-Um Caminho pelos Campos de ExtermÌnio~
-   Tudo ao seu redor s„o os Campos de ExtermÌnio, onde treinos reais e ao
-vivo acontecem.  Algumas pessoas est„o aqui pelo prazer da luta, outras para
+Um Caminho pelos Campos de Exterm√≠nio~
+   Tudo ao seu redor s√£o os Campos de Exterm√≠nio, onde treinos reais e ao
+vivo acontecem.  Algumas pessoas est√£o aqui pelo prazer da luta, outras para
 o treino.  Fique em guarda, acidentes acontecem.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -536,13 +537,13 @@ D2
 S
 #2727
 Os Campos de Treino dos Cavaleiros~
-   Cavaleiros de todo o campo vÍm aqui praticar suas habilidades na
-esperanÁa de ser famoso algum dia.  Meday.  Lutas com lanÁas, boxe,
-levantamento de peso e exercÌcio com espadas s„o algumas atividades
-acontecendo.  Esquivando-se, um vagabundo È golpeado pr um cavaleiro.  VocÍ
-vÍ entradas para grandes tendas ‡ direita e ‡ esquerda.
+   Cavaleiros de todo o campo v√™m aqui praticar suas habilidades na
+esperan√ßa de ser famoso algum dia.  Meday.  Lutas com lan√ßas, boxe,
+levantamento de peso e exerc√≠cio com espadas s√£o algumas atividades
+acontecendo.  Esquivando-se, um vagabundo √© golpeado pr um cavaleiro.  Voc√™
+v√™ entradas para grandes tendas √† direita e √† esquerda.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -562,13 +563,13 @@ D3
 S
 #2728
 Uma Tenda dos Cavaleiros Leais~
-   Esta grande tenda È a casa do Cavaleiro da Rosa Branca.  Tudo ao seu
-redor È de cor branca e carregam a insÌgnia da Rosa Branca.  Maravilhosas
-armas feitas ‡ m„o repousam de forma organizada em uma escrivaninha ‡
-direita.  Uma grande cama ‡ direita sustenta armaduras polidas, prontas para
+   Esta grande tenda √© a casa do Cavaleiro da Rosa Branca.  Tudo ao seu
+redor √© de cor branca e carregam a ins√≠gnia da Rosa Branca.  Maravilhosas
+armas feitas √† m√£o repousam de forma organizada em uma escrivaninha √†
+direita.  Uma grande cama √† direita sustenta armaduras polidas, prontas para
 serem vestidas.
 ~
-27 8 0 0 0 0
+27 8 0
 D3
 ~
 ~
@@ -576,11 +577,11 @@ D3
 S
 #2729
 Uma Tenda de um Escudeiro~
-   A tenda È pequena e pouco mobiliada.  Uma mesa com uma vela em cima est·
-no meio do quarto.  Uma cama est· atr·s.  Pilhas de farrapos usados para
-limpar e polir utensÌlios dos cavaleiro est„o espalhados pelo ch„o.
+   A tenda √© pequena e pouco mobiliada.  Uma mesa com uma vela em cima est√°
+no meio do quarto.  Uma cama est√° atr√°s.  Pilhas de farrapos usados para
+limpar e polir utens√≠lios dos cavaleiro est√£o espalhados pelo ch√£o.
 ~
-27 8 0 0 0 0
+27 8 0
 D1
 ~
 ~
@@ -588,13 +589,13 @@ D1
 S
 #2730
 Os Campos de Treino dos Cavaleiros~
-   Cavaleiros de todo o campo vÍm aqui praticar suas habilidades na
-esperanÁa de ser famoso algum dia.  Meday.  Lutas com lanÁas, boxe,
-levantamento de peso e exercÌcio com espadas s„o algumas atividades
-acontecendo.  Esquivando-se, um vagabundo È golpeado pr um cavaleiro.  VocÍ
-vÍ entradas para grandes tendas ‡ direita e ‡ esquerda.
+   Cavaleiros de todo o campo v√™m aqui praticar suas habilidades na
+esperan√ßa de ser famoso algum dia.  Meday.  Lutas com lan√ßas, boxe,
+levantamento de peso e exerc√≠cio com espadas s√£o algumas atividades
+acontecendo.  Esquivando-se, um vagabundo √© golpeado pr um cavaleiro.  Voc√™
+v√™ entradas para grandes tendas √† direita e √† esquerda.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -614,13 +615,13 @@ D3
 S
 #2731
 A Tenda da Paladina~
-   A tenda È esplendidamente decorada, dando a impress„o de que pertence a
-alguÈm de altÌssimo nÌvel.  Travesseiros de veludo sobre tapetes persas faz
-com que qualquer um se sinta em casa.  Uma escrivaninha com in˙meros papeis,
-contendo a extensa programaÁ„o de eventos deste reino, est· no centro do
+   A tenda √© esplendidamente decorada, dando a impress√£o de que pertence a
+algu√©m de alt√≠ssimo n√≠vel.  Travesseiros de veludo sobre tapetes persas faz
+com que qualquer um se sinta em casa.  Uma escrivaninha com in√∫meros papeis,
+contendo a extensa programa√ß√£o de eventos deste reino, est√° no centro do
 quarto.  Incensos perfumados queimam de apoios presos ao teto da tenda.
 ~
-27 8 0 0 0 0
+27 8 0
 D3
 ~
 ~
@@ -628,11 +629,11 @@ D3
 S
 #2732
 A Tenda de um Escudeiro~
-   A tenda È pequena e pouco mobiliada.  Uma mesa com uma vela em cima est·
-no meio do quarto.  Uma cama est· atr·s.  Pilhas de farrapos usados para
-limpar e polir utensÌlios dos cavaleiro est„o espalhados pelo ch„o.
+   A tenda √© pequena e pouco mobiliada.  Uma mesa com uma vela em cima est√°
+no meio do quarto.  Uma cama est√° atr√°s.  Pilhas de farrapos usados para
+limpar e polir utens√≠lios dos cavaleiro est√£o espalhados pelo ch√£o.
 ~
-27 8 0 0 0 0
+27 8 0
 D1
 ~
 ~
@@ -640,24 +641,24 @@ D1
 S
 #2733
 A Tenda dos Treinadores~
-   RemÈdios e extratos de ervas demarcam as prateleiras organizadas da
-melhor forma possÌvel, nesta tenda.  Uma cama mÈdica encontra-se no centro
-do quarto.  Um grande balde cheio de ·gua sangrenta est· perto dela.  Um
+   Rem√©dios e extratos de ervas demarcam as prateleiras organizadas da
+melhor forma poss√≠vel, nesta tenda.  Uma cama m√©dica encontra-se no centro
+do quarto.  Um grande balde cheio de √°gua sangrenta est√° perto dela.  Um
 grande buraco no topo da tenda permite a entrada da luz do sol.
 ~
-27 8 0 0 0 0
+27 8 0
 D0
 ~
 ~
 0 -1 2730
 S
 #2734
-Os Campos de ExtermÌnio~
-   Tudo ao seu redor s„o os Campos de ExtermÌnio, onde treinos reais e ao
-vivo acontecem.  Algumas pessoas est„o aqui pelo prazer da luta, outras para
+Os Campos de Exterm√≠nio~
+   Tudo ao seu redor s√£o os Campos de Exterm√≠nio, onde treinos reais e ao
+vivo acontecem.  Algumas pessoas est√£o aqui pelo prazer da luta, outras para
 o treino.  Fique em guarda, acidentes acontecem.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -672,12 +673,12 @@ D3
 0 -1 2726
 S
 #2735
-Um Caminho pelos Campos de ExtermÌnio~
-   Tudo ao seu redor s„o os Campos de ExtermÌnio, onde treinos reais e ao
-vivo acontecem.  Algumas pessoas est„o aqui pelo prazer da luta, outras para
+Um Caminho pelos Campos de Exterm√≠nio~
+   Tudo ao seu redor s√£o os Campos de Exterm√≠nio, onde treinos reais e ao
+vivo acontecem.  Algumas pessoas est√£o aqui pelo prazer da luta, outras para
 o treino.  Fique em guarda, acidentes acontecem.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -688,13 +689,13 @@ D3
 0 -1 2734
 S
 #2736
-Os Campos de ExtermÌnio~
-   Tudo ao seu redor È grama que foi atropelada atÈ morrer.  Nada aqui ir·
-oferecer proteÁ„o contra os atacantes.  Sangue pinta o ch„o e pedaÁos de
-carne sacrificada est· ao redor.  O zumbido das moscas procurando por corpos
-È enlouquecedor.  Estes s„o realmente os Campos de ExtermÌnio!
+Os Campos de Exterm√≠nio~
+   Tudo ao seu redor √© grama que foi atropelada at√© morrer.  Nada aqui ir√°
+oferecer prote√ß√£o contra os atacantes.  Sangue pinta o ch√£o e peda√ßos de
+carne sacrificada est√° ao redor.  O zumbido das moscas procurando por corpos
+√© enlouquecedor.  Estes s√£o realmente os Campos de Exterm√≠nio!
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -713,12 +714,12 @@ D3
 0 -1 2725
 S
 #2737
-Um Caminho pelos Campos de ExtermÌnio~
-   Tudo ao seu redor s„o os Campos de ExtermÌnio, onde treinos reais e ao
-vivo acontecem.  Algumas pessoas est„o aqui pelo prazer da luta, outras para
+Um Caminho pelos Campos de Exterm√≠nio~
+   Tudo ao seu redor s√£o os Campos de Exterm√≠nio, onde treinos reais e ao
+vivo acontecem.  Algumas pessoas est√£o aqui pelo prazer da luta, outras para
 o treino.  Fique em guarda, acidentes acontecem.
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
@@ -733,13 +734,13 @@ D3
 0 -1 2736
 S
 #2738
-Os Campos de ExtermÌnio~
-   Tudo ao seu redor È grama que foi atropelada atÈ morrer.  Nada aqui ir·
-oferecer proteÁ„o contra os atacantes.  Sangue pinta o ch„o e pedaÁos de
-carne sacrificada est· ao redor.  O zumbido das moscas procurando por corpos
-È enlouquecedor.  Estes s„o realmente os Campos de ExtermÌnio!
+Os Campos de Exterm√≠nio~
+   Tudo ao seu redor √© grama que foi atropelada at√© morrer.  Nada aqui ir√°
+oferecer prote√ß√£o contra os atacantes.  Sangue pinta o ch√£o e peda√ßos de
+carne sacrificada est√° ao redor.  O zumbido das moscas procurando por corpos
+√© enlouquecedor.  Estes s√£o realmente os Campos de Exterm√≠nio!
 ~
-27 0 0 0 0 2
+27 0 2
 D1
 ~
 ~
@@ -751,15 +752,15 @@ D2
 S
 #2739
 Um Quartel~
-   Conforme vocÍ entra pela entrada de granito, vocÍ p·ra um momento
-deixando que seus olhos acostumem com a escura sala.  VocÍ nota uma
-escrivaninha no centro da sala, onde um Guarda est· sentado mexendo em
-papÈis aparentemente importantes.  Ele levanta a cabeÁa lentamente fitando-o
-com um olhar frio e mortal.  VocÍ espera que a raz„o por estar l· seja boa.
-Olhando para o leste vocÍ vÍ outro ecritÛrio...  Ousa entrar?  Talvez vocÍ
+   Conforme voc√™ entra pela entrada de granito, voc√™ p√°ra um momento
+deixando que seus olhos acostumem com a escura sala.  Voc√™ nota uma
+escrivaninha no centro da sala, onde um Guarda est√° sentado mexendo em
+pap√©is aparentemente importantes.  Ele levanta a cabe√ßa lentamente fitando-o
+com um olhar frio e mortal.  Voc√™ espera que a raz√£o por estar l√° seja boa.
+Olhando para o leste voc√™ v√™ outro ecrit√≥rio...  Ousa entrar?  Talvez voc√™
 deva apenas voltar...
 ~
-27 12 0 0 0 0
+27 12 0
 D1
 ~
 ~
@@ -770,14 +771,14 @@ D3
 0 -1 2703
 S
 #2740
-O EscritÛrio do Carcereiro~
-   Cuidadosamente entrando no escritÛrio do Carcereiro, vocÍ d· uma r·pida
+O Escrit√≥rio do Carcereiro~
+   Cuidadosamente entrando no escrit√≥rio do Carcereiro, voc√™ d√° uma r√°pida
 olhada pela sala.  Parece como se ela acabasse de sair...  Um copo fumegante
-de algum liquÌdo aparentemente sujo est· entre v·rios papÈis manchados com
+de algum liqu√≠do aparentemente sujo est√° entre v√°rios pap√©is manchados com
 sangue.  Uma porta, ligeiramente aberta, revela um grupo de escadas
 conduzindo para baixo.
 ~
-27 12 0 0 0 0
+27 12 0
 D3
 ~
 ~
@@ -788,14 +789,14 @@ D5
 0 -1 2742
 S
 #2741
-Embaixo da Ponte LevadiÁa do Canal~
-   A ·gua do canal È estagnada e tem um cheiro nojento.  A ·gua preta e
+Embaixo da Ponte Levadi√ßa do Canal~
+   A √°gua do canal √© estagnada e tem um cheiro nojento.  A √°gua preta e
 turva forma redemoinhos enquanto coisas nunca vistas nadam envolta.  Sob a
-superfÌcie.  Bolhas de gases nocivos elevam-se das profundezas e estouram na
-superfÌcie.  Funcionando como um maravilhoso mecanismo de defesa, eles
+superf√≠cie.  Bolhas de gases nocivos elevam-se das profundezas e estouram na
+superf√≠cie.  Funcionando como um maravilhoso mecanismo de defesa, eles
 cercam todo o castelo.
 ~
-27 5 0 0 0 6
+27 5 6
 D1
 ~
 ~
@@ -807,14 +808,14 @@ D3
 S
 #2742
 O Quarto do Carcereiro~
-   Localizado na base das escadas, vocÍ analiza o quarto sem janelas,
-procurando por seus ocupantes.  A l‚mpada, suspensa do teto, est· balanÁando
-para frente e para tr·s espalhando sobras pelo quarto.  De um de seus lados
-os carcereiros aparecem!!  Fortes e vestidos de preto, eles avanÁam em sua
-direÁ„o, espadas empunhadas...  O som estridente de v·rias chaves presas em
-suas cinturas rompem o silÍncio
+   Localizado na base das escadas, voc√™ analiza o quarto sem janelas,
+procurando por seus ocupantes.  A l√¢mpada, suspensa do teto, est√° balan√ßando
+para frente e para tr√°s espalhando sobras pelo quarto.  De um de seus lados
+os carcereiros aparecem!!  Fortes e vestidos de preto, eles avan√ßam em sua
+dire√ß√£o, espadas empunhadas...  O som estridente de v√°rias chaves presas em
+suas cinturas rompem o sil√™ncio
 ~
-27 8 0 0 0 0
+27 8 0
 D0
 ~
 ~
@@ -825,12 +826,12 @@ D4
 0 -1 2740
 S
 #2743
-Os Est·bulos~
-   Estes s„o os est·bulos.  Palha cobre o ch„o e cercados limpos, cheios de
-animais, podem ser vistos aqui.  Toda noite os animais do castelo s„o
+Os Est√°bulos~
+   Estes s√£o os est√°bulos.  Palha cobre o ch√£o e cercados limpos, cheios de
+animais, podem ser vistos aqui.  Toda noite os animais do castelo s√£o
 reunidos e trnacados aqui para evitar qualquer dano causado por eles.
 ~
-27 0 0 0 0 0
+27 0 0
 D3
 ~
 ~
@@ -838,32 +839,33 @@ D3
 S
 #2744
 A Cela~
-   V·rios utensÌlios de dor e tortura est„o pendurados nas paredes aqui...
-Chicotes de couro...  Pequenos ganchos visÌveis fazem um zig-zag em todo seu
-comprimento.  As paredes respingadas de sangue e o ch„o manchado contam
-sobre v·rias mortes.
+   V√°rios utens√≠lios de dor e tortura est√£o pendurados nas paredes aqui...
+Chicotes de couro...  Pequenos ganchos vis√≠veis fazem um zig-zag em todo seu
+comprimento.  As paredes respingadas de sangue e o ch√£o manchado contam
+sobre v√°rias mortes.
 ~
-27 9 0 0 0 0
+27 9 0
 D3
 ~
 ~
 0 -1 2746
 S
 #2745
-O Corredor do CalabouÁo~
-   O escuro e ˙mido corredor parece ser infinito, interrompido apenas por
-uma ocasional entrada.  VocÍ pode ver barras cobrindo as portas, mas nada
-alÈm daquilo...  As salas s„o t„o escuras que vocÍ sente como se estivesse
-caindo no v·cuo escuro.
+O Corredor do Calabou√ßo~
+   O escuro e √∫mido corredor parece ser infinito, interrompido apenas por
+uma ocasional entrada.  Voc√™ pode ver barras cobrindo as portas, mas nada
+al√©m daquilo...  As salas s√£o t√£o escuras que voc√™ sente como se estivesse
+caindo no v√°cuo escuro.
 ~
-27 8 0 0 0 0
+27 8 0
 D0
 ~
 ~
 0 -1 2746
 D1
 ~
-A porta da cela~
+porta cela~
+:n 2 a porta da cela
 1 0 2747
 D2
 ~
@@ -871,19 +873,21 @@ D2
 0 -1 2742
 D3
 ~
-A porta da cela~
+porta cela~
+:n 2 a porta da cela
 1 0 2748
 S
 #2746
-Corredor do CalabouÁo~
-   Aventurando-se mais abaixo pelo corredor escurecido, vocÍ n„o consegue
-nem imaginar que outros horrores ir· encontrar aqui...  Sua mente clama para
-que vocÍ volte.
+Corredor do Calabou√ßo~
+   Aventurando-se mais abaixo pelo corredor escurecido, voc√™ n√£o consegue
+nem imaginar que outros horrores ir√° encontrar aqui...  Sua mente clama para
+que voc√™ volte.
 ~
-27 8 0 0 0 0
+27 8 0
 D1
 ~
-A porta da cela~
+porta cela~
+:n 2 a porta da cela
 1 0 2744
 D2
 ~
@@ -891,17 +895,18 @@ D2
 0 -1 2745
 D3
 ~
-A porta da cela~
+porta cela~
+:n 2 a porta da cela
 1 0 2749
 S
 #2747
 A Cela~
-   Os ossos de v·rios homens est„o esparramados pelo ch„o ensanguentado.  As
+   Os ossos de v√°rios homens est√£o esparramados pelo ch√£o ensanguentado.  As
 correntes presas no alto da parede contam sobre torturas e dores
-excruciantes...  VocÍ treme involuntariamente quando olha para as marcas
+excruciantes...  Voc√™ treme involuntariamente quando olha para as marcas
 escuras de sangue seco que marcam a parede...
 ~
-27 9 0 0 0 0
+27 9 0
 D3
 ~
 ~
@@ -909,13 +914,13 @@ D3
 S
 #2748
 A Cela~
-   Uma grande mesa domina a sala.  Grandes cabos em um dos fins n„o deixam
-d˙vidas sobre onde era utilizado.  Conforme vocÍ olha mais de perto para as
-correntes do pulso e do tornozla, vocÍ percebe que existem pedaÁos de carne
-dilacerada ainda presentes...  O cheio na sala È predominante...  Carne
+   Uma grande mesa domina a sala.  Grandes cabos em um dos fins n√£o deixam
+d√∫vidas sobre onde era utilizado.  Conforme voc√™ olha mais de perto para as
+correntes do pulso e do tornozla, voc√™ percebe que existem peda√ßos de carne
+dilacerada ainda presentes...  O cheio na sala √© predominante...  Carne
 podre e morte penetra em seus sentidos...
 ~
-27 9 0 0 0 0
+27 9 0
 D1
 ~
 ~
@@ -923,25 +928,25 @@ D1
 S
 #2749
 A Cela~
-   Ao entrar nesta cela eus sentidos s„o imediatamente assaltados pelo forte
-cheiro de carne podre.  VocÍ rapidamente descobre a origem do cheiro
-p˙trido...  V·rios corpos em putrefaÁ„o est„o pendurados por grossas
+   Ao entrar nesta cela eus sentidos s√£o imediatamente assaltados pelo forte
+cheiro de carne podre.  Voc√™ rapidamente descobre a origem do cheiro
+p√∫trido...  V√°rios corpos em putrefa√ß√£o est√£o pendurados por grossas
 correntes presas nas paredes...
 ~
-27 9 0 0 0 0
+27 9 0
 D1
 ~
 ~
 0 -1 2746
 S
 #2750
-O Sagu„o Real~
-   VocÍ entrou em um grande sagu„o.  H· uma grande manta de ornamento, no
-ch„o que estende-se por todo o comprimento do sagu„o.  H· tambÈm duas
-grandes tepeÁarias nas paredes, uma de cada lado.  Tochas nas paredes
+O Sagu√£o Real~
+   Voc√™ entrou em um grande sagu√£o.  H√° uma grande manta de ornamento, no
+ch√£o que estende-se por todo o comprimento do sagu√£o.  H√° tamb√©m duas
+grandes tepe√ßarias nas paredes, uma de cada lado.  Tochas nas paredes
 fornecem luz paras as pessoas verem.
 ~
-27 8 0 0 0 0
+27 8 0
 D2
 ~
 ~
@@ -953,12 +958,12 @@ D4
 S
 #2751
 No Topo da Torre de Guarda~
-   Olhando da torre de guarda vocÍ pode ver o campo que a cerca por muitas
+   Olhando da torre de guarda voc√™ pode ver o campo que a cerca por muitas
 milhas.  Um inimigo teria dificuldades tentando se aproximar sem ser notado.
-VocÍ pode ver brilhos da luz refletidas nas armaduras no Campo de ExtermÌnio
-ao sul.  As ·rvores da Floresta Midan cobrem as terras a leste.
+Voc√™ pode ver brilhos da luz refletidas nas armaduras no Campo de Exterm√≠nio
+ao sul.  As √°rvores da Floresta Midan cobrem as terras a leste.
 ~
-27 0 0 0 0 0
+27 0 0
 D5
 ~
 ~
@@ -968,25 +973,25 @@ S
 As Moradias dos Criados~
    Todos os criados do Rei moram aqui.  Sob o olho atento de experientes
 chefs, os criados levam e trazem comida da torre.  Eles obedientemente
-limpam a torre e mantÈm as terras do castelo.  Uma corda amarrada a um
-pequeno sino vai para cima em direÁ„o ao quarto do rei.  Quando o sino toca
+limpam a torre e mant√©m as terras do castelo.  Uma corda amarrada a um
+pequeno sino vai para cima em dire√ß√£o ao quarto do rei.  Quando o sino toca
 os criados entram em atividade para cumprir a ordem do rei.  As mobilias
-neste quarto s„o planas e simples
+neste quarto s√£o planas e simples
 ~
-27 8 0 0 0 0
+27 8 0
 D2
 ~
 ~
 0 -1 2712
 S
 #2753
-Um pequeno P·tio~
-   Um pequeno p·tio situa-se entre estas parede, oferecendo um refugio dos
-rigores da vida no castelo.  Pequenas ·rvores e arbustos trazem um pouco do
-mundo l· fora.  A ·gua flui do topo da fonte de bacia em bacia atÈ que ela
-se encontre com o lago do peixe dourado, no meio do p·tio.
+Um pequeno P√°tio~
+   Um pequeno p√°tio situa-se entre estas parede, oferecendo um refugio dos
+rigores da vida no castelo.  Pequenas √°rvores e arbustos trazem um pouco do
+mundo l√° fora.  A √°gua flui do topo da fonte de bacia em bacia at√© que ela
+se encontre com o lago do peixe dourado, no meio do p√°tio.
 ~
-27 16 0 0 0 0
+27 16 0
 D1
 ~
 ~
@@ -994,12 +999,12 @@ D1
 S
 #2754
 A Loja do Ferreiro~
-   Ferrugem preta cobre as paredes daqui.  Uma fornalha fervendo est· a
-leste, no fim da sala.  PedaÁos de metal est„o espalhados por toda a grande
-bancada de carvalho na sala.  Uma bacia com ·gua est· no meio da sala.
+   Ferrugem preta cobre as paredes daqui.  Uma fornalha fervendo est√° a
+leste, no fim da sala.  Peda√ßos de metal est√£o espalhados por toda a grande
+bancada de carvalho na sala.  Uma bacia com √°gua est√° no meio da sala.
 Escadas ao longo da parede norte levam ao andar superior, para outras lojas.
 ~
-27 8 0 0 0 0
+27 8 0
 D3
 ~
 ~
@@ -1012,12 +1017,12 @@ Nada.
 S
 #2755
 No Topo da Torre de Guarda~
-   Olhando da torre de guarda vocÍ pode ver o campo que a cerca por muitas
+   Olhando da torre de guarda voc√™ pode ver o campo que a cerca por muitas
 milhas.  Um inimigo teria dificuldades tentando se aproximar sem ser notado.
-VocÍ pode ver brilhos da luz refletidas nas armaduras no Campo de ExtermÌnio
-ao sul.  As ·rvores da Floresta Midan cobrem as terras a leste.
+Voc√™ pode ver brilhos da luz refletidas nas armaduras no Campo de Exterm√≠nio
+ao sul.  As √°rvores da Floresta Midan cobrem as terras a leste.
 ~
-27 0 0 0 0 0
+27 0 0
 D5
 ~
 ~
@@ -1025,12 +1030,12 @@ D5
 S
 #2756
 A Padaria do Castelo~
-   Um velho homem e sua mulher est„o atr·s de uma bancada vendendo suas
-mercadorias assadas.  Um agrad·vel odor de canela toma conta da sala.
-Apenas as melhores mercadorias assadas s„o vendidas aqui.  Qualquer coisa de
-menor qualidade È mandada para alimentar os animais do est·bulo.
+   Um velho homem e sua mulher est√£o atr√°s de uma bancada vendendo suas
+mercadorias assadas.  Um agrad√°vel odor de canela toma conta da sala.
+Apenas as melhores mercadorias assadas s√£o vendidas aqui.  Qualquer coisa de
+menor qualidade √© mandada para alimentar os animais do est√°bulo.
 ~
-27 12 0 0 0 0
+27 12 0
 D1
 ~
 ~
@@ -1042,12 +1047,12 @@ D3
 S
 #2757
 O Quarto da Rainha~
-   Este È o quarto da Rainha.  Aqui È onde todas as damas de espera tendem
-‡s suas necessidades.  Uma grande cadeira de veludo, uma pia elegante, um
-arm·rio e bobagens podem ser vistas aqui.  Uma porta leva ao quarto do rei,
+   Este √© o quarto da Rainha.  Aqui √© onde todas as damas de espera tendem
+√†s suas necessidades.  Uma grande cadeira de veludo, uma pia elegante, um
+arm√°rio e bobagens podem ser vistas aqui.  Uma porta leva ao quarto do rei,
 ao sul.
 ~
-27 8 0 0 0 0
+27 8 0
 D2
 ~
 ~
@@ -1059,13 +1064,13 @@ D5
 S
 #2758
 A Loja de Armas~
-   Mostru·rios exibem todos os tipo de armas, pendurados nas paredes da
-sala.  Qualquer arma que vocÍ poder· percisar pode ser obtida aqui.  Se por
-acaso for uma arma em especial, o ferreiro ir· trabalhar com o forno no
-andar de baixo para deix·-la a seu gosto.  Escadas na parede ao norte levam
+   Mostru√°rios exibem todos os tipo de armas, pendurados nas paredes da
+sala.  Qualquer arma que voc√™ poder√° percisar pode ser obtida aqui.  Se por
+acaso for uma arma em especial, o ferreiro ir√° trabalhar com o forno no
+andar de baixo para deix√°-la a seu gosto.  Escadas na parede ao norte levam
 para cima e para baixo.
 ~
-27 8 0 0 0 0
+27 8 0
 D4
 ~
 ~
@@ -1076,26 +1081,26 @@ D5
 0 -1 2754
 S
 #2759
-O DepÛsito de Armaduras~
-   Manequins usando o que h· de mais recente em armaduras est„o pela sala.
-Armaduras dos melhores artes„os podem ser compradas aqui.  Olhando ao redor
-vocÍ a ˙nica saÌda, que È descer as escadas.
+O Dep√≥sito de Armaduras~
+   Manequins usando o que h√° de mais recente em armaduras est√£o pela sala.
+Armaduras dos melhores artes√£os podem ser compradas aqui.  Olhando ao redor
+voc√™ a √∫nica sa√≠da, que √© descer as escadas.
 ~
-27 8 0 0 0 0
+27 8 0
 D5
 ~
 ~
 0 -1 2758
 S
 #2760
-Entre as FortificaÁıes do Castelo~
-   Pedras cinzas do interior e exterior das fortificaÁıes demarcam a
-passagem.  Fendas atravÈs das paredes de ambos os lados permitem que
-defensores atirem flechas em qualquer atacante, em caso de um cerco.  VocÍ
-percebe que este castelo È bem protegido e n„o cair· facilmente nas m„os de
+Entre as Fortifica√ß√µes do Castelo~
+   Pedras cinzas do interior e exterior das fortifica√ß√µes demarcam a
+passagem.  Fendas atrav√©s das paredes de ambos os lados permitem que
+defensores atirem flechas em qualquer atacante, em caso de um cerco.  Voc√™
+percebe que este castelo √© bem protegido e n√£o cair√° facilmente nas m√£os de
 inimigos.
 ~
-27 4 0 0 0 0
+27 4 0
 D1
 ~
 ~
@@ -1107,13 +1112,13 @@ D3
 S
 #2761
 O Canto Sudoeste~
-   Pedras cinzas do interior e exterior das fortificaÁıes demarcam a
-passagem.  Fendas atravÈs das paredes de ambos os lados permitem que
-defensores atirem flechas em qualquer atacante, em caso de um cerco.  VocÍ
-percebe que este castelo È bem protegido e n„o cair· facilmente nas m„os de
+   Pedras cinzas do interior e exterior das fortifica√ß√µes demarcam a
+passagem.  Fendas atrav√©s das paredes de ambos os lados permitem que
+defensores atirem flechas em qualquer atacante, em caso de um cerco.  Voc√™
+percebe que este castelo √© bem protegido e n√£o cair√° facilmente nas m√£os de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -1124,14 +1129,14 @@ D1
 0 -1 2760
 S
 #2762
-Entre as FortificaÁıes do Castelo~
-   Pedras cinzas do interior e exterior das fortificaÁıes demarcam a
-passagem.  Fendas atravÈs das paredes de ambos os lados permitem que
-defensores atirem flechas em qualquer atacante, em caso de um cerco.  VocÍ
-percebe que este castelo È bem protegido e n„o cair· facilmente nas m„os de
+Entre as Fortifica√ß√µes do Castelo~
+   Pedras cinzas do interior e exterior das fortifica√ß√µes demarcam a
+passagem.  Fendas atrav√©s das paredes de ambos os lados permitem que
+defensores atirem flechas em qualquer atacante, em caso de um cerco.  Voc√™
+percebe que este castelo √© bem protegido e n√£o cair√° facilmente nas m√£os de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -1142,14 +1147,14 @@ D2
 0 -1 2761
 S
 #2763
-Entre as FortificaÁıes do Castelo~
-   Pedras cinzas do interior e exterior das fortificaÁıes demarcam a
-passagem.  Fendas atravÈs das paredes de ambos os lados permitem que
-defensores atirem flechas em qualquer atacante, em caso de um cerco.  VocÍ
-percebe que este castelo È bem protegido e n„o cair· facilmente nas m„os de
+Entre as Fortifica√ß√µes do Castelo~
+   Pedras cinzas do interior e exterior das fortifica√ß√µes demarcam a
+passagem.  Fendas atrav√©s das paredes de ambos os lados permitem que
+defensores atirem flechas em qualquer atacante, em caso de um cerco.  Voc√™
+percebe que este castelo √© bem protegido e n√£o cair√° facilmente nas m√£os de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -1160,14 +1165,14 @@ D2
 0 -1 2762
 S
 #2764
-Entre as FortificaÁıes do Castelo~
-   Pedras cinzas do interior e exterior das fortificaÁıes demarcam a
-passagem.  Fendas atravÈs das paredes de ambos os lados permitem que
-defensores atirem flechas em qualquer atacante, em caso de um cerco.  VocÍ
-percebe que este castelo È bem protegido e n„o cair· facilmente nas m„os de
+Entre as Fortifica√ß√µes do Castelo~
+   Pedras cinzas do interior e exterior das fortifica√ß√µes demarcam a
+passagem.  Fendas atrav√©s das paredes de ambos os lados permitem que
+defensores atirem flechas em qualquer atacante, em caso de um cerco.  Voc√™
+percebe que este castelo √© bem protegido e n√£o cair√° facilmente nas m√£os de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -1179,12 +1184,12 @@ D2
 S
 #2765
 A Torre de Guarda Noroeste~
-   Pesadas t·buas de madeira foram construÌdas para ligar as duas
-fortificaÁıes daqui.  Olhando para cima vocÍ pode ver que uma torre de
+   Pesadas t√°buas de madeira foram constru√≠das para ligar as duas
+fortifica√ß√µes daqui.  Olhando para cima voc√™ pode ver que uma torre de
 guarda de pedra foi construida sobre aquela.  Uma escada ao longo da parede
 interna leva para a torre de guarda acima.
 ~
-27 0 0 0 0 0
+27 0 0
 D1
 ~
 ~
@@ -1199,14 +1204,14 @@ D4
 0 -1 2751
 S
 #2766
-Entre as FortificaÁıes do Castelo~
-   Pedras cinzas do interior e exterior das fortificaÁıes demarcam a
-passagem.  Fendas atravÈs das paredes de ambos os lados permitem que
-defensores atirem flechas em qualquer atacante, em caso de um cerco.  VocÍ
-percebe que este castelo È bem protegido e n„o cair· facilmente nas m„os de
+Entre as Fortifica√ß√µes do Castelo~
+   Pedras cinzas do interior e exterior das fortifica√ß√µes demarcam a
+passagem.  Fendas atrav√©s das paredes de ambos os lados permitem que
+defensores atirem flechas em qualquer atacante, em caso de um cerco.  Voc√™
+percebe que este castelo √© bem protegido e n√£o cair√° facilmente nas m√£os de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D1
 ~
 ~
@@ -1217,14 +1222,14 @@ D3
 0 -1 2765
 S
 #2767
-Entre as FortificaÁıes do Castelo~
-   Pedras cinzas do interior e exterior das fortificaÁıes demarcam a
-passagem.  Fendas atravÈs das paredes de ambos os lados permitem que
-defensores atirem flechas em qualquer atacante, em caso de um cerco.  VocÍ
-percebe que este castelo È bem protegido e n„o cair· facilmente nas m„os de
+Entre as Fortifica√ß√µes do Castelo~
+   Pedras cinzas do interior e exterior das fortifica√ß√µes demarcam a
+passagem.  Fendas atrav√©s das paredes de ambos os lados permitem que
+defensores atirem flechas em qualquer atacante, em caso de um cerco.  Voc√™
+percebe que este castelo √© bem protegido e n√£o cair√° facilmente nas m√£os de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D1
 ~
 ~
@@ -1235,14 +1240,14 @@ D3
 0 -1 2766
 S
 #2768
-Entre as FortificaÁıes do Castelo~
-   Pedras cinzas do interior e exterior das fortificaÁıes demarcam a
-passagem.  Fendas atravÈs das paredes de ambos os lados permitem que
-defensores atirem flechas em qualquer atacante, em caso de um cerco.  VocÍ
-percebe que este castelo È bem protegido e n„o cair· facilmente nas m„os de
+Entre as Fortifica√ß√µes do Castelo~
+   Pedras cinzas do interior e exterior das fortifica√ß√µes demarcam a
+passagem.  Fendas atrav√©s das paredes de ambos os lados permitem que
+defensores atirem flechas em qualquer atacante, em caso de um cerco.  Voc√™
+percebe que este castelo √© bem protegido e n√£o cair√° facilmente nas m√£os de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D1
 ~
 ~
@@ -1253,14 +1258,14 @@ D3
 0 -1 2767
 S
 #2769
-Entre as FortificaÁıes do Castelo~
-   Pedras cinzas do interior e exterior das fortificaÁıes demarcam a
-passagem.  Fendas atravÈs das paredes de ambos os lados permitem que
-defensores atirem flechas em qualquer atacante, em caso de um cerco.  VocÍ
-percebe que este castelo È bem protegido e n„o cair· facilmente nas m„os de
-inimigos.
+Entre as Fortifica√ß√µes do Castelo~
+   Pedras cinzas do interior e exterior das fortifica√ß√µes demarcam a
+passagem.  Fendas atrav√©s das paredes de ambos os lados permitem que
+defensores atirem flechas em qualquer atacante, em caso de um cerco.  Voc√™
+percebe que este castelo √© bem protegido e n√£o cair√° facilmente nas m√£os de
+inimigos.1
 ~
-27 0 0 0 0 0
+27 0 0
 D1
 ~
 ~
@@ -1272,12 +1277,12 @@ D3
 S
 #2770
 A Torre Nordeste~
-   Pesadas t·buas de madeira foram construÌdas para ligar as duas
-fortificaÁıes daqui.  Olhando para cima vocÍ pode ver que uma torre de
+   Pesadas t√°buas de madeira foram constru√≠das para ligar as duas
+fortifica√ß√µes daqui.  Olhando para cima voc√™ pode ver que uma torre de
 guarda de pedra foi construida sobre aquela.  Uma escada ao longo da parede
 interna leva para a torre de guarda acima.
 ~
-27 0 0 0 0 0
+27 0 0
 D2
 ~
 ~
@@ -1292,14 +1297,14 @@ D4
 0 -1 2755
 S
 #2771
-Entre as FortificaÁıes do Castelo~
-   Pedras cinzas do interior e exterior das fortificaÁıes demarcam a
-passagem.  Fendas atravÈs das paredes de ambos os lados permitem que
-defensores atirem flechas em qualquer atacante, em caso de um cerco.  VocÍ
-percebe que este castelo È bem protegido e n„o cair· facilmente nas m„os de
+Entre as Fortifica√ß√µes do Castelo~
+   Pedras cinzas do interior e exterior das fortifica√ß√µes demarcam a
+passagem.  Fendas atrav√©s das paredes de ambos os lados permitem que
+defensores atirem flechas em qualquer atacante, em caso de um cerco.  Voc√™
+percebe que este castelo √© bem protegido e n√£o cair√° facilmente nas m√£os de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -1310,14 +1315,14 @@ D2
 0 -1 2772
 S
 #2772
-Entre as FortificaÁıes do Castelo~
-   Pedras cinzas do interior e exterior das fortificaÁıes demarcam a
-passagem.  Fendas atravÈs das paredes de ambos os lados permitem que
-defensores atirem flechas em qualquer atacante, em caso de um cerco.  VocÍ
-percebe que este castelo È bem protegido e n„o cair· facilmente nas m„os de
+Entre as Fortifica√ß√µes do Castelo~
+   Pedras cinzas do interior e exterior das fortifica√ß√µes demarcam a
+passagem.  Fendas atrav√©s das paredes de ambos os lados permitem que
+defensores atirem flechas em qualquer atacante, em caso de um cerco.  Voc√™
+percebe que este castelo √© bem protegido e n√£o cair√° facilmente nas m√£os de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -1328,14 +1333,14 @@ D2
 0 -1 2773
 S
 #2773
-Entre as FortificaÁıes do Castelo~
-   Pedras cinzas do interior e exterior das fortificaÁıes demarcam a
-passagem.  Fendas atravÈs das paredes de ambos os lados permitem que
-defensores atirem flechas em qualquer atacante, em caso de um cerco.  VocÍ
-percebe que este castelo È bem protegido e n„o cair· facilmente nas m„os de
+Entre as Fortifica√ß√µes do Castelo~
+   Pedras cinzas do interior e exterior das fortifica√ß√µes demarcam a
+passagem.  Fendas atrav√©s das paredes de ambos os lados permitem que
+defensores atirem flechas em qualquer atacante, em caso de um cerco.  Voc√™
+percebe que este castelo √© bem protegido e n√£o cair√° facilmente nas m√£os de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -1347,13 +1352,13 @@ D2
 S
 #2774
 O Canto Sudeste~
-   Pedras cinzas do interior e exterior das fortificaÁıes demarcam a
-passagem.  Fendas atravÈs das paredes de ambos os lados permitem que
-defensores atirem flechas em qualquer atacante, em caso de um cerco.  VocÍ
-percebe que este castelo È bem protegido e n„o cair· facilmente nas m„os de
+   Pedras cinzas do interior e exterior das fortifica√ß√µes demarcam a
+passagem.  Fendas atrav√©s das paredes de ambos os lados permitem que
+defensores atirem flechas em qualquer atacante, em caso de um cerco.  Voc√™
+percebe que este castelo √© bem protegido e n√£o cair√° facilmente nas m√£os de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D0
 ~
 ~
@@ -1364,14 +1369,14 @@ D3
 0 -1 2775
 S
 #2775
-Entre as FortificaÁıes do Castelo~
-   Pedras cinzas do interior e exterior das fortificaÁıes demarcam a
-passagem.  Fendas atravÈs das paredes de ambos os lados permitem que
-defensores atirem flechas em qualquer atacante, em caso de um cerco.  VocÍ
-percebe que este castelo È bem protegido e n„o cair· facilmente nas m„os de
+Entre as Fortifica√ß√µes do Castelo~
+   Pedras cinzas do interior e exterior das fortifica√ß√µes demarcam a
+passagem.  Fendas atrav√©s das paredes de ambos os lados permitem que
+defensores atirem flechas em qualquer atacante, em caso de um cerco.  Voc√™
+percebe que este castelo √© bem protegido e n√£o cair√° facilmente nas m√£os de
 inimigos.
 ~
-27 0 0 0 0 0
+27 0 0
 D1
 ~
 ~
@@ -1383,26 +1388,26 @@ D3
 S
 #2776
 A Caverna do Urso~
-   Abaixo de uma grande quantidade de rochas est· a caverna do urso.  Mesmo
+   Abaixo de uma grande quantidade de rochas est√° a caverna do urso.  Mesmo
 com a fraca luz do sol na entrada da caverna aqui eh escuro.  Uma briga pode
 ser ouvida vinda de algum lugar daqui.  Talvez seja melhor sair
 silenciosamente e voltar por onde veio.
 ~
-27 5 0 0 0 0
+27 5 0
 D3
 ~
 ~
 0 -1 2798
 S
 #2777
-Uma trilha atravÈs da Floresta Midan~
-   A trilha faz uma suave curva aqui conforme vocÍ caminha pela floresta.
-Raios de sol passam pelas folhas das ·rvores que crescem acima de vocÍ.
+Uma trilha atrav√©s da Floresta Midan~
+   A trilha faz uma suave curva aqui conforme voc√™ caminha pela floresta.
+Raios de sol passam pelas folhas das √°rvores que crescem acima de voc√™.
 Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
-graciosamente no ch„o ao seu redor.  Os sons do imenso jardim selvagem s„o
+graciosamente no ch√£o ao seu redor.  Os sons do imenso jardim selvagem s√£o
 tranquilizantes para a alma do viajante.
 ~
-27 0 0 0 0 3
+27 0 3
 D0
 ~
 ~
@@ -1413,14 +1418,14 @@ D1
 0 -1 2797
 S
 #2778
-Uma trilha atravÈs da Floresta Midan~
-   Raios de sol passam pelas folhas das ·rvores crescendo acima de vocÍ.
+Uma trilha atrav√©s da Floresta Midan~
+   Raios de sol passam pelas folhas das √°rvores crescendo acima de voc√™.
 Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
-graciosamente no ch„o ao seu redor.  Os sons do imenso jardim selvagem s„o
+graciosamente no ch√£o ao seu redor.  Os sons do imenso jardim selvagem s√£o
 tranquilizantes para a alma do viajante.  A trilha o leva para o norte e
 para o sul.
 ~
-27 0 0 0 0 3
+27 0 3
 D0
 ~
 ~
@@ -1431,13 +1436,13 @@ D2
 0 -1 2777
 S
 #2779
-Os Campos de ExtermÌnio~
-   Tudo ao seu redor È grama que foi atropelada atÈ morrer.  Nada aqui ir·
-oferecer proteÁ„o contra os atacantes.  Sangue pinta o ch„o e pedaÁos de
-carne sacrificada est· ao redor.  O zumbido das moscas procurando por corpos
-È enlouquecedor.  Estes s„o realmente os Campos de ExtermÌnio!
+Os Campos de Exterm√≠nio~
+   Tudo ao seu redor √© grama que foi atropelada at√© morrer.  Nada aqui ir√°
+oferecer prote√ß√£o contra os atacantes.  Sangue pinta o ch√£o e peda√ßos de
+carne sacrificada est√° ao redor.  O zumbido das moscas procurando por corpos
+√© enlouquecedor.  Estes s√£o realmente os Campos de Exterm√≠nio!
 ~
-27 0 0 0 0 2
+27 0 2
 D1
 ~
 ~
@@ -1452,14 +1457,14 @@ D3
 0 -1 2738
 S
 #2780
-Os Campos de ExtermÌnio~
-   Tudo ao seu redor È grama que foi atropelada atÈ morrer.  Nada aqui ir·
-oferecer proteÁ„o contra os atacantes.  Sangue pinta o ch„o e pedaÁos de
-carne sacrificada est· ao redor.  O zumbido das moscas procurando por corpos
-È enlouquecedor.  Estes s„o realmente os Campos de ExtermÌnio!  Uma grande
-tenda emanando uma fraca aura preta est· a leste.
+Os Campos de Exterm√≠nio~
+   Tudo ao seu redor √© grama que foi atropelada at√© morrer.  Nada aqui ir√°
+oferecer prote√ß√£o contra os atacantes.  Sangue pinta o ch√£o e peda√ßos de
+carne sacrificada est√° ao redor.  O zumbido das moscas procurando por corpos
+√© enlouquecedor.  Estes s√£o realmente os Campos de Exterm√≠nio!  Uma grande
+tenda emanando uma fraca aura preta est√° a leste.
 ~
-27 0 0 0 0 2
+27 0 2
 D1
 ~
 ~
@@ -1475,39 +1480,39 @@ D3
 S
 #2781
 A Tenda do Cavaleiro do Espinho Negro~
-   ApÛs entrar na tenda, um sentimento de intensa maldade desloca sua alma.
+   Ap√≥s entrar na tenda, um sentimento de intensa maldade desloca sua alma.
 Valiosos panos de seda preta guarnece sobre tudo e travesseiros de veludo
-convidam-no a um descanso.  VocÍ deseja descansar, mas a presenÁa de sangue
-no ch„o ˙mido deixa-o nervoso.  A oeste vocÍ pode voltar as Campos de
-ExtermÌnio.
+convidam-no a um descanso.  Voc√™ deseja descansar, mas a presen√ßa de sangue
+no ch√£o √∫mido deixa-o nervoso.  A oeste voc√™ pode voltar as Campos de
+Exterm√≠nio.
 ~
-27 12 0 0 0 0
+27 12 0
 D3
 ~
 ~
 0 -1 2780
 S
 #2782
-Os Campos de ExtermÌnio~
-   Tudo ao seu redor È grama que foi atropelada atÈ morrer.  Nada aqui ir·
-oferecer proteÁ„o contra os atacantes.  Sangue pinta o ch„o e pedaÁos de
-carne sacrificada est· ao redor.  O zumbido das moscas procurando por corpos
-È enlouquecedor.  Estes s„o realmente os Campos de ExtermÌnio!
+Os Campos de Exterm√≠nio~
+   Tudo ao seu redor √© grama que foi atropelada at√© morrer.  Nada aqui ir√°
+oferecer prote√ß√£o contra os atacantes.  Sangue pinta o ch√£o e peda√ßos de
+carne sacrificada est√° ao redor.  O zumbido das moscas procurando por corpos
+√© enlouquecedor.  Estes s√£o realmente os Campos de Exterm√≠nio!
 ~
-27 0 0 0 0 2
+27 0 2
 D0
 ~
 ~
 0 -1 2726
 S
 #2783
-Um Caminho AtravÈs da Clareira~
-   Esta clareira È ampla e espaÁosa.  A grama alta ondula com a suave brisa.
+Um Caminho Atrav√©s da Clareira~
+   Esta clareira √© ampla e espa√ßosa.  A grama alta ondula com a suave brisa.
 Borboletas de todos os tipos voam entre as coloridas flores selvagens que
-crescem aqui.  Para o norte o caminho torna-se uma trilha atravÈs da
-Floresta Midan.  A oeste est· um caminho mais utilizado.
+crescem aqui.  Para o norte o caminho torna-se uma trilha atrav√©s da
+Floresta Midan.  A oeste est√° um caminho mais utilizado.
 ~
-27 0 0 0 0 3
+27 0 3
 D0
 ~
 ~
@@ -1518,13 +1523,13 @@ D3
 0 -1 2721
 S
 #2784
-Uma trilha atravÈs da Floresta Midan~
-   A trilha faz uma suave curva aqui conforme vocÍ caminha pela floresta.
-Raios de sol passam pelas folhas das ·rvores que crescem acima de vocÍ.  As
-·rvores est„o comeÁando a dar espaÁo para baixos arbustos e para a grama
-alta.  Uma clareira abriu-se ao o sul, enquanto a floresta est· a leste.
+Uma trilha atrav√©s da Floresta Midan~
+   A trilha faz uma suave curva aqui conforme voc√™ caminha pela floresta.
+Raios de sol passam pelas folhas das √°rvores que crescem acima de voc√™.  As
+√°rvores est√£o come√ßando a dar espa√ßo para baixos arbustos e para a grama
+alta.  Uma clareira abriu-se ao o sul, enquanto a floresta est√° a leste.
 ~
-27 4 0 0 0 3
+27 4 3
 D1
 ~
 ~
@@ -1535,13 +1540,13 @@ D2
 0 -1 2783
 S
 #2785
-Uma trilha atravÈs da Floresta Midan~
-   Raios de sol passam pelas folhas das ·rvores que crescem acima de vocÍ.
+Uma trilha atrav√©s da Floresta Midan~
+   Raios de sol passam pelas folhas das √°rvores que crescem acima de voc√™.
 Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
-graciosamente no ch„o ao seu redor.  Os sons do imenso jardim selvagem s„o
+graciosamente no ch√£o ao seu redor.  Os sons do imenso jardim selvagem s√£o
 tranquilizantes para a alma do viajante.  A trilha vai para leste e oeste.
 ~
-27 0 0 0 0 3
+27 0  3
 D1
 ~
 ~
@@ -1552,13 +1557,13 @@ D3
 0 -1 2784
 S
 #2786
-Uma trilha atravÈs da Floresta Midan~
-   Raios de sol passam pelas folhas das ·rvores que crescem acima de vocÍ.
+Uma trilha atrav√©s da Floresta Midan~
+   Raios de sol passam pelas folhas das √°rvores que crescem acima de voc√™.
 Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
-graciosamente no ch„o ao seu redor.  Os sons do imenso jardim selvagem s„o
+graciosamente no ch√£o ao seu redor.  Os sons do imenso jardim selvagem s√£o
 tranquilizantes para a alma do viajante.  A trilha vai para leste e oeste.
 ~
-27 0 0 0 0 3
+27 0 3
 D1
 ~
 ~
@@ -1569,13 +1574,13 @@ D3
 0 -1 2785
 S
 #2787
-Uma trilha atravÈs da Floresta Midan~
-   Raios de sol passam pelas folhas das ·rvores que crescem acima de vocÍ.
+Uma trilha atrav√©s da Floresta Midan~
+   Raios de sol passam pelas folhas das √°rvores que crescem acima de voc√™.
 Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
-graciosamente no ch„o ao seu redor.  Os sons do imenso jardim selvagem s„o
+graciosamente no ch√£o ao seu redor.  Os sons do imenso jardim selvagem s√£o
 tranquilizantes para a alma do viajante.  A trilha vai para leste e oeste.
 ~
-27 0 0 0 0 3
+27 0 3
 D1
 ~
 ~
@@ -1586,13 +1591,13 @@ D3
 0 -1 2786
 S
 #2788
-Uma trilha atravÈs da Floresta Midan~
-   Raios de sol passam pelas folhas das ·rvores que crescem acima de vocÍ.
+Uma trilha atrav√©s da Floresta Midan~
+   Raios de sol passam pelas folhas das √°rvores que crescem acima de voc√™.
 Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
-graciosamente no ch„o ao seu redor.  Os sons do imenso jardim selvagem s„o
+graciosamente no ch√£o ao seu redor.  Os sons do imenso jardim selvagem s√£o
 tranquilizantes para a alma do viajante.  A trilha vai para leste e oeste.
 ~
-27 0 0 0 0 3
+27 0  3
 D1
 ~
 ~
@@ -1603,14 +1608,14 @@ D3
 0 -1 2787
 S
 #2789
-Uma trilha atravÈs da Floresta Midan~
-   A trilha faz uma suave curva aqui conforme vocÍ caminha pela floresta.
-Raios de sol passam pelas folhas das ·rvores que crescem acima de vocÍ.
+Uma trilha atrav√©s da Floresta Midan~
+   A trilha faz uma suave curva aqui conforme voc√™ caminha pela floresta.
+Raios de sol passam pelas folhas das √°rvores que crescem acima de voc√™.
 Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
-graciosamente no ch„o ao seu redor.  Os sons do imenso jardim selvagem s„o
+graciosamente no ch√£o ao seu redor.  Os sons do imenso jardim selvagem s√£o
 tranquilizantes para a alma do viajante.
 ~
-27 0 0 0 0 3
+27 0 3
 D2
 ~
 ~
@@ -1621,14 +1626,14 @@ D3
 0 -1 2788
 S
 #2790
-Uma trilha atravÈs da Floresta Midan~
-   A trilha faz uma suave curva aqui conforme vocÍ caminha pela floresta.
-Raios de sol passam pelas folhas das ·rvores que crescem acima de vocÍ.
+Uma trilha atrav√©s da Floresta Midan~
+   A trilha faz uma suave curva aqui conforme voc√™ caminha pela floresta.
+Raios de sol passam pelas folhas das √°rvores que crescem acima de voc√™.
 Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
-graciosamente no ch„o ao seu redor.  Os sons do imenso jardim selvagem s„o
+graciosamente no ch√£o ao seu redor.  Os sons do imenso jardim selvagem s√£o
 tranquilizantes para a alma do viajante.
 ~
-27 0 0 0 0 3
+27 0 3
 D1
 ~
 ~
@@ -1640,18 +1645,22 @@ D2
 S
 #2791
 Uma Clareira Dentro da Floresta~
-   As ·vores crescem adiante daqui, criando uma clareira.  A grama baixa
-atapetam o ch„o.  Uma pequena nascente borbulha para fora do ch„o, saindo
-dentre algumas pedras recobertas de musgo.  Uma pequena cascata È criada
-conforme ela flui sobre as pedras.  O resplendor aqu·tico parece brilhar
-como se uma brisa vinda do leste apenas sobre o outro lado da cascata.  … um
-lugar tranq¸ilo, um onde um viajante pode descansar sem se preocupar.
+   As √°vores crescem adiante daqui, criando uma clareira.  A grama baixa
+atapetam o ch√£o.  Uma pequena nascente borbulha para fora do ch√£o, saindo
+dentre algumas pedras recobertas de musgo.  Uma pequena cascata √© criada
+conforme ela flui sobre as pedras.  O resplendor aqu√°tico parece brilhar
+como se uma brisa vinda do leste apenas sobre o outro lado da cascata.  √â um
+lugar tranq√ºilo, um onde um viajante pode descansar sem se preocupar.
 ~
-27 16 0 0 0 3
+27 16 3
 D0
 ~
 ~
 0 -1 2792
+D1
+~
+~
+0 -1 -1
 D2
 ~
 ~
@@ -1662,14 +1671,14 @@ D3
 0 -1 2797
 S
 #2792
-Uma trilha atravÈs da Floresta Midan~
-   Raios de sol passam pelas folhas das ·rvores que crescem acima de vocÍ.
+Uma trilha atrav√©s da Floresta Midan~
+   Raios de sol passam pelas folhas das √°rvores que crescem acima de voc√™.
 Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
-graciosamente no ch„o ao seu redor.  Os sons do imenso jardim selvagem s„o
+graciosamente no ch√£o ao seu redor.  Os sons do imenso jardim selvagem s√£o
 tranquilizantes para a alma do viajante.  Uma clareira pode ser vista ao
 sul.
 ~
-27 0 0 0 0 3
+27 0 3
 D1
 ~
 ~
@@ -1684,14 +1693,14 @@ D3
 0 -1 2790
 S
 #2793
-Uma trilha atravÈs da Floresta Midan~
-   A trilha faz uma suave curva aqui conforme vocÍ caminha pela floresta.
-Raios de sol passam pelas folhas das ·rvores que crescem acima de vocÍ.
+Uma trilha atrav√©s da Floresta Midan~
+   A trilha faz uma suave curva aqui conforme voc√™ caminha pela floresta.
+Raios de sol passam pelas folhas das √°rvores que crescem acima de voc√™.
 Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
-graciosamente no ch„o ao seu redor.  Os sons do imenso jardim selvagem s„o
+graciosamente no ch√£o ao seu redor.  Os sons do imenso jardim selvagem s√£o
 tranquilizantes para a alma do viajante.
 ~
-27 0 0 0 0 3
+27 0 3
 D2
 ~
 ~
@@ -1703,14 +1712,14 @@ D3
 S
 #2794
 Uma curva na Trilha~
-   A trilha faz uma suave curva aqui conforme vocÍ caminha pela floresta.
-Raios de sol passam pelas folhas das ·rvores que crescem acima de vocÍ.
+   A trilha faz uma suave curva aqui conforme voc√™ caminha pela floresta.
+Raios de sol passam pelas folhas das √°rvores que crescem acima de voc√™.
 Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
-graciosamente no ch„o ao seu redor.  Os sons do imenso jardim selvagem s„o
-tranquilizantes para a alma do viajante.  Para o sul est· uma ·rea aberta de
+graciosamente no ch√£o ao seu redor.  Os sons do imenso jardim selvagem s√£o
+tranquilizantes para a alma do viajante.  Para o sul est√° uma √°rea aberta de
 encostas que podem cair.
 ~
-27 0 0 0 0 3
+27 0 3
 D0
 ~
 ~
@@ -1719,15 +1728,19 @@ D1
 ~
 ~
 0 -1 2795
+D2
+~
+~
+0 -1 -1
 S
 #2795
-Uma trilha atravÈs da Floresta Midan~
-   Raios de sol passam pelas folhas das ·rvores que crescem acima de vocÍ.
+Uma trilha atrav√©s da Floresta Midan~
+   Raios de sol passam pelas folhas das √°rvores que crescem acima de voc√™.
 Algumas folhas, tiradas de grandes galhos pela suave brisa, caem
-graciosamente no ch„o ao seu redor.  Os sons do imenso jardim selvagem s„o
+graciosamente no ch√£o ao seu redor.  Os sons do imenso jardim selvagem s√£o
 tranquilizantes para a alma do viajante.  A trilha vai para leste e oeste.
 ~
-27 0 0 0 0 3
+27 0 3
 D1
 ~
 ~
@@ -1739,13 +1752,13 @@ D3
 S
 #2796
 A Entrada para a Floresta Midan~
-   Os confortos de Midgaard cedem lugar para uma regi„o selvagem, aqui.
-Altos carvalhos, agrad·veis borbos, vidoeiros brancos descascados, e uma
-ampla vegetaÁ„o de pl·tanos marcam o comeÁo da Floresta Midan.  Uma trilha
+   Os confortos de Midgaard cedem lugar para uma regi√£o selvagem, aqui.
+Altos carvalhos, agrad√°veis borbos, vidoeiros brancos descascados, e uma
+ampla vegeta√ß√£o de pl√°tanos marcam o come√ßo da Floresta Midan.  Uma trilha
 de um rico solo sedimentar pode ser vista a oeste.  Midgaard situa-se a
 leste.
 ~
-27 4 0 0 0 3
+27 4 3
 D0
 ~
 ~
@@ -1756,13 +1769,13 @@ D3
 0 -1 2795
 S
 #2797
-Uma Trilha atravÈs da Floresta Midan~
-   A trilha faz uma suave curva aqui conforme vocÍ caminha pela floresta.
-Raios de sol passam pelas folhas das ·rvores que crescem acima de vocÍ.  Uma
-clareira pode ser vista a leste e a floresta fechada est· ao sul.  A trilha
+Uma Trilha atrav√©s da Floresta Midan~
+   A trilha faz uma suave curva aqui conforme voc√™ caminha pela floresta.
+Raios de sol passam pelas folhas das √°rvores que crescem acima de voc√™.  Uma
+clareira pode ser vista a leste e a floresta fechada est√° ao sul.  A trilha
 continua ao norte e oeste.
 ~
-27 0 0 0 0 3
+27 0 3
 D0
 ~
 ~
@@ -1782,13 +1795,13 @@ D3
 S
 #2798
 A Mata Fechada na Floresta Midan~
-   A luz do sol È bloqueada pela copa das fortes ·rvores que crescem aqui.
-Uma ·rvore bastante cicatrizada est· a sua frente.  Ela parece ter sido
+   A luz do sol √© bloqueada pela copa das fortes √°rvores que crescem aqui.
+Uma √°rvore bastante cicatrizada est√° a sua frente.  Ela parece ter sido
 arranhada por algum tipo de animal grande.  Uma entrada para uma caverna
-est· a leste.  Ao norte est· a floresta mais aberta e uma trilha de
-caÁadores est· a oeste.
+est√° a leste.  Ao norte est√° a floresta mais aberta e uma trilha de
+ca√ßadores est√° a oeste.
 ~
-27 0 0 0 0 3
+27 0 3
 D0
 ~
 ~
@@ -1804,11 +1817,11 @@ D3
 S
 #2799
 A Mata Fechada na Floresta Midan~
-   A luz do sol È bloqueada pela copa das fortes ·rvores que crescem aqui.
-A vegetaÁ„o daqui È t„o densa que a ˙nica saÌda È voltando de onde veio ou
-indo para leste na trilha dos caÁadores.
+   A luz do sol √© bloqueada pela copa das fortes √°rvores que crescem aqui.
+A vegeta√ß√£o daqui √© t√£o densa que a √∫nica sa√≠da √© voltando de onde veio ou
+indo para leste na trilha dos ca√ßadores.
 ~
-27 0 0 0 0 3
+27 0 3
 D0
 ~
 ~
