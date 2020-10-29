@@ -1,229 +1,229 @@
 #2800
-p�rola bacia bebedouro~
-uma p�rola gigante~
-Uma p�rola escavada em formato de bacia est� aqui, vertendo �gua pura.~
+perola bacia bebedouro~
+uma pérola gigante~
+Uma pérola escavada em formato de bacia está aqui, vertendo água pura.~
 ~
-23 g 0 0 0 0 0 0 0 0 0 0 0
-9999 9999 15 0
-9000 0 0 0 0
+23 g 0 0
+9999 9999 15 0 0 0
+9000 0 0 0
 E
-bacia bebedouro p�rola~
-� uma esp�cie de bacia muito bonita, em formato de concha aberta, escavada em 
-uma p�rola descomunalmente grande e foi colocada sobre um lindo pedestal feito
-de ouro maci�o e totalmente cravejado por imensas e variadas gemas preciosas,
+bacia bebedouro perola~
+É uma espécie de bacia muito bonita, em formato de concha aberta, escavada em 
+uma pérola descomunalmente grande e foi colocada sobre um lindo pedestal feito
+de ouro maciço e totalmente cravejado por imensas e variadas gemas preciosas,
 para que os que estejam com sede possam se saciar.
 ~
 #2801
-m�sica~
-a m�sica viva~
-A m�sica parece dan�ar diante dos seus olhos incr�dulos.~
+musica~
+a música viva~
+A música parece dançar diante dos seus olhos incrédulos.~
 ~
-12 dg 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0
-9000 0 0 0 0
+12 dg 0 0
+0 0 0 0 0 0
+9000 0 0 0
 E
-m�sica viva~
-� t�o fant�stico, que voc� se deixa levar sem nenhum receio ou medo.   � como
+musica viva~
+É tão fantástico, que você se deixa levar sem nenhum receio ou medo.   É como
 se os seus sonhos tivessem se tornado realidade e finalmente o som pudesse
-dan�ar livre, sem nenhum bloqueio, adquirindo tonalidades brilhantes, que 
+dançar livre, sem nenhum bloqueio, adquirindo tonalidades brilhantes, que 
 ondulando sem parar, tornam o ambiente cintilante e totalmente inebriante.
 ~
 #2802
-m�stico cristal painel~
-o grande cristal m�stico~
-H� um grande painel feito de cristal puro aqui, flutuando de forma m�stica.~
+mistico cristal painel~
+o grande cristal místico~
+Há um grande painel feito de cristal puro aqui, flutuando de forma mística.~
 ~
-13 giq 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0
-100 0 0 0 0
+13 giq 0 0
+0 0 0 0 0 0
+100 0 0 0
 E
-m�stico cristal painel~
-Olhar para algo t�o extraordin�riamente belo � de fato um privil�gio.   Feito
-do mais puro cristal, ele parece conter em seu interior, in�meras frases 
-m�sticas que com certeza apenas os mais experientes poder�o compreender.
+mistico cristal painel~
+Olhar para algo tão extraordináriamente belo é de fato um privilégio.   Feito
+do mais puro cristal, ele parece conter em seu interior, inúmeras frases 
+místicas que com certeza apenas os mais experientes poderão compreender.
 ~
 #2803
 convite lacre envelope pequeno belo casamento linho dourado~
 um convite de casamento feito de papel de linho e lacrado em dourado~
-H� aqui um pequeno e belo envelope fechado com lacre dourado.~
+Há aqui um pequeno e belo envelope fechado com lacre dourado.~
 ~
-12 g 0 0 0 a 0 0 0 0 0 0 0
-0 0 0 0
-1 0 0 0 0
+12 g a 0
+0 0 0 0 0 0
+1 0 0 0
 E
 convite lacre envelope pequeno belo casamento linho dourado~
-Voc� rompe o lacre e retira do envelope um papel escrito em delicadas letras
-douradas.  Est� escrito:
+Você rompe o lacre e retira do envelope um papel escrito em delicadas letras
+douradas.  Está escrito:
 
-&yDign�ssimo Amigo e Exma. Fam�lia:
+@yDigníssimo Amigo e Exma. Família:
 
-&y� com imensa satisfa��o que n�s os convidamos para celebrar a uni�o de duas
+@yÉ com imensa satisfação que nós os convidamos para celebrar a união de duas
 pessoas queridas. Sendo assim, se apresentem na hora marcada na Grande Catedral
-de Cristal, local da oficializa��o das Bodas dos Noivos.
+de Cristal, local da oficialização das Bodas dos Noivos.
 ~
 #2804
 vestido noiva~
-um bel�ssimo vestido de noiva~
+um belíssimo vestido de noiva~
 A mais bela de todas as noivas deve ter deixado este traje aqui.~
 ~
-9 0 0 0 0 ad 0 0 0 0 0 0 0
+9 0 ad
 5 0 0 0
-6 5000 0 0 0
+6 5000 0 0
 E
 vestido noiva~
-Olhar para este vestido � sonhar um pouco acordado.   � t�o bonito que chega a
+Olhar para este vestido é sonhar um pouco acordado.   É tão bonito que chega a
 emocionar qualquer pessoa.   Branco como o mais puro floco de neve, feito de
-tecido leve, quase et�reo, inteirinho bordado com pequeninas p�rolas e 
-pequeninos cristais em forma de gota, que refletem a luz e d�o ao vestido o 
+tecido leve, quase etéreo, inteirinho bordado com pequeninas pérolas e 
+pequeninos cristais em forma de gota, que refletem a luz e dão ao vestido o 
 explendor das estrelas brilhando no firmamento.  
 ~
 #2805
 luz raio~
 um raio de luz~
-Um raio de luz que parece ter se materializado, atrai voc� de forma irresist�vel.~
+Um raio de luz que parece ter se materializado, atrai você de forma irresistível.~
 ~
-26 cg 0 0 0 0 0 0 0 0 0 0 0
+26 gc 0 :
 2800 0 0 0
-400 50000 5000 0 0
+400 50000 5000 0
 E
 portal luz raio~
-� uma luz t�o intensa, que seus olhos chegam a doer e ao mesmo tempo, voc� se
-sente irresistivelmente atra�do para essa luz.
+É uma luz tão intensa, que seus olhos chegam a doer e ao mesmo tempo, você se
+sente irresistivelmente atraído para essa luz.
 ~
 #2806
-v�u noiva~
-um v�u de noiva longu�ssimo~
-Um v�u de noiva muito longo e todo bordado foi deixado aqui.~
+veu noiva~
+um véu de noiva longuíssimo~
+Um véu de noiva muito longo e todo bordado foi deixado aqui.~
 ~
-9 ag 0 0 0 ar 0 0 0 0 0 0 0
+9 ag ar
 3 0 0 0
-2 1230 0 0 0
+2 1230 0
 E
-v�u noiva~
-O longo v�u cai solto sobre o rosto da noiva, dando-lhe a apar�ncia de anjo.
+veu noiva~
+O longo véu cai solto sobre o rosto da noiva, dando-lhe a aparência de anjo.
 Ele foi inteiramente bordado com pequeninas pedras de cristal, que brilham
 intensamente.
 ~
 #2807
 grinalda noiva~
 a delicada grinalda de noiva~
-Uma grinalda de noiva, enfeitada por flores e p�rolas foi deixada aqui.~
+Uma grinalda de noiva, enfeitada por flores e pérolas foi deixada aqui.~
 ~
-9 ag 0 0 0 ae 0 0 0 0 0 0 0
+9 ag ae
 3 0 0 0
-2 1230 0 0 0
+2 1230 0
 E
 grinalda noiva~
-Coroando a beleza da noiva, esta pequena pe�a mais parece uma j�ia rara.  
-Flores brancas absolutamente lindas, foram entremeadas com p�rolas e pequenos
-diamantes, formando um conjunto inesquec�vel.
+Coroando a beleza da noiva, esta pequena peça mais parece uma jóia rara.  
+Flores brancas absolutamente lindas, foram entremeadas com pérolas e pequenos
+diamantes, formando um conjunto inesquecível.
 ~
 #2808
 bouquet ramalhete noiva~
 um perfumado bouquet de noiva~
 Um estonteante bouquet de noiva parece que foi esquecido aqui.~
 ~
-13 0 0 0 0 ao 0 0 0 0 0 0 0
+13 0 ao 0 
 0 0 0 0
-1 0 0 0 0
+1 0 0 0
 E
 bouquet ramalhete noiva~
-Ah! As mo�as solteiras v�o querer muito pegar esse lindo bouquet! As flores 
-usadas s�o raras, majestosas e muito perfumadas! Com certeza foram arrumadas
-por m�os de fadas.
+Ah! As moças solteiras vão querer muito pegar esse lindo bouquet! As flores 
+usadas são raras, majestosas e muito perfumadas! Com certeza foram arrumadas
+por mãos de fadas.
 ~
 #2809
 sapatos cristal noiva~
 um par de sapatos de cristal~
 Um cintilante par de sapatos de cristal foi deixado aqui.~
 ~
-9 ag 0 0 0 ag 0 0 0 0 0 0 0
+9 ag ag
 4 0 0 0
-1 4500 0 0 0
-E
-sapatos cristal noiva~
-Que lindos sapatos!  Toda noiva deveria ter um par desses, n�o acha?  Feito de
-um cristal t�o transparente e brilhante, que chegam a refletir a luz.
-~
+1 4500 0 0
 A
 10 -4
 A
-14 30
+14 +30
+E
+sapatos cristal noiva~
+Que lindos sapatos!  Toda noiva deveria ter um par desses, não acha?  Feito de
+um cristal tão transparente e brilhante, que chegam a refletir a luz.
+~
 #2810
 capa nupcial veludo~
 uma capa nupcial de veludo negro~
-Uma capa nupcial foi deixado aqui por algum noivo distra�do.~
+Uma capa nupcial foi deixado aqui por algum noivo distraído.~
 ~
-9 ag 0 0 0 ak 0 0 0 0 0 0 0
+9 ag ak
 8 0 0 0
-1 8999 0 0 0
+1 8999 0 0
 E
 capa nupcial veludo~
-� uma bel�ssima capa negra, que quase cobre o corpo do noivo.   Feita de veludo
+É uma belíssima capa negra, que quase cobre o corpo do noivo.   Feita de veludo
 muito macio ao toque.   Toda bordada com fios de ouro e pequeninas pedras
-preciosas e na altura das costas, est� estampado um bel�ssimo bras�o, com as 
-armas da fam�lia do noivo. Embora seja pesada, � muito bonita e todos os 
+preciosas e na altura das costas, está estampado um belíssimo brasão, com as 
+armas da família do noivo. Embora seja pesada, é muito bonita e todos os 
 membros da nobre estirpe a usam em suas bodas nupciais.
 ~
 #2811
 bolo noiva~
-um bolo de noiva de tr�s andares~
-Um IMENSO bolo de noiva foi deixado aqui por algu�m muito distra�do.~
+um bolo de noiva de três andares~
+Um IMENSO bolo de noiva foi deixado aqui por alguém muito distraído.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 a 0
 0 0 0 0
-1 0 0 0 0
+1 0 0 0
 E
 bolo noiva~
-Hummmmm!  Com tr�s andares de massa de p�o-de-l� bem �mido, recheio de
+Hummmmm!  Com três andares de massa de pão-de-ló bem úmido, recheio de
 morango e mousse de chocolate e uma caprichada cobertura de chantili, raspas
-de chocolate e morangos inteiros, esse bolo � uma tenta��o para mortal
-nenhum botar defeito...  Sobre o seu topo, um casal de noivos feitos de a��car
-parecem sorrir para voc�!
+de chocolate e morangos inteiros, esse bolo é uma tentação para mortal
+nenhum botar defeito...  Sobre o seu topo, um casal de noivos feitos de açúcar
+parecem sorrir para você!
 ~
 #2812
-ta�a~
-uma ta�a~
-Uma ta�a de vinho champagne bastante gelada est� aqui.~
+taca~
+uma taça~
+Uma taça de vinho champagne bastante gelada está aqui.~
 ~
-17 0 0 0 0 a 0 0 0 0 0 0 0
+17 0 a
 10 10 17 0
-15 5000 500 0 0
+3 5000 500
 E
-ta�a~
+taca~
 O vinho do tipo champagne possui uma bela cor dourada, e estando gelada como 
-est�, d� vontade de querer mais e mais.  Cuidado para n�o abusar muito.
+está, dá vontade de querer mais e mais.  Cuidado para não abusar muito.
 ~
 #2813
 carruagem nupcial cristal~
 uma linda carruagem de cristal~
-Uma linda carruagem de cristal est� estacionada aqui, aguardando pelos noivos.~
+Uma linda carruagem de cristal está estacionada aqui, aguardando pelos noivos.~
 ~
-13 0 0 0 0 0 0 0 0 0 0 0 0
+13 0 0 0
 0 0 0 0
-80 0 0 0 0
+80 0 0 0
 E
 carruagem nupcial cristal~
-� simplesmente t�o fanst�stica, que por alguns instantes voc� se recusa a 
+É simplesmente tão fanstástica, que por alguns instantes você se recusa a 
 acreditar que ela seja real.   Totalmente feita de cristal mas parece ser 
-bastante confort�vel, j� que seu interior � todinho forrado com veludo 
-vermelho e adornada com o &GBras�o de Vit�lia&n nas duas portas.  Puxada por
-seis elegantes cavalos brancos, est� parada, enquando o jovem cocheiro 
+bastante confortável, já que seu interior é todinho forrado com veludo 
+vermelho e adornada com o @GBrasão de Vitália@n nas duas portas.  Puxada por
+seis elegantes cavalos brancos, está parada, enquando o jovem cocheiro 
 aguarda a chegada dos nubentes.
 ~
 #2814
 fatia bolo noiva~
 uma deliciosa fatia de bolo de noiva~
-Um fatia de bolo de noiva foi deixada aqui, por algu�m muito distra�do.~
+Um fatia de bolo de noiva foi deixada aqui, por alguém muito distraído.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 a 0
 0 0 0 0
-1 0 0 0 0
+1 0 0 0
 E
 fatia bolo noiva~
-Hummmmm!  Com tr�s camadas de massa de p�o-de-l� bem �mido, recheio de
+Hummmmm!  Com três camadas de massa de pão-de-ló bem úmido, recheio de
 morango e mousse de chocolate e uma caprichada cobertura de chantili, raspas
-de chocolate e morangos inteiros, esse bolo � uma tenta��o para mortal
+de chocolate e morangos inteiros, esse bolo é uma tentação para mortal
 nenhum botar defeito!!
 ~
 #2815
@@ -231,45 +231,45 @@ pequenina caixinha porcelana casamento lembrancinha dourado~
 uma caixinha de porcelana com as iniciais dos noivos gravadas em dourado~
 Uma lembrancinha de casamento com as inicias dos noivos foi deixada aqui.~
 ~
-15 g 0 0 0 a 0 0 0 0 0 0 0
-15 5 -1 0
-1 0 0 0 0
+15 g a 0
+15 5 -1 0 0 0
+1 0 0 0
 E
 pequenina porcelana casamento lembrancinha dourado~
-Voc� abre o pequenino pacote e encontra uma linda caixinha de porcelana muito
+Você abre o pequenino pacote e encontra uma linda caixinha de porcelana muito
 fina, quase transparente, lindamente adornada por delicada pintura e se encanta
-com sua perfei��o.   Feita com tanto cuidado e com tamanha arte que d� medo de
-quebrar em suas m�os.  Em sua tampa, est�o gravadas as iniciais do noivo e da 
+com sua perfeição.   Feita com tanto cuidado e com tamanha arte que dá medo de
+quebrar em suas mãos.  Em sua tampa, estão gravadas as iniciais do noivo e da 
 noiva.
 ~
 #2816
 fonte luminosa luz~
-uma bel�ssima fonte emitindo luz~
-Uma bel�ssima fonte luminosa, emitindo suave melodia enquanto verte �gua pura.~
+uma belíssima fonte emitindo luz~
+Uma belíssima fonte luminosa, emitindo suave melodia enquanto verte água pura.~
 ~
-23 g 0 0 0 0 0 0 0 0 0 0 0
-9999 9999 15 0
-9000 0 0 0 0
+23 g 0 0
+9999 9999 15 0 0 0
+9000 0 0 0
 E
 fonte luminosa~
-Suntuosidade e perfei��o: s�o essas as palavras para descrever essa 
+Suntuosidade e perfeição: são essas as palavras para descrever essa 
 verdadeira obra de arte. Postada no meio do grande jardim, essa fonte possui
-uma capacidade sui generis: enquanto sua �gua jorra pura e cristalina, ela 
+uma capacidade sui generis: enquanto sua água jorra pura e cristalina, ela 
 emite luz e ao mesmo tempo, suave melodia toma conta do ambiente, 
 possibilitando assim, que todos possam conversar normalmente, sem terem que 
 gritar uns com os outros.
 ~
 #2817
-canap� camar�o~
-um saboroso canap� de camar�o~
-Um pequeno canap� foi jogado no ch�o.~
+canape camarao~
+um saboroso canapé de camarão~
+Um pequeno canapé foi jogado no chão.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 a 0
 0 0 0 0
-1 0 0 0 0
+1 0 0 0
 E
-canap� camar�o~
-Est� quentinho e voc� mal pode esperar para dar uma mordida neste canap� que
+canape camarao~
+Está quentinho e você mal pode esperar para dar uma mordida neste canapé que
 parece estar delicioso!!
 ~
 #2818
@@ -277,13 +277,13 @@ bolinho queijo derretido~
 um fumegante bolinho de queijo~
 Um bolinho de queijo mordido foi deixado aqui.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 a 0
 0 0 0 0
-1 0 0 0 0
+1 0 0 0
 E
 bolinho queijo derretido~
-Este bolinho est� t�o quente que voc� consegue puxar o queijo uns 30 
-cent�metros para frente.  Voc� se diverte com aquilo e continua a sabore�-lo
+Este bolinho está tão quente que você consegue puxar o queijo uns 30 
+centímetros para frente.  Você se diverte com aquilo e continua a saboreá-lo
 com voracidade.
 ~
 #2819
@@ -291,130 +291,130 @@ pastelzinho massa-folhada recheado quentinho~
 um pastelzinho bem recheado e quentinho~
 Um pastelzinho de massa-folhada foi esquecido aqui.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 a 0
 0 0 0 0
-1 0 0 0 0
+1 0 0 0
 E
 pastelzinho massa-folhada~
-Deve ter sido tirado do forno agora mesmo, pois est� saindo fuma�a. Cuidado para
-n�o queimar a l�ngua.
+Deve ter sido tirado do forno agora mesmo, pois está saindo fumaça. Cuidado para
+não queimar a língua.
 ~
 #2820
 brigadeiro chocolate~
 um brigadeiro de chocolate~
-Algu�m derrubou um brigadeiro de chocolate aqui no ch�o.~
+Alguém derrubou um brigadeiro de chocolate aqui no chão.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 a 0
 0 0 0 0
-1 0 0 0 0
+1 0 0 0
 E
 brigadeiro chocolate~
-Esse brigadeiro est� t�o macio que voc� o coloca na boca e em instantes
-ele some, como que por encanto.   O sabor do chocolate � t�o bom que voc� n�o
-consegue parar de comer.   O que ser� que houve com a sua dieta...?
+Esse brigadeiro está tão macio que você o coloca na boca e em instantes
+ele some, como que por encanto.   O sabor do chocolate é tão bom que você não
+consegue parar de comer.   O que será que houve com a sua dieta...?
 ~
 #2821
 bem-casado docinho ameixa coco~
 um bem-casado de ameixa com coco~
-Deixaram um peda�o de bem-casado de ameixa com coco aqui.~
+Deixaram um pedaço de bem-casado de ameixa com coco aqui.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 a 0
 0 0 0 0
-1 0 0 0 0
+1 0 0 0
 E
 bem-casado docinho ameixa coco~
-As m�os que fizeram este docinho s�o m�gicas! O creme de coco est� t�o cremoso
-que voc� chega quase a babar e a ameixa est� t�o macia que pr�ticamente n�o �
+As mãos que fizeram este docinho são mágicas! O creme de coco está tão cremoso
+que você chega quase a babar e a ameixa está tão macia que práticamente não é
 preciso nem mastigar.
 ~
 #2822
-ponche ta�a cristal~
-uma inebriante ta�a de ponche~
-Uma ta�a de cristal contendo ponche de n�ctar foi deixada aqui.~
+ponche taca cristal~
+uma inebriante taça de ponche~
+Uma taça de cristal contendo ponche de néctar foi deixada aqui.~
 ~
-17 0 0 0 0 a 0 0 0 0 0 0 0
+17 0 1
 8 8 16 0
-13 5 1 0 0
+1 5 1
 E
-ponche n�ctar ta�a cristal~
-� t�o suave, t�o gostoso, que � dif�cil recusar uma segunda ta�a dessa 
+ponche nectar taca cristal~
+É tão suave, tão gostoso, que é difícil recusar uma segunda taça dessa 
 deliciosa bebida.  Que flores teriam sido usadas para se conseguir resultado 
-t�o especial assim?
+tão especial assim?
 ~
 #2823
-ba� cristal azul~
-um ba� de cristal &Cazul&n~
-Um ba� com as iniciais do nome do Noivo foi deixado aqui no ch�o.~
+bau cristal azul~
+um baú de cristal @Cazul@n~
+Um baú com as iniciais do nome do Noivo foi deixado aqui no chão.~
 ~
-15 deq 0 0 0 0 0 0 0 0 0 0 0
+15 deq 0 0
 1500 7 -1 0
-8 50000 25000 0 0
+8 50000 25000 0
 E
-ba� cristal azul~
-� um lindo ba� de cristal &Cazul&n que parece cintilar.  Em sua tampa, est�o
-gravados em dourado, o nome do Noivo.  Parece que h� um enxoval completo
-guardado dentro dele.  N�o seria interessante abrir?
+bau cristal azul~
+É um lindo baú de cristal @Cazul@n que parece cintilar.  Em sua tampa, estão
+gravados em dourado, o nome do Noivo.  Parece que há um enxoval completo
+guardado dentro dele.  Não seria interessante abrir?
 ~
 #2824
-ba� cristal rosa~
-um ba� de cristal &Mrosa&n~
-Um ba� com as iniciais do nome da Noiva foi deixado aqui no ch�o.~
+bau cristal rosa~
+um baú de cristal @Mrosa@n~
+Um baú com as iniciais do nome da Noiva foi deixado aqui no chão.~
 ~
-15 deq 0 0 0 0 0 0 0 0 0 0 0
+15 deq 0 0
 1500 7 -1 0
-8 50000 25000 0 0
+8 50000 25000 0
 E
-ba� cristal rosa~
-� um lindo ba� de cristal &Mrosado&n que parece cintilar.  Em sua tampa, 
-est�o gravados em dourado, o nome da Noiva.  Parece que h� um enxoval 
-completo guardado dentro dele.  N�o seria interessante abrir?
+bau cristal rosa~
+É um lindo baú de cristal @Mrosado@n que parece cintilar.  Em sua tampa, 
+estão gravados em dourado, o nome da Noiva.  Parece que há um enxoval 
+completo guardado dentro dele.  Não seria interessante abrir?
 ~
 #2825
-botas camur�a negra~
-um par de botas de camur�a negra~
-Um par de botas de camur�a negra foi deixado aqui.~
+botas camurca negra~
+um par de botas de camurça negra~
+Um par de botas de camurça negra foi deixado aqui.~
 ~
-9 ag 0 0 0 ag 0 0 0 0 0 0 0
+9 ag ag
 4 0 0 0
-1 4500 0 0 0
-E
-botas camur�a negra~
-Essas botas parecem ser bastante confort�veis.  Extremamente macias e 
-elegantes, feitas de encomenda para o mais exigente dos noivos.
-~
+1 4500 0 0
 A
 10 -4
 A
-14 30
+14 +30
+E
+botas camurca negra~
+Essas botas parecem ser bastante confortáveis.  Extremamente macias e 
+elegantes, feitas de encomenda para o mais exigente dos noivos.
+~
 #2826
 coroa louro ouro~
 uma coroa de louro feita de ouro~
-Uma intrigante coroa de louro dourada foi deixada aqui.~
+uma intrigante coroa de louro dourada foi deixada aqui.~
 ~
-9 ag 0 0 0 ae 0 0 0 0 0 0 0
+9 ag ae
 3 0 0 0
-2 1230 0 0 0
+2 1230 0
 E
 coroa louro ouro~
-O louro sempre foi considerado s�mbolo da nobreza e us�-lo em t�o importante
-cerim�nia marca um ciclo de magnific�ncia conquistado pelo casal que est� 
+O louro sempre foi considerado símbolo da nobreza e usá-lo em tão importante
+cerimônia marca um ciclo de magnificência conquistado pelo casal que está 
 iniciando vida nova.  Simples, elegante, denota, com certeza, a maturidade
-atingida no relacionamento a dois.  Al�m disso, traz boa sorte e vida 
-pr�spera.
+atingida no relacionamento a dois.  Além disso, traz boa sorte e vida 
+próspera.
 ~
 #2827
 pesada corrente ouro antigo~
-uma pesad�ssima corrente de ouro~
+uma pesadíssima corrente de ouro~
 Uma pesada corrente de ouro com aspecto antigo foi deixado aqui.~
 ~
-11 aegikq 0 0 0 ac 0 0 0 0 0 0 0
+11 aqegik ac
 0 0 0 0
-5 1000000 100000 0 0
+5 1000000 100000 0
 E
 pesada corrente ouro antigo~
-� um colar de apar�ncia bem antiga e deve estar sendo passado de gera��o a 
-gera��o h� muitos s�culos.  Seu valor deve ser muito alto, pois � muito pesado.
-Todos os membros masculinos dessa numerosa fam�lia usam este colar no dia de 
+É um colar de aparência bem antiga e deve estar sendo passado de geração a 
+geração há muitos séculos.  Seu valor deve ser muito alto, pois é muito pesado.
+Todos os membros masculinos dessa numerosa família usam este colar no dia de 
 suas bodas nupciais.
 ~
 A
@@ -424,19 +424,19 @@ A
 A
 18 2
 #2828
-colar brilhantes p�rolas delicado~
-um colar de brilhantes e p�rolas delicad�ssimo~
-Um delicado colar de brilhantes e p�rolas parece ter sido esquecido aqui.~
+colar brilhantes perolas delicado~
+um colar de brilhantes e pérolas delicadíssimo~
+Um delicado colar de brilhantes e pérolas parece ter sido esquecido aqui.~
 ~
-11 aegikq 0 0 0 ac 0 0 0 0 0 0 0
+11 aqegik ac
 0 0 0 0
-5 1000000 100000 0 0
+5 1000000 100000 0
 E
-colar brilhantes p�rolas delicado~
-� um colar t�o bonito e t�o valioso que as palavras s�o pobres e in�cuas para 
-descrev�-lo.   Extremamente delicado, brilha tanto que chega-se pensar nas
+colar brilhantes perolas delicado~
+É um colar tão bonito e tão valioso que as palavras são pobres e inócuas para 
+descrevê-lo.   Extremamente delicado, brilha tanto que chega-se pensar nas
 estrelas quando o observamos.   A magia deste colar reside exatamente no fato
-dele s� poder ser usado pelas noivas dessa fam�lia.
+dele só poder ser usado pelas noivas dessa família.
 ~
 A
 2 1
@@ -447,73 +447,73 @@ A
 #2829
 camisa nupcial seda branca~
 uma camisa de seda branca~
-Uma bel�ssima camisa de seda branca foi deixada aqui por algum noivo apressado.~
+Uma belíssima camisa de seda branca foi deixada aqui por algum noivo apressado.~
 ~
-9 ag 0 0 0 ad 0 0 0 0 0 0 0
+9 ag ad
 8 0 0 0
-1 8999 0 0 0
+1 8999 0 0
 E
 camisa nupcial seda branca~
-A camisa � t�o branca e t�o macia que t�m-se a impress�o de que ir� rasgar ao
-menor movimento mais brusco do noivo.   Bot�es feitos a m�o, de madrep�rola,
-s�o os �nicos destaques desta bel�ssima pe�a.  Nunca se viu um noivo t�o 
+A camisa é tão branca e tão macia que têm-se a impressão de que irá rasgar ao
+menor movimento mais brusco do noivo.   Botões feitos a mão, de madrepérola,
+são os únicos destaques desta belíssima peça.  Nunca se viu um noivo tão 
 elegante como este.
 ~
 #2830
-cal�a linho branco~
-uma elegante cal�a de linho branco~
-Uma elegante cal�a de linho branco est� no ch�o, � espera do noivo.~
+calca linho branco~
+uma elegante calça de linho branco~
+Uma elegante calça de linho branco está no chão, à espera do noivo.~
 ~
-9 ag 0 0 0 af 0 0 0 0 0 0 0
+9 ag af
 8 0 0 0
-1 8999 0 0 0
+1 8999 0 0
 E
-cal�a linho branco~
-Feita do mais puro linho, esta cal�a parece vestir como uma luva.  Seu 
-corte reto e perfeito, d�o eleg�ncia e garbo ao jovem noivo. 
+calca linho branco~
+Feita do mais puro linho, esta calça parece vestir como uma luva.  Seu 
+corte reto e perfeito, dão elegância e garbo ao jovem noivo. 
 ~
 #2831
 bandeja prata~
 uma pesada bandeja de prata repleta de finas iguarias~
 Uma pesada bandeja de prata com muita comida, foi deixada aqui no canto.~
 ~
-12 g 0 0 0 ao 0 0 0 0 0 0 0
-0 0 0 0
-1 0 0 0 0
+12 g ao 0
+0 0 0 0 0 0
+1 0 0 0
 E
 bandeja prata~
-Que pesada essa bandeja de prata!  Tamb�m pudera, com tantas iguarias 
-deliciosas servidas sobre ela....Hum.....d� vontade de experimentar um pouco
-de cada coisa, n�o � mesmo?
+Que pesada essa bandeja de prata!  Também pudera, com tantas iguarias 
+deliciosas servidas sobre ela....Hum.....dá vontade de experimentar um pouco
+de cada coisa, não é mesmo?
 ~
 #2832
 estojo maquiagem dourado~
 um delicado estojo de maquiagem~
-Um delicado estojo dourado, com pequeninos brilhantes e p�rolas inscrutrados.~
+Um delicado estojo dourado, com pequeninos brilhantes e pérolas inscrutrados.~
 ~
-12 g 0 0 0 ao 0 0 0 0 0 0 0
-0 0 0 0
-1 0 0 0 0
+12 g ao 0
+0 0 0 0 0 0
+1 0 0 0
 E
 estojo maquiagem dourado~
-Que trabalho delicado e perfeito.  O estojo � feito de ouro puro, e com um 
-bel�ssimo desenho em forma de gota de luz em sua tampa, formado por min�sculos
-brilhantes e pequeninas p�rolas.  Ao abrir, voc� se deslumbra com as cores de
-sombra e batom, que foram ali colocadas, de forma quase art�stica.  Voc� ficar�
+Que trabalho delicado e perfeito.  O estojo é feito de ouro puro, e com um 
+belíssimo desenho em forma de gota de luz em sua tampa, formado por minúsculos
+brilhantes e pequeninas pérolas.  Ao abrir, você se deslumbra com as cores de
+sombra e batom, que foram ali colocadas, de forma quase artística.  Você ficará
 ainda mais linda usando tudo isso.
 ~
 #2833
 portal suave brisa~
-uma suave brisa que abra�a voc�~
+uma suave brisa que abraça você~
 Uma suave brisa o envolve por completo, como se fosse um convite para voar.~
 ~
-26 cg 0 0 0 0 0 0 0 0 0 0 0
+26 gc 0 :
 2845 0 0 0
-400 50000 5000 0 0
+400 50000 5000 0
 E
 portal suave brisa~
-� uma brisa suave, morna, acolhedora, que o abra�a e o envolve de tal forma 
-que d� a voc� a n�tida impress�o de estar sendo chamado para planos mais altos
+É uma brisa suave, morna, acolhedora, que o abraça e o envolve de tal forma 
+que dá a você a nítida impressão de estar sendo chamado para planos mais altos
 que estes.
 ~
 $~
