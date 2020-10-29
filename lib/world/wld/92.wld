@@ -1,46 +1,46 @@
 #9200
 A Estrada dos Cinco Reinos~
-   Você caminha por uma estrada realmente bela de terra batida.  Pouca
-poeira é levantada ao seu caminhar e você pode respirar muito bem, embora
-não perceba a presença de árvores ou qualquer tipo de vegetação por perto.
-A estrada é ladeada por pedras muito brancas, talvez fosse mármore mas você
-não tem certeza.  Bem longe ao norte você consegue, com muita dificuldade,
-ver 5 torres: duas vermelhas, duas pretas e uma dourada.  Você ainda pode
-voltar para o sul de onde você veio.
+   VocÃª caminha por uma estrada realmente bela de terra batida.  Pouca
+poeira Ã© levantada ao seu caminhar e vocÃª pode respirar muito bem, embora
+nÃ£o perceba a presenÃ§a de Ã¡rvores ou qualquer tipo de vegetaÃ§Ã£o por perto.
+A estrada Ã© ladeada por pedras muito brancas, talvez fosse mÃ¡rmore mas vocÃª
+nÃ£o tem certeza.  Bem longe ao norte vocÃª consegue, com muita dificuldade,
+ver 5 torres: duas vermelhas, duas pretas e uma dourada.  VocÃª ainda pode
+voltar para o sul de onde vocÃª veio.
 ~
-92 4 0 0 0 2
-D0
+92 c 2
+D 0
 A estrada segue para o norte.
 ~
 ~
 0 -1 9201
-D2
-Você não vê muita coisa além do caminho que segue para Midgaard...
+D 2
+VocÃª nÃ£o vÃª muita coisa alÃ©m do caminho que segue para Midgaard...
 ~
 ~
 0 -1 3070
 E
 pedras~
-Você vê várias pedras brancas muito lisas que jamais poderiam ser retiradas
-de seu lugar original.  Você sente que estas pedras foram colocadas para
-adornar o caminho de chegada de Reis e Rainhas, ou talvez alguém mais
+VocÃª vÃª vÃ¡rias pedras brancas muito lisas que jamais poderiam ser retiradas
+de seu lugar original.  VocÃª sente que estas pedras foram colocadas para
+adornar o caminho de chegada de Reis e Rainhas, ou talvez alguÃ©m mais
 importante.
 ~
 S
 #9201
 A Estrada dos Cinco Reinos~
-   Você continua caminhando pela estrada maravilhado por sua beleza.  Ao
-norte a visão das cinco torres parece mais nítida e você percebe que a torre
+   VocÃª continua caminhando pela estrada maravilhado por sua beleza.  Ao
+norte a visÃ£o das cinco torres parece mais nÃ­tida e vocÃª percebe que a torre
 dourada parece mudar de forma assemelhando-se a cada uma das outras torres.
-Há realmente algo de mágico nesta torre.  Você pode ainda seguir para o sul.
+HÃ¡ realmente algo de mÃ¡gico nesta torre.  VocÃª pode ainda seguir para o sul.
 ~
-92 0 0 0 0 2
-D0
+92 0 2
+D 0
 A estrada segue para o norte.
 ~
 ~
 0 -1 9202
-D2
+D 2
 A estrada segue para o sul.
 ~
 ~
@@ -48,351 +48,381 @@ A estrada segue para o sul.
 S
 #9202
 A Escolha~
-   É chegada a hora de você decidir seu caminho.  Três são suas escolhas e
-a partir daqui você terá selado seu caminho.  Ao norte há uma estrada
+   Ã‰ chegada a hora de vocÃª decidir seu caminho.  TrÃªs sÃ£o suas escolhas e
+a partir daqui vocÃª terÃ¡ selado seu caminho.  Ao norte hÃ¡ uma estrada
 multicolorida que hora assemelha-se a estrada a nordeste e hora confunde-se
-na sua forma com a estrada que segue para norodeste.  Você ainda pode voltar
+na sua forma com a estrada que segue para norodeste.  VocÃª ainda pode voltar
 para o sul.
 ~
-92 0 0 0 0 2
-D0
-Ao longe você vê dois portões.
+92 0 2
+D 0
+Ao longe vocÃª vÃª um portÃ£o.
+~
+~
+0 -1 9205
+D 6
+Ao longe vocÃª vÃª dois portÃµes.
+~
+~
+0 -1 9203
+D 7
+Ao longe vocÃª vÃª dois portÃµes.
 ~
 ~
 0 -1 9204
-D2
-Você ainda pode voltar para o sul.
+D 2
+VocÃª ainda pode voltar para o sul.
 ~
 ~
 0 -1 9201
 S
 #9203
-Os Dois Portões~
-   Você nem percebe que depois de feita sua escolha a estrada toma uma cor
-avermelhada com tonalidade indefinida.  Ao perceber isso você se depara com
-dois portões um ao norte e outro para noroeste.  O caminho para sudeste
+Os Dois PortÃµes~
+   VocÃª nem percebe que depois de feita sua escolha a estrada toma uma cor
+avermelhada com tonalidade indefinida.  Ao perceber isso vocÃª se depara com
+dois portÃµes um ao norte e outro para noroeste.  O caminho para sudeste
 continua livre.
 ~
-92 0 0 0 0 2
-D0
-Você vê um portão vermelho.
+92 0 2
+D 8
+VocÃª olha nessa direÃ§Ã£o lembrando de sua escolha.  Seria melhor alterÃ¡-la?
+~
+~
+0 -1 9202
+D 6
+VocÃª vÃª um portÃ£o vermelho.
+~
+~
+0 -1 9206
+D 0
+VocÃª vÃª um portÃ£o vermelho.
 ~
 ~
 0 -1 9207
-D2
-Você olha nessa direção lembrando de sua escolha.  Seria melhor alterá-la?
+S
+#9204
+Os Dois PortÃµes~
+   VocÃª nem percebe que depois de feita sua escolha a estrada toma uma cor
+enegrecida com tonalidade indefinida.  Ao perceber isso vocÃª se depara com
+dois portÃµes um ao norte e outro para nordeste.  O caminho para sudoeste
+continua livre.
+~
+92 0 2
+D 9
+VocÃª olha nessa direÃ§Ã£o lembrando de sua escolha.  Seria melhor alterÃ¡-la?
 ~
 ~
 0 -1 9202
-S
-#9204
-Os Dois Portões~
-   Você nem percebe que depois de feita sua escolha a estrada toma uma cor
-enegrecida com tonalidade indefinida.  Ao perceber isso você se depara com
-dois portões um ao norte e outro para nordeste.  O caminho para sudoeste
-continua livre.
+D 7
+VocÃª vÃª um portÃ£o negro.
 ~
-92 0 0 0 0 2
-D0
-Você vê um portão negro.
+~
+0 -1 9208
+D 0
+VocÃª vÃª um portÃ£o negro.
 ~
 ~
 0 -1 9209
-D2
-Você olha nessa direção lembrando de sua escolha.  Seria melhor alterá-la?
-~
-~
-0 -1 9202
 S
 #9205
-O Portão de Forma Indefinida~
-   Você se depara com um portão de forma indefinida.  Na verdade você nota
+O PortÃ£o de Forma Indefinida~
+   VocÃª se depara com um portÃ£o de forma indefinida.  Na verdade vocÃª nota
 que ele toma diversas formas, ou melhor, quatro formas muito parecidas com
-os naipes de um baralho.  Sua tonalidade também oscila entre o vermelho e o
-preto.Uma placa está bem ao alto do portão com alguma coisa escrita mas você
-não consegue enxergar ...  Talvez se você examinasse mais de perto a
-placa...  Você pode atravessar o portão para norte ou simplesmente seguir
+os naipes de um baralho.  Sua tonalidade tambÃ©m oscila entre o vermelho e o
+preto.Uma placa estÃ¡ bem ao alto do portÃ£o com alguma coisa escrita mas vocÃª
+nÃ£o consegue enxergar ...  Talvez se vocÃª examinasse mais de perto a
+placa...  VocÃª pode atravessar o portÃ£o para norte ou simplesmente seguir
 para o sul.
 ~
-92 0 0 0 0 2
-D0
-Você vê uma estrada.
+92 0 2
+D 0
+VocÃª vÃª uma estrada.
 ~
-portão indefinida forma~
+portÃ£o indefinida forma~
+:n 1 O portÃ£o de forma indefinida
 1 9200 9214
-D2
-Você olha nessa direção lembrando da sua escolha.  Seria melhor alterá-la?
+D 2
+VocÃª olha nessa direÃ§Ã£o lembrando da sua escolha.  Seria melhor alterÃ¡-la?
 ~
 ~
 0 -1 9202
 E
-placa~
-Você força sua vista e consegue ler o que está escrito na placa:
-
-Seja bem vindo ao Reino Coringa.  Nosso soberano, o Rei Coringa, governa
-este reino com justiça e sabedoria.  Esperamos que sua vinda aqui seja com
-boas intenções.  Saiba que a partir de sua entrada você estará sujeito às
-leis de nosso reino.
-                            Ass.: Falso Ás - O Pacificador
+portÃ£o~
+Um belo portÃ£o de cor indefinida com a forma tambÃ©m indefinida.
 ~
 E
-portão~
-Um belo portão de cor indefinida com a forma também indefinida.
+placa~
+VocÃª forÃ§a sua vista e consegue ler o que estÃ¡ escrito na placa:
+
+Seja bem vindo ao Reino Coringa.  Nosso soberano, o Rei Coringa, governa
+este reino com justiÃ§a e sabedoria.  Esperamos que sua vinda aqui seja com
+boas intenÃ§Ãµes.  Saiba que a partir de sua entrada vocÃª estarÃ¡ sujeito Ã s
+leis de nosso reino.
+                            Ass.: Falso Ãs - O Pacificador
 ~
 S
 #9206
-O Portão para o Reino de Copas~
-   Você se depara com um portão todo vermelho com a forma do naipe de copas.
-Uma placa está bem ao alto do portão com alguma coisa escrita mas você não
-consegue enxergar ...  Talvez se você examinasse mais de perto a placa...
-De qualquer maneira você não tem dúvidas de que está entrando na corte do
-Reino de Copas.  Você pode seguir em frente, para o norte ou para o sudeste.
+O PortÃ£o para o Reino de Copas~
+   VocÃª se depara com um portÃ£o todo vermelho com a forma do naipe de copas.
+Uma placa estÃ¡ bem ao alto do portÃ£o com alguma coisa escrita mas vocÃª nÃ£o
+consegue enxergar ...  Talvez se vocÃª examinasse mais de perto a placa...
+De qualquer maneira vocÃª nÃ£o tem dÃºvidas de que estÃ¡ entrando na corte do
+Reino de Copas.  VocÃª pode seguir em frente, para o norte ou para o sudeste.
 ~
-92 0 0 0 0 2
-D0
-Você vê uma estrada.
+92 0 2
+D 0
+VocÃª vÃª uma estrada.
 ~
-portão copas forma~
+portÃ£o copas forma~
+:n 1 O portÃ£o na forma do naipe de copas
 1 9201 9210
-D2
-Você vê o caminho por onde você veio.
+D 8
+VocÃª vÃª o caminho por onde vocÃª veio.
 ~
 ~
 0 -1 9203
 E
-placa~
-Você força sua vista e consegue ler o que está escrito na placa:
-
-Seja bem vindo ao reino de Copas.  Nosso soberano, o Rei de Copas governa
-este reino com justiça e sabedoria.  Esperamos que sua vinda aqui seja com
-boas intenções.  Saiba que a partir de sua entrada você estará sujeito às
-leis de nosso reino.
-
-                            Ass.: Ás de Copas - O Pacificador
+PortÃ£o~
+Um belo portÃ£o vermelho com a forma do naipe de copas.
 ~
 E
-Portão~
-Um belo portão vermelho com a forma do naipe de copas.
+placa~
+VocÃª forÃ§a sua vista e consegue ler o que estÃ¡ escrito na placa:
+
+Seja bem vindo ao reino de Copas.  Nosso soberano, o Rei de Copas governa
+este reino com justiÃ§a e sabedoria.  Esperamos que sua vinda aqui seja com
+boas intenÃ§Ãµes.  Saiba que a partir de sua entrada vocÃª estarÃ¡ sujeito Ã s
+leis de nosso reino.
+
+                            Ass.: Ãs de Copas - O Pacificador
 ~
 S
 #9207
-O Portão para o Reino de Ouros~
-   Você se depara com um portão todo vermelho com a forma do naipe de ouros.
-Uma placa está bem ao alto do portão com alguma coisa escrita mas você não
-consegue enxergar ...  Talvez se você examinasse mais de perto a placa...
-De qualquer maneira você não tem dúvidas de que está entrando na corte do
-Reino de Ouros.  Você pode seguir em frente, para o norte, ou para o sul.
+O PortÃ£o para o Reino de Ouros~
+   VocÃª se depara com um portÃ£o todo vermelho com a forma do naipe de ouros.
+Uma placa estÃ¡ bem ao alto do portÃ£o com alguma coisa escrita mas vocÃª nÃ£o
+consegue enxergar ...  Talvez se vocÃª examinasse mais de perto a placa...
+De qualquer maneira vocÃª nÃ£o tem dÃºvidas de que estÃ¡ entrando na corte do
+Reino de Ouros.  VocÃª pode seguir em frente, para o norte, ou para o sul.
 ~
-92 0 0 0 0 2
-D0
-Você vê uma estrada.
+92 0 2
+D 0
+VocÃª vÃª uma estrada.
 ~
-portão ouros forma~
+portÃ£o ouros forma~
+:n 1 O portÃ£o na forma do naipe de ouros
 1 9202 9211
-D2
-Você vê o caminho por onde você veio.
+D 2
+VocÃª vÃª o caminho por onde vocÃª veio.
 ~
 ~
 0 -1 9203
 E
-placa~
-Você força sua vista e consegue ler o que está escrito na placa:
-
-Seja bem vindo ao reino de Ouros.  Nosso soberano, o Rei de Ouros governa
-este reino com justiça e sabedoria.  Esperamos que sua vinda aqui seja com
-boas intenções.  Saiba que a partir de sua entrada você estará sujeito às
-leis de nosso reino.
-
-                            Ass.: Ás de Ouros - O Pacificador
+portÃ£o~
+Um belo portÃ£o vermelho com a forma do naipe de ouros.
 ~
 E
-portão~
-Um belo portão vermelho com a forma do naipe de ouros.
+placa~
+VocÃª forÃ§a sua vista e consegue ler o que estÃ¡ escrito na placa:
+
+Seja bem vindo ao reino de Ouros.  Nosso soberano, o Rei de Ouros governa
+este reino com justiÃ§a e sabedoria.  Esperamos que sua vinda aqui seja com
+boas intenÃ§Ãµes.  Saiba que a partir de sua entrada vocÃª estarÃ¡ sujeito Ã s
+leis de nosso reino.
+
+                            Ass.: Ãs de Ouros - O Pacificador
 ~
 S
 #9208
-O Portão para o Reino de Espadas~
-   Você se depara com um portão todo negro com a forma do naipe de espadas.
-Uma placa está bem ao alto do portão com alguma coisa escrita mas você não
-consegue enxergar ...  Talvez se você examinasse mais de perto a placa...
-De qualquer maneira você não tem dúvidas de que está entrando na corte do
-Reino de Espadas.  Você pode seguir em frente, para o norte, ou para o
+O PortÃ£o para o Reino de Espadas~
+   VocÃª se depara com um portÃ£o todo negro com a forma do naipe de espadas.
+Uma placa estÃ¡ bem ao alto do portÃ£o com alguma coisa escrita mas vocÃª nÃ£o
+consegue enxergar ...  Talvez se vocÃª examinasse mais de perto a placa...
+De qualquer maneira vocÃª nÃ£o tem dÃºvidas de que estÃ¡ entrando na corte do
+Reino de Espadas.  VocÃª pode seguir em frente, para o norte, ou para o
 sudoeste.
 ~
-92 0 0 0 0 2
-D0
-Você vê uma estrada.
+92 0 2
+D 0
+VocÃª vÃª uma estrada.
 ~
-portão espadas forma~
+portÃ£o espadas forma~
+:n 1 O portÃ£o na forma do naipe de espadas
 1 9203 9212
-D2
-Você vê o caminho por onde você veio.
+D 9
+VocÃª vÃª o caminho por onde vocÃª veio.
 ~
 ~
 0 -1 9204
 E
-placa~
-Você força sua vista e consegue ler o que está escrito na placa:
-
-Seja bem vindo ao reino de Espada.  Nosso soberano, o Rei de Espadas governa
-este reino com justiça e sabedoria.  Esperamos que sua vinda aqui seja com
-boas intenções.  Saiba que a partir de sua entrada você estará sujeito às
-leis de nosso reino.
-
-                            Ass.: Ás de Espada - O Pacificador
+portÃ£o~
+Um belo portÃ£o negro com a forma do naipe de espadas.
 ~
 E
-portão~
-Um belo portão negro com a forma do naipe de espadas.
+placa~
+VocÃª forÃ§a sua vista e consegue ler o que estÃ¡ escrito na placa:
+
+Seja bem vindo ao reino de Espada.  Nosso soberano, o Rei de Espadas governa
+este reino com justiÃ§a e sabedoria.  Esperamos que sua vinda aqui seja com
+boas intenÃ§Ãµes.  Saiba que a partir de sua entrada vocÃª estarÃ¡ sujeito Ã s
+leis de nosso reino.
+
+                            Ass.: Ãs de Espada - O Pacificador
 ~
 S
 #9209
-O Portão para o Reino de Paus~
-   Você se depara com um portão todo Negro com a forma do naipe de paus.
-Uma placa está bem ao alto do portão com alguma coisa escrita mas você não
-consegue enxergar ...  Talvez se você examinasse mais de perto a placa...
-De qualquer maneira você não tem dúvidas de que está entrando na corte do
-Reino de Paus.  Você pode seguir em frente, para o norte, ou para o
+O PortÃ£o para o Reino de Paus~
+   VocÃª se depara com um portÃ£o todo Negro com a forma do naipe de paus.
+Uma placa estÃ¡ bem ao alto do portÃ£o com alguma coisa escrita mas vocÃª nÃ£o
+consegue enxergar ...  Talvez se vocÃª examinasse mais de perto a placa...
+De qualquer maneira vocÃª nÃ£o tem dÃºvidas de que estÃ¡ entrando na corte do
+Reino de Paus.  VocÃª pode seguir em frente, para o norte, ou para o
 sudoeste.
 ~
-92 0 0 0 0 2
-D0
-Você vê uma estrada.
+92 0 2
+D 0
+VocÃª vÃª uma estrada.
 ~
-portão copas forma~
+portÃ£o copas forma~
+:n 1 O portÃ£o na forma do naipe de paus
 1 9204 9213
-D2
-Você vê o caminho por onde você veio.
+D 2
+VocÃª vÃª o caminho por onde vocÃª veio.
 ~
 ~
 0 -1 9204
 E
-placa~
-Você força sua vista e consegue ler o que está escrito na placa:
-
-Seja bem vindo ao Reino de Paus.  Nosso soberano, o Rei de Paus governa este
-reino com justiça e sabedoria.  Esperamos que sua vinda aqui seja com boas
-intenções.  Saiba que a partir de sua entrada você estará sujeito às leis de
-nosso reino.
-                           Ass.: Ás de Paus - O Pacificador
+portÃ£o~
+Um belo portÃ£o Negro com a forma do naipe de Paus.
 ~
 E
-portão~
-Um belo portão Negro com a forma do naipe de Paus.
+placa~
+VocÃª forÃ§a sua vista e consegue ler o que estÃ¡ escrito na placa:
+
+Seja bem vindo ao Reino de Paus.  Nosso soberano, o Rei de Paus governa este
+reino com justiÃ§a e sabedoria.  Esperamos que sua vinda aqui seja com boas
+intenÃ§Ãµes.  Saiba que a partir de sua entrada vocÃª estarÃ¡ sujeito Ã s leis de
+nosso reino.
+                           Ass.: Ãs de Paus - O Pacificador
 ~
 S
 #9210
 Estrada para o Castelo de Copas~
-   Atravessando o portão do Reino de Copas você entra em uma estrada pouco
-movimentada, que segue em direção ao castelo de Copas onde você pode ver uma
-linda torre vermelha.  Antes do castelo ao norte, você vê uma praça onde
-algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o sul você vê o
-portão.
+   Atravessando o portÃ£o do Reino de Copas vocÃª entra em uma estrada pouco
+movimentada, que segue em direÃ§Ã£o ao castelo de Copas onde vocÃª pode ver uma
+linda torre vermelha.  Antes do castelo ao norte, vocÃª vÃª uma praÃ§a onde
+algumas pessoas (?) estÃ£o paradas.  Ao voltar seu olhar para o sul vocÃª vÃª o
+portÃ£o.
 ~
-92 0 0 0 0 1
-D0
-Você vê um praça.
+92 0 1
+D 0
+VocÃª vÃª um praÃ§a.
 ~
 ~
 0 -1 9215
-D2
-Você vê o portão por onde você entrou.
+D 2
+VocÃª vÃª o portÃ£o por onde vocÃª entrou.
 ~
-portão copas forma~
+portÃ£o copas forma~
+:n 1 O portÃ£o na forma do naipe de copas
 1 9201 9206
 S
 #9211
 Estrada para o Castelo de Ouros~
-   Atravessando o portão do Reino de Ouros você entra em uma estrada pouco
-movimentada, que segue em direção ao castelo de Ouros onde você pode ver uma
-linda torre vermelha.  Antes do castelo ao norte, você vê uma praça onde
-algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o sul você vê o
-portão.
+   Atravessando o portÃ£o do Reino de Ouros vocÃª entra em uma estrada pouco
+movimentada, que segue em direÃ§Ã£o ao castelo de Ouros onde vocÃª pode ver uma
+linda torre vermelha.  Antes do castelo ao norte, vocÃª vÃª uma praÃ§a onde
+algumas pessoas (?) estÃ£o paradas.  Ao voltar seu olhar para o sul vocÃª vÃª o
+portÃ£o.
 ~
-92 0 0 0 0 1
-D0
-Você vê um praça.
+92 0 1
+D 0
+VocÃª vÃª um praÃ§a.
 ~
 ~
 0 -1 9216
-D2
-Você vê o portão por onde você entrou.
+D 2
+VocÃª vÃª o portÃ£o por onde vocÃª entrou.
 ~
-portão ouros forma~
+portÃ£o ouros forma~
+:n 1 O portÃ£o na forma do naipe de ouros
 1 9202 9207
 S
 #9212
 Estrada para o Castelo de Espadas~
-   Atravessando o portão do Reino de Espadas você entra em uma estrada pouco
-movimentada, que segue em direção ao castelo de Espadas onde você pode ver
-uma linda torre Negra.  Antes do castelo ao norte, você vê uma praça onde
-algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o sul você vê o
-portão.
+   Atravessando o portÃ£o do Reino de Espadas vocÃª entra em uma estrada pouco
+movimentada, que segue em direÃ§Ã£o ao castelo de Espadas onde vocÃª pode ver
+uma linda torre Negra.  Antes do castelo ao norte, vocÃª vÃª uma praÃ§a onde
+algumas pessoas (?) estÃ£o paradas.  Ao voltar seu olhar para o sul vocÃª vÃª o
+portÃ£o.
 ~
-92 0 0 0 0 1
-D0
-Você vê um praça.
+92 0 1
+D 0
+VocÃª vÃª um praÃ§a.
 ~
 ~
 0 -1 9217
-D2
-Você vê o portão por onde você entrou.
+D 2
+VocÃª vÃª o portÃ£o por onde vocÃª entrou.
 ~
-portão espadas forma~
+portÃ£o espadas forma~
+:n 1 O portÃ£o na forma do naipe de espadas
 1 9203 9208
 S
 #9213
 Estrada para o Castelo de Paus~
-   Atravessando o portão do Reino de Paus você entra em uma estrada pouco
-movimentada, que segue em direção ao castelo de Paus onde você pode ver uma
-linda torre Negra.  Antes do castelo ao norte, você vê uma praça onde
-algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o sul você vê o
-portão.
+   Atravessando o portÃ£o do Reino de Paus vocÃª entra em uma estrada pouco
+movimentada, que segue em direÃ§Ã£o ao castelo de Paus onde vocÃª pode ver uma
+linda torre Negra.  Antes do castelo ao norte, vocÃª vÃª uma praÃ§a onde
+algumas pessoas (?) estÃ£o paradas.  Ao voltar seu olhar para o sul vocÃª vÃª o
+portÃ£o.
 ~
-92 0 0 0 0 1
-D0
-Você vê um praça.
+92 0 1
+D 0
+VocÃª vÃª um praÃ§a.
 ~
 ~
 0 -1 9218
-D2
-Você vê o portão por onde você entrou.
+D 2
+VocÃª vÃª o portÃ£o por onde vocÃª entrou.
 ~
-portão copas forma~
+portÃ£o copas forma~
+:n 1 O portÃ£o na forma do naipe de copas
 1 9204 9209
 S
 #9214
 Estrada para o Castelo Multiforme~
-   Atravessando o portão do Reino Coringa você entra em uma estrada pouco
-movimentada, que segue em direção ao Castelo Multiforme onde você pode ver
-uma linda torre de cor indefinida.  Antes do castelo ao norte, você vê uma
-praça onde algumas pessoas (?) estão paradas.  Ao voltar seu olhar para o
-sul você vê o portão.
+   Atravessando o portÃ£o do Reino Coringa vocÃª entra em uma estrada pouco
+movimentada, que segue em direÃ§Ã£o ao Castelo Multiforme onde vocÃª pode ver
+uma linda torre de cor indefinida.  Antes do castelo ao norte, vocÃª vÃª uma
+praÃ§a onde algumas pessoas (?) estÃ£o paradas.  Ao voltar seu olhar para o
+sul vocÃª vÃª o portÃ£o.
 ~
-92 0 0 0 0 1
-D0
-Você vê um praça.
+92 0 1
+D 0
+VocÃª vÃª um praÃ§a.
 ~
 ~
 0 -1 9219
-D2
-Você vê o portão por onde você entrou.
+D 2
+VocÃª vÃª o portÃ£o por onde vocÃª entrou.
 ~
-portão indefinida forma~
+portÃ£o indefinida forma~
+:n 1 O portÃ£o de forma indefinida
 1 9200 9205
 S
 #9215
 O Lixo~
-   Você se encontra em uma praça bastante tumultuada onde os arcanos menores
-de Copas se reúnem para celebrar sabe-se lá o quê...
+   VocÃª se encontra em uma praÃ§a bastante tumultuada onde os arcanos menores
+de Copas se reÃºnem para celebrar sabe-se lÃ¡ o quÃª...
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D 0
 A Estrada continua rumo ao castelo.
 ~
 ~
 0 -1 9220
-D2
+D 2
 A estrada segue para o sul.
 ~
 ~
@@ -400,16 +430,16 @@ A estrada segue para o sul.
 S
 #9216
 O Lixo~
-   Você se encontra em uma praça bastante tumultuada onde os arcanos menores
-de Ouros se reúnem para celebrar sabe-se lá o quê...
+   VocÃª se encontra em uma praÃ§a bastante tumultuada onde os arcanos menores
+de Ouros se reÃºnem para celebrar sabe-se lÃ¡ o quÃª...
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D 0
 A Estrada continua rumo ao castelo.
 ~
 ~
 0 -1 9221
-D2
+D 2
 A estrada segue para o sul.
 ~
 ~
@@ -417,16 +447,16 @@ A estrada segue para o sul.
 S
 #9217
 O Lixo~
-   Você se encontra em uma praça bastante tumultuada onde os arcanos menores
-de Espadas se reúnem para celebrar sabe-se lá o quê...
+   VocÃª se encontra em uma praÃ§a bastante tumultuada onde os arcanos menores
+de Espadas se reÃºnem para celebrar sabe-se lÃ¡ o quÃª...
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D 0
 A Estrada continua rumo ao castelo.
 ~
 ~
 0 -1 9222
-D2
+D 2
 A estrada segue para o sul.
 ~
 ~
@@ -434,16 +464,16 @@ A estrada segue para o sul.
 S
 #9218
 O Lixo~
-   Você se encontra em uma praça bastante tumultuada onde os arcanos menores
-de Paus se reúnem para celebrar sabe-se lá o quê...
+   VocÃª se encontra em uma praÃ§a bastante tumultuada onde os arcanos menores
+de Paus se reÃºnem para celebrar sabe-se lÃ¡ o quÃª...
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D 0
 A Estrada continua rumo ao castelo.
 ~
 ~
 0 -1 9223
-D2
+D 2
 A estrada segue para o sul.
 ~
 ~
@@ -451,16 +481,16 @@ A estrada segue para o sul.
 S
 #9219
 O Lixo~
-   Você se encontra em uma praça bastante tumultuada onde os coringas menos
-nobres se reúnem para celebrar sabe-se lá o quê...
+   VocÃª se encontra em uma praÃ§a bastante tumultuada onde os coringas menos
+nobres se reÃºnem para celebrar sabe-se lÃ¡ o quÃª...
 ~
-92 0 0 0 0 1
-D0
+92 0 1
+D 0
 A Estrada continua rumo ao castelo.
 ~
 ~
 0 -1 9224
-D2
+D 2
 A estrada segue para o sul.
 ~
 ~
@@ -468,499 +498,524 @@ A estrada segue para o sul.
 S
 #9220
 Antes do Castelo de Copas~
-   Você está diante de um belo castelo de cartas vermelhas.  Sua entrada é
-sempre bem guardada.  O mistério do que te aguarda dentro deste castelo
-invade sua alma e você não consegue pensar em mais nada a não ser em entrar
+   VocÃª estÃ¡ diante de um belo castelo de cartas vermelhas.  Sua entrada Ã©
+sempre bem guardada.  O mistÃ©rio do que te aguarda dentro deste castelo
+invade sua alma e vocÃª nÃ£o consegue pensar em mais nada a nÃ£o ser em entrar
 nele e descobrir, talvez, o TESOURO perdido do Rei de Copas.  Seguindo para
-norte está a entrada do Castelo e ao sul uma praça bastante movimentada
-chama sua atenção.
+norte estÃ¡ a entrada do Castelo e ao sul uma praÃ§a bastante movimentada
+chama sua atenÃ§Ã£o.
 ~
-92 0 0 0 0 1
-D0
-O Castelo está a sua frente, com sempre de portas abertas.
+92 0 1
+D 0
+O Castelo estÃ¡ a sua frente, com sempre de portas abertas.
 ~
 ~
 0 -1 9225
-D2
-Você vê uma praça.
+D 2
+VocÃª vÃª uma praÃ§a.
 ~
 ~
-0 -1 9215
+0 -1  9215
 S
 #9221
 Antes do Castelo de Ouros~
-   Você está diante de um belo castelo de cartas vermelhas.  Sua entrada é
-sempre bem guardada.  O mistério do que te aguarda dentro deste castelo
-invade sua alma e você não consegue pensar em mais nada a não ser em entrar
+   VocÃª estÃ¡ diante de um belo castelo de cartas vermelhas.  Sua entrada Ã©
+sempre bem guardada.  O mistÃ©rio do que te aguarda dentro deste castelo
+invade sua alma e vocÃª nÃ£o consegue pensar em mais nada a nÃ£o ser em entrar
 nele e descobrir, talvez, o TESOURO perdido do Rei de Ouros.  Seguindo para
-norte está a entrada do Castelo e ao sul uma praça bastante movimentada
-chama sua atenção.
+norte estÃ¡ a entrada do Castelo e ao sul uma praÃ§a bastante movimentada
+chama sua atenÃ§Ã£o.
 ~
-92 0 0 0 0 1
-D0
-O Castelo está a sua frente, com sempre de portas abertas.
+92 0 1
+D 0
+O Castelo estÃ¡ a sua frente, com sempre de portas abertas.
 ~
 ~
 0 -1 9226
-D2
-Você vê uma praça.
+D 2
+VocÃª vÃª uma praÃ§a.
 ~
 ~
-0 -1 9216
+0 -1  9216
 S
 #9222
 Antes do Castelo de Espadas~
-   Você está diante de um belo castelo de cartas pretas.  Sua entrada é
-sempre bem guardada.  O mistério do que te aguarda dentro deste castelo
-invade sua alma e você não consegue pensar em mais nada a não ser em entrar
+   VocÃª estÃ¡ diante de um belo castelo de cartas pretas.  Sua entrada Ã©
+sempre bem guardada.  O mistÃ©rio do que te aguarda dentro deste castelo
+invade sua alma e vocÃª nÃ£o consegue pensar em mais nada a nÃ£o ser em entrar
 nele e descobrir, talvez, o TESOURO perdido do Rei de Espadas.  Seguindo
-para norte está a entrada do Castelo e ao sul uma praça bastante movimentada
-chama sua atenção.
+para norte estÃ¡ a entrada do Castelo e ao sul uma praÃ§a bastante movimentada
+chama sua atenÃ§Ã£o.
 ~
-92 0 0 0 0 1
-D0
-O Castelo está a sua frente, com sempre de portas abertas.
+92 0 1
+D 0
+O Castelo estÃ¡ a sua frente, com sempre de portas abertas.
 ~
 ~
 0 -1 9227
-D2
-Você vê uma praça.
+D 2
+VocÃª vÃª uma praÃ§a.
 ~
 ~
-0 -1 9217
+0 -1  9217
 S
 #9223
 Antes do Castelo de Paus~
-   Você está diante de um belo castelo de cartas pretas.  Sua entrada é
-sempre bem guardada.  O mistério do que te aguarda dentro deste castelo
-invade sua alma e você não consegue pensar em mais nada a não ser em entrar
+   VocÃª estÃ¡ diante de um belo castelo de cartas pretas.  Sua entrada Ã©
+sempre bem guardada.  O mistÃ©rio do que te aguarda dentro deste castelo
+invade sua alma e vocÃª nÃ£o consegue pensar em mais nada a nÃ£o ser em entrar
 nele e descobrir, talvez, o TESOURO perdido do Rei de Paus.  Seguindo para
-norte está a entrada do Castelo e ao sul uma praça bastante movimentada
-chama sua atenção.
+norte estÃ¡ a entrada do Castelo e ao sul uma praÃ§a bastante movimentada
+chama sua atenÃ§Ã£o.
 ~
-92 0 0 0 0 1
-D0
-O Castelo está a sua frente, com sempre de portas abertas.
+92 0 1
+D 0
+O Castelo estÃ¡ a sua frente, com sempre de portas abertas.
 ~
 ~
 0 -1 9228
-D2
-Você vê uma praça.
+D 2
+VocÃª vÃª uma praÃ§a.
 ~
 ~
-0 -1 9218
+0 -1  9218
 S
 #9224
 Antes do Castelo Multiforme~
-   Você está diante de um belo castelo de cartas multicoloridas.  Sua
-entrada é sempre bem guardada.  O mistério do que te aguarda dentro deste
-castelo invade sua alma e você não consegue pensar em mais nada a não ser em
+   VocÃª estÃ¡ diante de um belo castelo de cartas multicoloridas.  Sua
+entrada Ã© sempre bem guardada.  O mistÃ©rio do que te aguarda dentro deste
+castelo invade sua alma e vocÃª nÃ£o consegue pensar em mais nada a nÃ£o ser em
 entrar nele e descobrir, talvez, o TESOURO perdido do Rei Coringa.  Seguindo
-para norte está a entrada do Castelo e ao sul uma praça bastante movimentada
-chama sua atenção.
+para norte estÃ¡ a entrada do Castelo e ao sul uma praÃ§a bastante movimentada
+chama sua atenÃ§Ã£o.
 ~
-92 0 0 0 0 1
-D0
-O Castelo está a sua frente, com sempre de portas abertas.
+92 0 1
+D 0
+O Castelo estÃ¡ a sua frente, com sempre de portas abertas.
 ~
 ~
 0 -1 9229
-D2
-Você vê uma praça.
+D 2
+VocÃª vÃª uma praÃ§a.
 ~
 ~
-0 -1 9219
+0 -1  9219
 S
 #9225
 A Sala do Trono de Copas~
-   Você se encontra diante de um salão enorme com cortinas vermelhas e o
-chão quadriculado em branco e vermelho.  Na parede há um ENORME painel com o
-brasão de Copas.  A sua frente o mais belo de todos os tronos que você já
+   VocÃª se encontra diante de um salÃ£o enorme com cortinas vermelhas e o
+chÃ£o quadriculado em branco e vermelho.  Na parede hÃ¡ um ENORME painel com o
+brasÃ£o de Copas.  A sua frente o mais belo de todos os tronos que vocÃª jÃ¡
 viu.  Forrado com cetim vermelho esse trono deve pertencer ao belo Rei de
-Copas e um trono um pouco menor parece não ser usado há muito tempo, o que o
-faz pensar que a rainha não mais habita esse mundo.  A leste você vê uma
-pequena sala, que, embora pareça pequena, também parece muito luxuosa - ao
-menos é o q você pode ver pela porta entreaberta que se fecha
-repentinamente.  No canto noroeste da sala você vê uma porta que
-provavelmente o levará para a torre que você via do lado de fora.
+Copas e um trono um pouco menor parece nÃ£o ser usado hÃ¡ muito tempo, o que o
+faz pensar que a rainha nÃ£o mais habita esse mundo.  A leste vocÃª vÃª uma
+pequena sala, que, embora pareÃ§a pequena, tambÃ©m parece muito luxuosa - ao
+menos Ã© o q vocÃª pode ver pela porta entreaberta que se fecha
+repentinamente.  No canto noroeste da sala vocÃª vÃª uma porta que
+provavelmente o levarÃ¡ para a torre que vocÃª via do lado de fora.
 ~
-92 8 0 0 0 0
-D0
-Você vê uma porta.
-~
-porta~
-1 -1 9235
-D1
-A fresta deixada pela porta não permite uma visão mais detalhada.
+92 d 0
+D 1
+A fresta deixada pela porta nÃ£o permite uma visÃ£o mais detalhada.
 ~
 porta~
+:n 2 A porta bem trabalhada.
 1 -1 9230
-D2
-Você vê a entrada do castelo.
+D 6
+VocÃª vÃª uma porta.
+~
+porta~
+:n 2 A porta simples
+1 -1 9235
+D 2
+VocÃª vÃª a entrada do castelo.
 ~
 ~
 0 -1 9220
 S
 #9226
 A Sala do Trono de Ouros~
-   Você se encontra diante de um salão enorme com cortinas vermelhas e o
-chão quadriculado em branco e vermelho.  Na parede há um ENORME painel com o
-brasão de Ouros.  A sua frente o mais belo de todos os tronos que você já
+   VocÃª se encontra diante de um salÃ£o enorme com cortinas vermelhas e o
+chÃ£o quadriculado em branco e vermelho.  Na parede hÃ¡ um ENORME painel com o
+brasÃ£o de Ouros.  A sua frente o mais belo de todos os tronos que vocÃª jÃ¡
 viu.  Forrado com cetim vermelho esse trono deve pertencer ao belo Rei de
-Ouros e um trono um pouco menor parece não ser usado há muito tempo, o que o
-faz pensar que a rainha não mais habita esse mundo.  A leste você vê uma
-pequena sala, que, embora pareça pequena, também parece muito luxuosa - ao
-menos é o q você pode ver pela porta entreaberta que se fecha
-repentinamente.  No canto noroeste da sala você vê uma porta que
-provavelmente o levará para a torre que você via do lado de fora.
+Ouros e um trono um pouco menor parece nÃ£o ser usado hÃ¡ muito tempo, o que o
+faz pensar que a rainha nÃ£o mais habita esse mundo.  A leste vocÃª vÃª uma
+pequena sala, que, embora pareÃ§a pequena, tambÃ©m parece muito luxuosa - ao
+menos Ã© o q vocÃª pode ver pela porta entreaberta que se fecha
+repentinamente.  No canto noroeste da sala vocÃª vÃª uma porta que
+provavelmente o levarÃ¡ para a torre que vocÃª via do lado de fora.
 ~
-92 8 0 0 0 0
-D0
-Você vê uma porta.
-~
-porta~
-1 -1 9236
-D1
-A fresta deixada pela porta não permite uma visão mais detalhada.
+92 d 0
+D 1
+A fresta deixada pela porta nÃ£o permite uma visÃ£o mais detalhada.
 ~
 porta~
+:n 2 A porta bem trabalhada
 1 -1 9231
-D2
-Você vê a entrada do castelo.
+D 6
+VocÃª vÃª uma porta.
+~
+porta~
+:n 2 A porta simples
+1 -1 9236
+D 2
+VocÃª vÃª a entrada do castelo.
 ~
 ~
 0 -1 9221
 S
 #9227
 A Sala do Trono de Espadas~
-   Você se encontra diante de um salão enorme com cortinas negras e o chão
-quadriculado em branco e preto.  Na parede há um ENORME painel com o brasão
-de Espadas.  A sua frente o mais belo de todos os tronos que você já viu.
+   VocÃª se encontra diante de um salÃ£o enorme com cortinas negras e o chÃ£o
+quadriculado em branco e preto.  Na parede hÃ¡ um ENORME painel com o brasÃ£o
+de Espadas.  A sua frente o mais belo de todos os tronos que vocÃª jÃ¡ viu.
 Forrado com cetim negro esse trono deve pertencer ao belo Rei de Espadas e
-um trono um pouco menor parece não ser usado há muito tempo, o que o faz
-pensar que a rainha não mais habita esse mundo.  A leste você vê uma pequena
-sala, que, embora pareça pequena, também parece muito luxuosa - ao menos é o
-q você pode ver pela porta entreaberta que se fecha repentinamente.  No
-canto noroeste da sala você vê uma porta que provavelmente o levará para a
-torre que você via do lado de fora.
+um trono um pouco menor parece nÃ£o ser usado hÃ¡ muito tempo, o que o faz
+pensar que a rainha nÃ£o mais habita esse mundo.  A leste vocÃª vÃª uma pequena
+sala, que, embora pareÃ§a pequena, tambÃ©m parece muito luxuosa - ao menos Ã© o
+q vocÃª pode ver pela porta entreaberta que se fecha repentinamente.  No
+canto noroeste da sala vocÃª vÃª uma porta que provavelmente o levarÃ¡ para a
+torre que vocÃª via do lado de fora.
 ~
-92 8 0 0 0 0
-D0
-Você vê uma porta.
-~
-porta~
-1 -1 9237
-D1
-A fresta deixada pela porta não permite uma visão mais detalhada.
+92 d 0
+D 1
+A fresta deixada pela porta nÃ£o permite uma visÃ£o mais detalhada.
 ~
 porta~
+:n 2 A porta bem trabalhada
 1 -1 9232
-D2
-Você vê a entrada do castelo.
+D 6
+VocÃª vÃª uma porta.
+~
+porta~
+:n 2 A porta simples
+1 -1 9237
+D 2
+VocÃª vÃª a entrada do castelo.
 ~
 ~
 0 -1 9222
 S
 #9228
 A Sala do Trono de Paus~
-   Você se encontra diante de um salão enorme com cortinas negras e o chão
-quadriculado em branco e preto.  Na parede há um ENORME painel com o brasão
-de Paus.  A sua frente o mais belo de todos os tronos que você já viu.
+   VocÃª se encontra diante de um salÃ£o enorme com cortinas negras e o chÃ£o
+quadriculado em branco e preto.  Na parede hÃ¡ um ENORME painel com o brasÃ£o
+de Paus.  A sua frente o mais belo de todos os tronos que vocÃª jÃ¡ viu.
 Forrado com cetim negro esse trono deve pertencer ao belo Rei de Paus e um
-trono um pouco menor parece não ser usado há muito tempo, o que o faz pensar
-que a rainha não mais habita esse mundo.  A leste você vê uma pequena sala,
-que, embora pareça pequena, também parece muito luxuosa - ao menos é o q
-você pode ver pela porta entreaberta que se fecha repentinamente.  No canto
-noroeste da sala você vê uma porta que provavelmente o levará para a torre
-que você via do lado de fora.
+trono um pouco menor parece nÃ£o ser usado hÃ¡ muito tempo, o que o faz pensar
+que a rainha nÃ£o mais habita esse mundo.  A leste vocÃª vÃª uma pequena sala,
+que, embora pareÃ§a pequena, tambÃ©m parece muito luxuosa - ao menos Ã© o q
+vocÃª pode ver pela porta entreaberta que se fecha repentinamente.  No canto
+noroeste da sala vocÃª vÃª uma porta que provavelmente o levarÃ¡ para a torre
+que vocÃª via do lado de fora.
 ~
-92 8 0 0 0 0
-D0
-Você vê uma porta.
-~
-porta~
-1 -1 9238
-D1
-A fresta deixada pela porta não permite uma visão mais detalhada.
+92 d 0
+D 1
+A fresta deixada pela porta nÃ£o permite uma visÃ£o mais detalhada.
 ~
 porta~
+:n 2 A porta bem trabalhada
 1 -1 9233
-D2
-Você vê a entrada do castelo.
+D 6
+VocÃª vÃª uma porta.
+~
+porta~
+:n 2 A porta simples
+1 -1 9238
+D 2
+VocÃª vÃª a entrada do castelo.
 ~
 ~
 0 -1 9223
 S
 #9229
 A Sala do Trono do Rei Coringa~
-   Você se encontra diante de um salão enorme com cortinas coloridas e o
-chão quadriculado em vermelho e preto.  Na parede há um ENORME painel com o
-brasão sem forma definida.  A sua frente um trono que parece imitar, sem
+   VocÃª se encontra diante de um salÃ£o enorme com cortinas coloridas e o
+chÃ£o quadriculado em vermelho e preto.  Na parede hÃ¡ um ENORME painel com o
+brasÃ£o sem forma definida.  A sua frente um trono que parece imitar, sem
 sucesso a beleza de outros.  Forrado com cetim de uma cor indefinida esse
-trono deve pertencer ao Rei Coringa e um trono um pouco menor parece não ser
-usado há muito tempo, o que o faz pensar que a rainha não mais habita esse
-mundo.  A leste você vê uma pequena sala, que, embora pareça pequena, também
-parece muito luxuosa - ao menos é o q você pode ver pela porta entreaberta
-que se fecha repentinamente.  No canto noroeste da sala você vê uma porta
-que provavelmente o levará para a torre que você via do lado de fora.  Você
-ainda pode sair do castelo pela direção sul.
+trono deve pertencer ao Rei Coringa e um trono um pouco menor parece nÃ£o ser
+usado hÃ¡ muito tempo, o que o faz pensar que a rainha nÃ£o mais habita esse
+mundo.  A leste vocÃª vÃª uma pequena sala, que, embora pareÃ§a pequena, tambÃ©m
+parece muito luxuosa - ao menos Ã© o q vocÃª pode ver pela porta entreaberta
+que se fecha repentinamente.  No canto noroeste da sala vocÃª vÃª uma porta
+que provavelmente o levarÃ¡ para a torre que vocÃª via do lado de fora.  VocÃª
+ainda pode sair do castelo pela direÃ§Ã£o sul.
 ~
-92 8 0 0 0 0
-D0
-Você vê uma porta.
-~
-porta~
-1 -1 9239
-D1
-A fresta deixada pela porta não permite uma visão mais detalhada.
+92 d 0
+D 1
+A fresta deixada pela porta nÃ£o permite uma visÃ£o mais detalhada.
 ~
 porta~
+:n 2 A porta bem trabalhada
 1 -1 9234
-D2
-Você vê a entrada do castelo.
+D 6
+VocÃª vÃª uma porta.
+~
+porta~
+:n 2 A porta simples
+1 -1 9239
+D 2
+VocÃª vÃª a entrada do castelo.
 ~
 ~
 0 -1 9224
 S
 #9230
-O Quarto do Ás de Copas~
-   Você está diante de um luxuosíssimo aposento com tudo que há de melhor em
-conforto.  Também, pudera, este quarto pertence ao ÁS de COPAS!  O mais
+O Quarto do Ãs de Copas~
+   VocÃª estÃ¡ diante de um luxuosÃ­ssimo aposento com tudo que hÃ¡ de melhor em
+conforto.  TambÃ©m, pudera, este quarto pertence ao ÃS de COPAS!  O mais
 habilidoso de todos os habitantes deste e de muitos outros reinos!  Sua
-habilidade com espadas, chicotes, lanças e todo tipo de arma é famosa por
-toda Vitália!  Sorte sua você não encontra-lo aqui ...  Mas espere ...  Onde
-andará o Pacificador do Reino de Copas?  Antes que o Ás chegue você ainda
-pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
+habilidade com espadas, chicotes, lanÃ§as e todo tipo de arma Ã© famosa por
+toda VitÃ¡lia!  Sorte sua vocÃª nÃ£o encontra-lo aqui ...  Mas espere ...  Onde
+andarÃ¡ o Pacificador do Reino de Copas?  Antes que o Ãs chegue vocÃª ainda
+pode correr de volta ao salÃ£o a oeste ou ficar e esperar para enfrentÃ¡-lo.
 ~
-92 8 0 0 0 0
-D3
-Sua única saida é para oeste.
+92 d 0
+D 3
+Sua Ãºnica saida Ã© para oeste.
 ~
 porta~
+:n 2 A porta bem trabalhada
 1 -1 9225
 S
 #9231
-O Quarto do Ás de Ouros~
-   Você está diante de um luxuosíssimo aposento com tudo que há de melhor em
-conforto.  Também, pudera, este quarto pertence ao ÁS de OUROS!  O mais
+O Quarto do Ãs de Ouros~
+   VocÃª estÃ¡ diante de um luxuosÃ­ssimo aposento com tudo que hÃ¡ de melhor em
+conforto.  TambÃ©m, pudera, este quarto pertence ao ÃS de OUROS!  O mais
 habilidoso de todos os habitantes deste e de muitos outros reinos!  Sua
-habilidade com espadas, chicotes, lanças e todo tipo de arma é famosa por
-toda Vitália!  Sorte sua você não encontra-lo aqui ...  Mas espere ...  Onde
-andará o Pacificador do Reino de Ouros?  Antes que o Ás chegue você ainda
-pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
+habilidade com espadas, chicotes, lanÃ§as e todo tipo de arma Ã© famosa por
+toda VitÃ¡lia!  Sorte sua vocÃª nÃ£o encontra-lo aqui ...  Mas espere ...  Onde
+andarÃ¡ o Pacificador do Reino de Ouros?  Antes que o Ãs chegue vocÃª ainda
+pode correr de volta ao salÃ£o a oeste ou ficar e esperar para enfrentÃ¡-lo.
 ~
-92 8 0 0 0 0
-D3
-Sua única saida é para oeste.
+92 d 0
+D 3
+Sua Ãºnica saida Ã© para oeste.
 ~
 porta~
+:n 2 A porta bem trabalhada
 1 -1 9226
 S
 #9232
-O Quarto do Ás de Espadas~
-   Você está diante de um luxuosíssimo aposento com tudo que há de melhor em
-conforto.  Também, pudera, este quarto pertence ao ÁS de ESPADAS!  O mais
+O Quarto do Ãs de Espadas~
+   VocÃª estÃ¡ diante de um luxuosÃ­ssimo aposento com tudo que hÃ¡ de melhor em
+conforto.  TambÃ©m, pudera, este quarto pertence ao ÃS de ESPADAS!  O mais
 habilidoso de todos os habitantes deste e de muitos outros reinos!  Sua
-habilidade com espadas, chicotes, lanças e todo tipo de arma é famosa por
-toda Vitália!  Sorte sua você não encontra-lo aqui ...  Mas espere ...  Onde
-andará o Pacificador do Reino de Espadas?  Antes que o Ás chegue você ainda
-pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
+habilidade com espadas, chicotes, lanÃ§as e todo tipo de arma Ã© famosa por
+toda VitÃ¡lia!  Sorte sua vocÃª nÃ£o encontra-lo aqui ...  Mas espere ...  Onde
+andarÃ¡ o Pacificador do Reino de Espadas?  Antes que o Ãs chegue vocÃª ainda
+pode correr de volta ao salÃ£o a oeste ou ficar e esperar para enfrentÃ¡-lo.
 ~
-92 8 0 0 0 0
-D3
-Sua única saida é para oeste.
+92 d 0
+D 3
+Sua Ãºnica saida Ã© para oeste.
 ~
 porta~
+:n 2 A porta bem trabalhada
 1 -1 9227
 S
 #9233
-O Quarto do Ás de Paus~
-   Você está diante de um luxuosíssimo aposento com tudo que há de melhor em
-conforto.  Também, pudera, este quarto pertence ao ÁS de PAUS!  O mais
+O Quarto do Ãs de Paus~
+   VocÃª estÃ¡ diante de um luxuosÃ­ssimo aposento com tudo que hÃ¡ de melhor em
+conforto.  TambÃ©m, pudera, este quarto pertence ao ÃS de PAUS!  O mais
 habilidoso de todos os habitantes deste e de muitos outros reinos!  Sua
-habilidade com espadas, chicotes, lanças e todo tipo de arma é famosa por
-toda Vitália!  Sorte sua você não encontra-lo aqui ...  Mas espere ...  Onde
-andará o Pacificador do Reino de Paus?  Antes que o Ás chegue você ainda
-pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
+habilidade com espadas, chicotes, lanÃ§as e todo tipo de arma Ã© famosa por
+toda VitÃ¡lia!  Sorte sua vocÃª nÃ£o encontra-lo aqui ...  Mas espere ...  Onde
+andarÃ¡ o Pacificador do Reino de Paus?  Antes que o Ãs chegue vocÃª ainda
+pode correr de volta ao salÃ£o a oeste ou ficar e esperar para enfrentÃ¡-lo.
 ~
-92 8 0 0 0 0
-D3
-Sua única saida é para oeste.
+92 d 0
+D 3
+Sua Ãºnica saida Ã© para oeste.
 ~
 porta~
+:n 2 A porta bem trabalhada
 1 -1 9228
 S
 #9234
-O Quarto do Falso Ás~
-   Você está diante de um luxuosíssimo aposento com tudo que há de melhor em
-conforto.  Também, pudera, este quarto pertence ao Falso Ás!  O mais
+O Quarto do Falso Ãs~
+   VocÃª estÃ¡ diante de um luxuosÃ­ssimo aposento com tudo que hÃ¡ de melhor em
+conforto.  TambÃ©m, pudera, este quarto pertence ao Falso Ãs!  O mais
 habilidoso de todos os habitantes deste e de muitos outros reinos!  Sua
-habilidade com espadas, chicotes, lanças e todo tipo de arma é famosa por
-toda Vitália!  Sorte sua você não encontra-lo aqui ...  Mas espere ...  Onde
-andará o Pacificador do Reino Coringa?  Antes que o Ás chegue você ainda
-pode correr de volta ao salão a oeste ou ficar e esperar para enfrentá-lo.
+habilidade com espadas, chicotes, lanÃ§as e todo tipo de arma Ã© famosa por
+toda VitÃ¡lia!  Sorte sua vocÃª nÃ£o encontra-lo aqui ...  Mas espere ...  Onde
+andarÃ¡ o Pacificador do Reino Coringa?  Antes que o Ãs chegue vocÃª ainda
+pode correr de volta ao salÃ£o a oeste ou ficar e esperar para enfrentÃ¡-lo.
 ~
-92 8 0 0 0 0
-D3
-Sua única saida é para oeste.
+92 d 0
+D 3
+Sua Ãºnica saida Ã© para oeste.
 ~
 porta~
+:n 2 A porta bem trabalhada
 1 -1 9229
 S
 #9235
 A Subindo a Torre de Copas~
-   Você está em uma escada reta que o conduz ao alto da torre de Copas.
-Você não deixa de pensar que tipo de surpresa você encontrará no fim dessa
-escada...  Você chega ao final da escada onde há uma porta fechada.  Você
-ainda pode voltar ao salão do trono pela mesma escada na direção
+   VocÃª estÃ¡ em uma escada reta que o conduz ao alto da torre de Copas.
+VocÃª nÃ£o deixa de pensar que tipo de surpresa vocÃª encontrarÃ¡ no fim dessa
+escada...  VocÃª chega ao final da escada onde hÃ¡ uma porta fechada.  VocÃª
+ainda pode voltar ao salÃ£o do trono pela mesma escada na direÃ§Ã£o
 sul.
 ~
-92 8 0 0 0 0
-D0
-Você vê a porta fechada.
+92 d 0
+D 0
+VocÃª vÃª a porta fechada.
 ~
 porta~
+:n 2 A porta da torre
 1 -1 9240
-D2
-A descida da escada parece ser mais fácil.
+D 8
+A descida da escada parece ser mais fÃ¡cil.
 ~
 porta~
+:n 2 A porta simples
 1 -1 9225
 S
 #9236
 A Subindo a Torre de Ouros~
-   Você está em uma escada reta que o conduz ao alto da torre de Ouros.
-Você não deixa de pensar que tipo de surpresa você encontrará no fim dessa
-escada...  Você chega ao final da escada onde há uma porta fechada.  Você
-ainda pode voltar ao salão do trono pela mesma escada na direção sul.
+   VocÃª estÃ¡ em uma escada reta que o conduz ao alto da torre de Ouros.
+VocÃª nÃ£o deixa de pensar que tipo de surpresa vocÃª encontrarÃ¡ no fim dessa
+escada...  VocÃª chega ao final da escada onde hÃ¡ uma porta fechada.  VocÃª
+ainda pode voltar ao salÃ£o do trono pela mesma escada na direÃ§Ã£o sul.
 ~
-92 8 0 0 0 0
-D0
-Você vê a porta fechada.
+92 d 0
+D 0
+VocÃª vÃª a porta fechada.
 ~
 porta~
+:n 2 A porta da torre
 1 -1 9241
-D2
-A descida da escada parece ser mais fácil.
+D 8
+A descida da escada parece ser mais fÃ¡cil.
 ~
 porta~
+:n 2 A porta simples
 1 -1 9226
 S
 #9237
 A Subindo a Torre de Espadas~
-   Você está em uma escada reta que o conduz ao alto da torre de Espadas.
-Você não deixa de pensar que tipo de surpresa você encontrará no fim dessa
-escada...  Você chega ao final da escada onde há uma porta fechada.  Você
-ainda pode voltar ao salão do trono pela mesma escada na direção sul.
+   VocÃª estÃ¡ em uma escada reta que o conduz ao alto da torre de Espadas.
+VocÃª nÃ£o deixa de pensar que tipo de surpresa vocÃª encontrarÃ¡ no fim dessa
+escada...  VocÃª chega ao final da escada onde hÃ¡ uma porta fechada.  VocÃª
+ainda pode voltar ao salÃ£o do trono pela mesma escada na direÃ§Ã£o sul.
 ~
-92 8 0 0 0 0
-D0
-Você vê a porta fechada.
+92 d 0
+D 0
+VocÃª vÃª a porta fechada.
 ~
 porta~
+:n 2 A porta da torre
 1 -1 9242
-D2
-A descida da escada parece ser mais fácil.
+D 8
+A descida da escada parece ser mais fÃ¡cil.
 ~
 porta~
+:n 2 A porta simples
 1 -1 9227
 S
 #9238
 A Subindo a Torre de Paus~
-   Você está em uma escada reta que o conduz ao alto da torre de Paus.  Você
-não deixa de pensar que tipo de surpresa você encontrará no fim dessa
-escada...  Você chega ao final da escada onde há uma porta fechada.  Você
-ainda pode voltar ao salão do trono pela mesma escada na direção sul.
+   VocÃª estÃ¡ em uma escada reta que o conduz ao alto da torre de Paus.  VocÃª
+nÃ£o deixa de pensar que tipo de surpresa vocÃª encontrarÃ¡ no fim dessa
+escada...  VocÃª chega ao final da escada onde hÃ¡ uma porta fechada.  VocÃª
+ainda pode voltar ao salÃ£o do trono pela mesma escada na direÃ§Ã£o sul.
 ~
-92 8 0 0 0 0
-D0
-Você vê a porta fechada.
+92 d 0
+D 0
+VocÃª vÃª a porta fechada.
 ~
 porta~
+:n 2 A porta da torre
 1 -1 9243
-D2
-A descida da escada parece ser mais fácil.
+D 8
+A descida da escada parece ser mais fÃ¡cil.
 ~
 porta~
+:n 2 A porta simples
 1 -1 9228
 S
 #9239
 A Subindo a Torre Coringa~
-   Você está em uma escada reta que o conduz ao alto da torre Coringa.  Você
-não deixa de pensar que tipo de surpresa você encontrará no fim dessa
-escada...  Você chega ao final da escada onde há uma porta fechada.  Você
-ainda pode voltar ao salão do trono pela mesma escada na direção sudeste. 
+   VocÃª estÃ¡ em uma escada reta que o conduz ao alto da torre Coringa.  VocÃª
+nÃ£o deixa de pensar que tipo de surpresa vocÃª encontrarÃ¡ no fim dessa
+escada...  VocÃª chega ao final da escada onde hÃ¡ uma porta fechada.  VocÃª
+ainda pode voltar ao salÃ£o do trono pela mesma escada na direÃ§Ã£o sudeste. 
 ~
-92 8 0 0 0 0
-D0
-Você vê a porta fechada.
+92 d 0
+D 0
+VocÃª vÃª a porta fechada.
 ~
 porta~
+:n 2 A porta da torre
 1 -1 9244
-D2
-A descida da escada parece ser mais fácil.
+D 8
+A descida da escada parece ser mais fÃ¡cil.
 ~
 porta~
+:n 2 A porta simples
 1 -1 9229
 S
 #9240
 O Alto da Torre de Copas~
-   Você nota que, vendo daqui, o interior da torre é muito menor do que você
+   VocÃª nota que, vendo daqui, o interior da torre Ã© muito menor do que vocÃª
 havia imaginado pelo lado de fora.  Na verdade trata-se de um pequeno
 aposento onde o Rei de Copas deixa sua filha para livra-la dos
-conquistadores baratos que rondam o Reino de Copas atrás de belas donzelas
-com dotes altos como a Dama de Copas.  Subitamente você percebe que a porta
-se tranca com uma rapidez estupenda impedindo seu retorno!  Parece que você
+conquistadores baratos que rondam o Reino de Copas atrÃ¡s de belas donzelas
+com dotes altos como a Dama de Copas.  Subitamente vocÃª percebe que a porta
+se tranca com uma rapidez estupenda impedindo seu retorno!  Parece que vocÃª
 ficou preso aqui ....
 ~
-92 8 0 0 0 0
+92 d 0
 S
 #9241
 O Alto da Torre de Ouros~
-   Você nota que, vendo daqui, o interior da torre é muito menor do que você
+   VocÃª nota que, vendo daqui, o interior da torre Ã© muito menor do que vocÃª
 havia imaginado pelo lado de fora.  Na verdade trata-se de um pequeno
 aposento onde o Rei de Ouros deixa sua filha para livra-la dos
-conquistadores baratos que rondam o Reino de Ouros atrás de belas donzelas
-com dotes altos como a Dama de Ouros.  Subitamente você percebe que a porta
-se tranca com uma rapidez estupenda impedindo seu retorno!  Parece que você
+conquistadores baratos que rondam o Reino de Ouros atrÃ¡s de belas donzelas
+com dotes altos como a Dama de Ouros.  Subitamente vocÃª percebe que a porta
+se tranca com uma rapidez estupenda impedindo seu retorno!  Parece que vocÃª
 ficou preso aqui ....
 ~
-92 8 0 0 0 0
+92 d 0
 S
 #9242
 O Alto da Torre de Espadas~
-   Você nota que, vendo daqui, o interior da torre é muito menor do que você
+   VocÃª nota que, vendo daqui, o interior da torre Ã© muito menor do que vocÃª
 havia imaginado pelo lado de fora.  Na verdade trata-se de um pequeno
 aposento onde o Rei de Espadas deixa sua filha para livra-la dos
-conquistadores baratos que rondam o Reino de Espadas atrás de belas donzelas
-com dotes altos como a Dama de Espadas.  Subitamente você percebe que a
+conquistadores baratos que rondam o Reino de Espadas atrÃ¡s de belas donzelas
+com dotes altos como a Dama de Espadas.  Subitamente vocÃª percebe que a
 porta se tranca com uma rapidez estupenda impedindo seu retorno!  Parece que
-você ficou preso aqui ....
+vocÃª ficou preso aqui ....
 ~
-92 8 0 0 0 0
+92 d 0
 S
 #9243
 O Alto da Torre de Paus~
-   Você nota que, vendo daqui, o interior da torre é muito menor do que você
+   VocÃª nota que, vendo daqui, o interior da torre Ã© muito menor do que vocÃª
 havia imaginado pelo lado de fora.  Na verdade trata-se de um pequeno
 aposento onde o Rei de Paus deixa sua filha para livra-la dos conquistadores
-baratos que rondam o Reino de Paus atrás de belas donzelas com dotes altos
-como a Dama de Paus.  Subitamente você percebe que a porta se tranca com uma
-rapidez estupenda impedindo seu retorno!  Parece que você ficou preso aqui
+baratos que rondam o Reino de Paus atrÃ¡s de belas donzelas com dotes altos
+como a Dama de Paus.  Subitamente vocÃª percebe que a porta se tranca com uma
+rapidez estupenda impedindo seu retorno!  Parece que vocÃª ficou preso aqui
 ....
 ~
-92 8 0 0 0 0
+92 d 0
 S
 #9244
 O Alto da Torre Coringa~
-   Você nota que, vendo daqui, o interior da torre é muito menor do que você
+   VocÃª nota que, vendo daqui, o interior da torre Ã© muito menor do que vocÃª
 havia imaginado pelo lado de fora.  Na verdade trata-se de um pequeno
 aposento onde o Rei Coringa deixa sua filha (?) para livra-la dos
-conquistadores baratos que rondam o Reino Coringa atrás de belas (?)
-donzelas (?) com dotes altos como a Dama Coringa.  Subitamente você percebe
+conquistadores baratos que rondam o Reino Coringa atrÃ¡s de belas (?)
+donzelas (?) com dotes altos como a Dama Coringa.  Subitamente vocÃª percebe
 que a porta se tranca com uma rapidez estupenda impedindo seu retorno!
-Parece que você ficou preso aqui ....
+Parece que vocÃª ficou preso aqui ....
 ~
-92 8 0 0 0 0
+92 d 0
 S
-$~
+$
