@@ -1945,4 +1945,112 @@ D5
 ~
 0 -1 3087
 S
+#3089
+A Entrada para a Associação dos Rangers~
+A Entrada para a Associação dos Rangers parece com o interior de uma cabana
+sem janelas e mobilias. As luzes estão vindo de
+lamparinas nas paredes, e uma chama queima em um coração de pedra. Uma porta que
+parece ter sido cortada na parede oeste leva para o bar. Um
+arco para o sul leva para Uma Estrada Através da Planicie.
+~
+30 8 0 0 0 0
+D2
+Você pode ver uma estrada através da planície.
+~
+~
+0 -1 6092
+D3
+O bar parece ser apenas um pouco mais confortavel que a sala onde você está agora.
+~
+~
+0 -1 3090
+E
+lamparina lamparinas~
+Você não vê nada de especial sobre as lamparinas.
+~
+E
+lareira coracao fogo~
+Você não vê nada de especial sobre o coração.
+~
+S
+#3090
+O Bar do Chápeu de Penas~
+O bar parece bem menos interessante visto de fora. Agora que
+você está aqui, você pode ver alguns bancos, um índio de madeira, e as
+cabeças de troféu da última viagem da família Humulis. A sala está
+iluminada por lamparinas, e um fogo queima em um coração de pedra.
+Um arco de pedra para o norte leva para o Santuário Interno da Associação. A
+entrada da associação é através da porta cortada na parede leste. Tem uma
+placa pendurada na parede oeste.
+~
+30 8 0 0 0 0
+D0
+Para o norte está o Santuário Interno do seu Mestre.
+~
+~
+0 -1 3091
+D1
+Você vê de relance a entra da sua associação.
+~
+~
+0 -1 3089
+E
+placa~
+A placa diz:
+Aqui está o lance:
+Buy - Compre algo de beber da garçonete.
+List - A garçonete vai ler a lista de preços.
+A proposito, a garçonete não está a venda.
+~
+E
+madeira indio~
+Ele provavelmente deveria estar segurando um cigarro, mas não. Ele
+parece quase vivo, mas uma batida rápida confirma que ele é feito de
+ madeira maciça.
+~
+E
+banco bancos~
+Os bancos parecem ser bem confortáveis.
+~
+E
+cabeca trofeu cabecas trofeis~
+Você vê uma zebra, um elefante, e MEU DEUS aquele deve ter sido um
+rinoceronte ENORME.
+~
+E
+lamparina lamparinas~
+Você não vê nada de especial sobre as lamparinas.
+~
+E
+lareira coracao fogo~
+Você não vê nada de especial sobre o coração.
+~
+S
+#3091
+O Santuário Interno dos Rangers~
+Definitivamente tem um... sentimentonde floresta no lugar.
+As paredes são feitas de troncos entrelaçados com prateleiras de
+livros. Acima de você tem um teto feito de folhas e galhos. No meio de
+um enorme tronco na parede sul tem um arco que leva para o bar.
+O chão está forrado de flores, e no meio da sala um enorme tronco oco.
+O cheiro seria horrível se não fosse pelo aroma doce das flores.
+~
+30 8 0 0 0 0
+D2
+Através do arco na grande árvore você vê... o bar.
+~
+~
+0 -1 3090
+D5
+Tem um poço naquele tronco. As paredes são escorregadias, e se você descer não conseguiria subir.
+Além de estar tudo escuro lá.
+~
+~
+0 -1 7026
+E
+arvore tronco oco poco~
+Tem um poço naquele tronco. As paredes são escorregadias, e se você descer não conseguiria subir.
+Além de estar tudo escuro lá.
+~
+S
 $
