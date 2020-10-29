@@ -1235,14 +1235,21 @@ ACMD(do_suggestion)
    struct fann *ann;
 	fann_type *calc_output;
 	ann = fann_create_from_file("etc/aventureiro.fann");
-	fann_type input[26];
+	fann_type input[29];
 	fann_type output[6];
 	int grupo;
-	
-   	if (GROUP(ch) != NULL)
+	int count_obj = 0;
+    
+    /* verifica grupo e inventario */
+	if (GROUP(ch) != NULL)
 		grupo = 1;
 	else
 		grupo = 0;
+
+	for (object= ch->carrying; object; object = object->next_content)
+	{
+			count_obj++;
+	}
 
 	input[0] = GET_HIT(ch);
 	input[1] = GET_MAX_HIT(ch);
@@ -1270,6 +1277,10 @@ ACMD(do_suggestion)
 	input[23] = grupo;
 	input[24] = time_info.hours;
 	input[25] = GET_BREATH(ch);
+	input[26] = GET_HITROLL(ch);
+	input[27] = GET_DAMROLL(ch);
+	input[28] = count_obj;
+
 	calc_output = fann_run(ann, input);
 
 		if (calc_output[3] <= 0 )
