@@ -1,40 +1,42 @@
 Name: Forneck
-Pass: FoM1UKOdiGg7I
+Pass: Fok1D9gXuJVIg
 Titl: the Fledgling
-Sex : 2
+Sex : 1
 Clas: 6
 Levl: 1
-Id  : 19
-Brth: 1603761289
-Plyd: 528
-Last: 1603763263
-Lmot: 1603761300
-Lnew: 1603761297
+Id  : 0
+Brth: 1603946823
+Plyd: 1837
+Last: 1603948660
+Lmot: 1603946833
+Lnew: 1603946829
 Htwn: 1372
-Host: 177.220.172.147
-Hite: 155
-Wate: 143
-Alin: 15
+Host: 177.220.172.133
+Hite: 191
+Wate: 137
+Alin: 95
 Act : gh 0 0 0
 Aff : 0 0 0 0
-Pref: efghno 0 0 0
-Wimp: 10
+Pref: efghnoBCDE ad 0 0
+Wimp: 5
 Room: 3001
-Hung: 15
-Thir: 19
-Hit : 20/20
+Hung: 24
+Thir: 16
+Hit : 11/18
 Mana : 100/100
-Move: 86/86
-Str : 17/0
-Int : 12
-Wis : 9
-Dex : 15
+Move: 84/84
+Breath : 15/15
+Str : 16/0
+Int : 10
+Wis : 10
+Dex : 14
 Con : 15
 Cha : 8
 Ac  : 100
-Gold: 250
-Exp : 473
+Gold: 256
+Exp : 679
 Olc : 0
+ScrW: 44
 Skil:
-224 22
+224 17
 0 0
