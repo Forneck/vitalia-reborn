@@ -1,11 +1,11 @@
 #10004
 armadura tenente prata malha~
 a armadura do tenente~
-Uma armadura feita de cota de malha prateada est� jogada aqui.~
+Uma armadura feita de cota de malha prateada está jogada aqui.~
 ~
-9 0 0 0 0 ad 0 0 0 0 0 0 0
+9 0 ad
 6 0 0 0
-35 17000 5 20 0
+35 17000 5 20
 E
 armadura tenente prata malha~
 Parece que foi bem vestida e bem usada pelo seu antigo dono. A malha foi
@@ -15,13 +15,13 @@ parece ser uma boa armadura.
 A
 2 1
 #10005
-medalh�o dourado~
-o medalh�o dourado de Pen�lope~
-Um medalh�o dourado est� jogado aqui.~
+medalhao dourado~
+o medalhão dourado de Penélope~
+Um medalhão dourado está jogado aqui.~
 ~
-9 adg 0 0 0 ac 0 0 0 0 0 0 0
+9 adg ac
 5 0 0 0
-6 17000 5 15 0
+6 17000 5 15
 A
 4 2
 A
@@ -29,99 +29,99 @@ A
 #10006
 rabo peixe adaga~
 a adaga rabo-de-peixe~
-Uma adaga rabo-de-peixe est� aqui.~
+Uma adaga rabo-de-peixe está aqui.~
 ~
-5 0 0 0 0 ano 0 0 0 0 0 0 0
+5 0 ano
 0 2 7 11
-12 10 3 10 0
+12 10 3 10
 #10007
-couro peda�os armadura~
-a armadura de peda�os de couro~
-Uma armadura feita de peda�os de couro est� aqui.~
+couro pedacos armadura~
+a armadura de pedaços de couro~
+Uma armadura feita de pedaços de couro está aqui.~
 ~
-9 0 0 0 0 ad 0 0 0 0 0 0 0
+9 0 ad
 6 0 0 0
-18 10 3 5 0
+18 10 3 5
 #10009
 coxa galinha mel grande~
 uma coxa de galinha coberta com mel~
 Uma grande coxa de galinha coberta de mel foi deixada aqui.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 a
 10 0 0 0
-3 2 1 0 0
+3 2 1 0
 #10012
 mordecai manto~
 o manto de Mordecai~
-O manto de Mordecai est� aqui.~
+o manto de Mordecai está aqui.~
 ~
-9 j 0 0 0 ak 0 0 0 0 0 0 0
+9 j ak
 7 0 0 0
-20 85000 1 36 0
+20 85000 1 36
 E
 mordecai manto~
-� uma longa capa flutuante, toda pintada em preto com um fino colar branco
-circundando o pesco�o. Parece BEM formal, e BEM elegante. Pena que cheire
-t�o mal.
+É uma longa capa flutuante, toda pintada em preto com um fino colar branco
+circundando o pescoço. Parece BEM formal, e BEM elegante. Pena que cheire
+tão mal.
 ~
 A
 6 3
 A
 3 1
 #10013
-peda�o galinha coxinha~
+pedaco galinha coxinha~
 uma coxinha de galinha~
 Uma carne parecendo uma coxinha de galinha se encontra aqui.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 1
 5 0 0 0
-3 5 1 0 0
+3 5 1 0
 #10014
 chave bambu~
 a chave bambu~
-H� uma chave bambu aqui.~
+Há uma chave bambu aqui.~
 ~
-18 cq 0 0 0 a 0 0 0 0 0 0 0
+18 cq 1
 0 0 0 0
-1 1000 300 0 0
+1 1000 300 0
 #10015
 chave caveira~
 a chave em formato de caveira~
-H� uma chave em formato de caveira aqui.~
+Há uma chave em formato de caveira aqui.~
 ~
-18 cq 0 0 0 a 0 0 0 0 0 0 0
+18 cq 1
 0 0 0 0
-1 1000 300 0 0
+1 1000 300 0
 #10016
 moedas ouro tesouro~
 o tesouro de Mordecai~
 O tesouro de Mordecai foi deixado aqui.~
 ~
-20 0 0 0 0 a 0 0 0 0 0 0 0
+20 0 1
 10000 0 0 0
-10 10000 0 0 0
+10 10000 0 0
 #10017
 chave sombria cinza~
 a sombria chave cinza~
 Uma sombria chave cinza foi deixada aqui.~
 ~
-18 cq 0 0 0 a 0 0 0 0 0 0 0
+18 cq 1
 0 0 0 0
-10 10000 0 0 0
+10 10000 0 0
 #10018
-buraco coisa desagrad�vel mal cheirosa mancha negra~
+buraco coisa desagradavel mal cheirosa mancha negra~
 um buraco~
-H� uma coisa desagrad�vel e mal cheirosa no ch�o. Parece uma mancha negra no ch�o.~
+Há uma coisa desagradável e mal cheirosa no chão. Parece uma mancha negra no chão.~
 ~
-15 0 0 0 0 0 0 0 0 0 0 0 0
+15 0 0
 200 0 -1 0
-0 0 0 0 0
+0 0 0 0
 #10019
 milho espiga~
 uma espiga de milho~
-Uma espiga, cheia do seu milho est� aqui.~
+Uma espiga, cheia do seu milho está aqui.~
 ~
-4 q 0 0 0 ao 0 0 0 0 0 0 0
+4 q ao
 4 1 1 17
-1 1 2 1 0
+1 1 2 1
 $~
