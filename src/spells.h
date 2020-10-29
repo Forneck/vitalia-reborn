@@ -142,7 +142,7 @@
 #define SPELL_DARKNESS               92
 #define SPELL_TRANSPORT_VIA_PLANTS      93
 #define SPELL_PROT_FROM_GOOD         94
-#define SPELL_CREATE_FOOD_DRUID 95
+#define SPELL_CREATE_BERRIES 95
 /* To make an affect induced by dg_affect look correct on 'stat' we need to define it with a 'spellname'. */
 #define SPELL_DG_AFFECT              96
 
