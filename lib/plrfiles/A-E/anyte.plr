@@ -1,43 +1,51 @@
 Name: Anyte
 Pass: AnRCfBykX0mXk
-Titl: a Aprendiz de Malabarista
+Titl: a Barda
 Sex : 2
-Clas: 3
-Levl: 16
+Clas: 4
+Levl: 17
 Id  : 6
 Brth: 1603323580
-Plyd: 4555
-Last: 1603673650
+Plyd: 19334
+Last: 1603933368
 Lmot: 1603324480
 Lnew: 1603323627
 Htwn: 3001
 Host: 189.120.73.49
 Hite: 161
 Wate: 139
-Alin: -74
-Act : g 0 0 0
+Alin: 65
+Act : hl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
-Room: 5518
-Hung: -1
-Thir: -1
-Hit : 265/250
-Mana : 200/200
-Move: 397/400
-Str : 11/0
-Int : 13
+Room: 3001
+Hung: 14
+Thir: 16
+Hit : 187/210
+Mana : 100/100
+Move: 3/117
+Str : 17/0
+Int : 9
 Wis : 11
-Dex : 17
+Dex : 15
 Con : 12
-Cha : 9
+Cha : 8
 Ac  : 100
-Gold: 301
-Exp : 9518
+Gold: 26501
+Exp : 2407300
 Olc : 0
 Skil:
-224 12
+222 80
+224 48
+231 80
 0 0
-Alis: 1
+Affs:
+63 17 0 42 131072 0 0 0
+0 0 0 0 0 0 0 0
+Alis: 2
+ bash
+ bash $*;st
+1
  say
  say @g$*@n
 1

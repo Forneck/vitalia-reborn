@@ -1,31 +1,30 @@
 Name: Althair
 Pass: Al0/4XKfoKti2
-Titl: the Tenderfoot
+Titl: the Wolf Cub
 Sex : 1
 Clas: 6
-Levl: 2
+Levl: 5
 Id  : 20
 Brth: 1603768097
-Plyd: 2381
-Last: 1603770708
+Plyd: 9420
+Last: 1603942638
 Lmot: 1603768107
-Lnew: 1603768103
+Lnew: 1603941799
 Htwn: 1372
-Host: 177.220.172.147
+Host: 177.220.172.133
 Hite: 195
 Wate: 172
-Alin: 45
+Alin: 177
 Act : gh 0 0 0
 Aff : 0 0 0 0
-Pref: efghknoBCDE abd 0 0
-Wimp: 10
+Pref: efghknoBCDE abde 0 0
+Wimp: 20
 Room: 3001
-Lern: 2
-Hung: 11
+Hung: 21
 Thir: 20
-Hit : 47/32
-Mana : 102/102
-Move: 82/87
+Hit : 33/64
+Mana : 15/107
+Move: 97/97
 Str : 16/0
 Int : 14
 Wis : 12
@@ -33,12 +32,18 @@ Dex : 14
 Con : 15
 Cha : 4
 Ac  : 100
-Gold: 504
-Exp : 1455
+Gold: 2358
+Bank: 11280
+Exp : 15229
 Olc : 0
+ScrW: 44
 Skil:
-224 60
+16 90
+21 30
+42 90
+224 90
 0 0
-Affs:
-19 0 0 29 16 0 0 0
-0 0 0 0 0 0 0 0
+Alis: 1
+ cl
+ cast 'cure light' $*
+1

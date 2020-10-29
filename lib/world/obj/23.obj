@@ -1,27 +1,27 @@
 #2300
 madame zayla carroca~
-A carroça de Madame Zayla~
+a carroça de Madame Zayla~
 A carroça de Madame Zayla está parada aqui no meio da mata.~
 ~
-12 0 0 
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1000 0 0 0
+1000 0 0 0 0
 #2301
 pequena mesa redonda~
 pequena mesa redonda~
 Uma pequena mesa redonda foi colocada bem no centro da carroça.~
 ~
-12 0 0
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-0 0 0 0
+0 0 0 0 0
 #2302
 cristal bola brilhante~
 a bola de cristal de Madame Zayla~
 A bola de cristal de Madame Zayla brilha sobre a mesa.~
 ~
-1 a ao :4
+1 a 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
-5 500 0 30
+5 500 0 30 0
 A
 3 2
 #2303
@@ -29,17 +29,17 @@ riacho~
 o riacho fluindo~
 Um pequenino riacho vai fluindo lentamente, limpo e claro.~
 ~
-23 0 0
+23 0 0 0 0 0 0 0 0 0 0 0 0
 99999 99999 0 0
-1100 0 0 0
+1100 0 0 0 0
 #2304
 pequeno palco~
 um pequeno palco~
 Um pequeno palco foi construído para os atores.~
 ~
-12 0 0
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-0 0 0 0
+0 0 0 0 0
 E
 pequeno palco~
 Feito de madeira da melhor qualidade, embora pequeno, possui vários cenários
@@ -51,66 +51,66 @@ fila criancas~
 uma fila de crianças~
 Uma fila de crianças passa por você, vindas da barraca de maquiagem de palhaço.~
 ~
-12 0 0
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-0 0 0 0
+0 0 0 0 0
 #2306
 torta quente cobertura~
 uma pequeno pedaço de torta quente~
 Uma pequeno pedaço torta quente foi jogado no chão.~
 ~
-19 0 a
+19 0 0 0 0 a 0 0 0 0 0 0 0
 28 0 0 0
-2 50 0 0
+2 50 0 0 0
 #2307
 mesa pic-nic~
 Uma comprida mesa de pic-nic~
 Compridas mesas para pic-nic, feitas de madeira, estão espalhadas por aqui.~
 ~
-12 dcgq 0 0
+12 cdgq 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-0 0 0 0
+0 0 0 0 0
 #2308
 churrasqueira grelha ferro preto~
 uma churrasqueira de ferro preto~
 Uma fumacenta churrasqueira de ferro preto, muito quente, está aqui.~
 ~
-12 dcgq 0 0
+12 cdgq 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-12 500 0 0
+12 500 0 0 0
 #2309
 barrilzinho madeira~
 um barrilzinho de madeira~
 Um barrilzinho de madeira foi colocado perto da churrasqueira.~
 ~
-17 0 1
+17 0 0 0 0 a 0 0 0 0 0 0 0
 40 40 15 0
-45 60 0 0
+45 60 0 0 0
 #2310
 castelo marionetes~
 um castelo de madeira para marionetes~
 Um lindo castelo de brinquedo, com marionetes dentro, foi esquecido aqui.~
 ~
-12 0 0 0
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-0 0 0 0
+0 0 0 0 0
 #2311
 bolas coloridas bola colorida balao~
 Um jogo com cinco @Rb@Yo@Gl@Ba@ys @Wc@Yo@Gl@Lo@Br@yi@gd@Ca@Rs@n~
 Não tropece! Alguém deixou jogado no chão uma porção de @Rb@Yo@Gl@Ba@ys 
 @Wc@Yo@Gl@Lo@Br@yi@gd@Ca@Rs.@n~
 ~
-12 dcgq ao 0
+12 cdgq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-4 10 0 1
+4 10 0 1 0
 #2312
 bandolim simples madeira~
 Um simples bandolim de madeira~
 Um simples bandolim de madeira foi esquecido aqui.~
 ~
-12 eg ao 0
+12 eg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-3 100 0 30
+3 100 0 30 0
 A
 3 2
 #2313
@@ -118,9 +118,9 @@ lira artesanal~
 uma lira feita à mão~
 Uma bonita lira feita à mão foi deixada aqui.~
 ~
-12 eg ao 0
+12 eg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-5 100 0 30
+5 100 0 30 0
 A
 4 2
 #2314
@@ -128,49 +128,49 @@ tonico amor~
 um jarro de tônico do amor~
 Um jarro com tônico do amor está brilhando no chão.~
 ~
-10 aqhgc ao
+10 acghq 0 0 0 ao 0 0 0 0 0 0 0
 1 43 62 34
-1 1500 0 0
+1 1500 0 0 0
 #2315
 tonico jarro inteligencia~
 um jarro de tônico de inteligência~
 Um jarro de tônico de inteligência foi deixado aqui.~
 ~
-10 aqhgc ao 
+10 acghq 0 0 0 ao 0 0 0 0 0 0 0
 1 51 42 -1
-1 1500 0 0
+1 1500 0 0 0
 #2316
 tonico jarro juventude~
 um jarro de tônico de juventude~
 Um estranho jarro de tônico foi esquecido aqui.~
 ~
-10 dgq ao
+10 dgq 0 0 0 ao 0 0 0 0 0 0 0
 10 307 62 -1
-1 1500 0 0
+1 1500 0 0 0
 #2317
 tomo livro grandioso aventuras~
 o Grande Tomo de Aventuras~
 Um grande tomo com as costas para baixo est� ca�do no chão.~
 ~
-2 dgq ao 
+2 dgq 0 0 0 ao 0 0 0 0 0 0 0
 10 23 23 -1
-19 1500 0 0
+19 1500 0 0 0
 #2318
 pequena gaita~
 uma pequena gaita~
 Uma pequena gaita foi atirada ao chão.~
 ~
-12 ag ao
+12 ag 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 300 0 1 
+1 300 0 1 0
 #2319
 pequeno simbolo porcao~
 uma porção de pequenos símbolos~
 Uma porção de pequeninos símbolos foram deixados no chão.~
 ~
-11 ag am
+11 ag 0 0 0 am 0 0 0 0 0 0 0
 0 0 0 0
-20 5000 0 30
+20 5000 0 30 0
 A
 13 4
 A
@@ -180,17 +180,17 @@ fortuna sorte roda~
 uma brilhante roda da fortuna~
 Uma brilhante roda da fortuna est� no chão.~
 ~
-2 ag ao
+2 ag 0 0 0 ao 0 0 0 0 0 0 0
 25 3 -1 -1
-5 1900 0 0
+5 1900 0 0 0
 #2321
 traca robe manto~
 um manto cheio de traças~
 Um manto cheio de traças está jogado aqui, pronto para ser jogado no lixo.~
 ~
-11 agdkmnt ak
+11 adgkmnt 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
-20 8000 0 30
+20 8000 0 30 0
 A
 4 2
 A
@@ -202,27 +202,27 @@ baralho tarot cartas~
 um baralho de tarot~
 Um baralho de tarot foi deixado aqui.~
 ~
-2 cdh ao 
+2 cdh 0 0 0 ao 0 0 0 0 0 0 0
 10 28 39 -1
-1 25000 0 0
+1 25000 0 0 0
 #2323
 saia dancarina danca cigana~
 uma saia de cigana feita de seda~
 Uma bonita saia de cigana, feita de seda, usada para dançar, foi deixada aqui.~
 ~
-9 g al
+9 g 0 0 0 al 0 0 0 0 0 0 0
 6 0 0 0
-8 5000 0 30
+8 5000 0 30 0
 A
-14 +12
+14 12
 #2324
 tamborim pandeiro~
 um tamborim~
 Um tamborim foi deixado aqui no chão, brilhando quando a luz bate nele.~
 ~
-12 0 ao
+12 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-4 100 0 30
+4 100 0 30 0
 A
 4 2
 A
@@ -232,17 +232,17 @@ fatia grossa carne carneiro defumada~
 uma grossa fatia de carne de carneiro defumada~
 Uma grossa fatia de carne de carneiro defumada foi jogada aqui.~
 ~
-19 0 a
+19 0 0 0 0 a 0 0 0 0 0 0 0
 14 0 0 0
-1 10 0 0
+1 10 0 0 0
 #2326
 bolsa tiracolo~
 uma bolsa a tiracolo~
 Uma estranha bolsa a tiracolo preta foi largada aqui.~
 ~
-15 0 ak 0
+15 0 0 0 0 ak 0 0 0 0 0 0 0
 400 1 -1 0
-9 1000 0 30
+9 1000 0 30 0
 A
 1 2
 #2327
@@ -250,39 +250,39 @@ alfalfa broto~
 alguns brotos de alfafa~
 Alguns brotos de alfafa picados foram jogados aqui no chão.~
 ~
-19 0 1 
+19 0 0 0 0 a 0 0 0 0 0 0 0
 6 0 0 0
-1 3 0 0
+1 3 0 0 0
 #2328
 fruta frutas frescas fresca~
 algumas frutas frescas~
 Algumas frutas frescas foram jogadas aqui no chão.~
 ~
-19 0 1 0
+19 0 0 0 0 a 0 0 0 0 0 0 0
 6 0 0 0
-2 7 0 0
+2 7 0 0 0
 #2329
 capa viagem~
 uma capa de viagem~
 Uma capa de viagem está amontoada no chão.~
 ~
-9 aqg ak
+9 agq 0 0 0 ak 0 0 0 0 0 0 0
 8 0 0 0
-6 15000 0 30
+6 15000 0 30 0
 A
 18 1
 A
 13 2
 A
-14 +10
+14 10
 #2330
 garra leao~
 a garra decepada de um leão jamuurin~
 Uma garra presa a um pedaço de couro foi deixada aqui.~
 ~
-9 aemnq ah 
+9 aemnq 0 0 0 ah 0 0 0 0 0 0 0
 3 0 0 0
-8 4000 0 30
+8 4000 0 30 0
 A
 5 1
 A
@@ -294,9 +294,9 @@ par sapatos viagem~
 um par de sapatos de viagem~
 Um par de sapatos de viagem está no chão, sujo com o pó da estrada.~
 ~
-9 0 ag
+9 0 0 0 0 ag 0 0 0 0 0 0 0
 4 0 0 0
-6 800 200
+6 800 200 0 0
 A
 18 -1
 A
@@ -310,9 +310,9 @@ emblema cancao musica verdade colar corrente objeto~
 o Emblema da Canção Verdadeira~
 Um objeto com formato estranho está no chão, preso numa corrente.~
 ~
-11 ag ac
+11 ag 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
-5 8500 0 30
+5 8500 0 30 0
 A
 6 2
 A
@@ -322,9 +322,9 @@ bambu palheta~
 uma palheta de bambu~
 Uma palheta de bambu está no chão.~
 ~
-12 0 aon
+12 0 0 0 0 ano 0 0 0 0 0 0 0
 0 0 0 0
-2 40 0 13
+2 40 0 13 0
 A
 6 1
 #2334
@@ -332,9 +332,9 @@ xale seda~
 um xale de seda~
 Um xale de seda amarrotado foi deixado no chão.~
 ~
-9 ag akc :4
+9 ag 0 0 0 ack 0 0 0 0 0 0 0
 3 0 0 0
-1 20000 0 30
+1 20000 0 30 0
 A
 17 -5
 #2335
@@ -342,9 +342,9 @@ bandolim decorado cinzelado esculpido entalhado~
 um bandolim lindamente entalhado~
 Um bandolim lindamente entalhado, feito de grossa madeira, foi esquecido aqui.~
 ~
-12 0 aon
+12 0 0 0 0 ano 0 0 0 0 0 0 0
 0 0 0 0
-6 4000 0 30
+6 4000 0 30 0
 A
 5 2
 #2336
@@ -352,9 +352,9 @@ falso postico rabo gato~
 um rabo falso de gato~
 Um rabo de fantasia de gato foi jogado aqui no chão.~
 ~
-12 agkh al
+12 aghk 0 0 0 al 0 0 0 0 0 0 0
 0 0 0 0
-3 7000 0 30
+3 7000 0 30 0
 A
 17 -2
 A
@@ -364,17 +364,17 @@ bigodes gato~
 alguns bigodes de gato~
 Alguns bigodes de gato foram deixados aqui.~
 ~
-12 0 ar 
+12 0 0 0 0 ar 0 0 0 0 0 0 0
 0 0 0 0
-1 8 0 1
+1 8 0 1 0
 #2338
 macias bota botas cigana ciganas~
 um par de macias botas ciganas~
 Um par de macias botas ciganas sem uso estão no chão.~
 ~
-9 0 ag
+9 0 0 0 0 ag 0 0 0 0 0 0 0
 6 0 0 0
-5 1800 0 20
+5 1800 0 20 0
 A
 14 25
 #2339
@@ -382,29 +382,29 @@ paleto cogumelo~
 um paletó com forma de cogumelo~
 Um bizarro paletó com formato de cogumelo está amontoado aqui.~
 ~
-9 ag ad 
+9 ag 0 0 0 ad 0 0 0 0 0 0 0
 6 0 0 0
-8 2500 0 30
+8 2500 0 30 0
 A
 17 -5
 A
-9 +5
+9 5
 #2340
 pilha roupa roupas limpa limpas~
 uma pilha de roupas limpas~
 Uma pilha de roupas limpas está na margem do rio.~
 ~
-13 0 a 
+13 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-6 1 0 0
+6 1 0 0 0
 #2341
 taco martelo madeira~
 um taco de madeira~
 Um taco de madeira foi esquecido aqui.~
 ~
-5 0 ano
+5 0 0 0 0 ano 0 0 0 0 0 0 0
 0 2 7 7
-5 500 0 15
+5 500 0 15 0
 A
 3 1
 #2342
@@ -412,9 +412,9 @@ par calca calcas bufantes~
 um par de calças bufantes~
 Um par de calças bufantes foi largado no chão.~
 ~
-9 ag af 
+9 ag 0 0 0 af 0 0 0 0 0 0 0
 6 0 0 0
-1 15000 0 30
+1 15000 0 30 0
 A
 2 1
 A
@@ -424,25 +424,25 @@ martelo forrado~
 um martelo com cabo forrado de madre-pérolas~
 Alguém derrubou um martelo com cabo forrado de madre-pérolas aqui.~
 ~
-5 adklmop an
+5 adklmop 0 0 0 an 0 0 0 0 0 0 0
 0 3 5 7
-4 4000 0 30
+4 4000 0 30 0
 #2344
 mimica mimico estojo maquiagem~
 maquiagem para teatro~
 Um estojo de maquiagem para teatro foi jogado aqui no chão.~
 ~
-12 0 aor
+12 0 0 0 0 aor 0 0 0 0 0 0 0
 0 0 0 0
-1 7 0 1
+1 7 0 1 0
 #2345
 pintor palheta~
 uma palheta de pintor~
 Alguém deixou aqui uma palheta de tinta @Rc@Yo@Gl@Mo@Br@yi@gd@Ca.@n~
 ~
-12 0 ao
+12 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-3 2500 0 20
+3 2500 0 20 0
 A
 6 1
 A
@@ -454,9 +454,9 @@ sapato sapatos finamente enfeitado~
 um par de sapatos ricamente enfeitado~
 Alguém deixou um par de sapatos ricamente enfeitado aqui.~
 ~
-9 0 ag 
+9 0 0 0 0 ag 0 0 0 0 0 0 0
 6 0 0 0
-4 3500 0 35
+4 3500 0 35 0
 A
 19 1
 A
@@ -468,17 +468,17 @@ bolo guloseima confeiteiro~
 um bolo de confeiteiro~
 Um bolo de confeiteiro foi deixado no chão.~
 ~
-19 0 a 0
+19 0 0 0 0 a 0 0 0 0 0 0 0
 9 0 0 0
-1 20 0 0
+1 20 0 0 0
 #2348
 anel azul brilhante~
 um anel azul brilhante~
 Um anel azul muito brilhante está no chão.~
 ~
-11 ag 3
+11 ag 0 0 0 ab 0 0 0 0 0 0 0
 0 0 0 0
-9 18000 0 35
+9 18000 0 35 0
 A
 3 1
 A
@@ -490,9 +490,9 @@ adaga falcao~
 uma adaga com formato de falcão~
 Uma adaga com formato de falcão foi deixada aqui.~
 ~
-5 alnm aon
+5 almn 0 0 0 ano 0 0 0 0 0 0 0
 0 4 4 11
-5 15000 0 30
+5 15000 0 30 0
 A
 19 2
 A
@@ -502,27 +502,27 @@ botas bonitas elfo elficas~
 um bonito par de botas élficas~
 Um bonito e confortável par de botas élficas está aqui no chão.~
 ~
-9 ah ga
+9 ah 0 0 0 ag 0 0 0 0 0 0 0
 5 0 0 0
-8 13500 0 25
+8 13500 0 25 0
 A
 14 25
 #2351
 vestido simples caseiro~
 um simples vestido caseiro~
-um simples vestido caseiro foi deixado aqui, por alguém.~
+Um simples vestido caseiro foi deixado aqui, por alguém.~
 ~
-9 0 ad
+9 0 0 0 0 ad 0 0 0 0 0 0 0
 5 0 0 0
-6 5000 0 30
+6 5000 0 30 0
 #2352
 gorro palhaco sino~
 um engraçado gorro de palhaço~
 Um engraçado gorro de palhaço, com sinos em suas pontas, foi deixado aqui.~
 ~
-9 0 ae 
+9 0 0 0 0 ae 0 0 0 0 0 0 0
 5 0 0 0
-5 1500 0 30
+5 1500 0 30 0
 A
 5 2
 #2353
@@ -530,9 +530,9 @@ perna pau~
 um par de pernas-de-pau~
 Um par de pernas-de-pau está jogado aqui.~
 ~
-11 aqdg af
+11 adgq 0 0 0 af 0 0 0 0 0 0 0
 0 0 0 0
-3 10 0 30
+3 10 0 30 0
 A
 11 8
 A
@@ -544,9 +544,9 @@ brincos ciganos~
 um par de brincos ciganos~
 Um par de brincos ciganos foi deixado aqui.~
 ~
-11 a aq
+11 a 0 0 0 aq 0 0 0 0 0 0 0
 0 0 0 0
-2 450 0 30
+2 450 0 30 0
 A
 19 1
 A
@@ -558,9 +558,9 @@ anel cigano~
 um anel cigano~
 Um anel cigano está no meio da sujeira.~
 ~
-11 a ab
+11 a 0 0 0 ab 0 0 0 0 0 0 0
 0 0 0 0
-2 17000 0 30
+2 17000 0 30 0
 A
 18 1
 A
@@ -572,9 +572,9 @@ espada encurvada curva larga~
 uma espada encurvada~
 Uma espada encurvada e larga foi deixada aqui.~
 ~
-5 g 8193
+5 g 0 0 0 an 0 0 0 0 0 0 0
 0 3 4 11
-9 60000 5000 30
+9 60000 5000 30 0
 A
 2 2
 A
@@ -584,17 +584,17 @@ tunica prateada~
 uma túnida prateada~
 Uma túnica prateada foi largada no chão.~
 ~
-9 0 9
+9 0 0 0 0 ad 0 0 0 0 0 0 0
 4 0 0 0
-4 10 0
+4 10 0 0 0
 #2358
 tunica vermelha~
 uma túnica vermelha~
 Uma túnica vermelha foi deixada aqui.~
 ~
-9 agjk ad
+9 agjk 0 0 0 ad 0 0 0 0 0 0 0
 0 0 0 0
-8 9000 950 30
+8 9000 950 30 0
 A
 17 -12
 A
@@ -604,33 +604,33 @@ lampada renkaza~
 a Lâmpada de Renkaza~
 Uma pequenina lâmpada a óleo foi deixada aqui.~
 ~
-1 ah ao
+1 ah 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
-5 203 30
+5 203 30 0 0
 #2360
 chifre manticonn~
 os Chifres de Manticonn~
 Um estranho chifre foi deixado aqui.~
 ~
-9 0 ae
+9 0 0 0 0 ae 0 0 0 0 0 0 0
 6 0 0 0
-14 164 0 30
+14 164 0 30 0
 #2361
 arvida estandarte bandeira~
 o Estandarte de Árvida~
 Um longo pedaço de pano velho foi deixado aqui.~
 ~
-13 0 ao
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-12 189 0 0
+12 189 0 0 0
 #2362
 seda longa echarpe pedaco~
 uma longa echarpe de seda~
 Uma maravilhosa echarpe de seda pura, bastante comprida, foi esquecida aqui.~
 ~
-9 aghqdqopk ac
+9 adghkopq 0 0 0 ac 0 0 0 0 0 0 0
 1 0 0 0
-9 10000 5000 30
+9 10000 5000 30 0
 A
 17 -2
 A
@@ -640,25 +640,25 @@ casaco seda~
 um casaco de seda~
 Um maravilhoso casaco de seda foi deixado aqui.~
 ~
-9 0 ad
+9 0 0 0 0 ad 0 0 0 0 0 0 0
 6 0 0 0
-2 4700 0 30
+2 4700 0 30 0
 #2364
 cinto seda~
 um cinto de seda~
 Um belíssimo cinto de seda foi deixado aqui no chão.~
 ~
-9 0 al
+9 0 0 0 0 al 0 0 0 0 0 0 0
 5 0 0 0
-3 2900 0 30
+3 2900 0 30 0
 #2365
 brinco artesanal~
 um brinco artesanal~
 Um estranho brinco artesanal foi esquecido aqui por alguém.~
 ~
-11 a aq
+11 a 0 0 0 aq 0 0 0 0 0 0 0
 0 0 0 0
-2 450 0 30
+2 450 0 30 0
 A
 17 -2
 #2366
@@ -666,9 +666,9 @@ colar corda trancada~
 um colar de corda trançada~
 Um pequeno colar feito de corda trançada foi deixado aqui no chão.~
 ~
-9 amnptqjl ac
+9 ajlmnpqt 0 0 0 ac 0 0 0 0 0 0 0
 1 0 0 0
-3 10000 0 30
+3 10000 0 30 0
 A
 17 -2
 A
@@ -678,9 +678,9 @@ anel estanho~
 um anel de estanho~
 Um anel feito de estanho foi deixado aqui por alguém.~
 ~
-11 a ab
+11 a 0 0 0 ab 0 0 0 0 0 0 0
 0 0 0 0
-1 6000 0 30
+1 6000 0 30 0
 A
 5 1
 A
@@ -690,23 +690,23 @@ dedo marionete pequeno homen~
 um pequeno marionete para dedos de homem~
 Um pequeno marionete para dedos masculinos, foi jogado aqui.~
 ~
-11 ajk ab
+11 ajk 0 0 0 ab 0 0 0 0 0 0 0
 0 0 0 0
-1 6000 0 10
+1 6000 0 10 0
 A
 1 3
 A
 17 -2
 A
-9 +5
+9 5
 #2369
 dedo marionete pequeno mulher~
 um pequeno marionete de dedos para mulher~
 Um pequeno marionete para dedos femininos, foi jogado aqui.~
 ~
-11 ajk ab
+11 ajk 0 0 0 ab 0 0 0 0 0 0 0
 0 0 0 0
-1 6000 0 10
+1 6000 0 10 0
 A
 4 2
 A
@@ -718,7 +718,7 @@ caneca bebida~
 uma caneca~
 Uma caneca de cerveja foi deixada aqui.~
 ~
-17 0 a
+17 0 0 0 0 a 0 0 0 0 0 0 0
 12 12 6 0
-1 8 2
+17 8 2 0 0
 $~

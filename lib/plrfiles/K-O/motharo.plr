@@ -1,36 +1,42 @@
 Name: Motharo
 Pass: ModL.5YHLP/kM
-Titl: o Crente
+Titl: the Fledgling
 Sex : 1
-Clas: 1
+Clas: 6
 Levl: 1
-Id  : 18
-Brth: 1603721837
-Plyd: 693
-Last: 1603809957
-Lnew: 1603721842
+Id  : 22
+Brth: 1603914365
+Plyd: 541
+Last: 1603916835
+Lnew: 1603915341
 Htwn: 1372
 Host: 187.66.23.112
-Hite: 199
-Wate: 133
-Act : h 0 0 0
+Hite: 184
+Wate: 176
+Alin: 55
+Act : gh 0 0 0
 Aff : 0 0 0 0
-Pref: efghno 0 0 0
+Pref: efghnoBCDEF abd 0 0
 Room: 3001
-Lern: 3
-Hung: 14
-Thir: 14
-Hit : 19/19
+Lern: 1
+Hung: 10
+Thir: 10
+Hit : 18/18
 Mana : 100/100
-Move: 84/84
-Str : 12/0
-Int : 13
-Wis : 15
-Dex : 9
-Con : 7
-Cha : 6
+Move: 86/86
+Str : 14/0
+Int : 12
+Wis : 11
+Dex : 13
+Con : 13
+Cha : 11
 Ac  : 100
-Exp : 1
+Gold: 254
+Exp : 477
 Olc : 0
 Skil:
 0 0
+Alis: 1
+ wak
+ wak;sta
+1

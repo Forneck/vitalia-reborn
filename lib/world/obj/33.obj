@@ -3,9 +3,9 @@ laranja~
 uma laranja~
 Uma laranja está no chão aqui.~
 ~
-19 0 1
+19 0 0 0 0 a 0 0 0 0 0 0 0
 8 0 0 0
-1 8 8
+1 8 8 0 0
 E
 laranja~
 Você imagina como ela veio parar aqui, visto
@@ -16,9 +16,9 @@ fardo trigo~
 um fardo de trigo~
 Existe um fardo de trigo aqui.~
 ~
-19 0 1
+19 0 0 0 0 a 0 0 0 0 0 0 0
 24 0 0 0
-100 1000 1000
+100 1000 1000 0 0
 E
 fardo trigo~
 Ele não lhe parece apetitoso, mas um
@@ -29,9 +29,9 @@ citara~
 uma grande cítara~
 Uma ENORME cítara feita de ouro foi deixada em um canto.~
 ~
-8 0 1
+8 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-40 200000 20000
+40 200000 20000 0 0
 E
 citara~
 Alguém realmente forte, com grandes dedos poderia tocar isso. Você não.
@@ -41,9 +41,9 @@ barril perfume~
 um barril de perfume~
 Você pode sentir daqui o cheiro do barril no outro lado da sala.~
 ~
-8 0 1
+8 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-20 100000 10000
+20 100000 10000 0 0
 E
 barril perfume~
 Cheira bem... o rótulo diz:
@@ -56,9 +56,9 @@ estatua~
 uma estátua~
 Existe uma estátua do Aglandiir aqui, feita de ouro sólido.~
 ~
-8 0 1 
+8 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-30 150000 15000
+30 150000 15000 0 0
 E
 estatua~
 Ele é um lindo e extraordinário sujeito, para um dragão.
@@ -68,24 +68,24 @@ alabarda~
 uma alabarda~
 Uma alabarda feita de runas encontra-se aqui no chão.~
 ~
-5 g 8193
+5 g 0 0 0 an 0 0 0 0 0 0 0
 0 1 12 17
-16 10000 3000
-A 
-18 5
+16 10000 3000 0 0
 E
 alabarda~
 As runas resplandecem com uma luz clara, fazendo você
 pensar que esta deve ser uma respeitável arma.
 ~
+A
+18 5
 #3306
 pocao protecao parda frasco~
 uma poção de proteção~
 Existe um frasco com um fluído pardo aqui.~
 ~
-10 a 1
+10 a 0 0 0 a 0 0 0 0 0 0 0
 20 36 1 3
-1 10000 2000
+1 10000 2000 0 0
 E
 pocao protecao parda frasco~
 Parece grossa e castanho-cinzenta (parda). Eca!
@@ -95,9 +95,9 @@ coroa~
 uma coroa de dragão~
 A coroa do Aglandiir encontra-se aqui, irradiando uma proteção.~
 ~
-8 a 0
+8 a 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-400 0 0
+400 0 0 0 0
 E
 coroa~
 A proteção repele você, fazendo você imaginar como
@@ -109,9 +109,9 @@ maca~
 uma maçã~
 Uma maçã vermelha, mas muito magra, está aqui.~
 ~
-19 0 1
+19 0 0 0 0 a 0 0 0 0 0 0 0
 4 0 0 0
-1 5 2
+1 5 2 0 0
 E
 maca~
 Ela não está bichada... ainda.
@@ -121,9 +121,9 @@ pao cesta~
 uma cesta de pães~
 Uma cesta cheia de pães frescos encontra-se aqui.~
 ~
-19 0 1
+19 0 0 0 0 a 0 0 0 0 0 0 0
 12 0 0 0
-1 10 5
+1 10 5 0 0
 E
 pao cesta~
 Mmmm... Centeio!
@@ -133,9 +133,9 @@ melao~
 um melão~
 Um melão está aqui, descartado evidentemente.~
 ~
-19 0 1
+19 0 0 0 0 a 0 0 0 0 0 0 0
 8 0 0 0
-3 8 3
+3 8 3 0 0
 E
 melao~
 Uau!  Olhe para o tamanho daquele melão!
@@ -145,9 +145,9 @@ faca~
 uma faca~
 Uma faca em perfeita arte descansa aqui.~
 ~
-5 dn 24577
+5 dn 0 0 0 ano 0 0 0 0 0 0 0
 0 3 5 11
-8 1000000 20000
+8 1000000 20000 0 0
 E
 faca~
 O artesão... isto tira sua respiração! Esta
@@ -164,9 +164,9 @@ espada longa~
 uma espada longa~
 Uma magnífica espada longa está enfiada na terra.~
 ~
-5 dmnt 24577
+5 dmnt 0 0 0 ano 0 0 0 0 0 0 0
 0 2 7 3
-15 750000 15000
+15 750000 15000 0 0
 E
 espada longa~
 Esta espada é leve mas seu corpo é perfeitamente
@@ -183,9 +183,9 @@ espada curta~
 uma espada curta~
 Uma espada curta encontra-se aqui... trabalho explêndido~
 ~
-5 adgimnqt 24577
+5 adgimnqt 0 0 0 ano 0 0 0 0 0 0 0
 0 5 6 3
-10 10000000 30000 101
+10 10000000 30000 101 0
 E
 espada curta~
 Ela traz lágrimas ao seus olhos. Esta deve ter
@@ -203,9 +203,9 @@ corpo~
 um corpo queimado e desmembrado~
 Um corpo queimado e desmembrado está aqui no chão.~
 ~
-13 0 0
+13 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 1 1
+1 1 1 0 0
 E
 corpo~
 Ele ainda está ardendo um pouco; os criminosos não
@@ -216,9 +216,9 @@ cimitarra~
 uma cimitarra~
 Uma cimitarra tão grande quanto seu braço está aqui.~
 ~
-5 0 8193
+5 0 0 0 0 an 0 0 0 0 0 0 0
 0 1 7 3
-10 500 50
+10 500 50 0 0
 E
 cimitarra~
 Esta arma realmente não é de muita qualidade.
@@ -228,9 +228,9 @@ engradado~
 um engradado~
 Um engradado está acondicionado aqui.~
 ~
-15 0 1
+15 0 0 0 0 a 0 0 0 0 0 0 0
 200 5 0 0
-50 100 20
+50 100 20 0 0
 E
 engradado~
 É um engradado normal feito de madeira.
@@ -240,9 +240,9 @@ arco caca~
 um arco de caça~
 Um arco de caça encontra-se aqui, sem dono~
 ~
-5 0 8193
+5 0 0 0 0 an 0 0 0 0 0 0 0
 0 1 5 11
-6 400 40
+6 400 40 0 0
 E
 arco caca~
 Este é o tipo de arma que você usaria para caçar
@@ -256,9 +256,9 @@ colete couro~
 um colete de couro~
 Um bom colete de couro encontra-se aqui.~
 ~
-9 g 9
+9 g 0 0 0 ad 0 0 0 0 0 0 0
 6 0 0 0
-6 5000 500
+6 5000 500 0 0
 E
 colete couro~
 As bainhas foram delicadamente costuradas com uma linha...
@@ -268,9 +268,9 @@ copo~
 um copo~
 Um copo de cerveja está esquecido aqui.~
 ~
-17 0 16385
+17 0 0 0 0 ao 0 0 0 0 0 0 0
 1 1 1 0
-2 5 1
+2 5 1 0 0
 E
 copo~
 Este é um bom copo cheio de cerveja caseira. Não parece existir
@@ -281,9 +281,9 @@ copo~
 um copo~
 Um grande copo de um líquido amarelo está aqui, frio e coberto de gelo.~
 ~
-17 0 16385
+17 0 0 0 0 ao 0 0 0 0 0 0 0
 1 1 3 0
-2 8 3
+2 8 3 0 0
 E
 copo~
 Parece bom. Parece aquecido. Não importa; ele ainda parece bom.
@@ -293,11 +293,11 @@ dose~
 uma dose~
 Uma dose de uísque está aqui.~
 ~
-17 0 16385
+17 0 0 0 0 ao 0 0 0 0 0 0 0
 1 1 5 0
-1 10 5
+1 10 5 0 0
 E
 dose~
 Uau!  Parece ser um material muito potente!
 ~
-$
+$~

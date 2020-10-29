@@ -3,9 +3,9 @@ capa vermelha~
 uma capa vermelha de cardeal~
 Uma capa vermelha está aqui.~
 ~
-9 ao ak
+9 ao 0 0 0 ak 0 0 0 0 0 0 0
 3 0 0 0
-5 1735 8
+5 1735 8 0 0
 A
 17 -1
 A
@@ -15,9 +15,9 @@ botas marrom~
 um par de botas marrom~
 Um par de botas marrom está aqui.~
 ~
-11 em ag
+11 em 0 0 0 ag 0 0 0 0 0 0 0
 0 0 0 0
-6 1000 8
+6 1000 8 0 0
 A
 17 -5
 A
@@ -29,35 +29,35 @@ vaso~
 um vaso de madeira~
 Uma antigo vaso de madeira foi esquecido aqui.~
 ~
-17 g a
+17 g 0 0 0 a 0 0 0 0 0 0 0
 12 12 15 0
-12 1500 5
+12 1500 5 0 0
 E
 vaso madeira antigo~
 Este é um vaso muito antigo, com água limpa e fresca que você pode beber se 
 quiser.  Há uma inscrição no vaso que diz que será possível tomar apenas
 12 goles desta água.
 ~
-#4307  
+#4307
 frasco prata~
 um frasco prateado~
 Um frasco prateado está preso à parede.~
 ~
-17 a a
+17 a 0 0 0 a 0 0 0 0 0 0 0
 10 10 14 0
-20 500 25
+20 500 25 0 0
 E
 frasco prata prateado~
 Este frasco está cheio de água benta.
 ~
-#4308  
+#4308
 casaco~
 um casaco leve~
 Um casaco bem leve foi deixado aqui.~
 ~
-11 0 ad
+11 0 0 0 0 ad 0 0 0 0 0 0 0
 0 0 0 0
-3 5000 40
+3 5000 40 0 0
 A
 17 -10
 #4311
@@ -65,23 +65,23 @@ biblia~
 uma Bíblia~
 Uma Bíblia foi esquecida aqui.~
 ~
-1 abegikoq ao
+1 abegikoq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 -1 0
-5 50 1
+5 50 1 0 0
 A
 17 -5
 A
 1 1
 A
 4 1
-#4315  
+#4315
 placa~
 uma placa de madeira~
 Uma placa de madeira foi deixada aqui.~
 ~
-22 de a
+22 de 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-28 1200 88
+28 1200 88 0 0
 A
 1 -1
 A
@@ -97,17 +97,17 @@ dizimo cesta~
 uma cesta para coletar o dízimo~
 Uma cesta foi deixada aqui.~
 ~
-15 bei ao
+15 bei 0 0 0 ao 0 0 0 0 0 0 0
 150 1 -1 0
-3 100 10
+3 100 10 0 0
 #4324
 anel Cardeal~
 O anel de rubi do Cardeal~
 Um valioso anel de rubi foi esquecido aqui.~
 ~
-9 aefg ab
+9 aefg 0 0 0 ab 0 0 0 0 0 0 0
 3 0 0 0
-2 5500 50
+2 5500 50 0 0
 A
 18 1
 A
@@ -119,9 +119,9 @@ calcas sujas~
 um par de calças sujas~
 Um par de calças sujas foi esquecido aqui.~
 ~
-11 en af
+11 en 0 0 0 af 0 0 0 0 0 0 0
 0 0 0 0
-4 1000 18
+4 1000 18 0 0
 A
 17 -5
 A
@@ -131,9 +131,9 @@ camisa verde~
 uma camisa verde~
 Um pedaço de pano foi deixado aqui.~
 ~
-9 0 ad
+9 0 0 0 0 ad 0 0 0 0 0 0 0
 3 0 0 0
-4 1250 30
+4 1250 30 0 0
 A
 17 -9
 A
@@ -145,9 +145,9 @@ sandalias sagradas~
 um par de sandálias sagradas~
 Um par de sandálias foi deixada aqui.~
 ~
-11 aegiko ag
+11 aegiko 0 0 0 ag 0 0 0 0 0 0 0
 0 0 0 0
-2 250 15
+2 250 15 0 0
 A
 17 -3
 A
@@ -157,9 +157,9 @@ escudo pedra~
 um escudo de pedra~
 Um escudo de pedra foi esquecido aqui.~
 ~
-9 bet aj
+9 bet 0 0 0 aj 0 0 0 0 0 0 0
 0 0 0 0
-10 1000 10
+10 1000 10 0 0
 A
 17 -7
 A
@@ -175,9 +175,9 @@ bracal pedra~
 um braçal de pedra~
 Um braçal de pedra foi deixado aqui.~
 ~
-9 bet ai
+9 bet 0 0 0 ai 0 0 0 0 0 0 0
 0 0 0 0
-12 2750 90
+12 2750 90 0 0
 A
 17 -8
 A
@@ -190,14 +190,14 @@ A
 19 1
 A
 22 5
-#4336  
+#4336
 pedra perneiras~
 um par de perneiras de pedra~
 Um par de perneiras feitas de pedra foi deixado aqui.~
 ~
-9 bet af
+9 bet 0 0 0 af 0 0 0 0 0 0 0
 2 0 0 0
-15 2575 90
+15 2575 90 0 0
 A
 17 -5
 A
@@ -206,28 +206,28 @@ A
 13 -5
 A
 14 -20
-#4337  
+#4337
 espada prateada~
 uma espada prateada~
 Uma espada brilhante foi deixada aqui.~
 ~
-5 aeop an
+5 aeop 0 0 0 an 0 0 0 0 0 0 0
 2 3 5 3
-5 8258 64
+5 8258 64 0 0
 A
 1 1
 A
 19 1
 A
 18 1
-#4338  
+#4338
 rosario colar contas~
 um rosário~
 Um pequeno colar de contas sagradas foi esquecido aqui.~
 ~
-11 aegi ac
+11 aegi 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
-3 853 28
+3 853 28 0 0
 A
 17 -5
 A
@@ -237,21 +237,21 @@ cachorro coleira~
 uma brilhante coleira de cachorro~
 Uma brilhante coleira foi esquecida aqui.~
 ~
-11 a ac
+11 a 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
-3 1500 20
+3 1500 20 0 0
 A
 17 -5
 A
 9 1
 #4342
 Fonte de Lyon~
-A Grande Fonte de Lyon~
+a Grande Fonte de Lyon~
 Há uma imensa fonte de pedra cinzenta aqui, jorrando o melhor vinho de mesa.~
 ~
-23 0 0
+23 0 0 0 0 0 0 0 0 0 0 0 0
 9999 9999 2 0
-600 0 0
+600 0 0 0 0
 E
 fonte pedra vinho~
 Não é só uma fonte, é um verdadeiro marco para a cidade.
@@ -261,17 +261,17 @@ pocao magica~
 uma poção mágica~
 Uma poção mágica foi esquecida aqui.~
 ~
-10 c a
+10 c 0 0 0 a 0 0 0 0 0 0 0
 30 43 3 -1
-2 5620 0
+2 5620 0 0 0
 #4345
 cobre abajur~
 um abajur de cobre~
 Um abajur de cobre foi esquecido aqui.~
 ~
-1 ae ao
+1 ae 0 0 0 ao 0 0 0 0 0 0 0
 0 0 999 0
-6 5000 50
+6 5000 50 0 0
 A
 9 -5
 A
@@ -283,9 +283,9 @@ flores ramalhete~
 um bonito ramalhete de flores do campo~
 Algumas flores foram esquecidas aqui.~
 ~
-12 deq ao
+12 deq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 100 10
+1 100 10 0 0
 A
 6 1
 #4349
@@ -293,9 +293,9 @@ punhal ensanguentado~
 um punhal ensanguentado~
 Um punhal manchado com sangue foi esquecido aqui.~
 ~
-5 ae ano
+5 ae 0 0 0 ano 0 0 0 0 0 0 0
 2 3 5 14
-7 12055 50
+7 12055 50 0 0
 A
 2 1
 A
@@ -309,25 +309,25 @@ maca eremita~
 uma maça de eremita~
 Um maça de eremita foi esquecida aqui.~
 ~
-5 begi an
+5 begi 0 0 0 an 0 0 0 0 0 0 0
 1 3 6 10
-8 500 10
+8 500 10 0 0
 #4355
 chave magica~
 uma chave mágica~
 Uma chave mágica foi esquecida aqui.~
 ~
-18 cf a
+18 cf 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-5 0 0
+5 0 0 0 0
 #4357
 cinto magico~
 um cinto mágico~
 Um cinto mágico foi deixado aqui.~
 ~
-9 aegp al
+9 aegp 0 0 0 al 0 0 0 0 0 0 0
 3 0 0 0
-10 12085 25
+10 12085 25 0 0
 A
 17 -1
 A
@@ -341,9 +341,9 @@ estatua rei luis~
 uma estátua de Luís XIV~
 Uma estátua de bronze de Luís XIV está aqui.~
 ~
-12 0 0
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-5000 0 0
+5000 0 0 0 0
 E
 estatua rei luis bronze~
 Esta belíssima e pesada estátua foi feita em honra do grande Rei Luís XIV.
@@ -353,9 +353,9 @@ vestido branco~
 um vestido branco~
 Um belíssimo vestido branco foi deixado aqui.~
 ~
-11 a ad
+11 a 0 0 0 ad 0 0 0 0 0 0 0
 0 0 0 0
-4 5000 40
+4 5000 40 0 0
 E
 vestido branco~
 É um vestido maravilhoso, muito feminino. Você não consegue se imaginar 
@@ -372,9 +372,9 @@ capuz negro~
 um capuz negro~
 Um capuz negro foi deixado aqui.~
 ~
-11 bfm ae
+11 bfm 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
-2 500 15
+2 500 15 0 0
 A
 17 -5
 A
@@ -388,9 +388,9 @@ chave de bronze~
 uma chave de bronze~
 Uma chave de bronze foi deixada aqui.~
 ~
-18 c ao
+18 c 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-8 0 0
+8 0 0 0 0
 E
 chave bronze~
 Esta chave parece ser peça importante do Q.G dos Mosqueteiros.
@@ -400,9 +400,9 @@ guilhotina ensanguentada~
 uma guilhotina ensanguentada~
 Uma guilhotina totalmente ensanguentada está aqui.~
 ~
-12 0 0
+12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-500 0 0
+500 0 0 0 0
 E
 guilhotina sangue~
 Esta guilhotina foi construída para ser usada para punir os 
@@ -413,9 +413,9 @@ bolo frances~
 um bolo francês~
 Alguém esqueceu aqui, um bolo francês que parece estar simplesmente delicioso.~
 ~
-19 0 a
+19 0 0 0 0 a 0 0 0 0 0 0 0
 7 0 0 0
-1 50 0
+1 50 0 0 0
 A
 1 1
 #4372
@@ -423,9 +423,9 @@ chapeu mosqueteiro~
 um chapéu de Mosqueteiro~
 Um grande chapéu marrom foi deixado aqui.~
 ~
-11 etq ae
+11 eqt 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
-5 1200 5
+5 1200 5 0 0
 A
 17 -3
 A
@@ -439,9 +439,9 @@ espadim dourado~
 um espadim dourado~
 Um brilhante espadim foi esquecido aqui.~
 ~
-5 aeg an
+5 aeg 0 0 0 an 0 0 0 0 0 0 0
 3 4 4 3
-8 10000 13
+8 10000 13 0 0
 A
 6 1
 A
@@ -455,9 +455,9 @@ florete aco~
 um florete de aço~
 Um florete de aço foi deixado aqui.~
 ~
-5 en an
+5 en 0 0 0 an 0 0 0 0 0 0 0
 3 5 5 3
-3 5000 60
+3 5000 60 0 0
 A
 4 1
 A
@@ -469,9 +469,9 @@ luvas marrons~
 um par de luvas marrons~
 Um par de luvas marrons foi esquecida aqui.~
 ~
-11 m ah
+11 m 0 0 0 ah 0 0 0 0 0 0 0
 0 0 0 0
-2 5 0
+2 5 0 0 0
 A
 17 -5
 A
@@ -483,17 +483,17 @@ baguete pao~
 uma baguete~
 Uma apetitosa baguete foi esquecida aqui.~
 ~
-19 0 a
+19 0 0 0 0 a 0 0 0 0 0 0 0
 6 0 0 0
-3 58 0
+3 58 0 0 0
 #4387
 ferraduras par~
 dois pares de ferraduras~
 Dois pares de ferraduras foram deixadas aqui.~
 ~
-11 c ag
+11 c 0 0 0 ag 0 0 0 0 0 0 0
 0 0 0 0
-12 4000 50
+12 4000 50 0 0
 E
 ferraduras~
 Estes objetos só podem ser usados por um cavalo. Se você gostou deles, 
@@ -508,9 +508,9 @@ bastao magico~
 um bastão mágico~
 Um bastão foi esquecido aqui.~
 ~
-4 acgi a
+4 acgi 0 0 0 a 0 0 0 0 0 0 0
 30 5 2 3
-2 1800 10
+2 1800 10 0 0
 E
 bastao magico~
 Este é poderoso bastão mágico que abençoa todas as pessoas ou monstros que 
@@ -521,9 +521,9 @@ chave oxidada enferrujada~
 uma chave oxidada~
 Uma chave oxidada foi esquecida aqui.~
 ~
-18 bc ao
+18 bc 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-8 100 10
+8 100 10 0 0
 E
 chave enferrujada oxidada~
 Esta é a chave de uma cela. Quem quer que esteja naquela cela, deveria ser
@@ -535,9 +535,9 @@ cadaver~
 um cadáver~
 O cadáver de um homem foi deixado aqui.~
 ~
-13 0 0
+13 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-58 0 0
+58 0 0 0 0
 E
 cadaver~
 Este é o cadáver do homem que uma vez usou a máscara de ferro em seu rosto.
@@ -547,9 +547,9 @@ chave platina~
 uma chave de platina~
 Uma chave de platina foi deixada aqui.~
 ~
-18 ac ao
+18 ac 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-3 100 10
+3 100 10 0 0
 E
 chave platina~
 Esta não é uma chave qualquer, pois parece que ela consegue abrir uma 
@@ -560,9 +560,9 @@ coroa real~
 uma coroa real~
 Uma coroa real foi deixada aqui.~
 ~
-11 aegio ae
+11 aegio 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
-8 25000 100
+8 25000 100 0 0
 A
 18 1
 A
@@ -572,9 +572,9 @@ ferro mascara~
 uma máscara de ferro~
 Uma máscara de ferro foi deixada aqui.~
 ~
-11 b ar
+11 b 0 0 0 ar 0 0 0 0 0 0 0
 0 0 0 0
-12 180 18
+12 180 18 0 0
 A
 1 1
 #4395
@@ -582,9 +582,9 @@ Mosqueteiro capa~
 uma capa de Mosqueteiro~
 Uma capa de Mosqueteiro foi deixada aqui.~
 ~
-9 begmn ak
+9 begmn 0 0 0 ak 0 0 0 0 0 0 0
 3 0 0 0
-4 15000 70
+4 15000 70 0 0
 A
 17 -3
 A
@@ -596,9 +596,9 @@ colar perolas negras~
 um colar de pérolas negras~
 Um valiosíssimo colar foi esquecido aqui.~
 ~
-11 agi ac
+11 agi 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
-3 2500 50
+3 2500 50 0 0
 A
 13 10
 A
@@ -610,21 +610,21 @@ luvas espirituais~
 um par de luvas espirituais~
 Um par de luvas foi esquecido aqui.~
 ~
-11 aegp ah
+11 aegp 0 0 0 ah 0 0 0 0 0 0 0
 0 0 0 0
-6 1000 75
+6 1000 75 0 0
 A
 12 30
 A
 9 2
-#4398  
+#4398
 correntes ferro~
 uma corrente de ferro~
 Uma pesada corrente foi esquecida aqui.~
 ~
-9 0 ao
+9 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-16 5000 50
+16 5000 50 0 0
 A
 1 -1
 A
@@ -634,9 +634,9 @@ mascara negra escura~
 uma máscara negra~
 Uma máscara escura foi esquecida aqui.~
 ~
-11 beg ar
+11 beg 0 0 0 ar 0 0 0 0 0 0 0
 0 0 0 0
-3 1000 75
+3 1000 75 0 0
 A
 2 1
 A
