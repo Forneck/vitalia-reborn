@@ -531,7 +531,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	else
 		grupo = 0;
 
-	for (i = ch->carrying; i; i = i->next_content)
+	for (object= ch->carrying; object; object = i->next_content)
 	{
 			count_obj++;
 	}
