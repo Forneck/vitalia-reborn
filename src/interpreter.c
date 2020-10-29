@@ -525,6 +525,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	obj_vnum obj = 0;
     int count_obj = 0;
     
+    /* verifica grupo e inventario */
 	if (GROUP(ch) != NULL)
 		grupo = 1;
 	else
@@ -535,6 +536,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			count_obj++;
 	}
 
+   /*pega dados pro aventureiro */
 	input[0] = GET_HIT(ch);
 	input[1] = GET_MAX_HIT(ch);
 	input[2] = GET_MANA(ch);
