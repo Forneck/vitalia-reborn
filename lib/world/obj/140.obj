@@ -1,15 +1,15 @@
 #14000
 diadema cristal negro~
 um diadema de cristal negro~
-O brilho de um diadema negro atrai sua aten��o.~
+O brilho de um diadema negro atrai sua atenção.~
 ~
-9 aegjlq 0 0 0 ae 0 0 0 0 0 0 0
+9 aegjlq ae
 8 0 0 0
-4 999999 99999 15 0
+4 999999 99999 15
 E
 diadema cristal negro~
-Feita sob medida para a senhora Ellora, essa magn�fica pe�a n�o deve
-ser maculada por m�os impuras nem cingir outra fronte que n�o seja a
+Feita sob medida para a senhora Ellora, essa magnífica peça não deve
+ser maculada por mãos impuras nem cingir outra fronte que não seja a
 da rainha.
 ~
 A
@@ -23,14 +23,14 @@ diadema cristal azul~
 um diadema de cristal azul~
 O brilho azulado de um diadema ofusca sua vista.~
 ~
-9 aegklq 0 0 0 ae 0 0 0 0 0 0 0
+9 aegklq ae
 8 0 0 0
-4 999999 99999 15 0
+4 999999 99999 15
 E
 diadema cristal azul~
-Esse bel�ssimo diadema, feito para somente adornar a nobre fronte
-da rainha Eldora, n�o deve cair em m�os que possam macular sua pureza.
-N�o o use de maneira alguma.
+Esse belíssimo diadema, feito para somente adornar a nobre fronte
+da rainha Eldora, não deve cair em mãos que possam macular sua pureza.
+Não o use de maneira alguma.
 ~
 A
 1 1
@@ -41,40 +41,40 @@ A
 #14002
 amuleto negro estranho noite~
 o Amuleto da Noite~
-Esquecido no ch�o, um estranho amuleto negro brilha com sua aproxima��o.~
+Esquecido no chão, um estranho amuleto negro brilha com sua aproximação.~
 ~
-11 aegjlq 0 0 0 ac 0 0 0 0 0 0 0
+11 aqejlg ac
 0 0 0 0
-3 999999 99999 15 0
+3 999999 99999 15
 E
 amuleto negro estranho noite~
-Mais pesado do que parecia ser, o amuleto � feito do raro ouro negro das
-minas al�m de Lindrel.  Uma enorme granada, lapidada de uma forma que voc�
-nunca viu antes, foi engastada em uma arma��o negra presa � corrente.  A
-pedra, quase negra de t�o rubra (??), est� muito quente, n�o permitindo que
-voc� a toque.  Pouco se sabe sobre sua origem e seus poderes, mas � comum
-dizer-se que com ela � poss�vel ver tudo que a Noite oculta.  Apenas Ellora,
-uma das altas rainhas das fadas, sabe us�-lo.
+Mais pesado do que parecia ser, o amuleto é feito do raro ouro negro das
+minas além de Lindrel.  Uma enorme granada, lapidada de uma forma que você
+nunca viu antes, foi engastada em uma armação negra presa à corrente.  A
+pedra, quase negra de tão rubra (??), está muito quente, não permitindo que
+você a toque.  Pouco se sabe sobre sua origem e seus poderes, mas é comum
+dizer-se que com ela é possível ver tudo que a Noite oculta.  Apenas Ellora,
+uma das altas rainhas das fadas, sabe usá-lo.
 ~
 A
 17 -7
 A
 2 1
 #14003
-amuleto manh� incomum azul~
-o Amuleto da Manh�~
-Brilhando intensamente, um amuleto de incomum cor azul jaz no ch�o.~
+amuleto manha incomum azul~
+o Amuleto da Manhã~
+Brilhando intensamente, um amuleto de incomum cor azul jaz no chão.~
 ~
-11 aegklq 0 0 0 ac 0 0 0 0 0 0 0
+11 aqeklg ac
 0 0 0 0
-3 999999 99999 15 0
+3 999999 99999 15
 E
-amuleto manh� incomum azul~
-Uma bela e enorme safira, de azul puro como o c�u de uma manh� de ver�o,
+amuleto manha incomum azul~
+Uma bela e enorme safira, de azul puro como o céu de uma manhã de verão,
 brilha em um engaste de ouro branco preso a uma corrente do mesmo metal.  A
-lapida��o da pedra, que de t�o gelada n�o permite que voc� a toque, � muito
-estranha, por�m bonita.  Voc� n�o sabe ao certo o que se pode fazer com ela,
-mas j� ouviu dizer que seu uso permite visualizar qualquer coisa sem ser
+lapidação da pedra, que de tão gelada não permite que você a toque, é muito
+estranha, porém bonita.  Você não sabe ao certo o que se pode fazer com ela,
+mas já ouviu dizer que seu uso permite visualizar qualquer coisa sem ser
 ofuscado.  Ele foi criado para somente Eldora saber usar.
 ~
 A
@@ -82,22 +82,22 @@ A
 A
 2 1
 #14004
-bord�o branca fada prateado~
-o Bord�o da Fada Branca~
-Um longo bord�o prateado flutua � sua frente.~
+bordao branca fada prateado~
+o Bordão da Fada Branca~
+Um longo bordão prateado flutua à sua frente.~
 ~
-5 aegklq 0 0 0 ano 0 0 0 0 0 0 0
+5 aqkleg ano
 0 4 4 12
-12 999999 99999 25 0
+12 999999 99999 25
 E
-bord�o branca fada prateado~
-Feito de ouro branco, o longo bord�o possui por toda sua superf�cie as
-estranhas runas das fadas, que brilham num g�lido e intenso azul.  Uma
-esp�cie de grande bot�o de flor, no mesmo metal que o cabo do cajado, orna a
-parte superior da pe�a, parecendo ainda prestes a se abrir.  Ao olhar com
-aten��o, voc� nota que no centro dele h� uma enorme safira azul que,
-cintilando com cada vez mais for�a, parece espalhar um estranho frio a seu
-redor. Esse tesouro � um dos s�mbolos do reinado da rainha Eldora.
+bordao branca fada prateado~
+Feito de ouro branco, o longo bordão possui por toda sua superfície as
+estranhas runas das fadas, que brilham num gélido e intenso azul.  Uma
+espécie de grande botão de flor, no mesmo metal que o cabo do cajado, orna a
+parte superior da peça, parecendo ainda prestes a se abrir.  Ao olhar com
+atenção, você nota que no centro dele há uma enorme safira azul que,
+cintilando com cada vez mais força, parece espalhar um estranho frio a seu
+redor. Esse tesouro é um dos símbolos do reinado da rainha Eldora.
 ~
 A
 12 30
@@ -108,13 +108,13 @@ A
 A
 4 1
 #14005
-enorme chap�u margarida~
+enorme chapeu margarida~
 uma enorme margarida~
-Uma enorme margarida foi deixada no ch�o.~
+Uma enorme margarida foi deixada no chão.~
 ~
-9 ag 0 0 0 ae 0 0 0 0 0 0 0
+9 ag ae
 4 0 0 0
-3 4000 0 5 0
+3 4000 0 5
 A
 5 1
 #14006
@@ -122,9 +122,9 @@ flor violeta imensa~
 uma imensa flor de violeta~
 Uma imensa flor de violeta foi esquecida aqui.~
 ~
-9 ag 0 0 0 ae 0 0 0 0 0 0 0
+9 ag ae
 3 0 0 0
-3 4000 0 5 0
+3 4000 0 5
 A
 17 -2
 A
@@ -134,9 +134,9 @@ par botinas amarelas~
 um par de botinas amarelas~
 Um par de alegres botinas amarelas esperam aqui por um novo dono.~
 ~
-9 ag 0 0 0 ag 0 0 0 0 0 0 0
+9 ag ag
 4 0 0 0
-4 4500 0 5 0
+4 4500 0 5
 A
 10 -4
 A
@@ -146,9 +146,9 @@ pulseira delicada violetas~
 uma pulseira de violetas~
 Uma delicada pulseira de violetas foi perdida aqui.~
 ~
-11 ag 0 0 0 am 0 0 0 0 0 0 0
+11 ag am
 0 0 0 0
-3 3000 0 5 0
+3 3000 0 5
 A
 17 -3
 #14009
@@ -156,35 +156,35 @@ malva pequena flor brinco~
 uma pequena flor de malva~
 Um pequeno brinco de malva foi perdido aqui.~
 ~
-11 ag 0 0 0 aq 0 0 0 0 0 0 0
+11 ag aq
 0 0 0 0
-2 2007 0 0 0
+2 2007 0
 A
 17 -2
 #14010
 balde pequeno madeira~
-um balde de n�ctar~
-Um pequeno balde de madeira foi deixado no ch�o.~
+um balde de néctar~
+Um pequeno balde de madeira foi deixado no chão.~
 ~
-17 ag 0 0 0 ao 0 0 0 0 0 0 0
+17 ag ao
 20 20 16 0
-25 1000 0 0 0
+6 1000 0
 #14011
 vestido cor-de-rosa~
 um vestido cor-de-rosa~
 Um gracioso vestido cor-de-rosa espera pacientemente por uma nova dona.~
 ~
-9 ag 0 0 0 ad 0 0 0 0 0 0 0
+9 ag ad
 6 0 0 0
-5 1000 0 0 0
+5 1000 0
 #14012
 cinto verde-folha~
 um cinto verde-folha~
 Um bonito cinto verde-folha parece pedir para ser tirado daqui.~
 ~
-11 ag 0 0 0 al 0 0 0 0 0 0 0
+11 ag al
 0 0 0 0
-5 3000 0 35 0
+5 3000 0 35
 A
 17 -3
 A
@@ -194,28 +194,28 @@ escudo folha escudo-folha~
 um escudo-folha~
 Um grande escudo em forma de folha espera ser usado novamente.~
 ~
-9 ag 0 0 0 aj 0 0 0 0 0 0 0
+9 ag aj
 6 0 0 0
-6 4000 0 5 0
+6 4000 0 5
 A
 5 1
 #14014
-espada altaflor not�vel~
+espada altaflor notavel~
 Altaflor~
-Uma espada de not�vel beleza foi fincada no ch�o.~
+Uma espada de notável beleza foi fincada no chão.~
 ~
-5 ak 0 0 0 an 0 0 0 0 0 0 0
+5 ka an
 0 3 5 3
-7 6000 0 10 0
+7 6000 0 10
 E
-espada altaflor not�vel~
-A bela Altaflor � a famosa espada de L�rio de Lindrel, t�o antiga quanto sua
-respeitada fam�lia guerreira.  Apesar de temperamental, ela nunca deixou
-algu�m que a empunhasse, tendo bom cora��o, em situa��o dif�cil.  N�o se
-sabe quem a criou, mas dizem que ela surgiu por magia f�dica quando fadas e
-duendes ainda n�o se escondiam de outros seres, na �poca em que as rainhas
-eram ainda jovens princesas.  � por ter nascido nessa �poca que Altaflor
-� t�o s�bia.
+espada altaflor notavel~
+A bela Altaflor é a famosa espada de Lírio de Lindrel, tão antiga quanto sua
+respeitada família guerreira.  Apesar de temperamental, ela nunca deixou
+alguém que a empunhasse, tendo bom coração, em situação difícil.  Não se
+sabe quem a criou, mas dizem que ela surgiu por magia fádica quando fadas e
+duendes ainda não se escondiam de outros seres, na época em que as rainhas
+eram ainda jovens princesas.  É por ter nascido nessa época que Altaflor
+é tão sábia.
 ~
 A
 18 2
@@ -228,9 +228,9 @@ bengala carvalho~
 uma bengala de carvalho~
 Uma velha bengala de carvalho reclama por ter sido esquecida.~
 ~
-12 ag 0 0 0 ao 0 0 0 0 0 0 0
+12 ag ao
 0 0 0 0
-3 1234 0 0 0
+3 1234 0
 A
 3 1
 A
@@ -240,202 +240,202 @@ garrafa enorme~
 uma enorme garrafa~
 Uma enorme garrafa diverte-se sozinha aqui.~
 ~
-17 ag 0 0 0 ao 0 0 0 0 0 0 0
+17 ag ao
 12 12 2 0
-17 300 30 0 0
+3 300 30
 #14017
-chocalho beb�~
-um chocalho de beb�~
-Um pequeno chocalho colorido chora por ter se perdido de seu beb�.~
+chocalho bebe~
+um chocalho de bebê~
+Um pequeno chocalho colorido chora por ter se perdido de seu bebê.~
 ~
-12 ag 0 0 0 ao 0 0 0 0 0 0 0
+12 ag ao
 0 0 0 0
-3 900 0 0 0
+3 900 0
 #14018
 mantinha perfumada~
 uma mantinha perfumada~
-Uma mantinha perfumada espera encontrar seu beb� o mais r�pido poss�vel.~
+Uma mantinha perfumada espera encontrar seu bebê o mais rápido possível.~
 ~
-9 ag 0 0 0 ak 0 0 0 0 0 0 0
+9 ag ak
 6 0 0 0
-3 600 0 0 0
+3 600 0
 A
 17 -2
 #14019
-cal�as amarronzadas marrom~
-cal�as amarronzadas~
-Algu�m esqueceu um par de cal�as marrom aqui.~
+calcas amarronzadas marrom~
+calças amarronzadas~
+Alguém esqueceu um par de calças marrom aqui.~
 ~
-9 ag 0 0 0 af 0 0 0 0 0 0 0
+9 ag af
 6 0 0 0
-4 400 0 0 0
+4 400 0
 #14020
 colete verde~
 um colete verde~
 Um elegante colete verde procura por um dono aqui.~
 ~
-9 ag 0 0 0 ad 0 0 0 0 0 0 0
+9 ag ad
 2 0 0 0
-5 500 0 0 0
+5 500 0
 #14021
-pergaminho verde estudo t�tulo interessante avan�ado mente clorofilada~
-Sentindo-se Verde - Estudo Avan�ado da Mente Clorofilada~
-Um enorme pergaminho de t�tulo interessante irrita-se por ter sido perdido.~
+pergaminho verde estudo titulo interessante avancado mente clorofilada~
+Sentindo-se Verde - Estudo Avançado da Mente Clorofilada~
+Um enorme pergaminho de título interessante irrita-se por ter sido perdido.~
 ~
-2 ag 0 0 0 ao 0 0 0 0 0 0 0
+2 ag ao
 15 12 13 301
-3 690 0 0 0
+3 690 0
 E
-pergaminho verde estudo avan�ado mente clorofilada t�tulo interessante~
-O t�tulo do pergaminho � muito interessante.  Infelizmente, esse � o tipo de
-pergaminho que s� pode ser lido quando o antigo dono revela como "abr�-lo".
-Portanto, a menos que voc� descubra seu segredo, s� lhe resta imaginar o que
+pergaminho verde estudo avancado mente clorofilada titulo interessante~
+O título do pergaminho é muito interessante.  Infelizmente, esse é o tipo de
+pergaminho que só pode ser lido quando o antigo dono revela como "abrí-lo".
+Portanto, a menos que você descubra seu segredo, só lhe resta imaginar o que
 diz tal estudo...
 ~
 #14022
-mochila vermelha pr�tica estudante~
+mochila vermelha pratica estudante~
 uma mochila vermelha de estudante~
-Uma pr�tica mochila vermelha foi esquecida aqui.~
+Uma prática mochila vermelha foi esquecida aqui.~
 ~
-15 ag 0 0 0 ak 0 0 0 0 0 0 0
+15 ag ak
 100 5 -1 0
-5 2631 0 0 0
+5 2631 0
 #14023
 varinha treinamento~
 uma varinha de treinamento~
 Uma varinha quase nova perdeu-se de seu dono e o espera aqui.~
 ~
-4 ag 0 0 0 ao 0 0 0 0 0 0 0
+4 ag ao
 10 2 1 1
-4 1290 0 0 0
+4 1290 0
 #14024
-p�o mel~
-um p�o de mel~
-O cheiro de um p�o de mel fresquinho lhe d� �gua na boca.~
+pao mel~
+um pão de mel~
+O cheiro de um pão de mel fresquinho lhe dá água na boca.~
 ~
-19 ag 0 0 0 a 0 0 0 0 0 0 0
+19 ag a
 12 0 0 0
-3 100 0 0 0
+3 100 0
 #14025
 garrafa~
 uma garrafa de leite~
 Uma garrafa de leite foi esquecida aqui.~
 ~
-17 ag 0 0 0 ao 0 0 0 0 0 0 0
+17 ag ao
 10 10 10 0
-15 130 0 0 0
+3 130 0
 #14026
 caderno~
 um caderno~
-Um caderno foi perdido aqui por algum estudante distra�do.~
+Um caderno foi perdido aqui por algum estudante distraído.~
 ~
-12 0 0 0 0 ao 0 0 0 0 0 0 0
+12 0 ao 0
 0 0 0 0
-2 200 0 0 0
+2 200 0
 #14027
 saquinho travessuras pano suspeito~
 um saquinho de travessuras~
 Um suspeito saquinho de pano foi perdido aqui.~
 ~
-2 ag 0 0 0 ao 0 0 0 0 0 0 0
+2 ag ao
 9 38 79 -1
-4 900 0 0 0
+4 900 0
 #14028
-cal�as curtas tecido azul-claro azul claro~
-cal�as curtas de tecido azul-claro~
-Um par de cal�as curtas azul-claro foi deixada no ch�o.~
+calcas curtas tecido azul-claro azul claro~
+calças curtas de tecido azul-claro~
+Um par de calças curtas azul-claro foi deixada no chão.~
 ~
-9 ag 0 0 0 af 0 0 0 0 0 0 0
+9 ag af
 5 0 0 0
-5 1200 0 0 0
+5 1200 0
 #14029
 avental branco~
 um avental branco~
-Um avental branco impecavelmente limpo desespera-se por estar no ch�o sujo.~
+Um avental branco impecavelmente limpo desespera-se por estar no chão sujo.~
 ~
-9 ag 0 0 0 ak 0 0 0 0 0 0 0
+9 ag ak
 6 0 0 0
-6 3120 0 0 0
+6 3120 0
 A
 1 1
 #14030
-armadura encantada m�gico~
+armadura encantada magico~
 uma armadura encantada~
-Uma armadura de ar m�gico brilha no ch�o daqui.~
+Uma armadura de ar mágico brilha no chão daqui.~
 ~
-9 ag 0 0 0 ad 0 0 0 0 0 0 0
+9 ag ad
 10 0 0 0
-10 7200 15 0 0
+10 7200 15
 A
 2 1
 A
 18 1
 #14031
-p� pequeno frasco brilhante pirlimpimpim~
-p� de pirlimpimpim~
-Um pequeno frasco contendo um p� brilhante foi esquecido aqui.~
-$n come�a a espalhar um pouco de $p, o que faz com que voc� comece a brilhar.~
-3 acg 0 0 0 ao 0 0 0 0 0 0 0
+po pequeno frasco brilhante pirlimpimpim~
+pó de pirlimpimpim~
+Um pequeno frasco contendo um pó brilhante foi esquecido aqui.~
+$n começa a espalhar um pouco de $p, o que faz com que você comece a brilhar.~
+3 cag ao
 20 4 4 62
-4 1000 0 0 0
+4 1000 0
 #14032
-raiz mandr�gora~
-raiz de mandr�gora~
+raiz mandragora~
+raiz de mandrágora~
 Uma estranha raiz foi deixada aqui.~
 ~
-3 acg 0 0 0 ao 0 0 0 0 0 0 0
+3 cag ao
 20 1 1 34
-4 5600 0 0 0
+4 5600 0
 #14033
-p�talas preparado papoula negra bonito negro frasco~
-um preparado de p�talas de papoula negra~
-Voc� percebe um bonito frasco negro esquecido no ch�o.~
+petalas preparado papoula negra bonito negro frasco~
+um preparado de pétalas de papoula negra~
+Você percebe um bonito frasco negro esquecido no chão.~
 ~
-10 acg 0 0 0 ao 0 0 0 0 0 0 0
+10 acg ao
 20 38 43 -1
-5 5400 0 0 0
+5 5400 0
 #14034
 touca dormir~
 uma touca de dormir~
-Algu�m perdeu sua touca de dormir bem aqui.~
+Alguém perdeu sua touca de dormir bem aqui.~
 ~
-9 ag 0 0 0 ae 0 0 0 0 0 0 0
+9 ag ae
 3 0 0 0
-2 1230 0 0 0
+2 1230 0
 #14035
 martelo marceneiro~
 um martelo de marceneiro~
 Um grande martelo de marceneiro foi esquecido aqui.~
 ~
-5 a 0 0 0 ano 0 0 0 0 0 0 0
+5 a ano
 0 3 3 5
-7 3210 0 0 0
+7 3210 0
 #14036
-luvas algod�o~
-confort�veis luvas de algod�o~
-Um par de luvas de algod�o foi perdido aqui.~
+luvas algodao~
+confortáveis luvas de algodão~
+Um par de luvas de algodão foi perdido aqui.~
 ~
-9 ag 0 0 0 ah 0 0 0 0 0 0 0
+9 ag ah
 3 0 0 0
-2 1000 0 0 0
+2 1000 0
 A
 1 1
 #14037
 pacote pregos~
 um pacote de pregos~
-Um pacote repleto de pregos foi deixado no ch�o.~
+Um pacote repleto de pregos foi deixado no chão.~
 ~
-12 ag 0 0 0 a 0 0 0 0 0 0 0
+12 ag a
 0 0 0 0
-6 789 0 0 0
+6 789 0
 #14038
 capa vermelha tecido vermelho bonita~
 uma capa vermelha~
 Uma bonita capa de tecido vermelho foi perdida por aqui.~
 ~
-9 ag 0 0 0 ak 0 0 0 0 0 0 0
+9 ag ak
 4 0 0 0
-9 6780 0 18 0
+9 6780 0 18
 A
 6 1
 A
@@ -445,14 +445,14 @@ A
 #14039
 adaga cantora~
 a adaga cantora~
-Voc� se surpreende ao perceber que h� uma adaga cantando aqui.~
+Você se surpreende ao perceber que há uma adaga cantando aqui.~
 ~
-5 ag 0 0 0 ano 0 0 0 0 0 0 0
+5 ag ano
 0 4 3 1
-6 7891 0 0 0
+6 7891 0
 E
 adaga cantora~
-$> emote come�a a cantar em dueto com sua adaga cantora.
+$> emote começa a cantar em dueto com sua adaga cantora.
 ~
 A
 19 2
@@ -461,70 +461,70 @@ A
 #14040
 lira madeira encantada~
 uma lira de madeira encantada~
-Uma bonita lira de madeira espera ser dedilhada por algu�m com talento.~
+Uma bonita lira de madeira espera ser dedilhada por alguém com talento.~
 ~
-12 ag 0 0 0 ao 0 0 0 0 0 0 0
+12 ga ao
 0 0 0 0
-6 2310 0 0 0
+6 2310 0
 #14041
 pergaminho cantiga simples~
 uma cantiga~
-Um pergaminho de apar�ncia simples parece pedir para ser lido.~
+Um pergaminho de aparência simples parece pedir para ser lido.~
 ~
-2 ag 0 0 0 ao 0 0 0 0 0 0 0
+2 ag ao
 30 7 7 -1
-4 4000 0 0 0
+4 4000 0
 E
 pergaminho cantiga simples~
-Voc� abre o pergaminho e v� uma bonita cantiga onde uma donzela reclama a
-falta de seu amado.  Parece que �lamo de Lindrel coleciona cantigas desse
+Você abre o pergaminho e vê uma bonita cantiga onde uma donzela reclama a
+falta de seu amado.  Parece que Álamo de Lindrel coleciona cantigas desse
 tipo, tendo conseguido essa de um trovador chamado Jorge de Sena.
 Ela diz:
                               
 
                               " Ramo verde florido,
                                 Florido de bela flor,
-                                Do meu amor t�o querido,
-                                Onde est� o meu amor? 
+                                Do meu amor tão querido,
+                                Onde está o meu amor? 
 
-                                Diz-me aonde ele est�,
-                                Aonde est� o meu amor,
-                                P'ra que eu busc�-lo v�
+                                Diz-me aonde ele está,
+                                Aonde está o meu amor,
+                                P'ra que eu buscá-lo vá
                                 Florido de bela flor.
 
-                                Ramo verde t�o querido,
-                                T�o querido do meu amor,
+                                Ramo verde tão querido,
+                                Tão querido do meu amor,
                                 De belas flores florido,
                                 Florido de bela flor... 
 
-                                Diz-me aonde ele est�,
+                                Diz-me aonde ele está,
                                 Florido de bela flor,
-                                P'ra que eu busc�-lo v�
-                                Aonde ele est�, o meu amor. 
+                                P'ra que eu buscá-lo vá
+                                Aonde ele está, o meu amor. 
 
                                 Ramo verde florido,
                                 Florido de bela flor,
-                                Do meu amor t�o querido,
-                                T�o querido do meu amor. "
+                                Do meu amor tão querido,
+                                Tão querido do meu amor. "
 
 ~
 #14042
 rubraragem varinha repleta extravagante~
 Rubraragem~
-Uma extravagante varinha repleta de incrusta��es flutua sobre o solo.~
+Uma extravagante varinha repleta de incrustações flutua sobre o solo.~
 ~
-5 agiq 0 0 0 an 0 0 0 0 0 0 0
+5 aigq an
 0 3 6 12
-6 9000 0 30 0
+6 9000 0 30
 E
 rubraragem varinha repleta extravagante~
-Rubraragem � bastante antiga, mas ainda muito poderosa.  Feita inteiramente
-de prata, ela possui por toda sua superf�cie rubis de diferentes tamanhos,
-trabalhados primorosamente para brilharem o m�ximo poss�vel.  Sendo a
-varinha de estima��o de Pr�mula, Rubraragem tornou-se muito parecida com sua
-dona, prevendo at� a maneira que seria usada pela fada, tendo ent�o
-dificuldade de se adaptar com um novo propriet�rio.  Diz-se que as magias de sua
-prefer�ncia envolvem o fogo e o ar, da� o seu nome.
+Rubraragem é bastante antiga, mas ainda muito poderosa.  Feita inteiramente
+de prata, ela possui por toda sua superfície rubis de diferentes tamanhos,
+trabalhados primorosamente para brilharem o máximo possível.  Sendo a
+varinha de estimação de Prímula, Rubraragem tornou-se muito parecida com sua
+dona, prevendo até a maneira que seria usada pela fada, tendo então
+dificuldade de se adaptar com um novo proprietário.  Diz-se que as magias de sua
+preferência envolvem o fogo e o ar, daí o seu nome.
 ~
 A
 19 3
@@ -537,17 +537,17 @@ manto rubra seda rubro~
 um manto de seda rubra~
 Um delicado manto rubro perdeu-se de seu dono por aqui.~
 ~
-9 ag 0 0 0 ak 0 0 0 0 0 0 0
+9 ag ak
 8 0 0 0
-5 8999 0 10 0
+5 8999 0 10
 #14044
-cajado cedro madeira clara arom�tica~
+cajado cedro madeira clara aromatica~
 um cajado de cedro~
-Um cajado de madeira clara e arom�tica espera ser tirado daqui.~
+Um cajado de madeira clara e aromática espera ser tirado daqui.~
 ~
-5 ag 0 0 0 ano 0 0 0 0 0 0 0
+5 ag ano
 0 5 3 5
-10 8500 0 8 0
+10 8500 0 8
 A
 19 4
 A
@@ -555,13 +555,13 @@ A
 A
 2 1
 #14045
-botas sete l�guas~
-botas de sete l�guas~
-Um par de magn�ficas botas procura algu�m para acompanhar em alguma aventura.~
+botas sete leguas~
+botas de sete léguas~
+Um par de magníficas botas procura alguém para acompanhar em alguma aventura.~
 ~
-9 ag 0 0 0 ag 0 0 0 0 0 0 0
+9 ag ag
 6 0 0 0
-6 4500 0 0 0
+6 4500 0
 A
 14 50
 A
@@ -571,150 +571,150 @@ manta felpuda~
 uma manta felpuda~
 Uma manta felpuda foi deixada aqui.~
 ~
-12 ag 0 0 0 ak 0 0 0 0 0 0 0
+12 ag ak
 0 0 0 0
-3 1000 0 0 0
+3 1000 0
 A
 17 -3
 #14047
 liana florida longa~
 uma liana florida~
-Uma longa liana florida est� ca�da aqui.~
+Uma longa liana florida está caída aqui.~
 ~
-9 ag 0 0 0 al 0 0 0 0 0 0 0
+9 ag al
 3 0 0 0
-4 1200 0 0 0
+4 1200 0
 E
 liana florida longa~
-As flores desse delicado cip� s�o todas brancas.
+As flores desse delicado cipó são todas brancas.
 ~
 #14048
-carapa�a vermelha bolinhas negras joaninha~
-uma carapa�a vermelha com bolinhas negras~
-Alguma joaninha desleixada esqueceu sua carapa�a aqui.~
+carapaca vermelha bolinhas negras joaninha~
+uma carapaça vermelha com bolinhas negras~
+Alguma joaninha desleixada esqueceu sua carapaça aqui.~
 ~
-9 ag 0 0 0 ad 0 0 0 0 0 0 0
+9 ag ad
 9 0 0 0
-6 3600 0 0 0
+6 3600 0
 #14049
 capacete vermelho antenas~
 um capacete vermelho com antenas~
 Um capacete vermelho com antenas foi esquecido aqui.~
 ~
-9 ag 0 0 0 ae 0 0 0 0 0 0 0
+9 ag ae
 5 0 0 0
-5 3000 0 0 0
+5 3000 0
 #14050
 joelheiras vermelhas~
 um par de joelheiras vermelhas~
 Um par de joelheiras vermelhas foi perdido aqui.~
 ~
-9 ag 0 0 0 af 0 0 0 0 0 0 0
+9 ag af
 5 0 0 0
-5 2900 0 0 0
+5 2900 0
 #14051
 luvas negras~
 um par de luvas negras~
-Um par de luvas negras foi deixado no ch�o.~
+Um par de luvas negras foi deixado no chão.~
 ~
-9 ag 0 0 0 ah 0 0 0 0 0 0 0
+9 ag ah
 4 0 0 0
-3 2600 0 0 0
+3 2600 0
 #14052
 mamadeira~
 uma mamadeira~
 Uma mamadeira foi esquecida aqui.~
 ~
-17 ag 0 0 0 ao 0 0 0 0 0 0 0
+17 ag ao
 6 6 16 0
-11 340 0 0 0
+2 340 0
 #14053
-pi�o colorido~
-um pi�o colorido~
-Um bonito pi�o colorido espera brincar com alguma crian�a que passe por aqui.~
+piao colorido~
+um pião colorido~
+Um bonito pião colorido espera brincar com alguma criança que passe por aqui.~
 ~
-12 ag 0 0 0 ao 0 0 0 0 0 0 0
+12 ag ao
 0 0 0 0
-2 290 0 0 0
+2 290 0
 #14054
-macac�o azul~
-um macac�o azul~
-Um pequeno macac�o azul foi esquecido no ch�o.~
+macacao azul~
+um macacão azul~
+Um pequeno macacão azul foi esquecido no chão.~
 ~
-9 ag 0 0 0 ad 0 0 0 0 0 0 0
+9 ag ad
 4 0 0 0
-5 5600 0 0 0
+5 5600 0
 #14055
 antenas borboleta~
 um par de antenas de borboleta~
 Um par de antenas foi perdido aqui.~
 ~
-9 ag 0 0 0 ae 0 0 0 0 0 0 0
+9 ag ae
 4 0 0 0
-2 1450 0 0 0
+2 1450 0
 #14056
 coleira prateada~
 uma coleira prateada~
-Uma delicada coleira prateada foi esquecida no ch�o.~
+Uma delicada coleira prateada foi esquecida no chão.~
 ~
-9 ag 0 0 0 ac 0 0 0 0 0 0 0
+9 ag ac
 4 0 0 0
-5 6000 0 0 0
+5 6000 0
 #14057
 apetitosa folha amoreira~
 uma apetitosa folha de amoreira~
-Uma apetitosa folha de amoreira foi trazida at� aqui pelo vento.~
+Uma apetitosa folha de amoreira foi trazida até aqui pelo vento.~
 ~
-19 ag 0 0 0 a 0 0 0 0 0 0 0
+19 ag a
 8 0 0 0
-4 20 0 0 0
+4 20 0
 #14058
 folha macieira~
 uma folha de macieira~
-Uma folha de macieira caiu no ch�o.~
+Uma folha de macieira caiu no chão.~
 ~
-19 ag 0 0 0 a 0 0 0 0 0 0 0
+19 ag a
 8 0 0 0
-4 20 0 0 0
+4 20 0
 #14059
 folha laranjeira~
 uma folha laranjeira~
 Uma cheirosa folha de laranjeira caiu aqui.~
 ~
-19 ag 0 0 0 a 0 0 0 0 0 0 0
+19 ag a
 8 0 0 0
-4 20 0 0 0
+4 20 0
 #14060
 capacete azul claro~
 um capacete azul-claro~
 Um capacete azul-claro todo enfeitado foi perdido aqui.~
 ~
-9 ag 0 0 0 ae 0 0 0 0 0 0 0
+9 ag ae
 4 0 0 0
-7 3890 0 0 0
+7 3890 0
 #14061
 par cotoveleiras azul claras~
 um par de cotoveleiras azul-claras~
 Um par de cotoveleiras azul-claras foi esquecida aqui.~
 ~
-9 ag 0 0 0 ai 0 0 0 0 0 0 0
+9 ag ai
 4 0 0 0
-6 3560 0 0 0
+6 3560 0
 #14062
 longa varinha marfim chispalva~
 Chispalva~
-Uma longa varinha de marfim roda alegremente sobre o ch�o.~
+Uma longa varinha de marfim roda alegremente sobre o chão.~
 ~
-5 ag 0 0 0 ano 0 0 0 0 0 0 0
+5 ag ano
 0 3 6 12
-10 10000 10 0 0
+10 10000 10
 E
 longa varinha cristal chispalva~
-A velha Chispalva, de nome engra�ado mas significativo, � uma varinha muito
-s�bia.  Seus conhecimentos sobre po��es, encantamentos e qualquer coisa
-relacionada a prepara��o de magias auxiliam, e muito, sua dona, a fada
-Papoula.  Chispalva tamb�m detecta qualquer defeito em outra varinha, tendo
-j� ajudado no conserto de quase todas da regi�o.  E ela nunca quebrou.
+A velha Chispalva, de nome engraçado mas significativo, é uma varinha muito
+sábia.  Seus conhecimentos sobre poções, encantamentos e qualquer coisa
+relacionada a preparação de magias auxiliam, e muito, sua dona, a fada
+Papoula.  Chispalva também detecta qualquer defeito em outra varinha, tendo
+já ajudado no conserto de quase todas da região.  E ela nunca quebrou.
 ~
 A
 2 1
@@ -727,55 +727,55 @@ A
 #14063
 colher pau~
 uma colher de pau~
-Uma longa colher de pau caiu no ch�o.~
+Uma longa colher de pau caiu no chão.~
 ~
-12 ag 0 0 0 ao 0 0 0 0 0 0 0
+12 ag ao
 0 0 0 0
-4 340 0 0 0
+4 340 0
 #14064
 tacho cobre~
 um tacho de cobre~
 Um tacho de cobre flutua no ar, aquecido por estranha chama.~
 ~
-15 ag 0 0 0 0 0 0 0 0 0 0 0
+15 ag 0
 50 0 -1 0
-20 4560 0 0 0
+20 4560 0
 E
 tacho cobre~
-Algo esquisito est� sendo preparado nele... Isso tem cheiro de chuva!
+Algo esquisito está sendo preparado nele... Isso tem cheiro de chuva!
 ~
 #14065
-fonte flores entrela�adas~
+fonte flores entrelacadas~
 a fonte das duas flores~
-Uma fonte em forma de duas flores entrela�adas convida-o para beber de seu n�ctar.~
+Uma fonte em forma de duas flores entrelaçadas convida-o para beber de seu néctar.~
 ~
-23 ag 0 0 0 0 0 0 0 0 0 0 0
+23 ag 0
 1999 1999 16 0
-60 10000 0 0 0
+60 10000 0
 E
-fonte flores entrela�adas~
-A bel�ssima fonte foi feita, talvez por magia, a partir da lapida��o de dois
+fonte flores entrelacadas~
+A belíssima fonte foi feita, talvez por magia, a partir da lapidação de dois
 grandes blocos de pedra: um de safira e outro de granada.  Acredite se
-puder, mas � isso mesmo.  Uma enorme flor de safira entrela�a-se a uma de
-granada, tendo as duas sua corolas de p�talas voltada para o alto.  Delas,
-jorra um l�quido dourado muito critalino.
+puder, mas é isso mesmo.  Uma enorme flor de safira entrelaça-se a uma de
+granada, tendo as duas sua corolas de pétalas voltada para o alto.  Delas,
+jorra um líquido dourado muito critalino.
 ~
 #14066
-bord�o fada negra negro~
-o Bord�o da Fada Negra~
-Um longo bord�o negro foi flutua � sua frente.~
+bordao fada negra negro~
+o Bordão da Fada Negra~
+Um longo bordão negro foi flutua à sua frente.~
 ~
-5 aegjlq 0 0 0 ano 0 0 0 0 0 0 0
+5 aqjleg ano
 0 4 4 12
-12 999999 99999 25 0
+12 999999 99999 25
 E
-bord�o fada negra negro~
-Esse longo cajado negro � feito de rijo ouro negro.  Por toda sua extens�o
-runas f�dicas, at� agora in�ditas para voc�, emitem um suave brilho
-sang��neo, parecendo tamb�m produzir calor crescente.  Na parte superior do
-bord�o, no centro de uma esp�cie de um bot�o de flor negra prestes a se
+bordao fada negra negro~
+Esse longo cajado negro é feito de rijo ouro negro.  Por toda sua extensão
+runas fádicas, até agora inéditas para você, emitem um suave brilho
+sangüíneo, parecendo também produzir calor crescente.  Na parte superior do
+bordão, no centro de uma espécie de um botão de flor negra prestes a se
 abrir, uma granada do tamanho de seu punho flameja ardentemente, espalhando
-sua intensa luz vermelho-escura por tudo a seu redor. � esse um dos s�mbolos
+sua intensa luz vermelho-escura por tudo a seu redor. É esse um dos símbolos
 da realeza e soberania de Ellora.
 ~
 A
@@ -791,215 +791,215 @@ garrafa vidro verde~
 uma garrafa~
 Uma garrafa de vidro esverdeado foi deixada aqui.~
 ~
-17 ag 0 0 0 ao 0 0 0 0 0 0 0
+17 ag ao
 10 10 16 0
-15 200 20 0 0
+3 200 20
 #14068
 copo~
 um copo~
 Um copo foi deixado aqui.~
 ~
-17 ag 0 0 0 ao 0 0 0 0 0 0 0
+17 ag ao
 5 5 6 0
-10 55 5 0 0
+3 55 5
 #14069
 dose copo~
 uma dose~
 Um copo de uma dose foi deixado aqui.~
 ~
-17 ag 0 0 0 ao 0 0 0 0 0 0 0
+17 ag ao
 2 2 5 0
-3 62 6 0 0
+3 62 6
 #14070
 caneca~
 uma caneca~
 Uma caneca foi deixada aqui.~
 ~
-17 ag 0 0 0 ao 0 0 0 0 0 0 0
+17 ag ao
 10 10 1 0
-15 100 10 0 0
+3 100 10
 #14071
 travesseiro branco~
 um travesseiro branco~
 Um grande travesseiro branco literalmente descansa aqui.~
 ~
-12 ag 0 0 0 ao 0 0 0 0 0 0 0
+12 ag ao
 0 0 0 0
-1 1900 0 0 0
+1 1900 0
 #14072
 linda fada escultura~
 a escultura de uma fada~
-Uma linda escultura de m�rmore representa uma fada prestes a al�ar v�o.~
+Uma linda escultura de mármore representa uma fada prestes a alçar vôo.~
 ~
-12 agq 0 0 0 a 0 0 0 0 0 0 0
+12 qag a
 0 0 0 0
-20 13000 0 0 0
+20 13000 0 0
 E
 linda fada escultura~
 A delicada fada parece viva.  Suas asas, como as das borboletas, possuem
-desenhos sim�tricos por toda sua extens�o, estando abertas de maneira que
-parecem que v�o come�ar a bater a qualquer momento.  Os cabelos da fada,
-tamanha a perfei��o, parecem estar voando ao vento, emoldurando a sorridente
+desenhos simétricos por toda sua extensão, estando abertas de maneira que
+parecem que vão começar a bater a qualquer momento.  Os cabelos da fada,
+tamanha a perfeição, parecem estar voando ao vento, emoldurando a sorridente
 face voltada para o alto.  Deve haver magia nessa escultura.
 ~
 #14073
-p� maquiagem rosa cor-de-rosa~
+po maquiagem rosa cor-de-rosa~
 maquiagem cor-de-rosa~
-Um esquisito p� cor-de-rosa caiu no ch�o.~
+Um esquisito pó cor-de-rosa caiu no chão.~
 ~
-12 ag 0 0 0 ar 0 0 0 0 0 0 0
+12 ag ar
 0 0 0 0
-2 490 0 0 0
+2 490 0
 #14074
 torta morango fatia~
 uma fatia de torta de morango~
 Uma fatia de apetitosa torta de morango espera ser devorada.~
 ~
-19 ag 0 0 0 a 0 0 0 0 0 0 0
+19 ag a
 12 0 0 0
-5 100 0 0 0
+5 100 0
 #14075
-bolinho chocolate baunilha �tima apar�ncia~
+bolinho chocolate baunilha otima aparencia~
 um bolinho de chocolate com baunilha~
-Um bolinho de �tima apar�ncia foi deixado no ch�o.~
+Um bolinho de ótima aparência foi deixado no chão.~
 ~
-19 ag 0 0 0 a 0 0 0 0 0 0 0
+19 ag a
 12 0 0 0
-5 70 0 0 0
+5 70 0
 #14076
-biscoitos ma�� canela~
-biscoitos de ma�� com canela~
+biscoitos maca canela~
+biscoitos de maçã com canela~
 Alguns biscoitos foram deixados aqui.~
 ~
-19 ag 0 0 0 a 0 0 0 0 0 0 0
+19 ag a
 12 0 0 0
-5 40 0 0 0
+5 40 0
 #14077
-peda�o bolo laranja~
-um peda�o de bolo de laranja~
-Um belo peda�o de bolo foi deixado aqui.~
+pedaco bolo laranja~
+um pedaço de bolo de laranja~
+Um belo pedaço de bolo foi deixado aqui.~
 ~
-19 ag 0 0 0 a 0 0 0 0 0 0 0
+19 ag a
 12 0 0 0
-5 65 0 0 0
+5 65 0
 #14078
-bombom avel�~
-um bombom de avel�~
+bombom avela~
+um bombom de avelã~
 Um pequeno bombom foi perdido aqui.~
 ~
-19 ag 0 0 0 a 0 0 0 0 0 0 0
+19 ag a
 12 0 0 0
-2 25 0 0 0
+2 25 0
 #14079
 torta trufa fatia cereja~
 uma fatia de torta de trufa com cereja~
 Uma grande fatia de torta foi deixada aqui.~
 ~
-19 ag 0 0 0 a 0 0 0 0 0 0 0
+19 ag a
 12 0 0 0
-5 95 0 0 0
+5 95 0
 #14080
 bonita rosa vermelha cabo longo~
 uma rosa vermelha de cabo longo~
-Uma bonita rosa vermelha caiu no ch�o e nele ficou.~
+Uma bonita rosa vermelha caiu no chão e nele ficou.~
 ~
-12 0 0 0 0 ao 0 0 0 0 0 0 0
+12 0 ao 0
 0 0 0 0
-2 145 0 0 0
+2 145 0
 #14081
-ramalhete perfumadas gard�nias brancas~
-um ramalhete de perfumadas gard�nias~
+ramalhete perfumadas gardenias brancas~
+um ramalhete de perfumadas gardênias~
 Um belo ramalhete de flores brancas foi deixado aqui.~
 ~
-12 0 0 0 0 ao 0 0 0 0 0 0 0
+12 0 ao 0 
 0 0 0 0
-4 275 0 0 0
+4 275 0
 #14082
 cesta flores do campo coloridas~
 uma cesta com flores do campo~
 Uma cesta repleta de flores coloridas foi esquecida aqui.~
 ~
-12 0 0 0 0 ao 0 0 0 0 0 0 0
+12 0 ao 0
 0 0 0 0
-4 260 0 0 0
+4 260 0
 #14083
 vaso amores-perfeitos coloridos pequeno~
 um vaso de coloridos amores-perfeitos~
 Um pequeno vaso de amores-perfeitos foi deixado aqui.~
 ~
-12 0 0 0 0 ao 0 0 0 0 0 0 0
-0 0 0 0
-4 321 0 0 0
+12 0 ao 0
+0 0 0 0 
+4 321 0
 #14084
 ramo arruda~
 um ramo de arruda~
-Um pequeno ramo de arruda foi deixado no ch�o.~
+Um pequeno ramo de arruda foi deixado no chão.~
 ~
-3 acg 0 0 0 ao 0 0 0 0 0 0 0
+3 acg ao
 10 1 1 35
-4 3000 0 0 0
+4 3000 0
 #14085
 cesta velha vime~
 uma velha cesta de vime~
 Uma velha cesta de vime foi deixada aqui.~
 ~
-15 acg 0 0 0 ao 0 0 0 0 0 0 0
+15 cga ao
 10 5 -1 0
-7 1000 0 0 0
+7 1000 0
 #14086
 esfera vaga-lumes cristal brilhante~
 uma esfera de cristal com vaga-lumes dentro~
-Uma brilhante esfera de cristal foi deixada no ch�o.~
+Uma brilhante esfera de cristal foi deixada no chão.~
 ~
-1 agq 0 0 0 ao 0 0 0 0 0 0 0
+1 agq ao
 0 0 -1 0
-4 3400 0 0 0
+4 3400 0
 #14087
-�rvore amoreira bonita~
+arvore amoreira bonita~
 uma bonita amoreira~
-undefined~
 ~
-12 ag 0 0 0 0 0 0 0 0 0 0 0
+~
+12 ag 0
 14088 0 0 0
-40 180000 0 0 0
+40 180000 0
 #14088
 amora enorme apetitosa~
 uma enorme amora vermelha~
-Uma enorme e apetitosa amora vermelha caiu no ch�o.~
+Uma enorme e apetitosa amora vermelha caiu no chão.~
 ~
-19 ag 0 0 0 a 0 0 0 0 0 0 0
+19 ag a
 20 0 0 0
-4 100 0 0 0
+4 100 0
 #14089
-�rvore grande laranjeira~
+arvore grande laranjeira~
 uma grande laranjeira~
-undefined~
 ~
-12 ag 0 0 0 0 0 0 0 0 0 0 0
+~
+12 ag 0
 14090 0 0 0
-40 180000 0 0 0
+40 180000 0
 #14090
 laranja gigante desproporcional~
 uma laranja gigante~
-Uma laranja de tamanho desproporcional caiu no ch�o.~
+Uma laranja de tamanho desproporcional caiu no chão.~
 ~
-19 ag 0 0 0 a 0 0 0 0 0 0 0
+19 ag a
 20 0 0 0
-4 100 0 0 0
+4 100 0
 #14091
-�rvore grande pessegueiro~
+arvore grande pessegueiro~
 um grande pessegueiro~
-undefined~
 ~
-12 ag 0 0 0 0 0 0 0 0 0 0 0
+~
+12 ag 0
 14092 0 0 0
-40 180000 0 0 0
+40 180000 0
 #14092
-p�ssego maduro perfeito~
-um p�ssego maduro~
-Um p�ssego perfeito para ser comido caiu no ch�o.~
+pessego maduro perfeito~
+um pêssego maduro~
+Um pêssego perfeito para ser comido caiu no chão.~
 ~
-19 ag 0 0 0 a 0 0 0 0 0 0 0
+19 ag a
 20 0 0 0
-4 100 0 0 0
-$~
+4 100 0
+$
