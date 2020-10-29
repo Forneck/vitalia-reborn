@@ -514,7 +514,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	struct fann *ann;
 
 	ann = fann_create_from_file("etc/aventureiro.fann");
-	fann_type input[26];
+	fann_type input[29];
 	fann_type output[6];
 	struct char_data *victim;
 	struct obj_data *object;
@@ -523,11 +523,17 @@ void command_interpreter(struct char_data *ch, char *argument)
 	int grupo;
 	mob_vnum mob = 0;
 	obj_vnum obj = 0;
-
+    int count_obj = 0;
+    
 	if (GROUP(ch) != NULL)
 		grupo = 1;
 	else
 		grupo = 0;
+
+	for (i = ch->carrying; i; i = i->next_content)
+	{
+			count_obj++;
+	}
 
 	input[0] = GET_HIT(ch);
 	input[1] = GET_MAX_HIT(ch);
@@ -555,6 +561,9 @@ void command_interpreter(struct char_data *ch, char *argument)
 	input[23] = grupo;
 	input[24] = time_info.hours;
 	input[25] = GET_BREATH(ch);
+	input[26] = GET_HITROLL(ch);
+	input[27] = GET_DAMROLL(ch);
+	input[28] = count_obj;
 
 	REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
 
