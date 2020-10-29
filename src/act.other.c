@@ -1232,6 +1232,7 @@ ACMD(do_recall)
 
 ACMD(do_suggestion)
 {
+   struct obj_data *object;
    struct fann *ann;
 	fann_type *calc_output;
 	ann = fann_create_from_file("etc/aventureiro.fann");
