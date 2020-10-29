@@ -884,7 +884,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		fann_destroy(ann);
 		if (GET_LEVEL(ch) == LVL_IMPL)
 		{
-			send_to_char(ch, "%f, %f, %f, %f, %f, %f, %d", output[0], output[1], output[2], output[3],
+			send_to_char(ch, "%f, %f, %f, %f, %f, %f, %d\r\n", output[0], output[1], output[2], output[3],
 						 output[4], output[5], cmd);
 		}
 		((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd,
