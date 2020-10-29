@@ -3,24 +3,24 @@ Amuleto Runa Odin~
 a runa de Odin~
 Um sublime amuleto foi deixado aqui.~
 ~
-11 aegikq 0 0 0 ac 0 0 0 0 0 0 0
+11 aegikq ac 0
 0 0 0 0
-3 800000 80000 60 0
+3 800000 80000 60
 E
 Amuleto Runa Odin~
-                                  &G*******
-                                  &G*     *
-                                  &G*     *
-                                  &G*     *
-                                  &G*     *
-                                  &G*******&n
-Voc� observa um belo amuleto esculpido num pequeno bloco de pedra.  Simples
-e misterioso, o amuleto cont�m a runa de Odin.  A runa do desconhecido.  A
-runa de Odin exige das criaturas, f� em sua capacidade de transmuta��o e
-crescimento e coragem para superar obst�culos e transcender suas pr�prias
-limita��es.  Todos os nossos f�rteis sonhos est�o contidos nessa brancura.
-Nada � predestinado; os obst�culos do seu passado podem tornar-se os portais
-que o conduzir�o a novos come�os.
+                                  @G*******
+                                  @G*     *
+                                  @G*     *
+                                  @G*     *
+                                  @G*     *
+                                  @G*******@n
+Você observa um belo amuleto esculpido num pequeno bloco de pedra.  Simples
+e misterioso, o amuleto contém a runa de Odin.  A runa do desconhecido.  A
+runa de Odin exige das criaturas, fé em sua capacidade de transmutação e
+crescimento e coragem para superar obstáculos e transcender suas próprias
+limitações.  Todos os nossos férteis sonhos estão contidos nessa brancura.
+Nada é predestinado; os obstáculos do seu passado podem tornar-se os portais
+que o conduzirão a novos começos.
 ~
 A
 4 1
@@ -33,21 +33,21 @@ Amuleto Ouro Runa Fehu Majestoso~
 um amuleto de ouro~
 Um majestoso amuleto de ouro foi esquecido aqui.~
 ~
-11 aeiq 0 0 0 ac 0 0 0 0 0 0 0
+11 aeiq ac 0
 0 0 0 0
-3 500000 50000 60 0
+3 500000 50000 60
 E
 Amuleto Runa Fehu Ouro Majestoso~
-                                  &Y*******
-                                  &Y* |// *
-                                  &Y* |/  *
-                                  &Y* |   *
-                                  &Y* |   *
-                                  &Y*******&n
-Voc� observa um belo amuleto feito de ouro com uma pequena runa esculpida em
-seu corpo.  O amuleto de ouro cont�m a runa Fehu, que significa vit�ria e
-conquistas.  Seu regente � o deus Freyr, o deus do sol, e seus regentes
-planet�rios s�o os astros V�nus e a Lua.  
+                                  @Y*******
+                                  @Y* |// *
+                                  @Y* |/  *
+                                  @Y* |   *
+                                  @Y* |   *
+                                  @Y*******@n
+Você observa um belo amuleto feito de ouro com uma pequena runa esculpida em
+seu corpo.  O amuleto de ouro contém a runa Fehu, que significa vitória e
+conquistas.  Seu regente é o deus Freyr, o deus do sol, e seus regentes
+planetários são os astros Vênus e a Lua.  
 ~
 A
 2 1
@@ -58,21 +58,21 @@ Amuleto Pequeno Madeira Antiga Runa Othila~
 um amuleto de madeira~
 Um pequeno amuleto de madeira antiga foi deixado aqui.~
 ~
-11 aeiq 0 0 0 ac 0 0 0 0 0 0 0
+11 aeiq ac 0
 0 0 0 0
-3 600000 60000 60 0
+3 600000 60000 60
 E
 Amuleto Pequeno Madeira Antiga Runa Othila~
-                                 &y********
-                                 &y*  /\  *
-                                 &y*  \/  *
-                                 &y*  /\  *
-                                 &y* /  \ *
-                                 &y********&n
-Voc� observa um pequeno amuleto de madeira antiga com uma runa esculpida.  A
-Othila � uma runa de ruptura radical e nos aconselha a acreditar no que �
-novo.  Othila possui como regente o guardi� Heindall e seus regentes
-planet�rios s�o os astros Saturno e Marte.
+                                 @y********
+                                 @y*  /\  *
+                                 @y*  \/  *
+                                 @y*  /\  *
+                                 @y* /  \ *
+                                 @y********@n
+Você observa um pequeno amuleto de madeira antiga com uma runa esculpida.  A
+Othila é uma runa de ruptura radical e nos aconselha a acreditar no que é
+novo.  Othila possui como regente o guardiã Heindall e seus regentes
+planetários são os astros Saturno e Marte.
 ~
 A
 5 1
@@ -83,50 +83,50 @@ A
 #12603
 Amuleto Diamante Runa Geibo~
 um amuleto de diamante~
-Um magn�fico amuleto de diamante foi deixado aqui.~
+Um magnífico amuleto de diamante foi deixado aqui.~
 ~
-11 aeikq 0 0 0 ac 0 0 0 0 0 0 0
+11 aeikq ac 0
 0 0 0 0
-4 550000 55000 60 0
+4 550000 55000 60
 E
 Amuleto Diamante Runa Geibo~
-                                 &W********
-                                 &W* \  / *
-                                 &W*  \/  *
-                                 &W*  /\  *
-                                 &W* /  \ *
-                                 &W********&n
-Voc� observa um bel�ssimo amuleto de diamante.  Ao observ�-lo mais de perto,
-voc� percebe dois gravetos min�sculos que se cruzam dentro do majestoso
-diamante.  A runa Geibo indica a uni�o de duas for�as opostas, de forma
+                                 @W********
+                                 @W* \  / *
+                                 @W*  \/  *
+                                 @W*  /\  *
+                                 @W* /  \ *
+                                 @W********@n
+Você observa um belíssimo amuleto de diamante.  Ao observá-lo mais de perto,
+você percebe dois gravetos minúsculos que se cruzam dentro do majestoso
+diamante.  A runa Geibo indica a união de duas forças opostas, de forma
 harmoniosa e equilibrada.  Geibo possui como regente a deusa Freia e seus
-regentes planet�rios � o astro V�nus.
+regentes planetários é o astro Vênus.
 ~
 A
 13 25
 A
 18 1
 #12604
-Amuleto Esfera �gua Runa Inguz~
+Amuleto Esfera Agua Runa Inguz~
 um amuleto em forma de esfera~
-Um amuleto em forma de esfera foi deixado aqui, cheio de �gua e gravetos.~
+Um amuleto em forma de esfera foi deixado aqui, cheio de água e gravetos.~
 ~
-11 aeikq 0 0 0 ac 0 0 0 0 0 0 0
+11 aeikq ac 0
 0 0 0 0
-4 400000 40000 60 0
+4 400000 40000 60
 E
-Amuleto Esfera �gua Runa Inguz~
-                                  &B********
-                                  &B*  \/  *
-                                  &B*  /\  *
-                                  &B*  \/  *
-                                  &B*  /\  *
-                                  &B********&n
-Voc� observa um lindo amuleto em forma de esfera.  Dentro da esfera de
-cristal cheia de �gua, voc� percebe a exist�ncia de alguns gravetos que
-formam a runa Inguz.  Inguz significa um novo est�gio de vida, ela nos
-indica o abandono de tudo que est� superado e exaurido.  Inguz possui como
-regente Freyr, o deus do sol, e como regente planet�rio: O astro V�nus.
+Amuleto Esfera Agua Runa Inguz~
+                                  @B********
+                                  @B*  \/  *
+                                  @B*  /\  *
+                                  @B*  \/  *
+                                  @B*  /\  *
+                                  @B********@n
+Você observa um lindo amuleto em forma de esfera.  Dentro da esfera de
+cristal cheia de água, você percebe a existência de alguns gravetos que
+formam a runa Inguz.  Inguz significa um novo estágio de vida, ela nos
+indica o abandono de tudo que está superado e exaurido.  Inguz possui como
+regente Freyr, o deus do sol, e como regente planetário: O astro Vênus.
 ~
 A
 3 1
@@ -139,22 +139,22 @@ Amuleto Sinistro Olho Auroque Runa Uruz~
 um olho de auroque~
 Um sinistro olho foi jogado aqui.~
 ~
-11 beiq 0 0 0 ac 0 0 0 0 0 0 0
+11 beiq ac 0
 0 0 0 0
-3 300000 30000 60 0
+3 300000 30000 60
 E
 Amuleto Sinistro Olho Auroque Runa Uruz~
-                                 &R********
-                                 &R* |\   *
-                                 &R* | \  *
-                                 &R* |  | *
-                                 &R* |  | *
-                                 &R********&n
-Voc� observa um sinistro olho de um auroque, o extinto gado selvagem das
-terras setentrionais, s�mbolo da grande for�a e velocidade e um desafio para
-os ca�adores.  Voc� percebe alguns gravetos pequeninos fixados no olho de
+                                 @R********
+                                 @R* |\   *
+                                 @R* | \  *
+                                 @R* |  | *
+                                 @R* |  | *
+                                 @R********@n
+Você observa um sinistro olho de um auroque, o extinto gado selvagem das
+terras setentrionais, símbolo da grande força e velocidade e um desafio para
+os caçadores.  Você percebe alguns gravetos pequeninos fixados no olho de
 auroque, formando a runa Uruz.  Uruz possui como regente o poderoso deus da
-batalha, Tyr, e possui como regente planet�rio: O astro Marte.
+batalha, Tyr, e possui como regente planetário: O astro Marte.
 ~
 A
 1 1
@@ -163,21 +163,21 @@ A
 A
 14 25
 #12606
-Amuleto Magn�fico Metal A�o Runa Tyr~
-um amuleto de a�o~
-Um magn�fico amuleto de metal foi deixado aqui.~
+Amuleto Magnifico Metal Aco Runa Tyr~
+um amuleto de aço~
+Um magnífico amuleto de metal foi deixado aqui.~
 ~
-11 aeiq 0 0 0 ac 0 0 0 0 0 0 0
+11 aeiq ac 0
 0 0 0 0
-5 400000 40000 60 0
+5 400000 40000 60
 E
-Amuleto Magn�fico Metal A�o Runa Tyr~
-Voc� observa um antigo amuleto feito de a�o.  Em seu corpo voc� percebe uma
-bela runa esculpida em sua face met�lica.  A bela Tyr � a runa do soldado,
-sendo utilizada como talism� pelos guerreiros.  Tyr � uma runa de motiva��o
-e significa for�a de vontade.  A energia guerreira de Tyr, regente desta
-runa, � f�cil de ser invocada, e � uma energia dif�cil de ser controlada.
-Esta runa possui o astro Marte como regente planet�rio.
+Amuleto Magnifico Metal Aco Runa Tyr~
+Você observa um antigo amuleto feito de aço.  Em seu corpo você percebe uma
+bela runa esculpida em sua face metálica.  A bela Tyr é a runa do soldado,
+sendo utilizada como talismã pelos guerreiros.  Tyr é uma runa de motivação
+e significa força de vontade.  A energia guerreira de Tyr, regente desta
+runa, é fácil de ser invocada, e é uma energia difícil de ser controlada.
+Esta runa possui o astro Marte como regente planetário.
 ~
 A
 1 2
@@ -188,22 +188,22 @@ Amuleto Espinhos Corrente Metal Runa Thurisaz~
 um amuleto de espinhos~
 Alguns espinhos envolvidos por uma corrente de metal foram deixados aqui.~
 ~
-11 aeiq 0 0 0 ac 0 0 0 0 0 0 0
+11 aeiq ac 0
 0 0 0 0
-3 350000 35000 60 0
+3 350000 35000 60
 E
 Amuleto Espinhos Corrente Metal Runa Thurisaz~
-                                  &y******
-                                  &y* |  *
-                                  &y* |\ *
-                                  &y* |/ *
-                                  &y* |  *
-                                  &y******&n
-Voc� observa alguns espinhos envolvidos por uma corrente de metal, formando
-a misteriosa runa Thurisaz.  Esta runa � usada para invocar e controlar os
-dem�nios que na antiga lenda escandinava, se acreditava assombravam as
+                                  @y******
+                                  @y* |  *
+                                  @y* |\ *
+                                  @y* |/ *
+                                  @y* |  *
+                                  @y******@n
+Você observa alguns espinhos envolvidos por uma corrente de metal, formando
+a misteriosa runa Thurisaz.  Esta runa é usada para invocar e controlar os
+demônios que na antiga lenda escandinava, se acreditava assombravam as
 florestas escuras e lagos cinzentos.  Thurisaz possui como regente o deus
-dos trov�es, Thor, e possui como seu regente planet�rio o astro J�piter.
+dos trovões, Thor, e possui como seu regente planetário o astro Júpiter.
 ~
 A
 17 -3
@@ -214,23 +214,23 @@ Amuleto Gravetos Runa Algiz~
 um amuleto de gravetos~
 Alguns gravetos foram deixados aqui.~
 ~
-11 eiq 0 0 0 ac 0 0 0 0 0 0 0
+11 eiq ac 0
 0 0 0 0
-3 450000 45000 60 0
+3 450000 45000 60
 E
 Amuleto Gravetos Runa Algiz~
-                                 &y*********
-                                 &y* \ | / *
-                                 &y*  \|/  *
-                                 &y*   |   *
-                                 &y*   |   *
-                                 &y*********&n
-Voc� observa um sublime amuleto sagrado formado por gravetos, que simbolizam
+                                 @y*********
+                                 @y* \ | / *
+                                 @y*  \|/  *
+                                 @y*   |   *
+                                 @y*   |   *
+                                 @y*********@n
+Você observa um sublime amuleto sagrado formado por gravetos, que simbolizam
 a runa Algiz.  A runa Algiz lembra um gesto antigo, usado pelos germanos:
-Que estendiam a m�o com os tr�s dedos m�dios levantados, num movimento de
-prote��o.  Essa runa � gravada nas armas e nos escudos dos guerreiros e no
-p�rtico das casas, com a mesma inten��o.  Algiz possui como regente o senhor
-dos trov�es, Thor, e como regentes planet�rios: Os astros J�piter e V�nus.
+Que estendiam a mão com os três dedos médios levantados, num movimento de
+proteção.  Essa runa é gravada nas armas e nos escudos dos guerreiros e no
+pórtico das casas, com a mesma intenção.  Algiz possui como regente o senhor
+dos trovões, Thor, e como regentes planetários: Os astros Júpiter e Vênus.
 ~
 A
 17 -4
@@ -241,23 +241,23 @@ Amuleto Pequena Runa Pedra Ansuz~
 um amuleto de pedra~
 Uma pequena pedra foi deixada aqui.~
 ~
-11 eiq 0 0 0 ac 0 0 0 0 0 0 0
+11 eiq ac 0
 0 0 0 0
-5 380000 38000 60 0
+5 380000 38000 60
 E
 Amuleto Pequena Runa Pedra Ansuz~
-                                  &W*******
-                                  &W* |\  *
-                                  &W* |\\ *
-                                  &W* | \ *
-                                  &W* |   *
-                                  &W*******&n
-Voc� observa um pequeno e belo amuleto de pedra.  Em uma de suas faces voc�
+                                  @W*******
+                                  @W* |\  *
+                                  @W* |\\ *
+                                  @W* | \ *
+                                  @W* |   *
+                                  @W*******@n
+Você observa um pequeno e belo amuleto de pedra.  Em uma de suas faces você
 percebe a runa Ansuz esculpida.  Esta runa estando associada aos mensageiros
-dos Deuses, a eloqu�ncia e a intelig�ncia, indica a chegada de avisos ou
-sinais inesperados.  � a runa portadora do conhecimento, da comunica��o e de
+dos Deuses, a eloquência e a inteligência, indica a chegada de avisos ou
+sinais inesperados.  É a runa portadora do conhecimento, da comunicação e de
 mensagens divinas.  Ansuz possui como regente o deus da poesia, Bragi, e seu
-regente planet�rio � o astro Merc�rio.
+regente planetário é o astro Mercúrio.
 ~
 A
 3 1
@@ -270,21 +270,21 @@ Amuleto Majestoso Prata Runa Raido~
 um amuleto de prata~
 Um majestoso amuleto de prata foi esquecido aqui.~
 ~
-11 aeiq 0 0 0 ac 0 0 0 0 0 0 0
+11 aeiq ac 0
 0 0 0 0
-4 300000 30000 60 0
+4 300000 30000 60
 E
 Amuleto Majestoso Prata Runa Raido~
-                                  &L*******
-                                  &L* |\  *
-                                  &L* |/  *
-                                  &L* |\  *
-                                  &L* | \ *
-                                  &L*******&n
-Voc� observa um lindo amuleto feito de prata.  Voc� percebe em uma de suas
-faces, a presen�a de uma runa esculpida, a runa Raido.  Raido possui como
-suas regentes as Norns, e como regentes planet�rios, Raido possui os astros
-Merc�rio e Nodo Norte.
+                                  @L*******
+                                  @L* |\  *
+                                  @L* |/  *
+                                  @L* |\  *
+                                  @L* | \ *
+                                  @L*******@n
+Você observa um lindo amuleto feito de prata.  Você percebe em uma de suas
+faces, a presença de uma runa esculpida, a runa Raido.  Raido possui como
+suas regentes as Norns, e como regentes planetários, Raido possui os astros
+Mercúrio e Nodo Norte.
 ~
 A
 14 25
@@ -295,47 +295,47 @@ Amuleto Belo Bronze Runa Peorth~
 um amuleto de bronze~
 Um belo amuleto de bronze foi deixado aqui.~
 ~
-11 aeiq 0 0 0 ac 0 0 0 0 0 0 0
+11 aeiq ac 0
 0 0 0 0
-5 400000 40000 60 0
+5 400000 40000 60
 E
 Amuleto Belo Bronze Runa Peorth~
-                                  &r*******
-                                  &r* |\/ *
-                                  &r* |   *
-                                  &r* |   *
-                                  &r* |/\ *
-                                  &r*******&n
-Voc� observa um lindo amuleto feito de bronze.  Voc� percebe em uma de suas
-faces, a exist�ncia de uma runa esculpida, a runa Peorth.  Peorth tem
-liga��o com o oculto e significa bom press�gio.  Peorth possui como regente
-as Norns, e como regentes planet�rios, os astros Marte e Nodo Sul.
+                                  @r*******
+                                  @r* |\/ *
+                                  @r* |   *
+                                  @r* |   *
+                                  @r* |/\ *
+                                  @r*******@n
+Você observa um lindo amuleto feito de bronze.  Você percebe em uma de suas
+faces, a existência de uma runa esculpida, a runa Peorth.  Peorth tem
+ligação com o oculto e significa bom presságio.  Peorth possui como regente
+as Norns, e como regentes planetários, os astros Marte e Nodo Sul.
 ~
 A
 4 1
 A
-17 -7
+17 -7 
 #12612
 Amuleto luz Runa Kano~
 a luz de Kano~
 Uma pequena tocha foi deixada aqui, iluminando este lugar.~
 ~
-1 aeiq 0 0 0 ao 0 0 0 0 0 0 0
+1 aeiq ao 0 
 0 0 -1 0
-5 600000 60000 40 0
+5 600000 60000 40
 E
 Amuleto luz Runa Kano~
-                                  &R******
-                                  &Y*  / *
-                                  &R* /  *
-                                  &Y* \  *
-                                  &Y*  \ *
-                                  &B******&n
-Voc� observa uma maravilhosa chama de fogo com um brilho intenso e jamais
-visto por voc�.  Voc� percebe na tocha uma runa esculpida, a runa Kano.
-Kano representa energia, for�a, luz, poder e positividade.  Tanto Marte como
-o Sol est�o ligados ao fogo, e s�o os regentes planet�rios desta runa, que
-possui o deus Loge, conhecido tamb�m por Loki, como seu regente.
+                                  @R******
+                                  @Y*  / *
+                                  @R* /  *
+                                  @Y* \  *
+                                  @Y*  \ *
+                                  @B******@n
+Você observa uma maravilhosa chama de fogo com um brilho intenso e jamais
+visto por você.  Você percebe na tocha uma runa esculpida, a runa Kano.
+Kano representa energia, força, luz, poder e positividade.  Tanto Marte como
+o Sol estão ligados ao fogo, e são os regentes planetários desta runa, que
+possui o deus Loge, conhecido também por Loki, como seu regente.
 ~
 A
 1 1
@@ -348,49 +348,49 @@ Amuleto Pequeno Gelo Runa Isa~
 um amuleto de gelo~
 Um pequeno bloco de gelo foi deixado aqui.~
 ~
-11 eiq 0 0 0 ac 0 0 0 0 0 0 0
+11 eiq ac 0
 0 0 0 0
-5 350000 35000 50 0
+5 350000 35000 50
 E
 Amuleto Pequeno Gelo Runa Isa~
-                                  &w*******
-                                  &w*  |  *
-                                  &w*  |  *
-                                  &w*  |  *
-                                  &w*  |  *
-                                  &w*******&n
-Voc� observa um pequeno bloco de gelo preso por uma corrente de metal.  Voc�
-percebe um pequeno graveto fixado no bloco de gelo e observa tamb�m que o
-gelo n�o derrete nem na presen�a do fogo.  Voc� est� protegido pelo poder do
-gelo, contido na runa Isa, contudo como o gelo � inimigo do calor, na �rea
-do amor e da amizade, voc� poder� se tornar infeliz.  Isa possui como
-regente o an�o Nibelungo Mime, e como regente planet�rio, o astro J�piter.
+                                  @w*******
+                                  @w*  |  *
+                                  @w*  |  *
+                                  @w*  |  *
+                                  @w*  |  *
+                                  @w*******@n
+Você observa um pequeno bloco de gelo preso por uma corrente de metal.  Você
+percebe um pequeno graveto fixado no bloco de gelo e observa também que o
+gelo não derrete nem na presença do fogo.  Você está protegido pelo poder do
+gelo, contido na runa Isa, contudo como o gelo é inimigo do calor, na área
+do amor e da amizade, você poderá se tornar infeliz.  Isa possui como
+regente o anão Nibelungo Mime, e como regente planetário, o astro Júpiter.
 ~
 A
 14 -25
 A
 17 -5
 A
-19 1
+19 1 
 #12614
 Amuleto Metal Vermelha Runa Jera~
 um amuleto de metal vermelho~
 Um belo amuleto de metal vermelho foi deixado aqui.~
 ~
-11 aeiq 0 0 0 ac 0 0 0 0 0 0 0
+11 aeiq ac 0
 0 0 0 0
-4 250000 25000 70 0
+4 250000 25000 70
 E
 Amuleto Metal Vermelha Runa Jera~
-                                  &R*******
-                                  &R*   \ *
-                                  &R* / / *
-                                  &R* \   *
-                                  &R*******&n
-Voc� observa um bel�ssimo amuleto feito com um tipo misterioso de metal
-vermelho.  Em uma de suas faces voc� observa a Runa Jera, esculpida
-caprichosamente no metal.  Jera � uma runa relacionada com a Justi�a e seu
-regente planet�rio � o majestoso astro Merc�rio.
+                                  @R*******
+                                  @R*   \ *
+                                  @R* / / *
+                                  @R* \   *
+                                  @R*******@n
+Você observa um belíssimo amuleto feito com um tipo misterioso de metal
+vermelho.  Em uma de suas faces você observa a Runa Jera, esculpida
+caprichosamente no metal.  Jera é uma runa relacionada com a Justiça e seu
+regente planetário é o majestoso astro Mercúrio.
 ~
 A
 17 -5
@@ -401,18 +401,18 @@ Amuleto Cascas Teixo Runa Yr~
 um amuleto de cascas de teixo~
 Algumas cascas de teixo foram deixadas aqui.~
 ~
-11 eiq 0 0 0 ac 0 0 0 0 0 0 0
+11 eiq ac 0
 0 0 0 0
-3 200000 20000 40 0
+3 200000 20000 40
 E
 Amuleto Cascas Teixo Runa Yr~
-Voc� observa um amuleto bel�ssimo feito com algumas cascas de teixo, uma
-planta natural da regi�o n�rdica, que mant�m suas folhas verdes, mesmo
-durante o inverno, simbolizando a vit�ria sobre a morte, a resist�ncia.  Sua
-madeira resistente e el�stica � utilizada no fabrico de arcos e flechas e na
-sua casca s�o gravadas runas.  Voc� observa a runa Yr, esculpida
+Você observa um amuleto belíssimo feito com algumas cascas de teixo, uma
+planta natural da região nórdica, que mantém suas folhas verdes, mesmo
+durante o inverno, simbolizando a vitória sobre a morte, a resistência.  Sua
+madeira resistente e elástica é utilizada no fabrico de arcos e flechas e na
+sua casca são gravadas runas.  Você observa a runa Yr, esculpida
 delicadamente em uma das cascas de teixo.  Yr possui como regentes
-planet�rios, os astros J�piter e Nodo Sul.
+planetários, os astros Júpiter e Nodo Sul.
 ~
 A
 17 -5
@@ -425,17 +425,17 @@ Amuleto Dourado Runa Sigel~
 um amuleto dourado~
 Um amuleto dourado foi deixado aqui, emanando raios semelhantes aos do sol.~
 ~
-1 aeiq 0 0 0 ao 0 0 0 0 0 0 0
+1 aeiq ao 0 
 0 0 -1 0
-4 400000 40000 70 0
+4 400000 40000 70
 E
 Amuleto Dourado Runa Sigel~
-Voc� observa um belo amuleto dourado feito de um misterioso e desconhecido
-metal dourado.  Em uma de suas faces, voc� percebe uma sublime runa
-esculpida, a runa Sigel.  Dos tra�os delicados da runa na face do amuleto,
-voc� observa o brotar de raios luminosos semelhantes aos raios solares.
-Sigel � a runa da vit�ria, ela possui como regente o deus Balder, e como
-regente planet�rio o magn�fico astro Sol.
+Você observa um belo amuleto dourado feito de um misterioso e desconhecido
+metal dourado.  Em uma de suas faces, você percebe uma sublime runa
+esculpida, a runa Sigel.  Dos traços delicados da runa na face do amuleto,
+você observa o brotar de raios luminosos semelhantes aos raios solares.
+Sigel é a runa da vitória, ela possui como regente o deus Balder, e como
+regente planetário o magnífico astro Sol.
 ~
 A
 4 -1
@@ -444,26 +444,26 @@ A
 A
 18 2
 #12617
-Amuleto Brotos B�tula Runa Berkana~
-um amuleto de brotos de b�tula~
-Alguns brotos de b�tula foram esquecidos aqui.~
+Amuleto Brotos Betula Runa Berkana~
+um amuleto de brotos de bétula~
+Alguns brotos de bétula foram esquecidos aqui.~
 ~
-11 eiq 0 0 0 ac 0 0 0 0 0 0 0
+11 eiq ac 0
 0 0 0 0
-3 200000 20000 50 0
+3 200000 20000 50
 E
-Amuleto Brotos B�tula Runa Berkana~
-                                  &g******
-                                  &g* |\ *
-                                  &g* |/ *
-                                  &g* |\ *
-                                  &g* |/ *
-                                  &g******&n
-Voc� observa um belo amuleto feito de brotos de b�tula, �rvore que para as
-ra�as n�rdicas significa come�o, simbolizando o despertar da primavera, pois
-seus brotos s�o os primeiros a surgirem ap�s o inverno.  Berkana � a runa do
-nascimento e da fertilidade.  Seu regente � a deusa da fertilidade, Friga, e
-seus regentes planet�rios s�o os astros Lua e J�piter.
+Amuleto Brotos Betula Runa Berkana~
+                                  @g******
+                                  @g* |\ *
+                                  @g* |/ *
+                                  @g* |\ *
+                                  @g* |/ *
+                                  @g******@n
+Você observa um belo amuleto feito de brotos de bétula, árvore que para as
+raças nórdicas significa começo, simbolizando o despertar da primavera, pois
+seus brotos são os primeiros a surgirem após o inverno.  Berkana é a runa do
+nascimento e da fertilidade.  Seu regente é a deusa da fertilidade, Friga, e
+seus regentes planetários são os astros Lua e Júpiter.
 ~
 A
 5 1
@@ -476,26 +476,26 @@ Amuleto Estrela Prata Runa Dagaz~
 um amuleto em forma de estrela de prata~
 Uma estrela de prata foi deixada aqui.~
 ~
-11 aeiq 0 0 0 ac 0 0 0 0 0 0 0
+11 aeiq ac 0
 0 0 0 0
-4 200000 20000 60 0
+4 200000 20000 60
 E
 Amuleto Estrela Prata Runa Dagaz~
-                                 &Y********
-                                 &Y*      *
-                                 &Y* |\/| *
-                                 &Y* |/\| *
-                                 &Y*      *
-                                 &Y********&n
-Voc� observa uma maravilhosa estrela feita de prata e adornada por uma bela
-gema amarela.  Voc� percebe dentro da gema amarela, pequeninos gravetos que
-formam uma misteriosa runa, a runa Dagaz.  Dagaz � um s�mbolo de
-crescimento, assim como o calor do Sol na primavera e no ver�o � respons�vel
-pelo crescimento das plantas.  Seu regente � o bondoso deus Balder, e seus
-regentes planet�rios s�o os astros Sol e Nodo Norte.  O Nodo Norte � o
-s�mbolo do eclipse e o Sol, o s�mbolo da Luz.  Dagaz, portanto, encerra a
-conota��o de "Luz depois da escurid�o".  Essa runa n�o apresenta aspectos
-negativos e as modifica��es conseq�entes das vibra��es de Dagaz incidem
+                                 @Y********
+                                 @Y*      *
+                                 @Y* |\/| *
+                                 @Y* |/\| *
+                                 @Y*      *
+                                 @Y********@n
+Você observa uma maravilhosa estrela feita de prata e adornada por uma bela
+gema amarela.  Você percebe dentro da gema amarela, pequeninos gravetos que
+formam uma misteriosa runa, a runa Dagaz.  Dagaz é um símbolo de
+crescimento, assim como o calor do Sol na primavera e no verão é responsável
+pelo crescimento das plantas.  Seu regente é o bondoso deus Balder, e seus
+regentes planetários são os astros Sol e Nodo Norte.  O Nodo Norte é o
+símbolo do eclipse e o Sol, o símbolo da Luz.  Dagaz, portanto, encerra a
+conotação de "Luz depois da escuridão".  Essa runa não apresenta aspectos
+negativos e as modificações conseqüentes das vibrações de Dagaz incidem
 principalmente em suas atitudes pessoais.
 ~
 A
@@ -503,25 +503,25 @@ A
 A
 19 2
 #12619
-La�o Azul Runa Wunjo~
-um la�o azul~
-Um pequeno la�o azul foi deixado aqui, envolvendo uma bela gema vermelha.~
+Laço Azul Runa Wunjo~
+um laço azul~
+Um pequeno laço azul foi deixado aqui, envolvendo uma bela gema vermelha.~
 ~
-11 eiq 0 0 0 ac 0 0 0 0 0 0 0
+11 eiq ac 0
 0 0 0 0
-3 350000 35000 55 0
+3 350000 35000 55
 E
-La�o Azul Runa Wunjo~
-                                  &R*******
-                                  &R* |\  *
-                                  &R* | \ *
-                                  &R* |/  *
-                                  &R* |   *
-                                  &R*******&n
-Voc� observa um belo la�o de tecido azul envolvendo uma bela gema vermelha.
-Voc� percebe dentro da pequenina gema vermelha alguns pequenos gravetos, que
-formam uma bela runa, a runa Wunjo.  Wunjo � a runa da amizade e da
-sinceridade, seus regentes planet�rios s�o os astros V�nus e Saturno.
+Laço Azul Runa Wunjo~
+                                  @R*******
+                                  @R* |\  *
+                                  @R* | \ *
+                                  @R* |/  *
+                                  @R* |   *
+                                  @R*******@n
+Você observa um belo laço de tecido azul envolvendo uma bela gema vermelha.
+Você percebe dentro da pequenina gema vermelha alguns pequenos gravetos, que
+formam uma bela runa, a runa Wunjo.  Wunjo é a runa da amizade e da
+sinceridade, seus regentes planetários são os astros Vênus e Saturno.
 ~
 A
 6 2
@@ -534,51 +534,51 @@ Amuleto Pequeno Esfera Sangue Runa Mannaz~
 uma esfera de sangue~
 Um pequeno amuleto sujo de sangue foi deixado aqui.~
 ~
-11 eiq 0 0 0 ac 0 0 0 0 0 0 0
+11 eiq ac 0
 0 0 0 0
-3 600000 60000 30 0
+3 600000 60000 30
 E
 Amuleto Pequeno Esfera Sangue Runa Mannaz~
-                                 &r********
-                                 &r* |\/| *
-                                 &r* |/\| *
-                                 &r* |  | *
-                                 &r* |  | *
-                                 &r********&n
-Voc� observa uma sinistra esfera cheia de sangue humano.  Em meio ao sangue,
-voc� percebe alguns gravetos formando uma bela runa, a runa Mannaz.  Mannaz
+                                 @r********
+                                 @r* |\/| *
+                                 @r* |/\| *
+                                 @r* |  | *
+                                 @r* |  | *
+                                 @r********@n
+Você observa uma sinistra esfera cheia de sangue humano.  Em meio ao sangue,
+você percebe alguns gravetos formando uma bela runa, a runa Mannaz.  Mannaz
 significa a humanidade, com todos os seus defeitos e virtudes.  O sangue
-contido na esfera � sagrado e celestial.  A esfera cont�m o sangue de Aske e
+contido na esfera é sagrado e celestial.  A esfera contém o sangue de Aske e
 sua mulher Embla, os primeiros humanos deste maravilhoso mundo criado pelos
-irm�os Odin, Vili e Ve.  Mannaz possui como regente o ser humano, e como
-regentes planet�rios os astros Saturno e Nodo Sul.
+irmãos Odin, Vili e Ve.  Mannaz possui como regente o ser humano, e como
+regentes planetários os astros Saturno e Nodo Sul.
 ~
 A
 1 1
 A
 17 -3
 #12621
-Amuleto Pequeno Cr�nio Humano Runa Nauthiz~
+Amuleto Pequeno Cranio Humano Runa Nauthiz~
 o amuleto de Hela~
-Um pequeno cr�nio humano foi deixado aqui, preso numa corrente de metal.~
+Um pequeno crânio humano foi deixado aqui, preso numa corrente de metal.~
 ~
-11 ehjnq 0 0 0 ac 0 0 0 0 0 0 0
+11 ehjnq ac 0
 0 0 0 0
-6 700000 70000 70 0
+6 700000 70000 70
 E
-Amuleto Pequeno Cr�nio Humano Runa Nauthiz~
-                                  &w*******
-                                  &w* \|  *
-                                  &w*  |  *
-                                  &w*  |\ *
-                                  &w*  |  *
-                                  &w*******&n
-Voc� observa uma pequena corrente de metal presa num min�sculo cr�nio
-humano.  Na regi�o frontal do cr�nio, voc� percebe uma pequenina inscri��o,
-que voc� logo reconhece como sendo a runa Nauthiz.  Nauthiz d� origem a
-atrasos, repress�o, limita��o, opress�o, afli��o, doen�a ou sa�de prec�ria.
-Nauthiz possui como regente a terr�vel senhora das trevas, Hela, e como
-regente planet�rio o astro Saturno.
+Amuleto Pequeno Cranio Humano Runa Nauthiz~
+                                  @w*******
+                                  @w* \|  *
+                                  @w*  |  *
+                                  @w*  |\ *
+                                  @w*  |  *
+                                  @w*******@n
+Você observa uma pequena corrente de metal presa num minúsculo crânio
+humano.  Na região frontal do crânio, você percebe uma pequenina inscrição,
+que você logo reconhece como sendo a runa Nauthiz.  Nauthiz dá origem a
+atrasos, repressão, limitação, opressão, aflição, doença ou saúde precária.
+Nauthiz possui como regente a terrível senhora das trevas, Hela, e como
+regente planetário o astro Saturno.
 ~
 A
 5 -3
@@ -591,52 +591,52 @@ Amuleto Corrente Dourada Bloco Granizo Runa Hagalaz~
 um amuleto de granizo~
 Uma bela corrente dourada envolvida por blocos de granizo foi deixada aqui.~
 ~
-11 eiq 0 0 0 ac 0 0 0 0 0 0 0
+11 eiq ac 0
 0 0 0 0
-6 350000 35000 35 0
+6 350000 35000 35
 E
 Amuleto Corrente Dourada Bloco Granizo Runa Hagalaz~
-                                  &w********
-                                  &w* |  | *
-                                  &w* |\ | *
-                                  &w* | \| *
-                                  &w* |  | *
-                                  &w********&n
-Voc� observa um lindo amuleto feito com blocos de granizo, colhidos pelos
-monstruosos gigantes de Jotunheim.  Voc� percebe que cada bloco de granizo
+                                  @w********
+                                  @w* |  | *
+                                  @w* |\ | *
+                                  @w* | \| *
+                                  @w* |  | *
+                                  @w********@n
+Você observa um lindo amuleto feito com blocos de granizo, colhidos pelos
+monstruosos gigantes de Jotunheim.  Você percebe que cada bloco de granizo
 existe alguns gravetos formando uma misteriosa runa, a runa Hagalaz.
-Hagalaz representa as for�as destrutivas da natureza.  Hagalaz possui como
-regente os poderosos gigantes e como regente planet�rio o astro Saturno.
+Hagalaz representa as forças destrutivas da natureza.  Hagalaz possui como
+regente os poderosos gigantes e como regente planetário o astro Saturno.
 ~
 A
 1 1
 A
-2 -1
+2 -1 
 #12623
 Amuleto Corrente Metal Prateada Ferradura Runa Ehwaz~
 um amuleto em forma de ferradura~
 Uma linda ferradura prateada foi deixada aqui, presa numa corrente de metal.~
 ~
-11 aeiq 0 0 0 ac 0 0 0 0 0 0 0
+11 aeiq ac 0
 0 0 0 0
-5 300000 30000 55 0
+5 300000 30000 55
 E
 Amuleto Corrente Metal Prateada Ferradura Runa Ehwaz~
-                                 &w*********
-                                 &w*   |\  *
-                                 &w*   | \ *
-                                 &w* \ |   *
-                                 &w*  \|   *
-                                 &w*********&n
-Voc� observa um belo amuleto, composto por uma pequena ferradura prateada e
-uma linda corrente de metal.  Voc� percebe algumas inscri��es nas faces da
+                                 @w*********
+                                 @w*   |\  *
+                                 @w*   | \ *
+                                 @w* \ |   *
+                                 @w*  \|   *
+                                 @w*********@n
+Você observa um belo amuleto, composto por uma pequena ferradura prateada e
+uma linda corrente de metal.  Você percebe algumas inscrições nas faces da
 ferradura e logo reconhece a runa Ehwaz.  Para os povos primitivos
-germ�nicos o cavalo � um animal sagrado, ligado ao culto solar e ao mundo
+germânicos o cavalo é um animal sagrado, ligado ao culto solar e ao mundo
 dos deuses: eternidade, ventos, sol e movimento.  O cavalo simboliza por
-seus atributos, for�a, energia, impetuosidade e vitalidade, que s�o
-associados a seus instintos de prote��o em momentos de perigo.  A runa Ehwaz
-significa movimento e mudan�a para melhor.  Esta runa possui como regentes
-as belas Valqu�rias, e como regente planet�rio o astro Merc�rio.
+seus atributos, força, energia, impetuosidade e vitalidade, que são
+associados a seus instintos de proteção em momentos de perigo.  A runa Ehwaz
+significa movimento e mudança para melhor.  Esta runa possui como regentes
+as belas Valquírias, e como regente planetário o astro Mercúrio.
 ~
 A
 2 1
@@ -645,27 +645,27 @@ A
 A
 17 -5
 #12624
-Amuleto P�rola �gua Runa Laguz~
-um amuleto de p�rola d'�gua~
-Um pequena gota d'�gua caiu aqui.~
+Amuleto Perola Agua Runa Laguz~
+um amuleto de pérola d'água~
+Um pequena gota d'água caiu aqui.~
 ~
-11 aeiq 0 0 0 ac 0 0 0 0 0 0 0
+11 aeiq ac 0
 0 0 0 0
-3 350000 35000 50 0
+3 350000 35000 50
 E
-Amuleto P�rola �gua Runa Laguz~
-                                  &C*******
-                                  &C* |\  *
-                                  &C* | \ *
-                                  &C* |   *
-                                  &C* |   *
-                                  &C*******&n
-Voc� observa um bel�ssimo amuleto de p�rola d'�gua, encontrada apenas nas
-profundas �guas do rio Blanda.  Voc� percebe dentro da p�rola alguns
-gravetos que formam a linda runa Laguz.  Tanto a Lua como o elemental �gua
+Amuleto Perola Agua Runa Laguz~
+                                  @C*******
+                                  @C* |\  *
+                                  @C* | \ *
+                                  @C* |   *
+                                  @C* |   *
+                                  @C*******@n
+Você observa um belíssimo amuleto de pérola d'água, encontrada apenas nas
+profundas águas do rio Blanda.  Você percebe dentro da pérola alguns
+gravetos que formam a linda runa Laguz.  Tanto a Lua como o elemental água
 representam o aspecto subconsciente da mente, a parte da psique da qual
-surgem a intui��o e os poderes ps�quicos em geral.  A lua � a regente
-planet�rio desta misteriosa runa, que possui como suas regentes as
+surgem a intuição e os poderes psíquicos em geral.  A lua é a regente
+planetário desta misteriosa runa, que possui como suas regentes as
 sacerdotisas.
 ~
 A
@@ -675,21 +675,21 @@ A
 A
 17 -5
 #12625
-Lan�a Majestosa Odin Gungnir~
-Gungnir, a poderosa lan�a de Odin~
-Uma majestosa lan�a de brilho celestial foi deixada aqui.~
+Lanca Majestosa Odin Gungnir~
+Gungnir, a poderosa lança de Odin~
+Uma majestosa lança de brilho celestial foi deixada aqui.~
 ~
-5 aeginq 0 0 0 an 0 0 0 0 0 0 0
+5 aeginq an 0
 0 8 5 15
-10 8000000 800000 95 0
+10 8000000 800000 95
 E
-Lan�a Majestosa Odin Gungnir~
-Voc� observa uma poderosa lan�a feita de um metal desconhecido pelos
+Lanca Majestosa Odin Gungnir~
+Você observa uma poderosa lança feita de um metal desconhecido pelos
 sublimes mortais e capaz de partir uma montanha ao meio.  A lenda que contam
-os vikings da pen�nsula escandinava � de que a lan�a possui for�a pr�pria e
-nunca erra o alvo, mas outros preferem exaltar as poderosas m�os e a mira
-perfeita do seu dono.  Voc� observa algumas runas gravadas no cabo da
-gloriosa Gungnir.  Estas runas ditam a preserva��o da lei.
+os vikings da península escandinava é de que a lança possui força própria e
+nunca erra o alvo, mas outros preferem exaltar as poderosas mãos e a mira
+perfeita do seu dono.  Você observa algumas runas gravadas no cabo da
+gloriosa Gungnir.  Estas runas ditam a preservação da lei.
 ~
 A
 2 2
@@ -698,20 +698,20 @@ A
 A
 19 6
 #12626
-Elmo Belo Ouro P�ssaro Odin~
+Elmo Belo Ouro Passaro Odin~
 o elmo de Odin~
-Um belo elmo ornado por um imponente p�ssaro de ouro foi deixado aqui.~
+Um belo elmo ornado por um imponente pássaro de ouro foi deixado aqui.~
 ~
-9 aegiq 0 0 0 ae 0 0 0 dv 0 0 0
+9 aegiq ae cu
 10 0 0 0
-8 6000000 600000 70 0
+8 6000000 600000 70
 E
-Elmo Belo Ouro P�ssaro Odin~
-Voc� observa um monumental elmo de a�o com um majestoso p�ssaro
+Elmo Belo Ouro Passaro Odin~
+Você observa um monumental elmo de aço com um majestoso pássaro
 imponentemente pousado em cima do mesmo.  Este elmo pertence ao poderoso
 deus dos deuses e senhor supremo das sagradas terras de Asgard.  O elmo de
-Odin possui poderes inimagin�veis e que apenas seu leg�timo dono � capaz de
-us�-los em plena for�a.
+Odin possui poderes inimagináveis e que apenas seu legítimo dono é capaz de
+usá-los em plena força.
 ~
 A
 3 2
@@ -720,19 +720,19 @@ A
 A
 12 40
 #12627
-Anel M�gico Draupnir Odin~
-Draupnir, o anel m�gico de Odin~
+Anel Magico Draupnir Odin~
+Draupnir, o anel mágico de Odin~
 Um celestial anel dourado foi esquecido aqui, brilhando como o sol.~
 ~
-11 aegiq 0 0 0 ab 0 0 0 0 0 0 0
+11 aqegi ab 0
 0 0 0 0
-5 1000000 100000 70 0
+5 1000000 100000 70
 E
-Anel M�gico Draupnir~
-Voc� observa um belo anel dourado feito pelos habilidosos an�es e entregue
-por eles ao deus todo poderoso, Odin.  Tamb�m chamado de Draupnir, o anel
-m�gico tem como peculiaridade produzir, a cada nova noite, oito an�is de
-igual peso.  Draupnir � um s�mbolo de riqueza, fartura e poder.
+Anel Magico Draupnir~
+Você observa um belo anel dourado feito pelos habilidosos anões e entregue
+por eles ao deus todo poderoso, Odin.  Também chamado de Draupnir, o anel
+mágico tem como peculiaridade produzir, a cada nova noite, oito anéis de
+igual peso.  Draupnir é um símbolo de riqueza, fartura e poder.
 ~
 A
 18 2
@@ -743,18 +743,18 @@ Martelo Mjollnir Thor~
 Mjollnir, o poderoso martelo de Thor~
 Um sublime martelo foi deixado aqui.~
 ~
-5 aegikmqt 0 0 0 an 0 0 0 0 0 0 0
+5 aegikmtq an 0
 0 8 6 5
-12 0 900000 90 0
+12 0 900000 90
 E
 Martelo Mjollnir Thor~
-Voc� observa o poderoso martelo de Thor, Mjollnir.  Mjollnir foi feito pelos
-an�es Brokk e Eitri.  O martelo tem a caracter�stica maravilhosa de, quando
-lan�ado contra um inimigo, retornar, como um bumerangue, � m�o de Thor.
-Mjollnir � um s�mbolo de destrui��o, como ma�a usada na guerra, mas � tamb�m
-um s�mbolo de fertilidade.  Os monstruosos gigantes aprenderam a respeitar o
-martelo, quando o viram lan�ado contra eles no ar, pois o martelo rompeu
-muitos cr�nios de seus pais e parentes.
+Você observa o poderoso martelo de Thor, Mjollnir.  Mjollnir foi feito pelos
+anões Brokk e Eitri.  O martelo tem a característica maravilhosa de, quando
+lançado contra um inimigo, retornar, como um bumerangue, à mão de Thor.
+Mjollnir é um símbolo de destruição, como maça usada na guerra, mas é também
+um símbolo de fertilidade.  Os monstruosos gigantes aprenderam a respeitar o
+martelo, quando o viram lançado contra eles no ar, pois o martelo rompeu
+muitos crânios de seus pais e parentes.
 ~
 A
 1 1
@@ -763,17 +763,17 @@ A
 A
 19 6
 #12629
-Cinto Couro Foca For�a Thor~
-o cinto da for�a de Thor~
+Cinto Couro Foca Forca Thor~
+o cinto da força de Thor~
 Um belo cinto de couro de foca foi deixado aqui.~
 ~
-11 aegiq 0 0 0 al 0 0 0 0 0 0 0
+11 aeqgi al 0
 0 0 0 0
-3 600000 60000 75 0
+3 600000 60000 75
 E
-Cinto Couro Foca For�a Thor~
-Voc� observa um belo cinto feito de couro de foca.  O cinto da for�a
-pertence ao senhor dos trov�es, o deus Thor.  O cinto quando utilizado, dota
+Cinto Couro Foca Forca Thor~
+Você observa um belo cinto feito de couro de foca.  O cinto da força
+pertence ao senhor dos trovões, o deus Thor.  O cinto quando utilizado, dota
 o seu dono de um redobrado poder divino.
 ~
 A
@@ -784,16 +784,16 @@ A
 17 -10
 #12630
 Luvas Ferro Thor~
-as luvas de ferro dos trov�es~
-Um par de magn�ficas luvas de ferro foi esquecida aqui.~
+as luvas de ferro dos trovões~
+Um par de magníficas luvas de ferro foi esquecida aqui.~
 ~
-9 aegiq 0 0 0 ah 0 0 0 0 0 0 0
+9 aeqgi ah 0
 10 0 0 0
-5 5500000 550000 60 0
+5 5500000 550000 60
 E
 Luvas Ferro Thor~
-Voc� observa bel�ssimas luvas de ferro feitas pelas m�os habilidosas dos
-an�es e entregue ao senhor dos trov�es, o deus Thor.
+Você observa belíssimas luvas de ferro feitas pelas mãos habilidosas dos
+anões e entregue ao senhor dos trovões, o deus Thor.
 ~
 A
 2 1
@@ -804,12 +804,12 @@ elmo virgens virgem diamantes~
 o elmo das virgens~
 Um belo elmo de diamantes foi deixado aqui.~
 ~
-9 aegiq 0 0 0 ae 0 0 0 0 0 0 0
+9 aeqgi ae
 8 0 0 0
-7 3500000 350000 60 0
+7 3500000 350000 60
 E
 elmo virgens virgem diamantes~
-Voc� observa um majestoso elmo feito de diamantes pelas m�os do todo
+Você observa um majestoso elmo feito de diamantes pelas mãos do todo
 poderoso deus Odin e entregue as belas mensageiras e guerreiras virgens.
 ~
 A
@@ -821,14 +821,14 @@ escudo aurora boreal~
 o escudo da aurora~
 Um sublime escudo foi deixado aqui, brilhando como a luz da aurora boreal.~
 ~
-9 aegiq 0 0 0 aj 0 0 0 0 0 0 0
+9 aqegi aj 0
 10 0 0 0
-10 4000000 400000 65 0
+10 4000000 400000 65
 E
 escudo aurora boreal~
-Voc� observa um grande e belo escudo met�lico.  As antigas lendas dos povos
-n�rdicos contam que quando as Valqu�rias galopavam em seus corc�is, o brilho
-de seus escudos produzia nos c�us n�rdicos uma luz estranha, a chamada
+Você observa um grande e belo escudo metálico.  As antigas lendas dos povos
+nórdicos contam que quando as Valquírias galopavam em seus corcéis, o brilho
+de seus escudos produzia nos céus nórdicos uma luz estranha, a chamada
 misteriosa aurora boreal.
 ~
 A
@@ -838,18 +838,18 @@ A
 A
 18 2
 #12633
-lan�as destino dourada~
-a lan�a do destino~
-Uma lan�a dourada foi esquecida aqui.~
+lancas destino dourada~
+a lança do destino~
+Uma lança dourada foi esquecida aqui.~
 ~
-5 aeginq 0 0 0 ano 0 0 0 0 0 0 0
+5 aegiqn ano 0
 0 6 4 16
-12 3000000 300000 35 0
+12 3000000 300000 35
 E
 lancas destino dourada~
-Voc� observa uma magn�fica lan�a dourada com algumas inscri��es em torno da
-sua haste.  A lan�a do destino, como � chamada pelos imortais das terras
-n�rdicas, s� tem seu poder realmente utilizado e energizado quando for
+Você observa uma magnífica lança dourada com algumas inscrições em torno da
+sua haste.  A lança do destino, como é chamada pelos imortais das terras
+nórdicas, só tem seu poder realmente utilizado e energizado quando for
 empunhada pelas que escolhem os mortos.
 ~
 A
@@ -861,12 +861,12 @@ elmo viking~
 um elmo viking~
 Um elmo sujo de sangue foi deixado aqui.~
 ~
-9 q 0 0 0 ae 0 0 0 0 0 0 0
+9 q ae 0
 4 0 0 0
-6 200000 20000 10 0
+6 200000 20000 10
 E
 elmo viking~
-Voc� observa um antigo elmo de batalha viking sujo de sangue.
+Você observa um antigo elmo de batalha viking sujo de sangue.
 ~
 A
 18 1
@@ -875,13 +875,13 @@ espada viking batalha~
 uma espada de batalha viking~
 Uma enorme espada suja de sangue foi deixada aqui.~
 ~
-5 nqr 0 0 0 an 0 0 0 0 0 0 0
+5 nqr an 0
 0 4 5 3
-10 150000 15000 10 0
+10 150000 15000 10
 E
 espada viking batalha~
-Voc� observa uma enorme espada de batalha utilizada pelos temidos vikings e
-aben�oada pelo deus todo poderoso Odin.
+Você observa uma enorme espada de batalha utilizada pelos temidos vikings e
+abençoada pelo deus todo poderoso Odin.
 ~
 A
 13 15
@@ -892,12 +892,12 @@ batalha armadura viking~
 a sanguinolenta armadura viking~
 Uma armadura de batalha viking foi esquecida aqui.~
 ~
-9 q 0 0 0 ad 0 0 0 0 0 0 0
+9 q ad 0
 8 0 0 0
-12 100000 10000 10 0
+12 100000 10000 10
 E
 batalha viking armadura~
-Voc� observa uma armadura de batalha viking coberta de sangue e aben�oada
+Você observa uma armadura de batalha viking coberta de sangue e abençoada
 pelo deus todo poderoso Odin.
 ~
 A
@@ -909,27 +909,27 @@ vestido velho~
 um velho vestido~
 Um velho vestido foi deixado aqui.~
 ~
-9 0 0 0 0 ak 0 0 0 0 0 0 0
+9 0 ak 0
 3 0 0 0
-5 10000 1000 0 0
+5 10000 1000 0
 E
 vestido velho~
-Voc� observa um vestido velho e bastante sujo.
+Você observa um vestido velho e bastante sujo.
 ~
 A
 6 -2
 #12638
 bracelete bronze viking~
 um bracelete de bronze viking~
-Um r�stico bracelete de bronze foi deixado aqui.~
+Um rústico bracelete de bronze foi deixado aqui.~
 ~
-11 0 0 0 0 am 0 0 0 0 0 0 0
+11 0 am 0
 0 0 0 0
-5 50000 5000 10 0
+5 50000 5000 10
 E
 bracelete bronze viking~
-Voc� observa um bracelete de bronze viking feito de forma bastante r�stica,
-com algumas runas em sua superf�cie.
+Você observa um bracelete de bronze viking feito de forma bastante rústica,
+com algumas runas em sua superfície.
 ~
 A
 1 1
@@ -940,13 +940,13 @@ botas viking couro par~
 um par de botas viking~
 Um par de botas de couro foi deixado aqui, junto com alguns insetos.~
 ~
-11 0 0 0 0 ag 0 0 0 0 0 0 0
+11 0 ag 0
 0 0 0 0
-6 30000 3000 5 0
+6 30000 3000 5
 E
 botas viking couro par~
-Voc� observa um velho e sujo par de botas de couro viking, que de t�o
-fedorento come�a a atrair insetos.
+Você observa um velho e sujo par de botas de couro viking, que de tão
+fedorento começa a atrair insetos.
 ~
 A
 14 10
@@ -954,17 +954,17 @@ A
 17 -5
 #12640
 gjall trompa bela prateada~
-Gjall, a trompa da anucia��o~
+Gjall, a trompa da anuciação~
 Uma bela trompa prateada foi esquecida aqui.~
 ~
-12 abegikq 0 0 0 ao 0 0 0 0 0 0 0
+12 abqegik ao 0
 0 0 0 0
-6 3000000 300000 40 0
+6 3000000 300000 40
 E
 gjall trompa bela prateada~
-Voc� observa a lend�ria Gjall, a trompa da anuncia��o.  Feita pelas m�os
-aben�oadas dos deuses no in�cio da cria��o do universo, com o objetivo de
-anunciar e alertar aos povos n�rdicos o in�cio do Ragnar�k.  Gjall foi
+Você observa a lendária Gjall, a trompa da anunciação.  Feita pelas mãos
+abençoadas dos deuses no início da criação do universo, com o objetivo de
+anunciar e alertar aos povos nórdicos o início do Ragnarök.  Gjall foi
 entregue ao poderoso Heindall, o vigia dos deuses e um dos mais bravos
 guerreiros do exercito de Odin.
 ~
@@ -977,15 +977,15 @@ A
 #12641
 espada balmung azul~
 Balmung, a espada sagrada de Sigmund~
-Uma magn�fica espada azul est� fincada aqui no ch�o.~
+Uma magnífica espada azul está fincada aqui no chão.~
 ~
-5 aegiknq 0 0 0 an 0 0 0 0 0 0 0
+5 aeikgnq an 0
 0 4 8 3
-10 6500000 650000 55 0
+10 6500000 650000 55
 E
 espada balmung azul~
-Voc� observa a lend�ria e sagrada espada de sagrada de Sigmund, pai de
-Siegfried.  A Balmung foi confeccionada pelas habilidosas m�os de Volund com
+Você observa a lendária e sagrada espada de sagrada de Sigmund, pai de
+Siegfried.  A Balmung foi confeccionada pelas habilidosas mãos de Volund com
 um raro metal azul entregue a ele pelos deuses do Valhala.
 ~
 A
@@ -999,13 +999,13 @@ belo vestido transparente~
 um belo vestido transparente~
 Um vestido de tecido transparente foi deixado aqui, brilhando como o sol.~
 ~
-11 aegikq 0 0 0 ak 0 0 0 n 0 0 0
+11 aeqgik ak m
 0 0 0 0
-4 150000 15000 10 0
+4 150000 15000 10
 E
 belo vestido transparente~
-Voc� observa um majestoso vestido feito de um tecido transparente e
-brilhante utilizado pelas bel�ssimas elfas luminosas.
+Você observa um majestoso vestido feito de um tecido transparente e
+brilhante utilizado pelas belíssimas elfas luminosas.
 ~
 A
 6 2
@@ -1016,13 +1016,13 @@ brinco luz misterioso~
 o brinco da luz~
 Um misterioso brinco foi deixado aqui, emitindo feixes de luz.~
 ~
-11 aegik 0 0 0 aq 0 0 0 0 0 0 0
+11 aegik aq 0
 0 0 0 0
-3 200000 20000 12 0
+3 200000 20000 12
 E
 brinco luz misterioso~
-Voc� observa um belo brinco feito com um tipo de cristal desconhecido,
-contendo um l�quido dourado, de onde surgem v�rios feixes de luz.
+Você observa um belo brinco feito com um tipo de cristal desconhecido,
+contendo um líquido dourado, de onde surgem vários feixes de luz.
 ~
 A
 13 10
@@ -1033,12 +1033,12 @@ manto transparente~
 um manto transparente~
 Um manto transparente foi deixado aqui, brilhando como o sol.~
 ~
-11 aegik 0 0 0 ak 0 0 0 0 0 0 0
+11 aegik ak
 0 0 0 0
-4 150000 15000 10 0
+4 150000 15000 10
 E
 manto transparente~
-Voc� observa um majestoso manto feito de um tecido transparente e brilhante
+Você observa um majestoso manto feito de um tecido transparente e brilhante
 utilizado pelos belos elfos luminosos.
 ~
 A
@@ -1050,13 +1050,13 @@ cinto luminoso~
 o cinto luminoso~
 Um majestoso cinto foi esquecido aqui, brilhando fortemente.~
 ~
-11 aegikq 0 0 0 al 0 0 0 0 0 0 0
+11 aeqgik al 0
 0 0 0 0
-5 100000 10000 12 0
+5 100000 10000 12
 E
 cinto luminoso~
-Voc� observa um nobre cinto feito com um material desconhecido, que emiti um
-brilho extremamente forte para todas as dire��es.
+Você observa um nobre cinto feito com um material desconhecido, que emiti um
+brilho extremamente forte para todas as direções.
 ~
 A
 17 -6
@@ -1065,12 +1065,12 @@ arco dourado sol~
 o arco do sol~
 Um belo arco dourado foi esquecido aqui.~
 ~
-5 agikqr 0 0 0 an 0 0 0 0 0 0 0
+5 agqikr an 0
 0 3 4 12
-7 220000 22000 15 0
+7 220000 22000 15
 E
 arco  dourado sol~
-Voc� observa um belo arco feito por habilidosas m�os �lficas de um material
+Você observa um belo arco feito por habilidosas mãos élficas de um material
 bastante resistente.
 ~
 A
@@ -1078,16 +1078,16 @@ A
 A
 19 1
 #12647
-medalh�o imortalidade �lficos~
-o medalh�o da imortalidade~
-Um belo medalh�o de tra�os �lficos foi deixado aqui.~
+medalhao imortalidade elficos~
+o medalhão da imortalidade~
+Um belo medalhão de traços élficos foi deixado aqui.~
 ~
-11 aegk 0 0 0 ac 0 0 0 0 0 0 0
+11 aegk ac 0
 0 0 0 0
-3 300000 30000 20 0
+3 300000 30000 20
 E
-medalh�o imortalidade �lficos~
-Voc� observa o belo medalh�o da imortalidade �lfica feito de prata e de uma
+medalhao imortalidade elficos~
+Você observa o belo medalhão da imortalidade élfica feito de prata e de uma
 majestosa pedra ametista, que emite um forte brilho, purificando sua mente e
 curando suas chagas.
 ~
@@ -1102,13 +1102,13 @@ machado trevas monumental~
 um machado das trevas~
 Um monumental machado foi deixado aqui, sujo de sangue.~
 ~
-5 ehjlns 0 0 0 an 0 0 0 0 0 0 0
+5 ehjlns an 0
 0 3 4 3
-12 150000 15000 12 0
+12 150000 15000 12
 E
 machado trevas monumental~
-Voc� observa um terr�vel machado negro, sujo de sangue e bastante destru�do.
-Os machados das trevas s�o encontrados apenas nas perigosas terras de
+Você observa um terrível machado negro, sujo de sangue e bastante destruído.
+Os machados das trevas são encontrados apenas nas perigosas terras de
 Niffheleim, onde Hela reina e domina as trevas.
 ~
 A
@@ -1118,14 +1118,14 @@ A
 #12649
 par luvas rasgadas~
 um par de luvas rasgadas~
-Um par de luvas rasgadas foi esquecido aqui, atraindo v�rios insetos.~
+Um par de luvas rasgadas foi esquecido aqui, atraindo vários insetos.~
 ~
-11 hj 0 0 0 ah 0 0 0 0 0 0 0
+11 hj ah 0
 0 0 0 0
-3 5000 500 0 0
+3 5000 500 0
 E
 par luvas rasgadas~
-Voc� observa um par de luvas rasgadas de couro bastante sujas e fedorentas.
+Você observa um par de luvas rasgadas de couro bastante sujas e fedorentas.
 ~
 A
 6 -1
@@ -1136,12 +1136,12 @@ manto negro rasgado~
 um manto negro rasgado~
 Um manto negro rasgado foi deixado aqui.~
 ~
-11 hjl 0 0 0 ak 0 0 0 0 0 0 0
+11 hlj ak 0
 0 0 0 0
-5 5000 500 0 0
+5 5000 500 0
 E
 manto negro rasgado~
-Voc� observa um manto negro bastante rasgado e sujo.
+Você observa um manto negro bastante rasgado e sujo.
 ~
 A
 17 -3
@@ -1150,13 +1150,13 @@ elmo trevas negro niffleheim~
 o elmo das trevas de Niffheleim~
 Um estranho elmo negro foi deixado aqui.~
 ~
-9 hjlq 0 0 0 ae 0 0 0 0 0 0 0
+9 hlqj ae 0
 3 0 0 0
-6 150000 1500 5 0
+6 150000 1500 5
 E
 elmo trevas negro niffleheim~
-Voc� observa um estranho elmo negro, oriundo das profundezas da terra
-obscura de Niffheleim.  Voc� sente um mal press�gio ao toc�-lo.
+Você observa um estranho elmo negro, oriundo das profundezas da terra
+obscura de Niffheleim.  Você sente um mal presságio ao tocá-lo.
 ~
 A
 6 -2
@@ -1167,13 +1167,13 @@ bela tiara prata~
 uma bela tiara de prata~
 Uma tiara de prata foi esquecida aqui.~
 ~
-11 aegikq 0 0 0 ae 0 0 0 0 0 0 0
+11 aeqgik ae 0
 0 0 0 0
-4 2000000 200000 60 0
+4 2000000 200000 60
 E
 bela tiara prata~
-Voc� observa a bela tiara de prata da Deusa Freia, que foi entregue a ela
-pelo seu irm�o Frei.
+Você observa a bela tiara de prata da Deusa Freia, que foi entregue a ela
+pelo seu irmão Frei.
 ~
 A
 6 2
@@ -1186,12 +1186,12 @@ colar brisings~
 o colar de Brisings~
 Um sublime colar foi deixado aqui.~
 ~
-11 aegik 0 0 0 ac 0 0 0 0 0 0 0
+11 aegik ac 0
 0 0 0 0
-3 3000000 300000 65 0
+3 3000000 300000 65
 E
 colar brisings~
-Voc� observa o lend�rio colar de Brisings, feito pelos quatro an�es com os
+Você observa o lendário colar de Brisings, feito pelos quatro anões com os
 quais a Deusa Freia dormiu para consegui-lo.
 ~
 A
@@ -1205,28 +1205,28 @@ caixa mocidade~
 a caixa da mocidade~
 Um maravilhosa caixa dourada foi deixada aqui.~
 ~
-15 aegiq 0 0 0 ao 0 0 0 0 0 0 0
+15 aegiq ao 0
 12 5 -1 0
-20 1500000 150000 0 0
+20 1500000 150000
 E
 caixa mocidade~
-Voc� observa a maravilhosa caixa da mocidade, guardada pela Deusa Iduna,
-esposa do Deus Bragi, o Deus da Poesia.  A caixa da mocidade guarda as ma��s
+Você observa a maravilhosa caixa da mocidade, guardada pela Deusa Iduna,
+esposa do Deus Bragi, o Deus da Poesia.  A caixa da mocidade guarda as maçãs
 que eram provadas pelos deuses do Valhala, quando os mesmos sentiam a
 velhice se aproximando.
 ~
 #12655
-ma��s divina mocidade~
-a divina ma�� da mocidade~
-Uma divina ma�� da mocidade foi deixada aqui.~
+macas divina mocidade~
+a divina maçã da mocidade~
+Uma divina maçã da mocidade foi deixada aqui.~
 ~
-19 aegiq 0 0 0 ao 0 0 0 0 0 0 0
+19 aeqgi ao 0
 24 0 0 0
-3 1000000 100000 0 0
+3 1000000 100000 0
 E
-ma��s divina mocidade~
-Voc� observa uma suculenta e divina ma�� da mocidade.  As ma��s da mocidade
-s�o protegidas e guardadas pela Deusa Iduna, elas s�o a fonte de
+macas divina mocidade~
+Você observa uma suculenta e divina maçã da mocidade.  As maçãs da mocidade
+são protegidas e guardadas pela Deusa Iduna, elas são a fonte de
 rejuvenescimento dos deuses do Valhala.
 ~
 A
@@ -1238,25 +1238,25 @@ bolsa couro foca~
 uma bolsa de couro de foca~
 Uma resistente bolsa de couro de foca foi deixada aqui.~
 ~
-15 q 0 0 0 a 0 0 0 0 0 0 0
+15 q a 0
 50 5 -1 0
-10 500000 50000 0 0
+10 500000 50000 0
 E
 bolsa couro foca~
-Voc� observa uma bela bolsa feita de couro de foca.
+Você observa uma bela bolsa feita de couro de foca.
 ~
 #12657
 bracelete branco neve~
-o lend�rio bracelete de neve~
+o lendário bracelete de neve~
 Um majestoso bracelete branco foi esquecido aqui.~
 ~
-11 egiq 0 0 0 am 0 0 0 0 0 0 0
+11 egqi am 0
 0 0 0 0
-6 1500000 150000 50 0
+6 1500000 150000 50
 E
 bracelete branco neve~
-Voc� observa um belo bracelete branco, feito pelas celestiais m�os do Deus
-todo poderoso Odin, tendo sido roubado logo ap�s sua cria��o.
+Você observa um belo bracelete branco, feito pelas celestiais mãos do Deus
+todo poderoso Odin, tendo sido roubado logo após sua criação.
 ~
 A
 17 -7
@@ -1265,24 +1265,24 @@ ouro amontoado moedas~
 um amontoado de moedas de ouro~
 Um amontoado de moedas de ouro foi esquecido aqui.~
 ~
-20 0 0 0 0 a 0 0 0 0 0 0 0
+20 0 a 0
 200000 0 0 0
-4 200000 200000 0 0
+4 200000 200000 0
 E
 ouro amontoado moedas~
-Voc� observa um grande amontoado de moedas de ouro.
+Você observa um grande amontoado de moedas de ouro.
 ~
 #12659
 brinco cristal~
 um brinco de cristal~
 Um belo brinco de cristal foi esquecido aqui.~
 ~
-11 aeq 0 0 0 aq 0 0 0 0 0 0 0
+11 aqe aq 0
 0 0 0 0
-3 2000000 200000 50 0
+3 2000000 200000 50
 E
 brinco cristal~
-Voc� observa um belo brinco de cristal, ornado com pequenos tra�os de prata
+Você observa um belo brinco de cristal, ornado com pequenos traços de prata
 e ouro.
 ~
 A
@@ -1290,36 +1290,36 @@ A
 #12660
 luz tempestades~
 a luz das tempestades~
-Um pequeno c�rculo de luz foi esquecido aqui.~
+Um pequeno círculo de luz foi esquecido aqui.~
 ~
-1 abegjq 0 0 0 ao 0 0 0 0 0 0 0
+1 abegqj ao 0
 0 0 -1 0
-8 2500000 250000 55 0
+8 2500000 250000 55
 E
 luz tempestades~
-Voc� observa curiosamente um pequeno c�rculo dourado brilhante, que da sua
-parte central emite fortes ventos frios vindos de uma outra dimens�o.  A luz
-das tempestades possuem um alto poder de destrui��o, que s� � acionado nas
-m�os dos tem�veis gigantes de Jotunheim.
+Você observa curiosamente um pequeno círculo dourado brilhante, que da sua
+parte central emite fortes ventos frios vindos de uma outra dimensão.  A luz
+das tempestades possuem um alto poder de destruição, que só é acionado nas
+mãos dos temíveis gigantes de Jotunheim.
 ~
 A
 18 2
 #12661
-inani��o faca negra~
-a Inani��o, a faca da rainha das trevas~
-Uma magn�fica faca negra foi deixada aqui.~
+inanicao faca negra~
+a Inanição, a faca da rainha das trevas~
+Uma magnífica faca negra foi deixada aqui.~
 ~
-5 aeghjlnqs 0 0 0 ano 0 0 0 0 0 0 0
+5 aeghjqlns ano 0
 0 6 4 14
-6 4000000 400000 75 0
+6 4000000 400000 75
 E
-inani��o faca negra~
-Voc� observa a tem�vel e devastadora arma da rainha suprema de Niffheleim, a
-Inani��o.  Hela utilizando os poderes oriundos das trevas e de seus
+inanicao faca negra~
+Você observa a temível e devastadora arma da rainha suprema de Niffheleim, a
+Inanição.  Hela utilizando os poderes oriundos das trevas e de seus
 habitantes, criou a faca com tudo de mais podre e macabro que conseguiu.  A
-inani��o provoca um estado terr�vel nos inimigos da poderosa Hela, ao
+inanição provoca um estado terrível nos inimigos da poderosa Hela, ao
 empunhar tal arma seus inimigos ficam num estado de enfraquecimento
-lament�vel e covarde.
+lamentável e covarde.
 ~
 A
 13 -50
@@ -1328,19 +1328,19 @@ A
 A
 19 3
 #12662
-ess�ncia morte~
-a ess�ncia da morte~
+essencia morte~
+a essência da morte~
 Um pequenino anel de prata com uma grande pedra vermelha foi deixado aqui.~
 ~
-11 aeghjlnq 0 0 0 ab 0 0 0 0 0 0 0
+11 aeghqjln ab 0
 0 0 0 0
-4 3000000 300000 60 0
+4 3000000 300000 60
 E
-ess�ncia morte~
-Voc� observa um pequenino anel de prata com uma grande pedra vermelha
-ornamentando-o.  Ao olhar dentro da pedra vermelha, voc� se surpreende ao
-observar o aparecimento de terr�veis imagens sobre a sua pr�pria morte.  A
-ess�ncia da morte � mais uma das cru�is cria��es de Hela, a rainha suprema
+essencia morte~
+Você observa um pequenino anel de prata com uma grande pedra vermelha
+ornamentando-o.  Ao olhar dentro da pedra vermelha, você se surpreende ao
+observar o aparecimento de terríveis imagens sobre a sua própria morte.  A
+essência da morte é mais uma das cruéis criações de Hela, a rainha suprema
 de Niffheleim.
 ~
 A
@@ -1354,13 +1354,13 @@ vestido fios ouro~
 um belo vestido de fios de ouro~
 Um lindo vestido de fios de ouro foi deixado aqui.~
 ~
-11 aegiq 0 0 0 ak 0 0 0 0 0 0 0
+11 aqegi ak 0
 0 0 0 0
-8 1500000 150000 60 0
+8 1500000 150000 60
 E
 vestido fios ouro~
-Voc� observa um belo vestido de fios de ouro, pertencente a bel�ssima Deusa
-da sabedoria, Herda, a m�e das Valqu�rias.
+Você observa um belo vestido de fios de ouro, pertencente a belíssima Deusa
+da sabedoria, Herda, a mãe das Valquírias.
 ~
 A
 6 3
@@ -1373,12 +1373,12 @@ bela faixa seda~
 uma bela faixa de seda~
 Uma bela faixa de seda foi deixada aqui.~
 ~
-11 gq 0 0 0 al 0 0 0 0 0 0 0
+11 qg al 0
 0 0 0 0
-3 2500000 250000 65 0
+3 2500000 250000 65
 E
 bela faixa seda~
-Voc� observa uma bela e delicada faixa de seda.
+Você observa uma bela e delicada faixa de seda.
 ~
 A
 4 1
@@ -1389,13 +1389,13 @@ par ouro perneiras divinas~
 as perneiras divinas~
 Um par de perneiras de ouro foi esquecido aqui.~
 ~
-11 aegikq 0 0 0 af 0 0 0 0 0 0 0
+11 aegqik af 0
 0 0 0 0
-10 3000000 300000 80 0
+10 3000000 300000 80
 E
 par ouro perneiras divinas~
-Voc� observa um magn�fico par de perneiras de ouro, feito e aben�oado pelas
-habilidosas m�os dos deuses criadores.
+Você observa um magnífico par de perneiras de ouro, feito e abençoado pelas
+habilidosas mãos dos deuses criadores.
 ~
 A
 1 2
@@ -1408,13 +1408,13 @@ belo elmo esverdeado divino~
 o elmo divino~
 Um belo elmo esverdeado foi deixado aqui.~
 ~
-9 aegiq 0 0 0 ae 0 0 0 0 0 0 0
+9 aegiq ae 0
 10 0 0 0
-8 3400000 340000 70 0
+8 3400000 340000 70
 E
 belo elmo esverdeado divino~
-Voc� observa um belo elmo esverdeado, feito e aben�oado pelas habilidosas
-m�os dos deuses criadores.
+Você observa um belo elmo esverdeado, feito e abençoado pelas habilidosas
+mãos dos deuses criadores.
 ~
 A
 5 1
@@ -1427,14 +1427,14 @@ manto dourado Frei~
 o manto dourado de Frei~
 Um majestoso manto dourado foi esquecido aqui.~
 ~
-11 aegiq 0 0 0 ak 0 0 0 0 0 0 0
+11 aegqi ak 0
 0 0 0 0
-7 2800000 280000 80 0
+7 2800000 280000 80
 E
 manto dourado frei~
-Voc� observa o belo manto dourado do Deus Frei, o deus da fertilidade, na
-sua superf�cie voc� observa algumas paisagens das belas e misteriosas terras
-n�rdicas.
+Você observa o belo manto dourado do Deus Frei, o deus da fertilidade, na
+sua superfície você observa algumas paisagens das belas e misteriosas terras
+nórdicas.
 ~
 A
 13 25
@@ -1444,15 +1444,15 @@ A
 18 2
 #12668
 armadura solar freyr~
-a magn�fica armadura solar do Deus Freyr~
+a magnífica armadura solar do Deus Freyr~
 Uma grandiosa armadura dourada foi deixada aqui, brilhando como o sol.~
 ~
-9 aegikq 0 0 0 ad 0 0 0 0 0 0 0
+9 aeqgik ad 0
 14 0 0 0
-20 5000000 500000 90 0
+20 5000000 500000 90
 E
 armadura solar freyr~
-Voc� observa a lend�ria armadura do Deus Freyr, o deus do sol, forjada nas
+Você observa a lendária armadura do Deus Freyr, o deus do sol, forjada nas
 fervorosas chamas do astro rei.
 ~
 A
@@ -1464,52 +1464,52 @@ A
 #12669
 armadura sanguinolenta tir~
 a armadura sanguinolenta de Tir~
-Uma poderosa armadura vermelha-met�lica foi deixada aqui.~
+Uma poderosa armadura vermelha-metálica foi deixada aqui.~
 ~
-9 aegiq 0 0 0 ad 0 0 0 0 0 0 0
+9 aegqi ad 0
 12 0 0 0
-20 5000000 500000 85 0
+20 5000000 500000 85
 E
 armadura sanguinolenta tir~
-Voc� observa uma magn�fica armadura feita com um resistente metal vermelho.
-A armadura sanguinolenta possui vida pr�pria e serve exclusivamente ao
-poderoso e corajoso, Deus da batalha, Tir, irm�o de Odin.  A armadura
-met�lica em outras m�os nunca se manifestar�.
+Você observa uma magnífica armadura feita com um resistente metal vermelho.
+A armadura sanguinolenta possui vida própria e serve exclusivamente ao
+poderoso e corajoso, Deus da batalha, Tir, irmão de Odin.  A armadura
+metálica em outras mãos nunca se manifestará.
 ~
 A
 3 2
 A
 18 1
 #12670
-caluniador m�scara~
-a m�scara de Loge, o caluniador~
-Uma linda m�scara de ouro e pedras foi esquecida aqui.~
+caluniador mascara~
+a máscara de Loge, o caluniador~
+Uma linda máscara de ouro e pedras foi esquecida aqui.~
 ~
-11 aegjq 0 0 0 ar 0 0 0 0 0 0 0
+11 aeqgj ar 0
 0 0 0 0
-5 2300000 230000 75 0
+5 2300000 230000 75
 E
-m�scara caluniador~
-Voc� observa uma bela m�scara de ouro ornamentada com belas pedras preciosas
-e tra�os de prata.  "A m�scara da mentira por mais forte e resistente que
-seja, sempre cair� em desgra�a e caminhar� para as trevas."
+mascara caluniador~
+Você observa uma bela máscara de ouro ornamentada com belas pedras preciosas
+e traços de prata.  "A máscara da mentira por mais forte e resistente que
+seja, sempre cairá em desgraça e caminhará para as trevas."
 ~
 A
 3 2
 A
 17 -4
 #12671
-pequena esfera azul semente ess�ncia vida~
+pequena esfera azul semente essencia vida~
 a semente de Friga~
 Uma pequena esfera azul gira no ar bem na sua frente.~
 ~
-8 abegikq 0 0 0 ao 0 0 0 0 0 0 0
+8 abegqik ao 0
 0 0 0 0
-5 5300000 530000 80 0
+5 5300000 530000 80
 E
-pequena esfera azul semente ess�ncia vida~
-Voc� observa a mais bela e maravilhosa de todas as sementes existentes nas
-sagradas e gloriosas terras de Vit�lia.  A ess�ncia da vida, o mais puro e
+pequena esfera azul semente essencia vida~
+Você observa a mais bela e maravilhosa de todas as sementes existentes nas
+sagradas e gloriosas terras de Vitália.  A essência da vida, o mais puro e
 caridoso elemento das nossas terras.  Guardada por Friga, a deusa da
 fertilidade, a semente da vida e da luz emana amor e paz para todos os
 cantos do nosso mundo.
@@ -1519,17 +1519,17 @@ A
 A
 6 2
 #12672
-bra�adeiras Bragi prata par~
-as bra�adeiras de Bragi, o deus da poesia~
-Um belo par de bra�adeiras de prata foi esquecido aqui.~
+bracadeiras Bragi prata par~
+as braçadeiras de Bragi, o deus da poesia~
+Um belo par de braçadeiras de prata foi esquecido aqui.~
 ~
-9 aegiq 0 0 0 ai 0 0 0 0 0 0 0
+9 aegqi ai 0
 11 0 0 0
-8 2100000 210000 81 0
+8 2100000 210000 81
 E
-bra�adeiras Bragi prata par~
-Voc� observa um lindo par de bra�adeiras de prata.  Na superf�cie de cada
-bra�adeira voc� observa pinturas de guerreiros e da Deusa Iduna, a guardi�
+bracadeiras Bragi prata par~
+Você observa um lindo par de braçadeiras de prata.  Na superfície de cada
+braçadeira você observa pinturas de guerreiros e da Deusa Iduna, a guardiã
 da mocidade e esposa do Deus Bragi, o deus da poesia.
 ~
 A
@@ -1539,15 +1539,15 @@ A
 #12673
 serpente dourada njord~
 a serpente dourada de Njord~
-Uma serpente rasteja entre seus p�s.~
+Uma serpente rasteja entre seus pés.~
 ~
-5 abegiqs 0 0 0 an 0 0 0 0 0 0 0
+5 abegqis an
 0 6 5 12
-10 3800000 380000 75 0
+10 3800000 380000 75
 E
 serpente dourada njord~
-Voc� observa uma bela serpente dourada de olhos verdes cintilantes e escamas
-brilhantes.  A serpente dourada ajudar� sempre os habitantes dos mares que
+Você observa uma bela serpente dourada de olhos verdes cintilantes e escamas
+brilhantes.  A serpente dourada ajudará sempre os habitantes dos mares que
 estiverem em perigo.
 ~
 A
@@ -1561,12 +1561,12 @@ madeira caixa passado~
 a caixa do passado~
 Um caixa de madeira foi deixada aqui.~
 ~
-15 aegiq 0 0 0 a 0 0 0 0 0 0 0
+15 aegqi a 0
 80 15 12677 0
-80 1000000 100000 0 0
+80 1000000 100000 0
 E
 madeira caixa passado~
-Voc� observa uma antiga caixa de madeira com algumas runas apagadas pelo
+Você observa uma antiga caixa de madeira com algumas runas apagadas pelo
 tempo.
 ~
 #12675
@@ -1574,24 +1574,24 @@ ouro caixa presente~
 a caixa do presente~
 Uma caixa de ouro foi deixada aqui.~
 ~
-15 aegiq 0 0 0 a 0 0 0 0 0 0 0
+15 aeqgi a 0
 40 15 12678 0
-20 2000000 200000 0 0
+20 2000000 200000 0
 E
 ouro caixa presente~
-Voc� observa uma caixa de ouro com algumas runas n�o reconhecidas por voc�.
+Você observa uma caixa de ouro com algumas runas não reconhecidas por você.
 ~
 #12676
 cristal caixa futuro~
 a caixa do futuro~
 Uma caixa de cristal foi deixada aqui.~
 ~
-15 aegiq 0 0 0 a 0 0 0 0 0 0 0
+15 aegqi a 0
 15 15 12679 0
-10 3000000 300000 0 0
+10 3000000 300000 0
 E
 cristal caixa futuro~
-Voc� observa uma bela caixa de cristal, cuja superf�cie voc� percebe algumas
+Você observa uma bela caixa de cristal, cuja superfície você percebe algumas
 imagens do futuro dos povos vitalianos.
 ~
 #12677
@@ -1599,12 +1599,12 @@ chave passado enferrujada pequenina~
 a chave do passado~
 Uma pequenina chave enferrujada foi esquecida aqui.~
 ~
-18 egi 0 0 0 a 0 0 0 0 0 0 0
+18 egi a 0
 0 0 0 0
-2 500000 50000 0 0
+2 500000 50000 0
 E
 chave passado ferro enferrujada pequenina~
-Voc� observa uma antiga chave de ferro bastante enferrujada e desgastada
+Você observa uma antiga chave de ferro bastante enferrujada e desgastada
 pelo tempo.
 ~
 #12678
@@ -1612,88 +1612,88 @@ bela chave presente ouro~
 a chave do presente~
 Uma bela chave de ouro foi esquecida aqui.~
 ~
-18 aegi 0 0 0 a 0 0 0 0 0 0 0
+18 aegi a 0
 0 0 0 0
-2 1000000 100000 0 0
+2 1000000 100000 0
 E
 bela chave presente ouro~
-Voc� observa uma bela chave de ouro, ainda quente como se tivesse sido
-criada h� alguns minutos.
+Você observa uma bela chave de ouro, ainda quente como se tivesse sido
+criada há alguns minutos.
 ~
 #12679
 majestosa cristal chave futuro~
 a chave do futuro~
 Uma majestosa chave de cristal foi esquecida aqui.~
 ~
-18 aegi 0 0 0 a 0 0 0 0 0 0 0
+18 aegi a 0
 0 0 0 0
-2 1500000 150000 0 0
+2 1500000 150000 0
 E
 majestosa cristal chave futuro~
-Voc� observa uma majestosa chave de cristal e sente uma estranha sensa��o de
+Você observa uma majestosa chave de cristal e sente uma estranha sensação de
 que pode mudar seu futuro.
 ~
 #12680
 escudo destino cristal~
 o escudo do destino~
-Um belo escudo de cristal foi deixado aqui, � espera do seu dono leg�timo.~
+Um belo escudo de cristal foi deixado aqui, à espera do seu dono legítimo.~
 ~
-9 aegiq 0 0 0 aj 0 0 0 0 0 0 0
+9 aegqi aj 0
 15 0 0 0
-15 3000000 300000 85 0
+15 3000000 300000 85
 E
 escudo destino cristal~
-Voc� observa um magn�fico escudo de cristal feito pela magia das tr�s irm�s
-Norns, que o guardaram e protegeram at� a sua chegada.  O escudo do destino
-dar ao seu dono o poder e a for�a de mudar o pr�prio destino.
+Você observa um magnífico escudo de cristal feito pela magia das três irmãs
+Norns, que o guardaram e protegeram até a sua chegada.  O escudo do destino
+dar ao seu dono o poder e a força de mudar o próprio destino.
 ~
 #12681
-azul celeste medalh�o for�a~
-o medalh�o da for�a~
-Um maravilhoso medalh�o azul-celeste foi deixado aqui.~
+azul celeste medalhao força~
+o medalhão da força~
+Um maravilhoso medalhão azul-celeste foi deixado aqui.~
 ~
-11 aegiq 0 0 0 ac 0 0 0 0 0 0 0
+11 aeqgi ac 0
 0 0 0 0
-4 2500000 250000 70 0
+4 2500000 250000 70
 E
-azul celeste medalh�o for�a~
-Voc� observa um belo medalh�o feito de um desconhecido metal azul-celeste e
-pertencente a Trudr, a for�a.  O medalh�o da for�a foi um presente do Deus
-dos trov�es, Thor, pai de Trudr.
+azul celeste medalhao força~
+Você observa um belo medalhão feito de um desconhecido metal azul-celeste e
+pertencente a Trudr, a força.  O medalhão da força foi um presente do Deus
+dos trovões, Thor, pai de Trudr.
 ~
 A
 1 3
 A
 17 -5
 #12682
-branco medalh�o intelig�ncia~
-o medalh�o da intelig�ncia~
-Um belo medalh�o branco foi deixado aqui.~
+branco medalhao inteligencia~
+o medalhão da inteligência~
+Um belo medalhão branco foi deixado aqui.~
 ~
-11 aegiq 0 0 0 ac 0 0 0 0 0 0 0
+11 aegqi ac 0
 0 0 0 0
-4 2500000 250000 70 0
+4 2500000 250000 70
 E
-branco medalh�o intelig�ncia~
-Voc� observa um nobre medalh�o feito de um desconhecido metal branco e
-pertencente a Modi, a intelig�ncia.  O medalh�o da intelig�ncia foi um
-presente do Deus dos trov�es, Thor, pai de Modi.
+branco medalhao inteligencia~
+Você observa um nobre medalhão feito de um desconhecido metal branco e
+pertencente a Modi, a inteligência.  O medalhão da inteligência foi um
+presente do Deus dos trovões, Thor, pai de Modi.
 ~
 A
 17 -5
 #12683
-dourado medalh�o poder~
-o medalh�o do poder~
-Um magn�fico medalh�o dourado foi deixado aqui.~
+dourado medalhao poder~
+o medalhão do poder~
+Um magnífico medalhão dourado foi deixado aqui.~
 ~
-11 aegiq 0 0 0 ac 0 0 0 0 0 0 0
+11 aeqgi ac 0
 0 0 0 0
-4 2500000 250000 70 0
+4 2500000 250000 70
 E
-dourado medalh�o poder~
-Voc� observa um majestoso medalh�o feito de um metal dourado desconhecido e
-pertencente a Magni, o poder.  O medalh�o do poder foi um presente do Deus
-dos trov�es, Thor, pai de Magni.
+dourado medalhao poder~
+Você observa um majestoso medalhão feito de um metal dourado desconhecido e
+pertencente a Magni, o poder.  O medalhão do poder foi um presente do Deus
+dos trovões, Thor, pai de Magni.
 ~
 A
 17 -5
@@ -1702,14 +1702,14 @@ A
 #12684
 escudo gelo~
 o escudo de gelo de Haquem~
-Um bel�ssimo escudo de gelo foi esquecido aqui.~
+Um belíssimo escudo de gelo foi esquecido aqui.~
 ~
-9 aegiq 0 0 0 aj 0 0 0 0 0 0 0
+9 aeqgi aj 0
 12 0 0 0
-15 2500000 250000 75 0
+15 2500000 250000 75
 E
 escudo gelo~
-Voc� observa um maravilhoso e resistente escudo de gelo, pertencente ao
+Você observa um maravilhoso e resistente escudo de gelo, pertencente ao
 poderoso guerreiro do gelo Haquem.
 ~
 A
@@ -1721,34 +1721,34 @@ ouro pequeno anel nibelungos~
 o anel de Nibelungos~
 Um pequeno anel de ouro foi esquecido aqui.~
 ~
-11 aeghiq 0 0 0 ab 0 0 0 0 0 0 0
+11 aqeghi ab 0
 0 0 0 0
-4 4000000 400000 90 0
+4 4000000 400000 90
 E
 ouro pequeno anel nibelungos~
-Voc� observa o lend�rio e poderoso anel de Nibelungos.  Este anel foi feito
-de ouro do Reno, conta uma antiga lenda n�rdica que no fundo do rio Reno,
-tr�s belas donzelas do Reno guardaram um monte de ouro, o ouro do Reno.  O
-ouro do Reno � capaz de dar a quem o possuir um imenso poder, desde que essa
-pessoa renegue o amor.  O an�o Alberish fez exatamente isto, apoderou-se do
-ouro e criou o anel m�gico, o Nibelungos.  A partir da sua cria��o Alberish
+Você observa o lendário e poderoso anel de Nibelungos.  Este anel foi feito
+de ouro do Reno, conta uma antiga lenda nórdica que no fundo do rio Reno,
+três belas donzelas do Reno guardaram um monte de ouro, o ouro do Reno.  O
+ouro do Reno é capaz de dar a quem o possuir um imenso poder, desde que essa
+pessoa renegue o amor.  O anão Alberish fez exatamente isto, apoderou-se do
+ouro e criou o anel mágico, o Nibelungos.  A partir da sua criação Alberish
 nunca mais foi o mesmo.
 ~
 A
 17 -15
 #12686
 armadura divina~
-a armadura divina do ex�rcito de Odin~
-Uma magn�fica armadura dourada e branca foi deixada aqui.~
+a armadura divina do exército de Odin~
+Uma magnífica armadura dourada e branca foi deixada aqui.~
 ~
-9 aegikq 0 0 0 ad 0 0 0 0 0 0 0
+9 aegqik ad 0
 8 0 0 0
-15 1200000 120000 60 0
+15 1200000 120000 60
 E
 armadura divina~
-Voc� observa a bel�ssima e resistente armadura de ouro e pedras brancas do
+Você observa a belíssima e resistente armadura de ouro e pedras brancas do
 exercito dos Einherjars, comandado pelo Deus todo poderoso Odin para
-proteger os deuses e Asgard, no dia do crep�sculo dos deuses, o Ragnarok.
+proteger os deuses e Asgard, no dia do crepúsculo dos deuses, o Ragnarok.
 ~
 A
 2 1
@@ -1761,31 +1761,31 @@ escudo celestial dourado~
 o escudo celestial dos Einherjars~
 Um escudo dourado foi deixado aqui, emanando uma forte energia.~
 ~
-9 aegiq 0 0 0 aj 0 0 0 0 0 0 0
+9 aeqgi aj 0
 9 0 0 0
-13 1500000 150000 55 0
+13 1500000 150000 55
 E
 escudo celestial dourado~
-Voc� observa o celestial escudo do exercito dos Einherjars, comandado pelo
+Você observa o celestial escudo do exercito dos Einherjars, comandado pelo
 Deus todo poderoso Odin para proteger os deuses e Asgard, no dia do
-crep�sculo dos deuses, o Ragnar�k.
+crepúsculo dos deuses, o Ragnarök.
 ~
 A
 12 20
 #12688
-espada vit�ria~
-a espada da vit�ria~
-Uma espada luminosa est� aqui fincada no ch�o.~
+espada vitoria~
+a espada da vitória~
+Uma espada luminosa está aqui fincada no chão.~
 ~
-5 aegiq 0 0 0 an 0 0 0 0 0 0 0
+5 aegqi an 0
 0 4 5 3
-10 800000 80000 40 0
+10 800000 80000 40
 E
-espada vit�ria~
-Voc� observa a bela espada da vit�ria, feita com um metal azulado bastante
-luminoso.  A espada da vit�ria � mais uma das armas do exercito dos
+espada vitoria~
+Você observa a bela espada da vitória, feita com um metal azulado bastante
+luminoso.  A espada da vitória é mais uma das armas do exercito dos
 Einherjars, comandado pelo Deus todo poderoso Odin para proteger os deuses e
-Asgard, no dia do crep�sculo dos deuses, o Ragnar�k.
+Asgard, no dia do crepúsculo dos deuses, o Ragnarök.
 ~
 A
 12 10
@@ -1798,24 +1798,24 @@ bolsa pele lobo~
 uma bolsa de pele de lobo~
 Uma bolsa de pele de lobo foi esquecida aqui.~
 ~
-15 q 0 0 0 a 0 0 0 0 0 0 0
+15 q a 0
 60 1 -1 0
-10 200000 20000 0 0
+10 200000 20000 0
 E
 bolsa pele lobo~
-Voc� observa resistente bolsa de pele de lobo.
+Você observa resistente bolsa de pele de lobo.
 ~
 #12690
 coroa ouro~
-a coroa de ouro de Eric, o rei viking dos cl�s suecos~
-Uma maravilhosa coroa de ouro foi deixada aqui, � espera do seu rei.~
+a coroa de ouro de Eric, o rei viking dos clãs suecos~
+Uma maravilhosa coroa de ouro foi deixada aqui, à espera do seu rei.~
 ~
-11 aeq 0 0 0 ae 0 0 0 0 0 0 0
+11 qae ae 0
 0 0 0 0
-8 700000 70000 40 0
+8 700000 70000 40
 E
 coroa ouro~
-Voc� observa a magn�fica coroa de ouro do rei viking Eric, rei dos cl�s
+Você observa a magnífica coroa de ouro do rei viking Eric, rei dos clãs
 suecos.
 ~
 A
@@ -1827,14 +1827,14 @@ espada coragem monumental~
 a espada da coragem~
 Uma monumental espada foi deixada aqui.~
 ~
-5 aegiqr 0 0 0 an 0 0 0 0 0 0 0
+5 aeqgir an 0
 0 6 4 3
-20 1500000 150000 65 0
+20 1500000 150000 65
 E
 espada coragem monumental~
-Voc� observa a temida espada da coragem do rei Eric.  A monumental espada
-poderia facilmente partir um grande guerreiro em dois peda�os, caso o golpe
-fosse perfeito.  A l�mina da gigante espada possui 1,80 metros de
+Você observa a temida espada da coragem do rei Eric.  A monumental espada
+poderia facilmente partir um grande guerreiro em dois pedaços, caso o golpe
+fosse perfeito.  A lâmina da gigante espada possui 1,80 metros de
 comprimento.
 ~
 A
@@ -1844,17 +1844,17 @@ A
 A
 19 2
 #12692
-m�scara Anidhogge~
-a m�scara de Anidhogge~
-Uma estranha m�scara negra foi esquecida aqui.~
+mascara Anidhogge~
+a máscara de Anidhogge~
+Uma estranha máscara negra foi esquecida aqui.~
 ~
-11 aehjlq 0 0 0 ar 0 0 0 0 0 0 0
+11 aeqlhj ar 0
 0 0 0 0
-5 1200000 120000 65 0
+5 1200000 120000 65
 E
-m�scara Anidhogge~
-Voc� observa a misteriosa m�scara negra de Anidhogge, a escurid�o.  Como
-Anidhogge, a m�scara tamb�m muda de forma dependendo das suas necessidades.
+mascara Anidhogge~
+Você observa a misteriosa máscara negra de Anidhogge, a escuridão.  Como
+Anidhogge, a máscara também muda de forma dependendo das suas necessidades.
 ~
 A
 6 -3
@@ -1865,12 +1865,12 @@ plumas ventos~
 as plumas dos ventos~
 Algumas plumas brancas foram deixadas aqui ou trazidas pelos ventos.~
 ~
-24 aegiq 0 0 0 ap 0 0 0 0 0 0 0
+24 aeqgi ap 0
 0 0 25 0
-3 500000 50000 20 0
+3 500000 50000 20
 E
 plumas ventos~
-Voc� observa lindas e suaves plumas brancas.
+Você observa lindas e suaves plumas brancas.
 ~
 A
 14 10
@@ -1881,12 +1881,12 @@ armadura hermod~
 a armadura de Hermod~
 Uma bela e leve armadura cinza foi deixada aqui.~
 ~
-9 aegikq 0 0 0 ad 0 0 0 0 0 0 0
+9 aeqgik ad 0
 5 0 0 0
-10 1800000 180000 35 0
+10 1800000 180000 35
 E
 armadura hermod~
-Voc� observa uma linda armadura met�lica, bastante leve e resistente.
+Você observa uma linda armadura metálica, bastante leve e resistente.
 ~
 A
 14 20
@@ -1899,13 +1899,13 @@ escudo negro trevas~
 o escudo das trevas de Niffheleim~
 Um horripilante escudo negro foi deixado aqui.~
 ~
-9 bhjlnq 0 0 0 aj 0 0 0 0 0 0 0
+9 bhlqjn aj 0
 3 0 0 0
-12 400000 40000 40 0
+12 400000 40000 40
 E
 escudo negro trevas~
-Voc� observa um terr�vel escudo negro oriundo das trevas de Niffheleim.  O
-escudo � feito dos restos dos corpos em decomposi��o dos abatidos inimigos
+Você observa um terrível escudo negro oriundo das trevas de Niffheleim.  O
+escudo é feito dos restos dos corpos em decomposição dos abatidos inimigos
 da rainha suprema de Niffheleim, Hela.
 ~
 A
@@ -1917,12 +1917,12 @@ foice negra trevas~
 a foice das trevas de Niffheleim~
 Uma enorme foice negra foi esquecida aqui.~
 ~
-5 bghjlnqrs 0 0 0 an 0 0 0 0 0 0 0
+5 bhjnqlgrs an 0
 0 3 7 17
-18 300000 30000 40 0
+18 300000 30000 40
 E
 foice negra trevas~
-Voc� observa uma enorme foice negra criada nas horripilantes terras de
+Você observa uma enorme foice negra criada nas horripilantes terras de
 Niffheleim.
 ~
 A
@@ -1934,15 +1934,15 @@ machado corais~
 o machado de corais de Aegir~
 Um gigantesco machado de corais foi esquecido aqui.~
 ~
-5 aeginqr 0 0 0 an 0 0 0 0 0 0 0
+5 aeinqgr an 0
 0 3 9 3
-22 450000 45000 75 0
+22 450000 45000 75
 E
 machado corais~
-Voc� observa um gigantesco machado de corais colorido, que seria capaz de
-com um �nico golpe partir ao meio os Alpes escandinavos.  O machado de
+Você observa um gigantesco machado de corais colorido, que seria capaz de
+com um único golpe partir ao meio os Alpes escandinavos.  O machado de
 corais utilizado pelo gigante do mar, Aegir, provoca um estado de choque em
-seus inimigos.  O machado � realmente uma poderosa arma.
+seus inimigos.  O machado é realmente uma poderosa arma.
 ~
 A
 18 2
@@ -1951,19 +1951,19 @@ A
 A
 23 -2
 #12698
-cristal medalh�o tempestades~
-o medalh�o das tempestades~
-Um belo medalh�o de cristal foi esquecido aqui.~
+cristal medalhao tempestades~
+o medalhão das tempestades~
+Um belo medalhão de cristal foi esquecido aqui.~
 ~
-11 abejlq 0 0 0 ac 0 0 0 0 0 0 0
+11 abqlej ac 0
 0 0 0 0
-5 550000 55000 70 0
+5 550000 55000 70
 E
-cristal medalh�o tempestades~
-Voc� observa um belo medalh�o de cristal.  O medalh�o possui uma resistente
-corrente de a�o e uma maravilhosa esfera de cristal.  Voc� observa for�ando
-muito a vis�o, dentro da esfera, alguns blocos de neve surgirem em uma outra
-dimens�o.  O medalh�o das tempestades pertence ao gigante do gelo, Zorgerdr.
+cristal medalhao tempestades~
+Você observa um belo medalhão de cristal.  O medalhão possui uma resistente
+corrente de aço e uma maravilhosa esfera de cristal.  Você observa forçando
+muito a visão, dentro da esfera, alguns blocos de neve surgirem em uma outra
+dimensão.  O medalhão das tempestades pertence ao gigante do gelo, Zorgerdr.
 ~
 A
 17 -7
@@ -1972,47 +1972,47 @@ A
 #12699
 corneta neve~
 a corneta da neve de Irpa~
-Uma magn�fica corneta branca foi deixada aqui, emitindo um som agudo.~
+Uma magnífica corneta branca foi deixada aqui, emitindo um som agudo.~
 ~
-12 begijq 0 0 0 ao 0 0 0 0 0 0 0
+12 bqegij ao 0
 0 0 0 0
-8 650000 65000 75 0
+8 650000 65000 75
 E
 corneta neve~
-Voc� observa a bela corneta de neve do gigante do gelo, Irpa.  Os povos
-n�rdicos dizem que quando Irpa fica irritado com alguma coisa, ele toca a
+Você observa a bela corneta de neve do gigante do gelo, Irpa.  Os povos
+nórdicos dizem que quando Irpa fica irritado com alguma coisa, ele toca a
 corneta provocando ou aumentando a tempestade de neve.
 ~
 A
 12 20
 #12700
-met�licas escamas luvas Nibelungos par~
+metalicas escamas luvas Nibelungos par~
 as luvas dos Nibelungos~
-Um par de luvas de escamas met�licas foi esquecida aqui.~
+Um par de luvas de escamas metálicas foi esquecida aqui.~
 ~
-9 aq 0 0 0 ah 0 0 0 0 0 0 0
+9 aq ah 0
 10 0 0 0
-6 1750000 175000 50 0
+6 1750000 175000 50
 E
-met�licas escamas luvas Nibelungos par~
-Voc� observa um par de luvas dos Nibelungos, resistente e feita com pequenas
-escamas met�licas.  A luva met�lica pertence ao an�o Mime o mais engenhoso
+metalicas escamas luvas Nibelungos par~
+Você observa um par de luvas dos Nibelungos, resistente e feita com pequenas
+escamas metálicas.  A luva metálica pertence ao anão Mime o mais engenhoso
 dos ferreiros entre os Nibelungos.
 ~
 A
 2 1
 #12701
-esfera m�gica Thryn branco azulada~
-a esfera m�gica de Thryn~
+esfera magica Thryn branco azulada~
+a esfera mágica de Thryn~
 Uma pequena esfera branco-azulada foi esquecida aqui.~
 ~
-5 begjq 0 0 0 ano 0 0 0 0 0 0 0
+5 bqegj ano 0
 0 4 5 12
-5 2000000 200000 65 0
+5 2000000 200000 65
 E
-esfera m�gica Thryn branco azulada~
-Voc� observa uma misteriosa esfera branco-azulada emanando um frio terr�vel.
-A esfera m�gica do rei Thryn, rei dos gigantes do gelo, � uma das armas mais
+esfera magica Thryn branco azulada~
+Você observa uma misteriosa esfera branco-azulada emanando um frio terrível.
+A esfera mágica do rei Thryn, rei dos gigantes do gelo, é uma das armas mais
 temidas pelos inimigos dos gigantes, que lutam para instalar a ordem.
 ~
 A
@@ -2023,20 +2023,20 @@ A
 19 3
 #12702
 argola ouro Ymir~
-a argola de ouro do lend�rio Ymir~
-Uma magn�fica argola de ouro foi deixada aqui, brilhando como o sol.~
+a argola de ouro do lendário Ymir~
+Uma magnífica argola de ouro foi deixada aqui, brilhando como o sol.~
 ~
-11 aegiq 0 0 0 aq 0 0 0 0 0 0 0
+11 aeqgi aq 0
 0 0 0 0
-4 1500000 150000 70 0
+4 1500000 150000 70
 E
 argola ouro Ymir~
-Voc� observa uma bela argola de ouro bastante brilhante.  A argola de ouro
-pertenceu ao lend�rio gigante Ymir.  Ymir foi um dos primeiros gigantes a
-surgirem no mundo.  Ele foi morto pelos irm�os Odin, Vili e Ve, que ap�s a
+Você observa uma bela argola de ouro bastante brilhante.  A argola de ouro
+pertenceu ao lendário gigante Ymir.  Ymir foi um dos primeiros gigantes a
+surgirem no mundo.  Ele foi morto pelos irmãos Odin, Vili e Ve, que após a
 sua morte formaram com o seu corpo a terra, com o seu sangue os mares, com
-seus ossos as montanhas, com seus cabelos as �rvores, com seu cr�nio o c�u e
-com seu c�rebro as nuvens carregadas de neve e granizo.  Com a testa de Ymir,
+seus ossos as montanhas, com seus cabelos as árvores, com seu crânio o céu e
+com seu cérebro as nuvens carregadas de neve e granizo.  Com a testa de Ymir,
 os deuses formaram a bela cidade de Midgaard, destinada a tornar-se a morada
 dos homens.
 ~
@@ -2045,20 +2045,20 @@ A
 A
 17 -6
 #12703
-faces ilus�o m�scara colorida~
-as mil faces da ilus�o~
-Uma maravilhosa m�scara colorida foi esquecida aqui.~
+faces ilusao mascara colorida~
+as mil faces da ilusão~
+Uma maravilhosa máscara colorida foi esquecida aqui.~
 ~
-11 aegq 0 0 0 ar 0 0 0 0 0 0 0
+11 aeqg ar 0
 0 0 0 0
-5 2700000 270000 75 0
+5 2700000 270000 75
 E
-faces ilus�o m�scara colorida~
-Voc� observa uma bela m�scara colorida, as vezes mais azul, as vezes mais
-verde e outras vezes mais vermelha.  Voc� observa atentamente a m�scara
-mudar de forma v�rias vezes.  As mil faces da ilus�o pertence ao rei de
-Utgard, o senhor das ilus�es, Utgard-loki.  Utgard-loki � bastante conhecido
-pelas ilus�es criadas por ele para o seu pr�prio proveito.
+faces ilusao mascara colorida~
+Você observa uma bela máscara colorida, as vezes mais azul, as vezes mais
+verde e outras vezes mais vermelha.  Você observa atentamente a máscara
+mudar de forma várias vezes.  As mil faces da ilusão pertence ao rei de
+Utgard, o senhor das ilusões, Utgard-loki.  Utgard-loki é bastante conhecido
+pelas ilusões criadas por ele para o seu próprio proveito.
 ~
 A
 3 -2
@@ -2069,33 +2069,33 @@ arco flamejante~
 o arco flamejante de Logi~
 Um grande arco em chamas foi deixado aqui.~
 ~
-5 aegqr 0 0 0 an 0 0 0 0 0 0 0
+5 aeqgr an 0
 0 3 6 12
-10 1800000 180000 75 0
+10 1800000 180000 75
 E
 arco flamejante~
-Voc� observa um enorme arco em chamas, contudo o arco continua intacto ao
+Você observa um enorme arco em chamas, contudo o arco continua intacto ao
 poder destrutivo do fogo.  O arco flamejante pertence a Logi, o fogo, e
-com certeza os danos que ele causar� nos seus inimigos n�o ser�o ilus�es.
+com certeza os danos que ele causará nos seus inimigos não serão ilusões.
 ~
 A
 18 4
 A
 19 4
 #12705
-pedra vis�es~
-a pedra das vis�es de Angerbode~
+pedra visoes~
+a pedra das visões de Angerbode~
 Uma grande pedra vermelha foi deixada aqui.~
 ~
-12 aegiq 0 0 0 ao 0 0 0 0 0 0 0
+12 aeqgi ao 0
 0 0 0 0
-14 2500000 250000 60 0
+14 2500000 250000 60
 E
-pedra vis�es~
-Voc� observa a lend�ria pedra das vis�es de Angerbode, a giganta profetisa.
-A pedra vermelha das vis�es possui v�rios poderes, contudo o mais relevante
-� o de antecipar vis�es futur�sticas.  O poder das vis�es prof�ticas s� �
-acionado pelas m�os da profetisa Angerbode, a m�e das aberra��es.
+pedra visoes~
+Você observa a lendária pedra das visões de Angerbode, a giganta profetisa.
+A pedra vermelha das visões possui vários poderes, contudo o mais relevante
+é o de antecipar visões futurísticas.  O poder das visões proféticas só é
+acionado pelas mãos da profetisa Angerbode, a mãe das aberrações.
 ~
 A
 4 2
@@ -2104,14 +2104,14 @@ A
 #12706
 ferradura prateada Greyfell~
 a ferradura de Greyfell~
-Uma magn�fica ferradura prateada foi esquecida aqui.~
+Uma magnífica ferradura prateada foi esquecida aqui.~
 ~
-12 aegikq 0 0 0 ao 0 0 0 0 0 0 0
+12 aegqik ao 0
 0 0 0 0
-6 2400000 240000 40 0
+6 2400000 240000 40
 E
 ferradura prateada Greyfell~
-Voc� observa uma bela ferradura prateada do magn�fico Greyfell, o cavalo de
+Você observa uma bela ferradura prateada do magnífico Greyfell, o cavalo de
 Siegfried.
 ~
 A
@@ -2119,18 +2119,18 @@ A
 A
 17 -5
 #12707
-carne javali grande peda�o Schrinnir~
-um grande peda�o de carne de javali~
-Um grande peda�o de carne de javali foi esquecido aqui.~
+carne javali grande pedaco Schrinnir~
+um grande pedaço de carne de javali~
+Um grande pedaço de carne de javali foi esquecido aqui.~
 ~
-19 cdi 0 0 0 a 0 0 0 0 0 0 0
+19 cdi a 0
 30 0 0 0
-2 2000 200 0 0
+2 2000 200 0
 E
-carne javali grande peda�o Schrinnir~
-Voc� observa um grande peda�o de carne de javali.  Este peda�o de carne �
+carne javali grande pedaco Schrinnir~
+Você observa um grande pedaço de carne de javali.  Este pedaço de carne é
 parte da fonte de alimentos do exercito de Odin, o grande javali Schrinnir.
-Que mesmo tendo suas carnes cozidas todas as manh�s, ele fica novamente
+Que mesmo tendo suas carnes cozidas todas as manhãs, ele fica novamente
 inteiro todas as noites.
 ~
 #12708
@@ -2138,13 +2138,13 @@ bela corrente seda gleipnir~
 Gleipnir, a corrente de seda~
 Uma bela corrente foi deixada aqui.~
 ~
-12 aegiq 0 0 0 ao 0 0 0 0 0 0 0
+12 aeqgi ao 0
 0 0 0 0
-2 2200000 220000 30 0
+2 2200000 220000 30
 E
 bela corrente seda gleipnir~
-Voc� observa a bela corrente feita pelos an�es para prender o lobo Fenrir.
-Ela parece uma fita de seda; por�m, depois de amarrado com ela, quanto mais
+Você observa a bela corrente feita pelos anões para prender o lobo Fenrir.
+Ela parece uma fita de seda; porém, depois de amarrado com ela, quanto mais
 Fenrir luta para livrar-se, mais forte ela fica e mais ele se enreda.
 ~
 A
@@ -2158,12 +2158,12 @@ ouro ferradura sleipnir~
 a ferradura de Sleipnir~
 Uma majestosa ferradura de ouro foi esquecida aqui.~
 ~
-12 aegikq 0 0 0 ao 0 0 0 0 0 0 0
+12 aeqgik ao 0
 0 0 0 0
-6 2400000 240000 45 0
+6 2400000 240000 45
 E
 ouro ferradura sleipnir~
-Voc� observa uma bela ferradura dourada do celestial Sleipnir, o cavalo do
+Você observa uma bela ferradura dourada do celestial Sleipnir, o cavalo do
 Deus Odin.
 ~
 A
@@ -2177,12 +2177,12 @@ bronze ferradura gulltopp~
 a ferradura de Gulltopp~
 Uma bela ferradura de bronze foi deixada aqui.~
 ~
-12 aegikq 0 0 0 ao 0 0 0 0 0 0 0
+12 aegqik ao 0
 0 0 0 0
-6 2400000 240000 35 0
+6 2400000 240000 35
 E
 ouro ferradura sleipnir~
-Voc� observa uma bela ferradura dourada do celestial Sleipnir, o cavalo do
+Você observa uma bela ferradura dourada do celestial Sleipnir, o cavalo do
 Deus Odin.
 ~
 A
@@ -2194,13 +2194,13 @@ gigantesca escama serpente midgaard~
 uma escama da serpente de Midgaard~
 Uma gigantesca escama verde foi deixada aqui.~
 ~
-9 aehq 0 0 0 aj 0 0 0 0 0 0 0
+9 aeqh aj 0
 10 0 0 0
-25 3500000 350000 75 0
+25 3500000 350000 75
 E
 gigantesca escama serpente midgaard~
-Voc� observa uma enorme e horripilante escama verde da temida serpente de
-Midgaard, Jormungand.   Jormungand ap�s ser jogada no oceano por Odin,
+Você observa uma enorme e horripilante escama verde da temida serpente de
+Midgaard, Jormungand.   Jormungand após ser jogada no oceano por Odin,
 cresceu a tal ponto que, enfiando a cauda na boca, rodearia toda a terra.
 ~
 A
@@ -2212,13 +2212,13 @@ grande vermelho olho flamejante nidhogg~
 o olho flamejante de Nidhogg~
 Um grande olho vermelho em chamas foi deixado aqui, coberto de sangue.~
 ~
-1 aehjnq 0 0 0 ao 0 0 0 0 0 0 0
+1 aehqjn ao 0
 0 0 -1 0
-10 2000000 200000 85 0
+10 2000000 200000 85
 E
 grande vermelho olho flamejante nidhogg~
-Voc� observa um monstruoso olho coberto por chamas que parecem infinitas.  O
-olho do poderoso drag�o da escurid�o possui o poder de envolver o seu dono
+Você observa um monstruoso olho coberto por chamas que parecem infinitas.  O
+olho do poderoso dragão da escuridão possui o poder de envolver o seu dono
 numa grande bola de fogo.
 ~
 A
@@ -2226,17 +2226,17 @@ A
 A
 17 -10
 #12713
-asas guardi�~
-as asas da guardi� de Yggdrasil~
+asas guardia~
+as asas da guardiã de Yggdrasil~
 Um belo par de asas brancas foi esquecido aqui.~
 ~
-24 aegikq 0 0 0 ap 0 0 0 0 0 0 0
+24 aeqgik ap 0
 0 0 50 0
-6 1500000 150000 50 0
+6 1500000 150000 50
 E
-asas guardi�~
-Voc� observa um belo par de asas brancas.  Suas penas possuem um brilho
-celestial, trazendo um sentimento de paz e tranq�ilidade para voc�.
+asas guardia~
+Você observa um belo par de asas brancas.  Suas penas possuem um brilho
+celestial, trazendo um sentimento de paz e tranqüilidade para você.
 ~
 A
 2 1
@@ -2245,17 +2245,17 @@ A
 A
 18 2
 #12714
-a�o perneiras f�ria~
-as perneiras da f�ria~
-Um belo par de perneiras de a�o foi deixado aqui.~
+aco perneiras furia~
+as perneiras da fúria~
+Um belo par de perneiras de aço foi deixado aqui.~
 ~
-9 aegijlq 0 0 0 af 0 0 0 0 0 0 0
+9 aegjlqi af 0
 6 0 0 0
-6 1000000 100000 45 0
+6 1000000 100000 45
 E
-a�o perneiras f�ria~
-Voc� observa um maravilhoso par de perneiras de a�o, que emitem um brilho
-intenso.  As perneiras da f�ria s�o presentes do Deus todo poderoso Odin
+aco perneiras furia~
+Você observa um maravilhoso par de perneiras de aço, que emitem um brilho
+intenso.  As perneiras da fúria são presentes do Deus todo poderoso Odin
 para os berserks, guerreiros sanguinolentos e bravos.
 ~
 #12715
@@ -2263,14 +2263,14 @@ punhado fios cabelo ouro~
 um punhado de fios de cabelo de ouro~
 Um punhado de fios de cabelo de ouro foi deixado aqui ao vento.~
 ~
-12 aegikq 0 0 0 ao 0 0 0 0 0 0 0
+12 aegqik ao 0
 0 0 0 0
-1 2500000 250000 50 0
+1 2500000 250000 50
 E
 punhado fios cabelo ouro~
-Voc� observa um punhado de fios de cabelo de ouro.  Os cabelos da bel�ssima
-Sif, a esposa do senhor dos trov�es, Thor, foram confeccionados pelos an�es e
-seus fios s�o feitos de ouro, substituindo assim os fios de cabelos cortados
+Você observa um punhado de fios de cabelo de ouro.  Os cabelos da belíssima
+Sif, a esposa do senhor dos trovões, Thor, foram confeccionados pelos anões e
+seus fios são feitos de ouro, substituindo assim os fios de cabelos cortados
 maleficamente por Loge.
 ~
 A
@@ -2278,44 +2278,44 @@ A
 A
 12 20
 #12716
-estatua bronze viking noruegu�s~
-uma estatua de bronze de um viking noruegu�s~
-Um estatua de bronze de um poderoso viking noruegu�s foi deixada aqui.~
+estatua bronze viking noruegues~
+uma estatua de bronze de um viking norueguês~
+Um estatua de bronze de um poderoso viking norueguês foi deixada aqui.~
 ~
-8 aeiq 0 0 0 0 0 0 0 0 0 0 0
+8 aeqi 0 0
 0 0 0 0
-90 1500000 150000 0 0
+90 1500000 150000 0
 E
-estatua bronze viking noruegu�s~
-Voc� observa uma bela estatua confeccionada toda em bronze, que cria uma
-imagem t�o real de um viking noruegu�s, que voc� pensava que era de carne e
+estatua bronze viking noruegues~
+Você observa uma bela estatua confeccionada toda em bronze, que cria uma
+imagem tão real de um viking norueguês, que você pensava que era de carne e
 osso.
 ~
 #12717
 estatua tor~
-uma bela estatua do senhor dos trov�es~
-Uma bela estatua de Thor, o Deus dos Trov�es, foi fincada aqui.~
+uma bela estatua do senhor dos trovões~
+Uma bela estatua de Thor, o Deus dos Trovões, foi fincada aqui.~
 ~
-8 aeiq 0 0 0 0 0 0 0 0 0 0 0
+8 aqei 0 0
 0 0 0 0
-100 1800000 180000 0 0
+100 1800000 180000 0
 E
 estatua tor~
-Voc� observa uma magn�fica estatua feita de ouro e algumas pedras preciosas
-do Deus Thor, o senhor dos trov�es.
+Você observa uma magnífica estatua feita de ouro e algumas pedras preciosas
+do Deus Thor, o senhor dos trovões.
 ~
 #12718
 estatua bronze viking sueco~
 uma estatua de bronze de um viking sueco~
 Um estatua de bronze de um poderoso viking sueco foi deixada aqui.~
 ~
-8 aei 0 0 0 0 0 0 0 0 0 0 0
+8 aei 0 0
 0 0 0 0
-100 1800000 180000 0 0
+100 1800000 180000 0
 E
-estatua bronze viking noruegu�s~
-Voc� observa uma bela estatua confeccionada toda em bronze, que cria uma
-imagem t�o real de um viking noruegu�s, que voc� pensava que era de carne e
+estatua bronze viking norueguês~
+Você observa uma bela estatua confeccionada toda em bronze, que cria uma
+imagem tão real de um viking norueguês, que você pensava que era de carne e
 osso.
 ~
 #12719
@@ -2323,24 +2323,24 @@ cadeira madeira~
 uma cadeira de madeira~
 Uma rudimentar cadeira de madeira foi colocada aqui.~
 ~
-12 0 0 0 0 0 0 0 0 0 0 0 0
+12 0 0 0
 0 0 0 0
-45 500 50 0 0
+45 500 50 0
 E
 cadeira madeira~
-Voc� observa uma rudimentar cadeira de madeira.
+Você observa uma rudimentar cadeira de madeira.
 ~
 #12720
 madeira longa mesa~
 uma longa mesa de madeira~
 Uma longa mesa de madeira foi colocada aqui.~
 ~
-12 0 0 0 0 0 0 0 0 0 0 0 0
+12 0 0 0
 0 0 0 0
-250 5000 500 0 0
+250 5000 500 0
 E
 madeira longa mesa~
-Voc� observa uma longa e rudimentar mesa de madeira, que daria para mais de
+Você observa uma longa e rudimentar mesa de madeira, que daria para mais de
 12 vikings utilizarem na mesa hora.
 ~
 #12721
@@ -2348,36 +2348,36 @@ tesouro moedas ouro~
 um grande tesouro de moedas de ouro~
 Um grande tesouro de moedas de ouro foi guardado aqui.~
 ~
-20 0 0 0 0 a 0 0 0 0 0 0 0
+20 0 a 0
 300000 0 0 0
-15 300000 30000 0 0
+15 300000 30000 0
 E
 tesouro moedas ouro~
-Voc� observa um grande tesouro em moedas de ouro.
+Você observa um grande tesouro em moedas de ouro.
 ~
 #12722
 chave rudimentar ferro~
 uma chave viking rudimentar de ferro~
 Uma chave rudimentar de ferro foi deixada aqui.~
 ~
-18 ce 0 0 0 a 0 0 0 0 0 0 0
+18 ec a 0
 0 0 0 0
-3 100 10 0 0
+3 100 10 0
 E
 chave rudimentar ferro~
-Voc� observa uma chave viking bastante rudimentar.
+Você observa uma chave viking bastante rudimentar.
 ~
 #12723
 trono ouro~
 o trono de ouro do rei Eric~
-Um magn�fico trono de ouro foi colocado aqui.~
+Um magnífico trono de ouro foi colocado aqui.~
 ~
-12 0 0 0 0 0 0 0 0 0 0 0 0
+12 0 0 0
 0 0 0 0
-70 200000 20000 0 0
+70 200000 20000 0
 E
 trono ouro~
-Voc� observa o magn�fico trono de ouro do rei Eric, rei dos cl�s vikings
+Você observa o magnífico trono de ouro do rei Eric, rei dos clãs vikings
 suecos.
 ~
 #12724
@@ -2385,39 +2385,39 @@ monumental pedras estatua odin~
 uma monumental estatua do Deus todo poderoso Odin~
 Uma monumental estatua de pedras do Deus Supremo Odin foi fincada aqui.~
 ~
-12 aeg 0 0 0 0 0 0 0 0 0 0 0
+12 aeg 0 0
 0 0 0 0
-280 3000000 300000 0 0
+280 3000000 300000 0
 E
 monumental pedras estatua odin~
-Voc� observa uma monumental estatua do Deus Odin feita com resistentes e
+Você observa uma monumental estatua do Deus Odin feita com resistentes e
 poderosas pedras.
 ~
 #12725
-pedra enorme sacrif�cios~
-a pedra dos sacrif�cios~
-Uma enorme pedra coberta de sangue est� fincada aqui.~
+pedra enorme sacrificios~
+a pedra dos sacrifícios~
+Uma enorme pedra coberta de sangue está fincada aqui.~
 ~
-12 a 0 0 0 0 0 0 0 0 0 0 0
+12 a 0 0
 0 0 0 0
-200 100 10 0 0
+200 100 10 0
 E
-pedra enorme sacrif�cios~
-Voc� observa uma enorme pedra usada pelos vikings para oferecerem
-sacrif�cios e presentes aos seus deuses.  A superf�cie da grande pedra est�
+pedra enorme sacrificios~
+Você observa uma enorme pedra usada pelos vikings para oferecerem
+sacrifícios e presentes aos seus deuses.  A superfície da grande pedra está
 quase que completamente coberta por sangue. 
 ~
 #12726
 grande pedra jogos~
 uma grande pedra para jogos de arremessos~
-Uma grande pedra foi arremessada aqui no ch�o.~
+Uma grande pedra foi arremessada aqui no chão.~
 ~
-12 0 0 0 0 a 0 0 0 0 0 0 0
+12 0 a 0
 0 0 0 0
-65 100 10 0 0
+65 100 10 0
 E
 grande pedra jogos~
-Voc� observa uma grande pedra utilizada para os jogos de arremessos dos
+Você observa uma grande pedra utilizada para os jogos de arremessos dos
 sanguinolentos vikings.
 ~
 #12727
@@ -2425,12 +2425,12 @@ cama feno~
 uma cama de feno~
 Uma cama de feno foi colocada aqui.~
 ~
-12 0 0 0 0 0 0 0 0 0 0 0 0
+12 0 0 0
 0 0 0 0
-45 100 10 0 0
+45 100 10 0
 E
 cama feno~
-Voc� observa uma cama feita com uma longa pedra plana e coberta com muito
+Você observa uma cama feita com uma longa pedra plana e coberta com muito
 feno.
 ~
 #12728
@@ -2438,378 +2438,378 @@ rudimentar mesa madeira~
 uma mesa rudimentar de madeira~
 Uma mesa rudimentar de madeira foi colocada aqui.~
 ~
-12 0 0 0 0 0 0 0 0 0 0 0 0
+12 0 0 0
 0 0 0 0
-45 100 10 0 0
+45 100 10 0
 E
 rudimentar mesa madeira~
-Voc� observa uma rudimentar mesa de madeira.
+Você observa uma rudimentar mesa de madeira.
 ~
 #12729
 navio batalha viking~
-um grande navio de batalha viking em constru��o~
-Um grande navio de batalha viking est� aqui, sendo constru�do.~
+um grande navio de batalha viking em construção~
+Um grande navio de batalha viking está aqui, sendo construído.~
 ~
-12 0 0 0 0 0 0 0 0 0 0 0 0
+12 0 0 0
 0 0 0 0
-300 5000000 500000 0 0
+300 5000000 500000 0
 E
 navio batalha viking~
-Voc� observa v�rios vikings trabalhando na constru��o de um grande navio de
+Você observa vários vikings trabalhando na construção de um grande navio de
 batalha viking.
 ~
 #12730
 ouro chave valhala~
-a chave do pal�cio~
+a chave do palácio~
 Uma bela chave de ouro foi deixada aqui.~
 ~
-18 ac 0 0 0 a 0 0 0 0 0 0 0
+18 ac a 0
 0 0 0 0
-5 5000 500 0 0
+5 5000 500 0
 E
 ouro chave valhala~
-Voc� observa uma bela chave feita de ouro, que emite um brilho misterioso.
+Você observa uma bela chave feita de ouro, que emite um brilho misterioso.
 ~
 #12731
 pedra estatua einherjar~
-uma estatua de um her�i Einherjar~
-Um bela estatua de pedra de um her�i Einherjar foi colocada aqui.~
+uma estatua de um herói Einherjar~
+Um bela estatua de pedra de um herói Einherjar foi colocada aqui.~
 ~
-12 ai 0 0 0 0 0 0 0 0 0 0 0
+12 ai 0 0
 0 0 0 0
-150 25000 2500 0 0
+150 25000 2500 0
 E
 pedra estatua einherjar~
-Voc� observa uma bela estatua feita de pedras, que ilustra uma grande e
-poderoso Einherjar � espera do Ragnarok.
+Você observa uma bela estatua feita de pedras, que ilustra uma grande e
+poderoso Einherjar à espera do Ragnarok.
 ~
 #12732
-t�bua ragnar�k~
-uma t�bua dourada~
-Uma t�bua dourada foi deixada aqui, para lembrar a todos o dia do Ragnarok.~
+tabua ragnarok~
+uma tábua dourada~
+Uma tábua dourada foi deixada aqui, para lembrar a todos o dia do Ragnarok.~
 ~
-12 a 0 0 0 0 0 0 0 0 0 0 0
+12 a 0 0
 0 0 0 0
-30 3000 300 0 0
+30 3000 300 0
 E
-inscri��es~
-O celestial e poderoso exercito de Odin dever� est� sempre pronto para o
-pavoroso dia do Ragnar�k.  Lembrem-se que este dia n�o vir� inesperadamente.
-Primeiro, um inverno tr�plice, durante o qual a neve cairia dos quatro
-cantos do c�u, o congelamento seria rigoroso, o vento cortante, o tempo
-tempestuoso e o sol n�o traria alegria.  Suceder-se-iam tr�s invernos sem
-serem temperados por um �nico ver�o.  Tr�s outros invernos seguir-se-iam,
-durante os quais a guerra e a disc�rdia se espalhariam pelo universo.  A
-pr�pria Terra ficaria amedrontada e come�aria a tremer, o mar sairia de seu
-leito, o c�u se abriria e os homens morreriam em grande n�mero, enquanto as
-�guias do ar se regozijariam sobre seus corpos tr�mulos.  O lobo Fenris
-arrebentar� a corrente que o prende, a serpente de Midgaard levantar-se-�
+tabua ragnarok~
+Você observa uma magnífica tábua dourada com algumas runas e inscrições.
+~
+E
+inscricoes~
+O celestial e poderoso exercito de Odin deverá está sempre pronto para o
+pavoroso dia do Ragnarök.  Lembrem-se que este dia não virá inesperadamente.
+Primeiro, um inverno tríplice, durante o qual a neve cairia dos quatro
+cantos do céu, o congelamento seria rigoroso, o vento cortante, o tempo
+tempestuoso e o sol não traria alegria.  Suceder-se-iam três invernos sem
+serem temperados por um único verão.  Três outros invernos seguir-se-iam,
+durante os quais a guerra e a discórdia se espalhariam pelo universo.  A
+própria Terra ficaria amedrontada e começaria a tremer, o mar sairia de seu
+leito, o céu se abriria e os homens morreriam em grande número, enquanto as
+águias do ar se regozijariam sobre seus corpos trêmulos.  O lobo Fenris
+arrebentará a corrente que o prende, a serpente de Midgaard levantar-se-á
 de seu leito no mar e um deus seria libertado de suas cadeias, para
-juntar-se aos inimigos dos deuses.  No meio da devasta��o geral, os filhos
-de Musplheim acorrer�o, sob a chefia de Surtur, adiante e atr�s do qual
-irromper�o, chamas devastadoras.  Os assaltantes avan�ariam pela ponte do
-arco-�ris, Bifrost, que se quebraria sob os cascos dos cavalos. Sem se
-incomodar com a queda, por�m, eles se dirigiriam ao campo de batalha chamado
-Vigrid, onde tamb�m apareceriam o lobo Fenris, a serpente de Midgaard, o
+juntar-se aos inimigos dos deuses.  No meio da devastação geral, os filhos
+de Musplheim acorrerão, sob a chefia de Surtur, adiante e atrás do qual
+irromperão, chamas devastadoras.  Os assaltantes avançariam pela ponte do
+arco-íris, Bifrost, que se quebraria sob os cascos dos cavalos. Sem se
+incomodar com a queda, porém, eles se dirigiriam ao campo de batalha chamado
+Vigrid, onde também apareceriam o lobo Fenris, a serpente de Midgaard, o
 deus caluniador dos deuses e impostor com todos os seguidores de Hela e os
 gigantes do gelo.  Heindall levantar-se-ia e soaria a trombeta Gjall, para
-chamar � luta todos os deuses e her�is.
-~
-E
-t�bua ragnar�k~
-Voc� observa uma magn�fica t�bua dourada com algumas runas e inscri��es.
+chamar à luta todos os deuses e heróis.
 ~
 #12733
 pedra trono Odin~
-o magn�fico trono de Odin~
+o magnífico trono de Odin~
 Um majestoso trono de pedra foi colocado aqui.~
 ~
-12 aegi 0 0 0 0 0 0 0 0 0 0 0
+12 aegi 0 0
 0 0 0 0
-180 2000000 200000 0 0
+180 2000000 200000 0
 E
 pedra trono Odin~
-Voc� observa o magn�fico trono de pedra do Deus supremo Odin.  O Deus todo
+Você observa o magnífico trono de pedra do Deus supremo Odin.  O Deus todo
 poderoso Odin quando sobe em seu trono de pedra, pode observa todo o
 universo.
 ~
 #12734
-sublime po�o fonte Jotunheim~
-o po�o de Ymir~
-Um sublime po�o foi feito aqui.~
+sublime poco fonte Jotunheim~
+o poço de Ymir~
+Um sublime poço foi feito aqui.~
 ~
-23 aegi 0 0 0 0 0 0 0 0 0 0 0
+23 aegi 0 0
 90 90 15 0
-200 1000000 100000 0 0
+200 1000000 100000 0
 E
-sublime po�o fonte Jotunheim~
-Voc� observa um singelo po�o feito de pedras resistentes.  O po�o de Ymir �
-o esconderijo da sabedoria e da intelig�ncia.
+sublime poco fonte Jotunheim~
+Você observa um singelo poço feito de pedras resistentes.  O poço de Ymir é
+o esconderijo da sabedoria e da inteligência.
 ~
 #12735
 estatua monumental pedra gigante~
 uma gigantesca estatua~
-Uma monumental estatua de v�rios gigantes foi fincada aqui.~
+Uma monumental estatua de vários gigantes foi fincada aqui.~
 ~
-12 a 0 0 0 0 0 0 0 0 0 0 0
+12 a 0 0
 0 0 0 0
-250 1000000 100000 0 0
+250 1000000 100000 0
 E
 estatua monumental pedra gigante~
-Voc� observa uma grandiosa estatua que ilustra v�rios gigantes partindo para
+Você observa uma grandiosa estatua que ilustra vários gigantes partindo para
 Vigrid, no dia do Ragnarok.
 ~
 #12736
 ouro estatua Ymir~
-Ymir, a lenda da cria��o~
-Uma magn�fica estatua do lend�rio gigante Ymir foi fincada aqui.~
+Ymir, a lenda da criação~
+Uma magnífica estatua do lendário gigante Ymir foi fincada aqui.~
 ~
-12 ae 0 0 0 0 0 0 0 0 0 0 0
+12 ae 0 0
 0 0 0 0
-180 1000000 100000 0 0
+180 1000000 100000 0
 E
 ouro estatua Ymir~
-Voc� observa uma bel�ssima estatua de ouro do poderoso gigante Ymir.  A
-lenda da cria��o conta que no princ�pio, n�o havia nem c�u em cima nem terra
+Você observa uma belíssima estatua de ouro do poderoso gigante Ymir.  A
+lenda da criação conta que no princípio, não havia nem céu em cima nem terra
 embaixo, mas apenas um abismo sem fundo e um mundo de vapor no qual flutuava
-uma fonte.  Dessa fonte sa�ram doze rios, e, depois deles terem corrido at�
+uma fonte.  Dessa fonte saíram doze rios, e, depois deles terem corrido até
 muito distante de sua origem, congelaram-se e, tendo as camadas de gelo se
 acumulado umas sobre as outras, o grande abismo se encheu.  Ao sul do mundo
-de vapor, havia um mundo de luz, do qual uma vira��o quente soprou sobre o
+de vapor, havia um mundo de luz, do qual uma viração quente soprou sobre o
 gelo, derretendo-o.  Os vapores elevaram-se no ar e formaram nuvens, das
-quais surgiu Ymir, o gelo gigante, e sua gera��o, e a vaca Audumbla, cujo
+quais surgiu Ymir, o gelo gigante, e sua geração, e a vaca Audumbla, cujo
 leite alimentou o gigante.  Essa vaca, alimentava-se lambendo o gelo de onde
-retirava a �gua e o sal.  Certo dia, quando ela estava lambendo as pedras de
-sal, surgiram os cabelos de um homem; no segundo dia toda a cabe�a e, no
-terceiro dia, todo o corpo, que tinha grande beleza, agilidade e for�a.  O
-novo ser era um deus e dele e de sua esposa, filha da ra�a dos gigantes,
-nasceram os tr�s irm�os, Odin, Vili e Ve, que mataram o gigante Ymir,
+retirava a água e o sal.  Certo dia, quando ela estava lambendo as pedras de
+sal, surgiram os cabelos de um homem; no segundo dia toda a cabeça e, no
+terceiro dia, todo o corpo, que tinha grande beleza, agilidade e força.  O
+novo ser era um deus e dele e de sua esposa, filha da raça dos gigantes,
+nasceram os três irmãos, Odin, Vili e Ve, que mataram o gigante Ymir,
 formando com seu corpo a terra, com seu sangue os mares, com seus ossos as
-montanhas, com seus cabelos as �rvores, com seu cr�nio o c�u e com seu
-c�rebro as nuvens carregadas de neve e granizo.  Com a testa de Ymir, os
+montanhas, com seus cabelos as árvores, com seu crânio o céu e com seu
+cérebro as nuvens carregadas de neve e granizo.  Com a testa de Ymir, os
 deuses formaram a Midgaard, destinada a tornar-se a morada do homem.  Odin
-estabeleceu, depois, os per�odos do dia e da noite, e as esta��es, colocando
-no c�u o Sol e a Lua e lhes determinando os respectivos cursos.  Logo que o
-Sol come�ou a lan�ar seus raios sobre a terra, fez brotarem e crescerem os
+estabeleceu, depois, os períodos do dia e da noite, e as estações, colocando
+no céu o Sol e a Lua e lhes determinando os respectivos cursos.  Logo que o
+Sol começou a lançar seus raios sobre a terra, fez brotarem e crescerem os
 vegetais.  Pouco tempo depois de terem criado o mundo, os deuses passearam
 junto ao mar, satisfeitos com sua obra recente, mas verificaram que ela
-ainda estava incompleta, pois faltavam seres humanos.  Tomaram, ent�o, um
+ainda estava incompleta, pois faltavam seres humanos.  Tomaram, então, um
 freixo e dele fizeram um homem e de um amieiro fizeram uma mulher, chamando
-o homem de Aske e a mulher de Embla.  Odin deu-lhes ent�o, a vida e a alma.
-Vili, a raz�o e o movimento, e Ve, os sentidos, a fisionomia expressiva e o
-dom da palavra.  A Midgaard foi-lhes, ent�o, dada para moradia e eles se
-tornaram os progenitores do g�nero humano.
+o homem de Aske e a mulher de Embla.  Odin deu-lhes então, a vida e a alma.
+Vili, a razão e o movimento, e Ve, os sentidos, a fisionomia expressiva e o
+dom da palavra.  A Midgaard foi-lhes, então, dada para moradia e eles se
+tornaram os progenitores do gênero humano.
 ~
 #12737
 chave bronze pequena~
 uma pequena chave de bronze~
 Uma pequena chave de bronze foi esquecida aqui.~
 ~
-18 c 0 0 0 a 0 0 0 0 0 0 0
+18 c a 0
 0 0 0 0
-3 1000 100 0 0
+3 1000 100 0
 E
 chave bronze pequena~
-Voc� observa uma pequena chave de bronze bastante antiga.
+Você observa uma pequena chave de bronze bastante antiga.
 ~
 #12738
 trono Hela corpos esqueletos~
 o trono de Hela~
 Um macabro trono de esqueletos e corpos foi colocado aqui.~
 ~
-12 be 0 0 0 0 0 0 0 0 0 0 0
+12 be 0 0
 0 0 0 0
-150 1000000 100000 0 0
+150 1000000 100000 0
 E
 trono Hela corpos esqueletos~
-Voc� observa uma sombrio trono feito de corpos em decomposi��o e esqueletos
+Você observa uma sombrio trono feito de corpos em decomposição e esqueletos
 humanos.
 ~
 #12739
-fonte urd m�rmore branco~
+fonte urd marmore branco~
 a fonte de Urd~
-Uma bela fonte de m�rmore branco foi feita aqui.~
+Uma bela fonte de mármore branco foi feita aqui.~
 ~
-23 aei 0 0 0 0 0 0 0 0 0 0 0
+23 aei 0 0
 90 90 16 0
-200 1500000 150000 0 0
+200 1500000 150000 0
 E
-fonte urd m�rmore branco~
-Voc� observa a bela fonte de m�rmore branco de Urd.  Guardada pelas Norns,
-a fonte de Urd � o local onde os deuses se re�nem todos os dias em conselho.
+fonte urd marmore branco~
+Você observa a bela fonte de mármore branco de Urd.  Guardada pelas Norns,
+a fonte de Urd é o local onde os deuses se reúnem todos os dias em conselho.
 ~
 #12740
 fonte Hvergelnir negra~
 Hvergelnir, a fonte de Niffleheim~
-Uma estranha fonte negra de l�quido vermelho foi feita aqui.~
+Uma estranha fonte negra de líquido vermelho foi feita aqui.~
 ~
-23 be 0 0 0 0 0 0 0 0 0 0 0
+23 be 0 0
 90 90 13 0
-200 1500000 150000 0 0
+200 1500000 150000 0
 E
 fonte Hvergelnir negra~
-Voc� observa uma estranha fonte feita com pedras negras, onde um macabro
-l�quido vermelho borbulha e jorra sem parar.
+Você observa uma estranha fonte feita com pedras negras, onde um macabro
+líquido vermelho borbulha e jorra sem parar.
 ~
 #12741
 rochas imensas~
-as rochas do santu�rio da alegria~
-Seis imensas rochas foram fincadas aqui, formando o santu�rio da alegria.~
+as rochas do santuário da alegria~
+Seis imensas rochas foram fincadas aqui, formando o santuário da alegria.~
 ~
-12 aeg 0 0 0 0 0 0 0 0 0 0 0
+12 aeg 0 0
 0 0 0 0
-150 10000 1000 0 0
+150 10000 1000 0
 E
 rochas imensas~
-Voc� observa seis imensas rochas que foram fincadas no ch�o formando o belo
-santu�rio da alegria, Gladsheim.
+Você observa seis imensas rochas que foram fincadas no chão formando o belo
+santuário da alegria, Gladsheim.
 ~
 #12742
 amarelas verdes vermelhas flores~
-as flores do pal�cio de Sessrumir~
-V�rias flores amarelas, verdes e vermelhas est�o espalhadas aqui.~
+as flores do palácio de Sessrumir~
+Várias flores amarelas, verdes e vermelhas estão espalhadas aqui.~
 ~
-12 ei 0 0 0 ao 0 0 0 0 0 0 0
+12 ei ao 0 
 0 0 0 0
-2 2000 200 0 0
+2 2000 200 0
 E
 amarelas verdes vermelhas flores~
-Voc� observa v�rias flores amarelas, verdes e vermelhas espalhadas por todos
-os cantos do pal�cio.  O perfume emitido por elas � maravilhoso, deixando-o
+Você observa várias flores amarelas, verdes e vermelhas espalhadas por todos
+os cantos do palácio.  O perfume emitido por elas é maravilhoso, deixando-o
 bastante sonolento.
 ~
 #12743
 bola fogo sol Alfheim~
 o sol de Alfheim~
-Uma grande bola de fogo est� aqui na sua frente girando no ar.~
+Uma grande bola de fogo está aqui na sua frente girando no ar.~
 ~
-12 aegi 0 0 0 0 0 0 0 0 0 0 0
+12 aegi 0 0
 0 0 0 0
-80 2500000 250000 0 0
+80 2500000 250000 0
 E
 bola fogo sol Alfheim~
-Voc� observa uma enorme bola de fogo girando no ar e emitindo luz para todos
-os cantos de Alfheim.  O sol de Alfheim ilumina toda a floresta e � cultuado
+Você observa uma enorme bola de fogo girando no ar e emitindo luz para todos
+os cantos de Alfheim.  O sol de Alfheim ilumina toda a floresta e é cultuado
 pelos iluminados seres que vivem na floresta.
 ~
 #12744
-an�o petrificado~
-um an�o do subterr�neo petrificado~
-Um an�o do subterr�neo de Niffleheim est� aqui petrificado.~
+anao petrificado~
+um anão do subterrâneo petrificado~
+Um anão do subterrâneo de Niffleheim está aqui petrificado.~
 ~
-12 e 0 0 0 0 0 0 0 0 0 0 0
+12 e 0 0
 0 0 0 0
-90 1000 100 0 0
+90 1000 100 0
 E
-an�o petrificado~
-Voc� observa um horripilante an�o do subterr�neo de Niffleheim petrificado.
-Os an�es das trevas de Niffleheim quando s�o atingidos pelos raios solares
+anao petrificado~
+Você observa um horripilante anão do subterrâneo de Niffleheim petrificado.
+Os anões das trevas de Niffleheim quando são atingidos pelos raios solares
 se transformam imediatamente em pedra pela eternidade.
 ~
 #12745
 grande fogueira~
 uma grande fogueira~
-Uma grande fogueira est� aqui em chamas.~
+Uma grande fogueira está aqui em chamas.~
 ~
-12 ae 0 0 0 0 0 0 0 0 0 0 0
+12 ae 0 0
 0 0 0 0
-20 100 10 0 0
+20 100 10 0
 E
 grande fogueira~
-Voc� observa uma grande fogueira utilizada pelos an�es ferreiros do
-subterr�neo de Niffleheim.
+Você observa uma grande fogueira utilizada pelos anões ferreiros do
+subterrâneo de Niffleheim.
 ~
 #12746
 visco erva folhas~
 algumas folhas de visco~
 Algumas folhas de visco foram deixadas aqui.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 a
 -4 0 0 1
-2 1000 100 0 0
+2 1000 100 0
 E
 visco erva folhas~
-Voc� observa algumas folhas da temida erva visco.  A erva visco cresce no
-lado oriental do Valhala.  A Deusa Friga fez com que as pedras, as lan�as,
+Você observa algumas folhas da temida erva visco.  A erva visco cresce no
+lado oriental do Valhala.  A Deusa Friga fez com que as pedras, as lanças,
 nem qualquer outra coisa conseguissem ferir Balder, pois todas as coisas
 deram seu juramento.  Contudo Friga achando que a visco era muito jovem e
-muito fraca n�o ordenou o juramento dela.  Loge, o caluniador dos deuses,
+muito fraca não ordenou o juramento dela.  Loge, o caluniador dos deuses,
 soube desse detalhe e utilizando suas artimanhas, criou um plano e envenenou
 Balder com a erva visco.
 ~
 #12747
-carne foca peda�o~
-um peda�o de carne de foca~
-Um apetitoso peda�o de carne de foca foi deixado aqui.~
+carne foca pedaco~
+um pedaço de carne de foca~
+Um apetitoso pedaço de carne de foca foi deixado aqui.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 a 0
 12 0 0 0
-4 2500 250 0 0
+4 2500 250 0
 E
-carne foca peda�o~
-Voc� observa um suculento peda�o de carne de foca.
+carne foca pedaco~
+Você observa um suculento pedaço de carne de foca.
 ~
 #12748
-peda�o carne alce~
-um suculento peda�o de carne de alce~
-Um suculento peda�o de carne de alce foi esquecido aqui.~
+pedaco carne alce~
+um suculento pedaço de carne de alce~
+Um suculento pedaço de carne de alce foi esquecido aqui.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 a 0
 16 0 0 0
-5 3500 350 0 0
+5 3500 350 0
 E
-peda�o carne alce~
-Voc� observa um apetitoso peda�o de carne de alce.
+pedaco carne alce~
+Você observa um apetitoso pedaço de carne de alce.
 ~
 #12749
-peda�o carne rena~
-um pequeno peda�o de carne de rena~
-Um pequeno peda�o de carne de rena foi deixado aqui.~
+pedaco carne rena~
+um pequeno pedaço de carne de rena~
+Um pequeno pedaço de carne de rena foi deixado aqui.~
 ~
-19 0 0 0 0 a 0 0 0 0 0 0 0
+19 0 a 0
 8 0 0 0
-2 1000 100 0 0
+2 1000 100 0
 E
-peda�o carne rena~
-Voc� observa um pequeno peda�o, por�m apetitoso de carne de rena.
+pedaco carne rena~
+Você observa um pequeno pedaço, porém apetitoso de carne de rena.
 ~
 #12750
-c�lice prata~
-um belo c�lice de prata~
-Um belo c�lice de prata foi deixado aqui.~
+calice prata~
+um belo cálice de prata~
+Um belo cálice de prata foi deixado aqui.~
 ~
-12 aei 0 0 0 ao 0 0 0 0 0 0 0
+12 aei ao 0
 0 0 0 0
-3 50000 5000 0 0
+3 50000 5000 0
 E
-c�lice prata~
-Voc� observa um belo c�lice de prata vazio.
+calice prata~
+Você observa um belo cálice de prata vazio.
 ~
 #12751
 garrafa hidromel~
 uma bela garrafa de hidromel~
 Uma bela garrafa seca foi deixada aqui.~
 ~
-17 a 0 0 0 a 0 0 0 0 0 0 0
+17 a a 0
 16 0 16 0
-4 1000 100 0 0
+4 1000 100 0
 E
 garrafa hidromel~
-Voc� observa uma bela garrafa seca de hidromel.  O hidromel � fornecido pela
+Você observa uma bela garrafa seca de hidromel.  O hidromel é fornecido pela
 cabra Heidrum e alimenta os deuses e todo o exercito de Odin.
 ~
 #12752
-p�rola �gua~
-uma p�rola d'�gua~
-Uma bela gota d'�gua cristalizada foi deixada aqui.~
+perola agua~
+uma pérola d'água~
+Uma bela gota d'água cristalizada foi deixada aqui.~
 ~
-11 aegiq 0 0 0 ac 0 0 0 0 0 0 0
+11 aeqgi ac 0
 0 0 0 0
-2 3500000 350000 45 0
+2 3500000 350000 45
 E
-p�rola �gua~
-Voc� observa um bel�ssimo colar feito de ouro e ornamentado com uma bela
-gota d'�gua cristalizada.  O colar de p�rola foi criado por Odin, o deus
+perola agua~
+Você observa um belíssimo colar feito de ouro e ornamentado com uma bela
+gota d'água cristalizada.  O colar de pérola foi criado por Odin, o deus
 supremo, para presentear os seus soldados mais bravos e corajosos.
 ~
 A
@@ -2819,12 +2819,12 @@ argola prata~
 uma bela argola de prata~
 Uma maravilhosa argola de prata foi esquecida aqui.~
 ~
-11 aegiq 0 0 0 aq 0 0 0 0 0 0 0
+11 aegqi aq 0
 0 0 0 0
-3 3500000 350000 65 0
+3 3500000 350000 65
 E
 argola prata~
-Voc� observa uma bel�ssima argola de prata, criada pelo deus supremo Odin,
+Você observa uma belíssima argola de prata, criada pelo deus supremo Odin,
 para presentear os seus soldados mais bravos e corajosos.
 ~
 A
@@ -2832,129 +2832,129 @@ A
 A
 17 -6
 #12754
-dourado c�rculo portal~
-um portal em forma de c�rculo~
-Um c�rculo dourado est� aqui irradiando energia para todas as dire��es.~
+dourado circulo portal~
+um portal em forma de círculo~
+Um círculo dourado está aqui irradiando energia para todas as direções.~
 ~
-26 ae 0 0 0 0 0 0 0 0 0 0 0
+26 ae 0 0
 12692 0 0 0
-200 2000000 200000 0 0
+200 2000000 200000 0
 E
-dourado c�rculo portal~
-Voc� observa um misterioso c�rculo dourado, que irradia energia e pequenos
-raios como trov�es para todas as dire��es.  Atrav�s dele voc� observa uma
+dourado circulo portal~
+Você observa um misterioso círculo dourado, que irradia energia e pequenos
+raios como trovões para todas as direções.  Através dele você observa uma
 tempestade de neve.
 ~
 #12755
-dourado c�rculo portal~
-um portal em forma de c�rculo~
-Um c�rculo dourado est� aqui irradiando energia para todas as dire��es.~
+dourado circulo portal~
+um portal em forma de círculo~
+Um círculo dourado está aqui irradiando energia para todas as direções.~
 ~
-26 ae 0 0 0 0 0 0 0 0 0 0 0
+26 ae 0 0
 12694 0 0 0
-200 2000000 200000 0 0
+200 2000000 200000 0
 E
-dourado c�rculo portal~
-Voc� observa um misterioso c�rculo dourado, que irradia energia e pequenos
-raios como trov�es para todas as dire��es.  Atrav�s dele voc� observa uma
+dourado circulo portal~
+Você observa um misterioso círculo dourado, que irradia energia e pequenos
+raios como trovões para todas as direções.  Através dele você observa uma
 tempestade de neve.
 ~
 #12756
-dourado c�rculo portal~
-um portal em forma de c�rculo~
-Um c�rculo dourado est� aqui irradiando energia para todas as dire��es.~
+dourado circulo portal~
+um portal em forma de círculo~
+Um círculo dourado está aqui irradiando energia para todas as direções.~
 ~
-26 ae 0 0 0 0 0 0 0 0 0 0 0
+26 ae 0 0
 12703 0 0 0
-200 2000000 200000 0 0
+200 2000000 200000 0
 E
-dourado c�rculo portal~
-Voc� observa um misterioso c�rculo dourado, que irradia energia e pequenos
-raios como trov�es para todas as dire��es.  Atrav�s dele voc� observa uma
+dourado circulo portal~
+Você observa um misterioso círculo dourado, que irradia energia e pequenos
+raios como trovões para todas as direções.  Através dele você observa uma
 tempestade de neve.
 ~
 #12757
-dourado c�rculo portal~
-um portal em forma de c�rculo~
-Um c�rculo dourado est� aqui irradiando energia para todas as dire��es.~
+dourado circulo portal~
+um portal em forma de círculo~
+Um círculo dourado está aqui irradiando energia para todas as direções.~
 ~
-26 ae 0 0 0 0 0 0 0 0 0 0 0
+26 ae 0 0
 12704 0 0 0
-200 2000000 200000 0 0
+200 2000000 200000 0
 E
-dourado c�rculo portal~
-Voc� observa um misterioso c�rculo dourado, que irradia energia e pequenos
-raios como trov�es para todas as dire��es.  Atrav�s dele voc� observa uma
+dourado circulo portal~
+Você observa um misterioso círculo dourado, que irradia energia e pequenos
+raios como trovões para todas as direções.  Através dele você observa uma
 tempestade de neve.
 ~
 #12758
-dourado c�rculo portal~
-um portal em forma de c�rculo~
-Um c�rculo dourado est� aqui irradiando energia para todas as dire��es.~
+dourado circulo portal~
+um portal em forma de círculo~
+Um círculo dourado está aqui irradiando energia para todas as direções.~
 ~
-26 ae 0 0 0 0 0 0 0 0 0 0 0
+26 ae 0 0
 12688 0 0 0
-200 2000000 200000 0 0
+200 2000000 200000 0
 E
-dourado c�rculo portal~
-Voc� observa um misterioso c�rculo dourado, que irradia energia e pequenos
-raios como trov�es para todas as dire��es.  Atrav�s dele voc� observa uma
+dourado circulo portal~
+Você observa um misterioso círculo dourado, que irradia energia e pequenos
+raios como trovões para todas as direções.  Através dele você observa uma
 tempestade de neve.
 ~
 #12759
-dourado c�rculo portal~
-um portal em forma de c�rculo~
-Um c�rculo dourado est� aqui irradiando energia para todas as dire��es.~
+dourado circulo portal~
+um portal em forma de círculo~
+Um círculo dourado está aqui irradiando energia para todas as direções.~
 ~
-26 ae 0 0 0 0 0 0 0 0 0 0 0
+26 ae 0 0
 12686 0 0 0
-200 2000000 200000 0 0
+200 2000000 200000 0
 E
-dourado c�rculo portal~
-Voc� observa um misterioso c�rculo dourado, que irradia energia e pequenos
-raios como trov�es para todas as dire��es.  Atrav�s dele voc� observa uma
+dourado circulo portal~
+Você observa um misterioso círculo dourado, que irradia energia e pequenos
+raios como trovões para todas as direções.  Através dele você observa uma
 tempestade de neve.
 ~
 #12760
-dourado c�rculo portal~
-um portal em forma de c�rculo~
-Um c�rculo dourado est� aqui irradiando energia para todas as dire��es.~
+dourado circulo portal~
+um portal em forma de círculo~
+Um círculo dourado está aqui irradiando energia para todas as direções.~
 ~
-26 ae 0 0 0 0 0 0 0 0 0 0 0
+26 ae 0 0
 12693 0 0 0
-200 2000000 200000 0 0
+200 2000000 200000 0
 E
-dourado c�rculo portal~
-Voc� observa um misterioso c�rculo dourado, que irradia energia e pequenos
-raios como trov�es para todas as dire��es.  Atrav�s dele voc� observa uma
+dourado circulo portal~
+Você observa um misterioso círculo dourado, que irradia energia e pequenos
+raios como trovões para todas as direções.  Através dele você observa uma
 tempestade de neve.
 ~
 #12761
-dourado c�rculo portal~
-um portal em forma de c�rculo~
-Um c�rculo dourado est� aqui irradiando energia para todas as dire��es.~
+dourado circulo portal~
+um portal em forma de círculo~
+Um círculo dourado está aqui irradiando energia para todas as direções.~
 ~
-26 ae 0 0 0 0 0 0 0 0 0 0 0
+26 ae 0 0
 12702 0 0 0
-200 2000000 200000 0 0
+200 2000000 200000 0
 E
-dourado c�rculo portal~
-Voc� observa um misterioso c�rculo dourado, que irradia energia e pequenos
-raios como trov�es para todas as dire��es.  Atrav�s dele voc� observa uma
+dourado circulo portal~
+Você observa um misterioso círculo dourado, que irradia energia e pequenos
+raios como trovões para todas as direções.  Através dele você observa uma
 tempestade de neve.
 ~
 #12762
-dourado c�rculo portal~
-um portal em forma de c�rculo~
-Um c�rculo dourado est� aqui irradiando energia para todas as dire��es.~
+dourado circulo portal~
+um portal em forma de círculo~
+Um círculo dourado está aqui irradiando energia para todas as direções.~
 ~
-26 ae 0 0 0 0 0 0 0 0 0 0 0
+26 ae 0 0
 12687 0 0 0
-200 2000000 200000 0 0
+200 2000000 200000 0
 E
-dourado c�rculo portal~
-Voc� observa um misterioso c�rculo dourado, que irradia energia e pequenos
-raios como trov�es para todas as dire��es.  Atrav�s dele voc� observa uma
+dourado circulo portal~
+Você observa um misterioso círculo dourado, que irradia energia e pequenos
+raios como trovões para todas as direções.  Através dele você observa uma
 tempestade de neve.
 ~
 #12763
@@ -2962,12 +2962,12 @@ corpo Balder~
 o corpo do amado Balder~
 O corpo de Balder, o bom, foi deixado aqui.~
 ~
-25 ai 0 0 0 0 0 0 0 0 0 0 0
+25 ai 0 0
 0 0 0 0
-90 10 1 0 0
+90 10 1 0
 E
 corpo Balder~
-Voc� observa o corpo do amado Balder e se emociona com o seu estado.  O
-verdadeiro lugar de Balder com certeza n�o � aqui.
+Você observa o corpo do amado Balder e se emociona com o seu estado.  O
+verdadeiro lugar de Balder com certeza não é aqui.
 ~
-$~
+$
