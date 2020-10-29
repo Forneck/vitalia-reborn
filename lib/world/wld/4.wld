@@ -1,16 +1,16 @@
 #400
 Uma Estrada Lateral~
-   Você se desviou de seu curso normal e entrou nesse bem construído
-caminho de tijolos brancos.  É uma estrada um tanto estreita, com cerca de
-dois metros de largura, o que não impede três ou até quatro homens de
+   VocÃª se desviou de seu curso normal e entrou nesse bem construÃ­do
+caminho de tijolos brancos.  Ã‰ uma estrada um tanto estreita, com cerca de
+dois metros de largura, o que nÃ£o impede trÃªs ou atÃ© quatro homens de
 passarem, lado-a-lado.  Pequenos arbustos perfeitamente podados, fazem a
-vez de uma espécie de corrimão rústico e sobem até a altura de sua
-cintura.  Para  oeste, você vai para o Altar do Templo de Midgaard e para
-leste você vê, logo adiante, uma alta torre em estilo greco-romano.
+vez de uma espÃ©cie de corrimÃ£o rÃºstico e sobem atÃ© a altura de sua
+cintura.  Para  oeste, vocÃª vai para o Altar do Templo de Midgaard e para
+leste vocÃª vÃª, logo adiante, uma alta torre em estilo greco-romano.
 ~
-4 20 0 0 0 2
+4 ce 2
 D1
-A estrada leva para debaixo de uma grande laje de pedra, à frente da Torre.
+A estrada leva para debaixo de uma grande laje de pedra, Ã  frente da Torre.
 ~
 ~
 0 -1 401
@@ -23,61 +23,61 @@ S
 #401
 Sob a Grande Laje da Entrada da Embaixada~
    Os arbustos que cercavam a estrada parecem se abrir para alargar a
-estrada, e circundam a grande Torre à sua frente.  Entre os pilares de
-mármore branco, em estilo clássico greco-romano, você se encontra sob uma
-enorme laje de pedra, com detalhes em mármore cinza.  A soleira que
-antecede a porta de entrada da Embaixada dos Clãs de Vitália está há alguns
-metros de você, e parece convidá-lo para dentro da Grande Torre.  A oeste,
+estrada, e circundam a grande Torre Ã  sua frente.  Entre os pilares de
+mÃ¡rmore branco, em estilo clÃ¡ssico greco-romano, vocÃª se encontra sob uma
+enorme laje de pedra, com detalhes em mÃ¡rmore cinza.  A soleira que
+antecede a porta de entrada da Embaixada dos ClÃ£s de VitÃ¡lia estÃ¡ hÃ¡ alguns
+metros de vocÃª, e parece convidÃ¡-lo para dentro da Grande Torre.  A oeste,
 o caminho de pedras o espera, levando-o de volta para a cidade de Midgaard
-e o para leste, você tem o portão de entrada para a Embaixada.
+e o para leste, vocÃª tem o portÃ£o de entrada para a Embaixada.
 ~
-4 20 0 0 0 2
+4 ce 2
 D1
-Os portões da Embaixada dos Clãs.
+Os portÃµes da Embaixada dos ClÃ£s.
 ~
 ~
 0 -1 402
 D3
-Uma estrada lateral de pedras polidas e leva até o Altar do Templo.
+Uma estrada lateral de pedras polidas e leva atÃ© o Altar do Templo.
 ~
 ~
 0 -1 400
 S
 #402
-Os Grandes Portões da Entrada da Embaixada~
-   Finalmente você chega à entrada da Embaixada dos Clãs de Vitália.  Dois
-imensos portões, feitos em madeira de lei maciça, com belíssimos entalhes,
-parecem estar à sua espera, há poucos passos de onde você está.  Com mais
-de dois metros de altura,  estão presos às paredes, por enormes dobradiças
-feitas de um metal azulado fosco, muito resistente.  As paredes são feitas
-de grandes blocos de calcário, montados uns sobre os outros de forma tão
-compacta que não existe nenhum perigo de qualquer tipo de infiltração.  A
+Os Grandes PortÃµes da Entrada da Embaixada~
+   Finalmente vocÃª chega Ã  entrada da Embaixada dos ClÃ£s de VitÃ¡lia.  Dois
+imensos portÃµes, feitos em madeira de lei maciÃ§a, com belÃ­ssimos entalhes,
+parecem estar Ã  sua espera, hÃ¡ poucos passos de onde vocÃª estÃ¡.  Com mais
+de dois metros de altura,  estÃ£o presos Ã s paredes, por enormes dobradiÃ§as
+feitas de um metal azulado fosco, muito resistente.  As paredes sÃ£o feitas
+de grandes blocos de calcÃ¡rio, montados uns sobre os outros de forma tÃ£o
+compacta que nÃ£o existe nenhum perigo de qualquer tipo de infiltraÃ§Ã£o.  A
 oeste, pode-se ir abaixo da soleira de entrada e para leste, entra-se na
 grande Torre.
 ~
-4 20 0 0 0 0
+4 ce 0
 D1
-O saguão de entrada da Embaixada.
+O saguÃ£o de entrada da Embaixada.
 ~
 ~
 0 -1 403
 D3
-Dois degraus seguem na direção da laje erguida sob a entrada.
+Dois degraus seguem na direÃ§Ã£o da laje erguida sob a entrada.
 ~
 ~
 0 -1 401
 S
 #403
-O Saguão Principal do Andar Térreo~
-   Um bonito salão se ergue ao seu redor, envolto por uma atmosfera suave
-e tranquila.  Sob seus pés, grandes lajotas de marfim foram dispostas
-transversalmente.  De cada lado do saguão, quatro grandes e belos arcos
+O SaguÃ£o Principal do Andar TÃ©rreo~
+   Um bonito salÃ£o se ergue ao seu redor, envolto por uma atmosfera suave
+e tranquila.  Sob seus pÃ©s, grandes lajotas de marfim foram dispostas
+transversalmente.  De cada lado do saguÃ£o, quatro grandes e belos arcos
 de um prateado fosco emergem e cruzam-se no alto do teto formando uma
-belíssima estrela de oito pontas.  Suas bases são pequenos gárgulas
-arqueados com seus braços erguidos, segurando os arcos.  Logo a sua
-frente há uma grande escada que leva para cima.
+belÃ­ssima estrela de oito pontas.  Suas bases sÃ£o pequenos gÃ¡rgulas
+arqueados com seus braÃ§os erguidos, segurando os arcos.  Logo a sua
+frente hÃ¡ uma grande escada que leva para cima.
 ~
-4 393288 0 0 0 0
+4 dgsr 0
 D3
 ~
 ~
@@ -88,27 +88,27 @@ D4
 0 -1 404
 S
 #404
-O Saguão do Primeiro Andar da Embaixada~
-   Um bonito salão se ergue ao seu redor, envolto por uma atmosfera
-dourada.  Sob seus pés, grandes lajotas de ouro foram dispostas
-transversalmente.  Há quatro sólidas portas, entre as quais quatro grandes
+O SaguÃ£o do Primeiro Andar da Embaixada~
+   Um bonito salÃ£o se ergue ao seu redor, envolto por uma atmosfera
+dourada.  Sob seus pÃ©s, grandes lajotas de ouro foram dispostas
+transversalmente.  HÃ¡ quatro sÃ³lidas portas, entre as quais quatro grandes
 arcos de um prateado fosco emergem e cruzam-se no alto do teto formando uma
-belíssima estrela de oito pontas.  Suas bases são pequenos gárgulas
-arqueados com um dos braços erguido, segurando o arco e o outro esticado,
-prendendo um dos lados do galhardete com o nome do Clã a quem pertence a
+belÃ­ssima estrela de oito pontas.  Suas bases sÃ£o pequenos gÃ¡rgulas
+arqueados com um dos braÃ§os erguido, segurando o arco e o outro esticado,
+prendendo um dos lados do galhardete com o nome do ClÃ£ a quem pertence a
 respectiva porta.  Aqui se encontram representados os quatro mais antigos
-Clãs de Vitália: ao norte, A Ordem dos Discípulos da Luz; ao leste, Os
-Guardiões do Legado de Atlântida; ao sul, Os Olhos de Mitra e ao oeste, Os
+ClÃ£s de VitÃ¡lia: ao norte, A Ordem dos DiscÃ­pulos da Luz; ao leste, Os
+GuardiÃµes do Legado de AtlÃ¢ntida; ao sul, Os Olhos de Mitra e ao oeste, Os
 Cavaleiros da Virtude.
 ~
-4 152 0 0 0 0
+4 deh 0
 D0
-A Ordem dos Discípulos da Luz.
+A Ordem dos DiscÃ­pulos da Luz.
 ~
 ~
 0 -1 405
 D1
-Os Guardiões do Legado de Atlântida.
+Os GuardiÃµes do Legado de AtlÃ¢ntida.
 ~
 ~
 0 -1 406
@@ -122,46 +122,46 @@ Os Cavaleiros da Virtude.
 ~
 ~
 0 -1 408
-D4
-~
-~
-0 -1 409
 D5
 ~
 ~
 0 -1 403
+D4
+~
+~
+0 -1 409
 S
 #405
-Sala do Clã Discípulos da Luz~
-   Você entra em uma enorme sala!  Ela é toda feita com enormes blocos de
-uma pedra branca como a neve, vários quadros estão decorando as paredes,
+Sala do ClÃ£ DiscÃ­pulos da Luz~
+   VocÃª entra em uma enorme sala!  Ela Ã© toda feita com enormes blocos de
+uma pedra branca como a neve, vÃ¡rios quadros estÃ£o decorando as paredes,
 em especial quatro estatuas, uma em cada canto da sala, servem de
-sustentação para o teto.  Existe um grande desenho na parede de frente com
-a entrada, olhando com maior atenção você percebe se tratar de Anluzir, o
-corcel alado que protege os Discípulos da Luz.  Agora que você está dentro
-dessa sala, uma sensação de Força e Honra o envolve.  Aqui somos mais do
-que companheiros, somos irmãos, dispostos a tudo para se ajudar!  Esse clã,
-tem várias estórias para contar.  Foram o primeiro clã a ser fundando, a
-primeira família a tomar forma, e mesmo depois de tanto tempo continua com
-a mesma força e honra do passado.  Um enorme pergaminho com o Velho Código,
-está preso em uma parede.  Baseado nesses preceitos os Discípulos vivem...
-Sim, essa sala, assim como o clã, tem a Força e Honra que esses preceitos
+sustentaÃ§Ã£o para o teto.  Existe um grande desenho na parede de frente com
+a entrada, olhando com maior atenÃ§Ã£o vocÃª percebe se tratar de Anluzir, o
+corcel alado que protege os DiscÃ­pulos da Luz.  Agora que vocÃª estÃ¡ dentro
+dessa sala, uma sensaÃ§Ã£o de ForÃ§a e Honra o envolve.  Aqui somos mais do
+que companheiros, somos irmÃ£os, dispostos a tudo para se ajudar!  Esse clÃ£,
+tem vÃ¡rias estÃ³rias para contar.  Foram o primeiro clÃ£ a ser fundando, a
+primeira famÃ­lia a tomar forma, e mesmo depois de tanto tempo continua com
+a mesma forÃ§a e honra do passado.  Um enorme pergaminho com o Velho CÃ³digo,
+estÃ¡ preso em uma parede.  Baseado nesses preceitos os DiscÃ­pulos vivem...
+Sim, essa sala, assim como o clÃ£, tem a ForÃ§a e Honra que esses preceitos
 inspiram.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D2
 ~
 ~
 0 -1 404
 S
 #406
-Os Guardiões do Legado de Atlântida~
-   Ao entrar você se depara com um ambiente que lhe inspira um certo
+Os GuardiÃµes do Legado de AtlÃ¢ntida~
+   Ao entrar vocÃª se depara com um ambiente que lhe inspira um certo
 temor.  Austera como a cela de um monge, eis a Sala dos Atlantes, a sua
-frente, uma imponente estátua de Eletra, feita do mais puro jade e a seus
-pés está um livro, no qual estão gravados, a fogo, os preceitos deste Clã.
+frente, uma imponente estÃ¡tua de Eletra, feita do mais puro jade e a seus
+pÃ©s estÃ¡ um livro, no qual estÃ£o gravados, a fogo, os preceitos deste ClÃ£.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D3
 ~
 ~
@@ -169,27 +169,27 @@ D3
 S
 #407
 Os Olhos de Mitra~
-   A iluminação dessa sala é fraca, mas de alguma maneira isso não impede
-que você veja a sublimidade de tudo a sua volta.  São quatro paredes e, no
-meio delas, caindo e revestindo o chão como um tapete, você observa um belo
+   A iluminaÃ§Ã£o dessa sala Ã© fraca, mas de alguma maneira isso nÃ£o impede
+que vocÃª veja a sublimidade de tudo a sua volta.  SÃ£o quatro paredes e, no
+meio delas, caindo e revestindo o chÃ£o como um tapete, vocÃª observa um belo
 tecido vermelho escarlate com as bordas amarelas.  Olhando a sua frente
-você encontra uma estátua, a estátua de uma águia.  Ela foi posta como um
-gárgula, saindo da parede de onde pende o tecido vermelho.  Na parede à
-sua esquerda você percebe uma espada aparentemente preciosa, e que parece
-ignorar o passar dos anos.  Ao lado existem dois painéis emoldurados em
-profundo amarelo, retratando o que parece ter sido uma árdua e dolorosa
-batalha em um passado não muito distante.  À sua direita está uma cruz e,
-como a espada, possui dois painéis, um de cada lado.  Dessa vez eles estão
-mostrando os mais singelos atos de humildade e compaixão.  São as mesmas
-pessoas dos outros painéis, e alguns você até pode reconhecer.  Outras
-estão sumidas a algum tempo, mas é certo que todas elas possuem um coração
-bondoso.  Essa pequena sala parece ter sido montada há séculos, mas se
-mantém intacta até os dias de hoje.  Você se sente seguro nesse lugar, não
-pelas paredes robustas e nem pela sensação de abrigo, mas sim porque você
-parece estar sendo observado.  Esse fato, ao invés de lhe causar medo, lhe
-faz sentir tão protegido quanto qualquer magia jamais sonhou em deixar.
+vocÃª encontra uma estÃ¡tua, a estÃ¡tua de uma Ã¡guia.  Ela foi posta como um
+gÃ¡rgula, saindo da parede de onde pende o tecido vermelho.  Na parede Ã 
+sua esquerda vocÃª percebe uma espada aparentemente preciosa, e que parece
+ignorar o passar dos anos.  Ao lado existem dois painÃ©is emoldurados em
+profundo amarelo, retratando o que parece ter sido uma Ã¡rdua e dolorosa
+batalha em um passado nÃ£o muito distante.  Ã€ sua direita estÃ¡ uma cruz e,
+como a espada, possui dois painÃ©is, um de cada lado.  Dessa vez eles estÃ£o
+mostrando os mais singelos atos de humildade e compaixÃ£o.  SÃ£o as mesmas
+pessoas dos outros painÃ©is, e alguns vocÃª atÃ© pode reconhecer.  Outras
+estÃ£o sumidas a algum tempo, mas Ã© certo que todas elas possuem um coraÃ§Ã£o
+bondoso.  Essa pequena sala parece ter sido montada hÃ¡ sÃ©culos, mas se
+mantÃ©m intacta atÃ© os dias de hoje.  VocÃª se sente seguro nesse lugar, nÃ£o
+pelas paredes robustas e nem pela sensaÃ§Ã£o de abrigo, mas sim porque vocÃª
+parece estar sendo observado.  Esse fato, ao invÃ©s de lhe causar medo, lhe
+faz sentir tÃ£o protegido quanto qualquer magia jamais sonhou em deixar.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D0
 ~
 ~
@@ -197,40 +197,44 @@ D0
 S
 #408
 Os Cavaleiros da Virtude~
-   Ao entrar pela porta, você se surpreende com a simplicidade dos adornos
-que enfeitam esta sala, contudo a importância dela fica evidenciada em cada
-peça.  Depois de olhar em volta, você entende porque a Humildade é a mais
-importante Virtude deste Clã.  À esquerda, você vê um grande quadro com
-muitas mensagens fixadas nele, o que instiga sua curiosidade de lê-lo.
-Nestes poucos minutos que você está nesta sala já percebeu várias pessoas
-entrando e saindo.  Muitos deles membros conhecidos do Clã Virtudes, todos
-lhe cumprimentaram com um largo sorriso e um deles lhe disse que se você
-precisasse de alguma coisa que procurasse os Justos, Sábios e Humildes do
-Clã para que possamos, na medida do possível, lhe ajudar.
+   Ao entrar pela porta, vocÃª se surpreende com a simplicidade dos adornos
+que enfeitam esta sala, contudo a importÃ¢ncia dela fica evidenciada em cada
+peÃ§a.  Depois de olhar em volta, vocÃª entende porque a Humildade Ã© a mais
+importante Virtude deste ClÃ£.  Ã€ esquerda, vocÃª vÃª um grande quadro com
+muitas mensagens fixadas nele, o que instiga sua curiosidade de lÃª-lo.
+Nestes poucos minutos que vocÃª estÃ¡ nesta sala jÃ¡ percebeu vÃ¡rias pessoas
+entrando e saindo.  Muitos deles membros conhecidos do ClÃ£ Virtudes, todos
+lhe cumprimentaram com um largo sorriso e um deles lhe disse que se vocÃª
+precisasse de alguma coisa que procurasse os Justos, SÃ¡bios e Humildes do
+ClÃ£ para que possamos, na medida do possÃ­vel, lhe ajudar.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D1
 ~
 ~
 0 -1 404
 S
 #409
-O Saguão do Segundo Andar da Embaixada~
-   Um bonito salão se ergue ao seu redor, mergulhada em um ar azulado
-brilhante.  Embaixo de seus pés há lajotas de safira dispostas
-transversalmente.  Há quatro sólidas portas, entre as quais quatro grandes
+O SaguÃ£o do Segundo Andar da Embaixada~
+   Um bonito salÃ£o se ergue ao seu redor, mergulhada em um ar azulado
+brilhante.  Embaixo de seus pÃ©s hÃ¡ lajotas de safira dispostas
+transversalmente.  HÃ¡ quatro sÃ³lidas portas, entre as quais quatro grandes
 arcos de um prateado fosco emergem e cruzam-se no alto do teto formando uma
-belíssima estrela de oito pontas.  Suas bases são pequenos gárgulas
-arqueados com um dos braços erguido, segurando o arco, e o outro esticado,
-prendendo um dos lados do galhardete com o nome do clã a quem pertence a
-respectiva porta.  Aqui se encontram representados mais três dos antigos
-Clãs de Vitália: ao norte, os Remanescentes Cavaleiros de Númenor; ao
-leste, A Tribo Seguidora do Sol; e ao oeste, Os Guardiões do Segredo dos
+belÃ­ssima estrela de oito pontas.  Suas bases sÃ£o pequenos gÃ¡rgulas
+arqueados com um dos braÃ§os erguido, segurando o arco, e o outro esticado,
+prendendo um dos lados do galhardete com o nome do clÃ£ a quem pertence a
+respectiva porta.  Aqui se encontram representados mais trÃªs dos antigos
+ClÃ£s de VitÃ¡lia: ao norte, os Remanescentes Cavaleiros de NÃºmenor; ao
+leste, A Tribo Seguidora do Sol; e ao oeste, Os GuardiÃµes do Segredo dos
 JVKB.
 ~
-4 156 0 0 0 0
+4 cdeh 0
+D5
+~
+~
+0 -1 404
 D0
-Os Remanescentes Cavaleiros de Númenor.
+Os Remanescentes Cavaleiros de NÃºmenor.
 ~
 ~
 0 -1 410
@@ -240,7 +244,7 @@ A Tribo Seguidora do Sol.
 ~
 0 -1 411
 D3
-Os Guardiões do Segredo dos JVKB.
+Os GuardiÃµes do Segredo dos JVKB.
 ~
 ~
 0 -1 412
@@ -248,30 +252,26 @@ D4
 ~
 ~
 0 -1 414
-D5
-~
-~
-0 -1 404
 S
 #410
-Os Remanescentes Cavaleiros de Númenor~
-   Estranhamente tudo ao seu redor pareceu mudar quando você passou pela
-porta.  A beleza e perfeição que estrutura a base da Torre desapareceu,
-dando lugar a um conjunto bizarro de raízes e lascas de tronco, que parecem
-dar vida a esta sala de Númenor.  Uma Númenor destruída, consumida pela ira
-dos Deuses de sua época de glória, penalizada por sua ganância e ostentação
-vã e fútil de seu poderio militar.  Uma Númenor diferente daquela imaginada
-nos devaneios literários; uma Númenor que aprendeu uma importante lição,
-sob duras penas.  Esta Númenor, onde você se encontra agora, foi
-reconstruída pelos Remanescentes de seu antigo Império, liderados pelos
-Quatro Irmãos, herdeiros de Tar-Míriel, filha de Tar-Palantir, o último rei
-de direito de Númenor, em busca da sobriedade e simplicidade de espírito
-que se fazem, hoje, presentes na alma e no coração de cada um dos membros
-que formam este clã.  Todos desejosos de igualdade entre os iguais, justiça
+Os Remanescentes Cavaleiros de NÃºmenor~
+   Estranhamente tudo ao seu redor pareceu mudar quando vocÃª passou pela
+porta.  A beleza e perfeiÃ§Ã£o que estrutura a base da Torre desapareceu,
+dando lugar a um conjunto bizarro de raÃ­zes e lascas de tronco, que parecem
+dar vida a esta sala de NÃºmenor.  Uma NÃºmenor destruÃ­da, consumida pela ira
+dos Deuses de sua Ã©poca de glÃ³ria, penalizada por sua ganÃ¢ncia e ostentaÃ§Ã£o
+vÃ£ e fÃºtil de seu poderio militar.  Uma NÃºmenor diferente daquela imaginada
+nos devaneios literÃ¡rios; uma NÃºmenor que aprendeu uma importante liÃ§Ã£o,
+sob duras penas.  Esta NÃºmenor, onde vocÃª se encontra agora, foi
+reconstruÃ­da pelos Remanescentes de seu antigo ImpÃ©rio, liderados pelos
+Quatro IrmÃ£os, herdeiros de Tar-MÃ­riel, filha de Tar-Palantir, o Ãºltimo rei
+de direito de NÃºmenor, em busca da sobriedade e simplicidade de espÃ­rito
+que se fazem, hoje, presentes na alma e no coraÃ§Ã£o de cada um dos membros
+que formam este clÃ£.  Todos desejosos de igualdade entre os iguais, justiÃ§a
 e paz, em um mundo onde nenhum outro povo precise sofrer tanto quanto
-Númenor sofreu.
+NÃºmenor sofreu.
 ~
-4 131228 0 0 0 0
+4 cdehr 0
 D2
 ~
 ~
@@ -279,32 +279,32 @@ D2
 S
 #411
 A Tribo Seguidora do Sol~
-   Você acaba de entrar em uma sala não muito grande, porém magnifica.  A
-sala é inteira branca, feita de algo que você desconhece, e neste puro
-branco brilhante das paredes você pode ver, talhado com a maior habilidade,
-formas de pessoas; os antigos fundadores do clã Solis.  Ao centro,
-imponente, uma estátua se encontra, iluminada por uma estranha luz vinda do
-nada. Conforme você se aproxima dela, uma sensação de pureza invade seu
-corpo, juntamente com um calor confortável.
+   VocÃª acaba de entrar em uma sala nÃ£o muito grande, porÃ©m magnifica.  A
+sala Ã© inteira branca, feita de algo que vocÃª desconhece, e neste puro
+branco brilhante das paredes vocÃª pode ver, talhado com a maior habilidade,
+formas de pessoas; os antigos fundadores do clÃ£ Solis.  Ao centro,
+imponente, uma estÃ¡tua se encontra, iluminada por uma estranha luz vinda do
+nada. Conforme vocÃª se aproxima dela, uma sensaÃ§Ã£o de pureza invade seu
+corpo, juntamente com um calor confortÃ¡vel.
 ~
-4 131228 0 0 0 0
+4 cdehr 0
 D3
 ~
 ~
 0 -1 409
 S
 #412
-Os Guardiões do Segredo dos JVKB~
-   Abruptamente as caprichosas paredes da construção se fecham em uma
-imensa caverna.  O secular altar central e todo o gigantesco salão é
+Os GuardiÃµes do Segredo dos JVKB~
+   Abruptamente as caprichosas paredes da construÃ§Ã£o se fecham em uma
+imensa caverna.  O secular altar central e todo o gigantesco salÃ£o Ã©
 iluminado por uma bela luz, um misto dos poderosos raios do Sol com o
 brilho misterioso da Lua.  A leve morbidez do lugar some ao pensar nas
-honras dessa Família, sua glorias, conquistas e da profunda amizade entre
-seus membros, características dignas apenas das Casas mais nobres de
-Vitália.  Runas indecifráveis cercam as quatro saliências no topo do altar
-de pedra: JVKB, será essa a chave para um mundo perdido?
+honras dessa FamÃ­lia, sua glorias, conquistas e da profunda amizade entre
+seus membros, caracterÃ­sticas dignas apenas das Casas mais nobres de
+VitÃ¡lia.  Runas indecifrÃ¡veis cercam as quatro saliÃªncias no topo do altar
+de pedra: JVKB, serÃ¡ essa a chave para um mundo perdido?
 ~
-4 131228 0 0 0 0
+4 cdehr 0
 D1
 ~
 ~
@@ -313,70 +313,72 @@ S
 #413
 O Aposento dos Livros~
    Uma quantidade imensa de estantes antigas, escrivaninhas, livros e
-pergaminhos estão nesta sala.  Considerada por alguns como uma saleta
-dispensável, este aposento é uma das peças mais importantes da vida e
-permanência dos Clãs em Vitália.  É aqui, em meio a grande profusão de
-velas e em meio ao ar viciado, que parece estar aqui há séculos, que estão
-assentadas as idéias e premissas de cada uma das famílias.  Aqui descansam
-os pesados livros que contam as histórias e as glórias de cada clã, todos
+pergaminhos estÃ£o nesta sala.  Considerada por alguns como uma saleta
+dispensÃ¡vel, este aposento Ã© uma das peÃ§as mais importantes da vida e
+permanÃªncia dos ClÃ£s em VitÃ¡lia.  Ã‰ aqui, em meio a grande profusÃ£o de
+velas e em meio ao ar viciado, que parece estar aqui hÃ¡ sÃ©culos, que estÃ£o
+assentadas as idÃ©ias e premissas de cada uma das famÃ­lias.  Aqui descansam
+os pesados livros que contam as histÃ³rias e as glÃ³rias de cada clÃ£, todos
 alocados estranhamente ordenados em uma grande prateleira imponente na
-parede adjacente à porta.
+parede adjacente Ã  porta.
 ~
-4 188 0 0 0 0
+4 cdefh 0
 D0
 ~
 porta~
+:n 2 uma pequenina porta
 0 -1 414
 S
 #414
-O Saguão do Terceiro Andar da Embaixada~
-   Um bonito salão se ergue ao seu redor.  Embaixo de seus pés há lajotas
-marfim dispostas transversalmente.  Três grandes arcos de um prateado fosco
-cruzam-se no alto do teto formando uma belíssima estrela de seis pontas.
-Suas bases são pequenos gárgulas arqueados com seus braços erguidos,
-segurando os arcos.  Ao sul há uma pequenina porta; e ao norte pode-se
-ver uma grande escada seguindo para cima, em direção ao piso superior, e
+O SaguÃ£o do Terceiro Andar da Embaixada~
+   Um bonito salÃ£o se ergue ao seu redor.  Embaixo de seus pÃ©s hÃ¡ lajotas
+marfim dispostas transversalmente.  TrÃªs grandes arcos de um prateado fosco
+cruzam-se no alto do teto formando uma belÃ­ssima estrela de seis pontas.
+Suas bases sÃ£o pequenos gÃ¡rgulas arqueados com seus braÃ§os erguidos,
+segurando os arcos.  Ao sul hÃ¡ uma pequenina porta; e ao norte pode-se
+ver uma grande escada seguindo para cima, em direÃ§Ã£o ao piso superior, e
 para baixo, voltando ao piso inferior.
 ~
-4 156 0 0 0 0
+4 cdeh 0
 D2
 ~
 porta~
+:n 2 uma pequenina porta
 0 -1 413
-D4
-~
-~
-0 -1 415
 D5
 ~
 ~
 0 -1 409
+D4
+~
+~
+0 -1 415
 S
 #415
 O Terceiro Andar da Embaixada~
-   Um bonito salão se ergue ao seu redor.  Embaixo de seus pés há lajotas
-marfim dispostas transversalmente.  Três grandes arcos de um prateado
-fosco cruzam-se no alto do teto formando uma belíssima estrela de seis
-pontas.  Suas bases são pequenos gárgulas arqueados com seus braços
-erguidos, segurando os arcos.  Entre uma base e outra há uma porta com uma
-sala de um dos Clãs em Vitália, com exceção da abertura a sua frente, onde
-há uma escada que leva para cima e para baixo.  Ao norte encontra-se Os
-Filhos de Seth; ao leste, o Exército Suicida de Vitália; e ao oeste, Os
-Vingadores de Íris.
+   Um bonito salÃ£o se ergue ao seu redor.  Embaixo de seus pÃ©s hÃ¡ lajotas
+marfim dispostas transversalmente.  TrÃªs grandes arcos de um prateado
+fosco cruzam-se no alto do teto formando uma belÃ­ssima estrela de seis
+pontas.  Suas bases sÃ£o pequenos gÃ¡rgulas arqueados com seus braÃ§os
+erguidos, segurando os arcos.  Entre uma base e outra hÃ¡ uma porta com uma
+sala de um dos ClÃ£s em VitÃ¡lia, com exceÃ§Ã£o da abertura a sua frente, onde
+hÃ¡ uma escada que leva para cima e para baixo.  Ao norte encontra-se Os
+Filhos de Seth; ao leste, o ExÃ©rcito Suicida de VitÃ¡lia; e ao oeste, Os
+Vingadores de Ãris.
 ~
-4 156 0 0 0 0
+4 cdeh 0
 D0
 Os Filhos de Seth.
 ~
 ~
 0 -1 416
 D1
-O Exército Suicida de Vitália.
+O ExÃ©rcito Suicida de VitÃ¡lia.
 ~
 ~
 0 -1 417
 D3
-Os Vingadores de Íris.
+Os Vingadores de Ãris.
 ~
 ~
 0 -1 418
@@ -391,46 +393,46 @@ D5
 S
 #416
 Os Filhos de Seth~
-   Você adentra em uma sala totalmente fechada, construída com gigantescos
-monólitos de arenito, onde o ar é muito seco e o ambiente é muito mal
-iluminado.  Nas paredes, há desenhos representando a sangrenta batalha
+   VocÃª adentra em uma sala totalmente fechada, construÃ­da com gigantescos
+monÃ³litos de arenito, onde o ar Ã© muito seco e o ambiente Ã© muito mal
+iluminado.  Nas paredes, hÃ¡ desenhos representando a sangrenta batalha
 entre Muwattali e Akhenaton.  No fim da sala um pequeno altar, repleto de
-oferendas a frente de uma magnífica estátua, que parece ser de Seth.
+oferendas a frente de uma magnÃ­fica estÃ¡tua, que parece ser de Seth.
 ~
-4 131228 0 0 0 0
+4 cdehr 0
 D2
 ~
 ~
 0 -1 415
 S
 #417
-Exército Suicida de Vitália~
-   Você adentra em um grande salão circular em arquitetura Gótica,
-pode-se sentir a presença gelada da Morte aqui.  Pelas paredes percebe-se
-vários quadros e textos sobre as aventuras dos Suicidas de Vitália.  No
-centro do salão está uma Estátua De Cristal e ao fundo a atendente dos
-Suicidas está fazendo algumas anotações.
+ExÃ©rcito Suicida de VitÃ¡lia~
+   VocÃª adentra em um grande salÃ£o circular em arquitetura GÃ³tica,
+pode-se sentir a presenÃ§a gelada da Morte aqui.  Pelas paredes percebe-se
+vÃ¡rios quadros e textos sobre as aventuras dos Suicidas de VitÃ¡lia.  No
+centro do salÃ£o estÃ¡ uma EstÃ¡tua De Cristal e ao fundo a atendente dos
+Suicidas estÃ¡ fazendo algumas anotaÃ§Ãµes.
 ~
-4 131228 0 0 0 0
+4 cdehr 0
 D3
 ~
 ~
 0 -1 415
 S
 #418
-Os Vingadores de Íris~
+Os Vingadores de Ãris~
    Todos que entram nesta sala ficam chocados e maravilhados ao mesmo
-tempo com a beleza desta sala.  Uma sala feita de mármore branco, com
-grandes castiçais encostados nos cantos das paredes, dando um ar
-misterioso à sala.  Ao lado da porta, duas tochas iluminam melhor a
-entrada e permitem uma melhor visão para quem entra.  Na parede a direita
-da entrada, você observa uma bela pintura da Rainha Íris, com toda sua
-beleza e seu ar majestoso.  Na parede esquerda da entrada você observa
-outra pintura, da Deusa Miuma lutando para honrar a Rainha Íris.  Na
-parede oposta a entrada, você encontra um quadro cheio de mensagens que
-chama a sua atenção.
+tempo com a beleza desta sala.  Uma sala feita de mÃ¡rmore branco, com
+grandes castiÃ§ais encostados nos cantos das paredes, dando um ar
+misterioso Ã  sala.  Ao lado da porta, duas tochas iluminam melhor a
+entrada e permitem uma melhor visÃ£o para quem entra.  Na parede a direita
+da entrada, vocÃª observa uma bela pintura da Rainha Ãris, com toda sua
+beleza e seu ar majestoso.  Na parede esquerda da entrada vocÃª observa
+outra pintura, da Deusa Miuma lutando para honrar a Rainha Ãris.  Na
+parede oposta a entrada, vocÃª encontra um quadro cheio de mensagens que
+chama a sua atenÃ§Ã£o.
 ~
-4 131228 0 0 0 0
+4 cdehr 0
 D1
 ~
 ~
@@ -438,19 +440,19 @@ D1
 S
 #419
 O Quarto Andar da Embaixada~
-  Um bonito salão se ergue ao seu redor, densamente preenchida por um vapor
-vermelho vivo.  Embaixo de seus pés há lajotas de rubi dispostas
-transversalmente.  Há quatro sólidas portas, entre as quais quatro grandes
+  Um bonito salÃ£o se ergue ao seu redor, densamente preenchida por um vapor
+vermelho vivo.  Embaixo de seus pÃ©s hÃ¡ lajotas de rubi dispostas
+transversalmente.  HÃ¡ quatro sÃ³lidas portas, entre as quais quatro grandes
 arcos de um prateado fosco emergem e cruzam-se no alto do teto formando uma
-belíssima estrela de oito pontas.  Suas bases são pequenos gárgulas
-arqueados com um dos braços erguido, segurando o arco, e o outro esticado,
-prendendo um dos lados do galhardete com o nome do clã a quem pertence a
-respectiva porta.  Aqui se encontram representados outros quatro dos clãs
-recentes em Vitália: ao norte, Os Senhores da Tempestade; ao leste, os
-Seguidores da Dinastia Breyldon; ao sul, Os Guardiões da Prisão de Kildner
+belÃ­ssima estrela de oito pontas.  Suas bases sÃ£o pequenos gÃ¡rgulas
+arqueados com um dos braÃ§os erguido, segurando o arco, e o outro esticado,
+prendendo um dos lados do galhardete com o nome do clÃ£ a quem pertence a
+respectiva porta.  Aqui se encontram representados outros quatro dos clÃ£s
+recentes em VitÃ¡lia: ao norte, Os Senhores da Tempestade; ao leste, os
+Seguidores da Dinastia Breyldon; ao sul, Os GuardiÃµes da PrisÃ£o de Kildner
 e ao oeste A Eterna Sociedade da Luz.
 ~
-4 152 0 0 0 0
+4 deh 0
 D0
 Os Senhores da Tempestade.
 ~
@@ -462,7 +464,7 @@ Os Seguidores da Dinastia Breyldon.
 ~
 0 -1 425
 D2
-Os Guardiões da Prisão de Kildner.
+Os GuardiÃµes da PrisÃ£o de Kildner.
 ~
 ~
 0 -1 426
@@ -471,30 +473,30 @@ A Eterna Sociedade da Luz.
 ~
 ~
 0 -1 420
-D4
-~
-~
-0 -1 421
 D5
 ~
 ~
 0 -1 415
+D4
+~
+~
+0 -1 421
 S
 #420
 A Eterna Sociedade da Luz~
-   Ao adentrar a sala, você nota algo muito estranho: Não há nada aqui além
+   Ao adentrar a sala, vocÃª nota algo muito estranho: NÃ£o hÃ¡ nada aqui alÃ©m
 das paredes de rocha com algumas gravuras.  Repentinamente uma energia
-incrivelmente forte e pura começa a invadir sua alma, tomando seus olhos e
-mostrando-lhe a presença de uma misteriosa, provavelmente divina, luz branca.
+incrivelmente forte e pura comeÃ§a a invadir sua alma, tomando seus olhos e
+mostrando-lhe a presenÃ§a de uma misteriosa, provavelmente divina, luz branca.
    Dessa maravilhosa luz surge uma rouca voz que diz:
-   "Você está na sala da Eterna Sociedade da Luz.  Como agora esta me vendo
-e ouvindo, sentiu a força que exala dos corações da sociedade.  Este piso que
-está sob seus pés é sagrado, portanto purifique seu coração, alma e mente,
-siga em paz e leve em seu coração a frase: 'Meus problemas não são maiores que
-meus deuses e não irão me impedir de caminhar.  Se diante de mim não se abrir
-o mar, caminharei por sobre as águas."
+   "VocÃª estÃ¡ na sala da Eterna Sociedade da Luz.  Como agora esta me vendo
+e ouvindo, sentiu a forÃ§a que exala dos coraÃ§Ãµes da sociedade.  Este piso que
+estÃ¡ sob seus pÃ©s Ã© sagrado, portanto purifique seu coraÃ§Ã£o, alma e mente,
+siga em paz e leve em seu coraÃ§Ã£o a frase: 'Meus problemas nÃ£o sÃ£o maiores que
+meus deuses e nÃ£o irÃ£o me impedir de caminhar.  Se diante de mim nÃ£o se abrir
+o mar, caminharei por sobre as Ã¡guas."
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D1
 ~
 ~
@@ -502,20 +504,20 @@ D1
 S
 #421
 O Quinto Andar da Embaixada~
-  Um bonito salão se ergue ao seu redor, densamente preenchida por um vapor
-vermelho vivo.  Embaixo de seus pés há lajotas de rubi dispostas
-transversalmente.  Há quatro sólidas portas, entre as quais quatro grandes
+  Um bonito salÃ£o se ergue ao seu redor, densamente preenchida por um vapor
+vermelho vivo.  Embaixo de seus pÃ©s hÃ¡ lajotas de rubi dispostas
+transversalmente.  HÃ¡ quatro sÃ³lidas portas, entre as quais quatro grandes
 arcos de um prateado fosco emergem e cruzam-se no alto do teto formando uma
-belíssima estrela de oito pontas.  Suas bases são pequenos gárgulas arqueados
-com um dos braços erguido, segurando o arco, e o outro esticado, prendendo um
-dos lados do galhardete com o nome do clã a quem pertence a respectiva porta.
-Aqui se encontram representados outros três dos clãs recentes de Vitália:
-ao norte, Os Protetores da Família Mclaud; ao leste, Os Seguidores da
-Disciplina das Trevas; ao sul, Os Cavaleiros da família Dragoon.
+belÃ­ssima estrela de oito pontas.  Suas bases sÃ£o pequenos gÃ¡rgulas arqueados
+com um dos braÃ§os erguido, segurando o arco, e o outro esticado, prendendo um
+dos lados do galhardete com o nome do clÃ£ a quem pertence a respectiva porta.
+Aqui se encontram representados outros trÃªs dos clÃ£s recentes de VitÃ¡lia:
+ao norte, Os Protetores da FamÃ­lia Mclaud; ao leste, Os Seguidores da
+Disciplina das Trevas; ao sul, Os Cavaleiros da famÃ­lia Dragoon.
 ~
-4 152 0 0 0 0
+4 deh 0
 D0
-Os Protetores da Família Mclaud.
+Os Protetores da FamÃ­lia Mclaud.
 ~
 ~
 0 -1 422
@@ -525,104 +527,106 @@ Os Seguidores da Disciplina das Trevas.
 ~
 0 -1 427
 D2
-Os Cavaleiros da Família Dragoon.
+Os Cavaleiros da FamÃ­lia Dragoon.
 ~
 ~
 0 -1 428
-D4
-Escadas para o último andar.
-~
-porta~
-0 402 423
 D5
 ~
 ~
 0 -1 419
+D4
+Escadas para o Ãºltimo andar.
+~
+porta~
+:n 2 a porta da Sala de ReuniÃµes
+abg 402 423
 S
 #422
-Os Protetores da Família Mclaud~
-   Uma bela sala que lhe lembra muito as aldeias do sul da Escócia, você
-observa vários adornos nas paredes e pinturas das várias gerações que já
-fizeram parte deste clan.  Dentre elas você observa um belo quadro rústico
-escocês que o chama atenção.
-   Há uma bela estátua de O'Connel Mclaud aqui.
+Os Protetores da FamÃ­lia Mclaud~
+   Uma bela sala que lhe lembra muito as aldeias do sul da EscÃ³cia, vocÃª
+observa vÃ¡rios adornos nas paredes e pinturas das vÃ¡rias geraÃ§Ãµes que jÃ¡
+fizeram parte deste clan.  Dentre elas vocÃª observa um belo quadro rÃºstico
+escocÃªs que o chama atenÃ§Ã£o.
+   HÃ¡ uma bela estÃ¡tua de O'Connel Mclaud aqui.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D2
 ~
 ~
 0 -1 421
 E
-estátua~
-   O'Connel Mclaud, o mais bravo e destemido guerreiro do Clã, mesmo
+estÃ¡tua~
+   O'Connel Mclaud, o mais bravo e destemido guerreiro do ClÃ£, mesmo
 com apenas 17 anos.
 ~
 S
 #423
-A Sagrada Sala de Reuniões~
-   A escada sobe até esta sala.  É uma sala perfeitamente redonda, com
-adornos prateados sobre as paredes de mármore negro.  Pequenas runas fazem
-um círculo à dois pés do chão, entalhadas na parede, e dão origem a três
-filetes de runas maiores que vão subindo pelas paredes diagonalmente até
-encontrarem-se no teto, dando a estranha impressão de estarem sempre em
-movimento e que o teto é infinitamente alto.  Uma grande mesa oval de um
-estranho metal que parece disformemente surgir do chão está posta no centro
-da sala, com tantas cadeiras quantas pessoas estão presentes.  A mesa parece
-aumentar ou diminuir magicamente, em acordo com o número de pessoas Flâmulas
-com o brasão de cada um dos clãs adornam as cadeiras, modificando-se sempre
-que o membro do clã correspondente tome seu lugar para sentar.  Todas as
-cadeiras são magníficas e você observa que em cada uma delas, existe uma
-espécie de inscrição, que foi cuidadosamente entalhada na madeira.  Uma
+A Sagrada Sala de ReuniÃµes~
+   A escada sobe atÃ© esta sala.  Ã‰ uma sala perfeitamente redonda, com
+adornos prateados sobre as paredes de mÃ¡rmore negro.  Pequenas runas fazem
+um cÃ­rculo Ã  dois pÃ©s do chÃ£o, entalhadas na parede, e dÃ£o origem a trÃªs
+filetes de runas maiores que vÃ£o subindo pelas paredes diagonalmente atÃ©
+encontrarem-se no teto, dando a estranha impressÃ£o de estarem sempre em
+movimento e que o teto Ã© infinitamente alto.  Uma grande mesa oval de um
+estranho metal que parece disformemente surgir do chÃ£o estÃ¡ posta no centro
+da sala, com tantas cadeiras quantas pessoas estÃ£o presentes.  A mesa parece
+aumentar ou diminuir magicamente, em acordo com o nÃºmero de pessoas FlÃ¢mulas
+com o brasÃ£o de cada um dos clÃ£s adornam as cadeiras, modificando-se sempre
+que o membro do clÃ£ correspondente tome seu lugar para sentar.  Todas as
+cadeiras sÃ£o magnÃ­ficas e vocÃª observa que em cada uma delas, existe uma
+espÃ©cie de inscriÃ§Ã£o, que foi cuidadosamente entalhada na madeira.  Uma
 imensa cadeira de espaldar alto, lembrando um trono, foi postada na
-extremidade contrária à escada e virada para ela, tendo a mesa à sua frente.
-   Este parece o lugar que toma o Deus que vem presidir as reuniões do
-Conselho dos Clãs.
-   Uma imensa janela descortina belíssima paisagem e você se extasia diante
+extremidade contrÃ¡ria Ã  escada e virada para ela, tendo a mesa Ã  sua frente.
+   Este parece o lugar que toma o Deus que vem presidir as reuniÃµes do
+Conselho dos ClÃ£s.
+   Uma imensa janela descortina belÃ­ssima paisagem e vocÃª se extasia diante
 de tamanha grandiosidade.
-   Sua única saída é seguindo a escada e voltando para baixo.
+   Sua Ãºnica saÃ­da Ã© seguindo a escada e voltando para baixo.
 ~
-4 252 0 0 0 0
-D4
-Você vê daqui uma passagem que parece levar à uma espécie de câmara.
-~
-~
-0 -1 429
+4 cdefgh 0
 D5
 ~
 porta~
-0 402 421
-E
-inscrição~
-	C"Deus, dá-nos a graça de aceitar com Serenidade as coisas que não podem ser
-mudadas, Coragem de mudar as coisas que devem ser mudadas, e Sabedoria para
-distinguir umas das outras"	n
+:n 2 a porta da Sala de ReuniÃµes
+abg 402 421
+D4
+VocÃª vÃª daqui uma passagem que parece levar Ã  uma espÃ©cie de cÃ¢mara.
 ~
+~
+0 -1 429
 E
-cadeira cadeiras~
-Que bela peça de mobília.  Poderia se dizer que foi feita por exímio
-artesão.  Esculpida em imensos blocos de desconhecida pedra acinzentada, não
-possui, contudo, a sensação de frio que costuma-se sentir, ao tocar algo
-feito de pedra.
+janela~
+VocÃª se embriaga diante de tamanha beleza.  Nunca havia lhe ocorrido, quÃ£o
+bela Ã© a cidade de Midgaard.
 ~
 E
 mesa~
-Uma imensa e pesada peça estranhamente ovalada, que parece brotar do chão
-como se fora imensa árvore metálica.
+Uma imensa e pesada peÃ§a estranhamente ovalada, que parece brotar do chÃ£o
+como se fora imensa Ã¡rvore metÃ¡lica.
 ~
 E
-janela~
-Você se embriaga diante de tamanha beleza.  Nunca havia lhe ocorrido, quão
-bela é a cidade de Midgaard.
+cadeira cadeiras~
+Que bela peÃ§a de mobÃ­lia.  Poderia se dizer que foi feita por exÃ­mio
+artesÃ£o.  Esculpida em imensos blocos de desconhecida pedra acinzentada, nÃ£o
+possui, contudo, a sensaÃ§Ã£o de frio que costuma-se sentir, ao tocar algo
+feito de pedra.
+~
+E
+inscricao~
+@C"Deus, dÃ¡-nos a graÃ§a de aceitar com Serenidade as coisas que nÃ£o podem ser
+mudadas, Coragem de mudar as coisas que devem ser mudadas, e Sabedoria para
+distinguir umas das outras"@n
 ~
 S
 #424
 Os Senhores da Tempestade~
-   Ao adentrar no salão, você sente como se o mundo la fora deixasse de
-existir, onde o mal nunca conseguiria aguentar os fluídos aqui presente.  As
-paredes são rodeadas de todos os lados por grandes blocos de granito, nos
-cantos da sala você percebe alguns querubins esculpidos em mármore.
+   Ao adentrar no salÃ£o, vocÃª sente como se o mundo la fora deixasse de
+existir, onde o mal nunca conseguiria aguentar os fluÃ­dos aqui presente.  As
+paredes sÃ£o rodeadas de todos os lados por grandes blocos de granito, nos
+cantos da sala vocÃª percebe alguns querubins esculpidos em mÃ¡rmore.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D2
 ~
 ~
@@ -630,29 +634,29 @@ D2
 S
 #425
 Seguidores da Dinastia Breyldon~
-   É um templo majestoso e imponente, com altas colunas de mármore
+   Ã‰ um templo majestoso e imponente, com altas colunas de mÃ¡rmore
 sustentando suas grossas paredes feitas com uma rocha que parece cintilar.
-Este é um lugar onde a paz e a harmonia prevalecem, e estranhamente, você se
-sente muito mais bondoso e com o coração cheio de alegria e júbilo.  Por
-alguns momentos você parece estar andando sobre macias e aconchegantes
-nuvens.  Apesar de sua imponência, quase se pode sentir a presença
-espiritual dos lendários guerreiros de Breyldon, que parecem estar zelando
-por este verdadeiro santuário.
+Este Ã© um lugar onde a paz e a harmonia prevalecem, e estranhamente, vocÃª se
+sente muito mais bondoso e com o coraÃ§Ã£o cheio de alegria e jÃºbilo.  Por
+alguns momentos vocÃª parece estar andando sobre macias e aconchegantes
+nuvens.  Apesar de sua imponÃªncia, quase se pode sentir a presenÃ§a
+espiritual dos lendÃ¡rios guerreiros de Breyldon, que parecem estar zelando
+por este verdadeiro santuÃ¡rio.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D3
 ~
 ~
 0 -1 419
 S
 #426
-Os Guardiões da Prisão de Kildner~
-   Ao entrar nessa sala você vê suas feridas e cicatrizes desaparecerem.
-Esse é um santuário muito lindo e enfeitado, o cheiro daqui é muito bom e
-daqui se ouve um relaxante som de água corrente.  Você vê um altar com uma
-estátua sobre ele.
+Os GuardiÃµes da PrisÃ£o de Kildner~
+   Ao entrar nessa sala vocÃª vÃª suas feridas e cicatrizes desaparecerem.
+Esse Ã© um santuÃ¡rio muito lindo e enfeitado, o cheiro daqui Ã© muito bom e
+daqui se ouve um relaxante som de Ã¡gua corrente.  VocÃª vÃª um altar com uma
+estÃ¡tua sobre ele.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D0
 ~
 ~
@@ -660,47 +664,47 @@ D0
 S
 #427
 Os Seguidores da Disciplina das Trevas~
-   Este é o altar do templo de Tenebra.  Muitos devotos fazem orações a
-Deusa das Trevas.  No topo do altar se encontra a estátua de Tenebra, uma
-bela jovem de cabelos longos e lisos com os pés descalços usando um vestido
-longo e justo aberto nas laterais.  A beleza de seu rosto é indescritivel e
+   Este Ã© o altar do templo de Tenebra.  Muitos devotos fazem oraÃ§Ãµes a
+Deusa das Trevas.  No topo do altar se encontra a estÃ¡tua de Tenebra, uma
+bela jovem de cabelos longos e lisos com os pÃ©s descalÃ§os usando um vestido
+longo e justo aberto nas laterais.  A beleza de seu rosto Ã© indescritivel e
 seus olhos encantam a todos.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D3
 ~
 ~
 0 -1 421
 S
 #428
-Os Cavaleiros da Família Dragoon~
-   Você repara que as paredes da proximidade estão cheias de desenhos
-enigmáticos, esculpidos com muito cuidado e precisão, que parecem
-respresentar uma grande batalha que acontecera há muito tempo atrás.  Você
-ouve os mais variados sons, que em seu todo parecem formar uma belíssima
-canção homenageando todos os bravos que protegem Vitália com suas próprias
+Os Cavaleiros da FamÃ­lia Dragoon~
+   VocÃª repara que as paredes da proximidade estÃ£o cheias de desenhos
+enigmÃ¡ticos, esculpidos com muito cuidado e precisÃ£o, que parecem
+respresentar uma grande batalha que acontecera hÃ¡ muito tempo atrÃ¡s.  VocÃª
+ouve os mais variados sons, que em seu todo parecem formar uma belÃ­ssima
+canÃ§Ã£o homenageando todos os bravos que protegem VitÃ¡lia com suas prÃ³prias
 vidas.
 ~
-4 131224 0 0 0 0
+4 dehr 0
 D0
 ~
 ~
 0 -1 421
 S
 #429
-A Câmara das Comunicações~
-   Esta é uma sala diferente de todas que já viu.  Daqui é possível sentir a
-essência divina à sua volta.  Este lugar se assemelha muito aos Espaços
-Vazios, pois além da porta e um humilde quadro de carvalho pairando no ar,
-não há paredes, nem teto, nem chão, nem nada.  Ao olhar à sua volta, você
-começa a ter a sensação de que está flutuando.  Tudo à sua volta é muito
-branco e não se consegue ver de onde vem a luz que ilumina este quarto.
+A CÃ¢mara das ComunicaÃ§Ãµes~
+   Esta Ã© uma sala diferente de todas que jÃ¡ viu.  Daqui Ã© possÃ­vel sentir a
+essÃªncia divina Ã  sua volta.  Este lugar se assemelha muito aos EspaÃ§os
+Vazios, pois alÃ©m da porta e um humilde quadro de carvalho pairando no ar,
+nÃ£o hÃ¡ paredes, nem teto, nem chÃ£o, nem nada.  Ao olhar Ã  sua volta, vocÃª
+comeÃ§a a ter a sensaÃ§Ã£o de que estÃ¡ flutuando.  Tudo Ã  sua volta Ã© muito
+branco e nÃ£o se consegue ver de onde vem a luz que ilumina este quarto.
 ~
-4 1310968 0 0 0 0
+4 defghsu 0
 D5
-Daqui, pode-se ver a Sagrada Sala de Reuniões.
+Daqui, pode-se ver a Sagrada Sala de ReuniÃµes.
 ~
 ~
 0 -1 423
 S
-$~
+$
