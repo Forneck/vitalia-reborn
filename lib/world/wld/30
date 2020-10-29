@@ -758,9 +758,9 @@ O aviso diz:
 
   Instruções para cuidar de seu bichinho:
 
-  Use 'ORDER <animal> <instruções>' para chamar seu animal.
+  Use 'ORD 1R <animal> <instruções>' para chamar seu animal.
   Se você abusar de seu animal, ele não vai mais te reconhecer como mestre.
-  Se você tiver varios animais, use 'ORDER FOLLOWERS <instrucoes>'
+  Se você tiver varios animais, use 'ORD 1R FOLLOWERS <instrucoes>'
 
   Você pode batizar seu animal com: 'BUY <animal> <nome>'
 
@@ -1804,7 +1804,7 @@ Você lê a placa amarela escrita em caprichadas letras coloridas:
 &Y              ._______________________________.&n
 &Y              |                               &Y|&n
 &Y              |    &CTaverna&n                    &Y|&n
-&Y              |          &RA BADERNA&n            &Y|&n
+&Y              |          &RA BAD 1RNA&n            &Y|&n
 &Y              |    &Co refúgio do bom bardo.&n    &Y|&n
 &Y              |                               &Y|&n
 &Y              |   &BSe a ti pesado é o fardo,&n   &Y|&n

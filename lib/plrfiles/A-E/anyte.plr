@@ -1,30 +1,30 @@
 Name: Anyte
 Pass: AnRCfBykX0mXk
-Titl: a Iniciada no Segundo C�rculo
+Titl: a Iniciada no Terceiro C�rculo
 Sex : 2
 Clas: 4
-Levl: 19
+Levl: 21
 Id  : 6
 Brth: 1603323580
-Plyd: 24638
-Last: 1603991669
+Plyd: 26198
+Last: 1603993280
 Lmot: 1603324480
 Lnew: 1603323627
 Htwn: 3001
 Host: 189.120.73.49
 Hite: 161
 Wate: 139
-Alin: 26
+Alin: -79
 Act : hl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
-Room: 3616
-Lern: 4
-Hung: 5
-Thir: 5
-Hit : 102/230
-Mana : 157/157
-Move: 107/120
+Room: 1667
+Lern: 8
+Hung: 8
+Thir: 11
+Hit : 138/246
+Mana : 214/214
+Move: 9/124
 Str : 17/0
 Int : 9
 Wis : 11
@@ -32,18 +32,21 @@ Dex : 15
 Con : 12
 Cha : 8
 Ac  : 100
-Gold: 61201
-Exp : 2649747
+Gold: 107402
+Exp : 3057732
 Olc : 0
 Skil:
 222 80
 224 48
 231 80
 0 0
+Affs:
+36 32 0 33 256 0 0 0
+0 0 0 0 0 0 0 0
 Alis: 2
- bash
- bash $*;st
-1
  say
  say @g$*@n
+1
+ bash
+ bash $*;st
 1

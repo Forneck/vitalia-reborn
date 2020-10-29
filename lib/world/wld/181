@@ -10,7 +10,7 @@ estarão espalhados nas próximas salas, adiante.  Agora boa jornada!  Digite
 &WW&n e siga para &WOESTE&n (w) e que bons ventos guiem seus passos!
 ~
 181 gfj 0
-D W
+D 3
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -27,7 +27,7 @@ atenção.  Seja curioso, digite &WREAD PAINEL&n e descubra o que nele está
 escrito.  Para continuar sua jornada, digite &WU&n e torne-se mais sábio ainda.
 ~
 181 gfj 0
-D U
+D 4
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -59,12 +59,12 @@ atravessa este jardim e segue em direção ao Norte.  Há um clima de paz
 reinando neste ambiente.
 ~
 181 gfj 0
-D D
+D 5
 Você vê um lindo jardim.
 ~
 ~
 0 -1 18102
-D U
+D 4
 Você vê um lugar repleto de espelhos.
 ~
 ~
@@ -90,23 +90,23 @@ cobrem todas as paredes, transmitindo a você uma sensação de infinito.  Há
 quatro portas neste lugar.  Que tal se você descobrisse aonde elas vão dar?
 ~
 181 gfj 0
-D N
+D 0
 ~
 ~
 0 -1 18105
-D E
+D 1
 ~
 ~
 0 -1 18106
-D S
+D 2
 ~
 ~
 0 -1 18107
-D W
+D 3
 ~
 ~
 0 -1 18118
-D D
+D 5
 ~
 ~
 0 -1 18108
@@ -131,7 +131,7 @@ todas as paredes, transmitindo a você uma sensação de infinito.  Há quatro
 portas neste lugar.  Que tal se você descobrisse aonde elas vão dar?
 ~
 181 gjf 0
-D S
+D 2
 ~
 ~
 0 -1 18104
@@ -156,7 +156,7 @@ cobrem todas as paredes, transmitindo a você uma sensação de infinito.  Há
 quatro portas neste lugar.  Que tal se você descobrisse aonde elas vão dar?
 ~
 181 gfj 0
-D W
+D 3
 ~
 ~
 0 -1 18104
@@ -184,7 +184,7 @@ para o norte e depois seguisse para baixo, para descobrir de onde vem esta
 luz?
 ~
 181 gfj 0
-D N
+D 0
 ~
 ~
 0 -1 18104
@@ -211,7 +211,7 @@ pensa que um belo naco de carne seria maravilhoso.  Continue a sua
 caminhada, quem sabe você não encontra algo que possa saciar a sua fome.
 ~
 181 gfj 0
-D D
+D 5
 Você vê um lindo jardim.
 ~
 ~
@@ -241,7 +241,7 @@ não acha?  Notou que um imenso &Wpainel&n foi colocado na parede?  Que tal
 lê-lo?  Para seguir com a sua jornada, digite W.
 ~
 181 gfj 0
-D W
+D 3
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -273,7 +273,7 @@ corre o risco de passar sede no futuro.  Para obtê-lo digite &WGET PORUNGA&n e
 leia o &Waviso&n que algum viajante mais experiente parece ter escrito.
 ~
 181 gfj 0
-D W
+D 3
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -285,7 +285,7 @@ DRINK <nome do recepiente ou líquido>
    Ex: &WDRINK GARRAFA&n, &WDRINK CANTIL&n, &WDRINK PORUNGA&n.
    Para tomar poções mágicas, o comando é:
 &WQUAFF <nome da poção>&n.
-   Ex: &WQUAFF INVISIBILIDADE&n, etc.
+   Ex: &WQUAFF INVISIBILIDAD 1&n, etc.
 ~
 S
 #18111
@@ -299,7 +299,7 @@ interessante pegar uma destas armas e aprender a usá-la corretamente.
 Afinal, nunca se sabe o dia de amanhã...
 ~
 181 gfj 0
-D W
+D 3
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -311,7 +311,7 @@ abreviada: &WEQ&n.  Para ver o que você carrega em suas mãos, use &WINVENTORY&
 abrevie e use &WINV&n.
 
    Para empunhar uma arma, digite: &WWIELD <nome do objeto>&n.
-   Ex: &WWIELD ESPADA&n, &WWIELD FACA&n
+   Ex: &WWIELD 1SPADA&n, &WWIELD FACA&n
 
    Em Vitália também é possível segurar alguns objetos.  E para fazê-lo,
 digite: &WHOLD <objeto>&n.
@@ -332,7 +332,7 @@ não seja interessante pegar uma destas armaduras e vesti-la da forma
 correta.  Afinal, nunca se sabe o dia de amanhã...
 ~
 181 gfj 0
-D W
+D 3
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -362,7 +362,7 @@ que as letras parecem fogo crepitando e sente necessidade de se aproximar
 para tentar ler aquilo que foi escrito.
 ~
 181 gfj 0
-D W
+D 3
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -391,7 +391,7 @@ reto e digno.  Bem no centro da sala há um &Wpergaminho&n onde várias anotaç�
 foram feitas.  Pegue-o e torne-se mais sábio.
 ~
 181 gfj 0
-D W
+D 3
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -408,7 +408,7 @@ grosso e pesado e parece que alguém o deixou aqui de propósito.  Nunca se
 sabe o dia de amanhã.  Você gosta de livros?
 ~
 181 gfj 0
-D W
+D 3
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -429,7 +429,7 @@ pronta para atacá-lo.  Lembre-se de tudo aquilo que aprendeu até agora e
 coloque em prática sem medo.  Os Deuses estarão ao seu lado.
 ~
 181 gfj 0
-D W
+D 3
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -437,7 +437,7 @@ Você vê um caminho iluminado que parece não ter fim.
 E
 frase parede~
    Para atacar esta imensa cobra, certifique-se antes se você tem chances:
-&WCONSIDER COBRA&n.
+&WCONSID 1R COBRA&n.
    Para observá-la bem &RANTES&n de atacar, digite: &WLOOK COBRA&n.
    Lembre-se de checar seu comando de fuga automático, ex: &RWIMP 6&n
    Para atacá-la digite: &WKILL COBRA&n.
@@ -460,7 +460,7 @@ escolher para trilhar.  E que as recompensas virão na mesma proporção.
    Antes de deixar esta sala, respire fundo, concentre-se e Boa Jornada.
 ~
 181 gfj 0
-D W
+D 3
 Você vê um caminho iluminado que parece estar chegando ao fim.
 ~
 ~

@@ -3,27 +3,28 @@ Pass: HerEmrjDaQg1o
 Titl: o Novato em Espadas
 Sex : 1
 Clas: 3
-Levl: 1
+Levl: 3
 Id  : 11
 Brth: 1603375575
-Plyd: 335
-Last: 1603991311
+Plyd: 1953
+Last: 1603992929
 Lmot: 1603375637
 Lnew: 1603375634
 Htwn: 1372
 Host: 168.194.161.183
 Hite: 166
 Wate: 135
-Act : h 0 0 0
+Alin: 11
+Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghno 0 0 0
-Room: 65535
-Lern: 2
-Hung: 20
-Thir: 20
-Hit : 21/21
+Room: 3001
+Lern: 6
+Hung: 11
+Thir: 11
+Hit : 42/49
 Mana : 100/100
-Move: 83/83
+Move: 86/86
 Str : 17/0
 Int : 11
 Wis : 13
@@ -31,10 +32,11 @@ Dex : 15
 Con : 14
 Cha : 8
 Ac  : 100
-Exp : 1
+Gold: 3408
+Exp : 5369
 Olc : 0
 Skil:
 0 0
 Affs:
-63 48 0 42 131072 0 0 0
+63 26 0 42 131072 0 0 0
 0 0 0 0 0 0 0 0
