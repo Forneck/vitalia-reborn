@@ -1,12 +1,12 @@
 #300
 O Caminho Para Bandar, A Cidade Maldita~
-   Voc� est� em um caminho subaqu�tico, nadando entre corais e algas.  O
+   Você está em um caminho subaquático, nadando entre corais e algas.  O
 caminho parece ser bastante movimentado e tem as marcas do tempo de uso.
-Acima voc� pode ver o que sobrou de uma abandonada cidade que parece ser um
-centro de com�rcio.  Perto deste centro voc� pode ver uma vermelha luz
+Acima você pode ver o que sobrou de uma abandonada cidade que parece ser um
+centro de comércio.  Perto deste centro você pode ver uma vermelha luz
 brilhante, emanando de uma grande torre.
 ~
-3 96 0 0 0 8
+3 fg 8
 D1
 ~
 ~
@@ -17,14 +17,14 @@ D4
 0 -1 341
 S
 #301
-Os Port�es de Bandar~
-   Um enorme port�o enferrujado se ergue diante de seus olhos.  Agora voc�
-pode ver a cidade voc� percebe que ela � mais simples do que voc� pensava.
-Zumbis e mortos-vivos flutuam ao redor, com seus resqu�cios de cabelos sendo
-levados pelas correntes.  Seus olhos n�o t�m qualquer express�o; a �nica
-hist�ria que eles contam � a morte.
+Os Portões de Bandar~
+   Um enorme portão enferrujado se ergue diante de seus olhos.  Agora você
+pode ver a cidade você percebe que ela é mais simples do que você pensava.
+Zumbis e mortos-vivos flutuam ao redor, com seus resquícios de cabelos sendo
+levados pelas correntes.  Seus olhos não têm qualquer expressão; a única
+história que eles contam é a morte.
 ~
-3 96 0 0 0 8
+3 fg 8
 D1
 ~
 ~
@@ -36,13 +36,13 @@ D3
 S
 #302
 A Estrada Principal~
-   Voc� est� em uma rua que parece ter sido bastante usada.  H� muito tempo
-atr�s ela pode ter sido a estrada pela qual comerciantes e viajantes usavam
-para atravessar a cidade.  Agora ela est� coberta com escombros das
-constru��es � seu redor.  Cobrindo a rua, tamb�m est�o centenas de zumbis
-malditos, amaldi�oados � vagar por estas ruas por todo o sempre.
+   Você está em uma rua que parece ter sido bastante usada.  Há muito tempo
+atrás ela pode ter sido a estrada pela qual comerciantes e viajantes usavam
+para atravessar a cidade.  Agora ela está coberta com escombros das
+construções à seu redor.  Cobrindo a rua, também estão centenas de zumbis
+malditos, amaldiçoados à vagar por estas ruas por todo o sempre.
 ~
-3 96 0 0 0 8
+3 fg 8
 D1
 ~
 ~
@@ -54,13 +54,13 @@ D3
 S
 #303
 A Estrada Principal~
-   Voc� est� em uma rua que parece ter sido bastante usada.  H� muito tempo
-atr�s ela pode ter sido a estrada pela qual comerciantes e viajantes usavam
-para atravessar a cidade.  Agora ela est� coberta com escombros das
-constru��es � seu redor.  Cobrindo a rua, tamb�m est�o centenas de zumbis
-malditos, amaldi�oados � vagar por estas ruas por todo o sempre.
+   Você está em uma rua que parece ter sido bastante usada.  Há muito tempo
+atrás ela pode ter sido a estrada pela qual comerciantes e viajantes usavam
+para atravessar a cidade.  Agora ela está coberta com escombros das
+construções à seu redor.  Cobrindo a rua, também estão centenas de zumbis
+malditos, amaldiçoados à vagar por estas ruas por todo o sempre.
 ~
-3 96 0 0 0 8
+3 fg 8
 D1
 ~
 ~
@@ -72,13 +72,13 @@ D3
 S
 #304
 Diante da Grande Torre~
-   Voc� est� em uma parte da estrada principal que parece ter sido um centro
-� parte do comercio.  As tavernas ao longo da estrada est�o todas
-destru�das, exceto uma parte parece ter resistido, ao norte uma enorme torre
-que � a fonte da estranha luz que voc� notou desde que chegou nesta cidade
-amaldi�oada.
+   Você está em uma parte da estrada principal que parece ter sido um centro
+à parte do comercio.  As tavernas ao longo da estrada estão todas
+destruídas, exceto uma parte parece ter resistido, ao norte uma enorme torre
+que é a fonte da estranha luz que você notou desde que chegou nesta cidade
+amaldiçoada.
 ~
-3 96 0 0 0 8
+3 fg 8
 D0
 ~
 ~
@@ -94,13 +94,13 @@ D3
 S
 #305
 A Estrada Principal~
-   Voc� est� em uma rua que parece ter sido bastante usada.  H� muito tempo
-atr�s ela pode ter sido a estrada pela qual comerciantes e viajantes usavam
-para atravessar a cidade.  Agora ela est� coberta com escombros das
-constru��es � seu redor.  Cobrindo a rua, tamb�m est�o centenas de zumbis
-malditos, amaldi�oados � vagar por estas ruas por todo o sempre.
+   Você está em uma rua que parece ter sido bastante usada.  Há muito tempo
+atrás ela pode ter sido a estrada pela qual comerciantes e viajantes usavam
+para atravessar a cidade.  Agora ela está coberta com escombros das
+construções à seu redor.  Cobrindo a rua, também estão centenas de zumbis
+malditos, amaldiçoados à vagar por estas ruas por todo o sempre.
 ~
-3 96 0 0 0 8
+3 fg 8
 D1
 ~
 ~
@@ -112,13 +112,13 @@ D3
 S
 #306
 A Estrada Principal~
-   Voc� est� em uma rua que parece ter sido bastante usada.  H� muito tempo
-atr�s ela pode ter sido a estrada pela qual comerciantes e viajantes usavam
-para atravessar a cidade.  Agora ela est� coberta com escombros das
-constru��es � seu redor.  Cobrindo a rua, tamb�m est�o centenas de zumbis
-malditos, amaldi�oados � vagar por estas ruas por todo o sempre.
+   Você está em uma rua que parece ter sido bastante usada.  Há muito tempo
+atrás ela pode ter sido a estrada pela qual comerciantes e viajantes usavam
+para atravessar a cidade.  Agora ela está coberta com escombros das
+construções à seu redor.  Cobrindo a rua, também estão centenas de zumbis
+malditos, amaldiçoados à vagar por estas ruas por todo o sempre.
 ~
-3 96 0 0 0 8
+3 fg 8
 D1
 ~
 ~
@@ -130,13 +130,13 @@ D3
 S
 #307
 A Estrada Principal~
-   Voc� est� em uma rua que parece ter sido bastante usada.  H� muito tempo
-atr�s ela pode ter sido a estrada pela qual comerciantes e viajantes usavam
-para atravessar a cidade.  Agora ela est� coberta com escombros das
-constru��es � seu redor.  Cobrindo a rua, tamb�m est�o centenas de zumbis
-malditos, amaldi�oados � vagar por estas ruas por todo o sempre.
+   Você está em uma rua que parece ter sido bastante usada.  Há muito tempo
+atrás ela pode ter sido a estrada pela qual comerciantes e viajantes usavam
+para atravessar a cidade.  Agora ela está coberta com escombros das
+construções à seu redor.  Cobrindo a rua, também estão centenas de zumbis
+malditos, amaldiçoados à vagar por estas ruas por todo o sempre.
 ~
-3 108 0 0 0 8
+3 fgcd 8
 D1
 ~
 ~
@@ -151,26 +151,26 @@ D3
 0 -1 306
 S
 #308
-Guerrand Itens M�gicos~
-   At� mesmo as instala��es desta loja n�o tem valor.  At� as pinturas nas
-paredes s�o baratas.  Voc� se surpreende ao encontrar uma po��o mais cara na
-lista de itens.  Olhando atrav�s do vidro, voc� pode ver po��es de todas as
+Guerrand Itens Mágicos~
+   Até mesmo as instalações desta loja não tem valor.  Até as pinturas nas
+paredes são baratas.  Você se surpreende ao encontrar uma poção mais cara na
+lista de itens.  Olhando através do vidro, você pode ver poções de todas as
 formas, tamanhos e variedades.
 ~
-3 96 0 0 0 8
+3 fg 8
 D0
 ~
 ~
 0 -1 307
 S
 #309
-O Port�o Oriental de Bandar~
-   Voc� est� diante do enorme port�o leste da Cidade de Bandar.  H� centenas
-de corpos pendurados no port�o.  Embora cruel, o castigo parece ter sido
+O Portão Oriental de Bandar~
+   Você está diante do enorme portão leste da Cidade de Bandar.  Há centenas
+de corpos pendurados no portão.  Embora cruel, o castigo parece ter sido
 efetivo.  A sua volta, enormes algas tocam sua carne, como enormes dedos que
-tentam te puxar na dire��o do port�o, para receber seu frio flagelo eterno.
+tentam te puxar na direção do portão, para receber seu frio flagelo eterno.
 ~
-3 96 0 0 0 8
+3 fg 8
 D2
 ~
 ~
@@ -182,13 +182,13 @@ D3
 S
 #310
 Fora do Caminho~
-   Voc� afasta as algas e v� um surpreendentemente bem cuidado caminho, em
-rela��o aos outros, claro.  Ele tamb�m � coberto de algas e outras plantas
-aqu�ticas.  Voc� sente perigo, um calafrio toma sua espinha fazendo os pelos
-de seu bra�o se arrepiarem.  Seria melhor tomar cuidado onde pisa; nunca se
+   Você afasta as algas e vê um surpreendentemente bem cuidado caminho, em
+relação aos outros, claro.  Ele também é coberto de algas e outras plantas
+aquáticas.  Você sente perigo, um calafrio toma sua espinha fazendo os pelos
+de seu braço se arrepiarem.  Seria melhor tomar cuidado onde pisa; nunca se
 sabe o que se pode encontrar aqui.
 ~
-3 108 0 0 0 8
+3 fgcd 8
 D0
 ~
 ~
@@ -204,14 +204,14 @@ D2
 S
 #311
 Uma Pequena Alcova~
-   Voc� adentra a caverna e imediatamente seus sentidos s�o tomados por
-cheiros horr�veis, fecais, para ser exato.  Voc� ouve uma pesada respira��o
-a seu lado, e se pergunta o que diabos est� pingando em seu p�.  Com cada
-pingo sua mente lentamente come�a a perceber que o que quer que seja que
-esteja pingando em seu p�, � quente e viscoso...  Apenas um pensamento vem a
+   Você adentra a caverna e imediatamente seus sentidos são tomados por
+cheiros horríveis, fecais, para ser exato.  Você ouve uma pesada respiração
+a seu lado, e se pergunta o que diabos está pingando em seu pé.  Com cada
+pingo sua mente lentamente começa a perceber que o que quer que seja que
+esteja pingando em seu pé, é quente e viscoso...  Apenas um pensamento vem a
 sua mente....  CORRA!
 ~
-3 96 0 0 0 8
+3 fg 8
 D3
 ~
 ~
@@ -219,13 +219,13 @@ D3
 S
 #312
 Nas Profundezas das Algas~
-   Voc� est� em uma enorme floresta de algas e outras plantas.  Normalmente
-estas �reas seriam cheias de vida marinha, mas voc� pode ver que n�o h� nada
-al�m de plantas.  Olhando em volta, voc� percebe que a areia embaixo de seus
-p�s est� ensopada de sangue.  Estaria voc� no meio de algum grotesco
+   Você está em uma enorme floresta de algas e outras plantas.  Normalmente
+estas áreas seriam cheias de vida marinha, mas você pode ver que não há nada
+além de plantas.  Olhando em volta, você percebe que a areia embaixo de seus
+pés está ensopada de sangue.  Estaria você no meio de algum grotesco
 matadouro?
 ~
-3 96 0 0 0 8
+3 fg 8
 D0
 ~
 ~
@@ -237,14 +237,14 @@ D1
 S
 #313
 Nas Profundezas das Algas~
-   Voc� come�a a perceber que a terra se inclina a medida que voc� avan�a.
-Em algum lugar de sua mente, voc� sabe que grandes predadores do oceano
-vivem neste tipo de �rea.  Cada passo que voc� toma o faz pensar mais e mais
-a respeito da vida marinha, o modo como a cadeia alimentar � diferente aqui.
-O fato do homem ser mais vulner�vel no oceano...  Isso faz voc� querer ter
-algum repelente de tubar�es � seu alcance.
+   Você começa a perceber que a terra se inclina a medida que você avança.
+Em algum lugar de sua mente, você sabe que grandes predadores do oceano
+vivem neste tipo de área.  Cada passo que você toma o faz pensar mais e mais
+a respeito da vida marinha, o modo como a cadeia alimentar é diferente aqui.
+O fato do homem ser mais vulnerável no oceano...  Isso faz você querer ter
+algum repelente de tubarões à seu alcance.
 ~
-3 96 0 0 0 8
+3 fg 8
 D3
 ~
 ~
@@ -256,12 +256,12 @@ D5
 S
 #314
 Dentro de Uma Fenda~
-   Olhando em volta voc� v� que est� em um enorme buraco no solo do oceano.
+   Olhando em volta você vê que está em um enorme buraco no solo do oceano.
 Pequenos outros buracos servem de lugar de repouso para outras criaturas
-marinhas.  A cada toque voc� percebe que finalmente h� alguma sa�da
-penetrando estas escuras �guas.
+marinhas.  A cada toque você percebe que finalmente há alguma saída
+penetrando estas escuras águas.
 ~
-3 96 0 0 0 8
+3 fg 8
 D1
 ~
 ~
@@ -277,12 +277,12 @@ D5
 S
 #315
 Uma Borda Rochosa~
-   Voc� est� em uma beirada rochosa e pegajosa, que se ergue da grande
-fresta no solo do oceano.  Voc� percebe que h� uma pequena cabana feita de
+   Você está em uma beirada rochosa e pegajosa, que se ergue da grande
+fresta no solo do oceano.  Você percebe que há uma pequena cabana feita de
 algas, estranhamente colocada aqui.  Uma aconchegante luz amarela e o cheiro
-de comida caseira penetra as paredes de �gua e alcan�a suas narinas.
+de comida caseira penetra as paredes de água e alcança suas narinas.
 ~
-3 108 0 0 0 8
+3 fgcd 8
 D2
 ~
 ~
@@ -294,13 +294,13 @@ D3
 S
 #316
 Uma Cabana~
-   Voc� est� em uma pequena cabana.  Este lugar parece bom demais para ser
-verdade.  Em sua frente h� uma pequena mesa cheia das mais finas comidas.
+   Você está em uma pequena cabana.  Este lugar parece bom demais para ser
+verdade.  Em sua frente há uma pequena mesa cheia das mais finas comidas.
 Desde leite a carne de porco, este lugar parece ter tudo, menos uma pia.
-Voc� sente-se um pouco desconfiado, mas rapidamente se senta e come�a a se
+Você sente-se um pouco desconfiado, mas rapidamente se senta e começa a se
 servir.
 ~
-3 96 0 0 0 8
+3 fg 8
 D0
 ~
 ~
@@ -308,13 +308,13 @@ D0
 S
 #317
 No Fundo da Fenda~
-   Ao nadar mais fundo pela fenda, a �gua se torna mais fria e seus membros
-come�am a esfriar, tornando dif�cil seu movimento.  Voc� pensa que se n�o
-encontrar �gua mais morna logo, ir� morrer.  Cada bra�ada se torna mais e
-mais dif�cil, e voc� come�a a parar de sentir seus membros.  Voc� pode
+   Ao nadar mais fundo pela fenda, a água se torna mais fria e seus membros
+começam a esfriar, tornando difícil seu movimento.  Você pensa que se não
+encontrar água mais morna logo, irá morrer.  Cada braçada se torna mais e
+mais difícil, e você começa a parar de sentir seus membros.  Você pode
 avistar uma luminosidade vinda do leste.
 ~
-3 96 0 0 0 8
+3 fg 8
 D1
 ~
 ~
@@ -326,11 +326,11 @@ D4
 S
 #318
 Uma Alcova~
-   Voc� est� em uma alcova e nota que a �gua aqui come�a a esquentar
-consideravelmente.  Seus movimentos come�am a voltar ao normal.  Ao olhar em
-volta voc� nota que a luminosidade vem de cima.
+   Você está em uma alcova e nota que a água aqui começa a esquentar
+consideravelmente.  Seus movimentos começam a voltar ao normal.  Ao olhar em
+volta você nota que a luminosidade vem de cima.
 ~
-3 96 0 0 0 8
+3 fg 8
 D0
 ~
 ~
@@ -338,16 +338,16 @@ D0
 D3
 ~
 ~
-0 -1 317
+0 -1 317 0
 S
 #319
-Quase L�~
-   Voc� olha em frente e pode perceber que o calor est� a apenas alguns
-passos de voc�.  Voc� sente como se estivesse levando horas atravessar
+Quase Lá~
+   Você olha em frente e pode perceber que o calor está a apenas alguns
+passos de você.  Você sente como se estivesse levando horas atravessar
 apenas alguns metros, mas a busca pelo calor afasta este pensamento, e o
-mant�m andando em frente.
+mantêm andando em frente.
 ~
-3 96 0 0 0 8
+3 fg 8
 D2
 ~
 ~
@@ -358,13 +358,13 @@ D4
 0 -1 304
 S
 #320
-Come�ando a Grande Aventura!~
-   Voc� est� onde todos devem esperar para que comece a aventura.  O lugar �
-bem decorado e mobiliado com bom gosto.  Cada pe�a da mob�lia tem seu lugar,
-dando uma atmosfera de suspense e mist�rio.  Para voc� este lugar � como um
-purgat�rio em vida, a espera pelo pr�mio e gl�ria.
+Começando a Grande Aventura!~
+   Você está onde todos devem esperar para que comece a aventura.  O lugar é
+bem decorado e mobiliado com bom gosto.  Cada peça da mobília tem seu lugar,
+dando uma atmosfera de suspense e mistério.  Para você este lugar é como um
+purgatório em vida, a espera pelo prêmio e glória.
 ~
-3 108 0 0 0 8
+3 fgcd 8
 D2
 ~
 ~
@@ -375,13 +375,13 @@ D4
 0 -1 321
 S
 #321
-O Come�o do Labirinto~
-   Voc� est� em uma sala, sem teto.  A grama embaixo de seus p�s � bem
-cuidada e parece fresca.  P�ssaros voam a seu redor, abelhas zunem, formigas
-trabalham...  Mas apesar de tudo isso, voc� sente como se estivesse em um
+O Começo do Labirinto~
+   Você está em uma sala, sem teto.  A grama embaixo de seus pés é bem
+cuidada e parece fresca.  Pássaros voam a seu redor, abelhas zunem, formigas
+trabalham...  Mas apesar de tudo isso, você sente como se estivesse em um
 lugar fechado...estranhamente fechado.
 ~
-3 108 0 0 0 8
+3 fgcd 8
 D1
 ~
 ~
@@ -393,13 +393,13 @@ D5
 S
 #322
 No Labirinto~
-   A medida que voc� entra nessa sala voc� � surpreendido.  Voc� quase pode
-sentir o cheiro do cachimbo de papai, e o gosto da comida da mam�e.  Cada
-sentimento, cada cheiro, e cada toque faz com que voc� se sinta mais em
-casa.  Voc� quase sente-se deitado no sof� pronto para descansar a tarde
+   A medida que você entra nessa sala você é surpreendido.  Você quase pode
+sentir o cheiro do cachimbo de papai, e o gosto da comida da mamãe.  Cada
+sentimento, cada cheiro, e cada toque faz com que você se sinta mais em
+casa.  Você quase sente-se deitado no sofá pronto para descansar a tarde
 toda.
 ~
-3 96 0 0 0 8
+3 fg 8
 D1
 ~
 ~
@@ -411,14 +411,14 @@ D3
 S
 #323
 No Labirinto~
-   A medida que voc� entra neste quarto os sentimentos de seguran�a s�o
-dilu�dos.  A fria realidade deste severo ambiente o atinge com grande
-impacto.  Voc� percebe que a qualquer momento a magia que permite que voc�
-respire em baixo de �gua possa acabar, e voc� ter� que lutar por ar e buscar
-pela superf�cie.  Voc� percebe que est� a total merc� do oceano, de joelhos
+   A medida que você entra neste quarto os sentimentos de segurança são
+diluídos.  A fria realidade deste severo ambiente o atinge com grande
+impacto.  Você percebe que a qualquer momento a magia que permite que você
+respire em baixo de água possa acabar, e você terá que lutar por ar e buscar
+pela superfície.  Você percebe que está a total mercê do oceano, de joelhos
 diante do poder do profundo...
 ~
-3 96 0 0 0 8
+3 fg 8
 D1
 ~
 ~
@@ -430,13 +430,13 @@ D3
 S
 #324
 Uma Esquina~
-   Voc� est� em uma curva do labirinto.  Voc� pode seguir a norte e explorar
-mais, ou voltar pelo caminho o qual veio.  Mas h� alguma estranha luz azul
-que causa um frio arrepio em sua espinha.  Uma voz dentro de sua cabe�a
-come�a a chamar por voc�...  Quase um choro pedindo ajuda.  Tudo isso lhe
-diz para voltar, mas o bravo em voc� deseja continuar adiante...  N�o �?
+   Você está em uma curva do labirinto.  Você pode seguir a norte e explorar
+mais, ou voltar pelo caminho o qual veio.  Mas há alguma estranha luz azul
+que causa um frio arrepio em sua espinha.  Uma voz dentro de sua cabeça
+começa a chamar por você...  Quase um choro pedindo ajuda.  Tudo isso lhe
+diz para voltar, mas o bravo em você deseja continuar adiante...  Não é?
 ~
-3 96 0 0 0 8
+3 fg 8
 D0
 ~
 ~
@@ -448,15 +448,15 @@ D3
 S
 #325
 Em Um Novo Corredor~
-   Voc� est� em um outro corredor que tem suas pr�prias mem�rias e
-hist�rias.  Olhando em volta, todas as pinturas de pessoas nas paredes lhe
-conta a hist�ria de quem viveu a muito tempo atr�s, grandes aventureiros que
+   Você está em um outro corredor que tem suas próprias memórias e
+histórias.  Olhando em volta, todas as pinturas de pessoas nas paredes lhe
+conta a história de quem viveu a muito tempo atrás, grandes aventureiros que
 tentaram conquistar o labirinto, e todos mortos agora.  Seus gritos de
 agonia e terror enchem suas orelhas.  Cada alma perdida dos aventureiros
-derrotados se torna um fantasma em sua mente.  Ser� que vale mesmo a pena se
+derrotados se torna um fantasma em sua mente.  Será que vale mesmo a pena se
 arriscar assim?
 ~
-3 96 0 0 0 8
+3 fg 8
 D0
 ~
 ~
@@ -469,11 +469,11 @@ S
 #326
 Ainda Mais do Corredor~
    Nesta parte do corredor, um acorde soa fundo em sua alma.  Ele fala de
-perda de pessoas amadas.  Imagens de m�es se lamentando v�m a sua cabe�a.
-Voc� v� todos eles, vestidos em negro, chorando at� que as l�grimas se
-acabem.  Voc� suportaria ver sua fam�lia assim?  Ousaria continuar?
+perda de pessoas amadas.  Imagens de mães se lamentando vêm a sua cabeça.
+Você vê todos eles, vestidos em negro, chorando até que as lágrimas se
+acabem.  Você suportaria ver sua família assim?  Ousaria continuar?
 ~
-3 96 0 0 0 8
+3 fg 8
 D0
 ~
 ~
@@ -488,12 +488,12 @@ D3
 0 -1 327
 S
 #327
-Um Corredor Indescrit�vel~
-   Este corredor parece frio e solit�rio.  Cada passo ecoa pelas profundezas
-do oceano.  A costumeira onda de emo��es n�o aparece aqui.  Voc� se sente
+Um Corredor Indescritível~
+   Este corredor parece frio e solitário.  Cada passo ecoa pelas profundezas
+do oceano.  A costumeira onda de emoções não aparece aqui.  Você se sente
 mais nulo do que qualquer outra coisa...
 ~
-3 96 0 0 0 8
+3 fg 8
 D0
 ~
 ~
@@ -508,12 +508,12 @@ D3
 0 -1 328
 S
 #328
-Um Corredor Indescrit�vel~
-   Este corredor parece frio e solit�rio.  Cada passo ecoa pelas profundezas
-do oceano.  A costumeira onda de emo��es n�o aparece aqui.  Voc� se sente
+Um Corredor Indescritível~
+   Este corredor parece frio e solitário.  Cada passo ecoa pelas profundezas
+do oceano.  A costumeira onda de emoções não aparece aqui.  Você se sente
 mais nulo do que qualquer outra coisa...
 ~
-3 108 0 0 0 8
+3 fgdc 8
 D1
 ~
 ~
@@ -528,12 +528,12 @@ D3
 0 -1 329
 S
 #329
-Um Corredor Indescrit�vel~
-   Este corredor parece frio e solit�rio.  Cada passo ecoa pelas profundezas
-do oceano.  A costumeira onda de emo��es n�o aparece aqui.  Voc� se sente
+Um Corredor Indescritível~
+   Este corredor parece frio e solitário.  Cada passo ecoa pelas profundezas
+do oceano.  A costumeira onda de emoções não aparece aqui.  Você se sente
 mais nulo do que qualquer outra coisa...
 ~
-3 108 0 0 0 8
+3 fgdc 8
 D0
 ~
 ~
@@ -548,14 +548,14 @@ D3
 0 -1 330
 S
 #330
-O Or�culo~
-   Finalmente voc� chegou ao Or�culo!  Centenas de aventureiros falharam
-nesta busca, mas voc�, poderoso bravo, teve sucesso!  Alegra-te, por tudo o
-que voc� viu, � tudo seu, somente seu.  Use seus tesouros sabiamente meu
-amigo.  Eles podem ser a melhor coisa que j� aconteceu a voc�, ou a pior
-maldi��o que algu�m j� proferiu...
+O Oráculo~
+   Finalmente você chegou ao Oráculo!  Centenas de aventureiros falharam
+nesta busca, mas você, poderoso bravo, teve sucesso!  Alegra-te, por tudo o
+que você viu, é tudo seu, somente seu.  Use seus tesouros sabiamente meu
+amigo.  Eles podem ser a melhor coisa que já aconteceu a você, ou a pior
+maldição que alguém já proferiu...
 ~
-3 96 0 0 0 8
+3 fg 8
 D1
 ~
 ~
@@ -563,11 +563,11 @@ D1
 S
 #331
 Um Corredor~
-   Voc� est� em outro corredor que parece n�o um corredor, mas a jun��o de
-tr�s passagens, ent�o ele tem apenas uma parede.  Todas as dire��es podem
+   Você está em outro corredor que parece não um corredor, mas a junção de
+três passagens, então ele tem apenas uma parede.  Todas as direções podem
 guardar novas aventuras, e ainda, armadilhas e terror.
 ~
-3 76 0 0 0 8
+3 cdg 8
 D0
 ~
 ~
@@ -586,30 +586,30 @@ Um Corredor~
 CAMINHO ERRADO!!!
 OOPS
 ~
-3 96 0 0 0 8
+3 fg 8
 S
 #333
 Um Corredor~
-SEM SA�DA!!!
-D 4HH!!!!    
+SEM SAÍDA!!!
+DUHH!!!!    
 ~
-3 96 0 0 0 8
+3 fg 8
 S
 #334
 Um Corredor~
-SEM SA�DA!!!
-D 4HH!!!!    
+SEM SAÍDA!!!
+DUHH!!!!    
 ~
-3 96 0 0 0 8
+3 fg 8
 S
 #335
 Um Corredor~
-   E mais uma vez, voc� est� na jun��o de corredores.  Este corredor parece
-lhe dar aquela sensa��o confort�vel, como se voc� estivesse em sua casa, lhe
-dando o sentimento de que voc� realizou sua tarefa, e agora vai sentar e
-relaxar com a fam�lia.
+   E mais uma vez, você está na junção de corredores.  Este corredor parece
+lhe dar aquela sensação confortável, como se você estivesse em sua casa, lhe
+dando o sentimento de que você realizou sua tarefa, e agora vai sentar e
+relaxar com a família.
 ~
-3 96 0 0 0 8
+3 fg 8
 D1
 ~
 ~
@@ -621,11 +621,11 @@ D2
 S
 #336
 Um Corredor~
-   E mais uma vez, voc� est� na jun��o de corredores.  Este corredor parece
-lhe dar aquela sensa��o confort�vel, como se voc� procurasse por sua casa e
-que seu objetivo est� a poucos passos daqui...
+   E mais uma vez, você está na junção de corredores.  Este corredor parece
+lhe dar aquela sensação confortável, como se você procurasse por sua casa e
+que seu objetivo está a poucos passos daqui...
 ~
-3 96 0 0 0 8
+3 fg 8
 D0
 ~
 ~
@@ -637,13 +637,13 @@ D3
 S
 #337
 Um Corredor~
-   Agora voc� sente como se pudesse alcan�ar aquela bandeja de bolinhos e
-leite que aguarda junto com sua fam�lia, onde todos riem e conversam em
-volta da lareira.  Papai est� sentado em sua grande poltrona, mam�e est� lhe
-esperando, com uma bandeja nas m�os.  Sua irm� est� sentada no sof�,
-esperando que voc� fa�a companhia a ela.
+   Agora você sente como se pudesse alcançar aquela bandeja de bolinhos e
+leite que aguarda junto com sua família, onde todos riem e conversam em
+volta da lareira.  Papai está sentado em sua grande poltrona, mamãe está lhe
+esperando, com uma bandeja nas mãos.  Sua irmã está sentada no sofá,
+esperando que você faça companhia a ela.
 ~
-3 96 0 0 0 8
+3 fg 8
 D0
 ~
 ~
@@ -655,11 +655,11 @@ D2
 S
 #338
 A Recompensa Final~
-   Adiante est� seu objetivo.  A sala brilha com a mais bela e branca luz de
-todas, lhe chamando para ela.  At� o cheiro da atmosfera mudou para um
-triunfante aroma.  Voc� tem certeza que conseguiu...
+   Adiante está seu objetivo.  A sala brilha com a mais bela e branca luz de
+todas, lhe chamando para ela.  Até o cheiro da atmosfera mudou para um
+triunfante aroma.  Você tem certeza que conseguiu...
 ~
-3 96 0 0 0 8
+3 fg 8
 D0
 ~
 ~
@@ -667,12 +667,12 @@ D0
 S
 #339
 Sob o Mar~
-   Voc� viu uma esp�cie de buraco na parte rasa da costa, logo abaixo da
-doca, e resolveu investigar.  Um pouco depois, voc� constata estar em um
-t�nel subaqu�tico, nadando entre corais e algas.  O caminho parece ser
+   Você viu uma espécie de buraco na parte rasa da costa, logo abaixo da
+doca, e resolveu investigar.  Um pouco depois, você constata estar em um
+túnel subaquático, nadando entre corais e algas.  O caminho parece ser
 bastante movimentado, tendo marcas de passagem recente por todos os lados.
 ~
-3 360 0 0 0 8
+3 fgdi 8
 D4
 ~
 ~
@@ -683,12 +683,12 @@ D5
 0 -1 340
 S
 #340
-O T�nel Subaqu�tico~
-   Voc� est� em um t�nel sub�quatico, nadando entre corais e algas.  O
+O Túnel Subaquático~
+   Você está em um túnel subáquatico, nadando entre corais e algas.  O
 caminho parece ser bastante movimentado, tendo marcas de passagem recente
 por todos os lados.
 ~
-3 360 0 0 0 8
+3 fgdi 8
 D4
 ~
 ~
@@ -699,12 +699,12 @@ D5
 0 -1 341
 S
 #341
-O T�nel Subaqu�tico~
-   Voc� est� em um t�nel sub�quatico, nadando entre corais e algas.  O
+O Túnel Subaquático~
+   Você está em um túnel subáquatico, nadando entre corais e algas.  O
 caminho parece ser bastante movimentado, tendo marcas de passagem recente
 por todos os lados.
 ~
-3 360 0 0 0 8
+3 fgdi 8
 D4
 ~
 ~
