@@ -3,13 +3,13 @@ compêndio universal livro~
 o Compêndio Universal de Armas e Armaduras~
 Um enorme livro sobre armas e armaduras, pronto para ser lido.~
 ~
-27 0 a 0
-0 0 0 0 0 0
-10 2000 0 0
+27 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+10 2000 0 0 0
 E
 compêndio universal livro~
 
-       @RO Compêndio Universal de Armas e Armaduras@n
+       	RO Compêndio Universal de Armas e Armaduras	n
 
    Saudações!
 
@@ -57,10 +57,10 @@ de muita coisa.
 cama e tacar fogo em tudo antes que alguém apareça e veja esse monte de
 baboseira.
 
-@GVolume 1: Dos Itens de Novato@n
+	GVolume 1: Dos Itens de Novato	n
 
 
-   @B*@n@C Capítulo I: Armas@n
+   	B*	n	C Capítulo I: Armas	n
 
    Ahhhhhhhh!  A parte boa da vida de aventuras!  As ARMAS!!  Bom, vamos ao
 que interessa!
@@ -92,7 +92,7 @@ artefato de exepcional utilidade como uma arma "off-hand" para qualquer
 aventureiro iniciante!
 
 
-   @B*@n @CCapítulo II: Luzes@n
+   	B*	n 	CCapítulo II: Luzes	n
 
    Hmmm...  Não há muito o que se falar aqui.  Acho que tem só uma luz mesmo
 na Zona dos Novatos.  Ai vai ela.
@@ -114,7 +114,7 @@ incandescente.
 encantamento que aumenta a defesa do usuário contra magias!
 
 
-   @B*@n @CCapítulo III: Armaduras@n
+   	B*	n 	CCapítulo III: Armaduras	n
 
    A parte chata dos itens.  As armaduras, que sempre estão naquele carinha
 que você quer tanto surrar...
@@ -199,7 +199,7 @@ aumenta significantemente a precisão dos ataques de quem a usa!  E pode (e
 deve!) ser utilizada por qualquer aventureiro em qualquer nível.
 
 
-   @B*@n @CCapítulo IV: O Minotauro@n
+   	B*	n 	CCapítulo IV: O Minotauro	n
 
    E aquele monstro que anda pelo sub-solo da Zona dos Novatos?  Que tal
 esfolá-lo depois de matá-lo, e usar seus restos?
@@ -239,14 +239,14 @@ livro memórias eriel claustro~
 as Memórias de Eriel~
 Um grande livro de memórias parece chamar sua atenção.~
 ~
-27 0 a 0
+27 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-10 2000 0 0
+10 2000 0 0 0
 E
 livro memórias eriel claustro~
 
-                        @RAs Memórias de Eriel@n
-                         @GEnsaios do Claustro@n
+                        	RAs Memórias de Eriel	n
+                         	GEnsaios do Claustro	n
 
    &GA Partida&n
 
@@ -434,9 +434,9 @@ livro história todos~
 a História de Todos Nós~
 Um pesado livro de histórias brilha, chamando sua atenção.~
 ~
-27 0 a 0
+27 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-10 2000 0 0
+10 2000 0 0 0
 E
 livro história todos~
 
@@ -552,9 +552,9 @@ livro contos aventuras lord~
 as Aventuras de um certo Lord~
 Um estranho livro manchado de vinho chama sua atenção.~
 ~
-27 0 a 0
+27 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-10 2000 0 0
+10 2000 0 0 0
 E
 livro contos aventuras lord~
 
@@ -660,9 +660,9 @@ livro retorno louse emnevar~
 o Retorno de Louse Emnevar~
 Um estranho livro manchado de vinho chama sua atenção.~
 ~
-27 0 a 0
+27 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-10 2000 0 0
+10 2000 0 0 0
 E
 livro retorno louse emnevar~
 
@@ -915,9 +915,9 @@ livro balserton~
 o Livro de Balserton~
 Um livro com apararência milenar está aqui.~
 ~
-27 0 a 0
+27 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-10 2000 0 0
+10 2000 0 0 0
 E
 livro  Balserton~
 As informações aqui contidas foram roubadas das mãos de um Dragão morador
@@ -1423,9 +1423,9 @@ livro mestre dragões andrés aventuras~
 as Aventuras de Andrés, o Mestre dos Dragões~
 Um grande livro de capa dourada chama a sua atenção.~
 ~
-27 0 a 0
+27 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-10 2000 0 0
+10 2000 0 0 0
 E
 livro mestre dragões~
                      &R"O Mestre dos Dragões"&n
@@ -1651,9 +1651,13 @@ livro destino homem~
 o livro do destino de um homem~
 Um belo livro foi deixado aqui, refletindo os raios solares com intensidade.~
 ~
-27 0 a 0
-0 0 0 0 0 0
-10 2000 0 0
+27 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+10 2000 0 0 0
+E
+autor Brujah~
+                   *	gEste Livro foi escrito por 	cBrujah Hauphentall&n*
+~
 E
 livro destino homem~
 
@@ -1810,18 +1814,14 @@ Reino, nos áureos céus de Vitália.
 
 
 ~
-E
-autor Brujah~
-                   *@gEste Livro foi escrito por @cBrujah Hauphentall&n*
-~
 #22108
 almas coração diário homenagem amigos~
 uma Homenagem aos Amigos~
 Uma página de um surrado diário está caída aqui.~
 ~
-27 0 a 0
+27 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-10 2000 0 0
+10 2000 0 0 0
 E
 almas coraçãon diário homenagem amigos~
 
@@ -1879,9 +1879,9 @@ livro anciao contador historias contos~
 O Ancião Contador de Histórias~
 Um livro de contos brilha, chamando sua atenção.~
 ~
-27 0 a 0
+27 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-10 2000 0 0
+10 2000 0 0 0
 E
 livro anciao contador historias contos~
 
@@ -2021,4 +2021,4 @@ pelo seu mestre."
                            &CApollo, emissário anônimo.&n
 
 ~
-$
+$~

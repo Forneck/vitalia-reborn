@@ -9,8 +9,8 @@ cuidadosamente todas as informações dos painéis, livros e avisos, que
 estarão espalhados nas próximas salas, adiante.  Agora boa jornada!  Digite
 @WW@n e siga para @WOESTE@n (w) e que bons ventos guiem seus passos!
 ~
-181 gfj 0
-D W
+181 608 0 0 0 0
+D0
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -26,30 +26,30 @@ fazê-lo, digite @WGET MAPA@n.  Na parede, um enorme @Wpainel@n brilha, chamando
 atenção.  Seja curioso, digite @WREAD PAINEL@n e descubra o que nele está
 escrito.  Para continuar sua jornada, digite @WU@n e torne-se mais sábio ainda.
 ~
-181 gfj 0
-D U
+181 608 0 0 0 0
+D0
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
 0 -1 18103
+E
+rosa rosa-dos-ventos ventos~
+Uma imensa rosa dos ventos pintada no chão com tintas que parecem fulgurar,
+mostrando aos viajantes as 10 direções de Vitália (Norte, Sul, Leste, Oeste,
+Noroeste, Nordeste, Sudeste, Sudoeste, Cima e Baixo).
+~
 E
 painel~
 Em nosso mundo, para se locomover, você deverá se utilizar dos pontos
 cardeais.  Temos disponibilizadas aqui, 10 direções: Norte (N), Sul (S),
 Leste (E), Oeste (W), Noroeste (NW), Nordeste (NE), Sudeste (SE), Sudoeste
 (SW), Cima (U) e Baixo (D).
-Quando quiser saber as saídas de um lugar, digite @WEXIT@n e fique atento também
+Quando quiser saber as saídas de um lugar, digite 	WEXIT	n e fique atento também
 para as descricões que todas as salas possuem, pois nestas descrições podem
-existir informações preciosas.  Também é possível usar o comando @WLOOK
-<direçao>@n (ex: LOOK NORTH).
-Para ler o seu mapa, digite @WREAD MAPA.@n Aproveite também para examinar a
-imensa @MRosa-dos-Ventos@n, pintada no chão, digitando @WLOOK ROSA@n.
-~
-E
-rosa rosa-dos-ventos ventos~
-Uma imensa rosa dos ventos pintada no chão com tintas que parecem fulgurar,
-mostrando aos viajantes as 10 direções de Vitália (Norte, Sul, Leste, Oeste,
-Noroeste, Nordeste, Sudeste, Sudoeste, Cima e Baixo).
+existir informações preciosas.  Também é possível usar o comando 	WLOOK
+<direçao>	n (ex: LOOK NORTH).
+Para ler o seu mapa, digite 	WREAD MAPA.	n Aproveite também para examinar a
+imensa 	MRosa-dos-Ventos	n, pintada no chão, digitando 	WLOOK ROSA	n.
 ~
 S
 #18103
@@ -58,29 +58,24 @@ Alcançando a Sabedoria~
 atravessa este jardim e segue em direção ao Norte.  Há um clima de paz
 reinando neste ambiente.
 ~
-181 gfj 0
-D D
-Você vê um lindo jardim.
-~
-~
-0 -1 18102
-D U
+181 608 0 0 0 0
+D0
 Você vê um lugar repleto de espelhos.
 ~
 ~
 0 -1 18104
-E
-jardim jardins flores flor~
-É um jardim deslumbrante, com as mais variadas qualidades de flores jamais
-vistas antes.  Seus perfumes penetram em suas narinas dando-lhe uma
-deliciosa sensação de bem-estar.
-~
 E
 rampa suspensa~
 É uma delicada rampa de madeira de lei, feita artesanalmente por algum
 carpinteiro muito experiente e artista.  A madeira de lei, provavelmente
 saída de alguma floresta próxima daqui, possui uma tonalidade forte de
 vermelho, lembrando o pôr-do-sol.
+~
+E
+jardim jardins flores flor~
+É um jardim deslumbrante, com as mais variadas qualidades de flores jamais
+vistas antes.  Seus perfumes penetram em suas narinas dando-lhe uma
+deliciosa sensação de bem-estar.
 ~
 S
 #18104
@@ -89,39 +84,23 @@ Casa dos Espelhos~
 cobrem todas as paredes, transmitindo a você uma sensação de infinito.  Há
 quatro portas neste lugar.  Que tal se você descobrisse aonde elas vão dar?
 ~
-181 gfj 0
-D N
-~
-~
-0 -1 18105
-D E
-~
-~
-0 -1 18106
-D S
-~
-~
-0 -1 18107
-D W
-~
-~
-0 -1 18118
-D D
+181 608 0 0 0 0
+D0
 ~
 ~
 0 -1 18108
+E
+porta portas~
+Imensas e maciças, parecem que foram feitas por mãos experientes e
+perfeccionistas.  Figuras medievais foram cuidadosamente entalhadas em sua
+superfície, deixando-a com o aspecto de uma grande moldura.
+~
 E
 espelho espelhos cristal~
 Enormes espelhos, feitos do mais puro cristal, cobrem todas as paredes da
 sala.  Você observa, impressionado, que estes espelhos parecem refletir não
 apenas a sua figura, mas também o seu caráter.  Teriam sido os Deuses que
 criaram estes artefatos?
-~
-E
-porta portas~
-Imensas e maciças, parecem que foram feitas por mãos experientes e
-perfeccionistas.  Figuras medievais foram cuidadosamente entalhadas em sua
-superfície, deixando-a com o aspecto de uma grande moldura.
 ~
 S
 #18105
@@ -130,23 +109,23 @@ Você entra numa sala maravilhosamente iluminada.  Espelhos de cristal cobrem
 todas as paredes, transmitindo a você uma sensação de infinito.  Há quatro
 portas neste lugar.  Que tal se você descobrisse aonde elas vão dar?
 ~
-181 gjf 0
-D S
+181 608 0 0 0 0
+D0
 ~
 ~
 0 -1 18104
+E
+porta portas~
+Imensas e maciças, parecem que foram feitas por mãos experientes e
+perfeccionistas.  Figuras medievais foram cuidadosamente entalhadas em sua
+superfície, deixando-a com o aspecto de uma grande moldura.
+~
 E
 espelho espelhos cristal~
 Enormes espelhos, feitos do mais puro cristal, cobrem todas as paredes da
 sala.  Você observa, impressionado, que estes espelhos parecem refletir não
 apenas a sua figura, mas também o seu caráter.  Teriam sido os Deuses que
 criaram estes artefatos?
-~
-E
-porta portas~
-Imensas e maciças, parecem que foram feitas por mãos experientes e
-perfeccionistas.  Figuras medievais foram cuidadosamente entalhadas em sua
-superfície, deixando-a com o aspecto de uma grande moldura.
 ~
 S
 #18106
@@ -155,23 +134,23 @@ Casa dos Espelhos~
 cobrem todas as paredes, transmitindo a você uma sensação de infinito.  Há
 quatro portas neste lugar.  Que tal se você descobrisse aonde elas vão dar?
 ~
-181 gfj 0
-D W
+181 608 0 0 0 0
+D0
 ~
 ~
 0 -1 18104
+E
+porta portas~
+Imensas e maciças, parecem que foram feitas por mãos experientes e
+perfeccionistas.  Figuras medievais foram cuidadosamente entalhadas em sua
+superfície, deixando-a com o aspecto de uma grande moldura.
+~
 E
 espelho espelhos cristal~
 Enormes espelhos, feitos do mais puro cristal, cobrem todas as paredes da
 sala.  Você observa, impressionado, que estes espelhos parecem refletir não
 apenas a sua figura, mas também o seu caráter.  Teriam sido os Deuses que
 criaram estes artefatos?
-~
-E
-porta portas~
-Imensas e maciças, parecem que foram feitas por mãos experientes e
-perfeccionistas.  Figuras medievais foram cuidadosamente entalhadas em sua
-superfície, deixando-a com o aspecto de uma grande moldura.
 ~
 S
 #18107
@@ -183,23 +162,23 @@ luminosidade.  Você se sente atraído por esta luz.  Que tal se você voltasse
 para o norte e depois seguisse para baixo, para descobrir de onde vem esta
 luz?
 ~
-181 gfj 0
-D N
+181 608 0 0 0 0
+D0
 ~
 ~
 0 -1 18104
+E
+porta portas~
+Imensas e maciças, parecem que foram feitas por mãos experientes e
+perfeccionistas.  Figuras medievais foram cuidadosamente entalhadas em sua
+superfície, deixando-a com o aspecto de uma grande moldura.
+~
 E
 espelho espelhos cristal~
 Enormes espelhos, feitos do mais puro cristal, cobrem todas as paredes da
 sala.  Você observa, impressionado, que estes espelhos parecem refletir não
 apenas a sua figura, mas também o seu caráter.  Teriam sido os Deuses que
 criaram estes espelhos mágicos?
-~
-E
-porta portas~
-Imensas e maciças, parecem que foram feitas por mãos experientes e
-perfeccionistas.  Figuras medievais foram cuidadosamente entalhadas em sua
-superfície, deixando-a com o aspecto de uma grande moldura.
 ~
 S
 #18108
@@ -210,24 +189,24 @@ reinando neste ambiente.  Você percebe que seu estômago começou a roncar e
 pensa que um belo naco de carne seria maravilhoso.  Continue a sua
 caminhada, quem sabe você não encontra algo que possa saciar a sua fome.
 ~
-181 gfj 0
-D D
+181 608 0 0 0 0
+D0
 Você vê um lindo jardim.
 ~
 ~
 0 -1 18109
-E
-jardim jardins flores flor~
-É um jardim deslumbrante, com as mais variadas qualidades de flores jamais
-vistas antes.  Seus perfumes penetram em suas narinas dando-lhe uma
-deliciosa sensação de bem-estar.
-~
 E
 rampa suspensa~
 É uma delicada rampa de madeira de lei, feita artesalmente por algum
 carpinteiro muito experiente e artista.  A madeira de lei, provavelmente
 saída de alguma floresta próxima daqui, possui uma tonalidade forte de
 vermelho, lembrando o pôr-do-sol.
+~
+E
+jardim jardins flores flor~
+É um jardim deslumbrante, com as mais variadas qualidades de flores jamais
+vistas antes.  Seus perfumes penetram em suas narinas dando-lhe uma
+deliciosa sensação de bem-estar.
 ~
 S
 #18109
@@ -240,25 +219,25 @@ suas mãos.  E quando a fome bater, basta digitar @WEAT PÃO@n.  É bem saboroso
 não acha?  Notou que um imenso @Wpainel@n foi colocado na parede?  Que tal
 lê-lo?  Para seguir com a sua jornada, digite W.
 ~
-181 gfj 0
-D W
+181 608 0 0 0 0
+D0
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
 0 -1 18110
 E
 painel parede~
-   Você já sabe o comando para comer:  @WEAT <alimento>@n
-   Para ver quanto de alimento você ainda tem, digite @WINV@n.
+   Você já sabe o comando para comer:  	WEAT <alimento>	n
+   Para ver quanto de alimento você ainda tem, digite 	WINV	n.
    E quando seu alimento terminar, você deverá comprar mais.  Há uma padaria
 muito boa em Midgaard, onde você poderá comprar pães fresquinhos a toda hora.
 Para ir até lá é bem simples: confira em seu mapa.   Ao chegar digite
-@WLIST@n e faça sua escolha.
-   Para comprar o que você escolheu digite: @WBUY <nome do alimento>@n, ou
+	WLIST	n e faça sua escolha.
+   Para comprar o que você escolheu digite: 	WBUY <nome do alimento>	n, ou
 observe o número correspondente ao alimento que você quer comprar e digite:
-@WBUY #<número>@n (ex: @WBUY #1@n, @WBUY #2@n).
+	WBUY #<número>	n (ex: 	WBUY #1	n, 	WBUY #2	n).
    Se você for esperto, vai aprender a olhar tudo o que pegar em suas mãos,
-minuciosamente.  Para isso é bem simples: @WLOOK <objeto>@n (ex: @WLOOK PÃO@n).
+minuciosamente.  Para isso é bem simples: 	WLOOK <objeto>	n (ex: 	WLOOK PÃO	n).
 ~
 S
 #18110
@@ -272,8 +251,8 @@ objeto foi esquecido aqui.  Que tal pegá-lo e enchê-lo?  Assim você não
 corre o risco de passar sede no futuro.  Para obtê-lo digite @WGET PORUNGA@n e
 leia o @Waviso@n que algum viajante mais experiente parece ter escrito.
 ~
-181 gfj 0
-D W
+181 608 0 0 0 0
+D0
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -282,10 +261,10 @@ E
 aviso~
    Para beber qualquer tipo de líquido, o comando deverá sempre ser:
 DRINK <nome do recepiente ou líquido>
-   Ex: @WDRINK GARRAFA@n, @WDRINK CANTIL@n, @WDRINK PORUNGA@n.
+   Ex: 	WDRINK GARRAFA	n, 	WDRINK CANTIL	n, 	WDRINK PORUNGA	n.
    Para tomar poções mágicas, o comando é:
-@WQUAFF <nome da poção>@n.
-   Ex: @WQUAFF INVISIBILIDADE@n, etc.
+	WQUAFF <nome da poção>	n.
+   Ex: 	WQUAFF INVISIBILIDADE	n, etc.
 ~
 S
 #18111
@@ -298,24 +277,24 @@ parede.  Talvez seja bom você ler o que está escrito.  E quem sabe não seja
 interessante pegar uma destas armas e aprender a usá-la corretamente.
 Afinal, nunca se sabe o dia de amanhã...
 ~
-181 gfj 0
-D W
+181 608 0 0 0 0
+D0
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
 0 -1 18112
 E
 inscrição inscrições~
-   Acostume-se a checar seus equipamentos.  Digite @WEQUIPMENT@n ou use a forma
-abreviada: @WEQ@n.  Para ver o que você carrega em suas mãos, use @WINVENTORY@nou
-abrevie e use @WINV@n.
+   Acostume-se a checar seus equipamentos.  Digite 	WEQUIPMENT	n ou use a forma
+abreviada: 	WEQ	n.  Para ver o que você carrega em suas mãos, use 	WINVENTORY	nou
+abrevie e use 	WINV	n.
 
-   Para empunhar uma arma, digite: @WWIELD <nome do objeto>@n.
-   Ex: @WWIELD ESPADA@n, @WWIELD FACA@n
+   Para empunhar uma arma, digite: 	WWIELD <nome do objeto>	n.
+   Ex: 	WWIELD ESPADA	n, 	WWIELD FACA	n
 
    Em Vitália também é possível segurar alguns objetos.  E para fazê-lo,
-digite: @WHOLD <objeto>@n.
-   Ex: @WHOLD LUZ@n, @WHOLD BASTAO@n.
+digite: 	WHOLD <objeto>	n.
+   Ex: 	WHOLD LUZ	n, 	WHOLD BASTAO	n.
 
    Alguns objetos, como varinhas, bastões e outros objetos, para serem
 usados, terão que ser seguros (hold).
@@ -331,8 +310,8 @@ feitas na parede.  Talvez seja bom você ler o que está escrito.  E quem sabe
 não seja interessante pegar uma destas armaduras e vesti-la da forma
 correta.  Afinal, nunca se sabe o dia de amanhã...
 ~
-181 gfj 0
-D W
+181 608 0 0 0 0
+D0
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -340,15 +319,15 @@ Você vê um caminho iluminado que parece não ter fim.
 E
 inscrição inscrições~
    Para usar uma armadura corretamente, é bem simples. Digite:
-@WWEAR <nome do objeto>@n.
-   Ex: @WWEAR COLETE@n, @WWEAR CALCAS@n.
+	WWEAR <nome do objeto>	n.
+   Ex: 	WWEAR COLETE	n, 	WWEAR CALCAS	n.
 
    Observe as pessoas quando estiver explorando Vitália.  Veja os objetos que
 elas costumam usar ao longo do corpo.
    Existem objetos para serem usados nas pernas, braços, pulsos, dedos, etc.
    Vai ser divertido experimentar trocar suas roupas, vestir armaduras cada vez
 melhores e que mais proteção lhe darão.
-   Lembre-se que: "@CO bom aprendiz é aquele que observa a tudo e a todos@n".
+   Lembre-se que: "	CO bom aprendiz é aquele que observa a tudo e a todos	n".
 ~
 S
 #18113
@@ -361,8 +340,8 @@ algo parecido com espelho, foram escritas diversas palavras.  Você percebe
 que as letras parecem fogo crepitando e sente necessidade de se aproximar
 para tentar ler aquilo que foi escrito.
 ~
-181 gfj 0
-D W
+181 608 0 0 0 0
+D0
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -373,8 +352,8 @@ painel parece aviso~
 silenciosa e inesperadamente.  Para que você não seja pego desprevinido,
 acostume-se a fazer uso de luzes.  Algumas luzes não possuem longa duração.
 Outras, porém, duram para sempre.
-   Para usar uma luz, é bem simples, digite: @WHOLD <nome do objeto>@n.  Ex:
-@WHOLD LANTERNA@n, @WHOLD JARRO@n.
+   Para usar uma luz, é bem simples, digite: 	WHOLD <nome do objeto>	n.  Ex:
+	WHOLD LANTERNA	n, 	WHOLD JARRO	n.
    Se a sua luz por algum motivo se apagar, não se preocupe.  Existem lojas
 em Vitália que vendem estes artigos, ou simplesmente procure uma por si
 mesmo.
@@ -390,8 +369,8 @@ certeza, por aqui passaram todos aqueles que resolveram seguir um caminho
 reto e digno.  Bem no centro da sala há um @Wpergaminho@n onde várias anotações
 foram feitas.  Pegue-o e torne-se mais sábio.
 ~
-181 gfj 0
-D W
+181 608 0 0 0 0
+D0
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -407,8 +386,8 @@ foram bastante estudados.  Algo no chão chama a sua atenção.  É um @Wlivro@n
 grosso e pesado e parece que alguém o deixou aqui de propósito.  Nunca se
 sabe o dia de amanhã.  Você gosta de livros?
 ~
-181 gfj 0
-D W
+181 608 0 0 0 0
+D0
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -428,8 +407,8 @@ sinuosos e você pressente que alguma coisa está se erguendo à sua frente,
 pronta para atacá-lo.  Lembre-se de tudo aquilo que aprendeu até agora e
 coloque em prática sem medo.  Os Deuses estarão ao seu lado.
 ~
-181 gfj 0
-D W
+181 608 0 0 0 0
+D0
 Você vê um caminho iluminado que parece não ter fim.
 ~
 ~
@@ -437,14 +416,14 @@ Você vê um caminho iluminado que parece não ter fim.
 E
 frase parede~
    Para atacar esta imensa cobra, certifique-se antes se você tem chances:
-@WCONSIDER COBRA@n.
-   Para observá-la bem @RANTES@n de atacar, digite: @WLOOK COBRA@n.
-   Lembre-se de checar seu comando de fuga automático, ex: @RWIMP 6@n
-   Para atacá-la digite: @WKILL COBRA@n.
-   Depois veja o que tem dentro do corpo: @WEXAMINE CORPO@n, ou simplesmente @WEXA
-CORPO@n.
+	WCONSIDER COBRA	n.
+   Para observá-la bem 	RANTES	n de atacar, digite: 	WLOOK COBRA	n.
+   Lembre-se de checar seu comando de fuga automático, ex: 	RWIMP 6	n
+   Para atacá-la digite: 	WKILL COBRA	n.
+   Depois veja o que tem dentro do corpo: 	WEXAMINE CORPO	n, ou simplesmente 	WEXA
+CORPO	n.
    E se achar interessante, pegue o ouro e os objetos que estão dentro dele:
-@WGET COLETE CORPO@n e depois @WGET OURO CORPO@n.
+	WGET COLETE CORPO	n e depois 	WGET OURO CORPO	n.
 ~
 S
 #18117
@@ -459,8 +438,8 @@ escolher para trilhar.  E que as recompensas virão na mesma proporção.
    É importante seguir conhecendo.  Uma @Wmensagem @n foi escrita para você.
    Antes de deixar esta sala, respire fundo, concentre-se e Boa Jornada.
 ~
-181 gfj 0
-D W
+181 608 0 0 0 0
+D0
 Você vê um caminho iluminado que parece estar chegando ao fim.
 ~
 ~
@@ -472,11 +451,17 @@ Casa dos Espelhos~
 cobrem todas as paredes, transmitindo a você uma sensação de infinito.  Há
 quatro portas neste lugar.  Que tal se você descobrisse aonde elas vão dar?
 ~
-181 gjf 0
+181 608 0 0 0 0
 D1
 ~
 ~
 0 -1 18104
+E
+porta portas~
+Imensas e maciças, parecem que foram feitas por mãos experientes e
+perfeccionistas.  Figuras medievais foram cuidadosamente entalhadas em sua
+superfície, deixando-a com o aspecto de uma grande moldura.
+~
 E
 espelho espelhos cristal~
 Enormes espelhos, feitos do mais puro cristal, cobrem todas as paredes da
@@ -484,11 +469,5 @@ sala.  Você observa, impressionado, que estes espelhos parecem refletir não
 apenas a sua figura, mas também o seu caráter.  Teriam sido os Deuses que
 criaram estes artefatos?
 ~
-E
-porta portas~
-Imensas e maciças, parecem que foram feitas por mãos experientes e
-perfeccionistas.  Figuras medievais foram cuidadosamente entalhadas em sua
-superfície, deixando-a com o aspecto de uma grande moldura.
-~
 S
-$
+$~

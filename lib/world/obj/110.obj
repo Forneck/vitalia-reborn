@@ -3,21 +3,9 @@ elmo luetn'amir metal esverdeado~
 @Go elmo de luetn'amir@n~
 Um majestoso elmo de metal esverdeado foi esquecido aqui.~
 ~
-9 aqdce ae 0
+9 acdeq 0 0 0 ae 0 0 0 0 0 0 0
 14 0 0 0
-20 0 0 101
-E
-elmo luetn'amir metal esverdeado~
-Você examina surpreso esse belo elmo pois é difícil não identificar o
-precioso metal com que ele foi feito: luetn'amir, a pedra de dragão, um raro
-mineral encontrado em grandes minas no interior das Montanhas Dragonhelm.
-Há muitos séculos não se vê uma peça feita desse material pois ele é
-cuidadosamente guardado pelos estranhos seres que habitam a cordilheira
-norte.  Na parte superior do elmo você ainda observa, maravilhado, o símbolo
-que a muito tempo pareceu desaparecer do conhecimento dos mortais: o Brasão
-de Vitália.  A viseira também é bastante... extraordinária. Definitivamente,
-é uma honra ter ente objeto em suas mãos.
-~
+20 0 0 101 0
 E
 viseira~
 É simplesmente a perfeita face de um impassível dragão.  Tocando-a, você
@@ -29,6 +17,18 @@ vermelhas, do mesmo jeito com que você os examina; o mais interessante é
 que, mesmo assim, quem usa abaixa essa viseira sobre o elmo consegue ver
 perfeitamente.  Por fim, você repara nas duas grandes presas que saem da
 boca da viseira: ainda bem que é de mentira...
+~
+E
+elmo luetn'amir metal esverdeado~
+Você examina surpreso esse belo elmo pois é difícil não identificar o
+precioso metal com que ele foi feito: luetn'amir, a pedra de dragão, um raro
+mineral encontrado em grandes minas no interior das Montanhas Dragonhelm.
+Há muitos séculos não se vê uma peça feita desse material pois ele é
+cuidadosamente guardado pelos estranhos seres que habitam a cordilheira
+norte.  Na parte superior do elmo você ainda observa, maravilhado, o símbolo
+que a muito tempo pareceu desaparecer do conhecimento dos mortais: o Brasão
+de Vitália.  A viseira também é bastante... extraordinária. Definitivamente,
+é uma honra ter ente objeto em suas mãos.
 ~
 A
 3 1
@@ -43,9 +43,9 @@ couraça esverdeado luetn'amir metal~
 @Ga couraça de luetn'amir@n~
 Há no chão uma couraça de metal esverdeado fulgurando à luz do Sol.~
 ~
-9 aqdce ad 0
+9 acdeq 0 0 0 ad 0 0 0 0 0 0 0
 17 0 0 0
-40 0 0 101
+40 0 0 101 0
 E
 couraça esverdeado luetn'amir metal~
 Impressionante!  Essa couraça parece ter sido na verdade extraída do tronco
@@ -70,9 +70,9 @@ amuleto pedra dragao~
 Um estranho amuleto flutua acima do solo, brilhando cada vez mais intensamente
 à medida que você se aproxima.~
 ~
-11 aqdce ac cdefk
+11 acdeq 0 0 0 ac 0 0 0 defgl 0 0 0
 0 0 0 0
-10 0 0 101
+10 0 0 101 0
 E
 amuleto pedra dragao~
 Não é só pela sua aparência, mas você sabe que esse amuleto é especial.  Até
@@ -99,9 +99,9 @@ anel luetn'amir chancela~
 @Go anel de chancela@n~
 Um pequeno aro de luetn'amir foi cuidadosamente depositado no chão.~
 ~
-9 aqdce ab 0
+9 acdeq 0 0 0 ab 0 0 0 0 0 0 0
 0 0 0 0
-10 0 0 101
+10 0 0 101 0
 E
 anel luetn'amir chancela~
 Esse anel cabe perfeitamente em qualquer dedo de sua mão.  Estranho isso,
@@ -124,9 +124,9 @@ escudo pedra dragao luetn'amir metal esverdeado~
 @Go escudo Pedra do Dragão@n~
 Alguém muito desleixado esqueceu aqui um imenso escudo de metal esverdeado.~
 ~
-9 aqdce aj 0
+9 acdeq 0 0 0 aj 0 0 0 0 0 0 0
 15 0 0 0
-30 0 0 101
+30 0 0 101 0
 E
 escudo pedra dragao luetn'amir metal esverdeado~
 Extremamente grande, mas nada pesado, esse escudo consegue proteger sem
@@ -150,9 +150,9 @@ garras metalicas luetn'amir dragao~
 @GGarras do Dragão@n~
 Um par de estranhas garras metálicas foram perdidas aqui.~
 ~
-9 aqdce ah 0
+9 acdeq 0 0 0 ah 0 0 0 0 0 0 0
 10 0 0 0
-20 0 0 101
+20 0 0 101 0
 E
 garras metalicas luetn'amir dragao~
 De aparência assustadora, essas manoplas em forma de garras são enormes, por
@@ -176,9 +176,9 @@ manto verde-musgo dragao~
 @Go Manto do Dragão@n~
 Um soberbo manto verde-musgo foi cuidadosamente dobrado e deixado no chão.~
 ~
-9 aqdce ak h
+9 acdeq 0 0 0 ak 0 0 0 i 0 0 0
 15 0 0 0
-15 0 0 101
+15 0 0 101 0
 E
 manto verde-musgo dragao~
 Visto de um ângulo parece veludo.  Mas não é.  Visto de outro, parece seda.
@@ -208,9 +208,9 @@ calcas couro dragao~
 @Gcalças de couro de dragão@n~
 Um par de calças feitas de um couro muito estranho foi deixado aqui.~
 ~
-9 aqdce af 0
+9 acdeq 0 0 0 af 0 0 0 0 0 0 0
 10 0 0 0
-15 0 0 101
+15 0 0 101 0
 E
 calcas couro dragao~
 Você não sabe se classifica essa calça como sendo horrenda ou maravilhosa!
@@ -236,9 +236,9 @@ bracais dragao bracos~
 Um enorme par de braçais semelhantes aos braços de um dragão foram perdidos
 por aqui.~
 ~
-9 aqdce ai 0
+9 acdeq 0 0 0 ai 0 0 0 0 0 0 0
 10 0 0 0
-20 0 0 101
+20 0 0 101 0
 E
 bracais dragao bracos~
 Esses braçais se encaixam perfeitamente nas Garras do Dragão, fazendo com
@@ -266,9 +266,9 @@ dente dragao bebe~
 @Go Dente de Dragão-bebê@n~
 Um pequeno dente de dragão-bebê foi esquecido aqui.~
 ~
-11 aqdce aq 0
+11 acdeq 0 0 0 aq 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0 101
+1 0 0 101 0
 E
 dente dragao bebe~
 Esse dente não é TÃO pequeno assim não...  Alias, é bem grande: do tamanho
@@ -279,7 +279,7 @@ bem cuidados ou que simplesmente essa peça foi muito bem polida), o
 luetn'amir, servindo perfeitamente de brinco.  O guerreiro que o usar
 decididamente ganhará um ar meio... selvagem.
 ~
-A 
+A
 17 -6
 A
 3 2
@@ -293,17 +293,19 @@ espada dragao brilho esverdeado~
 Você percebe que o estranho brilho esverdeado à sua frente nada mais é que
 uma enorme espada fincada no chão.~
 ~
-5 aqgdcer an 0
+5 acdegqr 0 0 0 an 0 0 0 0 0 0 0
 0 7 5 3
-30 0 0 101
+30 0 0 101 0
 E
-espada dragao brilho esverdeado~
-Gigantesca.  Essa é a palavra.  Você não sabe como um homem consegue
-segurá-la (se é que consegue) de tão grande ela é. Facilmente
-identifica-se o material usado nessa arma: só pode ser luetn'amir...
-Uma forte luz esverdedada irradia dela e, quando você a toca, transmite
-parte do brilho à sua pele, mas apenas por alguns instantes. Da empunhadura à
-lâmina, tudo o supreende, amedronta e causa reverência.
+lamina~
+Comprida e larga, a lâmina foi feita com um raro luetn'amir (luetn'amir já é
+um metal raro...  Imagine um luetn'amir mais raro ainda...) de tonalidade
+verde-água.  Extremamente duro, nada parece quebrar esse metal.  Você tenta
+imaginar que tipo de forja teria conseguido fazer tão perfeita arma, mas
+nada que seus olhos já tenham visto consegue dar-lhe uma idéia...  Há sobre
+a perfeita superficíe da lâmina símbolos que você não conhece e, da ponta à
+parte ligada à empunhadura, a figura de um enorme dragão carregando um
+estandarte com o Brasão de Vitália.
 ~
 E
 empunhadura~
@@ -318,15 +320,13 @@ as avermelhadas íris em formato de fenda que se expande ou contrai, dependendo
 da luz . Você estremece ao pensar que tavez ele esteja o vendo...
 ~
 E
-lamina~
-Comprida e larga, a lâmina foi feita com um raro luetn'amir (luetn'amir já é
-um metal raro...  Imagine um luetn'amir mais raro ainda...) de tonalidade
-verde-água.  Extremamente duro, nada parece quebrar esse metal.  Você tenta
-imaginar que tipo de forja teria conseguido fazer tão perfeita arma, mas
-nada que seus olhos já tenham visto consegue dar-lhe uma idéia...  Há sobre
-a perfeita superficíe da lâmina símbolos que você não conhece e, da ponta à
-parte ligada à empunhadura, a figura de um enorme dragão carregando um
-estandarte com o Brasão de Vitália.
+espada dragao brilho esverdeado~
+Gigantesca.  Essa é a palavra.  Você não sabe como um homem consegue
+segurá-la (se é que consegue) de tão grande ela é. Facilmente
+identifica-se o material usado nessa arma: só pode ser luetn'amir...
+Uma forte luz esverdedada irradia dela e, quando você a toca, transmite
+parte do brilho à sua pele, mas apenas por alguns instantes. Da empunhadura à
+lâmina, tudo o supreende, amedronta e causa reverência.
 ~
 A
 18 8
@@ -343,9 +343,9 @@ bracelete luetn'amir~
 @Go bracelete de luetn'amir@n~
 Um grande bracelete de luetn'amir foi esquecido no chão.~
 ~
-11 aqdce am 0
+11 acdeq 0 0 0 am 0 0 0 0 0 0 0
 0 0 0 0
-5 0 0 101
+5 0 0 101 0
 E
 bracelete luetn'amir~
 Esse bracelete serve perfeitamente para ser usado com as Garras e os Braçais
@@ -367,9 +367,9 @@ botas pernas couro dragao~
 @GBotas de Dragão@n~
 Um par de pernas... pernas não, botas de couro de dragão, foi esquecido aqui.~
 ~
-9 aqdce ag 0
+9 acdeq 0 0 0 ag 0 0 0 0 0 0 0
 10 0 0 0
-20 0 0 101
+20 0 0 101 0
 E
 botas pernas couro dragao~
 Você olha...  Olha...  E olha para esse par de botas (será?) e tenda definir
@@ -401,9 +401,9 @@ gorjal dragao luetn'amir metal esverdeado~
 @Go Gorjal do Dragão@n~
 Um exótico gorjal de metal esverdeado foi perdido aqui.~
 ~
-9 aqdce ac 0
+9 acdeq 0 0 0 ac 0 0 0 0 0 0 0
 10 0 0 0
-10 0 0 101
+10 0 0 101 0
 E
 gorjal dragão luetn'amir metal esverdeado~
 Feito de luetn'amir trabalhado, esse gorjal passa perfeitamente como sendo
@@ -428,9 +428,9 @@ cinturao dragao couro~
 @Go Cinturão do Dragão@n~
 Um belo cinturão de couro de dragão foi cuidadosamente enrolado e deixado aqui.~
 ~
-9 aqdce al r
+9 acdeq 0 0 0 al 0 0 0 s 0 0 0
 0 0 0 0
-10 0 0 101
+10 0 0 101 0
 E
 cinturao dragao couro~
 Uma grossa e única tira de couro de dragão foi usada nesse cinto, mas não de
@@ -455,22 +455,22 @@ camiseta camelo~
 uma camiseta com um simpático camelo estampado~
 Uma linda camiseta com uma estranha figura impressa nela, foi deixada aqui.~
 ~
-9 g 9
+9 g 0 0 0 ad 0 0 0 s 0 0 0
 10 0 0 0
-9 300 1000 0
+9 300 1000 0 0
 E
 camiseta camelo~
 Esta camiseta possui a estampa do camelo mais famoso de Vitália. Uma 
-frase está escrita nas costas: @G"Vote em mim para Prefeito de Midgaard"@n
+frase está escrita nas costas: 	G"Vote em mim para Prefeito de Midgaard"	n
 ~
 #11016
 camiseta raposa~
 uma camiseta com uma raposa estampada~
 Uma exótica camiseta estampada com a figura de uma estranha raposa foi deixada aqui.~
 ~
-9 g 9
+9 g 0 0 0 ad 0 0 0 s 0 0 0
 10 0 0 0
-9 300 1000 0
+9 300 1000 0 0
 E
 camiseta raposa~
 Que bela estampa a dela! E que ar de superioridade!! Pelo jeito, esta
@@ -481,128 +481,128 @@ bandeirinha numenor~
 uma bandeirinha do clã Numenor~
 Uma bandeirinha do clã Numenor foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha numenor~
-É uma linda flâmula @RVermelha@n, com um nome gravado em letras douradas:
- @yA Remanescentes Cavaleiros de Númenor@n.
+É uma linda flâmula 	RVermelha	n, com um nome gravado em letras douradas:
+ 	yA Remanescentes Cavaleiros de Númenor	n.
 ~
 #11018
 bandeirinha discipulos~
 uma bandeirinha do clã Discípulos~
 Uma bandeirinha do clã Discípulos foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha discipulos~
-É uma linda flâmula @Cturquesa@n, com um nome gravado em letras douradas:
- @yA Ordem dos Discípulos da Luz@n.
+É uma linda flâmula 	Cturquesa	n, com um nome gravado em letras douradas:
+ 	yA Ordem dos Discípulos da Luz	n.
 ~
 #11019
 bandeirinha virtude~
 uma bandeirinha do clã Virtude~
 Uma bandeirinha do clã Virtude foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha virtude~
-É uma linda flâmula @ccinza-azulado@n, com um nome gravado em letras douradas:
-@yOs Cavaleiros da Virtude@n.
+É uma linda flâmula 	ccinza-azulado	n, com um nome gravado em letras douradas:
+	yOs Cavaleiros da Virtude	n.
 ~
 #11020
 bandeirinha solis~
 uma bandeirinha do clã Solis~
 Uma bandeirinha do clã Solis foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha solis~
-É uma linda flâmula @Wbranco-perolado@n, com um nome gravado em letras douradas:
- @yA Tribo Seguidora do Sol@n.
+É uma linda flâmula 	Wbranco-perolado	n, com um nome gravado em letras douradas:
+ 	yA Tribo Seguidora do Sol	n.
 ~
 #11021
 bandeirinha mitra~
 uma bandeirinha do clã Mitra~
 Uma bandeirinha do clã Mitra foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha mitra~
-É uma linda flâmula @Yamarela@n, com um nome gravado em letras douradas:
- @yOs Olhos de Mitra@n.
+É uma linda flâmula 	Yamarela	n, com um nome gravado em letras douradas:
+ 	yOs Olhos de Mitra	n.
 ~
 #11022
 bandeirinha atlantes~
 uma bandeirinha do clã Atlantes~
 Uma bandeirinha do clã Atlantes foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha atlantes~
-É uma linda flâmula @Gverde-claro@n, com um nome gravado em letras douradas:
- @yGuardiões do Legado de Atlântida@n.
+É uma linda flâmula 	Gverde-claro	n, com um nome gravado em letras douradas:
+ 	yGuardiões do Legado de Atlântida	n.
 ~
 #11023
 bandeirinha jvkb~
 uma bandeirinha do clã JVKB~
 Uma bandeirinha do clã JVKB foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha jvkb~
-É uma linda flâmula @Bazul-claro@n, com um nome gravado em letras douradas:
- @yOs Guardiões do Segredo dos JVKB@n.
+É uma linda flâmula 	Bazul-claro	n, com um nome gravado em letras douradas:
+ 	yOs Guardiões do Segredo dos JVKB	n.
 ~
 #11024
 bandeirinha exercito~
 uma bandeirinha do clã Exército~
 Uma bandeirinha do clã Exército foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha exercito~
 É uma linda flâmula com um nome gravado em letras douradas:
- @yExército Suicida de Vitália@n.
+ 	yExército Suicida de Vitália	n.
 ~
 #11025
 apito prata~
 um brilhante apito de prata~
 Um brilhante apito de prata foi deixado aqui.~
 ~
-9 64 5
+9 g 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
-A
-18 1
+1 150 0 0 0
 E
 apito prata~
 Este apito possui um som altamente estridente e irritante. Cuidado para
 não importunar as pessoas que estão dormindo.
 ~
+A
+18 1
 #11026
 medalha melhor torcedor mesnadas~
 @Ga Medalha de melhor torcedor das Mesnadas@n~
 Uma Medalha de cor esverdeada foi deixada aqui.~
 ~
-13 0 ac 0 
+13 0 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0 0
+1 0 0 0 0
 E
 medalha melhor torcedor mesnadas~
 Uma medalha reluzente, é difícil não identificar o precioso metal com que
@@ -615,9 +615,9 @@ pipoca saquinho~
 um saquinho de pipocas~
 Um saquinho de pipocas foi deixado aqui.~
 ~
-19 0 1
+19 0 0 0 0 a 0 0 0 0 0 0 0
 12 0 0 0
-1 10 10 0
+1 10 10 0 0
 E
 pipoca saquinho~
 Hummm!!!  Que cheirinho bom!!  E estão quentinhas, feitas quase agora!  Você
@@ -628,9 +628,9 @@ taco mexicano~
 um taco mexicano~
 Um taco mexicano, que aparenta estar delicioso, foi abandonado aqui.~
 ~
-19 0 1
+19 0 0 0 0 a 0 0 0 0 0 0 0
 15 0 0 0
-1 15 15 0
+1 15 15 0 0
 E
 taco mexicano~
 Ahhhhh...  Você mal consegue resistir a este delicioso taco mexicano!  Hei
@@ -641,9 +641,9 @@ nachos nacho~
 alguns nachos com queijo~
 Alguém deixou alguns nachos com queijo aqui.~
 ~
-19 0 1
+19 0 0 0 0 a 0 0 0 0 0 0 0
 5 0 0 0
-1 5 5
+1 5 5 0 0
 E
 nachos nacho~
 Eles estão cobertos por muito queijo.  Parecem ser um dos especiais feitos
@@ -654,17 +654,17 @@ garrafa mineral~
 uma garrafa~
 Uma garrafa de água mineral gelada está aqui.~
 ~
-17 0 1
+17 0 0 0 0 a 0 0 0 0 0 0 0
 24 24 15 0
-1 10 6 0
+29 10 6 0 0
+E
+rotulo~
+Esta água está geladinha e mata a sua sede completamente!
+~
 E
 garrafa mineral~
 É uma garrafa azul e está gelada.  E percebe-se que havia rótulo grudado em um
 dos seus lados mas que parece ter se desgrudado.
-~
-E
-rotulo~
-Esta água está geladinha e mata a sua sede completamente!
 ~
 #11031
 garrafa pinot noir~
@@ -672,9 +672,9 @@ uma garrafa~
 Uma garrafa de um delicioso, gelado vinho Pinot Noir está aqui, apenas
 esperando ser degustado.~
 ~
-17 a a
+17 a 0 0 0 a 0 0 0 0 0 0 0
 10 10 2 0
-3 400 500 0
+15 400 500 0 0
 E
 garrafa pinot noir~
 O vinho possui uma bela cor vermelho escuro, e cai bem com qualquer comida.
@@ -684,9 +684,9 @@ oculos~
 @Gum par de óculos@n~
 Um par de óculos de aro de arame foi deixado aqui.~
 ~
-9 g ar
+9 g 0 0 0 ar 0 0 0 0 0 0 0
 10 0 0 0
-4 0 0 101
+4 0 0 101 0
 A
 3 1
 A
@@ -696,142 +696,142 @@ bandeirinha seth~
 uma bandeirinha do clã Seth~
 Uma bandeirinha do clã Seth foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha seth~
-É uma linda flâmula @ymarrom@n, com um nome gravado em letras douradas:
- @yOs Filhos de Seth@n.
+É uma linda flâmula 	ymarrom	n, com um nome gravado em letras douradas:
+ 	yOs Filhos de Seth	n.
 ~
 #11034
 bandeirinha protetores~
 uma bandeirinha do clã Protetores~
 Uma bandeirinha do clã Protetores foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha Protetores~
-É uma linda flâmula @Wbranca@n, com um nome gravado em letras douradas:
- @yOs Protetores do Bem@n.
+É uma linda flâmula 	Wbranca	n, com um nome gravado em letras douradas:
+ 	yOs Protetores do Bem	n.
 ~
 #11035
 bandeirinha vingadores~
 uma bandeirinha do clã Vingadores~
 Uma bandeirinha do clã Vingadores foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha vingadores~
 É uma linda flâmula com um nome gravado em letras douradas:
- @yOs Vingadores de Iris@n.
+ 	yOs Vingadores de Iris	n.
 ~
 #11036
 bandeirinha tempestade~
 uma bandeirinha do clã Tempestade~
 Uma bandeirinha do clã Tempestade foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha tempestade~
-É uma linda flâmula @gverde@n, com um nome gravado em letras douradas:
- @yOs Senhores da Tempestade@n.
+É uma linda flâmula 	gverde	n, com um nome gravado em letras douradas:
+ 	yOs Senhores da Tempestade	n.
 ~
 #11037
 bandeirinha dinastia~
 uma bandeirinha do clã Dinastia~
 Uma bandeirinha do clã Dinastia foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha dinastia~
-É uma linda flâmula @wbranca@n, com um nome gravado em letras douradas:
- @ySeguidores da Dinastia Breyldon@n.
+É uma linda flâmula 	wbranca	n, com um nome gravado em letras douradas:
+ 	ySeguidores da Dinastia Breyldon	n.
 ~
 #11038
 bandeirinha guardioes~
 uma bandeirinha do clã Guardiões~
 Uma bandeirinha do clã Guardiões foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha guardioes~
-É uma linda flâmula @Rvermelho-claro@n, com um nome gravado em letras douradas:
- @yOs Guardiões da Prisão de Kildner@n.
+É uma linda flâmula 	Rvermelho-claro	n, com um nome gravado em letras douradas:
+ 	yOs Guardiões da Prisão de Kildner	n.
 ~
 #11039
 bandeirinha luz~
 uma bandeirinha do clã Luz~
 Uma bandeirinha do clã Luz foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha luz~
-É uma linda flâmula @Wbranca@n, com um nome gravado em letras douradas:
- @yA Eterna Sociedade da Luz@n.
+É uma linda flâmula 	Wbranca	n, com um nome gravado em letras douradas:
+ 	yA Eterna Sociedade da Luz	n.
 ~
 #11040
 bandeirinha mclaud~
 uma bandeirinha do clã Mclaud~
 Uma bandeirinha do clã Mclaud foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha mclaud~
-É uma linda flâmula @Bazul-claro@n, com um nome gravado em letras douradas:
- @yOs protetores da Família Mclaud@n.
+É uma linda flâmula 	Bazul-claro	n, com um nome gravado em letras douradas:
+ 	yOs protetores da Família Mclaud	n.
 ~
 #11041
 bandeirinha trevas~
 uma bandeirinha do clã Trevas~
 Uma bandeirinha do clã Trevas foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha trevas~
-É uma linda flâmula @lcinza-escuro@n, com um nome gravado em letras douradas:
- @yOs Seguidores da Disciplina das Trevas@n.
+É uma linda flâmula 	lcinza-escuro	n, com um nome gravado em letras douradas:
+ 	yOs Seguidores da Disciplina das Trevas	n.
 ~
 #11042
 bandeirinha dragoon~
 uma bandeirinha do clã Dragoon~
 Uma bandeirinha do clã Dragoon foi deixada aqui.~
 ~
-13 0 ao 0 
+13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 150 0 0
+1 150 0 0 0
 E
 bandeirinha dragoon~
-É uma linda flâmula @rvermelha@n, com um nome gravado em letras douradas:
- @yOs Cavaleiros da família Dragoon@n.
+É uma linda flâmula 	rvermelha	n, com um nome gravado em letras douradas:
+ 	yOs Cavaleiros da família Dragoon	n.
 ~
 #11099
 portal~
 o portal da saída~
 Há um portal aqui, que o levará devolta à sua cidade.~
 ~
-26 cdegq 0 0
+26 cdegq 0 0 0 0 0 0 0 0 0 0 0
 50 0 0 0
-0 0 0 0
+0 0 0 0 0
 E
 portal~
 Através das névoas do portal você pode ver um caminho que o levará devolta à
 sua cidade.
 ~
-$
+$~

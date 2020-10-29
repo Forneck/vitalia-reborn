@@ -1,29 +1,30 @@
 Name: Anyte
 Pass: AnRCfBykX0mXk
-Titl: a Barda
+Titl: a Iniciada no Segundo C�rculo
 Sex : 2
 Clas: 4
-Levl: 17
+Levl: 19
 Id  : 6
 Brth: 1603323580
-Plyd: 19334
-Last: 1603933368
+Plyd: 24638
+Last: 1603991669
 Lmot: 1603324480
 Lnew: 1603323627
 Htwn: 3001
 Host: 189.120.73.49
 Hite: 161
 Wate: 139
-Alin: 65
+Alin: 26
 Act : hl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
-Room: 3001
-Hung: 14
-Thir: 16
-Hit : 187/210
-Mana : 100/100
-Move: 3/117
+Room: 3616
+Lern: 4
+Hung: 5
+Thir: 5
+Hit : 102/230
+Mana : 157/157
+Move: 107/120
 Str : 17/0
 Int : 9
 Wis : 11
@@ -31,17 +32,14 @@ Dex : 15
 Con : 12
 Cha : 8
 Ac  : 100
-Gold: 26501
-Exp : 2407300
+Gold: 61201
+Exp : 2649747
 Olc : 0
 Skil:
 222 80
 224 48
 231 80
 0 0
-Affs:
-63 17 0 42 131072 0 0 0
-0 0 0 0 0 0 0 0
 Alis: 2
  bash
  bash $*;st

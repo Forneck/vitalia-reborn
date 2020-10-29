@@ -3,9 +3,9 @@ armadura tenente prata malha~
 a armadura do tenente~
 Uma armadura feita de cota de malha prateada está jogada aqui.~
 ~
-9 0 ad
+9 0 0 0 0 ad 0 0 0 0 0 0 0
 6 0 0 0
-35 17000 5 20
+35 17000 5 20 0
 E
 armadura tenente prata malha~
 Parece que foi bem vestida e bem usada pelo seu antigo dono. A malha foi
@@ -19,9 +19,9 @@ medalhao dourado~
 o medalhão dourado de Penélope~
 Um medalhão dourado está jogado aqui.~
 ~
-9 adg ac
+9 adg 0 0 0 ac 0 0 0 0 0 0 0
 5 0 0 0
-6 17000 5 15
+6 17000 5 15 0
 A
 4 2
 A
@@ -31,33 +31,33 @@ rabo peixe adaga~
 a adaga rabo-de-peixe~
 Uma adaga rabo-de-peixe está aqui.~
 ~
-5 0 ano
+5 0 0 0 0 ano 0 0 0 0 0 0 0
 0 2 7 11
-12 10 3 10
+12 10 3 10 0
 #10007
 couro pedacos armadura~
 a armadura de pedaços de couro~
 Uma armadura feita de pedaços de couro está aqui.~
 ~
-9 0 ad
+9 0 0 0 0 ad 0 0 0 0 0 0 0
 6 0 0 0
-18 10 3 5
+18 10 3 5 0
 #10009
 coxa galinha mel grande~
 uma coxa de galinha coberta com mel~
 Uma grande coxa de galinha coberta de mel foi deixada aqui.~
 ~
-19 0 a
+19 0 0 0 0 a 0 0 0 0 0 0 0
 10 0 0 0
-3 2 1 0
+3 2 1 0 0
 #10012
 mordecai manto~
 o manto de Mordecai~
-o manto de Mordecai está aqui.~
+O manto de Mordecai está aqui.~
 ~
-9 j ak
+9 j 0 0 0 ak 0 0 0 0 0 0 0
 7 0 0 0
-20 85000 1 36
+20 85000 1 36 0
 E
 mordecai manto~
 É uma longa capa flutuante, toda pintada em preto com um fino colar branco
@@ -73,55 +73,55 @@ pedaco galinha coxinha~
 uma coxinha de galinha~
 Uma carne parecendo uma coxinha de galinha se encontra aqui.~
 ~
-19 0 1
+19 0 0 0 0 a 0 0 0 0 0 0 0
 5 0 0 0
-3 5 1 0
+3 5 1 0 0
 #10014
 chave bambu~
 a chave bambu~
 Há uma chave bambu aqui.~
 ~
-18 cq 1
+18 cq 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 1000 300 0
+1 1000 300 0 0
 #10015
 chave caveira~
 a chave em formato de caveira~
 Há uma chave em formato de caveira aqui.~
 ~
-18 cq 1
+18 cq 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 1000 300 0
+1 1000 300 0 0
 #10016
 moedas ouro tesouro~
 o tesouro de Mordecai~
 O tesouro de Mordecai foi deixado aqui.~
 ~
-20 0 1
+20 0 0 0 0 a 0 0 0 0 0 0 0
 10000 0 0 0
-10 10000 0 0
+10 10000 0 0 0
 #10017
 chave sombria cinza~
 a sombria chave cinza~
 Uma sombria chave cinza foi deixada aqui.~
 ~
-18 cq 1
+18 cq 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-10 10000 0 0
+10 10000 0 0 0
 #10018
 buraco coisa desagradavel mal cheirosa mancha negra~
 um buraco~
 Há uma coisa desagradável e mal cheirosa no chão. Parece uma mancha negra no chão.~
 ~
-15 0 0
+15 0 0 0 0 0 0 0 0 0 0 0 0
 200 0 -1 0
-0 0 0 0
+0 0 0 0 0
 #10019
 milho espiga~
 uma espiga de milho~
 Uma espiga, cheia do seu milho está aqui.~
 ~
-4 q ao
+4 q 0 0 0 ao 0 0 0 0 0 0 0
 4 1 1 17
-1 1 2 1
+1 1 2 1 0
 $~

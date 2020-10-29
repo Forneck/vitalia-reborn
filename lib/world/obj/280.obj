@@ -3,9 +3,9 @@ sabre cally~
 um sabre cally~
 Um belo sabre cally foi deixado aqui no chão.~
 ~
-5 8192 8193
+5 n 0 0 0 an 0 0 0 0 0 0 0
 0 4 5 3
-10 500 100
+10 500 100 0 0
 E
 sabre~
 Você vê um sabre ligeiramente curvo, feito do mais puro metal.
@@ -15,9 +15,9 @@ lanca titanio~
 uma lança de titânio azulado~
 Uma grande lança de titânio foi deixada aqui no chão.~
 ~
-5 gbikmnuot 8193
+5 bgikmnotu 0 0 0 an 0 0 0 0 0 0 0
 0 4 4 15
-10 3000 1000 40
+10 3000 1000 40 0
 E
 lanca~
 A lança de titânio é uma arma feita com uma liga de metal leve de tonalidade
@@ -36,17 +36,17 @@ cetro carvalho~
 um cetro de carvalho vermelho~
 Um cetro vermelho foi deixado aqui no chão.~
 ~
-5 34113 8193
+5 agikp 0 0 0 an 0 0 0 0 0 0 0
 0 3 6 7
-9 10000 1000 40
+9 10000 1000 40 0
 #28004
 foice pequena~
 uma pequena foice~
 Uma pequena foice foi deixada aqui.~
 ~
-5 bmntg 8193
+5 bgmnt 0 0 0 an 0 0 0 0 0 0 0
 0 2 6 17
-10 100 20
+10 100 20 0 0
 E
 foice~
 Apenas uma pequena foice que pode ter sido usada na colheita ou ainda como
@@ -57,9 +57,9 @@ balsamo pocao vida~
 um bálsamo de vida~
 Um frasco ricamente adornado foi deixado aqui.~
 ~
-10 1 1
+10 a 0 0 0 a 0 0 0 0 0 0 0
 10 28 28 -1
-5 100 30000
+5 100 30000 0 0
 E
 balsamo pocao~
 Você vê um bonito frasco contando um líquido vermelho dentro.
@@ -69,9 +69,9 @@ balsamo pocao cristalina~
 um bálsamo cristalino~
 Um frasco arredondado foi deixado aqui no chão.~
 ~
-10 1 1
+10 a 0 0 0 a 0 0 0 0 0 0 0
 10 36 29 -1
-5 150 30000
+5 150 30000 0 0
 E
 balsamo pocao~
 Você vê um bonito frasco arredondado, contendo um líquido brilhante e
@@ -82,9 +82,9 @@ bracelete graos~
 um bracelete feito de grãos~
 Um bracelete bem simples, feito de grãos, foi deixado aqui no chão.~
 ~
-9 98 4097
+9 bfg 0 0 0 am 0 0 0 0 0 0 0
 0 0 0 0
-5 1000 200 15
+5 1000 200 15 0
 E
 bracelete graos~
 Você vê um modesto bracelete feito com grãos de milho, arroz e sementes de
@@ -100,9 +100,9 @@ casaco la~
 um casaco de lã~
 Um casaco de lã foi deixado aqui.~
 ~
-9 320 1025
+9 gi 0 0 0 ak 0 0 0 0 0 0 0
 5 0 0 0
-10 5000 500
+10 5000 500 0 0
 A
 14 70
 #28051
@@ -110,9 +110,9 @@ bone gorro~
 um boné preto~
 Um boné preto foi deixado aqui.~
 ~
-9 128 17
+9 h 0 0 0 ae 0 0 0 0 0 0 0
 2 0 0 0
-8 100 50
+8 100 50 0 0
 A
 3 2
 #28052
@@ -120,9 +120,9 @@ luvas titanio~
 um par de luvas de titânio azulado~
 Um par de luvas metal azulado foi deixada aqui no chão.~
 ~
-9 klmnt 129
+9 klmnt 0 0 0 ah 0 0 0 0 0 0 0
 10 0 0 0
-8 30000 10000 50
+8 30000 10000 50 0
 A
 1 1
 A
@@ -132,9 +132,9 @@ botas titanio~
 um par de botas de titânio azulado~
 Um par de botas metal azulado foi deixada aqui no chão~
 ~
-9 322 65
+9 bgi 0 0 0 ag 0 0 0 0 0 0 0
 10 0 0 0
-10 30000 10000 50
+10 30000 10000 50 0
 A
 1 1
 A
@@ -144,9 +144,9 @@ mangas bracadeiras agua-marinha~
 uma braçadeira feita de água-marinha~
 Uma braçadeira feita de água-marinha foi deixada aqui no chão.~
 ~
-9 321 257
+9 agi 0 0 0 ai 0 0 0 0 0 0 0
 8 0 0 0
-12 10000 2000 30
+12 10000 2000 30 0
 A
 19 1
 A
@@ -156,9 +156,9 @@ anel negro escuro duplo~
 um anel-duplo negro~
 Um estranho anel escuro foi deixado aqui.~
 ~
-9 ajlnt 3
+9 ajlnt 0 0 0 ab 0 0 0 0 0 0 0
 10 0 0 0
-7 5000 1000 30
+7 5000 1000 30 0
 A
 5 1
 A
@@ -170,9 +170,9 @@ colar madeira fibra~
 um colar de fibra de madeira~
 Um colar de uma volta, feito de fibra de madeira, foi deixado no chão.~
 ~
-9 320 5
+9 gi 0 0 0 ac 0 0 0 0 0 0 0
 8 0 0 0
-10 2000 200
+10 2000 200 0 0
 A
 17 -6
 A
@@ -182,9 +182,9 @@ cascata fonte~
 uma cascata~
 Há uma cascata aqui alimentando a grande fonte com suas águas.~
 ~
-23 0 0
+23 0 0 0 0 0 0 0 0 0 0 0 0
 500 500 15 0
-0 0 0
+0 0 0 0 0
 E
 cascata fonte~
 Você vê uma grande fonte sendo alimentada pelas águas frescas e cristalinas
@@ -195,41 +195,41 @@ carne naco pedaco~
 um grande pedaço de carne~
 Há um grande pedaço de carne suculenta aqui.~
 ~
-19 0 1
+19 0 0 0 0 a 0 0 0 0 0 0 0
 24 0 0 1
-5 50 10
+5 50 10 0 0
 #28082
 carne naco pedaco~
 um grande pedaço de carne~
 Há um grande pedaço de carne suculenta aqui.~
 ~
-19 0 1
+19 0 0 0 0 a 0 0 0 0 0 0 0
 24 0 0 0
-5 50 10
+5 50 10 0 0
 #28083
 tonel barril~
 um tonel de leite~
 Um tonel de leite foi deixado aqui.~
 ~
-23 0 0
+23 0 0 0 0 0 0 0 0 0 0 0 0
 100 100 10 0
-5 100 0
+5 100 0 0 0
 #28084
 cofre arca~
 um pesado cofre de aço~
 Um pesado cofre de aço foi colocado bem ali naquele canto.~
 ~
-15 0 0
+15 0 0 0 0 0 0 0 0 0 0 0 0
 100 15 28096 0
-100 100 100
+100 100 100 0 0
 #28085
 pao viagem~
 um pão de viagem cally~
 Um pão de viagem foi deixado aqui.~
 ~
-19 0 1
+19 0 0 0 0 a 0 0 0 0 0 0 0
 24 0 0 0
-5 70 20
+5 70 20 0 0
 E
 pao viagem~
 Você vê um enorme pão redondo.
@@ -239,31 +239,31 @@ chave titanio ornamentada~
 uma chave de titânio ornamentada~
 Uma linda chave foi deixada aqui no chão.~
 ~
-18 65676 1
+18 cdhq 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-8 0 0
+8 0 0 0 0
 #28097
 chave sextavada~
 uma chave sextavada~
 Uma pequenina chave foi deixada aqui no chão~
 ~
-18 65676 1
+18 cdhq 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-6 0 0
+6 0 0 0 0
 #28098
 chave triangular~
 uma chave com três lados~
 Uma pequenina chave foi deixada aqui no chão~
 ~
-18 65676 1
+18 cdhq 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-6 0 0
+6 0 0 0 0
 #28099
 chave ferro~
 uma pesada chave de ferro~
 Uma pesada chave de ferro foi deixada aqui.~
 ~
-18 65676 1
+18 cdhq 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-12 0 0
-$
+12 0 0 0 0
+$~
