@@ -116,7 +116,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"bash", "bas", POS_FIGHTING, do_cast, 1, SKILL_BASH, CMD_PLAYERS},
 	{"brief", "br", POS_DEAD, do_gen_tog, 0, SCMD_BRIEF, CMD_SELF},
 	{"buildwalk", "buildwalk", POS_STANDING, do_gen_tog, LVL_BUILDER, SCMD_BUILDWALK, CMD_SELF},
-	{"buy", "bu", POS_STANDING, do_not_here, 0, 0, CMD_OBJ},
+//	{"buy", "bu", POS_STANDING, do_not_here, 0, 0, CMD_OBJ},
 	{"bug", "bug", POS_DEAD, do_ibt, 0, SCMD_BUG, CMD_NONE},
 	{"cast", "c", POS_SITTING, do_cast, 1, SCMD_SPELL, CMD_MISC},
 	{"cedit", "cedit", POS_DEAD, do_oasis_cedit, LVL_IMPL, CMD_NONE},
