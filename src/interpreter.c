@@ -562,7 +562,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	input[22] = GET_PRACTICES(ch);
 	input[23] = grupo;
 	//input 24 eh o clan em vez de mudhora
-	input[24] = -1;
+	input[24] = 0;
 	input[25] = GET_BREATH(ch);
 	input[26] = GET_HITROLL(ch);
 	input[27] = GET_DAMROLL(ch);
