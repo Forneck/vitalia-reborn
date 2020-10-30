@@ -1,31 +1,31 @@
 #4000
 As Colinas~
-   Você está em um caminho rumo ao norte.  Pequenas colinas o rodeiam.  Você
-sente forças malignas se aproximando desta direção.  A leste você vê a
-entrada de uma pequena vila.  Bem afastado à nordeste, uma enorme formação
-montanhosa começa a aparecer.
+   VocÃª estÃ¡ em um caminho rumo ao norte.  Pequenas colinas o rodeiam.  VocÃª
+sente forÃ§as malignas se aproximando desta direÃ§Ã£o.  A leste vocÃª vÃª a
+entrada de uma pequena vila.  Bem afastado Ã  nordeste, uma enorme formaÃ§Ã£o
+montanhosa comeÃ§a a aparecer.
 ~
-40 4 0 0 0 4
+40 c 4
 D0
 ~
 ~
 0 -1 4001
-D1
-~
-~
-0 -1 3400
 D2
 ~
 ~
 0 -1 3500
+D1
+~
+~
+0 -1 3400
 S
 #4001
 As Colinas~
-   Você está em um pequeno caminho rumo ao norte. Colinas escuras e
-aterrorizantes estão quase em todas as direções ao seu redor. A uma
-distância média ao norte, você vê a enorme sombra de uma montanha solitária.
+   VocÃª estÃ¡ em um pequeno caminho rumo ao norte. Colinas escuras e
+aterrorizantes estÃ£o quase em todas as direÃ§Ãµes ao seu redor. A uma
+distÃ¢ncia mÃ©dia ao norte, vocÃª vÃª a enorme sombra de uma montanha solitÃ¡ria.
 ~
-40 4 0 0 0 4
+40 c 4
 D0
 ~
 ~
@@ -37,14 +37,14 @@ D2
 S
 #4002
 O Fim do Caminho~
-   O caminho termina aqui.  Ao norte, repousa uma única montanha e ao redor
-de você estão algumas colinas aterrorizantes.  Uma pequena trilha o leva
-pelas colinas através dos rochedos até uma caverna escura, localizada ao
-norte.  Distante a nordeste, você pode ver a face sul mais extrema do que
-parece ser uma formação montanhosa.  Você vê, ainda, um caminho seguindo
+   O caminho termina aqui.  Ao norte, repousa uma Ãºnica montanha e ao redor
+de vocÃª estÃ£o algumas colinas aterrorizantes.  Uma pequena trilha o leva
+pelas colinas atravÃ©s dos rochedos atÃ© uma caverna escura, localizada ao
+norte.  Distante a nordeste, vocÃª pode ver a face sul mais extrema do que
+parece ser uma formaÃ§Ã£o montanhosa.  VocÃª vÃª, ainda, um caminho seguindo
 montanha acima.
 ~
-40 4 0 0 0 4
+40 c 4
 D0
 ~
 ~
@@ -60,12 +60,12 @@ D4
 S
 #4010
 A Caverna~
-   Você está em uma pequena caverna com aproximadamente 4,5 metros de
+   VocÃª estÃ¡ em uma pequena caverna com aproximadamente 4,5 metros de
 largura e 11 metros de comprimento. Uma suave brisa fresca vinda do sul o
-faz pensar que a saída da caverna é nesta direção. Ao norte, um pequeno
-túnel continua dentro da montanha.
+faz pensar que a saÃ­da da caverna Ã© nesta direÃ§Ã£o. Ao norte, um pequeno
+tÃºnel continua dentro da montanha.
 ~
-40 9 0 0 0 2
+40 ad 2
 D0
 ~
 ~
@@ -76,13 +76,13 @@ D2
 0 -1 4002
 S
 #4011
-O Túnel~
-   Você força a sua passagem através de um estreito túnel, ajudado pelas
-paredes molhadas e limosas que fazem você escorregar pelo caminho. O cheiro
-podre de lodo cresce a medida que você se embrenha ao norte, mas você ainda
-é capaz de sentir uma suave brisa fresca vindo por trás de você.
+O TÃºnel~
+   VocÃª forÃ§a a sua passagem atravÃ©s de um estreito tÃºnel, ajudado pelas
+paredes molhadas e limosas que fazem vocÃª escorregar pelo caminho. O cheiro
+podre de lodo cresce a medida que vocÃª se embrenha ao norte, mas vocÃª ainda
+Ã© capaz de sentir uma suave brisa fresca vindo por trÃ¡s de vocÃª.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -93,12 +93,12 @@ D2
 0 -1 4010
 S
 #4012
-O Túnel~
-   Você se encontra em uma curva deste túnel estreito. Ele parece se abrir
-ao norte para uma caverna enquanto que a leste, o túnel continua seguindo
-adiante através da montanha.
+O TÃºnel~
+   VocÃª se encontra em uma curva deste tÃºnel estreito. Ele parece se abrir
+ao norte para uma caverna enquanto que a leste, o tÃºnel continua seguindo
+adiante atravÃ©s da montanha.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -109,13 +109,13 @@ D1
 0 -1 4013
 S
 #4013
-O Túnel~
-   Em pé no chão sujo no meio da caverna, você percebe que esta passagem não
-é muito utilizada. Ela parece seguir na direção leste, oeste e norte.
+O TÃºnel~
+   Em pÃ© no chÃ£o sujo no meio da caverna, vocÃª percebe que esta passagem nÃ£o
+Ã© muito utilizada. Ela parece seguir na direÃ§Ã£o leste, oeste e norte.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
-Há uma estranha construção ali.
+HÃ¡ uma estranha construÃ§Ã£o ali.
 ~
 ~
 0 -1 6969
@@ -129,13 +129,13 @@ D3
 0 -1 4012
 S
 #4014
-O Túnel~
-   Você se encontra em uma pequena interseção dos caminhos da caverna. O
-túnel principal parece curvar do sul para o oeste, mas há uma entrada ao
-norte. A entrada não parece ser natural e é muito mais recente que o túnel
+O TÃºnel~
+   VocÃª se encontra em uma pequena interseÃ§Ã£o dos caminhos da caverna. O
+tÃºnel principal parece curvar do sul para o oeste, mas hÃ¡ uma entrada ao
+norte. A entrada nÃ£o parece ser natural e Ã© muito mais recente que o tÃºnel
 ou mesmo a caverna.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -150,12 +150,12 @@ D3
 0 -1 4013
 S
 #4015
-O Túnel~
-   Você escala através do túnel estreito. As paredes umidas, pela
-condensação e, o peso da rocha sobre você o faz se sentir um pouco
-claustrofóbico. O túnel faz uma curva abrupta do oeste para o norte daqui.
+O TÃºnel~
+   VocÃª escala atravÃ©s do tÃºnel estreito. As paredes umidas, pela
+condensaÃ§Ã£o e, o peso da rocha sobre vocÃª o faz se sentir um pouco
+claustrofÃ³bico. O tÃºnel faz uma curva abrupta do oeste para o norte daqui.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -167,11 +167,11 @@ D3
 S
 #4016
 A Caverna Ampla~
-   Você está em uma caverna razoavelmente ampla. Grande o bastante para
-fazer as paredes a leste e a oeste quase sumirem na escuridão. Um pequeno
-túnel se abre ao sul e este também é bem escuro.
+   VocÃª estÃ¡ em uma caverna razoavelmente ampla. Grande o bastante para
+fazer as paredes a leste e a oeste quase sumirem na escuridÃ£o. Um pequeno
+tÃºnel se abre ao sul e este tambÃ©m Ã© bem escuro.
 ~
-40 9 0 0 0 2
+40 ad 2
 D1
 ~
 ~
@@ -187,12 +187,12 @@ D3
 S
 #4017
 A Caverna Ampla~
-   Você anda através da caverna para a extremidade a leste, porem descobre
-que aparentemente não há nenhuma outra saída de lá. As paredes são
-razoavelmente lisas e parecem ter sido naturalmente esculpidas pela ação da
-água nas rochas.
+   VocÃª anda atravÃ©s da caverna para a extremidade a leste, porem descobre
+que aparentemente nÃ£o hÃ¡ nenhuma outra saÃ­da de lÃ¡. As paredes sÃ£o
+razoavelmente lisas e parecem ter sido naturalmente esculpidas pela aÃ§Ã£o da
+Ã¡gua nas rochas.
 ~
-40 9 0 0 0 2
+40 ad 2
 D3
 ~
 ~
@@ -200,12 +200,12 @@ D3
 S
 #4018
 A Caverna~
-   Você se encontra na parte mais ao sul da caverna, onde ela se transforma
-em um túnel e segue ao sul. A caverna continua ao norte, cada vez mais
-profunda e mergulhada em escuridão. Você percebe uma pilha de ossos em um
+   VocÃª se encontra na parte mais ao sul da caverna, onde ela se transforma
+em um tÃºnel e segue ao sul. A caverna continua ao norte, cada vez mais
+profunda e mergulhada em escuridÃ£o. VocÃª percebe uma pilha de ossos em um
 dos cantos.
 ~
-40 9 0 0 0 2
+40 ad 2
 D0
 ~
 ~
@@ -216,16 +216,16 @@ D2
 0 -1 4014
 E
 pilha ossos~
-Você deveria tomar cuidado - alguns dos ossos são humanos!
+VocÃª deveria tomar cuidado - alguns dos ossos sÃ£o humanos!
 ~
 S
 #4019
-O Túnel~
-   Você está no meio de um de uma passagem razoavelmente ampla, que segue
-numa direção norte-sul. As paredes são bem polidas, como se um rio tivesse
+O TÃºnel~
+   VocÃª estÃ¡ no meio de um de uma passagem razoavelmente ampla, que segue
+numa direÃ§Ã£o norte-sul. As paredes sÃ£o bem polidas, como se um rio tivesse
 as esculpido dentro da terra.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -237,10 +237,10 @@ D2
 S
 #4020
 O Buraco~
-   Você está em uma pequena alcova, ao lado do túnel principal. Há um buraco
-grade no chão da alcova. Além do buraco, a única saida é ao norte.
+   VocÃª estÃ¡ em uma pequena alcova, ao lado do tÃºnel principal. HÃ¡ um buraco
+grade no chÃ£o da alcova. AlÃ©m do buraco, a Ãºnica saida Ã© ao norte.
 ~
-40 13 0 0 0 3
+40 acd 3
 D0
 ~
 ~
@@ -252,11 +252,11 @@ D5
 S
 #4021
 O Buraco~
-   Tão logo você chega ao final do túnel, você nota um enorme buraco no chão
-próximo a um dos cantos das paredes. O túnel continua a leste. O ar aqui é
-muito úmido e você sente como se estivesse ficando molhado e pegajoso.
+   TÃ£o logo vocÃª chega ao final do tÃºnel, vocÃª nota um enorme buraco no chÃ£o
+prÃ³ximo a um dos cantos das paredes. O tÃºnel continua a leste. O ar aqui Ã©
+muito Ãºmido e vocÃª sente como se estivesse ficando molhado e pegajoso.
 ~
-40 13 0 0 0 3
+40 acd 3
 D1
 ~
 ~
@@ -267,12 +267,12 @@ D5
 0 -1 4115
 S
 #4022
-O Túnel Úmido~
-   Você está no meio de um túnel úmido. As gotículas de agua em suspensão no
-ar são tão densas que você quase pode vê-las grudando em sua roupa. O túnel
+O TÃºnel Ãšmido~
+   VocÃª estÃ¡ no meio de um tÃºnel Ãºmido. As gotÃ­culas de agua em suspensÃ£o no
+ar sÃ£o tÃ£o densas que vocÃª quase pode vÃª-las grudando em sua roupa. O tÃºnel
 continua a norte e a oeste. Uma caverna se abre a leste.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -288,13 +288,13 @@ D3
 S
 #4023
 A Caverna Ampla~
-   Você está próximo da parte oeste da grande caverna. Para o leste você vê
-um túnel.  O ar na entrada do túnel é pesado, com tanta umidade que as
-gotículas de ar pairam no ar, fazendo você ter a impressão que está parado
-na chuva. As paredes da caverna são quase totalmente envolta em sombras e
-escuridão, assim como a parte sul da caverna.
+   VocÃª estÃ¡ prÃ³ximo da parte oeste da grande caverna. Para o leste vocÃª vÃª
+um tÃºnel.  O ar na entrada do tÃºnel Ã© pesado, com tanta umidade que as
+gotÃ­culas de ar pairam no ar, fazendo vocÃª ter a impressÃ£o que estÃ¡ parado
+na chuva. As paredes da caverna sÃ£o quase totalmente envolta em sombras e
+escuridÃ£o, assim como a parte sul da caverna.
 ~
-40 9 0 0 0 2
+40 ad 2
 D1
 ~
 ~
@@ -305,13 +305,13 @@ D3
 0 -1 4022
 S
 #4024
-O Túnel Úmido~
-   O túnel em que você está agora é muito úmido e, o ar, parece querer te
-segurar com tanta umidade. Filetes quase constantes de água escorrem pelas
-paredes, se acumulando no chão, em pequenas poças estagnadas. O túnel segue
-distante ao sul.  A oeste o ar é ainda mais pesado e úmido que aqui.
+O TÃºnel Ãšmido~
+   O tÃºnel em que vocÃª estÃ¡ agora Ã© muito Ãºmido e, o ar, parece querer te
+segurar com tanta umidade. Filetes quase constantes de Ã¡gua escorrem pelas
+paredes, se acumulando no chÃ£o, em pequenas poÃ§as estagnadas. O tÃºnel segue
+distante ao sul.  A oeste o ar Ã© ainda mais pesado e Ãºmido que aqui.
 ~
-40 9 0 0 0 3
+40 ad 3
 D2
 ~
 ~
@@ -323,11 +323,11 @@ D3
 S
 #4025
 A Caverna~
-   A parte norte de uma caverna é onde você está agora. A parede da caverna
-a leste possui uma abertura que parece levar a uma junção de vários outros
-túneis.
+   A parte norte de uma caverna Ã© onde vocÃª estÃ¡ agora. A parede da caverna
+a leste possui uma abertura que parece levar a uma junÃ§Ã£o de vÃ¡rios outros
+tÃºneis.
 ~
-40 9 0 0 0 2
+40 ad 2
 D1
 ~
 ~
@@ -338,13 +338,13 @@ D2
 0 -1 4018
 S
 #4026
-O Encontro dos Túneis~
-   O ponto de interseção de muitos túneis é onde você está agora. Do túnel
+O Encontro dos TÃºneis~
+   O ponto de interseÃ§Ã£o de muitos tÃºneis Ã© onde vocÃª estÃ¡ agora. Do tÃºnel
 ao norte, vem um terrivel cheiro de mofado, enquanto que o a oeste parece se
-abrir quase que imediatamente para uma caverna. Os túneis ao sul e a leste
-estão totalmente envoltos pela escuridão.
+abrir quase que imediatamente para uma caverna. Os tÃºneis ao sul e a leste
+estÃ£o totalmente envoltos pela escuridÃ£o.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -363,13 +363,13 @@ D3
 0 -1 4025
 S
 #4027
-O Túnel~
-   Você chegou a um cotovelo do túnel. As passagens vão para o oeste e para
-o norte.  Você observa uma alcova, escondida nas sombras, logo ao sul de
-você, e também sente uma suave brisa vinda de algum lugar, provavelmente do
+O TÃºnel~
+   VocÃª chegou a um cotovelo do tÃºnel. As passagens vÃ£o para o oeste e para
+o norte.  VocÃª observa uma alcova, escondida nas sombras, logo ao sul de
+vocÃª, e tambÃ©m sente uma suave brisa vinda de algum lugar, provavelmente do
 norte.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -384,12 +384,12 @@ D3
 0 -1 4026
 S
 #4028
-O Túnel Mau-cheiroso~
-   Você está em um pequeno túnel do tipo norte-sul. Há uma pequena luz
-visível ao norte. Parando por um instante, você nota um cheiro estranho
-vindo também do norte.
+O TÃºnel Mau-cheiroso~
+   VocÃª estÃ¡ em um pequeno tÃºnel do tipo norte-sul. HÃ¡ uma pequena luz
+visÃ­vel ao norte. Parando por um instante, vocÃª nota um cheiro estranho
+vindo tambÃ©m do norte.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -401,10 +401,10 @@ D2
 S
 #4029
 A Caverna~
-   Você está em uma caverna com ar fresco. Um vento sopra do norte. Para o
-sul, você vê um pequeno túnel seguindo adiante na montanha.
+   VocÃª estÃ¡ em uma caverna com ar fresco. Um vento sopra do norte. Para o
+sul, vocÃª vÃª um pequeno tÃºnel seguindo adiante na montanha.
 ~
-40 9 0 0 0 2
+40 ad 2
 D0
 ~
 ~
@@ -416,36 +416,36 @@ D2
 S
 #4030
 A Caverna Iluminada~
-   Você está em uma caverna iluminada. Através de um enorme buraco sobre sua
-cabeça, você vê o céu. A única saída daqui é ao sul. Olhando ao redor, você
-descobre a fonte do mau-cheiro. Corpos de vários monstros em decomposição se
+   VocÃª estÃ¡ em uma caverna iluminada. AtravÃ©s de um enorme buraco sobre sua
+cabeÃ§a, vocÃª vÃª o cÃ©u. A Ãºnica saÃ­da daqui Ã© ao sul. Olhando ao redor, vocÃª
+descobre a fonte do mau-cheiro. Corpos de vÃ¡rios monstros em decomposiÃ§Ã£o se
 espalham pela caverna.
 ~
-40 8 0 0 0 2
+40 d 2
 D2
 ~
 ~
 0 -1 4028
 E
 corpo corpos~
-Olhando melhor os corpos pelo chão, você vê que todos eles parecem ter sido
-rasgados por alguma grande criatura. Além disso, como você não poderia
-deixar de notar, todos estão fedendo muito.
+Olhando melhor os corpos pelo chÃ£o, vocÃª vÃª que todos eles parecem ter sido
+rasgados por alguma grande criatura. AlÃ©m disso, como vocÃª nÃ£o poderia
+deixar de notar, todos estÃ£o fedendo muito.
 ~
 S
 #4031
 O Vale~
-   Você está em um pequeno vale, cercado por colinas e por uma montanha ao
-sul.  Há uma caverna na montanha. Para o norte você pode entrar nas colinas.
+   VocÃª estÃ¡ em um pequeno vale, cercado por colinas e por uma montanha ao
+sul.  HÃ¡ uma caverna na montanha. Para o norte vocÃª pode entrar nas colinas.
 Uma trilha a leste sobe uma delas.
 ~
-40 0 0 0 0 2
+40 0 2
 D0
 ~
 ~
 0 -1 4032
 D1
-Você observa uma trilha seguindo rumo as colinas para o leste
+VocÃª observa uma trilha seguindo rumo as colinas para o leste
 ~
 ~
 0 -1 4045
@@ -456,10 +456,10 @@ D2
 S
 #4032
 As Baixas Colinas~
-   Você está andando por um caminho que segue serpenteando através das
+   VocÃª estÃ¡ andando por um caminho que segue serpenteando atravÃ©s das
 baixas colinas do lado norte do Monte Moria. O caminho continua ao norte.
 ~
-40 0 0 0 0 4
+40 0 4
 D0
 ~
 ~
@@ -470,11 +470,11 @@ D2
 0 -1 4031
 S
 #4033
-A Interseção nas Baixas Colinas~
-   Você está em um ponto do caminho que se divide. A estrada continua ao
+A InterseÃ§Ã£o nas Baixas Colinas~
+   VocÃª estÃ¡ em um ponto do caminho que se divide. A estrada continua ao
 norte, enquanto uma trilha rude segue a leste para as montanhas.
 ~
-40 0 0 0 0 4
+40 0 4
 D0
 ~
 ~
@@ -489,14 +489,14 @@ D2
 0 -1 4032
 S
 #4034
-A Área Gramada nas Baixas Colinas~
-   A grama aqui é estranhamente alta. Você percebe vários pontos na relva
+A Ãrea Gramada nas Baixas Colinas~
+   A grama aqui Ã© estranhamente alta. VocÃª percebe vÃ¡rios pontos na relva
 que foram debastados por alguem ou algo bem grande. Muitas rochas enormes e
-pesadas estão jogadas pelo campo. Indo através do caminho ao norte, você
-chega ao fim das baixas colinas e para o oeste, você estará entrando
-novamente nelas. Ao sul, você vê uma pequena interseção no caminho.
+pesadas estÃ£o jogadas pelo campo. Indo atravÃ©s do caminho ao norte, vocÃª
+chega ao fim das baixas colinas e para o oeste, vocÃª estarÃ¡ entrando
+novamente nelas. Ao sul, vocÃª vÃª uma pequena interseÃ§Ã£o no caminho.
 ~
-40 0 0 0 0 2
+40 0 2
 D0
 ~
 ~
@@ -512,11 +512,11 @@ D3
 S
 #4035
 O Fim das Baixas Colinas~
-   Você está na extremidade norte das baixas colinas, onde elas se encontram
-com as planícies mais ao norte. Você pode voltar para as baixas colinas ao
-sul, ou seguir adiante através das planícies.
+   VocÃª estÃ¡ na extremidade norte das baixas colinas, onde elas se encontram
+com as planÃ­cies mais ao norte. VocÃª pode voltar para as baixas colinas ao
+sul, ou seguir adiante atravÃ©s das planÃ­cies.
 ~
-40 0 0 0 0 4
+40 0 4
 D0
 ~
 ~
@@ -527,11 +527,11 @@ D2
 0 -1 4034
 S
 #4036
-As Planícies~
-   Você está nas planícies. O caminho segue para o sul. Olhando melhor ao
-redor, você nota uma trilha pequena, quase invísivel, entrando em um bosque.
+As PlanÃ­cies~
+   VocÃª estÃ¡ nas planÃ­cies. O caminho segue para o sul. Olhando melhor ao
+redor, vocÃª nota uma trilha pequena, quase invÃ­sivel, entrando em um bosque.
 ~
-40 0 0 0 0 2
+40 0 2
 D2
 ~
 ~
@@ -542,17 +542,13 @@ D3
 0 -1 4075
 S
 #4037
-O Caminho Através das Baixas Colinas~
-   Você está em um caminho através das baixas colinas, numa direção
-leste-oeste.  Olhando a oeste, você vê uma interseção de caminhos, e para o
-leste, o caminho parece terminar no pé de uma cadeia montanhosa que se
-levanta abruptamente do chão, bloqueando até mesmo a sua visão do céu.
+O Caminho AtravÃ©s das Baixas Colinas~
+   VocÃª estÃ¡ em um caminho atravÃ©s das baixas colinas, numa direÃ§Ã£o
+leste-oeste.  Olhando a oeste, vocÃª vÃª uma interseÃ§Ã£o de caminhos, e para o
+leste, o caminho parece terminar no pÃ© de uma cadeia montanhosa que se
+levanta abruptamente do chÃ£o, bloqueando atÃ© mesmo a sua visÃ£o do cÃ©u.
 ~
-40 0 0 0 0 4
-D0
-~
-~
-0 -1 9900
+40 0 4
 D1
 ~
 ~
@@ -561,16 +557,20 @@ D3
 ~
 ~
 0 -1 4033
+D0
+~
+~
+0 -1 9900
 S
 #4038
 A Base da Montanha~
-   Você está na parte inferior de uma enorme montanha da cadeia montanhosa
-que começa no Monte Moria e se extende até o topo do mundo. Um caminho segue
-para o oeste, onde você vê algumas planícies que você poderia alcançar após
+   VocÃª estÃ¡ na parte inferior de uma enorme montanha da cadeia montanhosa
+que comeÃ§a no Monte Moria e se extende atÃ© o topo do mundo. Um caminho segue
+para o oeste, onde vocÃª vÃª algumas planÃ­cies que vocÃª poderia alcanÃ§ar apÃ³s
 algum tempo de caminhada.  A leste, uma trilha bem desgastada sobe a lateral
 da montanha.
 ~
-40 0 0 0 0 5
+40 0 5
 D1
 ~
 ~
@@ -582,10 +582,10 @@ D3
 S
 #4039
 A Trilha na Montanha~
-   Você está no meio de uma trilha estreita, no entando muito utilizada. Ela
+   VocÃª estÃ¡ no meio de uma trilha estreita, no entando muito utilizada. Ela
 sobe a montanha rumo ao topo. Para oeste ela desce rumo as baixas colinas.
 ~
-40 0 0 0 0 5
+40 0 5
 D3
 ~
 ~
@@ -597,13 +597,13 @@ D4
 S
 #4040
 O Topo da Montanha~
-   Você está no lugar que é essencialmente o ápice da montanha. Ele com
-certeza parecia mais alto lá de baixo. O platô em que você está tem cerca de
+   VocÃª estÃ¡ no lugar que Ã© essencialmente o Ã¡pice da montanha. Ele com
+certeza parecia mais alto lÃ¡ de baixo. O platÃ´ em que vocÃª estÃ¡ tem cerca de
 trinta metros de comprimento e, ao norte, uma fenda parece descer para uma
 gruta. Uma trilha segue para o leste, descendo para o vale quase escondido,
 deste lado da montanha.
 ~
-40 0 0 0 0 5
+40 0 5
 D0
 ~
 ~
@@ -612,22 +612,22 @@ D1
 ~
 ~
 0 -1 4076
-D4
-~
-~
-0 -1 15100
 D5
 ~
 ~
 0 -1 4039
+D4
+~
+~
+0 -1 15100
 S
 #4041
-O Covil dos Leões~
-   Seguindo a fenda para a entrada da gruta, você escala através do único
-caminho de entrada, para então descobrir que aqui é um covil de um grande
-animal carnívoro!
+O Covil dos LeÃµes~
+   Seguindo a fenda para a entrada da gruta, vocÃª escala atravÃ©s do Ãºnico
+caminho de entrada, para entÃ£o descobrir que aqui Ã© um covil de um grande
+animal carnÃ­voro!
 ~
-40 9 0 0 0 2
+40 ad 2
 D2
 ~
 ~
@@ -635,13 +635,13 @@ D2
 S
 #4042
 As Baixas Colinas Niveladas~
-   Você continua a andar pelas baixas colinas até notar que, a uma meia
-distância a oeste existe uma entrada bem grande de uma caverna na lateral de
+   VocÃª continua a andar pelas baixas colinas atÃ© notar que, a uma meia
+distÃ¢ncia a oeste existe uma entrada bem grande de uma caverna na lateral de
 uma grande colina.  Uma colina que se sobresalta das baixas colinas de uma
-forma sobrenatural. Um caminho segue para o leste, parecendo começar de
+forma sobrenatural. Um caminho segue para o leste, parecendo comeÃ§ar de
 lugar algum.
 ~
-40 0 0 0 0 2
+40 0 2
 D1
 ~
 ~
@@ -653,12 +653,12 @@ D3
 S
 #4043
 A Entrada da Caverna~
-   Você está em um grande túnel, muito maior do que parecia do lado de fora.
-O teto tem pelo menos seis metros de altura neste salão e a largura, não é
+   VocÃª estÃ¡ em um grande tÃºnel, muito maior do que parecia do lado de fora.
+O teto tem pelo menos seis metros de altura neste salÃ£o e a largura, nÃ£o Ã©
 menor que quatro metros e meio.  Ar fresco vindo do leste bate em seu rosto.
-Para o oeste, tudo o que há é escuridão.
+Para o oeste, tudo o que hÃ¡ Ã© escuridÃ£o.
 ~
-40 8 0 0 0 2
+40 d 2
 D1
 ~
 ~
@@ -670,43 +670,43 @@ D3
 S
 #4044
 A Caverna do Gigante da Colina~
-   Agora você está em uma caverna ainda maior. O teto está a 8 metros de
-altura, se não mais. As paredes estão tão distandes uma da outra que fazem a
-sala parecer infinita em sua escuridão. Além da grandeza do ambiente, uma
-mesa no meio do chão arenoso do salão chama a sua atencão. Ela é alta o
-suficiente para permitir que você ande por baixo dela com tranquilidade.  Um
-grande túnel sai pela parede leste da caverna.
+   Agora vocÃª estÃ¡ em uma caverna ainda maior. O teto estÃ¡ a 8 metros de
+altura, se nÃ£o mais. As paredes estÃ£o tÃ£o distandes uma da outra que fazem a
+sala parecer infinita em sua escuridÃ£o. AlÃ©m da grandeza do ambiente, uma
+mesa no meio do chÃ£o arenoso do salÃ£o chama a sua atencÃ£o. Ela Ã© alta o
+suficiente para permitir que vocÃª ande por baixo dela com tranquilidade.  Um
+grande tÃºnel sai pela parede leste da caverna.
 ~
-40 9 0 0 0 2
+40 ad 2
 D1
 ~
 ~
 0 -1 4043
 S
 #4045
-A Trilha Íngreme~
-   Esta trilha sobe uma colina íngreme até um ponto em que ela se nivela.
-Neste ponto, a trilha começa a passar entre as montanhas que o rodeiam.  Ela
+A Trilha Ãngreme~
+   Esta trilha sobe uma colina Ã­ngreme atÃ© um ponto em que ela se nivela.
+Neste ponto, a trilha comeÃ§a a passar entre as montanhas que o rodeiam.  Ela
 continua para as colinas a leste e para oeste descendo novamente para o vale.
 ~
-40 4 0 0 0 5
+40 c 5
 D1
 A trilha rochosa continua.
 ~
 ~
 0 -1 4046
 D3
-O vale está no parte final da trilha.
+O vale estÃ¡ no parte final da trilha.
 ~
 ~
 0 -1 4031
 S
 #4046
 Entre as Montanhas~
-   A trilha entre as montanhas parece quase sem fim, enquanto você continua
+   A trilha entre as montanhas parece quase sem fim, enquanto vocÃª continua
 caminhando.  Ela continua tanto para leste quanto para oeste.
 ~
-40 4 0 0 0 5
+40 c 5
 D1
 A trilha continua a leste.
 ~
@@ -720,13 +720,13 @@ A trilha continua a oeste.
 S
 #4047
 As Baixas Colinas~
-   Após uma longa caminhada, você chega novamente nas baixas colinas.
-Olhando o horizonte, você observa uma estreita trilha seguindo na direção
-nordeste, não muito distante a oeste.
+   ApÃ³s uma longa caminhada, vocÃª chega novamente nas baixas colinas.
+Olhando o horizonte, vocÃª observa uma estreita trilha seguindo na direÃ§Ã£o
+nordeste, nÃ£o muito distante a oeste.
 ~
-40 4 0 0 0 5
+40 c 5
 D1
-Você pode seguir pela trilha estreita nesta direção.
+VocÃª pode seguir pela trilha estreita nesta direÃ§Ã£o.
 ~
 ~
 0 -1 4049
@@ -738,14 +738,14 @@ A trilha voltando para as montanhas parece continuar eternamente.
 S
 #4048
 As Baixas Colinas~
-   Uma caminhada através das baixas colinas e você se depara com uma trilha
-entre as montanhas para oeste. A trilha através delas parece muito longa e
-cansativa.  Você observa uma trilha seguindo a nordeste, não muito distante
+   Uma caminhada atravÃ©s das baixas colinas e vocÃª se depara com uma trilha
+entre as montanhas para oeste. A trilha atravÃ©s delas parece muito longa e
+cansativa.  VocÃª observa uma trilha seguindo a nordeste, nÃ£o muito distante
 para o oeste.
 ~
-40 4 0 0 0 5
+40 c 5
 D1
-You can head towards the narrow trail this way.
+VocÃª pode seguir em direÃ§Ã£o a trilha estreita por aqui.
 ~
 ~
 0 -1 4049
@@ -757,28 +757,28 @@ A trilha seguindo pelas montanhas parece continuar para sempre.
 S
 #4049
 As Baixas Colinas~
-   Você está em um ponto em que a trilha muda de uma quase reta para o oeste
+   VocÃª estÃ¡ em um ponto em que a trilha muda de uma quase reta para o oeste
 para um caminho sinuoso para o norte e em seguida oeste.
 ~
-40 4 0 0 0 4
+40 c 4
 D0
-Uma pequena trilha segue para o norte e, adiante, para a direção oeste.
+Uma pequena trilha segue para o norte e, adiante, para a direÃ§Ã£o oeste.
 ~
 ~
 0 -1 5628
 D3
-Uma trilha segue através das montanhas para o oeste.
+Uma trilha segue atravÃ©s das montanhas para o oeste.
 ~
 ~
 0 -1 4048
 S
 #4050
-O Túnel~
-   Aqui, o túnel faz uma curva. Ele muda de uma direção leste para uma
-direção sul.  As paredes estão frias e umidas, com algumas gotículas. Há uma
+O TÃºnel~
+   Aqui, o tÃºnel faz uma curva. Ele muda de uma direÃ§Ã£o leste para uma
+direÃ§Ã£o sul.  As paredes estÃ£o frias e umidas, com algumas gotÃ­culas. HÃ¡ uma
 coisa verde, musguenta, crescendo perto do teto na parede norte.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -789,13 +789,13 @@ D2
 0 -1 4053
 S
 #4051
-O Túnel~
-   Nesta parte do túnel, você nota que não só ele se torna mais estreito,
-como o piso se torna irregular também. Olhando melhor, você percebe que o
-chão cai quase um merto e meio em degraus denteados para o leste. Para o
-oeste, ele é muito mais regular.
+O TÃºnel~
+   Nesta parte do tÃºnel, vocÃª nota que nÃ£o sÃ³ ele se torna mais estreito,
+como o piso se torna irregular tambÃ©m. Olhando melhor, vocÃª percebe que o
+chÃ£o cai quase um merto e meio em degraus denteados para o leste. Para o
+oeste, ele Ã© muito mais regular.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -806,11 +806,11 @@ D3
 0 -1 4050
 S
 #4052
-O Túnel~
-   Continuando através do túnel, o piso se torna liso novamente. Olhando
-melhor a sua volta, você vê uma nascente de água próxima à parede sul.
+O TÃºnel~
+   Continuando atravÃ©s do tÃºnel, o piso se torna liso novamente. Olhando
+melhor a sua volta, vocÃª vÃª uma nascente de Ã¡gua prÃ³xima Ã  parede sul.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -821,14 +821,14 @@ D3
 0 -1 4051
 S
 #4053
-O Túnel~
-   Você continua através do túnel até encontrar uma curva de angulo reto.
+O TÃºnel~
+   VocÃª continua atravÃ©s do tÃºnel atÃ© encontrar uma curva de angulo reto.
 A passagem leva a norte e leste daqui. O caminho ao norte parece ser
-maior e, continua na escuridão subterrânea.  A passagem a leste leva a uma
+maior e, continua na escuridÃ£o subterrÃ¢nea.  A passagem a leste leva a uma
 caverna ampla, fresca e bem-iluminada. Bem diferente do que normalmente se
-encontraria numa caverna abaixo do nível do chão.
+encontraria numa caverna abaixo do nÃ­vel do chÃ£o.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -840,14 +840,14 @@ D1
 S
 #4054
 A Caverna Iluminada~
-   A caverna em que você está agora é iluminada por uma estranha luz
+   A caverna em que vocÃª estÃ¡ agora Ã© iluminada por uma estranha luz
 inconstante, que provavelmente vem de uma enorme fogueira que queima a uma
-curta distância ao sul, no que parece ser o meio da caverna. A luz vibrante
-produz algumas sombras realmente estranhas e até mesmo quase assustadoras
-nas paredes, quase escondendo os dois túneis que se afastam daqui, um para o
+curta distÃ¢ncia ao sul, no que parece ser o meio da caverna. A luz vibrante
+produz algumas sombras realmente estranhas e atÃ© mesmo quase assustadoras
+nas paredes, quase escondendo os dois tÃºneis que se afastam daqui, um para o
 leste e o outro para oeste.
 ~
-40 8 0 0 0 2
+40 d 2
 D1
 ~
 ~
@@ -863,11 +863,11 @@ D3
 S
 #4055
 O Labirinto~
-   Você está, até agora, em um outro túnel pequeno e úmido. O teto se
-sustenta bastante baixo, sobre a sua cabeça e a passagem se mistura a
-escuridão. A única saída daqui parece ser para o oeste.
+   VocÃª estÃ¡, atÃ© agora, em um outro tÃºnel pequeno e Ãºmido. O teto se
+sustenta bastante baixo, sobre a sua cabeÃ§a e a passagem se mistura a
+escuridÃ£o. A Ãºnica saÃ­da daqui parece ser para o oeste.
 ~
-40 9 0 0 0 3
+40 ad 3
 D3
 ~
 ~
@@ -875,12 +875,12 @@ D3
 S
 #4056
 A Caverna Iluminada~
-   Esta caverna em que você se encontra é iluminada por uma luz vibrante,
+   Esta caverna em que vocÃª se encontra Ã© iluminada por uma luz vibrante,
 vinda de uma enorme fogueira que queima logo a sua frente, no meio da caverna.
 O fogo lhe fornece luz mais que suficiente para tornar clara as extremidades
 norte e sul da caverna.
 ~
-40 8 0 0 0 2
+40 d 2
 D0
 ~
 ~
@@ -891,17 +891,17 @@ D2
 0 -1 4061
 E
 fogueira fogo~
-A fogueira parece estar queimando por um longo tempo. O teto está coberto
-de fuligem da fumaça e cinzas se espalham por todo o chão da caverna.
+A fogueira parece estar queimando por um longo tempo. O teto estÃ¡ coberto
+de fuligem da fumaÃ§a e cinzas se espalham por todo o chÃ£o da caverna.
 ~
 S
 #4057
 O Labirinto~
-   Você está em mais um túnel pequeno e úmido. O teto se sustenta bastante
-baixo sobre a sua cabeça e a passagem se mistura a escuridão. As únicas
-saídas daqui parecem ser ao norte e ao sul.
+   VocÃª estÃ¡ em mais um tÃºnel pequeno e Ãºmido. O teto se sustenta bastante
+baixo sobre a sua cabeÃ§a e a passagem se mistura a escuridÃ£o. As Ãºnicas
+saÃ­das daqui parecem ser ao norte e ao sul.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -913,11 +913,11 @@ D2
 S
 #4058
 O Labirinto~
-   Você está em mais um túnel pequeno e úmido. O teto se sustenta bastante
-baixo sobre a sua cabeça e a passagem se mistura a escuridão. As únicas
-saídas daqui parecem ser ao sul e a oeste.
+   VocÃª estÃ¡ em mais um tÃºnel pequeno e Ãºmido. O teto se sustenta bastante
+baixo sobre a sua cabeÃ§a e a passagem se mistura a escuridÃ£o. As Ãºnicas
+saÃ­das daqui parecem ser ao sul e a oeste.
 ~
-40 9 0 0 0 3
+40 ad 3
 D2
 ~
 ~
@@ -928,14 +928,14 @@ D3
 0 -1 4057
 S
 #4059
-O Túnel~
-   Você está em um túnel profundo dentro do coração do Monte Moria.  Um
-pequeno filete de água corre junto a parede para o norte, enquanto o túnel
+O TÃºnel~
+   VocÃª estÃ¡ em um tÃºnel profundo dentro do coraÃ§Ã£o do Monte Moria.  Um
+pequeno filete de Ã¡gua corre junto a parede para o norte, enquanto o tÃºnel
 parece seguir ligeiramente descendente a leste.
-   O túnel continua para o leste, se infiltrando ainda mais na terra, e um
-pouco acima, seguindo para o oeste, o ar parece ser bastante úmido.
+   O tÃºnel continua para o leste, se infiltrando ainda mais na terra, e um
+pouco acima, seguindo para o oeste, o ar parece ser bastante Ãºmido.
 ~
-40 13 0 0 0 3
+40 acd 3
 D1
 ~
 ~
@@ -946,17 +946,17 @@ D3
 0 -1 4024
 S
 #4060
-O Túnel~
-   Você está em uma seção do túnel que parece ser praticamente nivelada.
-Há uma pequena poça de água se acumulando junto a parede norte, indicando
-que provavelmente existe um pequeno buraco no chão. A poça é alimentada por
-um filete de água que corre através da parede norte da seção a oeste, mas
-apesar disto, o nível da água não parece estar se alterando.
-   Olhando mais adiante no túnel, você percebe que o túnel sobe para o oeste
-e, para o leste, uma estranha luz vibrante mostra que o túnel se abre para
+O TÃºnel~
+   VocÃª estÃ¡ em uma seÃ§Ã£o do tÃºnel que parece ser praticamente nivelada.
+HÃ¡ uma pequena poÃ§a de Ã¡gua se acumulando junto a parede norte, indicando
+que provavelmente existe um pequeno buraco no chÃ£o. A poÃ§a Ã© alimentada por
+um filete de Ã¡gua que corre atravÃ©s da parede norte da seÃ§Ã£o a oeste, mas
+apesar disto, o nÃ­vel da Ã¡gua nÃ£o parece estar se alterando.
+   Olhando mais adiante no tÃºnel, vocÃª percebe que o tÃºnel sobe para o oeste
+e, para o leste, uma estranha luz vibrante mostra que o tÃºnel se abre para
 uma caverna.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -968,13 +968,13 @@ D3
 S
 #4061
 A Caverna Iluminada~
-   A caverna é iluminada por uma estranha luz vibrante, que provavelmente
-vem de uma fogueira que queima a uma curta distância ao norte, no que parece
-ser o meio da caverna. A luz trêmula produz algumas sombras realmente
-esquisitas e até mesmo assustadoras, quase escondendo os dois túneis que
+   A caverna Ã© iluminada por uma estranha luz vibrante, que provavelmente
+vem de uma fogueira que queima a uma curta distÃ¢ncia ao norte, no que parece
+ser o meio da caverna. A luz trÃªmula produz algumas sombras realmente
+esquisitas e atÃ© mesmo assustadoras, quase escondendo os dois tÃºneis que
 saem daqui, um para o oeste e outro para o sul.
 ~
-40 8 0 0 0 2
+40 d 2
 D0
 ~
 ~
@@ -990,11 +990,11 @@ D3
 S
 #4062
 O Labirinto~
-   Você está em mais um túnel pequeno e úmido. O teto se sustenta bastante
-baixo sobre a sua cabeça e a passagem se mistura a escuridão. As únicas
-saídas daqui parecem ser a leste e a oeste.
+   VocÃª estÃ¡ em mais um tÃºnel pequeno e Ãºmido. O teto se sustenta bastante
+baixo sobre a sua cabeÃ§a e a passagem se mistura a escuridÃ£o. As Ãºnicas
+saÃ­das daqui parecem ser a leste e a oeste.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -1006,11 +1006,11 @@ D3
 S
 #4063
 O Labirinto~
-   Você está em mais um túnel pequeno e úmido. O teto se sustenta bastante
-baixo sobre a sua cabeça e a passagem se mistura a escuridão. As únicas
-saídas daqui parecem ser a leste e ao norte
+   VocÃª estÃ¡ em mais um tÃºnel pequeno e Ãºmido. O teto se sustenta bastante
+baixo sobre a sua cabeÃ§a e a passagem se mistura a escuridÃ£o. As Ãºnicas
+saÃ­das daqui parecem ser a leste e ao norte
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1021,14 +1021,14 @@ D1
 0 -1 4064
 S
 #4064
-O Túnel~
-   Você está em uma pequena câmara subterrânea. A câmara se reduz ao tamanho
-de um túnel para o oeste, enquanto a única saída óbvia parece ser nesta
-direção.  Antes de sair por este caminho, você decide olhar ao redor da
-caverna.  As paredes são levemente úmidas ao toque e o teto é muito liso.
+O TÃºnel~
+   VocÃª estÃ¡ em uma pequena cÃ¢mara subterrÃ¢nea. A cÃ¢mara se reduz ao tamanho
+de um tÃºnel para o oeste, enquanto a Ãºnica saÃ­da Ã³bvia parece ser nesta
+direÃ§Ã£o.  Antes de sair por este caminho, vocÃª decide olhar ao redor da
+caverna.  As paredes sÃ£o levemente Ãºmidas ao toque e o teto Ã© muito liso.
 Praticamente no centro do teto, foi feito um buraco bem arredondado.
 ~
-40 9 0 0 0 3
+40 ad 3
 D3
 ~
 ~
@@ -1040,12 +1040,12 @@ D4
 S
 #4065
 O Labirinto~
-   Você está em mais um túnel pequeno e úmido. O teto se sustenta bastante
-baixo sobre a sua cabeça e a passagem se mistura a escuridão. As únicas
-saídas daqui parecem ser a leste e ao norte. Para o norte, você pode ver a
+   VocÃª estÃ¡ em mais um tÃºnel pequeno e Ãºmido. O teto se sustenta bastante
+baixo sobre a sua cabeÃ§a e a passagem se mistura a escuridÃ£o. As Ãºnicas
+saÃ­das daqui parecem ser a leste e ao norte. Para o norte, vocÃª pode ver a
 entrada de uma caverna que parece ser ampla e bem iluminada.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1057,12 +1057,12 @@ D1
 S
 #4066
 O Labirinto~
-   Você está em mais um túnel pequeno e úmido. O teto se sustenta bastante
-baixo sobre a sua cabeça e a passagem se mistura a escuridão.  As únicas
-saídas daqui parecem ser a leste, ao sul e ao norte. Ao sul, o túnel parece
+   VocÃª estÃ¡ em mais um tÃºnel pequeno e Ãºmido. O teto se sustenta bastante
+baixo sobre a sua cabeÃ§a e a passagem se mistura a escuridÃ£o.  As Ãºnicas
+saÃ­das daqui parecem ser a leste, ao sul e ao norte. Ao sul, o tÃºnel parece
 se abrir para uma caverna.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1078,11 +1078,11 @@ D2
 S
 #4067
 O Labirinto~
-   Você está em mais um túnel pequeno e úmido. O teto se sustenta bastante
-baixo sobre a sua cabeça e a passagem se mistura a escuridão. As únicas
-saídas daqui parecem ser a oeste e ao norte.
+   VocÃª estÃ¡ em mais um tÃºnel pequeno e Ãºmido. O teto se sustenta bastante
+baixo sobre a sua cabeÃ§a e a passagem se mistura a escuridÃ£o. As Ãºnicas
+saÃ­das daqui parecem ser a oeste e ao norte.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1094,12 +1094,12 @@ D3
 S
 #4068
 A Caverna Ampla~
-   VocÊ se encontra na caverna que talvez seja a maior em que você jamais
-esteve.  Ela se estende através da escuridão para o leste e para o sul. A
-caverna é quase preenchida por ecos de sua respirção. Estalactites e
-estalagmites se penduram no teto e sobem do chão da caverna respectivamente.
+   VocÃª se encontra na caverna que talvez seja a maior em que vocÃª jamais
+esteve.  Ela se estende atravÃ©s da escuridÃ£o para o leste e para o sul. A
+caverna Ã© quase preenchida por ecos de sua respirÃ§Ã£o. Estalactites e
+estalagmites se penduram no teto e sobem do chÃ£o da caverna respectivamente.
 ~
-40 9 0 0 0 2
+40 ad 2
 D1
 ~
 ~
@@ -1111,13 +1111,13 @@ D2
 S
 #4069
 A Caverna Ampla~
-   Você se encontra na caverna que talvez seja a maior em que você jamais
-esteve.  Ela se estende através da escuridão para o leste e para o sul. A
-caverna é quase preenchida por ecos de sua respirção. Estalactites e
-estalagmites se penduram no teto e sobem do chão da caverna respectivamente.
-Um túnel estreito se se afasta da caverna para o norte.
+   VocÃª se encontra na caverna que talvez seja a maior em que vocÃª jamais
+esteve.  Ela se estende atravÃ©s da escuridÃ£o para o leste e para o sul. A
+caverna Ã© quase preenchida por ecos de sua respirÃ§Ã£o. Estalactites e
+estalagmites se penduram no teto e sobem do chÃ£o da caverna respectivamente.
+Um tÃºnel estreito se se afasta da caverna para o norte.
 ~
-40 9 0 0 0 2
+40 ad 2
 D0
 ~
 ~
@@ -1133,12 +1133,12 @@ D3
 S
 #4070
 A Caverna Ampla~
-   Você se encontra na caverna que talvez seja a maior em que você jamais
-esteve.  Ela se estende através da escuridão para o leste e para o sul.  A
-caverna é quase preenchida por ecos de sua respirção. Estalactites e
-estalagmites se penduram no teto e sobem do chão da caverna respectivamente.
+   VocÃª se encontra na caverna que talvez seja a maior em que vocÃª jamais
+esteve.  Ela se estende atravÃ©s da escuridÃ£o para o leste e para o sul.  A
+caverna Ã© quase preenchida por ecos de sua respirÃ§Ã£o. Estalactites e
+estalagmites se penduram no teto e sobem do chÃ£o da caverna respectivamente.
 ~
-40 9 0 0 0 2
+40 ad 2
 D0
 ~
 ~
@@ -1150,13 +1150,13 @@ D1
 S
 #4071
 A Caverna Ampla~
-   Você se encontra na caverna que talvez seja a maior em que você jamais
-esteve. Ela se estende através da escuridão para o leste e para o sul.  A
-caverna é quase preenchida por ecos de sua respirção. Estalactites e
-estalagmites se penduram no teto e sobem do chão da caverna respectivamente.
-Um túnel estreito se afasta da caverna para o leste.
+   VocÃª se encontra na caverna que talvez seja a maior em que vocÃª jamais
+esteve. Ela se estende atravÃ©s da escuridÃ£o para o leste e para o sul.  A
+caverna Ã© quase preenchida por ecos de sua respirÃ§Ã£o. Estalactites e
+estalagmites se penduram no teto e sobem do chÃ£o da caverna respectivamente.
+Um tÃºnel estreito se afasta da caverna para o leste.
 ~
-40 9 0 0 0 2
+40 ad 2
 D0
 ~
 ~
@@ -1171,13 +1171,13 @@ D3
 0 -1 4070
 S
 #4072
-O Túnel~
-   Você está em um túnel estreito. Ele faz uma curva para o sul aqui, onde
-ele penetra nas rochas da montanha. A parede oeste do túnel parece ter
-quebrado através de uma pequena, natural rachadura na rocha, levando ao que
+O TÃºnel~
+   VocÃª estÃ¡ em um tÃºnel estreito. Ele faz uma curva para o sul aqui, onde
+ele penetra nas rochas da montanha. A parede oeste do tÃºnel parece ter
+quebrado atravÃ©s de uma pequena, natural rachadura na rocha, levando ao que
 parece, uma relativamente grande, caverna.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -1192,13 +1192,13 @@ D3
 0 -1 4071
 S
 #4073
-O Fim do Túnel~
-   Aqui o túnel chega a um final abrupto.  Realmente grotesco.  A única
-saida é voltar para oeste,onde o túnel o conduz de volta à montanha.  Em
-todo caso, não há absolutamente nada de interessante para baixo No fim dessa
+O Fim do TÃºnel~
+   Aqui o tÃºnel chega a um final abrupto.  Realmente grotesco.  A Ãºnica
+saida Ã© voltar para oeste,onde o tÃºnel o conduz de volta Ã  montanha.  Em
+todo caso, nÃ£o hÃ¡ absolutamente nada de interessante para baixo No fim dessa
 passagem.  Que estranho!
 ~
-40 9 0 0 0 3
+40 ad 3
 D3
 ~
 ~
@@ -1206,37 +1206,31 @@ D3
 S
 #4074
 O Buraco~
-   Você está em um pequeno buraco no chão.  Ah! você só pode seguir para
-norte, pois para descer rumo ao desconhecido você teria que se esgueirar
-pelo buraco que é muito pequeno para você!
+   VocÃª estÃ¡ em um pequeno buraco no chÃ£o.  Ah! vocÃª sÃ³ pode seguir para
+norte, pois para descer rumo ao desconhecido vocÃª teria que se esgueirar
+pelo buraco que Ã© muito pequeno para vocÃª!
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
 0 -1 4072
-D5
-O pequeno buraco no chão recusa-se a revelar os segredos que podem ser
-encontrados lá embaixo.
-~
-~
-0 -1 -1
 E
-buraco chão~
-O pequeno buraco no chão recusa-se a revelar os segredos que podem ser
-encontrados lá embaixo.
+buraco chao~
+O pequeno buraco no chÃ£o recusa-se a revelar os segredos que podem ser
+encontrados lÃ¡ embaixo.
 ~
 S
 #4075
-O Bosque das Árvores~
-   Estar neste bosque das árvores te dá uma estranha sensação.  Na lateral
-leste você pode ver as planicies, e logo ao norte uma estranha sombra parece
+O Bosque das Ãrvores~
+   Estar neste bosque das Ã¡rvores te dÃ¡ uma estranha sensaÃ§Ã£o.  Na lateral
+leste vocÃª pode ver as planicies, e logo ao norte uma estranha sombra parece
 estar mudando constantemente sua forma e quase parece acenar te convidando a
 entrar nela.
 ~
-40 0 0 0 0 4
+40 0 4
 D0
-Há uma estranha sombra modelando-se diante de você.
+HÃ¡ uma estranha sombra modelando-se diante de vocÃª.
 ~
 ~
 0 -1 2500
@@ -1247,16 +1241,16 @@ D1
 S
 #4076
 Numa Trilha Montanhosa~
-   Você se encontra numa trilha montanhosa seguindo para baixo em direção a
+   VocÃª se encontra numa trilha montanhosa seguindo para baixo em direÃ§Ã£o a
 um pequeno vale escondido sob a sombra de outra montanha logo a Leste.  O
-caminiho segue belamente irregular e parece inclinar-se até o pequeno vale
-antes de começar a subir a encosta da outra montanha.  Logo que você olha
-para o vale desse ponto de vista privilegiado, percebe que ele é bem menor
-do que você havia previsto, talvez com trinta pés de comprimento.  É
-surpreendente como a percepção de distâncias é abalada pela altitude das
-montanhas não é mesmo?
+caminiho segue belamente irregular e parece inclinar-se atÃ© o pequeno vale
+antes de comeÃ§ar a subir a encosta da outra montanha.  Logo que vocÃª olha
+para o vale desse ponto de vista privilegiado, percebe que ele Ã© bem menor
+do que vocÃª havia previsto, talvez com trinta pÃ©s de comprimento.  Ã‰
+surpreendente como a percepÃ§Ã£o de distÃ¢ncias Ã© abalada pela altitude das
+montanhas nÃ£o Ã© mesmo?
 ~
-40 0 0 0 0 5
+40 0 5
 D3
 ~
 ~
@@ -1268,12 +1262,12 @@ D5
 S
 #4077
 No Vale Escondido~
-   Este vale parece ser resultado da erosão das encostas das montanhas.
-Obviamente, sempre há o caminho cuidadosamente escondido que você percebe na
-parte leste do vale, conduzindo você para cima da montanha leste que encobre
-sua visão da maior parte do céu.
+   Este vale parece ser resultado da erosÃ£o das encostas das montanhas.
+Obviamente, sempre hÃ¡ o caminho cuidadosamente escondido que vocÃª percebe na
+parte leste do vale, conduzindo vocÃª para cima da montanha leste que encobre
+sua visÃ£o da maior parte do cÃ©u.
 ~
-40 0 0 0 0 5
+40 0 5
 D1
 ~
 ~
@@ -1289,13 +1283,13 @@ D8
 S
 #4078
 No Vale Escondido~
-   Este pequeno vale está escondido sob a sombra da enorme montanha leste.
+   Este pequeno vale estÃ¡ escondido sob a sombra da enorme montanha leste.
 O caminho que o leva de volta para cima da montanha leste  parece
-desaparecer diante de sua visão, mas você rapidamente poderia encontrá-lo
+desaparecer diante de sua visÃ£o, mas vocÃª rapidamente poderia encontrÃ¡-lo
 novamente.  Uma trilha ainda pode leva-lo de volta para cima da montanha
 Oeste.
 ~
-40 0 0 0 0 5
+40 0 5
 D1
 ~
 ~
@@ -1306,14 +1300,14 @@ D4
 0 -1 4076
 S
 #4100
-O Túnel~
-   Enquanto você caminha ao longo desse túnel que parece aprofundar-se mais
-e mais para dentro da terra, você percebe que ele deve ser muito mais
-íngrime do que você esperava assim como percebe que um pequeno corrego jorra
-água rumo à parte mais baixa do túnel.  O Túnel parece seguir direto para
+O TÃºnel~
+   Enquanto vocÃª caminha ao longo desse tÃºnel que parece aprofundar-se mais
+e mais para dentro da terra, vocÃª percebe que ele deve ser muito mais
+Ã­ngrime do que vocÃª esperava assim como percebe que um pequeno corrego jorra
+Ã¡gua rumo Ã  parte mais baixa do tÃºnel.  O TÃºnel parece seguir direto para
 leste por um bom trecho.
 ~
-40 13 0 0 0 3
+40 acd 3
 D1
 ~
 ~
@@ -1324,14 +1318,14 @@ D3
 0 -1 4052
 S
 #4101
-O Extenso Túnel~
-   O túnel parece inclinar-se indiferentemente continuando na direção
-leste-oeste.  Os muros do túnel são bem separadas permitindo que um grupo de
-quatro pessoas perfiladas lado a lado o atravesse facilmente.  Os muros não
-mostram-se muito úmidos, mas há um pequeno córrego correndo pelo muro do
+O Extenso TÃºnel~
+   O tÃºnel parece inclinar-se indiferentemente continuando na direÃ§Ã£o
+leste-oeste.  Os muros do tÃºnel sÃ£o bem separadas permitindo que um grupo de
+quatro pessoas perfiladas lado a lado o atravesse facilmente.  Os muros nÃ£o
+mostram-se muito Ãºmidos, mas hÃ¡ um pequeno cÃ³rrego correndo pelo muro do
 norte.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -1342,13 +1336,13 @@ D3
 0 -1 4100
 S
 #4102
-O Extenso Túnel~
-   Durante sua jornada por este longo túnel você começa a se perguntar qual
-seria sua extenção.  Os muros ainda estão bastante afastados, mas você pode
-ver que eles começam a se fechar rapidamente para o leste.  De fato, o
-formato da aproximação deles, o faz lembrar de um funil.
+O Extenso TÃºnel~
+   Durante sua jornada por este longo tÃºnel vocÃª comeÃ§a a se perguntar qual
+seria sua extenÃ§Ã£o.  Os muros ainda estÃ£o bastante afastados, mas vocÃª pode
+ver que eles comeÃ§am a se fechar rapidamente para o leste.  De fato, o
+formato da aproximaÃ§Ã£o deles, o faz lembrar de um funil.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -1359,15 +1353,15 @@ D3
 0 -1 4101
 S
 #4103
-O Extenso Túnel~
-   Você está parado em um extenso túnel leste-oeste.  Ele não é tão amplo
+O Extenso TÃºnel~
+   VocÃª estÃ¡ parado em um extenso tÃºnel leste-oeste.  Ele nÃ£o Ã© tÃ£o amplo
 agora, talvez aplo o suficiente para duas pessoas caminharem lado a lado sem
- que uma bloqueie a outra.  Ao longe para oeste parece que o túnel se abre
+ que uma bloqueie a outra.  Ao longe para oeste parece que o tÃºnel se abre
 um pouco mais, enquanto para leste ele se afunda mais e mais para dentro da
-terra e você pode ver um pequenino buraco de aproximadamente dois pés de
-diâmetro a altura de sua cintura no muro sul.
+terra e vocÃª pode ver um pequenino buraco de aproximadamente dois pÃ©s de
+diÃ¢metro a altura de sua cintura no muro sul.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -1382,14 +1376,14 @@ D3
 0 -1 4102
 S
 #4104
-O Extenso Túnel~
-   Você se encontra no pequeno fim bolbuloso da caverna.  Uma espécie de
-"sala" circular com aproximadamente 30 pés de diâmetroe você só pode ver uma
-saída dessa sala: Um túnel avançando impetuosamente para a direção do muro
-oeste.  Os muros desta caverna são irregulares e cheios de musgos ou
-humidade, seja lá o que for.
+O Extenso TÃºnel~
+   VocÃª se encontra no pequeno fim bolbuloso da caverna.  Uma espÃ©cie de
+"sala" circular com aproximadamente 30 pÃ©s de diÃ¢metroe vocÃª sÃ³ pode ver uma
+saÃ­da dessa sala: Um tÃºnel avanÃ§ando impetuosamente para a direÃ§Ã£o do muro
+oeste.  Os muros desta caverna sÃ£o irregulares e cheios de musgos ou
+humidade, seja lÃ¡ o que for.
 ~
-40 9 0 0 0 3
+40 ad 3
 D3
 ~
 ~
@@ -1397,12 +1391,12 @@ D3
 S
 #4105
 A Caverna Dourada~
-   Você está parado no que parce ser o canto nordeste desta grande caverna.
-A caverna é iluminada pela extraordinária, agradável, luz dourada que perece
-emanar das próprias paredes.  A caverna em si é enorme extendendo-se por uma
+   VocÃª estÃ¡ parado no que parce ser o canto nordeste desta grande caverna.
+A caverna Ã© iluminada pela extraordinÃ¡ria, agradÃ¡vel, luz dourada que perece
+emanar das prÃ³prias paredes.  A caverna em si Ã© enorme extendendo-se por uma
 pequena distancia para o oeste e sul.
 ~
-40 8 0 0 0 1
+40 d 1
 D2
 ~
 ~
@@ -1413,19 +1407,19 @@ D3
 0 -1 4106
 E
 luz ouro dourado parede~
-Elas parecem ouro, mas assim que você olha percebe que não tem valor.
+Elas parecem ouro, mas assim que vocÃª olha percebe que nÃ£o tem valor.
 ~
 S
 #4106
 A Caverna Dourada~
-   Você está parado no que parece ser o canto noroeste desta grande caverna.
-A caverna é iluminada pela extraordinária, agradável, luz dourada que perece
-emanar das próprias paredes.  A caverna em si é enorme extendendo-se por uma
-   Pequena distancia para o leste e sul.  Há um buraco no muro do norte de
-aproximadamente dois pés de diâmetro.  Tudo que você pode ver pelo buraco é
-a escuridão.
+   VocÃª estÃ¡ parado no que parece ser o canto noroeste desta grande caverna.
+A caverna Ã© iluminada pela extraordinÃ¡ria, agradÃ¡vel, luz dourada que perece
+emanar das prÃ³prias paredes.  A caverna em si Ã© enorme extendendo-se por uma
+   Pequena distancia para o leste e sul.  HÃ¡ um buraco no muro do norte de
+aproximadamente dois pÃ©s de diÃ¢metro.  Tudo que vocÃª pode ver pelo buraco Ã©
+a escuridÃ£o.
 ~
-40 8 0 0 0 1
+40 d 1
 D0
 ~
 ~
@@ -1440,16 +1434,16 @@ D2
 0 -1 4109
 E
 luz ouro dourado parede~
-Elas parecem ouro, mas assim que você olha percebe que não tem valor.
+Elas parecem ouro, mas assim que vocÃª olha percebe que nÃ£o tem valor.
 ~
 S
 #4107
 A Passagem~
-   Você está parado na esquina de um passadiço.  Ele o vira diretamente para
+   VocÃª estÃ¡ parado na esquina de um passadiÃ§o.  Ele o vira diretamente para
 o sul e oeste. Para o sul, parece que a passagem continua, mas para oeste
-você só pode ver uma aparente luz dourada.
+vocÃª sÃ³ pode ver uma aparente luz dourada.
 ~
-40 9 0 0 0 3
+40 ad 3
 D2
 ~
 ~
@@ -1461,13 +1455,13 @@ D3
 S
 #4108
 A Caverna Dourada~
-   Você está parado no que parce ser o canto sudeste desta grande caverna.
-A caverna é iluminada pela extraordinária, agradável, luz dourada que perece
- emanar das próprias paredes.  A caverna em si é enorme extendendo-se por
+   VocÃª estÃ¡ parado no que parce ser o canto sudeste desta grande caverna.
+A caverna Ã© iluminada pela extraordinÃ¡ria, agradÃ¡vel, luz dourada que perece
+ emanar das prÃ³prias paredes.  A caverna em si Ã© enorme extendendo-se por
 uma pequena distancia para o oeste e Norte. Uma rachadura na parede leste
-parece conduzi-lo a um tipo de passadiço.
+parece conduzi-lo a um tipo de passadiÃ§o.
 ~
-40 8 0 0 0 1
+40 d 1
 D0
 ~
 ~
@@ -1482,17 +1476,17 @@ D3
 0 -1 4109
 E
 luz ouro dourado parede~
-Elas parecem ouro, mas assim que você olha percebe que não tem valor.
+Elas parecem ouro, mas assim que vocÃª olha percebe que nÃ£o tem valor.
 ~
 S
 #4109
 A Caverna Dourada~
-   Você está parado no que parce ser o muro leste  do centro dessa grande
-caverna.  A caverna é iluminada pela extraordinária, agradável, luz dourada
-que perece emanar das próprias paredes.  A caverna em si é enorme
+   VocÃª estÃ¡ parado no que parce ser o muro leste  do centro dessa grande
+caverna.  A caverna Ã© iluminada pela extraordinÃ¡ria, agradÃ¡vel, luz dourada
+que perece emanar das prÃ³prias paredes.  A caverna em si Ã© enorme
 extendendo-se por uma pequena distancia para o Leste, sul e norte.
 ~
-40 8 0 0 0 1
+40 d 1
 D0
 ~
 ~
@@ -1507,55 +1501,47 @@ D2
 0 -1 4114
 E
 luz ouro dourado parede~
-Elas parecem ouro, mas assim que você olha percebe que não tem valor.
+Elas parecem ouro, mas assim que vocÃª olha percebe que nÃ£o tem valor.
 ~
 S
 #4110
 O Buraco~
-   Você se encontra em uma pequena alcova que termina abruptamente no túnel.
-Olhando ao redor você de repente percebe um grande buraco no chão do túnel.
-Na verdade um passo a mais e você teria caído nele.
-   O Túnel segue para oeste, e olhando para baixo dentro do buraco no chão
-você se dá conta do fato dele parecer muito profundo e escuro.  Há um
-estranho cheiro vindo do buraco, parece que alguma coisa lá embaixo está em
-estado de putrefação.
+   VocÃª se encontra em uma pequena alcova que termina abruptamente no tÃºnel.
+Olhando ao redor vocÃª de repente percebe um grande buraco no chÃ£o do tÃºnel.
+Na verdade um passo a mais e vocÃª teria caÃ­do nele.
+   O TÃºnel segue para oeste, e olhando para baixo dentro do buraco no chÃ£o
+vocÃª se dÃ¡ conta do fato dele parecer muito profundo e escuro.  HÃ¡ um
+estranho cheiro vindo do buraco, parece que alguma coisa lÃ¡ embaixo estÃ¡ em
+estado de putrefaÃ§Ã£o.
 ~
-40 13 0 0 0 3
+40 acd 3
 D3
 ~
 ~
 0 -1 4111
-D5
-Antes de abaixar a cabeça, você joga uma pedra para testar a profundidade do
-buraco...
-Depois de cinco minutos, a pedra ainda não atingiu o solo.  Então, por
-razões de sanidade, você decide não tomar este caminho.
-~
-~
-0 -1 -1
 E
-buraco chão~
-Antes de abaixar a cabeça, você joga uma pedra para testar a profundidade do
+buraco chao~
+Antes de abaixar a cabeÃ§a, vocÃª joga uma pedra para testar a profundidade do
 buraco...
-Depois de cinco minutos, a pedra ainda não atingiu o solo.  Então, por
-razões de sanidade, você decide não tomar este caminho.
+Depois de cinco minutos, a pedra ainda nÃ£o atingiu o solo.  EntÃ£o, por
+razÃµes de sanidade, vocÃª decide nÃ£o tomar este caminho.
 ~
 S
 #4111
-O Túnel~
-   Os muros deste pequeno túnel estão quase completamente tomados por um
-musgo escamosos ao toque.  O túnel segue na direção leste-oeste e o ar
-dentro dele parece muito úmido e estagnado.  Nenhuma brisa pode ser
-percebida, mas um estranho cheiro emana do leste.  Há um quase imperceptível
+O TÃºnel~
+   Os muros deste pequeno tÃºnel estÃ£o quase completamente tomados por um
+musgo escamosos ao toque.  O tÃºnel segue na direÃ§Ã£o leste-oeste e o ar
+dentro dele parece muito Ãºmido e estagnado.  Nenhuma brisa pode ser
+percebida, mas um estranho cheiro emana do leste.  HÃ¡ um quase imperceptÃ­vel
 buraco no muro do sul.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
 0 -1 4110
 D2
-O Buraco é muito pequeno.  Você provavelmente terá que rastejar para
+O Buraco Ã© muito pequeno.  VocÃª provavelmente terÃ¡ que rastejar para
 entrar nele.
 ~
 ~
@@ -1566,18 +1552,18 @@ D3
 0 -1 4112
 E
 musgo muro muros~
-O musgo nos muros é laranja.  Quando você o toca, sente que os flocos
-imperceptíveis deixam uma marca laranja nas pontas dos  seus dedos.
+O musgo nos muros Ã© laranja.  Quando vocÃª o toca, sente que os flocos
+imperceptÃ­veis deixam uma marca laranja nas pontas dos  seus dedos.
 ~
 S
 #4112
-O Túnel~
-   O Túnel no qual você se encontra é realmente amplo (muito amplo
-comparando  com a maior parte dos túneis dessas redondezas) e o ar ainda
-assim é bastante úmido.  Os muros estão cobertos por uma fina camada de um
-sumo viscoso que parece óleo.  O Túnel segue na direção leste-oeste.
+O TÃºnel~
+   O TÃºnel no qual vocÃª se encontra Ã© realmente amplo (muito amplo
+comparando  com a maior parte dos tÃºneis dessas redondezas) e o ar ainda
+assim Ã© bastante Ãºmido.  Os muros estÃ£o cobertos por uma fina camada de um
+sumo viscoso que parece Ã³leo.  O TÃºnel segue na direÃ§Ã£o leste-oeste.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -1588,19 +1574,19 @@ D3
 0 -1 4113
 E
 muros muro sumo musgo cobertura~
-A cobertura de musgo nas paredes tece um estranho padrão de cores nele,
-quase como se alguem tivesse jogado óleo na sua superfície aguada.
+A cobertura de musgo nas paredes tece um estranho padrÃ£o de cores nele,
+quase como se alguem tivesse jogado Ã³leo na sua superfÃ­cie aguada.
 ~
 S
 #4113
 A Passagem~
-   Este passadiço norte-sul parece ser uma criação natural, exceto pelas
+   Este passadiÃ§o norte-sul parece ser uma criaÃ§Ã£o natural, exceto pelas
 paredes parecendo terem sido rusticamente demolidas para endireitar a
-passagem tornando-a mais fácil.  Os muros tortuosos forçam passagem
-aprofundando-se no íntimo da terra.  Uma estranha sombra no muro do leste o
-leva a pensar que uma pequena passagem encontra o túnel lá.
+passagem tornando-a mais fÃ¡cil.  Os muros tortuosos forÃ§am passagem
+aprofundando-se no Ã­ntimo da terra.  Uma estranha sombra no muro do leste o
+leva a pensar que uma pequena passagem encontra o tÃºnel lÃ¡.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1616,13 +1602,13 @@ D2
 S
 #4114
 A Caverna Dourada~
-   Você está parado no que parce ser o canto sudoeste desta grande caverna.
-A caverna é iluminada pela extraordinária, agradável, luz dourada que perece
-emanar das próprias paredes.  A caverna em si é enorme extendendo-se por
-uma pequena distancia para o norte e uma formação de sombra parece indicar
+   VocÃª estÃ¡ parado no que parce ser o canto sudoeste desta grande caverna.
+A caverna Ã© iluminada pela extraordinÃ¡ria, agradÃ¡vel, luz dourada que perece
+emanar das prÃ³prias paredes.  A caverna em si Ã© enorme extendendo-se por
+uma pequena distancia para o norte e uma formaÃ§Ã£o de sombra parece indicar
 a entrada de uma passagem a oeste.
 ~
-40 8 0 0 0 1
+40 d 1
 D0
 ~
 ~
@@ -1633,20 +1619,20 @@ D3
 0 -1 4115
 E
 luz ouro dourado parede~
-Elas parecem ouro, mas assim que você olha percebe que não tem valor.
+Elas parecem ouro, mas assim que vocÃª olha percebe que nÃ£o tem valor.
 ~
 S
 #4115
 A Passagem Escura~
-   Você se encontra no fim da passagem.  Está realmente escuro aqui.  Ao
-olhar sobre os musgos do muro, você percebe que a passagem parece quase
-curvar-se para o teto.  Ao olhar para cima você percebe que existe um
+   VocÃª se encontra no fim da passagem.  EstÃ¡ realmente escuro aqui.  Ao
+olhar sobre os musgos do muro, vocÃª percebe que a passagem parece quase
+curvar-se para o teto.  Ao olhar para cima vocÃª percebe que existe um
 pequeno buraco, largo o suficiente para sua passagem.  Olhando mais de perto
-na parte mais inclinada do muro você nota que alguem (ou alguma coisa)
-colocou pequenso apoios para as mãos para facilitar a passagem para cima.
-O Túnel  em si segue para leste.
+na parte mais inclinada do muro vocÃª nota que alguem (ou alguma coisa)
+colocou pequenso apoios para as mÃ£os para facilitar a passagem para cima.
+O TÃºnel  em si segue para leste.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
 ~
 ~
@@ -1658,12 +1644,12 @@ D4
 S
 #4116
 A Passagem~
-   Você se encontra em um pequeno passadiço que segue norte e sul.  Parece
+   VocÃª se encontra em um pequeno passadiÃ§o que segue norte e sul.  Parece
 largo o suficiente para duas pessoas caminharem lado a lado com sobra de
-espaço.  A passagem aparenta ter um formato quase retangular.  Ao longe na
-direção sul você pode ver um pequeno facho de luz.
+espaÃ§o.  A passagem aparenta ter um formato quase retangular.  Ao longe na
+direÃ§Ã£o sul vocÃª pode ver um pequeno facho de luz.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1674,16 +1660,16 @@ D2
 0 -1 4120
 E
 luz facho~
-Bem, você não consegue ver de onde ela vem...
+Bem, vocÃª nÃ£o consegue ver de onde ela vem...
 ~
 S
 #4117
-O Túnel Secreto~
-   Você está agora num estreito passadiço que não parece ter sido muito
+O TÃºnel Secreto~
+   VocÃª estÃ¡ agora num estreito passadiÃ§o que nÃ£o parece ter sido muito
 visitado ultimamente (nem em qualquer outro tempo).  Ele segue voltando-se
 para o norte e ao sul algo que parece um quarto.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1695,14 +1681,14 @@ D2
 S
 #4118
 A Caverna~
-   Esta enorme caverna é surpreendetemente muito bom iluminada.  Há cerca de
-vinte tochas acesas por todo o ambiente colocadas em castiçais muitos pés
-acima de sua cabeça.  A dança das sombras criada pela inquietação das chamas
-prende seu olhar por alguns minutos ameaçando impedir sua entrada.
+   Esta enorme caverna Ã© surpreendetemente muito bom iluminada.  HÃ¡ cerca de
+vinte tochas acesas por todo o ambiente colocadas em castiÃ§ais muitos pÃ©s
+acima de sua cabeÃ§a.  A danÃ§a das sombras criada pela inquietaÃ§Ã£o das chamas
+prende seu olhar por alguns minutos ameaÃ§ando impedir sua entrada.
    Olhando ao redor da caverna, ela parece continuar para oeste e sul.
 No muro do norte uma estranha e vertical rachadura levar a algum lugar.
 ~
-40 8 0 0 0 1
+40 d 1
 D0
 Parece bastante apertada.
 ~
@@ -1719,13 +1705,13 @@ D3
 S
 #4119
 A Caverna~
-   Esta enorme caverna é surpreendetemente muito bem iluminada.  Há cerca de
-vinte tochas acesas por todo o ambiente colocadas em castiçais muitos pés
-acima de sua cabeça.  A dança das sombras criada pela inquietação das chamas
-prende seu olhar por alguns minutos ameaçando impedir sua entrada.
+   Esta enorme caverna Ã© surpreendetemente muito bem iluminada.  HÃ¡ cerca de
+vinte tochas acesas por todo o ambiente colocadas em castiÃ§ais muitos pÃ©s
+acima de sua cabeÃ§a.  A danÃ§a das sombras criada pela inquietaÃ§Ã£o das chamas
+prende seu olhar por alguns minutos ameaÃ§ando impedir sua entrada.
    Olhando ao redor da caverna, ela parece continuar para leste e sul.
 ~
-40 8 0 0 0 1
+40 d 1
 D1
 ~
 ~
@@ -1735,20 +1721,20 @@ D2
 ~
 0 -1 4124
 D3
-A rocha do muro oeste parece mal encaixada por alguma estranha rezão.
+A rocha do muro oeste parece mal encaixada por alguma estranha rezÃ£o.
 ~
 rocha muro~
 1 -1 4121
 S
 #4120
 A Passagem~
-   Você está em uma passagem absolutamente normal, suficientemente ampla
-para que uma pessoa possa atravessa-la, mas não o suficiente para duas.
-O teto cai aqui surpreendentemente, ou espere, será porque o chão voltou-se
-para cima?  O Tunel parece estreitar-se mais a medida  que você olha para o
+   VocÃª estÃ¡ em uma passagem absolutamente normal, suficientemente ampla
+para que uma pessoa possa atravessa-la, mas nÃ£o o suficiente para duas.
+O teto cai aqui surpreendentemente, ou espere, serÃ¡ porque o chÃ£o voltou-se
+para cima?  O Tunel parece estreitar-se mais a medida  que vocÃª olha para o
 sul, e alarga-se mais na vista norte.  A luz ao sul continua a faiscar.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1759,39 +1745,40 @@ D2
 0 -1 4125
 E
 luz~
-Está perto o suficente para iluminar a passagem.
+EstÃ¡ perto o suficente para iluminar a passagem.
 ~
 S
 #4121
-O Túnel Secreto~
-   Você para em um saguão muito pouco natural, com mais ou menos dez pés de
-diagonal e uns dez ou doze pés de altura.  O Passadiço se afunila para baixo
-na direção oeste onde ele leva a uma porta com aproximadamente 5 pés de
+O TÃºnel Secreto~
+   VocÃª para em um saguÃ£o muito pouco natural, com mais ou menos dez pÃ©s de
+diagonal e uns dez ou doze pÃ©s de altura.  O PassadiÃ§o se afunila para baixo
+na direÃ§Ã£o oeste onde ele leva a uma porta com aproximadamente 5 pÃ©s de
 diagonal.  O caminho para o leste parece bloqueado por uma rocha.
 ~
-40 9 0 0 0 3
+40 ad 3
 D1
-A rocha que bloqueia a passagem leste parece facilmente removível.
+A rocha que bloqueia a passagem leste parece facilmente removÃ­vel.
 ~
 muro rocha~
 1 -1 4119
 D3
 ~
 porta~
+:n 2
 1 -1 4122
 E
 muro rocha~
-A rocha que bloqueia a passagem leste parece facilmente removível.
+A rocha que bloqueia a passagem leste parece facilmente removÃ­vel.
 ~
 S
 #4122
 O Quarto Secreto~
-   Você está em um pequeno quarto que nunca pensou poder existir.  Este
-pequeno, quase perfeitamente circular, lugar não parece ser uma formação
+   VocÃª estÃ¡ em um pequeno quarto que nunca pensou poder existir.  Este
+pequeno, quase perfeitamente circular, lugar nÃ£o parece ser uma formaÃ§Ã£o
 natural, sendo as paredes muito lisas e as entradas das portas para o norte
-e leste ambas com quase cinco pés de largura por onze de altura.
+e leste ambas com quase cinco pÃ©s de largura por onze de altura.
 ~
-40 9 0 0 0 3
+40 ad 3
 D0
 ~
 ~
@@ -1799,17 +1786,18 @@ D0
 D1
 ~
 entrada porta~
+:n 2 A porta de entrada
 1 -1 4121
 S
 #4123
 A Caverna~
-   Esta enorme caverna é surpreendetemente muito bem iluminada.  Há cerca de
-vinte tochas acesas por todo o ambiente colocadas em castiçais muitos pés
-acima de sua cabeça.  A dança das sombras criada pela inquietação das chamas
-prende seu olhar por alguns minutos ameaçando impedir sua entrada.
+   Esta enorme caverna Ã© surpreendetemente muito bem iluminada.  HÃ¡ cerca de
+vinte tochas acesas por todo o ambiente colocadas em castiÃ§ais muitos pÃ©s
+acima de sua cabeÃ§a.  A danÃ§a das sombras criada pela inquietaÃ§Ã£o das chamas
+prende seu olhar por alguns minutos ameaÃ§ando impedir sua entrada.
    Olhando ao redor da caverna, ela parece continuar para oeste e norte.
 ~
-40 8 0 0 0 1
+40 d 1
 D0
 ~
 ~
@@ -1821,15 +1809,15 @@ D3
 S
 #4124
 A Caverna~
-   Esta enorme caverna é surpreendetemente muito bem iluminada.  Há cerca de
-vinte tochas acesas por todo o ambiente colocadas em castiçais muitos pés
-acima de sua cabeça.  A dança das sombras criada pela inquietação das chamas
-prende seu olhar por alguns minutos ameaçando impedir sua entrada.
-   Olhando ao redor da caverna, ela parece continuar para leste e norte.Há
-uma passagem saindo do muro oeste da caverna que parece curvar-se na direção
+   Esta enorme caverna Ã© surpreendetemente muito bem iluminada.  HÃ¡ cerca de
+vinte tochas acesas por todo o ambiente colocadas em castiÃ§ais muitos pÃ©s
+acima de sua cabeÃ§a.  A danÃ§a das sombras criada pela inquietaÃ§Ã£o das chamas
+prende seu olhar por alguns minutos ameaÃ§ando impedir sua entrada.
+   Olhando ao redor da caverna, ela parece continuar para leste e norte.HÃ¡
+uma passagem saindo do muro oeste da caverna que parece curvar-se na direÃ§Ã£o
 norte.
 ~
-40 8 0 0 0 1
+40 d 1
 D0
 ~
 ~
@@ -1845,11 +1833,11 @@ D3
 S
 #4125
 A Passagem~
-   Você está no fimda passagem estreita que segue daqui para o norte.  O
-muro do sul é liso e quase parece dançar com as sombras criadas pelo faiscar
+   VocÃª estÃ¡ no fimda passagem estreita que segue daqui para o norte.  O
+muro do sul Ã© liso e quase parece danÃ§ar com as sombras criadas pelo faiscar
 da luz vinda da caverna ao leste.
 ~
-40 8 0 0 0 3
+40 d 3
 D0
 ~
 ~
@@ -1861,22 +1849,22 @@ D1
 S
 #4126
 O Caminho Rasteiro~
-   Você está em um caminho rasteiro bastante estreito.  Para sair dele, você
+   VocÃª estÃ¡ em um caminho rasteiro bastante estreito.  Para sair dele, vocÃª
 deve se esgueirar por entre as rochas salientes das pardes e do teto.  O
-diâmetro desse caminho é de aproximadamente dois pés, e é uma situação um
-tanto difícil.  Você torce para não encontrar nenhuma minhoca ou criaturas
-desta espécie, pois seria muito difícil se defender aqui.
+diÃ¢metro desse caminho Ã© de aproximadamente dois pÃ©s, e Ã© uma situaÃ§Ã£o um
+tanto difÃ­cil.  VocÃª torce para nÃ£o encontrar nenhuma minhoca ou criaturas
+desta espÃ©cie, pois seria muito difÃ­cil se defender aqui.
 ~
-40 877 0 0 0 5
+40 acdfgij 5
 D0
-Você pode ver pequeno buraco marcando a saida norte desse lugar.
+VocÃª pode ver pequeno buraco marcando a saida norte desse lugar.
 ~
 ~
 0 -1 4111
 D2
-Você ve a luz vinda da saída sul daqui.
+VocÃª ve a luz vinda da saÃ­da sul daqui.
 ~
 ~
 0 -1 4118
 S
-$~
+$
