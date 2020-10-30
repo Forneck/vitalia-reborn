@@ -1,29 +1,30 @@
 #5900
-A Entrada Para o ManicÙmio~
-   O port„o negro descascado fica ao norte.  A parede de pedra fica a leste
-e oeste do port„o.  … uma boa pergunta se o port„o ainda funciona, de t„o
-velho e acabado que parece.  O sul È usado como entrada principal para algum
-tipo de encontro, talvez acadÍmico, talvez militar.  Em todo caso, n„o È usado
+A Entrada Para o Manic√¥mio~
+   O port√£o negro descascado fica ao norte.  A parede de pedra fica a leste
+e oeste do port√£o.  √â uma boa pergunta se o port√£o ainda funciona, de t√£o
+velho e acabado que parece.  O sul √© usado como entrada principal para algum
+tipo de encontro, talvez acad√™mico, talvez militar.  Em todo caso, n√£o √© usado
 a um bom tempo.
 ~
-59 105 0 0 0 0
+59 dgfa 0
+D3
+~
+portao~
+:n 1 o port√£o
+a -1 15067 
 D2
 ~
 ~
 0 -1 5901
-D3
-~
-port„o~
-1 -1 15067
 S
 #5901
 Em uma Velha Fonte~
    Uma fonte, seca, rachada, escurecida pelo limo, fica no centro deste
-pequeno p·tio.  A fonte ostenta a figura de um homem, orgulhosamente no
-centro, com um tomo em uma das m„os e a outra em sua lapela.  Ainda h· algum
-tipo de lÌquido no fundo da fonte, mas n„o parece ser segura sua consumaÁ„o.
+pequeno p√°tio.  A fonte ostenta a figura de um homem, orgulhosamente no
+centro, com um tomo em uma das m√£os e a outra em sua lapela.  Ainda h√° algum
+tipo de l√≠quido no fundo da fonte, mas n√£o parece ser segura sua consuma√ß√£o.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -42,14 +43,14 @@ D3
 0 -1 5905
 S
 #5902
-Pelo ManicÙmio~
-   Grandes construÁıes cercam todos os lados, o que deveriam ser caminhos
-bem cuidados agora est„o tomados por ervas daninhas, levam pelas construÁıes
-e ao redor das mesmas.  Dois velhos prÈdios ficam a leste e oeste, e ao sul,
-uma construÁ„o menor, claro, ao norte fica a saÌda deste lugar.  A porta
+Pelo Manic√¥mio~
+   Grandes constru√ß√µes cercam todos os lados, o que deveriam ser caminhos
+bem cuidados agora est√£o tomados por ervas daninhas, levam pelas constru√ß√µes
+e ao redor das mesmas.  Dois velhos pr√©dios ficam a leste e oeste, e ao sul,
+uma constru√ß√£o menor, claro, ao norte fica a sa√≠da deste lugar.  A porta
 para a parte sul, obviamente, fica ao sul.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -61,20 +62,21 @@ D1
 D2
 ~
 porta~
-1 -1 5931
+:n 2 a porta
+a -1 5931
 D3
 ~
 ~
 0 -1 5906
 S
 #5903
-Pelo ManicÙmio~
+Pelo Manic√¥mio~
    As ervas daninhas quase cobrem todo o assoalho que costumava cobrir o
-ch„o aqui, apenas pequenos caminhos de pedra ainda s„o visÌveis.  Uma vez,
-este lugar costumava ser algum tipo de fundaÁ„o.  O que pode ter acontecido
-para que o lugar ficasse deste jeito, vocÍ pode apenas imaginar.
+ch√£o aqui, apenas pequenos caminhos de pedra ainda s√£o vis√≠veis.  Uma vez,
+este lugar costumava ser algum tipo de funda√ß√£o.  O que pode ter acontecido
+para que o lugar ficasse deste jeito, voc√™ pode apenas imaginar.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D2
 ~
 ~
@@ -85,15 +87,15 @@ D3
 0 -1 5901
 S
 #5904
-Pelo ManicÙmio~
-   O ch„o abaixo de vocÍ foi obviamente remendado aqui, neste pequeno p·tio,
-as pedras ainda proÌbem o crescimento das ervas daninhas.  Um prÈdio
+Pelo Manic√¥mio~
+   O ch√£o abaixo de voc√™ foi obviamente remendado aqui, neste pequeno p√°tio,
+as pedras ainda pro√≠bem o crescimento das ervas daninhas.  Um pr√©dio
 bastante antigo fica ao leste, suas portas principais ficam ao leste, uma
-delas balanÁa loucamente em sua dobradiÁa.  Olhando mais de perto, vocÍ pode
-ver manchas de sangue perto da maÁaneta e em sua moldura.  Um caminho
-perde-se ao sul entre as construÁıes.
+delas balan√ßa loucamente em sua dobradi√ßa.  Olhando mais de perto, voc√™ pode
+ver manchas de sangue perto da ma√ßaneta e em sua moldura.  Um caminho
+perde-se ao sul entre as constru√ß√µes.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -101,7 +103,8 @@ D0
 D1
 ~
 porta~
-1 -1 5907
+:n 2 a porta
+a -1 5907
 D2
 ~
 ~
@@ -112,14 +115,14 @@ D3
 0 -1 5902
 S
 #5905
-Pelo ManicÙmio~
-   Perto do oeste h· uma porta que leva a um prÈdio bem antigo feito de
-pedra lascada.  O p·tio a sua volta deve ter sido bastante bonito com a
-fonte em seu centro, cercado de grandes construÁıes.  De qualquer forma,
-alguÈm ou alguma coisa causou todo este abandono.  Talvez uma fuga, talvez
-uma doenÁa.  Podemos apenas imaginar.
+Pelo Manic√¥mio~
+   Perto do oeste h√° uma porta que leva a um pr√©dio bem antigo feito de
+pedra lascada.  O p√°tio a sua volta deve ter sido bastante bonito com a
+fonte em seu centro, cercado de grandes constru√ß√µes.  De qualquer forma,
+algu√©m ou alguma coisa causou todo este abandono.  Talvez uma fuga, talvez
+uma doen√ßa.  Podemos apenas imaginar.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 ~
@@ -131,16 +134,17 @@ D2
 D3
 ~
 porta~
-1 -1 5920
+:n 2 a porta
+a -1 5920
 S
 #5906
-Pelo ManicÙmio~
-   Um longo prÈdio bastante antigo segue pelo norte e sul, formando o limite
-ocidental deste p·tio.  Ao sul h· um caminho que contorna as construÁıes,
-levando para tr·s para o manicÙmio.  Deste ‚ngulo, vocÍ pode ver um brilho
-bruxuleante vindo do prÈdio ao sul.
+Pelo Manic√¥mio~
+   Um longo pr√©dio bastante antigo segue pelo norte e sul, formando o limite
+ocidental deste p√°tio.  Ao sul h√° um caminho que contorna as constru√ß√µes,
+levando para tr√°s para o manic√¥mio.  Deste √¢ngulo, voc√™ pode ver um brilho
+bruxuleante vindo do pr√©dio ao sul.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -155,13 +159,13 @@ D2
 0 -1 5935
 S
 #5907
-A C‚mara Interna do ManicÙmio~
-   O ch„o deste prÈdio È feito de concreto, qua j· foi branco.  … agora
+A C√¢mara Interna do Manic√¥mio~
+   O ch√£o deste pr√©dio √© feito de concreto, qua j√° foi branco.  √â agora
 negro pelo tempo e negligente desuso.  Uma porta fica pela parede leste, um
-pequeno buraco se abre aqui, onde uma vez foi o lugar de um vidro.  A c‚mara
-segue a norte daqui, um pequeno rastro de sangue velho segue pelo ch„o.
+pequeno buraco se abre aqui, onde uma vez foi o lugar de um vidro.  A c√¢mara
+segue a norte daqui, um pequeno rastro de sangue velho segue pelo ch√£o.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -169,20 +173,22 @@ D0
 D1
 ~
 porta~
-1 -1 5912
+:n 2 a porta
+a -1 5912
 D3
 ~
 porta~
-1 -1 5904
+:n 2 a porta
+a -1 5904
 S
 #5908
-A C‚mara Interna da Academia~
-   A c‚mara aqui parece muito com a c‚mara ao sul, a sujeira toma todo o
-lugar.  Outra porta fica ao leste, h· uma abertura em seu centro onde parece
+A C√¢mara Interna da Academia~
+   A c√¢mara aqui parece muito com a c√¢mara ao sul, a sujeira toma todo o
+lugar.  Outra porta fica ao leste, h√° uma abertura em seu centro onde parece
 que era o lugar de uma janela.  O rastro de sangue segue a norte para fim da
-c‚mara e segue para outra porta ainda.
+c√¢mara e segue para outra porta ainda.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -190,25 +196,27 @@ D0
 D1
 ~
 porta~
-1 -1 5911
+:n 2 a porta
+a -1 5911
 D2
 ~
 ~
 0 -1 5907
 S
 #5909
-A C‚mara Interna da Academia~
-   A c‚mara chega a um fim, uma porta fica ao leste seguindo para uma sala
+A C√¢mara Interna da Academia~
+   A c√¢mara chega a um fim, uma porta fica ao leste seguindo para uma sala
 de aula.  O rastro de sangue, em sua maior parte seco, segue para a sala
-onde est· muito escuro para que vocÍ possa ver alguma coisa l· dentro.  A
-c‚mara segue a sul na escurid„o, para a saÌda.  Uma escada de concreto segue
-acima na escurid„o, seus degraus est„o cobertos de lixo e poeira.
+onde est√° muito escuro para que voc√™ possa ver alguma coisa l√° dentro.  A
+c√¢mara segue a sul na escurid√£o, para a sa√≠da.  Uma escada de concreto segue
+acima na escurid√£o, seus degraus est√£o cobertos de lixo e poeira.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 porta~
-1 -1 5910
+:n 2 a porta
+a -1 5910
 D2
 ~
 ~
@@ -222,65 +230,69 @@ S
 A Sala de Aula~
    Esta pequena sala de vinte por vinte, foi uma vez usada como sala de aula
 para algum tipo de ensino que era passado aos pupilos que residiam neste
-manicÙmio.  H· um velho quadro negro, quebrado ao meio, ainda pendurado na
-parede ao sul, e as mesas e cadeiras usadas pelos pupilos ainda est„o
-firmemente pregadas ao ch„o.  Obviamente, se as mesas e cadeiras tiveram de
-ser pregadas ao ch„o, houve necessidade de forÁar a disciplina.
+manic√¥mio.  H√° um velho quadro negro, quebrado ao meio, ainda pendurado na
+parede ao sul, e as mesas e cadeiras usadas pelos pupilos ainda est√£o
+firmemente pregadas ao ch√£o.  Obviamente, se as mesas e cadeiras tiveram de
+ser pregadas ao ch√£o, houve necessidade de for√ßar a disciplina.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D3
 ~
 porta~
-1 -1 5909
+:n 2 a porta
+a -1 5909
 S
 #5911
 A Sala de Aula~
-   Esta pequena sala tem trÍs fileiras de mesas e cadeiras.  As cadeiras
-est„o viradas para o sul, para um velho quadro negro e um espaÁo, onde
-deveria estar a mesa da professora, est· vazio.  As cadeiras e mesas
-restaram apenas por estarem pregadas ao ch„o, para impor disciplina do modo
+   Esta pequena sala tem tr√™s fileiras de mesas e cadeiras.  As cadeiras
+est√£o viradas para o sul, para um velho quadro negro e um espa√ßo, onde
+deveria estar a mesa da professora, est√° vazio.  As cadeiras e mesas
+restaram apenas por estarem pregadas ao ch√£o, para impor disciplina do modo
 antigo.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D3
 ~
 porta~
-1 -1 5908
+:n 2 a porta
+a -1 5908
 S
 #5912
 A Sala de Aula~
-   Esta pequena sala tem trÍs fileiras de mesas e cadeiras, todas colocadas
+   Esta pequena sala tem tr√™s fileiras de mesas e cadeiras, todas colocadas
 a mesma exata distancia uma da outra e das paredes.  As paredes uma vez de
 gesso branco, agora trincado pelo tempo, abrindo grandes buracos nas antigas
-paredes brancas e lisas.  Lascivos desenhos adornam a superfÌcie escura do
-gesso, clara evidÍncia de que o lugar n„o est· abandonado por completo.  
+paredes brancas e lisas.  Lascivos desenhos adornam a superf√≠cie escura do
+gesso, clara evid√™ncia de que o lugar n√£o est√° abandonado por completo.  
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D3
 ~
 porta~
-1 -1 5907
+:n 2 a porta
+a -1 5907
 E
 gesso desenho~
-VocÍ tenta entender as palavras, vocÍ faz o m·ximo que pode mas a maioria
-delas parece desaparecer em manchas.  Palavras como /cwm„e/c0 e /cwoutras
-hereges, s„o repetidas como uma pequena poesia.  Uma lÍ /cwAqui eu sento,
-com meu coraÁ„o partido, tentando pensar mas nada/c0, e as palavras
-enfraquecem, fica difÌcil ler o que se segue.
+Voc√™ tenta entender as palavras, voc√™ faz o m√°ximo que pode mas a maioria
+delas parece desaparecer em manchas.  Palavras como @wm√£e@n e @woutras
+hereges@n, s√£o repetidas como uma pequena poesia.  Uma l√™ @wAqui eu sento,
+com meu cora√ß√£o partido, tentando pensar mas nada@n, e as palavras
+enfraquecem, fica dif√≠cil ler o que se segue.
 ~
 S
 #5913
 O Corredor Superior~
-   Estranho que n„o haja janelas no prÈdio todo, parece que este prÈdio
+   Estranho que n√£o haja janelas no pr√©dio todo, parece que este pr√©dio
 deste tamanho foi feito inteiramente de tijolos de pedra e gesso, o que o
-tornara muito quente e extremamente mal ventilado.  H· uma porta na parede
+tornara muito quente e extremamente mal ventilado.  H√° uma porta na parede
 leste, o corredor segue ao sul.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 porta~
-1 -1 5918
+:n 2 a porta
+a -1 5918
 D2
 ~
 ~
@@ -292,11 +304,11 @@ D5
 S
 #5914
 O Corredor Superior~
-   O corredor È t„o coberto de pedregulhos e escombros do teto e das paredes
-que fica difÌcil sua travessia.  As paredes s„o rachadas e chamuscadas,
+   O corredor √© t√£o coberto de pedregulhos e escombros do teto e das paredes
+que fica dif√≠cil sua travessia.  As paredes s√£o rachadas e chamuscadas,
 manchadas de sangue em alguns lugares.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -304,7 +316,8 @@ D0
 D1
 ~
 porta~
-1 -1 5917
+:n 2 a porta
+a -1 5917
 D2
 ~
 ~
@@ -312,12 +325,12 @@ D2
 S
 #5915
 O Corredor Interno~
-   Aqui no fim do corredor, o ch„o È coberto por pedaÁos de gesso e tijolos
-de pedra.  H· uma porta na parede leste, tomada pelo lixo que h· no ch„o.
-Talvez um r·pido pulo sobre os escombros permita que vocÍ aterrisse ao
+   Aqui no fim do corredor, o ch√£o √© coberto por peda√ßos de gesso e tijolos
+de pedra.  H√° uma porta na parede leste, tomada pelo lixo que h√° no ch√£o.
+Talvez um r√°pido pulo sobre os escombros permita que voc√™ aterrisse ao
 leste.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -325,58 +338,62 @@ D0
 D1
 ~
 porta~
-1 -1 5916
+:n 2 a porta
+a -1 5916
 S
 #5916
 A Sala de Aula~
-   Lixo e escombros est„o por todo o ch„o deste pequeno quarto.  Os restos
-das velhas mesas e cadeiras se acumulam quebradas pelo ch„o, em uma parede
-h· um pequeno buraco que d· para a outra sala.
+   Lixo e escombros est√£o por todo o ch√£o deste pequeno quarto.  Os restos
+das velhas mesas e cadeiras se acumulam quebradas pelo ch√£o, em uma parede
+h√° um pequeno buraco que d√° para a outra sala.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D3
 ~
 porta~
-1 -1 5915
+:n 2 a porta
+a -1 5915
 E
 buraco~
-VocÍ pode ver um pequeno pedaÁo de uma sala - ela parece estar na mesma
-condiÁ„o desta aqui.
+Voc√™ pode ver um pequeno peda√ßo de uma sala - ela parece estar na mesma
+condi√ß√£o desta aqui.
 ~
 S
 #5917
 A Sala de Aula~
    O lixo que estava sobre todo o corredor, se derramou neste quarto - ou
-ser· vice versa?  - cobrindo o ch„o de sujeira.  PedaÁos quebrados de
-madeira das mesas e cadeiras se amontoam dentre pedaÁos de metal esquecidos.
+ser√° vice versa?  - cobrindo o ch√£o de sujeira.  Peda√ßos quebrados de
+madeira das mesas e cadeiras se amontoam dentre peda√ßos de metal esquecidos.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D3
 ~
 porta~
-1 -1 5914
+:n 2 a porta
+a -1 5914
 S
 #5918
 A Sala de Aula~
-   A sala È manchada com sangue, em todos os est·gios de apodrecimento.  …
-obvio que algumas manchas s„o mais velhas que as outras, umas atÈ
-relativamente frescas.  H· uma tonelada de entulho das paredes em colapso e
-do teto, e o fedor È terrÌvel.
+   A sala √© manchada com sangue, em todos os est√°gios de apodrecimento.  √â
+obvio que algumas manchas s√£o mais velhas que as outras, umas at√©
+relativamente frescas.  H√° uma tonelada de entulho das paredes em colapso e
+do teto, e o fedor √© terr√≠vel.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D3
 ~
 porta~
-1 -1 5913
+:n 2 a porta
+a -1 5913
 S
 #5919
 O Fim do Corredor~
-   O corredor termina com uma porta ao oeste.  A porta est· aberta, apoiada
-ao ch„o, pendurada por uma dobradiÁa.  O entulho do prÈdio em decadÍncia
-torna a passagem difÌcil.  O sangue emplastado nas paredes e o lixo no ch„o
-n„o contribuem muito tambÈm.  
+   O corredor termina com uma porta ao oeste.  A porta est√° aberta, apoiada
+ao ch√£o, pendurada por uma dobradi√ßa.  O entulho do pr√©dio em decad√™ncia
+torna a passagem dif√≠cil.  O sangue emplastado nas paredes e o lixo no ch√£o
+n√£o contribuem muito tamb√©m.  
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D2
 ~
 ~
@@ -384,16 +401,17 @@ D2
 D3
 ~
 porta~
-1 -1 5922
+:n 2 a porta
+a -1 5922
 S
 #5920
 O Corredor Interno~
-   Este corredor quase n„o pode ser chamado de corredor de t„o devastado,
-t„o arruinado pelas garras do tempo e pelos tijolos de pedra que as paredes
-n„o mais parecem segurar.  H· buracos nas paredes, abrindo uma brecha que d·
-a vis„o dos outros quartos arruinados.
+   Este corredor quase n√£o pode ser chamado de corredor de t√£o devastado,
+t√£o arruinado pelas garras do tempo e pelos tijolos de pedra que as paredes
+n√£o mais parecem segurar.  H√° buracos nas paredes, abrindo uma brecha que d√°
+a vis√£o dos outros quartos arruinados.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -401,45 +419,47 @@ D0
 D1
 ~
 porta~
-1 -1 5905
+:n 2 a porta
+a -1 5905
 D3
 ~
 ~
 0 -1 5923
 S
 #5921
-Um Velho EscritÛrio~
-   Este parece ter sido algum tipo de escritÛrio ou administraÁ„o.  Quem
-sabe, possivelmente ele tenha sido a recepÁ„o ou talvez onde os mais
-problem·ticos eram ouvidos.  Quem pode dizer?
+Um Velho Escrit√≥rio~
+   Este parece ter sido algum tipo de escrit√≥rio ou administra√ß√£o.  Quem
+sabe, possivelmente ele tenha sido a recep√ß√£o ou talvez onde os mais
+problem√°ticos eram ouvidos.  Quem pode dizer?
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D3
 ~
 ~
 0 -1 5924
 S
 #5922
-O EscritÛrio Administrativo~
-   Este ao que parece foi algum tipo de escritÛrio de quando o manicÙmio
-ainda estava ativo.  PedaÁos de metal e de madeira tomam o ch„o desta sala,
-parecem ser os restos da mobÌlia do escritÛrio.
+O Escrit√≥rio Administrativo~
+   Este ao que parece foi algum tipo de escrit√≥rio de quando o manic√¥mio
+ainda estava ativo.  Peda√ßos de metal e de madeira tomam o ch√£o desta sala,
+parecem ser os restos da mob√≠lia do escrit√≥rio.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 porta~
-1 -1 5919
+:n 2 a porta
+a -1 5919
 S
 #5923
 O Corredor Interno~
-   O corredor continua seu decadente caminho atÈ as profundezas do prÈdio,
+   O corredor continua seu decadente caminho at√© as profundezas do pr√©dio,
 os buracos da parede ainda mostram outros quartos.  Tons de vermelho - o que
-parecem ser manchas de sangue - s„o muito freq¸entes enquanto vocÍ segue seu
-caminho para dentro deste lugar amaldiÁoado.  Pode ser uma boa idÈia
-manter-se perto da saÌda.
+parecem ser manchas de sangue - s√£o muito freq√ºentes enquanto voc√™ segue seu
+caminho para dentro deste lugar amaldi√ßoado.  Pode ser uma boa id√©ia
+manter-se perto da sa√≠da.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 ~
@@ -450,11 +470,11 @@ D2
 0 -1 5924
 S
 #5924
-A Base de uma Escada Caindo aos PedaÁos~
-   Degraus levam para cima, estes, que est„o pela metade, esmigalhados.
-Seria um grande ato de coragem seguir adiante.  H· uma porta ao leste.
+A Base de uma Escada Caindo aos Peda√ßos~
+   Degraus levam para cima, estes, que est√£o pela metade, esmigalhados.
+Seria um grande ato de coragem seguir adiante.  H√° uma porta ao leste.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -469,16 +489,17 @@ D4
 0 -1 5925
 S
 #5925
-No Topo da Escada Caindo aos PedaÁos~
+No Topo da Escada Caindo aos Peda√ßos~
    A escada fica bem abaixo, seus degraus quebrados abrem buracos prontos
 para engolir almas tolas o suficiente para descer.  Uma porta fica ao norte,
 um corredor segue a leste.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 porta~
-1 -1 5927
+:n 2 a porta
+a -1 5927
 D1
 ~
 ~
@@ -490,11 +511,11 @@ D5
 S
 #5926
 O Corredor Escurecido~
-   O corredor faz uma curva pela direita ao norte, levando para a escurid„o.
-Os escombros s„o tantos quanto no nÌvel superior e inferior.  N„o h· portas
-ou janelas a vista, mas h· manchas de sangue - sempre presentes.
+   O corredor faz uma curva pela direita ao norte, levando para a escurid√£o.
+Os escombros s√£o tantos quanto no n√≠vel superior e inferior.  N√£o h√° portas
+ou janelas a vista, mas h√° manchas de sangue - sempre presentes.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -505,25 +526,26 @@ D3
 0 -1 5925
 S
 #5927
-Um Velho EscritÛrio~
-   Parece ser bem pequeno este escritÛrio privativo.  H· pedaÁos velhos da
-decoraÁ„o, apodrecendo desde que a decadÍncia veio a este lugar, o que
-indica que em alguma Època este foi um lugar de conforto para algum alto
+Um Velho Escrit√≥rio~
+   Parece ser bem pequeno este escrit√≥rio privativo.  H√° peda√ßos velhos da
+decora√ß√£o, apodrecendo desde que a decad√™ncia veio a este lugar, o que
+indica que em alguma √©poca este foi um lugar de conforto para algum alto
 administrador.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D2
 ~
 porta~
-1 -1 5925
+:n 2 a porta
+a -1 5925
 S
 #5928
 O Corredor de Pedregulhos~
    O corredor segue do norte ao sul, sem janelas ou portas em ambas as
-paredes.  Quase parece que o prÈdio inteiro foi borrifado com sangue, mas
-manchas de sangue persistem atÈ aqui, no nÌvel superior.  
+paredes.  Quase parece que o pr√©dio inteiro foi borrifado com sangue, mas
+manchas de sangue persistem at√© aqui, no n√≠vel superior.  
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -534,26 +556,27 @@ D2
 0 -1 5926
 S
 #5929
-O EscritÛrio~
-   Este obviamente foi o escritÛrio de algum funcion·rio de alto escal„o,
-como se ele fosse feito para entreter convidados e outras pessoas.  O ch„o
-ainda È parcialmente coberto com um carpete apodrecido e carcomido, assim
+O Escrit√≥rio~
+   Este obviamente foi o escrit√≥rio de algum funcion√°rio de alto escal√£o,
+como se ele fosse feito para entreter convidados e outras pessoas.  O ch√£o
+ainda √© parcialmente coberto com um carpete apodrecido e carcomido, assim
 como as paredes.
 ~
-59 105 0 0 0 0
+59 dfga 0
 D1
 ~
 porta~
-1 -1 5930
+:n 2 a porta
+a -1 5930
 S
 #5930
 O Fim do Corredor~
    Os corredores terminam aqui, com uma porta ao oeste.  Pilhas de escombro
-sobem pelas paredes, fazendo da caminhada um desafio.  H· ainda as marcas de
+sobem pelas paredes, fazendo da caminhada um desafio.  H√° ainda as marcas de
 sangue em todo lugar, fazendo-o parecer pintado com alguma tinta macabra e
 mal cheirosa.
 ~
-59 105 0 0 0 0
+59 dfga 0
 D2
 ~
 ~
@@ -561,33 +584,36 @@ D2
 D3
 ~
 porta~
-1 -1 5929
+:n 2 a porta
+a -1 5929
 S
 #5931
-A RecepÁ„o~
-   Aqui era a recepÁ„o do de„o do manicÙmio, h· muito tempo, quando este
-ainda funcionava - era um manicÙmio oras.  O sangue que parece cobrir quase
-todo ch„o parece especialmente grosso aqui, as paredes s„o pegajosas ao
-toque, e o ch„o bastante grudendo.  H· uma pequena porta na parede leste.
+A Recep√ß√£o~
+   Aqui era a recep√ß√£o do de√£o do manic√¥mio, h√° muito tempo, quando este
+ainda funcionava - era um manic√¥mio oras.  O sangue que parece cobrir quase
+todo ch√£o parece especialmente grosso aqui, as paredes s√£o pegajosas ao
+toque, e o ch√£o bastante grudendo.  H√° uma pequena porta na parede leste.
 ~
-59 105 0 0 0 0
+59 dfga 0
 D0
 ~
 porta~
-1 -1 5902
+:n 2 a porta
+a -1 5902
 D1
 ~
 porta~
-1 -1 5932
+:n 2 a porta
+a -1 5932
 S
 #5932
 A Sala de Estar~
-   Este era a sala de estar do de„o e de sua famÌlia, onde eles se
-encontravam, passavam algum tempo juntos e faziam suas refeiÁıes.  Os restos
-de uma velha mesa est„o aqui, apenas uma perna restou das quatro originais,
-apoiando a mesa em um ‚ngulo absurdo.
+   Este era a sala de estar do de√£o e de sua fam√≠lia, onde eles se
+encontravam, passavam algum tempo juntos e faziam suas refei√ß√µes.  Os restos
+de uma velha mesa est√£o aqui, apenas uma perna restou das quatro originais,
+apoiando a mesa em um √¢ngulo absurdo.
 ~
-59 105 0 0 0 0
+59 dfga 0
 D2
 ~
 ~
@@ -595,18 +621,19 @@ D2
 D3
 ~
 porta~
-1 -1 5931
+:n 2 a porta
+a -1 5931
 S
 #5933
 O Quarto~
-   Este periclitante quarto È tudo o que restou de uma confort·vel c‚mara de
-descanso do de„o e sua esposa.  Os travesseiros e lenÁÛis h· muito foram
-rasgados em pedaÁos e carregados pelos ratos, o que era roupa de cama, agora
-È um grande ninho.  O que restou da mobÌlia È apenas uma pilha de madeira
-carcomida, e gesso que caiu das paredes.  E tudo est· - claro - ensopado de
+   Este periclitante quarto √© tudo o que restou de uma confort√°vel c√¢mara de
+descanso do de√£o e sua esposa.  Os travesseiros e len√ß√≥is h√° muito foram
+rasgados em peda√ßos e carregados pelos ratos, o que era roupa de cama, agora
+√© um grande ninho.  O que restou da mob√≠lia √© apenas uma pilha de madeira
+carcomida, e gesso que caiu das paredes.  E tudo est√° - claro - ensopado de
 sangue.
 ~
-59 105 0 0 0 0
+59 dfga 0
 D0
 ~
 ~
@@ -615,13 +642,13 @@ S
 #5934
 Um Caminho Confuso~
    Em sua maior parte coberto de ervas daninhas e plantas escuras, este
-caminho È cheio de tijolos de pedra e lixo dos prÈdios a seu redor, tudo,
+caminho √© cheio de tijolos de pedra e lixo dos pr√©dios a seu redor, tudo,
 coberto com um vermelho profundo, a cor do sangue.  Parece que o caminho foi
 limpo recentemente, embora ainda haja muitos escombros no caminho, o que
-torna sua passagem possÌvel.  Ao sul uma luz bruxuleante pode ser vista.  Ao
-leste fica a entrada para uma pequena construÁ„o feita de pedra.
+torna sua passagem poss√≠vel.  Ao sul uma luz bruxuleante pode ser vista.  Ao
+leste fica a entrada para uma pequena constru√ß√£o feita de pedra.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -637,13 +664,13 @@ D2
 S
 #5935
 Um Caminho Errante~
-   O caminho segue ao sul, em direÁ„o ‡ fonte de luz.  ¿ luz bruxuleante,
+   O caminho segue ao sul, em dire√ß√£o √† fonte de luz.  √Ä luz bruxuleante,
 pode-se ver marcas vermelhas e molhadas que foram espirradas por todo o
-ch„o, nas velhas pedras algumas das manchas secaram.  Um terrÌvel sentimento
-acompanha este lugar, quase como uma antecipaÁ„o da morte prÛxima.  Um
-prÈdio de pedra sem telhado fica logo ao oeste.
+ch√£o, nas velhas pedras algumas das manchas secaram.  Um terr√≠vel sentimento
+acompanha este lugar, quase como uma antecipa√ß√£o da morte pr√≥xima.  Um
+pr√©dio de pedra sem telhado fica logo ao oeste.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -658,17 +685,17 @@ D3
 0 -1 5940
 S
 #5936
-Um Caminho Errante Perto do P·tio~
-   A fonte de luz bruxuleante È agora vista.  Ela vem de um grande belvedere
-de pedra, no meio do p·tio.  O p·tio È cercado por prÈdios escurecidos,
-todos mostrando sinais de destruiÁ„o.  H· formas humanas vagando pelo p·tio,
-algumas parecem estar danÁando, outras parecem estar fazendo tarefas
-especÌficas.  No belvedere h· algumas pessoas, todas em ˙nissono parecem
-dizer alguma coisa com um som ainda n„o ouvido.  Olhando para o ch„o do
-p·tio, sangue pode ser visto espirrado em grandes quantidades pelas pedras.
+Um Caminho Errante Perto do P√°tio~
+   A fonte de luz bruxuleante √© agora vista.  Ela vem de um grande belvedere
+de pedra, no meio do p√°tio.  O p√°tio √© cercado por pr√©dios escurecidos,
+todos mostrando sinais de destrui√ß√£o.  H√° formas humanas vagando pelo p√°tio,
+algumas parecem estar dan√ßando, outras parecem estar fazendo tarefas
+espec√≠ficas.  No belvedere h√° algumas pessoas, todas em √∫nissono parecem
+dizer alguma coisa com um som ainda n√£o ouvido.  Olhando para o ch√£o do
+p√°tio, sangue pode ser visto espirrado em grandes quantidades pelas pedras.
 Quase parece que foi vertido para saturar o lugar todo.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -679,14 +706,14 @@ D2
 0 -1 5945
 S
 #5937
-Ao Norte do P·tio~
-   O caminho entra em uma curva ao noroeste para um grande p·tio de pedra,
-ornado com um enorme belvedere em seu centro.  Parece que o belvedere È a
+Ao Norte do P√°tio~
+   O caminho entra em uma curva ao noroeste para um grande p√°tio de pedra,
+ornado com um enorme belvedere em seu centro.  Parece que o belvedere √© a
 fonte de luz bruxuleante, como se algum tipo de fogo o estivesse consumindo.
-Ao longo do p·tio h· pessoas que parecem estar celebrando algum tipo de
-ritual, eles s„o muitos.
+Ao longo do p√°tio h√° pessoas que parecem estar celebrando algum tipo de
+ritual, eles s√£o muitos.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -698,11 +725,11 @@ D2
 S
 #5938
 Os Quartos dos Guardas~
-   Parece que os ocupantes dessa instituiÁ„o eram ligeiramente periculosos,
-uma vez que guardas haviam de ser mantidos em alerta.  Este prÈdio È igual
-aos outros, decadente, caindo aos pedaÁos e manchado de sangue.
+   Parece que os ocupantes dessa institui√ß√£o eram ligeiramente periculosos,
+uma vez que guardas haviam de ser mantidos em alerta.  Este pr√©dio √© igual
+aos outros, decadente, caindo aos peda√ßos e manchado de sangue.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 ~
@@ -714,24 +741,24 @@ D3
 S
 #5939
 Os Quartos dos Guardas~
-   O prÈdio mais parece um matadouro.  Nada de valor foi deixado, apenas
-pedaÁos da mobÌlia.  Este lugar deve ter sido deixado para apodrecer h·
-muito tempo atr·s.
+   O pr√©dio mais parece um matadouro.  Nada de valor foi deixado, apenas
+peda√ßos da mob√≠lia.  Este lugar deve ter sido deixado para apodrecer h√°
+muito tempo atr√°s.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D3
 ~
 ~
 0 -1 5938
 S
 #5940
-Os Velhos Est·bulos~
+Os Velhos Est√°bulos~
    Em algum tempo aqui deve ter sido onde os moradores e visitantes do
-manicÙmio mantinham suas montarias.  O ch„o n„o mostra sinais de que fora de
-pedra, as paredes s„o todas de pedra crua, que n„o parecem terem sido
-erguidas com o propÛsito de dar algum conforto.
+manic√¥mio mantinham suas montarias.  O ch√£o n√£o mostra sinais de que fora de
+pedra, as paredes s√£o todas de pedra crua, que n√£o parecem terem sido
+erguidas com o prop√≥sito de dar algum conforto.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 ~
@@ -742,25 +769,25 @@ D2
 0 -1 5941
 S
 #5941
-Os Velhos Est·bulos~
-   O sangue aqui È t„o presente quanto È em todos os lugares deste
-manicÙmio, borrifadas de vermelho decorando cada polegada.  Que tipo de
-crime horrÌvel fora cometido aqui, de modo a jorrar sangue deste modo?  Que
+Os Velhos Est√°bulos~
+   O sangue aqui √© t√£o presente quanto √© em todos os lugares deste
+manic√¥mio, borrifadas de vermelho decorando cada polegada.  Que tipo de
+crime horr√≠vel fora cometido aqui, de modo a jorrar sangue deste modo?  Que
 tipo de criatura faria uma coisa destas?
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
 0 -1 5940
 S
 #5942
-O P·tio Principal do ManicÙmio~
-   O p·tio aqui È enorme, em seu centro h· um grande belvedere que segura
-uma bruxuleante chama.  As pedras s„o pegajosas, aderindo ‡ sola das botas e
-sand·lias, causando efeito atÈ aos mais corajosos.
+O P√°tio Principal do Manic√¥mio~
+   O p√°tio aqui √© enorme, em seu centro h√° um grande belvedere que segura
+uma bruxuleante chama.  As pedras s√£o pegajosas, aderindo √† sola das botas e
+sand√°lias, causando efeito at√© aos mais corajosos.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -775,12 +802,12 @@ D2
 0 -1 5948
 S
 #5943
-O P·tio Principal do ManicÙmio~
-   Este È o p·tio principal do manicÙmio.  Um enorme belvedere de pedra È
-ostentado no centro, um caminho de pedra leva em todas as direÁıes.  O ch„o
-È pegajoso, fazendo seu calÁado grudar nele.
+O P√°tio Principal do Manic√¥mio~
+   Este √© o p√°tio principal do manic√¥mio.  Um enorme belvedere de pedra √©
+ostentado no centro, um caminho de pedra leva em todas as dire√ß√µes.  O ch√£o
+√© pegajoso, fazendo seu cal√ßado grudar nele.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 ~
@@ -795,14 +822,14 @@ D3
 0 -1 5942
 S
 #5944
-O P·tio Interno do ManicÙmio~
-   Este p·tio foi uma vez, obviamente, o centro de tr·fego do manicÙmio
+O P√°tio Interno do Manic√¥mio~
+   Este p√°tio foi uma vez, obviamente, o centro de tr√°fego do manic√¥mio
 durante o dia.  Um enorme belvedere de pedra fica ao sul daqui, um caminho
-largo leva a ele.  As pedras do p·tio est„o bem mais ensopadas de sangue que
-o resto do caminho pelo qual vocÍ passou, o ch„o È pegajoso a ponto de
-realmente tornar sua passagem difÌcil, pois seus calÁados ficam presos.
+largo leva a ele.  As pedras do p√°tio est√£o bem mais ensopadas de sangue que
+o resto do caminho pelo qual voc√™ passou, o ch√£o √© pegajoso a ponto de
+realmente tornar sua passagem dif√≠cil, pois seus cal√ßados ficam presos.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 ~
@@ -817,14 +844,14 @@ D3
 0 -1 5943
 S
 #5945
-O P·tio Interno do ManicÙmio~
-   Este p·tio foi uma vez, obviamente, o centro de tr·fego do manicÙmio
+O P√°tio Interno do Manic√¥mio~
+   Este p√°tio foi uma vez, obviamente, o centro de tr√°fego do manic√¥mio
 durante o dia.  Um enorme belvedere de pedra fica ao sul daqui, um caminho
-largo leva a ele.  As pedras do p·tio est„o bem mais ensopadas de sangue que
-o resto do caminho pelo qual vocÍ passou, o ch„o È pegajoso a ponto de
-realmente tornar sua passagem difÌcil, pois seus calÁados ficam presos.
+largo leva a ele.  As pedras do p√°tio est√£o bem mais ensopadas de sangue que
+o resto do caminho pelo qual voc√™ passou, o ch√£o √© pegajoso a ponto de
+realmente tornar sua passagem dif√≠cil, pois seus cal√ßados ficam presos.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -843,12 +870,12 @@ D3
 0 -1 5944
 S
 #5946
-O P·tio Interno do ManicÙmio~
-   Esta parte do p·tio È de pedra, fica no meio de degraus que seguem para o
-belvedere.  O cheiro de sangue fresco no ar È bastante forte, as pedras
-deste p·tio devem ser testemunhas de mortes di·rias.
+O P√°tio Interno do Manic√¥mio~
+   Esta parte do p√°tio √© de pedra, fica no meio de degraus que seguem para o
+belvedere.  O cheiro de sangue fresco no ar √© bastante forte, as pedras
+deste p√°tio devem ser testemunhas de mortes di√°rias.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -869,12 +896,12 @@ S
 #5947
 Os Degraus do Belvedere~
    Agora a fonte de luz do belvedere pode ser bem vista - uma tocha
-bruxuleante encrustada em um suporte de pedra, e h· um pequeno altar perto
-dela.  Um homem vestido em um robe vermelho ensang¸entado, se ajoelha diante
-do altar, com braÁos erguidos em prece, enquanto segura firmemente uma adaga
+bruxuleante encrustada em um suporte de pedra, e h√° um pequeno altar perto
+dela.  Um homem vestido em um robe vermelho ensang√ºentado, se ajoelha diante
+do altar, com bra√ßos erguidos em prece, enquanto segura firmemente uma adaga
 curva.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -893,13 +920,13 @@ D3
 0 -1 5946
 S
 #5948
-O P·tio do ManicÙmio~
-   O p·tio termina ao oeste, um pequeno edifÌcio marca seu limite.  A
-entrada para o prÈdio fica ao sul, uma escada de altos degraus leva para o
-seu escuro interior.  Bem atr·s do prÈdio uma alta torre pode ser vista se
-erguendo no cÈu da noite.
+O P√°tio do Manic√¥mio~
+   O p√°tio termina ao oeste, um pequeno edif√≠cio marca seu limite.  A
+entrada para o pr√©dio fica ao sul, uma escada de altos degraus leva para o
+seu escuro interior.  Bem atr√°s do pr√©dio uma alta torre pode ser vista se
+erguendo no c√©u da noite.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -916,12 +943,12 @@ S
 #5949
 Os Degraus do Belvedere~
    Agora a fonte de luz do belvedere pode ser bem vista - uma tocha
-bruxuleante encrustada em um suporte de pedra, e h· um pequeno altar perto
-dela.  Um homem vestido em um robe vermelho ensang¸entado, se ajoelha diante
-do altar, com braÁos erguidos em prece, enquanto segura firmemente uma adaga
+bruxuleante encrustada em um suporte de pedra, e h√° um pequeno altar perto
+dela.  Um homem vestido em um robe vermelho ensang√ºentado, se ajoelha diante
+do altar, com bra√ßos erguidos em prece, enquanto segura firmemente uma adaga
 curva.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -940,13 +967,13 @@ D3
 0 -1 5950
 S
 #5950
-A Entrada Para o PrÈdio~
-   Um prÈdio, de aparÍncia importante, pelo menos parece, pois n„o tem
+A Entrada Para o Pr√©dio~
+   Um pr√©dio, de apar√™ncia importante, pelo menos parece, pois n√£o tem
 manchas de sangue cobrindo as paredes interiores, fica ao oeste.  Portas
-duplas penduradas em suas dobradiÁas d„o vis„o para o escuro e misterioso
+duplas penduradas em suas dobradi√ßas d√£o vis√£o para o escuro e misterioso
 interior.  Pelo leste, degraus levam para o belvedere de pedra.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -966,13 +993,13 @@ D3
 S
 #5951
 O Altar de Raantra~
-   O ch„o do belvedere È de pedra, como o resto dos edifÌcios que compıem o
-manicÙmio, È gasto, o que indica grande movimento.  Esta ·rea meio afundada
-forma um tipo de piscina, que provavelmente È cheia com grosso e escuro
-sangue.  Tochas s„o seguras em suportes de pedra no teto, quatro delas,
-iluminando bem este terrÌvel lugar.
+   O ch√£o do belvedere √© de pedra, como o resto dos edif√≠cios que comp√µem o
+manic√¥mio, √© gasto, o que indica grande movimento.  Esta √°rea meio afundada
+forma um tipo de piscina, que provavelmente √© cheia com grosso e escuro
+sangue.  Tochas s√£o seguras em suportes de pedra no teto, quatro delas,
+iluminando bem este terr√≠vel lugar.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -991,11 +1018,11 @@ D3
 0 -1 5949
 S
 #5952
-O P·tio Interno do ManicÙmio~
-   O p·tio d· para a parede de um prÈdio singular ao oeste.  A entrada para
-esta construÁ„o fica a norte, atravÈs de suas portas previamente abertas.
+O P√°tio Interno do Manic√¥mio~
+   O p√°tio d√° para a parede de um pr√©dio singular ao oeste.  A entrada para
+esta constru√ß√£o fica a norte, atrav√©s de suas portas previamente abertas.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1010,12 +1037,12 @@ D2
 0 -1 5962
 S
 #5953
-O P·tio Interno do ManicÙmio~
-   Esta parte do p·tio È de pedra, fica no meio de degraus que seguem para o
-belvedere.  O cheiro de sangue fresco no ar È bastante forte, as pedras
-deste p·tio devem ser testemunhas de mortes di·rias.
+O P√°tio Interno do Manic√¥mio~
+   Esta parte do p√°tio √© de pedra, fica no meio de degraus que seguem para o
+belvedere.  O cheiro de sangue fresco no ar √© bastante forte, as pedras
+deste p√°tio devem ser testemunhas de mortes di√°rias.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1036,12 +1063,12 @@ S
 #5954
 Os Degraus do Belvedere~
    Agora a fonte de luz do belvedere pode ser bem vista - uma tocha
-bruxuleante encrustada em um suporte de pedra, e h· um pequeno altar perto
-dela.  Um homem vestido em um robe vermelho ensang¸entado, se ajoelha diante
-do altar, com braÁos erguidos em prece, enquanto segura firmemente uma adaga
+bruxuleante encrustada em um suporte de pedra, e h√° um pequeno altar perto
+dela.  Um homem vestido em um robe vermelho ensang√ºentado, se ajoelha diante
+do altar, com bra√ßos erguidos em prece, enquanto segura firmemente uma adaga
 curva.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1060,12 +1087,12 @@ D3
 0 -1 5951
 S
 #5955
-O P·tio Interno do ManicÙmio~
-   Esta parte do p·tio È de pedra, fica no meio de degraus que seguem para o
-belvedere.  O cheiro de sangue fresco no ar È bastante forte, as pedras deste
-p·tio devem ser testemunhas de mortes di·rias.
+O P√°tio Interno do Manic√¥mio~
+   Esta parte do p√°tio √© de pedra, fica no meio de degraus que seguem para o
+belvedere.  O cheiro de sangue fresco no ar √© bastante forte, as pedras deste
+p√°tio devem ser testemunhas de mortes di√°rias.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1086,11 +1113,11 @@ S
 #5956
 Os Degraus do Belvedere~
    Agora a fonte de luz do belvedere pode ser bem vista - uma tocha bruxuleante
-encrustada em um suporte de pedra, e h· um pequeno altar perto dela.  Um
-homem vestido em um robe vermelho ensang¸entado, se ajoelha diante do altar,
-com braÁos erguidos em prece, enquanto segura firmemente uma adaga curva.
+encrustada em um suporte de pedra, e h√° um pequeno altar perto dela.  Um
+homem vestido em um robe vermelho ensang√ºentado, se ajoelha diante do altar,
+com bra√ßos erguidos em prece, enquanto segura firmemente uma adaga curva.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1109,12 +1136,12 @@ D3
 0 -1 5951
 S
 #5957
-O P·tio Interno do ManicÙmio~
-   Esta parte do p·tio È de pedra, fica no meio de degraus que seguem para o
-belvedere.  O cheiro de sangue fresco no ar È bastante forte, as pedras
-deste p·tio devem ser testemunhas de mortes di·rias.
+O P√°tio Interno do Manic√¥mio~
+   Esta parte do p√°tio √© de pedra, fica no meio de degraus que seguem para o
+belvedere.  O cheiro de sangue fresco no ar √© bastante forte, as pedras
+deste p√°tio devem ser testemunhas de mortes di√°rias.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1133,14 +1160,14 @@ D3
 0 -1 5954
 S
 #5958
-O P·tio Interno do ManicÙmio~
-   Este È o limite nordeste do p·tio.  Uma velha capela abandonada fica ao
-leste, e a entrada a sul daqui.  Deste ‚ngulo, uma alta torre pode ser
+O P√°tio Interno do Manic√¥mio~
+   Este √© o limite nordeste do p√°tio.  Uma velha capela abandonada fica ao
+leste, e a entrada a sul daqui.  Deste √¢ngulo, uma alta torre pode ser
 vista, se erguendo da capela, de onde um sino ainda toca.  Um grande
-belvedere de pedra fica no centro do p·tio, uma forte chama bruxuleia dentro
+belvedere de pedra fica no centro do p√°tio, uma forte chama bruxuleia dentro
 dele.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D2
 ~
 ~
@@ -1151,13 +1178,13 @@ D3
 0 -1 5945
 S
 #5959
-O P·tio Interno do ManicÙmio~
+O P√°tio Interno do Manic√¥mio~
    A entrada da capela fica ao sul daqui, alguns degraus ficam ao leste
-levando para a porta principal.  Ao sudoeste, no centro do p·tio, um grande
-belvedere celebra o progresso (?).  Pessoas de alguma outra raÁa podem ser
-vistas vagando pelo p·tio.
+levando para a porta principal.  Ao sudoeste, no centro do p√°tio, um grande
+belvedere celebra o progresso (?).  Pessoas de alguma outra ra√ßa podem ser
+vistas vagando pelo p√°tio.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1175,10 +1202,10 @@ S
 A Entrada da Capela~
    Os degraus levam direto para a porta da capela, de madeira esculpida que
 resistiu ao tempo.  A madeira deve ter sido muito bonita com seus desenhos
-de anjos e querubins em alto relevo, mas agora os anjos est„o sujos de
-sangue, suas faces refletem algo horrÌvel.  O p·tio fica ao oeste.
+de anjos e querubins em alto relevo, mas agora os anjos est√£o sujos de
+sangue, suas faces refletem algo horr√≠vel.  O p√°tio fica ao oeste.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1186,7 +1213,8 @@ D0
 D1
 ~
 porta~
-1 -1 5967
+:n 2 a porta
+a -1 5967
 D2
 ~
 ~
@@ -1197,11 +1225,11 @@ D3
 0 -1 5956
 S
 #5961
-O P·tio do ManicÙmio~
-   Este È o limite leste do p·tio, a parede externa da capela fica a leste.
+O P√°tio do Manic√¥mio~
+   Este √© o limite leste do p√°tio, a parede externa da capela fica a leste.
 A entrada da capela fica a norte, pelos degraus.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1216,12 +1244,12 @@ D3
 0 -1 5957
 S
 #5962
-O P·tio do ManicÙmio~
-   Este È o limite sudoeste do manicÙmio.  Um pequeno caminho leva ao redor
-de um enorme prÈdio que fica a sul daqui.  A cerimÙnia continua no belvedere
+O P√°tio do Manic√¥mio~
+   Este √© o limite sudoeste do manic√¥mio.  Um pequeno caminho leva ao redor
+de um enorme pr√©dio que fica a sul daqui.  A cerim√¥nia continua no belvedere
 ao nordeste.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1236,11 +1264,11 @@ D3
 0 -1 5993
 S
 #5963
-O P·tio do ManicÙmio~
-   Este È o limite sul do manicÙmio, limitado por um grande prÈdio cuja uma
-das entradas fica ao sul.  O belvedere fica ao nordeste, no centro do p·tio.
+O P√°tio do Manic√¥mio~
+   Este √© o limite sul do manic√¥mio, limitado por um grande pr√©dio cuja uma
+das entradas fica ao sul.  O belvedere fica ao nordeste, no centro do p√°tio.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1259,12 +1287,12 @@ D3
 0 -1 5962
 S
 #5964
-O P·tio do ManicÙmio~
-   O belvedere fica ao norte daqui, no fim de alguns degraus.  Ao sul, h·
-uma parede de pedra de uma das construÁıes.  O sangue no ch„o parece nunca
+O P√°tio do Manic√¥mio~
+   O belvedere fica ao norte daqui, no fim de alguns degraus.  Ao sul, h√°
+uma parede de pedra de uma das constru√ß√µes.  O sangue no ch√£o parece nunca
 acabar.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1279,12 +1307,12 @@ D3
 0 -1 5963
 S
 #5965
-O P·tio do ManicÙmio~
-   Este È o final sul do p·tio, onde ele termina em uma larga parede de
-pedra de um dos prÈdios.  Uma porta para a entrada deste prÈdio fica ao sul,
-o belvedere fica no centro do p·tio - mais parece uma entrada pelos fundos.
+O P√°tio do Manic√¥mio~
+   Este √© o final sul do p√°tio, onde ele termina em uma larga parede de
+pedra de um dos pr√©dios.  Uma porta para a entrada deste pr√©dio fica ao sul,
+o belvedere fica no centro do p√°tio - mais parece uma entrada pelos fundos.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1303,12 +1331,12 @@ D3
 0 -1 5964
 S
 #5966
-O P·tio do ManicÙmio~
-   Esta È a curva sudeste do p·tio.  Uma trilha segue ao leste entre as
-construÁıes que limitam o p·tio.  Ao longe, noroeste, um grande belvedere de
+O P√°tio do Manic√¥mio~
+   Esta √© a curva sudeste do p√°tio.  Uma trilha segue ao leste entre as
+constru√ß√µes que limitam o p√°tio.  Ao longe, noroeste, um grande belvedere de
 onde emana uma luz profana.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1324,16 +1352,17 @@ D3
 S
 #5967
 Na Entrada da Capela~
-   Que grande lugar aqui deve ter sido.  As paredes s„o de pedra trabalhada,
-esculpidas com motivos angelicais.  Ao norte h· uma porta, ao sul, a ·rea
-principal de adoraÁ„o.  Ao leste um pequeno quarto, cuja funÁ„o È
-insond·vel.
+   Que grande lugar aqui deve ter sido.  As paredes s√£o de pedra trabalhada,
+esculpidas com motivos angelicais.  Ao norte h√° uma porta, ao sul, a √°rea
+principal de adora√ß√£o.  Ao leste um pequeno quarto, cuja fun√ß√£o √©
+insond√°vel.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 porta~
-1 -1 5968
+:n 2 a porta
+a -1 5968
 D1
 ~
 ~
@@ -1345,44 +1374,46 @@ D2
 D3
 ~
 porta~
-1 -1 5960
+:n a porta
+a -1 5960
 S
 #5968
 A Chapelaria~
-   Os ganchos de pedra nas paredes onde os clÈrigos costumavam pendurar seus
-h·bitos e robes depois e antes de seus serviÁos.  N„o h·, obviamente, robes
-pendurados.  Este quarto, como a maioria dos quartos nas dependÍncias deste
-manicÙmio, sucumbiu ao tempo e a decadÍncia.  As paredes, assim como o ch„o,
-est„o rachadas e quebradas.  Tudo È claro, coberto de manchas vermelhas.
+   Os ganchos de pedra nas paredes onde os cl√©rigos costumavam pendurar seus
+h√°bitos e robes depois e antes de seus servi√ßos.  N√£o h√°, obviamente, robes
+pendurados.  Este quarto, como a maioria dos quartos nas depend√™ncias deste
+manic√¥mio, sucumbiu ao tempo e a decad√™ncia.  As paredes, assim como o ch√£o,
+est√£o rachadas e quebradas.  Tudo √© claro, coberto de manchas vermelhas.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D2
 ~
 porta~
-1 -1 5967
+:n 2 porta
+a -1 5967
 S
 #5969
 Pelo Cabo~
-   Nada mais È, que um quarto cinco por cinco sem teto.  Olhando para cima,
-vocÍ pode ver que este alto cabo segue diretamente para a torre do sino, de
-onde o mesmo pode ser visto.  Algumas cordas est„o penduradas, mas n„o podem
-ser alcanÁadas.  Elas deviam ligar alguma coisa atÈ aqui, mas seja o que
-tenha sido, j· apodreceu...
+   Nada mais √©, que um quarto cinco por cinco sem teto.  Olhando para cima,
+voc√™ pode ver que este alto cabo segue diretamente para a torre do sino, de
+onde o mesmo pode ser visto.  Algumas cordas est√£o penduradas, mas n√£o podem
+ser alcan√ßadas.  Elas deviam ligar alguma coisa at√© aqui, mas seja o que
+tenha sido, j√° apodreceu...
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D3
 ~
 ~
 0 -1 5967
 S
 #5970
-A Sala de AdoraÁ„o da Capela~
+A Sala de Adora√ß√£o da Capela~
    A manchas onde candelabros se alinham diante do altar esculpido em pedra,
-de qualquer forma, tudo o que restou da majestade deste lugar s„o dois
-candelabros que restaram no altar.  Pareceria trabalho de algum v‚ndalo ou
-ladr„o, se n„o fosse a grande quantidade de sangue pelas pedras.
+de qualquer forma, tudo o que restou da majestade deste lugar s√£o dois
+candelabros que restaram no altar.  Pareceria trabalho de algum v√¢ndalo ou
+ladr√£o, se n√£o fosse a grande quantidade de sangue pelas pedras.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1390,11 +1421,11 @@ D0
 S
 #5971
 Pelo Cabo~
-   Inacreditavelmente, os lados interiores das paredes s„o escal·veis!
-Apenas mais um pouco e o sino pode ser alcanÁado, onde uma plataforma de
+   Inacreditavelmente, os lados interiores das paredes s√£o escal√°veis!
+Apenas mais um pouco e o sino pode ser alcan√ßado, onde uma plataforma de
 pedra cerca o cabo.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D4
 ~
 ~
@@ -1406,16 +1437,17 @@ D5
 S
 #5972
 A Torre do Sino~
-   O cabo que segue no interior da capela È na verdade a torre do sino.  Na
-parede norte h· uma janela que leva para cima do telhado da capela.  N„o
-parece que a torre seria acessÌvel novamente, uma vez que vocÍ saia pelo
+   O cabo que segue no interior da capela √© na verdade a torre do sino.  Na
+parede norte h√° uma janela que leva para cima do telhado da capela.  N√£o
+parece que a torre seria acess√≠vel novamente, uma vez que voc√™ saia pelo
 telhado.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 janela~
-1 -1 5973
+:n 2 a janela
+ad -1 5973
 D5
 ~
 ~
@@ -1423,24 +1455,25 @@ D5
 S
 #5973
 O Telhado da Capela~
-   N„o h· nada de interessante neste telhado, exceto o fato deste ser o
-˙nico lugar onde n„o h· manchas de sangue.  Parece que o ˙nico modo de se
-descer, È pulando para o p·tio abaixo de vocÍ.
+   N√£o h√° nada de interessante neste telhado, exceto o fato deste ser o
+√∫nico lugar onde n√£o h√° manchas de sangue.  Parece que o √∫nico modo de se
+descer, √© pulando para o p√°tio abaixo de voc√™.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D5
 ~
 telhado~
-1 -1 5959
+:n 1 o telhado
+a -1 5959
 S
 #5974
 A Entrada da Biblioteca~
-   Esta È uma pequena antec‚mara onde em algum tempo um bibliotec·rio uma
+   Esta √© uma pequena antec√¢mara onde em algum tempo um bibliotec√°rio uma
 vez trabalhou e se certificou de que todos os livros estivessem em ordem.
-N„o h· mesa, nem secret·ria, ou bibliotec·rio, apenas quatro paredes aos
-pedaÁos.
+N√£o h√° mesa, nem secret√°ria, ou bibliotec√°rio, apenas quatro paredes aos
+peda√ßos.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 ~
@@ -1454,9 +1487,9 @@ S
 A Biblioteca~
    A maioria das prateleiras que costumavam se alinhar pela parede, moldadas
 em pedra, agora
-   Est„o quebradas pelo ch„o, cheias de poeira.
+   Est√£o quebradas pelo ch√£o, cheias de poeira.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1464,14 +1497,14 @@ D0
 S
 #5976
 O Alojamento da Faculdade~
-   A faculdade do manicÙmio manteve os restos de camas e mesas quebradas
-aqui, sem mencionar que neste prÈdio ficam todos os outros quartos dos
-'estudantes' do lugar.  Ainda h· vestÌgios do que este quarto costumava ser,
-algumas velhas armaÁıes de aÁo - provavelmente camas - jogadas em uma
-parede, retorcidas.  Como qualquer outra parte deste manicÙmio, as paredes
-est„o ensopadas em sangue assim, como o ch„o.
+   A faculdade do manic√¥mio manteve os restos de camas e mesas quebradas
+aqui, sem mencionar que neste pr√©dio ficam todos os outros quartos dos
+'estudantes' do lugar.  Ainda h√° vest√≠gios do que este quarto costumava ser,
+algumas velhas arma√ß√µes de a√ßo - provavelmente camas - jogadas em uma
+parede, retorcidas.  Como qualquer outra parte deste manic√¥mio, as paredes
+est√£o ensopadas em sangue assim, como o ch√£o.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1482,12 +1515,12 @@ D2
 0 -1 5977
 S
 #5977
-O DormitÛrio~
-   Aqui È onde os estudantes - ou doentes mentais - eram trazidos a noite.
-N„o h· mais mobÌlia pelo quarto, apenas pedaÁos de gesso quebrado e tijolos
-de pedra.  Uma porta leva ‡ base de uma escada.
+O Dormit√≥rio~
+   Aqui √© onde os estudantes - ou doentes mentais - eram trazidos a noite.
+N√£o h√° mais mob√≠lia pelo quarto, apenas peda√ßos de gesso quebrado e tijolos
+de pedra.  Uma porta leva √† base de uma escada.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1503,14 +1536,14 @@ D5
 S
 #5978
 O Alojamento da Faculdade~
-   A faculdade do manicÙmio manteve os restos de camas e mesas quebradas
-aqui, sem mencionar que neste prÈdio ficam todos os outros quartos dos
-'estudantes' do lugar.  Ainda h· vestÌgios do que este quarto costumava ser,
-algumas velhas armaÁıes de aÁo - provavelmente camas - jogadas em uma
-parede, retorcidas.  Como qualquer outra parte deste manicÙmio, as paredes
-est„o ensopadas em sangue assim, como o ch„o.
+   A faculdade do manic√¥mio manteve os restos de camas e mesas quebradas
+aqui, sem mencionar que neste pr√©dio ficam todos os outros quartos dos
+'estudantes' do lugar.  Ainda h√° vest√≠gios do que este quarto costumava ser,
+algumas velhas arma√ß√µes de a√ßo - provavelmente camas - jogadas em uma
+parede, retorcidas.  Como qualquer outra parte deste manic√¥mio, as paredes
+est√£o ensopadas em sangue assim, como o ch√£o.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1521,12 +1554,12 @@ D2
 0 -1 5980
 S
 #5979
-O DormitÛrio~
-   Aqui È onde os estudantes - ou doentes mentais - eram trazidos a noite.
-N„o h· mais mobÌlia pelo quarto, apenas pedaÁos de gesso quebrado e tijolos
-de pedra.  Uma porta leva ‡ base de uma escada.
+O Dormit√≥rio~
+   Aqui √© onde os estudantes - ou doentes mentais - eram trazidos a noite.
+N√£o h√° mais mob√≠lia pelo quarto, apenas peda√ßos de gesso quebrado e tijolos
+de pedra.  Uma porta leva √† base de uma escada.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 ~
@@ -1537,12 +1570,12 @@ D3
 0 -1 5977
 S
 #5980
-O DormitÛrio~
-   Aqui È onde os estudantes - ou doentes mentais - eram trazidos a noite.
-N„o h· mais mobÌlia pelo quarto, apenas pedaÁos de gesso quebrado e tijolos
-de pedra.  Uma porta leva ‡ base de uma escada.
+O Dormit√≥rio~
+   Aqui √© onde os estudantes - ou doentes mentais - eram trazidos a noite.
+N√£o h√° mais mob√≠lia pelo quarto, apenas peda√ßos de gesso quebrado e tijolos
+de pedra.  Uma porta leva √† base de uma escada.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1555,14 +1588,15 @@ S
 #5981
 O Almoxarifado~
    Este quarto tem todas suas paredes quebradas, guardando apenas o vazio.
-Na parede sul h· uma pequena porta de madeira, ainda bem segura em suas
-dobradiÁas.
+Na parede sul h√° uma pequena porta de madeira, ainda bem segura em suas
+dobradi√ßas.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D2
 ~
 porta~
-1 -1 5982
+:n 2 a porta
+a -1 5982
 D4
 ~
 ~
@@ -1570,25 +1604,26 @@ D4
 S
 #5982
 O Quarto Gelado~
-   Isto È o que os serventes do manicÙmio usavam como ˙ltima arma contra os
-'estudantes' que saÌam fora do controle.  A temperatura deste min˙sculo
-cubÌculo deve cair mais ainda durante a noite, o ch„o È sujo assim, como as
-paredes.  Qualquer 'estudante' que tivesse problemas com obediÍncia era
-trazido aqui para esfriar o ‚nimo.
+   Isto √© o que os serventes do manic√¥mio usavam como √∫ltima arma contra os
+'estudantes' que sa√≠am fora do controle.  A temperatura deste min√∫sculo
+cub√≠culo deve cair mais ainda durante a noite, o ch√£o √© sujo assim, como as
+paredes.  Qualquer 'estudante' que tivesse problemas com obedi√™ncia era
+trazido aqui para esfriar o √¢nimo.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 porta~
-1 -1 5981
+:n 2 a porta
+a -1 5981
 S
 #5983
 Um Velho Caminho de Pedra~
-   Este uma vez foi um caminho bem cuidado, cujas pedras, agora, est„o
+   Este uma vez foi um caminho bem cuidado, cujas pedras, agora, est√£o
 quebras e ensopadas de sangue.  O caminho segue ao sul, e faz uma curva a
-leste, em direÁ„o a um grande prÈdio de pedra.
+leste, em dire√ß√£o a um grande pr√©dio de pedra.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D2
 ~
 ~
@@ -1600,11 +1635,11 @@ D3
 S
 #5984
 Um Velho Caminho de Pedra~
-   Este uma vez foi um caminho bem cuidado, cujas pedras, agora, est„o
-quebras e ensopadas de sangue.  O caminho segue ao norte pelo p·tio, e vira
-ao leste novamente, na direÁ„o ao grande prÈdio.
+   Este uma vez foi um caminho bem cuidado, cujas pedras, agora, est√£o
+quebras e ensopadas de sangue.  O caminho segue ao norte pelo p√°tio, e vira
+ao leste novamente, na dire√ß√£o ao grande pr√©dio.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1616,11 +1651,11 @@ D1
 S
 #5985
 Um Velho Caminho de Pedra~
-   Este uma vez foi um caminho bem cuidado, cujas pedras, agora, est„o
-quebras e ensopadas de sangue.  O prÈdio, que agora fica bem ao sul de vocÍ,
-pode ser adentrado atravÈs de uma porta ao leste.
+   Este uma vez foi um caminho bem cuidado, cujas pedras, agora, est√£o
+quebras e ensopadas de sangue.  O pr√©dio, que agora fica bem ao sul de voc√™,
+pode ser adentrado atrav√©s de uma porta ao leste.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 ~
@@ -1631,13 +1666,13 @@ D3
 0 -1 5984
 S
 #5986
-A Entrada Para o AuditÛrio~
-   O interior do prÈdio pode ser visto atravÈs de bruxuleantes luzes.
-Estranhas pessoas podem ser vistas dentro do prÈdio, aquecendo-se em
-fogueiras ou dormindo, miser·veis pelo ch„o.  O caminho segue pelo leste
-daqui, de volta ao p·tio.
+A Entrada Para o Audit√≥rio~
+   O interior do pr√©dio pode ser visto atrav√©s de bruxuleantes luzes.
+Estranhas pessoas podem ser vistas dentro do pr√©dio, aquecendo-se em
+fogueiras ou dormindo, miser√°veis pelo ch√£o.  O caminho segue pelo leste
+daqui, de volta ao p√°tio.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D2
 ~
 ~
@@ -1648,13 +1683,13 @@ D3
 0 -1 5985
 S
 #5987
-Pelo AuditÛrio~
-   O lugar tem dimensıes imensas, um enorme palco fica ao norte.  Pessoas
-encardidas e miser·veis se aglomeram em volta de pequenas fogueiras, ou
-dormem encolhidas no ch„o, esperando para serem a prÛxima Escolha.  Fileiras
-de cadeiras de pedra v„o atÈ o teto.
+Pelo Audit√≥rio~
+   O lugar tem dimens√µes imensas, um enorme palco fica ao norte.  Pessoas
+encardidas e miser√°veis se aglomeram em volta de pequenas fogueiras, ou
+dormem encolhidas no ch√£o, esperando para serem a pr√≥xima Escolha.  Fileiras
+de cadeiras de pedra v√£o at√© o teto.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1669,13 +1704,13 @@ D3
 0 -1 5988
 S
 #5988
-Pelo AuditÛrio~
-   O lugar tem dimensıes imensas, um enorme palco fica ao norte.  Pessoas
-encardidas e miser·veis se aglomeram em volta de pequenas fogueiras, ou
-dormem encolhidas no ch„o, esperando para serem a prÛxima Escolha.  Fileiras
-de cadeiras de pedra v„o atÈ o teto.
+Pelo Audit√≥rio~
+   O lugar tem dimens√µes imensas, um enorme palco fica ao norte.  Pessoas
+encardidas e miser√°veis se aglomeram em volta de pequenas fogueiras, ou
+dormem encolhidas no ch√£o, esperando para serem a pr√≥xima Escolha.  Fileiras
+de cadeiras de pedra v√£o at√© o teto.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 ~
@@ -1686,13 +1721,13 @@ D2
 0 -1 5990
 S
 #5989
-Pelo AuditÛrio~
-   O lugar tem dimensıes imensas, um enorme palco fica ao norte.  Pessoas
-encardidas e miser·veis se aglomeram em volta de pequenas fogueiras, ou
-dormem encolhidas no ch„o, esperando para serem a prÛxima Escolha.  Fileiras
-de cadeiras de pedra v„o atÈ o teto.
+Pelo Audit√≥rio~
+   O lugar tem dimens√µes imensas, um enorme palco fica ao norte.  Pessoas
+encardidas e miser√°veis se aglomeram em volta de pequenas fogueiras, ou
+dormem encolhidas no ch√£o, esperando para serem a pr√≥xima Escolha.  Fileiras
+de cadeiras de pedra v√£o at√© o teto.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1707,13 +1742,13 @@ D4
 0 -1 5992
 S
 #5990
-Pelo AuditÛrio~
-   O lugar tem dimensıes imensas, um enorme palco fica ao norte.  Pessoas
-encardidas e miser·veis se aglomeram em volta de pequenas fogueiras, ou
-dormem encolhidas no ch„o, esperando para serem a prÛxima Escolha.  Fileiras
-de cadeiras de pedra v„o atÈ o teto.
+Pelo Audit√≥rio~
+   O lugar tem dimens√µes imensas, um enorme palco fica ao norte.  Pessoas
+encardidas e miser√°veis se aglomeram em volta de pequenas fogueiras, ou
+dormem encolhidas no ch√£o, esperando para serem a pr√≥xima Escolha.  Fileiras
+de cadeiras de pedra v√£o at√© o teto.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1728,13 +1763,13 @@ D4
 0 -1 5991
 S
 #5991
-Os Assentos do AuditÛrio~
+Os Assentos do Audit√≥rio~
    Fileiras e fileiras de assentos de pedra podem ser vistos, ao leste e
-oeste da parede sul onde os assentos quase alcanÁam o teto.  Mais miser·veis
-deitam entre os assentos, aconchegados em suas esperanÁas, que os mantÍm
-longe da prÛxima Escolha.
+oeste da parede sul onde os assentos quase alcan√ßam o teto.  Mais miser√°veis
+deitam entre os assentos, aconchegados em suas esperan√ßas, que os mant√™m
+longe da pr√≥xima Escolha.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 ~
@@ -1745,13 +1780,13 @@ D5
 0 -1 5990
 S
 #5992
-Os Assentos do AuditÛrio~
+Os Assentos do Audit√≥rio~
    Fileiras e fileiras de assentos de pedra podem ser vistos, ao leste e
-oeste da parede sul onde os assentos quase alcanÁam o teto.  Mais miser·veis
-deitam entre os assentos, aconchegados em suas esperanÁas, que os mantÍm
-longe da prÛxima Escolha.
+oeste da parede sul onde os assentos quase alcan√ßam o teto.  Mais miser√°veis
+deitam entre os assentos, aconchegados em suas esperan√ßas, que os mant√™m
+longe da pr√≥xima Escolha.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D3
 ~
 ~
@@ -1763,11 +1798,11 @@ D5
 S
 #5993
 Um Caminho Rachado~
-   Este caminho costumava ser uma pequena extens„o do caminho de pedra,
-levando para a principal fonte de ·gua do manicÙmio.  A torre se ergue pelo
-escuro cÈu ao oeste.
+   Este caminho costumava ser uma pequena extens√£o do caminho de pedra,
+levando para a principal fonte de √°gua do manic√¥mio.  A torre se ergue pelo
+escuro c√©u ao oeste.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 ~
@@ -1779,11 +1814,11 @@ D3
 S
 #5994
 Um Caminho Rachado~
-   O caminho se divide ao sul e tambÈm d· entrada para a torre de ·gua ao
-oeste.  H· algum tipo de baixa estrutura se erguendo por vinte pÈs, ao sul
-daqui, mas est· escuro demais para se ver com clareza.
+   O caminho se divide ao sul e tamb√©m d√° entrada para a torre de √°gua ao
+oeste.  H√° algum tipo de baixa estrutura se erguendo por vinte p√©s, ao sul
+daqui, mas est√° escuro demais para se ver com clareza.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 ~
@@ -1798,13 +1833,13 @@ D3
 0 -1 5995
 S
 #5995
-Na Base da Torre de ¡gua~
-   Este È uma estranha torre esfÈrica, de madeira, a qual guardava a ·gua
-quando o manicÙmio ainda era ativo.  Agora h· buracos demais e rachaduras
-para manter qualquer coisa l· dentro, mas uma escada em espiral ainda a
+Na Base da Torre de √Ågua~
+   Este √© uma estranha torre esf√©rica, de madeira, a qual guardava a √°gua
+quando o manic√¥mio ainda era ativo.  Agora h√° buracos demais e rachaduras
+para manter qualquer coisa l√° dentro, mas uma escada em espiral ainda a
 contorna, levando ao topo, provavelmente usada para reparar as rachaduras.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 ~
@@ -1815,12 +1850,12 @@ D4
 0 -1 5996
 S
 #5996
-No Topo da Torre de ¡gua~
-   N„o h· teto no topo desta coisa, o manicÙmio deve ter confiado
-veementemente na ·gua da chuva para suprir suas necessidades.  Esta pequena
-plataforma leva ao topo mais alto da torre, onde n„o parece ser muito firme.
+No Topo da Torre de √Ågua~
+   N√£o h√° teto no topo desta coisa, o manic√¥mio deve ter confiado
+veementemente na √°gua da chuva para suprir suas necessidades.  Esta pequena
+plataforma leva ao topo mais alto da torre, onde n√£o parece ser muito firme.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D5
 ~
 ~
@@ -1828,11 +1863,11 @@ D5
 S
 #5997
 O Caminho Rachado~
-   O caminho segue para as ruÌnas queimadas de um prÈdio, que, obviamente
-n„o era feito de pedra como os outros.  Tudo o que restou, ao que parece, È
-a chaminÈ que ainda tem uma grande lareira na base.
+   O caminho segue para as ru√≠nas queimadas de um pr√©dio, que, obviamente
+n√£o era feito de pedra como os outros.  Tudo o que restou, ao que parece, √©
+a chamin√© que ainda tem uma grande lareira na base.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1843,11 +1878,11 @@ D2
 0 -1 5998
 S
 #5998
-Nas RuÌnas~
-   O ch„o È coberto com pedaÁos de madeira e tijolos de pedra.  N„o h· nada
+Nas Ru√≠nas~
+   O ch√£o √© coberto com peda√ßos de madeira e tijolos de pedra.  N√£o h√° nada
 mais que cinzas.  Uma grande lareira de pedra se ergue ao oeste.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D0
 ~
 ~
@@ -1858,12 +1893,12 @@ D3
 0 -1 5999
 S
 #5999
-Nas RuÌnas~
-   O ch„o È coberto com pedaÁos de madeira e tijolos de pedra.  N„o h· nada
-mais que cinzas.  Uma chaminÈ de pedra que, em sua base, tem uma lareira È
-tudo o que restou do que seja l· o que este prÈdio tenha sido.
+Nas Ru√≠nas~
+   O ch√£o √© coberto com peda√ßos de madeira e tijolos de pedra.  N√£o h√° nada
+mais que cinzas.  Uma chamin√© de pedra que, em sua base, tem uma lareira √©
+tudo o que restou do que seja l√° o que este pr√©dio tenha sido.
 ~
-59 105 0 0 0 0
+59 dgfa 0
 D1
 ~
 ~
@@ -1871,14 +1906,15 @@ D1
 D5
 ~
 lareira passagem secreta~
-0 -1 1757
-E
-fundo~
-N„o h· fundo!
-~
+:n 2 a passagem secreta
+abcd -1 1757
 E
 lareira~
-H· alguma coisa muito estranha no fundo da lareira.
+H√° alguma coisa muito estranha no fundo da lareira.
+~
+E
+fundo~
+N√£o h√° fundo!
 ~
 S
 $~
