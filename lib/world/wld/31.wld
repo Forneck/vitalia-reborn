@@ -1,17 +1,17 @@
 #3100
-O Final Noroeste da Confluência~
-   Você está na confluência, o muro da cidade está a oeste.  Um pequeno
-passeio vai a leste, e a ponte está bem a norte daqui.  A confluência
+O Final Noroeste da ConfluÃªncia~
+   VocÃª estÃ¡ na confluÃªncia, o muro da cidade estÃ¡ a oeste.  Um pequeno
+passeio vai a leste, e a ponte estÃ¡ bem a norte daqui.  A confluÃªncia
 prolonga-se ao sul junto ao muro da cidade.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
-Você vê a Ponte.
+VocÃª vÃª a Ponte.
 ~
 ~
 0 -1 3051
 D1
-Você vê o passeio.
+VocÃª vÃª o passeio.
 ~
 ~
 0 -1 3101
@@ -27,7 +27,7 @@ O Passeio~
 leste e a oeste voce pode ver o muro da cidade.  A Estrada do Parque leva a
 sul daqui.
 ~
-31 0 0 0 0 1
+31 0 1
 D1
 O passeio continua.
 ~
@@ -39,7 +39,7 @@ A Estrada do Parque leva para o sul.
 ~
 0 -1 3131
 D3
-Você vê a Confluência.
+VocÃª vÃª a ConfluÃªncia.
 ~
 ~
 0 -1 3100
@@ -47,22 +47,22 @@ S
 #3102
 O Passeio~
    O rio flui calmamente para oeste, a norte daqui.  O passeio continua a
-leste e oeste.  Ao sul você vê a entrada para o parque, e uma pequena
-construção parece estar bem a oeste da entrada.
+leste e oeste.  Ao sul vocÃª vÃª a entrada para o parque, e uma pequena
+construÃ§Ã£o parece estar bem a oeste da entrada.
 ~
-31 0 0 0 0 1
+31 0 1
 D1
-Você vê o Passeio.
+VocÃª vÃª o Passeio.
 ~
 ~
 0 -1 3103
 D2
-Você vê a Entrada do Parque.
+VocÃª vÃª a Entrada do Parque.
 ~
 ~
 0 -1 3105
 D3
-Você vê o Passeio.
+VocÃª vÃª o Passeio.
 ~
 ~
 0 -1 3101
@@ -70,12 +70,12 @@ S
 #3103
 O Passeio~
    O rio flui calmamente para oeste, a norte daqui.  O passeio continua a
-leste e oeste.  Um pequeno caminho leva para o sul.  Olhando além do rio
-você vê o dique.
+leste e oeste.  Um pequeno caminho leva para o sul.  Olhando alÃ©m do rio
+vocÃª vÃª o dique.
 ~
-31 0 0 0 0 1
+31 0 1
 D1
-Você vê a Confluência.
+VocÃª vÃª a ConfluÃªncia.
 ~
 ~
 0 -1 3104
@@ -85,77 +85,77 @@ O pequeno caminho leva ao sul.
 ~
 0 -1 3132
 D3
-Você vê o passeio.
+VocÃª vÃª o passeio.
 ~
 ~
 0 -1 3102
 S
 #3104
-O Final Nordeste da Confluência~
-   Você está na Confluência.  O muro da cidade está a leste e um pequeno
-passeio vai para oeste.  Olhando além do rio você vê uma construção que
-lembra um depósito.  A Confluência continua ao sul ao longo do muro da
+O Final Nordeste da ConfluÃªncia~
+   VocÃª estÃ¡ na ConfluÃªncia.  O muro da cidade estÃ¡ a leste e um pequeno
+passeio vai para oeste.  Olhando alÃ©m do rio vocÃª vÃª uma construÃ§Ã£o que
+lembra um depÃ³sito.  A ConfluÃªncia continua ao sul ao longo do muro da
 cidade.
 ~
-31 0 0 0 0 1
+31 0 1
 D2
-A Confluência continua ao sul.
+A ConfluÃªncia continua ao sul.
 ~
 ~
 0 -1 3130
 D3
-Você vê o passeio.
+VocÃª vÃª o passeio.
 ~
 ~
 0 -1 3103
 E
 muro~
-É construído com grandes rochas unidas umas às outras com algum tipo de
-cimento.  É muito alto para subir.
+Ã‰ construÃ­do com grandes rochas unidas umas Ã s outras com algum tipo de
+cimento.  Ã‰ muito alto para subir.
 ~
 S
 #3105
 A Entrada do Parque~
-   Você está dentro do pequeno parque de Midgaard.  Ao norte fica o passeio
+   VocÃª estÃ¡ dentro do pequeno parque de Midgaard.  Ao norte fica o passeio
 e um pequeno caminho leva ao sul dentro do parque.  A leste fica o famoso
-Café do Parque.
+CafÃ© do Parque.
 ~
-31 4 0 0 0 1
+31 c 1
 D0
-Você vê o passeio.
+VocÃª vÃª o passeio.
 ~
 ~
 0 -1 3102
 D1
-Você vê o Café do Parque.
+VocÃª vÃª o CafÃ© do Parque.
 ~
 ~
 0 -1 3106
 D2
-Você vê o parque.
+VocÃª vÃª o parque.
 ~
 ~
 0 -1 3108
 S
 #3106
-Café do Parque~
-   Você está dentro do Café do Parque, um lugar muito agradável com muitas
-mesas onde voce pode relaxar e aproveitar a paisagem.  A oeste você pode ver
+CafÃ© do Parque~
+   VocÃª estÃ¡ dentro do CafÃ© do Parque, um lugar muito agradÃ¡vel com muitas
+mesas onde voce pode relaxar e aproveitar a paisagem.  A oeste vocÃª pode ver
 a entrada do parque.
 ~
-31 136 0 0 0 0
+31 dh 0
 D3
-Você vê a entrada do parque.
+VocÃª vÃª a entrada do parque.
 ~
 ~
 0 -1 3105
 S
 #3107
 Um Pequeno Caminho no Parque~
-   Você está andando por um pequeno caminho através do parque.  O caminho
+   VocÃª estÃ¡ andando por um pequeno caminho atravÃ©s do parque.  O caminho
 continua a sul e leste.
 ~
-31 0 0 0 0 1
+31 0 1
 D1
 ~
 ~
@@ -167,13 +167,13 @@ D2
 S
 #3108
 Um Pequeno Caminho no Parque~
-   Você está em um pequeno caminho dentro do parque.  A entrada do parque
-fica a norte daqui, e o Café do Parque é a leste da entrada.  O caminho leva
-além, a leste e oeste.
+   VocÃª estÃ¡ em um pequeno caminho dentro do parque.  A entrada do parque
+fica a norte daqui, e o CafÃ© do Parque Ã© a leste da entrada.  O caminho leva
+alÃ©m, a leste e oeste.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
-Você vê a entrada norte do parque.
+VocÃª vÃª a entrada norte do parque.
 ~
 ~
 0 -1 3105
@@ -188,10 +188,10 @@ D3
 S
 #3109
 Um Pequeno Caminho no Parque~
-   Você está em um pequeno caminho que corre através do parque.  O caminho
-continua a oeste e sul, ao norte você vê a parede sul do Café do Parque.
+   VocÃª estÃ¡ em um pequeno caminho que corre atravÃ©s do parque.  O caminho
+continua a oeste e sul, ao norte vocÃª vÃª a parede sul do CafÃ© do Parque.
 ~
-31 0 0 0 0 1
+31 0 1
 D2
 ~
 ~
@@ -203,27 +203,28 @@ D3
 S
 #3110
 Quartel da Guarda~
-   Você está dentro de um escritório bem arrumado.
+   VocÃª estÃ¡ dentro de um escritÃ³rio bem arrumado.
 ~
-31 8 0 0 0 0
+31 d 0
 D1
-Você vê a Estrada do Parque.
+VocÃª vÃª a Estrada do Parque.
 ~
 porta~
+:n 2
 1 3105 3111
 S
 #3111
 Estrada do Parque~
-   A estrada continua a norte e sul.  Há uma construção a oeste daqui, você
-vê um aviso na porta.  A entrada do parque fica a leste.
+   A estrada continua a norte e sul.  HÃ¡ uma construÃ§Ã£o a oeste daqui, vocÃª
+vÃª um aviso na porta.  A entrada do parque fica a leste.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
 0 -1 3131
 D1
-Você vê a entrada do parque.
+VocÃª vÃª a entrada do parque.
 ~
 ~
 0 -1 3112
@@ -232,12 +233,13 @@ D2
 ~
 0 -1 3118
 D3
-Você vê o Quartel da Guarda.
+VocÃª vÃª o Quartel da Guarda.
 ~
 porta~
-1 3105 3110
+:n 2
+1 3105 3110 2
 E
-construção porta aviso~
+construcao porta aviso~
 O aviso na porta diz:
 
 		    Quartel da Guarda
@@ -247,11 +249,11 @@ O aviso na porta diz:
 S
 #3112
 A Entrada Oeste do Parque~
-   Você está no extremo oeste do parque.  Um pequeno caminho leva a leste
-dentro do parque e a oeste, através da entrada, você chega à Estrada do
+   VocÃª estÃ¡ no extremo oeste do parque.  Um pequeno caminho leva a leste
+dentro do parque e a oeste, atravÃ©s da entrada, vocÃª chega Ã  Estrada do
 Parque.
 ~
-31 4 0 0 0 1
+31 c 1
 D1
 ~
 ~
@@ -263,31 +265,31 @@ D3
 S
 #3113
 Um Caminho no Parque~
-   Você está no parque.  O caminho leva a norte e oeste.  A oeste fica a
-entrada do parque e a leste você vê um pequeno tanque.
+   VocÃª estÃ¡ no parque.  O caminho leva a norte e oeste.  A oeste fica a
+entrada do parque e a leste vocÃª vÃª um pequeno tanque.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
 0 -1 3107
 D1
-Você vê o tanque.
+VocÃª vÃª o tanque.
 ~
 ~
 0 -1 3114
 D3
-Você vê a entrada oeste do parque.
+VocÃª vÃª a entrada oeste do parque.
 ~
 ~
 0 -1 3112
 S
 #3114
 O Tanque~
-   Você está nadando pelo tanque, parecendo um idiota.  Você pode voltar ao
+   VocÃª estÃ¡ nadando pelo tanque, parecendo um idiota.  VocÃª pode voltar ao
 caminho pelo extremo leste e oeste do tanque.
 ~
-31 0 0 0 0 6
+31 0 6
 D1
 ~
 ~
@@ -299,10 +301,10 @@ D3
 S
 #3115
 Um Caminho no Parque~
-   Você está no parque.  O caminho leva a norte e leste.  A leste fica a
-entrada do parque e a oeste você vê um pequeno tanque.
+   VocÃª estÃ¡ no parque.  O caminho leva a norte e leste.  A leste fica a
+entrada do parque e a oeste vocÃª vÃª um pequeno tanque.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
@@ -318,11 +320,11 @@ D3
 S
 #3116
 A Entrada Leste do Parque~
-   Você está no extremo leste do parque.  Um pequeno caminho leva a oeste
-dentro do parque.  Seguindo a leste, através da entrada, você chegará à
+   VocÃª estÃ¡ no extremo leste do parque.  Um pequeno caminho leva a oeste
+dentro do parque.  Seguindo a leste, atravÃ©s da entrada, vocÃª chegarÃ¡ Ã 
 Avenida Esmeralda.
 ~
-31 4 0 0 0 1
+31 c 1
 D1
 ~
 ~
@@ -334,11 +336,11 @@ D3
 S
 #3117
 Avenida Esmeralda~
-   Você está no extremo norte da Avenida Esmeralda.  Ao sul fica o passeio e
-a oeste a entrada do parque.  A leste fica a não muito grande Prefeitura de
+   VocÃª estÃ¡ no extremo norte da Avenida Esmeralda.  Ao sul fica o passeio e
+a oeste a entrada do parque.  A leste fica a nÃ£o muito grande Prefeitura de
 Midgaard.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
@@ -358,9 +360,9 @@ D3
 S
 #3118
 Estrada do Parque~
-   Você está na Estrada do Parque, que leva ao norte e sul.
+   VocÃª estÃ¡ na Estrada do Parque, que leva ao norte e sul.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
@@ -372,10 +374,10 @@ D2
 S
 #3119
 Avenida Esmeralda~
-   Você está numa curva da Avenida Esmeralda.  A estrada leva a norte e
+   VocÃª estÃ¡ numa curva da Avenida Esmeralda.  A estrada leva a norte e
 oeste.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
@@ -387,13 +389,13 @@ D3
 S
 #3120
 A Encruzilhada~
-   Você está no meio de uma encruzilhada.  A estrada leva a todas as
-direções.  Uma enorme corrente de ferro negro, grossa como uma arvore está
-presa no chão no centro da encruzilhada.  A outra extremidade sobe
-diretamente ao céu.
-   Há um placa de estrada aqui.
+   VocÃª estÃ¡ no meio de uma encruzilhada.  A estrada leva a todas as
+direÃ§Ãµes.  Uma enorme corrente de ferro negro, grossa como uma arvore estÃ¡
+presa no chÃ£o no centro da encruzilhada.  A outra extremidade sobe
+diretamente ao cÃ©u.
+   HÃ¡ um placa de estrada aqui.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
@@ -411,35 +413,35 @@ D3
 ~
 0 -1 3135
 D4
-A corrente desaparece nas núvens.
+A corrente desaparece nas nÃºvens.
 ~
 ~
 0 -1 7914
 E
-corrente~
-A corrente alcança as núvens acima de você.  Deve haver uma magica poderosa
-para segurar essa corrente no lugar!
-~
-E
 placa~
-O aviso aponta em todas as direções:
+O aviso aponta em todas as direÃ§Ãµes:
 
    Norte - Avenida Esmeralda
    Leste - Estrada do Parque
    Sul   - Avenida Esmeralda
    Oeste - Estrada do Parque
 
-Alguém adicionou o seguinte com tinta vermelha:
+AlguÃ©m adicionou o seguinte com tinta vermelha:
 
    Cima  - Cidadela Voadora de Redferne
+~
+E
+corrente~
+A corrente alcanÃ§a as nÃºvens acima de vocÃª.  Deve haver uma magica poderosa
+para segurar essa corrente no lugar!
 ~
 S
 #3121
 Avenida Esmeralda~
-   Você está em uma curva da Avenida Esmeralda.  A estrada leva ao sul e
+   VocÃª estÃ¡ em uma curva da Avenida Esmeralda.  A estrada leva ao sul e
 leste.
 ~
-31 0 0 0 0 1
+31 0 1
 D1
 ~
 ~
@@ -451,10 +453,10 @@ D2
 S
 #3122
 Estrada do Parque~
-   Você está na Estrada do Parque, que leva ao norte e sul.  A Rua Olmo fica
+   VocÃª estÃ¡ na Estrada do Parque, que leva ao norte e sul.  A Rua Olmo fica
 a leste daqui.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
@@ -470,10 +472,10 @@ D2
 S
 #3123
 Rua Olmo~
-   Você está na Rua Olmo.  A Estrada do Parque fica a oeste e a Rua Olmo
-continua na direção leste.
+   VocÃª estÃ¡ na Rua Olmo.  A Estrada do Parque fica a oeste e a Rua Olmo
+continua na direÃ§Ã£o leste.
 ~
-31 0 0 0 0 1
+31 0 1
 D1
 ~
 ~
@@ -485,44 +487,44 @@ D3
 S
 #3124
 O Final da Rua Olmo~
-   Você está no final da Rua Olmo.
+   VocÃª estÃ¡ no final da Rua Olmo.
 ~
-31 0 0 0 0 1
-D1
-Você vê uma bela alameda nessa direção.
-~
-~
-0 -1 19028
+31 0 1
 D3
 ~
 ~
 0 -1 3123
+D1
+VocÃª vÃª uma bela alameda nessa direÃ§Ã£o.
+~
+~
+0 -1 19028
 S
 #3125
 Avenida Esmeralda~
-   Você está na Avenida Esmeralda, que continua ao norte.  A Confluência
-fica ao sul daqui. Uma grande construção fica a leste.
+   VocÃª estÃ¡ na Avenida Esmeralda, que continua ao norte.  A ConfluÃªncia
+fica ao sul daqui. Uma grande construÃ§Ã£o fica a leste.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
 0 -1 3121
-D1
-~
-~
-0 -1 20100
 D2
 ~
 ~
 0 -1 3128
+D1
+~
+~
+0 -1 20100
 S
 #3126
 Estrada do Parque~
-   Você está na Estrada do Parque, que continua ao norte.  A Confluência
+   VocÃª estÃ¡ na Estrada do Parque, que continua ao norte.  A ConfluÃªncia
 fica ao sul daqui.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
@@ -537,11 +539,11 @@ D2
 0 -1 3129
 S
 #3127
-Na Confluência~
-   Você está no canto sudoeste do muro da cidade.  A Confluência leva a
+Na ConfluÃªncia~
+   VocÃª estÃ¡ no canto sudoeste do muro da cidade.  A ConfluÃªncia leva a
 norte e leste.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
@@ -551,17 +553,17 @@ D1
 ~
 0 -1 3128
 D3
-Através do Portão Sul você pode ver um pequeno caminho que leva ao sul.
+AtravÃ©s do PortÃ£o Sul vocÃª pode ver um pequeno caminho que leva ao sul.
 ~
 ~
 0 -1 3504
 S
 #3128
-Na Confluência~
-   A Confluência continua para leste e oeste.  A Avenida Esmeralda fica a
+Na ConfluÃªncia~
+   A ConfluÃªncia continua para leste e oeste.  A Avenida Esmeralda fica a
 norte daqui.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
@@ -576,11 +578,11 @@ D3
 0 -1 3127
 S
 #3129
-Na Confluência~
-   A Confluência continua para leste e oeste.  A Estrada do Parque fica a
+Na ConfluÃªncia~
+   A ConfluÃªncia continua para leste e oeste.  A Estrada do Parque fica a
 norte daqui e uma grade de ferro leva ao sul para o cemiterio.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
@@ -590,9 +592,10 @@ D1
 ~
 0 -1 3130
 D2
-Através das sólidas barras de ferro você vê o cemitério.
+AtravÃ©s das sÃ³lidas barras de ferro vocÃª vÃª o cemitÃ©rio.
 ~
 grade~
+:n 2
 2 3106 3150
 D3
 ~
@@ -600,11 +603,11 @@ D3
 0 -1 3128
 S
 #3130
-Na Confluência~
-   Você está no canto sudeste do muro da cidade.  A Confluência leva a norte
-e oeste. Você ainda repara em uma estranhíssima (e enorme) árvore a noroeste.
+Na ConfluÃªncia~
+   VocÃª estÃ¡ no canto sudeste do muro da cidade.  A ConfluÃªncia leva a norte
+e oeste. VocÃª ainda repara em uma estranhÃ­ssima (e enorme) Ã¡rvore a noroeste.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
@@ -614,16 +617,16 @@ D3
 ~
 0 -1 3129
 D6
-Há uma estranha árvore ali.
+HÃ¡ uma estranha Ã¡rvore ali.
 ~
 ~
 0 -1 4978
 S
 #3131
 Estrada do Parque~
-   Você está na Estrada do Parque que continua ao norte e sul.
+   VocÃª estÃ¡ na Estrada do Parque que continua ao norte e sul.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
@@ -635,10 +638,10 @@ D2
 S
 #3132
 Avenida Esmeralda~
-   Você está na Avenida Esmeralda, que continua para norte e sul.  A
-Travessa Vintém leva a leste daqui.
+   VocÃª estÃ¡ na Avenida Esmeralda, que continua para norte e sul.  A
+Travessa VintÃ©m leva a leste daqui.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
@@ -654,10 +657,10 @@ D2
 S
 #3133
 Avenida Esmeralda~
-   Você está em uma curva da Avenida Esmeralda.  A leste a estrada continua
+   VocÃª estÃ¡ em uma curva da Avenida Esmeralda.  A leste a estrada continua
 e para o sul fica a Encruzilhada.
 ~
-31 0 0 0 0 1
+31 0 1
 D1
 ~
 ~
@@ -669,10 +672,10 @@ D2
 S
 #3134
 Avenida Esmeralda~
-   Você está em uma curva da Avenida Esmeralda.  A oeste a estrada continua
+   VocÃª estÃ¡ em uma curva da Avenida Esmeralda.  A oeste a estrada continua
 e para o norte fica a Encruzilhada.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
@@ -684,10 +687,10 @@ D3
 S
 #3135
 Estrada do Parque~
-   Você está numa curva da Estrada do Parque.  Ao norte a estrada continua e
+   VocÃª estÃ¡ numa curva da Estrada do Parque.  Ao norte a estrada continua e
 a leste fica a Encruzilhada.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
@@ -699,10 +702,10 @@ D1
 S
 #3136
 Estrada do Parque~
-   Você está numa curva da Estrada do Parque.  Ao sul a estrada continua e a
+   VocÃª estÃ¡ numa curva da Estrada do Parque.  Ao sul a estrada continua e a
 oeste fica a Encruzilhada.
 ~
-31 0 0 0 0 1
+31 0 1
 D2
 ~
 ~
@@ -714,69 +717,69 @@ D3
 S
 #3137
 A Sala da Espera~
-   Você está na sala de espera da prefeitura.  Cadeiras de madeira estão
-colocadas ao longo das paredes e uma grande mesa com uma máquina de escrever
+   VocÃª estÃ¡ na sala de espera da prefeitura.  Cadeiras de madeira estÃ£o
+colocadas ao longo das paredes e uma grande mesa com uma mÃ¡quina de escrever
 foi colocada no meio da sala.
 ~
-31 8 0 0 0 0
+31 d 0
 D1
-Parece com algum tipo de escritório.
+Parece com algum tipo de escritÃ³rio.
 ~
 ~
 0 -1 3138
 D3
-A saída oeste leva à Avenida Esmeralda.
+A saÃ­da oeste leva Ã  Avenida Esmeralda.
 ~
 ~
 0 -1 3117
 E
-maquina escrever~
-É uma antiga Quifatronic T-1000 mk I.  Essas máquinas são famosas pela
-incrível durabilidade, e por seu mais incrível ainda peso.  Elas fazem um
-Cray II parecer um laptop.
+cadeira cadeiras~
+NÃ£o parecem muito confortÃ¡veis.
 ~
 E
 mesa~
-Uma mesa extremamente pesada.  É tão grande que nem mesmo precisa de
+Uma mesa extremamente pesada.  Ã‰ tÃ£o grande que nem mesmo precisa de
 gavetas.  Tudo pode ser colocado sobre ela.
 ~
 E
-cadeira cadeiras~
-Não parecem muito confortáveis.
+maquina escrever~
+Ã‰ uma antiga Quifatronic T-1000 mk I.  Essas mÃ¡quinas sÃ£o famosas pela
+incrÃ­vel durabilidade, e por seu mais incrÃ­vel ainda peso.  Elas fazem um
+Cray II parecer um laptop.
 ~
 S
 #3138
-O Escritório do Prefeito~
-   Você está no não muito grande escritório do Prefeito de Midgaard.  Uma
-mesa polida mas completamente vazia fica à frente de uma poltrona que parece
-tão confortavel que quase parece com uma cama com a cabeceira ligeiramente
+O EscritÃ³rio do Prefeito~
+   VocÃª estÃ¡ no nÃ£o muito grande escritÃ³rio do Prefeito de Midgaard.  Uma
+mesa polida mas completamente vazia fica Ã  frente de uma poltrona que parece
+tÃ£o confortavel que quase parece com uma cama com a cabeceira ligeiramente
 levantada.
 ~
-31 8 0 0 0 0
+31 d 0
 D3
 A sala de espera fica a oeste.
 ~
 ~
 0 -1 3137
 E
-cadeira poltrona~
-Esta cadeira é realmente uma obra de arte.  Uma cadeira onde alguém pode
-ficar tão à vontade como numa cama.  Todos os auditórios deveriam ser
-equipados com essa coisa.  Uma vergonha que não iria haver espaço para os
-estudantes também.
+mesa~
+Esta mesa Ã© obviamente muito antiga.  Entretanto parece nunca ter sido
+usada.
 ~
 E
-mesa~
-Esta mesa é obviamente muito antiga.  Entretanto parece nunca ter sido
-usada.
+cadeira poltrona~
+Esta cadeira Ã© realmente uma obra de arte.  Uma cadeira onde alguÃ©m pode
+ficar tÃ£o Ã  vontade como numa cama.  Todos os auditÃ³rios deveriam ser
+equipados com essa coisa.  Uma vergonha que nÃ£o iria haver espaÃ§o para os
+estudantes tambÃ©m.
 ~
 S
 #3139
-Travessa Vintém~
-   Você está na Travessa Vintém.  A Avenida Esmeralda fica a oeste e a
-Travessa Vintém continua na direção leste.
+Travessa VintÃ©m~
+   VocÃª estÃ¡ na Travessa VintÃ©m.  A Avenida Esmeralda fica a oeste e a
+Travessa VintÃ©m continua na direÃ§Ã£o leste.
 ~
-31 0 0 0 0 1
+31 0 1
 D1
 ~
 ~
@@ -787,11 +790,11 @@ D3
 0 -1 3132
 S
 #3140
-Travessa Vintém~
-   Você está na Travessa Vintém.  A estrada estreita continua para norte e
+Travessa VintÃ©m~
+   VocÃª estÃ¡ na Travessa VintÃ©m.  A estrada estreita continua para norte e
 oeste.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 ~
 ~
@@ -802,27 +805,28 @@ D3
 0 -1 3139
 S
 #3141
-O Final da Travessa Vintém~
-   Você está no final da Travessa Vintém.  Aparentemente a única saída fica
+O Final da Travessa VintÃ©m~
+   VocÃª estÃ¡ no final da Travessa VintÃ©m.  Aparentemente a Ãºnica saÃ­da fica
 ao sul.
 ~
-31 0 0 0 0 1
+31 0 1
 D2
 ~
 ~
 0 -1 3140
 S
 #3150
-Uma Estrada de Cascalho no Cemitério~
-   Você está em uma estrada de cascalho muito bem cuidada, que leva a norte
-e sul através do cemiterio.  Em ambos os lados da estrada erguem-se escuras
-sempre-verdes.  Ao norte há uma grade de ferro.
+Uma Estrada de Cascalho no CemitÃ©rio~
+   VocÃª estÃ¡ em uma estrada de cascalho muito bem cuidada, que leva a norte
+e sul atravÃ©s do cemiterio.  Em ambos os lados da estrada erguem-se escuras
+sempre-verdes.  Ao norte hÃ¡ uma grade de ferro.
 ~
-31 0 0 0 0 2
+31 0 2
 D0
-Através das sólidas barras de ferro você vê a Confluência.
+AtravÃ©s das sÃ³lidas barras de ferro vocÃª vÃª a ConfluÃªncia.
 ~
 grade~
+:n 2
 2 3106 3129
 D2
 A estrada de cascalho continua para o sul.
@@ -832,11 +836,11 @@ A estrada de cascalho continua para o sul.
 S
 #3151
 Uma Estrada de Cascalho no Cemiterio~
-   Você está em uma estrada de cascalho muito bem cuidada, que leva a norte
-e sul através do cemitério.  Em ambos os lados da estrada erguem-se escuras
+   VocÃª estÃ¡ em uma estrada de cascalho muito bem cuidada, que leva a norte
+e sul atravÃ©s do cemitÃ©rio.  Em ambos os lados da estrada erguem-se escuras
 sempre-verdes.
 ~
-31 0 0 0 0 2
+31 0 2
 D0
 A estrada de cascalho continua para o norte.
 ~
@@ -850,11 +854,11 @@ A estrada de cascalho continua para o sul.
 S
 #3152
 Uma Estrada de Cascalho no Cemiterio~
-   Você está em uma estrada de cascalho muito bem cuidada, que leva a norte
-e sul através do cemitério.  Em ambos os lados da estrada erguem-se escuras
+   VocÃª estÃ¡ em uma estrada de cascalho muito bem cuidada, que leva a norte
+e sul atravÃ©s do cemitÃ©rio.  Em ambos os lados da estrada erguem-se escuras
 sempre-verdes.
 ~
-31 0 0 0 0 2
+31 0 2
 D0
 A estrada de cascalho continua para o norte.
 ~
@@ -868,76 +872,78 @@ A estrada de cascalho continua para o sul.
 S
 #3153
 Uma Estrada de Cascalho no Cemiterio~
-   Você está em uma estrada de cascalho muito bem cuidada, que leva a norte
-e sul através do cemitério.  Em ambos os lados da estrada erguem-se escuras
+   VocÃª estÃ¡ em uma estrada de cascalho muito bem cuidada, que leva a norte
+e sul atravÃ©s do cemitÃ©rio.  Em ambos os lados da estrada erguem-se escuras
 sempre-verdes.
 ~
-31 0 0 0 0 1
+31 0 1
 D0
 A estrada de cascalho continua para o norte.
 ~
 ~
 0 -1 3152
 D2
-A estrada de cascalho continua para o sul até um espaco aberto ante
-uma pequena construção.
+A estrada de cascalho continua para o sul atÃ© um espaco aberto ante
+uma pequena construÃ§Ã£o.
 ~
 ~
 0 -1 3154
 S
 #3154
 Na Frente da Capela~
-   Você está num espaço aberto na frente de uma pequena capela.  Uma estrada
-de cascalho leva ao norte através do cemitério e a entrada da capela fica ao
+   VocÃª estÃ¡ num espaÃ§o aberto na frente de uma pequena capela.  Uma estrada
+de cascalho leva ao norte atravÃ©s do cemitÃ©rio e a entrada da capela fica ao
 sul.
 ~
-31 0 0 0 0 2
+31 0 2
 D0
 A estrada de cascalho continua para o norte.
 ~
 ~
 0 -1 3153
 D2
-A porta da capela é feita de madeira escura.
+A porta da capela Ã© feita de madeira escura.
 ~
 porta~
+:n 2
 1 -1 3155
 S
 #3155
 Dentro da Capela~
-   Você está em uma pequena e escura capela.  O vidro marrom escuro nas
-janelas estreitas não deixam entrar muita luz.  Há umas poucas fileiras de
+   VocÃª estÃ¡ em uma pequena e escura capela.  O vidro marrom escuro nas
+janelas estreitas nÃ£o deixam entrar muita luz.  HÃ¡ umas poucas fileiras de
 gastos bancos de madeira e um antigo altar foi colocado no meio da sala.
 ~
-31 9 0 0 0 0
+31 ad 0
 D0
-A porta da capela é feita de madeira escura.
+A porta da capela Ã© feita de madeira escura.
 ~
 porta~
+:n 2
 1 -1 3154
 E
-banco bancos fileiras~
-Os bancos não são do tipo confortável.
+vidros janelas~
+As janelas devem ser para manter isso escuro. Pelo menos estÃ£o bem limpas.
 ~
 E
 altar~
-O altar parece muito velho...  Você examina o chão em volta do altar e
-repara que parece menos empoeirado que o resto da sala...  Alguém deve
-limpar isso regularmente...  Talvez aquele velhinho do Café do Parque, ele
+O altar parece muito velho...  VocÃª examina o chÃ£o em volta do altar e
+repara que parece menos empoeirado que o resto da sala...  AlguÃ©m deve
+limpar isso regularmente...  Talvez aquele velhinho do CafÃ© do Parque, ele
 parece bem desse tipo...
 ~
 E
-vidros janelas~
-As janelas devem ser para manter isso escuro. Pelo menos estão bem limpas.
+banco bancos fileiras~
+Os bancos nÃ£o sÃ£o do tipo confortÃ¡vel.
 ~
 S
 #3200
 Sob a Ponte~
-   O arco sob a ponte é coberto com algas até meio metro sobre a superfície
-do rio.  A água flui através de uma abertura na parte mais baixa do muro da
+   O arco sob a ponte Ã© coberto com algas atÃ© meio metro sobre a superfÃ­cie
+do rio.  A Ã¡gua flui atravÃ©s de uma abertura na parte mais baixa do muro da
 cidade.
 ~
-31 0 0 0 0 7
+31 0 7
 D1
 ~
 ~
@@ -948,16 +954,16 @@ D3
 0 -1 900
 E
 muro~
-É construído com grande rochas, unidas entre si com algum tipo de cimento.
-Parece bastante sólido.
+Ã‰ construÃ­do com grande rochas, unidas entre si com algum tipo de cimento.
+Parece bastante sÃ³lido.
 ~
 S
 #3201
 No Rio~
-   Ao norte daqui você vê os prédios decadentes do Beco Miserável.  O rio
-flui para oeste, sob a ponte.  A ribanceira é muito íngreme para subir.
+   Ao norte daqui vocÃª vÃª os prÃ©dios decadentes do Beco MiserÃ¡vel.  O rio
+flui para oeste, sob a ponte.  A ribanceira Ã© muito Ã­ngreme para subir.
 ~
-31 0 0 0 0 7
+31 0 7
 D1
 ~
 ~
@@ -969,10 +975,10 @@ D3
 S
 #3202
 No Rio~
-   Ao norte daqui você vê o depósito de lixo.  O rio flui para oeste.  A
-ribanceira é muito íngreme para subir.
+   Ao norte daqui vocÃª vÃª o depÃ³sito de lixo.  O rio flui para oeste.  A
+ribanceira Ã© muito Ã­ngreme para subir.
 ~
-31 0 0 0 0 7
+31 0 7
 D1
 ~
 ~
@@ -984,10 +990,10 @@ D3
 S
 #3203
 No Rio~
-   O dique fica diretamente a norte daqui.  O rio flui na direção
+   O dique fica diretamente a norte daqui.  O rio flui na direÃ§Ã£o
 leste-oeste.
 ~
-31 0 0 0 0 7
+31 0 7
 D0
 ~
 ~
@@ -1003,10 +1009,10 @@ D3
 S
 #3204
 No Rio~
-   Você vê o depósito na margem norte do rio.  A leste daqui você vê o muro
-da cidade.  O rio flui para oeste além do dique.
+   VocÃª vÃª o depÃ³sito na margem norte do rio.  A leste daqui vocÃª vÃª o muro
+da cidade.  O rio flui para oeste alÃ©m do dique.
 ~
-31 0 0 0 0 7
+31 0 7
 D1
 ~
 ~
@@ -1019,19 +1025,19 @@ S
 #3205
 No Rio~
    O rio entra por um buraco no muro leste da cidade.  O buraco foi
-bloqueado por várias barras de ferro colocadas verticalmente no muro.
+bloqueado por vÃ¡rias barras de ferro colocadas verticalmente no muro.
 O rio faz uma pequena curva para o sul.
 ~
-31 0 0 0 0 7
+31 0 7
 D1
-As barras de ferro dificultam a passagem através do buraco no muro.  Além
-das barras você vê que o rio leva a uma caverna sob a cadeia de montanhas a
+As barras de ferro dificultam a passagem atravÃ©s do buraco no muro.  AlÃ©m
+das barras vocÃª vÃª que o rio leva a uma caverna sob a cadeia de montanhas a
 leste.
 ~
 ~
 0 -1 5001
 D2
-Você não vê nada alem do rio.
+VocÃª nÃ£o vÃª nada alem do rio.
 ~
 ~
 0 -1 3206
@@ -1042,57 +1048,57 @@ D3
 S
 #3206
 No Rio~
-   O Rio segue na direção Sul-Norte.
+   O Rio segue na direÃ§Ã£o Sul-Norte.
 ~
-31 0 0 0 0 0
+31 0 0
 D0
-Você vê a continuação do rio.
+VocÃª vÃª a continuaÃ§Ã£o do rio.
 ~
 ~
 0 -1 3205
 D2
-Ao longe você pode ver um pequeno lago.
+Ao longe vocÃª pode ver um pequeno lago.
 ~
 ~
 0 -1 3207
 S
 #3207
 Um Lago~
-   O rio desemboca em um pequeno lago.  Ao seu redor você percebe uma
-floresta bem cuidada.  Você tem a nítida impressão de que esta floresta
-é protegida por seres muito especiais. Você não tem muita visibilidade
-do que se passa devido a escuridão causada pelas sombras das enormes
-Árvores Nirin.
+   O rio desemboca em um pequeno lago.  Ao seu redor vocÃª percebe uma
+floresta bem cuidada.  VocÃª tem a nÃ­tida impressÃ£o de que esta floresta
+Ã© protegida por seres muito especiais. VocÃª nÃ£o tem muita visibilidade
+do que se passa devido a escuridÃ£o causada pelas sombras das enormes
+Ãrvores Nirin.
 ~
-31 13 0 0 0 3
+31 acd 3
 D0
-Você vê o rio.
+VocÃª vÃª o rio.
 ~
 ~
 0 -1 3206
-D1
-Você vê um caminho sujo e empoeirado ao longe.
-~
-~
-0 -1 13583
 D2
-Você vê um pequeno caminho verde ao longe.
+VocÃª vÃª um pequeno caminho verde ao longe.
 ~
 ~
 0 -1 13502
+D1
+VocÃª vÃª um caminho sujo e empoeirado ao longe.
+~
+~
+0 -1 13583
 D3
-Você vê uma trilha lamacenta.
+VocÃª vÃª uma trilha lamacenta.
 ~
 ~
 0 -1 13639
 S
 #3208
-O Grande Silêncio de Vitália~
-   Você sente tudo a sua volta mudar. Um enorme vazio preenche seu corpo e
-quando você menos espera, um grande silêncio toma conta de tudo e nem um único
-som chega até você. Você foi @Rsilenciado@n por um oponente. Sua aventura 
-termina por aqui. A única saída é esperar o final de mais esta aventura.
+O Grande SilÃªncio de VitÃ¡lia~
+   VocÃª sente tudo a sua volta mudar. Um enorme vazio preenche seu corpo e
+quando vocÃª menos espera, um grande silÃªncio toma conta de tudo e nem um Ãºnico
+som chega atÃ© vocÃª. VocÃª foi @Rsilenciado@n por um oponente. Sua aventura 
+termina por aqui. A Ãºnica saÃ­da Ã© esperar o final de mais esta aventura.
 ~
-31 1048824 0 0 0 0
+31.1 defghu 0
 S
-$~
+$
