@@ -1,11 +1,11 @@
 #4200
 O Vale Protegido~
    Duas grandes dunas de areia, uma ao leste e a outra ao oeste, formam uma
-fortaleza de areia.  O uiva, soprando por todo o vale.  O calor é intenso e
-inexorável queima cruelmente sob sua cabeça.  Ao sul, você pode ver algumas
+fortaleza de areia.  O uiva, soprando por todo o vale.  O calor Ã© intenso e
+inexorÃ¡vel queima cruelmente sob sua cabeÃ§a.  Ao sul, vocÃª pode ver algumas
 tendas alojadas por todo o vale.
 ~
-42 65600 0 0 0 2
+42 gq 2
 D0
 ~
 ~
@@ -16,14 +16,14 @@ D2
 0 -1 4201
 S
 #4201
-O Acampamento Nômade~
-   Este é o lar dos nômades de Kubalai.  Apesar de estar localizado em um
+O Acampamento NÃ´made~
+   Este Ã© o lar dos nÃ´mades de Kubalai.  Apesar de estar localizado em um
 dos lugares menos hospitaleiros do reino, o acampamento parece bastante
-próspero.  Tendas feitas de pano alvejado pelo sol se alinham por ambos os
-lados do caminho.  Você pode visitar as tendas, continuar a sul pelo
+prÃ³spero.  Tendas feitas de pano alvejado pelo sol se alinham por ambos os
+lados do caminho.  VocÃª pode visitar as tendas, continuar a sul pelo
 caminho, ou voltar pelo norte, de onde sopra os ventos uivantes.
 ~
-42 65600 0 0 0 1
+42 gq 1
 D0
 ~
 ~
@@ -42,44 +42,44 @@ D3
 0 -1 4202
 S
 #4202
-A Tenda de Um Nômade Kubalai~
-   Esta é uma típica tenda dos moradores deste acampamento.  Panos pálidos
+A Tenda de Um NÃ´made Kubalai~
+   Esta Ã© uma tÃ­pica tenda dos moradores deste acampamento.  Panos pÃ¡lidos
 formam a parede e o teto, criando uma relaxante atmosfera.  Brilhantes e
-coloridos panos de todos os tipos também estão pendurados pelas paredes,
-criando uma aparência festiva.  Um tapete felpudo cobre o chão arenoso,
-tintilando os pés daqueles que pisam sob ele.  Largas almofadas espalhadas
-são a única mobília usada aqui.
+coloridos panos de todos os tipos tambÃ©m estÃ£o pendurados pelas paredes,
+criando uma aparÃªncia festiva.  Um tapete felpudo cobre o chÃ£o arenoso,
+tintilando os pÃ©s daqueles que pisam sob ele.  Largas almofadas espalhadas
+sÃ£o a Ãºnica mobÃ­lia usada aqui.
 ~
-42 65600 0 0 0 1
+42 gq 1
 D1
 ~
 ~
-0 -1 4201
+0 -1 4201 0
 S
 #4203
-A Tenda de Um Nômade Kubalai~
-   Esta é uma típica tenda dos moradores deste acampamento.  Panos pálidos
+A Tenda de Um NÃ´made Kubalai~
+   Esta Ã© uma tÃ­pica tenda dos moradores deste acampamento.  Panos pÃ¡lidos
 formam a parede e o teto, criando uma relaxante atmosfera.  Brilhantes e
-coloridos panos de todos os tipos também estão pendurados pelas paredes,
-criando uma aparência festiva.  Um tapete felpudo cobre o chão arenoso,
-tintilando os pés daqueles que pisam sob ele.  Largas almofadas espalhadas
-são a única mobília usada aqui.
+coloridos panos de todos os tipos tambÃ©m estÃ£o pendurados pelas paredes,
+criando uma aparÃªncia festiva.  Um tapete felpudo cobre o chÃ£o arenoso,
+tintilando os pÃ©s daqueles que pisam sob ele.  Largas almofadas espalhadas
+sÃ£o a Ãºnica mobÃ­lia usada aqui.
 ~
-42 65600 0 0 0 1
+42 gq 1
 D3
 ~
 ~
 0 -1 4201
 S
 #4204
-O Acampamento Nômade~
-   Este é o lar dos nômades de Kubalai.  Apesar de estar localizado em um
+O Acampamento NÃ´made~
+   Este Ã© o lar dos nÃ´mades de Kubalai.  Apesar de estar localizado em um
 dos lugares menos hospitaleiros do reino, o acampamento parece bastante
-próspero.  Tendas feitas de pano alvejado pelo sol se alinham por ambos os
-lados do caminho.  Você pode visitar as tendas, continuar a sul pelo
+prÃ³spero.  Tendas feitas de pano alvejado pelo sol se alinham por ambos os
+lados do caminho.  VocÃª pode visitar as tendas, continuar a sul pelo
 caminho, ou voltar pelo norte, de onde sopra os ventos uivantes.
 ~
-42 65600 0 0 0 1
+42 gq 1
 D0
 ~
 ~
@@ -98,44 +98,44 @@ D3
 0 -1 4205
 S
 #4205
-A Tenda de Um Nômade Kubalai~
-   Esta é uma típica tenda dos moradores deste acampamento.  Panos pálidos
+A Tenda de Um NÃ´made Kubalai~
+   Esta Ã© uma tÃ­pica tenda dos moradores deste acampamento.  Panos pÃ¡lidos
 formam a parede e o teto, criando uma relaxante atmosfera.  Brilhantes e
-coloridos panos de todos os tipos também estão pendurados pelas paredes,
-criando uma aparência festiva.  Um tapete felpudo cobre o chão arenoso,
-tintilando os pés daqueles que pisam sob ele.  Largas almofadas espalhadas
-são a única mobília usada aqui.
+coloridos panos de todos os tipos tambÃ©m estÃ£o pendurados pelas paredes,
+criando uma aparÃªncia festiva.  Um tapete felpudo cobre o chÃ£o arenoso,
+tintilando os pÃ©s daqueles que pisam sob ele.  Largas almofadas espalhadas
+sÃ£o a Ãºnica mobÃ­lia usada aqui.
 ~
-42 65600 0 0 0 1
+42 qg 1
 D1
 ~
 ~
 0 -1 4204
 S
 #4206
-A Tenda de Um Nômade Kubalai~
-   Esta é uma típica tenda dos moradores deste acampamento.  Panos pálidos
+A Tenda de Um NÃ´made Kubalai~
+   Esta Ã© uma tÃ­pica tenda dos moradores deste acampamento.  Panos pÃ¡lidos
 formam a parede e o teto, criando uma relaxante atmosfera.  Brilhantes e
-coloridos panos de todos os tipos também estão pendurados pelas paredes,
-criando uma aparência festiva.  Um tapete felpudo cobre o chão arenoso,
-tintilando os pés daqueles que pisam sob ele.  Largas almofadas espalhadas
-são a única mobília usada aqui.
+coloridos panos de todos os tipos tambÃ©m estÃ£o pendurados pelas paredes,
+criando uma aparÃªncia festiva.  Um tapete felpudo cobre o chÃ£o arenoso,
+tintilando os pÃ©s daqueles que pisam sob ele.  Largas almofadas espalhadas
+sÃ£o a Ãºnica mobÃ­lia usada aqui.
 ~
-42 65600 0 0 0 1
+42 gq 1
 D3
 ~
 ~
 0 -1 4204
 S
 #4207
-O Acampamento Nômade~
-   Este é o lar dos nômades de Kubalai.  Apesar de estar localizado em um
+O Acampamento NÃ´made~
+   Este Ã© o lar dos nÃ´mades de Kubalai.  Apesar de estar localizado em um
 dos lugares menos hospitaleiros do reino, o acampamento parece bastante
-próspero.  Tendas feitas de pano alvejado pelo sol se alinham por ambos os
-lados do caminho.  Você pode visitar as tendas, continuar a sul pelo
+prÃ³spero.  Tendas feitas de pano alvejado pelo sol se alinham por ambos os
+lados do caminho.  VocÃª pode visitar as tendas, continuar a sul pelo
 caminho, ou voltar pelo norte, de onde sopra os ventos uivantes.
 ~
-42 65600 0 0 0 1
+42 qg 1
 D0
 ~
 ~
@@ -154,27 +154,27 @@ D3
 0 -1 4208
 S
 #4208
-A Tenda do Gênio~
-   A tenda é completamente plana e mobiliada.  Aromas de incensos e perfumes
-carregam o ar, quase embriagando quem entra aqui.  Uma misteriosa névoa
-escura esconde aquele que os nômades respeitam e temem.
+A Tenda do GÃªnio~
+   A tenda Ã© completamente plana e mobiliada.  Aromas de incensos e perfumes
+carregam o ar, quase embriagando quem entra aqui.  Uma misteriosa nÃ©voa
+escura esconde aquele que os nÃ´mades respeitam e temem.
 ~
-42 65600 0 0 0 1
+42 qg 1
 D1
 ~
 ~
 0 -1 4207
 S
 #4209
-A Tenda de Um Nômade Kubalai~
-   Esta é uma típica tenda dos moradores deste acampamento.  Panos pálidos
+A Tenda de Um NÃ´made Kubalai~
+   Esta Ã© uma tÃ­pica tenda dos moradores deste acampamento.  Panos pÃ¡lidos
 formam a parede e o teto, criando uma relaxante atmosfera.  Brilhantes e
-coloridos panos de todos os tipos também estão pendurados pelas paredes,
-criando uma aparência festiva.  Um tapete felpudo cobre o chão arenoso,
-tintilando os pés daqueles que pisam sob ele.  Largas almofadas espalhadas
-são a única mobília usada aqui.
+coloridos panos de todos os tipos tambÃ©m estÃ£o pendurados pelas paredes,
+criando uma aparÃªncia festiva.  Um tapete felpudo cobre o chÃ£o arenoso,
+tintilando os pÃ©s daqueles que pisam sob ele.  Largas almofadas espalhadas
+sÃ£o a Ãºnica mobÃ­lia usada aqui.
 ~
-42 65600 0 0 0 1
+42 qg 1
 D3
 ~
 ~
@@ -182,12 +182,12 @@ D3
 S
 #4210
 A Tenda do Chefe~
-   Seda colorida pende do alto desta alta tenda, formando uma espécie de
-abóbada na tenda do chefe nômade.  Almofadas de pelúcia e macios tapetes
-fazem o lugar confortável a qualquer viajante.  Não há sinal da dura vida do
+   Seda colorida pende do alto desta alta tenda, formando uma espÃ©cie de
+abÃ³bada na tenda do chefe nÃ´made.  Almofadas de pelÃºcia e macios tapetes
+fazem o lugar confortÃ¡vel a qualquer viajante.  NÃ£o hÃ¡ sinal da dura vida do
 deserto em lugar algum.
 ~
-42 65600 0 0 0 1
+42 qg 1
 D0
 ~
 ~
@@ -195,13 +195,13 @@ D0
 S
 #4211
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -221,14 +221,14 @@ D3
 S
 #4212
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
-faz sentir isolado de todo o mundo, trazendo-lhe o desespero.  Um precipício
+faz sentir isolado de todo o mundo, trazendo-lhe o desespero.  Um precipÃ­cio
 de areia criado por enormes dunas bloqueia a passagem ao leste e ao sul.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -240,14 +240,14 @@ D3
 S
 #4213
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
-faz sentir isolado de todo o mundo, trazendo-lhe o desespero.  Um precipício
+faz sentir isolado de todo o mundo, trazendo-lhe o desespero.  Um precipÃ­cio
 de areia criado por enormes dunas bloqueia a passagem ao oeste.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -263,13 +263,13 @@ D2
 S
 #4214
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -289,13 +289,13 @@ D3
 S
 #4215
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -315,14 +315,14 @@ D3
 S
 #4216
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.  Duas enormes dunas se erguem ao
 sul, criando um profundo vale.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -342,13 +342,13 @@ D3
 S
 #4217
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -368,13 +368,13 @@ D3
 S
 #4218
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -394,13 +394,13 @@ D3
 S
 #4219
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -420,13 +420,13 @@ D3
 S
 #4220
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -446,13 +446,13 @@ D3
 S
 #4221
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -472,13 +472,13 @@ D3
 S
 #4222
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -498,13 +498,13 @@ D3
 S
 #4223
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -524,13 +524,13 @@ D3
 S
 #4224
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -550,13 +550,13 @@ D3
 S
 #4225
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -576,13 +576,13 @@ D3
 S
 #4226
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -602,13 +602,13 @@ D3
 S
 #4227
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -628,13 +628,13 @@ D3
 S
 #4228
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -654,15 +654,15 @@ D3
 S
 #4229
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.  Uma inclinada
-parede de blocos de pedra de uma antiga estrutura, construída na areia,
-torna impossível continuar adiante ao sul.
+parede de blocos de pedra de uma antiga estrutura, construÃ­da na areia,
+torna impossÃ­vel continuar adiante ao sul.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -678,13 +678,13 @@ D3
 S
 #4230
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -704,13 +704,13 @@ D3
 S
 #4231
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -730,13 +730,13 @@ D3
 S
 #4232
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -756,13 +756,13 @@ D3
 S
 #4233
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -783,12 +783,12 @@ S
 #4234
 O Deserto Escaldante de Kubalai~
    O vasto oceano de areia continua, oprimido pelo ar sufocante.  Os severos
-ventos açoitam as dunas, levantando nuvens de poeira que chega a cegar seus
+ventos aÃ§oitam as dunas, levantando nuvens de poeira que chega a cegar seus
 olhos.  As dunas de areia de todos os tamanhos mudam lentamente ao sabor do
-vento.  O terreno parece se inclinar ao norte onde carapaças quebradas,
-exoesqueletos, e ossos podem ser vistos em meio às areias.
+vento.  O terreno parece se inclinar ao norte onde carapaÃ§as quebradas,
+exoesqueletos, e ossos podem ser vistos em meio Ã s areias.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -808,13 +808,13 @@ D3
 S
 #4235
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -834,13 +834,13 @@ D3
 S
 #4236
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -860,13 +860,13 @@ D3
 S
 #4237
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -886,13 +886,13 @@ D3
 S
 #4238
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -913,15 +913,15 @@ S
 #4239
 O Deserto Escaldante de Kubalai~
    O vasto oceano de areia continua, oprimido pelo ar sufocante.  Os severos
-ventos açoitam as dunas, levantando nuvens de poeira que chega a cegar seus
+ventos aÃ§oitam as dunas, levantando nuvens de poeira que chega a cegar seus
 olhos.  As dunas de areia de todos os tamanhos mudam lentamente ao sabor do
-vento.  O terreno parece se inclinar ao norte onde carapaças quebradas,
-exoesqueletos, e ossos podem ser vistos em meio às areias.  Uma pequena
-pletora, alguns magros arbustos e cactos podem ser vistos a alguma distância
-ao norte, oferecendo alguma esperança para escapar da turbulenta tempestade
+vento.  O terreno parece se inclinar ao norte onde carapaÃ§as quebradas,
+exoesqueletos, e ossos podem ser vistos em meio Ã s areias.  Uma pequena
+pletora, alguns magros arbustos e cactos podem ser vistos a alguma distÃ¢ncia
+ao norte, oferecendo alguma esperanÃ§a para escapar da turbulenta tempestade
 de areia.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -941,13 +941,13 @@ D3
 S
 #4240
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -967,13 +967,13 @@ D3
 S
 #4241
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -994,12 +994,12 @@ S
 #4242
 O Deserto Escaldante de Kubalai~
    O vasto oceano de areia continua, oprimido pelo ar sufocante.  Os severos
-ventos açoitam as dunas, levantando nuvens de poeira que chega a cegar seus
+ventos aÃ§oitam as dunas, levantando nuvens de poeira que chega a cegar seus
 olhos.  As dunas de areia de todos os tamanhos mudam lentamente ao sabor do
-vento.  O terreno parece se inclinar ao norte onde carapaças quebradas,
-exoesqueletos, e ossos podem ser vistos em meio às areias.
+vento.  O terreno parece se inclinar ao norte onde carapaÃ§as quebradas,
+exoesqueletos, e ossos podem ser vistos em meio Ã s areias.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1019,13 +1019,13 @@ D3
 S
 #4243
 O Covil de Tam'ala~
-   A areia subitamente se inclina para baixo, formando um túnel.  Este é o
+   A areia subitamente se inclina para baixo, formando um tÃºnel.  Este Ã© o
 covil de Tam'ala, quem assombra estas terras por eras.  Esta armadilha foi
-espertamente armada, qualquer coisa que entrar aqui, vai encontrar sérias
-dificuldades escalar de volta por causa da areia que desce pelo túnel.
+espertamente armada, qualquer coisa que entrar aqui, vai encontrar sÃ©rias
+dificuldades escalar de volta por causa da areia que desce pelo tÃºnel.
 Fragmentos de exoesqueletos e ossos descarnados tomam todo o lugar.
 ~
-42 65856 0 0 0 2
+42 qgi 2
 D0
 ~
 ~
@@ -1046,12 +1046,12 @@ S
 #4244
 O Deserto Escaldante de Kubalai~
    O vasto oceano de areia continua, oprimido pelo ar sufocante.  Os severos
-ventos açoitam as dunas, levantando nuvens de poeira que chega a cegar seus
+ventos aÃ§oitam as dunas, levantando nuvens de poeira que chega a cegar seus
 olhos.  As dunas de areia de todos os tamanhos mudam lentamente ao sabor do
-vento.  O terreno parece se inclinar ao norte onde carapaças quebradas,
-exoesqueletos, e ossos podem ser vistos em meio às areias.
+vento.  O terreno parece se inclinar ao norte onde carapaÃ§as quebradas,
+exoesqueletos, e ossos podem ser vistos em meio Ã s areias.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1071,13 +1071,13 @@ D3
 S
 #4245
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 0 0 0 0 2
+42 0 2
 D0
 ~
 ~
@@ -1097,14 +1097,14 @@ D3
 S
 #4246
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varre a areia,
 chicoteando as dunas.  Uma pequena pletora, alguns magros arbustos e cactos
-podem ser vistos a alguma distância ao norte, oferecendo alguma esperança
+podem ser vistos a alguma distÃ¢ncia ao norte, oferecendo alguma esperanÃ§a
 para escapar da turbulenta tempestade de areia.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1123,13 +1123,13 @@ D3
 0 -1 4246
 S
 #4247
-Um Oásis~
-   Um oásis, protegido dos amargos ventos pelo agrupamento de arbustos em
-sua volta, é um sinal de esperança para os viajantes.  Não é muito
-confortável devido aos espinhos dos arbustos e cactos, mas é muito melhor
+Um OÃ¡sis~
+   Um oÃ¡sis, protegido dos amargos ventos pelo agrupamento de arbustos em
+sua volta, Ã© um sinal de esperanÃ§a para os viajantes.  NÃ£o Ã© muito
+confortÃ¡vel devido aos espinhos dos arbustos e cactos, mas Ã© muito melhor
 que o deserto aberto.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1149,14 +1149,14 @@ D3
 S
 #4248
 O Deserto Escaldante de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Uma pequena pletora, alguns magros arbustos e cactos
-podem ser vistos a alguma distância ao norte, oferecendo alguma esperança
+podem ser vistos a alguma distÃ¢ncia ao norte, oferecendo alguma esperanÃ§a
 para escapar da turbulenta tempestade de areia.
 ~
-42 65600 0 0 0 2
+42 qg 2
 D0
 ~
 ~
@@ -1176,13 +1176,13 @@ D3
 S
 #4249
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1202,13 +1202,13 @@ D3
 S
 #4250
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1229,12 +1229,12 @@ S
 #4251
 O Deserto Escaldante de Kubalai~
    O vasto oceano de areia continua, oprimido pelo ar sufocante.  Os severos
-ventos açoitam as dunas, levantando nuvens de poeira que chega a cegar seus
+ventos aÃ§oitam as dunas, levantando nuvens de poeira que chega a cegar seus
 olhos.  As dunas de areia de todos os tamanhos mudam lentamente ao sabor do
-vento.  O terreno parece se inclinar ao norte onde carapaças quebradas,
-exoesqueletos, e ossos podem ser vistos em meio às areias.
+vento.  O terreno parece se inclinar ao norte onde carapaÃ§as quebradas,
+exoesqueletos, e ossos podem ser vistos em meio Ã s areias.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1254,13 +1254,13 @@ D3
 S
 #4252
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1280,14 +1280,14 @@ D3
 S
 #4253
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Uma pequena pletora, alguns magros arbustos e cactos
-podem ser vistos a alguma distância ao norte, oferecendo alguma esperança
+podem ser vistos a alguma distÃ¢ncia ao norte, oferecendo alguma esperanÃ§a
 para escapar da turbulenta tempestade de areia.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1307,13 +1307,13 @@ D3
 S
 #4254
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1333,13 +1333,13 @@ D3
 S
 #4255
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1359,13 +1359,13 @@ D3
 S
 #4256
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1385,13 +1385,13 @@ D3
 S
 #4257
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1411,13 +1411,13 @@ D3
 S
 #4258
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1437,13 +1437,13 @@ D3
 S
 #4259
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1462,14 +1462,14 @@ D3
 0 -1 4258
 S
 #4260
-A Pirâmide~
-   É surpreendentemente mais fresco aqui, comparado ao intenso calor lá
-fora.  As paredes de pedra são adornadas com antigos símbolos e letras de
-uma escrita já esquecida.  A areia no solo causa alguns ruídos ásperos a
-medida que você pisa nele, quebrando o silêncio desta estranha e esquecida
+A PirÃ¢mide~
+   Ã‰ surpreendentemente mais fresco aqui, comparado ao intenso calor lÃ¡
+fora.  As paredes de pedra sÃ£o adornadas com antigos sÃ­mbolos e letras de
+uma escrita jÃ¡ esquecida.  A areia no solo causa alguns ruÃ­dos Ã¡speros a
+medida que vocÃª pisa nele, quebrando o silÃªncio desta estranha e esquecida
 tumba.
 ~
-42 8 0 0 0 0
+42 d 0
 D1
 ~
 ~
@@ -1480,14 +1480,14 @@ D3
 0 -1 4261
 S
 #4261
-A Pirâmide~
-   É surpreendentemente mais fresco aqui, comparado ao intenso calor lá
-fora.  As paredes de pedra são adornadas com antigos símbolos e letras de
-uma escrita já esquecida.  A areia no solo causa alguns ruídos ásperos a
-medida que você pisa nele, quebrando o silêncio desta estranha e esquecida
+A PirÃ¢mide~
+   Ã‰ surpreendentemente mais fresco aqui, comparado ao intenso calor lÃ¡
+fora.  As paredes de pedra sÃ£o adornadas com antigos sÃ­mbolos e letras de
+uma escrita jÃ¡ esquecida.  A areia no solo causa alguns ruÃ­dos Ã¡speros a
+medida que vocÃª pisa nele, quebrando o silÃªncio desta estranha e esquecida
 tumba.
 ~
-42 8 0 0 0 0
+42 d 0
 D1
 ~
 ~
@@ -1498,57 +1498,57 @@ D3
 0 -1 4265
 S
 #4262
-A Pirâmide~
-   As frias paredes de pedra são inclinadas em um ângulo voltado para o
-interior, alcançando e encontrando um apex em algum lugar da escuridão.  O
-chão de pedra, intocado por eras, é ligeiramente coberto por areia.
-Esculturas e runas adornam as paredes rochosas, contando-lhe uma história que
-não é contada há séculos.
+A PirÃ¢mide~
+   As frias paredes de pedra sÃ£o inclinadas em um Ã¢ngulo voltado para o
+interior, alcanÃ§ando e encontrando um apex em algum lugar da escuridÃ£o.  O
+chÃ£o de pedra, intocado por eras, Ã© ligeiramente coberto por areia.
+Esculturas e runas adornam as paredes rochosas, contando-lhe uma histÃ³ria que
+nÃ£o Ã© contada hÃ¡ sÃ©culos.
 ~
-42 8 0 0 0 0
+42 d 0
 D2
 ~
 ~
 0 -1 4265
 S
 #4263
-A Pirâmide~
-   As frias paredes de pedra são inclinadas em um ângulo voltado para o
-interior, alcançando e encontrando um apex em algum lugar da escuridão.  O
-chão de pedra, intocado por eras, é ligeiramente coberto por areia.
-Esculturas e runas adornam as paredes rochosas, contando-lhe uma história que
-não é contada há séculos.
+A PirÃ¢mide~
+   As frias paredes de pedra sÃ£o inclinadas em um Ã¢ngulo voltado para o
+interior, alcanÃ§ando e encontrando um apex em algum lugar da escuridÃ£o.  O
+chÃ£o de pedra, intocado por eras, Ã© ligeiramente coberto por areia.
+Esculturas e runas adornam as paredes rochosas, contando-lhe uma histÃ³ria que
+nÃ£o Ã© contada hÃ¡ sÃ©culos.
 ~
-42 8 0 0 0 0
+42 d 0
 D0
 ~
 ~
 0 -1 4265
 S
 #4264
-A Pirâmide~
-   As frias paredes de pedra são inclinadas em um ângulo voltado para o
-interior, alcançando e encontrando um apex em algum lugar da escuridão.  O
-chão de pedra, intocado por eras, é ligeiramente coberto por areia.
-Esculturas e runas adornam as paredes rochosas, contando-lhe uma história que
-não é contada há séculos.
+A PirÃ¢mide~
+   As frias paredes de pedra sÃ£o inclinadas em um Ã¢ngulo voltado para o
+interior, alcanÃ§ando e encontrando um apex em algum lugar da escuridÃ£o.  O
+chÃ£o de pedra, intocado por eras, Ã© ligeiramente coberto por areia.
+Esculturas e runas adornam as paredes rochosas, contando-lhe uma histÃ³ria que
+nÃ£o Ã© contada hÃ¡ sÃ©culos.
 ~
-42 8 0 0 0 0
+42 d 0
 D1
 ~
 ~
 0 -1 4265
 S
 #4265
-A Câmara Central da Pirâmide~
-   Tochas flamejantes iluminam esta câmara.  Sombras enganosas e
-assustadoras são vistas por toda a vastidão do lugar.  Uma suave brisa sopra
-de alguma fonte desconhecida.  A grande parede de pedra se ergue do chão,
-formando um majestoso teto de catedral.  Estranhos e belos símbolos decoram
-todo o lugar.  O propósito deste lugar foi esquecido e escondido entre as
+A CÃ¢mara Central da PirÃ¢mide~
+   Tochas flamejantes iluminam esta cÃ¢mara.  Sombras enganosas e
+assustadoras sÃ£o vistas por toda a vastidÃ£o do lugar.  Uma suave brisa sopra
+de alguma fonte desconhecida.  A grande parede de pedra se ergue do chÃ£o,
+formando um majestoso teto de catedral.  Estranhos e belos sÃ­mbolos decoram
+todo o lugar.  O propÃ³sito deste lugar foi esquecido e escondido entre as
 areias do vasto deserto.
 ~
-42 8 0 0 0 0
+42 d 0
 D0
 ~
 ~
@@ -1568,14 +1568,14 @@ D3
 S
 #4266
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Uma inclinada parede de pedra de uma antiga estrutura
-construída sobre a areia, barra qualquer tentativa de continuar adiante pelo
+construÃ­da sobre a areia, barra qualquer tentativa de continuar adiante pelo
 sul e pelo oeste.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1587,14 +1587,14 @@ D1
 S
 #4267
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Uma inclinada parede de pedra de uma antiga estrutura
-construída sobre a areia, barra qualquer tentativa de continuar adiante pelo
+construÃ­da sobre a areia, barra qualquer tentativa de continuar adiante pelo
 sul.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1610,12 +1610,12 @@ D3
 S
 #4268
 O Deserto Escaldante de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Uma pequena abertura pode ser vista na
-parede da antiga construção ao sul.
+parede da antiga construÃ§Ã£o ao sul.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1634,15 +1634,15 @@ D3
 0 -1 4267
 S
 #4269
-A Entrada da Pirâmide~
-   É surpreendentemente mais fresco aqui, comparado ao intenso calor lá
-fora.  As paredes de pedra são adornadas com antigos símbolos e letras de
-uma escrita já esquecida.  A areia no solo causa alguns ruídos ásperos a
-medida que você pisa nele, quebrando o silêncio desta estranha e esquecida
-tumba.  Você pode continuar pelo oeste, se aprofundando na pirâmide, ou pode
+A Entrada da PirÃ¢mide~
+   Ã‰ surpreendentemente mais fresco aqui, comparado ao intenso calor lÃ¡
+fora.  As paredes de pedra sÃ£o adornadas com antigos sÃ­mbolos e letras de
+uma escrita jÃ¡ esquecida.  A areia no solo causa alguns ruÃ­dos Ã¡speros a
+medida que vocÃª pisa nele, quebrando o silÃªncio desta estranha e esquecida
+tumba.  VocÃª pode continuar pelo oeste, se aprofundando na pirÃ¢mide, ou pode
 voltar para o norte, para o infinito oceano de areia.
 ~
-42 8 0 0 0 0
+42 d 0
 D0
 ~
 ~
@@ -1654,13 +1654,13 @@ D3
 S
 #4270
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia.  Uma inclinada parede de pedra de uma antiga estrutura
-construída sobre a areia, barra qualquer tentativa de continuar adiante pelo
+construÃ­da sobre a areia, barra qualquer tentativa de continuar adiante pelo
 norte.
 ~
-42 64 0 0 0 2
+42 g 2
 D1
 ~
 ~
@@ -1676,14 +1676,14 @@ D3
 S
 #4271
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Uma inclinada parede de pedra de uma antiga estrutura
-construída sobre a areia, barra qualquer tentativa de continuar adiante pelo
+construÃ­da sobre a areia, barra qualquer tentativa de continuar adiante pelo
 norte.
 ~
-42 64 0 0 0 2
+42 g 2
 D1
 ~
 ~
@@ -1699,13 +1699,13 @@ D3
 S
 #4272
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1725,13 +1725,13 @@ D3
 S
 #4273
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1751,14 +1751,14 @@ D3
 S
 #4274
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Uma inclinada parede de pedra de uma antiga estrutura
-construída sobre a areia, barra qualquer tentativa de continuar adiante pelo
+construÃ­da sobre a areia, barra qualquer tentativa de continuar adiante pelo
 norte e pelo oeste.
 ~
-42 64 0 0 0 2
+42 g 2
 D1
 ~
 ~
@@ -1770,13 +1770,13 @@ D2
 S
 #4275
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1796,11 +1796,11 @@ D3
 S
 #4276
 Pelas Dunas~
-   Você está sobre as dunas ao norte da praia.  OUCH!!!  A areia é tão
-quente que parece perfurar, como pregos, através das solas de suas botas.
-Você pode apenas esperar, que seus preciosos pés não se machuquem.
+   VocÃª estÃ¡ sobre as dunas ao norte da praia.  OUCH!!!  A areia Ã© tÃ£o
+quente que parece perfurar, como pregos, atravÃ©s das solas de suas botas.
+VocÃª pode apenas esperar, que seus preciosos pÃ©s nÃ£o se machuquem.
 ~
-42 65600 0 0 0 2
+42 qg 2
 D0
 ~
 ~
@@ -1812,11 +1812,11 @@ D2
 S
 #4277
 Em Um Caminho Sujo~
-   Você está no começo de um caminho sujo que, parece seguir infinitamente
-pelo norte.  Até onde você pode dizer, não há vida por aqui.  Está ficando
-notavelmente quente, a medida que você avança.
+   VocÃª estÃ¡ no comeÃ§o de um caminho sujo que, parece seguir infinitamente
+pelo norte.  AtÃ© onde vocÃª pode dizer, nÃ£o hÃ¡ vida por aqui.  EstÃ¡ ficando
+notavelmente quente, a medida que vocÃª avanÃ§a.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1828,11 +1828,11 @@ D2
 S
 #4278
 Em Um Caminho Sujo~
-   O caminho sujo parece seguir infinitamente pelo norte.  Até onde você
-pode dizer, não há vida por aqui.  Está ficando notavelmente quente a
-medida que você avança.
+   O caminho sujo parece seguir infinitamente pelo norte.  AtÃ© onde vocÃª
+pode dizer, nÃ£o hÃ¡ vida por aqui.  EstÃ¡ ficando notavelmente quente a
+medida que vocÃª avanÃ§a.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1844,11 +1844,11 @@ D2
 S
 #4279
 Em Um Caminho Sujo~
-   O caminho sujo parece seguir infinitamente pelo norte.  Até onde você
-pode dizer, não há vida por aqui.  Está ficando notavelmente quente a
-medida que você avança.
+   O caminho sujo parece seguir infinitamente pelo norte.  AtÃ© onde vocÃª
+pode dizer, nÃ£o hÃ¡ vida por aqui.  EstÃ¡ ficando notavelmente quente a
+medida que vocÃª avanÃ§a.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1860,11 +1860,11 @@ D2
 S
 #4280
 Em Um Caminho Sujo~
-   O caminho sujo parece seguir infinitamente pelo norte.  Até onde você
-pode dizer, não há vida por aqui.  Está ficando notavelmente quente a
-medida que você avança.
+   O caminho sujo parece seguir infinitamente pelo norte.  AtÃ© onde vocÃª
+pode dizer, nÃ£o hÃ¡ vida por aqui.  EstÃ¡ ficando notavelmente quente a
+medida que vocÃª avanÃ§a.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1876,12 +1876,12 @@ D2
 S
 #4281
 Em um Caminho de Areia~
-   O caminho pelo qual você estava viajando se transformou misteriosamente
-em areia.  Ao longo do caminho, como antes, está ficando realmente quente a
-medida que você avança.  Você seca sua face, lavando-a com um pouco de água,
+   O caminho pelo qual vocÃª estava viajando se transformou misteriosamente
+em areia.  Ao longo do caminho, como antes, estÃ¡ ficando realmente quente a
+medida que vocÃª avanÃ§a.  VocÃª seca sua face, lavando-a com um pouco de Ã¡gua,
 esperando que logo o clima se amenize.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1893,11 +1893,11 @@ D2
 S
 #4282
 Em um Caminho de Areia~
-   Você viaja por um misterioso caminho de areia.  Está ficando realmente
-quente a medida que você avança.  Você seca sua face, lavando-a com um pouco
-de água, esperando que logo o clima se amenize.
+   VocÃª viaja por um misterioso caminho de areia.  EstÃ¡ ficando realmente
+quente a medida que vocÃª avanÃ§a.  VocÃª seca sua face, lavando-a com um pouco
+de Ã¡gua, esperando que logo o clima se amenize.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1905,15 +1905,15 @@ D0
 D2
 ~
 ~
-0 -1 4281
+0 -1 4281 0
 S
 #4283
 Em um Caminho de Areia~
-   Você viaja por um misterioso caminho de areia.  Está ficando realmente
-quente a medida que você avança.  Você seca sua face, lavando-a com um pouco
-de água, esperando que logo o clima se amenize.
+   VocÃª viaja por um misterioso caminho de areia.  EstÃ¡ ficando realmente
+quente a medida que vocÃª avanÃ§a.  VocÃª seca sua face, lavando-a com um pouco
+de Ã¡gua, esperando que logo o clima se amenize.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1929,13 +1929,13 @@ D3
 S
 #4284
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1955,13 +1955,13 @@ D3
 S
 #4285
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -1981,13 +1981,13 @@ D3
 S
 #4286
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Uma inclinada parede de pedra de uma
-antiga estrutura construída sobre a areia, barra qualquer tentativa de
+antiga estrutura construÃ­da sobre a areia, barra qualquer tentativa de
 continuar adiante pelo oeste.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -2003,13 +2003,13 @@ D2
 S
 #4287
 O Deserto Escaldante de Kubalai~
-   O grande deserto se estende até onde seus olhos podem ver.  A areia sendo
-carregada pelo vento, forma uma grossa névoa que torna difícil sua
-respiração, o sufocando.  O sol ardente, acima de sua cabeça,
+   O grande deserto se estende atÃ© onde seus olhos podem ver.  A areia sendo
+carregada pelo vento, forma uma grossa nÃ©voa que torna difÃ­cil sua
+respiraÃ§Ã£o, o sufocando.  O sol ardente, acima de sua cabeÃ§a,
 implacavelmente chamusca estas terras.  As dunas sempre em movimento criam
 um panorama de infinitos vales e cumes.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -2028,12 +2028,12 @@ D3
 0 -1 4268
 S
 #4288
-Um Oásis~
-   Você está em um lindo oásis, cercado por altas palmeiras.  Este parece
-ser um ótimo lugar para descansar, encha seu cantil, pois pode ser o único
-lugar que você vá poder fazer isso, por algum tempo.
+Um OÃ¡sis~
+   VocÃª estÃ¡ em um lindo oÃ¡sis, cercado por altas palmeiras.  Este parece
+ser um Ã³timo lugar para descansar, encha seu cantil, pois pode ser o Ãºnico
+lugar que vocÃª vÃ¡ poder fazer isso, por algum tempo.
 ~
-42 64 0 0 0 2
+42 g 2
 D1
 ~
 ~
@@ -2045,98 +2045,98 @@ D3
 S
 #4289
 A Praia~
-   Essa parte da praia é pequena e arenosa.  Bosques a limitam a oeste,
-enquanto a leste ela faz uma curva seguindo ainda além.  Construções se
-erguem nessa direção, local em que a areia deixa de ser fina e se torna
+   Essa parte da praia Ã© pequena e arenosa.  Bosques a limitam a oeste,
+enquanto a leste ela faz uma curva seguindo ainda alÃ©m.  ConstruÃ§Ãµes se
+erguem nessa direÃ§Ã£o, local em que a areia deixa de ser fina e se torna
 pedregosa.
 ~
-42 68 0 0 0 2
+42 gc 2
 D0
 ~
 ~
 0 -1 4276
-D1
-~
-~
-0 -1 4290
 D2
 ~
 ~
 0 -1 5694
-S
-#4290
-A Praia~
-   Você caminha pela praia, vendo que ela é mais extensa a leste do que você
-imaginava.  Conforme o caminho segue norte, mais pedras podem ser vistas a
-oeste.
-~
-42 68 0 0 0 2
-D0
-~
-~
-0 -1 4291
-D3
-~
-~
-0 -1 4289
-S
-#4291
-A Praia~
-   Você caminha pela praia, vendo que ela é mais extensa a leste do que você
-imaginava.  Conforme o caminho segue norte, mais pedras podem ser vistas a
-oeste.
-~
-42 68 0 0 0 2
-D0
-~
-~
-0 -1 4292
-D2
+D1
 ~
 ~
 0 -1 4290
 S
-#4292
+#4290
 A Praia~
-   Você caminha pela praia, vendo que ela é mais extensa a leste do que você
+   VocÃª caminha pela praia, vendo que ela Ã© mais extensa a leste do que vocÃª
 imaginava.  Conforme o caminho segue norte, mais pedras podem ser vistas a
 oeste.
 ~
-42 68 0 0 0 2
+42 gc 2
+D3
+~
+~
+0 -1 4289
 D0
-~
-~
-0 -1 4293
-D2
 ~
 ~
 0 -1 4291
 S
-#4293
+#4291
 A Praia~
-   Você caminha pela praia, vendo que ela é mais extensa a leste do que você
-imaginava.  Daqui você consegue ver que o caminho a noroeste e nordeste
-parece desobstruído.
+   VocÃª caminha pela praia, vendo que ela Ã© mais extensa a leste do que vocÃª
+imaginava.  Conforme o caminho segue norte, mais pedras podem ser vistas a
+oeste.
 ~
-42 68 0 0 0 2
-D0
-~
-~
-0 -1 13205
+42 gc 2
 D2
+~
+~
+0 -1 4290
+D0
 ~
 ~
 0 -1 4292
 S
+#4292
+A Praia~
+   VocÃª caminha pela praia, vendo que ela Ã© mais extensa a leste do que vocÃª
+imaginava.  Conforme o caminho segue norte, mais pedras podem ser vistas a
+oeste.
+~
+42 gc 2
+D2
+~
+~
+0 -1 4291
+D0
+~
+~
+0 -1 4293
+S
+#4293
+A Praia~
+   VocÃª caminha pela praia, vendo que ela Ã© mais extensa a leste do que vocÃª
+imaginava.  Daqui vocÃª consegue ver que o caminho a noroeste e nordeste
+parece desobstruÃ­do.
+~
+42 gc 2
+D2
+~
+~
+0 -1 4292
+D0
+~
+~
+0 -1 13205
+S
 #4294
 Os Limites do Deserto de Kubalai~
-   Dunas incontáveis pontilham o horizonte para até onde seus olhos podem
-ver.  A visibilidade e a respiração se tornam difíceis a medida que a
+   Dunas incontÃ¡veis pontilham o horizonte para atÃ© onde seus olhos podem
+ver.  A visibilidade e a respiraÃ§Ã£o se tornam difÃ­ceis a medida que a
 tempestade de areia se intensifica.  Os uivantes ventos varrem a areia,
 chicoteando as dunas.  Este oceano de areia e calor parece infinito, o que o
 faz sentir isolado de todo o mundo, trazendo-lhe o desespero.
 ~
-42 64 0 0 0 2
+42 g 2
 D0
 ~
 ~
@@ -2145,11 +2145,11 @@ D1
 ~
 ~
 0 -1 17600
-D2
+D3
 ~
 ~
 0 -1 4294
-D3
+D2
 ~
 ~
 0 -1 4294
