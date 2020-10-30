@@ -572,7 +572,7 @@ ASPELL(spell_transport_via_plants) {
       dest_obj = tmp_obj;
 
       // 5% chance we will just stop at this obj
-      if (!rand_number(0, 20))
+      if (!rand_number(0, 10))
         break;
     }
   }
