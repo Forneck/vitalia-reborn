@@ -1,18 +1,19 @@
 #3700
 A Ladeira em Espiral~
-   Você entra no meio do nada à medida em que segue para baixo, em direção
-a escuridão.  Este vácuo, fútil e sem qualquer tipo de vida, segue em
-espiral até onde sua visão consegue chegar.  A unica coisa que visivel é a
-enorme escadaria em espiral.  Construída por pedras muito antigas e espaçosa
+   VocÃª entra no meio do nada Ã  medida em que segue para baixo, em direÃ§Ã£o
+a escuridÃ£o.  Este vÃ¡cuo, fÃºtil e sem qualquer tipo de vida, segue em
+espiral atÃ© onde sua visÃ£o consegue chegar.  A unica coisa que visivel Ã© a
+enorme escadaria em espiral.  ConstruÃ­da por pedras muito antigas e espaÃ§osa
 como dez homens lado a lado, ela espirala infinitamente.  Os sons de passos
-ecoando é tudo o que pode ser ouvido.  Você pode voltar pelo sul para a
-plataforma, ou você pode seguir para baixo pela escada.
+ecoando Ã© tudo o que pode ser ouvido.  VocÃª pode voltar pelo sul para a
+plataforma, ou vocÃª pode seguir para baixo pela escada.
 ~
-37 5 0 0 0 1
+37 ac 1
 D0
 ~
 porta metal~
-1 -1 2217
+:n 2 a porta de metal
+a -1 2217
 D3
 ~
 ~
@@ -20,15 +21,15 @@ D3
 S
 #3701
 A Ladeira em Espiral~
-   O som de passos ecoando e o total vazio são as unicas coisas que vem a
-você na medida em que atravessa esses degraus.  Construída por pedras muito
-antigas e espaçosa como dez homens lado a lado, ela espirala infinitamente.
-Você surpreende-se imaginando que tipo de força segura essa escadaria no
+   O som de passos ecoando e o total vazio sÃ£o as unicas coisas que vem a
+vocÃª na medida em que atravessa esses degraus.  ConstruÃ­da por pedras muito
+antigas e espaÃ§osa como dez homens lado a lado, ela espirala infinitamente.
+VocÃª surpreende-se imaginando que tipo de forÃ§a segura essa escadaria no
 meio do nada.  Se focalizando para manter na escada, neste lugar sem
-paredes, você pode voltar para o plano mortal, ou continuar em direção ao
+paredes, vocÃª pode voltar para o plano mortal, ou continuar em direÃ§Ã£o ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D0
 ~
 ~
@@ -40,15 +41,15 @@ D1
 S
 #3702
 A Ladeira em Espiral~
-   O som de passos ecoando e o total vazio são as unicas coisas que vem a
-você na medida em que atravessa esses degraus.  Construída por pedras muito
-antigas e espaçosa como dez homens lado a lado, ela espirala infinitamente.
-Você surpreende-se imaginando que tipo de força segura essa escadaria no
+   O som de passos ecoando e o total vazio sÃ£o as unicas coisas que vem a
+vocÃª na medida em que atravessa esses degraus.  ConstruÃ­da por pedras muito
+antigas e espaÃ§osa como dez homens lado a lado, ela espirala infinitamente.
+VocÃª surpreende-se imaginando que tipo de forÃ§a segura essa escadaria no
 meio do nada.  Se focalizando para manter na escada, neste lugar sem
-paredes, você pode voltar para o plano mortal, ou continuar em direção ao
+paredes, vocÃª pode voltar para o plano mortal, ou continuar em direÃ§Ã£o ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D1
 ~
 ~
@@ -60,15 +61,15 @@ D2
 S
 #3703
 A Ladeira em Espiral~
-   O som de passos ecoando e o total vazio são as unicas coisas que vem a
-você na medida em que atravessa esses degraus.  Construída por pedras muito
-antigas e espaçosa como dez homens lado a lado, ela espirala infinitamente.
-Você surpreende-se imaginando que tipo de força segura essa escadaria no
+   O som de passos ecoando e o total vazio sÃ£o as unicas coisas que vem a
+vocÃª na medida em que atravessa esses degraus.  ConstruÃ­da por pedras muito
+antigas e espaÃ§osa como dez homens lado a lado, ela espirala infinitamente.
+VocÃª surpreende-se imaginando que tipo de forÃ§a segura essa escadaria no
 meio do nada.  Se focalizando para manter na escada, neste lugar sem
-paredes, você pode voltar para o plano mortal, ou continuar em direção ao
+paredes, vocÃª pode voltar para o plano mortal, ou continuar em direÃ§Ã£o ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D3
 ~
 ~
@@ -80,15 +81,15 @@ D5
 S
 #3704
 A Ladeira em Espiral~
-   O som de passos ecoando e o total vazio são as unicas coisas que vem a
-você na medida em que atravessa esses degraus.  Construída por pedras muito
-antigas e espaçosa como dez homens lado a lado, ela espirala infinitamente.
-Você surpreende-se imaginando que tipo de força segura essa escadaria no
+   O som de passos ecoando e o total vazio sÃ£o as unicas coisas que vem a
+vocÃª na medida em que atravessa esses degraus.  ConstruÃ­da por pedras muito
+antigas e espaÃ§osa como dez homens lado a lado, ela espirala infinitamente.
+VocÃª surpreende-se imaginando que tipo de forÃ§a segura essa escadaria no
 meio do nada.  Se focalizando para manter na escada, neste lugar sem
-paredes, você pode voltar para o plano mortal, ou continuar em direção ao
+paredes, vocÃª pode voltar para o plano mortal, ou continuar em direÃ§Ã£o ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D2
 ~
 ~
@@ -100,15 +101,15 @@ D4
 S
 #3705
 A Ladeira em Espiral~
-   O som de passos ecoando e o total vazio são as unicas coisas que vem a
-você na medida em que atravessa esses degraus.  Construída por pedras muito
-antigas e espaçosa como dez homens lado a lado, ela espirala infinitamente.
-Você surpreende-se imaginando que tipo de força segura essa escadaria no
+   O som de passos ecoando e o total vazio sÃ£o as unicas coisas que vem a
+vocÃª na medida em que atravessa esses degraus.  ConstruÃ­da por pedras muito
+antigas e espaÃ§osa como dez homens lado a lado, ela espirala infinitamente.
+VocÃª surpreende-se imaginando que tipo de forÃ§a segura essa escadaria no
 meio do nada.  Se focalizando para manter na escada, neste lugar sem
-paredes, você pode voltar para o plano mortal, ou continuar em direção ao
+paredes, vocÃª pode voltar para o plano mortal, ou continuar em direÃ§Ã£o ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D0
 ~
 ~
@@ -120,15 +121,15 @@ D3
 S
 #3706
 A Ladeira em Espiral~
-   O som de passos ecoando e o total vazio são as unicas coisas que vem a
-você na medida em que atravessa esses degraus.  Construída por pedras muito
-antigas e espaçosa como dez homens lado a lado, ela espirala infinitamente.
-Você surpreende-se imaginando que tipo de força segura essa escadaria no
+   O som de passos ecoando e o total vazio sÃ£o as unicas coisas que vem a
+vocÃª na medida em que atravessa esses degraus.  ConstruÃ­da por pedras muito
+antigas e espaÃ§osa como dez homens lado a lado, ela espirala infinitamente.
+VocÃª surpreende-se imaginando que tipo de forÃ§a segura essa escadaria no
 meio do nada.  Se focalizando para manter na escada, neste lugar sem
-paredes, você pode voltar para o plano mortal, ou continuar em direção ao
+paredes, vocÃª pode voltar para o plano mortal, ou continuar em direÃ§Ã£o ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D0
 ~
 ~
@@ -140,15 +141,15 @@ D1
 S
 #3707
 A Ladeira em Espiral~
-   O som de passos ecoando e o total vazio são as unicas coisas que vem a
-você na medida em que atravessa esses degraus.  Construída por pedras muito
-antigas e espaçosa como dez homens lado a lado, ela espirala infinitamente.
-Você surpreende-se imaginando que tipo de força segura essa escadaria no
+   O som de passos ecoando e o total vazio sÃ£o as unicas coisas que vem a
+vocÃª na medida em que atravessa esses degraus.  ConstruÃ­da por pedras muito
+antigas e espaÃ§osa como dez homens lado a lado, ela espirala infinitamente.
+VocÃª surpreende-se imaginando que tipo de forÃ§a segura essa escadaria no
 meio do nada.  Se focalizando para manter na escada, neste lugar sem
-paredes, você pode voltar para o plano mortal, ou continuar em direção ao
+paredes, vocÃª pode voltar para o plano mortal, ou continuar em direÃ§Ã£o ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D1
 ~
 ~
@@ -160,15 +161,15 @@ D2
 S
 #3708
 A Ladeira em Espiral~
-   O som de passos ecoando e o total vazio são as unicas coisas que vem a
-você na medida em que atravessa esses degraus.  Construída por pedras muito
-antigas e espaçosa como dez homens lado a lado, ela espirala infinitamente.
-Você surpreende-se imaginando que tipo de força segura essa escadaria no
+   O som de passos ecoando e o total vazio sÃ£o as unicas coisas que vem a
+vocÃª na medida em que atravessa esses degraus.  ConstruÃ­da por pedras muito
+antigas e espaÃ§osa como dez homens lado a lado, ela espirala infinitamente.
+VocÃª surpreende-se imaginando que tipo de forÃ§a segura essa escadaria no
 meio do nada.  Se focalizando para manter na escada, neste lugar sem
-paredes, você pode voltar para o plano mortal, ou continuar em direção ao
+paredes, vocÃª pode voltar para o plano mortal, ou continuar em direÃ§Ã£o ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D3
 ~
 ~
@@ -180,15 +181,15 @@ D5
 S
 #3709
 A Ladeira em Espiral~
-   O som de passos ecoando e o total vazio são as unicas coisas que vem a
-você na medida em que atravessa esses degraus.  Construída por pedras muito
-antigas e espaçosa como dez homens lado a lado, ela espirala infinitamente.
-Você surpreende-se imaginando que tipo de força segura essa escadaria no
+   O som de passos ecoando e o total vazio sÃ£o as unicas coisas que vem a
+vocÃª na medida em que atravessa esses degraus.  ConstruÃ­da por pedras muito
+antigas e espaÃ§osa como dez homens lado a lado, ela espirala infinitamente.
+VocÃª surpreende-se imaginando que tipo de forÃ§a segura essa escadaria no
 meio do nada.  Se focalizando para manter na escada, neste lugar sem
-paredes, você pode voltar para o plano mortal, ou continuar em direção ao
+paredes, vocÃª pode voltar para o plano mortal, ou continuar em direÃ§Ã£o ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D2
 ~
 ~
@@ -200,15 +201,15 @@ D4
 S
 #3710
 A Ladeira em Espiral~
-   O som de passos ecoando e o total vazio são as unicas coisas que vem a
-você na medida em que atravessa esses degraus.  Construída por pedras muito
-antigas e espaçosa como dez homens lado a lado, ela espirala infinitamente.
-Você surpreende-se imaginando que tipo de força segura essa escadaria no
+   O som de passos ecoando e o total vazio sÃ£o as unicas coisas que vem a
+vocÃª na medida em que atravessa esses degraus.  ConstruÃ­da por pedras muito
+antigas e espaÃ§osa como dez homens lado a lado, ela espirala infinitamente.
+VocÃª surpreende-se imaginando que tipo de forÃ§a segura essa escadaria no
 meio do nada.  Se focalizando para manter na escada, neste lugar sem
-paredes, você pode voltar para o plano mortal, ou continuar em direção ao
+paredes, vocÃª pode voltar para o plano mortal, ou continuar em direÃ§Ã£o ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D0
 ~
 ~
@@ -220,15 +221,15 @@ D3
 S
 #3711
 A Ladeira em Espiral~
-   O som de passos ecoando e o total vazio são as unicas coisas que vem a
-você na medida em que atravessa esses degraus.  Construída por pedras muito
-antigas e espaçosa como dez homens lado a lado, ela espirala infinitamente.
-Você surpreende-se imaginando que tipo de força segura essa escadaria no
+   O som de passos ecoando e o total vazio sÃ£o as unicas coisas que vem a
+vocÃª na medida em que atravessa esses degraus.  ConstruÃ­da por pedras muito
+antigas e espaÃ§osa como dez homens lado a lado, ela espirala infinitamente.
+VocÃª surpreende-se imaginando que tipo de forÃ§a segura essa escadaria no
 meio do nada.  Se focalizando para manter na escada, neste lugar sem
-paredes, você pode voltar para o plano mortal, ou continuar em direção ao
+paredes, vocÃª pode voltar para o plano mortal, ou continuar em direÃ§Ã£o ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D0
 ~
 ~
@@ -240,15 +241,15 @@ D1
 S
 #3712
 A Ladeira em Espiral~
-   O som de passos ecoando e o total vazio são as unicas coisas que vem a
-você na medida em que atravessa esses degraus.  Construída por pedras muito
-antigas e espaçosa como dez homens lado a lado, ela espirala infinitamente.
-Você surpreende-se imaginando que tipo de força segura essa escadaria no
+   O som de passos ecoando e o total vazio sÃ£o as unicas coisas que vem a
+vocÃª na medida em que atravessa esses degraus.  ConstruÃ­da por pedras muito
+antigas e espaÃ§osa como dez homens lado a lado, ela espirala infinitamente.
+VocÃª surpreende-se imaginando que tipo de forÃ§a segura essa escadaria no
 meio do nada.  Se focalizando para manter na escada, neste lugar sem
-paredes, você pode voltar para o plano mortal, ou continuar em direção ao
+paredes, vocÃª pode voltar para o plano mortal, ou continuar em direÃ§Ã£o ao
 misterioso plano abaixo.
 ~
-37 1 0 0 0 1
+37 a 1
 D1
 ~
 ~
@@ -262,11 +263,11 @@ S
 A Ladeira em Espiral~
    A escadaria de pedra termina abruptamente aqui, defronte a um
 vislumbrante portal.  A base da escadaria desaparece no desconhecido, por
-dentro do portal.  Vindo do portal, você pode ouvir o suave som da água se
-debatendo com uma espécie de margem, e a terrível lamentação de algum tipo
-de criatura.  Você pode voltar subindo a escadaria, ou avançar pelo portal.
+dentro do portal.  Vindo do portal, vocÃª pode ouvir o suave som da Ã¡gua se
+debatendo com uma espÃ©cie de margem, e a terrÃ­vel lamentaÃ§Ã£o de algum tipo
+de criatura.  VocÃª pode voltar subindo a escadaria, ou avanÃ§ar pelo portal.
 ~
-37 5 0 0 0 0
+37 ca 0
 D3
 ~
 ~
@@ -278,15 +279,15 @@ D5
 S
 #3714
 Nas Margens do Rio Styx~
-   A areia negra obsidiana silencia o som dos passos na medida em que você
-anda nas margens do rio Styx.  O ar aqui é mortalmente imóvel, e trasmite
+   A areia negra obsidiana silencia o som dos passos na medida em que vocÃª
+anda nas margens do rio Styx.  O ar aqui Ã© mortalmente imÃ³vel, e trasmite
 um som que pode ter sido feito por qualquer mortal que esteja nessas
-margens.  O rio flui vagarosamente de leste para oeste. A superfície do
-rio é preta como carvão, e nenhum tipo de reflexo pode ser visto.  Na
-superficie não há nenhum tipo de ondas.  O translúcido brilho de
-atormentados espíritos flui pelo rio em direção ao desconhecido.
+margens.  O rio flui vagarosamente de leste para oeste. A superfÃ­cie do
+rio Ã© preta como carvÃ£o, e nenhum tipo de reflexo pode ser visto.  Na
+superficie nÃ£o hÃ¡ nenhum tipo de ondas.  O translÃºcido brilho de
+atormentados espÃ­ritos flui pelo rio em direÃ§Ã£o ao desconhecido.
 ~
-37 32 0 0 0 1
+37 f 1
 D0
 ~
 ~
@@ -298,12 +299,12 @@ D4
 S
 #3715
 O Rio Styx~
-   O rio parece parado, mas vários seres fluem por suas correntes, sabendo
-que ele move eternamente em direção a um local desconhecido.  Nenhum
-reflexo, ondas, ou vibrações por toda a superície do rio.  O rio Styx é,
+   O rio parece parado, mas vÃ¡rios seres fluem por suas correntes, sabendo
+que ele move eternamente em direÃ§Ã£o a um local desconhecido.  Nenhum
+reflexo, ondas, ou vibraÃ§Ãµes por toda a superÃ­cie do rio.  O rio Styx Ã©,
 certamente, o Rio dos Mortos.
 ~
-37 65696 0 0 0 7
+37 qhf 7
 D1
 ~
 ~
@@ -315,17 +316,17 @@ D3
 S
 #3716
 O Rio Styx~
-   Entrando no friorento rio, você subitamente é puxado para baixo por uma
-força desconhecida.  Ofegando, você tente alcançar a superfície para
-descobrir que você nao consegue penetra-la!  Como os espíritos flutuantes,
-você agora está na mercê das correntes para sempre.  Não importa o quanto
-você se esforçe, a superfície do rio continua impenetrável e a margem foje
-do seu alcançe.  Na medida em que flui, você compreende que deveria ter
+   Entrando no friorento rio, vocÃª subitamente Ã© puxado para baixo por uma
+forÃ§a desconhecida.  Ofegando, vocÃª tente alcanÃ§ar a superfÃ­cie para
+descobrir que vocÃª nao consegue penetra-la!  Como os espÃ­ritos flutuantes,
+vocÃª agora estÃ¡ na mercÃª das correntes para sempre.  NÃ£o importa o quanto
+vocÃª se esforÃ§e, a superfÃ­cie do rio continua impenetrÃ¡vel e a margem foje
+do seu alcanÃ§e.  Na medida em que flui, vocÃª compreende que deveria ter
 pago a Chyron, e permitido que o transportasse seguramente.
    Passando por essa cruel armadilha, seu ultimo suspiro toma seu corpo na
-medida em que você flutua....  Flutua.......  Flutua.............
+medida em que vocÃª flutua....  Flutua.......  Flutua.............
 ~
-37 65696 0 0 0 7
+37 qhf 7
 D1
 ~
 ~
@@ -337,33 +338,33 @@ D3
 S
 #3717
 O Rio Styx~
-   O rio parece parado, mas vários seres fluem por suas correntes, sabendo
-que ele move eternamente em direção a um local desconhecido.  Nenhum
-reflexo, ondas, ou vibrações por toda a superície do rio.  O rio Styx é,
+   O rio parece parado, mas vÃ¡rios seres fluem por suas correntes, sabendo
+que ele move eternamente em direÃ§Ã£o a um local desconhecido.  Nenhum
+reflexo, ondas, ou vibraÃ§Ãµes por toda a superÃ­cie do rio.  O rio Styx Ã©,
 certamente, o Rio dos Mortos.
 ~
-37 65696 0 0 0 7
+37 qhf 7
 D1
 ~
 ~
 0 -1 3717
-D2
-~
-~
-0 -1 3718
 D3
 ~
 ~
 0 -1 3716
+D2
+~
+~
+0 -1 3718
 S
 #3718
 Caminho Abandonado~
-   Uma precária doca recebe você, como uma doca de embarcações.  Olhando
-para as águas fluindo, ainda calmas do rio Styx, você se arrepia apavorado.
-Um pequeno e abandonado caminho segue para o norte em direção a uma maciça
+   Uma precÃ¡ria doca recebe vocÃª, como uma doca de embarcaÃ§Ãµes.  Olhando
+para as Ã¡guas fluindo, ainda calmas do rio Styx, vocÃª se arrepia apavorado.
+Um pequeno e abandonado caminho segue para o norte em direÃ§Ã£o a uma maciÃ§a
 catacumba, aparecendo gradualmente das sombras.
 ~
-37 4 0 0 0 3
+37 c 3
 D0
 ~
 ~
@@ -371,14 +372,14 @@ D0
 S
 #3719
 A Cripta: Sala de Clotho~
-   Na ofuscada luz dessa sala você pode ver uma roda de fiar bem no meio
-desta sala.  A roda está em constante movimento, rodando para sempre por
-Clotho.  Pilhas de macios e translúcidos materiais se aglomeram aqui.
-A roda de fiar fica girando e girando enquanto vai teando um interminável
-fio usando todo este meterial do chão.  O fio, magicamente flutuando, segue
+   Na ofuscada luz dessa sala vocÃª pode ver uma roda de fiar bem no meio
+desta sala.  A roda estÃ¡ em constante movimento, rodando para sempre por
+Clotho.  Pilhas de macios e translÃºcidos materiais se aglomeram aqui.
+A roda de fiar fica girando e girando enquanto vai teando um interminÃ¡vel
+fio usando todo este meterial do chÃ£o.  O fio, magicamente flutuando, segue
 para norte.
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -390,14 +391,14 @@ D1
 S
 #3720
 Entrada Para a Cripta~
-   As enormes portas de metal se abrem lentamente, como se a cripta já
+   As enormes portas de metal se abrem lentamente, como se a cripta jÃ¡
 estivesse esperando por sua alma.  A habilidade daqueles que construiram
-esta cripta é fabulosa e inigualável.  Complexamente esculpido os socorros
-de algum ser, e símbolos nas portas e paredes de pedras, dão a aura de
-magnificiência neste local.  O vacilar de sombras e o frágil sussuro lhe
+esta cripta Ã© fabulosa e inigualÃ¡vel.  Complexamente esculpido os socorros
+de algum ser, e sÃ­mbolos nas portas e paredes de pedras, dÃ£o a aura de
+magnificiÃªncia neste local.  O vacilar de sombras e o frÃ¡gil sussuro lhe
 mostram que mesmo os mortos ainda vivem.
 ~
-37 0 0 0 0 0
+37 0 0
 D0
 ~
 ~
@@ -412,29 +413,30 @@ D3
 0 -1 3719
 S
 #3721
-A Cripta Abóbada~
+A Cripta AbÃ³bada~
    Se livrando do aglomerado de teias de aranha que atrapalham sua passagem,
-você sente um calafrio por alguma razão desconhecida.  A poeira que se
-depositou despreocupada aqui no chão, parece agora silenciosamente protestar
-pelos seus passos, que perturbam o seu repouso.  Um enorme caixão de pedra
+vocÃª sente um calafrio por alguma razÃ£o desconhecida.  A poeira que se
+depositou despreocupada aqui no chÃ£o, parece agora silenciosamente protestar
+pelos seus passos, que perturbam o seu repouso.  Um enorme caixÃ£o de pedra
 descansa aqui, acima de um pedestal de granito.  Sem contar no fato de que
-nunca ninguém entrou neste local, a cobertura do caixão está, de alguma
+nunca ninguÃ©m entrou neste local, a cobertura do caixÃ£o estÃ¡, de alguma
 forma, ligeiramente aberta.
 ~
-37 1 0 0 0 0
+37 a 0
 D0
 ~
-portão~
-1 3799 3724
+portao~
+:n 1 o portÃ£o
+ab 3799 3724
 S
 #3722
 A Cripta: Sala de Atropos~
    O fio continua flutuando por esta sala, do sul para o norte.  Ele para,
 somemte por um breve momento, permitindo que Atropos avalie e marque-o.  Esta
-sala é completamente vazia, contendo somente um cadeira, onde Urd permanece
+sala Ã© completamente vazia, contendo somente um cadeira, onde Urd permanece
 sentado enquanto executa suas tarefas.
 ~
-37 0 0 0 0 0
+37 0 0
 D0
 ~
 ~
@@ -451,14 +453,14 @@ S
 #3723
 Um Corredor da Cripta~
    Tochas que queimaram por muitos anos sinalizam os pilares que
-formam um corredor através da cripta.  A grossa camada de poeira
-no chão mostra que você é o primeiro visitante aqui em só Deus
+formam um corredor atravÃ©s da cripta.  A grossa camada de poeira
+no chÃ£o mostra que vocÃª Ã© o primeiro visitante aqui em sÃ³ Deus
 sabe quanto tempo.  Teias de aranha se penduram por toda a parte,
-tremulando gentilmente com a brisa criada pela dusa presença.
-Você pode para norte seguindo o corredor abaixo, pode checar a
+tremulando gentilmente com a brisa criada pela dusa presenÃ§a.
+VocÃª pode para norte seguindo o corredor abaixo, pode checar a
 sala a esquerda, ou voltar para o sul, saindo da cripta.
 ~
-37 0 0 0 0 0
+37 0 0
 D0
 ~
 ~
@@ -473,36 +475,37 @@ D3
 0 -1 3722
 S
 #3724
-Entrada para a Câmara da Cripta~
-   Um pequeno, mas massivo portão de ferro trabalhado barra a sua passagem
-pela câmara.  Maciços pedaços de pedra emolduram a entrada, desanimando
-muitas tentativas de atravessa-la.  Inscrições em uma língua desconhecida
-adornam a lápide acima do portão.  Qual o significado...  Alguém poderia
+Entrada para a CÃ¢mara da Cripta~
+   Um pequeno, mas massivo portÃ£o de ferro trabalhado barra a sua passagem
+pela cÃ¢mara.  MaciÃ§os pedaÃ§os de pedra emolduram a entrada, desanimando
+muitas tentativas de atravessa-la.  InscriÃ§Ãµes em uma lÃ­ngua desconhecida
+adornam a lÃ¡pide acima do portÃ£o.  Qual o significado...  AlguÃ©m poderia
 somente adivinhar.
 ~
-37 0 0 0 0 0
+37 0 0
 D0
 ~
 ~
 0 -1 3727
 D2
-Maciço e muito antigo, enste portão de ferro entalhado existe há anos.
-Amassões e entalhes o desfiguram, mostrando as varias tentativas de abri-lo
+MaciÃ§o e muito antigo, enste portÃ£o de ferro entalhado existe hÃ¡ anos.
+AmassÃµes e entalhes o desfiguram, mostrando as varias tentativas de abri-lo
 para ter acesso a catacumba.
 ~
-portão~
-1 3799 3721
+portÃ£o~
+:n 1 o portÃ£o
+ab 3799 3721
 S
 #3725
 A Cripta: Sala de Lachesis~
-   SNIP!  Você ouve Lachesis cortando o fio bem na medida da marcação.  Uma
-multidão de pilhas de cestos trançados por fios está descansando aqui.
-Repentinamente, você vê um cesto cheio desaparecer, para ser reposto por um
+   SNIP!  VocÃª ouve Lachesis cortando o fio bem na medida da marcaÃ§Ã£o.  Uma
+multidÃ£o de pilhas de cestos tranÃ§ados por fios estÃ¡ descansando aqui.
+Repentinamente, vocÃª vÃª um cesto cheio desaparecer, para ser reposto por um
 vazio.  Fios preenchem a sala, todos de alguma forma sabendo a sua vez de
-ser cortado.  Você repentinamente sente que seria inteligente sair desta
-sala e não perturbar o trabalho das três do Destino.
+ser cortado.  VocÃª repentinamente sente que seria inteligente sair desta
+sala e nÃ£o perturbar o trabalho das trÃªs do Destino.
 ~
-37 0 0 0 0 0
+37 0 0
 D1
 ~
 ~
@@ -515,14 +518,14 @@ S
 #3726
 Um Corredor da Cripta~
    Tochas que queimaram por muitos anos sinalizam os pilares que
-formam um corredor através da cripta.  A grossa camada de poeira
-no chão mostra que você é o primeiro visitante aqui em só Deus
+formam um corredor atravÃ©s da cripta.  A grossa camada de poeira
+no chÃ£o mostra que vocÃª Ã© o primeiro visitante aqui em sÃ³ Deus
 sabe quanto tempo.  Teias de aranha se penduram por toda a parte,
-tremulando gentilmente com a brisa criada pela dusa presença.
-Para sua direita você percebe que está mais escuro do que o comum,
-e sons de batalhas podem ser ouvidos dessa direção.
+tremulando gentilmente com a brisa criada pela dusa presenÃ§a.
+Para sua direita vocÃª percebe que estÃ¡ mais escuro do que o comum,
+e sons de batalhas podem ser ouvidos dessa direÃ§Ã£o.
 ~
-37 0 0 0 0 0
+37 0 0
 D1
 ~
 ~
@@ -538,13 +541,13 @@ D3
 S
 #3727
 O Mais Escuro Canto da Cripta~
-   As tochas neste canto se carbonizaram há muito tempo atrás.  Estranhos
-sons e mais sons de uma grande batalha ecoam da escuridão abaixo.  Uma
-pequena névoa se arrasta passando proximo a seu tornozelo, resfriando você
-até nos ossos.  Para o oeste está o seguro e lcaro corredor, e para o sul
-há uma câmara.
+   As tochas neste canto se carbonizaram hÃ¡ muito tempo atrÃ¡s.  Estranhos
+sons e mais sons de uma grande batalha ecoam da escuridÃ£o abaixo.  Uma
+pequena nÃ©voa se arrasta passando proximo a seu tornozelo, resfriando vocÃª
+atÃ© nos ossos.  Para o oeste estÃ¡ o seguro e lcaro corredor, e para o sul
+hÃ¡ uma cÃ¢mara.
 ~
-37 5 0 0 0 0
+37 ac 0
 D2
 ~
 ~
@@ -559,14 +562,14 @@ D5
 0 -1 3728
 S
 #3728
-Uma Terra Amaldiçoada~
-   Um denso nevoeiro preenche o local, tornando difícil de ver algo em sua
-volta.  Há uma coisa que você consegue detectar com absoluta clareza, que é
-o frio na espinha ao ouvir os gritos de morte.  Você nunca tinha ouvido um
-som tão horroroso.  As origens desse som ecoam do norte, a unica saída
-visível deste denso nevoeiro.
+Uma Terra AmaldiÃ§oada~
+   Um denso nevoeiro preenche o local, tornando difÃ­cil de ver algo em sua
+volta.  HÃ¡ uma coisa que vocÃª consegue detectar com absoluta clareza, que Ã©
+o frio na espinha ao ouvir os gritos de morte.  VocÃª nunca tinha ouvido um
+som tÃ£o horroroso.  As origens desse som ecoam do norte, a unica saÃ­da
+visÃ­vel deste denso nevoeiro.
 ~
-37 5 0 0 0 0
+37 ac 0
 D0
 ~
 ~
@@ -574,14 +577,14 @@ D0
 S
 #3729
 Campo de Batalha~
-   Partes do denso nevoeiro redemoinham na medida em que você caminha por
-este horroroso pântano.  Nenhum sinal de plantas neste local que uma vez
-ja fora uma densa vwegetação sob seus pés.  Sangue de corpos submersos
-boiam na superfície e se esbarram com os seus calcanhares.  A presença de
-morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, você
+   Partes do denso nevoeiro redemoinham na medida em que vocÃª caminha por
+este horroroso pÃ¢ntano.  Nenhum sinal de plantas neste local que uma vez
+ja fora uma densa vwegetaÃ§Ã£o sob seus pÃ©s.  Sangue de corpos submersos
+boiam na superfÃ­cie e se esbarram com os seus calcanhares.  A presenÃ§a de
+morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, vocÃª
 espera que haja alguma forma de sair deste horroroso campo de batalha.
 ~
-37 1 0 0 0 5
+37 a 5
 D0
 ~
 ~
@@ -589,14 +592,14 @@ D0
 S
 #3730
 Campo de Batalha~
-   Partes do denso nevoeiro redemoinham na medida em que você caminha por
-este horroroso pântano.  Nenhum sinal de plantas neste local que uma vez
-ja fora uma densa vwegetação sob seus pés.  Sangue de corpos submersos
-boiam na superfície e se esbarram com os seus calcanhares.  A presença de
-morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, você
+   Partes do denso nevoeiro redemoinham na medida em que vocÃª caminha por
+este horroroso pÃ¢ntano.  Nenhum sinal de plantas neste local que uma vez
+ja fora uma densa vwegetaÃ§Ã£o sob seus pÃ©s.  Sangue de corpos submersos
+boiam na superfÃ­cie e se esbarram com os seus calcanhares.  A presenÃ§a de
+morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, vocÃª
 espera que haja alguma forma de sair deste horroroso campo de batalha.
 ~
-37 1 0 0 0 5
+37 a 5
 D0
 ~
 ~
@@ -612,14 +615,14 @@ D2
 S
 #3731
 Campo de Batalha~
-   Partes do denso nevoeiro redemoinham na medida em que você caminha por
-este horroroso pântano.  Nenhum sinal de plantas neste local que uma vez
-ja fora uma densa vwegetação sob seus pés.  Sangue de corpos submersos
-boiam na superfície e se esbarram com os seus calcanhares.  A presença de
-morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, você
+   Partes do denso nevoeiro redemoinham na medida em que vocÃª caminha por
+este horroroso pÃ¢ntano.  Nenhum sinal de plantas neste local que uma vez
+ja fora uma densa vwegetaÃ§Ã£o sob seus pÃ©s.  Sangue de corpos submersos
+boiam na superfÃ­cie e se esbarram com os seus calcanhares.  A presenÃ§a de
+morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, vocÃª
 espera que haja alguma forma de sair deste horroroso campo de batalha.
 ~
-37 5 0 0 0 5
+37 ac 5
 D1
 ~
 ~
@@ -635,14 +638,14 @@ D5
 S
 #3732
 Campo de Batalha~
-   Partes do denso nevoeiro redemoinham na medida em que você caminha por
-este horroroso pântano.  Nenhum sinal de plantas neste local que uma vez
-ja fora uma densa vwegetação sob seus pés.  Sangue de corpos submersos
-boiam na superfície e se esbarram com os seus calcanhares.  A presença de
-morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, você
+   Partes do denso nevoeiro redemoinham na medida em que vocÃª caminha por
+este horroroso pÃ¢ntano.  Nenhum sinal de plantas neste local que uma vez
+ja fora uma densa vwegetaÃ§Ã£o sob seus pÃ©s.  Sangue de corpos submersos
+boiam na superfÃ­cie e se esbarram com os seus calcanhares.  A presenÃ§a de
+morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, vocÃª
 espera que haja alguma forma de sair deste horroroso campo de batalha.
 ~
-37 1 0 0 0 4
+37 a 4
 D1
 ~
 ~
@@ -658,14 +661,14 @@ D3
 S
 #3733
 Campo de Batalha~
-   Partes do denso nevoeiro redemoinham na medida em que você caminha por
-este horroroso pântano.  Nenhum sinal de plantas neste local que uma vez
-ja fora uma densa vwegetação sob seus pés.  Sangue de corpos submersos
-boiam na superfície e se esbarram com os seus calcanhares.  A presença de
-morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, você
+   Partes do denso nevoeiro redemoinham na medida em que vocÃª caminha por
+este horroroso pÃ¢ntano.  Nenhum sinal de plantas neste local que uma vez
+ja fora uma densa vwegetaÃ§Ã£o sob seus pÃ©s.  Sangue de corpos submersos
+boiam na superfÃ­cie e se esbarram com os seus calcanhares.  A presenÃ§a de
+morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, vocÃª
 espera que haja alguma forma de sair deste horroroso campo de batalha.
 ~
-37 1 0 0 0 4
+37 a 4
 D0
 ~
 ~
@@ -685,14 +688,14 @@ D3
 S
 #3734
 Campo de Batalha~
-   Partes do denso nevoeiro redemoinham na medida em que você caminha por
-este horroroso pântano.  Nenhum sinal de plantas neste local que uma vez
-ja fora uma densa vwegetação sob seus pés.  Sangue de corpos submersos
-boiam na superfície e se esbarram com os seus calcanhares.  A presença de
-morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, você
+   Partes do denso nevoeiro redemoinham na medida em que vocÃª caminha por
+este horroroso pÃ¢ntano.  Nenhum sinal de plantas neste local que uma vez
+ja fora uma densa vwegetaÃ§Ã£o sob seus pÃ©s.  Sangue de corpos submersos
+boiam na superfÃ­cie e se esbarram com os seus calcanhares.  A presenÃ§a de
+morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, vocÃª
 espera que haja alguma forma de sair deste horroroso campo de batalha.
 ~
-37 1 0 0 0 4
+37 a 4
 D2
 ~
 ~
@@ -704,14 +707,14 @@ D3
 S
 #3735
 Campo de Batalha~
-   Partes do denso nevoeiro redemoinham na medida em que você caminha por
-este horroroso pântano.  Nenhum sinal de plantas neste local que uma vez
-ja fora uma densa vwegetação sob seus pés.  Sangue de corpos submersos
-boiam na superfície e se esbarram com os seus calcanhares.  A presença de
-morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, você
+   Partes do denso nevoeiro redemoinham na medida em que vocÃª caminha por
+este horroroso pÃ¢ntano.  Nenhum sinal de plantas neste local que uma vez
+ja fora uma densa vwegetaÃ§Ã£o sob seus pÃ©s.  Sangue de corpos submersos
+boiam na superfÃ­cie e se esbarram com os seus calcanhares.  A presenÃ§a de
+morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, vocÃª
 espera que haja alguma forma de sair deste horroroso campo de batalha.
 ~
-37 1 0 0 0 4
+37 a 4
 D0
 ~
 ~
@@ -727,14 +730,14 @@ D3
 S
 #3736
 Campo de Batalha~
-   Partes do denso nevoeiro redemoinham na medida em que você caminha por
-este horroroso pântano.  Nenhum sinal de plantas neste local que uma vez
-ja fora uma densa vwegetação sob seus pés.  Sangue de corpos submersos
-boiam na superfície e se esbarram com os seus calcanhares.  A presença de
-morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, você
+   Partes do denso nevoeiro redemoinham na medida em que vocÃª caminha por
+este horroroso pÃ¢ntano.  Nenhum sinal de plantas neste local que uma vez
+ja fora uma densa vwegetaÃ§Ã£o sob seus pÃ©s.  Sangue de corpos submersos
+boiam na superfÃ­cie e se esbarram com os seus calcanhares.  A presenÃ§a de
+morte recobre tudo, por todo o lugar.  Com um ataque de adrenalina, vocÃª
 espera que haja alguma forma de sair deste horroroso campo de batalha.
 ~
-37 1 0 0 0 4
+37 a 4
 D0
 ~
 ~
@@ -742,14 +745,14 @@ D0
 S
 #3737
 Sala dos Esqueletos~
-   Uma única chama queima no chão.  A vacilandnte luz ilumina a sala,
-revelando incontáveis esqueletos presos nas paredes!  Com um aterrorizante
-suspiro, você gira e observa milhares de olhos brancos fitando-o.  Após o
-susto inicial, um senso comum lhe diz que está ameaçadora sala é só o
-começo de mais sofrimento que está por vir.  Uma caminho muito empoeirado
+   Uma Ãºnica chama queima no chÃ£o.  A vacilandnte luz ilumina a sala,
+revelando incontÃ¡veis esqueletos presos nas paredes!  Com um aterrorizante
+suspiro, vocÃª gira e observa milhares de olhos brancos fitando-o.  ApÃ³s o
+susto inicial, um senso comum lhe diz que estÃ¡ ameaÃ§adora sala Ã© sÃ³ o
+comeÃ§o de mais sofrimento que estÃ¡ por vir.  Uma caminho muito empoeirado
 segue para oeste, para fora desta sala.
 ~
-37 5 0 0 0 0
+37 ac 0
 D3
 ~
 ~
@@ -758,13 +761,13 @@ S
 #3738
 O Caminho do Esqueleto~
    A poeira muito branca, feita de ossos, se ergue e assenta a cada passada
-que você da.  Na luz turva, pode-se ver que o caminho segue através de um
-tipo de saguão.  Olhando com mais cuidado, você percebe que as colunas de
-cada lado de você, e o abrigo acima são as costelas de alguma besta anciã,
-formando esse saguão.  Com um tremor, você pode continuar pelo oeste, ou
-voltar para o leste em direçao a sala.
+que vocÃª da.  Na luz turva, pode-se ver que o caminho segue atravÃ©s de um
+tipo de saguÃ£o.  Olhando com mais cuidado, vocÃª percebe que as colunas de
+cada lado de vocÃª, e o abrigo acima sÃ£o as costelas de alguma besta anciÃ£,
+formando esse saguÃ£o.  Com um tremor, vocÃª pode continuar pelo oeste, ou
+voltar para o leste em direÃ§ao a sala.
 ~
-37 4 0 0 0 2
+37 c 2
 D1
 ~
 ~
@@ -777,14 +780,14 @@ S
 #3739
 O Caminho do Esqueleto~
    A poeira muito branca, feita de ossos, se ergue e assenta a cada passada
-que você da.  Na luz turva, pode-se ver que o caminho segue através de um
-tipo de saguão.  Olhando com mais cuidado, você percebe que as colunas de
-cada lado de você, e o abrigo acima são as costelas de alguma besta anciã,
-formando esse saguão.  Você pode ouvir o respingar da água, vindo de um
-buraco no chão.  Você pode seguir para baixo e dar uma olhada, ou voltar
+que vocÃª da.  Na luz turva, pode-se ver que o caminho segue atravÃ©s de um
+tipo de saguÃ£o.  Olhando com mais cuidado, vocÃª percebe que as colunas de
+cada lado de vocÃª, e o abrigo acima sÃ£o as costelas de alguma besta anciÃ£,
+formando esse saguÃ£o.  VocÃª pode ouvir o respingar da Ã¡gua, vindo de um
+buraco no chÃ£o.  VocÃª pode seguir para baixo e dar uma olhada, ou voltar
 pelo leste.
 ~
-37 4 0 0 0 0
+37 c 0
 D1
 ~
 ~
@@ -796,13 +799,13 @@ D5
 S
 #3740
 Mar Morto~
-   Examinando o Mar Morto, tudo o que se pode ver são aguas vermelhas de
-sangue.  Nenhuma margem pode ser vista por todas as direções.  Sem contar
-no fato de que não pode ser detectado vento algum, pequenas ondas cobrem o
+   Examinando o Mar Morto, tudo o que se pode ver sÃ£o aguas vermelhas de
+sangue.  Nenhuma margem pode ser vista por todas as direÃ§Ãµes.  Sem contar
+no fato de que nÃ£o pode ser detectado vento algum, pequenas ondas cobrem o
 mar.  As ondas fazem seus percursos com um pouco de dificuldade.  Um
 sentimento de desespero recobre fortemente este mar.
 ~
-37 0 0 0 0 6
+37 0 6
 D0
 ~
 ~
@@ -818,13 +821,13 @@ D3
 S
 #3741
 Mar Morto~
-   Examinando o Mar Morto, tudo o que se pode ver são aguas vermelhas de
-sangue.  Nenhuma margem pode ser vista por todas as direções.  Sem contar
-no fato de que não pode ser detectado vento algum, pequenas ondas cobrem o
+   Examinando o Mar Morto, tudo o que se pode ver sÃ£o aguas vermelhas de
+sangue.  Nenhuma margem pode ser vista por todas as direÃ§Ãµes.  Sem contar
+no fato de que nÃ£o pode ser detectado vento algum, pequenas ondas cobrem o
 mar.  As ondas fazem seus percursos com um pouco de dificuldade.  Um
 sentimento de desespero recobre fortemente este mar.
 ~
-37 0 0 0 0 6
+37 0 6
 D0
 ~
 ~
@@ -844,13 +847,13 @@ D3
 S
 #3742
 Mar Morto~
-   Examinando o Mar Morto, tudo o que se pode ver são aguas vermelhas de
-sangue.  Nenhuma margem pode ser vista por todas as direções.  Sem contar
-no fato de que não pode ser detectado vento algum, pequenas ondas cobrem o
+   Examinando o Mar Morto, tudo o que se pode ver sÃ£o aguas vermelhas de
+sangue.  Nenhuma margem pode ser vista por todas as direÃ§Ãµes.  Sem contar
+no fato de que nÃ£o pode ser detectado vento algum, pequenas ondas cobrem o
 mar.  As ondas fazem seus percursos com um pouco de dificuldade.  Um
 sentimento de desespero recobre fortemente este mar.
 ~
-37 0 0 0 0 6
+37 0 6
 D0
 ~
 ~
@@ -866,13 +869,13 @@ D3
 S
 #3743
 Mar Morto~
-   Examinando o Mar Morto, tudo o que se pode ver são aguas vermelhas de
-sangue.  Nenhuma margem pode ser vista por todas as direções.  Sem contar
-no fato de que não pode ser detectado vento algum, pequenas ondas cobrem o
+   Examinando o Mar Morto, tudo o que se pode ver sÃ£o aguas vermelhas de
+sangue.  Nenhuma margem pode ser vista por todas as direÃ§Ãµes.  Sem contar
+no fato de que nÃ£o pode ser detectado vento algum, pequenas ondas cobrem o
 mar.  As ondas fazem seus percursos com um pouco de dificuldade.  Um
 sentimento de desespero recobre fortemente este mar.
 ~
-37 0 0 0 0 6
+37 0 6
 D0
 ~
 ~
@@ -892,13 +895,13 @@ D3
 S
 #3744
 Mar Morto~
-   Examinando o Mar Morto, tudo o que se pode ver são aguas vermelhas de
-sangue.  Nenhuma margem pode ser vista por todas as direções.  Sem contar
-no fato de que não pode ser detectado vento algum, pequenas ondas cobrem o
+   Examinando o Mar Morto, tudo o que se pode ver sÃ£o aguas vermelhas de
+sangue.  Nenhuma margem pode ser vista por todas as direÃ§Ãµes.  Sem contar
+no fato de que nÃ£o pode ser detectado vento algum, pequenas ondas cobrem o
 mar.  As ondas fazem seus percursos com um pouco de dificuldade.  Um
 sentimento de desespero recobre fortemente este mar.
 ~
-37 0 0 0 0 6
+37 0 6
 D1
 ~
 ~
@@ -914,13 +917,13 @@ D3
 S
 #3745
 Mar Morto~
-   Examinando o Mar Morto, tudo o que se pode ver são aguas vermelhas de
-sangue.  Nenhuma margem pode ser vista por todas as direções.  Sem contar
-no fato de que não pode ser detectado vento algum, pequenas ondas cobrem o
+   Examinando o Mar Morto, tudo o que se pode ver sÃ£o aguas vermelhas de
+sangue.  Nenhuma margem pode ser vista por todas as direÃ§Ãµes.  Sem contar
+no fato de que nÃ£o pode ser detectado vento algum, pequenas ondas cobrem o
 mar.  As ondas fazem seus percursos com um pouco de dificuldade.  Um
 sentimento de desespero recobre fortemente este mar.
 ~
-37 0 0 0 0 6
+37 0 6
 D0
 ~
 ~
@@ -940,13 +943,13 @@ D3
 S
 #3746
 Mar Morto~
-   Examinando o Mar Morto, tudo o que se pode ver são aguas vermelhas de
-sangue.  Nenhuma margem pode ser vista por todas as direções.  Sem contar
-no fato de que não pode ser detectado vento algum, pequenas ondas cobrem o
+   Examinando o Mar Morto, tudo o que se pode ver sÃ£o aguas vermelhas de
+sangue.  Nenhuma margem pode ser vista por todas as direÃ§Ãµes.  Sem contar
+no fato de que nÃ£o pode ser detectado vento algum, pequenas ondas cobrem o
 mar.  As ondas fazem seus percursos com um pouco de dificuldade.  Um
 sentimento de desespero recobre fortemente este mar.
 ~
-37 0 0 0 0 6
+37 0 6
 D0
 ~
 ~
@@ -966,14 +969,14 @@ D3
 S
 #3747
 O Covil do Ixitxachityl~
-   Se aprofundando muito, você encontra o covil de uma apavorante besta.
+   Se aprofundando muito, vocÃª encontra o covil de uma apavorante besta.
 Pilhas de ossos, cobertas por algas e um coral negro, formam brutas paredes
-neste local.  Uma pequena depressão no chão mostra onde a besta descansa,
-esperando sua presa.  Há uma enorme conha em um dos cantos.  Na parte
-interior da concha você pode ver um fraco e vacilante brilho.  Você pensa:
-...  "Seria isto um portal, e uma saída para este interminável mar?"
+neste local.  Uma pequena depressÃ£o no chÃ£o mostra onde a besta descansa,
+esperando sua presa.  HÃ¡ uma enorme conha em um dos cantos.  Na parte
+interior da concha vocÃª pode ver um fraco e vacilante brilho.  VocÃª pensa:
+...  "Seria isto um portal, e uma saÃ­da para este interminÃ¡vel mar?"
 ~
-37 5 0 0 0 8
+37 ac 8
 D1
 ~
 ~
@@ -985,13 +988,13 @@ D4
 S
 #3748
 Mar Morto~
-   Examinando o Mar Morto, tudo o que se pode ver são aguas vermelhas de
-sangue.  Nenhuma margem pode ser vista por todas as direções.  Sem contar
-no fato de que não pode ser detectado vento algum, pequenas ondas cobrem o
+   Examinando o Mar Morto, tudo o que se pode ver sÃ£o aguas vermelhas de
+sangue.  Nenhuma margem pode ser vista por todas as direÃ§Ãµes.  Sem contar
+no fato de que nÃ£o pode ser detectado vento algum, pequenas ondas cobrem o
 mar.  As ondas fazem seus percursos com um pouco de dificuldade.  Um
 sentimento de desespero recobre fortemente este mar.
 ~
-37 0 0 0 0 6
+37 0 6
 D0
 ~
 ~
@@ -1015,13 +1018,13 @@ D5
 S
 #3749
 Ilha de Ossos~
-   Um pó muito branco cobre tudo neste estéril local.  O vento aqui é muito
-forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou áqua
+   Um pÃ³ muito branco cobre tudo neste estÃ©ril local.  O vento aqui Ã© muito
+forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou Ã¡qua
 pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
-defender seus olhos, você caminha progressivamente através da tempestade de
+defender seus olhos, vocÃª caminha progressivamente atravÃ©s da tempestade de
 areia e no intenso brilho branco, formado pela areia.
 ~
-37 0 0 0 0 3
+37 0 3
 D1
 ~
 ~
@@ -1037,14 +1040,14 @@ D3
 S
 #3750
 Ilha de Ossos~
-   Um pó muito branco cobre tudo neste estéril local.  O vento aqui é muito
-forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou áqua
+   Um pÃ³ muito branco cobre tudo neste estÃ©ril local.  O vento aqui Ã© muito
+forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou Ã¡qua
 pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
-defender seus olhos, você caminha progressivamente através da tempestade de
+defender seus olhos, vocÃª caminha progressivamente atravÃ©s da tempestade de
 areia e no intenso brilho branco, formado pela areia.  Um grande esqueleto
-de alguma raça anciã está aqui, encarando as regiões a sul.
+de alguma raÃ§a anciÃ£ estÃ¡ aqui, encarando as regiÃµes a sul.
 ~
-37 0 0 0 0 3
+37 0 3
 D0
 ~
 ~
@@ -1060,14 +1063,14 @@ D2
 S
 #3751
 Ilha de Ossos~
-   Um pó muito branco cobre tudo neste estéril local.  O vento aqui é muito
-forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou áqua
+   Um pÃ³ muito branco cobre tudo neste estÃ©ril local.  O vento aqui Ã© muito
+forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou Ã¡qua
 pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
-defender seus olhos, você caminha progressivamente através da tempestade de
+defender seus olhos, vocÃª caminha progressivamente atravÃ©s da tempestade de
 areia e no intenso brilho branco, formado pela areia.  Um grande esqueleto
-de alguma raça anciã está aqui, encarando as regiões a oeste.
+de alguma raÃ§a anciÃ£ estÃ¡ aqui, encarando as regiÃµes a oeste.
 ~
-37 0 0 0 0 3
+37 0 3
 D1
 ~
 ~
@@ -1083,13 +1086,13 @@ D3
 S
 #3752
 Ilha de Ossos~
-   Um pó muito branco cobre tudo neste estéril local.  O vento aqui é muito
-forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou áqua
+   Um pÃ³ muito branco cobre tudo neste estÃ©ril local.  O vento aqui Ã© muito
+forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou Ã¡qua
 pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
-defender seus olhos, você caminha progressivamente através da tempestade de
+defender seus olhos, vocÃª caminha progressivamente atravÃ©s da tempestade de
 areia e no intenso brilho branco, formado pela areia.
 ~
-37 0 0 0 0 3
+37 0 3
 D0
 ~
 ~
@@ -1109,13 +1112,13 @@ D3
 S
 #3753
 Ilha de Ossos~
-   Um pó muito branco cobre tudo neste estéril local.  O vento aqui é muito
-forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou áqua
+   Um pÃ³ muito branco cobre tudo neste estÃ©ril local.  O vento aqui Ã© muito
+forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou Ã¡qua
 pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
-defender seus olhos, você caminha progressivamente através da tempestade de
+defender seus olhos, vocÃª caminha progressivamente atravÃ©s da tempestade de
 areia e no intenso brilho branco, formado pela areia.
 ~
-37 0 0 0 0 3
+37 0 3
 D0
 ~
 ~
@@ -1135,13 +1138,13 @@ D3
 S
 #3754
 Ilha de Ossos~
-   Um pó muito branco cobre tudo neste estéril local.  O vento aqui é muito
-forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou áqua
+   Um pÃ³ muito branco cobre tudo neste estÃ©ril local.  O vento aqui Ã© muito
+forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou Ã¡qua
 pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
-defender seus olhos, você caminha progressivamente através da tempestade de
+defender seus olhos, vocÃª caminha progressivamente atravÃ©s da tempestade de
 areia e no intenso brilho branco, formado pela areia.
 ~
-37 0 0 0 0 3
+37 0 3
 D0
 ~
 ~
@@ -1153,13 +1156,13 @@ D1
 S
 #3755
 Ilha de Ossos~
-   Um pó muito branco cobre tudo neste estéril local.  O vento aqui é muito
-forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou áqua
+   Um pÃ³ muito branco cobre tudo neste estÃ©ril local.  O vento aqui Ã© muito
+forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou Ã¡qua
 pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
-defender seus olhos, você caminha progressivamente através da tempestade de
+defender seus olhos, vocÃª caminha progressivamente atravÃ©s da tempestade de
 areia e no intenso brilho branco, formado pela areia.
 ~
-37 0 0 0 0 3
+37 0 3
 D2
 ~
 ~
@@ -1171,14 +1174,14 @@ D3
 S
 #3756
 Ilha de Ossos~
-   Um pó muito branco cobre tudo neste estéril local.  O vento aqui é muito
-forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou áqua
+   Um pÃ³ muito branco cobre tudo neste estÃ©ril local.  O vento aqui Ã© muito
+forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou Ã¡qua
 pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
-defender seus olhos, você caminha progressivamente através da tempestade de
+defender seus olhos, vocÃª caminha progressivamente atravÃ©s da tempestade de
 areia e no intenso brilho branco, formado pela areia.  Um grande esqueleto
-de alguma raça anciã está aqui, encarando as regiões abaixo.
+de alguma raÃ§a anciÃ£ estÃ¡ aqui, encarando as regiÃµes abaixo.
 ~
-37 4 0 0 0 3
+37 c 3
 D0
 ~
 ~
@@ -1202,13 +1205,13 @@ D5
 S
 #3757
 Ilha de Ossos~
-   Um pó muito branco cobre tudo neste estéril local.  O vento aqui é muito
-forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou áqua
+   Um pÃ³ muito branco cobre tudo neste estÃ©ril local.  O vento aqui Ã© muito
+forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou Ã¡qua
 pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
-defender seus olhos, você caminha progressivamente através da tempestade de
+defender seus olhos, vocÃª caminha progressivamente atravÃ©s da tempestade de
 areia e no intenso brilho branco, formado pela areia
 ~
-37 0 0 0 0 3
+37 0 3
 D0
 ~
 ~
@@ -1228,14 +1231,14 @@ D3
 S
 #3758
 Ilha de Ossos~
-   Um pó muito branco cobre tudo neste estéril local.  O vento aqui é muito
-forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou áqua
+   Um pÃ³ muito branco cobre tudo neste estÃ©ril local.  O vento aqui Ã© muito
+forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou Ã¡qua
 pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
-defender seus olhos, você caminha progressivamente através da tempestade de
+defender seus olhos, vocÃª caminha progressivamente atravÃ©s da tempestade de
 areia e no intenso brilho branco, formado pela areia.  Um grande esqueleto
-de alguma raça anciã está aqui, encarando as regiões a leste.
+de alguma raÃ§a anciÃ£ estÃ¡ aqui, encarando as regiÃµes a leste.
 ~
-37 0 0 0 0 3
+37 0 3
 D0
 ~
 ~
@@ -1251,14 +1254,14 @@ D3
 S
 #3759
 Ilha de Ossos~
-   Um pó muito branco cobre tudo neste estéril local.  O vento aqui é muito
-forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou áqua
+   Um pÃ³ muito branco cobre tudo neste estÃ©ril local.  O vento aqui Ã© muito
+forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou Ã¡qua
 pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
-defender seus olhos, você caminha progressivamente através da tempestade de
+defender seus olhos, vocÃª caminha progressivamente atravÃ©s da tempestade de
 areia e no intenso brilho branco, formado pela areia.  Um grande esqueleto
-de alguma raça anciã está aqui, encarando as regiões a norte.
+de alguma raÃ§a anciÃ£ estÃ¡ aqui, encarando as regiÃµes a norte.
 ~
-37 0 0 0 0 3
+37 0 3
 D0
 ~
 ~
@@ -1274,13 +1277,13 @@ D3
 S
 #3760
 Ilha de Ossos~
-   Um pó muito branco cobre tudo neste estéril local.  O vento aqui é muito
-forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou áqua
+   Um pÃ³ muito branco cobre tudo neste estÃ©ril local.  O vento aqui Ã© muito
+forte, criando redemoinhos que giram ferozmente.  Nenhuma vida, ou Ã¡qua
 pode ser encontrada aqui nas redondezas.  Com um grande suspiro e tentando
-defender seus olhos, você caminha progressivamente através da tempestade de
+defender seus olhos, vocÃª caminha progressivamente atravÃ©s da tempestade de
 areia e no intenso brilho branco, formado pela areia.
 ~
-37 0 0 0 0 3
+37 0 3
 D0
 ~
 ~
@@ -1292,11 +1295,11 @@ D3
 S
 #3761
 Terra do Desespero~
-   Saindo da Ilha de Ossos, você alcança um local totalmente novo e a saída
-se dissipa antes de você.  Com um poderoso tremor, a todo o local se rompe,
+   Saindo da Ilha de Ossos, vocÃª alcanÃ§a um local totalmente novo e a saÃ­da
+se dissipa antes de vocÃª.  Com um poderoso tremor, a todo o local se rompe,
 revelando um caminho que segue para locais desconhecidos.
 ~
-37 4 0 0 0 1
+37 c 1
 D1
 ~
 ~
@@ -1304,13 +1307,13 @@ D1
 S
 #3762
 Caminho do Desespero~
-   Uma enorme onda negra de desespero se choca com você, fazendo-o chorar
-de aflição.  Um pesado nevoeiro gira, descansando fortemente sobre tudo.
-Vacilando e desesperado, você agora conheçe o verdadeiro poder do Desespero.
-  Sentindo como se um punho de ferro tivesse acertado seu coração, você
+   Uma enorme onda negra de desespero se choca com vocÃª, fazendo-o chorar
+de afliÃ§Ã£o.  Um pesado nevoeiro gira, descansando fortemente sobre tudo.
+Vacilando e desesperado, vocÃª agora conheÃ§e o verdadeiro poder do Desespero.
+  Sentindo como se um punho de ferro tivesse acertado seu coraÃ§Ã£o, vocÃª
 deve, mais do que nunca, tomar muito cuidado...
 ~
-37 0 0 0 0 1
+37 0 1
 D1
 ~
 ~
@@ -1318,13 +1321,13 @@ D1
 S
 #3763
 Caminho do Desespero~
-   Uma enorme onda negra de desespero se choca com você, fazendo-o chorar
-de aflição.  Um pesado nevoeiro gira, descansando fortemente sobre tudo.
-Vacilando e desesperado, você agora conheçe o verdadeiro poder do Desespero.
-  Sentindo como se um punho de ferro tivesse acertado seu coração, você
+   Uma enorme onda negra de desespero se choca com vocÃª, fazendo-o chorar
+de afliÃ§Ã£o.  Um pesado nevoeiro gira, descansando fortemente sobre tudo.
+Vacilando e desesperado, vocÃª agora conheÃ§e o verdadeiro poder do Desespero.
+  Sentindo como se um punho de ferro tivesse acertado seu coraÃ§Ã£o, vocÃª
 deve, mais do que nunca, tomar muito cuidado...
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1336,13 +1339,13 @@ D3
 S
 #3764
 Caminho do Desepero~
-   Uma enorme onda negra de desespero se choca com você, fazendo-o chorar
-de aflição.  Um pesado nevoeiro gira, descansando fortemente sobre tudo.
-Vacilando e desesperado, você agora conheçe o verdadeiro poder do Desespero.
-  Sentindo como se um punho de ferro tivesse acertado seu coração, você
+   Uma enorme onda negra de desespero se choca com vocÃª, fazendo-o chorar
+de afliÃ§Ã£o.  Um pesado nevoeiro gira, descansando fortemente sobre tudo.
+Vacilando e desesperado, vocÃª agora conheÃ§e o verdadeiro poder do Desespero.
+  Sentindo como se um punho de ferro tivesse acertado seu coraÃ§Ã£o, vocÃª
 deve, mais do que nunca, tomar muito cuidado...
 ~
-37 0 0 0 0 1
+37 0 1
 D2
 ~
 ~
@@ -1354,13 +1357,13 @@ D3
 S
 #3765
 Caminho do Desespero~
-   Uma enorme onda negra de desespero se choca com você, fazendo-o chorar
-de aflição.  Um pesado nevoeiro gira, descansando fortemente sobre tudo.
-Vacilando e desesperado, você agora conheçe o verdadeiro poder do Desespero.
-  Sentindo como se um punho de ferro tivesse acertado seu coração, você
+   Uma enorme onda negra de desespero se choca com vocÃª, fazendo-o chorar
+de afliÃ§Ã£o.  Um pesado nevoeiro gira, descansando fortemente sobre tudo.
+Vacilando e desesperado, vocÃª agora conheÃ§e o verdadeiro poder do Desespero.
+  Sentindo como se um punho de ferro tivesse acertado seu coraÃ§Ã£o, vocÃª
 deve, mais do que nunca, tomar muito cuidado...
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1372,53 +1375,53 @@ D1
 S
 #3766
 A Sala do Desespero~
-   As ondas de desespero de acalmam na medida em que você entra na sala.
-Respirando mais facilmente, você espera um momento para olhar ao redor.
-Você percebe que está em um vazio infinito, o qual o conduz ao verdadeiro
+   As ondas de desespero de acalmam na medida em que vocÃª entra na sala.
+Respirando mais facilmente, vocÃª espera um momento para olhar ao redor.
+VocÃª percebe que estÃ¡ em um vazio infinito, o qual o conduz ao verdadeiro
 sentimento de desespero.  Um pequeno tufo de cordas se movimenta, chamando
-você para pega-lo.
+vocÃª para pega-lo.
 ~
-37 0 0 0 0 1
+37 0 1
 D2
 ~
 ~
 0 -1 3765
 S
 #3767
-Terra das Lágrimas~
-   Saindo da Ilha de Ossos, você alcança um local totalmente novo e a saída
-se dissipa antes de você.  Com um poderoso tremor, a todo o local se rompe,
+Terra das LÃ¡grimas~
+   Saindo da Ilha de Ossos, vocÃª alcanÃ§a um local totalmente novo e a saÃ­da
+se dissipa antes de vocÃª.  Com um poderoso tremor, a todo o local se rompe,
 revelando um caminho que segue para locais desconhecidos.
 ~
-37 4 0 0 0 1
+37 c 1
 D1
 ~
 ~
 0 -1 3768
 S
 #3768
-Caminho das Lágrimas~
-   Uma névoa úmida cobre toda esta trilha, deixando tudo muito úmido.
-Olhando para baixo, você percebe que está andando sobre a água.  Por toda a
-sua volta, há gotas de água se formando e precipitando.  O silencioso choro
+Caminho das LÃ¡grimas~
+   Uma nÃ©voa Ãºmida cobre toda esta trilha, deixando tudo muito Ãºmido.
+Olhando para baixo, vocÃª percebe que estÃ¡ andando sobre a Ã¡gua.  Por toda a
+sua volta, hÃ¡ gotas de Ã¡gua se formando e precipitando.  O silencioso choro
 de todos os seres que existem, preenchem sua mente fazendo-o cambalear.
-Segurando suas lágrimas, você deveria seguir em frente...
+Segurando suas lÃ¡grimas, vocÃª deveria seguir em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
 0 -1 3769
 S
 #3769
-Caminho das Lágrimas~
-   Uma névoa úmida cobre toda esta trilha, deixando tudo muito úmido.
-Olhando para baixo, você percebe que está andando sobre a água.  Por toda a
-sua volta, há gotas de água se formando e precipitando.  O silencioso choro
+Caminho das LÃ¡grimas~
+   Uma nÃ©voa Ãºmida cobre toda esta trilha, deixando tudo muito Ãºmido.
+Olhando para baixo, vocÃª percebe que estÃ¡ andando sobre a Ã¡gua.  Por toda a
+sua volta, hÃ¡ gotas de Ã¡gua se formando e precipitando.  O silencioso choro
 de todos os seres que existem, preenchem sua mente fazendo-o cambalear.
-Segurando suas lágrimas, você deveria seguir em frente...
+Segurando suas lÃ¡grimas, vocÃª deveria seguir em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D1
 ~
 ~
@@ -1429,14 +1432,14 @@ D2
 0 -1 3768
 S
 #3770
-Caminho das Lágrimas~
-   Uma névoa úmida cobre toda esta trilha, deixando tudo muito úmido.
-Olhando para baixo, você percebe que está andando sobre a água.  Por toda a
-sua volta, há gotas de água se formando e precipitando.  O silencioso choro
+Caminho das LÃ¡grimas~
+   Uma nÃ©voa Ãºmida cobre toda esta trilha, deixando tudo muito Ãºmido.
+Olhando para baixo, vocÃª percebe que estÃ¡ andando sobre a Ã¡gua.  Por toda a
+sua volta, hÃ¡ gotas de Ã¡gua se formando e precipitando.  O silencioso choro
 de todos os seres que existem, preenchem sua mente fazendo-o cambalear.
-Segurando suas lágrimas, você deveria seguir em frente...
+Segurando suas lÃ¡grimas, vocÃª deveria seguir em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D2
 ~
 ~
@@ -1447,14 +1450,14 @@ D3
 0 -1 3769
 S
 #3771
-Caminho das Lágrimas~
-   Uma névoa úmida cobre toda esta trilha, deixando tudo muito úmido.
-Olhando para baixo, você percebe que está andando sobre a água.  Por toda a
-sua volta, há gotas de água se formando e precipitando.  O silencioso choro
+Caminho das LÃ¡grimas~
+   Uma nÃ©voa Ãºmida cobre toda esta trilha, deixando tudo muito Ãºmido.
+Olhando para baixo, vocÃª percebe que estÃ¡ andando sobre a Ã¡gua.  Por toda a
+sua volta, hÃ¡ gotas de Ã¡gua se formando e precipitando.  O silencioso choro
 de todos os seres que existem, preenchem sua mente fazendo-o cambalear.
-Segurando suas lágrimas, você deveria seguir em frente...
+Segurando suas lÃ¡grimas, vocÃª deveria seguir em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1465,13 +1468,13 @@ D1
 0 -1 3772
 S
 #3772
-Sala das Lágrimas~
-   A névoa úmida vai desaparecendo.  Há lágrimas chovendo, no meio do nada,
-precipitando geltilmente por sua volta e batendo suavemente no piso de água.
-Um enorme, e solitária lágrima flutua bem a sua frente.  Sua superfície
-cintilante parece lhe chamar para alcança-la e toca-la.
+Sala das LÃ¡grimas~
+   A nÃ©voa Ãºmida vai desaparecendo.  HÃ¡ lÃ¡grimas chovendo, no meio do nada,
+precipitando geltilmente por sua volta e batendo suavemente no piso de Ã¡gua.
+Um enorme, e solitÃ¡ria lÃ¡grima flutua bem a sua frente.  Sua superfÃ­cie
+cintilante parece lhe chamar para alcanÃ§a-la e toca-la.
 ~
-37 0 0 0 0 1
+37 0 1
 D3
 ~
 ~
@@ -1479,11 +1482,11 @@ D3
 S
 #3773
 Terra do Sofrimento~
-   Saindo da Ilha de Ossos, você alcança um local totalmente novo e a saída
-se dissipa antes de você.  Com um poderoso tremor, a todo o local se rompe,
+   Saindo da Ilha de Ossos, vocÃª alcanÃ§a um local totalmente novo e a saÃ­da
+se dissipa antes de vocÃª.  Com um poderoso tremor, a todo o local se rompe,
 revelando um caminho que segue para locais desconhecidos.
 ~
-37 4 0 0 0 1
+37 c 1
 D2
 ~
 ~
@@ -1491,13 +1494,13 @@ D2
 S
 #3774
 Caminho do Sofrimento~
-   Imagens de insuportável dor preenchem sua mente na medida em que você
-atravessa este.  Respirando profundamente, você se esforça para se manter
-estável.  Olhando para frente, você vê que o caminho parece girar e se
-contorcer como se estivesse sofrendo.  Mesmo nervoso, você deveria seguir
+   Imagens de insuportÃ¡vel dor preenchem sua mente na medida em que vocÃª
+atravessa este.  Respirando profundamente, vocÃª se esforÃ§a para se manter
+estÃ¡vel.  Olhando para frente, vocÃª vÃª que o caminho parece girar e se
+contorcer como se estivesse sofrendo.  Mesmo nervoso, vocÃª deveria seguir
 em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D3
 ~
 ~
@@ -1505,13 +1508,13 @@ D3
 S
 #3775
 Caminho do Sofrimento~
-   Imagens de insuportável dor preenchem sua mente na medida em que você
-atravessa este.  Respirando profundamente, você se esforça para se manter
-estável.  Olhando para frente, você vê que o caminho parece girar e se
-contorcer como se estivesse sofrendo.  Mesmo nervoso, você deveria seguir
+   Imagens de insuportÃ¡vel dor preenchem sua mente na medida em que vocÃª
+atravessa este.  Respirando profundamente, vocÃª se esforÃ§a para se manter
+estÃ¡vel.  Olhando para frente, vocÃª vÃª que o caminho parece girar e se
+contorcer como se estivesse sofrendo.  Mesmo nervoso, vocÃª deveria seguir
 em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1523,13 +1526,13 @@ D1
 S
 #3776
 Caminho do Sofrimento~
-   Imagens de insuportável dor preenchem sua mente na medida em que você
-atravessa este.  Respirando profundamente, você se esforça para se manter
-estável.  Olhando para frente, você vê que o caminho parece girar e se
-contorcer como se estivesse sofrendo.  Mesmo nervoso, você deveria seguir
+   Imagens de insuportÃ¡vel dor preenchem sua mente na medida em que vocÃª
+atravessa este.  Respirando profundamente, vocÃª se esforÃ§a para se manter
+estÃ¡vel.  Olhando para frente, vocÃª vÃª que o caminho parece girar e se
+contorcer como se estivesse sofrendo.  Mesmo nervoso, vocÃª deveria seguir
 em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1541,13 +1544,13 @@ D2
 S
 #3777
 Caminho do Sofrimento~
-   Imagens de insuportável dor preenchem sua mente na medida em que você
-atravessa este.  Respirando profundamente, você se esforça para se manter
-estável.  Olhando para frente, você vê que o caminho parece girar e se
-contorcer como se estivesse sofrendo.  Mesmo nervoso, você deveria seguir
+   Imagens de insuportÃ¡vel dor preenchem sua mente na medida em que vocÃª
+atravessa este.  Respirando profundamente, vocÃª se esforÃ§a para se manter
+estÃ¡vel.  Olhando para frente, vocÃª vÃª que o caminho parece girar e se
+contorcer como se estivesse sofrendo.  Mesmo nervoso, vocÃª deveria seguir
 em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D2
 ~
 ~
@@ -1559,13 +1562,13 @@ D3
 S
 #3778
 Sala do Sofrimento~
-   As imagens de sofrimento diminuem na medida em que você entra nesta
-sala.  As paredes são feitas de milhões de cabeças vivas gritando
-silenciosamente em sofrimento.  Se virando, você pode ver um enorme boca
+   As imagens de sofrimento diminuem na medida em que vocÃª entra nesta
+sala.  As paredes sÃ£o feitas de milhÃµes de cabeÃ§as vivas gritando
+silenciosamente em sofrimento.  Se virando, vocÃª pode ver um enorme boca
 suspensa no ar.  Com uma silenciosa voz preenchida de sofrimento, ela te
 chama para entrar.
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1577,11 +1580,11 @@ D1
 S
 #3779
 Terra da Tristeza~
-   Saindo da Ilha de Ossos, você alcança um local totalmente novo e a saída
-se dissipa antes de você.  Com um poderoso tremor, a todo o local se rompe,
+   Saindo da Ilha de Ossos, vocÃª alcanÃ§a um local totalmente novo e a saÃ­da
+se dissipa antes de vocÃª.  Com um poderoso tremor, a todo o local se rompe,
 revelando um caminho que segue para locais desconhecidos.
 ~
-37 4 0 0 0 1
+37 c 1
 D0
 ~
 ~
@@ -1589,12 +1592,12 @@ D0
 S
 #3780
 Caminho da Tristeza~
-   Tudo por aqui é muito abandonado e gélido.  O vento sopra como se
-tivesse perdido seu único companheiro no universo.  Gemendo silenciosamente
-por aqueles que já tiveram a tristeza no coração.  Com um pesado coração,
-você deveria seguir em frente...
+   Tudo por aqui Ã© muito abandonado e gÃ©lido.  O vento sopra como se
+tivesse perdido seu Ãºnico companheiro no universo.  Gemendo silenciosamente
+por aqueles que jÃ¡ tiveram a tristeza no coraÃ§Ã£o.  Com um pesado coraÃ§Ã£o,
+vocÃª deveria seguir em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1602,12 +1605,12 @@ D0
 S
 #3781
 Caminho da Tristeza~
-   Tudo por aqui é muito abandonado e gélido.  O vento sopra como se
-tivesse perdido seu único companheiro no universo.  Gemendo silenciosamente
-por aqueles que já tiveram a tristeza no coração.  Com um pesado coração,
-você deveria seguir em frente...
+   Tudo por aqui Ã© muito abandonado e gÃ©lido.  O vento sopra como se
+tivesse perdido seu Ãºnico companheiro no universo.  Gemendo silenciosamente
+por aqueles que jÃ¡ tiveram a tristeza no coraÃ§Ã£o.  Com um pesado coraÃ§Ã£o,
+vocÃª deveria seguir em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1619,12 +1622,12 @@ D2
 S
 #3782
 Caminho da Tristeza~
-   Tudo por aqui é muito abandonado e gélido.  O vento sopra como se
-tivesse perdido seu único companheiro no universo.  Gemendo silenciosamente
-por aqueles que já tiveram a tristeza no coração.  Com um pesado coração,
-você deveria seguir em frente...
+   Tudo por aqui Ã© muito abandonado e gÃ©lido.  O vento sopra como se
+tivesse perdido seu Ãºnico companheiro no universo.  Gemendo silenciosamente
+por aqueles que jÃ¡ tiveram a tristeza no coraÃ§Ã£o.  Com um pesado coraÃ§Ã£o,
+vocÃª deveria seguir em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D1
 ~
 ~
@@ -1636,12 +1639,12 @@ D2
 S
 #3783
 Caminho da Tristeza~
-   Tudo por aqui é muito abandonado e gélido.  O vento sopra como se
-tivesse perdido seu único companheiro no universo.  Gemendo silenciosamente
-por aqueles que já tiveram a tristeza no coração.  Com um pesado coração,
-você deveria seguir em frente...
+   Tudo por aqui Ã© muito abandonado e gÃ©lido.  O vento sopra como se
+tivesse perdido seu Ãºnico companheiro no universo.  Gemendo silenciosamente
+por aqueles que jÃ¡ tiveram a tristeza no coraÃ§Ã£o.  Com um pesado coraÃ§Ã£o,
+vocÃª deveria seguir em frente...
 ~
-37 0 0 0 0 1
+37 0 1
 D1
 ~
 ~
@@ -1653,14 +1656,14 @@ D3
 S
 #3784
 Sala da Tristeza~
-   A tristeza deixa seu coração na medida em que você entra neste local.
-Incontáveis vozes sussuram por toda sua volta.  Lamentos, amores perdidos,
-e  oportunidades perdidas relampejam em sua mente na medida em que você
+   A tristeza deixa seu coraÃ§Ã£o na medida em que vocÃª entra neste local.
+IncontÃ¡veis vozes sussuram por toda sua volta.  Lamentos, amores perdidos,
+e  oportunidades perdidas relampejam em sua mente na medida em que vocÃª
 percebe como a tristeza pode modelar a vida.  Por toda sua volta flutuam os
-pedaços de um coração partido.  Uma enorme força dentro de você lhe diz
-para pegar os pequenos pedaços e construi-lo novamente.
+pedaÃ§os de um coraÃ§Ã£o partido.  Uma enorme forÃ§a dentro de vocÃª lhe diz
+para pegar os pequenos pedaÃ§os e construi-lo novamente.
 ~
-37 0 0 0 0 1
+37 0 1
 D0
 ~
 ~
@@ -1672,12 +1675,12 @@ D3
 S
 #3785
 Reinado da Fome~
-   O universo foi traçado em quatro ângulos e dividido entre os Quatro
+   O universo foi traÃ§ado em quatro Ã¢ngulos e dividido entre os Quatro
 Cavaleiros como um presente de Apocalipse, pela eterna lealdade dos Quatro
-a ele.  Este é o reino da Fome, onde todos não conheçem nada além da fome e
+a ele.  Este Ã© o reino da Fome, onde todos nÃ£o conheÃ§em nada alÃ©m da fome e
 da sede.  Uma imponente estrutura pode ser vista ao norte.
 ~
-37 65536 0 0 0 1
+37 q 1
 D0
 ~
 ~
@@ -1685,13 +1688,13 @@ D0
 S
 #3786
 Dias~
-   A estrutura ergue um Dias esculpido em onyx.  Acima deste dias há um
-trono real, poderosamente criado para o magnífico imperador.  Tudo isto foi
+   A estrutura ergue um Dias esculpido em onyx.  Acima deste dias hÃ¡ um
+trono real, poderosamente criado para o magnÃ­fico imperador.  Tudo isto foi
 dado por Apocalipse para cada um dos Quatro Cavaleiros.  Um brilhante globo
 flutua no meio da sala, em frente ao trono.  Cenas do presente de todo o
 universo relampejam em somente um olhar a este globo.
 ~
-37 65608 0 0 0 1
+37 dgq 1
 D1
 ~
 ~
@@ -1703,12 +1706,12 @@ D2
 S
 #3787
 Reinado da Pestilencia~
-   O universo foi traçado em quatro ângulos e dividido entre os Quatro
+   O universo foi traÃ§ado em quatro Ã¢ngulos e dividido entre os Quatro
 Cavaleiros como um presente de Apocalipse, pela eterna lealdade dos Quatro
-a ele.  Este é o reino da Pestilencia, onde todos não conheçem nada além
+a ele.  Este Ã© o reino da Pestilencia, onde todos nÃ£o conheÃ§em nada alÃ©m
 de dor e desgosto.  Uma imponente estrutura pode ser vista ao leste.
 ~
-37 65544 0 0 0 1
+37 dq 1
 D1
 ~
 ~
@@ -1716,13 +1719,13 @@ D1
 S
 #3788
 Dias~
-   A estrutura ergue um Dias esculpido em onyx.  Acima deste dias há um
-trono real, poderosamente criado para o magnífico imperador.  Tudo isto foi
+   A estrutura ergue um Dias esculpido em onyx.  Acima deste dias hÃ¡ um
+trono real, poderosamente criado para o magnÃ­fico imperador.  Tudo isto foi
 dado por Apocalipse para cada um dos Quatro Cavaleiros.  Um brilhante globo
 flutua no meio da sala, em frente ao trono.  Cenas do presente de todo o
 universo relampejam em somente um olhar a este globo.
 ~
-37 65608 0 0 0 1
+37 dgq 1
 D2
 ~
 ~
@@ -1730,16 +1733,16 @@ D2
 D3
 ~
 ~
-0 0 3787
+0 0 3787 0
 S
 #3789
 Reinado da Guerra~
-   O universo foi traçado em quatro ângulos e dividido entre os Quatro
+   O universo foi traÃ§ado em quatro Ã¢ngulos e dividido entre os Quatro
 Cavaleiros como um presente de Apocalipse, pela eterna lealdade dos Quatro
-a ele.  Este é o reino da Guerra, onde todos não conheçem nada além da
+a ele.  Este Ã© o reino da Guerra, onde todos nÃ£o conheÃ§em nada alÃ©m da
 crueldade e sofrimento.  Uma imponente estrutura pode ser vista ao sul.
 ~
-37 65544 0 0 0 0
+37 dq 0 0 0 0
 D2
 ~
 ~
@@ -1747,13 +1750,13 @@ D2
 S
 #3790
 Dias~
-   A estrutura ergue um Dias esculpido em onyx.  Acima deste dias há um
-trono real, poderosamente criado para o magnífico imperador.  Tudo isto foi
+   A estrutura ergue um Dias esculpido em onyx.  Acima deste dias hÃ¡ um
+trono real, poderosamente criado para o magnÃ­fico imperador.  Tudo isto foi
 dado por Apocalipse para cada um dos Quatro Cavaleiros.  Um brilhante globo
 flutua no meio da sala, em frente ao trono.  Cenas do presente de todo o
 universo relampejam em somente um olhar a este globo.
 ~
-37 65608 0 0 0 0
+37 dgq 0 0 0 0
 D0
 ~
 ~
@@ -1765,12 +1768,12 @@ D3
 S
 #3791
 Reinado da Morte~
-   O universo foi traçado em quatro ângulos e dividido entre os Quatro
+   O universo foi traÃ§ado em quatro Ã¢ngulos e dividido entre os Quatro
 Cavaleiros como um presente de Apocalipse, pela eterna lealdade dos Quatro
-a ele.  Este é o reino da Morte, onde todos não conheçem nada além do fim e
-do começo.  Uma imponente construção pode ser vista a oeste.
+a ele.  Este Ã© o reino da Morte, onde todos nÃ£o conheÃ§em nada alÃ©m do fim e
+do comeÃ§o.  Uma imponente construÃ§Ã£o pode ser vista a oeste.
 ~
-37 0 0 0 0 1
+37 0 1
 D3
 ~
 ~
@@ -1778,13 +1781,13 @@ D3
 S
 #3792
 Dias~
-   A estrutura ergue um Dias esculpido em onyx.  Acima deste dias há um
-trono real, poderosamente criado para o magnífico imperador.  Tudo isto foi
+   A estrutura ergue um Dias esculpido em onyx.  Acima deste dias hÃ¡ um
+trono real, poderosamente criado para o magnÃ­fico imperador.  Tudo isto foi
 dado por Apocalipse para cada um dos Quatro Cavaleiros.  Um brilhante globo
 flutua no meio da sala, em frente ao trono.  Cenas do presente de todo o
 universo relampejam em somente um olhar a este globo.
 ~
-37 65608 0 0 0 1
+37 dgq 1
 D0
 ~
 ~
@@ -1796,14 +1799,14 @@ D1
 S
 #3793
 Nascimento do Caos~
-   Pelo poder deste globo mágico, você pode testemunhar o nascimento do
-Caos.  O universo se abre e amplia até onde seus olhos podem ver.
-Incontáveis estrelas começam a implodir se auto destruindo.  Um enorme
-buraco negro é formado pela união de duas super novas e começa, sem
-misericórdia, a puxar tudo para o seu ventre.  Lentamente o universo entra
-em colapso e dessa forma o reinado do Caos começa!
+   Pelo poder deste globo mÃ¡gico, vocÃª pode testemunhar o nascimento do
+Caos.  O universo se abre e amplia atÃ© onde seus olhos podem ver.
+IncontÃ¡veis estrelas comeÃ§am a implodir se auto destruindo.  Um enorme
+buraco negro Ã© formado pela uniÃ£o de duas super novas e comeÃ§a, sem
+misericÃ³rdia, a puxar tudo para o seu ventre.  Lentamente o universo entra
+em colapso e dessa forma o reinado do Caos comeÃ§a!
 ~
-37 65632 0 0 0 1
+37 fgq 1
 D0
 ~
 ~
@@ -1831,14 +1834,14 @@ D5
 S
 #3794
 Nascimento da Ordem~
-   Pelo poder deste globo mágico, você pode testemunhar o nascimento do
-Caos.  O universo se abre e amplia até onde seus olhos podem ver.  Pequenas
-partículas lentamente se unem e fundem, formando uma das incontáveis
-estrelas.  Planetas vazis lentamente se enchem de vida e começam a orbitar
+   Pelo poder deste globo mÃ¡gico, vocÃª pode testemunhar o nascimento do
+Caos.  O universo se abre e amplia atÃ© onde seus olhos podem ver.  Pequenas
+partÃ­culas lentamente se unem e fundem, formando uma das incontÃ¡veis
+estrelas.  Planetas vazis lentamente se enchem de vida e comeÃ§am a orbitar
 uma estrela de sua escolha.  Quando tudo toma seu devido lugar, o reinado
-da Ordem começa!
+da Ordem comeÃ§a!
 ~
-37 65632 0 0 0 1
+37 fgq 1
 D0
 ~
 ~
@@ -1866,29 +1869,30 @@ D5
 S
 #3795
 O Trono de Apocalipse~
-   Uma planeta sem vida com sinais de completa e total destruição recebe a
-sua presença aqui.  O enorme trono de Apocalipse está aqui, aparentando em
-ser o início de todo o mal deste planeta.  Uma névoa negra corre do trono
-penetrando no planeta, envenenando-o por inteiro.  Logo o trono irá pairar
+   Uma planeta sem vida com sinais de completa e total destruiÃ§Ã£o recebe a
+sua presenÃ§a aqui.  O enorme trono de Apocalipse estÃ¡ aqui, aparentando em
+ser o inÃ­cio de todo o mal deste planeta.  Uma nÃ©voa negra corre do trono
+penetrando no planeta, envenenando-o por inteiro.  Logo o trono irÃ¡ pairar
 novamente, deixando somente a casca morta deste planeta, a procura de um
 outro planeta cheio de vida para destruir.
 ~
-37 65608 0 0 0 1
+37 dgq 1
 D1
-Uma esquecida porta está fechada aqui.
+Uma esquecida porta estÃ¡ fechada aqui.
 ~
 porta~
-1 3736 3797
+:n 2 a porta
+ab 3736 3797
 S
 #3796
 A Costa do Passado~
-   Na medida emq ue o último raio de sol desaparece, a ilha é tomada pela
-escuridão como se estivesse no Começo.  O vacilante brilho das distantes
-estrelas começam a aparecer no céu e o som das ondas ecoa por toda a
+   Na medida emq ue o Ãºltimo raio de sol desaparece, a ilha Ã© tomada pela
+escuridÃ£o como se estivesse no ComeÃ§o.  O vacilante brilho das distantes
+estrelas comeÃ§am a aparecer no cÃ©u e o som das ondas ecoa por toda a
 parte.  Cintilantes cenas de tempos passados brilham e desaparecem nas
-águas do tempo.
+Ã¡guas do tempo.
 ~
-37 65728 0 0 0 3
+37 ghq 3
 D1
 ~
 ~
@@ -1896,14 +1900,14 @@ D1
 S
 #3797
 Ilha do Tempo~
-   As areias do tempo flutuam livremente aqui.  Sussurros de tempos que já
-se passaram e de tempos que ainda estão por vir ecoam silenciosamente por
-toda a ilha.  A atmosfera cintila, quase que revelando dois sóis presentes
-no céu, mas depois clareia e mostra o normal e único sol em nosso céu.
-Esta ilha é a morada do Grande Mestre do Tempo, que controla as águas do
+   As areias do tempo flutuam livremente aqui.  Sussurros de tempos que jÃ¡
+se passaram e de tempos que ainda estÃ£o por vir ecoam silenciosamente por
+toda a ilha.  A atmosfera cintila, quase que revelando dois sÃ³is presentes
+no cÃ©u, mas depois clareia e mostra o normal e Ãºnico sol em nosso cÃ©u.
+Esta ilha Ã© a morada do Grande Mestre do Tempo, que controla as Ã¡guas do
 tempo aqui na costa.
 ~
-37 65600 0 0 0 2
+37 gq 2
 D1
 ~
 ~
@@ -1919,13 +1923,13 @@ D3
 S
 #3798
 A Costa do Futuro~
-   O sol nascente cria um brilho rosado no céu.  A lua começa a desaparecer
+   O sol nascente cria um brilho rosado no cÃ©u.  A lua comeÃ§a a desaparecer
 no brilho da manha.  Os calmos sons das ondas se debatendo pela costa
-começa a intensificar na medida em que o vento começa a aumentar.  Ficando
-nesta costra você pode testemunhar o temeroso poder daqueles que chamam ser
+comeÃ§a a intensificar na medida em que o vento comeÃ§a a aumentar.  Ficando
+nesta costra vocÃª pode testemunhar o temeroso poder daqueles que chamam ser
 o futuro.
 ~
-37 65728 0 0 0 3
+37 ghq 3
 D3
 ~
 ~
@@ -1933,13 +1937,13 @@ D3
 S
 #3799
 A Costa do Presente~
-   O sol se ergue, muito brilhante, no ápice do céu.  Podem ser vistas as
-brancas cristas das ondas, semeando as águas do tempo.  A brisa sopra
-gentilmente, frequentemente aumento, só para se acalmar.  As águas parecem
-estar congeladas no tempo, como se esperassem por uma proxima ação, pelo o
-que é determinado no presente.
+   O sol se ergue, muito brilhante, no Ã¡pice do cÃ©u.  Podem ser vistas as
+brancas cristas das ondas, semeando as Ã¡guas do tempo.  A brisa sopra
+gentilmente, frequentemente aumento, sÃ³ para se acalmar.  As Ã¡guas parecem
+estar congeladas no tempo, como se esperassem por uma proxima aÃ§Ã£o, pelo o
+que Ã© determinado no presente.
 ~
-37 65728 0 0 0 3
+37 ghq 3
 D0
 ~
 ~
