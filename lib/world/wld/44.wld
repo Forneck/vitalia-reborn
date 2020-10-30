@@ -1,10 +1,10 @@
 #4400
 A Costa do Rio Negro~
-   A lateral do penhasco desmoronou no rio tornando-o íngreme, mas com a costa
-usável.  Todo o litoral é uma extensa placa de granito que foi desgastado pela
-água durante o período da inundação.
+   A lateral do penhasco desmoronou no rio tornando-o Ã­ngreme, mas com a costa
+usÃ¡vel.  Todo o litoral Ã© uma extensa placa de granito que foi desgastado pela
+Ã¡gua durante o perÃ­odo da inundaÃ§Ã£o.
 ~
-44 68 0 0 0 3
+44 cg 3
 D0
 ~
 ~
@@ -20,12 +20,16 @@ D2
 S
 #4401
 O Caminho de Nirin~
-   O caminho é feito de largas pedras no meio de uma trincheira.  A floresta 
-que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os sons
+   O caminho Ã© feito de largas pedras no meio de uma trincheira.  A floresta 
+que o cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel.  Os sons
 da floresta podem ser ouvidos a sua volta.  O caminho segue ao noroeste e ao 
 leste.
 ~
-44 262208 0 0 0 2
+44 gs 2
+D6
+~
+~
+0 -1 13534
 D1
 ~
 ~
@@ -38,19 +42,15 @@ D3
 ~
 ~
 0 -1 4400
-D6
-~
-~
-0 -1 13534
 S
 #4402
 O Caminho de Nirin~
-   O caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os 
+   O caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que o cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel.  Os 
 sons da floresta podem ser ouvidos a sua volta.  O caminho segue ao leste e 
 ao oeste.
 ~
-44 262208 0 0 0 2
+44 gs 2
 D1
 ~
 ~
@@ -66,11 +66,11 @@ D3
 S
 #4403
 O Caminho de Nirin~
-   O caminho é feito de largas pedras no meio de uma trincheira.  A floresta 
-que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os sons
+   O caminho Ã© feito de largas pedras no meio de uma trincheira.  A floresta 
+que o cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel.  Os sons
  da floresta podem ser ouvidos a sua volta.  O caminho segue ao sul.
 ~
-44 262208 0 0 0 2
+44 gs 2
 D1
 ~
 ~
@@ -86,12 +86,12 @@ D3
 S
 #4404
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D1
 ~
 ~
@@ -107,12 +107,12 @@ D3
 S
 #4405
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 Caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D1
 ~
 ~
@@ -128,12 +128,12 @@ D3
 S
 #4406
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D1
 ~
 ~
@@ -149,12 +149,12 @@ D3
 S
 #4407
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D1
 ~
 ~
@@ -170,12 +170,12 @@ D3
 S
 #4408
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D1
 ~
 ~
@@ -191,12 +191,12 @@ D3
 S
 #4409
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D1
 ~
 ~
@@ -208,12 +208,12 @@ D3
 S
 #4410
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D2
 ~
 ~
@@ -225,12 +225,12 @@ D3
 S
 #4411
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D0
 ~
 ~
@@ -242,12 +242,12 @@ D1
 S
 #4412
 O Caminho de Nirin~
-   O caminho é feito de largas pedras no meio de uma trincheira.  A floresta 
-que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os 
+   O caminho Ã© feito de largas pedras no meio de uma trincheira.  A floresta 
+que o cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel.  Os 
 sons da floresta podem ser ouvidos a sua volta.  O caminho segue ao norte e 
 ao leste.
 ~
-44 262208 0 0 0 2
+44 gs 2
 D0
 ~
 ~
@@ -263,12 +263,12 @@ D3
 S
 #4413
 O Caminho de Nirin~
-   O caminho é feito de largas pedras no meio de uma trincheira.  A floresta 
-que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os sons
+   O caminho Ã© feito de largas pedras no meio de uma trincheira.  A floresta 
+que o cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel.  Os sons
  da floresta podem ser ouvidos a sua volta.  O caminho segue ao leste e ao 
 oeste.
 ~
-44 262208 0 0 0 2
+44 gs 2
 D0
 ~
 ~
@@ -284,12 +284,12 @@ D3
 S
 #4414
 O Caminho de Nirin~
-   O caminho é feito de largas pedras no meio de uma trincheira.  A floresta
-que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os sons
+   O caminho Ã© feito de largas pedras no meio de uma trincheira.  A floresta
+que o cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel.  Os sons
  da floresta podem ser ouvidos a sua volta.  O caminho segue ao leste e ao 
 oeste.
 ~
-44 262208 0 0 0 2
+44 gs 2
 D0
 ~
 ~
@@ -305,12 +305,12 @@ D3
 S
 #4415
 O Caminho de Nirin~
-   O caminho é feito de largas pedras no meio de uma trincheira.  A floresta 
-que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os sons
+   O caminho Ã© feito de largas pedras no meio de uma trincheira.  A floresta 
+que o cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel.  Os sons
  da floresta podem ser ouvidos a sua volta.  O caminho segue ao leste e ao 
 oeste.
 ~
-44 262208 0 0 0 2
+44 gs 2
 D0
 ~
 ~
@@ -330,12 +330,12 @@ D3
 S
 #4416
 O Caminho de Nirin~
-   O caminho é feito de largas pedras no meio de uma trincheira.  A floresta 
-que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os sons
+   O caminho Ã© feito de largas pedras no meio de uma trincheira.  A floresta 
+que o cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel.  Os sons
  da floresta podem ser ouvidos a sua volta.  O caminho segue ao leste e ao 
 oeste.
 ~
-44 262208 0 0 0 2
+44 gs 2
 D0
 ~
 ~
@@ -355,12 +355,12 @@ D3
 S
 #4417
 O Caminho de Nirin~
-   O caminho é feito de largas pedras no meio de uma trincheira.  A floresta 
-que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os 
+   O caminho Ã© feito de largas pedras no meio de uma trincheira.  A floresta 
+que o cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel.  Os 
 sons da floresta podem ser ouvidos a sua volta.  O caminho segue ao leste e 
 ao oeste.
 ~
-44 262208 0 0 0 2
+44 gs 2
 D0
 ~
 ~
@@ -380,12 +380,12 @@ D3
 S
 #4418
 O Caminho de Nirin~
-   O caminho é feito de largas pedras no meio de uma trincheira.  A floresta 
-que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os 
+   O caminho Ã© feito de largas pedras no meio de uma trincheira.  A floresta 
+que o cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel.  Os 
 sons da floresta podem ser ouvidos a sua volta.  O caminho segue ao leste e
 ao oeste.
 ~
-44 262208 0 0 0 2
+44 gs 2
 D1
 ~
 ~
@@ -401,11 +401,11 @@ D3
 S
 #4419
 O Caminho de Nirin~
-   O caminho é feito de largas pedras no meio de uma trincheira.  A floresta 
-que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os sons
+   O caminho Ã© feito de largas pedras no meio de uma trincheira.  A floresta 
+que o cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel.  Os sons
 da floresta podem ser ouvidos a sua volta.  O caminho segue ao oeste e ao sul.
 ~
-44 262208 0 0 0 2
+44 gs 2
 D0
 ~
 ~
@@ -425,12 +425,12 @@ D3
 S
 #4420
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D1
 ~
 ~
@@ -446,12 +446,12 @@ D3
 S
 #4421
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D2
 ~
 ~
@@ -463,12 +463,12 @@ D3
 S
 #4422
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D0
 ~
 ~
@@ -484,12 +484,12 @@ D2
 S
 #4423
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D0
 ~
 ~
@@ -509,12 +509,12 @@ D3
 S
 #4424
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D0
 ~
 ~
@@ -534,12 +534,12 @@ D3
 S
 #4425
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D0
 ~
 ~
@@ -559,12 +559,12 @@ D3
 S
 #4426
 O Caminho de Nirin~
-   O caminho é feito de largas pedras no meio de uma trincheira.  A floresta 
-que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os 
+   O caminho Ã© feito de largas pedras no meio de uma trincheira.  A floresta 
+que o cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel.  Os 
 sons da floresta podem ser ouvidos a sua volta.  O caminho segue ao norte e 
 ao sul.
 ~
-44 262208 0 0 0 2
+44 gs 2
 D0
 ~
 ~
@@ -584,12 +584,12 @@ D3
 S
 #4427
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D0
 ~
 ~
@@ -609,12 +609,12 @@ D3
 S
 #4428
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D0
 ~
 ~
@@ -630,12 +630,12 @@ D3
 S
 #4429
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D0
 ~
 ~
@@ -647,12 +647,12 @@ D1
 S
 #4430
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D0
 ~
 ~
@@ -668,12 +668,12 @@ D3
 S
 #4431
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D0
 ~
 ~
@@ -689,12 +689,12 @@ D3
 S
 #4432
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D0
 ~
 ~
@@ -710,12 +710,12 @@ D3
 S
 #4433
 O Caminho de Nirin~
-   O caminho é feito de largas pedras no meio de uma trincheira.  A floresta 
-que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os 
+   O caminho Ã© feito de largas pedras no meio de uma trincheira.  A floresta 
+que o cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel.  Os 
 sons da floresta podem ser ouvidos a sua volta.  O caminho segue ao norte e
 ao sul.
 ~
-44 262208 0 0 0 2
+44 gs 2
 D0
 ~
 ~
@@ -731,12 +731,12 @@ D3
 S
 #4434
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D0
 ~
 ~
@@ -752,12 +752,12 @@ D3
 S
 #4435
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D0
 ~
 ~
@@ -773,12 +773,12 @@ D3
 S
 #4436
 A Floresta~
-   Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+   Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-44 64 0 0 0 3
+44 g 3
 D3
 ~
 ~
@@ -786,12 +786,12 @@ D3
 S
 #4437
 Uma Doca de Madeira~
-   A doca é feita de grandes pranchas de madeira Nirin amarradas fortemente 
-nos extremos e ajustadas ao fundo da lagoa.  O cheiro de sal é pesado no ar, 
-pois o lago é de água salgada.  Pequenos caranguejos correm ao redor dos 
+   A doca Ã© feita de grandes pranchas de madeira Nirin amarradas fortemente 
+nos extremos e ajustadas ao fundo da lagoa.  O cheiro de sal Ã© pesado no ar, 
+pois o lago Ã© de Ã¡gua salgada.  Pequenos caranguejos correm ao redor dos 
 postes, procurando alimentos.    
 ~
-44 68 0 0 0 2
+44 gc 2
 D0
 ~
 ~
@@ -807,11 +807,11 @@ D2
 S
 #4438
 A Lagoa~
-   Pequenas ondas causam um ruído ao baterem de encontro à doca espirando um 
-pouco de água para os lados.  Ao norte a lagoa estende-se ao horizonte, além 
-de onde sua visão alcança.
+   Pequenas ondas causam um ruÃ­do ao baterem de encontro Ã  doca espirando um 
+pouco de Ã¡gua para os lados.  Ao norte a lagoa estende-se ao horizonte, alÃ©m 
+de onde sua visÃ£o alcanÃ§a.
 ~
-44 68 0 0 0 7
+44 gc 7
 D0
 ~
 ~
@@ -831,12 +831,12 @@ D3
 S
 #4439
 Uma Doca de Madeira~
-   A doca é feita de grandes pranchas de madeira Nirin amarradas fortemente 
-nos extremos e ajustadas ao fundo da lagoa.  O cheiro de sal é pesado no ar,
-pois o lago é de água salgada.  Pequenos caranguejos correm ao redor dos postes
+   A doca Ã© feita de grandes pranchas de madeira Nirin amarradas fortemente 
+nos extremos e ajustadas ao fundo da lagoa.  O cheiro de sal Ã© pesado no ar,
+pois o lago Ã© de Ã¡gua salgada.  Pequenos caranguejos correm ao redor dos postes
 procurando alimentos.    
 ~
-44 68 0 0 0 2
+44 gc 2
 D0
 ~
 ~
@@ -856,11 +856,11 @@ D3
 S
 #4440
 A Lagoa~
-   Pequenas ondas causam um ruído ao baterem de encontro à doca espirando um 
-pouco de água para os lados.  Ao norte a lagoa estende-se ao horizonte, além
-de onde sua visão alcança.    
+   Pequenas ondas causam um ruÃ­do ao baterem de encontro Ã  doca espirando um 
+pouco de Ã¡gua para os lados.  Ao norte a lagoa estende-se ao horizonte, alÃ©m
+de onde sua visÃ£o alcanÃ§a.    
 ~
-44 68 0 0 0 7
+44 gc 7
 D0
 ~
 ~
@@ -880,12 +880,12 @@ D3
 S
 #4441
 Uma Doca de Madeira~
-   A doca é feita de grandes pranchas de madeira Nirin amarradas fortemente 
-nos extremos e ajustadas ao fundo da lagoa.  O cheiro de sal é pesado no ar, 
-pois o lago é de água salgada.  Pequenos caranguejos correm ao redor dos postes
+   A doca Ã© feita de grandes pranchas de madeira Nirin amarradas fortemente 
+nos extremos e ajustadas ao fundo da lagoa.  O cheiro de sal Ã© pesado no ar, 
+pois o lago Ã© de Ã¡gua salgada.  Pequenos caranguejos correm ao redor dos postes
 procurando alimentos.    
 ~
-44 68 0 0 0 2
+44 gc 2
 D0
 ~
 ~
@@ -905,11 +905,11 @@ D3
 S
 #4442
 A Lagoa~
-   As águas calmas da lagoa dão de encontro com o lado do enorme penhasco de 
-granito que está ao sul, obstruindo sua passagem por este caminho.  Em todos
-os outros sentidos, a lagoa estende-se além do horizonte.
+   As Ã¡guas calmas da lagoa dÃ£o de encontro com o lado do enorme penhasco de 
+granito que estÃ¡ ao sul, obstruindo sua passagem por este caminho.  Em todos
+os outros sentidos, a lagoa estende-se alÃ©m do horizonte.
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -925,11 +925,11 @@ D3
 S
 #4443
 A Lagoa~
-   As águas calmas da lagoa dão de encontro com o lado do enorme penhasco de 
-granito que está ao sul, obstruindo sua passagem por este caminho.  Em todos 
-os outros sentidos, a lagoa estende-se além do horizonte.
+   As Ã¡guas calmas da lagoa dÃ£o de encontro com o lado do enorme penhasco de 
+granito que estÃ¡ ao sul, obstruindo sua passagem por este caminho.  Em todos 
+os outros sentidos, a lagoa estende-se alÃ©m do horizonte.
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -945,11 +945,11 @@ D3
 S
 #4444
 A Lagoa~
-   As águas calmas da lagoa dão de encontro com o lado do enorme penhasco de
-granito que está ao sul, obstruindo sua passagem por este caminho.  Em todos 
-os outros sentidos, a lagoa estende-se além do horizonte.
+   As Ã¡guas calmas da lagoa dÃ£o de encontro com o lado do enorme penhasco de
+granito que estÃ¡ ao sul, obstruindo sua passagem por este caminho.  Em todos 
+os outros sentidos, a lagoa estende-se alÃ©m do horizonte.
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -965,11 +965,11 @@ D3
 S
 #4445
 A Lagoa~
-   As águas calmas da lagoa dão de encontro com o lado do enorme penhasco de 
-granito que está ao sul, obstruindo sua passagem por este caminho.  Em todos 
-os outros sentidos, a lagoa estende-se além do horizonte.
+   As Ã¡guas calmas da lagoa dÃ£o de encontro com o lado do enorme penhasco de 
+granito que estÃ¡ ao sul, obstruindo sua passagem por este caminho.  Em todos 
+os outros sentidos, a lagoa estende-se alÃ©m do horizonte.
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -986,9 +986,9 @@ S
 #4446
 Uma Doca de Madeira~
    A doca termina aqui, mas estende-se completamente ao leste.  O cheiro de 
-sal é pesado no ar, pois um grande mar ou o oceano se encontra ao norte.
+sal Ã© pesado no ar, pois um grande mar ou o oceano se encontra ao norte.
 ~
-44 64 0 0 0 2
+44 g 2
 D0
 ~
 ~
@@ -1004,10 +1004,10 @@ D2
 S
 #4447
 Uma Doca de Madeira~
-   As pranchas de madeira da doca tremem e rangem a cada passo que você dá.
+   As pranchas de madeira da doca tremem e rangem a cada passo que vocÃª dÃ¡.
 Um grande lago estende-se ao norte e a doca continua ao leste e ao oeste.    
 ~
-44 64 0 0 0 2
+44 g 2
 D0
 ~
 ~
@@ -1027,11 +1027,11 @@ D3
 S
 #4448
 Uma Doca de Madeira~
-   As tábuas de madeira da doca fazem ligeiros ruídos, tremem e rangem com o 
-seu peso.  Ao norte uma vasta quantidade de água estende-se por todo o 
-horizonte até onde você consegue enxergar.    
+   As tÃ¡buas de madeira da doca fazem ligeiros ruÃ­dos, tremem e rangem com o 
+seu peso.  Ao norte uma vasta quantidade de Ã¡gua estende-se por todo o 
+horizonte atÃ© onde vocÃª consegue enxergar.    
 ~
-44 64 0 0 0 2
+44 g 2
 D0
 ~
 ~
@@ -1051,11 +1051,11 @@ D3
 S
 #4449
 Uma Doca de Madeira~
-   As tábuas de madeira da doca fazem ligeiros ruídos, tremem e rangem com o 
-seu peso.  Ao norte uma vasta quantidade de água estende-se por todo o 
-horizonte até onde você consegue enxergar.    
+   As tÃ¡buas de madeira da doca fazem ligeiros ruÃ­dos, tremem e rangem com o 
+seu peso.  Ao norte uma vasta quantidade de Ã¡gua estende-se por todo o 
+horizonte atÃ© onde vocÃª consegue enxergar.    
 ~
-44 64 0 0 0 2
+44 g 2
 D0
 ~
 ~
@@ -1075,12 +1075,12 @@ D3
 S
 #4450
 Uma Doca de Madeira~
-   A doca é feita de grandes pranchas de madeira Nirin amarradas fortemente 
-nos extremos e ajustadas ao fundo da lagoa.  O cheiro de sal é pesado no ar,
-pois o lago é de água salgada.  Pequenos caranguejos correm ao redor dos postes
+   A doca Ã© feita de grandes pranchas de madeira Nirin amarradas fortemente 
+nos extremos e ajustadas ao fundo da lagoa.  O cheiro de sal Ã© pesado no ar,
+pois o lago Ã© de Ã¡gua salgada.  Pequenos caranguejos correm ao redor dos postes
 procurando alimentos.
 ~
-44 64 0 0 0 2
+44 g 2
 D0
 ~
 ~
@@ -1095,13 +1095,13 @@ D3
 0 -1 4449
 S
 #4451
-Uma Trilha Através da Aldeia~
-   Mais uma passagem do que uma trilha, o caminho o leva às batentes das portas
- de pequenas cabanas.  Todas estas tem o formato redondo com telhados cônicos,
-elas são de uma cor verde escura e folhas parecem ainda crescer nelas, 
+Uma Trilha AtravÃ©s da Aldeia~
+   Mais uma passagem do que uma trilha, o caminho o leva Ã s batentes das portas
+ de pequenas cabanas.  Todas estas tem o formato redondo com telhados cÃ´nicos,
+elas sÃ£o de uma cor verde escura e folhas parecem ainda crescer nelas, 
 insinuando que podem estar vivas.
 ~
-44 64 0 0 0 2
+44 g 2
 D0
 ~
 ~
@@ -1116,13 +1116,13 @@ D2
 0 -1 4460
 S
 #4452
-Uma Trilha Através da Aldeia~
-   Mais uma passagem do que uma trilha, o caminho o leva às batentes das portas
- de pequenas cabanas.  Todas estas tem o formato redondo com telhados cônicos,
-elas são de uma cor verde escura e folhas parecem ainda crescer nelas, 
+Uma Trilha AtravÃ©s da Aldeia~
+   Mais uma passagem do que uma trilha, o caminho o leva Ã s batentes das portas
+ de pequenas cabanas.  Todas estas tem o formato redondo com telhados cÃ´nicos,
+elas sÃ£o de uma cor verde escura e folhas parecem ainda crescer nelas, 
 insinuando que podem estar vivas.    
 ~
-44 64 0 0 0 2
+44 g 2
 D0
 ~
 ~
@@ -1137,13 +1137,13 @@ D3
 0 -1 4451
 S
 #4453
-Uma Trilha Através da Aldeia~
-   Mais uma passagem do que uma trilha, o caminho o leva às batentes das portas
-de pequenas cabanas.  Todas estas tem o formato redondo com telhados cônicos,
-elas são de uma cor verde escura e folhas parecem ainda crescer nelas, 
+Uma Trilha AtravÃ©s da Aldeia~
+   Mais uma passagem do que uma trilha, o caminho o leva Ã s batentes das portas
+de pequenas cabanas.  Todas estas tem o formato redondo com telhados cÃ´nicos,
+elas sÃ£o de uma cor verde escura e folhas parecem ainda crescer nelas, 
 insinuando que podem estar vivas.    
 ~
-44 64 0 0 0 2
+44 g 2
 D0
 ~
 ~
@@ -1158,13 +1158,13 @@ D3
 0 -1 4452
 S
 #4454
-Uma Trilha Através da Aldeia~
-   O caminho no qual você está caminhando dá voltas através de uma pequena 
+Uma Trilha AtravÃ©s da Aldeia~
+   O caminho no qual vocÃª estÃ¡ caminhando dÃ¡ voltas atravÃ©s de uma pequena 
 vila de choupanas, estranho, considerando que a maioria dos elfos vive em 
-árvores.  Ao norte uma grande doca de madeira beira um lago de água salgada ou
+Ã¡rvores.  Ao norte uma grande doca de madeira beira um lago de Ã¡gua salgada ou
 o oceano.  A floresta cerca a vila para todos os lados.    
 ~
-44 64 0 0 0 2
+44 g 2
 D0
 ~
 ~
@@ -1175,23 +1175,24 @@ D1
 0 -1 4455
 S
 #4455
-Uma Trilha Através da Aldeia~
-   O caminho no qual você está caminhando dá voltas através de uma pequena vila
- de choupanas, estranho, considerando que a maioria dos elfos vive em árvores.
-Um outro caminho ramifica-se em direção ao sul.  Enquanto a trilha em que você
-está andando continua ao leste e ao oeste.  Uma grande doca de madeira está ao
-norte, e depois dela uma grande quantidade de água salgada que parece 
+Uma Trilha AtravÃ©s da Aldeia~
+   O caminho no qual vocÃª estÃ¡ caminhando dÃ¡ voltas atravÃ©s de uma pequena vila
+ de choupanas, estranho, considerando que a maioria dos elfos vive em Ã¡rvores.
+Um outro caminho ramifica-se em direÃ§Ã£o ao sul.  Enquanto a trilha em que vocÃª
+estÃ¡ andando continua ao leste e ao oeste.  Uma grande doca de madeira estÃ¡ ao
+norte, e depois dela uma grande quantidade de Ã¡gua salgada que parece 
 estender-se ao infinito.
 ~
-44 64 0 0 0 2
+44 g 2
 D0
 ~
 ~
 0 -1 4450
 D1
 ~
-portão~
-1 -1 4456
+portao~
+:n 1 o portÃ£o
+ab -1 4456
 D2
 ~
 ~
@@ -1202,13 +1203,13 @@ D3
 0 -1 4454
 S
 #4456
-Em Frente ao Portão de Madeira~
-   Você está em frente a um pequeno portão de madeira.  Parece mais ser usado 
+Em Frente ao PortÃ£o de Madeira~
+   VocÃª estÃ¡ em frente a um pequeno portÃ£o de madeira.  Parece mais ser usado 
 como um marcador de limites do que para manter pessoas para dentro ou para 
-fora dele.  A floresta ainda cerca-o em todas as direções, mas ao norte, você 
+fora dele.  A floresta ainda cerca-o em todas as direÃ§Ãµes, mas ao norte, vocÃª 
 observa um pequeno posto de guarda.    
 ~
-44 64 0 0 0 2
+44 g 2
 D0
 ~
 ~
@@ -1219,16 +1220,17 @@ D1
 0 -1 4457
 D3
 ~
-portão~
+portao~
+:n 1 o portÃ£o de madeira
 1 -1 4455
 S
 #4457
-Uma Trilha Através da Floresta~
-   O caminho o leva através da floresta.  Parece que você pode ouvir uma voz 
-sussurrando algo saindo da própria floresta que está em todas direções.  Mas 
-descarta está sensação pensando estar ficando paranóico.    
+Uma Trilha AtravÃ©s da Floresta~
+   O caminho o leva atravÃ©s da floresta.  Parece que vocÃª pode ouvir uma voz 
+sussurrando algo saindo da prÃ³pria floresta que estÃ¡ em todas direÃ§Ãµes.  Mas 
+descarta estÃ¡ sensaÃ§Ã£o pensando estar ficando paranÃ³ico.    
 ~
-44 64 0 0 0 2
+44 g 2
 D1
 ~
 ~
@@ -1239,14 +1241,14 @@ D3
 0 -1 4456
 S
 #4458
-Uma Trilha Através da Floresta~
-   O caminho o leva através da floresta.  Parece que você pode ouvir uma voz 
-sussurrando algo saindo da própria floresta que está em todas direções.  Mas 
-descarta está sensação pensando estar ficando paranóico.  Você respira um ar 
-salgado, estará perto do oceano?  
+Uma Trilha AtravÃ©s da Floresta~
+   O caminho o leva atravÃ©s da floresta.  Parece que vocÃª pode ouvir uma voz 
+sussurrando algo saindo da prÃ³pria floresta que estÃ¡ em todas direÃ§Ãµes.  Mas 
+descarta estÃ¡ sensaÃ§Ã£o pensando estar ficando paranÃ³ico.  VocÃª respira um ar 
+salgado, estarÃ¡ perto do oceano?  
 
 ~
-44 64 0 0 0 2
+44 g 2
 D1
 ~
 ~
@@ -1257,14 +1259,14 @@ D3
 0 -1 4457
 S
 #4459
-Uma Trilha Através da Floresta~
-   O caminho o leva através da floresta.  Parece que você pode ouvir uma voz
-sussurrando algo saindo da própria floresta que está em todas direções.  Mas 
-descarta está sensação pensando estar ficando paranóico.  Você respira um ar
-salgado, estará perto do oceano?  
+Uma Trilha AtravÃ©s da Floresta~
+   O caminho o leva atravÃ©s da floresta.  Parece que vocÃª pode ouvir uma voz
+sussurrando algo saindo da prÃ³pria floresta que estÃ¡ em todas direÃ§Ãµes.  Mas 
+descarta estÃ¡ sensaÃ§Ã£o pensando estar ficando paranÃ³ico.  VocÃª respira um ar
+salgado, estarÃ¡ perto do oceano?  
 
 ~
-44 64 0 0 0 2
+44 g 2
 D1
 ~
 ~
@@ -1276,24 +1278,24 @@ D3
 S
 #4460
 Uma Cabana~
-   Você está em uma grande cabana redonda com o telhado cônico.  As laterais 
-da cabana são protegidas e pequenas porcas de mármore também são produzidas.
-Uma pequena cama está encostada na parede leste e uma mesa com cadeiras fica 
+   VocÃª estÃ¡ em uma grande cabana redonda com o telhado cÃ´nico.  As laterais 
+da cabana sÃ£o protegidas e pequenas porcas de mÃ¡rmore tambÃ©m sÃ£o produzidas.
+Uma pequena cama estÃ¡ encostada na parede leste e uma mesa com cadeiras fica 
 a sua esquerda.
 ~
-44 64 0 0 0 3
+44 g 3
 D0
 ~
 ~
 0 -1 4451
 S
 #4461
-Uma Trilha Através da Aldeia~
-   O caminho no qual você está seguindo chega a duas pequenas cabanas.  Elas
-têm o formato redondo com telhados cônicos, são de uma cor verde escura e 
+Uma Trilha AtravÃ©s da Aldeia~
+   O caminho no qual vocÃª estÃ¡ seguindo chega a duas pequenas cabanas.  Elas
+tÃªm o formato redondo com telhados cÃ´nicos, sÃ£o de uma cor verde escura e 
 folhas parecem ainda crescer nelas, insinuando que podem estar vivas.    
 ~
-44 64 0 0 0 3
+44 g 3
 D0
 ~
 ~
@@ -1309,11 +1311,11 @@ D2
 S
 #4462
 Uma Cabana~
-   Você está em uma grande cabana redonda com o telhado cônico.  As laterais 
-da cabana são protegidas e pequenas porcas de mármore também são produzidas. 
+   VocÃª estÃ¡ em uma grande cabana redonda com o telhado cÃ´nico.  As laterais 
+da cabana sÃ£o protegidas e pequenas porcas de mÃ¡rmore tambÃ©m sÃ£o produzidas. 
 Esta cabana cheira levemente a peixe.
 ~
-44 8 0 0 0 0
+44 8 0
 D3
 ~
 ~
@@ -1321,13 +1323,13 @@ D3
 S
 #4463
 Uma Pequena Trilha~
-   Mais uma passagem do que uma trilha, o trajeto no qual você está seguindo 
-leva às portas de duas pequenas cabanas de palha.  Ambas tem formato redondo 
-com telhados cônicos, são de uma cor verde escura e folhas parecem ainda 
+   Mais uma passagem do que uma trilha, o trajeto no qual vocÃª estÃ¡ seguindo 
+leva Ã s portas de duas pequenas cabanas de palha.  Ambas tem formato redondo 
+com telhados cÃ´nicos, sÃ£o de uma cor verde escura e folhas parecem ainda 
 crescer nelas, insinuando que podem estar vivas.
 
 ~
-44 64 0 0 0 2
+44 g 2
 D0
 ~
 ~
@@ -1343,12 +1345,12 @@ D2
 S
 #4464
 Dentro da Cabana~
-   Você sente um cheiro diferente assim que entra na cabana.  Fica surpreso ao
- observar porcas de mármore feitas sob medida penduradas nas paredes da cabana.
- No lado norte, uma pequena mesa com três cadeiras foram arrumadas e uma cama 
-está de encontro à parede sul.    
+   VocÃª sente um cheiro diferente assim que entra na cabana.  Fica surpreso ao
+ observar porcas de mÃ¡rmore feitas sob medida penduradas nas paredes da cabana.
+ No lado norte, uma pequena mesa com trÃªs cadeiras foram arrumadas e uma cama 
+estÃ¡ de encontro Ã  parede sul.    
 ~
-44 8 0 0 0 0
+44 8 0
 D3
 ~
 ~
@@ -1356,12 +1358,12 @@ D3
 S
 #4465
 Uma Cabana~
-   Você sente um cheiro diferente assim que entra na cabana.  Fica surpreso ao
- observar porcas de mármore feitas sob medida penduradas nas paredes da cabana.
+   VocÃª sente um cheiro diferente assim que entra na cabana.  Fica surpreso ao
+ observar porcas de mÃ¡rmore feitas sob medida penduradas nas paredes da cabana.
   Bem ao centro uma grande mesa retangular de madeira nirin cercada por cadeira
-s torna o ambiente apropriado para as reuniões da cidade.
+s torna o ambiente apropriado para as reuniÃµes da cidade.
 ~
-44 8 0 0 0 0
+44 8 0
 D0
 ~
 ~
@@ -1369,37 +1371,37 @@ D0
 S
 #4466
 Uma Pequena Cabana~
-   Você sente um cheiro diferente assim que entra na cabana.  Fica surpreso ao
-observar porcas de mármore feitas sob medida penduradas nas paredes da cabana.
+   VocÃª sente um cheiro diferente assim que entra na cabana.  Fica surpreso ao
+observar porcas de mÃ¡rmore feitas sob medida penduradas nas paredes da cabana.
 No lado leste, uma pequena mesa com duas cadeiras foram arrumadas e uma cama 
-está de encontro à parede sul.    
+estÃ¡ de encontro Ã  parede sul.    
 ~
-44 8 0 0 0 0
+44 8 0
 D0
 ~
 ~
 0 -1 4463
 S
 #4467
-Uma Cabana de Vigilância~
+Uma Cabana de VigilÃ¢ncia~
    Nada muito interessante para se ver aqui.  Uma pequena mesa com cadeira 
-encontra-se próximo à parede norte enquanto uma cama de lona está armada na 
-parede oriental.  Um largo balde está no meio da sala parcialmente cheio de 
-uma água marrom, ele deve servir conter a goteira do telhado.    
+encontra-se prÃ³ximo Ã  parede norte enquanto uma cama de lona estÃ¡ armada na 
+parede oriental.  Um largo balde estÃ¡ no meio da sala parcialmente cheio de 
+uma Ã¡gua marrom, ele deve servir conter a goteira do telhado.    
 ~
-44 8 0 0 0 0
+44 8 0
 D2
 ~
 ~
 0 -1 4456
 S
 #4468
-Uma Trilha Através da Floresta~
-   Você desce por um estreito caminho que o leva através da floresta, ele está
- desgastado e regular, nenhuma planta cresce na passagem.  Isto sugere que está
+Uma Trilha AtravÃ©s da Floresta~
+   VocÃª desce por um estreito caminho que o leva atravÃ©s da floresta, ele estÃ¡
+ desgastado e regular, nenhuma planta cresce na passagem.  Isto sugere que estÃ¡
  em constante uso.    
 ~
-44 64 0 0 0 2
+44 g 2
 D0
 ~
 ~
@@ -1414,12 +1416,12 @@ D3
 0 -1 4459
 S
 #4469
-Uma Trilha Através da Floresta~
-   Você desce por um estreito caminho que o leva através da floresta, ele está
- desgastado e regular, nenhuma planta cresce na passagem.  Isto sugere que está
+Uma Trilha AtravÃ©s da Floresta~
+   VocÃª desce por um estreito caminho que o leva atravÃ©s da floresta, ele estÃ¡
+ desgastado e regular, nenhuma planta cresce na passagem.  Isto sugere que estÃ¡
  em constante uso.    
 ~
-44 64 0 0 0 2
+44 g 2
 D0
 ~
 ~
@@ -1431,12 +1433,12 @@ D3
 S
 #4476
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções
-até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
-arenoso , aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam
-ao redor e voltam à tona com o suave movimento das ondas.
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes
+atÃ© onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo
+arenoso , aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam
+ao redor e voltam Ã  tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -1456,12 +1458,12 @@ D3
 S
 #4477
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções
-até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo 
-arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
-redor e voltam à tona com o suave movimento das ondas.
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes
+atÃ© onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo 
+arenoso, aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam ao 
+redor e voltam Ã  tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -1477,12 +1479,12 @@ D2
 S
 #4478
 A Lagoa~
-   As águas da lagoa estendem-se completamente ao redor, sem fim.  Você não 
-consegue avistar nenhum sinal de terra firme.  Entretanto abaixo você vê uma 
-enorme construção de mármore bem lá no fundo da lagoa.  Será este o famoso 
-Templo da Água?
+   As Ã¡guas da lagoa estendem-se completamente ao redor, sem fim.  VocÃª nÃ£o 
+consegue avistar nenhum sinal de terra firme.  Entretanto abaixo vocÃª vÃª uma 
+enorme construÃ§Ã£o de mÃ¡rmore bem lÃ¡ no fundo da lagoa.  SerÃ¡ este o famoso 
+Templo da Ãgua?
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -1502,12 +1504,12 @@ D3
 S
 #4479
 A Lagoa~
-   As águas da lagoa estendem-se completamente ao redor, sem fim.  Você não 
-consegue avistar nenhum sinal de terra firme.  Entretanto abaixo você vê uma 
-enorme construção de mármore bem lá no fundo da lagoa.  Será este o famoso 
-Templo da Água?
+   As Ã¡guas da lagoa estendem-se completamente ao redor, sem fim.  VocÃª nÃ£o 
+consegue avistar nenhum sinal de terra firme.  Entretanto abaixo vocÃª vÃª uma 
+enorme construÃ§Ã£o de mÃ¡rmore bem lÃ¡ no fundo da lagoa.  SerÃ¡ este o famoso 
+Templo da Ãgua?
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -1527,12 +1529,12 @@ D3
 S
 #4480
 A Lagoa~
-   As águas da lagoa estendem-se completamente ao redor, sem fim.  Você não 
-consegue avistar nenhum sinal de terra firme.  Entretanto abaixo você vê uma 
-enorme construção de mármore bem lá no fundo da lagoa.  Será este o famoso 
-Templo da Água?
+   As Ã¡guas da lagoa estendem-se completamente ao redor, sem fim.  VocÃª nÃ£o 
+consegue avistar nenhum sinal de terra firme.  Entretanto abaixo vocÃª vÃª uma 
+enorme construÃ§Ã£o de mÃ¡rmore bem lÃ¡ no fundo da lagoa.  SerÃ¡ este o famoso 
+Templo da Ãgua?
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -1552,12 +1554,12 @@ D3
 S
 #4481
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções 
-até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo 
-arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
-redor e voltam à tona com o suave movimento das ondas.
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes 
+atÃ© onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo 
+arenoso, aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam ao 
+redor e voltam Ã  tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -1577,12 +1579,12 @@ D3
 S
 #4482
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções 
-até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo 
-arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
-redor e voltam à tona com o suave movimento das ondas.
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes 
+atÃ© onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo 
+arenoso, aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam ao 
+redor e voltam Ã  tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -1602,12 +1604,12 @@ D3
 S
 #4483
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções 
-até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo 
-arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
-redor e voltam à tona com o suave movimento das ondas.
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes 
+atÃ© onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo 
+arenoso, aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam ao 
+redor e voltam Ã  tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -1627,12 +1629,12 @@ D3
 S
 #4484
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções
-até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
-arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam 
-ao redor e voltam à tona com o suave movimento das ondas.
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes
+atÃ© onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo
+arenoso, aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam 
+ao redor e voltam Ã  tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -1652,12 +1654,12 @@ D3
 S
 #4485
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções 
-até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo 
-arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
-redor e voltam à tona com o suave movimento das ondas.
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes 
+atÃ© onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo 
+arenoso, aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam ao 
+redor e voltam Ã  tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D1
 ~
 ~
@@ -1673,12 +1675,12 @@ D3
 S
 #4486
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções 
-até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
-arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao
-redor e voltam à tona com o suave movimento das ondas.
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes 
+atÃ© onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo
+arenoso, aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam ao
+redor e voltam Ã  tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D1
 ~
 ~
@@ -1694,12 +1696,12 @@ D3
 S
 #4487
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções até
- onde sua visão pode alcançar.  Olhando para baixo você avista um fundo arenoso,
-aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao redor 
-e voltam à tona com o suave movimento das ondas.
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes atÃ©
+ onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo arenoso,
+aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam ao redor 
+e voltam Ã  tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D1
 ~
 ~
@@ -1715,12 +1717,12 @@ D3
 S
 #4488
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções 
-até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo 
-arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
-redor e voltam à tona com o suave movimento das ondas.
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes 
+atÃ© onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo 
+arenoso, aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam ao 
+redor e voltam Ã  tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -1740,12 +1742,12 @@ D3
 S
 #4489
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções 
-até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo 
-arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
-redor e voltam à tona com o suave movimento das ondas.
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes 
+atÃ© onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo 
+arenoso, aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam ao 
+redor e voltam Ã  tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -1765,12 +1767,12 @@ D3
 S
 #4490
 A Lagoa~
-   As águas da lagoa estendem-se completamente ao redor, sem fim.  Você não 
-consegue avistar nenhum sinal de terra firme.  Entretanto abaixo você vê uma 
-enorme construção de mármore bem lá no fundo da lagoa.  Será este o famoso 
-Templo da Água?
+   As Ã¡guas da lagoa estendem-se completamente ao redor, sem fim.  VocÃª nÃ£o 
+consegue avistar nenhum sinal de terra firme.  Entretanto abaixo vocÃª vÃª uma 
+enorme construÃ§Ã£o de mÃ¡rmore bem lÃ¡ no fundo da lagoa.  SerÃ¡ este o famoso 
+Templo da Ãgua?
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -1790,12 +1792,12 @@ D3
 S
 #4491
 A Lagoa~
-   As águas da lagoa estendem-se completamente ao redor, sem fim.  Você não 
-consegue avistar nenhum sinal de terra firme.  Entretanto abaixo você vê uma 
-enorme construção de mármore bem lá no fundo da lagoa.  Será este o famoso 
-Templo da Água?
+   As Ã¡guas da lagoa estendem-se completamente ao redor, sem fim.  VocÃª nÃ£o 
+consegue avistar nenhum sinal de terra firme.  Entretanto abaixo vocÃª vÃª uma 
+enorme construÃ§Ã£o de mÃ¡rmore bem lÃ¡ no fundo da lagoa.  SerÃ¡ este o famoso 
+Templo da Ãgua?
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -1815,12 +1817,12 @@ D3
 S
 #4492
 A Lagoa~
-   As águas da lagoa estendem-se completamente ao redor, sem fim.  Você não 
-consegue avistar nenhum sinal de terra firme.  Entretanto abaixo você vê uma 
-enorme construção de mármore bem lá no fundo da lagoa.  Será este o famoso 
-Templo da Água?
+   As Ã¡guas da lagoa estendem-se completamente ao redor, sem fim.  VocÃª nÃ£o 
+consegue avistar nenhum sinal de terra firme.  Entretanto abaixo vocÃª vÃª uma 
+enorme construÃ§Ã£o de mÃ¡rmore bem lÃ¡ no fundo da lagoa.  SerÃ¡ este o famoso 
+Templo da Ãgua?
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -1840,12 +1842,12 @@ D3
 S
 #4493
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções 
-até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo 
-arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
-redor e voltam à tona com o suave movimento das ondas.
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes 
+atÃ© onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo 
+arenoso, aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam ao 
+redor e voltam Ã  tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D0
 ~
 ~
@@ -1861,12 +1863,12 @@ D2
 S
 #4494
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções 
-até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo 
-arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
-redor e voltam à tona com o suave movimento das ondas.
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes 
+atÃ© onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo 
+arenoso, aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam ao 
+redor e voltam Ã  tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D1
 ~
 ~
@@ -1878,12 +1880,12 @@ D2
 S
 #4495
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções
-até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo 
-arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes
+atÃ© onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo 
+arenoso, aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam ao 
 redor e voltam a tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D1
 ~
 ~
@@ -1899,12 +1901,12 @@ D3
 S
 #4496
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções até
- onde sua visão pode alcançar.  Olhando para baixo você avista um fundo arenoso,
-aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao redor e
-voltam à tona com o suave movimento das ondas.
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes atÃ©
+ onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo arenoso,
+aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam ao redor e
+voltam Ã  tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D1
 ~
 ~
@@ -1920,12 +1922,12 @@ D3
 S
 #4497
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções 
-até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo 
-arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
-redor e voltam à tona com o suave movimento das ondas.
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes 
+atÃ© onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo 
+arenoso, aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam ao 
+redor e voltam Ã  tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D1
 ~
 ~
@@ -1941,12 +1943,12 @@ D3
 S
 #4498
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções 
-até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo 
-arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
-redor e voltam à tona com o suave movimento das ondas.
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes 
+atÃ© onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo 
+arenoso, aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam ao 
+redor e voltam Ã  tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D1
 ~
 ~
@@ -1962,12 +1964,12 @@ D3
 S
 #4499
 A Lagoa~
-   A água cristalina da lagoa que o cerca estende-se para todas as direções 
-até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo 
-arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam 
-ao redor e voltam à tona com o suave movimento das ondas.
+   A Ã¡gua cristalina da lagoa que o cerca estende-se para todas as direÃ§Ãµes 
+atÃ© onde sua visÃ£o pode alcanÃ§ar.  Olhando para baixo vocÃª avista um fundo 
+arenoso, aproximadamente a vinte pÃ©s.  Pequenos pedaÃ§os de madeira flutuam 
+ao redor e voltam Ã  tona com o suave movimento das ondas.
 ~
-44 64 0 0 0 7
+44 g 7
 D2
 ~
 ~
@@ -1977,4 +1979,4 @@ D3
 ~
 0 -1 4498
 S
-$~
+$
