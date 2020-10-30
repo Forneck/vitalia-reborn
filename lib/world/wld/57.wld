@@ -1,10 +1,10 @@
 #5700
-O Caminho até o Campo~
-   Você está ao norte da passagem, em uma trilha estreita por entre
-espinhentos arbustos e densa folhagem.  É possível avistar, mais afrente,
+O Caminho atÃ© o Campo~
+   VocÃª estÃ¡ ao norte da passagem, em uma trilha estreita por entre
+espinhentos arbustos e densa folhagem.  Ã‰ possÃ­vel avistar, mais afrente,
 um extenso campo.
 ~
-57 0 0 0 0 3
+57 0 3
 D0
 ~
 ~
@@ -15,12 +15,12 @@ D2
 0 -1 1105
 S
 #5701
-O Caminho até o Campo~
-   Você está no fim da trilha entreita, sendo possível agora ver o extenso
-campo que se segue até onde sua vista alcança.  Pelo sul você volta a
+O Caminho atÃ© o Campo~
+   VocÃª estÃ¡ no fim da trilha entreita, sendo possÃ­vel agora ver o extenso
+campo que se segue atÃ© onde sua vista alcanÃ§a.  Pelo sul vocÃª volta a
 caminhar pela trilha.
 ~
-57 0 0 0 0 3
+57 0 3
 D0
 ~
 ~
@@ -28,16 +28,16 @@ D0
 D2
 ~
 ~
-0 -1 5700
+0 -1 5700 
 S
 #5702
 O Grande Campo~
-   Você está parado em um grande campo com relva alta.  O cheiro da terra
-fresca e a luz do sol o envolve.  O ambiente é preenchido pelo gorjeio dos
-pássaros, que alegremente estão construindo seus ninhos de emaranhados de
-grama.  Um campo aberto segue na direção leste-sul.
+   VocÃª estÃ¡ parado em um grande campo com relva alta.  O cheiro da terra
+fresca e a luz do sol o envolve.  O ambiente Ã© preenchido pelo gorjeio dos
+pÃ¡ssaros, que alegremente estÃ£o construindo seus ninhos de emaranhados de
+grama.  Um campo aberto segue na direÃ§Ã£o leste-sul.
 ~
-57 0 0 0 0 2
+57 0 2
 D2
 ~
 ~
@@ -50,13 +50,13 @@ S
 #5703
 O Limiar da Floresta~
    A relva brota fina e rasteira aqui e finalmente se une a uma fila de
-árvores.  Ao longe, para norte, uma nuvem carregada flutua no céu em sinal
-de mau presságio mas curiosamente aqui continua bastante agradável ainda.
+Ã¡rvores.  Ao longe, para norte, uma nuvem carregada flutua no cÃ©u em sinal
+de mau pressÃ¡gio mas curiosamente aqui continua bastante agradÃ¡vel ainda.
 Grilos cricrilam alegremente, e os raios de sol aquecem sua pele.  O grande
-campo segue para ala leste de volta à relva e desaparece para o flanco
+campo segue para ala leste de volta Ã  relva e desaparece para o flanco
 oeste, para dentro da floresta.
 ~
-57 0 0 0 0 3
+57 0 3
 D0
 ~
 ~
@@ -73,13 +73,13 @@ S
 #5704
 Entrada para a Floresta de Graye~
    O caminho torna-se sombrio aqui e a temperatura subitamente cai.  Enormes
-folhas amplas de árvore unem-se para amenizar a luz do sol deixando o chão
+folhas amplas de Ã¡rvore unem-se para amenizar a luz do sol deixando o chÃ£o
 da floresta rajado de finos raios de sol que atravessam as folhas.  O grande
-campo torna-se mais amplo aqui mostrando vestígios de largo uso recente.  O
-Grande campo segue para leste e oeste e você ainda pode se aventurar
+campo torna-se mais amplo aqui mostrando vestÃ­gios de largo uso recente.  O
+Grande campo segue para leste e oeste e vocÃª ainda pode se aventurar
 adentrando a floresta no sentido norte-sul.
 ~
-57 0 0 0 0 3
+57 0 3
 D0
 ~
 ~
@@ -99,10 +99,10 @@ D3
 S
 #5705
 A Floresta de Graye~
-   Você está em uma floresta de madeiras de lei, caminhando por entre os
+   VocÃª estÃ¡ em uma floresta de madeiras de lei, caminhando por entre os
 ruidosos seres que aqui habitam.
 ~
-57 0 0 0 0 3
+57 0 3 
 D2
 ~
 ~
@@ -114,10 +114,10 @@ D3
 S
 #5706
 A Floresta de Graye~
-   Você está em uma floresta de madeiras de lei, caminhando por entre os
+   VocÃª estÃ¡ em uma floresta de madeiras de lei, caminhando por entre os
 ruidosos seres que aqui habitam.
 ~
-57 0 0 0 0 3
+57 0 3
 D0
 ~
 ~
@@ -133,10 +133,10 @@ D3
 S
 #5707
 A Floresta de Graye~
-   Você está em uma floresta de madeiras de lei, caminhando por entre os
+   VocÃª estÃ¡ em uma floresta de madeiras de lei, caminhando por entre os
 ruidosos seres que aqui habitam.
 ~
-57 0 0 0 0 3
+57 0 3
 D0
 ~
 ~
@@ -152,10 +152,10 @@ D3
 S
 #5708
 A Floresta de Graye~
-   Você está em uma floresta de madeiras de lei, caminhando por entre os
+   VocÃª estÃ¡ em uma floresta de madeiras de lei, caminhando por entre os
 ruidosos seres que aqui habitam.
 ~
-57 0 0 0 0 3
+57 0 3 
 D0
 ~
 ~
@@ -167,12 +167,12 @@ D3
 S
 #5709
 A Floresta de Graye~
-   Você está em uma floresta de madeiras de lei, caminhando por entre os
-ruidosos seres que aqui habitam.  Há um abrupto penhasco voltado para oeste
+   VocÃª estÃ¡ em uma floresta de madeiras de lei, caminhando por entre os
+ruidosos seres que aqui habitam.  HÃ¡ um abrupto penhasco voltado para oeste
 subindo pela floresta.  Uma tabuleta perfeitamente pregada na encosta do
 penhasco.
 ~
-57 0 0 0 0 3
+57 0 3 
 D1
 ~
 ~
@@ -182,36 +182,36 @@ D2
 ~
 0 -1 5710
 E
+penhasco encosta ~
+A encosta do penhasco parece impossÃ­vel de se escalar.
+~
+E
 placa tabuleta pregada~
-Você pode ler:
+VocÃª pode ler:
 
 ******************************
 *                            *
-*        A  Área Graye       *   
+*        A  Ãrea Graye       *   
 *         Escrita por:       *
 *      Aten of GenericMUD    *
 *         Abril de  1994     *
 *     Traduzida por          *
 *         Boromir            *
-*       	yVitália Mud	n          * 
+*       @yVitÃ¡lia Mud@n          * 
 *      Dezembro de 2000      *
 *                            *
 *                            *
 *                            *
 ******************************
 ~
-E
-penhasco encosta ~
-A encosta do penhasco parece impossível de se escalar.
-~
 S
 #5710
 A Floresta de Graye~
-   Você está em uma floresta de madeiras de lei, caminhando por entre os
-ruidosos seres que aqui habitam.  Há um abrupto penhasco voltado para oeste,
+   VocÃª estÃ¡ em uma floresta de madeiras de lei, caminhando por entre os
+ruidosos seres que aqui habitam.  HÃ¡ um abrupto penhasco voltado para oeste,
 erguendo-se sobre a floresta.
 ~
-57 0 0 0 0 3
+57 0 3 
 D0
 ~
 ~
@@ -225,16 +225,16 @@ D2
 ~
 0 -1 5711
 E
-penhasco encosta ~
-A encosta do penhasco parece impossível de se escalar.
+penhasco encosta~
+A encosta do penhasco parece impossÃ­vel de se escalar.
 ~
 S
 #5711
 A Floresta de Graye~
-   Você está em uma floresta de madeiras de lei, caminhando por entre os
+   VocÃª estÃ¡ em uma floresta de madeiras de lei, caminhando por entre os
 ruidosos seres que aqui habitam.  O grande campo termina de repente aqui.
 ~
-57 0 0 0 0 3
+57 0 3 
 D0
 ~
 ~
@@ -254,10 +254,10 @@ D3
 S
 #5712
 A Floresta de Graye~
-   Você está em uma floresta de madeiras de lei, caminhando por entre os
+   VocÃª estÃ¡ em uma floresta de madeiras de lei, caminhando por entre os
 ruidosos seres que aqui habitam.
 ~
-57 0 0 0 0 3
+57 0 3 
 D0
 ~
 ~
@@ -277,10 +277,10 @@ D3
 S
 #5713
 A Floresta de Graye~
-   Você está em uma floresta de madeiras de lei, caminhando por entre os
+   VocÃª estÃ¡ em uma floresta de madeiras de lei, caminhando por entre os
 ruidosos seres que aqui habitam.
 ~
-57 0 0 0 0 3
+57 0 3 
 D0
 ~
 ~
@@ -292,11 +292,11 @@ D1
 S
 #5714
 A Floresta de Graye~
-   Você está em uma floresta de madeiras de lei, caminhando por entre os
-ruidosos seres que aqui habitam.  Há um abrupto penhasco voltado para norte,
+   VocÃª estÃ¡ em uma floresta de madeiras de lei, caminhando por entre os
+ruidosos seres que aqui habitam.  HÃ¡ um abrupto penhasco voltado para norte,
 erguendo-se sobre a floresta.
 ~
-57 0 0 0 0 3
+57 0 3 
 D1
 ~
 ~
@@ -311,15 +311,15 @@ D3
 0 -1 5717
 E
 penhasco encosta~
-A encosta do penhasco parece impossível de se escalar.
+A encosta do penhasco parece impossÃ­vel de se escalar.
 ~
 S
 #5715
 A Floresta de Graye~
-   Você está em uma floresta de madeiras de lei, caminhando por entre os
+   VocÃª estÃ¡ em uma floresta de madeiras de lei, caminhando por entre os
 ruidosos seres que aqui habitam.
 ~
-57 0 0 0 0 3
+57 0 3 
 D0
 ~
 ~
@@ -339,10 +339,10 @@ D3
 S
 #5716
 A Floresta de Graye~
-   Você está em uma floresta de madeiras de lei, caminhando por
+   VocÃª estÃ¡ em uma floresta de madeiras de lei, caminhando por
 entre os ruidosos seres que aqui habitam.
 ~
-57 0 0 0 0 3
+57 0 3 
 D0
 ~
 ~
@@ -358,11 +358,11 @@ D3
 S
 #5717
 A Floresta de Graye~
-   Você está em uma floresta de madeiras de lei, caminhando por entre os
-ruidosos seres que aqui habitam.  Há um penhasco voltado para o norte e
+   VocÃª estÃ¡ em uma floresta de madeiras de lei, caminhando por entre os
+ruidosos seres que aqui habitam.  HÃ¡ um penhasco voltado para o norte e
 outro para sudoeste.
 ~
-57 0 0 0 0 3
+57 0 3 
 D1
 ~
 ~
@@ -381,16 +381,16 @@ D9
 0 -1 800
 E
 penhasco voltado~
-Parece que se você botasse seu dedão direito aqui e sua mão esquerda aqui,
-você conseguiria escalá-lo.
+Parece que se vocÃª botasse seu dedÃ£o direito aqui e sua mÃ£o esquerda aqui,
+vocÃª conseguiria escalÃ¡-lo.
 ~
 S
 #5718
 A Floresta de Graye~
-   Você está em uma floresta de madeiras de lei, caminhando por
+   VocÃª estÃ¡ em uma floresta de madeiras de lei, caminhando por
 entre os ruidosos seres que aqui habitam.
 ~
-57 0 0 0 0 3
+57 0 3 
 D0
 ~
 ~
@@ -406,10 +406,10 @@ D2
 S
 #5719
 A Floresta de Graye~
-   Você está em uma floresta de madeiras de lei, caminhando por
+   VocÃª estÃ¡ em uma floresta de madeiras de lei, caminhando por
 entre os ruidosos seres que aqui habitam.
 ~
-57 0 0 0 0 3
+57 0 3 
 D0
 ~
 ~
@@ -421,12 +421,12 @@ D1
 S
 #5720
 A Encosta do Penhasco~
-   Você traça seu caminho para cima, mão após mão, procurando um melhor
-apoio para os pés.  O suor cai em seus olhos e sua respiração vai ficando
-ofegante.  Você ainda pode se jogar a salvo no chão da floresta, ou
+   VocÃª traÃ§a seu caminho para cima, mÃ£o apÃ³s mÃ£o, procurando um melhor
+apoio para os pÃ©s.  O suor cai em seus olhos e sua respiraÃ§Ã£o vai ficando
+ofegante.  VocÃª ainda pode se jogar a salvo no chÃ£o da floresta, ou
 continuar subindo loucamente.
 ~
-57 0 0 0 0 5
+57 0 5 
 D4
 ~
 ~
@@ -437,13 +437,13 @@ D5
 0 0 5717
 S
 #5721
-A Saliência~
-   Sua subida é interrompida pelo que parece ser uma saliência.  Poderia ser
-um excelente lugar para um descanso..  Se você não estivesse exatamente
-embaixo dele.  Você observa as coisas ao seu redor procurando por um caminho
+A SaliÃªncia~
+   Sua subida Ã© interrompida pelo que parece ser uma saliÃªncia.  Poderia ser
+um excelente lugar para um descanso..  Se vocÃª nÃ£o estivesse exatamente
+embaixo dele.  VocÃª observa as coisas ao seu redor procurando por um caminho
 alternativo.
 ~
-57 0 0 0 0 5
+57 0 5 
 D1
 ~
 ~
@@ -455,35 +455,35 @@ D5
 S
 #5722
 Estando Por um Fio~
-   Assim que você alcança a próxima saliência, a pedra se desprende e começa
-a cair, cair e cair até o chão.  Você mal consegue salvar-se, pendurando-se
-desesperadamente na pedra que apoiava sua outra mão.  Voltar para oeste está
-fora de cogitação mas você pode tomar impulso para subir em uma frágil pedra
-posta na posição horizontal.
+   Assim que vocÃª alcanÃ§a a prÃ³xima saliÃªncia, a pedra se desprende e comeÃ§a
+a cair, cair e cair atÃ© o chÃ£o.  VocÃª mal consegue salvar-se, pendurando-se
+desesperadamente na pedra que apoiava sua outra mÃ£o.  Voltar para oeste estÃ¡
+fora de cogitaÃ§Ã£o mas vocÃª pode tomar impulso para subir em uma frÃ¡gil pedra
+posta na posiÃ§Ã£o horizontal.
 ~
-57 0 0 0 0 5
+57 0 5 
 D4
 ~
 ~
 0 -1 5723
 E
-frágil pedra horizontal~
-A pedra é bastante estreita, talvez dois pés de largura na parte mais ampla.
+fragil pedra horizontal~
+A pedra Ã© bastante estreita, talvez dois pÃ©s de largura na parte mais ampla.
 ~
 S
 #5723
-A Frágil Pedra~
-   Você está parado em uma pedra muito frágil, larga o suficiente para seus
-pés de lado.  A pedra se extende para leste e oeste.
+A FrÃ¡gil Pedra~
+   VocÃª estÃ¡ parado em uma pedra muito frÃ¡gil, larga o suficiente para seus
+pÃ©s de lado.  A pedra se extende para leste e oeste.
 ~
-57 0 0 0 0 5
+57 0 5
 D1
-A pedra parece um tanto instável ali.
+A pedra parece um tanto instÃ¡vel ali.
 ~
 ~
 0 -1 5725
 D3
-A pedra se alonga um pouco mais para lá.
+A pedra se alonga um pouco mais para lÃ¡.
 ~
 ~
 0 -1 5724
@@ -492,19 +492,19 @@ D4
 ~
 0 -1 2060
 D5
-Eu não tentaria...
+Eu nÃ£o tentaria...
 ~
 ~
 0 -1 5725
 S
 #5724
 A Pedra~
-   Você se encontra em uma pedra plana muito larga.  Você poderia deitar-se
-aqui e tirar uma bela soneca também se quisesse.  Ao sul você tem uma vista
-espetacular de toda a floresta.  Há também um outro calço para os pés seguro
-até o topo do penhasco, tudo para uma fácil escalada.
+   VocÃª se encontra em uma pedra plana muito larga.  VocÃª poderia deitar-se
+aqui e tirar uma bela soneca tambÃ©m se quisesse.  Ao sul vocÃª tem uma vista
+espetacular de toda a floresta.  HÃ¡ tambÃ©m um outro calÃ§o para os pÃ©s seguro
+atÃ© o topo do penhasco, tudo para uma fÃ¡cil escalada.
 ~
-57 0 0 0 0 5
+57 0 5
 D1
 ~
 ~
@@ -516,14 +516,14 @@ D4
 S
 #5725
 OPA!!~
-   "AAAAAHHHH!", você grita enquanto despenca em direção a terra.  O chão se
-aproxima e você se prepara para o impacto.  De repente, num piscar de olhos,
-você se sente flutuando em meio a uma luz branca.  Você percebe que há um
+   "AAAAAHHHH!", vocÃª grita enquanto despenca em direÃ§Ã£o a terra.  O chÃ£o se
+aproxima e vocÃª se prepara para o impacto.  De repente, num piscar de olhos,
+vocÃª se sente flutuando em meio a uma luz branca.  VocÃª percebe que hÃ¡ um
 brilho no olho dos deuses.
 
-   "Sua hora ainda não chegou.." - eles profetizam.
+   "Sua hora ainda nÃ£o chegou.." - eles profetizam.
 ~
-57 0 0 0 0 0
+57 0 0  
 D5
 ~
 ~
@@ -531,13 +531,13 @@ D5
 S
 #5726
 No Topo do Penhasco~
-   Você alcança o topo do penhasco e luta para manter-se de pé.  Por alguns
-instantes você consegue vislumbrar tudo, sem perder absolutamente nada de
-vista.  Para o sul e leste você vê a floresta vindo em direção à encosta do
-penhasco e ao norte você percebe uma clareira nas vizinhanças de uma pequena
+   VocÃª alcanÃ§a o topo do penhasco e luta para manter-se de pÃ©.  Por alguns
+instantes vocÃª consegue vislumbrar tudo, sem perder absolutamente nada de
+vista.  Para o sul e leste vocÃª vÃª a floresta vindo em direÃ§Ã£o Ã  encosta do
+penhasco e ao norte vocÃª percebe uma clareira nas vizinhanÃ§as de uma pequena
 cidade.
 ~
-57 0 0 0 0 2
+57 0 2
 D0
 ~
 ~
@@ -549,10 +549,10 @@ D5
 S
 #5727
 A Clareira~
-   Você está em uma ampla clareira entre os muros da cidade e da floresta.
-Você nota alguns homens no alto do muro, gesticulando e apontando para você.
+   VocÃª estÃ¡ em uma ampla clareira entre os muros da cidade e da floresta.
+VocÃª nota alguns homens no alto do muro, gesticulando e apontando para vocÃª.
 ~
-57 0 0 0 0 2
+57 0 2
 D0
 ~
 ~
@@ -569,10 +569,10 @@ A floresta parece MUITO escura.
 S
 #5728
 A Clareira~
-   Você está em uma ampla clareira entre os muros da cidade e a floresta.
-Você nota alguns homens no alto do muro, gesticulando e apontando para você.
+   VocÃª estÃ¡ em uma ampla clareira entre os muros da cidade e a floresta.
+VocÃª nota alguns homens no alto do muro, gesticulando e apontando para vocÃª.
 ~
-57 0 0 0 0 2
+57 0 2 
 D0
 ~
 ~
@@ -592,10 +592,10 @@ D3
 S
 #5729
 A Clareira~
-   Você está em uma ampla clareira entre os muros da cidade e a floresta.
-Você nota alguns homens no alto do muro, gesticulando e apontando para você.
+   VocÃª estÃ¡ em uma ampla clareira entre os muros da cidade e a floresta.
+VocÃª nota alguns homens no alto do muro, gesticulando e apontando para vocÃª.
 ~
-57 0 0 0 0 2
+57 0 2 
 D0
 ~
 ~
@@ -611,10 +611,10 @@ D3
 S
 #5730
 A Clareira~
-   Você está em uma ampla clareira entre os muros da cidade e a floresta.
-Você nota alguns homens no alto do muro, gesticulando e apontando para você.
+   VocÃª estÃ¡ em uma ampla clareira entre os muros da cidade e a floresta.
+VocÃª nota alguns homens no alto do muro, gesticulando e apontando para vocÃª.
 ~
-57 0 0 0 0 2
+57 0 2 
 D2
 ~
 ~
@@ -625,14 +625,14 @@ A floresta parece MUITO escura.
 ~
 0 -1 5734
 S
-#5731
+#5731 
 Entrada para a Cidade de Graye~
-   Você está parado em frente ao grande portão da cidade de Graye.  Soldados
-ornados com plumas vermelhas levantam a porta de grades levadiça e apressam
-você a entrar rapidamente.
+   VocÃª estÃ¡ parado em frente ao grande portÃ£o da cidade de Graye.  Soldados
+ornados com plumas vermelhas levantam a porta de grades levadiÃ§a e apressam
+vocÃª a entrar rapidamente.
 ~
-57 0 0 0 0 2
-D0
+57 0 2
+D0 
 Parece seguro...
 ~
 ~
@@ -640,11 +640,11 @@ Parece seguro...
 S
 #5732
 A Clareira~
-   Você está em uma ampla clareira entre os muros da cidade e a floresta.
-Você nota alguns homens no alto do muro, gesticulando e apontando para você.
+   VocÃª estÃ¡ em uma ampla clareira entre os muros da cidade e a floresta.
+VocÃª nota alguns homens no alto do muro, gesticulando e apontando para vocÃª.
 
 ~
-57 0 0 0 0 2
+57 0 2 
 D1
 A floresta parece MUITO escura.
 ~
@@ -656,31 +656,31 @@ D2
 0 -1 5729
 S
 #5733
-O Bosque do Demônio~
-   Você se encontra em meio a um emaranhado de espinhos retorcidos de
-árvores gigantescas.  O orvalho cobre o chão da floresta e tudo está
+O Bosque do DemÃ´nio~
+   VocÃª se encontra em meio a um emaranhado de espinhos retorcidos de
+Ã¡rvores gigantescas.  O orvalho cobre o chÃ£o da floresta e tudo estÃ¡
 completamente tranquilo.
 ~
-57 1 0 0 0 3
+57 1 3
 D0
 ~
 ~
 0 -1 5734
 D1
-Salvação!
+SalvaÃ§Ã£o!
 ~
 ~
 0 -1 5727
 S
 #5734
-O Bosque do Demônio~
-   Você se encontra em meio a um emaranhado de espinhos retorcidos de
-árvores gigantescas.  O orvalho cobre o chão da floresta e tudo está
+O Bosque do DemÃ´nio~
+   VocÃª se encontra em meio a um emaranhado de espinhos retorcidos de
+Ã¡rvores gigantescas.  O orvalho cobre o chÃ£o da floresta e tudo estÃ¡
 completamente tranquilo.
 ~
-57 1 0 0 0 3
+57 1 3 
 D1
-Salvação!
+SalvaÃ§Ã£o!
 ~
 ~
 0 -1 5730
@@ -690,35 +690,35 @@ D2
 0 -1 5733
 S
 #5735
-O Bosque do Demônio~
-   Você se encontra em meio a um emaranhado de espinhos retorcidos de
-árvores gigantescas.  O orvalho cobre o chão da floresta e tudo está
+O Bosque do DemÃ´nio~
+   VocÃª se encontra em meio a um emaranhado de espinhos retorcidos de
+Ã¡rvores gigantescas.  O orvalho cobre o chÃ£o da floresta e tudo estÃ¡
 completamente tranquilo.
 ~
-57 1 0 0 0 3
+57 1 3
 D2
 ~
 ~
 0 -1 5736
 D3
-Salvação!
+SalvaÃ§Ã£o!
 ~
 ~
 0 -1 5732
 S
 #5736
-O Bosque do Demônio~
-   Você se encontra em meio a um emaranhado de espinhos retorcidos de
-árvores gigantescas.  O orvalho cobre o chão da floresta e tudo está
+O Bosque do DemÃ´nio~
+   VocÃª se encontra em meio a um emaranhado de espinhos retorcidos de
+Ã¡rvores gigantescas.  O orvalho cobre o chÃ£o da floresta e tudo estÃ¡
 completamente tranquilo.
 ~
-57 1 0 0 0 3
+57 1 3 
 D0
 ~
 ~
 0 -1 5735
 D3
-Salvação!
+SalvaÃ§Ã£o!
 ~
 ~
 0 -1 5729
@@ -726,12 +726,12 @@ S
 #5737
 A Rua da Cidade~
    Casas simples, postas lado a lado dos dois lados da rua e sentinelas em
-cada esquina.  Há um castelo e mais ruas para o leste e oeste.  Um grande
+cada esquina.  HÃ¡ um castelo e mais ruas para o leste e oeste.  Um grande
 cartaz foi afixado no muro aqui.
 ~
-57 0 0 0 0 1
+57 0 1 
 D0
-Você enxerga o Castelo.
+VocÃª enxerga o Castelo.
 ~
 ~
 0 -1 5741
@@ -745,16 +745,16 @@ D3
 0 -1 5738
 E
 cartaz grande~
-Há um cartaz aqui, que diz:
+HÃ¡ um cartaz aqui, que diz:
 
-                         	RATENÇÃO CIDADÃOS D 1 GRAYE!	n
+                         @RATENÃ‡ÃƒO CIDADÃƒOS DE GRAYE!@n
 
-Devido aos demonios sitiando nossa cidade, sua invasão durante o turno da
-noite e o recente sequestro do Rei Relnar, nós pedimos a todos os cidadãos
-para prestarem atenção ao sino das 19 horas!  Aqueles que se aventuram fora
+Devido aos demonios sitiando nossa cidade, sua invasÃ£o durante o turno da
+noite e o recente sequestro do Rei Relnar, nÃ³s pedimos a todos os cidadÃ£os
+para prestarem atenÃ§Ã£o ao sino das 19 horas!  Aqueles que se aventuram fora
 das ruas da cidade, correm o risco de serem
 
-                      	RCAPTURADOS E MORTOS 	npelo inimigo!
+                      @RCAPTURADOS E MORTOS @npelo inimigo!
 
 Assinado,
 
@@ -764,19 +764,19 @@ S
 #5738
 A Rua da Cidade~
    Pequenas casas alinhadas lado a lado dos dois lados da rua e e sentinelas
-armados foram deixados de guarda a cada esquina.  Você vê um pequeno papel
+armados foram deixados de guarda a cada esquina.  VocÃª vÃª um pequeno papel
 colado na parede.
 ~
-57 0 0 0 0 1
+57 0 1 
 D1
 ~
 ~
 0 -1 5737
 E
 papel pequeno~
-Está escrito:
+EstÃ¡ escrito:
 
-Grande recompensa será dada àquele que puder resgatar nosso querido e
+Grande recompensa serÃ¡ dada Ã quele que puder resgatar nosso querido e
 bondoso Rei Relnar.
 ~
 S
@@ -785,7 +785,7 @@ A Rua da Cidade~
    Pequenas casas alinhadas lado a lado dos dois lados da rua e sentinelas
 armados foram deixados de guarda a cada esquina.
 ~
-57 0 0 0 0 1
+57 0 1
 D3
 ~
 ~
@@ -793,10 +793,10 @@ D3
 S
 #5740
 Dentro do Castelo~
-   Tudo aqui está uma bagunça.  Mobílias foram reviradas, pinturas rasgadas,
-cada ornamento de ouro extraído e levado.
+   Tudo aqui estÃ¡ uma bagunÃ§a.  MobÃ­lias foram reviradas, pinturas rasgadas,
+cada ornamento de ouro extraÃ­do e levado.
 ~
-57 0 0 0 0 1
+57 0 1
 D1
 ~
 ~
@@ -804,11 +804,11 @@ D1
 S
 #5741
 Entrada para o Castelo de Relnar~
-   Você se depara com o portão entreaberto do castelo.  Você nota o completo
-silêncio de dentro.  A vida na cidade continua animada a sua volta.
+   VocÃª se depara com o portÃ£o entreaberto do castelo.  VocÃª nota o completo
+silÃªncio de dentro.  A vida na cidade continua animada a sua volta.
 ~
-57 0 0 0 0 1
-D0
+57 0 1
+D0 
 ~
 ~
 0 -1 5744
@@ -827,37 +827,38 @@ D3
 S
 #5742
 Dentro do Castelo~
-   Tudo aqui está uma bagunça.  Mobílias foram reviradas, pinturas rasgadas,
+   Tudo aqui estÃ¡ uma bagunÃ§a.  MobÃ­lias foram reviradas, pinturas rasgadas,
 cada ornamento de ouro extraido e levado.
 ~
-57 0 0 0 0 0
+57 0 0 
 D3
 ~
 ~
 0 -1 5741
 S
 #5743
-Escritório de Relnar~
-   Assim que você adentra este aposento você pode sentí-lo vivo.  Uma aura
-mágica de bondade preenche ente quarto e tudo está em perfeita ordem.
+EscritÃ³rio de Relnar~
+   Assim que vocÃª adentra este aposento vocÃª pode sentÃ­-lo vivo.  Uma aura
+mÃ¡gica de bondade preenche ente quarto e tudo estÃ¡ em perfeita ordem.
 ~
-57 0 0 0 0 0
+57 0 0 
 D1
 ~
 ~
 0 -1 5744
 D5
-Você vê alguns tacos.
+VocÃª vÃª alguns tacos.
 ~
 tacos secreto secreta~
+:n 2 alguns tacos
 2 5723 5759
 S
 #5744
 A sala do Trono~
-   O trono do Rei Relnar está aqui, vazio.  Você nota aposentos para o leste
+   O trono do Rei Relnar estÃ¡ aqui, vazio.  VocÃª nota aposentos para o leste
 e oeste.
 ~
-57 4 0 0 0 0
+57 4 0
 D1
 ~
 ~
@@ -874,38 +875,39 @@ D5
 Aha! Uma porta Secreta!
 ~
 porta secreta~
+:n 2 A porta secreta
 2 5701 5746
 S
 #5745
 Quarto de Rymat~
-   Você se encontra em um pequeno quarto simples.  Há uma cama, uma
+   VocÃª se encontra em um pequeno quarto simples.  HÃ¡ uma cama, uma
 escrivaninha e, finalmente, uma banheira bem trabalhada.
 ~
-57 0 0 0 0 0
+57 0 0  
 D3
 ~
 ~
-0 65526 5744
+0 -10 5744
 E
-Banheira banho trabalhada~
-É uma ótima banheira.
+cama~
+EstÃ¡ limpa e bem arrumada. Uma bela cama.
 ~
 E
 escrivaninha~
-É somente uma escrivaninha simples, sem gavetas ou puxadores.
+Ã‰ somente uma escrivaninha simples, sem gavetas ou puxadores.
 ~
 E
-cama~
-Está limpa e bem arrumada. Uma bela cama.
+Banheira banho trabalhada~
+Ã‰ uma Ã³tima banheira.
 ~
 S
 #5746
-O Túnel~
-   O chão do túnel está um pouco empoeirado e as paredes são de pedra e
-parecem sólidas.  Tochas mágicas estão postas em cada lado das paredes do
+O TÃºnel~
+   O chÃ£o do tÃºnel estÃ¡ um pouco empoeirado e as paredes sÃ£o de pedra e
+parecem sÃ³lidas.  Tochas mÃ¡gicas estÃ£o postas em cada lado das paredes do
 muro, iluminando o ambiente.
 ~
-57 4 0 0 0 0
+57 4 0 
 D0
 ~
 ~
@@ -914,18 +916,19 @@ D4
 Aha! Uma porta secreta!
 ~
 porta secreta~
+:n 2 A porta secreta
 2 5701 5744
 E
-tocha tochas mágica mágicas~
-Elas iluminam com um suave brilho mágico.
+tocha tochas magica magicas~
+Elas iluminam com um suave brilho mÃ¡gico.
 ~
 S
 #5747
-O Túnel~
-   Começa uma curva no túnel mais a frente.
+O TÃºnel~
+   ComeÃ§a uma curva no tÃºnel mais a frente.
 ~
-57 4 0 0 0 0
-D0
+57 4 0
+D0 
 ~
 ~
 0 -1 5748
@@ -935,48 +938,50 @@ D2
 0 -1 5746
 S
 #5748
-O Fim do Túnel~
-   Você chega ao fim do túnel.  Logo acima de você, a luz do sol atravessa a
-ponta do alçapão.
+O Fim do TÃºnel~
+   VocÃª chega ao fim do tÃºnel.  Logo acima de vocÃª, a luz do sol atravessa a
+ponta do alÃ§apÃ£o.
 ~
-57 4 0 0 0 0
+57 4 0
 D2
 ~
 ~
 0 -1 5747
 D4
-É um alçapão, espertamente escondido.
+Ã‰ um alÃ§apÃ£o, espertamente escondido.
 ~
-alçapão porta escondido~
+alcapao porta escondido~
+:n 1 O alÃ§apÃ£o escondido
 2 5702 5749
 S
 #5749
-O Vale dos Demônios~
-   Você sai do túnel e olha em volta.  Bem ao longe, ao sul, você mal vê uma
-das torres do castelo entre as árvores.  Para o norte, a terra vai descendo
-em forma de ladeira e muitas árvores retorcidas impedem o avanço na direção
+O Vale dos DemÃ´nios~
+   VocÃª sai do tÃºnel e olha em volta.  Bem ao longe, ao sul, vocÃª mal vÃª uma
+das torres do castelo entre as Ã¡rvores.  Para o norte, a terra vai descendo
+em forma de ladeira e muitas Ã¡rvores retorcidas impedem o avanÃ§o na direÃ§Ã£o
 leste-oeste.
 ~
-57 4 0 0 0 4
+57 4 4
 D0
 ~
 ~
 0 -1 5750
 D5
-É um alçapão espertamente escondido.
+Ã‰ um alÃ§apÃ£o espertamente escondido.
 ~
-alçapão porta escondido~
-2 5502 5548
+alcapao porta escondido~
+:n 1 O AlÃ§apÃ£o escondido
+2 5501 5548
 S
 #5750
-O Vale dos Demônios~
-   Você avança mais e mais profundamente para dentro do vale.  Os muros
-inclinam-se na mesma direção que você segue, tornando-se quase verticais.
-Seu caminho é atrasado pela vegetação densa agarrando em seus pés.  O
-caminho de volta ao sul desaparece na escuridão e sua trilha segue,
-conduzindo você para o norte.
+O Vale dos DemÃ´nios~
+   VocÃª avanÃ§a mais e mais profundamente para dentro do vale.  Os muros
+inclinam-se na mesma direÃ§Ã£o que vocÃª segue, tornando-se quase verticais.
+Seu caminho Ã© atrasado pela vegetaÃ§Ã£o densa agarrando em seus pÃ©s.  O
+caminho de volta ao sul desaparece na escuridÃ£o e sua trilha segue,
+conduzindo vocÃª para o norte.
 ~
-57 0 0 0 0 4
+57 0 4
 D0
 ~
 ~
@@ -988,11 +993,11 @@ D2
 S
 #5751
 O Fundo do Vale~
-   Você chegou na parte mais baixa do vale.  As colinas inclinam-se para o
+   VocÃª chegou na parte mais baixa do vale.  As colinas inclinam-se para o
 leste e oeste.  Um repentino sopro de vento, traz um cheiro de enxofre,
 vindo do norte.
 ~
-57 0 0 0 0 4
+57 0 4 
 D0
 ~
 ~
@@ -1004,45 +1009,45 @@ D2
 S
 #5752
 A Gruta~
-   Um grande gruta corta a superfície da terra aqui.  Sinais de fumaça
-seguem seu caminho para cima, atingindo seu nariz de forma aguda!  Você
-sente que algo muito mal está por perto.
+   Um grande gruta corta a superfÃ­cie da terra aqui.  Sinais de fumaÃ§a
+seguem seu caminho para cima, atingindo seu nariz de forma aguda!  VocÃª
+sente que algo muito mal estÃ¡ por perto.
 ~
-57 0 0 0 0 4
+57 0 4 
 D2
 ~
 ~
 0 -1 5751
 D5
-Você não pode ver muito, parece escalável...
+VocÃª nÃ£o pode ver muito, parece escalÃ¡vel...
 ~
 ~
 0 -1 5753
 S
 #5753
 Dentro da Gruta~
-   Há uma ponte de pedra aqui e um túnel que conduz diretamente para dentro
-da terra.  Por baixo, você sente a lava borbulhando.
+   HÃ¡ uma ponte de pedra aqui e um tÃºnel que conduz diretamente para dentro
+da terra.  Por baixo, vocÃª sente a lava borbulhando.
 ~
-57 1 0 0 0 0
+57 1 0
 D0
 ~
 ~
 0 -1 5754
 D4
-Eu não arriscaria!! E você?
+Eu nÃ£o arriscaria!! E vocÃª?
 ~
 ~
 0 -1 5758
 S
 #5754
-O Túnel~
-   O túnel segue nas direções norte e sul e para os lados você vê grandes
-celas.  Espiando por uma pequena janela, você vê prisioneiros humanos,
+O TÃºnel~
+   O tÃºnel segue nas direÃ§Ãµes norte e sul e para os lados vocÃª vÃª grandes
+celas.  Espiando por uma pequena janela, vocÃª vÃª prisioneiros humanos,
 muitos deles vestindo o uniforme da guarda Graye.
 ~
-57 1 0 0 0 0
-D0
+57 1 0 
+D0 
 ~
 ~
 0 -1 5755
@@ -1053,16 +1058,17 @@ D2
 S
 #5755
 A Sala da Guarda de Irgon~
-   Você se encontra em uma pequena sala de guarda.  Quartos para o leste e
-oeste guardam prisioneiros e uma porta de ébano bloqueia o caminho para o
-norte.  Pendurados na parede, você vê instrumentos de tortura e há sangue
+   VocÃª se encontra em uma pequena sala de guarda.  Quartos para o leste e
+oeste guardam prisioneiros e uma porta de Ã©bano bloqueia o caminho para o
+norte.  Pendurados na parede, vocÃª vÃª instrumentos de tortura e hÃ¡ sangue
 por toda parte.
 ~
-57 1 0 0 0 0
+57 1 0 
 D0
-Uma porta de ébano está aqui.
+Uma porta de Ã©bano estÃ¡ aqui.
 ~
-porta ébano~
+porta ebano~
+:n 2 A porta negra de Ã©bano
 2 5703 5756
 D2
 ~
@@ -1070,43 +1076,45 @@ D2
 0 -1 5754
 S
 #5756
-O Quarto de execução de Scrytin~
-   Este quarto está COBERTO de sangue.  O aprendiz do Arque-Demônio,
-Scrytin, fez deste lugar horrível sua morada.  Há uma porta de mármore para
+O Quarto de execuÃ§Ã£o de Scrytin~
+   Este quarto estÃ¡ COBERTO de sangue.  O aprendiz do Arque-DemÃ´nio,
+Scrytin, fez deste lugar horrÃ­vel sua morada.  HÃ¡ uma porta de mÃ¡rmore para
 leste.
 ~
-57 1 0 0 0 0
+57 1 0 
 D1
-Há uma porta de mármore ali.
+HÃ¡ uma porta de mÃ¡rmore ali.
 ~
-mármore porta~
+marmore porta~
+:n 2 A porta de mÃ¡rmore
 2 5704 5762
 D2
-Uma porta de ébano está ali.
+Uma porta de Ã©bano estÃ¡ ali.
 ~
-porta ébano~
+porta ebano~
+:n 2 A porta de Ã©bano
 2 5703 5755
 S
 #5758
 A Lava~
-@Você escorrega...
+	VocÃª escorrega...
                         ...
                            ...
                               quente
                                  Quente
                                      @RQUENTE!!@n
 
-Desculpe, você está morto... +_+  R.I.P.
+Desculpe, vocÃª estÃ¡ morto... +_+  R.I.P.
 ~
-57 2 0 0 0 0
+57 b 0  
 S
 #5759
 O Caminho Secreto~
-   Você pisa nesta passagem e espera seus olhos ficarem acostumados à luz.
-Muros de pedra impedem a progressão para todas as direções, exceto para o
+   VocÃª pisa nesta passagem e espera seus olhos ficarem acostumados Ã  luz.
+Muros de pedra impedem a progressÃ£o para todas as direÃ§Ãµes, exceto para o
 norte.
 ~
-57 1 0 0 0 0
+57 1 0
 D0
 ~
 ~
@@ -1118,12 +1126,12 @@ D4
 S
 #5760
 As Catacumbas~
-   Você caminha por esta passagem e avista que os restos mortais dos antigos
-reis de Graye estão por toda parte.  Você pode ver pelo quarto mas não com
-muita perfeição, por causa da luz escassa.  A passagem continua no sentido
+   VocÃª caminha por esta passagem e avista que os restos mortais dos antigos
+reis de Graye estÃ£o por toda parte.  VocÃª pode ver pelo quarto mas nÃ£o com
+muita perfeiÃ§Ã£o, por causa da luz escassa.  A passagem continua no sentido
 norte-sul.
 ~
-57 0 0 0 0 0
+57 0 0 
 D0
 ~
 ~
@@ -1135,40 +1143,41 @@ D2
 S
 #5761
 A Tumba de Graye~
-   Você entra em um enorme aposento em forma circular.  Um sarcófago de ouro
-está colocado no centro, em cima de uma mesa de pedra.  O tesouro está
-amontoado até o alto das paredes.  Você encontrou a última morada do
+   VocÃª entra em um enorme aposento em forma circular.  Um sarcÃ³fago de ouro
+estÃ¡ colocado no centro, em cima de uma mesa de pedra.  O tesouro estÃ¡
+amontoado atÃ© o alto das paredes.  VocÃª encontrou a Ãºltima morada do
 Cavaleiro Paladino Graye.
 ~
-57 0 0 0 0 0
+57 0 0 
 D2
 ~
 ~
 0 -1 5760
 E
-mesa pedra altar~
-É um altar gigante sustentando o sarcófago de Graye.
+sarcofago~
+O SarcÃ³fago leva os restos mortais de Graye.  Sua recompensa nÃ£o estÃ¡ dentro
+dele.
 ~
 E
-sarcófago~
-O Sarcófago leva os restos mortais de Graye.  Sua recompensa não está dentro
-dele.
+mesa pedra altar~
+Ã‰ um altar gigante sustentando o sarcÃ³fago de Graye.
 ~
 S
 #5762
 A Cela de Relnar~
-   Você se depara com uma pequenina cela iluminada apenas por uma única
+   VocÃª se depara com uma pequenina cela iluminada apenas por uma Ãºnica
 vela.
 ~
-57 0 0 0 0 0
+57 0 0 
 D1
 ~
 ~
 0 -1 5743
 D3
-Há uma porta de mármore ali.
+HÃ¡ uma porta de mÃ¡rmore ali.
 ~
-mármore porta~
+marmore porta~
+:n 2 A porta de mÃ¡rmore
 2 5704 5756
 S
 $~
