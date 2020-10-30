@@ -2,5 +2,31 @@
 Vitalia~
 Os Túneis nos Esgotos~
 7300 7399 25 2 k 0 0 0 -1 -1
+*
+* Mobiles
+M 0 7040 1 7328         O Drag�o Vermelho
+M 0 7041 2 7344         A Bruxa do Mar
+M 0 7042 2 7335         O Bondoso Guardi�o Naga
+M 0 7043 3 7339         O Basilisco
+M 0 7044 6 7306         O Lemure Blob
+M 0 7045 1 7319         Jones Ettin
+M 0 7046 1 7324         Herald Ettin
+M 0 7010 2 7329         Chr-eff'n
+* Doors
+D 0 7304 2 1            A Porta da Sala Secreta
+D 0 7305 0 1
+D 0 7305 2 1            A Entrada para o Buraco de Lama
+D 0 7306 0 1
+D 0 7315 0 1            A Porta da Sala do Tesouro
+D 0 7316 2 1
+D 0 7321 3 1            A Pra�a da Toca
+D 0 7318 1 1
+D 0 7324 0 2            Porta Falsa
+D 0 7324 2 2            Porta Falsa
+D 0 7324 1 1            Entrada Secreta do Tunel
+D 0 7325 3 1
+D 0 7333 3 1            Entrada da Sala da Escada
+*
 S
+$
 $
