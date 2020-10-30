@@ -1,16 +1,17 @@
 #4900
-O Galho Mais Baixo da Grande ¡rvore~
-   A base da Grande ¡rvore fica logo abaixo, e os prÛximos galhos a 
-uma pequena dist‚ncia acima, os galhos se entrelaÁam entre si e olhando
- para o cÈu, pode-se ver movimentos das criaturas que habitam esta 
-enorme ·rvore. Um buraco no tronco se abre ao norte e prestando um 
-pouco de atenÁ„o, vocÍ nota que aquele È o lar de alguÈm. 
+O Galho Mais Baixo da Grande √Årvore~
+   A base da Grande √Årvore fica logo abaixo, e os pr√≥ximos galhos a 
+uma pequena dist√¢ncia acima, os galhos se entrela√ßam entre si e olhando
+ para o c√©u, pode-se ver movimentos das criaturas que habitam esta 
+enorme √°rvore. Um buraco no tronco se abre ao norte e prestando um 
+pouco de aten√ß√£o, voc√™ nota que aquele √© o lar de algu√©m. 
 ~
-49 4 0 0 0 1
+49 c 1
 D0
 ~
 porta~
-0 -1 4904
+:n 2 a porta
+ag -1 4904
 D4
 ~
 ~
@@ -21,15 +22,15 @@ D5
 0 -1 4979
 S
 #4901
-Em Um Galho no NÌvel Mais Baixo~
-   Os galhos da ·rvore v„o se entrelaÁando atÈ onde seus olhos podem 
-ver, tornando possÌvel que vocÍ possa andar por eles. O caminho que 
-segue para a Zona dos Iniciantes fica um pouco abaixo porÈm, tambÈm
-È possÌvel seguir para cima, escalando cuidadosamente os acessos por
-entre a vegetaÁ„o da Grande ¡rvore. Perceba que os galhos se cruzam e
-seguem em todas as direÁıes. 
+Em Um Galho no N√≠vel Mais Baixo~
+   Os galhos da √°rvore v√£o se entrela√ßando at√© onde seus olhos podem 
+ver, tornando poss√≠vel que voc√™ possa andar por eles. O caminho que 
+segue para a Zona dos Iniciantes fica um pouco abaixo por√©m, tamb√©m
+√© poss√≠vel seguir para cima, escalando cuidadosamente os acessos por
+entre a vegeta√ß√£o da Grande √Årvore. Perceba que os galhos se cruzam e
+seguem em todas as dire√ß√µes. 
 ~
-49 4 0 0 0 1
+49 c 1
 D0
 ~
 ~
@@ -57,14 +58,14 @@ D5
 S
 #4902
 Dentro do Centro do Tronco~
-   Os galhos da ·rvore v„o se entrelaÁando atÈ onde seus olhos podem 
-ver, tornando possÌvel que vocÍ possa andar por eles. O caminho que 
-segue para a Zona dos Iniciantes fica um pouco abaixo porÈm, tambÈm
-È possÌvel seguir para cima, escalando cuidadosamente os acessos por
-entre a vegetaÁ„o da Grande ¡rvore. Perceba que os galhos se cruzam e
-seguem em todas as direÁıes. 
+   Os galhos da √°rvore v√£o se entrela√ßando at√© onde seus olhos podem 
+ver, tornando poss√≠vel que voc√™ possa andar por eles. O caminho que 
+segue para a Zona dos Iniciantes fica um pouco abaixo por√©m, tamb√©m
+√© poss√≠vel seguir para cima, escalando cuidadosamente os acessos por
+entre a vegeta√ß√£o da Grande √Årvore. Perceba que os galhos se cruzam e
+seguem em todas as dire√ß√µes. 
 ~
-49 4 0 0 0 0
+49 c 0
 D0
 ~
 ~
@@ -92,13 +93,13 @@ D5
 S
 #4903
 Numa Parte Alta Dentro do Tronco~
-   VocÍ est· no ponto mais alto que se pode alcanÁar com seguranÁa
-desta gigantesca ·rvore. Acima, o tronco n„o parece ser forte o suficiente
+   Voc√™ est√° no ponto mais alto que se pode alcan√ßar com seguran√ßa
+desta gigantesca √°rvore. Acima, o tronco n√£o parece ser forte o suficiente
 para suportar um peso mais substancial. Os ramos seguem em praticamente
-em todas as direÁıes e os galhos que est„o na parte mais alta s„o t„o 
-fortes como os que est„o nas partes mais baixas.
+em todas as dire√ß√µes e os galhos que est√£o na parte mais alta s√£o t√£o 
+fortes como os que est√£o nas partes mais baixas.
 ~
-49 4 0 0 0 0
+49 c 0
 D0
 ~
 ~
@@ -123,11 +124,11 @@ S
 #4904
 No Interior do Tronco~
    O interior desse tronco foi surpreendentemente transformado em um
-aconchegante lar, com uma confort·vel poltrona e uma pequena cama feita de 
-gravetos e folhas. H· uma outro pequeno aposento que se conecta ao norte
-atravÈs de um estreito caminho.
+aconchegante lar, com uma confort√°vel poltrona e uma pequena cama feita de 
+gravetos e folhas. H√° uma outro pequeno aposento que se conecta ao norte
+atrav√©s de um estreito caminho.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -135,27 +136,28 @@ D0
 D2
 ~
 porta~
-0 -1 4900
+:n 2 a porta
+ag -1 4900
 S
 #4905
 No Interior do Tronco~
-   VocÍ est· explorando os aposentos secretos e Ìntimos de um treant, um ser
-que È na realidade, a essÍncia da prÛpria ·rvore.  Apenas os mais tolos
-tentariam desafiar um treant dentro de seu prÛprio lar.
+   Voc√™ est√° explorando os aposentos secretos e √≠ntimos de um treant, um ser
+que √© na realidade, a ess√™ncia da pr√≥pria √°rvore.  Apenas os mais tolos
+tentariam desafiar um treant dentro de seu pr√≥prio lar.
 ~
-49 0 0 0 0 0
+49 0 0
 D2
 ~
 ~
 0 -1 4904
 S
 #4906
-AtravÈs dos Galhos Internos~
-   Os galhos aqui s„o bastante grossos e resistentes devido sua 
-proximidade ao tronco. Os galhos levam ‡ todas as direÁıes, sendo que 
+Atrav√©s dos Galhos Internos~
+   Os galhos aqui s√£o bastante grossos e resistentes devido sua 
+proximidade ao tronco. Os galhos levam √† todas as dire√ß√µes, sendo que 
 o tronco fica bem ao sul. 
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -174,12 +176,12 @@ D3
 0 -1 4913
 S
 #4907
-AtravÈs dos Galhos Internos~
-   Os galhos aqui s„o bastante grossos e resistentes devido sua 
+Atrav√©s dos Galhos Internos~
+   Os galhos aqui s√£o bastante grossos e resistentes devido sua 
 proximidade do tronco. Os galhos levam se ramificam ao norte e ao 
 oeste.
 ~
-49 0 0 0 0 0
+49 0 0
 D2
 ~
 ~
@@ -190,12 +192,12 @@ D3
 0 -1 4906
 S
 #4908
-AtravÈs dos Galhos Internos~
-   Os galhos aqui s„o bastante grossos e resistentes devido sua 
-proximidade ao tronco. Os galhos levam ‡ todas as direÁıes, sendo que
+Atrav√©s dos Galhos Internos~
+   Os galhos aqui s√£o bastante grossos e resistentes devido sua 
+proximidade ao tronco. Os galhos levam √† todas as dire√ß√µes, sendo que
 o tronco fica bem ao oeste.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -214,12 +216,12 @@ D3
 0 -1 4901
 S
 #4909
-AtravÈs dos Galhos Internos~
-   Os galhos aqui s„o bastante grossos e resistentes devido sua 
+Atrav√©s dos Galhos Internos~
+   Os galhos aqui s√£o bastante grossos e resistentes devido sua 
 proximidade ao tronco. Daqui, os galhos se ramificam para o norte e 
 para o oeste.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -230,12 +232,12 @@ D3
 0 -1 4910
 S
 #4910
-AtravÈs dos Galhos Internos~
-   Os galhos aqui s„o bastante grossos e resistentes devido sua 
-proximidade ao tronco. Os galhos levam ‡ todas as direÁıes, sendo que 
+Atrav√©s dos Galhos Internos~
+   Os galhos aqui s√£o bastante grossos e resistentes devido sua 
+proximidade ao tronco. Os galhos levam √† todas as dire√ß√µes, sendo que 
 o tronco fica bem ao norte.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -254,11 +256,11 @@ D3
 0 -1 4911
 S
 #4911
-AtravÈs dos Galhos Internos~
-   Os galhos aqui s„o bastante grossos com o tronco principal.  Daqui,
+Atrav√©s dos Galhos Internos~
+   Os galhos aqui s√£o bastante grossos com o tronco principal.  Daqui,
 os galhos se ramificam para o norte e leste.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -269,12 +271,12 @@ D1
 0 -1 4910
 S
 #4912
-AtravÈs dos Galhos Internos~
-   Os galhos aqui s„o bastante grossos e resistentes devido sua proximidade
-ao tronco.  Os galhos levam ‡ todas as direÁıes, sendo que o tronco fica bem
+Atrav√©s dos Galhos Internos~
+   Os galhos aqui s√£o bastante grossos e resistentes devido sua proximidade
+ao tronco.  Os galhos levam √† todas as dire√ß√µes, sendo que o tronco fica bem
 ao leste.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -293,12 +295,12 @@ D3
 0 -1 4924
 S
 #4913
-AtravÈs dos Galhos Internos~
-   Os galhos aqui s„o bastante grossos e resistentes devido sua proximidade
+Atrav√©s dos Galhos Internos~
+   Os galhos aqui s√£o bastante grossos e resistentes devido sua proximidade
 ao tronco.  Daqui os
    Galhos se ramificam ao sul e ao leste.
 ~
-49 0 0 0 0 0
+49 0 0
 D1
 ~
 ~
@@ -310,11 +312,11 @@ D2
 S
 #4914
 Os Galhos Externos~
-   Os galhos ainda s„o suficientemente fortes para sustentar bastante peso,
-de qualquer forma, n„o parece muito seguro em suas extremidades.  O ˙nico
+   Os galhos ainda s√£o suficientemente fortes para sustentar bastante peso,
+de qualquer forma, n√£o parece muito seguro em suas extremidades.  O √∫nico
 caminho de volta para o tronco fica ao leste.
 ~
-49 0 0 0 0 0
+49 0 0
 D1
 ~
 ~
@@ -322,11 +324,11 @@ D1
 S
 #4915
 Os Galhos Externos~
-   Os galhos ainda s„o suficientemente fortes para sustentar bastante peso,
-de qualquer forma, n„o parece muito seguro em suas extremidades.  SaÌdas
-seguem em todas as direÁıes, e os galhos internos seguem para o sul.
+   Os galhos ainda s√£o suficientemente fortes para sustentar bastante peso,
+de qualquer forma, n√£o parece muito seguro em suas extremidades.  Sa√≠das
+seguem em todas as dire√ß√µes, e os galhos internos seguem para o sul.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -346,23 +348,23 @@ D3
 S
 #4916
 Os Galhos Externos~
-   Os galhos ainda s„o suficientemente fortes para sustentar bastante peso,
-de qualquer forma, n„o parece muito seguro em suas extremidades.  A ˙nica
-saÌda de volta ao tronco principal fica ao oeste.
+   Os galhos ainda s√£o suficientemente fortes para sustentar bastante peso,
+de qualquer forma, n√£o parece muito seguro em suas extremidades.  A √∫nica
+sa√≠da de volta ao tronco principal fica ao oeste.
 ~
-49 0 0 0 0 0
+49 0 0
 D3
 ~
 ~
 0 -1 4915
 S
-#4917
+#4917 
 Os Galhos Externos~
-   Os galhos ainda s„o suficientemente fortes para sustentar bastante peso,
-de qualquer forma, n„o parece muito seguro em suas extremidades.  A ˙nica
-saÌda de volta ao tronco principal fica ao sul.
+   Os galhos ainda s√£o suficientemente fortes para sustentar bastante peso,
+de qualquer forma, n√£o parece muito seguro em suas extremidades.  A √∫nica
+sa√≠da de volta ao tronco principal fica ao sul.
 ~
-49 0 0 0 0 0
+49 0 0
 D2
 ~
 ~
@@ -370,11 +372,11 @@ D2
 S
 #4918
 Os Galhos Externos~
-   Os galhos ainda s„o suficientemente fortes para sustentar bastante peso,
-de qualquer forma, n„o parece muito seguro em suas extremidades.  SaÌdas
-seguem em todas as direÁıes, os galhos internos ficam bem ao oeste.
+   Os galhos ainda s√£o suficientemente fortes para sustentar bastante peso,
+de qualquer forma, n√£o parece muito seguro em suas extremidades.  Sa√≠das
+seguem em todas as dire√ß√µes, os galhos internos ficam bem ao oeste.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -394,11 +396,11 @@ D3
 S
 #4919
 Os Galhos Externos~
-   Os galhos ainda s„o suficientemente fortes para sustentar bastante peso,
-de qualquer forma, n„o parece muito seguro em suas extremidades.  O ˙nico
+   Os galhos ainda s√£o suficientemente fortes para sustentar bastante peso,
+de qualquer forma, n√£o parece muito seguro em suas extremidades.  O √∫nico
 caminho de volta para o tronco fica ao norte.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -406,11 +408,11 @@ D0
 S
 #4920
 Os Galhos Externos~
-   Os galhos ainda s„o suficientemente fortes para sustentar bastante peso,
-de qualquer forma, n„o parece muito seguro em suas extremidades.  O ˙nico
-caminho para outra parte da Grande ¡rvore fica ao oeste.
+   Os galhos ainda s√£o suficientemente fortes para sustentar bastante peso,
+de qualquer forma, n√£o parece muito seguro em suas extremidades.  O √∫nico
+caminho para outra parte da Grande √Årvore fica ao oeste.
 ~
-49 0 0 0 0 0
+49 0 0
 D3
 ~
 ~
@@ -418,12 +420,12 @@ D3
 S
 #4921
 Os Galhos Externos~
-   Os galhos ainda s„o suficientemente fortes para sustentar bastante peso,
-de qualquer forma, n„o parece muito seguro em suas extremidades.  As saÌdas
-seguem em todas as direÁıes atravÈs dos ramos do tronco, e os galhos
-internos seguem em direÁ„o ao norte.
+   Os galhos ainda s√£o suficientemente fortes para sustentar bastante peso,
+de qualquer forma, n√£o parece muito seguro em suas extremidades.  As sa√≠das
+seguem em todas as dire√ß√µes atrav√©s dos ramos do tronco, e os galhos
+internos seguem em dire√ß√£o ao norte.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -443,11 +445,11 @@ D3
 S
 #4922
 Os Galhos Externos~
-   Os galhos ainda s„o suficientemente fortes para sustentar bastante peso,
-de qualquer forma, n„o parece muito seguro em suas extremidades.  O ˙nico
-caminho de volta para o outro lado da Grande ¡rvore fica a leste.
+   Os galhos ainda s√£o suficientemente fortes para sustentar bastante peso,
+de qualquer forma, n√£o parece muito seguro em suas extremidades.  O √∫nico
+caminho de volta para o outro lado da Grande √Årvore fica a leste.
 ~
-49 0 0 0 0 0
+49 0 0
 D1
 ~
 ~
@@ -455,11 +457,11 @@ D1
 S
 #4923
 Os Galhos Externos~
-   Os galhos ainda s„o suficientemente fortes para sustentar bastante peso,
-de qualquer forma, n„o parece muito seguro em suas extremidades.  O ˙nico
-caminho de volta para o outro lado da Grande ¡rvore fica ao norte.
+   Os galhos ainda s√£o suficientemente fortes para sustentar bastante peso,
+de qualquer forma, n√£o parece muito seguro em suas extremidades.  O √∫nico
+caminho de volta para o outro lado da Grande √Årvore fica ao norte.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -467,12 +469,12 @@ D0
 S
 #4924
 Os Galhos Externos~
-   Os galhos ainda s„o suficientemente fortes para sustentar bastante peso,
-de qualquer forma, n„o parece muito seguro em suas extremidades.  SaÌdas
-seguem em todas as direÁıes atravÈs das ramificaÁıes do tronco
+   Os galhos ainda s√£o suficientemente fortes para sustentar bastante peso,
+de qualquer forma, n√£o parece muito seguro em suas extremidades.  Sa√≠das
+seguem em todas as dire√ß√µes atrav√©s das ramifica√ß√µes do tronco
 e os galhos interiores ficam ao leste.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -492,11 +494,11 @@ D3
 S
 #4925
 Os Galhos Externos~
-   Os galhos ainda s„o suficientemente fortes para sustentar bastante peso,
-de qualquer forma, n„o parece muito seguro em suas extremidades.  O ˙nico
-caminho de volta para o outro lado da Grande ¡rvore fica ao sul.
+   Os galhos ainda s√£o suficientemente fortes para sustentar bastante peso,
+de qualquer forma, n√£o parece muito seguro em suas extremidades.  O √∫nico
+caminho de volta para o outro lado da Grande √Årvore fica ao sul.
 ~
-49 0 0 0 0 0
+49 0 0
 D2
 ~
 ~
@@ -504,13 +506,13 @@ D2
 S
 #4926
 Em Um Galho~
-   Embora o galho em que vocÍ se encontre n„o seja muito alto, a julgar
-pelos galhos acima da sua cabeÁa, parece que ainda h· muito o que se escalar
-e vocÍ nota que a ·rvore parece muito alta vista daqui.  Uma suave brisa
-toca o seu rosto e vocÍ se sente feliz, sem motivos.  O caminho de volta
+   Embora o galho em que voc√™ se encontre n√£o seja muito alto, a julgar
+pelos galhos acima da sua cabe√ßa, parece que ainda h√° muito o que se escalar
+e voc√™ nota que a √°rvore parece muito alta vista daqui.  Uma suave brisa
+toca o seu rosto e voc√™ se sente feliz, sem motivos.  O caminho de volta
 fica ao sul.
 ~
-49 0 0 0 0 0
+49 0 0
 D2
 ~
 ~
@@ -518,13 +520,13 @@ D2
 S
 #4927
 Em Um Galho~
-   Embora o galho em que vocÍ se encontre n„o seja muito alto, a julgar
-pelos galhos acima da sua cabeÁa, parece que ainda h· muito o que se escalar
-e vocÍ nota que a ·rvore parece muito alta vista daqui.  Uma suave brisa
-toca o seu rosto e vocÍ se sente feliz, sem motivos.  O caminho de volta
+   Embora o galho em que voc√™ se encontre n√£o seja muito alto, a julgar
+pelos galhos acima da sua cabe√ßa, parece que ainda h√° muito o que se escalar
+e voc√™ nota que a √°rvore parece muito alta vista daqui.  Uma suave brisa
+toca o seu rosto e voc√™ se sente feliz, sem motivos.  O caminho de volta
 fica ao oeste.
 ~
-49 0 0 0 0 0
+49 0 0
 D3
 ~
 ~
@@ -532,13 +534,13 @@ D3
 S
 #4928
 Em Um Galho~
-   Embora o galho em que vocÍ se encontre n„o seja muito alto, a julgar
-pelos galhos acima da sua cabeÁa, parece que ainda h· muito o que se escalar
-e vocÍ nota que a ·rvore parece muito alta vista daqui.  Uma suave brisa
-toca o seu rosto e vocÍ se sente feliz, sem motivos.  O caminho de volta
+   Embora o galho em que voc√™ se encontre n√£o seja muito alto, a julgar
+pelos galhos acima da sua cabe√ßa, parece que ainda h√° muito o que se escalar
+e voc√™ nota que a √°rvore parece muito alta vista daqui.  Uma suave brisa
+toca o seu rosto e voc√™ se sente feliz, sem motivos.  O caminho de volta
 fica ao norte.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -546,13 +548,13 @@ D0
 S
 #4929
 Em Um Galho~
-   Embora o galho em que vocÍ se encontre n„o seja muito alto, a julgar
-pelos galhos acima da sua cabeÁa, parece que ainda h· muito o que se escalar
-e vocÍ nota que a ·rvore parece muito alta vista daqui.  Uma suave brisa
-toca o seu rosto e vocÍ se sente feliz, sem motivos.  O caminho de volta
+   Embora o galho em que voc√™ se encontre n√£o seja muito alto, a julgar
+pelos galhos acima da sua cabe√ßa, parece que ainda h√° muito o que se escalar
+e voc√™ nota que a √°rvore parece muito alta vista daqui.  Uma suave brisa
+toca o seu rosto e voc√™ se sente feliz, sem motivos.  O caminho de volta
 fica ao leste.
 ~
-49 0 0 0 0 0
+49 0 0
 D1
 ~
 ~
@@ -560,12 +562,12 @@ D1
 S
 #4930
 Entre os Galhos~
-   Os galhos seguem para fora do tronco e vocÍ est· mais ou menos na metade
-da altura da ·rvore.  Os galhos aqui ainda s„o grossos, parecendo fortes o
-suficiente para aguentar bastante peso.  Existem saÌdas para todas as
-direÁıes mas o tronco central fica ao sul.
+   Os galhos seguem para fora do tronco e voc√™ est√° mais ou menos na metade
+da altura da √°rvore.  Os galhos aqui ainda s√£o grossos, parecendo fortes o
+suficiente para aguentar bastante peso.  Existem sa√≠das para todas as
+dire√ß√µes mas o tronco central fica ao sul.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -585,12 +587,12 @@ D3
 S
 #4931
 Entre os Galhos~
-   Os galhos da Grande ¡rvore se abrem, formando uma ·rea muito grande, que
-abriga as in˙meras casinhas de um sem n˙mero de exÛticas criaturinhas, que
-de alguma maneira, coabitam neste lugar, pacÌficamente.  Os galhos v„o
+   Os galhos da Grande √Årvore se abrem, formando uma √°rea muito grande, que
+abriga as in√∫meras casinhas de um sem n√∫mero de ex√≥ticas criaturinhas, que
+de alguma maneira, coabitam neste lugar, pac√≠ficamente.  Os galhos v√£o
 seguindo para o sul e para o oeste.
 ~
-49 0 0 0 0 0
+49 0 0
 D2
 ~
 ~
@@ -602,12 +604,12 @@ D3
 S
 #4932
 Entre os Galhos~
-   Os galhos seguem para fora do tronco e vocÍ est· mais ou menos na metade
-da altura da ·rvore.  Os galhos aqui ainda s„o grossos, parecendo fortes o
-suficiente para aguentar bastante peso.  Existem saÌdas para todas as
-direÁıes mas o tronco central fica bem ao oeste.
+   Os galhos seguem para fora do tronco e voc√™ est√° mais ou menos na metade
+da altura da √°rvore.  Os galhos aqui ainda s√£o grossos, parecendo fortes o
+suficiente para aguentar bastante peso.  Existem sa√≠das para todas as
+dire√ß√µes mas o tronco central fica bem ao oeste.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -627,12 +629,12 @@ D3
 S
 #4933
 Entre os Galhos~
-   Os galhos da Grande ¡rvore se abrem, formando uma ·rea muito grande, que
-abriga as in˙meras casinhas de um sem n˙mero de exÛticas criaturinhas, que
-de alguma maneira, coabitam neste lugar, pacÌficamente.  Os galhos v„o
+   Os galhos da Grande √Årvore se abrem, formando uma √°rea muito grande, que
+abriga as in√∫meras casinhas de um sem n√∫mero de ex√≥ticas criaturinhas, que
+de alguma maneira, coabitam neste lugar, pac√≠ficamente.  Os galhos v√£o
 seguindo para o norte e para o oeste.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -644,12 +646,12 @@ D3
 S
 #4934
 Entre os Galhos~
-   Os galhos seguem para fora do tronco e vocÍ est· mais ou menos na metade
-da altura da ·rvore.  Os galhos aqui ainda s„o grossos, parecendo fortes o
-suficiente para aguentar bastante peso.  Existem saÌdas para todas as
-direÁıes mas o tronco central est· bem ao norte.
+   Os galhos seguem para fora do tronco e voc√™ est√° mais ou menos na metade
+da altura da √°rvore.  Os galhos aqui ainda s√£o grossos, parecendo fortes o
+suficiente para aguentar bastante peso.  Existem sa√≠das para todas as
+dire√ß√µes mas o tronco central est√° bem ao norte.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -669,12 +671,12 @@ D3
 S
 #4935
 Entre os Galhos~
-   Os galhos seguem para fora do tronco e vocÍ est· mais ou menos na metade
-da altura da ·rvore.  Os galhos aqui ainda s„o grossos, parecendo fortes o
+   Os galhos seguem para fora do tronco e voc√™ est√° mais ou menos na metade
+da altura da √°rvore.  Os galhos aqui ainda s√£o grossos, parecendo fortes o
 suficiente para aguentar bastante peso.  Os galhos seguem para o norte e
 leste.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -686,12 +688,12 @@ D1
 S
 #4936
 Entre os Galhos~
-   Os galhos seguem para fora do tronco e vocÍ est· mais ou menos na metade
-da altura da ·rvore.  Os galhos aqui ainda s„o grossos, parecendo fortes o
-suficiente para aguentar bastante peso.  Existem saÌdas para todas as
-direÁıes mas o tronco central fica ao leste.
+   Os galhos seguem para fora do tronco e voc√™ est√° mais ou menos na metade
+da altura da √°rvore.  Os galhos aqui ainda s√£o grossos, parecendo fortes o
+suficiente para aguentar bastante peso.  Existem sa√≠das para todas as
+dire√ß√µes mas o tronco central fica ao leste.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -711,12 +713,12 @@ D3
 S
 #4937
 Entre os Galhos~
-   Os galhos da Grande ¡rvore se abrem, formando uma ·rea muito grande, que
-abriga as in˙meras casinhas de um sem n˙mero de exÛticas criaturinhas, que
-de alguma maneira, coabitam neste lugar, pacÌficamente.  Os galhos seguem
+   Os galhos da Grande √Årvore se abrem, formando uma √°rea muito grande, que
+abriga as in√∫meras casinhas de um sem n√∫mero de ex√≥ticas criaturinhas, que
+de alguma maneira, coabitam neste lugar, pac√≠ficamente.  Os galhos seguem
 para o sul e leste.
 ~
-49 0 0 0 0 0
+49 0 0
 D1
 ~
 ~
@@ -728,11 +730,11 @@ D2
 S
 #4938
 Os Galhos Externos~
-   Uma queda desta altura seria um pouco desconfort·vel e olhando daqui
-parece que h· muito mais para subir.  A ˙nica direÁ„o possÌvel de ser
-seguida atravÈs do galho È para leste.
+   Uma queda desta altura seria um pouco desconfort√°vel e olhando daqui
+parece que h√° muito mais para subir.  A √∫nica dire√ß√£o poss√≠vel de ser
+seguida atrav√©s do galho √© para leste.
 ~
-49 0 0 0 0 3
+49 0 3
 D1
 ~
 ~
@@ -740,10 +742,10 @@ D1
 S
 #4939
 Os Galhos Externos~
-   Neste ponto, os galhos seguem para todas as direÁıes.  O ˙nico caminho
-que parece seguro atravÈs dos troncos fica ao sul.
+   Neste ponto, os galhos seguem para todas as dire√ß√µes.  O √∫nico caminho
+que parece seguro atrav√©s dos troncos fica ao sul.
 ~
-49 0 0 0 0 0
+49 0 0
 D0
 ~
 ~
@@ -763,11 +765,11 @@ D3
 S
 #4940
 Os Galhos Externos~
-   Uma queda desta altura seria um pouco desconfort·vel e olhando daqui
-parece que h· muito mais para subir.  A ˙nica direÁ„o possÌvel de ser
-seguida atravÈs do galho È para oeste.
+   Uma queda desta altura seria um pouco desconfort√°vel e olhando daqui
+parece que h√° muito mais para subir.  A √∫nica dire√ß√£o poss√≠vel de ser
+seguida atrav√©s do galho √© para oeste.
 ~
-49 0 0 0 0 3
+49 0 3
 D3
 ~
 ~
@@ -775,11 +777,11 @@ D3
 S
 #4941
 Os Galhos Externos~
-   Uma queda desta altura seria um pouco desconfort·vel e olhando daqui
-parece que h· muito mais para subir.  A ˙nica direÁ„o possÌvel de ser
-seguida atravÈs do galho È para o sul.
+   Uma queda desta altura seria um pouco desconfort√°vel e olhando daqui
+parece que h√° muito mais para subir.  A √∫nica dire√ß√£o poss√≠vel de ser
+seguida atrav√©s do galho √© para o sul.
 ~
-49 0 0 0 0 3
+49 0 3
 D2
 ~
 ~
@@ -787,10 +789,10 @@ D2
 S
 #4942
 Os Galhos Externos~
-   Neste ponto, os galhos seguem em todas as direÁıes e o ˙nico caminho que
-parece seguro atravÈs dos ramos do tronco fica a oeste.
+   Neste ponto, os galhos seguem em todas as dire√ß√µes e o √∫nico caminho que
+parece seguro atrav√©s dos ramos do tronco fica a oeste.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -810,11 +812,11 @@ D3
 S
 #4943
 Os Galhos Externos~
-   Uma queda desta altura seria um pouco desconfort·vel e olhando daqui
-parece que h· muito mais para subir.  A ˙nica direÁ„o possÌvel de ser
-seguida atravÈs do galho È para o norte.
+   Uma queda desta altura seria um pouco desconfort√°vel e olhando daqui
+parece que h√° muito mais para subir.  A √∫nica dire√ß√£o poss√≠vel de ser
+seguida atrav√©s do galho √© para o norte.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -826,11 +828,11 @@ D1
 S
 #4944
 Os Galhos Externos~
-   Uma queda desta altura seria um pouco desconfort·vel e olhando daqui
-parece que h· muito mais para subir.  A ˙nica direÁ„o possÌvel de ser
-seguida atravÈs do galho È para o oeste.
+   Uma queda desta altura seria um pouco desconfort√°vel e olhando daqui
+parece que h√° muito mais para subir.  A √∫nica dire√ß√£o poss√≠vel de ser
+seguida atrav√©s do galho √© para o oeste.
 ~
-49 0 0 0 0 3
+49 0 3
 D3
 ~
 ~
@@ -838,10 +840,10 @@ D3
 S
 #4945
 Os Galhos Externos~
-   Deste ponto, os galhos seguem em todas as direÁıes, e o ˙nico caminho que
-parece seguro atravÈs dos troncos fica ao norte.
+   Deste ponto, os galhos seguem em todas as dire√ß√µes, e o √∫nico caminho que
+parece seguro atrav√©s dos troncos fica ao norte.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -861,19 +863,19 @@ D3
 S
 #4946
 Os Galhos Externos~
-   Uma queda desta altura seria um pouco desconfort·vel e olhando daqui
-parece que h· muito mais para subir.  A ˙nica direÁ„o possÌvel de ser
-seguida atravÈs do galho È para o leste.
+   Uma queda desta altura seria um pouco desconfort√°vel e olhando daqui
+parece que h√° muito mais para subir.  A √∫nica dire√ß√£o poss√≠vel de ser
+seguida atrav√©s do galho √© para o leste.
 ~
-49 0 0 0 0 3
+49 0 3
 S
 #4947
 Os Galhos Externos~
-   Uma queda desta altura seria um pouco desconfort·vel e olhando daqui
-parece que h· muito mais para subir.  A ˙nica direÁ„o possÌvel de ser
-seguida atravÈs do galho È para o norte.
+   Uma queda desta altura seria um pouco desconfort√°vel e olhando daqui
+parece que h√° muito mais para subir.  A √∫nica dire√ß√£o poss√≠vel de ser
+seguida atrav√©s do galho √© para o norte.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -881,10 +883,10 @@ D0
 S
 #4948
 Os Galhos Externos~
-   Deste ponto, os galhos seguem em todas as direÁıes e o ˙nico caminho que
-parece seguro atravÈs dos troncos fica ao leste.
+   Deste ponto, os galhos seguem em todas as dire√ß√µes e o √∫nico caminho que
+parece seguro atrav√©s dos troncos fica ao leste.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -904,11 +906,11 @@ D3
 S
 #4949
 Os Galhos Externos~
-   Uma queda desta altura seria um pouco desconfort·vel e olhando daqui
-parece que h· muito mais para subir.  A ˙nica direÁ„o possÌvel de ser
-seguida atravÈs do galho È para o sul.
+   Uma queda desta altura seria um pouco desconfort√°vel e olhando daqui
+parece que h√° muito mais para subir.  A √∫nica dire√ß√£o poss√≠vel de ser
+seguida atrav√©s do galho √© para o sul.
 ~
-49 0 0 0 0 3
+49 0 3
 D2
 ~
 ~
@@ -916,13 +918,13 @@ D2
 S
 #4950
 Em Um Galho Externo~
-   O galho termina em um lugar sem saÌda, elevando-se sobre a zona dos
-iniciantes.  Ele se estende um pouco mais, porÈm, ele n„o parece ser forte o
-suficiente para suportar qualquer peso a mais.  A ˙nica saÌda segura para se
-voltar ao tronco da ·rvore È retornar pelo mesmo caminho que se usou na
+   O galho termina em um lugar sem sa√≠da, elevando-se sobre a zona dos
+iniciantes.  Ele se estende um pouco mais, por√©m, ele n√£o parece ser forte o
+suficiente para suportar qualquer peso a mais.  A √∫nica sa√≠da segura para se
+voltar ao tronco da √°rvore √© retornar pelo mesmo caminho que se usou na
 vinda.
 ~
-49 0 0 0 0 3
+49 0 3
 D2
 ~
 ~
@@ -930,13 +932,13 @@ D2
 S
 #4951
 Em Um Galho Externo~
-   O galho termina em um lugar sem saÌda, elevando-se sobre a zona dos
-iniciantes.  Ele se estende um pouco mais, porÈm, ele n„o parece ser forte o
-suficiente para suportar qualquer peso a mais.  A ˙nica saÌda segura para se
-voltar ao tronco da ·rvore È retornar pelo mesmo caminho que se usou na
+   O galho termina em um lugar sem sa√≠da, elevando-se sobre a zona dos
+iniciantes.  Ele se estende um pouco mais, por√©m, ele n√£o parece ser forte o
+suficiente para suportar qualquer peso a mais.  A √∫nica sa√≠da segura para se
+voltar ao tronco da √°rvore √© retornar pelo mesmo caminho que se usou na
 vinda.
 ~
-49 0 0 0 0 3
+49 0 3
 D3
 ~
 ~
@@ -944,13 +946,13 @@ D3
 S
 #4952
 Em Um Galho Externo~
-   O galho termina em um lugar sem saÌda, elevando-se sobre a zona dos
-iniciantes.  Ele se estende um pouco mais, porÈm, ele n„o parece ser forte o
-suficiente para suportar qualquer peso a mais.  A ˙nica saÌda segura para se
-voltar ao tronco da ·rvore È retornar pelo mesmo caminho que se usou na
+   O galho termina em um lugar sem sa√≠da, elevando-se sobre a zona dos
+iniciantes.  Ele se estende um pouco mais, por√©m, ele n√£o parece ser forte o
+suficiente para suportar qualquer peso a mais.  A √∫nica sa√≠da segura para se
+voltar ao tronco da √°rvore √© retornar pelo mesmo caminho que se usou na
 vinda.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -958,13 +960,13 @@ D0
 S
 #4953
 Em Um Galho Externo~
-   O galho termina em um lugar sem saÌda, elevando-se sobre a zona dos
-iniciantes.  Ele se estende um pouco mais, porÈm, ele n„o parece ser forte o
-suficiente para suportar qualquer peso a mais.  A ˙nica saÌda segura para se
-voltar ao tronco da ·rvore È retornar pelo mesmo caminho que se usou na
+   O galho termina em um lugar sem sa√≠da, elevando-se sobre a zona dos
+iniciantes.  Ele se estende um pouco mais, por√©m, ele n√£o parece ser forte o
+suficiente para suportar qualquer peso a mais.  A √∫nica sa√≠da segura para se
+voltar ao tronco da √°rvore √© retornar pelo mesmo caminho que se usou na
 vinda.
 ~
-49 0 0 0 0 3
+49 0 3
 D1
 ~
 ~
@@ -972,12 +974,12 @@ D1
 S
 #4954
 Viajando Por Dentro dos Galhos~
-   Esses s„o os galhos mais fortes da parte mais alta da ·rvore.  Eles
-facilmente se comparam aos braÁos musculosos de um gigante.  PorÈm, mesmo
-sendo grossos e muito fortes, estes galhos balanÁam perigosamente com o
+   Esses s√£o os galhos mais fortes da parte mais alta da √°rvore.  Eles
+facilmente se comparam aos bra√ßos musculosos de um gigante.  Por√©m, mesmo
+sendo grossos e muito fortes, estes galhos balan√ßam perigosamente com o
 vento.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -997,12 +999,12 @@ D3
 S
 #4955
 Viajando Por Dentro dos Galhos~
-   Esses s„o os galhos mais fortes da parte mais alta da ·rvore.  Eles
-facilmente se comparam aos braÁos musculosos de um gigante.  PorÈm, mesmo
-sendo grossos e muito fortes, estes galhos balanÁam perigosamente com o
+   Esses s√£o os galhos mais fortes da parte mais alta da √°rvore.  Eles
+facilmente se comparam aos bra√ßos musculosos de um gigante.  Por√©m, mesmo
+sendo grossos e muito fortes, estes galhos balan√ßam perigosamente com o
 vento.
 ~
-49 0 0 0 0 3
+49 0 3
 D2
 ~
 ~
@@ -1014,12 +1016,12 @@ D3
 S
 #4956
 Viajando Por Dentro dos Galhos~
-   Esses s„o os galhos mais fortes da parte mais alta da ·rvore.  Eles
-facilmente se comparam aos braÁos musculosos de um gigante.  PorÈm, mesmo
-sendo grossos e muito fortes, estes galhos balanÁam perigosamente com o
+   Esses s√£o os galhos mais fortes da parte mais alta da √°rvore.  Eles
+facilmente se comparam aos bra√ßos musculosos de um gigante.  Por√©m, mesmo
+sendo grossos e muito fortes, estes galhos balan√ßam perigosamente com o
 vento.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -1039,12 +1041,12 @@ D3
 S
 #4957
 Viajando Por Dentro dos Galhos~
-   Esses s„o os galhos mais fortes da parte mais alta da ·rvore.  Eles
-facilmente se comparam aos braÁos musculosos de um gigante.  PorÈm, mesmo
-sendo grossos e muito fortes, estes galhos balanÁam perigosamente com o
+   Esses s√£o os galhos mais fortes da parte mais alta da √°rvore.  Eles
+facilmente se comparam aos bra√ßos musculosos de um gigante.  Por√©m, mesmo
+sendo grossos e muito fortes, estes galhos balan√ßam perigosamente com o
 vento.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -1056,12 +1058,12 @@ D3
 S
 #4958
 Viajando Por Dentro dos Galhos~
-   Esses s„o os galhos mais fortes da parte mais alta da ·rvore.  Eles
-facilmente se comparam aos braÁos musculosos de um gigante.  PorÈm, mesmo
-sendo grossos e muito fortes, estes galhos balanÁam perigosamente com o
+   Esses s√£o os galhos mais fortes da parte mais alta da √°rvore.  Eles
+facilmente se comparam aos bra√ßos musculosos de um gigante.  Por√©m, mesmo
+sendo grossos e muito fortes, estes galhos balan√ßam perigosamente com o
 vento.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -1081,12 +1083,12 @@ D3
 S
 #4959
 Viajando Por Dentro dos Galhos~
-   Esses s„o os galhos mais fortes da parte mais alta da ·rvore.  Eles
-facilmente se comparam aos braÁos musculosos de um gigante.  PorÈm, mesmo
-sendo grossos e muito fortes, estes galhos balanÁam perigosamente com o
+   Esses s√£o os galhos mais fortes da parte mais alta da √°rvore.  Eles
+facilmente se comparam aos bra√ßos musculosos de um gigante.  Por√©m, mesmo
+sendo grossos e muito fortes, estes galhos balan√ßam perigosamente com o
 vento.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -1098,12 +1100,12 @@ D1
 S
 #4960
 Viajando Por Dentro dos Galhos~
-   Esses s„o os galhos mais fortes da parte mais alta da ·rvore.  Eles
-facilmente se comparam aos braÁos musculosos de um gigante.  PorÈm, mesmo
-sendo grossos e muito fortes, estes galhos balanÁam perigosamente com o
+   Esses s√£o os galhos mais fortes da parte mais alta da √°rvore.  Eles
+facilmente se comparam aos bra√ßos musculosos de um gigante.  Por√©m, mesmo
+sendo grossos e muito fortes, estes galhos balan√ßam perigosamente com o
 vento.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -1123,12 +1125,12 @@ D3
 S
 #4961
 Viajando Por Dentro dos Galhos~
-   Esses s„o os galhos mais fortes da parte mais alta da ·rvore.  Eles
-facilmente se comparam aos braÁos musculosos de um gigante.  PorÈm, mesmo
-sendo grossos e muito fortes, estes galhos balanÁam perigosamente com o
+   Esses s√£o os galhos mais fortes da parte mais alta da √°rvore.  Eles
+facilmente se comparam aos bra√ßos musculosos de um gigante.  Por√©m, mesmo
+sendo grossos e muito fortes, estes galhos balan√ßam perigosamente com o
 vento.
 ~
-49 0 0 0 0 3
+49 0 3
 D1
 ~
 ~
@@ -1140,12 +1142,12 @@ D2
 S
 #4962
 Os Galhos Externos~
-   O topo da Grande ¡rvore È maravilhoso!  H· uma vista estonteante que
+   O topo da Grande √Årvore √© maravilhoso!  H√° uma vista estonteante que
 permite contemplar todo o esplendor destas vastas terras.  Uma suave brisa
-est· soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
+est√° soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
 galhos se balancem ligeiramente.
 ~
-49 0 0 0 0 3
+49 0 3
 D1
 ~
 ~
@@ -1153,11 +1155,11 @@ D1
 S
 #4963
 Os Galhos Externos~
-   O constante movimentar dos galhos pelo vento È quase hipnÛtico, trazendo
-a vocÍ uma tremenda sensaÁ„o de paz.  Este suave balanÁo n„o oferece risco
-nenhum.  Os galhos da ·rvore se expandem para todos os lados.
+   O constante movimentar dos galhos pelo vento √© quase hipn√≥tico, trazendo
+a voc√™ uma tremenda sensa√ß√£o de paz.  Este suave balan√ßo n√£o oferece risco
+nenhum.  Os galhos da √°rvore se expandem para todos os lados.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -1177,12 +1179,12 @@ D3
 S
 #4964
 Os Galhos Externos~
-   O topo da Grande ¡rvore È maravilhoso!  H· uma vista estonteante que
+   O topo da Grande √Årvore √© maravilhoso!  H√° uma vista estonteante que
 permite contemplar todo o esplendor destas vastas terras.  Uma suave brisa
-est· soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
+est√° soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
 galhos se balancem ligeiramente.
 ~
-49 0 0 0 0 3
+49 0 3
 D3
 ~
 ~
@@ -1190,12 +1192,12 @@ D3
 S
 #4965
 Os Galhos Externos~
-   O topo da Grande ¡rvore È maravilhoso!  H· uma vista estonteante que
+   O topo da Grande √Årvore √© maravilhoso!  H√° uma vista estonteante que
 permite contemplar todo o esplendor destas vastas terras.  Uma suave brisa
-est· soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
+est√° soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
 galhos se balancem ligeiramente.
 ~
-49 0 0 0 0 3
+49 0 3
 D2
 ~
 ~
@@ -1203,12 +1205,12 @@ D2
 S
 #4966
 Os Galhos Externos~
-   O topo da Grande ¡rvore È maravilhoso!  H· uma vista estonteante que
+   O topo da Grande √Årvore √© maravilhoso!  H√° uma vista estonteante que
 permite contemplar todo o esplendor destas vastas terras.  Uma suave brisa
-est· soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
+est√° soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
 galhos se balancem ligeiramente.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -1228,12 +1230,12 @@ D3
 S
 #4967
 Os Galhos Externos~
-   O topo da Grande ¡rvore È maravilhoso!  H· uma vista estonteante que
+   O topo da Grande √Årvore √© maravilhoso!  H√° uma vista estonteante que
 permite contemplar todo o esplendor destas vastas terras.  Uma suave brisa
-est· soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
+est√° soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
 galhos se balancem ligeiramente.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -1241,12 +1243,12 @@ D0
 S
 #4968
 Os Galhos Externos~
-   O topo da Grande ¡rvore È maravilhoso!  H· uma vista estonteante que
+   O topo da Grande √Årvore √© maravilhoso!  H√° uma vista estonteante que
 permite contemplar todo o esplendor destas vastas terras.  Uma suave brisa
-est· soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
+est√° soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
 galhos se balancem ligeiramente.
 ~
-49 0 0 0 0 3
+49 0 3
 D3
 ~
 ~
@@ -1254,11 +1256,11 @@ D3
 S
 #4969
 Os Galhos Externos~
-   O constante movimentar dos galhos pelo vento È quase hipnÛtico, trazendo
-a vocÍ uma tremenda sensaÁ„o de paz.  Este suave balanÁo n„o oferece risco
-nenhum.  Os galhos da ·rvore se expandem para todos os lados.
+   O constante movimentar dos galhos pelo vento √© quase hipn√≥tico, trazendo
+a voc√™ uma tremenda sensa√ß√£o de paz.  Este suave balan√ßo n√£o oferece risco
+nenhum.  Os galhos da √°rvore se expandem para todos os lados.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -1278,12 +1280,12 @@ D3
 S
 #4970
 Os Galhos Externos~
-   O topo da Grande ¡rvore È maravilhoso!  H· uma vista estonteante que
+   O topo da Grande √Årvore √© maravilhoso!  H√° uma vista estonteante que
 permite contemplar todo o esplendor destas vastas terras.  Uma suave brisa
-est· soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
+est√° soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
 galhos se balancem ligeiramente.
 ~
-49 0 0 0 0 3
+49 0 3
 D1
 ~
 ~
@@ -1291,12 +1293,12 @@ D1
 S
 #4971
 Os Galhos Externos~
-   O topo da Grande ¡rvore È maravilhoso!  H· uma vista estonteante que
+   O topo da Grande √Årvore √© maravilhoso!  H√° uma vista estonteante que
 permite contemplar todo o esplendor destas vastas terras.  Uma suave brisa
-est· soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
+est√° soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
 galhos se balancem ligeiramente.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -1304,11 +1306,11 @@ D0
 S
 #4972
 Os Galhos Externos~
-   O constante movimentar dos galhos pelo vento È quase hipnÛtico, trazendo
-a vocÍ uma tremenda sensaÁ„o de paz.  Este suave balanÁo n„o oferece risco
-nenhum.  Os galhos da ·rvore se expandem para todos os lados.
+   O constante movimentar dos galhos pelo vento √© quase hipn√≥tico, trazendo
+a voc√™ uma tremenda sensa√ß√£o de paz.  Este suave balan√ßo n√£o oferece risco
+nenhum.  Os galhos da √°rvore se expandem para todos os lados.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -1328,12 +1330,12 @@ D3
 S
 #4973
 Os Galhos Externos~
-   O topo da Grande ¡rvore È maravilhoso!  H· uma vista estonteante que
+   O topo da Grande √Årvore √© maravilhoso!  H√° uma vista estonteante que
 permite contemplar todo o esplendor destas vastas terras.  Uma suave brisa
-est· soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
+est√° soprando, chacoalhando todas as folhas dos ramos e fazendo com que os
 galhos se balancem ligeiramente.
 ~
-49 0 0 0 0 3
+49 0 3
 D2
 ~
 ~
@@ -1341,11 +1343,11 @@ D2
 S
 #4974
 O Limite do Galho~
-   Esse È o ponto mais extremo que o galho alcanÁa, tanto em limite de peso
-quanto em altura.  O ˙nico caminho para seguir È voltar pelo mesmo caminho
-que vocÍ usou para chegar atÈ aqui.
+   Esse √© o ponto mais extremo que o galho alcan√ßa, tanto em limite de peso
+quanto em altura.  O √∫nico caminho para seguir √© voltar pelo mesmo caminho
+que voc√™ usou para chegar at√© aqui.
 ~
-49 0 0 0 0 3
+49 0 3
 D2
 ~
 ~
@@ -1353,11 +1355,11 @@ D2
 S
 #4975
 O Limite do Galho~
-   Esse È o ponto mais extremo que o galho alcanÁa, tanto em limite de peso
-quanto em altura.  O ˙nico caminho para seguir È voltar pelo mesmo caminho
-que vocÍ usou para chegar atÈ aqui.
+   Esse √© o ponto mais extremo que o galho alcan√ßa, tanto em limite de peso
+quanto em altura.  O √∫nico caminho para seguir √© voltar pelo mesmo caminho
+que voc√™ usou para chegar at√© aqui.
 ~
-49 0 0 0 0 3
+49 0 3
 D3
 ~
 ~
@@ -1365,11 +1367,11 @@ D3
 S
 #4976
 O Limite do Galho~
-   Esse È o ponto mais extremo que o galho alcanÁa, tanto em limite de peso
-quanto em altura.  O ˙nico caminho para seguir È voltar pelo mesmo caminho
-que vocÍ usou para chegar atÈ aqui.
+   Esse √© o ponto mais extremo que o galho alcan√ßa, tanto em limite de peso
+quanto em altura.  O √∫nico caminho para seguir √© voltar pelo mesmo caminho
+que voc√™ usou para chegar at√© aqui.
 ~
-49 0 0 0 0 3
+49 0 3
 D0
 ~
 ~
@@ -1377,37 +1379,37 @@ D0
 S
 #4977
 O Limite do Galho~
-   Esse È o ponto mais extremo que o galho alcanÁa, tanto em limite de peso
-quanto em altura.  O ˙nico caminho para seguir È voltar pelo mesmo caminho
-que vocÍ usou para chegar atÈ aqui.
+   Esse √© o ponto mais extremo que o galho alcan√ßa, tanto em limite de peso
+quanto em altura.  O √∫nico caminho para seguir √© voltar pelo mesmo caminho
+que voc√™ usou para chegar at√© aqui.
 ~
-49 0 0 0 0 3
+49 0 3
 D1
 ~
 ~
 0 -1 4972
 S
 #4978
-Abaixo da ¡rvore~
-   VocÍ est· bem abaixo da copa de uma grande ·rvore.  Uma idÈia absurda
-comeÁa a tomar conta de sua cabeÁa: subir (o que parece ser, na verdade, a
-˙nica maneira de se sair daqui a pÈ...).  Para isso, pelo que vocÍ consegue
-ver, vocÍ deve subir por um galho que est· muito prÛximo do solo.
+Abaixo da √Årvore~
+   Voc√™ est√° bem abaixo da copa de uma grande √°rvore.  Uma id√©ia absurda
+come√ßa a tomar conta de sua cabe√ßa: subir (o que parece ser, na verdade, a
+√∫nica maneira de se sair daqui a p√©...).  Para isso, pelo que voc√™ consegue
+ver, voc√™ deve subir por um galho que est√° muito pr√≥ximo do solo.
 ~
-49 68 0 0 0 1
+49 gc 1
 D4
 ~
 ~
 0 -1 4900
 S
 #4979
-Abaixo da ¡rvore~
-   VocÍ est· bem abaixo da ·rvore, sÛ que, ao invÈs de estar no lado por
+Abaixo da √Årvore~
+   Voc√™ est√° bem abaixo da √°rvore, s√≥ que, ao inv√©s de estar no lado por
 onde chegou, acabou indo parar em um outro lugar. Um enorme galho se extende
-daqui atÈ alcanÁar exatamente a entrada do templo, sendo possÌvel chegar
+daqui at√© alcan√ßar exatamente a entrada do templo, sendo poss√≠vel chegar
 nele rapidamente.
 ~
-49 68 0 0 0 1
+49 gc 1
 D3
 ~
 ~
