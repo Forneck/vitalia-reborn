@@ -554,10 +554,10 @@ ASPELL(spell_transport_via_plants) {
     return;
 
   if (!obj) {
-    send_to_char(ch, "O seu alvo nao existe!\r\n");
+    send_to_char(ch, "O seu alvo não existe!\r\n");
     return;
   } else if (GET_OBJ_TYPE(obj) != ITEM_PLANT) {
-    send_to_char(ch, "Isto nao e' uma planta!\r\n");
+    send_to_char(ch, "Isto nao é uma planta!\r\n");
     return;
   } 
   obj_num = GET_OBJ_VNUM(obj);
@@ -675,7 +675,7 @@ if (IN_ROOM(victim) == IN_ROOM(ch)) {
 
 	/* Portal at other side */
 	portal_obj = read_object(PORTAL_VNUM, VIRTUAL);
-	sprintf(buf, "Through the mists of the portal, you can faintly see %s",
+	sprintf(buf, "Através das névoas do portal, você vê %s",
 			world[IN_ROOM(ch)].name);
 
 	CREATE(extra_desc, struct extra_descr_data, 1);
