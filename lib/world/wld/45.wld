@@ -1,441 +1,443 @@
 #4500
-Um Círculo de Montanhas~
-   Você está num circulo de montanhas altas e escarpadas, aonde é impossível
-de se chegar ao topo à exceção das enormes aves que circulam o local a
-grandes altitudes parecendo estarem em constate vigilância.  Em direção ao
-sul você sai deste local, enquanto que ao norte, ao leste e ao oeste continua
-o círculo de montanhas.
+Um CÃ­rculo de Montanhas~
+   VocÃª estÃ¡ num circulo de montanhas altas e escarpadas, aonde Ã© impossÃ­vel
+de se chegar ao topo Ã  exceÃ§Ã£o das enormes aves que circulam o local a
+grandes altitudes parecendo estarem em constate vigilÃ¢ncia.  Em direÃ§Ã£o ao
+sul vocÃª sai deste local, enquanto que ao norte, ao leste e ao oeste continua
+o cÃ­rculo de montanhas.
 ~
-45 64 0 0 0 5
-D0
-Um círculo de montanhas.
-~
-~
-0 -1 4505
-D1
-Um círculo de montanhas.
-~
-~
-0 -1 4501
-D3
-Um círculo de montanhas.
-~
-~
-0 -1 4509
-D8
+45 g 5
+D 8
 ~
 ~
 0 -1 5659
+D 0
+Um cÃ­rculo de montanhas.
+~
+~
+0 -1 4505
+D 1
+Um cÃ­rculo de montanhas.
+~
+~
+0 -1 4501
+D 3
+Um cÃ­rculo de montanhas.
+~
+~
+0 -1 4509
 E
 aves enormes~
-São enormes águias circulando o pico destas montanhas, você poderia
-facilmente ser carregado por uma delas.  Reze para que elas não o
-considerem uma ameaça a este local.
+SÃ£o enormes Ã¡guias circulando o pico destas montanhas, vocÃª poderia
+facilmente ser carregado por uma delas.  Reze para que elas nÃ£o o
+considerem uma ameaÃ§a a este local.
 ~
 S
 #4501
-Um Círculo de Montanhas~
-   Você está num circulo de montanhas altas e escarpadas, aonde é impossível
-de se chegar ao topo à exceção das enormes aves que circulam o local a
-grandes altitudes parecendo estarem em constate vigilância.  Em direção ao
-norte, ao leste e ao oeste continua o círculo de montanhas.
+Um CÃ­rculo de Montanhas~
+   VocÃª estÃ¡ num circulo de montanhas altas e escarpadas, aonde Ã© impossÃ­vel
+de se chegar ao topo Ã  exceÃ§Ã£o das enormes aves que circulam o local a
+grandes altitudes parecendo estarem em constate vigilÃ¢ncia.  Em direÃ§Ã£o ao
+norte, ao leste e ao oeste continua o cÃ­rculo de montanhas.
 ~
-45 64 0 0 0 5
-D0
-Um círculo de montanhas.
+45 g 5
+D 0
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4504
-D1
-Um círculo de montanhas.
+D 1
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4502
-D3
-Um círculo de montanhas.
+D 3
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4500
 E
 aves enormes~
-São enormes águias circulando o pico destas montanhas, você poderia
-facilmente ser carregado por uma delas.  Reze para que elas não o considerem
-uma ameaça a este local.
+SÃ£o enormes Ã¡guias circulando o pico destas montanhas, vocÃª poderia
+facilmente ser carregado por uma delas.  Reze para que elas nÃ£o o considerem
+uma ameaÃ§a a este local.
 ~
 S
 #4502
-Um Círculo de Montanhas~
-   Você está num circulo de montanhas altas e escarpadas, aonde é impossível
-de se chegar ao topo à exceção das enormes aves que circulam o local a
-grandes altitudes parecendo estarem em constate vigilância.  Em direção ao
-norte e ao oeste continua o círculo de montanhas.
+Um CÃ­rculo de Montanhas~
+   VocÃª estÃ¡ num circulo de montanhas altas e escarpadas, aonde Ã© impossÃ­vel
+de se chegar ao topo Ã  exceÃ§Ã£o das enormes aves que circulam o local a
+grandes altitudes parecendo estarem em constate vigilÃ¢ncia.  Em direÃ§Ã£o ao
+norte e ao oeste continua o cÃ­rculo de montanhas.
 ~
-45 64 0 0 0 5
-D0
-Um círculo de montanhas.
+45 g 5
+D 0
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4503
-D3
-Um círculo de montanhas.
+D 3
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4501
 E
 aves enormes~
-São enormes águias circulando o pico destas montanhas, você poderia
-facilmente ser carregado por uma delas.  Reze para que elas não o
-considerem uma ameaça a este local.
+SÃ£o enormes Ã¡guias circulando o pico destas montanhas, vocÃª poderia
+facilmente ser carregado por uma delas.  Reze para que elas nÃ£o o
+considerem uma ameaÃ§a a este local.
 ~
 S
 #4503
-Um Círculo de Montanhas~
-   Você está num circulo de montanhas altas e escarpadas, aonde é impossível
-de se chegar ao topo à exceção das enormes aves que circulam o local a
-grandes altitudes parecendo estarem em constate vigilância.  Em direção ao
-sul e ao oeste continua o círculo de montanhas.
+Um CÃ­rculo de Montanhas~
+   VocÃª estÃ¡ num circulo de montanhas altas e escarpadas, aonde Ã© impossÃ­vel
+de se chegar ao topo Ã  exceÃ§Ã£o das enormes aves que circulam o local a
+grandes altitudes parecendo estarem em constate vigilÃ¢ncia.  Em direÃ§Ã£o ao
+sul e ao oeste continua o cÃ­rculo de montanhas.
 ~
-45 64 0 0 0 5
-D2
-Um círculo de montanhas.
+45 g 5
+D 2
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4502
-D3
-Um círculo de montanhas.
+D 3
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4504
 E
 aves enormes~
-São enormes águias circulando o pico destas montanhas, você poderia
-facilmente ser carregado por uma delas.  Reze para que elas não o considerem
-uma ameaça a este local.
+SÃ£o enormes Ã¡guias circulando o pico destas montanhas, vocÃª poderia
+facilmente ser carregado por uma delas.  Reze para que elas nÃ£o o considerem
+uma ameaÃ§a a este local.
 ~
 S
 #4504
-Um Círculo de Montanhas~
-   Você está num circulo de montanhas altas e escarpadas, aonde é impossível
-de se chegar ao topo à exceção das enormes aves que circulam o local a
-grandes altitudes parecendo estarem em constate vigilância.  Em direção ao
-norte, ao leste, ao oeste e ao sul continua o círculo de montanhas.
+Um CÃ­rculo de Montanhas~
+   VocÃª estÃ¡ num circulo de montanhas altas e escarpadas, aonde Ã© impossÃ­vel
+de se chegar ao topo Ã  exceÃ§Ã£o das enormes aves que circulam o local a
+grandes altitudes parecendo estarem em constate vigilÃ¢ncia.  Em direÃ§Ã£o ao
+norte, ao leste, ao oeste e ao sul continua o cÃ­rculo de montanhas.
 ~
-45 64 0 0 0 5
-D0
-Um círculo de montanhas.
+45 g 5
+D 0
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4511
-D1
-Um círculo de montanhas.
+D 1
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4503
-D2
+D 3
+Um cÃ­rculo de montanhas.
+~
+~
+0 -1 4505
+D 2
 ~
 ~
 0 -1 4501
-D3
-Um círculo de montanhas.
-~
-~
-0 -1 4505
 E
 aves enormes~
-São enormes águias circulando o pico destas montanhas, você poderia
-facilmente ser carregado por uma delas.  Reze para que elas não o
-considerem uma ameaça a este local.
+SÃ£o enormes Ã¡guias circulando o pico destas montanhas, vocÃª poderia
+facilmente ser carregado por uma delas.  Reze para que elas nÃ£o o
+considerem uma ameaÃ§a a este local.
 ~
 S
 #4505
-Um Círculo de Montanhas~
-   Você está num circulo de montanhas altas e escarpadas, aonde é impossível
-de se chegar ao topo à exceção das enormes aves que circulam o local a
-grandes altitudes parecendo estarem em constate vigilância.  Em direção ao
-norte é impossível continuar, ao leste, ao oeste e ao sul continua o círculo
+Um CÃ­rculo de Montanhas~
+   VocÃª estÃ¡ num circulo de montanhas altas e escarpadas, aonde Ã© impossÃ­vel
+de se chegar ao topo Ã  exceÃ§Ã£o das enormes aves que circulam o local a
+grandes altitudes parecendo estarem em constate vigilÃ¢ncia.  Em direÃ§Ã£o ao
+norte Ã© impossÃ­vel continuar, ao leste, ao oeste e ao sul continua o cÃ­rculo
 de montanhas.
 ~
-45 64 0 0 0 5
-D1
-Um círculo de montanhas.
+45 g 5
+D 1
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4504
-D2
-Um círculo de montanhas.
-~
-~
-0 -1 4500
-D3
-Um círculo de montanhas.
+D 3
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4506
+D 2
+Um cÃ­rculo de montanhas.
+~
+~
+0 -1 4500
 E
 aves enormes~
-São enormes águias circulando o pico destas montanhas, você poderia
-facilmente ser carregado por uma delas.  Reze para que elas não o
-considerem uma ameaça a este local.
+SÃ£o enormes Ã¡guias circulando o pico destas montanhas, vocÃª poderia
+facilmente ser carregado por uma delas.  Reze para que elas nÃ£o o
+considerem uma ameaÃ§a a este local.
 ~
 S
 #4506
-Um Círculo de Montanhas~
-   Você está num circulo de montanhas altas e escarpadas, aonde é impossível
-de se chegar ao topo à exceção das enormes aves que circulam o local a
-grandes altitudes parecendo estarem em constate vigilância.  Em direção ao
-norte, ao leste, ao oeste e ao sul continua o círculo de montanhas.
+Um CÃ­rculo de Montanhas~
+   VocÃª estÃ¡ num circulo de montanhas altas e escarpadas, aonde Ã© impossÃ­vel
+de se chegar ao topo Ã  exceÃ§Ã£o das enormes aves que circulam o local a
+grandes altitudes parecendo estarem em constate vigilÃ¢ncia.  Em direÃ§Ã£o ao
+norte, ao leste, ao oeste e ao sul continua o cÃ­rculo de montanhas.
 ~
-45 64 0 0 0 5
-D0
-Um círculo de montanhas.
+45 g 5
+D 0
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4510
-D1
-Um círculo de montanhas.
+D 1
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4505
-D2
-Um círculo de montanhas.
-~
-~
-0 -1 4509
-D3
-Um círculo de montanhas.
+D 3
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4507
+D 2
+Um cÃ­rculo de montanhas.
+~
+~
+0 -1 4509
 E
 aves enormes~
-São enormes águias circulando o pico destas montanhas, você poderia
-facilmente ser carregado por uma delas.  Reze para que elas não o
-considerem uma ameaça a este local.
+SÃ£o enormes Ã¡guias circulando o pico destas montanhas, vocÃª poderia
+facilmente ser carregado por uma delas.  Reze para que elas nÃ£o o
+considerem uma ameaÃ§a a este local.
 ~
 S
 #4507
-Um Círculo de Montanhas~
-   Você está num circulo de montanhas altas e escarpadas, aonde é impossível
-de se chegar ao topo à exceção das enormes aves que circulam o local a
-grandes altitudes parecendo estarem em constate vigilância.  Em direção ao
-leste e ao sul continua o círculo de montanhas.
+Um CÃ­rculo de Montanhas~
+   VocÃª estÃ¡ num circulo de montanhas altas e escarpadas, aonde Ã© impossÃ­vel
+de se chegar ao topo Ã  exceÃ§Ã£o das enormes aves que circulam o local a
+grandes altitudes parecendo estarem em constate vigilÃ¢ncia.  Em direÃ§Ã£o ao
+leste e ao sul continua o cÃ­rculo de montanhas.
 ~
-45 64 0 0 0 5
-D1
-Um círculo de montanhas.
-~
-~
-0 -1 4506
-D2
-Um círculo de montanhas.
+45 g 5
+D 2
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4508
+D 1
+Um cÃ­rculo de montanhas.
+~
+~
+0 -1 4506
 E
 aves enormes~
-São enormes águias circulando o pico destas montanhas, você poderia
-facilmente ser carregado por uma delas.  Reze para que elas não o
-considerem uma ameaça a este local.
+SÃ£o enormes Ã¡guias circulando o pico destas montanhas, vocÃª poderia
+facilmente ser carregado por uma delas.  Reze para que elas nÃ£o o
+considerem uma ameaÃ§a a este local.
 ~
 S
 #4508
-Um Círculo de Montanhas~
-   Você está num circulo de montanhas altas e escarpadas, aonde é impossível
-de se chegar ao topo à exceção das enormes aves que circulam o local a
-grandes altitudes parecendo estarem em constate vigilância.  Em direção ao
-norte e ao leste continua o círculo de montanhas.
+Um CÃ­rculo de Montanhas~
+   VocÃª estÃ¡ num circulo de montanhas altas e escarpadas, aonde Ã© impossÃ­vel
+de se chegar ao topo Ã  exceÃ§Ã£o das enormes aves que circulam o local a
+grandes altitudes parecendo estarem em constate vigilÃ¢ncia.  Em direÃ§Ã£o ao
+norte e ao leste continua o cÃ­rculo de montanhas.
 ~
-45 64 0 0 0 5
-D0
-Um círculo de montanhas.
+45 g 5
+D 0
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4507
-D1
-Um círculo de montanhas.
+D 1
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4509
 E
 aves enormes~
-São enormes águias circulando o pico destas montanhas, você poderia
-facilmente ser carregado por uma delas.  Reze para que elas não o
-considerem uma ameaça a este local.
+SÃ£o enormes Ã¡guias circulando o pico destas montanhas, vocÃª poderia
+facilmente ser carregado por uma delas.  Reze para que elas nÃ£o o
+considerem uma ameaÃ§a a este local.
 ~
 S
 #4509
-Um Círculo de Montanhas~
-   Você está num circulo de montanhas altas e escarpadas, aonde é impossível
-de se chegar ao topo à exceção das enormes aves que circulam o local a
-grandes altitudes parecendo estarem em constate vigilância.  Em direção ao
-norte, ao leste e ao oeste continua o círculo de montanhas.
+Um CÃ­rculo de Montanhas~
+   VocÃª estÃ¡ num circulo de montanhas altas e escarpadas, aonde Ã© impossÃ­vel
+de se chegar ao topo Ã  exceÃ§Ã£o das enormes aves que circulam o local a
+grandes altitudes parecendo estarem em constate vigilÃ¢ncia.  Em direÃ§Ã£o ao
+norte, ao leste e ao oeste continua o cÃ­rculo de montanhas.
 ~
-45 64 0 0 0 5
-D0
-Um círculo de montanhas.
+45 g 5
+D 0
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4506
-D1
-Um círculo de montanhas.
+D 1
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4500
-D3
-Um círculo de montanhas.
+D 3
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4508
 E
 aves enormes~
-São enormes águias circulando o pico destas montanhas, você poderia
-facilmente ser carregado por uma delas.  Reze para que elas não o
-considerem uma ameaça a este local.
+SÃ£o enormes Ã¡guias circulando o pico destas montanhas, vocÃª poderia
+facilmente ser carregado por uma delas.  Reze para que elas nÃ£o o
+considerem uma ameaÃ§a a este local.
 ~
 S
 #4510
-Um Círculo de Montanhas~
-   Você está num circulo de montanhas altas e escarpadas, aonde é impossível
-de se chegar ao topo à exceção das enormes aves que circulam o local a
-grandes altitudes parecendo estarem em constate vigilância.  Em direção ao
-sul e ao leste continua o círculo de montanhas.
+Um CÃ­rculo de Montanhas~
+   VocÃª estÃ¡ num circulo de montanhas altas e escarpadas, aonde Ã© impossÃ­vel
+de se chegar ao topo Ã  exceÃ§Ã£o das enormes aves que circulam o local a
+grandes altitudes parecendo estarem em constate vigilÃ¢ncia.  Em direÃ§Ã£o ao
+sul e ao leste continua o cÃ­rculo de montanhas.
 ~
-45 64 0 0 0 5
-D1
-Um círculo de montanhas.
-~
-~
-0 -1 4512
-D2
-Um círculo de montanhas.
+45 g 5
+D 2
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4506
-E
-aves enormes~
-São enormes águias circulando o pico destas montanhas, você poderia
-facilmente ser carregado por uma delas.  Reze para que elas não o
-considerem uma ameaça a este local.
-~
-S
-#4511
-Um Círculo de Montanhas~
-   Você está num circulo de montanhas altas e escarpadas, aonde é impossível
-de se chegar ao topo à exceção das enormes aves que circulam o local a
-grandes altitudes parecendo estarem em constate vigilância.  Em direção ao
-sul e ao oeste continua o círculo de montanhas.
-~
-45 64 0 0 0 5
-D2
-Um círculo de montanhas.
-~
-~
-0 -1 4504
-D3
-Um círculo de montanhas.
+D 1
+Um cÃ­rculo de montanhas.
 ~
 ~
 0 -1 4512
 E
 aves enormes~
-São enormes águias circulando o pico destas montanhas, você poderia
-facilmente ser carregado por uma delas.  Reze para que elas não o
-considerem uma ameaça a este local.
+SÃ£o enormes Ã¡guias circulando o pico destas montanhas, vocÃª poderia
+facilmente ser carregado por uma delas.  Reze para que elas nÃ£o o
+considerem uma ameaÃ§a a este local.
+~
+S
+#4511
+Um CÃ­rculo de Montanhas~
+   VocÃª estÃ¡ num circulo de montanhas altas e escarpadas, aonde Ã© impossÃ­vel
+de se chegar ao topo Ã  exceÃ§Ã£o das enormes aves que circulam o local a
+grandes altitudes parecendo estarem em constate vigilÃ¢ncia.  Em direÃ§Ã£o ao
+sul e ao oeste continua o cÃ­rculo de montanhas.
+~
+45 g 5
+D 2
+Um cÃ­rculo de montanhas.
+~
+~
+0 -1 4504
+D 3
+Um cÃ­rculo de montanhas.
+~
+~
+0 -1 4512
+E
+aves enormes~
+SÃ£o enormes Ã¡guias circulando o pico destas montanhas, vocÃª poderia
+facilmente ser carregado por uma delas.  Reze para que elas nÃ£o o
+considerem uma ameaÃ§a a este local.
 ~
 S
 #4512
-Um Círculo de Montanhas~
-   Você está num circulo de montanhas altas e escarpadas, aonde é impossível
-de se chegar ao topo à exceção das enormes aves que circulam o local a
-grandes altitudes parecendo estarem em constate vigilância.  Parece haver um
-caminho que foi escavado pelas águas seguindo para baixo das montanhas.
-Em direção ao leste e ao oeste continua o círculo de montanhas.
+Um CÃ­rculo de Montanhas~
+   VocÃª estÃ¡ num circulo de montanhas altas e escarpadas, aonde Ã© impossÃ­vel
+de se chegar ao topo Ã  exceÃ§Ã£o das enormes aves que circulam o local a
+grandes altitudes parecendo estarem em constate vigilÃ¢ncia.  Parece haver um
+caminho que foi escavado pelas Ã¡guas seguindo para baixo das montanhas.
+Em direÃ§Ã£o ao leste e ao oeste continua o cÃ­rculo de montanhas.
 ~
-45 64 0 0 0 5
-D1
-Um círculo de montanhas.
-~
-~
-0 -1 4511
-D3
-Um círculo de montanhas.
-~
-~
-0 -1 4510
-D5
+45 g 5
+D 5
 Um caminho oculto.
 ~
 caminho baixo oculto~
-1 -1 4513
-E
-águas escavado~
-Um caminho nas profundezas, por baixo das montanhas, escavado nas trevas do
-mundo, por águas que ali fluíam.
+:n 1 um caminho oculto
+ad -1 4513
+D 1
+Um cÃ­rculo de montanhas.
 ~
+~
+0 -1 4511
+D 3
+Um cÃ­rculo de montanhas.
+~
+~
+0 -1 4510
 E
 aves enormes~
-São enormes águias circulando o pico destas montanhas, você poderia
-facilmente ser carregado por uma delas.  Reze para que elas não o
-considerem uma ameaça a este local.
+SÃ£o enormes Ã¡guias circulando o pico destas montanhas, vocÃª poderia
+facilmente ser carregado por uma delas.  Reze para que elas nÃ£o o
+considerem uma ameaÃ§a a este local.
+~
+E
+Ã¡guas escavado~
+Um caminho nas profundezas, por baixo das montanhas, escavado nas trevas do
+mundo, por Ã¡guas que ali fluÃ­am.
 ~
 S
 #4513
 No Interior das Montanhas Circundantes~
-   Ao passar pela abertura oculta, como se fosse a boca de um túnel escavado
-na dura rocha por águas que tivessem fluído do coração das montanhas, você
-chega a um caminho bastante estreito.  Seguindo para cima você volta para a
-parte exterior das montanhas, ao norte há um estreito e escuro caminho.
+   Ao passar pela abertura oculta, como se fosse a boca de um tÃºnel escavado
+na dura rocha por Ã¡guas que tivessem fluÃ­do do coraÃ§Ã£o das montanhas, vocÃª
+chega a um caminho bastante estreito.  Seguindo para cima vocÃª volta para a
+parte exterior das montanhas, ao norte hÃ¡ um estreito e escuro caminho.
 ~
-45 262253 0 0 0 5
-D0
+45 acdfgs 5
+D 4
+O exterior das montanhas.
+~
+caminho oculto~
+:n 1 o caminho oculto
+ab -1 4512
+D 0
 Um caminho estreito e escuro.
 ~
 ~
 0 -1 4514
-D3
+D 3
 O rio de Gondolin.
 ~
 ~
 0 -1 4599
-D4
-O exterior das montanhas.
-~
-caminho oculto~
-1 -1 4512
 S
 #4514
 Um Caminho Estreito e Escuro~
-   Aqui dentro não há luz alguma e é preciso andar encurvado, pois o teto é
-bastante baixo.  Ao norte você continua por este caminho assustador, para o
-sul você retorna à entrada do túnel.
+   Aqui dentro nÃ£o hÃ¡ luz alguma e Ã© preciso andar encurvado, pois o teto Ã©
+bastante baixo.  Ao norte vocÃª continua por este caminho assustador, para o
+sul vocÃª retorna Ã  entrada do tÃºnel.
 ~
-45 262253 0 0 0 5
-D0
+45 acdfgs 5
+D 0
 Um caminho estreito e escuro.
 ~
 ~
 0 -1 4515
-D2
-A entrada do túnel.
+D 2
+A entrada do tÃºnel.
 ~
 ~
 0 -1 4513
 S
 #4515
 Um Caminho Estreito e Escuro~
-   Aqui dentro não há luz alguma e é preciso andar encurvado, pois o teto é
-bastante baixo.  Durante algum tempo você prossegue as cegas, passo a passo,
-até que finalmente sente o chão sob seus pés tornar-se plano e livre de
-pedras soltas.  Ao norte você se aprofunda no interior das montanhas, ao sul
-você retorna pelo túnel até a saída.
+   Aqui dentro nÃ£o hÃ¡ luz alguma e Ã© preciso andar encurvado, pois o teto Ã©
+bastante baixo.  Durante algum tempo vocÃª prossegue as cegas, passo a passo,
+atÃ© que finalmente sente o chÃ£o sob seus pÃ©s tornar-se plano e livre de
+pedras soltas.  Ao norte vocÃª se aprofunda no interior das montanhas, ao sul
+vocÃª retorna pelo tÃºnel atÃ© a saÃ­da.
 ~
-45 262253 0 0 0 5
-D0
-Um grande vão.
+45 acdfgs 5
+D 0
+Um grande vÃ£o.
 ~
 ~
 0 -1 4516
-D2
+D 2
 Um caminho estreito e escuro.
 ~
 ~
@@ -443,18 +445,18 @@ Um caminho estreito e escuro.
 S
 #4516
 Uma Grande Caverna~
-   Aqui o ar é fresco e saudável, há um grande espaço a sua volta e também
-acima.  Mas o silêncio é total, e nem mesmo o pingar da água se pode ouvir.
-Você se sente inquieto e inseguro.  Você pode seguir ao norte através da
+   Aqui o ar Ã© fresco e saudÃ¡vel, hÃ¡ um grande espaÃ§o a sua volta e tambÃ©m
+acima.  Mas o silÃªncio Ã© total, e nem mesmo o pingar da Ã¡gua se pode ouvir.
+VocÃª se sente inquieto e inseguro.  VocÃª pode seguir ao norte atravÃ©s da
 caverna ou voltar pelo sul ao caminho estreito.
 ~
-45 41 0 0 0 5
-D0
+45 adf 5
+D 0
 A caverna da guarda externa.
 ~
 ~
 0 -1 4517
-D2
+D 2
 Um caminho estreito e escuro.
 ~
 ~
@@ -462,37 +464,37 @@ Um caminho estreito e escuro.
 S
 #4517
 A Caverna da Guarda Externa~
-   Você ouve o ruído de passos, crescendo para um tropel alto como a marcha
-de trolls neste lugar oco.  De repente uma lanterna élfica é destapada e seu
-raio luminoso se volta contra você.  Para o leste há uma passagem e ao sul
-você volta ao inicio desta caverna.
+   VocÃª ouve o ruÃ­do de passos, crescendo para um tropel alto como a marcha
+de trolls neste lugar oco.  De repente uma lanterna Ã©lfica Ã© destapada e seu
+raio luminoso se volta contra vocÃª.  Para o leste hÃ¡ uma passagem e ao sul
+vocÃª volta ao inicio desta caverna.
 ~
-45 262153 0 0 0 5
-D1
-A passagem.
-~
-~
-0 -1 4518
-D2
+45 ads 5
+D 2
 A grande caverna.
 ~
 ~
 0 -1 4516
+D 1
+A passagem.
+~
+~
+0 -1 4518
 S
 #4518
 Um Corredor Estreito~
-   Você caminha por este corredor estreito durante muito tempo sobre um 
-chão plano, sempre observado pelos guardas élficos, até que uma luz pálida 
-reluz à frente.  Ao leste continua pelo corredor estreito e ao oeste você 
+   VocÃª caminha por este corredor estreito durante muito tempo sobre um 
+chÃ£o plano, sempre observado pelos guardas Ã©lficos, atÃ© que uma luz pÃ¡lida 
+reluz Ã  frente.  Ao leste continua pelo corredor estreito e ao oeste vocÃª 
 retorna a caverna da guarda externa.
 ~
-45 262153 0 0 0 5
-D1
+45 ads 5
+D 1
 Um corredor estreito.
 ~
 ~
 0 -1 4519
-D3
+D 3
 A caverna da guarda externa.
 ~
 ~
@@ -500,61 +502,62 @@ A caverna da guarda externa.
 S
 #4519
 Um Corredor Estreito~
-   Você caminha por este corredor estreito durante muito tempo sobre um chão
-plano, sempre observado pelos guardas élficos, até que uma luz pálida reluz
-à frente.  Ao leste finalmente parece terminar o corredor estreito e ao oeste
-irá voltar por este.
+   VocÃª caminha por este corredor estreito durante muito tempo sobre um chÃ£o
+plano, sempre observado pelos guardas Ã©lficos, atÃ© que uma luz pÃ¡lida reluz
+Ã  frente.  Ao leste finalmente parece terminar o corredor estreito e ao oeste
+irÃ¡ voltar por este.
 ~
-45 262153 0 0 0 5
-D1
-O portão de madeira.
+45 ads 5
+D 1
+O portÃ£o de madeira.
 ~
 ~
 0 -1 4520
-D3
+D 3
 O corredor estreito.
 ~
 ~
 0 -1 4518
 S
 #4520
-O Portão de Madeira~
-   Você chega, finalmente, a um amplo arco, com colunas altas de ambos os
-lados, esculpidas na rocha, e entre elas está suspenso um grande portão
-corrediço de barras de madeira cruzadas, maravilhosamente entalhado e
-guarnecido de pregos de ferro.  Seguindo para o norte você atravessa o
-primeiro dos portões de Gondolin, ao oeste você retorna pelo caminho que o
-trouxe até aqui.
+O PortÃ£o de Madeira~
+   VocÃª chega, finalmente, a um amplo arco, com colunas altas de ambos os
+lados, esculpidas na rocha, e entre elas estÃ¡ suspenso um grande portÃ£o
+corrediÃ§o de barras de madeira cruzadas, maravilhosamente entalhado e
+guarnecido de pregos de ferro.  Seguindo para o norte vocÃª atravessa o
+primeiro dos portÃµes de Gondolin, ao oeste vocÃª retorna pelo caminho que o
+trouxe atÃ© aqui.
 ~
-45 262152 0 0 0 5
-D0
-Do outro lado do portão.
+45 ds 5
+D 0
+Do outro lado do portÃ£o.
 ~
-portão madeira~
-0 4500 4521
-D3
+portao madeira~
+:n 1 o PortÃ£o de Madeira
+ag 4500 4521
+D 3
 O corredor.
 ~
 ~
 0 -1 4519
 E
-portão madeira~
-Um grande portão corrediço de barras de madeira cruzadas, maravilhosamente
+portao madeira~
+Um grande portÃ£o corrediÃ§o de barras de madeira cruzadas, maravilhosamente
 entalhado e guarnecido de pregos de ferro.
 ~
 S
 #4521
 Uma Ravina~
-   Você atravessa o portão de madeira que se abre sem ruído algum.  Aqui é a
-extremidade de uma ravina, tal como nunca antes contemplará ou imaginara.
-As mãos dos próprios Valar, nas antigas guerras do princípio do mundo, haviam
-apartado à força os grandes montes, e as laterais da fenda são escarpadas
-como se cortadas a golpes de machado, e se erguem a alturas inimagináveis.
-   Ao noroeste você segue pela ravina, é impossível voltar a partir de agora
-sem ser morto pela guarda do portão de madeira.
+   VocÃª atravessa o portÃ£o de madeira que se abre sem ruÃ­do algum.  Aqui Ã© a
+extremidade de uma ravina, tal como nunca antes contemplarÃ¡ ou imaginara.
+As mÃ£os dos prÃ³prios Valar, nas antigas guerras do princÃ­pio do mundo, haviam
+apartado Ã  forÃ§a os grandes montes, e as laterais da fenda sÃ£o escarpadas
+como se cortadas a golpes de machado, e se erguem a alturas inimaginÃ¡veis.
+   Ao noroeste vocÃª segue pela ravina, Ã© impossÃ­vel voltar a partir de agora
+sem ser morto pela guarda do portÃ£o de madeira.
 ~
-45 262209 0 0 0 4
-D6
+45 ags 4
+D 6
 Uma ravina.
 ~
 ~
@@ -562,18 +565,18 @@ Uma ravina.
 S
 #4522
 Uma Ravina~
-   Embora já seja dia claro, estrelas brilham pálidas sobre os cimos das
-montanhas, e lá embaixo tudo é penumbra, a não ser pela luz fraca das
-lanternas colocadas ao longo da estrada ascendente.  Ao oeste você continua
-pela ravina e ao sudeste você volta pelo caminho até o portão de madeira.
+   Embora jÃ¡ seja dia claro, estrelas brilham pÃ¡lidas sobre os cimos das
+montanhas, e lÃ¡ embaixo tudo Ã© penumbra, a nÃ£o ser pela luz fraca das
+lanternas colocadas ao longo da estrada ascendente.  Ao oeste vocÃª continua
+pela ravina e ao sudeste vocÃª volta pelo caminho atÃ© o portÃ£o de madeira.
 ~
-45 0 0 0 0 4
-D3
+45 0 4
+D 3
 Uma ravina.
 ~
 ~
 0 -1 4523
-D8
+D 8
 Uma ravina.
 ~
 ~
@@ -581,18 +584,18 @@ Uma ravina.
 S
 #4523
 Um Caminho Pavimentado~
-   O piso da ravina apresenta um aclive pronunciado na direção leste e a
-esquerda, ao lado do leito do rio, um caminho longo, calçado com pedras,
-subindo sinuoso até se perder na sombra.  Você pode subir pelo caminho
+   O piso da ravina apresenta um aclive pronunciado na direÃ§Ã£o leste e a
+esquerda, ao lado do leito do rio, um caminho longo, calÃ§ado com pedras,
+subindo sinuoso atÃ© se perder na sombra.  VocÃª pode subir pelo caminho
 seguindo para cima ou voltar ao inicio da ravina.
 ~
-45 0 0 0 0 4
-D1
+45 0 4
+D 1
 Uma ravina.
 ~
 ~
 0 -1 4522
-D4
+D 4
 Um caminho pavimentado.
 ~
 ~
@@ -600,19 +603,19 @@ Um caminho pavimentado.
 S
 #4524
 Um Caminho Pavimentado~
-   O piso da ravina apresenta um aclive pronunciado na direção leste e a
-esquerda, ao lado do leito do rio, um caminho longo, calçado com pedras,
-subindo sinuoso até se perder na sombra.  Você não consegue imaginar a que
-distância esta estrada profundo leva.  Pode subir pelo caminho seguindo para
+   O piso da ravina apresenta um aclive pronunciado na direÃ§Ã£o leste e a
+esquerda, ao lado do leito do rio, um caminho longo, calÃ§ado com pedras,
+subindo sinuoso atÃ© se perder na sombra.  VocÃª nÃ£o consegue imaginar a que
+distÃ¢ncia esta estrada profundo leva.  Pode subir pelo caminho seguindo para
 cima ou voltar pela ravina.
 ~
-45 0 0 0 0 4
-D4
+45 0 4
+D 4
 Um caminho pavimentado.
 ~
 ~
 0 -1 4525
-D5
+D 5
 Um caminho pavimentado.
 ~
 ~
@@ -620,18 +623,18 @@ Um caminho pavimentado.
 S
 #4525
 Um Aclive Sinuoso~
-   Você não consegue imaginar a que distância esta estrada profundo leva,
-mas percebe que não há mais guardas vigiando seus passos, afinal deste local
-não há como elfo ou homem escapar.  E assim continua subindo o caminho
-íngreme, sob a sombra intimidante do penhasco ao seu redor.
+   VocÃª nÃ£o consegue imaginar a que distÃ¢ncia esta estrada profundo leva,
+mas percebe que nÃ£o hÃ¡ mais guardas vigiando seus passos, afinal deste local
+nÃ£o hÃ¡ como elfo ou homem escapar.  E assim continua subindo o caminho
+Ã­ngreme, sob a sombra intimidante do penhasco ao seu redor.
 ~
-45 0 0 0 0 4
-D0
+45 0 4
+D 0
 Longas escadarias.
 ~
 ~
 0 -1 4526
-D5
+D 5
 Um caminho pavimentado.
 ~
 ~
@@ -639,717 +642,733 @@ Um caminho pavimentado.
 S
 #4526
 Longas Escadarias~
-   Escadarias talhadas na própria encosta da montanha, mas você observa que
-são perfeitamente regulares e fica imaginando se foram feitas pelos elfos ou
-se foi obra de alguém mais antigo.  E assim continua subindo as longas
+   Escadarias talhadas na prÃ³pria encosta da montanha, mas vocÃª observa que
+sÃ£o perfeitamente regulares e fica imaginando se foram feitas pelos elfos ou
+se foi obra de alguÃ©m mais antigo.  E assim continua subindo as longas
 escadarias, sob a sombra intimidante do penhasco ao seu redor.
 ~
-45 0 0 0 0 4
-D2
+45 0 4
+D 2
 Um aclive sinuoso.
 ~
 ~
 0 -1 4525
-D4
-Próximo ao segundo portão.
+D 4
+PrÃ³ximo ao segundo portÃ£o.
 ~
 ~
 0 -1 4527
 S
 #4527
-Próximo ao Segundo Portão~
-   E você continua sempre subindo pelas escadarias ou caminhos íngremes,
-até que, a cerca de meia légua do Portão de Madeira você percebe que o
-caminho está barrado por um grande murro construído de lado a lado da
-ravina, com robustas torres de pedra de ambos os flancos.  Você pode descer
-em direção ao Portão de Madeira, ou seguir para o oeste, chegando ao
-Segundo Portão.
+PrÃ³ximo ao Segundo PortÃ£o~
+   E vocÃª continua sempre subindo pelas escadarias ou caminhos Ã­ngremes,
+atÃ© que, a cerca de meia lÃ©gua do PortÃ£o de Madeira vocÃª percebe que o
+caminho estÃ¡ barrado por um grande murro construÃ­do de lado a lado da
+ravina, com robustas torres de pedra de ambos os flancos.  VocÃª pode descer
+em direÃ§Ã£o ao PortÃ£o de Madeira, ou seguir para o oeste, chegando ao
+Segundo PortÃ£o.
 ~
-45 64 0 0 0 4
-D2
-O rio de Gondolin.
-~
-~
-0 -1 4598
-D3
-O segundo portão.
-~
-~
-0 -1 4528
-D5
+45 g 4
+D 5
 Longas escadarias.
 ~
 ~
 0 -1 4526
+D 3
+O segundo portÃ£o.
+~
+~
+0 -1 4528
+D 2
+O rio de Gondolin.
+~
+~
+0 -1 4598
 S
 #4528
-O Portão de Pedra~
-   No muro há um grande arco sobre a estrada, mas parece ter sido bloqueado
-com uma única pedra enorme.  Ao se aproximar, sua superfície escura e polida
-reluz à luz de lâmpada branca suspensa sobre o meio do arco.
-   Quando não está bloqueado um leve empurrão é o suficiente para fazer a
+O PortÃ£o de Pedra~
+   No muro hÃ¡ um grande arco sobre a estrada, mas parece ter sido bloqueado
+com uma Ãºnica pedra enorme.  Ao se aproximar, sua superfÃ­cie escura e polida
+reluz Ã  luz de lÃ¢mpada branca suspensa sobre o meio do arco.
+   Quando nÃ£o estÃ¡ bloqueado um leve empurrÃ£o Ã© o suficiente para fazer a
 pedra girar em torno de seu eixo, abrindo o caminho de ambos os lados.
 ~
-45 0 0 0 0 4
-D0
-Um grande pátio.
-~
-portão pedra~
-1 4501 4529
-D1
+45 0 4
+D 1
 ~
 ~
 0 -1 4527
+D 0
+Um grande pÃ¡tio.
+~
+portao pedra~
+:n 1 o PortÃ£o de Pedra
+a 4501 4529
 E
-portão pedra~
-Um grande arco com uma única e enorme pedra de superfície escura polida.
+portao pedra~
+Um grande arco com uma Ãºnica e enorme pedra de superfÃ­cie escura polida.
 ~
 S
 #4529
-Um Grande Pátio~
-   Você está no pátio do segundo portão, olhando ao redor pode avistar
-muitos soldados élficos armados, trajados de vestes cinzas, protegendo o
-caminho que leva à cidade.
-   Para sudeste e sudoeste há duas portas, que levam ao acesso das duas
-torres de vigia, enquanto que para nordeste você segue em direção ao
-próximo portão.
+Um Grande PÃ¡tio~
+   VocÃª estÃ¡ no pÃ¡tio do segundo portÃ£o, olhando ao redor pode avistar
+muitos soldados Ã©lficos armados, trajados de vestes cinzas, protegendo o
+caminho que leva Ã  cidade.
+   Para sudeste e sudoeste hÃ¡ duas portas, que levam ao acesso das duas
+torres de vigia, enquanto que para nordeste vocÃª segue em direÃ§Ã£o ao
+prÃ³ximo portÃ£o.
 ~
-45 0 0 0 0 4
-D2
+45 0 4
+D 2
 ~
-portão pedra~
-1 4501 4528
-D7
-O Pátio.
-~
-~
-0 -1 4534
-D8
+portao pedra~
+:n 1 o PortÃ£o de Pedra
+a 4501 4528
+D 8
 Torre leste.
 ~
 porta~
-0 4501 4530
-D9
+:n 2 a porta da torre leste
+ag 4501 4530
+D 9
 Torre oeste.
 ~
 porta~
-0 4501 4531
+:n 2 a porta da torre oeste
+ag 4501 4531
+D 7
+O PÃ¡tio.
+~
+~
+0 -1 4534
 E
-portão pedra~
-Um grande arco com uma única e enorme pedra de superfície escura polida.
+portao pedra~
+Um grande arco com uma Ãºnica e enorme pedra de superfÃ­cie escura polida.
 ~
 S
 #4530
 De Baixo da Torre Leste~
    Este parece um local bastante calmo, ideal para que um aventureiro cansado
 e faminto recupere parte de suas energias para seguir o restante do caminho
-até a cidade.
-   Há uma escada em espiral que leva ao segundo andar da torre no canto sul,
-e a noroeste você retorna ao pátio.
+atÃ© a cidade.
+   HÃ¡ uma escada em espiral que leva ao segundo andar da torre no canto sul,
+e a noroeste vocÃª retorna ao pÃ¡tio.
 ~
-45 655416 0 0 0 0
-D4
+45 defrt 0
+D 4
 O topo da torre leste.
 ~
 ~
 0 -1 4532
-D6
-O pátio.
+D 6
+O pÃ¡tio.
 ~
 porta~
-0 4501 4529
+:n 2 a porta da torre leste
+ag 4501 4529
 S
 #4531
 De Baixo da Torre Oeste~
    Este parece um local bastante calmo, ideal para que um aventureiro cansado
 e faminto recupere parte de suas energias para seguir o restante do caminho
-até a cidade.
-   Há uma escada em espiral que leva ao segundo andar da torre no canto sul,
-e a nordeste você retorna ao pátio.
+atÃ© a cidade.
+   HÃ¡ uma escada em espiral que leva ao segundo andar da torre no canto sul,
+e a nordeste vocÃª retorna ao pÃ¡tio.
 ~
-45 655416 0 0 0 0
-D4
+45 defrt 0
+D 4
 O topo da torre oeste.
 ~
 ~
 0 -1 4533
-D7
-O pátio.
+D 7
+O pÃ¡tio.
 ~
 porta~
-0 4501 4529
+:n 2 a porta da torre oeste
+ag 4501 4529
 S
 #4532
 O Topo da Torre Leste~
-   Você está no alto da torre de vigilância leste do imponente Portão de
-Pedra do reino oculto, deste local olhando para sudeste é possível avistar o
-caminho íngreme que o trouxe desde o primeiro portão, enquanto que olhando
-para norte você enxerga o pátio e muitos soldados de trajes cinza.
+   VocÃª estÃ¡ no alto da torre de vigilÃ¢ncia leste do imponente PortÃ£o de
+Pedra do reino oculto, deste local olhando para sudeste Ã© possÃ­vel avistar o
+caminho Ã­ngreme que o trouxe desde o primeiro portÃ£o, enquanto que olhando
+para norte vocÃª enxerga o pÃ¡tio e muitos soldados de trajes cinza.
 ~
-45 64 0 0 0 0
-D5
+45 g 0
+D 5
 ~
 ~
 0 -1 4530
 E
-norte~
-Um grande pátio onde há muitos soldados élficos de vestes cinza,
-fortemente armados.
+sudeste~
+Um longo e Ã­ngreme caminho nas montanhas.
 ~
 E
-sudeste~
-Um longo e íngreme caminho nas montanhas.
+norte~
+Um grande pÃ¡tio onde hÃ¡ muitos soldados Ã©lficos de vestes cinza,
+fortemente armados.
 ~
 S
 #4533
 O Topo da Torre Oeste~
-   Você está no alto da torre de vigilância oeste do imponente Portão de
-Pedra do reino oculto, deste local olhando para sudeste é possível avistar o
-caminho íngreme que o trouxe desde o primeiro portão, enquanto que olhando
-para norte você enxerga o pátio e muitos soldados de trajes cinza.
+   VocÃª estÃ¡ no alto da torre de vigilÃ¢ncia oeste do imponente PortÃ£o de
+Pedra do reino oculto, deste local olhando para sudeste Ã© possÃ­vel avistar o
+caminho Ã­ngreme que o trouxe desde o primeiro portÃ£o, enquanto que olhando
+para norte vocÃª enxerga o pÃ¡tio e muitos soldados de trajes cinza.
 ~
-45 64 0 0 0 0
-D5
+45 g 0
+D 5
 ~
 ~
 0 -1 4531
 E
-norte~
-Um grande pátio onde há muitos soldados élficos de vestes cinza,
-fortemente armados.
+sudeste~
+Um longo e Ã­ngreme caminho nas montanhas.
 ~
 E
-sudeste~
-Um longo e íngreme caminho nas montanhas.
+norte~
+Um grande pÃ¡tio onde hÃ¡ muitos soldados Ã©lficos de vestes cinza,
+fortemente armados.
 ~
 S
 #4534
-Um Grande Pátio~
-   Você está no pátio do segundo portão, olhando ao redor pode avistar
-muitos soldados élficos armados, trajados de vestes cinzas, protegendo o
-caminho que leva à cidade.
-   Para sudoeste você retorna em direção ao Porta de Pedra, enquanto que
-seguindo a trilha ainda ascendente, irá em direção à cidade.
+Um Grande PÃ¡tio~
+   VocÃª estÃ¡ no pÃ¡tio do segundo portÃ£o, olhando ao redor pode avistar
+muitos soldados Ã©lficos armados, trajados de vestes cinzas, protegendo o
+caminho que leva Ã  cidade.
+   Para sudoeste vocÃª retorna em direÃ§Ã£o ao Porta de Pedra, enquanto que
+seguindo a trilha ainda ascendente, irÃ¡ em direÃ§Ã£o Ã  cidade.
 ~
-45 0 0 0 0 4
-D4
-~
-~
-0 -1 4535
-D9
-Um grande pátio.
+45 0 4
+D 9
+Um grande pÃ¡tio.
 ~
 ~
 0 -1 4529
+D 4
+~
+~
+0 -1 4535
 S
 #4535
 Trilha Ascendente~
-   Você sobe por esta longa trilha, no interior das montanhas, que leva
-sempre para cima.  Após muito subir, o caminho torna-se novamente plano e
-você segue com maior facilidade.  Forçando seus olhos, você avista uma
+   VocÃª sobe por esta longa trilha, no interior das montanhas, que leva
+sempre para cima.  ApÃ³s muito subir, o caminho torna-se novamente plano e
+vocÃª segue com maior facilidade.  ForÃ§ando seus olhos, vocÃª avista uma
 enorme muralha adiante.
 ~
-45 64 0 0 0 5
-D1
+45 g 5
+D 5
+~
+~
+0 -1 4534
+D 1
 ~
 ~
 0 -1 4536
-D3
+D 3
 O rio de Gondolin.
 ~
 ~
 0 -1 4597
-D5
-~
-~
-0 -1 4534
 E
 muralha~
 Uma muralha ainda mais forte e alta do que a anterior.
 ~
 S
 #4536
-O Portão de Bronze~
-   Você chega em uma muralha ainda mais forte e alta do que a anterior,
-e nesta está instalado o Terceiro Portão.  Há uma grande porta dupla
-adornada com escudos e placas de bronze, nos quais estão gravados muitas
+O PortÃ£o de Bronze~
+   VocÃª chega em uma muralha ainda mais forte e alta do que a anterior,
+e nesta estÃ¡ instalado o Terceiro PortÃ£o.  HÃ¡ uma grande porta dupla
+adornada com escudos e placas de bronze, nos quais estÃ£o gravados muitas
 figuras e sinais estranhos.
-   Na muralha acima da verga há três torres quadradas, com telhados e
-revestimentos de cobre, que através de algum estratagema da arte de forjar
-estão sempre brilhantes e reluzem como fogo aos raios das lâmpadas vermelhas
+   Na muralha acima da verga hÃ¡ trÃªs torres quadradas, com telhados e
+revestimentos de cobre, que atravÃ©s de algum estratagema da arte de forjar
+estÃ£o sempre brilhantes e reluzem como fogo aos raios das lÃ¢mpadas vermelhas
 alinhadas como tochas ao longo da muralha.
 ~
-45 64 0 0 0 4
-D1
-~
-portão bronze~
-1 4502 4537
-D3
+45 g 4
+D 3
 ~
 ~
 0 -1 4535
+D 1
+~
+portao bronze~
+:n 1 o PortÃ£o de Bronze
+a 4502 4537
 E
-figuras sinais~
-Você não consegue decifras o significado destas figuras, talvez por não ser
-do povo de Gondolin...
+portao bronze~
+Uma grande porta dupla adornada com escudos e placas de bronze, nos quais
+estÃ£o gravados muitas figuras e sinais estranhos.
 ~
 E
 escudos placas~
-Escudos e placas de bronze, nos quais estão gravados muitas figuras e sinais
+Escudos e placas de bronze, nos quais estÃ£o gravados muitas figuras e sinais
 estranhos.
 ~
 E
-portão bronze~
-Uma grande porta dupla adornada com escudos e placas de bronze, nos quais
-estão gravados muitas figuras e sinais estranhos.
+figuras sinais~
+VocÃª nÃ£o consegue decifras o significado destas figuras, talvez por nÃ£o ser
+do povo de Gondolin...
 ~
 S
 #4537
-O Pátio do Terceiro Portão~
-   Você passa pelo portão de bronze e vê no pátio do outro lado uma companhia
-ainda maior de guardas, em cotas de malha que refulgem pálidas como o fogo
-baço, observa também que a lâmina dos seus machados é vermelha.  Olhando para
-a muralha pode avistar a entrada das três torres, mas elas estão fechadas e
-os sentinelas não parecem dispostos a lhe deixar entrar.
-   Ao oeste você retorna pela passagem do grande portão, enquanto que para
-sudeste você segue por uma difícil trilha.
+O PÃ¡tio do Terceiro PortÃ£o~
+   VocÃª passa pelo portÃ£o de bronze e vÃª no pÃ¡tio do outro lado uma companhia
+ainda maior de guardas, em cotas de malha que refulgem pÃ¡lidas como o fogo
+baÃ§o, observa tambÃ©m que a lÃ¢mina dos seus machados Ã© vermelha.  Olhando para
+a muralha pode avistar a entrada das trÃªs torres, mas elas estÃ£o fechadas e
+os sentinelas nÃ£o parecem dispostos a lhe deixar entrar.
+   Ao oeste vocÃª retorna pela passagem do grande portÃ£o, enquanto que para
+sudeste vocÃª segue por uma difÃ­cil trilha.
 ~
-45 0 0 0 0 4
-D3
+45 0 4
+D 3
 ~
-portão bronze~
-1 4502 4536
-D8
-Uma trilha difícil.
+portao bronze~
+:n 1 o PortÃ£o de Bronze
+a 4502 4536
+D 8
+Uma trilha difÃ­cil.
 ~
 ~
 0 -1 4538
 S
 #4538
-O Aclive Íngreme~
-   Você chega então ao caminho mais cansativo, pois no meio do Orfalch o
-aclive é o mais íngreme, além disto a trilha é estreita, permitindo a
-passagem apenas em fila.  Enquanto sobe você observa a maior de todas as
+O Aclive Ãngreme~
+   VocÃª chega entÃ£o ao caminho mais cansativo, pois no meio do Orfalch o
+aclive Ã© o mais Ã­ngreme, alÃ©m disto a trilha Ã© estreita, permitindo a
+passagem apenas em fila.  Enquanto sobe vocÃª observa a maior de todas as
 muralhas assomando sombria acima.
 ~
-45 324 0 0 0 5
-D4
-O Aclive Íngreme.
-~
-~
-0 -1 4539
-D9
-O Pátio do Terceiro Portão.
+45 cgi 5
+D 9
+O PÃ¡tio do Terceiro PortÃ£o.
 ~
 ~
 0 -1 4537
+D 4
+O Aclive Ãngreme.
+~
+~
+0 -1 4539
 S
 #4539
-O Aclive Íngreme~
-   Você chega então ao caminho mais cansativo, pois no meio do Orfalch o
-aclive é o mais íngreme, além disto a trilha é estreita, permitindo a
-passagem apenas em fila.  Enquanto sobe você observa a maior de todas as
+O Aclive Ãngreme~
+   VocÃª chega entÃ£o ao caminho mais cansativo, pois no meio do Orfalch o
+aclive Ã© o mais Ã­ngreme, alÃ©m disto a trilha Ã© estreita, permitindo a
+passagem apenas em fila.  Enquanto sobe vocÃª observa a maior de todas as
 muralhas assomando sombria acima.
 ~
-45 324 0 0 0 5
-D4
-O Aclive Íngreme.
-~
-~
-0 -1 4540
-D5
-O Aclive Íngreme.
+45 cgi 5
+D 5
+O Aclive Ãngreme.
 ~
 ~
 0 -1 4538
+D 4
+O Aclive Ãngreme.
+~
+~
+0 -1 4540
 S
 #4540
-O Aclive Íngreme~
-   Você chega ao final deste caminho cansativo e íngreme, e depara-se com
+O Aclive Ãngreme~
+   VocÃª chega ao final deste caminho cansativo e Ã­ngreme, e depara-se com
 a maior de todas as muralhas.  Um caminho, muito bem cuidado segue para
-o oeste, em direção ao Quarto Portão do Reino Oculto.  Para baixo, você
-desce pelo caminho estreito em direção ao Terceiro Portão.
+o oeste, em direÃ§Ã£o ao Quarto PortÃ£o do Reino Oculto.  Para baixo, vocÃª
+desce pelo caminho estreito em direÃ§Ã£o ao Terceiro PortÃ£o.
 ~
-45 65 0 0 0 5
-D1
+45 ag 5
+D 5
+O Aclive Ãngreme.
+~
+~
+0 -1 4539
+D 3
+O PortÃ£o de Ferro Forjado.
+~
+~
+0 -1 4541
+D 1
 O rio de Gondolin.
 ~
 ~
 0 -1 4596
-D3
-O Portão de Ferro Forjado.
-~
-~
-0 -1 4541
-D5
-O Aclive Íngreme.
-~
-~
-0 -1 4539
 S
 #4541
-A Muralha do Quarto Portão~
-   Você aproxima-se por fim do Quarto Portão, o Portão de Ferro Forjado.
-Alta e negra é a sua muralha, e nenhuma lâmpada a ilumina.  Quatro torres
-de ferro estão assentadas sobre ela, e entre as duas torres internas esta
-colocada a figura de uma grande águia, trabalhada em ferro, a própria
+A Muralha do Quarto PortÃ£o~
+   VocÃª aproxima-se por fim do Quarto PortÃ£o, o PortÃ£o de Ferro Forjado.
+Alta e negra Ã© a sua muralha, e nenhuma lÃ¢mpada a ilumina.  Quatro torres
+de ferro estÃ£o assentadas sobre ela, e entre as duas torres internas esta
+colocada a figura de uma grande Ã¡guia, trabalhada em ferro, a prÃ³pria
 imagem do Rei Thorondor, como pousaria em uma montanha vindo das alturas.
-   Para o oeste você atravessa o Portão, enquanto que ao leste você segue
-em direção ao caminho íngreme que o trouxe até aqui.
+   Para o oeste vocÃª atravessa o PortÃ£o, enquanto que ao leste vocÃª segue
+em direÃ§Ã£o ao caminho Ã­ngreme que o trouxe atÃ© aqui.
 ~
-45 65 0 0 0 5
-D1
-O Aclive Íngreme.
+45 ag 5
+D 1
+O Aclive Ãngreme.
 ~
 ~
 0 -1 4540
-D3
-o Interior do Quarto Portão.
+D 3
+o Interior do Quarto PortÃ£o.
 ~
 ~
 0 -1 4542
 E
-águia~
-Uma grande águia, trabalhada em ferro, a própria imagem do Rei Thorondor,
+aguia~
+Uma grande Ã¡guia, trabalhada em ferro, a prÃ³pria imagem do Rei Thorondor,
 como pousaria em uma montanha vindo das alturas.
 ~
 S
 #4542
-O Portão de Ferro Forjado~
-   Quando você para diante do portão, parece aos seus olhos maravilhados
-que olha, através de ramos e troncos de árvores imperecíveis, para dentro
-de uma pálida clareira da Lua.  Pois passa uma luz pelas filigranas do
-portão, que são forjadas e marteladas em forma de árvores com raízes
-contorcidas e ramos entrelaçados carregados de folhas e flores.
-   Ao atravessar, vê como isso pode acontecer; pois a muralha é de grande
-espessura, e não há uma grade, e sim três alinhadas, dispostas de forma
+O PortÃ£o de Ferro Forjado~
+   Quando vocÃª para diante do portÃ£o, parece aos seus olhos maravilhados
+que olha, atravÃ©s de ramos e troncos de Ã¡rvores imperecÃ­veis, para dentro
+de uma pÃ¡lida clareira da Lua.  Pois passa uma luz pelas filigranas do
+portÃ£o, que sÃ£o forjadas e marteladas em forma de Ã¡rvores com raÃ­zes
+contorcidas e ramos entrelaÃ§ados carregados de folhas e flores.
+   Ao atravessar, vÃª como isso pode acontecer; pois a muralha Ã© de grande
+espessura, e nÃ£o hÃ¡ uma grade, e sim trÃªs alinhadas, dispostas de forma
 que, para quem se aproximar no meio do caminho, cada uma forme parte do
-desenho; mas a luz do outro lado é a luz do dia.
+desenho; mas a luz do outro lado Ã© a luz do dia.
 ~
-45 262144 0 0 0 4
-D0
-Pátio Interno do Quarto Portão.
-~
-portão ferro~
-1 4503 4543
-D1
+45 s 4
+D 1
 A Muralha.
 ~
 ~
 0 -1 4541
+D 0
+PÃ¡tio Interno do Quarto PortÃ£o.
+~
+portao ferro~
+:n 1 o PortÃ£o de Ferro Forjado
+ab 4503 4543
 S
 #4543
-Dentro do Quarto Portão~
-   Você passou pela entrada do Portão de Ferro Forjado e depara-se,
-finalmente, com a luz do dia.  Agora já subiu a grande altura acima das
-terras baixas de onde havia partido, e para além do portão a estrada segue
+Dentro do Quarto PortÃ£o~
+   VocÃª passou pela entrada do PortÃ£o de Ferro Forjado e depara-se,
+finalmente, com a luz do dia.  Agora jÃ¡ subiu a grande altura acima das
+terras baixas de onde havia partido, e para alÃ©m do portÃ£o a estrada segue
 quase nivelada.
-   Ademais, passou pelo cimo e coração dos Echoriath, e as torres das
-montanhas agora descem rapidamente em direção das colinas internas, enquanto
-a ravina se abre mais, e suas paredes se tornam menos íngremes.
-   Para o sul há o imponente Portão, já para o nordeste você segue pela
+   Ademais, passou pelo cimo e coraÃ§Ã£o dos Echoriath, e as torres das
+montanhas agora descem rapidamente em direÃ§Ã£o das colinas internas, enquanto
+a ravina se abre mais, e suas paredes se tornam menos Ã­ngremes.
+   Para o sul hÃ¡ o imponente PortÃ£o, jÃ¡ para o nordeste vocÃª segue pela
 ravina.
 ~
-45 0 0 0 0 4
-D1
+45 0 4
+D 2
+O PortÃ£o de Ferro Forjado.
+~
+portao ferro~
+:n 1 o PortÃ£o de Ferro Forjado
+a 4503 4542
+D 7
+Fileiras do Quarto PortÃ£o.
+~
+~
+0 -1 4544
+D 1
 O rio de Gondolin.
 ~
 ~
 0 -1 4595
-D2
-O Portão de Ferro Forjado.
-~
-portão ferro~
-1 4503 4542
-D7
-Fileiras do Quarto Portão.
-~
-~
-0 -1 4544
 S
 #4544
 As Fileiras dos Guardas de Ferro~
-   Está seguindo pela ravina, suas longas margens estão recobertas de neve
+   EstÃ¡ seguindo pela ravina, suas longas margens estÃ£o recobertas de neve
 branca, e a luz do firmamento, espelhada pela neve, passa branca como o
-luar através de uma névoa tremeluzente que enche o ar.
-   Passa então pelas fileiras dos Guardas de Ferro; negros são seus mantos
+luar atravÃ©s de uma nÃ©voa tremeluzente que enche o ar.
+   Passa entÃ£o pelas fileiras dos Guardas de Ferro; negros sÃ£o seus mantos
 bem como sua malha e seus longos escudos, e seu rosto mascarado por viseiras
-que ostentam cada uma um bico de águia.
+que ostentam cada uma um bico de Ã¡guia.
 ~
-45 0 0 0 0 4
-D1
+45 0 4
+D 1
 O caminho gramado.
 ~
 ~
 0 -1 4545
-D9
+D 9
 ~
 ~
 0 -1 4543
 S
 #4545
 O Caminho Gramado~
-   Então você segue a frente, entrando na luz pálida; e vê ao lado do
+   EntÃ£o vocÃª segue a frente, entrando na luz pÃ¡lida; e vÃª ao lado do
 caminho um gramado, onde crescem como estrelas as flores brancas de uilos,
-a Sempre-em-Mente que não conhece estação e não murcha; e assim, maravilhado
-e de coração leve, é conduzido ao Portão de Prata.
-   Para voltar deve seguir pelo oeste, ao sudeste você aproxima-se do
-próximo portão.
+a Sempre-em-Mente que nÃ£o conhece estaÃ§Ã£o e nÃ£o murcha; e assim, maravilhado
+e de coraÃ§Ã£o leve, Ã© conduzido ao PortÃ£o de Prata.
+   Para voltar deve seguir pelo oeste, ao sudeste vocÃª aproxima-se do
+prÃ³ximo portÃ£o.
 ~
-45 524304 0 0 0 2
-D0
-O rio de Gondolin.
-~
-~
-0 -1 4594
-D3
+45 et 2
+D 3
 Fileiras dos Guardas de Ferro.
 ~
 ~
 0 -1 4544
-D8
-Em direção do Quinto Portão.
+D 8
+Em direÃ§Ã£o do Quinto PortÃ£o.
 ~
 ~
 0 -1 4546
+D 0
+O rio de Gondolin.
+~
+~
+0 -1 4594
 S
 #4546
-O Portão de Prata~
-   O muro do Quinto Portão é construído de mármore branco, e é baixo e
-largo; seu parapeito é uma treliça de prata entre cinco grandes globos
-de mármore; e lá estão postados muitos arqueiros de vestes brancas.
-   O portão tem a forma de três quartos de círculo, e é trabalhado em
-prata e pérolas de Nevrast com imagens da Lua; mais acima do Portão,
-sobre o globo central, há uma imagem da Árvore Branca Telperion, lavrada
-em prata e malaquita com flores feitas de grandes pérolas de Balar.
+O PortÃ£o de Prata~
+   O muro do Quinto PortÃ£o Ã© construÃ­do de mÃ¡rmore branco, e Ã© baixo e
+largo; seu parapeito Ã© uma treliÃ§a de prata entre cinco grandes globos
+de mÃ¡rmore; e lÃ¡ estÃ£o postados muitos arqueiros de vestes brancas.
+   O portÃ£o tem a forma de trÃªs quartos de cÃ­rculo, e Ã© trabalhado em
+prata e pÃ©rolas de Nevrast com imagens da Lua; mais acima do PortÃ£o,
+sobre o globo central, hÃ¡ uma imagem da Ãrvore Branca Telperion, lavrada
+em prata e malaquita com flores feitas de grandes pÃ©rolas de Balar.
 ~
-45 0 0 0 0 2
-D0
-O Pátio de Mármore.
-~
-portão prata~
-1 4504 4547
-D6
+45 0 2
+D 6
 O Caminho Gramado.
 ~
 ~
 0 -1 4545
+D 0
+O PÃ¡tio de MÃ¡rmore.
+~
+portao prata~
+:n 1 o PortÃ£o de Prata
+ab 4504 4547
 S
 #4547
-O Pátio de Prata~
-   Você está em um amplo pátio calçado de mármore, verde e branco, onde
-estão parados arqueiros em cota de malha de prata e elmos de cristas
+O PÃ¡tio de Prata~
+   VocÃª estÃ¡ em um amplo pÃ¡tio calÃ§ado de mÃ¡rmore, verde e branco, onde
+estÃ£o parados arqueiros em cota de malha de prata e elmos de cristas
 brancas, cem de cada flanco.
-   Seguindo por suas fileiras silenciosas, ao norte, você entra numa
-longa estrada branca que segue reto para o Sexto Portão; e, a medida
-que avança, o gramado se torna mais largo, e entre as estrelas brancas
+   Seguindo por suas fileiras silenciosas, ao norte, vocÃª entra numa
+longa estrada branca que segue reto para o Sexto PortÃ£o; e, a medida
+que avanÃ§a, o gramado se torna mais largo, e entre as estrelas brancas
 de uilos abrem-se muitas florezinhas como olhos de ouro.
 ~
-45 0 0 0 0 2
-D0
-Próximo ao Sexto Portão.
+45 0 2
+D 2
+O PortÃ£o de Prata.
+~
+portao prata~
+:n 1 o PortÃ£o de Prata
+a 4504 4546
+D 0
+PrÃ³ximo ao Sexto PortÃ£o.
 ~
 ~
 0 -1 4548
-D2
-O Portão de Prata.
-~
-portão prata~
-1 4504 4546
 S
 #4548
-Estrada para o Sexto Portão~
-   A medida em que você avança, o gramado torna-se mais largo, e entre as
+Estrada para o Sexto PortÃ£o~
+   A medida em que vocÃª avanÃ§a, o gramado torna-se mais largo, e entre as
 estrelas brancas de uilos abrem-se muitas florezinhas como olhos de ouro.
-   Deste local você consegue avistar o último dos portões de Turgon; e é
-muito semelhante ao Portão de Prata, exceto que o muro é construído de
-mármore amarelo, e os globos e o parapeito são de ouro vermelho.
-   Para sul você avista um belíssimo pátio de mármore, ou pode seguir para
-oeste, chegando ao magnífico Portão de Ouro.
+   Deste local vocÃª consegue avistar o Ãºltimo dos portÃµes de Turgon; e Ã©
+muito semelhante ao PortÃ£o de Prata, exceto que o muro Ã© construÃ­do de
+mÃ¡rmore amarelo, e os globos e o parapeito sÃ£o de ouro vermelho.
+   Para sul vocÃª avista um belÃ­ssimo pÃ¡tio de mÃ¡rmore, ou pode seguir para
+oeste, chegando ao magnÃ­fico PortÃ£o de Ouro.
 ~
-45 0 0 0 0 2
-D2
-O pátio de mármore.
+45 0 2
+D 2
+O pÃ¡tio de mÃ¡rmore.
 ~
 ~
 0 -1 4547
-D3
-O Portão Dourado.
+D 3
+O PortÃ£o Dourado.
 ~
 ~
 0 -1 4549
-D6
+D 6
 O rio de Gondolin.
 ~
 ~
 0 -1 4593
 S
 #4549
-O Portão Dourado~
-   Muito semelhante ao Portão de Prata, exceto que o muro é construído de
-mármore amarelo, e os globos e o parapeito são de ouro vermelho.  São seis
-globos e, no meio, sobre uma pirâmide dourada, esta fixada uma imagem de
-Laurelin, a Árvore do Sol, com flores feitas de topázio, em longos cachos
-em correntes de ouro.  O próprio Portão é adornado com discos de ouro, de
-muitos raios, à semelhança do Sol, engastados entre desenhos de granadas,
-topázios e diamantes amarelos.
+O PortÃ£o Dourado~
+   Muito semelhante ao PortÃ£o de Prata, exceto que o muro Ã© construÃ­do de
+mÃ¡rmore amarelo, e os globos e o parapeito sÃ£o de ouro vermelho.  SÃ£o seis
+globos e, no meio, sobre uma pirÃ¢mide dourada, esta fixada uma imagem de
+Laurelin, a Ãrvore do Sol, com flores feitas de topÃ¡zio, em longos cachos
+em correntes de ouro.  O prÃ³prio PortÃ£o Ã© adornado com discos de ouro, de
+muitos raios, Ã  semelhanÃ§a do Sol, engastados entre desenhos de granadas,
+topÃ¡zios e diamantes amarelos.
 ~
-45 0 0 0 0 2
-D0
-O Pátio Dourado.
-~
-portão ouro dourado~
-1 4505 4550
-D1
-Estrada para o Quinto Portão.
+45 0 2
+D 1
+Estrada para o Quinto PortÃ£o.
 ~
 ~
 0 -1 4548
+D 0
+O PÃ¡tio Dourado.
+~
+portao ouro dourado~
+:n 1 o PortÃ£o Dourado
+ab 4505 4550
 S
 #4550
-O Pátio Dourado~
-   Deste lado do Portão de Ouro, estão perfilados trezentos arqueiros com
-arcos longos e sua malha é coberta de ouro; altas plumas douradas erguem-se
-de seus elmos, e seus grandes escudos redondos são vermelhos como chamas.
+O PÃ¡tio Dourado~
+   Deste lado do PortÃ£o de Ouro, estÃ£o perfilados trezentos arqueiros com
+arcos longos e sua malha Ã© coberta de ouro; altas plumas douradas erguem-se
+de seus elmos, e seus grandes escudos redondos sÃ£o vermelhos como chamas.
    A luz do sol cai sobre o restante da estrada, pois as muralhas das colinas
-são baixas de ambos os lados e verdes, exceto pela neve nos cimos.  Ao olhar
-na direção sul-oeste, pode ver uma bela estrada.
+sÃ£o baixas de ambos os lados e verdes, exceto pela neve nos cimos.  Ao olhar
+na direÃ§Ã£o sul-oeste, pode ver uma bela estrada.
 ~
-45 0 0 0 0 2
-D0
-O rio de Gondolin.
+45 0 2
+D 2
+O PÃ¡tio Dourado.
 ~
-~
-0 -1 4592
-D2
-O Pátio Dourado.
-~
-portão ouro dourado~
-1 4505 4549
-D9
+portao ouro dourado~
+:n 1 o PortÃ£o Dourado
+a 4505 4549
+D 9
 A Estrada Curta.
 ~
 ~
 0 -1 4551
+D 0
+O rio de Gondolin.
+~
+~
+0 -1 4592
 S
 #4551
 A Estrada Curta~
    A luz do sol cai sobre o restante da estrada, pois as muralhas das colinas
-são baixas de ambos os lados e verdes, exceto pela neve nos cimos.
-   Você prossegue, pois é curto o caminho até o Sétimo Portão, chamado o
-Grande, o Portão de Aço atravessado na ampla entrada do Orfalch Echor.  Para
-nordeste você avista um pátio com muitos arqueiros vestidos em ouro, ao norte
-já é possível avistar o Sétimo Portão.
+sÃ£o baixas de ambos os lados e verdes, exceto pela neve nos cimos.
+   VocÃª prossegue, pois Ã© curto o caminho atÃ© o SÃ©timo PortÃ£o, chamado o
+Grande, o PortÃ£o de AÃ§o atravessado na ampla entrada do Orfalch Echor.  Para
+nordeste vocÃª avista um pÃ¡tio com muitos arqueiros vestidos em ouro, ao norte
+jÃ¡ Ã© possÃ­vel avistar o SÃ©timo PortÃ£o.
 ~
-45 0 0 0 0 2
-D0
-Próximo do Portão.
+45 0 2
+D 7
+O PÃ¡tio Dourado.
+~
+~
+0 -1 4550
+D 0
+PrÃ³ximo do PortÃ£o.
 ~
 ~
 0 -1 4552
-D3
+D 3
 O rio de Gondolin.
 ~
 ~
 0 -1 4591
-D7
-O Pátio Dourado.
-~
-~
-0 -1 4550
 S
 #4552
-Contemplando o Sétimo Portão~
-   Aqui não há muro, mas dos dois lados há torres redondas de grande altura,
-com muitas janelas, que, em sete andares, se afilam em torreões de aço
-brilhante; e entre as torres ergue-se uma enorme cerca de aço que não
+Contemplando o SÃ©timo PortÃ£o~
+   Aqui nÃ£o hÃ¡ muro, mas dos dois lados hÃ¡ torres redondas de grande altura,
+com muitas janelas, que, em sete andares, se afilam em torreÃµes de aÃ§o
+brilhante; e entre as torres ergue-se uma enorme cerca de aÃ§o que nÃ£o
 enferruja, mas rebrilha fria e branca.
-   Sete grandes colunas de aço, esguias, da altura e diâmetro de árvores
-jovens e fortes, mas encimadas por pontas acres que subiam aguçadas como
-agulhas; e entre as colunas há sete barras transversais de aço, e em cada
-espaço sete vezes sete hastes de aço vertical, com cabeças como as lâminas
-largas de lanças.  Mas no centro, sobre a coluna do meio, a maior, ergue-se
+   Sete grandes colunas de aÃ§o, esguias, da altura e diÃ¢metro de Ã¡rvores
+jovens e fortes, mas encimadas por pontas acres que subiam aguÃ§adas como
+agulhas; e entre as colunas hÃ¡ sete barras transversais de aÃ§o, e em cada
+espaÃ§o sete vezes sete hastes de aÃ§o vertical, com cabeÃ§as como as lÃ¢minas
+largas de lanÃ§as.  Mas no centro, sobre a coluna do meio, a maior, ergue-se
 uma enorme imagem do elmo real de Turgon, a Coroa do Reino Oculto, cravejada
-de diamantes.  Você não consegue ver porta ou portão.
+de diamantes.  VocÃª nÃ£o consegue ver porta ou portÃ£o.
 ~
-45 4 0 0 0 2
-D0
-O Portão de Aço.
+45 c 2
+D 0
+O PortÃ£o de AÃ§o.
 ~
 ~
 0 -1 4553
-D2
+D 2
 A Estrada Curta.
 ~
 ~
 0 -1 4551
 S
 #4553
-O Portão de Aço~
-   Você não consegue ver porta ou portão nesta enorme sebe de aço, mas,
-à medida que se aproxima, parece-lhe que sai pelos espaços entre as barras
-uma luz ofuscante; e cobre os olhos, permanecendo imóvel de temor e espanto.
-   Cavaleiros começam a sair das torres, mas à frente dos da torre norte vem
-um montado num cavalo branco.  Apeou e vem caminhando em sua direção.  Por
-alto e nobre que fossem os outros elfos, maior e mais soberbo é Ecthelion,
-Senhor das Fontes, Guardião do Grande Portão.
-   Passando pelo portão que está a sua frente, você entrará na cidade de
-Gondolin, também é possível voltar pela estrada sul.
+O PortÃ£o de AÃ§o~
+   VocÃª nÃ£o consegue ver porta ou portÃ£o nesta enorme sebe de aÃ§o, mas,
+Ã  medida que se aproxima, parece-lhe que sai pelos espaÃ§os entre as barras
+uma luz ofuscante; e cobre os olhos, permanecendo imÃ³vel de temor e espanto.
+   Cavaleiros comeÃ§am a sair das torres, mas Ã  frente dos da torre norte vem
+um montado num cavalo branco.  Apeou e vem caminhando em sua direÃ§Ã£o.  Por
+alto e nobre que fossem os outros elfos, maior e mais soberbo Ã© Ecthelion,
+Senhor das Fontes, GuardiÃ£o do Grande PortÃ£o.
+   Passando pelo portÃ£o que estÃ¡ a sua frente, vocÃª entrarÃ¡ na cidade de
+Gondolin, tambÃ©m Ã© possÃ­vel voltar pela estrada sul.
 ~
-45 0 0 0 0 2
-D0
-A cidade de Gondolin.
-~
-portão aço~
-0 -1 4554
-D2
+45 0 2
+D 2
 A Estrada.
 ~
 ~
 0 -1 4552
+D 0
+A cidade de Gondolin.
+~
+portao aco~
+:n 1 o PortÃ£o de AÃ§o
+adhi -1 4554
 S
 #4554
 O Alto Gramado~
-   Você passa pelo portão então e, chega a um alto gramado de onde se divisa
-o vale mais além, ao nordeste, contemplando uma visão de Gondolin em meio a
-neve branca.  Você fica tão encantado que por muito tempo não consegue olhar
+   VocÃª passa pelo portÃ£o entÃ£o e, chega a um alto gramado de onde se divisa
+o vale mais alÃ©m, ao nordeste, contemplando uma visÃ£o de Gondolin em meio a
+neve branca.  VocÃª fica tÃ£o encantado que por muito tempo nÃ£o consegue olhar
 para nada mais.
-   Em silêncio, de ambos os lados, está postada uma hoste do exercito de
-Gondolin; estão representados todos os sete grupos dos Sete Portões; mas
-seus capitães e comandantes montam cavalos, brancos e cinzentos. 
+   Em silÃªncio, de ambos os lados, estÃ¡ postada uma hoste do exercito de
+Gondolin; estÃ£o representados todos os sete grupos dos Sete PortÃµes; mas
+seus capitÃ£es e comandantes montam cavalos, brancos e cinzentos. 
 ~
-45 0 0 0 0 2
-D2
-O Portão de Aço.
+45 0 2
+D 2
+O PortÃ£o de AÃ§o.
 ~
-portão aço~
-0 -1 4553
-D3
-O rio de Gondolin.
-~
-~
-0 -1 4590
-D7
+portao aco~
+:n 1 o PortÃ£o de AÃ§o
+adhi -1 4553
+D 7
 O Vale de Tumladen.
 ~
 ~
 0 -1 4555
+D 3
+O rio de Gondolin.
+~
+~
+0 -1 4590
 S
 #4555
 O Vale de Tumladen~
-   Deste local você contempla o belo vale de Tumladen, engastado como uma
-pedra preciosa verde no meio das colinas circundantes.  E vê ao longe, ao
-leste, sobre a elevação rochosa do Amon Gwareth, Gondolin, a esplêndida, a
-cidade dos sete nomes, cuja fama e glória é a maior em verso de todas as
-moradas dos elfos nas Terras de Cá.  Para sudoeste você vê um campo gramado.
+   Deste local vocÃª contempla o belo vale de Tumladen, engastado como uma
+pedra preciosa verde no meio das colinas circundantes.  E vÃª ao longe, ao
+leste, sobre a elevaÃ§Ã£o rochosa do Amon Gwareth, Gondolin, a esplÃªndida, a
+cidade dos sete nomes, cuja fama e glÃ³ria Ã© a maior em verso de todas as
+moradas dos elfos nas Terras de CÃ¡.  Para sudoeste vocÃª vÃª um campo gramado.
 ~
-45 0 0 0 0 2
-D1
+45 0 2
+D 1
 O Vale de Tumladen.
 ~
 ~
 0 -1 4556
-D9
+D 9
 O Alto Gramado.
 ~
 ~
@@ -1357,19 +1376,19 @@ O Alto Gramado.
 S
 #4556
 O Vale de Tumladen~
-   Você vê ao longe, ao leste, sobre a elevação rochosa do Amon Gwareth,
-Gondolin, a esplêndida, a cidade dos sete nomes, cuja fama e glória é a
-maior em verso de todas as moradas dos elfos nas Terras de Cá.
+   VocÃª vÃª ao longe, ao leste, sobre a elevaÃ§Ã£o rochosa do Amon Gwareth,
+Gondolin, a esplÃªndida, a cidade dos sete nomes, cuja fama e glÃ³ria Ã© a
+maior em verso de todas as moradas dos elfos nas Terras de CÃ¡.
    As alvas muralhas da cidade, deste ponto esplendida e completamente
-visíveis estão coloridas pelo rosado alvorecer sobre a planíce.
+visÃ­veis estÃ£o coloridas pelo rosado alvorecer sobre a planÃ­ce.
 ~
-45 0 0 0 0 2
-D1
+45 0 2
+D 1
 As muralhas de Gondolin.
 ~
 ~
 0 -1 4557
-D3
+D 3
 O Vale de Tumladen.
 ~
 ~
@@ -1377,145 +1396,147 @@ O Vale de Tumladen.
 S
 #4557
 As Muralhas de Gondolin~
-   As alvas muralhas da cidade de Gondolin são esplendidas, com o rosado
-alvorecer adquirem diversos tons.  Você atravessou todo o Vale de Tumladen
-e chega, finalmente, ao portão de Gondolin.
-   O portão está aberto, não há necessidade de manter um forte esquema de
-segurança contra invasores, afinal, é praticamente impossível que qualquer
-inimigo passe pelos Sete Portões, por isso você encontra apenas dois elfos
-segurando grandes lanças na entrada da cidade. 
+   As alvas muralhas da cidade de Gondolin sÃ£o esplendidas, com o rosado
+alvorecer adquirem diversos tons.  VocÃª atravessou todo o Vale de Tumladen
+e chega, finalmente, ao portÃ£o de Gondolin.
+   O portÃ£o estÃ¡ aberto, nÃ£o hÃ¡ necessidade de manter um forte esquema de
+seguranÃ§a contra invasores, afinal, Ã© praticamente impossÃ­vel que qualquer
+inimigo passe pelos Sete PortÃµes, por isso vocÃª encontra apenas dois elfos
+segurando grandes lanÃ§as na entrada da cidade. 
 ~
-45 0 0 0 0 1
-D2
-A Pátio de Gondolin.
-~
-portão~
-0 -1 4558
-D3
+45 0 1
+D 3
 O Vale de Tumladen.
 ~
 ~
 0 -1 4556
+D 2
+A PÃ¡tio de Gondolin.
+~
+portao~
+:n 1 o PortÃ£o de Gondolin
+ag -1 4558
 S
 #4558
-O Pátio da Muralha~
-   Atravessando o portão, você olha ao seu redor e percebe que está num
-grande pátio que circunda toda a extensão da muralha ao redor de Gondolin,
-muitos soldados élficos estão por aqui, sempre atentos para correr em defesa
-dos grandes portões.
-   Há uma grande escadaria de mármore que o leva à uma bela e florida praça,
-deste local você tem a impressão de que as moradias e o palácio do Rei Turgon
+O PÃ¡tio da Muralha~
+   Atravessando o portÃ£o, vocÃª olha ao seu redor e percebe que estÃ¡ num
+grande pÃ¡tio que circunda toda a extensÃ£o da muralha ao redor de Gondolin,
+muitos soldados Ã©lficos estÃ£o por aqui, sempre atentos para correr em defesa
+dos grandes portÃµes.
+   HÃ¡ uma grande escadaria de mÃ¡rmore que o leva Ã  uma bela e florida praÃ§a,
+deste local vocÃª tem a impressÃ£o de que as moradias e o palÃ¡cio do Rei Turgon
 ficam naquele patamar superior.
 ~
-45 0 0 0 0 1
-D0
+45 0 1
+D 0
 A muralha externa.
 ~
-portão~
-0 -1 4557
-D1
-O pátio da muralha.
-~
-~
-0 -1 4559
-D3
-O pátio da muralha.
-~
-~
-0 -1 4560
-D4
-A praça central.
+portao~
+:n 1 o PortÃ£o de Gondolin
+ag -1 4557
+D 4
+A praÃ§a central.
 ~
 ~
 0 -1 4561
-S
-#4559
-O Pátio da Muralha~
-   Você olha ao seu redor e percebe que está num grande pátio que circunda
-toda a extensão da muralha ao redor de Gondolin, muitos soldados élficos
-estão por aqui, sempre atentos para correr em defesa dos grandes portões.
-Deste local você tem a impressão de que as moradias e o palácio do Rei
-Turgon ficam naquele patamar superior, subindo a grande escada de mármore.
+D 1
+O pÃ¡tio da muralha.
 ~
-45 0 0 0 0 1
-D1
-O pátio da muralha.
+~
+0 -1 4559
+D 3
+O pÃ¡tio da muralha.
 ~
 ~
 0 -1 4560
-D3
-O pátio da muralha.
+S
+#4559
+O PÃ¡tio da Muralha~
+   VocÃª olha ao seu redor e percebe que estÃ¡ num grande pÃ¡tio que circunda
+toda a extensÃ£o da muralha ao redor de Gondolin, muitos soldados Ã©lficos
+estÃ£o por aqui, sempre atentos para correr em defesa dos grandes portÃµes.
+Deste local vocÃª tem a impressÃ£o de que as moradias e o palÃ¡cio do Rei
+Turgon ficam naquele patamar superior, subindo a grande escada de mÃ¡rmore.
+~
+45 0 1
+D 1
+O pÃ¡tio da muralha.
+~
+~
+0 -1 4560
+D 3
+O pÃ¡tio da muralha.
 ~
 ~
 0 -1 4558
 S
 #4560
-O Pátio da Muralha~
-   Você olha ao seu redor e percebe que está num grande pátio que circunda
-toda a extensão da muralha ao redor de Gondolin, muitos soldados élficos
-estão por aqui, sempre atentos para correr em defesa dos grandes portões.
-Deste local você tem a impressão de que as moradias e o palácio do Rei
-Turgon ficam naquele patamar superior, subindo a grande escada de mármore.
+O PÃ¡tio da Muralha~
+   VocÃª olha ao seu redor e percebe que estÃ¡ num grande pÃ¡tio que circunda
+toda a extensÃ£o da muralha ao redor de Gondolin, muitos soldados Ã©lficos
+estÃ£o por aqui, sempre atentos para correr em defesa dos grandes portÃµes.
+Deste local vocÃª tem a impressÃ£o de que as moradias e o palÃ¡cio do Rei
+Turgon ficam naquele patamar superior, subindo a grande escada de mÃ¡rmore.
 ~
-45 0 0 0 0 1
-D1
-O pátio da muralha.
+45 0 1
+D 1
+O pÃ¡tio da muralha.
 ~
 ~
 0 -1 4558
-D3
-O pátio da muralha.
+D 3
+O pÃ¡tio da muralha.
 ~
 ~
 0 -1 4559
 S
 #4561
-A Praça Central de Ondolindë~
-   Subindo pela grande escadaria de mármore esculpida pelos habilidosos
-noldor, você chega a praça central da cidade e a admira por alguns instantes,
-há muitas pessoas alegres caminhando e algumas crianças brincando e
+A PraÃ§a Central de OndolindÃ«~
+   Subindo pela grande escadaria de mÃ¡rmore esculpida pelos habilidosos
+noldor, vocÃª chega a praÃ§a central da cidade e a admira por alguns instantes,
+hÃ¡ muitas pessoas alegres caminhando e algumas crianÃ§as brincando e
 banhando-se na maravilhosa fonte, da qual correm e esguicham jatos para
-todas as direções.  Os jardins possuem flores das mais diversas cores que
-deixam o ar perfumado, transmitindo uma sensação de paz.  Ao sul um caminho
-pavimentado leva ao palácio, enquanto que ao leste e oeste há ruas secundárias.
+todas as direÃ§Ãµes.  Os jardins possuem flores das mais diversas cores que
+deixam o ar perfumado, transmitindo uma sensaÃ§Ã£o de paz.  Ao sul um caminho
+pavimentado leva ao palÃ¡cio, enquanto que ao leste e oeste hÃ¡ ruas secundÃ¡rias.
 ~
-45 524288 0 0 0 1
-D1
-As ruas de Gondolin.
+45 t 1
+D 5
+O pÃ¡tio da muralha.
 ~
 ~
-0 -1 4580
-D2
+0 -1 4558
+D 2
 A Alameda Central.
 ~
 ~
 0 -1 4562
-D3
+D 1
+As ruas de Gondolin.
+~
+~
+0 -1 4580
+D 3
 As ruas de Gondolin.
 ~
 ~
 0 -1 4585
-D5
-O pátio da muralha.
-~
-~
-0 -1 4558
 S
 #4562
 A Alameda Central~
-   Você caminha pelos caminho pavimentado de granito, sempre observando os
-delicados jardins cultivados pelos elfos de Ondolindë, a sua frente a Torre
-do Rei, o palácio de Turgon, vai ficando cada vez mais próximo, mostrando-se
-forte e elevada.  Ao norte você vê a agitação da praça central da cidade, ao
+   VocÃª caminha pelos caminho pavimentado de granito, sempre observando os
+delicados jardins cultivados pelos elfos de OndolindÃ«, a sua frente a Torre
+do Rei, o palÃ¡cio de Turgon, vai ficando cada vez mais prÃ³ximo, mostrando-se
+forte e elevada.  Ao norte vocÃª vÃª a agitaÃ§Ã£o da praÃ§a central da cidade, ao
 sul continua a alameda.
 ~
-45 0 0 0 0 1
-D0
-A praça central.
+45 0 1
+D 0
+A praÃ§a central.
 ~
 ~
 0 -1 4561
-D2
+D 2
 A alameda.
 ~
 ~
@@ -1523,19 +1544,19 @@ A alameda.
 S
 #4563
 A Alameda Central~
-   Você caminha pelos caminho pavimentado de granito, sempre observando os
-delicados jardins cultivados pelos elfos de Ondolindë, a sua frente a Torre
-do Rei, o palácio de Turgon, vai ficando cada vez mais próximo, mostrando-se
-forte e elevada.  Ao norte você vê a agitação da praça central da cidade, ao
-sudeste está o arco de entrada da Torre do Rei.
+   VocÃª caminha pelos caminho pavimentado de granito, sempre observando os
+delicados jardins cultivados pelos elfos de OndolindÃ«, a sua frente a Torre
+do Rei, o palÃ¡cio de Turgon, vai ficando cada vez mais prÃ³ximo, mostrando-se
+forte e elevada.  Ao norte vocÃª vÃª a agitaÃ§Ã£o da praÃ§a central da cidade, ao
+sudeste estÃ¡ o arco de entrada da Torre do Rei.
 ~
-45 4 0 0 0 1
-D0
+45 c 1
+D 0
 A alameda.
 ~
 ~
 0 -1 4562
-D8
+D 8
 A Torre do Rei.
 ~
 ~
@@ -1543,452 +1564,468 @@ A Torre do Rei.
 S
 #4564
 O Arco de Entrada~
-   Altas e brancas são as muralhas da forte e elevada Torre do Rei, a porta do
-arco de entrada é de madeira, com imagens de ouro e prata em alto relevo das
-Árvores de outrora.
+   Altas e brancas sÃ£o as muralhas da forte e elevada Torre do Rei, a porta do
+arco de entrada Ã© de madeira, com imagens de ouro e prata em alto relevo das
+Ãrvores de outrora.
    Dois sentinelas vigiam o arco da torre, mas lhe permitem a entrada, parece
-que a sua chegada já estava sendo aguardada.
+que a sua chegada jÃ¡ estava sendo aguardada.
 ~
-45 0 0 0 0 1
-D1
-A Torre do Rei.
-~
-porta~
-0 -1 4565
-D6
+45 0 1
+D 6
 A alameda.
 ~
 ~
 0 -1 4563
+D 1
+A Torre do Rei.
+~
+porta~
+:n 2 a porta da Torre
+ag -1 4565
 S
 #4565
-O Salão de Entrada da Torre~
-   Passando pelo grande arco de entrada, você chega num enorme salão com as paredes
-e o teto de mármore esverdeado.  Doze pilares de prata trabalhada, estão dispostos
+O SalÃ£o de Entrada da Torre~
+   Passando pelo grande arco de entrada, vocÃª chega num enorme salÃ£o com as paredes
+e o teto de mÃ¡rmore esverdeado.  Doze pilares de prata trabalhada, estÃ£o dispostos
 aqui, sustentando os andares superiores da Torre.
-   No lado oposto da porta de entrada, há um arco com passagem livre de onde uma larga
-escada em espiral parte para cima.  Enquanto você se dirige à escada, exatamente no
-centro do salão vê duas passagens; uma no sentido norte, da qual refulge uma luz dourada;
+   No lado oposto da porta de entrada, hÃ¡ um arco com passagem livre de onde uma larga
+escada em espiral parte para cima.  Enquanto vocÃª se dirige Ã  escada, exatamente no
+centro do salÃ£o vÃª duas passagens; uma no sentido norte, da qual refulge uma luz dourada;
 a outra, no sentido sul, brilhando num tom prateado.
 ~
-45 12 0 0 0 0
-D0
-O santuário dourado.
+45 cd 0
+D 0
+O santuÃ¡rio dourado.
 ~
 ~
 0 -1 4567
-D1
-Uma escada de mármore.
-~
-~
-0 -1 4568
-D2
-O santuário prateado.
+D 2
+O santuÃ¡rio prateado.
 ~
 ~
 0 -1 4566
-D3
+D 1
+Uma escada de mÃ¡rmore.
+~
+~
+0 -1 4568
+D 3
 O Arco de Entrada.
 ~
 porta~
-0 -1 4564
+:n 2 a porta da Torre
+ag -1 4564
 S
 #4566
-O Santuário de Telperion~
-   Dentre todas as maravilhas de Gondolin, você encontra-se diante de uma das
-maiores.  Neste maravilhoso jardim está Belthil, a árvore das flores de prata,
-a imagem de Telperion, a Árvore Branca, a mais velha das Antigas Árvores de
+O SantuÃ¡rio de Telperion~
+   Dentre todas as maravilhas de Gondolin, vocÃª encontra-se diante de uma das
+maiores.  Neste maravilhoso jardim estÃ¡ Belthil, a Ã¡rvore das flores de prata,
+a imagem de Telperion, a Ãrvore Branca, a mais velha das Antigas Ãrvores de
 Valinor criadas por Yavanna, umas das Valier.
-   Belthil foi esculpida pelas mãos do próprio Turgon, um dos mais habilidosos
+   Belthil foi esculpida pelas mÃ£os do prÃ³prio Turgon, um dos mais habilidosos
 elfos, mesmo dentre os noldor.
-   Em torno da árvore de prata há um belo jardim de árvores com folhas de um
-verde-escuro, você deseja, poder voltar novamente à estes jardins.
+   Em torno da Ã¡rvore de prata hÃ¡ um belo jardim de Ã¡rvores com folhas de um
+verde-escuro, vocÃª deseja, poder voltar novamente Ã  estes jardins.
 ~
-45 180 0 0 0 0
-D0
-Um salão de mármore.
+45 cefh 0
+D 0
+Um salÃ£o de mÃ¡rmore.
 ~
 ~
 0 -1 4565
 S
 #4567
-O Santuário de Laurelin~
-   Dentre todas as maravilhas de Gondolin, você encontra-se diante de uma das
-maiores.  Neste maravilhoso jardim está Glingal, a árvore das folhas de ouro,
-a imagem de Laurelin, a Canção de Ouro, a mais jovem das Antigas Árvores de
+O SantuÃ¡rio de Laurelin~
+   Dentre todas as maravilhas de Gondolin, vocÃª encontra-se diante de uma das
+maiores.  Neste maravilhoso jardim estÃ¡ Glingal, a Ã¡rvore das folhas de ouro,
+a imagem de Laurelin, a CanÃ§Ã£o de Ouro, a mais jovem das Antigas Ãrvores de
 Valinor criadas por Yavanna, uma das Valier.
-   Glingal foi esculpida pelas mãos do próprio Turgon, um dos mais habilidosos
+   Glingal foi esculpida pelas mÃ£os do prÃ³prio Turgon, um dos mais habilidosos
 elfos, mesmo dentre os nondor.
-   Em torno da árvore de ouro há um belo jardim de árvores com folhas de um
-verde viçoso, você deseja, poder voltar novamente à estes jardins.
+   Em torno da Ã¡rvore de ouro hÃ¡ um belo jardim de Ã¡rvores com folhas de um
+verde viÃ§oso, vocÃª deseja, poder voltar novamente Ã  estes jardins.
 ~
-45 180 0 0 0 0
-D2
-Um salão de mármore.
+45 cefh 0
+D 2
+Um salÃ£o de mÃ¡rmore.
 ~
 ~
 0 -1 4565
 S
 #4568
 As Escadas do Primeiro Andar~
-   Esta escadaria espiral de mármore une o andar inferior da Torre do Rei ao
-segundo andar, seus degraus são de mármore e seu corrimão de prata trabalhada.
-   Ao oeste fica o salão de entrada do palácio, e subindo você chega ao segundo
+   Esta escadaria espiral de mÃ¡rmore une o andar inferior da Torre do Rei ao
+segundo andar, seus degraus sÃ£o de mÃ¡rmore e seu corrimÃ£o de prata trabalhada.
+   Ao oeste fica o salÃ£o de entrada do palÃ¡cio, e subindo vocÃª chega ao segundo
 andar.
 ~
-45 8 0 0 0 0
-D3
-O salão de entrada.
+45 d 0
+D 3
+O salÃ£o de entrada.
 ~
 ~
 0 -1 4565
-D4
+D 4
 O segundo andar.
 ~
 ~
 0 -1 4569
-D5
+D 5
 A passagem secreta.
 ~
 passagem~
-1 4528 4577
+:n 2 a passagem secreta
+ad 4528 4577
 S
 #4569
 As Escadas do Segundo Andar~
-   Esta escadaria espiral de mármore une o segundo andar da Torre do Rei ao
-primeiro e terceiro andar, seus degraus são de mármore e seu corrimão de prata
+   Esta escadaria espiral de mÃ¡rmore une o segundo andar da Torre do Rei ao
+primeiro e terceiro andar, seus degraus sÃ£o de mÃ¡rmore e seu corrimÃ£o de prata
 trabalhada.
-   Ao oeste está mais um dos salões de Turgon, para cima e para baixo há as
+   Ao oeste estÃ¡ mais um dos salÃµes de Turgon, para cima e para baixo hÃ¡ as
 escadas.
 ~
-45 8 0 0 0 0
-D3
-O salão do segundo andar.
+45 d 0
+D 3
+O salÃ£o do segundo andar.
 ~
 ~
 0 -1 4570
-D4
-O terceiro andar.
-~
-~
-0 -1 4574
-D5
+D 5
 O primeiro andar.
 ~
 ~
 0 -1 4568
+D 4
+O terceiro andar.
+~
+~
+0 -1 4574
 S
 #4570
-O Salão de Cristal~
-   Este, como todos os outros salões da forte e bela torre, lhe faz parar
-alguns instantes espantado de admiração pela habilidade destes elfos.
+O SalÃ£o de Cristal~
+   Este, como todos os outros salÃµes da forte e bela torre, lhe faz parar
+alguns instantes espantado de admiraÃ§Ã£o pela habilidade destes elfos.
 Grandes janelas de cristal, onde pode-se ver em relevo desenhos das antigas
-árvores deixam a luz solar ou da lua adentrar, iluminando os candelabros
-e as estátuas que, também, são de cristal.
-   Diversas portas de carvalho, com maçanetas de cristal, dão acesso aos
-aposentos reais e dos capitães de Gondolin.  A grande maioria está trancada.
+Ã¡rvores deixam a luz solar ou da lua adentrar, iluminando os candelabros
+e as estÃ¡tuas que, tambÃ©m, sÃ£o de cristal.
+   Diversas portas de carvalho, com maÃ§anetas de cristal, dÃ£o acesso aos
+aposentos reais e dos capitÃ£es de Gondolin.  A grande maioria estÃ¡ trancada.
 ~
-45 8 0 0 0 0
-D1
+45 d 0
+D 1
 As escadas.
 ~
 ~
 0 -1 4569
-D2
+D 3
 Alguns aposentos.
 ~
 porta~
-0 -1 4572
-D3
+:n 2 a porta de carvalho
+ag -1 4571
+D 2
 Alguns aposentos.
 ~
 porta~
-0 -1 4571
+:n a porta de carvalho
+ag -1 4572
 S
 #4571
 A Sala de Espera do Rei~
-   Várias poltronas de veludo negro estão dispostas neste aposento usado
-pelos capitães e membros da família real, ao aguardarem por uma audiência
-com Turgon.  Do lado oposto ao da grande porta, há uma cadeira de ouro
+   VÃ¡rias poltronas de veludo negro estÃ£o dispostas neste aposento usado
+pelos capitÃ£es e membros da famÃ­lia real, ao aguardarem por uma audiÃªncia
+com Turgon.  Do lado oposto ao da grande porta, hÃ¡ uma cadeira de ouro
 estofada com veludo vermelho, de onde o Rei costuma das conselhos.
 ~
-45 8 0 0 0 0
-D1
-O salão de cristal.
+45 d 0
+D 1
+O salÃ£o de cristal.
 ~
 porta~
-0 -1 4570
+:n 2 a porta de carvalho
+ag -1 4570
 S
 #4572
 Os Aposentos de Idril~
-   Estes são os aposentos de Tuor e Idril, a filha do Rei.  Tudo é belo e
-luxuoso, belíssimos tapetes ornamentam o piso de mármore e quadros ilustrando
-feitos heróicos e o Grande Mar, estão dispostos nas paredes.  Algumas damas de
-companhia, estão arrumando a sala e outras bordando.  Há 4 portas que levam ao
-restante dos aposentos da princesa e também ao quarto de Eärendil, seu filho.
+   Estes sÃ£o os aposentos de Tuor e Idril, a filha do Rei.  Tudo Ã© belo e
+luxuoso, belÃ­ssimos tapetes ornamentam o piso de mÃ¡rmore e quadros ilustrando
+feitos herÃ³icos e o Grande Mar, estÃ£o dispostos nas paredes.  Algumas damas de
+companhia, estÃ£o arrumando a sala e outras bordando.  HÃ¡ 4 portas que levam ao
+restante dos aposentos da princesa e tambÃ©m ao quarto de EÃ¤rendil, seu filho.
 ~
-45 8 0 0 0 0
-D0
-O salão de cristal.
+45 d 0
+D 0
+O salÃ£o de cristal.
 ~
 porta~
-0 -1 4570
-D2
+:n 2 a porta de carvalho
+ag -1 4570
+D 2
 Mais aposentos.
 ~
 porta~
-0 -1 4573
+:n 2
+ag -1 4573
 S
 #4573
-O Quarto de Eärendil~
-   Este é o quarto do pequeno Eärendil, filho de Tuor e Idril.  As paredes e
-o piso são esverdeados, e nas paredes há algumas imagens do Mar e de grandes
-embarcações, pois Eärendil sonha constantemente com eles.  Alguns brinquedos
-estão espalhados pelo chão e em cima da cama, passando-lhe a impressão de que
-esta criança é bastante ativa.  Há apenas uma saída, que é a pela qual você
+O Quarto de EÃ¤rendil~
+   Este Ã© o quarto do pequeno EÃ¤rendil, filho de Tuor e Idril.  As paredes e
+o piso sÃ£o esverdeados, e nas paredes hÃ¡ algumas imagens do Mar e de grandes
+embarcaÃ§Ãµes, pois EÃ¤rendil sonha constantemente com eles.  Alguns brinquedos
+estÃ£o espalhados pelo chÃ£o e em cima da cama, passando-lhe a impressÃ£o de que
+esta crianÃ§a Ã© bastante ativa.  HÃ¡ apenas uma saÃ­da, que Ã© a pela qual vocÃª
 veio.
 ~
-45 8 0 0 0 0
-D0
+45 d 0
+D 0
 Os aposentos de Idril.
 ~
 porta~
-0 -1 4572
+:n 2
+ag -1 4572
 S
 #4574
 As Escadas do Terceiro Andar~
-   Esta escadaria espiral de mármore une o terceiro andar da Torre do Rei ao
-segundo andar, seus degraus são de mármore e seu corrimão de prata trabalhada.
-   Ao oeste está mais um dos salões de Turgon, de onde um sentinela guarda a
-entrada e para baixo há as escadas que descem para os andares inferiores.
+   Esta escadaria espiral de mÃ¡rmore une o terceiro andar da Torre do Rei ao
+segundo andar, seus degraus sÃ£o de mÃ¡rmore e seu corrimÃ£o de prata trabalhada.
+   Ao oeste estÃ¡ mais um dos salÃµes de Turgon, de onde um sentinela guarda a
+entrada e para baixo hÃ¡ as escadas que descem para os andares inferiores.
 ~
-45 8 0 0 0 0
-D3
-O salão de audiências.
-~
-porta~
-0 -1 4575
-D5
+45 d 0
+D 5
 O segundo andar.
 ~
 ~
 0 -1 4569
+D 3
+O salÃ£o de audiÃªncias.
+~
+porta~
+:n 2 a porta do salÃ£o de audiÃªncias
+ag -1 4575
 S
 #4575
-O Salão de Audiências~
-   Um vasto salão ocupa o andar inteiro da Torre do Rei, neste local Turgon
-governa sabiamente o reino de Ondolindë.  Há um belo trono de ouro sobre um
-estrado de mármore verde do lado oposto da porta de entrada.  Há uma enorme
+O SalÃ£o de AudiÃªncias~
+   Um vasto salÃ£o ocupa o andar inteiro da Torre do Rei, neste local Turgon
+governa sabiamente o reino de OndolindÃ«.  HÃ¡ um belo trono de ouro sobre um
+estrado de mÃ¡rmore verde do lado oposto da porta de entrada.  HÃ¡ uma enorme
 janela de cristal no teto, esta pode ser aberta permitindo a entrada das
-grandes e nobres Águias aliadas de Gondolin, a maior parte das noticias do
-exterior chega ao conhecimento do Rei através delas.
+grandes e nobres Ãguias aliadas de Gondolin, a maior parte das noticias do
+exterior chega ao conhecimento do Rei atravÃ©s delas.
 ~
-45 0 0 0 0 0
-D1
+45 0 0
+D 1
 As escadas.
 ~
 porta~
-0 4528 4574
-D3
+:n 2 a porta do salÃ£o de audiÃªncias
+ag 4528 4574
+D 3
 A sala do tesouro.
 ~
 estrado~
-0 4528 4576
+:n 1 o trono de Turgon
+abd 4528 4576
 S
 #4576
 A Sala do Tesouro~
-   É permitido a entrada a esta sala apenas aos membros da família real,
-se você não faz parte dela sofrerá uma grande punição caso seja pego aqui.
-   Muitas pedras preciosas, estão espalhados por urnas de prata, você encontra
-diamantes, rubis, safiras... também há muita prata, ouro e mithril.
+   Ã‰ permitido a entrada a esta sala apenas aos membros da famÃ­lia real,
+se vocÃª nÃ£o faz parte dela sofrerÃ¡ uma grande puniÃ§Ã£o caso seja pego aqui.
+   Muitas pedras preciosas, estÃ£o espalhados por urnas de prata, vocÃª encontra
+diamantes, rubis, safiras... tambÃ©m hÃ¡ muita prata, ouro e mithril.
 ~
-45 108 0 0 0 0
-D1
-O salão de audiências.
+45 cdfg 0
+D 1
+O salÃ£o de audiÃªncias.
 ~
 estrado~
-1 4528 4575
+:n 1
+a 4528 4575
 S
 #4577
-Os Túneis de Fuga~
-   Estes são túneis foram construídos secretamente por Turgon e conhecidos
-apenas por ele e Idril.  Alertado por Ulmo antes da construção de Gondolin
+Os TÃºneis de Fuga~
+   Estes sÃ£o tÃºneis foram construÃ­dos secretamente por Turgon e conhecidos
+apenas por ele e Idril.  Alertado por Ulmo antes da construÃ§Ã£o de Gondolin
 sobre as dificuldades que viriam, fez esta passagem que da acesso a um
-túnel que passa por baixo da cidade até o exterior das montanhas Circundantes.
+tÃºnel que passa por baixo da cidade atÃ© o exterior das montanhas Circundantes.
 ~
-45 105 0 0 0 5
-D0
-Os túneis de fuga.
-~
-~
-0 -1 4578
-D1
-Os túneis de fuga.
-~
-~
-0 -1 4578
-D2
-Os túneis de fuga.
-~
-~
-0 -1 4578
-D3
-Os túneis de fuga.
-~
-~
-0 -1 4578
-D4
+45 adfg 5
+D 4
 A Torre do Rei.
 ~
 passagem~
-1 4528 4568
+:n 2 a passagem secreta
+a 4528 4568
+D 2
+Os tÃºneis de fuga.
+~
+~
+0 -1 4578
+D 0
+Os tÃºneis de fuga.
+~
+~
+0 -1 4578
+D 1
+Os tÃºneis de fuga.
+~
+~
+0 -1 4578
+D 3
+Os tÃºneis de fuga.
+~
+~
+0 -1 4578
 S
 #4578
-Os Túneis de Fuga~
-   Estes são túneis foram construídos secretamente por Turgon e conhecidos
-apenas por ele e Idril.  Alertado por Ulmo antes da construção de Gondolin
+Os TÃºneis de Fuga~
+   Estes sÃ£o tÃºneis foram construÃ­dos secretamente por Turgon e conhecidos
+apenas por ele e Idril.  Alertado por Ulmo antes da construÃ§Ã£o de Gondolin
 sobre as dificuldades que viriam, fez esta passagem que da acesso a um
-túnel que passa por baixo da cidade até o exterior das montanhas Circundantes.
-   Há muitos labirintos e você a esta altura já está completamente perdido.
+tÃºnel que passa por baixo da cidade atÃ© o exterior das montanhas Circundantes.
+   HÃ¡ muitos labirintos e vocÃª a esta altura jÃ¡ estÃ¡ completamente perdido.
 ~
-45 105 0 0 0 5
-D0
-Os túneis de fuga.
+45 adfg 5
+D 0
+Os tÃºneis de fuga.
 ~
 ~
 0 -1 4577
-D1
-Os túneis de fuga.
+D 1
+Os tÃºneis de fuga.
 ~
 ~
 0 -1 4578
-D2
-Os túneis de fuga.
+D 2
+Os tÃºneis de fuga.
 ~
 ~
 0 -1 4578
-D3
-Os túneis de fuga.
+D 3
+Os tÃºneis de fuga.
 ~
 ~
 0 -1 4578
-D6
-Os túneis de fuga.
+D 6
+Os tÃºneis de fuga.
 ~
 ~
 0 -1 4578
-D7
-Os túneis de fuga.
+D 7
+Os tÃºneis de fuga.
 ~
 ~
 0 -1 4579
-D8
-Os túneis de fuga.
+D 8
+Os tÃºneis de fuga.
 ~
 ~
 0 -1 4578
-D9
-Os túneis de fuga.
+D 9
+Os tÃºneis de fuga.
 ~
 ~
 0 -1 4578
 S
 #4579
-Os Túneis de Fuga~
-   Estes são túneis foram construídos secretamente por Turgon e conhecidos
-apenas por ele e Idril.  Alertado por Ulmo antes da construção de Gondolin
+Os TÃºneis de Fuga~
+   Estes sÃ£o tÃºneis foram construÃ­dos secretamente por Turgon e conhecidos
+apenas por ele e Idril.  Alertado por Ulmo antes da construÃ§Ã£o de Gondolin
 sobre as dificuldades que viriam, fez esta passagem que da acesso a um
-túnel que passa por baixo da cidade até o exterior das montanhas Circundantes.
-   Há muitos labirintos e você a esta altura já está completamente perdido.
+tÃºnel que passa por baixo da cidade atÃ© o exterior das montanhas Circundantes.
+   HÃ¡ muitos labirintos e vocÃª a esta altura jÃ¡ estÃ¡ completamente perdido.
 ~
-45 105 0 0 0 5
-D0
-Os túneis de fuga.
-~
-~
-0 -1 4579
-D1
-Os túneis de fuga.
+45 adfg 5
+D 0
+Os tÃºneis de fuga.
 ~
 ~
 0 -1 4579
-D2
-Os túneis de fuga.
+D 1
+Os tÃºneis de fuga.
 ~
 ~
 0 -1 4579
-D3
-Os túneis de fuga.
+D 2
+Os tÃºneis de fuga.
 ~
 ~
 0 -1 4579
-D6
-Os túneis de fuga.
+D 3
+Os tÃºneis de fuga.
 ~
 ~
 0 -1 4579
-D7
-Os túneis de fuga.
+D 6
+Os tÃºneis de fuga.
 ~
 ~
 0 -1 4579
-D8
-Os túneis de fuga.
+D 7
+Os tÃºneis de fuga.
+~
+~
+0 -1 4579
+D 8
+Os tÃºneis de fuga.
 ~
 ~
 0 -1 4500
-D9
-Os túneis de fuga.
+D 9
+Os tÃºneis de fuga.
 ~
 ~
 0 -1 4578
 S
 #4580
 As Ruas de Gondolin~
-   Esta é a parte ocidental de Ondolindë, a Canção de Pedra.  Alguns alegres
-elfos caminham alegremente, despreocupados, pois a segurança dos sete portões
-até hoje nunca falhou e nenhum servo do Inimigo encontrou o Reino Oculto.
-   Tudo é muito limpo e tranqüilo, belas estátuas ornamentam as ruas e as
-casas são muito bem construídas, e de tonalidades claras.  Você escuta a
-agitação da praça central à oeste, e ao leste continua pelas ruas.
+   Esta Ã© a parte ocidental de OndolindÃ«, a CanÃ§Ã£o de Pedra.  Alguns alegres
+elfos caminham alegremente, despreocupados, pois a seguranÃ§a dos sete portÃµes
+atÃ© hoje nunca falhou e nenhum servo do Inimigo encontrou o Reino Oculto.
+   Tudo Ã© muito limpo e tranqÃ¼ilo, belas estÃ¡tuas ornamentam as ruas e as
+casas sÃ£o muito bem construÃ­das, e de tonalidades claras.  VocÃª escuta a
+agitaÃ§Ã£o da praÃ§a central Ã  oeste, e ao leste continua pelas ruas.
 ~
-45 0 0 0 0 0
-D1
+45 0 0
+D 3
+A praÃ§a central.
+~
+~
+0 -1 4561
+D 1
 As ruas de Gondolin.
 ~
 ~
 0 -1 4581
-D3
-A praça central.
-~
-~
-0 -1 4561
 S
 #4581
 As Ruas de Gondolin~
-Esta é a parte ocidental de Ondolindë, a Canção de Pedra.  Alguns alegres
-elfos caminham alegremente, despreocupados, pois a segurança dos sete portões
-até hoje nunca falhou e nenhum servo do Inimigo encontrou o Reino Oculto.
-   Tudo é muito limpo e tranqüilo, belas estátuas ornamentam as ruas e as
-casas são muito bem construídas, e de tonalidades claras.
+Esta Ã© a parte ocidental de OndolindÃ«, a CanÃ§Ã£o de Pedra.  Alguns alegres
+elfos caminham alegremente, despreocupados, pois a seguranÃ§a dos sete portÃµes
+atÃ© hoje nunca falhou e nenhum servo do Inimigo encontrou o Reino Oculto.
+   Tudo Ã© muito limpo e tranqÃ¼ilo, belas estÃ¡tuas ornamentam as ruas e as
+casas sÃ£o muito bem construÃ­das, e de tonalidades claras.
 ~
-45 0 0 0 0 0
-D0
+45 0 0
+D 0
 Uma casa.
 ~
 porta~
-1 -1 4582
-D1
+:n 2
+a -1 4582
+D 1
 As ruas de Gondolin.
 ~
 ~
 0 -1 4584
-D2
+D 2
 Uma casa.
 ~
 porta~
-1 -1 4583
-D3
+:n 2
+a -1 4583
+D 3
 As ruas de Gondolin.
 ~
 ~
@@ -1996,49 +2033,51 @@ As ruas de Gondolin.
 S
 #4582
 Uma Bela Casa~
-   Esta casa é muito bela, grandes tapetes estão estendidos pelo chão,
-tornando o ambiente muito agradável.  As paredes são brancas e no teto
+   Esta casa Ã© muito bela, grandes tapetes estÃ£o estendidos pelo chÃ£o,
+tornando o ambiente muito agradÃ¡vel.  As paredes sÃ£o brancas e no teto
 lustres de cristal fulgem com uma luz branca.
-   Os moradores recebem você cordialmente, oferecendo-lhe comida e uma
-taça de vinho, em troca querem apenas noticias do mundo exterior.
+   Os moradores recebem vocÃª cordialmente, oferecendo-lhe comida e uma
+taÃ§a de vinho, em troca querem apenas noticias do mundo exterior.
 ~
-45 0 0 0 0 0
-D2
+45 0 0
+D 2
 As ruas de Gondolin.
 ~
 porta~
-1 -1 4581
+:n 2
+a -1 4581
 S
 #4583
 Uma Bela Casa~
-   Esta casa é muito bela, grandes tapetes estão estendidos pelo chão,
-tornando o ambiente muito agradável.  As paredes são brancas e no teto
+   Esta casa Ã© muito bela, grandes tapetes estÃ£o estendidos pelo chÃ£o,
+tornando o ambiente muito agradÃ¡vel.  As paredes sÃ£o brancas e no teto
 lustres de cristal fulgem com uma luz branca.
-   Os moradores recebem você cordialmente, oferecendo-lhe comida e uma
-taça de vinho, em troca querem apenas noticias do mundo exterior.
+   Os moradores recebem vocÃª cordialmente, oferecendo-lhe comida e uma
+taÃ§a de vinho, em troca querem apenas noticias do mundo exterior.
 ~
-45 0 0 0 0 0
-D0
+45 0 0
+D 0
 As ruas de Gondolin.
 ~
 porta~
-1 -1 4581
+:n 2
+a -1 4581
 S
 #4584
 As Ruas de Gondolin~
-Esta é a parte ocidental de Ondolindë, a Canção de Pedra.  Alguns alegres
-elfos caminham alegremente, despreocupados, pois a segurança dos sete portões
-até hoje nunca falhou e nenhum servo do Inimigo encontrou o Reino Oculto.
-   Tudo é muito limpo e tranqüilo, belas estátuas ornamentam as ruas e as
-casas são muito bem construídas, e de tonalidades claras.
+Esta Ã© a parte ocidental de OndolindÃ«, a CanÃ§Ã£o de Pedra.  Alguns alegres
+elfos caminham alegremente, despreocupados, pois a seguranÃ§a dos sete portÃµes
+atÃ© hoje nunca falhou e nenhum servo do Inimigo encontrou o Reino Oculto.
+   Tudo Ã© muito limpo e tranqÃ¼ilo, belas estÃ¡tuas ornamentam as ruas e as
+casas sÃ£o muito bem construÃ­das, e de tonalidades claras.
 ~
-45 0 0 0 0 0
-D1
+45 0 0
+D 1
 As ruas de Gondolin.
 ~
 ~
 0 -1 4589
-D3
+D 3
 As ruas de Gondolin.
 ~
 ~
@@ -2046,50 +2085,52 @@ As ruas de Gondolin.
 S
 #4585
 As Ruas de Gondolin~
-   Esta é a parte ocidental de Ondolindë, a Canção de Pedra.  Alguns alegres
-elfos caminham alegremente, despreocupados, pois a segurança dos sete portões
-até hoje nunca falhou e nenhum servo do Inimigo encontrou o Reino Oculto.
-   Tudo é muito limpo e tranqüilo, belas estátuas ornamentam as ruas e as
-casas são muito bem construídas, e de tonalidades claras.  Você escuta a
-agitação da praça central à leste, e ao oeste continua pelas ruas.
+   Esta Ã© a parte ocidental de OndolindÃ«, a CanÃ§Ã£o de Pedra.  Alguns alegres
+elfos caminham alegremente, despreocupados, pois a seguranÃ§a dos sete portÃµes
+atÃ© hoje nunca falhou e nenhum servo do Inimigo encontrou o Reino Oculto.
+   Tudo Ã© muito limpo e tranqÃ¼ilo, belas estÃ¡tuas ornamentam as ruas e as
+casas sÃ£o muito bem construÃ­das, e de tonalidades claras.  VocÃª escuta a
+agitaÃ§Ã£o da praÃ§a central Ã  leste, e ao oeste continua pelas ruas.
 ~
-45 0 0 0 0 0
-D1
-A praça da cidade.
-~
-~
-0 -1 4561
-D3
+45 0 0
+D 3
 As ruas de Gondolin.
 ~
 ~
 0 -1 4586
+D 1
+A praÃ§a da cidade.
+~
+~
+0 -1 4561
 S
 #4586
 As Ruas de Gondolin~
-Esta é a parte ocidental de Ondolindë, a Canção de Pedra.  Alguns alegres
-elfos caminham alegremente, despreocupados, pois a segurança dos sete portões
-até hoje nunca falhou e nenhum servo do Inimigo encontrou o Reino Oculto.
-   Tudo é muito limpo e tranqüilo, belas estátuas ornamentam as ruas e as
-casas são muito bem construídas, e de tonalidades claras.
+Esta Ã© a parte ocidental de OndolindÃ«, a CanÃ§Ã£o de Pedra.  Alguns alegres
+elfos caminham alegremente, despreocupados, pois a seguranÃ§a dos sete portÃµes
+atÃ© hoje nunca falhou e nenhum servo do Inimigo encontrou o Reino Oculto.
+   Tudo Ã© muito limpo e tranqÃ¼ilo, belas estÃ¡tuas ornamentam as ruas e as
+casas sÃ£o muito bem construÃ­das, e de tonalidades claras.
 ~
-45 0 0 0 0 0
-D0
+45 0 0
+D 0
 Uma casa.
 ~
 porta~
-1 -1 4587
-D1
+:n 2
+a -1 4587
+D 1
 As ruas de Gondolin.
 ~
 ~
 0 -1 4585
-D2
+D 2
 Uma casa.
 ~
 porta~
-1 -1 4588
-D3
+:n 2
+a -1 4588
+D 3
 As ruas de Gondolin.
 ~
 ~
@@ -2097,49 +2138,51 @@ As ruas de Gondolin.
 S
 #4587
 Uma Bela Casa~
-   Esta casa é muito bela, grandes tapetes estão estendidos pelo chão,
-tornando o ambiente muito agradável.  As paredes são brancas e no teto
+   Esta casa Ã© muito bela, grandes tapetes estÃ£o estendidos pelo chÃ£o,
+tornando o ambiente muito agradÃ¡vel.  As paredes sÃ£o brancas e no teto
 lustres de cristal fulgem com uma luz branca.
-   Os moradores recebem você cordialmente, oferecendo-lhe comida e uma
-taça de vinho, em troca querem apenas noticias do mundo exterior.
+   Os moradores recebem vocÃª cordialmente, oferecendo-lhe comida e uma
+taÃ§a de vinho, em troca querem apenas noticias do mundo exterior.
 ~
-45 0 0 0 0 0
-D2
+45 0 0
+D 2
 As ruas de Gondolin.
 ~
 porta~
-1 -1 4586
+:n 2
+a -1 4586
 S
 #4588
 Uma Bela Casa~
-   Esta casa é muito bela, grandes tapetes estão estendidos pelo chão,
-tornando o ambiente muito agradável.  As paredes são brancas e no teto
+   Esta casa Ã© muito bela, grandes tapetes estÃ£o estendidos pelo chÃ£o,
+tornando o ambiente muito agradÃ¡vel.  As paredes sÃ£o brancas e no teto
 lustres de cristal fulgem com uma luz branca.
-   Os moradores recebem você cordialmente, oferecendo-lhe comida e uma
-taça de vinho, em troca querem apenas noticias do mundo exterior.
+   Os moradores recebem vocÃª cordialmente, oferecendo-lhe comida e uma
+taÃ§a de vinho, em troca querem apenas noticias do mundo exterior.
 ~
-45 0 0 0 0 0
-D0
+45 0 0
+D 0
 As ruas de Gondolin.
 ~
 porta~
-1 -1 4586
+:n 2
+a -1 4586
 S
 #4589
 As Ruas de Gondolin~
-Esta é a parte ocidental de Ondolindë, a Canção de Pedra.  Alguns alegres
-elfos caminham alegremente, despreocupados, pois a segurança dos sete portões
-até hoje nunca falhou e nenhum servo do Inimigo encontrou o Reino Oculto.
-   Tudo é muito limpo e tranqüilo, belas estátuas ornamentam as ruas e as
-casas são muito bem construídas, e de tonalidades claras.
+Esta Ã© a parte ocidental de OndolindÃ«, a CanÃ§Ã£o de Pedra.  Alguns alegres
+elfos caminham alegremente, despreocupados, pois a seguranÃ§a dos sete portÃµes
+atÃ© hoje nunca falhou e nenhum servo do Inimigo encontrou o Reino Oculto.
+   Tudo Ã© muito limpo e tranqÃ¼ilo, belas estÃ¡tuas ornamentam as ruas e as
+casas sÃ£o muito bem construÃ­das, e de tonalidades claras.
 ~
-45 0 0 0 0 0
-D1
+45 0 0
+D 1
 As ruas de Gondolin.
 ~
 ~
 0 -1 4586
-D3
+D 3
 As ruas de Gondolin.
 ~
 ~
@@ -2147,192 +2190,192 @@ As ruas de Gondolin.
 S
 #4590
 O Rio de Gondolin~
-   Estas águas límpidas e cristalinas abastecem o Reino Oculto, e são uma
-das graças que o Vala Ulmo concedeu a Gondolin, conta-se que as águas são
-renovadas por Ossë, a pedido de Ulmo.  A correnteza é bastante forte, não
-sendo apropriadas para a navegação, curiosamente a correnteza segue do
+   Estas Ã¡guas lÃ­mpidas e cristalinas abastecem o Reino Oculto, e sÃ£o uma
+das graÃ§as que o Vala Ulmo concedeu a Gondolin, conta-se que as Ã¡guas sÃ£o
+renovadas por OssÃ«, a pedido de Ulmo.  A correnteza Ã© bastante forte, nÃ£o
+sendo apropriadas para a navegaÃ§Ã£o, curiosamente a correnteza segue do
 sentido interno da cidade para o exterior das montanhas, evitando a entrada
 na cidade pelo rio.
 ~
-45 4 0 0 0 7
-D1
+45 c 7
+D 2
+~
+~
+d -1 4591
+D 1
 ~
 ~
 0 -1 4554
-D2
-~
-~
-1 -1 4591
 S
 #4591
 O Rio de Gondolin~
-   Estas águas límpidas e cristalinas abastecem o Reino Oculto, e são uma
-das graças que o Vala Ulmo concedeu a Gondolin, conta-se que as águas são
-renovadas por Ossë, a pedido de Ulmo.  A correnteza é bastante forte, não
-sendo apropriadas para a navegação, curiosamente a correnteza segue do
+   Estas Ã¡guas lÃ­mpidas e cristalinas abastecem o Reino Oculto, e sÃ£o uma
+das graÃ§as que o Vala Ulmo concedeu a Gondolin, conta-se que as Ã¡guas sÃ£o
+renovadas por OssÃ«, a pedido de Ulmo.  A correnteza Ã© bastante forte, nÃ£o
+sendo apropriadas para a navegaÃ§Ã£o, curiosamente a correnteza segue do
 sentido interno da cidade para o exterior das montanhas, evitando a entrada
 na cidade pelo rio.
 ~
-45 4 0 0 0 7
-D1
+45 c 7
+D 7
+~
+~
+d -1 4592
+D 1
 ~
 ~
 0 -1 4551
-D7
-~
-~
-1 -1 4592
 S
 #4592
 O Rio de Gondolin~
-   Estas águas límpidas e cristalinas abastecem o Reino Oculto, e são uma
-das graças que o Vala Ulmo concedeu a Gondolin, conta-se que as águas são
-renovadas por Ossë, a pedido de Ulmo.  A correnteza é bastante forte, não
-sendo apropriadas para a navegação, curiosamente a correnteza segue do
+   Estas Ã¡guas lÃ­mpidas e cristalinas abastecem o Reino Oculto, e sÃ£o uma
+das graÃ§as que o Vala Ulmo concedeu a Gondolin, conta-se que as Ã¡guas sÃ£o
+renovadas por OssÃ«, a pedido de Ulmo.  A correnteza Ã© bastante forte, nÃ£o
+sendo apropriadas para a navegaÃ§Ã£o, curiosamente a correnteza segue do
 sentido interno da cidade para o exterior das montanhas, evitando a entrada
 na cidade pelo rio.
 ~
-45 4 0 0 0 7
-D1
+45 c 7
+D 1
 ~
 ~
-1 -1 4593
-D2
+d -1 4593
+D 2
 ~
 ~
 0 -1 4550
 S
 #4593
 O Rio de Gondolin~
-   Estas águas límpidas e cristalinas abastecem o Reino Oculto, e são uma
-das graças que o Vala Ulmo concedeu a Gondolin, conta-se que as águas são
-renovadas por Ossë, a pedido de Ulmo.  A correnteza é bastante forte, não
-sendo apropriadas para a navegação, curiosamente a correnteza segue do
+   Estas Ã¡guas lÃ­mpidas e cristalinas abastecem o Reino Oculto, e sÃ£o uma
+das graÃ§as que o Vala Ulmo concedeu a Gondolin, conta-se que as Ã¡guas sÃ£o
+renovadas por OssÃ«, a pedido de Ulmo.  A correnteza Ã© bastante forte, nÃ£o
+sendo apropriadas para a navegaÃ§Ã£o, curiosamente a correnteza segue do
 sentido interno da cidade para o exterior das montanhas, evitando a entrada
 na cidade pelo rio.
 ~
-45 4 0 0 0 7
-D2
+45 c 7
+D 2
 ~
 ~
-1 -1 4594
-D8
+d -1 4594
+D 8
 ~
 ~
 0 -1 4548
 S
 #4594
 O Rio de Gondolin~
-   Estas águas límpidas e cristalinas abastecem o Reino Oculto, e são uma
-das graças que o Vala Ulmo concedeu a Gondolin, conta-se que as águas são
-renovadas por Ossë, a pedido de Ulmo.  A correnteza é bastante forte, não
-sendo apropriadas para a navegação, curiosamente a correnteza segue do
+   Estas Ã¡guas lÃ­mpidas e cristalinas abastecem o Reino Oculto, e sÃ£o uma
+das graÃ§as que o Vala Ulmo concedeu a Gondolin, conta-se que as Ã¡guas sÃ£o
+renovadas por OssÃ«, a pedido de Ulmo.  A correnteza Ã© bastante forte, nÃ£o
+sendo apropriadas para a navegaÃ§Ã£o, curiosamente a correnteza segue do
 sentido interno da cidade para o exterior das montanhas, evitando a entrada
 na cidade pelo rio.
 ~
-45 4 0 0 0 7
-D2
+45 c 7
+D 3
+~
+~
+d -1 4595
+D 2
 ~
 ~
 0 -1 4545
-D3
-~
-~
-1 -1 4595
 S
 #4595
 O Rio de Gondolin~
-   Estas águas límpidas e cristalinas abastecem o Reino Oculto, e são uma
-das graças que o Vala Ulmo concedeu a Gondolin, conta-se que as águas são
-renovadas por Ossë, a pedido de Ulmo.  A correnteza é bastante forte, não
-sendo apropriadas para a navegação, curiosamente a correnteza segue do
+   Estas Ã¡guas lÃ­mpidas e cristalinas abastecem o Reino Oculto, e sÃ£o uma
+das graÃ§as que o Vala Ulmo concedeu a Gondolin, conta-se que as Ã¡guas sÃ£o
+renovadas por OssÃ«, a pedido de Ulmo.  A correnteza Ã© bastante forte, nÃ£o
+sendo apropriadas para a navegaÃ§Ã£o, curiosamente a correnteza segue do
 sentido interno da cidade para o exterior das montanhas, evitando a entrada
 na cidade pelo rio.
 ~
-45 4 0 0 0 7
-D2
+45 c 7
+D 2
 ~
 ~
-1 -1 4596
-D3
+d -1 4596
+D 3
 ~
 ~
 0 -1 4543
 S
 #4596
 O Rio de Gondolin~
-   Estas águas límpidas e cristalinas abastecem o Reino Oculto, e são uma
-das graças que o Vala Ulmo concedeu a Gondolin, conta-se que as águas são
-renovadas por Ossë, a pedido de Ulmo.  A correnteza é bastante forte, não
-sendo apropriadas para a navegação, curiosamente a correnteza segue do
+   Estas Ã¡guas lÃ­mpidas e cristalinas abastecem o Reino Oculto, e sÃ£o uma
+das graÃ§as que o Vala Ulmo concedeu a Gondolin, conta-se que as Ã¡guas sÃ£o
+renovadas por OssÃ«, a pedido de Ulmo.  A correnteza Ã© bastante forte, nÃ£o
+sendo apropriadas para a navegaÃ§Ã£o, curiosamente a correnteza segue do
 sentido interno da cidade para o exterior das montanhas, evitando a entrada
 na cidade pelo rio.
 ~
-45 4 0 0 0 7
-D3
+45 c 7
+D 9
+~
+~
+d -1 4597
+D 3
 ~
 ~
 0 -1 4540
-D9
-~
-~
-1 -1 4597
 S
 #4597
 O Rio de Gondolin~
-   Estas águas límpidas e cristalinas abastecem o Reino Oculto, e são uma
-das graças que o Vala Ulmo concedeu a Gondolin, conta-se que as águas são
-renovadas por Ossë, a pedido de Ulmo.  A correnteza é bastante forte, não
-sendo apropriadas para a navegação, curiosamente a correnteza segue do
+   Estas Ã¡guas lÃ­mpidas e cristalinas abastecem o Reino Oculto, e sÃ£o uma
+das graÃ§as que o Vala Ulmo concedeu a Gondolin, conta-se que as Ã¡guas sÃ£o
+renovadas por OssÃ«, a pedido de Ulmo.  A correnteza Ã© bastante forte, nÃ£o
+sendo apropriadas para a navegaÃ§Ã£o, curiosamente a correnteza segue do
 sentido interno da cidade para o exterior das montanhas, evitando a entrada
 na cidade pelo rio.
 ~
-45 4 0 0 0 7
-D1
+45 c 7
+D 3
+~
+~
+d -1 4598
+D 1
 ~
 ~
 0 -1 4535
-D3
-~
-~
-1 -1 4598
 S
 #4598
 O Rio de Gondolin~
-   Estas águas límpidas e cristalinas abastecem o Reino Oculto, e são uma
-das graças que o Vala Ulmo concedeu a Gondolin, conta-se que as águas são
-renovadas por Ossë, a pedido de Ulmo.  A correnteza é bastante forte, não
-sendo apropriadas para a navegação, curiosamente a correnteza segue do
+   Estas Ã¡guas lÃ­mpidas e cristalinas abastecem o Reino Oculto, e sÃ£o uma
+das graÃ§as que o Vala Ulmo concedeu a Gondolin, conta-se que as Ã¡guas sÃ£o
+renovadas por OssÃ«, a pedido de Ulmo.  A correnteza Ã© bastante forte, nÃ£o
+sendo apropriadas para a navegaÃ§Ã£o, curiosamente a correnteza segue do
 sentido interno da cidade para o exterior das montanhas, evitando a entrada
 na cidade pelo rio.
 ~
-45 4 0 0 0 7
-D0
+45 c 7
+D 9
+~
+~
+d -1 4599
+D 0
 ~
 ~
 0 -1 4527
-D9
-~
-~
-1 -1 4599
 S
 #4599
 O Rio de Gondolin~
-   Estas águas límpidas e cristalinas abastecem o Reino Oculto, e são uma
-das graças que o Vala Ulmo concedeu a Gondolin, conta-se que as águas são
-renovadas por Ossë, a pedido de Ulmo.  A correnteza é bastante forte, não
-sendo apropriadas para a navegação, curiosamente a correnteza segue do
+   Estas Ã¡guas lÃ­mpidas e cristalinas abastecem o Reino Oculto, e sÃ£o uma
+das graÃ§as que o Vala Ulmo concedeu a Gondolin, conta-se que as Ã¡guas sÃ£o
+renovadas por OssÃ«, a pedido de Ulmo.  A correnteza Ã© bastante forte, nÃ£o
+sendo apropriadas para a navegaÃ§Ã£o, curiosamente a correnteza segue do
 sentido interno da cidade para o exterior das montanhas, evitando a entrada
 na cidade pelo rio.
 ~
-45 4 0 0 0 7
-D1
+45 c 7
+D 4
+~
+~
+d -1 4512
+D 1
 ~
 ~
 0 -1 4513
-D4
-~
-~
-1 -1 4512
 S
-$~
+$
