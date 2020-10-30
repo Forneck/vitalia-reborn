@@ -1,12 +1,14 @@
 #3900
 Entrada Para o Corredor das Chamas~
-   Escuros, brilhantes pilares de ônix suportam o portal de entrada para o
-desconhecido.  A sala é fria e mortalmente silenciosa.  Perscrutando através
-do portal você sente que almas atormentadas existem em qualquer lugar que
-ele vá levar.  Um ocasional estouro de calor irradia de lá...  Quase
+   Escuros, brilhantes pilares de Ã´nix suportam o portal de entrada para o
+desconhecido.  A sala Ã© fria e mortalmente silenciosa.  Perscrutando atravÃ©s
+do portal vocÃª sente que almas atormentadas existem em qualquer lugar que
+ele vÃ¡ levar.  Um ocasional estouro de calor irradia de lÃ¡...  Quase
 chamuscando seu cabelo.
 ~
-39 4 0 0 0 0
+39 c 0
+ON z39
+ON abismo
 D0
 ~
 ~
@@ -17,68 +19,70 @@ D4
 0 -1 5100
 S
 #3901
-Através dos Portais Flamejantes~
-   Esta pequena construção de pedra é grande o bastante para apenas uma
-pessoa se manter em pé.  Musgo verde cobre as rachaduras entre os blocos e
-você sente algo viscoso gotejar do teto.  Ao sul, a saída o levará de volta
-aos Portais Flamejantes enquanto ao norte, uma escada segue através da
-escuridão.
+AtravÃ©s dos Portais Flamejantes~
+   Esta pequena construÃ§Ã£o de pedra Ã© grande o bastante para apenas uma
+pessoa se manter em pÃ©.  Musgo verde cobre as rachaduras entre os blocos e
+vocÃª sente algo viscoso gotejar do teto.  Ao sul, a saÃ­da o levarÃ¡ de volta
+aos Portais Flamejantes enquanto ao norte, uma escada segue atravÃ©s da
+escuridÃ£o.
 ~
-39 13 0 0 0 0
+39 acd 0
 D0
 ~
 ~
 0 -1 5145
 D2
 ~
-portão~
-2 3908 3914
+portao~
+:n 1 o portÃ£o
+2 3908 3914 9
 S
 #3902
 A Toca de Valik~
-   Uma enorme caverna se abre diante de você.  Formações minerais crescem do
-teto até o solo, ocasionalmente ligando um ao outro.  Na escuridão, algo
+   Uma enorme caverna se abre diante de vocÃª.  FormaÃ§Ãµes minerais crescem do
+teto atÃ© o solo, ocasionalmente ligando um ao outro.  Na escuridÃ£o, algo
 volumoso se movimenta.  Uma baforada de fogo ilumina a caverna por um
-instante.  No segundo seguinte você vê diante de si, o maior dragão que
+instante.  No segundo seguinte vocÃª vÃª diante de si, o maior dragÃ£o que
 jamais fora desperto.
 ~
-39 1 0 0 0 0
+39 a 0
 D3
 ~
 ~
 0 -1 3905
 S
 #3903
-A Câmara de Kalas~
-   Ricamente mobiliada, está é a câmara de Kalas.  A tapeçaria, pendurada
-por todas as paredes, mostra famosas cenas de batalha.  Diversos troféus de
-macabras origens, crânios, escalpes, e partes do corpo mumificadas, repousam
+A CÃ¢mara de Kalas~
+   Ricamente mobiliada, estÃ¡ Ã© a cÃ¢mara de Kalas.  A tapeÃ§aria, pendurada
+por todas as paredes, mostra famosas cenas de batalha.  Diversos trofÃ©us de
+macabras origens, crÃ¢nios, escalpes, e partes do corpo mumificadas, repousam
 pela sala.  Embora a grosseria de ter tais itens guardados aqui, o lugar em
 minuciosamente limpo e organizado.
 ~
-39 0 0 0 0 0
+39 0 0
 D2
 ~
 porta~
+:n 2 a porta
 1 -1 3931
 S
 #3904
 A Queda sem Fim~
-   Assim que você mergulha na escuridão, você sente o chão abaixo de seus
-pés sumir.  E você cai...  Cai....cai...  Você tenta gritar mas o som não
-sai de sua boca.  Finalmente, você atinge o solo, e vê claramente sua alma
-se desprender de seu corpo, e voar para o paraíso.
+   Assim que vocÃª mergulha na escuridÃ£o, vocÃª sente o chÃ£o abaixo de seus
+pÃ©s sumir.  E vocÃª cai...  Cai....cai...  VocÃª tenta gritar mas o som nÃ£o
+sai de sua boca.  Finalmente, vocÃª atinge o solo, e vÃª claramente sua alma
+se desprender de seu corpo, e voar para o paraÃ­so.
 ~
-39 6 0 0 0 0
+39 bc 0
 S
 #3905
-A Entrada Para a Toca dos Dragões~
-   Você anda em uma pequena caverna.  As paredes a sua volta estão
-carbonizadas e pulsam com o calor.  A medida que você começa a suar, você se
-pergunta o que na terra poderia causar tamanho calor.  Ruídos e chamas vêm
+A Entrada Para a Toca dos DragÃµes~
+   VocÃª anda em uma pequena caverna.  As paredes a sua volta estÃ£o
+carbonizadas e pulsam com o calor.  A medida que vocÃª comeÃ§a a suar, vocÃª se
+pergunta o que na terra poderia causar tamanho calor.  RuÃ­dos e chamas vÃªm
 do leste.
 ~
-39 1 0 0 0 0
+39 a 0
 D1
 ~
 ~
@@ -90,11 +94,11 @@ D3
 S
 #3906
 Uma Curva no Rio~
-   As furiosas águas fazem uma curva ao oeste.  Silenciosas e observadoras
-árvores contornam as bordas do rio.  Elas parecem estar observando-lhe com
-desaprovação a medida que você vaga indefeso pelas frias águas.
+   As furiosas Ã¡guas fazem uma curva ao oeste.  Silenciosas e observadoras
+Ã¡rvores contornam as bordas do rio.  Elas parecem estar observando-lhe com
+desaprovaÃ§Ã£o a medida que vocÃª vaga indefeso pelas frias Ã¡guas.
 ~
-39 0 0 0 0 6
+39 0 6
 D0
 ~
 ~
@@ -105,12 +109,12 @@ D3
 0 -1 3976
 S
 #3907
-Uma Bifurcação no Rio~
-   A medida que o rio segue para o oeste, ele se ramifica em duas direções.
-A corrente principal segue pelo sul e uma corrente secundária ao leste, de
-onde podem ser ouvidos lânguidos ruídos.
+Uma BifurcaÃ§Ã£o no Rio~
+   A medida que o rio segue para o oeste, ele se ramifica em duas direÃ§Ãµes.
+A corrente principal segue pelo sul e uma corrente secundÃ¡ria ao leste, de
+onde podem ser ouvidos lÃ¢nguidos ruÃ­dos.
 ~
-39 0 0 0 0 6
+39 0 6
 D1
 ~
 ~
@@ -126,20 +130,20 @@ D3
 S
 #3908
 O Redemoinho~
-   O barulho das águas é ensurdecedor.  Corpos congelados de aventureiros e
-criaturas flutuam na água, rodando a sua volta, rodando e rodando neste
+   O barulho das Ã¡guas Ã© ensurdecedor.  Corpos congelados de aventureiros e
+criaturas flutuam na Ã¡gua, rodando a sua volta, rodando e rodando neste
 redemoinho maldito.
 ~
-39 4 0 0 0 8
+39 c  8
 S
 #3909
 O Rio Talloren~
-   Escuras e observadoras contornam o rio.  Seus galhos tocam a água, como
-se quisessem lhe alcançar e lhe agarrar.  Coisas esbarram em suas pernas a
-medida que você luta para conseguir manter sua cabeça acima das gélidas e
-avermelhadas águas.
+   Escuras e observadoras contornam o rio.  Seus galhos tocam a Ã¡gua, como
+se quisessem lhe alcanÃ§ar e lhe agarrar.  Coisas esbarram em suas pernas a
+medida que vocÃª luta para conseguir manter sua cabeÃ§a acima das gÃ©lidas e
+avermelhadas Ã¡guas.
 ~
-39 0 0 0 0 6
+39 0 6
 D0
 ~
 ~
@@ -147,16 +151,16 @@ D0
 D1
 ~
 ~
-0 -1 3907
+0 -1 3907 0
 S
 #3910
 Descendo pelo Abismo Profundo~
-   As brilhantes paredes de ônix do corredor parecem ser infinitas.  Tudo é
+   As brilhantes paredes de Ã´nix do corredor parecem ser infinitas.  Tudo Ã©
 frio ao toque e mortalmente silencioso.  Olhando adiante abaixo o corredor
-não revela nada, exceto escuridão.  Você pode continuar ou voltar aos
+nÃ£o revela nada, exceto escuridÃ£o.  VocÃª pode continuar ou voltar aos
 Portais.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -168,12 +172,12 @@ D2
 S
 #3911
 Descendo pelo Abismo Profundo~
-   As brilhantes paredes de ônix do corredor parecem ser infinitas.  Tudo é
+   As brilhantes paredes de Ã´nix do corredor parecem ser infinitas.  Tudo Ã©
 frio ao toque e mortalmente silencioso.  Olhando adiante abaixo o corredor
-não revela nada, exceto escuridão.  Você pode continuar ou voltar aos
+nÃ£o revela nada, exceto escuridÃ£o.  VocÃª pode continuar ou voltar aos
 Portais.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -185,12 +189,12 @@ D2
 S
 #3912
 Uma Curva no Corredor~
-   Encontrando esta curva do corredor, você percebe uma brilhante
+   Encontrando esta curva do corredor, vocÃª percebe uma brilhante
 luminosidade vinda do leste.  A atmosfera se torna duramente quente a medida
-que o declínio se acentua.  As sombras no corredor bruxuleiam como se fossem
+que o declÃ­nio se acentua.  As sombras no corredor bruxuleiam como se fossem
 feitas pela luz de chamas ardentes.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -203,10 +207,10 @@ S
 #3913
 Se Aproximando do Fim do Corredor~
    As paredes do corredor parecem bruxulear no intenso calor emanado do
-leste.  A luz é tão brilhante, que você é forçado a proteger os olhos.  Logo
-você poderá ver a fonte deste calor e luz.
+leste.  A luz Ã© tÃ£o brilhante, que vocÃª Ã© forÃ§ado a proteger os olhos.  Logo
+vocÃª poderÃ¡ ver a fonte deste calor e luz.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -218,19 +222,21 @@ D3
 S
 #3914
 O Portal Flamejante~
-   Enormes pilares gêmeos, flamejantes se erguem diante de você.  Um pesado
-portão forjado em ferro magicalmente engolfado em chamas, impede que você
-siga adiante.  Tudo a sua vista é chamuscado e enegrecido.  Algum alívio
+   Enormes pilares gÃªmeos, flamejantes se erguem diante de vocÃª.  Um pesado
+portÃ£o forjado em ferro magicalmente engolfado em chamas, impede que vocÃª
+siga adiante.  Tudo a sua vista Ã© chamuscado e enegrecido.  Algum alÃ­vio
 pode ser encontrado ao oeste e talvez ao sul...
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
-portão~
+portao~
+:n 1 o portÃ£o
 2 3908 3901
 D2
 ~
-portão~
+portao~
+:n 1 o portÃ£o
 2 -1 3915
 D3
 ~
@@ -239,15 +245,16 @@ D3
 S
 #3915
 Um Chamuscado Caminho de Pedra~
-   O caminho fora construído por escultores de um longo tempo atrás.  As
-pedras lisas ainda resistem firmemente, um último tributo à habilidade
-destes construtores.  A área ao redor é chamuscada e enegrecida.  Nenhum
-sinal de vida pode ser vista e o vento é bastante calmo.
+   O caminho fora construÃ­do por escultores de um longo tempo atrÃ¡s.  As
+pedras lisas ainda resistem firmemente, um Ãºltimo tributo Ã  habilidade
+destes construtores.  A Ã¡rea ao redor Ã© chamuscada e enegrecida.  Nenhum
+sinal de vida pode ser vista e o vento Ã© bastante calmo.
 ~
-39 0 0 0 0 2
+39 0 2
 D0
 ~
-portão~
+portao~
+:n 1 o portÃ£o
 1 -1 3914
 D1
 ~
@@ -256,12 +263,12 @@ D1
 S
 #3916
 Um Chamuscado Caminho de Pedra~
-   O caminho fora construído por escultores de um longo tempo atrás.  As
-pedras lisas ainda resistem firmemente, um último tributo à habilidade
-destes construtores.  A área ao redor é chamuscada e enegrecida.  Nenhum
-sinal de vida pode ser vista e o vento é bastante calmo.
+   O caminho fora construÃ­do por escultores de um longo tempo atrÃ¡s.  As
+pedras lisas ainda resistem firmemente, um Ãºltimo tributo Ã  habilidade
+destes construtores.  A Ã¡rea ao redor Ã© chamuscada e enegrecida.  Nenhum
+sinal de vida pode ser vista e o vento Ã© bastante calmo.
 ~
-39 0 0 0 0 2
+39 0 2
 D1
 ~
 ~
@@ -272,13 +279,13 @@ D3
 0 -1 3915
 S
 #3917
-O Pátio do Abismo Profundo~
-   Este fora um lindo pátio.  Majestosos pilares e estátuas agora repousam
-quebradas por todo o chão.  A única coisa que ainda resta é a fonte no
-centro do pátio.  De alguma forma ela sobreviveu à o que quer que causou da
-ruína deste lugar.
+O PÃ¡tio do Abismo Profundo~
+   Este fora um lindo pÃ¡tio.  Majestosos pilares e estÃ¡tuas agora repousam
+quebradas por todo o chÃ£o.  A Ãºnica coisa que ainda resta Ã© a fonte no
+centro do pÃ¡tio.  De alguma forma ela sobreviveu Ã  o que quer que causou da
+ruÃ­na deste lugar.
 ~
-39 0 0 0 0 2
+39 0 2
 D0
 ~
 ~
@@ -295,14 +302,15 @@ S
 #3918
 Um Caminho Lateral~
    Este pequeno caminho segue pelo norte.  O que restou dos jardins reais,
-cerca o caminho.  Vegetação rasteira e retorcida agora cresce onde lindas
-flores foram cultivadas.  A sua frente fica uma pequena construção de pedra,
-enquanto o pátio fica ao sul.
+cerca o caminho.  VegetaÃ§Ã£o rasteira e retorcida agora cresce onde lindas
+flores foram cultivadas.  A sua frente fica uma pequena construÃ§Ã£o de pedra,
+enquanto o pÃ¡tio fica ao sul.
 ~
-39 0 0 0 0 2
+39 0 2
 D0
 ~
 porta pedra~
+:n 2 a pedra
 1 -1 3919
 D1
 ~
@@ -318,26 +326,26 @@ D3
 0 -1 3959
 S
 #3919
-Uma Pequena Construção de Pedra~
-   Assim que você adentra a construção, você vê que ela foi a morada de um
-jardineiro.  Ferramentas quebradas estão por toda parte, todas elas
-inutilizadas.  O teto desabou há muito, deixando um enorme buraco acima de
-as cabeça.  Amassadas tapeçarias estão penduradas em uma das paredes.  Não
-há outras saídas óbvias, a não ser pela qual você veio.
+Uma Pequena ConstruÃ§Ã£o de Pedra~
+   Assim que vocÃª adentra a construÃ§Ã£o, vocÃª vÃª que ela foi a morada de um
+jardineiro.  Ferramentas quebradas estÃ£o por toda parte, todas elas
+inutilizadas.  O teto desabou hÃ¡ muito, deixando um enorme buraco acima de
+as cabeÃ§a.  Amassadas tapeÃ§arias estÃ£o penduradas em uma das paredes.  NÃ£o
+hÃ¡ outras saÃ­das Ã³bvias, a nÃ£o ser pela qual vocÃª veio.
 ~
-39 0 0 0 0 0
+39 0 0
 D2
 ~
 ~
 0 -1 3918
 S
 #3920
-A Ponte Levadiça~
-   Uma grande ponte levadiça permite a entrada ao Castelo do Abismo.  A
-portícula fora elevada como se alguém fosse esperado.  Olhando para baixo,
-nos limites da ponte, você não ve nada, apenas a mais negra escuridão.
+A Ponte LevadiÃ§a~
+   Uma grande ponte levadiÃ§a permite a entrada ao Castelo do Abismo.  A
+portÃ­cula fora elevada como se alguÃ©m fosse esperado.  Olhando para baixo,
+nos limites da ponte, vocÃª nÃ£o ve nada, apenas a mais negra escuridÃ£o.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -353,12 +361,12 @@ D5
 S
 #3921
 A Entrada~
-   Desbotados tapetes decoram esta sala.  A tapeçaria mostra cenas dos
+   Desbotados tapetes decoram esta sala.  A tapeÃ§aria mostra cenas dos
 melhores tempos que o Castelo viveu.  Um pedestal suporta um grande e
-empoeirado tomo.  Examinando este livro, você percebe que o último visitante
-a assina-lo o fez há séculos atrás.
+empoeirado tomo.  Examinando este livro, vocÃª percebe que o Ãºltimo visitante
+a assina-lo o fez hÃ¡ sÃ©culos atrÃ¡s.
 ~
-39 0 0 0 0 2
+39 0 2
 D1
 ~
 ~
@@ -370,11 +378,11 @@ D3
 S
 #3922
 O Grande Corredor~
-   Um vasto corredor se abre diante de você.  Tochas douradas e cortinas de
-veludo estão penduradas nas vigas.  Macios sofás e almofadas se alinham
-pelos lados do corredor.  Nunca você viu um corredor tão esplendoroso.
+   Um vasto corredor se abre diante de vocÃª.  Tochas douradas e cortinas de
+veludo estÃ£o penduradas nas vigas.  Macios sofÃ¡s e almofadas se alinham
+pelos lados do corredor.  Nunca vocÃª viu um corredor tÃ£o esplendoroso.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -385,14 +393,14 @@ D3
 0 -1 3921
 S
 #3923
-Uma interseção Abobadada~
-   O grande corredor encontra as asas do castelo debaixo desta enorme cúpula
-de cristal.  Há muito tempo atrás, este lugar fora chamado Cúpula do
-Esplendor.  Quando o sol da tarde se põe, os últimos raios de claridade
-brilham através do cristal formando um arco-íris.  Havia uma grande bola
-pendurada aqui, mas não há mais.
+Uma interseÃ§Ã£o Abobadada~
+   O grande corredor encontra as asas do castelo debaixo desta enorme cÃºpula
+de cristal.  HÃ¡ muito tempo atrÃ¡s, este lugar fora chamado CÃºpula do
+Esplendor.  Quando o sol da tarde se pÃµe, os Ãºltimos raios de claridade
+brilham atravÃ©s do cristal formando um arco-Ã­ris.  Havia uma grande bola
+pendurada aqui, mas nÃ£o hÃ¡ mais.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -412,11 +420,11 @@ D3
 S
 #3924
 O Grande Corredor~
-   Um vasto corredor se abre diante de você.  Tochas douradas e cortinas de
-veludo estão penduradas nas vigas.  Macios sofás e almofadas se alinham
-pelos lados do corredor.  Nunca você viu um corredor tão esplendoroso.
+   Um vasto corredor se abre diante de vocÃª.  Tochas douradas e cortinas de
+veludo estÃ£o penduradas nas vigas.  Macios sofÃ¡s e almofadas se alinham
+pelos lados do corredor.  Nunca vocÃª viu um corredor tÃ£o esplendoroso.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -428,11 +436,11 @@ D3
 S
 #3925
 A Asa Norte~
-   Tudo é mortalmente normal através desta asa.  Pegadas e outros sons são
+   Tudo Ã© mortalmente normal atravÃ©s desta asa.  Pegadas e outros sons sÃ£o
 estranhamente amortecidos aqui.  Portas em cada lado do lugar levam a um,
 dos muitos quartos do castelo.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -440,6 +448,7 @@ D0
 D1
 ~
 porta~
+:n 2 a porta
 1 -1 3946
 D2
 ~
@@ -448,15 +457,16 @@ D2
 D3
 ~
 porta~
+:n 2 a porta
 1 -1 3943
 S
 #3926
 A Asa Norte~
-   Tudo é mortalmente normal através desta asa.  Pegadas e outros sons são
+   Tudo Ã© mortalmente normal atravÃ©s desta asa.  Pegadas e outros sons sÃ£o
 estranhamente amortecidos aqui.  Portas em cada lado do lugar levam a um,
 dos muitos quartos do castelo.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -464,6 +474,7 @@ D0
 D1
 ~
 porta~
+:n 2 a porta
 1 -1 3945
 D2
 ~
@@ -472,17 +483,18 @@ D2
 D3
 ~
 porta~
+:n a porta
 1 -1 3944
 S
 #3927
 Na Base da Torre Norte~
    Enormes blocos que resistiram aos testes do tempo, ainda seguram a
 poderosa torre.  Uma escadaria de pedra em espiral leva para cima.  Olhando
-no meio da torre, você se esforça, e pode ver seu topo, ele parece estar
-longe de sua vista, lhe surpreendendo pela altura da torre.  Um lânguido
-esboço de um alçapão pode ser visto.
+no meio da torre, vocÃª se esforÃ§a, e pode ver seu topo, ele parece estar
+longe de sua vista, lhe surpreendendo pela altura da torre.  Um lÃ¢nguido
+esboÃ§o de um alÃ§apÃ£o pode ser visto.
 ~
-39 0 0 0 0 0
+39 0 0
 D2
 ~
 ~
@@ -493,66 +505,66 @@ D4
 0 -1 3940
 D5
 ~
-alçapão~
-1 0 3961
+alcapao~
+1 0 3961 1
 S
 #3928
 A Asa Sul~
-   Tudo é mortalmente normal através desta asa.  Pegadas e outros sons são
+   Tudo Ã© mortalmente normal atravÃ©s desta asa.  Pegadas e outros sons sÃ£o
 estranhamente amortecidos aqui.  Portas em cada lado do lugar levam a um,
 dos muitos quartos do castelo.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
-0 0 3923
+0 0 3923 0
 D1
 ~
 porta leste~
-1 0 3947
+1 0 3947 1
 D2
 ~
 ~
-0 0 3929
+0 0 3929 0
 D3
 ~
 porta oeste~
-1 0 3950
+1 0 3950 1
 S
 #3929
 Asa Sul~
-   Tudo é mortalmente normal através desta asa.  Pegadas e outros sons são
+   Tudo Ã© mortalmente normal atravÃ©s desta asa.  Pegadas e outros sons sÃ£o
 estranhamente amortecidos aqui.  Portas em cada lado do lugar levam a um,
 dos muitos quartos do castelo.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
-0 0 3928
+0 0 3928 0
 D1
 ~
 porta~
-1 0 3948
+1 0 3948 1
 D2
 ~
 ~
-0 0 3930
+0 0 3930 0
 D3
 ~
 porta~
-1 0 3949
+1 0 3949 1
 S
 #3930
 A Base da Torre Sul~
    Enormes blocos que resistiram aos testes do tempo, ainda seguram a
 poderosa torre.  Uma escadaria de pedra em espiral leva para cima.  Olhando
-no meio da torre, você se esforça, e pode ver seu topo, ele parece estar
-longe de sua vista, lhe surpreendendo pela altura da torre.  Um lânguido
-esboço de um alçapão pode ser visto.
+no meio da torre, vocÃª se esforÃ§a, e pode ver seu topo, ele parece estar
+longe de sua vista, lhe surpreendendo pela altura da torre.  Um lÃ¢nguido
+esboÃ§o de um alÃ§apÃ£o pode ser visto.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -563,21 +575,23 @@ D4
 0 -1 3932
 D5
 ~
-alçapão~
+alcapao~
+:n 2 o alÃ§apÃ£o
 1 -1 3935
 S
 #3931
 A Base da Torre Principal~
    Enormes blocos que resistiram aos testes do tempo, ainda seguram a
 poderosa torre.  Uma escadaria de pedra em espiral leva para cima.  Olhando
-no meio da torre, você se esforça, e pode ver seu topo, ele parece estar
+no meio da torre, vocÃª se esforÃ§a, e pode ver seu topo, ele parece estar
 longe de sua vista, lhe surpreendendo pela altura da torre.  Uma porta de
 ferro pode ser vista ao norte.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 porta ferro~
+:n 2 a porta de ferro
 1 -1 3903
 D3
 ~
@@ -590,11 +604,11 @@ D4
 S
 #3932
 A Torre Sul~
-   A escadaria continua dando voltas e voltas a medida que você sobe pela
+   A escadaria continua dando voltas e voltas a medida que vocÃª sobe pela
 torre.  Ela parece continuar para sempre, sem que seu fim possa ser
 avistado.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
 ~
@@ -606,11 +620,11 @@ D5
 S
 #3933
 A Torre Sul~
-   A escadaria continua dando voltas e voltas a medida que você sobe pela
+   A escadaria continua dando voltas e voltas a medida que vocÃª sobe pela
 torre.  Ela parece continuar para sempre, sem que seu fim possa ser
 avistado.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
 ~
@@ -622,14 +636,14 @@ D5
 S
 #3934
 O Topo da Torre Sul~
-   Você suspira aliviado por ter finalmente chego ao topo da Torre Sul.
-Você vê que a única coisa que resta mais alta que esta torre, é a Torre
-Principal.  Caminhando até seu limite, você vê a zona rural.  Tudo parece
-ter sido afetado por algum tipo de doença.  De fato, você começa a perceber
+   VocÃª suspira aliviado por ter finalmente chego ao topo da Torre Sul.
+VocÃª vÃª que a Ãºnica coisa que resta mais alta que esta torre, Ã© a Torre
+Principal.  Caminhando atÃ© seu limite, vocÃª vÃª a zona rural.  Tudo parece
+ter sido afetado por algum tipo de doenÃ§a.  De fato, vocÃª comeÃ§a a perceber
 que este castelo parece ser a origem de qualquer que seja a causa de tanto
-desastre e ruína.
+desastre e ruÃ­na.
 ~
-39 0 0 0 0 0
+39 0 0
 D5
 ~
 ~
@@ -637,15 +651,16 @@ D5
 S
 #3935
 Pela Torre Sul~
-   O ar começa a esfriar a medida que você caminha pelos degraus.  A parede
-de pedra é coberta por umidade.  Parece que a parede está verdadeiramente
-suando.  Perscrutando a escuridão, és invadido por um sentimento de intensa
+   O ar comeÃ§a a esfriar a medida que vocÃª caminha pelos degraus.  A parede
+de pedra Ã© coberta por umidade.  Parece que a parede estÃ¡ verdadeiramente
+suando.  Perscrutando a escuridÃ£o, Ã©s invadido por um sentimento de intensa
 tristeza.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
-alçapão~
+alcapao~
+:n o alÃ§apÃ£o
 1 -1 3930
 D5
 ~
@@ -653,19 +668,20 @@ D5
 0 -1 3936
 S
 #3936
-O Poço de Sacrifícios~
-   Você é invadido pelo horror e tragédia que aconteceu nesta sala há tempos
-atrás.  Nos dias finais deste castelo, quando o mal aumentou seu poder,
+O PoÃ§o de SacrifÃ­cios~
+   VocÃª Ã© invadido pelo horror e tragÃ©dia que aconteceu nesta sala hÃ¡ tempos
+atrÃ¡s.  Nos dias finais deste castelo, quando o mal aumentou seu poder,
 pessoas foram jogadas para a morte da base desta torre.  Ossos quebrados e
-caveiras se empilham no chão.  As paredes são cobertas com sangue, que há
+caveiras se empilham no chÃ£o.  As paredes sÃ£o cobertas com sangue, que hÃ¡
 muito secou e desbotou.  Marcas feitas com cinzel foram deixadas nas
-paredes, provavelmente feitas por aqueles que sobreviveram à queda inicial e
-tentaram escapar da morte resultante do fechamento do alçapão acima.
+paredes, provavelmente feitas por aqueles que sobreviveram Ã  queda inicial e
+tentaram escapar da morte resultante do fechamento do alÃ§apÃ£o acima.
 ~
-39 0 0 0 0 0
+39 0 0
 D3
 ~
 porta~
+:n 2 a porta
 2 -1 3937
 D4
 ~
@@ -673,17 +689,18 @@ D4
 0 -1 3935
 S
 #3937
-A Entrada Para o Santuário~
-   Uma sala plana e branca oferece algum alívio da vista do poço de
-sacrifícios.  Tudo aqui é muito branco, é a primeira vez que você vê esta
-cor sendo usada no castelo.  Uma avermelhada mancha no chão perto da porta
-do poço é a única outra cor que você vê.  Você pode sentir a paz vinda do
+A Entrada Para o SantuÃ¡rio~
+   Uma sala plana e branca oferece algum alÃ­vio da vista do poÃ§o de
+sacrifÃ­cios.  Tudo aqui Ã© muito branco, Ã© a primeira vez que vocÃª vÃª esta
+cor sendo usada no castelo.  Uma avermelhada mancha no chÃ£o perto da porta
+do poÃ§o Ã© a Ãºnica outra cor que vocÃª vÃª.  VocÃª pode sentir a paz vinda do
 oeste.
 ~
-39 4 0 0 0 0
+39 c 0
 D1
 ~
 porta~
+:n 2 a porta
 1 -1 3936
 D3
 ~
@@ -691,14 +708,14 @@ D3
 0 -1 3938
 S
 #3938
-O Santuário~
-   A medida que você entra nesta grande sala, você é agraciado com o
-sentimento da paz.  Há móveis em boas condições aqui.  Você se sente
-completamente calmo, até que nota-se algo a mais neste lugar.  No chão, uma
-larga trilha de sangue seco cruza o a sala da entrada até o próximo cômodo
+O SantuÃ¡rio~
+   A medida que vocÃª entra nesta grande sala, vocÃª Ã© agraciado com o
+sentimento da paz.  HÃ¡ mÃ³veis em boas condiÃ§Ãµes aqui.  VocÃª se sente
+completamente calmo, atÃ© que nota-se algo a mais neste lugar.  No chÃ£o, uma
+larga trilha de sangue seco cruza o a sala da entrada atÃ© o prÃ³ximo cÃ´modo
 que fica ao oeste.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -715,14 +732,14 @@ S
 #3939
 No Altar~
    Um altar coberto de sangue repousa no meio desta sala branca.  Ele parece
-um pouco deslocado de sua posição normal, deixando passar estranha luz
-através de uma pequena fresta.  Uma estátua quebrada de alguma entidade fora
-largada ao chão.  Ela tem uma figura grotesca, presas podem ser vistas de
-sua boca aberta, podem ser vistos também seis apêndices, cada um terminando
-em uma enorme garra.  Magicalmente ela começa a brilhar a medida que você
+um pouco deslocado de sua posiÃ§Ã£o normal, deixando passar estranha luz
+atravÃ©s de uma pequena fresta.  Uma estÃ¡tua quebrada de alguma entidade fora
+largada ao chÃ£o.  Ela tem uma figura grotesca, presas podem ser vistas de
+sua boca aberta, podem ser vistos tambÃ©m seis apÃªndices, cada um terminando
+em uma enorme garra.  Magicalmente ela comeÃ§a a brilhar a medida que vocÃª
 pisa no lugar.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -731,25 +748,26 @@ D5
 O altar.
 ~
 altar tampo~
-1 -1 11400
-E
-fresta luz algo~
-Você aproxima seus olhos da fresta, deparando-se com uma espécie de passagem
-cercada de luz.  Talvez seja possível alcançá-la, se abrir um pouco mais a
-fresta, movendo o tampo do altar.
-~
+:n 1 o altar
+ad -1 11400
 E
 altar~
-Parece haver algo embaixo desse altar. Talvez você consiga movê-lo.
+Parece haver algo embaixo desse altar. Talvez vocÃª consiga movÃª-lo.
+~
+E
+fresta luz algo~
+VocÃª aproxima seus olhos da fresta, deparando-se com uma espÃ©cie de passagem
+cercada de luz.  Talvez seja possÃ­vel alcanÃ§Ã¡-la, se abrir um pouco mais a
+fresta, movendo o tampo do altar.
 ~
 S
 #3940
 A Torre Norte~
-   A escadaria continua dando voltas e voltas a medida que você sobe pela
+   A escadaria continua dando voltas e voltas a medida que vocÃª sobe pela
 torre.
    Ela parece continuar para sempre, sem que seu fim possa ser avistado.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
 ~
@@ -761,11 +779,11 @@ D5
 S
 #3941
 Torre Norte~
-   A escadaria continua dando voltas e voltas a medida que você sobe pela
+   A escadaria continua dando voltas e voltas a medida que vocÃª sobe pela
 torre.  Ela parece continuar para sempre, sem que seu fim possa ser
 avistado.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
 ~
@@ -777,14 +795,14 @@ D5
 S
 #3942
 O Topo da Torre Norte~
-   Uma fresca brisa lhe dá as boas vindas a medida que você pisa a abertura
-no topo da Torre Norte.  Olhando abaixo, você percebe que tudo parece sem
+   Uma fresca brisa lhe dÃ¡ as boas vindas a medida que vocÃª pisa a abertura
+no topo da Torre Norte.  Olhando abaixo, vocÃª percebe que tudo parece sem
 sentido e triste.  Os campos rurais foram infestados por ervas daninhas e a
-floresta ao seu redor parece estar agonizando.  Ao oeste, você pode ver o
-brilho de um Portal Flamejante e nada mais além dele.  Ao leste a única
-estrutura que é mais alta que esta torre é a Torre Principal.
+floresta ao seu redor parece estar agonizando.  Ao oeste, vocÃª pode ver o
+brilho de um Portal Flamejante e nada mais alÃ©m dele.  Ao leste a Ãºnica
+estrutura que Ã© mais alta que esta torre Ã© a Torre Principal.
 ~
-39 0 0 0 0 0
+39 0 0
 D5
 ~
 ~
@@ -794,11 +812,11 @@ S
 O Quarto Carmesim~
    Tudo neste quarto tem alguma sombra carmesim, sendo a tonalidade
 vermelho-sangue a que prevalece.  Uma larga cama forrada com veludo vermelho
-fica nos fundos do quarto.  Um sofá adornado com rubis o convida a se sentar
-e descansar.  Quando você resolve descansar no sofá, você percebe que as
-paredes começam a sangrar...
+fica nos fundos do quarto.  Um sofÃ¡ adornado com rubis o convida a se sentar
+e descansar.  Quando vocÃª resolve descansar no sofÃ¡, vocÃª percebe que as
+paredes comeÃ§am a sangrar...
 ~
-39 4 0 0 0 0
+39 c 0
 D1
 ~
 ~
@@ -806,12 +824,12 @@ D1
 S
 #3944
 O Posto da Guarda~
-   O quarto é pouco mobiliado.  Poucas cadeiras e uma mesa ficam no meio da
-sala.  A atmosfera pesada, lhe da um sentimento de muita disciplina.  Há
+   O quarto Ã© pouco mobiliado.  Poucas cadeiras e uma mesa ficam no meio da
+sala.  A atmosfera pesada, lhe da um sentimento de muita disciplina.  HÃ¡
 apenas uma porta neste lugar, pela qual os guardas se espremem para passar
-em caso de emergência.
+em caso de emergÃªncia.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -819,13 +837,13 @@ D1
 S
 #3945
 O Quarto dos Nobres~
-   Este quarto fora designado para o conforto dos nobres, o que não seria
-possível hoje.  O esqueleto dos confortáveis móveis ainda estão de pé, seu
-tecido caprichoso apodreceu há muito tempo.  O pó cobriu tudo, mostrando que
-ninguém esteve aqui durante anos, desde que o local fora saqueado e
-destruído.
+   Este quarto fora designado para o conforto dos nobres, o que nÃ£o seria
+possÃ­vel hoje.  O esqueleto dos confortÃ¡veis mÃ³veis ainda estÃ£o de pÃ©, seu
+tecido caprichoso apodreceu hÃ¡ muito tempo.  O pÃ³ cobriu tudo, mostrando que
+ninguÃ©m esteve aqui durante anos, desde que o local fora saqueado e
+destruÃ­do.
 ~
-39 0 0 0 0 0
+39 0 0
 D3
 ~
 ~
@@ -833,13 +851,13 @@ D3
 S
 #3946
 A Sala da Corte~
-   Há muito tempo, os negócios do castelo eram resolvidos aqui.  Restaram
-pedaços quebrados de madeira onde a audiência costumava se sentar para
-assistir aos julgamentos.  Na parte de trás da sala, sobre um degrau, há uma
-grande mesa de carvalho.  Em cima da mesa há marcas antigas das marteladas
-do juíz.  Ela também está coberta de sangue seco.
+   HÃ¡ muito tempo, os negÃ³cios do castelo eram resolvidos aqui.  Restaram
+pedaÃ§os quebrados de madeira onde a audiÃªncia costumava se sentar para
+assistir aos julgamentos.  Na parte de trÃ¡s da sala, sobre um degrau, hÃ¡ uma
+grande mesa de carvalho.  Em cima da mesa hÃ¡ marcas antigas das marteladas
+do juÃ­z.  Ela tambÃ©m estÃ¡ coberta de sangue seco.
 ~
-39 4 0 0 0 0
+39 c 0
 D3
 ~
 ~
@@ -847,15 +865,15 @@ D3
 S
 #3947
 O Quarto Amarelo~
-   Enjoativas, pálidas paredes amarelas lhe da as boas vindas a medida que
-você entra no quarto, que é completamente desprovido de mobília, a não ser
-por uma cama no meio do quarto.  A cama parece anti-higiênica, como se ela
-não tivesse sido limpa depois que alguém morreu em cima dela.  Subitamente,
-o ar torna-se mais quente e alguma coisa começa a gotejar do teto.  Bolhas
-de pus amarelo se abrem na superfície das paredes e um cheiro pútrido invade
+   Enjoativas, pÃ¡lidas paredes amarelas lhe da as boas vindas a medida que
+vocÃª entra no quarto, que Ã© completamente desprovido de mobÃ­lia, a nÃ£o ser
+por uma cama no meio do quarto.  A cama parece anti-higiÃªnica, como se ela
+nÃ£o tivesse sido limpa depois que alguÃ©m morreu em cima dela.  Subitamente,
+o ar torna-se mais quente e alguma coisa comeÃ§a a gotejar do teto.  Bolhas
+de pus amarelo se abrem na superfÃ­cie das paredes e um cheiro pÃºtrido invade
 suas narinas.
 ~
-39 4 0 0 0 0
+39 c 0
 D3
 ~
 ~
@@ -863,12 +881,12 @@ D3
 S
 #3948
 O Posto da Guarda~
-   O quarto é pouco mobiliado.  Poucas cadeiras e uma mesa ficam no meio da
-sala.  A atmosfera pesada, lhe da um sentimento de muita disciplina.  Há
+   O quarto Ã© pouco mobiliado.  Poucas cadeiras e uma mesa ficam no meio da
+sala.  A atmosfera pesada, lhe da um sentimento de muita disciplina.  HÃ¡
 apenas uma porta neste lugar, pela qual os guardas se espremem para passar
-em caso de emergência.
+em caso de emergÃªncia.
 ~
-39 0 0 0 0 0
+39 0 0
 D3
 ~
 ~
@@ -878,11 +896,11 @@ S
 O Quarto de Repouso da Rainha~
    Uma vez ricamente decorado para uma rainha, este quarto agora parece um
 matadouro.  Espelhos quebrados revestem as paredes junto com cortinas
-mofentas.  O chão é coberto com porta jóias abertos e afiados fragmentos de
-vidro.  Traços de sangue seco restam em algum dos espelhos quebrados,
-indicando a violência a qual sofreram os últimos habitantes deste quarto.
+mofentas.  O chÃ£o Ã© coberto com porta jÃ³ias abertos e afiados fragmentos de
+vidro.  TraÃ§os de sangue seco restam em algum dos espelhos quebrados,
+indicando a violÃªncia a qual sofreram os Ãºltimos habitantes deste quarto.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -890,12 +908,12 @@ D1
 S
 #3950
 O Quarto Negro~
-   Escuridão, escuridão, escuridão é tudo o que você pode ver deste quarto.
-Tudo aqui é negro.  Uma chama negra arde na lareira de obsidiana,
-emprestando alguma claridade ao lugar.  A coisa mais notável aqui, são as
+   EscuridÃ£o, escuridÃ£o, escuridÃ£o Ã© tudo o que vocÃª pode ver deste quarto.
+Tudo aqui Ã© negro.  Uma chama negra arde na lareira de obsidiana,
+emprestando alguma claridade ao lugar.  A coisa mais notÃ¡vel aqui, sÃ£o as
 rasgadas cortinas que se movem, parecendo ter vida.
 ~
-39 4 0 0 0 0
+39 c 0
 D1
 ~
 ~
@@ -903,10 +921,10 @@ D1
 S
 #3951
 A Torre Principal~
-   A escadaria continua dando voltas e voltas a medida que você sobe pela
+   A escadaria continua dando voltas e voltas a medida que vocÃª sobe pela
 torre.  Ela parece continuar para sempre, sem um fim a vista.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
 ~
@@ -918,10 +936,10 @@ D5
 S
 #3952
 A Torre Principal~
-   A escadaria continua dando voltas e voltas a medida que você sobe pela
+   A escadaria continua dando voltas e voltas a medida que vocÃª sobe pela
 torre.  Ela parece continuar para sempre, sem um fim a vista.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
 ~
@@ -933,10 +951,10 @@ D5
 S
 #3953
 A Torre Principal~
-   A escadaria continua dando voltas e voltas a medida que você sobe pela
+   A escadaria continua dando voltas e voltas a medida que vocÃª sobe pela
 torre.  Ela parece continuar para sempre, sem um fim a vista.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
 ~
@@ -949,12 +967,12 @@ S
 #3954
 O Topo da Torre Principal~
    Habilmente nomeada de Torre Principal, ela se ergue acima de tudo o que
-você pode avistar.  Você pode ver daqui os campos abandonados, espalhados
+vocÃª pode avistar.  VocÃª pode ver daqui os campos abandonados, espalhados
 pelo reino.  Uma floresta moribunda ao sul.  Portais Flamejantes ao oeste, e
 um rio.  O qual daqui parece fluir em vermelho, ou pelo menos avermelhado, e
-como se não bastasse, ele flui em direção ao castelo, e então...desaparece.
+como se nÃ£o bastasse, ele flui em direÃ§Ã£o ao castelo, e entÃ£o...desaparece.
 ~
-39 0 0 0 0 0
+39 0 0
 D2
 ~
 ~
@@ -966,14 +984,14 @@ D5
 S
 #3955
 O Corredor Dos Reis~
-   Este é um pequeno corredor, ricamente decorado.  Ele parece ser o único
-lugar que parece estar intacto, remanescendo do tempo de glória do castelo.
-Cortinas de veludo e placas coloridas adornam as vigas.  Exóticas armas e
-armaduras estão penduradas pelas paredes.  Bustos de famosas pessoas, por
+   Este Ã© um pequeno corredor, ricamente decorado.  Ele parece ser o Ãºnico
+lugar que parece estar intacto, remanescendo do tempo de glÃ³ria do castelo.
+Cortinas de veludo e placas coloridas adornam as vigas.  ExÃ³ticas armas e
+armaduras estÃ£o penduradas pelas paredes.  Bustos de famosas pessoas, por
 seu valor ou poder, se alinham em cada lado do corredor.  O corredor segue
 para uma linda porta esculpida em madeira negra ao leste.
 ~
-39 4 0 0 0 0
+39 c 0
 D0
 ~
 ~
@@ -981,18 +999,19 @@ D0
 D1
 ~
 porta~
+:n 2 a porta
 1 -1 3956
 S
 #3956
 A Sala do Trono~
-   A porta pela qual você veio desaparece atrás de você.  Tudo aqui emite
-uma aura de decadência e morte.  Uma grossa camada de poeira parece cobrir
-tudo.  Nos fundos da sala há um enorme trono.  Ele é a única coisa que
-parece resistir á toda destruição e poeira.  Feito de ouro maciço e adornado
+   A porta pela qual vocÃª veio desaparece atrÃ¡s de vocÃª.  Tudo aqui emite
+uma aura de decadÃªncia e morte.  Uma grossa camada de poeira parece cobrir
+tudo.  Nos fundos da sala hÃ¡ um enorme trono.  Ele Ã© a Ãºnica coisa que
+parece resistir Ã¡ toda destruiÃ§Ã£o e poeira.  Feito de ouro maciÃ§o e adornado
 com pedras preciosas vindas de todas as partes do mundo, ele parece lhe
 convidar a se sentar.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -1004,25 +1023,25 @@ D3
 S
 #3957
 O Tesouro~
-   O que uma vez fora uma fortaleza, agora está aberta e destruída.  A
-grande porta maciça fora arrebentada e agora está jogada pelo chão.  Se já
-existiu qualquer coisa de valor aqui, foi saqueado há muito tempo atrás.
+   O que uma vez fora uma fortaleza, agora estÃ¡ aberta e destruÃ­da.  A
+grande porta maciÃ§a fora arrebentada e agora estÃ¡ jogada pelo chÃ£o.  Se jÃ¡
+existiu qualquer coisa de valor aqui, foi saqueado hÃ¡ muito tempo atrÃ¡s.
 ~
-39 0 0 0 0 0
+39 0 0
 D2
 ~
 ~
 0 -1 3956
 S
 #3958
-A Sala de Mármore~
-   Este quarto é o última fortaleza contra o mal que tomou este castelo.
-Tudo aqui é magnificamente branco.  Não há sinal do mal, ou da destruição.
-A sólida mobília de mármore, coberta com a mais fina seda lhe convida a
-descansar.  Há um grande vaso de alabastro branco sobre a lareira, e nele,
-pintado em sangue, pode-se ler a palavra "PrIsÃo".
+A Sala de MÃ¡rmore~
+   Este quarto Ã© o Ãºltima fortaleza contra o mal que tomou este castelo.
+Tudo aqui Ã© magnificamente branco.  NÃ£o hÃ¡ sinal do mal, ou da destruiÃ§Ã£o.
+A sÃ³lida mobÃ­lia de mÃ¡rmore, coberta com a mais fina seda lhe convida a
+descansar.  HÃ¡ um grande vaso de alabastro branco sobre a lareira, e nele,
+pintado em sangue, pode-se ler a palavra "PrIsÃƒo".
 ~
-39 0 0 0 0 0
+39 0 0
 D2
 ~
 ~
@@ -1030,12 +1049,12 @@ D2
 S
 #3959
 Os Jardins Reais~
-   Pode-se dizer que estes jardins já foram lindos há tempos atrás.
+   Pode-se dizer que estes jardins jÃ¡ foram lindos hÃ¡ tempos atrÃ¡s.
 Tristemente tudo o que restou foram plantas rasteiras e contorcidas.
-Majestosas árvores agora estão torcidas e carbonizadas.  O solo está sem
+Majestosas Ã¡rvores agora estÃ£o torcidas e carbonizadas.  O solo estÃ¡ sem
 vida, coberto de cinzas e de morte.
 ~
-39 0 0 0 0 2
+39 0 2
 D1
 ~
 ~
@@ -1043,12 +1062,12 @@ D1
 S
 #3960
 Os Jardins Reais~
-   Pode-se dizer que estes jardins já foram lindos há tempos atrás.
+   Pode-se dizer que estes jardins jÃ¡ foram lindos hÃ¡ tempos atrÃ¡s.
 Tristemente tudo o que restou foram plantas rasteiras e contorcidas.
-Majestosas árvores agora estão torcidas e carbonizadas.  O solo está sem
+Majestosas Ã¡rvores agora estÃ£o torcidas e carbonizadas.  O solo estÃ¡ sem
 vida, coberto de cinzas e de morte.
 ~
-39 0 0 0 0 2
+39 0 2
 D3
 ~
 ~
@@ -1056,14 +1075,15 @@ D3
 S
 #3961
 A Sala Secreta Embaixo da Torre Norte~
-   Este é um pequeno quarto usado pelos membros da família real para escapar
-do castelo se este estivesse sob ameaça.  Acima, leva para a base da torre,
-e o caminho abaixo segue para os túneis de fuga.
+   Este Ã© um pequeno quarto usado pelos membros da famÃ­lia real para escapar
+do castelo se este estivesse sob ameaÃ§a.  Acima, leva para a base da torre,
+e o caminho abaixo segue para os tÃºneis de fuga.
 ~
-39 4 0 0 0 0
+39 c 0
 D4
 ~
-alçapão~
+alcapao~
+:n 1 o alÃ§apÃ£o
 1 -1 3927
 D5
 ~
@@ -1071,12 +1091,12 @@ D5
 0 -1 3962
 S
 #3962
-A Entrada Para os Túneis de Fuga~
+A Entrada Para os TÃºneis de Fuga~
    Escondidos nas profundezas do castelo, esta sala manteve-se secreta por
-anos.  Sarrafos de madeira e vigas sustentam o teto e as paredes.  Os túneis
-de fuga seguem a leste pela escuridão.
+anos.  Sarrafos de madeira e vigas sustentam o teto e as paredes.  Os tÃºneis
+de fuga seguem a leste pela escuridÃ£o.
 ~
-39 4 0 0 0 0
+39 c 0
 D1
 ~
 ~
@@ -1087,22 +1107,22 @@ D4
 0 -1 3961
 S
 #3963
-Os Túneis de Fuga~
-   Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
+Os TÃºneis de Fuga~
+   Os tÃºneis sÃ£o grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 769 0 0 0 0
+39 aij 0
 D1
 ~
 ~
 0 -1 3964
 S
 #3964
-Os Túneis de Fuga~
-   Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
+Os TÃºneis de Fuga~
+   Os tÃºneis sÃ£o grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 769 0 0 0 0
+39 aij 0
 D1
 ~
 ~
@@ -1113,11 +1133,11 @@ D3
 0 -1 3963
 S
 #3965
-Uma Curva no Túnel de Fuga~
-   Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
+Uma Curva no TÃºnel de Fuga~
+   Os tÃºneis sÃ£o grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 773 0 0 0 0
+39 acij 0
 D0
 ~
 ~
@@ -1132,11 +1152,11 @@ D3
 0 -1 3964
 S
 #3966
-Os Túneis de Fuga~
-   Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
+Os TÃºneis de Fuga~
+   Os tÃºneis sÃ£o grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 769 0 0 0 0
+39 aij 0
 D0
 ~
 ~
@@ -1147,11 +1167,11 @@ D2
 0 -1 3967
 S
 #3967
-Uma Curva no Túnel de Fuga~
-   Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
+Uma Curva no TÃºnel de Fuga~
+   Os tÃºneis sÃ£o grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 773 0 0 0 0
+39 acij 0
 D0
 ~
 ~
@@ -1162,11 +1182,11 @@ D3
 0 -1 3968
 S
 #3968
-Uma Curva no Túnel de Fuga~
-   Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
+Uma Curva no TÃºnel de Fuga~
+   Os tÃºneis sÃ£o grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 773 0 0 0 0
+39 acij 0
 D0
 ~
 ~
@@ -1178,15 +1198,15 @@ D1
 D2
 ~
 ~
-1 -1 7031
+ad -1 7031
 S
 #3969
-Um Aclive nos Túneis de Fuga~
-   Um suave aclive pode ser percebido, e o túnel agora sobe em direção à
-escuridão.  Velhas e apodrecidas cordas se penduram da escuridão.  Se você
-deseja tentar, você pode escalar a rampa, ou pode seguir ao oeste.
+Um Aclive nos TÃºneis de Fuga~
+   Um suave aclive pode ser percebido, e o tÃºnel agora sobe em direÃ§Ã£o Ã 
+escuridÃ£o.  Velhas e apodrecidas cordas se penduram da escuridÃ£o.  Se vocÃª
+deseja tentar, vocÃª pode escalar a rampa, ou pode seguir ao oeste.
 ~
-39 773 0 0 0 0
+39 acij 0
 D2
 ~
 ~
@@ -1201,11 +1221,11 @@ D4
 0 -1 3970
 S
 #3970
-Os Túneis de Fuga~
-   Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
+Os TÃºneis de Fuga~
+   Os tÃºneis sÃ£o grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 769 0 0 0 0
+39 aij 0
 D2
 ~
 ~
@@ -1216,11 +1236,11 @@ D5
 0 -1 3969
 S
 #3971
-Uma Curva no Túnel de Fuga~
-   Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
+Uma Curva no TÃºnel de Fuga~
+   Os tÃºneis sÃ£o grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 769 0 0 0 0
+39 aij 0
 D0
 ~
 ~
@@ -1231,13 +1251,13 @@ D1
 0 -1 3972
 S
 #3972
-A Saída dos Túneis de Fuga~
-   Você sente a brisa em seu rosto, a medida que se aproxima da saída, mas
-você está indeciso por onde seguir, já que a brisa vem de duas direções
-diferentes.  Você deve escolher o caminho correto até a saída, então,
+A SaÃ­da dos TÃºneis de Fuga~
+   VocÃª sente a brisa em seu rosto, a medida que se aproxima da saÃ­da, mas
+vocÃª estÃ¡ indeciso por onde seguir, jÃ¡ que a brisa vem de duas direÃ§Ãµes
+diferentes.  VocÃª deve escolher o caminho correto atÃ© a saÃ­da, entÃ£o,
 escolha sabiamente.
 ~
-39 773 0 0 0 0
+39 acij 0
 D1
 ~
 ~
@@ -1249,16 +1269,16 @@ D3
 S
 #3973
 Uma Clareira Pelos Bosques~
-   Se livrando das roseiras bravas da saída do túnel, você se depara com uma
-pequena clareira.  A luz do sol brilha através dos galhos retorcidos e das
-folhas das árvores a sua volta.  Seria um lindo lugar para sentar e
-descansar se não tudo não fosse pelo mofo negro que cobre quase tudo à
+   Se livrando das roseiras bravas da saÃ­da do tÃºnel, vocÃª se depara com uma
+pequena clareira.  A luz do sol brilha atravÃ©s dos galhos retorcidos e das
+folhas das Ã¡rvores a sua volta.  Seria um lindo lugar para sentar e
+descansar se nÃ£o tudo nÃ£o fosse pelo mofo negro que cobre quase tudo Ã 
 vista.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
-1~
+~
 0 -1 3974
 D3
 ~
@@ -1268,28 +1288,28 @@ S
 #3974
 Uma Trilha de Animais~
    Este caminho foi criado por algum animal que costumava usar esta trilha
-para chegar ao rio.  Tudo através do caminho é coberto pelo mesmo mofo
+para chegar ao rio.  Tudo atravÃ©s do caminho Ã© coberto pelo mesmo mofo
 asqueroso que cobria a clareira.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
 0 -1 3975
 D3
 ~
-1~
+~
 0 -1 3973
 S
 #3975
 A Trilha de Animais Termina na Ribeira do Rio~
    Este caminho foi criado por algum animal que costumava usar esta trilha
-para chegar ao rio.  Tudo através do caminho é coberto pelo mesmo mofo
+para chegar ao rio.  Tudo atravÃ©s do caminho Ã© coberto pelo mesmo mofo
 asqueroso que cobria a clareira.  O tom avermelhado da terra da ribeira,
-confere ao rio sua cor vermelha.  O leste lhe levará pelo rio, enquanto pelo
-oeste, você volta à clareira.
+confere ao rio sua cor vermelha.  O leste lhe levarÃ¡ pelo rio, enquanto pelo
+oeste, vocÃª volta Ã  clareira.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -1301,13 +1321,13 @@ D3
 S
 #3976
 O Rio Talloren~
-   Escuras e observadoras contornam o rio.  Seus galhos tocam á água, como
-se quisessem lhe alcançar e lhe agarrar.  Coisas esbarram em suas pernas a
-pedida que você luta para conseguir manter sua cabeça acima das gélidas e
-avermelhadas águas.  Você pode tentar lutar contra a corrente e ir pelo
+   Escuras e observadoras contornam o rio.  Seus galhos tocam Ã¡ Ã¡gua, como
+se quisessem lhe alcanÃ§ar e lhe agarrar.  Coisas esbarram em suas pernas a
+pedida que vocÃª luta para conseguir manter sua cabeÃ§a acima das gÃ©lidas e
+avermelhadas Ã¡guas.  VocÃª pode tentar lutar contra a corrente e ir pelo
 oeste, ou apenas soltar o corpo e seguir a corrente.
 ~
-39 0 0 0 0 6
+39 0 6
 D1
 ~
 ~
@@ -1318,11 +1338,11 @@ D5
 0 -1 3977
 S
 #3977
-Uma Piscina Subterrânea~
-   Quase sem fôlego, você se encontra afundado em uma piscina, abaixo das
-águas congelantes.  O único som é o da água correndo sobre sua cabeça.
+Uma Piscina SubterrÃ¢nea~
+   Quase sem fÃ´lego, vocÃª se encontra afundado em uma piscina, abaixo das
+Ã¡guas congelantes.  O Ãºnico som Ã© o da Ã¡gua correndo sobre sua cabeÃ§a.
 ~
-39 65541 0 0 0 6
+39 acq 6
 D3
 ~
 ~
@@ -1333,12 +1353,12 @@ D4
 0 -1 3976
 S
 #3978
-Uma Pequena Queda D´água~
-   A piscina o leva para uma pequena queda de água.  O suave barulho do cair
-das águas adiante, lhe diz que a queda não é muito grande.  Você pode voltar
-para a piscina ou simplesmente descer pelas águas.
+Uma Pequena Queda DÂ´Ã¡gua~
+   A piscina o leva para uma pequena queda de Ã¡gua.  O suave barulho do cair
+das Ã¡guas adiante, lhe diz que a queda nÃ£o Ã© muito grande.  VocÃª pode voltar
+para a piscina ou simplesmente descer pelas Ã¡guas.
 ~
-39 1 0 0 0 6
+39 a 6
 D1
 ~
 ~
@@ -1349,15 +1369,15 @@ D5
 0 -1 3979
 S
 #3979
-A Base da Queda D'água~
-   Com um ressoante esguicho SPLASH!  ...  Você chega a uma piscina de água.
-O som de sua queda ecoa por toda a caverna.  A medida que você começa a
-sucumbir pelo frio, você procura rapidamente um caminho para sair destas
-águas congelantes.  Você pode continuar seguindo a corrente pelo oeste, ou
-pode sair piscina pelo leste.  O caminho ao leste segue através da
-escuridão.
+A Base da Queda D'Ã¡gua~
+   Com um ressoante esguicho SPLASH!  ...  VocÃª chega a uma piscina de Ã¡gua.
+O som de sua queda ecoa por toda a caverna.  A medida que vocÃª comeÃ§a a
+sucumbir pelo frio, vocÃª procura rapidamente um caminho para sair destas
+Ã¡guas congelantes.  VocÃª pode continuar seguindo a corrente pelo oeste, ou
+pode sair piscina pelo leste.  O caminho ao leste segue atravÃ©s da
+escuridÃ£o.
 ~
-39 1 0 0 0 6
+39 a 6
 D1
 ~
 ~
@@ -1368,13 +1388,13 @@ D3
 0 -1 3980
 S
 #3980
-A Costa do Lago Subterrâneo Congelado~
-   Você chegou à costa de um lago congelado.  Você nota que está amargamente
-frio aqui.  Alguns flocos de neve flutuam pelo ar, caindo preguiçosamente
-pelo chão.  Ao leste, tudo o que pode ver é gelo.  Ao oeste, você seguira de
+A Costa do Lago SubterrÃ¢neo Congelado~
+   VocÃª chegou Ã  costa de um lago congelado.  VocÃª nota que estÃ¡ amargamente
+frio aqui.  Alguns flocos de neve flutuam pelo ar, caindo preguiÃ§osamente
+pelo chÃ£o.  Ao leste, tudo o que pode ver Ã© gelo.  Ao oeste, vocÃª seguira de
 volta ao rio.
 ~
-39 1 0 0 0 0
+39 a 0
 D0
 ~
 ~
@@ -1394,11 +1414,11 @@ D3
 S
 #3981
 A Costa Norte do Lago Congelado~
-   Grossos pedaços de gelo se amontoam pela costa, dificultando a passagem.
-Também dificulta a viagem, o fato de ser muito escorregadio aqui.  Lutando
-para chegar aqui, você desliza através do frio mortal.
+   Grossos pedaÃ§os de gelo se amontoam pela costa, dificultando a passagem.
+TambÃ©m dificulta a viagem, o fato de ser muito escorregadio aqui.  Lutando
+para chegar aqui, vocÃª desliza atravÃ©s do frio mortal.
 ~
-39 1 0 0 0 0
+39 a 0
 D2
 ~
 ~
@@ -1410,11 +1430,11 @@ D3
 S
 #3982
 A Costa Sul do Lago Congelado~
-   Grossos pedaços de gelo se amontoam pela costa, dificultando a passagem.
-Também dificulta a viagem, o fato de ser muito escorregadio aqui.  Lutando
-para chegar aqui, você desliza através do frio mortal.
+   Grossos pedaÃ§os de gelo se amontoam pela costa, dificultando a passagem.
+TambÃ©m dificulta a viagem, o fato de ser muito escorregadio aqui.  Lutando
+para chegar aqui, vocÃª desliza atravÃ©s do frio mortal.
 ~
-39 1 0 0 0 0
+39 a 0
 D0
 ~
 ~
@@ -1426,12 +1446,12 @@ D3
 S
 #3983
 O Lago Congelado~
-   Este campo de gelo parece continuar além e além, seus limites não podem
-ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que você
-escorrega por este lugar desolado.  Você deve se apressar a encontrar um
+   Este campo de gelo parece continuar alÃ©m e alÃ©m, seus limites nÃ£o podem
+ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que vocÃª
+escorrega por este lugar desolado.  VocÃª deve se apressar a encontrar um
 abrigo.
 ~
-39 1 0 0 0 0
+39 a 0
 D0
 ~
 ~
@@ -1451,12 +1471,12 @@ D3
 S
 #3984
 O Lago Congelado~
-   Este campo de gelo parece continuar além e além, seus limites não podem
-ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que você
-escorrega por este lugar desolado.  Você deve se apressar a encontrar um
+   Este campo de gelo parece continuar alÃ©m e alÃ©m, seus limites nÃ£o podem
+ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que vocÃª
+escorrega por este lugar desolado.  VocÃª deve se apressar a encontrar um
 abrigo.
 ~
-39 1 0 0 0 0
+39 a 0
 D2
 ~
 ~
@@ -1464,12 +1484,12 @@ D2
 S
 #3985
 O Lago Congelado~
-   Este campo de gelo parece continuar além e além, seus limites não podem
-ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que você
-escorrega por este lugar desolado.  Você deve se apressar a encontrar um
+   Este campo de gelo parece continuar alÃ©m e alÃ©m, seus limites nÃ£o podem
+ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que vocÃª
+escorrega por este lugar desolado.  VocÃª deve se apressar a encontrar um
 abrigo.
 ~
-39 1 0 0 0 0
+39 1   0
 D0
 ~
 ~
@@ -1477,12 +1497,12 @@ D0
 S
 #3986
 O Lago Congelado~
-   Este campo de gelo parece continuar além e além, seus limites não podem
-ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que você
-escorrega por este lugar desolado.  Você deve se apressar a encontrar um
+   Este campo de gelo parece continuar alÃ©m e alÃ©m, seus limites nÃ£o podem
+ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que vocÃª
+escorrega por este lugar desolado.  VocÃª deve se apressar a encontrar um
 abrigo.
 ~
-39 1 0 0 0 0
+39 a 0
 D1
 ~
 ~
@@ -1494,12 +1514,12 @@ D2
 S
 #3987
 O Lago Congelado~
-   Este campo de gelo parece continuar além e além, seus limites não podem
-ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que você
-escorrega por este lugar desolado.  Você deve se apressar a encontrar um
+   Este campo de gelo parece continuar alÃ©m e alÃ©m, seus limites nÃ£o podem
+ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que vocÃª
+escorrega por este lugar desolado.  VocÃª deve se apressar a encontrar um
 abrigo.
 ~
-39 1 0 0 0 0
+39 a 0
 D0
 ~
 ~
@@ -1511,12 +1531,12 @@ D3
 S
 #3988
 O Lago Congelado~
-   Este campo de gelo parece continuar além e além, seus limites não podem
-ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que você
-escorrega por este lugar desolado.  Você deve se apressar a encontrar um
+   Este campo de gelo parece continuar alÃ©m e alÃ©m, seus limites nÃ£o podem
+ser avistados.  O vento uiva e lhe chicoteia cruelmente a medida que vocÃª
+escorrega por este lugar desolado.  VocÃª deve se apressar a encontrar um
 abrigo.
 ~
-39 1 0 0 0 0
+39 a 0
 D0
 ~
 ~
@@ -1527,11 +1547,11 @@ D2
 0 -1 3995
 S
 #3989
-No Congelado Lago Subterrâneo~
-   Você está em um congelado lago subterrâneo.  O caminho é escorregadio, e
-você quase cai, ao se apressar para sair daqui antes que o gelo se parta.
+No Congelado Lago SubterrÃ¢neo~
+   VocÃª estÃ¡ em um congelado lago subterrÃ¢neo.  O caminho Ã© escorregadio, e
+vocÃª quase cai, ao se apressar para sair daqui antes que o gelo se parta.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -1539,13 +1559,13 @@ D1
 S
 #3990
 A Costa Oriental da Ilha Congelada~
-   A medida que você olha a sua volta, tudo o que você vê é branco, já que
-tudo aqui está congelado.  Você mal acredita que alguma coisa poderia estar
-viva aqui, ainda, ao olhar para o oeste, você vê uma árvore gigantesca
-alcançando o teto de uma caverna.  Suas únicas chances são as de voltar de
-onde você veio, ou seguir ao norte para a caverna que você avistou.
+   A medida que vocÃª olha a sua volta, tudo o que vocÃª vÃª Ã© branco, jÃ¡ que
+tudo aqui estÃ¡ congelado.  VocÃª mal acredita que alguma coisa poderia estar
+viva aqui, ainda, ao olhar para o oeste, vocÃª vÃª uma Ã¡rvore gigantesca
+alcanÃ§ando o teto de uma caverna.  Suas Ãºnicas chances sÃ£o as de voltar de
+onde vocÃª veio, ou seguir ao norte para a caverna que vocÃª avistou.
 ~
-39 1 0 0 0 0
+39 a 0
 D0
 ~
 ~
@@ -1557,11 +1577,11 @@ D3
 S
 #3991
 O Centro da Ilha Congelada~
-   Você está debaixo de uma grande e larga árvore congelada, que se estende
-quase até o teto da caverna.  Você percebe que a árvore é quase larga o
+   VocÃª estÃ¡ debaixo de uma grande e larga Ã¡rvore congelada, que se estende
+quase atÃ© o teto da caverna.  VocÃª percebe que a Ã¡rvore Ã© quase larga o
 suficiente para quem sabe...  Degraus?
 ~
-39 65 0 0 0 0
+39 ag   0
 D0
 ~
 ~
@@ -1584,11 +1604,11 @@ porta~
 2 3912 3992
 S
 #3992
-Na Árvore de Damorask~
-   Você está em uma rampa de degraus escorregadios.  Você pode seguir para
+Na Ãrvore de Damorask~
+   VocÃª estÃ¡ em uma rampa de degraus escorregadios.  VocÃª pode seguir para
 cima ou para baixo daqui.
 ~
-39 129 0 0 0 0
+39 129   0
 D2
 ~
 ~
@@ -1603,25 +1623,25 @@ D5
 0 -1 3994
 S
 #3993
-A Câmara do Gigante Congelado~
-   Você está na câmara de gelo do Gigante Congelado.  Ele senta em um grande
-trono feito de cristal, como sentinela para Damorask.  Do teto, você vê
-pilares de gelo que alcançam o solo.  Ao olhar mais de perto, você percebe
-que eles são de cor avermelhada.
+A CÃ¢mara do Gigante Congelado~
+   VocÃª estÃ¡ na cÃ¢mara de gelo do Gigante Congelado.  Ele senta em um grande
+trono feito de cristal, como sentinela para Damorask.  Do teto, vocÃª vÃª
+pilares de gelo que alcanÃ§am o solo.  Ao olhar mais de perto, vocÃª percebe
+que eles sÃ£o de cor avermelhada.
 ~
-39 0 0 0 0 0
+39 0 0
 D5
 ~
 ~
 0 -1 3992
 S
 #3994
-O Santuário de Damorask~
-   Você adentrou o santuário de Damorask, um antigo mago que reinou por
-estas terras por séculos.  Ele está atrás de uma mesa, feita de puro gelo,
-preparando novos modos de reger as forças do mal.
+O SantuÃ¡rio de Damorask~
+   VocÃª adentrou o santuÃ¡rio de Damorask, um antigo mago que reinou por
+estas terras por sÃ©culos.  Ele estÃ¡ atrÃ¡s de uma mesa, feita de puro gelo,
+preparando novos modos de reger as forÃ§as do mal.
 ~
-39 0 0 0 0 0
+39 0 0
 D4
 ~
 ~
@@ -1629,12 +1649,12 @@ D4
 S
 #3995
 A Costa Sul da Ilha Congelada~
-   Você está na costa sul da Ilha Congelada.  Ao norte você pode ver a
-árvore de Damorask, enquanto ao sul, você vê mais do lago congelado.  Parece
-que a neve e o gelo foram revolvidos aqui, como se alguém tivesse estado
+   VocÃª estÃ¡ na costa sul da Ilha Congelada.  Ao norte vocÃª pode ver a
+Ã¡rvore de Damorask, enquanto ao sul, vocÃª vÃª mais do lago congelado.  Parece
+que a neve e o gelo foram revolvidos aqui, como se alguÃ©m tivesse estado
 aqui recentemente.
 ~
-39 0 0 0 0 0
+39 0 0
 D0
 ~
 ~
@@ -1642,12 +1662,12 @@ D0
 S
 #3996
 A Costa Ocidental da Ilha Congelada~
-   Você está na costa oeste da Ilha Congelada.  Ao leste você pode ver a
-árvore de Damorask, enquanto ao oeste, você vê mais do lago congelado.
-Parece que a neve e o gelo foram revolvidos aqui, como se alguém tivesse
+   VocÃª estÃ¡ na costa oeste da Ilha Congelada.  Ao leste vocÃª pode ver a
+Ã¡rvore de Damorask, enquanto ao oeste, vocÃª vÃª mais do lago congelado.
+Parece que a neve e o gelo foram revolvidos aqui, como se alguÃ©m tivesse
 estado aqui recentemente.
 ~
-39 0 0 0 0 0
+39 0 0
 D1
 ~
 ~
@@ -1655,12 +1675,12 @@ D1
 S
 #3997
 A Costa Norte da Ilha Congelada~
-   Você está na costa norte da Ilha Congelada.  Ao sul você pode ver a
-árvore de Damorask, enquanto ao norte, você vê mais do lago congelado.
-Parece que a neve e o gelo foram revolvidos aqui, como se alguém tivesse
+   VocÃª estÃ¡ na costa norte da Ilha Congelada.  Ao sul vocÃª pode ver a
+Ã¡rvore de Damorask, enquanto ao norte, vocÃª vÃª mais do lago congelado.
+Parece que a neve e o gelo foram revolvidos aqui, como se alguÃ©m tivesse
 cavado aqui recentemente.
 ~
-39 0 0 0 0 0
+39 0 0
 D2
 ~
 ~
@@ -1668,28 +1688,28 @@ D2
 D5
 ~
 ~
-1 -1 3998
+ad -1 3998
 S
 #3998
 Uma Sala Secreta!~
-   Você encontrou a antiga sala de tesouros do Gigante Congelado!
+   VocÃª encontrou a antiga sala de tesouros do Gigante Congelado!
 ~
-39 149 0 0 0 0
+39 aceh  0
 D4
 ~
 ~
-1 -1 3997
+ad -1 3997
 S
 #3999
 A Caverna da Besta da Neve~
-   Você adentrou a caverna da Besta da Neve.  A sua volta, você vê os ossos
-dos outros visitantes desta ilha que não foram fortes o suficiente para
+   VocÃª adentrou a caverna da Besta da Neve.  A sua volta, vocÃª vÃª os ossos
+dos outros visitantes desta ilha que nÃ£o foram fortes o suficiente para
 passar por este monstro.
 ~
-39 0 0 0 0 0
+39 0 0
 D2
 ~
 ~
 0 -1 3990
 S
-$~
+$
