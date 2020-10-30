@@ -1,93 +1,96 @@
 #18600
 A Entrada para a Zona dos Iniciantes~
-   Ahhh... A entrada para a zona dos iniciantes! O lugar pelo qual você tem
-procurado. Bem, quando você estiver pronto, siga para o norte.
+   Ahhh... A entrada para a zona dos iniciantes! O lugar pelo qual vocÃª tem
+procurado. Bem, quando vocÃª estiver pronto, siga para o norte.
 ~
-186 4 0 0 0 1
+186 c 1
 D0
-Voce vê o começo da Zona dos Iniciantes.
+Voce vÃª o comeÃ§o da Zona dos Iniciantes.
 ~
 ~
 0 -1 18601
 S
 #18601
-O Começo da Passagem~
-   Você se encontra entrando por um longo corredor.   Você pode ouvir o som
-de criaturas vagando por perto mas não pode dizer, com certeza, de onde
+O ComeÃ§o da Passagem~
+   VocÃª se encontra entrando por um longo corredor.   VocÃª pode ouvir o som
+de criaturas vagando por perto mas nÃ£o pode dizer, com certeza, de onde
 o som vem exatamente.
-   A saída fica ao leste, ao longo da antecâmara e ao sul de volta à entrada.
+   A saÃ­da fica ao leste, ao longo da antecÃ¢mara e ao sul de volta Ã  entrada.
 ~
-186 8 0 0 0 0
+186 d 0
 D1
-Mais da antecâmara aqui... que excitante!
+Mais da antecÃ¢mara aqui... que excitante!
 ~
 ~
 0 -1 18602
 D2
-A entrada para a zona dos iniciantes... que monótono.
+A entrada para a zona dos iniciantes... que monÃ³tono.
 ~
 ~
 0 -1 18648
 S
 #18602
-A Antecâmara Suja~
-   Voce continua vagando pela antecâmara.   Não há nada de muito diferente por
-aqui mas você está certo de ter ouvido barulhos atrás da porta ao sul, e vindo
-do leste.  As paredes estão bem gosmentas e mofadas aqui... Eca!   Eles não
-podiam arrumar alguém para limpar este lugar?   O que os iniciantes não
-irão pensar?
-   Bem, você pode continuar ao longo da antecâmara para leste ou oeste.
+A AntecÃ¢mara Suja~
+   Voce continua vagando pela antecÃ¢mara.   NÃ£o hÃ¡ nada de muito diferente por
+aqui mas vocÃª estÃ¡ certo de ter ouvido barulhos atrÃ¡s da porta ao sul, e vindo
+do leste.  As paredes estÃ£o bem gosmentas e mofadas aqui... Eca!   Eles nÃ£o
+podiam arrumar alguÃ©m para limpar este lugar?   O que os iniciantes nÃ£o
+irÃ£o pensar?
+   Bem, vocÃª pode continuar ao longo da antecÃ¢mara para leste ou oeste.
 ~
-186 8 0 0 0 0
+186 d 0
 D1
-Mais da antecâmara aqui... que excitante!
+Mais da antecÃ¢mara aqui... que excitante!
 ~
 ~
 0 -1 18603
 D2
-Uma pequena sala fica ao sul... você ouve algo se movendo lá dentro.
+Uma pequena sala fica ao sul... vocÃª ouve algo se movendo lÃ¡ dentro.
 ~
 porta~
+:n 2
 1 -1 18606
 D3
-Mais da antecâmara aqui... que excitante!
+Mais da antecÃ¢mara aqui... que excitante!
 ~
 ~
 0 -1 18601
 S
 #18603
 Um Nexus~
-   Bem... você alcançou uma intersecção de duas passagens, para norte
-e leste a passagem se ilumina mas a antecâmara escura continua ao sul.
+   Bem... vocÃª alcanÃ§ou uma intersecÃ§Ã£o de duas passagens, para norte
+e leste a passagem se ilumina mas a antecÃ¢mara escura continua ao sul.
 ~
-186 8 0 0 0 0
+186 d 0
 D0
-Uma antecâmara mais iluminada vai por esse caminho.
+Uma antecÃ¢mara mais iluminada vai por esse caminho.
 ~
 porta~
+:n 2
 1 -1 18644
 D1
-Uma antecâmara mais iluminada vai por esse caminho.
+Uma antecÃ¢mara mais iluminada vai por esse caminho.
 ~
 porta~
+:n 2
 1 -1 18646
 D2
-Mais da antecâmara aqui... que excitante!
+Mais da antecÃ¢mara aqui... que excitante!
 ~
 ~
 0 -1 18607
 D3
-Mais da antecâmara aqui... que excitante!
+Mais da antecÃ¢mara aqui... que excitante!
 ~
 ~
 0 -1 18602
 S
 #18604
 Uma Passagem Estreita~
-   A passagem estreita é limpa e sem nenhuma decoração.   Termina abruptamente
-ao sul em uma pequena porta de carvalho, atrás da qual você ouve movimento...
+   A passagem estreita Ã© limpa e sem nenhuma decoraÃ§Ã£o.   Termina abruptamente
+ao sul em uma pequena porta de carvalho, atrÃ¡s da qual vocÃª ouve movimento...
 ~
-186 9 0 0 0 0
+186 ad 0
 D0
 Um grande quarto abobadado.
 ~
@@ -97,130 +100,136 @@ D2
 Um pequeno quarto baguncado.
 ~
 porta~
+:n 2
 1 -1 18612
 S
 #18605
 O Fosso Escuro~
-   Credo... um escuro fosso de lixo.   Pior: o que é aquela coisa suja, cheia
-de lixo, olhando pra você de um canto?   ECCAAA!   Talvez você devesse voltar
-para cima, onde é um pouco mais seguro, a menos que você possa enfrentar
+   Credo... um escuro fosso de lixo.   Pior: o que Ã© aquela coisa suja, cheia
+de lixo, olhando pra vocÃª de um canto?   ECCAAA!   Talvez vocÃª devesse voltar
+para cima, onde Ã© um pouco mais seguro, a menos que vocÃª possa enfrentar
 aquela coisa nojenta...
 ~
-186 9 0 0 0 0
+186 ad 0
 D4
-Voce vê uma escada subindo.
+Voce vÃª uma escada subindo.
 ~
 grade~
+:n 2
 1 18608 18606
 S
 #18606
 Um Pequeno Quarto~
-   Hmmm... este é um quartinho interessante.   Eca!!! e há uma pequena
-criatura interessante olhando prá você também.   Ele parece um pouco
-surpreso com sua intromissão.   Você pode partir pela porta ao norte ou leste,
-ou você pode ficar e aborrece-lo um pouco mais.   Também parece haver um poço
-aqui mas há uma grade bastante segura e pesada que o está cobrindo.
+   Hmmm... este Ã© um quartinho interessante.   Eca!!! e hÃ¡ uma pequena
+criatura interessante olhando prÃ¡ vocÃª tambÃ©m.   Ele parece um pouco
+surpreso com sua intromissÃ£o.   VocÃª pode partir pela porta ao norte ou leste,
+ou vocÃª pode ficar e aborrece-lo um pouco mais.   TambÃ©m parece haver um poÃ§o
+aqui mas hÃ¡ uma grade bastante segura e pesada que o estÃ¡ cobrindo.
 ~
-186 8 0 0 0 0
+186 d 0
 D0
-Mais da antecâmara aqui... que excitante!
+Mais da antecÃ¢mara aqui... que excitante!
 ~
 porta~
+:n 2
 1 -1 18602
 D1
-Mais da antecâmara aqui... que excitante!
+Mais da antecÃ¢mara aqui... que excitante!
 ~
 porta~
+:n 2
 1 -1 18607
 D5
-Uma escada desce para a escuridão.
+Uma escada desce para a escuridÃ£o.
 ~
 grade~
+:n 2
 1 18608 18605
 S
 #18607
-Mais da Antecâmara~
-   Que alegria! Mais dessa passagem chata! Será que existe algo mais excitante
-atrás daquela porta a oeste? Ou será que existem outras antecâmaras ao norte
+Mais da AntecÃ¢mara~
+   Que alegria! Mais dessa passagem chata! SerÃ¡ que existe algo mais excitante
+atrÃ¡s daquela porta a oeste? Ou serÃ¡ que existem outras antecÃ¢maras ao norte
 e ao sul?
 ~
-186 8 0 0 0 0
+186 d 0
 D0
-Mais da antecâmara aqui... que excitante!
+Mais da antecÃ¢mara aqui... que excitante!
 ~
 ~
 0 -1 18603
 D2
-Mais da antecâmara aqui... que excitante!
+Mais da antecÃ¢mara aqui... que excitante!
 ~
 ~
 0 -1 18611
 D3
 ~
 porta~
+:n 2
 1 -1 18606
 S
 #18608
 Um Campo Aberto no Grande Campo~
-   Finalmente, voce está em campo aberto...  É tão bom respirar ar fresco
-novamente!  Você pode voltar àquele lugar nojento e fedorento ao leste ou
-usar a saída a norte, que parece ser um ótimo atalho para o Templo.
+   Finalmente, voce estÃ¡ em campo aberto...  Ã‰ tÃ£o bom respirar ar fresco
+novamente!  VocÃª pode voltar Ã quele lugar nojento e fedorento ao leste ou
+usar a saÃ­da a norte, que parece ser um Ã³timo atalho para o Templo.
 ~
-186 4 0 0 0 0
+186 c 0
 D0
 Parece haver uma estrada no campo ao norte.
 ~
 ~
 0 -1 50
 D1
-O fim desta horrível antecâmara fica ao leste.
+O fim desta horrÃ­vel antecÃ¢mara fica ao leste.
 ~
 ~
 0 -1 18609
 S
 #18609
 O Final da Passagem~
-    Ahhh... Finalmente o final da antecâmara... Você pode sair ao ar livre
-ao oeste, ou voltar para leste e se certificar de não ter esquecido nada.
+    Ahhh... Finalmente o final da antecÃ¢mara... VocÃª pode sair ao ar livre
+ao oeste, ou voltar para leste e se certificar de nÃ£o ter esquecido nada.
 ~
-186 8 0 0 0 0
+186 d 0
 D1
-Mais da antecâmara aqui... que excitante!
+Mais da antecÃ¢mara aqui... que excitante!
 ~
 ~
 0 -1 18610
 D3
-Um campo aberto, próximo ao Grande Campo de Midgaard, pode ser visto.
+Um campo aberto, prÃ³ximo ao Grande Campo de Midgaard, pode ser visto.
 ~
 ~
 0 -1 18608
 S
 #18610
-Uma Antecâmara Iluminada~
-   A antecâmara continua em direção ao leste e oeste... e as coisas parecem 
+Uma AntecÃ¢mara Iluminada~
+   A antecÃ¢mara continua em direÃ§Ã£o ao leste e oeste... e as coisas parecem 
 estar mais claras a oeste.
 ~
-186 8 0 0 0 0
+186 d 0
 D1
 Um canto na passagem fica a leste.
 ~
 ~
 0 -1 18611
 D3
-Mais da antecâmara aqui... que excitante!
+Mais da antecÃ¢mara aqui... que excitante!
 ~
 ~
 0 -1 18609
 S
 #18611
 Outro Canto~
-   Outro canto da passagem e está tão sujo quanto o resto deste lugar, ou 
-quem sabe, talvez até mais!!!   Há uma porta ao leste...Para onde ela levará?
-Ah!!! e a antecâmara continua para o oeste e norte.
+   Outro canto da passagem e estÃ¡ tÃ£o sujo quanto o resto deste lugar, ou 
+quem sabe, talvez atÃ© mais!!!   HÃ¡ uma porta ao leste...Para onde ela levarÃ¡?
+Ah!!! e a antecÃ¢mara continua para o oeste e norte.
 ~
-186 8 0 0 0 0
+186 d 0
 D0
-Mais da antecâmara aqui... que excitante!
+Mais da antecÃ¢mara aqui... que excitante!
 ~
 ~
 0 -1 18607
@@ -228,32 +237,35 @@ D1
 Voce espia dentro de um quartinho entulhado a leste.
 ~
 porta~
+:n 2
 1 -1 18612
 D3
-Mais da antecâmara aqui... que excitante!
+Mais da antecÃ¢mara aqui... que excitante!
 ~
 ~
 0 -1 18610
 S
 #18612
 A Sala do Alquimista~
-   Várias garrafas e frascos se encontram aqui mas tudo parece bagunçado e
-inútil.   Aparentemente, o alquimista que trabalha aqui é realmente muito
-apegado à sua arte.   Há várias fórmulas e encantos escritos pelas paredes
-também... Será que ele não possui dinheiro para comprar papel?   Há uma porta
-ao norte e também uma escadaria escura num canto, que parece descer para algum
-lugar, com um grande aviso próximo a ela, que você talvez devesse ler...
+   VÃ¡rias garrafas e frascos se encontram aqui mas tudo parece bagunÃ§ado e
+inÃºtil.   Aparentemente, o alquimista que trabalha aqui Ã© realmente muito
+apegado Ã  sua arte.   HÃ¡ vÃ¡rias fÃ³rmulas e encantos escritos pelas paredes
+tambÃ©m... SerÃ¡ que ele nÃ£o possui dinheiro para comprar papel?   HÃ¡ uma porta
+ao norte e tambÃ©m uma escadaria escura num canto, que parece descer para algum
+lugar, com um grande aviso prÃ³ximo a ela, que vocÃª talvez devesse ler...
 ~
-186 8 0 0 0 0
+186 d 0
 D0
-Uma bela e iluminada antecâmara!
+Uma bela e iluminada antecÃ¢mara!
 ~
 porta~
+:n 2
 1 -1 18604
 D3
 Um canto da passagem fica a oeste.
 ~
 porta~
+:n 2
 1 -1 18611
 D5
 Uma escaria escura descendo.
@@ -262,37 +274,37 @@ Uma escaria escura descendo.
 0 -1 18632
 E
 aviso escada escadaria~
-O aviso próximo à escada diz:
+O aviso prÃ³ximo Ã  escada diz:
 
-Se você está abaixo do nível 7 e sózinho ou ainda, abaixo do nível 4, talvez
-fosse mais prudente, pegar suas coisinhas e cair fora...e bem rápido ainda!!!
-Ou então não culpe ninguém se por acaso você vier a morrer...
+Se vocÃª estÃ¡ abaixo do nÃ­vel 7 e sÃ³zinho ou ainda, abaixo do nÃ­vel 4, talvez
+fosse mais prudente, pegar suas coisinhas e cair fora...e bem rÃ¡pido ainda!!!
+Ou entÃ£o nÃ£o culpe ninguÃ©m se por acaso vocÃª vier a morrer...
 ~
 S
 #18620
 Uma Curva na Passagem~
-   Este canto é bem parecido com os outros... Exceto por um pequeno brilho
-que você percebe, vindo do sul.   Poderia ser uma saída... Você espera...
+   Este canto Ã© bem parecido com os outros... Exceto por um pequeno brilho
+que vocÃª percebe, vindo do sul.   Poderia ser uma saÃ­da... VocÃª espera...
 ~
-186 9 0 0 0 0
+186 ad 0
 D1
 A passagem continua a leste.
 ~
 ~
 0 -1 18621
 D2
-Você vê um estranho brilho vermelho vindo desta direção.
+VocÃª vÃª um estranho brilho vermelho vindo desta direÃ§Ã£o.
 ~
 ~
 0 -1 18629
 S
 #18621
-Uma Intersecção em "T" na Passagem~
-   Esta é uma intersecção de uma longa passagem do leste-oeste com um
-corredor que segue para o sul.   O ar parece um pouco mais claro, como se você
-estivesse se aproximando de uma saída.
+Uma IntersecÃ§Ã£o em "T" na Passagem~
+   Esta Ã© uma intersecÃ§Ã£o de uma longa passagem do leste-oeste com um
+corredor que segue para o sul.   O ar parece um pouco mais claro, como se vocÃª
+estivesse se aproximando de uma saÃ­da.
 ~
-186 9 0 0 0 0
+186 ad 0
 D1
 ~
 ~
@@ -309,10 +321,10 @@ S
 #18622
 Outro Canto~
    Aqui a passagem faz uma curva, vinda do norte e segue para o oeste.
-As paredes ainda são cobertas com os mesmos fungos nojentos que você tem visto,
-e você ouve sons de criaturas se movendo à sua volta...
+As paredes ainda sÃ£o cobertas com os mesmos fungos nojentos que vocÃª tem visto,
+e vocÃª ouve sons de criaturas se movendo Ã  sua volta...
 ~
-186 9 0 0 0 0
+186 ad 0
 D2
 ~
 ~
@@ -323,13 +335,13 @@ D3
 0 -1 18621
 S
 #18623
-Um Canto na Antecâmara~
-   Você pode ouvir criaturas se movendo à sua volta... E não são sons
-muito reconfortantes, não.   Talvez nem fosse bom mencionar nada sobre a 
-mobília...As paredes acinzentadas são lisas, com uma imensa quantidade de fungo 
+Um Canto na AntecÃ¢mara~
+   VocÃª pode ouvir criaturas se movendo Ã  sua volta... E nÃ£o sÃ£o sons
+muito reconfortantes, nÃ£o.   Talvez nem fosse bom mencionar nada sobre a 
+mobÃ­lia...As paredes acinzentadas sÃ£o lisas, com uma imensa quantidade de fungo 
 verde (ou alguma coisa) crescendo sobre elas.
 ~
-186 9 0 0 0 0
+186 ad 0
 D1
 ~
 ~
@@ -341,11 +353,11 @@ D2
 S
 #18624
 Outra Curva~
-   Hmmm... A passagem faz uma curva para o sul, aqui.   Você começa a perceber
-que pode facilmente perder seu pertences se não for cuidadoso e começa a achar
-que talvez fosse melhor não perder muito tempo aqui...
+   Hmmm... A passagem faz uma curva para o sul, aqui.   VocÃª comeÃ§a a perceber
+que pode facilmente perder seu pertences se nÃ£o for cuidadoso e comeÃ§a a achar
+que talvez fosse melhor nÃ£o perder muito tempo aqui...
 ~
-186 9 0 0 0 0
+186 ad 0
 D2
 ~
 ~
@@ -357,10 +369,10 @@ D3
 S
 #18625
 Uma Sala Maior~
-   A passagem se abre para um grande salão oval.   Não há nada de muito
+   A passagem se abre para um grande salÃ£o oval.   NÃ£o hÃ¡ nada de muito
 interessante por aqui...
 ~
-186 9 0 0 0 0
+186 ad 0
 D1
 ~
 ~
@@ -372,11 +384,11 @@ D2
 S
 #18626
 Uma Longa Passagem Leste-Oeste~
-   Esta é uma longa e estreita passagem que vai para o leste e oeste.   As
-paredes sao úmidas e cobertas com bolor e fungos.   O ar aqui é pouco
-saudável e você começa a querer sair daqui... e rápido!
+   Esta Ã© uma longa e estreita passagem que vai para o leste e oeste.   As
+paredes sao Ãºmidas e cobertas com bolor e fungos.   O ar aqui Ã© pouco
+saudÃ¡vel e vocÃª comeÃ§a a querer sair daqui... e rÃ¡pido!
 ~
-186 9 0 0 0 0
+186 ad 0
 D1
 ~
 ~
@@ -389,10 +401,10 @@ S
 #18627
 Um Cruzamento de Corredores~
    Aqui a estreita passagem leste-oeste cruza com uma passagem mais larga
-ao norte e sul.   O ar é umido e há um cheiro de decadência e ruínas no ar.
-Realmente esse nao é um lugar muito agradável...
+ao norte e sul.   O ar Ã© umido e hÃ¡ um cheiro de decadÃªncia e ruÃ­nas no ar.
+Realmente esse nao Ã© um lugar muito agradÃ¡vel...
 ~
-186 9 0 0 0 0
+186 ad 0
 D0
 ~
 ~
@@ -412,10 +424,10 @@ D3
 S
 #18628
 Um Canto do Quarto~
-   Este quarto é pouco mais que um cruzamento de passagens.   Você sente uma
+   Este quarto Ã© pouco mais que um cruzamento de passagens.   VocÃª sente uma
 leve brisa vinda da passagem ao norte mas tem um cheiro ruim...
 ~
-186 9 0 0 0 0
+186 ad 0
 D0
 ~
 ~
@@ -427,14 +439,14 @@ D3
 S
 #18629
 A Sala Vermelha~
-   Demora um tempo para você perceber que aquele brilho vermelho vem de um
-portal redondo no chão.  Parece como se tivessem pintado a gravura de uma
-estrada de terra no chão desta sala, com alguém correndo através dos campos,
-indo em direção a um templo.  Mais estranho ainda: é tão real, que você
-consegue sentir o vento dos campos e a movimentação do templo, vindos da
+   Demora um tempo para vocÃª perceber que aquele brilho vermelho vem de um
+portal redondo no chÃ£o.  Parece como se tivessem pintado a gravura de uma
+estrada de terra no chÃ£o desta sala, com alguÃ©m correndo atravÃ©s dos campos,
+indo em direÃ§Ã£o a um templo.  Mais estranho ainda: Ã© tÃ£o real, que vocÃª
+consegue sentir o vento dos campos e a movimentaÃ§Ã£o do templo, vindos da
 pintura.
 ~
-186 9 0 0 0 0
+186 ad 0
 D0
 ~
 ~
@@ -448,17 +460,17 @@ D5
 ~
 0 -1 50
 E
-portal chão~
-Parece que você consegue entrar nele... Mas você não pode ter certeza do lugar
-onde isso vai levar...e nem mesmo tem a certeza se poderá voltar.
+portal chao~
+Parece que vocÃª consegue entrar nele... Mas vocÃª nÃ£o pode ter certeza do lugar
+onde isso vai levar...e nem mesmo tem a certeza se poderÃ¡ voltar.
 ~
 S
 #18630
 Uma Passagem Dividida~
-   A passagem norte-sul se divide para o leste, daqui.   Há um estrambólico
-brilho vermelho vindo desse lado também, como se fosse uma leve brisa.
+   A passagem norte-sul se divide para o leste, daqui.   HÃ¡ um estrambÃ³lico
+brilho vermelho vindo desse lado tambÃ©m, como se fosse uma leve brisa.
 ~
-186 9 0 0 0 0
+186 ad 0
 D0
 ~
 ~
@@ -468,19 +480,19 @@ D2
 ~
 0 -1 18634
 D3
-Um brilho muito esquisito vem dessa direção.
+Um brilho muito esquisito vem dessa direÃ§Ã£o.
 ~
 ~
 0 -1 18629
 S
 #18631
 Uma Passagem~
-   Eca... Este lugar é nojento!   Você tenta se manter afastado das paredes
-mas a passagem é tão estreita, toda vez que você se mexe, você esbarra nelas,
-por mais cuidadoso que você esteja sendo.   Você está quase convencido de que
-o fungo que cobre estas paredes, está quase cobrindo você também.
+   Eca... Este lugar Ã© nojento!   VocÃª tenta se manter afastado das paredes
+mas a passagem Ã© tÃ£o estreita, toda vez que vocÃª se mexe, vocÃª esbarra nelas,
+por mais cuidadoso que vocÃª esteja sendo.   VocÃª estÃ¡ quase convencido de que
+o fungo que cobre estas paredes, estÃ¡ quase cobrindo vocÃª tambÃ©m.
 ~
-186 9 0 0 0 0
+186 ad 0
 D0
 ~
 ~
@@ -496,11 +508,11 @@ D2
 S
 #18632
 A Entrada~
-   É escuro escuro, nojento e absurdamente frio aqui.   Você ouve sons de
-criaturas se movendo à sua volta... De algum modo, elas não soam nada amigáveis.
-Talvez seja uma sábia atitude ter um pouco de cautela aqui...
+   Ã‰ escuro escuro, nojento e absurdamente frio aqui.   VocÃª ouve sons de
+criaturas se movendo Ã  sua volta... De algum modo, elas nÃ£o soam nada amigÃ¡veis.
+Talvez seja uma sÃ¡bia atitude ter um pouco de cautela aqui...
 ~
-186 9 0 0 0 0
+186 ad 0
 D0
 ~
 ~
@@ -521,10 +533,10 @@ S
 #18633
 Outro Canto~
    Bem... O que dizer?   Mais fungos!...mais sons estranhos!!!... e uma leve
-brisa vinda do norte.   Talvez fosse bom que você pudesse aprender a andar 
-nesse lugar, não?
+brisa vinda do norte.   Talvez fosse bom que vocÃª pudesse aprender a andar 
+nesse lugar, nÃ£o?
 ~
-186 9 0 0 0 0
+186 ad 0
 D0
 ~
 ~
@@ -535,12 +547,12 @@ D1
 0 -1 18634
 S
 #18634
-Uma Intersecção de Passagens~
-   Frio, fedorento, e coberto por musgos esverdeados... que são bem parecidos
-com as sobras da verdura da semana.  Ainda assim, você não queria fazer nada
-aqui, apenas pretende sair o mais rápido possível.
+Uma IntersecÃ§Ã£o de Passagens~
+   Frio, fedorento, e coberto por musgos esverdeados... que sÃ£o bem parecidos
+com as sobras da verdura da semana.  Ainda assim, vocÃª nÃ£o queria fazer nada
+aqui, apenas pretende sair o mais rÃ¡pido possÃ­vel.
 ~
-186 9 0 0 0 0
+186 ad 0
 D0
 ~
 ~
@@ -556,11 +568,11 @@ D3
 S
 #18635
 Uma Curva na Passagem~
-   Este lugar é nauseante...Certamente cheira como se algo (ou alguém)
-tivesse morrido aqui.   Você espera não ser o próximo mas, pelos sons que você
-ouve à sua volta, parece que alguma coisa tem outras idéias a este respeito.
+   Este lugar Ã© nauseante...Certamente cheira como se algo (ou alguÃ©m)
+tivesse morrido aqui.   VocÃª espera nÃ£o ser o prÃ³ximo mas, pelos sons que vocÃª
+ouve Ã  sua volta, parece que alguma coisa tem outras idÃ©ias a este respeito.
 ~
-186 9 0 0 0 0
+186 ad 0
 D0
 ~
 ~
@@ -572,12 +584,12 @@ D1
 S
 #18636
 Um Desvio para o Sul~
-   A passagem leste-oeste se divide ao sul daqui.   Tudo à sua volta tem
+   A passagem leste-oeste se divide ao sul daqui.   Tudo Ã  sua volta tem
 cheiro de morte.   Realmente, o bolor e o fungo das paredes ajuda bastante,
-mas por outro lado... bem... você não gostaria de pensar sobre o que mais 
+mas por outro lado... bem... vocÃª nÃ£o gostaria de pensar sobre o que mais 
 vive neste lugar.
 ~
-186 9 0 0 0 0
+186 ad 0
 D1
 ~
 ~
@@ -593,11 +605,11 @@ D3
 S
 #18637
 Mais Outro Canto~
-   A passagem vira aqui e dirige-se para o norte.   Você pressente que há algo
-à sua frente, se seguir por este caminho, mas não está muito certo disso.
-Você não está muito seguro se quer realmente saber algo além desse ponto.
+   A passagem vira aqui e dirige-se para o norte.   VocÃª pressente que hÃ¡ algo
+Ã  sua frente, se seguir por este caminho, mas nÃ£o estÃ¡ muito certo disso.
+VocÃª nÃ£o estÃ¡ muito seguro se quer realmente saber algo alÃ©m desse ponto.
 ~
-186 9 0 0 0 0
+186 ad 0
 D0
 ~
 ~
@@ -609,13 +621,13 @@ D3
 S
 #18638
 Uma Sala Grande~
-   Voce quase tropeça ao entrar nesta sala... A sensação de não haver
-paredes em ambos os lados, deixa você um pouco nervoso e inquieto.   Você
-está vulnerável em todos os sentidos.   Você não pode nem imaginar o tamanho 
+   Voce quase tropeÃ§a ao entrar nesta sala... A sensaÃ§Ã£o de nÃ£o haver
+paredes em ambos os lados, deixa vocÃª um pouco nervoso e inquieto.   VocÃª
+estÃ¡ vulnerÃ¡vel em todos os sentidos.   VocÃª nÃ£o pode nem imaginar o tamanho 
 desta sala, pois a mesma se extende para o leste, muito mais do que a sua luz
-consegue alcançar...
+consegue alcanÃ§ar...
 ~
-186 9 0 0 0 0
+186 ad 0
 D0
 ~
 ~
@@ -628,39 +640,39 @@ A sala afunda nas sombras...
 S
 #18639
 Uma Sala Grande~
-   Quando você entra, sua luz reflete na parede a leste.   Parece que há
+   Quando vocÃª entra, sua luz reflete na parede a leste.   Parece que hÃ¡
 palavras gravadas na parede e uma pintura cruel.   A oeste, a sala se estende
-além do alcance da sua luz e sombras escuras lhe deixam paranóico...
-Algo poderia se esconder lá.   Você está dolorosamente consciente, de como
-você fica exposto e frágil, quando não existem paredes à sua volta.
+alÃ©m do alcance da sua luz e sombras escuras lhe deixam paranÃ³ico...
+Algo poderia se esconder lÃ¡.   VocÃª estÃ¡ dolorosamente consciente, de como
+vocÃª fica exposto e frÃ¡gil, quando nÃ£o existem paredes Ã  sua volta.
 ~
-186 9 0 0 0 0
+186 ad 0
 D0
 ~
 ~
 0 -1 18636
 D3
-A sala se estende ao longo (mais longe ainda) do que você consegue ver...
+A sala se estende ao longo (mais longe ainda) do que vocÃª consegue ver...
 ~
 ~
 0 -1 18638
 E
-parede~
-Há uma pintura de um homem com cabeca de touro, com alguns escritos perto.
-~
-E
 escrita escrito palavras palavra~
 A escrita aparentemente diz: "Cuidado com o Minotauro..."
 ~
+E
+parede~
+HÃ¡ uma pintura de um homem com cabeca de touro, com alguns escritos perto.
+~
 S
 #18640
-A Sala da Estátua~
-   Aqui a passagem entra em uma pequena sala.   A saída leva a leste e sul,
-e você vê uma maravilhosa e bastante grande (e de bom gosto) estátua, ao norte.
+A Sala da EstÃ¡tua~
+   Aqui a passagem entra em uma pequena sala.   A saÃ­da leva a leste e sul,
+e vocÃª vÃª uma maravilhosa e bastante grande (e de bom gosto) estÃ¡tua, ao norte.
 ~
-186 9 0 0 0 0
+186 ad 0
 D1
-Uma longa antecâmara, terminando em uma escadaria.
+Uma longa antecÃ¢mara, terminando em uma escadaria.
 ~
 ~
 0 -1 18641
@@ -670,26 +682,26 @@ A sala se estende ao sul e parece iluminar um pouco.
 ~
 0 -1 18644
 E
+estatua~
+Olhando de perto, vocÃª vÃª que a estÃ¡tua tem uma pequena placa afixada nela.
+A face lhe parece impressionantemente familiar.
+~
+E
 placa~
 Diz:
 
-Maynard, o Bufão Morto dos Arlequins.
-~
-E
-estátua~
-Olhando de perto, você vê que a estátua tem uma pequena placa afixada nela.
-A face lhe parece impressionantemente familiar.
+Maynard, o BufÃ£o Morto dos Arlequins.
 ~
 S
 #18641
-A Antecâmara~
-   Voce continua vagando pela antecâmara e repara nas bandeiras, pinturas e
-outras finas decorações que estão enfeitando as paredes ao longo da passagem.
-Parece muito diferente da passagem tão despojada e sem graça, de onde você veio.
+A AntecÃ¢mara~
+   Voce continua vagando pela antecÃ¢mara e repara nas bandeiras, pinturas e
+outras finas decoraÃ§Ãµes que estÃ£o enfeitando as paredes ao longo da passagem.
+Parece muito diferente da passagem tÃ£o despojada e sem graÃ§a, de onde vocÃª veio.
 ~
-186 9 0 0 0 0
+186 ad 0
 D1
-A antecâmara termina em uma grande escadaria de mármore.
+A antecÃ¢mara termina em uma grande escadaria de mÃ¡rmore.
 ~
 ~
 0 -1 18642
@@ -702,13 +714,13 @@ S
 #18642
 As Escadarias Norte~
    Aqui a sala se abre para uma grande sala, com alto teto abobadado.   Agora 
-que você sai da passagem, você vê que a escada leva a uma sacada a céu aberto,
-que se debruça sobre a área.   Ao sul, a sala prolonga-se e outra escada é
-visível, unindo-se àquela que está à sua frente.
+que vocÃª sai da passagem, vocÃª vÃª que a escada leva a uma sacada a cÃ©u aberto,
+que se debruÃ§a sobre a Ã¡rea.   Ao sul, a sala prolonga-se e outra escada Ã©
+visÃ­vel, unindo-se Ã quela que estÃ¡ Ã  sua frente.
 ~
-186 9 0 0 0 0
+186 ad 0
 D2
-Você vê outra escadaria e duas passagens levando a oeste e sul.
+VocÃª vÃª outra escadaria e duas passagens levando a oeste e sul.
 ~
 ~
 0 -1 18647
@@ -718,23 +730,23 @@ Uma entrada para uma passagem iluminada.
 ~
 0 -1 18641
 D4
-Uma sacada a céu aberto.
+Uma sacada a cÃ©u aberto.
 ~
 ~
 0 -1 18643
 E
 escadaria escada escadarias~
-Elas sao construídas com mármore liso e bonito.
+Elas sao construÃ­das com mÃ¡rmore liso e bonito.
 ~
 S
 #18643
 A Sacada~
-   Aqui você pode olhar e observar o mundo a sua volta.   Construída em um
-semi-círculo que circunda todo o domo da sala, a sacada permite que você
-olhe em qualquer direção.   Ao extremo norte, você pode ver que os 
-Grandes Campos de Midgaard se prolongam até as Montanhas Dragonhelm, ao norte.
+   Aqui vocÃª pode olhar e observar o mundo a sua volta.   ConstruÃ­da em um
+semi-cÃ­rculo que circunda todo o domo da sala, a sacada permite que vocÃª
+olhe em qualquer direÃ§Ã£o.   Ao extremo norte, vocÃª pode ver que os 
+Grandes Campos de Midgaard se prolongam atÃ© as Montanhas Dragonhelm, ao norte.
 ~
-186 0 0 0 0 0
+186 0 0
 D2
 O extremo sul da sacada.
 ~
@@ -747,18 +759,18 @@ Desce a escada para um grande sala abobadado.
 0 -1 18642
 E
 escada escadas escadaria escadarias~
-Elas sao construídas com mármore liso e bonito.
+Elas sao construÃ­das com mÃ¡rmore liso e bonito.
 ~
 S
 #18644
-Uma Antecâmara Iluminada~
-   Uau! Que diferença da passagem ao sul.   Quem quer que mantenha esse lugar,
-deve realmente gostar de iniciantes.   As paredes e o chão são limpos e
-lindamente decorados.   Você repara em um interesante desenho no chão.
+Uma AntecÃ¢mara Iluminada~
+   Uau! Que diferenÃ§a da passagem ao sul.   Quem quer que mantenha esse lugar,
+deve realmente gostar de iniciantes.   As paredes e o chÃ£o sÃ£o limpos e
+lindamente decorados.   VocÃª repara em um interesante desenho no chÃ£o.
 ~
-186 9 0 0 0 0
+186 ad 0
 D0
-Uma pequena sala com uma estátua.
+Uma pequena sala com uma estÃ¡tua.
 ~
 ~
 0 -1 18640
@@ -766,20 +778,21 @@ D2
 Um cruzamento de passagens.
 ~
 porta~
+:n 2
 1 -1 18603
 E
 chao desenho~
-Parece ser o Ornato da Associação dos Arlequins.
+Parece ser o Ornato da AssociaÃ§Ã£o dos Arlequins.
 ~
 S
 #18645
 A Sacada~
-   Aqui você pode olhar e observar o mundo a sua volta.   Construída em um
-semi-círculo que circunda todo o domo da sala, a sacada permite que você
-olhe para qualquer direção.   No extremo sul, você pode ver a grande Cidade de
+   Aqui vocÃª pode olhar e observar o mundo a sua volta.   ConstruÃ­da em um
+semi-cÃ­rculo que circunda todo o domo da sala, a sacada permite que vocÃª
+olhe para qualquer direÃ§Ã£o.   No extremo sul, vocÃª pode ver a grande Cidade de
 Midgaard.
 ~
-186 0 0 0 0 0
+186 0 0
 D0
 O extremo norte da sacada.
 ~
@@ -792,39 +805,40 @@ Volta descendo a escadaria sul.
 0 -1 18647
 E
 escada escadas escadaria escadarias~
-Elas sao construídas com mármore liso e bonito.
+Elas sao construÃ­das com mÃ¡rmore liso e bonito.
 ~
 S
 #18646
-Uma Antecâmara Iluminada~
-   Uau!   Que diferença da passagem ao sul.   Quem quer que mantenha esse lugar,
-deve realmente gostar de iniciantes.   As paredes e o chão são limpos e
-lindamente decorados.   Você repara num interesante desenho no chão.
+Uma AntecÃ¢mara Iluminada~
+   Uau!   Que diferenÃ§a da passagem ao sul.   Quem quer que mantenha esse lugar,
+deve realmente gostar de iniciantes.   As paredes e o chÃ£o sÃ£o limpos e
+lindamente decorados.   VocÃª repara num interesante desenho no chÃ£o.
 ~
-186 9 0 0 0 0
+186 ad 0
 D1
-A passagem se abre em uma sala abobadada com uma grande escadaria de mármore.
+A passagem se abre em uma sala abobadada com uma grande escadaria de mÃ¡rmore.
 ~
 ~
 0 -1 18647
 D3
-Uma escura interseção de passagens
+Uma escura interseÃ§Ã£o de passagens
 ~
 porta~
+:n 2
 1 -1 18603
 E
-chão desenho~
-Parece ser o Ornato da Associação dos Arlequins.
+chao desenho~
+Parece ser o Ornato da AssociaÃ§Ã£o dos Arlequins.
 ~
 S
 #18647
 As Escadarias Sul~
    Aqui a sala se abre para uma grande sala, com alto teto abobadado.   Agora
-que você sai da passagem, você vê que a escada leva a uma sacada a céu aberto,
-que se debruça sobre a área.   Ao norte, a sala se prolonga e outra escada é
-visível, unindo-se àquela que está à sua frente.
+que vocÃª sai da passagem, vocÃª vÃª que a escada leva a uma sacada a cÃ©u aberto,
+que se debruÃ§a sobre a Ã¡rea.   Ao norte, a sala se prolonga e outra escada Ã©
+visÃ­vel, unindo-se Ã quela que estÃ¡ Ã  sua frente.
 ~
-186 9 0 0 0 0
+186 ad 0
 D0
 Outra escadaria fica ao norte, assim como uma passagem para oeste.
 ~
@@ -836,36 +850,36 @@ Uma estreita passagem ao sul, que termina em uma porta de madeira.
 ~
 0 -1 18604
 D3
-Volta a antecâmara iluminada.
+Volta a antecÃ¢mara iluminada.
 ~
 ~
 0 -1 18646
 D4
-Uma sacada a céu aberto.
+Uma sacada a cÃ©u aberto.
 ~
 ~
 0 -1 18645
 E
 escada escadas escadaria escadarias~
-Elas sao construídas com mármore liso e bonito.
+Elas sao construÃ­das com mÃ¡rmore liso e bonito.
 ~
 S
 #18648
-A Saída para a Zona dos Iniciantes~
-   Ahhh...  A saída para a zona dos iniciantes!  Se você se cansou de ficar
-aqui, vá embora seguindo para oeste, onde fica um pequeno atalho que leva
-direto ao Templo.  Caso de mudado de idéia, siga norte.
+A SaÃ­da para a Zona dos Iniciantes~
+   Ahhh...  A saÃ­da para a zona dos iniciantes!  Se vocÃª se cansou de ficar
+aqui, vÃ¡ embora seguindo para oeste, onde fica um pequeno atalho que leva
+direto ao Templo.  Caso de mudado de idÃ©ia, siga norte.
 ~
-186 4 0 0 0 1
-D0
-Voce vê o começo da Zona dos Iniciantes.
-~
-~
-0 -1 18601
+186 c 1
 D3
 Ali fica o atalho.
 ~
 ~
 0 -1 50
+D0
+Voce vÃª o comeÃ§o da Zona dos Iniciantes.
+~
+~
+0 -1 18601
 S
-$~
+$
