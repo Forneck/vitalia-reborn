@@ -1,9 +1,9 @@
 #5001
-Um Túnel Longo~
-   Ao entrar neste tunel, você encontra a correnteza deste rio que
-corta as montanhas.  Há uma ramificação para o norte.
+Um TÃºnel Longo~
+   Ao entrar neste tunel, vocÃª encontra a correnteza deste rio que
+corta as montanhas.  HÃ¡ uma ramificaÃ§Ã£o para o norte.
 ~
-50 9 0 0 0 7
+50 ad 7
 D0
 ~
 ~
@@ -19,10 +19,10 @@ Parecem haver algumas barras aqui, dificultado a passagem ao oeste.
 0 -1 3205
 S
 #5002
-Um Túnel Longo~
-   O túnel se ramifica para o norte.
+Um TÃºnel Longo~
+   O tÃºnel se ramifica para o norte.
 ~
-50 9 0 0 0 7
+50 ad 7
 D0
 ~
 ~
@@ -37,10 +37,10 @@ D3
 0 -1 5001
 S
 #5003
-Um Túnel Longo~
-   O túnel se ramifica para o sul.
+Um TÃºnel Longo~
+   O tÃºnel se ramifica para o sul.
 ~
-50 9 0 0 0 7
+50 ad 7
 D1
 ~
 ~
@@ -55,10 +55,10 @@ D3
 0 -1 5002
 S
 #5004
-Um Túnel Longo~
-   O túnel se ramifica para o sul.
+Um TÃºnel Longo~
+   O tÃºnel se ramifica para o sul.
 ~
-50 9 0 0 0 7
+50 ad 7
 D0
 ~
 ~
@@ -77,13 +77,13 @@ D3
 0 -1 5003
 S
 #5005
-Um Lago Subterrâneo~
-   Você está flutuando em um negro lago subterrâneo, alimentado pelo
-gotejar da água e do limbo que vem de cima. O túnel continua ao leste
-e a correnteza do rio a oeste. Conduzindo acima ao noroeste há um
+Um Lago SubterrÃ¢neo~
+   VocÃª estÃ¡ flutuando em um negro lago subterrÃ¢neo, alimentado pelo
+gotejar da Ã¡gua e do limbo que vem de cima. O tÃºnel continua ao leste
+e a correnteza do rio a oeste. Conduzindo acima ao noroeste hÃ¡ um
 corredor.
 ~
-50 9 0 0 0 7
+50 ad 7
 D0
 ~
 ~
@@ -106,10 +106,10 @@ D4
 0 -1 5016
 S
 #5006
-Um Longo Túnel Estreito~
-   O túnel sobe diretamente para o leste.
+Um Longo TÃºnel Estreito~
+   O tÃºnel sobe diretamente para o leste.
 ~
-50 265 0 0 0 5
+50 adi 5
 D1
 ~
 ~
@@ -120,11 +120,11 @@ D3
 0 -1 5005
 S
 #5007
-Um Túnel Largo~
-   O túnel segue para leste e oeste. Para o leste, o túnel mergulha
-na direção de uma clara luz. Uma passagem pequena se abre ao norte.
+Um TÃºnel Largo~
+   O tÃºnel segue para leste e oeste. Para o leste, o tÃºnel mergulha
+na direÃ§Ã£o de uma clara luz. Uma passagem pequena se abre ao norte.
 ~
-50 9 0 0 0 5
+50 ad 5
 D1
 ~
 ~
@@ -136,26 +136,26 @@ D3
 S
 #5008
 A Entrada da Caverna~
-   Você se encontra bem no limite de um grande monte de pedregulhos,
-fruto do último deslizamento.
+   VocÃª se encontra bem no limite de um grande monte de pedregulhos,
+fruto do Ãºltimo deslizamento.
 ~
-50 9 0 0 0 5
+50 ad 5
 D2
 ~
 ~
 0 -1 5002
 D5
-Você pode facilmente escorregar pelas pedras sem se machucar.
+VocÃª pode facilmente escorregar pelas pedras sem se machucar.
 ~
 ~
 0 -1 5009
 S
 #5009
-Ao Pé dos Pedregulhos~
-   Você está bem ao fundo de uma grande pilha de pedregulho. Um túnel
+Ao PÃ© dos Pedregulhos~
+   VocÃª estÃ¡ bem ao fundo de uma grande pilha de pedregulho. Um tÃºnel
 se ramifica  para o norte e leste.
 ~
-50 9 0 0 0 5
+50 ad 5
 D0
 ~
 ~
@@ -171,16 +171,16 @@ D4
 S
 #5010
 Uma Entrada de Caverna~
-   Você se encontra no meio de uma caverna grande e bonita. Um caminho
-conduz para a mais profunda escuridão.
+   VocÃª se encontra no meio de uma caverna grande e bonita. Um caminho
+conduz para a mais profunda escuridÃ£o.
 ~
-50 9 0 0 0 5
+50 ad 5
 D2
 ~
 ~
 0 -1 5009
 D5
-Você olha para baixo na caverna. Há ossos espalhados por todos os
+VocÃª olha para baixo na caverna. HÃ¡ ossos espalhados por todos os
 lugares.
 ~
 ~
@@ -188,11 +188,11 @@ lugares.
 S
 #5011
 Uma Caverna Gigantesca~
-   Esta caverna o subjuga. As paredes e o teto parecem estar há
-milhas de distância de você. Ossos de desafortunados aventureiros estão
-espalhados pelo chão de toda a caverna.
+   Esta caverna o subjuga. As paredes e o teto parecem estar hÃ¡
+milhas de distÃ¢ncia de vocÃª. Ossos de desafortunados aventureiros estÃ£o
+espalhados pelo chÃ£o de toda a caverna.
 ~
-50 9 0 0 0 5
+50 ad 5
 D4
 ~
 ~
@@ -204,9 +204,9 @@ D5
 S
 #5012
 Uma Curva Estreita~
-   O túnel segue para o sul e oeste.
+   O tÃºnel segue para o sul e oeste.
 ~
-50 9 0 0 0 5
+50 ad 5
 D2
 ~
 ~
@@ -218,10 +218,10 @@ D3
 S
 #5013
 Uma Caverna Grande~
-   Você se encontra dentro de uma caverna muito grande.  Muitas peles
-estão jogadas pelo chão.
+   VocÃª se encontra dentro de uma caverna muito grande.  Muitas peles
+estÃ£o jogadas pelo chÃ£o.
 ~
-50 9 0 0 0 5
+50 ad 5
 D0
 ~
 ~
@@ -232,12 +232,12 @@ D1
 0 -1 5014
 S
 #5014
-Um Corredor Úmido~
-   As paredes aqui estão extremamente úmidas, assim como o chão também.
+Um Corredor Ãšmido~
+   As paredes aqui estÃ£o extremamente Ãºmidas, assim como o chÃ£o tambÃ©m.
 ~
-50 9 0 0 0 5
+50 ad 5
 D1
-Você ouve gotas de água pingando.
+VocÃª ouve gotas de Ã¡gua pingando.
 ~
 ~
 0 -1 5015
@@ -247,10 +247,10 @@ D3
 0 -1 5013
 S
 #5015
-Uma Piscina Subterrânea~
-   Você avança penosamente por uma funda piscina de água limbosa.
+Uma Piscina SubterrÃ¢nea~
+   VocÃª avanÃ§a penosamente por uma funda piscina de Ã¡gua limbosa.
 ~
-50 9 0 0 0 6
+50 ad 6
 D2
 ~
 ~
@@ -261,13 +261,13 @@ D3
 0 -1 5014
 S
 #5016
-Um Corredor Úmido~
-   As paredes do túnel são extremamente úmidas aqui. Você ouve a doce
-melodia provocada pelo constante movimento da água corrente ao sul
+Um Corredor Ãšmido~
+   As paredes do tÃºnel sÃ£o extremamente Ãºmidas aqui. VocÃª ouve a doce
+melodia provocada pelo constante movimento da Ã¡gua corrente ao sul
 ~
-50 9 0 0 0 5
+50 ad 5
 D0
-Você ouve gotas de água pingando.
+VocÃª ouve gotas de Ã¡gua pingando.
 ~
 ~
 0 -1 5015
@@ -278,10 +278,10 @@ D2
 S
 #5017
 Um Canal Estreito~
-   Este canal é grande o bastante para que um homem adulto rasteje ou
+   Este canal Ã© grande o bastante para que um homem adulto rasteje ou
 para que outro tipo de forma de vida caminhe livremente.
 ~
-50 9 0 0 0 5
+50 ad 5
 D0
 ~
 ~
@@ -291,17 +291,17 @@ D1
 ~
 0 -1 5018
 D2
-Você sente o forte cheiro de fungos.
+VocÃª sente o forte cheiro de fungos.
 ~
 ~
 0 -1 5019
 S
 #5018
 Uma Caverna Grande~
-   Você entrou dentro de uma caverna muito grande. As formações
-rochosas causariam espanto em práticamente todos os anões.
+   VocÃª entrou dentro de uma caverna muito grande. As formaÃ§Ãµes
+rochosas causariam espanto em prÃ¡ticamente todos os anÃµes.
 ~
-50 9 0 0 0 5
+50 ad 5
 D0
 ~
 ~
@@ -313,43 +313,43 @@ D3
 S
 #5019
 Um Caminho de Fungo~
-   Enquanto você anda através do caminho de fungos, você se vê
-envolvido por milhões e milhões de esporos. Você mal consegue respirar.
+   Enquanto vocÃª anda atravÃ©s do caminho de fungos, vocÃª se vÃª
+envolvido por milhÃµes e milhÃµes de esporos. VocÃª mal consegue respirar.
 ~
-50 9 0 0 0 5
+50 ad 5
 D0
 ~
 ~
 0 -1 5017
 D1
-O característico cheiro dos esporos de fungo segue ao leste.
+O caracterÃ­stico cheiro dos esporos de fungo segue ao leste.
 ~
 ~
 0 -1 5020
 S
 #5020
 O Caminho de Fungo~
-   A medida em que você anda através do caminho, milhões de esporos
-são arremessados em sua direção. Isso lhe dificulta a respiração.
+   A medida em que vocÃª anda atravÃ©s do caminho, milhÃµes de esporos
+sÃ£o arremessados em sua direÃ§Ã£o. Isso lhe dificulta a respiraÃ§Ã£o.
 ~
-50 9 0 0 0 5
+50 ad 5
 D2
 Um gigantesco Templo de Fungos fica ao sul.
 ~
 ~
 0 -1 5021
 D3
-O característico cheiro dos esporos de fungo segue ao oeste.
+O caracterÃ­stico cheiro dos esporos de fungo segue ao oeste.
 ~
 ~
 0 -1 5019
 S
 #5021
 O Templo de Fungos~
-   Você se encontra dentro de um gigantesco cogumelo. Seu interior
-está todo enfeitado como um templo.
+   VocÃª se encontra dentro de um gigantesco cogumelo. Seu interior
+estÃ¡ todo enfeitado como um templo.
 ~
-50 9 0 0 0 5
+50 ad 5
 D0
 ~
 ~
@@ -361,10 +361,10 @@ D1
 S
 #5022
 Uma Passagem Inclinada~
-   Você segue por um caminho que se inclina por baixo do templo de
+   VocÃª segue por um caminho que se inclina por baixo do templo de
 fungos.
 ~
-50 9 0 0 0 5
+50 ad 5
 D2
 ~
 ~
@@ -376,44 +376,44 @@ D5
 S
 #5023
 Uma Passagem Inclinada~
-   Você está em um caminho que suavemente emerge da piscina subterrânea.
+   VocÃª estÃ¡ em um caminho que suavemente emerge da piscina subterrÃ¢nea.
 ~
-50 13 0 0 0 5
+50 acd 5
 D0
-Você ouve sons de água gotejando.
+VocÃª ouve sons de Ã¡gua gotejando.
 ~
 ~
 0 -1 5005
-D3
-Você vê uma estranha contrução.
-~
-~
-0 -1 6951
 D4
 ~
 ~
 0 -1 5022
+D3
+VocÃª vÃª uma estranha contruÃ§Ã£o.
+~
+~
+0 -1 6951
 S
 #5024
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. Ao leste há uma pirâmide e ao oeste se
+passa por constantes mudanÃ§as. Ao leste hÃ¡ uma pirÃ¢mide e ao oeste se
 encontra uma gigantesca montanha com seu cume embranquecido por neves
 eternas.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5030
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5034
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5025
@@ -421,23 +421,23 @@ S
 #5025
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. Ao leste há uma pirâmide e ao oeste se
+passa por constantes mudanÃ§as. Ao leste hÃ¡ uma pirÃ¢mide e ao oeste se
 encontra uma gigantesca montanha com seu cume embranquecido por neves
 eternas.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5024
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5031
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5026
@@ -445,24 +445,24 @@ S
 #5026
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. Ao leste há uma pirâmide e ao oeste se
+passa por constantes mudanÃ§as. Ao leste hÃ¡ uma pirÃ¢mide e ao oeste se
 encontra uma gigantesca montanha com seu cume embranquecido por neves
-eternas. O buraco por onde você saiu é muito alto para que possa ser
-alcançado.
+eternas. O buraco por onde vocÃª saiu Ã© muito alto para que possa ser
+alcanÃ§ado.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5025
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5036
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5027
@@ -470,23 +470,23 @@ S
 #5027
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. Ao leste há uma pirâmide e ao oeste se
+passa por constantes mudanÃ§as. Ao leste hÃ¡ uma pirÃ¢mide e ao oeste se
 encontra uma gigantesca montanha com seu cume embranquecido por neves
 eternas.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5026
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5033
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5028
@@ -494,24 +494,24 @@ S
 #5028
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. Ao leste há uma pirâmide e ao oeste se
+passa por constantes mudanÃ§as. Ao leste hÃ¡ uma pirÃ¢mide e ao oeste se
 encontra uma gigantesca montanha com seu cume embranquecido por neves
-eternas. Você espia através de uma estreita trilha de terra que conduz
-para o oeste, por entre o pé das montanhas.
+eternas. VocÃª espia atravÃ©s de uma estreita trilha de terra que conduz
+para o oeste, por entre o pÃ© das montanhas.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5027
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5033
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5029
@@ -525,57 +525,57 @@ S
 #5029
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. A nordeste há uma pirâmide e ao oeste se
+passa por constantes mudanÃ§as. A nordeste hÃ¡ uma pirÃ¢mide e ao oeste se
 encontra uma gigantesca montanha com seu cume embranquecido por neves
 eternas.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5028
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5037
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5044
 S
 #5030
-Um Pequeno Oásis~
-   Você se vê ao lado de uma pequenina piscina de águas cristalinas,
-envolvivas pelas sombras de algumas raras palmeiras. Ao norte, você
-vê um pequeno acampamento, descansando.
+Um Pequeno OÃ¡sis~
+   VocÃª se vÃª ao lado de uma pequenina piscina de Ã¡guas cristalinas,
+envolvivas pelas sombras de algumas raras palmeiras. Ao norte, vocÃª
+vÃª um pequeno acampamento, descansando.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Você vê três tendas e alguns camelos, amarrados a uma estaca. Sombras
+VocÃª vÃª trÃªs tendas e alguns camelos, amarrados a uma estaca. Sombras
 se movimentando dentro da tenda, sugerem atividades.
 ~
 ~
 0 -1 5056
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5036
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5032
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5025
 D4
-Você vê um enorme castelo sobre as núvens.
+VocÃª vÃª um enorme castelo sobre as nÃºvens.
 ~
 ~
 0 -1 2000
@@ -583,26 +583,26 @@ S
 #5031
 O Grande Deserto Oriental~
   Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. Ao leste há uma pirâmide.
+passa por constantes mudanÃ§as. Ao leste hÃ¡ uma pirÃ¢mide.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5031
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5031
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5032
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5024
@@ -610,26 +610,26 @@ S
 #5032
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. Ao leste há uma pirâmide.
+passa por constantes mudanÃ§as. Ao leste hÃ¡ uma pirÃ¢mide.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5035
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5036
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5033
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5032
@@ -637,26 +637,26 @@ S
 #5033
 O Grande Deserto Oriental~
      Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. A nordeste há uma pirâmide.
+passa por constantes mudanÃ§as. A nordeste hÃ¡ uma pirÃ¢mide.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5037
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5037
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5043
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5028
@@ -664,26 +664,26 @@ S
 #5034
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. A sudeste há uma pirâmide.
+passa por constantes mudanÃ§as. A sudeste hÃ¡ uma pirÃ¢mide.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5038
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5035
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5034
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5035
@@ -691,28 +691,28 @@ S
 #5035
 O Grande Deserto Oriental~
   Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. A leste há uma pirâmide que parece ser
-enorme, mesmo a esta distância.
+passa por constantes mudanÃ§as. A leste hÃ¡ uma pirÃ¢mide que parece ser
+enorme, mesmo a esta distÃ¢ncia.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5039
 D1
-Mesmo daqui, você pode sentir que há um grande mal que se encontra
-dentro da pirâmide projetando-se atraves das areias ao leste.
+Mesmo daqui, vocÃª pode sentir que hÃ¡ um grande mal que se encontra
+dentro da pirÃ¢mide projetando-se atraves das areias ao leste.
 ~
 ~
 0 -1 5300
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5032
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5034
@@ -720,26 +720,26 @@ S
 #5036
 O Grande Deserto Oriental~
   Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. A nordeste há uma pirâmide.
+passa por constantes mudanÃ§as. A nordeste hÃ¡ uma pirÃ¢mide.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5035
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5041
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5032
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5030
@@ -747,26 +747,26 @@ S
 #5037
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. A nordeste há uma pirâmide.
+passa por constantes mudanÃ§as. A nordeste hÃ¡ uma pirÃ¢mide.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5048
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 8101
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5042
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5033
@@ -774,26 +774,26 @@ S
 #5038
 O Grande Deserto Oriental~
     Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. Ao sul há uma pirâmide.
+passa por constantes mudanÃ§as. Ao sul hÃ¡ uma pirÃ¢mide.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5046
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5045
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5040
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5034
@@ -801,26 +801,26 @@ S
 #5039
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. Ao sul há uma pirâmide.
+passa por constantes mudanÃ§as. Ao sul hÃ¡ uma pirÃ¢mide.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5046
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5039
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5048
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5039
@@ -828,28 +828,28 @@ S
 #5040
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. Você está próximo a uma pirâmide
-gigantesca localizada a uns cem metros a oeste de você.  Daqui você
+passa por constantes mudanÃ§as. VocÃª estÃ¡ prÃ³ximo a uma pirÃ¢mide
+gigantesca localizada a uns cem metros a oeste de vocÃª.  Daqui vocÃª
 consegue sentiro grande mal que se encontra dentro da estrutura volumosa.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5036
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5049
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5041
 D3
-A pirâmide pode ser vista pelas areias ao oeste.
+A pirÃ¢mide pode ser vista pelas areias ao oeste.
 ~
 ~
 0 -1 5300
@@ -857,27 +857,27 @@ S
 #5041
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas.  A areia ao seu redor
-passa por constantes mudanças.  Ao norte há uma pirâmide.
+passa por constantes mudanÃ§as.  Ao norte hÃ¡ uma pirÃ¢mide.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Mesmo daqui, você pode sentir que há um grande mal que se encontra
-dentro da pirâmide projetando-se atraves das areias ao norte.
+Mesmo daqui, vocÃª pode sentir que hÃ¡ um grande mal que se encontra
+dentro da pirÃ¢mide projetando-se atraves das areias ao norte.
 ~
 ~
 0 -1 5040
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5048
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5041
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5037
@@ -885,26 +885,26 @@ S
 #5042
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. Ao norte há uma pirâmide.
+passa por constantes mudanÃ§as. Ao norte hÃ¡ uma pirÃ¢mide.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5049
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5055
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5043
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5041
@@ -912,26 +912,26 @@ S
 #5043
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. Ao norte há uma pirâmide.
+passa por constantes mudanÃ§as. Ao norte hÃ¡ uma pirÃ¢mide.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5042
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5055
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5044
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5033
@@ -939,27 +939,27 @@ S
 #5044
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas.  A areia ao seu redor
-passa por constantes mudanças.  Ao norte há uma pirâmide e há uma cidade
+passa por constantes mudanÃ§as.  Ao norte hÃ¡ uma pirÃ¢mide e hÃ¡ uma cidade
 arruinada a oeste.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5050
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5055
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5029
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5200
@@ -967,26 +967,26 @@ S
 #5045
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. Ao sul há uma pirâmide.
+passa por constantes mudanÃ§as. Ao sul hÃ¡ uma pirÃ¢mide.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5045
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5052
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5045
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5038
@@ -994,26 +994,26 @@ S
 #5046
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. Ao sudoeste há uma pirâmide.
+passa por constantes mudanÃ§as. Ao sudoeste hÃ¡ uma pirÃ¢mide.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5038
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5047
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5047
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5039
@@ -1021,27 +1021,27 @@ S
 #5047
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. A oeste há uma pirâmide.
+passa por constantes mudanÃ§as. A oeste hÃ¡ uma pirÃ¢mide.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5046
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5051
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5053
 D3
-Mesmo daqui, você pode sentir que há um grande mal que se encontra
-dentro da pirâmide projetando-se atraves das areias a oeste.
+Mesmo daqui, vocÃª pode sentir que hÃ¡ um grande mal que se encontra
+dentro da pirÃ¢mide projetando-se atraves das areias a oeste.
 ~
 ~
 0 -1 5040
@@ -1049,26 +1049,26 @@ S
 #5048
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. A oeste há uma pirâmide.
+passa por constantes mudanÃ§as. A oeste hÃ¡ uma pirÃ¢mide.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5039
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5048
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5053
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5041
@@ -1076,26 +1076,26 @@ S
 #5049
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. A noroeste há uma pirâmide.
+passa por constantes mudanÃ§as. A noroeste hÃ¡ uma pirÃ¢mide.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5053
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5054
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5050
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5042
@@ -1103,26 +1103,26 @@ S
 #5050
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. A norte há uma pirâmide.
+passa por constantes mudanÃ§as. A norte hÃ¡ uma pirÃ¢mide.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver... e uma pirâmide ao longe.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver... e uma pirÃ¢mide ao longe.
 ~
 ~
 0 -1 5300
 D1
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5054
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5044
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5042
@@ -1130,22 +1130,22 @@ S
 #5051
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. Ao sudoeste há uma pirâmide e ao leste se
+passa por constantes mudanÃ§as. Ao sudoeste hÃ¡ uma pirÃ¢mide e ao leste se
 encontra um canion muito profundo.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5051
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5052
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5047
@@ -1153,23 +1153,23 @@ S
 #5052
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. A sudoeste há uma pirâmide e um canion
-muito profundo se encontra ao leste. Um pouco abaixo, você pode perceber
+passa por constantes mudanÃ§as. A sudoeste hÃ¡ uma pirÃ¢mide e um canion
+muito profundo se encontra ao leste. Um pouco abaixo, vocÃª pode perceber
 uma pequena borda.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5051
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5053
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5045
@@ -1181,28 +1181,28 @@ S
 #5053
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas.  A areia ao seu redor
-passa por constantes mudanças.  A oeste há uma pirâmide e um canion muito
+passa por constantes mudanÃ§as.  A oeste hÃ¡ uma pirÃ¢mide e um canion muito
 profundo se encontra ao leste.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5052
 D1
-Uma ponte feita com cordas já esgarçadas, cruza o canion... isso não parece
+Uma ponte feita com cordas jÃ¡ esgarÃ§adas, cruza o canion... isso nÃ£o parece
 muito seguro.
 ~
 ~
 0 -1 5062
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5054
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5049
@@ -1210,22 +1210,22 @@ S
 #5054
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. A oeste há uma pirâmide e um canion
+passa por constantes mudanÃ§as. A oeste hÃ¡ uma pirÃ¢mide e um canion
 muito profundo se encontra ao leste.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5053
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5055
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5050
@@ -1233,161 +1233,161 @@ S
 #5055
 O Grande Deserto Oriental~
    Um vasto deserto se estende por milhas e milhas. A areia ao seu redor
-passa por constantes mudanças. A noroeste há uma pirâmide e um canion
+passa por constantes mudanÃ§as. A noroeste hÃ¡ uma pirÃ¢mide e um canion
 muito profundo se encontra ao leste.
 ~
-50 0 0 0 0 2
+50 0 2
 D0
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5054
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5055
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5043
 S
 #5056
-Um Acampamento de Nômades~
-   Este pequeno grupo de nômades do deserto, parou durante o dia para
-descansar e se refrescar neste oásis maravilhoso.  Três tendas e
-alguns camelos fazem parte do cenário.  De dentro de duas das tendas,
-você ouve vozes abafadas, obviamente surpresas com a sua visita.
+Um Acampamento de NÃ´mades~
+   Este pequeno grupo de nÃ´mades do deserto, parou durante o dia para
+descansar e se refrescar neste oÃ¡sis maravilhoso.  TrÃªs tendas e
+alguns camelos fazem parte do cenÃ¡rio.  De dentro de duas das tendas,
+vocÃª ouve vozes abafadas, obviamente surpresas com a sua visita.
 ~
-50 64 0 0 0 2
+50 g 2
 D0
-Alguns camelos estão amarrados em um feixe de estacas cravadas no chão.
+Alguns camelos estÃ£o amarrados em um feixe de estacas cravadas no chÃ£o.
 ~
 ~
 0 -1 5058
 D1
-Você vê que dentro de uma das tendas se encontram um grupo de pessoas
-amontoadas, provavelmente são escravos.
+VocÃª vÃª que dentro de uma das tendas se encontram um grupo de pessoas
+amontoadas, provavelmente sÃ£o escravos.
 ~
 ~
 0 -1 5057
 D2
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5030
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5025
 S
 #5057
 Dentro de Uma Pequena Tenda~
-   Esta é uma pequena e simples tenda, em cujo interior poucas posses
+   Esta Ã© uma pequena e simples tenda, em cujo interior poucas posses
 foram guardadas. Homens e mulheres jazem deitados por todos os lados,
-possivelmente são os escravos do líder deste bando.
+possivelmente sÃ£o os escravos do lÃ­der deste bando.
 ~
-50 72 0 0 0 2
+50 dg 2
 D3
-Você vê o centro do acampamento dos nômades.
+VocÃª vÃª o centro do acampamento dos nÃ´mades.
 ~
 ~
 0 -1 5056
 S
 #5058
 Ao lado dos Camelos~
-   Aqui estão aproximadamente dez camelos, todos amarrados a algumas
-estacas cravadas no chão. Ao leste você vê uma pequena tenda e ao norte
-você vê uma tenda bem maior e muito mais luxuosa.
+   Aqui estÃ£o aproximadamente dez camelos, todos amarrados a algumas
+estacas cravadas no chÃ£o. Ao leste vocÃª vÃª uma pequena tenda e ao norte
+vocÃª vÃª uma tenda bem maior e muito mais luxuosa.
 ~
-50 64 0 0 0 2
+50 g 2
 D0
-Esta tenda parece ser a residência temporária do líder dos nômades. Você
+Esta tenda parece ser a residÃªncia temporÃ¡ria do lÃ­der dos nÃ´mades. VocÃª
 mentalmente se faz um lembrete para visitar este lugar antes de partir.
 ~
 ~
 0 -1 5060
 D1
-Nesta tenda estão homens muito grandes, todos carregando armas.
+Nesta tenda estÃ£o homens muito grandes, todos carregando armas.
 ~
 ~
 0 -1 5059
 D2
-Você vê o centro do acampamento dos nômades.
+VocÃª vÃª o centro do acampamento dos nÃ´mades.
 ~
 ~
 0 -1 5056
 D3
-Há areia até onde seus olhos conseguem ver.
+HÃ¡ areia atÃ© onde seus olhos conseguem ver.
 ~
 ~
 0 -1 5024
 S
 #5059
 A Tenda dos Guerreiros~
-   Esta tenda possui pouco mobiliário mas guarda, principalmente, os que
-são os protetores do bando. Quando você entra, sente que todos lhe fixam
+   Esta tenda possui pouco mobiliÃ¡rio mas guarda, principalmente, os que
+sÃ£o os protetores do bando. Quando vocÃª entra, sente que todos lhe fixam
 friamente.
 ~
-50 72 0 0 0 2
+50 dg 2
 D3
-Você vê alguns camelos bem tranquilos.
+VocÃª vÃª alguns camelos bem tranquilos.
 ~
 ~
 0 -1 5058
 S
 #5060
 A Tenda Principal~
-   Esta tenda é tão bem decorada em seu interior quanto no seu exterior.
+   Esta tenda Ã© tÃ£o bem decorada em seu interior quanto no seu exterior.
 Um tapete foi cuidadosamente estendido sobre a areia e numerosas cestas
 enfileiram-se nas paredes.
 ~
-50 72 0 0 0 2
+50 dg 2
 D1
 ~
 ~
 0 -1 5061
 D2
-Você vê alguns camelos bem tranquilos.
+VocÃª vÃª alguns camelos bem tranquilos.
 ~
 ~
 0 -1 5058
 S
 #5061
 A Tenda Principal~
-   Este é o local onde o líder deste grupo de nômades reside. Você
-examina cuidadosamente as belas tapeçarias, cestas e alguns pinturas
-que ali estão enfeitando o ambiente e conclui que, definitvamente,
-o dono desta tenda é muito rico.
+   Este Ã© o local onde o lÃ­der deste grupo de nÃ´mades reside. VocÃª
+examina cuidadosamente as belas tapeÃ§arias, cestas e alguns pinturas
+que ali estÃ£o enfeitando o ambiente e conclui que, definitvamente,
+o dono desta tenda Ã© muito rico.
 ~
-50 72 0 0 0 2
+50 dg 2
 D3
-Você vê a entrada desta tenda.
+VocÃª vÃª a entrada desta tenda.
 ~
 ~
 0 -1 5060
 S
 #5062
-A Ponte de Corda Esgarçada~
-   Você cuidadosamente começa a caminhar para o outro lado da ponte mas,
-de repente, a corda se rompe e você cai.......
+A Ponte de Corda EsgarÃ§ada~
+   VocÃª cuidadosamente comeÃ§a a caminhar para o outro lado da ponte mas,
+de repente, a corda se rompe e vocÃª cai.......
 ...e cai
         ...e cai
                 ...e cai
-                        ...e você encontra a morte nas pedras abaixo.
+                        ...e vocÃª encontra a morte nas pedras abaixo.
 ~
-50 10 0 0 0 5
+50 bd 5
 S
 #5063
 A Borda de Vento~
-   Sendo muito cuidadoso para não perder o equilíbrio, você dá uma olhada
-e acha que este canion deve ter mais ou menos 1/2 quilômetro de
-profundidade. Para o oeste há uma caverna escura que segue por debaixo
-das areias do deserto e sobre a sua cabeça há uma ponte de corda.
+   Sendo muito cuidadoso para nÃ£o perder o equilÃ­brio, vocÃª dÃ¡ uma olhada
+e acha que este canion deve ter mais ou menos 1/2 quilÃ´metro de
+profundidade. Para o oeste hÃ¡ uma caverna escura que segue por debaixo
+das areias do deserto e sobre a sua cabeÃ§a hÃ¡ uma ponte de corda.
 ~
-50 0 0 0 0 5
+50 0 5
 D3
 ~
 ~
@@ -1400,13 +1400,13 @@ As areias do deserto batem contra o seu rosto.
 S
 #5064
 A Entrada da Caverna~
-   O ar daqui é MUITO mais fresco que o de fora. Vindos do oeste, você
-ouve sons estranhos, mas não consegue ver nada.  A caverna se aprofunda
-na escuridão.
+   O ar daqui Ã© MUITO mais fresco que o de fora. Vindos do oeste, vocÃª
+ouve sons estranhos, mas nÃ£o consegue ver nada.  A caverna se aprofunda
+na escuridÃ£o.
 ~
-50 9 0 0 0 5
+50 ad 5
 D1
-Fora daqui está bem mais claro e venta muito.
+Fora daqui estÃ¡ bem mais claro e venta muito.
 ~
 ~
 0 -1 5063
@@ -1417,12 +1417,12 @@ D3
 S
 #5065
 Uma Toca Misteriosa~
-   Você acabou de tropeçar na casa de alguém.  Pelos tesouros largados
-displicentemente e as inúmeras carcaças apodrecendo, você diria que esta
-é a toca de um dragão. Dizer que tipo de dragão é este, você não poderia
-dizer com certeza. A caverna estreita fora em um túnel para o oeste.
+   VocÃª acabou de tropeÃ§ar na casa de alguÃ©m.  Pelos tesouros largados
+displicentemente e as inÃºmeras carcaÃ§as apodrecendo, vocÃª diria que esta
+Ã© a toca de um dragÃ£o. Dizer que tipo de dragÃ£o Ã© este, vocÃª nÃ£o poderia
+dizer com certeza. A caverna estreita fora em um tÃºnel para o oeste.
 ~
-50 201 0 0 0 5
+50 adgh 5
 D1
 ~
 ~
@@ -1433,11 +1433,11 @@ D3
 0 -1 5066
 S
 #5066
-Um Túnel Largo~
-   Este túnel parece entrar infinitamente atraves da escuridão. Você
+Um TÃºnel Largo~
+   Este tÃºnel parece entrar infinitamente atraves da escuridÃ£o. VocÃª
 cuidadosamente vai apalpando as paredes para sentir por onde anda.
 ~
-50 9 0 0 0 5
+50 ad 5
 D1
 ~
 ~
@@ -1448,11 +1448,11 @@ D3
 0 -1 5067
 S
 #5067
-Um Túnel Mais Estreito~
-   O túnel vai ficando muito estreito e você tem que se espremer para
-conseguir passar. O chão parece que se nivelou um pouco.
+Um TÃºnel Mais Estreito~
+   O tÃºnel vai ficando muito estreito e vocÃª tem que se espremer para
+conseguir passar. O chÃ£o parece que se nivelou um pouco.
 ~
-50 9 0 0 0 5
+50 ad 5
 D1
 ~
 ~
@@ -1464,10 +1464,10 @@ D2
 S
 #5068
 Uma Trinca Estreita~
-   Esta é a parte do túnel onde fica mais difícil de se mover, porque as
-paredes parecem que estão vindo ao seu encontro.
+   Esta Ã© a parte do tÃºnel onde fica mais difÃ­cil de se mover, porque as
+paredes parecem que estÃ£o vindo ao seu encontro.
 ~
-50 265 0 0 0 5
+50 adi 5
 D0
 ~
 ~
@@ -1479,11 +1479,11 @@ D3
 S
 #5069
 Uma Pequena Caverna~
-   É escuro e muito úmido e há morcegos pendurados no teto. Uma trinca
-muito estreita aparece na parede a leste.  O chão se inclina para cima
+   Ã‰ escuro e muito Ãºmido e hÃ¡ morcegos pendurados no teto. Uma trinca
+muito estreita aparece na parede a leste.  O chÃ£o se inclina para cima
 agora.
 ~
-50 9 0 0 0 5
+50 ad 5
 D1
 ~
 ~
@@ -1495,10 +1495,10 @@ D3
 S
 #5070
 Um Pequeno Feixe de Luz~
-   Atraves deste pequeno feixe de luz você pode ver um buraco estreito no
-teto grande o bastante para uma pessoa passar. Ao leste está a caverna.
+   Atraves deste pequeno feixe de luz vocÃª pode ver um buraco estreito no
+teto grande o bastante para uma pessoa passar. Ao leste estÃ¡ a caverna.
 ~
-50 9 0 0 0 5
+50 ad 5
 D1
 ~
 ~
@@ -1508,4 +1508,4 @@ D4
 ~
 0 -1 5009
 S
-$~
+$
