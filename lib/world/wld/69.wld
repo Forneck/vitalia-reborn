@@ -1,39 +1,39 @@
 #6900
 O Jardim~
-   Você está agora em um pequeno jardim.  Há muitas plantas aqui, mas a
-grande maioria da flora local são vários tipos de vitória-régia.  Este
-jardim do Templo parece ser bem cuidado e todas as plantas estão
+   VocÃª estÃ¡ agora em um pequeno jardim.  HÃ¡ muitas plantas aqui, mas a
+grande maioria da flora local sÃ£o vÃ¡rios tipos de vitÃ³ria-rÃ©gia.  Este
+jardim do Templo parece ser bem cuidado e todas as plantas estÃ£o
 florescendo.
 ~
-69 64 0 0 0 2
-D2
-Você vê dentro do Templo.
+69 g 2
+D2 
+VocÃª vÃª dentro do Templo.
 ~
 ~
 0 -1 6903
 S
 #6901
 Fora dos Muros do Templo~
-   Você se encontra fora dos muros do primeiro Templo de Anura.  O muro é
-feito de pedra marrom e é muito alto para manter alguma coisa dentro ou
+   VocÃª se encontra fora dos muros do primeiro Templo de Anura.  O muro Ã©
+feito de pedra marrom e Ã© muito alto para manter alguma coisa dentro ou
 fora.
 ~
-69 64 0 0 0 2
-D2
-Você vê as dependências do Templo.
+69 g 2
+D2 
+VocÃª vÃª as dependÃªncias do Templo.
 ~
 ~
 0 -1 6906
 S
-#6902
+#6902 
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construido de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construido de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D1
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6903
@@ -44,314 +44,316 @@ D2
 S
 #6903
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construido de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construido de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê um pequeno jardim
+VocÃª vÃª um pequeno jardim
 ~
 ~
 0 -1 6900
 D1
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6904
 D2
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6908
+
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6902
 S
 #6904
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construido de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construido de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D2
-Você vê uma piscina de água.
+VocÃª vÃª uma piscina de Ã¡gua.
 ~
 ~
 0 -1 6909
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6903
 S
 #6905
 Fora do Primeiro Templo~
-   Você se encontra fora de um grande Templo no final da trilha estreita.  Uma
-subida íngreme leva para o Templo ao leste, e a trilha é para oeste.  Esse
-Templo contém importantes informações de onde se encontra os outros Templos
-de Anura, uma peça de quebra-cabeça que quando resolvido levará você para o
-grande Templo de Anura, onde a riqueza está fora da sua imaginação.
+   VocÃª se encontra fora de um grande Templo no final da trilha estreita.  Uma
+subida Ã­ngreme leva para o Templo ao leste, e a trilha Ã© para oeste.  Esse
+Templo contÃ©m importantes informaÃ§Ãµes de onde se encontra os outros Templos
+de Anura, uma peÃ§a de quebra-cabeÃ§a que quando resolvido levarÃ¡ vocÃª para o
+grande Templo de Anura, onde a riqueza estÃ¡ fora da sua imaginaÃ§Ã£o.
 ~
-69 64 0 0 0 2
+69 g 2
 D1
-Você vê as dependências do Templo.
+VocÃª vÃª as dependÃªncias do Templo.
 ~
 ~
 0 -1 6906
 D3
-Você vê a avenida real.
+VocÃª vÃª a avenida real.
 ~
 ~
 0 -1 3301
 S
 #6906
-As Dependências do Templo~
-   Você se encontra em um lugar íngreme das dependências do Templo.  Elas
-são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
-Você vê algumas plantas florescendo nas fendas das dependências e indo em
-direção ao sol.
+As DependÃªncias do Templo~
+   VocÃª se encontra em um lugar Ã­ngreme das dependÃªncias do Templo.  Elas
+sÃ£o feitas de uma espÃ©cie de rocha marrom que foi bem cuidada e Ã© bem macia.
+VocÃª vÃª algumas plantas florescendo nas fendas das dependÃªncias e indo em
+direÃ§Ã£o ao sol.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê o muro.
+VocÃª vÃª o muro.
 ~
 ~
 0 -1 6901
 D1
-Você vê um corredor sombrio.
+VocÃª vÃª um corredor sombrio.
 ~
 ~
 0 -1 6907
 D2
-Você vê o muro.
+VocÃª vÃª o muro.
 ~
 ~
 0 -1 6912
 D3
-Você vê o fundo das dependências.
+VocÃª vÃª o fundo das dependÃªncias.
 ~
 ~
 0 -1 6905
 S
 #6907
 Corredor Sombrio~
-   Você se encontra em um longo corredor sombrio.  Você pode ver algumas
-fracas sombras, mas você acaba não vendo um palmo na sua frente.
+   VocÃª se encontra em um longo corredor sombrio.  VocÃª pode ver algumas
+fracas sombras, mas vocÃª acaba nÃ£o vendo um palmo na sua frente.
 ~
-69 65 0 0 0 0
+69 ga 0
 D0
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6902
 D1
-Você vê um corredor sombrio.
+VocÃª vÃª um corredor sombrio.
 ~
 ~
 0 -1 6908
 D2
-Você vê um corredor sombrio.
+VocÃª vÃª um corredor sombrio.
 ~
 ~
 0 -1 6913
 D3
-Você vê as dependências do Templo.
+VocÃª vÃª as dependÃªncias do Templo.
 ~
 ~
 0 -1 6906
 S
 #6908
 Corredor Sombrio~
-   Você se encontra em um longo corredor sombrio.  Você pode ver algumas
-fracas sombras, mas você acaba não vendo um palmo na sua frente.
+   VocÃª se encontra em um longo corredor sombrio.  VocÃª pode ver algumas
+fracas sombras, mas vocÃª acaba nÃ£o vendo um palmo na sua frente.
 ~
-69 65 0 0 0 0
+69 ga 0
 D0
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6903
 D1
-Você vê uma piscina de água.
+VocÃª vÃª uma piscina de Ã¡gua.
 ~
 ~
 0 -1 6909
 D2
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6914
 D3
-Você vê um corredor sombrio.
+VocÃª vÃª um corredor sombrio.
 ~
 ~
 0 -1 6907
 S
 #6909
-Piscina de Água~
-   Você está em uma piscina de água antes do altar onde vê várias criaturas
-nadando, parecendo pertubadas com sua presença.
+Piscina de Ãgua~
+   VocÃª estÃ¡ em uma piscina de Ã¡gua antes do altar onde vÃª vÃ¡rias criaturas
+nadando, parecendo pertubadas com sua presenÃ§a.
 ~
-69 64 0 0 0 8
+69 g 8 
 D0
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6904
 D1
-Você vê o altar.
+VocÃª vÃª o altar.
 ~
 ~
 0 -1 6910
 D2
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6915
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6908
 S
-#6910
+#6910 
 Um Altar para Anura~
-   Você vê um grande altar dourado com uma estátua de um sapo gigante.  Você
-vê outra sala para leste.
+   VocÃª vÃª um grande altar dourado com uma estÃ¡tua de um sapo gigante.  VocÃª
+vÃª outra sala para leste.
 ~
-69 64 0 0 0 0
+69 g 0
 D1
-Você vê uma pequena sala atrás do altar.
+VocÃª vÃª uma pequena sala atrÃ¡s do altar.
 ~
 ~
 0 -1 6911
 D3
-Você vê uma piscina de água.
+VocÃª vÃª uma piscina de Ã¡gua.
 ~
 ~
 0 -1 6909
 D5
-Ali há uma pequena sala.
+Ali hÃ¡ uma pequena sala.
 ~
-barreira mágica~
-0 -1 6917
+barreira magica~
+:n 2 a barreira mÃ¡gica
+abch -1 6917
 S
 #6911
-Atrás do Altar~
-   Você está em uma pequena sala atrás do altar.  Ela é escura mas parece
-haver escrituras na parede e há uma grande rocha no meio da sala.  As
-escrituras dizem a você que você pode usar as quatro tabuletas juntas para
+AtrÃ¡s do Altar~
+   VocÃª estÃ¡ em uma pequena sala atrÃ¡s do altar.  Ela Ã© escura mas parece
+haver escrituras na parede e hÃ¡ uma grande rocha no meio da sala.  As
+escrituras dizem a vocÃª que vocÃª pode usar as quatro tabuletas juntas para
 achar as chaves para o grande Templo de Anura.  Elas ainda falam sobre outro
 Templo ao sudeste de Nova Thalos.
 ~
-69 64 0 0 0 0
+69 g 0
 D3
-Você vê um altar.
+VocÃª vÃª um altar.
 ~
 ~
 0 -1 6910
 S
 #6912
 Fora dos Muros do Templo~
-   Você se encontra fora dos muros do primeiro Templo de Anura.  O muro é
-feito de pedra marrom e é muito alto para manter alguma coisa dentro ou
+   VocÃª se encontra fora dos muros do primeiro Templo de Anura.  O muro Ã©
+feito de pedra marrom e Ã© muito alto para manter alguma coisa dentro ou
 fora.
 ~
-69 64 0 0 0 1
+69 g 1
 D0
-Você vê as dependências do Templo.
+VocÃª vÃª as dependÃªncias do Templo.
 ~
 ~
 0 -1 6906
 S
 #6913
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construido de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construido de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê um corredor sombrio.
+VocÃª vÃª um corredor sombrio.
 ~
 ~
 0 -1 6907
 D1
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6914
 S
 #6914
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construido de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construido de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê um corredor sombrio.
+VocÃª vÃª um corredor sombrio.
 ~
 ~
 0 -1 6908
 D1
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6915
 D2
-Você vê um pequeno jardim.
+VocÃª vÃª um pequeno jardim.
 ~
 ~
 0 -1 6916
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6913
 S
 #6915
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construido de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construido de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê uma piscina de água.
+VocÃª vÃª uma piscina de Ã¡gua.
 ~
 ~
 0 -1 6909
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6914
 S
 #6916
 O Jardim~
-   Você está agora em um pequeno jardim.  Há muitas plantas aqui, mas a
-grande maioria da flora local são vários tipos de vitória-régia.  Este
-jardim do Templo parece ser bem cuidado e todas as plantas estão
+   VocÃª estÃ¡ agora em um pequeno jardim.  HÃ¡ muitas plantas aqui, mas a
+grande maioria da flora local sÃ£o vÃ¡rios tipos de vitÃ³ria-rÃ©gia.  Este
+jardim do Templo parece ser bem cuidado e todas as plantas estÃ£o
 florescendo.
 ~
-69 64 0 0 0 2
+69 g 2
 D0
-Você vê dentro do Templo.
+VocÃª vÃª dentro do Templo.
 ~
 ~
 0 -1 6914
 S
 #6917
 Sob o Altar~
-   Você se encontra em uma pequena sala sob o altar.  O chão é coberto de
-areia, mas se você procurar bem saberá que pode encontrar alguma coisa ali.
+   VocÃª se encontra em uma pequena sala sob o altar.  O chÃ£o Ã© coberto de
+areia, mas se vocÃª procurar bem saberÃ¡ que pode encontrar alguma coisa ali.
 ~
-69 64 0 0 0 0
+69 g 0
 D4
 ~
 ~
@@ -359,1505 +361,1515 @@ D4
 S
 #6918
 Fora do Segundo Templo~
-   Você se encontra fora de um Templo retangular construído para Anura.
-Para o sul está as dependências do Templo, e para norte se encontra a cidade
+   VocÃª se encontra fora de um Templo retangular construÃ­do para Anura.
+Para o sul estÃ¡ as dependÃªncias do Templo, e para norte se encontra a cidade
 de Nova Thalos.
 ~
-69 68 0 0 0 1
-D2
-Você vê as dependências do Templo.
-~
-~
-0 -1 6920
+69 cg 1
 D6
-Você vê a cidade de Nova Thalos.
+VocÃª vÃª a cidade de Nova Thalos.
 ~
 ~
 0 -1 5411
+D2
+VocÃª vÃª as dependÃªncias do Templo.
+~
+~
+0 -1 6920
 S
 #6919
 O Jardim~
-   Você está agora em um pequeno jardim.  Há muitas plantas aqui, mas a
-grande maioria da flora local são vários tipos de vitória-régia.  Este
-jardim do Templo parece ser bem cuidado e todas as plantas estão
+   VocÃª estÃ¡ agora em um pequeno jardim.  HÃ¡ muitas plantas aqui, mas a
+grande maioria da flora local sÃ£o vÃ¡rios tipos de vitÃ³ria-rÃ©gia.  Este
+jardim do Templo parece ser bem cuidado e todas as plantas estÃ£o
 florescendo.
 ~
-69 64 0 0 0 2
+69 g 2
 D1
-Você vê as dependências do Templo.
+VocÃª vÃª as dependÃªncias do Templo.
 ~
 ~
 0 -1 6920
 S
 #6920
-As Dependências do Templo~
-   Você se encontra em um lugar íngreme das dependências do Templo.  Elas
-são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
-Você vê algumas plantas florescendo nas fendas das dependências e indo em
-direção ao sol.
+As DependÃªncias do Templo~
+   VocÃª se encontra em um lugar Ã­ngreme das dependÃªncias do Templo.  Elas
+sÃ£o feitas de uma espÃ©cie de rocha marrom que foi bem cuidada e Ã© bem macia.
+VocÃª vÃª algumas plantas florescendo nas fendas das dependÃªncias e indo em
+direÃ§Ã£o ao sol.
 ~
-69 64 0 0 0 4
+69 g 4
 D0
-Você vê o fundo das dependências.
+VocÃª vÃª o fundo das dependÃªncias.
 ~
 ~
 0 -1 6918
 D1
-Você vê um jardim.
+VocÃª vÃª um jardim.
 ~
 ~
 0 -1 6921
 D2
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6923
 D3
-Você vê um jardim.
+VocÃª vÃª um jardim.
 ~
 ~
 0 -1 6919
 S
 #6921
 O Jardim~
-   Você está agora em um pequeno jardim.  Há muitas plantas aqui, mas a
-grande maioria da flora local são vários tipos de vitória-régia.  Este
-jardim do Templo parece ser bem cuidado e todas as plantas estão
+   VocÃª estÃ¡ agora em um pequeno jardim.  HÃ¡ muitas plantas aqui, mas a
+grande maioria da flora local sÃ£o vÃ¡rios tipos de vitÃ³ria-rÃ©gia.  Este
+jardim do Templo parece ser bem cuidado e todas as plantas estÃ£o
 florescendo.
 ~
-69 64 0 0 0 2
+69 g 2
 D3
-Você vê as dependências do Templo.
+VocÃª vÃª as dependÃªncias do Templo.
 ~
 ~
 0 -1 6920
 D5
-Você vê um buraco.
+VocÃª vÃª um buraco.
 ~
-barreira mágica~
-0 -1 6934
+barreira magica~
+:n 2 a barreira mÃ¡gica
+abch -1 6934
 S
 #6922
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construido de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construido de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D1
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6923
 D2
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6925
 S
 #6923
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construido de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construido de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê as dependências do Templo.
+VocÃª vÃª as dependÃªncias do Templo.
 ~
 ~
 0 -1 6920
 D1
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6924
 D2
-Você vê o altar norte
+VocÃª vÃª o altar norte
 ~
 ~
 0 -1 6926
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6922
 S
 #6924
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construido de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construido de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D2
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6927
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6923
 S
 #6925
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construido de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construido de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6922
 D1
-Você vê o altar norte
+VocÃª vÃª o altar norte
 ~
 ~
 0 -1 6926
 D2
-Você vê o altar oeste
+VocÃª vÃª o altar oeste
 ~
 ~
 0 -1 6928
 S
 #6926
 O Altar Norte~
-   Você se encontra no altar norte de um dos Templos construídos para Anura.
+   VocÃª se encontra no altar norte de um dos Templos construÃ­dos para Anura.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6923
 D1
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6927
 D2
-Você vê o altar central.
+VocÃª vÃª o altar central.
 ~
 ~
 0 -1 6929
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6925
 S
 #6927
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construido de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construido de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6924
 D2
-Você vê o altar leste.
+VocÃª vÃª o altar leste.
 ~
 ~
 0 -1 6930
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6926
 S
 #6928
 O Altar Oeste~
-   Você se encontra no altar oeste de um dos Templos construídos para Anura.
+   VocÃª se encontra no altar oeste de um dos Templos construÃ­dos para Anura.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6925
 D1
-Você vê o altar central.
+VocÃª vÃª o altar central.
 ~
 ~
 0 -1 6929
 D2
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6931
 S
 #6929
 O Altar Central~
-   Você se encontra no altar central de um dos Templos construídos para
-Anura.  Algumas inscrições dizem a você que existe outro Templo aos
+   VocÃª se encontra no altar central de um dos Templos construÃ­dos para
+Anura.  Algumas inscriÃ§Ãµes dizem a vocÃª que existe outro Templo aos
 arredores.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê o altar norte.
+VocÃª vÃª o altar norte.
 ~
 ~
 0 -1 6926
 D1
-Você vê o altar leste.
+VocÃª vÃª o altar leste.
 ~
 ~
 0 -1 6930
 D2
-Você vê o altar sul.
+VocÃª vÃª o altar sul.
 ~
 ~
 0 -1 6932
 D3
-Você vê o altar oeste.
+VocÃª vÃª o altar oeste.
 ~
 ~
 0 -1 6928
 S
 #6930
 O Altar Leste~
-   Você se encontra no altar leste de um dos Templos construídos para Anura.
+   VocÃª se encontra no altar leste de um dos Templos construÃ­dos para Anura.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6927
 D2
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6933
 D3
-Você vê o altar central.
+VocÃª vÃª o altar central.
 ~
 ~
 0 -1 6929
 S
 #6931
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construido de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construido de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê o altar oeste
+VocÃª vÃª o altar oeste
 ~
 ~
 0 -1 6928
 D1
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6932
 S
 #6932
 O Altar Sul~
-   Você se encontra no altar sul de um dos Templos construídos para Anura.
+   VocÃª se encontra no altar sul de um dos Templos construÃ­dos para Anura.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê o altar central.
+VocÃª vÃª o altar central.
 ~
 ~
 0 -1 6929
 D1
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6933
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6931
 S
 #6933
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construido de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construido de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê o altar leste.
+VocÃª vÃª o altar leste.
 ~
 ~
 0 -1 6930
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6932
 S
 #6934
 Sob o Jardim~
-   Você se encontra em um buraco no chão.  Areia solta cobre o fundo do
+   VocÃª se encontra em um buraco no chÃ£o.  Areia solta cobre o fundo do
 buraco.
 ~
-69 64 0 0 0 0
+69 g 0
 D4
-Você vê um jardim.
+VocÃª vÃª um jardim.
 ~
 ~
 0 -1 6921
 S
-#6935
+#6935 
 O Lago~
-   Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
-está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
+   VocÃª estÃ¡ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+estÃ¡ tranqÃ¼ilo e sem ondas e existe uma fina camada de limo sobre a Ã¡gua.
 ~
-69 64 0 0 0 0
+69 g 0
 D1
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6936
 D2
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6940
 S
 #6936
 O Lago~
-   Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
-está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
+   VocÃª estÃ¡ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+estÃ¡ tranqÃ¼ilo e sem ondas e existe uma fina camada de limo sobre a Ã¡gua.
 ~
-69 64 0 0 0 6
+69 g 6
 D1
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6937
 D3
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6935
 S
 #6937
 O Lago~
-   Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
-está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
+   VocÃª estÃ¡ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+estÃ¡ tranqÃ¼ilo e sem ondas e existe uma fina camada de limo sobre a Ã¡gua.
 ~
-69 64 0 0 0 6
+69 g 6
 D1
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6938
 D3
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6936
 S
 #6938
 O Lago~
-   Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
-está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
+   VocÃª estÃ¡ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+estÃ¡ tranqÃ¼ilo e sem ondas e existe uma fina camada de limo sobre a Ã¡gua.
 ~
-69 64 0 0 0 6
+69 g 6
 D1
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6939
 D3
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6937
 S
 #6939
 O Lago~
-   Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
-está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
+   VocÃª estÃ¡ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+estÃ¡ tranqÃ¼ilo e sem ondas e existe uma fina camada de limo sobre a Ã¡gua.
 ~
-69 64 0 0 0 6
+69 g 6
 D2
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6944
 D3
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6938
 S
 #6940
 O Lago~
-   Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
-está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
+   VocÃª estÃ¡ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+estÃ¡ tranqÃ¼ilo e sem ondas e existe uma fina camada de limo sobre a Ã¡gua.
 ~
-69 64 0 0 0 6
+69 g 6
 D0
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6935
 D2
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6946
 S
 #6941
-As Dependências do Templo~
-   Você se encontra em um lugar íngreme das dependências do Templo.  Elas
-são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
-Você vê algumas plantas florescendo nas fendas das dependências e indo em
-direção ao sol.
+As DependÃªncias do Templo~
+   VocÃª se encontra em um lugar Ã­ngreme das dependÃªncias do Templo.  Elas
+sÃ£o feitas de uma espÃ©cie de rocha marrom que foi bem cuidada e Ã© bem macia.
+VocÃª vÃª algumas plantas florescendo nas fendas das dependÃªncias e indo em
+direÃ§Ã£o ao sol.
 ~
-69 64 0 0 0 4
+69 g 4
 D1
-Você vê as dependências do Templo.
+VocÃª vÃª as dependÃªncias do Templo.
 ~
 ~
 0 -1 6942
 D2
-Você vê as dependências do Templo.
+VocÃª vÃª as dependÃªncias do Templo.
 ~
 ~
 0 -1 6947
 S
 #6942
-As Dependências do Templo~
-   Você se encontra em um lugar íngreme das dependências do Templo.  Elas
-são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
-Você vê algumas plantas florescendo nas fendas das dependências e indo em
-direção ao sol.
+As DependÃªncias do Templo~
+   VocÃª se encontra em um lugar Ã­ngreme das dependÃªncias do Templo.  Elas
+sÃ£o feitas de uma espÃ©cie de rocha marrom que foi bem cuidada e Ã© bem macia.
+VocÃª vÃª algumas plantas florescendo nas fendas das dependÃªncias e indo em
+direÃ§Ã£o ao sol.
 ~
-69 64 0 0 0 4
+69 g 4
 D1
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6943
 D2
-Você vê o grande altar.
+VocÃª vÃª o grande altar.
 ~
 ~
 0 -1 6948
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6941
 S
 #6943
-As Dependências do Templo~
-   Você se encontra em um lugar íngreme das dependências do Templo.  Elas
-são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
-Você vê algumas plantas florescendo nas fendas das dependências e indo em
-direção ao sol.
+As DependÃªncias do Templo~
+   VocÃª se encontra em um lugar Ã­ngreme das dependÃªncias do Templo.  Elas
+sÃ£o feitas de uma espÃ©cie de rocha marrom que foi bem cuidada e Ã© bem macia.
+VocÃª vÃª algumas plantas florescendo nas fendas das dependÃªncias e indo em
+direÃ§Ã£o ao sol.
 ~
-69 64 0 0 0 4
+69 g 4
 D2
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6949
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6942
 S
 #6944
 O Lago~
-   Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
-está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
+   VocÃª estÃ¡ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+estÃ¡ tranqÃ¼ilo e sem ondas e existe uma fina camada de limo sobre a Ã¡gua.
 ~
-69 64 0 0 0 4
+69 g 4
 D0
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6939
 D2
-Você vê uma ponte.
+VocÃª vÃª uma ponte.
 ~
 ~
 0 -1 6950
 S
 #6945
 Sob o Lago~
-   Você se encontra em um buraco de ar cheio de lodo sob o lago.
+   VocÃª se encontra em um buraco de ar cheio de lodo sob o lago.
 ~
-69 64 0 0 0 0
+69 g 0
 D4
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6957
 S
 #6946
 O Lago~
-   Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
-está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
+   VocÃª estÃ¡ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+estÃ¡ tranqÃ¼ilo e sem ondas e existe uma fina camada de limo sobre a Ã¡gua.
 ~
-69 64 0 0 0 6
+69 g 6
 D0
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6940
 D2
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6952
 S
 #6947
-As Dependências do Templo~
-   Você se encontra em um lugar íngreme das dependências do Templo.  Elas
-são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
-Você vê algumas plantas florescendo nas fendas das dependências e indo em
-direção ao sol.
+As DependÃªncias do Templo~
+   VocÃª se encontra em um lugar Ã­ngreme das dependÃªncias do Templo.  Elas
+sÃ£o feitas de uma espÃ©cie de rocha marrom que foi bem cuidada e Ã© bem macia.
+VocÃª vÃª algumas plantas florescendo nas fendas das dependÃªncias e indo em
+direÃ§Ã£o ao sol.
 ~
-69 64 0 0 0 4
+69 g 4
 D0
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6941
 D1
-Você vê o grande altar.
+VocÃª vÃª o grande altar.
 ~
 ~
 0 -1 6948
 D2
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6953
 S
 #6948
 O Grande Altar~
-   Você se encontra no altar do terceiro Templo de Anura.  Algumas
-inscrições no altar dizem a você que há outro Templo nos túneis a norte de
+   VocÃª se encontra no altar do terceiro Templo de Anura.  Algumas
+inscriÃ§Ãµes no altar dizem a vocÃª que hÃ¡ outro Templo nos tÃºneis a norte de
 Nova Thalos.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê as dependências do Templo.
+VocÃª vÃª as dependÃªncias do Templo.
 ~
 ~
 0 -1 6942
 D1
-Você vê as dependências do Templo.
+VocÃª vÃª as dependÃªncias do Templo.
 ~
 ~
 0 -1 6949
 D2
-Você vê as dependências do Templo.
+VocÃª vÃª as dependÃªncias do Templo.
 ~
 ~
 0 -1 6954
 D3
-Você vê as dependências do Templo.
+VocÃª vÃª as dependÃªncias do Templo.
 ~
 ~
 0 -1 6947
 S
 #6949
-As Dependências do Templo~
-   Você se encontra em um lugar íngreme das dependências do Templo.  Elas
-são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
-Você vê algumas plantas florescendo nas fendas das dependências e indo em
-direção ao sol.
+As DependÃªncias do Templo~
+   VocÃª se encontra em um lugar Ã­ngreme das dependÃªncias do Templo.  Elas
+sÃ£o feitas de uma espÃ©cie de rocha marrom que foi bem cuidada e Ã© bem macia.
+VocÃª vÃª algumas plantas florescendo nas fendas das dependÃªncias e indo em
+direÃ§Ã£o ao sol.
 ~
-69 64 0 0 0 4
+69 g 4
 D0
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6943
 D1
-Você vê uma ponte.
+VocÃª vÃª uma ponte.
 ~
 ~
 0 -1 6950
 D2
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6955
 D3
-Você vê o altar.
+VocÃª vÃª o altar.
 ~
 ~
 0 -1 6948
 S
 #6950
 Na Ponte~
-   Você se encontra em uma ponte sobre um pequeno lago fora do terceiro
-Templo de Anura.  O Templo está a oeste e o lago corre para norte e sul.
+   VocÃª se encontra em uma ponte sobre um pequeno lago fora do terceiro
+Templo de Anura.  O Templo estÃ¡ a oeste e o lago corre para norte e sul.
 ~
-69 64 0 0 0 2
+69 g 2
 D0
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6944
 D1
-Você vê a borda da ponte.
+VocÃª vÃª a borda da ponte.
 ~
 ~
 0 -1 6951
 D2
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6956
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6949
 S
 #6951
 Fora do Terceiro Templo~
-   Você se encontra fora de um Templo em forma piramidal que foi construído
-para Anura.  A oeste está uma ponte atravessando o lago que circunda o
+   VocÃª se encontra fora de um Templo em forma piramidal que foi construÃ­do
+para Anura.  A oeste estÃ¡ uma ponte atravessando o lago que circunda o
 Templo.
 ~
-69 64 0 0 0 1
+69 g 1
 D1
-Você vê um estreito caminho.
+VocÃª vÃª um estreito caminho.
 ~
 ~
 0 -1 5023
 D3
-Você vê uma ponte.
+VocÃª vÃª uma ponte.
 ~
 ~
 0 -1 6950
 S
 #6952
 O Lago~
-   Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
-está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
+   VocÃª estÃ¡ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+estÃ¡ tranqÃ¼ilo e sem ondas e existe uma fina camada de limo sobre a Ã¡gua.
 ~
-69 64 0 0 0 6
+69 g 6
 D0
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6946
 D2
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6957
 S
 #6953
-As Dependências do Templo~
-   Você se encontra em um lugar íngreme das dependências do Templo.  Elas
-são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
-Você vê algumas plantas florescendo nas fendas das dependências e indo em
-direção ao sol.
+As DependÃªncias do Templo~
+   VocÃª se encontra em um lugar Ã­ngreme das dependÃªncias do Templo.  Elas
+sÃ£o feitas de uma espÃ©cie de rocha marrom que foi bem cuidada e Ã© bem macia.
+VocÃª vÃª algumas plantas florescendo nas fendas das dependÃªncias e indo em
+direÃ§Ã£o ao sol.
 ~
-69 64 0 0 0 4
+69 g 4
 D0
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6947
 D1
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6954
 S
 #6954
-As Dependências do Templo~
-   Você se encontra em um lugar íngreme das dependências do Templo.  Elas
-são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
-Você vê algumas plantas florescendo nas fendas das dependências e indo em
-direção ao sol.
+As DependÃªncias do Templo~
+   VocÃª se encontra em um lugar Ã­ngreme das dependÃªncias do Templo.  Elas
+sÃ£o feitas de uma espÃ©cie de rocha marrom que foi bem cuidada e Ã© bem macia.
+VocÃª vÃª algumas plantas florescendo nas fendas das dependÃªncias e indo em
+direÃ§Ã£o ao sol.
 ~
-69 64 0 0 0 4
+69 g 4
 D0
-Você vê o altar.
+VocÃª vÃª o altar.
 ~
 ~
 0 -1 6948
 D1
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6955
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6953
 S
 #6955
-As Dependências do Templo~
-   Você se encontra em um lugar íngreme das dependências do Templo.  Elas
-são feitas de uma espécie de rocha marrom que foi bem cuidada e é bem macia.
-Você vê algumas plantas florescendo nas fendas das dependências e indo em
-direção ao sol.
+As DependÃªncias do Templo~
+   VocÃª se encontra em um lugar Ã­ngreme das dependÃªncias do Templo.  Elas
+sÃ£o feitas de uma espÃ©cie de rocha marrom que foi bem cuidada e Ã© bem macia.
+VocÃª vÃª algumas plantas florescendo nas fendas das dependÃªncias e indo em
+direÃ§Ã£o ao sol.
 ~
-69 64 0 0 0 4
+69 g 4
 D1
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6949
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6954
 S
 #6956
 O Lago~
-   Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
-está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
+   VocÃª estÃ¡ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+estÃ¡ tranqÃ¼ilo e sem ondas e existe uma fina camada de limo sobre a Ã¡gua.
 ~
-69 64 0 0 0 6
+69 g 6
 D0
-Você vê uma ponte.
+VocÃª vÃª uma ponte.
 ~
 ~
 0 -1 6950
 D2
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6961
 S
 #6957
 O Lago~
-   Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
-está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
+   VocÃª estÃ¡ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+estÃ¡ tranqÃ¼ilo e sem ondas e existe uma fina camada de limo sobre a Ã¡gua.
 ~
-69 64 0 0 0 6
+69 g 6
 D0
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6952
 D1
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6958
 D5
-Você vê ume espécie de bolha de ar ali.
+VocÃª vÃª ume espÃ©cie de bolha de ar ali.
 ~
-barreira mágica~
-0 -1 6945
+barreira magica~
+:n 2 a barreira mÃ¡gica
+abch -1 6945
 S
 #6958
 O Lago~
-   Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
-está tranqüilo e sem ondas e existe uma fina camada de limo sobre
-a água.
+   VocÃª estÃ¡ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+estÃ¡ tranqÃ¼ilo e sem ondas e existe uma fina camada de limo sobre
+a Ã¡gua.
 ~
-69 64 0 0 0 6
+69 g 6
 D1
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6959
 D3
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6957
 S
 #6959
 O Lago~
-   Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
-está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
+   VocÃª estÃ¡ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+estÃ¡ tranqÃ¼ilo e sem ondas e existe uma fina camada de limo sobre a Ã¡gua.
 ~
-69 64 0 0 0 6
+69 g 6
 D1
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6960
 D3
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6958
 S
 #6960
 O Lago~
-Você está em um pequeno lago que rodeia o terceiro Templo de Anura.
-Ele está tranqüilo e sem ondas e existe uma fina camada de limo sobre
-a água.
+VocÃª estÃ¡ em um pequeno lago que rodeia o terceiro Templo de Anura.
+Ele estÃ¡ tranqÃ¼ilo e sem ondas e existe uma fina camada de limo sobre
+a Ã¡gua.
 ~
-69 64 0 0 0 6
+69 g 6
 D1
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6961
 D3
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6959
 S
 #6961
 O Lago~
-   Você está em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
-está tranqüilo e sem ondas e existe uma fina camada de limo sobre a água.
+   VocÃª estÃ¡ em um pequeno lago que rodeia o terceiro Templo de Anura.  Ele
+estÃ¡ tranqÃ¼ilo e sem ondas e existe uma fina camada de limo sobre a Ã¡gua.
 ~
-69 64 0 0 0 6
+69 g 6
 D0
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6956
 D3
-Você vê o lago.
+VocÃª vÃª o lago.
 ~
 ~
 0 -1 6960
 S
 #6962
 O Altar~
-   Você se encontra agora no altar do quarto Templo de Anura.  Algumas
-inscrições no altar dizem a você que você deve reunir as quatro tabuletas
+   VocÃª se encontra agora no altar do quarto Templo de Anura.  Algumas
+inscriÃ§Ãµes no altar dizem a vocÃª que vocÃª deve reunir as quatro tabuletas
 para encontrar as chaves para o quinto Templo.
 ~
-69 64 0 0 0 0
+69 g 0
 D2
-Você vê um poço de fogo.
+VocÃª vÃª um poÃ§o de fogo.
 ~
 ~
 0 -1 6964
 S
 #6963
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construido de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construido de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D1
-Você vê um poço de fogo.
+VocÃª vÃª um poÃ§o de fogo.
 ~
 ~
 0 -1 6964
 D2
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6966
 S
 #6964
-Poço de Fogo~
-   Você está em frente à um grande poço no chão da onde pulam labaredas de
-fogo.  Ele é muito quente e será melhor andar nas bordas do poço se
-possível.
+PoÃ§o de Fogo~
+   VocÃª estÃ¡ em frente Ã  um grande poÃ§o no chÃ£o da onde pulam labaredas de
+fogo.  Ele Ã© muito quente e serÃ¡ melhor andar nas bordas do poÃ§o se
+possÃ­vel.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê o altar.
+VocÃª vÃª o altar.
 ~
 ~
 0 -1 6962
 D1
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6965
 D2
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6967
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6963
 D5
-Você vê fogo.
+VocÃª vÃª fogo.
 ~
-barreira mágica~
-0 -1 6970
+barreira magica~
+:n 2 a barreira mÃ¡gica
+abch -1 6970
 S
 #6965
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construido de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construido de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D2
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6968
 D3
-Você vê um poço de fogo.
+VocÃª vÃª um poÃ§o de fogo.
 ~
 ~
 0 -1 6964
 S
 #6966
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construido de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construido de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6963
 D1
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6967
 S
 #6967
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construído de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construÃ­do de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê um poço de fogo.
+VocÃª vÃª um poÃ§o de fogo.
 ~
 ~
 0 -1 6964
 D1
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6968
 D2
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6969
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6966
 S
 #6968
 Dentro do Templo~
-   Você se encontra dentro de um pequeno Templo construido de pedras.  A
-sala é iluminada por tochas que estão presas nas paredes, mas elas não
-produzem muita luz, e as chamas estão começando a desaparecer.
+   VocÃª se encontra dentro de um pequeno Templo construido de pedras.  A
+sala Ã© iluminada por tochas que estÃ£o presas nas paredes, mas elas nÃ£o
+produzem muita luz, e as chamas estÃ£o comeÃ§ando a desaparecer.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6965
 D3
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6967
 S
 #6969
 Fora do Quarto Templo~
-   Você se encontra antes de um pequeno Templo construído para Anura.  A
-entrada do Templo está a norte, enquanto um labirinto de túneis está a sul.
+   VocÃª se encontra antes de um pequeno Templo construÃ­do para Anura.  A
+entrada do Templo estÃ¡ a norte, enquanto um labirinto de tÃºneis estÃ¡ a sul.
 ~
-69 68 0 0 0 0
+69 cg 0
 D0
-Você vê o Templo.
+VocÃª vÃª o Templo.
 ~
 ~
 0 -1 6967
 D2
-Você vê um túnel escuro.
+VocÃª vÃª um tÃºnel escuro.
 ~
 ~
 0 -1 4013
 S
 #6970
 No Fogo~
-   Você está sobre uma pilha de cinzas, rodeado de ardentes labaredas.
+   VocÃª estÃ¡ sobre uma pilha de cinzas, rodeado de ardentes labaredas.
 ~
-69 84 0 0 0 0
+69 gce 0
 D4
-Você vê a beirada do poço.
+VocÃª vÃª a beirada do poÃ§o.
 ~
 ~
 0 -1 6964
 S
 #6971
 Uma Caverna Escura~
-   Você está em uma escura caverna que contém uma porta de madeira no seu
-chão.
+   VocÃª estÃ¡ em uma escura caverna que contÃ©m uma porta de madeira no seu
+chÃ£o.
 ~
-69 69 0 0 0 0
+69 acg 0
 D3
-Você vê uma estranha toca.
+VocÃª vÃª uma estranha toca.
 ~
 ~
 0 -1 7201
 D5
-Você vê um poço sombrio.
+VocÃª vÃª um poÃ§o sombrio.
 ~
 porta~
-0 6911 6972
+:n 2 a porta de madeira
+abg 6911 6972~
 S
 #6972
-Um Poço Sombrio~
-   Você está caindo em um poço sombrio, mas uma porta de madeira parou a sua
+Um PoÃ§o Sombrio~
+   VocÃª estÃ¡ caindo em um poÃ§o sombrio, mas uma porta de madeira parou a sua
 queda temporariamente.
 ~
-69 65 0 0 0 0
+69 ag 0
 D5
-Você vê um poço sombrio.
+VocÃª vÃª um poÃ§o sombrio.
 ~
 porta~
-0 6912 6973
+:n 2 a porta de madeira
+abg 6912 6973~
 S
 #6973
-Um Poço Sombrio~
-   Você está caindo em um poço sombrio, mas uma porta de madeira parou a sua
+Um PoÃ§o Sombrio~
+   VocÃª estÃ¡ caindo em um poÃ§o sombrio, mas uma porta de madeira parou a sua
 queda temporariamente.
 ~
-69 65 0 0 0 0
+69 ga 0
 D5
-Você vê um poço sombrio.
+VocÃª vÃª um poÃ§o sombrio.
 ~
 porta~
-0 6913 6974
+:n 2 a porta de madeira
+abg 6913 6974
 S
 #6974
-Um Poço Sombrio~
-   Você está caindo em um poço sombrio, mas uma porta de madeira parou a sua
+Um PoÃ§o Sombrio~
+   VocÃª estÃ¡ caindo em um poÃ§o sombrio, mas uma porta de madeira parou a sua
 queda temporariamente.
 ~
-69 65 0 0 0 0
+69 ga 0
 D5
-Você vê um poço sombrio.
+VocÃª vÃª um poÃ§o sombrio.
 ~
 porta~
-0 6914 6975
+:n 2 a porta de madeira
+abg 6914 6975
 S
 #6975
-Um Poço Sombrio~
-   Você está caindo em um poço sombrio, mas uma porta de madeira parou a sua
+Um PoÃ§o Sombrio~
+   VocÃª estÃ¡ caindo em um poÃ§o sombrio, mas uma porta de madeira parou a sua
 queda temporariamente.
 ~
-69 65 0 0 0 0
+69 ga 0
 D5
-Você vê um poço sombrio.
+VocÃª vÃª um poÃ§o sombrio.
 ~
 porta~
-0 6919 6982
+:n 2 a porta de madeira
+abg 6919 6982
 S
 #6976
 Altar Principal~
-   Você se encontra no altar principal do grande Templo de Anura que você
+   VocÃª se encontra no altar principal do grande Templo de Anura que vocÃª
 encontrou com sucesso.
 ~
-69 64 0 0 0 0
+69 g 0
 D2
-Você vê um corredor com porta.
+VocÃª vÃª um corredor com porta.
 ~
 ~
 0 -1 6977
 D5
-Você vê uma pequena sala.
+VocÃª vÃª uma pequena sala.
 ~
-barreira mágica~
-0 -1 6987
+barreira magica~
+:n 2 a barreira mÃ¡gica
+abch -1 6987
 S
 #6977
 Antes do Altar Principal~
-   Você se encontra antes do altar principal.  O altar se encontra a norte
-atrás de uma porta de madeira.
+   VocÃª se encontra antes do altar principal.  O altar se encontra a norte
+atrÃ¡s de uma porta de madeira.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê o altar principal.
+VocÃª vÃª o altar principal.
 ~
 porta~
-0 6915 6976
+:n 2 a porta de madeira
+abg 6915 6976
 D2
-Você vê somente ar.
+VocÃª vÃª somente ar.
 ~
 ~
 0 -1 6978
 S
 #6978
 No Ar~
-   Você está flutuando no ar sobre um poço sem fundo no Templo graças a uma
-intensa coluna de ar que o impele para o alto.  Você provavelmente não está
-seguro ficando aqui, sendo melhor você pisar em um solo firme antes que o
-vento que o mantém resolva desaparecer.
+   VocÃª estÃ¡ flutuando no ar sobre um poÃ§o sem fundo no Templo graÃ§as a uma
+intensa coluna de ar que o impele para o alto.  VocÃª provavelmente nÃ£o estÃ¡
+seguro ficando aqui, sendo melhor vocÃª pisar em um solo firme antes que o
+vento que o mantÃ©m resolva desaparecer.
 ~
-69 262208 0 0 0 11
+69 gs 11 
 D0
-Você vê o altar principal.
+VocÃª vÃª o altar principal.
 ~
 ~
 0 -1 6977
 D1
-Você vê o altar norte.
+VocÃª vÃª o altar norte.
 ~
 ~
 0 -1 6979
 D2
-Você vê o altar oeste.
+VocÃª vÃª o altar oeste.
 ~
 ~
 0 -1 6981
 D5
-Você não consegue ver nada.
+VocÃª nÃ£o consegue ver nada.
 ~
 ~
 0 -1 6988
 S
 #6979
 O Altar Norte~
-   Você se encontra no altar norte de Anura.
+   VocÃª se encontra no altar norte de Anura.
 ~
-69 64 0 0 0 0
+69 g 0
 D1
-Você vê somente ar.
+VocÃª vÃª somente ar.
 ~
 ~
 0 -1 6980
 D2
-Você vê o fundo de um poço sombrio.
+VocÃª vÃª o fundo de um poÃ§o sombrio.
 ~
 ~
 0 -1 6982
 D3
-Você vê somente ar.
+VocÃª vÃª somente ar.
 ~
 ~
 0 -1 6978
 S
 #6980
 No Ar~
-   Você está flutuando no ar sobre um poço sem fundo no Templo graças a uma
-intensa coluna de ar que o impele para o alto.  Você provavelmente não está
-seguro ficando aqui, sendo melhor você pisar em um solo firme antes que o
-vento que o mantém resolva desaparecer.
+   VocÃª estÃ¡ flutuando no ar sobre um poÃ§o sem fundo no Templo graÃ§as a uma
+intensa coluna de ar que o impele para o alto.  VocÃª provavelmente nÃ£o estÃ¡
+seguro ficando aqui, sendo melhor vocÃª pisar em um solo firme antes que o
+vento que o mantÃ©m resolva desaparecer.
 ~
-69 262208 0 0 0 11
+69 gs 11
 D2
-Você vê o altar leste.
+VocÃª vÃª o altar leste.
 ~
 ~
 0 -1 6983
 D3
-Você vê o altar norte.
+VocÃª vÃª o altar norte.
 ~
 ~
 0 -1 6979
 D5
-Você não consegue ver nada.
+VocÃª nÃ£o consegue ver nada.
 ~
 ~
 0 -1 6988
 S
 #6981
 O Altar Oeste~
-   Você se encontra no altar oeste de Anura.
+   VocÃª se encontra no altar oeste de Anura.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê somente ar.
+VocÃª vÃª somente ar.
 ~
 ~
 0 -1 6978
 D1
-Você vê o fundo de um poço.
+VocÃª vÃª o fundo de um poÃ§o.
 ~
 ~
 0 -1 6982
 D2
-Você vê somente ar.
+VocÃª vÃª somente ar.
 ~
 ~
 0 -1 6984
 S
 #6982
-O Fundo do Poço Sombrio~
-   Você chegou no fundo do poço.  Há altares para todas as direções, e
-existe muita areia no chão aqui.
+O Fundo do PoÃ§o Sombrio~
+   VocÃª chegou no fundo do poÃ§o.  HÃ¡ altares para todas as direÃ§Ãµes, e
+existe muita areia no chÃ£o aqui.
 ~
-69 65 0 0 0 0
+69 ag 0
 D0
-Você vê um altar.
+VocÃª vÃª um altar.
 ~
 ~
 0 -1 6979
 D1
-Você vê um altar.
+VocÃª vÃª um altar.
 ~
 ~
 0 -1 6983
 D2
-Você vê um altar.
+VocÃª vÃª um altar.
 ~
 ~
 0 -1 6985
 D3
-Você vê um altar.
+VocÃª vÃª um altar.
 ~
 ~
 0 -1 6981
 S
 #6983
 O Altar Leste~
-   Você se encontra no altar leste de Anura.
+   VocÃª se encontra no altar leste de Anura.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê somente ar.
+VocÃª vÃª somente ar.
 ~
 ~
 0 -1 6980
 D2
-Você vê somente ar.
+VocÃª vÃª somente ar.
 ~
 ~
 0 -1 6986
 D3
-Você vê somente ar.
+VocÃª vÃª somente ar.
 ~
 ~
 0 -1 6982
 S
 #6984
 No Ar~
-   Você está flutuando no ar sobre um poço sem fundo no Templo graças a uma
-intensa coluna de ar que o impele para o alto.  Você provavelmente não está
-seguro ficando aqui, sendo melhor você pisar em um solo firme antes que o
-vento que o mantém resolva desaparecer.
+   VocÃª estÃ¡ flutuando no ar sobre um poÃ§o sem fundo no Templo graÃ§as a uma
+intensa coluna de ar que o impele para o alto.  VocÃª provavelmente nÃ£o estÃ¡
+seguro ficando aqui, sendo melhor vocÃª pisar em um solo firme antes que o
+vento que o mantÃ©m resolva desaparecer.
 ~
-69 262208 0 0 0 11
+69 gs 11
 D0
-Você vê o altar oeste.
+VocÃª vÃª o altar oeste.
 ~
 ~
 0 -1 6981
 D1
-Você vê o altar sul.
+VocÃª vÃª o altar sul.
 ~
 ~
 0 -1 6985
 D5
-Você não consegue ver nada.
+VocÃª nÃ£o consegue ver nada.
 ~
 ~
 0 -1 6988
 S
 #6985
 O Altar Sul~
-   Você se encontra no altar sul de Anura.
+   VocÃª se encontra no altar sul de Anura.
 ~
-69 64 0 0 0 0
+69 g 0
 D0
-Você vê o fundo de um poço.
+VocÃª vÃª o fundo de um poÃ§o.
 ~
 ~
 0 -1 6982
 D1
-Você vê somente ar.
+VocÃª vÃª somente ar.
 ~
 ~
 0 -1 6986
 D3
-Você vê somente ar.
+VocÃª vÃª somente ar.
 ~
 ~
 0 -1 6984
 S
 #6986
 No Ar~
-   Você está flutuando no ar sobre um poço sem fundo no Templo graças a uma
-intensa coluna de ar que o impele para o alto.  Você provavelmente não está
-seguro ficando aqui, sendo melhor você pisar em um solo firme antes que o
-vento que o mantém resolva desaparecer.
+   VocÃª estÃ¡ flutuando no ar sobre um poÃ§o sem fundo no Templo graÃ§as a uma
+intensa coluna de ar que o impele para o alto.  VocÃª provavelmente nÃ£o estÃ¡
+seguro ficando aqui, sendo melhor vocÃª pisar em um solo firme antes que o
+vento que o mantÃ©m resolva desaparecer.
 ~
-69 262208 0 0 0 11
+69 gs 11
 D0
-Você vê o altar leste.
+VocÃª vÃª o altar leste.
 D3
 ~
 ~
 0 -1 6983
 D5
-Você não consegue ver nada.
+VocÃª nÃ£o consegue ver nada.
 ~
 ~
 0 -1 6988
 S
 #6987
 Sob o Altar Principal~
-   Você está sob o altar principal de Anura.
+   VocÃª estÃ¡ sob o altar principal de Anura.
 ~
-69 64 0 0 0 0
+69 g 0
 D4
-Você vê o altar principal.
+VocÃª vÃª o altar principal.
 ~
 ~
 0 -1 6976
 D5
-Você vê... nada?
+VocÃª vÃª... nada?
 ~
 ~
 0 -1 50
 S
 #6988
-Um Poço Quase Sem Fim~
-   Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
-sustentar no ar.  Parece que você está em um poço sem fim.
+Um PoÃ§o Quase Sem Fim~
+   VocÃª comeÃ§a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que vocÃª estÃ¡ em um poÃ§o sem fim.
 ~
-69 229 0 0 0 9
+69 acfgh 9
 D5
-O poço não parece ter fim...
+O poÃ§o nÃ£o parece ter fim...
 ~
 ~
 0 -1 6989
 S
 #6989
-Um Poço Quase Sem Fim~
-   Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
-sustentar no ar.  Parece que você está em um poço sem fim.
+Um PoÃ§o Quase Sem Fim~
+   VocÃª comeÃ§a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que vocÃª estÃ¡ em um poÃ§o sem fim.
 ~
-69 229 0 0 0 9
+69 acfgh 9
 D5
-O poço não parece ter fim...
+O poÃ§o nÃ£o parece ter fim...
 ~
 ~
 0 -1 6990
 S
 #6990
-Um Poço Quase Sem Fim~
-   Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
-sustentar no ar.  Parece que você está em um poço sem fim.
+Um PoÃ§o Quase Sem Fim~
+   VocÃª comeÃ§a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que vocÃª estÃ¡ em um poÃ§o sem fim.
 ~
-69 229 0 0 0 9
+69 acfgh 9
 D5
-O poço não parece ter fim...
+O poÃ§o nÃ£o parece ter fim...
 ~
 ~
 0 -1 6991
 S
 #6991
-Um Poço Quase Sem Fim~
-   Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
-sustentar no ar.  Parece que você está em um poço sem fim.
+Um PoÃ§o Quase Sem Fim~
+   VocÃª comeÃ§a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que vocÃª estÃ¡ em um poÃ§o sem fim.
 ~
-69 229 0 0 0 9
+69 acfgh 9
 D5
-O poço não parece ter fim...
+O poÃ§o nÃ£o parece ter fim...
 ~
 ~
 0 -1 6992
 S
 #6992
-Um Poço Quase Sem Fim~
-   Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
-sustentar no ar.  Parece que você está em um poço sem fim.
+Um PoÃ§o Quase Sem Fim~
+   VocÃª comeÃ§a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que vocÃª estÃ¡ em um poÃ§o sem fim.
 ~
-69 229 0 0 0 9
+69 acfgh 9
 D5
-O poço não parece ter fim...
+O poÃ§o nÃ£o parece ter fim...
 ~
 ~
 0 -1 6993
 S
 #6993
-Um Poço Quase Sem Fim~
-   Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
-sustentar no ar.  Parece que você está em um poço sem fim.
+Um PoÃ§o Quase Sem Fim~
+   VocÃª comeÃ§a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que vocÃª estÃ¡ em um poÃ§o sem fim.
 ~
-69 229 0 0 0 9
+69 acfgh 9
 D5
-O poço não parece ter fim...
+O poÃ§o nÃ£o parece ter fim...
 ~
 ~
 0 -1 6994
 S
 #6994
-Um Poço Quase Sem Fim~
-   Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
-sustentar no ar.  Parece que você está em um poço sem fim.
+Um PoÃ§o Quase Sem Fim~
+   VocÃª comeÃ§a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que vocÃª estÃ¡ em um poÃ§o sem fim.
 ~
-69 229 0 0 0 9
+69 acfgh 9
 D5
-O poço não parece ter fim...
+O poÃ§o nÃ£o parece ter fim...
 ~
 ~
 0 -1 6995
 S
 #6995
-Um Poço Quase Sem Fim~
-   Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
-sustentar no ar.  Parece que você está em um poço sem fim.
+Um PoÃ§o Quase Sem Fim~
+   VocÃª comeÃ§a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que vocÃª estÃ¡ em um poÃ§o sem fim.
 ~
-69 229 0 0 0 9
+69 acfgh 9
 D5
-O poço não parece ter fim...
+O poÃ§o nÃ£o parece ter fim...
 ~
 ~
 0 -1 6996
 S
 #6996
-Um Poço Quase Sem Fim~
-   Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
-sustentar no ar.  Parece que você está em um poço sem fim.
+Um PoÃ§o Quase Sem Fim~
+   VocÃª comeÃ§a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que vocÃª estÃ¡ em um poÃ§o sem fim.
 ~
-69 229 0 0 0 9
+69 acfgh 9
 D5
-O poço não parece ter fim...
+O poÃ§o nÃ£o parece ter fim...
 ~
 ~
 0 -1 6997
 S
 #6997
-Um Poço Quase Sem Fim~
-   Você começa a cair, cair, cair e cair quando a coluna de ar pare de o
-sustentar no ar.  Parece que você está em um poço sem fim.
+Um PoÃ§o Quase Sem Fim~
+   VocÃª comeÃ§a a cair, cair, cair e cair quando a coluna de ar pare de o
+sustentar no ar.  Parece que vocÃª estÃ¡ em um poÃ§o sem fim.
 ~
-69 229 0 0 0 9
+69 acfgh 9
 D5
-O poço não parece ter fim...
+O poÃ§o nÃ£o parece ter fim...
 ~
 ~
 0 -1 6998
 S
 #6998
-O Fim do Poço~
-   Você caiu bem no fim do poço. Aqui é muito escuro, frio e úmido,
+O Fim do PoÃ§o~
+   VocÃª caiu bem no fim do poÃ§o. Aqui Ã© muito escuro, frio e Ãºmido,
 sendo que estranhas coisas peludas passam a todo instante por sobre
-você. Não há saída aparente.
+vocÃª. NÃ£o hÃ¡ saÃ­da aparente.
 ~
-69 101 0 0 0 0
+69 acfg 0
 S
 $~
