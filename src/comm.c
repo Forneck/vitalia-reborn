@@ -88,6 +88,10 @@
 #define INVALID_SOCKET (-1)
 #endif
 
+#ifndef RUSAGE
+#define RUSAGE 1
+#endif
+
 extern time_t motdmod;
 extern time_t newsmod;
 
