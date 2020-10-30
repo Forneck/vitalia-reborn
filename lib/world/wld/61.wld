@@ -1,10 +1,10 @@
 #6100
-Um Estreito Caminho AtravÈs da Escura Floresta Profunda~
-   VocÍ est· em um estreito caminho que faz seu caminho atravÈs dos enormes
-troncos cinzas.  As copas das ·rvores s„o muito densas, deixando a floresta
-na escurid„o.  O caminho segue ao leste e ao oeste.
+Um Estreito Caminho Atrav√©s da Escura Floresta Profunda~
+   Voc√™ est√° em um estreito caminho que faz seu caminho atrav√©s dos enormes
+troncos cinzas.  As copas das √°rvores s√£o muito densas, deixando a floresta
+na escurid√£o.  O caminho segue ao leste e ao oeste.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
 Um pequeno caminho sombrio segue ao norte.
 ~
@@ -17,30 +17,30 @@ floresta.
 ~
 0 -1 6004
 D3
-O caminho estreito segue ao leste atravÈs da floresta.
+O caminho estreito segue ao leste atrav√©s da floresta.
 ~
 ~
 0 -1 6101
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho escuro parece fr√°gil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas ra√≠zes romperam o solo.
 ~
 E
-caminho~
-O caminho escuro parece fr·gil comparada com os volumosos troncos, e em
-alguns lugares, gigantescas raÌzes romperam o solo.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6101
-Um Estreito Caminho AtravÈs da Escura Floresta Profunda~
-   VocÍ est· em um empoeirado caminho que segue para o leste e oeste, entre
-enormes ·rvores antigas, cujos troncos lembram antigos pilares de um
-corredor deserto.  Ao sul, um fr·gil caminho o conduz alÈm.
+Um Estreito Caminho Atrav√©s da Escura Floresta Profunda~
+   Voc√™ est√° em um empoeirado caminho que segue para o leste e oeste, entre
+enormes √°rvores antigas, cujos troncos lembram antigos pilares de um
+corredor deserto.  Ao sul, um fr√°gil caminho o conduz al√©m.
 ~
-61 9 0 0 0 3
+61 ad 3
 D1
-O caminho estreito segue ao leste atravÈs da floresta.
+O caminho estreito segue ao leste atrav√©s da floresta.
 ~
 ~
 0 -1 6100
@@ -50,79 +50,79 @@ O caminho leva ao sul, longe do caminho.
 ~
 0 -1 6104
 D3
-O caminho estreito segue ao oeste atravÈs da floresta.
+O caminho estreito segue ao oeste atrav√©s da floresta.
 ~
 ~
 0 -1 6102
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho escuro parece fr√°gil comparado com os volumosos troncos, e em
+alguns lugares, gigantescas ra√≠zes romperam o solo.
 ~
 E
 caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
 ao seu redor.
 ~
 E
-caminho~
-O caminho escuro parece fr·gil comparado com os volumosos troncos, e em
-alguns lugares, gigantescas raÌzes romperam o solo.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6102
-Um Estreito Caminho AtravÈs da Escura Floresta Profunda~
-   VocÍ est· em um empoeirado caminho que segue pelo leste e oeste entre
-enormes ·rvores antigas que o cerca de todos os lados.  Nenhum som pode ser
-ouvido - tudo est· em completo silÍncio.
+Um Estreito Caminho Atrav√©s da Escura Floresta Profunda~
+   Voc√™ est√° em um empoeirado caminho que segue pelo leste e oeste entre
+enormes √°rvores antigas que o cerca de todos os lados.  Nenhum som pode ser
+ouvido - tudo est√° em completo sil√™ncio.
 ~
-61 9 0 0 0 3
+61 ad 3
 D1
-O caminho estreito segue ao leste atravÈs da floresta.
+O caminho estreito segue ao leste atrav√©s da floresta.
 ~
 ~
 0 -1 6101
 D3
-O caminho estreito segue ao oeste atravÈs da floresta.
+O caminho estreito segue ao oeste atrav√©s da floresta.
 ~
 ~
 0 -1 6103
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho escuro parece fr√°gil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas ra√≠zes romperam o solo.
 ~
 E
 caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
 ao seu redor.
 ~
 E
-caminho~
-O caminho escuro parece fr·gil comparada com os volumosos troncos, e em
-alguns lugares, gigantescas raÌzes romperam o solo.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6103
-Um Estreito Caminho AtravÈs da Escura Floresta Profunda~
-   VocÍ est· onde o caminho faz uma curva, como que para evitar se chocar
-com um tronco colossal ao oeste.  Nenhum som pode ser ouvido - tudo est· em
-completo silÍncio.  O caminho segue ao leste e ao sul, e um pequeno caminho
+Um Estreito Caminho Atrav√©s da Escura Floresta Profunda~
+   Voc√™ est√° onde o caminho faz uma curva, como que para evitar se chocar
+com um tronco colossal ao oeste.  Nenhum som pode ser ouvido - tudo est√° em
+completo sil√™ncio.  O caminho segue ao leste e ao sul, e um pequeno caminho
 leva para longe da trilha ao norte.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
 Um pequeno caminho leva para longe da trilha.
 ~
 ~
 0 -1 6150
 D1
-O caminho estreito segue ao leste atravÈs da floresta.
+O caminho estreito segue ao leste atrav√©s da floresta.
 ~
 ~
 0 -1 6102
 D2
-O caminho estreito segue ao sul atravÈs da floresta.
+O caminho estreito segue ao sul atrav√©s da floresta.
 ~
 ~
 0 -1 6108
@@ -131,142 +131,142 @@ D9
 ~
 0 -1 2040
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho escuro parece fr√°gil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas ra√≠zes romperam o solo.
 ~
 E
-caminho~
-O caminho escuro parece fr·gil comparada com os volumosos troncos, e em
-alguns lugares, gigantescas raÌzes romperam o solo.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6104
 Um Pequeno Caminho na Escura Floresta Profunda~
-   VocÍ est· em um estreito caminho que atravessa a escura floresta
-profunda.  VocÍ se sente como se as antigas ·rvores observassem vocÍ em
+   Voc√™ est√° em um estreito caminho que atravessa a escura floresta
+profunda.  Voc√™ se sente como se as antigas √°rvores observassem voc√™ em
 profundo silencio.  O caminho continua ao norte e ao sul.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-O estreito caminho segue atravÈs das ·rvores ao norte.
+O estreito caminho segue atrav√©s das √°rvores ao norte.
 ~
 ~
 0 -1 6101
 D2
-O estreito caminho segue atravÈs das ·rvores ao sul.
+O estreito caminho segue atrav√©s das √°rvores ao sul.
 ~
 ~
 0 -1 6105
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
+ao seu redor.
 ~
 E
-caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
-ao seu redor.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6105
 Um Pequeno Caminho na Escura Floresta Profunda~
-   VocÍ est· em um estreito caminho que atravessa a escura floresta
-profunda.  Antigas ·rvores acinzentadas cercam vocÍ.  O caminho continua ao
+   Voc√™ est√° em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas √°rvores acinzentadas cercam voc√™.  O caminho continua ao
 norte e ao oeste.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-O estreito caminho segue atravÈs das ·rvores ao norte.
+O estreito caminho segue atrav√©s das √°rvores ao norte.
 ~
 ~
 0 -1 6104
 D3
-O estreito caminho segue atravÈs das ·rvores ao oeste.
+O estreito caminho segue atrav√©s das √°rvores ao oeste.
 ~
 ~
 0 -1 6106
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
+ao seu redor.
 ~
 E
-caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
-ao seu redor.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6106
-Uma JunÁ„o na Escura Floresta Profunda~
-   VocÍ est· em uma junÁ„o onde trÍs caminhos se encontram.  Antigas ·rvores
+Uma Jun√ß√£o na Escura Floresta Profunda~
+   Voc√™ est√° em uma jun√ß√£o onde tr√™s caminhos se encontram.  Antigas √°rvores
 acinzentadas o cercam de todos os lados.  Os caminhos seguem para o leste,
 sul e oeste.
 ~
-61 9 0 0 0 3
+61 ad 3
 D1
-O estreito caminho segue atravÈs das ·rvores ao leste.
+O estreito caminho segue atrav√©s das √°rvores ao leste.
 ~
 ~
 0 -1 6105
 D2
-O estreito caminho segue atravÈs das ·rvores ao sul.
+O estreito caminho segue atrav√©s das √°rvores ao sul.
 ~
 ~
 0 -1 6117
 D3
-O estreito caminho segue atravÈs das ·rvores ao oeste.
+O estreito caminho segue atrav√©s das √°rvores ao oeste.
 ~
 ~
 0 -1 6107
 E
-caminho ~
-O caminho parece fr·gil comparada com os volumosos troncos, e em alguns
-lugares, gigantescas raÌzes romperam o solo.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho parece fr√°gil comparada com os volumosos troncos, e em alguns
+lugares, gigantescas ra√≠zes romperam o solo.
 ~
 S
 #6107
 Um Pequeno Caminho na Escura Floresta Profunda~
-   VocÍ est· em um estreito caminho que atravessa a escura floresta
-profunda.  Antigas ·rvores acinzentadas cercam vocÍ.  O caminho continua ao
+   Voc√™ est√° em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas √°rvores acinzentadas cercam voc√™.  O caminho continua ao
 norte e ao leste.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-O estreito caminho segue atravÈs das ·rvores ao norte.
+O estreito caminho segue atrav√©s das √°rvores ao norte.
 ~
 ~
 0 -1 6108
 D1
-O estreito caminho segue atravÈs das ·rvores ao leste.
+O estreito caminho segue atrav√©s das √°rvores ao leste.
 ~
 ~
 0 -1 6106
 E
-caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
-ao seu redor..
+arvore arvores troncos tronco~
+As gigantescas √°rvores antigas parece lhe observar silenciosamente.
 ~
 E
-·rvore ·rvores troncos tronco~
-As gigantescas ·rvores antigas parece lhe observar silenciosamente.
+caminho~
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
+ao seu redor..
 ~
 S
 #6108
-Um Estreito Caminho AtravÈs da Escura Floresta Profunda~
-   VocÍ est· em um estreito caminho que atravessa a escura floresta
-profunda.  Antigas ·rvores acinzentadas cercam vocÍ.  O caminho continua
-para o norte e oeste e ao sul, um fr·gil caminho o leva para longe do
+Um Estreito Caminho Atrav√©s da Escura Floresta Profunda~
+   Voc√™ est√° em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas √°rvores acinzentadas cercam voc√™.  O caminho continua
+para o norte e oeste e ao sul, um fr√°gil caminho o leva para longe do
 caminho.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-O caminho estreito segue ao norte atravÈs da floresta.
+O caminho estreito segue ao norte atrav√©s da floresta.
 ~
 ~
 0 -1 6103
@@ -276,128 +276,128 @@ O caminho segue ao sul, para longe do caminho.
 ~
 0 -1 6107
 D3
-O caminho estreito segue ao oeste atravÈs da floresta.
+O caminho estreito segue ao oeste atrav√©s da floresta.
 ~
 ~
 0 -1 6109
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho escuro parece fr√°gil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas ra√≠zes romperam o solo.
 ~
 E
 caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
 ao seu redor.
 ~
 E
-caminho~
-O caminho escuro parece fr·gil comparada com os volumosos troncos, e em
-alguns lugares, gigantescas raÌzes romperam o solo.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6109
-Um Estreito Caminho AtravÈs da Escura Floresta Profunda~
-   VocÍ est· em um empoeirado caminho que segue pelo leste e oeste entre
-enormes ·rvores antigas que o cerca de todos os lados.  Nenhum som pode ser
-ouvido - tudo est· em completo silÍncio.
+Um Estreito Caminho Atrav√©s da Escura Floresta Profunda~
+   Voc√™ est√° em um empoeirado caminho que segue pelo leste e oeste entre
+enormes √°rvores antigas que o cerca de todos os lados.  Nenhum som pode ser
+ouvido - tudo est√° em completo sil√™ncio.
 ~
-61 9 0 0 0 3
+61 ad 3
 D1
-O caminho estreito segue ao leste atravÈs da floresta.
+O caminho estreito segue ao leste atrav√©s da floresta.
 ~
 ~
 0 -1 6108
 D3
-O caminho estreito segue ao oeste atravÈs da floresta.
+O caminho estreito segue ao oeste atrav√©s da floresta.
 ~
 ~
 0 -1 6110
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho escuro parece fr√°gil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas ra√≠zes romperam o solo.
 ~
 E
-caminho~
-O caminho escuro parece fr·gil comparada com os volumosos troncos, e em
-alguns lugares, gigantescas raÌzes romperam o solo.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6110
-Um Estreito Caminho AtravÈs da Escura Floresta Profunda~
-   Antigas ·rvores acinzentadas o cercam de todos os lados.  O caminho segue
+Um Estreito Caminho Atrav√©s da Escura Floresta Profunda~
+   Antigas √°rvores acinzentadas o cercam de todos os lados.  O caminho segue
 ao leste e ao sul.  Ao oeste, um pequeno caminho o leva para longe da
 trilha.
 ~
-61 9 0 0 0 3
+61 ad 3
 D1
-O caminho estreito segue ao leste atravÈs da floresta.
+O caminho estreito segue ao leste atrav√©s da floresta.
 ~
 ~
 0 -1 6109
 D2
-O caminho estreito segue ao sul atravÈs da floresta.
+O caminho estreito segue ao sul atrav√©s da floresta.
 ~
 ~
 0 -1 6111
 D3
-O caminho estreito segue ao oeste atravÈs da floresta.
+O caminho estreito segue ao oeste atrav√©s da floresta.
 ~
 ~
 0 -1 6130
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho escuro parece fr√°gil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas ra√≠zes romperam o solo.
 ~
 E
 caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
 ao seu redor.
 ~
 E
-caminho~
-O caminho escuro parece fr·gil comparada com os volumosos troncos, e em
-alguns lugares, gigantescas raÌzes romperam o solo.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6111
-Um Estreito Caminho AtravÈs da Escura Floresta Profunda~
-   VocÍ est· em um caminho empoeirado que segue ao norte e sul entre as
-enormes ·rvores antigas que lhe observam silenciosamente.
+Um Estreito Caminho Atrav√©s da Escura Floresta Profunda~
+   Voc√™ est√° em um caminho empoeirado que segue ao norte e sul entre as
+enormes √°rvores antigas que lhe observam silenciosamente.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-O caminho estreito segue ao norte atravÈs da floresta.
+O caminho estreito segue ao norte atrav√©s da floresta.
 ~
 ~
 0 -1 6110
 D2
-O caminho estreito segue ao sul atravÈs da floresta.
+O caminho estreito segue ao sul atrav√©s da floresta.
 ~
 ~
 0 -1 6112
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho escuro parece fr√°gil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas ra√≠zes romperam o solo.
 ~
 E
-caminho~
-O caminho escuro parece fr·gil comparada com os volumosos troncos, e em
-alguns lugares, gigantescas raÌzes romperam o solo.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6112
-Um Estreito Caminho AtravÈs da Escura Floresta Profunda~
-   VocÍ est· em um caminho empoeirado que segue entre as enormes ·rvores
+Um Estreito Caminho Atrav√©s da Escura Floresta Profunda~
+   Voc√™ est√° em um caminho empoeirado que segue entre as enormes √°rvores
 antigas que o cercam de todos os lados.  O caminho segue ao norte e oeste e
-ao leste, um fr·gil caminho o leva para longe do caminho.
+ao leste, um fr√°gil caminho o leva para longe do caminho.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-O caminho estreito segue ao norte atravÈs da floresta.
+O caminho estreito segue ao norte atrav√©s da floresta.
 ~
 ~
 0 -1 6111
@@ -407,435 +407,435 @@ O caminho leva ao leste - para longe do caminho.
 ~
 0 -1 6113
 D3
-O caminho estreito segue ao oeste atravÈs da floresta.
+O caminho estreito segue ao oeste atrav√©s da floresta.
 ~
 ~
 0 -1 6127
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho escuro parece fr√°gil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas ra√≠zes romperam o solo.
 ~
 E
 caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
 ao seu redor.
 ~
 E
-caminho~
-O caminho escuro parece fr·gil comparada com os volumosos troncos, e em
-alguns lugares, gigantescas raÌzes romperam o solo.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6113
 Um Pequeno Caminho na Escura Floresta Profunda~
-   VocÍ est· em um estreito caminho que atravessa a escura floresta
-profunda.  Antigas ·rvores acinzentadas cercam vocÍ.  O caminho continua ao
+   Voc√™ est√° em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas √°rvores acinzentadas cercam voc√™.  O caminho continua ao
 sul e ao oeste.
 ~
-61 9 0 0 0 3
+61 ad 3
 D2
-O estreito caminho segue atravÈs das ·rvores ao sul.
+O estreito caminho segue atrav√©s das √°rvores ao sul.
 ~
 ~
 0 -1 6114
 D3
-O estreito caminho segue atravÈs das ·rvores ao oeste.
+O estreito caminho segue atrav√©s das √°rvores ao oeste.
 ~
 ~
 0 -1 6112
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
+ao seu redor.
 ~
 E
-caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
-ao seu redor.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6114
-Uma JunÁ„o na Escura Floresta Profunda~
-   VocÍ est· em uma junÁ„o onde trÍs caminhos se encontram.  Antigas ·rvores
+Uma Jun√ß√£o na Escura Floresta Profunda~
+   Voc√™ est√° em uma jun√ß√£o onde tr√™s caminhos se encontram.  Antigas √°rvores
 acinzentadas o cercam de todos os lados.  Os caminhos seguem para leste e
 oeste.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-O estreito caminho segue atravÈs das ·rvores ao norte.
+O estreito caminho segue atrav√©s das √°rvores ao norte.
 ~
 ~
 0 -1 6113
 D1
-O estreito caminho segue atravÈs das ·rvores ao leste.
+O estreito caminho segue atrav√©s das √°rvores ao leste.
 ~
 ~
 0 -1 6115
 D3
-O estreito caminho segue atravÈs das ·rvores ao oeste.
+O estreito caminho segue atrav√©s das √°rvores ao oeste.
 ~
 ~
 0 -1 6122
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
+ao seu redor.
 ~
 E
-caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
-ao seu redor.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6115
 Um Pequeno Caminho na Escura Floresta Profunda~
-   VocÍ est· em um estreito caminho que atravessa a escura floresta
-profunda.  Antigas ·rvores acinzentadas cercam vocÍ.  O caminho continua ao
+   Voc√™ est√° em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas √°rvores acinzentadas cercam voc√™.  O caminho continua ao
 norte e ao oeste.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-O estreito caminho segue atravÈs das ·rvores ao norte.
+O estreito caminho segue atrav√©s das √°rvores ao norte.
 ~
 ~
 0 -1 6116
 D3
-O estreito caminho segue atravÈs das ·rvores ao oeste.
+O estreito caminho segue atrav√©s das √°rvores ao oeste.
 ~
 ~
 0 -1 6114
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
+ao seu redor.
 ~
 E
-caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
-ao seu redor.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6116
-Uma JunÁ„o na Escura Floresta Profunda~
-   VocÍ est· em um estreito caminho que atravessa a escura floresta
-profunda.  Antigas ·rvores acinzentadas cercam vocÍ.  O caminho continua ·
+Uma Jun√ß√£o na Escura Floresta Profunda~
+   Voc√™ est√° em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas √°rvores acinzentadas cercam voc√™.  O caminho continua √°
 leste e sul.
 ~
-61 9 0 0 0 3
+61 ad 3
 D1
-O estreito caminho segue atravÈs das ·rvores ao leste.
+O estreito caminho segue atrav√©s das √°rvores ao leste.
 ~
 ~
 0 -1 6117
 D2
-O estreito caminho segue atravÈs das ·rvores ao sul.
+O estreito caminho segue atrav√©s das √°rvores ao sul.
 ~
 ~
 0 -1 6115
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
+ao seu redor.
 ~
 E
-caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
-ao seu redor.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6117
-Uma JunÁ„o na Escura Floresta Profunda~
-   VocÍ est· em uma junÁ„o onde trÍs caminhos se encontram.  Antigas ·rvores
+Uma Jun√ß√£o na Escura Floresta Profunda~
+   Voc√™ est√° em uma jun√ß√£o onde tr√™s caminhos se encontram.  Antigas √°rvores
 acinzentadas o cercam de todos os lados.  Os caminhos seguem para leste,
 oeste e norte.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-O estreito caminho segue atravÈs das ·rvores ao norte.
+O estreito caminho segue atrav√©s das √°rvores ao norte.
 ~
 ~
 0 -1 6106
 D1
-O estreito caminho segue atravÈs das ·rvores ao leste.
+O estreito caminho segue atrav√©s das √°rvores ao leste.
 ~
 ~
 0 -1 6118
 D3
-O estreito caminho segue atravÈs das ·rvores ao oeste.
+O estreito caminho segue atrav√©s das √°rvores ao oeste.
 ~
 ~
 0 -1 6116
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
+ao seu redor.
 ~
 E
-caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
-ao seu redor.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6118
 Um Pequeno Caminho na Escura Floresta Profunda~
-   VocÍ est· em um estreito caminho que atravessa a escura floresta
-profunda.  Antigas ·rvores acinzentadas cercam vocÍ.  O caminho continua ao
+   Voc√™ est√° em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas √°rvores acinzentadas cercam voc√™.  O caminho continua ao
 sul e ao oeste.
 ~
-61 9 0 0 0 3
+61 ad 3
 D2
-O estreito caminho segue atravÈs das ·rvores ao sul.
+O estreito caminho segue atrav√©s das √°rvores ao sul.
 ~
 ~
 0 -1 6119
 D3
-O estreito caminho segue atravÈs das ·rvores ao oeste.
+O estreito caminho segue atrav√©s das √°rvores ao oeste.
 ~
 ~
 0 -1 6117
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
+ao seu redor.
 ~
 E
-caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
-ao seu redor.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6119
 Um Pequeno Caminho na Escura Floresta Profunda~
-   VocÍ est· em um estreito caminho que atravessa a escura floresta
-profunda.  Antigas ·rvores acinzentadas cercam vocÍ.  O caminho continua.
+   Voc√™ est√° em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas √°rvores acinzentadas cercam voc√™.  O caminho continua.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-O estreito caminho segue atravÈs das ·rvores ao norte.
+O estreito caminho segue atrav√©s das √°rvores ao norte.
 ~
 ~
 0 -1 6118
 D2
-O estreito caminho segue atravÈs das ·rvores ao sul.
+O estreito caminho segue atrav√©s das √°rvores ao sul.
 ~
 ~
 0 -1 6120
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
+ao seu redor.
 ~
 E
-caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
-ao seu redor.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6120
 Na Ribeira de um Rio na Escura Floresta Profunda~
-   VocÍ est· em um estreito caminho que segue na escura floresta profunda.
-Ao sul, um r·pido rio flui ao oeste pela floresta.  Antigas ·rvores antigas
+   Voc√™ est√° em um estreito caminho que segue na escura floresta profunda.
+Ao sul, um r√°pido rio flui ao oeste pela floresta.  Antigas √°rvores antigas
 acinzentadas repousam pela ribeira.  O caminho continua ao norte e ao oeste.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-O estreito caminho segue atravÈs das ·rvores ao norte.
+O estreito caminho segue atrav√©s das √°rvores ao norte.
 ~
 ~
 0 -1 6119
 D2
-Parece que vocÍ poderia adentrar o rio pelo sul.
+Parece que voc√™ poderia adentrar o rio pelo sul.
 ~
 ~
 0 -1 901
 D3
-O estreito caminho segue atravÈs das ·rvores ao oeste.
+O estreito caminho segue atrav√©s das √°rvores ao oeste.
 ~
 ~
 0 -1 6121
 E
-caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
-ao seu redor.
-~
-E
-ribeira ·rvore ·rvores troncos tronco~
-As copas das antigas ·rvores tomam ambos lados da ribeira formando um denso
-telhado acima do rio escuro.
-~
-E
 rio~
 O rio flui rapidamente e fortemente.  Ele parece negro, ou pelo menos assim
 parece na sombra.
 ~
+E
+ribeira arvore arvores troncos tronco~
+As copas das antigas √°rvores tomam ambos lados da ribeira formando um denso
+telhado acima do rio escuro.
+~
+E
+caminho~
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
+ao seu redor.
+~
 S
 #6121
-Um Caminho Sem SaÌda na Escura Floresta Profunda~
-   VocÍ est· em um estreito caminho atravÈs da escura floresta profunda.  As
-antigas ·rvores est„o t„o prÛximas uma das outras, que o caminho desaparece
-entre elas.  Ao sul um escuro rio flui ao leste e ao oeste.  A ˙nica saÌda
+Um Caminho Sem Sa√≠da na Escura Floresta Profunda~
+   Voc√™ est√° em um estreito caminho atrav√©s da escura floresta profunda.  As
+antigas √°rvores est√£o t√£o pr√≥ximas uma das outras, que o caminho desaparece
+entre elas.  Ao sul um escuro rio flui ao leste e ao oeste.  A √∫nica sa√≠da
 parece ser ao leste.
 ~
-61 9 0 0 0 3
+61 ad 3
 D1
-O estreito caminho segue atravÈs das ·rvores ao leste.
+O estreito caminho segue atrav√©s das √°rvores ao leste.
 ~
 ~
 0 -1 6120
 E
-caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
-ao seu redor.
-~
-E
-ribeira ·rvore ·rvores troncos tronco~
-As copas das antigas ·rvores tomam ambos lados da ribeira, formando um denso
-telhado acima do rio escuro.
-~
-E
 rio~
 O rio flui rapidamente e fortemente.  Ele parece negro, ou pelo menos assim
 parece na sombra.
+~
+E
+ribeira arvore arvores troncos tronco~
+As copas das antigas √°rvores tomam ambos lados da ribeira, formando um denso
+telhado acima do rio escuro.
+~
+E
+caminho~
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
+ao seu redor.
 ~
 S
 #6122
 Um Pequeno Caminho na Escura Floresta Profunda~
-   VocÍ est· em um estreito caminho que atravessa a escura floresta
-profunda.  Antigas ·rvores acinzentadas cercam vocÍ.  O caminho continua ao
+   Voc√™ est√° em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas √°rvores acinzentadas cercam voc√™.  O caminho continua ao
 leste e ao sul.
 ~
-61 9 0 0 0 3
+61 ad 3
 D1
-O estreito caminho segue atravÈs das ·rvores ao leste.
+O estreito caminho segue atrav√©s das √°rvores ao leste.
 ~
 ~
 0 -1 6114
 D2
-O estreito caminho segue atravÈs das ·rvores ao sul.
+O estreito caminho segue atrav√©s das √°rvores ao sul.
 ~
 ~
 0 -1 6123
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
+ao seu redor.
 ~
 E
-caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
-ao seu redor.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6123
-Uma JunÁ„o na Ribanceira do Rio na Escura Floresta Profunda~
-   VocÍ est· em uma junÁ„o, onde trÍs caminhos se encontram.  Antigas
-·rvores acinzentadas parecem observar vocÍ silenciosamente por todos os
-lados.  Ao sul, um rio escuro flui do leste ao oeste atravÈs da floresta.
+Uma Jun√ß√£o na Ribanceira do Rio na Escura Floresta Profunda~
+   Voc√™ est√° em uma jun√ß√£o, onde tr√™s caminhos se encontram.  Antigas
+√°rvores acinzentadas parecem observar voc√™ silenciosamente por todos os
+lados.  Ao sul, um rio escuro flui do leste ao oeste atrav√©s da floresta.
 Caminhos levam ao norte, leste e oeste.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-O estreito caminho segue atravÈs das ·rvores ao norte.
+O estreito caminho segue atrav√©s das √°rvores ao norte.
 ~
 ~
 0 -1 6122
 D1
-O estreito caminho segue atravÈs das ·rvores ao leste.
+O estreito caminho segue atrav√©s das √°rvores ao leste.
 ~
 ~
 0 -1 6124
 D3
-O estreito caminho segue atravÈs das ·rvores ao oeste.
+O estreito caminho segue atrav√©s das √°rvores ao oeste.
 ~
 ~
 0 -1 6125
 E
-caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
-ao seu redor.
-~
-E
-ribeira ·rvore ·rvores troncos tronco~
-As copas das antigas ·rvores tomam ambos lados da ribeira, formando um denso
-telhado acima do rio escuro.
-~
-E
 rio~
 O rio flui rapidamente e fortemente.  Ele parece negro, ou pelo menos assim
 parece na sombra.
 ~
+E
+ribeira arvore arvores troncos tronco~
+As copas das antigas √°rvores tomam ambos lados da ribeira, formando um denso
+telhado acima do rio escuro.
+~
+E
+caminho~
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
+ao seu redor.
+~
 S
 #6124
-Um Caminho Sem SaÌda na Escura Floresta Profunda~
-   VocÍ est· em um estreito caminho atravÈs da escura floresta profunda.  As
-antigas ·rvores est·o t„o prÛximas umas das outras, que o caminho desaparece
-entre elas.  A ˙nica saÌda parece ser ao oeste.
+Um Caminho Sem Sa√≠da na Escura Floresta Profunda~
+   Voc√™ est√° em um estreito caminho atrav√©s da escura floresta profunda.  As
+antigas √°rvores est√°o t√£o pr√≥ximas umas das outras, que o caminho desaparece
+entre elas.  A √∫nica sa√≠da parece ser ao oeste.
 ~
-61 9 0 0 0 3
+61 ad 3
 D3
-O estreito caminho segue atravÈs das ·rvores ao oeste.
+O estreito caminho segue atrav√©s das √°rvores ao oeste.
 ~
 ~
 0 -1 6123
 E
-caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
-ao seu redor.
-~
-E
-ribeira ·rvore ·rvores troncos tronco~
-As copas das antigas ·rvores tomam ambos lados da ribeira formando um denso
-telhado acima do rio escuro.
-~
-E
 rio~
 O rio flui rapidamente e fortemente.  Ele parece negro, ou pelo menos assim
 parece na sombra.
+~
+E
+ribeira arvore arvores troncos tronco~
+As copas das antigas √°rvores tomam ambos lados da ribeira formando um denso
+telhado acima do rio escuro.
+~
+E
+caminho~
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
+ao seu redor.
 ~
 S
 #6125
 Um Estreito Caminho pela Ribeira na Escura Floresta Profunda~
-   VocÍ est· em um estreito caminho atravÈs da escura floresta profunda.
-Antigas ·rvores acinzentadas est„o por toda parte.  O caminho continua ao
+   Voc√™ est√° em um estreito caminho atrav√©s da escura floresta profunda.
+Antigas √°rvores acinzentadas est√£o por toda parte.  O caminho continua ao
 norte e ao leste.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-O estreito caminho segue atravÈs das ·rvores ao norte.
+O estreito caminho segue atrav√©s das √°rvores ao norte.
 ~
 ~
 0 -1 6126
 D1
-O estreito caminho segue atravÈs das ·rvores ao leste.
+O estreito caminho segue atrav√©s das √°rvores ao leste.
 ~
 ~
 0 -1 6123
-E
-caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
-ao seu redor.
-~
-E
-ribeira ·rvore ·rvores troncos tronco~
-As copas das antigas ·rvores tomam ambos lados da ribeira, formando um denso
-telhado acima do rio escuro.
-~
 E
 rio~
 O rio flui rapidamente e fortemente.  Ele parece negro, ou pelo menos assim
 parece na sombra.
 ~
+E
+ribeira arvore arvores troncos tronco~
+As copas das antigas √°rvores tomam ambos lados da ribeira, formando um denso
+telhado acima do rio escuro.
+~
+E
+caminho~
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
+ao seu redor.
+~
 S
 #6126
 Um Estreito Caminho na Escura Floresta Profunda~
-   VocÍ est· em um estreito caminho que atravessa a escura floresta
-profunda.  Antigas ·rvores acinzentadas cercam vocÍ.  O caminho continua ao
-norte e ao oeste, ao sul um fr·gil caminho o leva para do caminho.
+   Voc√™ est√° em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas √°rvores acinzentadas cercam voc√™.  O caminho continua ao
+norte e ao oeste, ao sul um fr√°gil caminho o leva para do caminho.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-O caminho estreito segue ao norte atravÈs da floresta.
+O caminho estreito segue ao norte atrav√©s da floresta.
 ~
 ~
 0 -1 6127
@@ -845,127 +845,127 @@ O caminho o leva ao sul - para longe do caminho.
 ~
 0 -1 6125
 D3
-O caminho estreito segue ao oeste atravÈs da floresta.
+O caminho estreito segue ao oeste atrav√©s da floresta.
 ~
 ~
 0 -1 6128
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho escuro parece fr√°gil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas ra√≠zes romperam o solo.
 ~
 E
 caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
 ao seu redor.
 ~
 E
-caminho~
-O caminho escuro parece fr·gil comparada com os volumosos troncos, e em
-alguns lugares, gigantescas raÌzes romperam o solo.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6127
 Um Estreito Caminho na Escura Floresta Profunda~
-   VocÍ est· em um estreito caminho que atravessa a escura floresta
-profunda.  Antigas ·rvores acinzentadas cercam vocÍ.  O caminho continua.
+   Voc√™ est√° em um estreito caminho que atravessa a escura floresta
+profunda.  Antigas √°rvores acinzentadas cercam voc√™.  O caminho continua.
 ~
-61 9 0 0 0 3
+61 ad 3
 D1
-O caminho estreito segue ao leste atravÈs da floresta.
+O caminho estreito segue ao leste atrav√©s da floresta.
 ~
 ~
 0 -1 6112
 D2
-O caminho estreito segue ao sul atravÈs da floresta.
+O caminho estreito segue ao sul atrav√©s da floresta.
 ~
 ~
 0 -1 6126
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho escuro parece fr√°gil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas ra√≠zes romperam o solo.
 ~
 E
-caminho~
-O caminho escuro parece fr·gil comparada com os volumosos troncos, e em
-alguns lugares, gigantescas raÌzes romperam o solo.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6128
-Um Estreito Caminho AtravÈs da Escura Floresta Profunda~
-   VocÍ est· em um empoeirado caminho que segue pelo leste e oeste entre
-enormes ·rvores antigas que o cerca de todos os lados.  Nenhum som pode ser
-ouvido - tudo est· no mais absoluto e completo silÍncio.
+Um Estreito Caminho Atrav√©s da Escura Floresta Profunda~
+   Voc√™ est√° em um empoeirado caminho que segue pelo leste e oeste entre
+enormes √°rvores antigas que o cerca de todos os lados.  Nenhum som pode ser
+ouvido - tudo est√° no mais absoluto e completo sil√™ncio.
 ~
-61 9 0 0 0 3
+61 ad 3
 D1
-O caminho estreito segue ao leste atravÈs da floresta.
+O caminho estreito segue ao leste atrav√©s da floresta.
 ~
 ~
 0 -1 6126
 D3
-O caminho estreito segue ao oeste atravÈs da floresta.
+O caminho estreito segue ao oeste atrav√©s da floresta.
 ~
 ~
 0 -1 6129
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho escuro parece fr√°gil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas ra√≠zes romperam o solo.
 ~
 E
-caminho~
-O caminho escuro parece fr·gil comparada com os volumosos troncos, e em
-alguns lugares, gigantescas raÌzes romperam o solo.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6129
-Um Estreito Caminho AtravÈs da Escura Floresta Profunda~
-   VocÍ est· em um empoeirado caminho que segue pelo leste e oeste entre
-enormes ·rvores antigas, que o cercam de todos os lados.  Nenhum som pode
-ser ouvido - tudo est· no mais absoluto e completo silÍncio.
+Um Estreito Caminho Atrav√©s da Escura Floresta Profunda~
+   Voc√™ est√° em um empoeirado caminho que segue pelo leste e oeste entre
+enormes √°rvores antigas, que o cercam de todos os lados.  Nenhum som pode
+ser ouvido - tudo est√° no mais absoluto e completo sil√™ncio.
 ~
-61 9 0 0 0 3
+61 ad 3
 D1
-O caminho estreito segue ao leste atravÈs da floresta.
+O caminho estreito segue ao leste atrav√©s da floresta.
 ~
 ~
 0 -1 6128
 D3
-O caminho estreito segue ao oeste atravÈs da floresta.
+O caminho estreito segue ao oeste atrav√©s da floresta.
 ~
 ~
 0 -1 6135
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho escuro parece fr√°gil comparada com os volumosos troncos, e em alguns
+lugares, gigantescas ra√≠zes romperam o solo.
 ~
 E
-caminho~
-O caminho escuro parece fr·gil comparada com os volumosos troncos, e em alguns
-lugares, gigantescas raÌzes romperam o solo.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6130
-Um Estreito Caminho AtravÈs da Escura Floresta Profunda~
-   VocÍ est· em um empoeirado caminho que segue pelo leste e oeste entre
-enormes ·rvores antigas, que o cerca de todos os lados.  Os troncos das
-·rvores parecem estar cobertos com alguma subst‚ncia pegajosa, que parece
+Um Estreito Caminho Atrav√©s da Escura Floresta Profunda~
+   Voc√™ est√° em um empoeirado caminho que segue pelo leste e oeste entre
+enormes √°rvores antigas, que o cerca de todos os lados.  Os troncos das
+√°rvores parecem estar cobertos com alguma subst√¢ncia pegajosa, que parece
 ficar mais pegajosa ao oeste!  Cuidado!
 ~
-61 9 0 0 0 3
+61 ad 3
 D1
-O caminho estreito segue ao leste atravÈs da floresta.
+O caminho estreito segue ao leste atrav√©s da floresta.
 ~
 ~
 0 -1 6110
 D3
-A subst‚ncia pende dos galhos das ·rvores acima do caminho, em forma de
-cordıes.  Ao oeste, o caminho parece estar coberto por grossas cordas
-cobertas por cola.  VocÍ pode sentir as forÁas do mal vindas de l·, e seus
-ossos lhe dizem que n„o È uma boa idÈia prosseguir.
+A subst√¢ncia pende dos galhos das √°rvores acima do caminho, em forma de
+cord√µes.  Ao oeste, o caminho parece estar coberto por grossas cordas
+cobertas por cola.  Voc√™ pode sentir as for√ßas do mal vindas de l√°, e seus
+ossos lhe dizem que n√£o √© uma boa id√©ia prosseguir.
 ~
 ~
 0 -1 6131
@@ -974,37 +974,37 @@ D4
 ~
 0 -1 6132
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+subst√¢ncia corda cord√µes cola~
+A subst√¢ncia lembra grossas cordas cobertas de cola.  Se isso n√£o fosse do
+tamanho que √©, voc√™ poderia jurar que √© uma teia de aranha.
 ~
 E
 caminho~
-O caminho escuro parece fr·gil comparada com os volumosos troncos, e em
-alguns lugares, gigantescas raÌzes romperam o solo.
+O caminho escuro parece fr√°gil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas ra√≠zes romperam o solo.
 ~
 E
-subst‚ncia corda cordıes cola~
-A subst‚ncia lembra grossas cordas cobertas de cola.  Se isso n„o fosse do
-tamanho que È, vocÍ poderia jurar que È uma teia de aranha.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6131
-A Teia de Aranha MortÌfera~
-   VocÍ est· andando pelo estreito caminho, desviando dos cordıes pegajosos
-enquanto avanÁa..
+A Teia de Aranha Mort√≠fera~
+   Voc√™ est√° andando pelo estreito caminho, desviando dos cord√µes pegajosos
+enquanto avan√ßa..
 
-Uma aranha enorme, venenosa cai acima de vocÍ!
-Uma aranha enorme, venenosa cai acima de vocÍ!
-Uma aranha enorme, venenosa cai acima de vocÍ!
+Uma aranha enorme, venenosa cai acima de voc√™!
+Uma aranha enorme, venenosa cai acima de voc√™!
+Uma aranha enorme, venenosa cai acima de voc√™!
 
-A aranha enorme, venenosa o pica!  VocÍ resiste ao veneno!
-A aranha enorme, venenosa o pica!  VocÍ est· envenenado!
-A aranha enorme, venenosa o pica!  VocÍ est· envenenado!
+A aranha enorme, venenosa o pica!  Voc√™ resiste ao veneno!
+A aranha enorme, venenosa o pica!  Voc√™ est√° envenenado!
+A aranha enorme, venenosa o pica!  Voc√™ est√° envenenado!
 
-VocÍ est· morto!
+Voc√™ est√° morto!
 ~
-61 10 0 0 0 3
+61 bd 3
 D1
 ~
 ~
@@ -1019,270 +1019,270 @@ D4
 0 -1 6133
 S
 #6132
-Em Cima, na ¡rvore~
-   VocÍ est· pendurado pelo lado de fora de um enorme tronco de ·rvore,
-coberto com por subst‚ncia pegajosa.  Exatamente a oeste, h· uma imensa teia
-de aranha presa entre v·rias ·rvores gigantescas, inclusive na que vocÍ
-est·.  Ao norte, h· o que parece ser uma entrada.
+Em Cima, na √Årvore~
+   Voc√™ est√° pendurado pelo lado de fora de um enorme tronco de √°rvore,
+coberto com por subst√¢ncia pegajosa.  Exatamente a oeste, h√° uma imensa teia
+de aranha presa entre v√°rias √°rvores gigantescas, inclusive na que voc√™
+est√°.  Ao norte, h√° o que parece ser uma entrada.
 ~
-61 13 0 0 0 6
+61 acd 6
 D0
-Ao norte, h· o que parece uma grande expans„o de teias que se extende ao
-longe pelas ·rvores.
+Ao norte, h√° o que parece uma grande expans√£o de teias que se extende ao
+longe pelas √°rvores.
 ~
 ~
 0 -1 6301
 D3
-Ao oeste h· uma imensa teia de aranha. Ela parece bastante macia.
+Ao oeste h√° uma imensa teia de aranha. Ela parece bastante macia.
 ~
 ~
 0 -1 6133
 D5
-Abaixo h· um caminho.
+Abaixo h√° um caminho.
 ~
 ~
 0 -1 6130
 E
 teia~
-A teia de aranha se estira ao oeste. Parece possÌvel andar nela.
+A teia de aranha se estira ao oeste. Parece poss√≠vel andar nela.
 ~
 S
 #6133
 Na Teia de Aranha~
-   VocÍ est· se equilibrando cuidadosamente nos grandes cordıes que seguram
-a teia.  Ao leste, h· um gigantesco tronco de ·rvore e ao oeste h· o que
-parece ser a entrada de uma caverna.  Sua estrutura È formada por muitas
+   Voc√™ est√° se equilibrando cuidadosamente nos grandes cord√µes que seguram
+a teia.  Ao leste, h√° um gigantesco tronco de √°rvore e ao oeste h√° o que
+parece ser a entrada de uma caverna.  Sua estrutura √© formada por muitas
 camadas de teia.
 ~
-61 9 0 0 0 6
+61 ad 6
 D1
-Ao leste h· um gigantesco tronco de ·rvore.
+Ao leste h√° um gigantesco tronco de √°rvore.
 ~
 ~
 0 -1 6132
 D3
-Ao oeste, h· a entrada do que parece ser uma caverna.
+Ao oeste, h√° a entrada do que parece ser uma caverna.
 ~
 ~
 0 -1 6134
 E
-caverna~
-Cobre a ·rea correspondente a um cÌrculo irregular, com o di‚metro de cerca
-de 120 pÈs e tem pelo menos 20 pÈs de altura.  Ela parece muito antiga.
+teia~
+A imensa teia de aranha balan√ßa suavemente.
 ~
 E
-teia~
-A imensa teia de aranha balanÁa suavemente.
+caverna~
+Cobre a √°rea correspondente a um c√≠rculo irregular, com o di√¢metro de cerca
+de 120 p√©s e tem pelo menos 20 p√©s de altura.  Ela parece muito antiga.
 ~
 S
 #6134
 O Ninho da Rainha Aranha~
-   VocÍ est· dentro de uma caverna que parece ser feita inteiramente de
-cordıes de teia.  A temperatura e umidade s„o bastante altas, tornando
-difÌcil de se respirar o ar sujo que circula aqui.  As paredes est„o
+   Voc√™ est√° dentro de uma caverna que parece ser feita inteiramente de
+cord√µes de teia.  A temperatura e umidade s√£o bastante altas, tornando
+dif√≠cil de se respirar o ar sujo que circula aqui.  As paredes est√£o
 cobertas de casulos abertos.
 ~
-61 9 0 0 0 6
+61 ad 6
 D1
 Comparado a este lugar, o leste parece convidativo.
 ~
 ~
 0 -1 6133
 E
-casulos casulo~
-Os casulos estourados est„o abertos, como se alguma coisa que estivesse
-dentro realmente quisesse sair.  Eles s„o do tamanho de uma cabeÁa humana.
+teia parede paredes~
+As pegajosas paredes est√£o cobertas de casulos abertos.
 ~
 E
-teia parede paredes~
-As pegajosas paredes est„o cobertas de casulos abertos.
+casulos casulo~
+Os casulos estourados est√£o abertos, como se alguma coisa que estivesse
+dentro realmente quisesse sair.  Eles s√£o do tamanho de uma cabe√ßa humana.
 ~
 S
 #6135
 Um Caminho Empoeirado na Escura Floresta Profunda~
-   VocÍ est· em um empoeirado caminho atravÈs da escura floresta profunda.
-Antigas ·rvores cinzentas o cercam de todos os lados.  O caminho continua ao
+   Voc√™ est√° em um empoeirado caminho atrav√©s da escura floresta profunda.
+Antigas √°rvores cinzentas o cercam de todos os lados.  O caminho continua ao
 norte e ao leste.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-O caminho segue ao norte atravÈs da floresta.
+O caminho segue ao norte atrav√©s da floresta.
 ~
 ~
 0 -1 6136
 D1
-O caminho segue ao leste atravÈs da floresta.
+O caminho segue ao leste atrav√©s da floresta.
 ~
 ~
 0 -1 6129
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6136
 Um Caminho Empoeirado na Escura Floresta Profunda~
-   VocÍ est· em um empoeirado caminho atravÈs da escura floresta profunda.
-Antigas ·rvores cinzentas o cercam de todos os lados.  O caminho continua a
+   Voc√™ est√° em um empoeirado caminho atrav√©s da escura floresta profunda.
+Antigas √°rvores cinzentas o cercam de todos os lados.  O caminho continua a
 sul e a oeste.  Uma larga trilha irregular segue ao leste para longe do
 caminho.
 ~
-61 9 0 0 0 3
+61 ad 3
 D1
-As ·rvores de todos os lados do caminho possuem arranhıes em seus troncos.
+As √°rvores de todos os lados do caminho possuem arranh√µes em seus troncos.
 ~
 ~
 0 -1 6142
 D2
-O caminho segue atravÈs das ·rvores ao sul.
+O caminho segue atrav√©s das √°rvores ao sul.
 ~
 ~
 0 -1 6135
 D3
-O caminho segue atravÈs das ·rvores, ao oeste.
+O caminho segue atrav√©s das √°rvores, ao oeste.
 ~
 ~
 0 -1 6137
 E
-·rvore ·rvores troncos tronco~
-Estas antigas ·rvores devem estar aqui por muitos, muitos anos.  …
-impossÌvel enxergar alÈm mesmo das copas mais baixas.
+caminho~
+O caminho escuro parece fr√°gil comparada com os volumosos troncos, e em
+alguns lugares, gigantescas ra√≠zes romperam o solo.
 ~
 E
 caminho~
-O caminho parece fr·gil e inseguro, comparado aos enormes troncos de ·rvores
+O caminho parece fr√°gil e inseguro, comparado aos enormes troncos de √°rvores
 ao seu redor.
 ~
 E
-caminho~
-O caminho escuro parece fr·gil comparada com os volumosos troncos, e em
-alguns lugares, gigantescas raÌzes romperam o solo.
+arvore arvores troncos tronco~
+Estas antigas √°rvores devem estar aqui por muitos, muitos anos.  √â
+imposs√≠vel enxergar al√©m mesmo das copas mais baixas.
 ~
 S
 #6137
-No Fim do Caminho, AtravÈs da Escura Floresta Profunda~
-   VocÍ est· em um caminho atravÈs da escura floresta profunda.  Antigas
-·rvores cinzentas o cercam de todos os lados.  Um estreito caminho segue ao
-norte e a ˙nica saÌda È ao leste, atravÈs do caminho principal.
+No Fim do Caminho, Atrav√©s da Escura Floresta Profunda~
+   Voc√™ est√° em um caminho atrav√©s da escura floresta profunda.  Antigas
+√°rvores cinzentas o cercam de todos os lados.  Um estreito caminho segue ao
+norte e a √∫nica sa√≠da √© ao leste, atrav√©s do caminho principal.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-Um estreito caminho segue ao norte atravÈs dos arbustos.
+Um estreito caminho segue ao norte atrav√©s dos arbustos.
 ~
 ~
 0 -1 6138
 D1
-O caminho segue ao leste, atravÈs das ·rvores.
+O caminho segue ao leste, atrav√©s das √°rvores.
 ~
 ~
 0 -1 6136
 E
-·rvore tronco troncos~
-As antigas ·rvores cinzentas parecem lhe observar silenciosamente.
+arvore tronco troncos~
+As antigas √°rvores cinzentas parecem lhe observar silenciosamente.
 ~
 S
 #6138
 No Caminho Estreito~
-   O caminho continua ao norte e ao sul, seguindo atravÈs dos densos
-arbustos desta parte da floresta de Haon-Dor.  Antigas ·rvores cinzentas o
+   O caminho continua ao norte e ao sul, seguindo atrav√©s dos densos
+arbustos desta parte da floresta de Haon-Dor.  Antigas √°rvores cinzentas o
 cercam de todos os lados.  Os arbustos fecham o caminho, tornando-o estreito
 para sua passagem.  O caminho parece clarear ao sul.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-O caminho estreito continua ao norte, atravÈs dos ·rbustos.
+O caminho estreito continua ao norte, atrav√©s dos √°rbustos.
 ~
 ~
 0 -1 6139
 D2
-O caminho segue a leste, atravÈs das ·rvores.
+O caminho segue a leste, atrav√©s das √°rvores.
 ~
 ~
 0 -1 6137
 E
-·rvores troncos tronco~
-As antigas ·rvores cinzentas parecem lhe observar silenciosamente.
+arvores troncos tronco~
+As antigas √°rvores cinzentas parecem lhe observar silenciosamente.
 ~
 S
 #6139
 No Caminho Estreito~
-   O caminho continua ao norte e ao sul, seguindo atravÈs dos densos
-arbustos desta parte da floresta de Haon-Dor.  Antigas ·rvores cinzentas o
+   O caminho continua ao norte e ao sul, seguindo atrav√©s dos densos
+arbustos desta parte da floresta de Haon-Dor.  Antigas √°rvores cinzentas o
 cercam de todos os lados.  Os arbustos fecham o caminho, tornando-o estreito
 para sua passagem.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-¿ uma curta dist‚ncia ao norte, vocÍ pode ver algo brilhando.
+√Ä uma curta dist√¢ncia ao norte, voc√™ pode ver algo brilhando.
 ~
 ~
 0 -1 6203
 D2
-O caminho estreito continua ao norte, atravÈs dos ·rbustos.
+O caminho estreito continua ao norte, atrav√©s dos √°rbustos.
 ~
 ~
 0 -1 6138
 S
 #6142
 Do Lado de Fora de uma Caverna, na Escura Floresta Profunda~
-   VocÍ est· no fim de um grande e irregular caminho.  A leste a um local
+   Voc√™ est√° no fim de um grande e irregular caminho.  A leste a um local
 completamente diferente, um campo aberto que parece isolado por magia.  Ao
-norte, h· uma o que parece ser a entrada de uma caverna.  As ·rvores aqui
+norte, h√° uma o que parece ser a entrada de uma caverna.  As √°rvores aqui
 possuem marcas como se alguma coisa enorme as tivesse rasgado com suas
 garras, com raiva.
 
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
-O cheiro repugnante de um grande rÈptil sai da entrada da caverna.
+O cheiro repugnante de um grande r√©ptil sai da entrada da caverna.
 ~
 ~
 0 -1 6143
-D1
-~
-~
-0 -1 15701
 D3
 O caminho continua ao oeste.
 ~
 ~
 0 -1 6136
+D1
+~
+~
+0 -1 15701
 E
-entrada caverna~
-A entrada da caverna emana o cheiro repugnante de um grande rÈptil.
+arvores arvore~
+As enormes e antigas √°rvores cinzentas possuem marcas como se alguma coisa
+enorme as tivesse rasgado com suas garras, com muita raiva.
 ~
 E
-·rvores ·rvore~
-As enormes e antigas ·rvores cinzentas possuem marcas como se alguma coisa
-enorme as tivesse rasgado com suas garras, com muita raiva.
+entrada caverna~
+A entrada da caverna emana o cheiro repugnante de um grande r√©ptil.
 ~
 S
 #6143
-A Caverna do Drag„o Verde~
-   VocÍ est· em uma grande caverna natural.  O ch„o est· coberto de ossos de
-todos os tipos e o fedor t„o volumoso que vocÍ poderia cort·-lo com uma
-faca.  A ˙nica saÌda È ao sul.
+A Caverna do Drag√£o Verde~
+   Voc√™ est√° em uma grande caverna natural.  O ch√£o est√° coberto de ossos de
+todos os tipos e o fedor t√£o volumoso que voc√™ poderia cort√°-lo com uma
+faca.  A √∫nica sa√≠da √© ao sul.
 ~
-61 9 0 0 0 3
+61 ad 3
 D2
-A saÌda o leva de volta · floresta.
+A sa√≠da o leva de volta √° floresta.
 ~
 ~
 0 -1 6142
 E
-osso ossos ch„o~
-A maioria dos ossos no ch„o parecem ter origem humana.
+osso ossos chao~
+A maioria dos ossos no ch√£o parecem ter origem humana.
 ~
 S
 #6150
 O Caminho Estreito~
-   Este caminho parece mais assustador do que qualquer outro que vocÍ viu.
-As habituais marcas de garras de animais e mordidas nas ·rvores diminuem e
+   Este caminho parece mais assustador do que qualquer outro que voc√™ viu.
+As habituais marcas de garras de animais e mordidas nas √°rvores diminuem e
 se tornam distantes.  O mato parece se mover para o leste.  O caminho
 continua ao norte.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
 O caminho estreito continua ao norte.
 ~
@@ -1292,7 +1292,8 @@ D1
 um caminho esquecido.
 ~
 mato~
-1 -1 19700
+:n 1 o mato
+ad -1 19700
 D2
 O caminho cruza o caminho da floresta principal.
 ~
@@ -1301,31 +1302,31 @@ O caminho cruza o caminho da floresta principal.
 S
 #6151
 O Caminho Estreito~
-   Esta parte do caminho È tambÈm bastante peculiar.  VocÍ n„o vÍ nenhum
-sinal de vida animal, nem nada parecido.  A estrutura formada pelas ·rvores,
-forÁa o caminho a uma acentuada curva ao leste.
+   Esta parte do caminho √© tamb√©m bastante peculiar.  Voc√™ n√£o v√™ nenhum
+sinal de vida animal, nem nada parecido.  A estrutura formada pelas √°rvores,
+for√ßa o caminho a uma acentuada curva ao leste.
 ~
-61 9 0 0 0 3
+61 ad 3
 D1
 O caminho segue ao leste.
 ~
 ~
 0 -1 6152
 D2
-O comeÁo do caminho.
+O come√ßo do caminho.
 ~
 ~
 0 -1 6150
 S
 #6152
-O CÌrculo de ¡rvores~
-   ¡s ·rvores aqui parecem formar um cÌrculo em volta de uma enorme ·rvore
-no centro.  VocÍ percebe uma porta de madeira esculpida na enorme ·rvore ao
-leste.  O caminho que vocÍ vinha seguindo parece terminar na base da ·rvore.
+O C√≠rculo de √Årvores~
+   √Ås √°rvores aqui parecem formar um c√≠rculo em volta de uma enorme √°rvore
+no centro.  Voc√™ percebe uma porta de madeira esculpida na enorme √°rvore ao
+leste.  O caminho que voc√™ vinha seguindo parece terminar na base da √°rvore.
 ~
-61 9 0 0 0 3
+61 ad 3
 D1
-A porta da ·rvore foi belamente esculpida.
+A porta da √°rvore foi belamente esculpida.
 ~
 porta~
 1 -1 6153
@@ -1336,13 +1337,13 @@ A curva no caminho.
 0 -1 6151
 S
 #6153
-Dentro da Grande ¡rvore~
-   VocÍ entrou dentro da ·rvore.  A partir daqui, degraus conduzem para
-baixo, na escurid„o, ou vocÍ pode sair da ·rvore, seguindo para o oeste.
+Dentro da Grande √Årvore~
+   Voc√™ entrou dentro da √°rvore.  A partir daqui, degraus conduzem para
+baixo, na escurid√£o, ou voc√™ pode sair da √°rvore, seguindo para o oeste.
 ~
-61 9 0 0 0 3
+61 ad 3
 D3
-A porta da ·rvore foi lindamente esculpida.
+A porta da √°rvore foi lindamente esculpida.
 ~
 porta~
 1 -1 6152
@@ -1353,11 +1354,11 @@ Os degraus parecem que poderiam sustentar seu peso.
 0 -1 6154
 S
 #6154
-O Corredor Subterr‚neo~
-   Este corredor È aparentemente uma das raÌzes da ·rvore.  Ele segue ao
-sul, de onde vocÍ pode ouvir estranhos barulhos.
+O Corredor Subterr√¢neo~
+   Este corredor √© aparentemente uma das ra√≠zes da √°rvore.  Ele segue ao
+sul, de onde voc√™ pode ouvir estranhos barulhos.
 ~
-61 9 0 0 0 3
+61 ad 3
 D2
 O corredor parece bem grande.
 ~
@@ -1371,16 +1372,16 @@ Os degraus parecem que poderiam sustentar seu peso.
 S
 #6155
 O Templo Cultista~
-   Este templo, construÌdo para um Deus o qual vocÍ n„o adora, È um bom
-lugar para visitar mas vocÍ se sente desconfort·vel ao pensar em gastar seu
-tempo aqui.  O altar esculpido na madeira parece quase brilhar quando vocÍ
-entra na sala.  A ˙nica saÌda È pela qual vocÍ entrou.
+   Este templo, constru√≠do para um Deus o qual voc√™ n√£o adora, √© um bom
+lugar para visitar mas voc√™ se sente desconfort√°vel ao pensar em gastar seu
+tempo aqui.  O altar esculpido na madeira parece quase brilhar quando voc√™
+entra na sala.  A √∫nica sa√≠da √© pela qual voc√™ entrou.
 ~
-61 9 0 0 0 3
+61 ad 3
 D0
 O corredor ao norte parece bem grande.
 ~
 ~
 0 -1 6154
 S
-$~
+$
