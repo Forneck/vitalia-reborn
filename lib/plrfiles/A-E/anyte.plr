@@ -6,8 +6,8 @@ Clas: 4
 Levl: 32
 Id  : 6
 Brth: 1603323580
-Plyd: 48012
-Last: 1604102280
+Plyd: 48642
+Last: 1604102910
 Lmot: 1603324480
 Lnew: 1604011239
 Htwn: 3001
@@ -20,11 +20,11 @@ Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
 Room: 3001
 Lern: 29
-Hung: 20
-Thir: 17
-Hit : 129/342
-Mana : 574/603
-Move: 94/146
+Hung: 11
+Thir: 8
+Hit : 372/342
+Mana : 603/603
+Move: 116/146
 Str : 17/0
 Int : 9
 Wis : 11
