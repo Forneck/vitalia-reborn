@@ -1,13 +1,22 @@
 Name: Anyte
 Pass: AnRCfBykX0mXk
-Titl: a Iniciada no Quinto C�rculo
+Titl: a Iniciada no Quinto Circulo
 Sex : 2
 Clas: 4
 Levl: 32
 Id  : 6
 Brth: 1603323580
+<<<<<<< HEAD
+Plyd: 48642
+Last: 1604011239
+=======
 Plyd: 52710
+<<<<<<< HEAD
 Last: 1604110240
+=======
+Last: 1604107429
+>>>>>>> ae121f907ed1364f7a80a7bf96646c6022165e33
+>>>>>>> c9f4c0ebbb798551e5aed8eb886a8f842a18d469
 Lmot: 1603324480
 Lnew: 1604011239
 Htwn: 3001
@@ -32,8 +41,13 @@ Dex : 15
 Con : 12
 Cha : 8
 Ac  : 100
+<<<<<<< HEAD
+Gold: 329923
+Exp : 7564173
+=======
 Gold: 371448
 Exp : 6700290
+>>>>>>> ae121f907ed1364f7a80a7bf96646c6022165e33
 Olc : 0
 Skil:
 7 100
@@ -86,6 +100,18 @@ Alis: 15
  isha
             s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;u;w;w
 1
+<<<<<<< HEAD
  isharet
          e;e;d;e;e;e;n;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;n;n
 1
+=======
+ bash
+ bash $*;st
+0
+ 1
+ say
+0
+ say
+ say @g$*@n
+1
+>>>>>>> c9f4c0ebbb798551e5aed8eb886a8f842a18d469

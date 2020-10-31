@@ -147,14 +147,26 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 		}
 	}
 
-	if (corpse)
+		/* If corpse has objects, save them to file */
+	Crash_extract_norents(corpse);
 	for (obj = corpse->contains; obj != NULL; obj = obj->next_content)
-		{
-			obj_from_obj(obj);
-			obj_to_char(obj, ch);
-			get_check_money(ch, obj);
-		}
+	{
+	    if (GET_OBJ_TYPE(obj) == ITEM_MONEY) {
+      GET_GOLD(ch) += GET_OBJ_VAL(obj, 0);
+      extract_obj(obj);
+	    }
+      obj_from_obj(obj);
+      Crash_extract_objs(obj);
+	}
+		
+	/* Show message */
+	if (corpse->carried_by)
+		act("$p é envolvido por uma forte luz branca e desaparece.", FALSE, corpse->carried_by,
+			corpse, 0, TO_CHAR);
+	else if (corpse->in_room)
+		act("$p é envolvido por uma forte luz branca e desaparece.", TRUE, NULL, corpse, 0, TO_ROOM);
 
+	/* Store player */
 	save_char(ch);
 	Crash_crashsave(ch);
 }
@@ -237,10 +249,11 @@ int autoraise(struct obj_data *corpse)
     return (AR_EXTRACT);
   }
 
-  LIST_FOR(character_list, ch, l_global)
+	for (i = 0; i <= top_of_p_table; i++){
     if (!IS_NPC(ch) && (GET_IDNUM(ch) == idnum))
       break;
-
+	}
+	
   if (!ch) {
     if ((ch = load_offline_char_by_id(idnum)) == NULL) {
       log(CMP, LVL_GOD, "AutoRaise: Player %s was not found in the playerfile.", temp);
