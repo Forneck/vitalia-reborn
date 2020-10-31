@@ -69,7 +69,7 @@ D2
 D3
 ~
 porta~
-0 -1 10203
+1 -1 10203
 S
 #10203
 A Chapelaria~
@@ -81,15 +81,15 @@ sul, e oeste.  A porta ao leste, claro, leva ao lado exterior.
 D0
 ~
 porta~
-0 -1 10204
+1 -1 10204
 D1
 ~
 porta~
-0 -1 10202
+1 -1 10202
 D2
 ~
 porta~
-0 -1 10207
+1 -1 10207
 D3
 ~
 ~
@@ -109,7 +109,7 @@ D0
 D2
 ~
 porta~
-0 -1 10203
+1 -1 10203
 S
 #10205
 Um Curto Corredor~

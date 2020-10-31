@@ -3,28 +3,28 @@ Pass: Al0/4XKfoKti2
 Titl: the Wolf Cub
 Sex : 1
 Clas: 6
-Levl: 5
+Levl: 7
 Id  : 20
 Brth: 1603768097
-Plyd: 17255
-Last: 1604021198
-Lmot: 1603768107
+Plyd: 36843
+Last: 1604165790
+Lmot: 1604141912
 Lnew: 1604020538
 Htwn: 1372
-Host: 177.220.172.133
+Host: 138.204.26.96
 Hite: 195
 Wate: 172
-Alin: 188
+Alin: 66
 Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghknoBCDE abde 0 0
-Wimp: 20
+Wimp: 30
 Room: 3001
-Hung: 16
-Thir: 16
-Hit : 79/64
-Mana : 83/107
-Move: 97/97
+Hung: 21
+Thir: 20
+Hit : 124/84
+Mana : 115/115
+Move: 103/103
 Str : 16/0
 Int : 14
 Wis : 12
@@ -32,17 +32,20 @@ Dex : 14
 Con : 15
 Cha : 4
 Ac  : 100
-Gold: 2700
-Bank: 17596
-Exp : 20889
+Gold: 1981
+Bank: 33008
+Exp : 71294
 Olc : 0
 ScrW: 44
 Skil:
 16 90
 21 30
 42 90
+44 90
+93 30
 224 90
 0 0
 Affs:
-19 18 0 29 16 0 0 0
+19 32 0 29 16 0 0 0
+44 5 0 31 64 0 0 0
 0 0 0 0 0 0 0 0

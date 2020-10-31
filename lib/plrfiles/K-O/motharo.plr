@@ -6,9 +6,10 @@ Clas: 6
 Levl: 1
 Id  : 22
 Brth: 1603914365
-Plyd: 621
-Last: 1603983753
-Lnew: 1603915341
+Plyd: 8360
+Last: 1604154791
+Lmot: 1604149290
+Lnew: 1604145461
 Htwn: 1372
 Host: 187.66.23.112
 Hite: 184
@@ -17,13 +18,13 @@ Alin: 95
 Act : hy 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDEF abd 0 0
-Room: 1891
+Room: 65535
 Lern: 1
 Hung: -1
 Thir: -1
-Hit : 0/18
-Mana : 0/100
-Move: 0/86
+Hit : 1/18
+Mana : 1/100
+Move: 1/86
 Str : 14/0
 Int : 12
 Wis : 11

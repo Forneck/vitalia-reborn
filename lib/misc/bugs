@@ -46,7 +46,7 @@ IdNum     1
 Dated     1603259862
 Level     110
 Room      1204
-Flags     1 0 0 0
+Flags     0 0 0 0
 End
 Text      guilda ranger~
 Body      fazer guilda de ranger em mid e nt
@@ -78,12 +78,33 @@ Level     110
 Room      3001
 Flags     0 0 0 0
 End
-Text       away vazado~
+Text      away vazado~
 Body      o verde no away na hora de mostrar na sala ta vazando
 ~
 Name      Cansian~
 IdNum     1
 Dated     1604012800
+Level     110
+Room      3001
+Flags     0 0 0 0
+End
+Text      IA~
+Body      nao ta treinando arg1 de magias (cast).
+buy e sell tb nao por dnh
+~
+Name      Cansian~
+IdNum     1
+Dated     1604136131
+Level     110
+Room      3375
+Flags     0 0 0 0
+End
+Text       autoequip~
+Body      brincos, rosto e asas
+~
+Name      Cansian~
+IdNum     1
+Dated     1604159805
 Level     110
 Room      3001
 Flags     0 0 0 0

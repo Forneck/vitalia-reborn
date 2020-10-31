@@ -1,7 +1,10 @@
 #81
 Vitalia~
 Egito~
-8100 8299 180 1 b 0 0 0 -1 -1
+8100 8299 180 1 bj 0 0 0 -1 -1
+R 0 8101 8163 -1 	(um pássaro alma)
+R 0 8101 8163 -1 	(um pássaro alma)
+R 0 8101 8163 -1 	(um pássaro alma)
 M 0 8101 4 8159 	(um sacerdote)
 E 1 8140 20 12 	(o manto do sacerdote)
 M 0 8101 4 8164 	(um sacerdote)
@@ -266,9 +269,6 @@ E 1 8164 20 11 	(um escudo de soldado)
 M 0 8152 6 8162 	(um soldado egípcio)
 E 1 8135 20 17 	(uma faca egípcia)
 E 1 8164 20 11 	(um escudo de soldado)
-R 0 8101 8163 -1 	(um pássaro alma)
-R 0 8101 8163 -1 	(um pássaro alma)
-R 0 8101 8163 -1 	(um pássaro alma)
 O 1 8101 3 8163 	(um osso)
 O 1 8101 3 8163 	(um osso)
 O 1 8101 3 8163 	(um osso)

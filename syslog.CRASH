@@ -1,30 +1,30 @@
-Oct 31 02:16:29 2020 :: Cansian (level 110) has 2 objects (max 100).
-Oct 31 02:21:21 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Oct 31 02:21:21 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 21520
-Oct 31 02:22:48 2020 :: (GC) Cansian snoops Anyte
-Oct 31 02:26:21 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Oct 31 02:26:21 2020 :: rusage: user time: 2 sec, system time: 0 sec, max res size: 21784
-Oct 31 02:31:21 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Oct 31 02:31:21 2020 :: rusage: user time: 3 sec, system time: 0 sec, max res size: 22240
-Oct 31 02:35:12 2020 :: OLC: Cansian starts editing zone 22 allowed zone 0
-Oct 31 02:35:31 2020 :: GenOLC: add_room: Updated existing room #2202.
-Oct 31 02:35:31 2020 :: OLC: Cansian edits room 2202.
-Oct 31 02:35:31 2020 :: GenOLC: save_rooms: Saving rooms in zone #22 (2200-2299).
-Oct 31 02:35:31 2020 :: OLC: Cansian stops editing zone 22 allowed zone 0
-Oct 31 02:36:00 2020 :: OLC: Cansian starts editing zone 22 allowed zone 0
-Oct 31 02:36:12 2020 :: GenOLC: add_room: Updated existing room #2205.
-Oct 31 02:36:12 2020 :: OLC: Cansian edits room 2205.
-Oct 31 02:36:12 2020 :: GenOLC: save_rooms: Saving rooms in zone #22 (2200-2299).
-Oct 31 02:36:12 2020 :: OLC: Cansian stops editing zone 22 allowed zone 0
-Oct 31 02:36:21 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Oct 31 02:36:21 2020 :: rusage: user time: 4 sec, system time: 0 sec, max res size: 22468
-Oct 31 02:36:29 2020 :: OLC: Cansian starts editing zone 22 allowed zone 0
-Oct 31 02:36:56 2020 :: OLC: Cansian stops editing zone 22 allowed zone 0
-Oct 31 02:37:08 2020 :: OLC: Cansian starts editing zone 22 allowed zone 0
-Oct 31 02:37:19 2020 :: GenOLC: add_room: Updated existing room #2206.
-Oct 31 02:37:19 2020 :: OLC: Cansian edits room 2206.
-Oct 31 02:37:19 2020 :: GenOLC: save_rooms: Saving rooms in zone #22 (2200-2299).
-Oct 31 02:37:19 2020 :: OLC: Cansian stops editing zone 22 allowed zone 0
-Oct 31 02:37:29 2020 :: (GC) Cansian stops snooping
-Oct 31 02:37:33 2020 :: (GC) Cansian snoops Anyte
-Segmentation fault (core dumped)
+Oct 31 16:54:37 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
+Oct 31 16:54:37 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
+Oct 31 16:54:37 2020 :: Boot db -- DONE.
+Oct 31 16:54:37 2020 :: Signal trapping.
+Oct 31 16:54:37 2020 :: Entering game loop.
+Oct 31 16:54:37 2020 :: No connections.  Going to sleep.
+Oct 31 16:54:37 2020 :: New connection.  Waking up.
+Oct 31 16:54:45 2020 :: Cansian has connected.
+Oct 31 16:54:47 2020 :: Cansian had no variable file
+Oct 31 16:54:47 2020 :: Cansian retrieving crash-saved items and entering game.
+Oct 31 16:54:47 2020 :: Cansian (level 110) has 2 objects (max 100).
+Oct 31 16:54:47 2020 :: Anyte has connected.
+Oct 31 16:54:48 2020 :: Anyte had no variable file
+Oct 31 16:54:48 2020 :: Anyte retrieving crash-saved items and entering game.
+Oct 31 16:54:48 2020 :: Anyte (level 33) has 29 objects (max 100).
+Oct 31 16:59:37 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Oct 31 16:59:37 2020 :: rusage: user time: 1 sec, system time: 0 sec, max res size: 21696
+Oct 31 17:03:26 2020 :: (GC) Cansian snoops Anyte
+Oct 31 17:03:55 2020 :: (GC) Cansian restored Anyte
+Oct 31 17:04:37 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Oct 31 17:04:37 2020 :: rusage: user time: 2 sec, system time: 0 sec, max res size: 21800
+Oct 31 17:06:21 2020 :: (GC) Reboot by Cansian.
+Oct 31 17:06:21 2020 :: SYSERR: lib/.fastboot: No such file or directory
+Oct 31 17:06:21 2020 :: Closing all sockets.
+Oct 31 17:06:21 2020 :: Closing link to: Anyte.
+Oct 31 17:06:21 2020 :: Closing link to: Cansian.
+Oct 31 17:06:21 2020 :: Saving current MUD time.
+Oct 31 17:06:21 2020 :: Rebooting.
+Quick boot mode -- rent check supressed.
+Using file descriptor for logging.
