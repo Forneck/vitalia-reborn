@@ -11,11 +11,6 @@ D0
 ~
 ~
 0 -1 8328
-D1
-A lagoa extende-se par o leste mas você não tem como mover-se até lá.
-~
-~
-4 -1 0
 D4
 ~
 ~
@@ -131,14 +126,6 @@ possível.
 ~
 ~
 0 -1 7015
-D5
-Lá embaixo nada pode ser identificado.  A escuridão que se mostra aqui
-parece ser impossível de existir no mundo mortal.  Ela é tão abundante que
-uma tocha acesa lá seria totalmente inútil... isso é o que você acha.  Não
-é o tipo de coisa que encoraje você nessa viagem, heim?
-~
-~
-4 -1 0
 E
 barras~
 Elas parecem bem escorregadias, e não parecem seguras, porém podem ser
