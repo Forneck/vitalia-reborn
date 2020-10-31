@@ -1628,7 +1628,7 @@ atuais estão cheios de revolucionários.
 D2
 ~
 porta~
-0 -1 4379
+1 -1 4379
 D5
 ~
 ~
@@ -1744,7 +1744,7 @@ D1
 D3
 ~
 porta~
-0 -1 4387
+1 -1 4387
 S
 #4387
 Um Estábulo Francês~
@@ -1758,7 +1758,7 @@ alimentar.
 D1
 ~
 porta~
-0 -1 4386
+1 -1 4386
 S
 #4388
 Uma Hospedaria Francêsa~
@@ -1829,15 +1829,15 @@ D0
 D1
 ~
 porta~
-0 -1 4392
+1 -1 4392
 D2
 ~
 porta~
-0 4390 4394
+1 4390 4394
 D3
 ~
 porta~
-0 4390 4393
+1 4390 4393
 S
 #4392
 Uma Cela do Calabouço~
