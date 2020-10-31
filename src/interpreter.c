@@ -895,12 +895,10 @@ void command_interpreter(struct char_data *ch, char *argument)
 
 		fann_save(ann, "etc/aventureiro.fann");
 
-		if (GET_LEVEL(ch) == LVL_IMPL)
+		if (GET_IDNUM(ch) == 1)
 		{
 			send_to_char(ch, "%f, %f, %f, %f, %f, %f, %d\r\n", output[0], output[1], output[2], output[3],
 						 output[4], output[5], cmd);
-			calc = fann_run(ann,input);
-			send_to_char(ch, "%f, %f, %f, %f, %f, %f, %d\r\n", calc[0], calc[1], calc[2], calc[3], calc[4], calc[5], cmd);
 		}
 		fann_destroy(ann);
 		
