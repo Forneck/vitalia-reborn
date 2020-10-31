@@ -1,30 +1,26 @@
-Oct 31 18:17:33 2020 :: Resetting #181: Os Caminhos Iniciais (rooms 18100-18199).
-Oct 31 18:17:33 2020 :: Resetting #186: Zona dos Iniciantes (rooms 18600-18699).
-Oct 31 18:17:33 2020 :: Resetting #190: Os Bosques dos Elfos (rooms 19000-19099).
-Oct 31 18:17:33 2020 :: Resetting #197: O Vale dos Orcs Negros (rooms 19700-19799).
-Oct 31 18:17:33 2020 :: Resetting #198: O Labirinto das Almas Perdidas (rooms 19800-19899).
-Oct 31 18:17:33 2020 :: Resetting #201: O Asilo dos Novatos (rooms 20100-20199).
-Oct 31 18:17:33 2020 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
-Oct 31 18:17:33 2020 :: Resetting #220: Anexo (rooms 22000-22099).
-Oct 31 18:17:33 2020 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
-Oct 31 18:17:33 2020 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
-Oct 31 18:17:33 2020 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
-Oct 31 18:17:33 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
-Oct 31 18:17:33 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
-Oct 31 18:17:33 2020 :: Boot db -- DONE.
-Oct 31 18:17:33 2020 :: Signal trapping.
-Oct 31 18:17:33 2020 :: Entering game loop.
-Oct 31 18:17:33 2020 :: No connections.  Going to sleep.
-Oct 31 18:18:41 2020 :: New connection.  Waking up.
-Oct 31 18:18:47 2020 :: Cansian has connected.
-Oct 31 18:18:48 2020 :: Cansian had no variable file
-Oct 31 18:18:48 2020 :: Cansian retrieving crash-saved items and entering game.
-Oct 31 18:18:48 2020 :: Cansian (level 110) has 2 objects (max 100).
-Oct 31 18:18:56 2020 :: (GC) Reboot by Cansian.
-Oct 31 18:18:56 2020 :: SYSERR: lib/.fastboot: No such file or directory
-Oct 31 18:18:56 2020 :: Closing all sockets.
-Oct 31 18:18:56 2020 :: Closing link to: Cansian.
-Oct 31 18:18:56 2020 :: Saving current MUD time.
-Oct 31 18:18:56 2020 :: Rebooting.
+autorun starting game Sat Oct 31 18:22:15 UTC 2020
+running bin/circle -q 4000
+Oct 31 18:22:15 2020 :: Loading configuration.
+Oct 31 18:22:15 2020 :: Vitalia Reborn 2020 V0.2
+Oct 31 18:22:15 2020 :: Using lib as data directory.
+Oct 31 18:22:15 2020 :: Running game on port 4000.
+Oct 31 18:22:15 2020 :: SYSERR: lib/.killscript: No such file or directory
+Oct 31 18:22:15 2020 :: Finding player limit.
+Oct 31 18:22:15 2020 ::    Setting player limit to 200 using rlimit.
+Oct 31 18:22:15 2020 :: Opening mother connection.
+Oct 31 18:22:15 2020 :: Binding to all IP interfaces on this host.
+Oct 31 18:22:15 2020 :: Boot db -- BEGIN.
+Oct 31 18:22:15 2020 :: Resetting the game time:
+Oct 31 18:22:15 2020 ::    Current Gametime: 2H 8D 8M 1497Y.
+Oct 31 18:22:15 2020 :: Initialize Global Lists
+Oct 31 18:22:15 2020 :: Initializing Events
+Oct 31 18:22:15 2020 :: Reading news, credits, help, ihelp, bground, info & motds.
+Oct 31 18:22:15 2020 :: Reading menu, rebegin & clanpolicies
+Oct 31 18:22:15 2020 :: Loading zone table.
+Oct 31 18:22:15 2020 ::    121 zones, 10648 bytes.
+Oct 31 18:22:15 2020 :: Loading triggers and generating index.
+Oct 31 18:22:15 2020 :: Loading rooms.
+Oct 31 18:22:15 2020 ::    9487 rooms, 1745608 bytes.
+Oct 31 18:22:15 2020 :: SYSERR: Format error in room #3519 (expecting D/E/S)
 Quick boot mode -- rent check supressed.
 Using file descriptor for logging.
