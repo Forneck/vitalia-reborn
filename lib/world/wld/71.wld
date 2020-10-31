@@ -15,7 +15,7 @@ D1
 A lagoa extende-se par o leste mas você não tem como mover-se até lá.
 ~
 ~
-0 -1 -1
+4 -1 0
 D4
 ~
 ~
@@ -138,7 +138,7 @@ uma tocha acesa lá seria totalmente inútil... isso é o que você acha.  Não
 é o tipo de coisa que encoraje você nessa viagem, heim?
 ~
 ~
-0 -1 -1
+4 -1 0
 E
 barras~
 Elas parecem bem escorregadias, e não parecem seguras, porém podem ser
