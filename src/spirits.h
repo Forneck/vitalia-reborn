@@ -12,7 +12,7 @@ extern void Crash_extract_norents(struct obj_data *obj);
 extern void Crash_extract_objs(struct obj_data *obj);
 extern void get_check_money(struct char_data *ch, struct obj_data *obj);
 
-//int autoraise(struct obj_data *corpse)
+//int autoraise(struct obj_data *corpse);
 
 #define AR_SKIP 0
 #define AR_DROPOBJS 1
