@@ -1,265 +1,278 @@
 #7900
 Do Lado de fora da Moradia de Redferne~
-   Uma grande nuvem forma o platô em que você está de pé.  Aqui, o vento é
-absolutamente calmo e o Sol está brilhando calorosamente sobre você.  Vindo
-debaixo da nuvem, você pode ouvir fracos sons da Cidade de Midgaard.  Para
-norte, logo em frente a você, está a Grande Mansão de Naris.
+   Uma grande nuvem forma o platÃ´ em que vocÃª estÃ¡ de pÃ©.  Aqui, o vento Ã©
+absolutamente calmo e o Sol estÃ¡ brilhando calorosamente sobre vocÃª.  Vindo
+debaixo da nuvem, vocÃª pode ouvir fracos sons da Cidade de Midgaard.  Para
+norte, logo em frente a vocÃª, estÃ¡ a Grande MansÃ£o de Naris.
 ~
-79 516 0 0 0 0
+79 cj 0
 D0
-Você vê um portão arqueado levando para dentro desta magnífica construção.
+VocÃª vÃª um portÃ£o arqueado levando para dentro desta magnÃ­fica construÃ§Ã£o.
 ~
 portao grande arqueado~
+:n 1 o portÃ£o
 2 7901 7901
 D5
-Você vê a Grande Corrente que ancora a Mansão de Naris ao solo.
+VocÃª vÃª a Grande Corrente que ancora a MansÃ£o de Naris ao solo.
 ~
 ~
 0 -1 7918
 S
 #7901
-A Parte Meridional do Grande Salão~
-   Você está em um vasto salão fracamente iluminado, mas de onde a luz vêm é
-um mistério.  As paredes parecem irradiar cordialidade e dão a você a
-sensação de que é bem-vindo aqui.  Há um grande quadro pendurado na parede.
-Uma grande escadaria de madeira leva a torre.  Para leste, há uma grande
-passagem levando para fora do salão.  E esta termina bruscamente em uma alta
-porta de carvalho.  O enorme salão se estende mais adiante para norte.  Para
-o sul, você pode ver uma enorme e muito pesada porta de ferro trabalhado.
-Esta parece ser a única saída desta magnífica e velha casa.
+A Parte Meridional do Grande SalÃ£o~
+   VocÃª estÃ¡ em um vasto salÃ£o fracamente iluminado, mas de onde a luz vÃªm Ã©
+um mistÃ©rio.  As paredes parecem irradiar cordialidade e dÃ£o a vocÃª a
+sensaÃ§Ã£o de que Ã© bem-vindo aqui.  HÃ¡ um grande quadro pendurado na parede.
+Uma grande escadaria de madeira leva a torre.  Para leste, hÃ¡ uma grande
+passagem levando para fora do salÃ£o.  E esta termina bruscamente em uma alta
+porta de carvalho.  O enorme salÃ£o se estende mais adiante para norte.  Para
+o sul, vocÃª pode ver uma enorme e muito pesada porta de ferro trabalhado.
+Esta parece ser a Ãºnica saÃ­da desta magnÃ­fica e velha casa.
 ~
-79 524 0 0 0 0
+79 cdj 0
 D0
-O corredor continua nesta direção.  Você também pode ver mais entradas
+O corredor continua nesta direÃ§Ã£o.  VocÃª tambÃ©m pode ver mais entradas
 abaixo da escadaria de madeira.
 ~
 ~
 0 -1 7904
 D1
-Você vê uma alta porta de carvalho.  Ista parece totalmente fechada
-para você.  Na porta, pequenas runas estão gravadas na madeira.
+VocÃª vÃª uma alta porta de carvalho.  Ista parece totalmente fechada
+para vocÃª.  Na porta, pequenas runas estÃ£o gravadas na madeira.
 ~
 porta carvalho alta~
+:n 2 a porta
 1 -1 7910
 D2
-Aqui você vê uma porta realmente grande.  Esta seria mais apropriadamente
-chamada de 'PORTÃO', no lugar de 'porta'.  O portão é realmente grande!
-Nele está pendurada uma grande placa com letras muito grandes dizendo:
+Aqui vocÃª vÃª uma porta realmente grande.  Esta seria mais apropriadamente
+chamada de 'PORTÃƒO', no lugar de 'porta'.  O portÃ£o Ã© realmente grande!
+Nele estÃ¡ pendurada uma grande placa com letras muito grandes dizendo:
 
-                SAÍDA D 1 EMERGÊNCIA
+                SAÃDA DE EMERGÃŠNCIA
 
 ~
 portao ferro grande~
+:n 1 o portÃ£o
 2 7901 7900
 D3
-Esta é realmente uma 'porta' seguindo o significado da palavra.  A porta
-de cinzas está pintada com uma peculiar cor amarela.  Uma pequena nota está
+Esta Ã© realmente uma 'porta' seguindo o significado da palavra.  A porta
+de cinzas estÃ¡ pintada com uma peculiar cor amarela.  Uma pequena nota estÃ¡
 escrita em preto na porta.
 ~
 porta cinzas cinza amarelo~
+:n 2 a porta
 1 -1 7902
 D4
-Você vê a escadaria subindo até o ponto mais alto da torre.  Esta termina num
+VocÃª vÃª a escadaria subindo atÃ© o ponto mais alto da torre.  Esta termina num
 grande quarto.
 ~
 ~
 0 -1 7909
 E
+runas~
+Estas runas sÃ£o totalmente estranhas a vocÃª, mas vocÃª estÃ¡ em um dia de sorte:
+Abaixo das runas vocÃª percebe uma sentenÃ§a em idioma comum. EstÃ¡ escrito:
+
+Afaste-se, se vocÃª presa sua vida.  Isto se vocÃª for um mortal.
+~
+E
 nota~
-Está escrito:
+EstÃ¡ escrito:
 
                 BIBLIOTECA
 
 ~
-E
-runas~
-Estas runas são totalmente estranhas a você, mas você está em um dia de sorte:
-Abaixo das runas você percebe uma sentença em idioma comum. Está escrito:
-
-Afaste-se, se você presa sua vida.  Isto se você for um mortal.
-~
 S
 #7902
 A Biblioteca de Redferne~
-   Este é um lugar realmente magnífico!  Livros e pergaminhos estão juntos
-em cada uma das estantes.  Um grande globo, com o mapa do mundo nele, está
-no canto noroeste, fracamente iluminado.  Duas grandes e confortáveis
+   Este Ã© um lugar realmente magnÃ­fico!  Livros e pergaminhos estÃ£o juntos
+em cada uma das estantes.  Um grande globo, com o mapa do mundo nele, estÃ¡
+no canto noroeste, fracamente iluminado.  Duas grandes e confortÃ¡veis
 poltronas de couro adornam o centro desta biblioteca, junto com uma imensa
 mesa de carvalho.  Uma luz fosca irradia dos candelabros de cristal
-pendurados no teto há aproximadamente quatro metros do chão.  Para leste há
-a grande e velha porta de cinzas.  Há uma grande janela de vidro na parede
+pendurados no teto hÃ¡ aproximadamente quatro metros do chÃ£o.  Para leste hÃ¡
+a grande e velha porta de cinzas.  HÃ¡ uma grande janela de vidro na parede
 oeste.
 ~
-79 524 0 0 0 0
+79 cdj 0
 D1
-Você pode ver uma grande e velha porta de cinzas, pintada com uma peculiar cor
+VocÃª pode ver uma grande e velha porta de cinzas, pintada com uma peculiar cor
 amarela.
 ~
 porta cinza cinzas~
+:n 2 a porta
 1 -1 7901
 E
-rio~
-Você vê um grande rio serpenteando pela paisagem, começando em um enorme
-lago, passando por Midgaard e finalmente terminando no Grande Mar, na
-costa leste do continente.
-~
-E
-fora exterior alem~
-As nuvens se conglomeram e formam o chão no qual este prédio inteiro está
-erguido. Através das mais finas das nuvens você pode observar Midgaard
-com toda sua magnífica agitação.
-~
-E
-janela vidro~
-Estas janelas são realmente GRAND 1S!  Elas começam a vinte polegadas do chão
-indo terminar há dez polegadas do teto.  Se você tentar 'olhar o exterior',
-você talvez veja o que pode estar além desta do vidro.
-~
-E
-cadeiras couro poltronas cadeira poltrona~
-Estas duas poltronas são exatamente iguais uma a outra.  Elas parecem
-incrivelmente confortáveis.  Ambas são feitas de um couro velho e bastante
-usado, fazendo delas o lugar perfeito para um longo e merecido repouso.
+globo mundo mapa~
+VocÃª vÃª um grande mapa do mundo sobre um enorme globo.  HÃ¡ vilas desenhadas
+em cada lugar livre para uma.  No meio do mapa vocÃª pode ver uma grande
+cidade com o nome 'MIDGAARD' escrito sobre ela.  O resto sÃ£o montanhas,
+florestas, planÃ­cies e Ã¡guas.
 ~
 E
 midgaard vila cidade~
-Você vê uma pequena mancha com florestas a oeste, planícies para leste
-e montanhas ao norte.  A leste você também vê um estreito caminho levando
-a um grande castelo.  Finalmente, você nota um rio particularmente grande
+VocÃª vÃª uma pequena mancha com florestas a oeste, planÃ­cies para leste
+e montanhas ao norte.  A leste vocÃª tambÃ©m vÃª um estreito caminho levando
+a um grande castelo.  Finalmente, vocÃª nota um rio particularmente grande
 vindo do oeste cortando Midgaard ao meio.
 ~
 E
-globo mundo mapa~
-Você vê um grande mapa do mundo sobre um enorme globo.  Há vilas desenhadas
-em cada lugar livre para uma.  No meio do mapa você pode ver uma grande
-cidade com o nome 'MIDGAARD' escrito sobre ela.  O resto são montanhas,
-florestas, planícies e águas.
+cadeiras couro poltronas cadeira poltrona~
+Estas duas poltronas sÃ£o exatamente iguais uma a outra.  Elas parecem
+incrivelmente confortÃ¡veis.  Ambas sÃ£o feitas de um couro velho e bastante
+usado, fazendo delas o lugar perfeito para um longo e merecido repouso.
+~
+E
+janela vidro~
+Estas janelas sÃ£o realmente GRANDES!  Elas comeÃ§am a vinte polegadas do chÃ£o
+indo terminar hÃ¡ dez polegadas do teto.  Se vocÃª tentar 'olhar o exterior',
+vocÃª talvez veja o que pode estar alÃ©m desta do vidro.
+~
+E
+fora exterior alem~
+As nuvens se conglomeram e formam o chÃ£o no qual este prÃ©dio inteiro estÃ¡
+erguido. AtravÃ©s das mais finas das nuvens vocÃª pode observar Midgaard
+com toda sua magnÃ­fica agitaÃ§Ã£o.
+~
+E
+rio~
+VocÃª vÃª um grande rio serpenteando pela paisagem, comeÃ§ando em um enorme
+lago, passando por Midgaard e finalmente terminando no Grande Mar, na
+costa leste do continente.
 ~
 S
 #7903
 A Sala dos Artefatos de Naris~
-   Esta é uma triste e escura sala com somente uma fraca luz irradiando das
-paredes.  Um monte de engraçados itens preenchem o centro desta sala.  Não
-há mobiliário aqui.  A única saída aparente está a oeste, através de uma
-pequena porta de aço.
+   Esta Ã© uma triste e escura sala com somente uma fraca luz irradiando das
+paredes.  Um monte de engraÃ§ados itens preenchem o centro desta sala.  NÃ£o
+hÃ¡ mobiliÃ¡rio aqui.  A Ãºnica saÃ­da aparente estÃ¡ a oeste, atravÃ©s de uma
+pequena porta de aÃ§o.
 ~
-79 524 0 0 0 0
+79 cdj 0
 D3
-Você somente vê a parte posterior da porta do cofre de aço.
+VocÃª somente vÃª a parte posterior da porta do cofre de aÃ§o.
 ~
 porta aco cofre~
+:n 2 a porta
 2 7900 7910
 S
 #7904
-A Parte Setentrional do Grande Salão~
-   Você está de pé na parte norte de um grande salão.  Esta parte está
-abaixo da grande escadaria de madeira, então, a luz é um pouco menos
-brilhante aqui, mas isso não chega a afetar sua visão.  Para norte, está a
-cozinha.  E ao sul, está a parte meridional do salão.  Para leste, há uma
-imensa porta de metal.  Já para oeste, há uma grande porta de madeira de
+A Parte Setentrional do Grande SalÃ£o~
+   VocÃª estÃ¡ de pÃ© na parte norte de um grande salÃ£o.  Esta parte estÃ¡
+abaixo da grande escadaria de madeira, entÃ£o, a luz Ã© um pouco menos
+brilhante aqui, mas isso nÃ£o chega a afetar sua visÃ£o.  Para norte, estÃ¡ a
+cozinha.  E ao sul, estÃ¡ a parte meridional do salÃ£o.  Para leste, hÃ¡ uma
+imensa porta de metal.  JÃ¡ para oeste, hÃ¡ uma grande porta de madeira de
 pinho.
 ~
-79 524 0 0 0 0
+79 cdj 0
 D0
 ~
 ~
 0 -1 7906
 D1
-Você vê uma imensa porta de metal.  Um odor nojento emana da porta.  O cheiro
-é a mais terrível experiência de toda sua existência.  Um pensamento penetra
-em sua mente através deste cheiro: 'Monstros', você sente um agouro em pensar
-abrir está porta.
+VocÃª vÃª uma imensa porta de metal.  Um odor nojento emana da porta.  O cheiro
+Ã© a mais terrÃ­vel experiÃªncia de toda sua existÃªncia.  Um pensamento penetra
+em sua mente atravÃ©s deste cheiro: 'Monstros', vocÃª sente um agouro em pensar
+abrir estÃ¡ porta.
 ~
 porta metal imensa~
+:n 2 a porta
 2 -1 7913
 D2
-Nesta direção está o resto do Grande Salão, e também está a saída.
+Nesta direÃ§Ã£o estÃ¡ o resto do Grande SalÃ£o, e tambÃ©m estÃ¡ a saÃ­da.
 ~
 ~
 0 -1 7901
 D3
-Na porta está escrito: 'SALA D 1 ESTAR'.  Ela é feita de madeira de pinho
-e é lindamente entalhada com pequenos elfos como principal escopo da 
+Na porta estÃ¡ escrito: 'SALA DE ESTAR'.  Ela Ã© feita de madeira de pinho
+e Ã© lindamente entalhada com pequenos elfos como principal escopo da 
 escultura.
 ~
 porta pinho madeira~
+:n 2 a porta
 1 -1 7905
 S
 #7905
 A Sala de Estar de Naris~
-   Você está de pé no meio de um lugar realmente confortável.  As paredes
-são decoradas com pinturas de sorridentes Reis e Rainhas.  A mais atrativa
-figura é a de um príncipe em uma ofuscante armadura.  Perto de uma das
-paredes há uma velha poltrona.  A única saída é pela porta de pinho a leste.
+   VocÃª estÃ¡ de pÃ© no meio de um lugar realmente confortÃ¡vel.  As paredes
+sÃ£o decoradas com pinturas de sorridentes Reis e Rainhas.  A mais atrativa
+figura Ã© a de um prÃ­ncipe em uma ofuscante armadura.  Perto de uma das
+paredes hÃ¡ uma velha poltrona.  A Ãºnica saÃ­da Ã© pela porta de pinho a leste.
 ~
-79 524 0 0 0 0
+79 cdj 0
 D1
 A porta parece ser uma porta muito pesada, esculpida completamente de um
 tronco de pinho.
 ~
 porta pinho pesada~
+:n 2 porta
 1 -1 7904
 E
 cadeira poltrona~
-Esta é uma verdadeiramente maravilhosa relíquia do passado.  Nela está um
+Esta Ã© uma verdadeiramente maravilhosa relÃ­quia do passado.  Nela estÃ¡ um
 grande travesseiro.
 ~
 S
 #7906
 A Cozinha de Naris~
-   Este deve ser o lugar da comida e da bebida.  Você pode ouvir um fraco
-barulho de ratos banqueteando carne e pão de algum lugar indeterminado.  O
-som faz você sentir a agonia da fome.  A única saída visível está ao sul,
-indo para a parte Setentrional do Grande Salão.
+   Este deve ser o lugar da comida e da bebida.  VocÃª pode ouvir um fraco
+barulho de ratos banqueteando carne e pÃ£o de algum lugar indeterminado.  O
+som faz vocÃª sentir a agonia da fome.  A Ãºnica saÃ­da visÃ­vel estÃ¡ ao sul,
+indo para a parte Setentrional do Grande SalÃ£o.
 ~
-79 524 0 0 0 0
+79 cdj 0
 D0
-Está escuro lá.  Mas os sons vindos de lá são inconfundíveis.  Para sua
-informação, os ratos estão aqui.
+EstÃ¡ escuro lÃ¡.  Mas os sons vindos de lÃ¡ sÃ£o inconfundÃ­veis.  Para sua
+informaÃ§Ã£o, os ratos estÃ£o aqui.
 ~
 despensa madeira armario~
+:n 2 a despensa
 1 -1 7907
 D1
-Você pode ver a geladeira daqui.  Há bebidas por todo este lugar.
+VocÃª pode ver a geladeira daqui.  HÃ¡ bebidas por todo este lugar.
 ~
 geladeira~
+:n 2
 1 -1 7908
 D2
-Você pode ver a parte sententrional do Grande Salão.
+VocÃª pode ver a parte sententrional do Grande SalÃ£o.
 ~
 ~
 0 -1 7904
 S
 #7907
 A Despensa~
-   Você pode ver comida por toda parte.  Entre as pilhas de comida você nota
-grandes ratos correndo ao redor, mordiscando pedaços de comida aqui e ali.
+   VocÃª pode ver comida por toda parte.  Entre as pilhas de comida vocÃª nota
+grandes ratos correndo ao redor, mordiscando pedaÃ§os de comida aqui e ali.
 ~
-79 524 0 0 0 0
+79 cdj 0
 D2
 ~
 porta madeira despensa~
+:n 2 a porta
 1 -1 7906
 S
 #7908
 A Geladeira~
-   Este lugar está completamente carregado de bebidas: água e bebidas
-alcoólicas.
+   Este lugar estÃ¡ completamente carregado de bebidas: Ã¡gua e bebidas
+alcoÃ³licas.
 ~
-79 524 0 0 0 0
+79 cdj 0
 D3
 ~
 porta geladeira~
+:n 2 a porta
 1 -1 7906
 S
 #7909
 Nas Escadarias~
-   Você pode ver acima e a baixo da escada.  A escadaria parece continuar
+   VocÃª pode ver acima e a baixo da escada.  A escadaria parece continuar
 eternamente, tanto para baixo como para cima.  Esta parece ser uma escalada
-infindável, em ambos os sentidos.  Acima está o quarto de Redferne, e para
-baixo a escada leva à parte meridional do Grande Salão.
+infindÃ¡vel, em ambos os sentidos.  Acima estÃ¡ o quarto de Redferne, e para
+baixo a escada leva Ã  parte meridional do Grande SalÃ£o.
 ~
-79 524 0 0 0 0
+79 cdj 0
 D4
 ~
 ~
@@ -271,35 +284,38 @@ D5
 S
 #7910
 A Sala do Tesouro~
-   Este é um lugar triste.  Um grande cofre está cimentado na parede leste.
-A única saída visível está a oeste, pela alta porta de carvalho.
+   Este Ã© um lugar triste.  Um grande cofre estÃ¡ cimentado na parede leste.
+A Ãºnica saÃ­da visÃ­vel estÃ¡ a oeste, pela alta porta de carvalho.
 ~
-79 524 0 0 0 0
+79 cdj 0
 D1
 ~
 cofre~
+:n 1 o cofre
 2 7900 7903
 D3
-Você vê uma alta porta de carvalho.
+VocÃª vÃª uma alta porta de carvalho.
 ~
 porta carvalho alta~
+:n 2 a porta
 1 -1 7901
 S
 #7911
 O Quarto de Redferne~
-   Este é um mais que afável quarto com tudo que se faz necessário a uma
-noite romântica.  Uma ampla lareira embeleza a parede leste, e queimando ao
-longe está a lenha cujo interior arde em brasas.  A cama é enorme, ocupando
-no mínimo metade deste grande salão.  O quarto estende-se por ao menos cento
-e quarenta pés, com isso é possível imaginar o tamanho da cama?  Uma grande
-escadaria leva para baixo, ao salão.  Um par de portas se abrem a uma larga
+   Este Ã© um mais que afÃ¡vel quarto com tudo que se faz necessÃ¡rio a uma
+noite romÃ¢ntica.  Uma ampla lareira embeleza a parede leste, e queimando ao
+longe estÃ¡ a lenha cujo interior arde em brasas.  A cama Ã© enorme, ocupando
+no mÃ­nimo metade deste grande salÃ£o.  O quarto estende-se por ao menos cento
+e quarenta pÃ©s, com isso Ã© possÃ­vel imaginar o tamanho da cama?  Uma grande
+escadaria leva para baixo, ao salÃ£o.  Um par de portas se abrem a uma larga
 varanda, ao sul.
 ~
-79 524 0 0 0 0
+79 cdj 0
 D2
-O sol parece brilhar lá fora, aquecendo e confortando.
+O sol parece brilhar lÃ¡ fora, aquecendo e confortando.
 ~
 portas~
+:n 2 a porta
 1 -1 7912
 D5
 ~
@@ -308,19 +324,20 @@ D5
 S
 #7912
 A Varanda de Redferne~
-   Você vê o esplendor da maior parte deste mundo.  Os vales desenrolando-se
-ao mais longínquo ponto que seus olhos alcaçam ao sul.  Logo abaixo da
-varanda, você pode ver a entrada deste magnífico edifício.  Ao norte, estão
+   VocÃª vÃª o esplendor da maior parte deste mundo.  Os vales desenrolando-se
+ao mais longÃ­nquo ponto que seus olhos alcaÃ§am ao sul.  Logo abaixo da
+varanda, vocÃª pode ver a entrada deste magnÃ­fico edifÃ­cio.  Ao norte, estÃ£o
 as portas do Quarto de Redferne.
 ~
-79 516 0 0 0 0
+79 cj 0
 D0
-Você pode ver o confortável quarto de Naris.
+VocÃª pode ver o confortÃ¡vel quarto de Naris.
 ~
 portas~
+:n 2 a porta
 1 -1 7911
 D5
-Você vê o chão cujo castelo está construído. Comicamente o chão não parece ser
+VocÃª vÃª o chÃ£o cujo castelo estÃ¡ construÃ­do. Comicamente o chÃ£o nÃ£o parece ser
 nada mais do que nuvens.
 ~
 ~
@@ -328,33 +345,34 @@ nada mais do que nuvens.
 S
 #7913
 A Jaula do Monstro~
-   Este lugar é parecido com uma gaiola onde um grande animal carnívoro está
+   Este lugar Ã© parecido com uma gaiola onde um grande animal carnÃ­voro estÃ¡
 sendo mantido preso.  A julgar pelo estado das paredes, este parece ser um
 bem grande e agressivo animal.  Isto te deixa bastante inseguro, fazendo
-você sentir este lugar como um provável fim para você.
+vocÃª sentir este lugar como um provÃ¡vel fim para vocÃª.
 ~
-79 520 0 0 0 0
+79 dj 0
 D3
-Esta é a única provável saída desta sala.
+Esta Ã© a Ãºnica provÃ¡vel saÃ­da desta sala.
 ~
 porta gaiola metal jaula~
+:n 2 a jaula
 1 -1 7904
 S
 #7914
 Na Grande Corrente~
    Este lugar tem um panorama muito bom de Midgaard.  Suas possibilidades de
-movimento abrangem somente a subida ou descida.  A menos que você queira
-deixar a segurança e estabilidade da corrente, então estas são as direções
-que você deve tomar.
+movimento abrangem somente a subida ou descida.  A menos que vocÃª queira
+deixar a seguranÃ§a e estabilidade da corrente, entÃ£o estas sÃ£o as direÃ§Ãµes
+que vocÃª deve tomar.
 ~
-79 4 0 0 0 5
+79 c 5
 D4
-Para cima, você vê a corrente desaparecer dentro das nuvens.
+Para cima, vocÃª vÃª a corrente desaparecer dentro das nuvens.
 ~
 ~
 0 -1 7915
 D5
-Logo abaixo, você vê a grande corrente ancorada no chão em um cruzamento
+Logo abaixo, vocÃª vÃª a grande corrente ancorada no chÃ£o em um cruzamento
 das ruas do Sul de Midgaard.
 ~
 ~
@@ -362,65 +380,60 @@ das ruas do Sul de Midgaard.
 S
 #7915
 Na Corrente, Onde o Vento Sopra Vigorosamente~
-   Pendurado na corrente você percebe que não há como descer daqui.  O vento
-joga você de um lado para o outro, para frente e para trás.  Descer parece
-ser impossível.  A subida é o único meio de seguir em frente.  De outra
-forma você estaria arriscando-se a morte certa, na queda ao chão.  NÃO D 1SÇA
-AGORA OU VOCÊ CERTAMENTE MORRERÁ!!!!
+   Pendurado na corrente vocÃª percebe que nÃ£o hÃ¡ como descer daqui.  O vento
+joga vocÃª de um lado para o outro, para frente e para trÃ¡s.  Descer parece
+ser impossÃ­vel.  A subida Ã© o Ãºnico meio de seguir em frente.  De outra
+forma vocÃª estaria arriscando-se a morte certa, na queda ao chÃ£o.  NÃƒO DESÃ‡A
+AGORA OU VOCÃŠ CERTAMENTE MORRERÃ!!!!
 ~
-79 4 0 0 0 5
+79 c 5
 D4
-Este é o único caminho para sair daqui.
+Este Ã© o Ãºnico caminho para sair daqui.
 ~
 ~
 0 -1 7916
 D5
-ISTO É A MORTE CERTA!!!!  Você nota o vento rasgando a corrente logo
-abaixo de você.  E esta balança de um lado ao outro como uma serpente
-furiosa!  A descida está ABSOLUTAMENTE fora de QUESTÃO.  
+ISTO Ã‰ A MORTE CERTA!!!!  VocÃª nota o vento rasgando a corrente logo
+abaixo de vocÃª.  E esta balanÃ§a de um lado ao outro como uma serpente
+furiosa!  A descida estÃ¡ ABSOLUTAMENTE fora de QUESTÃƒO.  
 ~
 ~
 0 -1 7920
 S
 #7916
 Na Grande Corrente de Naris~
-   Você está aproximadamente na metade da traiçoeira corrente.  Um passo
-falso e a morte virá ceifar sua vida.  A corrente segue para cima e para
-baixo.  De nenhuma maneira você irá descer agora...  Você só começou sua
-subida.  Além disso, a descida pode custar sua vida.  Você olha para baixo e
-vê o porquê.
+   VocÃª estÃ¡ aproximadamente na metade da traiÃ§oeira corrente.  Um passo
+falso e a morte virÃ¡ ceifar sua vida.  A corrente segue para cima e para
+baixo.  De nenhuma maneira vocÃª irÃ¡ descer agora...  VocÃª sÃ³ comeÃ§ou sua
+subida.  AlÃ©m disso, a descida pode custar sua vida.  VocÃª olha para baixo e
+vÃª o porquÃª.
 ~
-79 4 0 0 0 5
+79 c 5
 D4
-A única saída daqui parece ser a subida.
+A Ãºnica saÃ­da daqui parece ser a subida.
 ~
 ~
 0 -1 7918
 D5
-A corrente abaixo balança para frente e para trás.  Descer a corrente é
-um risco desnecessário.
+A corrente abaixo balanÃ§a para frente e para trÃ¡s.  Descer a corrente Ã©
+um risco desnecessÃ¡rio.
 ~
 ~
 0 -1 7915
 S
 #7917
 A Corrente~
-   A medida que você desce, a corrente parece absorver todo o clima ao
-redor, fazendo a corrente balançar cada vez menos ao sabor do poderoso
-vento.  A corrente parece rir por dentro, você escuta um leve mumúrio
-originário do interior da *própria corrente*.  Ela diz 'Seja bem-vindo outra
-vez, estranho.  Sua companhia é sempre...  Hmmm...  Interessante.  Vá com
-Deus.' A Corrente estende-se abaixo através das agora divergentes nuvens.
+   A medida que vocÃª desce, a corrente parece absorver todo o clima ao
+redor, fazendo a corrente balanÃ§ar cada vez menos ao sabor do poderoso
+vento.  A corrente parece rir por dentro, vocÃª escuta um leve mumÃºrio
+originÃ¡rio do interior da *prÃ³pria corrente*.  Ela diz 'Seja bem-vindo outra
+vez, estranho.  Sua companhia Ã© sempre...  Hmmm...  Interessante.  VÃ¡ com
+Deus.' A Corrente estende-se abaixo atravÃ©s das agora divergentes nuvens.
 ~
-79 4 0 0 0 5
-D3
-Você vê...UMA TAVERNA!
-~
-~
-0 -1 9501
+79 c 5
 D4
-Aparentemente, a corrente está se desfazendo de novo .  Talvez seja somente
-uma ilusão, mas continua...
+Aparentemente, a corrente estÃ¡ se desfazendo de novo .  Talvez seja somente
+uma ilusÃ£o, mas continua...
 ~
 ~
 0 -1 -1
@@ -429,24 +442,29 @@ Este caminho parece seguro suficiente... por hora.
 ~
 ~
 0 -1 7914
+D3
+VocÃª vÃª...UMA TAVERNA!
+~
+~
+0 -1 9501
 S
 #7918
 A Poderosa Corrente de Naris~
-   Este é um lugar verdadeiramente esplêndido, com uma vista de todo reino!
-Uma magnífica luz brilha acima de você e o caminho através das nuvens está
-aberto.  Acima, você pode ver a Mansão de Naris, Residência do Grande Deus
-Redferne.  A corrente abaixo de você parece evaporar no conjunto de nuvens
+   Este Ã© um lugar verdadeiramente esplÃªndido, com uma vista de todo reino!
+Uma magnÃ­fica luz brilha acima de vocÃª e o caminho atravÃ©s das nuvens estÃ¡
+aberto.  Acima, vocÃª pode ver a MansÃ£o de Naris, ResidÃªncia do Grande Deus
+Redferne.  A corrente abaixo de vocÃª parece evaporar no conjunto de nuvens
 que te cercam agora.
 ~
-79 4 0 0 0 5
+79 c 5
 D4
-Você vê o ensolarado topo das nuvens.  Através destas, a Mansão de ergue
+VocÃª vÃª o ensolarado topo das nuvens.  AtravÃ©s destas, a MansÃ£o de ergue
 diante de seus olhos.  Maravilhosa!!
 ~
 ~
 0 -1 7900
 D5
-Você não vê nada além de espessas nuvens.  Elas se fecharam completamente
+VocÃª nÃ£o vÃª nada alÃ©m de espessas nuvens.  Elas se fecharam completamente
 em torno da Corrente.
 ~
 ~
@@ -454,7 +472,7 @@ em torno da Corrente.
 S
 #7920
 A Queda Livre da Corrente~
-   Este é provavelmente o terceiro pior lugar do mundo neste momento.  Você
+   Este Ã© provavelmente o terceiro pior lugar do mundo neste momento.  VocÃª
 cai
 .  
 .
@@ -467,10 +485,10 @@ e cai
 .
 .
 .
-Atingindo o chão com um som mudo: *POFT*; você tem uma morte horrível e
-instantânea.  Adeus, mundo cruel.
+Atingindo o chÃ£o com um som mudo: *POFT*; vocÃª tem uma morte horrÃ­vel e
+instantÃ¢nea.  Adeus, mundo cruel.
 ~
-79 10 0 0 0 0
+79 bd 0
 D0
 ~
 ~
@@ -496,4 +514,4 @@ D5
 ~
 0 -1 3120
 S
-$~
+$
